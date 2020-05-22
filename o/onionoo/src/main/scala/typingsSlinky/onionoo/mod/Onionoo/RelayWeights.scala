@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RelayWeights extends js.Object {
   /**
     * History object containing the absolute consensus weight of this relay. The specification of this history
     * object is similar to that in the `consensus_weight_fraction` field above.
     */
-  var consensus_weight: js.UndefOr[PartialRecord1week1month6] = js.native
+  var consensus_weight: js.UndefOr[PartialRecord1week1month6] = js.undefined
   /**
     * History object containing the fraction of this relay's consensus weight compared to the sum of all consensus
     * weights in the network. This fraction is a very rough approximation of the probability of this relay to be
@@ -22,113 +21,51 @@ trait RelayWeights extends js.Object {
     * time period and higher data resolution. The unit is path-selection probability. Contained graph history objects
     * may contain null values if the relay was running less than 20% of a given time period.
     */
-  var consensus_weight_fraction: js.UndefOr[PartialRecord1week1month6] = js.native
+  var consensus_weight_fraction: js.UndefOr[PartialRecord1week1month6] = js.undefined
   /**
     * History object containing the probability of this relay to be selected for the exit position.
     * This probability is calculated based on consensus weights, relay flags, and bandwidth weights in the consensus.
     * Path selection depends on more factors, so that this probability can only be an approximation.
     * The specification of this history object is similar to that in the `consensus_weight_fraction` field above.
     */
-  var exit_probability: js.UndefOr[PartialRecord1week1month6] = js.native
+  var exit_probability: js.UndefOr[PartialRecord1week1month6] = js.undefined
   /**
     * Node fingerprint consisting of 40 upper-case hexadecimal characters.
     */
-  var fingerprint: String = js.native
+  var fingerprint: String
   /**
     * History object containing the probability of this relay to be selected for the guard position.
     * This probability is calculated based on consensus weights, relay flags, and bandwidth weights in the consensus.
     * Path selection depends on more factors, so that this probability can only be an approximation.
     * The specification of this history object is similar to that in the `consensus_weight_fraction` field above.
     */
-  var guard_probability: js.UndefOr[PartialRecord1week1month6] = js.native
+  var guard_probability: js.UndefOr[PartialRecord1week1month6] = js.undefined
   /**
     * History object containing the probability of this relay to be selected for the middle position.
     * This probability is calculated based on consensus weights, relay flags, and bandwidth weights in the consensus.
     * Path selection depends on more factors, so that this probability can only be an approximation.
     * The specification of this history object is similar to that in the `consensus_weight_fraction` field above.
     */
-  var middle_probability: js.UndefOr[PartialRecord1week1month6] = js.native
+  var middle_probability: js.UndefOr[PartialRecord1week1month6] = js.undefined
 }
 
 object RelayWeights {
   @scala.inline
-  def apply(fingerprint: String): RelayWeights = {
+  def apply(
+    fingerprint: String,
+    consensus_weight: PartialRecord1week1month6 = null,
+    consensus_weight_fraction: PartialRecord1week1month6 = null,
+    exit_probability: PartialRecord1week1month6 = null,
+    guard_probability: PartialRecord1week1month6 = null,
+    middle_probability: PartialRecord1week1month6 = null
+  ): RelayWeights = {
     val __obj = js.Dynamic.literal(fingerprint = fingerprint.asInstanceOf[js.Any])
+    if (consensus_weight != null) __obj.updateDynamic("consensus_weight")(consensus_weight.asInstanceOf[js.Any])
+    if (consensus_weight_fraction != null) __obj.updateDynamic("consensus_weight_fraction")(consensus_weight_fraction.asInstanceOf[js.Any])
+    if (exit_probability != null) __obj.updateDynamic("exit_probability")(exit_probability.asInstanceOf[js.Any])
+    if (guard_probability != null) __obj.updateDynamic("guard_probability")(guard_probability.asInstanceOf[js.Any])
+    if (middle_probability != null) __obj.updateDynamic("middle_probability")(middle_probability.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelayWeights]
   }
-  @scala.inline
-  implicit class RelayWeightsOps[Self <: RelayWeights] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConsensus_weight(value: PartialRecord1week1month6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsensus_weight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsensus_weight_fraction(value: PartialRecord1week1month6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight_fraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsensus_weight_fraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consensus_weight_fraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_probability(value: PartialRecord1week1month6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_probability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_probability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuard_probability(value: PartialRecord1week1month6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guard_probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuard_probability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guard_probability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMiddle_probability(value: PartialRecord1week1month6): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middle_probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMiddle_probability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middle_probability")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

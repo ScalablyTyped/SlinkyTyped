@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetNotificationsCountParams extends js.Object {
-  var alreadyRead: Boolean = js.native
-  var resourceAlreadyRead: Boolean = js.native
+  var alreadyRead: Boolean
+  var resourceAlreadyRead: Boolean
 }
 
 object GetNotificationsCountParams {
@@ -16,25 +15,5 @@ object GetNotificationsCountParams {
     val __obj = js.Dynamic.literal(alreadyRead = alreadyRead.asInstanceOf[js.Any], resourceAlreadyRead = resourceAlreadyRead.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetNotificationsCountParams]
   }
-  @scala.inline
-  implicit class GetNotificationsCountParamsOps[Self <: GetNotificationsCountParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlreadyRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alreadyRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceAlreadyRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAlreadyRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

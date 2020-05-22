@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SteppedEase extends Ease {
-  def config(steps: Double): SteppedEase = js.native
+  def config(steps: Double): SteppedEase
 }
 
 object SteppedEase {
@@ -15,19 +14,5 @@ object SteppedEase {
     val __obj = js.Dynamic.literal(config = js.Any.fromFunction1(config), getRatio = js.Any.fromFunction1(getRatio))
     __obj.asInstanceOf[SteppedEase]
   }
-  @scala.inline
-  implicit class SteppedEaseOps[Self <: SteppedEase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: Double => SteppedEase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

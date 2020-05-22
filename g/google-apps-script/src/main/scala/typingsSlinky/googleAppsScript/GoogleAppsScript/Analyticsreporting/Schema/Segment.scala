@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Segment extends js.Object {
-  var dynamicSegment: js.UndefOr[DynamicSegment] = js.native
-  var segmentId: js.UndefOr[String] = js.native
+  var dynamicSegment: js.UndefOr[DynamicSegment] = js.undefined
+  var segmentId: js.UndefOr[String] = js.undefined
 }
 
 object Segment {
   @scala.inline
-  def apply(): Segment = {
+  def apply(dynamicSegment: DynamicSegment = null, segmentId: String = null): Segment = {
     val __obj = js.Dynamic.literal()
+    if (dynamicSegment != null) __obj.updateDynamic("dynamicSegment")(dynamicSegment.asInstanceOf[js.Any])
+    if (segmentId != null) __obj.updateDynamic("segmentId")(segmentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Segment]
   }
-  @scala.inline
-  implicit class SegmentOps[Self <: Segment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDynamicSegment(value: DynamicSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSegment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSegment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

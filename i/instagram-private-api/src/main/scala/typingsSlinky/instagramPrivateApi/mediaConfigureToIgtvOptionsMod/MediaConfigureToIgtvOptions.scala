@@ -13,220 +13,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaConfigureToIgtvOptions extends js.Object {
-  var audio_muted: js.UndefOr[Boolean] = js.native
-  var caption: js.UndefOr[String] = js.native
-  var clips: js.UndefOr[js.Array[LengthSourcetype]] = js.native
-  var date_time_original: js.UndefOr[String] = js.native
-  var device: js.UndefOr[Androidversion] = js.native
-  var extra: Sourceheight = js.native
-  var feed_preview_crop: js.UndefOr[Cropbottom | String] = js.native
-  var filter_type: js.UndefOr[String] = js.native
-  var igtv_share_preview_to_feed: js.UndefOr[`1` | `0`] = js.native
-  var length: Double = js.native
-  var media_folder: js.UndefOr[String] = js.native
-  var poster_frame_index: js.UndefOr[Double] = js.native
-  var retryContext: js.UndefOr[Numreupload] = js.native
-  var source_type: js.UndefOr[`3` | `4`] = js.native
-  var timezone_offset: js.UndefOr[String] = js.native
-  var title: String = js.native
-  var upload_id: String = js.native
+  var audio_muted: js.UndefOr[Boolean] = js.undefined
+  var caption: js.UndefOr[String] = js.undefined
+  var clips: js.UndefOr[js.Array[LengthSourcetype]] = js.undefined
+  var date_time_original: js.UndefOr[String] = js.undefined
+  var device: js.UndefOr[Androidversion] = js.undefined
+  var extra: Sourceheight
+  var feed_preview_crop: js.UndefOr[Cropbottom | String] = js.undefined
+  var filter_type: js.UndefOr[String] = js.undefined
+  var igtv_share_preview_to_feed: js.UndefOr[`1` | `0`] = js.undefined
+  var length: Double
+  var media_folder: js.UndefOr[String] = js.undefined
+  var poster_frame_index: js.UndefOr[Double] = js.undefined
+  var retryContext: js.UndefOr[Numreupload] = js.undefined
+  var source_type: js.UndefOr[`3` | `4`] = js.undefined
+  var timezone_offset: js.UndefOr[String] = js.undefined
+  var title: String
+  var upload_id: String
 }
 
 object MediaConfigureToIgtvOptions {
   @scala.inline
-  def apply(extra: Sourceheight, length: Double, title: String, upload_id: String): MediaConfigureToIgtvOptions = {
+  def apply(
+    extra: Sourceheight,
+    length: Double,
+    title: String,
+    upload_id: String,
+    audio_muted: js.UndefOr[Boolean] = js.undefined,
+    caption: String = null,
+    clips: js.Array[LengthSourcetype] = null,
+    date_time_original: String = null,
+    device: Androidversion = null,
+    feed_preview_crop: Cropbottom | String = null,
+    filter_type: String = null,
+    igtv_share_preview_to_feed: `1` | `0` = null,
+    media_folder: String = null,
+    poster_frame_index: js.UndefOr[Double] = js.undefined,
+    retryContext: Numreupload = null,
+    source_type: `3` | `4` = null,
+    timezone_offset: String = null
+  ): MediaConfigureToIgtvOptions = {
     val __obj = js.Dynamic.literal(extra = extra.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], upload_id = upload_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(audio_muted)) __obj.updateDynamic("audio_muted")(audio_muted.get.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (clips != null) __obj.updateDynamic("clips")(clips.asInstanceOf[js.Any])
+    if (date_time_original != null) __obj.updateDynamic("date_time_original")(date_time_original.asInstanceOf[js.Any])
+    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
+    if (feed_preview_crop != null) __obj.updateDynamic("feed_preview_crop")(feed_preview_crop.asInstanceOf[js.Any])
+    if (filter_type != null) __obj.updateDynamic("filter_type")(filter_type.asInstanceOf[js.Any])
+    if (igtv_share_preview_to_feed != null) __obj.updateDynamic("igtv_share_preview_to_feed")(igtv_share_preview_to_feed.asInstanceOf[js.Any])
+    if (media_folder != null) __obj.updateDynamic("media_folder")(media_folder.asInstanceOf[js.Any])
+    if (!js.isUndefined(poster_frame_index)) __obj.updateDynamic("poster_frame_index")(poster_frame_index.get.asInstanceOf[js.Any])
+    if (retryContext != null) __obj.updateDynamic("retryContext")(retryContext.asInstanceOf[js.Any])
+    if (source_type != null) __obj.updateDynamic("source_type")(source_type.asInstanceOf[js.Any])
+    if (timezone_offset != null) __obj.updateDynamic("timezone_offset")(timezone_offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaConfigureToIgtvOptions]
   }
-  @scala.inline
-  implicit class MediaConfigureToIgtvOptionsOps[Self <: MediaConfigureToIgtvOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtra(value: Sourceheight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpload_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudio_muted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio_muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudio_muted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio_muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClips(value: js.Array[LengthSourcetype]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate_time_original(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date_time_original")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate_time_original: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date_time_original")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevice(value: Androidversion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeed_preview_crop(value: Cropbottom | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed_preview_crop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeed_preview_crop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feed_preview_crop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgtv_share_preview_to_feed(value: `1` | `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("igtv_share_preview_to_feed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgtv_share_preview_to_feed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("igtv_share_preview_to_feed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia_folder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_folder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia_folder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media_folder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoster_frame_index(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poster_frame_index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoster_frame_index: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poster_frame_index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryContext(value: Numreupload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource_type(value: `3` | `4`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone_offset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone_offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone_offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone_offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

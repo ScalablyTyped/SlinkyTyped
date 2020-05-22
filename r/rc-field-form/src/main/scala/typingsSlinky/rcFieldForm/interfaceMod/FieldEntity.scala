@@ -11,6 +11,7 @@ trait FieldEntity extends js.Object {
   def getErrors(): js.Array[String] = js.native
   def getMeta(): Meta = js.native
   def getNamePath(): InternalNamePath = js.native
+  def isFieldDirty(): Boolean = js.native
   def isFieldTouched(): Boolean = js.native
   def isFieldValidating(): Boolean = js.native
   def onStoreChange(store: Store, namePathList: js.Array[InternalNamePath], info: NotifyInfo): Unit = js.native

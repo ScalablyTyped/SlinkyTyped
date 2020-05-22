@@ -5,20 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2GearJointDef extends b2JointDef {
   /**
-  		* The first revolute/prismatic joint attached to the gear joint.
-  		**/
-  var joint1: b2Joint = js.native
+    * The first revolute/prismatic joint attached to the gear joint.
+    **/
+  var joint1: b2Joint
   /**
-  		* The second revolute/prismatic joint attached to the gear joint.
-  		**/
-  var joint2: b2Joint = js.native
+    * The second revolute/prismatic joint attached to the gear joint.
+    **/
+  var joint2: b2Joint
   /**
-  		* The gear ratio.
-  		**/
-  var ratio: Double = js.native
+    * The gear ratio.
+    **/
+  var ratio: Double
 }
 
 object b2GearJointDef {
@@ -37,31 +36,5 @@ object b2GearJointDef {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2GearJointDef]
   }
-  @scala.inline
-  implicit class b2GearJointDefOps[Self <: b2GearJointDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJoint1(value: b2Joint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joint1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJoint2(value: b2Joint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joint2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

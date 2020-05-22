@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdditionalProperties extends js.Object {
   /**
     * if set to `false`, all object schemas will include JSON schema
@@ -14,7 +13,7 @@ trait AdditionalProperties extends js.Object {
     *
     * @default true
     */
-  var additionalProperties: js.UndefOr[Boolean] = js.native
+  var additionalProperties: js.UndefOr[Boolean] = js.undefined
   /**
     * By providing `postProcessFnc`, you can modify or replace generated
     * schema. This function will be called recursively for all the
@@ -34,7 +33,7 @@ trait AdditionalProperties extends js.Object {
       /* defaultFnc */ js.Function2[/* schema */ JSONSchema3or4, /* obj */ js.Any, JSONSchema3or4], 
       JSONSchema3or4
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * By providing custom function you will be able to modify any object
     * value (including nested ones) and pre-process it before it gets
@@ -52,62 +51,21 @@ trait AdditionalProperties extends js.Object {
       /* defaultFunc */ js.Function1[/* obj */ js.Any, JSONSchema3or4], 
       JSONSchema3or4
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object AdditionalProperties {
   @scala.inline
-  def apply(): AdditionalProperties = {
+  def apply(
+    additionalProperties: js.UndefOr[Boolean] = js.undefined,
+    postProcessFnc: (/* schema */ JSONSchema3or4, /* obj */ js.Any, /* defaultFnc */ js.Function2[/* schema */ JSONSchema3or4, /* obj */ js.Any, JSONSchema3or4]) => JSONSchema3or4 = null,
+    preProcessFnc: (/* obj */ js.Any, /* defaultFunc */ js.Function1[/* obj */ js.Any, JSONSchema3or4]) => JSONSchema3or4 = null
+  ): AdditionalProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(additionalProperties)) __obj.updateDynamic("additionalProperties")(additionalProperties.get.asInstanceOf[js.Any])
+    if (postProcessFnc != null) __obj.updateDynamic("postProcessFnc")(js.Any.fromFunction3(postProcessFnc))
+    if (preProcessFnc != null) __obj.updateDynamic("preProcessFnc")(js.Any.fromFunction2(preProcessFnc))
     __obj.asInstanceOf[AdditionalProperties]
   }
-  @scala.inline
-  implicit class AdditionalPropertiesOps[Self <: AdditionalProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalProperties(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostProcessFnc(
-      value: (/* schema */ JSONSchema3or4, /* obj */ js.Any, /* defaultFnc */ js.Function2[/* schema */ JSONSchema3or4, /* obj */ js.Any, JSONSchema3or4]) => JSONSchema3or4
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postProcessFnc")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPostProcessFnc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postProcessFnc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreProcessFnc(
-      value: (/* obj */ js.Any, /* defaultFunc */ js.Function1[/* obj */ js.Any, JSONSchema3or4]) => JSONSchema3or4
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preProcessFnc")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPreProcessFnc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preProcessFnc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

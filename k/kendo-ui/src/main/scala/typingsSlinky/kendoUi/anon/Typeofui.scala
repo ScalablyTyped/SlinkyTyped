@@ -46,6 +46,7 @@ trait Typeofui extends js.Object {
   var Filter: TypeofFilter = js.native
   var FilterMenu: TypeofFilterMenu = js.native
   var FlatColorPicker: TypeofFlatColorPicker = js.native
+  var Form: TypeofForm = js.native
   var Gantt: TypeofGantt = js.native
   var Grid: TypeofGrid = js.native
   var ListBox: TypeofListBox = js.native
@@ -75,8 +76,11 @@ trait Typeofui extends js.Object {
   var Sortable: TypeofSortable = js.native
   var Splitter: TypeofSplitter = js.native
   var Spreadsheet: TypeofSpreadsheet = js.native
+  var Stepper: TypeofStepper = js.native
   var Switch: TypeofSwitch = js.native
   var TabStrip: TypeofTabStrip = js.native
+  var TextBox: TypeofTextBox = js.native
+  var TileLayout: TypeofTileLayout = js.native
   var TimePicker: TypeofTimePicker = js.native
   var Timeline: TypeofTimeline = js.native
   var ToolBar: TypeofToolBar = js.native

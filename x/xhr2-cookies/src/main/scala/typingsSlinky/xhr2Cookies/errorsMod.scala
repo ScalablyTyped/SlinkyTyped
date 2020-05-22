@@ -9,16 +9,36 @@ import scala.scalajs.js.annotation._
 @js.native
 object errorsMod extends js.Object {
   @js.native
-  class InvalidStateError () extends Error
+  class InvalidStateError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
-  class NetworkError () extends Error
+  class NetworkError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
-  class SecurityError () extends Error
+  class SecurityError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
-  class SyntaxError () extends Error
+  class SyntaxError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
 }
 

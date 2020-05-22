@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * {@link ObjectInspector} will not **have** any UI for it. In this case, the call to `enablePropertyUI( "Foo" )` will simply be ignored.
   * @since OOo 2.0.3
   */
-@js.native
 trait XObjectInspectorUI extends js.Object {
   /**
     * enables or disables all components belonging to the UI representation of a property
@@ -23,7 +22,7 @@ trait XObjectInspectorUI extends js.Object {
     * @param PropertyName denotes the name of the property whose UI is to be enabled or disabled.
     * @param Enable `TRUE` if and only if the UI should be disabled, `FALSE` otherwise.
     */
-  def enablePropertyUI(PropertyName: String, Enable: Boolean): Unit = js.native
+  def enablePropertyUI(PropertyName: String, Enable: Boolean): Unit
   /**
     * enables or disables the single elements which can be part of the UI representation of a property
     *
@@ -33,18 +32,18 @@ trait XObjectInspectorUI extends js.Object {
     * @param Elements a combination of {@link PropertyLineElement} flags specifying which elements are to be enabled or disabled. ;  Note that if you don't se
     * @param Enable `TRUE` if the elements denoted by _nElements should be enabled, `FALSE` if they should be disabled.
     */
-  def enablePropertyUIElements(PropertyName: String, Elements: Double, Enable: Boolean): Unit = js.native
+  def enablePropertyUIElements(PropertyName: String, Elements: Double, Enable: Boolean): Unit
   /**
     * retrieves the control currently used to display a given property
     * @param PropertyName the name of the property whose control should be retrieved
     * @returns the {@link XPropertyControl} representing the given property, or `NULL` if there is no such property control.
     */
-  def getPropertyControl(PropertyName: String): XPropertyControl = js.native
+  def getPropertyControl(PropertyName: String): XPropertyControl
   /**
     * hides the UI for a given property
     * @param PropertyName the name of the property whose UI is to be hidden
     */
-  def hidePropertyUI(PropertyName: String): Unit = js.native
+  def hidePropertyUI(PropertyName: String): Unit
   /**
     * completely rebuilds the UI for the given property.
     *
@@ -58,7 +57,7 @@ trait XObjectInspectorUI extends js.Object {
     * XPropertyHandler.describePropertyLine()}
     * @param PropertyName the name of the property whose UI is to be completely rebuilt.
     */
-  def rebuildPropertyUI(PropertyName: String): Unit = js.native
+  def rebuildPropertyUI(PropertyName: String): Unit
   /**
     * registers an observer for all property controls
     *
@@ -66,30 +65,30 @@ trait XObjectInspectorUI extends js.Object {
     * @see revokeControlObserver
     * @since OOo 2.2
     */
-  def registerControlObserver(Observer: XPropertyControlObserver): Unit = js.native
+  def registerControlObserver(Observer: XPropertyControlObserver): Unit
   /**
     * revokes a previously registered control observer
     * @see registerControlObserver
     * @since OOo 2.2
     */
-  def revokeControlObserver(Observer: XPropertyControlObserver): Unit = js.native
+  def revokeControlObserver(Observer: XPropertyControlObserver): Unit
   /**
     * sets the text of the help section, if the object inspector contains one.
     * @since OOo 2.2
     * @throws NoSupportException if the {@link XObjectInspectorModel.HasHelpSection} property requires the help section to be unavailable.
     */
-  def setHelpSectionText(HelpText: String): Unit = js.native
+  def setHelpSectionText(HelpText: String): Unit
   /**
     * shows or hides all properties belonging to a given category
     * @see LineDescriptor.Category
     * @see XObjectInspectorModel.describeCategories
     */
-  def showCategory(Category: String, Show: Boolean): Unit = js.native
+  def showCategory(Category: String, Show: Boolean): Unit
   /**
     * shows the UI for a given property
     * @param PropertyName the name of the property whose UI is to be shown
     */
-  def showPropertyUI(PropertyName: String): Unit = js.native
+  def showPropertyUI(PropertyName: String): Unit
 }
 
 object XObjectInspectorUI {
@@ -109,73 +108,5 @@ object XObjectInspectorUI {
     val __obj = js.Dynamic.literal(enablePropertyUI = js.Any.fromFunction2(enablePropertyUI), enablePropertyUIElements = js.Any.fromFunction3(enablePropertyUIElements), getPropertyControl = js.Any.fromFunction1(getPropertyControl), hidePropertyUI = js.Any.fromFunction1(hidePropertyUI), rebuildPropertyUI = js.Any.fromFunction1(rebuildPropertyUI), registerControlObserver = js.Any.fromFunction1(registerControlObserver), revokeControlObserver = js.Any.fromFunction1(revokeControlObserver), setHelpSectionText = js.Any.fromFunction1(setHelpSectionText), showCategory = js.Any.fromFunction2(showCategory), showPropertyUI = js.Any.fromFunction1(showPropertyUI))
     __obj.asInstanceOf[XObjectInspectorUI]
   }
-  @scala.inline
-  implicit class XObjectInspectorUIOps[Self <: XObjectInspectorUI] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnablePropertyUI(value: (String, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePropertyUI")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEnablePropertyUIElements(value: (String, Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePropertyUIElements")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertyControl(value: String => XPropertyControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyControl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHidePropertyUI(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidePropertyUI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRebuildPropertyUI(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebuildPropertyUI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterControlObserver(value: XPropertyControlObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerControlObserver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRevokeControlObserver(value: XPropertyControlObserver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revokeControlObserver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetHelpSectionText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHelpSectionText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShowCategory(value: (String, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCategory")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withShowPropertyUI(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPropertyUI")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

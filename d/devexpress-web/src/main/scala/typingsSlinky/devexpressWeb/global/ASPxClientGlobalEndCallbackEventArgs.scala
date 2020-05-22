@@ -16,5 +16,15 @@ class ASPxClientGlobalEndCallbackEventArgs protected ()
     * @param control An ASPxClientControl class descendant object that is the control that initiated a callback.
     */
   def this(control: typingsSlinky.devexpressWeb.ASPxClientControl) = this()
+  /**
+    * Gets a command name that identifies which client action forced a callback to occur.
+    */
+  /* CompleteClass */
+  override var command: String = js.native
+  /**
+    * Gets an object that initiated a callback.
+    */
+  /* CompleteClass */
+  override var control: typingsSlinky.devexpressWeb.ASPxClientControl = js.native
 }
 

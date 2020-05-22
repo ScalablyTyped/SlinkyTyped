@@ -5,69 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Certreq extends js.Object {
-  var certreq: js.UndefOr[Boolean] = js.native
-  var mi: MessageImprint = js.native
-  var nonce: js.UndefOr[String] = js.native
-  var policy: js.UndefOr[String] = js.native
+  var certreq: js.UndefOr[Boolean] = js.undefined
+  var mi: MessageImprint
+  var nonce: js.UndefOr[String] = js.undefined
+  var policy: js.UndefOr[String] = js.undefined
 }
 
 object Certreq {
   @scala.inline
-  def apply(mi: MessageImprint): Certreq = {
+  def apply(
+    mi: MessageImprint,
+    certreq: js.UndefOr[Boolean] = js.undefined,
+    nonce: String = null,
+    policy: String = null
+  ): Certreq = {
     val __obj = js.Dynamic.literal(mi = mi.asInstanceOf[js.Any])
+    if (!js.isUndefined(certreq)) __obj.updateDynamic("certreq")(certreq.get.asInstanceOf[js.Any])
+    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[Certreq]
   }
-  @scala.inline
-  implicit class CertreqOps[Self <: Certreq] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMi(value: MessageImprint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertreq(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certreq")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertreq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certreq")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

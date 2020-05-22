@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToCssOptions extends js.Object {
-  var allowEmpty: js.UndefOr[Boolean] = js.native
-  var indent: js.UndefOr[Double] = js.native
+  var allowEmpty: js.UndefOr[Boolean] = js.undefined
+  var indent: js.UndefOr[Double] = js.undefined
 }
 
 object ToCssOptions {
   @scala.inline
-  def apply(): ToCssOptions = {
+  def apply(allowEmpty: js.UndefOr[Boolean] = js.undefined, indent: js.UndefOr[Double] = js.undefined): ToCssOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowEmpty)) __obj.updateDynamic("allowEmpty")(allowEmpty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent)) __obj.updateDynamic("indent")(indent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToCssOptions]
   }
-  @scala.inline
-  implicit class ToCssOptionsOps[Self <: ToCssOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

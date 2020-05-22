@@ -14,18 +14,3 @@ import scala.scalajs.js.annotation._
 */
 trait TexImageSource extends js.Object
 
-object TexImageSource {
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.HTMLCanvasElement): TexImageSource = value.asInstanceOf[TexImageSource]
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.HTMLImageElement): TexImageSource = value.asInstanceOf[TexImageSource]
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.HTMLVideoElement): TexImageSource = value.asInstanceOf[TexImageSource]
-  @scala.inline
-  implicit def apply(value: ImageBitmap): TexImageSource = value.asInstanceOf[TexImageSource]
-  @scala.inline
-  implicit def apply(value: org.scalajs.dom.raw.ImageData): TexImageSource = value.asInstanceOf[TexImageSource]
-  @scala.inline
-  implicit def apply(value: OffscreenCanvas): TexImageSource = value.asInstanceOf[TexImageSource]
-}
-

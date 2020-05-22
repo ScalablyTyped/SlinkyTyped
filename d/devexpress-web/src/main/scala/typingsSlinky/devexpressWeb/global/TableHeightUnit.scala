@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TableHeightUnit")
 @js.native
 class TableHeightUnit ()
-  extends typingsSlinky.devexpressWeb.TableHeightUnit
+  extends typingsSlinky.devexpressWeb.TableHeightUnit {
+  /**
+    * Gets or sets the unit type for the table height.
+    */
+  /* CompleteClass */
+  override var `type`: typingsSlinky.devexpressWeb.TableHeightUnitType = js.native
+  /**
+    * Gets or sets the table height value in twips.
+    */
+  /* CompleteClass */
+  override var value: Double = js.native
+}
 

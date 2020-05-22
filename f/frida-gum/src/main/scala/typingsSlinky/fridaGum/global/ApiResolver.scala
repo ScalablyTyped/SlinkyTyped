@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum.global
 
+import typingsSlinky.fridaGum.ApiResolverMatch
 import typingsSlinky.fridaGum.ApiResolverType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,5 +28,12 @@ class ApiResolver protected ()
     * @param type The type of resolver to create.
     */
   def this(`type`: ApiResolverType) = this()
+  /**
+    * Performs the resolver-specific query.
+    *
+    * @param query Resolver-specific query.
+    */
+  /* CompleteClass */
+  override def enumerateMatches(query: String): js.Array[ApiResolverMatch] = js.native
 }
 

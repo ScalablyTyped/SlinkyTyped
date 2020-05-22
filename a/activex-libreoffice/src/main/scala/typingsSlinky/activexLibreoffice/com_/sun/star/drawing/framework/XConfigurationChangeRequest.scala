@@ -15,13 +15,12 @@ import scala.scalajs.js.annotation._
   * This interface is typically used internally by the {@link XConfigurationController}
   * @see XConfigurationController
   */
-@js.native
 trait XConfigurationChangeRequest extends js.Object {
   /**
     * Commit the configuration change request represented by the called object to the given configuration.
     * @param xConfiguration This is the configuration to commit the requested change to.
     */
-  def execute(xConfiguration: XConfiguration): Unit = js.native
+  def execute(xConfiguration: XConfiguration): Unit
 }
 
 object XConfigurationChangeRequest {
@@ -30,19 +29,5 @@ object XConfigurationChangeRequest {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute))
     __obj.asInstanceOf[XConfigurationChangeRequest]
   }
-  @scala.inline
-  implicit class XConfigurationChangeRequestOps[Self <: XConfigurationChangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: XConfiguration => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

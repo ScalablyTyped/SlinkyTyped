@@ -4,50 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
-  var initialUiVisible: js.UndefOr[Boolean] = js.native
-  var tabOpen: Double = js.native
-  def onChangeTab(index: Double): Unit = js.native
+  var initialUiVisible: js.UndefOr[Boolean] = js.undefined
+  var tabOpen: Double
+  def onChangeTab(index: Double): Unit
 }
 
 object Props {
   @scala.inline
-  def apply(onChangeTab: Double => Unit, tabOpen: Double): Props = {
+  def apply(onChangeTab: Double => Unit, tabOpen: Double, initialUiVisible: js.UndefOr[Boolean] = js.undefined): Props = {
     val __obj = js.Dynamic.literal(onChangeTab = js.Any.fromFunction1(onChangeTab), tabOpen = tabOpen.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialUiVisible)) __obj.updateDynamic("initialUiVisible")(initialUiVisible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnChangeTab(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeTab")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTabOpen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialUiVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialUiVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialUiVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialUiVisible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -40,7 +40,7 @@ import scala.scalajs.js.annotation._
 trait RangeBorder extends ClientObject {
   /**
     *
-    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * HTML color code representing the color of the border line, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -50,7 +50,7 @@ trait RangeBorder extends ClientObject {
   var context_RangeBorder: RequestContext = js.native
   /**
     *
-    * Constant value that indicates the specific side of the border. See Excel.BorderIndex for details. Read-only.
+    * Constant value that indicates the specific side of the border. See Excel.BorderIndex for details.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -64,7 +64,7 @@ trait RangeBorder extends ClientObject {
   var style: BorderLineStyle | None | Continuous | Dash | DashDot | DashDotDot | Dot | Double | SlantDashDot = js.native
   /**
     *
-    * Returns or sets a double that lightens or darkens a color for Range Border, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
+    * Specifies a double that lightens or darkens a color for Range Border, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
     A null value indicates that the border doesn't have uniform tintAndShade setting.
     *
     * [Api set: ExcelApi 1.9]

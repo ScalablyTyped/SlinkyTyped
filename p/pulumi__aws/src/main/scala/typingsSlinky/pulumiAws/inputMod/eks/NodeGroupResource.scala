@@ -19,41 +19,14 @@ trait NodeGroupResource extends js.Object {
 
 object NodeGroupResource {
   @scala.inline
-  def apply(): NodeGroupResource = {
+  def apply(
+    autoscalingGroups: Input[js.Array[Input[NodeGroupResourceAutoscalingGroup]]] = null,
+    remoteAccessSecurityGroupId: Input[String] = null
+  ): NodeGroupResource = {
     val __obj = js.Dynamic.literal()
+    if (autoscalingGroups != null) __obj.updateDynamic("autoscalingGroups")(autoscalingGroups.asInstanceOf[js.Any])
+    if (remoteAccessSecurityGroupId != null) __obj.updateDynamic("remoteAccessSecurityGroupId")(remoteAccessSecurityGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeGroupResource]
   }
-  @scala.inline
-  implicit class NodeGroupResourceOps[Self <: NodeGroupResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoscalingGroups(value: Input[js.Array[Input[NodeGroupResourceAutoscalingGroup]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoscalingGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteAccessSecurityGroupId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccessSecurityGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteAccessSecurityGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccessSecurityGroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,37 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Leaf extends Token {
-  var end: Double = js.native
-  var nodes: js.Array[Token] = js.native
+  var end: Double
+  var nodes: js.Array[Token]
 }
 
 object Leaf {
   @scala.inline
-  def apply(end: Double, nodes: js.Array[Token], tag: String): Leaf = {
+  def apply(
+    end: Double,
+    nodes: js.Array[Token],
+    tag: String,
+    ctag: String = null,
+    i: js.UndefOr[Double] = js.undefined,
+    n: String = null,
+    otag: String = null,
+    text: String = null
+  ): Leaf = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    if (ctag != null) __obj.updateDynamic("ctag")(ctag.asInstanceOf[js.Any])
+    if (!js.isUndefined(i)) __obj.updateDynamic("i")(i.get.asInstanceOf[js.Any])
+    if (n != null) __obj.updateDynamic("n")(n.asInstanceOf[js.Any])
+    if (otag != null) __obj.updateDynamic("otag")(otag.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Leaf]
   }
-  @scala.inline
-  implicit class LeafOps[Self <: Leaf] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodes(value: js.Array[Token]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait DescribeReservedInstancesListingsRequest extends js.Object {
 
 object DescribeReservedInstancesListingsRequest {
   @scala.inline
-  def apply(): DescribeReservedInstancesListingsRequest = {
+  def apply(
+    Filters: FilterList = null,
+    ReservedInstancesId: ReservationId = null,
+    ReservedInstancesListingId: ReservedInstancesListingId = null
+  ): DescribeReservedInstancesListingsRequest = {
     val __obj = js.Dynamic.literal()
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (ReservedInstancesId != null) __obj.updateDynamic("ReservedInstancesId")(ReservedInstancesId.asInstanceOf[js.Any])
+    if (ReservedInstancesListingId != null) __obj.updateDynamic("ReservedInstancesListingId")(ReservedInstancesListingId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeReservedInstancesListingsRequest]
   }
-  @scala.inline
-  implicit class DescribeReservedInstancesListingsRequestOps[Self <: DescribeReservedInstancesListingsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: FilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedInstancesId(value: ReservationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedInstancesId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedInstancesListingId(value: ReservedInstancesListingId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesListingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedInstancesListingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesListingId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

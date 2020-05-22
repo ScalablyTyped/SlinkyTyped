@@ -1,5 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.devextremeStrings.copy
 import typingsSlinky.devextreme.devextremeStrings.create
 import typingsSlinky.devextreme.devextremeStrings.delete
@@ -8,56 +9,49 @@ import typingsSlinky.devextreme.devextremeStrings.move
 import typingsSlinky.devextreme.devextremeStrings.refresh
 import typingsSlinky.devextreme.devextremeStrings.rename
 import typingsSlinky.devextreme.devextremeStrings.upload
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxFileManagerContextMenuItem extends dxContextMenuItem {
-  /**  */
+  /** @name dxFileManagerContextMenuItem.items */
   @JSName("items")
-  var items_dxFileManagerContextMenuItem: js.UndefOr[js.Array[dxFileManagerContextMenuItem]] = js.native
-  /** Specifies the context menu item's name. */
-  var name: js.UndefOr[create | upload | refresh | download | move | copy | rename | delete | String] = js.native
+  var items_dxFileManagerContextMenuItem: js.UndefOr[js.Array[dxFileManagerContextMenuItem]] = js.undefined
+  /** @name dxFileManagerContextMenuItem.name */
+  var name: js.UndefOr[create | upload | refresh | download | move | copy | rename | delete | String] = js.undefined
 }
 
 object dxFileManagerContextMenuItem {
   @scala.inline
-  def apply(): dxFileManagerContextMenuItem = {
+  def apply(
+    beginGroup: js.UndefOr[Boolean] = js.undefined,
+    closeMenuOnClick: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    html: String = null,
+    icon: String = null,
+    items: js.Array[dxFileManagerContextMenuItem] = null,
+    name: create | upload | refresh | download | move | copy | rename | delete | String = null,
+    selectable: js.UndefOr[Boolean] = js.undefined,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery]) = null,
+    text: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxFileManagerContextMenuItem = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(beginGroup)) __obj.updateDynamic("beginGroup")(beginGroup.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeMenuOnClick)) __obj.updateDynamic("closeMenuOnClick")(closeMenuOnClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxFileManagerContextMenuItem]
   }
-  @scala.inline
-  implicit class dxFileManagerContextMenuItemOps[Self <: dxFileManagerContextMenuItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[dxFileManagerContextMenuItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: create | upload | refresh | download | move | copy | rename | delete | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

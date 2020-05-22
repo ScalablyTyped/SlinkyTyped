@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * itself. ;  To be notified about this, interested components should register as {@link XValidityConstraintListener} .
   * @see XValidatable
   */
-@js.native
 trait XValidator extends XInterface {
   /**
     * registers the given validity listener.
@@ -26,25 +25,25 @@ trait XValidator extends XInterface {
     * @see XValidityConstraintListener
     * @throws com::sun::star::lang::NullPointerException if the given listener is `NULL`
     */
-  def addValidityConstraintListener(Listener: XValidityConstraintListener): Unit = js.native
+  def addValidityConstraintListener(Listener: XValidityConstraintListener): Unit
   /**
     * retrieves a justification for the invalidity of the given value
     * @param Value the value which has been recognized as being invalid
     * @returns a human-readable string, which explains why the given value is considered invalid.
     */
-  def explainInvalid(Value: js.Any): String = js.native
+  def explainInvalid(Value: js.Any): String
   /**
     * determines whether the given value is valid
     * @param Value the value to check for validity
     * @returns `TRUE` if and only if the value is considered valid.
     */
-  def isValid(Value: js.Any): Boolean = js.native
+  def isValid(Value: js.Any): Boolean
   /**
     * revokes the given validity listener
     * @see XValidityConstraintListener
     * @throws com::sun::star::lang::NullPointerException if the given listener is `NULL`
     */
-  def removeValidityConstraintListener(Listener: XValidityConstraintListener): Unit = js.native
+  def removeValidityConstraintListener(Listener: XValidityConstraintListener): Unit
 }
 
 object XValidator {
@@ -61,37 +60,5 @@ object XValidator {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addValidityConstraintListener = js.Any.fromFunction1(addValidityConstraintListener), explainInvalid = js.Any.fromFunction1(explainInvalid), isValid = js.Any.fromFunction1(isValid), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeValidityConstraintListener = js.Any.fromFunction1(removeValidityConstraintListener))
     __obj.asInstanceOf[XValidator]
   }
-  @scala.inline
-  implicit class XValidatorOps[Self <: XValidator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddValidityConstraintListener(value: XValidityConstraintListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addValidityConstraintListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExplainInvalid(value: js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explainInvalid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsValid(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveValidityConstraintListener(value: XValidityConstraintListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeValidityConstraintListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

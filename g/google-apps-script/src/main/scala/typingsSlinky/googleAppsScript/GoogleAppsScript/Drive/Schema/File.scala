@@ -4,907 +4,219 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait File extends js.Object {
-  var alternateLink: js.UndefOr[String] = js.native
-  var appDataContents: js.UndefOr[Boolean] = js.native
-  var canComment: js.UndefOr[Boolean] = js.native
-  var canReadRevisions: js.UndefOr[Boolean] = js.native
-  var capabilities: js.UndefOr[FileCapabilities] = js.native
-  var copyRequiresWriterPermission: js.UndefOr[Boolean] = js.native
-  var copyable: js.UndefOr[Boolean] = js.native
-  var createdDate: js.UndefOr[String] = js.native
-  var defaultOpenWithLink: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var downloadUrl: js.UndefOr[String] = js.native
-  var driveId: js.UndefOr[String] = js.native
-  var editable: js.UndefOr[Boolean] = js.native
-  var embedLink: js.UndefOr[String] = js.native
-  var etag: js.UndefOr[String] = js.native
-  var explicitlyTrashed: js.UndefOr[Boolean] = js.native
-  var exportLinks: js.UndefOr[js.Object] = js.native
-  var fileExtension: js.UndefOr[String] = js.native
-  var fileSize: js.UndefOr[String] = js.native
-  var folderColorRgb: js.UndefOr[String] = js.native
-  var fullFileExtension: js.UndefOr[String] = js.native
-  var hasAugmentedPermissions: js.UndefOr[Boolean] = js.native
-  var hasThumbnail: js.UndefOr[Boolean] = js.native
-  var headRevisionId: js.UndefOr[String] = js.native
-  var iconLink: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var imageMediaMetadata: js.UndefOr[FileImageMediaMetadata] = js.native
-  var indexableText: js.UndefOr[FileIndexableText] = js.native
-  var isAppAuthorized: js.UndefOr[Boolean] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var labels: js.UndefOr[FileLabels] = js.native
-  var lastModifyingUser: js.UndefOr[User] = js.native
-  var lastModifyingUserName: js.UndefOr[String] = js.native
-  var lastViewedByMeDate: js.UndefOr[String] = js.native
-  var markedViewedByMeDate: js.UndefOr[String] = js.native
-  var md5Checksum: js.UndefOr[String] = js.native
-  var mimeType: js.UndefOr[String] = js.native
-  var modifiedByMeDate: js.UndefOr[String] = js.native
-  var modifiedDate: js.UndefOr[String] = js.native
-  var openWithLinks: js.UndefOr[js.Object] = js.native
-  var originalFilename: js.UndefOr[String] = js.native
-  var ownedByMe: js.UndefOr[Boolean] = js.native
-  var ownerNames: js.UndefOr[js.Array[String]] = js.native
-  var owners: js.UndefOr[js.Array[User]] = js.native
-  var parents: js.UndefOr[js.Array[ParentReference]] = js.native
-  var permissionIds: js.UndefOr[js.Array[String]] = js.native
-  var permissions: js.UndefOr[js.Array[Permission]] = js.native
-  var properties: js.UndefOr[js.Array[Property]] = js.native
-  var quotaBytesUsed: js.UndefOr[String] = js.native
-  var selfLink: js.UndefOr[String] = js.native
-  var shareable: js.UndefOr[Boolean] = js.native
-  var shared: js.UndefOr[Boolean] = js.native
-  var sharedWithMeDate: js.UndefOr[String] = js.native
-  var sharingUser: js.UndefOr[User] = js.native
-  var spaces: js.UndefOr[js.Array[String]] = js.native
-  var teamDriveId: js.UndefOr[String] = js.native
-  var thumbnail: js.UndefOr[FileThumbnail] = js.native
-  var thumbnailLink: js.UndefOr[String] = js.native
-  var thumbnailVersion: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var trashedDate: js.UndefOr[String] = js.native
-  var trashingUser: js.UndefOr[User] = js.native
-  var userPermission: js.UndefOr[Permission] = js.native
-  var version: js.UndefOr[String] = js.native
-  var videoMediaMetadata: js.UndefOr[FileVideoMediaMetadata] = js.native
-  var webContentLink: js.UndefOr[String] = js.native
-  var webViewLink: js.UndefOr[String] = js.native
-  var writersCanShare: js.UndefOr[Boolean] = js.native
+  var alternateLink: js.UndefOr[String] = js.undefined
+  var appDataContents: js.UndefOr[Boolean] = js.undefined
+  var canComment: js.UndefOr[Boolean] = js.undefined
+  var canReadRevisions: js.UndefOr[Boolean] = js.undefined
+  var capabilities: js.UndefOr[FileCapabilities] = js.undefined
+  var copyRequiresWriterPermission: js.UndefOr[Boolean] = js.undefined
+  var copyable: js.UndefOr[Boolean] = js.undefined
+  var createdDate: js.UndefOr[String] = js.undefined
+  var defaultOpenWithLink: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var downloadUrl: js.UndefOr[String] = js.undefined
+  var driveId: js.UndefOr[String] = js.undefined
+  var editable: js.UndefOr[Boolean] = js.undefined
+  var embedLink: js.UndefOr[String] = js.undefined
+  var etag: js.UndefOr[String] = js.undefined
+  var explicitlyTrashed: js.UndefOr[Boolean] = js.undefined
+  var exportLinks: js.UndefOr[js.Object] = js.undefined
+  var fileExtension: js.UndefOr[String] = js.undefined
+  var fileSize: js.UndefOr[String] = js.undefined
+  var folderColorRgb: js.UndefOr[String] = js.undefined
+  var fullFileExtension: js.UndefOr[String] = js.undefined
+  var hasAugmentedPermissions: js.UndefOr[Boolean] = js.undefined
+  var hasThumbnail: js.UndefOr[Boolean] = js.undefined
+  var headRevisionId: js.UndefOr[String] = js.undefined
+  var iconLink: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var imageMediaMetadata: js.UndefOr[FileImageMediaMetadata] = js.undefined
+  var indexableText: js.UndefOr[FileIndexableText] = js.undefined
+  var isAppAuthorized: js.UndefOr[Boolean] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var labels: js.UndefOr[FileLabels] = js.undefined
+  var lastModifyingUser: js.UndefOr[User] = js.undefined
+  var lastModifyingUserName: js.UndefOr[String] = js.undefined
+  var lastViewedByMeDate: js.UndefOr[String] = js.undefined
+  var markedViewedByMeDate: js.UndefOr[String] = js.undefined
+  var md5Checksum: js.UndefOr[String] = js.undefined
+  var mimeType: js.UndefOr[String] = js.undefined
+  var modifiedByMeDate: js.UndefOr[String] = js.undefined
+  var modifiedDate: js.UndefOr[String] = js.undefined
+  var openWithLinks: js.UndefOr[js.Object] = js.undefined
+  var originalFilename: js.UndefOr[String] = js.undefined
+  var ownedByMe: js.UndefOr[Boolean] = js.undefined
+  var ownerNames: js.UndefOr[js.Array[String]] = js.undefined
+  var owners: js.UndefOr[js.Array[User]] = js.undefined
+  var parents: js.UndefOr[js.Array[ParentReference]] = js.undefined
+  var permissionIds: js.UndefOr[js.Array[String]] = js.undefined
+  var permissions: js.UndefOr[js.Array[Permission]] = js.undefined
+  var properties: js.UndefOr[js.Array[Property]] = js.undefined
+  var quotaBytesUsed: js.UndefOr[String] = js.undefined
+  var selfLink: js.UndefOr[String] = js.undefined
+  var shareable: js.UndefOr[Boolean] = js.undefined
+  var shared: js.UndefOr[Boolean] = js.undefined
+  var sharedWithMeDate: js.UndefOr[String] = js.undefined
+  var sharingUser: js.UndefOr[User] = js.undefined
+  var spaces: js.UndefOr[js.Array[String]] = js.undefined
+  var teamDriveId: js.UndefOr[String] = js.undefined
+  var thumbnail: js.UndefOr[FileThumbnail] = js.undefined
+  var thumbnailLink: js.UndefOr[String] = js.undefined
+  var thumbnailVersion: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var trashedDate: js.UndefOr[String] = js.undefined
+  var trashingUser: js.UndefOr[User] = js.undefined
+  var userPermission: js.UndefOr[Permission] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
+  var videoMediaMetadata: js.UndefOr[FileVideoMediaMetadata] = js.undefined
+  var webContentLink: js.UndefOr[String] = js.undefined
+  var webViewLink: js.UndefOr[String] = js.undefined
+  var writersCanShare: js.UndefOr[Boolean] = js.undefined
 }
 
 object File {
   @scala.inline
-  def apply(): File = {
+  def apply(
+    alternateLink: String = null,
+    appDataContents: js.UndefOr[Boolean] = js.undefined,
+    canComment: js.UndefOr[Boolean] = js.undefined,
+    canReadRevisions: js.UndefOr[Boolean] = js.undefined,
+    capabilities: FileCapabilities = null,
+    copyRequiresWriterPermission: js.UndefOr[Boolean] = js.undefined,
+    copyable: js.UndefOr[Boolean] = js.undefined,
+    createdDate: String = null,
+    defaultOpenWithLink: String = null,
+    description: String = null,
+    downloadUrl: String = null,
+    driveId: String = null,
+    editable: js.UndefOr[Boolean] = js.undefined,
+    embedLink: String = null,
+    etag: String = null,
+    explicitlyTrashed: js.UndefOr[Boolean] = js.undefined,
+    exportLinks: js.Object = null,
+    fileExtension: String = null,
+    fileSize: String = null,
+    folderColorRgb: String = null,
+    fullFileExtension: String = null,
+    hasAugmentedPermissions: js.UndefOr[Boolean] = js.undefined,
+    hasThumbnail: js.UndefOr[Boolean] = js.undefined,
+    headRevisionId: String = null,
+    iconLink: String = null,
+    id: String = null,
+    imageMediaMetadata: FileImageMediaMetadata = null,
+    indexableText: FileIndexableText = null,
+    isAppAuthorized: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    labels: FileLabels = null,
+    lastModifyingUser: User = null,
+    lastModifyingUserName: String = null,
+    lastViewedByMeDate: String = null,
+    markedViewedByMeDate: String = null,
+    md5Checksum: String = null,
+    mimeType: String = null,
+    modifiedByMeDate: String = null,
+    modifiedDate: String = null,
+    openWithLinks: js.Object = null,
+    originalFilename: String = null,
+    ownedByMe: js.UndefOr[Boolean] = js.undefined,
+    ownerNames: js.Array[String] = null,
+    owners: js.Array[User] = null,
+    parents: js.Array[ParentReference] = null,
+    permissionIds: js.Array[String] = null,
+    permissions: js.Array[Permission] = null,
+    properties: js.Array[Property] = null,
+    quotaBytesUsed: String = null,
+    selfLink: String = null,
+    shareable: js.UndefOr[Boolean] = js.undefined,
+    shared: js.UndefOr[Boolean] = js.undefined,
+    sharedWithMeDate: String = null,
+    sharingUser: User = null,
+    spaces: js.Array[String] = null,
+    teamDriveId: String = null,
+    thumbnail: FileThumbnail = null,
+    thumbnailLink: String = null,
+    thumbnailVersion: String = null,
+    title: String = null,
+    trashedDate: String = null,
+    trashingUser: User = null,
+    userPermission: Permission = null,
+    version: String = null,
+    videoMediaMetadata: FileVideoMediaMetadata = null,
+    webContentLink: String = null,
+    webViewLink: String = null,
+    writersCanShare: js.UndefOr[Boolean] = js.undefined
+  ): File = {
     val __obj = js.Dynamic.literal()
+    if (alternateLink != null) __obj.updateDynamic("alternateLink")(alternateLink.asInstanceOf[js.Any])
+    if (!js.isUndefined(appDataContents)) __obj.updateDynamic("appDataContents")(appDataContents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(canComment)) __obj.updateDynamic("canComment")(canComment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(canReadRevisions)) __obj.updateDynamic("canReadRevisions")(canReadRevisions.get.asInstanceOf[js.Any])
+    if (capabilities != null) __obj.updateDynamic("capabilities")(capabilities.asInstanceOf[js.Any])
+    if (!js.isUndefined(copyRequiresWriterPermission)) __obj.updateDynamic("copyRequiresWriterPermission")(copyRequiresWriterPermission.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(copyable)) __obj.updateDynamic("copyable")(copyable.get.asInstanceOf[js.Any])
+    if (createdDate != null) __obj.updateDynamic("createdDate")(createdDate.asInstanceOf[js.Any])
+    if (defaultOpenWithLink != null) __obj.updateDynamic("defaultOpenWithLink")(defaultOpenWithLink.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (downloadUrl != null) __obj.updateDynamic("downloadUrl")(downloadUrl.asInstanceOf[js.Any])
+    if (driveId != null) __obj.updateDynamic("driveId")(driveId.asInstanceOf[js.Any])
+    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.get.asInstanceOf[js.Any])
+    if (embedLink != null) __obj.updateDynamic("embedLink")(embedLink.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (!js.isUndefined(explicitlyTrashed)) __obj.updateDynamic("explicitlyTrashed")(explicitlyTrashed.get.asInstanceOf[js.Any])
+    if (exportLinks != null) __obj.updateDynamic("exportLinks")(exportLinks.asInstanceOf[js.Any])
+    if (fileExtension != null) __obj.updateDynamic("fileExtension")(fileExtension.asInstanceOf[js.Any])
+    if (fileSize != null) __obj.updateDynamic("fileSize")(fileSize.asInstanceOf[js.Any])
+    if (folderColorRgb != null) __obj.updateDynamic("folderColorRgb")(folderColorRgb.asInstanceOf[js.Any])
+    if (fullFileExtension != null) __obj.updateDynamic("fullFileExtension")(fullFileExtension.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasAugmentedPermissions)) __obj.updateDynamic("hasAugmentedPermissions")(hasAugmentedPermissions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasThumbnail)) __obj.updateDynamic("hasThumbnail")(hasThumbnail.get.asInstanceOf[js.Any])
+    if (headRevisionId != null) __obj.updateDynamic("headRevisionId")(headRevisionId.asInstanceOf[js.Any])
+    if (iconLink != null) __obj.updateDynamic("iconLink")(iconLink.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (imageMediaMetadata != null) __obj.updateDynamic("imageMediaMetadata")(imageMediaMetadata.asInstanceOf[js.Any])
+    if (indexableText != null) __obj.updateDynamic("indexableText")(indexableText.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAppAuthorized)) __obj.updateDynamic("isAppAuthorized")(isAppAuthorized.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (lastModifyingUser != null) __obj.updateDynamic("lastModifyingUser")(lastModifyingUser.asInstanceOf[js.Any])
+    if (lastModifyingUserName != null) __obj.updateDynamic("lastModifyingUserName")(lastModifyingUserName.asInstanceOf[js.Any])
+    if (lastViewedByMeDate != null) __obj.updateDynamic("lastViewedByMeDate")(lastViewedByMeDate.asInstanceOf[js.Any])
+    if (markedViewedByMeDate != null) __obj.updateDynamic("markedViewedByMeDate")(markedViewedByMeDate.asInstanceOf[js.Any])
+    if (md5Checksum != null) __obj.updateDynamic("md5Checksum")(md5Checksum.asInstanceOf[js.Any])
+    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
+    if (modifiedByMeDate != null) __obj.updateDynamic("modifiedByMeDate")(modifiedByMeDate.asInstanceOf[js.Any])
+    if (modifiedDate != null) __obj.updateDynamic("modifiedDate")(modifiedDate.asInstanceOf[js.Any])
+    if (openWithLinks != null) __obj.updateDynamic("openWithLinks")(openWithLinks.asInstanceOf[js.Any])
+    if (originalFilename != null) __obj.updateDynamic("originalFilename")(originalFilename.asInstanceOf[js.Any])
+    if (!js.isUndefined(ownedByMe)) __obj.updateDynamic("ownedByMe")(ownedByMe.get.asInstanceOf[js.Any])
+    if (ownerNames != null) __obj.updateDynamic("ownerNames")(ownerNames.asInstanceOf[js.Any])
+    if (owners != null) __obj.updateDynamic("owners")(owners.asInstanceOf[js.Any])
+    if (parents != null) __obj.updateDynamic("parents")(parents.asInstanceOf[js.Any])
+    if (permissionIds != null) __obj.updateDynamic("permissionIds")(permissionIds.asInstanceOf[js.Any])
+    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (quotaBytesUsed != null) __obj.updateDynamic("quotaBytesUsed")(quotaBytesUsed.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (!js.isUndefined(shareable)) __obj.updateDynamic("shareable")(shareable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shared)) __obj.updateDynamic("shared")(shared.get.asInstanceOf[js.Any])
+    if (sharedWithMeDate != null) __obj.updateDynamic("sharedWithMeDate")(sharedWithMeDate.asInstanceOf[js.Any])
+    if (sharingUser != null) __obj.updateDynamic("sharingUser")(sharingUser.asInstanceOf[js.Any])
+    if (spaces != null) __obj.updateDynamic("spaces")(spaces.asInstanceOf[js.Any])
+    if (teamDriveId != null) __obj.updateDynamic("teamDriveId")(teamDriveId.asInstanceOf[js.Any])
+    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
+    if (thumbnailLink != null) __obj.updateDynamic("thumbnailLink")(thumbnailLink.asInstanceOf[js.Any])
+    if (thumbnailVersion != null) __obj.updateDynamic("thumbnailVersion")(thumbnailVersion.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (trashedDate != null) __obj.updateDynamic("trashedDate")(trashedDate.asInstanceOf[js.Any])
+    if (trashingUser != null) __obj.updateDynamic("trashingUser")(trashingUser.asInstanceOf[js.Any])
+    if (userPermission != null) __obj.updateDynamic("userPermission")(userPermission.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (videoMediaMetadata != null) __obj.updateDynamic("videoMediaMetadata")(videoMediaMetadata.asInstanceOf[js.Any])
+    if (webContentLink != null) __obj.updateDynamic("webContentLink")(webContentLink.asInstanceOf[js.Any])
+    if (webViewLink != null) __obj.updateDynamic("webViewLink")(webViewLink.asInstanceOf[js.Any])
+    if (!js.isUndefined(writersCanShare)) __obj.updateDynamic("writersCanShare")(writersCanShare.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[File]
   }
-  @scala.inline
-  implicit class FileOps[Self <: File] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternateLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternateLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppDataContents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appDataContents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppDataContents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appDataContents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanComment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canComment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanReadRevisions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canReadRevisions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanReadRevisions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canReadRevisions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapabilities(value: FileCapabilities): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyRequiresWriterPermission(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyRequiresWriterPermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyRequiresWriterPermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyRequiresWriterPermission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOpenWithLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenWithLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOpenWithLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenWithLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriveId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmbedLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embedLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbedLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embedLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplicitlyTrashed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitlyTrashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitlyTrashed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitlyTrashed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportLinks(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolderColorRgb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderColorRgb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolderColorRgb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderColorRgb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullFileExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullFileExtension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullFileExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullFileExtension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAugmentedPermissions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAugmentedPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasAugmentedPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAugmentedPermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasThumbnail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasThumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasThumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headRevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headRevisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageMediaMetadata(value: FileImageMediaMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMediaMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageMediaMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMediaMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexableText(value: FileIndexableText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexableText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexableText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexableText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAppAuthorized(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAppAuthorized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAppAuthorized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAppAuthorized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: FileLabels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifyingUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifyingUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifyingUserName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifyingUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUserName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastViewedByMeDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastViewedByMeDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastViewedByMeDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastViewedByMeDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkedViewedByMeDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markedViewedByMeDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkedViewedByMeDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markedViewedByMeDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5Checksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5Checksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Checksum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifiedByMeDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedByMeDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifiedByMeDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedByMeDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifiedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenWithLinks(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openWithLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenWithLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openWithLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFilename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFilename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnedByMe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownedByMe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnedByMe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownedByMe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwners(value: js.Array[User]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParents(value: js.Array[ParentReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: js.Array[Permission]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Array[Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaBytesUsed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaBytesUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShared(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedWithMeDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedWithMeDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedWithMeDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharedWithMeDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharingUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharingUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharingUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharingUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpaces(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeamDriveId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeamDriveId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: FileThumbnail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrashedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trashedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrashedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trashedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrashingUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trashingUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrashingUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trashingUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPermission(value: Permission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPermission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoMediaMetadata(value: FileVideoMediaMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoMediaMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoMediaMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoMediaMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebContentLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webContentLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebContentLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webContentLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebViewLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebViewLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webViewLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWritersCanShare(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writersCanShare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWritersCanShare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writersCanShare")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

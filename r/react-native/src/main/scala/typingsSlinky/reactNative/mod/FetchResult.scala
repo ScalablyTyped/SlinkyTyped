@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FetchResult extends js.Object {
-  var NewData: UIBackgroundFetchResultNewData = js.native
-  var NoData: UIBackgroundFetchResultNoData = js.native
-  var ResultFailed: UIBackgroundFetchResultFailed = js.native
+  var NewData: UIBackgroundFetchResultNewData
+  var NoData: UIBackgroundFetchResultNoData
+  var ResultFailed: UIBackgroundFetchResultFailed
 }
 
 object FetchResult {
@@ -24,31 +23,5 @@ object FetchResult {
     val __obj = js.Dynamic.literal(NewData = NewData.asInstanceOf[js.Any], NoData = NoData.asInstanceOf[js.Any], ResultFailed = ResultFailed.asInstanceOf[js.Any])
     __obj.asInstanceOf[FetchResult]
   }
-  @scala.inline
-  implicit class FetchResultOps[Self <: FetchResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewData(value: UIBackgroundFetchResultNewData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoData(value: UIBackgroundFetchResultNoData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResultFailed(value: UIBackgroundFetchResultFailed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultFailed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

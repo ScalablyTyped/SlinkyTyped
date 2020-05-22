@@ -39,53 +39,12 @@ trait SchemaCreateTableRequest extends js.Object {
 
 object SchemaCreateTableRequest {
   @scala.inline
-  def apply(): SchemaCreateTableRequest = {
+  def apply(initialSplits: js.Array[SchemaSplit] = null, table: SchemaTable = null, tableId: String = null): SchemaCreateTableRequest = {
     val __obj = js.Dynamic.literal()
+    if (initialSplits != null) __obj.updateDynamic("initialSplits")(initialSplits.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
+    if (tableId != null) __obj.updateDynamic("tableId")(tableId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateTableRequest]
   }
-  @scala.inline
-  implicit class SchemaCreateTableRequestOps[Self <: SchemaCreateTableRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialSplits(value: js.Array[SchemaSplit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSplits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialSplits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialSplits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: SchemaTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

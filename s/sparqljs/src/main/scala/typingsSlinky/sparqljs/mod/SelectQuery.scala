@@ -9,21 +9,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectQuery
   extends Query
      with BaseQuery
      with Pattern {
-  var distinct: js.UndefOr[Boolean] = js.native
-  var from: js.UndefOr[Default] = js.native
-  var group: js.UndefOr[js.Array[Grouping]] = js.native
-  var having: js.UndefOr[js.Array[Expression]] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var order: js.UndefOr[js.Array[Ordering]] = js.native
-  var queryType: SELECT = js.native
-  var reduced: js.UndefOr[Boolean] = js.native
-  var variables: js.Array[Asterisk | Variable] = js.native
+  var distinct: js.UndefOr[Boolean] = js.undefined
+  var from: js.UndefOr[Default] = js.undefined
+  var group: js.UndefOr[js.Array[Grouping]] = js.undefined
+  var having: js.UndefOr[js.Array[Expression]] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var order: js.UndefOr[js.Array[Ordering]] = js.undefined
+  var queryType: SELECT
+  var reduced: js.UndefOr[Boolean] = js.undefined
+  var variables: js.Array[Asterisk | Variable]
 }
 
 object SelectQuery {
@@ -32,127 +31,33 @@ object SelectQuery {
     prefixes: StringDictionary[String],
     queryType: SELECT,
     `type`: query,
-    variables: js.Array[Asterisk | Variable]
+    variables: js.Array[Asterisk | Variable],
+    base: String = null,
+    distinct: js.UndefOr[Boolean] = js.undefined,
+    from: Default = null,
+    group: js.Array[Grouping] = null,
+    having: js.Array[Expression] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    order: js.Array[Ordering] = null,
+    reduced: js.UndefOr[Boolean] = js.undefined,
+    values: js.Array[ValuePatternRow] = null,
+    where: js.Array[Pattern] = null
   ): SelectQuery = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (!js.isUndefined(distinct)) __obj.updateDynamic("distinct")(distinct.get.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (having != null) __obj.updateDynamic("having")(having.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (!js.isUndefined(reduced)) __obj.updateDynamic("reduced")(reduced.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectQuery]
   }
-  @scala.inline
-  implicit class SelectQueryOps[Self <: SelectQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueryType(value: SELECT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVariables(value: js.Array[Asterisk | Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDistinct(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistinct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: Default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: js.Array[Grouping]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHaving(value: js.Array[Expression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("having")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHaving: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("having")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: js.Array[Ordering]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReduced(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reduced")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReduced: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reduced")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

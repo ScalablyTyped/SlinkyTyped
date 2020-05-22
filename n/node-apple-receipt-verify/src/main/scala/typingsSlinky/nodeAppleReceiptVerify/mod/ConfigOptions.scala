@@ -4,108 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigOptions extends js.Object {
-  var environment: js.UndefOr[js.Array[String]] = js.native
-  var excludeOldTransactions: js.UndefOr[Boolean] = js.native
-  var extended: js.UndefOr[Boolean] = js.native
-  var ignoreExpired: js.UndefOr[Boolean] = js.native
-  var ignoreExpiredError: js.UndefOr[Boolean] = js.native
-  var secret: String = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
+  var environment: js.UndefOr[js.Array[String]] = js.undefined
+  var excludeOldTransactions: js.UndefOr[Boolean] = js.undefined
+  var extended: js.UndefOr[Boolean] = js.undefined
+  var ignoreExpired: js.UndefOr[Boolean] = js.undefined
+  var ignoreExpiredError: js.UndefOr[Boolean] = js.undefined
+  var secret: String
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(secret: String): ConfigOptions = {
+  def apply(
+    secret: String,
+    environment: js.Array[String] = null,
+    excludeOldTransactions: js.UndefOr[Boolean] = js.undefined,
+    extended: js.UndefOr[Boolean] = js.undefined,
+    ignoreExpired: js.UndefOr[Boolean] = js.undefined,
+    ignoreExpiredError: js.UndefOr[Boolean] = js.undefined,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): ConfigOptions = {
     val __obj = js.Dynamic.literal(secret = secret.asInstanceOf[js.Any])
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeOldTransactions)) __obj.updateDynamic("excludeOldTransactions")(excludeOldTransactions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(extended)) __obj.updateDynamic("extended")(extended.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreExpired)) __obj.updateDynamic("ignoreExpired")(ignoreExpired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreExpiredError)) __obj.updateDynamic("ignoreExpiredError")(ignoreExpiredError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
-  @scala.inline
-  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeOldTransactions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeOldTransactions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeOldTransactions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeOldTransactions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtended(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extended")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtended: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extended")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreExpired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreExpired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreExpired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreExpired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreExpiredError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreExpiredError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreExpiredError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreExpiredError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

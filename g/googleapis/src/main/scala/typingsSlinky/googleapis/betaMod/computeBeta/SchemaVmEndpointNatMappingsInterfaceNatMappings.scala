@@ -35,65 +35,18 @@ trait SchemaVmEndpointNatMappingsInterfaceNatMappings extends js.Object {
 
 object SchemaVmEndpointNatMappingsInterfaceNatMappings {
   @scala.inline
-  def apply(): SchemaVmEndpointNatMappingsInterfaceNatMappings = {
+  def apply(
+    natIpPortRanges: js.Array[String] = null,
+    numTotalNatPorts: js.UndefOr[Double] = js.undefined,
+    sourceAliasIpRange: String = null,
+    sourceVirtualIp: String = null
+  ): SchemaVmEndpointNatMappingsInterfaceNatMappings = {
     val __obj = js.Dynamic.literal()
+    if (natIpPortRanges != null) __obj.updateDynamic("natIpPortRanges")(natIpPortRanges.asInstanceOf[js.Any])
+    if (!js.isUndefined(numTotalNatPorts)) __obj.updateDynamic("numTotalNatPorts")(numTotalNatPorts.get.asInstanceOf[js.Any])
+    if (sourceAliasIpRange != null) __obj.updateDynamic("sourceAliasIpRange")(sourceAliasIpRange.asInstanceOf[js.Any])
+    if (sourceVirtualIp != null) __obj.updateDynamic("sourceVirtualIp")(sourceVirtualIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVmEndpointNatMappingsInterfaceNatMappings]
   }
-  @scala.inline
-  implicit class SchemaVmEndpointNatMappingsInterfaceNatMappingsOps[Self <: SchemaVmEndpointNatMappingsInterfaceNatMappings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNatIpPortRanges(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("natIpPortRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNatIpPortRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("natIpPortRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumTotalNatPorts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTotalNatPorts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumTotalNatPorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTotalNatPorts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceAliasIpRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAliasIpRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAliasIpRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAliasIpRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceVirtualIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVirtualIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceVirtualIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVirtualIp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

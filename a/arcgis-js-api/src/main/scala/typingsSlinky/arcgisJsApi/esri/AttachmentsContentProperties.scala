@@ -6,41 +6,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttachmentsContentProperties extends ContentProperties {
   /**
     * A string value indicating how to display the attachment.  If `list` is specified, attachments show as links.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-AttachmentsContent.html#displayType)
     */
-  var displayType: js.UndefOr[preview | list] = js.native
+  var displayType: js.UndefOr[preview | list] = js.undefined
 }
 
 object AttachmentsContentProperties {
   @scala.inline
-  def apply(): AttachmentsContentProperties = {
+  def apply(displayType: preview | list = null): AttachmentsContentProperties = {
     val __obj = js.Dynamic.literal()
+    if (displayType != null) __obj.updateDynamic("displayType")(displayType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentsContentProperties]
   }
-  @scala.inline
-  implicit class AttachmentsContentPropertiesOps[Self <: AttachmentsContentProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayType(value: preview | list): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

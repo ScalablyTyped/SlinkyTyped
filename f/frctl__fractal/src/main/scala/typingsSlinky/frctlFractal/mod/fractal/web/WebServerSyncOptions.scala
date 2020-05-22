@@ -4,63 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebServerSyncOptions extends js.Object {
-  var browser: js.UndefOr[js.Array[String]] = js.native
+  var browser: js.UndefOr[js.Array[String]] = js.undefined
   @JSName("notify")
-  var notify_FWebServerSyncOptions: js.UndefOr[Boolean] = js.native
-  var open: js.UndefOr[Boolean] = js.native
+  var notify_FWebServerSyncOptions: js.UndefOr[Boolean] = js.undefined
+  var open: js.UndefOr[Boolean] = js.undefined
 }
 
 object WebServerSyncOptions {
   @scala.inline
-  def apply(): WebServerSyncOptions = {
+  def apply(
+    browser: js.Array[String] = null,
+    notify: js.UndefOr[Boolean] = js.undefined,
+    open: js.UndefOr[Boolean] = js.undefined
+  ): WebServerSyncOptions = {
     val __obj = js.Dynamic.literal()
+    if (browser != null) __obj.updateDynamic("browser")(browser.asInstanceOf[js.Any])
+    if (!js.isUndefined(notify)) __obj.updateDynamic("notify")(notify.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebServerSyncOptions]
   }
-  @scala.inline
-  implicit class WebServerSyncOptionsOps[Self <: WebServerSyncOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowser(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

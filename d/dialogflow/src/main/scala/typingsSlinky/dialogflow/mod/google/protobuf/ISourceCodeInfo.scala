@@ -6,43 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a SourceCodeInfo. */
-@js.native
 trait ISourceCodeInfo extends js.Object {
   /** SourceCodeInfo location */
-  var location: js.UndefOr[js.Array[ILocation] | Null] = js.native
+  var location: js.UndefOr[js.Array[ILocation] | Null] = js.undefined
 }
 
 object ISourceCodeInfo {
   @scala.inline
-  def apply(): ISourceCodeInfo = {
+  def apply(location: js.UndefOr[Null | js.Array[ILocation]] = js.undefined): ISourceCodeInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(location)) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISourceCodeInfo]
   }
-  @scala.inline
-  implicit class ISourceCodeInfoOps[Self <: ISourceCodeInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: js.Array[ILocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(null)
-        ret
-    }
-  }
-  
 }
 

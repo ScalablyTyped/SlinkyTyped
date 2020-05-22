@@ -4,50 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AllDocsMeta extends js.Object {
-  var _attachments: js.UndefOr[Attachments] = js.native
+  var _attachments: js.UndefOr[Attachments] = js.undefined
   /** Only present if `conflicts` is `true` */
-  var _conflicts: js.UndefOr[js.Array[RevisionId]] = js.native
+  var _conflicts: js.UndefOr[js.Array[RevisionId]] = js.undefined
 }
 
 object AllDocsMeta {
   @scala.inline
-  def apply(): AllDocsMeta = {
+  def apply(_attachments: Attachments = null, _conflicts: js.Array[RevisionId] = null): AllDocsMeta = {
     val __obj = js.Dynamic.literal()
+    if (_attachments != null) __obj.updateDynamic("_attachments")(_attachments.asInstanceOf[js.Any])
+    if (_conflicts != null) __obj.updateDynamic("_conflicts")(_conflicts.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllDocsMeta]
   }
-  @scala.inline
-  implicit class AllDocsMetaOps[Self <: AllDocsMeta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_attachments(value: Attachments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_attachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_attachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_conflicts(value: js.Array[RevisionId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_conflicts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_conflicts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_conflicts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

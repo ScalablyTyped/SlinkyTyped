@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TooltipLabel extends js.Object {
-  var tooltipDisplay: off | auto = js.native
-  var tooltipLabel: String = js.native
+  var tooltipDisplay: off | auto
+  var tooltipLabel: String
 }
 
 object TooltipLabel {
@@ -18,25 +17,5 @@ object TooltipLabel {
     val __obj = js.Dynamic.literal(tooltipDisplay = tooltipDisplay.asInstanceOf[js.Any], tooltipLabel = tooltipLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipLabel]
   }
-  @scala.inline
-  implicit class TooltipLabelOps[Self <: TooltipLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTooltipDisplay(value: off | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTooltipLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

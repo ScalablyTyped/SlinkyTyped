@@ -5,270 +5,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITypeaheadOptions extends js.Object {
-  var animation: js.UndefOr[String] = js.native
-  var autoSelect: js.UndefOr[Boolean] = js.native
-  var comparator: js.UndefOr[String] = js.native
-  var container: js.UndefOr[String | Boolean] = js.native
-  var delay: js.UndefOr[Double | Hide] = js.native
-  var html: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[String] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var minLength: js.UndefOr[Double] = js.native
-  var onBeforeHide: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.native
-  var onBeforeShow: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.native
-  var onHide: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.native
-  var onShow: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.native
-  var placement: js.UndefOr[String] = js.native
-  var template: js.UndefOr[String] = js.native
-  var trigger: js.UndefOr[String] = js.native
-  var trimValue: js.UndefOr[Boolean] = js.native
-  var watchOptions: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[String] = js.undefined
+  var autoSelect: js.UndefOr[Boolean] = js.undefined
+  var comparator: js.UndefOr[String] = js.undefined
+  var container: js.UndefOr[String | Boolean] = js.undefined
+  var delay: js.UndefOr[Double | Hide] = js.undefined
+  var html: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var minLength: js.UndefOr[Double] = js.undefined
+  var onBeforeHide: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.undefined
+  var onBeforeShow: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.undefined
+  var onHide: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.undefined
+  var onSelect: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.undefined
+  var onShow: js.UndefOr[js.Function1[/* typeahead */ ITypeahead, Unit]] = js.undefined
+  var placement: js.UndefOr[String] = js.undefined
+  var template: js.UndefOr[String] = js.undefined
+  var trigger: js.UndefOr[String] = js.undefined
+  var trimValue: js.UndefOr[Boolean] = js.undefined
+  var watchOptions: js.UndefOr[Boolean] = js.undefined
 }
 
 object ITypeaheadOptions {
   @scala.inline
-  def apply(): ITypeaheadOptions = {
+  def apply(
+    animation: String = null,
+    autoSelect: js.UndefOr[Boolean] = js.undefined,
+    comparator: String = null,
+    container: String | Boolean = null,
+    delay: Double | Hide = null,
+    html: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    minLength: js.UndefOr[Double] = js.undefined,
+    onBeforeHide: /* typeahead */ ITypeahead => Unit = null,
+    onBeforeShow: /* typeahead */ ITypeahead => Unit = null,
+    onHide: /* typeahead */ ITypeahead => Unit = null,
+    onSelect: /* typeahead */ ITypeahead => Unit = null,
+    onShow: /* typeahead */ ITypeahead => Unit = null,
+    placement: String = null,
+    template: String = null,
+    trigger: String = null,
+    trimValue: js.UndefOr[Boolean] = js.undefined,
+    watchOptions: js.UndefOr[Boolean] = js.undefined
+  ): ITypeaheadOptions = {
     val __obj = js.Dynamic.literal()
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoSelect)) __obj.updateDynamic("autoSelect")(autoSelect.get.asInstanceOf[js.Any])
+    if (comparator != null) __obj.updateDynamic("comparator")(comparator.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minLength)) __obj.updateDynamic("minLength")(minLength.get.asInstanceOf[js.Any])
+    if (onBeforeHide != null) __obj.updateDynamic("onBeforeHide")(js.Any.fromFunction1(onBeforeHide))
+    if (onBeforeShow != null) __obj.updateDynamic("onBeforeShow")(js.Any.fromFunction1(onBeforeShow))
+    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
+    if (!js.isUndefined(trimValue)) __obj.updateDynamic("trimValue")(trimValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(watchOptions)) __obj.updateDynamic("watchOptions")(watchOptions.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITypeaheadOptions]
   }
-  @scala.inline
-  implicit class ITypeaheadOptionsOps[Self <: ITypeaheadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double | Hide): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeHide(value: /* typeahead */ ITypeahead => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeHide")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeShow(value: /* typeahead */ ITypeahead => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeShow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: /* typeahead */ ITypeahead => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: /* typeahead */ ITypeahead => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: /* typeahead */ ITypeahead => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrigger(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrimValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trimValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrimValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trimValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatchOptions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

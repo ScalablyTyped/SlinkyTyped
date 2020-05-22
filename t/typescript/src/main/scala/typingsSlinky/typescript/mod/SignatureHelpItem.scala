@@ -11,15 +11,14 @@ import scala.scalajs.js.annotation._
   * an edit has happened, while signature help is still active, the host can ask important
   * questions like 'what parameter is the user currently contained within?'.
   */
-@js.native
 trait SignatureHelpItem extends js.Object {
-  var documentation: js.Array[SymbolDisplayPart] = js.native
-  var isVariadic: Boolean = js.native
-  var parameters: js.Array[SignatureHelpParameter] = js.native
-  var prefixDisplayParts: js.Array[SymbolDisplayPart] = js.native
-  var separatorDisplayParts: js.Array[SymbolDisplayPart] = js.native
-  var suffixDisplayParts: js.Array[SymbolDisplayPart] = js.native
-  var tags: js.Array[JSDocTagInfo] = js.native
+  var documentation: js.Array[SymbolDisplayPart]
+  var isVariadic: Boolean
+  var parameters: js.Array[SignatureHelpParameter]
+  var prefixDisplayParts: js.Array[SymbolDisplayPart]
+  var separatorDisplayParts: js.Array[SymbolDisplayPart]
+  var suffixDisplayParts: js.Array[SymbolDisplayPart]
+  var tags: js.Array[JSDocTagInfo]
 }
 
 object SignatureHelpItem {
@@ -36,55 +35,5 @@ object SignatureHelpItem {
     val __obj = js.Dynamic.literal(documentation = documentation.asInstanceOf[js.Any], isVariadic = isVariadic.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any], prefixDisplayParts = prefixDisplayParts.asInstanceOf[js.Any], separatorDisplayParts = separatorDisplayParts.asInstanceOf[js.Any], suffixDisplayParts = suffixDisplayParts.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpItem]
   }
-  @scala.inline
-  implicit class SignatureHelpItemOps[Self <: SignatureHelpItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentation(value: js.Array[SymbolDisplayPart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVariadic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariadic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Array[SignatureHelpParameter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrefixDisplayParts(value: js.Array[SymbolDisplayPart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixDisplayParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeparatorDisplayParts(value: js.Array[SymbolDisplayPart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separatorDisplayParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuffixDisplayParts(value: js.Array[SymbolDisplayPart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixDisplayParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[JSDocTagInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

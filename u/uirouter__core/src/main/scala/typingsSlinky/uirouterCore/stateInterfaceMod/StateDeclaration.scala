@@ -12,10 +12,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StateDeclaration
-  extends StateOrName
-     with _StateDeclaration {
+  extends _StateDeclaration
+     with _StateOrName {
   /**
     * Gets the internal State object API
     *
@@ -24,14 +23,14 @@ trait StateDeclaration
     * Note: the internal [[StateObject]] API is subject to change without notice
     */
   @JSName("$$state")
-  var DollarDollarstate: js.UndefOr[js.Function0[StateObject]] = js.native
+  var DollarDollarstate: js.UndefOr[js.Function0[StateObject]] = js.undefined
   /**
     * Abstract state indicator
     *
     * An abstract state can never be directly activated.
     * Use an abstract state to provide inherited properties (url, resolve, data, etc) to children states.
     */
-  var `abstract`: js.UndefOr[Boolean] = js.native
+  var `abstract`: js.UndefOr[Boolean] = js.undefined
   /**
     * An inherited property to store state data
     *
@@ -44,7 +43,7 @@ trait StateDeclaration
     * Care should be taken if you are using `hasOwnProperty` on the `data` object.
     * Properties from parent objects will return false for `hasOwnProperty`.
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
     * Marks all the state's parameters as `dynamic`.
     *
@@ -53,7 +52,7 @@ trait StateDeclaration
     *
     * Note: this value overrides the `dynamic` value on a custom parameter type ([[ParamTypeDefinition.dynamic]]).
     */
-  var dynamic: js.UndefOr[Boolean] = js.native
+  var dynamic: js.UndefOr[Boolean] = js.undefined
   /**
     * A function used to lazy load code
     *
@@ -182,7 +181,7 @@ trait StateDeclaration
       /* state */ StateDeclaration, 
       js.Promise[LazyLoadResult]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The state name (required)
     *
@@ -192,7 +191,7 @@ trait StateDeclaration
     * Note: [State] objects require unique names.
     * The name is used like an id.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * A Transition Hook called with the state is being entered.  See: [[IHookRegistry.onEnter]]
     *
@@ -214,7 +213,7 @@ trait StateDeclaration
     * });
     * ```
     */
-  var onEnter: js.UndefOr[TransitionStateHookFn] = js.native
+  var onEnter: js.UndefOr[TransitionStateHookFn] = js.undefined
   /**
     * A Transition Hook called with the state is being exited. See: [[IHookRegistry.onExit]]
     *
@@ -236,7 +235,7 @@ trait StateDeclaration
     * });
     * ```
     */
-  var onExit: js.UndefOr[TransitionStateHookFn] = js.native
+  var onExit: js.UndefOr[TransitionStateHookFn] = js.undefined
   /**
     * A [[TransitionStateHookFn]] called with the state is being retained/kept. See: [[IHookRegistry.onRetain]]
     *
@@ -258,7 +257,7 @@ trait StateDeclaration
     * });
     * ```
     */
-  var onRetain: js.UndefOr[TransitionStateHookFn] = js.native
+  var onRetain: js.UndefOr[TransitionStateHookFn] = js.undefined
   /**
     * Params configuration
     *
@@ -279,7 +278,7 @@ trait StateDeclaration
     * }
     * ```
     */
-  var params: js.UndefOr[StringDictionary[ParamDeclaration | js.Any]] = js.native
+  var params: js.UndefOr[StringDictionary[ParamDeclaration | js.Any]] = js.undefined
   /**
     * The parent state
     *
@@ -304,7 +303,7 @@ trait StateDeclaration
     * }
     * ```
     */
-  var parent: js.UndefOr[String | StateDeclaration] = js.native
+  var parent: js.UndefOr[String | StateDeclaration] = js.undefined
   /**
     * Synchronously or asynchronously redirects Transitions to a different state/params
     *
@@ -372,13 +371,13 @@ trait StateDeclaration
     */
   var redirectTo: js.UndefOr[
     RedirectToResult | (js.Function1[/* transition */ Transition, js.Promise[RedirectToResult] | RedirectToResult])
-  ] = js.native
+  ] = js.undefined
   /**
     * Marks all query parameters as [[ParamDeclaration.dynamic]]
     *
     * @deprecated use either [[dynamic]] or [[ParamDeclaration.dynamic]]
     */
-  var reloadOnSearch: js.UndefOr[Boolean] = js.native
+  var reloadOnSearch: js.UndefOr[Boolean] = js.undefined
   /**
     * Resolve - a mechanism to asynchronously fetch data, participating in the Transition lifecycle
     *
@@ -499,7 +498,7 @@ trait StateDeclaration
     * }
     * ```
     */
-  var resolve: js.UndefOr[js.Array[ResolveTypes] | StringDictionary[IInjectable]] = js.native
+  var resolve: js.UndefOr[js.Array[ResolveTypes] | StringDictionary[IInjectable]] = js.undefined
   /**
     * Sets the resolve policy defaults for all resolves on this state
     *
@@ -512,7 +511,7 @@ trait StateDeclaration
     *
     * See [[ResolvePolicy]] for more details.
     */
-  var resolvePolicy: js.UndefOr[ResolvePolicy] = js.native
+  var resolvePolicy: js.UndefOr[ResolvePolicy] = js.undefined
   /**
     * The url fragment for the state
     *
@@ -541,7 +540,7 @@ trait StateDeclaration
     * url: "/messages/:mailboxid?{before:date}&{after:date}"
     * ```
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /**
     * Named views
     *
@@ -587,234 +586,49 @@ trait StateDeclaration
     * }
     * ```
     */
-  var views: js.UndefOr[StringDictionary[ViewDeclaration]] = js.native
+  var views: js.UndefOr[StringDictionary[ViewDeclaration]] = js.undefined
 }
 
 object StateDeclaration {
   @scala.inline
-  def apply(): StateDeclaration = {
+  def apply(
+    DollarDollarstate: () => StateObject = null,
+    `abstract`: js.UndefOr[Boolean] = js.undefined,
+    data: js.Any = null,
+    dynamic: js.UndefOr[Boolean] = js.undefined,
+    lazyLoad: (/* transition */ Transition, /* state */ StateDeclaration) => js.Promise[LazyLoadResult] = null,
+    name: String = null,
+    onEnter: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult = null,
+    onExit: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult = null,
+    onRetain: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult = null,
+    params: StringDictionary[ParamDeclaration | js.Any] = null,
+    parent: String | StateDeclaration = null,
+    redirectTo: RedirectToResult | (js.Function1[/* transition */ Transition, js.Promise[RedirectToResult] | RedirectToResult]) = null,
+    reloadOnSearch: js.UndefOr[Boolean] = js.undefined,
+    resolve: js.Array[ResolveTypes] | StringDictionary[IInjectable] = null,
+    resolvePolicy: ResolvePolicy = null,
+    url: String = null,
+    views: StringDictionary[ViewDeclaration] = null
+  ): StateDeclaration = {
     val __obj = js.Dynamic.literal()
+    if (DollarDollarstate != null) __obj.updateDynamic("$$state")(js.Any.fromFunction0(DollarDollarstate))
+    if (!js.isUndefined(`abstract`)) __obj.updateDynamic("abstract")(`abstract`.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamic)) __obj.updateDynamic("dynamic")(dynamic.get.asInstanceOf[js.Any])
+    if (lazyLoad != null) __obj.updateDynamic("lazyLoad")(js.Any.fromFunction2(lazyLoad))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction2(onEnter))
+    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction2(onExit))
+    if (onRetain != null) __obj.updateDynamic("onRetain")(js.Any.fromFunction2(onRetain))
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (redirectTo != null) __obj.updateDynamic("redirectTo")(redirectTo.asInstanceOf[js.Any])
+    if (!js.isUndefined(reloadOnSearch)) __obj.updateDynamic("reloadOnSearch")(reloadOnSearch.get.asInstanceOf[js.Any])
+    if (resolve != null) __obj.updateDynamic("resolve")(resolve.asInstanceOf[js.Any])
+    if (resolvePolicy != null) __obj.updateDynamic("resolvePolicy")(resolvePolicy.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[StateDeclaration]
   }
-  @scala.inline
-  implicit class StateDeclarationOps[Self <: StateDeclaration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDollarDollarstate(value: () => StateObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$$state")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDollarDollarstate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$$state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbstract(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbstract: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazyLoad(value: (/* transition */ Transition, /* state */ StateDeclaration) => js.Promise[LazyLoadResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutLazyLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnter(value: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExit(value: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRetain(value: (/* transition */ Transition, /* state */ StateDeclaration) => HookResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRetain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRetain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: StringDictionary[ParamDeclaration | js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: String | StateDeclaration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectToFunction1(value: /* transition */ Transition => js.Promise[RedirectToResult] | RedirectToResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRedirectTo(
-      value: RedirectToResult | (js.Function1[/* transition */ Transition, js.Promise[RedirectToResult] | RedirectToResult])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReloadOnSearch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadOnSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReloadOnSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadOnSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolve(value: js.Array[ResolveTypes] | StringDictionary[IInjectable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvePolicy(value: ResolvePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViews(value: StringDictionary[ViewDeclaration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

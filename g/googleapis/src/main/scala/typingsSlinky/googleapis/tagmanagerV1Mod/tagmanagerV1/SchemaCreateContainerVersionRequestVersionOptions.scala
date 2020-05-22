@@ -26,53 +26,12 @@ trait SchemaCreateContainerVersionRequestVersionOptions extends js.Object {
 
 object SchemaCreateContainerVersionRequestVersionOptions {
   @scala.inline
-  def apply(): SchemaCreateContainerVersionRequestVersionOptions = {
+  def apply(name: String = null, notes: String = null, quickPreview: js.UndefOr[Boolean] = js.undefined): SchemaCreateContainerVersionRequestVersionOptions = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (!js.isUndefined(quickPreview)) __obj.updateDynamic("quickPreview")(quickPreview.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateContainerVersionRequestVersionOptions]
   }
-  @scala.inline
-  implicit class SchemaCreateContainerVersionRequestVersionOptionsOps[Self <: SchemaCreateContainerVersionRequestVersionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuickPreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuickPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickPreview")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,7 +13,7 @@ object StatefulTreeView {
   
   def withProps(p: TreeViewProps): SharedBuilder_TreeViewProps_1705561772 = new SharedBuilder_TreeViewProps_1705561772(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[TreeNode]): SharedBuilder_TreeViewProps_1705561772 = {
+  def apply(data: js.Array[TreeNode[_]]): SharedBuilder_TreeViewProps_1705561772 = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     new SharedBuilder_TreeViewProps_1705561772(js.Array(this.component, __props.asInstanceOf[TreeViewProps]))
   }

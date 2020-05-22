@@ -12,38 +12,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BsOption extends js.Object {
-  var HWCompositing: Boolean = js.native
-  var autoBlur: Boolean = js.native
-  var bindToWrapper: Boolean = js.native
-  var bounce: Boolean | BounceObjectOption = js.native
-  var bounceTime: Double = js.native
-  var click: Boolean = js.native
-  var dblclick: Boolean | DoubleClick = js.native
-  var deceleration: Double = js.native
-  var directionLockThreshold: Double = js.native
-  var disableMouse: Boolean = js.native
-  var disableTouch: Boolean = js.native
-  var eventPassthrough: String | Boolean = js.native
-  var flickLimitDistance: Double = js.native
-  var flickLimitTime: Double = js.native
-  var freeScroll: Boolean = js.native
+  var HWCompositing: Boolean
+  var autoBlur: Boolean
+  var bindToWrapper: Boolean
+  var bounce: Boolean | BounceObjectOption
+  var bounceTime: Double
+  var click: Boolean
+  var dblclick: Boolean | DoubleClick
+  var deceleration: Double
+  var directionLockThreshold: Double
+  var disableMouse: Boolean
+  var disableTouch: Boolean
+  var eventPassthrough: String | Boolean
+  var flickLimitDistance: Double
+  var flickLimitTime: Double
+  var freeScroll: Boolean
   // https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/options-advanced.html
-  var infinity: PartialInfinityOption | Boolean = js.native
-  var momentum: Boolean = js.native
-  var momentumLimitDistance: Double = js.native
-  var momentumLimitTime: Double = js.native
+  var infinity: PartialInfinityOption | Boolean
+  var momentum: Boolean
+  var momentumLimitDistance: Double
+  var momentumLimitTime: Double
   // mouseWheel: {
   //  speed: 20,
   //  invert: false,
   //  easeTime: 300
   // }
-  var mouseWheel: PartialMouseWheelOption | Boolean = js.native
-  var observeDOM: Boolean = js.native
-  var preventDefault: Boolean = js.native
-  var preventDefaultException: js.Object = js.native
-  var probeType: Double = js.native
+  var mouseWheel: PartialMouseWheelOption | Boolean
+  var observeDOM: Boolean
+  var preventDefault: Boolean
+  var preventDefaultException: js.Object
+  var probeType: Double
   /**
     * for pull down and refresh
     * pullDownRefresh: {
@@ -51,24 +50,24 @@ trait BsOption extends js.Object {
     *   stop: 20
     * }
     */
-  var pullDownRefresh: PartialPullDownOption | Boolean = js.native
+  var pullDownRefresh: PartialPullDownOption | Boolean
   /**
     * for pull up and load
     * pullUpLoad: {
     *   threshold: 50
     * }
     */
-  var pullUpLoad: PartialPullUpOption | Boolean = js.native
-  var resizePolling: Double = js.native
-  var scrollX: Boolean = js.native
-  var scrollY: Boolean = js.native
+  var pullUpLoad: PartialPullUpOption | Boolean
+  var resizePolling: Double
+  var scrollX: Boolean
+  var scrollY: Boolean
   /**
     * for scrollbar
     * scrollbar: {
     *   fade: true
     * }
     */
-  var scrollbar: PartialScrollBarOption | Boolean = js.native
+  var scrollbar: PartialScrollBarOption | Boolean
   /**
     * for slide
     * snap: {
@@ -80,15 +79,15 @@ trait BsOption extends js.Object {
     *   listenFlick: true
     * }
     */
-  var snap: PartialSlideOption | Boolean = js.native
-  var startX: Double = js.native
-  var startY: Double = js.native
-  var stopPropagation: Boolean = js.native
-  var swipeBounceTime: Double = js.native
-  var swipeTime: Double = js.native
-  var tap: Boolean = js.native
-  var useTransform: Boolean = js.native
-  var useTransition: Boolean = js.native
+  var snap: PartialSlideOption | Boolean
+  var startX: Double
+  var startY: Double
+  var stopPropagation: Boolean
+  var swipeBounceTime: Double
+  var swipeTime: Double
+  var tap: Boolean
+  var useTransform: Boolean
+  var useTransition: Boolean
   /**
     * for picker
     * wheel: {
@@ -97,13 +96,13 @@ trait BsOption extends js.Object {
     *   adjustTime: 400
     * }
     */
-  var wheel: PartialWheelOption | Boolean = js.native
+  var wheel: PartialWheelOption | Boolean
   // zoom: {
   //  start: 1,
   //  min: 1,
   //  max: 4
   // }
-  var zoom: PartialZoomOption | Boolean = js.native
+  var zoom: PartialZoomOption | Boolean
 }
 
 object BsOption {
@@ -154,259 +153,5 @@ object BsOption {
     val __obj = js.Dynamic.literal(HWCompositing = HWCompositing.asInstanceOf[js.Any], autoBlur = autoBlur.asInstanceOf[js.Any], bindToWrapper = bindToWrapper.asInstanceOf[js.Any], bounce = bounce.asInstanceOf[js.Any], bounceTime = bounceTime.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], deceleration = deceleration.asInstanceOf[js.Any], directionLockThreshold = directionLockThreshold.asInstanceOf[js.Any], disableMouse = disableMouse.asInstanceOf[js.Any], disableTouch = disableTouch.asInstanceOf[js.Any], eventPassthrough = eventPassthrough.asInstanceOf[js.Any], flickLimitDistance = flickLimitDistance.asInstanceOf[js.Any], flickLimitTime = flickLimitTime.asInstanceOf[js.Any], freeScroll = freeScroll.asInstanceOf[js.Any], infinity = infinity.asInstanceOf[js.Any], momentum = momentum.asInstanceOf[js.Any], momentumLimitDistance = momentumLimitDistance.asInstanceOf[js.Any], momentumLimitTime = momentumLimitTime.asInstanceOf[js.Any], mouseWheel = mouseWheel.asInstanceOf[js.Any], observeDOM = observeDOM.asInstanceOf[js.Any], preventDefault = preventDefault.asInstanceOf[js.Any], preventDefaultException = preventDefaultException.asInstanceOf[js.Any], probeType = probeType.asInstanceOf[js.Any], pullDownRefresh = pullDownRefresh.asInstanceOf[js.Any], pullUpLoad = pullUpLoad.asInstanceOf[js.Any], resizePolling = resizePolling.asInstanceOf[js.Any], scrollX = scrollX.asInstanceOf[js.Any], scrollY = scrollY.asInstanceOf[js.Any], scrollbar = scrollbar.asInstanceOf[js.Any], snap = snap.asInstanceOf[js.Any], startX = startX.asInstanceOf[js.Any], startY = startY.asInstanceOf[js.Any], stopPropagation = stopPropagation.asInstanceOf[js.Any], swipeBounceTime = swipeBounceTime.asInstanceOf[js.Any], swipeTime = swipeTime.asInstanceOf[js.Any], tap = tap.asInstanceOf[js.Any], useTransform = useTransform.asInstanceOf[js.Any], useTransition = useTransition.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[BsOption]
   }
-  @scala.inline
-  implicit class BsOptionOps[Self <: BsOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHWCompositing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HWCompositing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoBlur(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBindToWrapper(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindToWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBounce(value: Boolean | BounceObjectOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBounceTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDblclick(value: Boolean | DoubleClick): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeceleration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deceleration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirectionLockThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directionLockThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisableMouse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMouse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisableTouch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTouch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventPassthrough(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPassthrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlickLimitDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flickLimitDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlickLimitTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flickLimitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFreeScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfinity(value: PartialInfinityOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("infinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMomentum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("momentum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMomentumLimitDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("momentumLimitDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMomentumLimitTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("momentumLimitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseWheel(value: PartialMouseWheelOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObserveDOM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observeDOM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreventDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreventDefaultException(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefaultException")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProbeType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPullDownRefresh(value: PartialPullDownOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullDownRefresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPullUpLoad(value: PartialPullUpOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullUpLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResizePolling(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizePolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollbar(value: PartialScrollBarOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnap(value: PartialSlideOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStopPropagation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwipeBounceTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeBounceTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwipeTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseTransform(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseTransition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWheel(value: PartialWheelOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZoom(value: PartialZoomOption | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

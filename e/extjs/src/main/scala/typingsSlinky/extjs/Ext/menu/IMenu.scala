@@ -6,48 +6,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMenu extends IPanel {
   /** [Method] Invoked after the Component is shown after onShow is called */
   @JSName("afterShow")
-  var afterShow_IMenu: js.UndefOr[js.Function0[Unit]] = js.native
+  var afterShow_IMenu: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var allowOtherMenus: js.UndefOr[Boolean] = js.native
+  var allowOtherMenus: js.UndefOr[Boolean] = js.undefined
   /** [Method] Returns whether a menu item can be activated or not
-  		* @param item Object
-  		* @returns Boolean
-  		*/
-  var canActivateItem: js.UndefOr[js.Function1[/* item */ js.UndefOr[js.Any], Boolean]] = js.native
+    * @param item Object
+    * @returns Boolean
+    */
+  var canActivateItem: js.UndefOr[js.Function1[/* item */ js.UndefOr[js.Any], Boolean]] = js.undefined
   /** [Method] Deactivates the current active item on the menu if one exists
-  		* @param andBlurFocusedItem Object
-  		*/
-  var deactivateActiveItem: js.UndefOr[js.Function1[/* andBlurFocusedItem */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param andBlurFocusedItem Object
+    */
+  var deactivateActiveItem: js.UndefOr[js.Function1[/* andBlurFocusedItem */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var enableKeyNav: js.UndefOr[Boolean] = js.native
+  var enableKeyNav: js.UndefOr[Boolean] = js.undefined
   /** [Method] Hides this Component setting it to invisible using the configured hideMode
-  		* @returns Ext.Component this
-  		*/
+    * @returns Ext.Component this
+    */
   @JSName("hide")
-  var hide_IMenu: js.UndefOr[js.Function0[IComponent]] = js.native
+  var hide_IMenu: js.UndefOr[js.Function0[IComponent]] = js.undefined
   /** [Config Option] (Boolean) */
-  var ignoreParentClicks: js.UndefOr[Boolean] = js.native
+  var ignoreParentClicks: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
-  var isMenu: js.UndefOr[Boolean] = js.native
+  var isMenu: js.UndefOr[Boolean] = js.undefined
   /** [Method] Menus are never contained and must not ascertain their visibility from the ancestor hierarchy
-  		* @returns Boolean true if this component is visible, false otherwise.
-  		*/
+    * @returns Boolean true if this component is visible, false otherwise.
+    */
   @JSName("isVisible")
-  var isVisible_IMenu: js.UndefOr[js.Function0[Boolean]] = js.native
+  var isVisible_IMenu: js.UndefOr[js.Function0[Boolean]] = js.undefined
   /** [Property] (Ext.menu.Menu) */
-  var parentMenu: js.UndefOr[IMenu] = js.native
+  var parentMenu: js.UndefOr[IMenu] = js.undefined
   /** [Config Option] (Boolean) */
-  var plain: js.UndefOr[Boolean] = js.native
+  var plain: js.UndefOr[Boolean] = js.undefined
   /** [Method] Shows this component by the specified Component or Element
-  		* @param cmp Object
-  		* @param pos Object
-  		* @param off Object
-  		* @returns Ext.Component this
-  		*/
+    * @param cmp Object
+    * @param pos Object
+    * @param off Object
+    * @returns Ext.Component this
+    */
   @JSName("showBy")
   var showBy_IMenu: js.UndefOr[
     js.Function3[
@@ -56,182 +55,45 @@ trait IMenu extends IPanel {
       /* off */ js.UndefOr[js.Any], 
       IComponent
     ]
-  ] = js.native
+  ] = js.undefined
   /** [Config Option] (Boolean) */
-  var showSeparator: js.UndefOr[Boolean] = js.native
+  var showSeparator: js.UndefOr[Boolean] = js.undefined
 }
 
 object IMenu {
   @scala.inline
-  def apply(): IMenu = {
+  def apply(
+    IPanel: IPanel = null,
+    afterShow: () => Unit = null,
+    allowOtherMenus: js.UndefOr[Boolean] = js.undefined,
+    canActivateItem: /* item */ js.UndefOr[js.Any] => Boolean = null,
+    deactivateActiveItem: /* andBlurFocusedItem */ js.UndefOr[js.Any] => Unit = null,
+    enableKeyNav: js.UndefOr[Boolean] = js.undefined,
+    hide: () => IComponent = null,
+    ignoreParentClicks: js.UndefOr[Boolean] = js.undefined,
+    isMenu: js.UndefOr[Boolean] = js.undefined,
+    isVisible: () => Boolean = null,
+    parentMenu: IMenu = null,
+    plain: js.UndefOr[Boolean] = js.undefined,
+    showBy: (/* cmp */ js.UndefOr[js.Any], /* pos */ js.UndefOr[js.Any], /* off */ js.UndefOr[js.Any]) => IComponent = null,
+    showSeparator: js.UndefOr[Boolean] = js.undefined
+  ): IMenu = {
     val __obj = js.Dynamic.literal()
+    if (IPanel != null) js.Dynamic.global.Object.assign(__obj, IPanel)
+    if (afterShow != null) __obj.updateDynamic("afterShow")(js.Any.fromFunction0(afterShow))
+    if (!js.isUndefined(allowOtherMenus)) __obj.updateDynamic("allowOtherMenus")(allowOtherMenus.get.asInstanceOf[js.Any])
+    if (canActivateItem != null) __obj.updateDynamic("canActivateItem")(js.Any.fromFunction1(canActivateItem))
+    if (deactivateActiveItem != null) __obj.updateDynamic("deactivateActiveItem")(js.Any.fromFunction1(deactivateActiveItem))
+    if (!js.isUndefined(enableKeyNav)) __obj.updateDynamic("enableKeyNav")(enableKeyNav.get.asInstanceOf[js.Any])
+    if (hide != null) __obj.updateDynamic("hide")(js.Any.fromFunction0(hide))
+    if (!js.isUndefined(ignoreParentClicks)) __obj.updateDynamic("ignoreParentClicks")(ignoreParentClicks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMenu)) __obj.updateDynamic("isMenu")(isMenu.get.asInstanceOf[js.Any])
+    if (isVisible != null) __obj.updateDynamic("isVisible")(js.Any.fromFunction0(isVisible))
+    if (parentMenu != null) __obj.updateDynamic("parentMenu")(parentMenu.asInstanceOf[js.Any])
+    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.get.asInstanceOf[js.Any])
+    if (showBy != null) __obj.updateDynamic("showBy")(js.Any.fromFunction3(showBy))
+    if (!js.isUndefined(showSeparator)) __obj.updateDynamic("showSeparator")(showSeparator.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMenu]
   }
-  @scala.inline
-  implicit class IMenuOps[Self <: IMenu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowOtherMenus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOtherMenus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowOtherMenus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOtherMenus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanActivateItem(value: /* item */ js.UndefOr[js.Any] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canActivateItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanActivateItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canActivateItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeactivateActiveItem(value: /* andBlurFocusedItem */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deactivateActiveItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeactivateActiveItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deactivateActiveItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableKeyNav(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKeyNav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableKeyNav: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableKeyNav")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHide(value: () => IComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreParentClicks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreParentClicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreParentClicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreParentClicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentMenu(value: IMenu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlain(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBy(
-      value: (/* cmp */ js.UndefOr[js.Any], /* pos */ js.UndefOr[js.Any], /* off */ js.UndefOr[js.Any]) => IComponent
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBy")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutShowBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSeparator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSeparator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

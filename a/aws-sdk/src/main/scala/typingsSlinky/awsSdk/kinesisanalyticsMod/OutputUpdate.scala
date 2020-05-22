@@ -34,83 +34,21 @@ trait OutputUpdate extends js.Object {
 
 object OutputUpdate {
   @scala.inline
-  def apply(OutputId: Id): OutputUpdate = {
+  def apply(
+    OutputId: Id,
+    DestinationSchemaUpdate: DestinationSchema = null,
+    KinesisFirehoseOutputUpdate: KinesisFirehoseOutputUpdate = null,
+    KinesisStreamsOutputUpdate: KinesisStreamsOutputUpdate = null,
+    LambdaOutputUpdate: LambdaOutputUpdate = null,
+    NameUpdate: InAppStreamName = null
+  ): OutputUpdate = {
     val __obj = js.Dynamic.literal(OutputId = OutputId.asInstanceOf[js.Any])
+    if (DestinationSchemaUpdate != null) __obj.updateDynamic("DestinationSchemaUpdate")(DestinationSchemaUpdate.asInstanceOf[js.Any])
+    if (KinesisFirehoseOutputUpdate != null) __obj.updateDynamic("KinesisFirehoseOutputUpdate")(KinesisFirehoseOutputUpdate.asInstanceOf[js.Any])
+    if (KinesisStreamsOutputUpdate != null) __obj.updateDynamic("KinesisStreamsOutputUpdate")(KinesisStreamsOutputUpdate.asInstanceOf[js.Any])
+    if (LambdaOutputUpdate != null) __obj.updateDynamic("LambdaOutputUpdate")(LambdaOutputUpdate.asInstanceOf[js.Any])
+    if (NameUpdate != null) __obj.updateDynamic("NameUpdate")(NameUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputUpdate]
   }
-  @scala.inline
-  implicit class OutputUpdateOps[Self <: OutputUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationSchemaUpdate(value: DestinationSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSchemaUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationSchemaUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSchemaUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisFirehoseOutputUpdate(value: KinesisFirehoseOutputUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseOutputUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisFirehoseOutputUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseOutputUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisStreamsOutputUpdate(value: KinesisStreamsOutputUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamsOutputUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisStreamsOutputUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamsOutputUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambdaOutputUpdate(value: LambdaOutputUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaOutputUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaOutputUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaOutputUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameUpdate(value: InAppStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

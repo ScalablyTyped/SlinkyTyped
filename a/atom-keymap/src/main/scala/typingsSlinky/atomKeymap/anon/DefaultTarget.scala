@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultTarget extends js.Object {
-  var defaultTarget: js.UndefOr[HTMLElement] = js.native
+  var defaultTarget: js.UndefOr[HTMLElement] = js.undefined
 }
 
 object DefaultTarget {
   @scala.inline
-  def apply(): DefaultTarget = {
+  def apply(defaultTarget: HTMLElement = null): DefaultTarget = {
     val __obj = js.Dynamic.literal()
+    if (defaultTarget != null) __obj.updateDynamic("defaultTarget")(defaultTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultTarget]
   }
-  @scala.inline
-  implicit class DefaultTargetOps[Self <: DefaultTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultTarget(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTarget")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

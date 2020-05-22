@@ -4,69 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var displacement: js.UndefOr[js.Array[Double]] = js.native
-  var fill: js.UndefOr[typingsSlinky.ol.fillMod.default] = js.native
-  var radius: Double = js.native
-  var stroke: js.UndefOr[typingsSlinky.ol.strokeMod.default] = js.native
+  var displacement: js.UndefOr[js.Array[Double]] = js.undefined
+  var fill: js.UndefOr[typingsSlinky.ol.fillMod.default] = js.undefined
+  var radius: Double
+  var stroke: js.UndefOr[typingsSlinky.ol.strokeMod.default] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(radius: Double): Options = {
+  def apply(
+    radius: Double,
+    displacement: js.Array[Double] = null,
+    fill: typingsSlinky.ol.fillMod.default = null,
+    stroke: typingsSlinky.ol.strokeMod.default = null
+  ): Options = {
     val __obj = js.Dynamic.literal(radius = radius.asInstanceOf[js.Any])
+    if (displacement != null) __obj.updateDynamic("displacement")(displacement.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplacement(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: typingsSlinky.ol.fillMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStroke(value: typingsSlinky.ol.strokeMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStroke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.CellAreaLink
   * @see com.sun.star.sheet.SpreadsheetDocument
   */
-@js.native
 trait CellAreaLinks
   extends XAreaLinks
      with XEnumerationAccess

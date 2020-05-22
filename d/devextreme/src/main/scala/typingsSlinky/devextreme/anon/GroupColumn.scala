@@ -6,62 +6,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroupColumn extends js.Object {
-  var groupColumn: js.UndefOr[String] = js.native
-  var sortOrder: js.UndefOr[asc | desc] = js.native
-  var summaryItem: js.UndefOr[String | Double] = js.native
+  var groupColumn: js.UndefOr[String] = js.undefined
+  var sortOrder: js.UndefOr[asc | desc] = js.undefined
+  var summaryItem: js.UndefOr[String | Double] = js.undefined
 }
 
 object GroupColumn {
   @scala.inline
-  def apply(): GroupColumn = {
+  def apply(groupColumn: String = null, sortOrder: asc | desc = null, summaryItem: String | Double = null): GroupColumn = {
     val __obj = js.Dynamic.literal()
+    if (groupColumn != null) __obj.updateDynamic("groupColumn")(groupColumn.asInstanceOf[js.Any])
+    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
+    if (summaryItem != null) __obj.updateDynamic("summaryItem")(summaryItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupColumn]
   }
-  @scala.inline
-  implicit class GroupColumnOps[Self <: GroupColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: asc | desc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryItem(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummaryItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryItem")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

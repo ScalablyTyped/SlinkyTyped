@@ -42,113 +42,26 @@ trait OptionGroup extends js.Object {
 
 object OptionGroup {
   @scala.inline
-  def apply(): OptionGroup = {
+  def apply(
+    AllowsVpcAndNonVpcInstanceMemberships: js.UndefOr[Boolean] = js.undefined,
+    EngineName: String = null,
+    MajorEngineVersion: String = null,
+    OptionGroupArn: String = null,
+    OptionGroupDescription: String = null,
+    OptionGroupName: String = null,
+    Options: OptionsList = null,
+    VpcId: String = null
+  ): OptionGroup = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AllowsVpcAndNonVpcInstanceMemberships)) __obj.updateDynamic("AllowsVpcAndNonVpcInstanceMemberships")(AllowsVpcAndNonVpcInstanceMemberships.get.asInstanceOf[js.Any])
+    if (EngineName != null) __obj.updateDynamic("EngineName")(EngineName.asInstanceOf[js.Any])
+    if (MajorEngineVersion != null) __obj.updateDynamic("MajorEngineVersion")(MajorEngineVersion.asInstanceOf[js.Any])
+    if (OptionGroupArn != null) __obj.updateDynamic("OptionGroupArn")(OptionGroupArn.asInstanceOf[js.Any])
+    if (OptionGroupDescription != null) __obj.updateDynamic("OptionGroupDescription")(OptionGroupDescription.asInstanceOf[js.Any])
+    if (OptionGroupName != null) __obj.updateDynamic("OptionGroupName")(OptionGroupName.asInstanceOf[js.Any])
+    if (Options != null) __obj.updateDynamic("Options")(Options.asInstanceOf[js.Any])
+    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionGroup]
   }
-  @scala.inline
-  implicit class OptionGroupOps[Self <: OptionGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowsVpcAndNonVpcInstanceMemberships(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowsVpcAndNonVpcInstanceMemberships")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowsVpcAndNonVpcInstanceMemberships: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowsVpcAndNonVpcInstanceMemberships")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorEngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorEngineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionGroupArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionGroupDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionGroupDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: OptionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

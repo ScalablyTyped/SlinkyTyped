@@ -2,124 +2,59 @@ package typingsSlinky.nodeDownloaderHelper.mod
 
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.httpMod.RequestOptions
+import typingsSlinky.nodeDownloaderHelper.anon.Delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
    // Custom HTTP Header ex: Authorization, User-Agent
-  var fileName: js.UndefOr[String] = js.native
+  var fileName: js.UndefOr[String] = js.undefined
    // Custom filename when saved
-  var forceResume: js.UndefOr[Boolean] = js.native
+  var forceResume: js.UndefOr[Boolean] = js.undefined
    // Request Method Verb
-  var headers: js.UndefOr[OutgoingHttpHeaders] = js.native
+  var headers: js.UndefOr[OutgoingHttpHeaders] = js.undefined
    // if true it will override the file, otherwise will append '(number)' to the end of file
-  var httpRequestOptions: js.UndefOr[RequestOptions] = js.native
+  var httpRequestOptions: js.UndefOr[RequestOptions] = js.undefined
    // Override the http request options
-  var httpsRequestOptions: js.UndefOr[typingsSlinky.node.httpsMod.RequestOptions] = js.native
-  var method: js.UndefOr[String] = js.native
+  var httpsRequestOptions: js.UndefOr[typingsSlinky.node.httpsMod.RequestOptions] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
    // If the server does not return the "accept-ranges" header, can be force if it does support it
-  var `override`: js.UndefOr[Boolean] = js.native
+  var `override`: js.UndefOr[Boolean] = js.undefined
+   // remove the file when is stopped (default:true)
+  var removeOnFail: js.UndefOr[Boolean] = js.undefined
+   // { maxRetries: number, delay: number in ms } or false to disable (default)
+  var removeOnStop: js.UndefOr[Boolean] = js.undefined
+   // Override the https request options, ex: to add SSL Certs
+  var retry: js.UndefOr[Delay] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    fileName: String = null,
+    forceResume: js.UndefOr[Boolean] = js.undefined,
+    headers: OutgoingHttpHeaders = null,
+    httpRequestOptions: RequestOptions = null,
+    httpsRequestOptions: typingsSlinky.node.httpsMod.RequestOptions = null,
+    method: String = null,
+    `override`: js.UndefOr[Boolean] = js.undefined,
+    removeOnFail: js.UndefOr[Boolean] = js.undefined,
+    removeOnStop: js.UndefOr[Boolean] = js.undefined,
+    retry: Delay = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceResume)) __obj.updateDynamic("forceResume")(forceResume.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (httpRequestOptions != null) __obj.updateDynamic("httpRequestOptions")(httpRequestOptions.asInstanceOf[js.Any])
+    if (httpsRequestOptions != null) __obj.updateDynamic("httpsRequestOptions")(httpsRequestOptions.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(`override`)) __obj.updateDynamic("override")(`override`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeOnFail)) __obj.updateDynamic("removeOnFail")(removeOnFail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeOnStop)) __obj.updateDynamic("removeOnStop")(removeOnStop.get.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceResume(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceResume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceResume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceResume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: OutgoingHttpHeaders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpRequestOptions(value: RequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequestOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRequestOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequestOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpsRequestOptions(value: typingsSlinky.node.httpsMod.RequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsRequestOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpsRequestOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsRequestOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverride(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("override")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("override")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

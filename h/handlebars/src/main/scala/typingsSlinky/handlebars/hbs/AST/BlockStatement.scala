@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlockStatement extends Node {
-  var closeStrip: StripFlags = js.native
-  var hash: Hash = js.native
-  var inverse: Program = js.native
-  var inverseStrip: StripFlags = js.native
-  var openStrip: StripFlags = js.native
-  var params: js.Array[Expression] = js.native
-  var path: PathExpression = js.native
-  var program: Program = js.native
+  var closeStrip: StripFlags
+  var hash: Hash
+  var inverse: Program
+  var inverseStrip: StripFlags
+  var openStrip: StripFlags
+  var params: js.Array[Expression]
+  var path: PathExpression
+  var program: Program
   @JSName("type")
-  var type_BlockStatement: typingsSlinky.handlebars.handlebarsStrings.BlockStatement = js.native
+  var type_BlockStatement: typingsSlinky.handlebars.handlebarsStrings.BlockStatement
 }
 
 object BlockStatement {
@@ -36,67 +35,5 @@ object BlockStatement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockStatement]
   }
-  @scala.inline
-  implicit class BlockStatementOps[Self <: BlockStatement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseStrip(value: StripFlags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStrip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHash(value: Hash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInverse(value: Program): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInverseStrip(value: StripFlags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverseStrip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenStrip(value: StripFlags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openStrip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Array[Expression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: PathExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgram(value: Program): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.handlebars.handlebarsStrings.BlockStatement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait CreateBrokerResponse extends js.Object {
 
 object CreateBrokerResponse {
   @scala.inline
-  def apply(): CreateBrokerResponse = {
+  def apply(BrokerArn: string = null, BrokerId: string = null): CreateBrokerResponse = {
     val __obj = js.Dynamic.literal()
+    if (BrokerArn != null) __obj.updateDynamic("BrokerArn")(BrokerArn.asInstanceOf[js.Any])
+    if (BrokerId != null) __obj.updateDynamic("BrokerId")(BrokerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBrokerResponse]
   }
-  @scala.inline
-  implicit class CreateBrokerResponseOps[Self <: CreateBrokerResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrokerArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokerArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrokerId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

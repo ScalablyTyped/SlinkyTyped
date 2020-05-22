@@ -7,9 +7,10 @@ import scala.scalajs.js.annotation._
 /** A file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system. */
 @js.native
 trait Blob
-  extends BlobPart
-     with BodyInit
-     with ImageBitmapSource {
+  extends ImageBitmapSource
+     with MediaProvider
+     with _BlobPart
+     with _BodyInit {
   val size: Double = js.native
   val `type`: java.lang.String = js.native
   def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native

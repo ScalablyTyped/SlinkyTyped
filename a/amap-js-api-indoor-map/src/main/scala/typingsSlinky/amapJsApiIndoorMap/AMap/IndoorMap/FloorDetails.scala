@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FloorDetails extends js.Object {
   /**
     * 各楼层索引
     */
-  var floor_indexs: js.Array[Double] = js.native
+  var floor_indexs: js.Array[Double]
   /**
     * 各楼层名字
     */
-  var floor_names: js.Array[String] = js.native
+  var floor_names: js.Array[String]
   /**
     * 各楼层英文
     */
-  var floor_nonas: js.Array[String] = js.native
+  var floor_nonas: js.Array[String]
 }
 
 object FloorDetails {
@@ -26,31 +25,5 @@ object FloorDetails {
     val __obj = js.Dynamic.literal(floor_indexs = floor_indexs.asInstanceOf[js.Any], floor_names = floor_names.asInstanceOf[js.Any], floor_nonas = floor_nonas.asInstanceOf[js.Any])
     __obj.asInstanceOf[FloorDetails]
   }
-  @scala.inline
-  implicit class FloorDetailsOps[Self <: FloorDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFloor_indexs(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floor_indexs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFloor_names(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floor_names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFloor_nonas(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floor_nonas")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

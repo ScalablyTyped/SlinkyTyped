@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MessagingStatics extends js.Object {
-  var RemoteMessage: Instantiable0[typingsSlinky.reactNativeFirebase.mod.RNFirebase.messaging.RemoteMessage] = js.native
+  var RemoteMessage: Instantiable0[typingsSlinky.reactNativeFirebase.mod.RNFirebase.messaging.RemoteMessage]
 }
 
 object MessagingStatics {
@@ -16,19 +15,5 @@ object MessagingStatics {
     val __obj = js.Dynamic.literal(RemoteMessage = RemoteMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessagingStatics]
   }
-  @scala.inline
-  implicit class MessagingStaticsOps[Self <: MessagingStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemoteMessage(value: Instantiable0[RemoteMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

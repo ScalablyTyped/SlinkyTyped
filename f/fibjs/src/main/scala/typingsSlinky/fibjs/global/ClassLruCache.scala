@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 class ClassLruCache protected ()
   extends typingsSlinky.fibjs.ClassLruCache {
   /**
-  	 * 
-  	 * @brief LruCache 对象构造函数
-  	 * @param size 缓存最大尺寸
-  	 * @param timeout 元素失效时间，单位是 ms，小于等于 0 不失效，缺省为 0
-  	 * 
-  	 * 
-  	 * 
-  	 */
+    * 
+    * @brief LruCache 对象构造函数
+    * @param size 缓存最大尺寸
+    * @param timeout 元素失效时间，单位是 ms，小于等于 0 不失效，缺省为 0
+    * 
+    * 
+    * 
+    */
   def this(size: Double) = this()
   def this(size: Double, timeout: Double) = this()
 }

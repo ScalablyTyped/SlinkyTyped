@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Inherit from L.Editable.PathEditor.
   */
-@js.native
 trait PolylineEditor extends PathEditor {
   /**
     * Set up drawing tools to continue the line backward.
     */
-  def continueBackward(): Unit = js.native
+  def continueBackward(): Unit
   /**
     * Set up drawing tools to continue the line forward.
     */
-  def continueForward(): Unit = js.native
+  def continueForward(): Unit
 }
 
 object PolylineEditor {
@@ -31,25 +30,5 @@ object PolylineEditor {
     val __obj = js.Dynamic.literal(continueBackward = js.Any.fromFunction0(continueBackward), continueForward = js.Any.fromFunction0(continueForward), disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), reset = js.Any.fromFunction0(reset))
     __obj.asInstanceOf[PolylineEditor]
   }
-  @scala.inline
-  implicit class PolylineEditorOps[Self <: PolylineEditor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContinueBackward(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueBackward")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withContinueForward(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueForward")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

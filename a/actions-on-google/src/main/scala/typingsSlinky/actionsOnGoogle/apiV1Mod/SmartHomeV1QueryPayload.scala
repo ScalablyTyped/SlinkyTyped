@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SmartHomeV1QueryPayload extends js.Object {
-  var devices: ApiClientObjectMap[_] = js.native
+  var devices: ApiClientObjectMap[_]
 }
 
 object SmartHomeV1QueryPayload {
@@ -16,19 +15,5 @@ object SmartHomeV1QueryPayload {
     val __obj = js.Dynamic.literal(devices = devices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeV1QueryPayload]
   }
-  @scala.inline
-  implicit class SmartHomeV1QueryPayloadOps[Self <: SmartHomeV1QueryPayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevices(value: ApiClientObjectMap[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,23 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates a new instance of the ImageEncodingProperties class. */
 class ImageEncodingProperties ()
-  extends typingsSlinky.winrtUwp.Windows.Media.MediaProperties.ImageEncodingProperties
+  extends typingsSlinky.winrtUwp.Windows.Media.MediaProperties.ImageEncodingProperties {
+  /** Gets or sets the image height. */
+  /* CompleteClass */
+  override var height: Double = js.native
+  /** Gets additional format properties for the image stream. */
+  /* CompleteClass */
+  override var properties: typingsSlinky.winrtUwp.Windows.Media.MediaProperties.MediaPropertySet = js.native
+  /** Gets or sets the subtype of the format. */
+  /* CompleteClass */
+  override var subtype: String = js.native
+  /** Gets the format type. */
+  /* CompleteClass */
+  override var `type`: String = js.native
+  /** Gets or sets the image width. */
+  /* CompleteClass */
+  override var width: Double = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.Media.MediaProperties.ImageEncodingProperties")

@@ -6,67 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** State information for the conversation. To maintain state, include the context from the previous response. */
-@js.native
 trait Context
   extends /** DialogNodeOutput accepts additional properties. */
 /* propName */ StringDictionary[js.Any] {
   /** The unique identifier of the conversation. */
-  var conversation_id: js.UndefOr[String] = js.native
+  var conversation_id: js.UndefOr[String] = js.undefined
   /** Metadata related to the message. */
-  var metadata: js.UndefOr[MessageContextMetadata] = js.native
+  var metadata: js.UndefOr[MessageContextMetadata] = js.undefined
   /** For internal use only. */
-  var system: js.UndefOr[SystemResponse] = js.native
+  var system: js.UndefOr[SystemResponse] = js.undefined
 }
 
 object Context {
   @scala.inline
-  def apply(): Context = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    conversation_id: String = null,
+    metadata: MessageContextMetadata = null,
+    system: SystemResponse = null
+  ): Context = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (conversation_id != null) __obj.updateDynamic("conversation_id")(conversation_id.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (system != null) __obj.updateDynamic("system")(system.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
   }
-  @scala.inline
-  implicit class ContextOps[Self <: Context] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversation_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversation_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversation_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversation_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: MessageContextMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystem(value: SystemResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,77 +16,20 @@ trait VpnConnectionVgwTelemetry extends js.Object {
 
 object VpnConnectionVgwTelemetry {
   @scala.inline
-  def apply(): VpnConnectionVgwTelemetry = {
+  def apply(
+    acceptedRouteCount: Input[Double] = null,
+    lastStatusChange: Input[String] = null,
+    outsideIpAddress: Input[String] = null,
+    status: Input[String] = null,
+    statusMessage: Input[String] = null
+  ): VpnConnectionVgwTelemetry = {
     val __obj = js.Dynamic.literal()
+    if (acceptedRouteCount != null) __obj.updateDynamic("acceptedRouteCount")(acceptedRouteCount.asInstanceOf[js.Any])
+    if (lastStatusChange != null) __obj.updateDynamic("lastStatusChange")(lastStatusChange.asInstanceOf[js.Any])
+    if (outsideIpAddress != null) __obj.updateDynamic("outsideIpAddress")(outsideIpAddress.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpnConnectionVgwTelemetry]
   }
-  @scala.inline
-  implicit class VpnConnectionVgwTelemetryOps[Self <: VpnConnectionVgwTelemetry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptedRouteCount(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedRouteCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptedRouteCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedRouteCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStatusChange(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStatusChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutsideIpAddress(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outsideIpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutsideIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outsideIpAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

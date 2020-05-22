@@ -14,55 +14,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumberLiteral
   extends PrimaryExpression
      with BaseASTNode
      with AssemblyItem {
-  var number: String = js.native
-  var subdenomination: Null | wei | szabo | finney | ether | seconds | minutes | hours | days | weeks | years = js.native
+  var number: String
+  var subdenomination: Null | wei | szabo | finney | ether | seconds | minutes | hours | days | weeks | years
   @JSName("type")
-  var type_NumberLiteral: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.NumberLiteral = js.native
+  var type_NumberLiteral: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.NumberLiteral
 }
 
 object NumberLiteral {
   @scala.inline
-  def apply(number: String, `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.NumberLiteral): NumberLiteral = {
-    val __obj = js.Dynamic.literal(number = number.asInstanceOf[js.Any])
+  def apply(
+    number: String,
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.NumberLiteral,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null,
+    subdenomination: wei | szabo | finney | ether | seconds | minutes | hours | days | weeks | years = null
+  ): NumberLiteral = {
+    val __obj = js.Dynamic.literal(number = number.asInstanceOf[js.Any], subdenomination = subdenomination.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberLiteral]
   }
-  @scala.inline
-  implicit class NumberLiteralOps[Self <: NumberLiteral] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.NumberLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubdenomination(value: wei | szabo | finney | ether | seconds | minutes | hours | days | weeks | years): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdenomination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubdenominationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdenomination")(null)
-        ret
-    }
-  }
-  
 }
 

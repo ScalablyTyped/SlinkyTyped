@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.DataPilotSourceDimension
   * @see com.sun.star.sheet.DataPilotSource
   */
-@js.native
 trait DataPilotSourceHierarchy
   extends XNamed
      with XLevelsSupplier

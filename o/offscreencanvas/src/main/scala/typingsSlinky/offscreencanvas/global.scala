@@ -2,8 +2,12 @@ package typingsSlinky.offscreencanvas
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.std.CanvasDirection
+import typingsSlinky.std.CanvasTextAlign
+import typingsSlinky.std.CanvasTextBaseline
 import typingsSlinky.std.ImageBitmap
 import typingsSlinky.std.ImageBitmapSource
+import typingsSlinky.std.ImageSmoothingQuality
 import typingsSlinky.std.Transferable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +24,44 @@ object global extends js.Object {
   
   @js.native
   class OffscreenCanvasRenderingContext2D ()
-    extends typingsSlinky.offscreencanvas.OffscreenCanvasRenderingContext2D
+    extends typingsSlinky.offscreencanvas.OffscreenCanvasRenderingContext2D {
+    /* CompleteClass */
+    override var direction: CanvasDirection = js.native
+    /* CompleteClass */
+    override var filter: String = js.native
+    /* CompleteClass */
+    override var font: String = js.native
+    /* CompleteClass */
+    override var globalAlpha: Double = js.native
+    /* CompleteClass */
+    override var globalCompositeOperation: String = js.native
+    /* CompleteClass */
+    override var imageSmoothingEnabled: Boolean = js.native
+    /* CompleteClass */
+    override var imageSmoothingQuality: ImageSmoothingQuality = js.native
+    /* CompleteClass */
+    override var shadowBlur: Double = js.native
+    /* CompleteClass */
+    override var shadowColor: String = js.native
+    /* CompleteClass */
+    override var shadowOffsetX: Double = js.native
+    /* CompleteClass */
+    override var shadowOffsetY: Double = js.native
+    /* CompleteClass */
+    override var textAlign: CanvasTextAlign = js.native
+    /* CompleteClass */
+    override var textBaseline: CanvasTextBaseline = js.native
+    /* CompleteClass */
+    override def clearRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
+    /* CompleteClass */
+    override def fillRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
+    /* CompleteClass */
+    override def restore(): Unit = js.native
+    /* CompleteClass */
+    override def save(): Unit = js.native
+    /* CompleteClass */
+    override def strokeRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native
+  }
   
   def createImageBitmap(image: typingsSlinky.offscreencanvas.OffscreenCanvas): js.Promise[ImageBitmap] = js.native
   def createImageBitmap(

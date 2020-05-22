@@ -9,101 +9,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Inverted extends js.Object {
-  var inverted: js.UndefOr[Boolean] = js.native
-  var logarithmBase: js.UndefOr[Double] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[continuous | logarithmic] = js.native
-  var valueType: js.UndefOr[datetime | numeric | string_] = js.native
+  var inverted: js.UndefOr[Boolean] = js.undefined
+  var logarithmBase: js.UndefOr[Double] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[continuous | logarithmic] = js.undefined
+  var valueType: js.UndefOr[datetime | numeric | string_] = js.undefined
 }
 
 object Inverted {
   @scala.inline
-  def apply(): Inverted = {
+  def apply(
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    logarithmBase: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    `type`: continuous | logarithmic = null,
+    valueType: datetime | numeric | string_ = null
+  ): Inverted = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logarithmBase)) __obj.updateDynamic("logarithmBase")(logarithmBase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (valueType != null) __obj.updateDynamic("valueType")(valueType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Inverted]
   }
-  @scala.inline
-  implicit class InvertedOps[Self <: Inverted] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogarithmBase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogarithmBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: continuous | logarithmic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueType(value: datetime | numeric | string_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,53 +30,12 @@ trait SchemaObservation extends js.Object {
 
 object SchemaObservation {
   @scala.inline
-  def apply(): SchemaObservation = {
+  def apply(advertisedId: SchemaAdvertisedId = null, telemetry: String = null, timestampMs: String = null): SchemaObservation = {
     val __obj = js.Dynamic.literal()
+    if (advertisedId != null) __obj.updateDynamic("advertisedId")(advertisedId.asInstanceOf[js.Any])
+    if (telemetry != null) __obj.updateDynamic("telemetry")(telemetry.asInstanceOf[js.Any])
+    if (timestampMs != null) __obj.updateDynamic("timestampMs")(timestampMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaObservation]
   }
-  @scala.inline
-  implicit class SchemaObservationOps[Self <: SchemaObservation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertisedId(value: SchemaAdvertisedId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertisedId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTelemetry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTelemetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampMs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

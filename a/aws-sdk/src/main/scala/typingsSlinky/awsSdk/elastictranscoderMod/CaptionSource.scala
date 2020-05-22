@@ -30,77 +30,20 @@ trait CaptionSource extends js.Object {
 
 object CaptionSource {
   @scala.inline
-  def apply(): CaptionSource = {
+  def apply(
+    Encryption: Encryption = null,
+    Key: LongKey = null,
+    Label: Name = null,
+    Language: Key = null,
+    TimeOffset: TimeOffset = null
+  ): CaptionSource = {
     val __obj = js.Dynamic.literal()
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
+    if (Language != null) __obj.updateDynamic("Language")(Language.asInstanceOf[js.Any])
+    if (TimeOffset != null) __obj.updateDynamic("TimeOffset")(TimeOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionSource]
   }
-  @scala.inline
-  implicit class CaptionSourceOps[Self <: CaptionSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryption(value: Encryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: LongKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeOffset(value: TimeOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

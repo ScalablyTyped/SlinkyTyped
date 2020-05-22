@@ -6,9 +6,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPicker.dateBodyMod.DateBodyProps
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Locale
-import typingsSlinky.rcPicker.rcPickerStrings.key
-import typingsSlinky.rcPicker.rcPickerStrings.mouse
-import typingsSlinky.rcPicker.rcPickerStrings.submit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,12 +38,12 @@ object DateBody {
   def apply[DateType](
     generateConfig: GenerateConfig[DateType],
     locale: Locale,
-    onSelect: (DateType, /* type */ key | mouse | submit) => Unit,
+    onSelect: DateType => Unit,
     prefixCls: String,
     rowCount: Double,
     viewDate: DateType
   ): Builder[DateType] = {
-    val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction2(onSelect), prefixCls = prefixCls.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], viewDate = viewDate.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction1(onSelect), prefixCls = prefixCls.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], viewDate = viewDate.asInstanceOf[js.Any])
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[DateBodyProps[DateType]]))
   }
 }

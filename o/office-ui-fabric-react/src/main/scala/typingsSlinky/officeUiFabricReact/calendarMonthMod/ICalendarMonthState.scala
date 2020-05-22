@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICalendarMonthState extends js.Object {
   /** State used to show/hide month picker */
-  var isYearPickerVisible: js.UndefOr[Boolean] = js.native
+  var isYearPickerVisible: js.UndefOr[Boolean] = js.undefined
 }
 
 object ICalendarMonthState {
   @scala.inline
-  def apply(): ICalendarMonthState = {
+  def apply(isYearPickerVisible: js.UndefOr[Boolean] = js.undefined): ICalendarMonthState = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isYearPickerVisible)) __obj.updateDynamic("isYearPickerVisible")(isYearPickerVisible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICalendarMonthState]
   }
-  @scala.inline
-  implicit class ICalendarMonthStateOps[Self <: ICalendarMonthState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsYearPickerVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isYearPickerVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsYearPickerVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isYearPickerVisible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

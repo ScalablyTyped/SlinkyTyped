@@ -8,6 +8,22 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends KeyAgreeRecipientInfo {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var keyEncryptionAlgorithm: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
+  /* CompleteClass */
+  override var originator: typingsSlinky.pkijs.originatorIdentifierOrKeyMod.default = js.native
+  /* CompleteClass */
+  override var recipientCertificate: typingsSlinky.pkijs.certificateMod.default = js.native
+  /* CompleteClass */
+  override var recipientEncryptedKeys: typingsSlinky.pkijs.recipientEncryptedKeysMod.default = js.native
+  /* CompleteClass */
+  override var version: Double = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

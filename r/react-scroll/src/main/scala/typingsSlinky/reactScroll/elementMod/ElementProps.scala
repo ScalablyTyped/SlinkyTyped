@@ -7,33 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElementProps
   extends AllHTMLAttributes[HTMLDivElement]
      with ClassAttributes[HTMLDivElement] {
   @JSName("name")
-  var name_ElementProps: String = js.native
+  var name_ElementProps: String
 }
 
 object ElementProps {
   @scala.inline
-  def apply(name: String): ElementProps = {
+  def apply(
+    name: String,
+    AllHTMLAttributes: AllHTMLAttributes[HTMLDivElement] = null,
+    ClassAttributes: ClassAttributes[HTMLDivElement] = null
+  ): ElementProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
     __obj.asInstanceOf[ElementProps]
   }
-  @scala.inline
-  implicit class ElementPropsOps[Self <: ElementProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

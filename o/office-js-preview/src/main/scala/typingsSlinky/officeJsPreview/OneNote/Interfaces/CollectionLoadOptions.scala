@@ -7,57 +7,26 @@ import scala.scalajs.js.annotation._
 /**
   * Provides ways to load properties of only a subset of members of a collection.
   */
-@js.native
 trait CollectionLoadOptions extends js.Object {
   /**
     * Specify the number of items in the collection that are to be skipped and not included in the result. If top is specified, the selection of result will start after skipping the specified number of items.
     */
   @JSName("$skip")
-  var $skip: js.UndefOr[Double] = js.native
+  var $skip: js.UndefOr[Double] = js.undefined
   /**
     * Specify the number of items in the queried collection to be included in the result.
     */
   @JSName("$top")
-  var $top: js.UndefOr[Double] = js.native
+  var $top: js.UndefOr[Double] = js.undefined
 }
 
 object CollectionLoadOptions {
   @scala.inline
-  def apply(): CollectionLoadOptions = {
+  def apply($skip: js.UndefOr[Double] = js.undefined, $top: js.UndefOr[Double] = js.undefined): CollectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($skip)) __obj.updateDynamic("$skip")($skip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($top)) __obj.updateDynamic("$top")($top.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionLoadOptions]
   }
-  @scala.inline
-  implicit class CollectionLoadOptionsOps[Self <: CollectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$skip(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$skip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$skip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$top(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$top: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$top")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,57 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IRawStyle
   extends IRawStyleBase
-     with IStyleBase {
+     with _IStyleBase {
   /**
     * Display name for the style.
     */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /**
     * Custom selectors for the style.
     */
-  var selectors: js.UndefOr[StringDictionary[IStyle]] = js.native
+  var selectors: js.UndefOr[StringDictionary[IStyle]] = js.undefined
 }
 
 object IRawStyle {
   @scala.inline
-  def apply(): IRawStyle = {
+  def apply(
+    IRawStyleBase: IRawStyleBase = null,
+    _IStyleBase: _IStyleBase = null,
+    displayName: String = null,
+    selectors: StringDictionary[IStyle] = null
+  ): IRawStyle = {
     val __obj = js.Dynamic.literal()
+    if (IRawStyleBase != null) js.Dynamic.global.Object.assign(__obj, IRawStyleBase)
+    if (_IStyleBase != null) js.Dynamic.global.Object.assign(__obj, _IStyleBase)
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (selectors != null) __obj.updateDynamic("selectors")(selectors.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRawStyle]
   }
-  @scala.inline
-  implicit class IRawStyleOps[Self <: IRawStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectors(value: StringDictionary[IStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

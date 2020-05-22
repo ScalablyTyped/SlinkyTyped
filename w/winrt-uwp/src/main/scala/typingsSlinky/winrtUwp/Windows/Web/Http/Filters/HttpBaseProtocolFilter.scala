@@ -15,42 +15,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The base protocol filter for an HttpClient instance. */
-@js.native
 trait HttpBaseProtocolFilter extends js.Object {
   /** Get or set a value that indicates whether the HttpBaseProtocolFilter should follow redirection responses. */
-  var allowAutoRedirect: Boolean = js.native
+  var allowAutoRedirect: Boolean
   /** Get or set a value that indicates whether the HttpBaseProtocolFilter can prompt for user credentials when requested by the server. */
-  var allowUI: Boolean = js.native
+  var allowUI: Boolean
   /** Gets or sets a value that indicates whether the HttpBaseProtocolFilter can automatically decompress the HTTP content response. */
-  var automaticDecompression: Boolean = js.native
+  var automaticDecompression: Boolean
   /** Get or set the read and write cache control behavior to be used on the HttpBaseProtocolFilter object. */
-  var cacheControl: HttpCacheControl = js.native
+  var cacheControl: HttpCacheControl
   /** Get or set the client SSL certificate that will be sent to the server if the server requests a client certificate. */
-  var clientCertificate: Certificate = js.native
+  var clientCertificate: Certificate
   /** Get the HttpCookieManager with the cookies associated with an app. */
-  var cookieManager: HttpCookieManager = js.native
+  var cookieManager: HttpCookieManager
   /** Gets or sets the cookie usage behavior. By default, cookies are handled automatically. */
-  var cookieUsageBehavior: HttpCookieUsageBehavior = js.native
+  var cookieUsageBehavior: HttpCookieUsageBehavior
   /** Get a vector of SSL server certificate errors that the app might subsequently choose to ignore. */
-  var ignorableServerCertificateErrors: IVector[ChainValidationResult] = js.native
+  var ignorableServerCertificateErrors: IVector[ChainValidationResult]
   /** Get or set the maximum number of TCP connections allowed per HTTP server by the HttpBaseProtocolFilter object. */
-  var maxConnectionsPerServer: Double = js.native
+  var maxConnectionsPerServer: Double
   /** Gets or sets the version of the HTTP protocol used. */
-  var maxVersion: HttpVersion = js.native
+  var maxVersion: HttpVersion
   /** Get or set the credentials to be used to negotiate with an HTTP proxy. */
-  var proxyCredential: PasswordCredential = js.native
+  var proxyCredential: PasswordCredential
   /** Get or set the credentials to be used to authenticate with an HTTP server. */
-  var serverCredential: PasswordCredential = js.native
+  var serverCredential: PasswordCredential
   /** Get or set a value that indicates whether the HttpBaseProtocolFilter can use a proxy for sending HTTP requests. */
-  var useProxy: Boolean = js.native
+  var useProxy: Boolean
   /** Closes the HttpBaseProtocolFilter instance and releases allocated resources. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Send an HTTP request using the HttpBaseProtocolFilter as an asynchronous operation.
     * @param request The HTTP request message to send.
     * @return The object representing the asynchronous operation.
     */
-  def sendRequestAsync(request: HttpRequestMessage): IPromiseWithIAsyncOperationWithProgress[HttpResponseMessage, HttpProgress] = js.native
+  def sendRequestAsync(request: HttpRequestMessage): IPromiseWithIAsyncOperationWithProgress[HttpResponseMessage, HttpProgress]
 }
 
 object HttpBaseProtocolFilter {
@@ -75,105 +74,5 @@ object HttpBaseProtocolFilter {
     val __obj = js.Dynamic.literal(allowAutoRedirect = allowAutoRedirect.asInstanceOf[js.Any], allowUI = allowUI.asInstanceOf[js.Any], automaticDecompression = automaticDecompression.asInstanceOf[js.Any], cacheControl = cacheControl.asInstanceOf[js.Any], clientCertificate = clientCertificate.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), cookieManager = cookieManager.asInstanceOf[js.Any], cookieUsageBehavior = cookieUsageBehavior.asInstanceOf[js.Any], ignorableServerCertificateErrors = ignorableServerCertificateErrors.asInstanceOf[js.Any], maxConnectionsPerServer = maxConnectionsPerServer.asInstanceOf[js.Any], maxVersion = maxVersion.asInstanceOf[js.Any], proxyCredential = proxyCredential.asInstanceOf[js.Any], sendRequestAsync = js.Any.fromFunction1(sendRequestAsync), serverCredential = serverCredential.asInstanceOf[js.Any], useProxy = useProxy.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpBaseProtocolFilter]
   }
-  @scala.inline
-  implicit class HttpBaseProtocolFilterOps[Self <: HttpBaseProtocolFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowAutoRedirect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAutoRedirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowUI(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutomaticDecompression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticDecompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCacheControl(value: HttpCacheControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientCertificate(value: Certificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCookieManager(value: HttpCookieManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCookieUsageBehavior(value: HttpCookieUsageBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieUsageBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIgnorableServerCertificateErrors(value: IVector[ChainValidationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorableServerCertificateErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxConnectionsPerServer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConnectionsPerServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxVersion(value: HttpVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProxyCredential(value: PasswordCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSendRequestAsync(
-      value: HttpRequestMessage => IPromiseWithIAsyncOperationWithProgress[HttpResponseMessage, HttpProgress]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendRequestAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withServerCredential(value: PasswordCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseProxy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

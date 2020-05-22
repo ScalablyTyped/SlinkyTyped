@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MemberName extends js.Object {
-  var prefix: String = js.native
-  var suffix: String = js.native
-  def isArray(): Boolean = js.native
-  def isMarker(): Boolean = js.native
-  def isString(): Boolean = js.native
+  var prefix: String
+  var suffix: String
+  def isArray(): Boolean
+  def isMarker(): Boolean
+  def isString(): Boolean
 }
 
 object MemberName {
@@ -25,43 +24,5 @@ object MemberName {
     val __obj = js.Dynamic.literal(isArray = js.Any.fromFunction0(isArray), isMarker = js.Any.fromFunction0(isMarker), isString = js.Any.fromFunction0(isString), prefix = prefix.asInstanceOf[js.Any], suffix = suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberName]
   }
-  @scala.inline
-  implicit class MemberNameOps[Self <: MemberName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsArray(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsMarker(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMarker")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsString(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

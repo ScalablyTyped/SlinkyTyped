@@ -18,35 +18,10 @@ trait AttributeDimension extends js.Object {
 
 object AttributeDimension {
   @scala.inline
-  def apply(Values: ListOfString): AttributeDimension = {
+  def apply(Values: ListOfString, AttributeType: AttributeType = null): AttributeDimension = {
     val __obj = js.Dynamic.literal(Values = Values.asInstanceOf[js.Any])
+    if (AttributeType != null) __obj.updateDynamic("AttributeType")(AttributeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeDimension]
   }
-  @scala.inline
-  implicit class AttributeDimensionOps[Self <: AttributeDimension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValues(value: ListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeType(value: AttributeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

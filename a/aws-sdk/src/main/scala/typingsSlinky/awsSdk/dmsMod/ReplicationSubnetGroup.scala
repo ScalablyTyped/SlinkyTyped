@@ -30,77 +30,20 @@ trait ReplicationSubnetGroup extends js.Object {
 
 object ReplicationSubnetGroup {
   @scala.inline
-  def apply(): ReplicationSubnetGroup = {
+  def apply(
+    ReplicationSubnetGroupDescription: String = null,
+    ReplicationSubnetGroupIdentifier: String = null,
+    SubnetGroupStatus: String = null,
+    Subnets: SubnetList = null,
+    VpcId: String = null
+  ): ReplicationSubnetGroup = {
     val __obj = js.Dynamic.literal()
+    if (ReplicationSubnetGroupDescription != null) __obj.updateDynamic("ReplicationSubnetGroupDescription")(ReplicationSubnetGroupDescription.asInstanceOf[js.Any])
+    if (ReplicationSubnetGroupIdentifier != null) __obj.updateDynamic("ReplicationSubnetGroupIdentifier")(ReplicationSubnetGroupIdentifier.asInstanceOf[js.Any])
+    if (SubnetGroupStatus != null) __obj.updateDynamic("SubnetGroupStatus")(SubnetGroupStatus.asInstanceOf[js.Any])
+    if (Subnets != null) __obj.updateDynamic("Subnets")(Subnets.asInstanceOf[js.Any])
+    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationSubnetGroup]
   }
-  @scala.inline
-  implicit class ReplicationSubnetGroupOps[Self <: ReplicationSubnetGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicationSubnetGroupDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationSubnetGroupDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationSubnetGroupDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationSubnetGroupDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationSubnetGroupIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationSubnetGroupIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationSubnetGroupIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationSubnetGroupIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetGroupStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetGroupStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetGroupStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetGroupStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnets(value: SubnetList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

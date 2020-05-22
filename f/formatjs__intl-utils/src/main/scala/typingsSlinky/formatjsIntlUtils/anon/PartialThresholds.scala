@@ -5,75 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@formatjs/intl-utils.@formatjs/intl-utils/dist/diff.Thresholds> */
-@js.native
 trait PartialThresholds extends js.Object {
-  var day: js.UndefOr[Double] = js.native
-  var hour: js.UndefOr[Double] = js.native
-  var minute: js.UndefOr[Double] = js.native
-  var second: js.UndefOr[Double] = js.native
+  var day: js.UndefOr[Double] = js.undefined
+  var hour: js.UndefOr[Double] = js.undefined
+  var minute: js.UndefOr[Double] = js.undefined
+  var second: js.UndefOr[Double] = js.undefined
 }
 
 object PartialThresholds {
   @scala.inline
-  def apply(): PartialThresholds = {
+  def apply(
+    day: js.UndefOr[Double] = js.undefined,
+    hour: js.UndefOr[Double] = js.undefined,
+    minute: js.UndefOr[Double] = js.undefined,
+    second: js.UndefOr[Double] = js.undefined
+  ): PartialThresholds = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(day)) __obj.updateDynamic("day")(day.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hour)) __obj.updateDynamic("hour")(hour.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minute)) __obj.updateDynamic("minute")(minute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(second)) __obj.updateDynamic("second")(second.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialThresholds]
   }
-  @scala.inline
-  implicit class PartialThresholdsOps[Self <: PartialThresholds] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHour(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

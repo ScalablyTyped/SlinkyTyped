@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGridOptions extends js.Object {
   /**
     * Save the current filter state for each column
     * Defaults to true
     * @default true
     */
-  var saveFilter: js.UndefOr[Boolean] = js.native
+  var saveFilter: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the current focused cell. On returning to this focused cell we'll also scroll.
     * This option is preferred to the saveScroll option, so is set to true by default.
@@ -28,13 +27,13 @@ trait IGridOptions extends js.Object {
     * Defaults to true (unless saveScroll is true)
     * @default true
     */
-  var saveFocus: js.UndefOr[Boolean] = js.native
+  var saveFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the grouping configuration. If set to true and the grouping feature is not enabled then does
     * nothing. Defaults to true
     * @default true
     */
-  var saveGrouping: js.UndefOr[Boolean] = js.native
+  var saveGrouping: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the grouping row expanded states.
     * If set to true and the grouping feature is not enabled then does nothing.
@@ -44,7 +43,7 @@ trait IGridOptions extends js.Object {
     * Defaults to false
     * @default false
     */
-  var saveGroupingExpandedStates: js.UndefOr[Boolean] = js.native
+  var saveGroupingExpandedStates: js.UndefOr[Boolean] = js.undefined
   /**
     * Restore the current column order.
     * Note that unless you've provided the user with some way to reorder their columns
@@ -52,13 +51,13 @@ trait IGridOptions extends js.Object {
     * Defaults to true
     * @default true
     */
-  var saveOrder: js.UndefOr[Boolean] = js.native
+  var saveOrder: js.UndefOr[Boolean] = js.undefined
   /**
     * Save pinning state for columns.
     * Defaults to true
     * @default true
     */
-  var savePinning: js.UndefOr[Boolean] = js.native
+  var savePinning: js.UndefOr[Boolean] = js.undefined
   /**
     * A function that can be called, passing in a rowEntity, and that will return a unique id for that row.
     * This might simply return the id field from that row (if you have one),
@@ -69,7 +68,7 @@ trait IGridOptions extends js.Object {
     * Defaults to undefined
     * @default undefined
     */
-  var saveRowIdentity: js.UndefOr[Boolean] = js.native
+  var saveRowIdentity: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the current scroll position.
     * Note that this is saved as the percentage of the grid scrolled -
@@ -83,7 +82,7 @@ trait IGridOptions extends js.Object {
     * Defaults to false
     * @default false
     */
-  var saveScroll: js.UndefOr[Boolean] = js.native
+  var saveScroll: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the currently selected rows.
     * If the saveRowIdentity callback is defined, then it will save the id of the row and select that.
@@ -95,27 +94,27 @@ trait IGridOptions extends js.Object {
     * Defaults to true
     * @default true
     */
-  var saveSelection: js.UndefOr[Boolean] = js.native
+  var saveSelection: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the current sort state for each column
     * Defaults to true
     *
     * @default true
     */
-  var saveSort: js.UndefOr[Boolean] = js.native
+  var saveSort: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the treeView configuration. If set to true and the treeView feature is not enabled then does
     * nothing.
     *
     * @default true;
     */
-  var saveTreeView: js.UndefOr[Boolean] = js.native
+  var saveTreeView: js.UndefOr[Boolean] = js.undefined
   /**
     * Save whether or not columns are visible
     * Defaults to true
     * @default true
     */
-  var saveVisible: js.UndefOr[Boolean] = js.native
+  var saveVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * Save the current column widths.
     * Note that unless you've provided the user with some way to resize their columns
@@ -123,178 +122,41 @@ trait IGridOptions extends js.Object {
     * Defaults to true
     * @default true
     */
-  var saveWidths: js.UndefOr[Boolean] = js.native
+  var saveWidths: js.UndefOr[Boolean] = js.undefined
 }
 
 object IGridOptions {
   @scala.inline
-  def apply(): IGridOptions = {
+  def apply(
+    saveFilter: js.UndefOr[Boolean] = js.undefined,
+    saveFocus: js.UndefOr[Boolean] = js.undefined,
+    saveGrouping: js.UndefOr[Boolean] = js.undefined,
+    saveGroupingExpandedStates: js.UndefOr[Boolean] = js.undefined,
+    saveOrder: js.UndefOr[Boolean] = js.undefined,
+    savePinning: js.UndefOr[Boolean] = js.undefined,
+    saveRowIdentity: js.UndefOr[Boolean] = js.undefined,
+    saveScroll: js.UndefOr[Boolean] = js.undefined,
+    saveSelection: js.UndefOr[Boolean] = js.undefined,
+    saveSort: js.UndefOr[Boolean] = js.undefined,
+    saveTreeView: js.UndefOr[Boolean] = js.undefined,
+    saveVisible: js.UndefOr[Boolean] = js.undefined,
+    saveWidths: js.UndefOr[Boolean] = js.undefined
+  ): IGridOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(saveFilter)) __obj.updateDynamic("saveFilter")(saveFilter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveFocus)) __obj.updateDynamic("saveFocus")(saveFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveGrouping)) __obj.updateDynamic("saveGrouping")(saveGrouping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveGroupingExpandedStates)) __obj.updateDynamic("saveGroupingExpandedStates")(saveGroupingExpandedStates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveOrder)) __obj.updateDynamic("saveOrder")(saveOrder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(savePinning)) __obj.updateDynamic("savePinning")(savePinning.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveRowIdentity)) __obj.updateDynamic("saveRowIdentity")(saveRowIdentity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveScroll)) __obj.updateDynamic("saveScroll")(saveScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveSelection)) __obj.updateDynamic("saveSelection")(saveSelection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveSort)) __obj.updateDynamic("saveSort")(saveSort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveTreeView)) __obj.updateDynamic("saveTreeView")(saveTreeView.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveVisible)) __obj.updateDynamic("saveVisible")(saveVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveWidths)) __obj.updateDynamic("saveWidths")(saveWidths.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridOptions]
   }
-  @scala.inline
-  implicit class IGridOptionsOps[Self <: IGridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSaveFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveGrouping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveGrouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveGrouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveGroupingExpandedStates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveGroupingExpandedStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveGroupingExpandedStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveGroupingExpandedStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveOrder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavePinning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savePinning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavePinning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savePinning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveRowIdentity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveRowIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveRowIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveRowIdentity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveSort(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveSort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveSort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveTreeView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveTreeView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveTreeView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveTreeView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveWidths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveWidths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveWidths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveWidths")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

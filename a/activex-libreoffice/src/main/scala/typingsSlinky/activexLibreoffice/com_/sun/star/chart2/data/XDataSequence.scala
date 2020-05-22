@@ -12,15 +12,14 @@ import scala.scalajs.js.annotation._
   *
   * The data that is stored in this container may contain different types.
   */
-@js.native
 trait XDataSequence extends XInterface {
   /**
     * retrieves the data stored in this component.
     * @returns a sequence containing the actual data. This sequence is a copy of the internal data. Therefore changing this object does not affect the content o
     */
-  val Data: SafeArray[_] = js.native
+  val Data: SafeArray[_]
   /** returns the (UI) range representation string used by this {@link XDataSequence} . */
-  val SourceRangeRepresentation: String = js.native
+  val SourceRangeRepresentation: String
   /**
     * creates a label that describes the origin of this data sequence.
     *
@@ -33,12 +32,12 @@ trait XDataSequence extends XInterface {
     * @param eLabelOrigin denotes what part of the range should be used for label generation. If you have, e.g., one cell only, the parameter COLUMN enables y
     * @returns Suitable labels for the given sequence depending on the range of the sequence and the parameter `eLabelOrigin` passed. In a spreadsheet this woul
     */
-  def generateLabel(eLabelOrigin: LabelOrigin): SafeArray[String] = js.native
+  def generateLabel(eLabelOrigin: LabelOrigin): SafeArray[String]
   /**
     * retrieves the data stored in this component.
     * @returns a sequence containing the actual data. This sequence is a copy of the internal data. Therefore changing this object does not affect the content o
     */
-  def getData(): SafeArray[_] = js.native
+  def getData(): SafeArray[_]
   /**
     * returns a number format key for the value at the given index in the data sequence. If nIndex is -1, a key for the entire sequence should be returned,
     * e.g. the most commonly used one.
@@ -48,9 +47,9 @@ trait XDataSequence extends XInterface {
     * The number format key must be valid for the {@link com.sun.star.util.XNumberFormatsSupplier} given by the {@link XDataProvider} , or 0 which is
     * assumed to be always valid.
     */
-  def getNumberFormatKeyByIndex(nIndex: Double): Double = js.native
+  def getNumberFormatKeyByIndex(nIndex: Double): Double
   /** returns the (UI) range representation string used by this {@link XDataSequence} . */
-  def getSourceRangeRepresentation(): String = js.native
+  def getSourceRangeRepresentation(): String
 }
 
 object XDataSequence {
@@ -69,49 +68,5 @@ object XDataSequence {
     val __obj = js.Dynamic.literal(Data = Data.asInstanceOf[js.Any], SourceRangeRepresentation = SourceRangeRepresentation.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), generateLabel = js.Any.fromFunction1(generateLabel), getData = js.Any.fromFunction0(getData), getNumberFormatKeyByIndex = js.Any.fromFunction1(getNumberFormatKeyByIndex), getSourceRangeRepresentation = js.Any.fromFunction0(getSourceRangeRepresentation), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDataSequence]
   }
-  @scala.inline
-  implicit class XDataSequenceOps[Self <: XDataSequence] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceRangeRepresentation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRangeRepresentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenerateLabel(value: LabelOrigin => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetData(value: () => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberFormatKeyByIndex(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberFormatKeyByIndex")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSourceRangeRepresentation(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSourceRangeRepresentation")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

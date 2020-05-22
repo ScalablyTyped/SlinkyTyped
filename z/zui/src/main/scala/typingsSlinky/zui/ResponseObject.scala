@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResponseObject extends js.Object {
-  var offset: js.UndefOr[Double] = js.native
-  var response: js.UndefOr[String] = js.native
-  var responseHeaders: js.UndefOr[js.Object] = js.native
-  var status: js.UndefOr[Double] = js.native
-  var total: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
+  var response: js.UndefOr[String] = js.undefined
+  var responseHeaders: js.UndefOr[js.Object] = js.undefined
+  var status: js.UndefOr[Double] = js.undefined
+  var total: js.UndefOr[Double] = js.undefined
 }
 
 object ResponseObject {
   @scala.inline
-  def apply(): ResponseObject = {
+  def apply(
+    offset: js.UndefOr[Double] = js.undefined,
+    response: String = null,
+    responseHeaders: js.Object = null,
+    status: js.UndefOr[Double] = js.undefined,
+    total: js.UndefOr[Double] = js.undefined
+  ): ResponseObject = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
+    if (responseHeaders != null) __obj.updateDynamic("responseHeaders")(responseHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total)) __obj.updateDynamic("total")(total.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseObject]
   }
-  @scala.inline
-  implicit class ResponseObjectOps[Self <: ResponseObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

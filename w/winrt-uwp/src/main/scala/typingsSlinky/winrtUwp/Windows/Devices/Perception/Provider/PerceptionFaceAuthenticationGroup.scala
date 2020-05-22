@@ -6,10 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A group of unique identifiers specifying IPerceptionFrameProviders that share handlers for entering and exiting Face Authentication mode. */
-@js.native
 trait PerceptionFaceAuthenticationGroup extends js.Object {
   /** The id(s) of the IPerceptionFrameProvider(s) referenced by this group. */
-  var frameProviderIds: IVectorView[String] = js.native
+  var frameProviderIds: IVectorView[String]
 }
 
 object PerceptionFaceAuthenticationGroup {
@@ -18,19 +17,5 @@ object PerceptionFaceAuthenticationGroup {
     val __obj = js.Dynamic.literal(frameProviderIds = frameProviderIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerceptionFaceAuthenticationGroup]
   }
-  @scala.inline
-  implicit class PerceptionFaceAuthenticationGroupOps[Self <: PerceptionFaceAuthenticationGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameProviderIds(value: IVectorView[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameProviderIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -19,22 +19,21 @@ import scala.scalajs.js.annotation._
   * specifies service of a page number text field.
   * @see com.sun.star.text.TextField
   */
-@js.native
 trait PageNumber extends TextField_ {
   /**
     * determines the type of the numbering.
     * @see com.sun.star.style.NumberingType
     */
-  var NumberingType: Double = js.native
+  var NumberingType: Double
   /** determines an offset value to show a different page number. */
-  var Offset: Double = js.native
+  var Offset: Double
   /**
     * determines which page the field refers to.
     * @see com.sun.star.text.PageNumberType
     */
-  var SubType: PageNumberType = js.native
+  var SubType: PageNumberType
   /** if the user text string is set then it is displayed when the value of NumberingType is set to {@link com.sun.star.style.NumberingType.CHAR_SPECIAL} */
-  var UserText: String = js.native
+  var UserText: String
 }
 
 object PageNumber {
@@ -71,37 +70,5 @@ object PageNumber {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], IsFieldDisplayed = IsFieldDisplayed.asInstanceOf[js.Any], IsFieldUsed = IsFieldUsed.asInstanceOf[js.Any], NumberingType = NumberingType.asInstanceOf[js.Any], Offset = Offset.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], SubType = SubType.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], UserText = UserText.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), getPresentation = js.Any.fromFunction1(getPresentation), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[PageNumber]
   }
-  @scala.inline
-  implicit class PageNumberOps[Self <: PageNumber] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumberingType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubType(value: PageNumberType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

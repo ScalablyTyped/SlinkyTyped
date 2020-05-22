@@ -22,53 +22,16 @@ trait LoadBalancerAddress extends js.Object {
 
 object LoadBalancerAddress {
   @scala.inline
-  def apply(): LoadBalancerAddress = {
+  def apply(
+    AllocationId: AllocationId = null,
+    IpAddress: IpAddress = null,
+    PrivateIPv4Address: PrivateIPv4Address = null
+  ): LoadBalancerAddress = {
     val __obj = js.Dynamic.literal()
+    if (AllocationId != null) __obj.updateDynamic("AllocationId")(AllocationId.asInstanceOf[js.Any])
+    if (IpAddress != null) __obj.updateDynamic("IpAddress")(IpAddress.asInstanceOf[js.Any])
+    if (PrivateIPv4Address != null) __obj.updateDynamic("PrivateIPv4Address")(PrivateIPv4Address.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerAddress]
   }
-  @scala.inline
-  implicit class LoadBalancerAddressOps[Self <: LoadBalancerAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocationId(value: AllocationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAddress(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIPv4Address(value: PrivateIPv4Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIPv4Address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIPv4Address: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIPv4Address")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

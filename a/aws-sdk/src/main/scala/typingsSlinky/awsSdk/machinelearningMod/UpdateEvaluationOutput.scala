@@ -14,29 +14,10 @@ trait UpdateEvaluationOutput extends js.Object {
 
 object UpdateEvaluationOutput {
   @scala.inline
-  def apply(): UpdateEvaluationOutput = {
+  def apply(EvaluationId: EntityId = null): UpdateEvaluationOutput = {
     val __obj = js.Dynamic.literal()
+    if (EvaluationId != null) __obj.updateDynamic("EvaluationId")(EvaluationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEvaluationOutput]
   }
-  @scala.inline
-  implicit class UpdateEvaluationOutputOps[Self <: UpdateEvaluationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvaluationId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,70 +12,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IInvoiceLineItem extends IResourceObject {
   /**
     * The amount, in cents/pence
     */
-  var amount: Double = js.native
-  var currency: String = js.native
+  var amount: Double
+  var currency: String
   /**
     * A text description of the line item, if the line item is an invoice item
     */
-  var description: String = js.native
+  var description: String
   /**
     * If true, discounts will apply to this line item. Always false for prorations.
     */
-  var discountable: Boolean = js.native
+  var discountable: Boolean
   /**
     * Whether or not this is a test line item
     */
-  var livemode: Boolean = js.native
-  var metadata: IMetadata = js.native
+  var livemode: Boolean
+  var metadata: IMetadata
   /**
     * Value is "line_item"
     */
   @JSName("object")
-  var object_IInvoiceLineItem: line_item = js.native
+  var object_IInvoiceLineItem: line_item
   /**
     * The period this line_item covers. For subscription line items, this is the subscription period. For prorations, this starts when
     * the proration was calculated, and ends at the period end of the subscription. For invoice items, this is the time at which the
     * invoice item was created, so the period start and end are the same time.
     */
-  var period: IPeriod = js.native
+  var period: IPeriod
   /**
     * The plan of the subscription, if the line item is a subscription or a proration
     */
-  var plan: IPlan = js.native
+  var plan: IPlan
   /**
     * Whether or not this is a proration
     */
-  var proration: Boolean = js.native
+  var proration: Boolean
   /**
     * The quantity of the subscription, if the line item is a subscription or a proration
     */
-  var quantity: Double = js.native
+  var quantity: Double
   /**
     * When type is invoiceitem, the subscription that the invoice item pertains to, if any. Left blank when
     * type is already subscription, as it'd be redundant with id.
     */
-  var subscription: String = js.native
+  var subscription: String
   /**
     * The subscription item that generated this invoice item. Left empty if the line item is not an explicit result of a subscription.
     */
-  var subscription_item: String = js.native
+  var subscription_item: String
   /**
     * The amount of tax calculated per tax rate for this line item
     */
-  var tax_amounts: js.Array[ITaxAmount] = js.native
+  var tax_amounts: js.Array[ITaxAmount]
   /**
     * The tax rates which apply to the line item.
     */
-  var tax_rates: js.Array[ITaxRate] = js.native
+  var tax_rates: js.Array[ITaxRate]
   /**
     * A string identifying the type of the source of this line item, either an invoiceitem or a subscription
     */
-  var `type`: invoiceitem | subscription = js.native
+  var `type`: invoiceitem | subscription
 }
 
 object IInvoiceLineItem {
@@ -104,109 +103,5 @@ object IInvoiceLineItem {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInvoiceLineItem]
   }
-  @scala.inline
-  implicit class IInvoiceLineItemOps[Self <: IInvoiceLineItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiscountable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discountable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLivemode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("livemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: IMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: line_item): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: IPeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlan(value: IPlan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscription_item(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTax_amounts(value: js.Array[ITaxAmount]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_amounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTax_rates(value: js.Array[ITaxRate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_rates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: invoiceitem | subscription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,5 +7,14 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.AccelerometerReading")
 @js.native
 class AccelerometerReading ()
-  extends typingsSlinky.winrt.Windows.Devices.Sensors.AccelerometerReading
+  extends typingsSlinky.winrt.Windows.Devices.Sensors.AccelerometerReading {
+  /* CompleteClass */
+  override var accelerationX: Double = js.native
+  /* CompleteClass */
+  override var accelerationY: Double = js.native
+  /* CompleteClass */
+  override var accelerationZ: Double = js.native
+  /* CompleteClass */
+  override var timestamp: js.Date = js.native
+}
 

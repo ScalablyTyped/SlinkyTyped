@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Variable extends js.Object {
   /** Members contained or pointed to by the variable. */
-  var members: js.UndefOr[js.Array[Variable]] = js.native
+  var members: js.UndefOr[js.Array[Variable]] = js.undefined
   /** Name of the variable, if any. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Status associated with the variable. This field will usually stay
     * unset. A status of a single variable only applies to that variable or
@@ -31,109 +30,42 @@ trait Variable extends js.Object {
     * &#42;   `Field f not found in class C`
     * &#42;   `Null pointer dereference`
     */
-  var status: js.UndefOr[StatusMessage] = js.native
+  var status: js.UndefOr[StatusMessage] = js.undefined
   /**
     * Variable type (e.g. `MyClass`). If the variable is split with
     * `var_table_index`, `type` goes next to `value`. The interpretation of
     * a type is agent specific. It is recommended to include the dynamic type
     * rather than a static type of an object.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** Simple value of the variable. */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
   /**
     * Reference to a variable in the shared variable table. More than
     * one variable can reference the same variable in the table. The
     * `var_table_index` field is an index into `variable_table` in Breakpoint.
     */
-  var varTableIndex: js.UndefOr[Double] = js.native
+  var varTableIndex: js.UndefOr[Double] = js.undefined
 }
 
 object Variable {
   @scala.inline
-  def apply(): Variable = {
+  def apply(
+    members: js.Array[Variable] = null,
+    name: String = null,
+    status: StatusMessage = null,
+    `type`: String = null,
+    value: String = null,
+    varTableIndex: js.UndefOr[Double] = js.undefined
+  ): Variable = {
     val __obj = js.Dynamic.literal()
+    if (members != null) __obj.updateDynamic("members")(members.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (!js.isUndefined(varTableIndex)) __obj.updateDynamic("varTableIndex")(varTableIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Variable]
   }
-  @scala.inline
-  implicit class VariableOps[Self <: Variable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMembers(value: js.Array[Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StatusMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVarTableIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("varTableIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVarTableIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("varTableIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

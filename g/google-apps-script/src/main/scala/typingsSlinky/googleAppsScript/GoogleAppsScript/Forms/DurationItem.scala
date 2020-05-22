@@ -14,23 +14,22 @@ import scala.scalajs.js.annotation._
   *     var item = form.addDurationItem();
   *     item.setTitle('How long can you hold your breath?');
   */
-@js.native
 trait DurationItem extends js.Object {
-  def createResponse(hours: Integer, minutes: Integer, seconds: Integer): ItemResponse = js.native
-  def duplicate(): DurationItem = js.native
-  def getGeneralFeedback(): QuizFeedback = js.native
-  def getHelpText(): String = js.native
-  def getId(): Integer = js.native
-  def getIndex(): Integer = js.native
-  def getPoints(): Integer = js.native
-  def getTitle(): String = js.native
-  def getType(): ItemType = js.native
-  def isRequired(): Boolean = js.native
-  def setGeneralFeedback(feedback: QuizFeedback): DurationItem = js.native
-  def setHelpText(text: String): DurationItem = js.native
-  def setPoints(points: Integer): DurationItem = js.native
-  def setRequired(enabled: Boolean): DurationItem = js.native
-  def setTitle(title: String): DurationItem = js.native
+  def createResponse(hours: Integer, minutes: Integer, seconds: Integer): ItemResponse
+  def duplicate(): DurationItem
+  def getGeneralFeedback(): QuizFeedback
+  def getHelpText(): String
+  def getId(): Integer
+  def getIndex(): Integer
+  def getPoints(): Integer
+  def getTitle(): String
+  def getType(): ItemType
+  def isRequired(): Boolean
+  def setGeneralFeedback(feedback: QuizFeedback): DurationItem
+  def setHelpText(text: String): DurationItem
+  def setPoints(points: Integer): DurationItem
+  def setRequired(enabled: Boolean): DurationItem
+  def setTitle(title: String): DurationItem
 }
 
 object DurationItem {
@@ -55,103 +54,5 @@ object DurationItem {
     val __obj = js.Dynamic.literal(createResponse = js.Any.fromFunction3(createResponse), duplicate = js.Any.fromFunction0(duplicate), getGeneralFeedback = js.Any.fromFunction0(getGeneralFeedback), getHelpText = js.Any.fromFunction0(getHelpText), getId = js.Any.fromFunction0(getId), getIndex = js.Any.fromFunction0(getIndex), getPoints = js.Any.fromFunction0(getPoints), getTitle = js.Any.fromFunction0(getTitle), getType = js.Any.fromFunction0(getType), isRequired = js.Any.fromFunction0(isRequired), setGeneralFeedback = js.Any.fromFunction1(setGeneralFeedback), setHelpText = js.Any.fromFunction1(setHelpText), setPoints = js.Any.fromFunction1(setPoints), setRequired = js.Any.fromFunction1(setRequired), setTitle = js.Any.fromFunction1(setTitle))
     __obj.asInstanceOf[DurationItem]
   }
-  @scala.inline
-  implicit class DurationItemOps[Self <: DurationItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateResponse(value: (Integer, Integer, Integer) => ItemResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createResponse")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withDuplicate(value: () => DurationItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetGeneralFeedback(value: () => QuizFeedback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGeneralFeedback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetHelpText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHelpText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndex(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPoints(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPoints")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetType(value: () => ItemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsRequired(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRequired")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetGeneralFeedback(value: QuizFeedback => DurationItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGeneralFeedback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetHelpText(value: String => DurationItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHelpText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPoints(value: Integer => DurationItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPoints")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRequired(value: Boolean => DurationItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequired")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: String => DurationItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

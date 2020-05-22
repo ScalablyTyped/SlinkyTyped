@@ -23,53 +23,16 @@ trait OrganizationArgs extends js.Object {
 
 object OrganizationArgs {
   @scala.inline
-  def apply(): OrganizationArgs = {
+  def apply(
+    awsServiceAccessPrincipals: Input[js.Array[Input[String]]] = null,
+    enabledPolicyTypes: Input[js.Array[Input[String]]] = null,
+    featureSet: Input[String] = null
+  ): OrganizationArgs = {
     val __obj = js.Dynamic.literal()
+    if (awsServiceAccessPrincipals != null) __obj.updateDynamic("awsServiceAccessPrincipals")(awsServiceAccessPrincipals.asInstanceOf[js.Any])
+    if (enabledPolicyTypes != null) __obj.updateDynamic("enabledPolicyTypes")(enabledPolicyTypes.asInstanceOf[js.Any])
+    if (featureSet != null) __obj.updateDynamic("featureSet")(featureSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationArgs]
   }
-  @scala.inline
-  implicit class OrganizationArgsOps[Self <: OrganizationArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsServiceAccessPrincipals(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsServiceAccessPrincipals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsServiceAccessPrincipals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsServiceAccessPrincipals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledPolicyTypes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledPolicyTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledPolicyTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledPolicyTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureSet(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

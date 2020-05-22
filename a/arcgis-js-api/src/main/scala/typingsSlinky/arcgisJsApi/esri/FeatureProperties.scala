@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeatureProperties extends WidgetProperties {
   /**
     * Enables automatic creation of a popup template for layers that have popups enabled but no popupTemplate defined. Automatic popup templates are supported for layers that support the `createPopupTemplate` method. (Supported for [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html), [GeoJSONLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html), [SceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-SceneLayer.html), [CSVLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html), [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html), [StreamLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html) and [ImageryLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html)).
@@ -13,7 +13,7 @@ trait FeatureProperties extends WidgetProperties {
     *
     * @default false
     */
-  var defaultPopupTemplateEnabled: js.UndefOr[Boolean] = js.native
+  var defaultPopupTemplateEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The [Graphic](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) used to represent the feature.
     *
@@ -21,7 +21,7 @@ trait FeatureProperties extends WidgetProperties {
     *
     * @default null
     */
-  var graphic: js.UndefOr[GraphicProperties] = js.native
+  var graphic: js.UndefOr[GraphicProperties] = js.undefined
   /**
     * A reference to the [view's](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html) [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html). Use this property when needing to get access to the underlying layers within the map. This can then be used within [Arcade](https://developers.arcgis.com/arcade) expressions.
     *
@@ -29,7 +29,7 @@ trait FeatureProperties extends WidgetProperties {
     *
     * @default null
     */
-  var map: js.UndefOr[MapProperties] = js.native
+  var map: js.UndefOr[MapProperties] = js.undefined
   /**
     * The spatial reference used for [Arcade](https://developers.arcgis.com/arcade) operations.
     *
@@ -37,124 +37,55 @@ trait FeatureProperties extends WidgetProperties {
     *
     * @default null
     */
-  var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
+  var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.undefined
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Feature.html#view)
     */
-  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [FeatureViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Feature-FeatureViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Feature.html#viewModel)
     */
-  var viewModel: js.UndefOr[FeatureViewModelProperties] = js.native
+  var viewModel: js.UndefOr[FeatureViewModelProperties] = js.undefined
   /**
     * The visible elements that are displayed within the widget's [graphic.popupTemplate.content](esri-PopupTemplate.html#content). This property provides the ability to turn individual elements of the widget's display on/off. See the [PopupTemplate.content](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html#content) documentation for additional information on how these elements work.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Feature.html#visibleElements)
     */
-  var visibleElements: js.UndefOr[FeatureVisibleElements] = js.native
+  var visibleElements: js.UndefOr[FeatureVisibleElements] = js.undefined
 }
 
 object FeatureProperties {
   @scala.inline
-  def apply(): FeatureProperties = {
+  def apply(
+    container: String | HTMLElement = null,
+    defaultPopupTemplateEnabled: js.UndefOr[Boolean] = js.undefined,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    graphic: GraphicProperties = null,
+    id: String = null,
+    label: String = null,
+    map: MapProperties = null,
+    spatialReference: SpatialReferenceProperties = null,
+    view: MapViewProperties | SceneViewProperties = null,
+    viewModel: FeatureViewModelProperties = null,
+    visibleElements: FeatureVisibleElements = null
+  ): FeatureProperties = {
     val __obj = js.Dynamic.literal()
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultPopupTemplateEnabled)) __obj.updateDynamic("defaultPopupTemplateEnabled")(defaultPopupTemplateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (graphic != null) __obj.updateDynamic("graphic")(graphic.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
+    if (visibleElements != null) __obj.updateDynamic("visibleElements")(visibleElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeatureProperties]
   }
-  @scala.inline
-  implicit class FeaturePropertiesOps[Self <: FeatureProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultPopupTemplateEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPopupTemplateEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPopupTemplateEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPopupTemplateEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGraphic(value: GraphicProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGraphic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: MapProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpatialReference(value: SpatialReferenceProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpatialReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties | SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: FeatureViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleElements(value: FeatureVisibleElements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

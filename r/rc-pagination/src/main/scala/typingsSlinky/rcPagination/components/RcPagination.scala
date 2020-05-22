@@ -98,6 +98,8 @@ object RcPagination {
     @scala.inline
     def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): this.type = set("showTotal", js.Any.fromFunction2(value))
     @scala.inline
+    def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
+    @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def total(value: Double): this.type = set("total", value.asInstanceOf[js.Any])

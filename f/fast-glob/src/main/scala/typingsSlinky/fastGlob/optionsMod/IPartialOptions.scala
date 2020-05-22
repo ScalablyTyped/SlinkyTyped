@@ -7,296 +7,78 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<fast-glob.fast-glob/out/managers/options.IOptions<T>> */
-@js.native
 trait IPartialOptions[T] extends js.Object {
-  var absolute: js.UndefOr[Boolean] = js.native
-  var brace: js.UndefOr[Boolean] = js.native
-  var `case`: js.UndefOr[Boolean] = js.native
-  var cwd: js.UndefOr[String] = js.native
-  var deep: js.UndefOr[Double | Boolean] = js.native
-  var dot: js.UndefOr[Boolean] = js.native
-  var extension: js.UndefOr[Boolean] = js.native
-  var followSymlinkedDirectories: js.UndefOr[Boolean] = js.native
-  var globstar: js.UndefOr[Boolean] = js.native
-  var ignore: js.UndefOr[js.Array[Pattern]] = js.native
-  var markDirectories: js.UndefOr[Boolean] = js.native
-  var matchBase: js.UndefOr[Boolean] = js.native
-  var nobrace: js.UndefOr[Boolean] = js.native
-  var nocase: js.UndefOr[Boolean] = js.native
-  var noext: js.UndefOr[Boolean] = js.native
-  var noglobstar: js.UndefOr[Boolean] = js.native
-  var onlyDirectories: js.UndefOr[Boolean] = js.native
-  var onlyFiles: js.UndefOr[Boolean] = js.native
-  var stats: js.UndefOr[Boolean] = js.native
-  var transform: js.UndefOr[TransformFunction[T]] = js.native
-  var unique: js.UndefOr[Boolean] = js.native
+  var absolute: js.UndefOr[Boolean] = js.undefined
+  var brace: js.UndefOr[Boolean] = js.undefined
+  var `case`: js.UndefOr[Boolean] = js.undefined
+  var cwd: js.UndefOr[String] = js.undefined
+  var deep: js.UndefOr[Double | Boolean] = js.undefined
+  var dot: js.UndefOr[Boolean] = js.undefined
+  var extension: js.UndefOr[Boolean] = js.undefined
+  var followSymlinkedDirectories: js.UndefOr[Boolean] = js.undefined
+  var globstar: js.UndefOr[Boolean] = js.undefined
+  var ignore: js.UndefOr[js.Array[Pattern]] = js.undefined
+  var markDirectories: js.UndefOr[Boolean] = js.undefined
+  var matchBase: js.UndefOr[Boolean] = js.undefined
+  var nobrace: js.UndefOr[Boolean] = js.undefined
+  var nocase: js.UndefOr[Boolean] = js.undefined
+  var noext: js.UndefOr[Boolean] = js.undefined
+  var noglobstar: js.UndefOr[Boolean] = js.undefined
+  var onlyDirectories: js.UndefOr[Boolean] = js.undefined
+  var onlyFiles: js.UndefOr[Boolean] = js.undefined
+  var stats: js.UndefOr[Boolean] = js.undefined
+  var transform: js.UndefOr[TransformFunction[T]] = js.undefined
+  var unique: js.UndefOr[Boolean] = js.undefined
 }
 
 object IPartialOptions {
   @scala.inline
-  def apply[T](): IPartialOptions[T] = {
+  def apply[T](
+    absolute: js.UndefOr[Boolean] = js.undefined,
+    brace: js.UndefOr[Boolean] = js.undefined,
+    `case`: js.UndefOr[Boolean] = js.undefined,
+    cwd: String = null,
+    deep: Double | Boolean = null,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    extension: js.UndefOr[Boolean] = js.undefined,
+    followSymlinkedDirectories: js.UndefOr[Boolean] = js.undefined,
+    globstar: js.UndefOr[Boolean] = js.undefined,
+    ignore: js.Array[Pattern] = null,
+    markDirectories: js.UndefOr[Boolean] = js.undefined,
+    matchBase: js.UndefOr[Boolean] = js.undefined,
+    nobrace: js.UndefOr[Boolean] = js.undefined,
+    nocase: js.UndefOr[Boolean] = js.undefined,
+    noext: js.UndefOr[Boolean] = js.undefined,
+    noglobstar: js.UndefOr[Boolean] = js.undefined,
+    onlyDirectories: js.UndefOr[Boolean] = js.undefined,
+    onlyFiles: js.UndefOr[Boolean] = js.undefined,
+    stats: js.UndefOr[Boolean] = js.undefined,
+    transform: /* entry */ EntryItem => T = null,
+    unique: js.UndefOr[Boolean] = js.undefined
+  ): IPartialOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(absolute)) __obj.updateDynamic("absolute")(absolute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(brace)) __obj.updateDynamic("brace")(brace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`case`)) __obj.updateDynamic("case")(`case`.get.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (deep != null) __obj.updateDynamic("deep")(deep.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(extension)) __obj.updateDynamic("extension")(extension.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(followSymlinkedDirectories)) __obj.updateDynamic("followSymlinkedDirectories")(followSymlinkedDirectories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(globstar)) __obj.updateDynamic("globstar")(globstar.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(markDirectories)) __obj.updateDynamic("markDirectories")(markDirectories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchBase)) __obj.updateDynamic("matchBase")(matchBase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nobrace)) __obj.updateDynamic("nobrace")(nobrace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nocase)) __obj.updateDynamic("nocase")(nocase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noext)) __obj.updateDynamic("noext")(noext.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noglobstar)) __obj.updateDynamic("noglobstar")(noglobstar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyDirectories)) __obj.updateDynamic("onlyDirectories")(onlyDirectories.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyFiles)) __obj.updateDynamic("onlyFiles")(onlyFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stats)) __obj.updateDynamic("stats")(stats.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
+    if (!js.isUndefined(unique)) __obj.updateDynamic("unique")(unique.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPartialOptions[T]]
   }
-  @scala.inline
-  implicit class IPartialOptionsOps[Self[t] <: IPartialOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAbsolute(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsolute: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrace(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrace: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCase(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCase: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("case")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeep(value: Double | Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeep: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDot(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDot: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtension(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowSymlinkedDirectories(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followSymlinkedDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowSymlinkedDirectories: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followSymlinkedDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobstar(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globstar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobstar: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globstar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: js.Array[Pattern]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkDirectories(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkDirectories: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchBase(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchBase: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNobrace(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNobrace: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nobrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNocase(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nocase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNocase: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nocase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoext(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoext: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoglobstar(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noglobstar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoglobstar: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noglobstar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyDirectories(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyDirectories: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyDirectories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyFiles(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyFiles: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(value: /* entry */ EntryItem => T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnique(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnique: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

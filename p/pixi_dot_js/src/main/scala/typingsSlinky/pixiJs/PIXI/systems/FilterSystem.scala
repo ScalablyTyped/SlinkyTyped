@@ -35,6 +35,11 @@ trait FilterSystem extends System {
     */
   val defaultFilterStack: js.Array[_] = js.native
   /**
+    * Whether to clear output renderTexture in AUTO/BLIT mode. See {@link PIXI.CLEAR_MODES}
+    * @member {boolean} PIXI.systems.FilterSystem#forceClear
+    */
+  var forceClear: Boolean = js.native
+  /**
     * This uniform group is attached to filter uniforms when used
     * @member {PIXI.UniformGroup} PIXI.systems.FilterSystem#globalUniforms
     * @property {PIXI.Rectangle} outputFrame
@@ -71,6 +76,13 @@ trait FilterSystem extends System {
     * @member {Object} PIXI.systems.FilterSystem#texturePool
     */
   var texturePool: js.Any = js.native
+  /**
+    * Old padding behavior is to use the max amount instead of sum padding.
+    * Use this flag if you need the old behavior.
+    * @member {boolean} PIXI.systems.FilterSystem#useMaxPadding
+    * @default false
+    */
+  var useMaxPadding: Boolean = js.native
   /**
     * Draws a filter.
     *

@@ -67,89 +67,22 @@ trait SchemaRouterBgpPeerBfd extends js.Object {
 
 object SchemaRouterBgpPeerBfd {
   @scala.inline
-  def apply(): SchemaRouterBgpPeerBfd = {
+  def apply(
+    minReceiveInterval: js.UndefOr[Double] = js.undefined,
+    minTransmitInterval: js.UndefOr[Double] = js.undefined,
+    mode: String = null,
+    multiplier: js.UndefOr[Double] = js.undefined,
+    packetMode: String = null,
+    slowTimerInterval: js.UndefOr[Double] = js.undefined
+  ): SchemaRouterBgpPeerBfd = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(minReceiveInterval)) __obj.updateDynamic("minReceiveInterval")(minReceiveInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minTransmitInterval)) __obj.updateDynamic("minTransmitInterval")(minTransmitInterval.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiplier)) __obj.updateDynamic("multiplier")(multiplier.get.asInstanceOf[js.Any])
+    if (packetMode != null) __obj.updateDynamic("packetMode")(packetMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(slowTimerInterval)) __obj.updateDynamic("slowTimerInterval")(slowTimerInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterBgpPeerBfd]
   }
-  @scala.inline
-  implicit class SchemaRouterBgpPeerBfdOps[Self <: SchemaRouterBgpPeerBfd] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMinReceiveInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minReceiveInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinReceiveInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minReceiveInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinTransmitInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTransmitInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinTransmitInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTransmitInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiplier(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiplier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiplier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPacketMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPacketMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlowTimerInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slowTimerInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlowTimerInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slowTimerInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

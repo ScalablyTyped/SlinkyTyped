@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Use with <Attribute.type> to place a horizontal line through the text.
-		 */
+  * Use with <Attribute.type> to place a horizontal line through the text.
+  */
 @JSGlobal("Titanium.UI.ATTRIBUTE_STRIKETHROUGH_STYLE")
 @js.native
 object ATTRIBUTE_STRIKETHROUGH_STYLE extends TopLevel[Double]

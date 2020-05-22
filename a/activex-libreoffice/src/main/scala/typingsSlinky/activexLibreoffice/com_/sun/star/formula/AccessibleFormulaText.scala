@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of a formula documents command text.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleFormulaText
   extends XAccessible
      with XAccessibleComponent

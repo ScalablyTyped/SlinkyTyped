@@ -26,65 +26,18 @@ trait GetOpenIDConnectProviderResponse extends js.Object {
 
 object GetOpenIDConnectProviderResponse {
   @scala.inline
-  def apply(): GetOpenIDConnectProviderResponse = {
+  def apply(
+    ClientIDList: clientIDListType = null,
+    CreateDate: js.Date = null,
+    ThumbprintList: thumbprintListType = null,
+    Url: OpenIDConnectProviderUrlType = null
+  ): GetOpenIDConnectProviderResponse = {
     val __obj = js.Dynamic.literal()
+    if (ClientIDList != null) __obj.updateDynamic("ClientIDList")(ClientIDList.asInstanceOf[js.Any])
+    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
+    if (ThumbprintList != null) __obj.updateDynamic("ThumbprintList")(ThumbprintList.asInstanceOf[js.Any])
+    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOpenIDConnectProviderResponse]
   }
-  @scala.inline
-  implicit class GetOpenIDConnectProviderResponseOps[Self <: GetOpenIDConnectProviderResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientIDList(value: clientIDListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIDList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientIDList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIDList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbprintList(value: thumbprintListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbprintList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbprintList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbprintList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: OpenIDConnectProviderUrlType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

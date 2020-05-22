@@ -20,40 +20,39 @@ import scala.scalajs.js.annotation._
   * Yiddishzh-CN : Chinese (simplified)zh-TW : Chinese (traditional)
   * @since OOo 2.2
   */
-@js.native
 trait XLanguageGuessing extends js.Object {
   /**
     * returns a list of all supported languages.
     *
     * This should be the same as the mathematical union of all enabled and disabled languages.
     */
-  val AvailableLanguages: SafeArray[Locale] = js.native
+  val AvailableLanguages: SafeArray[Locale]
   /** returns the list of all disabled languages */
-  val DisabledLanguages: SafeArray[Locale] = js.native
+  val DisabledLanguages: SafeArray[Locale]
   /** returns the list of all enabled languages */
-  val EnabledLanguages: SafeArray[Locale] = js.native
+  val EnabledLanguages: SafeArray[Locale]
   /**
     * allows to explicitly discard some languages from the set of languages possibly returned.
     *
     * By default all languages are enabled.
     */
-  def disableLanguages(aLanguages: SeqEquiv[Locale]): Unit = js.native
+  def disableLanguages(aLanguages: SeqEquiv[Locale]): Unit
   /**
     * allows to explicitly re-enable some languages that got previously disabled.
     *
     * By default all languages are enabled.
     */
-  def enableLanguages(aLanguages: SeqEquiv[Locale]): Unit = js.native
+  def enableLanguages(aLanguages: SeqEquiv[Locale]): Unit
   /**
     * returns a list of all supported languages.
     *
     * This should be the same as the mathematical union of all enabled and disabled languages.
     */
-  def getAvailableLanguages(): SafeArray[Locale] = js.native
+  def getAvailableLanguages(): SafeArray[Locale]
   /** returns the list of all disabled languages */
-  def getDisabledLanguages(): SafeArray[Locale] = js.native
+  def getDisabledLanguages(): SafeArray[Locale]
   /** returns the list of all enabled languages */
-  def getEnabledLanguages(): SafeArray[Locale] = js.native
+  def getEnabledLanguages(): SafeArray[Locale]
   /**
     * determines the single most probable language of a sub-string.
     *
@@ -68,7 +67,7 @@ trait XLanguageGuessing extends js.Object {
     * @returns the locale for the language identified. If no language could be identified the locale will be empty.
     * @see com.sun.star.lang.Locale
     */
-  def guessPrimaryLanguage(aText: String, nStartPos: Double, nLen: Double): Locale = js.native
+  def guessPrimaryLanguage(aText: String, nStartPos: Double, nLen: Double): Locale
 }
 
 object XLanguageGuessing {
@@ -87,67 +86,5 @@ object XLanguageGuessing {
     val __obj = js.Dynamic.literal(AvailableLanguages = AvailableLanguages.asInstanceOf[js.Any], DisabledLanguages = DisabledLanguages.asInstanceOf[js.Any], EnabledLanguages = EnabledLanguages.asInstanceOf[js.Any], disableLanguages = js.Any.fromFunction1(disableLanguages), enableLanguages = js.Any.fromFunction1(enableLanguages), getAvailableLanguages = js.Any.fromFunction0(getAvailableLanguages), getDisabledLanguages = js.Any.fromFunction0(getDisabledLanguages), getEnabledLanguages = js.Any.fromFunction0(getEnabledLanguages), guessPrimaryLanguage = js.Any.fromFunction3(guessPrimaryLanguage))
     __obj.asInstanceOf[XLanguageGuessing]
   }
-  @scala.inline
-  implicit class XLanguageGuessingOps[Self <: XLanguageGuessing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableLanguages(value: SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableLanguages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisabledLanguages(value: SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisabledLanguages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabledLanguages(value: SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnabledLanguages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisableLanguages(value: SeqEquiv[Locale] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLanguages")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnableLanguages(value: SeqEquiv[Locale] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLanguages")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAvailableLanguages(value: () => SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableLanguages")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDisabledLanguages(value: () => SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisabledLanguages")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetEnabledLanguages(value: () => SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEnabledLanguages")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGuessPrimaryLanguage(value: (String, Double, Double) => Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guessPrimaryLanguage")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

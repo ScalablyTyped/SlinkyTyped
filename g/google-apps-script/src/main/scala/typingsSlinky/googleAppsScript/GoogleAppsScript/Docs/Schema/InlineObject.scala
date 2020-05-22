@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InlineObject extends js.Object {
-  var inlineObjectProperties: js.UndefOr[InlineObjectProperties] = js.native
-  var objectId: js.UndefOr[String] = js.native
-  var suggestedDeletionIds: js.UndefOr[js.Array[String]] = js.native
-  var suggestedInlineObjectPropertiesChanges: js.UndefOr[js.Object] = js.native
-  var suggestedInsertionId: js.UndefOr[String] = js.native
+  var inlineObjectProperties: js.UndefOr[InlineObjectProperties] = js.undefined
+  var objectId: js.UndefOr[String] = js.undefined
+  var suggestedDeletionIds: js.UndefOr[js.Array[String]] = js.undefined
+  var suggestedInlineObjectPropertiesChanges: js.UndefOr[js.Object] = js.undefined
+  var suggestedInsertionId: js.UndefOr[String] = js.undefined
 }
 
 object InlineObject {
   @scala.inline
-  def apply(): InlineObject = {
+  def apply(
+    inlineObjectProperties: InlineObjectProperties = null,
+    objectId: String = null,
+    suggestedDeletionIds: js.Array[String] = null,
+    suggestedInlineObjectPropertiesChanges: js.Object = null,
+    suggestedInsertionId: String = null
+  ): InlineObject = {
     val __obj = js.Dynamic.literal()
+    if (inlineObjectProperties != null) __obj.updateDynamic("inlineObjectProperties")(inlineObjectProperties.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (suggestedDeletionIds != null) __obj.updateDynamic("suggestedDeletionIds")(suggestedDeletionIds.asInstanceOf[js.Any])
+    if (suggestedInlineObjectPropertiesChanges != null) __obj.updateDynamic("suggestedInlineObjectPropertiesChanges")(suggestedInlineObjectPropertiesChanges.asInstanceOf[js.Any])
+    if (suggestedInsertionId != null) __obj.updateDynamic("suggestedInsertionId")(suggestedInsertionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[InlineObject]
   }
-  @scala.inline
-  implicit class InlineObjectOps[Self <: InlineObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInlineObjectProperties(value: InlineObjectProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineObjectProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineObjectProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineObjectProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedDeletionIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedDeletionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedInlineObjectPropertiesChanges(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInlineObjectPropertiesChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedInlineObjectPropertiesChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInlineObjectPropertiesChanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedInsertionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedInsertionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

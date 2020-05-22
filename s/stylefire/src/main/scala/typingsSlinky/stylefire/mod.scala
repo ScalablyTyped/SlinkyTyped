@@ -56,7 +56,8 @@ object mod extends js.Object {
     transform: js.UndefOr[ResolvedState],
     transformOrigin: js.UndefOr[ResolvedState],
     transformKeys: js.UndefOr[js.Array[String]],
-    isDashCase: js.UndefOr[Boolean]
+    isDashCase: js.UndefOr[Boolean],
+    allowTransformNone: js.UndefOr[Boolean]
   ): ResolvedState = js.native
   def createStylerFactory(hasOnReadOnRenderUncachedValuesUseCache: Config): js.Function1[/* hasProps */ js.UndefOr[Props], Styler] = js.native
   def default(nodeOrSelector: String): Styler = js.native

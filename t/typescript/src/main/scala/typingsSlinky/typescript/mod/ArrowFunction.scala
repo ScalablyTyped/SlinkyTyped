@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 trait ArrowFunction
   extends FunctionLikeDeclarationBase
      with FunctionLikeDeclaration
-     with HasJSDoc
      with SignatureDeclaration
-     with ConciseBody
+     with _HasJSDoc
      with ForInitializer {
   var _expressionBrand: js.Any = js.native
   @JSName("body")

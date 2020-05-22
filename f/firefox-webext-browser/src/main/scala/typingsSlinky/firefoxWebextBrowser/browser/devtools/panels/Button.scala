@@ -6,13 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A button created by the extension. */
-@js.native
 trait Button extends js.Object {
   /**
     * Fired when the button is clicked.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var onClicked: WebExtEvent[js.Function0[Unit]] = js.native
+  var onClicked: WebExtEvent[js.Function0[Unit]]
   /**
     * Updates the attributes of the button. If some of the arguments are omitted or `null`, the corresponding
     * attributes are not updated.
@@ -28,42 +27,18 @@ trait Button extends js.Object {
       /* disabled */ js.UndefOr[Boolean], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object Button {
   @scala.inline
-  def apply(onClicked: WebExtEvent[js.Function0[Unit]]): Button = {
+  def apply(
+    onClicked: WebExtEvent[js.Function0[Unit]],
+    update: (/* iconPath */ js.UndefOr[String], /* tooltipText */ js.UndefOr[String], /* disabled */ js.UndefOr[Boolean]) => Unit = null
+  ): Button = {
     val __obj = js.Dynamic.literal(onClicked = onClicked.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction3(update))
     __obj.asInstanceOf[Button]
   }
-  @scala.inline
-  implicit class ButtonOps[Self <: Button] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnClicked(value: WebExtEvent[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClicked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(
-      value: (/* iconPath */ js.UndefOr[String], /* tooltipText */ js.UndefOr[String], /* disabled */ js.UndefOr[Boolean]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

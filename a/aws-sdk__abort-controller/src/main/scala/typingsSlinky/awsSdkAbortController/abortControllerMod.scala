@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkAbortController
 
+import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,20 @@ import scala.scalajs.js.annotation._
 object abortControllerMod extends js.Object {
   @js.native
   class AbortController ()
-    extends typingsSlinky.awsSdkTypes.abortMod.AbortController
+    extends typingsSlinky.awsSdkTypes.abortMod.AbortController {
+    /**
+      * An object that reports whether the action associated with this
+      * {AbortController} has been cancelled.
+      */
+    /* CompleteClass */
+    override val signal: AbortSignal = js.native
+    /**
+      * Declares the operation associated with this AbortController to have been
+      * cancelled.
+      */
+    /* CompleteClass */
+    override def abort(): Unit = js.native
+  }
   
 }
 

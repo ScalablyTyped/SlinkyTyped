@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Review extends js.Object {
   /** The name of the user who wrote the review. */
-  var authorName: js.UndefOr[String] = js.native
+  var authorName: js.UndefOr[String] = js.undefined
   /** A repeated field containing comments for the review. */
-  var comments: js.UndefOr[js.Array[Comment]] = js.native
+  var comments: js.UndefOr[js.Array[Comment]] = js.undefined
   /** Unique identifier for this review. */
-  var reviewId: js.UndefOr[String] = js.native
+  var reviewId: js.UndefOr[String] = js.undefined
 }
 
 object Review {
   @scala.inline
-  def apply(): Review = {
+  def apply(authorName: String = null, comments: js.Array[Comment] = null, reviewId: String = null): Review = {
     val __obj = js.Dynamic.literal()
+    if (authorName != null) __obj.updateDynamic("authorName")(authorName.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (reviewId != null) __obj.updateDynamic("reviewId")(reviewId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Review]
   }
-  @scala.inline
-  implicit class ReviewOps[Self <: Review] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[Comment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviewId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviewId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

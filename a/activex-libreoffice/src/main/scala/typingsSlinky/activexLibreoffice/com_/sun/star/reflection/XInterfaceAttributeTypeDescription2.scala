@@ -13,33 +13,32 @@ import scala.scalajs.js.annotation._
   * This type supersedes {@link XInterfaceAttributeTypeDescription} , which does not support extended attributes.
   * @since OOo 2.0
   */
-@js.native
 trait XInterfaceAttributeTypeDescription2 extends XInterfaceAttributeTypeDescription {
   /**
     * Returns the exceptions that can be raised by the attribute's getter.
     * @returns the reflections of all the exceptions that are listed in the `raises` specification of the attribute's getter (if any), in no particular order; a
     */
-  val GetExceptions: SafeArray[XCompoundTypeDescription] = js.native
+  val GetExceptions: SafeArray[XCompoundTypeDescription]
   /**
     * Returns the exceptions that can be raised by the attribute's setter.
     * @returns the reflections of all the exceptions that are listed in the `raises` specification of the attribute's setter (if any), in no particular order; a
     */
-  val SetExceptions: SafeArray[XCompoundTypeDescription] = js.native
+  val SetExceptions: SafeArray[XCompoundTypeDescription]
   /**
     * Returns the exceptions that can be raised by the attribute's getter.
     * @returns the reflections of all the exceptions that are listed in the `raises` specification of the attribute's getter (if any), in no particular order; a
     */
-  def getGetExceptions(): SafeArray[XCompoundTypeDescription] = js.native
+  def getGetExceptions(): SafeArray[XCompoundTypeDescription]
   /**
     * Returns the exceptions that can be raised by the attribute's setter.
     * @returns the reflections of all the exceptions that are listed in the `raises` specification of the attribute's setter (if any), in no particular order; a
     */
-  def getSetExceptions(): SafeArray[XCompoundTypeDescription] = js.native
+  def getSetExceptions(): SafeArray[XCompoundTypeDescription]
   /**
     * Returns whether this object reflects a bound attribute.
     * @returns `TRUE` iff this object reflects a bound attribute
     */
-  def isBound(): Boolean = js.native
+  def isBound(): Boolean
 }
 
 object XInterfaceAttributeTypeDescription2 {
@@ -68,43 +67,5 @@ object XInterfaceAttributeTypeDescription2 {
     val __obj = js.Dynamic.literal(GetExceptions = GetExceptions.asInstanceOf[js.Any], MemberName = MemberName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], SetExceptions = SetExceptions.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getGetExceptions = js.Any.fromFunction0(getGetExceptions), getMemberName = js.Any.fromFunction0(getMemberName), getName = js.Any.fromFunction0(getName), getPosition = js.Any.fromFunction0(getPosition), getSetExceptions = js.Any.fromFunction0(getSetExceptions), getType = js.Any.fromFunction0(getType), getTypeClass = js.Any.fromFunction0(getTypeClass), isBound = js.Any.fromFunction0(isBound), isReadOnly = js.Any.fromFunction0(isReadOnly), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XInterfaceAttributeTypeDescription2]
   }
-  @scala.inline
-  implicit class XInterfaceAttributeTypeDescription2Ops[Self <: XInterfaceAttributeTypeDescription2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetExceptions(value: SafeArray[XCompoundTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetExceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetExceptions(value: SafeArray[XCompoundTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetExceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetGetExceptions(value: () => SafeArray[XCompoundTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGetExceptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSetExceptions(value: () => SafeArray[XCompoundTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSetExceptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsBound(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBound")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

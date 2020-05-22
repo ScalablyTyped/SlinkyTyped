@@ -1,84 +1,76 @@
 package typingsSlinky.extjs.Ext.data
 
+import typingsSlinky.extjs.Ext.Array
+import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IUuidGenerator extends IIdGenerator {
   /** [Method] Reconfigures this generator given new config properties
-  		* @param config Object
-  		*/
-  var reconfigure: js.UndefOr[js.Function1[/* config */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param config Object
+    */
+  var reconfigure: js.UndefOr[js.Function1[/* config */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Property] (Number/Object) */
-  var salt: js.UndefOr[js.Any] = js.native
+  var salt: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Number/Object) */
-  var timestamp: js.UndefOr[js.Any] = js.native
+  var timestamp: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Number) */
-  var version: js.UndefOr[Double] = js.native
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object IUuidGenerator {
   @scala.inline
-  def apply(): IUuidGenerator = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    extend: String = null,
+    generate: () => String = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    id: String = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => IUuidGenerator = null,
+    isGenerator: js.UndefOr[Boolean] = js.undefined,
+    mixins: js.Any = null,
+    reconfigure: /* config */ js.UndefOr[js.Any] => Unit = null,
+    requires: Array = null,
+    salt: js.Any = null,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    timestamp: js.Any = null,
+    uses: Array = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): IUuidGenerator = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (generate != null) __obj.updateDynamic("generate")(js.Any.fromFunction0(generate))
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (!js.isUndefined(isGenerator)) __obj.updateDynamic("isGenerator")(isGenerator.get.asInstanceOf[js.Any])
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (reconfigure != null) __obj.updateDynamic("reconfigure")(js.Any.fromFunction1(reconfigure))
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (salt != null) __obj.updateDynamic("salt")(salt.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUuidGenerator]
   }
-  @scala.inline
-  implicit class IUuidGeneratorOps[Self <: IUuidGenerator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReconfigure(value: /* config */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconfigure")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReconfigure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconfigure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSalt(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSalt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

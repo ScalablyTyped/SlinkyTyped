@@ -23,29 +23,10 @@ trait SchemaAddSheetRequest extends js.Object {
 
 object SchemaAddSheetRequest {
   @scala.inline
-  def apply(): SchemaAddSheetRequest = {
+  def apply(properties: SchemaSheetProperties = null): SchemaAddSheetRequest = {
     val __obj = js.Dynamic.literal()
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddSheetRequest]
   }
-  @scala.inline
-  implicit class SchemaAddSheetRequestOps[Self <: SchemaAddSheetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: SchemaSheetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

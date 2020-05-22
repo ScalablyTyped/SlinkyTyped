@@ -4,75 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEditorContribution extends js.Object {
   /**
     * Restore view state.
     */
-  var restoreViewState: js.UndefOr[js.Function1[/* state */ js.Any, Unit]] = js.native
+  var restoreViewState: js.UndefOr[js.Function1[/* state */ js.Any, Unit]] = js.undefined
   /**
     * Store view state.
     */
-  var saveViewState: js.UndefOr[js.Function0[_]] = js.native
+  var saveViewState: js.UndefOr[js.Function0[_]] = js.undefined
   /**
     * Dispose this contribution.
     */
-  def dispose(): Unit = js.native
+  def dispose(): Unit
   /**
     * Get a unique identifier for this contribution.
     */
-  def getId(): String = js.native
+  def getId(): String
 }
 
 object IEditorContribution {
   @scala.inline
-  def apply(dispose: () => Unit, getId: () => String): IEditorContribution = {
+  def apply(
+    dispose: () => Unit,
+    getId: () => String,
+    restoreViewState: /* state */ js.Any => Unit = null,
+    saveViewState: () => _ = null
+  ): IEditorContribution = {
     val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), getId = js.Any.fromFunction0(getId))
+    if (restoreViewState != null) __obj.updateDynamic("restoreViewState")(js.Any.fromFunction1(restoreViewState))
+    if (saveViewState != null) __obj.updateDynamic("saveViewState")(js.Any.fromFunction0(saveViewState))
     __obj.asInstanceOf[IEditorContribution]
   }
-  @scala.inline
-  implicit class IEditorContributionOps[Self <: IEditorContribution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDispose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRestoreViewState(value: /* state */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreViewState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRestoreViewState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreViewState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveViewState(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveViewState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSaveViewState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveViewState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

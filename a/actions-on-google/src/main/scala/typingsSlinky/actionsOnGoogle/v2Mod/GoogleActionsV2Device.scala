@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsV2Device extends js.Object {
   /**
     * Represents actual device location such as latitude, longitude, and
@@ -14,34 +13,15 @@ trait GoogleActionsV2Device extends js.Object {
     * DEVICE_PRECISE_LOCATION
     * permission.
     */
-  var location: js.UndefOr[GoogleActionsV2Location] = js.native
+  var location: js.UndefOr[GoogleActionsV2Location] = js.undefined
 }
 
 object GoogleActionsV2Device {
   @scala.inline
-  def apply(): GoogleActionsV2Device = {
+  def apply(location: GoogleActionsV2Location = null): GoogleActionsV2Device = {
     val __obj = js.Dynamic.literal()
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2Device]
   }
-  @scala.inline
-  implicit class GoogleActionsV2DeviceOps[Self <: GoogleActionsV2Device] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: GoogleActionsV2Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

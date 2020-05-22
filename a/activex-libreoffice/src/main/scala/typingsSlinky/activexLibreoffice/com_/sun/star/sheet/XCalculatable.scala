@@ -7,16 +7,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents something that can recalculate. */
-@js.native
 trait XCalculatable extends XInterface {
   /**
     * recalculates all dirty cells.
     *
     * This calculates all formula cells which have not yet been calculated after their precedents have changed.
     */
-  def calculate(): Unit = js.native
+  def calculate(): Unit
   /** recalculates all cells. */
-  def calculateAll(): Unit = js.native
+  def calculateAll(): Unit
   /**
     * enables automatic calculation.
     *
@@ -24,7 +23,7 @@ trait XCalculatable extends XInterface {
     * the cell is displayed or used in another calculation.
     * @param bEnabled `TRUE` to enable automatic calculation, `FALSE` to disable.
     */
-  def enableAutomaticCalculation(bEnabled: Boolean): Unit = js.native
+  def enableAutomaticCalculation(bEnabled: Boolean): Unit
   /**
     * returns whether automatic calculation is enabled.
     *
@@ -32,7 +31,7 @@ trait XCalculatable extends XInterface {
     * the cell is displayed or used in another calculation.
     * @returns `TRUE` , if automatic calculation is enabled.
     */
-  def isAutomaticCalculationEnabled(): Boolean = js.native
+  def isAutomaticCalculationEnabled(): Boolean
 }
 
 object XCalculatable {
@@ -49,37 +48,5 @@ object XCalculatable {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), calculate = js.Any.fromFunction0(calculate), calculateAll = js.Any.fromFunction0(calculateAll), enableAutomaticCalculation = js.Any.fromFunction1(enableAutomaticCalculation), isAutomaticCalculationEnabled = js.Any.fromFunction0(isAutomaticCalculationEnabled), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCalculatable]
   }
-  @scala.inline
-  implicit class XCalculatableOps[Self <: XCalculatable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalculate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCalculateAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateAll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnableAutomaticCalculation(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutomaticCalculation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsAutomaticCalculationEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutomaticCalculationEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

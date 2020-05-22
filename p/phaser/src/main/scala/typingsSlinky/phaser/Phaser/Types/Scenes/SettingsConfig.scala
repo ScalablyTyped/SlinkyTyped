@@ -4,189 +4,81 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.phaser.Phaser.Types.Cameras.Scene2D.JSONCamera
 import typingsSlinky.phaser.Phaser.Types.Core.LoaderConfig
 import typingsSlinky.phaser.Phaser.Types.Core.PhysicsConfig
-import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.PackFileConfig
+import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.PackFileSection
 import typingsSlinky.phaser.phaserBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SettingsConfig extends js.Object {
   /**
     * Does the Scene start as active or not? An active Scene updates each step.
     */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /**
     * An optional Camera configuration object.
     */
-  var cameras: js.UndefOr[JSONCamera | js.Array[JSONCamera]] = js.native
+  var cameras: js.UndefOr[JSONCamera | js.Array[JSONCamera]] = js.undefined
   /**
     * The unique key of this Scene. Must be unique within the entire Game instance.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * The loader configuration object for the Scene.
     */
-  var loader: js.UndefOr[LoaderConfig] = js.native
+  var loader: js.UndefOr[LoaderConfig] = js.undefined
   /**
     * Overwrites the default injection map for a scene.
     */
-  var map: js.UndefOr[StringDictionary[String]] = js.native
+  var map: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * Extends the injection map for a scene.
     */
-  var mapAdd: js.UndefOr[StringDictionary[String]] = js.native
+  var mapAdd: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
-    * An optional Loader Packfile to be loaded before the Scene begins.
+    * Files to be loaded before the Scene begins.
     */
-  var pack: js.UndefOr[`false` | PackFileConfig] = js.native
+  var pack: js.UndefOr[`false` | PackFileSection] = js.undefined
   /**
     * The physics configuration object for the Scene.
     */
-  var physics: js.UndefOr[PhysicsConfig] = js.native
+  var physics: js.UndefOr[PhysicsConfig] = js.undefined
   /**
     * The plugin configuration object for the Scene.
     */
-  var plugins: js.UndefOr[`false` | js.Any] = js.native
+  var plugins: js.UndefOr[`false` | js.Any] = js.undefined
   /**
     * Does the Scene start as visible or not? A visible Scene renders each step.
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object SettingsConfig {
   @scala.inline
-  def apply(): SettingsConfig = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    cameras: JSONCamera | js.Array[JSONCamera] = null,
+    key: String = null,
+    loader: LoaderConfig = null,
+    map: StringDictionary[String] = null,
+    mapAdd: StringDictionary[String] = null,
+    pack: `false` | PackFileSection = null,
+    physics: PhysicsConfig = null,
+    plugins: `false` | js.Any = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): SettingsConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (cameras != null) __obj.updateDynamic("cameras")(cameras.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (mapAdd != null) __obj.updateDynamic("mapAdd")(mapAdd.asInstanceOf[js.Any])
+    if (pack != null) __obj.updateDynamic("pack")(pack.asInstanceOf[js.Any])
+    if (physics != null) __obj.updateDynamic("physics")(physics.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettingsConfig]
   }
-  @scala.inline
-  implicit class SettingsConfigOps[Self <: SettingsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameras(value: JSONCamera | js.Array[JSONCamera]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameras")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCameras: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameras")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoader(value: LoaderConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapAdd(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPack(value: `false` | PackFileConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhysics(value: PhysicsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhysics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: `false` | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,24 +22,10 @@ trait IDequeContainer_[T /* <: PElem */, SourceT /* <: IDequeContainer[T, Source
   /* InferMemberOverrides */
   override def assign[InputIterator /* <: IForwardIterator[PElem, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
   /**
-    * Iterator to the first element.
-    *
-    * @return Iterator to the first element.
-    */
-  /* InferMemberOverrides */
-  override def begin(): Iterator[T, SourceT, IteratorT, ReverseT, PElem] = js.native
-  /**
     * @inheritDoc
     */
   /* InferMemberOverrides */
   override def clear(): Unit = js.native
-  /**
-    * Iterator to the end.
-    *
-    * @return Iterator to the end.
-    */
-  /* InferMemberOverrides */
-  override def end(): Iterator[T, SourceT, IteratorT, ReverseT, PElem] = js.native
   /**
     * Erase elements in range.
     *
@@ -57,27 +43,6 @@ trait IDequeContainer_[T /* <: PElem */, SourceT /* <: IDequeContainer[T, Source
     */
   /* InferMemberOverrides */
   override def erase(pos: IteratorT): IteratorT = js.native
-  /**
-    * Insert an element at the end.
-    *
-    * @param val Value to insert.
-    */
-  /* InferMemberOverrides */
-  override def push_back(`val`: T): Unit = js.native
-  /**
-    * Reverse iterator to the first element in reverse.
-    *
-    * @return Reverse iterator to the first.
-    */
-  /* InferMemberOverrides */
-  override def rbegin(): ReverseT = js.native
-  /**
-    * Reverse iterator to the reverse end.
-    *
-    * @return Reverse iterator to the end.
-    */
-  /* InferMemberOverrides */
-  override def rend(): ReverseT = js.native
   /**
     * Swap elements.
     *

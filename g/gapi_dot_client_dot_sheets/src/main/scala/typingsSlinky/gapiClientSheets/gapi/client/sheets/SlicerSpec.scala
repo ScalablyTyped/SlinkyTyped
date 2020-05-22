@@ -4,158 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SlicerSpec extends js.Object {
   /**
     * True if the filter should apply to pivot tables.
     * If not set, default to `True`.
     */
-  var applyToPivotTables: js.UndefOr[Boolean] = js.native
+  var applyToPivotTables: js.UndefOr[Boolean] = js.undefined
   /** The background color of the slicer. */
-  var backgroundColor: js.UndefOr[Color] = js.native
+  var backgroundColor: js.UndefOr[Color] = js.undefined
   /**
     * The background color of the slicer.
     * If background_color is also set, this field takes precedence.
     */
-  var backgroundColorStyle: js.UndefOr[ColorStyle] = js.native
+  var backgroundColorStyle: js.UndefOr[ColorStyle] = js.undefined
   /** The column index in the data table on which the filter is applied to. */
-  var columnIndex: js.UndefOr[Double] = js.native
+  var columnIndex: js.UndefOr[Double] = js.undefined
   /** The data range of the slicer. */
-  var dataRange: js.UndefOr[GridRange] = js.native
+  var dataRange: js.UndefOr[GridRange] = js.undefined
   /** The filtering criteria of the slicer. */
-  var filterCriteria: js.UndefOr[FilterCriteria] = js.native
+  var filterCriteria: js.UndefOr[FilterCriteria] = js.undefined
   /**
     * The horizontal alignment of title in the slicer.
     * If unspecified, defaults to `LEFT`
     */
-  var horizontalAlignment: js.UndefOr[String] = js.native
+  var horizontalAlignment: js.UndefOr[String] = js.undefined
   /** The text format of title in the slicer. */
-  var textFormat: js.UndefOr[TextFormat] = js.native
+  var textFormat: js.UndefOr[TextFormat] = js.undefined
   /** The title of the slicer. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object SlicerSpec {
   @scala.inline
-  def apply(): SlicerSpec = {
+  def apply(
+    applyToPivotTables: js.UndefOr[Boolean] = js.undefined,
+    backgroundColor: Color = null,
+    backgroundColorStyle: ColorStyle = null,
+    columnIndex: js.UndefOr[Double] = js.undefined,
+    dataRange: GridRange = null,
+    filterCriteria: FilterCriteria = null,
+    horizontalAlignment: String = null,
+    textFormat: TextFormat = null,
+    title: String = null
+  ): SlicerSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(applyToPivotTables)) __obj.updateDynamic("applyToPivotTables")(applyToPivotTables.get.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (backgroundColorStyle != null) __obj.updateDynamic("backgroundColorStyle")(backgroundColorStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnIndex)) __obj.updateDynamic("columnIndex")(columnIndex.get.asInstanceOf[js.Any])
+    if (dataRange != null) __obj.updateDynamic("dataRange")(dataRange.asInstanceOf[js.Any])
+    if (filterCriteria != null) __obj.updateDynamic("filterCriteria")(filterCriteria.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
+    if (textFormat != null) __obj.updateDynamic("textFormat")(textFormat.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SlicerSpec]
   }
-  @scala.inline
-  implicit class SlicerSpecOps[Self <: SlicerSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyToPivotTables(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyToPivotTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyToPivotTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyToPivotTables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColorStyle(value: ColorStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColorStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColorStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColorStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataRange(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterCriteria(value: FilterCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalAlignment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextFormat(value: TextFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

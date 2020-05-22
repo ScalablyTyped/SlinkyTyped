@@ -16,10 +16,9 @@ import scala.scalajs.js.annotation._
   *
   * Get does the same: if the key is present, delete and reinsert it.
   */
-@js.native
 trait LRUCache[T] extends Cache[T] {
-  var _capacity: Double = js.native
-  var _map: Map[String, T] = js.native
+  var _capacity: Double
+  var _map: Map[String, T]
 }
 
 object LRUCache {
@@ -38,25 +37,5 @@ object LRUCache {
     val __obj = js.Dynamic.literal(_capacity = _capacity.asInstanceOf[js.Any], _map = _map.asInstanceOf[js.Any], capacity = js.Any.fromFunction0(capacity), clear = js.Any.fromFunction0(clear), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), set = js.Any.fromFunction2(set), size = js.Any.fromFunction0(size))
     __obj.asInstanceOf[LRUCache[T]]
   }
-  @scala.inline
-  implicit class LRUCacheOps[Self[t] <: LRUCache[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def with_capacity(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_map(value: Map[String, T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_map")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

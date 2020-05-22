@@ -12,47 +12,46 @@ import scala.scalajs.js.annotation._
   * Note: If the dimension is set in the object itself and not in the library, this dimension cannot be shared with other objects.
   * Note: A dimension that is set in the library can be used by many objects.
   */
-@js.native
 trait IListObjectDef extends js.Object {
   /*
     * Defines the sorting by state.
     */
-  var qAutoSortByState: INxAutoSortByStateDef = js.native
+  var qAutoSortByState: INxAutoSortByStateDef
   /*
     * Refers to a dimension stored in the list object.
     */
-  var qDef: INxInlineDimensionDef = js.native
+  var qDef: INxInlineDimensionDef
   /*
     * Lists the expressions in the list object.
     * >> This parameter is optional.
     */
-  var qExpressions: js.UndefOr[js.Array[INxListObjectExpressionDef]] = js.native
+  var qExpressions: js.UndefOr[js.Array[INxListObjectExpressionDef]] = js.undefined
   /*
     * Defines the frequency mode. The frequency mode is used to calculate the frequency of a value in a list object.
     * >> This parameter is optional.
     * >> Default is NX_FREQUENCY_NONE.
     */
-  var qFrequencyMode: js.UndefOr[FrequencyModeType] = js.native
+  var qFrequencyMode: js.UndefOr[FrequencyModeType] = js.undefined
   /*
     * Fetches an initial data set.
     */
-  var qInitialDataFetch: js.Array[INxPage] = js.native
+  var qInitialDataFetch: js.Array[INxPage]
   /*
     * Refers to a dimension stored in the library.
     */
-  var qLibraryId: String = js.native
+  var qLibraryId: String
   /*
     * If set to true, alternative values are allowed in qData.
     * This parameter is optional. The default value is false.
     * If set to false, no alternative values are displayed in qData. Values are excluded instead.
     * Note that on the contrary, the qStateCounts parameter counts the excluded values as alternative values.
     */
-  var qShowAlternatives: js.UndefOr[Boolean] = js.native
+  var qShowAlternatives: js.UndefOr[Boolean] = js.undefined
   /*
     * Name of the alternate state.
     * Default is current selections $.
     */
-  var qStateName: String = js.native
+  var qStateName: String
 }
 
 object IListObjectDef {
@@ -62,84 +61,16 @@ object IListObjectDef {
     qDef: INxInlineDimensionDef,
     qInitialDataFetch: js.Array[INxPage],
     qLibraryId: String,
-    qStateName: String
+    qStateName: String,
+    qExpressions: js.Array[INxListObjectExpressionDef] = null,
+    qFrequencyMode: FrequencyModeType = null,
+    qShowAlternatives: js.UndefOr[Boolean] = js.undefined
   ): IListObjectDef = {
     val __obj = js.Dynamic.literal(qAutoSortByState = qAutoSortByState.asInstanceOf[js.Any], qDef = qDef.asInstanceOf[js.Any], qInitialDataFetch = qInitialDataFetch.asInstanceOf[js.Any], qLibraryId = qLibraryId.asInstanceOf[js.Any], qStateName = qStateName.asInstanceOf[js.Any])
+    if (qExpressions != null) __obj.updateDynamic("qExpressions")(qExpressions.asInstanceOf[js.Any])
+    if (qFrequencyMode != null) __obj.updateDynamic("qFrequencyMode")(qFrequencyMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(qShowAlternatives)) __obj.updateDynamic("qShowAlternatives")(qShowAlternatives.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IListObjectDef]
   }
-  @scala.inline
-  implicit class IListObjectDefOps[Self <: IListObjectDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQAutoSortByState(value: INxAutoSortByStateDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAutoSortByState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQDef(value: INxInlineDimensionDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQInitialDataFetch(value: js.Array[INxPage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qInitialDataFetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQLibraryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLibraryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQStateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qStateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQExpressions(value: js.Array[INxListObjectExpressionDef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQFrequencyMode(value: FrequencyModeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qFrequencyMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQFrequencyMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qFrequencyMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQShowAlternatives(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowAlternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQShowAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qShowAlternatives")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

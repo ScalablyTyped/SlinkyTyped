@@ -12,247 +12,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrimusOptions extends js.Object {
-  var authorization: js.UndefOr[AuthorizationHandler] = js.native
-  var compression: js.UndefOr[Boolean] = js.native
-  var credentials: js.UndefOr[Boolean] = js.native
-  var exposed: js.UndefOr[Boolean] = js.native
-  var global: js.UndefOr[String] = js.native
-  var headers: js.UndefOr[Boolean] = js.native
-  var idGenerator: js.UndefOr[js.Function0[String]] = js.native
-  var maxAge: js.UndefOr[String] = js.native
-  var maxLength: js.UndefOr[Double] = js.native
-  var methods: js.UndefOr[String] = js.native
+  var authorization: js.UndefOr[AuthorizationHandler] = js.undefined
+  var compression: js.UndefOr[Boolean] = js.undefined
+  var credentials: js.UndefOr[Boolean] = js.undefined
+  var exposed: js.UndefOr[Boolean] = js.undefined
+  var global: js.UndefOr[String] = js.undefined
+  var headers: js.UndefOr[Boolean] = js.undefined
+  var idGenerator: js.UndefOr[js.Function0[String]] = js.undefined
+  var maxAge: js.UndefOr[String] = js.undefined
+  var maxLength: js.UndefOr[Double] = js.undefined
+  var methods: js.UndefOr[String] = js.undefined
   // Cors
-  var origins: js.UndefOr[String] = js.native
-  var parser: js.UndefOr[String | Parser] = js.native
-  var pathname: js.UndefOr[String] = js.native
-  var pingInterval: js.UndefOr[Double] = js.native
-  var plugin: js.UndefOr[String | js.Object] = js.native
-  var transformer: js.UndefOr[websockets | engineDotio | browserchannel | sockjs | faye | uws] = js.native
-  var transport: js.UndefOr[js.Object] = js.native
+  var origins: js.UndefOr[String] = js.undefined
+  var parser: js.UndefOr[String | Parser] = js.undefined
+  var pathname: js.UndefOr[String] = js.undefined
+  var pingInterval: js.UndefOr[Double] = js.undefined
+  var plugin: js.UndefOr[String | js.Object] = js.undefined
+  var transformer: js.UndefOr[websockets | engineDotio | browserchannel | sockjs | faye | uws] = js.undefined
+  var transport: js.UndefOr[js.Object] = js.undefined
 }
 
 object PrimusOptions {
   @scala.inline
-  def apply(): PrimusOptions = {
+  def apply(
+    authorization: (/* req */ IncomingMessage, /* done */ js.Function1[/* err */ js.UndefOr[String | js.Error | Authenticate], Unit]) => Unit = null,
+    compression: js.UndefOr[Boolean] = js.undefined,
+    credentials: js.UndefOr[Boolean] = js.undefined,
+    exposed: js.UndefOr[Boolean] = js.undefined,
+    global: String = null,
+    headers: js.UndefOr[Boolean] = js.undefined,
+    idGenerator: () => String = null,
+    maxAge: String = null,
+    maxLength: js.UndefOr[Double] = js.undefined,
+    methods: String = null,
+    origins: String = null,
+    parser: String | Parser = null,
+    pathname: String = null,
+    pingInterval: js.UndefOr[Double] = js.undefined,
+    plugin: String | js.Object = null,
+    transformer: websockets | engineDotio | browserchannel | sockjs | faye | uws = null,
+    transport: js.Object = null
+  ): PrimusOptions = {
     val __obj = js.Dynamic.literal()
+    if (authorization != null) __obj.updateDynamic("authorization")(js.Any.fromFunction2(authorization))
+    if (!js.isUndefined(compression)) __obj.updateDynamic("compression")(compression.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(credentials)) __obj.updateDynamic("credentials")(credentials.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exposed)) __obj.updateDynamic("exposed")(exposed.get.asInstanceOf[js.Any])
+    if (global != null) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
+    if (!js.isUndefined(headers)) __obj.updateDynamic("headers")(headers.get.asInstanceOf[js.Any])
+    if (idGenerator != null) __obj.updateDynamic("idGenerator")(js.Any.fromFunction0(idGenerator))
+    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLength)) __obj.updateDynamic("maxLength")(maxLength.get.asInstanceOf[js.Any])
+    if (methods != null) __obj.updateDynamic("methods")(methods.asInstanceOf[js.Any])
+    if (origins != null) __obj.updateDynamic("origins")(origins.asInstanceOf[js.Any])
+    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
+    if (pathname != null) __obj.updateDynamic("pathname")(pathname.asInstanceOf[js.Any])
+    if (!js.isUndefined(pingInterval)) __obj.updateDynamic("pingInterval")(pingInterval.get.asInstanceOf[js.Any])
+    if (plugin != null) __obj.updateDynamic("plugin")(plugin.asInstanceOf[js.Any])
+    if (transformer != null) __obj.updateDynamic("transformer")(transformer.asInstanceOf[js.Any])
+    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrimusOptions]
   }
-  @scala.inline
-  implicit class PrimusOptionsOps[Self <: PrimusOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorization(
-      value: (/* req */ IncomingMessage, /* done */ js.Function1[/* err */ js.UndefOr[String | js.Error | Authenticate], Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorization")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutAuthorization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExposed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExposed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdGenerator(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idGenerator")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutIdGenerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idGenerator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethods(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigins(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParser(value: String | Parser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPingInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pingInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPingInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pingInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugin(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformer(value: websockets | engineDotio | browserchannel | sockjs | faye | uws): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransport(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

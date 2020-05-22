@@ -51,6 +51,11 @@ class Transaction () extends Resource {
     */
   var network: js.UndefOr[js.Any] = js.native
   /**
+    * Resource type
+    */
+  /* CompleteClass */
+  override var resource: ResourceType = js.native
+  /**
     * Constant "transaction"
     */
   @JSName("resource")

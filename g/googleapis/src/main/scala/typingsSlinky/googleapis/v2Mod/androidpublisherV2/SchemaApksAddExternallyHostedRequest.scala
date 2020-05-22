@@ -14,29 +14,10 @@ trait SchemaApksAddExternallyHostedRequest extends js.Object {
 
 object SchemaApksAddExternallyHostedRequest {
   @scala.inline
-  def apply(): SchemaApksAddExternallyHostedRequest = {
+  def apply(externallyHostedApk: SchemaExternallyHostedApk = null): SchemaApksAddExternallyHostedRequest = {
     val __obj = js.Dynamic.literal()
+    if (externallyHostedApk != null) __obj.updateDynamic("externallyHostedApk")(externallyHostedApk.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApksAddExternallyHostedRequest]
   }
-  @scala.inline
-  implicit class SchemaApksAddExternallyHostedRequestOps[Self <: SchemaApksAddExternallyHostedRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExternallyHostedApk(value: SchemaExternallyHostedApk): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externallyHostedApk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternallyHostedApk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externallyHostedApk")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

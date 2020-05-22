@@ -1,17 +1,17 @@
 package typingsSlinky.instagramPrivateApi
 
-import typingsSlinky.instagramPrivateApi.anon.DiffAttachmentStickerInst
-import typingsSlinky.instagramPrivateApi.anon.DiffChatStickerInstaStick
-import typingsSlinky.instagramPrivateApi.anon.DiffCountdownStickerInsta
-import typingsSlinky.instagramPrivateApi.anon.DiffHashtagStickerInstaSt
-import typingsSlinky.instagramPrivateApi.anon.DiffLocationStickerInstaS
-import typingsSlinky.instagramPrivateApi.anon.DiffMentionStickerInstaSt
-import typingsSlinky.instagramPrivateApi.anon.DiffPollStickerInstaStick
-import typingsSlinky.instagramPrivateApi.anon.DiffQuestionStickerInstaS
-import typingsSlinky.instagramPrivateApi.anon.DiffQuizStickerInstaStick
-import typingsSlinky.instagramPrivateApi.anon.DiffSliderStickerInstaSti
-import typingsSlinky.instagramPrivateApi.anon.PartialAttachmentSticker
-import typingsSlinky.instagramPrivateApi.anon.PartialMentionSticker
+import typingsSlinky.instagramPrivateApi.anon.PartialStickerOptionsAtta
+import typingsSlinky.instagramPrivateApi.anon.PartialStickerOptionsMent
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsAttachmentS
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsChatSticker
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsCountdownSt
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsHashtagStic
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsLocationSti
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsMentionStic
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsPollSticker
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsQuestionSti
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsQuizSticker
+import typingsSlinky.instagramPrivateApi.anon.StickerOptionsSliderStick
 import typingsSlinky.instagramPrivateApi.anon.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -71,20 +71,20 @@ object stickerBuilderMod extends js.Object {
   /* static members */
   @js.native
   object StickerBuilder extends js.Object {
-    def attachment(options: DiffAttachmentStickerInst): typingsSlinky.instagramPrivateApi.stickersMod.AttachmentSticker = js.native
+    def attachment(options: StickerOptionsAttachmentS): typingsSlinky.instagramPrivateApi.stickersMod.AttachmentSticker = js.native
     def attachmentFromMedia(mediaInfo: User): typingsSlinky.instagramPrivateApi.stickersMod.AttachmentSticker = js.native
-    def attachmentFromMedia(mediaInfo: User, additional: PartialAttachmentSticker): typingsSlinky.instagramPrivateApi.stickersMod.AttachmentSticker = js.native
-    def chat(options: DiffChatStickerInstaStick): typingsSlinky.instagramPrivateApi.stickersMod.ChatSticker = js.native
-    def countdown(options: DiffCountdownStickerInsta): typingsSlinky.instagramPrivateApi.stickersMod.CountdownSticker = js.native
-    def hashtag(options: DiffHashtagStickerInstaSt): typingsSlinky.instagramPrivateApi.stickersMod.HashtagSticker = js.native
-    def location(options: DiffLocationStickerInstaS): typingsSlinky.instagramPrivateApi.stickersMod.LocationSticker = js.native
-    def mention(options: DiffMentionStickerInstaSt): typingsSlinky.instagramPrivateApi.stickersMod.MentionSticker = js.native
+    def attachmentFromMedia(mediaInfo: User, additional: PartialStickerOptionsAtta): typingsSlinky.instagramPrivateApi.stickersMod.AttachmentSticker = js.native
+    def chat(options: StickerOptionsChatSticker): typingsSlinky.instagramPrivateApi.stickersMod.ChatSticker = js.native
+    def countdown(options: StickerOptionsCountdownSt): typingsSlinky.instagramPrivateApi.stickersMod.CountdownSticker = js.native
+    def hashtag(options: StickerOptionsHashtagStic): typingsSlinky.instagramPrivateApi.stickersMod.HashtagSticker = js.native
+    def location(options: StickerOptionsLocationSti): typingsSlinky.instagramPrivateApi.stickersMod.LocationSticker = js.native
+    def mention(options: StickerOptionsMentionStic): typingsSlinky.instagramPrivateApi.stickersMod.MentionSticker = js.native
     def mentionReel(mediaInfo: User): typingsSlinky.instagramPrivateApi.stickersMod.MentionSticker = js.native
-    def mentionReel(mediaInfo: User, additional: PartialMentionSticker): typingsSlinky.instagramPrivateApi.stickersMod.MentionSticker = js.native
-    def poll(options: DiffPollStickerInstaStick): typingsSlinky.instagramPrivateApi.stickersMod.PollSticker = js.native
-    def question(options: DiffQuestionStickerInstaS): typingsSlinky.instagramPrivateApi.stickersMod.QuestionSticker = js.native
-    def quiz(options: DiffQuizStickerInstaStick): typingsSlinky.instagramPrivateApi.stickersMod.QuizSticker = js.native
-    def slider(options: DiffSliderStickerInstaSti): typingsSlinky.instagramPrivateApi.stickersMod.SliderSticker = js.native
+    def mentionReel(mediaInfo: User, additional: PartialStickerOptionsMent): typingsSlinky.instagramPrivateApi.stickersMod.MentionSticker = js.native
+    def poll(options: StickerOptionsPollSticker): typingsSlinky.instagramPrivateApi.stickersMod.PollSticker = js.native
+    def question(options: StickerOptionsQuestionSti): typingsSlinky.instagramPrivateApi.stickersMod.QuestionSticker = js.native
+    def quiz(options: StickerOptionsQuizSticker): typingsSlinky.instagramPrivateApi.stickersMod.QuizSticker = js.native
+    def slider(options: StickerOptionsSliderStick): typingsSlinky.instagramPrivateApi.stickersMod.SliderSticker = js.native
   }
   
 }

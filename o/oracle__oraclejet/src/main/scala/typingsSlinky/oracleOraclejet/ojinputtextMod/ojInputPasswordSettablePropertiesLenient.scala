@@ -20,260 +20,74 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojinputtext.ojInputPasswordSettableProperties> */
-@js.native
 trait ojInputPasswordSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var asyncValidators: js.UndefOr[js.Array[AsyncValidator[String | Null]]] = js.native
-  var autocomplete: js.UndefOr[on | off | String] = js.native
-  var autofocus: js.UndefOr[Boolean] = js.native
-  var describedBy: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[ConverterHint] = js.native
-  var help: js.UndefOr[Instruction] = js.native
-  var helpHints: js.UndefOr[Definition] = js.native
-  var labelHint: js.UndefOr[String] = js.native
-  var messagesCustom: js.UndefOr[js.Array[^]] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var rawValue: js.UndefOr[String] = js.native
-  var readonly: js.UndefOr[Boolean] = js.native
-  var required: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[Regexp] = js.native
+  var asyncValidators: js.UndefOr[js.Array[AsyncValidator[String | Null]]] = js.undefined
+  var autocomplete: js.UndefOr[on | off | String] = js.undefined
+  var autofocus: js.UndefOr[Boolean] = js.undefined
+  var describedBy: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var displayOptions: js.UndefOr[ConverterHint] = js.undefined
+  var help: js.UndefOr[Instruction] = js.undefined
+  var helpHints: js.UndefOr[Definition] = js.undefined
+  var labelHint: js.UndefOr[String] = js.undefined
+  var messagesCustom: js.UndefOr[js.Array[^]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var rawValue: js.UndefOr[String] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var translations: js.UndefOr[Regexp] = js.undefined
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
-  ] = js.native
-  var validators: js.UndefOr[js.Array[(Validator[String | Null]) | RegisteredValidator]] = js.native
-  var value: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var validators: js.UndefOr[js.Array[(Validator[String | Null]) | RegisteredValidator]] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object ojInputPasswordSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojInputPasswordSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    asyncValidators: js.Array[AsyncValidator[String | Null]] = null,
+    autocomplete: on | off | String = null,
+    autofocus: js.UndefOr[Boolean] = js.undefined,
+    describedBy: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    displayOptions: ConverterHint = null,
+    help: Instruction = null,
+    helpHints: Definition = null,
+    labelHint: String = null,
+    messagesCustom: js.Array[^] = null,
+    placeholder: String = null,
+    rawValue: String = null,
+    readonly: js.UndefOr[Boolean] = js.undefined,
+    required: js.UndefOr[Boolean] = js.undefined,
+    translations: Regexp = null,
+    valid: valid | pending | invalidHidden | invalidShown = null,
+    validators: js.Array[(Validator[String | Null]) | RegisteredValidator] = null,
+    value: String = null
+  ): ojInputPasswordSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (asyncValidators != null) __obj.updateDynamic("asyncValidators")(asyncValidators.asInstanceOf[js.Any])
+    if (autocomplete != null) __obj.updateDynamic("autocomplete")(autocomplete.asInstanceOf[js.Any])
+    if (!js.isUndefined(autofocus)) __obj.updateDynamic("autofocus")(autofocus.get.asInstanceOf[js.Any])
+    if (describedBy != null) __obj.updateDynamic("describedBy")(describedBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (displayOptions != null) __obj.updateDynamic("displayOptions")(displayOptions.asInstanceOf[js.Any])
+    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
+    if (helpHints != null) __obj.updateDynamic("helpHints")(helpHints.asInstanceOf[js.Any])
+    if (labelHint != null) __obj.updateDynamic("labelHint")(labelHint.asInstanceOf[js.Any])
+    if (messagesCustom != null) __obj.updateDynamic("messagesCustom")(messagesCustom.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (rawValue != null) __obj.updateDynamic("rawValue")(rawValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
+    if (valid != null) __obj.updateDynamic("valid")(valid.asInstanceOf[js.Any])
+    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojInputPasswordSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojInputPasswordSettablePropertiesLenientOps[Self <: ojInputPasswordSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsyncValidators(value: js.Array[AsyncValidator[String | Null]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutocomplete(value: on | off | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutofocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutofocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescribedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescribedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayOptions(value: ConverterHint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelp(value: Instruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelpHints(value: Definition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelpHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagesCustom(value: js.Array[^]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagesCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: Regexp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValid(value: valid | pending | invalidHidden | invalidShown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidators(value: js.Array[(Validator[String | Null]) | RegisteredValidator]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

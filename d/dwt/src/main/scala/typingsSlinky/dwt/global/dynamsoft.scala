@@ -1,5 +1,6 @@
 package typingsSlinky.dwt.global
 
+import typingsSlinky.dwt.RunTimeSetting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +15,70 @@ object dynamsoft extends js.Object {
   class BarcodeReader ()
     extends typingsSlinky.dwt.dynamsoft.BarcodeReader {
     def this(dbrKey: String) = this()
+    /** 
+      * Append a new template string to current runtime settings.
+      * @method BarcodeReader#decode
+      * @param {string} content    A JSON string that represents the content of the settings.
+      * @param {number} emSettingPriority    The parameter setting mode, which decides to inherit parameters from previous template setting or overwrite previous settings and replace by new template.
+      * @return {void}
+      */
+    /* CompleteClass */
+    override def appendTplStringToRuntimeSettings(content: String, emSettingPriority: Double): Unit = js.native
+    /** 
+      * Read barcode from the source image.
+      * @method BarcodeReader#decode
+      * @param {string} source specifies the image to read on
+      * @return {Promise}
+      * @example
+      ```javascript
+      // dwtUrl: HTML5 Edition only
+      reader.decode('dwt://dwt_trial_13000404/img?id=306159652&index=0&t=1502184632022').then(
+      results=>{
+      for(var i = 0; i < results.length; ++i){
+      console.log(results[i].BarcodeText);
+      // Confidence >= 30 is reliable
+      console.log(results[i].LocalizationResult.ExtendedResultArray[0].Confidence);
+      }
+      });
+      // dcsUrl
+      reader.decode('dcs://dcs_trial_6110531/img?id=306159652&index=0&t=1502184632022').then(
+      function(results){
+      // ie6-7 does not support console.log
+      var messageArr = [];
+      for(var i = 0; i < results.length; ++i){
+      messageArr.push(results[i].BarcodeText);
+      // Confidence >= 30 is reliable
+      messageArr.push(results[i].LocalizationResult.ExtendedResultArray[0].Confidence);
+      }
+      alert(messageArr.join(''));
+      })['catch'](function(ex){
+      // ie6-9 does not support '.catch(function(ex){...})'
+      if(ex){alert(ex.message||ex);}
+      });
+      ```
+      
+      */
+    /* CompleteClass */
+    override def decode(source: String): js.Promise[_] = js.native
+    /**
+      * Read barcode from base64 string
+      */
+    /* CompleteClass */
+    override def decodeBase64String(base64String: String): js.Promise[_] = js.native
+    /* CompleteClass */
+    override def getAllLocalizationResults(): js.Any = js.native
+    /* CompleteClass */
+    override def getAllParameterTemplateNames(): js.Any = js.native
+    /* CompleteClass */
+    override def getRuntimeSettings(): RunTimeSetting = js.native
+    /* CompleteClass */
+    override def initRuntimeSettingsWithString(): js.Any = js.native
+    /* CompleteClass */
+    override def outputSettingsToString(): js.Any = js.native
+    /* CompleteClass */
+    override def resetRuntimeSettings(): Unit = js.native
+    /* CompleteClass */
+    override def updateRuntimeSettings(setting: RunTimeSetting): Unit = js.native
   }
   
   var TaskQueue: typingsSlinky.dwt.TaskQueue = js.native

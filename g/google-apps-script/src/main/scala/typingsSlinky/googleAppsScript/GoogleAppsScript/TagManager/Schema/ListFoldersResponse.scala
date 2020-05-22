@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListFoldersResponse extends js.Object {
-  var folder: js.UndefOr[js.Array[Folder]] = js.native
-  var nextPageToken: js.UndefOr[String] = js.native
+  var folder: js.UndefOr[js.Array[Folder]] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.undefined
 }
 
 object ListFoldersResponse {
   @scala.inline
-  def apply(): ListFoldersResponse = {
+  def apply(folder: js.Array[Folder] = null, nextPageToken: String = null): ListFoldersResponse = {
     val __obj = js.Dynamic.literal()
+    if (folder != null) __obj.updateDynamic("folder")(folder.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListFoldersResponse]
   }
-  @scala.inline
-  implicit class ListFoldersResponseOps[Self <: ListFoldersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFolder(value: js.Array[Folder]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

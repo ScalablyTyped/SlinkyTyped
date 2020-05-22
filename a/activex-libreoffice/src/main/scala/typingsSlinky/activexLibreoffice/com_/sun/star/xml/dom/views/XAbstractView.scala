@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XAbstractView extends XInterface {
-  val Document: XDocumentView = js.native
-  def getDocument(): XDocumentView = js.native
+  val Document: XDocumentView
+  def getDocument(): XDocumentView
 }
 
 object XAbstractView {
@@ -24,25 +23,5 @@ object XAbstractView {
     val __obj = js.Dynamic.literal(Document = Document.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDocument = js.Any.fromFunction0(getDocument), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAbstractView]
   }
-  @scala.inline
-  implicit class XAbstractViewOps[Self <: XAbstractView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument(value: XDocumentView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDocument(value: () => XDocumentView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

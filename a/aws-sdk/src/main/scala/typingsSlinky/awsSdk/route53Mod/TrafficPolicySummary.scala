@@ -40,43 +40,5 @@ object TrafficPolicySummary {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any], LatestVersion = LatestVersion.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], TrafficPolicyCount = TrafficPolicyCount.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficPolicySummary]
   }
-  @scala.inline
-  implicit class TrafficPolicySummaryOps[Self <: TrafficPolicySummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: TrafficPolicyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLatestVersion(value: TrafficPolicyVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: TrafficPolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyCount(value: TrafficPolicyVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: RRType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

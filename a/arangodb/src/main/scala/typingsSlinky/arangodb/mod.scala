@@ -36,6 +36,8 @@ object mod extends js.Object {
   @js.native
   object aql extends js.Object {
     def apply(strings: TemplateStringsArray, args: js.Any*): Query = js.native
+    def join(values: js.Array[_]): Query = js.native
+    def join(values: js.Array[_], sep: String): Query = js.native
     def literal(value: js.Any): AqlLiteral = js.native
   }
   

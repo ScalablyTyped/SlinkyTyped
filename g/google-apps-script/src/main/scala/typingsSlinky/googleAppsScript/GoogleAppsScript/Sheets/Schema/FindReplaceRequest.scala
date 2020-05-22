@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FindReplaceRequest extends js.Object {
-  var allSheets: js.UndefOr[Boolean] = js.native
-  var find: js.UndefOr[String] = js.native
-  var includeFormulas: js.UndefOr[Boolean] = js.native
-  var matchCase: js.UndefOr[Boolean] = js.native
-  var matchEntireCell: js.UndefOr[Boolean] = js.native
-  var range: js.UndefOr[GridRange] = js.native
-  var replacement: js.UndefOr[String] = js.native
-  var searchByRegex: js.UndefOr[Boolean] = js.native
-  var sheetId: js.UndefOr[Double] = js.native
+  var allSheets: js.UndefOr[Boolean] = js.undefined
+  var find: js.UndefOr[String] = js.undefined
+  var includeFormulas: js.UndefOr[Boolean] = js.undefined
+  var matchCase: js.UndefOr[Boolean] = js.undefined
+  var matchEntireCell: js.UndefOr[Boolean] = js.undefined
+  var range: js.UndefOr[GridRange] = js.undefined
+  var replacement: js.UndefOr[String] = js.undefined
+  var searchByRegex: js.UndefOr[Boolean] = js.undefined
+  var sheetId: js.UndefOr[Double] = js.undefined
 }
 
 object FindReplaceRequest {
   @scala.inline
-  def apply(): FindReplaceRequest = {
+  def apply(
+    allSheets: js.UndefOr[Boolean] = js.undefined,
+    find: String = null,
+    includeFormulas: js.UndefOr[Boolean] = js.undefined,
+    matchCase: js.UndefOr[Boolean] = js.undefined,
+    matchEntireCell: js.UndefOr[Boolean] = js.undefined,
+    range: GridRange = null,
+    replacement: String = null,
+    searchByRegex: js.UndefOr[Boolean] = js.undefined,
+    sheetId: js.UndefOr[Double] = js.undefined
+  ): FindReplaceRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allSheets)) __obj.updateDynamic("allSheets")(allSheets.get.asInstanceOf[js.Any])
+    if (find != null) __obj.updateDynamic("find")(find.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeFormulas)) __obj.updateDynamic("includeFormulas")(includeFormulas.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchCase)) __obj.updateDynamic("matchCase")(matchCase.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchEntireCell)) __obj.updateDynamic("matchEntireCell")(matchEntireCell.get.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (replacement != null) __obj.updateDynamic("replacement")(replacement.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchByRegex)) __obj.updateDynamic("searchByRegex")(searchByRegex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetId)) __obj.updateDynamic("sheetId")(sheetId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindReplaceRequest]
   }
-  @scala.inline
-  implicit class FindReplaceRequestOps[Self <: FindReplaceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllSheets(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allSheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllSheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allSheets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeFormulas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeFormulas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeFormulas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeFormulas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchCase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchEntireCell(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchEntireCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchEntireCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchEntireCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchByRegex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchByRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchByRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchByRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

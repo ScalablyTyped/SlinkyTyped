@@ -18,14 +18,13 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.linguistic2.Hyphenator
   * @see com.sun.star.lang.EventObject
   */
-@js.native
 trait LinguServiceEvent extends EventObject {
   /**
     * The type of event.
     *
     * The value may be combined via logical OR from those values defined in {@link com.sun.star.linguistic2.LinguServiceEventFlags}
     */
-  var nEvent: Double = js.native
+  var nEvent: Double
 }
 
 object LinguServiceEvent {
@@ -34,19 +33,5 @@ object LinguServiceEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], nEvent = nEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinguServiceEvent]
   }
-  @scala.inline
-  implicit class LinguServiceEventOps[Self <: LinguServiceEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNEvent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

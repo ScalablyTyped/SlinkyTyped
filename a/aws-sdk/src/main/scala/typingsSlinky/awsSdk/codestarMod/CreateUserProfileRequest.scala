@@ -26,47 +26,15 @@ trait CreateUserProfileRequest extends js.Object {
 
 object CreateUserProfileRequest {
   @scala.inline
-  def apply(displayName: UserProfileDisplayName, emailAddress: Email, userArn: UserArn): CreateUserProfileRequest = {
+  def apply(
+    displayName: UserProfileDisplayName,
+    emailAddress: Email,
+    userArn: UserArn,
+    sshPublicKey: SshPublicKey = null
+  ): CreateUserProfileRequest = {
     val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], emailAddress = emailAddress.asInstanceOf[js.Any], userArn = userArn.asInstanceOf[js.Any])
+    if (sshPublicKey != null) __obj.updateDynamic("sshPublicKey")(sshPublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUserProfileRequest]
   }
-  @scala.inline
-  implicit class CreateUserProfileRequestOps[Self <: CreateUserProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayName(value: UserProfileDisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailAddress(value: Email): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserArn(value: UserArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSshPublicKey(value: SshPublicKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshPublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSshPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sshPublicKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

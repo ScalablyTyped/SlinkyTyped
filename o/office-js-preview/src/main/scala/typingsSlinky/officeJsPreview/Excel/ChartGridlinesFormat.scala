@@ -23,7 +23,7 @@ trait ChartGridlinesFormat extends ClientObject {
   var context_ChartGridlinesFormat: RequestContext = js.native
   /**
     *
-    * Represents chart line formatting. Read-only.
+    * Represents chart line formatting.
     *
     * [Api set: ExcelApi 1.1]
     */

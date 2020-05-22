@@ -25,53 +25,12 @@ trait SchemaSdkVersion extends js.Object {
 
 object SchemaSdkVersion {
   @scala.inline
-  def apply(): SchemaSdkVersion = {
+  def apply(sdkSupportStatus: String = null, version: String = null, versionDisplayName: String = null): SchemaSdkVersion = {
     val __obj = js.Dynamic.literal()
+    if (sdkSupportStatus != null) __obj.updateDynamic("sdkSupportStatus")(sdkSupportStatus.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (versionDisplayName != null) __obj.updateDynamic("versionDisplayName")(versionDisplayName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSdkVersion]
   }
-  @scala.inline
-  implicit class SchemaSdkVersionOps[Self <: SchemaSdkVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSdkSupportStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkSupportStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSdkSupportStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkSupportStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionDisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionDisplayName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -41,41 +41,11 @@ trait SchemaMetadataFilter extends js.Object {
 
 object SchemaMetadataFilter {
   @scala.inline
-  def apply(): SchemaMetadataFilter = {
+  def apply(filterLabels: js.Array[SchemaMetadataFilterLabelMatch] = null, filterMatchCriteria: String = null): SchemaMetadataFilter = {
     val __obj = js.Dynamic.literal()
+    if (filterLabels != null) __obj.updateDynamic("filterLabels")(filterLabels.asInstanceOf[js.Any])
+    if (filterMatchCriteria != null) __obj.updateDynamic("filterMatchCriteria")(filterMatchCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMetadataFilter]
   }
-  @scala.inline
-  implicit class SchemaMetadataFilterOps[Self <: SchemaMetadataFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterLabels(value: js.Array[SchemaMetadataFilterLabelMatch]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterMatchCriteria(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMatchCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterMatchCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMatchCriteria")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

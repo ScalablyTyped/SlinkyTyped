@@ -5,15 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MEMO_STATICS extends js.Object {
   @JSName("$$typeof")
-  var DollarDollartypeof: `true` = js.native
-  var compare: `true` = js.native
-  var defaultProps: `true` = js.native
-  var displayName: `true` = js.native
-  var propTypes: `true` = js.native
-  var `type`: `true` = js.native
+  var DollarDollartypeof: `true`
+  var compare: `true`
+  var defaultProps: `true`
+  var displayName: `true`
+  var propTypes: `true`
+  var `type`: `true`
 }
 
 object MEMO_STATICS {
@@ -31,49 +30,5 @@ object MEMO_STATICS {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MEMO_STATICS]
   }
-  @scala.inline
-  implicit class MEMO_STATICSOps[Self <: MEMO_STATICS] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDollarDollartypeof(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$$typeof")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompare(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultProps(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropTypes(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

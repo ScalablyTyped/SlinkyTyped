@@ -26,9 +26,16 @@ object deleteFunctionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteFunctionInput) = this()
+    /* CompleteClass */
+    override val input: DeleteFunctionInput = js.native
     val middlewareStack: MiddlewareStack[DeleteFunctionInput, DeleteFunctionOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[DeleteFunctionInput, DeleteFunctionOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[DeleteFunctionInput, DeleteFunctionOutput] = js.native
   }

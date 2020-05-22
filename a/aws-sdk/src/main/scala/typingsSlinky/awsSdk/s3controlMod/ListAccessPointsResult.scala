@@ -18,41 +18,11 @@ trait ListAccessPointsResult extends js.Object {
 
 object ListAccessPointsResult {
   @scala.inline
-  def apply(): ListAccessPointsResult = {
+  def apply(AccessPointList: AccessPointList = null, NextToken: NonEmptyMaxLength1024String = null): ListAccessPointsResult = {
     val __obj = js.Dynamic.literal()
+    if (AccessPointList != null) __obj.updateDynamic("AccessPointList")(AccessPointList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAccessPointsResult]
   }
-  @scala.inline
-  implicit class ListAccessPointsResultOps[Self <: ListAccessPointsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessPointList(value: AccessPointList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessPointList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NonEmptyMaxLength1024String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

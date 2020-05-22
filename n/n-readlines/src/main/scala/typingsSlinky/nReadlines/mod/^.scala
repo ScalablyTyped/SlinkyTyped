@@ -1,5 +1,7 @@
 package typingsSlinky.nReadlines.mod
 
+import typingsSlinky.nReadlines.nReadlinesBooleans.`false`
+import typingsSlinky.node.Buffer
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,5 +14,11 @@ class ^ protected () extends LineByLine {
   def this(file: PathLike) = this()
   def this(file: Double, options: Options) = this()
   def this(file: PathLike, options: Options) = this()
+  /* CompleteClass */
+  override def close(): Unit = js.native
+  /* CompleteClass */
+  override def next(): Buffer | `false` = js.native
+  /* CompleteClass */
+  override def reset(): Unit = js.native
 }
 

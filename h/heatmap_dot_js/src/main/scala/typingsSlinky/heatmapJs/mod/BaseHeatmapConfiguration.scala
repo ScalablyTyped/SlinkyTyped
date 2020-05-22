@@ -5,211 +5,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseHeatmapConfiguration[V /* <: String */] extends js.Object {
   /**
     * A background color string in form of hexcode, color name, or rgb(a)
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /**
     * The blur factor that will be applied to all datapoints. The higher the
     * blur factor is, the smoother the gradients will be
     * Default value: 0.85
     */
-  var blur: js.UndefOr[Double] = js.native
+  var blur: js.UndefOr[Double] = js.undefined
   /**
     * An object that represents the gradient.
     * Syntax: {[key: number in range [0,1]]: color}
     */
-  var gradient: js.UndefOr[StringDictionary[String]] = js.native
+  var gradient: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * The maximal opacity the highest value in the heatmap will have. (will be
     * overridden if opacity set)
     * Default value: 0.6
     */
-  var maxOpacity: js.UndefOr[Double] = js.native
+  var maxOpacity: js.UndefOr[Double] = js.undefined
   /**
     * The minimum opacity the lowest value in the heatmap will have (will be
     * overridden if opacity set)
     */
-  var minOpacity: js.UndefOr[Double] = js.native
+  var minOpacity: js.UndefOr[Double] = js.undefined
   /**
     * Pass a callback to receive extrema change updates. Useful for DOM
     * legends.
     */
-  var onExtremaChange: js.UndefOr[js.Function0[Unit]] = js.native
+  var onExtremaChange: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * A global opacity for the whole heatmap. This overrides maxOpacity and
     * minOpacity if set
     * Default value: 0.6
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /**
     * The radius each datapoint will have (if not specified on the datapoint
     * itself)
     */
-  var radius: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.undefined
   /**
     * Scales the radius based on map zoom.
     */
-  var scaleRadius: js.UndefOr[Boolean] = js.native
+  var scaleRadius: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicate whether the heatmap should use a global extrema or a local
     * extrema (the maximum and minimum of the currently displayed viewport)
     */
-  var useLocalExtrema: js.UndefOr[Boolean] = js.native
+  var useLocalExtrema: js.UndefOr[Boolean] = js.undefined
   /**
     * The property name of the value/weight in a datapoint
     * Default value: 'value'
     */
-  var valueField: js.UndefOr[V] = js.native
+  var valueField: js.UndefOr[V] = js.undefined
 }
 
 object BaseHeatmapConfiguration {
   @scala.inline
-  def apply[V](): BaseHeatmapConfiguration[V] = {
+  def apply[V](
+    backgroundColor: String = null,
+    blur: js.UndefOr[Double] = js.undefined,
+    gradient: StringDictionary[String] = null,
+    maxOpacity: js.UndefOr[Double] = js.undefined,
+    minOpacity: js.UndefOr[Double] = js.undefined,
+    onExtremaChange: () => Unit = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    radius: js.UndefOr[Double] = js.undefined,
+    scaleRadius: js.UndefOr[Boolean] = js.undefined,
+    useLocalExtrema: js.UndefOr[Boolean] = js.undefined,
+    valueField: V = null
+  ): BaseHeatmapConfiguration[V] = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(blur)) __obj.updateDynamic("blur")(blur.get.asInstanceOf[js.Any])
+    if (gradient != null) __obj.updateDynamic("gradient")(gradient.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxOpacity)) __obj.updateDynamic("maxOpacity")(maxOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minOpacity)) __obj.updateDynamic("minOpacity")(minOpacity.get.asInstanceOf[js.Any])
+    if (onExtremaChange != null) __obj.updateDynamic("onExtremaChange")(js.Any.fromFunction0(onExtremaChange))
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleRadius)) __obj.updateDynamic("scaleRadius")(scaleRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useLocalExtrema)) __obj.updateDynamic("useLocalExtrema")(useLocalExtrema.get.asInstanceOf[js.Any])
+    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseHeatmapConfiguration[V]]
   }
-  @scala.inline
-  implicit class BaseHeatmapConfigurationOps[Self[v] <: BaseHeatmapConfiguration[v], V] (val x: Self[V]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[V] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[V]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[V] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[V] with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlur(value: Double): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlur: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradient(value: StringDictionary[String]): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradient: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxOpacity(value: Double): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxOpacity: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinOpacity(value: Double): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinOpacity: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnExtremaChange(value: () => Unit): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExtremaChange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnExtremaChange: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onExtremaChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleRadius(value: Boolean): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleRadius: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseLocalExtrema(value: Boolean): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLocalExtrema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseLocalExtrema: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useLocalExtrema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueField(value: V): Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueField: Self[V] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

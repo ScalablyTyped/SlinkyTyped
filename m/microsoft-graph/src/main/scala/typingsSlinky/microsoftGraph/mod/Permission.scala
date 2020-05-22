@@ -4,107 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Permission extends Entity {
   // For user type permissions, the details of the users &amp; applications for this permission. Read-only.
-  var grantedTo: js.UndefOr[IdentitySet] = js.native
+  var grantedTo: js.UndefOr[IdentitySet] = js.undefined
   // Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
-  var inheritedFrom: js.UndefOr[ItemReference] = js.native
+  var inheritedFrom: js.UndefOr[ItemReference] = js.undefined
   // Details of any associated sharing invitation for this permission. Read-only.
-  var invitation: js.UndefOr[SharingInvitation] = js.native
+  var invitation: js.UndefOr[SharingInvitation] = js.undefined
   // Provides the link details of the current permission, if it is a link type permissions. Read-only.
-  var link: js.UndefOr[SharingLink] = js.native
+  var link: js.UndefOr[SharingLink] = js.undefined
   // The type of permission, e.g. read. See below for the full list of roles. Read-only.
-  var roles: js.UndefOr[js.Array[String]] = js.native
+  var roles: js.UndefOr[js.Array[String]] = js.undefined
   // A unique token that can be used to access this shared item via the **shares** API. Read-only.
-  var shareId: js.UndefOr[String] = js.native
+  var shareId: js.UndefOr[String] = js.undefined
 }
 
 object Permission {
   @scala.inline
-  def apply(): Permission = {
+  def apply(
+    grantedTo: IdentitySet = null,
+    id: String = null,
+    inheritedFrom: ItemReference = null,
+    invitation: SharingInvitation = null,
+    link: SharingLink = null,
+    roles: js.Array[String] = null,
+    shareId: String = null
+  ): Permission = {
     val __obj = js.Dynamic.literal()
+    if (grantedTo != null) __obj.updateDynamic("grantedTo")(grantedTo.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inheritedFrom != null) __obj.updateDynamic("inheritedFrom")(inheritedFrom.asInstanceOf[js.Any])
+    if (invitation != null) __obj.updateDynamic("invitation")(invitation.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (roles != null) __obj.updateDynamic("roles")(roles.asInstanceOf[js.Any])
+    if (shareId != null) __obj.updateDynamic("shareId")(shareId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Permission]
   }
-  @scala.inline
-  implicit class PermissionOps[Self <: Permission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrantedTo(value: IdentitySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grantedTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantedTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grantedTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInheritedFrom(value: ItemReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritedFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInheritedFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritedFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvitation(value: SharingInvitation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invitation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invitation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: SharingLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

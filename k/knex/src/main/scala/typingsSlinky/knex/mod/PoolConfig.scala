@@ -4,310 +4,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PoolConfig extends js.Object {
-  var Promise: js.UndefOr[js.Any] = js.native
-  var acquireTimeoutMillis: js.UndefOr[Double] = js.native
-  var afterCreate: js.UndefOr[js.Function] = js.native
-  var autostart: js.UndefOr[Boolean] = js.native
-  var create: js.UndefOr[js.Function] = js.native
-  var destroy: js.UndefOr[js.Function] = js.native
-  var evictionRunIntervalMillis: js.UndefOr[Double] = js.native
-  var fifo: js.UndefOr[Boolean] = js.native
-  var idleTimeoutMillis: js.UndefOr[Double] = js.native
-  var log: js.UndefOr[Boolean] = js.native
-  var max: js.UndefOr[Double] = js.native
+  var Promise: js.UndefOr[js.Any] = js.undefined
+  var acquireTimeoutMillis: js.UndefOr[Double] = js.undefined
+  var afterCreate: js.UndefOr[js.Function] = js.undefined
+  var autostart: js.UndefOr[Boolean] = js.undefined
+  var create: js.UndefOr[js.Function] = js.undefined
+  var destroy: js.UndefOr[js.Function] = js.undefined
+  var evictionRunIntervalMillis: js.UndefOr[Double] = js.undefined
+  var fifo: js.UndefOr[Boolean] = js.undefined
+  var idleTimeoutMillis: js.UndefOr[Double] = js.undefined
+  var log: js.UndefOr[Boolean] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
   // generic-pool v3 configs
-  var maxWaitingClients: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var numTestsPerRun: js.UndefOr[Double] = js.native
-  var priorityRange: js.UndefOr[Double] = js.native
-  var reapIntervalMillis: js.UndefOr[Double] = js.native
-  var refreshIdle: js.UndefOr[Boolean] = js.native
-  var returnToHead: js.UndefOr[Boolean] = js.native
-  var softIdleTimeoutMillis: js.UndefOr[Double] = js.native
-  var testOnBorrow: js.UndefOr[Boolean] = js.native
-  var validate: js.UndefOr[js.Function] = js.native
+  var maxWaitingClients: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var numTestsPerRun: js.UndefOr[Double] = js.undefined
+  var priorityRange: js.UndefOr[Double] = js.undefined
+  var reapIntervalMillis: js.UndefOr[Double] = js.undefined
+  var refreshIdle: js.UndefOr[Boolean] = js.undefined
+  var returnToHead: js.UndefOr[Boolean] = js.undefined
+  var softIdleTimeoutMillis: js.UndefOr[Double] = js.undefined
+  var testOnBorrow: js.UndefOr[Boolean] = js.undefined
+  var validate: js.UndefOr[js.Function] = js.undefined
 }
 
 object PoolConfig {
   @scala.inline
-  def apply(): PoolConfig = {
+  def apply(
+    Promise: js.Any = null,
+    acquireTimeoutMillis: js.UndefOr[Double] = js.undefined,
+    afterCreate: js.Function = null,
+    autostart: js.UndefOr[Boolean] = js.undefined,
+    create: js.Function = null,
+    destroy: js.Function = null,
+    evictionRunIntervalMillis: js.UndefOr[Double] = js.undefined,
+    fifo: js.UndefOr[Boolean] = js.undefined,
+    idleTimeoutMillis: js.UndefOr[Double] = js.undefined,
+    log: js.UndefOr[Boolean] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    maxWaitingClients: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    numTestsPerRun: js.UndefOr[Double] = js.undefined,
+    priorityRange: js.UndefOr[Double] = js.undefined,
+    reapIntervalMillis: js.UndefOr[Double] = js.undefined,
+    refreshIdle: js.UndefOr[Boolean] = js.undefined,
+    returnToHead: js.UndefOr[Boolean] = js.undefined,
+    softIdleTimeoutMillis: js.UndefOr[Double] = js.undefined,
+    testOnBorrow: js.UndefOr[Boolean] = js.undefined,
+    validate: js.Function = null
+  ): PoolConfig = {
     val __obj = js.Dynamic.literal()
+    if (Promise != null) __obj.updateDynamic("Promise")(Promise.asInstanceOf[js.Any])
+    if (!js.isUndefined(acquireTimeoutMillis)) __obj.updateDynamic("acquireTimeoutMillis")(acquireTimeoutMillis.get.asInstanceOf[js.Any])
+    if (afterCreate != null) __obj.updateDynamic("afterCreate")(afterCreate.asInstanceOf[js.Any])
+    if (!js.isUndefined(autostart)) __obj.updateDynamic("autostart")(autostart.get.asInstanceOf[js.Any])
+    if (create != null) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
+    if (!js.isUndefined(evictionRunIntervalMillis)) __obj.updateDynamic("evictionRunIntervalMillis")(evictionRunIntervalMillis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fifo)) __obj.updateDynamic("fifo")(fifo.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(idleTimeoutMillis)) __obj.updateDynamic("idleTimeoutMillis")(idleTimeoutMillis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(log)) __obj.updateDynamic("log")(log.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWaitingClients)) __obj.updateDynamic("maxWaitingClients")(maxWaitingClients.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(numTestsPerRun)) __obj.updateDynamic("numTestsPerRun")(numTestsPerRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(priorityRange)) __obj.updateDynamic("priorityRange")(priorityRange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reapIntervalMillis)) __obj.updateDynamic("reapIntervalMillis")(reapIntervalMillis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refreshIdle)) __obj.updateDynamic("refreshIdle")(refreshIdle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnToHead)) __obj.updateDynamic("returnToHead")(returnToHead.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(softIdleTimeoutMillis)) __obj.updateDynamic("softIdleTimeoutMillis")(softIdleTimeoutMillis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(testOnBorrow)) __obj.updateDynamic("testOnBorrow")(testOnBorrow.get.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(validate.asInstanceOf[js.Any])
     __obj.asInstanceOf[PoolConfig]
   }
-  @scala.inline
-  implicit class PoolConfigOps[Self <: PoolConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPromise(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcquireTimeoutMillis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquireTimeoutMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcquireTimeoutMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acquireTimeoutMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterCreate(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterCreate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterCreate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutostart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutostart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autostart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestroy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvictionRunIntervalMillis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evictionRunIntervalMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvictionRunIntervalMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evictionRunIntervalMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFifo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fifo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFifo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fifo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleTimeoutMillis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeoutMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleTimeoutMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeoutMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWaitingClients(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWaitingClients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWaitingClients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWaitingClients")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumTestsPerRun(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTestsPerRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumTestsPerRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numTestsPerRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriorityRange(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priorityRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriorityRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priorityRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReapIntervalMillis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapIntervalMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReapIntervalMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reapIntervalMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshIdle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshIdle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshIdle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshIdle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnToHead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnToHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnToHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnToHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoftIdleTimeoutMillis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softIdleTimeoutMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoftIdleTimeoutMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softIdleTimeoutMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestOnBorrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testOnBorrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestOnBorrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testOnBorrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidate(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

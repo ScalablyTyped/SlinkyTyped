@@ -13,7 +13,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WindowGroupChangedEvent extends WindowBaseEvent {
   /**
     * Which group array the window that the event listener was registered on is included in:
@@ -21,7 +20,7 @@ trait WindowGroupChangedEvent extends WindowBaseEvent {
     * 'target' The window is included in targetGroup.
     * 'nothing' The window is not included in sourceGroup nor targetGroup.
     */
-  var memberOf: source | target | nothing = js.native
+  var memberOf: source | target | nothing
   /**
     * The reason this event was triggered.
     * 'leave' A window has left the group due to a leave or merge with group.
@@ -29,33 +28,33 @@ trait WindowGroupChangedEvent extends WindowBaseEvent {
     * 'merge' Two groups have been merged together.
     * 'disband' There are no other windows in the group.
     */
-  var reason: leave | join | merge | disband = js.native
+  var reason: leave | join | merge | disband
   /**
     * All the windows in the group the sourceWindow originated from.
     */
-  var sourceGroup: js.Array[WindowOfGroupInfo] = js.native
+  var sourceGroup: js.Array[WindowOfGroupInfo]
   /**
     * The UUID of the application the sourceWindow belongs to The source window is the window in which (merge/join/leave)group(s) was called.
     */
-  var sourceWindowAppUuid: String = js.native
+  var sourceWindowAppUuid: String
   /**
     * the name of the sourcewindow.The source window is the window in which(merge / join / leave) group(s) was called.
     */
-  var sourceWindowName: String = js.native
+  var sourceWindowName: String
   /**
     * All the windows in the group the targetWindow orginated from
     */
-  var targetGroup: js.Array[WindowOfGroupInfo] = js.native
+  var targetGroup: js.Array[WindowOfGroupInfo]
   /**
     * The UUID of the application the targetWindow belongs to. The target window is the window that was passed into (merge/join) group(s).
     */
-  var targetWindowAppUuid: String = js.native
+  var targetWindowAppUuid: String
   /**
     * The name of the targetWindow. The target window is the window that was passed into (merge/join) group(s).
     */
-  var targetWindowName: String = js.native
+  var targetWindowName: String
   @JSName("type")
-  var type_WindowGroupChangedEvent: `group-changed` = js.native
+  var type_WindowGroupChangedEvent: `group-changed`
 }
 
 object WindowGroupChangedEvent {
@@ -78,67 +77,5 @@ object WindowGroupChangedEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowGroupChangedEvent]
   }
-  @scala.inline
-  implicit class WindowGroupChangedEventOps[Self <: WindowGroupChangedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMemberOf(value: source | target | nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: leave | join | merge | disband): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceGroup(value: js.Array[WindowOfGroupInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceWindowAppUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceWindowAppUuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceWindowName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceWindowName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetGroup(value: js.Array[WindowOfGroupInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetWindowAppUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindowAppUuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetWindowName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindowName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `group-changed`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -39,7 +39,7 @@ import scala.scalajs.js.annotation._
   * Use a Static Tilemap Layer instead of a Dynamic Tilemap Layer when you don't need tile manipulation features.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType because Already inherited */ @js.native
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @js.native
 trait StaticTilemapLayer
   extends GameObject
      with Alpha

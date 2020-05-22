@@ -1,24 +1,22 @@
 package typingsSlinky.focusTrap.mod
 
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * Default: `false`. If `true`, a click outside the focus trap will
     * deactivate the focus trap and allow the click event to do its thing.
     */
-  var clickOutsideDeactivates: js.UndefOr[Boolean] = js.native
+  var clickOutsideDeactivates: js.UndefOr[Boolean] = js.undefined
   /**
     * Default: `true`. If `false`, the `Escape` key will not trigger
     * deactivation of the focus trap. This can be useful if you want
     * to force the user to make a decision instead of allowing an easy
     * way out.
     */
-  var escapeDeactivates: js.UndefOr[Boolean] = js.native
+  var escapeDeactivates: js.UndefOr[Boolean] = js.undefined
   /**
     * By default, an error will be thrown if the focus trap contains no
     * elements in its tab order. With this option you can specify a
@@ -28,149 +26,48 @@ trait Options extends js.Object {
     * tabbable elements. *Make sure the fallback element has a negative
     * `tabindex` so it can be programmatically focused.*
     */
-  var fallbackFocus: js.UndefOr[FocusTarget] = js.native
+  var fallbackFocus: js.UndefOr[FocusTarget] = js.undefined
   /**
     * By default, when a focus trap is activated the first element in the
     * focus trap's tab order will receive focus. With this option you can
     * specify a different element to receive that initial focus.
     */
-  var initialFocus: js.UndefOr[FocusTarget] = js.native
+  var initialFocus: js.UndefOr[FocusTarget] = js.undefined
   /**
     * A function that will be called when the focus trap activates.
     */
-  var onActivate: js.UndefOr[js.Function0[Unit]] = js.native
+  var onActivate: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * A function that will be called when the focus trap deactivates.
     */
-  var onDeactivate: js.UndefOr[js.Function0[Unit]] = js.native
+  var onDeactivate: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Default: `true`. If `false`, when the trap is deactivated,
     * focus will *not* return to the element that had focus before activation.
     */
-  var returnFocusOnDeactivate: js.UndefOr[Boolean] = js.native
+  var returnFocusOnDeactivate: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    clickOutsideDeactivates: js.UndefOr[Boolean] = js.undefined,
+    escapeDeactivates: js.UndefOr[Boolean] = js.undefined,
+    fallbackFocus: FocusTarget = null,
+    initialFocus: FocusTarget = null,
+    onActivate: () => Unit = null,
+    onDeactivate: () => Unit = null,
+    returnFocusOnDeactivate: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clickOutsideDeactivates)) __obj.updateDynamic("clickOutsideDeactivates")(clickOutsideDeactivates.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(escapeDeactivates)) __obj.updateDynamic("escapeDeactivates")(escapeDeactivates.get.asInstanceOf[js.Any])
+    if (fallbackFocus != null) __obj.updateDynamic("fallbackFocus")(fallbackFocus.asInstanceOf[js.Any])
+    if (initialFocus != null) __obj.updateDynamic("initialFocus")(initialFocus.asInstanceOf[js.Any])
+    if (onActivate != null) __obj.updateDynamic("onActivate")(js.Any.fromFunction0(onActivate))
+    if (onDeactivate != null) __obj.updateDynamic("onDeactivate")(js.Any.fromFunction0(onDeactivate))
+    if (!js.isUndefined(returnFocusOnDeactivate)) __obj.updateDynamic("returnFocusOnDeactivate")(returnFocusOnDeactivate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClickOutsideDeactivates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickOutsideDeactivates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickOutsideDeactivates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickOutsideDeactivates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscapeDeactivates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeDeactivates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEscapeDeactivates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeDeactivates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackFocusHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFallbackFocusFunction0(value: () => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackFocus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFallbackFocus(value: FocusTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialFocusHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialFocusFunction0(value: () => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFocus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInitialFocus(value: FocusTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnActivate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnActivate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDeactivate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeactivate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDeactivate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeactivate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnFocusOnDeactivate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnFocusOnDeactivate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnFocusOnDeactivate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnFocusOnDeactivate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

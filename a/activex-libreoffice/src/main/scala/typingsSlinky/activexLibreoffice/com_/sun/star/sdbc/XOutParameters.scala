@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * form that includes a result parameter and one that does not. If used, the result parameter must be registered as an OUT parameter. The other
   * parameters can be used for input, output, or both. Parameters are referred to sequentially, by number. The first parameter is 1.
   */
-@js.native
 trait XOutParameters extends XInterface {
   /**
     * registers the OUT parameter in ordinal position `parameterIndex` to the SDBC type `sqlType` . All OUT parameters must be registered before a stored
@@ -27,7 +26,7 @@ trait XOutParameters extends XInterface {
     * @param scale the scale of the type
     * @throws SQLException if a database access error occurs.
     */
-  def registerNumericOutParameter(parameterIndex: Double, sqlType: Double, scale: Double): Unit = js.native
+  def registerNumericOutParameter(parameterIndex: Double, sqlType: Double, scale: Double): Unit
   /**
     * registers the designated output parameter. This version of the method {@link com.sun.star.sdbc.XOutParameters.registerOutParameter()} should be used
     * for a user-named or REF output parameter. Examples of user-named types include: STRUCT, DISTINCT, OBJECT, and named array types.
@@ -48,7 +47,7 @@ trait XOutParameters extends XInterface {
     * @param typeName the name of the type
     * @throws SQLException if a database access error occurs.
     */
-  def registerOutParameter(parameterIndex: Double, sqlType: Double, typeName: String): Unit = js.native
+  def registerOutParameter(parameterIndex: Double, sqlType: Double, typeName: String): Unit
 }
 
 object XOutParameters {
@@ -63,25 +62,5 @@ object XOutParameters {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), registerNumericOutParameter = js.Any.fromFunction3(registerNumericOutParameter), registerOutParameter = js.Any.fromFunction3(registerOutParameter), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XOutParameters]
   }
-  @scala.inline
-  implicit class XOutParametersOps[Self <: XOutParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegisterNumericOutParameter(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerNumericOutParameter")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterOutParameter(value: (Double, Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerOutParameter")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * @see XLogHandler
   * @since OOo 2.3
   */
-@js.native
 trait XLogFormatter extends js.Object {
   /**
     * returns the header string for the log
@@ -19,20 +18,20 @@ trait XLogFormatter extends js.Object {
     *
     * For instance, a formatter might produce table-like plain text output, and could return a table-head string (potentially including line breaks) here.
     */
-  val Head: String = js.native
+  val Head: String
   /**
     * returns the footer string for the log
     *
     * This can be used to generate a footer string, which by the {@link XLogHandler} is emitted to its output channel before it is finally being closed.
     */
-  val Tail: String = js.native
+  val Tail: String
   /**
     * formats the given log record for output
     *
     * A {@link XLogHandler} will call this method to format a given log record. The resulting string will be emitted to the handler's output channel,
     * without processing it any further (except possibly encoding it with the handler's `Encoding` ).
     */
-  def format(Record: LogRecord): String = js.native
+  def format(Record: LogRecord): String
   /**
     * returns the header string for the log
     *
@@ -41,13 +40,13 @@ trait XLogFormatter extends js.Object {
     *
     * For instance, a formatter might produce table-like plain text output, and could return a table-head string (potentially including line breaks) here.
     */
-  def getHead(): String = js.native
+  def getHead(): String
   /**
     * returns the footer string for the log
     *
     * This can be used to generate a footer string, which by the {@link XLogHandler} is emitted to its output channel before it is finally being closed.
     */
-  def getTail(): String = js.native
+  def getTail(): String
 }
 
 object XLogFormatter {
@@ -62,43 +61,5 @@ object XLogFormatter {
     val __obj = js.Dynamic.literal(Head = Head.asInstanceOf[js.Any], Tail = Tail.asInstanceOf[js.Any], format = js.Any.fromFunction1(format), getHead = js.Any.fromFunction0(getHead), getTail = js.Any.fromFunction0(getTail))
     __obj.asInstanceOf[XLogFormatter]
   }
-  @scala.inline
-  implicit class XLogFormatterOps[Self <: XLogFormatter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Head")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: LogRecord => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetHead(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHead")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTail(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTail")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

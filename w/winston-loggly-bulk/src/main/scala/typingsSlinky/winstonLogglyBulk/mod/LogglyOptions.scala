@@ -1,5 +1,6 @@
 package typingsSlinky.winstonLogglyBulk.mod
 
+import typingsSlinky.logform.mod.Format_
 import typingsSlinky.node.urlMod.Url
 import typingsSlinky.winstonLogglyBulk.anon.Password
 import typingsSlinky.winstonTransport.mod.TransportStreamOptions
@@ -7,166 +8,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LogglyOptions extends TransportStreamOptions {
-  var auth: js.UndefOr[Password | Null] = js.native
-  var bufferOptions: js.UndefOr[BufferOptions] = js.native
-  var isBulk: js.UndefOr[Boolean] = js.native
-  var json: js.UndefOr[Boolean] = js.native
-  var networkErrorOnConsole: js.UndefOr[Boolean] = js.native
-  var proxy: js.UndefOr[Null | String | Url] = js.native
-  var stripColors: js.UndefOr[Boolean] = js.native
-  var subdomain: String = js.native
-  var tags: js.UndefOr[js.Array[String]] = js.native
-  var timestamp: js.UndefOr[Boolean] = js.native
-  var token: String = js.native
+  var auth: js.UndefOr[Password | Null] = js.undefined
+  var bufferOptions: js.UndefOr[BufferOptions] = js.undefined
+  var isBulk: js.UndefOr[Boolean] = js.undefined
+  var json: js.UndefOr[Boolean] = js.undefined
+  var networkErrorOnConsole: js.UndefOr[Boolean] = js.undefined
+  var proxy: js.UndefOr[Null | String | Url] = js.undefined
+  var stripColors: js.UndefOr[Boolean] = js.undefined
+  var subdomain: String
+  var tags: js.UndefOr[js.Array[String]] = js.undefined
+  var timestamp: js.UndefOr[Boolean] = js.undefined
+  var token: String
 }
 
 object LogglyOptions {
   @scala.inline
-  def apply(subdomain: String, token: String): LogglyOptions = {
+  def apply(
+    subdomain: String,
+    token: String,
+    auth: js.UndefOr[Null | Password] = js.undefined,
+    bufferOptions: BufferOptions = null,
+    close: () => Unit = null,
+    format: Format_ = null,
+    handleExceptions: js.UndefOr[Boolean] = js.undefined,
+    isBulk: js.UndefOr[Boolean] = js.undefined,
+    json: js.UndefOr[Boolean] = js.undefined,
+    level: String = null,
+    log: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    logv: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    networkErrorOnConsole: js.UndefOr[Boolean] = js.undefined,
+    proxy: js.UndefOr[Null | String | Url] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    stripColors: js.UndefOr[Boolean] = js.undefined,
+    tags: js.Array[String] = null,
+    timestamp: js.UndefOr[Boolean] = js.undefined
+  ): LogglyOptions = {
     val __obj = js.Dynamic.literal(subdomain = subdomain.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any])
+    if (!js.isUndefined(auth)) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (bufferOptions != null) __obj.updateDynamic("bufferOptions")(bufferOptions.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction0(close))
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleExceptions)) __obj.updateDynamic("handleExceptions")(handleExceptions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBulk)) __obj.updateDynamic("isBulk")(isBulk.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(json)) __obj.updateDynamic("json")(json.get.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction2(log))
+    if (logv != null) __obj.updateDynamic("logv")(js.Any.fromFunction2(logv))
+    if (!js.isUndefined(networkErrorOnConsole)) __obj.updateDynamic("networkErrorOnConsole")(networkErrorOnConsole.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(proxy)) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripColors)) __obj.updateDynamic("stripColors")(stripColors.get.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (!js.isUndefined(timestamp)) __obj.updateDynamic("timestamp")(timestamp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogglyOptions]
   }
-  @scala.inline
-  implicit class LogglyOptionsOps[Self <: LogglyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubdomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuth(value: Password): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(null)
-        ret
-    }
-    @scala.inline
-    def withBufferOptions(value: BufferOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBufferOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBulk(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBulk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBulk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBulk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJson(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkErrorOnConsole(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkErrorOnConsole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkErrorOnConsole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkErrorOnConsole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: String | Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(null)
-        ret
-    }
-    @scala.inline
-    def withStripColors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripColors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

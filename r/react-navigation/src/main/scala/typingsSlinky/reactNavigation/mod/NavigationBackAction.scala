@@ -5,34 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationBackAction
   extends NavigationStackAction
      with NavigationBackActionPayload
      with NavigationTabAction {
-  var `type`: NavigationSlashBACK = js.native
+  var `type`: NavigationSlashBACK
 }
 
 object NavigationBackAction {
   @scala.inline
-  def apply(`type`: NavigationSlashBACK): NavigationBackAction = {
+  def apply(
+    `type`: NavigationSlashBACK,
+    immediate: js.UndefOr[Boolean] = js.undefined,
+    key: js.UndefOr[Null | String] = js.undefined
+  ): NavigationBackAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationBackAction]
   }
-  @scala.inline
-  implicit class NavigationBackActionOps[Self <: NavigationBackAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: NavigationSlashBACK): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,5 +9,8 @@ import scala.scalajs.js.annotation._
 trait DocumentFragment
   extends Node
      with NonElementParentNode
-     with ParentNode
+     with ParentNode {
+  @JSName("ownerDocument")
+  val ownerDocument_DocumentFragment: org.scalajs.dom.raw.Document = js.native
+}
 

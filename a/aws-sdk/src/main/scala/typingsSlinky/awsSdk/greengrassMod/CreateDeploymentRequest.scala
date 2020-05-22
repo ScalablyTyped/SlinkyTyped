@@ -30,65 +30,18 @@ trait CreateDeploymentRequest extends js.Object {
 
 object CreateDeploymentRequest {
   @scala.inline
-  def apply(DeploymentType: DeploymentType, GroupId: string): CreateDeploymentRequest = {
+  def apply(
+    DeploymentType: DeploymentType,
+    GroupId: string,
+    AmznClientToken: string = null,
+    DeploymentId: string = null,
+    GroupVersionId: string = null
+  ): CreateDeploymentRequest = {
     val __obj = js.Dynamic.literal(DeploymentType = DeploymentType.asInstanceOf[js.Any], GroupId = GroupId.asInstanceOf[js.Any])
+    if (AmznClientToken != null) __obj.updateDynamic("AmznClientToken")(AmznClientToken.asInstanceOf[js.Any])
+    if (DeploymentId != null) __obj.updateDynamic("DeploymentId")(DeploymentId.asInstanceOf[js.Any])
+    if (GroupVersionId != null) __obj.updateDynamic("GroupVersionId")(GroupVersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeploymentRequest]
   }
-  @scala.inline
-  implicit class CreateDeploymentRequestOps[Self <: CreateDeploymentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentType(value: DeploymentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmznClientToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmznClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupVersionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupVersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

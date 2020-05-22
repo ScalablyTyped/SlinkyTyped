@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PatternRequiredParams extends ErrorParameters {
-  var missingPattern: String = js.native
+  var missingPattern: String
 }
 
 object PatternRequiredParams {
@@ -15,19 +14,5 @@ object PatternRequiredParams {
     val __obj = js.Dynamic.literal(missingPattern = missingPattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatternRequiredParams]
   }
-  @scala.inline
-  implicit class PatternRequiredParamsOps[Self <: PatternRequiredParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMissingPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

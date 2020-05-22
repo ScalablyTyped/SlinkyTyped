@@ -6,16 +6,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides response data for a request that involves a consumable add-on for the current app. */
-@js.native
 trait StoreConsumableResult extends js.Object {
   /** Gets the remaining balance for the consumable add-on. */
-  var balanceRemaining: Double = js.native
+  var balanceRemaining: Double
   /** Gets the error code for the request, if the operation encountered an error. */
-  var extendedError: WinRTError = js.native
+  var extendedError: WinRTError
   /** Gets the status of the request. */
-  var status: StoreConsumableStatus = js.native
+  var status: StoreConsumableStatus
   /** Gets the tracking ID that was submitted with the ReportConsumableFulfillmentAsync request. */
-  var trackingId: String = js.native
+  var trackingId: String
 }
 
 object StoreConsumableResult {
@@ -29,37 +28,5 @@ object StoreConsumableResult {
     val __obj = js.Dynamic.literal(balanceRemaining = balanceRemaining.asInstanceOf[js.Any], extendedError = extendedError.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], trackingId = trackingId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StoreConsumableResult]
   }
-  @scala.inline
-  implicit class StoreConsumableResultOps[Self <: StoreConsumableResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBalanceRemaining(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("balanceRemaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtendedError(value: WinRTError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StoreConsumableStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrackingId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,87 +6,38 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.protobufjs.mod.AnyNestedObject because Already inherited */ @js.native
-trait IType extends INamespace {
+- typingsSlinky.protobufjs.mod.AnyNestedObject because Already inherited */ trait IType extends INamespace {
   /** Extension ranges */
-  var extensions: js.UndefOr[js.Array[js.Array[Double]]] = js.native
+  var extensions: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
   /** Field descriptors */
-  var fields: StringDictionary[IField] = js.native
+  var fields: StringDictionary[IField]
   /** Whether a legacy group or not */
-  var group: js.UndefOr[Boolean] = js.native
+  var group: js.UndefOr[Boolean] = js.undefined
   /** Oneof descriptors */
-  var oneofs: js.UndefOr[StringDictionary[IOneOf]] = js.native
+  var oneofs: js.UndefOr[StringDictionary[IOneOf]] = js.undefined
   /** Reserved ranges */
-  var reserved: js.UndefOr[js.Array[js.Array[Double]]] = js.native
+  var reserved: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
 }
 
 object IType {
   @scala.inline
-  def apply(fields: StringDictionary[IField]): IType = {
+  def apply(
+    fields: StringDictionary[IField],
+    extensions: js.Array[js.Array[Double]] = null,
+    group: js.UndefOr[Boolean] = js.undefined,
+    nested: StringDictionary[AnyNestedObject] = null,
+    oneofs: StringDictionary[IOneOf] = null,
+    options: StringDictionary[js.Any] = null,
+    reserved: js.Array[js.Array[Double]] = null
+  ): IType = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(group)) __obj.updateDynamic("group")(group.get.asInstanceOf[js.Any])
+    if (nested != null) __obj.updateDynamic("nested")(nested.asInstanceOf[js.Any])
+    if (oneofs != null) __obj.updateDynamic("oneofs")(oneofs.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (reserved != null) __obj.updateDynamic("reserved")(reserved.asInstanceOf[js.Any])
     __obj.asInstanceOf[IType]
   }
-  @scala.inline
-  implicit class ITypeOps[Self <: IType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: StringDictionary[IField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneofs(value: StringDictionary[IOneOf]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneofs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneofs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneofs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReserved(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReserved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserved")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

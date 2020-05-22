@@ -14,29 +14,10 @@ trait ListPipelinesInput extends js.Object {
 
 object ListPipelinesInput {
   @scala.inline
-  def apply(): ListPipelinesInput = {
+  def apply(marker: String = null): ListPipelinesInput = {
     val __obj = js.Dynamic.literal()
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPipelinesInput]
   }
-  @scala.inline
-  implicit class ListPipelinesInputOps[Self <: ListPipelinesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

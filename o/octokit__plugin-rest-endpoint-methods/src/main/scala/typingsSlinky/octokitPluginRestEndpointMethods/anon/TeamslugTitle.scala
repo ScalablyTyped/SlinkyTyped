@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TeamslugTitle extends js.Object {
-  var body: Type = js.native
-  var discussion_number: Required = js.native
+  var body: Type
+  var discussion_number: Required
   @JSName("org")
-  var org_ : Required = js.native
-  var team_slug: Required = js.native
-  var title: Type = js.native
+  var org_ : Required
+  var team_slug: Required
+  var title: Type
 }
 
 object TeamslugTitle {
@@ -21,43 +20,5 @@ object TeamslugTitle {
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamslugTitle]
   }
-  @scala.inline
-  implicit class TeamslugTitleOps[Self <: TeamslugTitle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiscussion_number(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discussion_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrg_(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTeam_slug(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team_slug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

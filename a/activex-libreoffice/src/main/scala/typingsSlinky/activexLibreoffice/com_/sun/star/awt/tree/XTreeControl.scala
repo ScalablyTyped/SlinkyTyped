@@ -13,43 +13,42 @@ import scala.scalajs.js.annotation._
   * An interface to a control that displays a set of hierarchical data as an outline.
   * @see TreeControl
   */
-@js.native
 trait XTreeControl extends XMultiSelectionSupplier {
   /**
     * If the given URL points to a loadable graphic, the graphic is rendered before collapsed non leaf nodes.
     *
     * This can be overridden for individual nodes by {@link XTreeNode.getCollapsedGraphicURL()}
     */
-  var DefaultCollapsedGraphicURL: String = js.native
+  var DefaultCollapsedGraphicURL: String
   /**
     * If the given URL points to a loadable graphic, the graphic is rendered before expanded non leaf nodes.
     *
     * This can be overridden for individual nodes by {@link XTreeNode.getExpandedGraphicURL()}
     */
-  var DefaultExpandedGraphicURL: String = js.native
+  var DefaultExpandedGraphicURL: String
   /**
     * Adds a {@link XTreeEditListener} .
     * @param Listener a {@link XTreeEditListener} that will be notified before and after a tree node is edited.
     */
-  def addTreeEditListener(Listener: XTreeEditListener): Unit = js.native
+  def addTreeEditListener(Listener: XTreeEditListener): Unit
   /**
     * Adds a listener for TreeExpansion events.
     * @param Listener a {@link XTreeExpansionListener} that will be notified when a tree node is expanded or collapsed.
     */
-  def addTreeExpansionListener(Listener: XTreeExpansionListener): Unit = js.native
+  def addTreeExpansionListener(Listener: XTreeExpansionListener): Unit
   /**
     * Cancels the current editing session.
     *
     * Has no effect if the tree isn't being edited.
     */
-  def cancelEditing(): Unit = js.native
+  def cancelEditing(): Unit
   /**
     * Ensures that **Node** is collapsed.
     * @param Node the {@link XTreeNode} identifying a node
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     * @throws ExpandVetoException if collapsing **Node** failed because at least one of the registered {@link XTreeExpansionListener} raised a {@link ExpandVet
     */
-  def collapseNode(Node: XTreeNode): Unit = js.native
+  def collapseNode(Node: XTreeNode): Unit
   /**
     * Ensures that **Node** is expanded and visible.
     *
@@ -58,7 +57,7 @@ trait XTreeControl extends XMultiSelectionSupplier {
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     * @throws ExpandVetoException if expanding **Node** failed because at least one of the registered {@link XTreeExpansionListener} raised a {@link ExpandVeto
     */
-  def expandNode(Node: XTreeNode): Unit = js.native
+  def expandNode(Node: XTreeNode): Unit
   /**
     * Returns the node that is closest to x,y.
     *
@@ -68,41 +67,41 @@ trait XTreeControl extends XMultiSelectionSupplier {
     * @param y an integer giving the number of pixels vertically from the top edge of the controls display area
     * @returns the {@link XTreeNode} for the node closest to that location, null if nothing is viewable or there is no model
     */
-  def getClosestNodeForLocation(x: Double, y: Double): XTreeNode = js.native
+  def getClosestNodeForLocation(x: Double, y: Double): XTreeNode
   /**
     * Returns the node at the specified location.
     * @param x an integer giving the number of pixels horizontally from the left edge of the controls display area
     * @param y an integer giving the number of pixels vertically from the top edge of the controls display area
     * @returns the {@link XTreeNode} for the node at that location, or 0 if there is no node at the given position
     */
-  def getNodeForLocation(x: Double, y: Double): XTreeNode = js.native
+  def getNodeForLocation(x: Double, y: Double): XTreeNode
   /**
     * returns the rectangle occupied by the visual representation of the given node
     * @param Node the node whose geometry should be obtained
     * @throws com::sun::star::lang::IllegalArgumentException if the given node is `NULL` , or does not belong to the tree's data model
     */
-  def getNodeRect(Node: XTreeNode): Rectangle = js.native
+  def getNodeRect(Node: XTreeNode): Rectangle
   /**
     * Returns `TRUE` if one of tree's nodes is being currently edited.
     *
     * The node that is being edited can be obtained using {@link com.sun.star.view.XSelectionSupplier.getSelection()} .
     * @returns `TRUE` if the user is currently editing a node
     */
-  def isEditing(): Boolean = js.native
+  def isEditing(): Boolean
   /**
     * Returns `TRUE` if **Node** is currently collapsed.
     * @param Node the {@link XTreeNode} specifying the node to check
     * @returns `TRUE` if **Node** or at least one of its parent nodes are collapsed, `FALSE` if **Node** and all of its parent nodes are expanded
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     */
-  def isNodeCollapsed(Node: XTreeNode): Boolean = js.native
+  def isNodeCollapsed(Node: XTreeNode): Boolean
   /**
     * Returns `TRUE` if **Node** is currently expanded.
     * @param Node the {@link XTreeNode} specifying the node to check.
     * @returns `FALSE` if **Node** or at least one of its parent nodes are collapsed, `TRUE` if **Node** and all of its parent nodes are expanded.
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     */
-  def isNodeExpanded(Node: XTreeNode): Boolean = js.native
+  def isNodeExpanded(Node: XTreeNode): Boolean
   /**
     * Returns `TRUE` if **Node** is currently visible.
     *
@@ -110,7 +109,7 @@ trait XTreeControl extends XMultiSelectionSupplier {
     * @returns `TRUE` if **Node** is visible, otherwise `FALSE`
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     */
-  def isNodeVisible(Node: XTreeNode): Boolean = js.native
+  def isNodeVisible(Node: XTreeNode): Boolean
   /**
     * Ensures that **Node** is currently visible.
     *
@@ -119,17 +118,17 @@ trait XTreeControl extends XMultiSelectionSupplier {
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     * @throws ExpandVetoException if **Node** can't be made visible since at least one of the parent nodes are collapsed and expanding failed because at least
     */
-  def makeNodeVisible(Node: XTreeNode): Unit = js.native
+  def makeNodeVisible(Node: XTreeNode): Unit
   /**
     * Removes a {@link XTreeEditListener} .
     * @param Listener the {@link XTreeEditListener} to remove
     */
-  def removeTreeEditListener(Listener: XTreeEditListener): Unit = js.native
+  def removeTreeEditListener(Listener: XTreeEditListener): Unit
   /**
     * Removes a listener for TreeExpansion events.
     * @param Listener the {@link XTreeExpansionListener} to remove.
     */
-  def removeTreeExpansionListener(Listener: XTreeExpansionListener): Unit = js.native
+  def removeTreeExpansionListener(Listener: XTreeExpansionListener): Unit
   /**
     * Selects **Node** and initiates editing.
     *
@@ -139,7 +138,7 @@ trait XTreeControl extends XMultiSelectionSupplier {
     * @param Node the {@link XTreeNode} identifying a node.
     * @throws com::sun::star::lang::IllegalArgumentException if **Node** is not a valid node of the corresponding {@link XTreeDataModel} .
     */
-  def startEditingAtNode(Node: XTreeNode): Unit = js.native
+  def startEditingAtNode(Node: XTreeNode): Unit
   /**
     * Ends the current editing session.
     *
@@ -148,7 +147,7 @@ trait XTreeControl extends XMultiSelectionSupplier {
     * Has no effect if the tree isn't being edited.
     * @returns `TRUE` if editing was in progress and is now stopped, `FALSE` if editing was not in progress
     */
-  def stopEditing(): Boolean = js.native
+  def stopEditing(): Boolean
 }
 
 object XTreeControl {
@@ -192,127 +191,5 @@ object XTreeControl {
     val __obj = js.Dynamic.literal(DefaultCollapsedGraphicURL = DefaultCollapsedGraphicURL.asInstanceOf[js.Any], DefaultExpandedGraphicURL = DefaultExpandedGraphicURL.asInstanceOf[js.Any], Selection = Selection.asInstanceOf[js.Any], SelectionCount = SelectionCount.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addSelection = js.Any.fromFunction1(addSelection), addSelectionChangeListener = js.Any.fromFunction1(addSelectionChangeListener), addTreeEditListener = js.Any.fromFunction1(addTreeEditListener), addTreeExpansionListener = js.Any.fromFunction1(addTreeExpansionListener), cancelEditing = js.Any.fromFunction0(cancelEditing), clearSelection = js.Any.fromFunction0(clearSelection), collapseNode = js.Any.fromFunction1(collapseNode), createReverseSelectionEnumeration = js.Any.fromFunction0(createReverseSelectionEnumeration), createSelectionEnumeration = js.Any.fromFunction0(createSelectionEnumeration), expandNode = js.Any.fromFunction1(expandNode), getClosestNodeForLocation = js.Any.fromFunction2(getClosestNodeForLocation), getNodeForLocation = js.Any.fromFunction2(getNodeForLocation), getNodeRect = js.Any.fromFunction1(getNodeRect), getSelection = js.Any.fromFunction0(getSelection), getSelectionCount = js.Any.fromFunction0(getSelectionCount), isEditing = js.Any.fromFunction0(isEditing), isNodeCollapsed = js.Any.fromFunction1(isNodeCollapsed), isNodeExpanded = js.Any.fromFunction1(isNodeExpanded), isNodeVisible = js.Any.fromFunction1(isNodeVisible), makeNodeVisible = js.Any.fromFunction1(makeNodeVisible), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeSelection = js.Any.fromFunction1(removeSelection), removeSelectionChangeListener = js.Any.fromFunction1(removeSelectionChangeListener), removeTreeEditListener = js.Any.fromFunction1(removeTreeEditListener), removeTreeExpansionListener = js.Any.fromFunction1(removeTreeExpansionListener), select = js.Any.fromFunction1(select), startEditingAtNode = js.Any.fromFunction1(startEditingAtNode), stopEditing = js.Any.fromFunction0(stopEditing))
     __obj.asInstanceOf[XTreeControl]
   }
-  @scala.inline
-  implicit class XTreeControlOps[Self <: XTreeControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultCollapsedGraphicURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCollapsedGraphicURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultExpandedGraphicURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultExpandedGraphicURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddTreeEditListener(value: XTreeEditListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTreeEditListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddTreeExpansionListener(value: XTreeExpansionListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTreeExpansionListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCancelEditing(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelEditing")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCollapseNode(value: XTreeNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExpandNode(value: XTreeNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetClosestNodeForLocation(value: (Double, Double) => XTreeNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getClosestNodeForLocation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetNodeForLocation(value: (Double, Double) => XTreeNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNodeForLocation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetNodeRect(value: XTreeNode => Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNodeRect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsEditing(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEditing")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsNodeCollapsed(value: XTreeNode => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNodeCollapsed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsNodeExpanded(value: XTreeNode => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNodeExpanded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsNodeVisible(value: XTreeNode => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNodeVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMakeNodeVisible(value: XTreeNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("makeNodeVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveTreeEditListener(value: XTreeEditListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTreeEditListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveTreeExpansionListener(value: XTreeExpansionListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTreeExpansionListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartEditingAtNode(value: XTreeNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startEditingAtNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStopEditing(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEditing")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

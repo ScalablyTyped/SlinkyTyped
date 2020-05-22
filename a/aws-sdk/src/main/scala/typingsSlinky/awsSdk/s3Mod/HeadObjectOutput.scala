@@ -119,353 +119,66 @@ trait HeadObjectOutput extends js.Object {
 
 object HeadObjectOutput {
   @scala.inline
-  def apply(): HeadObjectOutput = {
+  def apply(
+    AcceptRanges: AcceptRanges = null,
+    CacheControl: CacheControl = null,
+    ContentDisposition: ContentDisposition = null,
+    ContentEncoding: ContentEncoding = null,
+    ContentLanguage: ContentLanguage = null,
+    ContentLength: js.UndefOr[ContentLength] = js.undefined,
+    ContentType: ContentType = null,
+    DeleteMarker: js.UndefOr[DeleteMarker] = js.undefined,
+    ETag: ETag = null,
+    Expiration: Expiration = null,
+    Expires: js.Date = null,
+    LastModified: js.Date = null,
+    Metadata: Metadata = null,
+    MissingMeta: js.UndefOr[MissingMeta] = js.undefined,
+    ObjectLockLegalHoldStatus: ObjectLockLegalHoldStatus = null,
+    ObjectLockMode: ObjectLockMode = null,
+    ObjectLockRetainUntilDate: js.Date = null,
+    PartsCount: js.UndefOr[PartsCount] = js.undefined,
+    ReplicationStatus: ReplicationStatus = null,
+    RequestCharged: RequestCharged = null,
+    Restore: Restore = null,
+    SSECustomerAlgorithm: SSECustomerAlgorithm = null,
+    SSECustomerKeyMD5: SSECustomerKeyMD5 = null,
+    SSEKMSKeyId: SSEKMSKeyId = null,
+    ServerSideEncryption: ServerSideEncryption = null,
+    StorageClass: StorageClass = null,
+    VersionId: ObjectVersionId = null,
+    WebsiteRedirectLocation: WebsiteRedirectLocation = null
+  ): HeadObjectOutput = {
     val __obj = js.Dynamic.literal()
+    if (AcceptRanges != null) __obj.updateDynamic("AcceptRanges")(AcceptRanges.asInstanceOf[js.Any])
+    if (CacheControl != null) __obj.updateDynamic("CacheControl")(CacheControl.asInstanceOf[js.Any])
+    if (ContentDisposition != null) __obj.updateDynamic("ContentDisposition")(ContentDisposition.asInstanceOf[js.Any])
+    if (ContentEncoding != null) __obj.updateDynamic("ContentEncoding")(ContentEncoding.asInstanceOf[js.Any])
+    if (ContentLanguage != null) __obj.updateDynamic("ContentLanguage")(ContentLanguage.asInstanceOf[js.Any])
+    if (!js.isUndefined(ContentLength)) __obj.updateDynamic("ContentLength")(ContentLength.get.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteMarker)) __obj.updateDynamic("DeleteMarker")(DeleteMarker.get.asInstanceOf[js.Any])
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (Expiration != null) __obj.updateDynamic("Expiration")(Expiration.asInstanceOf[js.Any])
+    if (Expires != null) __obj.updateDynamic("Expires")(Expires.asInstanceOf[js.Any])
+    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
+    if (Metadata != null) __obj.updateDynamic("Metadata")(Metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(MissingMeta)) __obj.updateDynamic("MissingMeta")(MissingMeta.get.asInstanceOf[js.Any])
+    if (ObjectLockLegalHoldStatus != null) __obj.updateDynamic("ObjectLockLegalHoldStatus")(ObjectLockLegalHoldStatus.asInstanceOf[js.Any])
+    if (ObjectLockMode != null) __obj.updateDynamic("ObjectLockMode")(ObjectLockMode.asInstanceOf[js.Any])
+    if (ObjectLockRetainUntilDate != null) __obj.updateDynamic("ObjectLockRetainUntilDate")(ObjectLockRetainUntilDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartsCount)) __obj.updateDynamic("PartsCount")(PartsCount.get.asInstanceOf[js.Any])
+    if (ReplicationStatus != null) __obj.updateDynamic("ReplicationStatus")(ReplicationStatus.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
+    if (Restore != null) __obj.updateDynamic("Restore")(Restore.asInstanceOf[js.Any])
+    if (SSECustomerAlgorithm != null) __obj.updateDynamic("SSECustomerAlgorithm")(SSECustomerAlgorithm.asInstanceOf[js.Any])
+    if (SSECustomerKeyMD5 != null) __obj.updateDynamic("SSECustomerKeyMD5")(SSECustomerKeyMD5.asInstanceOf[js.Any])
+    if (SSEKMSKeyId != null) __obj.updateDynamic("SSEKMSKeyId")(SSEKMSKeyId.asInstanceOf[js.Any])
+    if (ServerSideEncryption != null) __obj.updateDynamic("ServerSideEncryption")(ServerSideEncryption.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
+    if (WebsiteRedirectLocation != null) __obj.updateDynamic("WebsiteRedirectLocation")(WebsiteRedirectLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeadObjectOutput]
   }
-  @scala.inline
-  implicit class HeadObjectOutputOps[Self <: HeadObjectOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptRanges(value: AcceptRanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheControl(value: CacheControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDisposition(value: ContentDisposition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentDisposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEncoding(value: ContentEncoding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLanguage(value: ContentLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLength(value: ContentLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteMarker(value: DeleteMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withETag(value: ETag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiration(value: Expiration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpires(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModified(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissingMeta(value: MissingMeta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingMeta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissingMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingMeta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockLegalHoldStatus(value: ObjectLockLegalHoldStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockLegalHoldStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockLegalHoldStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockLegalHoldStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockMode(value: ObjectLockMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLockRetainUntilDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockRetainUntilDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockRetainUntilDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockRetainUntilDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartsCount(value: PartsCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationStatus(value: ReplicationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: RequestCharged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestore(value: Restore): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Restore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Restore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerAlgorithm(value: SSECustomerAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerKeyMD5(value: SSECustomerKeyMD5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerKeyMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEKMSKeyId(value: SSEKMSKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEKMSKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEKMSKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideEncryption(value: ServerSideEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: StorageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: ObjectVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsiteRedirectLocation(value: WebsiteRedirectLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebsiteRedirectLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsiteRedirectLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebsiteRedirectLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

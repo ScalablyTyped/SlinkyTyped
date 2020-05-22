@@ -8,9 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `0`[TBase, TImpl /* <: Impl[TBase] */, TArgs /* <: Args[TBase] */] extends js.Object {
-  def get(container: Container, key: PrimitiveOrDependencyCtor[TBase, TImpl, TArgs]): TImpl = js.native
+  def get(container: Container, key: PrimitiveOrDependencyCtor[TBase, TImpl, TArgs]): TImpl
 }
 
 object `0` {
@@ -19,19 +18,5 @@ object `0` {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction2(get))
     __obj.asInstanceOf[`0`[TBase, TImpl, TArgs]]
   }
-  @scala.inline
-  implicit class `0Ops`[Self[tbase, timpl, targs] <: `0`[tbase, timpl, targs], TBase, TImpl, TArgs] (val x: Self[TBase, TImpl, TArgs]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TBase, TImpl, TArgs] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TBase, TImpl, TArgs]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TBase, TImpl, TArgs]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TBase, TImpl, TArgs]) with Other]
-    @scala.inline
-    def withGet(value: (Container, PrimitiveOrDependencyCtor[TBase, TImpl, TArgs]) => TImpl): Self[TBase, TImpl, TArgs] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

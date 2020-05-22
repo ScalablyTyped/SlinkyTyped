@@ -3,7 +3,9 @@ package typingsSlinky.rcTable.tableMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.columnGroupMod.ColumnGroupProps
 import typingsSlinky.rcTable.columnMod.ColumnProps
+import typingsSlinky.rcTable.footerCellMod.SummaryCellProps
 import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
+import typingsSlinky.rcTable.rowMod.FooterRowProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +22,12 @@ object default extends js.Object {
   @js.native
   object ColumnGroup extends js.Object {
     def apply[RecordType](_underscore: ColumnGroupProps[RecordType]): js.Any = js.native
+  }
+  
+  @js.native
+  object Summary extends js.Object {
+    var Cell: js.Function1[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps, ReactElement] = js.native
+    var Row: js.Function1[/* props */ FooterRowProps, ReactElement] = js.native
   }
   
   @js.native

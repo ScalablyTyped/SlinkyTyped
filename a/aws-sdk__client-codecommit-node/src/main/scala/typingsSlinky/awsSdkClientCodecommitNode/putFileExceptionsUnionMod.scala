@@ -1,0 +1,43 @@
+package typingsSlinky.awsSdkClientCodecommitNode
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-codecommit-node/types/PutFileExceptionsUnion", JSImport.Namespace)
+@js.native
+object putFileExceptionsUnionMod extends js.Object {
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitIdRequiredExceptionMod.ParentCommitIdRequiredException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidParentCommitIdExceptionMod.InvalidParentCommitIdException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitDoesNotExistExceptionMod.ParentCommitDoesNotExistException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitIdOutdatedExceptionMod.ParentCommitIdOutdatedException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesFileContentRequiredExceptionMod.FileContentRequiredException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesFileContentSizeLimitExceededExceptionMod.FileContentSizeLimitExceededException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesBranchDoesNotExistExceptionMod.BranchDoesNotExistException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameIsTagNameExceptionMod.BranchNameIsTagNameException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidFileModeExceptionMod.InvalidFileModeException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesNameLengthExceededExceptionMod.NameLengthExceededException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidEmailExceptionMod.InvalidEmailException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesCommitMessageLengthExceededExceptionMod.CommitMessageLengthExceededException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDeletionParameterExceptionMod.InvalidDeletionParameterException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesSameFileContentExceptionMod.SameFileContentException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesFileNameConflictsWithDirectoryNameExceptionMod.FileNameConflictsWithDirectoryNameException
+    - typingsSlinky.awsSdkClientCodecommitNode.typesDirectoryNameConflictsWithFileNameExceptionMod.DirectoryNameConflictsWithFileNameException
+  */
+  trait PutFileExceptionsUnion extends js.Object
+  
+}
+

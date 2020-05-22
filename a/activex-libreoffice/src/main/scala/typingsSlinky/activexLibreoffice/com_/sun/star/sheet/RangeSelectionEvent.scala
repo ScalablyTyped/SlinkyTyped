@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.XRangeSelectionListener
   * @see com.sun.star.sheet.XRangeSelectionChangeListener
   */
-@js.native
 trait RangeSelectionEvent extends EventObject {
   /** contains a textual representation of the selected range. */
-  var RangeDescriptor: String = js.native
+  var RangeDescriptor: String
 }
 
 object RangeSelectionEvent {
@@ -23,19 +22,5 @@ object RangeSelectionEvent {
     val __obj = js.Dynamic.literal(RangeDescriptor = RangeDescriptor.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeSelectionEvent]
   }
-  @scala.inline
-  implicit class RangeSelectionEventOps[Self <: RangeSelectionEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRangeDescriptor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeDescriptor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

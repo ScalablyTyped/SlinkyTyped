@@ -22,53 +22,12 @@ trait ProvisionedCapacityDescription extends js.Object {
 
 object ProvisionedCapacityDescription {
   @scala.inline
-  def apply(): ProvisionedCapacityDescription = {
+  def apply(CapacityId: String = null, ExpirationDate: String = null, StartDate: String = null): ProvisionedCapacityDescription = {
     val __obj = js.Dynamic.literal()
+    if (CapacityId != null) __obj.updateDynamic("CapacityId")(CapacityId.asInstanceOf[js.Any])
+    if (ExpirationDate != null) __obj.updateDynamic("ExpirationDate")(ExpirationDate.asInstanceOf[js.Any])
+    if (StartDate != null) __obj.updateDynamic("StartDate")(StartDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionedCapacityDescription]
   }
-  @scala.inline
-  implicit class ProvisionedCapacityDescriptionOps[Self <: ProvisionedCapacityDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,14 +16,13 @@ import scala.scalajs.js.annotation._
   * url when the value attribute contains a URL to the photo image, or base64 when the value
   * contains a base64-encoded image string.
   */
-@js.native
 trait ContactField extends js.Object {
   /** Set to true if this ContactField contains the user's preferred value. */
-  var pref: Boolean = js.native
+  var pref: Boolean
   /** A string that indicates what type of field this is, home for example. */
-  var `type`: String = js.native
+  var `type`: String
   /** The value of the field, such as a phone number or email address. */
-  var value: String = js.native
+  var value: String
 }
 
 object ContactField {
@@ -33,31 +32,5 @@ object ContactField {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactField]
   }
-  @scala.inline
-  implicit class ContactFieldOps[Self <: ContactField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPref(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

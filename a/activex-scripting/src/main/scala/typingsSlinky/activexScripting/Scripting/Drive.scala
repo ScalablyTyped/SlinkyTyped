@@ -5,34 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Drive Object */
-@js.native
 trait Drive extends js.Object {
   /** Get available space */
-  val AvailableSpace: Double = js.native
+  val AvailableSpace: Double
   /** Drive letter */
-  val DriveLetter: String = js.native
+  val DriveLetter: String
   /** Drive type */
-  val DriveType: DriveTypeConst = js.native
+  val DriveType: DriveTypeConst
   /** Filesystem type */
-  val FileSystem: String = js.native
+  val FileSystem: String
   /** Get drive free space */
-  val FreeSpace: Double = js.native
+  val FreeSpace: Double
   /** Check if disk is available */
-  val IsReady: Boolean = js.native
+  val IsReady: Boolean
   /** Path */
-  val Path: String = js.native
+  val Path: String
   /** Root folder */
-  val RootFolder: Folder = js.native
+  val RootFolder: Folder
   @JSName("Scripting.Drive_typekey")
-  var ScriptingDotDrive_typekey: Drive = js.native
+  var ScriptingDotDrive_typekey: Drive
   /** Serial number */
-  val SerialNumber: Double = js.native
+  val SerialNumber: Double
   /** Share name */
-  val ShareName: String = js.native
+  val ShareName: String
   /** Get total drive size */
-  val TotalSize: Double = js.native
+  val TotalSize: Double
   /** Name of volume */
-  var VolumeName: String = js.native
+  var VolumeName: String
 }
 
 object Drive {
@@ -56,91 +55,5 @@ object Drive {
     __obj.updateDynamic("Scripting.Drive_typekey")(ScriptingDotDrive_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Drive]
   }
-  @scala.inline
-  implicit class DriveOps[Self <: Drive] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableSpace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDriveLetter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriveLetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDriveType(value: DriveTypeConst): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriveType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFreeSpace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FreeSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsReady(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsReady")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRootFolder(value: Folder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScriptingDotDrive_typekey(value: Drive): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scripting.Drive_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSerialNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShareName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

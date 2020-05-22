@@ -51,7 +51,7 @@ trait JobDescriptor extends js.Object {
     */
   var Report: js.UndefOr[JobReport] = js.native
   /**
-    * The Amazon Resource Name (ARN) for the Identity and Access Management (IAM) Role assigned to execute the tasks for this job.
+    * The Amazon Resource Name (ARN) for the AWS Identity and Access Management (IAM) role assigned to execute the tasks for this job.
     */
   var RoleArn: js.UndefOr[IAMRoleArn] = js.native
   /**
@@ -78,221 +78,44 @@ trait JobDescriptor extends js.Object {
 
 object JobDescriptor {
   @scala.inline
-  def apply(): JobDescriptor = {
+  def apply(
+    ConfirmationRequired: js.UndefOr[ConfirmationRequired] = js.undefined,
+    CreationTime: js.Date = null,
+    Description: NonEmptyMaxLength256String = null,
+    FailureReasons: JobFailureList = null,
+    JobArn: JobArn = null,
+    JobId: JobId = null,
+    Manifest: JobManifest = null,
+    Operation: JobOperation = null,
+    Priority: js.UndefOr[JobPriority] = js.undefined,
+    ProgressSummary: JobProgressSummary = null,
+    Report: JobReport = null,
+    RoleArn: IAMRoleArn = null,
+    Status: JobStatus = null,
+    StatusUpdateReason: JobStatusUpdateReason = null,
+    SuspendedCause: SuspendedCause = null,
+    SuspendedDate: js.Date = null,
+    TerminationDate: js.Date = null
+  ): JobDescriptor = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ConfirmationRequired)) __obj.updateDynamic("ConfirmationRequired")(ConfirmationRequired.get.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (FailureReasons != null) __obj.updateDynamic("FailureReasons")(FailureReasons.asInstanceOf[js.Any])
+    if (JobArn != null) __obj.updateDynamic("JobArn")(JobArn.asInstanceOf[js.Any])
+    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
+    if (Manifest != null) __obj.updateDynamic("Manifest")(Manifest.asInstanceOf[js.Any])
+    if (Operation != null) __obj.updateDynamic("Operation")(Operation.asInstanceOf[js.Any])
+    if (!js.isUndefined(Priority)) __obj.updateDynamic("Priority")(Priority.get.asInstanceOf[js.Any])
+    if (ProgressSummary != null) __obj.updateDynamic("ProgressSummary")(ProgressSummary.asInstanceOf[js.Any])
+    if (Report != null) __obj.updateDynamic("Report")(Report.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusUpdateReason != null) __obj.updateDynamic("StatusUpdateReason")(StatusUpdateReason.asInstanceOf[js.Any])
+    if (SuspendedCause != null) __obj.updateDynamic("SuspendedCause")(SuspendedCause.asInstanceOf[js.Any])
+    if (SuspendedDate != null) __obj.updateDynamic("SuspendedDate")(SuspendedDate.asInstanceOf[js.Any])
+    if (TerminationDate != null) __obj.updateDynamic("TerminationDate")(TerminationDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobDescriptor]
   }
-  @scala.inline
-  implicit class JobDescriptorOps[Self <: JobDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfirmationRequired(value: ConfirmationRequired): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfirmationRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfirmationRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfirmationRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NonEmptyMaxLength256String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReasons(value: JobFailureList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReasons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobArn(value: JobArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifest(value: JobManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Manifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Manifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: JobOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: JobPriority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressSummary(value: JobProgressSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReport(value: JobReport): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Report")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Report")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: IAMRoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: JobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusUpdateReason(value: JobStatusUpdateReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusUpdateReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspendedCause(value: SuspendedCause): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedCause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspendedCause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedCause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspendedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspendedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

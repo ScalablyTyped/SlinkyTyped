@@ -1,6 +1,6 @@
 package typingsSlinky.xadesjs
 
-import typingsSlinky.xmlCore.mod.IConverter
+import typingsSlinky.xmlCore.typesMod.IConverter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

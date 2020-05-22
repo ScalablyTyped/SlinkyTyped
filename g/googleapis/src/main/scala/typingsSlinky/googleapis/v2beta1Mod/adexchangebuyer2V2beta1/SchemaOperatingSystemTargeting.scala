@@ -21,41 +21,14 @@ trait SchemaOperatingSystemTargeting extends js.Object {
 
 object SchemaOperatingSystemTargeting {
   @scala.inline
-  def apply(): SchemaOperatingSystemTargeting = {
+  def apply(
+    operatingSystemCriteria: SchemaCriteriaTargeting = null,
+    operatingSystemVersionCriteria: SchemaCriteriaTargeting = null
+  ): SchemaOperatingSystemTargeting = {
     val __obj = js.Dynamic.literal()
+    if (operatingSystemCriteria != null) __obj.updateDynamic("operatingSystemCriteria")(operatingSystemCriteria.asInstanceOf[js.Any])
+    if (operatingSystemVersionCriteria != null) __obj.updateDynamic("operatingSystemVersionCriteria")(operatingSystemVersionCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperatingSystemTargeting]
   }
-  @scala.inline
-  implicit class SchemaOperatingSystemTargetingOps[Self <: SchemaOperatingSystemTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperatingSystemCriteria(value: SchemaCriteriaTargeting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatingSystemCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperatingSystemVersionCriteria(value: SchemaCriteriaTargeting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemVersionCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatingSystemVersionCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystemVersionCriteria")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

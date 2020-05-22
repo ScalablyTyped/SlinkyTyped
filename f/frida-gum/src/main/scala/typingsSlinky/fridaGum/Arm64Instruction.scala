@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Arm64Instruction extends Instruction {
   /**
     * Array of objects describing each operand.
     */
-  var operands: js.Array[Arm64Operand] = js.native
+  var operands: js.Array[Arm64Operand]
   /**
     * Registers implicitly read by this instruction.
     */
-  var regsRead: js.Array[Arm64Register] = js.native
+  var regsRead: js.Array[Arm64Register]
   /**
     * Registers implicitly written to by this instruction.
     */
-  var regsWritten: js.Array[Arm64Register] = js.native
+  var regsWritten: js.Array[Arm64Register]
 }
 
 object Arm64Instruction {
@@ -36,31 +35,5 @@ object Arm64Instruction {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], mnemonic = mnemonic.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], opStr = opStr.asInstanceOf[js.Any], operands = operands.asInstanceOf[js.Any], regsRead = regsRead.asInstanceOf[js.Any], regsWritten = regsWritten.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Arm64Instruction]
   }
-  @scala.inline
-  implicit class Arm64InstructionOps[Self <: Arm64Instruction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperands(value: js.Array[Arm64Operand]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegsRead(value: js.Array[Arm64Register]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regsRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRegsWritten(value: js.Array[Arm64Register]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regsWritten")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

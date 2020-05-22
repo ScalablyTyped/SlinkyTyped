@@ -6,102 +6,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Readonly<vue.vue/types/vnode.VNodeDirective> */
-@js.native
 trait DirectiveBinding extends js.Object {
-  val arg: js.UndefOr[String] = js.native
-  val expression: js.UndefOr[js.Any] = js.native
-  val modifiers: StringDictionary[Boolean] = js.native
-  val name: String = js.native
-  val oldArg: js.UndefOr[String] = js.native
-  val oldValue: js.UndefOr[js.Any] = js.native
-  val value: js.UndefOr[js.Any] = js.native
+  val arg: js.UndefOr[String] = js.undefined
+  val expression: js.UndefOr[js.Any] = js.undefined
+  val modifiers: StringDictionary[Boolean]
+  val name: String
+  val oldArg: js.UndefOr[String] = js.undefined
+  val oldValue: js.UndefOr[js.Any] = js.undefined
+  val value: js.UndefOr[js.Any] = js.undefined
 }
 
 object DirectiveBinding {
   @scala.inline
-  def apply(modifiers: StringDictionary[Boolean], name: String): DirectiveBinding = {
+  def apply(
+    modifiers: StringDictionary[Boolean],
+    name: String,
+    arg: String = null,
+    expression: js.Any = null,
+    oldArg: String = null,
+    oldValue: js.Any = null,
+    value: js.Any = null
+  ): DirectiveBinding = {
     val __obj = js.Dynamic.literal(modifiers = modifiers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (arg != null) __obj.updateDynamic("arg")(arg.asInstanceOf[js.Any])
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
+    if (oldArg != null) __obj.updateDynamic("oldArg")(oldArg.asInstanceOf[js.Any])
+    if (oldValue != null) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectiveBinding]
   }
-  @scala.inline
-  implicit class DirectiveBindingOps[Self <: DirectiveBinding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModifiers(value: StringDictionary[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpression(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldArg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldArg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldArg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldArg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

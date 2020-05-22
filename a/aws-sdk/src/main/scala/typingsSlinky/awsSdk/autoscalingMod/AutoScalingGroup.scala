@@ -122,282 +122,46 @@ object AutoScalingGroup {
     DesiredCapacity: AutoScalingGroupDesiredCapacity,
     HealthCheckType: XmlStringMaxLen32,
     MaxSize: AutoScalingGroupMaxSize,
-    MinSize: AutoScalingGroupMinSize
+    MinSize: AutoScalingGroupMinSize,
+    AutoScalingGroupARN: ResourceName = null,
+    EnabledMetrics: EnabledMetrics = null,
+    HealthCheckGracePeriod: js.UndefOr[HealthCheckGracePeriod] = js.undefined,
+    Instances: Instances = null,
+    LaunchConfigurationName: XmlStringMaxLen255 = null,
+    LaunchTemplate: LaunchTemplateSpecification = null,
+    LoadBalancerNames: LoadBalancerNames = null,
+    MaxInstanceLifetime: js.UndefOr[MaxInstanceLifetime] = js.undefined,
+    MixedInstancesPolicy: MixedInstancesPolicy = null,
+    NewInstancesProtectedFromScaleIn: js.UndefOr[InstanceProtected] = js.undefined,
+    PlacementGroup: XmlStringMaxLen255 = null,
+    ServiceLinkedRoleARN: ResourceName = null,
+    Status: XmlStringMaxLen255 = null,
+    SuspendedProcesses: SuspendedProcesses = null,
+    Tags: TagDescriptionList = null,
+    TargetGroupARNs: TargetGroupARNs = null,
+    TerminationPolicies: TerminationPolicies = null,
+    VPCZoneIdentifier: XmlStringMaxLen2047 = null
   ): AutoScalingGroup = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any], AvailabilityZones = AvailabilityZones.asInstanceOf[js.Any], CreatedTime = CreatedTime.asInstanceOf[js.Any], DefaultCooldown = DefaultCooldown.asInstanceOf[js.Any], DesiredCapacity = DesiredCapacity.asInstanceOf[js.Any], HealthCheckType = HealthCheckType.asInstanceOf[js.Any], MaxSize = MaxSize.asInstanceOf[js.Any], MinSize = MinSize.asInstanceOf[js.Any])
+    if (AutoScalingGroupARN != null) __obj.updateDynamic("AutoScalingGroupARN")(AutoScalingGroupARN.asInstanceOf[js.Any])
+    if (EnabledMetrics != null) __obj.updateDynamic("EnabledMetrics")(EnabledMetrics.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthCheckGracePeriod)) __obj.updateDynamic("HealthCheckGracePeriod")(HealthCheckGracePeriod.get.asInstanceOf[js.Any])
+    if (Instances != null) __obj.updateDynamic("Instances")(Instances.asInstanceOf[js.Any])
+    if (LaunchConfigurationName != null) __obj.updateDynamic("LaunchConfigurationName")(LaunchConfigurationName.asInstanceOf[js.Any])
+    if (LaunchTemplate != null) __obj.updateDynamic("LaunchTemplate")(LaunchTemplate.asInstanceOf[js.Any])
+    if (LoadBalancerNames != null) __obj.updateDynamic("LoadBalancerNames")(LoadBalancerNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxInstanceLifetime)) __obj.updateDynamic("MaxInstanceLifetime")(MaxInstanceLifetime.get.asInstanceOf[js.Any])
+    if (MixedInstancesPolicy != null) __obj.updateDynamic("MixedInstancesPolicy")(MixedInstancesPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(NewInstancesProtectedFromScaleIn)) __obj.updateDynamic("NewInstancesProtectedFromScaleIn")(NewInstancesProtectedFromScaleIn.get.asInstanceOf[js.Any])
+    if (PlacementGroup != null) __obj.updateDynamic("PlacementGroup")(PlacementGroup.asInstanceOf[js.Any])
+    if (ServiceLinkedRoleARN != null) __obj.updateDynamic("ServiceLinkedRoleARN")(ServiceLinkedRoleARN.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (SuspendedProcesses != null) __obj.updateDynamic("SuspendedProcesses")(SuspendedProcesses.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (TargetGroupARNs != null) __obj.updateDynamic("TargetGroupARNs")(TargetGroupARNs.asInstanceOf[js.Any])
+    if (TerminationPolicies != null) __obj.updateDynamic("TerminationPolicies")(TerminationPolicies.asInstanceOf[js.Any])
+    if (VPCZoneIdentifier != null) __obj.updateDynamic("VPCZoneIdentifier")(VPCZoneIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoScalingGroup]
   }
-  @scala.inline
-  implicit class AutoScalingGroupOps[Self <: AutoScalingGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZones(value: AvailabilityZones): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultCooldown(value: Cooldown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCooldown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesiredCapacity(value: AutoScalingGroupDesiredCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthCheckType(value: XmlStringMaxLen32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: AutoScalingGroupMaxSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: AutoScalingGroupMinSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoScalingGroupARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroupARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledMetrics(value: EnabledMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnabledMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnabledMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckGracePeriod(value: HealthCheckGracePeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckGracePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckGracePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckGracePeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstances(value: Instances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchConfigurationName(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchConfigurationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchConfigurationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchConfigurationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchTemplate(value: LaunchTemplateSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerNames(value: LoadBalancerNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancerNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxInstanceLifetime(value: MaxInstanceLifetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxInstanceLifetime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxInstanceLifetime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxInstanceLifetime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMixedInstancesPolicy(value: MixedInstancesPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MixedInstancesPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMixedInstancesPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MixedInstancesPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewInstancesProtectedFromScaleIn(value: InstanceProtected): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewInstancesProtectedFromScaleIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewInstancesProtectedFromScaleIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewInstancesProtectedFromScaleIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacementGroup(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacementGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceLinkedRoleARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceLinkedRoleARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceLinkedRoleARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceLinkedRoleARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspendedProcesses(value: SuspendedProcesses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedProcesses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspendedProcesses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuspendedProcesses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagDescriptionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetGroupARNs(value: TargetGroupARNs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupARNs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetGroupARNs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupARNs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminationPolicies(value: TerminationPolicies): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminationPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminationPolicies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVPCZoneIdentifier(value: XmlStringMaxLen2047): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCZoneIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVPCZoneIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCZoneIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

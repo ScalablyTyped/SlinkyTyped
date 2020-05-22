@@ -13,13 +13,12 @@ import scala.scalajs.js.annotation._
   * @see [Dynamic Components](guide/dynamic-component-loader)
   * @publicApi
   */
-@js.native
 trait ComponentFactoryResolver extends js.Object {
   /**
     * Retrieves the factory object that creates a component of the given type.
     * @param component The component type.
     */
-  def resolveComponentFactory[T](component: Type[T]): ComponentFactory[T] = js.native
+  def resolveComponentFactory[T](component: Type[T]): ComponentFactory[T]
 }
 
 object ComponentFactoryResolver {
@@ -28,19 +27,5 @@ object ComponentFactoryResolver {
     val __obj = js.Dynamic.literal(resolveComponentFactory = js.Any.fromFunction1(resolveComponentFactory))
     __obj.asInstanceOf[ComponentFactoryResolver]
   }
-  @scala.inline
-  implicit class ComponentFactoryResolverOps[Self <: ComponentFactoryResolver] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResolveComponentFactory(value: Type[js.Any] => ComponentFactory[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveComponentFactory")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

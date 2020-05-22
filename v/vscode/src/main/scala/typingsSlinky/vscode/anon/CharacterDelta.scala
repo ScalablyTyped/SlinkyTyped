@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CharacterDelta extends js.Object {
-  var characterDelta: js.UndefOr[Double] = js.native
-  var lineDelta: js.UndefOr[Double] = js.native
+  var characterDelta: js.UndefOr[Double] = js.undefined
+  var lineDelta: js.UndefOr[Double] = js.undefined
 }
 
 object CharacterDelta {
   @scala.inline
-  def apply(): CharacterDelta = {
+  def apply(characterDelta: js.UndefOr[Double] = js.undefined, lineDelta: js.UndefOr[Double] = js.undefined): CharacterDelta = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(characterDelta)) __obj.updateDynamic("characterDelta")(characterDelta.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineDelta)) __obj.updateDynamic("lineDelta")(lineDelta.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CharacterDelta]
   }
-  @scala.inline
-  implicit class CharacterDeltaOps[Self <: CharacterDelta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharacterDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characterDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharacterDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characterDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineDelta")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

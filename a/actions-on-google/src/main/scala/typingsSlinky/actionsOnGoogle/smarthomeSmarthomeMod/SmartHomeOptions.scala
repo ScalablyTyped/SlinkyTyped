@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SmartHomeOptions extends AppOptions {
   /**
     * A JWT (JSON Web Token) that is able to access the home graph API.
@@ -13,53 +12,24 @@ trait SmartHomeOptions extends AppOptions {
     * created through the Google Cloud Console: https://console.cloud.google.com/apis/credentials
     * @public
     */
-  var jwt: js.UndefOr[SmartHomeJwt] = js.native
+  var jwt: js.UndefOr[SmartHomeJwt] = js.undefined
   /**
     * An API key to use the home graph API. See
     * https://console.cloud.google.com/apis/api/homegraph.googleapis.com/overview
     * to learn more.
     * @public
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
 }
 
 object SmartHomeOptions {
   @scala.inline
-  def apply(): SmartHomeOptions = {
+  def apply(debug: js.UndefOr[Boolean] = js.undefined, jwt: SmartHomeJwt = null, key: String = null): SmartHomeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (jwt != null) __obj.updateDynamic("jwt")(jwt.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeOptions]
   }
-  @scala.inline
-  implicit class SmartHomeOptionsOps[Self <: SmartHomeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJwt(value: SmartHomeJwt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

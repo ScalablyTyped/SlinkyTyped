@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseFontSizeObject extends js.Object {
-  var baseFontSize: js.UndefOr[js.Object] = js.native
+  var baseFontSize: js.UndefOr[js.Object] = js.undefined
 }
 
 object BaseFontSizeObject {
   @scala.inline
-  def apply(): BaseFontSizeObject = {
+  def apply(baseFontSize: js.Object = null): BaseFontSizeObject = {
     val __obj = js.Dynamic.literal()
+    if (baseFontSize != null) __obj.updateDynamic("baseFontSize")(baseFontSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseFontSizeObject]
   }
-  @scala.inline
-  implicit class BaseFontSizeObjectOps[Self <: BaseFontSizeObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseFontSize(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseFontSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

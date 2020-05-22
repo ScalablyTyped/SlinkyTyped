@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddProtectedRangeResponse extends js.Object {
-  var protectedRange: js.UndefOr[ProtectedRange] = js.native
+  var protectedRange: js.UndefOr[ProtectedRange] = js.undefined
 }
 
 object AddProtectedRangeResponse {
   @scala.inline
-  def apply(): AddProtectedRangeResponse = {
+  def apply(protectedRange: ProtectedRange = null): AddProtectedRangeResponse = {
     val __obj = js.Dynamic.literal()
+    if (protectedRange != null) __obj.updateDynamic("protectedRange")(protectedRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddProtectedRangeResponse]
   }
-  @scala.inline
-  implicit class AddProtectedRangeResponseOps[Self <: AddProtectedRangeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtectedRange(value: ProtectedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtectedRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

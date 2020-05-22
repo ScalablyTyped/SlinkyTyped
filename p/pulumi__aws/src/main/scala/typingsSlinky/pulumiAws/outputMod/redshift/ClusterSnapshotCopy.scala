@@ -22,47 +22,15 @@ trait ClusterSnapshotCopy extends js.Object {
 
 object ClusterSnapshotCopy {
   @scala.inline
-  def apply(destinationRegion: String): ClusterSnapshotCopy = {
+  def apply(
+    destinationRegion: String,
+    grantName: String = null,
+    retentionPeriod: js.UndefOr[Double] = js.undefined
+  ): ClusterSnapshotCopy = {
     val __obj = js.Dynamic.literal(destinationRegion = destinationRegion.asInstanceOf[js.Any])
+    if (grantName != null) __obj.updateDynamic("grantName")(grantName.asInstanceOf[js.Any])
+    if (!js.isUndefined(retentionPeriod)) __obj.updateDynamic("retentionPeriod")(retentionPeriod.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterSnapshotCopy]
   }
-  @scala.inline
-  implicit class ClusterSnapshotCopyOps[Self <: ClusterSnapshotCopy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrantName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grantName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrantName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grantName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetentionPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetentionPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

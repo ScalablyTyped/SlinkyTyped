@@ -1,8 +1,8 @@
 package typingsSlinky.googleapis.driveV3Mod.driveV3
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleapis.AnonBackgroundImageLink
-import typingsSlinky.googleapis.AnonLimit
+import typingsSlinky.googleapis.anon.BackgroundImageLink
+import typingsSlinky.googleapis.anon.Limit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,11 +49,11 @@ trait SchemaAbout extends js.Object {
     * The user&#39;s storage quota limits and usage. All fields are measured in
     * bytes.
     */
-  var storageQuota: js.UndefOr[AnonLimit] = js.native
+  var storageQuota: js.UndefOr[Limit] = js.native
   /**
     * A list of themes that are supported for Team Drives.
     */
-  var teamDriveThemes: js.UndefOr[js.Array[AnonBackgroundImageLink]] = js.native
+  var teamDriveThemes: js.UndefOr[js.Array[BackgroundImageLink]] = js.native
   /**
     * The authenticated user.
     */
@@ -62,149 +62,32 @@ trait SchemaAbout extends js.Object {
 
 object SchemaAbout {
   @scala.inline
-  def apply(): SchemaAbout = {
+  def apply(
+    appInstalled: js.UndefOr[Boolean] = js.undefined,
+    canCreateTeamDrives: js.UndefOr[Boolean] = js.undefined,
+    exportFormats: StringDictionary[js.Array[String]] = null,
+    folderColorPalette: js.Array[String] = null,
+    importFormats: StringDictionary[js.Array[String]] = null,
+    kind: String = null,
+    maxImportSizes: StringDictionary[String] = null,
+    maxUploadSize: String = null,
+    storageQuota: Limit = null,
+    teamDriveThemes: js.Array[BackgroundImageLink] = null,
+    user: SchemaUser = null
+  ): SchemaAbout = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(appInstalled)) __obj.updateDynamic("appInstalled")(appInstalled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(canCreateTeamDrives)) __obj.updateDynamic("canCreateTeamDrives")(canCreateTeamDrives.get.asInstanceOf[js.Any])
+    if (exportFormats != null) __obj.updateDynamic("exportFormats")(exportFormats.asInstanceOf[js.Any])
+    if (folderColorPalette != null) __obj.updateDynamic("folderColorPalette")(folderColorPalette.asInstanceOf[js.Any])
+    if (importFormats != null) __obj.updateDynamic("importFormats")(importFormats.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (maxImportSizes != null) __obj.updateDynamic("maxImportSizes")(maxImportSizes.asInstanceOf[js.Any])
+    if (maxUploadSize != null) __obj.updateDynamic("maxUploadSize")(maxUploadSize.asInstanceOf[js.Any])
+    if (storageQuota != null) __obj.updateDynamic("storageQuota")(storageQuota.asInstanceOf[js.Any])
+    if (teamDriveThemes != null) __obj.updateDynamic("teamDriveThemes")(teamDriveThemes.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAbout]
   }
-  @scala.inline
-  implicit class SchemaAboutOps[Self <: SchemaAbout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppInstalled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInstalled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppInstalled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInstalled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanCreateTeamDrives(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canCreateTeamDrives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanCreateTeamDrives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canCreateTeamDrives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportFormats(value: StringDictionary[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolderColorPalette(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderColorPalette")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolderColorPalette: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderColorPalette")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportFormats(value: StringDictionary[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxImportSizes(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImportSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxImportSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImportSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxUploadSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUploadSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxUploadSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUploadSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageQuota(value: AnonLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageQuota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageQuota: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageQuota")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeamDriveThemes(value: js.Array[AnonBackgroundImageLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveThemes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeamDriveThemes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveThemes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: SchemaUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

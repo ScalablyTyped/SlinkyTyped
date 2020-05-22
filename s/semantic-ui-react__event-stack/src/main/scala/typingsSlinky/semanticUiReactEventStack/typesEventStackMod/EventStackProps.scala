@@ -1,108 +1,29 @@
 package typingsSlinky.semanticUiReactEventStack.typesEventStackMod
 
-import org.scalajs.dom.raw.Document
-import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.HTMLElement
-import org.scalajs.dom.raw.Window
-import slinky.core.facade.ReactRef
 import typingsSlinky.semanticUiReactEventStack.typesMod.InputEventListener
 import typingsSlinky.semanticUiReactEventStack.typesMod.InputTargetElement
-import typingsSlinky.semanticUiReactEventStack.typesMod.TargetElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventStackProps extends js.Object {
   /** An event name on which we will subscribe. */
-  var name: String = js.native
+  var name: String
   /** An event handler or array of event handlers. */
-  var on: InputEventListener = js.native
+  var on: InputEventListener
   /** A name of pool. */
-  var pool: js.UndefOr[String] = js.native
+  var pool: js.UndefOr[String] = js.undefined
   /** A DOM element on which we will subscribe. */
-  var target: js.UndefOr[InputTargetElement] = js.native
+  var target: js.UndefOr[InputTargetElement] = js.undefined
 }
 
 object EventStackProps {
   @scala.inline
-  def apply(name: String, on: InputEventListener): EventStackProps = {
+  def apply(name: String, on: InputEventListener, pool: String = null, target: InputTargetElement = null): EventStackProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], on = on.asInstanceOf[js.Any])
+    if (pool != null) __obj.updateDynamic("pool")(pool.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventStackProps]
   }
-  @scala.inline
-  implicit class EventStackPropsOps[Self <: EventStackProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnFunction1(value: /* evt */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOn(value: InputEventListener): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPool(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetDocument(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetRefObject(value: ReactRef[TargetElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: InputTargetElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetWindow(value: Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

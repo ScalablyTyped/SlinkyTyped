@@ -4,167 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMultiRenderTargetOptions extends js.Object {
   /**
     * Define the default type of the buffers we are creating
     */
-  var defaultType: js.UndefOr[Double] = js.native
+  var defaultType: js.UndefOr[Double] = js.undefined
   /**
     * Define if aspect ratio should be adapted to the texture or stay the scene one
     */
-  var doNotChangeAspectRatio: js.UndefOr[Boolean] = js.native
+  var doNotChangeAspectRatio: js.UndefOr[Boolean] = js.undefined
   /**
     * Define if a depth buffer is required
     */
-  var generateDepthBuffer: js.UndefOr[Boolean] = js.native
+  var generateDepthBuffer: js.UndefOr[Boolean] = js.undefined
   /**
     * Define if a depth texture is required instead of a depth buffer
     */
-  var generateDepthTexture: js.UndefOr[Boolean] = js.native
+  var generateDepthTexture: js.UndefOr[Boolean] = js.undefined
   /**
     * Define if the texture needs to create mip maps after render.
     */
-  var generateMipMaps: js.UndefOr[Boolean] = js.native
+  var generateMipMaps: js.UndefOr[Boolean] = js.undefined
   /**
     * Define if a stencil buffer is required
     */
-  var generateStencilBuffer: js.UndefOr[Boolean] = js.native
+  var generateStencilBuffer: js.UndefOr[Boolean] = js.undefined
   /**
     * Define the sampling modes of all the draw buffers we want to create
     */
-  var samplingModes: js.UndefOr[js.Array[Double]] = js.native
+  var samplingModes: js.UndefOr[js.Array[Double]] = js.undefined
   /**
     * Define the number of desired draw buffers
     */
-  var textureCount: js.UndefOr[Double] = js.native
+  var textureCount: js.UndefOr[Double] = js.undefined
   /**
     * Define the types of all the draw buffers we want to create
     */
-  var types: js.UndefOr[js.Array[Double]] = js.native
+  var types: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object IMultiRenderTargetOptions {
   @scala.inline
-  def apply(): IMultiRenderTargetOptions = {
+  def apply(
+    defaultType: js.UndefOr[Double] = js.undefined,
+    doNotChangeAspectRatio: js.UndefOr[Boolean] = js.undefined,
+    generateDepthBuffer: js.UndefOr[Boolean] = js.undefined,
+    generateDepthTexture: js.UndefOr[Boolean] = js.undefined,
+    generateMipMaps: js.UndefOr[Boolean] = js.undefined,
+    generateStencilBuffer: js.UndefOr[Boolean] = js.undefined,
+    samplingModes: js.Array[Double] = null,
+    textureCount: js.UndefOr[Double] = js.undefined,
+    types: js.Array[Double] = null
+  ): IMultiRenderTargetOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultType)) __obj.updateDynamic("defaultType")(defaultType.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(doNotChangeAspectRatio)) __obj.updateDynamic("doNotChangeAspectRatio")(doNotChangeAspectRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateDepthBuffer)) __obj.updateDynamic("generateDepthBuffer")(generateDepthBuffer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateDepthTexture)) __obj.updateDynamic("generateDepthTexture")(generateDepthTexture.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateMipMaps)) __obj.updateDynamic("generateMipMaps")(generateMipMaps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateStencilBuffer)) __obj.updateDynamic("generateStencilBuffer")(generateStencilBuffer.get.asInstanceOf[js.Any])
+    if (samplingModes != null) __obj.updateDynamic("samplingModes")(samplingModes.asInstanceOf[js.Any])
+    if (!js.isUndefined(textureCount)) __obj.updateDynamic("textureCount")(textureCount.get.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMultiRenderTargetOptions]
   }
-  @scala.inline
-  implicit class IMultiRenderTargetOptionsOps[Self <: IMultiRenderTargetOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoNotChangeAspectRatio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doNotChangeAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoNotChangeAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doNotChangeAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateDepthBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateDepthBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateDepthBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateDepthBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateDepthTexture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateDepthTexture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateDepthTexture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateDepthTexture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateMipMaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateMipMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateMipMaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateMipMaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateStencilBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStencilBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateStencilBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStencilBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingModes(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingModes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextureCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextureCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textureCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

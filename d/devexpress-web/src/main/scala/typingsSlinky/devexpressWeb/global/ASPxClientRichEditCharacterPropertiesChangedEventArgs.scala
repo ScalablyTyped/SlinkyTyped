@@ -17,5 +17,15 @@ class ASPxClientRichEditCharacterPropertiesChangedEventArgs protected ()
     * @param interval An interval object that relates to the changed characters.
     */
   def this(subDocumentId: Double, interval: typingsSlinky.devexpressWeb.Interval) = this()
+  /**
+    * Gets the text buffer interval related to the changed characters.
+    */
+  /* CompleteClass */
+  override var interval: typingsSlinky.devexpressWeb.Interval = js.native
+  /**
+    * Gets the active sub-document's identifier.
+    */
+  /* CompleteClass */
+  override var subDocumentId: Double = js.native
 }
 

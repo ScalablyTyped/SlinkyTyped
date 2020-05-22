@@ -6,7 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.checkTypesMod.ICheckProps
 import typingsSlinky.officeUiFabricReact.checkTypesMod.ICheckStyleProps
 import typingsSlinky.officeUiFabricReact.checkTypesMod.ICheckStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -31,7 +31,7 @@ class SharedBuilder_ICheckProps839741726 (val args: js.Array[js.Any])
   @scala.inline
   def componentRef(value: IRefObject[ICheckProps]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   @scala.inline
-  def stylesFunction1(value: ICheckStyleProps => Partial[ICheckStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  def stylesFunction1(value: ICheckStyleProps => DeepPartial[ICheckStyles]): this.type = set("styles", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: IStyleFunctionOrObject[ICheckStyleProps, ICheckStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

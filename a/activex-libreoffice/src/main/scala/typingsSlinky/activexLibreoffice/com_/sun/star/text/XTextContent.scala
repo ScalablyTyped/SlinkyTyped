@@ -8,10 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** enables objects to be inserted into a text and to provide their location in a text once they are inserted into it. */
-@js.native
 trait XTextContent extends XComponent {
   /** @returns the text range to which the content is attached.  Note: The anchor of the actual implementation for text tables does not have a position in the t */
-  val Anchor: XTextRange = js.native
+  val Anchor: XTextRange
   /**
     * is called when this object gets embedded in a text.
     *
@@ -21,9 +20,9 @@ trait XTextContent extends XComponent {
     * Both text objects and text content objects may only be connected to each other if they are created by the same component. When implementing new
     * components, this behavior is deprecated.
     */
-  def attach(xTextRange: XTextRange): Unit = js.native
+  def attach(xTextRange: XTextRange): Unit
   /** @returns the text range to which the content is attached.  Note: The anchor of the actual implementation for text tables does not have a position in the t */
-  def getAnchor(): XTextRange = js.native
+  def getAnchor(): XTextRange
 }
 
 object XTextContent {
@@ -42,31 +41,5 @@ object XTextContent {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[XTextContent]
   }
-  @scala.inline
-  implicit class XTextContentOps[Self <: XTextContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: XTextRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttach(value: XTextRange => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attach")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAnchor(value: () => XTextRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnchor")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

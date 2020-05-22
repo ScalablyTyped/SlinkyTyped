@@ -1,79 +1,51 @@
 package typingsSlinky.awsSdkClientS3Node.typesMultipartUploadMod
 
+import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.ONEZONE_IA
+import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.REDUCED_REDUNDANCY
+import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.STANDARD
+import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.STANDARD_IA
 import typingsSlinky.awsSdkClientS3Node.typesInitiatorMod.UnmarshalledInitiator
 import typingsSlinky.awsSdkClientS3Node.typesOwnerMod.UnmarshalledOwner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledMultipartUpload extends MultipartUpload {
   /**
     * <p>Date and time at which the multipart upload was initiated.</p>
     */
   @JSName("Initiated")
-  var Initiated_UnmarshalledMultipartUpload: js.UndefOr[js.Date] = js.native
+  var Initiated_UnmarshalledMultipartUpload: js.UndefOr[js.Date] = js.undefined
   /**
     * <p>Identifies who initiated the multipart upload.</p>
     */
   @JSName("Initiator")
-  var Initiator_UnmarshalledMultipartUpload: js.UndefOr[UnmarshalledInitiator] = js.native
+  var Initiator_UnmarshalledMultipartUpload: js.UndefOr[UnmarshalledInitiator] = js.undefined
   /**
     * _Owner shape
     */
   @JSName("Owner")
-  var Owner_UnmarshalledMultipartUpload: js.UndefOr[UnmarshalledOwner] = js.native
+  var Owner_UnmarshalledMultipartUpload: js.UndefOr[UnmarshalledOwner] = js.undefined
 }
 
 object UnmarshalledMultipartUpload {
   @scala.inline
-  def apply(): UnmarshalledMultipartUpload = {
+  def apply(
+    Initiated: js.Date = null,
+    Initiator: UnmarshalledInitiator = null,
+    Key: String = null,
+    Owner: UnmarshalledOwner = null,
+    StorageClass: STANDARD | REDUCED_REDUNDANCY | STANDARD_IA | ONEZONE_IA | String = null,
+    UploadId: String = null
+  ): UnmarshalledMultipartUpload = {
     val __obj = js.Dynamic.literal()
+    if (Initiated != null) __obj.updateDynamic("Initiated")(Initiated.asInstanceOf[js.Any])
+    if (Initiator != null) __obj.updateDynamic("Initiator")(Initiator.asInstanceOf[js.Any])
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
+    if (UploadId != null) __obj.updateDynamic("UploadId")(UploadId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledMultipartUpload]
   }
-  @scala.inline
-  implicit class UnmarshalledMultipartUploadOps[Self <: UnmarshalledMultipartUpload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitiated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitiator(value: UnmarshalledInitiator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitiator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: UnmarshalledOwner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   *
   * @class SAT
   */
-@js.native
 trait SAT extends js.Object
 

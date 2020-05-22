@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * @see GenericDrawPage
   * @see DrawPages
   */
-@js.native
 trait DrawPage
   extends GenericDrawPage
      with XMasterPageTarget

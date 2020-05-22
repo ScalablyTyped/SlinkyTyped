@@ -74,6 +74,10 @@ object serverconnectionMod extends js.Object {
         * Create a new network error.
         */
       def this(original: js.TypeError) = this()
+      /* CompleteClass */
+      override var message: String = js.native
+      /* CompleteClass */
+      override var name: String = js.native
     }
     
     /**
@@ -86,6 +90,10 @@ object serverconnectionMod extends js.Object {
         */
       def this(response: Response) = this()
       def this(response: Response, message: String) = this()
+      /* CompleteClass */
+      override var message: String = js.native
+      /* CompleteClass */
+      override var name: String = js.native
       /**
         * The response associated with the error.
         */

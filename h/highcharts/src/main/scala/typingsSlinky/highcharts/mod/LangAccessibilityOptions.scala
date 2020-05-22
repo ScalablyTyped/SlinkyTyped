@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LangAccessibilityOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Default announcement for new
@@ -15,13 +14,13 @@ trait LangAccessibilityOptions extends js.Object {
     * there are multiple charts on the page. For all other new data events, the
     * `newDataAnnounce` string will be used.
     */
-  var announceNewData: js.UndefOr[LangAccessibilityAnnounceNewDataOptions] = js.native
+  var announceNewData: js.UndefOr[LangAccessibilityAnnounceNewDataOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Axis description format strings.
     */
-  var axis: js.UndefOr[LangAccessibilityAxisOptions] = js.native
-  var chartContainerLabel: js.UndefOr[String] = js.native
-  var chartHeading: js.UndefOr[String] = js.native
+  var axis: js.UndefOr[LangAccessibilityAxisOptions] = js.undefined
+  var chartContainerLabel: js.UndefOr[String] = js.undefined
+  var chartHeading: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Chart type description strings.
     * This is added to the chart information region.
@@ -31,50 +30,50 @@ trait LangAccessibilityOptions extends js.Object {
     * format string for cases where there is only a single series in the chart,
     * and one for multiple series of the same type.
     */
-  var chartTypes: js.UndefOr[LangAccessibilityChartTypesOptions] = js.native
-  var credits: js.UndefOr[String] = js.native
-  var defaultChartTitle: js.UndefOr[String] = js.native
-  var drillUpButton: js.UndefOr[String] = js.native
+  var chartTypes: js.UndefOr[LangAccessibilityChartTypesOptions] = js.undefined
+  var credits: js.UndefOr[String] = js.undefined
+  var defaultChartTitle: js.UndefOr[String] = js.undefined
+  var drillUpButton: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting menu format strings
     * for accessibility module.
     */
-  var exporting: js.UndefOr[LangAccessibilityExportingOptions] = js.native
-  var legendItem: js.UndefOr[String] = js.native
-  var legendLabel: js.UndefOr[String] = js.native
-  var mapZoomIn: js.UndefOr[String] = js.native
-  var mapZoomOut: js.UndefOr[String] = js.native
-  var rangeSelectorButton: js.UndefOr[String] = js.native
-  var rangeSelectorMaxInput: js.UndefOr[String] = js.native
-  var rangeSelectorMinInput: js.UndefOr[String] = js.native
-  var resetZoomButton: js.UndefOr[String] = js.native
-  var screenReaderRegionLabel: js.UndefOr[String] = js.native
+  var exporting: js.UndefOr[LangAccessibilityExportingOptions] = js.undefined
+  var legendItem: js.UndefOr[String] = js.undefined
+  var legendLabel: js.UndefOr[String] = js.undefined
+  var mapZoomIn: js.UndefOr[String] = js.undefined
+  var mapZoomOut: js.UndefOr[String] = js.undefined
+  var rangeSelectorButton: js.UndefOr[String] = js.undefined
+  var rangeSelectorMaxInput: js.UndefOr[String] = js.undefined
+  var rangeSelectorMinInput: js.UndefOr[String] = js.undefined
+  var resetZoomButton: js.UndefOr[String] = js.undefined
+  var screenReaderRegionLabel: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Lang configuration for different
     * series types. For more dynamic control over the series element
     * descriptions, see accessibility.seriesDescriptionFormatter.
     */
-  var series: js.UndefOr[LangAccessibilitySeriesOptions] = js.native
+  var series: js.UndefOr[LangAccessibilitySeriesOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Descriptions of lesser known
     * series types. The relevant description is added to the screen reader
     * information region when these series types are used.
     */
-  var seriesTypeDescriptions: js.UndefOr[LangAccessibilitySeriesTypeDescriptionsOptions] = js.native
+  var seriesTypeDescriptions: js.UndefOr[LangAccessibilitySeriesTypeDescriptionsOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Label for the end of the chart.
     * Announced by screen readers.
     */
-  var svgContainerEnd: js.UndefOr[String] = js.native
-  var svgContainerLabel: js.UndefOr[String] = js.native
+  var svgContainerEnd: js.UndefOr[String] = js.undefined
+  var svgContainerLabel: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Title element text for the chart
     * SVG element. Leave this empty to disable adding the title element.
     * Browsers will display this content when hovering over elements in the
     * chart. Assistive technology may use this element to label the chart.
     */
-  var svgContainerTitle: js.UndefOr[String] = js.native
-  var tableSummary: js.UndefOr[String] = js.native
+  var svgContainerTitle: js.UndefOr[String] = js.undefined
+  var tableSummary: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Thousands separator to use when
     * formatting numbers for screen readers. Note that many screen readers will
@@ -83,335 +82,68 @@ trait LangAccessibilityOptions extends js.Object {
     *
     * Set to `null` to use the separator defined in lang.thousandsSep.
     */
-  var thousandsSep: js.UndefOr[String] = js.native
-  var viewAsDataTable: js.UndefOr[String] = js.native
+  var thousandsSep: js.UndefOr[String] = js.undefined
+  var viewAsDataTable: js.UndefOr[String] = js.undefined
 }
 
 object LangAccessibilityOptions {
   @scala.inline
-  def apply(): LangAccessibilityOptions = {
+  def apply(
+    announceNewData: LangAccessibilityAnnounceNewDataOptions = null,
+    axis: LangAccessibilityAxisOptions = null,
+    chartContainerLabel: String = null,
+    chartHeading: String = null,
+    chartTypes: LangAccessibilityChartTypesOptions = null,
+    credits: String = null,
+    defaultChartTitle: String = null,
+    drillUpButton: String = null,
+    exporting: LangAccessibilityExportingOptions = null,
+    legendItem: String = null,
+    legendLabel: String = null,
+    mapZoomIn: String = null,
+    mapZoomOut: String = null,
+    rangeSelectorButton: String = null,
+    rangeSelectorMaxInput: String = null,
+    rangeSelectorMinInput: String = null,
+    resetZoomButton: String = null,
+    screenReaderRegionLabel: String = null,
+    series: LangAccessibilitySeriesOptions = null,
+    seriesTypeDescriptions: LangAccessibilitySeriesTypeDescriptionsOptions = null,
+    svgContainerEnd: String = null,
+    svgContainerLabel: String = null,
+    svgContainerTitle: String = null,
+    tableSummary: String = null,
+    thousandsSep: String = null,
+    viewAsDataTable: String = null
+  ): LangAccessibilityOptions = {
     val __obj = js.Dynamic.literal()
+    if (announceNewData != null) __obj.updateDynamic("announceNewData")(announceNewData.asInstanceOf[js.Any])
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (chartContainerLabel != null) __obj.updateDynamic("chartContainerLabel")(chartContainerLabel.asInstanceOf[js.Any])
+    if (chartHeading != null) __obj.updateDynamic("chartHeading")(chartHeading.asInstanceOf[js.Any])
+    if (chartTypes != null) __obj.updateDynamic("chartTypes")(chartTypes.asInstanceOf[js.Any])
+    if (credits != null) __obj.updateDynamic("credits")(credits.asInstanceOf[js.Any])
+    if (defaultChartTitle != null) __obj.updateDynamic("defaultChartTitle")(defaultChartTitle.asInstanceOf[js.Any])
+    if (drillUpButton != null) __obj.updateDynamic("drillUpButton")(drillUpButton.asInstanceOf[js.Any])
+    if (exporting != null) __obj.updateDynamic("exporting")(exporting.asInstanceOf[js.Any])
+    if (legendItem != null) __obj.updateDynamic("legendItem")(legendItem.asInstanceOf[js.Any])
+    if (legendLabel != null) __obj.updateDynamic("legendLabel")(legendLabel.asInstanceOf[js.Any])
+    if (mapZoomIn != null) __obj.updateDynamic("mapZoomIn")(mapZoomIn.asInstanceOf[js.Any])
+    if (mapZoomOut != null) __obj.updateDynamic("mapZoomOut")(mapZoomOut.asInstanceOf[js.Any])
+    if (rangeSelectorButton != null) __obj.updateDynamic("rangeSelectorButton")(rangeSelectorButton.asInstanceOf[js.Any])
+    if (rangeSelectorMaxInput != null) __obj.updateDynamic("rangeSelectorMaxInput")(rangeSelectorMaxInput.asInstanceOf[js.Any])
+    if (rangeSelectorMinInput != null) __obj.updateDynamic("rangeSelectorMinInput")(rangeSelectorMinInput.asInstanceOf[js.Any])
+    if (resetZoomButton != null) __obj.updateDynamic("resetZoomButton")(resetZoomButton.asInstanceOf[js.Any])
+    if (screenReaderRegionLabel != null) __obj.updateDynamic("screenReaderRegionLabel")(screenReaderRegionLabel.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
+    if (seriesTypeDescriptions != null) __obj.updateDynamic("seriesTypeDescriptions")(seriesTypeDescriptions.asInstanceOf[js.Any])
+    if (svgContainerEnd != null) __obj.updateDynamic("svgContainerEnd")(svgContainerEnd.asInstanceOf[js.Any])
+    if (svgContainerLabel != null) __obj.updateDynamic("svgContainerLabel")(svgContainerLabel.asInstanceOf[js.Any])
+    if (svgContainerTitle != null) __obj.updateDynamic("svgContainerTitle")(svgContainerTitle.asInstanceOf[js.Any])
+    if (tableSummary != null) __obj.updateDynamic("tableSummary")(tableSummary.asInstanceOf[js.Any])
+    if (thousandsSep != null) __obj.updateDynamic("thousandsSep")(thousandsSep.asInstanceOf[js.Any])
+    if (viewAsDataTable != null) __obj.updateDynamic("viewAsDataTable")(viewAsDataTable.asInstanceOf[js.Any])
     __obj.asInstanceOf[LangAccessibilityOptions]
   }
-  @scala.inline
-  implicit class LangAccessibilityOptionsOps[Self <: LangAccessibilityOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnounceNewData(value: LangAccessibilityAnnounceNewDataOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announceNewData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnounceNewData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("announceNewData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxis(value: LangAccessibilityAxisOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChartContainerLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartContainerLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartContainerLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartContainerLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChartHeading(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartHeading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartHeading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChartTypes(value: LangAccessibilityChartTypesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultChartTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChartTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultChartTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChartTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrillUpButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillUpButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrillUpButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillUpButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExporting(value: LangAccessibilityExportingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exporting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExporting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exporting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendItem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapZoomIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapZoomIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapZoomIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapZoomIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapZoomOut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapZoomOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapZoomOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapZoomOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeSelectorButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeSelectorButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeSelectorMaxInput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorMaxInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeSelectorMaxInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorMaxInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeSelectorMinInput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorMinInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeSelectorMinInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorMinInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetZoomButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoomButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetZoomButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoomButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenReaderRegionLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderRegionLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenReaderRegionLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderRegionLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: LangAccessibilitySeriesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeriesTypeDescriptions(value: LangAccessibilitySeriesTypeDescriptionsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTypeDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeriesTypeDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTypeDescriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgContainerEnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgContainerEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgContainerEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgContainerEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgContainerLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgContainerLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgContainerLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgContainerLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgContainerTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgContainerTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgContainerTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgContainerTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThousandsSep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thousandsSep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThousandsSep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thousandsSep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewAsDataTable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewAsDataTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewAsDataTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewAsDataTable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

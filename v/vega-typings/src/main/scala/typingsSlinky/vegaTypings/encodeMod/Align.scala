@@ -1,6 +1,5 @@
 package typingsSlinky.vegaTypings.encodeMod
 
-import typingsSlinky.vegaTypings.valuesMod.AlignValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.center
   - typingsSlinky.vegaTypings.vegaTypingsStrings.right
 */
-trait Align extends AlignValue
+trait Align extends js.Object
 
 object Align {
   @scala.inline

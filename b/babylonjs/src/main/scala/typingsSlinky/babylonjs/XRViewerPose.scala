@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XRViewerPose extends XRPose {
-  var views: js.Array[XRView] = js.native
+  var views: js.Array[XRView]
 }
 
 object XRViewerPose {
@@ -15,19 +14,5 @@ object XRViewerPose {
     val __obj = js.Dynamic.literal(emulatedPosition = emulatedPosition.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any], views = views.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRViewerPose]
   }
-  @scala.inline
-  implicit class XRViewerPoseOps[Self <: XRViewerPose] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withViews(value: js.Array[XRView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

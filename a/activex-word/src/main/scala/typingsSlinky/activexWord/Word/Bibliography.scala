@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bibliography extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var BibliographyStyle: String = js.native
-  val Creator: Double = js.native
-  val Parent: js.Any = js.native
-  val Sources: typingsSlinky.activexWord.Word.Sources = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  var BibliographyStyle: String
+  val Creator: Double
+  val Parent: js.Any
+  val Sources: typingsSlinky.activexWord.Word.Sources
   @JSName("Word.Bibliography_typekey")
-  var WordDotBibliography_typekey: Bibliography = js.native
-  def GenerateUniqueTag(): String = js.native
+  var WordDotBibliography_typekey: Bibliography
+  def GenerateUniqueTag(): String
 }
 
 object Bibliography {
@@ -31,55 +30,5 @@ object Bibliography {
     __obj.updateDynamic("Word.Bibliography_typekey")(WordDotBibliography_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bibliography]
   }
-  @scala.inline
-  implicit class BibliographyOps[Self <: Bibliography] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBibliographyStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BibliographyStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenerateUniqueTag(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerateUniqueTag")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSources(value: Sources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotBibliography_typekey(value: Bibliography): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Bibliography_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

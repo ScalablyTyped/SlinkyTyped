@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * card networks can be filtered by setting the
   * [[CardParameters.allowedCardNetworks|`allowedCardNetworks`]] property.
   */
-@js.native
 trait CardParameters extends js.Object {
   /**
     * Whether a credit card may be used for this transaction.
@@ -23,7 +22,7 @@ trait CardParameters extends js.Object {
     *
     * @default true
     */
-  var allowCreditCards: js.UndefOr[`false` | `true`] = js.native
+  var allowCreditCards: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * Whether a prepaid card may be used for this transaction.
     *
@@ -31,7 +30,7 @@ trait CardParameters extends js.Object {
     *
     * @default true
     */
-  var allowPrepaidCards: js.UndefOr[`false` | `true`] = js.native
+  var allowPrepaidCards: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * Allowed authentication methods.
     *
@@ -48,7 +47,7 @@ trait CardParameters extends js.Object {
     *
     * This field is required.
     */
-  var allowedAuthMethods: js.Array[CardAuthMethod] = js.native
+  var allowedAuthMethods: js.Array[CardAuthMethod]
   /**
     * Allowed card networks.
     *
@@ -70,7 +69,7 @@ trait CardParameters extends js.Object {
     *
     * This field is required.
     */
-  var allowedCardNetworks: js.Array[CardNetwork] = js.native
+  var allowedCardNetworks: js.Array[CardNetwork]
   /**
     * Optional billing address parameters.
     *
@@ -78,7 +77,7 @@ trait CardParameters extends js.Object {
     * [[BillingAddressParameters|`BillingAddressParameters`]] will be
     * assumed.
     */
-  var billingAddressParameters: js.UndefOr[BillingAddressParameters] = js.native
+  var billingAddressParameters: js.UndefOr[BillingAddressParameters] = js.undefined
   /**
     * Whether a billing address is required from the buyer.
     *
@@ -91,101 +90,34 @@ trait CardParameters extends js.Object {
     *
     * @default false
     */
-  var billingAddressRequired: js.UndefOr[`false` | `true`] = js.native
+  var billingAddressRequired: js.UndefOr[`false` | `true`] = js.undefined
   /**
     * List of card network parameters.
     *
     * This field is optional. You may set it when network specific
     * parameters are needed to complete a transaction.
     */
-  var cardNetworkParameters: js.UndefOr[js.Array[CardNetworkParameters]] = js.native
+  var cardNetworkParameters: js.UndefOr[js.Array[CardNetworkParameters]] = js.undefined
 }
 
 object CardParameters {
   @scala.inline
-  def apply(allowedAuthMethods: js.Array[CardAuthMethod], allowedCardNetworks: js.Array[CardNetwork]): CardParameters = {
+  def apply(
+    allowedAuthMethods: js.Array[CardAuthMethod],
+    allowedCardNetworks: js.Array[CardNetwork],
+    allowCreditCards: `false` | `true` = null,
+    allowPrepaidCards: `false` | `true` = null,
+    billingAddressParameters: BillingAddressParameters = null,
+    billingAddressRequired: `false` | `true` = null,
+    cardNetworkParameters: js.Array[CardNetworkParameters] = null
+  ): CardParameters = {
     val __obj = js.Dynamic.literal(allowedAuthMethods = allowedAuthMethods.asInstanceOf[js.Any], allowedCardNetworks = allowedCardNetworks.asInstanceOf[js.Any])
+    if (allowCreditCards != null) __obj.updateDynamic("allowCreditCards")(allowCreditCards.asInstanceOf[js.Any])
+    if (allowPrepaidCards != null) __obj.updateDynamic("allowPrepaidCards")(allowPrepaidCards.asInstanceOf[js.Any])
+    if (billingAddressParameters != null) __obj.updateDynamic("billingAddressParameters")(billingAddressParameters.asInstanceOf[js.Any])
+    if (billingAddressRequired != null) __obj.updateDynamic("billingAddressRequired")(billingAddressRequired.asInstanceOf[js.Any])
+    if (cardNetworkParameters != null) __obj.updateDynamic("cardNetworkParameters")(cardNetworkParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardParameters]
   }
-  @scala.inline
-  implicit class CardParametersOps[Self <: CardParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedAuthMethods(value: js.Array[CardAuthMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedAuthMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowedCardNetworks(value: js.Array[CardNetwork]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedCardNetworks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowCreditCards(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCreditCards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCreditCards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCreditCards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowPrepaidCards(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrepaidCards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowPrepaidCards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrepaidCards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingAddressParameters(value: BillingAddressParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingAddressParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingAddressRequired(value: `false` | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingAddressRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardNetworkParameters(value: js.Array[CardNetworkParameters]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardNetworkParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardNetworkParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardNetworkParameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

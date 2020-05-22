@@ -24,6 +24,7 @@ package object apitypesMod {
     /* callback */ js.UndefOr[typingsSlinky.googleGax.apitypesMod.APICallback], 
     typingsSlinky.node.streamMod.Duplex with typingsSlinky.googleGax.apitypesMod.GRPCCallResult
   ]
+  type GRPCCall = typingsSlinky.googleGax.apitypesMod.UnaryCall | typingsSlinky.googleGax.apitypesMod.ServerStreamingCall | typingsSlinky.googleGax.apitypesMod.ClientStreamingCall | typingsSlinky.googleGax.apitypesMod.BiDiStreamingCall
   type GaxCall = js.Function3[
     /* argument */ js.Object, 
     /* callOptions */ js.UndefOr[typingsSlinky.googleGax.gaxMod.CallOptions], 
@@ -36,13 +37,17 @@ package object apitypesMod {
     /* callback */ js.UndefOr[typingsSlinky.googleGax.apitypesMod.APICallback], 
     typingsSlinky.googleGax.callMod.CancellablePromise[typingsSlinky.googleGax.apitypesMod.ResultTuple]
   ]
+  type GaxCallResult = typingsSlinky.googleGax.callMod.CancellablePromise[typingsSlinky.googleGax.apitypesMod.ResultTuple] | typingsSlinky.googleGax.apitypesMod.CancellableStream
   type GaxCallStream = js.Function3[
     /* argument */ js.Object, 
     /* callOptions */ js.UndefOr[typingsSlinky.googleGax.gaxMod.CallOptions], 
     /* callback */ js.UndefOr[typingsSlinky.googleGax.apitypesMod.APICallback], 
     typingsSlinky.googleGax.apitypesMod.CancellableStream
   ]
+  type NextPageRequestType = (org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Double | js.Object]) | scala.Null
+  type RawResponseType = typingsSlinky.googleGax.longrunningMod.Operation_ | js.Object | scala.Null
   type RequestType = org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Double | js.Object]
+  type ResponseType = js.Object | scala.Null
   type ResultTuple = js.Tuple3[
     typingsSlinky.googleGax.apitypesMod.ResponseType, 
     js.UndefOr[typingsSlinky.googleGax.apitypesMod.NextPageRequestType], 

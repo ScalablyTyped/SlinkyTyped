@@ -4,86 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransferDownload extends js.Object {
   /** channel id to upload to */
-  var cid: js.UndefOr[Double] = js.native
+  var cid: js.UndefOr[Double] = js.undefined
   /** arbitary id to identify the transfer */
-  var clientftfid: js.UndefOr[Double] = js.native
+  var clientftfid: js.UndefOr[Double] = js.undefined
   /** channel password of the channel which will be uploaded to */
-  var cpw: js.UndefOr[String] = js.native
+  var cpw: js.UndefOr[String] = js.undefined
   /** destination filename */
-  var name: String = js.native
-  var seekpos: js.UndefOr[Double] = js.native
+  var name: String
+  var seekpos: js.UndefOr[Double] = js.undefined
 }
 
 object TransferDownload {
   @scala.inline
-  def apply(name: String): TransferDownload = {
+  def apply(
+    name: String,
+    cid: js.UndefOr[Double] = js.undefined,
+    clientftfid: js.UndefOr[Double] = js.undefined,
+    cpw: String = null,
+    seekpos: js.UndefOr[Double] = js.undefined
+  ): TransferDownload = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(cid)) __obj.updateDynamic("cid")(cid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientftfid)) __obj.updateDynamic("clientftfid")(clientftfid.get.asInstanceOf[js.Any])
+    if (cpw != null) __obj.updateDynamic("cpw")(cpw.asInstanceOf[js.Any])
+    if (!js.isUndefined(seekpos)) __obj.updateDynamic("seekpos")(seekpos.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferDownload]
   }
-  @scala.inline
-  implicit class TransferDownloadOps[Self <: TransferDownload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientftfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientftfid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpw(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeekpos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seekpos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeekpos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seekpos")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

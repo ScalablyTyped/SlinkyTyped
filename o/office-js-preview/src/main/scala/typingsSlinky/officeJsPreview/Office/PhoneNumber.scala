@@ -11,26 +11,25 @@ import scala.scalajs.js.annotation._
   * `Entities` object that is returned when you call the `getEntities` method on the selected item.
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Read
   */
-@js.native
 trait PhoneNumber extends js.Object {
   /**
     * Gets the text that was identified in an item as a phone number.
     */
-  var originalPhoneString: String = js.native
+  var originalPhoneString: String
   /**
     * Gets a string containing a phone number. This string contains only the digits of the telephone number and excludes characters
     * like parentheses and hyphens, if they exist in the original item.
     */
-  var phoneString: String = js.native
+  var phoneString: String
   /**
     * Gets a string that identifies the type of phone number: Home, Work, Mobile, Unspecified.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object PhoneNumber {
@@ -40,31 +39,5 @@ object PhoneNumber {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneNumber]
   }
-  @scala.inline
-  implicit class PhoneNumberOps[Self <: PhoneNumber] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOriginalPhoneString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPhoneString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhoneString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

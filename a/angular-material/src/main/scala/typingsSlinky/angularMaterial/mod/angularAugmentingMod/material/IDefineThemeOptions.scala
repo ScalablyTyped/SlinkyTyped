@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDefineThemeOptions extends js.Object {
-  var accent: js.UndefOr[String] = js.native
-  var background: js.UndefOr[String] = js.native
-  var dark: js.UndefOr[Boolean] = js.native
-  var primary: js.UndefOr[String] = js.native
-  var warn: js.UndefOr[String] = js.native
+  var accent: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[String] = js.undefined
+  var dark: js.UndefOr[Boolean] = js.undefined
+  var primary: js.UndefOr[String] = js.undefined
+  var warn: js.UndefOr[String] = js.undefined
 }
 
 object IDefineThemeOptions {
   @scala.inline
-  def apply(): IDefineThemeOptions = {
+  def apply(
+    accent: String = null,
+    background: String = null,
+    dark: js.UndefOr[Boolean] = js.undefined,
+    primary: String = null,
+    warn: String = null
+  ): IDefineThemeOptions = {
     val __obj = js.Dynamic.literal()
+    if (accent != null) __obj.updateDynamic("accent")(accent.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (!js.isUndefined(dark)) __obj.updateDynamic("dark")(dark.get.asInstanceOf[js.Any])
+    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
+    if (warn != null) __obj.updateDynamic("warn")(warn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDefineThemeOptions]
   }
-  @scala.inline
-  implicit class IDefineThemeOptionsOps[Self <: IDefineThemeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDark(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

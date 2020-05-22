@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * @param name
   *         The name of a plugin.
   *
-  * @return	The plugin's version or an empty string.
+  * @return    The plugin's version or an empty string.
   */
 @JSImport("video.js", "getPluginVersion")
 @js.native

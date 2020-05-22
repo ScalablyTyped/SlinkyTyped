@@ -1,10 +1,10 @@
 package typingsSlinky.rsocketTypes.reactiveSocketTypesMod
 
-import typingsSlinky.rsocketTypes.anon.Error
-import typingsSlinky.rsocketTypes.anon.Kind
-import typingsSlinky.rsocketTypes.anon.`0`
-import typingsSlinky.rsocketTypes.anon.`1`
-import typingsSlinky.rsocketTypes.anon.`2`
+import typingsSlinky.rsocketTypes.rsocketTypesStrings.CLOSED
+import typingsSlinky.rsocketTypes.rsocketTypesStrings.CONNECTED
+import typingsSlinky.rsocketTypes.rsocketTypesStrings.CONNECTING
+import typingsSlinky.rsocketTypes.rsocketTypesStrings.ERROR
+import typingsSlinky.rsocketTypes.rsocketTypesStrings.NOT_CONNECTED
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,14 +20,29 @@ trait ConnectionStatus extends js.Object
 
 object ConnectionStatus {
   @scala.inline
-  implicit def apply(value: `0`): ConnectionStatus = value.asInstanceOf[ConnectionStatus]
+  def Kind(kind: NOT_CONNECTED): ConnectionStatus = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionStatus]
+  }
   @scala.inline
-  implicit def apply(value: `1`): ConnectionStatus = value.asInstanceOf[ConnectionStatus]
+  def `1`(kind: CONNECTED): ConnectionStatus = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionStatus]
+  }
   @scala.inline
-  implicit def apply(value: `2`): ConnectionStatus = value.asInstanceOf[ConnectionStatus]
+  def `0`(kind: CONNECTING): ConnectionStatus = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionStatus]
+  }
   @scala.inline
-  implicit def apply(value: Error): ConnectionStatus = value.asInstanceOf[ConnectionStatus]
+  def Error(error: js.Error, kind: ERROR): ConnectionStatus = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionStatus]
+  }
   @scala.inline
-  implicit def apply(value: Kind): ConnectionStatus = value.asInstanceOf[ConnectionStatus]
+  def `2`(kind: CLOSED): ConnectionStatus = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionStatus]
+  }
 }
 

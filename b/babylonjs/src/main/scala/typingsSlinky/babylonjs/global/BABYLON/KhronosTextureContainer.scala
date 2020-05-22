@@ -33,6 +33,88 @@ class KhronosTextureContainer protected ()
     threeDExpected: Boolean,
     textureArrayExpected: Boolean
   ) = this()
+  /* CompleteClass */
+  override var _upload2DCompressedLevels: js.Any = js.native
+  /**
+    * Gets the bytes of key value data
+    */
+  /* CompleteClass */
+  override var bytesOfKeyValueData: Double = js.native
+  /** contents of the KTX container file */
+  /* CompleteClass */
+  override var data: js.typedarray.ArrayBufferView = js.native
+  /**
+    * Gets the base internal format
+    */
+  /* CompleteClass */
+  override var glBaseInternalFormat: Double = js.native
+  /**
+    * Gets the openGL format
+    */
+  /* CompleteClass */
+  override var glFormat: Double = js.native
+  /**
+    * Gets the openGL internal format
+    */
+  /* CompleteClass */
+  override var glInternalFormat: Double = js.native
+  /**
+    * Gets the openGL type
+    */
+  /* CompleteClass */
+  override var glType: Double = js.native
+  /**
+    * Gets the openGL type size
+    */
+  /* CompleteClass */
+  override var glTypeSize: Double = js.native
+  /**
+    * If the container has been made invalid (eg. constructor failed to correctly load array buffer)
+    */
+  /* CompleteClass */
+  override var isInvalid: Boolean = js.native
+  /**
+    * Gets the load type
+    */
+  /* CompleteClass */
+  override var loadType: Double = js.native
+  /**
+    * Gets the number of array elements
+    */
+  /* CompleteClass */
+  override var numberOfArrayElements: Double = js.native
+  /**
+    * Gets the number of faces
+    */
+  /* CompleteClass */
+  override var numberOfFaces: Double = js.native
+  /**
+    * Gets the number of mipmap levels
+    */
+  /* CompleteClass */
+  override var numberOfMipmapLevels: Double = js.native
+  /**
+    * Gets image depth in pixels
+    */
+  /* CompleteClass */
+  override var pixelDepth: Double = js.native
+  /**
+    * Gets image height in pixel
+    */
+  /* CompleteClass */
+  override var pixelHeight: Double = js.native
+  /**
+    * Gets image width in pixel
+    */
+  /* CompleteClass */
+  override var pixelWidth: Double = js.native
+  /**
+    * Uploads KTX content to a Babylon Texture.
+    * It is assumed that the texture has already been created & is currently bound
+    * @hidden
+    */
+  /* CompleteClass */
+  override def uploadLevels(texture: typingsSlinky.babylonjs.BABYLON.InternalTexture, loadMipmaps: Boolean): Unit = js.native
 }
 
 /* static members */

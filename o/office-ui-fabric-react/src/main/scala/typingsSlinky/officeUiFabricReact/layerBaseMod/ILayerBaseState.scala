@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILayerBaseState extends js.Object {
-  var hostId: js.UndefOr[String] = js.native
-  var layerElement: js.UndefOr[HTMLElement] = js.native
+  var hostId: js.UndefOr[String] = js.undefined
+  var layerElement: js.UndefOr[HTMLElement] = js.undefined
 }
 
 object ILayerBaseState {
   @scala.inline
-  def apply(): ILayerBaseState = {
+  def apply(hostId: String = null, layerElement: HTMLElement = null): ILayerBaseState = {
     val __obj = js.Dynamic.literal()
+    if (hostId != null) __obj.updateDynamic("hostId")(hostId.asInstanceOf[js.Any])
+    if (layerElement != null) __obj.updateDynamic("layerElement")(layerElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILayerBaseState]
   }
-  @scala.inline
-  implicit class ILayerBaseStateOps[Self <: ILayerBaseState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerElement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

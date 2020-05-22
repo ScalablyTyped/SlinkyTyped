@@ -1,6 +1,7 @@
 package typingsSlinky.bull.mod
 
 import typingsSlinky.bull.anon.Count
+import typingsSlinky.bull.anon.Data
 import typingsSlinky.bull.bullStrings.active
 import typingsSlinky.bull.bullStrings.cleaned
 import typingsSlinky.bull.bullStrings.completed
@@ -50,6 +51,12 @@ trait Queue[T] extends EventEmitter {
     */
   def add(name: String, data: T): js.Promise[Job[T]] = js.native
   def add(name: String, data: T, opts: JobOptions): js.Promise[Job[T]] = js.native
+  /**
+    * Adds an array of jobs to the queue.
+    * If the queue is empty the jobs will be executed directly,
+    * otherwise they will be placed in the queue and executed as soon as possible.
+    */
+  def addBulk(jobs: js.Array[Data[T]]): js.Promise[js.Array[Job[T]]] = js.native
   /**
     * Returns Queue name in base64 encoded format
     */

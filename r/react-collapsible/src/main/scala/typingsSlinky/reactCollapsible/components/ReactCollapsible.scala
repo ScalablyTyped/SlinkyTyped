@@ -551,6 +551,10 @@ object ReactCollapsible {
     @scala.inline
     def onTransitionEnd(value: SyntheticTransitionEvent[Collapsible] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     @scala.inline
+    def onTriggerClosing(value: () => Unit): this.type = set("onTriggerClosing", js.Any.fromFunction0(value))
+    @scala.inline
+    def onTriggerOpening(value: () => Unit): this.type = set("onTriggerOpening", js.Any.fromFunction0(value))
+    @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, Collapsible] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
     def onWaiting(value: SyntheticEvent[Event, Collapsible] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))

@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsTransactionsV3DigitalPurchaseCheckResult extends js.Object {
   /**
     * Result type for digital purchase check result.
     */
-  var resultType: js.UndefOr[GoogleActionsTransactionsV3DigitalPurchaseCheckResultResultType] = js.native
+  var resultType: js.UndefOr[GoogleActionsTransactionsV3DigitalPurchaseCheckResultResultType] = js.undefined
 }
 
 object GoogleActionsTransactionsV3DigitalPurchaseCheckResult {
   @scala.inline
-  def apply(): GoogleActionsTransactionsV3DigitalPurchaseCheckResult = {
+  def apply(resultType: GoogleActionsTransactionsV3DigitalPurchaseCheckResultResultType = null): GoogleActionsTransactionsV3DigitalPurchaseCheckResult = {
     val __obj = js.Dynamic.literal()
+    if (resultType != null) __obj.updateDynamic("resultType")(resultType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsTransactionsV3DigitalPurchaseCheckResult]
   }
-  @scala.inline
-  implicit class GoogleActionsTransactionsV3DigitalPurchaseCheckResultOps[Self <: GoogleActionsTransactionsV3DigitalPurchaseCheckResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResultType(value: GoogleActionsTransactionsV3DigitalPurchaseCheckResultResultType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

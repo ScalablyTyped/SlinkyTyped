@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RealtimeDataQuery extends js.Object {
-  var dimensions: js.UndefOr[String] = js.native
-  var filters: js.UndefOr[String] = js.native
-  var ids: js.UndefOr[String] = js.native
-  var max_results: js.UndefOr[Double] = js.native
-  var metrics: js.UndefOr[js.Array[String]] = js.native
-  var sort: js.UndefOr[js.Array[String]] = js.native
+  var dimensions: js.UndefOr[String] = js.undefined
+  var filters: js.UndefOr[String] = js.undefined
+  var ids: js.UndefOr[String] = js.undefined
+  var max_results: js.UndefOr[Double] = js.undefined
+  var metrics: js.UndefOr[js.Array[String]] = js.undefined
+  var sort: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object RealtimeDataQuery {
   @scala.inline
-  def apply(): RealtimeDataQuery = {
+  def apply(
+    dimensions: String = null,
+    filters: String = null,
+    ids: String = null,
+    max_results: js.UndefOr[Double] = js.undefined,
+    metrics: js.Array[String] = null,
+    sort: js.Array[String] = null
+  ): RealtimeDataQuery = {
     val __obj = js.Dynamic.literal()
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (ids != null) __obj.updateDynamic("ids")(ids.asInstanceOf[js.Any])
+    if (!js.isUndefined(max_results)) __obj.updateDynamic("max_results")(max_results.get.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[RealtimeDataQuery]
   }
-  @scala.inline
-  implicit class RealtimeDataQueryOps[Self <: RealtimeDataQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax_results(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax_results: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

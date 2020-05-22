@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Input.Spatial.SpatialInteraction")
 @js.native
 abstract class SpatialInteraction ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Input.Spatial.SpatialInteraction
+  extends typingsSlinky.winrtUwp.Windows.UI.Input.Spatial.SpatialInteraction {
+  /* CompleteClass */
+  override var sourceState: js.Any = js.native
+}
 

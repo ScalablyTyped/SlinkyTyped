@@ -18,41 +18,11 @@ trait ProvisioningArtifactPreferences extends js.Object {
 
 object ProvisioningArtifactPreferences {
   @scala.inline
-  def apply(): ProvisioningArtifactPreferences = {
+  def apply(StackSetAccounts: StackSetAccounts = null, StackSetRegions: StackSetRegions = null): ProvisioningArtifactPreferences = {
     val __obj = js.Dynamic.literal()
+    if (StackSetAccounts != null) __obj.updateDynamic("StackSetAccounts")(StackSetAccounts.asInstanceOf[js.Any])
+    if (StackSetRegions != null) __obj.updateDynamic("StackSetRegions")(StackSetRegions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisioningArtifactPreferences]
   }
-  @scala.inline
-  implicit class ProvisioningArtifactPreferencesOps[Self <: ProvisioningArtifactPreferences] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStackSetAccounts(value: StackSetAccounts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetAccounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackSetAccounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetAccounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackSetRegions(value: StackSetRegions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackSetRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetRegions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

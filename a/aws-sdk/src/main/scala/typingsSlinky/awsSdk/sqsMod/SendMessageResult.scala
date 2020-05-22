@@ -30,77 +30,20 @@ trait SendMessageResult extends js.Object {
 
 object SendMessageResult {
   @scala.inline
-  def apply(): SendMessageResult = {
+  def apply(
+    MD5OfMessageAttributes: String = null,
+    MD5OfMessageBody: String = null,
+    MD5OfMessageSystemAttributes: String = null,
+    MessageId: String = null,
+    SequenceNumber: String = null
+  ): SendMessageResult = {
     val __obj = js.Dynamic.literal()
+    if (MD5OfMessageAttributes != null) __obj.updateDynamic("MD5OfMessageAttributes")(MD5OfMessageAttributes.asInstanceOf[js.Any])
+    if (MD5OfMessageBody != null) __obj.updateDynamic("MD5OfMessageBody")(MD5OfMessageBody.asInstanceOf[js.Any])
+    if (MD5OfMessageSystemAttributes != null) __obj.updateDynamic("MD5OfMessageSystemAttributes")(MD5OfMessageSystemAttributes.asInstanceOf[js.Any])
+    if (MessageId != null) __obj.updateDynamic("MessageId")(MessageId.asInstanceOf[js.Any])
+    if (SequenceNumber != null) __obj.updateDynamic("SequenceNumber")(SequenceNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMessageResult]
   }
-  @scala.inline
-  implicit class SendMessageResultOps[Self <: SendMessageResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMD5OfMessageAttributes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5OfMessageAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMD5OfMessageAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5OfMessageAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMD5OfMessageBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5OfMessageBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMD5OfMessageBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5OfMessageBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMD5OfMessageSystemAttributes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5OfMessageSystemAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMD5OfMessageSystemAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MD5OfMessageSystemAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSequenceNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequenceNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

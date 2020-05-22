@@ -20,9 +20,7 @@ object browserMod extends js.Object {
     /* numChannels */ js.UndefOr[Double], 
     Tensor3D
   ] = js.native
-  def toPixels(img: Tensor2D | Tensor3D): js.Promise[js.typedarray.Uint8ClampedArray] = js.native
-  def toPixels(img: Tensor2D | Tensor3D, canvas: HTMLCanvasElement): js.Promise[js.typedarray.Uint8ClampedArray] = js.native
-  def toPixels(img: TensorLike): js.Promise[js.typedarray.Uint8ClampedArray] = js.native
-  def toPixels(img: TensorLike, canvas: HTMLCanvasElement): js.Promise[js.typedarray.Uint8ClampedArray] = js.native
+  def toPixels(img: Tensor2D | Tensor3D | TensorLike): js.Promise[js.typedarray.Uint8ClampedArray] = js.native
+  def toPixels(img: Tensor2D | Tensor3D | TensorLike, canvas: HTMLCanvasElement): js.Promise[js.typedarray.Uint8ClampedArray] = js.native
 }
 

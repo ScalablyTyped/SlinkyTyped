@@ -1,7 +1,7 @@
 package typingsSlinky.expoFileSystem.fileSystemTypesMod
 
-import typingsSlinky.expoFileSystem.anon.Exists
-import typingsSlinky.expoFileSystem.anon.IsDirectory
+import typingsSlinky.expoFileSystem.expoFileSystemBooleans.`false`
+import typingsSlinky.expoFileSystem.expoFileSystemBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +14,22 @@ trait FileInfo extends js.Object
 
 object FileInfo {
   @scala.inline
-  implicit def apply(value: Exists): FileInfo = value.asInstanceOf[FileInfo]
+  def Exists(
+    exists: `true`,
+    isDirectory: Boolean,
+    modificationTime: Double,
+    size: Double,
+    uri: String,
+    md5: String = null
+  ): FileInfo = {
+    val __obj = js.Dynamic.literal(exists = exists.asInstanceOf[js.Any], isDirectory = isDirectory.asInstanceOf[js.Any], modificationTime = modificationTime.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    if (md5 != null) __obj.updateDynamic("md5")(md5.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileInfo]
+  }
   @scala.inline
-  implicit def apply(value: IsDirectory): FileInfo = value.asInstanceOf[FileInfo]
+  def IsDirectory(exists: `false`, isDirectory: `false`, uri: String): FileInfo = {
+    val __obj = js.Dynamic.literal(exists = exists.asInstanceOf[js.Any], isDirectory = isDirectory.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileInfo]
+  }
 }
 

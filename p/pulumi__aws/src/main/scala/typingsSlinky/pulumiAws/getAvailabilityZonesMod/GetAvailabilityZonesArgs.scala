@@ -1,11 +1,16 @@
 package typingsSlinky.pulumiAws.getAvailabilityZonesMod
 
+import typingsSlinky.pulumiAws.inputMod.GetAvailabilityZonesFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GetAvailabilityZonesArgs extends js.Object {
+  /**
+    * Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
+    */
+  val allAvailabilityZones: js.UndefOr[Boolean] = js.native
   /**
     * List of blacklisted Availability Zone names.
     */
@@ -14,6 +19,11 @@ trait GetAvailabilityZonesArgs extends js.Object {
     * List of blacklisted Availability Zone IDs.
     */
   val blacklistedZoneIds: js.UndefOr[js.Array[String]] = js.native
+  /**
+    * Configuration block(s) for filtering. Detailed below.
+    */
+  val filters: js.UndefOr[js.Array[GetAvailabilityZonesFilter]] = js.native
+  val groupNames: js.UndefOr[js.Array[String]] = js.native
   /**
     * Allows to filter list of Availability Zones based on their
     * current state. Can be either `"available"`, `"information"`, `"impaired"` or
@@ -25,53 +35,22 @@ trait GetAvailabilityZonesArgs extends js.Object {
 
 object GetAvailabilityZonesArgs {
   @scala.inline
-  def apply(): GetAvailabilityZonesArgs = {
+  def apply(
+    allAvailabilityZones: js.UndefOr[Boolean] = js.undefined,
+    blacklistedNames: js.Array[String] = null,
+    blacklistedZoneIds: js.Array[String] = null,
+    filters: js.Array[GetAvailabilityZonesFilter] = null,
+    groupNames: js.Array[String] = null,
+    state: String = null
+  ): GetAvailabilityZonesArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allAvailabilityZones)) __obj.updateDynamic("allAvailabilityZones")(allAvailabilityZones.get.asInstanceOf[js.Any])
+    if (blacklistedNames != null) __obj.updateDynamic("blacklistedNames")(blacklistedNames.asInstanceOf[js.Any])
+    if (blacklistedZoneIds != null) __obj.updateDynamic("blacklistedZoneIds")(blacklistedZoneIds.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (groupNames != null) __obj.updateDynamic("groupNames")(groupNames.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAvailabilityZonesArgs]
   }
-  @scala.inline
-  implicit class GetAvailabilityZonesArgsOps[Self <: GetAvailabilityZonesArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlacklistedNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlacklistedNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlacklistedZoneIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedZoneIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlacklistedZoneIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedZoneIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

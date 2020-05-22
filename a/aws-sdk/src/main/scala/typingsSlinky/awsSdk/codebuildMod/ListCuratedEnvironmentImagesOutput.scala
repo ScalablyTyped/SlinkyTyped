@@ -14,29 +14,10 @@ trait ListCuratedEnvironmentImagesOutput extends js.Object {
 
 object ListCuratedEnvironmentImagesOutput {
   @scala.inline
-  def apply(): ListCuratedEnvironmentImagesOutput = {
+  def apply(platforms: EnvironmentPlatforms = null): ListCuratedEnvironmentImagesOutput = {
     val __obj = js.Dynamic.literal()
+    if (platforms != null) __obj.updateDynamic("platforms")(platforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCuratedEnvironmentImagesOutput]
   }
-  @scala.inline
-  implicit class ListCuratedEnvironmentImagesOutputOps[Self <: ListCuratedEnvironmentImagesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlatforms(value: EnvironmentPlatforms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

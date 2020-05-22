@@ -4,63 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoginWithSMSParams extends js.Object {
-  var audience: js.UndefOr[String] = js.native
-  var code: String = js.native
-  var phoneNumber: String = js.native
-  var scope: js.UndefOr[String] = js.native
+  var audience: js.UndefOr[String] = js.undefined
+  var code: String
+  var phoneNumber: String
+  var scope: js.UndefOr[String] = js.undefined
 }
 
 object LoginWithSMSParams {
   @scala.inline
-  def apply(code: String, phoneNumber: String): LoginWithSMSParams = {
+  def apply(code: String, phoneNumber: String, audience: String = null, scope: String = null): LoginWithSMSParams = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], phoneNumber = phoneNumber.asInstanceOf[js.Any])
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginWithSMSParams]
   }
-  @scala.inline
-  implicit class LoginWithSMSParamsOps[Self <: LoginWithSMSParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudience(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

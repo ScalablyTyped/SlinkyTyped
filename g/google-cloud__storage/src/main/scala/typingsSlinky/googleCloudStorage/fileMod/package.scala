@@ -84,6 +84,7 @@ package object fileMod {
   ]
   type MoveResponse = js.Array[typingsSlinky.googleCloudCommon.serviceObjectMod.Metadata]
   type RotateEncryptionKeyCallback = typingsSlinky.googleCloudStorage.fileMod.CopyCallback
+  type RotateEncryptionKeyOptions = java.lang.String | typingsSlinky.node.Buffer | typingsSlinky.googleCloudStorage.fileMod.EncryptionKeyOptions
   type RotateEncryptionKeyResponse = typingsSlinky.googleCloudStorage.fileMod.CopyResponse
   type SaveCallback = js.Function1[/* err */ js.UndefOr[js.Error | scala.Null], scala.Unit]
   type SaveOptions = typingsSlinky.googleCloudStorage.fileMod.CreateWriteStreamOptions

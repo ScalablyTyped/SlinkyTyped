@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TeamsGetDiscussionResponseReactions extends js.Object {
-  var `-1`: Double = js.native
+  var `-1`: Double
   @JSName("+1")
-  var Plussign1: Double = js.native
-  var confused: Double = js.native
-  var heart: Double = js.native
-  var hooray: Double = js.native
-  var laugh: Double = js.native
-  var total_count: Double = js.native
-  var url: String = js.native
+  var Plussign1: Double
+  var confused: Double
+  var heart: Double
+  var hooray: Double
+  var laugh: Double
+  var total_count: Double
+  var url: String
 }
 
 object TeamsGetDiscussionResponseReactions {
@@ -34,61 +33,5 @@ object TeamsGetDiscussionResponseReactions {
     __obj.updateDynamic("+1")(Plussign1.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsGetDiscussionResponseReactions]
   }
-  @scala.inline
-  implicit class TeamsGetDiscussionResponseReactionsOps[Self <: TeamsGetDiscussionResponseReactions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `with-1`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("-1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlussign1(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("+1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfused(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHooray(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLaugh(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("laugh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal_count(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigurationParam extends js.Object {
-  var credential: js.UndefOr[String] = js.native
-  var username: js.UndefOr[String] = js.native
+  var credential: js.UndefOr[String] = js.undefined
+  var username: js.UndefOr[String] = js.undefined
 }
 
 object ConfigurationParam {
   @scala.inline
-  def apply(): ConfigurationParam = {
+  def apply(credential: String = null, username: String = null): ConfigurationParam = {
     val __obj = js.Dynamic.literal()
+    if (credential != null) __obj.updateDynamic("credential")(credential.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationParam]
   }
-  @scala.inline
-  implicit class ConfigurationParamOps[Self <: ConfigurationParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredential(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

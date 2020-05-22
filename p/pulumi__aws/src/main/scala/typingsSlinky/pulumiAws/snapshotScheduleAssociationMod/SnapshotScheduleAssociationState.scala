@@ -19,41 +19,11 @@ trait SnapshotScheduleAssociationState extends js.Object {
 
 object SnapshotScheduleAssociationState {
   @scala.inline
-  def apply(): SnapshotScheduleAssociationState = {
+  def apply(clusterIdentifier: Input[String] = null, scheduleIdentifier: Input[String] = null): SnapshotScheduleAssociationState = {
     val __obj = js.Dynamic.literal()
+    if (clusterIdentifier != null) __obj.updateDynamic("clusterIdentifier")(clusterIdentifier.asInstanceOf[js.Any])
+    if (scheduleIdentifier != null) __obj.updateDynamic("scheduleIdentifier")(scheduleIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotScheduleAssociationState]
   }
-  @scala.inline
-  implicit class SnapshotScheduleAssociationStateOps[Self <: SnapshotScheduleAssociationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterIdentifier(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleIdentifier(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

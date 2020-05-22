@@ -114,6 +114,10 @@ object util extends js.Object {
     def this(message: String, properties: StringDictionary[js.Any]) = this()
     /** So far decoded message instance. */
     var instance: Message[T] = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   /** Long.js's Long class if available. */

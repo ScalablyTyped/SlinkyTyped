@@ -18,41 +18,11 @@ trait ListNotificationRulesResult extends js.Object {
 
 object ListNotificationRulesResult {
   @scala.inline
-  def apply(): ListNotificationRulesResult = {
+  def apply(NextToken: NextToken = null, NotificationRules: NotificationRuleBatch = null): ListNotificationRulesResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (NotificationRules != null) __obj.updateDynamic("NotificationRules")(NotificationRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListNotificationRulesResult]
   }
-  @scala.inline
-  implicit class ListNotificationRulesResultOps[Self <: ListNotificationRulesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationRules(value: NotificationRuleBatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

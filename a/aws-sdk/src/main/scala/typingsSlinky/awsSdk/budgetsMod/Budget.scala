@@ -50,119 +50,27 @@ trait Budget extends js.Object {
 
 object Budget {
   @scala.inline
-  def apply(BudgetName: BudgetName, BudgetType: BudgetType, TimeUnit: TimeUnit): Budget = {
+  def apply(
+    BudgetName: BudgetName,
+    BudgetType: BudgetType,
+    TimeUnit: TimeUnit,
+    BudgetLimit: Spend = null,
+    CalculatedSpend: CalculatedSpend = null,
+    CostFilters: CostFilters = null,
+    CostTypes: CostTypes = null,
+    LastUpdatedTime: js.Date = null,
+    PlannedBudgetLimits: PlannedBudgetLimits = null,
+    TimePeriod: TimePeriod = null
+  ): Budget = {
     val __obj = js.Dynamic.literal(BudgetName = BudgetName.asInstanceOf[js.Any], BudgetType = BudgetType.asInstanceOf[js.Any], TimeUnit = TimeUnit.asInstanceOf[js.Any])
+    if (BudgetLimit != null) __obj.updateDynamic("BudgetLimit")(BudgetLimit.asInstanceOf[js.Any])
+    if (CalculatedSpend != null) __obj.updateDynamic("CalculatedSpend")(CalculatedSpend.asInstanceOf[js.Any])
+    if (CostFilters != null) __obj.updateDynamic("CostFilters")(CostFilters.asInstanceOf[js.Any])
+    if (CostTypes != null) __obj.updateDynamic("CostTypes")(CostTypes.asInstanceOf[js.Any])
+    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
+    if (PlannedBudgetLimits != null) __obj.updateDynamic("PlannedBudgetLimits")(PlannedBudgetLimits.asInstanceOf[js.Any])
+    if (TimePeriod != null) __obj.updateDynamic("TimePeriod")(TimePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[Budget]
   }
-  @scala.inline
-  implicit class BudgetOps[Self <: Budget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBudgetName(value: BudgetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBudgetType(value: BudgetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeUnit(value: TimeUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBudgetLimit(value: Spend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBudgetLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalculatedSpend(value: CalculatedSpend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CalculatedSpend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculatedSpend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CalculatedSpend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCostFilters(value: CostFilters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCostFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCostTypes(value: CostTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCostTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlannedBudgetLimits(value: PlannedBudgetLimits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlannedBudgetLimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlannedBudgetLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlannedBudgetLimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimePeriod(value: TimePeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -34,77 +34,20 @@ trait Resource extends js.Object {
 
 object Resource {
   @scala.inline
-  def apply(Id: NonEmptyString, Type: NonEmptyString): Resource = {
+  def apply(
+    Id: NonEmptyString,
+    Type: NonEmptyString,
+    Details: ResourceDetails = null,
+    Partition: Partition = null,
+    Region: NonEmptyString = null,
+    Tags: FieldMap = null
+  ): Resource = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
+    if (Details != null) __obj.updateDynamic("Details")(Details.asInstanceOf[js.Any])
+    if (Partition != null) __obj.updateDynamic("Partition")(Partition.asInstanceOf[js.Any])
+    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Resource]
   }
-  @scala.inline
-  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: ResourceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartition(value: Partition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Partition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Partition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: FieldMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

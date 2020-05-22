@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataSetQueueOptions extends js.Object {
   /**
     * Queue data changes ('add', 'update', 'remove') and flush them at once.
@@ -17,34 +16,15 @@ trait DataSetQueueOptions extends js.Object {
     * max: number - When the queue exceeds the given maximum number of entries, the queue is flushed automatically. Default value is Infinity.
     * Default value is Infinity.
     */
-  var queue: js.UndefOr[js.Any | Boolean] = js.native
+  var queue: js.UndefOr[js.Any | Boolean] = js.undefined
 }
 
 object DataSetQueueOptions {
   @scala.inline
-  def apply(): DataSetQueueOptions = {
+  def apply(queue: js.Any | Boolean = null): DataSetQueueOptions = {
     val __obj = js.Dynamic.literal()
+    if (queue != null) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSetQueueOptions]
   }
-  @scala.inline
-  implicit class DataSetQueueOptionsOps[Self <: DataSetQueueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueue(value: js.Any | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

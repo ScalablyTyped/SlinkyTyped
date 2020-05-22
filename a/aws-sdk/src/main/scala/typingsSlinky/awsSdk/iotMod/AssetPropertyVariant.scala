@@ -26,65 +26,18 @@ trait AssetPropertyVariant extends js.Object {
 
 object AssetPropertyVariant {
   @scala.inline
-  def apply(): AssetPropertyVariant = {
+  def apply(
+    booleanValue: AssetPropertyBooleanValue = null,
+    doubleValue: AssetPropertyDoubleValue = null,
+    integerValue: AssetPropertyIntegerValue = null,
+    stringValue: AssetPropertyStringValue = null
+  ): AssetPropertyVariant = {
     val __obj = js.Dynamic.literal()
+    if (booleanValue != null) __obj.updateDynamic("booleanValue")(booleanValue.asInstanceOf[js.Any])
+    if (doubleValue != null) __obj.updateDynamic("doubleValue")(doubleValue.asInstanceOf[js.Any])
+    if (integerValue != null) __obj.updateDynamic("integerValue")(integerValue.asInstanceOf[js.Any])
+    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssetPropertyVariant]
   }
-  @scala.inline
-  implicit class AssetPropertyVariantOps[Self <: AssetPropertyVariant] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBooleanValue(value: AssetPropertyBooleanValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBooleanValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleValue(value: AssetPropertyDoubleValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerValue(value: AssetPropertyIntegerValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: AssetPropertyStringValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

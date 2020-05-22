@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type/definition", "GraphQLEnumType")
 @js.native
 class GraphQLEnumType protected ()
-  extends GraphQLInputType
-     with GraphQLLeafType
-     with GraphQLNamedType
-     with GraphQLNullableType
-     with GraphQLOutputType
-     with GraphQLType {
+  extends GraphQLLeafType
+     with _GraphQLInputType
+     with _GraphQLNamedType
+     with _GraphQLNullableType
+     with _GraphQLOutputType
+     with _GraphQLType {
   def this(config: GraphQLEnumTypeConfig) = this()
   var astNode: Maybe[EnumTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

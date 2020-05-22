@@ -7,9 +7,9 @@ import org.scalajs.dom.crypto.EcdsaParams
 import org.scalajs.dom.crypto.RsaPssParams
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
-import typingsSlinky.xmlCore.mod.AssocArray
-import typingsSlinky.xmlCore.mod.IXmlSerializable
 import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xmlCore.typesMod.AssocArray
+import typingsSlinky.xmlCore.typesMod.IXmlSerializable
 import typingsSlinky.xmldsigjs.xmlMod.Reference
 import typingsSlinky.xmldsigjs.xmlMod.Signature
 import typingsSlinky.xmldsigjs.xmlMod.Transform

@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BuyQuantity extends js.Object {
   /**
     * 购买数量。mode=game 时必填。购买数量。详见 buyQuantity 限制说明。
@@ -41,12 +40,12 @@ trait BuyQuantity extends js.Object {
     *       328
     *       648
     */
-  var buyQuantity: js.UndefOr[Double] = js.native
-  var complete: js.UndefOr[js.Function0[Unit]] = js.native
+  var buyQuantity: js.UndefOr[Double] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * 币种
     */
-  var currencyType: CNY = js.native
+  var currencyType: CNY
   /**
     * 环境配置，默认值0
     *   0 - 米大师正式环境
@@ -54,163 +53,71 @@ trait BuyQuantity extends js.Object {
     */
   var env: js.UndefOr[
     typingsSlinky.wegameApi.wegameApiNumbers.`0` | typingsSlinky.wegameApi.wegameApiNumbers.`1`
-  ] = js.native
+  ] = js.undefined
   /**
     * @param res.errCode 有如下值：
-    *      -1	系统失败
-    *      -2	支付取消
-    *      -15001	虚拟支付接口错误码，缺少参数
-    *      -15002	虚拟支付接口错误码，参数不合法
-    *      -15003	虚拟支付接口错误码，订单重复
-    *      -15004	虚拟支付接口错误码，后台错误
-    *      -15006	虚拟支付接口错误码，appId 权限被封禁
-    *      -15006	虚拟支付接口错误码，货币类型不支持
-    *      -15007	虚拟支付接口错误码，订单已支付
-    *       1	虚拟支付接口错误码，用户取消支付
-    *       2	虚拟支付接口错误码，客户端错误, 判断到小程序在用户处于支付中时,又发起了一笔支付请求
-    *       3	虚拟支付接口错误码，Android 独有错误：用户使用 Google Play 支付，而手机未安装 Google Play
-    *       4	虚拟支付接口错误码，用户操作系统支付状态异常
-    *       5	虚拟支付接口错误码，操作系统错误
-    *       6	虚拟支付接口错误码，其他错误
-    *       1000	参数错误
-    *       1003	米大师 Portal 错误
+    *      -1    系统失败
+    *      -2    支付取消
+    *      -15001    虚拟支付接口错误码，缺少参数
+    *      -15002    虚拟支付接口错误码，参数不合法
+    *      -15003    虚拟支付接口错误码，订单重复
+    *      -15004    虚拟支付接口错误码，后台错误
+    *      -15006    虚拟支付接口错误码，appId 权限被封禁
+    *      -15006    虚拟支付接口错误码，货币类型不支持
+    *      -15007    虚拟支付接口错误码，订单已支付
+    *       1    虚拟支付接口错误码，用户取消支付
+    *       2    虚拟支付接口错误码，客户端错误, 判断到小程序在用户处于支付中时,又发起了一笔支付请求
+    *       3    虚拟支付接口错误码，Android 独有错误：用户使用 Google Play 支付，而手机未安装 Google Play
+    *       4    虚拟支付接口错误码，用户操作系统支付状态异常
+    *       5    虚拟支付接口错误码，操作系统错误
+    *       6    虚拟支付接口错误码，其他错误
+    *       1000    参数错误
+    *       1003    米大师 Portal 错误
     */
-  var fail: js.UndefOr[js.Function1[/* res */ ErrCode, Unit]] = js.native
+  var fail: js.UndefOr[js.Function1[/* res */ ErrCode, Unit]] = js.undefined
   /**
     * 支付的类型，不同的支付类型有各自额外要传的附加参数。
     *   game - 购买游戏币
     */
-  var mode: game = js.native
+  var mode: game
   /**
     * 在米大师侧申请的应用 id
     */
-  var offerId: String = js.native
+  var offerId: String
   /**
     * 申请接入时的平台，platform 与应用id有关。
     */
-  var platform: js.UndefOr[android] = js.native
-  var success: js.UndefOr[js.Function0[Unit]] = js.native
+  var platform: js.UndefOr[android] = js.undefined
+  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * 分区 ID
     */
-  var zoneId: js.UndefOr[String] = js.native
+  var zoneId: js.UndefOr[String] = js.undefined
 }
 
 object BuyQuantity {
   @scala.inline
-  def apply(currencyType: CNY, mode: game, offerId: String): BuyQuantity = {
+  def apply(
+    currencyType: CNY,
+    mode: game,
+    offerId: String,
+    buyQuantity: js.UndefOr[Double] = js.undefined,
+    complete: () => Unit = null,
+    env: typingsSlinky.wegameApi.wegameApiNumbers.`0` | typingsSlinky.wegameApi.wegameApiNumbers.`1` = null,
+    fail: /* res */ ErrCode => Unit = null,
+    platform: android = null,
+    success: () => Unit = null,
+    zoneId: String = null
+  ): BuyQuantity = {
     val __obj = js.Dynamic.literal(currencyType = currencyType.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], offerId = offerId.asInstanceOf[js.Any])
+    if (!js.isUndefined(buyQuantity)) __obj.updateDynamic("buyQuantity")(buyQuantity.get.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
+    if (zoneId != null) __obj.updateDynamic("zoneId")(zoneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuyQuantity]
   }
-  @scala.inline
-  implicit class BuyQuantityOps[Self <: BuyQuantity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrencyType(value: CNY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMode(value: game): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfferId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBuyQuantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buyQuantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuyQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buyQuantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: typingsSlinky.wegameApi.wegameApiNumbers.`0` | typingsSlinky.wegameApi.wegameApiNumbers.`1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* res */ ErrCode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: android): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

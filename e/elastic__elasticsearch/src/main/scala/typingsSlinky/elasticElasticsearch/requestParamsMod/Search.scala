@@ -6,6 +6,7 @@ import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.all
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.always
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.closed
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.dfs_query_then_fetch
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.hidden
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.missing
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.none
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.open
@@ -15,634 +16,170 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Search[T] extends Generic {
-  var _source: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_exclude: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_excludes: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_include: js.UndefOr[String | js.Array[String]] = js.native
-  var _source_includes: js.UndefOr[String | js.Array[String]] = js.native
-  var allow_no_indices: js.UndefOr[Boolean] = js.native
-  var allow_partial_search_results: js.UndefOr[Boolean] = js.native
-  var analyze_wildcard: js.UndefOr[Boolean] = js.native
-  var analyzer: js.UndefOr[String] = js.native
-  var batched_reduce_size: js.UndefOr[Double] = js.native
-  var body: js.UndefOr[T] = js.native
-  var ccs_minimize_roundtrips: js.UndefOr[Boolean] = js.native
-  var default_operator: js.UndefOr[AND | OR] = js.native
-  var df: js.UndefOr[String] = js.native
-  var docvalue_fields: js.UndefOr[String | js.Array[String]] = js.native
-  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.native
-  var explain: js.UndefOr[Boolean] = js.native
-  var from: js.UndefOr[Double] = js.native
-  var ignore_throttled: js.UndefOr[Boolean] = js.native
-  var ignore_unavailable: js.UndefOr[Boolean] = js.native
-  var index: js.UndefOr[String | js.Array[String]] = js.native
-  var lenient: js.UndefOr[Boolean] = js.native
-  var max_concurrent_shard_requests: js.UndefOr[Double] = js.native
-  var pre_filter_shard_size: js.UndefOr[Double] = js.native
-  var preference: js.UndefOr[String] = js.native
-  var q: js.UndefOr[String] = js.native
-  var request_cache: js.UndefOr[Boolean] = js.native
-  var rest_total_hits_as_int: js.UndefOr[Boolean] = js.native
-  var routing: js.UndefOr[String | js.Array[String]] = js.native
-  var scroll: js.UndefOr[String] = js.native
-  var search_type: js.UndefOr[query_then_fetch | dfs_query_then_fetch] = js.native
-  var seq_no_primary_term: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[Double] = js.native
-  var sort: js.UndefOr[String | js.Array[String]] = js.native
-  var stats: js.UndefOr[String | js.Array[String]] = js.native
-  var stored_fields: js.UndefOr[String | js.Array[String]] = js.native
-  var suggest_field: js.UndefOr[String] = js.native
-  var suggest_mode: js.UndefOr[missing | popular | always] = js.native
-  var suggest_size: js.UndefOr[Double] = js.native
-  var suggest_text: js.UndefOr[String] = js.native
-  var terminate_after: js.UndefOr[Double] = js.native
-  var timeout: js.UndefOr[String] = js.native
-  var track_scores: js.UndefOr[Boolean] = js.native
-  var track_total_hits: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[String | js.Array[String]] = js.native
-  var typed_keys: js.UndefOr[Boolean] = js.native
-  var version: js.UndefOr[Boolean] = js.native
+  var _source: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_exclude: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_excludes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_include: js.UndefOr[String | js.Array[String]] = js.undefined
+  var _source_includes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var allow_no_indices: js.UndefOr[Boolean] = js.undefined
+  var allow_partial_search_results: js.UndefOr[Boolean] = js.undefined
+  var analyze_wildcard: js.UndefOr[Boolean] = js.undefined
+  var analyzer: js.UndefOr[String] = js.undefined
+  var batched_reduce_size: js.UndefOr[Double] = js.undefined
+  var body: js.UndefOr[T] = js.undefined
+  var ccs_minimize_roundtrips: js.UndefOr[Boolean] = js.undefined
+  var default_operator: js.UndefOr[AND | OR] = js.undefined
+  var df: js.UndefOr[String] = js.undefined
+  var docvalue_fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var expand_wildcards: js.UndefOr[open | closed | hidden | none | all] = js.undefined
+  var explain: js.UndefOr[Boolean] = js.undefined
+  var from: js.UndefOr[Double] = js.undefined
+  var ignore_throttled: js.UndefOr[Boolean] = js.undefined
+  var ignore_unavailable: js.UndefOr[Boolean] = js.undefined
+  var index: js.UndefOr[String | js.Array[String]] = js.undefined
+  var lenient: js.UndefOr[Boolean] = js.undefined
+  var max_concurrent_shard_requests: js.UndefOr[Double] = js.undefined
+  var pre_filter_shard_size: js.UndefOr[Double] = js.undefined
+  var preference: js.UndefOr[String] = js.undefined
+  var q: js.UndefOr[String] = js.undefined
+  var request_cache: js.UndefOr[Boolean] = js.undefined
+  var rest_total_hits_as_int: js.UndefOr[Boolean] = js.undefined
+  var routing: js.UndefOr[String | js.Array[String]] = js.undefined
+  var scroll: js.UndefOr[String] = js.undefined
+  var search_type: js.UndefOr[query_then_fetch | dfs_query_then_fetch] = js.undefined
+  var seq_no_primary_term: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
+  var sort: js.UndefOr[String | js.Array[String]] = js.undefined
+  var stats: js.UndefOr[String | js.Array[String]] = js.undefined
+  var stored_fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var suggest_field: js.UndefOr[String] = js.undefined
+  var suggest_mode: js.UndefOr[missing | popular | always] = js.undefined
+  var suggest_size: js.UndefOr[Double] = js.undefined
+  var suggest_text: js.UndefOr[String] = js.undefined
+  var terminate_after: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[String] = js.undefined
+  var track_scores: js.UndefOr[Boolean] = js.undefined
+  var track_total_hits: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[String | js.Array[String]] = js.undefined
+  var typed_keys: js.UndefOr[Boolean] = js.undefined
+  var version: js.UndefOr[Boolean] = js.undefined
 }
 
 object Search {
   @scala.inline
-  def apply[T](): Search[T] = {
+  def apply[T](
+    _source: String | js.Array[String] = null,
+    _source_exclude: String | js.Array[String] = null,
+    _source_excludes: String | js.Array[String] = null,
+    _source_include: String | js.Array[String] = null,
+    _source_includes: String | js.Array[String] = null,
+    allow_no_indices: js.UndefOr[Boolean] = js.undefined,
+    allow_partial_search_results: js.UndefOr[Boolean] = js.undefined,
+    analyze_wildcard: js.UndefOr[Boolean] = js.undefined,
+    analyzer: String = null,
+    batched_reduce_size: js.UndefOr[Double] = js.undefined,
+    body: T = null,
+    ccs_minimize_roundtrips: js.UndefOr[Boolean] = js.undefined,
+    default_operator: AND | OR = null,
+    df: String = null,
+    docvalue_fields: String | js.Array[String] = null,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    expand_wildcards: open | closed | hidden | none | all = null,
+    explain: js.UndefOr[Boolean] = js.undefined,
+    filter_path: String | js.Array[String] = null,
+    from: js.UndefOr[Double] = js.undefined,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    ignore_throttled: js.UndefOr[Boolean] = js.undefined,
+    ignore_unavailable: js.UndefOr[Boolean] = js.undefined,
+    index: String | js.Array[String] = null,
+    lenient: js.UndefOr[Boolean] = js.undefined,
+    max_concurrent_shard_requests: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    pre_filter_shard_size: js.UndefOr[Double] = js.undefined,
+    preference: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    q: String = null,
+    request_cache: js.UndefOr[Boolean] = js.undefined,
+    rest_total_hits_as_int: js.UndefOr[Boolean] = js.undefined,
+    routing: String | js.Array[String] = null,
+    scroll: String = null,
+    search_type: query_then_fetch | dfs_query_then_fetch = null,
+    seq_no_primary_term: js.UndefOr[Boolean] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined,
+    sort: String | js.Array[String] = null,
+    source: String = null,
+    stats: String | js.Array[String] = null,
+    stored_fields: String | js.Array[String] = null,
+    suggest_field: String = null,
+    suggest_mode: missing | popular | always = null,
+    suggest_size: js.UndefOr[Double] = js.undefined,
+    suggest_text: String = null,
+    terminate_after: js.UndefOr[Double] = js.undefined,
+    timeout: String = null,
+    track_scores: js.UndefOr[Boolean] = js.undefined,
+    track_total_hits: js.UndefOr[Boolean] = js.undefined,
+    `type`: String | js.Array[String] = null,
+    typed_keys: js.UndefOr[Boolean] = js.undefined,
+    version: js.UndefOr[Boolean] = js.undefined
+  ): Search[T] = {
     val __obj = js.Dynamic.literal()
+    if (_source != null) __obj.updateDynamic("_source")(_source.asInstanceOf[js.Any])
+    if (_source_exclude != null) __obj.updateDynamic("_source_exclude")(_source_exclude.asInstanceOf[js.Any])
+    if (_source_excludes != null) __obj.updateDynamic("_source_excludes")(_source_excludes.asInstanceOf[js.Any])
+    if (_source_include != null) __obj.updateDynamic("_source_include")(_source_include.asInstanceOf[js.Any])
+    if (_source_includes != null) __obj.updateDynamic("_source_includes")(_source_includes.asInstanceOf[js.Any])
+    if (!js.isUndefined(allow_no_indices)) __obj.updateDynamic("allow_no_indices")(allow_no_indices.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allow_partial_search_results)) __obj.updateDynamic("allow_partial_search_results")(allow_partial_search_results.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(analyze_wildcard)) __obj.updateDynamic("analyze_wildcard")(analyze_wildcard.get.asInstanceOf[js.Any])
+    if (analyzer != null) __obj.updateDynamic("analyzer")(analyzer.asInstanceOf[js.Any])
+    if (!js.isUndefined(batched_reduce_size)) __obj.updateDynamic("batched_reduce_size")(batched_reduce_size.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(ccs_minimize_roundtrips)) __obj.updateDynamic("ccs_minimize_roundtrips")(ccs_minimize_roundtrips.get.asInstanceOf[js.Any])
+    if (default_operator != null) __obj.updateDynamic("default_operator")(default_operator.asInstanceOf[js.Any])
+    if (df != null) __obj.updateDynamic("df")(df.asInstanceOf[js.Any])
+    if (docvalue_fields != null) __obj.updateDynamic("docvalue_fields")(docvalue_fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (expand_wildcards != null) __obj.updateDynamic("expand_wildcards")(expand_wildcards.asInstanceOf[js.Any])
+    if (!js.isUndefined(explain)) __obj.updateDynamic("explain")(explain.get.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(from)) __obj.updateDynamic("from")(from.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignore_throttled)) __obj.updateDynamic("ignore_throttled")(ignore_throttled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignore_unavailable)) __obj.updateDynamic("ignore_unavailable")(ignore_unavailable.get.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (!js.isUndefined(lenient)) __obj.updateDynamic("lenient")(lenient.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max_concurrent_shard_requests)) __obj.updateDynamic("max_concurrent_shard_requests")(max_concurrent_shard_requests.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pre_filter_shard_size)) __obj.updateDynamic("pre_filter_shard_size")(pre_filter_shard_size.get.asInstanceOf[js.Any])
+    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (!js.isUndefined(request_cache)) __obj.updateDynamic("request_cache")(request_cache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rest_total_hits_as_int)) __obj.updateDynamic("rest_total_hits_as_int")(rest_total_hits_as_int.get.asInstanceOf[js.Any])
+    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
+    if (scroll != null) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
+    if (search_type != null) __obj.updateDynamic("search_type")(search_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(seq_no_primary_term)) __obj.updateDynamic("seq_no_primary_term")(seq_no_primary_term.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
+    if (stored_fields != null) __obj.updateDynamic("stored_fields")(stored_fields.asInstanceOf[js.Any])
+    if (suggest_field != null) __obj.updateDynamic("suggest_field")(suggest_field.asInstanceOf[js.Any])
+    if (suggest_mode != null) __obj.updateDynamic("suggest_mode")(suggest_mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(suggest_size)) __obj.updateDynamic("suggest_size")(suggest_size.get.asInstanceOf[js.Any])
+    if (suggest_text != null) __obj.updateDynamic("suggest_text")(suggest_text.asInstanceOf[js.Any])
+    if (!js.isUndefined(terminate_after)) __obj.updateDynamic("terminate_after")(terminate_after.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(track_scores)) __obj.updateDynamic("track_scores")(track_scores.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(track_total_hits)) __obj.updateDynamic("track_total_hits")(track_total_hits.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(typed_keys)) __obj.updateDynamic("typed_keys")(typed_keys.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Search[T]]
   }
-  @scala.inline
-  implicit class SearchOps[Self[t] <: Search[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def with_source(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_exclude(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_exclude: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_excludes(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_excludes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_excludes: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_excludes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_include(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_include: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_source_includes(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_includes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source_includes: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source_includes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_no_indices(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_no_indices: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_partial_search_results(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_partial_search_results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_partial_search_results: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_partial_search_results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyze_wildcard(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyze_wildcard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyze_wildcard: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyze_wildcard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzer(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzer: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatched_reduce_size(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batched_reduce_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatched_reduce_size: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batched_reduce_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcs_minimize_roundtrips(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccs_minimize_roundtrips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcs_minimize_roundtrips: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccs_minimize_roundtrips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_operator(value: AND | OR): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_operator: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_operator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDf(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("df")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDf: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("df")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocvalue_fields(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docvalue_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocvalue_fields: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docvalue_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand_wildcards(value: open | closed | none | all): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpand_wildcards: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplain(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplain: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore_throttled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_throttled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore_throttled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_throttled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore_unavailable(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore_unavailable: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLenient(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLenient: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax_concurrent_shard_requests(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_concurrent_shard_requests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax_concurrent_shard_requests: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_concurrent_shard_requests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPre_filter_shard_size(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_filter_shard_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPre_filter_shard_size: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_filter_shard_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreference(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreference: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest_cache(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request_cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest_cache: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request_cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRest_total_hits_as_int(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest_total_hits_as_int")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRest_total_hits_as_int: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest_total_hits_as_int")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouting(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouting: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScroll(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScroll: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearch_type(value: query_then_fetch | dfs_query_then_fetch): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearch_type: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeq_no_primary_term(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seq_no_primary_term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeq_no_primary_term: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seq_no_primary_term")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStored_fields(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stored_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStored_fields: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stored_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggest_field(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggest_field: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggest_mode(value: missing | popular | always): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggest_mode: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggest_size(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggest_size: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggest_text(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggest_text: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest_text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminate_after(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminate_after")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminate_after: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminate_after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack_scores(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track_scores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack_scores: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track_scores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack_total_hits(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track_total_hits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack_total_hits: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track_total_hits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String | js.Array[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTyped_keys(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typed_keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTyped_keys: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typed_keys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

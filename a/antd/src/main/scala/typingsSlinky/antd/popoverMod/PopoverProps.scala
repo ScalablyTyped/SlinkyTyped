@@ -1,67 +1,47 @@
 package typingsSlinky.antd.popoverMod
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
+import typingsSlinky.antd.getRenderPropValueMod.RenderFunction
+import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.tooltipMod.AbstractTooltipProps
+import typingsSlinky.antd.tooltipMod.TooltipPlacement
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PopoverProps extends AbstractTooltipProps {
-  var content: js.UndefOr[TagMod[Any]] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
+  var content: js.UndefOr[TagMod[Any] | RenderFunction] = js.undefined
+  var title: js.UndefOr[TagMod[Any] | RenderFunction] = js.undefined
 }
 
 object PopoverProps {
   @scala.inline
-  def apply(): PopoverProps = {
+  def apply(
+    arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
+    autoAdjustOverflow: Boolean | AdjustOverflow = null,
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
+    className: String = null,
+    content: TagMod[Any] | RenderFunction = null,
+    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
+    openClassName: String = null,
+    placement: TooltipPlacement = null,
+    style: CSSProperties = null,
+    title: TagMod[Any] | RenderFunction = null
+  ): PopoverProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arrowPointAtCenter)) __obj.updateDynamic("arrowPointAtCenter")(arrowPointAtCenter.get.asInstanceOf[js.Any])
+    if (autoAdjustOverflow != null) __obj.updateDynamic("autoAdjustOverflow")(autoAdjustOverflow.asInstanceOf[js.Any])
+    if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
+    if (openClassName != null) __obj.updateDynamic("openClassName")(openClassName.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PopoverProps]
   }
-  @scala.inline
-  implicit class PopoverPropsOps[Self <: PopoverProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

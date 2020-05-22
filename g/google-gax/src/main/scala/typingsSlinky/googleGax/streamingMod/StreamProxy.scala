@@ -27,6 +27,8 @@ class StreamProxy protected ()
   var _isCancelCalled: js.Any = js.native
   var stream: js.UndefOr[CancellableStream] = js.native
   var `type`: StreamType = js.native
+  /* CompleteClass */
+  override def cancel(): Unit = js.native
   /**
     * Forward events from an API request stream to the user's stream.
     * @param {Stream} stream - The API request stream.

@@ -3,6 +3,7 @@ package typingsSlinky.web3Eth.mod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable3
+import typingsSlinky.bignumberJs.mod.BigNumber
 import typingsSlinky.bnJs.mod.^
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.web3Core.mod.BlockNumber
@@ -19,8 +20,6 @@ import typingsSlinky.web3Core.mod.TransactionConfig
 import typingsSlinky.web3Core.mod.TransactionReceipt
 import typingsSlinky.web3Core.mod.chain
 import typingsSlinky.web3Core.mod.hardfork
-import typingsSlinky.web3CoreHelpers.mod.RevertInstructionError
-import typingsSlinky.web3CoreHelpers.mod.TransactionRevertInstructionError
 import typingsSlinky.web3CoreSubscriptions.mod.Subscription
 import typingsSlinky.web3Eth.web3EthBooleans.`true`
 import typingsSlinky.web3Eth.web3EthStrings.logs
@@ -66,17 +65,17 @@ class Eth () extends js.Object {
   var transactionBlockTimeout: Double = js.native
   var transactionConfirmationBlocks: Double = js.native
   var transactionPollingTimeout: Double = js.native
-  def call(transactionConfig: TransactionConfig): js.Promise[String | RevertInstructionError] = js.native
+  def call(transactionConfig: TransactionConfig): js.Promise[String] = js.native
   def call(
     transactionConfig: TransactionConfig,
     callback: js.Function2[/* error */ js.Error, /* data */ String, Unit]
-  ): js.Promise[String | RevertInstructionError] = js.native
-  def call(transactionConfig: TransactionConfig, defaultBlock: BlockNumber): js.Promise[String | RevertInstructionError] = js.native
+  ): js.Promise[String] = js.native
+  def call(transactionConfig: TransactionConfig, defaultBlock: BlockNumber): js.Promise[String] = js.native
   def call(
     transactionConfig: TransactionConfig,
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* data */ String, Unit]
-  ): js.Promise[String | RevertInstructionError] = js.native
+  ): js.Promise[String] = js.native
   def clearSubscriptions(callback: js.Function2[/* error */ js.Error, /* result */ Boolean, Unit]): Unit = js.native
   def estimateGas(transactionConfig: TransactionConfig): js.Promise[Double] = js.native
   def estimateGas(
@@ -167,18 +166,10 @@ class Eth () extends js.Object {
   ): js.Promise[js.Array[Log]] = js.native
   def getPendingTransactions(): js.Promise[js.Array[Transaction]] = js.native
   def getPendingTransactions(callback: js.Function2[/* error */ js.Error, /* result */ js.Array[Transaction], Unit]): js.Promise[js.Array[Transaction]] = js.native
+  def getProof(address: String, storageKey: js.Array[BigNumber | Double | String | ^ ], blockNumber: BlockNumber): js.Promise[GetProof] = js.native
   def getProof(
     address: String,
-    storageKey: js.Array[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ _) | Double | String | ^ 
-    ],
-    blockNumber: BlockNumber
-  ): js.Promise[GetProof] = js.native
-  def getProof(
-    address: String,
-    storageKey: js.Array[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ _) | Double | String | ^ 
-    ],
+    storageKey: js.Array[BigNumber | Double | String | ^ ],
     blockNumber: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* result */ GetProof, Unit]
   ): js.Promise[GetProof] = js.native
@@ -197,26 +188,6 @@ class Eth () extends js.Object {
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
-  def getStorageAt(
-    address: String,
-    position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ js.Any
-  ): js.Promise[String] = js.native
-  def getStorageAt(
-    address: String,
-    position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ js.Any,
-    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
-  ): js.Promise[String] = js.native
-  def getStorageAt(
-    address: String,
-    position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ js.Any,
-    defaultBlock: BlockNumber
-  ): js.Promise[String] = js.native
-  def getStorageAt(
-    address: String,
-    position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ js.Any,
-    defaultBlock: BlockNumber,
-    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
-  ): js.Promise[String] = js.native
   def getStorageAt(address: String, position: Double): js.Promise[String] = js.native
   def getStorageAt(
     address: String,
@@ -227,6 +198,19 @@ class Eth () extends js.Object {
   def getStorageAt(
     address: String,
     position: Double,
+    defaultBlock: BlockNumber,
+    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
+  ): js.Promise[String] = js.native
+  def getStorageAt(address: String, position: BigNumber): js.Promise[String] = js.native
+  def getStorageAt(
+    address: String,
+    position: BigNumber,
+    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
+  ): js.Promise[String] = js.native
+  def getStorageAt(address: String, position: BigNumber, defaultBlock: BlockNumber): js.Promise[String] = js.native
+  def getStorageAt(
+    address: String,
+    position: BigNumber,
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
@@ -400,11 +384,11 @@ class Eth () extends js.Object {
     signedTransactionData: String,
     callback: js.Function2[/* error */ js.Error, /* hash */ String, Unit]
   ): PromiEvent[TransactionReceipt] = js.native
-  def sendTransaction(transactionConfig: TransactionConfig): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
+  def sendTransaction(transactionConfig: TransactionConfig): PromiEvent[TransactionReceipt] = js.native
   def sendTransaction(
     transactionConfig: TransactionConfig,
     callback: js.Function2[/* error */ js.Error, /* hash */ String, Unit]
-  ): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
+  ): PromiEvent[TransactionReceipt] = js.native
   def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
   def sign(dataToSign: String, address: String): js.Promise[String] = js.native
   def sign(

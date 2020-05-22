@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeriesResource extends js.Object {
-  var membership: MembershipResource = js.native
+  var membership: MembershipResource
   /** Returns Series metadata for the given series ids. */
-  def get(request: Seriesid): Request[Series] = js.native
+  def get(request: Seriesid): Request[Series]
 }
 
 object SeriesResource {
@@ -19,25 +18,5 @@ object SeriesResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), membership = membership.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesResource]
   }
-  @scala.inline
-  implicit class SeriesResourceOps[Self <: SeriesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: Seriesid => Request[Series]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMembership(value: MembershipResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("membership")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

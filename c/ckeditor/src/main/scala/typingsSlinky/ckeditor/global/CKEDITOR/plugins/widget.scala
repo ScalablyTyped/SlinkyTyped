@@ -2,6 +2,7 @@ package typingsSlinky.ckeditor.global.CKEDITOR.plugins
 
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.dom.node
+import typingsSlinky.ckeditor.CKEDITOR.editable
 import typingsSlinky.ckeditor.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,7 +46,12 @@ object widget extends js.Object {
   
   @js.native
   class widgetselection ()
-    extends typingsSlinky.ckeditor.CKEDITOR.plugins.widget.widgetselection
+    extends typingsSlinky.ckeditor.CKEDITOR.plugins.widget.widgetselection {
+    /* CompleteClass */
+    override def addFillers(editable: editable): Boolean = js.native
+    /* CompleteClass */
+    override def removeFillers(editable: editable): Unit = js.native
+  }
   
   var WRAPPER_CLASS_PREFIX: String = js.native
   def getNestedEditable(guard: element, node: node): element = js.native

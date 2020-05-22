@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FloatingActionButton
   extends Component[FloatingActionButtonOptions]
      with Openable

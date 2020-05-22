@@ -14,29 +14,10 @@ trait GetDefaultPatchBaselineRequest extends js.Object {
 
 object GetDefaultPatchBaselineRequest {
   @scala.inline
-  def apply(): GetDefaultPatchBaselineRequest = {
+  def apply(OperatingSystem: OperatingSystem = null): GetDefaultPatchBaselineRequest = {
     val __obj = js.Dynamic.literal()
+    if (OperatingSystem != null) __obj.updateDynamic("OperatingSystem")(OperatingSystem.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDefaultPatchBaselineRequest]
   }
-  @scala.inline
-  implicit class GetDefaultPatchBaselineRequestOps[Self <: GetDefaultPatchBaselineRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperatingSystem(value: OperatingSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatingSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystem")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

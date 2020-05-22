@@ -23,29 +23,10 @@ trait SchemaNetworkRoutingConfig extends js.Object {
 
 object SchemaNetworkRoutingConfig {
   @scala.inline
-  def apply(): SchemaNetworkRoutingConfig = {
+  def apply(routingMode: String = null): SchemaNetworkRoutingConfig = {
     val __obj = js.Dynamic.literal()
+    if (routingMode != null) __obj.updateDynamic("routingMode")(routingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkRoutingConfig]
   }
-  @scala.inline
-  implicit class SchemaNetworkRoutingConfigOps[Self <: SchemaNetworkRoutingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoutingMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routingMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

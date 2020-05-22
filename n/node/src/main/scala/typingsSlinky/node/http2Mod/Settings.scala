@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Settings extends js.Object {
-  var enableConnectProtocol: js.UndefOr[Boolean] = js.native
-  var enablePush: js.UndefOr[Boolean] = js.native
-  var headerTableSize: js.UndefOr[Double] = js.native
-  var initialWindowSize: js.UndefOr[Double] = js.native
-  var maxConcurrentStreams: js.UndefOr[Double] = js.native
-  var maxFrameSize: js.UndefOr[Double] = js.native
-  var maxHeaderListSize: js.UndefOr[Double] = js.native
+  var enableConnectProtocol: js.UndefOr[Boolean] = js.undefined
+  var enablePush: js.UndefOr[Boolean] = js.undefined
+  var headerTableSize: js.UndefOr[Double] = js.undefined
+  var initialWindowSize: js.UndefOr[Double] = js.undefined
+  var maxConcurrentStreams: js.UndefOr[Double] = js.undefined
+  var maxFrameSize: js.UndefOr[Double] = js.undefined
+  var maxHeaderListSize: js.UndefOr[Double] = js.undefined
 }
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    enableConnectProtocol: js.UndefOr[Boolean] = js.undefined,
+    enablePush: js.UndefOr[Boolean] = js.undefined,
+    headerTableSize: js.UndefOr[Double] = js.undefined,
+    initialWindowSize: js.UndefOr[Double] = js.undefined,
+    maxConcurrentStreams: js.UndefOr[Double] = js.undefined,
+    maxFrameSize: js.UndefOr[Double] = js.undefined,
+    maxHeaderListSize: js.UndefOr[Double] = js.undefined
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableConnectProtocol)) __obj.updateDynamic("enableConnectProtocol")(enableConnectProtocol.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePush)) __obj.updateDynamic("enablePush")(enablePush.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerTableSize)) __obj.updateDynamic("headerTableSize")(headerTableSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialWindowSize)) __obj.updateDynamic("initialWindowSize")(initialWindowSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxConcurrentStreams)) __obj.updateDynamic("maxConcurrentStreams")(maxConcurrentStreams.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFrameSize)) __obj.updateDynamic("maxFrameSize")(maxFrameSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeaderListSize)) __obj.updateDynamic("maxHeaderListSize")(maxHeaderListSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableConnectProtocol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableConnectProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableConnectProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableConnectProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePush(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTableSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTableSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderTableSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTableSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialWindowSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialWindowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialWindowSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialWindowSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrentStreams(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentStreams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrentStreams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentStreams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFrameSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFrameSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFrameSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFrameSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeaderListSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeaderListSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeaderListSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeaderListSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

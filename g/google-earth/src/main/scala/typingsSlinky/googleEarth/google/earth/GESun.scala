@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GESun extends js.Object {
   /**
     *  Specifies whether the feature is drawn in the 3D viewer when it is initially loaded.
     *  In order for a feature to be visible, the visibility property and all of its ancestors must also be set to 1.
     */
-  def getVisibility(): Boolean = js.native
+  def getVisibility(): Boolean
   /**
     *  Specifies whether the feature is drawn in the 3D viewer when it is initially loaded.
     *  In order for a feature to be visible, the visibility property and all of its ancestors must also be set to 1.
     */
-  def setVisibility(visibility: Boolean): Unit = js.native
+  def setVisibility(visibility: Boolean): Unit
 }
 
 object GESun {
@@ -24,25 +23,5 @@ object GESun {
     val __obj = js.Dynamic.literal(getVisibility = js.Any.fromFunction0(getVisibility), setVisibility = js.Any.fromFunction1(setVisibility))
     __obj.asInstanceOf[GESun]
   }
-  @scala.inline
-  implicit class GESunOps[Self <: GESun] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetVisibility(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisibility")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetVisibility(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisibility")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

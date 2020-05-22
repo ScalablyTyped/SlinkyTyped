@@ -45,12 +45,19 @@ package object mod {
     * Same as IController. Keeping it for compatibility with older versions of these type definitions.
     */
   type IComponentController = typingsSlinky.angular.mod.IController
+  type IControllerConstructor = (org.scalablytyped.runtime.Instantiable1[/* args (repeated) */ js.Any, typingsSlinky.angular.mod.IController]) | (js.Function1[/* repeated */ js.Any, scala.Unit | typingsSlinky.angular.mod.IController])
   type IDirectiveCompileFn[TScope /* <: typingsSlinky.angular.mod.IScope */, TElement /* <: typingsSlinky.angular.JQLite */, TAttributes /* <: typingsSlinky.angular.mod.IAttributes */, TController /* <: typingsSlinky.angular.mod.IDirectiveController */] = js.Function3[
     /* templateElement */ TElement, 
     /* templateAttributes */ TAttributes, 
     /* transclude */ typingsSlinky.angular.mod.ITranscludeFunction, 
     scala.Unit | (typingsSlinky.angular.mod.IDirectiveLinkFn[TScope, TElement, TAttributes, TController]) | (typingsSlinky.angular.mod.IDirectivePrePost[TScope, TElement, TAttributes, TController])
   ]
+  ///////////////////////////////////////////////////////////////////////////
+  // Directive
+  // see http://docs.angularjs.org/api/ng.$compileProvider#directive
+  // and http://docs.angularjs.org/guide/directive
+  ///////////////////////////////////////////////////////////////////////////
+  type IDirectiveController = typingsSlinky.angular.mod.IController | js.Array[typingsSlinky.angular.mod.IController] | org.scalablytyped.runtime.StringDictionary[typingsSlinky.angular.mod.IController]
   type IDirectiveFactory[TScope /* <: typingsSlinky.angular.mod.IScope */, TElement /* <: typingsSlinky.angular.JQLite */, TAttributes /* <: typingsSlinky.angular.mod.IAttributes */, TController /* <: typingsSlinky.angular.mod.IDirectiveController */] = js.Function1[
     /* repeated */ js.Any, 
     (typingsSlinky.angular.mod.IDirective[TScope, TElement, TAttributes, TController]) | (typingsSlinky.angular.mod.IDirectiveLinkFn[TScope, TElement, TAttributes, TController])
@@ -208,4 +215,5 @@ package object mod {
     * see https://docs.angularjs.org/api/ng/service/$xhrFactory
     */
   type IXhrFactory[T] = js.Function2[/* method */ java.lang.String, /* url */ java.lang.String, T]
+  type Injectable[T /* <: typingsSlinky.angular.mod.global.Function */] = T | (js.Array[java.lang.String | T])
 }

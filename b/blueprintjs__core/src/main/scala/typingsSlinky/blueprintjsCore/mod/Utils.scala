@@ -11,8 +11,9 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.anon.Key
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyBlacklist
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyWhitelist
-import typingsSlinky.blueprintjsCore.utilsMod.INamed
-import typingsSlinky.blueprintjsCore.utilsMod.IThrottledReactEventOptions
+import typingsSlinky.blueprintjsCore.domUtilsMod.IThrottledReactEventOptions
+import typingsSlinky.blueprintjsCore.reactUtilsMod.INamed
+import typingsSlinky.blueprintjsCore.refUtilsMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,6 +49,8 @@ object Utils extends js.Object {
   def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T, objB: T, keys: js.Array[/* keyof T */ String]): js.Array[Key[T]] = js.native
   def getDisplayName(ComponentClass: INamed): String = js.native
   def getDisplayName(ComponentClass: ReactComponentClass[js.Object]): String = js.native
+  def getRef[T](ref: T): T = js.native
+  def getRef[T](ref: IRefObject[T]): T = js.native
   def isElementOfType[P](element: js.Any, ComponentType: ReactComponentClass[P]): /* is react.react.ReactElement */ Boolean = js.native
   def isFunction(value: js.Any): /* is std.Function */ Boolean = js.native
   def isNodeEnv(env: String): Boolean = js.native

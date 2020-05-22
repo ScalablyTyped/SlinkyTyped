@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // DropDown
-@js.native
 trait DropDownIcons extends js.Object {
-  var dropdown: js.UndefOr[String] = js.native
+  var dropdown: js.UndefOr[String] = js.undefined
 }
 
 object DropDownIcons {
   @scala.inline
-  def apply(): DropDownIcons = {
+  def apply(dropdown: String = null): DropDownIcons = {
     val __obj = js.Dynamic.literal()
+    if (dropdown != null) __obj.updateDynamic("dropdown")(dropdown.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropDownIcons]
   }
-  @scala.inline
-  implicit class DropDownIconsOps[Self <: DropDownIcons] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDropdown(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

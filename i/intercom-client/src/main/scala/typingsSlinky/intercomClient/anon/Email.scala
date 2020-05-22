@@ -1,34 +1,23 @@
 package typingsSlinky.intercomClient.anon
 
-import typingsSlinky.intercomClient.userMod.UserIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Email extends UserIdentifier {
-  var email: String = js.native
+trait Email extends js.Object {
+  var email: js.UndefOr[String] = js.undefined
+  var segment_id: js.UndefOr[String] = js.undefined
+  var tag_id: js.UndefOr[String] = js.undefined
 }
 
 object Email {
   @scala.inline
-  def apply(email: String): Email = {
-    val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any])
+  def apply(email: String = null, segment_id: String = null, tag_id: String = null): Email = {
+    val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (segment_id != null) __obj.updateDynamic("segment_id")(segment_id.asInstanceOf[js.Any])
+    if (tag_id != null) __obj.updateDynamic("tag_id")(tag_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[Email]
   }
-  @scala.inline
-  implicit class EmailOps[Self <: Email] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

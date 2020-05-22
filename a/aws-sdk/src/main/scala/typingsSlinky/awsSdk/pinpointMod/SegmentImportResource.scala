@@ -34,59 +34,17 @@ trait SegmentImportResource extends js.Object {
 
 object SegmentImportResource {
   @scala.inline
-  def apply(ExternalId: string, Format: Format, RoleArn: string, S3Url: string, Size: integer): SegmentImportResource = {
+  def apply(
+    ExternalId: string,
+    Format: Format,
+    RoleArn: string,
+    S3Url: string,
+    Size: integer,
+    ChannelCounts: MapOfInteger = null
+  ): SegmentImportResource = {
     val __obj = js.Dynamic.literal(ExternalId = ExternalId.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any], S3Url = S3Url.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any])
+    if (ChannelCounts != null) __obj.updateDynamic("ChannelCounts")(ChannelCounts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SegmentImportResource]
   }
-  @scala.inline
-  implicit class SegmentImportResourceOps[Self <: SegmentImportResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExternalId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS3Url(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChannelCounts(value: MapOfInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelCounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelCounts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -34,89 +34,22 @@ trait MotionImageInserter extends js.Object {
 
 object MotionImageInserter {
   @scala.inline
-  def apply(): MotionImageInserter = {
+  def apply(
+    Framerate: MotionImageInsertionFramerate = null,
+    Input: stringMin14Max1285PatternS3Mov09PngHttpsMov09Png = null,
+    InsertionMode: MotionImageInsertionMode = null,
+    Offset: MotionImageInsertionOffset = null,
+    Playback: MotionImagePlayback = null,
+    StartTime: stringMin11Max11Pattern01D20305D205D = null
+  ): MotionImageInserter = {
     val __obj = js.Dynamic.literal()
+    if (Framerate != null) __obj.updateDynamic("Framerate")(Framerate.asInstanceOf[js.Any])
+    if (Input != null) __obj.updateDynamic("Input")(Input.asInstanceOf[js.Any])
+    if (InsertionMode != null) __obj.updateDynamic("InsertionMode")(InsertionMode.asInstanceOf[js.Any])
+    if (Offset != null) __obj.updateDynamic("Offset")(Offset.asInstanceOf[js.Any])
+    if (Playback != null) __obj.updateDynamic("Playback")(Playback.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MotionImageInserter]
   }
-  @scala.inline
-  implicit class MotionImageInserterOps[Self <: MotionImageInserter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFramerate(value: MotionImageInsertionFramerate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Framerate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFramerate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Framerate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: stringMin14Max1285PatternS3Mov09PngHttpsMov09Png): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertionMode(value: MotionImageInsertionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsertionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsertionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: MotionImageInsertionOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayback(value: MotionImagePlayback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Playback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Playback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: stringMin11Max11Pattern01D20305D205D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * A better place for this interface (in an extended version) would be `com::sun::star::awt`
   * @see TabBarButton
   */
-@js.native
 trait XTabBar extends js.Object {
   /**
     * Return a sequence of all the tab bar buttons.
@@ -29,18 +28,18 @@ trait XTabBar extends js.Object {
     *
     * This method can be used when {@link addTabBarButtonAfter()} does not provide enough control as to where to insert a new button.
     */
-  val TabBarButtons: SafeArray[TabBarButton] = js.native
+  val TabBarButtons: SafeArray[TabBarButton]
   /**
     * Add a tab bar button to the right of another one.
     * @param aButton The new tab bar button that is to be inserted. If a button with the same resource id is already present than that is removed before the n
     * @param aAnchor The new button is inserted to the right of this button. When its {@link ResourceId} is empty then the new button is inserted at the left
     */
-  def addTabBarButtonAfter(aButton: TabBarButton, aAnchor: TabBarButton): Unit = js.native
+  def addTabBarButtonAfter(aButton: TabBarButton, aAnchor: TabBarButton): Unit
   /**
     * Add a tab bar button at the right most position.
     * @param aButton The new tab bar button that is to be inserted.
     */
-  def appendTabBarButton(aButton: TabBarButton): Unit = js.native
+  def appendTabBarButton(aButton: TabBarButton): Unit
   /**
     * Return a sequence of all the tab bar buttons.
     *
@@ -48,18 +47,18 @@ trait XTabBar extends js.Object {
     *
     * This method can be used when {@link addTabBarButtonAfter()} does not provide enough control as to where to insert a new button.
     */
-  def getTabBarButtons(): SafeArray[TabBarButton] = js.native
+  def getTabBarButtons(): SafeArray[TabBarButton]
   /**
     * Test whether the specified button exists in the tab bar.
     * @param aButton The tab bar button whose existence is tested.
     * @returns Returns `TRUE` when the button exists.
     */
-  def hasTabBarButton(aButton: TabBarButton): Boolean = js.native
+  def hasTabBarButton(aButton: TabBarButton): Boolean
   /**
     * Remove a tab bar button.
     * @param aButton The tab bar button to remove. When there is no button with the specified resource id then this call is silently ignored.
     */
-  def removeTabBarButton(aButton: TabBarButton): Unit = js.native
+  def removeTabBarButton(aButton: TabBarButton): Unit
 }
 
 object XTabBar {
@@ -75,49 +74,5 @@ object XTabBar {
     val __obj = js.Dynamic.literal(TabBarButtons = TabBarButtons.asInstanceOf[js.Any], addTabBarButtonAfter = js.Any.fromFunction2(addTabBarButtonAfter), appendTabBarButton = js.Any.fromFunction1(appendTabBarButton), getTabBarButtons = js.Any.fromFunction0(getTabBarButtons), hasTabBarButton = js.Any.fromFunction1(hasTabBarButton), removeTabBarButton = js.Any.fromFunction1(removeTabBarButton))
     __obj.asInstanceOf[XTabBar]
   }
-  @scala.inline
-  implicit class XTabBarOps[Self <: XTabBar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTabBarButtons(value: SafeArray[TabBarButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TabBarButtons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddTabBarButtonAfter(value: (TabBarButton, TabBarButton) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTabBarButtonAfter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAppendTabBarButton(value: TabBarButton => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTabBarButton")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTabBarButtons(value: () => SafeArray[TabBarButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTabBarButtons")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasTabBarButton(value: TabBarButton => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTabBarButton")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveTabBarButton(value: TabBarButton => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTabBarButton")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

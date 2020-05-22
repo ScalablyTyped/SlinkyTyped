@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs")
 @js.native
 abstract class Print3DTaskSourceChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs {
+  /** Gets the updated 3D print package from the workflow. */
+  /* CompleteClass */
+  override var source: typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3D3MFPackage = js.native
+}
 

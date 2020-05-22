@@ -22,5 +22,20 @@ class ASPxClientDockManagerProcessingModeEventArgs protected ()
     panel: typingsSlinky.devexpressWeb.ASPxClientDockPanel,
     zone: typingsSlinky.devexpressWeb.ASPxClientDockZone
   ) = this()
+  /**
+    * Gets the panel currently being processed.
+    */
+  /* CompleteClass */
+  override var panel: typingsSlinky.devexpressWeb.ASPxClientDockPanel = js.native
+  /**
+    * Gets or sets a value that specifies whether the event should be finally processed on the server side.
+    */
+  /* CompleteClass */
+  override var processOnServer: Boolean = js.native
+  /**
+    * Gets the zone currently being processed.
+    */
+  /* CompleteClass */
+  override var zone: typingsSlinky.devexpressWeb.ASPxClientDockZone = js.native
 }
 

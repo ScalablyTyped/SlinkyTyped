@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * platform-specific file paths, or newsgroup names). The abbreviation algorithms will then take into account the structural information.
   * @see XStringWidth
   */
-@js.native
 trait XStringAbbreviation extends XInterface {
   /**
     * Abbreviate a string, so that the resulting abbreviated string is not wider than some given width.
@@ -26,7 +25,7 @@ trait XStringAbbreviation extends XInterface {
     * @param aString The string that is abbreviated.
     * @returns an abbreviated string.
     */
-  def abbreviateString(xStringWidth: XStringWidth, nWidth: Double, aString: String): String = js.native
+  def abbreviateString(xStringWidth: XStringWidth, nWidth: Double, aString: String): String
 }
 
 object XStringAbbreviation {
@@ -40,19 +39,5 @@ object XStringAbbreviation {
     val __obj = js.Dynamic.literal(abbreviateString = js.Any.fromFunction3(abbreviateString), acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XStringAbbreviation]
   }
-  @scala.inline
-  implicit class XStringAbbreviationOps[Self <: XStringAbbreviation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbbreviateString(value: (XStringWidth, Double, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbreviateString")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

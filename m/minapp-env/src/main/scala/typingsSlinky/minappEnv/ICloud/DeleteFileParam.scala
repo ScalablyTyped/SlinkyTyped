@@ -1,34 +1,31 @@
 package typingsSlinky.minappEnv.ICloud
 
 import typingsSlinky.minappEnv.Array
+import typingsSlinky.minappEnv.IAPIError
+import typingsSlinky.minappEnv.ICloudConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteFileParam extends ICloudAPIParam[DeleteFileResult] {
-  var fileList: Array[String] = js.native
+  var fileList: Array[String]
 }
 
 object DeleteFileParam {
   @scala.inline
-  def apply(fileList: Array[String]): DeleteFileParam = {
+  def apply(
+    fileList: Array[String],
+    complete: /* val */ DeleteFileResult | IAPIError => Unit = null,
+    config: ICloudConfig = null,
+    fail: /* err */ IAPIError => Unit = null,
+    success: DeleteFileResult => Unit = null
+  ): DeleteFileParam = {
     val __obj = js.Dynamic.literal(fileList = fileList.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[DeleteFileParam]
   }
-  @scala.inline
-  implicit class DeleteFileParamOps[Self <: DeleteFileParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileList(value: Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

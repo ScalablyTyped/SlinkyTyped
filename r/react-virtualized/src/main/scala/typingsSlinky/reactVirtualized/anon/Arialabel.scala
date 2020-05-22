@@ -9,14 +9,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Arialabel extends js.Object {
-  var `aria-label`: Requireable[String] = js.native
-  var cellCount: Validator[Double] = js.native
-  var cellGroupRenderer: Validator[CollectionCellGroupRenderer] = js.native
-  var cellRenderer: Validator[CollectionCellRenderer] = js.native
-  var cellSizeAndPositionGetter: Validator[CollectionCellSizeAndPositionGetter] = js.native
-  var sectionSize: Requireable[Double] = js.native
+  var `aria-label`: Requireable[String]
+  var cellCount: Validator[Double]
+  var cellGroupRenderer: Validator[CollectionCellGroupRenderer]
+  var cellRenderer: Validator[CollectionCellRenderer]
+  var cellSizeAndPositionGetter: Validator[CollectionCellSizeAndPositionGetter]
+  var sectionSize: Requireable[Double]
 }
 
 object Arialabel {
@@ -33,49 +32,5 @@ object Arialabel {
     __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Arialabel]
   }
-  @scala.inline
-  implicit class ArialabelOps[Self <: Arialabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAria-label`(value: Requireable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCellCount(value: Validator[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCellGroupRenderer(value: Validator[CollectionCellGroupRenderer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellGroupRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCellRenderer(value: Validator[CollectionCellRenderer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCellSizeAndPositionGetter(value: Validator[CollectionCellSizeAndPositionGetter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSizeAndPositionGetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSectionSize(value: Requireable[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

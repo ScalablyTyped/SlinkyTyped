@@ -10,7 +10,7 @@ package object fin {
   type AppAssetRequest = typingsSlinky.openfin.downloadAssetMod.AppAssetRequest
   type ApplicationInfo = typingsSlinky.openfin.applicationMod.ApplicationInfo
   type ApplicationOption = typingsSlinky.openfin.applicationOptionMod.ApplicationOption
-  type ApplySnapshotOptions = typingsSlinky.openfin.platformMod.ApplySnapshotOptions
+  type ApplySnapshotOptions = typingsSlinky.openfin.platformPlatformMod.ApplySnapshotOptions
   type Bounds = typingsSlinky.openfin.shapesMod.Bounds
   type Channel = typingsSlinky.openfin.interappbusChannelMod.Channel
   type ChannelClient = typingsSlinky.openfin.clientMod.ChannelClient
@@ -28,14 +28,18 @@ package object fin {
   type FrameInfo = typingsSlinky.openfin.windowWindowMod.FrameInfo
   type HostSpecs = typingsSlinky.openfin.hostSpecsMod.HostSpecs
   type Identity = typingsSlinky.openfin.identityMod.Identity
+  type InitLayoutOptions = typingsSlinky.openfin.layoutMod.InitLayoutOptions
+  type InitPlatformOptions = typingsSlinky.openfin.platformPlatformMod.InitPlatformOptions
   type LaunchInfo = typingsSlinky.openfin.applicationMod.ApplicationInfo
+  type Layout = typingsSlinky.openfin.layoutMod.Layout
   type LogInfo = typingsSlinky.openfin.logMod.LogInfo
   type MonitorInfo = typingsSlinky.openfin.monitorMod.MonitorInfo
   type Opacity = typingsSlinky.openfin.shapesMod.Opacity
-  type Platform = typingsSlinky.openfin.platformMod.Platform
-  type PlatformOptions = typingsSlinky.openfin.platformMod.PlatformOptions
+  type Platform = typingsSlinky.openfin.platformPlatformMod.Platform
+  type PlatformOptions = typingsSlinky.openfin.platformPlatformMod.PlatformOptions
   type PointTopLeft = typingsSlinky.openfin.pointMod.PointTopLeft
   type Position = typingsSlinky.openfin.shapesMod.Position
+  type PresetLayoutOptions = typingsSlinky.openfin.layoutMod.PresetLayoutOptions
   type ProcessInfo = typingsSlinky.openfin.processMod.ProcessInfo
   type ProxyInfo = typingsSlinky.openfin.proxyMod.ProxyInfo
   type RGB = typingsSlinky.openfin.shapesMod.RGB
@@ -47,7 +51,7 @@ package object fin {
   type RvmLaunchOptions = typingsSlinky.openfin.applicationMod.RvmLaunchOptions
   type ShortCutConfig = typingsSlinky.openfin.applicationMod.ShortCutConfig
   type Size = typingsSlinky.openfin.shapesMod.Size
-  type Snapshot = typingsSlinky.openfin.platformMod.Snapshot
+  type Snapshot = typingsSlinky.openfin.platformPlatformMod.Snapshot
   type SystemWindowInfo = typingsSlinky.openfin.systemWindowMod.WindowInfo
   type Transition = typingsSlinky.openfin.shapesMod.Transition
   type TransitionBase = typingsSlinky.openfin.shapesMod.TransitionBase
@@ -59,6 +63,7 @@ package object fin {
   type WindowDetail = typingsSlinky.openfin.systemWindowMod.WindowDetail
   type WindowInfo = typingsSlinky.openfin.systemWindowMod.WindowInfo
   type WindowOption = typingsSlinky.openfin.windowOptionMod.WindowOption
+  type _Window = typingsSlinky.openfin.windowWindowMod.Window
   // v2 shapes
   type applicationLogInfo = typingsSlinky.openfin.applicationMod.LogInfo
 }

@@ -4,130 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListenOptions extends js.Object {
-  var backlog: js.UndefOr[Double] = js.native
-  var exclusive: js.UndefOr[Boolean] = js.native
-  var host: js.UndefOr[String] = js.native
+  var backlog: js.UndefOr[Double] = js.undefined
+  var exclusive: js.UndefOr[Boolean] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
   /**
     * @default false
     */
-  var ipv6Only: js.UndefOr[Boolean] = js.native
-  var path: js.UndefOr[String] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var readableAll: js.UndefOr[Boolean] = js.native
-  var writableAll: js.UndefOr[Boolean] = js.native
+  var ipv6Only: js.UndefOr[Boolean] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var readableAll: js.UndefOr[Boolean] = js.undefined
+  var writableAll: js.UndefOr[Boolean] = js.undefined
 }
 
 object ListenOptions {
   @scala.inline
-  def apply(): ListenOptions = {
+  def apply(
+    backlog: js.UndefOr[Double] = js.undefined,
+    exclusive: js.UndefOr[Boolean] = js.undefined,
+    host: String = null,
+    ipv6Only: js.UndefOr[Boolean] = js.undefined,
+    path: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    readableAll: js.UndefOr[Boolean] = js.undefined,
+    writableAll: js.UndefOr[Boolean] = js.undefined
+  ): ListenOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(backlog)) __obj.updateDynamic("backlog")(backlog.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.get.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(ipv6Only)) __obj.updateDynamic("ipv6Only")(ipv6Only.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readableAll)) __obj.updateDynamic("readableAll")(readableAll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(writableAll)) __obj.updateDynamic("writableAll")(writableAll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenOptions]
   }
-  @scala.inline
-  implicit class ListenOptionsOps[Self <: ListenOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBacklog(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBacklog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpv6Only(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpv6Only: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Only")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadableAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readableAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadableAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readableAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWritableAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writableAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWritableAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writableAll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

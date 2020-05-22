@@ -4,134 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationAction extends js.Object {
-  var action: js.UndefOr[NavigationAction] = js.native
-  var actions: js.UndefOr[js.Array[NavigationAction]] = js.native
-  var key: js.UndefOr[Nullable[String]] = js.native
-  var meta: js.UndefOr[js.Object] = js.native
-  var navKey: js.UndefOr[Nullable[String]] = js.native
-  var params: js.UndefOr[Params] = js.native
-  var routeName: js.UndefOr[String] = js.native
-  var `type`: String = js.native
+  var action: js.UndefOr[NavigationAction] = js.undefined
+  var actions: js.UndefOr[js.Array[NavigationAction]] = js.undefined
+  var key: js.UndefOr[Nullable[String]] = js.undefined
+  var meta: js.UndefOr[js.Object] = js.undefined
+  var navKey: js.UndefOr[Nullable[String]] = js.undefined
+  var params: js.UndefOr[Params] = js.undefined
+  var routeName: js.UndefOr[String] = js.undefined
+  var `type`: String
 }
 
 object NavigationAction {
   @scala.inline
-  def apply(`type`: String): NavigationAction = {
+  def apply(
+    `type`: String,
+    action: NavigationAction = null,
+    actions: js.Array[NavigationAction] = null,
+    key: js.UndefOr[Null | Nullable[String]] = js.undefined,
+    meta: js.Object = null,
+    navKey: js.UndefOr[Null | Nullable[String]] = js.undefined,
+    params: Params = null,
+    routeName: String = null
+  ): NavigationAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (!js.isUndefined(navKey)) __obj.updateDynamic("navKey")(navKey.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (routeName != null) __obj.updateDynamic("routeName")(routeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationAction]
   }
-  @scala.inline
-  implicit class NavigationActionOps[Self <: NavigationAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAction(value: NavigationAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActions(value: js.Array[NavigationAction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: Nullable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(null)
-        ret
-    }
-    @scala.inline
-    def withMeta(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavKey(value: Nullable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navKey")(null)
-        ret
-    }
-    @scala.inline
-    def withParams(value: Params): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

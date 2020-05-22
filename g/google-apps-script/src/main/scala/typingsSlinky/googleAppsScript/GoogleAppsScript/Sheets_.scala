@@ -155,314 +155,313 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Sheets_ extends js.Object {
-  var Spreadsheets: js.UndefOr[SpreadsheetsCollection] = js.native
+  var Spreadsheets: js.UndefOr[SpreadsheetsCollection] = js.undefined
   // Create a new instance of AddBandingRequest
-  def newAddBandingRequest(): AddBandingRequest = js.native
+  def newAddBandingRequest(): AddBandingRequest
   // Create a new instance of AddChartRequest
-  def newAddChartRequest(): AddChartRequest = js.native
+  def newAddChartRequest(): AddChartRequest
   // Create a new instance of AddConditionalFormatRuleRequest
-  def newAddConditionalFormatRuleRequest(): AddConditionalFormatRuleRequest = js.native
+  def newAddConditionalFormatRuleRequest(): AddConditionalFormatRuleRequest
   // Create a new instance of AddDimensionGroupRequest
-  def newAddDimensionGroupRequest(): AddDimensionGroupRequest = js.native
+  def newAddDimensionGroupRequest(): AddDimensionGroupRequest
   // Create a new instance of AddFilterViewRequest
-  def newAddFilterViewRequest(): AddFilterViewRequest = js.native
+  def newAddFilterViewRequest(): AddFilterViewRequest
   // Create a new instance of AddNamedRangeRequest
-  def newAddNamedRangeRequest(): AddNamedRangeRequest = js.native
+  def newAddNamedRangeRequest(): AddNamedRangeRequest
   // Create a new instance of AddProtectedRangeRequest
-  def newAddProtectedRangeRequest(): AddProtectedRangeRequest = js.native
+  def newAddProtectedRangeRequest(): AddProtectedRangeRequest
   // Create a new instance of AddSheetRequest
-  def newAddSheetRequest(): AddSheetRequest = js.native
+  def newAddSheetRequest(): AddSheetRequest
   // Create a new instance of AppendCellsRequest
-  def newAppendCellsRequest(): AppendCellsRequest = js.native
+  def newAppendCellsRequest(): AppendCellsRequest
   // Create a new instance of AppendDimensionRequest
-  def newAppendDimensionRequest(): AppendDimensionRequest = js.native
+  def newAppendDimensionRequest(): AppendDimensionRequest
   // Create a new instance of AutoFillRequest
-  def newAutoFillRequest(): AutoFillRequest = js.native
+  def newAutoFillRequest(): AutoFillRequest
   // Create a new instance of AutoResizeDimensionsRequest
-  def newAutoResizeDimensionsRequest(): AutoResizeDimensionsRequest = js.native
+  def newAutoResizeDimensionsRequest(): AutoResizeDimensionsRequest
   // Create a new instance of BandedRange
-  def newBandedRange(): BandedRange = js.native
+  def newBandedRange(): BandedRange
   // Create a new instance of BandingProperties
-  def newBandingProperties(): BandingProperties = js.native
+  def newBandingProperties(): BandingProperties
   // Create a new instance of BasicChartAxis
-  def newBasicChartAxis(): BasicChartAxis = js.native
+  def newBasicChartAxis(): BasicChartAxis
   // Create a new instance of BasicChartDomain
-  def newBasicChartDomain(): BasicChartDomain = js.native
+  def newBasicChartDomain(): BasicChartDomain
   // Create a new instance of BasicChartSeries
-  def newBasicChartSeries(): BasicChartSeries = js.native
+  def newBasicChartSeries(): BasicChartSeries
   // Create a new instance of BasicChartSpec
-  def newBasicChartSpec(): BasicChartSpec = js.native
+  def newBasicChartSpec(): BasicChartSpec
   // Create a new instance of BasicFilter
-  def newBasicFilter(): BasicFilter = js.native
+  def newBasicFilter(): BasicFilter
   // Create a new instance of BatchClearValuesByDataFilterRequest
-  def newBatchClearValuesByDataFilterRequest(): BatchClearValuesByDataFilterRequest = js.native
+  def newBatchClearValuesByDataFilterRequest(): BatchClearValuesByDataFilterRequest
   // Create a new instance of BatchClearValuesRequest
-  def newBatchClearValuesRequest(): BatchClearValuesRequest = js.native
+  def newBatchClearValuesRequest(): BatchClearValuesRequest
   // Create a new instance of BatchGetValuesByDataFilterRequest
-  def newBatchGetValuesByDataFilterRequest(): BatchGetValuesByDataFilterRequest = js.native
+  def newBatchGetValuesByDataFilterRequest(): BatchGetValuesByDataFilterRequest
   // Create a new instance of BatchUpdateSpreadsheetRequest
-  def newBatchUpdateSpreadsheetRequest(): BatchUpdateSpreadsheetRequest = js.native
+  def newBatchUpdateSpreadsheetRequest(): BatchUpdateSpreadsheetRequest
   // Create a new instance of BatchUpdateValuesByDataFilterRequest
-  def newBatchUpdateValuesByDataFilterRequest(): BatchUpdateValuesByDataFilterRequest = js.native
+  def newBatchUpdateValuesByDataFilterRequest(): BatchUpdateValuesByDataFilterRequest
   // Create a new instance of BatchUpdateValuesRequest
-  def newBatchUpdateValuesRequest(): BatchUpdateValuesRequest = js.native
+  def newBatchUpdateValuesRequest(): BatchUpdateValuesRequest
   // Create a new instance of BooleanCondition
-  def newBooleanCondition(): BooleanCondition = js.native
+  def newBooleanCondition(): BooleanCondition
   // Create a new instance of BooleanRule
-  def newBooleanRule(): BooleanRule = js.native
+  def newBooleanRule(): BooleanRule
   // Create a new instance of Border
-  def newBorder(): Border = js.native
+  def newBorder(): Border
   // Create a new instance of Borders
-  def newBorders(): Borders = js.native
+  def newBorders(): Borders
   // Create a new instance of BubbleChartSpec
-  def newBubbleChartSpec(): BubbleChartSpec = js.native
+  def newBubbleChartSpec(): BubbleChartSpec
   // Create a new instance of CandlestickChartSpec
-  def newCandlestickChartSpec(): CandlestickChartSpec = js.native
+  def newCandlestickChartSpec(): CandlestickChartSpec
   // Create a new instance of CandlestickData
-  def newCandlestickData(): CandlestickData = js.native
+  def newCandlestickData(): CandlestickData
   // Create a new instance of CandlestickDomain
-  def newCandlestickDomain(): CandlestickDomain = js.native
+  def newCandlestickDomain(): CandlestickDomain
   // Create a new instance of CandlestickSeries
-  def newCandlestickSeries(): CandlestickSeries = js.native
+  def newCandlestickSeries(): CandlestickSeries
   // Create a new instance of CellData
-  def newCellData(): CellData = js.native
+  def newCellData(): CellData
   // Create a new instance of CellFormat
-  def newCellFormat(): CellFormat = js.native
+  def newCellFormat(): CellFormat
   // Create a new instance of ChartData
-  def newChartData(): ChartData = js.native
+  def newChartData(): ChartData
   // Create a new instance of ChartSourceRange
-  def newChartSourceRange(): ChartSourceRange = js.native
+  def newChartSourceRange(): ChartSourceRange
   // Create a new instance of ChartSpec
-  def newChartSpec(): ChartSpec = js.native
+  def newChartSpec(): ChartSpec
   // Create a new instance of ClearBasicFilterRequest
-  def newClearBasicFilterRequest(): ClearBasicFilterRequest = js.native
+  def newClearBasicFilterRequest(): ClearBasicFilterRequest
   // Create a new instance of ClearValuesRequest
-  def newClearValuesRequest(): js.Any = js.native
+  def newClearValuesRequest(): js.Any
    // Schema.ClearValuesRequest;
   // Create a new instance of Color
-  def newColor(): Color = js.native
+  def newColor(): Color
   // Create a new instance of ConditionValue
-  def newConditionValue(): ConditionValue = js.native
+  def newConditionValue(): ConditionValue
   // Create a new instance of ConditionalFormatRule
-  def newConditionalFormatRule(): ConditionalFormatRule = js.native
+  def newConditionalFormatRule(): ConditionalFormatRule
   // Create a new instance of CopyPasteRequest
-  def newCopyPasteRequest(): CopyPasteRequest = js.native
+  def newCopyPasteRequest(): CopyPasteRequest
   // Create a new instance of CopySheetToAnotherSpreadsheetRequest
-  def newCopySheetToAnotherSpreadsheetRequest(): CopySheetToAnotherSpreadsheetRequest = js.native
+  def newCopySheetToAnotherSpreadsheetRequest(): CopySheetToAnotherSpreadsheetRequest
   // Create a new instance of CreateDeveloperMetadataRequest
-  def newCreateDeveloperMetadataRequest(): CreateDeveloperMetadataRequest = js.native
+  def newCreateDeveloperMetadataRequest(): CreateDeveloperMetadataRequest
   // Create a new instance of CutPasteRequest
-  def newCutPasteRequest(): CutPasteRequest = js.native
+  def newCutPasteRequest(): CutPasteRequest
   // Create a new instance of DataFilter
-  def newDataFilter(): DataFilter = js.native
+  def newDataFilter(): DataFilter
   // Create a new instance of DataFilterValueRange
-  def newDataFilterValueRange(): DataFilterValueRange = js.native
+  def newDataFilterValueRange(): DataFilterValueRange
   // Create a new instance of DataValidationRule
-  def newDataValidationRule(): DataValidationRule = js.native
+  def newDataValidationRule(): DataValidationRule
   // Create a new instance of DateTimeRule
-  def newDateTimeRule(): DateTimeRule = js.native
+  def newDateTimeRule(): DateTimeRule
   // Create a new instance of DeleteBandingRequest
-  def newDeleteBandingRequest(): DeleteBandingRequest = js.native
+  def newDeleteBandingRequest(): DeleteBandingRequest
   // Create a new instance of DeleteConditionalFormatRuleRequest
-  def newDeleteConditionalFormatRuleRequest(): DeleteConditionalFormatRuleRequest = js.native
+  def newDeleteConditionalFormatRuleRequest(): DeleteConditionalFormatRuleRequest
   // Create a new instance of DeleteDeveloperMetadataRequest
-  def newDeleteDeveloperMetadataRequest(): DeleteDeveloperMetadataRequest = js.native
+  def newDeleteDeveloperMetadataRequest(): DeleteDeveloperMetadataRequest
   // Create a new instance of DeleteDimensionGroupRequest
-  def newDeleteDimensionGroupRequest(): DeleteDimensionGroupRequest = js.native
+  def newDeleteDimensionGroupRequest(): DeleteDimensionGroupRequest
   // Create a new instance of DeleteDimensionRequest
-  def newDeleteDimensionRequest(): DeleteDimensionRequest = js.native
+  def newDeleteDimensionRequest(): DeleteDimensionRequest
   // Create a new instance of DeleteEmbeddedObjectRequest
-  def newDeleteEmbeddedObjectRequest(): DeleteEmbeddedObjectRequest = js.native
+  def newDeleteEmbeddedObjectRequest(): DeleteEmbeddedObjectRequest
   // Create a new instance of DeleteFilterViewRequest
-  def newDeleteFilterViewRequest(): DeleteFilterViewRequest = js.native
+  def newDeleteFilterViewRequest(): DeleteFilterViewRequest
   // Create a new instance of DeleteNamedRangeRequest
-  def newDeleteNamedRangeRequest(): DeleteNamedRangeRequest = js.native
+  def newDeleteNamedRangeRequest(): DeleteNamedRangeRequest
   // Create a new instance of DeleteProtectedRangeRequest
-  def newDeleteProtectedRangeRequest(): DeleteProtectedRangeRequest = js.native
+  def newDeleteProtectedRangeRequest(): DeleteProtectedRangeRequest
   // Create a new instance of DeleteRangeRequest
-  def newDeleteRangeRequest(): DeleteRangeRequest = js.native
+  def newDeleteRangeRequest(): DeleteRangeRequest
   // Create a new instance of DeleteSheetRequest
-  def newDeleteSheetRequest(): DeleteSheetRequest = js.native
+  def newDeleteSheetRequest(): DeleteSheetRequest
   // Create a new instance of DeveloperMetadata
-  def newDeveloperMetadata(): DeveloperMetadata = js.native
+  def newDeveloperMetadata(): DeveloperMetadata
   // Create a new instance of DeveloperMetadataLocation
-  def newDeveloperMetadataLocation(): DeveloperMetadataLocation = js.native
+  def newDeveloperMetadataLocation(): DeveloperMetadataLocation
   // Create a new instance of DeveloperMetadataLookup
-  def newDeveloperMetadataLookup(): DeveloperMetadataLookup = js.native
+  def newDeveloperMetadataLookup(): DeveloperMetadataLookup
   // Create a new instance of DimensionGroup
-  def newDimensionGroup(): DimensionGroup = js.native
+  def newDimensionGroup(): DimensionGroup
   // Create a new instance of DimensionProperties
-  def newDimensionProperties(): DimensionProperties = js.native
+  def newDimensionProperties(): DimensionProperties
   // Create a new instance of DimensionRange
-  def newDimensionRange(): DimensionRange = js.native
+  def newDimensionRange(): DimensionRange
   // Create a new instance of DuplicateFilterViewRequest
-  def newDuplicateFilterViewRequest(): DuplicateFilterViewRequest = js.native
+  def newDuplicateFilterViewRequest(): DuplicateFilterViewRequest
   // Create a new instance of DuplicateSheetRequest
-  def newDuplicateSheetRequest(): DuplicateSheetRequest = js.native
+  def newDuplicateSheetRequest(): DuplicateSheetRequest
   // Create a new instance of Editors
-  def newEditors(): Editors = js.native
+  def newEditors(): Editors
   // Create a new instance of EmbeddedChart
-  def newEmbeddedChart(): EmbeddedChart = js.native
+  def newEmbeddedChart(): EmbeddedChart
   // Create a new instance of EmbeddedObjectPosition
-  def newEmbeddedObjectPosition(): EmbeddedObjectPosition = js.native
+  def newEmbeddedObjectPosition(): EmbeddedObjectPosition
   // Create a new instance of ErrorValue
-  def newErrorValue(): ErrorValue = js.native
+  def newErrorValue(): ErrorValue
   // Create a new instance of ExtendedValue
-  def newExtendedValue(): ExtendedValue = js.native
+  def newExtendedValue(): ExtendedValue
   // Create a new instance of FilterView
-  def newFilterView(): FilterView = js.native
+  def newFilterView(): FilterView
   // Create a new instance of FindReplaceRequest
-  def newFindReplaceRequest(): FindReplaceRequest = js.native
+  def newFindReplaceRequest(): FindReplaceRequest
   // Create a new instance of GetSpreadsheetByDataFilterRequest
-  def newGetSpreadsheetByDataFilterRequest(): GetSpreadsheetByDataFilterRequest = js.native
+  def newGetSpreadsheetByDataFilterRequest(): GetSpreadsheetByDataFilterRequest
   // Create a new instance of GradientRule
-  def newGradientRule(): GradientRule = js.native
+  def newGradientRule(): GradientRule
   // Create a new instance of GridCoordinate
-  def newGridCoordinate(): GridCoordinate = js.native
+  def newGridCoordinate(): GridCoordinate
   // Create a new instance of GridData
-  def newGridData(): GridData = js.native
+  def newGridData(): GridData
   // Create a new instance of GridProperties
-  def newGridProperties(): GridProperties = js.native
+  def newGridProperties(): GridProperties
   // Create a new instance of GridRange
-  def newGridRange(): GridRange = js.native
+  def newGridRange(): GridRange
   // Create a new instance of HistogramChartSpec
-  def newHistogramChartSpec(): HistogramChartSpec = js.native
+  def newHistogramChartSpec(): HistogramChartSpec
   // Create a new instance of HistogramRule
-  def newHistogramRule(): HistogramRule = js.native
+  def newHistogramRule(): HistogramRule
   // Create a new instance of HistogramSeries
-  def newHistogramSeries(): HistogramSeries = js.native
+  def newHistogramSeries(): HistogramSeries
   // Create a new instance of InsertDimensionRequest
-  def newInsertDimensionRequest(): InsertDimensionRequest = js.native
+  def newInsertDimensionRequest(): InsertDimensionRequest
   // Create a new instance of InsertRangeRequest
-  def newInsertRangeRequest(): InsertRangeRequest = js.native
+  def newInsertRangeRequest(): InsertRangeRequest
   // Create a new instance of InterpolationPoint
-  def newInterpolationPoint(): InterpolationPoint = js.native
+  def newInterpolationPoint(): InterpolationPoint
   // Create a new instance of IterativeCalculationSettings
-  def newIterativeCalculationSettings(): IterativeCalculationSettings = js.native
+  def newIterativeCalculationSettings(): IterativeCalculationSettings
   // Create a new instance of LineStyle
-  def newLineStyle(): LineStyle = js.native
+  def newLineStyle(): LineStyle
   // Create a new instance of ManualRule
-  def newManualRule(): ManualRule = js.native
+  def newManualRule(): ManualRule
   // Create a new instance of ManualRuleGroup
-  def newManualRuleGroup(): ManualRuleGroup = js.native
+  def newManualRuleGroup(): ManualRuleGroup
   // Create a new instance of MergeCellsRequest
-  def newMergeCellsRequest(): MergeCellsRequest = js.native
+  def newMergeCellsRequest(): MergeCellsRequest
   // Create a new instance of MoveDimensionRequest
-  def newMoveDimensionRequest(): MoveDimensionRequest = js.native
+  def newMoveDimensionRequest(): MoveDimensionRequest
   // Create a new instance of NamedRange
-  def newNamedRange(): NamedRange = js.native
+  def newNamedRange(): NamedRange
   // Create a new instance of NumberFormat
-  def newNumberFormat(): NumberFormat = js.native
+  def newNumberFormat(): NumberFormat
   // Create a new instance of OrgChartSpec
-  def newOrgChartSpec(): OrgChartSpec = js.native
+  def newOrgChartSpec(): OrgChartSpec
   // Create a new instance of OverlayPosition
-  def newOverlayPosition(): OverlayPosition = js.native
+  def newOverlayPosition(): OverlayPosition
   // Create a new instance of Padding
-  def newPadding(): Padding = js.native
+  def newPadding(): Padding
   // Create a new instance of PasteDataRequest
-  def newPasteDataRequest(): PasteDataRequest = js.native
+  def newPasteDataRequest(): PasteDataRequest
   // Create a new instance of PieChartSpec
-  def newPieChartSpec(): PieChartSpec = js.native
+  def newPieChartSpec(): PieChartSpec
   // Create a new instance of PivotGroup
-  def newPivotGroup(): PivotGroup = js.native
+  def newPivotGroup(): PivotGroup
   // Create a new instance of PivotGroupRule
-  def newPivotGroupRule(): PivotGroupRule = js.native
+  def newPivotGroupRule(): PivotGroupRule
   // Create a new instance of PivotGroupSortValueBucket
-  def newPivotGroupSortValueBucket(): PivotGroupSortValueBucket = js.native
+  def newPivotGroupSortValueBucket(): PivotGroupSortValueBucket
   // Create a new instance of PivotGroupValueMetadata
-  def newPivotGroupValueMetadata(): PivotGroupValueMetadata = js.native
+  def newPivotGroupValueMetadata(): PivotGroupValueMetadata
   // Create a new instance of PivotTable
-  def newPivotTable(): PivotTable = js.native
+  def newPivotTable(): PivotTable
   // Create a new instance of PivotValue
-  def newPivotValue(): PivotValue = js.native
+  def newPivotValue(): PivotValue
   // Create a new instance of ProtectedRange
-  def newProtectedRange(): ProtectedRange = js.native
+  def newProtectedRange(): ProtectedRange
   // Create a new instance of RandomizeRangeRequest
-  def newRandomizeRangeRequest(): RandomizeRangeRequest = js.native
+  def newRandomizeRangeRequest(): RandomizeRangeRequest
   // Create a new instance of RepeatCellRequest
-  def newRepeatCellRequest(): RepeatCellRequest = js.native
+  def newRepeatCellRequest(): RepeatCellRequest
   // Create a new instance of Request
-  def newRequest(): Request = js.native
+  def newRequest(): Request
   // Create a new instance of RowData
-  def newRowData(): RowData = js.native
+  def newRowData(): RowData
   // Create a new instance of SearchDeveloperMetadataRequest
-  def newSearchDeveloperMetadataRequest(): SearchDeveloperMetadataRequest = js.native
+  def newSearchDeveloperMetadataRequest(): SearchDeveloperMetadataRequest
   // Create a new instance of SetBasicFilterRequest
-  def newSetBasicFilterRequest(): SetBasicFilterRequest = js.native
+  def newSetBasicFilterRequest(): SetBasicFilterRequest
   // Create a new instance of SetDataValidationRequest
-  def newSetDataValidationRequest(): SetDataValidationRequest = js.native
+  def newSetDataValidationRequest(): SetDataValidationRequest
   // Create a new instance of Sheet
-  def newSheet(): Sheet = js.native
+  def newSheet(): Sheet
   // Create a new instance of SheetProperties
-  def newSheetProperties(): SheetProperties = js.native
+  def newSheetProperties(): SheetProperties
   // Create a new instance of SortRangeRequest
-  def newSortRangeRequest(): SortRangeRequest = js.native
+  def newSortRangeRequest(): SortRangeRequest
   // Create a new instance of SortSpec
-  def newSortSpec(): SortSpec = js.native
+  def newSortSpec(): SortSpec
   // Create a new instance of SourceAndDestination
-  def newSourceAndDestination(): SourceAndDestination = js.native
+  def newSourceAndDestination(): SourceAndDestination
   // Create a new instance of Spreadsheet
-  def newSpreadsheet(): typingsSlinky.googleAppsScript.GoogleAppsScript.Sheets.Schema.Spreadsheet = js.native
+  def newSpreadsheet(): typingsSlinky.googleAppsScript.GoogleAppsScript.Sheets.Schema.Spreadsheet
   // Create a new instance of SpreadsheetProperties
-  def newSpreadsheetProperties(): SpreadsheetProperties = js.native
+  def newSpreadsheetProperties(): SpreadsheetProperties
   // Create a new instance of TextFormat
-  def newTextFormat(): TextFormat = js.native
+  def newTextFormat(): TextFormat
   // Create a new instance of TextFormatRun
-  def newTextFormatRun(): TextFormatRun = js.native
+  def newTextFormatRun(): TextFormatRun
   // Create a new instance of TextPosition
-  def newTextPosition(): TextPosition = js.native
+  def newTextPosition(): TextPosition
   // Create a new instance of TextRotation
-  def newTextRotation(): TextRotation = js.native
+  def newTextRotation(): TextRotation
   // Create a new instance of TextToColumnsRequest
-  def newTextToColumnsRequest(): TextToColumnsRequest = js.native
+  def newTextToColumnsRequest(): TextToColumnsRequest
   // Create a new instance of TreemapChartColorScale
-  def newTreemapChartColorScale(): TreemapChartColorScale = js.native
+  def newTreemapChartColorScale(): TreemapChartColorScale
   // Create a new instance of TreemapChartSpec
-  def newTreemapChartSpec(): TreemapChartSpec = js.native
+  def newTreemapChartSpec(): TreemapChartSpec
   // Create a new instance of UnmergeCellsRequest
-  def newUnmergeCellsRequest(): UnmergeCellsRequest = js.native
+  def newUnmergeCellsRequest(): UnmergeCellsRequest
   // Create a new instance of UpdateBandingRequest
-  def newUpdateBandingRequest(): UpdateBandingRequest = js.native
+  def newUpdateBandingRequest(): UpdateBandingRequest
   // Create a new instance of UpdateBordersRequest
-  def newUpdateBordersRequest(): UpdateBordersRequest = js.native
+  def newUpdateBordersRequest(): UpdateBordersRequest
   // Create a new instance of UpdateCellsRequest
-  def newUpdateCellsRequest(): UpdateCellsRequest = js.native
+  def newUpdateCellsRequest(): UpdateCellsRequest
   // Create a new instance of UpdateChartSpecRequest
-  def newUpdateChartSpecRequest(): UpdateChartSpecRequest = js.native
+  def newUpdateChartSpecRequest(): UpdateChartSpecRequest
   // Create a new instance of UpdateConditionalFormatRuleRequest
-  def newUpdateConditionalFormatRuleRequest(): UpdateConditionalFormatRuleRequest = js.native
+  def newUpdateConditionalFormatRuleRequest(): UpdateConditionalFormatRuleRequest
   // Create a new instance of UpdateDeveloperMetadataRequest
-  def newUpdateDeveloperMetadataRequest(): UpdateDeveloperMetadataRequest = js.native
+  def newUpdateDeveloperMetadataRequest(): UpdateDeveloperMetadataRequest
   // Create a new instance of UpdateDimensionGroupRequest
-  def newUpdateDimensionGroupRequest(): UpdateDimensionGroupRequest = js.native
+  def newUpdateDimensionGroupRequest(): UpdateDimensionGroupRequest
   // Create a new instance of UpdateDimensionPropertiesRequest
-  def newUpdateDimensionPropertiesRequest(): UpdateDimensionPropertiesRequest = js.native
+  def newUpdateDimensionPropertiesRequest(): UpdateDimensionPropertiesRequest
   // Create a new instance of UpdateEmbeddedObjectPositionRequest
-  def newUpdateEmbeddedObjectPositionRequest(): UpdateEmbeddedObjectPositionRequest = js.native
+  def newUpdateEmbeddedObjectPositionRequest(): UpdateEmbeddedObjectPositionRequest
   // Create a new instance of UpdateFilterViewRequest
-  def newUpdateFilterViewRequest(): UpdateFilterViewRequest = js.native
+  def newUpdateFilterViewRequest(): UpdateFilterViewRequest
   // Create a new instance of UpdateNamedRangeRequest
-  def newUpdateNamedRangeRequest(): UpdateNamedRangeRequest = js.native
+  def newUpdateNamedRangeRequest(): UpdateNamedRangeRequest
   // Create a new instance of UpdateProtectedRangeRequest
-  def newUpdateProtectedRangeRequest(): UpdateProtectedRangeRequest = js.native
+  def newUpdateProtectedRangeRequest(): UpdateProtectedRangeRequest
   // Create a new instance of UpdateSheetPropertiesRequest
-  def newUpdateSheetPropertiesRequest(): UpdateSheetPropertiesRequest = js.native
+  def newUpdateSheetPropertiesRequest(): UpdateSheetPropertiesRequest
   // Create a new instance of UpdateSpreadsheetPropertiesRequest
-  def newUpdateSpreadsheetPropertiesRequest(): UpdateSpreadsheetPropertiesRequest = js.native
+  def newUpdateSpreadsheetPropertiesRequest(): UpdateSpreadsheetPropertiesRequest
   // Create a new instance of ValueRange
-  def newValueRange(): ValueRange = js.native
+  def newValueRange(): ValueRange
   // Create a new instance of WaterfallChartColumnStyle
-  def newWaterfallChartColumnStyle(): WaterfallChartColumnStyle = js.native
+  def newWaterfallChartColumnStyle(): WaterfallChartColumnStyle
   // Create a new instance of WaterfallChartCustomSubtotal
-  def newWaterfallChartCustomSubtotal(): WaterfallChartCustomSubtotal = js.native
+  def newWaterfallChartCustomSubtotal(): WaterfallChartCustomSubtotal
   // Create a new instance of WaterfallChartDomain
-  def newWaterfallChartDomain(): WaterfallChartDomain = js.native
+  def newWaterfallChartDomain(): WaterfallChartDomain
   // Create a new instance of WaterfallChartSeries
-  def newWaterfallChartSeries(): WaterfallChartSeries = js.native
+  def newWaterfallChartSeries(): WaterfallChartSeries
   // Create a new instance of WaterfallChartSpec
-  def newWaterfallChartSpec(): WaterfallChartSpec = js.native
+  def newWaterfallChartSpec(): WaterfallChartSpec
 }
 
 object Sheets_ {
@@ -619,942 +618,12 @@ object Sheets_ {
     newWaterfallChartCustomSubtotal: () => WaterfallChartCustomSubtotal,
     newWaterfallChartDomain: () => WaterfallChartDomain,
     newWaterfallChartSeries: () => WaterfallChartSeries,
-    newWaterfallChartSpec: () => WaterfallChartSpec
+    newWaterfallChartSpec: () => WaterfallChartSpec,
+    Spreadsheets: SpreadsheetsCollection = null
   ): Sheets_ = {
     val __obj = js.Dynamic.literal(newAddBandingRequest = js.Any.fromFunction0(newAddBandingRequest), newAddChartRequest = js.Any.fromFunction0(newAddChartRequest), newAddConditionalFormatRuleRequest = js.Any.fromFunction0(newAddConditionalFormatRuleRequest), newAddDimensionGroupRequest = js.Any.fromFunction0(newAddDimensionGroupRequest), newAddFilterViewRequest = js.Any.fromFunction0(newAddFilterViewRequest), newAddNamedRangeRequest = js.Any.fromFunction0(newAddNamedRangeRequest), newAddProtectedRangeRequest = js.Any.fromFunction0(newAddProtectedRangeRequest), newAddSheetRequest = js.Any.fromFunction0(newAddSheetRequest), newAppendCellsRequest = js.Any.fromFunction0(newAppendCellsRequest), newAppendDimensionRequest = js.Any.fromFunction0(newAppendDimensionRequest), newAutoFillRequest = js.Any.fromFunction0(newAutoFillRequest), newAutoResizeDimensionsRequest = js.Any.fromFunction0(newAutoResizeDimensionsRequest), newBandedRange = js.Any.fromFunction0(newBandedRange), newBandingProperties = js.Any.fromFunction0(newBandingProperties), newBasicChartAxis = js.Any.fromFunction0(newBasicChartAxis), newBasicChartDomain = js.Any.fromFunction0(newBasicChartDomain), newBasicChartSeries = js.Any.fromFunction0(newBasicChartSeries), newBasicChartSpec = js.Any.fromFunction0(newBasicChartSpec), newBasicFilter = js.Any.fromFunction0(newBasicFilter), newBatchClearValuesByDataFilterRequest = js.Any.fromFunction0(newBatchClearValuesByDataFilterRequest), newBatchClearValuesRequest = js.Any.fromFunction0(newBatchClearValuesRequest), newBatchGetValuesByDataFilterRequest = js.Any.fromFunction0(newBatchGetValuesByDataFilterRequest), newBatchUpdateSpreadsheetRequest = js.Any.fromFunction0(newBatchUpdateSpreadsheetRequest), newBatchUpdateValuesByDataFilterRequest = js.Any.fromFunction0(newBatchUpdateValuesByDataFilterRequest), newBatchUpdateValuesRequest = js.Any.fromFunction0(newBatchUpdateValuesRequest), newBooleanCondition = js.Any.fromFunction0(newBooleanCondition), newBooleanRule = js.Any.fromFunction0(newBooleanRule), newBorder = js.Any.fromFunction0(newBorder), newBorders = js.Any.fromFunction0(newBorders), newBubbleChartSpec = js.Any.fromFunction0(newBubbleChartSpec), newCandlestickChartSpec = js.Any.fromFunction0(newCandlestickChartSpec), newCandlestickData = js.Any.fromFunction0(newCandlestickData), newCandlestickDomain = js.Any.fromFunction0(newCandlestickDomain), newCandlestickSeries = js.Any.fromFunction0(newCandlestickSeries), newCellData = js.Any.fromFunction0(newCellData), newCellFormat = js.Any.fromFunction0(newCellFormat), newChartData = js.Any.fromFunction0(newChartData), newChartSourceRange = js.Any.fromFunction0(newChartSourceRange), newChartSpec = js.Any.fromFunction0(newChartSpec), newClearBasicFilterRequest = js.Any.fromFunction0(newClearBasicFilterRequest), newClearValuesRequest = js.Any.fromFunction0(newClearValuesRequest), newColor = js.Any.fromFunction0(newColor), newConditionValue = js.Any.fromFunction0(newConditionValue), newConditionalFormatRule = js.Any.fromFunction0(newConditionalFormatRule), newCopyPasteRequest = js.Any.fromFunction0(newCopyPasteRequest), newCopySheetToAnotherSpreadsheetRequest = js.Any.fromFunction0(newCopySheetToAnotherSpreadsheetRequest), newCreateDeveloperMetadataRequest = js.Any.fromFunction0(newCreateDeveloperMetadataRequest), newCutPasteRequest = js.Any.fromFunction0(newCutPasteRequest), newDataFilter = js.Any.fromFunction0(newDataFilter), newDataFilterValueRange = js.Any.fromFunction0(newDataFilterValueRange), newDataValidationRule = js.Any.fromFunction0(newDataValidationRule), newDateTimeRule = js.Any.fromFunction0(newDateTimeRule), newDeleteBandingRequest = js.Any.fromFunction0(newDeleteBandingRequest), newDeleteConditionalFormatRuleRequest = js.Any.fromFunction0(newDeleteConditionalFormatRuleRequest), newDeleteDeveloperMetadataRequest = js.Any.fromFunction0(newDeleteDeveloperMetadataRequest), newDeleteDimensionGroupRequest = js.Any.fromFunction0(newDeleteDimensionGroupRequest), newDeleteDimensionRequest = js.Any.fromFunction0(newDeleteDimensionRequest), newDeleteEmbeddedObjectRequest = js.Any.fromFunction0(newDeleteEmbeddedObjectRequest), newDeleteFilterViewRequest = js.Any.fromFunction0(newDeleteFilterViewRequest), newDeleteNamedRangeRequest = js.Any.fromFunction0(newDeleteNamedRangeRequest), newDeleteProtectedRangeRequest = js.Any.fromFunction0(newDeleteProtectedRangeRequest), newDeleteRangeRequest = js.Any.fromFunction0(newDeleteRangeRequest), newDeleteSheetRequest = js.Any.fromFunction0(newDeleteSheetRequest), newDeveloperMetadata = js.Any.fromFunction0(newDeveloperMetadata), newDeveloperMetadataLocation = js.Any.fromFunction0(newDeveloperMetadataLocation), newDeveloperMetadataLookup = js.Any.fromFunction0(newDeveloperMetadataLookup), newDimensionGroup = js.Any.fromFunction0(newDimensionGroup), newDimensionProperties = js.Any.fromFunction0(newDimensionProperties), newDimensionRange = js.Any.fromFunction0(newDimensionRange), newDuplicateFilterViewRequest = js.Any.fromFunction0(newDuplicateFilterViewRequest), newDuplicateSheetRequest = js.Any.fromFunction0(newDuplicateSheetRequest), newEditors = js.Any.fromFunction0(newEditors), newEmbeddedChart = js.Any.fromFunction0(newEmbeddedChart), newEmbeddedObjectPosition = js.Any.fromFunction0(newEmbeddedObjectPosition), newErrorValue = js.Any.fromFunction0(newErrorValue), newExtendedValue = js.Any.fromFunction0(newExtendedValue), newFilterView = js.Any.fromFunction0(newFilterView), newFindReplaceRequest = js.Any.fromFunction0(newFindReplaceRequest), newGetSpreadsheetByDataFilterRequest = js.Any.fromFunction0(newGetSpreadsheetByDataFilterRequest), newGradientRule = js.Any.fromFunction0(newGradientRule), newGridCoordinate = js.Any.fromFunction0(newGridCoordinate), newGridData = js.Any.fromFunction0(newGridData), newGridProperties = js.Any.fromFunction0(newGridProperties), newGridRange = js.Any.fromFunction0(newGridRange), newHistogramChartSpec = js.Any.fromFunction0(newHistogramChartSpec), newHistogramRule = js.Any.fromFunction0(newHistogramRule), newHistogramSeries = js.Any.fromFunction0(newHistogramSeries), newInsertDimensionRequest = js.Any.fromFunction0(newInsertDimensionRequest), newInsertRangeRequest = js.Any.fromFunction0(newInsertRangeRequest), newInterpolationPoint = js.Any.fromFunction0(newInterpolationPoint), newIterativeCalculationSettings = js.Any.fromFunction0(newIterativeCalculationSettings), newLineStyle = js.Any.fromFunction0(newLineStyle), newManualRule = js.Any.fromFunction0(newManualRule), newManualRuleGroup = js.Any.fromFunction0(newManualRuleGroup), newMergeCellsRequest = js.Any.fromFunction0(newMergeCellsRequest), newMoveDimensionRequest = js.Any.fromFunction0(newMoveDimensionRequest), newNamedRange = js.Any.fromFunction0(newNamedRange), newNumberFormat = js.Any.fromFunction0(newNumberFormat), newOrgChartSpec = js.Any.fromFunction0(newOrgChartSpec), newOverlayPosition = js.Any.fromFunction0(newOverlayPosition), newPadding = js.Any.fromFunction0(newPadding), newPasteDataRequest = js.Any.fromFunction0(newPasteDataRequest), newPieChartSpec = js.Any.fromFunction0(newPieChartSpec), newPivotGroup = js.Any.fromFunction0(newPivotGroup), newPivotGroupRule = js.Any.fromFunction0(newPivotGroupRule), newPivotGroupSortValueBucket = js.Any.fromFunction0(newPivotGroupSortValueBucket), newPivotGroupValueMetadata = js.Any.fromFunction0(newPivotGroupValueMetadata), newPivotTable = js.Any.fromFunction0(newPivotTable), newPivotValue = js.Any.fromFunction0(newPivotValue), newProtectedRange = js.Any.fromFunction0(newProtectedRange), newRandomizeRangeRequest = js.Any.fromFunction0(newRandomizeRangeRequest), newRepeatCellRequest = js.Any.fromFunction0(newRepeatCellRequest), newRequest = js.Any.fromFunction0(newRequest), newRowData = js.Any.fromFunction0(newRowData), newSearchDeveloperMetadataRequest = js.Any.fromFunction0(newSearchDeveloperMetadataRequest), newSetBasicFilterRequest = js.Any.fromFunction0(newSetBasicFilterRequest), newSetDataValidationRequest = js.Any.fromFunction0(newSetDataValidationRequest), newSheet = js.Any.fromFunction0(newSheet), newSheetProperties = js.Any.fromFunction0(newSheetProperties), newSortRangeRequest = js.Any.fromFunction0(newSortRangeRequest), newSortSpec = js.Any.fromFunction0(newSortSpec), newSourceAndDestination = js.Any.fromFunction0(newSourceAndDestination), newSpreadsheet = js.Any.fromFunction0(newSpreadsheet), newSpreadsheetProperties = js.Any.fromFunction0(newSpreadsheetProperties), newTextFormat = js.Any.fromFunction0(newTextFormat), newTextFormatRun = js.Any.fromFunction0(newTextFormatRun), newTextPosition = js.Any.fromFunction0(newTextPosition), newTextRotation = js.Any.fromFunction0(newTextRotation), newTextToColumnsRequest = js.Any.fromFunction0(newTextToColumnsRequest), newTreemapChartColorScale = js.Any.fromFunction0(newTreemapChartColorScale), newTreemapChartSpec = js.Any.fromFunction0(newTreemapChartSpec), newUnmergeCellsRequest = js.Any.fromFunction0(newUnmergeCellsRequest), newUpdateBandingRequest = js.Any.fromFunction0(newUpdateBandingRequest), newUpdateBordersRequest = js.Any.fromFunction0(newUpdateBordersRequest), newUpdateCellsRequest = js.Any.fromFunction0(newUpdateCellsRequest), newUpdateChartSpecRequest = js.Any.fromFunction0(newUpdateChartSpecRequest), newUpdateConditionalFormatRuleRequest = js.Any.fromFunction0(newUpdateConditionalFormatRuleRequest), newUpdateDeveloperMetadataRequest = js.Any.fromFunction0(newUpdateDeveloperMetadataRequest), newUpdateDimensionGroupRequest = js.Any.fromFunction0(newUpdateDimensionGroupRequest), newUpdateDimensionPropertiesRequest = js.Any.fromFunction0(newUpdateDimensionPropertiesRequest), newUpdateEmbeddedObjectPositionRequest = js.Any.fromFunction0(newUpdateEmbeddedObjectPositionRequest), newUpdateFilterViewRequest = js.Any.fromFunction0(newUpdateFilterViewRequest), newUpdateNamedRangeRequest = js.Any.fromFunction0(newUpdateNamedRangeRequest), newUpdateProtectedRangeRequest = js.Any.fromFunction0(newUpdateProtectedRangeRequest), newUpdateSheetPropertiesRequest = js.Any.fromFunction0(newUpdateSheetPropertiesRequest), newUpdateSpreadsheetPropertiesRequest = js.Any.fromFunction0(newUpdateSpreadsheetPropertiesRequest), newValueRange = js.Any.fromFunction0(newValueRange), newWaterfallChartColumnStyle = js.Any.fromFunction0(newWaterfallChartColumnStyle), newWaterfallChartCustomSubtotal = js.Any.fromFunction0(newWaterfallChartCustomSubtotal), newWaterfallChartDomain = js.Any.fromFunction0(newWaterfallChartDomain), newWaterfallChartSeries = js.Any.fromFunction0(newWaterfallChartSeries), newWaterfallChartSpec = js.Any.fromFunction0(newWaterfallChartSpec))
+    if (Spreadsheets != null) __obj.updateDynamic("Spreadsheets")(Spreadsheets.asInstanceOf[js.Any])
     __obj.asInstanceOf[Sheets_]
   }
-  @scala.inline
-  implicit class Sheets_Ops[Self <: Sheets_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewAddBandingRequest(value: () => AddBandingRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddBandingRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddChartRequest(value: () => AddChartRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddChartRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddConditionalFormatRuleRequest(value: () => AddConditionalFormatRuleRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddConditionalFormatRuleRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddDimensionGroupRequest(value: () => AddDimensionGroupRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddDimensionGroupRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddFilterViewRequest(value: () => AddFilterViewRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddFilterViewRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddNamedRangeRequest(value: () => AddNamedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddNamedRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddProtectedRangeRequest(value: () => AddProtectedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddProtectedRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAddSheetRequest(value: () => AddSheetRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAddSheetRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAppendCellsRequest(value: () => AppendCellsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAppendCellsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAppendDimensionRequest(value: () => AppendDimensionRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAppendDimensionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAutoFillRequest(value: () => AutoFillRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAutoFillRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAutoResizeDimensionsRequest(value: () => AutoResizeDimensionsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAutoResizeDimensionsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBandedRange(value: () => BandedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBandedRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBandingProperties(value: () => BandingProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBandingProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBasicChartAxis(value: () => BasicChartAxis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBasicChartAxis")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBasicChartDomain(value: () => BasicChartDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBasicChartDomain")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBasicChartSeries(value: () => BasicChartSeries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBasicChartSeries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBasicChartSpec(value: () => BasicChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBasicChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBasicFilter(value: () => BasicFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBasicFilter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBatchClearValuesByDataFilterRequest(value: () => BatchClearValuesByDataFilterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBatchClearValuesByDataFilterRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBatchClearValuesRequest(value: () => BatchClearValuesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBatchClearValuesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBatchGetValuesByDataFilterRequest(value: () => BatchGetValuesByDataFilterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBatchGetValuesByDataFilterRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBatchUpdateSpreadsheetRequest(value: () => BatchUpdateSpreadsheetRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBatchUpdateSpreadsheetRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBatchUpdateValuesByDataFilterRequest(value: () => BatchUpdateValuesByDataFilterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBatchUpdateValuesByDataFilterRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBatchUpdateValuesRequest(value: () => BatchUpdateValuesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBatchUpdateValuesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBooleanCondition(value: () => BooleanCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBooleanCondition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBooleanRule(value: () => BooleanRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBooleanRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBorder(value: () => Border): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBorder")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBorders(value: () => Borders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBorders")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewBubbleChartSpec(value: () => BubbleChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newBubbleChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCandlestickChartSpec(value: () => CandlestickChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCandlestickChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCandlestickData(value: () => CandlestickData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCandlestickData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCandlestickDomain(value: () => CandlestickDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCandlestickDomain")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCandlestickSeries(value: () => CandlestickSeries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCandlestickSeries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCellData(value: () => CellData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCellData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCellFormat(value: () => CellFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCellFormat")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewChartData(value: () => ChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newChartData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewChartSourceRange(value: () => ChartSourceRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newChartSourceRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewChartSpec(value: () => ChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewClearBasicFilterRequest(value: () => ClearBasicFilterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newClearBasicFilterRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewClearValuesRequest(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newClearValuesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewColor(value: () => Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newColor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewConditionValue(value: () => ConditionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newConditionValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewConditionalFormatRule(value: () => ConditionalFormatRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newConditionalFormatRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCopyPasteRequest(value: () => CopyPasteRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCopyPasteRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCopySheetToAnotherSpreadsheetRequest(value: () => CopySheetToAnotherSpreadsheetRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCopySheetToAnotherSpreadsheetRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCreateDeveloperMetadataRequest(value: () => CreateDeveloperMetadataRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreateDeveloperMetadataRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCutPasteRequest(value: () => CutPasteRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCutPasteRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDataFilter(value: () => DataFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDataFilter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDataFilterValueRange(value: () => DataFilterValueRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDataFilterValueRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDataValidationRule(value: () => DataValidationRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDataValidationRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDateTimeRule(value: () => DateTimeRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDateTimeRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteBandingRequest(value: () => DeleteBandingRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteBandingRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteConditionalFormatRuleRequest(value: () => DeleteConditionalFormatRuleRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteConditionalFormatRuleRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteDeveloperMetadataRequest(value: () => DeleteDeveloperMetadataRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteDeveloperMetadataRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteDimensionGroupRequest(value: () => DeleteDimensionGroupRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteDimensionGroupRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteDimensionRequest(value: () => DeleteDimensionRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteDimensionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteEmbeddedObjectRequest(value: () => DeleteEmbeddedObjectRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteEmbeddedObjectRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteFilterViewRequest(value: () => DeleteFilterViewRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteFilterViewRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteNamedRangeRequest(value: () => DeleteNamedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteNamedRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteProtectedRangeRequest(value: () => DeleteProtectedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteProtectedRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteRangeRequest(value: () => DeleteRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeleteSheetRequest(value: () => DeleteSheetRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeleteSheetRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeveloperMetadata(value: () => DeveloperMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeveloperMetadata")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeveloperMetadataLocation(value: () => DeveloperMetadataLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeveloperMetadataLocation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDeveloperMetadataLookup(value: () => DeveloperMetadataLookup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeveloperMetadataLookup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDimensionGroup(value: () => DimensionGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDimensionGroup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDimensionProperties(value: () => DimensionProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDimensionProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDimensionRange(value: () => DimensionRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDimensionRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDuplicateFilterViewRequest(value: () => DuplicateFilterViewRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDuplicateFilterViewRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDuplicateSheetRequest(value: () => DuplicateSheetRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDuplicateSheetRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewEditors(value: () => Editors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newEditors")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewEmbeddedChart(value: () => EmbeddedChart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newEmbeddedChart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewEmbeddedObjectPosition(value: () => EmbeddedObjectPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newEmbeddedObjectPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewErrorValue(value: () => ErrorValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newErrorValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewExtendedValue(value: () => ExtendedValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newExtendedValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewFilterView(value: () => FilterView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newFilterView")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewFindReplaceRequest(value: () => FindReplaceRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newFindReplaceRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGetSpreadsheetByDataFilterRequest(value: () => GetSpreadsheetByDataFilterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGetSpreadsheetByDataFilterRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGradientRule(value: () => GradientRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGradientRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGridCoordinate(value: () => GridCoordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGridCoordinate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGridData(value: () => GridData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGridData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGridProperties(value: () => GridProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGridProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGridRange(value: () => GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGridRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewHistogramChartSpec(value: () => HistogramChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newHistogramChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewHistogramRule(value: () => HistogramRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newHistogramRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewHistogramSeries(value: () => HistogramSeries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newHistogramSeries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewInsertDimensionRequest(value: () => InsertDimensionRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newInsertDimensionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewInsertRangeRequest(value: () => InsertRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newInsertRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewInterpolationPoint(value: () => InterpolationPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newInterpolationPoint")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewIterativeCalculationSettings(value: () => IterativeCalculationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newIterativeCalculationSettings")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewLineStyle(value: () => LineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newLineStyle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewManualRule(value: () => ManualRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newManualRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewManualRuleGroup(value: () => ManualRuleGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newManualRuleGroup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewMergeCellsRequest(value: () => MergeCellsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMergeCellsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewMoveDimensionRequest(value: () => MoveDimensionRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMoveDimensionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewNamedRange(value: () => NamedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newNamedRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewNumberFormat(value: () => NumberFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newNumberFormat")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewOrgChartSpec(value: () => OrgChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newOrgChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewOverlayPosition(value: () => OverlayPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newOverlayPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPadding(value: () => Padding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPadding")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPasteDataRequest(value: () => PasteDataRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPasteDataRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPieChartSpec(value: () => PieChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPieChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPivotGroup(value: () => PivotGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPivotGroup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPivotGroupRule(value: () => PivotGroupRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPivotGroupRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPivotGroupSortValueBucket(value: () => PivotGroupSortValueBucket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPivotGroupSortValueBucket")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPivotGroupValueMetadata(value: () => PivotGroupValueMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPivotGroupValueMetadata")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPivotTable(value: () => PivotTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPivotTable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewPivotValue(value: () => PivotValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPivotValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewProtectedRange(value: () => ProtectedRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newProtectedRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewRandomizeRangeRequest(value: () => RandomizeRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRandomizeRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewRepeatCellRequest(value: () => RepeatCellRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRepeatCellRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewRequest(value: () => Request): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewRowData(value: () => RowData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRowData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSearchDeveloperMetadataRequest(value: () => SearchDeveloperMetadataRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSearchDeveloperMetadataRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSetBasicFilterRequest(value: () => SetBasicFilterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSetBasicFilterRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSetDataValidationRequest(value: () => SetDataValidationRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSetDataValidationRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSheet(value: () => Sheet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheet")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSheetProperties(value: () => SheetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheetProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSortRangeRequest(value: () => SortRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSortRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSortSpec(value: () => SortSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSortSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSourceAndDestination(value: () => SourceAndDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSourceAndDestination")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSpreadsheet(value: () => typingsSlinky.googleAppsScript.GoogleAppsScript.Sheets.Schema.Spreadsheet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSpreadsheet")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSpreadsheetProperties(value: () => SpreadsheetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSpreadsheetProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTextFormat(value: () => TextFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTextFormat")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTextFormatRun(value: () => TextFormatRun): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTextFormatRun")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTextPosition(value: () => TextPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTextPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTextRotation(value: () => TextRotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTextRotation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTextToColumnsRequest(value: () => TextToColumnsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTextToColumnsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTreemapChartColorScale(value: () => TreemapChartColorScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTreemapChartColorScale")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTreemapChartSpec(value: () => TreemapChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTreemapChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUnmergeCellsRequest(value: () => UnmergeCellsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUnmergeCellsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateBandingRequest(value: () => UpdateBandingRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateBandingRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateBordersRequest(value: () => UpdateBordersRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateBordersRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateCellsRequest(value: () => UpdateCellsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateCellsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateChartSpecRequest(value: () => UpdateChartSpecRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateChartSpecRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateConditionalFormatRuleRequest(value: () => UpdateConditionalFormatRuleRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateConditionalFormatRuleRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateDeveloperMetadataRequest(value: () => UpdateDeveloperMetadataRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateDeveloperMetadataRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateDimensionGroupRequest(value: () => UpdateDimensionGroupRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateDimensionGroupRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateDimensionPropertiesRequest(value: () => UpdateDimensionPropertiesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateDimensionPropertiesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateEmbeddedObjectPositionRequest(value: () => UpdateEmbeddedObjectPositionRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateEmbeddedObjectPositionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateFilterViewRequest(value: () => UpdateFilterViewRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateFilterViewRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateNamedRangeRequest(value: () => UpdateNamedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateNamedRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateProtectedRangeRequest(value: () => UpdateProtectedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateProtectedRangeRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateSheetPropertiesRequest(value: () => UpdateSheetPropertiesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateSheetPropertiesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUpdateSpreadsheetPropertiesRequest(value: () => UpdateSpreadsheetPropertiesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUpdateSpreadsheetPropertiesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewValueRange(value: () => ValueRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValueRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewWaterfallChartColumnStyle(value: () => WaterfallChartColumnStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWaterfallChartColumnStyle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewWaterfallChartCustomSubtotal(value: () => WaterfallChartCustomSubtotal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWaterfallChartCustomSubtotal")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewWaterfallChartDomain(value: () => WaterfallChartDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWaterfallChartDomain")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewWaterfallChartSeries(value: () => WaterfallChartSeries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWaterfallChartSeries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewWaterfallChartSpec(value: () => WaterfallChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWaterfallChartSpec")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSpreadsheets(value: SpreadsheetsCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spreadsheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpreadsheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spreadsheets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

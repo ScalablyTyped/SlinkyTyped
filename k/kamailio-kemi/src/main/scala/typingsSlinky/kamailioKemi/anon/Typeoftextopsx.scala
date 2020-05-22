@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeoftextopsx extends js.Object {
-  def append_hf_value(hexp: String, `val`: String): Double = js.native
-  def assign_hf_value(hexp: String, `val`: String): Double = js.native
-  def assign_hf_value2(hexp: String, `val`: String): Double = js.native
-  def change_reply_status(code: Double, reason: String): Double = js.native
-  def exclude_hf_value(hexp: String, `val`: String): Double = js.native
-  def fnmatch(`val`: String, `match`: String): Double = js.native
-  def fnmatch_ex(`val`: String, `match`: String, flags: String): Double = js.native
-  def hf_value_exists(hexp: String, `val`: String): Double = js.native
-  def include_hf_value(hexp: String, `val`: String): Double = js.native
-  def insert_hf_value(hexp: String, `val`: String): Double = js.native
-  def keep_hf(): Double = js.native
-  def keep_hf_re(sre: String): Double = js.native
-  def msg_apply_changes(): Double = js.native
-  def msg_set_buffer(obuf: String): Double = js.native
-  def remove_body(): Double = js.native
-  def remove_hf_value(hexp: String): Double = js.native
-  def remove_hf_value2(hexp: String, `val`: String): Double = js.native
+  def append_hf_value(hexp: String, `val`: String): Double
+  def assign_hf_value(hexp: String, `val`: String): Double
+  def assign_hf_value2(hexp: String, `val`: String): Double
+  def change_reply_status(code: Double, reason: String): Double
+  def exclude_hf_value(hexp: String, `val`: String): Double
+  def fnmatch(`val`: String, `match`: String): Double
+  def fnmatch_ex(`val`: String, `match`: String, flags: String): Double
+  def hf_value_exists(hexp: String, `val`: String): Double
+  def include_hf_value(hexp: String, `val`: String): Double
+  def insert_hf_value(hexp: String, `val`: String): Double
+  def keep_hf(): Double
+  def keep_hf_re(sre: String): Double
+  def msg_apply_changes(): Double
+  def msg_set_buffer(obuf: String): Double
+  def remove_body(): Double
+  def remove_hf_value(hexp: String): Double
+  def remove_hf_value2(hexp: String, `val`: String): Double
 }
 
 object Typeoftextopsx {
@@ -49,115 +48,5 @@ object Typeoftextopsx {
     val __obj = js.Dynamic.literal(append_hf_value = js.Any.fromFunction2(append_hf_value), assign_hf_value = js.Any.fromFunction2(assign_hf_value), assign_hf_value2 = js.Any.fromFunction2(assign_hf_value2), change_reply_status = js.Any.fromFunction2(change_reply_status), exclude_hf_value = js.Any.fromFunction2(exclude_hf_value), fnmatch = js.Any.fromFunction2(fnmatch), fnmatch_ex = js.Any.fromFunction3(fnmatch_ex), hf_value_exists = js.Any.fromFunction2(hf_value_exists), include_hf_value = js.Any.fromFunction2(include_hf_value), insert_hf_value = js.Any.fromFunction2(insert_hf_value), keep_hf = js.Any.fromFunction0(keep_hf), keep_hf_re = js.Any.fromFunction1(keep_hf_re), msg_apply_changes = js.Any.fromFunction0(msg_apply_changes), msg_set_buffer = js.Any.fromFunction1(msg_set_buffer), remove_body = js.Any.fromFunction0(remove_body), remove_hf_value = js.Any.fromFunction1(remove_hf_value), remove_hf_value2 = js.Any.fromFunction2(remove_hf_value2))
     __obj.asInstanceOf[Typeoftextopsx]
   }
-  @scala.inline
-  implicit class TypeoftextopsxOps[Self <: Typeoftextopsx] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppend_hf_value(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append_hf_value")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAssign_hf_value(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assign_hf_value")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAssign_hf_value2(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assign_hf_value2")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withChange_reply_status(value: (Double, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change_reply_status")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withExclude_hf_value(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_hf_value")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFnmatch(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fnmatch")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFnmatch_ex(value: (String, String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fnmatch_ex")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withHf_value_exists(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hf_value_exists")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInclude_hf_value(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_hf_value")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInsert_hf_value(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert_hf_value")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withKeep_hf(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keep_hf")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withKeep_hf_re(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keep_hf_re")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMsg_apply_changes(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg_apply_changes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMsg_set_buffer(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg_set_buffer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove_body(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_body")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemove_hf_value(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_hf_value")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove_hf_value2(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_hf_value2")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

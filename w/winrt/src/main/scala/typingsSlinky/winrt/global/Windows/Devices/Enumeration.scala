@@ -1,9 +1,19 @@
 package typingsSlinky.winrt.global.Windows.Devices
 
 import typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceClass
+import typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcherStatus
+import typingsSlinky.winrt.Windows.Devices.Enumeration.Panel
 import typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectType
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
+import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
+import typingsSlinky.winrt.Windows.Storage.Streams.IBuffer
+import typingsSlinky.winrt.Windows.Storage.Streams.IInputStream
+import typingsSlinky.winrt.Windows.Storage.Streams.IOutputStream
+import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStream
+import typingsSlinky.winrt.Windows.Storage.Streams.InputStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,27 +23,107 @@ import scala.scalajs.js.annotation._
 object Enumeration extends js.Object {
   @js.native
   class DeviceInformation ()
-    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformation
+    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformation {
+    /* CompleteClass */
+    override var enclosureLocation: typingsSlinky.winrt.Windows.Devices.Enumeration.EnclosureLocation = js.native
+    /* CompleteClass */
+    override var id: String = js.native
+    /* CompleteClass */
+    override var isDefault: Boolean = js.native
+    /* CompleteClass */
+    override var isEnabled: Boolean = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var properties: IMapView[String, _] = js.native
+    /* CompleteClass */
+    override def getGlyphThumbnailAsync(): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceThumbnail] = js.native
+    /* CompleteClass */
+    override def getThumbnailAsync(): IAsyncOperation[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceThumbnail] = js.native
+    /* CompleteClass */
+    override def update(updateInfo: typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationUpdate): Unit = js.native
+  }
   
   @js.native
   class DeviceInformationCollection ()
-    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection
+    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationCollection {
+    /* CompleteClass */
+    override def first(): IIterator[typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformation] = js.native
+  }
   
   @js.native
   class DeviceInformationUpdate ()
-    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationUpdate
+    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceInformationUpdate {
+    /* CompleteClass */
+    override var id: String = js.native
+    /* CompleteClass */
+    override var properties: IMapView[String, _] = js.native
+  }
   
   @js.native
   class DeviceThumbnail ()
-    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceThumbnail
+    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceThumbnail {
+    /* CompleteClass */
+    override var canRead: Boolean = js.native
+    /* CompleteClass */
+    override var canWrite: Boolean = js.native
+    /* CompleteClass */
+    override var contentType: String = js.native
+    /* CompleteClass */
+    override var position: Double = js.native
+    /* CompleteClass */
+    override var size: Double = js.native
+    /* CompleteClass */
+    override def cloneStream(): IRandomAccessStream = js.native
+    /* CompleteClass */
+    override def close(): Unit = js.native
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /* CompleteClass */
+    override def flushAsync(): IAsyncOperation[Boolean] = js.native
+    /* CompleteClass */
+    override def getInputStreamAt(position: Double): IInputStream = js.native
+    /* CompleteClass */
+    override def getOutputStreamAt(position: Double): IOutputStream = js.native
+    /* CompleteClass */
+    override def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IAsyncOperationWithProgress[IBuffer, Double] = js.native
+    /* CompleteClass */
+    override def seek(position: Double): Unit = js.native
+    /* CompleteClass */
+    override def writeAsync(buffer: IBuffer): IAsyncOperationWithProgress[Double, Double] = js.native
+  }
   
   @js.native
   class DeviceWatcher ()
-    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher
+    extends typingsSlinky.winrt.Windows.Devices.Enumeration.DeviceWatcher {
+    /* CompleteClass */
+    override var onadded: js.Any = js.native
+    /* CompleteClass */
+    override var onenumerationcompleted: js.Any = js.native
+    /* CompleteClass */
+    override var onremoved: js.Any = js.native
+    /* CompleteClass */
+    override var onstopped: js.Any = js.native
+    /* CompleteClass */
+    override var onupdated: js.Any = js.native
+    /* CompleteClass */
+    override var status: DeviceWatcherStatus = js.native
+    /* CompleteClass */
+    override def start(): Unit = js.native
+    /* CompleteClass */
+    override def stop(): Unit = js.native
+  }
   
   @js.native
   class EnclosureLocation ()
-    extends typingsSlinky.winrt.Windows.Devices.Enumeration.EnclosureLocation
+    extends typingsSlinky.winrt.Windows.Devices.Enumeration.EnclosureLocation {
+    /* CompleteClass */
+    override var inDock: Boolean = js.native
+    /* CompleteClass */
+    override var inLid: Boolean = js.native
+    /* CompleteClass */
+    override var panel: Panel = js.native
+  }
   
   @js.native
   object DeviceClass extends js.Object {
@@ -90,19 +180,55 @@ object Enumeration extends js.Object {
   object Pnp extends js.Object {
     @js.native
     class PnpObject ()
-      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObject
+      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObject {
+      /* CompleteClass */
+      override var id: String = js.native
+      /* CompleteClass */
+      override var properties: IMapView[String, _] = js.native
+      /* CompleteClass */
+      override var `type`: PnpObjectType = js.native
+      /* CompleteClass */
+      override def update(updateInfo: typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectUpdate): Unit = js.native
+    }
     
     @js.native
     class PnpObjectCollection ()
-      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectCollection
+      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectCollection {
+      /* CompleteClass */
+      override def first(): IIterator[typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObject] = js.native
+    }
     
     @js.native
     class PnpObjectUpdate ()
-      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectUpdate
+      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectUpdate {
+      /* CompleteClass */
+      override var id: String = js.native
+      /* CompleteClass */
+      override var properties: IMapView[String, _] = js.native
+      /* CompleteClass */
+      override var `type`: PnpObjectType = js.native
+    }
     
     @js.native
     class PnpObjectWatcher ()
-      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectWatcher
+      extends typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp.PnpObjectWatcher {
+      /* CompleteClass */
+      override var onadded: js.Any = js.native
+      /* CompleteClass */
+      override var onenumerationcompleted: js.Any = js.native
+      /* CompleteClass */
+      override var onremoved: js.Any = js.native
+      /* CompleteClass */
+      override var onstopped: js.Any = js.native
+      /* CompleteClass */
+      override var onupdated: js.Any = js.native
+      /* CompleteClass */
+      override var status: DeviceWatcherStatus = js.native
+      /* CompleteClass */
+      override def start(): Unit = js.native
+      /* CompleteClass */
+      override def stop(): Unit = js.native
+    }
     
     /* static members */
     @js.native

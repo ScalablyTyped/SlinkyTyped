@@ -18,35 +18,10 @@ trait PutDeliverabilityDashboardOptionRequest extends js.Object {
 
 object PutDeliverabilityDashboardOptionRequest {
   @scala.inline
-  def apply(DashboardEnabled: Enabled): PutDeliverabilityDashboardOptionRequest = {
+  def apply(DashboardEnabled: Enabled, SubscribedDomains: DomainDeliverabilityTrackingOptions = null): PutDeliverabilityDashboardOptionRequest = {
     val __obj = js.Dynamic.literal(DashboardEnabled = DashboardEnabled.asInstanceOf[js.Any])
+    if (SubscribedDomains != null) __obj.updateDynamic("SubscribedDomains")(SubscribedDomains.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutDeliverabilityDashboardOptionRequest]
   }
-  @scala.inline
-  implicit class PutDeliverabilityDashboardOptionRequestOps[Self <: PutDeliverabilityDashboardOptionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDashboardEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscribedDomains(value: DomainDeliverabilityTrackingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscribedDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscribedDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscribedDomains")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

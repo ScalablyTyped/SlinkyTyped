@@ -1,5 +1,7 @@
 package typingsSlinky.when.When
 
+import typingsSlinky.when.whenStrings.fulfilled
+import typingsSlinky.when.whenStrings.rejected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +20,14 @@ trait Descriptor[T] extends js.Object
 
 object Descriptor {
   @scala.inline
-  implicit def apply[T](value: FulfilledDescriptor[T]): Descriptor[T] = value.asInstanceOf[Descriptor[T]]
+  def FulfilledDescriptor[T](state: fulfilled, value: T): Descriptor[T] = {
+    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Descriptor[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: RejectedDescriptor): Descriptor[T] = value.asInstanceOf[Descriptor[T]]
+  def RejectedDescriptor[T](reason: js.Any, state: rejected): Descriptor[T] = {
+    val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Descriptor[T]]
+  }
 }
 

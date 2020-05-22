@@ -14,29 +14,10 @@ trait CreateMembersRequest extends js.Object {
 
 object CreateMembersRequest {
   @scala.inline
-  def apply(): CreateMembersRequest = {
+  def apply(AccountDetails: AccountDetailsList = null): CreateMembersRequest = {
     val __obj = js.Dynamic.literal()
+    if (AccountDetails != null) __obj.updateDynamic("AccountDetails")(AccountDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMembersRequest]
   }
-  @scala.inline
-  implicit class CreateMembersRequestOps[Self <: CreateMembersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountDetails(value: AccountDetailsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

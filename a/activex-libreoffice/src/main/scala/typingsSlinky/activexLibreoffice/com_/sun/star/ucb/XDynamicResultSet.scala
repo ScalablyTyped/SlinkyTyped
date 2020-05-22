@@ -37,20 +37,19 @@ import scala.scalajs.js.annotation._
   *  1. The listener is allowed to access the new {@link ContentResultSet} . The new one is first assigned in the WELCOME-event and than the ResultSets
   * are always swapped. 2. The listener is not allowed to access the old {@link ContentResultSet} .
   */
-@js.native
 trait XDynamicResultSet extends XComponent {
   /**
     * Using this method you can get information, whether the offered ContentResultSets are sorted or filtered etc correctly as demanded during the creation
     * of the {@link XDynamicResultSet} .
     * @returns zero or more constants of the {@link ContentResultSetCapability} constants group.
     */
-  val Capabilities: Double = js.native
+  val Capabilities: Double
   /**
     * Call this, if you don't care about any changes.
     * @returns an {@link com.sun.star.sdbc.XResultSet} that is implemented as {@link ContentResultSet} . Its content will never change.
     * @throws ListenerAlreadySetException if someone already has registered as listener via {@link XDynamicResultSet.setListener()} or if someone has establish
     */
-  val StaticResultSet: XResultSet = js.native
+  val StaticResultSet: XResultSet
   /**
     * Connects this to a {@link CachedDynamicResultSet} for optimized remote data transport.
     *
@@ -62,19 +61,19 @@ trait XDynamicResultSet extends XComponent {
     * @throws AlreadyInitializedException if **Cache** was already initialized with another source.
     * @throws ServiceNotFoundException
     */
-  def connectToCache(Cache: XDynamicResultSet): Unit = js.native
+  def connectToCache(Cache: XDynamicResultSet): Unit
   /**
     * Using this method you can get information, whether the offered ContentResultSets are sorted or filtered etc correctly as demanded during the creation
     * of the {@link XDynamicResultSet} .
     * @returns zero or more constants of the {@link ContentResultSetCapability} constants group.
     */
-  def getCapabilities(): Double = js.native
+  def getCapabilities(): Double
   /**
     * Call this, if you don't care about any changes.
     * @returns an {@link com.sun.star.sdbc.XResultSet} that is implemented as {@link ContentResultSet} . Its content will never change.
     * @throws ListenerAlreadySetException if someone already has registered as listener via {@link XDynamicResultSet.setListener()} or if someone has establish
     */
-  def getStaticResultSet(): XResultSet = js.native
+  def getStaticResultSet(): XResultSet
   /**
     * Call this, if you want to get notifications about changes.
     *
@@ -83,7 +82,7 @@ trait XDynamicResultSet extends XComponent {
     * @param Listener a listener for result set notifications
     * @throws ListenerAlreadySetException if this method is called more than once during the life of the implementation object or if this method is called if s
     */
-  def setListener(Listener: XDynamicResultSetListener): Unit = js.native
+  def setListener(Listener: XDynamicResultSetListener): Unit
 }
 
 object XDynamicResultSet {
@@ -105,49 +104,5 @@ object XDynamicResultSet {
     val __obj = js.Dynamic.literal(Capabilities = Capabilities.asInstanceOf[js.Any], StaticResultSet = StaticResultSet.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), connectToCache = js.Any.fromFunction1(connectToCache), dispose = js.Any.fromFunction0(dispose), getCapabilities = js.Any.fromFunction0(getCapabilities), getStaticResultSet = js.Any.fromFunction0(getStaticResultSet), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), setListener = js.Any.fromFunction1(setListener))
     __obj.asInstanceOf[XDynamicResultSet]
   }
-  @scala.inline
-  implicit class XDynamicResultSetOps[Self <: XDynamicResultSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapabilities(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStaticResultSet(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticResultSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectToCache(value: XDynamicResultSet => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectToCache")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCapabilities(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCapabilities")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStaticResultSet(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStaticResultSet")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetListener(value: XDynamicResultSetListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

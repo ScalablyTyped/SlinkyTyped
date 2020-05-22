@@ -4,7 +4,10 @@ import typingsSlinky.ionicCore.anon.Tab
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabsElement
 import typingsSlinky.ionicCore.interfaceMod.NavOutlet
+import typingsSlinky.ionicCore.interfaceMod.RouteID
 import typingsSlinky.ionicCore.interfaceMod.RouteWrite
+import typingsSlinky.ionicCore.interfaceMod.RouterDirection
+import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,6 +45,8 @@ object tabsMod extends js.Object {
     var useRouter: Boolean = js.native
     def componentWillLoad(): js.Promise[Unit] = js.native
     def componentWillRender(): Unit = js.native
+    /* CompleteClass */
+    override def getRouteId(): js.Promise[js.UndefOr[RouteID]] = js.native
     /**
       * Get the currently selected tab.
       */
@@ -63,6 +68,8 @@ object tabsMod extends js.Object {
     def select(tab: HTMLIonTabElement): js.Promise[Boolean] = js.native
     /** @internal */
     def setRouteId(id: String): js.Promise[RouteWrite] = js.native
+    /* CompleteClass */
+    override def setRouteId(id: String, params: js.UndefOr[ComponentProps[Null]], direction: RouterDirection): js.Promise[RouteWrite] = js.native
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.antd.menuMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.anon.TypeofItemInstantiable
+import typingsSlinky.antd.anon.TypeofItem
 import typingsSlinky.antd.anon.TypeofSubMenu
 import typingsSlinky.rcMenu.dividerMod.DividerProps
 import scala.scalajs.js
@@ -17,7 +17,7 @@ class default () extends Menu
 @js.native
 object default extends js.Object {
   var Divider: ReactComponentClass[DividerProps] = js.native
-  var Item: TypeofItemInstantiable = js.native
+  var Item: TypeofItem = js.native
   var ItemGroup: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ItemGroup */ js.Any = js.native
   var SubMenu: TypeofSubMenu = js.native
 }

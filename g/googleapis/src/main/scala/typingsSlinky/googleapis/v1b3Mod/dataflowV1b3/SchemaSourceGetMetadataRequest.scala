@@ -17,29 +17,10 @@ trait SchemaSourceGetMetadataRequest extends js.Object {
 
 object SchemaSourceGetMetadataRequest {
   @scala.inline
-  def apply(): SchemaSourceGetMetadataRequest = {
+  def apply(source: SchemaSource = null): SchemaSourceGetMetadataRequest = {
     val __obj = js.Dynamic.literal()
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceGetMetadataRequest]
   }
-  @scala.inline
-  implicit class SchemaSourceGetMetadataRequestOps[Self <: SchemaSourceGetMetadataRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: SchemaSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

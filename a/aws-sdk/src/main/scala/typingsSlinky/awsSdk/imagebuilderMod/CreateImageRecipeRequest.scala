@@ -7,15 +7,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreateImageRecipeRequest extends js.Object {
   /**
-    *  The block device mappings of the image recipe. 
+    * The block device mappings of the image recipe. 
     */
   var blockDeviceMappings: js.UndefOr[InstanceBlockDeviceMappings] = js.native
   /**
-    *  The idempotency token used to make this request idempotent. 
+    * The idempotency token used to make this request idempotent. 
     */
   var clientToken: ClientToken = js.native
   /**
-    *  The components of the image recipe. 
+    * The components of the image recipe. 
     */
   var components: ComponentConfigurationList = js.native
   /**
@@ -27,11 +27,11 @@ trait CreateImageRecipeRequest extends js.Object {
     */
   var name: ResourceName = js.native
   /**
-    *  The parent image of the image recipe. 
+    * The parent image of the image recipe. The value of the string can be the ARN of the parent image or an AMI ID. The format for the ARN follows this example: arn:aws:imagebuilder:us-west-2:aws:image/windows-server-2016-english-full-base-x86/2019.x.x. The ARN ends with /20xx.x.x, which communicates to EC2 Image Builder that you want to use the latest AMI created in 20xx (year). You can provide the specific version that you want to use, or you can use a wildcard in all of the fields. If you enter an AMI ID for the string value, you must have access to the AMI, and the AMI must be in the same Region in which you are using Image Builder. 
     */
   var parentImage: NonEmptyString = js.native
   /**
-    *  The semantic version of the image recipe. 
+    * The semantic version of the image recipe. 
     */
   var semanticVersion: VersionNumber = js.native
   /**
@@ -47,84 +47,16 @@ object CreateImageRecipeRequest {
     components: ComponentConfigurationList,
     name: ResourceName,
     parentImage: NonEmptyString,
-    semanticVersion: VersionNumber
+    semanticVersion: VersionNumber,
+    blockDeviceMappings: InstanceBlockDeviceMappings = null,
+    description: NonEmptyString = null,
+    tags: TagMap = null
   ): CreateImageRecipeRequest = {
     val __obj = js.Dynamic.literal(clientToken = clientToken.asInstanceOf[js.Any], components = components.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parentImage = parentImage.asInstanceOf[js.Any], semanticVersion = semanticVersion.asInstanceOf[js.Any])
+    if (blockDeviceMappings != null) __obj.updateDynamic("blockDeviceMappings")(blockDeviceMappings.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateImageRecipeRequest]
   }
-  @scala.inline
-  implicit class CreateImageRecipeRequestOps[Self <: CreateImageRecipeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponents(value: ComponentConfigurationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentImage(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSemanticVersion(value: VersionNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("semanticVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockDeviceMappings(value: InstanceBlockDeviceMappings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockDeviceMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockDeviceMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockDeviceMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

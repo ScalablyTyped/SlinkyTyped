@@ -14,29 +14,10 @@ trait UpdateProjectOutput extends js.Object {
 
 object UpdateProjectOutput {
   @scala.inline
-  def apply(): UpdateProjectOutput = {
+  def apply(project: Project = null): UpdateProjectOutput = {
     val __obj = js.Dynamic.literal()
+    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateProjectOutput]
   }
-  @scala.inline
-  implicit class UpdateProjectOutputOps[Self <: UpdateProjectOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProject(value: Project): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

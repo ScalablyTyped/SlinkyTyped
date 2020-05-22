@@ -44,101 +44,24 @@ trait SchemaDeviceSettings extends js.Object {
 
 object SchemaDeviceSettings {
   @scala.inline
-  def apply(): SchemaDeviceSettings = {
+  def apply(
+    adbEnabled: js.UndefOr[Boolean] = js.undefined,
+    developmentSettingsEnabled: js.UndefOr[Boolean] = js.undefined,
+    encryptionStatus: String = null,
+    isDeviceSecure: js.UndefOr[Boolean] = js.undefined,
+    isEncrypted: js.UndefOr[Boolean] = js.undefined,
+    unknownSourcesEnabled: js.UndefOr[Boolean] = js.undefined,
+    verifyAppsEnabled: js.UndefOr[Boolean] = js.undefined
+  ): SchemaDeviceSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(adbEnabled)) __obj.updateDynamic("adbEnabled")(adbEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(developmentSettingsEnabled)) __obj.updateDynamic("developmentSettingsEnabled")(developmentSettingsEnabled.get.asInstanceOf[js.Any])
+    if (encryptionStatus != null) __obj.updateDynamic("encryptionStatus")(encryptionStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDeviceSecure)) __obj.updateDynamic("isDeviceSecure")(isDeviceSecure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEncrypted)) __obj.updateDynamic("isEncrypted")(isEncrypted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unknownSourcesEnabled)) __obj.updateDynamic("unknownSourcesEnabled")(unknownSourcesEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verifyAppsEnabled)) __obj.updateDynamic("verifyAppsEnabled")(verifyAppsEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceSettings]
   }
-  @scala.inline
-  implicit class SchemaDeviceSettingsOps[Self <: SchemaDeviceSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdbEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adbEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdbEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adbEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevelopmentSettingsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developmentSettingsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevelopmentSettingsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developmentSettingsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDeviceSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeviceSecure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDeviceSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeviceSecure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEncrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEncrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownSourcesEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownSourcesEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownSourcesEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownSourcesEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifyAppsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyAppsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifyAppsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyAppsEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,29 +19,10 @@ trait SchemaGetJSONWebKeysResponse extends js.Object {
 
 object SchemaGetJSONWebKeysResponse {
   @scala.inline
-  def apply(): SchemaGetJSONWebKeysResponse = {
+  def apply(keys: js.Array[SchemaJwk] = null): SchemaGetJSONWebKeysResponse = {
     val __obj = js.Dynamic.literal()
+    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetJSONWebKeysResponse]
   }
-  @scala.inline
-  implicit class SchemaGetJSONWebKeysResponseOps[Self <: SchemaGetJSONWebKeysResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeys(value: js.Array[SchemaJwk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

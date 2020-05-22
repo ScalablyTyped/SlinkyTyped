@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Auth0LockAuthOptions extends js.Object {
-  var audience: js.UndefOr[String] = js.native
-  var autoParseHash: js.UndefOr[Boolean] = js.native
-  var params: js.UndefOr[Auth0LockAuthParamsOptions] = js.native
-  var redirect: js.UndefOr[Boolean] = js.native
-  var redirectUrl: js.UndefOr[String] = js.native
-  var responseMode: js.UndefOr[String] = js.native
-  var responseType: js.UndefOr[String] = js.native
-  var sso: js.UndefOr[Boolean] = js.native
+  var audience: js.UndefOr[String] = js.undefined
+  var autoParseHash: js.UndefOr[Boolean] = js.undefined
+  var params: js.UndefOr[Auth0LockAuthParamsOptions] = js.undefined
+  var redirect: js.UndefOr[Boolean] = js.undefined
+  var redirectUrl: js.UndefOr[String] = js.undefined
+  var responseMode: js.UndefOr[String] = js.undefined
+  var responseType: js.UndefOr[String] = js.undefined
+  var sso: js.UndefOr[Boolean] = js.undefined
 }
 
 object Auth0LockAuthOptions {
   @scala.inline
-  def apply(): Auth0LockAuthOptions = {
+  def apply(
+    audience: String = null,
+    autoParseHash: js.UndefOr[Boolean] = js.undefined,
+    params: Auth0LockAuthParamsOptions = null,
+    redirect: js.UndefOr[Boolean] = js.undefined,
+    redirectUrl: String = null,
+    responseMode: String = null,
+    responseType: String = null,
+    sso: js.UndefOr[Boolean] = js.undefined
+  ): Auth0LockAuthOptions = {
     val __obj = js.Dynamic.literal()
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoParseHash)) __obj.updateDynamic("autoParseHash")(autoParseHash.get.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (!js.isUndefined(redirect)) __obj.updateDynamic("redirect")(redirect.get.asInstanceOf[js.Any])
+    if (redirectUrl != null) __obj.updateDynamic("redirectUrl")(redirectUrl.asInstanceOf[js.Any])
+    if (responseMode != null) __obj.updateDynamic("responseMode")(responseMode.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (!js.isUndefined(sso)) __obj.updateDynamic("sso")(sso.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Auth0LockAuthOptions]
   }
-  @scala.inline
-  implicit class Auth0LockAuthOptionsOps[Self <: Auth0LockAuthOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudience(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoParseHash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoParseHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoParseHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoParseHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: Auth0LockAuthParamsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSso(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sso")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSso: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sso")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

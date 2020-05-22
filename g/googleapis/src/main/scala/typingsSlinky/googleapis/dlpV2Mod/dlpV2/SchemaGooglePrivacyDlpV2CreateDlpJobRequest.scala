@@ -23,53 +23,16 @@ trait SchemaGooglePrivacyDlpV2CreateDlpJobRequest extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CreateDlpJobRequest {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2CreateDlpJobRequest = {
+  def apply(
+    inspectJob: SchemaGooglePrivacyDlpV2InspectJobConfig = null,
+    jobId: String = null,
+    riskJob: SchemaGooglePrivacyDlpV2RiskAnalysisJobConfig = null
+  ): SchemaGooglePrivacyDlpV2CreateDlpJobRequest = {
     val __obj = js.Dynamic.literal()
+    if (inspectJob != null) __obj.updateDynamic("inspectJob")(inspectJob.asInstanceOf[js.Any])
+    if (jobId != null) __obj.updateDynamic("jobId")(jobId.asInstanceOf[js.Any])
+    if (riskJob != null) __obj.updateDynamic("riskJob")(riskJob.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CreateDlpJobRequest]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2CreateDlpJobRequestOps[Self <: SchemaGooglePrivacyDlpV2CreateDlpJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInspectJob(value: SchemaGooglePrivacyDlpV2InspectJobConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectJob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInspectJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectJob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRiskJob(value: SchemaGooglePrivacyDlpV2RiskAnalysisJobConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("riskJob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRiskJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("riskJob")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,29 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scripto extends js.Object {
   def eval(
     scriptName: String,
     keys: js.Array[String],
     args: js.Array[_],
     callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
-  ): Unit = js.native
+  ): Unit
   def evalSha(
     scriptName: String,
     keys: js.Array[String],
     args: js.Array[_],
     callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
-  ): Unit = js.native
-  def load(scripts: Scripts): Unit = js.native
-  def loadFromDir(scriptsDir: String): Unit = js.native
-  def loadFromFile(name: String, filepath: String): Unit = js.native
+  ): Unit
+  def load(scripts: Scripts): Unit
+  def loadFromDir(scriptsDir: String): Unit
+  def loadFromFile(name: String, filepath: String): Unit
   def run(
     scriptName: String,
     keys: js.Array[String],
     args: js.Array[_],
     callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
-  ): Unit = js.native
+  ): Unit
 }
 
 object Scripto {
@@ -42,55 +41,5 @@ object Scripto {
     val __obj = js.Dynamic.literal(eval = js.Any.fromFunction4(eval), evalSha = js.Any.fromFunction4(evalSha), load = js.Any.fromFunction1(load), loadFromDir = js.Any.fromFunction1(loadFromDir), loadFromFile = js.Any.fromFunction2(loadFromFile), run = js.Any.fromFunction4(run))
     __obj.asInstanceOf[Scripto]
   }
-  @scala.inline
-  implicit class ScriptoOps[Self <: Scripto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEval(
-      value: (String, js.Array[String], js.Array[_], js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eval")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withEvalSha(
-      value: (String, js.Array[String], js.Array[_], js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalSha")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withLoad(value: Scripts => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadFromDir(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadFromDir")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadFromFile(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadFromFile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRun(
-      value: (String, js.Array[String], js.Array[_], js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

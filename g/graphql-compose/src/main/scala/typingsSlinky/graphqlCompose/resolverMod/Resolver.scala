@@ -22,8 +22,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql-compose/lib/Resolver", "Resolver")
 @js.native
-class Resolver[TSource, TContext, TArgs, TReturn] protected ()
-  extends ComposeOutputType[js.Any, TContext] {
+class Resolver[TSource, TContext, TArgs, TReturn] protected () extends js.Object {
   def this(opts: ResolverOpts[TSource, TContext, TArgs, _], schemaComposer: SchemaComposer[TContext]) = this()
   var args: ComposeFieldConfigArgumentMap[_] = js.native
   var description: String | Unit = js.native

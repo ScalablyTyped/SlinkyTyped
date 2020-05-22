@@ -18,41 +18,11 @@ trait GetResourceShareAssociationsResponse extends js.Object {
 
 object GetResourceShareAssociationsResponse {
   @scala.inline
-  def apply(): GetResourceShareAssociationsResponse = {
+  def apply(nextToken: String = null, resourceShareAssociations: ResourceShareAssociationList = null): GetResourceShareAssociationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (resourceShareAssociations != null) __obj.updateDynamic("resourceShareAssociations")(resourceShareAssociations.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourceShareAssociationsResponse]
   }
-  @scala.inline
-  implicit class GetResourceShareAssociationsResponseOps[Self <: GetResourceShareAssociationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceShareAssociations(value: ResourceShareAssociationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareAssociations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceShareAssociations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceShareAssociations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

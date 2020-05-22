@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectionSelector extends js.Object {
-  var allDescendants: js.UndefOr[Boolean] = js.native
-  var collectionId: js.UndefOr[String] = js.native
+  var allDescendants: js.UndefOr[Boolean] = js.undefined
+  var collectionId: js.UndefOr[String] = js.undefined
 }
 
 object CollectionSelector {
   @scala.inline
-  def apply(): CollectionSelector = {
+  def apply(allDescendants: js.UndefOr[Boolean] = js.undefined, collectionId: String = null): CollectionSelector = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allDescendants)) __obj.updateDynamic("allDescendants")(allDescendants.get.asInstanceOf[js.Any])
+    if (collectionId != null) __obj.updateDynamic("collectionId")(collectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionSelector]
   }
-  @scala.inline
-  implicit class CollectionSelectorOps[Self <: CollectionSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllDescendants(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDescendants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllDescendants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDescendants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollectionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

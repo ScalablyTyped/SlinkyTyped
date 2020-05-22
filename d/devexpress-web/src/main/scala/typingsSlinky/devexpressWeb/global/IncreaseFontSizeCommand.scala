@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("IncreaseFontSizeCommand")
 @js.native
 class IncreaseFontSizeCommand ()
-  extends typingsSlinky.devexpressWeb.IncreaseFontSizeCommand
+  extends typingsSlinky.devexpressWeb.IncreaseFontSizeCommand {
+  /**
+    * Executes the IncreaseFontSizeCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

@@ -39,7 +39,7 @@ trait AwsSecurityFindingFilters extends js.Object {
     */
   var FirstObservedAt: js.UndefOr[DateFilterList] = js.native
   /**
-    * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In various security-findings providers' solutions, this generator can be called a rule, a check, a detector, a plug-in, etc.
+    * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In various security-findings providers' solutions, this generator can be called a rule, a check, a detector, a plugin, etc.
     */
   var GeneratorId: js.UndefOr[StringFilterList] = js.native
   /**
@@ -346,1025 +346,178 @@ trait AwsSecurityFindingFilters extends js.Object {
 
 object AwsSecurityFindingFilters {
   @scala.inline
-  def apply(): AwsSecurityFindingFilters = {
+  def apply(
+    AwsAccountId: StringFilterList = null,
+    CompanyName: StringFilterList = null,
+    ComplianceStatus: StringFilterList = null,
+    Confidence: NumberFilterList = null,
+    CreatedAt: DateFilterList = null,
+    Criticality: NumberFilterList = null,
+    Description: StringFilterList = null,
+    FirstObservedAt: DateFilterList = null,
+    GeneratorId: StringFilterList = null,
+    Id: StringFilterList = null,
+    Keyword: KeywordFilterList = null,
+    LastObservedAt: DateFilterList = null,
+    MalwareName: StringFilterList = null,
+    MalwarePath: StringFilterList = null,
+    MalwareState: StringFilterList = null,
+    MalwareType: StringFilterList = null,
+    NetworkDestinationDomain: StringFilterList = null,
+    NetworkDestinationIpV4: IpFilterList = null,
+    NetworkDestinationIpV6: IpFilterList = null,
+    NetworkDestinationPort: NumberFilterList = null,
+    NetworkDirection: StringFilterList = null,
+    NetworkProtocol: StringFilterList = null,
+    NetworkSourceDomain: StringFilterList = null,
+    NetworkSourceIpV4: IpFilterList = null,
+    NetworkSourceIpV6: IpFilterList = null,
+    NetworkSourceMac: StringFilterList = null,
+    NetworkSourcePort: NumberFilterList = null,
+    NoteText: StringFilterList = null,
+    NoteUpdatedAt: DateFilterList = null,
+    NoteUpdatedBy: StringFilterList = null,
+    ProcessLaunchedAt: DateFilterList = null,
+    ProcessName: StringFilterList = null,
+    ProcessParentPid: NumberFilterList = null,
+    ProcessPath: StringFilterList = null,
+    ProcessPid: NumberFilterList = null,
+    ProcessTerminatedAt: DateFilterList = null,
+    ProductArn: StringFilterList = null,
+    ProductFields: MapFilterList = null,
+    ProductName: StringFilterList = null,
+    RecommendationText: StringFilterList = null,
+    RecordState: StringFilterList = null,
+    RelatedFindingsId: StringFilterList = null,
+    RelatedFindingsProductArn: StringFilterList = null,
+    ResourceAwsEc2InstanceIamInstanceProfileArn: StringFilterList = null,
+    ResourceAwsEc2InstanceImageId: StringFilterList = null,
+    ResourceAwsEc2InstanceIpV4Addresses: IpFilterList = null,
+    ResourceAwsEc2InstanceIpV6Addresses: IpFilterList = null,
+    ResourceAwsEc2InstanceKeyName: StringFilterList = null,
+    ResourceAwsEc2InstanceLaunchedAt: DateFilterList = null,
+    ResourceAwsEc2InstanceSubnetId: StringFilterList = null,
+    ResourceAwsEc2InstanceType: StringFilterList = null,
+    ResourceAwsEc2InstanceVpcId: StringFilterList = null,
+    ResourceAwsIamAccessKeyCreatedAt: DateFilterList = null,
+    ResourceAwsIamAccessKeyStatus: StringFilterList = null,
+    ResourceAwsIamAccessKeyUserName: StringFilterList = null,
+    ResourceAwsS3BucketOwnerId: StringFilterList = null,
+    ResourceAwsS3BucketOwnerName: StringFilterList = null,
+    ResourceContainerImageId: StringFilterList = null,
+    ResourceContainerImageName: StringFilterList = null,
+    ResourceContainerLaunchedAt: DateFilterList = null,
+    ResourceContainerName: StringFilterList = null,
+    ResourceDetailsOther: MapFilterList = null,
+    ResourceId: StringFilterList = null,
+    ResourcePartition: StringFilterList = null,
+    ResourceRegion: StringFilterList = null,
+    ResourceTags: MapFilterList = null,
+    ResourceType: StringFilterList = null,
+    SeverityLabel: StringFilterList = null,
+    SeverityNormalized: NumberFilterList = null,
+    SeverityProduct: NumberFilterList = null,
+    SourceUrl: StringFilterList = null,
+    ThreatIntelIndicatorCategory: StringFilterList = null,
+    ThreatIntelIndicatorLastObservedAt: DateFilterList = null,
+    ThreatIntelIndicatorSource: StringFilterList = null,
+    ThreatIntelIndicatorSourceUrl: StringFilterList = null,
+    ThreatIntelIndicatorType: StringFilterList = null,
+    ThreatIntelIndicatorValue: StringFilterList = null,
+    Title: StringFilterList = null,
+    Type: StringFilterList = null,
+    UpdatedAt: DateFilterList = null,
+    UserDefinedFields: MapFilterList = null,
+    VerificationState: StringFilterList = null,
+    WorkflowState: StringFilterList = null,
+    WorkflowStatus: StringFilterList = null
+  ): AwsSecurityFindingFilters = {
     val __obj = js.Dynamic.literal()
+    if (AwsAccountId != null) __obj.updateDynamic("AwsAccountId")(AwsAccountId.asInstanceOf[js.Any])
+    if (CompanyName != null) __obj.updateDynamic("CompanyName")(CompanyName.asInstanceOf[js.Any])
+    if (ComplianceStatus != null) __obj.updateDynamic("ComplianceStatus")(ComplianceStatus.asInstanceOf[js.Any])
+    if (Confidence != null) __obj.updateDynamic("Confidence")(Confidence.asInstanceOf[js.Any])
+    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
+    if (Criticality != null) __obj.updateDynamic("Criticality")(Criticality.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (FirstObservedAt != null) __obj.updateDynamic("FirstObservedAt")(FirstObservedAt.asInstanceOf[js.Any])
+    if (GeneratorId != null) __obj.updateDynamic("GeneratorId")(GeneratorId.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Keyword != null) __obj.updateDynamic("Keyword")(Keyword.asInstanceOf[js.Any])
+    if (LastObservedAt != null) __obj.updateDynamic("LastObservedAt")(LastObservedAt.asInstanceOf[js.Any])
+    if (MalwareName != null) __obj.updateDynamic("MalwareName")(MalwareName.asInstanceOf[js.Any])
+    if (MalwarePath != null) __obj.updateDynamic("MalwarePath")(MalwarePath.asInstanceOf[js.Any])
+    if (MalwareState != null) __obj.updateDynamic("MalwareState")(MalwareState.asInstanceOf[js.Any])
+    if (MalwareType != null) __obj.updateDynamic("MalwareType")(MalwareType.asInstanceOf[js.Any])
+    if (NetworkDestinationDomain != null) __obj.updateDynamic("NetworkDestinationDomain")(NetworkDestinationDomain.asInstanceOf[js.Any])
+    if (NetworkDestinationIpV4 != null) __obj.updateDynamic("NetworkDestinationIpV4")(NetworkDestinationIpV4.asInstanceOf[js.Any])
+    if (NetworkDestinationIpV6 != null) __obj.updateDynamic("NetworkDestinationIpV6")(NetworkDestinationIpV6.asInstanceOf[js.Any])
+    if (NetworkDestinationPort != null) __obj.updateDynamic("NetworkDestinationPort")(NetworkDestinationPort.asInstanceOf[js.Any])
+    if (NetworkDirection != null) __obj.updateDynamic("NetworkDirection")(NetworkDirection.asInstanceOf[js.Any])
+    if (NetworkProtocol != null) __obj.updateDynamic("NetworkProtocol")(NetworkProtocol.asInstanceOf[js.Any])
+    if (NetworkSourceDomain != null) __obj.updateDynamic("NetworkSourceDomain")(NetworkSourceDomain.asInstanceOf[js.Any])
+    if (NetworkSourceIpV4 != null) __obj.updateDynamic("NetworkSourceIpV4")(NetworkSourceIpV4.asInstanceOf[js.Any])
+    if (NetworkSourceIpV6 != null) __obj.updateDynamic("NetworkSourceIpV6")(NetworkSourceIpV6.asInstanceOf[js.Any])
+    if (NetworkSourceMac != null) __obj.updateDynamic("NetworkSourceMac")(NetworkSourceMac.asInstanceOf[js.Any])
+    if (NetworkSourcePort != null) __obj.updateDynamic("NetworkSourcePort")(NetworkSourcePort.asInstanceOf[js.Any])
+    if (NoteText != null) __obj.updateDynamic("NoteText")(NoteText.asInstanceOf[js.Any])
+    if (NoteUpdatedAt != null) __obj.updateDynamic("NoteUpdatedAt")(NoteUpdatedAt.asInstanceOf[js.Any])
+    if (NoteUpdatedBy != null) __obj.updateDynamic("NoteUpdatedBy")(NoteUpdatedBy.asInstanceOf[js.Any])
+    if (ProcessLaunchedAt != null) __obj.updateDynamic("ProcessLaunchedAt")(ProcessLaunchedAt.asInstanceOf[js.Any])
+    if (ProcessName != null) __obj.updateDynamic("ProcessName")(ProcessName.asInstanceOf[js.Any])
+    if (ProcessParentPid != null) __obj.updateDynamic("ProcessParentPid")(ProcessParentPid.asInstanceOf[js.Any])
+    if (ProcessPath != null) __obj.updateDynamic("ProcessPath")(ProcessPath.asInstanceOf[js.Any])
+    if (ProcessPid != null) __obj.updateDynamic("ProcessPid")(ProcessPid.asInstanceOf[js.Any])
+    if (ProcessTerminatedAt != null) __obj.updateDynamic("ProcessTerminatedAt")(ProcessTerminatedAt.asInstanceOf[js.Any])
+    if (ProductArn != null) __obj.updateDynamic("ProductArn")(ProductArn.asInstanceOf[js.Any])
+    if (ProductFields != null) __obj.updateDynamic("ProductFields")(ProductFields.asInstanceOf[js.Any])
+    if (ProductName != null) __obj.updateDynamic("ProductName")(ProductName.asInstanceOf[js.Any])
+    if (RecommendationText != null) __obj.updateDynamic("RecommendationText")(RecommendationText.asInstanceOf[js.Any])
+    if (RecordState != null) __obj.updateDynamic("RecordState")(RecordState.asInstanceOf[js.Any])
+    if (RelatedFindingsId != null) __obj.updateDynamic("RelatedFindingsId")(RelatedFindingsId.asInstanceOf[js.Any])
+    if (RelatedFindingsProductArn != null) __obj.updateDynamic("RelatedFindingsProductArn")(RelatedFindingsProductArn.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceIamInstanceProfileArn != null) __obj.updateDynamic("ResourceAwsEc2InstanceIamInstanceProfileArn")(ResourceAwsEc2InstanceIamInstanceProfileArn.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceImageId != null) __obj.updateDynamic("ResourceAwsEc2InstanceImageId")(ResourceAwsEc2InstanceImageId.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceIpV4Addresses != null) __obj.updateDynamic("ResourceAwsEc2InstanceIpV4Addresses")(ResourceAwsEc2InstanceIpV4Addresses.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceIpV6Addresses != null) __obj.updateDynamic("ResourceAwsEc2InstanceIpV6Addresses")(ResourceAwsEc2InstanceIpV6Addresses.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceKeyName != null) __obj.updateDynamic("ResourceAwsEc2InstanceKeyName")(ResourceAwsEc2InstanceKeyName.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceLaunchedAt != null) __obj.updateDynamic("ResourceAwsEc2InstanceLaunchedAt")(ResourceAwsEc2InstanceLaunchedAt.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceSubnetId != null) __obj.updateDynamic("ResourceAwsEc2InstanceSubnetId")(ResourceAwsEc2InstanceSubnetId.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceType != null) __obj.updateDynamic("ResourceAwsEc2InstanceType")(ResourceAwsEc2InstanceType.asInstanceOf[js.Any])
+    if (ResourceAwsEc2InstanceVpcId != null) __obj.updateDynamic("ResourceAwsEc2InstanceVpcId")(ResourceAwsEc2InstanceVpcId.asInstanceOf[js.Any])
+    if (ResourceAwsIamAccessKeyCreatedAt != null) __obj.updateDynamic("ResourceAwsIamAccessKeyCreatedAt")(ResourceAwsIamAccessKeyCreatedAt.asInstanceOf[js.Any])
+    if (ResourceAwsIamAccessKeyStatus != null) __obj.updateDynamic("ResourceAwsIamAccessKeyStatus")(ResourceAwsIamAccessKeyStatus.asInstanceOf[js.Any])
+    if (ResourceAwsIamAccessKeyUserName != null) __obj.updateDynamic("ResourceAwsIamAccessKeyUserName")(ResourceAwsIamAccessKeyUserName.asInstanceOf[js.Any])
+    if (ResourceAwsS3BucketOwnerId != null) __obj.updateDynamic("ResourceAwsS3BucketOwnerId")(ResourceAwsS3BucketOwnerId.asInstanceOf[js.Any])
+    if (ResourceAwsS3BucketOwnerName != null) __obj.updateDynamic("ResourceAwsS3BucketOwnerName")(ResourceAwsS3BucketOwnerName.asInstanceOf[js.Any])
+    if (ResourceContainerImageId != null) __obj.updateDynamic("ResourceContainerImageId")(ResourceContainerImageId.asInstanceOf[js.Any])
+    if (ResourceContainerImageName != null) __obj.updateDynamic("ResourceContainerImageName")(ResourceContainerImageName.asInstanceOf[js.Any])
+    if (ResourceContainerLaunchedAt != null) __obj.updateDynamic("ResourceContainerLaunchedAt")(ResourceContainerLaunchedAt.asInstanceOf[js.Any])
+    if (ResourceContainerName != null) __obj.updateDynamic("ResourceContainerName")(ResourceContainerName.asInstanceOf[js.Any])
+    if (ResourceDetailsOther != null) __obj.updateDynamic("ResourceDetailsOther")(ResourceDetailsOther.asInstanceOf[js.Any])
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
+    if (ResourcePartition != null) __obj.updateDynamic("ResourcePartition")(ResourcePartition.asInstanceOf[js.Any])
+    if (ResourceRegion != null) __obj.updateDynamic("ResourceRegion")(ResourceRegion.asInstanceOf[js.Any])
+    if (ResourceTags != null) __obj.updateDynamic("ResourceTags")(ResourceTags.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
+    if (SeverityLabel != null) __obj.updateDynamic("SeverityLabel")(SeverityLabel.asInstanceOf[js.Any])
+    if (SeverityNormalized != null) __obj.updateDynamic("SeverityNormalized")(SeverityNormalized.asInstanceOf[js.Any])
+    if (SeverityProduct != null) __obj.updateDynamic("SeverityProduct")(SeverityProduct.asInstanceOf[js.Any])
+    if (SourceUrl != null) __obj.updateDynamic("SourceUrl")(SourceUrl.asInstanceOf[js.Any])
+    if (ThreatIntelIndicatorCategory != null) __obj.updateDynamic("ThreatIntelIndicatorCategory")(ThreatIntelIndicatorCategory.asInstanceOf[js.Any])
+    if (ThreatIntelIndicatorLastObservedAt != null) __obj.updateDynamic("ThreatIntelIndicatorLastObservedAt")(ThreatIntelIndicatorLastObservedAt.asInstanceOf[js.Any])
+    if (ThreatIntelIndicatorSource != null) __obj.updateDynamic("ThreatIntelIndicatorSource")(ThreatIntelIndicatorSource.asInstanceOf[js.Any])
+    if (ThreatIntelIndicatorSourceUrl != null) __obj.updateDynamic("ThreatIntelIndicatorSourceUrl")(ThreatIntelIndicatorSourceUrl.asInstanceOf[js.Any])
+    if (ThreatIntelIndicatorType != null) __obj.updateDynamic("ThreatIntelIndicatorType")(ThreatIntelIndicatorType.asInstanceOf[js.Any])
+    if (ThreatIntelIndicatorValue != null) __obj.updateDynamic("ThreatIntelIndicatorValue")(ThreatIntelIndicatorValue.asInstanceOf[js.Any])
+    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
+    if (UpdatedAt != null) __obj.updateDynamic("UpdatedAt")(UpdatedAt.asInstanceOf[js.Any])
+    if (UserDefinedFields != null) __obj.updateDynamic("UserDefinedFields")(UserDefinedFields.asInstanceOf[js.Any])
+    if (VerificationState != null) __obj.updateDynamic("VerificationState")(VerificationState.asInstanceOf[js.Any])
+    if (WorkflowState != null) __obj.updateDynamic("WorkflowState")(WorkflowState.asInstanceOf[js.Any])
+    if (WorkflowStatus != null) __obj.updateDynamic("WorkflowStatus")(WorkflowStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsSecurityFindingFilters]
   }
-  @scala.inline
-  implicit class AwsSecurityFindingFiltersOps[Self <: AwsSecurityFindingFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompanyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompanyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplianceStatus(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfidence(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCriticality(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Criticality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriticality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Criticality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstObservedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstObservedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstObservedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstObservedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeneratorId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneratorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratorId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyword(value: KeywordFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keyword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastObservedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastObservedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastObservedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastObservedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMalwareName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwareName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMalwareName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwareName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMalwarePath(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwarePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMalwarePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwarePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMalwareState(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwareState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMalwareState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwareState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMalwareType(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwareType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMalwareType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MalwareType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkDestinationDomain(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkDestinationDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationDomain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkDestinationIpV4(value: IpFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationIpV4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkDestinationIpV4: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationIpV4")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkDestinationIpV6(value: IpFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationIpV6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkDestinationIpV6: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationIpV6")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkDestinationPort(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkDestinationPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDestinationPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkDirection(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProtocol(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkSourceDomain(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkSourceDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceDomain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkSourceIpV4(value: IpFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceIpV4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkSourceIpV4: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceIpV4")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkSourceIpV6(value: IpFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceIpV6")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkSourceIpV6: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceIpV6")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkSourceMac(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceMac")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkSourceMac: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourceMac")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkSourcePort(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourcePort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkSourcePort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSourcePort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteText(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoteText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoteText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteUpdatedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoteUpdatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteUpdatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoteUpdatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteUpdatedBy(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoteUpdatedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteUpdatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoteUpdatedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessLaunchedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessLaunchedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessLaunchedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessLaunchedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessParentPid(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessParentPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessParentPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessParentPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessPath(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessPid(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessPid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessPid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessTerminatedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessTerminatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessTerminatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessTerminatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductArn(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductFields(value: MapFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendationText(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendationText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendationText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendationText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordState(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelatedFindingsId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelatedFindingsId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelatedFindingsId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelatedFindingsId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelatedFindingsProductArn(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelatedFindingsProductArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelatedFindingsProductArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelatedFindingsProductArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceIamInstanceProfileArn(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceIamInstanceProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceIamInstanceProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceIamInstanceProfileArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceImageId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceImageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceImageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceIpV4Addresses(value: IpFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceIpV4Addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceIpV4Addresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceIpV4Addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceIpV6Addresses(value: IpFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceIpV6Addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceIpV6Addresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceIpV6Addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceKeyName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceKeyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceLaunchedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceLaunchedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceLaunchedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceLaunchedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceSubnetId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceSubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceSubnetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceSubnetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceType(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsEc2InstanceVpcId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceVpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsEc2InstanceVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsEc2InstanceVpcId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsIamAccessKeyCreatedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsIamAccessKeyCreatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsIamAccessKeyCreatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsIamAccessKeyCreatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsIamAccessKeyStatus(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsIamAccessKeyStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsIamAccessKeyStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsIamAccessKeyStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsIamAccessKeyUserName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsIamAccessKeyUserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsIamAccessKeyUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsIamAccessKeyUserName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsS3BucketOwnerId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsS3BucketOwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsS3BucketOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsS3BucketOwnerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAwsS3BucketOwnerName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsS3BucketOwnerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAwsS3BucketOwnerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAwsS3BucketOwnerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceContainerImageId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerImageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceContainerImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerImageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceContainerImageName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerImageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceContainerImageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerImageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceContainerLaunchedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerLaunchedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceContainerLaunchedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerLaunchedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceContainerName(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceContainerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceContainerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceDetailsOther(value: MapFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDetailsOther")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceDetailsOther: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDetailsOther")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcePartition(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePartition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcePartition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePartition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceRegion(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTags(value: MapFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverityLabel(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverityLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverityNormalized(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityNormalized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverityNormalized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityNormalized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverityProduct(value: NumberFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityProduct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverityProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SeverityProduct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUrl(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicatorCategory(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicatorCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicatorLastObservedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorLastObservedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicatorLastObservedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorLastObservedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicatorSource(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicatorSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicatorSourceUrl(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorSourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicatorSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorSourceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicatorType(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicatorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicatorValue(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicatorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicatorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedAt(value: DateFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedFields(value: MapFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDefinedFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationState(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerificationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerificationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkflowState(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkflowState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkflowStatus(value: StringFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkflowStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

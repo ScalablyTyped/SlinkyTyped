@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait ModuleName extends js.Object
 
-object ModuleName {
-  @scala.inline
-  implicit def apply(value: Identifier): ModuleName = value.asInstanceOf[ModuleName]
-  @scala.inline
-  implicit def apply(value: StringLiteral): ModuleName = value.asInstanceOf[ModuleName]
-}
-

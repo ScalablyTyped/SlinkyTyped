@@ -26,41 +26,14 @@ trait SchemaExportResourcesRequest extends js.Object {
 
 object SchemaExportResourcesRequest {
   @scala.inline
-  def apply(): SchemaExportResourcesRequest = {
+  def apply(
+    bigqueryDestinationLocation: SchemaBigQueryLocation = null,
+    gcsDestinationLocation: SchemaGcsDataLocation = null
+  ): SchemaExportResourcesRequest = {
     val __obj = js.Dynamic.literal()
+    if (bigqueryDestinationLocation != null) __obj.updateDynamic("bigqueryDestinationLocation")(bigqueryDestinationLocation.asInstanceOf[js.Any])
+    if (gcsDestinationLocation != null) __obj.updateDynamic("gcsDestinationLocation")(gcsDestinationLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExportResourcesRequest]
   }
-  @scala.inline
-  implicit class SchemaExportResourcesRequestOps[Self <: SchemaExportResourcesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBigqueryDestinationLocation(value: SchemaBigQueryLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDestinationLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBigqueryDestinationLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigqueryDestinationLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcsDestinationLocation(value: SchemaGcsDataLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDestinationLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsDestinationLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDestinationLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

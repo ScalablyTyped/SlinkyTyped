@@ -26,9 +26,16 @@ object deleteItemCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteItemInput) = this()
+    /* CompleteClass */
+    override val input: DeleteItemInput = js.native
     val middlewareStack: MiddlewareStack[DeleteItemInput, DeleteItemOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[DeleteItemInput, DeleteItemOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DeleteItemInput, DeleteItemOutput] = js.native
   }

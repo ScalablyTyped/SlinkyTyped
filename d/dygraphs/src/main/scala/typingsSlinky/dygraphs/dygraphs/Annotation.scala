@@ -7,10 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Annotation extends js.Object {
-  /**	If true, attach annotations to the x-axis, rather than to actual points. */
-  var attachAtBottom: js.UndefOr[Boolean] = js.native
+  /**    If true, attach annotations to the x-axis, rather than to actual points. */
+  var attachAtBottom: js.UndefOr[Boolean] = js.undefined
   /** This function is called whenever the user clicks on this annotation. */
   var clickHandler: js.UndefOr[
     js.Function4[
@@ -20,9 +19,9 @@ trait Annotation extends js.Object {
       /* event */ MouseEvent, 
       _
     ]
-  ] = js.native
-  /**	CSS class to use for styling the annotation. */
-  var cssClass: js.UndefOr[String] = js.native
+  ] = js.undefined
+  /**    CSS class to use for styling the annotation. */
+  var cssClass: js.UndefOr[String] = js.undefined
   /** this function is called whenever the user double-clicks on this annotation. */
   var dblClickHandler: js.UndefOr[
     js.Function4[
@@ -32,15 +31,15 @@ trait Annotation extends js.Object {
       /* event */ MouseEvent, 
       _
     ]
-  ] = js.native
-  var div: js.UndefOr[HTMLDivElement] = js.native
+  ] = js.undefined
+  var div: js.UndefOr[HTMLDivElement] = js.undefined
   /** Height (in pixels) of the annotation flag or icon. */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * Specify in place of shortText to mark the annotation with an image rather than text.
     * If you specify this, you must specify width and height.
     */
-  var icon: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[String] = js.undefined
   /** This function is called whenever the user mouses out of this annotation. */
   var mouseOutHandler: js.UndefOr[
     js.Function4[
@@ -50,7 +49,7 @@ trait Annotation extends js.Object {
       /* event */ MouseEvent, 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   /** This function is called whenever the user mouses over this annotation. */
   var mouseOverHandler: js.UndefOr[
     js.Function4[
@@ -60,236 +59,66 @@ trait Annotation extends js.Object {
       /* event */ MouseEvent, 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   /** The name of the series to which the annotated point belongs. */
-  var series: String = js.native
-  /**	Text that will appear on the annotation's flag. */
-  var shortText: js.UndefOr[String] = js.native
+  var series: String
+  /**    Text that will appear on the annotation's flag. */
+  var shortText: js.UndefOr[String] = js.undefined
   /** A longer description of the annotation which will appear when the user hovers over it. */
-  var text: js.UndefOr[String] = js.native
-  /**	Height of the tick mark (in pixels) connecting the point to its flag or icon. */
-  var tickHeight: js.UndefOr[Double] = js.native
-  /**	Width (in pixels) of the annotation flag or icon. */
-  var width: js.UndefOr[Double] = js.native
+  var text: js.UndefOr[String] = js.undefined
+  /**    Height of the tick mark (in pixels) connecting the point to its flag or icon. */
+  var tickHeight: js.UndefOr[Double] = js.undefined
+  /**    Width (in pixels) of the annotation flag or icon. */
+  var width: js.UndefOr[Double] = js.undefined
   /**
     * The x value of the point. This should be the same as the value
     * you specified in your CSV file, e.g. "2010-09-13".
     * You must set either x or xval.
     */
-  var x: js.UndefOr[Double | String] = js.native
+  var x: js.UndefOr[Double | String] = js.undefined
   /**
     * numeric value of the point, or millis since epoch.
     */
-  var xval: js.UndefOr[Double] = js.native
+  var xval: js.UndefOr[Double] = js.undefined
 }
 
 object Annotation {
   @scala.inline
-  def apply(series: String): Annotation = {
+  def apply(
+    series: String,
+    attachAtBottom: js.UndefOr[Boolean] = js.undefined,
+    clickHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
+    cssClass: String = null,
+    dblClickHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
+    div: HTMLDivElement = null,
+    height: js.UndefOr[Double] = js.undefined,
+    icon: String = null,
+    mouseOutHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
+    mouseOverHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
+    shortText: String = null,
+    text: String = null,
+    tickHeight: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    x: Double | String = null,
+    xval: js.UndefOr[Double] = js.undefined
+  ): Annotation = {
     val __obj = js.Dynamic.literal(series = series.asInstanceOf[js.Any])
+    if (!js.isUndefined(attachAtBottom)) __obj.updateDynamic("attachAtBottom")(attachAtBottom.get.asInstanceOf[js.Any])
+    if (clickHandler != null) __obj.updateDynamic("clickHandler")(js.Any.fromFunction4(clickHandler))
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (dblClickHandler != null) __obj.updateDynamic("dblClickHandler")(js.Any.fromFunction4(dblClickHandler))
+    if (div != null) __obj.updateDynamic("div")(div.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (mouseOutHandler != null) __obj.updateDynamic("mouseOutHandler")(js.Any.fromFunction4(mouseOutHandler))
+    if (mouseOverHandler != null) __obj.updateDynamic("mouseOverHandler")(js.Any.fromFunction4(mouseOverHandler))
+    if (shortText != null) __obj.updateDynamic("shortText")(shortText.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickHeight)) __obj.updateDynamic("tickHeight")(tickHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+    if (!js.isUndefined(xval)) __obj.updateDynamic("xval")(xval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Annotation]
   }
-  @scala.inline
-  implicit class AnnotationOps[Self <: Annotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSeries(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachAtBottom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachAtBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachAtBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachAtBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickHandler(
-      value: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickHandler")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutClickHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDblClickHandler(
-      value: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dblClickHandler")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutDblClickHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dblClickHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiv(value: HTMLDivElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseOutHandler(
-      value: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOutHandler")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseOutHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOutHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseOverHandler(
-      value: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOverHandler")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseOverHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOverHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

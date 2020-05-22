@@ -15,7 +15,7 @@ trait Rectangle_[ExtraData] extends Polygon[ExtraData] {
   def setBounds(bounds: Bounds): Unit = js.native
   def setBounds(bounds: Bounds, preventEvent: Boolean): Unit = js.native
   /**
-    * 	修改矩形属性
+    *     修改矩形属性
     * @param options 属性
     */
   def setOptions(options: PartialOptionsany): Unit = js.native

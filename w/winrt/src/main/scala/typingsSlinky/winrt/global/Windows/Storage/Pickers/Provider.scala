@@ -1,5 +1,10 @@
 package typingsSlinky.winrt.global.Windows.Storage.Pickers
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrt.Windows.Storage.IStorageFile
+import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.AddFileResult
+import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSelectionMode
+import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.SetFileNameResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,39 +14,102 @@ import scala.scalajs.js.annotation._
 object Provider extends js.Object {
   @js.native
   class FileOpenPickerUI ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileOpenPickerUI
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileOpenPickerUI {
+    /* CompleteClass */
+    override var allowedFileTypes: IVectorView[String] = js.native
+    /* CompleteClass */
+    override var onclosing: js.Any = js.native
+    /* CompleteClass */
+    override var onfileremoved: js.Any = js.native
+    /* CompleteClass */
+    override var selectionMode: FileSelectionMode = js.native
+    /* CompleteClass */
+    override var settingsIdentifier: String = js.native
+    /* CompleteClass */
+    override var title: String = js.native
+    /* CompleteClass */
+    override def addFile(id: String, file: IStorageFile): AddFileResult = js.native
+    /* CompleteClass */
+    override def canAddFile(file: IStorageFile): Boolean = js.native
+    /* CompleteClass */
+    override def containsFile(id: String): Boolean = js.native
+    /* CompleteClass */
+    override def removeFile(id: String): Unit = js.native
+  }
   
   @js.native
   class FileRemovedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileRemovedEventArgs
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileRemovedEventArgs {
+    /* CompleteClass */
+    override var id: String = js.native
+  }
   
   @js.native
   class FileSavePickerUI ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSavePickerUI
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSavePickerUI {
+    /* CompleteClass */
+    override var allowedFileTypes: IVectorView[String] = js.native
+    /* CompleteClass */
+    override var fileName: String = js.native
+    /* CompleteClass */
+    override var onfilenamechanged: js.Any = js.native
+    /* CompleteClass */
+    override var ontargetfilerequested: js.Any = js.native
+    /* CompleteClass */
+    override var settingsIdentifier: String = js.native
+    /* CompleteClass */
+    override var title: String = js.native
+    /* CompleteClass */
+    override def trySetFileName(value: String): SetFileNameResult = js.native
+  }
   
   @js.native
   class PickerClosingDeferral ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingDeferral
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingDeferral {
+    /* CompleteClass */
+    override def complete(): Unit = js.native
+  }
   
   @js.native
   class PickerClosingEventArgs ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingEventArgs
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingEventArgs {
+    /* CompleteClass */
+    override var closingOperation: typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingOperation = js.native
+    /* CompleteClass */
+    override var isCanceled: Boolean = js.native
+  }
   
   @js.native
   class PickerClosingOperation ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingOperation
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingOperation {
+    /* CompleteClass */
+    override var deadline: js.Date = js.native
+    /* CompleteClass */
+    override def getDeferral(): typingsSlinky.winrt.Windows.Storage.Pickers.Provider.PickerClosingDeferral = js.native
+  }
   
   @js.native
   class TargetFileRequest ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequest
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequest {
+    /* CompleteClass */
+    override var targetFile: IStorageFile = js.native
+    /* CompleteClass */
+    override def getDeferral(): typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequestDeferral = js.native
+  }
   
   @js.native
   class TargetFileRequestDeferral ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequestDeferral
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequestDeferral {
+    /* CompleteClass */
+    override def complete(): Unit = js.native
+  }
   
   @js.native
   class TargetFileRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs {
+    /* CompleteClass */
+    override var request: typingsSlinky.winrt.Windows.Storage.Pickers.Provider.TargetFileRequest = js.native
+  }
   
   @js.native
   object AddFileResult extends js.Object {

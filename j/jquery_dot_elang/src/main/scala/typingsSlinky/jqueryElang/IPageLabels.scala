@@ -4,439 +4,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPageLabels extends js.Object {
-  var lblAdd: js.UndefOr[String] = js.native
-  var lblEditHead: js.UndefOr[String] = js.native
-  var lblEditKeyField: js.UndefOr[String] = js.native
-  var lblEditValueField: js.UndefOr[String] = js.native
-  var lblEditedExpressionsHead: js.UndefOr[String] = js.native
-  var lblFind: js.UndefOr[String] = js.native
-  var lblFindHead: js.UndefOr[String] = js.native
-  var lblFindedExpressionsHead: js.UndefOr[String] = js.native
-  var lblModify: js.UndefOr[String] = js.native
-  var lblOrderedTest: js.UndefOr[String] = js.native
-  var lblOrderedTestHlp: js.UndefOr[String] = js.native
-  var lblPageHeader: js.UndefOr[String] = js.native
-  var lblRandomlyTest: js.UndefOr[String] = js.native
-  var lblRandomlyTestHlp: js.UndefOr[String] = js.native
-  var lblRemove: js.UndefOr[String] = js.native
-  var lblSearchField: js.UndefOr[String] = js.native
-  var lblSearchInExpressions: js.UndefOr[String] = js.native
-  var lblSearchInExpressionsHlp: js.UndefOr[String] = js.native
-  var lblSearchInMeanings: js.UndefOr[String] = js.native
-  var lblSearchInMeaningsHlp: js.UndefOr[String] = js.native
-  var lblSelectedTest: js.UndefOr[String] = js.native
-  var lblSelectedTestHlp: js.UndefOr[String] = js.native
-  var lblStartTest: js.UndefOr[String] = js.native
-  var lblStopTest: js.UndefOr[String] = js.native
-  var lblTestHead: js.UndefOr[String] = js.native
-  var lblTitle: js.UndefOr[String] = js.native
-  var lblTypedTest: js.UndefOr[String] = js.native
-  var lblTypedTestHlp: js.UndefOr[String] = js.native
-  var lblVoicedTest: js.UndefOr[String] = js.native
-  var lblVoicedTestHlp: js.UndefOr[String] = js.native
-  var lblWrittedTest: js.UndefOr[String] = js.native
-  var lblWrittedTestHlp: js.UndefOr[String] = js.native
+  var lblAdd: js.UndefOr[String] = js.undefined
+  var lblEditHead: js.UndefOr[String] = js.undefined
+  var lblEditKeyField: js.UndefOr[String] = js.undefined
+  var lblEditValueField: js.UndefOr[String] = js.undefined
+  var lblEditedExpressionsHead: js.UndefOr[String] = js.undefined
+  var lblFind: js.UndefOr[String] = js.undefined
+  var lblFindHead: js.UndefOr[String] = js.undefined
+  var lblFindedExpressionsHead: js.UndefOr[String] = js.undefined
+  var lblModify: js.UndefOr[String] = js.undefined
+  var lblOrderedTest: js.UndefOr[String] = js.undefined
+  var lblOrderedTestHlp: js.UndefOr[String] = js.undefined
+  var lblPageHeader: js.UndefOr[String] = js.undefined
+  var lblRandomlyTest: js.UndefOr[String] = js.undefined
+  var lblRandomlyTestHlp: js.UndefOr[String] = js.undefined
+  var lblRemove: js.UndefOr[String] = js.undefined
+  var lblSearchField: js.UndefOr[String] = js.undefined
+  var lblSearchInExpressions: js.UndefOr[String] = js.undefined
+  var lblSearchInExpressionsHlp: js.UndefOr[String] = js.undefined
+  var lblSearchInMeanings: js.UndefOr[String] = js.undefined
+  var lblSearchInMeaningsHlp: js.UndefOr[String] = js.undefined
+  var lblSelectedTest: js.UndefOr[String] = js.undefined
+  var lblSelectedTestHlp: js.UndefOr[String] = js.undefined
+  var lblStartTest: js.UndefOr[String] = js.undefined
+  var lblStopTest: js.UndefOr[String] = js.undefined
+  var lblTestHead: js.UndefOr[String] = js.undefined
+  var lblTitle: js.UndefOr[String] = js.undefined
+  var lblTypedTest: js.UndefOr[String] = js.undefined
+  var lblTypedTestHlp: js.UndefOr[String] = js.undefined
+  var lblVoicedTest: js.UndefOr[String] = js.undefined
+  var lblVoicedTestHlp: js.UndefOr[String] = js.undefined
+  var lblWrittedTest: js.UndefOr[String] = js.undefined
+  var lblWrittedTestHlp: js.UndefOr[String] = js.undefined
 }
 
 object IPageLabels {
   @scala.inline
-  def apply(): IPageLabels = {
+  def apply(
+    lblAdd: String = null,
+    lblEditHead: String = null,
+    lblEditKeyField: String = null,
+    lblEditValueField: String = null,
+    lblEditedExpressionsHead: String = null,
+    lblFind: String = null,
+    lblFindHead: String = null,
+    lblFindedExpressionsHead: String = null,
+    lblModify: String = null,
+    lblOrderedTest: String = null,
+    lblOrderedTestHlp: String = null,
+    lblPageHeader: String = null,
+    lblRandomlyTest: String = null,
+    lblRandomlyTestHlp: String = null,
+    lblRemove: String = null,
+    lblSearchField: String = null,
+    lblSearchInExpressions: String = null,
+    lblSearchInExpressionsHlp: String = null,
+    lblSearchInMeanings: String = null,
+    lblSearchInMeaningsHlp: String = null,
+    lblSelectedTest: String = null,
+    lblSelectedTestHlp: String = null,
+    lblStartTest: String = null,
+    lblStopTest: String = null,
+    lblTestHead: String = null,
+    lblTitle: String = null,
+    lblTypedTest: String = null,
+    lblTypedTestHlp: String = null,
+    lblVoicedTest: String = null,
+    lblVoicedTestHlp: String = null,
+    lblWrittedTest: String = null,
+    lblWrittedTestHlp: String = null
+  ): IPageLabels = {
     val __obj = js.Dynamic.literal()
+    if (lblAdd != null) __obj.updateDynamic("lblAdd")(lblAdd.asInstanceOf[js.Any])
+    if (lblEditHead != null) __obj.updateDynamic("lblEditHead")(lblEditHead.asInstanceOf[js.Any])
+    if (lblEditKeyField != null) __obj.updateDynamic("lblEditKeyField")(lblEditKeyField.asInstanceOf[js.Any])
+    if (lblEditValueField != null) __obj.updateDynamic("lblEditValueField")(lblEditValueField.asInstanceOf[js.Any])
+    if (lblEditedExpressionsHead != null) __obj.updateDynamic("lblEditedExpressionsHead")(lblEditedExpressionsHead.asInstanceOf[js.Any])
+    if (lblFind != null) __obj.updateDynamic("lblFind")(lblFind.asInstanceOf[js.Any])
+    if (lblFindHead != null) __obj.updateDynamic("lblFindHead")(lblFindHead.asInstanceOf[js.Any])
+    if (lblFindedExpressionsHead != null) __obj.updateDynamic("lblFindedExpressionsHead")(lblFindedExpressionsHead.asInstanceOf[js.Any])
+    if (lblModify != null) __obj.updateDynamic("lblModify")(lblModify.asInstanceOf[js.Any])
+    if (lblOrderedTest != null) __obj.updateDynamic("lblOrderedTest")(lblOrderedTest.asInstanceOf[js.Any])
+    if (lblOrderedTestHlp != null) __obj.updateDynamic("lblOrderedTestHlp")(lblOrderedTestHlp.asInstanceOf[js.Any])
+    if (lblPageHeader != null) __obj.updateDynamic("lblPageHeader")(lblPageHeader.asInstanceOf[js.Any])
+    if (lblRandomlyTest != null) __obj.updateDynamic("lblRandomlyTest")(lblRandomlyTest.asInstanceOf[js.Any])
+    if (lblRandomlyTestHlp != null) __obj.updateDynamic("lblRandomlyTestHlp")(lblRandomlyTestHlp.asInstanceOf[js.Any])
+    if (lblRemove != null) __obj.updateDynamic("lblRemove")(lblRemove.asInstanceOf[js.Any])
+    if (lblSearchField != null) __obj.updateDynamic("lblSearchField")(lblSearchField.asInstanceOf[js.Any])
+    if (lblSearchInExpressions != null) __obj.updateDynamic("lblSearchInExpressions")(lblSearchInExpressions.asInstanceOf[js.Any])
+    if (lblSearchInExpressionsHlp != null) __obj.updateDynamic("lblSearchInExpressionsHlp")(lblSearchInExpressionsHlp.asInstanceOf[js.Any])
+    if (lblSearchInMeanings != null) __obj.updateDynamic("lblSearchInMeanings")(lblSearchInMeanings.asInstanceOf[js.Any])
+    if (lblSearchInMeaningsHlp != null) __obj.updateDynamic("lblSearchInMeaningsHlp")(lblSearchInMeaningsHlp.asInstanceOf[js.Any])
+    if (lblSelectedTest != null) __obj.updateDynamic("lblSelectedTest")(lblSelectedTest.asInstanceOf[js.Any])
+    if (lblSelectedTestHlp != null) __obj.updateDynamic("lblSelectedTestHlp")(lblSelectedTestHlp.asInstanceOf[js.Any])
+    if (lblStartTest != null) __obj.updateDynamic("lblStartTest")(lblStartTest.asInstanceOf[js.Any])
+    if (lblStopTest != null) __obj.updateDynamic("lblStopTest")(lblStopTest.asInstanceOf[js.Any])
+    if (lblTestHead != null) __obj.updateDynamic("lblTestHead")(lblTestHead.asInstanceOf[js.Any])
+    if (lblTitle != null) __obj.updateDynamic("lblTitle")(lblTitle.asInstanceOf[js.Any])
+    if (lblTypedTest != null) __obj.updateDynamic("lblTypedTest")(lblTypedTest.asInstanceOf[js.Any])
+    if (lblTypedTestHlp != null) __obj.updateDynamic("lblTypedTestHlp")(lblTypedTestHlp.asInstanceOf[js.Any])
+    if (lblVoicedTest != null) __obj.updateDynamic("lblVoicedTest")(lblVoicedTest.asInstanceOf[js.Any])
+    if (lblVoicedTestHlp != null) __obj.updateDynamic("lblVoicedTestHlp")(lblVoicedTestHlp.asInstanceOf[js.Any])
+    if (lblWrittedTest != null) __obj.updateDynamic("lblWrittedTest")(lblWrittedTest.asInstanceOf[js.Any])
+    if (lblWrittedTestHlp != null) __obj.updateDynamic("lblWrittedTestHlp")(lblWrittedTestHlp.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPageLabels]
   }
-  @scala.inline
-  implicit class IPageLabelsOps[Self <: IPageLabels] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLblAdd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblEditHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblEditHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblEditKeyField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditKeyField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblEditKeyField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditKeyField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblEditValueField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditValueField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblEditValueField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditValueField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblEditedExpressionsHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditedExpressionsHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblEditedExpressionsHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblEditedExpressionsHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblFind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblFind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblFind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblFind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblFindHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblFindHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblFindHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblFindHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblFindedExpressionsHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblFindedExpressionsHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblFindedExpressionsHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblFindedExpressionsHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblModify(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblModify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblModify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblModify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblOrderedTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblOrderedTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblOrderedTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblOrderedTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblOrderedTestHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblOrderedTestHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblOrderedTestHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblOrderedTestHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblPageHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblPageHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblPageHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblPageHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblRandomlyTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblRandomlyTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblRandomlyTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblRandomlyTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblRandomlyTestHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblRandomlyTestHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblRandomlyTestHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblRandomlyTestHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblRemove(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSearchField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSearchField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSearchInExpressions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSearchInExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSearchInExpressionsHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInExpressionsHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSearchInExpressionsHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInExpressionsHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSearchInMeanings(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInMeanings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSearchInMeanings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInMeanings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSearchInMeaningsHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInMeaningsHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSearchInMeaningsHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSearchInMeaningsHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSelectedTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSelectedTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSelectedTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSelectedTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblSelectedTestHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSelectedTestHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblSelectedTestHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblSelectedTestHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblStartTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblStartTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblStartTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblStartTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblStopTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblStopTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblStopTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblStopTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblTestHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTestHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblTestHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTestHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblTypedTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTypedTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblTypedTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTypedTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblTypedTestHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTypedTestHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblTypedTestHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblTypedTestHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblVoicedTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblVoicedTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblVoicedTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblVoicedTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblVoicedTestHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblVoicedTestHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblVoicedTestHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblVoicedTestHlp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblWrittedTest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblWrittedTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblWrittedTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblWrittedTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLblWrittedTestHlp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblWrittedTestHlp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLblWrittedTestHlp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lblWrittedTestHlp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

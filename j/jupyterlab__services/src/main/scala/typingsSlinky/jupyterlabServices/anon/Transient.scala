@@ -7,63 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Transient extends js.Object {
-  var data: IMimeBundle = js.native
-  var execution_count: ExecutionCount = js.native
-  var metadata: OutputMetadata = js.native
-  var transient: js.UndefOr[Displayid] = js.native
+  var data: IMimeBundle
+  var execution_count: ExecutionCount
+  var metadata: OutputMetadata
+  var transient: js.UndefOr[Displayid] = js.undefined
 }
 
 object Transient {
   @scala.inline
-  def apply(data: IMimeBundle, metadata: OutputMetadata): Transient = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any])
+  def apply(
+    data: IMimeBundle,
+    metadata: OutputMetadata,
+    execution_count: ExecutionCount = null.asInstanceOf[ExecutionCount],
+    transient: Displayid = null
+  ): Transient = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], execution_count = execution_count.asInstanceOf[js.Any])
+    if (transient != null) __obj.updateDynamic("transient")(transient.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transient]
   }
-  @scala.inline
-  implicit class TransientOps[Self <: Transient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: IMimeBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: OutputMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecution_count(value: ExecutionCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecution_countNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution_count")(null)
-        ret
-    }
-    @scala.inline
-    def withTransient(value: Displayid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transient")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,95 +38,23 @@ trait UpdateNetworkProfileRequest extends js.Object {
 
 object UpdateNetworkProfileRequest {
   @scala.inline
-  def apply(NetworkProfileArn: Arn): UpdateNetworkProfileRequest = {
+  def apply(
+    NetworkProfileArn: Arn,
+    CertificateAuthorityArn: Arn = null,
+    CurrentPassword: CurrentWiFiPassword = null,
+    Description: NetworkProfileDescription = null,
+    NetworkProfileName: NetworkProfileName = null,
+    NextPassword: NextWiFiPassword = null,
+    TrustAnchors: TrustAnchorList = null
+  ): UpdateNetworkProfileRequest = {
     val __obj = js.Dynamic.literal(NetworkProfileArn = NetworkProfileArn.asInstanceOf[js.Any])
+    if (CertificateAuthorityArn != null) __obj.updateDynamic("CertificateAuthorityArn")(CertificateAuthorityArn.asInstanceOf[js.Any])
+    if (CurrentPassword != null) __obj.updateDynamic("CurrentPassword")(CurrentPassword.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (NetworkProfileName != null) __obj.updateDynamic("NetworkProfileName")(NetworkProfileName.asInstanceOf[js.Any])
+    if (NextPassword != null) __obj.updateDynamic("NextPassword")(NextPassword.asInstanceOf[js.Any])
+    if (TrustAnchors != null) __obj.updateDynamic("TrustAnchors")(TrustAnchors.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateNetworkProfileRequest]
   }
-  @scala.inline
-  implicit class UpdateNetworkProfileRequestOps[Self <: UpdateNetworkProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkProfileArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificateAuthorityArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateAuthorityArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentPassword(value: CurrentWiFiPassword): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentPassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NetworkProfileDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProfileName(value: NetworkProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkProfileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPassword(value: NextWiFiPassword): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrustAnchors(value: TrustAnchorList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustAnchors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrustAnchors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustAnchors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

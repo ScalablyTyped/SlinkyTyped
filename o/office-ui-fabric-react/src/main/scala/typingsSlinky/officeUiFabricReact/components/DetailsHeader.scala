@@ -22,7 +22,7 @@ import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -41,7 +41,7 @@ object DetailsHeader {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -109,7 +109,7 @@ object DetailsHeader {
     @scala.inline
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDetailsHeaderStyleProps => Partial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDetailsHeaderStyleProps => DeepPartial[IDetailsHeaderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDetailsHeaderStyleProps, IDetailsHeaderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

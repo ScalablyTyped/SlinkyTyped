@@ -10,91 +10,43 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to initialize an editor.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The configuration options for the editor.
     */
-  var config: js.UndefOr[PartialIConfig] = js.native
+  var config: js.UndefOr[PartialIConfig] = js.undefined
   /**
     * The host widget used by the editor.
     */
-  var host: HTMLElement = js.native
+  var host: HTMLElement
   /**
     * The model used by the editor.
     */
-  var model: IModel = js.native
+  var model: IModel
   /**
     * The default selection style for the editor.
     */
-  var selectionStyle: js.UndefOr[PartialISelectionStyle] = js.native
+  var selectionStyle: js.UndefOr[PartialISelectionStyle] = js.undefined
   /**
     * The desired uuid for the editor.
     */
-  var uuid: js.UndefOr[String] = js.native
+  var uuid: js.UndefOr[String] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(host: HTMLElement, model: IModel): IOptions = {
+  def apply(
+    host: HTMLElement,
+    model: IModel,
+    config: PartialIConfig = null,
+    selectionStyle: PartialISelectionStyle = null,
+    uuid: String = null
+  ): IOptions = {
     val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], model = model.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (selectionStyle != null) __obj.updateDynamic("selectionStyle")(selectionStyle.asInstanceOf[js.Any])
+    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHost(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModel(value: IModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfig(value: PartialIConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionStyle(value: PartialISelectionStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,7 +30,7 @@ trait TimelineStyle extends ClientObject {
   var name: String = js.native
   /**
     *
-    * Specifies whether this TimelineStyle object is read-only. Read-only.
+    * Specifies if this TimelineStyle object is read-only.
     *
     * [Api set: ExcelApi 1.10]
     */

@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the RangeAreas object, for use in `rangeAreas.set({ ... })`. */
-@js.native
 trait RangeAreasUpdateData extends js.Object {
   /**
     *
@@ -13,14 +12,14 @@ trait RangeAreasUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var dataValidation: js.UndefOr[DataValidationUpdateData] = js.native
+  var dataValidation: js.UndefOr[DataValidationUpdateData] = js.undefined
   /**
     *
-    * Returns a rangeFormat object, encapsulating the the font, fill, borders, alignment, and other properties for all ranges in the RangeAreas object.
+    * Returns a RangeFormat object, encapsulating the the font, fill, borders, alignment, and other properties for all ranges in the RangeAreas object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var format: js.UndefOr[RangeFormatUpdateData] = js.native
+  var format: js.UndefOr[RangeFormatUpdateData] = js.undefined
   /**
     *
     * Represents the style for all ranges in this RangeAreas object.
@@ -29,58 +28,21 @@ trait RangeAreasUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var style: js.UndefOr[String] = js.native
+  var style: js.UndefOr[String] = js.undefined
 }
 
 object RangeAreasUpdateData {
   @scala.inline
-  def apply(): RangeAreasUpdateData = {
+  def apply(
+    dataValidation: DataValidationUpdateData = null,
+    format: RangeFormatUpdateData = null,
+    style: String = null
+  ): RangeAreasUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (dataValidation != null) __obj.updateDynamic("dataValidation")(dataValidation.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeAreasUpdateData]
   }
-  @scala.inline
-  implicit class RangeAreasUpdateDataOps[Self <: RangeAreasUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataValidation(value: DataValidationUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: RangeFormatUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

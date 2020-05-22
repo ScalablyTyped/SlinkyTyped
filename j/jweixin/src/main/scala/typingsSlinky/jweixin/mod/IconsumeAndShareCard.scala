@@ -4,37 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IconsumeAndShareCard extends BaseParams {
-  var cardId: String = js.native
-  var code: String = js.native
+  var cardId: String
+  var code: String
 }
 
 object IconsumeAndShareCard {
   @scala.inline
-  def apply(cardId: String, code: String): IconsumeAndShareCard = {
+  def apply(
+    cardId: String,
+    code: String,
+    complete: /* repeated */ js.Any => Unit = null,
+    fail: /* repeated */ js.Any => Unit = null,
+    success: /* repeated */ js.Any => Unit = null
+  ): IconsumeAndShareCard = {
     val __obj = js.Dynamic.literal(cardId = cardId.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[IconsumeAndShareCard]
   }
-  @scala.inline
-  implicit class IconsumeAndShareCardOps[Self <: IconsumeAndShareCard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCardId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

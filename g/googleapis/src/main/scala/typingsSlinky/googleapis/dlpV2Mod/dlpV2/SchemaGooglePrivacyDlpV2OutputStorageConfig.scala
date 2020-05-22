@@ -38,41 +38,11 @@ trait SchemaGooglePrivacyDlpV2OutputStorageConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2OutputStorageConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2OutputStorageConfig = {
+  def apply(outputSchema: String = null, table: SchemaGooglePrivacyDlpV2BigQueryTable = null): SchemaGooglePrivacyDlpV2OutputStorageConfig = {
     val __obj = js.Dynamic.literal()
+    if (outputSchema != null) __obj.updateDynamic("outputSchema")(outputSchema.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2OutputStorageConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2OutputStorageConfigOps[Self <: SchemaGooglePrivacyDlpV2OutputStorageConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputSchema(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: SchemaGooglePrivacyDlpV2BigQueryTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

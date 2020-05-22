@@ -7,79 +7,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LegendProps extends js.Object {
   /** Override the color of the items */
-  var config: js.UndefOr[js.Array[ColorString]] = js.native
-  var data: js.Array[_] = js.native
-  var dataId: String = js.native
+  var config: js.UndefOr[js.Array[ColorString]] = js.undefined
+  var data: js.Array[_]
+  var dataId: String
   /** change list items to inline-block (default block) */
-  var horizontal: js.UndefOr[Boolean] = js.native
+  var horizontal: js.UndefOr[Boolean] = js.undefined
   /** Override the css styles of individual components, see http://rma-consulting.github.io/react-easy-chart/legend/index.html */
-  var styles: js.UndefOr[StringDictionary[CSSProperties]] = js.native
+  var styles: js.UndefOr[StringDictionary[CSSProperties]] = js.undefined
 }
 
 object LegendProps {
   @scala.inline
-  def apply(data: js.Array[_], dataId: String): LegendProps = {
+  def apply(
+    data: js.Array[_],
+    dataId: String,
+    config: js.Array[ColorString] = null,
+    horizontal: js.UndefOr[Boolean] = js.undefined,
+    styles: StringDictionary[CSSProperties] = null
+  ): LegendProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], dataId = dataId.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[LegendProps]
   }
-  @scala.inline
-  implicit class LegendPropsOps[Self <: LegendProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfig(value: js.Array[ColorString]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: StringDictionary[CSSProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

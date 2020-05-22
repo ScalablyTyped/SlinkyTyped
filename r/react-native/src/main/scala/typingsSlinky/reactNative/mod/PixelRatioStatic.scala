@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PixelRatioStatic extends js.Object {
   /*
     Returns the device pixel density. Some examples:
@@ -23,7 +22,7 @@ trait PixelRatioStatic extends js.Object {
     PixelRatio.get() === 3.5
     Nexus 6
     */
-  def get(): Double = js.native
+  def get(): Double
   /*
     Returns the scaling factor for font sizes. This is the ratio that is
     used to calculate the absolute font size, so any elements that
@@ -33,12 +32,12 @@ trait PixelRatioStatic extends js.Object {
     preference set in Settings > Display > Font size,
     on iOS it will always return the default pixel ratio.
     */
-  def getFontScale(): Double = js.native
+  def getFontScale(): Double
   /**
     * Converts a layout size (dp) to pixel size (px).
     * Guaranteed to return an integer number.
     */
-  def getPixelSizeForLayoutSize(layoutSize: Double): Double = js.native
+  def getPixelSizeForLayoutSize(layoutSize: Double): Double
   /**
     * Rounds a layout size (dp) to the nearest layout size that
     * corresponds to an integer number of pixels. For example,
@@ -46,11 +45,11 @@ trait PixelRatioStatic extends js.Object {
     * PixelRatio.roundToNearestPixel(8.4) = 8.33,
     * which corresponds to exactly (8.33 * 3) = 25 pixels.
     */
-  def roundToNearestPixel(layoutSize: Double): Double = js.native
+  def roundToNearestPixel(layoutSize: Double): Double
   /**
     * No-op for iOS, but used on the web. Should not be documented. [sic]
     */
-  def startDetecting(): Unit = js.native
+  def startDetecting(): Unit
 }
 
 object PixelRatioStatic {
@@ -65,43 +64,5 @@ object PixelRatioStatic {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction0(get), getFontScale = js.Any.fromFunction0(getFontScale), getPixelSizeForLayoutSize = js.Any.fromFunction1(getPixelSizeForLayoutSize), roundToNearestPixel = js.Any.fromFunction1(roundToNearestPixel), startDetecting = js.Any.fromFunction0(startDetecting))
     __obj.asInstanceOf[PixelRatioStatic]
   }
-  @scala.inline
-  implicit class PixelRatioStaticOps[Self <: PixelRatioStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFontScale(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFontScale")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPixelSizeForLayoutSize(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPixelSizeForLayoutSize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoundToNearestPixel(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roundToNearestPixel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartDetecting(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDetecting")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -24,41 +24,11 @@ trait SchemaServiceSpecPinnedType extends js.Object {
 
 object SchemaServiceSpecPinnedType {
   @scala.inline
-  def apply(): SchemaServiceSpecPinnedType = {
+  def apply(configuration: SchemaConfigurationSpec = null, revisionName: String = null): SchemaServiceSpecPinnedType = {
     val __obj = js.Dynamic.literal()
+    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
+    if (revisionName != null) __obj.updateDynamic("revisionName")(revisionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServiceSpecPinnedType]
   }
-  @scala.inline
-  implicit class SchemaServiceSpecPinnedTypeOps[Self <: SchemaServiceSpecPinnedType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration(value: SchemaConfigurationSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

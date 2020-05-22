@@ -22,41 +22,10 @@ trait RegisterClientRequest extends js.Object {
 
 object RegisterClientRequest {
   @scala.inline
-  def apply(clientName: ClientName, clientType: ClientType): RegisterClientRequest = {
+  def apply(clientName: ClientName, clientType: ClientType, scopes: Scopes = null): RegisterClientRequest = {
     val __obj = js.Dynamic.literal(clientName = clientName.asInstanceOf[js.Any], clientType = clientType.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterClientRequest]
   }
-  @scala.inline
-  implicit class RegisterClientRequestOps[Self <: RegisterClientRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientName(value: ClientName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientType(value: ClientType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopes(value: Scopes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

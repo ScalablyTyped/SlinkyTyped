@@ -18,35 +18,10 @@ trait DisableMetricsCollectionQuery extends js.Object {
 
 object DisableMetricsCollectionQuery {
   @scala.inline
-  def apply(AutoScalingGroupName: ResourceName): DisableMetricsCollectionQuery = {
+  def apply(AutoScalingGroupName: ResourceName, Metrics: Metrics = null): DisableMetricsCollectionQuery = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any])
+    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisableMetricsCollectionQuery]
   }
-  @scala.inline
-  implicit class DisableMetricsCollectionQueryOps[Self <: DisableMetricsCollectionQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: Metrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

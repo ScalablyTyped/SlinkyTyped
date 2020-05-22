@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A description of the physical position and orientation of a device specified by the IPerceptionFrameProvider's unique identifier (PerceptionFrameProviderInfo::Id) sharing a common coordinate frame of other PerceptionCorrelations that will be combined into a PerceptionCorrelationGroup. */
-@js.native
 trait PerceptionCorrelation extends js.Object {
   /** The orientation of the device in the common coordinate frame shared by other PerceptionCorrelations in the PerceptionCorrelationGroup. */
-  var orientation: Quaternion = js.native
+  var orientation: Quaternion
   /** The position of the device in the common coordinate frame shared by other PerceptionCorrelations in the PerceptionCorrelationGroup. */
-  var position: Vector3 = js.native
+  var position: Vector3
   /** The unique identifier of the described device. */
-  var targetId: String = js.native
+  var targetId: String
 }
 
 object PerceptionCorrelation {
@@ -23,31 +22,5 @@ object PerceptionCorrelation {
     val __obj = js.Dynamic.literal(orientation = orientation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], targetId = targetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerceptionCorrelation]
   }
-  @scala.inline
-  implicit class PerceptionCorrelationOps[Self <: PerceptionCorrelation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrientation(value: Quaternion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

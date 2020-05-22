@@ -52,5 +52,10 @@ class ProceduralTexture protected ()
     generateMipMaps: Boolean,
     isCube: Boolean
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 

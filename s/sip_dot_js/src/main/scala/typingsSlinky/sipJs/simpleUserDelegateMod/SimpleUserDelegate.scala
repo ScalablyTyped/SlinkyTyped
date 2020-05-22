@@ -4,56 +4,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SimpleUserDelegate extends js.Object {
   /**
     * Called when a call is answered.
     * @remarks
     * Callback for handling establishment of a new Session.
     */
-  var onCallAnswered: js.UndefOr[js.Function0[Unit]] = js.native
+  var onCallAnswered: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Called when a call is created.
     * @remarks
     * Callback for handling the creation of a new Session.
     */
-  var onCallCreated: js.UndefOr[js.Function0[Unit]] = js.native
+  var onCallCreated: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
-    * Called when a call is hungup.
+    * Called when a call receives an incoming DTMF tone.
+    * @remarks
+    * Callback for handling an incoming INFO request with content type application/dtmf-relay.
+    */
+  var onCallDTMFReceived: js.UndefOr[js.Function2[/* tone */ String, /* duration */ Double, Unit]] = js.undefined
+  /**
+    * Called when a call is hung up.
     * @remarks
     * Callback for handling termination of a Session.
     */
-  var onCallHangup: js.UndefOr[js.Function0[Unit]] = js.native
+  var onCallHangup: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Called when a call is put on hold or taken off hold.
     * @remarks
     * Callback for handling re-INVITE responses.
     */
-  var onCallHold: js.UndefOr[js.Function1[/* held */ Boolean, Unit]] = js.native
+  var onCallHold: js.UndefOr[js.Function1[/* held */ Boolean, Unit]] = js.undefined
   /**
     * Called when a call is received.
     * @remarks
     * Callback for handling incoming INVITE requests.
     * The callback must either accept or reject the incoming call by calling `answer()` or `decline()` respectively.
     */
-  var onCallReceived: js.UndefOr[js.Function0[Unit]] = js.native
+  var onCallReceived: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Called upon receiving a message.
     * @remarks
     * Callback for handling incoming MESSAGE requests.
     * @param message - The message received.
     */
-  var onMessageReceived: js.UndefOr[js.Function1[/* message */ String, Unit]] = js.native
+  var onMessageReceived: js.UndefOr[js.Function1[/* message */ String, Unit]] = js.undefined
   /**
     * Called when user is registered to received calls.
     */
-  var onRegistered: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRegistered: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Called when user is connected to server.
     * @remarks
     * Callback for handling user becomes connected.
     */
-  var onServerConnect: js.UndefOr[js.Function0[Unit]] = js.native
+  var onServerConnect: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Called when user is no longer connected.
     * @remarks
@@ -61,146 +66,41 @@ trait SimpleUserDelegate extends js.Object {
     *
     * @param error - An Error if server caused the disconnect. Otherwise undefined.
     */
-  var onServerDisconnect: js.UndefOr[js.Function1[/* error */ js.UndefOr[js.Error], Unit]] = js.native
+  var onServerDisconnect: js.UndefOr[js.Function1[/* error */ js.UndefOr[js.Error], Unit]] = js.undefined
   /**
     * Called when user is no longer registered to received calls.
     */
-  var onUnregistered: js.UndefOr[js.Function0[Unit]] = js.native
+  var onUnregistered: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object SimpleUserDelegate {
   @scala.inline
-  def apply(): SimpleUserDelegate = {
+  def apply(
+    onCallAnswered: () => Unit = null,
+    onCallCreated: () => Unit = null,
+    onCallDTMFReceived: (/* tone */ String, /* duration */ Double) => Unit = null,
+    onCallHangup: () => Unit = null,
+    onCallHold: /* held */ Boolean => Unit = null,
+    onCallReceived: () => Unit = null,
+    onMessageReceived: /* message */ String => Unit = null,
+    onRegistered: () => Unit = null,
+    onServerConnect: () => Unit = null,
+    onServerDisconnect: /* error */ js.UndefOr[js.Error] => Unit = null,
+    onUnregistered: () => Unit = null
+  ): SimpleUserDelegate = {
     val __obj = js.Dynamic.literal()
+    if (onCallAnswered != null) __obj.updateDynamic("onCallAnswered")(js.Any.fromFunction0(onCallAnswered))
+    if (onCallCreated != null) __obj.updateDynamic("onCallCreated")(js.Any.fromFunction0(onCallCreated))
+    if (onCallDTMFReceived != null) __obj.updateDynamic("onCallDTMFReceived")(js.Any.fromFunction2(onCallDTMFReceived))
+    if (onCallHangup != null) __obj.updateDynamic("onCallHangup")(js.Any.fromFunction0(onCallHangup))
+    if (onCallHold != null) __obj.updateDynamic("onCallHold")(js.Any.fromFunction1(onCallHold))
+    if (onCallReceived != null) __obj.updateDynamic("onCallReceived")(js.Any.fromFunction0(onCallReceived))
+    if (onMessageReceived != null) __obj.updateDynamic("onMessageReceived")(js.Any.fromFunction1(onMessageReceived))
+    if (onRegistered != null) __obj.updateDynamic("onRegistered")(js.Any.fromFunction0(onRegistered))
+    if (onServerConnect != null) __obj.updateDynamic("onServerConnect")(js.Any.fromFunction0(onServerConnect))
+    if (onServerDisconnect != null) __obj.updateDynamic("onServerDisconnect")(js.Any.fromFunction1(onServerDisconnect))
+    if (onUnregistered != null) __obj.updateDynamic("onUnregistered")(js.Any.fromFunction0(onUnregistered))
     __obj.asInstanceOf[SimpleUserDelegate]
   }
-  @scala.inline
-  implicit class SimpleUserDelegateOps[Self <: SimpleUserDelegate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnCallAnswered(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallAnswered")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCallAnswered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallAnswered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCallCreated(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallCreated")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCallCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallCreated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCallHangup(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallHangup")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCallHangup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallHangup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCallHold(value: /* held */ Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallHold")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCallHold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallHold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCallReceived(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallReceived")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCallReceived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCallReceived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMessageReceived(value: /* message */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessageReceived")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMessageReceived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessageReceived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRegistered(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRegistered")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRegistered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRegistered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnServerConnect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onServerConnect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnServerConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onServerConnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnServerDisconnect(value: /* error */ js.UndefOr[js.Error] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onServerDisconnect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnServerDisconnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onServerDisconnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUnregistered(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnregistered")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUnregistered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnregistered")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

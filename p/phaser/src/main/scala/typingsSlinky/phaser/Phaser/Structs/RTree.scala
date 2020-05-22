@@ -16,6 +16,5 @@ import scala.scalajs.js.annotation._
   * 
   * rbush is forked from https://github.com/mourner/rbush by Vladimir Agafonkin
   */
-@js.native
 trait RTree extends js.Object
 

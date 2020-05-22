@@ -24,5 +24,10 @@ class PointsCloudSystem protected ()
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     options: UpdatableBoolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

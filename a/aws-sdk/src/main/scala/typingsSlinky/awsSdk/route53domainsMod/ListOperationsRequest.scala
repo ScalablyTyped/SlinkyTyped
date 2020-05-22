@@ -15,60 +15,23 @@ trait ListOperationsRequest extends js.Object {
     */
   var MaxItems: js.UndefOr[PageMaxItems] = js.native
   /**
-    * An optional parameter that lets you get information about all the operations that you submitted after a specified date and time. Specify the date and time in Coordinated Universal time (UTC).
+    * An optional parameter that lets you get information about all the operations that you submitted after a specified date and time. Specify the date and time in Unix time format and Coordinated Universal time (UTC).
     */
   var SubmittedSince: js.UndefOr[js.Date] = js.native
 }
 
 object ListOperationsRequest {
   @scala.inline
-  def apply(): ListOperationsRequest = {
+  def apply(
+    Marker: PageMarker = null,
+    MaxItems: js.UndefOr[PageMaxItems] = js.undefined,
+    SubmittedSince: js.Date = null
+  ): ListOperationsRequest = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxItems)) __obj.updateDynamic("MaxItems")(MaxItems.get.asInstanceOf[js.Any])
+    if (SubmittedSince != null) __obj.updateDynamic("SubmittedSince")(SubmittedSince.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOperationsRequest]
   }
-  @scala.inline
-  implicit class ListOperationsRequestOps[Self <: ListOperationsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: PageMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: PageMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmittedSince(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmittedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmittedSince")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

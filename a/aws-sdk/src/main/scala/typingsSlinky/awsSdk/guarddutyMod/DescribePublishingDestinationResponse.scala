@@ -15,7 +15,7 @@ trait DescribePublishingDestinationResponse extends js.Object {
     */
   var DestinationProperties: typingsSlinky.awsSdk.guarddutyMod.DestinationProperties = js.native
   /**
-    * The type of the publishing destination. Currently, only S3 is supported.
+    * The type of publishing destination. Currently, only Amazon S3 buckets are supported.
     */
   var DestinationType: typingsSlinky.awsSdk.guarddutyMod.DestinationType = js.native
   /**
@@ -40,43 +40,5 @@ object DescribePublishingDestinationResponse {
     val __obj = js.Dynamic.literal(DestinationId = DestinationId.asInstanceOf[js.Any], DestinationProperties = DestinationProperties.asInstanceOf[js.Any], DestinationType = DestinationType.asInstanceOf[js.Any], PublishingFailureStartTimestamp = PublishingFailureStartTimestamp.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePublishingDestinationResponse]
   }
-  @scala.inline
-  implicit class DescribePublishingDestinationResponseOps[Self <: DescribePublishingDestinationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationProperties(value: DestinationProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationType(value: DestinationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublishingFailureStartTimestamp(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublishingFailureStartTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: PublishingStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

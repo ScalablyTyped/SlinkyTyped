@@ -26,9 +26,16 @@ object createGrantCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateGrantInput) = this()
+    /* CompleteClass */
+    override val input: CreateGrantInput = js.native
     val middlewareStack: MiddlewareStack[CreateGrantInput, CreateGrantOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: KMSResolvedConfiguration
+    ): Handler[CreateGrantInput, CreateGrantOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[CreateGrantInput, CreateGrantOutput] = js.native
   }

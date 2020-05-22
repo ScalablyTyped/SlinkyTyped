@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleApiUrlShortenerUrlResourceAnalyticsArrayObject extends js.Object {
   /**
     * Number of clicks for this top entry, e.g. for this particular country or browser.
     */
-  var count: String = js.native
+  var count: String
   /**
     * Label assigned to this top entry, e.g. "US" or "Chrome".
     */
-  var id: String = js.native
+  var id: String
 }
 
 object GoogleApiUrlShortenerUrlResourceAnalyticsArrayObject {
@@ -22,25 +21,5 @@ object GoogleApiUrlShortenerUrlResourceAnalyticsArrayObject {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiUrlShortenerUrlResourceAnalyticsArrayObject]
   }
-  @scala.inline
-  implicit class GoogleApiUrlShortenerUrlResourceAnalyticsArrayObjectOps[Self <: GoogleApiUrlShortenerUrlResourceAnalyticsArrayObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

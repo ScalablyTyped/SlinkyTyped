@@ -30,71 +30,19 @@ trait StartFaceDetectionRequest extends js.Object {
 
 object StartFaceDetectionRequest {
   @scala.inline
-  def apply(Video: Video): StartFaceDetectionRequest = {
+  def apply(
+    Video: Video,
+    ClientRequestToken: ClientRequestToken = null,
+    FaceAttributes: FaceAttributes = null,
+    JobTag: JobTag = null,
+    NotificationChannel: NotificationChannel = null
+  ): StartFaceDetectionRequest = {
     val __obj = js.Dynamic.literal(Video = Video.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
+    if (FaceAttributes != null) __obj.updateDynamic("FaceAttributes")(FaceAttributes.asInstanceOf[js.Any])
+    if (JobTag != null) __obj.updateDynamic("JobTag")(JobTag.asInstanceOf[js.Any])
+    if (NotificationChannel != null) __obj.updateDynamic("NotificationChannel")(NotificationChannel.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartFaceDetectionRequest]
   }
-  @scala.inline
-  implicit class StartFaceDetectionRequestOps[Self <: StartFaceDetectionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVideo(value: Video): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Video")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceAttributes(value: FaceAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobTag(value: JobTag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationChannel(value: NotificationChannel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationChannel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationChannel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

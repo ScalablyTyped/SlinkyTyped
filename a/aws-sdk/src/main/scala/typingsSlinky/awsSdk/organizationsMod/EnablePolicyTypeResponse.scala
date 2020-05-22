@@ -14,29 +14,10 @@ trait EnablePolicyTypeResponse extends js.Object {
 
 object EnablePolicyTypeResponse {
   @scala.inline
-  def apply(): EnablePolicyTypeResponse = {
+  def apply(Root: Root = null): EnablePolicyTypeResponse = {
     val __obj = js.Dynamic.literal()
+    if (Root != null) __obj.updateDynamic("Root")(Root.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnablePolicyTypeResponse]
   }
-  @scala.inline
-  implicit class EnablePolicyTypeResponseOps[Self <: EnablePolicyTypeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoot(value: Root): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

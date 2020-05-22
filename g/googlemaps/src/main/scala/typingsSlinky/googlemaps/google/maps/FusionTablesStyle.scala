@@ -4,75 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+// TODO find source documentation
 trait FusionTablesStyle extends js.Object {
-  var markerOptions: js.UndefOr[FusionTablesMarkerOptions] = js.native
-  var polygonOptions: js.UndefOr[FusionTablesPolygonOptions] = js.native
-  var polylineOptions: js.UndefOr[FusionTablesPolylineOptions] = js.native
-  var where: js.UndefOr[String] = js.native
+  var markerOptions: js.UndefOr[FusionTablesMarkerOptions] = js.undefined
+  var polygonOptions: js.UndefOr[FusionTablesPolygonOptions] = js.undefined
+  var polylineOptions: js.UndefOr[FusionTablesPolylineOptions] = js.undefined
+  var where: js.UndefOr[String] = js.undefined
 }
 
 object FusionTablesStyle {
   @scala.inline
-  def apply(): FusionTablesStyle = {
+  def apply(
+    markerOptions: FusionTablesMarkerOptions = null,
+    polygonOptions: FusionTablesPolygonOptions = null,
+    polylineOptions: FusionTablesPolylineOptions = null,
+    where: String = null
+  ): FusionTablesStyle = {
     val __obj = js.Dynamic.literal()
+    if (markerOptions != null) __obj.updateDynamic("markerOptions")(markerOptions.asInstanceOf[js.Any])
+    if (polygonOptions != null) __obj.updateDynamic("polygonOptions")(polygonOptions.asInstanceOf[js.Any])
+    if (polylineOptions != null) __obj.updateDynamic("polylineOptions")(polylineOptions.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[FusionTablesStyle]
   }
-  @scala.inline
-  implicit class FusionTablesStyleOps[Self <: FusionTablesStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarkerOptions(value: FusionTablesMarkerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolygonOptions(value: FusionTablesPolygonOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolygonOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolylineOptions(value: FusionTablesPolylineOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polylineOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolylineOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polylineOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhere(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhere: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

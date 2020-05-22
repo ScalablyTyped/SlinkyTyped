@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.scroll
 */
 trait Attachment
-  extends FinalBgLayer[js.Any]
-     with BackgroundAttachmentProperty
-     with WebkitMaskAttachmentProperty
+  extends _FinalBgLayer[js.Any]
+     with _BackgroundAttachmentProperty
+     with _WebkitMaskAttachmentProperty
 
 object Attachment {
   @scala.inline

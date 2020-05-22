@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PluginRemoveEmptyText extends PluginConfig {
-  var removeEmptyText: Boolean | js.Object = js.native
+  var removeEmptyText: Boolean | js.Object
 }
 
 object PluginRemoveEmptyText {
@@ -15,19 +14,5 @@ object PluginRemoveEmptyText {
     val __obj = js.Dynamic.literal(removeEmptyText = removeEmptyText.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginRemoveEmptyText]
   }
-  @scala.inline
-  implicit class PluginRemoveEmptyTextOps[Self <: PluginRemoveEmptyText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemoveEmptyText(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEmptyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

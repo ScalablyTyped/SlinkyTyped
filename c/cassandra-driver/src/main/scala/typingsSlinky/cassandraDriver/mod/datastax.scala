@@ -1,5 +1,6 @@
 package typingsSlinky.cassandraDriver.mod
 
+import typingsSlinky.cassandraDriver.graphMod.graph.EnumValue
 import typingsSlinky.cassandraDriver.typesMod.types.ResultSet
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
@@ -15,6 +16,28 @@ object datastax extends js.Object {
     class GraphResultSet protected ()
       extends typingsSlinky.cassandraDriver.datastaxMod.datastax.graph.GraphResultSet {
       def this(rs: ResultSet) = this()
+    }
+    
+    def asDouble(value: Double): js.Object = js.native
+    def asFloat(value: Double): js.Object = js.native
+    def asInt(value: Double): js.Object = js.native
+    def asTimestamp(value: js.Date): js.Object = js.native
+    def asUdt(value: js.Object): js.Object = js.native
+    @js.native
+    object direction extends js.Object {
+      val both: EnumValue = js.native
+      // `in` is a reserved word
+      @JSName("in_")
+      val in: EnumValue = js.native
+      val out: EnumValue = js.native
+    }
+    
+    @js.native
+    object t extends js.Object {
+      val id: EnumValue = js.native
+      val key: EnumValue = js.native
+      val label: EnumValue = js.native
+      val value: EnumValue = js.native
     }
     
   }

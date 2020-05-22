@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * React state for collapsible section component.
   */
-@js.native
 trait IState extends js.Object {
   /**
     * Whether the section is expanded or collapsed.
     */
-  var isOpen: Boolean = js.native
+  var isOpen: Boolean
 }
 
 object IState {
@@ -21,19 +20,5 @@ object IState {
     val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
     __obj.asInstanceOf[IState]
   }
-  @scala.inline
-  implicit class IStateOps[Self <: IState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

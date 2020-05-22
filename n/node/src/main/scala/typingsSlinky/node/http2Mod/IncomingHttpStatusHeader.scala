@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncomingHttpStatusHeader extends js.Object {
   @JSName(":status")
-  var Colonstatus: js.UndefOr[Double] = js.native
+  var Colonstatus: js.UndefOr[Double] = js.undefined
 }
 
 object IncomingHttpStatusHeader {
   @scala.inline
-  def apply(): IncomingHttpStatusHeader = {
+  def apply(Colonstatus: js.UndefOr[Double] = js.undefined): IncomingHttpStatusHeader = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Colonstatus)) __obj.updateDynamic(":status")(Colonstatus.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncomingHttpStatusHeader]
   }
-  @scala.inline
-  implicit class IncomingHttpStatusHeaderOps[Self <: IncomingHttpStatusHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColonstatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonstatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

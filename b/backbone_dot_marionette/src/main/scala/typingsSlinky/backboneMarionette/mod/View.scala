@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backboneMarionette.anon.Dictindex
 import typingsSlinky.backboneMarionette.backboneMarionetteBooleans.`false`
 import typingsSlinky.jquery.JQuery
@@ -14,26 +15,76 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.backboneMarionette.mod.ViewMixin because var conflicts: delegateEvents. Inlined supportsRenderLifecycle, supportsDestroyLifecycle, isDestroyed, isRendered, isAttached, getTriggers, delegateEntityEvents, undelegateEntityEvents, destroy, bindUIElements, unbindUIElements, childViewEventPrefix, triggerMethod */ @JSImport("backbone.marionette", "View")
 @js.native
-class View[TModel /* <: Model */] ()
+class View[TModel /* <: Model[_, ModelSetOptions] */] ()
   extends typingsSlinky.backbone.mod.View[TModel]
      with RegionsMixin
      with DomMixin
      with CommonMixin {
   def this(options: ViewOptions[TModel]) = this()
+  /* CompleteClass */
+  override var addRegion: js.Any = js.native
+  /* CompleteClass */
+  override var addRegions: js.Any = js.native
+  /* CompleteClass */
+  override var appendChildren: js.Any = js.native
+  /* CompleteClass */
+  override var beforeEl: js.Any = js.native
   /**
     * Behavior objects to assign to this View.
     */
   var behaviors: (js.Array[Behavior | Dictindex]) | (StringDictionary[Instantiable1[js.UndefOr[/* options */ js.Any], Behavior]]) = js.native
+  /* CompleteClass */
+  override var bindEvents: js.Any = js.native
   /**
     * Customize the event prefix for events that are forwarded through the
     * collection view.
     */
   var childViewEventPrefix: js.Any | String | `false` = js.native
+  /* CompleteClass */
+  override var createBuffer: js.Any = js.native
   var destroy: js.Any = js.native
+  /* CompleteClass */
+  override var detachChildView: js.Any = js.native
+  /* CompleteClass */
+  override var detachContents: js.Any = js.native
+  /* CompleteClass */
+  override var detachEl: js.Any = js.native
+  /* CompleteClass */
+  override var emptyRegions: js.Any = js.native
+  /* CompleteClass */
+  override var findEls: js.Any = js.native
+  /* CompleteClass */
+  override var getChildView: js.Any = js.native
+  /* CompleteClass */
+  override var getOption: js.Any = js.native
+  /* CompleteClass */
+  override var getRegion: js.Any = js.native
+  /* CompleteClass */
+  override var getRegions: js.Any = js.native
+  /* CompleteClass */
+  override var hasRegion: js.Any = js.native
+  /* CompleteClass */
+  override var mergeOptions: js.Any = js.native
   /**
     * Bind to events that occur on attached models.
     */
   var modelEvents: EventsHash = js.native
+  /* CompleteClass */
+  override var normalizeMethods: js.Any = js.native
+  /* CompleteClass */
+  override var regionClass: js.Any = js.native
+  /* CompleteClass */
+  override var removeEl: js.Any = js.native
+  /* CompleteClass */
+  override var removeRegion: js.Any = js.native
+  /* CompleteClass */
+  override var removeRegions: js.Any = js.native
+  /* CompleteClass */
+  override var replaceEl: js.Any = js.native
+  /* CompleteClass */
+  override var setInnerContent: js.Any = js.native
+  /* CompleteClass */
+  override var showChildView: js.Any = js.native
   /**
     * Internal property. (undocumented)
     */
@@ -53,6 +104,8 @@ class View[TModel /* <: Model */] ()
     * throughout the view with the ui attribute.
     */
   var ui: js.Any = js.native
+  /* CompleteClass */
+  override var unbindEvents: js.Any = js.native
   /**
     * Used to attached the rendered template to this View's element.
     */

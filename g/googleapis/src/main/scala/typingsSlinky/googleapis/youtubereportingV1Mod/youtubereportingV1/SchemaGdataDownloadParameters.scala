@@ -21,41 +21,14 @@ trait SchemaGdataDownloadParameters extends js.Object {
 
 object SchemaGdataDownloadParameters {
   @scala.inline
-  def apply(): SchemaGdataDownloadParameters = {
+  def apply(
+    allowGzipCompression: js.UndefOr[Boolean] = js.undefined,
+    ignoreRange: js.UndefOr[Boolean] = js.undefined
+  ): SchemaGdataDownloadParameters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowGzipCompression)) __obj.updateDynamic("allowGzipCompression")(allowGzipCompression.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreRange)) __obj.updateDynamic("ignoreRange")(ignoreRange.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataDownloadParameters]
   }
-  @scala.inline
-  implicit class SchemaGdataDownloadParametersOps[Self <: SchemaGdataDownloadParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowGzipCompression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowGzipCompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowGzipCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowGzipCompression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

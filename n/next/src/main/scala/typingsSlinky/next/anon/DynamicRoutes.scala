@@ -6,16 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DynamicRoutes extends js.Object {
-  var catchAllRoute: Route_ = js.native
-  var dynamicRoutes: js.UndefOr[typingsSlinky.next.serverRouterMod.DynamicRoutes] = js.native
-  var fsRoutes: js.Array[Route_] = js.native
-  var headers: js.Array[Route_] = js.native
-  var pageChecker: PageChecker = js.native
-  var redirects: js.Array[Route_] = js.native
-  var rewrites: js.Array[Route_] = js.native
-  var useFileSystemPublicRoutes: Boolean = js.native
+  var catchAllRoute: Route_
+  var dynamicRoutes: js.UndefOr[typingsSlinky.next.serverRouterMod.DynamicRoutes] = js.undefined
+  var fsRoutes: js.Array[Route_]
+  var headers: js.Array[Route_]
+  var pageChecker: PageChecker
+  var redirects: js.Array[Route_]
+  var rewrites: js.Array[Route_]
+  var useFileSystemPublicRoutes: Boolean
 }
 
 object DynamicRoutes {
@@ -27,72 +26,12 @@ object DynamicRoutes {
     pageChecker: /* pathname */ String => js.Promise[Boolean],
     redirects: js.Array[Route_],
     rewrites: js.Array[Route_],
-    useFileSystemPublicRoutes: Boolean
+    useFileSystemPublicRoutes: Boolean,
+    dynamicRoutes: typingsSlinky.next.serverRouterMod.DynamicRoutes = null
   ): DynamicRoutes = {
     val __obj = js.Dynamic.literal(catchAllRoute = catchAllRoute.asInstanceOf[js.Any], fsRoutes = fsRoutes.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], pageChecker = js.Any.fromFunction1(pageChecker), redirects = redirects.asInstanceOf[js.Any], rewrites = rewrites.asInstanceOf[js.Any], useFileSystemPublicRoutes = useFileSystemPublicRoutes.asInstanceOf[js.Any])
+    if (dynamicRoutes != null) __obj.updateDynamic("dynamicRoutes")(dynamicRoutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DynamicRoutes]
   }
-  @scala.inline
-  implicit class DynamicRoutesOps[Self <: DynamicRoutes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCatchAllRoute(value: Route_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catchAllRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFsRoutes(value: js.Array[Route_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fsRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Array[Route_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageChecker(value: /* pathname */ String => js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageChecker")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRedirects(value: js.Array[Route_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRewrites(value: js.Array[Route_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewrites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseFileSystemPublicRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFileSystemPublicRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDynamicRoutes(value: typingsSlinky.next.serverRouterMod.DynamicRoutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRoutes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

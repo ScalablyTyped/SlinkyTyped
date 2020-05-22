@@ -18,41 +18,11 @@ trait PutParameterResult extends js.Object {
 
 object PutParameterResult {
   @scala.inline
-  def apply(): PutParameterResult = {
+  def apply(Tier: ParameterTier = null, Version: js.UndefOr[PSParameterVersion] = js.undefined): PutParameterResult = {
     val __obj = js.Dynamic.literal()
+    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
+    if (!js.isUndefined(Version)) __obj.updateDynamic("Version")(Version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutParameterResult]
   }
-  @scala.inline
-  implicit class PutParameterResultOps[Self <: PutParameterResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTier(value: ParameterTier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: PSParameterVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

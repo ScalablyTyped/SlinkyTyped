@@ -1,16 +1,15 @@
 package typingsSlinky.awsSdkClientS3Browser.typesDeleteBucketOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteBucketOutput
   extends MetadataBearer
-     with OutputTypesUnion
+     with _OutputTypesUnion
 
 object DeleteBucketOutput {
   @scala.inline

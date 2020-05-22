@@ -6,63 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StatusFileOptions
   extends /* key */ StringDictionary[js.Any] {
-  var entry: js.UndefOr[StatusEntry] = js.native
-  var path: js.UndefOr[String] = js.native
-  var status: js.UndefOr[Double] = js.native
+  var entry: js.UndefOr[StatusEntry] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[Double] = js.undefined
 }
 
 object StatusFileOptions {
   @scala.inline
-  def apply(): StatusFileOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    entry: StatusEntry = null,
+    path: String = null,
+    status: js.UndefOr[Double] = js.undefined
+  ): StatusFileOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (entry != null) __obj.updateDynamic("entry")(entry.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatusFileOptions]
   }
-  @scala.inline
-  implicit class StatusFileOptionsOps[Self <: StatusFileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntry(value: StatusEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

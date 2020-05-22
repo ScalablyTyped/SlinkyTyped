@@ -4,30 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NewLevelBefore extends NewLevel {
-  var before: String = js.native
+  var before: String
 }
 
 object NewLevelBefore {
   @scala.inline
-  def apply(before: String): NewLevelBefore = {
+  def apply(before: String, afterLog: () => Unit = null): NewLevelBefore = {
     val __obj = js.Dynamic.literal(before = before.asInstanceOf[js.Any])
+    if (afterLog != null) __obj.updateDynamic("afterLog")(js.Any.fromFunction0(afterLog))
     __obj.asInstanceOf[NewLevelBefore]
   }
-  @scala.inline
-  implicit class NewLevelBeforeOps[Self <: NewLevelBefore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBefore(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextMessage extends js.Object {
-  var invoker: TeamSpeakClient = js.native
-  var msg: String = js.native
-  var targetmode: TextMessageTargetMode = js.native
+  var invoker: TeamSpeakClient
+  var msg: String
+  var targetmode: TextMessageTargetMode
 }
 
 object TextMessage {
@@ -19,31 +18,5 @@ object TextMessage {
     val __obj = js.Dynamic.literal(invoker = invoker.asInstanceOf[js.Any], msg = msg.asInstanceOf[js.Any], targetmode = targetmode.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextMessage]
   }
-  @scala.inline
-  implicit class TextMessageOps[Self <: TextMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvoker(value: TeamSpeakClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetmode(value: TextMessageTargetMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

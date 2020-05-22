@@ -13,218 +13,60 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@google/maps.@google/maps.PlaceSearchResult> */
-@js.native
 trait PartialPlaceSearchResult extends js.Object {
-  var alt_ids: js.UndefOr[js.Array[AlternativePlaceId]] = js.native
-  var formatted_address: js.UndefOr[String] = js.native
-  var geometry: js.UndefOr[AddressGeometry] = js.native
-  var icon: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var opening_hours: js.UndefOr[OpeningHours] = js.native
-  var permanently_closed: js.UndefOr[Boolean] = js.native
-  var photos: js.UndefOr[js.Array[PlacePhoto]] = js.native
-  var place_id: js.UndefOr[String] = js.native
-  var plus_code: js.UndefOr[PlusCode] = js.native
-  var price_level: js.UndefOr[Double] = js.native
-  var rating: js.UndefOr[Double] = js.native
-  var scope: js.UndefOr[PlaceIdScope] = js.native
-  var types: js.UndefOr[js.Array[PlaceType1 | PlaceType2]] = js.native
-  var vicinity: js.UndefOr[String] = js.native
+  var alt_ids: js.UndefOr[js.Array[AlternativePlaceId]] = js.undefined
+  var formatted_address: js.UndefOr[String] = js.undefined
+  var geometry: js.UndefOr[AddressGeometry] = js.undefined
+  var icon: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var opening_hours: js.UndefOr[OpeningHours] = js.undefined
+  var permanently_closed: js.UndefOr[Boolean] = js.undefined
+  var photos: js.UndefOr[js.Array[PlacePhoto]] = js.undefined
+  var place_id: js.UndefOr[String] = js.undefined
+  var plus_code: js.UndefOr[PlusCode] = js.undefined
+  var price_level: js.UndefOr[Double] = js.undefined
+  var rating: js.UndefOr[Double] = js.undefined
+  var scope: js.UndefOr[PlaceIdScope] = js.undefined
+  var types: js.UndefOr[js.Array[PlaceType1 | PlaceType2]] = js.undefined
+  var vicinity: js.UndefOr[String] = js.undefined
 }
 
 object PartialPlaceSearchResult {
   @scala.inline
-  def apply(): PartialPlaceSearchResult = {
+  def apply(
+    alt_ids: js.Array[AlternativePlaceId] = null,
+    formatted_address: String = null,
+    geometry: AddressGeometry = null,
+    icon: String = null,
+    name: String = null,
+    opening_hours: OpeningHours = null,
+    permanently_closed: js.UndefOr[Boolean] = js.undefined,
+    photos: js.Array[PlacePhoto] = null,
+    place_id: String = null,
+    plus_code: PlusCode = null,
+    price_level: js.UndefOr[Double] = js.undefined,
+    rating: js.UndefOr[Double] = js.undefined,
+    scope: PlaceIdScope = null,
+    types: js.Array[PlaceType1 | PlaceType2] = null,
+    vicinity: String = null
+  ): PartialPlaceSearchResult = {
     val __obj = js.Dynamic.literal()
+    if (alt_ids != null) __obj.updateDynamic("alt_ids")(alt_ids.asInstanceOf[js.Any])
+    if (formatted_address != null) __obj.updateDynamic("formatted_address")(formatted_address.asInstanceOf[js.Any])
+    if (geometry != null) __obj.updateDynamic("geometry")(geometry.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (opening_hours != null) __obj.updateDynamic("opening_hours")(opening_hours.asInstanceOf[js.Any])
+    if (!js.isUndefined(permanently_closed)) __obj.updateDynamic("permanently_closed")(permanently_closed.get.asInstanceOf[js.Any])
+    if (photos != null) __obj.updateDynamic("photos")(photos.asInstanceOf[js.Any])
+    if (place_id != null) __obj.updateDynamic("place_id")(place_id.asInstanceOf[js.Any])
+    if (plus_code != null) __obj.updateDynamic("plus_code")(plus_code.asInstanceOf[js.Any])
+    if (!js.isUndefined(price_level)) __obj.updateDynamic("price_level")(price_level.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rating)) __obj.updateDynamic("rating")(rating.get.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    if (vicinity != null) __obj.updateDynamic("vicinity")(vicinity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPlaceSearchResult]
   }
-  @scala.inline
-  implicit class PartialPlaceSearchResultOps[Self <: PartialPlaceSearchResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlt_ids(value: js.Array[AlternativePlaceId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlt_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt_ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatted_address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted_address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatted_address: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted_address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometry(value: AddressGeometry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpening_hours(value: OpeningHours): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opening_hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpening_hours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opening_hours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermanently_closed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permanently_closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermanently_closed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permanently_closed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotos(value: js.Array[PlacePhoto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhotos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlace_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlace_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlus_code(value: PlusCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plus_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlus_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plus_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice_level(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price_level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice_level: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price_level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRating(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: PlaceIdScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[PlaceType1 | PlaceType2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVicinity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vicinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVicinity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vicinity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

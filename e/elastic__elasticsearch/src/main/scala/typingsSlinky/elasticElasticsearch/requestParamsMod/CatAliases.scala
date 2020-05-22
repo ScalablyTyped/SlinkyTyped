@@ -1,117 +1,61 @@
 package typingsSlinky.elasticElasticsearch.requestParamsMod
 
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.all
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.closed
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.hidden
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.none
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.open
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CatAliases extends Generic {
-  var format: js.UndefOr[String] = js.native
-  var h: js.UndefOr[String | js.Array[String]] = js.native
-  var help: js.UndefOr[Boolean] = js.native
-  var local: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String | js.Array[String]] = js.native
-  var s: js.UndefOr[String | js.Array[String]] = js.native
-  var v: js.UndefOr[Boolean] = js.native
+  var expand_wildcards: js.UndefOr[open | closed | hidden | none | all] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var h: js.UndefOr[String | js.Array[String]] = js.undefined
+  var help: js.UndefOr[Boolean] = js.undefined
+  var local: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String | js.Array[String]] = js.undefined
+  var s: js.UndefOr[String | js.Array[String]] = js.undefined
+  var v: js.UndefOr[Boolean] = js.undefined
 }
 
 object CatAliases {
   @scala.inline
-  def apply(): CatAliases = {
+  def apply(
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    expand_wildcards: open | closed | hidden | none | all = null,
+    filter_path: String | js.Array[String] = null,
+    format: String = null,
+    h: String | js.Array[String] = null,
+    help: js.UndefOr[Boolean] = js.undefined,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    local: js.UndefOr[Boolean] = js.undefined,
+    method: String = null,
+    name: String | js.Array[String] = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    s: String | js.Array[String] = null,
+    source: String = null,
+    v: js.UndefOr[Boolean] = js.undefined
+  ): CatAliases = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (expand_wildcards != null) __obj.updateDynamic("expand_wildcards")(expand_wildcards.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
+    if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatAliases]
   }
-  @scala.inline
-  implicit class CatAliasesOps[Self <: CatAliases] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withH(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutH: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withV(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutV: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

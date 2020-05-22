@@ -1,5 +1,9 @@
 package typingsSlinky.meteor.global.Blaze
 
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.meteor.Meteor.SubscriptionHandle
+import typingsSlinky.meteor.Tracker.Computation
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +13,26 @@ import scala.scalajs.js.annotation._
 class TemplateInstanceCls protected ()
   extends typingsSlinky.meteor.Blaze.TemplateInstance {
   def this(view: typingsSlinky.meteor.Blaze.View) = this()
+  /* CompleteClass */
+  override var data: Record[String, _] = js.native
+  /* CompleteClass */
+  override var firstNode: js.Object = js.native
+  /* CompleteClass */
+  override var lastNode: js.Object = js.native
+  /* CompleteClass */
+  override var view: js.Object = js.native
+  /* CompleteClass */
+  @JSName("$")
+  override def $(selector: String): js.Any = js.native
+  /* CompleteClass */
+  override def autorun(runFunc: js.Function1[/* computation */ Computation, Unit]): Computation = js.native
+  /* CompleteClass */
+  override def find(selector: String): HTMLElement = js.native
+  /* CompleteClass */
+  override def findAll(selector: String): js.Array[HTMLElement] = js.native
+  /* CompleteClass */
+  override def subscribe(name: String, args: js.Any*): SubscriptionHandle = js.native
+  /* CompleteClass */
+  override def subscriptionsReady(): Boolean = js.native
 }
 

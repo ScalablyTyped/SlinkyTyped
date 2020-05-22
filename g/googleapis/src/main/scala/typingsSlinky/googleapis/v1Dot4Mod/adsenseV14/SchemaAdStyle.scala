@@ -1,7 +1,7 @@
 package typingsSlinky.googleapis.v1Dot4Mod.adsenseV14
 
-import typingsSlinky.googleapis.AnonBackground
-import typingsSlinky.googleapis.AnonSize
+import typingsSlinky.googleapis.anon.Background
+import typingsSlinky.googleapis.anon.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait SchemaAdStyle extends js.Object {
     * hexadecimal characters, similar to HTML color codes, but without the
     * leading hash.
     */
-  var colors: js.UndefOr[AnonBackground] = js.native
+  var colors: js.UndefOr[Background] = js.native
   /**
     * The style of the corners in the ad (deprecated: never populated,
     * ignored).
@@ -22,7 +22,7 @@ trait SchemaAdStyle extends js.Object {
   /**
     * The font which is included in the style.
     */
-  var font: js.UndefOr[AnonSize] = js.native
+  var font: js.UndefOr[Size] = js.native
   /**
     * Kind this is, in this case adsense#adStyle.
     */
@@ -31,65 +31,13 @@ trait SchemaAdStyle extends js.Object {
 
 object SchemaAdStyle {
   @scala.inline
-  def apply(): SchemaAdStyle = {
+  def apply(colors: Background = null, corners: String = null, font: Size = null, kind: String = null): SchemaAdStyle = {
     val __obj = js.Dynamic.literal()
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (corners != null) __obj.updateDynamic("corners")(corners.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdStyle]
   }
-  @scala.inline
-  implicit class SchemaAdStyleOps[Self <: SchemaAdStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColors(value: AnonBackground): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorners(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("corners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("corners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: AnonSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

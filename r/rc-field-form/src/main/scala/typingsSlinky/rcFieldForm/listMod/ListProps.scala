@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListProps extends js.Object {
   var children: js.UndefOr[
     js.Function2[
@@ -15,43 +14,19 @@ trait ListProps extends js.Object {
       /* operations */ ListOperations, 
       ReactElement | TagMod[Any]
     ]
-  ] = js.native
-  var name: NamePath = js.native
+  ] = js.undefined
+  var name: NamePath
 }
 
 object ListProps {
   @scala.inline
-  def apply(name: NamePath): ListProps = {
+  def apply(
+    name: NamePath,
+    children: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement | TagMod[Any] = null
+  ): ListProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction2(children))
     __obj.asInstanceOf[ListProps]
   }
-  @scala.inline
-  implicit class ListPropsOps[Self <: ListProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: NamePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(
-      value: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement | TagMod[Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

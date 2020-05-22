@@ -9,12 +9,11 @@ import scala.scalajs.js.annotation._
   * Full Artist Object
   * [artist object (full)](https://developer.spotify.com/web-api/object-model/)
   */
-@js.native
 trait ArtistObjectFull extends ArtistObjectSimplified {
-  var followers: FollowersObject = js.native
-  var genres: js.Array[String] = js.native
-  var images: js.Array[ImageObject] = js.native
-  var popularity: Double = js.native
+  var followers: FollowersObject
+  var genres: js.Array[String]
+  var images: js.Array[ImageObject]
+  var popularity: Double
 }
 
 object ArtistObjectFull {
@@ -35,37 +34,5 @@ object ArtistObjectFull {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArtistObjectFull]
   }
-  @scala.inline
-  implicit class ArtistObjectFullOps[Self <: ArtistObjectFull] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFollowers(value: FollowersObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenres(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genres")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImages(value: js.Array[ImageObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPopularity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

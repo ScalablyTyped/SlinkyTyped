@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImportNamespaceSpecifier_
   extends Node
      with ModuleSpecifier {
-  var local: Identifier_ = js.native
+  var local: Identifier_
   @JSName("type")
-  var type_ImportNamespaceSpecifier_ : ImportNamespaceSpecifier = js.native
+  var type_ImportNamespaceSpecifier_ : ImportNamespaceSpecifier
 }
 
 object ImportNamespaceSpecifier_ {
@@ -21,31 +20,17 @@ object ImportNamespaceSpecifier_ {
     loc: SourceLocation,
     local: Identifier_,
     start: Double,
-    `type`: ImportNamespaceSpecifier
+    `type`: ImportNamespaceSpecifier,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
   ): ImportNamespaceSpecifier_ = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportNamespaceSpecifier_]
   }
-  @scala.inline
-  implicit class ImportNamespaceSpecifier_Ops[Self <: ImportNamespaceSpecifier_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocal(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ImportNamespaceSpecifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

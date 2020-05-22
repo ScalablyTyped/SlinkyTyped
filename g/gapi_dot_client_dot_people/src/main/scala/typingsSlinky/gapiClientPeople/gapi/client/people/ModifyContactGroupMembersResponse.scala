@@ -4,54 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModifyContactGroupMembersResponse extends js.Object {
   /**
     * The contact people resource names that cannot be removed from their
     * last contact group.
     */
-  var canNotRemoveLastContactGroupResourceNames: js.UndefOr[js.Array[String]] = js.native
+  var canNotRemoveLastContactGroupResourceNames: js.UndefOr[js.Array[String]] = js.undefined
   /** The contact people resource names that were not found. */
-  var notFoundResourceNames: js.UndefOr[js.Array[String]] = js.native
+  var notFoundResourceNames: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ModifyContactGroupMembersResponse {
   @scala.inline
-  def apply(): ModifyContactGroupMembersResponse = {
+  def apply(
+    canNotRemoveLastContactGroupResourceNames: js.Array[String] = null,
+    notFoundResourceNames: js.Array[String] = null
+  ): ModifyContactGroupMembersResponse = {
     val __obj = js.Dynamic.literal()
+    if (canNotRemoveLastContactGroupResourceNames != null) __obj.updateDynamic("canNotRemoveLastContactGroupResourceNames")(canNotRemoveLastContactGroupResourceNames.asInstanceOf[js.Any])
+    if (notFoundResourceNames != null) __obj.updateDynamic("notFoundResourceNames")(notFoundResourceNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyContactGroupMembersResponse]
   }
-  @scala.inline
-  implicit class ModifyContactGroupMembersResponseOps[Self <: ModifyContactGroupMembersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanNotRemoveLastContactGroupResourceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canNotRemoveLastContactGroupResourceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanNotRemoveLastContactGroupResourceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canNotRemoveLastContactGroupResourceNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotFoundResourceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundResourceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotFoundResourceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundResourceNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

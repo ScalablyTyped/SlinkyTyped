@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This is the collection of all {@link TextGraphicObject} instances within a context (e.g. a document). */
-@js.native
 trait TextGraphicObjects
   extends XNameAccess
      with XIndexAccess

@@ -6,103 +6,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridChildrenProps extends js.Object {
   /**
     * Whether the component is aligned with the other components in the column/row.
     */
-  var align: js.UndefOr[H] = js.native
+  var align: js.UndefOr[H] = js.undefined
   /**
     * What column the component resides in.
     */
-  var column: js.UndefOr[Double] = js.native
+  var column: js.UndefOr[Double] = js.undefined
   /**
     * Whether the component can expand in the direction.
     */
-  var expand: js.UndefOr[H] = js.native
+  var expand: js.UndefOr[H] = js.undefined
   /**
     * What row the component resides in.
     */
-  var row: js.UndefOr[Double] = js.native
+  var row: js.UndefOr[Double] = js.undefined
   /**
     * How many rows/columns the component takes off.
     */
-  var span: js.UndefOr[X] = js.native
+  var span: js.UndefOr[X] = js.undefined
 }
 
 object GridChildrenProps {
   @scala.inline
-  def apply(): GridChildrenProps = {
+  def apply(
+    align: H = null,
+    column: js.UndefOr[Double] = js.undefined,
+    expand: H = null,
+    row: js.UndefOr[Double] = js.undefined,
+    span: X = null
+  ): GridChildrenProps = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.get.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (!js.isUndefined(row)) __obj.updateDynamic("row")(row.get.asInstanceOf[js.Any])
+    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridChildrenProps]
   }
-  @scala.inline
-  implicit class GridChildrenPropsOps[Self <: GridChildrenProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: H): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand(value: H): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpan(value: X): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

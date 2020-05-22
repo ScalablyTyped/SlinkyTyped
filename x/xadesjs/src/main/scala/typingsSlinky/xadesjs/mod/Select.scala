@@ -1,7 +1,7 @@
 package typingsSlinky.xadesjs.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.xmlCore.mod.SelectNodes
+import typingsSlinky.xmlCore.utilsMod.SelectNodes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

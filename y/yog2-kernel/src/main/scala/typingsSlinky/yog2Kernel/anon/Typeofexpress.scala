@@ -17,6 +17,7 @@ import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.qs.mod.IParseOptions
+import typingsSlinky.qs.mod.ParsedQs
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -69,11 +70,11 @@ trait Typeofexpress extends js.Object {
   /**
     * These are the exposed prototypes.
     */
-  def application(req: Request[ParamsDictionary, _, _, Query], res: Response[_]): js.Any = js.native
+  def application(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_]): js.Any = js.native
   /**
     * These are the exposed prototypes.
     */
-  def application(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
+  def application(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
   /**
     * These are the exposed prototypes.
     */

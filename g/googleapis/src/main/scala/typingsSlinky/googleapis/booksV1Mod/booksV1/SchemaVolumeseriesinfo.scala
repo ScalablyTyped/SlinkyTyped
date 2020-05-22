@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.booksV1Mod.booksV1
 
-import typingsSlinky.googleapis.AnonIssue
+import typingsSlinky.googleapis.anon.Issue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,70 +20,23 @@ trait SchemaVolumeseriesinfo extends js.Object {
     * Short book title in the context of the series.
     */
   var shortSeriesBookTitle: js.UndefOr[String] = js.native
-  var volumeSeries: js.UndefOr[js.Array[AnonIssue]] = js.native
+  var volumeSeries: js.UndefOr[js.Array[Issue]] = js.native
 }
 
 object SchemaVolumeseriesinfo {
   @scala.inline
-  def apply(): SchemaVolumeseriesinfo = {
+  def apply(
+    bookDisplayNumber: String = null,
+    kind: String = null,
+    shortSeriesBookTitle: String = null,
+    volumeSeries: js.Array[Issue] = null
+  ): SchemaVolumeseriesinfo = {
     val __obj = js.Dynamic.literal()
+    if (bookDisplayNumber != null) __obj.updateDynamic("bookDisplayNumber")(bookDisplayNumber.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (shortSeriesBookTitle != null) __obj.updateDynamic("shortSeriesBookTitle")(shortSeriesBookTitle.asInstanceOf[js.Any])
+    if (volumeSeries != null) __obj.updateDynamic("volumeSeries")(volumeSeries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVolumeseriesinfo]
   }
-  @scala.inline
-  implicit class SchemaVolumeseriesinfoOps[Self <: SchemaVolumeseriesinfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBookDisplayNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookDisplayNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookDisplayNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookDisplayNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortSeriesBookTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortSeriesBookTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortSeriesBookTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortSeriesBookTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeSeries(value: js.Array[AnonIssue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSeries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

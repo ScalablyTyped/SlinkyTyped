@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * is implemented by components listening for events fired by an {@link XFilterController} .
   * @since OOo 3.3
   */
-@js.native
 trait XFilterControllerListener extends XEventListener {
   /**
     * is fired when a **disjunctive term** was added to the filter of the filter controller.
@@ -20,7 +19,7 @@ trait XFilterControllerListener extends XEventListener {
     *
     * {@link FilterEvent.FilterComponent} and {@link FilterEvent.PredicateExpression} are not used for this event type.
     */
-  def disjunctiveTermAdded(Event: FilterEvent): Unit = js.native
+  def disjunctiveTermAdded(Event: FilterEvent): Unit
   /**
     * is fired when a **disjunctive term** was removed from the filter of the filter controller.
     *
@@ -28,7 +27,7 @@ trait XFilterControllerListener extends XEventListener {
     *
     * {@link FilterEvent.FilterComponent} and {@link FilterEvent.PredicateExpression} are not used for this event type.
     */
-  def disjunctiveTermRemoved(Event: FilterEvent): Unit = js.native
+  def disjunctiveTermRemoved(Event: FilterEvent): Unit
   /**
     * is fired when a single **predicate expression** of the filter represented by the filter controller changed.
     *
@@ -39,7 +38,7 @@ trait XFilterControllerListener extends XEventListener {
     *
     * {@link FilterEvent.PredicateExpression} is the new **predicate expressions** .
     */
-  def predicateExpressionChanged(Event: FilterEvent): Unit = js.native
+  def predicateExpressionChanged(Event: FilterEvent): Unit
 }
 
 object XFilterControllerListener {
@@ -56,31 +55,5 @@ object XFilterControllerListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disjunctiveTermAdded = js.Any.fromFunction1(disjunctiveTermAdded), disjunctiveTermRemoved = js.Any.fromFunction1(disjunctiveTermRemoved), disposing = js.Any.fromFunction1(disposing), predicateExpressionChanged = js.Any.fromFunction1(predicateExpressionChanged), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XFilterControllerListener]
   }
-  @scala.inline
-  implicit class XFilterControllerListenerOps[Self <: XFilterControllerListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisjunctiveTermAdded(value: FilterEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctiveTermAdded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisjunctiveTermRemoved(value: FilterEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctiveTermRemoved")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPredicateExpressionChanged(value: FilterEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predicateExpressionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

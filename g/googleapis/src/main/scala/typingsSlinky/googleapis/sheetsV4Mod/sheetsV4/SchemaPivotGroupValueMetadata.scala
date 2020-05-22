@@ -22,41 +22,11 @@ trait SchemaPivotGroupValueMetadata extends js.Object {
 
 object SchemaPivotGroupValueMetadata {
   @scala.inline
-  def apply(): SchemaPivotGroupValueMetadata = {
+  def apply(collapsed: js.UndefOr[Boolean] = js.undefined, value: SchemaExtendedValue = null): SchemaPivotGroupValueMetadata = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivotGroupValueMetadata]
   }
-  @scala.inline
-  implicit class SchemaPivotGroupValueMetadataOps[Self <: SchemaPivotGroupValueMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: SchemaExtendedValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

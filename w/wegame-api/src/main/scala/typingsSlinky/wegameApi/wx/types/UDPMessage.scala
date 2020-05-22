@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UDPMessage extends js.Object {
   /**
     * 收到的消息
     */
-  var message: js.typedarray.ArrayBuffer = js.native
+  var message: js.typedarray.ArrayBuffer
   /**
     * 消息来源的结构化信息
     */
-  var remoteInfo: Address = js.native
+  var remoteInfo: Address
 }
 
 object UDPMessage {
@@ -23,25 +22,5 @@ object UDPMessage {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], remoteInfo = remoteInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[UDPMessage]
   }
-  @scala.inline
-  implicit class UDPMessageOps[Self <: UDPMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoteInfo(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

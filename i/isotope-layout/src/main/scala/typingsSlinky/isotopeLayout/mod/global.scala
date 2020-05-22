@@ -28,7 +28,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object global extends js.Object {
   @js.native
-  trait JQuery extends Elements {
+  trait JQuery extends js.Object {
     /**
       * Get the Isotope instance from a jQuery object. Isotope instances are useful to access Isotope properties.
       */

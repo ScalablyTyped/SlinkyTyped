@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesGetObjectInputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.cryptoMod.SourceData
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
@@ -9,15 +9,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait GetObjectInput extends InputTypesUnion {
+trait GetObjectInput extends _InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal
     */
   @JSName("$abortSignal")
-  var $abortSignal: js.UndefOr[AbortSignal] = js.native
+  var $abortSignal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * Whether to use the bucket name as the endpoint for this request. The bucket
     * name must be a domain name with a CNAME record alias to an appropriate virtual
@@ -31,438 +30,161 @@ trait GetObjectInput extends InputTypesUnion {
     * @see https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs
     */
   @JSName("$bucketEndpoint")
-  var $bucketEndpoint: js.UndefOr[String] = js.native
+  var $bucketEndpoint: js.UndefOr[String] = js.undefined
   /**
     * Whether to force path style URLs for S3 objects (e.g., https://s3.amazonaws.com/<bucketName>/<key> instead of https://<bucketName>.s3.amazonaws.com/<key>
     */
   @JSName("$forcePathStyle")
-  var $forcePathStyle: js.UndefOr[Boolean] = js.native
+  var $forcePathStyle: js.UndefOr[Boolean] = js.undefined
   /**
     * Per-request HTTP configuration options. If set, any options specified will override the corresponding HTTP option set on the client for this command.
     */
   @JSName("$httpOptions")
-  var $httpOptions: js.UndefOr[BrowserHttpOptions] = js.native
+  var $httpOptions: js.UndefOr[BrowserHttpOptions] = js.undefined
   /**
     * The maximum number of times this operation should be retried. If set, this value will override the `maxRetries` configuration set on the client for this command.
     */
   @JSName("$maxRetries")
-  var $maxRetries: js.UndefOr[Double] = js.native
+  var $maxRetries: js.UndefOr[Double] = js.undefined
   /**
     * Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon does not store the encryption key. The key must be appropriate for use with the algorithm specified in the `SSECustomerAlgorithm` parameter
     */
   @JSName("$serverSideEncryptionKey")
-  var $serverSideEncryptionKey: js.UndefOr[SourceData] = js.native
+  var $serverSideEncryptionKey: js.UndefOr[SourceData] = js.undefined
   /**
     * Whether to use the S3 Transfer Acceleration endpoint by default
     */
   @JSName("$useAccelerateEndpoint")
-  var $useAccelerateEndpoint: js.UndefOr[Boolean] = js.native
+  var $useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables IPv6/IPv4 dualstack endpoint. When a DNS lookup is performed on an endpoint of this type, it returns an “A” record with an IPv4 address and an “AAAA” record with an IPv6 address. In most cases the network stack in the client environment will automatically prefer the AAAA record and make a connection using the IPv6 address. Note, however, that currently on Windows, the IPv4 address will be preferred.
     */
   @JSName("$useDualstackEndpoint")
-  var $useDualstackEndpoint: js.UndefOr[Boolean] = js.native
+  var $useDualstackEndpoint: js.UndefOr[Boolean] = js.undefined
   /**
     * _BucketName shape
     */
-  var Bucket: String = js.native
+  var Bucket: String
   /**
     * <p>Return the object only if its entity tag (ETag) is the same as the one specified, otherwise return a 412 (precondition failed).</p>
     */
-  var IfMatch: js.UndefOr[String] = js.native
+  var IfMatch: js.UndefOr[String] = js.undefined
   /**
     * <p>Return the object only if it has been modified since the specified time, otherwise return a 304 (not modified).</p>
     */
-  var IfModifiedSince: js.UndefOr[js.Date | String | Double] = js.native
+  var IfModifiedSince: js.UndefOr[js.Date | String | Double] = js.undefined
   /**
     * <p>Return the object only if its entity tag (ETag) is different from the one specified, otherwise return a 304 (not modified).</p>
     */
-  var IfNoneMatch: js.UndefOr[String] = js.native
+  var IfNoneMatch: js.UndefOr[String] = js.undefined
   /**
     * <p>Return the object only if it has not been modified since the specified time, otherwise return a 412 (precondition failed).</p>
     */
-  var IfUnmodifiedSince: js.UndefOr[js.Date | String | Double] = js.native
+  var IfUnmodifiedSince: js.UndefOr[js.Date | String | Double] = js.undefined
   /**
     * _ObjectKey shape
     */
-  var Key: String = js.native
+  var Key: String
   /**
     * <p>Part number of the object being read. This is a positive integer between 1 and 10,000. Effectively performs a 'ranged' GET request for the part specified. Useful for downloading just a part of an object.</p>
     */
-  var PartNumber: js.UndefOr[Double] = js.native
+  var PartNumber: js.UndefOr[Double] = js.undefined
   /**
     * <p>Downloads the specified range bytes of an object. For more information about the HTTP Range header, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.</p>
     */
-  var Range: js.UndefOr[String] = js.native
+  var Range: js.UndefOr[String] = js.undefined
   /**
     * <p>Confirms that the requester knows that she or he will be charged for the request. Bucket owners need not specify this parameter in their requests. Documentation on downloading objects from requester pays buckets can be found at http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html</p>
     */
-  var RequestPayer: js.UndefOr[requester_ | String] = js.native
+  var RequestPayer: js.UndefOr[requester_ | String] = js.undefined
   /**
     * <p>Sets the Cache-Control header of the response.</p>
     */
-  var ResponseCacheControl: js.UndefOr[String] = js.native
+  var ResponseCacheControl: js.UndefOr[String] = js.undefined
   /**
     * <p>Sets the Content-Disposition header of the response</p>
     */
-  var ResponseContentDisposition: js.UndefOr[String] = js.native
+  var ResponseContentDisposition: js.UndefOr[String] = js.undefined
   /**
     * <p>Sets the Content-Encoding header of the response.</p>
     */
-  var ResponseContentEncoding: js.UndefOr[String] = js.native
+  var ResponseContentEncoding: js.UndefOr[String] = js.undefined
   /**
     * <p>Sets the Content-Language header of the response.</p>
     */
-  var ResponseContentLanguage: js.UndefOr[String] = js.native
+  var ResponseContentLanguage: js.UndefOr[String] = js.undefined
   /**
     * <p>Sets the Content-Type header of the response.</p>
     */
-  var ResponseContentType: js.UndefOr[String] = js.native
+  var ResponseContentType: js.UndefOr[String] = js.undefined
   /**
     * <p>Sets the Expires header of the response.</p>
     */
-  var ResponseExpires: js.UndefOr[js.Date | String | Double] = js.native
+  var ResponseExpires: js.UndefOr[js.Date | String | Double] = js.undefined
   /**
     * <p>Specifies the algorithm to use to when encrypting the object (e.g., AES256).</p>
     */
-  var SSECustomerAlgorithm: js.UndefOr[String] = js.native
+  var SSECustomerAlgorithm: js.UndefOr[String] = js.undefined
   /**
     * <p>VersionId used to reference a specific version of the object.</p>
     */
-  var VersionId: js.UndefOr[String] = js.native
+  var VersionId: js.UndefOr[String] = js.undefined
 }
 
 object GetObjectInput {
   @scala.inline
-  def apply(Bucket: String, Key: String): GetObjectInput = {
+  def apply(
+    Bucket: String,
+    Key: String,
+    $abortSignal: AbortSignal = null,
+    $bucketEndpoint: String = null,
+    $forcePathStyle: js.UndefOr[Boolean] = js.undefined,
+    $httpOptions: BrowserHttpOptions = null,
+    $maxRetries: js.UndefOr[Double] = js.undefined,
+    $serverSideEncryptionKey: SourceData = null,
+    $useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined,
+    $useDualstackEndpoint: js.UndefOr[Boolean] = js.undefined,
+    IfMatch: String = null,
+    IfModifiedSince: js.Date | String | Double = null,
+    IfNoneMatch: String = null,
+    IfUnmodifiedSince: js.Date | String | Double = null,
+    PartNumber: js.UndefOr[Double] = js.undefined,
+    Range: String = null,
+    RequestPayer: requester_ | String = null,
+    ResponseCacheControl: String = null,
+    ResponseContentDisposition: String = null,
+    ResponseContentEncoding: String = null,
+    ResponseContentLanguage: String = null,
+    ResponseContentType: String = null,
+    ResponseExpires: js.Date | String | Double = null,
+    SSECustomerAlgorithm: String = null,
+    VersionId: String = null
+  ): GetObjectInput = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any])
+    if ($abortSignal != null) __obj.updateDynamic("$abortSignal")($abortSignal.asInstanceOf[js.Any])
+    if ($bucketEndpoint != null) __obj.updateDynamic("$bucketEndpoint")($bucketEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined($forcePathStyle)) __obj.updateDynamic("$forcePathStyle")($forcePathStyle.get.asInstanceOf[js.Any])
+    if ($httpOptions != null) __obj.updateDynamic("$httpOptions")($httpOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined($maxRetries)) __obj.updateDynamic("$maxRetries")($maxRetries.get.asInstanceOf[js.Any])
+    if ($serverSideEncryptionKey != null) __obj.updateDynamic("$serverSideEncryptionKey")($serverSideEncryptionKey.asInstanceOf[js.Any])
+    if (!js.isUndefined($useAccelerateEndpoint)) __obj.updateDynamic("$useAccelerateEndpoint")($useAccelerateEndpoint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($useDualstackEndpoint)) __obj.updateDynamic("$useDualstackEndpoint")($useDualstackEndpoint.get.asInstanceOf[js.Any])
+    if (IfMatch != null) __obj.updateDynamic("IfMatch")(IfMatch.asInstanceOf[js.Any])
+    if (IfModifiedSince != null) __obj.updateDynamic("IfModifiedSince")(IfModifiedSince.asInstanceOf[js.Any])
+    if (IfNoneMatch != null) __obj.updateDynamic("IfNoneMatch")(IfNoneMatch.asInstanceOf[js.Any])
+    if (IfUnmodifiedSince != null) __obj.updateDynamic("IfUnmodifiedSince")(IfUnmodifiedSince.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartNumber)) __obj.updateDynamic("PartNumber")(PartNumber.get.asInstanceOf[js.Any])
+    if (Range != null) __obj.updateDynamic("Range")(Range.asInstanceOf[js.Any])
+    if (RequestPayer != null) __obj.updateDynamic("RequestPayer")(RequestPayer.asInstanceOf[js.Any])
+    if (ResponseCacheControl != null) __obj.updateDynamic("ResponseCacheControl")(ResponseCacheControl.asInstanceOf[js.Any])
+    if (ResponseContentDisposition != null) __obj.updateDynamic("ResponseContentDisposition")(ResponseContentDisposition.asInstanceOf[js.Any])
+    if (ResponseContentEncoding != null) __obj.updateDynamic("ResponseContentEncoding")(ResponseContentEncoding.asInstanceOf[js.Any])
+    if (ResponseContentLanguage != null) __obj.updateDynamic("ResponseContentLanguage")(ResponseContentLanguage.asInstanceOf[js.Any])
+    if (ResponseContentType != null) __obj.updateDynamic("ResponseContentType")(ResponseContentType.asInstanceOf[js.Any])
+    if (ResponseExpires != null) __obj.updateDynamic("ResponseExpires")(ResponseExpires.asInstanceOf[js.Any])
+    if (SSECustomerAlgorithm != null) __obj.updateDynamic("SSECustomerAlgorithm")(SSECustomerAlgorithm.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectInput]
   }
-  @scala.inline
-  implicit class GetObjectInputOps[Self <: GetObjectInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$abortSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$abortSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$bucketEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$bucketEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$bucketEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$bucketEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$forcePathStyle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$forcePathStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$forcePathStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$forcePathStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$httpOptions(value: BrowserHttpOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$httpOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$maxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$maxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$serverSideEncryptionKeyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$serverSideEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$serverSideEncryptionKeyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$serverSideEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$serverSideEncryptionKey(value: SourceData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$serverSideEncryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$serverSideEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$serverSideEncryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$useAccelerateEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useAccelerateEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$useAccelerateEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useAccelerateEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$useDualstackEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useDualstackEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$useDualstackEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useDualstackEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfModifiedSinceDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIfModifiedSince(value: js.Date | String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfModifiedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfNoneMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfNoneMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfNoneMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfNoneMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfUnmodifiedSinceDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIfUnmodifiedSince(value: js.Date | String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfUnmodifiedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPayer(value: requester_ | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestPayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseCacheControl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentDisposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentDisposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseExpiresDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseExpires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponseExpires(value: js.Date | String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseExpires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseExpires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseExpires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

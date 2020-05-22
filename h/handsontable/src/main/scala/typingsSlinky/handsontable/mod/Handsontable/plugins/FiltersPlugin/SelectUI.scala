@@ -8,13 +8,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectUI extends BaseUI {
-  var items: js.Array[_] = js.native
-  var menu: Menu | Unit = js.native
-  def closeOptions(): Unit = js.native
-  def openOptions(): Unit = js.native
-  def setItems(items: js.Array[_]): Unit = js.native
+  var items: js.Array[_]
+  var menu: Menu | Unit
+  def closeOptions(): Unit
+  def openOptions(): Unit
+  def setItems(items: js.Array[_]): Unit
 }
 
 object SelectUI {
@@ -44,43 +43,5 @@ object SelectUI {
     val __obj = js.Dynamic.literal(build = js.Any.fromFunction0(build), buildState = buildState.asInstanceOf[js.Any], closeOptions = js.Any.fromFunction0(closeOptions), destroy = js.Any.fromFunction0(destroy), element = js.Any.fromFunction0(element), eventManager = eventManager.asInstanceOf[js.Any], focus = js.Any.fromFunction0(focus), getValue = js.Any.fromFunction0(getValue), hide = js.Any.fromFunction0(hide), hot = hot.asInstanceOf[js.Any], isBuilt = js.Any.fromFunction0(isBuilt), items = items.asInstanceOf[js.Any], menu = menu.asInstanceOf[js.Any], openOptions = js.Any.fromFunction0(openOptions), options = options.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset), setItems = js.Any.fromFunction1(setItems), setValue = js.Any.fromFunction1(setValue), show = js.Any.fromFunction0(show), update = js.Any.fromFunction0(update))
     __obj.asInstanceOf[SelectUI]
   }
-  @scala.inline
-  implicit class SelectUIOps[Self <: SelectUI] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloseOptions(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMenu(value: Menu | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenOptions(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetItems(value: js.Array[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItems")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

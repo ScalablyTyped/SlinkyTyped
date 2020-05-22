@@ -2,336 +2,97 @@ package typingsSlinky.reactDayPicker.propsMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.reactDayPicker.commonMod.DayModifiers
-import typingsSlinky.reactDayPicker.commonMod.InputClassNames
-import typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput
+import typingsSlinky.reactDayPicker.classNamesMod.InputClassNames
+import typingsSlinky.reactDayPicker.dayPickerInputMod.default
+import typingsSlinky.reactDayPicker.modifiersMod.DayModifiers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DayPickerInputProps extends js.Object {
-  var classNames: js.UndefOr[InputClassNames] = js.native
-  var clickUnselectsDay: js.UndefOr[Boolean] = js.native
-  // Not sure React.ComponentClass<any> is the right type for _propTypes2.default.any
-  var component: js.UndefOr[js.Any] = js.native
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
-  var format: js.UndefOr[String | js.Array[String]] = js.native
+  var classNames: js.UndefOr[InputClassNames] = js.undefined
+  var clickUnselectsDay: js.UndefOr[Boolean] = js.undefined
+  var component: js.UndefOr[js.Any] = js.undefined
+  var dayPickerProps: js.UndefOr[DayPickerProps] = js.undefined
+  var format: js.UndefOr[String | js.Array[String]] = js.undefined
   var formatDate: js.UndefOr[
     js.Function3[/* date */ js.Date, /* format */ String, /* locale */ String, String]
-  ] = js.native
-  var hideOnDayClick: js.UndefOr[Boolean] = js.native
-  var inputProps: js.UndefOr[js.Object] = js.native
-  var keepFocus: js.UndefOr[Boolean] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.native
+  ] = js.undefined
+  var hideOnDayClick: js.UndefOr[Boolean] = js.undefined
+  var inputProps: js.UndefOr[js.Object] = js.undefined
+  var keepFocus: js.UndefOr[Boolean] = js.undefined
+  var onBlur: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.undefined
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.undefined
   var onDayChange: js.UndefOr[
-    js.Function3[
-      /* day */ js.Date, 
-      /* DayModifiers */ DayModifiers, 
-      /* dayPickerInput */ DayPickerInput, 
-      Unit
-    ]
-  ] = js.native
-  var onDayPickerHide: js.UndefOr[js.Function0[Unit]] = js.native
-  var onDayPickerShow: js.UndefOr[js.Function0[Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.native
-  var onKeyUp: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.native
-  var overlayComponent: js.UndefOr[js.Any] = js.native
+    js.Function3[/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ default, Unit]
+  ] = js.undefined
+  var onDayPickerHide: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onDayPickerShow: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.undefined
+  var onKeyUp: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLDivElement], Unit]] = js.undefined
+  var overlayComponent: js.UndefOr[js.Any] = js.undefined
   var parseDate: js.UndefOr[
     js.Function3[/* str */ String, /* format */ String, /* locale */ String, js.Date | Unit]
-  ] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var showOverlay: js.UndefOr[Boolean] = js.native
-  var value: js.UndefOr[String | js.Date] = js.native
+  ] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var showOverlay: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var value: js.UndefOr[String | js.Date] = js.undefined
 }
 
 object DayPickerInputProps {
   @scala.inline
-  def apply(): DayPickerInputProps = {
+  def apply(
+    classNames: InputClassNames = null,
+    clickUnselectsDay: js.UndefOr[Boolean] = js.undefined,
+    component: js.Any = null,
+    dayPickerProps: DayPickerProps = null,
+    format: String | js.Array[String] = null,
+    formatDate: (/* date */ js.Date, /* format */ String, /* locale */ String) => String = null,
+    hideOnDayClick: js.UndefOr[Boolean] = js.undefined,
+    inputProps: js.Object = null,
+    keepFocus: js.UndefOr[Boolean] = js.undefined,
+    onBlur: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
+    onChange: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
+    onClick: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
+    onDayChange: (/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ default) => Unit = null,
+    onDayPickerHide: () => Unit = null,
+    onDayPickerShow: () => Unit = null,
+    onFocus: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
+    onKeyUp: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit = null,
+    overlayComponent: js.Any = null,
+    parseDate: (/* str */ String, /* format */ String, /* locale */ String) => js.Date | Unit = null,
+    placeholder: String = null,
+    showOverlay: js.UndefOr[Boolean] = js.undefined,
+    style: js.Object = null,
+    value: String | js.Date = null
+  ): DayPickerInputProps = {
     val __obj = js.Dynamic.literal()
+    if (classNames != null) __obj.updateDynamic("classNames")(classNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickUnselectsDay)) __obj.updateDynamic("clickUnselectsDay")(clickUnselectsDay.get.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (formatDate != null) __obj.updateDynamic("formatDate")(js.Any.fromFunction3(formatDate))
+    if (!js.isUndefined(hideOnDayClick)) __obj.updateDynamic("hideOnDayClick")(hideOnDayClick.get.asInstanceOf[js.Any])
+    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepFocus)) __obj.updateDynamic("keepFocus")(keepFocus.get.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onDayChange != null) __obj.updateDynamic("onDayChange")(js.Any.fromFunction3(onDayChange))
+    if (onDayPickerHide != null) __obj.updateDynamic("onDayPickerHide")(js.Any.fromFunction0(onDayPickerHide))
+    if (onDayPickerShow != null) __obj.updateDynamic("onDayPickerShow")(js.Any.fromFunction0(onDayPickerShow))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
+    if (overlayComponent != null) __obj.updateDynamic("overlayComponent")(overlayComponent.asInstanceOf[js.Any])
+    if (parseDate != null) __obj.updateDynamic("parseDate")(js.Any.fromFunction3(parseDate))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOverlay)) __obj.updateDynamic("showOverlay")(showOverlay.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DayPickerInputProps]
   }
-  @scala.inline
-  implicit class DayPickerInputPropsOps[Self <: DayPickerInputProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassNames(value: InputClassNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickUnselectsDay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickUnselectsDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickUnselectsDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickUnselectsDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayPickerProps(value: DayPickerProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayPickerProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatDate(value: (/* date */ js.Date, /* format */ String, /* locale */ String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnDayClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnDayClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnDayClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnDayClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputProps(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDayChange(
-      value: (/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ DayPickerInput) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDayChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDayPickerHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayPickerHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDayPickerHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayPickerHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDayPickerShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayPickerShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDayPickerShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayPickerShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyUp(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayComponent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlayComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseDate(value: (/* str */ String, /* format */ String, /* locale */ String) => js.Date | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseDate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutParseDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOverlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

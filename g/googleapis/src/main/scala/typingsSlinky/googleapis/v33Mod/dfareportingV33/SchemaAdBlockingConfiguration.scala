@@ -37,65 +37,18 @@ trait SchemaAdBlockingConfiguration extends js.Object {
 
 object SchemaAdBlockingConfiguration {
   @scala.inline
-  def apply(): SchemaAdBlockingConfiguration = {
+  def apply(
+    clickThroughUrl: String = null,
+    creativeBundleId: String = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    overrideClickThroughUrl: js.UndefOr[Boolean] = js.undefined
+  ): SchemaAdBlockingConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (clickThroughUrl != null) __obj.updateDynamic("clickThroughUrl")(clickThroughUrl.asInstanceOf[js.Any])
+    if (creativeBundleId != null) __obj.updateDynamic("creativeBundleId")(creativeBundleId.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overrideClickThroughUrl)) __obj.updateDynamic("overrideClickThroughUrl")(overrideClickThroughUrl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdBlockingConfiguration]
   }
-  @scala.inline
-  implicit class SchemaAdBlockingConfigurationOps[Self <: SchemaAdBlockingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClickThroughUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickThroughUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeBundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeBundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideClickThroughUrl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideClickThroughUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideClickThroughUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideClickThroughUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

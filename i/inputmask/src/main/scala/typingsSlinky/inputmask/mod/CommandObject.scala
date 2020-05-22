@@ -6,120 +6,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommandObject extends js.Object {
   /**
     * Character to insert.
     */
-  var c: js.UndefOr[String] = js.native
+  var c: js.UndefOr[String] = js.undefined
   /**
     * Position of the caret.
     */
-  var caret: js.UndefOr[Double] = js.native
+  var caret: js.UndefOr[Double] = js.undefined
   /**
     * Position(s) to add.
     */
-  var insert: js.UndefOr[InsertPosition | js.Array[InsertPosition]] = js.native
+  var insert: js.UndefOr[InsertPosition | js.Array[InsertPosition]] = js.undefined
   /**
     * Position to insert.
     */
-  var pos: js.UndefOr[Double] = js.native
+  var pos: js.UndefOr[Double] = js.undefined
   /**
     * * `true` => refresh validPositions from the complete buffer .
     * * `{ start: , end: }` => refresh from start to end.
     */
-  var refreshFromBuffer: js.UndefOr[`true` | Start] = js.native
+  var refreshFromBuffer: js.UndefOr[`true` | Start] = js.undefined
   /**
     * Position(s) to remove.
     */
-  var remove: js.UndefOr[Double | js.Array[Double]] = js.native
+  var remove: js.UndefOr[Double | js.Array[Double]] = js.undefined
 }
 
 object CommandObject {
   @scala.inline
-  def apply(): CommandObject = {
+  def apply(
+    c: String = null,
+    caret: js.UndefOr[Double] = js.undefined,
+    insert: InsertPosition | js.Array[InsertPosition] = null,
+    pos: js.UndefOr[Double] = js.undefined,
+    refreshFromBuffer: `true` | Start = null,
+    remove: Double | js.Array[Double] = null
+  ): CommandObject = {
     val __obj = js.Dynamic.literal()
+    if (c != null) __obj.updateDynamic("c")(c.asInstanceOf[js.Any])
+    if (!js.isUndefined(caret)) __obj.updateDynamic("caret")(caret.get.asInstanceOf[js.Any])
+    if (insert != null) __obj.updateDynamic("insert")(insert.asInstanceOf[js.Any])
+    if (!js.isUndefined(pos)) __obj.updateDynamic("pos")(pos.get.asInstanceOf[js.Any])
+    if (refreshFromBuffer != null) __obj.updateDynamic("refreshFromBuffer")(refreshFromBuffer.asInstanceOf[js.Any])
+    if (remove != null) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandObject]
   }
-  @scala.inline
-  implicit class CommandObjectOps[Self <: CommandObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withC(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("c")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("c")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaret(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsert(value: InsertPosition | js.Array[InsertPosition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshFromBuffer(value: `true` | Start): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshFromBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshFromBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshFromBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

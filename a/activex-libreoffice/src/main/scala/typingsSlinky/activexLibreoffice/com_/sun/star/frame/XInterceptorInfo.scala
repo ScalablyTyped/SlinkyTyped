@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see XDispatchProviderInterception
   * @see XDispatchProviderInterceptor
   */
-@js.native
 trait XInterceptorInfo extends XInterface {
   /**
     * returns the URL list for interception.
@@ -24,14 +23,14 @@ trait XInterceptorInfo extends XInterface {
     * Wildcards inside the URLs are allowed to register the interceptor for URLs too, which can have optional arguments (e.g. "..#.." or "..?..").
     * @returns a list of URLs which are handled by this interceptor
     */
-  val InterceptedURLs: SafeArray[String] = js.native
+  val InterceptedURLs: SafeArray[String]
   /**
     * returns the URL list for interception.
     *
     * Wildcards inside the URLs are allowed to register the interceptor for URLs too, which can have optional arguments (e.g. "..#.." or "..?..").
     * @returns a list of URLs which are handled by this interceptor
     */
-  def getInterceptedURLs(): SafeArray[String] = js.native
+  def getInterceptedURLs(): SafeArray[String]
 }
 
 object XInterceptorInfo {
@@ -46,25 +45,5 @@ object XInterceptorInfo {
     val __obj = js.Dynamic.literal(InterceptedURLs = InterceptedURLs.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getInterceptedURLs = js.Any.fromFunction0(getInterceptedURLs), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XInterceptorInfo]
   }
-  @scala.inline
-  implicit class XInterceptorInfoOps[Self <: XInterceptorInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInterceptedURLs(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InterceptedURLs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetInterceptedURLs(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInterceptedURLs")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

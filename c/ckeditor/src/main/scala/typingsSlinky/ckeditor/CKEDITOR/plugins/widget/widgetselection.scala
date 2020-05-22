@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait widgetselection extends js.Object {
-  def addFillers(editable: editable): Boolean = js.native
-  def removeFillers(editable: editable): Unit = js.native
+  def addFillers(editable: editable): Boolean
+  def removeFillers(editable: editable): Unit
 }
 
 object widgetselection {
@@ -17,25 +16,5 @@ object widgetselection {
     val __obj = js.Dynamic.literal(addFillers = js.Any.fromFunction1(addFillers), removeFillers = js.Any.fromFunction1(removeFillers))
     __obj.asInstanceOf[widgetselection]
   }
-  @scala.inline
-  implicit class widgetselectionOps[Self <: widgetselection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddFillers(value: editable => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFillers")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveFillers(value: editable => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFillers")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

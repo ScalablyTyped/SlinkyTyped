@@ -29,65 +29,18 @@ trait LaunchTemplateBlockDeviceMapping extends js.Object {
 
 object LaunchTemplateBlockDeviceMapping {
   @scala.inline
-  def apply(): LaunchTemplateBlockDeviceMapping = {
+  def apply(
+    deviceName: Input[String] = null,
+    ebs: Input[LaunchTemplateBlockDeviceMappingEbs] = null,
+    noDevice: Input[String] = null,
+    virtualName: Input[String] = null
+  ): LaunchTemplateBlockDeviceMapping = {
     val __obj = js.Dynamic.literal()
+    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
+    if (ebs != null) __obj.updateDynamic("ebs")(ebs.asInstanceOf[js.Any])
+    if (noDevice != null) __obj.updateDynamic("noDevice")(noDevice.asInstanceOf[js.Any])
+    if (virtualName != null) __obj.updateDynamic("virtualName")(virtualName.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateBlockDeviceMapping]
   }
-  @scala.inline
-  implicit class LaunchTemplateBlockDeviceMappingOps[Self <: LaunchTemplateBlockDeviceMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbs(value: Input[LaunchTemplateBlockDeviceMappingEbs]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDevice(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDevice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FunctionConstructor extends js.Object {
-  def reference(func: js.Function): FunctionConstructor = js.native
+  def reference(func: js.Function): FunctionConstructor
 }
 
 object FunctionConstructor {
@@ -15,19 +14,5 @@ object FunctionConstructor {
     val __obj = js.Dynamic.literal(reference = js.Any.fromFunction1(reference))
     __obj.asInstanceOf[FunctionConstructor]
   }
-  @scala.inline
-  implicit class FunctionConstructorOps[Self <: FunctionConstructor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReference(value: js.Function => FunctionConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

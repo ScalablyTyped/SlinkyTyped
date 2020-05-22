@@ -5,36 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GanttResizeStartEvent extends GanttEvent {
-  var task: js.UndefOr[GanttTask] = js.native
+  var task: js.UndefOr[GanttTask] = js.undefined
 }
 
 object GanttResizeStartEvent {
   @scala.inline
-  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: Gantt): GanttResizeStartEvent = {
+  def apply(
+    isDefaultPrevented: () => Boolean,
+    preventDefault: js.Function,
+    sender: Gantt,
+    task: GanttTask = null
+  ): GanttResizeStartEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (task != null) __obj.updateDynamic("task")(task.asInstanceOf[js.Any])
     __obj.asInstanceOf[GanttResizeStartEvent]
   }
-  @scala.inline
-  implicit class GanttResizeStartEventOps[Self <: GanttResizeStartEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTask(value: GanttTask): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

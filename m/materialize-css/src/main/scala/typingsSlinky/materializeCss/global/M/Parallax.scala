@@ -11,7 +11,23 @@ import scala.scalajs.js.annotation._
 @JSGlobal("M.Parallax")
 @js.native
 class Parallax ()
-  extends typingsSlinky.materializeCss.M.Component[ParallaxOptions]
+  extends typingsSlinky.materializeCss.M.Component[ParallaxOptions] {
+  /**
+    * The DOM element the plugin was initialized with
+    */
+  /* CompleteClass */
+  override var el: Element = js.native
+  /**
+    * The options the instance was initialized with
+    */
+  /* CompleteClass */
+  override var options: ParallaxOptions = js.native
+  /**
+    * Destroy plugin instance and teardown
+    */
+  /* CompleteClass */
+  override def destroy(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("M.Parallax")

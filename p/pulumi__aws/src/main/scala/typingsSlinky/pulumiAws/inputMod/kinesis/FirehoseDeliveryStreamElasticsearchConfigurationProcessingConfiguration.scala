@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration extends js.Object {
   /**
-    * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+    * Enables or disables data processing.
     */
   var enabled: js.UndefOr[Input[Boolean]] = js.native
   /**
@@ -25,47 +25,18 @@ trait FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration ex
 
 object FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration {
   @scala.inline
-  def apply(): FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration = {
+  def apply(
+    enabled: Input[Boolean] = null,
+    processors: Input[
+      js.Array[
+        Input[FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor]
+      ]
+    ] = null
+  ): FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
+    if (processors != null) __obj.updateDynamic("processors")(processors.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration]
   }
-  @scala.inline
-  implicit class FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationOps[Self <: FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessors(
-      value: Input[
-          js.Array[
-            Input[FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor]
-          ]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

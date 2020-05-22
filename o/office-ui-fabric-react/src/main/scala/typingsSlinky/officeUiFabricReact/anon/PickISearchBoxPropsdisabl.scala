@@ -6,49 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/SearchBox/SearchBox.types.ISearchBoxProps, 'disableAnimation' | 'clearButtonProps'> */
-@js.native
 trait PickISearchBoxPropsdisabl extends js.Object {
-  var clearButtonProps: js.UndefOr[IButtonProps] = js.native
-  var disableAnimation: js.UndefOr[Boolean] = js.native
+  var clearButtonProps: js.UndefOr[IButtonProps] = js.undefined
+  var disableAnimation: js.UndefOr[Boolean] = js.undefined
 }
 
 object PickISearchBoxPropsdisabl {
   @scala.inline
-  def apply(): PickISearchBoxPropsdisabl = {
+  def apply(clearButtonProps: IButtonProps = null, disableAnimation: js.UndefOr[Boolean] = js.undefined): PickISearchBoxPropsdisabl = {
     val __obj = js.Dynamic.literal()
+    if (clearButtonProps != null) __obj.updateDynamic("clearButtonProps")(clearButtonProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableAnimation)) __obj.updateDynamic("disableAnimation")(disableAnimation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickISearchBoxPropsdisabl]
   }
-  @scala.inline
-  implicit class PickISearchBoxPropsdisablOps[Self <: PickISearchBoxPropsdisabl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearButtonProps(value: IButtonProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearButtonProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearButtonProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearButtonProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAnimation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

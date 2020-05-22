@@ -1,5 +1,14 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesStrings.ArrowFunctionExpression
+import typingsSlinky.babelTypes.babelTypesStrings.BigIntLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.BooleanLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.FunctionDeclaration
+import typingsSlinky.babelTypes.babelTypesStrings.FunctionExpression
+import typingsSlinky.babelTypes.babelTypesStrings.NullLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.NumericLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.RegExpLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,26 +24,162 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ArrowFunctionExpression_
   - typingsSlinky.babelTypes.mod.BigIntLiteral_
 */
-trait Pureish extends Node
+trait Pureish extends _Node
 
 object Pureish {
   @scala.inline
-  implicit def apply(value: ArrowFunctionExpression_): Pureish = value.asInstanceOf[Pureish]
+  def NullLiteral_(
+    `type`: NullLiteral,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: BigIntLiteral_): Pureish = value.asInstanceOf[Pureish]
+  def StringLiteral_(
+    `type`: StringLiteral,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: BooleanLiteral_): Pureish = value.asInstanceOf[Pureish]
+  def BooleanLiteral_(
+    `type`: BooleanLiteral,
+    value: Boolean,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: FunctionDeclaration_): Pureish = value.asInstanceOf[Pureish]
+  def FunctionExpression_(
+    async: Boolean,
+    body: BlockStatement_,
+    generator: Boolean,
+    params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
+    `type`: FunctionExpression,
+    end: Double = null.asInstanceOf[Double],
+    id: Identifier_ = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: FunctionExpression_): Pureish = value.asInstanceOf[Pureish]
+  def BigIntLiteral_(
+    `type`: BigIntLiteral,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: NullLiteral_): Pureish = value.asInstanceOf[Pureish]
+  def NumericLiteral_(
+    `type`: NumericLiteral,
+    value: Double,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: NumericLiteral_): Pureish = value.asInstanceOf[Pureish]
+  def RegExpLiteral_(
+    flags: js.Any,
+    pattern: String,
+    `type`: RegExpLiteral,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: RegExpLiteral_): Pureish = value.asInstanceOf[Pureish]
+  def ArrowFunctionExpression_(
+    async: Boolean,
+    body: BlockStatement_ | Expression,
+    expression: Boolean,
+    generator: Boolean,
+    params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
+    `type`: ArrowFunctionExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
   @scala.inline
-  implicit def apply(value: StringLiteral_): Pureish = value.asInstanceOf[Pureish]
+  def FunctionDeclaration_(
+    async: Boolean,
+    body: BlockStatement_,
+    generator: Boolean,
+    params: js.Array[Identifier_ | Pattern | RestElement_ | TSParameterProperty_],
+    `type`: FunctionDeclaration,
+    declare: Boolean = null.asInstanceOf[Boolean],
+    end: Double = null.asInstanceOf[Double],
+    id: Identifier_ = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    returnType: TypeAnnotation_ | TSTypeAnnotation_ | Noop_ = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ | TSTypeParameterDeclaration_ | Noop_ = null
+  ): Pureish = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], declare = declare.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pureish]
+  }
 }
 

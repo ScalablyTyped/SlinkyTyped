@@ -6,42 +6,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait AbbrOpenToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait AbbrOpenToken extends TagToken {
   /**
     * Abbreviation title.
     */
-  var title: String = js.native
+  var title: String
   @JSName("type")
-  var type_AbbrOpenToken: abbr_open = js.native
+  var type_AbbrOpenToken: abbr_open
 }
 
 object AbbrOpenToken {
   @scala.inline
-  def apply(level: Double, title: String, `type`: abbr_open): AbbrOpenToken = {
+  def apply(level: Double, title: String, `type`: abbr_open, lines: js.Tuple2[Double, Double] = null): AbbrOpenToken = {
     val __obj = js.Dynamic.literal(level = level.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbbrOpenToken]
   }
-  @scala.inline
-  implicit class AbbrOpenTokenOps[Self <: AbbrOpenToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: abbr_open): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

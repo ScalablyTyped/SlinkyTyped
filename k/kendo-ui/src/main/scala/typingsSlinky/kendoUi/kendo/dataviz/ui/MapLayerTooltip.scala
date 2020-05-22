@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapLayerTooltip extends js.Object {
-  var animation: js.UndefOr[MapLayerTooltipAnimation] = js.native
-  var autoHide: js.UndefOr[Boolean] = js.native
-  var callout: js.UndefOr[Boolean] = js.native
-  var content: js.UndefOr[String | js.Function | MapLayerTooltipContent] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var iframe: js.UndefOr[Boolean] = js.native
-  var position: js.UndefOr[String] = js.native
-  var showAfter: js.UndefOr[Double] = js.native
-  var showOn: js.UndefOr[String] = js.native
-  var template: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var animation: js.UndefOr[MapLayerTooltipAnimation] = js.undefined
+  var autoHide: js.UndefOr[Boolean] = js.undefined
+  var callout: js.UndefOr[Boolean] = js.undefined
+  var content: js.UndefOr[String | js.Function | MapLayerTooltipContent] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var iframe: js.UndefOr[Boolean] = js.undefined
+  var position: js.UndefOr[String] = js.undefined
+  var showAfter: js.UndefOr[Double] = js.undefined
+  var showOn: js.UndefOr[String] = js.undefined
+  var template: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object MapLayerTooltip {
   @scala.inline
-  def apply(): MapLayerTooltip = {
+  def apply(
+    animation: MapLayerTooltipAnimation = null,
+    autoHide: js.UndefOr[Boolean] = js.undefined,
+    callout: js.UndefOr[Boolean] = js.undefined,
+    content: String | js.Function | MapLayerTooltipContent = null,
+    height: js.UndefOr[Double] = js.undefined,
+    iframe: js.UndefOr[Boolean] = js.undefined,
+    position: String = null,
+    showAfter: js.UndefOr[Double] = js.undefined,
+    showOn: String = null,
+    template: String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): MapLayerTooltip = {
     val __obj = js.Dynamic.literal()
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHide)) __obj.updateDynamic("autoHide")(autoHide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(callout)) __obj.updateDynamic("callout")(callout.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iframe)) __obj.updateDynamic("iframe")(iframe.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAfter)) __obj.updateDynamic("showAfter")(showAfter.get.asInstanceOf[js.Any])
+    if (showOn != null) __obj.updateDynamic("showOn")(showOn.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapLayerTooltip]
   }
-  @scala.inline
-  implicit class MapLayerTooltipOps[Self <: MapLayerTooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: MapLayerTooltipAnimation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: String | js.Function | MapLayerTooltipContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIframe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIframe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAfter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

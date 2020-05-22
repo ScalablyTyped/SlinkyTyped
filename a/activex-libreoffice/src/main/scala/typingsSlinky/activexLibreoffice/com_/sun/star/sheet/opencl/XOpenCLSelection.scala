@@ -7,60 +7,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XOpenCLSelection extends XInterface {
   /**
     * returns the index of the currently selected device. This is an index into the sequence of devices in the OpenCLPLatform object the device is part of
     * in the current instance of LibreOffice (and not some a priori defined identifier for a specific model of device accessed through a specific platform).
     */
-  val DeviceID: Double = js.native
-  var FormulaCellNumberLimit: Double = js.native
+  val DeviceID: Double
+  var FormulaCellNumberLimit: Double
   /** lists all OpenCL devices and platforms */
-  val OpenCLPlatforms: SafeArray[OpenCLPlatform] = js.native
+  val OpenCLPlatforms: SafeArray[OpenCLPlatform]
   /**
     * returns the index of the platform of the currently selected device. This is an index into the sequence that getOpenCLPlatforms returns in the current
     * instance of LibreOffice (and not some a priori defined identifier for an OpenCL platform).
     */
-  val PlatformID: Double = js.native
+  val PlatformID: Double
   /** Disables automatic OpenCL Device Selection */
-  def disableAutomaticDeviceSelection(): Unit = js.native
-  def disableOpcodeSubsetTest(): Unit = js.native
+  def disableAutomaticDeviceSelection(): Unit
+  def disableOpcodeSubsetTest(): Unit
   /**
     * Enables automatic OpenCL Device Selection
     * @param force forces a new evaluation of the best device
     */
-  def enableAutomaticDeviceSelection(force: Boolean): Unit = js.native
-  def enableOpcodeSubsetTest(): Unit = js.native
+  def enableAutomaticDeviceSelection(force: Boolean): Unit
+  def enableOpcodeSubsetTest(): Unit
   /**
     * Enables or disables use of OpenCL for calculations. When using this API to enable OpenCL the configuration parameters are set to their built-in
     * default values, not ones read from the installation of user-specific configuration.
     */
-  def enableOpenCL(enable: Boolean): Unit = js.native
+  def enableOpenCL(enable: Boolean): Unit
   /**
     * returns the index of the currently selected device. This is an index into the sequence of devices in the OpenCLPLatform object the device is part of
     * in the current instance of LibreOffice (and not some a priori defined identifier for a specific model of device accessed through a specific platform).
     */
-  def getDeviceID(): Double = js.native
-  def getFormulaCellNumberLimit(): Double = js.native
+  def getDeviceID(): Double
+  def getFormulaCellNumberLimit(): Double
   /** lists all OpenCL devices and platforms */
-  def getOpenCLPlatforms(): SafeArray[OpenCLPlatform] = js.native
+  def getOpenCLPlatforms(): SafeArray[OpenCLPlatform]
   /**
     * returns the index of the platform of the currently selected device. This is an index into the sequence that getOpenCLPlatforms returns in the current
     * instance of LibreOffice (and not some a priori defined identifier for an OpenCL platform).
     */
-  def getPlatformID(): Double = js.native
-  def isOpcodeSubsetTested(): Boolean = js.native
+  def getPlatformID(): Double
+  def isOpcodeSubsetTested(): Boolean
   /**
     * Returns true if calculation with OpenCL is enabled (at all). The actual use of OpenCL for a formula is also affected by the configuration settings
     * specifying whether OpenCL is used for all opcodes or just for a subset, and the black- and whitelists of OpenCL implementations that are in use.
     */
-  def isOpenCLEnabled(): Boolean = js.native
+  def isOpenCLEnabled(): Boolean
   /**
     * Select the OpenCL device with the given platform and device number. The platform number corresponds to an index into the sequence returned by
     * getOpenCLPlatforms, and the device number corresponds to an index into the sequence of devices in that platform.
     */
-  def selectOpenCLDevice(platform: Double, device: Double): Unit = js.native
-  def setFormulaCellNumberLimit(number: Double): Unit = js.native
+  def selectOpenCLDevice(platform: Double, device: Double): Unit
+  def setFormulaCellNumberLimit(number: Double): Unit
 }
 
 object XOpenCLSelection {
@@ -90,115 +89,5 @@ object XOpenCLSelection {
     val __obj = js.Dynamic.literal(DeviceID = DeviceID.asInstanceOf[js.Any], FormulaCellNumberLimit = FormulaCellNumberLimit.asInstanceOf[js.Any], OpenCLPlatforms = OpenCLPlatforms.asInstanceOf[js.Any], PlatformID = PlatformID.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), disableAutomaticDeviceSelection = js.Any.fromFunction0(disableAutomaticDeviceSelection), disableOpcodeSubsetTest = js.Any.fromFunction0(disableOpcodeSubsetTest), enableAutomaticDeviceSelection = js.Any.fromFunction1(enableAutomaticDeviceSelection), enableOpcodeSubsetTest = js.Any.fromFunction0(enableOpcodeSubsetTest), enableOpenCL = js.Any.fromFunction1(enableOpenCL), getDeviceID = js.Any.fromFunction0(getDeviceID), getFormulaCellNumberLimit = js.Any.fromFunction0(getFormulaCellNumberLimit), getOpenCLPlatforms = js.Any.fromFunction0(getOpenCLPlatforms), getPlatformID = js.Any.fromFunction0(getPlatformID), isOpcodeSubsetTested = js.Any.fromFunction0(isOpcodeSubsetTested), isOpenCLEnabled = js.Any.fromFunction0(isOpenCLEnabled), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), selectOpenCLDevice = js.Any.fromFunction2(selectOpenCLDevice), setFormulaCellNumberLimit = js.Any.fromFunction1(setFormulaCellNumberLimit))
     __obj.asInstanceOf[XOpenCLSelection]
   }
-  @scala.inline
-  implicit class XOpenCLSelectionOps[Self <: XOpenCLSelection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormulaCellNumberLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FormulaCellNumberLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenCLPlatforms(value: SafeArray[OpenCLPlatform]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenCLPlatforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlatformID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisableAutomaticDeviceSelection(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutomaticDeviceSelection")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisableOpcodeSubsetTest(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOpcodeSubsetTest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnableAutomaticDeviceSelection(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutomaticDeviceSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnableOpcodeSubsetTest(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOpcodeSubsetTest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnableOpenCL(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOpenCL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDeviceID(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeviceID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFormulaCellNumberLimit(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormulaCellNumberLimit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetOpenCLPlatforms(value: () => SafeArray[OpenCLPlatform]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpenCLPlatforms")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPlatformID(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlatformID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsOpcodeSubsetTested(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpcodeSubsetTested")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsOpenCLEnabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpenCLEnabled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSelectOpenCLDevice(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOpenCLDevice")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetFormulaCellNumberLimit(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormulaCellNumberLimit")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

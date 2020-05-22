@@ -4,55 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait subscribersChangeArgs extends baseResponseArgs {
   /**
     * The details of the change that occurred.
     */
-  var change: js.UndefOr[subscribersChange] = js.native
+  var change: js.UndefOr[subscribersChange] = js.undefined
   /**
     * The channel on which the change occurred.
     */
-  var channel: js.UndefOr[String] = js.native
+  var channel: js.UndefOr[String] = js.undefined
 }
 
 object subscribersChangeArgs {
   @scala.inline
-  def apply(client: client, clientId: String, meta: js.Any, timestamp: js.Date): subscribersChangeArgs = {
+  def apply(
+    client: client,
+    clientId: String,
+    meta: js.Any,
+    timestamp: js.Date,
+    change: subscribersChange = null,
+    channel: String = null
+  ): subscribersChangeArgs = {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], clientId = clientId.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    if (change != null) __obj.updateDynamic("change")(change.asInstanceOf[js.Any])
+    if (channel != null) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
     __obj.asInstanceOf[subscribersChangeArgs]
   }
-  @scala.inline
-  implicit class subscribersChangeArgsOps[Self <: subscribersChangeArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChange(value: subscribersChange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

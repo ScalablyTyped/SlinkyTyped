@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RasterBandPixelsReadOptions extends js.Object {
-  var buffer_height: js.UndefOr[Double] = js.native
-  var buffer_width: js.UndefOr[Double] = js.native
-  var data_type: js.UndefOr[String] = js.native
-  var line_space: js.UndefOr[Double] = js.native
-  var pixel_space: js.UndefOr[Double] = js.native
+  var buffer_height: js.UndefOr[Double] = js.undefined
+  var buffer_width: js.UndefOr[Double] = js.undefined
+  var data_type: js.UndefOr[String] = js.undefined
+  var line_space: js.UndefOr[Double] = js.undefined
+  var pixel_space: js.UndefOr[Double] = js.undefined
 }
 
 object RasterBandPixelsReadOptions {
   @scala.inline
-  def apply(): RasterBandPixelsReadOptions = {
+  def apply(
+    buffer_height: js.UndefOr[Double] = js.undefined,
+    buffer_width: js.UndefOr[Double] = js.undefined,
+    data_type: String = null,
+    line_space: js.UndefOr[Double] = js.undefined,
+    pixel_space: js.UndefOr[Double] = js.undefined
+  ): RasterBandPixelsReadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(buffer_height)) __obj.updateDynamic("buffer_height")(buffer_height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(buffer_width)) __obj.updateDynamic("buffer_width")(buffer_width.get.asInstanceOf[js.Any])
+    if (data_type != null) __obj.updateDynamic("data_type")(data_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(line_space)) __obj.updateDynamic("line_space")(line_space.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pixel_space)) __obj.updateDynamic("pixel_space")(pixel_space.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RasterBandPixelsReadOptions]
   }
-  @scala.inline
-  implicit class RasterBandPixelsReadOptionsOps[Self <: RasterBandPixelsReadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuffer_height(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer_height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer_height: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer_height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuffer_width(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer_width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer_width: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer_width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine_space(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine_space: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line_space")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixel_space(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixel_space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixel_space: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixel_space")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

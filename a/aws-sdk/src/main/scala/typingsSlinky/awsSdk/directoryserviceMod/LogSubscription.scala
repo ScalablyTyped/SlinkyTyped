@@ -22,53 +22,16 @@ trait LogSubscription extends js.Object {
 
 object LogSubscription {
   @scala.inline
-  def apply(): LogSubscription = {
+  def apply(
+    DirectoryId: DirectoryId = null,
+    LogGroupName: LogGroupName = null,
+    SubscriptionCreatedDateTime: js.Date = null
+  ): LogSubscription = {
     val __obj = js.Dynamic.literal()
+    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
+    if (LogGroupName != null) __obj.updateDynamic("LogGroupName")(LogGroupName.asInstanceOf[js.Any])
+    if (SubscriptionCreatedDateTime != null) __obj.updateDynamic("SubscriptionCreatedDateTime")(SubscriptionCreatedDateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogSubscription]
   }
-  @scala.inline
-  implicit class LogSubscriptionOps[Self <: LogSubscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: LogGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptionCreatedDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionCreatedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptionCreatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionCreatedDateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

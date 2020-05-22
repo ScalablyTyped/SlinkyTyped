@@ -22,53 +22,16 @@ trait VocabularyFilterInfo extends js.Object {
 
 object VocabularyFilterInfo {
   @scala.inline
-  def apply(): VocabularyFilterInfo = {
+  def apply(
+    LanguageCode: LanguageCode = null,
+    LastModifiedTime: js.Date = null,
+    VocabularyFilterName: VocabularyFilterName = null
+  ): VocabularyFilterInfo = {
     val __obj = js.Dynamic.literal()
+    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
+    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
+    if (VocabularyFilterName != null) __obj.updateDynamic("VocabularyFilterName")(VocabularyFilterName.asInstanceOf[js.Any])
     __obj.asInstanceOf[VocabularyFilterInfo]
   }
-  @scala.inline
-  implicit class VocabularyFilterInfoOps[Self <: VocabularyFilterInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguageCode(value: LanguageCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVocabularyFilterName(value: VocabularyFilterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyFilterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

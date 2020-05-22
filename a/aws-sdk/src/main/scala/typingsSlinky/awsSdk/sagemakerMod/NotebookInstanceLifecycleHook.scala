@@ -14,29 +14,10 @@ trait NotebookInstanceLifecycleHook extends js.Object {
 
 object NotebookInstanceLifecycleHook {
   @scala.inline
-  def apply(): NotebookInstanceLifecycleHook = {
+  def apply(Content: NotebookInstanceLifecycleConfigContent = null): NotebookInstanceLifecycleHook = {
     val __obj = js.Dynamic.literal()
+    if (Content != null) __obj.updateDynamic("Content")(Content.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotebookInstanceLifecycleHook]
   }
-  @scala.inline
-  implicit class NotebookInstanceLifecycleHookOps[Self <: NotebookInstanceLifecycleHook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: NotebookInstanceLifecycleConfigContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

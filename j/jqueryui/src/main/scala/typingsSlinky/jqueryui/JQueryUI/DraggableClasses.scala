@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DraggableClasses extends js.Object {
-  var `ui-draggable`: js.UndefOr[String] = js.native
-  var `ui-draggable-disabled`: js.UndefOr[String] = js.native
-  var `ui-draggable-dragging`: js.UndefOr[String] = js.native
-  var `ui-draggable-handle`: js.UndefOr[String] = js.native
+  var `ui-draggable`: js.UndefOr[String] = js.undefined
+  var `ui-draggable-disabled`: js.UndefOr[String] = js.undefined
+  var `ui-draggable-dragging`: js.UndefOr[String] = js.undefined
+  var `ui-draggable-handle`: js.UndefOr[String] = js.undefined
 }
 
 object DraggableClasses {
   @scala.inline
-  def apply(): DraggableClasses = {
+  def apply(
+    `ui-draggable`: String = null,
+    `ui-draggable-disabled`: String = null,
+    `ui-draggable-dragging`: String = null,
+    `ui-draggable-handle`: String = null
+  ): DraggableClasses = {
     val __obj = js.Dynamic.literal()
+    if (`ui-draggable` != null) __obj.updateDynamic("ui-draggable")(`ui-draggable`.asInstanceOf[js.Any])
+    if (`ui-draggable-disabled` != null) __obj.updateDynamic("ui-draggable-disabled")(`ui-draggable-disabled`.asInstanceOf[js.Any])
+    if (`ui-draggable-dragging` != null) __obj.updateDynamic("ui-draggable-dragging")(`ui-draggable-dragging`.asInstanceOf[js.Any])
+    if (`ui-draggable-handle` != null) __obj.updateDynamic("ui-draggable-handle")(`ui-draggable-handle`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DraggableClasses]
   }
-  @scala.inline
-  implicit class DraggableClassesOps[Self <: DraggableClasses] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withUi-draggable`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUi-draggable`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUi-draggable-disabled`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable-disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUi-draggable-disabled`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable-disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUi-draggable-dragging`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable-dragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUi-draggable-dragging`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable-dragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUi-draggable-handle`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable-handle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUi-draggable-handle`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui-draggable-handle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

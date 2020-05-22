@@ -6,153 +6,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrganizationChartProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var nodeTemplate: js.UndefOr[js.Function1[/* node */ OrganizationChartNodeData, TagMod[Any]]] = js.native
-  var onNodeSelect: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.native
-  var onNodeUnselect: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.native
-  var selection: js.UndefOr[js.Any] = js.native
-  var selectionChange: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
-  var selectionMode: js.UndefOr[String] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var value: js.UndefOr[js.Array[OrganizationChartNodeData]] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var nodeTemplate: js.UndefOr[js.Function1[/* node */ OrganizationChartNodeData, TagMod[Any]]] = js.undefined
+  var onNodeSelect: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.undefined
+  var onNodeUnselect: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.undefined
+  var selection: js.UndefOr[js.Any] = js.undefined
+  var selectionChange: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.undefined
+  var selectionMode: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var value: js.UndefOr[js.Array[OrganizationChartNodeData]] = js.undefined
 }
 
 object OrganizationChartProps {
   @scala.inline
-  def apply(): OrganizationChartProps = {
+  def apply(
+    className: String = null,
+    id: String = null,
+    nodeTemplate: /* node */ OrganizationChartNodeData => TagMod[Any] = null,
+    onNodeSelect: /* e */ Node => Unit = null,
+    onNodeUnselect: /* e */ Node => Unit = null,
+    selection: js.Any = null,
+    selectionChange: /* data */ js.Any => Unit = null,
+    selectionMode: String = null,
+    style: js.Object = null,
+    value: js.Array[OrganizationChartNodeData] = null
+  ): OrganizationChartProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (nodeTemplate != null) __obj.updateDynamic("nodeTemplate")(js.Any.fromFunction1(nodeTemplate))
+    if (onNodeSelect != null) __obj.updateDynamic("onNodeSelect")(js.Any.fromFunction1(onNodeSelect))
+    if (onNodeUnselect != null) __obj.updateDynamic("onNodeUnselect")(js.Any.fromFunction1(onNodeUnselect))
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (selectionChange != null) __obj.updateDynamic("selectionChange")(js.Any.fromFunction1(selectionChange))
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationChartProps]
   }
-  @scala.inline
-  implicit class OrganizationChartPropsOps[Self <: OrganizationChartProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeTemplate(value: /* node */ OrganizationChartNodeData => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTemplate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNodeTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeSelect(value: /* e */ Node => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNodeUnselect(value: /* e */ Node => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnselect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNodeUnselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionChange(value: /* data */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelectionChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Array[OrganizationChartNodeData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

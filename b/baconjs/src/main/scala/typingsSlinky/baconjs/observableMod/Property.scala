@@ -1,7 +1,6 @@
 package typingsSlinky.baconjs.observableMod
 
 import typingsSlinky.baconjs.describeMod.Desc
-import typingsSlinky.baconjs.predicateMod.PredicateOrProperty
 import typingsSlinky.baconjs.typesMod.EventSink
 import typingsSlinky.baconjs.typesMod.Subscribe
 import typingsSlinky.baconjs.typesMod.Unsub
@@ -11,9 +10,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("baconjs/types/observable", "Property")
 @js.native
-class Property[V] protected ()
-  extends Observable[V]
-     with PredicateOrProperty[js.Any] {
+class Property[V] protected () extends Observable[V] {
   def this(desc: Desc, subscribe: Subscribe[V]) = this()
   def this(desc: Desc, subscribe: Subscribe[V], handler: EventSink[V]) = this()
   /**

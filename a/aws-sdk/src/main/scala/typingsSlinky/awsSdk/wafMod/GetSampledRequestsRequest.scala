@@ -15,7 +15,7 @@ trait GetSampledRequestsRequest extends js.Object {
     */
   var RuleId: ResourceId = js.native
   /**
-    * The start date and time and the end date and time of the range for which you want GetSampledRequests to return a sample of requests. Specify the date and time in the following format: "2016-09-27T14:50Z". You can specify any time range in the previous three hours.
+    * The start date and time and the end date and time of the range for which you want GetSampledRequests to return a sample of requests. You must specify the times in Coordinated Universal Time (UTC) format. UTC format includes the special designator, Z. For example, "2016-09-27T14:50Z". You can specify any time range in the previous three hours.
     */
   var TimeWindow: typingsSlinky.awsSdk.wafMod.TimeWindow = js.native
   /**
@@ -35,37 +35,5 @@ object GetSampledRequestsRequest {
     val __obj = js.Dynamic.literal(MaxItems = MaxItems.asInstanceOf[js.Any], RuleId = RuleId.asInstanceOf[js.Any], TimeWindow = TimeWindow.asInstanceOf[js.Any], WebAclId = WebAclId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSampledRequestsRequest]
   }
-  @scala.inline
-  implicit class GetSampledRequestsRequestOps[Self <: GetSampledRequestsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxItems(value: GetSampledRequestsMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRuleId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeWindow(value: TimeWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebAclId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebAclId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait PurchaseScheduledInstancesResult extends js.Object {
 
 object PurchaseScheduledInstancesResult {
   @scala.inline
-  def apply(): PurchaseScheduledInstancesResult = {
+  def apply(ScheduledInstanceSet: PurchasedScheduledInstanceSet = null): PurchaseScheduledInstancesResult = {
     val __obj = js.Dynamic.literal()
+    if (ScheduledInstanceSet != null) __obj.updateDynamic("ScheduledInstanceSet")(ScheduledInstanceSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseScheduledInstancesResult]
   }
-  @scala.inline
-  implicit class PurchaseScheduledInstancesResultOps[Self <: PurchaseScheduledInstancesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduledInstanceSet(value: PurchasedScheduledInstanceSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledInstanceSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledInstanceSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledInstanceSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

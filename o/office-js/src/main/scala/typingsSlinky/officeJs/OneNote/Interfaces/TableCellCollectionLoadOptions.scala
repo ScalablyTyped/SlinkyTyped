@@ -10,151 +10,73 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@js.native
 trait TableCellCollectionLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the index of the cell in its row. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var cellIndex: js.UndefOr[Boolean] = js.native
+  var cellIndex: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the ID of the cell. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the collection of Paragraph objects in the TableCell.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var paragraphs: js.UndefOr[ParagraphCollectionLoadOptions] = js.native
+  var paragraphs: js.UndefOr[ParagraphCollectionLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the parent row of the cell.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var parentRow: js.UndefOr[TableRowLoadOptions] = js.native
+  var parentRow: js.UndefOr[TableRowLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the index of the cell's row in the table. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var rowIndex: js.UndefOr[Boolean] = js.native
+  var rowIndex: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets and sets the shading color of the cell
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var shadingColor: js.UndefOr[Boolean] = js.native
+  var shadingColor: js.UndefOr[Boolean] = js.undefined
 }
 
 object TableCellCollectionLoadOptions {
   @scala.inline
-  def apply(): TableCellCollectionLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    cellIndex: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    paragraphs: ParagraphCollectionLoadOptions = null,
+    parentRow: TableRowLoadOptions = null,
+    rowIndex: js.UndefOr[Boolean] = js.undefined,
+    shadingColor: js.UndefOr[Boolean] = js.undefined
+  ): TableCellCollectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellIndex)) __obj.updateDynamic("cellIndex")(cellIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (paragraphs != null) __obj.updateDynamic("paragraphs")(paragraphs.asInstanceOf[js.Any])
+    if (parentRow != null) __obj.updateDynamic("parentRow")(parentRow.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowIndex)) __obj.updateDynamic("rowIndex")(rowIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadingColor)) __obj.updateDynamic("shadingColor")(shadingColor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableCellCollectionLoadOptions]
   }
-  @scala.inline
-  implicit class TableCellCollectionLoadOptionsOps[Self <: TableCellCollectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParagraphs(value: ParagraphCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParagraphs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentRow(value: TableRowLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadingColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadingColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadingColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadingColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

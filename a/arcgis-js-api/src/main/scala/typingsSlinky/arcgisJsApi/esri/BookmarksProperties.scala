@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BookmarksProperties
   extends WidgetProperties
      with GoToProperties {
@@ -13,13 +13,13 @@ trait BookmarksProperties
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#bookmarkCreationOptions)
     */
-  var bookmarkCreationOptions: js.UndefOr[BookmarkCreationOptions] = js.native
+  var bookmarkCreationOptions: js.UndefOr[BookmarkCreationOptions] = js.undefined
   /**
     * A collection of [Bookmark](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html)s.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#bookmarks)
     */
-  var bookmarks: js.UndefOr[CollectionProperties[BookmarkProperties]] = js.native
+  var bookmarks: js.UndefOr[CollectionProperties[BookmarkProperties]] = js.undefined
   /**
     * When true, the widget is visually withdrawn and cannot be interacted with.
     *
@@ -27,7 +27,7 @@ trait BookmarksProperties
     *
     * @default false
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether the widget is able to be edited. When `true`, allows bookmarks to be added, edited, reordered, or deleted from within the widget. Any edits made will only be shown locally and will not be saved.
     *
@@ -35,142 +35,65 @@ trait BookmarksProperties
     *
     * @default false
     */
-  var editingEnabled: js.UndefOr[Boolean] = js.native
+  var editingEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The widget's default CSS icon class.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#iconClass)
     */
-  var iconClass: js.UndefOr[String] = js.native
+  var iconClass: js.UndefOr[String] = js.undefined
   /**
     * The view from which the widget will operate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#view)
     */
-  var view: js.UndefOr[MapViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [BookmarksViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#viewModel)
     */
-  var viewModel: js.UndefOr[BookmarksViewModelProperties] = js.native
+  var viewModel: js.UndefOr[BookmarksViewModelProperties] = js.undefined
   /**
     * The visible elements that are displayed within the widget. This property provides the ability to turn individual elements of the widget's display on/off.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#visibleElements)
     */
-  var visibleElements: js.UndefOr[BookmarksVisibleElements] = js.native
+  var visibleElements: js.UndefOr[BookmarksVisibleElements] = js.undefined
 }
 
 object BookmarksProperties {
   @scala.inline
-  def apply(): BookmarksProperties = {
+  def apply(
+    bookmarkCreationOptions: BookmarkCreationOptions = null,
+    bookmarks: CollectionProperties[BookmarkProperties] = null,
+    container: String | HTMLElement = null,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    editingEnabled: js.UndefOr[Boolean] = js.undefined,
+    goToOverride: (/* view */ MapView | SceneView, /* goToParameters */ js.Any) => Unit = null,
+    iconClass: String = null,
+    id: String = null,
+    label: String = null,
+    view: MapViewProperties = null,
+    viewModel: BookmarksViewModelProperties = null,
+    visibleElements: BookmarksVisibleElements = null
+  ): BookmarksProperties = {
     val __obj = js.Dynamic.literal()
+    if (bookmarkCreationOptions != null) __obj.updateDynamic("bookmarkCreationOptions")(bookmarkCreationOptions.asInstanceOf[js.Any])
+    if (bookmarks != null) __obj.updateDynamic("bookmarks")(bookmarks.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(editingEnabled)) __obj.updateDynamic("editingEnabled")(editingEnabled.get.asInstanceOf[js.Any])
+    if (goToOverride != null) __obj.updateDynamic("goToOverride")(js.Any.fromFunction2(goToOverride))
+    if (iconClass != null) __obj.updateDynamic("iconClass")(iconClass.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
+    if (visibleElements != null) __obj.updateDynamic("visibleElements")(visibleElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[BookmarksProperties]
   }
-  @scala.inline
-  implicit class BookmarksPropertiesOps[Self <: BookmarksProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBookmarkCreationOptions(value: BookmarkCreationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarkCreationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookmarkCreationOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarkCreationOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBookmarks(value: CollectionProperties[BookmarkProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookmarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: MapViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: BookmarksViewModelProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleElements(value: BookmarksVisibleElements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleElements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

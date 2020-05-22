@@ -18,41 +18,11 @@ trait ListenerTlsCertificate extends js.Object {
 
 object ListenerTlsCertificate {
   @scala.inline
-  def apply(): ListenerTlsCertificate = {
+  def apply(acm: ListenerTlsAcmCertificate = null, file: ListenerTlsFileCertificate = null): ListenerTlsCertificate = {
     val __obj = js.Dynamic.literal()
+    if (acm != null) __obj.updateDynamic("acm")(acm.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerTlsCertificate]
   }
-  @scala.inline
-  implicit class ListenerTlsCertificateOps[Self <: ListenerTlsCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcm(value: ListenerTlsAcmCertificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFile(value: ListenerTlsFileCertificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,44 +12,43 @@ import scala.scalajs.js.annotation._
   * @author Kai Sommerfeld
   * @version 1.0
   */
-@js.native
 trait XCommandInfo extends XInterface {
   /**
     * obtains information for all supported commands.
     * @returns a sequence with information for all supported commands.
     */
-  val Commands: SafeArray[CommandInfo] = js.native
+  val Commands: SafeArray[CommandInfo]
   /**
     * returns information for a specific command.
     * @param Handle specifies the handle of the requested command.
     * @returns the information for the requested command.
     * @throws UnsupportedCommandException if the command is not supported.
     */
-  def getCommandInfoByHandle(Handle: Double): CommandInfo = js.native
+  def getCommandInfoByHandle(Handle: Double): CommandInfo
   /**
     * returns information for a specific command.
     * @param Name specifies the name of the requested command.
     * @returns the information for the requested command.
     * @throws UnsupportedCommandException if the command is not supported.
     */
-  def getCommandInfoByName(Name: String): CommandInfo = js.native
+  def getCommandInfoByName(Name: String): CommandInfo
   /**
     * obtains information for all supported commands.
     * @returns a sequence with information for all supported commands.
     */
-  def getCommands(): SafeArray[CommandInfo] = js.native
+  def getCommands(): SafeArray[CommandInfo]
   /**
     * checks whether a specific command is supported.
     * @param Handle specifies the handle of the requested command.
     * @returns `TRUE` if a command with the specified handle is supported; otherwise `FALSE` is returned.
     */
-  def hasCommandByHandle(Handle: Double): Boolean = js.native
+  def hasCommandByHandle(Handle: Double): Boolean
   /**
     * checks whether a command specific is supported.
     * @param Name specifies the name of the requested command.
     * @returns `TRUE` if a command with the specified name is supported; otherwise `FALSE` is returned.
     */
-  def hasCommandByName(Name: String): Boolean = js.native
+  def hasCommandByName(Name: String): Boolean
 }
 
 object XCommandInfo {
@@ -68,49 +67,5 @@ object XCommandInfo {
     val __obj = js.Dynamic.literal(Commands = Commands.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getCommandInfoByHandle = js.Any.fromFunction1(getCommandInfoByHandle), getCommandInfoByName = js.Any.fromFunction1(getCommandInfoByName), getCommands = js.Any.fromFunction0(getCommands), hasCommandByHandle = js.Any.fromFunction1(hasCommandByHandle), hasCommandByName = js.Any.fromFunction1(hasCommandByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCommandInfo]
   }
-  @scala.inline
-  implicit class XCommandInfoOps[Self <: XCommandInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommands(value: SafeArray[CommandInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCommandInfoByHandle(value: Double => CommandInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommandInfoByHandle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCommandInfoByName(value: String => CommandInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommandInfoByName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCommands(value: () => SafeArray[CommandInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommands")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasCommandByHandle(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCommandByHandle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHasCommandByName(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCommandByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

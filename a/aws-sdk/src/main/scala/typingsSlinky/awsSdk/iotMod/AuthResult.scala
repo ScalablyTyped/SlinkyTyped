@@ -30,77 +30,20 @@ trait AuthResult extends js.Object {
 
 object AuthResult {
   @scala.inline
-  def apply(): AuthResult = {
+  def apply(
+    allowed: Allowed = null,
+    authDecision: AuthDecision = null,
+    authInfo: AuthInfo = null,
+    denied: Denied = null,
+    missingContextValues: MissingContextValues = null
+  ): AuthResult = {
     val __obj = js.Dynamic.literal()
+    if (allowed != null) __obj.updateDynamic("allowed")(allowed.asInstanceOf[js.Any])
+    if (authDecision != null) __obj.updateDynamic("authDecision")(authDecision.asInstanceOf[js.Any])
+    if (authInfo != null) __obj.updateDynamic("authInfo")(authInfo.asInstanceOf[js.Any])
+    if (denied != null) __obj.updateDynamic("denied")(denied.asInstanceOf[js.Any])
+    if (missingContextValues != null) __obj.updateDynamic("missingContextValues")(missingContextValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthResult]
   }
-  @scala.inline
-  implicit class AuthResultOps[Self <: AuthResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowed(value: Allowed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthDecision(value: AuthDecision): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authDecision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthDecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authDecision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthInfo(value: AuthInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDenied(value: Denied): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("denied")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDenied: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("denied")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissingContextValues(value: MissingContextValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingContextValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissingContextValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingContextValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,25 +22,5 @@ object SizeConstraintSetUpdate {
     val __obj = js.Dynamic.literal(Action = Action.asInstanceOf[js.Any], SizeConstraint = SizeConstraint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizeConstraintSetUpdate]
   }
-  @scala.inline
-  implicit class SizeConstraintSetUpdateOps[Self <: SizeConstraintSetUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: ChangeAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeConstraint(value: SizeConstraint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

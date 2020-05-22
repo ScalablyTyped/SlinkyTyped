@@ -4,36 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AuditableModel extends TemporalModel {
-  val updated_at: String | Null = js.native
+  val updated_at: String | Null
 }
 
 object AuditableModel {
   @scala.inline
-  def apply(created_at: String, id: ZendeskID): AuditableModel = {
-    val __obj = js.Dynamic.literal(created_at = created_at.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+  def apply(created_at: String, id: ZendeskID, updated_at: String = null): AuditableModel = {
+    val __obj = js.Dynamic.literal(created_at = created_at.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditableModel]
   }
-  @scala.inline
-  implicit class AuditableModelOps[Self <: AuditableModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUpdated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdated_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(null)
-        ret
-    }
-  }
-  
 }
 

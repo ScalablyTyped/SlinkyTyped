@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompletingTransformer[TResult, TCompleteResult, TInput] extends js.Object {
   @JSName("@@transducer/init")
-  def `@@transducerSlashinit`(): TResult | Unit = js.native
+  def `@@transducerSlashinit`(): TResult | Unit
   @JSName("@@transducer/result")
-  def `@@transducerSlashresult`(result: TResult): TCompleteResult = js.native
+  def `@@transducerSlashresult`(result: TResult): TCompleteResult
   @JSName("@@transducer/step")
-  def `@@transducerSlashstep`(result: TResult, input: TInput): TResult | Reduced[TResult] = js.native
+  def `@@transducerSlashstep`(result: TResult, input: TInput): TResult | Reduced[TResult]
 }
 
 object CompletingTransformer {
@@ -27,31 +26,5 @@ object CompletingTransformer {
     __obj.updateDynamic("@@transducer/step")(js.Any.fromFunction2(`@@transducerSlashstep`))
     __obj.asInstanceOf[CompletingTransformer[TResult, TCompleteResult, TInput]]
   }
-  @scala.inline
-  implicit class CompletingTransformerOps[Self[tresult, tcompleteresult, tinput] <: CompletingTransformer[tresult, tcompleteresult, tinput], TResult, TCompleteResult, TInput] (val x: Self[TResult, TCompleteResult, TInput]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TResult, TCompleteResult, TInput] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TResult, TCompleteResult, TInput]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[TResult, TCompleteResult, TInput]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TResult, TCompleteResult, TInput]) with Other]
-    @scala.inline
-    def `with@@transducerSlashinit`(value: () => TResult | Unit): Self[TResult, TCompleteResult, TInput] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("@@transducer/init")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def `with@@transducerSlashresult`(value: TResult => TCompleteResult): Self[TResult, TCompleteResult, TInput] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("@@transducer/result")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def `with@@transducerSlashstep`(value: (TResult, TInput) => TResult | Reduced[TResult]): Self[TResult, TCompleteResult, TInput] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("@@transducer/step")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

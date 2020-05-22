@@ -8,16 +8,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextLayerItemInternal extends js.Object {
-  var fontName: String = js.native
-  var itemIndex: Double = js.native
-  var page: PDFPageItem = js.native
-  var rotate: js.UndefOr[`0` | `90` | `180` | `270`] = js.native
-  var scale: js.UndefOr[Double] = js.native
-  var str: String = js.native
-  var transform: js.Array[Double] = js.native
-  var width: Double = js.native
+  var fontName: String
+  var itemIndex: Double
+  var page: PDFPageItem
+  var rotate: js.UndefOr[`0` | `90` | `180` | `270`] = js.undefined
+  var scale: js.UndefOr[Double] = js.undefined
+  var str: String
+  var transform: js.Array[Double]
+  var width: Double
 }
 
 object TextLayerItemInternal {
@@ -28,78 +27,14 @@ object TextLayerItemInternal {
     page: PDFPageItem,
     str: String,
     transform: js.Array[Double],
-    width: Double
+    width: Double,
+    rotate: `0` | `90` | `180` | `270` = null,
+    scale: js.UndefOr[Double] = js.undefined
   ): TextLayerItemInternal = {
     val __obj = js.Dynamic.literal(fontName = fontName.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any], page = page.asInstanceOf[js.Any], str = str.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextLayerItemInternal]
   }
-  @scala.inline
-  implicit class TextLayerItemInternalOps[Self <: TextLayerItemInternal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFontName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPage(value: PDFPageItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("str")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransform(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRotate(value: `0` | `90` | `180` | `270`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

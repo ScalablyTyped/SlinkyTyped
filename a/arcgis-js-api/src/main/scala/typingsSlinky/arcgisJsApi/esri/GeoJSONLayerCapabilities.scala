@@ -6,38 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeoJSONLayerCapabilities extends Object {
   /**
     * Describes characteristics of the data in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */
-  var data: GeoJSONLayerCapabilitiesData = js.native
+  var data: GeoJSONLayerCapabilitiesData
   /**
     * Describes editing capabilities that can be performed on the features in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */
-  var editing: GeoJSONLayerCapabilitiesEditing = js.native
+  var editing: GeoJSONLayerCapabilitiesEditing
   /**
     * Describes operations that can be performed on features in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */
-  var operations: GeoJSONLayerCapabilitiesOperations = js.native
+  var operations: GeoJSONLayerCapabilitiesOperations
   /**
     * Describes [query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) operations that can be performed on features in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */
-  var query: GeoJSONLayerCapabilitiesQuery = js.native
+  var query: GeoJSONLayerCapabilitiesQuery
   /**
     * Indicates if the layer's query operation supports querying features or records related to features in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */
-  var queryRelated: GeoJSONLayerCapabilitiesQueryRelated = js.native
+  var queryRelated: GeoJSONLayerCapabilitiesQueryRelated
 }
 
 object GeoJSONLayerCapabilities {
@@ -55,43 +54,5 @@ object GeoJSONLayerCapabilities {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], editing = editing.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), operations = operations.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), query = query.asInstanceOf[js.Any], queryRelated = queryRelated.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoJSONLayerCapabilities]
   }
-  @scala.inline
-  implicit class GeoJSONLayerCapabilitiesOps[Self <: GeoJSONLayerCapabilities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: GeoJSONLayerCapabilitiesData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEditing(value: GeoJSONLayerCapabilitiesEditing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperations(value: GeoJSONLayerCapabilitiesOperations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery(value: GeoJSONLayerCapabilitiesQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryRelated(value: GeoJSONLayerCapabilitiesQueryRelated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryRelated")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

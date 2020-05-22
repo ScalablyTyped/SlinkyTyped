@@ -1,9 +1,7 @@
 package typingsSlinky.picomatch.mod
 
 import typingsSlinky.picomatch.anon.CHAR0
-import typingsSlinky.picomatch.anon.Contains
 import typingsSlinky.picomatch.anon.Debug
-import typingsSlinky.picomatch.anon.Format
 import typingsSlinky.picomatch.anon.IsMatch
 import typingsSlinky.picomatch.anon.MaxLength
 import typingsSlinky.picomatch.parseMod.State
@@ -43,16 +41,16 @@ trait Picomatch extends js.Object {
   def compileRe(state: ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]]): js.RegExp = js.native
   def compileRe(
     state: ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]],
-    options: Contains
+    options: PicomatchOptions
   ): js.RegExp = js.native
   def compileRe(
     state: ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]],
-    options: Contains,
+    options: PicomatchOptions,
     returnOutput: Boolean
   ): js.RegExp = js.native
   def compileRe(
     state: ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]],
-    options: Contains,
+    options: PicomatchOptions,
     returnOutput: Boolean,
     returnState: Boolean
   ): js.RegExp = js.native
@@ -66,28 +64,28 @@ trait Picomatch extends js.Object {
   def isMatch(str: js.Array[String], patterns: js.Array[String], options: js.Object): Boolean = js.native
   def makeRe(input: String): js.Function4[
     /* state */ ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]], 
-    /* options */ js.UndefOr[Contains], 
+    /* options */ js.UndefOr[PicomatchOptions], 
     /* returnOutput */ js.UndefOr[Boolean], 
     /* returnState */ js.UndefOr[Boolean], 
     js.RegExp
   ] = js.native
-  def makeRe(input: String, options: js.Object): js.Function4[
+  def makeRe(input: String, options: PicomatchOptions): js.Function4[
     /* state */ ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]], 
-    /* options */ js.UndefOr[Contains], 
+    /* options */ js.UndefOr[PicomatchOptions], 
     /* returnOutput */ js.UndefOr[Boolean], 
     /* returnState */ js.UndefOr[Boolean], 
     js.RegExp
   ] = js.native
-  def makeRe(input: String, options: js.Object, returnOutput: Boolean): js.Function4[
+  def makeRe(input: String, options: PicomatchOptions, returnOutput: Boolean): js.Function4[
     /* state */ ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]], 
-    /* options */ js.UndefOr[Contains], 
+    /* options */ js.UndefOr[PicomatchOptions], 
     /* returnOutput */ js.UndefOr[Boolean], 
     /* returnState */ js.UndefOr[Boolean], 
     js.RegExp
   ] = js.native
-  def makeRe(input: String, options: js.Object, returnOutput: Boolean, returnState: Boolean): js.Function4[
+  def makeRe(input: String, options: PicomatchOptions, returnOutput: Boolean, returnState: Boolean): js.Function4[
     /* state */ ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]], 
-    /* options */ js.UndefOr[Contains], 
+    /* options */ js.UndefOr[PicomatchOptions], 
     /* returnOutput */ js.UndefOr[Boolean], 
     /* returnState */ js.UndefOr[Boolean], 
     js.RegExp
@@ -98,8 +96,9 @@ trait Picomatch extends js.Object {
   def matchBase(input: String, glob: js.RegExp, options: js.Object, posix: js.Any): Boolean = js.native
   def parse(pattern: String, options: js.Object): js.Object = js.native
   def scan(input: String, options: js.Object): js.Object = js.native
-  def test(input: String, regex: js.RegExp, options: Format): IsMatch = js.native
-  def test(input: String, regex: js.RegExp, options: Format, test: js.Object): IsMatch = js.native
+  def test(input: String, regex: js.RegExp): IsMatch = js.native
+  def test(input: String, regex: js.RegExp, options: PicomatchOptions): IsMatch = js.native
+  def test(input: String, regex: js.RegExp, options: PicomatchOptions, test: js.Object): IsMatch = js.native
   def toRegex(source: String): js.RegExp = js.native
   def toRegex(source: String, options: Debug): js.RegExp = js.native
   def toRegex(source: js.RegExp): js.RegExp = js.native

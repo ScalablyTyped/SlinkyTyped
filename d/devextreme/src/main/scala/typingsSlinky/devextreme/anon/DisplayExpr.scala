@@ -6,87 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisplayExpr extends js.Object {
-  var allowClearing: js.UndefOr[Boolean] = js.native
-  var dataSource: js.UndefOr[js.Array[_] | DataSourceOptions | Store] = js.native
-  var displayExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, String])] = js.native
-  var valueExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, String | Double | Boolean])] = js.native
+  var allowClearing: js.UndefOr[Boolean] = js.undefined
+  var dataSource: js.UndefOr[js.Array[_] | DataSourceOptions | Store] = js.undefined
+  var displayExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, String])] = js.undefined
+  var valueExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, String | Double | Boolean])] = js.undefined
 }
 
 object DisplayExpr {
   @scala.inline
-  def apply(): DisplayExpr = {
+  def apply(
+    allowClearing: js.UndefOr[Boolean] = js.undefined,
+    dataSource: js.Array[_] | DataSourceOptions | Store = null,
+    displayExpr: String | (js.Function1[/* data */ js.Any, String]) = null,
+    valueExpr: String | (js.Function1[/* data */ js.Any, String | Double | Boolean]) = null
+  ): DisplayExpr = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowClearing)) __obj.updateDynamic("allowClearing")(allowClearing.get.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (displayExpr != null) __obj.updateDynamic("displayExpr")(displayExpr.asInstanceOf[js.Any])
+    if (valueExpr != null) __obj.updateDynamic("valueExpr")(valueExpr.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayExpr]
   }
-  @scala.inline
-  implicit class DisplayExprOps[Self <: DisplayExpr] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowClearing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowClearing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowClearing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowClearing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Array[_] | DataSourceOptions | Store): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayExprFunction1(value: /* data */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayExpr")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayExpr(value: String | (js.Function1[/* data */ js.Any, String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueExprFunction1(value: /* data */ js.Any => String | Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpr")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValueExpr(value: String | (js.Function1[/* data */ js.Any, String | Double | Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueExpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueExpr")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

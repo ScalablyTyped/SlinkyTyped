@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValueObject extends js.Object {
   /**
     * True if this and the other Collection have value equality, as defined
@@ -13,7 +12,7 @@ trait ValueObject extends js.Object {
     * Note: This is equivalent to `Immutable.is(this, other)`, but provided to
     * allow for chained expressions.
     */
-  def equals(other: js.Any): Boolean = js.native
+  def equals(other: js.Any): Boolean
 }
 
 object ValueObject {
@@ -22,19 +21,5 @@ object ValueObject {
     val __obj = js.Dynamic.literal(equals = js.Any.fromFunction1(equals))
     __obj.asInstanceOf[ValueObject]
   }
-  @scala.inline
-  implicit class ValueObjectOps[Self <: ValueObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEquals(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

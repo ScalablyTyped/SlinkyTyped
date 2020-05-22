@@ -11,29 +11,10 @@ trait SchemaInstanceGroupManagersSetAutoHealingRequest extends js.Object {
 
 object SchemaInstanceGroupManagersSetAutoHealingRequest {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagersSetAutoHealingRequest = {
+  def apply(autoHealingPolicies: js.Array[SchemaInstanceGroupManagerAutoHealingPolicy] = null): SchemaInstanceGroupManagersSetAutoHealingRequest = {
     val __obj = js.Dynamic.literal()
+    if (autoHealingPolicies != null) __obj.updateDynamic("autoHealingPolicies")(autoHealingPolicies.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagersSetAutoHealingRequest]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagersSetAutoHealingRequestOps[Self <: SchemaInstanceGroupManagersSetAutoHealingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoHealingPolicies(value: js.Array[SchemaInstanceGroupManagerAutoHealingPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHealingPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHealingPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHealingPolicies")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

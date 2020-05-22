@@ -1,53 +1,53 @@
 package typingsSlinky.caniuseLite
 
-import typingsSlinky.caniuseLite.mod.FeatureStatus
-import typingsSlinky.caniuseLite.mod.SupportStatus
+import typingsSlinky.caniuseLite.mod._FeatureStatus
+import typingsSlinky.caniuseLite.mod._SupportStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object caniuseLiteStrings {
   @js.native
-  sealed trait a extends SupportStatus
+  sealed trait a extends _SupportStatus
   
   @js.native
-  sealed trait `a x` extends SupportStatus
+  sealed trait `a x` extends _SupportStatus
   
   @js.native
-  sealed trait cr extends FeatureStatus
+  sealed trait cr extends _FeatureStatus
   
   @js.native
-  sealed trait ls extends FeatureStatus
+  sealed trait ls extends _FeatureStatus
   
   @js.native
-  sealed trait n extends SupportStatus
+  sealed trait n extends _SupportStatus
   
   @js.native
-  sealed trait other extends FeatureStatus
+  sealed trait other extends _FeatureStatus
   
   @js.native
-  sealed trait p extends SupportStatus
+  sealed trait p extends _SupportStatus
   
   @js.native
-  sealed trait pr extends FeatureStatus
+  sealed trait pr extends _FeatureStatus
   
   @js.native
-  sealed trait rec extends FeatureStatus
+  sealed trait rec extends _FeatureStatus
   
   @js.native
-  sealed trait u extends SupportStatus
+  sealed trait u extends _SupportStatus
   
   @js.native
-  sealed trait unoff extends FeatureStatus
+  sealed trait unoff extends _FeatureStatus
   
   @js.native
-  sealed trait wd extends FeatureStatus
+  sealed trait wd extends _FeatureStatus
   
   @js.native
-  sealed trait y extends SupportStatus
+  sealed trait y extends _SupportStatus
   
   @js.native
-  sealed trait `y x` extends SupportStatus
+  sealed trait `y x` extends _SupportStatus
   
   @scala.inline
   def a: a = "a".asInstanceOf[a]

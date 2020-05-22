@@ -14,29 +14,10 @@ trait SslProperties extends js.Object {
 
 object SslProperties {
   @scala.inline
-  def apply(): SslProperties = {
+  def apply(DisableSsl: js.UndefOr[Boolean] = js.undefined): SslProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DisableSsl)) __obj.updateDynamic("DisableSsl")(DisableSsl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SslProperties]
   }
-  @scala.inline
-  implicit class SslPropertiesOps[Self <: SslProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableSsl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableSsl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableSsl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

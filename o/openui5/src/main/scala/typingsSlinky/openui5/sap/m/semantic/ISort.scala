@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   * sap.m.Semantic.MasterPage.
   * @resource sap/m/library.js
   */
-@js.native
 trait ISort extends js.Object
 

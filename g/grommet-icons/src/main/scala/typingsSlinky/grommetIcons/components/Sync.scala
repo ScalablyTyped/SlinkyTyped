@@ -12,7 +12,7 @@ object Sync {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Sync] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Sync](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Sync.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Sync] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Sync](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Sync] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Sync](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sync.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Sync] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Sync](js.Array(this.component, js.Dictionary.empty))()
 }
 

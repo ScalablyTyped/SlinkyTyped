@@ -25,65 +25,18 @@ trait SchemaOrdersSetLineItemMetadataRequest extends js.Object {
 
 object SchemaOrdersSetLineItemMetadataRequest {
   @scala.inline
-  def apply(): SchemaOrdersSetLineItemMetadataRequest = {
+  def apply(
+    annotations: js.Array[SchemaOrderMerchantProvidedAnnotation] = null,
+    lineItemId: String = null,
+    operationId: String = null,
+    productId: String = null
+  ): SchemaOrdersSetLineItemMetadataRequest = {
     val __obj = js.Dynamic.literal()
+    if (annotations != null) __obj.updateDynamic("annotations")(annotations.asInstanceOf[js.Any])
+    if (lineItemId != null) __obj.updateDynamic("lineItemId")(lineItemId.asInstanceOf[js.Any])
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrdersSetLineItemMetadataRequest]
   }
-  @scala.inline
-  implicit class SchemaOrdersSetLineItemMetadataRequestOps[Self <: SchemaOrdersSetLineItemMetadataRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnotations(value: js.Array[SchemaOrderMerchantProvidedAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineItemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineItemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItemId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

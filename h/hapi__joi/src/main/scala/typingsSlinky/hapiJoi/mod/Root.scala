@@ -1,5 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
+import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.hapiJoi.anon.Alternatives
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,12 @@ import scala.scalajs.js.annotation._
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 @js.native
 trait Root extends js.Object {
-  var ValidationError: typingsSlinky.hapiJoi.mod.ValidationError = js.native
+  var ValidationError: Instantiable3[
+    /* message */ String, 
+    /* details */ js.Any, 
+    /* original */ js.Any, 
+    typingsSlinky.hapiJoi.mod.ValidationError
+  ] = js.native
   var cache: CacheConfiguration = js.native
   /**
     * A special value used with `any.allow()`, `any.invalid()`, and `any.valid()` as the first value to reset any previously set values.
@@ -151,6 +157,10 @@ trait Root extends js.Object {
     * Blacklists a value
     */
   def invalid(values: js.Any*): Schema = js.native
+  /**
+    * Checks whether or not the provided argument is an instance of ValidationError
+    */
+  def isError(error: js.Any): /* is @hapi/joi.@hapi/joi.ValidationError */ Boolean = js.native
   /**
     * Checks whether or not the provided argument is an expression.
     */

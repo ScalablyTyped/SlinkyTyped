@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReshapeEventInfo
   extends Object
      with UpdateToolEventInfo {
@@ -25,7 +24,7 @@ trait ReshapeEventInfo
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#ReshapeEventInfo)
     */
-  var `type`: `reshape-start` | reshape | `reshape-stop` = js.native
+  var `type`: `reshape-start` | reshape | `reshape-stop`
 }
 
 object ReshapeEventInfo {
@@ -40,19 +39,5 @@ object ReshapeEventInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReshapeEventInfo]
   }
-  @scala.inline
-  implicit class ReshapeEventInfoOps[Self <: ReshapeEventInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: `reshape-start` | reshape | `reshape-stop`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait PollForThirdPartyJobsInput extends js.Object {
 
 object PollForThirdPartyJobsInput {
   @scala.inline
-  def apply(actionTypeId: ActionTypeId): PollForThirdPartyJobsInput = {
+  def apply(actionTypeId: ActionTypeId, maxBatchSize: js.UndefOr[MaxBatchSize] = js.undefined): PollForThirdPartyJobsInput = {
     val __obj = js.Dynamic.literal(actionTypeId = actionTypeId.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBatchSize)) __obj.updateDynamic("maxBatchSize")(maxBatchSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollForThirdPartyJobsInput]
   }
-  @scala.inline
-  implicit class PollForThirdPartyJobsInputOps[Self <: PollForThirdPartyJobsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionTypeId(value: ActionTypeId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxBatchSize(value: MaxBatchSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBatchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBatchSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

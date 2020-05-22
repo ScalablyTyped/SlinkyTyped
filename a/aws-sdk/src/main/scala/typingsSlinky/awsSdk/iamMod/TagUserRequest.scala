@@ -22,25 +22,5 @@ object TagUserRequest {
     val __obj = js.Dynamic.literal(Tags = Tags.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagUserRequest]
   }
-  @scala.inline
-  implicit class TagUserRequestOps[Self <: TagUserRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTags(value: tagListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: existingUserNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

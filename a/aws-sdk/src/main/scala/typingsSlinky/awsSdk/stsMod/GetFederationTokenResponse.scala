@@ -22,53 +22,16 @@ trait GetFederationTokenResponse extends js.Object {
 
 object GetFederationTokenResponse {
   @scala.inline
-  def apply(): GetFederationTokenResponse = {
+  def apply(
+    Credentials: Credentials = null,
+    FederatedUser: FederatedUser = null,
+    PackedPolicySize: js.UndefOr[nonNegativeIntegerType] = js.undefined
+  ): GetFederationTokenResponse = {
     val __obj = js.Dynamic.literal()
+    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
+    if (FederatedUser != null) __obj.updateDynamic("FederatedUser")(FederatedUser.asInstanceOf[js.Any])
+    if (!js.isUndefined(PackedPolicySize)) __obj.updateDynamic("PackedPolicySize")(PackedPolicySize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFederationTokenResponse]
   }
-  @scala.inline
-  implicit class GetFederationTokenResponseOps[Self <: GetFederationTokenResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: Credentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFederatedUser(value: FederatedUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FederatedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFederatedUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FederatedUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackedPolicySize(value: nonNegativeIntegerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackedPolicySize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackedPolicySize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,45 +18,24 @@ trait CreateRoleAliasRequest extends js.Object {
     * The role ARN.
     */
   var roleArn: RoleArn = js.native
+  /**
+    * Metadata which can be used to manage the role alias.  For URI Request parameters use format: ...key1=value1&amp;key2=value2... For the CLI command-line parameter use format: &amp;&amp;tags "key1=value1&amp;key2=value2..." For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..." 
+    */
+  var tags: js.UndefOr[TagList] = js.native
 }
 
 object CreateRoleAliasRequest {
   @scala.inline
-  def apply(roleAlias: RoleAlias, roleArn: RoleArn): CreateRoleAliasRequest = {
+  def apply(
+    roleAlias: RoleAlias,
+    roleArn: RoleArn,
+    credentialDurationSeconds: js.UndefOr[CredentialDurationSeconds] = js.undefined,
+    tags: TagList = null
+  ): CreateRoleAliasRequest = {
     val __obj = js.Dynamic.literal(roleAlias = roleAlias.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(credentialDurationSeconds)) __obj.updateDynamic("credentialDurationSeconds")(credentialDurationSeconds.get.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRoleAliasRequest]
   }
-  @scala.inline
-  implicit class CreateRoleAliasRequestOps[Self <: CreateRoleAliasRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleAlias(value: RoleAlias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCredentialDurationSeconds(value: CredentialDurationSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialDurationSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentialDurationSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialDurationSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

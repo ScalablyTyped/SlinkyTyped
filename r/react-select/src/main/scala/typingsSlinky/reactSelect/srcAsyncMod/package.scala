@@ -9,4 +9,5 @@ package object srcAsyncMod {
   type ClassProps[T] = js.Any
   type FunctionProps[T] = js.Any
   type Props[OptionType /* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */] = typingsSlinky.reactSelect.selectMod.Props[OptionType] with typingsSlinky.reactSelect.srcAsyncMod.AsyncProps[OptionType]
+  type SelectComponentProps[T] = typingsSlinky.reactSelect.srcAsyncMod.ClassProps[T] | typingsSlinky.reactSelect.srcAsyncMod.FunctionProps[T]
 }

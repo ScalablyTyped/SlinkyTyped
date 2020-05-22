@@ -38,101 +38,24 @@ trait GetResourcesInput extends js.Object {
 
 object GetResourcesInput {
   @scala.inline
-  def apply(): GetResourcesInput = {
+  def apply(
+    ExcludeCompliantResources: js.UndefOr[ExcludeCompliantResources] = js.undefined,
+    IncludeComplianceDetails: js.UndefOr[IncludeComplianceDetails] = js.undefined,
+    PaginationToken: PaginationToken = null,
+    ResourceTypeFilters: ResourceTypeFilterList = null,
+    ResourcesPerPage: js.UndefOr[ResourcesPerPage] = js.undefined,
+    TagFilters: TagFilterList = null,
+    TagsPerPage: js.UndefOr[TagsPerPage] = js.undefined
+  ): GetResourcesInput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ExcludeCompliantResources)) __obj.updateDynamic("ExcludeCompliantResources")(ExcludeCompliantResources.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeComplianceDetails)) __obj.updateDynamic("IncludeComplianceDetails")(IncludeComplianceDetails.get.asInstanceOf[js.Any])
+    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
+    if (ResourceTypeFilters != null) __obj.updateDynamic("ResourceTypeFilters")(ResourceTypeFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(ResourcesPerPage)) __obj.updateDynamic("ResourcesPerPage")(ResourcesPerPage.get.asInstanceOf[js.Any])
+    if (TagFilters != null) __obj.updateDynamic("TagFilters")(TagFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(TagsPerPage)) __obj.updateDynamic("TagsPerPage")(TagsPerPage.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourcesInput]
   }
-  @scala.inline
-  implicit class GetResourcesInputOps[Self <: GetResourcesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludeCompliantResources(value: ExcludeCompliantResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeCompliantResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeCompliantResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludeCompliantResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeComplianceDetails(value: IncludeComplianceDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeComplianceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeComplianceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeComplianceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaginationToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTypeFilters(value: ResourceTypeFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypeFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTypeFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypeFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourcesPerPage(value: ResourcesPerPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcesPerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourcesPerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcesPerPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFilters(value: TagFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagsPerPage(value: TagsPerPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsPerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagsPerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsPerPage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

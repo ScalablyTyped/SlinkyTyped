@@ -14,21 +14,20 @@ import scala.scalajs.js.annotation._
   * After creation the service adds a listener of requested type ( close, terminate and/or etc. ) to the controlled object and let the listener throw
   * related veto exception until the service is disposed.
   */
-@js.native
 trait InstanceLocker extends XComponent {
   /**
     * is used to initialize the object on it's creation.
     * @param xInstance the controlled object. Must implement the related to the requested actions broadcaster interface.
     * @param nActions specifies the actions that should be done ( prevent closing, prevent termination and/or etc. ). It must not be empty and can currently c
     */
-  def InstanceLockerCtor1(xInstance: XInterface, nActions: Double): Unit = js.native
+  def InstanceLockerCtor1(xInstance: XInterface, nActions: Double): Unit
   /**
     * is used to initialize the object on it's creation.
     * @param xInstance the controlled object. Must implement the related to the requested actions broadcaster interface.
     * @param nActions specifies the actions that should be done ( prevent closing, prevent termination and/or etc. ). It must not be empty and can currently c
     * @param xApprove The object implementing {@link XActionsApproval} interface. If this parameter is an empty reference the object will proceed with the spe
     */
-  def InstanceLockerCtor2(xInstance: XInterface, nActions: Double, xApprove: XActionsApproval): Unit = js.native
+  def InstanceLockerCtor2(xInstance: XInterface, nActions: Double, xApprove: XActionsApproval): Unit
 }
 
 object InstanceLocker {
@@ -46,25 +45,5 @@ object InstanceLocker {
     val __obj = js.Dynamic.literal(InstanceLockerCtor1 = js.Any.fromFunction2(InstanceLockerCtor1), InstanceLockerCtor2 = js.Any.fromFunction3(InstanceLockerCtor2), acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), dispose = js.Any.fromFunction0(dispose), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[InstanceLocker]
   }
-  @scala.inline
-  implicit class InstanceLockerOps[Self <: InstanceLocker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceLockerCtor1(value: (XInterface, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceLockerCtor1")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInstanceLockerCtor2(value: (XInterface, Double, XActionsApproval) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceLockerCtor2")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

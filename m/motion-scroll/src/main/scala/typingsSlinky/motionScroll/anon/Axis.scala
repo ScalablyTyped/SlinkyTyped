@@ -7,153 +7,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Axis extends js.Object {
-  var axis: js.UndefOr[x | y] = js.native
-  var callBack: js.UndefOr[js.Function0[Unit]] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[js.Function0[Unit]] = js.native
-  var element: js.UndefOr[HTMLElement] = js.native
-  var force: js.UndefOr[Boolean] = js.native
-  var maxScrollTime: js.UndefOr[Double] = js.native
-  var minScrollTime: js.UndefOr[Double] = js.native
-  var scrollTo: js.UndefOr[Double] = js.native
-  var speed: js.UndefOr[Double] = js.native
+  var axis: js.UndefOr[x | y] = js.undefined
+  var callBack: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var element: js.UndefOr[HTMLElement] = js.undefined
+  var force: js.UndefOr[Boolean] = js.undefined
+  var maxScrollTime: js.UndefOr[Double] = js.undefined
+  var minScrollTime: js.UndefOr[Double] = js.undefined
+  var scrollTo: js.UndefOr[Double] = js.undefined
+  var speed: js.UndefOr[Double] = js.undefined
 }
 
 object Axis {
   @scala.inline
-  def apply(): Axis = {
+  def apply(
+    axis: x | y = null,
+    callBack: () => Unit = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    easing: () => Unit = null,
+    element: HTMLElement = null,
+    force: js.UndefOr[Boolean] = js.undefined,
+    maxScrollTime: js.UndefOr[Double] = js.undefined,
+    minScrollTime: js.UndefOr[Double] = js.undefined,
+    scrollTo: js.UndefOr[Double] = js.undefined,
+    speed: js.UndefOr[Double] = js.undefined
+  ): Axis = {
     val __obj = js.Dynamic.literal()
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (callBack != null) __obj.updateDynamic("callBack")(js.Any.fromFunction0(callBack))
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(js.Any.fromFunction0(easing))
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxScrollTime)) __obj.updateDynamic("maxScrollTime")(maxScrollTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minScrollTime)) __obj.updateDynamic("minScrollTime")(minScrollTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollTo)) __obj.updateDynamic("scrollTo")(scrollTo.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Axis]
   }
-  @scala.inline
-  implicit class AxisOps[Self <: Axis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxis(value: typingsSlinky.motionScroll.motionScrollStrings.x | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallBack(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callBack")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallBack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callBack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxScrollTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScrollTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxScrollTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScrollTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinScrollTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScrollTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinScrollTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minScrollTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollTo(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

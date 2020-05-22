@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAngularLoadService extends js.Object {
-  def loadCSS(url: String): IPromise[_] = js.native
-  def loadScript(url: String): IPromise[_] = js.native
+  def loadCSS(url: String): IPromise[_]
+  def loadScript(url: String): IPromise[_]
 }
 
 object IAngularLoadService {
@@ -17,25 +16,5 @@ object IAngularLoadService {
     val __obj = js.Dynamic.literal(loadCSS = js.Any.fromFunction1(loadCSS), loadScript = js.Any.fromFunction1(loadScript))
     __obj.asInstanceOf[IAngularLoadService]
   }
-  @scala.inline
-  implicit class IAngularLoadServiceOps[Self <: IAngularLoadService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadCSS(value: String => IPromise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadCSS")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadScript(value: String => IPromise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadScript")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

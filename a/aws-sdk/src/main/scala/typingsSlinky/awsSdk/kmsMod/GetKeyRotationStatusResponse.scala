@@ -14,29 +14,10 @@ trait GetKeyRotationStatusResponse extends js.Object {
 
 object GetKeyRotationStatusResponse {
   @scala.inline
-  def apply(): GetKeyRotationStatusResponse = {
+  def apply(KeyRotationEnabled: js.UndefOr[BooleanType] = js.undefined): GetKeyRotationStatusResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(KeyRotationEnabled)) __obj.updateDynamic("KeyRotationEnabled")(KeyRotationEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetKeyRotationStatusResponse]
   }
-  @scala.inline
-  implicit class GetKeyRotationStatusResponseOps[Self <: GetKeyRotationStatusResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyRotationEnabled(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyRotationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyRotationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyRotationEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

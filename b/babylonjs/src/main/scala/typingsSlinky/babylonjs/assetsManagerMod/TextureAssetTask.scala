@@ -95,6 +95,11 @@ class TextureAssetTask protected ()
     */
   var samplingMode: Double = js.native
   /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: Texture = js.native
+  /**
     * Defines the location of the file to load
     */
   var url: String = js.native

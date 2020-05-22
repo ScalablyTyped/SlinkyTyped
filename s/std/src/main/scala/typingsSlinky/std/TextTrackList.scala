@@ -69,7 +69,7 @@ trait TextTrackList
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
-  def item(index: Double): org.scalajs.dom.raw.TextTrack = js.native
+  def getTrackById(id: java.lang.String): org.scalajs.dom.raw.TextTrack | Null = js.native
   @JSName("removeEventListener")
   def removeEventListener_addtrack(
     `type`: addtrack,

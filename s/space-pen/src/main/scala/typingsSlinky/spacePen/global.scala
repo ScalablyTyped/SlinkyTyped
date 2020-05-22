@@ -9,12 +9,50 @@ import scala.scalajs.js.annotation._
 object global extends js.Object {
   @js.native
   class Builder ()
-    extends typingsSlinky.spacePen.Builder
+    extends typingsSlinky.spacePen.Builder {
+    /* CompleteClass */
+    override var document: js.Array[_] = js.native
+    /* CompleteClass */
+    override var postProcessingSteps: js.Array[_] = js.native
+    /* CompleteClass */
+    override def buildHtml(): js.Array[_] = js.native
+    /* CompleteClass */
+    override def closeTag(name: String): Unit = js.native
+    /* CompleteClass */
+    override def extractOptions(args: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def openTag(name: String, attributes: js.Any): Unit = js.native
+    /* CompleteClass */
+    override def raw(str: String): Unit = js.native
+    /* CompleteClass */
+    override def subview(outletName: js.Any, subview: typingsSlinky.spacePen.View): Unit = js.native
+    /* CompleteClass */
+    override def tag(name: String, args: js.Any*): Unit = js.native
+    /* CompleteClass */
+    override def text(str: String): Unit = js.native
+  }
   
   @js.native
   class View protected ()
     extends typingsSlinky.spacePen.View {
     def this(args: js.Any*) = this()
+    /* CompleteClass */
+    override def bindEventHandlers(view: typingsSlinky.spacePen.View): Unit = js.native
+    /* CompleteClass */
+    override def buildHtml(params: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def command(commandName: js.Any, selector: js.Any, options: js.Any, handler: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def end(): js.Any = js.native
+    // tag end
+    /* CompleteClass */
+    override def initialize(view: typingsSlinky.spacePen.View, args: js.Any): Unit = js.native
+    /* CompleteClass */
+    override def preempt(eventName: js.Any, handler: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def pushStack(elems: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def wireOutlets(view: typingsSlinky.spacePen.View): Unit = js.native
   }
   
   /* static members */

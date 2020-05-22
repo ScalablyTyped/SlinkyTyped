@@ -1,111 +1,81 @@
 package typingsSlinky.oclazyload.oc
 
+import typingsSlinky.angular.mod.IHttpRequestConfigHeaders
+import typingsSlinky.angular.mod.IHttpRequestTransformer
+import typingsSlinky.angular.mod.IHttpResponseTransformer
+import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IRequestShortcutConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOptionsConfig extends IRequestShortcutConfig {
   /**
     * If true, bypasses browser cache by appending a timestamp to URLs. Defaults to true.
     */
   @JSName("cache")
-  var cache_IOptionsConfig: js.UndefOr[Boolean] = js.native
+  var cache_IOptionsConfig: js.UndefOr[Boolean] = js.undefined
   /**
     * If set, will insert files immediately before the provided CSS selector, instead of the default behavior of inserting files immediately before the
     * last child of the <head> element. Defaults to undefined.
     */
-  var insertBefore: js.UndefOr[String] = js.native
+  var insertBefore: js.UndefOr[String] = js.undefined
   /**
     * If true, a module config will be invoked each time the module is reloaded. Use with caution, as re-invoking configs can lead to unexpected results.
     * Defaults to false.
     */
-  var reconfig: js.UndefOr[Boolean] = js.native
+  var reconfig: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, a module run block will be invoked each time the module is reloaded. Use with caution, as re-invoking run blocks can lead to unexpected results.
     * Defaults to false.
     */
-  var rerun: js.UndefOr[Boolean] = js.native
+  var rerun: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, will load files in a series, instead of in parallel. Defaults to false.
     */
-  var serie: js.UndefOr[Boolean] = js.native
+  var serie: js.UndefOr[Boolean] = js.undefined
 }
 
 object IOptionsConfig {
   @scala.inline
-  def apply(): IOptionsConfig = {
+  def apply(
+    cache: js.UndefOr[Boolean] = js.undefined,
+    data: js.Any = null,
+    headers: IHttpRequestConfigHeaders = null,
+    insertBefore: String = null,
+    jsonpCallbackParam: String = null,
+    paramSerializer: String | (js.Function1[/* obj */ js.Any, String]) = null,
+    params: js.Any = null,
+    reconfig: js.UndefOr[Boolean] = js.undefined,
+    rerun: js.UndefOr[Boolean] = js.undefined,
+    responseType: String = null,
+    serie: js.UndefOr[Boolean] = js.undefined,
+    timeout: Double | IPromise[_] = null,
+    transformRequest: IHttpRequestTransformer | js.Array[IHttpRequestTransformer] = null,
+    transformResponse: IHttpResponseTransformer | js.Array[IHttpResponseTransformer] = null,
+    withCredentials: js.UndefOr[Boolean] = js.undefined,
+    xsrfCookieName: String = null,
+    xsrfHeaderName: String = null
+  ): IOptionsConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (insertBefore != null) __obj.updateDynamic("insertBefore")(insertBefore.asInstanceOf[js.Any])
+    if (jsonpCallbackParam != null) __obj.updateDynamic("jsonpCallbackParam")(jsonpCallbackParam.asInstanceOf[js.Any])
+    if (paramSerializer != null) __obj.updateDynamic("paramSerializer")(paramSerializer.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (!js.isUndefined(reconfig)) __obj.updateDynamic("reconfig")(reconfig.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rerun)) __obj.updateDynamic("rerun")(rerun.get.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (!js.isUndefined(serie)) __obj.updateDynamic("serie")(serie.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (transformRequest != null) __obj.updateDynamic("transformRequest")(transformRequest.asInstanceOf[js.Any])
+    if (transformResponse != null) __obj.updateDynamic("transformResponse")(transformResponse.asInstanceOf[js.Any])
+    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
+    if (xsrfCookieName != null) __obj.updateDynamic("xsrfCookieName")(xsrfCookieName.asInstanceOf[js.Any])
+    if (xsrfHeaderName != null) __obj.updateDynamic("xsrfHeaderName")(xsrfHeaderName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptionsConfig]
   }
-  @scala.inline
-  implicit class IOptionsConfigOps[Self <: IOptionsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertBefore(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReconfig(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReconfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRerun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rerun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRerun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rerun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerie(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serie")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

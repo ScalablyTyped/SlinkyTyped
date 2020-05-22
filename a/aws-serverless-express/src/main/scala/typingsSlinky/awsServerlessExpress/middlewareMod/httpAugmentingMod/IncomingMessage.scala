@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncomingMessage extends js.Object {
-  var apiGateway: js.UndefOr[Context] = js.native
+  var apiGateway: js.UndefOr[Context] = js.undefined
 }
 
 object IncomingMessage {
   @scala.inline
-  def apply(): IncomingMessage = {
+  def apply(apiGateway: Context = null): IncomingMessage = {
     val __obj = js.Dynamic.literal()
+    if (apiGateway != null) __obj.updateDynamic("apiGateway")(apiGateway.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncomingMessage]
   }
-  @scala.inline
-  implicit class IncomingMessageOps[Self <: IncomingMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiGateway(value: Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGateway")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

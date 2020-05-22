@@ -446,6 +446,11 @@ object DropdownToggle {
   }
   
   def withProps[T](p: DropdownToggleProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[DropdownToggleProps]))
+  }
   implicit def make[T](companion: DropdownToggle.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

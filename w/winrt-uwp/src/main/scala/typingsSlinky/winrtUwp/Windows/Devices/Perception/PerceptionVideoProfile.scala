@@ -7,24 +7,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a Windows.Devices.Perception video profile. */
-@js.native
 trait PerceptionVideoProfile extends js.Object {
   /** Gets the bitmap alpha mode. */
-  var bitmapAlphaMode: BitmapAlphaMode = js.native
+  var bitmapAlphaMode: BitmapAlphaMode
   /** Gets the bitmap pixel format. */
-  var bitmapPixelFormat: BitmapPixelFormat = js.native
+  var bitmapPixelFormat: BitmapPixelFormat
   /** Gets the time duration of each frame. */
-  var frameDuration: Double = js.native
+  var frameDuration: Double
   /** Gets the frame height, in pixels. */
-  var height: Double = js.native
+  var height: Double
   /** Gets the frame width, in pixels. */
-  var width: Double = js.native
+  var width: Double
   /**
     * A comparison function used to determine if two IPerceptionVideoProfile objects are equivalent.
     * @param other The IPerceptionVideoProfile object to compare to this one.
     * @return True if the two video profiles are equivalent, otherwise false.
     */
-  def isEqual(other: PerceptionVideoProfile): Boolean = js.native
+  def isEqual(other: PerceptionVideoProfile): Boolean
 }
 
 object PerceptionVideoProfile {
@@ -40,49 +39,5 @@ object PerceptionVideoProfile {
     val __obj = js.Dynamic.literal(bitmapAlphaMode = bitmapAlphaMode.asInstanceOf[js.Any], bitmapPixelFormat = bitmapPixelFormat.asInstanceOf[js.Any], frameDuration = frameDuration.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], isEqual = js.Any.fromFunction1(isEqual), width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerceptionVideoProfile]
   }
-  @scala.inline
-  implicit class PerceptionVideoProfileOps[Self <: PerceptionVideoProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitmapAlphaMode(value: BitmapAlphaMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitmapAlphaMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBitmapPixelFormat(value: BitmapPixelFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitmapPixelFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrameDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEqual(value: PerceptionVideoProfile => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

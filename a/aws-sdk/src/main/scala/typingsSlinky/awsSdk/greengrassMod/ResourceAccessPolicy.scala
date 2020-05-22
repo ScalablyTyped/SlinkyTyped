@@ -18,35 +18,10 @@ trait ResourceAccessPolicy extends js.Object {
 
 object ResourceAccessPolicy {
   @scala.inline
-  def apply(ResourceId: string): ResourceAccessPolicy = {
+  def apply(ResourceId: string, Permission: Permission = null): ResourceAccessPolicy = {
     val __obj = js.Dynamic.literal(ResourceId = ResourceId.asInstanceOf[js.Any])
+    if (Permission != null) __obj.updateDynamic("Permission")(Permission.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceAccessPolicy]
   }
-  @scala.inline
-  implicit class ResourceAccessPolicyOps[Self <: ResourceAccessPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermission(value: Permission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permission")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

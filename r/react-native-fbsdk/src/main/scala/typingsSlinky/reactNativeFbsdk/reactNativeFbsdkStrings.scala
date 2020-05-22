@@ -10,11 +10,11 @@ import typingsSlinky.reactNativeFbsdk.mod.HorizontalAlignment
 import typingsSlinky.reactNativeFbsdk.mod.LoginBehaviorAndroid
 import typingsSlinky.reactNativeFbsdk.mod.ObjectIdActionType
 import typingsSlinky.reactNativeFbsdk.mod.OpenGraphValueType
-import typingsSlinky.reactNativeFbsdk.mod.Permissions
 import typingsSlinky.reactNativeFbsdk.mod.ShareDialogMode
 import typingsSlinky.reactNativeFbsdk.mod.ShareDialogModeAndroid
 import typingsSlinky.reactNativeFbsdk.mod.ShareDialogModeIOS
 import typingsSlinky.reactNativeFbsdk.mod.TooltipBehaviorIOS
+import typingsSlinky.reactNativeFbsdk.mod._Permissions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,10 +27,10 @@ object reactNativeFbsdkStrings {
   sealed trait Open extends AppGroupPrivacy
   
   @js.native
-  sealed trait ads_management extends Permissions
+  sealed trait ads_management extends _Permissions
   
   @js.native
-  sealed trait ads_read extends Permissions
+  sealed trait ads_read extends _Permissions
   
   @js.native
   sealed trait app_non_users extends GameRequestFilters
@@ -61,7 +61,7 @@ object reactNativeFbsdkStrings {
        with ShareDialogModeIOS
   
   @js.native
-  sealed trait business_management extends Permissions
+  sealed trait business_management extends _Permissions
   
   @js.native
   sealed trait center extends HorizontalAlignment
@@ -70,7 +70,7 @@ object reactNativeFbsdkStrings {
   sealed trait disable extends TooltipBehaviorIOS
   
   @js.native
-  sealed trait email extends Permissions
+  sealed trait email extends _Permissions
   
   @js.native
   sealed trait everyone extends DefaultAudience
@@ -105,7 +105,7 @@ object reactNativeFbsdkStrings {
   sealed trait m extends js.Object
   
   @js.native
-  sealed trait manage_pages extends Permissions
+  sealed trait manage_pages extends _Permissions
   
   @js.native
   sealed trait native
@@ -137,55 +137,55 @@ object reactNativeFbsdkStrings {
   sealed trait page extends ObjectIdActionType
   
   @js.native
-  sealed trait pages_manage_cta extends Permissions
+  sealed trait pages_manage_cta extends _Permissions
   
   @js.native
-  sealed trait pages_manage_instant_articles extends Permissions
+  sealed trait pages_manage_instant_articles extends _Permissions
   
   @js.native
-  sealed trait pages_messaging extends Permissions
+  sealed trait pages_messaging extends _Permissions
   
   @js.native
-  sealed trait pages_messaging_payments extends Permissions
+  sealed trait pages_messaging_payments extends _Permissions
   
   @js.native
-  sealed trait pages_messaging_phone_number extends Permissions
+  sealed trait pages_messaging_phone_number extends _Permissions
   
   @js.native
-  sealed trait pages_messaging_subscriptions extends Permissions
+  sealed trait pages_messaging_subscriptions extends _Permissions
   
   @js.native
-  sealed trait pages_show_list extends Permissions
+  sealed trait pages_show_list extends _Permissions
   
   @js.native
   sealed trait photo extends OpenGraphValueType
   
   @js.native
-  sealed trait public_profile extends Permissions
+  sealed trait public_profile extends _Permissions
   
   @js.native
-  sealed trait publish_actions extends Permissions
+  sealed trait publish_actions extends _Permissions
   
   @js.native
-  sealed trait publish_pages extends Permissions
+  sealed trait publish_pages extends _Permissions
   
   @js.native
-  sealed trait read_audience_network_insights extends Permissions
+  sealed trait read_audience_network_insights extends _Permissions
   
   @js.native
-  sealed trait read_custom_friendlists extends Permissions
+  sealed trait read_custom_friendlists extends _Permissions
   
   @js.native
-  sealed trait read_insights extends Permissions
+  sealed trait read_insights extends _Permissions
   
   @js.native
-  sealed trait read_page_mailboxes extends Permissions
+  sealed trait read_page_mailboxes extends _Permissions
   
   @js.native
   sealed trait right extends HorizontalAlignment
   
   @js.native
-  sealed trait rsvp_event extends Permissions
+  sealed trait rsvp_event extends _Permissions
   
   @js.native
   sealed trait send extends GameRequestActionType
@@ -203,76 +203,76 @@ object reactNativeFbsdkStrings {
   sealed trait unknown extends ObjectIdActionType
   
   @js.native
-  sealed trait user_about_me extends Permissions
+  sealed trait user_about_me extends _Permissions
   
   @js.native
-  sealed trait user_actionsDotbooks extends Permissions
+  sealed trait user_actionsDotbooks extends _Permissions
   
   @js.native
-  sealed trait user_actionsDotfitness extends Permissions
+  sealed trait user_actionsDotfitness extends _Permissions
   
   @js.native
-  sealed trait user_actionsDotmusic extends Permissions
+  sealed trait user_actionsDotmusic extends _Permissions
   
   @js.native
-  sealed trait user_actionsDotnews extends Permissions
+  sealed trait user_actionsDotnews extends _Permissions
   
   @js.native
-  sealed trait user_actionsDotvideo extends Permissions
+  sealed trait user_actionsDotvideo extends _Permissions
   
   @js.native
-  sealed trait user_birthday extends Permissions
+  sealed trait user_birthday extends _Permissions
   
   @js.native
-  sealed trait user_education_history extends Permissions
+  sealed trait user_education_history extends _Permissions
   
   @js.native
-  sealed trait user_events extends Permissions
+  sealed trait user_events extends _Permissions
   
   @js.native
-  sealed trait user_friends extends Permissions
+  sealed trait user_friends extends _Permissions
   
   @js.native
-  sealed trait user_games_activity extends Permissions
+  sealed trait user_games_activity extends _Permissions
   
   @js.native
-  sealed trait user_hometown extends Permissions
+  sealed trait user_hometown extends _Permissions
   
   @js.native
-  sealed trait user_likes extends Permissions
+  sealed trait user_likes extends _Permissions
   
   @js.native
-  sealed trait user_location extends Permissions
+  sealed trait user_location extends _Permissions
   
   @js.native
-  sealed trait user_managed_groups extends Permissions
+  sealed trait user_managed_groups extends _Permissions
   
   @js.native
-  sealed trait user_photos extends Permissions
+  sealed trait user_photos extends _Permissions
   
   @js.native
-  sealed trait user_posts extends Permissions
+  sealed trait user_posts extends _Permissions
   
   @js.native
-  sealed trait user_relationship_details extends Permissions
+  sealed trait user_relationship_details extends _Permissions
   
   @js.native
-  sealed trait user_relationships extends Permissions
+  sealed trait user_relationships extends _Permissions
   
   @js.native
-  sealed trait user_religion_politics extends Permissions
+  sealed trait user_religion_politics extends _Permissions
   
   @js.native
-  sealed trait user_tagged_places extends Permissions
+  sealed trait user_tagged_places extends _Permissions
   
   @js.native
-  sealed trait user_videos extends Permissions
+  sealed trait user_videos extends _Permissions
   
   @js.native
-  sealed trait user_website extends Permissions
+  sealed trait user_website extends _Permissions
   
   @js.native
-  sealed trait user_work_history extends Permissions
+  sealed trait user_work_history extends _Permissions
   
   @js.native
   sealed trait video extends js.Object

@@ -18,15 +18,14 @@ import scala.scalajs.js.annotation._
   * set visible, though individual rows or columns can be hidden or set visible irrespective of the
   * collapsed state.
   */
-@js.native
 trait Group extends js.Object {
-  def collapse(): Group = js.native
-  def expand(): Group = js.native
-  def getControlIndex(): Integer = js.native
-  def getDepth(): Integer = js.native
-  def getRange(): Range = js.native
-  def isCollapsed(): Boolean = js.native
-  def remove(): Unit = js.native
+  def collapse(): Group
+  def expand(): Group
+  def getControlIndex(): Integer
+  def getDepth(): Integer
+  def getRange(): Range
+  def isCollapsed(): Boolean
+  def remove(): Unit
 }
 
 object Group {
@@ -43,55 +42,5 @@ object Group {
     val __obj = js.Dynamic.literal(collapse = js.Any.fromFunction0(collapse), expand = js.Any.fromFunction0(expand), getControlIndex = js.Any.fromFunction0(getControlIndex), getDepth = js.Any.fromFunction0(getDepth), getRange = js.Any.fromFunction0(getRange), isCollapsed = js.Any.fromFunction0(isCollapsed), remove = js.Any.fromFunction0(remove))
     __obj.asInstanceOf[Group]
   }
-  @scala.inline
-  implicit class GroupOps[Self <: Group] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollapse(value: () => Group): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExpand(value: () => Group): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetControlIndex(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlIndex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDepth(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDepth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRange(value: () => Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsCollapsed(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

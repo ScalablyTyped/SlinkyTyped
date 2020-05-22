@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkerPoolOptions extends js.Object {
-  var enableWorkerThreads: Boolean = js.native
-  var forkOptions: ForkOptions = js.native
-  var maxRetries: Double = js.native
-  var numWorkers: Double = js.native
-  var setupArgs: js.Array[_] = js.native
+  var enableWorkerThreads: Boolean
+  var forkOptions: ForkOptions
+  var maxRetries: Double
+  var numWorkers: Double
+  var setupArgs: js.Array[_]
 }
 
 object WorkerPoolOptions {
@@ -26,43 +25,5 @@ object WorkerPoolOptions {
     val __obj = js.Dynamic.literal(enableWorkerThreads = enableWorkerThreads.asInstanceOf[js.Any], forkOptions = forkOptions.asInstanceOf[js.Any], maxRetries = maxRetries.asInstanceOf[js.Any], numWorkers = numWorkers.asInstanceOf[js.Any], setupArgs = setupArgs.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerPoolOptions]
   }
-  @scala.inline
-  implicit class WorkerPoolOptionsOps[Self <: WorkerPoolOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableWorkerThreads(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWorkerThreads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForkOptions(value: ForkOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forkOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumWorkers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numWorkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetupArgs(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,33 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PreviewConfig extends js.Object {
   /**
     * the caption or filename to display for each initial preview item content.
     */
-  var caption: String = js.native
+  var caption: String
   /**
     * the extra data that will be passed as data to the initial preview delete url / AJAX server call via POST.
     * This will default to deleteExtraData if not set.
     */
-  var extra: js.Object | js.Function0[js.Object] = js.native
+  var extra: js.Object | js.Function0[js.Object]
   /**
     * the additional frame css class to set for the file's thumbnail frame.
     */
-  var frameClass: String = js.native
+  var frameClass: String
   /**
     * the key that will be passed as data to the url via AJAX POST.
     */
-  var key: String | js.Object = js.native
+  var key: String | js.Object
   /**
     * the URL for deleting the image/ content in the initial preview via AJAX post response.This will default to deleteUrl if not set.
     */
-  var url: String = js.native
+  var url: String
   /**
     * the CSS width of the image/ content displayed.
     */
-  var width: String = js.native
+  var width: String
 }
 
 object PreviewConfig {
@@ -46,55 +45,5 @@ object PreviewConfig {
     val __obj = js.Dynamic.literal(caption = caption.asInstanceOf[js.Any], extra = extra.asInstanceOf[js.Any], frameClass = frameClass.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviewConfig]
   }
-  @scala.inline
-  implicit class PreviewConfigOps[Self <: PreviewConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtraFunction0(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExtra(value: js.Object | js.Function0[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrameClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

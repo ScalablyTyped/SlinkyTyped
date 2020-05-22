@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReferenceSet extends js.Object {
   /** Public id of this reference set, such as `GRCh37`. */
-  var assemblyId: js.UndefOr[String] = js.native
+  var assemblyId: js.UndefOr[String] = js.undefined
   /** Free text description of this reference set. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** The server-generated reference set ID, unique across all reference sets. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Order-independent MD5 checksum which identifies this reference set. The
     * checksum is computed by sorting all lower case hexidecimal string
@@ -19,7 +18,7 @@ trait ReferenceSet extends js.Object {
     * ascending lexicographic order, concatenating, and taking the MD5 of that
     * value. The resulting value is represented in lower case hexadecimal format.
     */
-  var md5checksum: js.UndefOr[String] = js.native
+  var md5checksum: js.UndefOr[String] = js.undefined
   /**
     * ID from http://www.ncbi.nlm.nih.gov/taxonomy (for example, 9606 for human)
     * indicating the species which this reference set is intended to model. Note
@@ -27,130 +26,43 @@ trait ReferenceSet extends js.Object {
     * assemblies may contain reference sequences which do not belong to the
     * modeled species, for example EBV in a human reference genome.
     */
-  var ncbiTaxonId: js.UndefOr[Double] = js.native
+  var ncbiTaxonId: js.UndefOr[Double] = js.undefined
   /**
     * The IDs of the reference objects that are part of this set.
     * `Reference.md5checksum` must be unique within this set.
     */
-  var referenceIds: js.UndefOr[js.Array[String]] = js.native
+  var referenceIds: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * All known corresponding accession IDs in INSDC (GenBank/ENA/DDBJ) ideally
     * with a version number, for example `NC_000001.11`.
     */
-  var sourceAccessions: js.UndefOr[js.Array[String]] = js.native
+  var sourceAccessions: js.UndefOr[js.Array[String]] = js.undefined
   /** The URI from which the references were obtained. */
-  var sourceUri: js.UndefOr[String] = js.native
+  var sourceUri: js.UndefOr[String] = js.undefined
 }
 
 object ReferenceSet {
   @scala.inline
-  def apply(): ReferenceSet = {
+  def apply(
+    assemblyId: String = null,
+    description: String = null,
+    id: String = null,
+    md5checksum: String = null,
+    ncbiTaxonId: js.UndefOr[Double] = js.undefined,
+    referenceIds: js.Array[String] = null,
+    sourceAccessions: js.Array[String] = null,
+    sourceUri: String = null
+  ): ReferenceSet = {
     val __obj = js.Dynamic.literal()
+    if (assemblyId != null) __obj.updateDynamic("assemblyId")(assemblyId.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (md5checksum != null) __obj.updateDynamic("md5checksum")(md5checksum.asInstanceOf[js.Any])
+    if (!js.isUndefined(ncbiTaxonId)) __obj.updateDynamic("ncbiTaxonId")(ncbiTaxonId.get.asInstanceOf[js.Any])
+    if (referenceIds != null) __obj.updateDynamic("referenceIds")(referenceIds.asInstanceOf[js.Any])
+    if (sourceAccessions != null) __obj.updateDynamic("sourceAccessions")(sourceAccessions.asInstanceOf[js.Any])
+    if (sourceUri != null) __obj.updateDynamic("sourceUri")(sourceUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReferenceSet]
   }
-  @scala.inline
-  implicit class ReferenceSetOps[Self <: ReferenceSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssemblyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assemblyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssemblyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assemblyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5checksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5checksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5checksum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNcbiTaxonId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ncbiTaxonId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNcbiTaxonId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ncbiTaxonId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceAccessions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAccessions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAccessions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAccessions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

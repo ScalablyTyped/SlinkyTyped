@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateRuleGroupRequest extends js.Object {
   /**
-    * A friendly description of the rule group. You cannot change the description of a rule group after you create it.
+    * A description of the rule group that helps with identification. You cannot change the description of a rule group after you create it.
     */
   var Description: js.UndefOr[EntityDescription] = js.native
   /**
@@ -19,7 +19,7 @@ trait UpdateRuleGroupRequest extends js.Object {
     */
   var LockToken: typingsSlinky.awsSdk.wafv2Mod.LockToken = js.native
   /**
-    * A friendly name of the rule group. You cannot change the name of a rule group after you create it.
+    * The name of the rule group. You cannot change the name of a rule group after you create it.
     */
   var Name: EntityName = js.native
   /**
@@ -27,7 +27,7 @@ trait UpdateRuleGroupRequest extends js.Object {
     */
   var Rules: js.UndefOr[typingsSlinky.awsSdk.wafv2Mod.Rules] = js.native
   /**
-    * Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage.  To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:    CLI - Specify the region when you use the CloudFront scope: --scope=CLOUDFRONT --region=us-east-1.    API and SDKs - For all calls, use the Region endpoint us-east-1.   
+    * Specifies whether this is for an AWS CloudFront distribution or for a regional application. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage.  To work with CloudFront, you must also specify the Region US East (N. Virginia) as follows:    CLI - Specify the Region when you use the CloudFront scope: --scope=CLOUDFRONT --region=us-east-1.    API and SDKs - For all calls, use the Region endpoint us-east-1.   
     */
   var Scope: typingsSlinky.awsSdk.wafv2Mod.Scope = js.native
   /**
@@ -43,72 +43,14 @@ object UpdateRuleGroupRequest {
     LockToken: LockToken,
     Name: EntityName,
     Scope: Scope,
-    VisibilityConfig: VisibilityConfig
+    VisibilityConfig: VisibilityConfig,
+    Description: EntityDescription = null,
+    Rules: Rules = null
   ): UpdateRuleGroupRequest = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any], LockToken = LockToken.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any], VisibilityConfig = VisibilityConfig.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRuleGroupRequest]
   }
-  @scala.inline
-  implicit class UpdateRuleGroupRequestOps[Self <: UpdateRuleGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLockToken(value: LockToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: Scope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisibilityConfig(value: VisibilityConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibilityConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: EntityDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: Rules): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

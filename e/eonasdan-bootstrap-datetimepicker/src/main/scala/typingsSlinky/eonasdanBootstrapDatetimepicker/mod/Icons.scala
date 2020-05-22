@@ -4,167 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Icons extends js.Object {
   /**
     * Default: "glyphicon glyphicon-trash"
     */
-  var clear: js.UndefOr[String] = js.native
+  var clear: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-remove"
     */
-  var close: js.UndefOr[String] = js.native
+  var close: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-calendar"
     */
-  var date: js.UndefOr[String] = js.native
+  var date: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-time"
     */
-  var down: js.UndefOr[String] = js.native
+  var down: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-chevron-left"
     */
-  var next: js.UndefOr[String] = js.native
+  var next: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-screenshot"
     */
-  var previous: js.UndefOr[String] = js.native
+  var previous: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-chevron-right"
     */
-  var time: js.UndefOr[String] = js.native
+  var time: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-chevron-down"
     */
-  var today: js.UndefOr[String] = js.native
+  var today: js.UndefOr[String] = js.undefined
   /**
     * Default: "glyphicon glyphicon-chevron-up"
     */
-  var up: js.UndefOr[String] = js.native
+  var up: js.UndefOr[String] = js.undefined
 }
 
 object Icons {
   @scala.inline
-  def apply(): Icons = {
+  def apply(
+    clear: String = null,
+    close: String = null,
+    date: String = null,
+    down: String = null,
+    next: String = null,
+    previous: String = null,
+    time: String = null,
+    today: String = null,
+    up: String = null
+  ): Icons = {
     val __obj = js.Dynamic.literal()
+    if (clear != null) __obj.updateDynamic("clear")(clear.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (down != null) __obj.updateDynamic("down")(down.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (previous != null) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
+    if (up != null) __obj.updateDynamic("up")(up.asInstanceOf[js.Any])
     __obj.asInstanceOf[Icons]
   }
-  @scala.inline
-  implicit class IconsOps[Self <: Icons] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClose(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDown(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevious(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevious: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToday(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

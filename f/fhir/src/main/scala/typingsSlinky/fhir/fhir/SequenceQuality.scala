@@ -7,418 +7,177 @@ import scala.scalajs.js.annotation._
 /**
   * An set of value as quality of sequence
   */
-@js.native
 trait SequenceQuality extends BackboneElement {
   /**
     * Contains extended information for property 'end'.
     */
-  var _end: js.UndefOr[Element] = js.native
+  var _end: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'fScore'.
     */
-  var _fScore: js.UndefOr[Element] = js.native
+  var _fScore: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'gtFP'.
     */
-  var _gtFP: js.UndefOr[Element] = js.native
+  var _gtFP: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'precision'.
     */
-  var _precision: js.UndefOr[Element] = js.native
+  var _precision: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'queryFP'.
     */
-  var _queryFP: js.UndefOr[Element] = js.native
+  var _queryFP: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'queryTP'.
     */
-  var _queryTP: js.UndefOr[Element] = js.native
+  var _queryTP: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'recall'.
     */
-  var _recall: js.UndefOr[Element] = js.native
+  var _recall: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'start'.
     */
-  var _start: js.UndefOr[Element] = js.native
+  var _start: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'truthFN'.
     */
-  var _truthFN: js.UndefOr[Element] = js.native
+  var _truthFN: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'truthTP'.
     */
-  var _truthTP: js.UndefOr[Element] = js.native
+  var _truthTP: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'type'.
     */
-  var _type: js.UndefOr[Element] = js.native
+  var _type: js.UndefOr[Element] = js.undefined
   /**
     * End position of the sequence
     */
-  var end: js.UndefOr[integer] = js.native
+  var end: js.UndefOr[integer] = js.undefined
   /**
     * F-score
     */
-  var fScore: js.UndefOr[decimal] = js.native
+  var fScore: js.UndefOr[decimal] = js.undefined
   /**
     * False positives where the non-REF alleles in the Truth and Query Call Sets match
     */
-  var gtFP: js.UndefOr[decimal] = js.native
+  var gtFP: js.UndefOr[decimal] = js.undefined
   /**
     * Method to get quality
     */
-  var method: js.UndefOr[CodeableConcept] = js.native
+  var method: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Precision of comparison
     */
-  var precision: js.UndefOr[decimal] = js.native
+  var precision: js.UndefOr[decimal] = js.undefined
   /**
     * False positives
     */
-  var queryFP: js.UndefOr[decimal] = js.native
+  var queryFP: js.UndefOr[decimal] = js.undefined
   /**
     * True positives from the perspective of the query data
     */
-  var queryTP: js.UndefOr[decimal] = js.native
+  var queryTP: js.UndefOr[decimal] = js.undefined
   /**
     * Recall of comparison
     */
-  var recall: js.UndefOr[decimal] = js.native
+  var recall: js.UndefOr[decimal] = js.undefined
   /**
     * Quality score for the comparison
     */
-  var score: js.UndefOr[Quantity] = js.native
+  var score: js.UndefOr[Quantity] = js.undefined
   /**
     * Standard sequence for comparison
     */
-  var standardSequence: js.UndefOr[CodeableConcept] = js.native
+  var standardSequence: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Start position of the sequence
     */
-  var start: js.UndefOr[integer] = js.native
+  var start: js.UndefOr[integer] = js.undefined
   /**
     * False negatives
     */
-  var truthFN: js.UndefOr[decimal] = js.native
+  var truthFN: js.UndefOr[decimal] = js.undefined
   /**
     * True positives from the perspective of the truth data
     */
-  var truthTP: js.UndefOr[decimal] = js.native
+  var truthTP: js.UndefOr[decimal] = js.undefined
   /**
     * indel | snp | unknown
     */
-  var `type`: code = js.native
+  var `type`: code
 }
 
 object SequenceQuality {
   @scala.inline
-  def apply(`type`: code): SequenceQuality = {
+  def apply(
+    `type`: code,
+    _end: Element = null,
+    _fScore: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _gtFP: Element = null,
+    _id: Element = null,
+    _precision: Element = null,
+    _queryFP: Element = null,
+    _queryTP: Element = null,
+    _recall: Element = null,
+    _start: Element = null,
+    _truthFN: Element = null,
+    _truthTP: Element = null,
+    _type: Element = null,
+    end: js.UndefOr[integer] = js.undefined,
+    extension: js.Array[Extension] = null,
+    fScore: js.UndefOr[decimal] = js.undefined,
+    fhir_comments: js.Array[String] = null,
+    gtFP: js.UndefOr[decimal] = js.undefined,
+    id: String = null,
+    method: CodeableConcept = null,
+    modifierExtension: js.Array[Extension] = null,
+    precision: js.UndefOr[decimal] = js.undefined,
+    queryFP: js.UndefOr[decimal] = js.undefined,
+    queryTP: js.UndefOr[decimal] = js.undefined,
+    recall: js.UndefOr[decimal] = js.undefined,
+    score: Quantity = null,
+    standardSequence: CodeableConcept = null,
+    start: js.UndefOr[integer] = js.undefined,
+    truthFN: js.UndefOr[decimal] = js.undefined,
+    truthTP: js.UndefOr[decimal] = js.undefined
+  ): SequenceQuality = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (_end != null) __obj.updateDynamic("_end")(_end.asInstanceOf[js.Any])
+    if (_fScore != null) __obj.updateDynamic("_fScore")(_fScore.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_gtFP != null) __obj.updateDynamic("_gtFP")(_gtFP.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_precision != null) __obj.updateDynamic("_precision")(_precision.asInstanceOf[js.Any])
+    if (_queryFP != null) __obj.updateDynamic("_queryFP")(_queryFP.asInstanceOf[js.Any])
+    if (_queryTP != null) __obj.updateDynamic("_queryTP")(_queryTP.asInstanceOf[js.Any])
+    if (_recall != null) __obj.updateDynamic("_recall")(_recall.asInstanceOf[js.Any])
+    if (_start != null) __obj.updateDynamic("_start")(_start.asInstanceOf[js.Any])
+    if (_truthFN != null) __obj.updateDynamic("_truthFN")(_truthFN.asInstanceOf[js.Any])
+    if (_truthTP != null) __obj.updateDynamic("_truthTP")(_truthTP.asInstanceOf[js.Any])
+    if (_type != null) __obj.updateDynamic("_type")(_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (!js.isUndefined(fScore)) __obj.updateDynamic("fScore")(fScore.get.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(gtFP)) __obj.updateDynamic("gtFP")(gtFP.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(queryFP)) __obj.updateDynamic("queryFP")(queryFP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(queryTP)) __obj.updateDynamic("queryTP")(queryTP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recall)) __obj.updateDynamic("recall")(recall.get.asInstanceOf[js.Any])
+    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
+    if (standardSequence != null) __obj.updateDynamic("standardSequence")(standardSequence.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(truthFN)) __obj.updateDynamic("truthFN")(truthFN.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(truthTP)) __obj.updateDynamic("truthTP")(truthTP.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequenceQuality]
   }
-  @scala.inline
-  implicit class SequenceQualityOps[Self <: SequenceQuality] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_end(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_end: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_fScore(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_fScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_fScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_fScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_gtFP(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_gtFP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_gtFP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_gtFP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_precision(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_precision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_queryFP(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_queryFP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_queryFP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_queryFP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_queryTP(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_queryTP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_queryTP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_queryTP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_recall(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_recall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_recall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_recall")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_start(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_start: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_truthFN(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_truthFN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_truthFN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_truthFN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_truthTP(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_truthTP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_truthTP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_truthTP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_type(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFScore(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGtFP(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtFP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGtFP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtFP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryFP(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryFP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryTP(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryTP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecall(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recall")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScore(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandardSequence(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardSequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandardSequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardSequence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruthFN(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truthFN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruthFN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truthFN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTruthTP(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truthTP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruthTP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truthTP")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

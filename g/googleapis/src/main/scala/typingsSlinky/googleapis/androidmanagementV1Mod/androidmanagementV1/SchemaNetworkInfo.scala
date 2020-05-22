@@ -29,65 +29,18 @@ trait SchemaNetworkInfo extends js.Object {
 
 object SchemaNetworkInfo {
   @scala.inline
-  def apply(): SchemaNetworkInfo = {
+  def apply(
+    imei: String = null,
+    meid: String = null,
+    networkOperatorName: String = null,
+    wifiMacAddress: String = null
+  ): SchemaNetworkInfo = {
     val __obj = js.Dynamic.literal()
+    if (imei != null) __obj.updateDynamic("imei")(imei.asInstanceOf[js.Any])
+    if (meid != null) __obj.updateDynamic("meid")(meid.asInstanceOf[js.Any])
+    if (networkOperatorName != null) __obj.updateDynamic("networkOperatorName")(networkOperatorName.asInstanceOf[js.Any])
+    if (wifiMacAddress != null) __obj.updateDynamic("wifiMacAddress")(wifiMacAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkInfo]
   }
-  @scala.inline
-  implicit class SchemaNetworkInfoOps[Self <: SchemaNetworkInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImei(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imei")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImei: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imei")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkOperatorName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperatorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkOperatorName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperatorName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWifiMacAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiMacAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWifiMacAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiMacAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

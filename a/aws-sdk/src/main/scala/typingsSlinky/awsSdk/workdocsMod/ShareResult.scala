@@ -34,89 +34,22 @@ trait ShareResult extends js.Object {
 
 object ShareResult {
   @scala.inline
-  def apply(): ShareResult = {
+  def apply(
+    InviteePrincipalId: IdType = null,
+    PrincipalId: IdType = null,
+    Role: RoleType = null,
+    ShareId: ResourceIdType = null,
+    Status: ShareStatusType = null,
+    StatusMessage: MessageType = null
+  ): ShareResult = {
     val __obj = js.Dynamic.literal()
+    if (InviteePrincipalId != null) __obj.updateDynamic("InviteePrincipalId")(InviteePrincipalId.asInstanceOf[js.Any])
+    if (PrincipalId != null) __obj.updateDynamic("PrincipalId")(PrincipalId.asInstanceOf[js.Any])
+    if (Role != null) __obj.updateDynamic("Role")(Role.asInstanceOf[js.Any])
+    if (ShareId != null) __obj.updateDynamic("ShareId")(ShareId.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareResult]
   }
-  @scala.inline
-  implicit class ShareResultOps[Self <: ShareResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInviteePrincipalId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InviteePrincipalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInviteePrincipalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InviteePrincipalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrincipalId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrincipalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: RoleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareId(value: ResourceIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ShareStatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: MessageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

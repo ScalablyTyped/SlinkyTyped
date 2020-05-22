@@ -1,25 +1,46 @@
 package typingsSlinky.playcanvas.global.pc
 
+import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @class
-  * @name pc.TouchEvent
-  * @classdesc A Event corresponding to touchstart, touchend, touchmove or touchcancel. TouchEvent wraps the standard
-  * browser event and provides lists of {@link pc.Touch} objects.
-  * @description Create a new TouchEvent from an existing browser event.
-  * @param {pc.TouchDevice} device - The source device of the touch events.
-  * @param {TouchEvent} event - The original browser TouchEvent.
-  * @property {Element} element The target Element that the event was fired from.
-  * @property {pc.Touch[]} touches A list of all touches currently in contact with the device.
-  * @property {pc.Touch[]} changedTouches A list of touches that have changed since the last event.
+  * Create a new TouchEvent from an existing browser event.
+  * @property element - The target Element that the event was fired from.
+  * @property touches - A list of all touches currently in contact with the device.
+  * @property changedTouches - A list of touches that have changed since the last event.
+  * @param device - The source device of the touch events.
+  * @param event - The original browser TouchEvent.
   */
 @JSGlobal("pc.TouchEvent")
 @js.native
 class TouchEvent protected ()
   extends typingsSlinky.playcanvas.pc.TouchEvent {
   def this(device: typingsSlinky.playcanvas.pc.TouchDevice, event: typingsSlinky.playcanvas.pc.TouchEvent) = this()
+  /**
+    * A list of touches that have changed since the last event.
+    */
+  /* CompleteClass */
+  override var changedTouches: js.Array[typingsSlinky.playcanvas.pc.Touch] = js.native
+  /**
+    * The target Element that the event was fired from.
+    */
+  /* CompleteClass */
+  override var element: Element = js.native
+  /**
+    * A list of all touches currently in contact with the device.
+    */
+  /* CompleteClass */
+  override var touches: js.Array[typingsSlinky.playcanvas.pc.Touch] = js.native
+  /**
+    * Get an event from one of the touch lists by the id. It is useful to access
+    touches by their id so that you can be sure you are referencing the same touch.
+    * @param id - The identifier of the touch.
+    * @param list - An array of touches to search.
+    * @returns The {@link pc.Touch} object or null.
+    */
+  /* CompleteClass */
+  override def getTouchById(id: Double, list: js.Array[typingsSlinky.playcanvas.pc.Touch]): typingsSlinky.playcanvas.pc.Touch = js.native
 }
 

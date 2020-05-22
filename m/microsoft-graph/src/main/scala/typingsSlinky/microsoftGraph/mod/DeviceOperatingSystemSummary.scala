@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceOperatingSystemSummary extends js.Object {
   // Number of android device count.
-  var androidCount: js.UndefOr[Double] = js.native
+  var androidCount: js.UndefOr[Double] = js.undefined
   // Number of iOS device count.
-  var iosCount: js.UndefOr[Double] = js.native
+  var iosCount: js.UndefOr[Double] = js.undefined
   // Number of Mac OS X device count.
-  var macOSCount: js.UndefOr[Double] = js.native
+  var macOSCount: js.UndefOr[Double] = js.undefined
   // Number of unknown device count.
-  var unknownCount: js.UndefOr[Double] = js.native
+  var unknownCount: js.UndefOr[Double] = js.undefined
   // Number of Windows device count.
-  var windowsCount: js.UndefOr[Double] = js.native
+  var windowsCount: js.UndefOr[Double] = js.undefined
   // Number of Windows mobile device count.
-  var windowsMobileCount: js.UndefOr[Double] = js.native
+  var windowsMobileCount: js.UndefOr[Double] = js.undefined
 }
 
 object DeviceOperatingSystemSummary {
   @scala.inline
-  def apply(): DeviceOperatingSystemSummary = {
+  def apply(
+    androidCount: js.UndefOr[Double] = js.undefined,
+    iosCount: js.UndefOr[Double] = js.undefined,
+    macOSCount: js.UndefOr[Double] = js.undefined,
+    unknownCount: js.UndefOr[Double] = js.undefined,
+    windowsCount: js.UndefOr[Double] = js.undefined,
+    windowsMobileCount: js.UndefOr[Double] = js.undefined
+  ): DeviceOperatingSystemSummary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(androidCount)) __obj.updateDynamic("androidCount")(androidCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iosCount)) __obj.updateDynamic("iosCount")(iosCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(macOSCount)) __obj.updateDynamic("macOSCount")(macOSCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unknownCount)) __obj.updateDynamic("unknownCount")(unknownCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsCount)) __obj.updateDynamic("windowsCount")(windowsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsMobileCount)) __obj.updateDynamic("windowsMobileCount")(windowsMobileCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceOperatingSystemSummary]
   }
-  @scala.inline
-  implicit class DeviceOperatingSystemSummaryOps[Self <: DeviceOperatingSystemSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMacOSCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macOSCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMacOSCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macOSCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsMobileCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsMobileCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsMobileCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsMobileCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

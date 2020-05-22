@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Astral extends FeatureOptions {
-  var astral: js.UndefOr[Boolean] = js.native
-  var namespacing: js.UndefOr[Boolean] = js.native
+  var astral: js.UndefOr[Boolean] = js.undefined
+  var namespacing: js.UndefOr[Boolean] = js.undefined
 }
 
 object Astral {
   @scala.inline
-  def apply(): Astral = {
+  def apply(astral: js.UndefOr[Boolean] = js.undefined, namespacing: js.UndefOr[Boolean] = js.undefined): Astral = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(astral)) __obj.updateDynamic("astral")(astral.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(namespacing)) __obj.updateDynamic("namespacing")(namespacing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Astral]
   }
-  @scala.inline
-  implicit class AstralOps[Self <: Astral] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAstral(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astral")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAstral: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astral")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespacing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

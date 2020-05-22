@@ -5,6 +5,7 @@ import typingsSlinky.firebaseFirestore.coreTypesMod.OnlineState
 import typingsSlinky.firebaseFirestore.coreTypesMod.TargetId
 import typingsSlinky.firebaseFirestore.localLocalStoreMod.LocalStore
 import typingsSlinky.firebaseFirestore.localTargetDataMod.TargetData
+import typingsSlinky.firebaseFirestore.modelCollectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.remoteConnectivityMonitorMod.ConnectivityMonitor
 import typingsSlinky.firebaseFirestore.remoteDatastoreMod.Datastore
 import typingsSlinky.firebaseFirestore.remoteRemoteSyncerMod.RemoteSyncer
@@ -35,6 +36,7 @@ object remoteRemoteStoreMod extends js.Object {
       * immediately if the write stream is established.
       */
     var addToWritePipeline: js.Any = js.native
+    var asyncQueue: js.Any = js.native
     /**
       * Returns true if we can add to the write pipeline (i.e. the network is
       * enabled and the write pipeline is not full).
@@ -45,10 +47,23 @@ object remoteRemoteStoreMod extends js.Object {
     /** The client-side proxy for interacting with the backend. */
     var datastore: js.Any = js.native
     var disableNetworkInternal: js.Any = js.native
+    /**
+      * Recovery logic for IndexedDB errors that takes the network offline until
+      * IndexedDb probing succeeds. Retries are scheduled with backoff using
+      * `enqueueRetryable()`.
+      */
+    var disableNetworkUntilRecovery: js.Any = js.native
+    var enableNetworkInternal: js.Any = js.native
     var handleHandshakeError: js.Any = js.native
     /** Handles an error on a target */
     var handleTargetError: js.Any = js.native
     var handleWriteError: js.Any = js.native
+    /**
+      * When set to `true`, the network was taken offline due to an IndexedDB
+      * failure. The state is flipped to `false` when access becomes available
+      * again.
+      */
+    var indexedDbFailed: js.Any = js.native
     var isPrimary: js.Any = js.native
     /**
       * A mapping of watched targets that the client cares about tracking and the
@@ -151,6 +166,18 @@ object remoteRemoteStoreMod extends js.Object {
       * Starts the write stream if necessary.
       */
     def fillWritePipeline(): js.Promise[Unit] = js.native
+    /**
+      * Returns the set of remote document keys for the given target ID as of the
+      * last raised snapshot.
+      */
+    /* CompleteClass */
+    override def getRemoteKeysForTarget(targetId: TargetId): DocumentKeySet_ = js.native
+    /**
+      * Returns the TargetData for an active target ID or 'null' if this target
+      * has become inactive
+      */
+    /* CompleteClass */
+    override def getTargetDataForTarget(targetId: TargetId): TargetData | Null = js.native
     def handleCredentialChange(): js.Promise[Unit] = js.native
     /**
       * Starts new listen for the given target. Uses resume token if provided. It

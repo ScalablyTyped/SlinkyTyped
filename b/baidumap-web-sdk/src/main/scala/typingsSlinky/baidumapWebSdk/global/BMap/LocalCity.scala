@@ -1,6 +1,7 @@
 package typingsSlinky.baidumapWebSdk.global.BMap
 
 import typingsSlinky.baidumapWebSdk.BMap.LocalCityOptions
+import typingsSlinky.baidumapWebSdk.BMap.LocalCityResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +11,7 @@ import scala.scalajs.js.annotation._
 class LocalCity ()
   extends typingsSlinky.baidumapWebSdk.BMap.LocalCity {
   def this(opts: LocalCityOptions) = this()
+  /* CompleteClass */
+  override def get(callback: js.Function1[/* result */ LocalCityResult, Unit]): Unit = js.native
 }
 

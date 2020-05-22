@@ -1,5 +1,6 @@
 package typingsSlinky.materializeCss.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +11,15 @@ import scala.scalajs.js.annotation._
 abstract class ComponentBase[TOptions] ()
   extends typingsSlinky.materializeCss.M.ComponentBase[TOptions] {
   def this(options: Partial[TOptions]) = this()
+  /**
+    * The DOM element the plugin was initialized with
+    */
+  /* CompleteClass */
+  override var el: Element = js.native
+  /**
+    * The options the instance was initialized with
+    */
+  /* CompleteClass */
+  override var options: TOptions = js.native
 }
 

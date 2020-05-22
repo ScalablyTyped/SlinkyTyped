@@ -5,75 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProgressBarParams extends TrafficParams {
   // Progress Bar
-  var legend: js.UndefOr[String | `true` | ValueStringCallback] = js.native
-  var legendAlign: js.UndefOr[Align] = js.native
-  var legendColor: js.UndefOr[Color] = js.native
+  var legend: js.UndefOr[String | `true` | ValueStringCallback] = js.undefined
+  var legendAlign: js.UndefOr[Align] = js.undefined
+  var legendColor: js.UndefOr[Color] = js.undefined
 }
 
 object ProgressBarParams {
   @scala.inline
-  def apply(): ProgressBarParams = {
+  def apply(
+    color: Color = null,
+    legend: String | `true` | ValueStringCallback = null,
+    legendAlign: Align = null,
+    legendColor: Color = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined
+  ): ProgressBarParams = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
+    if (legendAlign != null) __obj.updateDynamic("legendAlign")(legendAlign.asInstanceOf[js.Any])
+    if (legendColor != null) __obj.updateDynamic("legendColor")(legendColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressBarParams]
   }
-  @scala.inline
-  implicit class ProgressBarParamsOps[Self <: ProgressBarParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLegendFunction1(value: /* value */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLegend(value: String | `true` | ValueStringCallback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendAlign(value: Align): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendColorFunction1(value: /* value */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLegendColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

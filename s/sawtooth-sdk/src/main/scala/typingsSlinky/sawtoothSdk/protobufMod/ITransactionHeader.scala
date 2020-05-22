@@ -4,203 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITransactionHeader extends js.Object {
   /** TransactionHeader batcherPublicKey */
-  var batcherPublicKey: js.UndefOr[String | Null] = js.native
+  var batcherPublicKey: js.UndefOr[String | Null] = js.undefined
   /** TransactionHeader dependencies */
-  var dependencies: js.UndefOr[js.Array[String] | Null] = js.native
+  var dependencies: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** TransactionHeader familyName */
-  var familyName: js.UndefOr[String | Null] = js.native
+  var familyName: js.UndefOr[String | Null] = js.undefined
   /** TransactionHeader familyVersion */
-  var familyVersion: js.UndefOr[String | Null] = js.native
+  var familyVersion: js.UndefOr[String | Null] = js.undefined
   /** TransactionHeader inputs */
-  var inputs: js.UndefOr[js.Array[String] | Null] = js.native
+  var inputs: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** TransactionHeader nonce */
-  var nonce: js.UndefOr[String | Null] = js.native
+  var nonce: js.UndefOr[String | Null] = js.undefined
   /** TransactionHeader outputs */
-  var outputs: js.UndefOr[js.Array[String] | Null] = js.native
+  var outputs: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** TransactionHeader payloadSha512 */
-  var payloadSha512: js.UndefOr[String | Null] = js.native
+  var payloadSha512: js.UndefOr[String | Null] = js.undefined
   /** TransactionHeader signerPublicKey */
-  var signerPublicKey: js.UndefOr[String | Null] = js.native
+  var signerPublicKey: js.UndefOr[String | Null] = js.undefined
 }
 
 object ITransactionHeader {
   @scala.inline
-  def apply(): ITransactionHeader = {
+  def apply(
+    batcherPublicKey: js.UndefOr[Null | String] = js.undefined,
+    dependencies: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    familyName: js.UndefOr[Null | String] = js.undefined,
+    familyVersion: js.UndefOr[Null | String] = js.undefined,
+    inputs: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    nonce: js.UndefOr[Null | String] = js.undefined,
+    outputs: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    payloadSha512: js.UndefOr[Null | String] = js.undefined,
+    signerPublicKey: js.UndefOr[Null | String] = js.undefined
+  ): ITransactionHeader = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batcherPublicKey)) __obj.updateDynamic("batcherPublicKey")(batcherPublicKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(dependencies)) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (!js.isUndefined(familyName)) __obj.updateDynamic("familyName")(familyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(familyVersion)) __obj.updateDynamic("familyVersion")(familyVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(nonce)) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(payloadSha512)) __obj.updateDynamic("payloadSha512")(payloadSha512.asInstanceOf[js.Any])
+    if (!js.isUndefined(signerPublicKey)) __obj.updateDynamic("signerPublicKey")(signerPublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITransactionHeader]
   }
-  @scala.inline
-  implicit class ITransactionHeaderOps[Self <: ITransactionHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatcherPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batcherPublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatcherPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batcherPublicKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatcherPublicKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batcherPublicKey")(null)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependenciesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(null)
-        ret
-    }
-    @scala.inline
-    def withFamilyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFamilyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFamilyNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(null)
-        ret
-    }
-    @scala.inline
-    def withFamilyVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFamilyVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFamilyVersionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyVersion")(null)
-        ret
-    }
-    @scala.inline
-    def withInputs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(null)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(null)
-        ret
-    }
-    @scala.inline
-    def withOutputs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(null)
-        ret
-    }
-    @scala.inline
-    def withPayloadSha512(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadSha512")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadSha512: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadSha512")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadSha512Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadSha512")(null)
-        ret
-    }
-    @scala.inline
-    def withSignerPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerPublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignerPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerPublicKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignerPublicKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerPublicKey")(null)
-        ret
-    }
-  }
-  
 }
 

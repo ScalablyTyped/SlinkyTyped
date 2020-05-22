@@ -42,113 +42,26 @@ trait OptionGroupOptionSetting extends js.Object {
 
 object OptionGroupOptionSetting {
   @scala.inline
-  def apply(): OptionGroupOptionSetting = {
+  def apply(
+    AllowedValues: String = null,
+    ApplyType: String = null,
+    DefaultValue: String = null,
+    IsModifiable: js.UndefOr[Boolean] = js.undefined,
+    IsRequired: js.UndefOr[Boolean] = js.undefined,
+    MinimumEngineVersionPerAllowedValue: MinimumEngineVersionPerAllowedValueList = null,
+    SettingDescription: String = null,
+    SettingName: String = null
+  ): OptionGroupOptionSetting = {
     val __obj = js.Dynamic.literal()
+    if (AllowedValues != null) __obj.updateDynamic("AllowedValues")(AllowedValues.asInstanceOf[js.Any])
+    if (ApplyType != null) __obj.updateDynamic("ApplyType")(ApplyType.asInstanceOf[js.Any])
+    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsModifiable)) __obj.updateDynamic("IsModifiable")(IsModifiable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsRequired)) __obj.updateDynamic("IsRequired")(IsRequired.get.asInstanceOf[js.Any])
+    if (MinimumEngineVersionPerAllowedValue != null) __obj.updateDynamic("MinimumEngineVersionPerAllowedValue")(MinimumEngineVersionPerAllowedValue.asInstanceOf[js.Any])
+    if (SettingDescription != null) __obj.updateDynamic("SettingDescription")(SettingDescription.asInstanceOf[js.Any])
+    if (SettingName != null) __obj.updateDynamic("SettingName")(SettingName.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionGroupOptionSetting]
   }
-  @scala.inline
-  implicit class OptionGroupOptionSettingOps[Self <: OptionGroupOptionSetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedValues(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplyType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsModifiable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsModifiable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsModifiable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsModifiable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumEngineVersionPerAllowedValue(value: MinimumEngineVersionPerAllowedValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumEngineVersionPerAllowedValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumEngineVersionPerAllowedValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumEngineVersionPerAllowedValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettingName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SettingName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

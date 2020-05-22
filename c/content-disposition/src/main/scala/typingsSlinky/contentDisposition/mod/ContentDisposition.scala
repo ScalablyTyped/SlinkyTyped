@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
 /**
   * Class for parsed Content-Disposition header for v8 optimization
   */
-@js.native
 trait ContentDisposition extends js.Object {
   /**
     * An object of the parameters in the disposition
     * (name of parameter always lower case and extended versions replace non-extended versions)
     */
-  var parameters: js.Any = js.native
+  var parameters: js.Any
   /**
     * The disposition type (always lower case)
     */
-  var `type`: attachment | `inline` | String = js.native
+  var `type`: attachment | `inline` | String
 }
 
 object ContentDisposition {
@@ -29,25 +28,5 @@ object ContentDisposition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentDisposition]
   }
-  @scala.inline
-  implicit class ContentDispositionOps[Self <: ContentDisposition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameters(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: attachment | `inline` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

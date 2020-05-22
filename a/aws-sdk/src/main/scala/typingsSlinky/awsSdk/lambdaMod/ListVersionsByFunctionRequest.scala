@@ -22,47 +22,15 @@ trait ListVersionsByFunctionRequest extends js.Object {
 
 object ListVersionsByFunctionRequest {
   @scala.inline
-  def apply(FunctionName: NamespacedFunctionName): ListVersionsByFunctionRequest = {
+  def apply(
+    FunctionName: NamespacedFunctionName,
+    Marker: String = null,
+    MaxItems: js.UndefOr[MaxListItems] = js.undefined
+  ): ListVersionsByFunctionRequest = {
     val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxItems)) __obj.updateDynamic("MaxItems")(MaxItems.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListVersionsByFunctionRequest]
   }
-  @scala.inline
-  implicit class ListVersionsByFunctionRequestOps[Self <: ListVersionsByFunctionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionName(value: NamespacedFunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: MaxListItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

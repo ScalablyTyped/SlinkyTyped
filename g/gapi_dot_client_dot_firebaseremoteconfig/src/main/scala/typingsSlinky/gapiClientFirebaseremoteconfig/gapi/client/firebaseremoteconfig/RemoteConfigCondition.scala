@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RemoteConfigCondition extends js.Object {
   /** Required. */
-  var expression: js.UndefOr[String] = js.native
+  var expression: js.UndefOr[String] = js.undefined
   /**
     * Required.
     * A non empty and unique name of this condition.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Optional.
     * The display (tag) color of this condition. This serves as part of a tag
@@ -25,58 +24,17 @@ trait RemoteConfigCondition extends js.Object {
     * value (0) have the same meaning:  Let the UI choose any valid color when
     * displaying the condition.
     */
-  var tagColor: js.UndefOr[String] = js.native
+  var tagColor: js.UndefOr[String] = js.undefined
 }
 
 object RemoteConfigCondition {
   @scala.inline
-  def apply(): RemoteConfigCondition = {
+  def apply(expression: String = null, name: String = null, tagColor: String = null): RemoteConfigCondition = {
     val __obj = js.Dynamic.literal()
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (tagColor != null) __obj.updateDynamic("tagColor")(tagColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteConfigCondition]
   }
-  @scala.inline
-  implicit class RemoteConfigConditionOps[Self <: RemoteConfigCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

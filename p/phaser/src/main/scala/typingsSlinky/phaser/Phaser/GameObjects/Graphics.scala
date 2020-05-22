@@ -124,8 +124,8 @@ trait Graphics
     * @param anticlockwise Whether the drawing should be anticlockwise or clockwise. Default false.
     * @param overshoot This value allows you to increase the segment iterations in WebGL rendering. Useful if the arc has a thick stroke and needs to overshoot to join-up cleanly. Use small numbers such as 0.01 to start with and increase as needed. Default 0.
     */
-  def arc(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double): Graphics = js.native
-  def arc(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double, anticlockwise: Boolean): Graphics = js.native
+  def arc(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double): this.type = js.native
+  def arc(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double, anticlockwise: Boolean): this.type = js.native
   def arc(
     x: Double,
     y: Double,
@@ -134,38 +134,38 @@ trait Graphics
     endAngle: Double,
     anticlockwise: Boolean,
     overshoot: Double
-  ): Graphics = js.native
+  ): this.type = js.native
   /**
     * Start a new shape path.
     */
-  def beginPath(): Graphics = js.native
+  def beginPath(): this.type = js.native
   /**
     * Clear the command buffer and reset the fill style and line style to their defaults.
     */
-  def clear(): Graphics = js.native
+  def clear(): this.type = js.native
   /**
     * Close the current path.
     */
-  def closePath(): Graphics = js.native
+  def closePath(): this.type = js.native
   /**
     * Fill the current path.
     * 
     * This is an alias for `Graphics.fillPath` and does the same thing.
     * It was added to match the CanvasRenderingContext 2D API.
     */
-  def fill(): Graphics = js.native
+  def fill(): this.type = js.native
   /**
     * Fill a circle with the given position and radius.
     * @param x The x coordinate of the center of the circle.
     * @param y The y coordinate of the center of the circle.
     * @param radius The radius of the circle.
     */
-  def fillCircle(x: Double, y: Double, radius: Double): Graphics = js.native
+  def fillCircle(x: Double, y: Double, radius: Double): this.type = js.native
   /**
     * Fill the given circle.
     * @param circle The circle to fill.
     */
-  def fillCircleShape(circle: Circle): Graphics = js.native
+  def fillCircleShape(circle: Circle): this.type = js.native
   /**
     * Fill an ellipse with the given position and size.
     * @param x The x coordinate of the center of the ellipse.
@@ -174,15 +174,15 @@ trait Graphics
     * @param height The height of the ellipse.
     * @param smoothness The number of points to draw the ellipse with. Default 32.
     */
-  def fillEllipse(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
-  def fillEllipse(x: Double, y: Double, width: Double, height: Double, smoothness: integer): Graphics = js.native
+  def fillEllipse(x: Double, y: Double, width: Double, height: Double): this.type = js.native
+  def fillEllipse(x: Double, y: Double, width: Double, height: Double, smoothness: integer): this.type = js.native
   /**
     * Fill the given ellipse.
     * @param ellipse The ellipse to fill.
     * @param smoothness The number of points to draw the ellipse with. Default 32.
     */
-  def fillEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse): Graphics = js.native
-  def fillEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse, smoothness: integer): Graphics = js.native
+  def fillEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse): this.type = js.native
+  def fillEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse, smoothness: integer): this.type = js.native
   /**
     * Sets a gradient fill style. This is a WebGL only feature.
     * 
@@ -203,12 +203,12 @@ trait Graphics
     * @param bottomRight The tint being applied to the bottom-right of the Game Object.
     * @param alpha The fill alpha. Default 1.
     */
-  def fillGradientStyle(topLeft: integer, topRight: integer, bottomLeft: integer, bottomRight: integer): Graphics = js.native
-  def fillGradientStyle(topLeft: integer, topRight: integer, bottomLeft: integer, bottomRight: integer, alpha: Double): Graphics = js.native
+  def fillGradientStyle(topLeft: integer, topRight: integer, bottomLeft: integer, bottomRight: integer): this.type = js.native
+  def fillGradientStyle(topLeft: integer, topRight: integer, bottomLeft: integer, bottomRight: integer, alpha: Double): this.type = js.native
   /**
     * Fill the current path.
     */
-  def fillPath(): Graphics = js.native
+  def fillPath(): this.type = js.native
   /**
     * Fill a point at the given position.
     * 
@@ -217,10 +217,10 @@ trait Graphics
     * @param y The y coordinate of the point.
     * @param size The size of the square to draw. Default 1.
     */
-  def fillPoint(x: Double, y: Double): Graphics = js.native
-  def fillPoint(x: Double, y: Double, size: Double): Graphics = js.native
-  def fillPointShape(point: js.Object): Graphics = js.native
-  def fillPointShape(point: js.Object, size: Double): Graphics = js.native
+  def fillPoint(x: Double, y: Double): this.type = js.native
+  def fillPoint(x: Double, y: Double, size: Double): this.type = js.native
+  def fillPointShape(point: js.Object): this.type = js.native
+  def fillPointShape(point: js.Object, size: Double): this.type = js.native
   /**
     * Fill the given point.
     * 
@@ -228,10 +228,10 @@ trait Graphics
     * @param point The point to fill.
     * @param size The size of the square to draw. Default 1.
     */
-  def fillPointShape(point: Point): Graphics = js.native
-  def fillPointShape(point: Point, size: Double): Graphics = js.native
-  def fillPointShape(point: Vector2): Graphics = js.native
-  def fillPointShape(point: Vector2, size: Double): Graphics = js.native
+  def fillPointShape(point: Point): this.type = js.native
+  def fillPointShape(point: Point, size: Double): this.type = js.native
+  def fillPointShape(point: Vector2): this.type = js.native
+  def fillPointShape(point: Vector2, size: Double): this.type = js.native
   /**
     * Fill the shape represented by the given array of points.
     * 
@@ -243,10 +243,10 @@ trait Graphics
     * @param closePath When `true`, the path is closed before being stroked. Default false.
     * @param endIndex The index of `points` to stop at. Defaults to `points.length`.
     */
-  def fillPoints(points: js.Array[_ | Point]): Graphics = js.native
-  def fillPoints(points: js.Array[_ | Point], closeShape: Boolean): Graphics = js.native
-  def fillPoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean): Graphics = js.native
-  def fillPoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean, endIndex: integer): Graphics = js.native
+  def fillPoints(points: js.Array[_ | Point]): this.type = js.native
+  def fillPoints(points: js.Array[_ | Point], closeShape: Boolean): this.type = js.native
+  def fillPoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean): this.type = js.native
+  def fillPoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean, endIndex: integer): this.type = js.native
   /**
     * Fill a rectangle with the given position and size.
     * @param x The x coordinate of the top-left of the rectangle.
@@ -254,12 +254,12 @@ trait Graphics
     * @param width The width of the rectangle.
     * @param height The height of the rectangle.
     */
-  def fillRect(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
+  def fillRect(x: Double, y: Double, width: Double, height: Double): this.type = js.native
   /**
     * Fill the given rectangle.
     * @param rect The rectangle to fill.
     */
-  def fillRectShape(rect: typingsSlinky.phaser.Phaser.Geom.Rectangle): Graphics = js.native
+  def fillRectShape(rect: typingsSlinky.phaser.Phaser.Geom.Rectangle): this.type = js.native
   /**
     * Fill a rounded rectangle with the given position, size and radius.
     * @param x The x coordinate of the top-left of the rectangle.
@@ -268,16 +268,16 @@ trait Graphics
     * @param height The height of the rectangle.
     * @param radius The corner radius; It can also be an object to specify different radii for corners. Default 20.
     */
-  def fillRoundedRect(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
-  def fillRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: Double): Graphics = js.native
-  def fillRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: RoundedRectRadius): Graphics = js.native
+  def fillRoundedRect(x: Double, y: Double, width: Double, height: Double): this.type = js.native
+  def fillRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: Double): this.type = js.native
+  def fillRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: RoundedRectRadius): this.type = js.native
   /**
     * Set the current fill style.
     * @param color The fill color.
     * @param alpha The fill alpha. Default 1.
     */
-  def fillStyle(color: Double): Graphics = js.native
-  def fillStyle(color: Double, alpha: Double): Graphics = js.native
+  def fillStyle(color: Double): this.type = js.native
+  def fillStyle(color: Double, alpha: Double): this.type = js.native
   /**
     * Fill a triangle with the given points.
     * @param x0 The x coordinate of the first point.
@@ -287,12 +287,12 @@ trait Graphics
     * @param x2 The x coordinate of the third point.
     * @param y2 The y coordinate of the third point.
     */
-  def fillTriangle(x0: Double, y0: Double, x1: Double, y1: Double, x2: Double, y2: Double): Graphics = js.native
+  def fillTriangle(x0: Double, y0: Double, x1: Double, y1: Double, x2: Double, y2: Double): this.type = js.native
   /**
     * Fill the given triangle.
     * @param triangle The triangle to fill.
     */
-  def fillTriangleShape(triangle: typingsSlinky.phaser.Phaser.Geom.Triangle): Graphics = js.native
+  def fillTriangleShape(triangle: typingsSlinky.phaser.Phaser.Geom.Triangle): this.type = js.native
   /**
     * Generate a texture from this Graphics object.
     * 
@@ -305,12 +305,12 @@ trait Graphics
     * @param width The width of the graphics to generate.
     * @param height The height of the graphics to generate.
     */
-  def generateTexture(key: String): Graphics = js.native
-  def generateTexture(key: String, width: integer): Graphics = js.native
-  def generateTexture(key: String, width: integer, height: integer): Graphics = js.native
-  def generateTexture(key: HTMLCanvasElement): Graphics = js.native
-  def generateTexture(key: HTMLCanvasElement, width: integer): Graphics = js.native
-  def generateTexture(key: HTMLCanvasElement, width: integer, height: integer): Graphics = js.native
+  def generateTexture(key: String): this.type = js.native
+  def generateTexture(key: String, width: integer): this.type = js.native
+  def generateTexture(key: String, width: integer, height: integer): this.type = js.native
+  def generateTexture(key: HTMLCanvasElement): this.type = js.native
+  def generateTexture(key: HTMLCanvasElement, width: integer): this.type = js.native
+  def generateTexture(key: HTMLCanvasElement, width: integer, height: integer): this.type = js.native
   /**
     * Draw a line between the given points.
     * @param x1 The x coordinate of the start point of the line.
@@ -318,7 +318,7 @@ trait Graphics
     * @param x2 The x coordinate of the end point of the line.
     * @param y2 The y coordinate of the end point of the line.
     */
-  def lineBetween(x1: Double, y1: Double, x2: Double, y2: Double): Graphics = js.native
+  def lineBetween(x1: Double, y1: Double, x2: Double, y2: Double): this.type = js.native
   /**
     * Sets a gradient line style. This is a WebGL only feature.
     * 
@@ -338,7 +338,7 @@ trait Graphics
     * @param bottomRight The tint being applied to the bottom-right of the Game Object.
     * @param alpha The fill alpha. Default 1.
     */
-  def lineGradientStyle(lineWidth: Double, topLeft: integer, topRight: integer, bottomLeft: integer, bottomRight: integer): Graphics = js.native
+  def lineGradientStyle(lineWidth: Double, topLeft: integer, topRight: integer, bottomLeft: integer, bottomRight: integer): this.type = js.native
   def lineGradientStyle(
     lineWidth: Double,
     topLeft: integer,
@@ -346,15 +346,15 @@ trait Graphics
     bottomLeft: integer,
     bottomRight: integer,
     alpha: Double
-  ): Graphics = js.native
+  ): this.type = js.native
   /**
     * Set the current line style.
     * @param lineWidth The stroke width.
     * @param color The stroke color.
     * @param alpha The stroke alpha. Default 1.
     */
-  def lineStyle(lineWidth: Double, color: Double): Graphics = js.native
-  def lineStyle(lineWidth: Double, color: Double, alpha: Double): Graphics = js.native
+  def lineStyle(lineWidth: Double, color: Double): this.type = js.native
+  def lineStyle(lineWidth: Double, color: Double, alpha: Double): this.type = js.native
   /**
     * Draw a line from the current drawing position to the given position.
     * 
@@ -362,13 +362,13 @@ trait Graphics
     * @param x The x coordinate to draw the line to.
     * @param y The y coordinate to draw the line to.
     */
-  def lineTo(x: Double, y: Double): Graphics = js.native
+  def lineTo(x: Double, y: Double): this.type = js.native
   /**
     * Move the current drawing position to the given position.
     * @param x The x coordinate to move to.
     * @param y The y coordinate to move to.
     */
-  def moveTo(x: Double, y: Double): Graphics = js.native
+  def moveTo(x: Double, y: Double): this.type = js.native
   /**
     * Internal destroy handler, called as part of the destroy process.
     */
@@ -380,7 +380,7 @@ trait Graphics
     * 
     * If there is no saved state, this command does nothing.
     */
-  def restore(): Graphics = js.native
+  def restore(): this.type = js.native
   /**
     * Inserts a rotation command into this Graphics objects command buffer.
     * 
@@ -391,13 +391,13 @@ trait Graphics
     * only of the objects drawn by it after calling this method.
     * @param radians The rotation angle, in radians.
     */
-  def rotateCanvas(radians: Double): Graphics = js.native
+  def rotateCanvas(radians: Double): this.type = js.native
   /**
     * Saves the state of the Graphics by pushing the current state onto a stack.
     * 
     * The most recently saved state can then be restored with {@link Phaser.GameObjects.Graphics#restore}.
     */
-  def save(): Graphics = js.native
+  def save(): this.type = js.native
   /**
     * Inserts a scale command into this Graphics objects command buffer.
     * 
@@ -409,12 +409,12 @@ trait Graphics
     * @param x The horizontal scale to apply.
     * @param y The vertical scale to apply.
     */
-  def scaleCanvas(x: Double, y: Double): Graphics = js.native
+  def scaleCanvas(x: Double, y: Double): this.type = js.native
   /**
     * Set the default style settings for this Graphics object.
     * @param options The styles to set as defaults.
     */
-  def setDefaultStyles(options: Styles): Graphics = js.native
+  def setDefaultStyles(options: Styles): this.type = js.native
   /**
     * Sets the texture frame this Graphics Object will use when drawing all shapes defined after calling this.
     * 
@@ -455,8 +455,8 @@ trait Graphics
     * @param anticlockwise Whether the drawing should be anticlockwise or clockwise. Default false.
     * @param overshoot This value allows you to overshoot the endAngle by this amount. Useful if the arc has a thick stroke and needs to overshoot to join-up cleanly. Default 0.
     */
-  def slice(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double): Graphics = js.native
-  def slice(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double, anticlockwise: Boolean): Graphics = js.native
+  def slice(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double): this.type = js.native
+  def slice(x: Double, y: Double, radius: Double, startAngle: Double, endAngle: Double, anticlockwise: Boolean): this.type = js.native
   def slice(
     x: Double,
     y: Double,
@@ -465,26 +465,26 @@ trait Graphics
     endAngle: Double,
     anticlockwise: Boolean,
     overshoot: Double
-  ): Graphics = js.native
+  ): this.type = js.native
   /**
     * Stroke the current path.
     * 
     * This is an alias for `Graphics.strokePath` and does the same thing.
     * It was added to match the CanvasRenderingContext 2D API.
     */
-  def stroke(): Graphics = js.native
+  def stroke(): this.type = js.native
   /**
     * Stroke a circle with the given position and radius.
     * @param x The x coordinate of the center of the circle.
     * @param y The y coordinate of the center of the circle.
     * @param radius The radius of the circle.
     */
-  def strokeCircle(x: Double, y: Double, radius: Double): Graphics = js.native
+  def strokeCircle(x: Double, y: Double, radius: Double): this.type = js.native
   /**
     * Stroke the given circle.
     * @param circle The circle to stroke.
     */
-  def strokeCircleShape(circle: Circle): Graphics = js.native
+  def strokeCircleShape(circle: Circle): this.type = js.native
   /**
     * Stroke an ellipse with the given position and size.
     * @param x The x coordinate of the center of the ellipse.
@@ -493,24 +493,24 @@ trait Graphics
     * @param height The height of the ellipse.
     * @param smoothness The number of points to draw the ellipse with. Default 32.
     */
-  def strokeEllipse(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
-  def strokeEllipse(x: Double, y: Double, width: Double, height: Double, smoothness: integer): Graphics = js.native
+  def strokeEllipse(x: Double, y: Double, width: Double, height: Double): this.type = js.native
+  def strokeEllipse(x: Double, y: Double, width: Double, height: Double, smoothness: integer): this.type = js.native
   /**
     * Stroke the given ellipse.
     * @param ellipse The ellipse to stroke.
     * @param smoothness The number of points to draw the ellipse with. Default 32.
     */
-  def strokeEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse): Graphics = js.native
-  def strokeEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse, smoothness: integer): Graphics = js.native
+  def strokeEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse): this.type = js.native
+  def strokeEllipseShape(ellipse: typingsSlinky.phaser.Phaser.Geom.Ellipse, smoothness: integer): this.type = js.native
   /**
     * Draw the given line.
     * @param line The line to stroke.
     */
-  def strokeLineShape(line: typingsSlinky.phaser.Phaser.Geom.Line): Graphics = js.native
+  def strokeLineShape(line: typingsSlinky.phaser.Phaser.Geom.Line): this.type = js.native
   /**
     * Stroke the current path.
     */
-  def strokePath(): Graphics = js.native
+  def strokePath(): this.type = js.native
   /**
     * Stroke the shape represented by the given array of points.
     * 
@@ -522,10 +522,10 @@ trait Graphics
     * @param closePath When `true`, the path is closed before being stroked. Default false.
     * @param endIndex The index of `points` to stop drawing at. Defaults to `points.length`.
     */
-  def strokePoints(points: js.Array[_ | Point]): Graphics = js.native
-  def strokePoints(points: js.Array[_ | Point], closeShape: Boolean): Graphics = js.native
-  def strokePoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean): Graphics = js.native
-  def strokePoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean, endIndex: integer): Graphics = js.native
+  def strokePoints(points: js.Array[_ | Point]): this.type = js.native
+  def strokePoints(points: js.Array[_ | Point], closeShape: Boolean): this.type = js.native
+  def strokePoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean): this.type = js.native
+  def strokePoints(points: js.Array[_ | Point], closeShape: Boolean, closePath: Boolean, endIndex: integer): this.type = js.native
   /**
     * Stroke a rectangle with the given position and size.
     * @param x The x coordinate of the top-left of the rectangle.
@@ -533,12 +533,12 @@ trait Graphics
     * @param width The width of the rectangle.
     * @param height The height of the rectangle.
     */
-  def strokeRect(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
+  def strokeRect(x: Double, y: Double, width: Double, height: Double): this.type = js.native
   /**
     * Stroke the given rectangle.
     * @param rect The rectangle to stroke.
     */
-  def strokeRectShape(rect: typingsSlinky.phaser.Phaser.Geom.Rectangle): Graphics = js.native
+  def strokeRectShape(rect: typingsSlinky.phaser.Phaser.Geom.Rectangle): this.type = js.native
   /**
     * Stroke a rounded rectangle with the given position, size and radius.
     * @param x The x coordinate of the top-left of the rectangle.
@@ -547,9 +547,9 @@ trait Graphics
     * @param height The height of the rectangle.
     * @param radius The corner radius; It can also be an object to specify different radii for corners. Default 20.
     */
-  def strokeRoundedRect(x: Double, y: Double, width: Double, height: Double): Graphics = js.native
-  def strokeRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: Double): Graphics = js.native
-  def strokeRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: RoundedRectRadius): Graphics = js.native
+  def strokeRoundedRect(x: Double, y: Double, width: Double, height: Double): this.type = js.native
+  def strokeRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: Double): this.type = js.native
+  def strokeRoundedRect(x: Double, y: Double, width: Double, height: Double, radius: RoundedRectRadius): this.type = js.native
   /**
     * Stroke a triangle with the given points.
     * @param x0 The x coordinate of the first point.
@@ -559,12 +559,12 @@ trait Graphics
     * @param x2 The x coordinate of the third point.
     * @param y2 The y coordinate of the third point.
     */
-  def strokeTriangle(x0: Double, y0: Double, x1: Double, y1: Double, x2: Double, y2: Double): Graphics = js.native
+  def strokeTriangle(x0: Double, y0: Double, x1: Double, y1: Double, x2: Double, y2: Double): this.type = js.native
   /**
     * Stroke the given triangle.
     * @param triangle The triangle to stroke.
     */
-  def strokeTriangleShape(triangle: typingsSlinky.phaser.Phaser.Geom.Triangle): Graphics = js.native
+  def strokeTriangleShape(triangle: typingsSlinky.phaser.Phaser.Geom.Triangle): this.type = js.native
   /**
     * Inserts a translation command into this Graphics objects command buffer.
     * 
@@ -576,6 +576,6 @@ trait Graphics
     * @param x The horizontal translation to apply.
     * @param y The vertical translation to apply.
     */
-  def translateCanvas(x: Double, y: Double): Graphics = js.native
+  def translateCanvas(x: Double, y: Double): this.type = js.native
 }
 

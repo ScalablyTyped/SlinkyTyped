@@ -7,47 +7,24 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AmiFromInstanceEphemeralBlockDevice extends js.Object {
+  /**
+    * The path at which the device is exposed to created instances.
+    */
   var deviceName: js.UndefOr[Input[String]] = js.native
+  /**
+    * A name for the ephemeral device, of the form "ephemeralN" where
+    * *N* is a volume number starting from zero.
+    */
   var virtualName: js.UndefOr[Input[String]] = js.native
 }
 
 object AmiFromInstanceEphemeralBlockDevice {
   @scala.inline
-  def apply(): AmiFromInstanceEphemeralBlockDevice = {
+  def apply(deviceName: Input[String] = null, virtualName: Input[String] = null): AmiFromInstanceEphemeralBlockDevice = {
     val __obj = js.Dynamic.literal()
+    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
+    if (virtualName != null) __obj.updateDynamic("virtualName")(virtualName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AmiFromInstanceEphemeralBlockDevice]
   }
-  @scala.inline
-  implicit class AmiFromInstanceEphemeralBlockDeviceOps[Self <: AmiFromInstanceEphemeralBlockDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

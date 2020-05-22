@@ -30,59 +30,17 @@ trait ImportSourceCredentialsInput extends js.Object {
 
 object ImportSourceCredentialsInput {
   @scala.inline
-  def apply(authType: AuthType, serverType: ServerType, token: SensitiveNonEmptyString): ImportSourceCredentialsInput = {
+  def apply(
+    authType: AuthType,
+    serverType: ServerType,
+    token: SensitiveNonEmptyString,
+    shouldOverwrite: js.UndefOr[WrapperBoolean] = js.undefined,
+    username: NonEmptyString = null
+  ): ImportSourceCredentialsInput = {
     val __obj = js.Dynamic.literal(authType = authType.asInstanceOf[js.Any], serverType = serverType.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldOverwrite)) __obj.updateDynamic("shouldOverwrite")(shouldOverwrite.get.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportSourceCredentialsInput]
   }
-  @scala.inline
-  implicit class ImportSourceCredentialsInputOps[Self <: ImportSourceCredentialsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthType(value: AuthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerType(value: ServerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToken(value: SensitiveNonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShouldOverwrite(value: WrapperBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldOverwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldOverwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldOverwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

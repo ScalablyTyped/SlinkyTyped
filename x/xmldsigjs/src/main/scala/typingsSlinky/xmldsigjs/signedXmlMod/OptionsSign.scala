@@ -5,19 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptionsSign extends js.Object {
   /**
     * Id of Signature
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Public key for KeyInfo block
     *
     * @type {boolean}
     * @memberOf OptionsSign
     */
-  var keyValue: js.UndefOr[CryptoKey] = js.native
+  var keyValue: js.UndefOr[CryptoKey] = js.undefined
   /**
     * List of Reference
     * Default is Reference with hash alg SHA-256 and exc-c14n transform
@@ -25,77 +24,30 @@ trait OptionsSign extends js.Object {
     * @type {OptionsSignReference[]}
     * @memberOf OptionsSign
     */
-  var references: js.UndefOr[js.Array[OptionsSignReference]] = js.native
+  var references: js.UndefOr[js.Array[OptionsSignReference]] = js.undefined
   /**
     * List of X509 Certificates
     *
     * @type {string[]}
     * @memberOf OptionsSign
     */
-  var x509: js.UndefOr[js.Array[String]] = js.native
+  var x509: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object OptionsSign {
   @scala.inline
-  def apply(): OptionsSign = {
+  def apply(
+    id: String = null,
+    keyValue: CryptoKey = null,
+    references: js.Array[OptionsSignReference] = null,
+    x509: js.Array[String] = null
+  ): OptionsSign = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (keyValue != null) __obj.updateDynamic("keyValue")(keyValue.asInstanceOf[js.Any])
+    if (references != null) __obj.updateDynamic("references")(references.asInstanceOf[js.Any])
+    if (x509 != null) __obj.updateDynamic("x509")(x509.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsSign]
   }
-  @scala.inline
-  implicit class OptionsSignOps[Self <: OptionsSign] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyValue(value: CryptoKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferences(value: js.Array[OptionsSignReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("references")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("references")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX509(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x509")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX509: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x509")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BootstrapFontAwesome extends js.Object {
-  var close: js.UndefOr[String] = js.native
-  var next: js.UndefOr[String] = js.native
-  var nextYear: js.UndefOr[String] = js.native
-  var prev: js.UndefOr[String] = js.native
-  var prevYear: js.UndefOr[String] = js.native
+  var close: js.UndefOr[String] = js.undefined
+  var next: js.UndefOr[String] = js.undefined
+  var nextYear: js.UndefOr[String] = js.undefined
+  var prev: js.UndefOr[String] = js.undefined
+  var prevYear: js.UndefOr[String] = js.undefined
 }
 
 object BootstrapFontAwesome {
   @scala.inline
-  def apply(): BootstrapFontAwesome = {
+  def apply(
+    close: String = null,
+    next: String = null,
+    nextYear: String = null,
+    prev: String = null,
+    prevYear: String = null
+  ): BootstrapFontAwesome = {
     val __obj = js.Dynamic.literal()
+    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (nextYear != null) __obj.updateDynamic("nextYear")(nextYear.asInstanceOf[js.Any])
+    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
+    if (prevYear != null) __obj.updateDynamic("prevYear")(prevYear.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapFontAwesome]
   }
-  @scala.inline
-  implicit class BootstrapFontAwesomeOps[Self <: BootstrapFontAwesome] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextYear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevYear")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

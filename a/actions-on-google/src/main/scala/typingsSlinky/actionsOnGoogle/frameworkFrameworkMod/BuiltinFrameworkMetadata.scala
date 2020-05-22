@@ -1,56 +1,32 @@
 package typingsSlinky.actionsOnGoogle.frameworkFrameworkMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.actionsOnGoogle.expressMod.ExpressMetadata
 import typingsSlinky.actionsOnGoogle.lambdaMod.LambdaMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BuiltinFrameworkMetadata extends FrameworkMetadata {
   /** @public */
-  var express: js.UndefOr[ExpressMetadata] = js.native
+  var express: js.UndefOr[ExpressMetadata] = js.undefined
   /** @public */
-  var lambda: js.UndefOr[LambdaMetadata] = js.native
+  var lambda: js.UndefOr[LambdaMetadata] = js.undefined
 }
 
 object BuiltinFrameworkMetadata {
   @scala.inline
-  def apply(): BuiltinFrameworkMetadata = {
+  def apply(
+    StringDictionary: /** @public */
+  StringDictionary[js.Any] = null,
+    express: ExpressMetadata = null,
+    lambda: LambdaMetadata = null
+  ): BuiltinFrameworkMetadata = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (express != null) __obj.updateDynamic("express")(express.asInstanceOf[js.Any])
+    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuiltinFrameworkMetadata]
   }
-  @scala.inline
-  implicit class BuiltinFrameworkMetadataOps[Self <: BuiltinFrameworkMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpress(value: ExpressMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("express")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("express")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambda(value: LambdaMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambda: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

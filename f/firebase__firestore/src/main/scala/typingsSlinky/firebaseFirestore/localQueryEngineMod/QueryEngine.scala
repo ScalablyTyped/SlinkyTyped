@@ -11,7 +11,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryEngine extends js.Object {
   /** Returns all local documents matching the specified query. */
   def getDocumentsMatchingQuery(
@@ -19,9 +18,9 @@ trait QueryEngine extends js.Object {
     query: Query,
     lastLimboFreeSnapshotVersion: SnapshotVersion,
     remoteKeys: DocumentKeySet_
-  ): PersistencePromise[DocumentMap_] = js.native
+  ): PersistencePromise[DocumentMap_]
   /** Sets the document view to query against. */
-  def setLocalDocumentsView(localDocuments: LocalDocumentsView): Unit = js.native
+  def setLocalDocumentsView(localDocuments: LocalDocumentsView): Unit
 }
 
 object QueryEngine {
@@ -33,27 +32,5 @@ object QueryEngine {
     val __obj = js.Dynamic.literal(getDocumentsMatchingQuery = js.Any.fromFunction4(getDocumentsMatchingQuery), setLocalDocumentsView = js.Any.fromFunction1(setLocalDocumentsView))
     __obj.asInstanceOf[QueryEngine]
   }
-  @scala.inline
-  implicit class QueryEngineOps[Self <: QueryEngine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDocumentsMatchingQuery(
-      value: (PersistenceTransaction, Query, SnapshotVersion, DocumentKeySet_) => PersistencePromise[DocumentMap_]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentsMatchingQuery")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withSetLocalDocumentsView(value: LocalDocumentsView => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocalDocumentsView")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

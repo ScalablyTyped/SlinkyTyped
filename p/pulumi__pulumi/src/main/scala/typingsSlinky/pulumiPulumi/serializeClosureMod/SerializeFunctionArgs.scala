@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SerializeFunctionArgs extends js.Object {
   /**
     * The name to export from the module defined by the generated module text.  Defaults to 'handler'.
     */
-  var exportName: js.UndefOr[String] = js.native
+  var exportName: js.UndefOr[String] = js.undefined
   /**
     * If this is a function which, when invoked, will produce the actual entrypoint function.
     * Useful for when serializing a function that has high startup cost that only wants to be
@@ -21,79 +20,32 @@ trait SerializeFunctionArgs extends js.Object {
     * In other words, the function will be invoked (once) and the resulting inner function will
     * be what is exported.
     */
-  var isFactoryFunction: js.UndefOr[Boolean] = js.native
+  var isFactoryFunction: js.UndefOr[Boolean] = js.undefined
   /**
     * The resource to log any errors we encounter against.
     */
-  var logResource: js.UndefOr[Resource] = js.native
+  var logResource: js.UndefOr[Resource] = js.undefined
   /**
     * A function to prevent serialization of certain objects captured during the serialization.  Primarily used to
     * prevent potential cycles.
     */
-  var serialize: js.UndefOr[js.Function1[/* o */ js.Any, Boolean]] = js.native
+  var serialize: js.UndefOr[js.Function1[/* o */ js.Any, Boolean]] = js.undefined
 }
 
 object SerializeFunctionArgs {
   @scala.inline
-  def apply(): SerializeFunctionArgs = {
+  def apply(
+    exportName: String = null,
+    isFactoryFunction: js.UndefOr[Boolean] = js.undefined,
+    logResource: Resource = null,
+    serialize: /* o */ js.Any => Boolean = null
+  ): SerializeFunctionArgs = {
     val __obj = js.Dynamic.literal()
+    if (exportName != null) __obj.updateDynamic("exportName")(exportName.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFactoryFunction)) __obj.updateDynamic("isFactoryFunction")(isFactoryFunction.get.asInstanceOf[js.Any])
+    if (logResource != null) __obj.updateDynamic("logResource")(logResource.asInstanceOf[js.Any])
+    if (serialize != null) __obj.updateDynamic("serialize")(js.Any.fromFunction1(serialize))
     __obj.asInstanceOf[SerializeFunctionArgs]
   }
-  @scala.inline
-  implicit class SerializeFunctionArgsOps[Self <: SerializeFunctionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFactoryFunction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFactoryFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFactoryFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFactoryFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogResource(value: Resource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logResource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logResource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialize(value: /* o */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSerialize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

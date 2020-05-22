@@ -16,5 +16,10 @@ class WebXRProfiledMotionController protected ()
     _profile: IMotionControllerProfile,
     _repositoryUrl: String
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

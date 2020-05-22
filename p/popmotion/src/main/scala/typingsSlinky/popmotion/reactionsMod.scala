@@ -1,10 +1,10 @@
 package typingsSlinky.popmotion
 
+import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.chainableMod.default
 import typingsSlinky.popmotion.observerTypesMod.IObserver
 import typingsSlinky.popmotion.observerTypesMod.ObserverCandidate
 import typingsSlinky.popmotion.reactionsTypesMod.HotSubscription
-import typingsSlinky.popmotion.typesMod.ColdSubscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

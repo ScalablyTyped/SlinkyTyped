@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling "listItem.toJSON()". */
-@js.native
 trait ListItemData extends js.Object {
   /**
     *
@@ -13,72 +12,35 @@ trait ListItemData extends js.Object {
     *
     * [Api set: WordApi 1.3]
     */
-  var level: js.UndefOr[Double] = js.native
+  var level: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets the list item bullet, number, or picture as a string. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var listString: js.UndefOr[String] = js.native
+  var listString: js.UndefOr[String] = js.undefined
   /**
     *
     * Gets the list item order number in relation to its siblings. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var siblingIndex: js.UndefOr[Double] = js.native
+  var siblingIndex: js.UndefOr[Double] = js.undefined
 }
 
 object ListItemData {
   @scala.inline
-  def apply(): ListItemData = {
+  def apply(
+    level: js.UndefOr[Double] = js.undefined,
+    listString: String = null,
+    siblingIndex: js.UndefOr[Double] = js.undefined
+  ): ListItemData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (listString != null) __obj.updateDynamic("listString")(listString.asInstanceOf[js.Any])
+    if (!js.isUndefined(siblingIndex)) __obj.updateDynamic("siblingIndex")(siblingIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemData]
   }
-  @scala.inline
-  implicit class ListItemDataOps[Self <: ListItemData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiblingIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblingIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiblingIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblingIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

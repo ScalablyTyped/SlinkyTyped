@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Data *****/
 @js.native
 trait Data_ extends MVCObject {
   def add(feature: Feature): Feature = js.native

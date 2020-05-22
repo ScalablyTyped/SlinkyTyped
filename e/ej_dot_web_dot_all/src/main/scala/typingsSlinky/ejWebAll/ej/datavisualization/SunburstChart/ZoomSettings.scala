@@ -6,71 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ZoomSettings extends js.Object {
   /** Enables or disables zooming.
     * @Default {false}
     */
-  var enable: js.UndefOr[Boolean] = js.native
+  var enable: js.UndefOr[Boolean] = js.undefined
   /** Toolbar horizontal alignment
     * @Default {right. See Alignment}
     */
-  var toolbarHorizontalAlignment: js.UndefOr[SunburstHorizontalAlignment | String] = js.native
+  var toolbarHorizontalAlignment: js.UndefOr[SunburstHorizontalAlignment | String] = js.undefined
   /** Toolbar vertical alignment
     * @Default {top. See Alignment}
     */
-  var toolbarVerticalAlignment: js.UndefOr[SunburstVerticalAlignment | String] = js.native
+  var toolbarVerticalAlignment: js.UndefOr[SunburstVerticalAlignment | String] = js.undefined
 }
 
 object ZoomSettings {
   @scala.inline
-  def apply(): ZoomSettings = {
+  def apply(
+    enable: js.UndefOr[Boolean] = js.undefined,
+    toolbarHorizontalAlignment: SunburstHorizontalAlignment | String = null,
+    toolbarVerticalAlignment: SunburstVerticalAlignment | String = null
+  ): ZoomSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enable)) __obj.updateDynamic("enable")(enable.get.asInstanceOf[js.Any])
+    if (toolbarHorizontalAlignment != null) __obj.updateDynamic("toolbarHorizontalAlignment")(toolbarHorizontalAlignment.asInstanceOf[js.Any])
+    if (toolbarVerticalAlignment != null) __obj.updateDynamic("toolbarVerticalAlignment")(toolbarVerticalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZoomSettings]
   }
-  @scala.inline
-  implicit class ZoomSettingsOps[Self <: ZoomSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbarHorizontalAlignment(value: SunburstHorizontalAlignment | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarHorizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbarHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarHorizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbarVerticalAlignment(value: SunburstVerticalAlignment | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarVerticalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbarVerticalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarVerticalAlignment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

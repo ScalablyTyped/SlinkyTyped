@@ -18,35 +18,10 @@ trait RedirectAllRequestsTo extends js.Object {
 
 object RedirectAllRequestsTo {
   @scala.inline
-  def apply(HostName: HostName): RedirectAllRequestsTo = {
+  def apply(HostName: HostName, Protocol: Protocol = null): RedirectAllRequestsTo = {
     val __obj = js.Dynamic.literal(HostName = HostName.asInstanceOf[js.Any])
+    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedirectAllRequestsTo]
   }
-  @scala.inline
-  implicit class RedirectAllRequestsToOps[Self <: RedirectAllRequestsTo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostName(value: HostName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: Protocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

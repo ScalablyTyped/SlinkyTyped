@@ -14,29 +14,10 @@ trait ListStreamingDistributionsResult extends js.Object {
 
 object ListStreamingDistributionsResult {
   @scala.inline
-  def apply(): ListStreamingDistributionsResult = {
+  def apply(StreamingDistributionList: StreamingDistributionList = null): ListStreamingDistributionsResult = {
     val __obj = js.Dynamic.literal()
+    if (StreamingDistributionList != null) __obj.updateDynamic("StreamingDistributionList")(StreamingDistributionList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStreamingDistributionsResult]
   }
-  @scala.inline
-  implicit class ListStreamingDistributionsResultOps[Self <: ListStreamingDistributionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStreamingDistributionList(value: StreamingDistributionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingDistributionList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingDistributionList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingDistributionList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

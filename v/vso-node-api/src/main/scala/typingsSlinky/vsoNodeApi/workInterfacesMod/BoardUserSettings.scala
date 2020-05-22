@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BoardUserSettings extends js.Object {
-  var autoRefreshState: Boolean = js.native
+  var autoRefreshState: Boolean
 }
 
 object BoardUserSettings {
@@ -15,19 +14,5 @@ object BoardUserSettings {
     val __obj = js.Dynamic.literal(autoRefreshState = autoRefreshState.asInstanceOf[js.Any])
     __obj.asInstanceOf[BoardUserSettings]
   }
-  @scala.inline
-  implicit class BoardUserSettingsOps[Self <: BoardUserSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRefreshState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRefreshState")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

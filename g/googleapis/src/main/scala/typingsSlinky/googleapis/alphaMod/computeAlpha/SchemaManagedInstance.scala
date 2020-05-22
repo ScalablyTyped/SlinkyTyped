@@ -87,161 +87,34 @@ trait SchemaManagedInstance extends js.Object {
 
 object SchemaManagedInstance {
   @scala.inline
-  def apply(): SchemaManagedInstance = {
+  def apply(
+    currentAction: String = null,
+    id: String = null,
+    instance: String = null,
+    instanceHealth: js.Array[SchemaManagedInstanceInstanceHealth] = null,
+    instanceStatus: String = null,
+    instanceTemplate: String = null,
+    lastAttempt: SchemaManagedInstanceLastAttempt = null,
+    `override`: SchemaManagedInstanceOverride = null,
+    preservedStateFromConfig: SchemaPreservedState = null,
+    preservedStateFromPolicy: SchemaPreservedState = null,
+    tag: String = null,
+    version: SchemaManagedInstanceVersion = null
+  ): SchemaManagedInstance = {
     val __obj = js.Dynamic.literal()
+    if (currentAction != null) __obj.updateDynamic("currentAction")(currentAction.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
+    if (instanceHealth != null) __obj.updateDynamic("instanceHealth")(instanceHealth.asInstanceOf[js.Any])
+    if (instanceStatus != null) __obj.updateDynamic("instanceStatus")(instanceStatus.asInstanceOf[js.Any])
+    if (instanceTemplate != null) __obj.updateDynamic("instanceTemplate")(instanceTemplate.asInstanceOf[js.Any])
+    if (lastAttempt != null) __obj.updateDynamic("lastAttempt")(lastAttempt.asInstanceOf[js.Any])
+    if (`override` != null) __obj.updateDynamic("override")(`override`.asInstanceOf[js.Any])
+    if (preservedStateFromConfig != null) __obj.updateDynamic("preservedStateFromConfig")(preservedStateFromConfig.asInstanceOf[js.Any])
+    if (preservedStateFromPolicy != null) __obj.updateDynamic("preservedStateFromPolicy")(preservedStateFromPolicy.asInstanceOf[js.Any])
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedInstance]
   }
-  @scala.inline
-  implicit class SchemaManagedInstanceOps[Self <: SchemaManagedInstance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceHealth(value: js.Array[SchemaManagedInstanceInstanceHealth]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceHealth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceHealth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceHealth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAttempt(value: SchemaManagedInstanceLastAttempt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAttempt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAttempt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAttempt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverride(value: SchemaManagedInstanceOverride): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("override")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("override")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreservedStateFromConfig(value: SchemaPreservedState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservedStateFromConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreservedStateFromConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservedStateFromConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreservedStateFromPolicy(value: SchemaPreservedState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservedStateFromPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreservedStateFromPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservedStateFromPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: SchemaManagedInstanceVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

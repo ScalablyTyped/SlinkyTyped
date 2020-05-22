@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISendDeltasResult extends js.Object {
-  var eventId: Double = js.native
-  var firstError: js.Any = js.native
+  var eventId: Double
+  var firstError: js.Any
 }
 
 object ISendDeltasResult {
@@ -16,25 +15,5 @@ object ISendDeltasResult {
     val __obj = js.Dynamic.literal(eventId = eventId.asInstanceOf[js.Any], firstError = firstError.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISendDeltasResult]
   }
-  @scala.inline
-  implicit class ISendDeltasResultOps[Self <: ISendDeltasResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstError(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstError")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -34,89 +34,22 @@ trait BuildPhase extends js.Object {
 
 object BuildPhase {
   @scala.inline
-  def apply(): BuildPhase = {
+  def apply(
+    contexts: PhaseContexts = null,
+    durationInSeconds: js.UndefOr[WrapperLong] = js.undefined,
+    endTime: js.Date = null,
+    phaseStatus: StatusType = null,
+    phaseType: BuildPhaseType = null,
+    startTime: js.Date = null
+  ): BuildPhase = {
     val __obj = js.Dynamic.literal()
+    if (contexts != null) __obj.updateDynamic("contexts")(contexts.asInstanceOf[js.Any])
+    if (!js.isUndefined(durationInSeconds)) __obj.updateDynamic("durationInSeconds")(durationInSeconds.get.asInstanceOf[js.Any])
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
+    if (phaseStatus != null) __obj.updateDynamic("phaseStatus")(phaseStatus.asInstanceOf[js.Any])
+    if (phaseType != null) __obj.updateDynamic("phaseType")(phaseType.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildPhase]
   }
-  @scala.inline
-  implicit class BuildPhaseOps[Self <: BuildPhase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContexts(value: PhaseContexts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDurationInSeconds(value: WrapperLong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhaseStatus(value: StatusType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phaseStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhaseStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phaseStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhaseType(value: BuildPhaseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phaseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhaseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phaseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

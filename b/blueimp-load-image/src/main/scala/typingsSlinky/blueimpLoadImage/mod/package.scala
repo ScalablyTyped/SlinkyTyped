@@ -14,5 +14,6 @@ package object mod {
     scala.Unit
   ]
   type LoadImageOptions = typingsSlinky.blueimpLoadImage.mod.BasicOptions with typingsSlinky.blueimpLoadImage.mod.CanvasOptions with typingsSlinky.blueimpLoadImage.mod.CropOptions with typingsSlinky.blueimpLoadImage.mod.MetaOptions
+  type Orientation = scala.Double | scala.Boolean
   type ParseMetaDataCallback = js.Function1[/* data */ typingsSlinky.blueimpLoadImage.mod.ImageHead, scala.Unit]
 }

@@ -8,69 +8,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StageExecuteParams extends js.Object {
-  var changedPath: js.UndefOr[ChangedPath] = js.native
-  var rowNode: RowNode = js.native
-  var rowNodeOrder: js.UndefOr[StringDictionary[Double]] = js.native
-  var rowNodeTransaction: js.UndefOr[RowNodeTransaction] = js.native
+  var changedPath: js.UndefOr[ChangedPath] = js.undefined
+  var rowNode: RowNode
+  var rowNodeOrder: js.UndefOr[StringDictionary[Double]] = js.undefined
+  var rowNodeTransaction: js.UndefOr[RowNodeTransaction] = js.undefined
 }
 
 object StageExecuteParams {
   @scala.inline
-  def apply(rowNode: RowNode): StageExecuteParams = {
+  def apply(
+    rowNode: RowNode,
+    changedPath: ChangedPath = null,
+    rowNodeOrder: StringDictionary[Double] = null,
+    rowNodeTransaction: RowNodeTransaction = null
+  ): StageExecuteParams = {
     val __obj = js.Dynamic.literal(rowNode = rowNode.asInstanceOf[js.Any])
+    if (changedPath != null) __obj.updateDynamic("changedPath")(changedPath.asInstanceOf[js.Any])
+    if (rowNodeOrder != null) __obj.updateDynamic("rowNodeOrder")(rowNodeOrder.asInstanceOf[js.Any])
+    if (rowNodeTransaction != null) __obj.updateDynamic("rowNodeTransaction")(rowNodeTransaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[StageExecuteParams]
   }
-  @scala.inline
-  implicit class StageExecuteParamsOps[Self <: StageExecuteParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRowNode(value: RowNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangedPath(value: ChangedPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangedPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowNodeOrder(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNodeOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowNodeOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNodeOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowNodeTransaction(value: RowNodeTransaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNodeTransaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowNodeTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNodeTransaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

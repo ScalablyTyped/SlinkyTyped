@@ -7,62 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnDxTreeListColumn extends js.Object {
-  var column: js.UndefOr[dxTreeListColumn] = js.native
-  var component: js.UndefOr[dxTreeList] = js.native
-  var row: js.UndefOr[dxTreeListRowObject] = js.native
+  var column: js.UndefOr[dxTreeListColumn] = js.undefined
+  var component: js.UndefOr[dxTreeList] = js.undefined
+  var row: js.UndefOr[dxTreeListRowObject] = js.undefined
 }
 
 object ColumnDxTreeListColumn {
   @scala.inline
-  def apply(): ColumnDxTreeListColumn = {
+  def apply(column: dxTreeListColumn = null, component: dxTreeList = null, row: dxTreeListRowObject = null): ColumnDxTreeListColumn = {
     val __obj = js.Dynamic.literal()
+    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnDxTreeListColumn]
   }
-  @scala.inline
-  implicit class ColumnDxTreeListColumnOps[Self <: ColumnDxTreeListColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: dxTreeListColumn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxTreeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRow(value: dxTreeListRowObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

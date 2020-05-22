@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MqttConfig extends js.Object {
   /**
     * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT
     * connections to this registry will fail.
     */
-  var mqttEnabledState: js.UndefOr[String] = js.native
+  var mqttEnabledState: js.UndefOr[String] = js.undefined
 }
 
 object MqttConfig {
   @scala.inline
-  def apply(): MqttConfig = {
+  def apply(mqttEnabledState: String = null): MqttConfig = {
     val __obj = js.Dynamic.literal()
+    if (mqttEnabledState != null) __obj.updateDynamic("mqttEnabledState")(mqttEnabledState.asInstanceOf[js.Any])
     __obj.asInstanceOf[MqttConfig]
   }
-  @scala.inline
-  implicit class MqttConfigOps[Self <: MqttConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMqttEnabledState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mqttEnabledState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMqttEnabledState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mqttEnabledState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,12 @@ trait PutObjectResponse extends js.Object {
 
 object PutObjectResponse {
   @scala.inline
-  def apply(): PutObjectResponse = {
+  def apply(ContentSHA256: SHA256Hash = null, ETag: ETag = null, StorageClass: StorageClass = null): PutObjectResponse = {
     val __obj = js.Dynamic.literal()
+    if (ContentSHA256 != null) __obj.updateDynamic("ContentSHA256")(ContentSHA256.asInstanceOf[js.Any])
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutObjectResponse]
   }
-  @scala.inline
-  implicit class PutObjectResponseOps[Self <: PutObjectResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentSHA256(value: SHA256Hash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentSHA256")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentSHA256: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentSHA256")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withETag(value: ETag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: StorageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

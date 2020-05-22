@@ -24,6 +24,7 @@ package object mod {
   type ErrorEventCallback = js.Function1[/* error */ js.Error, scala.Unit]
   type EventCallback = js.Function0[scala.Unit]
   type FailedEventCallback[T] = js.Function2[/* job */ typingsSlinky.bull.mod.Job[T], /* error */ js.Error, scala.Unit]
+  type JobId = scala.Double | java.lang.String
   type ProcessCallbackFunction[T] = js.Function2[
     /* job */ typingsSlinky.bull.mod.Job[T], 
     /* done */ typingsSlinky.bull.mod.DoneCallback, 

@@ -1,8 +1,14 @@
 package typingsSlinky.figma.mod.global
 
-import typingsSlinky.figma.anon.Delay
-import typingsSlinky.figma.anon.Timeout
-import typingsSlinky.figma.anon.`1`
+import typingsSlinky.figma.figmaStrings.AFTER_TIMEOUT
+import typingsSlinky.figma.figmaStrings.MOUSE_DOWN
+import typingsSlinky.figma.figmaStrings.MOUSE_ENTER
+import typingsSlinky.figma.figmaStrings.MOUSE_LEAVE
+import typingsSlinky.figma.figmaStrings.MOUSE_UP
+import typingsSlinky.figma.figmaStrings.ON_CLICK
+import typingsSlinky.figma.figmaStrings.ON_DRAG
+import typingsSlinky.figma.figmaStrings.ON_HOVER
+import typingsSlinky.figma.figmaStrings.ON_PRESS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +22,22 @@ trait Trigger extends js.Object
 
 object Trigger {
   @scala.inline
-  implicit def apply(value: `1`): Trigger = value.asInstanceOf[Trigger]
+  def `1`(`type`: ON_CLICK | ON_HOVER | ON_PRESS | ON_DRAG): Trigger = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Trigger]
+  }
   @scala.inline
-  implicit def apply(value: Delay): Trigger = value.asInstanceOf[Trigger]
+  def Timeout(timeout: Double, `type`: AFTER_TIMEOUT): Trigger = {
+    val __obj = js.Dynamic.literal(timeout = timeout.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Trigger]
+  }
   @scala.inline
-  implicit def apply(value: Timeout): Trigger = value.asInstanceOf[Trigger]
+  def Delay(delay: Double, `type`: MOUSE_ENTER | MOUSE_LEAVE | MOUSE_UP | MOUSE_DOWN): Trigger = {
+    val __obj = js.Dynamic.literal(delay = delay.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Trigger]
+  }
 }
 

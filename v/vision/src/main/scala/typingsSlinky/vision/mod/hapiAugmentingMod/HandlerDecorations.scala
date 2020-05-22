@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HandlerDecorations extends js.Object {
   /**
     * The view handler can be used with routes registered in the same realm as the view manager.
@@ -16,34 +15,15 @@ trait HandlerDecorations extends js.Object {
     * (these can be overriden by values explicitly set via the options).
     * @see {@link https://github.com/hapijs/vision/blob/master/API.md#the-view-handler}
     */
-  var view: js.UndefOr[String | Context] = js.native
+  var view: js.UndefOr[String | Context] = js.undefined
 }
 
 object HandlerDecorations {
   @scala.inline
-  def apply(): HandlerDecorations = {
+  def apply(view: String | Context = null): HandlerDecorations = {
     val __obj = js.Dynamic.literal()
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandlerDecorations]
   }
-  @scala.inline
-  implicit class HandlerDecorationsOps[Self <: HandlerDecorations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withView(value: String | Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

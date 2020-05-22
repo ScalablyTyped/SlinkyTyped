@@ -30,77 +30,20 @@ trait SchemaAnalyticsSummary extends js.Object {
 
 object SchemaAnalyticsSummary {
   @scala.inline
-  def apply(): SchemaAnalyticsSummary = {
+  def apply(
+    allTime: SchemaAnalyticsSnapshot = null,
+    day: SchemaAnalyticsSnapshot = null,
+    month: SchemaAnalyticsSnapshot = null,
+    twoHours: SchemaAnalyticsSnapshot = null,
+    week: SchemaAnalyticsSnapshot = null
+  ): SchemaAnalyticsSummary = {
     val __obj = js.Dynamic.literal()
+    if (allTime != null) __obj.updateDynamic("allTime")(allTime.asInstanceOf[js.Any])
+    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
+    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
+    if (twoHours != null) __obj.updateDynamic("twoHours")(twoHours.asInstanceOf[js.Any])
+    if (week != null) __obj.updateDynamic("week")(week.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnalyticsSummary]
   }
-  @scala.inline
-  implicit class SchemaAnalyticsSummaryOps[Self <: SchemaAnalyticsSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllTime(value: SchemaAnalyticsSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDay(value: SchemaAnalyticsSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonth(value: SchemaAnalyticsSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTwoHours(value: SchemaAnalyticsSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoHours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTwoHours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoHours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeek(value: SchemaAnalyticsSnapshot): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

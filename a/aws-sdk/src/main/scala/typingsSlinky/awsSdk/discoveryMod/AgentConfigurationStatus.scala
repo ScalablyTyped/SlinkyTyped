@@ -22,53 +22,16 @@ trait AgentConfigurationStatus extends js.Object {
 
 object AgentConfigurationStatus {
   @scala.inline
-  def apply(): AgentConfigurationStatus = {
+  def apply(
+    agentId: String = null,
+    description: String = null,
+    operationSucceeded: js.UndefOr[Boolean] = js.undefined
+  ): AgentConfigurationStatus = {
     val __obj = js.Dynamic.literal()
+    if (agentId != null) __obj.updateDynamic("agentId")(agentId.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(operationSucceeded)) __obj.updateDynamic("operationSucceeded")(operationSucceeded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentConfigurationStatus]
   }
-  @scala.inline
-  implicit class AgentConfigurationStatusOps[Self <: AgentConfigurationStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationSucceeded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationSucceeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationSucceeded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationSucceeded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

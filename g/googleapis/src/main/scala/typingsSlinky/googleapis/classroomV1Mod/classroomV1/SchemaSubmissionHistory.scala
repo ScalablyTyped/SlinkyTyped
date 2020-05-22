@@ -22,41 +22,11 @@ trait SchemaSubmissionHistory extends js.Object {
 
 object SchemaSubmissionHistory {
   @scala.inline
-  def apply(): SchemaSubmissionHistory = {
+  def apply(gradeHistory: SchemaGradeHistory = null, stateHistory: SchemaStateHistory = null): SchemaSubmissionHistory = {
     val __obj = js.Dynamic.literal()
+    if (gradeHistory != null) __obj.updateDynamic("gradeHistory")(gradeHistory.asInstanceOf[js.Any])
+    if (stateHistory != null) __obj.updateDynamic("stateHistory")(stateHistory.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubmissionHistory]
   }
-  @scala.inline
-  implicit class SchemaSubmissionHistoryOps[Self <: SchemaSubmissionHistory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGradeHistory(value: SchemaGradeHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradeHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradeHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradeHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateHistory(value: SchemaStateHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateHistory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

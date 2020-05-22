@@ -8,170 +8,77 @@ import scala.scalajs.js.annotation._
 /**
   * StatefulSetStatus represents the current state of a StatefulSet.
   */
-@js.native
 trait StatefulSetStatus extends js.Object {
   /**
     * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet
     * controller uses this field as a collision avoidance mechanism when it needs to create the
     * name for the newest ControllerRevision.
     */
-  var collisionCount: js.UndefOr[Input[Double]] = js.native
+  var collisionCount: js.UndefOr[Input[Double]] = js.undefined
   /**
     * Represents the latest available observations of a statefulset's current state.
     */
-  var conditions: js.UndefOr[Input[js.Array[Input[StatefulSetCondition]]]] = js.native
+  var conditions: js.UndefOr[Input[js.Array[Input[StatefulSetCondition]]]] = js.undefined
   /**
     * currentReplicas is the number of Pods created by the StatefulSet controller from the
     * StatefulSet version indicated by currentRevision.
     */
-  var currentReplicas: js.UndefOr[Input[Double]] = js.native
+  var currentReplicas: js.UndefOr[Input[Double]] = js.undefined
   /**
     * currentRevision, if not empty, indicates the version of the StatefulSet used to generate
     * Pods in the sequence [0,currentReplicas).
     */
-  var currentRevision: js.UndefOr[Input[String]] = js.native
+  var currentRevision: js.UndefOr[Input[String]] = js.undefined
   /**
     * observedGeneration is the most recent generation observed for this StatefulSet. It
     * corresponds to the StatefulSet's generation, which is updated on mutation by the API
     * Server.
     */
-  var observedGeneration: js.UndefOr[Input[Double]] = js.native
+  var observedGeneration: js.UndefOr[Input[Double]] = js.undefined
   /**
     * readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready
     * Condition.
     */
-  var readyReplicas: js.UndefOr[Input[Double]] = js.native
+  var readyReplicas: js.UndefOr[Input[Double]] = js.undefined
   /**
     * replicas is the number of Pods created by the StatefulSet controller.
     */
-  var replicas: Input[Double] = js.native
+  var replicas: Input[Double]
   /**
     * updateRevision, if not empty, indicates the version of the StatefulSet used to generate
     * Pods in the sequence [replicas-updatedReplicas,replicas)
     */
-  var updateRevision: js.UndefOr[Input[String]] = js.native
+  var updateRevision: js.UndefOr[Input[String]] = js.undefined
   /**
     * updatedReplicas is the number of Pods created by the StatefulSet controller from the
     * StatefulSet version indicated by updateRevision.
     */
-  var updatedReplicas: js.UndefOr[Input[Double]] = js.native
+  var updatedReplicas: js.UndefOr[Input[Double]] = js.undefined
 }
 
 object StatefulSetStatus {
   @scala.inline
-  def apply(replicas: Input[Double]): StatefulSetStatus = {
+  def apply(
+    replicas: Input[Double],
+    collisionCount: Input[Double] = null,
+    conditions: Input[js.Array[Input[StatefulSetCondition]]] = null,
+    currentReplicas: Input[Double] = null,
+    currentRevision: Input[String] = null,
+    observedGeneration: Input[Double] = null,
+    readyReplicas: Input[Double] = null,
+    updateRevision: Input[String] = null,
+    updatedReplicas: Input[Double] = null
+  ): StatefulSetStatus = {
     val __obj = js.Dynamic.literal(replicas = replicas.asInstanceOf[js.Any])
+    if (collisionCount != null) __obj.updateDynamic("collisionCount")(collisionCount.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (currentReplicas != null) __obj.updateDynamic("currentReplicas")(currentReplicas.asInstanceOf[js.Any])
+    if (currentRevision != null) __obj.updateDynamic("currentRevision")(currentRevision.asInstanceOf[js.Any])
+    if (observedGeneration != null) __obj.updateDynamic("observedGeneration")(observedGeneration.asInstanceOf[js.Any])
+    if (readyReplicas != null) __obj.updateDynamic("readyReplicas")(readyReplicas.asInstanceOf[js.Any])
+    if (updateRevision != null) __obj.updateDynamic("updateRevision")(updateRevision.asInstanceOf[js.Any])
+    if (updatedReplicas != null) __obj.updateDynamic("updatedReplicas")(updatedReplicas.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatefulSetStatus]
   }
-  @scala.inline
-  implicit class StatefulSetStatusOps[Self <: StatefulSetStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollisionCount(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollisionCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: Input[js.Array[Input[StatefulSetCondition]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentReplicas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentReplicas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentRevision(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObservedGeneration(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObservedGeneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observedGeneration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadyReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadyReplicas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyReplicas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateRevision(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRevision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedReplicas(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedReplicas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedReplicas")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

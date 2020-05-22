@@ -14,29 +14,10 @@ trait DescribeEntitiesDetectionV2JobResponse extends js.Object {
 
 object DescribeEntitiesDetectionV2JobResponse {
   @scala.inline
-  def apply(): DescribeEntitiesDetectionV2JobResponse = {
+  def apply(ComprehendMedicalAsyncJobProperties: ComprehendMedicalAsyncJobProperties = null): DescribeEntitiesDetectionV2JobResponse = {
     val __obj = js.Dynamic.literal()
+    if (ComprehendMedicalAsyncJobProperties != null) __obj.updateDynamic("ComprehendMedicalAsyncJobProperties")(ComprehendMedicalAsyncJobProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEntitiesDetectionV2JobResponse]
   }
-  @scala.inline
-  implicit class DescribeEntitiesDetectionV2JobResponseOps[Self <: DescribeEntitiesDetectionV2JobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComprehendMedicalAsyncJobProperties(value: ComprehendMedicalAsyncJobProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComprehendMedicalAsyncJobProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComprehendMedicalAsyncJobProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComprehendMedicalAsyncJobProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

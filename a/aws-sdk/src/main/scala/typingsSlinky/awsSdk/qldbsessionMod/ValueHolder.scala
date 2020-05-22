@@ -18,47 +18,11 @@ trait ValueHolder extends js.Object {
 
 object ValueHolder {
   @scala.inline
-  def apply(): ValueHolder = {
+  def apply(IonBinary: IonBinary = null, IonText: IonText = null): ValueHolder = {
     val __obj = js.Dynamic.literal()
+    if (IonBinary != null) __obj.updateDynamic("IonBinary")(IonBinary.asInstanceOf[js.Any])
+    if (IonText != null) __obj.updateDynamic("IonText")(IonText.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueHolder]
   }
-  @scala.inline
-  implicit class ValueHolderOps[Self <: ValueHolder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIonBinaryUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IonBinary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIonBinary(value: IonBinary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IonBinary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIonBinary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IonBinary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIonText(value: IonText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IonText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ChartPointFormat extends ClientObject {
   /**
     *
-    * Represents the border format of a chart data point, which includes color, style, and weight information. Read-only.
+    * Represents the border format of a chart data point, which includes color, style, and weight information.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -30,7 +30,7 @@ trait ChartPointFormat extends ClientObject {
   var context_ChartPointFormat: RequestContext = js.native
   /**
     *
-    * Represents the fill format of a chart, which includes background formatting information. Read-only.
+    * Represents the fill format of a chart, which includes background formatting information.
     *
     * [Api set: ExcelApi 1.1]
     */

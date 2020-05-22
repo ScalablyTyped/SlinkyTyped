@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RSocketResumableTransport extends DuplexConnection
 
 object RSocketResumableTransport {

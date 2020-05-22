@@ -43,6 +43,7 @@ package object mod {
     /* options */ js.UndefOr[typingsSlinky.got.mod.GotOptions[java.lang.String | scala.Null]], 
     typingsSlinky.got.mod.GotEmitter with typingsSlinky.node.streamMod.Duplex
   ]
+  type GotUrl = java.lang.String | typingsSlinky.node.httpsMod.RequestOptions | typingsSlinky.node.urlMod.Url | typingsSlinky.node.urlMod.URL_
   /**
     * @param options Unnormalized request options.
     */

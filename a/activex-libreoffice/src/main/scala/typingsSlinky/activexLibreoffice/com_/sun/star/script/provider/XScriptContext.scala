@@ -14,23 +14,22 @@ import scala.scalajs.js.annotation._
   * This interface is provided to scripts, and provides a means of access to the various interfaces which they might need to perform some action on a
   * document. It is required to be passed as the first argument for any Java scripts.
   */
-@js.native
 trait XScriptContext extends XInterface {
   /**
     * Obtain the component context which the script can use to create other uno components
     * @returns {@link com.sun.star.uno.XComponentContext} interface
     */
-  val ComponentContext: XComponentContext = js.native
+  val ComponentContext: XComponentContext
   /**
     * Obtain the desktop reference on which the script can operate
     * @returns {@link com.sun.star.frame.XDesktop} interface
     */
-  val Desktop: XDesktop = js.native
+  val Desktop: XDesktop
   /**
     * Obtain the document reference on which the script can operate
     * @returns {@link com.sun.star.frame.XModel} interface
     */
-  val Document: XModel = js.native
+  val Document: XModel
   /**
     * provides access to the context where the script was invoked
     *
@@ -42,22 +41,22 @@ trait XScriptContext extends XInterface {
     * If the returned context is not `NULL` , its `ScriptContainer` attribute equals the document as returned by `XScriptContext::getDocument` .
     * @since OOo 3.0
     */
-  val InvocationContext: XScriptInvocationContext = js.native
+  val InvocationContext: XScriptInvocationContext
   /**
     * Obtain the component context which the script can use to create other uno components
     * @returns {@link com.sun.star.uno.XComponentContext} interface
     */
-  def getComponentContext(): XComponentContext = js.native
+  def getComponentContext(): XComponentContext
   /**
     * Obtain the desktop reference on which the script can operate
     * @returns {@link com.sun.star.frame.XDesktop} interface
     */
-  def getDesktop(): XDesktop = js.native
+  def getDesktop(): XDesktop
   /**
     * Obtain the document reference on which the script can operate
     * @returns {@link com.sun.star.frame.XModel} interface
     */
-  def getDocument(): XModel = js.native
+  def getDocument(): XModel
   /**
     * provides access to the context where the script was invoked
     *
@@ -69,7 +68,7 @@ trait XScriptContext extends XInterface {
     * If the returned context is not `NULL` , its `ScriptContainer` attribute equals the document as returned by `XScriptContext::getDocument` .
     * @since OOo 3.0
     */
-  def getInvocationContext(): XScriptInvocationContext = js.native
+  def getInvocationContext(): XScriptInvocationContext
 }
 
 object XScriptContext {
@@ -90,61 +89,5 @@ object XScriptContext {
     val __obj = js.Dynamic.literal(ComponentContext = ComponentContext.asInstanceOf[js.Any], Desktop = Desktop.asInstanceOf[js.Any], Document = Document.asInstanceOf[js.Any], InvocationContext = InvocationContext.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getComponentContext = js.Any.fromFunction0(getComponentContext), getDesktop = js.Any.fromFunction0(getDesktop), getDocument = js.Any.fromFunction0(getDocument), getInvocationContext = js.Any.fromFunction0(getInvocationContext), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XScriptContext]
   }
-  @scala.inline
-  implicit class XScriptContextOps[Self <: XScriptContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponentContext(value: XComponentContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDesktop(value: XDesktop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Desktop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocument(value: XModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvocationContext(value: XScriptInvocationContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetComponentContext(value: () => XComponentContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getComponentContext")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDesktop(value: () => XDesktop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDesktop")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDocument(value: () => XModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInvocationContext(value: () => XScriptInvocationContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInvocationContext")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,47 +22,15 @@ trait DeleteOTAUpdateRequest extends js.Object {
 
 object DeleteOTAUpdateRequest {
   @scala.inline
-  def apply(otaUpdateId: OTAUpdateId): DeleteOTAUpdateRequest = {
+  def apply(
+    otaUpdateId: OTAUpdateId,
+    deleteStream: js.UndefOr[DeleteStream] = js.undefined,
+    forceDeleteAWSJob: js.UndefOr[ForceDeleteAWSJob] = js.undefined
+  ): DeleteOTAUpdateRequest = {
     val __obj = js.Dynamic.literal(otaUpdateId = otaUpdateId.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteStream)) __obj.updateDynamic("deleteStream")(deleteStream.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceDeleteAWSJob)) __obj.updateDynamic("forceDeleteAWSJob")(forceDeleteAWSJob.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteOTAUpdateRequest]
   }
-  @scala.inline
-  implicit class DeleteOTAUpdateRequestOps[Self <: DeleteOTAUpdateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOtaUpdateId(value: OTAUpdateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteStream(value: DeleteStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceDeleteAWSJob(value: ForceDeleteAWSJob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDeleteAWSJob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceDeleteAWSJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDeleteAWSJob")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

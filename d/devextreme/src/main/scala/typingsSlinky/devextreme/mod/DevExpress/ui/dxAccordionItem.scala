@@ -1,54 +1,38 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxAccordionItem extends CollectionWidgetItem {
-  /** Specifies the icon to be displayed in the panel's title. */
-  var icon: js.UndefOr[String] = js.native
-  /** Specifies text displayed for the widget item title. */
-  var title: js.UndefOr[String] = js.native
+  /** @name dxAccordionItem.icon */
+  var icon: js.UndefOr[String] = js.undefined
+  /** @name dxAccordionItem.title */
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object dxAccordionItem {
   @scala.inline
-  def apply(): dxAccordionItem = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    html: String = null,
+    icon: String = null,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery]) = null,
+    text: String = null,
+    title: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxAccordionItem = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxAccordionItem]
   }
-  @scala.inline
-  implicit class dxAccordionItemOps[Self <: dxAccordionItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

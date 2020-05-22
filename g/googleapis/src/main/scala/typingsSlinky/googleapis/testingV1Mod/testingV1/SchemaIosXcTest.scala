@@ -41,65 +41,18 @@ trait SchemaIosXcTest extends js.Object {
 
 object SchemaIosXcTest {
   @scala.inline
-  def apply(): SchemaIosXcTest = {
+  def apply(
+    appBundleId: String = null,
+    testsZip: SchemaFileReference = null,
+    xcodeVersion: String = null,
+    xctestrun: SchemaFileReference = null
+  ): SchemaIosXcTest = {
     val __obj = js.Dynamic.literal()
+    if (appBundleId != null) __obj.updateDynamic("appBundleId")(appBundleId.asInstanceOf[js.Any])
+    if (testsZip != null) __obj.updateDynamic("testsZip")(testsZip.asInstanceOf[js.Any])
+    if (xcodeVersion != null) __obj.updateDynamic("xcodeVersion")(xcodeVersion.asInstanceOf[js.Any])
+    if (xctestrun != null) __obj.updateDynamic("xctestrun")(xctestrun.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIosXcTest]
   }
-  @scala.inline
-  implicit class SchemaIosXcTestOps[Self <: SchemaIosXcTest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestsZip(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testsZip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestsZip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testsZip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXcodeVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xcodeVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXcodeVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xcodeVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXctestrun(value: SchemaFileReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xctestrun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXctestrun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xctestrun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

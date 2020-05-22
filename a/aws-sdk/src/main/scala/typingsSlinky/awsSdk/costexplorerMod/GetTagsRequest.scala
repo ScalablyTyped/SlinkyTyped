@@ -26,59 +26,17 @@ trait GetTagsRequest extends js.Object {
 
 object GetTagsRequest {
   @scala.inline
-  def apply(TimePeriod: DateInterval): GetTagsRequest = {
+  def apply(
+    TimePeriod: DateInterval,
+    NextPageToken: NextPageToken = null,
+    SearchString: SearchString = null,
+    TagKey: TagKey = null
+  ): GetTagsRequest = {
     val __obj = js.Dynamic.literal(TimePeriod = TimePeriod.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (SearchString != null) __obj.updateDynamic("SearchString")(SearchString.asInstanceOf[js.Any])
+    if (TagKey != null) __obj.updateDynamic("TagKey")(TagKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTagsRequest]
   }
-  @scala.inline
-  implicit class GetTagsRequestOps[Self <: GetTagsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimePeriod(value: DateInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: NextPageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchString(value: SearchString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagKey(value: TagKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

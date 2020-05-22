@@ -6,10 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A group of IPerceptionFrameProvider identifiers to be controlled together. */
-@js.native
 trait PerceptionControlGroup extends js.Object {
   /** The id(s) of the IPerceptionFrameProvider(s) controlled by this group. */
-  var frameProviderIds: IVectorView[String] = js.native
+  var frameProviderIds: IVectorView[String]
 }
 
 object PerceptionControlGroup {
@@ -18,19 +17,5 @@ object PerceptionControlGroup {
     val __obj = js.Dynamic.literal(frameProviderIds = frameProviderIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerceptionControlGroup]
   }
-  @scala.inline
-  implicit class PerceptionControlGroupOps[Self <: PerceptionControlGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameProviderIds(value: IVectorView[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameProviderIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

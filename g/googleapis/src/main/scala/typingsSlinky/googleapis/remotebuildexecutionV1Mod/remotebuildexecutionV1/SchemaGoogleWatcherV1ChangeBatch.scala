@@ -17,29 +17,10 @@ trait SchemaGoogleWatcherV1ChangeBatch extends js.Object {
 
 object SchemaGoogleWatcherV1ChangeBatch {
   @scala.inline
-  def apply(): SchemaGoogleWatcherV1ChangeBatch = {
+  def apply(changes: js.Array[SchemaGoogleWatcherV1Change] = null): SchemaGoogleWatcherV1ChangeBatch = {
     val __obj = js.Dynamic.literal()
+    if (changes != null) __obj.updateDynamic("changes")(changes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleWatcherV1ChangeBatch]
   }
-  @scala.inline
-  implicit class SchemaGoogleWatcherV1ChangeBatchOps[Self <: SchemaGoogleWatcherV1ChangeBatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChanges(value: js.Array[SchemaGoogleWatcherV1Change]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

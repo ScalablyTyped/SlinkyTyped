@@ -6,32 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait ListItemOpenToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait ListItemOpenToken extends TagToken {
   @JSName("type")
-  var type_ListItemOpenToken: list_item_open = js.native
+  var type_ListItemOpenToken: list_item_open
 }
 
 object ListItemOpenToken {
   @scala.inline
-  def apply(level: Double, `type`: list_item_open): ListItemOpenToken = {
+  def apply(level: Double, `type`: list_item_open, lines: js.Tuple2[Double, Double] = null): ListItemOpenToken = {
     val __obj = js.Dynamic.literal(level = level.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemOpenToken]
   }
-  @scala.inline
-  implicit class ListItemOpenTokenOps[Self <: ListItemOpenToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: list_item_open): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

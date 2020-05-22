@@ -12,17 +12,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
-@js.native
 trait TSIndexedAccessType
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSTypeKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var indexType: TSTypeKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var objectType: TSTypeKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSIndexedAccessType = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var indexType: TSTypeKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var objectType: TSTypeKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSIndexedAccessType
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSIndexedAccessType")

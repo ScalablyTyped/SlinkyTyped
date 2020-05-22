@@ -1,12 +1,13 @@
 package typingsSlinky.sipJs.transactionUserMod
 
+import typingsSlinky.sipJs.coreExceptionsMod.TransportError
 import typingsSlinky.sipJs.logMod.LoggerFactory
 import typingsSlinky.sipJs.messagesMod.IncomingResponseMessage
+import typingsSlinky.sipJs.transactionStateMod.TransactionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientTransactionUser extends TransactionUser {
   /**
     * Callback for request timeout error.
@@ -17,53 +18,31 @@ trait ClientTransactionUser extends TransactionUser {
     * TU MUST be informed of a timeout.
     * https://tools.ietf.org/html/rfc3261#section-17.1.2.2
     */
-  var onRequestTimeout: js.UndefOr[js.Function0[Unit]] = js.native
+  var onRequestTimeout: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback for delegation of valid response handling.
     *
     * Valid responses are passed up to the TU from the client transaction.
     * https://tools.ietf.org/html/rfc3261#section-17.1
     */
-  var receiveResponse: js.UndefOr[js.Function1[/* response */ IncomingResponseMessage, Unit]] = js.native
+  var receiveResponse: js.UndefOr[js.Function1[/* response */ IncomingResponseMessage, Unit]] = js.undefined
 }
 
 object ClientTransactionUser {
   @scala.inline
-  def apply(loggerFactory: LoggerFactory): ClientTransactionUser = {
+  def apply(
+    loggerFactory: LoggerFactory,
+    onRequestTimeout: () => Unit = null,
+    onStateChange: /* newState */ TransactionState => Unit = null,
+    onTransportError: /* error */ TransportError => Unit = null,
+    receiveResponse: /* response */ IncomingResponseMessage => Unit = null
+  ): ClientTransactionUser = {
     val __obj = js.Dynamic.literal(loggerFactory = loggerFactory.asInstanceOf[js.Any])
+    if (onRequestTimeout != null) __obj.updateDynamic("onRequestTimeout")(js.Any.fromFunction0(onRequestTimeout))
+    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction1(onStateChange))
+    if (onTransportError != null) __obj.updateDynamic("onTransportError")(js.Any.fromFunction1(onTransportError))
+    if (receiveResponse != null) __obj.updateDynamic("receiveResponse")(js.Any.fromFunction1(receiveResponse))
     __obj.asInstanceOf[ClientTransactionUser]
   }
-  @scala.inline
-  implicit class ClientTransactionUserOps[Self <: ClientTransactionUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnRequestTimeout(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRequestTimeout")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRequestTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRequestTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReceiveResponse(value: /* response */ IncomingResponseMessage => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveResponse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReceiveResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveResponse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

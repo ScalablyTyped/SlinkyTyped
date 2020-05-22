@@ -21,7 +21,7 @@ import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -114,7 +114,7 @@ object DetailsRowBase {
     @scala.inline
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDetailsRowStyleProps => Partial[IDetailsRowStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDetailsRowStyleProps => DeepPartial[IDetailsRowStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

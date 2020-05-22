@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,35 @@ import scala.scalajs.js.annotation._
   * @param options (read-only) version of the options passed to this UI
   */
 class WebXREnterExitUI protected ()
-  extends typingsSlinky.babylonjs.BABYLON.WebXREnterExitUI
+  extends typingsSlinky.babylonjs.BABYLON.WebXREnterExitUI {
+  /* CompleteClass */
+  override var _activeButton: js.Any = js.native
+  /* CompleteClass */
+  override var _buttons: js.Any = js.native
+  /* CompleteClass */
+  override var _overlay: js.Any = js.native
+  /* CompleteClass */
+  override var _updateButtons: js.Any = js.native
+  /**
+    * Fired every time the active button is changed.
+    *
+    * When xr is entered via a button that launches xr that button will be the callback parameter
+    *
+    * When exiting xr the callback parameter will be null)
+    */
+  /* CompleteClass */
+  override var activeButtonChangedObservable: typingsSlinky.babylonjs.BABYLON.Observable[Nullable[typingsSlinky.babylonjs.BABYLON.WebXREnterExitUIButton]] = js.native
+  /** version of the options passed to this UI */
+  /* CompleteClass */
+  override var options: typingsSlinky.babylonjs.BABYLON.WebXREnterExitUIOptions = js.native
+  /* CompleteClass */
+  override var scene: js.Any = js.native
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.WebXREnterExitUI")

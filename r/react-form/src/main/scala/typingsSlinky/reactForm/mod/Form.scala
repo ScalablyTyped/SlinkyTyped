@@ -19,6 +19,8 @@ class Form ()
   @JSName("componentWillReceiveProps")
   def componentWillReceiveProps_MForm(nextProps: ReadonlyPartialFormProps, nextContext: js.Any): Unit = js.native
   def componentWillUmount(): Unit = js.native
+  /* CompleteClass */
+  override def getChildContext(): FormContext = js.native
   def getDefaultState(): FormState = js.native
 }
 

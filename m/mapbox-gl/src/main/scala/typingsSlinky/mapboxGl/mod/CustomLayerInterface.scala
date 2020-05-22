@@ -8,24 +8,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomLayerInterface extends js.Object {
   /** A unique layer id. */
-  var id: String = js.native
+  var id: String
   /**
     * Optional method called when the layer has been added to the Map with Map#addLayer.
     * This gives the layer a chance to initialize gl resources and register event listeners.
     * @param map The Map this custom layer was just added to.
     * @param gl The gl context for the map.
     */
-  var onAdd: js.UndefOr[js.Function2[/* map */ Map, /* gl */ WebGLRenderingContext, Unit]] = js.native
+  var onAdd: js.UndefOr[js.Function2[/* map */ Map, /* gl */ WebGLRenderingContext, Unit]] = js.undefined
   /**
     * Optional method called when the layer has been removed from the Map with Map#removeLayer.
     * This gives the layer a chance to clean up gl resources and event listeners.
     * @param map The Map this custom layer was just added to.
     * @param gl The gl context for the map.
     */
-  var onRemove: js.UndefOr[js.Function2[/* map */ Map, /* gl */ WebGLRenderingContext, Unit]] = js.native
+  var onRemove: js.UndefOr[js.Function2[/* map */ Map, /* gl */ WebGLRenderingContext, Unit]] = js.undefined
   /**
     * Optional method called during a render frame to allow a layer to prepare resources
     * or render into a texture.
@@ -43,11 +42,11 @@ trait CustomLayerInterface extends js.Object {
     */
   var prerender: js.UndefOr[
     js.Function2[/* gl */ WebGLRenderingContext, /* matrix */ js.Array[Double], Unit]
-  ] = js.native
+  ] = js.undefined
   /* Either "2d" or "3d". Defaults to  "2d". */
-  var renderingMode: js.UndefOr[`2d` | `3d`] = js.native
+  var renderingMode: js.UndefOr[`2d` | `3d`] = js.undefined
   /* The layer's type. Must be "custom". */
-  var `type`: custom = js.native
+  var `type`: custom
   /**
     * Called during a render frame allowing the layer to draw into the GL context.
     *
@@ -72,89 +71,27 @@ trait CustomLayerInterface extends js.Object {
     *               MercatorCoordinate .fromLatLng can be used to project a  LngLat to a mercator
     *               coordinate.
     */
-  def render(gl: WebGLRenderingContext, matrix: js.Array[Double]): Unit = js.native
+  def render(gl: WebGLRenderingContext, matrix: js.Array[Double]): Unit
 }
 
 object CustomLayerInterface {
   @scala.inline
-  def apply(id: String, render: (WebGLRenderingContext, js.Array[Double]) => Unit, `type`: custom): CustomLayerInterface = {
+  def apply(
+    id: String,
+    render: (WebGLRenderingContext, js.Array[Double]) => Unit,
+    `type`: custom,
+    onAdd: (/* map */ Map, /* gl */ WebGLRenderingContext) => Unit = null,
+    onRemove: (/* map */ Map, /* gl */ WebGLRenderingContext) => Unit = null,
+    prerender: (/* gl */ WebGLRenderingContext, /* matrix */ js.Array[Double]) => Unit = null,
+    renderingMode: `2d` | `3d` = null
+  ): CustomLayerInterface = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], render = js.Any.fromFunction2(render))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction2(onAdd))
+    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction2(onRemove))
+    if (prerender != null) __obj.updateDynamic("prerender")(js.Any.fromFunction2(prerender))
+    if (renderingMode != null) __obj.updateDynamic("renderingMode")(renderingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomLayerInterface]
   }
-  @scala.inline
-  implicit class CustomLayerInterfaceOps[Self <: CustomLayerInterface] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRender(value: (WebGLRenderingContext, js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: custom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnAdd(value: (/* map */ Map, /* gl */ WebGLRenderingContext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemove(value: (/* map */ Map, /* gl */ WebGLRenderingContext) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrerender(value: (/* gl */ WebGLRenderingContext, /* matrix */ js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prerender")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrerender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prerender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderingMode(value: `2d` | `3d`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

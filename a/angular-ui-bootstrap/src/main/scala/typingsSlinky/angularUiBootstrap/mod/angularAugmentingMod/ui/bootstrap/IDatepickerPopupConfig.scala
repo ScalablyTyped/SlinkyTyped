@@ -5,255 +5,161 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDatepickerPopupConfig extends IDatepickerConfig {
   /**
     * A list of alternate formats acceptable for manual entry.
     *
     * @default []
     */
-  var altInputFormats: js.UndefOr[js.Array[String]] = js.native
+  var altInputFormats: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Append the datepicker popup element to `body`, rather than inserting after `datepicker-popup`.
     *
     * @default false
     */
-  var appendToBody: js.UndefOr[Boolean] = js.native
+  var appendToBody: js.UndefOr[Boolean] = js.undefined
   /**
     * The text to display for the clear button.
     *
     * @default 'Clear'
     */
-  var clearText: js.UndefOr[String] = js.native
+  var clearText: js.UndefOr[String] = js.undefined
   /**
     * Whether to close calendar when a date is chosen.
     *
     * @default true
     */
-  var closeOnDateSelection: js.UndefOr[Boolean] = js.native
+  var closeOnDateSelection: js.UndefOr[Boolean] = js.undefined
   /**
     * The text to display for the close button.
     *
     * @default 'Done'
     */
-  var closeText: js.UndefOr[String] = js.native
+  var closeText: js.UndefOr[String] = js.undefined
   /**
     * The text to display for the current day button.
     *
     * @default 'Today'
     */
-  var currentText: js.UndefOr[String] = js.native
+  var currentText: js.UndefOr[String] = js.undefined
   /**
     * The format for displayed dates.
     *
     * @default 'yyyy-MM-dd'
     */
-  var datepickerPopup: js.UndefOr[String] = js.native
+  var datepickerPopup: js.UndefOr[String] = js.undefined
   /**
     * Allows overriding of default template of the popup.
     *
     * @default 'template/datepicker/popup.html'
     */
-  var datepickerPopupTemplateUrl: js.UndefOr[String] = js.native
+  var datepickerPopupTemplateUrl: js.UndefOr[String] = js.undefined
   /**
     * Allows overriding of default template of the datepicker used in popup.
     *
     * @default 'template/datepicker/popup.html'
     */
-  var datepickerTemplateUrl: js.UndefOr[String] = js.native
+  var datepickerTemplateUrl: js.UndefOr[String] = js.undefined
   /**
     * Allows overriding of the default format for html5 date inputs.
     */
-  var html5Types: js.UndefOr[Date] = js.native
+  var html5Types: js.UndefOr[Date] = js.undefined
   /**
     * Whether to focus the datepicker popup upon opening.
     *
     * @default true
     */
-  var onOpenFocus: js.UndefOr[Boolean] = js.native
+  var onOpenFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Passing in 'auto' separated by a space before the placement will enable auto positioning, e.g: "auto bottom-left". The popup will attempt to position where it fits in the closest scrollable ancestor.
     *
     * @default 'auto bottom-left'
     */
-  var placement: js.UndefOr[String] = js.native
+  var placement: js.UndefOr[String] = js.undefined
   /**
     * Whether to display a button bar underneath the datepicker.
     *
     * @default true
     */
-  var showButtonBar: js.UndefOr[Boolean] = js.native
+  var showButtonBar: js.UndefOr[Boolean] = js.undefined
 }
 
 object IDatepickerPopupConfig {
   @scala.inline
-  def apply(): IDatepickerPopupConfig = {
+  def apply(
+    altInputFormats: js.Array[String] = null,
+    appendToBody: js.UndefOr[Boolean] = js.undefined,
+    clearText: String = null,
+    closeOnDateSelection: js.UndefOr[Boolean] = js.undefined,
+    closeText: String = null,
+    currentText: String = null,
+    customClass: /* args */ IDatepickerCellArgs => String = null,
+    dateDisabled: /* args */ IDatepickerCellArgs => Boolean = null,
+    datepickerMode: DatepickerMode = null,
+    datepickerPopup: String = null,
+    datepickerPopupTemplateUrl: String = null,
+    datepickerTemplateUrl: String = null,
+    formatDay: String = null,
+    formatDayHeader: String = null,
+    formatDayTitle: String = null,
+    formatMonth: String = null,
+    formatMonthTitle: String = null,
+    formatYear: String = null,
+    html5Types: Date = null,
+    initDate: js.Any = null,
+    maxDate: js.Any = null,
+    maxMode: String = null,
+    minDate: js.Any = null,
+    minMode: String = null,
+    monthColumns: js.UndefOr[Double] = js.undefined,
+    ngModelOptions: IDropdownConfigNgOptions = null,
+    onOpenFocus: js.UndefOr[Boolean] = js.undefined,
+    placement: String = null,
+    shortcutPropagation: js.UndefOr[Boolean] = js.undefined,
+    showButtonBar: js.UndefOr[Boolean] = js.undefined,
+    showWeeks: js.UndefOr[Boolean] = js.undefined,
+    startingDay: js.UndefOr[Double] = js.undefined,
+    yearColumns: js.UndefOr[Double] = js.undefined,
+    yearRange: js.UndefOr[Double] = js.undefined,
+    yearRows: js.UndefOr[Double] = js.undefined
+  ): IDatepickerPopupConfig = {
     val __obj = js.Dynamic.literal()
+    if (altInputFormats != null) __obj.updateDynamic("altInputFormats")(altInputFormats.asInstanceOf[js.Any])
+    if (!js.isUndefined(appendToBody)) __obj.updateDynamic("appendToBody")(appendToBody.get.asInstanceOf[js.Any])
+    if (clearText != null) __obj.updateDynamic("clearText")(clearText.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnDateSelection)) __obj.updateDynamic("closeOnDateSelection")(closeOnDateSelection.get.asInstanceOf[js.Any])
+    if (closeText != null) __obj.updateDynamic("closeText")(closeText.asInstanceOf[js.Any])
+    if (currentText != null) __obj.updateDynamic("currentText")(currentText.asInstanceOf[js.Any])
+    if (customClass != null) __obj.updateDynamic("customClass")(js.Any.fromFunction1(customClass))
+    if (dateDisabled != null) __obj.updateDynamic("dateDisabled")(js.Any.fromFunction1(dateDisabled))
+    if (datepickerMode != null) __obj.updateDynamic("datepickerMode")(datepickerMode.asInstanceOf[js.Any])
+    if (datepickerPopup != null) __obj.updateDynamic("datepickerPopup")(datepickerPopup.asInstanceOf[js.Any])
+    if (datepickerPopupTemplateUrl != null) __obj.updateDynamic("datepickerPopupTemplateUrl")(datepickerPopupTemplateUrl.asInstanceOf[js.Any])
+    if (datepickerTemplateUrl != null) __obj.updateDynamic("datepickerTemplateUrl")(datepickerTemplateUrl.asInstanceOf[js.Any])
+    if (formatDay != null) __obj.updateDynamic("formatDay")(formatDay.asInstanceOf[js.Any])
+    if (formatDayHeader != null) __obj.updateDynamic("formatDayHeader")(formatDayHeader.asInstanceOf[js.Any])
+    if (formatDayTitle != null) __obj.updateDynamic("formatDayTitle")(formatDayTitle.asInstanceOf[js.Any])
+    if (formatMonth != null) __obj.updateDynamic("formatMonth")(formatMonth.asInstanceOf[js.Any])
+    if (formatMonthTitle != null) __obj.updateDynamic("formatMonthTitle")(formatMonthTitle.asInstanceOf[js.Any])
+    if (formatYear != null) __obj.updateDynamic("formatYear")(formatYear.asInstanceOf[js.Any])
+    if (html5Types != null) __obj.updateDynamic("html5Types")(html5Types.asInstanceOf[js.Any])
+    if (initDate != null) __obj.updateDynamic("initDate")(initDate.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (maxMode != null) __obj.updateDynamic("maxMode")(maxMode.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (minMode != null) __obj.updateDynamic("minMode")(minMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(monthColumns)) __obj.updateDynamic("monthColumns")(monthColumns.get.asInstanceOf[js.Any])
+    if (ngModelOptions != null) __obj.updateDynamic("ngModelOptions")(ngModelOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(onOpenFocus)) __obj.updateDynamic("onOpenFocus")(onOpenFocus.get.asInstanceOf[js.Any])
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (!js.isUndefined(shortcutPropagation)) __obj.updateDynamic("shortcutPropagation")(shortcutPropagation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showButtonBar)) __obj.updateDynamic("showButtonBar")(showButtonBar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showWeeks)) __obj.updateDynamic("showWeeks")(showWeeks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startingDay)) __obj.updateDynamic("startingDay")(startingDay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yearColumns)) __obj.updateDynamic("yearColumns")(yearColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yearRange)) __obj.updateDynamic("yearRange")(yearRange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yearRows)) __obj.updateDynamic("yearRows")(yearRows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDatepickerPopupConfig]
   }
-  @scala.inline
-  implicit class IDatepickerPopupConfigOps[Self <: IDatepickerPopupConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltInputFormats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altInputFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltInputFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altInputFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppendToBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendToBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppendToBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendToBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnDateSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnDateSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnDateSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnDateSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatepickerPopup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datepickerPopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatepickerPopup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datepickerPopup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatepickerPopupTemplateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datepickerPopupTemplateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatepickerPopupTemplateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datepickerPopupTemplateUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatepickerTemplateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datepickerTemplateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatepickerTemplateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datepickerTemplateUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml5Types(value: Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html5Types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml5Types: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html5Types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpenFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOpenFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowButtonBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButtonBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowButtonBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButtonBar")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

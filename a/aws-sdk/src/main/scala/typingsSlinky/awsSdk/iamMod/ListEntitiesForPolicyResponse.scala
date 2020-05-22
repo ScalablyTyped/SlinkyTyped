@@ -30,77 +30,20 @@ trait ListEntitiesForPolicyResponse extends js.Object {
 
 object ListEntitiesForPolicyResponse {
   @scala.inline
-  def apply(): ListEntitiesForPolicyResponse = {
+  def apply(
+    IsTruncated: js.UndefOr[booleanType] = js.undefined,
+    Marker: responseMarkerType = null,
+    PolicyGroups: PolicyGroupListType = null,
+    PolicyRoles: PolicyRoleListType = null,
+    PolicyUsers: PolicyUserListType = null
+  ): ListEntitiesForPolicyResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.get.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (PolicyGroups != null) __obj.updateDynamic("PolicyGroups")(PolicyGroups.asInstanceOf[js.Any])
+    if (PolicyRoles != null) __obj.updateDynamic("PolicyRoles")(PolicyRoles.asInstanceOf[js.Any])
+    if (PolicyUsers != null) __obj.updateDynamic("PolicyUsers")(PolicyUsers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListEntitiesForPolicyResponse]
   }
-  @scala.inline
-  implicit class ListEntitiesForPolicyResponseOps[Self <: ListEntitiesForPolicyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsTruncated(value: booleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTruncated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: responseMarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyGroups(value: PolicyGroupListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyRoles(value: PolicyRoleListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyRoles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyRoles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyRoles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyUsers(value: PolicyUserListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyUsers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyUsers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,651 +4,243 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtClassesSettings extends js.Object {
   /**
     * Default Value:
     * dataTables_filter
     */
-  var sFilter: js.UndefOr[String] = js.native
-  var sFilterInput: js.UndefOr[String] = js.native
-  var sFooterTH: js.UndefOr[String] = js.native
-  var sHeaderTH: js.UndefOr[String] = js.native
+  var sFilter: js.UndefOr[String] = js.undefined
+  var sFilterInput: js.UndefOr[String] = js.undefined
+  var sFooterTH: js.UndefOr[String] = js.undefined
+  var sHeaderTH: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_info
     */
-  var sInfo: js.UndefOr[String] = js.native
-  var sJUIFooter: js.UndefOr[String] = js.native
-  var sJUIHeader: js.UndefOr[String] = js.native
+  var sInfo: js.UndefOr[String] = js.undefined
+  var sJUIFooter: js.UndefOr[String] = js.undefined
+  var sJUIHeader: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_length
     */
-  var sLength: js.UndefOr[String] = js.native
-  var sLengthSelect: js.UndefOr[String] = js.native
+  var sLength: js.UndefOr[String] = js.undefined
+  var sLengthSelect: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * no-footer
     */
-  var sNoFooter: js.UndefOr[String] = js.native
+  var sNoFooter: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * paginate_button
     */
-  var sPageButton: js.UndefOr[String] = js.native
+  var sPageButton: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * current
     */
-  var sPageButtonActive: js.UndefOr[String] = js.native
+  var sPageButtonActive: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * disabled
     */
-  var sPageButtonDisabled: js.UndefOr[String] = js.native
+  var sPageButtonDisabled: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_paginate paging_
     */
-  var sPaging: js.UndefOr[String] = js.native
+  var sPaging: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_processing
     */
-  var sProcessing: js.UndefOr[String] = js.native
+  var sProcessing: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_empty
     */
-  var sRowEmpty: js.UndefOr[String] = js.native
+  var sRowEmpty: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_scrollBody
     */
-  var sScrollBody: js.UndefOr[String] = js.native
+  var sScrollBody: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_scrollFoot
     */
-  var sScrollFoot: js.UndefOr[String] = js.native
+  var sScrollFoot: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_scrollFootInner
     */
-  var sScrollFootInner: js.UndefOr[String] = js.native
+  var sScrollFootInner: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_scrollHead
     */
-  var sScrollHead: js.UndefOr[String] = js.native
+  var sScrollHead: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_scrollHeadInner
     */
-  var sScrollHeadInner: js.UndefOr[String] = js.native
+  var sScrollHeadInner: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_scroll
     */
-  var sScrollWrapper: js.UndefOr[String] = js.native
+  var sScrollWrapper: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting_asc
     */
-  var sSortAsc: js.UndefOr[String] = js.native
+  var sSortAsc: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting_
     */
-  var sSortColumn: js.UndefOr[String] = js.native
+  var sSortColumn: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting_desc
     */
-  var sSortDesc: js.UndefOr[String] = js.native
-  var sSortIcon: js.UndefOr[String] = js.native
-  var sSortJUI: js.UndefOr[String] = js.native
-  var sSortJUIAsc: js.UndefOr[String] = js.native
-  var sSortJUIAscAllowed: js.UndefOr[String] = js.native
-  var sSortJUIDesc: js.UndefOr[String] = js.native
-  var sSortJUIDescAllowed: js.UndefOr[String] = js.native
-  var sSortJUIWrapper: js.UndefOr[String] = js.native
+  var sSortDesc: js.UndefOr[String] = js.undefined
+  var sSortIcon: js.UndefOr[String] = js.undefined
+  var sSortJUI: js.UndefOr[String] = js.undefined
+  var sSortJUIAsc: js.UndefOr[String] = js.undefined
+  var sSortJUIAscAllowed: js.UndefOr[String] = js.undefined
+  var sSortJUIDesc: js.UndefOr[String] = js.undefined
+  var sSortJUIDescAllowed: js.UndefOr[String] = js.undefined
+  var sSortJUIWrapper: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting
     */
-  var sSortable: js.UndefOr[String] = js.native
+  var sSortable: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting_asc_disabled
     */
-  var sSortableAsc: js.UndefOr[String] = js.native
+  var sSortableAsc: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting_desc_disabled
     */
-  var sSortableDesc: js.UndefOr[String] = js.native
+  var sSortableDesc: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * sorting_disabled
     */
-  var sSortableNone: js.UndefOr[String] = js.native
+  var sSortableNone: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * even
     */
-  var sStripeEven: js.UndefOr[String] = js.native
+  var sStripeEven: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * odd
     */
-  var sStripeOdd: js.UndefOr[String] = js.native
+  var sStripeOdd: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTable
     */
-  var sTable: js.UndefOr[String] = js.native
+  var sTable: js.UndefOr[String] = js.undefined
   /**
     * Default Value:
     * dataTables_wrapper
     */
-  var sWrapper: js.UndefOr[String] = js.native
+  var sWrapper: js.UndefOr[String] = js.undefined
 }
 
 object ExtClassesSettings {
   @scala.inline
-  def apply(): ExtClassesSettings = {
+  def apply(
+    sFilter: String = null,
+    sFilterInput: String = null,
+    sFooterTH: String = null,
+    sHeaderTH: String = null,
+    sInfo: String = null,
+    sJUIFooter: String = null,
+    sJUIHeader: String = null,
+    sLength: String = null,
+    sLengthSelect: String = null,
+    sNoFooter: String = null,
+    sPageButton: String = null,
+    sPageButtonActive: String = null,
+    sPageButtonDisabled: String = null,
+    sPaging: String = null,
+    sProcessing: String = null,
+    sRowEmpty: String = null,
+    sScrollBody: String = null,
+    sScrollFoot: String = null,
+    sScrollFootInner: String = null,
+    sScrollHead: String = null,
+    sScrollHeadInner: String = null,
+    sScrollWrapper: String = null,
+    sSortAsc: String = null,
+    sSortColumn: String = null,
+    sSortDesc: String = null,
+    sSortIcon: String = null,
+    sSortJUI: String = null,
+    sSortJUIAsc: String = null,
+    sSortJUIAscAllowed: String = null,
+    sSortJUIDesc: String = null,
+    sSortJUIDescAllowed: String = null,
+    sSortJUIWrapper: String = null,
+    sSortable: String = null,
+    sSortableAsc: String = null,
+    sSortableDesc: String = null,
+    sSortableNone: String = null,
+    sStripeEven: String = null,
+    sStripeOdd: String = null,
+    sTable: String = null,
+    sWrapper: String = null
+  ): ExtClassesSettings = {
     val __obj = js.Dynamic.literal()
+    if (sFilter != null) __obj.updateDynamic("sFilter")(sFilter.asInstanceOf[js.Any])
+    if (sFilterInput != null) __obj.updateDynamic("sFilterInput")(sFilterInput.asInstanceOf[js.Any])
+    if (sFooterTH != null) __obj.updateDynamic("sFooterTH")(sFooterTH.asInstanceOf[js.Any])
+    if (sHeaderTH != null) __obj.updateDynamic("sHeaderTH")(sHeaderTH.asInstanceOf[js.Any])
+    if (sInfo != null) __obj.updateDynamic("sInfo")(sInfo.asInstanceOf[js.Any])
+    if (sJUIFooter != null) __obj.updateDynamic("sJUIFooter")(sJUIFooter.asInstanceOf[js.Any])
+    if (sJUIHeader != null) __obj.updateDynamic("sJUIHeader")(sJUIHeader.asInstanceOf[js.Any])
+    if (sLength != null) __obj.updateDynamic("sLength")(sLength.asInstanceOf[js.Any])
+    if (sLengthSelect != null) __obj.updateDynamic("sLengthSelect")(sLengthSelect.asInstanceOf[js.Any])
+    if (sNoFooter != null) __obj.updateDynamic("sNoFooter")(sNoFooter.asInstanceOf[js.Any])
+    if (sPageButton != null) __obj.updateDynamic("sPageButton")(sPageButton.asInstanceOf[js.Any])
+    if (sPageButtonActive != null) __obj.updateDynamic("sPageButtonActive")(sPageButtonActive.asInstanceOf[js.Any])
+    if (sPageButtonDisabled != null) __obj.updateDynamic("sPageButtonDisabled")(sPageButtonDisabled.asInstanceOf[js.Any])
+    if (sPaging != null) __obj.updateDynamic("sPaging")(sPaging.asInstanceOf[js.Any])
+    if (sProcessing != null) __obj.updateDynamic("sProcessing")(sProcessing.asInstanceOf[js.Any])
+    if (sRowEmpty != null) __obj.updateDynamic("sRowEmpty")(sRowEmpty.asInstanceOf[js.Any])
+    if (sScrollBody != null) __obj.updateDynamic("sScrollBody")(sScrollBody.asInstanceOf[js.Any])
+    if (sScrollFoot != null) __obj.updateDynamic("sScrollFoot")(sScrollFoot.asInstanceOf[js.Any])
+    if (sScrollFootInner != null) __obj.updateDynamic("sScrollFootInner")(sScrollFootInner.asInstanceOf[js.Any])
+    if (sScrollHead != null) __obj.updateDynamic("sScrollHead")(sScrollHead.asInstanceOf[js.Any])
+    if (sScrollHeadInner != null) __obj.updateDynamic("sScrollHeadInner")(sScrollHeadInner.asInstanceOf[js.Any])
+    if (sScrollWrapper != null) __obj.updateDynamic("sScrollWrapper")(sScrollWrapper.asInstanceOf[js.Any])
+    if (sSortAsc != null) __obj.updateDynamic("sSortAsc")(sSortAsc.asInstanceOf[js.Any])
+    if (sSortColumn != null) __obj.updateDynamic("sSortColumn")(sSortColumn.asInstanceOf[js.Any])
+    if (sSortDesc != null) __obj.updateDynamic("sSortDesc")(sSortDesc.asInstanceOf[js.Any])
+    if (sSortIcon != null) __obj.updateDynamic("sSortIcon")(sSortIcon.asInstanceOf[js.Any])
+    if (sSortJUI != null) __obj.updateDynamic("sSortJUI")(sSortJUI.asInstanceOf[js.Any])
+    if (sSortJUIAsc != null) __obj.updateDynamic("sSortJUIAsc")(sSortJUIAsc.asInstanceOf[js.Any])
+    if (sSortJUIAscAllowed != null) __obj.updateDynamic("sSortJUIAscAllowed")(sSortJUIAscAllowed.asInstanceOf[js.Any])
+    if (sSortJUIDesc != null) __obj.updateDynamic("sSortJUIDesc")(sSortJUIDesc.asInstanceOf[js.Any])
+    if (sSortJUIDescAllowed != null) __obj.updateDynamic("sSortJUIDescAllowed")(sSortJUIDescAllowed.asInstanceOf[js.Any])
+    if (sSortJUIWrapper != null) __obj.updateDynamic("sSortJUIWrapper")(sSortJUIWrapper.asInstanceOf[js.Any])
+    if (sSortable != null) __obj.updateDynamic("sSortable")(sSortable.asInstanceOf[js.Any])
+    if (sSortableAsc != null) __obj.updateDynamic("sSortableAsc")(sSortableAsc.asInstanceOf[js.Any])
+    if (sSortableDesc != null) __obj.updateDynamic("sSortableDesc")(sSortableDesc.asInstanceOf[js.Any])
+    if (sSortableNone != null) __obj.updateDynamic("sSortableNone")(sSortableNone.asInstanceOf[js.Any])
+    if (sStripeEven != null) __obj.updateDynamic("sStripeEven")(sStripeEven.asInstanceOf[js.Any])
+    if (sStripeOdd != null) __obj.updateDynamic("sStripeOdd")(sStripeOdd.asInstanceOf[js.Any])
+    if (sTable != null) __obj.updateDynamic("sTable")(sTable.asInstanceOf[js.Any])
+    if (sWrapper != null) __obj.updateDynamic("sWrapper")(sWrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtClassesSettings]
   }
-  @scala.inline
-  implicit class ExtClassesSettingsOps[Self <: ExtClassesSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSFilterInput(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sFilterInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSFilterInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sFilterInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSFooterTH(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sFooterTH")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSFooterTH: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sFooterTH")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSHeaderTH(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sHeaderTH")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSHeaderTH: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sHeaderTH")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSJUIFooter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sJUIFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSJUIFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sJUIFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSJUIHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sJUIHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSJUIHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sJUIHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSLength(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSLengthSelect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sLengthSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSLengthSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sLengthSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSNoFooter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sNoFooter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSNoFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sNoFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSPageButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPageButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSPageButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPageButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSPageButtonActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPageButtonActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSPageButtonActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPageButtonActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSPageButtonDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPageButtonDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSPageButtonDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPageButtonDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSPaging(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPaging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSPaging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sPaging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSProcessing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sProcessing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSProcessing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sProcessing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSRowEmpty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sRowEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSRowEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sRowEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSScrollBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSScrollBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSScrollFoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollFoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSScrollFoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollFoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSScrollFootInner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollFootInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSScrollFootInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollFootInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSScrollHead(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollHead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSScrollHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollHead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSScrollHeadInner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollHeadInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSScrollHeadInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollHeadInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSScrollWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSScrollWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sScrollWrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortAsc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortAsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortAsc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortAsc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortJUI(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortJUI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortJUIAsc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIAsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortJUIAsc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIAsc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortJUIAscAllowed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIAscAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortJUIAscAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIAscAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortJUIDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortJUIDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortJUIDescAllowed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIDescAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortJUIDescAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIDescAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortJUIWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortJUIWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortJUIWrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortableAsc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortableAsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortableAsc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortableAsc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortableDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortableDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortableDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortableDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSortableNone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortableNone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSortableNone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sSortableNone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSStripeEven(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sStripeEven")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSStripeEven: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sStripeEven")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSStripeOdd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sStripeOdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSStripeOdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sStripeOdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSTable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sWrapper")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

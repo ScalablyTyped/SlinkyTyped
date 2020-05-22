@@ -39,60 +39,14 @@ object Selection {
   def apply(
     countNumber: Input[Double],
     countType: Input[imageCountMoreThan | sinceImagePushed],
-    tagStatus: Input[tagged | untagged | any]
+    tagStatus: Input[tagged | untagged | any],
+    countUnit: Input[String] = null,
+    tagPrefixList: Input[String] | js.Array[Input[String]] = null
   ): Selection = {
     val __obj = js.Dynamic.literal(countNumber = countNumber.asInstanceOf[js.Any], countType = countType.asInstanceOf[js.Any], tagStatus = tagStatus.asInstanceOf[js.Any])
+    if (countUnit != null) __obj.updateDynamic("countUnit")(countUnit.asInstanceOf[js.Any])
+    if (tagPrefixList != null) __obj.updateDynamic("tagPrefixList")(tagPrefixList.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
-  @scala.inline
-  implicit class SelectionOps[Self <: Selection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountNumber(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountType(value: Input[imageCountMoreThan | sinceImagePushed]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagStatus(value: Input[tagged | untagged | any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountUnit(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagPrefixList(value: Input[String] | js.Array[Input[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagPrefixList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagPrefixList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagPrefixList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

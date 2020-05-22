@@ -5,44 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdminGroupsSettings_ extends js.Object {
-  var Groups: js.UndefOr[GroupsCollection] = js.native
+  var Groups: js.UndefOr[GroupsCollection] = js.undefined
   // Create a new instance of Groups
-  def newGroups(): typingsSlinky.googleAppsScript.GoogleAppsScript.AdminGroupsSettings.Schema.Groups = js.native
+  def newGroups(): typingsSlinky.googleAppsScript.GoogleAppsScript.AdminGroupsSettings.Schema.Groups
 }
 
 object AdminGroupsSettings_ {
   @scala.inline
-  def apply(newGroups: () => typingsSlinky.googleAppsScript.GoogleAppsScript.AdminGroupsSettings.Schema.Groups): AdminGroupsSettings_ = {
+  def apply(
+    newGroups: () => typingsSlinky.googleAppsScript.GoogleAppsScript.AdminGroupsSettings.Schema.Groups,
+    Groups: GroupsCollection = null
+  ): AdminGroupsSettings_ = {
     val __obj = js.Dynamic.literal(newGroups = js.Any.fromFunction0(newGroups))
+    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdminGroupsSettings_]
   }
-  @scala.inline
-  implicit class AdminGroupsSettings_Ops[Self <: AdminGroupsSettings_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewGroups(value: () => typingsSlinky.googleAppsScript.GoogleAppsScript.AdminGroupsSettings.Schema.Groups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGroups")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGroups(value: GroupsCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

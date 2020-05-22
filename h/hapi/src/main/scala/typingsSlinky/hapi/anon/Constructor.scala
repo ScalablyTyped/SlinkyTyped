@@ -2,48 +2,21 @@ package typingsSlinky.hapi.anon
 
 import typingsSlinky.catbox.mod.ClientOptions
 import typingsSlinky.catbox.mod.EnginePrototype
-import typingsSlinky.hapi.mod.CacheProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Constructor[T /* <: ClientOptions */] extends CacheProvider[T] {
-  var constructor: EnginePrototype[_] = js.native
-  var options: js.UndefOr[T] = js.native
+trait Constructor[T /* <: ClientOptions */] extends js.Object {
+  var constructor: EnginePrototype[_]
+  var options: js.UndefOr[T] = js.undefined
 }
 
 object Constructor {
   @scala.inline
-  def apply[T](constructor: EnginePrototype[_]): Constructor[T] = {
+  def apply[T](constructor: EnginePrototype[_], options: T = null): Constructor[T] = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[Constructor[T]]
   }
-  @scala.inline
-  implicit class ConstructorOps[Self[t] <: Constructor[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withConstructor(value: EnginePrototype[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptions(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

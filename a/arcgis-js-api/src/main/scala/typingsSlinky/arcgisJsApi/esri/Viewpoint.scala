@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 trait Viewpoint
   extends Accessor
      with JSONSupport
-     with GoToTarget2D
-     with GoToTarget3D {
+     with _GoToTarget2D
+     with _GoToTarget3D {
   /**
     * The viewpoint camera (3D only).
     * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.

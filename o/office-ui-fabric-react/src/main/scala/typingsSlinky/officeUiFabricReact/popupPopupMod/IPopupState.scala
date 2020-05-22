@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPopupState extends js.Object {
-  var needsVerticalScrollBar: js.UndefOr[Boolean] = js.native
+  var needsVerticalScrollBar: js.UndefOr[Boolean] = js.undefined
 }
 
 object IPopupState {
   @scala.inline
-  def apply(): IPopupState = {
+  def apply(needsVerticalScrollBar: js.UndefOr[Boolean] = js.undefined): IPopupState = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(needsVerticalScrollBar)) __obj.updateDynamic("needsVerticalScrollBar")(needsVerticalScrollBar.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPopupState]
   }
-  @scala.inline
-  implicit class IPopupStateOps[Self <: IPopupState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNeedsVerticalScrollBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsVerticalScrollBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNeedsVerticalScrollBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsVerticalScrollBar")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

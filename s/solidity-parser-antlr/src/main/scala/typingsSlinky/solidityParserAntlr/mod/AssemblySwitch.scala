@@ -5,34 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ @js.native
-trait AssemblySwitch
+- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ trait AssemblySwitch
   extends AssemblyItem
      with BaseASTNode {
   @JSName("type")
-  var type_AssemblySwitch: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblySwitch = js.native
+  var type_AssemblySwitch: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblySwitch
 }
 
 object AssemblySwitch {
   @scala.inline
-  def apply(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblySwitch): AssemblySwitch = {
+  def apply(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblySwitch,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): AssemblySwitch = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssemblySwitch]
   }
-  @scala.inline
-  implicit class AssemblySwitchOps[Self <: AssemblySwitch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblySwitch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

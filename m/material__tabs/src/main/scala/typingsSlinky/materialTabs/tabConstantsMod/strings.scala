@@ -1,35 +1,22 @@
 package typingsSlinky.materialTabs.tabConstantsMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.materialBase.foundationMod.MDCStrings
 import typingsSlinky.materialTabs.materialTabsStrings.MDCTabColonselected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait strings extends MDCStrings {
-  var SELECTED_EVENT: MDCTabColonselected = js.native
+  var SELECTED_EVENT: MDCTabColonselected
 }
 
 object strings {
   @scala.inline
-  def apply(SELECTED_EVENT: MDCTabColonselected): strings = {
+  def apply(SELECTED_EVENT: MDCTabColonselected, StringDictionary: StringDictionary[String] = null): strings = {
     val __obj = js.Dynamic.literal(SELECTED_EVENT = SELECTED_EVENT.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[strings]
   }
-  @scala.inline
-  implicit class stringsOps[Self <: strings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSELECTED_EVENT(value: MDCTabColonselected): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SELECTED_EVENT")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

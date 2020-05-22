@@ -11,7 +11,5 @@ import scala.scalajs.js.annotation._
 object messageBarButtonStylesMod extends js.Object {
   def getStyles(theme: ITheme): IButtonStyles = js.native
   def getStyles(theme: ITheme, customStyles: IButtonStyles): IButtonStyles = js.native
-  def getStyles(theme: ITheme, customStyles: IButtonStyles, focusInset: String): IButtonStyles = js.native
-  def getStyles(theme: ITheme, customStyles: IButtonStyles, focusInset: String, focusColor: String): IButtonStyles = js.native
 }
 

@@ -17,29 +17,10 @@ trait SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotation extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotation {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotation = {
+  def apply(cropHints: js.Array[SchemaGoogleCloudVisionV1p4beta1CropHint] = null): SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (cropHints != null) __obj.updateDynamic("cropHints")(cropHints.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotation]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotationOps[Self <: SchemaGoogleCloudVisionV1p4beta1CropHintsAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCropHints(value: js.Array[SchemaGoogleCloudVisionV1p4beta1CropHint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCropHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropHints")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

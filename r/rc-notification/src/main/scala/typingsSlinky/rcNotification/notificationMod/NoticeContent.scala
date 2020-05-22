@@ -2,8 +2,8 @@ package typingsSlinky.rcNotification.notificationMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.rcNotification.noticeMod.DivProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.MouseEventHandler
@@ -12,204 +12,57 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Omit<rc-notification.rc-notification/lib/Notice.NoticeProps, 'prefixCls' | 'children'> */
-@js.native
 trait NoticeContent extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var closable: js.UndefOr[Boolean] = js.native
-  var closeIcon: js.UndefOr[TagMod[Any]] = js.native
-  var content: js.UndefOr[TagMod[Any]] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var holder: js.UndefOr[HTMLDivElement] = js.native
-  var key: js.UndefOr[Key] = js.native
-  var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onClose: js.UndefOr[js.Function0[Unit]] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var update: js.UndefOr[Boolean] = js.native
-  var updateKey: js.UndefOr[Key] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var closable: js.UndefOr[Boolean] = js.undefined
+  var closeIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var content: js.UndefOr[TagMod[Any]] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var holder: js.UndefOr[HTMLDivElement] = js.undefined
+  var key: js.UndefOr[Key] = js.undefined
+  var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var props: js.UndefOr[DivProps] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var update: js.UndefOr[Boolean] = js.undefined
+  var updateKey: js.UndefOr[Key] = js.undefined
 }
 
 object NoticeContent {
   @scala.inline
-  def apply(): NoticeContent = {
+  def apply(
+    className: String = null,
+    closable: js.UndefOr[Boolean] = js.undefined,
+    closeIcon: TagMod[Any] = null,
+    content: TagMod[Any] = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    holder: HTMLDivElement = null,
+    key: Key = null,
+    onClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onClose: () => Unit = null,
+    prefixCls: String = null,
+    props: DivProps = null,
+    style: CSSProperties = null,
+    update: js.UndefOr[Boolean] = js.undefined,
+    updateKey: Key = null
+  ): NoticeContent = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
+    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (holder != null) __obj.updateDynamic("holder")(holder.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (props != null) __obj.updateDynamic("props")(props.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(update)) __obj.updateDynamic("update")(update.get.asInstanceOf[js.Any])
+    if (updateKey != null) __obj.updateDynamic("updateKey")(updateKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoticeContent]
   }
-  @scala.inline
-  implicit class NoticeContentOps[Self <: NoticeContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloseIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHolder(value: HTMLDivElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

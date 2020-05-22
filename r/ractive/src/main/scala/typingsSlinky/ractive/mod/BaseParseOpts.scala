@@ -4,149 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseParseOpts extends js.Object {
   /** The number of lines of template above and below a line with an error to include in the error message. */
-  var contextLines: js.UndefOr[Double] = js.native
+  var contextLines: js.UndefOr[Double] = js.undefined
   /** Whether or not to produce a map of expression string -> function when parsing the template. */
-  var csp: js.UndefOr[Boolean] = js.native
+  var csp: js.UndefOr[Boolean] = js.undefined
   /** The regular mustach delimiters - defaults to {{ }}. */
-  var delimiters: js.UndefOr[ParseDelimiters] = js.native
+  var delimiters: js.UndefOr[ParseDelimiters] = js.undefined
   /** Whether or not to collapse consective whitespace into a single space. */
-  var preserveWhitespace: js.UndefOr[Boolean] = js.native
+  var preserveWhitespace: js.UndefOr[Boolean] = js.undefined
   /** Whether or not to remove certain elements and event attributes from the parsed template. */
-  var sanitize: js.UndefOr[Boolean | SanitizeOpts] = js.native
+  var sanitize: js.UndefOr[Boolean | SanitizeOpts] = js.undefined
   /** The static mustache delimiters - defaults to [[ ]]. */
-  var staticDelimiters: js.UndefOr[ParseDelimiters] = js.native
+  var staticDelimiters: js.UndefOr[ParseDelimiters] = js.undefined
   /** The static triple mustache delimiters - defaults to [[[ ]]]. */
-  var staticTripleDelimiters: js.UndefOr[ParseDelimiters] = js.native
+  var staticTripleDelimiters: js.UndefOr[ParseDelimiters] = js.undefined
   /** Whether or not to remove HTML comments from the template. Defaults to true. */
-  var stripComments: js.UndefOr[Boolean] = js.native
+  var stripComments: js.UndefOr[Boolean] = js.undefined
   /** The triple mustache delimiters - defaults to {{{ }}}. */
-  var tripleDelimiters: js.UndefOr[ParseDelimiters] = js.native
+  var tripleDelimiters: js.UndefOr[ParseDelimiters] = js.undefined
 }
 
 object BaseParseOpts {
   @scala.inline
-  def apply(): BaseParseOpts = {
+  def apply(
+    contextLines: js.UndefOr[Double] = js.undefined,
+    csp: js.UndefOr[Boolean] = js.undefined,
+    delimiters: ParseDelimiters = null,
+    preserveWhitespace: js.UndefOr[Boolean] = js.undefined,
+    sanitize: Boolean | SanitizeOpts = null,
+    staticDelimiters: ParseDelimiters = null,
+    staticTripleDelimiters: ParseDelimiters = null,
+    stripComments: js.UndefOr[Boolean] = js.undefined,
+    tripleDelimiters: ParseDelimiters = null
+  ): BaseParseOpts = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(contextLines)) __obj.updateDynamic("contextLines")(contextLines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(csp)) __obj.updateDynamic("csp")(csp.get.asInstanceOf[js.Any])
+    if (delimiters != null) __obj.updateDynamic("delimiters")(delimiters.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveWhitespace)) __obj.updateDynamic("preserveWhitespace")(preserveWhitespace.get.asInstanceOf[js.Any])
+    if (sanitize != null) __obj.updateDynamic("sanitize")(sanitize.asInstanceOf[js.Any])
+    if (staticDelimiters != null) __obj.updateDynamic("staticDelimiters")(staticDelimiters.asInstanceOf[js.Any])
+    if (staticTripleDelimiters != null) __obj.updateDynamic("staticTripleDelimiters")(staticTripleDelimiters.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripComments)) __obj.updateDynamic("stripComments")(stripComments.get.asInstanceOf[js.Any])
+    if (tripleDelimiters != null) __obj.updateDynamic("tripleDelimiters")(tripleDelimiters.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseParseOpts]
   }
-  @scala.inline
-  implicit class BaseParseOptsOps[Self <: BaseParseOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContextLines(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelimiters(value: ParseDelimiters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimiters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveWhitespace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveWhitespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSanitize(value: Boolean | SanitizeOpts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSanitize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticDelimiters(value: ParseDelimiters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticDelimiters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticDelimiters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticDelimiters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticTripleDelimiters(value: ParseDelimiters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTripleDelimiters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticTripleDelimiters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticTripleDelimiters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTripleDelimiters(value: ParseDelimiters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tripleDelimiters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTripleDelimiters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tripleDelimiters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

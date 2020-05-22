@@ -5,37 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MiddlewareContext[T /* <: Adapter */]
   extends /* key */ StringDictionary[js.Any] {
-  var response: js.UndefOr[Response[T, Message]] = js.native
+  var response: js.UndefOr[Response[T, Message]] = js.undefined
 }
 
 object MiddlewareContext {
   @scala.inline
-  def apply[T](): MiddlewareContext[T] = {
+  def apply[T](
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    response: Response[T, Message] = null
+  ): MiddlewareContext[T] = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
     __obj.asInstanceOf[MiddlewareContext[T]]
   }
-  @scala.inline
-  implicit class MiddlewareContextOps[Self[t] <: MiddlewareContext[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withResponse(value: Response[T, Message]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

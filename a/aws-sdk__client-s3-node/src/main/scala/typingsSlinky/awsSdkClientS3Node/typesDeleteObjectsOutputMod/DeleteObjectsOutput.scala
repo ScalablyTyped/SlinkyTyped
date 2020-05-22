@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Node.typesDeleteObjectsOutputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesDeletedObjectMod.UnmarshalledDeletedObject
 import typingsSlinky.awsSdkClientS3Node.typesErrorMod.UnmarshalledError
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -10,73 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteObjectsOutput
   extends MetadataBearer
-     with OutputTypesUnion {
+     with _OutputTypesUnion {
   /**
     * _DeletedObjects shape
     */
-  var Deleted: js.UndefOr[js.Array[UnmarshalledDeletedObject]] = js.native
+  var Deleted: js.UndefOr[js.Array[UnmarshalledDeletedObject]] = js.undefined
   /**
     * _Errors shape
     */
-  var Errors: js.UndefOr[js.Array[UnmarshalledError]] = js.native
+  var Errors: js.UndefOr[js.Array[UnmarshalledError]] = js.undefined
   /**
     * <p>If present, indicates that the requester was successfully charged for the request.</p>
     */
-  var RequestCharged: js.UndefOr[requester_ | String] = js.native
+  var RequestCharged: js.UndefOr[requester_ | String] = js.undefined
 }
 
 object DeleteObjectsOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): DeleteObjectsOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    Deleted: js.Array[UnmarshalledDeletedObject] = null,
+    Errors: js.Array[UnmarshalledError] = null,
+    RequestCharged: requester_ | String = null
+  ): DeleteObjectsOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (Deleted != null) __obj.updateDynamic("Deleted")(Deleted.asInstanceOf[js.Any])
+    if (Errors != null) __obj.updateDynamic("Errors")(Errors.asInstanceOf[js.Any])
+    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteObjectsOutput]
   }
-  @scala.inline
-  implicit class DeleteObjectsOutputOps[Self <: DeleteObjectsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleted(value: js.Array[UnmarshalledDeletedObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: js.Array[UnmarshalledError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharged(value: requester_ | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

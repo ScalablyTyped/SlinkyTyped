@@ -10,41 +10,40 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait ChartTrendlineLabelLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if trendline label automatically generates appropriate text based on context.
+    * Specifies if trendline label automatically generate appropriate text based on context.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var autoText: js.UndefOr[Boolean] = js.native
+  var autoText: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents the format of chart trendline label.
+    * The format of chart trendline label.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var format: js.UndefOr[ChartTrendlineLabelFormatLoadOptions] = js.native
+  var format: js.UndefOr[ChartTrendlineLabelFormatLoadOptions] = js.undefined
   /**
     *
     * String value that represents the formula of chart trendline label using A1-style notation.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var formula: js.UndefOr[Boolean] = js.native
+  var formula: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns the height, in points, of the chart trendline label. Read-only. Null if chart trendline label is not visible.
+    * Returns the height, in points, of the chart trendline label. Null if chart trendline label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var height: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the horizontal alignment for chart trendline label. See Excel.ChartTextHorizontalAlignment for details.
@@ -52,49 +51,49 @@ trait ChartTrendlineLabelLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var horizontalAlignment: js.UndefOr[Boolean] = js.native
+  var horizontalAlignment: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the distance, in points, from the left edge of chart trendline label to the left edge of chart area. Null if chart trendline label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var left: js.UndefOr[Boolean] = js.native
+  var left: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells).
+    * Specifies if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells).
     *
     * [Api set: ExcelApi 1.9]
     */
-  var linkNumberFormat: js.UndefOr[Boolean] = js.native
+  var linkNumberFormat: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * String value that represents the format code for trendline label.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var numberFormat: js.UndefOr[Boolean] = js.native
+  var numberFormat: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * String representing the text of the trendline label on a chart.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var text: js.UndefOr[Boolean] = js.native
+  var text: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the angle to which the text is oriented for the chart trendline label. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var textOrientation: js.UndefOr[Boolean] = js.native
+  var textOrientation: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the distance, in points, from the top edge of chart trendline label to the top of chart area. Null if chart trendline label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var top: js.UndefOr[Boolean] = js.native
+  var top: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the vertical alignment of chart trendline label. See Excel.ChartTextVerticalAlignment for details.
@@ -102,197 +101,50 @@ trait ChartTrendlineLabelLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var verticalAlignment: js.UndefOr[Boolean] = js.native
+  var verticalAlignment: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns the width, in points, of the chart trendline label. Read-only. Null if chart trendline label is not visible.
+    * Returns the width, in points, of the chart trendline label. Null if chart trendline label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var width: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartTrendlineLabelLoadOptions {
   @scala.inline
-  def apply(): ChartTrendlineLabelLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    autoText: js.UndefOr[Boolean] = js.undefined,
+    format: ChartTrendlineLabelFormatLoadOptions = null,
+    formula: js.UndefOr[Boolean] = js.undefined,
+    height: js.UndefOr[Boolean] = js.undefined,
+    horizontalAlignment: js.UndefOr[Boolean] = js.undefined,
+    left: js.UndefOr[Boolean] = js.undefined,
+    linkNumberFormat: js.UndefOr[Boolean] = js.undefined,
+    numberFormat: js.UndefOr[Boolean] = js.undefined,
+    text: js.UndefOr[Boolean] = js.undefined,
+    textOrientation: js.UndefOr[Boolean] = js.undefined,
+    top: js.UndefOr[Boolean] = js.undefined,
+    verticalAlignment: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Boolean] = js.undefined
+  ): ChartTrendlineLabelLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoText)) __obj.updateDynamic("autoText")(autoText.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(formula)) __obj.updateDynamic("formula")(formula.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontalAlignment)) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(linkNumberFormat)) __obj.updateDynamic("linkNumberFormat")(linkNumberFormat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberFormat)) __obj.updateDynamic("numberFormat")(numberFormat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(text)) __obj.updateDynamic("text")(text.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(textOrientation)) __obj.updateDynamic("textOrientation")(textOrientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalAlignment)) __obj.updateDynamic("verticalAlignment")(verticalAlignment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartTrendlineLabelLoadOptions]
   }
-  @scala.inline
-  implicit class ChartTrendlineLabelLoadOptionsOps[Self <: ChartTrendlineLabelLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartTrendlineLabelFormatLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormula(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalAlignment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkNumberFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkNumberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkNumberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOrientation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlignment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

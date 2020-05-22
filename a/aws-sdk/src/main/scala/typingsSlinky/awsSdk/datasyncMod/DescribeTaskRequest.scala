@@ -18,19 +18,5 @@ object DescribeTaskRequest {
     val __obj = js.Dynamic.literal(TaskArn = TaskArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTaskRequest]
   }
-  @scala.inline
-  implicit class DescribeTaskRequestOps[Self <: DescribeTaskRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskArn(value: TaskArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

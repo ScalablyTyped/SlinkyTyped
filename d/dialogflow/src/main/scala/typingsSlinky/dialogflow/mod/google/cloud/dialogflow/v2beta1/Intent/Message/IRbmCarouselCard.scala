@@ -6,63 +6,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a RbmCarouselCard. */
-@js.native
 trait IRbmCarouselCard extends js.Object {
   /** RbmCarouselCard cardContents */
-  var cardContents: js.UndefOr[js.Array[IRbmCardContent] | Null] = js.native
+  var cardContents: js.UndefOr[js.Array[IRbmCardContent] | Null] = js.undefined
   /** RbmCarouselCard cardWidth */
-  var cardWidth: js.UndefOr[CardWidth | Null] = js.native
+  var cardWidth: js.UndefOr[CardWidth | Null] = js.undefined
 }
 
 object IRbmCarouselCard {
   @scala.inline
-  def apply(): IRbmCarouselCard = {
+  def apply(
+    cardContents: js.UndefOr[Null | js.Array[IRbmCardContent]] = js.undefined,
+    cardWidth: js.UndefOr[Null | CardWidth] = js.undefined
+  ): IRbmCarouselCard = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cardContents)) __obj.updateDynamic("cardContents")(cardContents.asInstanceOf[js.Any])
+    if (!js.isUndefined(cardWidth)) __obj.updateDynamic("cardWidth")(cardWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRbmCarouselCard]
   }
-  @scala.inline
-  implicit class IRbmCarouselCardOps[Self <: IRbmCarouselCard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCardContents(value: js.Array[IRbmCardContent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardContents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardContents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardContents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardContentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardContents")(null)
-        ret
-    }
-    @scala.inline
-    def withCardWidth(value: CardWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCardWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCardWidthNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardWidth")(null)
-        ret
-    }
-  }
-  
 }
 

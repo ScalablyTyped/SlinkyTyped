@@ -22,29 +22,10 @@ trait SchemaWorkerShutdownNotice extends js.Object {
 
 object SchemaWorkerShutdownNotice {
   @scala.inline
-  def apply(): SchemaWorkerShutdownNotice = {
+  def apply(reason: String = null): SchemaWorkerShutdownNotice = {
     val __obj = js.Dynamic.literal()
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkerShutdownNotice]
   }
-  @scala.inline
-  implicit class SchemaWorkerShutdownNoticeOps[Self <: SchemaWorkerShutdownNotice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

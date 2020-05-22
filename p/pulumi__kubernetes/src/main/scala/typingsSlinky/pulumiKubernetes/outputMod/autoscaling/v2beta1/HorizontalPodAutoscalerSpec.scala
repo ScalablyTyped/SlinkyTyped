@@ -8,13 +8,12 @@ import scala.scalajs.js.annotation._
   * HorizontalPodAutoscalerSpec describes the desired functionality of the
   * HorizontalPodAutoscaler.
   */
-@js.native
 trait HorizontalPodAutoscalerSpec extends js.Object {
   /**
     * maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale
     * up. It cannot be less that minReplicas.
     */
-  val maxReplicas: Double = js.native
+  val maxReplicas: Double
   /**
     * metrics contains the specifications for which to use to calculate the desired replica count
     * (the maximum replica count across all metrics will be used).  The desired replica count is
@@ -23,19 +22,19 @@ trait HorizontalPodAutoscalerSpec extends js.Object {
     * and vice-versa.  See the individual metric source types for more information about how each
     * type of metric must respond.
     */
-  val metrics: js.Array[MetricSpec] = js.native
+  val metrics: js.Array[MetricSpec]
   /**
     * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale
     * down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate
     * HPAScaleToZero is enabled and at least one Object or External metric is configured.
     * Scaling is active as long as at least one metric value is available.
     */
-  val minReplicas: Double = js.native
+  val minReplicas: Double
   /**
     * scaleTargetRef points to the target resource to scale, and is used to the pods for which
     * metrics should be collected, as well as to actually change the replica count.
     */
-  val scaleTargetRef: CrossVersionObjectReference = js.native
+  val scaleTargetRef: CrossVersionObjectReference
 }
 
 object HorizontalPodAutoscalerSpec {
@@ -49,37 +48,5 @@ object HorizontalPodAutoscalerSpec {
     val __obj = js.Dynamic.literal(maxReplicas = maxReplicas.asInstanceOf[js.Any], metrics = metrics.asInstanceOf[js.Any], minReplicas = minReplicas.asInstanceOf[js.Any], scaleTargetRef = scaleTargetRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[HorizontalPodAutoscalerSpec]
   }
-  @scala.inline
-  implicit class HorizontalPodAutoscalerSpecOps[Self <: HorizontalPodAutoscalerSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxReplicas(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[MetricSpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinReplicas(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minReplicas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScaleTargetRef(value: CrossVersionObjectReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleTargetRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

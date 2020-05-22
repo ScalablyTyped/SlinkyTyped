@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LanguagesCollection extends js.Object {
   // Retrieves a list of languages.
-  def list(profileId: String): LanguagesListResponse = js.native
+  def list(profileId: String): LanguagesListResponse
 }
 
 object LanguagesCollection {
@@ -17,19 +16,5 @@ object LanguagesCollection {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LanguagesCollection]
   }
-  @scala.inline
-  implicit class LanguagesCollectionOps[Self <: LanguagesCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withList(value: String => LanguagesListResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

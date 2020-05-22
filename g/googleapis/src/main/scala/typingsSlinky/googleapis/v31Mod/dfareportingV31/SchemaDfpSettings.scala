@@ -33,77 +33,20 @@ trait SchemaDfpSettings extends js.Object {
 
 object SchemaDfpSettings {
   @scala.inline
-  def apply(): SchemaDfpSettings = {
+  def apply(
+    dfpNetworkCode: String = null,
+    dfpNetworkName: String = null,
+    programmaticPlacementAccepted: js.UndefOr[Boolean] = js.undefined,
+    pubPaidPlacementAccepted: js.UndefOr[Boolean] = js.undefined,
+    publisherPortalOnly: js.UndefOr[Boolean] = js.undefined
+  ): SchemaDfpSettings = {
     val __obj = js.Dynamic.literal()
+    if (dfpNetworkCode != null) __obj.updateDynamic("dfpNetworkCode")(dfpNetworkCode.asInstanceOf[js.Any])
+    if (dfpNetworkName != null) __obj.updateDynamic("dfpNetworkName")(dfpNetworkName.asInstanceOf[js.Any])
+    if (!js.isUndefined(programmaticPlacementAccepted)) __obj.updateDynamic("programmaticPlacementAccepted")(programmaticPlacementAccepted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pubPaidPlacementAccepted)) __obj.updateDynamic("pubPaidPlacementAccepted")(pubPaidPlacementAccepted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(publisherPortalOnly)) __obj.updateDynamic("publisherPortalOnly")(publisherPortalOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDfpSettings]
   }
-  @scala.inline
-  implicit class SchemaDfpSettingsOps[Self <: SchemaDfpSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDfpNetworkCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpNetworkCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDfpNetworkCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpNetworkCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDfpNetworkName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpNetworkName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDfpNetworkName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpNetworkName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgrammaticPlacementAccepted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("programmaticPlacementAccepted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgrammaticPlacementAccepted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("programmaticPlacementAccepted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubPaidPlacementAccepted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubPaidPlacementAccepted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubPaidPlacementAccepted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubPaidPlacementAccepted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublisherPortalOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherPortalOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublisherPortalOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherPortalOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

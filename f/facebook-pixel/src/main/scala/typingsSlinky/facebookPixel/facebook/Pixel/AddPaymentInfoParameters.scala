@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddPaymentInfoParameters extends js.Object {
-  var content_category: js.UndefOr[String] = js.native
-  var content_ids: js.UndefOr[js.Array[String]] = js.native
-  var currency: js.UndefOr[String] = js.native
-  var value: js.UndefOr[Double] = js.native
+  var content_category: js.UndefOr[String] = js.undefined
+  var content_ids: js.UndefOr[js.Array[String]] = js.undefined
+  var currency: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object AddPaymentInfoParameters {
   @scala.inline
-  def apply(): AddPaymentInfoParameters = {
+  def apply(
+    content_category: String = null,
+    content_ids: js.Array[String] = null,
+    currency: String = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): AddPaymentInfoParameters = {
     val __obj = js.Dynamic.literal()
+    if (content_category != null) __obj.updateDynamic("content_category")(content_category.asInstanceOf[js.Any])
+    if (content_ids != null) __obj.updateDynamic("content_ids")(content_ids.asInstanceOf[js.Any])
+    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddPaymentInfoParameters]
   }
-  @scala.inline
-  implicit class AddPaymentInfoParametersOps[Self <: AddPaymentInfoParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent_category(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent_category: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent_ids(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubscribeStateChangeData extends SubscribeData {
-  var newChannelState: ChannelState = js.native
-  var oldChannelState: ChannelState = js.native
+  var newChannelState: ChannelState
+  var oldChannelState: ChannelState
 }
 
 object SubscribeStateChangeData {
@@ -22,25 +21,5 @@ object SubscribeStateChangeData {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], newChannelState = newChannelState.asInstanceOf[js.Any], oldChannelState = oldChannelState.asInstanceOf[js.Any], subscriptionOptions = subscriptionOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscribeStateChangeData]
   }
-  @scala.inline
-  implicit class SubscribeStateChangeDataOps[Self <: SubscribeStateChangeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewChannelState(value: ChannelState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newChannelState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldChannelState(value: ChannelState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldChannelState")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

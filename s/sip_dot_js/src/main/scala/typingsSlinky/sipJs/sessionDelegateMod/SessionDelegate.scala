@@ -1,20 +1,26 @@
 package typingsSlinky.sipJs.sessionDelegateMod
 
+import typingsSlinky.sipJs.byeMod.Bye
 import typingsSlinky.sipJs.coreMod.IncomingRequestMessage
 import typingsSlinky.sipJs.infoMod.Info
+import typingsSlinky.sipJs.messageMod.Message
 import typingsSlinky.sipJs.notificationMod.Notification
 import typingsSlinky.sipJs.referralMod.Referral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SessionDelegate extends js.Object {
+  /**
+    * Called upon receiving an incoming in dialog BYE request.
+    * @param bye - The bye.
+    */
+  var onBye: js.UndefOr[js.Function1[/* bye */ Bye, Unit]] = js.undefined
   /**
     * Called upon receiving an incoming in dialog INFO request.
     * @param info - The info.
     */
-  var onInfo: js.UndefOr[js.Function1[/* info */ Info, Unit]] = js.native
+  var onInfo: js.UndefOr[js.Function1[/* info */ Info, Unit]] = js.undefined
   /**
     * Called upon receiving an incoming in dialog INVITE request.
     * @param invite - The invite.
@@ -26,7 +32,12 @@ trait SessionDelegate extends js.Object {
       /* statusCode */ Double, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
+  /**
+    * Called upon receiving an incoming in dialog MESSAGE request.
+    * @param message - The message.
+    */
+  var onMessage: js.UndefOr[js.Function1[/* message */ Message, Unit]] = js.undefined
   /**
     * Called upon receiving an incoming in dialog NOTIFY request.
     *
@@ -35,77 +46,32 @@ trait SessionDelegate extends js.Object {
     *
     * @param notification - The notification.
     */
-  var onNotify: js.UndefOr[js.Function1[/* notification */ Notification, Unit]] = js.native
+  var onNotify: js.UndefOr[js.Function1[/* notification */ Notification, Unit]] = js.undefined
   /**
     * Called upon receiving an incoming in dialog REFER request.
     * @param referral - The referral.
     */
-  var onRefer: js.UndefOr[js.Function1[/* referral */ Referral, Unit]] = js.native
+  var onRefer: js.UndefOr[js.Function1[/* referral */ Referral, Unit]] = js.undefined
 }
 
 object SessionDelegate {
   @scala.inline
-  def apply(): SessionDelegate = {
+  def apply(
+    onBye: /* bye */ Bye => Unit = null,
+    onInfo: /* info */ Info => Unit = null,
+    onInvite: (/* request */ IncomingRequestMessage, /* response */ String, /* statusCode */ Double) => Unit = null,
+    onMessage: /* message */ Message => Unit = null,
+    onNotify: /* notification */ Notification => Unit = null,
+    onRefer: /* referral */ Referral => Unit = null
+  ): SessionDelegate = {
     val __obj = js.Dynamic.literal()
+    if (onBye != null) __obj.updateDynamic("onBye")(js.Any.fromFunction1(onBye))
+    if (onInfo != null) __obj.updateDynamic("onInfo")(js.Any.fromFunction1(onInfo))
+    if (onInvite != null) __obj.updateDynamic("onInvite")(js.Any.fromFunction3(onInvite))
+    if (onMessage != null) __obj.updateDynamic("onMessage")(js.Any.fromFunction1(onMessage))
+    if (onNotify != null) __obj.updateDynamic("onNotify")(js.Any.fromFunction1(onNotify))
+    if (onRefer != null) __obj.updateDynamic("onRefer")(js.Any.fromFunction1(onRefer))
     __obj.asInstanceOf[SessionDelegate]
   }
-  @scala.inline
-  implicit class SessionDelegateOps[Self <: SessionDelegate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnInfo(value: /* info */ Info => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInfo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInvite(
-      value: (/* request */ IncomingRequestMessage, /* response */ String, /* statusCode */ Double) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvite")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInvite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnNotify(value: /* notification */ Notification => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotify")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnNotify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRefer(value: /* referral */ Referral => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRefer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,6 +13,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@jimp/types", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  def default(): Types = js.native
+  type BmpRet = ReturnType[js.Function0[Bmp]]
+  type GifRet = ReturnType[js.Function0[Gif]]
+  type JpegRet = ReturnType[js.Function0[Jpeg]]
+  type PngRet = ReturnType[js.Function0[PNG]]
+  type TiffRet = ReturnType[js.Function0[Tiff]]
   /**
     * This is made union and not intersection to avoid issues with
     * `IllformedPlugin` and `WellFormedPlugin` when using typings with Jimp
@@ -21,20 +27,6 @@ object mod extends js.Object {
     * In reality, this should be an intersection but our type data isn't
     * clever enough to figure out what's a class and what's not/etc
     */
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.jimpTypes.mod.JpegRet
-    - typingsSlinky.jimpTypes.mod.PngRet
-    - typingsSlinky.jimpTypes.mod.BmpRet
-    - typingsSlinky.jimpTypes.mod.TiffRet
-    - typingsSlinky.jimpTypes.mod.GifRet
-  */
-  trait Types extends js.Object
-  
-  def default(): Types = js.native
-  type BmpRet = ReturnType[js.Function0[Bmp]]
-  type GifRet = ReturnType[js.Function0[Gif]]
-  type JpegRet = ReturnType[js.Function0[Jpeg]]
-  type PngRet = ReturnType[js.Function0[PNG]]
-  type TiffRet = ReturnType[js.Function0[Tiff]]
+  type Types = JpegRet | PngRet | BmpRet | TiffRet | GifRet
 }
 

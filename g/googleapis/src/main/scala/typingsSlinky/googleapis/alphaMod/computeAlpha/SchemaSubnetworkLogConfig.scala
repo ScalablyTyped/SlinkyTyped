@@ -40,65 +40,18 @@ trait SchemaSubnetworkLogConfig extends js.Object {
 
 object SchemaSubnetworkLogConfig {
   @scala.inline
-  def apply(): SchemaSubnetworkLogConfig = {
+  def apply(
+    aggregationInterval: String = null,
+    enable: js.UndefOr[Boolean] = js.undefined,
+    flowSampling: js.UndefOr[Double] = js.undefined,
+    metadata: String = null
+  ): SchemaSubnetworkLogConfig = {
     val __obj = js.Dynamic.literal()
+    if (aggregationInterval != null) __obj.updateDynamic("aggregationInterval")(aggregationInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(enable)) __obj.updateDynamic("enable")(enable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flowSampling)) __obj.updateDynamic("flowSampling")(flowSampling.get.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubnetworkLogConfig]
   }
-  @scala.inline
-  implicit class SchemaSubnetworkLogConfigOps[Self <: SchemaSubnetworkLogConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregationInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlowSampling(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flowSampling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowSampling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flowSampling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

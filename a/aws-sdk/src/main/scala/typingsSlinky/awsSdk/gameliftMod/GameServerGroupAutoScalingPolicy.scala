@@ -1,0 +1,30 @@
+package typingsSlinky.awsSdk.gameliftMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GameServerGroupAutoScalingPolicy extends js.Object {
+  /**
+    * Length of time, in seconds, it takes for a new instance to start new game server processes and register with GameLift FleetIQ. Specifying a warm-up time can be useful, particularly with game servers that take a long time to start up, because it avoids prematurely starting new instances 
+    */
+  var EstimatedInstanceWarmup: js.UndefOr[PositiveInteger] = js.native
+  /**
+    * Settings for a target-based scaling policy applied to Auto Scaling group. These settings are used to create a target-based policy that tracks the GameLift FleetIQ metric "PercentUtilizedGameServers" and specifies a target value for the metric. As player usage changes, the policy triggers to adjust the game server group capacity so that the metric returns to the target value. 
+    */
+  var TargetTrackingConfiguration: typingsSlinky.awsSdk.gameliftMod.TargetTrackingConfiguration = js.native
+}
+
+object GameServerGroupAutoScalingPolicy {
+  @scala.inline
+  def apply(
+    TargetTrackingConfiguration: TargetTrackingConfiguration,
+    EstimatedInstanceWarmup: js.UndefOr[PositiveInteger] = js.undefined
+  ): GameServerGroupAutoScalingPolicy = {
+    val __obj = js.Dynamic.literal(TargetTrackingConfiguration = TargetTrackingConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(EstimatedInstanceWarmup)) __obj.updateDynamic("EstimatedInstanceWarmup")(EstimatedInstanceWarmup.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GameServerGroupAutoScalingPolicy]
+  }
+}
+

@@ -18,41 +18,11 @@ trait SearchProductsAsAdminOutput extends js.Object {
 
 object SearchProductsAsAdminOutput {
   @scala.inline
-  def apply(): SearchProductsAsAdminOutput = {
+  def apply(NextPageToken: PageToken = null, ProductViewDetails: ProductViewDetails = null): SearchProductsAsAdminOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (ProductViewDetails != null) __obj.updateDynamic("ProductViewDetails")(ProductViewDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchProductsAsAdminOutput]
   }
-  @scala.inline
-  implicit class SearchProductsAsAdminOutputOps[Self <: SearchProductsAsAdminOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: PageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductViewDetails(value: ProductViewDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductViewDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,14 +14,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EggAppConfig
   extends /* prop */ StringDictionary[js.Any] {
   /**
     * The current HOME directory
     */
-  var HOME: String = js.native
-  var baseDir: String = js.native
+  var HOME: String
+  var baseDir: String
   /**
     * The option of `bodyParser` middleware
     *
@@ -30,8 +29,9 @@ trait EggAppConfig
     * @property {String | RegExp | Function | Array} ignore - won't parse request body when url path hit ignore pattern, can not set `ignore` when `match` presented
     * @property {String | RegExp | Function | Array} match - will parse request body only when url path hit match pattern
     * @property {String} encoding - body encoding config, default utf8
-    * @property {String} formLimit - form body size limit, default 100kb
-    * @property {String} jsonLimit - json body size limit, default 100kb
+    * @property {String} formLimit - form body size limit, default 1mb
+    * @property {String} jsonLimit - json body size limit, default 1mb
+    * @property {String} textLimit - json body size limit, default 1mb
     * @property {Boolean} strict - json body strict mode, if set strict value true, then only receive object and array json body
     * @property {Number} queryString.arrayLimit - from item array length limit, default 100
     * @property {Number} queryString.depth - json value deep lenght, default 5
@@ -39,33 +39,33 @@ trait EggAppConfig
     * @property {string[]} enableTypes - parser will only parse when request type hits enableTypes, default is ['json', 'form']
     * @property {any} extendTypes - support extend types
     */
-  var bodyParser: Enable = js.native
+  var bodyParser: Enable
   /**
     * customLoader config
     */
-  var customLoader: StringDictionary[CustomLoaderConfig] = js.native
+  var customLoader: StringDictionary[CustomLoaderConfig]
   /** custom logger of egg */
-  var customLogger: StringDictionary[EggLoggerOptions] = js.native
-  var development: FastReady = js.native
+  var customLogger: StringDictionary[EggLoggerOptions]
+  var development: FastReady
   /**
     * It will ignore special keys when dumpConfig
     */
-  var dump: Ignore = js.native
+  var dump: Ignore
   /**
     * The environment of egg
     */
-  var env: EggEnvType = js.native
-  var hostHeaders: String = js.native
+  var env: EggEnvType
+  var hostHeaders: String
   /** Configuration of httpclient in egg. */
-  var httpclient: HttpClientConfig = js.native
+  var httpclient: HttpClientConfig
   /**
     * I18n options
     */
-  var i18n: CookieField = js.native
+  var i18n: CookieField
   /**
     * Detect request' ip from specified headers, not case-sensitive. Only worked when config.proxy set to true.
     */
-  var ipHeaders: String = js.native
+  var ipHeaders: String
   /**
     * jsonp options
     * @member Config#jsonp
@@ -74,11 +74,11 @@ trait EggAppConfig
     * @property {Boolean} csrf - enable csrf check or not. default to false
     * @property {String|RegExp|Array} whiteList - referrer white list
     */
-  var jsonp: Callback = js.native
+  var jsonp: Callback
   /**
     * The key that signing cookies. It can contain multiple keys seperated by .
     */
-  var keys: String = js.native
+  var keys: String
   /**
     * logger options
     * @member Config#logger
@@ -95,18 +95,18 @@ trait EggAppConfig
     * @property {Object} coreLogger - custom config of coreLogger
     * @property {Boolean} allowDebugAtProd - allow debug log at prod, defaults to true
     */
-  var logger: EggLoggerConfig = js.native
-  var middleware: js.Array[String] = js.native
+  var logger: EggLoggerConfig
+  var middleware: js.Array[String]
   /**
     * The name of the application
     */
-  var name: String = js.native
+  var name: String
   /**
     * package.json
     */
-  var pkg: js.Any = js.native
-  var rundir: String = js.native
-  var security: Csp = js.native
+  var pkg: js.Any
+  var rundir: String
+  var security: Csp
   /**
     * server timeout in milliseconds, default to 2 minutes.
     *
@@ -114,11 +114,11 @@ trait EggAppConfig
     *
     * @see https://nodejs.org/api/http.html#http_server_timeout
     */
-  var serverTimeout: Double | Null = js.native
-  var siteFile: PlainObject[String | Buffer] = js.native
-  var watcher: PlainObject[_] = js.native
-  var workerStartTimeout: Double = js.native
-  def onClientError(err: js.Error, socket: Socket, app: EggApplication): ClientErrorResponse | js.Promise[ClientErrorResponse] = js.native
+  var serverTimeout: Double | Null
+  var siteFile: PlainObject[String | Buffer]
+  var watcher: PlainObject[_]
+  var workerStartTimeout: Double
+  def onClientError(err: js.Error, socket: Socket, app: EggApplication): ClientErrorResponse | js.Promise[ClientErrorResponse]
 }
 
 object EggAppConfig {
@@ -147,174 +147,13 @@ object EggAppConfig {
     security: Csp,
     siteFile: PlainObject[String | Buffer],
     watcher: PlainObject[_],
-    workerStartTimeout: Double
+    workerStartTimeout: Double,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    serverTimeout: Double = null.asInstanceOf[Double]
   ): EggAppConfig = {
-    val __obj = js.Dynamic.literal(HOME = HOME.asInstanceOf[js.Any], baseDir = baseDir.asInstanceOf[js.Any], bodyParser = bodyParser.asInstanceOf[js.Any], customLoader = customLoader.asInstanceOf[js.Any], customLogger = customLogger.asInstanceOf[js.Any], development = development.asInstanceOf[js.Any], dump = dump.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], hostHeaders = hostHeaders.asInstanceOf[js.Any], httpclient = httpclient.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], ipHeaders = ipHeaders.asInstanceOf[js.Any], jsonp = jsonp.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any], logger = logger.asInstanceOf[js.Any], middleware = middleware.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onClientError = js.Any.fromFunction3(onClientError), pkg = pkg.asInstanceOf[js.Any], rundir = rundir.asInstanceOf[js.Any], security = security.asInstanceOf[js.Any], siteFile = siteFile.asInstanceOf[js.Any], watcher = watcher.asInstanceOf[js.Any], workerStartTimeout = workerStartTimeout.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(HOME = HOME.asInstanceOf[js.Any], baseDir = baseDir.asInstanceOf[js.Any], bodyParser = bodyParser.asInstanceOf[js.Any], customLoader = customLoader.asInstanceOf[js.Any], customLogger = customLogger.asInstanceOf[js.Any], development = development.asInstanceOf[js.Any], dump = dump.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], hostHeaders = hostHeaders.asInstanceOf[js.Any], httpclient = httpclient.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], ipHeaders = ipHeaders.asInstanceOf[js.Any], jsonp = jsonp.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any], logger = logger.asInstanceOf[js.Any], middleware = middleware.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onClientError = js.Any.fromFunction3(onClientError), pkg = pkg.asInstanceOf[js.Any], rundir = rundir.asInstanceOf[js.Any], security = security.asInstanceOf[js.Any], siteFile = siteFile.asInstanceOf[js.Any], watcher = watcher.asInstanceOf[js.Any], workerStartTimeout = workerStartTimeout.asInstanceOf[js.Any], serverTimeout = serverTimeout.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[EggAppConfig]
   }
-  @scala.inline
-  implicit class EggAppConfigOps[Self <: EggAppConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHOME(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HOME")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBodyParser(value: Enable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomLoader(value: StringDictionary[CustomLoaderConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLoader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomLogger(value: StringDictionary[EggLoggerOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customLogger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDevelopment(value: FastReady): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("development")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDump(value: Ignore): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dump")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnv(value: EggEnvType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostHeaders(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHttpclient(value: HttpClientConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpclient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withI18n(value: CookieField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIpHeaders(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJsonp(value: Callback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeys(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogger(value: EggLoggerConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMiddleware(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnClientError(value: (js.Error, Socket, EggApplication) => ClientErrorResponse | js.Promise[ClientErrorResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClientError")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withPkg(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pkg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRundir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rundir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurity(value: Csp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSiteFile(value: PlainObject[String | Buffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWatcher(value: PlainObject[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkerStartTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerStartTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerTimeoutNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverTimeout")(null)
-        ret
-    }
-  }
-  
 }
 

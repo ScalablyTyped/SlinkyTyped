@@ -15,41 +15,11 @@ trait DescribeBudgetPerformanceHistoryResponse extends js.Object {
 
 object DescribeBudgetPerformanceHistoryResponse {
   @scala.inline
-  def apply(): DescribeBudgetPerformanceHistoryResponse = {
+  def apply(BudgetPerformanceHistory: BudgetPerformanceHistory = null, NextToken: GenericString = null): DescribeBudgetPerformanceHistoryResponse = {
     val __obj = js.Dynamic.literal()
+    if (BudgetPerformanceHistory != null) __obj.updateDynamic("BudgetPerformanceHistory")(BudgetPerformanceHistory.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeBudgetPerformanceHistoryResponse]
   }
-  @scala.inline
-  implicit class DescribeBudgetPerformanceHistoryResponseOps[Self <: DescribeBudgetPerformanceHistoryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBudgetPerformanceHistory(value: BudgetPerformanceHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetPerformanceHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBudgetPerformanceHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetPerformanceHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

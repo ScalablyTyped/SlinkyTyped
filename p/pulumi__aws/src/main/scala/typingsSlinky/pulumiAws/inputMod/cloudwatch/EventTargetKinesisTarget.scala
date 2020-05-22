@@ -15,29 +15,10 @@ trait EventTargetKinesisTarget extends js.Object {
 
 object EventTargetKinesisTarget {
   @scala.inline
-  def apply(): EventTargetKinesisTarget = {
+  def apply(partitionKeyPath: Input[String] = null): EventTargetKinesisTarget = {
     val __obj = js.Dynamic.literal()
+    if (partitionKeyPath != null) __obj.updateDynamic("partitionKeyPath")(partitionKeyPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventTargetKinesisTarget]
   }
-  @scala.inline
-  implicit class EventTargetKinesisTargetOps[Self <: EventTargetKinesisTarget] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPartitionKeyPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionKeyPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionKeyPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionKeyPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,12 +12,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scaling extends js.Object {
-  var converter: js.Object = js.native
-  var scaling: none | thousand | million | billion | trillion | quadrillion | auto = js.native
-  var tooltipDisplay: off | auto = js.native
-  var tooltipLabel: String = js.native
+  var converter: js.Object
+  var scaling: none | thousand | million | billion | trillion | quadrillion | auto
+  var tooltipDisplay: off | auto
+  var tooltipLabel: String
 }
 
 object Scaling {
@@ -31,37 +30,5 @@ object Scaling {
     val __obj = js.Dynamic.literal(converter = converter.asInstanceOf[js.Any], scaling = scaling.asInstanceOf[js.Any], tooltipDisplay = tooltipDisplay.asInstanceOf[js.Any], tooltipLabel = tooltipLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scaling]
   }
-  @scala.inline
-  implicit class ScalingOps[Self <: Scaling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConverter(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScaling(value: none | thousand | million | billion | trillion | quadrillion | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTooltipDisplay(value: off | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTooltipLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

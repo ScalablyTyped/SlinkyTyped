@@ -15,12 +15,11 @@ import scala.scalajs.js.annotation._
   *
   * **See also:** [[IIsCompleteReplyMsg]], [[IKernel.isComplete]]
   */
-@js.native
 trait IIsCompleteRequestMsg
   extends IShellMessage[is_complete_request]
-     with Message {
+     with _Message {
   @JSName("content")
-  var content_IIsCompleteRequestMsg: CodeString = js.native
+  var content_IIsCompleteRequestMsg: CodeString
 }
 
 object IIsCompleteRequestMsg {
@@ -30,24 +29,12 @@ object IIsCompleteRequestMsg {
     content: CodeString,
     header: IHeader[is_complete_request],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object
+    parent_header: IHeader[MessageType] | js.Object,
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView] = null
   ): IIsCompleteRequestMsg = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
+    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIsCompleteRequestMsg]
   }
-  @scala.inline
-  implicit class IIsCompleteRequestMsgOps[Self <: IIsCompleteRequestMsg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: CodeString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

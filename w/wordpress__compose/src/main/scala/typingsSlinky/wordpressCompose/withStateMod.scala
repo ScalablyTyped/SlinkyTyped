@@ -1,6 +1,9 @@
 package typingsSlinky.wordpressCompose
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.std.Omit
+import typingsSlinky.wordpressCompose.wordpressComposeStrings.setState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +17,8 @@ object withStateMod extends js.Object {
   {[ k in keyof SP ]: SP[k]}
     */ typingsSlinky.wordpressCompose.wordpressComposeStrings.default with TopLevel[SP]
   ): js.Function1[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<any> */ /* component */ js.Any, 
-    _
+    /* component */ ReactComponentClass[_], 
+    ReactComponentClass[Omit[_, (/* keyof SP */ String) | setState]]
   ] = js.native
 }
 

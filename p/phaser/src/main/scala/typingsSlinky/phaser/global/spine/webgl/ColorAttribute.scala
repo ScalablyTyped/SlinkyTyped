@@ -7,5 +7,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("spine.webgl.ColorAttribute")
 @js.native
 class ColorAttribute ()
-  extends typingsSlinky.phaser.spine.webgl.VertexAttribute
+  extends typingsSlinky.phaser.spine.webgl.VertexAttribute {
+  /* CompleteClass */
+  override var name: String = js.native
+  /* CompleteClass */
+  override var numElements: Double = js.native
+  /* CompleteClass */
+  override var `type`: typingsSlinky.phaser.spine.webgl.VertexAttributeType = js.native
+}
 

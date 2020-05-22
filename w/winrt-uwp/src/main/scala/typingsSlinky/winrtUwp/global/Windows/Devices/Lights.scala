@@ -17,7 +17,11 @@ object Lights extends js.Object {
   /** Provides data for the AvailabilityChanged event. */
   @js.native
   abstract class LampAvailabilityChangedEventArgs ()
-    extends typingsSlinky.winrtUwp.Windows.Devices.Lights.LampAvailabilityChangedEventArgs
+    extends typingsSlinky.winrtUwp.Windows.Devices.Lights.LampAvailabilityChangedEventArgs {
+    /** Gets a value indicating whether the lamp device that triggered the event is available. */
+    /* CompleteClass */
+    override var isAvailable: Boolean = js.native
+  }
   
   /* static members */
   @js.native

@@ -10,10 +10,8 @@ import typingsSlinky.graphqlCompose.definitionsMod.DirectiveArgs
 import typingsSlinky.graphqlCompose.definitionsMod.Extensions
 import typingsSlinky.graphqlCompose.definitionsMod.ExtensionsDirective
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeObjectType
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeOutputType
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer
-import typingsSlinky.graphqlCompose.schemaComposerMod.AnyComposeType
-import typingsSlinky.graphqlCompose.schemaComposerMod.AnyType
+import typingsSlinky.graphqlCompose.objectTypeComposerMod._ComposeOutputType
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,11 +19,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql-compose/lib/UnionTypeComposer", "UnionTypeComposer")
 @js.native
-class UnionTypeComposer[TSource, TContext] protected ()
-  extends ComposeOutputType[TSource, TContext]
-     with AnyComposeType[TContext]
-     with AnyType[TContext]
-     with ComposeUnionType {
+class UnionTypeComposer[TSource, TContext] protected () extends _ComposeOutputType[TSource, TContext] {
   def this(gqType: GraphQLUnionType, schemaComposer: SchemaComposer[TContext]) = this()
   var gqType: GraphQLUnionTypeExtended[TSource, TContext] = js.native
   var schemaComposer: SchemaComposer[TContext] = js.native

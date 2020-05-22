@@ -5,122 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageletOption extends js.Object {
-  var compiled: js.UndefOr[Boolean] = js.native
-  var container: js.UndefOr[String] = js.native
-  var `for`: js.UndefOr[String] = js.native
-  var id: String = js.native
-  var `lazy`: js.UndefOr[Boolean] = js.native
-  var locals: js.UndefOr[js.Object] = js.native
-  var mode: js.UndefOr[typingsSlinky.yogBigpipe.mod.Pagelet.mode] = js.native
-  var reqID: String = js.native
-  var skipAnalysis: Boolean = js.native
+  var compiled: js.UndefOr[Boolean] = js.undefined
+  var container: js.UndefOr[String] = js.undefined
+  var `for`: js.UndefOr[String] = js.undefined
+  var id: String
+  var `lazy`: js.UndefOr[Boolean] = js.undefined
+  var locals: js.UndefOr[js.Object] = js.undefined
+  var mode: js.UndefOr[typingsSlinky.yogBigpipe.mod.Pagelet.mode] = js.undefined
+  var reqID: String
+  var skipAnalysis: Boolean
 }
 
 object PageletOption {
   @scala.inline
-  def apply(id: String, reqID: String, skipAnalysis: Boolean): PageletOption = {
+  def apply(
+    id: String,
+    reqID: String,
+    skipAnalysis: Boolean,
+    compiled: js.UndefOr[Boolean] = js.undefined,
+    container: String = null,
+    `for`: String = null,
+    `lazy`: js.UndefOr[Boolean] = js.undefined,
+    locals: js.Object = null,
+    mode: mode = null
+  ): PageletOption = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], reqID = reqID.asInstanceOf[js.Any], skipAnalysis = skipAnalysis.asInstanceOf[js.Any])
+    if (!js.isUndefined(compiled)) __obj.updateDynamic("compiled")(compiled.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (`for` != null) __obj.updateDynamic("for")(`for`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.get.asInstanceOf[js.Any])
+    if (locals != null) __obj.updateDynamic("locals")(locals.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageletOption]
   }
-  @scala.inline
-  implicit class PageletOptionOps[Self <: PageletOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReqID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reqID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkipAnalysis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAnalysis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompiled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compiled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompiled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compiled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("for")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("for")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocals(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: mode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

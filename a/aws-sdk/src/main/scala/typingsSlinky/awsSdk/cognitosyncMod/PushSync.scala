@@ -18,41 +18,11 @@ trait PushSync extends js.Object {
 
 object PushSync {
   @scala.inline
-  def apply(): PushSync = {
+  def apply(ApplicationArns: ApplicationArnList = null, RoleArn: AssumeRoleArn = null): PushSync = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationArns != null) __obj.updateDynamic("ApplicationArns")(ApplicationArns.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushSync]
   }
-  @scala.inline
-  implicit class PushSyncOps[Self <: PushSync] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationArns(value: ApplicationArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: AssumeRoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

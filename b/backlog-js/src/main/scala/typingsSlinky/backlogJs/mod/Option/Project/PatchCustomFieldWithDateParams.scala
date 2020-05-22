@@ -4,88 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PatchCustomFieldWithDateParams extends PatchCustomFieldParams {
-  var initialDate: js.UndefOr[String] = js.native
-  var initialShift: js.UndefOr[Double] = js.native
-  var initialValueType: js.UndefOr[Double] = js.native
-  var max: js.UndefOr[String] = js.native
-  var min: js.UndefOr[String] = js.native
+  var initialDate: js.UndefOr[String] = js.undefined
+  var initialShift: js.UndefOr[Double] = js.undefined
+  var initialValueType: js.UndefOr[Double] = js.undefined
+  var max: js.UndefOr[String] = js.undefined
+  var min: js.UndefOr[String] = js.undefined
 }
 
 object PatchCustomFieldWithDateParams {
   @scala.inline
-  def apply(): PatchCustomFieldWithDateParams = {
+  def apply(
+    applicableIssueTypes: js.Array[Double] = null,
+    description: String = null,
+    initialDate: String = null,
+    initialShift: js.UndefOr[Double] = js.undefined,
+    initialValueType: js.UndefOr[Double] = js.undefined,
+    max: String = null,
+    min: String = null,
+    name: String = null,
+    required: js.UndefOr[Boolean] = js.undefined
+  ): PatchCustomFieldWithDateParams = {
     val __obj = js.Dynamic.literal()
+    if (applicableIssueTypes != null) __obj.updateDynamic("applicableIssueTypes")(applicableIssueTypes.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (initialDate != null) __obj.updateDynamic("initialDate")(initialDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialShift)) __obj.updateDynamic("initialShift")(initialShift.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialValueType)) __obj.updateDynamic("initialValueType")(initialValueType.get.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatchCustomFieldWithDateParams]
   }
-  @scala.inline
-  implicit class PatchCustomFieldWithDateParamsOps[Self <: PatchCustomFieldWithDateParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialShift(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialShift")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialShift: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialShift")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialValueType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialValueType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValueType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

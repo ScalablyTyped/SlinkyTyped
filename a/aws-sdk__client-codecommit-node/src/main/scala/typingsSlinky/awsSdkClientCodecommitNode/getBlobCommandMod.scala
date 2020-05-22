@@ -26,9 +26,16 @@ object getBlobCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetBlobInput) = this()
+    /* CompleteClass */
+    override val input: GetBlobInput = js.native
     val middlewareStack: MiddlewareStack[GetBlobInput, GetBlobOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[GetBlobInput, GetBlobOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetBlobInput, GetBlobOutput] = js.native
   }

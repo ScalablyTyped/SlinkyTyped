@@ -4,42 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FocusEventInit extends UIEventInit {
-  var relatedTarget: js.UndefOr[org.scalajs.dom.raw.EventTarget | Null] = js.native
+  var relatedTarget: js.UndefOr[org.scalajs.dom.raw.EventTarget | Null] = js.undefined
 }
 
 object FocusEventInit {
   @scala.inline
-  def apply(): FocusEventInit = {
+  def apply(
+    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
+    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
+    composed: js.UndefOr[scala.Boolean] = js.undefined,
+    detail: js.UndefOr[Double] = js.undefined,
+    relatedTarget: js.UndefOr[Null | org.scalajs.dom.raw.EventTarget] = js.undefined,
+    view: js.UndefOr[Null | org.scalajs.dom.raw.Window] = js.undefined
+  ): FocusEventInit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(detail)) __obj.updateDynamic("detail")(detail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(relatedTarget)) __obj.updateDynamic("relatedTarget")(relatedTarget.asInstanceOf[js.Any])
+    if (!js.isUndefined(view)) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusEventInit]
   }
-  @scala.inline
-  implicit class FocusEventInitOps[Self <: FocusEventInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRelatedTarget(value: org.scalajs.dom.raw.EventTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelatedTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelatedTargetNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedTarget")(null)
-        ret
-    }
-  }
-  
 }
 

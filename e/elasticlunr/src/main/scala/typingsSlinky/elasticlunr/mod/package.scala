@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type DocumentReference = java.lang.String | scala.Double
   type EventHandler = js.Function1[/* repeated */ js.Any, scala.Unit]
   type FieldSearchConfig[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? {  bool? :elasticlunr.elasticlunr.Bool,   boost? :number,   expand? :boolean}}

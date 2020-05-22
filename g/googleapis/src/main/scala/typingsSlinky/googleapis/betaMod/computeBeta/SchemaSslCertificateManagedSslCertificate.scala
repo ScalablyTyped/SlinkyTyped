@@ -28,53 +28,16 @@ trait SchemaSslCertificateManagedSslCertificate extends js.Object {
 
 object SchemaSslCertificateManagedSslCertificate {
   @scala.inline
-  def apply(): SchemaSslCertificateManagedSslCertificate = {
+  def apply(
+    domainStatus: StringDictionary[String] = null,
+    domains: js.Array[String] = null,
+    status: String = null
+  ): SchemaSslCertificateManagedSslCertificate = {
     val __obj = js.Dynamic.literal()
+    if (domainStatus != null) __obj.updateDynamic("domainStatus")(domainStatus.asInstanceOf[js.Any])
+    if (domains != null) __obj.updateDynamic("domains")(domains.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSslCertificateManagedSslCertificate]
   }
-  @scala.inline
-  implicit class SchemaSslCertificateManagedSslCertificateOps[Self <: SchemaSslCertificateManagedSslCertificate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainStatus(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomains(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

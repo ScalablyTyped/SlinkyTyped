@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Bookmarksui extends js.Object {
-  var bookmarks_ui: js.UndefOr[Removebookmarkshortcut] = js.native
+  var bookmarks_ui: js.UndefOr[Removebookmarkshortcut] = js.undefined
 }
 
 object Bookmarksui {
   @scala.inline
-  def apply(): Bookmarksui = {
+  def apply(bookmarks_ui: Removebookmarkshortcut = null): Bookmarksui = {
     val __obj = js.Dynamic.literal()
+    if (bookmarks_ui != null) __obj.updateDynamic("bookmarks_ui")(bookmarks_ui.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bookmarksui]
   }
-  @scala.inline
-  implicit class BookmarksuiOps[Self <: Bookmarksui] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBookmarks_ui(value: Removebookmarkshortcut): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarks_ui")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBookmarks_ui: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarks_ui")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

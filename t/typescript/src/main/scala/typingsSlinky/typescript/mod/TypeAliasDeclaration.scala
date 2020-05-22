@@ -9,8 +9,8 @@ trait TypeAliasDeclaration
   extends DeclarationStatement
      with JSDocContainer
      with DeclarationWithTypeParameterChildren
-     with HasJSDoc
-     with HasType {
+     with HasType
+     with _HasJSDoc {
   @JSName("kind")
   var kind_TypeAliasDeclaration: typingsSlinky.typescript.mod.SyntaxKind.TypeAliasDeclaration = js.native
   @JSName("name")

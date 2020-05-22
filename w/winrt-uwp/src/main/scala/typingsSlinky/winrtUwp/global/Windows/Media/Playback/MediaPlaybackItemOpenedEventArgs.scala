@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs")
 @js.native
 abstract class MediaPlaybackItemOpenedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs {
+  /** Gets the MediaPlaybackItem that was successfully opened. */
+  /* CompleteClass */
+  override var item: typingsSlinky.winrtUwp.Windows.Media.Playback.MediaPlaybackItem = js.native
+}
 

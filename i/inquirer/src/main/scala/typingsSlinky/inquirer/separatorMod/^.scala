@@ -1,5 +1,6 @@
 package typingsSlinky.inquirer.separatorMod
 
+import typingsSlinky.inquirer.inquirerStrings.separator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +18,17 @@ import scala.scalajs.js.annotation._
   */
 class ^ () extends Separator {
   def this(line: String) = this()
+  /**
+    * @inheritdoc
+    */
+  /* CompleteClass */
+  override var line: js.UndefOr[String] = js.native
+  /**
+    * @inheritdoc
+    */
+  /* CompleteClass */
+  @JSName("type")
+  override val type_Separator: separator = js.native
 }
 
 @JSImport("inquirer/lib/objects/separator", JSImport.Namespace)

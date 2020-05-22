@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BDCAdapterObject extends js.Object {
-  val EntityName: String = js.native
-  val EntityNamespace: String = js.native
+  val EntityName: String
+  val EntityNamespace: String
   @JSName("InfoPath.BDCAdapterObject_typekey")
-  var InfoPathDotBDCAdapterObject_typekey: BDCAdapterObject = js.native
-  val LOBSystemInstance: String = js.native
-  val Name: String = js.native
-  val QueryAllowed: Boolean = js.native
-  val SpecificFinder: String = js.native
-  val SubmitAdapterName: String = js.native
-  val SubmitAllowed: Boolean = js.native
-  def Query(): Unit = js.native
-  def Submit(): Unit = js.native
+  var InfoPathDotBDCAdapterObject_typekey: BDCAdapterObject
+  val LOBSystemInstance: String
+  val Name: String
+  val QueryAllowed: Boolean
+  val SpecificFinder: String
+  val SubmitAdapterName: String
+  val SubmitAllowed: Boolean
+  def Query(): Unit
+  def Submit(): Unit
 }
 
 object BDCAdapterObject {
@@ -39,79 +38,5 @@ object BDCAdapterObject {
     __obj.updateDynamic("InfoPath.BDCAdapterObject_typekey")(InfoPathDotBDCAdapterObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[BDCAdapterObject]
   }
-  @scala.inline
-  implicit class BDCAdapterObjectOps[Self <: BDCAdapterObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntityNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotBDCAdapterObject_typekey(value: BDCAdapterObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.BDCAdapterObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLOBSystemInstance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LOBSystemInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpecificFinder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpecificFinder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Submit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSubmitAdapterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitAdapterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmitAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

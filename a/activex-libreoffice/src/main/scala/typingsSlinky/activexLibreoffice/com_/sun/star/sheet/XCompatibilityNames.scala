@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** gives access to the sequence of compatibility names for an Addin function. */
-@js.native
 trait XCompatibilityNames extends XInterface {
   /**
     * returns the compatibility names of the specified function.
@@ -26,7 +25,7 @@ trait XCompatibilityNames extends XInterface {
     * which contains first the entry representing the current locale. `TRUE`
     * @param aProgrammaticName is the exact name of a method within its interface.
     */
-  def getCompatibilityNames(aProgrammaticName: String): SafeArray[LocalizedName] = js.native
+  def getCompatibilityNames(aProgrammaticName: String): SafeArray[LocalizedName]
 }
 
 object XCompatibilityNames {
@@ -40,19 +39,5 @@ object XCompatibilityNames {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getCompatibilityNames = js.Any.fromFunction1(getCompatibilityNames), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCompatibilityNames]
   }
-  @scala.inline
-  implicit class XCompatibilityNamesOps[Self <: XCompatibilityNames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCompatibilityNames(value: String => SafeArray[LocalizedName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCompatibilityNames")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

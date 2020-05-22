@@ -31,89 +31,22 @@ trait TextOptions extends js.Object {
 
 object TextOptions {
   @scala.inline
-  def apply(): TextOptions = {
+  def apply(
+    AnalysisScheme: Word = null,
+    DefaultValue: FieldValue = null,
+    HighlightEnabled: js.UndefOr[Boolean] = js.undefined,
+    ReturnEnabled: js.UndefOr[Boolean] = js.undefined,
+    SortEnabled: js.UndefOr[Boolean] = js.undefined,
+    SourceField: FieldName = null
+  ): TextOptions = {
     val __obj = js.Dynamic.literal()
+    if (AnalysisScheme != null) __obj.updateDynamic("AnalysisScheme")(AnalysisScheme.asInstanceOf[js.Any])
+    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(HighlightEnabled)) __obj.updateDynamic("HighlightEnabled")(HighlightEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReturnEnabled)) __obj.updateDynamic("ReturnEnabled")(ReturnEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SortEnabled)) __obj.updateDynamic("SortEnabled")(SortEnabled.get.asInstanceOf[js.Any])
+    if (SourceField != null) __obj.updateDynamic("SourceField")(SourceField.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextOptions]
   }
-  @scala.inline
-  implicit class TextOptionsOps[Self <: TextOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalysisScheme(value: Word): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalysisScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalysisScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalysisScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: FieldValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HighlightEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HighlightEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceField(value: FieldName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceField")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

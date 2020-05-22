@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * This action node returns RUNNING always.
   *
   */
-@js.native
 trait Runner extends BaseNode
 
 object Runner {

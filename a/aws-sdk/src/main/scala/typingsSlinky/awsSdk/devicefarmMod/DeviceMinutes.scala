@@ -22,53 +22,16 @@ trait DeviceMinutes extends js.Object {
 
 object DeviceMinutes {
   @scala.inline
-  def apply(): DeviceMinutes = {
+  def apply(
+    metered: js.UndefOr[Double] = js.undefined,
+    total: js.UndefOr[Double] = js.undefined,
+    unmetered: js.UndefOr[Double] = js.undefined
+  ): DeviceMinutes = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(metered)) __obj.updateDynamic("metered")(metered.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total)) __obj.updateDynamic("total")(total.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unmetered)) __obj.updateDynamic("unmetered")(unmetered.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceMinutes]
   }
-  @scala.inline
-  implicit class DeviceMinutesOps[Self <: DeviceMinutes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetered(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmetered(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmetered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmetered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmetered")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

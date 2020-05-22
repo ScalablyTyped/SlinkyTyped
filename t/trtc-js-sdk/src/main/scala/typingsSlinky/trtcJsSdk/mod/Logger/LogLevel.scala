@@ -12,23 +12,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** 日志输出等级 */
-@js.native
 trait LogLevel extends js.Object {
   /** 输出 DEBUG、INFO、WARN、ERROR 等级日志 */
-  var DEBUG: `1` = js.native
+  var DEBUG: `1`
   /** 输出 ERROR 等级日志 */
-  var ERROR: `4` = js.native
+  var ERROR: `4`
   /** 输出 INFO、WARN、ERROR 等级日志 */
-  var INFO: `2` = js.native
+  var INFO: `2`
   /**
     * 不输出任何日志
     * **注意： 关闭日之后我们将无法帮助您定位线上问题，建议至少保留 WARN 日志等级！**
     */
-  var NONE: `5` = js.native
+  var NONE: `5`
   /** 输出所有日志 */
-  var TRACE: `0` = js.native
+  var TRACE: `0`
   /** 输出 WARN、ERROR 等级日志 */
-  var WARN: `3` = js.native
+  var WARN: `3`
 }
 
 @JSImport("trtc-js-sdk", "Logger.LogLevel")

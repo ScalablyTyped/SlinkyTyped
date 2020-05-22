@@ -14,7 +14,7 @@ trait OverlayGroup[O /* <: Overlay[_] */, ExtraData] extends Overlay[ExtraData] 
   def addOverlay(overlay: O): this.type = js.native
   def addOverlay(overlay: js.Array[O]): this.type = js.native
   /**
-    * 	添加覆盖物数组到集合中，不支持添加重复的覆盖物
+    *     添加覆盖物数组到集合中，不支持添加重复的覆盖物
     * @param overlay 覆盖物数组
     */
   def addOverlays(overlay: O): this.type = js.native
@@ -62,7 +62,7 @@ trait OverlayGroup[O /* <: Overlay[_] */, ExtraData] extends Overlay[ExtraData] 
   def removeOverlay(overlay: O): this.type = js.native
   def removeOverlay(overlay: js.Array[O]): this.type = js.native
   /**
-    * 	从集合中删除传入的覆盖物实例数组
+    *     从集合中删除传入的覆盖物实例数组
     * @param overlay 覆盖物数组
     */
   def removeOverlays(overlay: O): this.type = js.native

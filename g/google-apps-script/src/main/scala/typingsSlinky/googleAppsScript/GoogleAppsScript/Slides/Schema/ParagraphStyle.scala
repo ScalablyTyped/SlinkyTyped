@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParagraphStyle extends js.Object {
-  var alignment: js.UndefOr[String] = js.native
-  var direction: js.UndefOr[String] = js.native
-  var indentEnd: js.UndefOr[Dimension] = js.native
-  var indentFirstLine: js.UndefOr[Dimension] = js.native
-  var indentStart: js.UndefOr[Dimension] = js.native
-  var lineSpacing: js.UndefOr[Double] = js.native
-  var spaceAbove: js.UndefOr[Dimension] = js.native
-  var spaceBelow: js.UndefOr[Dimension] = js.native
-  var spacingMode: js.UndefOr[String] = js.native
+  var alignment: js.UndefOr[String] = js.undefined
+  var direction: js.UndefOr[String] = js.undefined
+  var indentEnd: js.UndefOr[Dimension] = js.undefined
+  var indentFirstLine: js.UndefOr[Dimension] = js.undefined
+  var indentStart: js.UndefOr[Dimension] = js.undefined
+  var lineSpacing: js.UndefOr[Double] = js.undefined
+  var spaceAbove: js.UndefOr[Dimension] = js.undefined
+  var spaceBelow: js.UndefOr[Dimension] = js.undefined
+  var spacingMode: js.UndefOr[String] = js.undefined
 }
 
 object ParagraphStyle {
   @scala.inline
-  def apply(): ParagraphStyle = {
+  def apply(
+    alignment: String = null,
+    direction: String = null,
+    indentEnd: Dimension = null,
+    indentFirstLine: Dimension = null,
+    indentStart: Dimension = null,
+    lineSpacing: js.UndefOr[Double] = js.undefined,
+    spaceAbove: Dimension = null,
+    spaceBelow: Dimension = null,
+    spacingMode: String = null
+  ): ParagraphStyle = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (indentEnd != null) __obj.updateDynamic("indentEnd")(indentEnd.asInstanceOf[js.Any])
+    if (indentFirstLine != null) __obj.updateDynamic("indentFirstLine")(indentFirstLine.asInstanceOf[js.Any])
+    if (indentStart != null) __obj.updateDynamic("indentStart")(indentStart.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineSpacing)) __obj.updateDynamic("lineSpacing")(lineSpacing.get.asInstanceOf[js.Any])
+    if (spaceAbove != null) __obj.updateDynamic("spaceAbove")(spaceAbove.asInstanceOf[js.Any])
+    if (spaceBelow != null) __obj.updateDynamic("spaceBelow")(spaceBelow.asInstanceOf[js.Any])
+    if (spacingMode != null) __obj.updateDynamic("spacingMode")(spacingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParagraphStyle]
   }
-  @scala.inline
-  implicit class ParagraphStyleOps[Self <: ParagraphStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndentEnd(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndentEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndentFirstLine(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentFirstLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndentFirstLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentFirstLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndentStart(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndentStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpaceAbove(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceAbove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpaceAbove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceAbove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpaceBelow(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBelow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpaceBelow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBelow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacingMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

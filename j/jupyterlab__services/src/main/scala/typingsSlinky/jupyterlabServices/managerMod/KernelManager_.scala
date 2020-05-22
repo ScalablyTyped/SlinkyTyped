@@ -44,6 +44,14 @@ class KernelManager_ () extends IManager {
   @JSName("connectionFailure")
   val connectionFailure_KernelManager_ : ISignal[this.type, js.Error] = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * A signal emitted when the running kernels change.
     */
   @JSName("runningChanged")
@@ -58,6 +66,19 @@ class KernelManager_ () extends IManager {
     */
   @JSName("specsChanged")
   val specsChanged_KernelManager_ : ISignal[this.type, ISpecModels] = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Execute a request to the server to poll running kernels and update state.
     */

@@ -8,20 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnResource extends js.Object {
   /** Deletes the specified column. */
-  def delete(request: Alt): Request[Unit] = js.native
+  def delete(request: Alt): Request[Unit]
   /** Retrieves a specific column by its ID. */
-  def get(request: Alt): Request[Column] = js.native
+  def get(request: Alt): Request[Column]
   /** Adds a new column to the table. */
-  def insert(request: Fields): Request[Column] = js.native
+  def insert(request: Fields): Request[Column]
   /** Retrieves a list of columns. */
-  def list(request: Key): Request[ColumnList] = js.native
+  def list(request: Key): Request[ColumnList]
   /** Updates the name or type of an existing column. This method supports patch semantics. */
-  def patch(request: Alt): Request[Column] = js.native
+  def patch(request: Alt): Request[Column]
   /** Updates the name or type of an existing column. */
-  def update(request: Alt): Request[Column] = js.native
+  def update(request: Alt): Request[Column]
 }
 
 object ColumnResource {
@@ -37,49 +36,5 @@ object ColumnResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[ColumnResource]
   }
-  @scala.inline
-  implicit class ColumnResourceOps[Self <: ColumnResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Alt => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Alt => Request[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: Fields => Request[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Key => Request[ColumnList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Alt => Request[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Alt => Request[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

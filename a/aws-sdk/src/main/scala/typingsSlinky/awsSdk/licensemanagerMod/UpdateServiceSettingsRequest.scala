@@ -26,65 +26,18 @@ trait UpdateServiceSettingsRequest extends js.Object {
 
 object UpdateServiceSettingsRequest {
   @scala.inline
-  def apply(): UpdateServiceSettingsRequest = {
+  def apply(
+    EnableCrossAccountsDiscovery: js.UndefOr[BoxBoolean] = js.undefined,
+    OrganizationConfiguration: OrganizationConfiguration = null,
+    S3BucketArn: String = null,
+    SnsTopicArn: String = null
+  ): UpdateServiceSettingsRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(EnableCrossAccountsDiscovery)) __obj.updateDynamic("EnableCrossAccountsDiscovery")(EnableCrossAccountsDiscovery.get.asInstanceOf[js.Any])
+    if (OrganizationConfiguration != null) __obj.updateDynamic("OrganizationConfiguration")(OrganizationConfiguration.asInstanceOf[js.Any])
+    if (S3BucketArn != null) __obj.updateDynamic("S3BucketArn")(S3BucketArn.asInstanceOf[js.Any])
+    if (SnsTopicArn != null) __obj.updateDynamic("SnsTopicArn")(SnsTopicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateServiceSettingsRequest]
   }
-  @scala.inline
-  implicit class UpdateServiceSettingsRequestOps[Self <: UpdateServiceSettingsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableCrossAccountsDiscovery(value: BoxBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableCrossAccountsDiscovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCrossAccountsDiscovery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableCrossAccountsDiscovery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationConfiguration(value: OrganizationConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BucketArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BucketArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsTopicArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

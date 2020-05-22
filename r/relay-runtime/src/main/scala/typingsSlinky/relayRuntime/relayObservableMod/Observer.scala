@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Observer[T] extends js.Object {
-  val complete: js.UndefOr[js.Function0[Unit]] = js.native
-  val error: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
-  val next: js.UndefOr[js.Function1[/* value */ T, Unit]] = js.native
-  val start: js.UndefOr[js.Function1[/* subscription */ Subscription, Unit]] = js.native
-  val unsubscribe: js.UndefOr[js.Function1[/* subscription */ Subscription, Unit]] = js.native
+  val complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  val error: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
+  val next: js.UndefOr[js.Function1[/* value */ T, Unit]] = js.undefined
+  val start: js.UndefOr[js.Function1[/* subscription */ Subscription, Unit]] = js.undefined
+  val unsubscribe: js.UndefOr[js.Function1[/* subscription */ Subscription, Unit]] = js.undefined
 }
 
 object Observer {
   @scala.inline
-  def apply[T](): Observer[T] = {
+  def apply[T](
+    complete: () => Unit = null,
+    error: /* error */ js.Error => Unit = null,
+    next: /* value */ T => Unit = null,
+    start: /* subscription */ Subscription => Unit = null,
+    unsubscribe: /* subscription */ Subscription => Unit = null
+  ): Observer[T] = {
     val __obj = js.Dynamic.literal()
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
+    if (next != null) __obj.updateDynamic("next")(js.Any.fromFunction1(next))
+    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction1(start))
+    if (unsubscribe != null) __obj.updateDynamic("unsubscribe")(js.Any.fromFunction1(unsubscribe))
     __obj.asInstanceOf[Observer[T]]
   }
-  @scala.inline
-  implicit class ObserverOps[Self[t] <: Observer[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withComplete(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: /* error */ js.Error => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: /* value */ T => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: /* subscription */ Subscription => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsubscribe(value: /* subscription */ Subscription => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribe")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnsubscribe: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribe")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

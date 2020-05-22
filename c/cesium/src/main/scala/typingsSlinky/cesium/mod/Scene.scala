@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.cesium.anon.ContextOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ class Scene () extends js.Object {
   def this(options: ContextOptions) = this()
   var backgroundColor: Color = js.native
   val camera: Camera = js.native
-  val canvas: Element = js.native
+  val canvas: HTMLCanvasElement = js.native
   var completeMorphOnUserInput: Boolean = js.native
   val debugFrustumStatistics: js.Any = js.native
   var debugShowCommands: Boolean = js.native

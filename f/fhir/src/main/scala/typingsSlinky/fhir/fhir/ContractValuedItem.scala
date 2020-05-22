@@ -7,215 +7,99 @@ import scala.scalajs.js.annotation._
 /**
   * Contract Valued Item List
   */
-@js.native
 trait ContractValuedItem extends BackboneElement {
   /**
     * Contains extended information for property 'effectiveTime'.
     */
-  var _effectiveTime: js.UndefOr[Element] = js.native
+  var _effectiveTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'factor'.
     */
-  var _factor: js.UndefOr[Element] = js.native
+  var _factor: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'points'.
     */
-  var _points: js.UndefOr[Element] = js.native
+  var _points: js.UndefOr[Element] = js.undefined
   /**
     * Contract Valued Item Effective Tiem
     */
-  var effectiveTime: js.UndefOr[dateTime] = js.native
+  var effectiveTime: js.UndefOr[dateTime] = js.undefined
   /**
     * Contract Valued Item Type
     */
-  var entityCodeableConcept: js.UndefOr[CodeableConcept] = js.native
+  var entityCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Contract Valued Item Type
     */
-  var entityReference: js.UndefOr[Reference] = js.native
+  var entityReference: js.UndefOr[Reference] = js.undefined
   /**
     * Contract Valued Item Price Scaling Factor
     */
-  var factor: js.UndefOr[decimal] = js.native
+  var factor: js.UndefOr[decimal] = js.undefined
   /**
     * Contract Valued Item Number
     */
-  var identifier: js.UndefOr[Identifier] = js.native
+  var identifier: js.UndefOr[Identifier] = js.undefined
   /**
     * Total Contract Valued Item Value
     */
-  var net: js.UndefOr[Money] = js.native
+  var net: js.UndefOr[Money] = js.undefined
   /**
     * Contract Valued Item Difficulty Scaling Factor
     */
-  var points: js.UndefOr[decimal] = js.native
+  var points: js.UndefOr[decimal] = js.undefined
   /**
     * Count of Contract Valued Items
     */
-  var quantity: js.UndefOr[Quantity] = js.native
+  var quantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Contract Valued Item fee, charge, or cost
     */
-  var unitPrice: js.UndefOr[Money] = js.native
+  var unitPrice: js.UndefOr[Money] = js.undefined
 }
 
 object ContractValuedItem {
   @scala.inline
-  def apply(): ContractValuedItem = {
+  def apply(
+    _effectiveTime: Element = null,
+    _factor: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _points: Element = null,
+    effectiveTime: dateTime = null,
+    entityCodeableConcept: CodeableConcept = null,
+    entityReference: Reference = null,
+    extension: js.Array[Extension] = null,
+    factor: js.UndefOr[decimal] = js.undefined,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    identifier: Identifier = null,
+    modifierExtension: js.Array[Extension] = null,
+    net: Money = null,
+    points: js.UndefOr[decimal] = js.undefined,
+    quantity: Quantity = null,
+    unitPrice: Money = null
+  ): ContractValuedItem = {
     val __obj = js.Dynamic.literal()
+    if (_effectiveTime != null) __obj.updateDynamic("_effectiveTime")(_effectiveTime.asInstanceOf[js.Any])
+    if (_factor != null) __obj.updateDynamic("_factor")(_factor.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_points != null) __obj.updateDynamic("_points")(_points.asInstanceOf[js.Any])
+    if (effectiveTime != null) __obj.updateDynamic("effectiveTime")(effectiveTime.asInstanceOf[js.Any])
+    if (entityCodeableConcept != null) __obj.updateDynamic("entityCodeableConcept")(entityCodeableConcept.asInstanceOf[js.Any])
+    if (entityReference != null) __obj.updateDynamic("entityReference")(entityReference.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (!js.isUndefined(factor)) __obj.updateDynamic("factor")(factor.get.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (net != null) __obj.updateDynamic("net")(net.asInstanceOf[js.Any])
+    if (!js.isUndefined(points)) __obj.updateDynamic("points")(points.get.asInstanceOf[js.Any])
+    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
+    if (unitPrice != null) __obj.updateDynamic("unitPrice")(unitPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContractValuedItem]
   }
-  @scala.inline
-  implicit class ContractValuedItemOps[Self <: ContractValuedItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_effectiveTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_effectiveTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_effectiveTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_effectiveTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_factor(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_factor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_points(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_points: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectiveTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityCodeableConcept(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityCodeableConcept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityCodeableConcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityCodeableConcept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactor(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: Identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNet(value: Money): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("net")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("net")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoints(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPrice(value: Money): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

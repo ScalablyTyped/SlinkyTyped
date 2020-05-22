@@ -1,5 +1,8 @@
 package typingsSlinky.rdflib.mod
 
+import typingsSlinky.rdflib.formulaMod.default
+import typingsSlinky.rdflib.parseMod.CallbackFunc
+import typingsSlinky.rdflib.typesMod.ContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,12 +10,10 @@ import scala.scalajs.js.annotation._
 @JSImport("rdflib", "parse")
 @js.native
 object parse extends js.Object {
-  def apply(
-    str: String,
-    kb: Formula,
-    base: String,
-    contentType: String,
-    callback: js.Function2[/* error */ js.Any, /* kb */ Formula, Unit]
-  ): Unit = js.native
+  def apply(str: String, kb: default, base: String): Unit = js.native
+  def apply(str: String, kb: default, base: String, contentType: String): Unit = js.native
+  def apply(str: String, kb: default, base: String, contentType: String, callback: CallbackFunc): Unit = js.native
+  def apply(str: String, kb: default, base: String, contentType: ContentType): Unit = js.native
+  def apply(str: String, kb: default, base: String, contentType: ContentType, callback: CallbackFunc): Unit = js.native
 }
 

@@ -30,14 +30,14 @@ trait IterativeCalculation extends ClientObject {
   var enabled: Boolean = js.native
   /**
     *
-    * Returns or sets the maximum amount of change between each iteration as Excel resolves circular references.
+    * Specifies the maximum amount of change between each iteration as Excel resolves circular references.
     *
     * [Api set: ExcelApi 1.9]
     */
   var maxChange: Double = js.native
   /**
     *
-    * Returns or sets the maximum number of iterations that Excel can use to resolve a circular reference.
+    * Specifies the maximum number of iterations that Excel can use to resolve a circular reference.
     *
     * [Api set: ExcelApi 1.9]
     */

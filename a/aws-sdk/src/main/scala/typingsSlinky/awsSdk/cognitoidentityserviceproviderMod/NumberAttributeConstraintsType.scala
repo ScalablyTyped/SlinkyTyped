@@ -18,41 +18,11 @@ trait NumberAttributeConstraintsType extends js.Object {
 
 object NumberAttributeConstraintsType {
   @scala.inline
-  def apply(): NumberAttributeConstraintsType = {
+  def apply(MaxValue: StringType = null, MinValue: StringType = null): NumberAttributeConstraintsType = {
     val __obj = js.Dynamic.literal()
+    if (MaxValue != null) __obj.updateDynamic("MaxValue")(MaxValue.asInstanceOf[js.Any])
+    if (MinValue != null) __obj.updateDynamic("MinValue")(MinValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberAttributeConstraintsType]
   }
-  @scala.inline
-  implicit class NumberAttributeConstraintsTypeOps[Self <: NumberAttributeConstraintsType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxValue(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

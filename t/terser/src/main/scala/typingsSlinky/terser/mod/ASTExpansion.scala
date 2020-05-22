@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ASTExpansion
   extends ASTNode
-     with ArgType {
+     with _ArgType {
   var expression: ASTNode = js.native
 }
 

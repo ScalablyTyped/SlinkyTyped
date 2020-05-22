@@ -15,29 +15,10 @@ trait StandardsSubscriptionState extends js.Object {
 
 object StandardsSubscriptionState {
   @scala.inline
-  def apply(): StandardsSubscriptionState = {
+  def apply(standardsArn: Input[String] = null): StandardsSubscriptionState = {
     val __obj = js.Dynamic.literal()
+    if (standardsArn != null) __obj.updateDynamic("standardsArn")(standardsArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardsSubscriptionState]
   }
-  @scala.inline
-  implicit class StandardsSubscriptionStateOps[Self <: StandardsSubscriptionState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStandardsArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardsArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandardsArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardsArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

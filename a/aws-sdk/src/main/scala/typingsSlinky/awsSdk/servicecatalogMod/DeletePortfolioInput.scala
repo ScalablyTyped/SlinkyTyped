@@ -18,35 +18,10 @@ trait DeletePortfolioInput extends js.Object {
 
 object DeletePortfolioInput {
   @scala.inline
-  def apply(Id: Id): DeletePortfolioInput = {
+  def apply(Id: Id, AcceptLanguage: AcceptLanguage = null): DeletePortfolioInput = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
+    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeletePortfolioInput]
   }
-  @scala.inline
-  implicit class DeletePortfolioInputOps[Self <: DeletePortfolioInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptLanguage(value: AcceptLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

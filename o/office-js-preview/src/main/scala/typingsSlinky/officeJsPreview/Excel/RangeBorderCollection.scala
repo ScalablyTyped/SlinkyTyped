@@ -30,7 +30,7 @@ trait RangeBorderCollection extends ClientObject {
   var context_RangeBorderCollection: RequestContext = js.native
   /**
     *
-    * Number of border objects in the collection. Read-only.
+    * Number of border objects in the collection.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -39,7 +39,7 @@ trait RangeBorderCollection extends ClientObject {
   val items: js.Array[RangeBorder] = js.native
   /**
     *
-    * Returns or sets a double that lightens or darkens a color for Range Borders, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
+    * Specifies a double that lightens or darkens a color for Range Borders, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
     A null value indicates that the entire border collections don't have uniform tintAndShade setting.
     *
     * [Api set: ExcelApi 1.9]

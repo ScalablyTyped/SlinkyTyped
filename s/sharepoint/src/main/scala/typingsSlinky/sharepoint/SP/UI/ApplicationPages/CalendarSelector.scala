@@ -5,18 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CalendarSelector extends Component {
   def addHandler(
     scopeKey: String,
     people: Boolean,
     resource: Boolean,
     handler: js.Function2[/* sender */ js.Any, /* selection */ SelectorSelectionEventArgs, Unit]
-  ): Unit = js.native
-  def getSelector(`type`: SelectorType, scopeKey: String): ISelectorComponent = js.native
-  def registerSelector(selector: ISelectorComponent): Unit = js.native
-  def removeEntity(scopeKey: String, ent: ResolveEntity): Unit = js.native
-  def revertTo(scopeKey: String, ent: ResolveEntity): Unit = js.native
+  ): Unit
+  def getSelector(`type`: SelectorType, scopeKey: String): ISelectorComponent
+  def registerSelector(selector: ISelectorComponent): Unit
+  def removeEntity(scopeKey: String, ent: ResolveEntity): Unit
+  def revertTo(scopeKey: String, ent: ResolveEntity): Unit
 }
 
 object CalendarSelector {
@@ -46,45 +45,5 @@ object CalendarSelector {
     val __obj = js.Dynamic.literal(addHandler = js.Any.fromFunction4(addHandler), add_disposing = js.Any.fromFunction1(add_disposing), add_propertyChanged = js.Any.fromFunction1(add_propertyChanged), beginUpdate = js.Any.fromFunction0(beginUpdate), dispose = js.Any.fromFunction0(dispose), endUpdate = js.Any.fromFunction0(endUpdate), getSelector = js.Any.fromFunction2(getSelector), get_events = js.Any.fromFunction0(get_events), get_id = js.Any.fromFunction0(get_id), get_isInitialized = js.Any.fromFunction0(get_isInitialized), get_isUpdating = js.Any.fromFunction0(get_isUpdating), initialize = js.Any.fromFunction0(initialize), raisePropertyChanged = js.Any.fromFunction1(raisePropertyChanged), registerSelector = js.Any.fromFunction1(registerSelector), removeEntity = js.Any.fromFunction2(removeEntity), remove_disposing = js.Any.fromFunction1(remove_disposing), remove_propertyChanged = js.Any.fromFunction1(remove_propertyChanged), revertTo = js.Any.fromFunction2(revertTo), set_id = js.Any.fromFunction1(set_id), updated = js.Any.fromFunction0(updated))
     __obj.asInstanceOf[CalendarSelector]
   }
-  @scala.inline
-  implicit class CalendarSelectorOps[Self <: CalendarSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddHandler(
-      value: (String, Boolean, Boolean, js.Function2[/* sender */ js.Any, /* selection */ SelectorSelectionEventArgs, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addHandler")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelector(value: (SelectorType, String) => ISelectorComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelector")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterSelector(value: ISelectorComponent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerSelector")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveEntity(value: (String, ResolveEntity) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEntity")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRevertTo(value: (String, ResolveEntity) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revertTo")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

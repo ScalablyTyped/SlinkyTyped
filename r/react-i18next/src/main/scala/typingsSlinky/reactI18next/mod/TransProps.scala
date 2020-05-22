@@ -1,7 +1,6 @@
 package typingsSlinky.reactI18next.mod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.i18next.mod.TFunction
 import typingsSlinky.i18next.mod.i18n
 import scala.scalajs.js
@@ -9,178 +8,48 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<i18next.i18next.WithT> */
-@js.native
 trait TransProps extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var components: js.UndefOr[js.Array[TagMod[Any]]] = js.native
-  var count: js.UndefOr[Double] = js.native
-  var defaults: js.UndefOr[String] = js.native
-  var i18n: js.UndefOr[typingsSlinky.i18next.mod.i18n] = js.native
-  var i18nKey: js.UndefOr[String] = js.native
-  var ns: js.UndefOr[Namespace] = js.native
-  var parent: js.UndefOr[TagMod[Any]] = js.native
-  var t: js.UndefOr[TFunction] = js.native
-  var tOptions: js.UndefOr[js.Object] = js.native
-  var values: js.UndefOr[js.Object] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var components: js.UndefOr[js.Array[TagMod[Any]]] = js.undefined
+  var count: js.UndefOr[Double] = js.undefined
+  var defaults: js.UndefOr[String] = js.undefined
+  var i18n: js.UndefOr[typingsSlinky.i18next.mod.i18n] = js.undefined
+  var i18nKey: js.UndefOr[String] = js.undefined
+  var ns: js.UndefOr[Namespace] = js.undefined
+  var parent: js.UndefOr[TagMod[Any]] = js.undefined
+  var t: js.UndefOr[TFunction] = js.undefined
+  var tOptions: js.UndefOr[js.Object] = js.undefined
+  var values: js.UndefOr[js.Object] = js.undefined
 }
 
 object TransProps {
   @scala.inline
-  def apply(): TransProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    components: js.Array[TagMod[Any]] = null,
+    count: js.UndefOr[Double] = js.undefined,
+    defaults: String = null,
+    i18n: i18n = null,
+    i18nKey: String = null,
+    ns: Namespace = null,
+    parent: TagMod[Any] = null,
+    t: TFunction = null,
+    tOptions: js.Object = null,
+    values: js.Object = null
+  ): TransProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
+    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
+    if (i18nKey != null) __obj.updateDynamic("i18nKey")(i18nKey.asInstanceOf[js.Any])
+    if (ns != null) __obj.updateDynamic("ns")(ns.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (t != null) __obj.updateDynamic("t")(t.asInstanceOf[js.Any])
+    if (tOptions != null) __obj.updateDynamic("tOptions")(tOptions.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransProps]
   }
-  @scala.inline
-  implicit class TransPropsOps[Self <: TransProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponents(value: js.Array[TagMod[Any]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaults(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withI18n(value: i18n): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutI18n: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withI18nKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18nKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutI18nKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i18nKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNs(value: Namespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withT(value: TFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for client events that relate to custom dialog operations.
   */
-@js.native
 trait ASPxClientHtmlEditorCustomDialogEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name that uniquely identifies the processed custom dialog.
     */
-  var name: String = js.native
+  var name: String
 }
 
 object ASPxClientHtmlEditorCustomDialogEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientHtmlEditorCustomDialogEventArgs {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientHtmlEditorCustomDialogEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientHtmlEditorCustomDialogEventArgsOps[Self <: ASPxClientHtmlEditorCustomDialogEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -20,29 +20,10 @@ trait SchemaObjectPropertyOptions extends js.Object {
 
 object SchemaObjectPropertyOptions {
   @scala.inline
-  def apply(): SchemaObjectPropertyOptions = {
+  def apply(subobjectProperties: js.Array[SchemaPropertyDefinition] = null): SchemaObjectPropertyOptions = {
     val __obj = js.Dynamic.literal()
+    if (subobjectProperties != null) __obj.updateDynamic("subobjectProperties")(subobjectProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaObjectPropertyOptions]
   }
-  @scala.inline
-  implicit class SchemaObjectPropertyOptionsOps[Self <: SchemaObjectPropertyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubobjectProperties(value: js.Array[SchemaPropertyDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subobjectProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubobjectProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subobjectProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

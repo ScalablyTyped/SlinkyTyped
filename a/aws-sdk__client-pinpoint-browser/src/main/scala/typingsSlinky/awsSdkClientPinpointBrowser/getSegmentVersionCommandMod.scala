@@ -26,9 +26,16 @@ object getSegmentVersionCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetSegmentVersionInput) = this()
+    /* CompleteClass */
+    override val input: GetSegmentVersionInput = js.native
     val middlewareStack: MiddlewareStack[GetSegmentVersionInput, GetSegmentVersionOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[GetSegmentVersionInput, GetSegmentVersionOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetSegmentVersionInput, GetSegmentVersionOutput] = js.native
   }

@@ -22,53 +22,16 @@ trait InstanceHealthSummary extends js.Object {
 
 object InstanceHealthSummary {
   @scala.inline
-  def apply(): InstanceHealthSummary = {
+  def apply(
+    instanceHealth: InstanceHealthState = null,
+    instanceHealthReason: InstanceHealthReason = null,
+    instanceName: ResourceName = null
+  ): InstanceHealthSummary = {
     val __obj = js.Dynamic.literal()
+    if (instanceHealth != null) __obj.updateDynamic("instanceHealth")(instanceHealth.asInstanceOf[js.Any])
+    if (instanceHealthReason != null) __obj.updateDynamic("instanceHealthReason")(instanceHealthReason.asInstanceOf[js.Any])
+    if (instanceName != null) __obj.updateDynamic("instanceName")(instanceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceHealthSummary]
   }
-  @scala.inline
-  implicit class InstanceHealthSummaryOps[Self <: InstanceHealthSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceHealth(value: InstanceHealthState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceHealth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceHealth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceHealth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceHealthReason(value: InstanceHealthReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceHealthReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceHealthReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceHealthReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

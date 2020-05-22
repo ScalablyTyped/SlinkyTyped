@@ -18,19 +18,5 @@ object HlsTimedMetadataScheduleActionSettings {
     val __obj = js.Dynamic.literal(Id3 = Id3.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsTimedMetadataScheduleActionSettings]
   }
-  @scala.inline
-  implicit class HlsTimedMetadataScheduleActionSettingsOps[Self <: HlsTimedMetadataScheduleActionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId3(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id3")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

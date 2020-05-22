@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileReference extends js.Object {
   /**
     * The URI of a file stored in Google Cloud Storage.
@@ -16,34 +15,15 @@ trait FileReference extends js.Object {
     *
     * - In response: always set - In create/update request: always set
     */
-  var fileUri: js.UndefOr[String] = js.native
+  var fileUri: js.UndefOr[String] = js.undefined
 }
 
 object FileReference {
   @scala.inline
-  def apply(): FileReference = {
+  def apply(fileUri: String = null): FileReference = {
     val __obj = js.Dynamic.literal()
+    if (fileUri != null) __obj.updateDynamic("fileUri")(fileUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileReference]
   }
-  @scala.inline
-  implicit class FileReferenceOps[Self <: FileReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

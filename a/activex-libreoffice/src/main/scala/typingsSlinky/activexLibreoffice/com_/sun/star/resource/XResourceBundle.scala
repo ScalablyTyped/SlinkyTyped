@@ -102,24 +102,23 @@ import scala.scalajs.js.annotation._
   * @see Locale
   * @version 0.1 26 May 1999
   */
-@js.native
 trait XResourceBundle extends XNameAccess {
   /** @returns the locale for this resource bundle.  This function can be used to determine whether the resource bundle that is returned really corresponds to t */
-  val Locale: typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale = js.native
+  val Locale: typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale
   /**
     * contains the parent bundle of this bundle.
     *
     * The parent bundle is searched by the method {@link com.sun.star.container.XNameAccess.getByName()} when this bundle does not contain a particular
     * resource.
     */
-  var Parent: XResourceBundle = js.native
+  var Parent: XResourceBundle
   /**
     * @param key specifies the element.
     * @returns an object from a resource bundle or NULL if no resource exists.  It does not look in the parents.
     */
-  def getDirectElement(key: String): js.Any = js.native
+  def getDirectElement(key: String): js.Any
   /** @returns the locale for this resource bundle.  This function can be used to determine whether the resource bundle that is returned really corresponds to t */
-  def getLocale(): typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale = js.native
+  def getLocale(): typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale
 }
 
 object XResourceBundle {
@@ -143,37 +142,5 @@ object XResourceBundle {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], Locale = Locale.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByName = js.Any.fromFunction1(getByName), getDirectElement = js.Any.fromFunction1(getDirectElement), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), getLocale = js.Any.fromFunction0(getLocale), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XResourceBundle]
   }
-  @scala.inline
-  implicit class XResourceBundleOps[Self <: XResourceBundle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocale(value: Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: XResourceBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDirectElement(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDirectElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetLocale(value: () => Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocale")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

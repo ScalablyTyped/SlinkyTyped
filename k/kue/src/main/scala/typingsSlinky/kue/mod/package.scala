@@ -11,4 +11,14 @@ package object mod {
     /* job */ js.UndefOr[typingsSlinky.kue.mod.Job], 
     scala.Unit
   ]
+  type ProcessCallback = (js.Function2[
+    /* job */ typingsSlinky.kue.mod.Job, 
+    /* cb */ typingsSlinky.kue.mod.DoneCallback, 
+    scala.Unit
+  ]) | (js.Function3[
+    /* job */ typingsSlinky.kue.mod.Job, 
+    /* ctx */ typingsSlinky.kue.mod.WorkerCtx, 
+    /* cb */ typingsSlinky.kue.mod.DoneCallback, 
+    scala.Unit
+  ])
 }

@@ -6,194 +6,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PaginationProps
   extends /* x */ StringDictionary[js.Any] {
-  var className: js.UndefOr[String] = js.native
-  var disableStyles: js.UndefOr[Boolean] = js.native
-  var displayTotal: js.UndefOr[Boolean] = js.native
-  var displayTotalProps: js.UndefOr[js.Any] = js.native
-  var initialPage: js.UndefOr[Double] = js.native
-  var itemsPerPage: js.UndefOr[Double] = js.native
-  var itemsTotal: Double = js.native
-  var linkProps: js.UndefOr[js.Any] = js.native
-  var localizedText: js.UndefOr[Next] = js.native
-  var nextProps: js.UndefOr[js.Any] = js.native
-  var prevProps: js.UndefOr[js.Any] = js.native
-  var totalText: js.UndefOr[String] = js.native
-  var visiblePageTotal: js.UndefOr[Double] = js.native
-  def onClick(args: js.Any*): js.Any = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var disableStyles: js.UndefOr[Boolean] = js.undefined
+  var displayTotal: js.UndefOr[Boolean] = js.undefined
+  var displayTotalProps: js.UndefOr[js.Any] = js.undefined
+  var initialPage: js.UndefOr[Double] = js.undefined
+  var itemsPerPage: js.UndefOr[Double] = js.undefined
+  var itemsTotal: Double
+  var linkProps: js.UndefOr[js.Any] = js.undefined
+  var localizedText: js.UndefOr[Next] = js.undefined
+  var nextProps: js.UndefOr[js.Any] = js.undefined
+  var prevProps: js.UndefOr[js.Any] = js.undefined
+  var totalText: js.UndefOr[String] = js.undefined
+  var visiblePageTotal: js.UndefOr[Double] = js.undefined
+  def onClick(args: js.Any*): js.Any
 }
 
 object PaginationProps {
   @scala.inline
-  def apply(itemsTotal: Double, onClick: /* repeated */ js.Any => js.Any): PaginationProps = {
+  def apply(
+    itemsTotal: Double,
+    onClick: /* repeated */ js.Any => js.Any,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    className: String = null,
+    disableStyles: js.UndefOr[Boolean] = js.undefined,
+    displayTotal: js.UndefOr[Boolean] = js.undefined,
+    displayTotalProps: js.Any = null,
+    initialPage: js.UndefOr[Double] = js.undefined,
+    itemsPerPage: js.UndefOr[Double] = js.undefined,
+    linkProps: js.Any = null,
+    localizedText: Next = null,
+    nextProps: js.Any = null,
+    prevProps: js.Any = null,
+    totalText: String = null,
+    visiblePageTotal: js.UndefOr[Double] = js.undefined
+  ): PaginationProps = {
     val __obj = js.Dynamic.literal(itemsTotal = itemsTotal.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick))
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayTotal)) __obj.updateDynamic("displayTotal")(displayTotal.get.asInstanceOf[js.Any])
+    if (displayTotalProps != null) __obj.updateDynamic("displayTotalProps")(displayTotalProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialPage)) __obj.updateDynamic("initialPage")(initialPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemsPerPage)) __obj.updateDynamic("itemsPerPage")(itemsPerPage.get.asInstanceOf[js.Any])
+    if (linkProps != null) __obj.updateDynamic("linkProps")(linkProps.asInstanceOf[js.Any])
+    if (localizedText != null) __obj.updateDynamic("localizedText")(localizedText.asInstanceOf[js.Any])
+    if (nextProps != null) __obj.updateDynamic("nextProps")(nextProps.asInstanceOf[js.Any])
+    if (prevProps != null) __obj.updateDynamic("prevProps")(prevProps.asInstanceOf[js.Any])
+    if (totalText != null) __obj.updateDynamic("totalText")(totalText.asInstanceOf[js.Any])
+    if (!js.isUndefined(visiblePageTotal)) __obj.updateDynamic("visiblePageTotal")(visiblePageTotal.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationProps]
   }
-  @scala.inline
-  implicit class PaginationPropsOps[Self <: PaginationProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItemsTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableStyles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayTotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayTotalProps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTotalProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayTotalProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTotalProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsPerPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsPerPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkProps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizedText(value: Next): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalizedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextProps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevProps(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisiblePageTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visiblePageTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisiblePageTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visiblePageTotal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

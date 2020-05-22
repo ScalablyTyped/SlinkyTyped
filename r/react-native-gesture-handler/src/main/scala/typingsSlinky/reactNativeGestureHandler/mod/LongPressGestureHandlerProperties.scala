@@ -1,78 +1,48 @@
 package typingsSlinky.reactNativeGestureHandler.mod
 
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LongPressGestureHandlerProperties extends GestureHandlerProperties {
-  var maxDist: js.UndefOr[Double] = js.native
-  var minDurationMs: js.UndefOr[Double] = js.native
-  var onGestureEvent: js.UndefOr[js.Function1[/* event */ LongPressGestureHandlerGestureEvent, Unit]] = js.native
-  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ LongPressGestureHandlerStateChangeEvent, Unit]] = js.native
+  var maxDist: js.UndefOr[Double] = js.undefined
+  var minDurationMs: js.UndefOr[Double] = js.undefined
+  var onGestureEvent: js.UndefOr[js.Function1[/* event */ LongPressGestureHandlerGestureEvent, Unit]] = js.undefined
+  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ LongPressGestureHandlerStateChangeEvent, Unit]] = js.undefined
 }
 
 object LongPressGestureHandlerProperties {
   @scala.inline
-  def apply(): LongPressGestureHandlerProperties = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Double | Bottom | Left | Right | Height | BottomHeight = null,
+    id: String = null,
+    maxDist: js.UndefOr[Double] = js.undefined,
+    minDurationMs: js.UndefOr[Double] = js.undefined,
+    onGestureEvent: /* event */ LongPressGestureHandlerGestureEvent => Unit = null,
+    onHandlerStateChange: /* event */ LongPressGestureHandlerStateChangeEvent => Unit = null,
+    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
+    simultaneousHandlers: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined,
+    waitFor: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined
+  ): LongPressGestureHandlerProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDist)) __obj.updateDynamic("maxDist")(maxDist.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDurationMs)) __obj.updateDynamic("minDurationMs")(minDurationMs.get.asInstanceOf[js.Any])
+    if (onGestureEvent != null) __obj.updateDynamic("onGestureEvent")(js.Any.fromFunction1(onGestureEvent))
+    if (onHandlerStateChange != null) __obj.updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(onHandlerStateChange))
+    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(simultaneousHandlers)) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitFor)) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[LongPressGestureHandlerProperties]
   }
-  @scala.inline
-  implicit class LongPressGestureHandlerPropertiesOps[Self <: LongPressGestureHandlerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxDist(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDurationMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDurationMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDurationMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDurationMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnGestureEvent(value: /* event */ LongPressGestureHandlerGestureEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnGestureEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHandlerStateChange(value: /* event */ LongPressGestureHandlerStateChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHandlerStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

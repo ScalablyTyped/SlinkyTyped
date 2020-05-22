@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSIntersectionType
   extends Node
      with TSType {
   @JSName("type")
-  var type_TSIntersectionType: typingsSlinky.babelTypes.babelTypesStrings.TSIntersectionType = js.native
-  var types: js.Array[TSType] = js.native
+  var type_TSIntersectionType: typingsSlinky.babelTypes.babelTypesStrings.TSIntersectionType
+  var types: js.Array[TSType]
 }
 
 @JSImport("babel-types", "TSIntersectionType")

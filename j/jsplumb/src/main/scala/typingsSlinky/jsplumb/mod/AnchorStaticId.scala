@@ -20,9 +20,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jsplumb.jsplumbStrings.TopLeft
   - typingsSlinky.jsplumb.jsplumbStrings.TopRight
 */
-trait AnchorStaticId
-  extends AnchorStaticSpec
-     with AnchorId
+trait AnchorStaticId extends _AnchorId
 
 object AnchorStaticId {
   @scala.inline

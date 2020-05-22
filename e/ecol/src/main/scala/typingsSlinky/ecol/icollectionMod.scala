@@ -36,6 +36,12 @@ object icollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
     /**
+      * Test whether container is empty.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
+    /**
       * Iterator to the end.
       *
       * @return Iterator to the end.
@@ -60,11 +66,20 @@ object icollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def erase(pos: IteratorT): IteratorT = js.native
     /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def push(items: T*): Double = js.native
+    /**
       * Reverse iterator to the first element in reverse.
       *
       * @return Reverse iterator to the first.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseT = js.native
     def refresh(): Unit = js.native
@@ -75,9 +90,15 @@ object icollectionMod extends js.Object {
       *
       * @return Reverse iterator to the end.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rend(): ReverseT = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

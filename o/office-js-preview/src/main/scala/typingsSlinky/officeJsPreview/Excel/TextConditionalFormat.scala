@@ -23,7 +23,7 @@ trait TextConditionalFormat extends ClientObject {
   var context_TextConditionalFormat: RequestContext = js.native
   /**
     *
-    * Returns a format object, encapsulating the conditional formats font, fill, borders, and other properties. Read-only.
+    * Returns a format object, encapsulating the conditional formats font, fill, borders, and other properties.
     *
     * [Api set: ExcelApi 1.6]
     */

@@ -6,32 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait colorGetSchemeByNameParams extends Object {
   /**
     * The basemap to pair with the visualization. This value indicates the best symbol colors for visualizing features against the given basemap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-symbology-color.html#getSchemeByName)
     */
-  var basemap: js.UndefOr[String | Basemap] = js.native
+  var basemap: js.UndefOr[String | Basemap] = js.undefined
   /**
     * If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, use this parameter to indicate whether the background of the visualization is `light` or `dark`.  **Possible Values:** light | dark
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-symbology-color.html#getSchemeByName)
     */
-  var basemapTheme: js.UndefOr[String] = js.native
+  var basemapTheme: js.UndefOr[String] = js.undefined
   /**
     * The geometry type of the features to visualize.  **Possible Values:** point | multipoint | polyline | polygon | mesh
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-symbology-color.html#getSchemeByName)
     */
-  var geometryType: String = js.native
+  var geometryType: String
   /**
     * The name of the scheme to retrieve.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-symbology-color.html#getSchemeByName)
     */
-  var name: String = js.native
+  var name: String
   /**
     * The theme determines which values will be emphasized in the continuous ramp and the map. Possible values are listed below.
     *
@@ -45,19 +44,19 @@ trait colorGetSchemeByNameParams extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-symbology-color.html#getSchemeByName)
     */
-  var theme: String = js.native
+  var theme: String
   /**
     * The SceneView instance in which the scheme will be used. This property is only applicable when the scheme will be used in conjunction with 3D symbols.
     *
     * [Read more...](global.html)
     */
-  var view: js.UndefOr[SceneView] = js.native
+  var view: js.UndefOr[SceneView] = js.undefined
   /**
     * Indicates if the size units of the scheme will be in meters. This should be `true` when the scheme is intended for 3D volumetric symbology. A `view` must be provided if this property is set to `true`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-symbology-color.html#getSchemeByName)
     */
-  var worldScale: js.UndefOr[Boolean] = js.native
+  var worldScale: js.UndefOr[Boolean] = js.undefined
 }
 
 object colorGetSchemeByNameParams {
@@ -68,84 +67,18 @@ object colorGetSchemeByNameParams {
     hasOwnProperty: PropertyKey => Boolean,
     name: String,
     propertyIsEnumerable: PropertyKey => Boolean,
-    theme: String
+    theme: String,
+    basemap: String | Basemap = null,
+    basemapTheme: String = null,
+    view: SceneView = null,
+    worldScale: js.UndefOr[Boolean] = js.undefined
   ): colorGetSchemeByNameParams = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], geometryType = geometryType.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), name = name.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), theme = theme.asInstanceOf[js.Any])
+    if (basemap != null) __obj.updateDynamic("basemap")(basemap.asInstanceOf[js.Any])
+    if (basemapTheme != null) __obj.updateDynamic("basemapTheme")(basemapTheme.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(worldScale)) __obj.updateDynamic("worldScale")(worldScale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[colorGetSchemeByNameParams]
   }
-  @scala.inline
-  implicit class colorGetSchemeByNameParamsOps[Self <: colorGetSchemeByNameParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeometryType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasemap(value: String | Basemap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasemapTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemapTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapTheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: SceneView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorldScale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorldScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldScale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

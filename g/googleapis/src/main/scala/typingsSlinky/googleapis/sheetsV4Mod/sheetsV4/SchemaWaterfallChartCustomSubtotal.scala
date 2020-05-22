@@ -33,53 +33,16 @@ trait SchemaWaterfallChartCustomSubtotal extends js.Object {
 
 object SchemaWaterfallChartCustomSubtotal {
   @scala.inline
-  def apply(): SchemaWaterfallChartCustomSubtotal = {
+  def apply(
+    dataIsSubtotal: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    subtotalIndex: js.UndefOr[Double] = js.undefined
+  ): SchemaWaterfallChartCustomSubtotal = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dataIsSubtotal)) __obj.updateDynamic("dataIsSubtotal")(dataIsSubtotal.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(subtotalIndex)) __obj.updateDynamic("subtotalIndex")(subtotalIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWaterfallChartCustomSubtotal]
   }
-  @scala.inline
-  implicit class SchemaWaterfallChartCustomSubtotalOps[Self <: SchemaWaterfallChartCustomSubtotal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataIsSubtotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataIsSubtotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataIsSubtotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataIsSubtotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtotalIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtotalIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtotalIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtotalIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

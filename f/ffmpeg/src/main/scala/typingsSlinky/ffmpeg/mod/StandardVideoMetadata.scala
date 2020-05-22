@@ -5,244 +5,66 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<{  title  :string,   author  :string,   album_artist  :string,   album  :string,   grouping  :string,   composer  :string,   year  :string,   track  :string,   comment  :string,   genre  :string,   copyright  :string,   description  :string,   synopsis  :string,   show  :string,   episode_id  :string,   network  :string,   lyrics  :string}> */
-@js.native
 trait StandardVideoMetadata extends js.Object {
-  var album: js.UndefOr[String] = js.native
-  var album_artist: js.UndefOr[String] = js.native
-  var author: js.UndefOr[String] = js.native
-  var comment: js.UndefOr[String] = js.native
-  var composer: js.UndefOr[String] = js.native
-  var copyright: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var episode_id: js.UndefOr[String] = js.native
-  var genre: js.UndefOr[String] = js.native
-  var grouping: js.UndefOr[String] = js.native
-  var lyrics: js.UndefOr[String] = js.native
-  var network: js.UndefOr[String] = js.native
-  var show: js.UndefOr[String] = js.native
-  var synopsis: js.UndefOr[String] = js.native
-  var title: js.UndefOr[String] = js.native
-  var track: js.UndefOr[String] = js.native
-  var year: js.UndefOr[String] = js.native
+  var album: js.UndefOr[String] = js.undefined
+  var album_artist: js.UndefOr[String] = js.undefined
+  var author: js.UndefOr[String] = js.undefined
+  var comment: js.UndefOr[String] = js.undefined
+  var composer: js.UndefOr[String] = js.undefined
+  var copyright: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var episode_id: js.UndefOr[String] = js.undefined
+  var genre: js.UndefOr[String] = js.undefined
+  var grouping: js.UndefOr[String] = js.undefined
+  var lyrics: js.UndefOr[String] = js.undefined
+  var network: js.UndefOr[String] = js.undefined
+  var show: js.UndefOr[String] = js.undefined
+  var synopsis: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var track: js.UndefOr[String] = js.undefined
+  var year: js.UndefOr[String] = js.undefined
 }
 
 object StandardVideoMetadata {
   @scala.inline
-  def apply(): StandardVideoMetadata = {
+  def apply(
+    album: String = null,
+    album_artist: String = null,
+    author: String = null,
+    comment: String = null,
+    composer: String = null,
+    copyright: String = null,
+    description: String = null,
+    episode_id: String = null,
+    genre: String = null,
+    grouping: String = null,
+    lyrics: String = null,
+    network: String = null,
+    show: String = null,
+    synopsis: String = null,
+    title: String = null,
+    track: String = null,
+    year: String = null
+  ): StandardVideoMetadata = {
     val __obj = js.Dynamic.literal()
+    if (album != null) __obj.updateDynamic("album")(album.asInstanceOf[js.Any])
+    if (album_artist != null) __obj.updateDynamic("album_artist")(album_artist.asInstanceOf[js.Any])
+    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (composer != null) __obj.updateDynamic("composer")(composer.asInstanceOf[js.Any])
+    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (episode_id != null) __obj.updateDynamic("episode_id")(episode_id.asInstanceOf[js.Any])
+    if (genre != null) __obj.updateDynamic("genre")(genre.asInstanceOf[js.Any])
+    if (grouping != null) __obj.updateDynamic("grouping")(grouping.asInstanceOf[js.Any])
+    if (lyrics != null) __obj.updateDynamic("lyrics")(lyrics.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (synopsis != null) __obj.updateDynamic("synopsis")(synopsis.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (track != null) __obj.updateDynamic("track")(track.asInstanceOf[js.Any])
+    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardVideoMetadata]
   }
-  @scala.inline
-  implicit class StandardVideoMetadataOps[Self <: StandardVideoMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlbum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlbum_artist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album_artist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbum_artist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album_artist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyright(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEpisode_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("episode_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEpisode_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("episode_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenre(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenre: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrouping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLyrics(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lyrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLyrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lyrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSynopsis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synopsis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSynopsis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("synopsis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

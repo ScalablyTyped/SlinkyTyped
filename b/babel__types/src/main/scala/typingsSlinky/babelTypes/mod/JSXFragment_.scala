@@ -6,19 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait JSXFragment_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait JSXFragment_
   extends Expression
      with BaseNode
      with Immutable
      with JSX {
   var children: js.Array[
     JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_
-  ] = js.native
-  var closingFragment: JSXClosingFragment_ = js.native
-  var openingFragment: JSXOpeningFragment_ = js.native
+  ]
+  var closingFragment: JSXClosingFragment_
+  var openingFragment: JSXOpeningFragment_
   @JSName("type")
-  var type_JSXFragment_ : JSXFragment = js.native
+  var type_JSXFragment_ : JSXFragment
 }
 
 object JSXFragment_ {
@@ -29,47 +28,17 @@ object JSXFragment_ {
     ],
     closingFragment: JSXClosingFragment_,
     openingFragment: JSXOpeningFragment_,
-    `type`: JSXFragment
+    `type`: JSXFragment,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
   ): JSXFragment_ = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXFragment_]
   }
-  @scala.inline
-  implicit class JSXFragment_Ops[Self <: JSXFragment_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(
-      value: js.Array[
-          JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClosingFragment(value: JSXClosingFragment_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closingFragment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpeningFragment(value: JSXOpeningFragment_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openingFragment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: JSXFragment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

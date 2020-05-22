@@ -7,5 +7,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PowerPoint.MediaBookmark")
 @js.native
 class MediaBookmark protected ()
-  extends typingsSlinky.activexPowerpoint.PowerPoint.MediaBookmark
+  extends typingsSlinky.activexPowerpoint.PowerPoint.MediaBookmark {
+  /* CompleteClass */
+  override val Index: Double = js.native
+  /* CompleteClass */
+  override val Name: String = js.native
+  /* CompleteClass */
+  override val Position: Double = js.native
+  /* CompleteClass */
+  @JSName("PowerPoint.MediaBookmark_typekey")
+  override var PowerPointDotMediaBookmark_typekey: typingsSlinky.activexPowerpoint.PowerPoint.MediaBookmark = js.native
+  /* CompleteClass */
+  override def Delete(): Unit = js.native
+}
 

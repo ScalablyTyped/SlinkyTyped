@@ -18,41 +18,11 @@ trait DescribeOrderableReplicationInstancesResponse extends js.Object {
 
 object DescribeOrderableReplicationInstancesResponse {
   @scala.inline
-  def apply(): DescribeOrderableReplicationInstancesResponse = {
+  def apply(Marker: String = null, OrderableReplicationInstances: OrderableReplicationInstanceList = null): DescribeOrderableReplicationInstancesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (OrderableReplicationInstances != null) __obj.updateDynamic("OrderableReplicationInstances")(OrderableReplicationInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeOrderableReplicationInstancesResponse]
   }
-  @scala.inline
-  implicit class DescribeOrderableReplicationInstancesResponseOps[Self <: DescribeOrderableReplicationInstancesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderableReplicationInstances(value: OrderableReplicationInstanceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderableReplicationInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderableReplicationInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderableReplicationInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

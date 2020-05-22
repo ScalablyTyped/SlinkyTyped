@@ -108,281 +108,54 @@ trait ServiceState extends js.Object {
 
 object ServiceState {
   @scala.inline
-  def apply(): ServiceState = {
+  def apply(
+    capacityProviderStrategies: Input[js.Array[Input[ServiceCapacityProviderStrategy]]] = null,
+    cluster: Input[String] = null,
+    deploymentController: Input[ServiceDeploymentController] = null,
+    deploymentMaximumPercent: Input[Double] = null,
+    deploymentMinimumHealthyPercent: Input[Double] = null,
+    desiredCount: Input[Double] = null,
+    enableEcsManagedTags: Input[Boolean] = null,
+    healthCheckGracePeriodSeconds: Input[Double] = null,
+    iamRole: Input[String] = null,
+    launchType: Input[String] = null,
+    loadBalancers: Input[js.Array[Input[ServiceLoadBalancer]]] = null,
+    name: Input[String] = null,
+    networkConfiguration: Input[ServiceNetworkConfiguration] = null,
+    orderedPlacementStrategies: Input[js.Array[Input[ServiceOrderedPlacementStrategy]]] = null,
+    placementConstraints: Input[js.Array[Input[ServicePlacementConstraint]]] = null,
+    platformVersion: Input[String] = null,
+    propagateTags: Input[String] = null,
+    schedulingStrategy: Input[String] = null,
+    serviceRegistries: Input[ServiceServiceRegistries] = null,
+    tags: Input[StringDictionary[_]] = null,
+    taskDefinition: Input[String] = null,
+    waitForSteadyState: Input[Boolean] = null
+  ): ServiceState = {
     val __obj = js.Dynamic.literal()
+    if (capacityProviderStrategies != null) __obj.updateDynamic("capacityProviderStrategies")(capacityProviderStrategies.asInstanceOf[js.Any])
+    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
+    if (deploymentController != null) __obj.updateDynamic("deploymentController")(deploymentController.asInstanceOf[js.Any])
+    if (deploymentMaximumPercent != null) __obj.updateDynamic("deploymentMaximumPercent")(deploymentMaximumPercent.asInstanceOf[js.Any])
+    if (deploymentMinimumHealthyPercent != null) __obj.updateDynamic("deploymentMinimumHealthyPercent")(deploymentMinimumHealthyPercent.asInstanceOf[js.Any])
+    if (desiredCount != null) __obj.updateDynamic("desiredCount")(desiredCount.asInstanceOf[js.Any])
+    if (enableEcsManagedTags != null) __obj.updateDynamic("enableEcsManagedTags")(enableEcsManagedTags.asInstanceOf[js.Any])
+    if (healthCheckGracePeriodSeconds != null) __obj.updateDynamic("healthCheckGracePeriodSeconds")(healthCheckGracePeriodSeconds.asInstanceOf[js.Any])
+    if (iamRole != null) __obj.updateDynamic("iamRole")(iamRole.asInstanceOf[js.Any])
+    if (launchType != null) __obj.updateDynamic("launchType")(launchType.asInstanceOf[js.Any])
+    if (loadBalancers != null) __obj.updateDynamic("loadBalancers")(loadBalancers.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (networkConfiguration != null) __obj.updateDynamic("networkConfiguration")(networkConfiguration.asInstanceOf[js.Any])
+    if (orderedPlacementStrategies != null) __obj.updateDynamic("orderedPlacementStrategies")(orderedPlacementStrategies.asInstanceOf[js.Any])
+    if (placementConstraints != null) __obj.updateDynamic("placementConstraints")(placementConstraints.asInstanceOf[js.Any])
+    if (platformVersion != null) __obj.updateDynamic("platformVersion")(platformVersion.asInstanceOf[js.Any])
+    if (propagateTags != null) __obj.updateDynamic("propagateTags")(propagateTags.asInstanceOf[js.Any])
+    if (schedulingStrategy != null) __obj.updateDynamic("schedulingStrategy")(schedulingStrategy.asInstanceOf[js.Any])
+    if (serviceRegistries != null) __obj.updateDynamic("serviceRegistries")(serviceRegistries.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (taskDefinition != null) __obj.updateDynamic("taskDefinition")(taskDefinition.asInstanceOf[js.Any])
+    if (waitForSteadyState != null) __obj.updateDynamic("waitForSteadyState")(waitForSteadyState.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceState]
   }
-  @scala.inline
-  implicit class ServiceStateOps[Self <: ServiceState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityProviderStrategies(value: Input[js.Array[Input[ServiceCapacityProviderStrategy]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProviderStrategies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityProviderStrategies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityProviderStrategies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCluster(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCluster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentController(value: Input[ServiceDeploymentController]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentController")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentController: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentController")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentMaximumPercent(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentMaximumPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentMaximumPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentMaximumPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentMinimumHealthyPercent(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentMinimumHealthyPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentMinimumHealthyPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentMinimumHealthyPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesiredCount(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableEcsManagedTags(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEcsManagedTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableEcsManagedTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEcsManagedTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckGracePeriodSeconds(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckGracePeriodSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckGracePeriodSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckGracePeriodSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRole(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancers(value: Input[js.Array[Input[ServiceLoadBalancer]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkConfiguration(value: Input[ServiceNetworkConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderedPlacementStrategies(value: Input[js.Array[Input[ServiceOrderedPlacementStrategy]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedPlacementStrategies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderedPlacementStrategies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedPlacementStrategies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacementConstraints(value: Input[js.Array[Input[ServicePlacementConstraint]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementConstraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacementConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementConstraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatformVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatformVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platformVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPropagateTags(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagateTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropagateTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagateTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedulingStrategy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedulingStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedulingStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedulingStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRegistries(value: Input[ServiceServiceRegistries]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRegistries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRegistries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRegistries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskDefinition(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskDefinition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForSteadyState(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForSteadyState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForSteadyState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForSteadyState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

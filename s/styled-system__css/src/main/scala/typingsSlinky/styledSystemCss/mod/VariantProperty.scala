@@ -4,8 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait VariantProperty extends SystemStyleObject {
+trait VariantProperty extends _SystemStyleObject {
   /**
     * **`Variants`** can be useful for applying complex styles to a component based on a single prop.
     *
@@ -27,7 +26,7 @@ trait VariantProperty extends SystemStyleObject {
     *
     * @see https://styled-system.com/variants
     */
-  var variant: String = js.native
+  var variant: String
 }
 
 object VariantProperty {
@@ -36,19 +35,5 @@ object VariantProperty {
     val __obj = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
     __obj.asInstanceOf[VariantProperty]
   }
-  @scala.inline
-  implicit class VariantPropertyOps[Self <: VariantProperty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVariant(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

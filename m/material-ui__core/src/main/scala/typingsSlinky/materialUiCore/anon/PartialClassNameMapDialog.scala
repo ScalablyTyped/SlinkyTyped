@@ -25,185 +25,38 @@ trait PartialClassNameMapDialog extends js.Object {
 
 object PartialClassNameMapDialog {
   @scala.inline
-  def apply(): PartialClassNameMapDialog = {
+  def apply(
+    container: String = null,
+    paper: String = null,
+    paperFullScreen: String = null,
+    paperFullWidth: String = null,
+    paperScrollBody: String = null,
+    paperScrollPaper: String = null,
+    paperWidthLg: String = null,
+    paperWidthMd: String = null,
+    paperWidthSm: String = null,
+    paperWidthXl: String = null,
+    paperWidthXs: String = null,
+    root: String = null,
+    scrollBody: String = null,
+    scrollPaper: String = null
+  ): PartialClassNameMapDialog = {
     val __obj = js.Dynamic.literal()
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (paper != null) __obj.updateDynamic("paper")(paper.asInstanceOf[js.Any])
+    if (paperFullScreen != null) __obj.updateDynamic("paperFullScreen")(paperFullScreen.asInstanceOf[js.Any])
+    if (paperFullWidth != null) __obj.updateDynamic("paperFullWidth")(paperFullWidth.asInstanceOf[js.Any])
+    if (paperScrollBody != null) __obj.updateDynamic("paperScrollBody")(paperScrollBody.asInstanceOf[js.Any])
+    if (paperScrollPaper != null) __obj.updateDynamic("paperScrollPaper")(paperScrollPaper.asInstanceOf[js.Any])
+    if (paperWidthLg != null) __obj.updateDynamic("paperWidthLg")(paperWidthLg.asInstanceOf[js.Any])
+    if (paperWidthMd != null) __obj.updateDynamic("paperWidthMd")(paperWidthMd.asInstanceOf[js.Any])
+    if (paperWidthSm != null) __obj.updateDynamic("paperWidthSm")(paperWidthSm.asInstanceOf[js.Any])
+    if (paperWidthXl != null) __obj.updateDynamic("paperWidthXl")(paperWidthXl.asInstanceOf[js.Any])
+    if (paperWidthXs != null) __obj.updateDynamic("paperWidthXs")(paperWidthXs.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (scrollBody != null) __obj.updateDynamic("scrollBody")(scrollBody.asInstanceOf[js.Any])
+    if (scrollPaper != null) __obj.updateDynamic("scrollPaper")(scrollPaper.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapDialog]
   }
-  @scala.inline
-  implicit class PartialClassNameMapDialogOps[Self <: PartialClassNameMapDialog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperFullScreen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperFullScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperFullScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperFullScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperFullWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperFullWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperFullWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperFullWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperScrollBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperScrollBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperScrollBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperScrollBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperScrollPaper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperScrollPaper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperScrollPaper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperScrollPaper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperWidthLg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthLg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperWidthLg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthLg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperWidthMd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthMd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperWidthMd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthMd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperWidthSm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthSm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperWidthSm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthSm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperWidthXl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthXl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperWidthXl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthXl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaperWidthXs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthXs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaperWidthXs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paperWidthXs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollPaper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPaper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollPaper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPaper")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

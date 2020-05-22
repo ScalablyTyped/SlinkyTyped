@@ -12,20 +12,19 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.mail.XMailService
   * @since OOo 2.0
   */
-@js.native
 trait XConnectionListener extends XEventListener {
   /**
     * Invoked when the connection to the mail server is established.
     * @param aEvent [in] specific information regarding this event.
     * @see com.sun.star.lang.EventObject
     */
-  def connected(aEvent: EventObject): Unit = js.native
+  def connected(aEvent: EventObject): Unit
   /**
     * Invoked when the connection to the mail server is closed.
     * @param aEvent [in] specific information regarding this event.
     * @see com.sun.star.lang.EventObject
     */
-  def disconnected(aEvent: EventObject): Unit = js.native
+  def disconnected(aEvent: EventObject): Unit
 }
 
 object XConnectionListener {
@@ -41,25 +40,5 @@ object XConnectionListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), connected = js.Any.fromFunction1(connected), disconnected = js.Any.fromFunction1(disconnected), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XConnectionListener]
   }
-  @scala.inline
-  implicit class XConnectionListenerOps[Self <: XConnectionListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnected(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisconnected(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnected")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

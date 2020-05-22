@@ -62,161 +62,34 @@ trait SchemaTokeninfo extends js.Object {
 
 object SchemaTokeninfo {
   @scala.inline
-  def apply(): SchemaTokeninfo = {
+  def apply(
+    access_type: String = null,
+    audience: String = null,
+    email: String = null,
+    email_verified: js.UndefOr[Boolean] = js.undefined,
+    expires_in: js.UndefOr[Double] = js.undefined,
+    issued_at: js.UndefOr[Double] = js.undefined,
+    issued_to: String = null,
+    issuer: String = null,
+    nonce: String = null,
+    scope: String = null,
+    user_id: String = null,
+    verified_email: js.UndefOr[Boolean] = js.undefined
+  ): SchemaTokeninfo = {
     val __obj = js.Dynamic.literal()
+    if (access_type != null) __obj.updateDynamic("access_type")(access_type.asInstanceOf[js.Any])
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(email_verified)) __obj.updateDynamic("email_verified")(email_verified.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expires_in)) __obj.updateDynamic("expires_in")(expires_in.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(issued_at)) __obj.updateDynamic("issued_at")(issued_at.get.asInstanceOf[js.Any])
+    if (issued_to != null) __obj.updateDynamic("issued_to")(issued_to.asInstanceOf[js.Any])
+    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
+    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (user_id != null) __obj.updateDynamic("user_id")(user_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(verified_email)) __obj.updateDynamic("verified_email")(verified_email.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTokeninfo]
   }
-  @scala.inline
-  implicit class SchemaTokeninfoOps[Self <: SchemaTokeninfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAudience(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail_verified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email_verified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail_verified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email_verified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpires_in(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires_in: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssued_at(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssued_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssued_to(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued_to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssued_to: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issued_to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerified_email(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerified_email: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_email")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

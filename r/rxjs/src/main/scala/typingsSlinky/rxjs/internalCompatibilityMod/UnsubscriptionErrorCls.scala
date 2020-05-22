@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class UnsubscriptionErrorCls protected ()
   extends typingsSlinky.rxjs.unsubscriptionErrorMod.UnsubscriptionError {
   def this(errors: js.Array[_]) = this()
+  /* CompleteClass */
+  override val errors: js.Array[_] = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

@@ -19,452 +19,114 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Config> */
-@js.native
 trait PartialConfig extends js.Object {
-  var autosizable: js.UndefOr[Boolean] = js.native
-  var displayModeBar: js.UndefOr[hover | Boolean] = js.native
-  var displaylogo: js.UndefOr[Boolean] = js.native
-  var doubleClick: js.UndefOr[resetPlussignautosize | reset | autosize | `false`] = js.native
-  var editable: js.UndefOr[Boolean] = js.native
-  var edits: js.UndefOr[PartialEdits] = js.native
-  var fillFrame: js.UndefOr[Boolean] = js.native
-  var frameMargins: js.UndefOr[Double] = js.native
-  var globalTransforms: js.UndefOr[js.Array[_]] = js.native
-  var linkText: js.UndefOr[String] = js.native
-  var locale: js.UndefOr[String] = js.native
-  var logging: js.UndefOr[Boolean | `0` | `1` | `2`] = js.native
-  var mapboxAccessToken: js.UndefOr[String] = js.native
-  var modeBarButtons: js.UndefOr[(js.Array[js.Array[ModeBarButton | ModeBarDefaultButtons]]) | `false`] = js.native
-  var modeBarButtonsToAdd: js.UndefOr[js.Array[ModeBarButton | ModeBarDefaultButtons]] = js.native
-  var modeBarButtonsToRemove: js.UndefOr[js.Array[ModeBarDefaultButtons]] = js.native
-  var plotGlPixelRatio: js.UndefOr[Double] = js.native
-  var plotlyServerURL: js.UndefOr[String] = js.native
-  var queueLength: js.UndefOr[Double] = js.native
-  var responsive: js.UndefOr[Boolean] = js.native
-  var scrollZoom: js.UndefOr[Boolean] = js.native
-  var sendData: js.UndefOr[Boolean] = js.native
-  var setBackground: js.UndefOr[js.Function0[String | opaque | transparent]] = js.native
-  var showAxisDragHandles: js.UndefOr[Boolean] = js.native
-  var showAxisRangeEntryBoxes: js.UndefOr[Boolean] = js.native
-  var showEditInChartStudio: js.UndefOr[Boolean] = js.native
-  var showLink: js.UndefOr[Boolean] = js.native
-  var showSendToCloud: js.UndefOr[Boolean] = js.native
-  var showSources: js.UndefOr[Boolean] = js.native
-  var showTips: js.UndefOr[Boolean] = js.native
-  var staticPlot: js.UndefOr[Boolean] = js.native
-  var toImageButtonOptions: js.UndefOr[Partialfilenamestringscal] = js.native
-  var topojsonURL: js.UndefOr[String] = js.native
+  var autosizable: js.UndefOr[Boolean] = js.undefined
+  var displayModeBar: js.UndefOr[hover | Boolean] = js.undefined
+  var displaylogo: js.UndefOr[Boolean] = js.undefined
+  var doubleClick: js.UndefOr[resetPlussignautosize | reset | autosize | `false`] = js.undefined
+  var editable: js.UndefOr[Boolean] = js.undefined
+  var edits: js.UndefOr[PartialEdits] = js.undefined
+  var fillFrame: js.UndefOr[Boolean] = js.undefined
+  var frameMargins: js.UndefOr[Double] = js.undefined
+  var globalTransforms: js.UndefOr[js.Array[_]] = js.undefined
+  var linkText: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[String] = js.undefined
+  var logging: js.UndefOr[Boolean | `0` | `1` | `2`] = js.undefined
+  var mapboxAccessToken: js.UndefOr[String] = js.undefined
+  var modeBarButtons: js.UndefOr[(js.Array[js.Array[ModeBarButton | ModeBarDefaultButtons]]) | `false`] = js.undefined
+  var modeBarButtonsToAdd: js.UndefOr[js.Array[ModeBarButton | ModeBarDefaultButtons]] = js.undefined
+  var modeBarButtonsToRemove: js.UndefOr[js.Array[ModeBarDefaultButtons]] = js.undefined
+  var plotGlPixelRatio: js.UndefOr[Double] = js.undefined
+  var plotlyServerURL: js.UndefOr[String] = js.undefined
+  var queueLength: js.UndefOr[Double] = js.undefined
+  var responsive: js.UndefOr[Boolean] = js.undefined
+  var scrollZoom: js.UndefOr[Boolean] = js.undefined
+  var sendData: js.UndefOr[Boolean] = js.undefined
+  var setBackground: js.UndefOr[js.Function0[String | opaque | transparent]] = js.undefined
+  var showAxisDragHandles: js.UndefOr[Boolean] = js.undefined
+  var showAxisRangeEntryBoxes: js.UndefOr[Boolean] = js.undefined
+  var showEditInChartStudio: js.UndefOr[Boolean] = js.undefined
+  var showLink: js.UndefOr[Boolean] = js.undefined
+  var showSendToCloud: js.UndefOr[Boolean] = js.undefined
+  var showSources: js.UndefOr[Boolean] = js.undefined
+  var showTips: js.UndefOr[Boolean] = js.undefined
+  var staticPlot: js.UndefOr[Boolean] = js.undefined
+  var toImageButtonOptions: js.UndefOr[Partialfilenamestringscal] = js.undefined
+  var topojsonURL: js.UndefOr[String] = js.undefined
 }
 
 object PartialConfig {
   @scala.inline
-  def apply(): PartialConfig = {
+  def apply(
+    autosizable: js.UndefOr[Boolean] = js.undefined,
+    displayModeBar: hover | Boolean = null,
+    displaylogo: js.UndefOr[Boolean] = js.undefined,
+    doubleClick: resetPlussignautosize | reset | autosize | `false` = null,
+    editable: js.UndefOr[Boolean] = js.undefined,
+    edits: PartialEdits = null,
+    fillFrame: js.UndefOr[Boolean] = js.undefined,
+    frameMargins: js.UndefOr[Double] = js.undefined,
+    globalTransforms: js.Array[_] = null,
+    linkText: String = null,
+    locale: String = null,
+    logging: Boolean | `0` | `1` | `2` = null,
+    mapboxAccessToken: String = null,
+    modeBarButtons: (js.Array[js.Array[ModeBarButton | ModeBarDefaultButtons]]) | `false` = null,
+    modeBarButtonsToAdd: js.Array[ModeBarButton | ModeBarDefaultButtons] = null,
+    modeBarButtonsToRemove: js.Array[ModeBarDefaultButtons] = null,
+    plotGlPixelRatio: js.UndefOr[Double] = js.undefined,
+    plotlyServerURL: String = null,
+    queueLength: js.UndefOr[Double] = js.undefined,
+    responsive: js.UndefOr[Boolean] = js.undefined,
+    scrollZoom: js.UndefOr[Boolean] = js.undefined,
+    sendData: js.UndefOr[Boolean] = js.undefined,
+    setBackground: () => String | opaque | transparent = null,
+    showAxisDragHandles: js.UndefOr[Boolean] = js.undefined,
+    showAxisRangeEntryBoxes: js.UndefOr[Boolean] = js.undefined,
+    showEditInChartStudio: js.UndefOr[Boolean] = js.undefined,
+    showLink: js.UndefOr[Boolean] = js.undefined,
+    showSendToCloud: js.UndefOr[Boolean] = js.undefined,
+    showSources: js.UndefOr[Boolean] = js.undefined,
+    showTips: js.UndefOr[Boolean] = js.undefined,
+    staticPlot: js.UndefOr[Boolean] = js.undefined,
+    toImageButtonOptions: Partialfilenamestringscal = null,
+    topojsonURL: String = null
+  ): PartialConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autosizable)) __obj.updateDynamic("autosizable")(autosizable.get.asInstanceOf[js.Any])
+    if (displayModeBar != null) __obj.updateDynamic("displayModeBar")(displayModeBar.asInstanceOf[js.Any])
+    if (!js.isUndefined(displaylogo)) __obj.updateDynamic("displaylogo")(displaylogo.get.asInstanceOf[js.Any])
+    if (doubleClick != null) __obj.updateDynamic("doubleClick")(doubleClick.asInstanceOf[js.Any])
+    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.get.asInstanceOf[js.Any])
+    if (edits != null) __obj.updateDynamic("edits")(edits.asInstanceOf[js.Any])
+    if (!js.isUndefined(fillFrame)) __obj.updateDynamic("fillFrame")(fillFrame.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frameMargins)) __obj.updateDynamic("frameMargins")(frameMargins.get.asInstanceOf[js.Any])
+    if (globalTransforms != null) __obj.updateDynamic("globalTransforms")(globalTransforms.asInstanceOf[js.Any])
+    if (linkText != null) __obj.updateDynamic("linkText")(linkText.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (mapboxAccessToken != null) __obj.updateDynamic("mapboxAccessToken")(mapboxAccessToken.asInstanceOf[js.Any])
+    if (modeBarButtons != null) __obj.updateDynamic("modeBarButtons")(modeBarButtons.asInstanceOf[js.Any])
+    if (modeBarButtonsToAdd != null) __obj.updateDynamic("modeBarButtonsToAdd")(modeBarButtonsToAdd.asInstanceOf[js.Any])
+    if (modeBarButtonsToRemove != null) __obj.updateDynamic("modeBarButtonsToRemove")(modeBarButtonsToRemove.asInstanceOf[js.Any])
+    if (!js.isUndefined(plotGlPixelRatio)) __obj.updateDynamic("plotGlPixelRatio")(plotGlPixelRatio.get.asInstanceOf[js.Any])
+    if (plotlyServerURL != null) __obj.updateDynamic("plotlyServerURL")(plotlyServerURL.asInstanceOf[js.Any])
+    if (!js.isUndefined(queueLength)) __obj.updateDynamic("queueLength")(queueLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollZoom)) __obj.updateDynamic("scrollZoom")(scrollZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sendData)) __obj.updateDynamic("sendData")(sendData.get.asInstanceOf[js.Any])
+    if (setBackground != null) __obj.updateDynamic("setBackground")(js.Any.fromFunction0(setBackground))
+    if (!js.isUndefined(showAxisDragHandles)) __obj.updateDynamic("showAxisDragHandles")(showAxisDragHandles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAxisRangeEntryBoxes)) __obj.updateDynamic("showAxisRangeEntryBoxes")(showAxisRangeEntryBoxes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showEditInChartStudio)) __obj.updateDynamic("showEditInChartStudio")(showEditInChartStudio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLink)) __obj.updateDynamic("showLink")(showLink.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSendToCloud)) __obj.updateDynamic("showSendToCloud")(showSendToCloud.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSources)) __obj.updateDynamic("showSources")(showSources.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTips)) __obj.updateDynamic("showTips")(showTips.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(staticPlot)) __obj.updateDynamic("staticPlot")(staticPlot.get.asInstanceOf[js.Any])
+    if (toImageButtonOptions != null) __obj.updateDynamic("toImageButtonOptions")(toImageButtonOptions.asInstanceOf[js.Any])
+    if (topojsonURL != null) __obj.updateDynamic("topojsonURL")(topojsonURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialConfig]
   }
-  @scala.inline
-  implicit class PartialConfigOps[Self <: PartialConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutosizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayModeBar(value: hover | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayModeBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayModeBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayModeBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplaylogo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displaylogo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplaylogo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displaylogo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleClick(value: resetPlussignautosize | reset | autosize | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdits(value: PartialEdits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillFrame(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillFrame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameMargins(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameMargins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameMargins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameMargins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTransforms(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalTransforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalTransforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: Boolean | `0` | `1` | `2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapboxAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapboxAccessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapboxAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapboxAccessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModeBarButtons(value: (js.Array[js.Array[ModeBarButton | ModeBarDefaultButtons]]) | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeBarButtons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModeBarButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeBarButtons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModeBarButtonsToAdd(value: js.Array[ModeBarButton | ModeBarDefaultButtons]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeBarButtonsToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModeBarButtonsToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeBarButtonsToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModeBarButtonsToRemove(value: js.Array[ModeBarDefaultButtons]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeBarButtonsToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModeBarButtonsToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modeBarButtonsToRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotGlPixelRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotGlPixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotGlPixelRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotGlPixelRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotlyServerURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotlyServerURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotlyServerURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotlyServerURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueueLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queueLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueueLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queueLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBackground(value: () => String | opaque | transparent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackground")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAxisDragHandles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxisDragHandles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAxisDragHandles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxisDragHandles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAxisRangeEntryBoxes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxisRangeEntryBoxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAxisRangeEntryBoxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxisRangeEntryBoxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowEditInChartStudio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showEditInChartStudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowEditInChartStudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showEditInChartStudio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSendToCloud(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSendToCloud")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSendToCloud: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSendToCloud")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSources(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTips(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticPlot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticPlot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticPlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticPlot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToImageButtonOptions(value: Partialfilenamestringscal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toImageButtonOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToImageButtonOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toImageButtonOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopojsonURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topojsonURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopojsonURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topojsonURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

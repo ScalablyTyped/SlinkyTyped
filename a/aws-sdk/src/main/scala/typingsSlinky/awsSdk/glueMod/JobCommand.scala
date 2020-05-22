@@ -22,53 +22,16 @@ trait JobCommand extends js.Object {
 
 object JobCommand {
   @scala.inline
-  def apply(): JobCommand = {
+  def apply(
+    Name: GenericString = null,
+    PythonVersion: PythonVersionString = null,
+    ScriptLocation: ScriptLocationString = null
+  ): JobCommand = {
     val __obj = js.Dynamic.literal()
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (PythonVersion != null) __obj.updateDynamic("PythonVersion")(PythonVersion.asInstanceOf[js.Any])
+    if (ScriptLocation != null) __obj.updateDynamic("ScriptLocation")(ScriptLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobCommand]
   }
-  @scala.inline
-  implicit class JobCommandOps[Self <: JobCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPythonVersion(value: PythonVersionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PythonVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPythonVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PythonVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptLocation(value: ScriptLocationString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScriptLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScriptLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 /**
   * An Arcade Physics Group object.
   * 
-  * All Game Objects created by this Group will automatically be given dynamic Arcade Physics bodies.
+  * All Game Objects created by or added to this Group will automatically be given dynamic Arcade Physics bodies, if they have no body.
   * 
   * Its static counterpart is {@link Phaser.Physics.Arcade.StaticGroup}.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType because Already inherited */ @js.native
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @js.native
 trait Group
   extends typingsSlinky.phaser.Phaser.GameObjects.Group {
   /**

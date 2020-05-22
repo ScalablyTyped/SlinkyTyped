@@ -25,47 +25,11 @@ trait DistributionLoggingConfig extends js.Object {
 
 object DistributionLoggingConfig {
   @scala.inline
-  def apply(bucket: String): DistributionLoggingConfig = {
+  def apply(bucket: String, includeCookies: js.UndefOr[Boolean] = js.undefined, prefix: String = null): DistributionLoggingConfig = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeCookies)) __obj.updateDynamic("includeCookies")(includeCookies.get.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionLoggingConfig]
   }
-  @scala.inline
-  implicit class DistributionLoggingConfigOps[Self <: DistributionLoggingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeCookies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCookies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeCookies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCookies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

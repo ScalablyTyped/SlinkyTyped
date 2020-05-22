@@ -6,88 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OriginalRoute extends js.Object {
-  var component: js.UndefOr[dxMap] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var model: js.UndefOr[js.Any] = js.native
-  var options: js.UndefOr[js.Any] = js.native
-  var originalRoute: js.UndefOr[js.Any] = js.native
+  var component: js.UndefOr[dxMap] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
+  var options: js.UndefOr[js.Any] = js.undefined
+  var originalRoute: js.UndefOr[js.Any] = js.undefined
 }
 
 object OriginalRoute {
   @scala.inline
-  def apply(): OriginalRoute = {
+  def apply(
+    component: dxMap = null,
+    element: dxElement = null,
+    model: js.Any = null,
+    options: js.Any = null,
+    originalRoute: js.Any = null
+  ): OriginalRoute = {
     val __obj = js.Dynamic.literal()
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (originalRoute != null) __obj.updateDynamic("originalRoute")(originalRoute.asInstanceOf[js.Any])
     __obj.asInstanceOf[OriginalRoute]
   }
-  @scala.inline
-  implicit class OriginalRouteOps[Self <: OriginalRoute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponent(value: dxMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalRoute(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalRoute")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

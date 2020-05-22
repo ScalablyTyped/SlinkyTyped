@@ -1,21 +1,25 @@
 package typingsSlinky.wordpressElement.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.wordpressElement.anon.Children
+import typingsSlinky.wordpressElement.anon.childrenstringPickDetaile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.wordpressElement.anon.Children with (/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HTMLProps<HTMLDivElement> * / js.Any) because: IArray(Could't extract props from / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HTMLProps<HTMLDivElement> * / js.Any because couldn't resolve ClassTree.) */
 object RawHTML {
   @JSImport("@wordpress/element", "RawHTML")
   @js.native
   object component extends js.Object
   
-  def apply(
-    p: Children with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HTMLProps<HTMLDivElement> */ js.Any)
-  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: RawHTML.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: childrenstringPickDetaile): SharedBuilder_childrenstringPickDetaile209446344 = new SharedBuilder_childrenstringPickDetaile209446344(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RawHTML.type): SharedBuilder_childrenstringPickDetaile209446344 = new SharedBuilder_childrenstringPickDetaile209446344(js.Array(this.component, js.Dictionary.empty))()
+}
+
+object RawHtml {
+  @JSImport("@wordpress/element/raw-html", JSImport.Default)
+  @js.native
+  object component extends js.Object
+  
+  def withProps(p: childrenstringPickDetaile): SharedBuilder_childrenstringPickDetaile209446344 = new SharedBuilder_childrenstringPickDetaile209446344(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RawHtml.type): SharedBuilder_childrenstringPickDetaile209446344 = new SharedBuilder_childrenstringPickDetaile209446344(js.Array(this.component, js.Dictionary.empty))()
 }
 

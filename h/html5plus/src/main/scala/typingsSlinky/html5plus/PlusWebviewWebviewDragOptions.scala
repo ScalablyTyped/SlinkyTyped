@@ -16,25 +16,24 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
-@js.native
 trait PlusWebviewWebviewDragOptions extends js.Object {
   /**
     * 滑屏操作回调事件触发步长
     * 用于设置滑屏回调事件触发频率，取值范围为1-100，值越小触发频率越高，值越大触发频率越小，默认值为20。
-    * 	如设置值为20，则表示滑屏操作移动距离超过可移动范围的20%则触发一次回调事件，可通过回调函数参数（WebviewDragEvent）的progress属性获取。
-    * 	注意：触发频率过大会影响效率，开发者需谨慎设置此值。
+    *     如设置值为20，则表示滑屏操作移动距离超过可移动范围的20%则触发一次回调事件，可通过回调函数参数（WebviewDragEvent）的progress属性获取。
+    *     注意：触发频率过大会影响效率，开发者需谨慎设置此值。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var callbackStep: js.UndefOr[Double] = js.native
+  var callbackStep: js.UndefOr[Double] = js.undefined
   /**
     * 设置的手势类型
     * 可取值：
-    * 	可取值：
-    * 	"rtl" - 从右向左滑动手势；
-    * 	"left" - 向左滑动手势，与rtl一致；
-    * 	"ltr" - 从左向右滑动手势；
-    * 	"right" - 向右滑动手势，与ltr一致。
+    *     可取值：
+    *     "rtl" - 从右向左滑动手势；
+    *     "left" - 向左滑动手势，与rtl一致；
+    *     "ltr" - 从左向右滑动手势；
+    *     "right" - 向右滑动手势，与ltr一致。
     * - rtl: 从右向左滑动手势
     * - left: 向左滑动手势，与rtl一致
     * - ltr: 从左向右滑动手势
@@ -42,71 +41,34 @@ trait PlusWebviewWebviewDragOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var direction: js.UndefOr[rtl | left | ltr | right] = js.native
+  var direction: js.UndefOr[rtl | left | ltr | right] = js.undefined
   /**
     * 滑动手势模式
     * 可取值：
-    * 	"followFinger" - 当前Webview窗口跟随手指滑动；
-    * 	"silent" - 当前Webview窗口不跟随手指滑动；
-    * 	"bounce" - 当前Webview窗口自动回弹（松手后窗口恢复到拖动前的位置）,通常可通过设置此模式来实现Tab项无法继续滑动切换自动回弹效果。
+    *     "followFinger" - 当前Webview窗口跟随手指滑动；
+    *     "silent" - 当前Webview窗口不跟随手指滑动；
+    *     "bounce" - 当前Webview窗口自动回弹（松手后窗口恢复到拖动前的位置）,通常可通过设置此模式来实现Tab项无法继续滑动切换自动回弹效果。
     * - followFinger: 当前Webview窗口跟随手指滑动
     * - silent: 当前Webview窗口不跟随手指滑动
     * - bounce: 当前Webview窗口自动回弹
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var moveMode: js.UndefOr[followFinger | silent | bounce] = js.native
+  var moveMode: js.UndefOr[followFinger | silent | bounce] = js.undefined
 }
 
 object PlusWebviewWebviewDragOptions {
   @scala.inline
-  def apply(): PlusWebviewWebviewDragOptions = {
+  def apply(
+    callbackStep: js.UndefOr[Double] = js.undefined,
+    direction: rtl | left | ltr | right = null,
+    moveMode: followFinger | silent | bounce = null
+  ): PlusWebviewWebviewDragOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(callbackStep)) __obj.updateDynamic("callbackStep")(callbackStep.get.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (moveMode != null) __obj.updateDynamic("moveMode")(moveMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewDragOptions]
   }
-  @scala.inline
-  implicit class PlusWebviewWebviewDragOptionsOps[Self <: PlusWebviewWebviewDragOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallbackStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: rtl | left | ltr | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoveMode(value: followFinger | silent | bounce): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoveMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

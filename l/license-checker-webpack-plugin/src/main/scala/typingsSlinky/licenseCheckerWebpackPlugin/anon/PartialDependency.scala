@@ -5,88 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<license-checker-webpack-plugin.license-checker-webpack-plugin.Dependency> */
-@js.native
 trait PartialDependency extends js.Object {
-  var licenseName: js.UndefOr[String] = js.native
-  var licenseText: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var repository: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
+  var licenseName: js.UndefOr[String] = js.undefined
+  var licenseText: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var repository: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object PartialDependency {
   @scala.inline
-  def apply(): PartialDependency = {
+  def apply(
+    licenseName: String = null,
+    licenseText: String = null,
+    name: String = null,
+    repository: String = null,
+    version: String = null
+  ): PartialDependency = {
     val __obj = js.Dynamic.literal()
+    if (licenseName != null) __obj.updateDynamic("licenseName")(licenseName.asInstanceOf[js.Any])
+    if (licenseText != null) __obj.updateDynamic("licenseText")(licenseText.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDependency]
   }
-  @scala.inline
-  implicit class PartialDependencyOps[Self <: PartialDependency] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLicenseName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepository(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

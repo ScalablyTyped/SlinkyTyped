@@ -26,47 +26,15 @@ trait LoggingOptions extends js.Object {
 
 object LoggingOptions {
   @scala.inline
-  def apply(enabled: LoggingEnabled, level: LoggingLevel, roleArn: AmazonResourceName): LoggingOptions = {
+  def apply(
+    enabled: LoggingEnabled,
+    level: LoggingLevel,
+    roleArn: AmazonResourceName,
+    detectorDebugOptions: DetectorDebugOptions = null
+  ): LoggingOptions = {
     val __obj = js.Dynamic.literal(enabled = enabled.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    if (detectorDebugOptions != null) __obj.updateDynamic("detectorDebugOptions")(detectorDebugOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggingOptions]
   }
-  @scala.inline
-  implicit class LoggingOptionsOps[Self <: LoggingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: LoggingEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevel(value: LoggingLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetectorDebugOptions(value: DetectorDebugOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorDebugOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectorDebugOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorDebugOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

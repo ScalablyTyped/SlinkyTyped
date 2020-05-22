@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortSpec extends js.Object {
-  var dimensionIndex: js.UndefOr[Double] = js.native
-  var sortOrder: js.UndefOr[String] = js.native
+  var dimensionIndex: js.UndefOr[Double] = js.undefined
+  var sortOrder: js.UndefOr[String] = js.undefined
 }
 
 object SortSpec {
   @scala.inline
-  def apply(): SortSpec = {
+  def apply(dimensionIndex: js.UndefOr[Double] = js.undefined, sortOrder: String = null): SortSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dimensionIndex)) __obj.updateDynamic("dimensionIndex")(dimensionIndex.get.asInstanceOf[js.Any])
+    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortSpec]
   }
-  @scala.inline
-  implicit class SortSpecOps[Self <: SortSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

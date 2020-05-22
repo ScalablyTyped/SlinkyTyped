@@ -22,53 +22,16 @@ trait GetSendQuotaResponse extends js.Object {
 
 object GetSendQuotaResponse {
   @scala.inline
-  def apply(): GetSendQuotaResponse = {
+  def apply(
+    Max24HourSend: js.UndefOr[Max24HourSend] = js.undefined,
+    MaxSendRate: js.UndefOr[MaxSendRate] = js.undefined,
+    SentLast24Hours: js.UndefOr[SentLast24Hours] = js.undefined
+  ): GetSendQuotaResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Max24HourSend)) __obj.updateDynamic("Max24HourSend")(Max24HourSend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxSendRate)) __obj.updateDynamic("MaxSendRate")(MaxSendRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SentLast24Hours)) __obj.updateDynamic("SentLast24Hours")(SentLast24Hours.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSendQuotaResponse]
   }
-  @scala.inline
-  implicit class GetSendQuotaResponseOps[Self <: GetSendQuotaResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMax24HourSend(value: Max24HourSend): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max24HourSend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax24HourSend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max24HourSend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSendRate(value: MaxSendRate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSendRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSendRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSendRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentLast24Hours(value: SentLast24Hours): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SentLast24Hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentLast24Hours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SentLast24Hours")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

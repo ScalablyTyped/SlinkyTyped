@@ -5,127 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MjmlNavbarLinkProps extends js.Object {
-  var color: js.UndefOr[ColorProperty] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var fontSize: js.UndefOr[String | Double] = js.native
-  var fontStyle: js.UndefOr[String] = js.native
-  var fontWeight: js.UndefOr[Double] = js.native
-  var lineHeight: js.UndefOr[String | Double] = js.native
-  var textDecoration: js.UndefOr[String] = js.native
-  var textTransform: js.UndefOr[String] = js.native
+  var color: js.UndefOr[ColorProperty] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var fontSize: js.UndefOr[String | Double] = js.undefined
+  var fontStyle: js.UndefOr[String] = js.undefined
+  var fontWeight: js.UndefOr[Double] = js.undefined
+  var lineHeight: js.UndefOr[String | Double] = js.undefined
+  var textDecoration: js.UndefOr[String] = js.undefined
+  var textTransform: js.UndefOr[String] = js.undefined
 }
 
 object MjmlNavbarLinkProps {
   @scala.inline
-  def apply(): MjmlNavbarLinkProps = {
+  def apply(
+    color: ColorProperty = null,
+    fontFamily: String = null,
+    fontSize: String | Double = null,
+    fontStyle: String = null,
+    fontWeight: js.UndefOr[Double] = js.undefined,
+    lineHeight: String | Double = null,
+    textDecoration: String = null,
+    textTransform: String = null
+  ): MjmlNavbarLinkProps = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontWeight)) __obj.updateDynamic("fontWeight")(fontWeight.get.asInstanceOf[js.Any])
+    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
+    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
     __obj.asInstanceOf[MjmlNavbarLinkProps]
   }
-  @scala.inline
-  implicit class MjmlNavbarLinkPropsOps[Self <: MjmlNavbarLinkProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: ColorProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineHeight(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextDecoration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDecoration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextTransform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

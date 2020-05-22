@@ -22,25 +22,5 @@ object InsightResultValue {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], GroupByAttributeValue = GroupByAttributeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsightResultValue]
   }
-  @scala.inline
-  implicit class InsightResultValueOps[Self <: InsightResultValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupByAttributeValue(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupByAttributeValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

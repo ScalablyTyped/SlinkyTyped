@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object getBuildDate extends js.Object {
   /**
-  	 * Gets the value of the <Titanium.buildDate> property.
-  	 * @deprecated Access <Titanium.buildDate> instead.
-  	 */
+    * Gets the value of the <Titanium.buildDate> property.
+    * @deprecated Access <Titanium.buildDate> instead.
+    */
   def apply(): String = js.native
 }
 

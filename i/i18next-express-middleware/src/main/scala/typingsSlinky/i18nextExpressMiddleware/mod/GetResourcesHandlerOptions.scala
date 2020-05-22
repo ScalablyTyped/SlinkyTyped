@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetResourcesHandlerOptions extends js.Object {
-  var cache: js.UndefOr[Boolean] = js.native
-  var lngParam: js.UndefOr[String] = js.native
-  var maxAge: js.UndefOr[Double] = js.native
-  var nsParam: js.UndefOr[String] = js.native
+  var cache: js.UndefOr[Boolean] = js.undefined
+  var lngParam: js.UndefOr[String] = js.undefined
+  var maxAge: js.UndefOr[Double] = js.undefined
+  var nsParam: js.UndefOr[String] = js.undefined
 }
 
 object GetResourcesHandlerOptions {
   @scala.inline
-  def apply(): GetResourcesHandlerOptions = {
+  def apply(
+    cache: js.UndefOr[Boolean] = js.undefined,
+    lngParam: String = null,
+    maxAge: js.UndefOr[Double] = js.undefined,
+    nsParam: String = null
+  ): GetResourcesHandlerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (lngParam != null) __obj.updateDynamic("lngParam")(lngParam.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAge)) __obj.updateDynamic("maxAge")(maxAge.get.asInstanceOf[js.Any])
+    if (nsParam != null) __obj.updateDynamic("nsParam")(nsParam.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourcesHandlerOptions]
   }
-  @scala.inline
-  implicit class GetResourcesHandlerOptionsOps[Self <: GetResourcesHandlerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLngParam(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lngParam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLngParam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lngParam")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNsParam(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nsParam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNsParam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nsParam")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

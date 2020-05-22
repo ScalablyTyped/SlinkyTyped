@@ -7,71 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A configuration object that may be applied to a Context Choose operation.
   */
-@js.native
 trait ChooseContextConfig extends js.Object {
   /**
     * The set of filters to apply to the context suggestions: 'NEW_CONTEXT_ONLY', 'INCLUDE_EXISTING_CHALLENGES' or 'NEW_PLAYERS_ONLY'.
     */
-  var filters: js.UndefOr[js.Array[ContextFilter]] = js.native
+  var filters: js.UndefOr[js.Array[ContextFilter]] = js.undefined
   /**
     * The maximum number of participants that a suggested context should ideally have.
     */
-  var maxSize: js.UndefOr[Double] = js.native
+  var maxSize: js.UndefOr[Double] = js.undefined
   /**
     * The minimum number of participants that a suggested context should ideally have.
     */
-  var minSize: js.UndefOr[Double] = js.native
+  var minSize: js.UndefOr[Double] = js.undefined
 }
 
 object ChooseContextConfig {
   @scala.inline
-  def apply(): ChooseContextConfig = {
+  def apply(
+    filters: js.Array[ContextFilter] = null,
+    maxSize: js.UndefOr[Double] = js.undefined,
+    minSize: js.UndefOr[Double] = js.undefined
+  ): ChooseContextConfig = {
     val __obj = js.Dynamic.literal()
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSize)) __obj.updateDynamic("maxSize")(maxSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minSize)) __obj.updateDynamic("minSize")(minSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChooseContextConfig]
   }
-  @scala.inline
-  implicit class ChooseContextConfigOps[Self <: ChooseContextConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: js.Array[ContextFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

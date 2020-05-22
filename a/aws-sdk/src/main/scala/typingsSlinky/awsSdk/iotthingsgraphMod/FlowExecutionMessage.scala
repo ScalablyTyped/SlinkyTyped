@@ -26,65 +26,18 @@ trait FlowExecutionMessage extends js.Object {
 
 object FlowExecutionMessage {
   @scala.inline
-  def apply(): FlowExecutionMessage = {
+  def apply(
+    eventType: FlowExecutionEventType = null,
+    messageId: FlowExecutionMessageId = null,
+    payload: FlowExecutionMessagePayload = null,
+    timestamp: js.Date = null
+  ): FlowExecutionMessage = {
     val __obj = js.Dynamic.literal()
+    if (eventType != null) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
+    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowExecutionMessage]
   }
-  @scala.inline
-  implicit class FlowExecutionMessageOps[Self <: FlowExecutionMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventType(value: FlowExecutionEventType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageId(value: FlowExecutionMessageId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: FlowExecutionMessagePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

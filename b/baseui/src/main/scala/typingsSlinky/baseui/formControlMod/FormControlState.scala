@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormControlState extends js.Object {
-  var captionId: String = js.native
+  var captionId: String
 }
 
 object FormControlState {
@@ -15,19 +14,5 @@ object FormControlState {
     val __obj = js.Dynamic.literal(captionId = captionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormControlState]
   }
-  @scala.inline
-  implicit class FormControlStateOps[Self <: FormControlState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

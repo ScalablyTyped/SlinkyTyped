@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Id extends js.Object {
-  var id: js.UndefOr[Double] = js.native
-  var position: js.UndefOr[Double] = js.native
-  var product_id: js.UndefOr[Double] = js.native
+  var id: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[Double] = js.undefined
+  var product_id: js.UndefOr[Double] = js.undefined
 }
 
 object Id {
   @scala.inline
-  def apply(): Id = {
+  def apply(
+    id: js.UndefOr[Double] = js.undefined,
+    position: js.UndefOr[Double] = js.undefined,
+    product_id: js.UndefOr[Double] = js.undefined
+  ): Id = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(position)) __obj.updateDynamic("position")(position.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(product_id)) __obj.updateDynamic("product_id")(product_id.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Id]
   }
-  @scala.inline
-  implicit class IdOps[Self <: Id] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

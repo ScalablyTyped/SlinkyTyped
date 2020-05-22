@@ -57,6 +57,15 @@ class NgForOf[T] protected () extends DoCheck {
   @JSName("ngForTrackBy")
   var ngForTrackBy_Original: TrackByFunction[T] = js.native
   /**
+    * A callback method that performs change-detection, invoked
+    * after the default change-detector runs.
+    * See `KeyValueDiffers` and `IterableDiffers` for implementing
+    * custom change checking for collections.
+    *
+    */
+  /* CompleteClass */
+  override def ngDoCheck(): Unit = js.native
+  /**
     * A function that defines how to track changes for items in the iterable.
     *
     * When items are added, moved, or removed in the iterable,

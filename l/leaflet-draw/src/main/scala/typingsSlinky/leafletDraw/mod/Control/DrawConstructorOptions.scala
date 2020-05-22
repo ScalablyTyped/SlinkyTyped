@@ -5,77 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DrawConstructorOptions extends js.Object {
   /**
     * The options used to configure the draw toolbar.
     *
     * @default {}
     */
-  var draw: js.UndefOr[DrawOptions] = js.native
+  var draw: js.UndefOr[DrawOptions] = js.undefined
   /**
     * The options used to configure the edit toolbar.
     *
     * @default false
     */
-  var edit: js.UndefOr[EditOptions] = js.native
+  var edit: js.UndefOr[EditOptions] = js.undefined
   /**
     * The initial position of the control (one of the map corners).
     *
     * @default 'topleft'
     */
-  var position: js.UndefOr[ControlPosition] = js.native
+  var position: js.UndefOr[ControlPosition] = js.undefined
 }
 
 object DrawConstructorOptions {
   @scala.inline
-  def apply(): DrawConstructorOptions = {
+  def apply(draw: DrawOptions = null, edit: EditOptions = null, position: ControlPosition = null): DrawConstructorOptions = {
     val __obj = js.Dynamic.literal()
+    if (draw != null) __obj.updateDynamic("draw")(draw.asInstanceOf[js.Any])
+    if (edit != null) __obj.updateDynamic("edit")(edit.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawConstructorOptions]
   }
-  @scala.inline
-  implicit class DrawConstructorOptionsOps[Self <: DrawConstructorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDraw(value: DrawOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdit(value: EditOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: ControlPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

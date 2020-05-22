@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofsystem extends js.Object {
   ////////////////////
   // System CPU
@@ -14,7 +13,7 @@ trait Typeofsystem extends js.Object {
     * Permissions: "system.cpu"
     * @since Chrome 32.
     */
-  val cpu: js.Any = js.native
+  val cpu: js.Any
   ////////////////////
   // System Memory
   ////////////////////
@@ -23,7 +22,7 @@ trait Typeofsystem extends js.Object {
     * Permissions:  "system.memory"
     * @since Chrome 32.
     */
-  val memory: js.Any = js.native
+  val memory: js.Any
   ////////////////////
   // System Storage
   ////////////////////
@@ -32,7 +31,7 @@ trait Typeofsystem extends js.Object {
     * Permissions:  "system.storage"
     * @since Chrome 30.
     */
-  val storage: js.Any = js.native
+  val storage: js.Any
 }
 
 object Typeofsystem {
@@ -41,31 +40,5 @@ object Typeofsystem {
     val __obj = js.Dynamic.literal(cpu = cpu.asInstanceOf[js.Any], memory = memory.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeofsystem]
   }
-  @scala.inline
-  implicit class TypeofsystemOps[Self <: Typeofsystem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCpu(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMemory(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStorage(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

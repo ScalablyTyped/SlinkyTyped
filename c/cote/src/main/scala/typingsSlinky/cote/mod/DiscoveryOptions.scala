@@ -4,249 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiscoveryOptions extends js.Object {
   /**
     * Address to bind to.
     */
-  var address: js.UndefOr[String] = js.native
+  var address: js.UndefOr[String] = js.undefined
   /**
     * Broadcast address if using broadcast.
     */
-  var broadcast: js.UndefOr[String] = js.native
+  var broadcast: js.UndefOr[String] = js.undefined
   /**
     * How often to to check for missing nodes in milliseconds.
     */
-  var checkInterval: js.UndefOr[Double] = js.native
+  var checkInterval: js.UndefOr[Double] = js.undefined
   /**
     * Prevents Monitor from drawing.
     */
-  var disableScreen: js.UndefOr[Boolean] = js.native
+  var disableScreen: js.UndefOr[Boolean] = js.undefined
   /**
     * How often to broadcast a hello packet in milliseconds.
     */
-  var helloInterval: js.UndefOr[Double] = js.native
+  var helloInterval: js.UndefOr[Double] = js.undefined
   /**
     * Notifies when another service goes online.
     */
-  var helloLogsEnabled: js.UndefOr[Boolean] = js.native
+  var helloLogsEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Ignores messages from other services within the same process.
     */
-  var ignoreProcess: js.UndefOr[Boolean] = js.native
+  var ignoreProcess: js.UndefOr[Boolean] = js.undefined
   /**
     * If false, disables `helloLogsEnabled` and `statusLogsEnabled` no matter
     * what value they have, and also own hello log.
     */
-  var log: js.UndefOr[Boolean] = js.native
+  var log: js.UndefOr[Boolean] = js.undefined
   /**
     * Consider a master node dead if not seen in this many milliseconds.
     */
-  var masterTimeout: js.UndefOr[Double] = js.native
+  var masterTimeout: js.UndefOr[Double] = js.undefined
   /**
     * Skips key equality checks when logging.
     */
-  var monitor: js.UndefOr[Boolean] = js.native
+  var monitor: js.UndefOr[Boolean] = js.undefined
   /**
     * Multicast address if using multicast.
     */
-  var multicast: js.UndefOr[String] = js.native
+  var multicast: js.UndefOr[String] = js.undefined
   /**
     * Consider a node dead if not seen in this many milliseconds.
     */
-  var nodeTimeout: js.UndefOr[Double] = js.native
+  var nodeTimeout: js.UndefOr[Double] = js.undefined
   /**
     * Milliseconds between emissions of own status for monitoring.
     */
-  var statusInterval: js.UndefOr[Double] = js.native
+  var statusInterval: js.UndefOr[Double] = js.undefined
   /**
     * Notifies when another service goes online or offline. If false, disables
     * `helloLogsEnabled` as well.
     */
-  var statusLogsEnabled: js.UndefOr[Boolean] = js.native
+  var statusLogsEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object DiscoveryOptions {
   @scala.inline
-  def apply(): DiscoveryOptions = {
+  def apply(
+    address: String = null,
+    broadcast: String = null,
+    checkInterval: js.UndefOr[Double] = js.undefined,
+    disableScreen: js.UndefOr[Boolean] = js.undefined,
+    helloInterval: js.UndefOr[Double] = js.undefined,
+    helloLogsEnabled: js.UndefOr[Boolean] = js.undefined,
+    ignoreProcess: js.UndefOr[Boolean] = js.undefined,
+    log: js.UndefOr[Boolean] = js.undefined,
+    masterTimeout: js.UndefOr[Double] = js.undefined,
+    monitor: js.UndefOr[Boolean] = js.undefined,
+    multicast: String = null,
+    nodeTimeout: js.UndefOr[Double] = js.undefined,
+    statusInterval: js.UndefOr[Double] = js.undefined,
+    statusLogsEnabled: js.UndefOr[Boolean] = js.undefined
+  ): DiscoveryOptions = {
     val __obj = js.Dynamic.literal()
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (broadcast != null) __obj.updateDynamic("broadcast")(broadcast.asInstanceOf[js.Any])
+    if (!js.isUndefined(checkInterval)) __obj.updateDynamic("checkInterval")(checkInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableScreen)) __obj.updateDynamic("disableScreen")(disableScreen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(helloInterval)) __obj.updateDynamic("helloInterval")(helloInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(helloLogsEnabled)) __obj.updateDynamic("helloLogsEnabled")(helloLogsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreProcess)) __obj.updateDynamic("ignoreProcess")(ignoreProcess.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(log)) __obj.updateDynamic("log")(log.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(masterTimeout)) __obj.updateDynamic("masterTimeout")(masterTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(monitor)) __obj.updateDynamic("monitor")(monitor.get.asInstanceOf[js.Any])
+    if (multicast != null) __obj.updateDynamic("multicast")(multicast.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeTimeout)) __obj.updateDynamic("nodeTimeout")(nodeTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusInterval)) __obj.updateDynamic("statusInterval")(statusInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusLogsEnabled)) __obj.updateDynamic("statusLogsEnabled")(statusLogsEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoveryOptions]
   }
-  @scala.inline
-  implicit class DiscoveryOptionsOps[Self <: DiscoveryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBroadcast(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBroadcast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelloInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helloInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelloInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helloInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelloLogsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helloLogsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelloLogsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helloLogsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreProcess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreProcess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreProcess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreProcess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monitor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulticast(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multicast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulticast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multicast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusLogsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusLogsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusLogsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusLogsEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

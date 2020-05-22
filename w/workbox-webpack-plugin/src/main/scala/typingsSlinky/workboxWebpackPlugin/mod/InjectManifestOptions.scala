@@ -1,77 +1,92 @@
 package typingsSlinky.workboxWebpackPlugin.mod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.workboxWebpackPlugin.anon.Integrity
+import typingsSlinky.workboxWebpackPlugin.anon.Manifest
+import typingsSlinky.workboxWebpackPlugin.workboxWebpackPluginStrings.production
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InjectManifestOptions extends CommonOptions {
   /**
-  	 * When true (the default), the swSrc file will be compiled by webpack.
-  	 * When false, compilation will not occur (and webpackCompilationPlugins can't be used.)
-  	 * Set to false if you want to inject the manifest into, e.g., a JSON file
-  	 * @default true
-  	 */
-  var compileSrc: js.UndefOr[Boolean] = js.native
+    * When true (the default), the swSrc file will be compiled by webpack.
+    * When false, compilation will not occur (and webpackCompilationPlugins can't be used.)
+    * Set to false if you want to inject the manifest into, e.g., a JSON file
+    * @default true
+    */
+  var compileSrc: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * The path to the source service worker file that can contain your own customized code, in addition to containing a match for `injectionPointRegexp`.
-  	 *
-  	 * Your service worker file should reference the `self.__precacheManifest` variable to obtain a list of
-  	 * [`ManifestEntrys`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.ManifestEntry) obtained as part of the compilation:
-  	 * `workbox.precaching.precacheAndRoute(self.__precacheManifest)`.
-  	 *
-  	 * @example swSrc: path.join('src', 'sw.js')
-  	 */
-  var swSrc: String = js.native
+    * The path to the source service worker file that can contain your own customized code, in addition to containing a match for `injectionPointRegexp`.
+    *
+    * Your service worker file should reference the `self.__precacheManifest` variable to obtain a list of
+    * [`ManifestEntrys`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.ManifestEntry) obtained as part of the compilation:
+    * `workbox.precaching.precacheAndRoute(self.__precacheManifest)`.
+    *
+    * @example swSrc: path.join('src', 'sw.js')
+    */
+  var swSrc: String
   /**
-  	 * Optional webpack plugins that will be used when compiling the swSrc input file
-  	 */
-  var webpackCompilationPlugins: js.UndefOr[js.Array[_]] = js.native
+    * Optional webpack plugins that will be used when compiling the swSrc input file
+    */
+  var webpackCompilationPlugins: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object InjectManifestOptions {
   @scala.inline
-  def apply(swSrc: String): InjectManifestOptions = {
+  def apply(
+    swSrc: String,
+    additionalManifestEntries: js.Array[Integrity | String] = null,
+    chunks: js.Array[String] = null,
+    compileSrc: js.UndefOr[Boolean] = js.undefined,
+    dontCacheBustUrlsMatching: js.UndefOr[Null | js.RegExp] = js.undefined,
+    exclude: js.Array[String | js.RegExp] = null,
+    excludeChunks: js.Array[String] = null,
+    globDirectory: String = null,
+    globFollow: js.UndefOr[Boolean] = js.undefined,
+    globIgnores: js.Array[String] = null,
+    globPatterns: js.Array[String] = null,
+    globStrict: js.UndefOr[Boolean] = js.undefined,
+    importScriptsViaChunks: js.Array[String] = null,
+    importsDirectory: String = null,
+    include: js.Array[String | js.RegExp] = null,
+    manifestTransforms: js.UndefOr[
+      Null | (js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], Manifest]])
+    ] = js.undefined,
+    maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.undefined,
+    mode: production | String = null,
+    modifyUrlPrefix: js.UndefOr[Null | StringDictionary[String]] = js.undefined,
+    precacheManifestFilename: String = null,
+    swDest: String = null,
+    templatedUrls: js.UndefOr[Null | (StringDictionary[String | js.Array[String]])] = js.undefined,
+    test: js.Array[String | js.RegExp] = null,
+    webpackCompilationPlugins: js.Array[_] = null
+  ): InjectManifestOptions = {
     val __obj = js.Dynamic.literal(swSrc = swSrc.asInstanceOf[js.Any])
+    if (additionalManifestEntries != null) __obj.updateDynamic("additionalManifestEntries")(additionalManifestEntries.asInstanceOf[js.Any])
+    if (chunks != null) __obj.updateDynamic("chunks")(chunks.asInstanceOf[js.Any])
+    if (!js.isUndefined(compileSrc)) __obj.updateDynamic("compileSrc")(compileSrc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dontCacheBustUrlsMatching)) __obj.updateDynamic("dontCacheBustUrlsMatching")(dontCacheBustUrlsMatching.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (excludeChunks != null) __obj.updateDynamic("excludeChunks")(excludeChunks.asInstanceOf[js.Any])
+    if (globDirectory != null) __obj.updateDynamic("globDirectory")(globDirectory.asInstanceOf[js.Any])
+    if (!js.isUndefined(globFollow)) __obj.updateDynamic("globFollow")(globFollow.get.asInstanceOf[js.Any])
+    if (globIgnores != null) __obj.updateDynamic("globIgnores")(globIgnores.asInstanceOf[js.Any])
+    if (globPatterns != null) __obj.updateDynamic("globPatterns")(globPatterns.asInstanceOf[js.Any])
+    if (!js.isUndefined(globStrict)) __obj.updateDynamic("globStrict")(globStrict.get.asInstanceOf[js.Any])
+    if (importScriptsViaChunks != null) __obj.updateDynamic("importScriptsViaChunks")(importScriptsViaChunks.asInstanceOf[js.Any])
+    if (importsDirectory != null) __obj.updateDynamic("importsDirectory")(importsDirectory.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(manifestTransforms)) __obj.updateDynamic("manifestTransforms")(manifestTransforms.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumFileSizeToCacheInBytes)) __obj.updateDynamic("maximumFileSizeToCacheInBytes")(maximumFileSizeToCacheInBytes.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifyUrlPrefix)) __obj.updateDynamic("modifyUrlPrefix")(modifyUrlPrefix.asInstanceOf[js.Any])
+    if (precacheManifestFilename != null) __obj.updateDynamic("precacheManifestFilename")(precacheManifestFilename.asInstanceOf[js.Any])
+    if (swDest != null) __obj.updateDynamic("swDest")(swDest.asInstanceOf[js.Any])
+    if (!js.isUndefined(templatedUrls)) __obj.updateDynamic("templatedUrls")(templatedUrls.asInstanceOf[js.Any])
+    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
+    if (webpackCompilationPlugins != null) __obj.updateDynamic("webpackCompilationPlugins")(webpackCompilationPlugins.asInstanceOf[js.Any])
     __obj.asInstanceOf[InjectManifestOptions]
   }
-  @scala.inline
-  implicit class InjectManifestOptionsOps[Self <: InjectManifestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSwSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompileSrc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compileSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompileSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compileSrc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebpackCompilationPlugins(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpackCompilationPlugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebpackCompilationPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpackCompilationPlugins")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

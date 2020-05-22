@@ -9,7 +9,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.columnHeaderMod.IColumnHeaderProps
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
 import typingsSlinky.blueprintjsTable.commonMod.Grid
-import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
+import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.locatorMod.ILocator
 import scala.scalajs.js

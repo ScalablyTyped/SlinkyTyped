@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeedOnlyInitializerArgs extends js.Object {
   /** Random number generator seed. */
-  var seed: js.UndefOr[Double] = js.native
+  var seed: js.UndefOr[Double] = js.undefined
 }
 
 object SeedOnlyInitializerArgs {
   @scala.inline
-  def apply(): SeedOnlyInitializerArgs = {
+  def apply(seed: js.UndefOr[Double] = js.undefined): SeedOnlyInitializerArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(seed)) __obj.updateDynamic("seed")(seed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeedOnlyInitializerArgs]
   }
-  @scala.inline
-  implicit class SeedOnlyInitializerArgsOps[Self <: SeedOnlyInitializerArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

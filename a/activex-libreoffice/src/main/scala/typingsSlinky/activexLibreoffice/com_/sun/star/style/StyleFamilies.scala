@@ -25,7 +25,6 @@ import scala.scalajs.js.annotation._
   *
   * **ShapeStyles  **: the container for style sheets for shapes
   */
-@js.native
 trait StyleFamilies
   extends XNameAccess
      with XIndexAccess

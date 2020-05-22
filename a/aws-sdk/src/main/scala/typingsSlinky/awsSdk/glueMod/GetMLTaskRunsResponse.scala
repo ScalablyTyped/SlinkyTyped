@@ -18,41 +18,11 @@ trait GetMLTaskRunsResponse extends js.Object {
 
 object GetMLTaskRunsResponse {
   @scala.inline
-  def apply(): GetMLTaskRunsResponse = {
+  def apply(NextToken: PaginationToken = null, TaskRuns: TaskRunList = null): GetMLTaskRunsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (TaskRuns != null) __obj.updateDynamic("TaskRuns")(TaskRuns.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMLTaskRunsResponse]
   }
-  @scala.inline
-  implicit class GetMLTaskRunsResponseOps[Self <: GetMLTaskRunsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskRuns(value: TaskRunList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskRuns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskRuns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskRuns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

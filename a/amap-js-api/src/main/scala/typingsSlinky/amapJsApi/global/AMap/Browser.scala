@@ -21,7 +21,7 @@ object Browser extends js.Object {
     */
   val any3d: Boolean = js.native
   /**
-    * 	是否百度浏览器
+    *     是否百度浏览器
     */
   val baidu: Boolean = js.native
   /**
@@ -29,7 +29,7 @@ object Browser extends js.Object {
     */
   val chrome: Boolean = js.native
   /**
-    * 	是否Edge浏览器
+    *     是否Edge浏览器
     */
   val edge: Boolean = js.native
   /**
@@ -165,7 +165,7 @@ object Browser extends js.Object {
     */
   val safari: Boolean = js.native
   /**
-    * 	是否触屏
+    *     是否触屏
     */
   val touch: Boolean = js.native
   /**

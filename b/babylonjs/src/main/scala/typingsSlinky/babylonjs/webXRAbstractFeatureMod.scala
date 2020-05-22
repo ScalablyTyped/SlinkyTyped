@@ -41,6 +41,11 @@ object webXRAbstractFeatureMod extends js.Object {
       */
     @JSName("attached")
     def attached_MWebXRAbstractFeature: Boolean = js.native
+    /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
   }
   
 }

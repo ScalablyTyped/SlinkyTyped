@@ -8,244 +8,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChipsProps extends js.Object {
-  var ariaLabelledBy: js.UndefOr[String] = js.native
-  var className: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[String] = js.native
-  var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var onAdd: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var onRemove: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var tooltip: js.UndefOr[js.Any] = js.native
-  var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
-  var value: js.UndefOr[js.Array[_]] = js.native
+  var ariaLabelledBy: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var onAdd: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.undefined
+  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var onRemove: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var tooltip: js.UndefOr[js.Any] = js.undefined
+  var tooltipOptions: js.UndefOr[TooltipOptions] = js.undefined
+  var value: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object ChipsProps {
   @scala.inline
-  def apply(): ChipsProps = {
+  def apply(
+    ariaLabelledBy: String = null,
+    className: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    itemTemplate: /* item */ js.Any => js.UndefOr[ReactElement] = null,
+    max: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    onAdd: /* e */ Value => Unit = null,
+    onBlur: /* event */ Event => Unit = null,
+    onChange: /* e */ Value => Unit = null,
+    onFocus: /* event */ Event => Unit = null,
+    onRemove: /* e */ Value => Unit = null,
+    placeholder: String = null,
+    style: js.Object = null,
+    tooltip: js.Any = null,
+    tooltipOptions: TooltipOptions = null,
+    value: js.Array[_] = null
+  ): ChipsProps = {
     val __obj = js.Dynamic.literal()
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onAdd != null) __obj.updateDynamic("onAdd")(js.Any.fromFunction1(onAdd))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChipsProps]
   }
-  @scala.inline
-  implicit class ChipsPropsOps[Self <: ChipsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAriaLabelledBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaLabelledBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemTemplate(value: /* item */ js.Any => js.UndefOr[ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutItemTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAdd(value: /* e */ Value => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* e */ Value => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemove(value: /* e */ Value => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipOptions(value: TooltipOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

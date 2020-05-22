@@ -18,20 +18,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
-@js.native
 trait TSModuleDeclaration
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var body: js.UndefOr[TSModuleBlockKind | TSModuleDeclarationKind | Null] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var declare: js.UndefOr[Boolean] = js.native
-  var global: js.UndefOr[Boolean] = js.native
-  var id: StringLiteralKind | IdentifierKind | TSQualifiedNameKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSModuleDeclaration = js.native
+  var body: js.UndefOr[TSModuleBlockKind | TSModuleDeclarationKind | Null] = js.undefined
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var declare: js.UndefOr[Boolean] = js.undefined
+  var global: js.UndefOr[Boolean] = js.undefined
+  var id: StringLiteralKind | IdentifierKind | TSQualifiedNameKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSModuleDeclaration
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSModuleDeclaration")

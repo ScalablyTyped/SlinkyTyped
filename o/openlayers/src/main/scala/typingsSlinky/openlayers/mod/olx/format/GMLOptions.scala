@@ -5,121 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GMLOptions extends js.Object {
-  var curve: js.UndefOr[Boolean] = js.native
-  var featureNS: js.UndefOr[StringDictionary[String] | String] = js.native
-  var featureType: js.UndefOr[js.Array[String] | String] = js.native
-  var multiCurve: js.UndefOr[Boolean] = js.native
-  var multiSurface: js.UndefOr[Boolean] = js.native
-  var schemaLocation: js.UndefOr[String] = js.native
-  var srsName: String = js.native
-  var surface: js.UndefOr[Boolean] = js.native
+  var curve: js.UndefOr[Boolean] = js.undefined
+  var featureNS: js.UndefOr[StringDictionary[String] | String] = js.undefined
+  var featureType: js.UndefOr[js.Array[String] | String] = js.undefined
+  var multiCurve: js.UndefOr[Boolean] = js.undefined
+  var multiSurface: js.UndefOr[Boolean] = js.undefined
+  var schemaLocation: js.UndefOr[String] = js.undefined
+  var srsName: String
+  var surface: js.UndefOr[Boolean] = js.undefined
 }
 
 object GMLOptions {
   @scala.inline
-  def apply(srsName: String): GMLOptions = {
+  def apply(
+    srsName: String,
+    curve: js.UndefOr[Boolean] = js.undefined,
+    featureNS: StringDictionary[String] | String = null,
+    featureType: js.Array[String] | String = null,
+    multiCurve: js.UndefOr[Boolean] = js.undefined,
+    multiSurface: js.UndefOr[Boolean] = js.undefined,
+    schemaLocation: String = null,
+    surface: js.UndefOr[Boolean] = js.undefined
+  ): GMLOptions = {
     val __obj = js.Dynamic.literal(srsName = srsName.asInstanceOf[js.Any])
+    if (!js.isUndefined(curve)) __obj.updateDynamic("curve")(curve.get.asInstanceOf[js.Any])
+    if (featureNS != null) __obj.updateDynamic("featureNS")(featureNS.asInstanceOf[js.Any])
+    if (featureType != null) __obj.updateDynamic("featureType")(featureType.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiCurve)) __obj.updateDynamic("multiCurve")(multiCurve.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiSurface)) __obj.updateDynamic("multiSurface")(multiSurface.get.asInstanceOf[js.Any])
+    if (schemaLocation != null) __obj.updateDynamic("schemaLocation")(schemaLocation.asInstanceOf[js.Any])
+    if (!js.isUndefined(surface)) __obj.updateDynamic("surface")(surface.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GMLOptions]
   }
-  @scala.inline
-  implicit class GMLOptionsOps[Self <: GMLOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSrsName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureNS(value: StringDictionary[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureNS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureType(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiCurve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiCurve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiCurve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiCurve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiSurface(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSurface")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiSurface: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSurface")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurface(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surface")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurface: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surface")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

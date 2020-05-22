@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides methods that are independent of any particular instance of the document object model. */
-@js.native
 trait XmlDomImplementation extends js.Object {
   /**
     * Indicates support for the specified feature.
@@ -13,7 +12,7 @@ trait XmlDomImplementation extends js.Object {
     * @param version Specifies the version number to test. If NULL, tests for implementation of the feature in any version. In Level 1, "1.0" is the valid version value.
     * @return True if the specified feature is implemented; otherwise false.
     */
-  def hasFeature(feature: String, version: js.Any): Boolean = js.native
+  def hasFeature(feature: String, version: js.Any): Boolean
 }
 
 object XmlDomImplementation {
@@ -22,19 +21,5 @@ object XmlDomImplementation {
     val __obj = js.Dynamic.literal(hasFeature = js.Any.fromFunction2(hasFeature))
     __obj.asInstanceOf[XmlDomImplementation]
   }
-  @scala.inline
-  implicit class XmlDomImplementationOps[Self <: XmlDomImplementation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasFeature(value: (String, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasFeature")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,125 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MessageAttributeValue extends js.Object {
   /**
     * <p>Not implemented. Reserved for future use.</p>
     */
   var BinaryListValues: js.UndefOr[
     (js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String]) | (js.Iterable[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String])
-  ] = js.native
+  ] = js.undefined
   /**
     * <p>Binary type attributes can store any binary data, such as compressed data, encrypted data, or images.</p>
     */
-  var BinaryValue: js.UndefOr[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String] = js.native
+  var BinaryValue: js.UndefOr[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String] = js.undefined
   /**
     * <p>Amazon SQS supports the following logical data types: <code>String</code>, <code>Number</code>, and <code>Binary</code>. For the <code>Number</code> data type, you must use <code>StringValue</code>.</p> <p>You can also append custom labels. For more information, see <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Amazon SQS Message Attributes</a> in the <i>Amazon Simple Queue Service Developer Guide</i>.</p>
     */
-  var DataType: String = js.native
+  var DataType: String
   /**
     * <p>Not implemented. Reserved for future use.</p>
     */
-  var StringListValues: js.UndefOr[js.Array[String] | js.Iterable[String]] = js.native
+  var StringListValues: js.UndefOr[js.Array[String] | js.Iterable[String]] = js.undefined
   /**
     * <p>Strings are Unicode with UTF-8 binary encoding. For a list of code values, see <a href="http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters">ASCII Printable Characters</a>.</p>
     */
-  var StringValue: js.UndefOr[String] = js.native
+  var StringValue: js.UndefOr[String] = js.undefined
 }
 
 object MessageAttributeValue {
   @scala.inline
-  def apply(DataType: String): MessageAttributeValue = {
+  def apply(
+    DataType: String,
+    BinaryListValues: (js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String]) | (js.Iterable[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String]) = null,
+    BinaryValue: js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String = null,
+    StringListValues: js.Array[String] | js.Iterable[String] = null,
+    StringValue: String = null
+  ): MessageAttributeValue = {
     val __obj = js.Dynamic.literal(DataType = DataType.asInstanceOf[js.Any])
+    if (BinaryListValues != null) __obj.updateDynamic("BinaryListValues")(BinaryListValues.asInstanceOf[js.Any])
+    if (BinaryValue != null) __obj.updateDynamic("BinaryValue")(BinaryValue.asInstanceOf[js.Any])
+    if (StringListValues != null) __obj.updateDynamic("StringListValues")(StringListValues.asInstanceOf[js.Any])
+    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageAttributeValue]
   }
-  @scala.inline
-  implicit class MessageAttributeValueOps[Self <: MessageAttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryListValuesIterable(value: js.Iterable[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryListValues(
-      value: (js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String]) | (js.Iterable[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryListValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryListValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryValueArrayBufferView(value: js.typedarray.ArrayBufferView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryValueArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinaryValue(value: js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringListValuesIterable(value: js.Iterable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringListValues(value: js.Array[String] | js.Iterable[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringListValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

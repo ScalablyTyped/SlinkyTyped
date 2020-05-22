@@ -32,6 +32,16 @@ class StandardRenderingPipeline protected ()
     originalPostProcess: Nullable[typingsSlinky.babylonjs.BABYLON.PostProcess],
     cameras: js.Array[typingsSlinky.babylonjs.BABYLON.Camera]
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

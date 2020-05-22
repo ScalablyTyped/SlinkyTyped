@@ -15,9 +15,17 @@ trait SharePointConfiguration extends js.Object {
     */
   var DocumentTitleFieldName: js.UndefOr[DataSourceFieldName] = js.native
   /**
+    * A list of regulary expression patterns. Documents that match the patterns are excluded from the index. Documents that don't match the patterns are included in the index. If a document matches both an exclusion pattern and an inclusion pattern, the document is not included in the index. The regex is applied to the display URL of the SharePoint document.
+    */
+  var ExclusionPatterns: js.UndefOr[DataSourceInclusionsExclusionsStrings] = js.native
+  /**
     * A list of DataSourceToIndexFieldMapping objects that map Microsoft SharePoint attributes to custom fields in the Amazon Kendra index. You must first create the index fields using the operation before you map SharePoint attributes. For more information, see Mapping Data Source Fields.
     */
   var FieldMappings: js.UndefOr[DataSourceToIndexFieldMappingList] = js.native
+  /**
+    * A list of regular expression patterns. Documents that match the patterns are included in the index. Documents that don't match the patterns are excluded from the index. If a document matches both an inclusion pattern and an exclusion pattern, the document is not included in the index. The regex is applied to the display URL of the SharePoint document.
+    */
+  var InclusionPatterns: js.UndefOr[DataSourceInclusionsExclusionsStrings] = js.native
   /**
     * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a user/password pair. For more information, see Using a Microsoft SharePoint Data Source. For more information about AWS Secrets Manager, see  What Is AWS Secrets Manager  in the AWS Secrets Manager user guide.
     */
@@ -30,88 +38,36 @@ trait SharePointConfiguration extends js.Object {
     * The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
     */
   var Urls: SharePointUrlList = js.native
+  /**
+    * Set to TRUE to use the Microsoft SharePoint change log to determine the documents that need to be updated in the index. Depending on the size of the SharePoint change log, it may take longer for Amazon Kendra to use the change log than it takes it to determine the changed documents using the Amazon Kendra document crawler.
+    */
+  var UseChangeLog: js.UndefOr[Boolean] = js.native
   var VpcConfiguration: js.UndefOr[DataSourceVpcConfiguration] = js.native
 }
 
 object SharePointConfiguration {
   @scala.inline
-  def apply(SecretArn: SecretArn, SharePointVersion: SharePointVersion, Urls: SharePointUrlList): SharePointConfiguration = {
+  def apply(
+    SecretArn: SecretArn,
+    SharePointVersion: SharePointVersion,
+    Urls: SharePointUrlList,
+    CrawlAttachments: js.UndefOr[Boolean] = js.undefined,
+    DocumentTitleFieldName: DataSourceFieldName = null,
+    ExclusionPatterns: DataSourceInclusionsExclusionsStrings = null,
+    FieldMappings: DataSourceToIndexFieldMappingList = null,
+    InclusionPatterns: DataSourceInclusionsExclusionsStrings = null,
+    UseChangeLog: js.UndefOr[Boolean] = js.undefined,
+    VpcConfiguration: DataSourceVpcConfiguration = null
+  ): SharePointConfiguration = {
     val __obj = js.Dynamic.literal(SecretArn = SecretArn.asInstanceOf[js.Any], SharePointVersion = SharePointVersion.asInstanceOf[js.Any], Urls = Urls.asInstanceOf[js.Any])
+    if (!js.isUndefined(CrawlAttachments)) __obj.updateDynamic("CrawlAttachments")(CrawlAttachments.get.asInstanceOf[js.Any])
+    if (DocumentTitleFieldName != null) __obj.updateDynamic("DocumentTitleFieldName")(DocumentTitleFieldName.asInstanceOf[js.Any])
+    if (ExclusionPatterns != null) __obj.updateDynamic("ExclusionPatterns")(ExclusionPatterns.asInstanceOf[js.Any])
+    if (FieldMappings != null) __obj.updateDynamic("FieldMappings")(FieldMappings.asInstanceOf[js.Any])
+    if (InclusionPatterns != null) __obj.updateDynamic("InclusionPatterns")(InclusionPatterns.asInstanceOf[js.Any])
+    if (!js.isUndefined(UseChangeLog)) __obj.updateDynamic("UseChangeLog")(UseChangeLog.get.asInstanceOf[js.Any])
+    if (VpcConfiguration != null) __obj.updateDynamic("VpcConfiguration")(VpcConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharePointConfiguration]
   }
-  @scala.inline
-  implicit class SharePointConfigurationOps[Self <: SharePointConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecretArn(value: SecretArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSharePointVersion(value: SharePointVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharePointVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrls(value: SharePointUrlList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCrawlAttachments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlAttachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrawlAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlAttachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentTitleFieldName(value: DataSourceFieldName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitleFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentTitleFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitleFieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldMappings(value: DataSourceToIndexFieldMappingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcConfiguration(value: DataSourceVpcConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

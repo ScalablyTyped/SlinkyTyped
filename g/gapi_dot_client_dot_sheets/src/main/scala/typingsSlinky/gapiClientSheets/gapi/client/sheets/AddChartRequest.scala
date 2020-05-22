@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddChartRequest extends js.Object {
   /**
     * The chart that should be added to the spreadsheet, including the position
@@ -12,34 +11,15 @@ trait AddChartRequest extends js.Object {
     * field is optional; if one is not set, an id will be randomly generated. (It
     * is an error to specify the ID of an embedded object that already exists.)
     */
-  var chart: js.UndefOr[EmbeddedChart] = js.native
+  var chart: js.UndefOr[EmbeddedChart] = js.undefined
 }
 
 object AddChartRequest {
   @scala.inline
-  def apply(): AddChartRequest = {
+  def apply(chart: EmbeddedChart = null): AddChartRequest = {
     val __obj = js.Dynamic.literal()
+    if (chart != null) __obj.updateDynamic("chart")(chart.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddChartRequest]
   }
-  @scala.inline
-  implicit class AddChartRequestOps[Self <: AddChartRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChart(value: EmbeddedChart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

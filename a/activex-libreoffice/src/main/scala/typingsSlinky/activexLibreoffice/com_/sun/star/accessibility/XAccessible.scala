@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * @see AccessibleContext
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessible extends XInterface {
   /**
     * Returns the {@link AccessibleContext} associated with this object.
@@ -32,7 +31,7 @@ trait XAccessible extends XInterface {
     * @returns A reference to the object that contains the actual accessibility information.
     * @see AccessibleContext
     */
-  val AccessibleContext: XAccessibleContext = js.native
+  val AccessibleContext: XAccessibleContext
   /**
     * Returns the {@link AccessibleContext} associated with this object.
     *
@@ -42,7 +41,7 @@ trait XAccessible extends XInterface {
     * @returns A reference to the object that contains the actual accessibility information.
     * @see AccessibleContext
     */
-  def getAccessibleContext(): XAccessibleContext = js.native
+  def getAccessibleContext(): XAccessibleContext
 }
 
 object XAccessible {
@@ -57,25 +56,5 @@ object XAccessible {
     val __obj = js.Dynamic.literal(AccessibleContext = AccessibleContext.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAccessibleContext = js.Any.fromFunction0(getAccessibleContext), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAccessible]
   }
-  @scala.inline
-  implicit class XAccessibleOps[Self <: XAccessible] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessibleContext(value: XAccessibleContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleContext(value: () => XAccessibleContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleContext")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,40 +1,35 @@
 package typingsSlinky.exceljs.mod
 
+import typingsSlinky.exceljs.anon.PartialFastCsvFormatterOp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CsvWriteOptions extends js.Object {
-  var dateFormat: String = js.native
-  var dateUTC: Boolean = js.native
+  var dateFormat: String
+  var dateUTC: Boolean
+  var encoding: String
+  var formatterOptions: PartialFastCsvFormatterOp
+  var includeEmptyRows: Boolean
+  var sheetId: Double
+  var sheetName: String
+  def map(value: js.Any, index: Double): js.Any
 }
 
 object CsvWriteOptions {
   @scala.inline
-  def apply(dateFormat: String, dateUTC: Boolean): CsvWriteOptions = {
-    val __obj = js.Dynamic.literal(dateFormat = dateFormat.asInstanceOf[js.Any], dateUTC = dateUTC.asInstanceOf[js.Any])
+  def apply(
+    dateFormat: String,
+    dateUTC: Boolean,
+    encoding: String,
+    formatterOptions: PartialFastCsvFormatterOp,
+    includeEmptyRows: Boolean,
+    map: (js.Any, Double) => js.Any,
+    sheetId: Double,
+    sheetName: String
+  ): CsvWriteOptions = {
+    val __obj = js.Dynamic.literal(dateFormat = dateFormat.asInstanceOf[js.Any], dateUTC = dateUTC.asInstanceOf[js.Any], encoding = encoding.asInstanceOf[js.Any], formatterOptions = formatterOptions.asInstanceOf[js.Any], includeEmptyRows = includeEmptyRows.asInstanceOf[js.Any], map = js.Any.fromFunction2(map), sheetId = sheetId.asInstanceOf[js.Any], sheetName = sheetName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CsvWriteOptions]
   }
-  @scala.inline
-  implicit class CsvWriteOptionsOps[Self <: CsvWriteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateUTC(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateUTC")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

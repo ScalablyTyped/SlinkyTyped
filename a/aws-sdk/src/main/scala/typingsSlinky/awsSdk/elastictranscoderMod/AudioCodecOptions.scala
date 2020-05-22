@@ -26,65 +26,18 @@ trait AudioCodecOptions extends js.Object {
 
 object AudioCodecOptions {
   @scala.inline
-  def apply(): AudioCodecOptions = {
+  def apply(
+    BitDepth: AudioBitDepth = null,
+    BitOrder: AudioBitOrder = null,
+    Profile: AudioCodecProfile = null,
+    Signed: AudioSigned = null
+  ): AudioCodecOptions = {
     val __obj = js.Dynamic.literal()
+    if (BitDepth != null) __obj.updateDynamic("BitDepth")(BitDepth.asInstanceOf[js.Any])
+    if (BitOrder != null) __obj.updateDynamic("BitOrder")(BitOrder.asInstanceOf[js.Any])
+    if (Profile != null) __obj.updateDynamic("Profile")(Profile.asInstanceOf[js.Any])
+    if (Signed != null) __obj.updateDynamic("Signed")(Signed.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioCodecOptions]
   }
-  @scala.inline
-  implicit class AudioCodecOptionsOps[Self <: AudioCodecOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitDepth(value: AudioBitDepth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBitOrder(value: AudioBitOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BitOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfile(value: AudioCodecProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigned(value: AudioSigned): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Signed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Signed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

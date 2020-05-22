@@ -4,178 +4,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodePool extends js.Object {
   /**
     * Autoscaler configuration for this NodePool. Autoscaler is enabled
     * only if a valid configuration is present.
     */
-  var autoscaling: js.UndefOr[NodePoolAutoscaling] = js.native
+  var autoscaling: js.UndefOr[NodePoolAutoscaling] = js.undefined
   /** The node configuration of the pool. */
-  var config: js.UndefOr[NodeConfig] = js.native
+  var config: js.UndefOr[NodeConfig] = js.undefined
   /**
     * The initial node count for the pool. You must ensure that your
     * Compute Engine <a href="/compute/docs/resource-quotas">resource quota</a>
     * is sufficient for this number of instances. You must also have available
     * firewall and routes quota.
     */
-  var initialNodeCount: js.UndefOr[Double] = js.native
+  var initialNodeCount: js.UndefOr[Double] = js.undefined
   /**
     * [Output only] The resource URLs of [instance
     * groups](/compute/docs/instance-groups/) associated with this
     * node pool.
     */
-  var instanceGroupUrls: js.UndefOr[js.Array[String]] = js.native
+  var instanceGroupUrls: js.UndefOr[js.Array[String]] = js.undefined
   /** NodeManagement configuration for this NodePool. */
-  var management: js.UndefOr[NodeManagement] = js.native
+  var management: js.UndefOr[NodeManagement] = js.undefined
   /** The name of the node pool. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** [Output only] Server-defined URL for the resource. */
-  var selfLink: js.UndefOr[String] = js.native
+  var selfLink: js.UndefOr[String] = js.undefined
   /** [Output only] The status of the nodes in this pool instance. */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
   /**
     * [Output only] Additional information about the current status of this
     * node pool instance, if available.
     */
-  var statusMessage: js.UndefOr[String] = js.native
+  var statusMessage: js.UndefOr[String] = js.undefined
   /** [Output only] The version of the Kubernetes of this node. */
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object NodePool {
   @scala.inline
-  def apply(): NodePool = {
+  def apply(
+    autoscaling: NodePoolAutoscaling = null,
+    config: NodeConfig = null,
+    initialNodeCount: js.UndefOr[Double] = js.undefined,
+    instanceGroupUrls: js.Array[String] = null,
+    management: NodeManagement = null,
+    name: String = null,
+    selfLink: String = null,
+    status: String = null,
+    statusMessage: String = null,
+    version: String = null
+  ): NodePool = {
     val __obj = js.Dynamic.literal()
+    if (autoscaling != null) __obj.updateDynamic("autoscaling")(autoscaling.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialNodeCount)) __obj.updateDynamic("initialNodeCount")(initialNodeCount.get.asInstanceOf[js.Any])
+    if (instanceGroupUrls != null) __obj.updateDynamic("instanceGroupUrls")(instanceGroupUrls.asInstanceOf[js.Any])
+    if (management != null) __obj.updateDynamic("management")(management.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodePool]
   }
-  @scala.inline
-  implicit class NodePoolOps[Self <: NodePool] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoscaling(value: NodePoolAutoscaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoscaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfig(value: NodeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialNodeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialNodeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialNodeCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialNodeCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceGroupUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroupUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceGroupUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroupUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagement(value: NodeManagement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("management")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("management")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

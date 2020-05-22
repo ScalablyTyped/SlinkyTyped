@@ -16,36 +16,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AudioSource extends js.Object {
   /**
     * 指定录音的音频源，可通过 wx.getAvailableAudioSources() 获取当前可用的音频源，默认值auto
     */
-  var audioSource: js.UndefOr[AudioSourceType] = js.native
+  var audioSource: js.UndefOr[AudioSourceType] = js.undefined
   /**
     * 录音的时长，单位 ms，最大值 600000（10 分钟），默认值60000（1 分钟）
     */
-  var duration: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.undefined
   /**
     * 编码码率
     */
-  var encodeBitRate: Double = js.native
+  var encodeBitRate: Double
   /**
     * 音频格式
     */
-  var format: mp3 | aac = js.native
+  var format: mp3 | aac
   /**
     * 指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调
     */
-  var frameSize: Double = js.native
+  var frameSize: Double
   /**
     * 录音通道数
     */
-  var numberOfChannels: typingsSlinky.wegameApi.wegameApiNumbers.`1` | typingsSlinky.wegameApi.wegameApiNumbers.`2` = js.native
+  var numberOfChannels: typingsSlinky.wegameApi.wegameApiNumbers.`1` | typingsSlinky.wegameApi.wegameApiNumbers.`2`
   /**
     * 采样率
     */
-  var sampleRate: `8000` | `11025` | `12000` | `16000` | `22050` | `24000` | `32000` | `44100` | `48000` = js.native
+  var sampleRate: `8000` | `11025` | `12000` | `16000` | `22050` | `24000` | `32000` | `44100` | `48000`
 }
 
 object AudioSource {
@@ -55,72 +54,14 @@ object AudioSource {
     format: mp3 | aac,
     frameSize: Double,
     numberOfChannels: typingsSlinky.wegameApi.wegameApiNumbers.`1` | typingsSlinky.wegameApi.wegameApiNumbers.`2`,
-    sampleRate: `8000` | `11025` | `12000` | `16000` | `22050` | `24000` | `32000` | `44100` | `48000`
+    sampleRate: `8000` | `11025` | `12000` | `16000` | `22050` | `24000` | `32000` | `44100` | `48000`,
+    audioSource: AudioSourceType = null,
+    duration: js.UndefOr[Double] = js.undefined
   ): AudioSource = {
     val __obj = js.Dynamic.literal(encodeBitRate = encodeBitRate.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], frameSize = frameSize.asInstanceOf[js.Any], numberOfChannels = numberOfChannels.asInstanceOf[js.Any], sampleRate = sampleRate.asInstanceOf[js.Any])
+    if (audioSource != null) __obj.updateDynamic("audioSource")(audioSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioSource]
   }
-  @scala.inline
-  implicit class AudioSourceOps[Self <: AudioSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncodeBitRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeBitRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: mp3 | aac): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrameSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfChannels(value: typingsSlinky.wegameApi.wegameApiNumbers.`1` | typingsSlinky.wegameApi.wegameApiNumbers.`2`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfChannels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSampleRate(value: `8000` | `11025` | `12000` | `16000` | `22050` | `24000` | `32000` | `44100` | `48000`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudioSource(value: AudioSourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

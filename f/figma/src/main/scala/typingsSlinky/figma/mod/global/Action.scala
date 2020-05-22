@@ -1,8 +1,9 @@
 package typingsSlinky.figma.mod.global
 
-import typingsSlinky.figma.anon.DestinationId
-import typingsSlinky.figma.anon.Type
-import typingsSlinky.figma.anon.Url
+import typingsSlinky.figma.figmaStrings.BACK
+import typingsSlinky.figma.figmaStrings.CLOSE
+import typingsSlinky.figma.figmaStrings.NODE
+import typingsSlinky.figma.figmaStrings.URL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +17,30 @@ trait Action extends js.Object
 
 object Action {
   @scala.inline
-  implicit def apply(value: DestinationId): Action = value.asInstanceOf[Action]
+  def Type(`type`: BACK | CLOSE): Action = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Action]
+  }
   @scala.inline
-  implicit def apply(value: Type): Action = value.asInstanceOf[Action]
+  def Url(`type`: URL, url: String): Action = {
+    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Action]
+  }
   @scala.inline
-  implicit def apply(value: Url): Action = value.asInstanceOf[Action]
+  def DestinationId(
+    navigation: Navigation,
+    preserveScrollPosition: Boolean,
+    `type`: NODE,
+    destinationId: String = null,
+    overlayRelativePosition: Vector = null,
+    transition: Transition = null
+  ): Action = {
+    val __obj = js.Dynamic.literal(navigation = navigation.asInstanceOf[js.Any], preserveScrollPosition = preserveScrollPosition.asInstanceOf[js.Any], destinationId = destinationId.asInstanceOf[js.Any], transition = transition.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (overlayRelativePosition != null) __obj.updateDynamic("overlayRelativePosition")(overlayRelativePosition.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Action]
+  }
 }
 

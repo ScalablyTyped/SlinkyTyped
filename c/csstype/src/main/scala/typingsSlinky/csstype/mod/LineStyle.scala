@@ -17,24 +17,24 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.solid
 */
 trait LineStyle
-  extends BorderBlockEndProperty[js.Any]
-     with BorderBlockProperty[js.Any]
-     with BorderBlockStartProperty[js.Any]
-     with BorderBottomProperty[js.Any]
-     with BorderInlineEndProperty[js.Any]
-     with BorderInlineProperty[js.Any]
-     with BorderInlineStartProperty[js.Any]
-     with BorderLeftProperty[js.Any]
-     with BorderProperty[js.Any]
-     with BorderRightProperty[js.Any]
-     with BorderStyleProperty
-     with BorderTopProperty[js.Any]
-     with ColumnRuleProperty[js.Any]
-     with ColumnRuleStyleProperty
-     with OutlineProperty[js.Any]
-     with OutlineStyleProperty
-     with WebkitBorderBeforeProperty[js.Any]
-     with WebkitBorderBeforeStyleProperty
+  extends _BorderBlockEndProperty[js.Any]
+     with _BorderBlockProperty[js.Any]
+     with _BorderBlockStartProperty[js.Any]
+     with _BorderBottomProperty[js.Any]
+     with _BorderInlineEndProperty[js.Any]
+     with _BorderInlineProperty[js.Any]
+     with _BorderInlineStartProperty[js.Any]
+     with _BorderLeftProperty[js.Any]
+     with _BorderProperty[js.Any]
+     with _BorderRightProperty[js.Any]
+     with _BorderStyleProperty
+     with _BorderTopProperty[js.Any]
+     with _ColumnRuleProperty[js.Any]
+     with _ColumnRuleStyleProperty
+     with _OutlineProperty[js.Any]
+     with _OutlineStyleProperty
+     with _WebkitBorderBeforeProperty[js.Any]
+     with _WebkitBorderBeforeStyleProperty
 
 object LineStyle {
   @scala.inline

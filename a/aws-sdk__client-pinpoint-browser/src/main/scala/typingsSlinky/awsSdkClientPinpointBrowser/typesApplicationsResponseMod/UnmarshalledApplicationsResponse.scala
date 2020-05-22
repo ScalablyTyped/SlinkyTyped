@@ -5,40 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledApplicationsResponse extends ApplicationsResponse {
   /**
     * List of applications returned in this page.
     */
   @JSName("Item")
-  var Item_UnmarshalledApplicationsResponse: js.UndefOr[js.Array[UnmarshalledApplicationResponse]] = js.native
+  var Item_UnmarshalledApplicationsResponse: js.UndefOr[js.Array[UnmarshalledApplicationResponse]] = js.undefined
 }
 
 object UnmarshalledApplicationsResponse {
   @scala.inline
-  def apply(): UnmarshalledApplicationsResponse = {
+  def apply(Item: js.Array[UnmarshalledApplicationResponse] = null, NextToken: String = null): UnmarshalledApplicationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (Item != null) __obj.updateDynamic("Item")(Item.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledApplicationsResponse]
   }
-  @scala.inline
-  implicit class UnmarshalledApplicationsResponseOps[Self <: UnmarshalledApplicationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: js.Array[UnmarshalledApplicationResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

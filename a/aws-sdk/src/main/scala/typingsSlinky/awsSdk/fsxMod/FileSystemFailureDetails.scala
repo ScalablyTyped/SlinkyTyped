@@ -14,29 +14,10 @@ trait FileSystemFailureDetails extends js.Object {
 
 object FileSystemFailureDetails {
   @scala.inline
-  def apply(): FileSystemFailureDetails = {
+  def apply(Message: ErrorMessage = null): FileSystemFailureDetails = {
     val __obj = js.Dynamic.literal()
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileSystemFailureDetails]
   }
-  @scala.inline
-  implicit class FileSystemFailureDetailsOps[Self <: FileSystemFailureDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: ErrorMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

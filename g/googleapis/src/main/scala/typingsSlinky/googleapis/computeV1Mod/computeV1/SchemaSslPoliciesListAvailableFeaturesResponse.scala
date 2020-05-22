@@ -11,29 +11,10 @@ trait SchemaSslPoliciesListAvailableFeaturesResponse extends js.Object {
 
 object SchemaSslPoliciesListAvailableFeaturesResponse {
   @scala.inline
-  def apply(): SchemaSslPoliciesListAvailableFeaturesResponse = {
+  def apply(features: js.Array[String] = null): SchemaSslPoliciesListAvailableFeaturesResponse = {
     val __obj = js.Dynamic.literal()
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSslPoliciesListAvailableFeaturesResponse]
   }
-  @scala.inline
-  implicit class SchemaSslPoliciesListAvailableFeaturesResponseOps[Self <: SchemaSslPoliciesListAvailableFeaturesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatures(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

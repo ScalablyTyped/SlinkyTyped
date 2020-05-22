@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListTransferConfigsResponse extends js.Object {
   /**
     * Output only. The next-pagination token. For multiple-page list results,
@@ -12,48 +11,18 @@ trait ListTransferConfigsResponse extends js.Object {
     * `ListTransferConfigsRequest.page_token`
     * to request the next page of list results.
     */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** Output only. The stored pipeline transfer configurations. */
-  var transferConfigs: js.UndefOr[js.Array[TransferConfig]] = js.native
+  var transferConfigs: js.UndefOr[js.Array[TransferConfig]] = js.undefined
 }
 
 object ListTransferConfigsResponse {
   @scala.inline
-  def apply(): ListTransferConfigsResponse = {
+  def apply(nextPageToken: String = null, transferConfigs: js.Array[TransferConfig] = null): ListTransferConfigsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (transferConfigs != null) __obj.updateDynamic("transferConfigs")(transferConfigs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTransferConfigsResponse]
   }
-  @scala.inline
-  implicit class ListTransferConfigsResponseOps[Self <: ListTransferConfigsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransferConfigs(value: js.Array[TransferConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransferConfigs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferConfigs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

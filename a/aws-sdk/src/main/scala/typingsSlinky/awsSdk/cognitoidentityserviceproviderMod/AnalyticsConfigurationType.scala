@@ -26,47 +26,15 @@ trait AnalyticsConfigurationType extends js.Object {
 
 object AnalyticsConfigurationType {
   @scala.inline
-  def apply(ApplicationId: HexStringType, ExternalId: StringType, RoleArn: ArnType): AnalyticsConfigurationType = {
+  def apply(
+    ApplicationId: HexStringType,
+    ExternalId: StringType,
+    RoleArn: ArnType,
+    UserDataShared: js.UndefOr[BooleanType] = js.undefined
+  ): AnalyticsConfigurationType = {
     val __obj = js.Dynamic.literal(ApplicationId = ApplicationId.asInstanceOf[js.Any], ExternalId = ExternalId.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(UserDataShared)) __obj.updateDynamic("UserDataShared")(UserDataShared.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsConfigurationType]
   }
-  @scala.inline
-  implicit class AnalyticsConfigurationTypeOps[Self <: AnalyticsConfigurationType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: HexStringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalId(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: ArnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserDataShared(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDataShared")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDataShared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDataShared")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

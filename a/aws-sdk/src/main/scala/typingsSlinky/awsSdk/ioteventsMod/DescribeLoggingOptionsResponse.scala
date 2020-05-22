@@ -14,29 +14,10 @@ trait DescribeLoggingOptionsResponse extends js.Object {
 
 object DescribeLoggingOptionsResponse {
   @scala.inline
-  def apply(): DescribeLoggingOptionsResponse = {
+  def apply(loggingOptions: LoggingOptions = null): DescribeLoggingOptionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (loggingOptions != null) __obj.updateDynamic("loggingOptions")(loggingOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLoggingOptionsResponse]
   }
-  @scala.inline
-  implicit class DescribeLoggingOptionsResponseOps[Self <: DescribeLoggingOptionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoggingOptions(value: LoggingOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

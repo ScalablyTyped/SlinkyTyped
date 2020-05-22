@@ -7,28 +7,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a container for app settings. The methods and properties of this class support creating, deleting, enumerating, and traversing the container hierarchy. */
-@js.native
 trait ApplicationDataContainer extends js.Object {
   /** Gets the child application settings containers of this application settings container. */
-  var containers: IMapView[String, ApplicationDataContainer] = js.native
+  var containers: IMapView[String, ApplicationDataContainer]
   /** Gets the type (local or roaming) of the app data store that is associated with the current settings container. */
-  var locality: ApplicationDataLocality = js.native
+  var locality: ApplicationDataLocality
   /** Gets the name of the current settings container. */
-  var name: String = js.native
+  var name: String
   /** Gets an object that represents the settings in this settings container. */
-  var values: IPropertySet = js.native
+  var values: IPropertySet
   /**
     * Creates or opens the specified settings container in the current settings container.
     * @param name The name of the container.
     * @param disposition One of the enumeration values.
     * @return The settings container.
     */
-  def createContainer(name: String, disposition: ApplicationDataCreateDisposition): ApplicationDataContainer = js.native
+  def createContainer(name: String, disposition: ApplicationDataCreateDisposition): ApplicationDataContainer
   /**
     * Deletes the specified settings container, its subcontainers, and all application settings in the hierarchy.
     * @param name The name of the settings container.
     */
-  def deleteContainer(name: String): Unit = js.native
+  def deleteContainer(name: String): Unit
 }
 
 object ApplicationDataContainer {
@@ -44,49 +43,5 @@ object ApplicationDataContainer {
     val __obj = js.Dynamic.literal(containers = containers.asInstanceOf[js.Any], createContainer = js.Any.fromFunction2(createContainer), deleteContainer = js.Any.fromFunction1(deleteContainer), locality = locality.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationDataContainer]
   }
-  @scala.inline
-  implicit class ApplicationDataContainerOps[Self <: ApplicationDataContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainers(value: IMapView[String, ApplicationDataContainer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateContainer(value: (String, ApplicationDataCreateDisposition) => ApplicationDataContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createContainer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteContainer(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteContainer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLocality(value: ApplicationDataLocality): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValues(value: IPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

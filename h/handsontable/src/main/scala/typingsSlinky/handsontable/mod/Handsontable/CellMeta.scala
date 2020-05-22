@@ -8,88 +8,32 @@ import scala.scalajs.js.annotation._
 /**
   * Additional cell-specific meta data.
   */
-@js.native
 trait CellMeta extends ColumnSettings {
-  var comment: js.UndefOr[CommentObject] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var isSearchResult: js.UndefOr[Boolean] = js.native
-  var skipRowOnPaste: js.UndefOr[Boolean] = js.native
-  var valid: js.UndefOr[Boolean] = js.native
+  var comment: js.UndefOr[CommentObject] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var isSearchResult: js.UndefOr[Boolean] = js.undefined
+  var skipRowOnPaste: js.UndefOr[Boolean] = js.undefined
+  var valid: js.UndefOr[Boolean] = js.undefined
 }
 
 object CellMeta {
   @scala.inline
-  def apply(): CellMeta = {
+  def apply(
+    comment: CommentObject = null,
+    data: String | Double | ColumnDataGetterSetterFunction = null,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    isSearchResult: js.UndefOr[Boolean] = js.undefined,
+    skipRowOnPaste: js.UndefOr[Boolean] = js.undefined,
+    valid: js.UndefOr[Boolean] = js.undefined
+  ): CellMeta = {
     val __obj = js.Dynamic.literal()
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSearchResult)) __obj.updateDynamic("isSearchResult")(isSearchResult.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipRowOnPaste)) __obj.updateDynamic("skipRowOnPaste")(skipRowOnPaste.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valid)) __obj.updateDynamic("valid")(valid.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellMeta]
   }
-  @scala.inline
-  implicit class CellMetaOps[Self <: CellMeta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComment(value: CommentObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSearchResult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSearchResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSearchResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSearchResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipRowOnPaste(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipRowOnPaste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipRowOnPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipRowOnPaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

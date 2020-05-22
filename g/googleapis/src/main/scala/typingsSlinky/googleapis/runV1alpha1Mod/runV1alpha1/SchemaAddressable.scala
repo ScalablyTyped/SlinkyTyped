@@ -14,29 +14,10 @@ trait SchemaAddressable extends js.Object {
 
 object SchemaAddressable {
   @scala.inline
-  def apply(): SchemaAddressable = {
+  def apply(hostname: String = null): SchemaAddressable = {
     val __obj = js.Dynamic.literal()
+    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddressable]
   }
-  @scala.inline
-  implicit class SchemaAddressableOps[Self <: SchemaAddressable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

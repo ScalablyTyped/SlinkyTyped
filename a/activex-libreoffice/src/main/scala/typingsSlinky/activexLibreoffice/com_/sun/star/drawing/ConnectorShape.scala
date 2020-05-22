@@ -26,7 +26,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service is for a {@link ConnectorShape} , a specialized {@link Shape} , which can be connected to other {@link Shapes} or GluePoints. */
-@js.native
 trait ConnectorShape
   extends Shape
      with LineProperties
@@ -36,35 +35,35 @@ trait ConnectorShape
      with TextProperties
      with RotationDescriptor {
   /** This property contains the distance of line 1. */
-  var EdgeLine1Delta: Double = js.native
+  var EdgeLine1Delta: Double
   /** This property contains the distance of line 2. */
-  var EdgeLine2Delta: Double = js.native
+  var EdgeLine2Delta: Double
   /** This property contains the distance of line 3. */
-  var EdgeLine3Delta: Double = js.native
+  var EdgeLine3Delta: Double
   /**
     * this is the position of the connectors end point in 100th/mm. For unconnected end points you can get and set the position. For connected end points
     * you can only get the position.
     */
-  var EndGluePointIndex: Double = js.native
+  var EndGluePointIndex: Double
   /** this property holds the index of the glue point the end point of this connector is glued on. */
-  var EndPosition: Point = js.native
+  var EndPosition: Point
   /**
     * this property either holds the shape that the end point of this connector is connected to, or is empty when the end point of the connector is not
     * connected to a shape.
     */
-  var EndShape: XShape = js.native
+  var EndShape: XShape
   /** this property holds the index of the glue point the start point of this connector is glued on. */
-  var StartGluePointIndex: Double = js.native
+  var StartGluePointIndex: Double
   /**
     * this is the position of the connectors start point in 100th/mm. For unconnected start points you can get and set the position. For connected start
     * points you can only get the position.
     */
-  var StartPosition: Point = js.native
+  var StartPosition: Point
   /**
     * this property either holds the shape that the start point of this connector is connected to, or is empty when the start point of the connector is not
     * connected to a shape.
     */
-  var StartShape: XShape = js.native
+  var StartShape: XShape
 }
 
 object ConnectorShape {
@@ -172,67 +171,5 @@ object ConnectorShape {
     js.Dynamic.global.Object.assign(__obj, TextProperties)
     __obj.asInstanceOf[ConnectorShape]
   }
-  @scala.inline
-  implicit class ConnectorShapeOps[Self <: ConnectorShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdgeLine1Delta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EdgeLine1Delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEdgeLine2Delta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EdgeLine2Delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEdgeLine3Delta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EdgeLine3Delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndGluePointIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndGluePointIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndPosition(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndShape(value: XShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartGluePointIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartGluePointIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartPosition(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartShape(value: XShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

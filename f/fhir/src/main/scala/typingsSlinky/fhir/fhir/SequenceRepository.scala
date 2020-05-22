@@ -7,210 +7,99 @@ import scala.scalajs.js.annotation._
 /**
   * External repository which contains detailed report related with observedSeq in this resource
   */
-@js.native
 trait SequenceRepository extends BackboneElement {
   /**
     * Contains extended information for property 'datasetId'.
     */
-  var _datasetId: js.UndefOr[Element] = js.native
+  var _datasetId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'readsetId'.
     */
-  var _readsetId: js.UndefOr[Element] = js.native
+  var _readsetId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'type'.
     */
-  var _type: js.UndefOr[Element] = js.native
+  var _type: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.native
+  var _url: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'variantsetId'.
     */
-  var _variantsetId: js.UndefOr[Element] = js.native
+  var _variantsetId: js.UndefOr[Element] = js.undefined
   /**
     * Id of the dataset that used to call for dataset in repository
     */
-  var datasetId: js.UndefOr[String] = js.native
+  var datasetId: js.UndefOr[String] = js.undefined
   /**
     * Repository's name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Id of the read
     */
-  var readsetId: js.UndefOr[String] = js.native
+  var readsetId: js.UndefOr[String] = js.undefined
   /**
     * directlink | openapi | login | oauth | other
     */
-  var `type`: code = js.native
+  var `type`: code
   /**
     * URI of the repository
     */
-  var url: js.UndefOr[uri] = js.native
+  var url: js.UndefOr[uri] = js.undefined
   /**
     * Id of the variantset that used to call for variantset in repository
     */
-  var variantsetId: js.UndefOr[String] = js.native
+  var variantsetId: js.UndefOr[String] = js.undefined
 }
 
 object SequenceRepository {
   @scala.inline
-  def apply(`type`: code): SequenceRepository = {
+  def apply(
+    `type`: code,
+    _datasetId: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _name: Element = null,
+    _readsetId: Element = null,
+    _type: Element = null,
+    _url: Element = null,
+    _variantsetId: Element = null,
+    datasetId: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    name: String = null,
+    readsetId: String = null,
+    url: uri = null,
+    variantsetId: String = null
+  ): SequenceRepository = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (_datasetId != null) __obj.updateDynamic("_datasetId")(_datasetId.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (_readsetId != null) __obj.updateDynamic("_readsetId")(_readsetId.asInstanceOf[js.Any])
+    if (_type != null) __obj.updateDynamic("_type")(_type.asInstanceOf[js.Any])
+    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
+    if (_variantsetId != null) __obj.updateDynamic("_variantsetId")(_variantsetId.asInstanceOf[js.Any])
+    if (datasetId != null) __obj.updateDynamic("datasetId")(datasetId.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (readsetId != null) __obj.updateDynamic("readsetId")(readsetId.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (variantsetId != null) __obj.updateDynamic("variantsetId")(variantsetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequenceRepository]
   }
-  @scala.inline
-  implicit class SequenceRepositoryOps[Self <: SequenceRepository] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_datasetId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_datasetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_datasetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_datasetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_readsetId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_readsetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_readsetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_readsetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_type(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_url(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_variantsetId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_variantsetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_variantsetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_variantsetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadsetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readsetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadsetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readsetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariantsetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantsetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariantsetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantsetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

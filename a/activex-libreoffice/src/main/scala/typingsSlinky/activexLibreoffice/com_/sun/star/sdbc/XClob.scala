@@ -20,20 +20,19 @@ import scala.scalajs.js.annotation._
   * Methods in the interfaces {@link com.sun.star.sdbc.XResultSet} , and {@link com.sun.star.sdbc.XPreparedStatement} , such as `getClob` and `setClob`
   * allow a programmer to access the SQL `CLOB` .
   */
-@js.native
 trait XClob extends XInterface {
   /**
     * gets the `Clob` contents as a stream.
     * @returns the stream
     * @throws SQLException if a database access error occurs.
     */
-  val CharacterStream: XInputStream = js.native
+  val CharacterStream: XInputStream
   /**
     * gets the `Clob` contents as a stream.
     * @returns the stream
     * @throws SQLException if a database access error occurs.
     */
-  def getCharacterStream(): XInputStream = js.native
+  def getCharacterStream(): XInputStream
   /**
     * returns a copy of the specified substring in the `Clob` value designated by this `Clob` object.
     *
@@ -43,13 +42,13 @@ trait XClob extends XInterface {
     * @returns the substring
     * @throws SQLException if a database access error occurs.
     */
-  def getSubString(pos: Double, length: Double): String = js.native
+  def getSubString(pos: Double, length: Double): String
   /**
     * returns the number of characters in the `CLOB` value designated by this `Clob` object.
     * @returns the length of the CLOB object
     * @throws SQLException if a database access error occurs.
     */
-  def length(): Double = js.native
+  def length(): Double
   /**
     * determines the character position at which the specified substring `searchstr` appears in the `Clob` . The search begins at position `start` .
     * @param searchstr the string to search
@@ -57,7 +56,7 @@ trait XClob extends XInterface {
     * @returns the length of the CLOB object
     * @throws SQLException if a database access error occurs.
     */
-  def position(searchstr: String, start: Double): Double = js.native
+  def position(searchstr: String, start: Double): Double
   /**
     * determines the position at which the specified `Clob` object `pattern` appears in this `Clob` object. The search begins at position `start` .
     * @param pattern the CLOB to search
@@ -65,7 +64,7 @@ trait XClob extends XInterface {
     * @returns the position of the CLOB inside
     * @throws SQLException if a database access error occurs.
     */
-  def positionOfClob(pattern: XClob, start: Double): Double = js.native
+  def positionOfClob(pattern: XClob, start: Double): Double
 }
 
 object XClob {
@@ -84,49 +83,5 @@ object XClob {
     val __obj = js.Dynamic.literal(CharacterStream = CharacterStream.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getCharacterStream = js.Any.fromFunction0(getCharacterStream), getSubString = js.Any.fromFunction2(getSubString), length = js.Any.fromFunction0(length), position = js.Any.fromFunction2(position), positionOfClob = js.Any.fromFunction2(positionOfClob), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XClob]
   }
-  @scala.inline
-  implicit class XClobOps[Self <: XClob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharacterStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharacterStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCharacterStream(value: () => XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSubString(value: (Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSubString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPosition(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPositionOfClob(value: (XClob, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionOfClob")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

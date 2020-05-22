@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnPositionChanged extends js.Object {
   /**
     * Raised when a column is moved
@@ -15,34 +14,17 @@ trait ColumnPositionChanged extends js.Object {
     */
   var columnPositionChanged: js.UndefOr[
     js.Function2[/* scope */ IScope, /* handler */ columnPositionChangedHandler, Unit]
-  ] = js.native
+  ] = js.undefined
 }
 
 object ColumnPositionChanged {
   @scala.inline
-  def apply(): ColumnPositionChanged = {
+  def apply(
+    columnPositionChanged: (/* scope */ IScope, /* handler */ columnPositionChangedHandler) => Unit = null
+  ): ColumnPositionChanged = {
     val __obj = js.Dynamic.literal()
+    if (columnPositionChanged != null) __obj.updateDynamic("columnPositionChanged")(js.Any.fromFunction2(columnPositionChanged))
     __obj.asInstanceOf[ColumnPositionChanged]
   }
-  @scala.inline
-  implicit class ColumnPositionChangedOps[Self <: ColumnPositionChanged] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnPositionChanged(value: (/* scope */ IScope, /* handler */ columnPositionChangedHandler) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnPositionChanged")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnPositionChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnPositionChanged")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

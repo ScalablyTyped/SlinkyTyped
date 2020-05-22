@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * An object that resolves relative URLs.
   */
-@js.native
 trait IResolver extends js.Object {
   /**
     * Whether the URL should be handled by the resolver
@@ -18,57 +17,30 @@ trait IResolver extends js.Object {
     * but can also perform additional checks on whether the
     * resolver should handle a given URL.
     */
-  var isLocal: js.UndefOr[js.Function1[/* url */ String, Boolean]] = js.native
+  var isLocal: js.UndefOr[js.Function1[/* url */ String, Boolean]] = js.undefined
   /**
     * Get the download url for a given absolute url path.
     *
     * #### Notes
     * This URL may include a query parameter.
     */
-  def getDownloadUrl(url: String): js.Promise[String] = js.native
+  def getDownloadUrl(url: String): js.Promise[String]
   /**
     * Resolve a relative url to an absolute url path.
     */
-  def resolveUrl(url: String): js.Promise[String] = js.native
+  def resolveUrl(url: String): js.Promise[String]
 }
 
 object IResolver {
   @scala.inline
-  def apply(getDownloadUrl: String => js.Promise[String], resolveUrl: String => js.Promise[String]): IResolver = {
+  def apply(
+    getDownloadUrl: String => js.Promise[String],
+    resolveUrl: String => js.Promise[String],
+    isLocal: /* url */ String => Boolean = null
+  ): IResolver = {
     val __obj = js.Dynamic.literal(getDownloadUrl = js.Any.fromFunction1(getDownloadUrl), resolveUrl = js.Any.fromFunction1(resolveUrl))
+    if (isLocal != null) __obj.updateDynamic("isLocal")(js.Any.fromFunction1(isLocal))
     __obj.asInstanceOf[IResolver]
   }
-  @scala.inline
-  implicit class IResolverOps[Self <: IResolver] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDownloadUrl(value: String => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDownloadUrl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResolveUrl(value: String => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveUrl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsLocal(value: /* url */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLocal")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLocal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

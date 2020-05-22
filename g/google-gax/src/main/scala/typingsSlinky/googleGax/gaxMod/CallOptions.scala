@@ -7,191 +7,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallOptions extends js.Object {
-  var autoPaginate: js.UndefOr[Boolean] = js.native
-  var bundleOptions: js.UndefOr[BundleOptions | Null] = js.native
-  var isBundling: js.UndefOr[Boolean] = js.native
-  var longrunning: js.UndefOr[BackoffSettings] = js.native
-  var maxResults: js.UndefOr[Double] = js.native
-  var maxRetries: js.UndefOr[Double] = js.native
-  var otherArgs: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var pageSize: js.UndefOr[Double] = js.native
-  var pageToken: js.UndefOr[String] = js.native
-  var promise: js.UndefOr[PromiseConstructor] = js.native
-  var retry: js.UndefOr[RetryOptions | Null] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var autoPaginate: js.UndefOr[Boolean] = js.undefined
+  var bundleOptions: js.UndefOr[BundleOptions | Null] = js.undefined
+  var isBundling: js.UndefOr[Boolean] = js.undefined
+  var longrunning: js.UndefOr[BackoffSettings] = js.undefined
+  var maxResults: js.UndefOr[Double] = js.undefined
+  var maxRetries: js.UndefOr[Double] = js.undefined
+  var otherArgs: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.undefined
+  var pageToken: js.UndefOr[String] = js.undefined
+  var promise: js.UndefOr[PromiseConstructor] = js.undefined
+  var retry: js.UndefOr[RetryOptions | Null] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object CallOptions {
   @scala.inline
-  def apply(): CallOptions = {
+  def apply(
+    autoPaginate: js.UndefOr[Boolean] = js.undefined,
+    bundleOptions: js.UndefOr[Null | BundleOptions] = js.undefined,
+    isBundling: js.UndefOr[Boolean] = js.undefined,
+    longrunning: BackoffSettings = null,
+    maxResults: js.UndefOr[Double] = js.undefined,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    otherArgs: StringDictionary[js.Any] = null,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    pageToken: String = null,
+    promise: PromiseConstructor = null,
+    retry: js.UndefOr[Null | RetryOptions] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): CallOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoPaginate)) __obj.updateDynamic("autoPaginate")(autoPaginate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bundleOptions)) __obj.updateDynamic("bundleOptions")(bundleOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(isBundling)) __obj.updateDynamic("isBundling")(isBundling.get.asInstanceOf[js.Any])
+    if (longrunning != null) __obj.updateDynamic("longrunning")(longrunning.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (otherArgs != null) __obj.updateDynamic("otherArgs")(otherArgs.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
+    if (!js.isUndefined(retry)) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallOptions]
   }
-  @scala.inline
-  implicit class CallOptionsOps[Self <: CallOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoPaginate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoPaginate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundleOptions(value: BundleOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundleOptionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleOptions")(null)
-        ret
-    }
-    @scala.inline
-    def withIsBundling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBundling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongrunning(value: BackoffSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longrunning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongrunning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longrunning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtherArgs(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherArgs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromise(value: PromiseConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: RetryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(null)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

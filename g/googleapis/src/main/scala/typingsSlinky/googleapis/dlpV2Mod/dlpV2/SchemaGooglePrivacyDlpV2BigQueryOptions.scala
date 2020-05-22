@@ -43,89 +43,22 @@ trait SchemaGooglePrivacyDlpV2BigQueryOptions extends js.Object {
 
 object SchemaGooglePrivacyDlpV2BigQueryOptions {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2BigQueryOptions = {
+  def apply(
+    excludedFields: js.Array[SchemaGooglePrivacyDlpV2FieldId] = null,
+    identifyingFields: js.Array[SchemaGooglePrivacyDlpV2FieldId] = null,
+    rowsLimit: String = null,
+    rowsLimitPercent: js.UndefOr[Double] = js.undefined,
+    sampleMethod: String = null,
+    tableReference: SchemaGooglePrivacyDlpV2BigQueryTable = null
+  ): SchemaGooglePrivacyDlpV2BigQueryOptions = {
     val __obj = js.Dynamic.literal()
+    if (excludedFields != null) __obj.updateDynamic("excludedFields")(excludedFields.asInstanceOf[js.Any])
+    if (identifyingFields != null) __obj.updateDynamic("identifyingFields")(identifyingFields.asInstanceOf[js.Any])
+    if (rowsLimit != null) __obj.updateDynamic("rowsLimit")(rowsLimit.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowsLimitPercent)) __obj.updateDynamic("rowsLimitPercent")(rowsLimitPercent.get.asInstanceOf[js.Any])
+    if (sampleMethod != null) __obj.updateDynamic("sampleMethod")(sampleMethod.asInstanceOf[js.Any])
+    if (tableReference != null) __obj.updateDynamic("tableReference")(tableReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2BigQueryOptions]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2BigQueryOptionsOps[Self <: SchemaGooglePrivacyDlpV2BigQueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludedFields(value: js.Array[SchemaGooglePrivacyDlpV2FieldId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifyingFields(value: js.Array[SchemaGooglePrivacyDlpV2FieldId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifyingFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifyingFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifyingFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowsLimit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowsLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowsLimitPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsLimitPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowsLimitPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsLimitPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableReference(value: SchemaGooglePrivacyDlpV2BigQueryTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableReference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

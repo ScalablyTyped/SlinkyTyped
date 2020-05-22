@@ -12,22 +12,21 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@js.native
 trait DataConnectionCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
-  var context_DataConnectionCollection: RequestContext = js.native
+  var context_DataConnectionCollection: RequestContext
   /**
     * Refreshes all the Data Connections in the collection.
     *
     * [Api set: ExcelApi 1.7]
     */
-  def refreshAll(): Unit = js.native
+  def refreshAll(): Unit
   /**
     * Overrides the JavaScript `toJSON()` method in order to provide more useful output when an API object is passed to `JSON.stringify()`. (`JSON.stringify`, in turn, calls the `toJSON` method of the object that is passed to it.)
     * Whereas the original Excel.DataConnectionCollection object is an API object, the `toJSON` method returns a plain JavaScript object (typed as `Excel.Interfaces.DataConnectionCollectionData`) that contains shallow copies of any loaded child properties from the original object.
     */
-  def toJSON(): StringDictionary[String] = js.native
+  def toJSON(): StringDictionary[String]
 }
 
 object DataConnectionCollection {
@@ -41,31 +40,5 @@ object DataConnectionCollection {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], isNullObject = isNullObject.asInstanceOf[js.Any], refreshAll = js.Any.fromFunction0(refreshAll), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[DataConnectionCollection]
   }
-  @scala.inline
-  implicit class DataConnectionCollectionOps[Self <: DataConnectionCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: RequestContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefreshAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshAll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

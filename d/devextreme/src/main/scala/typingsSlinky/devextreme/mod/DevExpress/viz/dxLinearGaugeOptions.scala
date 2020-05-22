@@ -1,99 +1,121 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.anon.CancelComponentData
+import typingsSlinky.devextreme.anon.ComponentElementModelTarget
+import typingsSlinky.devextreme.anon.ComponentTElementDxElementModelAny
+import typingsSlinky.devextreme.anon.Element
+import typingsSlinky.devextreme.anon.FormatModel
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
+import typingsSlinky.devextreme.anon.TargetAny
 import typingsSlinky.devextreme.anon.`0`
+import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
+import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
+import typingsSlinky.devextreme.devextremeStrings.genericDotdark
+import typingsSlinky.devextreme.devextremeStrings.genericDotdarkmoon
+import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
+import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
+import typingsSlinky.devextreme.devextremeStrings.genericDotlight
+import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
+import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
+import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDotpurpleDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDottealDotlight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxLinearGaugeOptions extends BaseGaugeOptions[dxLinearGauge] {
-  /** Specifies the options required to set the geometry of the LinearGauge widget. */
-  var geometry: js.UndefOr[`0`] = js.native
-  /** Specifies gauge range container options. */
+  /** @name dxLinearGauge.Options.geometry */
+  var geometry: js.UndefOr[`0`] = js.undefined
+  /** @name dxLinearGauge.Options.rangeContainer */
   @JSName("rangeContainer")
-  var rangeContainer_dxLinearGaugeOptions: js.UndefOr[dxLinearGaugeRangeContainer] = js.native
-  /** Specifies the gauge's scale options. */
+  var rangeContainer_dxLinearGaugeOptions: js.UndefOr[dxLinearGaugeRangeContainer] = js.undefined
+  /** @name dxLinearGauge.Options.scale */
   @JSName("scale")
-  var scale_dxLinearGaugeOptions: js.UndefOr[dxLinearGaugeScale] = js.native
-  /** Specifies the appearance options of subvalue indicators. */
-  var subvalueIndicator: js.UndefOr[GaugeIndicator] = js.native
-  /** Specifies the appearance options of the value indicator. */
-  var valueIndicator: js.UndefOr[GaugeIndicator] = js.native
+  var scale_dxLinearGaugeOptions: js.UndefOr[dxLinearGaugeScale] = js.undefined
+  /** @name dxLinearGauge.Options.subvalueIndicator */
+  var subvalueIndicator: js.UndefOr[GaugeIndicator] = js.undefined
+  /** @name dxLinearGauge.Options.valueIndicator */
+  var valueIndicator: js.UndefOr[GaugeIndicator] = js.undefined
 }
 
 object dxLinearGaugeOptions {
   @scala.inline
-  def apply(): dxLinearGaugeOptions = {
+  def apply(
+    animation: BaseGaugeAnimation = null,
+    bindingOptions: js.Any = null,
+    containerBackgroundColor: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    export: BaseWidgetExport = null,
+    geometry: `0` = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    loadingIndicator: BaseGaugeLoadingIndicator = null,
+    margin: BaseWidgetMargin = null,
+    onDisposing: /* e */ Model[dxLinearGauge] => _ = null,
+    onDrawn: /* e */ ComponentTElementDxElementModelAny[dxLinearGauge] => _ = null,
+    onExported: /* e */ ComponentTElementDxElementModelAny[dxLinearGauge] => _ = null,
+    onExporting: /* e */ FormatModel[dxLinearGauge] => _ = null,
+    onFileSaving: /* e */ CancelComponentData[dxLinearGauge] => _ = null,
+    onIncidentOccurred: /* e */ TargetAny[dxLinearGauge] => _ = null,
+    onInitialized: /* e */ Element[dxLinearGauge] => _ = null,
+    onOptionChanged: /* e */ Name[dxLinearGauge] => _ = null,
+    onTooltipHidden: /* e */ ComponentElementModelTarget[dxLinearGauge] => _ = null,
+    onTooltipShown: /* e */ ComponentElementModelTarget[dxLinearGauge] => _ = null,
+    pathModified: js.UndefOr[Boolean] = js.undefined,
+    rangeContainer: dxLinearGaugeRangeContainer = null,
+    redrawOnResize: js.UndefOr[Boolean] = js.undefined,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    scale: dxLinearGaugeScale = null,
+    size: BaseWidgetSize = null,
+    subvalueIndicator: GaugeIndicator = null,
+    subvalues: js.Array[Double] = null,
+    theme: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight = null,
+    title: BaseWidgetTitle | String = null,
+    tooltip: BaseGaugeTooltip = null,
+    value: js.UndefOr[Double] = js.undefined,
+    valueIndicator: GaugeIndicator = null,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxLinearGaugeOptions = {
     val __obj = js.Dynamic.literal()
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (containerBackgroundColor != null) __obj.updateDynamic("containerBackgroundColor")(containerBackgroundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
+    if (geometry != null) __obj.updateDynamic("geometry")(geometry.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (loadingIndicator != null) __obj.updateDynamic("loadingIndicator")(loadingIndicator.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onDrawn != null) __obj.updateDynamic("onDrawn")(js.Any.fromFunction1(onDrawn))
+    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
+    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
+    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
+    if (onIncidentOccurred != null) __obj.updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(onIncidentOccurred))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onTooltipHidden != null) __obj.updateDynamic("onTooltipHidden")(js.Any.fromFunction1(onTooltipHidden))
+    if (onTooltipShown != null) __obj.updateDynamic("onTooltipShown")(js.Any.fromFunction1(onTooltipShown))
+    if (!js.isUndefined(pathModified)) __obj.updateDynamic("pathModified")(pathModified.get.asInstanceOf[js.Any])
+    if (rangeContainer != null) __obj.updateDynamic("rangeContainer")(rangeContainer.asInstanceOf[js.Any])
+    if (!js.isUndefined(redrawOnResize)) __obj.updateDynamic("redrawOnResize")(redrawOnResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (subvalueIndicator != null) __obj.updateDynamic("subvalueIndicator")(subvalueIndicator.asInstanceOf[js.Any])
+    if (subvalues != null) __obj.updateDynamic("subvalues")(subvalues.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (valueIndicator != null) __obj.updateDynamic("valueIndicator")(valueIndicator.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxLinearGaugeOptions]
   }
-  @scala.inline
-  implicit class dxLinearGaugeOptionsOps[Self <: dxLinearGaugeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeometry(value: `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRangeContainer(value: dxLinearGaugeRangeContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRangeContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: dxLinearGaugeScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubvalueIndicator(value: GaugeIndicator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subvalueIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubvalueIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subvalueIndicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueIndicator(value: GaugeIndicator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueIndicator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

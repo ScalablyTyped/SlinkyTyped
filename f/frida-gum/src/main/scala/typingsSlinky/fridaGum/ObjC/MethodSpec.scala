@@ -12,8 +12,14 @@ trait MethodSpec[I] extends js.Object
 
 object MethodSpec {
   @scala.inline
-  implicit def apply[I](value: DetailedMethodSpec[I]): MethodSpec[I] = value.asInstanceOf[MethodSpec[I]]
+  def SimpleMethodSpec[I](argTypes: js.Array[String], implementation: I, retType: String): MethodSpec[I] = {
+    val __obj = js.Dynamic.literal(argTypes = argTypes.asInstanceOf[js.Any], implementation = implementation.asInstanceOf[js.Any], retType = retType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MethodSpec[I]]
+  }
   @scala.inline
-  implicit def apply[I](value: SimpleMethodSpec[I]): MethodSpec[I] = value.asInstanceOf[MethodSpec[I]]
+  def DetailedMethodSpec[I](implementation: I, types: String): MethodSpec[I] = {
+    val __obj = js.Dynamic.literal(implementation = implementation.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MethodSpec[I]]
+  }
 }
 

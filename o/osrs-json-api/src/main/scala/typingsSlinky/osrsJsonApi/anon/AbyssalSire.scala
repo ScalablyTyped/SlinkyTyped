@@ -5,55 +5,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AbyssalSire extends js.Object {
-  var `Abyssal Sire`: RankScoreObject = js.native
-  var `Alchemical Hydra`: RankScoreObject = js.native
-  var `Barrows Chests`: RankScoreObject = js.native
-  var Bryophyta: RankScoreObject = js.native
-  var Callisto: RankScoreObject = js.native
-  var Cerberus: RankScoreObject = js.native
-  var `Chambers of Xeric`: RankScoreObject = js.native
+  var `Abyssal Sire`: RankScoreObject
+  var `Alchemical Hydra`: RankScoreObject
+  var `Barrows Chests`: RankScoreObject
+  var Bryophyta: RankScoreObject
+  var Callisto: RankScoreObject
+  var Cerberus: RankScoreObject
+  var `Chambers of Xeric`: RankScoreObject
   @JSName("Chambers of Xeric: Challenge Mode")
-  var `Chambers of XericColon Challenge Mode`: RankScoreObject = js.native
-  var `Chaos Elemental`: RankScoreObject = js.native
-  var `Chaos Fanatic`: RankScoreObject = js.native
-  var `Commander Zilyana`: RankScoreObject = js.native
-  var `Corporeal Beast`: RankScoreObject = js.native
-  var `Crazy Archaeologist`: RankScoreObject = js.native
-  var `Dagannoth Prime`: RankScoreObject = js.native
-  var `Dagannoth Rex`: RankScoreObject = js.native
-  var `Dagannoth Supreme`: RankScoreObject = js.native
-  var `Deranged Archaeologist`: RankScoreObject = js.native
-  var `General Graardor`: RankScoreObject = js.native
-  var `Giant Mole`: RankScoreObject = js.native
-  var `Grotesque Guardians`: RankScoreObject = js.native
-  var Hespori: RankScoreObject = js.native
+  var `Chambers of XericColon Challenge Mode`: RankScoreObject
+  var `Chaos Elemental`: RankScoreObject
+  var `Chaos Fanatic`: RankScoreObject
+  var `Commander Zilyana`: RankScoreObject
+  var `Corporeal Beast`: RankScoreObject
+  var `Crazy Archaeologist`: RankScoreObject
+  var `Dagannoth Prime`: RankScoreObject
+  var `Dagannoth Rex`: RankScoreObject
+  var `Dagannoth Supreme`: RankScoreObject
+  var `Deranged Archaeologist`: RankScoreObject
+  var `General Graardor`: RankScoreObject
+  var `Giant Mole`: RankScoreObject
+  var `Grotesque Guardians`: RankScoreObject
+  var Hespori: RankScoreObject
   @JSName("K'ril Tsutsaroth")
-  var `KApostropheril Tsutsaroth`: RankScoreObject = js.native
-  var `Kalphite Queen`: RankScoreObject = js.native
-  var `King Black Dragon`: RankScoreObject = js.native
-  var Kraken: RankScoreObject = js.native
+  var `KApostropheril Tsutsaroth`: RankScoreObject
+  var `Kalphite Queen`: RankScoreObject
+  var `King Black Dragon`: RankScoreObject
+  var Kraken: RankScoreObject
   @JSName("Kree'Arra")
-  var KreeApostropheArra: RankScoreObject = js.native
-  var Mimic: RankScoreObject = js.native
-  var Obor: RankScoreObject = js.native
-  var Sarachnis: RankScoreObject = js.native
-  var Scorpia: RankScoreObject = js.native
-  var Skotizo: RankScoreObject = js.native
-  var `The Corrupted Gauntlet`: RankScoreObject = js.native
-  var `The Gauntlet`: RankScoreObject = js.native
-  var `Theatre of Blood`: RankScoreObject = js.native
-  var `Thermonuclear Smoke Devil`: RankScoreObject = js.native
-  var `TzKal-Zuk`: RankScoreObject = js.native
-  var `TzTok-Jad`: RankScoreObject = js.native
-  var Venenatis: RankScoreObject = js.native
+  var KreeApostropheArra: RankScoreObject
+  var Mimic: RankScoreObject
+  var Obor: RankScoreObject
+  var Sarachnis: RankScoreObject
+  var Scorpia: RankScoreObject
+  var Skotizo: RankScoreObject
+  var `The Corrupted Gauntlet`: RankScoreObject
+  var `The Gauntlet`: RankScoreObject
+  var `Theatre of Blood`: RankScoreObject
+  var `Thermonuclear Smoke Devil`: RankScoreObject
+  var `TzKal-Zuk`: RankScoreObject
+  var `TzTok-Jad`: RankScoreObject
+  var Venenatis: RankScoreObject
   @JSName("Vet'ion")
-  var VetApostropheion: RankScoreObject = js.native
-  var Vorkath: RankScoreObject = js.native
-  var Wintertodt: RankScoreObject = js.native
-  var Zalcano: RankScoreObject = js.native
-  var Zulrah: RankScoreObject = js.native
+  var VetApostropheion: RankScoreObject
+  var Vorkath: RankScoreObject
+  var Wintertodt: RankScoreObject
+  var Zalcano: RankScoreObject
+  var Zulrah: RankScoreObject
 }
 
 object AbyssalSire {
@@ -134,271 +133,5 @@ object AbyssalSire {
     __obj.updateDynamic("Vet'ion")(VetApostropheion.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbyssalSire]
   }
-  @scala.inline
-  implicit class AbyssalSireOps[Self <: AbyssalSire] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAbyssal Sire`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Abyssal Sire")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAlchemical Hydra`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alchemical Hydra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBarrows Chests`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Barrows Chests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBryophyta(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bryophyta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCallisto(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Callisto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCerberus(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cerberus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withChambers of Xeric`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Chambers of Xeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withChambers of XericColon Challenge Mode`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Chambers of Xeric: Challenge Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withChaos Elemental`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Chaos Elemental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withChaos Fanatic`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Chaos Fanatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCommander Zilyana`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Commander Zilyana")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCorporeal Beast`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Corporeal Beast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCrazy Archaeologist`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Crazy Archaeologist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDagannoth Prime`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dagannoth Prime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDagannoth Rex`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dagannoth Rex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDagannoth Supreme`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dagannoth Supreme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDeranged Archaeologist`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deranged Archaeologist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGeneral Graardor`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("General Graardor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGiant Mole`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Giant Mole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGrotesque Guardians`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Grotesque Guardians")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHespori(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hespori")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withKApostropheril Tsutsaroth`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("K'ril Tsutsaroth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withKalphite Queen`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Kalphite Queen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withKing Black Dragon`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("King Black Dragon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKraken(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Kraken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKreeApostropheArra(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Kree'Arra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMimic(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mimic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObor(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Obor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSarachnis(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sarachnis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScorpia(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scorpia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkotizo(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Skotizo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withThe Corrupted Gauntlet`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("The Corrupted Gauntlet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withThe Gauntlet`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("The Gauntlet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTheatre of Blood`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Theatre of Blood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withThermonuclear Smoke Devil`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Thermonuclear Smoke Devil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTzKal-Zuk`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TzKal-Zuk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withTzTok-Jad`(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TzTok-Jad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVenenatis(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Venenatis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVetApostropheion(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vet'ion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVorkath(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vorkath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWintertodt(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Wintertodt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZalcano(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Zalcano")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZulrah(value: RankScoreObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Zulrah")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

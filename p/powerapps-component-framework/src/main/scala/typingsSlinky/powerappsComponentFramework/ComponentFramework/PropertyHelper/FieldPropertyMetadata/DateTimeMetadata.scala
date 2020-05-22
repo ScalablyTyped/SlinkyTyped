@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DateTimeMetadata extends Metadata {
-  var Behavior: DateTimeFieldBehavior = js.native
-  var Format: String = js.native
-  var ImeMode: typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.Types.ImeMode = js.native
+  var Behavior: DateTimeFieldBehavior
+  var Format: String
+  var ImeMode: typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHelper.Types.ImeMode
 }
 
 object DateTimeMetadata {
@@ -30,31 +29,5 @@ object DateTimeMetadata {
     val __obj = js.Dynamic.literal(Behavior = Behavior.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], DisplayName = DisplayName.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], ImeMode = ImeMode.asInstanceOf[js.Any], IsSecured = IsSecured.asInstanceOf[js.Any], LogicalName = LogicalName.asInstanceOf[js.Any], RequiredLevel = RequiredLevel.asInstanceOf[js.Any], SourceType = SourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateTimeMetadata]
   }
-  @scala.inline
-  implicit class DateTimeMetadataOps[Self <: DateTimeMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBehavior(value: DateTimeFieldBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImeMode(value: ImeMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

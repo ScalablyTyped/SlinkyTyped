@@ -26,65 +26,17 @@ trait InvokeEndpointOutput extends js.Object {
 
 object InvokeEndpointOutput {
   @scala.inline
-  def apply(Body: BodyBlob): InvokeEndpointOutput = {
+  def apply(
+    Body: BodyBlob,
+    ContentType: Header = null,
+    CustomAttributes: CustomAttributesHeader = null,
+    InvokedProductionVariant: Header = null
+  ): InvokeEndpointOutput = {
     val __obj = js.Dynamic.literal(Body = Body.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (CustomAttributes != null) __obj.updateDynamic("CustomAttributes")(CustomAttributes.asInstanceOf[js.Any])
+    if (InvokedProductionVariant != null) __obj.updateDynamic("InvokedProductionVariant")(InvokedProductionVariant.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeEndpointOutput]
   }
-  @scala.inline
-  implicit class InvokeEndpointOutputOps[Self <: InvokeEndpointOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: BodyBlob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentType(value: Header): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAttributes(value: CustomAttributesHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvokedProductionVariant(value: Header): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvokedProductionVariant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvokedProductionVariant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvokedProductionVariant")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,61 +9,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnnotationProps
   extends SVGAttributes[SVGGElement]
      with ClassAttributes[SVGGElement] {
-  var connectorProps: SVGProps[SVGPathElement] = js.native
+  var connectorProps: SVGProps[SVGPathElement]
   /**
     * @default 0
     */
-  var curve: js.UndefOr[Double] = js.native
-  var subject: js.UndefOr[Point] = js.native
+  var curve: js.UndefOr[Double] = js.undefined
+  var subject: js.UndefOr[Point] = js.undefined
 }
 
 object AnnotationProps {
   @scala.inline
-  def apply(connectorProps: SVGProps[SVGPathElement]): AnnotationProps = {
+  def apply(
+    connectorProps: SVGProps[SVGPathElement],
+    ClassAttributes: ClassAttributes[SVGGElement] = null,
+    SVGAttributes: SVGAttributes[SVGGElement] = null,
+    curve: js.UndefOr[Double] = js.undefined,
+    subject: Point = null
+  ): AnnotationProps = {
     val __obj = js.Dynamic.literal(connectorProps = connectorProps.asInstanceOf[js.Any])
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (SVGAttributes != null) js.Dynamic.global.Object.assign(__obj, SVGAttributes)
+    if (!js.isUndefined(curve)) __obj.updateDynamic("curve")(curve.get.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationProps]
   }
-  @scala.inline
-  implicit class AnnotationPropsOps[Self <: AnnotationProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectorProps(value: SVGProps[SVGPathElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurve(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

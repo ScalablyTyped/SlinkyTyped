@@ -16,243 +16,63 @@ import scala.scalajs.js.annotation._
   * The value null can be used to unset a previously set value.
   */
 /* Inlined std.Partial<nouislider.nouislider.Options> */
-@js.native
 trait UpdateOptions extends js.Object {
-  var animate: js.UndefOr[Boolean] = js.native
-  var animationDuration: js.UndefOr[Double] = js.native
-  var behaviour: js.UndefOr[String] = js.native
-  var connect: js.UndefOr[lower | upper | Boolean | js.Array[Boolean]] = js.native
-  var direction: js.UndefOr[ltr | rtl] = js.native
-  var format: js.UndefOr[js.Object | (js.Function1[/* repeated */ js.Any, _])] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var margin: js.UndefOr[Double] = js.native
-  var orientation: js.UndefOr[vertical | horizontal] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var pips: js.UndefOr[PipsOptions] = js.native
-  var range: js.UndefOr[StringDictionary[Double | js.Array[Double]]] = js.native
-  var snap: js.UndefOr[Boolean] = js.native
-  var start: js.UndefOr[Double | (js.Array[js.Array[Double] | Double])] = js.native
-  var step: js.UndefOr[Double] = js.native
-  var tooltips: js.UndefOr[Boolean | js.Object | (js.Function1[/* repeated */ js.Any, _])] = js.native
+  var animate: js.UndefOr[Boolean] = js.undefined
+  var animationDuration: js.UndefOr[Double] = js.undefined
+  var behaviour: js.UndefOr[String] = js.undefined
+  var connect: js.UndefOr[lower | upper | Boolean | js.Array[Boolean]] = js.undefined
+  var direction: js.UndefOr[ltr | rtl] = js.undefined
+  var format: js.UndefOr[js.Object | (js.Function1[/* repeated */ js.Any, _])] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var margin: js.UndefOr[Double] = js.undefined
+  var orientation: js.UndefOr[vertical | horizontal] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var pips: js.UndefOr[PipsOptions] = js.undefined
+  var range: js.UndefOr[StringDictionary[Double | js.Array[Double]]] = js.undefined
+  var snap: js.UndefOr[Boolean] = js.undefined
+  var start: js.UndefOr[Double | (js.Array[js.Array[Double] | Double])] = js.undefined
+  var step: js.UndefOr[Double] = js.undefined
+  var tooltips: js.UndefOr[Boolean | js.Object | (js.Function1[/* repeated */ js.Any, _])] = js.undefined
 }
 
 object UpdateOptions {
   @scala.inline
-  def apply(): UpdateOptions = {
+  def apply(
+    animate: js.UndefOr[Boolean] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    behaviour: String = null,
+    connect: lower | upper | Boolean | js.Array[Boolean] = null,
+    direction: ltr | rtl = null,
+    format: js.Object | (js.Function1[/* repeated */ js.Any, _]) = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    margin: js.UndefOr[Double] = js.undefined,
+    orientation: vertical | horizontal = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    pips: PipsOptions = null,
+    range: StringDictionary[Double | js.Array[Double]] = null,
+    snap: js.UndefOr[Boolean] = js.undefined,
+    start: Double | (js.Array[js.Array[Double] | Double]) = null,
+    step: js.UndefOr[Double] = js.undefined,
+    tooltips: Boolean | js.Object | (js.Function1[/* repeated */ js.Any, _]) = null
+  ): UpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (behaviour != null) __obj.updateDynamic("behaviour")(behaviour.asInstanceOf[js.Any])
+    if (connect != null) __obj.updateDynamic("connect")(connect.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (pips != null) __obj.updateDynamic("pips")(pips.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (!js.isUndefined(snap)) __obj.updateDynamic("snap")(snap.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (tooltips != null) __obj.updateDynamic("tooltips")(tooltips.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateOptions]
   }
-  @scala.inline
-  implicit class UpdateOptionsOps[Self <: UpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBehaviour(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehaviour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnect(value: lower | upper | Boolean | js.Array[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: ltr | rtl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction1(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: js.Object | (js.Function1[/* repeated */ js.Any, _])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: vertical | horizontal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPips(value: PipsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: StringDictionary[Double | js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double | (js.Array[js.Array[Double] | Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipsFunction1(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTooltips(value: Boolean | js.Object | (js.Function1[/* repeated */ js.Any, _])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

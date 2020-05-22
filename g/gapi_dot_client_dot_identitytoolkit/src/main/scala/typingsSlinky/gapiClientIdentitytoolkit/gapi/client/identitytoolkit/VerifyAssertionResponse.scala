@@ -4,576 +4,178 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VerifyAssertionResponse extends js.Object {
   /** The action code. */
-  var action: js.UndefOr[String] = js.native
+  var action: js.UndefOr[String] = js.undefined
   /** URL for OTA app installation. */
-  var appInstallationUrl: js.UndefOr[String] = js.native
+  var appInstallationUrl: js.UndefOr[String] = js.undefined
   /** The custom scheme used by mobile app. */
-  var appScheme: js.UndefOr[String] = js.native
+  var appScheme: js.UndefOr[String] = js.undefined
   /** The opaque value used by the client to maintain context info between the authentication request and the IDP callback. */
-  var context: js.UndefOr[String] = js.native
+  var context: js.UndefOr[String] = js.undefined
   /** The birth date of the IdP account. */
-  var dateOfBirth: js.UndefOr[String] = js.native
+  var dateOfBirth: js.UndefOr[String] = js.undefined
   /** The display name of the user. */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   /** The email returned by the IdP. NOTE: The federated login user may not own the email. */
-  var email: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.undefined
   /** It's true if the email is recycled. */
-  var emailRecycled: js.UndefOr[Boolean] = js.native
+  var emailRecycled: js.UndefOr[Boolean] = js.undefined
   /** The value is true if the IDP is also the email provider. It means the user owns the email. */
-  var emailVerified: js.UndefOr[Boolean] = js.native
+  var emailVerified: js.UndefOr[Boolean] = js.undefined
   /** Client error code. */
-  var errorMessage: js.UndefOr[String] = js.native
+  var errorMessage: js.UndefOr[String] = js.undefined
   /** If idToken is STS id token, then this field will be expiration time of STS id token in seconds. */
-  var expiresIn: js.UndefOr[String] = js.native
+  var expiresIn: js.UndefOr[String] = js.undefined
   /** The unique ID identifies the IdP account. */
-  var federatedId: js.UndefOr[String] = js.native
+  var federatedId: js.UndefOr[String] = js.undefined
   /** The first name of the user. */
-  var firstName: js.UndefOr[String] = js.native
+  var firstName: js.UndefOr[String] = js.undefined
   /** The full name of the user. */
-  var fullName: js.UndefOr[String] = js.native
+  var fullName: js.UndefOr[String] = js.undefined
   /** The ID token. */
-  var idToken: js.UndefOr[String] = js.native
+  var idToken: js.UndefOr[String] = js.undefined
   /**
     * It's the identifier param in the createAuthUri request if the identifier is an email. It can be used to check whether the user input email is different
     * from the asserted email.
     */
-  var inputEmail: js.UndefOr[String] = js.native
+  var inputEmail: js.UndefOr[String] = js.undefined
   /** True if it's a new user sign-in, false if it's a returning user. */
-  var isNewUser: js.UndefOr[Boolean] = js.native
+  var isNewUser: js.UndefOr[Boolean] = js.undefined
   /** The fixed string "identitytoolkit#VerifyAssertionResponse". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The language preference of the user. */
-  var language: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.undefined
   /** The last name of the user. */
-  var lastName: js.UndefOr[String] = js.native
+  var lastName: js.UndefOr[String] = js.undefined
   /** The RP local ID if it's already been mapped to the IdP account identified by the federated ID. */
-  var localId: js.UndefOr[String] = js.native
+  var localId: js.UndefOr[String] = js.undefined
   /** Whether the assertion is from a non-trusted IDP and need account linking confirmation. */
-  var needConfirmation: js.UndefOr[Boolean] = js.native
+  var needConfirmation: js.UndefOr[Boolean] = js.undefined
   /** Whether need client to supply email to complete the federated login flow. */
-  var needEmail: js.UndefOr[Boolean] = js.native
+  var needEmail: js.UndefOr[Boolean] = js.undefined
   /** The nick name of the user. */
-  var nickName: js.UndefOr[String] = js.native
+  var nickName: js.UndefOr[String] = js.undefined
   /** The OAuth2 access token. */
-  var oauthAccessToken: js.UndefOr[String] = js.native
+  var oauthAccessToken: js.UndefOr[String] = js.undefined
   /** The OAuth2 authorization code. */
-  var oauthAuthorizationCode: js.UndefOr[String] = js.native
+  var oauthAuthorizationCode: js.UndefOr[String] = js.undefined
   /** The lifetime in seconds of the OAuth2 access token. */
-  var oauthExpireIn: js.UndefOr[Double] = js.native
+  var oauthExpireIn: js.UndefOr[Double] = js.undefined
   /** The OIDC id token. */
-  var oauthIdToken: js.UndefOr[String] = js.native
+  var oauthIdToken: js.UndefOr[String] = js.undefined
   /** The user approved request token for the OpenID OAuth extension. */
-  var oauthRequestToken: js.UndefOr[String] = js.native
+  var oauthRequestToken: js.UndefOr[String] = js.undefined
   /** The scope for the OpenID OAuth extension. */
-  var oauthScope: js.UndefOr[String] = js.native
+  var oauthScope: js.UndefOr[String] = js.undefined
   /** The OAuth1 access token secret. */
-  var oauthTokenSecret: js.UndefOr[String] = js.native
+  var oauthTokenSecret: js.UndefOr[String] = js.undefined
   /** The original email stored in the mapping storage. It's returned when the federated ID is associated to a different email. */
-  var originalEmail: js.UndefOr[String] = js.native
+  var originalEmail: js.UndefOr[String] = js.undefined
   /** The URI of the public accessible profiel picture. */
-  var photoUrl: js.UndefOr[String] = js.native
+  var photoUrl: js.UndefOr[String] = js.undefined
   /**
     * The IdP ID. For white listed IdPs it's a short domain name e.g. google.com, aol.com, live.net and yahoo.com. If the "providerId" param is set to OpenID
     * OP identifer other than the whilte listed IdPs the OP identifier is returned. If the "identifier" param is federated ID in the createAuthUri request.
     * The domain part of the federated ID is returned.
     */
-  var providerId: js.UndefOr[String] = js.native
+  var providerId: js.UndefOr[String] = js.undefined
   /** Raw IDP-returned user info. */
-  var rawUserInfo: js.UndefOr[String] = js.native
+  var rawUserInfo: js.UndefOr[String] = js.undefined
   /** If idToken is STS id token, then this field will be refresh token. */
-  var refreshToken: js.UndefOr[String] = js.native
+  var refreshToken: js.UndefOr[String] = js.undefined
   /** The screen_name of a Twitter user or the login name at Github. */
-  var screenName: js.UndefOr[String] = js.native
+  var screenName: js.UndefOr[String] = js.undefined
   /** The timezone of the user. */
-  var timeZone: js.UndefOr[String] = js.native
+  var timeZone: js.UndefOr[String] = js.undefined
   /** When action is 'map', contains the idps which can be used for confirmation. */
-  var verifiedProvider: js.UndefOr[js.Array[String]] = js.native
+  var verifiedProvider: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object VerifyAssertionResponse {
   @scala.inline
-  def apply(): VerifyAssertionResponse = {
+  def apply(
+    action: String = null,
+    appInstallationUrl: String = null,
+    appScheme: String = null,
+    context: String = null,
+    dateOfBirth: String = null,
+    displayName: String = null,
+    email: String = null,
+    emailRecycled: js.UndefOr[Boolean] = js.undefined,
+    emailVerified: js.UndefOr[Boolean] = js.undefined,
+    errorMessage: String = null,
+    expiresIn: String = null,
+    federatedId: String = null,
+    firstName: String = null,
+    fullName: String = null,
+    idToken: String = null,
+    inputEmail: String = null,
+    isNewUser: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    language: String = null,
+    lastName: String = null,
+    localId: String = null,
+    needConfirmation: js.UndefOr[Boolean] = js.undefined,
+    needEmail: js.UndefOr[Boolean] = js.undefined,
+    nickName: String = null,
+    oauthAccessToken: String = null,
+    oauthAuthorizationCode: String = null,
+    oauthExpireIn: js.UndefOr[Double] = js.undefined,
+    oauthIdToken: String = null,
+    oauthRequestToken: String = null,
+    oauthScope: String = null,
+    oauthTokenSecret: String = null,
+    originalEmail: String = null,
+    photoUrl: String = null,
+    providerId: String = null,
+    rawUserInfo: String = null,
+    refreshToken: String = null,
+    screenName: String = null,
+    timeZone: String = null,
+    verifiedProvider: js.Array[String] = null
+  ): VerifyAssertionResponse = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (appInstallationUrl != null) __obj.updateDynamic("appInstallationUrl")(appInstallationUrl.asInstanceOf[js.Any])
+    if (appScheme != null) __obj.updateDynamic("appScheme")(appScheme.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (dateOfBirth != null) __obj.updateDynamic("dateOfBirth")(dateOfBirth.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(emailRecycled)) __obj.updateDynamic("emailRecycled")(emailRecycled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(emailVerified)) __obj.updateDynamic("emailVerified")(emailVerified.get.asInstanceOf[js.Any])
+    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
+    if (expiresIn != null) __obj.updateDynamic("expiresIn")(expiresIn.asInstanceOf[js.Any])
+    if (federatedId != null) __obj.updateDynamic("federatedId")(federatedId.asInstanceOf[js.Any])
+    if (firstName != null) __obj.updateDynamic("firstName")(firstName.asInstanceOf[js.Any])
+    if (fullName != null) __obj.updateDynamic("fullName")(fullName.asInstanceOf[js.Any])
+    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
+    if (inputEmail != null) __obj.updateDynamic("inputEmail")(inputEmail.asInstanceOf[js.Any])
+    if (!js.isUndefined(isNewUser)) __obj.updateDynamic("isNewUser")(isNewUser.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (lastName != null) __obj.updateDynamic("lastName")(lastName.asInstanceOf[js.Any])
+    if (localId != null) __obj.updateDynamic("localId")(localId.asInstanceOf[js.Any])
+    if (!js.isUndefined(needConfirmation)) __obj.updateDynamic("needConfirmation")(needConfirmation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(needEmail)) __obj.updateDynamic("needEmail")(needEmail.get.asInstanceOf[js.Any])
+    if (nickName != null) __obj.updateDynamic("nickName")(nickName.asInstanceOf[js.Any])
+    if (oauthAccessToken != null) __obj.updateDynamic("oauthAccessToken")(oauthAccessToken.asInstanceOf[js.Any])
+    if (oauthAuthorizationCode != null) __obj.updateDynamic("oauthAuthorizationCode")(oauthAuthorizationCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(oauthExpireIn)) __obj.updateDynamic("oauthExpireIn")(oauthExpireIn.get.asInstanceOf[js.Any])
+    if (oauthIdToken != null) __obj.updateDynamic("oauthIdToken")(oauthIdToken.asInstanceOf[js.Any])
+    if (oauthRequestToken != null) __obj.updateDynamic("oauthRequestToken")(oauthRequestToken.asInstanceOf[js.Any])
+    if (oauthScope != null) __obj.updateDynamic("oauthScope")(oauthScope.asInstanceOf[js.Any])
+    if (oauthTokenSecret != null) __obj.updateDynamic("oauthTokenSecret")(oauthTokenSecret.asInstanceOf[js.Any])
+    if (originalEmail != null) __obj.updateDynamic("originalEmail")(originalEmail.asInstanceOf[js.Any])
+    if (photoUrl != null) __obj.updateDynamic("photoUrl")(photoUrl.asInstanceOf[js.Any])
+    if (providerId != null) __obj.updateDynamic("providerId")(providerId.asInstanceOf[js.Any])
+    if (rawUserInfo != null) __obj.updateDynamic("rawUserInfo")(rawUserInfo.asInstanceOf[js.Any])
+    if (refreshToken != null) __obj.updateDynamic("refreshToken")(refreshToken.asInstanceOf[js.Any])
+    if (screenName != null) __obj.updateDynamic("screenName")(screenName.asInstanceOf[js.Any])
+    if (timeZone != null) __obj.updateDynamic("timeZone")(timeZone.asInstanceOf[js.Any])
+    if (verifiedProvider != null) __obj.updateDynamic("verifiedProvider")(verifiedProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerifyAssertionResponse]
   }
-  @scala.inline
-  implicit class VerifyAssertionResponseOps[Self <: VerifyAssertionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppInstallationUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInstallationUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppInstallationUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appInstallationUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppScheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateOfBirth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOfBirth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateOfBirth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOfBirth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailRecycled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailRecycled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailRecycled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailRecycled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailVerified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailVerified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFederatedId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("federatedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFederatedId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("federatedId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsNewUser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNewUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsNewUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNewUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNeedConfirmation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needConfirmation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNeedConfirmation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needConfirmation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNeedEmail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNeedEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNickName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNickName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthAccessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthAccessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthAuthorizationCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthAuthorizationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthAuthorizationCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthAuthorizationCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthExpireIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthExpireIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthExpireIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthExpireIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthIdToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthIdToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthRequestToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOauthTokenSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthTokenSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOauthTokenSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oauthTokenSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotoUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhotoUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProviderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProviderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawUserInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawUserInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawUserInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawUserInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifiedProvider(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifiedProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifiedProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifiedProvider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

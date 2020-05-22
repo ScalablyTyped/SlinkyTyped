@@ -4,33 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetScreenBrightnessOptions
   extends BaseOptions[js.Any, js.Any] {
   /** 屏幕亮度值，范围 0~1，0 最暗，1 最亮 */
   @JSName("success")
-  def success_MGetScreenBrightnessOptions(value: Double): Unit = js.native
+  def success_MGetScreenBrightnessOptions(value: Double): Unit
 }
 
 object GetScreenBrightnessOptions {
   @scala.inline
-  def apply(success: Double => Unit): GetScreenBrightnessOptions = {
+  def apply(success: Double => Unit, complete: /* res */ js.Any => Unit = null, fail: js.Any => Unit = null): GetScreenBrightnessOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
     __obj.asInstanceOf[GetScreenBrightnessOptions]
   }
-  @scala.inline
-  implicit class GetScreenBrightnessOptionsOps[Self <: GetScreenBrightnessOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

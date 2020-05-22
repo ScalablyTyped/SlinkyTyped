@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTMLNamespace extends js.Object {
   @JSName("MSHTML.HTMLNamespace_typekey")
-  var MSHTMLDotHTMLNamespace_typekey: HTMLNamespace = js.native
-  val constructor: js.Any = js.native
-  val name: String = js.native
-  var onreadystatechange: js.Any = js.native
-  val readyState: js.Any = js.native
-  val tagNames: js.Any = js.native
-  val urn: String = js.native
-  def attachEvent(event: String, pdisp: js.Any): Boolean = js.native
-  def detachEvent(event: String, pdisp: js.Any): Unit = js.native
-  def doImport(bstrImplementationUrl: String): Unit = js.native
+  var MSHTMLDotHTMLNamespace_typekey: HTMLNamespace
+  val constructor: js.Any
+  val name: String
+  var onreadystatechange: js.Any
+  val readyState: js.Any
+  val tagNames: js.Any
+  val urn: String
+  def attachEvent(event: String, pdisp: js.Any): Boolean
+  def detachEvent(event: String, pdisp: js.Any): Unit
+  def doImport(bstrImplementationUrl: String): Unit
 }
 
 object HTMLNamespace {
@@ -37,73 +36,5 @@ object HTMLNamespace {
     __obj.updateDynamic("MSHTML.HTMLNamespace_typekey")(MSHTMLDotHTMLNamespace_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLNamespace]
   }
-  @scala.inline
-  implicit class HTMLNamespaceOps[Self <: HTMLNamespace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotHTMLNamespace_typekey(value: HTMLNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.HTMLNamespace_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachEvent(value: (String, js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withConstructor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetachEvent(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detachEvent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDoImport(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doImport")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnreadystatechange(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreadystatechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadyState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagNames(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

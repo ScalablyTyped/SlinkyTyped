@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Issue extends js.Object {
   /** List of issues. Applicable only for Collection Edition and Omnibus. */
-  var issue: js.UndefOr[js.Array[IssueDisplayNumber]] = js.native
+  var issue: js.UndefOr[js.Array[IssueDisplayNumber]] = js.undefined
   /** The book order number in the series. */
-  var orderNumber: js.UndefOr[Double] = js.native
+  var orderNumber: js.UndefOr[Double] = js.undefined
   /** The book type in the context of series. Examples - Single Issue, Collection Edition, etc. */
-  var seriesBookType: js.UndefOr[String] = js.native
+  var seriesBookType: js.UndefOr[String] = js.undefined
   /** The series id. */
-  var seriesId: js.UndefOr[String] = js.native
+  var seriesId: js.UndefOr[String] = js.undefined
 }
 
 object Issue {
   @scala.inline
-  def apply(): Issue = {
+  def apply(
+    issue: js.Array[IssueDisplayNumber] = null,
+    orderNumber: js.UndefOr[Double] = js.undefined,
+    seriesBookType: String = null,
+    seriesId: String = null
+  ): Issue = {
     val __obj = js.Dynamic.literal()
+    if (issue != null) __obj.updateDynamic("issue")(issue.asInstanceOf[js.Any])
+    if (!js.isUndefined(orderNumber)) __obj.updateDynamic("orderNumber")(orderNumber.get.asInstanceOf[js.Any])
+    if (seriesBookType != null) __obj.updateDynamic("seriesBookType")(seriesBookType.asInstanceOf[js.Any])
+    if (seriesId != null) __obj.updateDynamic("seriesId")(seriesId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Issue]
   }
-  @scala.inline
-  implicit class IssueOps[Self <: Issue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIssue(value: js.Array[IssueDisplayNumber]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeriesBookType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesBookType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeriesBookType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesBookType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeriesId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeriesId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,34 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ @js.native
-trait AssemblyLiteral
+- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ trait AssemblyLiteral
   extends AssemblyExpression
      with BaseASTNode {
   @JSName("type")
-  var type_AssemblyLiteral: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral = js.native
+  var type_AssemblyLiteral: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral
 }
 
 object AssemblyLiteral {
   @scala.inline
-  def apply(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral): AssemblyLiteral = {
+  def apply(
+    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
+  ): AssemblyLiteral = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssemblyLiteral]
   }
-  @scala.inline
-  implicit class AssemblyLiteralOps[Self <: AssemblyLiteral] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

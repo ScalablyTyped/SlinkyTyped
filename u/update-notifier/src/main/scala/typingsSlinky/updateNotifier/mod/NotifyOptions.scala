@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotifyOptions extends js.Object {
   /** Options object that will be passed to `boxen` */
-  var boxenOptions: js.UndefOr[BoxenOptions] = js.native
+  var boxenOptions: js.UndefOr[BoxenOptions] = js.undefined
   /** Defer showing the notification to after the process has exited */
-  var defer: js.UndefOr[Boolean] = js.native
+  var defer: js.UndefOr[Boolean] = js.undefined
   /** Include the -g argument in the default message's npm i recommendation */
-  var isGlobal: js.UndefOr[Boolean] = js.native
+  var isGlobal: js.UndefOr[Boolean] = js.undefined
   /** Message that will be shown when an update is available */
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
 }
 
 object NotifyOptions {
   @scala.inline
-  def apply(): NotifyOptions = {
+  def apply(
+    boxenOptions: BoxenOptions = null,
+    defer: js.UndefOr[Boolean] = js.undefined,
+    isGlobal: js.UndefOr[Boolean] = js.undefined,
+    message: String = null
+  ): NotifyOptions = {
     val __obj = js.Dynamic.literal()
+    if (boxenOptions != null) __obj.updateDynamic("boxenOptions")(boxenOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(defer)) __obj.updateDynamic("defer")(defer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isGlobal)) __obj.updateDynamic("isGlobal")(isGlobal.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotifyOptions]
   }
-  @scala.inline
-  implicit class NotifyOptionsOps[Self <: NotifyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoxenOptions(value: BoxenOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxenOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxenOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxenOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsGlobal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isGlobal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isGlobal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

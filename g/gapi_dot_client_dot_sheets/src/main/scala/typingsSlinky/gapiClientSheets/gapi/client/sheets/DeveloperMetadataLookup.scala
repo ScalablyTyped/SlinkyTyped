@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeveloperMetadataLookup extends js.Object {
   /**
     * Determines how this lookup matches the location.  If this field is
@@ -16,7 +15,7 @@ trait DeveloperMetadataLookup extends js.Object {
     * If this field is specified, a metadataLocation
     * must also be specified.
     */
-  var locationMatchingStrategy: js.UndefOr[String] = js.native
+  var locationMatchingStrategy: js.UndefOr[String] = js.undefined
   /**
     * Limits the selected developer metadata to those entries which are
     * associated with locations of the specified type.  For example, when this
@@ -32,134 +31,57 @@ trait DeveloperMetadataLookup extends js.Object {
     * the locationMatchingStrategy
     * is specified as EXACT.
     */
-  var locationType: js.UndefOr[String] = js.native
+  var locationType: js.UndefOr[String] = js.undefined
   /**
     * Limits the selected developer metadata to that which has a matching
     * DeveloperMetadata.metadata_id.
     */
-  var metadataId: js.UndefOr[Double] = js.native
+  var metadataId: js.UndefOr[Double] = js.undefined
   /**
     * Limits the selected developer metadata to that which has a matching
     * DeveloperMetadata.metadata_key.
     */
-  var metadataKey: js.UndefOr[String] = js.native
+  var metadataKey: js.UndefOr[String] = js.undefined
   /**
     * Limits the selected developer metadata to those entries associated with
     * the specified location.  This field either matches exact locations or all
     * intersecting locations according the specified
     * locationMatchingStrategy.
     */
-  var metadataLocation: js.UndefOr[DeveloperMetadataLocation] = js.native
+  var metadataLocation: js.UndefOr[DeveloperMetadataLocation] = js.undefined
   /**
     * Limits the selected developer metadata to that which has a matching
     * DeveloperMetadata.metadata_value.
     */
-  var metadataValue: js.UndefOr[String] = js.native
+  var metadataValue: js.UndefOr[String] = js.undefined
   /**
     * Limits the selected developer metadata to that which has a matching
     * DeveloperMetadata.visibility.  If left unspecified, all developer
     * metadata visibile to the requesting project is considered.
     */
-  var visibility: js.UndefOr[String] = js.native
+  var visibility: js.UndefOr[String] = js.undefined
 }
 
 object DeveloperMetadataLookup {
   @scala.inline
-  def apply(): DeveloperMetadataLookup = {
+  def apply(
+    locationMatchingStrategy: String = null,
+    locationType: String = null,
+    metadataId: js.UndefOr[Double] = js.undefined,
+    metadataKey: String = null,
+    metadataLocation: DeveloperMetadataLocation = null,
+    metadataValue: String = null,
+    visibility: String = null
+  ): DeveloperMetadataLookup = {
     val __obj = js.Dynamic.literal()
+    if (locationMatchingStrategy != null) __obj.updateDynamic("locationMatchingStrategy")(locationMatchingStrategy.asInstanceOf[js.Any])
+    if (locationType != null) __obj.updateDynamic("locationType")(locationType.asInstanceOf[js.Any])
+    if (!js.isUndefined(metadataId)) __obj.updateDynamic("metadataId")(metadataId.get.asInstanceOf[js.Any])
+    if (metadataKey != null) __obj.updateDynamic("metadataKey")(metadataKey.asInstanceOf[js.Any])
+    if (metadataLocation != null) __obj.updateDynamic("metadataLocation")(metadataLocation.asInstanceOf[js.Any])
+    if (metadataValue != null) __obj.updateDynamic("metadataValue")(metadataValue.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeveloperMetadataLookup]
   }
-  @scala.inline
-  implicit class DeveloperMetadataLookupOps[Self <: DeveloperMetadataLookup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocationMatchingStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationMatchingStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationMatchingStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationMatchingStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataLocation(value: DeveloperMetadataLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

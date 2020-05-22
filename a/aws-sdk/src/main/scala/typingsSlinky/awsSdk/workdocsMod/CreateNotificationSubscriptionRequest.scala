@@ -35,37 +35,5 @@ object CreateNotificationSubscriptionRequest {
     val __obj = js.Dynamic.literal(Endpoint = Endpoint.asInstanceOf[js.Any], OrganizationId = OrganizationId.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any], SubscriptionType = SubscriptionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNotificationSubscriptionRequest]
   }
-  @scala.inline
-  implicit class CreateNotificationSubscriptionRequestOps[Self <: CreateNotificationSubscriptionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndpoint(value: SubscriptionEndPointType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrganizationId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: SubscriptionProtocolType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriptionType(value: SubscriptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

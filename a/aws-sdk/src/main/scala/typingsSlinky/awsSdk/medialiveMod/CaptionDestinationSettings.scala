@@ -22,161 +22,34 @@ trait CaptionDestinationSettings extends js.Object {
 
 object CaptionDestinationSettings {
   @scala.inline
-  def apply(): CaptionDestinationSettings = {
+  def apply(
+    AribDestinationSettings: AribDestinationSettings = null,
+    BurnInDestinationSettings: BurnInDestinationSettings = null,
+    DvbSubDestinationSettings: DvbSubDestinationSettings = null,
+    EmbeddedDestinationSettings: EmbeddedDestinationSettings = null,
+    EmbeddedPlusScte20DestinationSettings: EmbeddedPlusScte20DestinationSettings = null,
+    RtmpCaptionInfoDestinationSettings: RtmpCaptionInfoDestinationSettings = null,
+    Scte20PlusEmbeddedDestinationSettings: Scte20PlusEmbeddedDestinationSettings = null,
+    Scte27DestinationSettings: Scte27DestinationSettings = null,
+    SmpteTtDestinationSettings: SmpteTtDestinationSettings = null,
+    TeletextDestinationSettings: TeletextDestinationSettings = null,
+    TtmlDestinationSettings: TtmlDestinationSettings = null,
+    WebvttDestinationSettings: WebvttDestinationSettings = null
+  ): CaptionDestinationSettings = {
     val __obj = js.Dynamic.literal()
+    if (AribDestinationSettings != null) __obj.updateDynamic("AribDestinationSettings")(AribDestinationSettings.asInstanceOf[js.Any])
+    if (BurnInDestinationSettings != null) __obj.updateDynamic("BurnInDestinationSettings")(BurnInDestinationSettings.asInstanceOf[js.Any])
+    if (DvbSubDestinationSettings != null) __obj.updateDynamic("DvbSubDestinationSettings")(DvbSubDestinationSettings.asInstanceOf[js.Any])
+    if (EmbeddedDestinationSettings != null) __obj.updateDynamic("EmbeddedDestinationSettings")(EmbeddedDestinationSettings.asInstanceOf[js.Any])
+    if (EmbeddedPlusScte20DestinationSettings != null) __obj.updateDynamic("EmbeddedPlusScte20DestinationSettings")(EmbeddedPlusScte20DestinationSettings.asInstanceOf[js.Any])
+    if (RtmpCaptionInfoDestinationSettings != null) __obj.updateDynamic("RtmpCaptionInfoDestinationSettings")(RtmpCaptionInfoDestinationSettings.asInstanceOf[js.Any])
+    if (Scte20PlusEmbeddedDestinationSettings != null) __obj.updateDynamic("Scte20PlusEmbeddedDestinationSettings")(Scte20PlusEmbeddedDestinationSettings.asInstanceOf[js.Any])
+    if (Scte27DestinationSettings != null) __obj.updateDynamic("Scte27DestinationSettings")(Scte27DestinationSettings.asInstanceOf[js.Any])
+    if (SmpteTtDestinationSettings != null) __obj.updateDynamic("SmpteTtDestinationSettings")(SmpteTtDestinationSettings.asInstanceOf[js.Any])
+    if (TeletextDestinationSettings != null) __obj.updateDynamic("TeletextDestinationSettings")(TeletextDestinationSettings.asInstanceOf[js.Any])
+    if (TtmlDestinationSettings != null) __obj.updateDynamic("TtmlDestinationSettings")(TtmlDestinationSettings.asInstanceOf[js.Any])
+    if (WebvttDestinationSettings != null) __obj.updateDynamic("WebvttDestinationSettings")(WebvttDestinationSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionDestinationSettings]
   }
-  @scala.inline
-  implicit class CaptionDestinationSettingsOps[Self <: CaptionDestinationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAribDestinationSettings(value: AribDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AribDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAribDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AribDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBurnInDestinationSettings(value: BurnInDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BurnInDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBurnInDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BurnInDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDvbSubDestinationSettings(value: DvbSubDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDvbSubDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmbeddedDestinationSettings(value: EmbeddedDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbeddedDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmbeddedPlusScte20DestinationSettings(value: EmbeddedPlusScte20DestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedPlusScte20DestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbeddedPlusScte20DestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedPlusScte20DestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRtmpCaptionInfoDestinationSettings(value: RtmpCaptionInfoDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RtmpCaptionInfoDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRtmpCaptionInfoDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RtmpCaptionInfoDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScte20PlusEmbeddedDestinationSettings(value: Scte20PlusEmbeddedDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte20PlusEmbeddedDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte20PlusEmbeddedDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte20PlusEmbeddedDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScte27DestinationSettings(value: Scte27DestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte27DestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte27DestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte27DestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmpteTtDestinationSettings(value: SmpteTtDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SmpteTtDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmpteTtDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SmpteTtDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeletextDestinationSettings(value: TeletextDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeletextDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtmlDestinationSettings(value: TtmlDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TtmlDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtmlDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TtmlDestinationSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebvttDestinationSettings(value: WebvttDestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebvttDestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebvttDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebvttDestinationSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,19 +18,5 @@ object NetworkFabricConfiguration {
     val __obj = js.Dynamic.literal(Edition = Edition.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkFabricConfiguration]
   }
-  @scala.inline
-  implicit class NetworkFabricConfigurationOps[Self <: NetworkFabricConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdition(value: Edition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Edition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

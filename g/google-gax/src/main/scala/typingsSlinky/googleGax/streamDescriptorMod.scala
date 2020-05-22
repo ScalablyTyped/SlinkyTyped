@@ -1,6 +1,8 @@
 package typingsSlinky.googleGax
 
+import typingsSlinky.googleGax.apiCallerMod.APICaller
 import typingsSlinky.googleGax.descriptorMod.Descriptor
+import typingsSlinky.googleGax.gaxMod.CallSettings
 import typingsSlinky.googleGax.streamingMod.StreamType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +16,8 @@ object streamDescriptorMod extends js.Object {
     def this(streamType: StreamType) = this()
     var streaming: Boolean = js.native
     var `type`: StreamType = js.native
+    /* CompleteClass */
+    override def getApiCaller(settings: CallSettings): APICaller = js.native
   }
   
 }

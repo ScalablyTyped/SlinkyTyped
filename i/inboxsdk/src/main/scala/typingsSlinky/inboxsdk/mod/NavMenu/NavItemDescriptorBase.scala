@@ -5,138 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavItemDescriptorBase extends js.Object {
   var accessory: js.UndefOr[
     CreateAccessoryDescriptor | IconButtonAccessoryDescriptor | DropdownButtonAccessoryDescriptor
-  ] = js.native
-  var backgroundColor: js.UndefOr[String] = js.native
-  var expanderForegroundColor: js.UndefOr[String] = js.native
-  var name: String = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ PreventDefault, Unit]] = js.native
-  var orderHint: js.UndefOr[Double] = js.native
-  var routeID: js.UndefOr[String] = js.native
-  var routeParams: js.UndefOr[js.Object] = js.native
-  var `type`: js.UndefOr[NavItemTypes] = js.native
+  ] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  var expanderForegroundColor: js.UndefOr[String] = js.undefined
+  var name: String
+  var onClick: js.UndefOr[js.Function1[/* event */ PreventDefault, Unit]] = js.undefined
+  var orderHint: js.UndefOr[Double] = js.undefined
+  var routeID: js.UndefOr[String] = js.undefined
+  var routeParams: js.UndefOr[js.Object] = js.undefined
+  var `type`: js.UndefOr[NavItemTypes] = js.undefined
 }
 
 object NavItemDescriptorBase {
   @scala.inline
-  def apply(name: String): NavItemDescriptorBase = {
+  def apply(
+    name: String,
+    accessory: CreateAccessoryDescriptor | IconButtonAccessoryDescriptor | DropdownButtonAccessoryDescriptor = null,
+    backgroundColor: String = null,
+    expanderForegroundColor: String = null,
+    onClick: /* event */ PreventDefault => Unit = null,
+    orderHint: js.UndefOr[Double] = js.undefined,
+    routeID: String = null,
+    routeParams: js.Object = null,
+    `type`: NavItemTypes = null
+  ): NavItemDescriptorBase = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (accessory != null) __obj.updateDynamic("accessory")(accessory.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (expanderForegroundColor != null) __obj.updateDynamic("expanderForegroundColor")(expanderForegroundColor.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (!js.isUndefined(orderHint)) __obj.updateDynamic("orderHint")(orderHint.get.asInstanceOf[js.Any])
+    if (routeID != null) __obj.updateDynamic("routeID")(routeID.asInstanceOf[js.Any])
+    if (routeParams != null) __obj.updateDynamic("routeParams")(routeParams.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavItemDescriptorBase]
   }
-  @scala.inline
-  implicit class NavItemDescriptorBaseOps[Self <: NavItemDescriptorBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessory(
-      value: CreateAccessoryDescriptor | IconButtonAccessoryDescriptor | DropdownButtonAccessoryDescriptor
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanderForegroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanderForegroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanderForegroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanderForegroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* event */ PreventDefault => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderHint(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouteParams(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: NavItemTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

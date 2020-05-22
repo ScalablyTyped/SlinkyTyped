@@ -10,8 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Static[T /* <: Ractive[T] */]
-  extends Component
-     with Instantiable0[T]
+  extends Instantiable0[T]
      with Instantiable1[/* opts */ InitOpts[T], T] {
   /** The parent constructor used to create this constructor. */
   var Parent: Static[Ractive[Ractive[_]]] = js.native

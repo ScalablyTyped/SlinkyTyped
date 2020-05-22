@@ -21,29 +21,10 @@ trait SchemaFilter extends js.Object {
 
 object SchemaFilter {
   @scala.inline
-  def apply(): SchemaFilter = {
+  def apply(requisitionId: String = null): SchemaFilter = {
     val __obj = js.Dynamic.literal()
+    if (requisitionId != null) __obj.updateDynamic("requisitionId")(requisitionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFilter]
   }
-  @scala.inline
-  implicit class SchemaFilterOps[Self <: SchemaFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequisitionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requisitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequisitionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requisitionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

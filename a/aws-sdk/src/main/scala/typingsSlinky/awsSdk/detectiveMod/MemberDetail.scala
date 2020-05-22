@@ -11,6 +11,10 @@ trait MemberDetail extends js.Object {
     */
   var AccountId: js.UndefOr[typingsSlinky.awsSdk.detectiveMod.AccountId] = js.native
   /**
+    * For member accounts with a status of ACCEPTED_BUT_DISABLED, the reason that the member account is not enabled. The reason can have one of the following values:    VOLUME_TOO_HIGH - Indicates that adding the member account would cause the data volume for the behavior graph to be too high.    VOLUME_UNKNOWN - Indicates that Detective is unable to verify the data volume for the member account. This is usually because the member account is not enrolled in Amazon GuardDuty.   
+    */
+  var DisabledReason: js.UndefOr[MemberDisabledReason] = js.native
+  /**
     * The AWS account root user email address for the member account.
     */
   var EmailAddress: js.UndefOr[typingsSlinky.awsSdk.detectiveMod.EmailAddress] = js.native
@@ -27,7 +31,15 @@ trait MemberDetail extends js.Object {
     */
   var MasterId: js.UndefOr[AccountId] = js.native
   /**
-    * The current membership status of the member account. The status can have one of the following values:    INVITED - Indicates that the member was sent an invitation but has not yet responded.    VERIFICATION_IN_PROGRESS - Indicates that Detective is verifying that the account identifier and email address provided for the member account match. If they do match, then Detective sends the invitation. If the email address and account identifier don't match, then the member cannot be added to the behavior graph.    VERIFICATION_FAILED - Indicates that the account and email address provided for the member account do not match, and Detective did not send an invitation to the account.    ENABLED - Indicates that the member account accepted the invitation to contribute to the behavior graph.   Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+    * The member account data volume as a percentage of the maximum allowed data volume. 0 indicates 0 percent, and 100 indicates 100 percent. Note that this is not the percentage of the behavior graph data volume. For example, the data volume for the behavior graph is 80 GB per day. The maximum data volume is 160 GB per day. If the data volume for the member account is 40 GB per day, then PercentOfGraphUtilization is 25. It represents 25% of the maximum allowed data volume. 
+    */
+  var PercentOfGraphUtilization: js.UndefOr[Percentage] = js.native
+  /**
+    * The date and time when the graph utilization percentage was last updated.
+    */
+  var PercentOfGraphUtilizationUpdatedTime: js.UndefOr[js.Date] = js.native
+  /**
+    * The current membership status of the member account. The status can have one of the following values:    INVITED - Indicates that the member was sent an invitation but has not yet responded.    VERIFICATION_IN_PROGRESS - Indicates that Detective is verifying that the account identifier and email address provided for the member account match. If they do match, then Detective sends the invitation. If the email address and account identifier don't match, then the member cannot be added to the behavior graph.    VERIFICATION_FAILED - Indicates that the account and email address provided for the member account do not match, and Detective did not send an invitation to the account.    ENABLED - Indicates that the member account accepted the invitation to contribute to the behavior graph.    ACCEPTED_BUT_DISABLED - Indicates that the member account accepted the invitation but is prevented from contributing data to the behavior graph. DisabledReason provides the reason why the member account is not enabled.   Member accounts that declined an invitation or that were removed from the behavior graph are not included.
     */
   var Status: js.UndefOr[MemberStatus] = js.native
   /**
@@ -38,101 +50,30 @@ trait MemberDetail extends js.Object {
 
 object MemberDetail {
   @scala.inline
-  def apply(): MemberDetail = {
+  def apply(
+    AccountId: AccountId = null,
+    DisabledReason: MemberDisabledReason = null,
+    EmailAddress: EmailAddress = null,
+    GraphArn: GraphArn = null,
+    InvitedTime: js.Date = null,
+    MasterId: AccountId = null,
+    PercentOfGraphUtilization: js.UndefOr[Percentage] = js.undefined,
+    PercentOfGraphUtilizationUpdatedTime: js.Date = null,
+    Status: MemberStatus = null,
+    UpdatedTime: js.Date = null
+  ): MemberDetail = {
     val __obj = js.Dynamic.literal()
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (DisabledReason != null) __obj.updateDynamic("DisabledReason")(DisabledReason.asInstanceOf[js.Any])
+    if (EmailAddress != null) __obj.updateDynamic("EmailAddress")(EmailAddress.asInstanceOf[js.Any])
+    if (GraphArn != null) __obj.updateDynamic("GraphArn")(GraphArn.asInstanceOf[js.Any])
+    if (InvitedTime != null) __obj.updateDynamic("InvitedTime")(InvitedTime.asInstanceOf[js.Any])
+    if (MasterId != null) __obj.updateDynamic("MasterId")(MasterId.asInstanceOf[js.Any])
+    if (!js.isUndefined(PercentOfGraphUtilization)) __obj.updateDynamic("PercentOfGraphUtilization")(PercentOfGraphUtilization.get.asInstanceOf[js.Any])
+    if (PercentOfGraphUtilizationUpdatedTime != null) __obj.updateDynamic("PercentOfGraphUtilizationUpdatedTime")(PercentOfGraphUtilizationUpdatedTime.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (UpdatedTime != null) __obj.updateDynamic("UpdatedTime")(UpdatedTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberDetail]
   }
-  @scala.inline
-  implicit class MemberDetailOps[Self <: MemberDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailAddress(value: EmailAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGraphArn(value: GraphArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGraphArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvitedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: MemberStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

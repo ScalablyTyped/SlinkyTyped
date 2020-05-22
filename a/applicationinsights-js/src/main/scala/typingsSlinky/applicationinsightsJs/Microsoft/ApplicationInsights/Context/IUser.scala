@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IUser extends js.Object {
   /**
     * The account acquisition date.
     */
-  var accountAcquisitionDate: String = js.native
+  var accountAcquisitionDate: String
   /**
     * The account ID.
     */
-  var accountId: String = js.native
+  var accountId: String
   /**
     * The user agent string.
     */
-  var agent: String = js.native
+  var agent: String
   /**
     * Authenticated user id
     */
-  var authenticatedId: String = js.native
+  var authenticatedId: String
   /**
     * The telemetry configuration.
     */
-  var config: js.Any = js.native
+  var config: js.Any
   /**
     * The user ID.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The store region.
     */
-  var storeRegion: String = js.native
+  var storeRegion: String
 }
 
 object IUser {
@@ -50,55 +49,5 @@ object IUser {
     val __obj = js.Dynamic.literal(accountAcquisitionDate = accountAcquisitionDate.asInstanceOf[js.Any], accountId = accountId.asInstanceOf[js.Any], agent = agent.asInstanceOf[js.Any], authenticatedId = authenticatedId.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], storeRegion = storeRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUser]
   }
-  @scala.inline
-  implicit class IUserOps[Self <: IUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountAcquisitionDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountAcquisitionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthenticatedId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticatedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStoreRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

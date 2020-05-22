@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IColumnDef[TEntity] extends js.Object {
   /**
     * A custom function that populates aggregation.rendered.
@@ -19,7 +18,7 @@ trait IColumnDef[TEntity] extends js.Object {
     * @default undefined
     * @param {IGridTreeBaseAggregationObject} aggregation Aggregation object
     */
-  var customTreeAggregationFinalizerFn: js.UndefOr[js.Function1[/* aggregation */ IGridTreeBaseAggregationObject, Unit]] = js.native
+  var customTreeAggregationFinalizerFn: js.UndefOr[js.Function1[/* aggregation */ IGridTreeBaseAggregationObject, Unit]] = js.undefined
   /**
     * A custom function that aggregates rows into some form of total.
     * Aggregations run row-by-row, the function needs to be capable of creating a running total.
@@ -40,11 +39,11 @@ trait IColumnDef[TEntity] extends js.Object {
       /* row */ IGridRowOf[TEntity], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * A custom label to use for this aggregation.  If providedm, we don't use native i18n
     */
-  var treeAggregationLabel: js.UndefOr[String] = js.native
+  var treeAggregationLabel: js.UndefOr[String] = js.undefined
   /**
     * Use one of the native or grid-level aggregation methods for calculating aggregations on this column.
     * Native method are in the constants file and include: SUM, COUNT, MIN, MAX, AVG.
@@ -62,7 +61,7 @@ trait IColumnDef[TEntity] extends js.Object {
     * Defaults to undefined.
     * @default undefined
     */
-  var treeAggregationType: js.UndefOr[String] = js.native
+  var treeAggregationType: js.UndefOr[String] = js.undefined
   /**
     * Store calculated aggregations into the entity,
     * allowing them to be displayed in the grid using a standard cellTemplate.
@@ -80,84 +79,25 @@ trait IColumnDef[TEntity] extends js.Object {
     * Defaults to true
     * @default true
     */
-  var treeAggregationUpdateEntity: js.UndefOr[Boolean] = js.native
+  var treeAggregationUpdateEntity: js.UndefOr[Boolean] = js.undefined
 }
 
 object IColumnDef {
   @scala.inline
-  def apply[TEntity](): IColumnDef[TEntity] = {
+  def apply[TEntity](
+    customTreeAggregationFinalizerFn: /* aggregation */ IGridTreeBaseAggregationObject => Unit = null,
+    customTreeAggregationFn: (/* aggregation */ IGridTreeBaseAggregationObject, /* fieldValue */ js.Any, /* numValue */ Double, /* row */ IGridRowOf[TEntity]) => Unit = null,
+    treeAggregationLabel: String = null,
+    treeAggregationType: String = null,
+    treeAggregationUpdateEntity: js.UndefOr[Boolean] = js.undefined
+  ): IColumnDef[TEntity] = {
     val __obj = js.Dynamic.literal()
+    if (customTreeAggregationFinalizerFn != null) __obj.updateDynamic("customTreeAggregationFinalizerFn")(js.Any.fromFunction1(customTreeAggregationFinalizerFn))
+    if (customTreeAggregationFn != null) __obj.updateDynamic("customTreeAggregationFn")(js.Any.fromFunction4(customTreeAggregationFn))
+    if (treeAggregationLabel != null) __obj.updateDynamic("treeAggregationLabel")(treeAggregationLabel.asInstanceOf[js.Any])
+    if (treeAggregationType != null) __obj.updateDynamic("treeAggregationType")(treeAggregationType.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeAggregationUpdateEntity)) __obj.updateDynamic("treeAggregationUpdateEntity")(treeAggregationUpdateEntity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnDef[TEntity]]
   }
-  @scala.inline
-  implicit class IColumnDefOps[Self[tentity] <: IColumnDef[tentity], TEntity] (val x: Self[TEntity]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TEntity] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEntity]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
-    @scala.inline
-    def withCustomTreeAggregationFinalizerFn(value: /* aggregation */ IGridTreeBaseAggregationObject => Unit): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customTreeAggregationFinalizerFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomTreeAggregationFinalizerFn: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customTreeAggregationFinalizerFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomTreeAggregationFn(
-      value: (/* aggregation */ IGridTreeBaseAggregationObject, /* fieldValue */ js.Any, /* numValue */ Double, /* row */ IGridRowOf[TEntity]) => Unit
-    ): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customTreeAggregationFn")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomTreeAggregationFn: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customTreeAggregationFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeAggregationLabel(value: String): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeAggregationLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeAggregationLabel: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeAggregationLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeAggregationType(value: String): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeAggregationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeAggregationType: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeAggregationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeAggregationUpdateEntity(value: Boolean): Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeAggregationUpdateEntity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeAggregationUpdateEntity: Self[TEntity] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeAggregationUpdateEntity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,76 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fs
   extends /* key */ StringDictionary[js.Any] {
-  var fs: js.UndefOr[RecordingsDir] = js.native
-  var keepUnusedRequests: js.UndefOr[Boolean] = js.native
-  var `local-storage`: js.UndefOr[Key] = js.native
-  var rest: js.UndefOr[ApiNamespace] = js.native
+  var fs: js.UndefOr[RecordingsDir] = js.undefined
+  var keepUnusedRequests: js.UndefOr[Boolean] = js.undefined
+  var `local-storage`: js.UndefOr[Key] = js.undefined
+  var rest: js.UndefOr[ApiNamespace] = js.undefined
 }
 
 object Fs {
   @scala.inline
-  def apply(): Fs = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    fs: RecordingsDir = null,
+    keepUnusedRequests: js.UndefOr[Boolean] = js.undefined,
+    `local-storage`: Key = null,
+    rest: ApiNamespace = null
+  ): Fs = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (fs != null) __obj.updateDynamic("fs")(fs.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepUnusedRequests)) __obj.updateDynamic("keepUnusedRequests")(keepUnusedRequests.get.asInstanceOf[js.Any])
+    if (`local-storage` != null) __obj.updateDynamic("local-storage")(`local-storage`.asInstanceOf[js.Any])
+    if (rest != null) __obj.updateDynamic("rest")(rest.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fs]
   }
-  @scala.inline
-  implicit class FsOps[Self <: Fs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFs(value: RecordingsDir): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepUnusedRequests(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepUnusedRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepUnusedRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepUnusedRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLocal-storage`(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local-storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLocal-storage`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local-storage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRest(value: ApiNamespace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

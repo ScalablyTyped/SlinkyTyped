@@ -11,131 +11,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DrawOptions extends js.Object {
   /**
     * Circle draw handler options. Set to false to disable handler.
     *
     * @default {}
     */
-  var circle: js.UndefOr[CircleOptions | `false`] = js.native
+  var circle: js.UndefOr[CircleOptions | `false`] = js.undefined
   /**
     * Circle marker draw handler options. Set to false to disable handler.
     *
     * @default {}
     */
-  var circlemarker: js.UndefOr[CircleMarkerOptions | `false`] = js.native
+  var circlemarker: js.UndefOr[CircleMarkerOptions | `false`] = js.undefined
   /**
     * Marker draw handler options. Set to false to disable handler.
     *
     * @default {}
     */
-  var marker: js.UndefOr[MarkerOptions | `false`] = js.native
+  var marker: js.UndefOr[MarkerOptions | `false`] = js.undefined
   /**
     * Polygon draw handler options. Set to false to disable handler.
     *
     * @default {}
     */
-  var polygon: js.UndefOr[PolygonOptions | `false`] = js.native
+  var polygon: js.UndefOr[PolygonOptions | `false`] = js.undefined
   /**
     * Polyline draw handler options. Set to false to disable handler.
     *
     * @default {}
     */
-  var polyline: js.UndefOr[PolylineOptions | `false`] = js.native
+  var polyline: js.UndefOr[PolylineOptions | `false`] = js.undefined
   /**
     * Rectangle draw handler options. Set to false to disable handler.
     *
     * @default {}
     */
-  var rectangle: js.UndefOr[RectangleOptions | `false`] = js.native
+  var rectangle: js.UndefOr[RectangleOptions | `false`] = js.undefined
 }
 
 object DrawOptions {
   @scala.inline
-  def apply(): DrawOptions = {
+  def apply(
+    circle: CircleOptions | `false` = null,
+    circlemarker: CircleMarkerOptions | `false` = null,
+    marker: MarkerOptions | `false` = null,
+    polygon: PolygonOptions | `false` = null,
+    polyline: PolylineOptions | `false` = null,
+    rectangle: RectangleOptions | `false` = null
+  ): DrawOptions = {
     val __obj = js.Dynamic.literal()
+    if (circle != null) __obj.updateDynamic("circle")(circle.asInstanceOf[js.Any])
+    if (circlemarker != null) __obj.updateDynamic("circlemarker")(circlemarker.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (polygon != null) __obj.updateDynamic("polygon")(polygon.asInstanceOf[js.Any])
+    if (polyline != null) __obj.updateDynamic("polyline")(polyline.asInstanceOf[js.Any])
+    if (rectangle != null) __obj.updateDynamic("rectangle")(rectangle.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawOptions]
   }
-  @scala.inline
-  implicit class DrawOptionsOps[Self <: DrawOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCircle(value: CircleOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCirclemarker(value: CircleMarkerOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circlemarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCirclemarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circlemarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: MarkerOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolygon(value: PolygonOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolygon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolyline(value: PolylineOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolyline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRectangle(value: RectangleOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRectangle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rectangle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

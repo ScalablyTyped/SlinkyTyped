@@ -4,74 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutomaticFacetFilters extends js.Object {
   /**
     * Names of facets to which automatic filtering must be applied;
     * they must match the facet name of a facet value placeholder in the query pattern.
     */
-  var automaticFacetFilters: js.UndefOr[js.Array[String]] = js.native
+  var automaticFacetFilters: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Same as automaticFacetFilters, but for optionalFacetFilters.
     * The same syntax as query parameters can be used to specify a score: facetName<score=1>.
     */
-  var automaticOptionalFacetFilters: js.UndefOr[js.Array[String]] = js.native
+  var automaticOptionalFacetFilters: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * When a string, it replaces the entire query string.
     * When an object, describes incremental edits to be made to the query string.
     */
-  var query: js.UndefOr[String | Remove] = js.native
+  var query: js.UndefOr[String | Remove] = js.undefined
 }
 
 object AutomaticFacetFilters {
   @scala.inline
-  def apply(): AutomaticFacetFilters = {
+  def apply(
+    automaticFacetFilters: js.Array[String] = null,
+    automaticOptionalFacetFilters: js.Array[String] = null,
+    query: String | Remove = null
+  ): AutomaticFacetFilters = {
     val __obj = js.Dynamic.literal()
+    if (automaticFacetFilters != null) __obj.updateDynamic("automaticFacetFilters")(automaticFacetFilters.asInstanceOf[js.Any])
+    if (automaticOptionalFacetFilters != null) __obj.updateDynamic("automaticOptionalFacetFilters")(automaticOptionalFacetFilters.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutomaticFacetFilters]
   }
-  @scala.inline
-  implicit class AutomaticFacetFiltersOps[Self <: AutomaticFacetFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomaticFacetFilters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticFacetFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticFacetFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticFacetFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomaticOptionalFacetFilters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticOptionalFacetFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticOptionalFacetFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticOptionalFacetFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: String | Remove): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

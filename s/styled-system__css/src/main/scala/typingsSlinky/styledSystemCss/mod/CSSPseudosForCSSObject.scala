@@ -5,1549 +5,451 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in csstype.csstype.Pseudos ]:? @styled-system/css.@styled-system/css.CSSObject} */
-@js.native
 trait CSSPseudosForCSSObject extends js.Object {
   @JSName(":-moz-any-link")
-  var `Colon-moz-any-link`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-any-link`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-any()")
-  var `Colon-moz-anyLeftparenthesisRightparenthesis`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-anyLeftparenthesisRightparenthesis`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-dir")
-  var `Colon-moz-dir`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-dir`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-focusring")
-  var `Colon-moz-focusring`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-focusring`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-full-screen")
-  var `Colon-moz-full-screen`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-full-screen`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-placeholder")
-  var `Colon-moz-placeholder`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-placeholder`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-read-only")
-  var `Colon-moz-read-only`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-read-only`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-moz-read-write")
-  var `Colon-moz-read-write`: js.UndefOr[CSSObject] = js.native
+  var `Colon-moz-read-write`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-ms-fullscreen")
-  var `Colon-ms-fullscreen`: js.UndefOr[CSSObject] = js.native
+  var `Colon-ms-fullscreen`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-ms-input-placeholder")
-  var `Colon-ms-input-placeholder`: js.UndefOr[CSSObject] = js.native
+  var `Colon-ms-input-placeholder`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-webkit-any-link")
-  var `Colon-webkit-any-link`: js.UndefOr[CSSObject] = js.native
+  var `Colon-webkit-any-link`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-webkit-any()")
-  var `Colon-webkit-anyLeftparenthesisRightparenthesis`: js.UndefOr[CSSObject] = js.native
+  var `Colon-webkit-anyLeftparenthesisRightparenthesis`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":-webkit-full-screen")
-  var `Colon-webkit-full-screen`: js.UndefOr[CSSObject] = js.native
+  var `Colon-webkit-full-screen`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-moz-placeholder")
-  var `ColonColon-moz-placeholder`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-moz-placeholder`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-moz-progress-bar")
-  var `ColonColon-moz-progress-bar`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-moz-progress-bar`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-moz-range-progress")
-  var `ColonColon-moz-range-progress`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-moz-range-progress`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-moz-range-thumb")
-  var `ColonColon-moz-range-thumb`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-moz-range-thumb`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-moz-range-track")
-  var `ColonColon-moz-range-track`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-moz-range-track`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-moz-selection")
-  var `ColonColon-moz-selection`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-moz-selection`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-backdrop")
-  var `ColonColon-ms-backdrop`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-backdrop`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-browse")
-  var `ColonColon-ms-browse`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-browse`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-check")
-  var `ColonColon-ms-check`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-check`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-clear")
-  var `ColonColon-ms-clear`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-clear`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-fill")
-  var `ColonColon-ms-fill`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-fill`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-fill-lower")
-  var `ColonColon-ms-fill-lower`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-fill-lower`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-fill-upper")
-  var `ColonColon-ms-fill-upper`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-fill-upper`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-input-placeholder")
-  var `ColonColon-ms-input-placeholder`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-input-placeholder`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-reveal")
-  var `ColonColon-ms-reveal`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-reveal`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-thumb")
-  var `ColonColon-ms-thumb`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-thumb`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-ticks-after")
-  var `ColonColon-ms-ticks-after`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-ticks-after`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-ticks-before")
-  var `ColonColon-ms-ticks-before`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-ticks-before`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-tooltip")
-  var `ColonColon-ms-tooltip`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-tooltip`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-track")
-  var `ColonColon-ms-track`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-track`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-ms-value")
-  var `ColonColon-ms-value`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-ms-value`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-backdrop")
-  var `ColonColon-webkit-backdrop`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-backdrop`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-input-placeholder")
-  var `ColonColon-webkit-input-placeholder`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-input-placeholder`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-progress-bar")
-  var `ColonColon-webkit-progress-bar`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-progress-bar`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-progress-inner-value")
-  var `ColonColon-webkit-progress-inner-value`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-progress-inner-value`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-progress-value")
-  var `ColonColon-webkit-progress-value`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-progress-value`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-slider-runnable-track")
-  var `ColonColon-webkit-slider-runnable-track`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-slider-runnable-track`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::-webkit-slider-thumb")
-  var `ColonColon-webkit-slider-thumb`: js.UndefOr[CSSObject] = js.native
+  var `ColonColon-webkit-slider-thumb`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::after")
-  var ColonColonafter: js.UndefOr[CSSObject] = js.native
+  var ColonColonafter: js.UndefOr[CSSObject] = js.undefined
   @JSName("::backdrop")
-  var ColonColonbackdrop: js.UndefOr[CSSObject] = js.native
+  var ColonColonbackdrop: js.UndefOr[CSSObject] = js.undefined
   @JSName("::before")
-  var ColonColonbefore: js.UndefOr[CSSObject] = js.native
+  var ColonColonbefore: js.UndefOr[CSSObject] = js.undefined
   @JSName("::cue")
-  var ColonColoncue: js.UndefOr[CSSObject] = js.native
+  var ColonColoncue: js.UndefOr[CSSObject] = js.undefined
   @JSName("::first-letter")
-  var `ColonColonfirst-letter`: js.UndefOr[CSSObject] = js.native
+  var `ColonColonfirst-letter`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::first-line")
-  var `ColonColonfirst-line`: js.UndefOr[CSSObject] = js.native
+  var `ColonColonfirst-line`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::grammar-error")
-  var `ColonColongrammar-error`: js.UndefOr[CSSObject] = js.native
+  var `ColonColongrammar-error`: js.UndefOr[CSSObject] = js.undefined
   @JSName("::marker")
-  var ColonColonmarker: js.UndefOr[CSSObject] = js.native
+  var ColonColonmarker: js.UndefOr[CSSObject] = js.undefined
   @JSName("::part")
-  var ColonColonpart: js.UndefOr[CSSObject] = js.native
+  var ColonColonpart: js.UndefOr[CSSObject] = js.undefined
   @JSName("::placeholder")
-  var ColonColonplaceholder: js.UndefOr[CSSObject] = js.native
+  var ColonColonplaceholder: js.UndefOr[CSSObject] = js.undefined
   @JSName("::selection")
-  var ColonColonselection: js.UndefOr[CSSObject] = js.native
+  var ColonColonselection: js.UndefOr[CSSObject] = js.undefined
   @JSName("::slotted")
-  var ColonColonslotted: js.UndefOr[CSSObject] = js.native
+  var ColonColonslotted: js.UndefOr[CSSObject] = js.undefined
   @JSName("::spelling-error")
-  var `ColonColonspelling-error`: js.UndefOr[CSSObject] = js.native
+  var `ColonColonspelling-error`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":active")
-  var Colonactive: js.UndefOr[CSSObject] = js.native
+  var Colonactive: js.UndefOr[CSSObject] = js.undefined
   @JSName(":after")
-  var Colonafter: js.UndefOr[CSSObject] = js.native
+  var Colonafter: js.UndefOr[CSSObject] = js.undefined
   @JSName(":any-link")
-  var `Colonany-link`: js.UndefOr[CSSObject] = js.native
+  var `Colonany-link`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":before")
-  var Colonbefore: js.UndefOr[CSSObject] = js.native
+  var Colonbefore: js.UndefOr[CSSObject] = js.undefined
   @JSName(":blank")
-  var Colonblank: js.UndefOr[CSSObject] = js.native
+  var Colonblank: js.UndefOr[CSSObject] = js.undefined
   @JSName(":checked")
-  var Colonchecked: js.UndefOr[CSSObject] = js.native
+  var Colonchecked: js.UndefOr[CSSObject] = js.undefined
   @JSName(":default")
-  var Colondefault: js.UndefOr[CSSObject] = js.native
+  var Colondefault: js.UndefOr[CSSObject] = js.undefined
   @JSName(":defined")
-  var Colondefined: js.UndefOr[CSSObject] = js.native
+  var Colondefined: js.UndefOr[CSSObject] = js.undefined
   @JSName(":dir")
-  var Colondir: js.UndefOr[CSSObject] = js.native
+  var Colondir: js.UndefOr[CSSObject] = js.undefined
   @JSName(":disabled")
-  var Colondisabled: js.UndefOr[CSSObject] = js.native
+  var Colondisabled: js.UndefOr[CSSObject] = js.undefined
   @JSName(":empty")
-  var Colonempty: js.UndefOr[CSSObject] = js.native
+  var Colonempty: js.UndefOr[CSSObject] = js.undefined
   @JSName(":enabled")
-  var Colonenabled: js.UndefOr[CSSObject] = js.native
+  var Colonenabled: js.UndefOr[CSSObject] = js.undefined
   @JSName(":first")
-  var Colonfirst: js.UndefOr[CSSObject] = js.native
+  var Colonfirst: js.UndefOr[CSSObject] = js.undefined
   @JSName(":first-child")
-  var `Colonfirst-child`: js.UndefOr[CSSObject] = js.native
+  var `Colonfirst-child`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":first-letter")
-  var `Colonfirst-letter`: js.UndefOr[CSSObject] = js.native
+  var `Colonfirst-letter`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":first-line")
-  var `Colonfirst-line`: js.UndefOr[CSSObject] = js.native
+  var `Colonfirst-line`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":first-of-type")
-  var `Colonfirst-of-type`: js.UndefOr[CSSObject] = js.native
+  var `Colonfirst-of-type`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":focus")
-  var Colonfocus: js.UndefOr[CSSObject] = js.native
+  var Colonfocus: js.UndefOr[CSSObject] = js.undefined
   @JSName(":focus-visible")
-  var `Colonfocus-visible`: js.UndefOr[CSSObject] = js.native
+  var `Colonfocus-visible`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":focus-within")
-  var `Colonfocus-within`: js.UndefOr[CSSObject] = js.native
+  var `Colonfocus-within`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":fullscreen")
-  var Colonfullscreen: js.UndefOr[CSSObject] = js.native
+  var Colonfullscreen: js.UndefOr[CSSObject] = js.undefined
   @JSName(":has")
-  var Colonhas: js.UndefOr[CSSObject] = js.native
+  var Colonhas: js.UndefOr[CSSObject] = js.undefined
   @JSName(":host")
-  var Colonhost: js.UndefOr[CSSObject] = js.native
+  var Colonhost: js.UndefOr[CSSObject] = js.undefined
   @JSName(":host-context")
-  var `Colonhost-context`: js.UndefOr[CSSObject] = js.native
+  var `Colonhost-context`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":hover")
-  var Colonhover: js.UndefOr[CSSObject] = js.native
+  var Colonhover: js.UndefOr[CSSObject] = js.undefined
   @JSName(":in-range")
-  var `Colonin-range`: js.UndefOr[CSSObject] = js.native
+  var `Colonin-range`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":indeterminate")
-  var Colonindeterminate: js.UndefOr[CSSObject] = js.native
+  var Colonindeterminate: js.UndefOr[CSSObject] = js.undefined
   @JSName(":invalid")
-  var Coloninvalid: js.UndefOr[CSSObject] = js.native
+  var Coloninvalid: js.UndefOr[CSSObject] = js.undefined
   @JSName(":is")
-  var Colonis: js.UndefOr[CSSObject] = js.native
+  var Colonis: js.UndefOr[CSSObject] = js.undefined
   @JSName(":lang")
-  var Colonlang: js.UndefOr[CSSObject] = js.native
+  var Colonlang: js.UndefOr[CSSObject] = js.undefined
   @JSName(":last-child")
-  var `Colonlast-child`: js.UndefOr[CSSObject] = js.native
+  var `Colonlast-child`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":last-of-type")
-  var `Colonlast-of-type`: js.UndefOr[CSSObject] = js.native
+  var `Colonlast-of-type`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":left")
-  var Colonleft: js.UndefOr[CSSObject] = js.native
+  var Colonleft: js.UndefOr[CSSObject] = js.undefined
   @JSName(":link")
-  var Colonlink: js.UndefOr[CSSObject] = js.native
+  var Colonlink: js.UndefOr[CSSObject] = js.undefined
   @JSName(":matches()")
-  var ColonmatchesLeftparenthesisRightparenthesis: js.UndefOr[CSSObject] = js.native
+  var ColonmatchesLeftparenthesisRightparenthesis: js.UndefOr[CSSObject] = js.undefined
   @JSName(":not")
-  var Colonnot: js.UndefOr[CSSObject] = js.native
+  var Colonnot: js.UndefOr[CSSObject] = js.undefined
   @JSName(":nth-child")
-  var `Colonnth-child`: js.UndefOr[CSSObject] = js.native
+  var `Colonnth-child`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":nth-last-child")
-  var `Colonnth-last-child`: js.UndefOr[CSSObject] = js.native
+  var `Colonnth-last-child`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":nth-last-of-type")
-  var `Colonnth-last-of-type`: js.UndefOr[CSSObject] = js.native
+  var `Colonnth-last-of-type`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":nth-of-type")
-  var `Colonnth-of-type`: js.UndefOr[CSSObject] = js.native
+  var `Colonnth-of-type`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":only-child")
-  var `Colononly-child`: js.UndefOr[CSSObject] = js.native
+  var `Colononly-child`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":only-of-type")
-  var `Colononly-of-type`: js.UndefOr[CSSObject] = js.native
+  var `Colononly-of-type`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":optional")
-  var Colonoptional: js.UndefOr[CSSObject] = js.native
+  var Colonoptional: js.UndefOr[CSSObject] = js.undefined
   @JSName(":out-of-range")
-  var `Colonout-of-range`: js.UndefOr[CSSObject] = js.native
+  var `Colonout-of-range`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":placeholder-shown")
-  var `Colonplaceholder-shown`: js.UndefOr[CSSObject] = js.native
+  var `Colonplaceholder-shown`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":read-only")
-  var `Colonread-only`: js.UndefOr[CSSObject] = js.native
+  var `Colonread-only`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":read-write")
-  var `Colonread-write`: js.UndefOr[CSSObject] = js.native
+  var `Colonread-write`: js.UndefOr[CSSObject] = js.undefined
   @JSName(":required")
-  var Colonrequired: js.UndefOr[CSSObject] = js.native
+  var Colonrequired: js.UndefOr[CSSObject] = js.undefined
   @JSName(":right")
-  var Colonright: js.UndefOr[CSSObject] = js.native
+  var Colonright: js.UndefOr[CSSObject] = js.undefined
   @JSName(":root")
-  var Colonroot: js.UndefOr[CSSObject] = js.native
+  var Colonroot: js.UndefOr[CSSObject] = js.undefined
   @JSName(":scope")
-  var Colonscope: js.UndefOr[CSSObject] = js.native
+  var Colonscope: js.UndefOr[CSSObject] = js.undefined
   @JSName(":target")
-  var Colontarget: js.UndefOr[CSSObject] = js.native
+  var Colontarget: js.UndefOr[CSSObject] = js.undefined
   @JSName(":valid")
-  var Colonvalid: js.UndefOr[CSSObject] = js.native
+  var Colonvalid: js.UndefOr[CSSObject] = js.undefined
   @JSName(":visited")
-  var Colonvisited: js.UndefOr[CSSObject] = js.native
+  var Colonvisited: js.UndefOr[CSSObject] = js.undefined
   @JSName(":where")
-  var Colonwhere: js.UndefOr[CSSObject] = js.native
+  var Colonwhere: js.UndefOr[CSSObject] = js.undefined
 }
 
 object CSSPseudosForCSSObject {
   @scala.inline
-  def apply(): CSSPseudosForCSSObject = {
+  def apply(
+    `Colon-moz-any-link`: CSSObject = null,
+    `Colon-moz-anyLeftparenthesisRightparenthesis`: CSSObject = null,
+    `Colon-moz-dir`: CSSObject = null,
+    `Colon-moz-focusring`: CSSObject = null,
+    `Colon-moz-full-screen`: CSSObject = null,
+    `Colon-moz-placeholder`: CSSObject = null,
+    `Colon-moz-read-only`: CSSObject = null,
+    `Colon-moz-read-write`: CSSObject = null,
+    `Colon-ms-fullscreen`: CSSObject = null,
+    `Colon-ms-input-placeholder`: CSSObject = null,
+    `Colon-webkit-any-link`: CSSObject = null,
+    `Colon-webkit-anyLeftparenthesisRightparenthesis`: CSSObject = null,
+    `Colon-webkit-full-screen`: CSSObject = null,
+    `ColonColon-moz-placeholder`: CSSObject = null,
+    `ColonColon-moz-progress-bar`: CSSObject = null,
+    `ColonColon-moz-range-progress`: CSSObject = null,
+    `ColonColon-moz-range-thumb`: CSSObject = null,
+    `ColonColon-moz-range-track`: CSSObject = null,
+    `ColonColon-moz-selection`: CSSObject = null,
+    `ColonColon-ms-backdrop`: CSSObject = null,
+    `ColonColon-ms-browse`: CSSObject = null,
+    `ColonColon-ms-check`: CSSObject = null,
+    `ColonColon-ms-clear`: CSSObject = null,
+    `ColonColon-ms-fill`: CSSObject = null,
+    `ColonColon-ms-fill-lower`: CSSObject = null,
+    `ColonColon-ms-fill-upper`: CSSObject = null,
+    `ColonColon-ms-input-placeholder`: CSSObject = null,
+    `ColonColon-ms-reveal`: CSSObject = null,
+    `ColonColon-ms-thumb`: CSSObject = null,
+    `ColonColon-ms-ticks-after`: CSSObject = null,
+    `ColonColon-ms-ticks-before`: CSSObject = null,
+    `ColonColon-ms-tooltip`: CSSObject = null,
+    `ColonColon-ms-track`: CSSObject = null,
+    `ColonColon-ms-value`: CSSObject = null,
+    `ColonColon-webkit-backdrop`: CSSObject = null,
+    `ColonColon-webkit-input-placeholder`: CSSObject = null,
+    `ColonColon-webkit-progress-bar`: CSSObject = null,
+    `ColonColon-webkit-progress-inner-value`: CSSObject = null,
+    `ColonColon-webkit-progress-value`: CSSObject = null,
+    `ColonColon-webkit-slider-runnable-track`: CSSObject = null,
+    `ColonColon-webkit-slider-thumb`: CSSObject = null,
+    ColonColonafter: CSSObject = null,
+    ColonColonbackdrop: CSSObject = null,
+    ColonColonbefore: CSSObject = null,
+    ColonColoncue: CSSObject = null,
+    `ColonColonfirst-letter`: CSSObject = null,
+    `ColonColonfirst-line`: CSSObject = null,
+    `ColonColongrammar-error`: CSSObject = null,
+    ColonColonmarker: CSSObject = null,
+    ColonColonpart: CSSObject = null,
+    ColonColonplaceholder: CSSObject = null,
+    ColonColonselection: CSSObject = null,
+    ColonColonslotted: CSSObject = null,
+    `ColonColonspelling-error`: CSSObject = null,
+    Colonactive: CSSObject = null,
+    Colonafter: CSSObject = null,
+    `Colonany-link`: CSSObject = null,
+    Colonbefore: CSSObject = null,
+    Colonblank: CSSObject = null,
+    Colonchecked: CSSObject = null,
+    Colondefault: CSSObject = null,
+    Colondefined: CSSObject = null,
+    Colondir: CSSObject = null,
+    Colondisabled: CSSObject = null,
+    Colonempty: CSSObject = null,
+    Colonenabled: CSSObject = null,
+    Colonfirst: CSSObject = null,
+    `Colonfirst-child`: CSSObject = null,
+    `Colonfirst-letter`: CSSObject = null,
+    `Colonfirst-line`: CSSObject = null,
+    `Colonfirst-of-type`: CSSObject = null,
+    Colonfocus: CSSObject = null,
+    `Colonfocus-visible`: CSSObject = null,
+    `Colonfocus-within`: CSSObject = null,
+    Colonfullscreen: CSSObject = null,
+    Colonhas: CSSObject = null,
+    Colonhost: CSSObject = null,
+    `Colonhost-context`: CSSObject = null,
+    Colonhover: CSSObject = null,
+    `Colonin-range`: CSSObject = null,
+    Colonindeterminate: CSSObject = null,
+    Coloninvalid: CSSObject = null,
+    Colonis: CSSObject = null,
+    Colonlang: CSSObject = null,
+    `Colonlast-child`: CSSObject = null,
+    `Colonlast-of-type`: CSSObject = null,
+    Colonleft: CSSObject = null,
+    Colonlink: CSSObject = null,
+    ColonmatchesLeftparenthesisRightparenthesis: CSSObject = null,
+    Colonnot: CSSObject = null,
+    `Colonnth-child`: CSSObject = null,
+    `Colonnth-last-child`: CSSObject = null,
+    `Colonnth-last-of-type`: CSSObject = null,
+    `Colonnth-of-type`: CSSObject = null,
+    `Colononly-child`: CSSObject = null,
+    `Colononly-of-type`: CSSObject = null,
+    Colonoptional: CSSObject = null,
+    `Colonout-of-range`: CSSObject = null,
+    `Colonplaceholder-shown`: CSSObject = null,
+    `Colonread-only`: CSSObject = null,
+    `Colonread-write`: CSSObject = null,
+    Colonrequired: CSSObject = null,
+    Colonright: CSSObject = null,
+    Colonroot: CSSObject = null,
+    Colonscope: CSSObject = null,
+    Colontarget: CSSObject = null,
+    Colonvalid: CSSObject = null,
+    Colonvisited: CSSObject = null,
+    Colonwhere: CSSObject = null
+  ): CSSPseudosForCSSObject = {
     val __obj = js.Dynamic.literal()
+    if (`Colon-moz-any-link` != null) __obj.updateDynamic(":-moz-any-link")(`Colon-moz-any-link`.asInstanceOf[js.Any])
+    if (`Colon-moz-anyLeftparenthesisRightparenthesis` != null) __obj.updateDynamic(":-moz-any()")(`Colon-moz-anyLeftparenthesisRightparenthesis`.asInstanceOf[js.Any])
+    if (`Colon-moz-dir` != null) __obj.updateDynamic(":-moz-dir")(`Colon-moz-dir`.asInstanceOf[js.Any])
+    if (`Colon-moz-focusring` != null) __obj.updateDynamic(":-moz-focusring")(`Colon-moz-focusring`.asInstanceOf[js.Any])
+    if (`Colon-moz-full-screen` != null) __obj.updateDynamic(":-moz-full-screen")(`Colon-moz-full-screen`.asInstanceOf[js.Any])
+    if (`Colon-moz-placeholder` != null) __obj.updateDynamic(":-moz-placeholder")(`Colon-moz-placeholder`.asInstanceOf[js.Any])
+    if (`Colon-moz-read-only` != null) __obj.updateDynamic(":-moz-read-only")(`Colon-moz-read-only`.asInstanceOf[js.Any])
+    if (`Colon-moz-read-write` != null) __obj.updateDynamic(":-moz-read-write")(`Colon-moz-read-write`.asInstanceOf[js.Any])
+    if (`Colon-ms-fullscreen` != null) __obj.updateDynamic(":-ms-fullscreen")(`Colon-ms-fullscreen`.asInstanceOf[js.Any])
+    if (`Colon-ms-input-placeholder` != null) __obj.updateDynamic(":-ms-input-placeholder")(`Colon-ms-input-placeholder`.asInstanceOf[js.Any])
+    if (`Colon-webkit-any-link` != null) __obj.updateDynamic(":-webkit-any-link")(`Colon-webkit-any-link`.asInstanceOf[js.Any])
+    if (`Colon-webkit-anyLeftparenthesisRightparenthesis` != null) __obj.updateDynamic(":-webkit-any()")(`Colon-webkit-anyLeftparenthesisRightparenthesis`.asInstanceOf[js.Any])
+    if (`Colon-webkit-full-screen` != null) __obj.updateDynamic(":-webkit-full-screen")(`Colon-webkit-full-screen`.asInstanceOf[js.Any])
+    if (`ColonColon-moz-placeholder` != null) __obj.updateDynamic("::-moz-placeholder")(`ColonColon-moz-placeholder`.asInstanceOf[js.Any])
+    if (`ColonColon-moz-progress-bar` != null) __obj.updateDynamic("::-moz-progress-bar")(`ColonColon-moz-progress-bar`.asInstanceOf[js.Any])
+    if (`ColonColon-moz-range-progress` != null) __obj.updateDynamic("::-moz-range-progress")(`ColonColon-moz-range-progress`.asInstanceOf[js.Any])
+    if (`ColonColon-moz-range-thumb` != null) __obj.updateDynamic("::-moz-range-thumb")(`ColonColon-moz-range-thumb`.asInstanceOf[js.Any])
+    if (`ColonColon-moz-range-track` != null) __obj.updateDynamic("::-moz-range-track")(`ColonColon-moz-range-track`.asInstanceOf[js.Any])
+    if (`ColonColon-moz-selection` != null) __obj.updateDynamic("::-moz-selection")(`ColonColon-moz-selection`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-backdrop` != null) __obj.updateDynamic("::-ms-backdrop")(`ColonColon-ms-backdrop`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-browse` != null) __obj.updateDynamic("::-ms-browse")(`ColonColon-ms-browse`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-check` != null) __obj.updateDynamic("::-ms-check")(`ColonColon-ms-check`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-clear` != null) __obj.updateDynamic("::-ms-clear")(`ColonColon-ms-clear`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-fill` != null) __obj.updateDynamic("::-ms-fill")(`ColonColon-ms-fill`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-fill-lower` != null) __obj.updateDynamic("::-ms-fill-lower")(`ColonColon-ms-fill-lower`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-fill-upper` != null) __obj.updateDynamic("::-ms-fill-upper")(`ColonColon-ms-fill-upper`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-input-placeholder` != null) __obj.updateDynamic("::-ms-input-placeholder")(`ColonColon-ms-input-placeholder`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-reveal` != null) __obj.updateDynamic("::-ms-reveal")(`ColonColon-ms-reveal`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-thumb` != null) __obj.updateDynamic("::-ms-thumb")(`ColonColon-ms-thumb`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-ticks-after` != null) __obj.updateDynamic("::-ms-ticks-after")(`ColonColon-ms-ticks-after`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-ticks-before` != null) __obj.updateDynamic("::-ms-ticks-before")(`ColonColon-ms-ticks-before`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-tooltip` != null) __obj.updateDynamic("::-ms-tooltip")(`ColonColon-ms-tooltip`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-track` != null) __obj.updateDynamic("::-ms-track")(`ColonColon-ms-track`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-value` != null) __obj.updateDynamic("::-ms-value")(`ColonColon-ms-value`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-backdrop` != null) __obj.updateDynamic("::-webkit-backdrop")(`ColonColon-webkit-backdrop`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-input-placeholder` != null) __obj.updateDynamic("::-webkit-input-placeholder")(`ColonColon-webkit-input-placeholder`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-progress-bar` != null) __obj.updateDynamic("::-webkit-progress-bar")(`ColonColon-webkit-progress-bar`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-progress-inner-value` != null) __obj.updateDynamic("::-webkit-progress-inner-value")(`ColonColon-webkit-progress-inner-value`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-progress-value` != null) __obj.updateDynamic("::-webkit-progress-value")(`ColonColon-webkit-progress-value`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-slider-runnable-track` != null) __obj.updateDynamic("::-webkit-slider-runnable-track")(`ColonColon-webkit-slider-runnable-track`.asInstanceOf[js.Any])
+    if (`ColonColon-webkit-slider-thumb` != null) __obj.updateDynamic("::-webkit-slider-thumb")(`ColonColon-webkit-slider-thumb`.asInstanceOf[js.Any])
+    if (ColonColonafter != null) __obj.updateDynamic("::after")(ColonColonafter.asInstanceOf[js.Any])
+    if (ColonColonbackdrop != null) __obj.updateDynamic("::backdrop")(ColonColonbackdrop.asInstanceOf[js.Any])
+    if (ColonColonbefore != null) __obj.updateDynamic("::before")(ColonColonbefore.asInstanceOf[js.Any])
+    if (ColonColoncue != null) __obj.updateDynamic("::cue")(ColonColoncue.asInstanceOf[js.Any])
+    if (`ColonColonfirst-letter` != null) __obj.updateDynamic("::first-letter")(`ColonColonfirst-letter`.asInstanceOf[js.Any])
+    if (`ColonColonfirst-line` != null) __obj.updateDynamic("::first-line")(`ColonColonfirst-line`.asInstanceOf[js.Any])
+    if (`ColonColongrammar-error` != null) __obj.updateDynamic("::grammar-error")(`ColonColongrammar-error`.asInstanceOf[js.Any])
+    if (ColonColonmarker != null) __obj.updateDynamic("::marker")(ColonColonmarker.asInstanceOf[js.Any])
+    if (ColonColonpart != null) __obj.updateDynamic("::part")(ColonColonpart.asInstanceOf[js.Any])
+    if (ColonColonplaceholder != null) __obj.updateDynamic("::placeholder")(ColonColonplaceholder.asInstanceOf[js.Any])
+    if (ColonColonselection != null) __obj.updateDynamic("::selection")(ColonColonselection.asInstanceOf[js.Any])
+    if (ColonColonslotted != null) __obj.updateDynamic("::slotted")(ColonColonslotted.asInstanceOf[js.Any])
+    if (`ColonColonspelling-error` != null) __obj.updateDynamic("::spelling-error")(`ColonColonspelling-error`.asInstanceOf[js.Any])
+    if (Colonactive != null) __obj.updateDynamic(":active")(Colonactive.asInstanceOf[js.Any])
+    if (Colonafter != null) __obj.updateDynamic(":after")(Colonafter.asInstanceOf[js.Any])
+    if (`Colonany-link` != null) __obj.updateDynamic(":any-link")(`Colonany-link`.asInstanceOf[js.Any])
+    if (Colonbefore != null) __obj.updateDynamic(":before")(Colonbefore.asInstanceOf[js.Any])
+    if (Colonblank != null) __obj.updateDynamic(":blank")(Colonblank.asInstanceOf[js.Any])
+    if (Colonchecked != null) __obj.updateDynamic(":checked")(Colonchecked.asInstanceOf[js.Any])
+    if (Colondefault != null) __obj.updateDynamic(":default")(Colondefault.asInstanceOf[js.Any])
+    if (Colondefined != null) __obj.updateDynamic(":defined")(Colondefined.asInstanceOf[js.Any])
+    if (Colondir != null) __obj.updateDynamic(":dir")(Colondir.asInstanceOf[js.Any])
+    if (Colondisabled != null) __obj.updateDynamic(":disabled")(Colondisabled.asInstanceOf[js.Any])
+    if (Colonempty != null) __obj.updateDynamic(":empty")(Colonempty.asInstanceOf[js.Any])
+    if (Colonenabled != null) __obj.updateDynamic(":enabled")(Colonenabled.asInstanceOf[js.Any])
+    if (Colonfirst != null) __obj.updateDynamic(":first")(Colonfirst.asInstanceOf[js.Any])
+    if (`Colonfirst-child` != null) __obj.updateDynamic(":first-child")(`Colonfirst-child`.asInstanceOf[js.Any])
+    if (`Colonfirst-letter` != null) __obj.updateDynamic(":first-letter")(`Colonfirst-letter`.asInstanceOf[js.Any])
+    if (`Colonfirst-line` != null) __obj.updateDynamic(":first-line")(`Colonfirst-line`.asInstanceOf[js.Any])
+    if (`Colonfirst-of-type` != null) __obj.updateDynamic(":first-of-type")(`Colonfirst-of-type`.asInstanceOf[js.Any])
+    if (Colonfocus != null) __obj.updateDynamic(":focus")(Colonfocus.asInstanceOf[js.Any])
+    if (`Colonfocus-visible` != null) __obj.updateDynamic(":focus-visible")(`Colonfocus-visible`.asInstanceOf[js.Any])
+    if (`Colonfocus-within` != null) __obj.updateDynamic(":focus-within")(`Colonfocus-within`.asInstanceOf[js.Any])
+    if (Colonfullscreen != null) __obj.updateDynamic(":fullscreen")(Colonfullscreen.asInstanceOf[js.Any])
+    if (Colonhas != null) __obj.updateDynamic(":has")(Colonhas.asInstanceOf[js.Any])
+    if (Colonhost != null) __obj.updateDynamic(":host")(Colonhost.asInstanceOf[js.Any])
+    if (`Colonhost-context` != null) __obj.updateDynamic(":host-context")(`Colonhost-context`.asInstanceOf[js.Any])
+    if (Colonhover != null) __obj.updateDynamic(":hover")(Colonhover.asInstanceOf[js.Any])
+    if (`Colonin-range` != null) __obj.updateDynamic(":in-range")(`Colonin-range`.asInstanceOf[js.Any])
+    if (Colonindeterminate != null) __obj.updateDynamic(":indeterminate")(Colonindeterminate.asInstanceOf[js.Any])
+    if (Coloninvalid != null) __obj.updateDynamic(":invalid")(Coloninvalid.asInstanceOf[js.Any])
+    if (Colonis != null) __obj.updateDynamic(":is")(Colonis.asInstanceOf[js.Any])
+    if (Colonlang != null) __obj.updateDynamic(":lang")(Colonlang.asInstanceOf[js.Any])
+    if (`Colonlast-child` != null) __obj.updateDynamic(":last-child")(`Colonlast-child`.asInstanceOf[js.Any])
+    if (`Colonlast-of-type` != null) __obj.updateDynamic(":last-of-type")(`Colonlast-of-type`.asInstanceOf[js.Any])
+    if (Colonleft != null) __obj.updateDynamic(":left")(Colonleft.asInstanceOf[js.Any])
+    if (Colonlink != null) __obj.updateDynamic(":link")(Colonlink.asInstanceOf[js.Any])
+    if (ColonmatchesLeftparenthesisRightparenthesis != null) __obj.updateDynamic(":matches()")(ColonmatchesLeftparenthesisRightparenthesis.asInstanceOf[js.Any])
+    if (Colonnot != null) __obj.updateDynamic(":not")(Colonnot.asInstanceOf[js.Any])
+    if (`Colonnth-child` != null) __obj.updateDynamic(":nth-child")(`Colonnth-child`.asInstanceOf[js.Any])
+    if (`Colonnth-last-child` != null) __obj.updateDynamic(":nth-last-child")(`Colonnth-last-child`.asInstanceOf[js.Any])
+    if (`Colonnth-last-of-type` != null) __obj.updateDynamic(":nth-last-of-type")(`Colonnth-last-of-type`.asInstanceOf[js.Any])
+    if (`Colonnth-of-type` != null) __obj.updateDynamic(":nth-of-type")(`Colonnth-of-type`.asInstanceOf[js.Any])
+    if (`Colononly-child` != null) __obj.updateDynamic(":only-child")(`Colononly-child`.asInstanceOf[js.Any])
+    if (`Colononly-of-type` != null) __obj.updateDynamic(":only-of-type")(`Colononly-of-type`.asInstanceOf[js.Any])
+    if (Colonoptional != null) __obj.updateDynamic(":optional")(Colonoptional.asInstanceOf[js.Any])
+    if (`Colonout-of-range` != null) __obj.updateDynamic(":out-of-range")(`Colonout-of-range`.asInstanceOf[js.Any])
+    if (`Colonplaceholder-shown` != null) __obj.updateDynamic(":placeholder-shown")(`Colonplaceholder-shown`.asInstanceOf[js.Any])
+    if (`Colonread-only` != null) __obj.updateDynamic(":read-only")(`Colonread-only`.asInstanceOf[js.Any])
+    if (`Colonread-write` != null) __obj.updateDynamic(":read-write")(`Colonread-write`.asInstanceOf[js.Any])
+    if (Colonrequired != null) __obj.updateDynamic(":required")(Colonrequired.asInstanceOf[js.Any])
+    if (Colonright != null) __obj.updateDynamic(":right")(Colonright.asInstanceOf[js.Any])
+    if (Colonroot != null) __obj.updateDynamic(":root")(Colonroot.asInstanceOf[js.Any])
+    if (Colonscope != null) __obj.updateDynamic(":scope")(Colonscope.asInstanceOf[js.Any])
+    if (Colontarget != null) __obj.updateDynamic(":target")(Colontarget.asInstanceOf[js.Any])
+    if (Colonvalid != null) __obj.updateDynamic(":valid")(Colonvalid.asInstanceOf[js.Any])
+    if (Colonvisited != null) __obj.updateDynamic(":visited")(Colonvisited.asInstanceOf[js.Any])
+    if (Colonwhere != null) __obj.updateDynamic(":where")(Colonwhere.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSSPseudosForCSSObject]
   }
-  @scala.inline
-  implicit class CSSPseudosForCSSObjectOps[Self <: CSSPseudosForCSSObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withColon-moz-any-link`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-any-link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-any-link`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-any-link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-anyLeftparenthesisRightparenthesis`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-any()")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-anyLeftparenthesisRightparenthesis`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-any()")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-dir`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-dir`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-focusring`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-focusring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-focusring`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-focusring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-full-screen`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-full-screen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-full-screen`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-full-screen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-placeholder`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-read-only`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-read-only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-read-only`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-read-only")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-moz-read-write`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-read-write")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-moz-read-write`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-moz-read-write")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-ms-fullscreen`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-ms-fullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-ms-fullscreen`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-ms-fullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-ms-input-placeholder`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-ms-input-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-ms-input-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-ms-input-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-webkit-any-link`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-any-link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-webkit-any-link`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-any-link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-webkit-anyLeftparenthesisRightparenthesis`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-any()")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-webkit-anyLeftparenthesisRightparenthesis`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-any()")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColon-webkit-full-screen`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-full-screen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-webkit-full-screen`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-full-screen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-moz-placeholder`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-moz-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-moz-progress-bar`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-progress-bar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-moz-progress-bar`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-progress-bar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-moz-range-progress`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-range-progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-moz-range-progress`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-range-progress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-moz-range-thumb`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-range-thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-moz-range-thumb`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-range-thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-moz-range-track`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-range-track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-moz-range-track`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-range-track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-moz-selection`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-moz-selection`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-moz-selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-backdrop`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-backdrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-backdrop`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-backdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-browse`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-browse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-browse`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-browse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-check`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-check`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-check")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-clear`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-clear`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-fill`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-fill`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-fill-lower`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-fill-lower")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-fill-lower`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-fill-lower")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-fill-upper`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-fill-upper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-fill-upper`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-fill-upper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-input-placeholder`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-input-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-input-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-input-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-reveal`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-reveal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-reveal`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-reveal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-thumb`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-thumb`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-ticks-after`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-ticks-after")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-ticks-after`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-ticks-after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-ticks-before`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-ticks-before")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-ticks-before`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-ticks-before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-tooltip`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-tooltip`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-track`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-track`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-value`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-value`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-backdrop`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-backdrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-backdrop`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-backdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-input-placeholder`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-input-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-input-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-input-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-progress-bar`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-progress-bar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-progress-bar`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-progress-bar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-progress-inner-value`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-progress-inner-value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-progress-inner-value`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-progress-inner-value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-progress-value`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-progress-value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-progress-value`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-progress-value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-slider-runnable-track`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-slider-runnable-track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-slider-runnable-track`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-slider-runnable-track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-webkit-slider-thumb`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-slider-thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-webkit-slider-thumb`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-webkit-slider-thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonafter(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::after")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonafter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonbackdrop(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::backdrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonbackdrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::backdrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonbefore(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::before")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonbefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColoncue(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::cue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColoncue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::cue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColonfirst-letter`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::first-letter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColonfirst-letter`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::first-letter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColonfirst-line`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::first-line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColonfirst-line`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::first-line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColongrammar-error`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::grammar-error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColongrammar-error`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::grammar-error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonmarker(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonmarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonpart(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::part")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonpart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::part")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonplaceholder(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonplaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonselection(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonselection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonslotted(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::slotted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonslotted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::slotted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColonspelling-error`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::spelling-error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColonspelling-error`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::spelling-error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonactive(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonactive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonafter(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":after")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonafter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":after")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonany-link`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":any-link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonany-link`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":any-link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonbefore(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":before")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonbefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":before")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonblank(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":blank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonblank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":blank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonchecked(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonchecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":checked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColondefault(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColondefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColondefined(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":defined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColondefined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":defined")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColondir(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColondir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColondisabled(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColondisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonempty(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":empty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonempty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":empty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonenabled(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonenabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonfirst(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonfirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonfirst-child`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonfirst-child`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-child")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonfirst-letter`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-letter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonfirst-letter`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-letter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonfirst-line`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonfirst-line`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonfirst-of-type`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-of-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonfirst-of-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":first-of-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonfocus(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonfocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonfocus-visible`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus-visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonfocus-visible`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus-visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonfocus-within`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus-within")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonfocus-within`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus-within")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonfullscreen(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":fullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonfullscreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":fullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonhas(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":has")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonhas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":has")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonhost(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonhost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonhost-context`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":host-context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonhost-context`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":host-context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonhover(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonhover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonin-range`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":in-range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonin-range`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":in-range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonindeterminate(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":indeterminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonindeterminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":indeterminate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColoninvalid(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColoninvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":invalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonis(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":is")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":is")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonlang(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonlang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonlast-child`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":last-child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonlast-child`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":last-child")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonlast-of-type`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":last-of-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonlast-of-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":last-of-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonleft(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonleft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonlink(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonlink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonmatchesLeftparenthesisRightparenthesis(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":matches()")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonmatchesLeftparenthesisRightparenthesis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":matches()")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonnot(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonnot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":not")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonnth-child`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonnth-child`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-child")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonnth-last-child`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-last-child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonnth-last-child`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-last-child")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonnth-last-of-type`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-last-of-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonnth-last-of-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-last-of-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonnth-of-type`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-of-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonnth-of-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":nth-of-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColononly-child`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":only-child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColononly-child`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":only-child")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColononly-of-type`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":only-of-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColononly-of-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":only-of-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonoptional(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonoptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":optional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonout-of-range`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":out-of-range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonout-of-range`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":out-of-range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonplaceholder-shown`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":placeholder-shown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonplaceholder-shown`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":placeholder-shown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonread-only`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":read-only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonread-only`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":read-only")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonread-write`(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":read-write")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonread-write`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":read-write")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonrequired(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonrequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonright(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonroot(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonroot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonscope(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonscope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColontarget(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColontarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonvalid(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":valid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonvisited(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":visited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonvisited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":visited")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonwhere(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonwhere: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

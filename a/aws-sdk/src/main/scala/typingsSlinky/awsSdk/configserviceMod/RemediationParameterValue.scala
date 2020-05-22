@@ -18,41 +18,11 @@ trait RemediationParameterValue extends js.Object {
 
 object RemediationParameterValue {
   @scala.inline
-  def apply(): RemediationParameterValue = {
+  def apply(ResourceValue: ResourceValue = null, StaticValue: StaticValue = null): RemediationParameterValue = {
     val __obj = js.Dynamic.literal()
+    if (ResourceValue != null) __obj.updateDynamic("ResourceValue")(ResourceValue.asInstanceOf[js.Any])
+    if (StaticValue != null) __obj.updateDynamic("StaticValue")(StaticValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemediationParameterValue]
   }
-  @scala.inline
-  implicit class RemediationParameterValueOps[Self <: RemediationParameterValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceValue(value: ResourceValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticValue(value: StaticValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

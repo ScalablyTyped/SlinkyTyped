@@ -3,11 +3,13 @@ package typingsSlinky.sipJs.webTransportMod
 import org.scalajs.dom.raw.WebSocket
 import typingsSlinky.events.mod.EventEmitter
 import typingsSlinky.sipJs.coreMod.Logger
+import typingsSlinky.sipJs.emitterMod.Emitter
 import typingsSlinky.sipJs.sipJsStrings.connected
 import typingsSlinky.sipJs.sipJsStrings.connecting
 import typingsSlinky.sipJs.sipJsStrings.disconnected
 import typingsSlinky.sipJs.sipJsStrings.disconnecting
 import typingsSlinky.sipJs.sipJsStrings.message
+import typingsSlinky.sipJs.transportStateMod.TransportState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,6 +61,15 @@ class Transport protected ()
     */
   var onWebSocketOpen: js.Any = js.native
   /**
+    * The transport protocol.
+    *
+    * @remarks
+    * Formatted as defined for the Via header sent-protocol transport.
+    * https://tools.ietf.org/html/rfc3261#section-20.42
+    */
+  /* CompleteClass */
+  override val protocol: String = js.native
+  /**
     * Send a keep-alive (a double-CRLF sequence).
     */
   var sendKeepAlive: js.Any = js.native
@@ -70,6 +81,19 @@ class Transport protected ()
     * Start sending keep-alives.
     */
   var startSendingKeepAlives: js.Any = js.native
+  /**
+    * Transport state.
+    *
+    * @remarks
+    * The initial Transport state MUST be "disconnected" (after calling constructor).
+    */
+  /* CompleteClass */
+  override val state: TransportState = js.native
+  /**
+    * Transport state change emitter.
+    */
+  /* CompleteClass */
+  override val stateChange: Emitter[TransportState] = js.native
   /**
     * Stop sending keep-alives.
     */
@@ -90,6 +114,72 @@ class Transport protected ()
     */
   val ws: js.UndefOr[WebSocket] = js.native
   /**
+    * Connect to network.
+    *
+    * @remarks
+    * ```txt
+    * - If `state` is "Connecting", `state` MUST NOT transition before returning.
+    * - If `state` is "Connected", `state` MUST NOT transition before returning.
+    * - If `state` is "Disconnecting", `state` MUST transition to "Connecting" before returning.
+    * - If `state` is "Disconnected" `state` MUST transition to "Connecting" before returning.
+    * - The `state` MUST transition to "Connected" before resolving (assuming `state` is not already "Connected").
+    * - The `state` MUST transition to "Disconnecting" or "Disconnected" before rejecting and MUST reject with an Error.
+    * ```
+    * Resolves when the transport connects. Rejects if transport fails to connect.
+    * Rejects with {@link StateTransitionError} if a loop is detected.
+    * In particular, callbacks and emitters MUST NOT call this method synchronously.
+    */
+  /* CompleteClass */
+  override def connect(): js.Promise[Unit] = js.native
+  /**
+    * Disconnect from network.
+    *
+    * @remarks
+    * ```txt
+    * - If `state` is "Connecting", `state` MUST transition to "Disconnecting" before returning.
+    * - If `state` is "Connected", `state` MUST transition to "Disconnecting" before returning.
+    * - If `state` is "Disconnecting", `state` MUST NOT transition before returning.
+    * - If `state` is "Disconnected", `state` MUST NOT transition before returning.
+    * - The `state` MUST transition to "Disconnected" before resolving (assuming `state` is not already "Disconnected").
+    * - The `state` MUST transition to "Connecting" or "Connected" before rejecting and MUST reject with an Error.
+    * ```
+    * Resolves when the transport disconnects. Rejects if transport fails to disconnect.
+    * Rejects with {@link StateTransitionError} if a loop is detected.
+    * In particular, callbacks and emitters MUST NOT call this method synchronously.
+    */
+  /* CompleteClass */
+  override def disconnect(): js.Promise[Unit] = js.native
+  /**
+    * Dispose.
+    *
+    * @remarks
+    * When the `UserAgent` is disposed or stopped, this method is called.
+    * The `UserAgent` MUST NOT continue to utilize the instance after calling this method.
+    */
+  /* CompleteClass */
+  override def dispose(): js.Promise[Unit] = js.native
+  /**
+    * Returns true if the `state` equals "Connected".
+    *
+    * @remarks
+    * This is equivalent to `state === TransportState.Connected`.
+    * It is convenient. A common paradigm is, for example...
+    *
+    * @example
+    * ```ts
+    * // Monitor transport connectivity
+    * userAgent.transport.stateChange.addListener(() => {
+    *   if (userAgent.transport.isConnected()) {
+    *     // handle transport connect
+    *   } else {
+    *     // handle transport disconnect
+    *   }
+    * });
+    * ```
+    */
+  /* CompleteClass */
+  override def isConnected(): Boolean = js.native
+  /**
     * Add listener for connection events.
     * @deprecated Use `onConnected`, `onDisconnected` and/or `stateChange`.
     */
@@ -107,6 +197,16 @@ class Transport protected ()
     */
   @JSName("on")
   def on_message(event: message, listener: js.Function1[/* message */ String, Unit]): this.type = js.native
+  /**
+    * Send a message.
+    *
+    * @remarks
+    * Resolves once message is sent. Otherwise rejects with an Error.
+    *
+    * @param message - Message to send.
+    */
+  /* CompleteClass */
+  override def send(message: String): js.Promise[Unit] = js.native
 }
 
 /* static members */

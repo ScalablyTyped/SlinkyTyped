@@ -5,45 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToIndex
   extends /* key */ StringDictionary[js.Any] {
-  var fromIndex: Double = js.native
-  var tile: org.scalajs.dom.raw.Element = js.native
-  var toIndex: Double = js.native
+  var fromIndex: Double
+  var tile: org.scalajs.dom.raw.Element
+  var toIndex: Double
 }
 
 object ToIndex {
   @scala.inline
-  def apply(fromIndex: Double, tile: org.scalajs.dom.raw.Element, toIndex: Double): ToIndex = {
+  def apply(
+    fromIndex: Double,
+    tile: org.scalajs.dom.raw.Element,
+    toIndex: Double,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null
+  ): ToIndex = {
     val __obj = js.Dynamic.literal(fromIndex = fromIndex.asInstanceOf[js.Any], tile = tile.asInstanceOf[js.Any], toIndex = toIndex.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[ToIndex]
   }
-  @scala.inline
-  implicit class ToIndexOps[Self <: ToIndex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTile(value: org.scalajs.dom.raw.Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

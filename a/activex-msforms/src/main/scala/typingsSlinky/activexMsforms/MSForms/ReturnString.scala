@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReturnString extends js.Object {
   @JSName("MSForms.ReturnString_typekey")
-  var MSFormsDotReturnString_typekey: ReturnString = js.native
-  var Value: String = js.native
+  var MSFormsDotReturnString_typekey: ReturnString
+  var Value: String
 }
 
 object ReturnString {
@@ -18,25 +17,5 @@ object ReturnString {
     __obj.updateDynamic("MSForms.ReturnString_typekey")(MSFormsDotReturnString_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReturnString]
   }
-  @scala.inline
-  implicit class ReturnStringOps[Self <: ReturnString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSFormsDotReturnString_typekey(value: ReturnString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSForms.ReturnString_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

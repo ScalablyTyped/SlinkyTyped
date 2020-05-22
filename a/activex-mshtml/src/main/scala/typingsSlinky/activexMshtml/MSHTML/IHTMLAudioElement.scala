@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHTMLAudioElement extends js.Object {
   @JSName("MSHTML.IHTMLAudioElement_typekey")
-  var MSHTMLDotIHTMLAudioElement_typekey: IHTMLAudioElement = js.native
+  var MSHTMLDotIHTMLAudioElement_typekey: IHTMLAudioElement
 }
 
 object IHTMLAudioElement {
@@ -17,19 +16,5 @@ object IHTMLAudioElement {
     __obj.updateDynamic("MSHTML.IHTMLAudioElement_typekey")(MSHTMLDotIHTMLAudioElement_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHTMLAudioElement]
   }
-  @scala.inline
-  implicit class IHTMLAudioElementOps[Self <: IHTMLAudioElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotIHTMLAudioElement_typekey(value: IHTMLAudioElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.IHTMLAudioElement_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

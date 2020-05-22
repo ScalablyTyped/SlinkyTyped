@@ -5,57 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndicesUpdateAliasesParams extends GenericParams {
   @JSName("body")
-  var body_IndicesUpdateAliasesParams: Actions = js.native
-  var masterTimeout: js.UndefOr[TimeSpan] = js.native
-  var timeout: js.UndefOr[TimeSpan] = js.native
+  var body_IndicesUpdateAliasesParams: Actions
+  var masterTimeout: js.UndefOr[TimeSpan] = js.undefined
+  var timeout: js.UndefOr[TimeSpan] = js.undefined
 }
 
 object IndicesUpdateAliasesParams {
   @scala.inline
-  def apply(body: Actions): IndicesUpdateAliasesParams = {
+  def apply(
+    body: Actions,
+    filterPath: String | js.Array[String] = null,
+    ignore: Double | js.Array[Double] = null,
+    masterTimeout: TimeSpan = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    timeout: TimeSpan = null
+  ): IndicesUpdateAliasesParams = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (masterTimeout != null) __obj.updateDynamic("masterTimeout")(masterTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesUpdateAliasesParams]
   }
-  @scala.inline
-  implicit class IndicesUpdateAliasesParamsOps[Self <: IndicesUpdateAliasesParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Actions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMasterTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

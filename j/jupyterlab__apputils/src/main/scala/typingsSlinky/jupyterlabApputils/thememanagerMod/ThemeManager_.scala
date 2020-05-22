@@ -2,6 +2,10 @@ package typingsSlinky.jupyterlabApputils.thememanagerMod
 
 import typingsSlinky.jupyterlabApputils.thememanagerMod.ThemeManager.IOptions
 import typingsSlinky.jupyterlabApputils.tokensMod.IThemeManager
+import typingsSlinky.jupyterlabApputils.tokensMod.IThemeManager.ITheme
+import typingsSlinky.jupyterlabCoreutils.interfacesMod.IChangedArgs
+import typingsSlinky.phosphorDisposable.mod.IDisposable
+import typingsSlinky.phosphorSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,6 +54,21 @@ class ThemeManager_ protected () extends IThemeManager {
   var _themeChanged: js.Any = js.native
   var _themes: js.Any = js.native
   /**
+    * Get the name of the current theme.
+    */
+  /* CompleteClass */
+  override val theme: String | Null = js.native
+  /**
+    * A signal fired when the application theme changes.
+    */
+  /* CompleteClass */
+  override val themeChanged: ISignal[this.type, IChangedArgs[String, String]] = js.native
+  /**
+    * The names of the registered themes.
+    */
+  /* CompleteClass */
+  override val themes: js.Array[String] = js.native
+  /**
     * Decrease a font size w.r.t. its current setting or its value in the
     * current theme.
     *
@@ -72,18 +91,50 @@ class ThemeManager_ protected () extends IThemeManager {
     */
   def incrFontSize(key: String): js.Promise[Unit] = js.native
   /**
+    * Test whether a given theme is light.
+    */
+  /* CompleteClass */
+  override def isLight(name: String): Boolean = js.native
+  /**
     * Test if the user has scrollbar styling enabled.
     */
   def isToggledThemeScrollbars(): Boolean = js.native
+  /**
+    * Load a theme CSS file by path.
+    *
+    * @param path - The path of the file to load.
+    */
+  /* CompleteClass */
+  override def loadCSS(path: String): js.Promise[Unit] = js.native
   /**
     * Loads all current CSS overrides from settings. If an override has been
     * removed or is invalid, this function unloads it instead.
     */
   def loadCSSOverrides(): Unit = js.native
   /**
+    * Register a theme with the theme manager.
+    *
+    * @param theme - The theme to register.
+    *
+    * @returns A disposable that can be used to unregister the theme.
+    */
+  /* CompleteClass */
+  override def register(theme: ITheme): IDisposable = js.native
+  /**
     * Add a CSS override to the settings.
     */
   def setCSSOverride(key: String, value: String): js.Promise[Unit] = js.native
+  /**
+    * Set the current theme.
+    */
+  /* CompleteClass */
+  override def setTheme(name: String): js.Promise[Unit] = js.native
+  /**
+    * Test whether a given theme styles scrollbars,
+    * and if the user has scrollbar styling enabled.
+    */
+  /* CompleteClass */
+  override def themeScrollbars(name: String): Boolean = js.native
   /**
     * Toggle the `theme-scrollbbars` setting.
     */

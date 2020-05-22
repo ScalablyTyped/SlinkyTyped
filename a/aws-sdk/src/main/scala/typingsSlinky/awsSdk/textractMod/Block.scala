@@ -62,173 +62,36 @@ trait Block extends js.Object {
 
 object Block {
   @scala.inline
-  def apply(): Block = {
+  def apply(
+    BlockType: BlockType = null,
+    ColumnIndex: js.UndefOr[UInteger] = js.undefined,
+    ColumnSpan: js.UndefOr[UInteger] = js.undefined,
+    Confidence: js.UndefOr[Percent] = js.undefined,
+    EntityTypes: EntityTypes = null,
+    Geometry: Geometry = null,
+    Id: NonEmptyString = null,
+    Page: js.UndefOr[UInteger] = js.undefined,
+    Relationships: RelationshipList = null,
+    RowIndex: js.UndefOr[UInteger] = js.undefined,
+    RowSpan: js.UndefOr[UInteger] = js.undefined,
+    SelectionStatus: SelectionStatus = null,
+    Text: String = null
+  ): Block = {
     val __obj = js.Dynamic.literal()
+    if (BlockType != null) __obj.updateDynamic("BlockType")(BlockType.asInstanceOf[js.Any])
+    if (!js.isUndefined(ColumnIndex)) __obj.updateDynamic("ColumnIndex")(ColumnIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ColumnSpan)) __obj.updateDynamic("ColumnSpan")(ColumnSpan.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Confidence)) __obj.updateDynamic("Confidence")(Confidence.get.asInstanceOf[js.Any])
+    if (EntityTypes != null) __obj.updateDynamic("EntityTypes")(EntityTypes.asInstanceOf[js.Any])
+    if (Geometry != null) __obj.updateDynamic("Geometry")(Geometry.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (!js.isUndefined(Page)) __obj.updateDynamic("Page")(Page.get.asInstanceOf[js.Any])
+    if (Relationships != null) __obj.updateDynamic("Relationships")(Relationships.asInstanceOf[js.Any])
+    if (!js.isUndefined(RowIndex)) __obj.updateDynamic("RowIndex")(RowIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RowSpan)) __obj.updateDynamic("RowSpan")(RowSpan.get.asInstanceOf[js.Any])
+    if (SelectionStatus != null) __obj.updateDynamic("SelectionStatus")(SelectionStatus.asInstanceOf[js.Any])
+    if (Text != null) __obj.updateDynamic("Text")(Text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Block]
   }
-  @scala.inline
-  implicit class BlockOps[Self <: Block] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockType(value: BlockType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnIndex(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnSpan(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityTypes(value: EntityTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometry(value: Geometry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Geometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Geometry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelationships(value: RelationshipList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Relationships")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelationships: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Relationships")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowIndex(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowSpan(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionStatus(value: SelectionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

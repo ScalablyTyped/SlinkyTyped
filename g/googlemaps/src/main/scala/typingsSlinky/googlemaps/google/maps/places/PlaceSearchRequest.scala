@@ -8,166 +8,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaceSearchRequest extends js.Object {
-  var bounds: js.UndefOr[LatLngBounds | LatLngBoundsLiteral] = js.native
-  var keyword: js.UndefOr[String] = js.native
-  var location: js.UndefOr[LatLng | LatLngLiteral] = js.native
-  var maxPriceLevel: js.UndefOr[Double] = js.native
-  var minPriceLevel: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var openNow: js.UndefOr[Boolean] = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var rankBy: js.UndefOr[RankBy] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var types: js.UndefOr[js.Array[String]] = js.native
+  var bounds: js.UndefOr[LatLngBounds | LatLngBoundsLiteral] = js.undefined
+  var keyword: js.UndefOr[String] = js.undefined
+  var location: js.UndefOr[LatLng | LatLngLiteral] = js.undefined
+  var maxPriceLevel: js.UndefOr[Double] = js.undefined
+  var minPriceLevel: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var openNow: js.UndefOr[Boolean] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
+  var rankBy: js.UndefOr[RankBy] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var types: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object PlaceSearchRequest {
   @scala.inline
-  def apply(): PlaceSearchRequest = {
+  def apply(
+    bounds: LatLngBounds | LatLngBoundsLiteral = null,
+    keyword: String = null,
+    location: LatLng | LatLngLiteral = null,
+    maxPriceLevel: js.UndefOr[Double] = js.undefined,
+    minPriceLevel: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    openNow: js.UndefOr[Boolean] = js.undefined,
+    radius: js.UndefOr[Double] = js.undefined,
+    rankBy: RankBy = null,
+    `type`: String = null,
+    types: js.Array[String] = null
+  ): PlaceSearchRequest = {
     val __obj = js.Dynamic.literal()
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (keyword != null) __obj.updateDynamic("keyword")(keyword.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPriceLevel)) __obj.updateDynamic("maxPriceLevel")(maxPriceLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minPriceLevel)) __obj.updateDynamic("minPriceLevel")(minPriceLevel.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(openNow)) __obj.updateDynamic("openNow")(openNow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (rankBy != null) __obj.updateDynamic("rankBy")(rankBy.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaceSearchRequest]
   }
-  @scala.inline
-  implicit class PlaceSearchRequestOps[Self <: PlaceSearchRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounds(value: LatLngBounds | LatLngBoundsLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: LatLng | LatLngLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPriceLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPriceLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPriceLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPriceLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinPriceLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPriceLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinPriceLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPriceLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenNow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenNow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRankBy(value: RankBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRankBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait S3SetObjectAclOperation extends js.Object {
 
 object S3SetObjectAclOperation {
   @scala.inline
-  def apply(): S3SetObjectAclOperation = {
+  def apply(AccessControlPolicy: S3AccessControlPolicy = null): S3SetObjectAclOperation = {
     val __obj = js.Dynamic.literal()
+    if (AccessControlPolicy != null) __obj.updateDynamic("AccessControlPolicy")(AccessControlPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3SetObjectAclOperation]
   }
-  @scala.inline
-  implicit class S3SetObjectAclOperationOps[Self <: S3SetObjectAclOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessControlPolicy(value: S3AccessControlPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessControlPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

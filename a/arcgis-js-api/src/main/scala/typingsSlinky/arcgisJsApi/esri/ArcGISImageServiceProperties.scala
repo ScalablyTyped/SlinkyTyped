@@ -27,14 +27,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArcGISImageServiceProperties extends js.Object {
   /**
     * The compression quality value. Controls how much loss the image will be subjected to by the compression algorithm. Valid value ranges of compression quality are from 0 to 100. Only valid when using `jpg` or `jpgpng` [image format](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#format).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#compressionQuality)
     */
-  var compressionQuality: js.UndefOr[Double] = js.native
+  var compressionQuality: js.UndefOr[Double] = js.undefined
   /**
     * Controls the tolerance of the lerc compression algorithm. The tolerance defines the maximum possible error of pixel values in the compressed image. It's a double value.
     *
@@ -42,37 +41,37 @@ trait ArcGISImageServiceProperties extends js.Object {
     *
     * @default 0.01
     */
-  var compressionTolerance: js.UndefOr[Double] = js.native
+  var compressionTolerance: js.UndefOr[Double] = js.undefined
   /**
     * The copyright text as defined by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#copyright)
     */
-  var copyright: js.UndefOr[String] = js.native
+  var copyright: js.UndefOr[String] = js.undefined
   /**
     * The SQL where clause used to filter rasters. Only the rasters that satisfy the definition expression are displayed in the [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html). This property overrides the [mosaicRule's](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#mosaicRule) [where](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-MosaicRule.html#where) property if both properties are set on the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#definitionExpression)
     */
-  var definitionExpression: js.UndefOr[String] = js.native
+  var definitionExpression: js.UndefOr[String] = js.undefined
   /**
     * An array of fields in the layer. Each field represents an attribute that may contain a value for each raster in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#fields)
     */
-  var fields: js.UndefOr[js.Array[FieldProperties]] = js.native
+  var fields: js.UndefOr[js.Array[FieldProperties]] = js.undefined
   /**
     * The format of the exported image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#format)
     */
-  var format: js.UndefOr[png | png8 | png24 | png32 | jpg | jpgpng | lerc | tiff] = js.native
+  var format: js.UndefOr[png | png8 | png24 | png32 | jpg | jpgpng | lerc | tiff] = js.undefined
   /**
     * Indicates if the layer has [multidimensionalInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#multidimensionalInfo).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#hasMultidimensions)
     */
-  var hasMultidimensions: js.UndefOr[Boolean] = js.native
+  var hasMultidimensions: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates the maximum height of the image exported by the service.
     *
@@ -80,7 +79,7 @@ trait ArcGISImageServiceProperties extends js.Object {
     *
     * @default 4100
     */
-  var imageMaxHeight: js.UndefOr[Double] = js.native
+  var imageMaxHeight: js.UndefOr[Double] = js.undefined
   /**
     * Indicates the maximum width of the image exported by the service.
     *
@@ -88,19 +87,19 @@ trait ArcGISImageServiceProperties extends js.Object {
     *
     * @default 15000
     */
-  var imageMaxWidth: js.UndefOr[Double] = js.native
+  var imageMaxWidth: js.UndefOr[Double] = js.undefined
   /**
     * Defines how to interpolate pixel values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#interpolation)
     */
-  var interpolation: js.UndefOr[nearest | bilinear | cubic | majority] = js.native
+  var interpolation: js.UndefOr[nearest | bilinear | cubic | majority] = js.undefined
   /**
     * Defines how overlapping images should be mosaicked.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#mosaicRule)
     */
-  var mosaicRule: js.UndefOr[MosaicRuleProperties] = js.native
+  var mosaicRule: js.UndefOr[MosaicRuleProperties] = js.undefined
   /**
     * The multidimensional information associated with the layer if the layer's [hasMultidimensions](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#hasMultidimensions) property is `true`. If defined, multidimensional information contains various dimensions of data for a particular value, such as time, depth, altitude, etc. Defining slices of particular dimensions in the layer is handled with the [multidimensionalDefinition](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-MosaicRule.html#multidimensionalDefinition) property of the [mosaicRule](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#mosaicRule).
     *
@@ -108,13 +107,13 @@ trait ArcGISImageServiceProperties extends js.Object {
     *
     * @default null
     */
-  var multidimensionalInfo: js.UndefOr[js.Any] = js.native
+  var multidimensionalInfo: js.UndefOr[js.Any] = js.undefined
   /**
     * The pixel value representing no available information. Can be a number (same value for all bands) or array (specific value for each band).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#noData)
     */
-  var noData: js.UndefOr[Double | js.Array[Double]] = js.native
+  var noData: js.UndefOr[Double | js.Array[Double]] = js.undefined
   /**
     * Interpretation of the [noData](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#noData) setting.
     *
@@ -126,19 +125,19 @@ trait ArcGISImageServiceProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#noDataInterpretation)
     */
-  var noDataInterpretation: js.UndefOr[any | all] = js.native
+  var noDataInterpretation: js.UndefOr[any | all] = js.undefined
   /**
     * The name of an `oid` [field](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#fields) containing a unique value or identifier for each raster in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#objectIdField)
     */
-  var objectIdField: js.UndefOr[String] = js.native
+  var objectIdField: js.UndefOr[String] = js.undefined
   /**
     * A function that processes [pixelData](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-ImageryLayerView.html#pixelData). The `pixelData` object contains a [pixelBlock](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html) property that gives you access to all of the pixels in the raster on the client.  Inside the `pixelFilter` you may loop through all the [pixels](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#pixels) found in the `pixelBlock` property of the `pixelData` object and process them. This function may be used to hide some pixels from the view, alter their values, and change their color. The pixelFilter should be used when the imagery layer's [format](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#format) is `lerc` or `tiff` as these formats return raw pixel data to the client.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#pixelFilter)
     */
-  var pixelFilter: js.UndefOr[js.Function] = js.native
+  var pixelFilter: js.UndefOr[js.Function] = js.undefined
   /**
     * Raster source pixel type.
     *
@@ -157,316 +156,89 @@ trait ArcGISImageServiceProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#pixelType)
     */
-  var pixelType: js.UndefOr[unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64] = js.native
+  var pixelType: js.UndefOr[unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64] = js.undefined
   /**
     * Prefix used to define the fields from the raster attribute table. It's primarily used for [popups](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#rasterAttributeTableFieldPrefix)
     */
-  var rasterAttributeTableFieldPrefix: js.UndefOr[String] = js.native
+  var rasterAttributeTableFieldPrefix: js.UndefOr[String] = js.undefined
   /**
     * The renderer assigned to the layer. The renderer defines how to visualize pixels in the layer. Depending on the renderer type, the pixels may be [stretched](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterStretchRenderer.html) across the color ramp, [classified](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html) or have [different symbols](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-UniqueValueRenderer.html) based on values.  If both renderer and [pixelFilter](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#pixelFilter) is applied to an ImageryLayer then pixelFilter will override the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#renderer)
     */
-  var renderer: js.UndefOr[RendererProperties] = js.native
+  var renderer: js.UndefOr[RendererProperties] = js.undefined
   /**
     * Specifies the rule for how the requested image should be rendered. When renderingRule applied, the server returns an updated service information that reflects a custom processing as defined by the rendering rule.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#renderingRule)
     */
-  var renderingRule: js.UndefOr[RasterFunctionProperties] = js.native
+  var renderingRule: js.UndefOr[RasterFunctionProperties] = js.undefined
   /**
     * The [image service's metadata JSON](https://developers.arcgis.com/rest/services-reference/image-service.htm) exposed by the ArcGIS REST API. While most commonly used [properties](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#properties-summary) are exposed on the ImageryLayer class directly, this property gives access to all information returned by the image service. This property is useful if working in an application built using an older version of the API which requires access to image service properties from a more recent version.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#sourceJSON)
     */
-  var sourceJSON: js.UndefOr[js.Any] = js.native
+  var sourceJSON: js.UndefOr[js.Any] = js.undefined
   /**
     * The URL to the REST endpoint of the layer. The URL may either point to a resource on ArcGIS Enterprise or ArcGIS Online.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#url)
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object ArcGISImageServiceProperties {
   @scala.inline
-  def apply(): ArcGISImageServiceProperties = {
+  def apply(
+    compressionQuality: js.UndefOr[Double] = js.undefined,
+    compressionTolerance: js.UndefOr[Double] = js.undefined,
+    copyright: String = null,
+    definitionExpression: String = null,
+    fields: js.Array[FieldProperties] = null,
+    format: png | png8 | png24 | png32 | jpg | jpgpng | lerc | tiff = null,
+    hasMultidimensions: js.UndefOr[Boolean] = js.undefined,
+    imageMaxHeight: js.UndefOr[Double] = js.undefined,
+    imageMaxWidth: js.UndefOr[Double] = js.undefined,
+    interpolation: nearest | bilinear | cubic | majority = null,
+    mosaicRule: MosaicRuleProperties = null,
+    multidimensionalInfo: js.Any = null,
+    noData: Double | js.Array[Double] = null,
+    noDataInterpretation: any | all = null,
+    objectIdField: String = null,
+    pixelFilter: js.Function = null,
+    pixelType: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64 = null,
+    rasterAttributeTableFieldPrefix: String = null,
+    renderer: RendererProperties = null,
+    renderingRule: RasterFunctionProperties = null,
+    sourceJSON: js.Any = null,
+    url: String = null
+  ): ArcGISImageServiceProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compressionQuality)) __obj.updateDynamic("compressionQuality")(compressionQuality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compressionTolerance)) __obj.updateDynamic("compressionTolerance")(compressionTolerance.get.asInstanceOf[js.Any])
+    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
+    if (definitionExpression != null) __obj.updateDynamic("definitionExpression")(definitionExpression.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasMultidimensions)) __obj.updateDynamic("hasMultidimensions")(hasMultidimensions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(imageMaxHeight)) __obj.updateDynamic("imageMaxHeight")(imageMaxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(imageMaxWidth)) __obj.updateDynamic("imageMaxWidth")(imageMaxWidth.get.asInstanceOf[js.Any])
+    if (interpolation != null) __obj.updateDynamic("interpolation")(interpolation.asInstanceOf[js.Any])
+    if (mosaicRule != null) __obj.updateDynamic("mosaicRule")(mosaicRule.asInstanceOf[js.Any])
+    if (multidimensionalInfo != null) __obj.updateDynamic("multidimensionalInfo")(multidimensionalInfo.asInstanceOf[js.Any])
+    if (noData != null) __obj.updateDynamic("noData")(noData.asInstanceOf[js.Any])
+    if (noDataInterpretation != null) __obj.updateDynamic("noDataInterpretation")(noDataInterpretation.asInstanceOf[js.Any])
+    if (objectIdField != null) __obj.updateDynamic("objectIdField")(objectIdField.asInstanceOf[js.Any])
+    if (pixelFilter != null) __obj.updateDynamic("pixelFilter")(pixelFilter.asInstanceOf[js.Any])
+    if (pixelType != null) __obj.updateDynamic("pixelType")(pixelType.asInstanceOf[js.Any])
+    if (rasterAttributeTableFieldPrefix != null) __obj.updateDynamic("rasterAttributeTableFieldPrefix")(rasterAttributeTableFieldPrefix.asInstanceOf[js.Any])
+    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
+    if (renderingRule != null) __obj.updateDynamic("renderingRule")(renderingRule.asInstanceOf[js.Any])
+    if (sourceJSON != null) __obj.updateDynamic("sourceJSON")(sourceJSON.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArcGISImageServiceProperties]
   }
-  @scala.inline
-  implicit class ArcGISImageServicePropertiesOps[Self <: ArcGISImageServiceProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompressionQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionQuality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompressionQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionQuality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompressionTolerance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionTolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompressionTolerance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionTolerance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyright(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefinitionExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinitionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitionExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: js.Array[FieldProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: png | png8 | png24 | png32 | jpg | jpgpng | lerc | tiff): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasMultidimensions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMultidimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasMultidimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMultidimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMaxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMaxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterpolation(value: nearest | bilinear | cubic | majority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterpolation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMosaicRule(value: MosaicRuleProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mosaicRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMosaicRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mosaicRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultidimensionalInfo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multidimensionalInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultidimensionalInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multidimensionalInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoData(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDataInterpretation(value: any | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataInterpretation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDataInterpretation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataInterpretation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectIdField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIdField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectIdField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIdField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelFilter(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelType(value: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRasterAttributeTableFieldPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rasterAttributeTableFieldPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRasterAttributeTableFieldPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rasterAttributeTableFieldPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: RendererProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderingRule(value: RasterFunctionProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderingRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceJSON(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceJSON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceJSON")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

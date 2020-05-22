@@ -14,29 +14,10 @@ trait DeleteSubnetGroupResponse extends js.Object {
 
 object DeleteSubnetGroupResponse {
   @scala.inline
-  def apply(): DeleteSubnetGroupResponse = {
+  def apply(DeletionMessage: String = null): DeleteSubnetGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (DeletionMessage != null) __obj.updateDynamic("DeletionMessage")(DeletionMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSubnetGroupResponse]
   }
-  @scala.inline
-  implicit class DeleteSubnetGroupResponseOps[Self <: DeleteSubnetGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletionMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

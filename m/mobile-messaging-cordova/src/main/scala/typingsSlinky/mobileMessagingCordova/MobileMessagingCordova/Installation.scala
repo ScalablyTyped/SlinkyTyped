@@ -5,225 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Installation extends js.Object {
-  var appVersion: js.UndefOr[String] = js.native
-  var applicationUserId: js.UndefOr[String] = js.native
-  var customAttributes: js.UndefOr[Record[String, String]] = js.native
-  var deviceManufacturer: js.UndefOr[String] = js.native
-  var deviceModel: js.UndefOr[String] = js.native
-  var deviceName: js.UndefOr[String] = js.native
-  var deviceSecure: js.UndefOr[Boolean] = js.native
-  var deviceTimezoneId: js.UndefOr[String] = js.native
-  var geoEnabled: js.UndefOr[Boolean] = js.native
-  var isPrimaryDevice: js.UndefOr[Boolean] = js.native
-  var isPushRegistrationEnabled: js.UndefOr[Boolean] = js.native
-  var language: js.UndefOr[String] = js.native
-  var notificationsEnabled: js.UndefOr[Boolean] = js.native
-  var os: js.UndefOr[OS] = js.native
-  var osVersion: String = js.native
-  var sdkVersion: js.UndefOr[String] = js.native
+  var appVersion: js.UndefOr[String] = js.undefined
+  var applicationUserId: js.UndefOr[String] = js.undefined
+  var customAttributes: js.UndefOr[Record[String, String]] = js.undefined
+  var deviceManufacturer: js.UndefOr[String] = js.undefined
+  var deviceModel: js.UndefOr[String] = js.undefined
+  var deviceName: js.UndefOr[String] = js.undefined
+  var deviceSecure: js.UndefOr[Boolean] = js.undefined
+  var deviceTimezoneId: js.UndefOr[String] = js.undefined
+  var geoEnabled: js.UndefOr[Boolean] = js.undefined
+  var isPrimaryDevice: js.UndefOr[Boolean] = js.undefined
+  var isPushRegistrationEnabled: js.UndefOr[Boolean] = js.undefined
+  var language: js.UndefOr[String] = js.undefined
+  var notificationsEnabled: js.UndefOr[Boolean] = js.undefined
+  var os: js.UndefOr[OS] = js.undefined
+  var osVersion: String
+  var sdkVersion: js.UndefOr[String] = js.undefined
 }
 
 object Installation {
   @scala.inline
-  def apply(osVersion: String): Installation = {
+  def apply(
+    osVersion: String,
+    appVersion: String = null,
+    applicationUserId: String = null,
+    customAttributes: Record[String, String] = null,
+    deviceManufacturer: String = null,
+    deviceModel: String = null,
+    deviceName: String = null,
+    deviceSecure: js.UndefOr[Boolean] = js.undefined,
+    deviceTimezoneId: String = null,
+    geoEnabled: js.UndefOr[Boolean] = js.undefined,
+    isPrimaryDevice: js.UndefOr[Boolean] = js.undefined,
+    isPushRegistrationEnabled: js.UndefOr[Boolean] = js.undefined,
+    language: String = null,
+    notificationsEnabled: js.UndefOr[Boolean] = js.undefined,
+    os: OS = null,
+    sdkVersion: String = null
+  ): Installation = {
     val __obj = js.Dynamic.literal(osVersion = osVersion.asInstanceOf[js.Any])
+    if (appVersion != null) __obj.updateDynamic("appVersion")(appVersion.asInstanceOf[js.Any])
+    if (applicationUserId != null) __obj.updateDynamic("applicationUserId")(applicationUserId.asInstanceOf[js.Any])
+    if (customAttributes != null) __obj.updateDynamic("customAttributes")(customAttributes.asInstanceOf[js.Any])
+    if (deviceManufacturer != null) __obj.updateDynamic("deviceManufacturer")(deviceManufacturer.asInstanceOf[js.Any])
+    if (deviceModel != null) __obj.updateDynamic("deviceModel")(deviceModel.asInstanceOf[js.Any])
+    if (deviceName != null) __obj.updateDynamic("deviceName")(deviceName.asInstanceOf[js.Any])
+    if (!js.isUndefined(deviceSecure)) __obj.updateDynamic("deviceSecure")(deviceSecure.get.asInstanceOf[js.Any])
+    if (deviceTimezoneId != null) __obj.updateDynamic("deviceTimezoneId")(deviceTimezoneId.asInstanceOf[js.Any])
+    if (!js.isUndefined(geoEnabled)) __obj.updateDynamic("geoEnabled")(geoEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPrimaryDevice)) __obj.updateDynamic("isPrimaryDevice")(isPrimaryDevice.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPushRegistrationEnabled)) __obj.updateDynamic("isPushRegistrationEnabled")(isPushRegistrationEnabled.get.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (!js.isUndefined(notificationsEnabled)) __obj.updateDynamic("notificationsEnabled")(notificationsEnabled.get.asInstanceOf[js.Any])
+    if (os != null) __obj.updateDynamic("os")(os.asInstanceOf[js.Any])
+    if (sdkVersion != null) __obj.updateDynamic("sdkVersion")(sdkVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[Installation]
   }
-  @scala.inline
-  implicit class InstallationOps[Self <: Installation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOsVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAttributes(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceManufacturer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceManufacturer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceManufacturer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceManufacturer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSecure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSecure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTimezoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceTimezoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTimezoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceTimezoneId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeoEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPrimaryDevice(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimaryDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPrimaryDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimaryDevice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPushRegistrationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPushRegistrationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPushRegistrationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPushRegistrationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOs(value: OS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSdkVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSdkVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

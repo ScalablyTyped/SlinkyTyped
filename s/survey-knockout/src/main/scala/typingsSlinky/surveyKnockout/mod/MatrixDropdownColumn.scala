@@ -22,6 +22,8 @@ class MatrixDropdownColumn protected ()
   var hasVisibleCell: Boolean = js.native
   val index: Double = js.native
   var isRequired: Boolean = js.native
+  val isShowInMultipleColumns: Boolean = js.native
+  val isSupportMultipleColumns: Boolean = js.native
   val isVisible: Boolean = js.native
   val locRequiredErrorText: LocalizableString = js.native
   val locTitle: LocalizableString = js.native
@@ -31,6 +33,7 @@ class MatrixDropdownColumn protected ()
   var readOnly: Boolean = js.native
   var requiredErrorText: String = js.native
   var requiredIf: String = js.native
+  var showInMultipleColumns: Boolean = js.native
   val templateQuestion: Question = js.native
   var title: String = js.native
   var totalCurrency: String = js.native
@@ -51,10 +54,18 @@ class MatrixDropdownColumn protected ()
   def getDynamicProperties(): js.Array[String] = js.native
   def getDynamicPropertyName(): String = js.native
   def getDynamicType(): String = js.native
+  /* CompleteClass */
+  override def getLocale(): String = js.native
+  /* CompleteClass */
+  override def getMarkdownHtml(text: String): String = js.native
+  /* CompleteClass */
+  override def getProcessedText(text: String): String = js.native
   def setIndex(`val`: Double): Unit = js.native
   def setIsVisible(newVal: Boolean): Unit = js.native
   /* protected */ def setQuestionProperties(question: Question): Unit = js.native
+  /* protected */ def setQuestionProperties(question: Question, onUpdateJson: js.Function1[/* json */ js.Any, _]): Unit = js.native
   def updateCellQuestion(cellQuestion: Question, data: js.Any): Unit = js.native
+  def updateCellQuestion(cellQuestion: Question, data: js.Any, onUpdateJson: js.Function1[/* json */ js.Any, _]): Unit = js.native
   /* protected */ def updateTemplateQuestion(): Unit = js.native
 }
 

@@ -18,41 +18,11 @@ trait IpRuleItem extends js.Object {
 
 object IpRuleItem {
   @scala.inline
-  def apply(): IpRuleItem = {
+  def apply(ipRule: IpRule = null, ruleDesc: IpRuleDesc = null): IpRuleItem = {
     val __obj = js.Dynamic.literal()
+    if (ipRule != null) __obj.updateDynamic("ipRule")(ipRule.asInstanceOf[js.Any])
+    if (ruleDesc != null) __obj.updateDynamic("ruleDesc")(ruleDesc.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpRuleItem]
   }
-  @scala.inline
-  implicit class IpRuleItemOps[Self <: IpRuleItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpRule(value: IpRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleDesc(value: IpRuleDesc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleDesc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

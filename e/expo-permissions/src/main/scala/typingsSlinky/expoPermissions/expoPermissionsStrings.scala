@@ -1,6 +1,5 @@
 package typingsSlinky.expoPermissions
 
-import typingsSlinky.expoPermissions.permissionsTypesMod.PermissionExpiration
 import typingsSlinky.expoPermissions.permissionsTypesMod.PermissionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,7 +34,7 @@ object expoPermissionsStrings {
   sealed trait location extends PermissionType
   
   @js.native
-  sealed trait never extends PermissionExpiration
+  sealed trait never extends js.Object
   
   @js.native
   sealed trait none extends js.Object

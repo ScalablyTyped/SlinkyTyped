@@ -52,126 +52,29 @@ trait VpnConnectionArgs extends js.Object {
 
 object VpnConnectionArgs {
   @scala.inline
-  def apply(customerGatewayId: Input[String], `type`: Input[String]): VpnConnectionArgs = {
+  def apply(
+    customerGatewayId: Input[String],
+    `type`: Input[String],
+    staticRoutesOnly: Input[Boolean] = null,
+    tags: Input[StringDictionary[_]] = null,
+    transitGatewayId: Input[String] = null,
+    tunnel1InsideCidr: Input[String] = null,
+    tunnel1PresharedKey: Input[String] = null,
+    tunnel2InsideCidr: Input[String] = null,
+    tunnel2PresharedKey: Input[String] = null,
+    vpnGatewayId: Input[String] = null
+  ): VpnConnectionArgs = {
     val __obj = js.Dynamic.literal(customerGatewayId = customerGatewayId.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (staticRoutesOnly != null) __obj.updateDynamic("staticRoutesOnly")(staticRoutesOnly.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (transitGatewayId != null) __obj.updateDynamic("transitGatewayId")(transitGatewayId.asInstanceOf[js.Any])
+    if (tunnel1InsideCidr != null) __obj.updateDynamic("tunnel1InsideCidr")(tunnel1InsideCidr.asInstanceOf[js.Any])
+    if (tunnel1PresharedKey != null) __obj.updateDynamic("tunnel1PresharedKey")(tunnel1PresharedKey.asInstanceOf[js.Any])
+    if (tunnel2InsideCidr != null) __obj.updateDynamic("tunnel2InsideCidr")(tunnel2InsideCidr.asInstanceOf[js.Any])
+    if (tunnel2PresharedKey != null) __obj.updateDynamic("tunnel2PresharedKey")(tunnel2PresharedKey.asInstanceOf[js.Any])
+    if (vpnGatewayId != null) __obj.updateDynamic("vpnGatewayId")(vpnGatewayId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpnConnectionArgs]
   }
-  @scala.inline
-  implicit class VpnConnectionArgsOps[Self <: VpnConnectionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStaticRoutesOnly(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticRoutesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticRoutesOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticRoutesOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnel1InsideCidr(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1InsideCidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnel1InsideCidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1InsideCidr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnel1PresharedKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1PresharedKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnel1PresharedKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel1PresharedKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnel2InsideCidr(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2InsideCidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnel2InsideCidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2InsideCidr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnel2PresharedKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2PresharedKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnel2PresharedKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tunnel2PresharedKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpnGatewayId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpnGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnGatewayId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

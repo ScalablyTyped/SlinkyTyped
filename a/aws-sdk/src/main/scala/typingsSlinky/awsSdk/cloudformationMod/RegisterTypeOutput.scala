@@ -14,29 +14,10 @@ trait RegisterTypeOutput extends js.Object {
 
 object RegisterTypeOutput {
   @scala.inline
-  def apply(): RegisterTypeOutput = {
+  def apply(RegistrationToken: RegistrationToken = null): RegisterTypeOutput = {
     val __obj = js.Dynamic.literal()
+    if (RegistrationToken != null) __obj.updateDynamic("RegistrationToken")(RegistrationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterTypeOutput]
   }
-  @scala.inline
-  implicit class RegisterTypeOutputOps[Self <: RegisterTypeOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegistrationToken(value: RegistrationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait TeletextDestinationSettings extends js.Object {
 
 object TeletextDestinationSettings {
   @scala.inline
-  def apply(): TeletextDestinationSettings = {
+  def apply(PageNumber: stringMin3Max3Pattern1809aFAF09aEAE = null, PageTypes: listOfTeletextPageType = null): TeletextDestinationSettings = {
     val __obj = js.Dynamic.literal()
+    if (PageNumber != null) __obj.updateDynamic("PageNumber")(PageNumber.asInstanceOf[js.Any])
+    if (PageTypes != null) __obj.updateDynamic("PageTypes")(PageTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeletextDestinationSettings]
   }
-  @scala.inline
-  implicit class TeletextDestinationSettingsOps[Self <: TeletextDestinationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageNumber(value: stringMin3Max3Pattern1809aFAF09aEAE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageTypes(value: listOfTeletextPageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

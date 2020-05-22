@@ -7,14 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegionOperationsResource extends js.Object {
   /** Deletes the specified region-specific Operations resource. */
-  def delete(request: OauthtokenOperation): Request[Unit] = js.native
+  def delete(request: OauthtokenOperation): Request[Unit]
   /** Retrieves the specified region-specific Operations resource. */
-  def get(request: OauthtokenOperation): Request[Operation] = js.native
+  def get(request: OauthtokenOperation): Request[Operation]
   /** Retrieves a list of Operation resources contained within the specified region. */
-  def list(request: Filter): Request[OperationList] = js.native
+  def list(request: Filter): Request[OperationList]
 }
 
 object RegionOperationsResource {
@@ -27,31 +26,5 @@ object RegionOperationsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[RegionOperationsResource]
   }
-  @scala.inline
-  implicit class RegionOperationsResourceOps[Self <: RegionOperationsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: OauthtokenOperation => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: OauthtokenOperation => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Filter => Request[OperationList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait ListStepsInput extends js.Object {
 
 object ListStepsInput {
   @scala.inline
-  def apply(ClusterId: ClusterId): ListStepsInput = {
+  def apply(
+    ClusterId: ClusterId,
+    Marker: Marker = null,
+    StepIds: XmlStringList = null,
+    StepStates: StepStateList = null
+  ): ListStepsInput = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (StepIds != null) __obj.updateDynamic("StepIds")(StepIds.asInstanceOf[js.Any])
+    if (StepStates != null) __obj.updateDynamic("StepStates")(StepStates.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStepsInput]
   }
-  @scala.inline
-  implicit class ListStepsInputOps[Self <: ListStepsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterId(value: ClusterId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepIds(value: XmlStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepStates(value: StepStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StepStates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

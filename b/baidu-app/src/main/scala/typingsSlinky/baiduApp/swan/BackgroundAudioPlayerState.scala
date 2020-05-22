@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // 媒体-----音乐播放控制
-@js.native
 trait BackgroundAudioPlayerState extends js.Object {
   /** 选定音频的播放位置（单位：s），只有在当前有音乐播放时返回 */
-  var currentPosition: Double = js.native
+  var currentPosition: Double
   /** 歌曲数据链接，只有在当前有音乐播放时返回 */
-  var dataUrl: String = js.native
+  var dataUrl: String
   /** 音频的下载进度（整数，80 代表 80%），只有在当前有音乐播放时返回 */
-  var downloadPercent: Double = js.native
+  var downloadPercent: Double
   /** 选定音频的长度（单位：s），只有在当前有音乐播放时返回 */
-  var duration: Double = js.native
+  var duration: Double
   /** 播放状态（2：没有音乐在播放，1：播放中，0：暂停中） */
-  var status: Double = js.native
+  var status: Double
 }
 
 object BackgroundAudioPlayerState {
@@ -31,43 +30,5 @@ object BackgroundAudioPlayerState {
     val __obj = js.Dynamic.literal(currentPosition = currentPosition.asInstanceOf[js.Any], dataUrl = dataUrl.asInstanceOf[js.Any], downloadPercent = downloadPercent.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundAudioPlayerState]
   }
-  @scala.inline
-  implicit class BackgroundAudioPlayerStateOps[Self <: BackgroundAudioPlayerState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDownloadPercent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

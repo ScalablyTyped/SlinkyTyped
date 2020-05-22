@@ -43,7 +43,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-sankey
   */
-@js.native
 trait SeriesSankey_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -53,7 +52,7 @@ trait SeriesSankey_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-sankey.animation
     */
-  var animation: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean] = js.undefined
   /**
     * Delay before updating the first animation, which supports callback
     * function for different data to have different animation effect.
@@ -69,7 +68,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -85,7 +84,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -97,7 +96,7 @@ trait SeriesSankey_ extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.native
+  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -109,7 +108,7 @@ trait SeriesSankey_ extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -121,7 +120,7 @@ trait SeriesSankey_ extends js.Object {
     * "linear"
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasing: js.UndefOr[String] = js.undefined
   /**
     * Easing method used for animation.
     *
@@ -130,7 +129,7 @@ trait SeriesSankey_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.native
+  var animationEasingUpdate: js.UndefOr[String] = js.undefined
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -141,7 +140,7 @@ trait SeriesSankey_ extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-sankey.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.native
+  var animationThreshold: js.UndefOr[Double] = js.undefined
   /**
     * Distance between sankey component and the bottom side of the
     * container.
@@ -154,7 +153,7 @@ trait SeriesSankey_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-sankey.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.undefined
   /**
     * Data array of series, which can be a single data value, like:
     *
@@ -190,7 +189,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.data
     */
-  var data: js.UndefOr[js.Array[(js.Array[Double | DataObject]) | DataObject | Double]] = js.native
+  var data: js.UndefOr[js.Array[(js.Array[Double | DataObject]) | DataObject | Double]] = js.undefined
   /**
     * The drag-and-drop interaction of the node, which is enabled by
     * default.
@@ -203,7 +202,7 @@ trait SeriesSankey_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-sankey.draggable
     */
-  var draggable: js.UndefOr[Boolean] = js.native
+  var draggable: js.UndefOr[Boolean] = js.undefined
   /**
     * Equals to
     * [links](https://echarts.apache.org/en/option.html#series-sankey.links)
@@ -211,11 +210,11 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.edges
     */
-  var edges: js.UndefOr[js.Array[_]] = js.native
+  var edges: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis
     */
-  var emphasis: js.UndefOr[ItemStyleLabelLineStyle] = js.native
+  var emphasis: js.UndefOr[ItemStyleLabelLineStyle] = js.undefined
   /**
     * Support when mouse hovering over a node or an edge, the adjacent
     * nodes and edges are also highlighted.
@@ -239,14 +238,14 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.focusNodeAdjacency
     */
-  var focusNodeAdjacency: js.UndefOr[Boolean | String] = js.native
+  var focusNodeAdjacency: js.UndefOr[Boolean | String] = js.undefined
   /**
     * Height of sankey component.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.height
     */
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double | String] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -255,21 +254,21 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * The style of node rectangle in sankey graphs.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.undefined
   /**
     * `label` describes the text label style in each rectangular node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.label
     */
-  var label: js.UndefOr[BorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.undefined
   /**
     * The iterations of layout, which is used to continuously optimize
     * the positions of nodes in graph, decreasing the overlapping between
@@ -285,7 +284,7 @@ trait SeriesSankey_ extends js.Object {
     * 32
     * @see https://echarts.apache.org/en/option.html#series-sankey.layoutIterations
     */
-  var layoutIterations: js.UndefOr[Double] = js.native
+  var layoutIterations: js.UndefOr[Double] = js.undefined
   /**
     * Distance between sankey component and the left side of the container.
     *
@@ -301,7 +300,7 @@ trait SeriesSankey_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-sankey.left
     */
-  var left: js.UndefOr[Double | String] = js.native
+  var left: js.UndefOr[Double | String] = js.undefined
   /**
     * The line style of sankey graph, in which
     * [lineStyle.color](https://echarts.apache.org/en/option.html#series-sankey.lineStyle.color)
@@ -312,7 +311,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle
     */
-  var lineStyle: js.UndefOr[CurvenessOpacity] = js.native
+  var lineStyle: js.UndefOr[CurvenessOpacity] = js.undefined
   /**
     * The links between nodes.
     * **Notes: The Sankey diagram theoretically only supports Directed
@@ -324,7 +323,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.links
     */
-  var links: js.UndefOr[Source] = js.native
+  var links: js.UndefOr[Source] = js.undefined
   /**
     * The gap between any two rectangles in each column from the graph.
     *
@@ -333,7 +332,7 @@ trait SeriesSankey_ extends js.Object {
     * 8
     * @see https://echarts.apache.org/en/option.html#series-sankey.nodeGap
     */
-  var nodeGap: js.UndefOr[Double] = js.native
+  var nodeGap: js.UndefOr[Double] = js.undefined
   /**
     * The node width of rectangle in graph.
     *
@@ -342,7 +341,7 @@ trait SeriesSankey_ extends js.Object {
     * 20
     * @see https://echarts.apache.org/en/option.html#series-sankey.nodeWidth
     */
-  var nodeWidth: js.UndefOr[Double] = js.native
+  var nodeWidth: js.UndefOr[Double] = js.undefined
   /**
     * Equals to
     * [data](https://echarts.apache.org/en/option.html#series-sankey.data)
@@ -350,7 +349,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.nodes
     */
-  var nodes: js.UndefOr[js.Array[_]] = js.native
+  var nodes: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The layout direction of the nodes in the Sankey diagram, which
     * can be horizontal from left to right or vertical from top to
@@ -362,7 +361,7 @@ trait SeriesSankey_ extends js.Object {
     * "horizontal"
     * @see https://echarts.apache.org/en/option.html#series-sankey.orient
     */
-  var orient: js.UndefOr[String] = js.native
+  var orient: js.UndefOr[String] = js.undefined
   /**
     * Distance between sankey component and the right side of the container.
     *
@@ -374,7 +373,7 @@ trait SeriesSankey_ extends js.Object {
     * 20%
     * @see https://echarts.apache.org/en/option.html#series-sankey.right
     */
-  var right: js.UndefOr[Double | String] = js.native
+  var right: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -383,14 +382,14 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.silent
     */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.tooltip
     */
-  var tooltip: js.UndefOr[ExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.undefined
   /**
     * Distance between sankey component and the top side of the container.
     *
@@ -406,20 +405,20 @@ trait SeriesSankey_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-sankey.top
     */
-  var top: js.UndefOr[Double | String] = js.native
+  var top: js.UndefOr[Double | String] = js.undefined
   /**
     * @default
     * "sankey"
     * @see https://echarts.apache.org/en/option.html#series-sankey.type
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Width of sankey component.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.width
     */
-  var width: js.UndefOr[Double | String] = js.native
+  var width: js.UndefOr[Double | String] = js.undefined
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -434,7 +433,7 @@ trait SeriesSankey_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-sankey.z
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -452,430 +451,83 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesSankey_ {
   @scala.inline
-  def apply(): SeriesSankey_ = {
+  def apply(
+    animation: js.UndefOr[Boolean] = js.undefined,
+    animationDelay: js.Function | Double = null,
+    animationDelayUpdate: js.Function | Double = null,
+    animationDuration: js.Function | Double = null,
+    animationDurationUpdate: js.Function | Double = null,
+    animationEasing: String = null,
+    animationEasingUpdate: String = null,
+    animationThreshold: js.UndefOr[Double] = js.undefined,
+    bottom: Double | String = null,
+    data: js.Array[(js.Array[Double | DataObject]) | DataObject | Double] = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    edges: js.Array[_] = null,
+    emphasis: ItemStyleLabelLineStyle = null,
+    focusNodeAdjacency: Boolean | String = null,
+    height: Double | String = null,
+    id: String = null,
+    itemStyle: BorderType = null,
+    label: BorderRadius = null,
+    layoutIterations: js.UndefOr[Double] = js.undefined,
+    left: Double | String = null,
+    lineStyle: CurvenessOpacity = null,
+    links: Source = null,
+    nodeGap: js.UndefOr[Double] = js.undefined,
+    nodeWidth: js.UndefOr[Double] = js.undefined,
+    nodes: js.Array[_] = null,
+    orient: String = null,
+    right: Double | String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    tooltip: ExtraCssText = null,
+    top: Double | String = null,
+    `type`: String = null,
+    width: Double | String = null,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): SeriesSankey_ = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
+    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
+    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationThreshold)) __obj.updateDynamic("animationThreshold")(animationThreshold.get.asInstanceOf[js.Any])
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (edges != null) __obj.updateDynamic("edges")(edges.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (focusNodeAdjacency != null) __obj.updateDynamic("focusNodeAdjacency")(focusNodeAdjacency.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(layoutIterations)) __obj.updateDynamic("layoutIterations")(layoutIterations.get.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeGap)) __obj.updateDynamic("nodeGap")(nodeGap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeWidth)) __obj.updateDynamic("nodeWidth")(nodeWidth.get.asInstanceOf[js.Any])
+    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
+    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesSankey_]
   }
-  @scala.inline
-  implicit class SeriesSankey_Ops[Self <: SeriesSankey_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelayUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasingUpdate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasingUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottom(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[(js.Array[Double | DataObject]) | DataObject | Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdges(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: ItemStyleLabelLineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusNodeAdjacency(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusNodeAdjacency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusNodeAdjacency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusNodeAdjacency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: BorderRadius): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayoutIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayoutIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: CurvenessOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodes(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrient(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ExtraCssText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

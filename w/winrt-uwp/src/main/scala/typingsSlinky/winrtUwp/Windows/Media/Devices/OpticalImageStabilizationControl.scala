@@ -6,14 +6,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** When supported, allows an app to enable optical image stabilization on the capture device. */
-@js.native
 trait OpticalImageStabilizationControl extends js.Object {
   /** Gets or sets a value indicating the current optical image stabilization mode of the capture device. */
-  var mode: OpticalImageStabilizationMode = js.native
+  var mode: OpticalImageStabilizationMode
   /** Gets a value that indicates if the capture device supports the OpticalImageStabilizationControl . */
-  var supported: Boolean = js.native
+  var supported: Boolean
   /** Gets the list of OpticalImageStabilizationMode values indicating the modes supported by the capture device. */
-  var supportedModes: IVectorView[OpticalImageStabilizationMode] = js.native
+  var supportedModes: IVectorView[OpticalImageStabilizationMode]
 }
 
 object OpticalImageStabilizationControl {
@@ -26,31 +25,5 @@ object OpticalImageStabilizationControl {
     val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], supported = supported.asInstanceOf[js.Any], supportedModes = supportedModes.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpticalImageStabilizationControl]
   }
-  @scala.inline
-  implicit class OpticalImageStabilizationControlOps[Self <: OpticalImageStabilizationControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: OpticalImageStabilizationMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupported(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedModes(value: IVectorView[OpticalImageStabilizationMode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

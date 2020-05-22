@@ -30,53 +30,12 @@ trait SchemaGetIosReopenAttributionRequest extends js.Object {
 
 object SchemaGetIosReopenAttributionRequest {
   @scala.inline
-  def apply(): SchemaGetIosReopenAttributionRequest = {
+  def apply(bundleId: String = null, requestedLink: String = null, sdkVersion: String = null): SchemaGetIosReopenAttributionRequest = {
     val __obj = js.Dynamic.literal()
+    if (bundleId != null) __obj.updateDynamic("bundleId")(bundleId.asInstanceOf[js.Any])
+    if (requestedLink != null) __obj.updateDynamic("requestedLink")(requestedLink.asInstanceOf[js.Any])
+    if (sdkVersion != null) __obj.updateDynamic("sdkVersion")(sdkVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetIosReopenAttributionRequest]
   }
-  @scala.inline
-  implicit class SchemaGetIosReopenAttributionRequestOps[Self <: SchemaGetIosReopenAttributionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSdkVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSdkVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sdkVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

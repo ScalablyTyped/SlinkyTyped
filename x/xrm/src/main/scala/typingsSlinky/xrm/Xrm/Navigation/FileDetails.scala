@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileDetails extends js.Object {
   /**
     * Contents of the file.
     */
-  var fileContent: String = js.native
+  var fileContent: String
   /**
     * Name of the file.
     */
-  var fileName: String = js.native
+  var fileName: String
   /**
     * Size of the file in KB.
     */
-  var fileSize: Double = js.native
+  var fileSize: Double
   /**
     * String. MIME type of the file.
     */
-  var mimeType: String = js.native
+  var mimeType: String
 }
 
 object FileDetails {
@@ -30,37 +29,5 @@ object FileDetails {
     val __obj = js.Dynamic.literal(fileContent = fileContent.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], fileSize = fileSize.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileDetails]
   }
-  @scala.inline
-  implicit class FileDetailsOps[Self <: FileDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

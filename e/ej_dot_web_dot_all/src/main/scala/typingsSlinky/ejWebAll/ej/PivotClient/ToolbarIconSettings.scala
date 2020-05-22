@@ -4,279 +4,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToolbarIconSettings extends js.Object {
   /** Allows you to set the visibility of Add Report icon in the toolbar panel.
     * @Default {true}
     */
-  var enableAddReport: js.UndefOr[Boolean] = js.native
+  var enableAddReport: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Calculated Member icon in the toolbar panel.
     * @Default {false}
     */
-  var enableCalculatedMember: js.UndefOr[Boolean] = js.native
+  var enableCalculatedMember: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Chart Types icon in the toolbar panel.
     * @Default {true}
     */
-  var enableChartTypes: js.UndefOr[Boolean] = js.native
+  var enableChartTypes: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of DB Manipulation icon in the toolbar panel.
     * @Default {true}
     */
-  var enableDBManipulation: js.UndefOr[Boolean] = js.native
+  var enableDBManipulation: js.UndefOr[Boolean] = js.undefined
   /** Allows to set the visibility of Defer Update icon in the toolbar panel.
     * @Default {false}
     */
-  var enableDeferUpdate: js.UndefOr[Boolean] = js.native
+  var enableDeferUpdate: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Excel Export icon in the toolbar panel.
     * @Default {true}
     */
-  var enableExcelExport: js.UndefOr[Boolean] = js.native
+  var enableExcelExport: js.UndefOr[Boolean] = js.undefined
   /** Allows to set the visibility of Full Screen icon in the toolbar panel.
     * @Default {false}
     */
-  var enableFullScreen: js.UndefOr[Boolean] = js.native
+  var enableFullScreen: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of MDX Query icon in the toolbar panel.
     * @Default {true}
     */
-  var enableMDXQuery: js.UndefOr[Boolean] = js.native
+  var enableMDXQuery: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of New Report icon in the toolbar panel.
     * @Default {true}
     */
-  var enableNewReport: js.UndefOr[Boolean] = js.native
+  var enableNewReport: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of PDF Export icon in the toolbar panel.
     * @Default {true}
     */
-  var enablePdfExport: js.UndefOr[Boolean] = js.native
+  var enablePdfExport: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Remove Report icon in the toolbar panel.
     * @Default {true}
     */
-  var enableRemoveReport: js.UndefOr[Boolean] = js.native
+  var enableRemoveReport: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Rename Report icon in the toolbar panel.
     * @Default {true}
     */
-  var enableRenameReport: js.UndefOr[Boolean] = js.native
+  var enableRenameReport: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Sort/Filter Column icon in the toolbar panel.
     * @Default {true}
     */
-  var enableSortOrFilterColumn: js.UndefOr[Boolean] = js.native
+  var enableSortOrFilterColumn: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Sort/Filter Row icon in the toolbar panel.
     * @Default {true}
     */
-  var enableSortOrFilterRow: js.UndefOr[Boolean] = js.native
+  var enableSortOrFilterRow: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Toggle Axis icon in the toolbar panel.
     * @Default {true}
     */
-  var enableToggleAxis: js.UndefOr[Boolean] = js.native
+  var enableToggleAxis: js.UndefOr[Boolean] = js.undefined
   /** Allows you to set the visibility of Word Export icon in the toolbar panel.
     * @Default {true}
     */
-  var enableWordExport: js.UndefOr[Boolean] = js.native
+  var enableWordExport: js.UndefOr[Boolean] = js.undefined
 }
 
 object ToolbarIconSettings {
   @scala.inline
-  def apply(): ToolbarIconSettings = {
+  def apply(
+    enableAddReport: js.UndefOr[Boolean] = js.undefined,
+    enableCalculatedMember: js.UndefOr[Boolean] = js.undefined,
+    enableChartTypes: js.UndefOr[Boolean] = js.undefined,
+    enableDBManipulation: js.UndefOr[Boolean] = js.undefined,
+    enableDeferUpdate: js.UndefOr[Boolean] = js.undefined,
+    enableExcelExport: js.UndefOr[Boolean] = js.undefined,
+    enableFullScreen: js.UndefOr[Boolean] = js.undefined,
+    enableMDXQuery: js.UndefOr[Boolean] = js.undefined,
+    enableNewReport: js.UndefOr[Boolean] = js.undefined,
+    enablePdfExport: js.UndefOr[Boolean] = js.undefined,
+    enableRemoveReport: js.UndefOr[Boolean] = js.undefined,
+    enableRenameReport: js.UndefOr[Boolean] = js.undefined,
+    enableSortOrFilterColumn: js.UndefOr[Boolean] = js.undefined,
+    enableSortOrFilterRow: js.UndefOr[Boolean] = js.undefined,
+    enableToggleAxis: js.UndefOr[Boolean] = js.undefined,
+    enableWordExport: js.UndefOr[Boolean] = js.undefined
+  ): ToolbarIconSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableAddReport)) __obj.updateDynamic("enableAddReport")(enableAddReport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCalculatedMember)) __obj.updateDynamic("enableCalculatedMember")(enableCalculatedMember.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableChartTypes)) __obj.updateDynamic("enableChartTypes")(enableChartTypes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableDBManipulation)) __obj.updateDynamic("enableDBManipulation")(enableDBManipulation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableDeferUpdate)) __obj.updateDynamic("enableDeferUpdate")(enableDeferUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableExcelExport)) __obj.updateDynamic("enableExcelExport")(enableExcelExport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableFullScreen)) __obj.updateDynamic("enableFullScreen")(enableFullScreen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableMDXQuery)) __obj.updateDynamic("enableMDXQuery")(enableMDXQuery.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableNewReport)) __obj.updateDynamic("enableNewReport")(enableNewReport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePdfExport)) __obj.updateDynamic("enablePdfExport")(enablePdfExport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRemoveReport)) __obj.updateDynamic("enableRemoveReport")(enableRemoveReport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRenameReport)) __obj.updateDynamic("enableRenameReport")(enableRenameReport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSortOrFilterColumn)) __obj.updateDynamic("enableSortOrFilterColumn")(enableSortOrFilterColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSortOrFilterRow)) __obj.updateDynamic("enableSortOrFilterRow")(enableSortOrFilterRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableToggleAxis)) __obj.updateDynamic("enableToggleAxis")(enableToggleAxis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableWordExport)) __obj.updateDynamic("enableWordExport")(enableWordExport.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToolbarIconSettings]
   }
-  @scala.inline
-  implicit class ToolbarIconSettingsOps[Self <: ToolbarIconSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableAddReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAddReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAddReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAddReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCalculatedMember(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCalculatedMember")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCalculatedMember: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCalculatedMember")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableChartTypes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableChartTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableChartTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableChartTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableDBManipulation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDBManipulation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableDBManipulation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDBManipulation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableDeferUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDeferUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableDeferUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDeferUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableExcelExport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableExcelExport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableExcelExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableExcelExport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableFullScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFullScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableFullScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFullScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableMDXQuery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMDXQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMDXQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMDXQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableNewReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNewReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableNewReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNewReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePdfExport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePdfExport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePdfExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePdfExport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableRemoveReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRemoveReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRemoveReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRemoveReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableRenameReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRenameReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRenameReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRenameReport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSortOrFilterColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSortOrFilterColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSortOrFilterColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSortOrFilterColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSortOrFilterRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSortOrFilterRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSortOrFilterRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSortOrFilterRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableToggleAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableToggleAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableToggleAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableToggleAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableWordExport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWordExport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableWordExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWordExport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

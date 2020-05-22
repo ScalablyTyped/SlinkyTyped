@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 /**
   * A builder for SuggestionsResponse objects.
   */
-@js.native
 trait SuggestionsResponseBuilder extends js.Object {
-  def build(): SuggestionsResponse = js.native
-  def setSuggestions(suggestions: Suggestions): SuggestionsResponseBuilder = js.native
+  def build(): SuggestionsResponse
+  def setSuggestions(suggestions: Suggestions): SuggestionsResponseBuilder
 }
 
 object SuggestionsResponseBuilder {
@@ -19,25 +18,5 @@ object SuggestionsResponseBuilder {
     val __obj = js.Dynamic.literal(build = js.Any.fromFunction0(build), setSuggestions = js.Any.fromFunction1(setSuggestions))
     __obj.asInstanceOf[SuggestionsResponseBuilder]
   }
-  @scala.inline
-  implicit class SuggestionsResponseBuilderOps[Self <: SuggestionsResponseBuilder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuild(value: () => SuggestionsResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetSuggestions(value: Suggestions => SuggestionsResponseBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSuggestions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

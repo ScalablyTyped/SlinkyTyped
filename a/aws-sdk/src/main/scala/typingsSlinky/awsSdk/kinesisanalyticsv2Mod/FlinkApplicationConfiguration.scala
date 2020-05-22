@@ -22,53 +22,16 @@ trait FlinkApplicationConfiguration extends js.Object {
 
 object FlinkApplicationConfiguration {
   @scala.inline
-  def apply(): FlinkApplicationConfiguration = {
+  def apply(
+    CheckpointConfiguration: CheckpointConfiguration = null,
+    MonitoringConfiguration: MonitoringConfiguration = null,
+    ParallelismConfiguration: ParallelismConfiguration = null
+  ): FlinkApplicationConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (CheckpointConfiguration != null) __obj.updateDynamic("CheckpointConfiguration")(CheckpointConfiguration.asInstanceOf[js.Any])
+    if (MonitoringConfiguration != null) __obj.updateDynamic("MonitoringConfiguration")(MonitoringConfiguration.asInstanceOf[js.Any])
+    if (ParallelismConfiguration != null) __obj.updateDynamic("ParallelismConfiguration")(ParallelismConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlinkApplicationConfiguration]
   }
-  @scala.inline
-  implicit class FlinkApplicationConfigurationOps[Self <: FlinkApplicationConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckpointConfiguration(value: CheckpointConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckpointConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonitoringConfiguration(value: MonitoringConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonitoringConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelismConfiguration(value: ParallelismConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelismConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelismConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelismConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

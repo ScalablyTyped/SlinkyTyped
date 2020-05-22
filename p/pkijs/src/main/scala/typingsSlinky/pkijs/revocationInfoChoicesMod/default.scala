@@ -8,6 +8,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends RevocationInfoChoices {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var crls: js.Array[typingsSlinky.pkijs.certificateRevocationListMod.default] = js.native
+  /* CompleteClass */
+  override var otherRevocationInfos: js.Array[typingsSlinky.pkijs.otherRevocationInfoFormatMod.default] = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

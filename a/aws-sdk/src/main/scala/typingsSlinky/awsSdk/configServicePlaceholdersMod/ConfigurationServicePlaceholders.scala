@@ -119,6 +119,7 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var ioteventsdata: js.UndefOr[typingsSlinky.awsSdk.ioteventsdataMod.ClientConfiguration] = js.native
   var iotjobsdataplane: js.UndefOr[typingsSlinky.awsSdk.iotjobsdataplaneMod.ClientConfiguration] = js.native
   var iotsecuretunneling: js.UndefOr[typingsSlinky.awsSdk.iotsecuretunnelingMod.ClientConfiguration] = js.native
+  var iotsitewise: js.UndefOr[typingsSlinky.awsSdk.iotsitewiseMod.ClientConfiguration] = js.native
   var iotthingsgraph: js.UndefOr[typingsSlinky.awsSdk.iotthingsgraphMod.ClientConfiguration] = js.native
   var kafka: js.UndefOr[typingsSlinky.awsSdk.kafkaMod.ClientConfiguration] = js.native
   var kendra: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ClientConfiguration] = js.native
@@ -138,6 +139,7 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var lightsail: js.UndefOr[typingsSlinky.awsSdk.lightsailMod.ClientConfiguration] = js.native
   var machinelearning: js.UndefOr[typingsSlinky.awsSdk.machinelearningMod.ClientConfiguration] = js.native
   var macie: js.UndefOr[typingsSlinky.awsSdk.macieMod.ClientConfiguration] = js.native
+  var macie2: js.UndefOr[typingsSlinky.awsSdk.macie2Mod.ClientConfiguration] = js.native
   var managedblockchain: js.UndefOr[typingsSlinky.awsSdk.managedblockchainMod.ClientConfiguration] = js.native
   var marketplacecatalog: js.UndefOr[typingsSlinky.awsSdk.marketplacecatalogMod.ClientConfiguration] = js.native
   var marketplacecommerceanalytics: js.UndefOr[typingsSlinky.awsSdk.marketplacecommerceanalyticsMod.ClientConfiguration] = js.native
@@ -215,6 +217,7 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var sts: js.UndefOr[typingsSlinky.awsSdk.stsMod.ClientConfiguration] = js.native
   var support: js.UndefOr[typingsSlinky.awsSdk.supportMod.ClientConfiguration] = js.native
   var swf: js.UndefOr[typingsSlinky.awsSdk.swfMod.ClientConfiguration] = js.native
+  var synthetics: js.UndefOr[typingsSlinky.awsSdk.syntheticsMod.ClientConfiguration] = js.native
   var textract: js.UndefOr[typingsSlinky.awsSdk.textractMod.ClientConfiguration] = js.native
   var transcribeservice: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ClientConfiguration] = js.native
   var transfer: js.UndefOr[typingsSlinky.awsSdk.transferMod.ClientConfiguration] = js.native

@@ -75,6 +75,12 @@ package object Octokit {
   type IssuesReplaceLabelsResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.IssuesReplaceLabelsResponseItem]
   type LicensesListCommonlyUsedResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.LicensesListCommonlyUsedResponseItem]
   type LicensesListResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.LicensesListResponseItem]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.octokitRest.anon.Link
+    - typingsSlinky.octokitRest.anon.Headers
+    - java.lang.String
+  */
+  type Link = typingsSlinky.octokitRest.mod.Octokit._Link | java.lang.String
   type MigrationsGetCommitAuthorsResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.MigrationsGetCommitAuthorsResponseItem]
   type MigrationsGetLargeFilesResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.MigrationsGetLargeFilesResponseItem]
   type MigrationsListForAuthenticatedUserResponse = js.Array[
@@ -154,6 +160,7 @@ package object Octokit {
   ]
   type ReposGetCodeFrequencyStatsResponse = js.Array[js.Array[scala.Double]]
   type ReposGetCommitActivityStatsResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.ReposGetCommitActivityStatsResponseItem]
+  type ReposGetContentsResponse = typingsSlinky.octokitRest.anon.Content | js.Array[typingsSlinky.octokitRest.mod.Octokit.ReposGetContentsResponseItem]
   type ReposGetContributorsStatsResponse = js.Array[typingsSlinky.octokitRest.mod.Octokit.ReposGetContributorsStatsResponseItem]
   type ReposGetPunchCardStatsResponse = js.Array[js.Array[scala.Double]]
   type ReposGetTeamsWithAccessToProtectedBranchResponse = js.Array[

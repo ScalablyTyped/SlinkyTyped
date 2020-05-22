@@ -26,65 +26,18 @@ trait MergeMetadata extends js.Object {
 
 object MergeMetadata {
   @scala.inline
-  def apply(): MergeMetadata = {
+  def apply(
+    isMerged: js.UndefOr[IsMerged] = js.undefined,
+    mergeCommitId: CommitId = null,
+    mergeOption: MergeOptionTypeEnum = null,
+    mergedBy: Arn = null
+  ): MergeMetadata = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isMerged)) __obj.updateDynamic("isMerged")(isMerged.get.asInstanceOf[js.Any])
+    if (mergeCommitId != null) __obj.updateDynamic("mergeCommitId")(mergeCommitId.asInstanceOf[js.Any])
+    if (mergeOption != null) __obj.updateDynamic("mergeOption")(mergeOption.asInstanceOf[js.Any])
+    if (mergedBy != null) __obj.updateDynamic("mergedBy")(mergedBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergeMetadata]
   }
-  @scala.inline
-  implicit class MergeMetadataOps[Self <: MergeMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsMerged(value: IsMerged): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMerged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMerged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMerged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeCommitId(value: CommitId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCommitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeCommitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCommitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeOption(value: MergeOptionTypeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergedBy(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergedBy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,55 +7,27 @@ import scala.scalajs.js.annotation._
 /**
   * Options for a Gmail Attachments.
   */
-@js.native
 trait GmailAttachmentOptions extends js.Object {
   /**
     *  If the returned array of Blob attachments should include regular (non-inline) attachments.
     */
-  var includeAttachments: js.UndefOr[Boolean] = js.native
+  var includeAttachments: js.UndefOr[Boolean] = js.undefined
   /**
     * If the returned array of Blob attachments should include inline images.
     */
-  var includeInlineImages: js.UndefOr[Boolean] = js.native
+  var includeInlineImages: js.UndefOr[Boolean] = js.undefined
 }
 
 object GmailAttachmentOptions {
   @scala.inline
-  def apply(): GmailAttachmentOptions = {
+  def apply(
+    includeAttachments: js.UndefOr[Boolean] = js.undefined,
+    includeInlineImages: js.UndefOr[Boolean] = js.undefined
+  ): GmailAttachmentOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeAttachments)) __obj.updateDynamic("includeAttachments")(includeAttachments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeInlineImages)) __obj.updateDynamic("includeInlineImages")(includeInlineImages.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GmailAttachmentOptions]
   }
-  @scala.inline
-  implicit class GmailAttachmentOptionsOps[Self <: GmailAttachmentOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeAttachments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAttachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeAttachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeInlineImages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInlineImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeInlineImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInlineImages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

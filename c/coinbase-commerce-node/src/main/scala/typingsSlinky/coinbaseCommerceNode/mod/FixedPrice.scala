@@ -8,16 +8,15 @@ import scala.scalajs.js.annotation._
 /**
   * Fixed price resource.
   */
-@js.native
 trait FixedPrice extends js.Object {
   /**
     * Local price in fiat currency.
     */
-  var local_price: Price[FiatCurrency] = js.native
+  var local_price: Price[FiatCurrency]
   /**
     * Pricing type
     */
-  var pricing_type: fixed_price = js.native
+  var pricing_type: fixed_price
 }
 
 object FixedPrice {
@@ -26,25 +25,5 @@ object FixedPrice {
     val __obj = js.Dynamic.literal(local_price = local_price.asInstanceOf[js.Any], pricing_type = pricing_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[FixedPrice]
   }
-  @scala.inline
-  implicit class FixedPriceOps[Self <: FixedPrice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocal_price(value: Price[FiatCurrency]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local_price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPricing_type(value: fixed_price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/downloader.html](http://www.html5plus.org/doc/zh_cn/downloader.html)
   */
-@js.native
 trait PlusDownloaderDownloadEvent extends js.Object {
   /**
     * 下载任务状态变化事件
@@ -17,34 +16,15 @@ trait PlusDownloaderDownloadEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/downloader.html](http://www.html5plus.org/doc/zh_cn/downloader.html)
     */
-  var statechanged: js.UndefOr[String] = js.native
+  var statechanged: js.UndefOr[String] = js.undefined
 }
 
 object PlusDownloaderDownloadEvent {
   @scala.inline
-  def apply(): PlusDownloaderDownloadEvent = {
+  def apply(statechanged: String = null): PlusDownloaderDownloadEvent = {
     val __obj = js.Dynamic.literal()
+    if (statechanged != null) __obj.updateDynamic("statechanged")(statechanged.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusDownloaderDownloadEvent]
   }
-  @scala.inline
-  implicit class PlusDownloaderDownloadEventOps[Self <: PlusDownloaderDownloadEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatechanged(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statechanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatechanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statechanged")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

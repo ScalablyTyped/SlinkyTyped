@@ -9,10 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DownloadErrorResponse extends js.Object {
   /** Detail about that error */
-  var details: js.UndefOr[String] = js.native
+  var details: js.UndefOr[String] = js.undefined
   /**
     * Error reason
     * - `not_enabled` - the download feature isn't enabled by the user
@@ -25,40 +24,18 @@ trait DownloadErrorResponse extends js.Object {
     * - `not_succeeded` - the download wasn't started or failed, the
     * details attribute may provide more information
     */
-  var error: not_enabled | not_whitelisted | not_permitted | not_supported | not_succeeded = js.native
+  var error: not_enabled | not_whitelisted | not_permitted | not_supported | not_succeeded
 }
 
 object DownloadErrorResponse {
   @scala.inline
-  def apply(error: not_enabled | not_whitelisted | not_permitted | not_supported | not_succeeded): DownloadErrorResponse = {
+  def apply(
+    error: not_enabled | not_whitelisted | not_permitted | not_supported | not_succeeded,
+    details: String = null
+  ): DownloadErrorResponse = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
+    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
     __obj.asInstanceOf[DownloadErrorResponse]
   }
-  @scala.inline
-  implicit class DownloadErrorResponseOps[Self <: DownloadErrorResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: not_enabled | not_whitelisted | not_permitted | not_supported | not_succeeded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

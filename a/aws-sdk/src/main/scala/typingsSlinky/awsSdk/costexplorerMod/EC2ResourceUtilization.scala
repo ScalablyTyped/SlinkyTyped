@@ -22,53 +22,16 @@ trait EC2ResourceUtilization extends js.Object {
 
 object EC2ResourceUtilization {
   @scala.inline
-  def apply(): EC2ResourceUtilization = {
+  def apply(
+    MaxCpuUtilizationPercentage: GenericString = null,
+    MaxMemoryUtilizationPercentage: GenericString = null,
+    MaxStorageUtilizationPercentage: GenericString = null
+  ): EC2ResourceUtilization = {
     val __obj = js.Dynamic.literal()
+    if (MaxCpuUtilizationPercentage != null) __obj.updateDynamic("MaxCpuUtilizationPercentage")(MaxCpuUtilizationPercentage.asInstanceOf[js.Any])
+    if (MaxMemoryUtilizationPercentage != null) __obj.updateDynamic("MaxMemoryUtilizationPercentage")(MaxMemoryUtilizationPercentage.asInstanceOf[js.Any])
+    if (MaxStorageUtilizationPercentage != null) __obj.updateDynamic("MaxStorageUtilizationPercentage")(MaxStorageUtilizationPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2ResourceUtilization]
   }
-  @scala.inline
-  implicit class EC2ResourceUtilizationOps[Self <: EC2ResourceUtilization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxCpuUtilizationPercentage(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCpuUtilizationPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxCpuUtilizationPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCpuUtilizationPercentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMemoryUtilizationPercentage(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxMemoryUtilizationPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMemoryUtilizationPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxMemoryUtilizationPercentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxStorageUtilizationPercentage(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxStorageUtilizationPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxStorageUtilizationPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxStorageUtilizationPercentage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

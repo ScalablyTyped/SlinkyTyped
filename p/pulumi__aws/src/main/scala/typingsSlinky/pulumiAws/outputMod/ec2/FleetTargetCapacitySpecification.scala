@@ -26,53 +26,16 @@ trait FleetTargetCapacitySpecification extends js.Object {
 
 object FleetTargetCapacitySpecification {
   @scala.inline
-  def apply(defaultTargetCapacityType: String, totalTargetCapacity: Double): FleetTargetCapacitySpecification = {
+  def apply(
+    defaultTargetCapacityType: String,
+    totalTargetCapacity: Double,
+    onDemandTargetCapacity: js.UndefOr[Double] = js.undefined,
+    spotTargetCapacity: js.UndefOr[Double] = js.undefined
+  ): FleetTargetCapacitySpecification = {
     val __obj = js.Dynamic.literal(defaultTargetCapacityType = defaultTargetCapacityType.asInstanceOf[js.Any], totalTargetCapacity = totalTargetCapacity.asInstanceOf[js.Any])
+    if (!js.isUndefined(onDemandTargetCapacity)) __obj.updateDynamic("onDemandTargetCapacity")(onDemandTargetCapacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spotTargetCapacity)) __obj.updateDynamic("spotTargetCapacity")(spotTargetCapacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FleetTargetCapacitySpecification]
   }
-  @scala.inline
-  implicit class FleetTargetCapacitySpecificationOps[Self <: FleetTargetCapacitySpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultTargetCapacityType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTargetCapacityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalTargetCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalTargetCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnDemandTargetCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandTargetCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDemandTargetCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandTargetCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotTargetCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotTargetCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotTargetCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotTargetCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait Environment extends js.Object {
 
 object Environment {
   @scala.inline
-  def apply(): Environment = {
+  def apply(Variables: EnvironmentVariables = null): Environment = {
     val __obj = js.Dynamic.literal()
+    if (Variables != null) __obj.updateDynamic("Variables")(Variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[Environment]
   }
-  @scala.inline
-  implicit class EnvironmentOps[Self <: Environment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVariables(value: EnvironmentVariables): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Variables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

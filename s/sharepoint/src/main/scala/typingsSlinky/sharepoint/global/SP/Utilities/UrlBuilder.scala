@@ -9,6 +9,13 @@ import scala.scalajs.js.annotation._
 class UrlBuilder protected ()
   extends typingsSlinky.sharepoint.SP.Utilities.UrlBuilder {
   def this(path: String) = this()
+  /* CompleteClass */
+  override def addKeyValueQueryString(key: String, value: String): Unit = js.native
+  /* CompleteClass */
+  override def combinePath(path: String): Unit = js.native
+  /** Returns the resulting url */
+  /* CompleteClass */
+  override def get_url(): String = js.native
 }
 
 /* static members */

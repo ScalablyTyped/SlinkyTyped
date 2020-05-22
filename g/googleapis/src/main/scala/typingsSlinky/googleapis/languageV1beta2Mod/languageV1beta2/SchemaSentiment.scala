@@ -25,41 +25,11 @@ trait SchemaSentiment extends js.Object {
 
 object SchemaSentiment {
   @scala.inline
-  def apply(): SchemaSentiment = {
+  def apply(magnitude: js.UndefOr[Double] = js.undefined, score: js.UndefOr[Double] = js.undefined): SchemaSentiment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(magnitude)) __obj.updateDynamic("magnitude")(magnitude.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(score)) __obj.updateDynamic("score")(score.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSentiment]
   }
-  @scala.inline
-  implicit class SchemaSentimentOps[Self <: SchemaSentiment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMagnitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("magnitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMagnitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("magnitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

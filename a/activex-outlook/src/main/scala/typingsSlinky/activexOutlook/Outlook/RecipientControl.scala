@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RecipientControl extends js.Object {
-  var BackColor: Double = js.native
-  var Enabled: Double = js.native
-  var Font: js.Any = js.native
-  var ForeColor: Double = js.native
+  var BackColor: Double
+  var Enabled: Double
+  var Font: js.Any
+  var ForeColor: Double
   @JSName("Outlook._RecipientControl_typekey")
-  var OutlookDot_RecipientControl_typekey: RecipientControl = js.native
-  var ReadOnly: Double = js.native
-  var SpecialEffect: Double = js.native
+  var OutlookDot_RecipientControl_typekey: RecipientControl
+  var ReadOnly: Double
+  var SpecialEffect: Double
 }
 
 object RecipientControl {
@@ -31,55 +30,5 @@ object RecipientControl {
     __obj.updateDynamic("Outlook._RecipientControl_typekey")(OutlookDot_RecipientControl_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecipientControl]
   }
-  @scala.inline
-  implicit class RecipientControlOps[Self <: RecipientControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDot_RecipientControl_typekey(value: RecipientControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook._RecipientControl_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpecialEffect(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpecialEffect")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

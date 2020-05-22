@@ -1,5 +1,7 @@
 package typingsSlinky.ionic.definitionsMod
 
+import typingsSlinky.ionic.ionicStrings.managed
+import typingsSlinky.ionic.ionicStrings.repo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,18 @@ trait StarterTemplate extends js.Object
 
 object StarterTemplate {
   @scala.inline
-  implicit def apply(value: ManagedStarterTemplate): StarterTemplate = value.asInstanceOf[StarterTemplate]
+  def RepoStarterTemplate(name: String, projectType: ProjectType, repo: String, `type`: repo, description: String = null): StarterTemplate = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], projectType = projectType.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StarterTemplate]
+  }
   @scala.inline
-  implicit def apply(value: RepoStarterTemplate): StarterTemplate = value.asInstanceOf[StarterTemplate]
+  def ManagedStarterTemplate(id: String, name: String, projectType: ProjectType, `type`: managed, description: String = null): StarterTemplate = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], projectType = projectType.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StarterTemplate]
+  }
 }
 

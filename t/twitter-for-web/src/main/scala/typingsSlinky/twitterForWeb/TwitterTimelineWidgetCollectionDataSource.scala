@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait TwitterTimelineWidgetCollectionDataSource extends TwitterTimelineWidgetDataSource {
-  var id: String = js.native
-  var sourceType: collection = js.native
+trait TwitterTimelineWidgetCollectionDataSource extends _TwitterTimelineWidgetDataSource {
+  var id: String
+  var sourceType: collection
 }
 
 object TwitterTimelineWidgetCollectionDataSource {
@@ -17,25 +16,5 @@ object TwitterTimelineWidgetCollectionDataSource {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TwitterTimelineWidgetCollectionDataSource]
   }
-  @scala.inline
-  implicit class TwitterTimelineWidgetCollectionDataSourceOps[Self <: TwitterTimelineWidgetCollectionDataSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: collection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,79 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An aggregation produced by the Discovery service to analyze the input provided. */
-@js.native
 trait QueryAggregation extends js.Object {
   /** Aggregations returned by the Discovery service. */
-  var aggregations: js.UndefOr[js.Array[QueryAggregation]] = js.native
+  var aggregations: js.UndefOr[js.Array[QueryAggregation]] = js.undefined
   /** Number of matching results. */
-  var matching_results: js.UndefOr[Double] = js.native
+  var matching_results: js.UndefOr[Double] = js.undefined
   /** Array of aggregation results. */
-  var results: js.UndefOr[js.Array[AggregationResult]] = js.native
+  var results: js.UndefOr[js.Array[AggregationResult]] = js.undefined
   /** The type of aggregation command used. For example: term, filter, max, min, etc. */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object QueryAggregation {
   @scala.inline
-  def apply(): QueryAggregation = {
+  def apply(
+    aggregations: js.Array[QueryAggregation] = null,
+    matching_results: js.UndefOr[Double] = js.undefined,
+    results: js.Array[AggregationResult] = null,
+    `type`: String = null
+  ): QueryAggregation = {
     val __obj = js.Dynamic.literal()
+    if (aggregations != null) __obj.updateDynamic("aggregations")(aggregations.asInstanceOf[js.Any])
+    if (!js.isUndefined(matching_results)) __obj.updateDynamic("matching_results")(matching_results.get.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryAggregation]
   }
-  @scala.inline
-  implicit class QueryAggregationOps[Self <: QueryAggregation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregations(value: js.Array[QueryAggregation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatching_results(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matching_results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatching_results: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matching_results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[AggregationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

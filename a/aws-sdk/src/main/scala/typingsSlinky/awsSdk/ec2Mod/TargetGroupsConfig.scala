@@ -14,29 +14,10 @@ trait TargetGroupsConfig extends js.Object {
 
 object TargetGroupsConfig {
   @scala.inline
-  def apply(): TargetGroupsConfig = {
+  def apply(TargetGroups: TargetGroups = null): TargetGroupsConfig = {
     val __obj = js.Dynamic.literal()
+    if (TargetGroups != null) __obj.updateDynamic("TargetGroups")(TargetGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetGroupsConfig]
   }
-  @scala.inline
-  implicit class TargetGroupsConfigOps[Self <: TargetGroupsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetGroups(value: TargetGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

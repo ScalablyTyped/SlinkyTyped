@@ -52,113 +52,26 @@ trait SchemaDealTerms extends js.Object {
 
 object SchemaDealTerms {
   @scala.inline
-  def apply(): SchemaDealTerms = {
+  def apply(
+    brandingType: String = null,
+    description: String = null,
+    estimatedGrossSpend: SchemaPrice = null,
+    estimatedImpressionsPerDay: String = null,
+    guaranteedFixedPriceTerms: SchemaGuaranteedFixedPriceTerms = null,
+    nonGuaranteedAuctionTerms: SchemaNonGuaranteedAuctionTerms = null,
+    nonGuaranteedFixedPriceTerms: SchemaNonGuaranteedFixedPriceTerms = null,
+    sellerTimeZone: String = null
+  ): SchemaDealTerms = {
     val __obj = js.Dynamic.literal()
+    if (brandingType != null) __obj.updateDynamic("brandingType")(brandingType.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (estimatedGrossSpend != null) __obj.updateDynamic("estimatedGrossSpend")(estimatedGrossSpend.asInstanceOf[js.Any])
+    if (estimatedImpressionsPerDay != null) __obj.updateDynamic("estimatedImpressionsPerDay")(estimatedImpressionsPerDay.asInstanceOf[js.Any])
+    if (guaranteedFixedPriceTerms != null) __obj.updateDynamic("guaranteedFixedPriceTerms")(guaranteedFixedPriceTerms.asInstanceOf[js.Any])
+    if (nonGuaranteedAuctionTerms != null) __obj.updateDynamic("nonGuaranteedAuctionTerms")(nonGuaranteedAuctionTerms.asInstanceOf[js.Any])
+    if (nonGuaranteedFixedPriceTerms != null) __obj.updateDynamic("nonGuaranteedFixedPriceTerms")(nonGuaranteedFixedPriceTerms.asInstanceOf[js.Any])
+    if (sellerTimeZone != null) __obj.updateDynamic("sellerTimeZone")(sellerTimeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDealTerms]
   }
-  @scala.inline
-  implicit class SchemaDealTermsOps[Self <: SchemaDealTerms] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrandingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brandingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrandingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brandingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedGrossSpend(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedGrossSpend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedGrossSpend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedGrossSpend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedImpressionsPerDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedImpressionsPerDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedImpressionsPerDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedImpressionsPerDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuaranteedFixedPriceTerms(value: SchemaGuaranteedFixedPriceTerms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guaranteedFixedPriceTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuaranteedFixedPriceTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guaranteedFixedPriceTerms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonGuaranteedAuctionTerms(value: SchemaNonGuaranteedAuctionTerms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonGuaranteedAuctionTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonGuaranteedAuctionTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonGuaranteedAuctionTerms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonGuaranteedFixedPriceTerms(value: SchemaNonGuaranteedFixedPriceTerms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonGuaranteedFixedPriceTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonGuaranteedFixedPriceTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonGuaranteedFixedPriceTerms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSellerTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSellerTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerTimeZone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubscriptionQueryCondition extends js.Object {
   /**
     * Filter conditions that matching subscriptions must have. Typically only the filter's type and event type are used for matching.
     */
-  var filter: ISubscriptionFilter = js.native
+  var filter: ISubscriptionFilter
   /**
     * Flags to specify the the type subscriptions to query for.
     */
-  var flags: SubscriptionFlags = js.native
+  var flags: SubscriptionFlags
   /**
     * Scope that matching subscriptions must have.
     */
-  var scope: String = js.native
+  var scope: String
   /**
     * ID of the subscriber (user or group) that matching subscriptions must be subscribed to.
     */
-  var subscriberId: String = js.native
+  var subscriberId: String
   /**
     * ID of the subscription to query for.
     */
-  var subscriptionId: String = js.native
+  var subscriptionId: String
 }
 
 object SubscriptionQueryCondition {
@@ -40,43 +39,5 @@ object SubscriptionQueryCondition {
     val __obj = js.Dynamic.literal(filter = filter.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], subscriberId = subscriberId.asInstanceOf[js.Any], subscriptionId = subscriptionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscriptionQueryCondition]
   }
-  @scala.inline
-  implicit class SubscriptionQueryConditionOps[Self <: SubscriptionQueryCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: ISubscriptionFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: SubscriptionFlags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriberId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriberId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriptionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

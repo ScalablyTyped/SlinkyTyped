@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Algorithm extends js.Object {
   /**
     * The algorithm used for encryption (should not be edited w/o chaning keys appropriately).
     *   config.authentication.jwt.algorithm = 'RS256';
     */
-  var algorithm: String = js.native
+  var algorithm: String
   /**
     * Id of token used when placed inside of a cookie.
     *    config.authentication.jwt.cookieId = 'access_token';
     */
-  var cookieId: String = js.native
+  var cookieId: String
   /**
     * Lifetime of tokens in seconds.
     *   config.authentication.jwt.expiresIn = 3600 * 24 * 7;
     */
-  var expiresIn: Double = js.native
+  var expiresIn: Double
   /**
     * Private RSA256 key used when generating tokens 
     * (N.B. if authentication is turned on 
@@ -29,25 +28,25 @@ trait Algorithm extends js.Object {
     * a rule should be added to config.server.extlibExcludes).
     *   config.authentication.jwt.privateKey = './src/server/middleware/auth/EXAMPLE_PRIVATE_KEY';
     */
-  var privateKey: String = js.native
+  var privateKey: String
   /**
     * Public RSA256 key used when evaluating tokens.
     *   config.authentication.jwt.publicKey = './src/server/middleware/auth/EXAMPLE_PRIVATE_KEY';
     */
-  var publicKey: String = js.native
+  var publicKey: String
   /**
     * Interval in seconds, if there is less time until 
     * expiration the token will be automatically renewed.
     *  (Set this to less or equal to 0 to disabled automatic renewal.)
     *   config.authentication.jwt.renewBeforeExpires = 3600;
     */
-  var renewBeforeExpires: Double = js.native
+  var renewBeforeExpires: Double
   /**
     * Replaceable module for generating tokens in case 
     * webgme should not generated new tokens by itself.
     *   config.authentication.jwt.tokenGenerator = './src/server/middleware/auth/localtokengenerator.js';
     */
-  var tokenGenerator: String = js.native
+  var tokenGenerator: String
 }
 
 object Algorithm {
@@ -64,55 +63,5 @@ object Algorithm {
     val __obj = js.Dynamic.literal(algorithm = algorithm.asInstanceOf[js.Any], cookieId = cookieId.asInstanceOf[js.Any], expiresIn = expiresIn.asInstanceOf[js.Any], privateKey = privateKey.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any], renewBeforeExpires = renewBeforeExpires.asInstanceOf[js.Any], tokenGenerator = tokenGenerator.asInstanceOf[js.Any])
     __obj.asInstanceOf[Algorithm]
   }
-  @scala.inline
-  implicit class AlgorithmOps[Self <: Algorithm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCookieId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivateKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenewBeforeExpires(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renewBeforeExpires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTokenGenerator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenGenerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

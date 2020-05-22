@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Resizable extends js.Object {
-  val Resizable: Boolean = js.native
+  val Resizable: Boolean
 }
 
 object Resizable {
@@ -15,19 +14,5 @@ object Resizable {
     val __obj = js.Dynamic.literal(Resizable = Resizable.asInstanceOf[js.Any])
     __obj.asInstanceOf[Resizable]
   }
-  @scala.inline
-  implicit class ResizableOps[Self <: Resizable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

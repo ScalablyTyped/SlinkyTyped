@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Request protected ()
   extends Body
-     with RequestInfo {
+     with _RequestInfo {
   def this(input: RequestInfo) = this()
   def this(input: RequestInfo, init: RequestInit) = this()
   // node-fetch extensions to the whatwg/fetch spec

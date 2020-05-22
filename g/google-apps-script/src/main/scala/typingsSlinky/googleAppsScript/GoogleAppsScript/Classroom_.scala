@@ -50,102 +50,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Classroom_ extends js.Object {
-  var Courses: js.UndefOr[CoursesCollection] = js.native
-  var Invitations: js.UndefOr[InvitationsCollection] = js.native
-  var Registrations: js.UndefOr[RegistrationsCollection] = js.native
-  var UserProfiles: js.UndefOr[UserProfilesCollection] = js.native
+  var Courses: js.UndefOr[CoursesCollection] = js.undefined
+  var Invitations: js.UndefOr[InvitationsCollection] = js.undefined
+  var Registrations: js.UndefOr[RegistrationsCollection] = js.undefined
+  var UserProfiles: js.UndefOr[UserProfilesCollection] = js.undefined
   // Create a new instance of Announcement
-  def newAnnouncement(): Announcement = js.native
+  def newAnnouncement(): Announcement
   // Create a new instance of Assignment
-  def newAssignment(): Assignment = js.native
+  def newAssignment(): Assignment
   // Create a new instance of AssignmentSubmission
-  def newAssignmentSubmission(): AssignmentSubmission = js.native
+  def newAssignmentSubmission(): AssignmentSubmission
   // Create a new instance of Attachment
-  def newAttachment(): Attachment = js.native
+  def newAttachment(): Attachment
   // Create a new instance of CloudPubsubTopic
-  def newCloudPubsubTopic(): CloudPubsubTopic = js.native
+  def newCloudPubsubTopic(): CloudPubsubTopic
   // Create a new instance of Course
-  def newCourse(): Course = js.native
+  def newCourse(): Course
   // Create a new instance of CourseAlias
-  def newCourseAlias(): CourseAlias = js.native
+  def newCourseAlias(): CourseAlias
   // Create a new instance of CourseMaterial
-  def newCourseMaterial(): CourseMaterial = js.native
+  def newCourseMaterial(): CourseMaterial
   // Create a new instance of CourseMaterialSet
-  def newCourseMaterialSet(): CourseMaterialSet = js.native
+  def newCourseMaterialSet(): CourseMaterialSet
   // Create a new instance of CourseRosterChangesInfo
-  def newCourseRosterChangesInfo(): CourseRosterChangesInfo = js.native
+  def newCourseRosterChangesInfo(): CourseRosterChangesInfo
   // Create a new instance of CourseWork
-  def newCourseWork(): CourseWork = js.native
+  def newCourseWork(): CourseWork
   // Create a new instance of CourseWorkChangesInfo
-  def newCourseWorkChangesInfo(): CourseWorkChangesInfo = js.native
+  def newCourseWorkChangesInfo(): CourseWorkChangesInfo
   // Create a new instance of Date
-  def newDate(): Date = js.native
+  def newDate(): Date
   // Create a new instance of DriveFile
-  def newDriveFile(): DriveFile = js.native
+  def newDriveFile(): DriveFile
   // Create a new instance of DriveFolder
-  def newDriveFolder(): DriveFolder = js.native
+  def newDriveFolder(): DriveFolder
   // Create a new instance of Feed
-  def newFeed(): Feed = js.native
+  def newFeed(): Feed
   // Create a new instance of Form
-  def newForm(): Form = js.native
+  def newForm(): Form
   // Create a new instance of GlobalPermission
-  def newGlobalPermission(): GlobalPermission = js.native
+  def newGlobalPermission(): GlobalPermission
   // Create a new instance of GradeHistory
-  def newGradeHistory(): GradeHistory = js.native
+  def newGradeHistory(): GradeHistory
   // Create a new instance of GuardianInvitation
-  def newGuardianInvitation(): GuardianInvitation = js.native
+  def newGuardianInvitation(): GuardianInvitation
   // Create a new instance of IndividualStudentsOptions
-  def newIndividualStudentsOptions(): IndividualStudentsOptions = js.native
+  def newIndividualStudentsOptions(): IndividualStudentsOptions
   // Create a new instance of Invitation
-  def newInvitation(): Invitation = js.native
+  def newInvitation(): Invitation
   // Create a new instance of Link
-  def newLink(): Link = js.native
+  def newLink(): Link
   // Create a new instance of Material
-  def newMaterial(): Material = js.native
+  def newMaterial(): Material
   // Create a new instance of ModifyAnnouncementAssigneesRequest
-  def newModifyAnnouncementAssigneesRequest(): ModifyAnnouncementAssigneesRequest = js.native
+  def newModifyAnnouncementAssigneesRequest(): ModifyAnnouncementAssigneesRequest
   // Create a new instance of ModifyAttachmentsRequest
-  def newModifyAttachmentsRequest(): ModifyAttachmentsRequest = js.native
+  def newModifyAttachmentsRequest(): ModifyAttachmentsRequest
   // Create a new instance of ModifyCourseWorkAssigneesRequest
-  def newModifyCourseWorkAssigneesRequest(): ModifyCourseWorkAssigneesRequest = js.native
+  def newModifyCourseWorkAssigneesRequest(): ModifyCourseWorkAssigneesRequest
   // Create a new instance of ModifyIndividualStudentsOptions
-  def newModifyIndividualStudentsOptions(): ModifyIndividualStudentsOptions = js.native
+  def newModifyIndividualStudentsOptions(): ModifyIndividualStudentsOptions
   // Create a new instance of MultipleChoiceQuestion
-  def newMultipleChoiceQuestion(): MultipleChoiceQuestion = js.native
+  def newMultipleChoiceQuestion(): MultipleChoiceQuestion
   // Create a new instance of MultipleChoiceSubmission
-  def newMultipleChoiceSubmission(): MultipleChoiceSubmission = js.native
+  def newMultipleChoiceSubmission(): MultipleChoiceSubmission
   // Create a new instance of Name
-  def newName(): Name = js.native
+  def newName(): Name
   // Create a new instance of ReclaimStudentSubmissionRequest
-  def newReclaimStudentSubmissionRequest(): js.Any = js.native
+  def newReclaimStudentSubmissionRequest(): js.Any
   // Create a new instance of Registration
-  def newRegistration(): Registration = js.native
+  def newRegistration(): Registration
   // Create a new instance of ReturnStudentSubmissionRequest
-  def newReturnStudentSubmissionRequest(): js.Any = js.native
+  def newReturnStudentSubmissionRequest(): js.Any
   // Create a new instance of SharedDriveFile
-  def newSharedDriveFile(): SharedDriveFile = js.native
+  def newSharedDriveFile(): SharedDriveFile
   // Create a new instance of ShortAnswerSubmission
-  def newShortAnswerSubmission(): ShortAnswerSubmission = js.native
+  def newShortAnswerSubmission(): ShortAnswerSubmission
   // Create a new instance of StateHistory
-  def newStateHistory(): StateHistory = js.native
+  def newStateHistory(): StateHistory
   // Create a new instance of Student
-  def newStudent(): Student = js.native
+  def newStudent(): Student
   // Create a new instance of StudentSubmission
-  def newStudentSubmission(): StudentSubmission = js.native
+  def newStudentSubmission(): StudentSubmission
   // Create a new instance of SubmissionHistory
-  def newSubmissionHistory(): SubmissionHistory = js.native
+  def newSubmissionHistory(): SubmissionHistory
   // Create a new instance of Teacher
-  def newTeacher(): Teacher = js.native
+  def newTeacher(): Teacher
   // Create a new instance of TimeOfDay
-  def newTimeOfDay(): TimeOfDay = js.native
+  def newTimeOfDay(): TimeOfDay
   // Create a new instance of TurnInStudentSubmissionRequest
-  def newTurnInStudentSubmissionRequest(): js.Any = js.native
+  def newTurnInStudentSubmissionRequest(): js.Any
   // Create a new instance of UserProfile
-  def newUserProfile(): UserProfile = js.native
+  def newUserProfile(): UserProfile
   // Create a new instance of YouTubeVideo
-  def newYouTubeVideo(): YouTubeVideo = js.native
+  def newYouTubeVideo(): YouTubeVideo
 }
 
 object Classroom_ {
@@ -195,336 +194,18 @@ object Classroom_ {
     newTimeOfDay: () => TimeOfDay,
     newTurnInStudentSubmissionRequest: () => js.Any,
     newUserProfile: () => UserProfile,
-    newYouTubeVideo: () => YouTubeVideo
+    newYouTubeVideo: () => YouTubeVideo,
+    Courses: CoursesCollection = null,
+    Invitations: InvitationsCollection = null,
+    Registrations: RegistrationsCollection = null,
+    UserProfiles: UserProfilesCollection = null
   ): Classroom_ = {
     val __obj = js.Dynamic.literal(newAnnouncement = js.Any.fromFunction0(newAnnouncement), newAssignment = js.Any.fromFunction0(newAssignment), newAssignmentSubmission = js.Any.fromFunction0(newAssignmentSubmission), newAttachment = js.Any.fromFunction0(newAttachment), newCloudPubsubTopic = js.Any.fromFunction0(newCloudPubsubTopic), newCourse = js.Any.fromFunction0(newCourse), newCourseAlias = js.Any.fromFunction0(newCourseAlias), newCourseMaterial = js.Any.fromFunction0(newCourseMaterial), newCourseMaterialSet = js.Any.fromFunction0(newCourseMaterialSet), newCourseRosterChangesInfo = js.Any.fromFunction0(newCourseRosterChangesInfo), newCourseWork = js.Any.fromFunction0(newCourseWork), newCourseWorkChangesInfo = js.Any.fromFunction0(newCourseWorkChangesInfo), newDate = js.Any.fromFunction0(newDate), newDriveFile = js.Any.fromFunction0(newDriveFile), newDriveFolder = js.Any.fromFunction0(newDriveFolder), newFeed = js.Any.fromFunction0(newFeed), newForm = js.Any.fromFunction0(newForm), newGlobalPermission = js.Any.fromFunction0(newGlobalPermission), newGradeHistory = js.Any.fromFunction0(newGradeHistory), newGuardianInvitation = js.Any.fromFunction0(newGuardianInvitation), newIndividualStudentsOptions = js.Any.fromFunction0(newIndividualStudentsOptions), newInvitation = js.Any.fromFunction0(newInvitation), newLink = js.Any.fromFunction0(newLink), newMaterial = js.Any.fromFunction0(newMaterial), newModifyAnnouncementAssigneesRequest = js.Any.fromFunction0(newModifyAnnouncementAssigneesRequest), newModifyAttachmentsRequest = js.Any.fromFunction0(newModifyAttachmentsRequest), newModifyCourseWorkAssigneesRequest = js.Any.fromFunction0(newModifyCourseWorkAssigneesRequest), newModifyIndividualStudentsOptions = js.Any.fromFunction0(newModifyIndividualStudentsOptions), newMultipleChoiceQuestion = js.Any.fromFunction0(newMultipleChoiceQuestion), newMultipleChoiceSubmission = js.Any.fromFunction0(newMultipleChoiceSubmission), newName = js.Any.fromFunction0(newName), newReclaimStudentSubmissionRequest = js.Any.fromFunction0(newReclaimStudentSubmissionRequest), newRegistration = js.Any.fromFunction0(newRegistration), newReturnStudentSubmissionRequest = js.Any.fromFunction0(newReturnStudentSubmissionRequest), newSharedDriveFile = js.Any.fromFunction0(newSharedDriveFile), newShortAnswerSubmission = js.Any.fromFunction0(newShortAnswerSubmission), newStateHistory = js.Any.fromFunction0(newStateHistory), newStudent = js.Any.fromFunction0(newStudent), newStudentSubmission = js.Any.fromFunction0(newStudentSubmission), newSubmissionHistory = js.Any.fromFunction0(newSubmissionHistory), newTeacher = js.Any.fromFunction0(newTeacher), newTimeOfDay = js.Any.fromFunction0(newTimeOfDay), newTurnInStudentSubmissionRequest = js.Any.fromFunction0(newTurnInStudentSubmissionRequest), newUserProfile = js.Any.fromFunction0(newUserProfile), newYouTubeVideo = js.Any.fromFunction0(newYouTubeVideo))
+    if (Courses != null) __obj.updateDynamic("Courses")(Courses.asInstanceOf[js.Any])
+    if (Invitations != null) __obj.updateDynamic("Invitations")(Invitations.asInstanceOf[js.Any])
+    if (Registrations != null) __obj.updateDynamic("Registrations")(Registrations.asInstanceOf[js.Any])
+    if (UserProfiles != null) __obj.updateDynamic("UserProfiles")(UserProfiles.asInstanceOf[js.Any])
     __obj.asInstanceOf[Classroom_]
   }
-  @scala.inline
-  implicit class Classroom_Ops[Self <: Classroom_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewAnnouncement(value: () => Announcement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAnnouncement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAssignment(value: () => Assignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAssignment")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAssignmentSubmission(value: () => AssignmentSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAssignmentSubmission")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewAttachment(value: () => Attachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newAttachment")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCloudPubsubTopic(value: () => CloudPubsubTopic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCloudPubsubTopic")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourse(value: () => Course): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourseAlias(value: () => CourseAlias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourseAlias")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourseMaterial(value: () => CourseMaterial): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourseMaterial")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourseMaterialSet(value: () => CourseMaterialSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourseMaterialSet")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourseRosterChangesInfo(value: () => CourseRosterChangesInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourseRosterChangesInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourseWork(value: () => CourseWork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourseWork")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewCourseWorkChangesInfo(value: () => CourseWorkChangesInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newCourseWorkChangesInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDate(value: () => Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDriveFile(value: () => DriveFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDriveFile")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewDriveFolder(value: () => DriveFolder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDriveFolder")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewFeed(value: () => Feed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newFeed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewForm(value: () => Form): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newForm")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGlobalPermission(value: () => GlobalPermission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGlobalPermission")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGradeHistory(value: () => GradeHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGradeHistory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewGuardianInvitation(value: () => GuardianInvitation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGuardianInvitation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewIndividualStudentsOptions(value: () => IndividualStudentsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newIndividualStudentsOptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewInvitation(value: () => Invitation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newInvitation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewLink(value: () => Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newLink")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewMaterial(value: () => Material): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMaterial")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewModifyAnnouncementAssigneesRequest(value: () => ModifyAnnouncementAssigneesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newModifyAnnouncementAssigneesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewModifyAttachmentsRequest(value: () => ModifyAttachmentsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newModifyAttachmentsRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewModifyCourseWorkAssigneesRequest(value: () => ModifyCourseWorkAssigneesRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newModifyCourseWorkAssigneesRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewModifyIndividualStudentsOptions(value: () => ModifyIndividualStudentsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newModifyIndividualStudentsOptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewMultipleChoiceQuestion(value: () => MultipleChoiceQuestion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMultipleChoiceQuestion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewMultipleChoiceSubmission(value: () => MultipleChoiceSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newMultipleChoiceSubmission")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewName(value: () => Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewReclaimStudentSubmissionRequest(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newReclaimStudentSubmissionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewRegistration(value: () => Registration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRegistration")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewReturnStudentSubmissionRequest(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newReturnStudentSubmissionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSharedDriveFile(value: () => SharedDriveFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSharedDriveFile")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewShortAnswerSubmission(value: () => ShortAnswerSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newShortAnswerSubmission")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewStateHistory(value: () => StateHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newStateHistory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewStudent(value: () => Student): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newStudent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewStudentSubmission(value: () => StudentSubmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newStudentSubmission")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewSubmissionHistory(value: () => SubmissionHistory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newSubmissionHistory")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTeacher(value: () => Teacher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTeacher")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTimeOfDay(value: () => TimeOfDay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTimeOfDay")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewTurnInStudentSubmissionRequest(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newTurnInStudentSubmissionRequest")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewUserProfile(value: () => UserProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newUserProfile")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNewYouTubeVideo(value: () => YouTubeVideo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newYouTubeVideo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCourses(value: CoursesCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Courses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCourses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Courses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvitations(value: InvitationsCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invitations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invitations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrations(value: RegistrationsCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Registrations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Registrations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProfiles(value: UserProfilesCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProfiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfiles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

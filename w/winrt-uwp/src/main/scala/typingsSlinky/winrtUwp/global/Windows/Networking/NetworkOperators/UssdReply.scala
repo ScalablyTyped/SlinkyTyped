@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.UssdReply")
 @js.native
 abstract class UssdReply ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdReply
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdReply {
+  /** Gets the message for the USSD response. */
+  /* CompleteClass */
+  override var message: typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdMessage = js.native
+  /** Gets the result code for the USSD response. */
+  /* CompleteClass */
+  override var resultCode: typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.UssdResultCode = js.native
+}
 

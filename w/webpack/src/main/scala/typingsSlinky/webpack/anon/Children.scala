@@ -6,25 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Children extends js.Object {
-  var children: js.Array[Double] = js.native
-  var childrenByOrder: Record[String, js.Array[Double]] = js.native
-  var entry: Boolean = js.native
-  var files: js.Array[String] = js.native
-  var filteredModules: js.UndefOr[Double] = js.native
-  var hash: js.UndefOr[String] = js.native
-  var id: Double | String = js.native
-  var initial: Boolean = js.native
-  var modules: js.UndefOr[js.Array[FnModules]] = js.native
-  var names: js.Array[String] = js.native
-  var origins: js.UndefOr[js.Array[Loc]] = js.native
-  var parents: js.Array[Double] = js.native
-  var reason: js.UndefOr[String] = js.native
-  var recorded: js.UndefOr[Boolean] = js.native
-  var rendered: Boolean = js.native
-  var siblings: js.Array[Double] = js.native
-  var size: Double = js.native
+  var children: js.Array[Double]
+  var childrenByOrder: Record[String, js.Array[Double]]
+  var entry: Boolean
+  var files: js.Array[String]
+  var filteredModules: js.UndefOr[Double] = js.undefined
+  var hash: js.UndefOr[String] = js.undefined
+  var id: Double | String
+  var initial: Boolean
+  var modules: js.UndefOr[js.Array[FnModules]] = js.undefined
+  var names: js.Array[String]
+  var origins: js.UndefOr[js.Array[Loc]] = js.undefined
+  var parents: js.Array[Double]
+  var reason: js.UndefOr[String] = js.undefined
+  var recorded: js.UndefOr[Boolean] = js.undefined
+  var rendered: Boolean
+  var siblings: js.Array[Double]
+  var size: Double
 }
 
 object Children {
@@ -40,156 +39,22 @@ object Children {
     parents: js.Array[Double],
     rendered: Boolean,
     siblings: js.Array[Double],
-    size: Double
+    size: Double,
+    filteredModules: js.UndefOr[Double] = js.undefined,
+    hash: String = null,
+    modules: js.Array[FnModules] = null,
+    origins: js.Array[Loc] = null,
+    reason: String = null,
+    recorded: js.UndefOr[Boolean] = js.undefined
   ): Children = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], childrenByOrder = childrenByOrder.asInstanceOf[js.Any], entry = entry.asInstanceOf[js.Any], files = files.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], initial = initial.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], parents = parents.asInstanceOf[js.Any], rendered = rendered.asInstanceOf[js.Any], siblings = siblings.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    if (!js.isUndefined(filteredModules)) __obj.updateDynamic("filteredModules")(filteredModules.get.asInstanceOf[js.Any])
+    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
+    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
+    if (origins != null) __obj.updateDynamic("origins")(origins.asInstanceOf[js.Any])
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (!js.isUndefined(recorded)) __obj.updateDynamic("recorded")(recorded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Children]
   }
-  @scala.inline
-  implicit class ChildrenOps[Self <: Children] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildrenByOrder(value: Record[String, js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenByOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFiles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitial(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParents(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRendered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSiblings(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siblings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilteredModules(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredModules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilteredModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredModules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModules(value: js.Array[FnModules]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigins(value: js.Array[Loc]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecorded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recorded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecorded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recorded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

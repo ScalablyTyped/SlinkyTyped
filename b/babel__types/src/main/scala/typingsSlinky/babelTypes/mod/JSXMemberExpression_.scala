@@ -6,14 +6,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait JSXMemberExpression_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait JSXMemberExpression_
   extends JSX
      with BaseNode {
-  var `object`: JSXMemberExpression_ | JSXIdentifier_ = js.native
-  var property: JSXIdentifier_ = js.native
+  var `object`: JSXMemberExpression_ | JSXIdentifier_
+  var property: JSXIdentifier_
   @JSName("type")
-  var type_JSXMemberExpression_ : JSXMemberExpression = js.native
+  var type_JSXMemberExpression_ : JSXMemberExpression
 }
 
 object JSXMemberExpression_ {
@@ -21,38 +20,18 @@ object JSXMemberExpression_ {
   def apply(
     `object`: JSXMemberExpression_ | JSXIdentifier_,
     property: JSXIdentifier_,
-    `type`: JSXMemberExpression
+    `type`: JSXMemberExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
   ): JSXMemberExpression_ = {
-    val __obj = js.Dynamic.literal(property = property.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(property = property.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSXMemberExpression_]
   }
-  @scala.inline
-  implicit class JSXMemberExpression_Ops[Self <: JSXMemberExpression_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObject(value: JSXMemberExpression_ | JSXIdentifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperty(value: JSXIdentifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: JSXMemberExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

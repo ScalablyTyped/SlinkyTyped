@@ -749,6 +749,9 @@ object pulumiAwsStrings {
   sealed trait dotnetcore2Dot1 extends Runtime
   
   @js.native
+  sealed trait dotnetcore3Dot1 extends Runtime
+  
+  @js.native
   sealed trait dualstack
     extends IpAddressType
        with typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
@@ -1771,6 +1774,8 @@ object pulumiAwsStrings {
   def dotnetcore2Dot0: dotnetcore2Dot0 = "dotnetcore2.0".asInstanceOf[dotnetcore2Dot0]
   @scala.inline
   def dotnetcore2Dot1: dotnetcore2Dot1 = "dotnetcore2.1".asInstanceOf[dotnetcore2Dot1]
+  @scala.inline
+  def dotnetcore3Dot1: dotnetcore3Dot1 = "dotnetcore3.1".asInstanceOf[dotnetcore3Dot1]
   @scala.inline
   def dualstack: dualstack = "dualstack".asInstanceOf[dualstack]
   @scala.inline

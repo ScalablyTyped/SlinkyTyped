@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParseElements extends js.Object {
-  var parseElements: js.Tuple3[track, route, waypoint] = js.native
+  var parseElements: js.Tuple3[track, route, waypoint]
 }
 
 object ParseElements {
@@ -18,19 +17,5 @@ object ParseElements {
     val __obj = js.Dynamic.literal(parseElements = parseElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseElements]
   }
-  @scala.inline
-  implicit class ParseElementsOps[Self <: ParseElements] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParseElements(value: js.Tuple3[track, route, waypoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

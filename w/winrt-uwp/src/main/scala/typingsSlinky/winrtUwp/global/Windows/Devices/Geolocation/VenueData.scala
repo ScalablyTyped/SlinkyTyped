@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Geolocation.VenueData")
 @js.native
 abstract class VenueData ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.VenueData
+  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.VenueData {
+  /** Gets the identifier (ID) of the venue. */
+  /* CompleteClass */
+  override var id: String = js.native
+  /** Gets the identifier (ID) of the building level. */
+  /* CompleteClass */
+  override var level: String = js.native
+}
 

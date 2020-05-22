@@ -15,7 +15,7 @@ trait AutomationExecutionMetadata extends js.Object {
     */
   var AutomationExecutionStatus: js.UndefOr[typingsSlinky.awsSdk.ssmMod.AutomationExecutionStatus] = js.native
   /**
-    * Use this filter with DescribeAutomationExecutions. Specify either Local or CrossAccount. CrossAccount is an Automation that runs in multiple AWS Regions and accounts. For more information, see Executing Automations in Multiple AWS Regions and Accounts in the AWS Systems Manager User Guide. 
+    * Use this filter with DescribeAutomationExecutions. Specify either Local or CrossAccount. CrossAccount is an Automation that runs in multiple AWS Regions and accounts. For more information, see Running Automation workflows in multiple AWS Regions and accounts in the AWS Systems Manager User Guide. 
     */
   var AutomationType: js.UndefOr[typingsSlinky.awsSdk.ssmMod.AutomationType] = js.native
   /**
@@ -51,7 +51,7 @@ trait AutomationExecutionMetadata extends js.Object {
     */
   var FailureMessage: js.UndefOr[String] = js.native
   /**
-    * An Amazon S3 bucket where execution information is stored.
+    * An S3 bucket where execution information is stored.
     */
   var LogFile: js.UndefOr[String] = js.native
   /**
@@ -98,281 +98,54 @@ trait AutomationExecutionMetadata extends js.Object {
 
 object AutomationExecutionMetadata {
   @scala.inline
-  def apply(): AutomationExecutionMetadata = {
+  def apply(
+    AutomationExecutionId: AutomationExecutionId = null,
+    AutomationExecutionStatus: AutomationExecutionStatus = null,
+    AutomationType: AutomationType = null,
+    CurrentAction: String = null,
+    CurrentStepName: String = null,
+    DocumentName: DocumentName = null,
+    DocumentVersion: DocumentVersion = null,
+    ExecutedBy: String = null,
+    ExecutionEndTime: js.Date = null,
+    ExecutionStartTime: js.Date = null,
+    FailureMessage: String = null,
+    LogFile: String = null,
+    MaxConcurrency: MaxConcurrency = null,
+    MaxErrors: MaxErrors = null,
+    Mode: ExecutionMode = null,
+    Outputs: AutomationParameterMap = null,
+    ParentAutomationExecutionId: AutomationExecutionId = null,
+    ResolvedTargets: ResolvedTargets = null,
+    Target: String = null,
+    TargetMaps: TargetMaps = null,
+    TargetParameterName: AutomationParameterKey = null,
+    Targets: Targets = null
+  ): AutomationExecutionMetadata = {
     val __obj = js.Dynamic.literal()
+    if (AutomationExecutionId != null) __obj.updateDynamic("AutomationExecutionId")(AutomationExecutionId.asInstanceOf[js.Any])
+    if (AutomationExecutionStatus != null) __obj.updateDynamic("AutomationExecutionStatus")(AutomationExecutionStatus.asInstanceOf[js.Any])
+    if (AutomationType != null) __obj.updateDynamic("AutomationType")(AutomationType.asInstanceOf[js.Any])
+    if (CurrentAction != null) __obj.updateDynamic("CurrentAction")(CurrentAction.asInstanceOf[js.Any])
+    if (CurrentStepName != null) __obj.updateDynamic("CurrentStepName")(CurrentStepName.asInstanceOf[js.Any])
+    if (DocumentName != null) __obj.updateDynamic("DocumentName")(DocumentName.asInstanceOf[js.Any])
+    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
+    if (ExecutedBy != null) __obj.updateDynamic("ExecutedBy")(ExecutedBy.asInstanceOf[js.Any])
+    if (ExecutionEndTime != null) __obj.updateDynamic("ExecutionEndTime")(ExecutionEndTime.asInstanceOf[js.Any])
+    if (ExecutionStartTime != null) __obj.updateDynamic("ExecutionStartTime")(ExecutionStartTime.asInstanceOf[js.Any])
+    if (FailureMessage != null) __obj.updateDynamic("FailureMessage")(FailureMessage.asInstanceOf[js.Any])
+    if (LogFile != null) __obj.updateDynamic("LogFile")(LogFile.asInstanceOf[js.Any])
+    if (MaxConcurrency != null) __obj.updateDynamic("MaxConcurrency")(MaxConcurrency.asInstanceOf[js.Any])
+    if (MaxErrors != null) __obj.updateDynamic("MaxErrors")(MaxErrors.asInstanceOf[js.Any])
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
+    if (Outputs != null) __obj.updateDynamic("Outputs")(Outputs.asInstanceOf[js.Any])
+    if (ParentAutomationExecutionId != null) __obj.updateDynamic("ParentAutomationExecutionId")(ParentAutomationExecutionId.asInstanceOf[js.Any])
+    if (ResolvedTargets != null) __obj.updateDynamic("ResolvedTargets")(ResolvedTargets.asInstanceOf[js.Any])
+    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
+    if (TargetMaps != null) __obj.updateDynamic("TargetMaps")(TargetMaps.asInstanceOf[js.Any])
+    if (TargetParameterName != null) __obj.updateDynamic("TargetParameterName")(TargetParameterName.asInstanceOf[js.Any])
+    if (Targets != null) __obj.updateDynamic("Targets")(Targets.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutomationExecutionMetadata]
   }
-  @scala.inline
-  implicit class AutomationExecutionMetadataOps[Self <: AutomationExecutionMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomationExecutionId(value: AutomationExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomationExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomationExecutionStatus(value: AutomationExecutionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomationExecutionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationExecutionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomationType(value: AutomationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentStepName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentStepName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentStepName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentStepName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentName(value: DocumentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentVersion(value: DocumentVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionEndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrency(value: MaxConcurrency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxErrors(value: MaxErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ExecutionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputs(value: AutomationParameterMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentAutomationExecutionId(value: AutomationExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentAutomationExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentAutomationExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentAutomationExecutionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvedTargets(value: ResolvedTargets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolvedTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvedTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolvedTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetMaps(value: TargetMaps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetMaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetMaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetParameterName(value: AutomationParameterKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetParameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetParameterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetParameterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargets(value: Targets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

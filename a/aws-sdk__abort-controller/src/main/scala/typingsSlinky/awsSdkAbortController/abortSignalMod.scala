@@ -11,6 +11,11 @@ object abortSignalMod extends js.Object {
   class AbortSignal ()
     extends typingsSlinky.awsSdkTypes.abortMod.AbortSignal {
     var _aborted: js.Any = js.native
+    /**
+      * Whether the action represented by this signal has been cancelled.
+      */
+    /* CompleteClass */
+    override val aborted: Boolean = js.native
   }
   
 }

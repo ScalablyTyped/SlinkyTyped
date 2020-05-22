@@ -1,335 +1,141 @@
 package typingsSlinky.extjs.Ext.form
 
+import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
+import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAction extends IBase {
   /** [Property] (String) */
-  var CLIENT_INVALID: js.UndefOr[String] = js.native
+  var CLIENT_INVALID: js.UndefOr[String] = js.undefined
   /** [Property] (String) */
-  var CONNECT_FAILURE: js.UndefOr[String] = js.native
+  var CONNECT_FAILURE: js.UndefOr[String] = js.undefined
   /** [Property] (String) */
-  var LOAD_FAILURE: js.UndefOr[String] = js.native
+  var LOAD_FAILURE: js.UndefOr[String] = js.undefined
   /** [Property] (String) */
-  var SERVER_INVALID: js.UndefOr[String] = js.native
+  var SERVER_INVALID: js.UndefOr[String] = js.undefined
   /** [Config Option] (Function) */
-  var failure: js.UndefOr[js.Any] = js.native
+  var failure: js.UndefOr[js.Any] = js.undefined
   /** [Property] (String) */
-  var failureType: js.UndefOr[String] = js.native
+  var failureType: js.UndefOr[String] = js.undefined
   /** [Config Option] (Ext.form.Basic) */
-  var form: js.UndefOr[IBasic] = js.native
+  var form: js.UndefOr[IBasic] = js.undefined
   /** [Config Option] (Object) */
-  var headers: js.UndefOr[js.Any] = js.native
+  var headers: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var method: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.undefined
   /** [Config Option] (Object/String) */
-  var params: js.UndefOr[js.Any] = js.native
+  var params: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var reset: js.UndefOr[Boolean] = js.native
+  var reset: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Object) */
-  var response: js.UndefOr[js.Any] = js.native
+  var response: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Object) */
-  var result: js.UndefOr[js.Any] = js.native
+  var result: js.UndefOr[js.Any] = js.undefined
   /** [Method] Invokes this action using the current configuration  */
-  var run: js.UndefOr[js.Function0[Unit]] = js.native
+  var run: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (Object) */
-  var scope: js.UndefOr[js.Any] = js.native
+  var scope: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var submitEmptyText: js.UndefOr[Boolean] = js.native
+  var submitEmptyText: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Function) */
-  var success: js.UndefOr[js.Any] = js.native
+  var success: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Number) */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /** [Property] (String) */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var waitMsg: js.UndefOr[String] = js.native
+  var waitMsg: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var waitTitle: js.UndefOr[String] = js.native
+  var waitTitle: js.UndefOr[String] = js.undefined
 }
 
 object IAction {
   @scala.inline
-  def apply(): IAction = {
+  def apply(
+    CLIENT_INVALID: String = null,
+    CONNECT_FAILURE: String = null,
+    LOAD_FAILURE: String = null,
+    SERVER_INVALID: String = null,
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    extend: String = null,
+    failure: js.Any = null,
+    failureType: String = null,
+    form: IBasic = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    headers: js.Any = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => IAction = null,
+    method: String = null,
+    mixins: js.Any = null,
+    params: js.Any = null,
+    requires: Array = null,
+    reset: js.UndefOr[Boolean] = js.undefined,
+    response: js.Any = null,
+    result: js.Any = null,
+    run: () => Unit = null,
+    scope: js.Any = null,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    submitEmptyText: js.UndefOr[Boolean] = js.undefined,
+    success: js.Any = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    `type`: String = null,
+    url: String = null,
+    uses: Array = null,
+    waitMsg: String = null,
+    waitTitle: String = null
+  ): IAction = {
     val __obj = js.Dynamic.literal()
+    if (CLIENT_INVALID != null) __obj.updateDynamic("CLIENT_INVALID")(CLIENT_INVALID.asInstanceOf[js.Any])
+    if (CONNECT_FAILURE != null) __obj.updateDynamic("CONNECT_FAILURE")(CONNECT_FAILURE.asInstanceOf[js.Any])
+    if (LOAD_FAILURE != null) __obj.updateDynamic("LOAD_FAILURE")(LOAD_FAILURE.asInstanceOf[js.Any])
+    if (SERVER_INVALID != null) __obj.updateDynamic("SERVER_INVALID")(SERVER_INVALID.asInstanceOf[js.Any])
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (failure != null) __obj.updateDynamic("failure")(failure.asInstanceOf[js.Any])
+    if (failureType != null) __obj.updateDynamic("failureType")(failureType.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (!js.isUndefined(reset)) __obj.updateDynamic("reset")(reset.get.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (run != null) __obj.updateDynamic("run")(js.Any.fromFunction0(run))
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (!js.isUndefined(submitEmptyText)) __obj.updateDynamic("submitEmptyText")(submitEmptyText.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
+    if (waitMsg != null) __obj.updateDynamic("waitMsg")(waitMsg.asInstanceOf[js.Any])
+    if (waitTitle != null) __obj.updateDynamic("waitTitle")(waitTitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAction]
   }
-  @scala.inline
-  implicit class IActionOps[Self <: IAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCLIENT_INVALID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CLIENT_INVALID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCLIENT_INVALID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CLIENT_INVALID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCONNECT_FAILURE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECT_FAILURE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCONNECT_FAILURE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECT_FAILURE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLOAD_FAILURE(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LOAD_FAILURE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLOAD_FAILURE: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LOAD_FAILURE")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSERVER_INVALID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SERVER_INVALID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSERVER_INVALID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SERVER_INVALID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailure(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForm(value: IBasic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReset(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRun(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmitEmptyText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitEmptyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitEmptyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitEmptyText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitMsg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTitle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

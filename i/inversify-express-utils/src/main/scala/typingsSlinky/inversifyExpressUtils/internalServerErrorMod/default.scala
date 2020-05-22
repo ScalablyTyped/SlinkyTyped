@@ -1,6 +1,7 @@
 package typingsSlinky.inversifyExpressUtils.internalServerErrorMod
 
 import typingsSlinky.inversifyExpressUtils.baseHttpControllerMod.BaseHttpController
+import typingsSlinky.inversifyExpressUtils.httpResponseMessageMod.HttpResponseMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends InternalServerErrorResult {
   def this(apiController: BaseHttpController) = this()
+  /* CompleteClass */
+  override var apiController: js.Any = js.native
+  /* CompleteClass */
+  override def executeAsync(): js.Promise[HttpResponseMessage] = js.native
 }
 

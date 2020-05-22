@@ -26,65 +26,18 @@ trait DescribeTypeRegistrationOutput extends js.Object {
 
 object DescribeTypeRegistrationOutput {
   @scala.inline
-  def apply(): DescribeTypeRegistrationOutput = {
+  def apply(
+    Description: Description = null,
+    ProgressStatus: RegistrationStatus = null,
+    TypeArn: TypeArn = null,
+    TypeVersionArn: TypeArn = null
+  ): DescribeTypeRegistrationOutput = {
     val __obj = js.Dynamic.literal()
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (ProgressStatus != null) __obj.updateDynamic("ProgressStatus")(ProgressStatus.asInstanceOf[js.Any])
+    if (TypeArn != null) __obj.updateDynamic("TypeArn")(TypeArn.asInstanceOf[js.Any])
+    if (TypeVersionArn != null) __obj.updateDynamic("TypeVersionArn")(TypeVersionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTypeRegistrationOutput]
   }
-  @scala.inline
-  implicit class DescribeTypeRegistrationOutputOps[Self <: DescribeTypeRegistrationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressStatus(value: RegistrationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeArn(value: TypeArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeVersionArn(value: TypeArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeVersionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeVersionArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,19 +18,5 @@ object DescribePortfolioShareStatusInput {
     val __obj = js.Dynamic.literal(PortfolioShareToken = PortfolioShareToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePortfolioShareStatusInput]
   }
-  @scala.inline
-  implicit class DescribePortfolioShareStatusInputOps[Self <: DescribePortfolioShareStatusInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPortfolioShareToken(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

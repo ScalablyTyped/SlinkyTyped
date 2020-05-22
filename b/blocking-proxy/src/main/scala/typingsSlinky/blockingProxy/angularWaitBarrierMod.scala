@@ -1,6 +1,7 @@
 package typingsSlinky.blockingProxy
 
 import typingsSlinky.blockingProxy.simpleWebdriverClientMod.SimpleWebDriverClient
+import typingsSlinky.blockingProxy.webdriverCommandsMod.WebDriverCommand
 import typingsSlinky.blockingProxy.webdriverLoggerMod.WebDriverLogger
 import typingsSlinky.blockingProxy.webdriverProxyMod.WebDriverBarrier
 import scala.scalajs.js
@@ -23,6 +24,8 @@ object angularWaitBarrierMod extends js.Object {
       * @param logDir The directory to create logs in.
       */
     def enableLogging(logDir: String): Unit = js.native
+    /* CompleteClass */
+    override def onCommand(command: WebDriverCommand): js.Promise[Unit] = js.native
     /* private */ def sendRequestToStabilize(command: js.Any): js.Any = js.native
     /**
       * Override the logger instance. Only used for testing.

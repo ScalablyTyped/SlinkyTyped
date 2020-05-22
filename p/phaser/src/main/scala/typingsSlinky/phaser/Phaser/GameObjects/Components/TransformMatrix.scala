@@ -169,8 +169,8 @@ trait TransformMatrix extends js.Object {
     * @param rhs The Matrix to multiply by.
     * @param out An optional Matrix to store the results in.
     */
-  def multiply(rhs: TransformMatrix): TransformMatrix = js.native
-  def multiply(rhs: TransformMatrix, out: TransformMatrix): TransformMatrix = js.native
+  def multiply(rhs: TransformMatrix): this.type | TransformMatrix = js.native
+  def multiply(rhs: TransformMatrix, out: TransformMatrix): this.type | TransformMatrix = js.native
   /**
     * Multiply this Matrix by the matrix given, including the offset.
     * 

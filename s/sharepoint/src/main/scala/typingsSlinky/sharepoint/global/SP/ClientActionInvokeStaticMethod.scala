@@ -14,5 +14,11 @@ class ClientActionInvokeStaticMethod protected ()
     methodName: String,
     parameters: js.Array[_]
   ) = this()
+  /* CompleteClass */
+  override def get_id(): Double = js.native
+  /* CompleteClass */
+  override def get_name(): String = js.native
+  /* CompleteClass */
+  override def get_path(): typingsSlinky.sharepoint.SP.ObjectPath = js.native
 }
 

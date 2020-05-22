@@ -4,11 +4,17 @@ import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.IFuture
 import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.IKernel
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.ControlMessageType
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IControlMessage
+import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IIOPubMessage
+import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IInputReply
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IMessage
+import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IOPubMessageType
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IShellControlMessage
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IShellMessage
+import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IStdinMessage
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.MessageType
+import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.ReplyContent
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.ShellMessageType
+import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.StdinMessageType
 import typingsSlinky.phosphorDisposable.mod.DisposableDelegate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -58,13 +64,117 @@ object futureMod extends js.Object {
     var _testFlag: js.Any = js.native
     /**
       * A promise that resolves when the future is done.
+      *
+      * #### Notes
+      * The future is done when there are no more responses expected from the
+      * kernel.
+      *
+      * The `done` promise resolves to the reply message if there is one,
+      * otherwise it resolves to `undefined`.
+      */
+    /* CompleteClass */
+    override val done: js.Promise[js.UndefOr[REPLY]] = js.native
+    /**
+      * A promise that resolves when the future is done.
       */
     @JSName("done")
     val done_KernelFutureHandler: js.Promise[REPLY] = js.native
     /**
+      * Test whether the object has been disposed.
+      *
+      * #### Notes
+      * This property is always safe to access.
+      */
+    /* CompleteClass */
+    override val isDisposed: Boolean = js.native
+    /**
+      * The original outgoing message.
+      */
+    /* CompleteClass */
+    override val msg: REQUEST = js.native
+    /**
+      * Dispose of the resources held by the object.
+      *
+      * #### Notes
+      * If the object's `dispose` method is called more than once, all
+      * calls made after the first will be a no-op.
+      *
+      * #### Undefined Behavior
+      * It is undefined behavior to use any functionality of the object
+      * after it has been disposed unless otherwise explicitly noted.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def dispose(): Unit = js.native
+    /**
       * Handle an incoming kernel message.
       */
     def handleMsg(msg: IMessage[MessageType]): js.Promise[Unit] = js.native
+    /**
+      * The iopub handler for the kernel future.
+      *
+      * #### Notes
+      * If the handler returns a promise, all kernel message processing pauses
+      * until the promise is resolved.
+      */
+    /* CompleteClass */
+    override def onIOPub(msg: IIOPubMessage[IOPubMessageType]): Unit | js.Thenable[Unit] = js.native
+    /**
+      * The reply handler for the kernel future.
+      *
+      * #### Notes
+      * If the handler returns a promise, all kernel message processing pauses
+      * until the promise is resolved. If there is a reply message, the future
+      * `done` promise also resolves to the reply message after this handler has
+      * been called.
+      */
+    /* CompleteClass */
+    override def onReply(msg: REPLY): Unit | js.Thenable[Unit] = js.native
+    /**
+      * The stdin handler for the kernel future.
+      *
+      * #### Notes
+      * If the handler returns a promise, all kernel message processing pauses
+      * until the promise is resolved.
+      */
+    /* CompleteClass */
+    override def onStdin(msg: IStdinMessage[StdinMessageType]): Unit | js.Thenable[Unit] = js.native
+    /**
+      * Register hook for IOPub messages.
+      *
+      * @param hook - The callback invoked for an IOPub message.
+      *
+      * #### Notes
+      * The IOPub hook system allows you to preempt the handlers for IOPub
+      * messages handled by the future.
+      *
+      * The most recently registered hook is run first. A hook can return a
+      * boolean or a promise to a boolean, in which case all kernel message
+      * processing pauses until the promise is fulfilled. If a hook return value
+      * resolves to false, any later hooks will not run and the function will
+      * return a promise resolving to false. If a hook throws an error, the error
+      * is logged to the console and the next hook is run. If a hook is
+      * registered during the hook processing, it will not run until the next
+      * message. If a hook is removed during the hook processing, it will be
+      * deactivated immediately.
+      */
+    /* CompleteClass */
+    override def registerMessageHook(hook: js.Function1[/* msg */ IIOPubMessage[IOPubMessageType], Boolean | js.Thenable[Boolean]]): Unit = js.native
+    /**
+      * Remove a hook for IOPub messages.
+      *
+      * @param hook - The hook to remove.
+      *
+      * #### Notes
+      * If a hook is removed during the hook processing, it will be deactivated immediately.
+      */
+    /* CompleteClass */
+    override def removeMessageHook(hook: js.Function1[/* msg */ IIOPubMessage[IOPubMessageType], Boolean | js.Thenable[Boolean]]): Unit = js.native
+    /**
+      * Send an `input_reply` message.
+      */
+    /* CompleteClass */
+    override def sendInputReply(content: ReplyContent[IInputReply]): Unit = js.native
   }
   
   @js.native

@@ -8,5 +8,14 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Appointments.FindAppointmentsOptions")
 @js.native
 abstract class FindAppointmentsOptions ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.FindAppointmentsOptions
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.FindAppointmentsOptions {
+  /* CompleteClass */
+  override var calendarIds: js.Any = js.native
+   /* unmapped type */ /* CompleteClass */
+  override var fetchProperties: js.Any = js.native
+   /* unmapped type */ /* CompleteClass */
+  override var includeHidden: js.Any = js.native
+   /* unmapped type */ /* CompleteClass */
+  override var maxCount: js.Any = js.native
+}
 

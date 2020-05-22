@@ -11,36 +11,35 @@ import scala.scalajs.js.annotation._
   * This service may be represented by a {@link com.sun.star.beans.PropertyValue} [].
   * @see com.sun.star.beans.PropertyValue
   */
-@js.native
 trait PrinterDescriptor extends js.Object {
   /** indicates, whether the printer allows changes to {@link PrinterDescriptor.PaperFormat} . */
-  var CanSetPaperFormat: Boolean = js.native
+  var CanSetPaperFormat: Boolean
   /** indicates, whether the printer allows changes to {@link PrinterDescriptor.PaperOrientation} . */
-  var CanSetPaperOrientation: Boolean = js.native
+  var CanSetPaperOrientation: Boolean
   /** indicates if the printer allows changes to {@link PrinterDescriptor.PaperSize} . */
-  var CanSetPaperSize: Boolean = js.native
+  var CanSetPaperSize: Boolean
   /** indicates, whether the printer is busy or not. */
-  var IsBusy: Boolean = js.native
+  var IsBusy: Boolean
   /**
     * specifies the name of the printer queue to be used.
     *
     * Which printer queues are available, can be figured out with the system library of the used programming language/environment.
     */
-  var Name: String = js.native
+  var Name: String
   /**
     * specifies a predefined paper size or if the paper size is a user-defined size.
     *
     * Setting this property may change the value of {@link PrinterDescriptor.PaperSize} .
     */
-  var PaperFormat: typingsSlinky.activexLibreoffice.com_.sun.star.view.PaperFormat = js.native
+  var PaperFormat: typingsSlinky.activexLibreoffice.com_.sun.star.view.PaperFormat
   /** specifies the orientation of the paper. */
-  var PaperOrientation: typingsSlinky.activexLibreoffice.com_.sun.star.view.PaperOrientation = js.native
+  var PaperOrientation: typingsSlinky.activexLibreoffice.com_.sun.star.view.PaperOrientation
   /**
     * specifies the size of the paper in 100th mm.
     *
     * Setting this property may change the value of {@link PrinterDescriptor.PaperFormat} .
     */
-  var PaperSize: Size = js.native
+  var PaperSize: Size
 }
 
 object PrinterDescriptor {
@@ -58,61 +57,5 @@ object PrinterDescriptor {
     val __obj = js.Dynamic.literal(CanSetPaperFormat = CanSetPaperFormat.asInstanceOf[js.Any], CanSetPaperOrientation = CanSetPaperOrientation.asInstanceOf[js.Any], CanSetPaperSize = CanSetPaperSize.asInstanceOf[js.Any], IsBusy = IsBusy.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PaperFormat = PaperFormat.asInstanceOf[js.Any], PaperOrientation = PaperOrientation.asInstanceOf[js.Any], PaperSize = PaperSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrinterDescriptor]
   }
-  @scala.inline
-  implicit class PrinterDescriptorOps[Self <: PrinterDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanSetPaperFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CanSetPaperFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanSetPaperOrientation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CanSetPaperOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanSetPaperSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CanSetPaperSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsBusy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsBusy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaperFormat(value: PaperFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaperOrientation(value: PaperOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaperSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

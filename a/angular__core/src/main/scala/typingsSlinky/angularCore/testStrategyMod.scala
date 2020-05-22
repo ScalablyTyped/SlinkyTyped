@@ -1,5 +1,7 @@
 package typingsSlinky.angularCore
 
+import typingsSlinky.angularCore.queryDefinitionMod.NgQueryDefinition
+import typingsSlinky.angularCore.timingStrategyMod.TimingResult
 import typingsSlinky.angularCore.timingStrategyMod.TimingStrategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +11,14 @@ import scala.scalajs.js.annotation._
 @js.native
 object testStrategyMod extends js.Object {
   @js.native
-  class QueryTestStrategy () extends TimingStrategy
+  class QueryTestStrategy () extends TimingStrategy {
+    /** Detects the timing result for a given query. */
+    /* CompleteClass */
+    override def detectTiming(query: NgQueryDefinition): TimingResult = js.native
+    /** Sets up the given strategy. Throws if the strategy could not be set up. */
+    /* CompleteClass */
+    override def setup(): Unit = js.native
+  }
   
 }
 

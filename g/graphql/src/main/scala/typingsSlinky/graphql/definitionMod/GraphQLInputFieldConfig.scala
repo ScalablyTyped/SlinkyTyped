@@ -7,101 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GraphQLInputFieldConfig extends js.Object {
-  var astNode: js.UndefOr[Maybe[InputValueDefinitionNode]] = js.native
-  var defaultValue: js.UndefOr[js.Any] = js.native
-  var description: js.UndefOr[Maybe[String]] = js.native
-  var extensions: js.UndefOr[Maybe[Record[String, _]]] = js.native
-  var `type`: GraphQLInputType = js.native
+  var astNode: js.UndefOr[Maybe[InputValueDefinitionNode]] = js.undefined
+  var defaultValue: js.UndefOr[js.Any] = js.undefined
+  var description: js.UndefOr[Maybe[String]] = js.undefined
+  var extensions: js.UndefOr[Maybe[Record[String, _]]] = js.undefined
+  var `type`: GraphQLInputType
 }
 
 object GraphQLInputFieldConfig {
   @scala.inline
-  def apply(`type`: GraphQLInputType): GraphQLInputFieldConfig = {
+  def apply(
+    `type`: GraphQLInputType,
+    astNode: js.UndefOr[Null | Maybe[InputValueDefinitionNode]] = js.undefined,
+    defaultValue: js.Any = null,
+    description: js.UndefOr[Null | Maybe[String]] = js.undefined,
+    extensions: js.UndefOr[Null | (Maybe[Record[String, _]])] = js.undefined
+  ): GraphQLInputFieldConfig = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(astNode)) __obj.updateDynamic("astNode")(astNode.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(extensions)) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLInputFieldConfig]
   }
-  @scala.inline
-  implicit class GraphQLInputFieldConfigOps[Self <: GraphQLInputFieldConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: GraphQLInputType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAstNode(value: Maybe[InputValueDefinitionNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAstNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAstNodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(null)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Maybe[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: Maybe[Record[String, _]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThrottleConfig extends js.Object {
-  var leading: js.UndefOr[Boolean] = js.native
-  var trailing: js.UndefOr[Boolean] = js.native
+  var leading: js.UndefOr[Boolean] = js.undefined
+  var trailing: js.UndefOr[Boolean] = js.undefined
 }
 
 object ThrottleConfig {
   @scala.inline
-  def apply(): ThrottleConfig = {
+  def apply(leading: js.UndefOr[Boolean] = js.undefined, trailing: js.UndefOr[Boolean] = js.undefined): ThrottleConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(leading)) __obj.updateDynamic("leading")(leading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trailing)) __obj.updateDynamic("trailing")(trailing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThrottleConfig]
   }
-  @scala.inline
-  implicit class ThrottleConfigOps[Self <: ThrottleConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLeading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

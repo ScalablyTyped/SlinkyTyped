@@ -7,47 +7,26 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LaunchTemplateCapacityReservationSpecification extends js.Object {
+  /**
+    * Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
+    */
   var capacityReservationPreference: js.UndefOr[Input[String]] = js.native
+  /**
+    * Used to target a specific Capacity Reservation:
+    */
   var capacityReservationTarget: js.UndefOr[Input[LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget]] = js.native
 }
 
 object LaunchTemplateCapacityReservationSpecification {
   @scala.inline
-  def apply(): LaunchTemplateCapacityReservationSpecification = {
+  def apply(
+    capacityReservationPreference: Input[String] = null,
+    capacityReservationTarget: Input[LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget] = null
+  ): LaunchTemplateCapacityReservationSpecification = {
     val __obj = js.Dynamic.literal()
+    if (capacityReservationPreference != null) __obj.updateDynamic("capacityReservationPreference")(capacityReservationPreference.asInstanceOf[js.Any])
+    if (capacityReservationTarget != null) __obj.updateDynamic("capacityReservationTarget")(capacityReservationTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateCapacityReservationSpecification]
   }
-  @scala.inline
-  implicit class LaunchTemplateCapacityReservationSpecificationOps[Self <: LaunchTemplateCapacityReservationSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityReservationPreference(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityReservationPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityReservationPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityReservationPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapacityReservationTarget(value: Input[LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityReservationTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityReservationTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityReservationTarget")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.googleapis.reportsV1Mod.adminReportsV1
 
-import typingsSlinky.googleapis.AnonApplicationName
-import typingsSlinky.googleapis.AnonCallerType
-import typingsSlinky.googleapis.AnonName
+import typingsSlinky.googleapis.anon.ApplicationName
+import typingsSlinky.googleapis.anon.CallerType
+import typingsSlinky.googleapis.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait SchemaActivity extends js.Object {
   /**
     * User doing the action.
     */
-  var actor: js.UndefOr[AnonCallerType] = js.native
+  var actor: js.UndefOr[CallerType] = js.native
   /**
     * ETag of the entry.
     */
@@ -23,11 +23,11 @@ trait SchemaActivity extends js.Object {
   /**
     * Activity events.
     */
-  var events: js.UndefOr[js.Array[AnonName]] = js.native
+  var events: js.UndefOr[js.Array[Name]] = js.native
   /**
     * Unique identifier for each activity record.
     */
-  var id: js.UndefOr[AnonApplicationName] = js.native
+  var id: js.UndefOr[ApplicationName] = js.native
   /**
     * IP Address of the user doing the action.
     */
@@ -44,101 +44,24 @@ trait SchemaActivity extends js.Object {
 
 object SchemaActivity {
   @scala.inline
-  def apply(): SchemaActivity = {
+  def apply(
+    actor: CallerType = null,
+    etag: String = null,
+    events: js.Array[Name] = null,
+    id: ApplicationName = null,
+    ipAddress: String = null,
+    kind: String = null,
+    ownerDomain: String = null
+  ): SchemaActivity = {
     val __obj = js.Dynamic.literal()
+    if (actor != null) __obj.updateDynamic("actor")(actor.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (ownerDomain != null) __obj.updateDynamic("ownerDomain")(ownerDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaActivity]
   }
-  @scala.inline
-  implicit class SchemaActivityOps[Self <: SchemaActivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActor(value: AnonCallerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Array[AnonName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: AnonApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerDomain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDomain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

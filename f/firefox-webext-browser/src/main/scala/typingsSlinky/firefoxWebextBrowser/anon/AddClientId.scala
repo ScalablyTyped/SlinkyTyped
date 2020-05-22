@@ -5,79 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddClientId extends js.Object {
   /** True if the ping should contain the client id. */
-  var addClientId: js.UndefOr[Boolean] = js.native
+  var addClientId: js.UndefOr[Boolean] = js.undefined
   /** True if the ping should contain the environment data. */
-  var addEnvironment: js.UndefOr[Boolean] = js.native
+  var addEnvironment: js.UndefOr[Boolean] = js.undefined
   /** Set to override the environment data. */
-  var overrideEnvironment: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var overrideEnvironment: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   /** If true, send the ping using the PingSender. */
-  var usePingSender: js.UndefOr[Boolean] = js.native
+  var usePingSender: js.UndefOr[Boolean] = js.undefined
 }
 
 object AddClientId {
   @scala.inline
-  def apply(): AddClientId = {
+  def apply(
+    addClientId: js.UndefOr[Boolean] = js.undefined,
+    addEnvironment: js.UndefOr[Boolean] = js.undefined,
+    overrideEnvironment: StringDictionary[js.Any] = null,
+    usePingSender: js.UndefOr[Boolean] = js.undefined
+  ): AddClientId = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addClientId)) __obj.updateDynamic("addClientId")(addClientId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(addEnvironment)) __obj.updateDynamic("addEnvironment")(addEnvironment.get.asInstanceOf[js.Any])
+    if (overrideEnvironment != null) __obj.updateDynamic("overrideEnvironment")(overrideEnvironment.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePingSender)) __obj.updateDynamic("usePingSender")(usePingSender.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddClientId]
   }
-  @scala.inline
-  implicit class AddClientIdOps[Self <: AddClientId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddClientId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddEnvironment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEnvironment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEnvironment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideEnvironment(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideEnvironment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideEnvironment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePingSender(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePingSender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePingSender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePingSender")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

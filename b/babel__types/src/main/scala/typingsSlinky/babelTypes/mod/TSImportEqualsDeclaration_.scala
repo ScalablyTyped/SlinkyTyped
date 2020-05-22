@@ -6,15 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSImportEqualsDeclaration_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSImportEqualsDeclaration_
   extends Statement
      with BaseNode {
-  var id: Identifier_ = js.native
-  var isExport: Boolean = js.native
-  var moduleReference: TSEntityName | TSExternalModuleReference_ = js.native
+  var id: Identifier_
+  var isExport: Boolean
+  var moduleReference: TSEntityName | TSExternalModuleReference_
   @JSName("type")
-  var type_TSImportEqualsDeclaration_ : TSImportEqualsDeclaration = js.native
+  var type_TSImportEqualsDeclaration_ : TSImportEqualsDeclaration
 }
 
 object TSImportEqualsDeclaration_ {
@@ -23,43 +22,17 @@ object TSImportEqualsDeclaration_ {
     id: Identifier_,
     isExport: Boolean,
     moduleReference: TSEntityName | TSExternalModuleReference_,
-    `type`: TSImportEqualsDeclaration
+    `type`: TSImportEqualsDeclaration,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
   ): TSImportEqualsDeclaration_ = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isExport = isExport.asInstanceOf[js.Any], moduleReference = moduleReference.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isExport = isExport.asInstanceOf[js.Any], moduleReference = moduleReference.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSImportEqualsDeclaration_]
   }
-  @scala.inline
-  implicit class TSImportEqualsDeclaration_Ops[Self <: TSImportEqualsDeclaration_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsExport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModuleReference(value: TSEntityName | TSExternalModuleReference_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSImportEqualsDeclaration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

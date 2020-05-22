@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LibraryConfig extends js.Object {
-  var debug: js.UndefOr[Boolean] = js.native
-  var networkTimeout: js.UndefOr[Double] = js.native
-  var timeoutWindow: js.UndefOr[Double] = js.native
-  var token: js.UndefOr[String] = js.native
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var networkTimeout: js.UndefOr[Double] = js.undefined
+  var timeoutWindow: js.UndefOr[Double] = js.undefined
+  var token: js.UndefOr[String] = js.undefined
 }
 
 object LibraryConfig {
   @scala.inline
-  def apply(): LibraryConfig = {
+  def apply(
+    debug: js.UndefOr[Boolean] = js.undefined,
+    networkTimeout: js.UndefOr[Double] = js.undefined,
+    timeoutWindow: js.UndefOr[Double] = js.undefined,
+    token: String = null
+  ): LibraryConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkTimeout)) __obj.updateDynamic("networkTimeout")(networkTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutWindow)) __obj.updateDynamic("timeoutWindow")(timeoutWindow.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[LibraryConfig]
   }
-  @scala.inline
-  implicit class LibraryConfigOps[Self <: LibraryConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutWindow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

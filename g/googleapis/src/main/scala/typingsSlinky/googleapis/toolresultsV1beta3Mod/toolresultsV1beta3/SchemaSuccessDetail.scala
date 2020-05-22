@@ -14,29 +14,10 @@ trait SchemaSuccessDetail extends js.Object {
 
 object SchemaSuccessDetail {
   @scala.inline
-  def apply(): SchemaSuccessDetail = {
+  def apply(otherNativeCrash: js.UndefOr[Boolean] = js.undefined): SchemaSuccessDetail = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(otherNativeCrash)) __obj.updateDynamic("otherNativeCrash")(otherNativeCrash.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuccessDetail]
   }
-  @scala.inline
-  implicit class SchemaSuccessDetailOps[Self <: SchemaSuccessDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOtherNativeCrash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherNativeCrash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherNativeCrash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherNativeCrash")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

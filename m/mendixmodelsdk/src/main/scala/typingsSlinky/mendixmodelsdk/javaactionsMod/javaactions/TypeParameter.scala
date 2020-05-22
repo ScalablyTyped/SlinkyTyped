@@ -39,6 +39,14 @@ class TypeParameter protected ()
   var model_FTypeParameter: IModel = js.native
   @JSName("name")
   val name_FTypeParameter: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   def containerAsJavaAction: JavaAction = js.native
   def name: String = js.native
   def name(newValue: String): js.Any = js.native

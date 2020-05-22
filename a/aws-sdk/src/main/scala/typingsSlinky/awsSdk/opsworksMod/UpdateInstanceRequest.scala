@@ -58,155 +58,33 @@ trait UpdateInstanceRequest extends js.Object {
 
 object UpdateInstanceRequest {
   @scala.inline
-  def apply(InstanceId: String): UpdateInstanceRequest = {
+  def apply(
+    InstanceId: String,
+    AgentVersion: String = null,
+    AmiId: String = null,
+    Architecture: Architecture = null,
+    AutoScalingType: AutoScalingType = null,
+    EbsOptimized: js.UndefOr[Boolean] = js.undefined,
+    Hostname: String = null,
+    InstallUpdatesOnBoot: js.UndefOr[Boolean] = js.undefined,
+    InstanceType: String = null,
+    LayerIds: Strings = null,
+    Os: String = null,
+    SshKeyName: String = null
+  ): UpdateInstanceRequest = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any])
+    if (AgentVersion != null) __obj.updateDynamic("AgentVersion")(AgentVersion.asInstanceOf[js.Any])
+    if (AmiId != null) __obj.updateDynamic("AmiId")(AmiId.asInstanceOf[js.Any])
+    if (Architecture != null) __obj.updateDynamic("Architecture")(Architecture.asInstanceOf[js.Any])
+    if (AutoScalingType != null) __obj.updateDynamic("AutoScalingType")(AutoScalingType.asInstanceOf[js.Any])
+    if (!js.isUndefined(EbsOptimized)) __obj.updateDynamic("EbsOptimized")(EbsOptimized.get.asInstanceOf[js.Any])
+    if (Hostname != null) __obj.updateDynamic("Hostname")(Hostname.asInstanceOf[js.Any])
+    if (!js.isUndefined(InstallUpdatesOnBoot)) __obj.updateDynamic("InstallUpdatesOnBoot")(InstallUpdatesOnBoot.get.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (LayerIds != null) __obj.updateDynamic("LayerIds")(LayerIds.asInstanceOf[js.Any])
+    if (Os != null) __obj.updateDynamic("Os")(Os.asInstanceOf[js.Any])
+    if (SshKeyName != null) __obj.updateDynamic("SshKeyName")(SshKeyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInstanceRequest]
   }
-  @scala.inline
-  implicit class UpdateInstanceRequestOps[Self <: UpdateInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAgentVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmiId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmiId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmiId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArchitecture(value: Architecture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchitecture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Architecture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingType(value: AutoScalingType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEbsOptimized(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEbsOptimized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallUpdatesOnBoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstallUpdatesOnBoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallUpdatesOnBoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstallUpdatesOnBoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerIds(value: Strings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Os")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Os")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSshKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SshKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSshKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SshKeyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

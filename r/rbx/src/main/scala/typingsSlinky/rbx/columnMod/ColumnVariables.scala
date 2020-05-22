@@ -28,9 +28,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rbx.rbx/types.Prefer<rbx.rbx/grid/columns/column.ColumnVariablesOverrides, rbx.rbx/grid/columns/column.ColumnVariablesDefaults> */
-@js.native
 trait ColumnVariables extends js.Object {
-  var sizes: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `one-third` | `two-thirds` | `one-quarter` | half | `three-quarters` | `one-fifth` | `two-fifths` | `three-fifths` | `four-fifths` | full = js.native
+  var sizes: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `one-third` | `two-thirds` | `one-quarter` | half | `three-quarters` | `one-fifth` | `two-fifths` | `three-fifths` | `four-fifths` | full
 }
 
 object ColumnVariables {
@@ -41,21 +40,5 @@ object ColumnVariables {
     val __obj = js.Dynamic.literal(sizes = sizes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnVariables]
   }
-  @scala.inline
-  implicit class ColumnVariablesOps[Self <: ColumnVariables] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSizes(
-      value: `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `one-third` | `two-thirds` | `one-quarter` | half | `three-quarters` | `one-fifth` | `two-fifths` | `three-fifths` | `four-fifths` | full
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

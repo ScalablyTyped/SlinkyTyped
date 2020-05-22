@@ -1,5 +1,9 @@
 package typingsSlinky.vegaTypings.configMod
 
+import typingsSlinky.std.Exclude
+import typingsSlinky.vegaTypings.encodeMod.ColorValueRef
+import typingsSlinky.vegaTypings.encodeMod.NumericValueRef
+import typingsSlinky.vegaTypings.encodeMod.ScaledValueRef
 import typingsSlinky.vegaTypings.signalMod.SignalRef
 import typingsSlinky.vegaTypings.titleMod.TitleFrame
 import typingsSlinky.vegaTypings.titleMod.TitleOrient
@@ -16,322 +20,102 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined vega-typings.vega-typings/types/spec/config.ExcludeMappedValueRef<vega-typings.vega-typings/types/spec/title.BaseTitle> */
-@js.native
 trait TitleConfig extends js.Object {
-  var align: ExcludeValueRefKeepSignal[js.UndefOr[AlignValue]] = js.native
-  var anchor: ExcludeValueRefKeepSignal[js.UndefOr[AnchorValue]] = js.native
-  var angle: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var baseline: ExcludeValueRefKeepSignal[js.UndefOr[TextBaselineValue]] = js.native
-  var color: ExcludeValueRefKeepSignal[js.UndefOr[ColorValue]] = js.native
-  var dx: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var dy: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var font: ExcludeValueRefKeepSignal[js.UndefOr[StringValue]] = js.native
-  var fontSize: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var fontStyle: ExcludeValueRefKeepSignal[js.UndefOr[FontStyleValue]] = js.native
-  var fontWeight: ExcludeValueRefKeepSignal[js.UndefOr[FontWeightValue]] = js.native
-  var frame: ExcludeValueRefKeepSignal[js.UndefOr[TitleFrame | StringValue]] = js.native
-  var limit: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var lineHeight: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var offset: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var orient: ExcludeValueRefKeepSignal[js.UndefOr[TitleOrient | SignalRef]] = js.native
-  var subtitleColor: ExcludeValueRefKeepSignal[js.UndefOr[ColorValue]] = js.native
-  var subtitleFont: ExcludeValueRefKeepSignal[js.UndefOr[StringValue]] = js.native
-  var subtitleFontSize: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var subtitleFontStyle: ExcludeValueRefKeepSignal[js.UndefOr[FontStyleValue]] = js.native
-  var subtitleFontWeight: ExcludeValueRefKeepSignal[js.UndefOr[FontWeightValue]] = js.native
-  var subtitleLineHeight: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
-  var subtitlePadding: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]] = js.native
+  var align: (Exclude[js.UndefOr[AlignValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[AlignValue]]
+  var anchor: (Exclude[js.UndefOr[AnchorValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[AnchorValue]]
+  var angle: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var aria: (Exclude[js.UndefOr[Boolean], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[Boolean]]
+  var baseline: (Exclude[js.UndefOr[TextBaselineValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[TextBaselineValue]]
+  var color: (Exclude[js.UndefOr[ColorValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[ColorValue]]
+  var dx: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var dy: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var font: (Exclude[js.UndefOr[StringValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[StringValue]]
+  var fontSize: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var fontStyle: (Exclude[js.UndefOr[FontStyleValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontStyleValue]]
+  var fontWeight: (Exclude[js.UndefOr[FontWeightValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontWeightValue]]
+  var frame: (Exclude[
+    js.UndefOr[TitleFrame | StringValue], 
+    ScaledValueRef[_] | NumericValueRef | ColorValueRef
+  ]) | (KeepSignal[js.UndefOr[TitleFrame | StringValue]])
+  var limit: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var lineHeight: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var offset: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var orient: (Exclude[
+    js.UndefOr[TitleOrient | SignalRef], 
+    ScaledValueRef[_] | NumericValueRef | ColorValueRef
+  ]) | (KeepSignal[js.UndefOr[TitleOrient | SignalRef]])
+  var subtitleColor: (Exclude[js.UndefOr[ColorValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[ColorValue]]
+  var subtitleFont: (Exclude[js.UndefOr[StringValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[StringValue]]
+  var subtitleFontSize: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var subtitleFontStyle: (Exclude[js.UndefOr[FontStyleValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontStyleValue]]
+  var subtitleFontWeight: (Exclude[js.UndefOr[FontWeightValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontWeightValue]]
+  var subtitleLineHeight: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var subtitlePadding: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]]
+  var zindex: (Exclude[js.UndefOr[Double], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[Double]]
 }
 
 object TitleConfig {
   @scala.inline
-  def apply(): TitleConfig = {
+  def apply(
+    align: (Exclude[js.UndefOr[AlignValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[AlignValue]] = null,
+    anchor: (Exclude[js.UndefOr[AnchorValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[AnchorValue]] = null,
+    angle: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    aria: (Exclude[js.UndefOr[Boolean], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[Boolean]] = null,
+    baseline: (Exclude[js.UndefOr[TextBaselineValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[TextBaselineValue]] = null,
+    color: (Exclude[js.UndefOr[ColorValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[ColorValue]] = null,
+    dx: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    dy: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    font: (Exclude[js.UndefOr[StringValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[StringValue]] = null,
+    fontSize: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    fontStyle: (Exclude[js.UndefOr[FontStyleValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontStyleValue]] = null,
+    fontWeight: (Exclude[js.UndefOr[FontWeightValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontWeightValue]] = null,
+    frame: (Exclude[
+      js.UndefOr[TitleFrame | StringValue], 
+      ScaledValueRef[_] | NumericValueRef | ColorValueRef
+    ]) | (KeepSignal[js.UndefOr[TitleFrame | StringValue]]) = null,
+    limit: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    lineHeight: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    offset: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    orient: (Exclude[
+      js.UndefOr[TitleOrient | SignalRef], 
+      ScaledValueRef[_] | NumericValueRef | ColorValueRef
+    ]) | (KeepSignal[js.UndefOr[TitleOrient | SignalRef]]) = null,
+    subtitleColor: (Exclude[js.UndefOr[ColorValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[ColorValue]] = null,
+    subtitleFont: (Exclude[js.UndefOr[StringValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[StringValue]] = null,
+    subtitleFontSize: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    subtitleFontStyle: (Exclude[js.UndefOr[FontStyleValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontStyleValue]] = null,
+    subtitleFontWeight: (Exclude[js.UndefOr[FontWeightValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[FontWeightValue]] = null,
+    subtitleLineHeight: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    subtitlePadding: (Exclude[js.UndefOr[NumberValue], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[NumberValue]] = null,
+    zindex: (Exclude[js.UndefOr[Double], ScaledValueRef[_] | NumericValueRef | ColorValueRef]) | KeepSignal[js.UndefOr[Double]] = null
+  ): TitleConfig = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
+    if (aria != null) __obj.updateDynamic("aria")(aria.asInstanceOf[js.Any])
+    if (baseline != null) __obj.updateDynamic("baseline")(baseline.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
+    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
+    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
+    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
+    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
+    if (subtitleColor != null) __obj.updateDynamic("subtitleColor")(subtitleColor.asInstanceOf[js.Any])
+    if (subtitleFont != null) __obj.updateDynamic("subtitleFont")(subtitleFont.asInstanceOf[js.Any])
+    if (subtitleFontSize != null) __obj.updateDynamic("subtitleFontSize")(subtitleFontSize.asInstanceOf[js.Any])
+    if (subtitleFontStyle != null) __obj.updateDynamic("subtitleFontStyle")(subtitleFontStyle.asInstanceOf[js.Any])
+    if (subtitleFontWeight != null) __obj.updateDynamic("subtitleFontWeight")(subtitleFontWeight.asInstanceOf[js.Any])
+    if (subtitleLineHeight != null) __obj.updateDynamic("subtitleLineHeight")(subtitleLineHeight.asInstanceOf[js.Any])
+    if (subtitlePadding != null) __obj.updateDynamic("subtitlePadding")(subtitlePadding.asInstanceOf[js.Any])
+    if (zindex != null) __obj.updateDynamic("zindex")(zindex.asInstanceOf[js.Any])
     __obj.asInstanceOf[TitleConfig]
   }
-  @scala.inline
-  implicit class TitleConfigOps[Self <: TitleConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: ExcludeValueRefKeepSignal[js.UndefOr[AlignValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnchor(value: ExcludeValueRefKeepSignal[js.UndefOr[AnchorValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngle(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseline(value: ExcludeValueRefKeepSignal[js.UndefOr[TextBaselineValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: ExcludeValueRefKeepSignal[js.UndefOr[ColorValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDx(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDy(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: ExcludeValueRefKeepSignal[js.UndefOr[StringValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontStyle(value: ExcludeValueRefKeepSignal[js.UndefOr[FontStyleValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontWeight(value: ExcludeValueRefKeepSignal[js.UndefOr[FontWeightValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: ExcludeValueRefKeepSignal[js.UndefOr[TitleFrame | StringValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineHeight(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrient(value: ExcludeValueRefKeepSignal[js.UndefOr[TitleOrient | SignalRef]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleColor(value: ExcludeValueRefKeepSignal[js.UndefOr[ColorValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleFont(value: ExcludeValueRefKeepSignal[js.UndefOr[StringValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleFontSize(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleFontStyle(value: ExcludeValueRefKeepSignal[js.UndefOr[FontStyleValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleFontWeight(value: ExcludeValueRefKeepSignal[js.UndefOr[FontWeightValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFontWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleFontWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleFontWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleLineHeight(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleLineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleLineHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleLineHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitlePadding(value: ExcludeValueRefKeepSignal[js.UndefOr[NumberValue]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitlePadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitlePadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitlePadding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

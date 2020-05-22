@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDatagramSocketControl extends js.Object {
-  var outboundUnicastHopLimit: Double = js.native
-  var qualityOfService: SocketQualityOfService = js.native
+  var outboundUnicastHopLimit: Double
+  var qualityOfService: SocketQualityOfService
 }
 
 object IDatagramSocketControl {
@@ -16,25 +15,5 @@ object IDatagramSocketControl {
     val __obj = js.Dynamic.literal(outboundUnicastHopLimit = outboundUnicastHopLimit.asInstanceOf[js.Any], qualityOfService = qualityOfService.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDatagramSocketControl]
   }
-  @scala.inline
-  implicit class IDatagramSocketControlOps[Self <: IDatagramSocketControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutboundUnicastHopLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outboundUnicastHopLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQualityOfService(value: SocketQualityOfService): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualityOfService")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

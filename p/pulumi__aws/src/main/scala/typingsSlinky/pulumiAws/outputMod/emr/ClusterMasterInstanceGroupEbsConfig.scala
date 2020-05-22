@@ -14,54 +14,17 @@ trait ClusterMasterInstanceGroupEbsConfig extends js.Object {
 
 object ClusterMasterInstanceGroupEbsConfig {
   @scala.inline
-  def apply(size: Double, `type`: String): ClusterMasterInstanceGroupEbsConfig = {
+  def apply(
+    size: Double,
+    `type`: String,
+    iops: js.UndefOr[Double] = js.undefined,
+    volumesPerInstance: js.UndefOr[Double] = js.undefined
+  ): ClusterMasterInstanceGroupEbsConfig = {
     val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(iops)) __obj.updateDynamic("iops")(iops.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(volumesPerInstance)) __obj.updateDynamic("volumesPerInstance")(volumesPerInstance.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterMasterInstanceGroupEbsConfig]
   }
-  @scala.inline
-  implicit class ClusterMasterInstanceGroupEbsConfigOps[Self <: ClusterMasterInstanceGroupEbsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIops(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumesPerInstance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumesPerInstance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumesPerInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumesPerInstance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

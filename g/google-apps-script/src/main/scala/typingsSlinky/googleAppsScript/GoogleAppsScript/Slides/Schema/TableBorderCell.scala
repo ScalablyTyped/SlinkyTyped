@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableBorderCell extends js.Object {
-  var location: js.UndefOr[TableCellLocation] = js.native
-  var tableBorderProperties: js.UndefOr[TableBorderProperties] = js.native
+  var location: js.UndefOr[TableCellLocation] = js.undefined
+  var tableBorderProperties: js.UndefOr[TableBorderProperties] = js.undefined
 }
 
 object TableBorderCell {
   @scala.inline
-  def apply(): TableBorderCell = {
+  def apply(location: TableCellLocation = null, tableBorderProperties: TableBorderProperties = null): TableBorderCell = {
     val __obj = js.Dynamic.literal()
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (tableBorderProperties != null) __obj.updateDynamic("tableBorderProperties")(tableBorderProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableBorderCell]
   }
-  @scala.inline
-  implicit class TableBorderCellOps[Self <: TableBorderCell] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: TableCellLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableBorderProperties(value: TableBorderProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBorderProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableBorderProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBorderProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

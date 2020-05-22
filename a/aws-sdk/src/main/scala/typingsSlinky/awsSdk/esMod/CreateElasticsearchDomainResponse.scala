@@ -14,29 +14,10 @@ trait CreateElasticsearchDomainResponse extends js.Object {
 
 object CreateElasticsearchDomainResponse {
   @scala.inline
-  def apply(): CreateElasticsearchDomainResponse = {
+  def apply(DomainStatus: ElasticsearchDomainStatus = null): CreateElasticsearchDomainResponse = {
     val __obj = js.Dynamic.literal()
+    if (DomainStatus != null) __obj.updateDynamic("DomainStatus")(DomainStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateElasticsearchDomainResponse]
   }
-  @scala.inline
-  implicit class CreateElasticsearchDomainResponseOps[Self <: CreateElasticsearchDomainResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainStatus(value: ElasticsearchDomainStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

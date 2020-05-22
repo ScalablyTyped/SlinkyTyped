@@ -30,7 +30,7 @@ trait SlicerStyle extends ClientObject {
   var name: String = js.native
   /**
     *
-    * Specifies whether this SlicerStyle object is read-only. Read-only.
+    * Specifies if this SlicerStyle object is read-only.
     *
     * [Api set: ExcelApi 1.10]
     */

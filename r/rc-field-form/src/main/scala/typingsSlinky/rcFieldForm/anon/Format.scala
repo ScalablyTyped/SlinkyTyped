@@ -5,80 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Format extends js.Object {
-  var format: js.UndefOr[ValidateMessage] = js.native
-  var invalid: js.UndefOr[ValidateMessage] = js.native
-  var parse: js.UndefOr[ValidateMessage] = js.native
+  var format: js.UndefOr[ValidateMessage] = js.undefined
+  var invalid: js.UndefOr[ValidateMessage] = js.undefined
+  var parse: js.UndefOr[ValidateMessage] = js.undefined
 }
 
 object Format {
   @scala.inline
-  def apply(): Format = {
+  def apply(format: ValidateMessage = null, invalid: ValidateMessage = null, parse: ValidateMessage = null): Format = {
     val __obj = js.Dynamic.literal()
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (invalid != null) __obj.updateDynamic("invalid")(invalid.asInstanceOf[js.Any])
+    if (parse != null) __obj.updateDynamic("parse")(parse.asInstanceOf[js.Any])
     __obj.asInstanceOf[Format]
   }
-  @scala.inline
-  implicit class FormatOps[Self <: Format] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormatFunction0(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ValidateMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidFunction0(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInvalid(value: ValidateMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseFunction0(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParse(value: ValidateMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

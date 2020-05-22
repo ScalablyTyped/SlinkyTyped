@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation._
 trait ChartTrendlineLabel extends ClientObject {
   /**
     *
-    * Boolean value representing if trendline label automatically generates appropriate text based on context.
+    * Specifies if trendline label automatically generate appropriate text based on context.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -37,7 +37,7 @@ trait ChartTrendlineLabel extends ClientObject {
   var context_ChartTrendlineLabel: RequestContext = js.native
   /**
     *
-    * Represents the format of chart trendline label.
+    * The format of chart trendline label.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -51,7 +51,7 @@ trait ChartTrendlineLabel extends ClientObject {
   var formula: String = js.native
   /**
     *
-    * Returns the height, in points, of the chart trendline label. Read-only. Null if chart trendline label is not visible.
+    * Returns the height, in points, of the chart trendline label. Null if chart trendline label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -73,7 +73,7 @@ trait ChartTrendlineLabel extends ClientObject {
   var left: Double = js.native
   /**
     *
-    * Boolean value representing if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells).
+    * Specifies if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells).
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -116,7 +116,7 @@ trait ChartTrendlineLabel extends ClientObject {
   var verticalAlignment: ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed = js.native
   /**
     *
-    * Returns the width, in points, of the chart trendline label. Read-only. Null if chart trendline label is not visible.
+    * Returns the width, in points, of the chart trendline label. Null if chart trendline label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */

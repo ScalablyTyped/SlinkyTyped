@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GitAsyncRefOperationSource extends js.Object {
   /**
     * A list of commits to cherry pick or revert
     */
-  var commitList: js.Array[GitCommitRef] = js.native
+  var commitList: js.Array[GitCommitRef]
   /**
     * Id of the pull request to cherry pick or revert
     */
-  var pullRequestId: Double = js.native
+  var pullRequestId: Double
 }
 
 object GitAsyncRefOperationSource {
@@ -22,25 +21,5 @@ object GitAsyncRefOperationSource {
     val __obj = js.Dynamic.literal(commitList = commitList.asInstanceOf[js.Any], pullRequestId = pullRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitAsyncRefOperationSource]
   }
-  @scala.inline
-  implicit class GitAsyncRefOperationSourceOps[Self <: GitAsyncRefOperationSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitList(value: js.Array[GitCommitRef]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPullRequestId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

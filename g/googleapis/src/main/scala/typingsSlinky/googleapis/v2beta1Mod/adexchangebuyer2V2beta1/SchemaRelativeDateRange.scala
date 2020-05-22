@@ -26,41 +26,11 @@ trait SchemaRelativeDateRange extends js.Object {
 
 object SchemaRelativeDateRange {
   @scala.inline
-  def apply(): SchemaRelativeDateRange = {
+  def apply(durationDays: js.UndefOr[Double] = js.undefined, offsetDays: js.UndefOr[Double] = js.undefined): SchemaRelativeDateRange = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(durationDays)) __obj.updateDynamic("durationDays")(durationDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetDays)) __obj.updateDynamic("offsetDays")(offsetDays.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRelativeDateRange]
   }
-  @scala.inline
-  implicit class SchemaRelativeDateRangeOps[Self <: SchemaRelativeDateRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDurationDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDays")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

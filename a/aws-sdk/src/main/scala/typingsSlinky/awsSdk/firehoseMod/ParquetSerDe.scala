@@ -34,89 +34,22 @@ trait ParquetSerDe extends js.Object {
 
 object ParquetSerDe {
   @scala.inline
-  def apply(): ParquetSerDe = {
+  def apply(
+    BlockSizeBytes: js.UndefOr[BlockSizeBytes] = js.undefined,
+    Compression: ParquetCompression = null,
+    EnableDictionaryCompression: js.UndefOr[BooleanObject] = js.undefined,
+    MaxPaddingBytes: js.UndefOr[NonNegativeIntegerObject] = js.undefined,
+    PageSizeBytes: js.UndefOr[ParquetPageSizeBytes] = js.undefined,
+    WriterVersion: ParquetWriterVersion = null
+  ): ParquetSerDe = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(BlockSizeBytes)) __obj.updateDynamic("BlockSizeBytes")(BlockSizeBytes.get.asInstanceOf[js.Any])
+    if (Compression != null) __obj.updateDynamic("Compression")(Compression.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnableDictionaryCompression)) __obj.updateDynamic("EnableDictionaryCompression")(EnableDictionaryCompression.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxPaddingBytes)) __obj.updateDynamic("MaxPaddingBytes")(MaxPaddingBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PageSizeBytes)) __obj.updateDynamic("PageSizeBytes")(PageSizeBytes.get.asInstanceOf[js.Any])
+    if (WriterVersion != null) __obj.updateDynamic("WriterVersion")(WriterVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParquetSerDe]
   }
-  @scala.inline
-  implicit class ParquetSerDeOps[Self <: ParquetSerDe] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockSizeBytes(value: BlockSizeBytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompression(value: ParquetCompression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableDictionaryCompression(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDictionaryCompression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableDictionaryCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDictionaryCompression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPaddingBytes(value: NonNegativeIntegerObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPaddingBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPaddingBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPaddingBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSizeBytes(value: ParquetPageSizeBytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriterVersion(value: ParquetWriterVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriterVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriterVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriterVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

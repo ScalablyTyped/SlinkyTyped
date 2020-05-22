@@ -7,52 +7,22 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PrivateIpAddressDetails extends js.Object {
   /**
-    * Private DNS name of the EC2 instance.
+    * The private DNS name of the EC2 instance.
     */
   var PrivateDnsName: js.UndefOr[String] = js.native
   /**
-    * Private IP address of the EC2 instance.
+    * The private IP address of the EC2 instance.
     */
   var PrivateIpAddress: js.UndefOr[String] = js.native
 }
 
 object PrivateIpAddressDetails {
   @scala.inline
-  def apply(): PrivateIpAddressDetails = {
+  def apply(PrivateDnsName: String = null, PrivateIpAddress: String = null): PrivateIpAddressDetails = {
     val __obj = js.Dynamic.literal()
+    if (PrivateDnsName != null) __obj.updateDynamic("PrivateDnsName")(PrivateDnsName.asInstanceOf[js.Any])
+    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrivateIpAddressDetails]
   }
-  @scala.inline
-  implicit class PrivateIpAddressDetailsOps[Self <: PrivateIpAddressDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrivateDnsName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateDnsName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIpAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

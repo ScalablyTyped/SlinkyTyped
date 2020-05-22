@@ -8,155 +8,52 @@ import scala.scalajs.js.annotation._
   * request interfaces
   ************************/
 /** Parameters for the `message` operation. */
-@js.native
 trait MessageParams extends js.Object {
   /** Whether to return more than one intent. A value of `true` indicates that all matching intents are returned. */
-  var alternate_intents: js.UndefOr[Boolean] = js.native
+  var alternate_intents: js.UndefOr[Boolean] = js.undefined
   /** State information for the conversation. To maintain state, include the context from the previous response. */
-  var context: js.UndefOr[Context] = js.native
+  var context: js.UndefOr[Context] = js.undefined
   /** Entities to use when evaluating the message. Include entities from the previous response to continue using those entities rather than detecting entities in the new input. */
-  var entities: js.UndefOr[js.Array[RuntimeEntity]] = js.native
-  var headers: js.UndefOr[js.Object] = js.native
+  var entities: js.UndefOr[js.Array[RuntimeEntity]] = js.undefined
+  var headers: js.UndefOr[js.Object] = js.undefined
   /** An input object that includes the input text. */
-  var input: js.UndefOr[MessageInput] = js.native
+  var input: js.UndefOr[MessageInput] = js.undefined
   /** Intents to use when evaluating the user input. Include intents from the previous response to continue using those intents rather than trying to recognize intents in the new input. */
-  var intents: js.UndefOr[js.Array[RuntimeIntent]] = js.native
+  var intents: js.UndefOr[js.Array[RuntimeIntent]] = js.undefined
   /** Whether to include additional diagnostic information about the dialog nodes that were visited during processing of the message. */
-  var nodes_visited_details: js.UndefOr[Boolean] = js.native
+  var nodes_visited_details: js.UndefOr[Boolean] = js.undefined
   /** An output object that includes the response to the user, the dialog nodes that were triggered, and messages from the log. */
-  var output: js.UndefOr[OutputData] = js.native
-  var return_response: js.UndefOr[Boolean] = js.native
+  var output: js.UndefOr[OutputData] = js.undefined
+  var return_response: js.UndefOr[Boolean] = js.undefined
   /** Unique identifier of the workspace. */
-  var workspace_id: String = js.native
+  var workspace_id: String
 }
 
 object MessageParams {
   @scala.inline
-  def apply(workspace_id: String): MessageParams = {
+  def apply(
+    workspace_id: String,
+    alternate_intents: js.UndefOr[Boolean] = js.undefined,
+    context: Context = null,
+    entities: js.Array[RuntimeEntity] = null,
+    headers: js.Object = null,
+    input: MessageInput = null,
+    intents: js.Array[RuntimeIntent] = null,
+    nodes_visited_details: js.UndefOr[Boolean] = js.undefined,
+    output: OutputData = null,
+    return_response: js.UndefOr[Boolean] = js.undefined
+  ): MessageParams = {
     val __obj = js.Dynamic.literal(workspace_id = workspace_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(alternate_intents)) __obj.updateDynamic("alternate_intents")(alternate_intents.get.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (intents != null) __obj.updateDynamic("intents")(intents.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodes_visited_details)) __obj.updateDynamic("nodes_visited_details")(nodes_visited_details.get.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageParams]
   }
-  @scala.inline
-  implicit class MessageParamsOps[Self <: MessageParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkspace_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspace_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlternate_intents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternate_intents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternate_intents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternate_intents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntities(value: js.Array[RuntimeEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: MessageInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntents(value: js.Array[RuntimeIntent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodes_visited_details(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes_visited_details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodes_visited_details: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes_visited_details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: OutputData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_response(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

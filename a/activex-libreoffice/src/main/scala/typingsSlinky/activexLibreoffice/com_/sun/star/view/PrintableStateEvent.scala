@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
   *
   * .
   */
-@js.native
 trait PrintableStateEvent extends EventObject {
-  var State: PrintableState = js.native
+  var State: PrintableState
 }
 
 object PrintableStateEvent {
@@ -24,19 +23,5 @@ object PrintableStateEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintableStateEvent]
   }
-  @scala.inline
-  implicit class PrintableStateEventOps[Self <: PrintableStateEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withState(value: PrintableState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

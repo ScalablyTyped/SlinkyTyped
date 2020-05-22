@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpellingSuggestions extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Count: Double = js.native
-  val Creator: Double = js.native
-  val Parent: js.Any = js.native
-  val SpellingErrorType: WdSpellingErrorType = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Count: Double
+  val Creator: Double
+  val Parent: js.Any
+  val SpellingErrorType: WdSpellingErrorType
   @JSName("Word.SpellingSuggestions_typekey")
-  var WordDotSpellingSuggestions_typekey: SpellingSuggestions = js.native
-  def Item(Index: Double): SpellingSuggestion = js.native
+  var WordDotSpellingSuggestions_typekey: SpellingSuggestions
+  def Item(Index: Double): SpellingSuggestion
 }
 
 object SpellingSuggestions {
@@ -31,55 +30,5 @@ object SpellingSuggestions {
     __obj.updateDynamic("Word.SpellingSuggestions_typekey")(WordDotSpellingSuggestions_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpellingSuggestions]
   }
-  @scala.inline
-  implicit class SpellingSuggestionsOps[Self <: SpellingSuggestions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double => SpellingSuggestion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpellingErrorType(value: WdSpellingErrorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpellingErrorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotSpellingSuggestions_typekey(value: SpellingSuggestions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.SpellingSuggestions_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

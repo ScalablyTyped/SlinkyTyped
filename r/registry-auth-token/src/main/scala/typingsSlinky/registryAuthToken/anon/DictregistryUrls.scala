@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DictregistryUrls
   extends /**
   * Registry url's with token information
@@ -14,34 +13,19 @@ trait DictregistryUrls
   /**
     * A registry url used for matching
     */
-  var registry: js.UndefOr[String] = js.native
+  var registry: js.UndefOr[String] = js.undefined
 }
 
 object DictregistryUrls {
   @scala.inline
-  def apply(): DictregistryUrls = {
+  def apply(
+    StringDictionary: /* header */ StringDictionary[js.UndefOr[String]] = null,
+    registry: String = null
+  ): DictregistryUrls = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (registry != null) __obj.updateDynamic("registry")(registry.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictregistryUrls]
   }
-  @scala.inline
-  implicit class DictregistryUrlsOps[Self <: DictregistryUrls] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegistry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

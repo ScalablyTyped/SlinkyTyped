@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * It is an extension of {@link com.sun.star.document.ImportFilter} and differs from it in that this filter additionally supports the {@link
   * com.sun.star.xml.sax.XDocumentHandler} interface.
   */
-@js.native
 trait XMLImportFilter
   extends XImporter
      with XFilter

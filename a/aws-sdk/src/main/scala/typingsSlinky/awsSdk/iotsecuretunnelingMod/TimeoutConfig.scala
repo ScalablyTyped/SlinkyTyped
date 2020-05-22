@@ -14,29 +14,10 @@ trait TimeoutConfig extends js.Object {
 
 object TimeoutConfig {
   @scala.inline
-  def apply(): TimeoutConfig = {
+  def apply(maxLifetimeTimeoutMinutes: js.UndefOr[TimeoutInMin] = js.undefined): TimeoutConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxLifetimeTimeoutMinutes)) __obj.updateDynamic("maxLifetimeTimeoutMinutes")(maxLifetimeTimeoutMinutes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeoutConfig]
   }
-  @scala.inline
-  implicit class TimeoutConfigOps[Self <: TimeoutConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxLifetimeTimeoutMinutes(value: TimeoutInMin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLifetimeTimeoutMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLifetimeTimeoutMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLifetimeTimeoutMinutes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,18 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxServer Class */
-@js.native
 trait FaxServer extends IFaxServer {
   /** Fax server configuration */
-  val Configuration: FaxConfiguration = js.native
+  val Configuration: FaxConfiguration
   /** FaxAccount for the current connection */
-  val CurrentAccount: FaxAccount = js.native
+  val CurrentAccount: FaxAccount
   @JSName("FAXCOMEXLib.FaxServer_typekey")
-  var FAXCOMEXLibDotFaxServer_typekey: FaxServer = js.native
+  var FAXCOMEXLibDotFaxServer_typekey: FaxServer
   /** The FaxAccountSet configuration object */
-  val FaxAccountSet: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxAccountSet = js.native
+  val FaxAccountSet: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxAccountSet
   /** The security configuration object */
-  val Security2: FaxSecurity2 = js.native
+  val Security2: FaxSecurity2
 }
 
 object FaxServer {
@@ -59,43 +58,5 @@ object FaxServer {
     __obj.updateDynamic("FAXCOMEXLib.FaxServer_typekey")(FAXCOMEXLibDotFaxServer_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaxServer]
   }
-  @scala.inline
-  implicit class FaxServerOps[Self <: FaxServer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfiguration(value: FaxConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentAccount(value: FaxAccount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFAXCOMEXLibDotFaxServer_typekey(value: FaxServer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxServer_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFaxAccountSet(value: FaxAccountSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaxAccountSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurity2(value: FaxSecurity2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Security2")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

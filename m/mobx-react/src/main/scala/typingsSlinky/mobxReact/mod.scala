@@ -7,6 +7,7 @@ import typingsSlinky.mobxReact.ireactcomponentMod.IReactComponent
 import typingsSlinky.mobxReact.istorestopropsMod.IStoresToProps
 import typingsSlinky.mobxReact.iwrappedcomponentMod.IWrappedComponent
 import typingsSlinky.mobxReact.providerMod.ProviderProps
+import typingsSlinky.mobxReactLite.observerBatchingMod.IBatchedUpdates
 import typingsSlinky.mobxReactLite.useObserverMod.IUseObserverOptions
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.Requireable
@@ -25,10 +26,14 @@ object mod extends js.Object {
   def disposeOnUnmount[TF /* <: Disposer | js.Array[Disposer] */](target: ReactComponentClass[_], fn: TF): TF = js.native
   def inject(stores: String*): js.Function1[/* target */ IReactComponent[_], IReactComponent[_] with IWrappedComponent[_]] = js.native
   def inject[S, P, I, C](fn: IStoresToProps[S, P, I, C]): js.Function1[/* target */ IReactComponent[_], IReactComponent[_] with IWrappedComponent[P]] = js.native
+  def isObserverBatched(): js.Any = js.native
   def isUsingStaticRendering(): Boolean = js.native
   def observer[T /* <: IReactComponent[_] */](component: T): T = js.native
+  def observerBatching(): Unit = js.native
+  def observerBatching(reactionScheduler: IBatchedUpdates): Unit = js.native
+  def observerBatchingOptOut(): Unit = js.native
   def useAsObservableSource[TSource](current: TSource): TSource = js.native
-  def useLocalStore[TStore /* <: Record[String, _] */, TSource /* <: js.Object */](initializer: js.Function1[/* source */ TSource, TStore]): TStore = js.native
+  def useLocalStore[TStore /* <: Record[String, _] */](initializer: js.Function0[TStore]): TStore = js.native
   def useLocalStore[TStore /* <: Record[String, _] */, TSource /* <: js.Object */](initializer: js.Function1[/* source */ TSource, TStore], current: TSource): TStore = js.native
   def useObserver[T](fn: js.Function0[T]): T = js.native
   def useObserver[T](fn: js.Function0[T], baseComponentName: String): T = js.native

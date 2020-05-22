@@ -4,62 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommsOperation extends Entity {
-  var clientContext: js.UndefOr[String] = js.native
-  var resultInfo: js.UndefOr[ResultInfo] = js.native
-  var status: js.UndefOr[OperationStatus] = js.native
+  var clientContext: js.UndefOr[String] = js.undefined
+  var resultInfo: js.UndefOr[ResultInfo] = js.undefined
+  var status: js.UndefOr[OperationStatus] = js.undefined
 }
 
 object CommsOperation {
   @scala.inline
-  def apply(): CommsOperation = {
+  def apply(
+    clientContext: String = null,
+    id: String = null,
+    resultInfo: ResultInfo = null,
+    status: OperationStatus = null
+  ): CommsOperation = {
     val __obj = js.Dynamic.literal()
+    if (clientContext != null) __obj.updateDynamic("clientContext")(clientContext.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (resultInfo != null) __obj.updateDynamic("resultInfo")(resultInfo.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommsOperation]
   }
-  @scala.inline
-  implicit class CommsOperationOps[Self <: CommsOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultInfo(value: ResultInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: OperationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

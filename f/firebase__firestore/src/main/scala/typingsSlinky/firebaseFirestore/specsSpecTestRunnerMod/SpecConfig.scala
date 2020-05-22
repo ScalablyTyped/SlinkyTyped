@@ -4,39 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpecConfig extends js.Object {
+  /**
+    * The maximum number of concurrently-active listens for limbo resolutions.
+    * This value must be strictly greater than zero, or undefined to use the
+    * default value.
+    */
+  var maxConcurrentLimboResolutions: js.UndefOr[Double] = js.undefined
   /** The number of active clients for this test run. */
-  var numClients: Double = js.native
+  var numClients: Double
   /** A boolean to enable / disable GC. */
-  var useGarbageCollection: Boolean = js.native
+  var useGarbageCollection: Boolean
 }
 
 object SpecConfig {
   @scala.inline
-  def apply(numClients: Double, useGarbageCollection: Boolean): SpecConfig = {
+  def apply(
+    numClients: Double,
+    useGarbageCollection: Boolean,
+    maxConcurrentLimboResolutions: js.UndefOr[Double] = js.undefined
+  ): SpecConfig = {
     val __obj = js.Dynamic.literal(numClients = numClients.asInstanceOf[js.Any], useGarbageCollection = useGarbageCollection.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxConcurrentLimboResolutions)) __obj.updateDynamic("maxConcurrentLimboResolutions")(maxConcurrentLimboResolutions.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpecConfig]
   }
-  @scala.inline
-  implicit class SpecConfigOps[Self <: SpecConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumClients(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numClients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseGarbageCollection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useGarbageCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

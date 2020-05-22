@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Duplicate extends js.Object {
-  var duplicate: js.UndefOr[Boolean] = js.native
-  var relaxed: js.UndefOr[Boolean] = js.native
-  var reviver: js.UndefOr[Reviver] = js.native
-  var tolerant: js.UndefOr[Boolean] = js.native
-  var warnings: js.UndefOr[Boolean] = js.native
+  var duplicate: js.UndefOr[Boolean] = js.undefined
+  var relaxed: js.UndefOr[Boolean] = js.undefined
+  var reviver: js.UndefOr[Reviver] = js.undefined
+  var tolerant: js.UndefOr[Boolean] = js.undefined
+  var warnings: js.UndefOr[Boolean] = js.undefined
 }
 
 object Duplicate {
   @scala.inline
-  def apply(): Duplicate = {
+  def apply(
+    duplicate: js.UndefOr[Boolean] = js.undefined,
+    relaxed: js.UndefOr[Boolean] = js.undefined,
+    reviver: Reviver = null,
+    tolerant: js.UndefOr[Boolean] = js.undefined,
+    warnings: js.UndefOr[Boolean] = js.undefined
+  ): Duplicate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(duplicate)) __obj.updateDynamic("duplicate")(duplicate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(relaxed)) __obj.updateDynamic("relaxed")(relaxed.get.asInstanceOf[js.Any])
+    if (reviver != null) __obj.updateDynamic("reviver")(reviver.asInstanceOf[js.Any])
+    if (!js.isUndefined(tolerant)) __obj.updateDynamic("tolerant")(tolerant.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnings)) __obj.updateDynamic("warnings")(warnings.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Duplicate]
   }
-  @scala.inline
-  implicit class DuplicateOps[Self <: Duplicate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuplicate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuplicate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelaxed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relaxed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelaxed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relaxed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviver(value: Reviver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTolerant(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTolerant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

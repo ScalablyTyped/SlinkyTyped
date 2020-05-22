@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICollection extends js.Object {
   @JSName("apply")
-  def apply(method: js.Function, `val`: js.Any): js.Any = js.native
-  def each(func: js.Function0[_]): js.Any = js.native
+  def apply(method: js.Function, `val`: js.Any): js.Any
+  def each(func: js.Function0[_]): js.Any
 }
 
 object ICollection {
@@ -17,25 +16,5 @@ object ICollection {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction2(apply), each = js.Any.fromFunction1(each))
     __obj.asInstanceOf[ICollection]
   }
-  @scala.inline
-  implicit class ICollectionOps[Self <: ICollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApply(value: (js.Function, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEach(value: js.Function0[_] => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

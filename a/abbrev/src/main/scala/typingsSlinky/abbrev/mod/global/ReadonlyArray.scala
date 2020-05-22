@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadonlyArray[T] extends js.Object {
-  def abbrev(): StringDictionary[String] = js.native
+  def abbrev(): StringDictionary[String]
 }
 
 object ReadonlyArray {
@@ -16,19 +15,5 @@ object ReadonlyArray {
     val __obj = js.Dynamic.literal(abbrev = js.Any.fromFunction0(abbrev))
     __obj.asInstanceOf[ReadonlyArray[T]]
   }
-  @scala.inline
-  implicit class ReadonlyArrayOps[Self[t] <: ReadonlyArray[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAbbrev(value: () => StringDictionary[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbrev")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

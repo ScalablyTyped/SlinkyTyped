@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FocusMenu extends js.Object {
   /**
-  		 * If `true`, the menu's first item will receive focus when the
-  		 * menu opens. Default: `false`.
-  		 */
-  var focusMenu: Boolean = js.native
+    * If `true`, the menu's first item will receive focus when the
+    * menu opens. Default: `false`.
+    */
+  var focusMenu: Boolean
 }
 
 object FocusMenu {
@@ -19,19 +18,5 @@ object FocusMenu {
     val __obj = js.Dynamic.literal(focusMenu = focusMenu.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusMenu]
   }
-  @scala.inline
-  implicit class FocusMenuOps[Self <: FocusMenu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocusMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

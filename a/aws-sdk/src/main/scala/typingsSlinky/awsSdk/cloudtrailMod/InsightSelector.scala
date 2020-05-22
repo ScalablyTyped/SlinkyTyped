@@ -14,29 +14,10 @@ trait InsightSelector extends js.Object {
 
 object InsightSelector {
   @scala.inline
-  def apply(): InsightSelector = {
+  def apply(InsightType: InsightType = null): InsightSelector = {
     val __obj = js.Dynamic.literal()
+    if (InsightType != null) __obj.updateDynamic("InsightType")(InsightType.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsightSelector]
   }
-  @scala.inline
-  implicit class InsightSelectorOps[Self <: InsightSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsightType(value: InsightType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsightType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsightType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsightType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

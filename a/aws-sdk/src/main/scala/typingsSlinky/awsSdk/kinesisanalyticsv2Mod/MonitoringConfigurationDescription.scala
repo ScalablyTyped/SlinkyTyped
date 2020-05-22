@@ -22,53 +22,16 @@ trait MonitoringConfigurationDescription extends js.Object {
 
 object MonitoringConfigurationDescription {
   @scala.inline
-  def apply(): MonitoringConfigurationDescription = {
+  def apply(
+    ConfigurationType: ConfigurationType = null,
+    LogLevel: LogLevel = null,
+    MetricsLevel: MetricsLevel = null
+  ): MonitoringConfigurationDescription = {
     val __obj = js.Dynamic.literal()
+    if (ConfigurationType != null) __obj.updateDynamic("ConfigurationType")(ConfigurationType.asInstanceOf[js.Any])
+    if (LogLevel != null) __obj.updateDynamic("LogLevel")(LogLevel.asInstanceOf[js.Any])
+    if (MetricsLevel != null) __obj.updateDynamic("MetricsLevel")(MetricsLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitoringConfigurationDescription]
   }
-  @scala.inline
-  implicit class MonitoringConfigurationDescriptionOps[Self <: MonitoringConfigurationDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationType(value: ConfigurationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: LogLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricsLevel(value: MetricsLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricsLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricsLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricsLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

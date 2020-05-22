@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 /**
   * DEPRECATED. DeploymentRollback stores the information required to rollback a deployment.
   */
-@js.native
 trait DeploymentRollback extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -17,89 +16,42 @@ trait DeploymentRollback extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[String]] = js.native
+  var apiVersion: js.UndefOr[Input[String]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[String]] = js.native
+  var kind: js.UndefOr[Input[String]] = js.undefined
   /**
     * Required: This must match the Name of a deployment.
     */
-  var name: Input[String] = js.native
+  var name: Input[String]
   /**
     * The config of this deployment rollback.
     */
-  var rollbackTo: Input[RollbackConfig] = js.native
+  var rollbackTo: Input[RollbackConfig]
   /**
     * The annotations to be updated to a deployment
     */
-  var updatedAnnotations: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  var updatedAnnotations: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.undefined
 }
 
 object DeploymentRollback {
   @scala.inline
-  def apply(name: Input[String], rollbackTo: Input[RollbackConfig]): DeploymentRollback = {
+  def apply(
+    name: Input[String],
+    rollbackTo: Input[RollbackConfig],
+    apiVersion: Input[String] = null,
+    kind: Input[String] = null,
+    updatedAnnotations: Input[StringDictionary[Input[String]]] = null
+  ): DeploymentRollback = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], rollbackTo = rollbackTo.asInstanceOf[js.Any])
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (updatedAnnotations != null) __obj.updateDynamic("updatedAnnotations")(updatedAnnotations.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentRollback]
   }
-  @scala.inline
-  implicit class DeploymentRollbackOps[Self <: DeploymentRollback] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRollbackTo(value: Input[RollbackConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApiVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedAnnotations(value: Input[StringDictionary[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAnnotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedAnnotations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

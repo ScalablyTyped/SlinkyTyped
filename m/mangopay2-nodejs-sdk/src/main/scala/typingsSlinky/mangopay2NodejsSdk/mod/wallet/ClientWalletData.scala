@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent mangopay2-nodejs-sdk.mangopay2-nodejs-sdk/types.Omit<mangopay2-nodejs-sdk.mangopay2-nodejs-sdk.wallet.WalletData, 'Owners' | 'Description'> */
-@js.native
 trait ClientWalletData extends js.Object {
-  var Balance: MoneyData = js.native
-  var CreationDate: Double = js.native
-  var Currency: CurrencyISO = js.native
-  var FundsType: ClientFundsType = js.native
-  var Id: String = js.native
-  var Tag: String = js.native
+  var Balance: MoneyData
+  var CreationDate: Double
+  var Currency: CurrencyISO
+  var FundsType: ClientFundsType
+  var Id: String
+  var Tag: String
 }
 
 object ClientWalletData {
@@ -30,49 +29,5 @@ object ClientWalletData {
     val __obj = js.Dynamic.literal(Balance = Balance.asInstanceOf[js.Any], CreationDate = CreationDate.asInstanceOf[js.Any], Currency = Currency.asInstanceOf[js.Any], FundsType = FundsType.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientWalletData]
   }
-  @scala.inline
-  implicit class ClientWalletDataOps[Self <: ClientWalletData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBalance(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Balance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: CurrencyISO): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFundsType(value: ClientFundsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FundsType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

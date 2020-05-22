@@ -55,113 +55,26 @@ trait SchemaContactGroup extends js.Object {
 
 object SchemaContactGroup {
   @scala.inline
-  def apply(): SchemaContactGroup = {
+  def apply(
+    etag: String = null,
+    formattedName: String = null,
+    groupType: String = null,
+    memberCount: js.UndefOr[Double] = js.undefined,
+    memberResourceNames: js.Array[String] = null,
+    metadata: SchemaContactGroupMetadata = null,
+    name: String = null,
+    resourceName: String = null
+  ): SchemaContactGroup = {
     val __obj = js.Dynamic.literal()
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (formattedName != null) __obj.updateDynamic("formattedName")(formattedName.asInstanceOf[js.Any])
+    if (groupType != null) __obj.updateDynamic("groupType")(groupType.asInstanceOf[js.Any])
+    if (!js.isUndefined(memberCount)) __obj.updateDynamic("memberCount")(memberCount.get.asInstanceOf[js.Any])
+    if (memberResourceNames != null) __obj.updateDynamic("memberResourceNames")(memberResourceNames.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContactGroup]
   }
-  @scala.inline
-  implicit class SchemaContactGroupOps[Self <: SchemaContactGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormattedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormattedName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemberCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberResourceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberResourceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemberResourceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberResourceNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: SchemaContactGroupMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

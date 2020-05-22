@@ -10,303 +10,95 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Parameters for the `createDialogNode` operation. */
-@js.native
 trait CreateDialogNodeParams extends js.Object {
   /** An array of objects describing any actions to be invoked by the dialog node. */
-  var actions: js.UndefOr[js.Array[DialogNodeAction]] = js.native
+  var actions: js.UndefOr[js.Array[DialogNodeAction]] = js.undefined
   /** The condition that will trigger the dialog node. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters. */
-  var conditions: js.UndefOr[String] = js.native
+  var conditions: js.UndefOr[String] = js.undefined
   /** The context for the dialog node. */
-  var context: js.UndefOr[js.Object] = js.native
+  var context: js.UndefOr[js.Object] = js.undefined
   /** The description of the dialog node. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 128 characters. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** The dialog node ID. This string must conform to the following restrictions: - It can contain only Unicode alphanumeric, space, underscore, hyphen, and dot characters. - It must be no longer than 1024 characters. */
-  var dialog_node: String = js.native
+  var dialog_node: String
   /** Whether this top-level dialog node can be digressed into. */
-  var digress_in: js.UndefOr[DigressIn | String] = js.native
+  var digress_in: js.UndefOr[DigressIn | String] = js.undefined
   /** Whether this dialog node can be returned to after a digression. */
-  var digress_out: js.UndefOr[DigressOut | String] = js.native
+  var digress_out: js.UndefOr[DigressOut | String] = js.undefined
   /** Whether the user can digress to top-level nodes while filling out slots. */
-  var digress_out_slots: js.UndefOr[DigressOutSlots | String] = js.native
+  var digress_out_slots: js.UndefOr[DigressOutSlots | String] = js.undefined
   /** How an `event_handler` node is processed. */
-  var event_name: js.UndefOr[EventName | String] = js.native
-  var headers: js.UndefOr[js.Object] = js.native
+  var event_name: js.UndefOr[EventName | String] = js.undefined
+  var headers: js.UndefOr[js.Object] = js.undefined
   /** The metadata for the dialog node. */
-  var metadata: js.UndefOr[js.Object] = js.native
+  var metadata: js.UndefOr[js.Object] = js.undefined
   /** The next step to execute following this dialog node. */
-  var next_step: js.UndefOr[DialogNodeNextStep] = js.native
+  var next_step: js.UndefOr[DialogNodeNextStep] = js.undefined
   /** How the dialog node is processed. */
-  var node_type: js.UndefOr[NodeType | String] = js.native
+  var node_type: js.UndefOr[NodeType | String] = js.undefined
   /** The output of the dialog node. For more information about how to specify dialog node output, see the [documentation](https://cloud.ibm.com/docs/services/assistant/dialog-overview.html#dialog-overview-responses). */
-  var output: js.UndefOr[DialogNodeOutput] = js.native
+  var output: js.UndefOr[DialogNodeOutput] = js.undefined
   /** The ID of the parent dialog node. This property is omitted if the dialog node has no parent. */
-  var parent: js.UndefOr[String] = js.native
+  var parent: js.UndefOr[String] = js.undefined
   /** The ID of the previous sibling dialog node. This property is omitted if the dialog node has no previous sibling. */
-  var previous_sibling: js.UndefOr[String] = js.native
-  var return_response: js.UndefOr[Boolean] = js.native
+  var previous_sibling: js.UndefOr[String] = js.undefined
+  var return_response: js.UndefOr[Boolean] = js.undefined
   /** The alias used to identify the dialog node. This string must conform to the following restrictions: - It can contain only Unicode alphanumeric, space, underscore, hyphen, and dot characters. - It must be no longer than 64 characters. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** A label that can be displayed externally to describe the purpose of the node to users. This string must be no longer than 512 characters. */
-  var user_label: js.UndefOr[String] = js.native
+  var user_label: js.UndefOr[String] = js.undefined
   /** The location in the dialog context where output is stored. */
-  var variable: js.UndefOr[String] = js.native
+  var variable: js.UndefOr[String] = js.undefined
   /** Unique identifier of the workspace. */
-  var workspace_id: String = js.native
+  var workspace_id: String
 }
 
 object CreateDialogNodeParams {
   @scala.inline
-  def apply(dialog_node: String, workspace_id: String): CreateDialogNodeParams = {
+  def apply(
+    dialog_node: String,
+    workspace_id: String,
+    actions: js.Array[DialogNodeAction] = null,
+    conditions: String = null,
+    context: js.Object = null,
+    description: String = null,
+    digress_in: DigressIn | String = null,
+    digress_out: DigressOut | String = null,
+    digress_out_slots: DigressOutSlots | String = null,
+    event_name: EventName | String = null,
+    headers: js.Object = null,
+    metadata: js.Object = null,
+    next_step: DialogNodeNextStep = null,
+    node_type: NodeType | String = null,
+    output: DialogNodeOutput = null,
+    parent: String = null,
+    previous_sibling: String = null,
+    return_response: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    user_label: String = null,
+    variable: String = null
+  ): CreateDialogNodeParams = {
     val __obj = js.Dynamic.literal(dialog_node = dialog_node.asInstanceOf[js.Any], workspace_id = workspace_id.asInstanceOf[js.Any])
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (digress_in != null) __obj.updateDynamic("digress_in")(digress_in.asInstanceOf[js.Any])
+    if (digress_out != null) __obj.updateDynamic("digress_out")(digress_out.asInstanceOf[js.Any])
+    if (digress_out_slots != null) __obj.updateDynamic("digress_out_slots")(digress_out_slots.asInstanceOf[js.Any])
+    if (event_name != null) __obj.updateDynamic("event_name")(event_name.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (next_step != null) __obj.updateDynamic("next_step")(next_step.asInstanceOf[js.Any])
+    if (node_type != null) __obj.updateDynamic("node_type")(node_type.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (previous_sibling != null) __obj.updateDynamic("previous_sibling")(previous_sibling.asInstanceOf[js.Any])
+    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (user_label != null) __obj.updateDynamic("user_label")(user_label.asInstanceOf[js.Any])
+    if (variable != null) __obj.updateDynamic("variable")(variable.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDialogNodeParams]
   }
-  @scala.inline
-  implicit class CreateDialogNodeParamsOps[Self <: CreateDialogNodeParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDialog_node(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog_node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkspace_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspace_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActions(value: js.Array[DialogNodeAction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigress_in(value: DigressIn | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digress_in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigress_in: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digress_in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigress_out(value: DigressOut | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digress_out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigress_out: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digress_out")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigress_out_slots(value: DigressOutSlots | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digress_out_slots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigress_out_slots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digress_out_slots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent_name(value: EventName | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext_step(value: DialogNodeNextStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next_step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext_step: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next_step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNode_type(value: NodeType | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNode_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: DialogNodeOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevious_sibling(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous_sibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevious_sibling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous_sibling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_response(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_label(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_label: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

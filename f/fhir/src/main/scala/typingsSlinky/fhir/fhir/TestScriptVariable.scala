@@ -7,273 +7,122 @@ import scala.scalajs.js.annotation._
 /**
   * Placeholder for evaluated elements
   */
-@js.native
 trait TestScriptVariable extends BackboneElement {
   /**
     * Contains extended information for property 'defaultValue'.
     */
-  var _defaultValue: js.UndefOr[Element] = js.native
+  var _defaultValue: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'expression'.
     */
-  var _expression: js.UndefOr[Element] = js.native
+  var _expression: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'headerField'.
     */
-  var _headerField: js.UndefOr[Element] = js.native
+  var _headerField: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'hint'.
     */
-  var _hint: js.UndefOr[Element] = js.native
+  var _hint: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'path'.
     */
-  var _path: js.UndefOr[Element] = js.native
+  var _path: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sourceId'.
     */
-  var _sourceId: js.UndefOr[Element] = js.native
+  var _sourceId: js.UndefOr[Element] = js.undefined
   /**
     * Default, hard-coded, or user-defined value for this variable
     */
-  var defaultValue: js.UndefOr[String] = js.native
+  var defaultValue: js.UndefOr[String] = js.undefined
   /**
     * Natural language description of the variable
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * The fluentpath expression against the fixture body
     */
-  var expression: js.UndefOr[String] = js.native
+  var expression: js.UndefOr[String] = js.undefined
   /**
     * HTTP header field name for source
     */
-  var headerField: js.UndefOr[String] = js.native
+  var headerField: js.UndefOr[String] = js.undefined
   /**
     * Hint help text for default value to enter
     */
-  var hint: js.UndefOr[String] = js.native
+  var hint: js.UndefOr[String] = js.undefined
   /**
     * Descriptive name for this variable
     */
-  var name: String = js.native
+  var name: String
   /**
     * XPath or JSONPath against the fixture body
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * Fixture Id of source expression or headerField within this variable
     */
-  var sourceId: js.UndefOr[id] = js.native
+  var sourceId: js.UndefOr[id] = js.undefined
 }
 
 object TestScriptVariable {
   @scala.inline
-  def apply(name: String): TestScriptVariable = {
+  def apply(
+    name: String,
+    _defaultValue: Element = null,
+    _description: Element = null,
+    _expression: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _headerField: Element = null,
+    _hint: Element = null,
+    _id: Element = null,
+    _name: Element = null,
+    _path: Element = null,
+    _sourceId: Element = null,
+    defaultValue: String = null,
+    description: String = null,
+    expression: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    headerField: String = null,
+    hint: String = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    path: String = null,
+    sourceId: id = null
+  ): TestScriptVariable = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (_defaultValue != null) __obj.updateDynamic("_defaultValue")(_defaultValue.asInstanceOf[js.Any])
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_expression != null) __obj.updateDynamic("_expression")(_expression.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_headerField != null) __obj.updateDynamic("_headerField")(_headerField.asInstanceOf[js.Any])
+    if (_hint != null) __obj.updateDynamic("_hint")(_hint.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (_path != null) __obj.updateDynamic("_path")(_path.asInstanceOf[js.Any])
+    if (_sourceId != null) __obj.updateDynamic("_sourceId")(_sourceId.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (headerField != null) __obj.updateDynamic("headerField")(headerField.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (sourceId != null) __obj.updateDynamic("sourceId")(sourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestScriptVariable]
   }
-  @scala.inline
-  implicit class TestScriptVariableOps[Self <: TestScriptVariable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_defaultValue(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_defaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_expression(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_expression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_headerField(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_headerField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_headerField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_headerField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_hint(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_hint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_path(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

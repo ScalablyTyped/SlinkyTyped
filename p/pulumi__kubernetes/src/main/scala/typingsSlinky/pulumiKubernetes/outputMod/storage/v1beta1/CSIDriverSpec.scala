@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * CSIDriverSpec is the specification of a CSIDriver.
   */
-@js.native
 trait CSIDriverSpec extends js.Object {
   /**
     * attachRequired indicates this CSI volume driver requires an attach operation (because it
@@ -19,7 +18,7 @@ trait CSIDriverSpec extends js.Object {
     * enabled and the value is specified to false, the attach operation will be skipped.
     * Otherwise the attach operation will be called.
     */
-  val attachRequired: Boolean = js.native
+  val attachRequired: Boolean
   /**
     * If set to true, podInfoOnMount indicates this CSI volume driver requires additional pod
     * information (like podName, podUID, etc.) during mount operations. If set to false, pod
@@ -41,7 +40,7 @@ trait CSIDriverSpec extends js.Object {
     * the deployment determines which mode that is, for example via a command line parameter of
     * the driver.
     */
-  val podInfoOnMount: Boolean = js.native
+  val podInfoOnMount: Boolean
   /**
     * VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The
     * default if the list is empty is "Persistent", which is the usage defined by the CSI
@@ -53,7 +52,7 @@ trait CSIDriverSpec extends js.Object {
     * https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one
     * or more of these modes and more modes may be added in the future.
     */
-  val volumeLifecycleModes: js.Array[String] = js.native
+  val volumeLifecycleModes: js.Array[String]
 }
 
 object CSIDriverSpec {
@@ -62,31 +61,5 @@ object CSIDriverSpec {
     val __obj = js.Dynamic.literal(attachRequired = attachRequired.asInstanceOf[js.Any], podInfoOnMount = podInfoOnMount.asInstanceOf[js.Any], volumeLifecycleModes = volumeLifecycleModes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSIDriverSpec]
   }
-  @scala.inline
-  implicit class CSIDriverSpecOps[Self <: CSIDriverSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPodInfoOnMount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podInfoOnMount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVolumeLifecycleModes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeLifecycleModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

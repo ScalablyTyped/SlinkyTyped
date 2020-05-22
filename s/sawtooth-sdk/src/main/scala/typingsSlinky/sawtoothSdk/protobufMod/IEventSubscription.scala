@@ -4,63 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEventSubscription extends js.Object {
   /** EventSubscription eventType */
-  var eventType: js.UndefOr[String | Null] = js.native
+  var eventType: js.UndefOr[String | Null] = js.undefined
   /** EventSubscription filters */
-  var filters: js.UndefOr[js.Array[IEventFilter] | Null] = js.native
+  var filters: js.UndefOr[js.Array[IEventFilter] | Null] = js.undefined
 }
 
 object IEventSubscription {
   @scala.inline
-  def apply(): IEventSubscription = {
+  def apply(
+    eventType: js.UndefOr[Null | String] = js.undefined,
+    filters: js.UndefOr[Null | js.Array[IEventFilter]] = js.undefined
+  ): IEventSubscription = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(eventType)) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
+    if (!js.isUndefined(filters)) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEventSubscription]
   }
-  @scala.inline
-  implicit class IEventSubscriptionOps[Self <: IEventSubscription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(null)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[IEventFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiltersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(null)
-        ret
-    }
-  }
-  
 }
 

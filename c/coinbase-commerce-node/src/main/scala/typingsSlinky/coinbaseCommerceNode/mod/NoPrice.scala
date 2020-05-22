@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
 /**
   * No price resource.
   */
-@js.native
 trait NoPrice extends js.Object {
   /**
     * Pricing type.
     */
-  var pricing_type: no_price = js.native
+  var pricing_type: no_price
 }
 
 object NoPrice {
@@ -22,19 +21,5 @@ object NoPrice {
     val __obj = js.Dynamic.literal(pricing_type = pricing_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoPrice]
   }
-  @scala.inline
-  implicit class NoPriceOps[Self <: NoPrice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPricing_type(value: no_price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricing_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

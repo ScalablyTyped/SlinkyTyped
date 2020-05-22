@@ -1,5 +1,11 @@
 package typingsSlinky.typedGraphql.mod
 
+import typingsSlinky.typedGraphql.typedGraphqlStrings.ENUM
+import typingsSlinky.typedGraphql.typedGraphqlStrings.INPUT_OBJECT
+import typingsSlinky.typedGraphql.typedGraphqlStrings.INTERFACE
+import typingsSlinky.typedGraphql.typedGraphqlStrings.OBJECT
+import typingsSlinky.typedGraphql.typedGraphqlStrings.SCALAR
+import typingsSlinky.typedGraphql.typedGraphqlStrings.UNION
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +22,62 @@ trait IntrospectionType extends js.Object
 
 object IntrospectionType {
   @scala.inline
-  implicit def apply(value: IntrospectionEnumType): IntrospectionType = value.asInstanceOf[IntrospectionType]
+  def IntrospectionUnionType(
+    kind: UNION,
+    name: String,
+    possibleTypes: js.Array[IntrospectionNamedTypeRef],
+    description: String = null
+  ): IntrospectionType = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], possibleTypes = possibleTypes.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionInputObjectType): IntrospectionType = value.asInstanceOf[IntrospectionType]
+  def IntrospectionScalarType(kind: SCALAR, name: String, description: String = null): IntrospectionType = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionInterfaceType): IntrospectionType = value.asInstanceOf[IntrospectionType]
+  def IntrospectionObjectType(
+    fields: js.Array[IntrospectionField],
+    interfaces: js.Array[IntrospectionNamedTypeRef],
+    kind: OBJECT,
+    name: String,
+    description: String = null
+  ): IntrospectionType = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], interfaces = interfaces.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionObjectType): IntrospectionType = value.asInstanceOf[IntrospectionType]
+  def IntrospectionEnumType(enumValues: js.Array[IntrospectionEnumValue], kind: ENUM, name: String, description: String = null): IntrospectionType = {
+    val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionScalarType): IntrospectionType = value.asInstanceOf[IntrospectionType]
+  def IntrospectionInputObjectType(
+    inputFields: js.Array[IntrospectionInputValue],
+    kind: INPUT_OBJECT,
+    name: String,
+    description: String = null
+  ): IntrospectionType = {
+    val __obj = js.Dynamic.literal(inputFields = inputFields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionUnionType): IntrospectionType = value.asInstanceOf[IntrospectionType]
+  def IntrospectionInterfaceType(
+    fields: js.Array[IntrospectionField],
+    kind: INTERFACE,
+    name: String,
+    possibleTypes: js.Array[IntrospectionNamedTypeRef],
+    description: String = null
+  ): IntrospectionType = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], possibleTypes = possibleTypes.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionType]
+  }
 }
 

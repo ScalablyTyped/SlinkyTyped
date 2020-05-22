@@ -4,52 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDevice extends js.Object {
   /**
     * A device unique ID.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The IP address.
     */
-  var ip: String = js.native
+  var ip: String
   /**
     * The device language.
     */
-  var language: String = js.native
+  var language: String
   /**
     * The current display language of the operating system.
     */
-  var locale: String = js.native
+  var locale: String
   /**
     * The device model for the current device.
     */
-  var model: String = js.native
+  var model: String
   /**
     * The IANA interface type for the internet connected network adapter.
     */
-  var network: Double = js.native
+  var network: Double
   /**
     * The device OEM for the current device.
     */
-  var oemName: String = js.native
+  var oemName: String
   /**
     * The OS name.
     */
-  var os: String = js.native
+  var os: String
   /**
     * The OS version.
     */
-  var osversion: String = js.native
+  var osversion: String
   /**
     * The application screen resolution.
     */
-  var resolution: String = js.native
+  var resolution: String
   /**
     * The type for the current device.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object IDevice {
@@ -71,79 +70,5 @@ object IDevice {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDevice]
   }
-  @scala.inline
-  implicit class IDeviceOps[Self <: IDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOemName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oemName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOsversion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osversion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResolution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

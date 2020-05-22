@@ -18,35 +18,10 @@ trait DescribeRuleRequest extends js.Object {
 
 object DescribeRuleRequest {
   @scala.inline
-  def apply(Name: RuleName): DescribeRuleRequest = {
+  def apply(Name: RuleName, EventBusName: EventBusName = null): DescribeRuleRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (EventBusName != null) __obj.updateDynamic("EventBusName")(EventBusName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRuleRequest]
   }
-  @scala.inline
-  implicit class DescribeRuleRequestOps[Self <: DescribeRuleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: RuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventBusName(value: EventBusName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventBusName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

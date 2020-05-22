@@ -1,13 +1,29 @@
 package typingsSlinky.algoliasearchHelper.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.algoliasearch.algoliasearchStrings.all
+import typingsSlinky.algoliasearch.algoliasearchStrings.allOptional
+import typingsSlinky.algoliasearch.algoliasearchStrings.alpha
+import typingsSlinky.algoliasearch.algoliasearchStrings.attribute
+import typingsSlinky.algoliasearch.algoliasearchStrings.count
+import typingsSlinky.algoliasearch.algoliasearchStrings.firstWords
+import typingsSlinky.algoliasearch.algoliasearchStrings.ignorePlurals
+import typingsSlinky.algoliasearch.algoliasearchStrings.lastWords
+import typingsSlinky.algoliasearch.algoliasearchStrings.min
+import typingsSlinky.algoliasearch.algoliasearchStrings.multiWordsSynonym
+import typingsSlinky.algoliasearch.algoliasearchStrings.none
+import typingsSlinky.algoliasearch.algoliasearchStrings.prefixAll
+import typingsSlinky.algoliasearch.algoliasearchStrings.prefixLast
+import typingsSlinky.algoliasearch.algoliasearchStrings.prefixNone
+import typingsSlinky.algoliasearch.algoliasearchStrings.singleWordSynonym
+import typingsSlinky.algoliasearch.algoliasearchStrings.strict
+import typingsSlinky.algoliasearch.algoliasearchStrings.word
 import typingsSlinky.algoliasearchHelper.mod.SearchParameters.FacetList
 import typingsSlinky.algoliasearchHelper.mod.SearchParameters.OperatorList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryParameters
   extends typingsSlinky.algoliasearch.mod.QueryParameters {
   /**
@@ -15,7 +31,7 @@ trait QueryParameters
     * used. This list will be added to requested facets in the
     * [facets attribute](https://www.algolia.com/doc/rest-api/search#param-facets) sent to algolia.
     */
-  var disjunctiveFacets: js.UndefOr[js.Array[String]] = js.native
+  var disjunctiveFacets: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * This attribute contains all the filters that need to be
     * applied on the disjunctive facets. Each facet must be properly
@@ -27,7 +43,7 @@ trait QueryParameters
     * When querying algolia, the values stored in this attribute will
     * be translated into the `facetFilters` attribute.
     */
-  var disjunctiveFacetsRefinements: js.UndefOr[StringDictionary[FacetList]] = js.native
+  var disjunctiveFacetsRefinements: js.UndefOr[StringDictionary[FacetList]] = js.undefined
   // Misc. parameters
   /**
     * Applies 'exact' on single word queries if the word contains at least 3 characters
@@ -36,7 +52,7 @@ trait QueryParameters
     * By default, its set to false.
     * @see https://www.algolia.com/doc/rest#param-enableExactOnSingleWordQuery
     */
-  var enableExactOnSingleWordQuery: js.UndefOr[Boolean] = js.native
+  var enableExactOnSingleWordQuery: js.UndefOr[Boolean] = js.undefined
   /**
     * This attribute contains all the filters that need to be
     * excluded from the conjunctive facets. Each facet must be properly
@@ -48,7 +64,7 @@ trait QueryParameters
     * When querying algolia, the values stored in this attribute will
     * be translated into the `facetFilters` attribute.
     */
-  var facetsExcludes: js.UndefOr[StringDictionary[FacetList]] = js.native
+  var facetsExcludes: js.UndefOr[StringDictionary[FacetList]] = js.undefined
   // Refinements
   /**
     * This attribute contains all the filters that need to be
@@ -61,7 +77,7 @@ trait QueryParameters
     * When querying algolia, the values stored in this attribute will
     * be translated into the `facetFilters` attribute.
     */
-  var facetsRefinements: js.UndefOr[StringDictionary[FacetList]] = js.native
+  var facetsRefinements: js.UndefOr[StringDictionary[FacetList]] = js.undefined
   /**
     * This attribute contains the list of all the hierarchical facets
     * used. This list will be added to requested facets in the
@@ -69,7 +85,7 @@ trait QueryParameters
     * Hierarchical facets are a sub type of disjunctive facets that
     * let you filter faceted attributes hierarchically.
     */
-  var hierarchicalFacets: js.UndefOr[js.Array[js.Object | String]] = js.native
+  var hierarchicalFacets: js.UndefOr[js.Array[js.Object | String]] = js.undefined
   /**
     * This attribute contains all the filters that need to be
     * applied on the hierarchical facets. Each facet must be properly
@@ -83,11 +99,11 @@ trait QueryParameters
     * When querying algolia, the values stored in this attribute will
     * be translated into the `facetFilters` attribute.
     */
-  var hierarchicalFacetsRefinements: js.UndefOr[StringDictionary[FacetList]] = js.native
+  var hierarchicalFacetsRefinements: js.UndefOr[StringDictionary[FacetList]] = js.undefined
   /**
     * Targeted index. This parameter is mandatory.
     */
-  var index: js.UndefOr[String] = js.native
+  var index: js.UndefOr[String] = js.undefined
   /**
     * This attribute contains all the filters that need to be
     * applied on the numeric attributes.
@@ -98,183 +114,172 @@ trait QueryParameters
     * When querying algolia, the values stored in this attribute will
     * be translated into the `numericFilters` attribute.
     */
-  var numericRefinements: js.UndefOr[StringDictionary[OperatorList]] = js.native
+  var numericRefinements: js.UndefOr[StringDictionary[OperatorList]] = js.undefined
   /**
     * Contains the optional facet filters in the raw format of the Algolia API.
     * @see https://www.algolia.com/doc/rest#param-tagFilters
     */
-  var optionalFacetFilters: js.UndefOr[String] = js.native
+  var optionalFacetFilters: js.UndefOr[String] = js.undefined
   /**
     * Contains the optional tag filters in the raw format of the Algolia API.
     * @see https://www.algolia.com/doc/rest#param-tagFilters
     */
-  var optionalTagFilters: js.UndefOr[String] = js.native
+  var optionalTagFilters: js.UndefOr[String] = js.undefined
   /**
     * This attribute contains all the tags used to refine the query.
     *
     * When querying algolia, the values stored in this attribute will
     * be translated into the `tagFilters` attribute.
     */
-  var tagRefinements: js.UndefOr[js.Array[String]] = js.native
+  var tagRefinements: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object QueryParameters {
   @scala.inline
-  def apply(): QueryParameters = {
+  def apply(
+    advancedSyntax: js.UndefOr[Boolean] = js.undefined,
+    allowTyposOnNumericTokens: js.UndefOr[Boolean] = js.undefined,
+    alternativesAsExact: js.Array[ignorePlurals | singleWordSynonym | multiWordsSynonym] = null,
+    analytics: js.UndefOr[Boolean] = js.undefined,
+    analyticsTags: js.Array[String] = null,
+    aroundLatLng: String = null,
+    aroundLatLngViaIP: js.UndefOr[Boolean] = js.undefined,
+    aroundPrecision: js.UndefOr[Double] = js.undefined,
+    aroundRadius: Double | all = null,
+    attributesToHighlight: js.Array[String] = null,
+    attributesToRetrieve: js.Array[String] = null,
+    attributesToSnippet: js.Array[String] = null,
+    clickAnalytics: js.UndefOr[Boolean] = js.undefined,
+    disableExactOnAttributes: js.Array[String] = null,
+    disableTypoToleranceOnAttributes: js.Array[String] = null,
+    disjunctiveFacets: js.Array[String] = null,
+    disjunctiveFacetsRefinements: StringDictionary[FacetList] = null,
+    distinct: Double | Boolean = null,
+    enableABTest: js.UndefOr[Boolean] = js.undefined,
+    enableExactOnSingleWordQuery: js.UndefOr[Boolean] = js.undefined,
+    exactOnSingleWordQuery: attribute | none | word = null,
+    facetFilters: js.Array[String | js.Array[String]] = null,
+    facetingAfterDistinct: js.UndefOr[Boolean] = js.undefined,
+    facets: js.Array[String] = null,
+    facetsExcludes: StringDictionary[FacetList] = null,
+    facetsRefinements: StringDictionary[FacetList] = null,
+    filters: String = null,
+    getRankingInfo: js.UndefOr[Boolean] = js.undefined,
+    hierarchicalFacets: js.Array[js.Object | String] = null,
+    hierarchicalFacetsRefinements: StringDictionary[FacetList] = null,
+    highlightPostTag: String = null,
+    highlightPreTag: String = null,
+    hitsPerPage: js.UndefOr[Double] = js.undefined,
+    ignorePlurals: js.UndefOr[Boolean] = js.undefined,
+    index: String = null,
+    insideBoundingBox: js.Array[js.Array[Double]] = null,
+    insidePolygon: js.Array[js.Array[Double]] = null,
+    length: js.UndefOr[Double] = js.undefined,
+    maxValuesPerFacet: js.UndefOr[Double] = js.undefined,
+    minProximity: js.UndefOr[Double] = js.undefined,
+    minWordSizefor1Typo: js.UndefOr[Double] = js.undefined,
+    minWordSizefor2Typos: js.UndefOr[Double] = js.undefined,
+    minimumAroundRadius: js.UndefOr[Double] = js.undefined,
+    nbShards: js.UndefOr[Double] = js.undefined,
+    numericAttributesForFiltering: js.Array[String] = null,
+    numericAttributesToIndex: js.Array[String] = null,
+    numericFilters: js.Array[String] = null,
+    numericRefinements: StringDictionary[OperatorList] = null,
+    offset: js.UndefOr[Double] = js.undefined,
+    optionalFacetFilters: String = null,
+    optionalTagFilters: String = null,
+    optionalWords: js.Array[String] = null,
+    page: js.UndefOr[Double] = js.undefined,
+    query: String = null,
+    queryType: prefixAll | prefixLast | prefixNone = null,
+    removeStopWords: Boolean | js.Array[String] = null,
+    removeWordsIfNoResults: none | lastWords | firstWords | allOptional = null,
+    replaceSynonymsInHighlight: js.UndefOr[Boolean] = js.undefined,
+    restrictHighlightAndSnippetArrays: js.UndefOr[Boolean] = js.undefined,
+    restrictSearchableAttributes: js.Array[String] = null,
+    ruleContexts: js.Array[String] = null,
+    snippetEllipsisText: String = null,
+    sortFacetValuesBy: count | alpha = null,
+    sumOrFiltersScores: js.UndefOr[Boolean] = js.undefined,
+    synonyms: js.UndefOr[Boolean] = js.undefined,
+    tagFilters: js.Array[String | js.Array[String]] = null,
+    tagRefinements: js.Array[String] = null,
+    typoTolerance: Boolean | min | strict = null,
+    userData: String | js.Object = null,
+    userToken: String = null
+  ): QueryParameters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(advancedSyntax)) __obj.updateDynamic("advancedSyntax")(advancedSyntax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTyposOnNumericTokens)) __obj.updateDynamic("allowTyposOnNumericTokens")(allowTyposOnNumericTokens.get.asInstanceOf[js.Any])
+    if (alternativesAsExact != null) __obj.updateDynamic("alternativesAsExact")(alternativesAsExact.asInstanceOf[js.Any])
+    if (!js.isUndefined(analytics)) __obj.updateDynamic("analytics")(analytics.get.asInstanceOf[js.Any])
+    if (analyticsTags != null) __obj.updateDynamic("analyticsTags")(analyticsTags.asInstanceOf[js.Any])
+    if (aroundLatLng != null) __obj.updateDynamic("aroundLatLng")(aroundLatLng.asInstanceOf[js.Any])
+    if (!js.isUndefined(aroundLatLngViaIP)) __obj.updateDynamic("aroundLatLngViaIP")(aroundLatLngViaIP.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(aroundPrecision)) __obj.updateDynamic("aroundPrecision")(aroundPrecision.get.asInstanceOf[js.Any])
+    if (aroundRadius != null) __obj.updateDynamic("aroundRadius")(aroundRadius.asInstanceOf[js.Any])
+    if (attributesToHighlight != null) __obj.updateDynamic("attributesToHighlight")(attributesToHighlight.asInstanceOf[js.Any])
+    if (attributesToRetrieve != null) __obj.updateDynamic("attributesToRetrieve")(attributesToRetrieve.asInstanceOf[js.Any])
+    if (attributesToSnippet != null) __obj.updateDynamic("attributesToSnippet")(attributesToSnippet.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickAnalytics)) __obj.updateDynamic("clickAnalytics")(clickAnalytics.get.asInstanceOf[js.Any])
+    if (disableExactOnAttributes != null) __obj.updateDynamic("disableExactOnAttributes")(disableExactOnAttributes.asInstanceOf[js.Any])
+    if (disableTypoToleranceOnAttributes != null) __obj.updateDynamic("disableTypoToleranceOnAttributes")(disableTypoToleranceOnAttributes.asInstanceOf[js.Any])
+    if (disjunctiveFacets != null) __obj.updateDynamic("disjunctiveFacets")(disjunctiveFacets.asInstanceOf[js.Any])
+    if (disjunctiveFacetsRefinements != null) __obj.updateDynamic("disjunctiveFacetsRefinements")(disjunctiveFacetsRefinements.asInstanceOf[js.Any])
+    if (distinct != null) __obj.updateDynamic("distinct")(distinct.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableABTest)) __obj.updateDynamic("enableABTest")(enableABTest.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableExactOnSingleWordQuery)) __obj.updateDynamic("enableExactOnSingleWordQuery")(enableExactOnSingleWordQuery.get.asInstanceOf[js.Any])
+    if (exactOnSingleWordQuery != null) __obj.updateDynamic("exactOnSingleWordQuery")(exactOnSingleWordQuery.asInstanceOf[js.Any])
+    if (facetFilters != null) __obj.updateDynamic("facetFilters")(facetFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(facetingAfterDistinct)) __obj.updateDynamic("facetingAfterDistinct")(facetingAfterDistinct.get.asInstanceOf[js.Any])
+    if (facets != null) __obj.updateDynamic("facets")(facets.asInstanceOf[js.Any])
+    if (facetsExcludes != null) __obj.updateDynamic("facetsExcludes")(facetsExcludes.asInstanceOf[js.Any])
+    if (facetsRefinements != null) __obj.updateDynamic("facetsRefinements")(facetsRefinements.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(getRankingInfo)) __obj.updateDynamic("getRankingInfo")(getRankingInfo.get.asInstanceOf[js.Any])
+    if (hierarchicalFacets != null) __obj.updateDynamic("hierarchicalFacets")(hierarchicalFacets.asInstanceOf[js.Any])
+    if (hierarchicalFacetsRefinements != null) __obj.updateDynamic("hierarchicalFacetsRefinements")(hierarchicalFacetsRefinements.asInstanceOf[js.Any])
+    if (highlightPostTag != null) __obj.updateDynamic("highlightPostTag")(highlightPostTag.asInstanceOf[js.Any])
+    if (highlightPreTag != null) __obj.updateDynamic("highlightPreTag")(highlightPreTag.asInstanceOf[js.Any])
+    if (!js.isUndefined(hitsPerPage)) __obj.updateDynamic("hitsPerPage")(hitsPerPage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignorePlurals)) __obj.updateDynamic("ignorePlurals")(ignorePlurals.get.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (insideBoundingBox != null) __obj.updateDynamic("insideBoundingBox")(insideBoundingBox.asInstanceOf[js.Any])
+    if (insidePolygon != null) __obj.updateDynamic("insidePolygon")(insidePolygon.asInstanceOf[js.Any])
+    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValuesPerFacet)) __obj.updateDynamic("maxValuesPerFacet")(maxValuesPerFacet.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minProximity)) __obj.updateDynamic("minProximity")(minProximity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWordSizefor1Typo)) __obj.updateDynamic("minWordSizefor1Typo")(minWordSizefor1Typo.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWordSizefor2Typos)) __obj.updateDynamic("minWordSizefor2Typos")(minWordSizefor2Typos.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumAroundRadius)) __obj.updateDynamic("minimumAroundRadius")(minimumAroundRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nbShards)) __obj.updateDynamic("nbShards")(nbShards.get.asInstanceOf[js.Any])
+    if (numericAttributesForFiltering != null) __obj.updateDynamic("numericAttributesForFiltering")(numericAttributesForFiltering.asInstanceOf[js.Any])
+    if (numericAttributesToIndex != null) __obj.updateDynamic("numericAttributesToIndex")(numericAttributesToIndex.asInstanceOf[js.Any])
+    if (numericFilters != null) __obj.updateDynamic("numericFilters")(numericFilters.asInstanceOf[js.Any])
+    if (numericRefinements != null) __obj.updateDynamic("numericRefinements")(numericRefinements.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (optionalFacetFilters != null) __obj.updateDynamic("optionalFacetFilters")(optionalFacetFilters.asInstanceOf[js.Any])
+    if (optionalTagFilters != null) __obj.updateDynamic("optionalTagFilters")(optionalTagFilters.asInstanceOf[js.Any])
+    if (optionalWords != null) __obj.updateDynamic("optionalWords")(optionalWords.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (queryType != null) __obj.updateDynamic("queryType")(queryType.asInstanceOf[js.Any])
+    if (removeStopWords != null) __obj.updateDynamic("removeStopWords")(removeStopWords.asInstanceOf[js.Any])
+    if (removeWordsIfNoResults != null) __obj.updateDynamic("removeWordsIfNoResults")(removeWordsIfNoResults.asInstanceOf[js.Any])
+    if (!js.isUndefined(replaceSynonymsInHighlight)) __obj.updateDynamic("replaceSynonymsInHighlight")(replaceSynonymsInHighlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restrictHighlightAndSnippetArrays)) __obj.updateDynamic("restrictHighlightAndSnippetArrays")(restrictHighlightAndSnippetArrays.get.asInstanceOf[js.Any])
+    if (restrictSearchableAttributes != null) __obj.updateDynamic("restrictSearchableAttributes")(restrictSearchableAttributes.asInstanceOf[js.Any])
+    if (ruleContexts != null) __obj.updateDynamic("ruleContexts")(ruleContexts.asInstanceOf[js.Any])
+    if (snippetEllipsisText != null) __obj.updateDynamic("snippetEllipsisText")(snippetEllipsisText.asInstanceOf[js.Any])
+    if (sortFacetValuesBy != null) __obj.updateDynamic("sortFacetValuesBy")(sortFacetValuesBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(sumOrFiltersScores)) __obj.updateDynamic("sumOrFiltersScores")(sumOrFiltersScores.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(synonyms)) __obj.updateDynamic("synonyms")(synonyms.get.asInstanceOf[js.Any])
+    if (tagFilters != null) __obj.updateDynamic("tagFilters")(tagFilters.asInstanceOf[js.Any])
+    if (tagRefinements != null) __obj.updateDynamic("tagRefinements")(tagRefinements.asInstanceOf[js.Any])
+    if (typoTolerance != null) __obj.updateDynamic("typoTolerance")(typoTolerance.asInstanceOf[js.Any])
+    if (userData != null) __obj.updateDynamic("userData")(userData.asInstanceOf[js.Any])
+    if (userToken != null) __obj.updateDynamic("userToken")(userToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryParameters]
   }
-  @scala.inline
-  implicit class QueryParametersOps[Self <: QueryParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisjunctiveFacets(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctiveFacets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisjunctiveFacets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctiveFacets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisjunctiveFacetsRefinements(value: StringDictionary[FacetList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctiveFacetsRefinements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisjunctiveFacetsRefinements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disjunctiveFacetsRefinements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableExactOnSingleWordQuery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableExactOnSingleWordQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableExactOnSingleWordQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableExactOnSingleWordQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacetsExcludes(value: StringDictionary[FacetList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetsExcludes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacetsExcludes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetsExcludes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacetsRefinements(value: StringDictionary[FacetList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetsRefinements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacetsRefinements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facetsRefinements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHierarchicalFacets(value: js.Array[js.Object | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchicalFacets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHierarchicalFacets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchicalFacets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHierarchicalFacetsRefinements(value: StringDictionary[FacetList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchicalFacetsRefinements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHierarchicalFacetsRefinements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchicalFacetsRefinements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumericRefinements(value: StringDictionary[OperatorList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericRefinements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumericRefinements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numericRefinements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalFacetFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalFacetFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalFacetFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalFacetFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalTagFilters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalTagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalTagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalTagFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagRefinements(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagRefinements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagRefinements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagRefinements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

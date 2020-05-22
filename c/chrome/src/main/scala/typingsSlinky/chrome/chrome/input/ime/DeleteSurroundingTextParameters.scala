@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteSurroundingTextParameters extends js.Object {
   /** ID of the context where the surrounding text will be deleted. */
-  var contextID: Double = js.native
+  var contextID: Double
   /** ID of the engine receiving the event. */
-  var engineID: String = js.native
+  var engineID: String
   /** The number of characters to be deleted */
-  var length: Double = js.native
+  var length: Double
   /** The offset from the caret position where deletion will start. This value can be negative. */
-  var offset: Double = js.native
+  var offset: Double
 }
 
 object DeleteSurroundingTextParameters {
@@ -22,37 +21,5 @@ object DeleteSurroundingTextParameters {
     val __obj = js.Dynamic.literal(contextID = contextID.asInstanceOf[js.Any], engineID = engineID.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSurroundingTextParameters]
   }
-  @scala.inline
-  implicit class DeleteSurroundingTextParametersOps[Self <: DeleteSurroundingTextParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContextID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngineID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

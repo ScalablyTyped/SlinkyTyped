@@ -104,197 +104,40 @@ trait SchemaGoogleCloudDialogflowV2QueryResult extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2QueryResult {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2QueryResult = {
+  def apply(
+    action: String = null,
+    allRequiredParamsPresent: js.UndefOr[Boolean] = js.undefined,
+    diagnosticInfo: StringDictionary[js.Any] = null,
+    fulfillmentMessages: js.Array[SchemaGoogleCloudDialogflowV2IntentMessage] = null,
+    fulfillmentText: String = null,
+    intent: SchemaGoogleCloudDialogflowV2Intent = null,
+    intentDetectionConfidence: js.UndefOr[Double] = js.undefined,
+    languageCode: String = null,
+    outputContexts: js.Array[SchemaGoogleCloudDialogflowV2Context] = null,
+    parameters: StringDictionary[js.Any] = null,
+    queryText: String = null,
+    sentimentAnalysisResult: SchemaGoogleCloudDialogflowV2SentimentAnalysisResult = null,
+    speechRecognitionConfidence: js.UndefOr[Double] = js.undefined,
+    webhookPayload: StringDictionary[js.Any] = null,
+    webhookSource: String = null
+  ): SchemaGoogleCloudDialogflowV2QueryResult = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (!js.isUndefined(allRequiredParamsPresent)) __obj.updateDynamic("allRequiredParamsPresent")(allRequiredParamsPresent.get.asInstanceOf[js.Any])
+    if (diagnosticInfo != null) __obj.updateDynamic("diagnosticInfo")(diagnosticInfo.asInstanceOf[js.Any])
+    if (fulfillmentMessages != null) __obj.updateDynamic("fulfillmentMessages")(fulfillmentMessages.asInstanceOf[js.Any])
+    if (fulfillmentText != null) __obj.updateDynamic("fulfillmentText")(fulfillmentText.asInstanceOf[js.Any])
+    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (!js.isUndefined(intentDetectionConfidence)) __obj.updateDynamic("intentDetectionConfidence")(intentDetectionConfidence.get.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (outputContexts != null) __obj.updateDynamic("outputContexts")(outputContexts.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (queryText != null) __obj.updateDynamic("queryText")(queryText.asInstanceOf[js.Any])
+    if (sentimentAnalysisResult != null) __obj.updateDynamic("sentimentAnalysisResult")(sentimentAnalysisResult.asInstanceOf[js.Any])
+    if (!js.isUndefined(speechRecognitionConfidence)) __obj.updateDynamic("speechRecognitionConfidence")(speechRecognitionConfidence.get.asInstanceOf[js.Any])
+    if (webhookPayload != null) __obj.updateDynamic("webhookPayload")(webhookPayload.asInstanceOf[js.Any])
+    if (webhookSource != null) __obj.updateDynamic("webhookSource")(webhookSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2QueryResult]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2QueryResultOps[Self <: SchemaGoogleCloudDialogflowV2QueryResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllRequiredParamsPresent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allRequiredParamsPresent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllRequiredParamsPresent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allRequiredParamsPresent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiagnosticInfo(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagnosticInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFulfillmentMessages(value: js.Array[SchemaGoogleCloudDialogflowV2IntentMessage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFulfillmentMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFulfillmentText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFulfillmentText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntent(value: SchemaGoogleCloudDialogflowV2Intent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntentDetectionConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentDetectionConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntentDetectionConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentDetectionConfidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputContexts(value: js.Array[SchemaGoogleCloudDialogflowV2Context]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputContexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentimentAnalysisResult(value: SchemaGoogleCloudDialogflowV2SentimentAnalysisResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentimentAnalysisResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentimentAnalysisResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentimentAnalysisResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeechRecognitionConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speechRecognitionConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeechRecognitionConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speechRecognitionConfidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebhookPayload(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebhookPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebhookSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebhookSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookSource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

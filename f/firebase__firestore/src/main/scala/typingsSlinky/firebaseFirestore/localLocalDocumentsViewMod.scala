@@ -52,7 +52,7 @@ object localLocalDocumentsViewMod extends js.Object {
       *
       * @param transaction The persistence transaction.
       * @param query The query to match documents against.
-      * @param sinceReadTime If not set to SnapshotVersion.MIN, return only
+      * @param sinceReadTime If not set to SnapshotVersion.min(), return only
       *     documents that have been read since this snapshot version (exclusive).
       */
     def getDocumentsMatchingQuery(transaction: PersistenceTransaction, query: Query, sinceReadTime: SnapshotVersion): PersistencePromise[DocumentMap_] = js.native

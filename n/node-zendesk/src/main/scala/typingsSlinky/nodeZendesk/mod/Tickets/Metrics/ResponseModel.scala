@@ -6,280 +6,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResponseModel extends AuditableModel {
-  val agent_wait_time_in_minutes: js.UndefOr[MinutesObject] = js.native
-  val assigned_at: js.UndefOr[String | Null] = js.native
-  val assignee_stations: js.UndefOr[Double] = js.native
-  val assignee_updated_at: js.UndefOr[String | Null] = js.native
-  val first_resolution_time_in_minutes: js.UndefOr[MinutesObject] = js.native
-  val full_resolution_time_in_minutes: js.UndefOr[MinutesObject] = js.native
-  val group_stations: js.UndefOr[Double] = js.native
-  val initially_assigned_at: js.UndefOr[String | Null] = js.native
-  val latest_comment_added_at: js.UndefOr[String | Null] = js.native
-  val reopens: js.UndefOr[Double] = js.native
-  val replies: js.UndefOr[Double] = js.native
-  val reply_time_in_minutes: js.UndefOr[MinutesObject] = js.native
-  val requester_updated_at: js.UndefOr[String | Null] = js.native
-  val requester_wait_time_in_minutes: js.UndefOr[MinutesObject] = js.native
-  val solved_at: js.UndefOr[String | Null] = js.native
-  val ticket_id: js.UndefOr[ZendeskID] = js.native
-  val url: js.UndefOr[String] = js.native
+  val agent_wait_time_in_minutes: js.UndefOr[MinutesObject] = js.undefined
+  val assigned_at: js.UndefOr[String | Null] = js.undefined
+  val assignee_stations: js.UndefOr[Double] = js.undefined
+  val assignee_updated_at: js.UndefOr[String | Null] = js.undefined
+  val first_resolution_time_in_minutes: js.UndefOr[MinutesObject] = js.undefined
+  val full_resolution_time_in_minutes: js.UndefOr[MinutesObject] = js.undefined
+  val group_stations: js.UndefOr[Double] = js.undefined
+  val initially_assigned_at: js.UndefOr[String | Null] = js.undefined
+  val latest_comment_added_at: js.UndefOr[String | Null] = js.undefined
+  val reopens: js.UndefOr[Double] = js.undefined
+  val replies: js.UndefOr[Double] = js.undefined
+  val reply_time_in_minutes: js.UndefOr[MinutesObject] = js.undefined
+  val requester_updated_at: js.UndefOr[String | Null] = js.undefined
+  val requester_wait_time_in_minutes: js.UndefOr[MinutesObject] = js.undefined
+  val solved_at: js.UndefOr[String | Null] = js.undefined
+  val ticket_id: js.UndefOr[ZendeskID] = js.undefined
+  val url: js.UndefOr[String] = js.undefined
 }
 
 object ResponseModel {
   @scala.inline
-  def apply(created_at: String, id: ZendeskID): ResponseModel = {
-    val __obj = js.Dynamic.literal(created_at = created_at.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+  def apply(
+    created_at: String,
+    id: ZendeskID,
+    agent_wait_time_in_minutes: MinutesObject = null,
+    assigned_at: js.UndefOr[Null | String] = js.undefined,
+    assignee_stations: js.UndefOr[Double] = js.undefined,
+    assignee_updated_at: js.UndefOr[Null | String] = js.undefined,
+    first_resolution_time_in_minutes: MinutesObject = null,
+    full_resolution_time_in_minutes: MinutesObject = null,
+    group_stations: js.UndefOr[Double] = js.undefined,
+    initially_assigned_at: js.UndefOr[Null | String] = js.undefined,
+    latest_comment_added_at: js.UndefOr[Null | String] = js.undefined,
+    reopens: js.UndefOr[Double] = js.undefined,
+    replies: js.UndefOr[Double] = js.undefined,
+    reply_time_in_minutes: MinutesObject = null,
+    requester_updated_at: js.UndefOr[Null | String] = js.undefined,
+    requester_wait_time_in_minutes: MinutesObject = null,
+    solved_at: js.UndefOr[Null | String] = js.undefined,
+    ticket_id: js.UndefOr[ZendeskID] = js.undefined,
+    updated_at: String = null,
+    url: String = null
+  ): ResponseModel = {
+    val __obj = js.Dynamic.literal(created_at = created_at.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any])
+    if (agent_wait_time_in_minutes != null) __obj.updateDynamic("agent_wait_time_in_minutes")(agent_wait_time_in_minutes.asInstanceOf[js.Any])
+    if (!js.isUndefined(assigned_at)) __obj.updateDynamic("assigned_at")(assigned_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(assignee_stations)) __obj.updateDynamic("assignee_stations")(assignee_stations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(assignee_updated_at)) __obj.updateDynamic("assignee_updated_at")(assignee_updated_at.asInstanceOf[js.Any])
+    if (first_resolution_time_in_minutes != null) __obj.updateDynamic("first_resolution_time_in_minutes")(first_resolution_time_in_minutes.asInstanceOf[js.Any])
+    if (full_resolution_time_in_minutes != null) __obj.updateDynamic("full_resolution_time_in_minutes")(full_resolution_time_in_minutes.asInstanceOf[js.Any])
+    if (!js.isUndefined(group_stations)) __obj.updateDynamic("group_stations")(group_stations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initially_assigned_at)) __obj.updateDynamic("initially_assigned_at")(initially_assigned_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(latest_comment_added_at)) __obj.updateDynamic("latest_comment_added_at")(latest_comment_added_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(reopens)) __obj.updateDynamic("reopens")(reopens.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(replies)) __obj.updateDynamic("replies")(replies.get.asInstanceOf[js.Any])
+    if (reply_time_in_minutes != null) __obj.updateDynamic("reply_time_in_minutes")(reply_time_in_minutes.asInstanceOf[js.Any])
+    if (!js.isUndefined(requester_updated_at)) __obj.updateDynamic("requester_updated_at")(requester_updated_at.asInstanceOf[js.Any])
+    if (requester_wait_time_in_minutes != null) __obj.updateDynamic("requester_wait_time_in_minutes")(requester_wait_time_in_minutes.asInstanceOf[js.Any])
+    if (!js.isUndefined(solved_at)) __obj.updateDynamic("solved_at")(solved_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(ticket_id)) __obj.updateDynamic("ticket_id")(ticket_id.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseModel]
   }
-  @scala.inline
-  implicit class ResponseModelOps[Self <: ResponseModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgent_wait_time_in_minutes(value: MinutesObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent_wait_time_in_minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent_wait_time_in_minutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent_wait_time_in_minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssigned_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigned_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssigned_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigned_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssigned_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigned_at")(null)
-        ret
-    }
-    @scala.inline
-    def withAssignee_stations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee_stations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignee_stations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee_stations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignee_updated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee_updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignee_updated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee_updated_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignee_updated_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee_updated_at")(null)
-        ret
-    }
-    @scala.inline
-    def withFirst_resolution_time_in_minutes(value: MinutesObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first_resolution_time_in_minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirst_resolution_time_in_minutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first_resolution_time_in_minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFull_resolution_time_in_minutes(value: MinutesObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full_resolution_time_in_minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFull_resolution_time_in_minutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full_resolution_time_in_minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup_stations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group_stations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup_stations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group_stations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitially_assigned_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initially_assigned_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitially_assigned_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initially_assigned_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitially_assigned_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initially_assigned_at")(null)
-        ret
-    }
-    @scala.inline
-    def withLatest_comment_added_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_comment_added_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatest_comment_added_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_comment_added_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatest_comment_added_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_comment_added_at")(null)
-        ret
-    }
-    @scala.inline
-    def withReopens(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reopens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReopens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reopens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplies(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReply_time_in_minutes(value: MinutesObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reply_time_in_minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReply_time_in_minutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reply_time_in_minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequester_updated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester_updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequester_updated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester_updated_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequester_updated_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester_updated_at")(null)
-        ret
-    }
-    @scala.inline
-    def withRequester_wait_time_in_minutes(value: MinutesObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester_wait_time_in_minutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequester_wait_time_in_minutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requester_wait_time_in_minutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSolved_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solved_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSolved_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solved_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSolved_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solved_at")(null)
-        ret
-    }
-    @scala.inline
-    def withTicket_id(value: ZendeskID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticket_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicket_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticket_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

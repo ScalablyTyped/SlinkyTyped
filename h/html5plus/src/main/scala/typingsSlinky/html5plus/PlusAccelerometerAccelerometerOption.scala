@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/accelerometer.html](http://www.html5plus.org/doc/zh_cn/accelerometer.html)
   */
-@js.native
 trait PlusAccelerometerAccelerometerOption extends js.Object {
   /**
     * 更新加速度信息间隔时间
@@ -18,34 +17,15 @@ trait PlusAccelerometerAccelerometerOption extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/accelerometer.html](http://www.html5plus.org/doc/zh_cn/accelerometer.html)
     */
-  var frequency: js.UndefOr[Double] = js.native
+  var frequency: js.UndefOr[Double] = js.undefined
 }
 
 object PlusAccelerometerAccelerometerOption {
   @scala.inline
-  def apply(): PlusAccelerometerAccelerometerOption = {
+  def apply(frequency: js.UndefOr[Double] = js.undefined): PlusAccelerometerAccelerometerOption = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(frequency)) __obj.updateDynamic("frequency")(frequency.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusAccelerometerAccelerometerOption]
   }
-  @scala.inline
-  implicit class PlusAccelerometerAccelerometerOptionOps[Self <: PlusAccelerometerAccelerometerOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrequency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

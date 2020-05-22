@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FindParametersProperties extends js.Object {
   /**
     * Determines whether to look for an exact match of the search text or not. If `true`, searches for a value that contains the provided [searchText](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchText). This is a case-insensitive search. If `false`, searches for an exact match of the [searchText](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchText) string. The exact match is case-sensitive.
@@ -13,31 +12,31 @@ trait FindParametersProperties extends js.Object {
     *
     * @default true
     */
-  var contains: js.UndefOr[Boolean] = js.native
+  var contains: js.UndefOr[Boolean] = js.undefined
   /**
     * Specify the number of decimal places for the geometries returned by the task.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#geometryPrecision)
     */
-  var geometryPrecision: js.UndefOr[Double] = js.native
+  var geometryPrecision: js.UndefOr[Double] = js.undefined
   /**
     * The layers to perform the find operation on. The layers are specified as a comma-separated list of layer ids. The list of ids is returned in [MapImageLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html) layerInfos.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#layerIds)
     */
-  var layerIds: js.UndefOr[js.Array[Double]] = js.native
+  var layerIds: js.UndefOr[js.Array[Double]] = js.undefined
   /**
     * The maximum allowable offset used for generalizing geometries returned by the find operation. The offset is in the units of [outSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#outSpatialReference). If [outSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#outSpatialReference) is not defined, the spatial reference of the map is used.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#maxAllowableOffset)
     */
-  var maxAllowableOffset: js.UndefOr[Double] = js.native
+  var maxAllowableOffset: js.UndefOr[Double] = js.undefined
   /**
     * The spatial reference of the output geometries. If this is not specified, the output geometries are returned in the spatial reference of the map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#outSpatialReference)
     */
-  var outSpatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
+  var outSpatialReference: js.UndefOr[SpatialReferenceProperties] = js.undefined
   /**
     * If `true`, the output will include the geometry associated with each result.
     *
@@ -45,130 +44,43 @@ trait FindParametersProperties extends js.Object {
     *
     * @default false
     */
-  var returnGeometry: js.UndefOr[Boolean] = js.native
+  var returnGeometry: js.UndefOr[Boolean] = js.undefined
   /**
     * The names of the fields of a layer to search. The fields are specified as a comma-separated list of field names. If this parameter is not specified, all fields are searched by default.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchFields)
     */
-  var searchFields: js.UndefOr[js.Array[String]] = js.native
+  var searchFields: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The text that is searched across the layers and the fields as specified in the `layers` and [searchFields](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchFields) properties.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchText)
     */
-  var searchText: js.UndefOr[String] = js.native
+  var searchText: js.UndefOr[String] = js.undefined
 }
 
 object FindParametersProperties {
   @scala.inline
-  def apply(): FindParametersProperties = {
+  def apply(
+    contains: js.UndefOr[Boolean] = js.undefined,
+    geometryPrecision: js.UndefOr[Double] = js.undefined,
+    layerIds: js.Array[Double] = null,
+    maxAllowableOffset: js.UndefOr[Double] = js.undefined,
+    outSpatialReference: SpatialReferenceProperties = null,
+    returnGeometry: js.UndefOr[Boolean] = js.undefined,
+    searchFields: js.Array[String] = null,
+    searchText: String = null
+  ): FindParametersProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(contains)) __obj.updateDynamic("contains")(contains.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(geometryPrecision)) __obj.updateDynamic("geometryPrecision")(geometryPrecision.get.asInstanceOf[js.Any])
+    if (layerIds != null) __obj.updateDynamic("layerIds")(layerIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAllowableOffset)) __obj.updateDynamic("maxAllowableOffset")(maxAllowableOffset.get.asInstanceOf[js.Any])
+    if (outSpatialReference != null) __obj.updateDynamic("outSpatialReference")(outSpatialReference.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnGeometry)) __obj.updateDynamic("returnGeometry")(returnGeometry.get.asInstanceOf[js.Any])
+    if (searchFields != null) __obj.updateDynamic("searchFields")(searchFields.asInstanceOf[js.Any])
+    if (searchText != null) __obj.updateDynamic("searchText")(searchText.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindParametersProperties]
   }
-  @scala.inline
-  implicit class FindParametersPropertiesOps[Self <: FindParametersProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContains(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeometryPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryPrecision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeometryPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryPrecision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerIds(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAllowableOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAllowableOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAllowableOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAllowableOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutSpatialReference(value: SpatialReferenceProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outSpatialReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutSpatialReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outSpatialReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnGeometry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnGeometry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnGeometry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchFields(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

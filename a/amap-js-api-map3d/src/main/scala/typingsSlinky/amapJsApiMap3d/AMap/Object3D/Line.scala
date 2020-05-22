@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Line
   extends typingsSlinky.amapJsApiMap3d.AMap.Object3D {
   @JSName("geometry")
-  val geometry_Line: typingsSlinky.amapJsApiMap3d.AMap.Geometry3D.Line = js.native
+  val geometry_Line: typingsSlinky.amapJsApiMap3d.AMap.Geometry3D.Line
 }
 
 object Line {
@@ -26,19 +25,5 @@ object Line {
     val __obj = js.Dynamic.literal(DEPTH_TEST = DEPTH_TEST.asInstanceOf[js.Any], geometry = geometry.asInstanceOf[js.Any], needUpdate = needUpdate.asInstanceOf[js.Any], reDraw = js.Any.fromFunction0(reDraw), reset = js.Any.fromFunction0(reset), textures = textures.asInstanceOf[js.Any], transparent = transparent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Line]
   }
-  @scala.inline
-  implicit class LineOps[Self <: Line] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeometry(value: typingsSlinky.amapJsApiMap3d.AMap.Geometry3D.Line): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

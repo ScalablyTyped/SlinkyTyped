@@ -9,13 +9,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `3` extends js.Object {
-  var `1`: InformationseparatorthreewStartoftext = js.native
-  var `2`: InformationseparatorthreewEndoftext = js.native
-  var `3`: InformationseparatorthreewEndoftransmission = js.native
-  var `4`: InformationseparatorthreewEnquiry = js.native
-  var `5`: InformationseparatorthreewAcknowledge = js.native
+  var `1`: InformationseparatorthreewStartoftext
+  var `2`: InformationseparatorthreewEndoftext
+  var `3`: InformationseparatorthreewEndoftransmission
+  var `4`: InformationseparatorthreewEnquiry
+  var `5`: InformationseparatorthreewAcknowledge
 }
 
 object `3` {
@@ -35,43 +34,5 @@ object `3` {
     __obj.updateDynamic("5")(`5`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`3`]
   }
-  @scala.inline
-  implicit class `3Ops`[Self <: `3`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with1(value: InformationseparatorthreewStartoftext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with2(value: InformationseparatorthreewEndoftext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with3(value: InformationseparatorthreewEndoftransmission): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with4(value: InformationseparatorthreewEnquiry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with5(value: InformationseparatorthreewAcknowledge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

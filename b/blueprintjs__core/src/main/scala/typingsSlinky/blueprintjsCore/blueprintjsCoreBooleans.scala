@@ -1,13 +1,12 @@
 package typingsSlinky.blueprintjsCore
 
-import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object blueprintjsCoreBooleans {
   @js.native
-  sealed trait `false` extends MaybeElement
+  sealed trait `false` extends js.Object
   
   @js.native
   sealed trait `true` extends js.Object

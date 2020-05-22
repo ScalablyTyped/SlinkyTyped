@@ -14,29 +14,10 @@ trait StopEntitiesDetectionV2JobResponse extends js.Object {
 
 object StopEntitiesDetectionV2JobResponse {
   @scala.inline
-  def apply(): StopEntitiesDetectionV2JobResponse = {
+  def apply(JobId: JobId = null): StopEntitiesDetectionV2JobResponse = {
     val __obj = js.Dynamic.literal()
+    if (JobId != null) __obj.updateDynamic("JobId")(JobId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopEntitiesDetectionV2JobResponse]
   }
-  @scala.inline
-  implicit class StopEntitiesDetectionV2JobResponseOps[Self <: StopEntitiesDetectionV2JobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

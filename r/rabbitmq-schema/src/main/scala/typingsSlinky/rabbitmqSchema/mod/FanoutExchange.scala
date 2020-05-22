@@ -5,32 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FanoutExchange extends Exchange {
   @JSName("type")
-  var type_FanoutExchange: fanout = js.native
+  var type_FanoutExchange: fanout
 }
 
 object FanoutExchange {
   @scala.inline
-  def apply(bindings: js.Array[Binding], exchange: String, `type`: fanout): FanoutExchange = {
+  def apply(bindings: js.Array[Binding], exchange: String, `type`: fanout, options: js.Object = null): FanoutExchange = {
     val __obj = js.Dynamic.literal(bindings = bindings.asInstanceOf[js.Any], exchange = exchange.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[FanoutExchange]
   }
-  @scala.inline
-  implicit class FanoutExchangeOps[Self <: FanoutExchange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: fanout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenFindPanelCommand")
 @js.native
 class OpenFindPanelCommand ()
-  extends typingsSlinky.devexpressWeb.OpenFindPanelCommand
+  extends typingsSlinky.devexpressWeb.OpenFindPanelCommand {
+  /**
+    * Executes the OpenFindPanelCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

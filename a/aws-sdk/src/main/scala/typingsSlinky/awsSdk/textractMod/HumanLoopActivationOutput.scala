@@ -22,53 +22,16 @@ trait HumanLoopActivationOutput extends js.Object {
 
 object HumanLoopActivationOutput {
   @scala.inline
-  def apply(): HumanLoopActivationOutput = {
+  def apply(
+    HumanLoopActivationConditionsEvaluationResults: HumanLoopActivationConditionsEvaluationResults = null,
+    HumanLoopActivationReasons: HumanLoopActivationReasons = null,
+    HumanLoopArn: HumanLoopArn = null
+  ): HumanLoopActivationOutput = {
     val __obj = js.Dynamic.literal()
+    if (HumanLoopActivationConditionsEvaluationResults != null) __obj.updateDynamic("HumanLoopActivationConditionsEvaluationResults")(HumanLoopActivationConditionsEvaluationResults.asInstanceOf[js.Any])
+    if (HumanLoopActivationReasons != null) __obj.updateDynamic("HumanLoopActivationReasons")(HumanLoopActivationReasons.asInstanceOf[js.Any])
+    if (HumanLoopArn != null) __obj.updateDynamic("HumanLoopArn")(HumanLoopArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[HumanLoopActivationOutput]
   }
-  @scala.inline
-  implicit class HumanLoopActivationOutputOps[Self <: HumanLoopActivationOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHumanLoopActivationConditionsEvaluationResults(value: HumanLoopActivationConditionsEvaluationResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopActivationConditionsEvaluationResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHumanLoopActivationConditionsEvaluationResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopActivationConditionsEvaluationResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHumanLoopActivationReasons(value: HumanLoopActivationReasons): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopActivationReasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHumanLoopActivationReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopActivationReasons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHumanLoopArn(value: HumanLoopArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHumanLoopArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

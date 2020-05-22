@@ -5,173 +5,77 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgPivotGridDataSourceOptionsXmlaOptions
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * The catalog name.
-  	 */
-  var catalog: js.UndefOr[String] = js.native
+    * The catalog name.
+    */
+  var catalog: js.UndefOr[String] = js.undefined
   /**
-  	 * The name of the cube in the data source.
-  	 */
-  var cube: js.UndefOr[String] = js.native
+    * The name of the cube in the data source.
+    */
+  var cube: js.UndefOr[String] = js.undefined
   /**
-  	 * Additional properties sent with every discover request.
-  	 * The object is treated as a key/value store where each property name is used as the key and the property value as the value.
-  	 */
-  var discoverProperties: js.UndefOr[js.Any] = js.native
+    * Additional properties sent with every discover request.
+    * The object is treated as a key/value store where each property name is used as the key and the property value as the value.
+    */
+  var discoverProperties: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Enables/disables caching of the XMLA result object.
-  	 */
-  var enableResultCache: js.UndefOr[Boolean] = js.native
+    * Enables/disables caching of the XMLA result object.
+    */
+  var enableResultCache: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Additional properties sent with every execute request.
-  	 * The object is treated as a key/value store where each property name is used as the key and the property value as the value.
-  	 */
-  var executeProperties: js.UndefOr[js.Any] = js.native
+    * Additional properties sent with every execute request.
+    * The object is treated as a key/value store where each property name is used as the key and the property value as the value.
+    */
+  var executeProperties: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Optional="true" a javascript object containing information about how the request to the xmla server should be processed
-  	 */
-  var mdxSettings: js.UndefOr[IgPivotGridDataSourceOptionsXmlaOptionsMdxSettings] = js.native
+    * Optional="true" a javascript object containing information about how the request to the xmla server should be processed
+    */
+  var mdxSettings: js.UndefOr[IgPivotGridDataSourceOptionsXmlaOptionsMdxSettings] = js.undefined
   /**
-  	 * The name of the measure group in the data source.
-  	 */
-  var measureGroup: js.UndefOr[String] = js.native
+    * The name of the measure group in the data source.
+    */
+  var measureGroup: js.UndefOr[String] = js.undefined
   /**
-  	 * An object containing information about how the request to the XMLA server should be processed.
-  	 */
-  var requestOptions: js.UndefOr[IgPivotGridDataSourceOptionsXmlaOptionsRequestOptions] = js.native
+    * An object containing information about how the request to the XMLA server should be processed.
+    */
+  var requestOptions: js.UndefOr[IgPivotGridDataSourceOptionsXmlaOptionsRequestOptions] = js.undefined
   /**
-  	 * Optional="false" The URL of the XMLA server.
-  	 */
-  var serverUrl: js.UndefOr[String] = js.native
+    * Optional="false" The URL of the XMLA server.
+    */
+  var serverUrl: js.UndefOr[String] = js.undefined
 }
 
 object IgPivotGridDataSourceOptionsXmlaOptions {
   @scala.inline
-  def apply(): IgPivotGridDataSourceOptionsXmlaOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    catalog: String = null,
+    cube: String = null,
+    discoverProperties: js.Any = null,
+    enableResultCache: js.UndefOr[Boolean] = js.undefined,
+    executeProperties: js.Any = null,
+    mdxSettings: IgPivotGridDataSourceOptionsXmlaOptionsMdxSettings = null,
+    measureGroup: String = null,
+    requestOptions: IgPivotGridDataSourceOptionsXmlaOptionsRequestOptions = null,
+    serverUrl: String = null
+  ): IgPivotGridDataSourceOptionsXmlaOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (catalog != null) __obj.updateDynamic("catalog")(catalog.asInstanceOf[js.Any])
+    if (cube != null) __obj.updateDynamic("cube")(cube.asInstanceOf[js.Any])
+    if (discoverProperties != null) __obj.updateDynamic("discoverProperties")(discoverProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableResultCache)) __obj.updateDynamic("enableResultCache")(enableResultCache.get.asInstanceOf[js.Any])
+    if (executeProperties != null) __obj.updateDynamic("executeProperties")(executeProperties.asInstanceOf[js.Any])
+    if (mdxSettings != null) __obj.updateDynamic("mdxSettings")(mdxSettings.asInstanceOf[js.Any])
+    if (measureGroup != null) __obj.updateDynamic("measureGroup")(measureGroup.asInstanceOf[js.Any])
+    if (requestOptions != null) __obj.updateDynamic("requestOptions")(requestOptions.asInstanceOf[js.Any])
+    if (serverUrl != null) __obj.updateDynamic("serverUrl")(serverUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgPivotGridDataSourceOptionsXmlaOptions]
   }
-  @scala.inline
-  implicit class IgPivotGridDataSourceOptionsXmlaOptionsOps[Self <: IgPivotGridDataSourceOptionsXmlaOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCatalog(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("catalog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCube(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCube: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscoverProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discoverProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscoverProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discoverProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableResultCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResultCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableResultCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResultCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecuteProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecuteProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executeProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMdxSettings(value: IgPivotGridDataSourceOptionsXmlaOptionsMdxSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdxSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMdxSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mdxSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestOptions(value: IgPivotGridDataSourceOptionsXmlaOptionsRequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

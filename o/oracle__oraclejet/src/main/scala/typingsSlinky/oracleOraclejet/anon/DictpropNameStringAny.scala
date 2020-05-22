@@ -5,31 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DictpropNameStringAny
   extends /* key */ StringDictionary[js.Any] {
-  var item: org.scalajs.dom.raw.Element = js.native
+  var item: org.scalajs.dom.raw.Element
 }
 
 object DictpropNameStringAny {
   @scala.inline
-  def apply(item: org.scalajs.dom.raw.Element): DictpropNameStringAny = {
+  def apply(item: org.scalajs.dom.raw.Element, StringDictionary: /* name */ StringDictionary[js.Any] = null): DictpropNameStringAny = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[DictpropNameStringAny]
   }
-  @scala.inline
-  implicit class DictpropNameStringAnyOps[Self <: DictpropNameStringAny] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: org.scalajs.dom.raw.Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   * @author Kai Sommerfeld
   * @version 1.0
   */
-@js.native
 trait ContentCreationException extends Exception {
   /** An error code. */
-  var eError: ContentCreationError = js.native
+  var eError: ContentCreationError
 }
 
 object ContentCreationException {
@@ -23,19 +22,5 @@ object ContentCreationException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], eError = eError.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentCreationException]
   }
-  @scala.inline
-  implicit class ContentCreationExceptionOps[Self <: ContentCreationException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEError(value: ContentCreationError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eError")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

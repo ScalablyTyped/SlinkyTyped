@@ -18,53 +18,52 @@ import scala.scalajs.js.annotation._
   * @see XReportDefinition
   * @see XGroups
   */
-@js.native
 trait XGroup
   extends XChild
      with XPropertySet
      with XComponent
      with XFunctionsSupplier {
   /** Defines either a column name or an expression. */
-  var Expression: String = js.native
+  var Expression: String
   /**
     * returns the group footer.
     * @see XSection
     * @throws com::sun::star::container::NoSuchElementException If the group has the footer disabled.
     */
-  var Footer: XSection = js.native
+  var Footer: XSection
   /** Defines if a group has a footer. */
-  var FooterOn: Boolean = js.native
+  var FooterOn: Boolean
   /** Defines an interval value that rows are grouped by. */
-  var GroupInterval: Double = js.native
+  var GroupInterval: Double
   /**
     * Specifies how to group data.
     * @see GroupOn
     */
-  var GroupOn: Double = js.native
+  var GroupOn: Double
   /**
     * Specifies the parent of the group.
     * @see XChild
     */
-  var Groups: XGroups = js.native
+  var Groups: XGroups
   /**
     * returns the group header.
     * @see XSection
     * @throws com::sun::star::container::NoSuchElementException If the group has the header disabled.
     */
-  var Header: XSection = js.native
+  var Header: XSection
   /** Defines if a group has a header. */
-  var HeaderOn: Boolean = js.native
+  var HeaderOn: Boolean
   /**
     * Specifies if a group header, detail, and footer section is printed on the same page.
     * @see KeepTogether
     */
-  var KeepTogether: Double = js.native
+  var KeepTogether: Double
   /** Specifies that the group header should always be printed on a new page and the reset of the page number to zero. */
-  var ResetPageNumber: Boolean = js.native
+  var ResetPageNumber: Boolean
   /** Defines if the group is sorted ascending or descending. The default is `TRUE` . */
-  var SortAscending: Boolean = js.native
+  var SortAscending: Boolean
   /** Specifies that the group header should always be printed on a new column. */
-  var StartNewColumn: Boolean = js.native
+  var StartNewColumn: Boolean
 }
 
 object XGroup {
@@ -104,85 +103,5 @@ object XGroup {
     val __obj = js.Dynamic.literal(Expression = Expression.asInstanceOf[js.Any], Footer = Footer.asInstanceOf[js.Any], FooterOn = FooterOn.asInstanceOf[js.Any], Functions = Functions.asInstanceOf[js.Any], GroupInterval = GroupInterval.asInstanceOf[js.Any], GroupOn = GroupOn.asInstanceOf[js.Any], Groups = Groups.asInstanceOf[js.Any], Header = Header.asInstanceOf[js.Any], HeaderOn = HeaderOn.asInstanceOf[js.Any], KeepTogether = KeepTogether.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ResetPageNumber = ResetPageNumber.asInstanceOf[js.Any], SortAscending = SortAscending.asInstanceOf[js.Any], StartNewColumn = StartNewColumn.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), dispose = js.Any.fromFunction0(dispose), getParent = js.Any.fromFunction0(getParent), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setParent = js.Any.fromFunction1(setParent), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[XGroup]
   }
-  @scala.inline
-  implicit class XGroupOps[Self <: XGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFooter(value: XSection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Footer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFooterOn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FooterOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupOn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroups(value: XGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeader(value: XSection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderOn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeaderOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeepTogether(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeepTogether")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResetPageNumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetPageNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortAscending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortAscending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartNewColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartNewColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

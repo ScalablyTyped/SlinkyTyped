@@ -18,41 +18,11 @@ trait GenerateChangeSetRequest extends js.Object {
 
 object GenerateChangeSetRequest {
   @scala.inline
-  def apply(): GenerateChangeSetRequest = {
+  def apply(appId: AppId = null, changesetFormat: OutputFormat = null): GenerateChangeSetRequest = {
     val __obj = js.Dynamic.literal()
+    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
+    if (changesetFormat != null) __obj.updateDynamic("changesetFormat")(changesetFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateChangeSetRequest]
   }
-  @scala.inline
-  implicit class GenerateChangeSetRequestOps[Self <: GenerateChangeSetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppId(value: AppId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangesetFormat(value: OutputFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changesetFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangesetFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changesetFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

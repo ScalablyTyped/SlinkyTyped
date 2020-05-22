@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component

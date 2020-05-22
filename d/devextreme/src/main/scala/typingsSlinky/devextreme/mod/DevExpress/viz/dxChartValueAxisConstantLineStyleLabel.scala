@@ -2,58 +2,38 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.center
+import typingsSlinky.devextreme.devextremeStrings.inside
 import typingsSlinky.devextreme.devextremeStrings.left
+import typingsSlinky.devextreme.devextremeStrings.outside
 import typingsSlinky.devextreme.devextremeStrings.right
 import typingsSlinky.devextreme.devextremeStrings.top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxChartValueAxisConstantLineStyleLabel extends dxChartCommonAxisSettingsConstantLineStyleLabel {
-  /** Aligns constant line labels in the horizontal direction. */
-  var horizontalAlignment: js.UndefOr[center | left | right] = js.native
-  /** Aligns constant line labels in the vertical direction. */
-  var verticalAlignment: js.UndefOr[bottom | center | top] = js.native
+  /** @name dxChart.Options.valueAxis.constantLineStyle.label.horizontalAlignment */
+  var horizontalAlignment: js.UndefOr[center | left | right] = js.undefined
+  /** @name dxChart.Options.valueAxis.constantLineStyle.label.verticalAlignment */
+  var verticalAlignment: js.UndefOr[bottom | center | top] = js.undefined
 }
 
 object dxChartValueAxisConstantLineStyleLabel {
   @scala.inline
-  def apply(): dxChartValueAxisConstantLineStyleLabel = {
+  def apply(
+    font: Font = null,
+    horizontalAlignment: center | left | right = null,
+    position: inside | outside = null,
+    verticalAlignment: bottom | center | top = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxChartValueAxisConstantLineStyleLabel = {
     val __obj = js.Dynamic.literal()
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartValueAxisConstantLineStyleLabel]
   }
-  @scala.inline
-  implicit class dxChartValueAxisConstantLineStyleLabelOps[Self <: dxChartValueAxisConstantLineStyleLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHorizontalAlignment(value: center | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlignment(value: bottom | center | top): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

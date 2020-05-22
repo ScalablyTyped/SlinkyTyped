@@ -17,29 +17,10 @@ trait SchemaMaliciousEntity extends js.Object {
 
 object SchemaMaliciousEntity {
   @scala.inline
-  def apply(): SchemaMaliciousEntity = {
+  def apply(fromHeader: String = null): SchemaMaliciousEntity = {
     val __obj = js.Dynamic.literal()
+    if (fromHeader != null) __obj.updateDynamic("fromHeader")(fromHeader.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMaliciousEntity]
   }
-  @scala.inline
-  implicit class SchemaMaliciousEntityOps[Self <: SchemaMaliciousEntity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromHeader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

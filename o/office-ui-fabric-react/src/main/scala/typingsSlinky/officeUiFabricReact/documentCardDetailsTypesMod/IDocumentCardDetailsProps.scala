@@ -1,9 +1,10 @@
 package typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod
 
-import slinky.core.facade.ReactRef
+import slinky.core.TagMod
 import typingsSlinky.officeUiFabricReact.documentCardDetailsBaseMod.DocumentCardDetailsBase
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
-import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -11,107 +12,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDocumentCardDetailsProps extends Props[DocumentCardDetailsBase] {
   /**
     * Optional override class name
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Gets the component ref.
     */
-  var componentRef: js.UndefOr[IRefObject[IDocumentCardDetails]] = js.native
+  var componentRef: js.UndefOr[IRefObject[IDocumentCardDetails]] = js.undefined
   /**
     * Call to provide customized styling that will layer on top of the variant rules
     */
   var styles: js.UndefOr[
     IStyleFunctionOrObject[IDocumentCardDetailsStyleProps, IDocumentCardDetailsStyles]
-  ] = js.native
+  ] = js.undefined
   /**
     * Theme provided by HOC.
     */
-  var theme: js.UndefOr[ITheme] = js.native
+  var theme: js.UndefOr[ITheme] = js.undefined
 }
 
 object IDocumentCardDetailsProps {
   @scala.inline
-  def apply(): IDocumentCardDetailsProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    className: String = null,
+    componentRef: IRefObject[IDocumentCardDetails] = null,
+    key: Key = null,
+    ref: js.UndefOr[Null | LegacyRef[DocumentCardDetailsBase]] = js.undefined,
+    styles: IStyleFunctionOrObject[IDocumentCardDetailsStyleProps, IDocumentCardDetailsStyles] = null,
+    theme: ITheme = null
+  ): IDocumentCardDetailsProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDocumentCardDetailsProps]
   }
-  @scala.inline
-  implicit class IDocumentCardDetailsPropsOps[Self <: IDocumentCardDetailsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentRefFunction1(value: /* ref */ IDocumentCardDetails | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComponentRefRefObject(value: ReactRef[IDocumentCardDetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRef(value: IRefObject[IDocumentCardDetails]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStylesFunction1(value: IDocumentCardDetailsStyleProps => Partial[IDocumentCardDetailsStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStyles(value: IStyleFunctionOrObject[IDocumentCardDetailsStyleProps, IDocumentCardDetailsStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

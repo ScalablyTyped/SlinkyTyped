@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   *
   * If you do not need your own model implementation, you can also use the {@link MutableTreeDataModel} .
   */
-@js.native
 trait XTreeDataModel extends XComponent {
   /**
     * Returns the root of the tree.
@@ -23,24 +22,24 @@ trait XTreeDataModel extends XComponent {
     * Returns null only if the tree has no nodes.
     * @returns the root of the tree
     */
-  val Root: XTreeNode = js.native
+  val Root: XTreeNode
   /**
     * Adds a listener for the {@link TreeDataModelEvent} posted after the tree changes.
     * @param Listener the listener to add.
     */
-  def addTreeDataModelListener(Listener: XTreeDataModelListener): Unit = js.native
+  def addTreeDataModelListener(Listener: XTreeDataModelListener): Unit
   /**
     * Returns the root of the tree.
     *
     * Returns null only if the tree has no nodes.
     * @returns the root of the tree
     */
-  def getRoot(): XTreeNode = js.native
+  def getRoot(): XTreeNode
   /**
     * Removes a listener previously added with {@link addTreeDataModelListener()} .
     * @param Listener the listener to remove.
     */
-  def removeTreeDataModelListener(Listener: XTreeDataModelListener): Unit = js.native
+  def removeTreeDataModelListener(Listener: XTreeDataModelListener): Unit
 }
 
 object XTreeDataModel {
@@ -60,37 +59,5 @@ object XTreeDataModel {
     val __obj = js.Dynamic.literal(Root = Root.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addTreeDataModelListener = js.Any.fromFunction1(addTreeDataModelListener), dispose = js.Any.fromFunction0(dispose), getRoot = js.Any.fromFunction0(getRoot), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeTreeDataModelListener = js.Any.fromFunction1(removeTreeDataModelListener))
     __obj.asInstanceOf[XTreeDataModel]
   }
-  @scala.inline
-  implicit class XTreeDataModelOps[Self <: XTreeDataModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoot(value: XTreeNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddTreeDataModelListener(value: XTreeDataModelListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTreeDataModelListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRoot(value: () => XTreeNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRoot")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveTreeDataModelListener(value: XTreeDataModelListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTreeDataModelListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

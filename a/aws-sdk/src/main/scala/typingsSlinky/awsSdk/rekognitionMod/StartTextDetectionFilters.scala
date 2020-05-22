@@ -18,41 +18,11 @@ trait StartTextDetectionFilters extends js.Object {
 
 object StartTextDetectionFilters {
   @scala.inline
-  def apply(): StartTextDetectionFilters = {
+  def apply(RegionsOfInterest: RegionsOfInterest = null, WordFilter: DetectionFilter = null): StartTextDetectionFilters = {
     val __obj = js.Dynamic.literal()
+    if (RegionsOfInterest != null) __obj.updateDynamic("RegionsOfInterest")(RegionsOfInterest.asInstanceOf[js.Any])
+    if (WordFilter != null) __obj.updateDynamic("WordFilter")(WordFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTextDetectionFilters]
   }
-  @scala.inline
-  implicit class StartTextDetectionFiltersOps[Self <: StartTextDetectionFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegionsOfInterest(value: RegionsOfInterest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionsOfInterest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegionsOfInterest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionsOfInterest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordFilter(value: DetectionFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordFilter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

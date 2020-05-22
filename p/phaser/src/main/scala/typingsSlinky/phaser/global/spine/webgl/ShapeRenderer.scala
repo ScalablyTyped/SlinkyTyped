@@ -13,5 +13,7 @@ class ShapeRenderer protected ()
   def this(context: WebGLRenderingContext) = this()
   def this(context: typingsSlinky.phaser.spine.webgl.ManagedWebGLRenderingContext, maxVertices: Double) = this()
   def this(context: WebGLRenderingContext, maxVertices: Double) = this()
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

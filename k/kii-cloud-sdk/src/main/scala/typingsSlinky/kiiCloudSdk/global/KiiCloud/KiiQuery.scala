@@ -10,7 +10,41 @@ import scala.scalajs.js.annotation._
 @JSGlobal("KiiCloud.KiiQuery")
 @js.native
 class KiiQuery ()
-  extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiQuery
+  extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiQuery {
+  /**
+    * Get the limit of the current query
+    *
+    */
+  /* CompleteClass */
+  override def getLimit(): Double = js.native
+  /**
+    * Set the limit of the given query
+    *
+    * @param value The desired limit. Must be an integer > 0
+    *
+    * @throws InvalidLimitException
+    */
+  /* CompleteClass */
+  override def setLimit(value: Double): Unit = js.native
+  /**
+    * Set the query to sort by a field in ascending order
+    *
+    * If a sort has already been set, it will be overwritten.
+    *
+    * @param field The key that should be used to sort
+    */
+  /* CompleteClass */
+  override def sortByAsc(field: String): Unit = js.native
+  /**
+    * Set the query to sort by a field in descending order
+    *
+    * If a sort has already been set, it will be overwritten.
+    *
+    * @param field The key that should be used to sort
+    */
+  /* CompleteClass */
+  override def sortByDesc(field: String): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("KiiCloud.KiiQuery")

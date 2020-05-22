@@ -32,7 +32,6 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Function, 'type' | 'body'> */
-@js.native
 trait ClassPrivateMethod
   extends ASTNode
      with DeclarationKind
@@ -40,28 +39,28 @@ trait ClassPrivateMethod
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var `abstract`: js.UndefOr[Boolean | Null] = js.native
-  var access: js.UndefOr[public | `private` | `protected` | Null] = js.native
-  var accessibility: js.UndefOr[public | `private` | `protected` | Null] = js.native
-  var async: js.UndefOr[Boolean] = js.native
-  var body: BlockStatementKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var computed: js.UndefOr[Boolean] = js.native
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
-  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.native
-  var expression: js.UndefOr[Boolean] = js.native
-  var generator: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[IdentifierKind] = js.native
-  var key: PrivateNameKind = js.native
-  var kind: js.UndefOr[get | set | method | constructor] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var optional: js.UndefOr[Boolean | Null] = js.native
-  var params: js.Array[PatternKind] = js.native
-  var rest: js.UndefOr[IdentifierKind] = js.native
-  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.native
-  var static: js.UndefOr[Boolean | Null] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassPrivateMethod = js.native
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.native
+  var `abstract`: js.UndefOr[Boolean | Null] = js.undefined
+  var access: js.UndefOr[public | `private` | `protected` | Null] = js.undefined
+  var accessibility: js.UndefOr[public | `private` | `protected` | Null] = js.undefined
+  var async: js.UndefOr[Boolean] = js.undefined
+  var body: BlockStatementKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var computed: js.UndefOr[Boolean] = js.undefined
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
+  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.undefined
+  var expression: js.UndefOr[Boolean] = js.undefined
+  var generator: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[IdentifierKind] = js.undefined
+  var key: PrivateNameKind
+  var kind: js.UndefOr[get | set | method | constructor] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var optional: js.UndefOr[Boolean | Null] = js.undefined
+  var params: js.Array[PatternKind]
+  var rest: js.UndefOr[IdentifierKind] = js.undefined
+  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
+  var static: js.UndefOr[Boolean | Null] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassPrivateMethod
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ClassPrivateMethod")

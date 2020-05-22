@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ArrayOfContent
   extends Array[Content]
-     with Content
+     with _Content
 

@@ -18,41 +18,11 @@ trait SchemaDealTermsRubiconNonGuaranteedTerms extends js.Object {
 
 object SchemaDealTermsRubiconNonGuaranteedTerms {
   @scala.inline
-  def apply(): SchemaDealTermsRubiconNonGuaranteedTerms = {
+  def apply(priorityPrice: SchemaPrice = null, standardPrice: SchemaPrice = null): SchemaDealTermsRubiconNonGuaranteedTerms = {
     val __obj = js.Dynamic.literal()
+    if (priorityPrice != null) __obj.updateDynamic("priorityPrice")(priorityPrice.asInstanceOf[js.Any])
+    if (standardPrice != null) __obj.updateDynamic("standardPrice")(standardPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDealTermsRubiconNonGuaranteedTerms]
   }
-  @scala.inline
-  implicit class SchemaDealTermsRubiconNonGuaranteedTermsOps[Self <: SchemaDealTermsRubiconNonGuaranteedTerms] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPriorityPrice(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priorityPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriorityPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priorityPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandardPrice(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandardPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

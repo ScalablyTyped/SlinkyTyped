@@ -8,6 +8,8 @@ import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable6
 import typingsSlinky.firebaseAuthInteropTypes.mod.FirebaseAuthInternalName
 import typingsSlinky.firebaseComponent.mod.Provider
+import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
+import typingsSlinky.firebaseFirestore.componentProviderMod.ComponentProvider
 import typingsSlinky.firebaseFirestore.databaseMod.FirestoreDatabase
 import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.documentMod.Document
@@ -26,8 +28,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object indexDotconsoleMod extends js.Object {
   @js.native
-  class Blob ()
-    extends typingsSlinky.firebaseFirestore.blobMod.Blob
+  class Blob protected ()
+    extends typingsSlinky.firebaseFirestore.blobMod.Blob {
+    def this(byteString: ByteString) = this()
+  }
   
   @js.native
   class DocumentReference[T] protected ()
@@ -53,15 +57,24 @@ object indexDotconsoleMod extends js.Object {
   }
   
   @js.native
-  class FieldValue protected () extends FieldValueImpl {
-    def this(_methodName: String) = this()
-  }
+  class FieldValue ()
+    extends typingsSlinky.firebaseFirestore.fieldValueMod.FieldValue
   
   @js.native
   class Firestore protected ()
     extends typingsSlinky.firebaseFirestore.databaseMod.Firestore {
     def this(databaseIdOrApp: FirestoreDatabase, authProvider: Provider[FirebaseAuthInternalName]) = this()
     def this(databaseIdOrApp: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName]) = this()
+    def this(
+      databaseIdOrApp: FirestoreDatabase,
+      authProvider: Provider[FirebaseAuthInternalName],
+      componentProvider: ComponentProvider
+    ) = this()
+    def this(
+      databaseIdOrApp: FirebaseApp,
+      authProvider: Provider[FirebaseAuthInternalName],
+      componentProvider: ComponentProvider
+    ) = this()
   }
   
   @js.native
@@ -106,7 +119,7 @@ object indexDotconsoleMod extends js.Object {
   ] = js.native
   @js.native
   object Blob
-    extends Instantiable0[typingsSlinky.firebaseFirestore.blobMod.Blob] {
+    extends Instantiable1[/* byteString */ ByteString, typingsSlinky.firebaseFirestore.blobMod.Blob] {
     def fromBase64String(base64: String): typingsSlinky.firebaseFirestore.blobMod.Blob = js.native
     def fromUint8Array(array: js.typedarray.Uint8Array): typingsSlinky.firebaseFirestore.blobMod.Blob = js.native
   }
@@ -146,7 +159,8 @@ object indexDotconsoleMod extends js.Object {
   }
   
   @js.native
-  object FieldValue extends Instantiable1[/* _methodName */ String, FieldValueImpl] {
+  object FieldValue
+    extends Instantiable0[typingsSlinky.firebaseFirestore.fieldValueMod.FieldValue] {
     def arrayRemove(elements: js.Any*): FieldValueImpl = js.native
     def arrayUnion(elements: js.Any*): FieldValueImpl = js.native
     def delete(): FieldValueImpl = js.native

@@ -14,180 +14,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ojDiagramLinkSettableProperties extends JetSettableProperties {
-  var categories: js.Array[String] = js.native
-  var color: js.UndefOr[String] = js.native
-  var endConnectorType: js.UndefOr[arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded] = js.native
-  var endNode: js.Any = js.native
-  var label: js.UndefOr[String] = js.native
-  var labelStyle: js.UndefOr[js.Object | Null] = js.native
-  var selectable: js.UndefOr[auto | off] = js.native
-  var shortDesc: js.UndefOr[String] = js.native
-  var startConnectorType: js.UndefOr[arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded] = js.native
-  var startNode: js.Any = js.native
-  var svgClassName: js.UndefOr[String] = js.native
-  var svgStyle: js.UndefOr[js.Object] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var categories: js.Array[String]
+  var color: js.UndefOr[String] = js.undefined
+  var endConnectorType: js.UndefOr[arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded] = js.undefined
+  var endNode: js.Any
+  var label: js.UndefOr[String] = js.undefined
+  var labelStyle: js.UndefOr[js.Object | Null] = js.undefined
+  var selectable: js.UndefOr[auto | off] = js.undefined
+  var shortDesc: js.UndefOr[String] = js.undefined
+  var startConnectorType: js.UndefOr[arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded] = js.undefined
+  var startNode: js.Any
+  var svgClassName: js.UndefOr[String] = js.undefined
+  var svgStyle: js.UndefOr[js.Object] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ojDiagramLinkSettableProperties {
   @scala.inline
-  def apply(categories: js.Array[String], endNode: js.Any, startNode: js.Any): ojDiagramLinkSettableProperties = {
+  def apply(
+    categories: js.Array[String],
+    endNode: js.Any,
+    startNode: js.Any,
+    color: String = null,
+    endConnectorType: arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded = null,
+    label: String = null,
+    labelStyle: js.UndefOr[Null | js.Object] = js.undefined,
+    selectable: auto | off = null,
+    shortDesc: String = null,
+    startConnectorType: arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded = null,
+    svgClassName: String = null,
+    svgStyle: js.Object = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ojDiagramLinkSettableProperties = {
     val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any], endNode = endNode.asInstanceOf[js.Any], startNode = startNode.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (endConnectorType != null) __obj.updateDynamic("endConnectorType")(endConnectorType.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelStyle)) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
+    if (selectable != null) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
+    if (shortDesc != null) __obj.updateDynamic("shortDesc")(shortDesc.asInstanceOf[js.Any])
+    if (startConnectorType != null) __obj.updateDynamic("startConnectorType")(startConnectorType.asInstanceOf[js.Any])
+    if (svgClassName != null) __obj.updateDynamic("svgClassName")(svgClassName.asInstanceOf[js.Any])
+    if (svgStyle != null) __obj.updateDynamic("svgStyle")(svgStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojDiagramLinkSettableProperties]
   }
-  @scala.inline
-  implicit class ojDiagramLinkSettablePropertiesOps[Self <: ojDiagramLinkSettableProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndNode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartNode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndConnectorType(value: arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endConnectorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndConnectorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endConnectorType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withSelectable(value: auto | off): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartConnectorType(value: arrow | arrowConcave | arrowOpen | circle | none | rectangle | rectangleRounded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startConnectorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartConnectorType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startConnectorType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

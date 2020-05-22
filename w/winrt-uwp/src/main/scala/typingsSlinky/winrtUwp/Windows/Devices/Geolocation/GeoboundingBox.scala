@@ -5,24 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a rectangle that defines a geographic area. */
-@js.native
 trait GeoboundingBox extends js.Object {
   /** Gets the altitude reference system used by the GeoboundingBox . */
-  var altitudeReferenceSystem: AltitudeReferenceSystem = js.native
+  var altitudeReferenceSystem: AltitudeReferenceSystem
   /** Gets the center of the GeoboundingBox . */
-  var center: BasicGeoposition = js.native
+  var center: BasicGeoposition
   /** Gets the type of geographic shape represented by the GeoboundingBox . */
-  var geoshapeType: GeoshapeType = js.native
+  var geoshapeType: GeoshapeType
   /** Gets the altitude of the highest corner of the GeoboundingBox . */
-  var maxAltitude: Double = js.native
+  var maxAltitude: Double
   /** Gets the altitude of the lowest corner of the GeoboundingBox . */
-  var minAltitude: Double = js.native
+  var minAltitude: Double
   /** Gets the northwest corner of the GeoboundingBox . */
-  var northwestCorner: BasicGeoposition = js.native
+  var northwestCorner: BasicGeoposition
   /** Gets the southeast corner of the GeoboundingBox . */
-  var southeastCorner: BasicGeoposition = js.native
+  var southeastCorner: BasicGeoposition
   /** Gets the spatial reference ID (SRID) used by the GeoboundingBox . */
-  var spatialReferenceId: Double = js.native
+  var spatialReferenceId: Double
 }
 
 object GeoboundingBox {
@@ -40,61 +39,5 @@ object GeoboundingBox {
     val __obj = js.Dynamic.literal(altitudeReferenceSystem = altitudeReferenceSystem.asInstanceOf[js.Any], center = center.asInstanceOf[js.Any], geoshapeType = geoshapeType.asInstanceOf[js.Any], maxAltitude = maxAltitude.asInstanceOf[js.Any], minAltitude = minAltitude.asInstanceOf[js.Any], northwestCorner = northwestCorner.asInstanceOf[js.Any], southeastCorner = southeastCorner.asInstanceOf[js.Any], spatialReferenceId = spatialReferenceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoboundingBox]
   }
-  @scala.inline
-  implicit class GeoboundingBoxOps[Self <: GeoboundingBox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitudeReferenceSystem(value: AltitudeReferenceSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitudeReferenceSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCenter(value: BasicGeoposition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeoshapeType(value: GeoshapeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoshapeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAltitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAltitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNorthwestCorner(value: BasicGeoposition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("northwestCorner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSoutheastCorner(value: BasicGeoposition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("southeastCorner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpatialReferenceId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReferenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

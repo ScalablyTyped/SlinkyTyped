@@ -18,41 +18,11 @@ trait CreateInvalidationResult extends js.Object {
 
 object CreateInvalidationResult {
   @scala.inline
-  def apply(): CreateInvalidationResult = {
+  def apply(Invalidation: Invalidation = null, Location: String = null): CreateInvalidationResult = {
     val __obj = js.Dynamic.literal()
+    if (Invalidation != null) __obj.updateDynamic("Invalidation")(Invalidation.asInstanceOf[js.Any])
+    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateInvalidationResult]
   }
-  @scala.inline
-  implicit class CreateInvalidationResultOps[Self <: CreateInvalidationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidation(value: Invalidation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invalidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invalidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

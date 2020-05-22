@@ -39,89 +39,22 @@ trait CreateHsmRequest extends js.Object {
 
 object CreateHsmRequest {
   @scala.inline
-  def apply(IamRoleArn: IamRoleArn, SshKey: SshKey, SubnetId: SubnetId, SubscriptionType: SubscriptionType): CreateHsmRequest = {
+  def apply(
+    IamRoleArn: IamRoleArn,
+    SshKey: SshKey,
+    SubnetId: SubnetId,
+    SubscriptionType: SubscriptionType,
+    ClientToken: ClientToken = null,
+    EniIp: IpAddress = null,
+    ExternalId: ExternalId = null,
+    SyslogIp: IpAddress = null
+  ): CreateHsmRequest = {
     val __obj = js.Dynamic.literal(IamRoleArn = IamRoleArn.asInstanceOf[js.Any], SshKey = SshKey.asInstanceOf[js.Any], SubnetId = SubnetId.asInstanceOf[js.Any], SubscriptionType = SubscriptionType.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (EniIp != null) __obj.updateDynamic("EniIp")(EniIp.asInstanceOf[js.Any])
+    if (ExternalId != null) __obj.updateDynamic("ExternalId")(ExternalId.asInstanceOf[js.Any])
+    if (SyslogIp != null) __obj.updateDynamic("SyslogIp")(SyslogIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHsmRequest]
   }
-  @scala.inline
-  implicit class CreateHsmRequestOps[Self <: CreateHsmRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIamRoleArn(value: IamRoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSshKey(value: SshKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SshKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubnetId(value: SubnetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriptionType(value: SubscriptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEniIp(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEniIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalId(value: ExternalId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyslogIp(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyslogIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyslogIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyslogIp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

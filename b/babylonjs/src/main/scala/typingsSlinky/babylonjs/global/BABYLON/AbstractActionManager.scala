@@ -7,7 +7,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BABYLON.AbstractActionManager")
 @js.native
 abstract class AbstractActionManager ()
-  extends typingsSlinky.babylonjs.BABYLON.AbstractActionManager
+  extends typingsSlinky.babylonjs.BABYLON.AbstractActionManager {
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.AbstractActionManager")

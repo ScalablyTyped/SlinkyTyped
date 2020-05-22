@@ -9,5 +9,9 @@ import scala.scalajs.js.annotation._
 class CoreCursor protected ()
   extends typingsSlinky.winrt.Windows.UI.Core.CoreCursor {
   def this(`type`: typingsSlinky.winrt.Windows.UI.Core.CoreCursorType, id: Double) = this()
+  /* CompleteClass */
+  override var id: Double = js.native
+  /* CompleteClass */
+  override var `type`: typingsSlinky.winrt.Windows.UI.Core.CoreCursorType = js.native
 }
 

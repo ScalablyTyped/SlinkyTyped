@@ -60,8 +60,8 @@ trait UIComponent extends Component {
     * Returns the reference to the router instance. The passed controller or viewhas to be created in the
     * context of a UIComponent to return the routerinstance. Otherwise this function will return
     * undefined.You may define the routerClass property in the config section of the routing to make the
-    * Component create your router extension.Example:routing: {	config: {		routerClass :
-    * myAppNamespace.MyRouterClass		...}...
+    * Component create your router extension.Example:routing: {    config: {        routerClass :
+    * myAppNamespace.MyRouterClass        ...}...
     * @since 1.16.1
     * @param oControllerOrView either a view or controller
     * @returns the router instance

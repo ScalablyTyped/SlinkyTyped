@@ -16,7 +16,7 @@ import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.IDialogContentSty
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -32,7 +32,7 @@ object DialogContent {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,7 +54,7 @@ object DialogContent {
     @scala.inline
     def showCloseButton(value: Boolean): this.type = set("showCloseButton", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDialogContentStyleProps => Partial[IDialogContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDialogContentStyleProps => DeepPartial[IDialogContentStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDialogContentStyleProps, IDialogContentStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

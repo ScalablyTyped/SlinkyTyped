@@ -60,6 +60,11 @@ object gizmoManagerMod extends js.Object {
       */
     def boundingBoxGizmoEnabled(value: Boolean): js.Any = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Utility layer that the bounding box gizmo belongs to
       */
     def keepDepthUtilityLayer: UtilityLayerRenderer = js.native

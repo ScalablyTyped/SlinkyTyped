@@ -9,24 +9,23 @@ import scala.scalajs.js.annotation._
   *
   * The checkin command is always called on the target private working copy document.
   */
-@js.native
 trait CheckinArgument extends js.Object {
   /** Tells whether to create a new major or minor version during the checkin. */
-  var MajorVersion: Boolean = js.native
+  var MajorVersion: Boolean
   /** contains the Mime-Type of the content to check-in as it may be different from the original one. */
-  var MimeType: String = js.native
+  var MimeType: String
   /**
     * contains the title of the transferred object, if it is different from the original one.
     *
     * If this field is filled, for example, a file will be renamed while it is being checked in.
     */
-  var NewTitle: String = js.native
+  var NewTitle: String
   /** contains the URL of the source of the action (e.g. the URL of the temporary file to checkin). */
-  var SourceURL: String = js.native
+  var SourceURL: String
   /** contains the URL of the private working copy to checkin. */
-  var TargetURL: String = js.native
+  var TargetURL: String
   /** Contains the version comment to set during the checkin. */
-  var VersionComment: String = js.native
+  var VersionComment: String
 }
 
 object CheckinArgument {
@@ -42,49 +41,5 @@ object CheckinArgument {
     val __obj = js.Dynamic.literal(MajorVersion = MajorVersion.asInstanceOf[js.Any], MimeType = MimeType.asInstanceOf[js.Any], NewTitle = NewTitle.asInstanceOf[js.Any], SourceURL = SourceURL.asInstanceOf[js.Any], TargetURL = TargetURL.asInstanceOf[js.Any], VersionComment = VersionComment.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckinArgument]
   }
-  @scala.inline
-  implicit class CheckinArgumentOps[Self <: CheckinArgument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMajorVersion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersionComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

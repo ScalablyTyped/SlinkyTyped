@@ -2,7 +2,6 @@ package typingsSlinky.tstl
 
 import typingsSlinky.tstl.icomparableMod.IComparable
 import typingsSlinky.tstl.ipairMod.IPair
-import typingsSlinky.tstl.mapContainerMod.MapContainer.InsertRet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +12,7 @@ object pairMod extends js.Object {
   @js.native
   class Pair[First, Second] protected ()
     extends IPair[First, Second]
-       with IComparable[Pair[First, Second]]
-       with InsertRet[js.Any, js.Any, js.Any, js.Any, First, js.Any]
-       with typingsSlinky.tstl.setContainerMod.SetContainer.InsertRet[js.Any, js.Any, js.Any, First, js.Any] {
+       with IComparable[Pair[First, Second]] {
     /**
       * Initializer Constructor.
       *
@@ -23,6 +20,24 @@ object pairMod extends js.Object {
       * @param second The second element.
       */
     def this(first: First, second: Second) = this()
+    /**
+      * The first element.
+      */
+    /* CompleteClass */
+    override var first: First = js.native
+    /**
+      * The second element.
+      */
+    /* CompleteClass */
+    override var second: Second = js.native
+    /**
+      * Test whether less than some object.
+      *
+      * @param obj The object to compare.
+      * @return Whether less or not.
+      */
+    /* CompleteClass */
+    override def less(obj: Pair[First, Second]): Boolean = js.native
   }
   
   @JSName("make_pair")

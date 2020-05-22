@@ -4,7 +4,9 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IMap
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Networking.Proximity.PeerDiscoveryTypes
+import typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectState
 import typingsSlinky.winrt.Windows.Networking.Sockets.StreamSocket
+import typingsSlinky.winrt.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +16,10 @@ import scala.scalajs.js.annotation._
 object Proximity extends js.Object {
   @js.native
   class ConnectionRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Networking.Proximity.ConnectionRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Networking.Proximity.ConnectionRequestedEventArgs {
+    /* CompleteClass */
+    override var peerInformation: typingsSlinky.winrt.Windows.Networking.Proximity.PeerInformation = js.native
+  }
   
   @js.native
   class PeerFinder ()
@@ -22,7 +27,10 @@ object Proximity extends js.Object {
   
   @js.native
   class PeerInformation ()
-    extends typingsSlinky.winrt.Windows.Networking.Proximity.PeerInformation
+    extends typingsSlinky.winrt.Windows.Networking.Proximity.PeerInformation {
+    /* CompleteClass */
+    override var displayName: String = js.native
+  }
   
   @js.native
   class ProximityDevice ()
@@ -30,11 +38,27 @@ object Proximity extends js.Object {
   
   @js.native
   class ProximityMessage ()
-    extends typingsSlinky.winrt.Windows.Networking.Proximity.ProximityMessage
+    extends typingsSlinky.winrt.Windows.Networking.Proximity.ProximityMessage {
+    /* CompleteClass */
+    override var data: IBuffer = js.native
+    /* CompleteClass */
+    override var dataAsString: String = js.native
+    /* CompleteClass */
+    override var messageType: String = js.native
+    /* CompleteClass */
+    override var subscriptionId: Double = js.native
+  }
   
   @js.native
   class TriggeredConnectionStateChangedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs
+    extends typingsSlinky.winrt.Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs {
+    /* CompleteClass */
+    override var id: Double = js.native
+    /* CompleteClass */
+    override var socket: StreamSocket = js.native
+    /* CompleteClass */
+    override var state: TriggeredConnectState = js.native
+  }
   
   @js.native
   object PeerDiscoveryTypes extends js.Object {

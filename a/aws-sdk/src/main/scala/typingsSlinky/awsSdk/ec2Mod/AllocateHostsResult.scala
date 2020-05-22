@@ -14,29 +14,10 @@ trait AllocateHostsResult extends js.Object {
 
 object AllocateHostsResult {
   @scala.inline
-  def apply(): AllocateHostsResult = {
+  def apply(HostIds: ResponseHostIdList = null): AllocateHostsResult = {
     val __obj = js.Dynamic.literal()
+    if (HostIds != null) __obj.updateDynamic("HostIds")(HostIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllocateHostsResult]
   }
-  @scala.inline
-  implicit class AllocateHostsResultOps[Self <: AllocateHostsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostIds(value: ResponseHostIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

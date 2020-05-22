@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   *
   * If you want to allow control from outside, also implement the {@link XActiveDataControl} interface.
   */
-@js.native
 trait XActiveDataStreamer extends XInterface {
   /** @returns the plugged stream. */
-  var Stream: XStream = js.native
+  var Stream: XStream
   /** @returns the plugged stream. */
-  def getStream(): XStream = js.native
+  def getStream(): XStream
   /**
     * plugs the input/output stream.
     *
     * If {@link XConnectable} is also implemented, this method should query **aStream** for a {@link XConnectable} and connect both.
     */
-  def setStream(aStream: XStream): Unit = js.native
+  def setStream(aStream: XStream): Unit
 }
 
 object XActiveDataStreamer {
@@ -38,31 +37,5 @@ object XActiveDataStreamer {
     val __obj = js.Dynamic.literal(Stream = Stream.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getStream = js.Any.fromFunction0(getStream), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setStream = js.Any.fromFunction1(setStream))
     __obj.asInstanceOf[XActiveDataStreamer]
   }
-  @scala.inline
-  implicit class XActiveDataStreamerOps[Self <: XActiveDataStreamer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStream(value: XStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetStream(value: () => XStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetStream(value: XStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStream")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

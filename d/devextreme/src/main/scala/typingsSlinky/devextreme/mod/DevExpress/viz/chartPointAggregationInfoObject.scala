@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait chartPointAggregationInfoObject extends js.Object {
-  /** Contains the length of the aggregation interval in axis units (numbers or dates). If the interval is set in pixels (using the aggregationGroupWidth option), it will be converted to axis units. */
-  var aggregationInterval: js.UndefOr[js.Any] = js.native
-  /** Contains data objects that were aggregated into this point. */
-  var data: js.UndefOr[js.Array[_]] = js.native
-  /** Contains the end value of the interval to which the point belongs. */
-  var intervalEnd: js.UndefOr[js.Any] = js.native
-  /** Contains the start value of the interval to which the point belongs. */
-  var intervalStart: js.UndefOr[js.Any] = js.native
+  /** @name chartPointAggregationInfoObject.aggregationInterval */
+  var aggregationInterval: js.UndefOr[js.Any] = js.undefined
+  /** @name chartPointAggregationInfoObject.data */
+  var data: js.UndefOr[js.Array[_]] = js.undefined
+  /** @name chartPointAggregationInfoObject.intervalEnd */
+  var intervalEnd: js.UndefOr[js.Any] = js.undefined
+  /** @name chartPointAggregationInfoObject.intervalStart */
+  var intervalStart: js.UndefOr[js.Any] = js.undefined
 }
 
 object chartPointAggregationInfoObject {
   @scala.inline
-  def apply(): chartPointAggregationInfoObject = {
+  def apply(
+    aggregationInterval: js.Any = null,
+    data: js.Array[_] = null,
+    intervalEnd: js.Any = null,
+    intervalStart: js.Any = null
+  ): chartPointAggregationInfoObject = {
     val __obj = js.Dynamic.literal()
+    if (aggregationInterval != null) __obj.updateDynamic("aggregationInterval")(aggregationInterval.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (intervalEnd != null) __obj.updateDynamic("intervalEnd")(intervalEnd.asInstanceOf[js.Any])
+    if (intervalStart != null) __obj.updateDynamic("intervalStart")(intervalStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[chartPointAggregationInfoObject]
   }
-  @scala.inline
-  implicit class chartPointAggregationInfoObjectOps[Self <: chartPointAggregationInfoObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregationInterval(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntervalEnd(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntervalStart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

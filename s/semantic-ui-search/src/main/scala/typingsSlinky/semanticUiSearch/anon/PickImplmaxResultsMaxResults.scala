@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-search.SemanticUI.Search.ErrorSettings._Impl, 'maxResults'> */
-@js.native
 trait PickImplmaxResultsMaxResults extends js.Object {
-  var maxResults: String = js.native
+  var maxResults: String
 }
 
 object PickImplmaxResultsMaxResults {
@@ -16,19 +15,5 @@ object PickImplmaxResultsMaxResults {
     val __obj = js.Dynamic.literal(maxResults = maxResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplmaxResultsMaxResults]
   }
-  @scala.inline
-  implicit class PickImplmaxResultsMaxResultsOps[Self <: PickImplmaxResultsMaxResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxResults(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoCorrect extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var CorrectCapsLock: Boolean = js.native
-  var CorrectDays: Boolean = js.native
-  var CorrectHangulAndAlphabet: Boolean = js.native
-  var CorrectInitialCaps: Boolean = js.native
-  var CorrectKeyboardSetting: Boolean = js.native
-  var CorrectSentenceCaps: Boolean = js.native
-  var CorrectTableCells: Boolean = js.native
-  val Creator: Double = js.native
-  var DisplayAutoCorrectOptions: Boolean = js.native
-  val Entries: AutoCorrectEntries = js.native
-  var FirstLetterAutoAdd: Boolean = js.native
-  val FirstLetterExceptions: typingsSlinky.activexWord.Word.FirstLetterExceptions = js.native
-  var HangulAndAlphabetAutoAdd: Boolean = js.native
-  val HangulAndAlphabetExceptions: typingsSlinky.activexWord.Word.HangulAndAlphabetExceptions = js.native
-  var OtherCorrectionsAutoAdd: Boolean = js.native
-  val OtherCorrectionsExceptions: typingsSlinky.activexWord.Word.OtherCorrectionsExceptions = js.native
-  val Parent: js.Any = js.native
-  var ReplaceText: Boolean = js.native
-  var ReplaceTextFromSpellingChecker: Boolean = js.native
-  var TwoInitialCapsAutoAdd: Boolean = js.native
-  val TwoInitialCapsExceptions: typingsSlinky.activexWord.Word.TwoInitialCapsExceptions = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  var CorrectCapsLock: Boolean
+  var CorrectDays: Boolean
+  var CorrectHangulAndAlphabet: Boolean
+  var CorrectInitialCaps: Boolean
+  var CorrectKeyboardSetting: Boolean
+  var CorrectSentenceCaps: Boolean
+  var CorrectTableCells: Boolean
+  val Creator: Double
+  var DisplayAutoCorrectOptions: Boolean
+  val Entries: AutoCorrectEntries
+  var FirstLetterAutoAdd: Boolean
+  val FirstLetterExceptions: typingsSlinky.activexWord.Word.FirstLetterExceptions
+  var HangulAndAlphabetAutoAdd: Boolean
+  val HangulAndAlphabetExceptions: typingsSlinky.activexWord.Word.HangulAndAlphabetExceptions
+  var OtherCorrectionsAutoAdd: Boolean
+  val OtherCorrectionsExceptions: typingsSlinky.activexWord.Word.OtherCorrectionsExceptions
+  val Parent: js.Any
+  var ReplaceText: Boolean
+  var ReplaceTextFromSpellingChecker: Boolean
+  var TwoInitialCapsAutoAdd: Boolean
+  val TwoInitialCapsExceptions: typingsSlinky.activexWord.Word.TwoInitialCapsExceptions
   @JSName("Word.AutoCorrect_typekey")
-  var WordDotAutoCorrect_typekey: AutoCorrect = js.native
+  var WordDotAutoCorrect_typekey: AutoCorrect
 }
 
 object AutoCorrect {
@@ -63,151 +62,5 @@ object AutoCorrect {
     __obj.updateDynamic("Word.AutoCorrect_typekey")(WordDotAutoCorrect_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoCorrect]
   }
-  @scala.inline
-  implicit class AutoCorrectOps[Self <: AutoCorrect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectCapsLock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectCapsLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectDays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectHangulAndAlphabet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectHangulAndAlphabet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectInitialCaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectInitialCaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectKeyboardSetting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectKeyboardSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectSentenceCaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectSentenceCaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCorrectTableCells(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CorrectTableCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisplayAutoCorrectOptions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayAutoCorrectOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntries(value: AutoCorrectEntries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstLetterAutoAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstLetterAutoAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstLetterExceptions(value: FirstLetterExceptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstLetterExceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHangulAndAlphabetAutoAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HangulAndAlphabetAutoAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHangulAndAlphabetExceptions(value: HangulAndAlphabetExceptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HangulAndAlphabetExceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOtherCorrectionsAutoAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCorrectionsAutoAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOtherCorrectionsExceptions(value: OtherCorrectionsExceptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCorrectionsExceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplaceText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplaceTextFromSpellingChecker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplaceTextFromSpellingChecker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTwoInitialCapsAutoAdd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TwoInitialCapsAutoAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTwoInitialCapsExceptions(value: TwoInitialCapsExceptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TwoInitialCapsExceptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotAutoCorrect_typekey(value: AutoCorrect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.AutoCorrect_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

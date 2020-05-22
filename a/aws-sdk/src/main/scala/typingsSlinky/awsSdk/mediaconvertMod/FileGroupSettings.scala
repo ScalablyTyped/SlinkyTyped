@@ -18,41 +18,11 @@ trait FileGroupSettings extends js.Object {
 
 object FileGroupSettings {
   @scala.inline
-  def apply(): FileGroupSettings = {
+  def apply(Destination: stringPatternS3 = null, DestinationSettings: DestinationSettings = null): FileGroupSettings = {
     val __obj = js.Dynamic.literal()
+    if (Destination != null) __obj.updateDynamic("Destination")(Destination.asInstanceOf[js.Any])
+    if (DestinationSettings != null) __obj.updateDynamic("DestinationSettings")(DestinationSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileGroupSettings]
   }
-  @scala.inline
-  implicit class FileGroupSettingsOps[Self <: FileGroupSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: stringPatternS3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationSettings(value: DestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

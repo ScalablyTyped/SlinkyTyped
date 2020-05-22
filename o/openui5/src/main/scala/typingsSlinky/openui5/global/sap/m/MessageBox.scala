@@ -72,7 +72,7 @@ object MessageBox extends js.Object {
     *                               // default    styleClass: ""                                       //
     * default    initialFocus: null                                   // default    textDirection:
     * sap.ui.core.TextDirection.Inherit     // default    });</pre>The callback is called with the
-    * following signature				 *<pre>  function (oAction)</pre>The information dialog opened by this method
+    * following signature                 *<pre>  function (oAction)</pre>The information dialog opened by this method
     * is processed asynchronously.Applications have to use <code>fnCallback</code> to continue work after
     * theuser closed the information dialog
     * @since 1.30
@@ -131,7 +131,7 @@ object MessageBox extends js.Object {
     *                    // default    styleClass: ""                                       // default   
     * initialFocus: null                                   // default    textDirection:
     * sap.ui.core.TextDirection.Inherit     // default    });</pre>The callback is called with the
-    * following signature				 *<pre>  function (oAction)</pre>The warning dialog opened by this method is
+    * following signature                 *<pre>  function (oAction)</pre>The warning dialog opened by this method is
     * processed asynchronously.Applications have to use <code>fnCallback</code> to continue work after
     * theuser closed the warning dialog
     * @since 1.30

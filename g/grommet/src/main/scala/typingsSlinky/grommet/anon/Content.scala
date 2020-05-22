@@ -8,127 +8,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Content extends js.Object {
-  var border: js.UndefOr[BorderType] = js.native
-  var content: js.UndefOr[Pad] = js.native
-  var disabled: js.UndefOr[`1`] = js.native
-  var error: js.UndefOr[ColorMargin] = js.native
-  var help: js.UndefOr[MarginMarginType] = js.native
-  var label: js.UndefOr[TextProps] = js.native
-  var margin: js.UndefOr[MarginType] = js.native
-  var round: js.UndefOr[RoundType] = js.native
+  var border: js.UndefOr[BorderType] = js.undefined
+  var content: js.UndefOr[Pad] = js.undefined
+  var disabled: js.UndefOr[`1`] = js.undefined
+  var error: js.UndefOr[ColorMargin] = js.undefined
+  var help: js.UndefOr[MarginMarginType] = js.undefined
+  var label: js.UndefOr[TextProps] = js.undefined
+  var margin: js.UndefOr[MarginType] = js.undefined
+  var round: js.UndefOr[RoundType] = js.undefined
 }
 
 object Content {
   @scala.inline
-  def apply(): Content = {
+  def apply(
+    border: BorderType = null,
+    content: Pad = null,
+    disabled: `1` = null,
+    error: ColorMargin = null,
+    help: MarginMarginType = null,
+    label: TextProps = null,
+    margin: MarginType = null,
+    round: RoundType = null
+  ): Content = {
     val __obj = js.Dynamic.literal()
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (round != null) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
     __obj.asInstanceOf[Content]
   }
-  @scala.inline
-  implicit class ContentOps[Self <: Content] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorder(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: Pad): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: ColorMargin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelp(value: MarginMarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: TextProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: MarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRound(value: RoundType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,237 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Lead extends js.Object {
   /** The AdWords Customer ID of the lead. */
-  var adwordsCustomerId: js.UndefOr[String] = js.native
+  var adwordsCustomerId: js.UndefOr[String] = js.undefined
   /** Comments lead source gave. */
-  var comments: js.UndefOr[String] = js.native
+  var comments: js.UndefOr[String] = js.undefined
   /** Timestamp of when this lead was created. */
-  var createTime: js.UndefOr[String] = js.native
+  var createTime: js.UndefOr[String] = js.undefined
   /** Email address of lead source. */
-  var email: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.undefined
   /** Last name of lead source. */
-  var familyName: js.UndefOr[String] = js.native
+  var familyName: js.UndefOr[String] = js.undefined
   /** First name of lead source. */
-  var givenName: js.UndefOr[String] = js.native
+  var givenName: js.UndefOr[String] = js.undefined
   /** List of reasons for using Google Partner Search and creating a lead. */
-  var gpsMotivations: js.UndefOr[js.Array[String]] = js.native
+  var gpsMotivations: js.UndefOr[js.Array[String]] = js.undefined
   /** ID of the lead. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Language code of the lead's language preference, as defined by
     * <a href="https://tools.ietf.org/html/bcp47">BCP 47</a>
     * (IETF BCP 47, "Tags for Identifying Languages").
     */
-  var languageCode: js.UndefOr[String] = js.native
+  var languageCode: js.UndefOr[String] = js.undefined
   /** Whether or not the lead signed up for marketing emails */
-  var marketingOptIn: js.UndefOr[Boolean] = js.native
+  var marketingOptIn: js.UndefOr[Boolean] = js.undefined
   /** The minimum monthly budget lead source is willing to spend. */
-  var minMonthlyBudget: js.UndefOr[Money] = js.native
+  var minMonthlyBudget: js.UndefOr[Money] = js.undefined
   /** Phone number of lead source. */
-  var phoneNumber: js.UndefOr[String] = js.native
+  var phoneNumber: js.UndefOr[String] = js.undefined
   /** The lead's state in relation to the company. */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
   /** Type of lead. */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** Website URL of lead source. */
-  var websiteUrl: js.UndefOr[String] = js.native
+  var websiteUrl: js.UndefOr[String] = js.undefined
 }
 
 object Lead {
   @scala.inline
-  def apply(): Lead = {
+  def apply(
+    adwordsCustomerId: String = null,
+    comments: String = null,
+    createTime: String = null,
+    email: String = null,
+    familyName: String = null,
+    givenName: String = null,
+    gpsMotivations: js.Array[String] = null,
+    id: String = null,
+    languageCode: String = null,
+    marketingOptIn: js.UndefOr[Boolean] = js.undefined,
+    minMonthlyBudget: Money = null,
+    phoneNumber: String = null,
+    state: String = null,
+    `type`: String = null,
+    websiteUrl: String = null
+  ): Lead = {
     val __obj = js.Dynamic.literal()
+    if (adwordsCustomerId != null) __obj.updateDynamic("adwordsCustomerId")(adwordsCustomerId.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (familyName != null) __obj.updateDynamic("familyName")(familyName.asInstanceOf[js.Any])
+    if (givenName != null) __obj.updateDynamic("givenName")(givenName.asInstanceOf[js.Any])
+    if (gpsMotivations != null) __obj.updateDynamic("gpsMotivations")(gpsMotivations.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(marketingOptIn)) __obj.updateDynamic("marketingOptIn")(marketingOptIn.get.asInstanceOf[js.Any])
+    if (minMonthlyBudget != null) __obj.updateDynamic("minMonthlyBudget")(minMonthlyBudget.asInstanceOf[js.Any])
+    if (phoneNumber != null) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (websiteUrl != null) __obj.updateDynamic("websiteUrl")(websiteUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lead]
   }
-  @scala.inline
-  implicit class LeadOps[Self <: Lead] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdwordsCustomerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsCustomerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdwordsCustomerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adwordsCustomerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFamilyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFamilyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGivenName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGivenName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGpsMotivations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gpsMotivations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGpsMotivations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gpsMotivations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarketingOptIn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketingOptIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarketingOptIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketingOptIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinMonthlyBudget(value: Money): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMonthlyBudget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinMonthlyBudget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMonthlyBudget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsiteUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsiteUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

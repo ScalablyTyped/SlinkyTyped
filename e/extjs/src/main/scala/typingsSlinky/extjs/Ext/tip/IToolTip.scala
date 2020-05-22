@@ -6,207 +6,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IToolTip extends ITip {
   /** [Config Option] (String) */
-  var anchor: js.UndefOr[String] = js.native
+  var anchor: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var anchorOffset: js.UndefOr[Double] = js.native
+  var anchorOffset: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Boolean) */
-  var anchorToTarget: js.UndefOr[Boolean] = js.native
+  var anchorToTarget: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var autoHide: js.UndefOr[Boolean] = js.native
+  var autoHide: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */
-  var delegate: js.UndefOr[String] = js.native
+  var delegate: js.UndefOr[String] = js.undefined
   /** [Config Option] (Number) */
-  var dismissDelay: js.UndefOr[Double] = js.native
+  var dismissDelay: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number) */
-  var hideDelay: js.UndefOr[Double] = js.native
+  var hideDelay: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number[]) */
-  var mouseOffset: js.UndefOr[Array] = js.native
+  var mouseOffset: js.UndefOr[Array] = js.undefined
   /** [Method] Binds this ToolTip to the specified element
-  		* @param t String/HTMLElement/Ext.Element The Element, HtmlElement, or ID of an element to bind to
-  		*/
-  var setTarget: js.UndefOr[js.Function1[/* t */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param t String/HTMLElement/Ext.Element The Element, HtmlElement, or ID of an element to bind to
+    */
+  var setTarget: js.UndefOr[js.Function1[/* t */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Config Option] (Number) */
-  var showDelay: js.UndefOr[Double] = js.native
+  var showDelay: js.UndefOr[Double] = js.undefined
   /** [Config Option] (HTMLElement/Ext.Element/String) */
-  var target: js.UndefOr[js.Any] = js.native
+  var target: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var trackMouse: js.UndefOr[Boolean] = js.native
+  var trackMouse: js.UndefOr[Boolean] = js.undefined
   /** [Property] (HTMLElement) */
-  var triggerElement: js.UndefOr[HTMLElement] = js.native
+  var triggerElement: js.UndefOr[HTMLElement] = js.undefined
 }
 
 object IToolTip {
   @scala.inline
-  def apply(): IToolTip = {
+  def apply(
+    ITip: ITip = null,
+    anchor: String = null,
+    anchorOffset: js.UndefOr[Double] = js.undefined,
+    anchorToTarget: js.UndefOr[Boolean] = js.undefined,
+    autoHide: js.UndefOr[Boolean] = js.undefined,
+    delegate: String = null,
+    dismissDelay: js.UndefOr[Double] = js.undefined,
+    hideDelay: js.UndefOr[Double] = js.undefined,
+    mouseOffset: Array = null,
+    setTarget: /* t */ js.UndefOr[js.Any] => Unit = null,
+    showDelay: js.UndefOr[Double] = js.undefined,
+    target: js.Any = null,
+    trackMouse: js.UndefOr[Boolean] = js.undefined,
+    triggerElement: HTMLElement = null
+  ): IToolTip = {
     val __obj = js.Dynamic.literal()
+    if (ITip != null) js.Dynamic.global.Object.assign(__obj, ITip)
+    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
+    if (!js.isUndefined(anchorOffset)) __obj.updateDynamic("anchorOffset")(anchorOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(anchorToTarget)) __obj.updateDynamic("anchorToTarget")(anchorToTarget.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHide)) __obj.updateDynamic("autoHide")(autoHide.get.asInstanceOf[js.Any])
+    if (delegate != null) __obj.updateDynamic("delegate")(delegate.asInstanceOf[js.Any])
+    if (!js.isUndefined(dismissDelay)) __obj.updateDynamic("dismissDelay")(dismissDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDelay)) __obj.updateDynamic("hideDelay")(hideDelay.get.asInstanceOf[js.Any])
+    if (mouseOffset != null) __obj.updateDynamic("mouseOffset")(mouseOffset.asInstanceOf[js.Any])
+    if (setTarget != null) __obj.updateDynamic("setTarget")(js.Any.fromFunction1(setTarget))
+    if (!js.isUndefined(showDelay)) __obj.updateDynamic("showDelay")(showDelay.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackMouse)) __obj.updateDynamic("trackMouse")(trackMouse.get.asInstanceOf[js.Any])
+    if (triggerElement != null) __obj.updateDynamic("triggerElement")(triggerElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToolTip]
   }
-  @scala.inline
-  implicit class IToolTipOps[Self <: IToolTip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnchorOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchorOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnchorToTarget(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorToTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchorToTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorToTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelegate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDismissDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDismissDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseOffset(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetTarget(value: /* t */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTarget")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackMouse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackMouse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackMouse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackMouse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerElement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

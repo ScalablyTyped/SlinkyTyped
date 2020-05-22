@@ -1,6 +1,14 @@
 package typingsSlinky.firebaseFirestore
 
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.firebaseFirestore.coreQueryMod.Query
+import typingsSlinky.firebaseFirestore.coreSnapshotVersionMod.SnapshotVersion
+import typingsSlinky.firebaseFirestore.localLocalDocumentsViewMod.LocalDocumentsView
+import typingsSlinky.firebaseFirestore.localPersistenceMod.PersistenceTransaction
+import typingsSlinky.firebaseFirestore.localPersistencePromiseMod.PersistencePromise
 import typingsSlinky.firebaseFirestore.localQueryEngineMod.QueryEngine
+import typingsSlinky.firebaseFirestore.modelCollectionsMod.DocumentKeySet_
+import typingsSlinky.firebaseFirestore.modelCollectionsMod.DocumentMap_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +18,7 @@ import scala.scalajs.js.annotation._
 object localCountingQueryEngineMod extends js.Object {
   @js.native
   class CountingQueryEngine protected () extends QueryEngine {
-    def this(queryEngine: QueryEngine) = this()
+    def this(queryEngine: QueryEngine, `type`: QueryEngineType) = this()
     /**
       * The number of documents returned by the RemoteDocumentCache's `getEntry()`
       * and `getEntries()` APIs (since the last call to `resetCounts()`)
@@ -35,9 +43,42 @@ object localCountingQueryEngineMod extends js.Object {
       */
     var mutationsReadByQuery: Double = js.native
     val queryEngine: js.Any = js.native
+    val `type`: QueryEngineType = js.native
     var wrapMutationQueue: js.Any = js.native
     var wrapRemoteDocumentCache: js.Any = js.native
+    /** Returns all local documents matching the specified query. */
+    /* CompleteClass */
+    override def getDocumentsMatchingQuery(
+      transaction: PersistenceTransaction,
+      query: Query,
+      lastLimboFreeSnapshotVersion: SnapshotVersion,
+      remoteKeys: DocumentKeySet_
+    ): PersistencePromise[DocumentMap_] = js.native
     def resetCounts(): Unit = js.native
+    /** Sets the document view to query against. */
+    /* CompleteClass */
+    override def setLocalDocumentsView(localDocuments: LocalDocumentsView): Unit = js.native
+  }
+  
+  @js.native
+  sealed trait QueryEngineType extends js.Object
+  
+  @js.native
+  object QueryEngineType extends js.Object {
+    @js.native
+    sealed trait IndexFree extends QueryEngineType
+    
+    @js.native
+    sealed trait Simple extends QueryEngineType
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[QueryEngineType with Double] = js.native
+    /* 0 */ @js.native
+    object IndexFree extends TopLevel[IndexFree with Double]
+    
+    /* 1 */ @js.native
+    object Simple extends TopLevel[Simple with Double]
+    
   }
   
 }

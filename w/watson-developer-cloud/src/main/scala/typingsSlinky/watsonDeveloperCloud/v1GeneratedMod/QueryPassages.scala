@@ -5,107 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** QueryPassages. */
-@js.native
 trait QueryPassages extends js.Object {
   /** The unique identifier of the document from which the passage has been extracted. */
-  var document_id: js.UndefOr[String] = js.native
+  var document_id: js.UndefOr[String] = js.undefined
   /** The position of the last character of the extracted passage in the originating field. */
-  var end_offset: js.UndefOr[Double] = js.native
+  var end_offset: js.UndefOr[Double] = js.undefined
   /** The label of the field from which the passage has been extracted. */
-  var field: js.UndefOr[String] = js.native
+  var field: js.UndefOr[String] = js.undefined
   /** The confidence score of the passages's analysis. A higher score indicates greater confidence. */
-  var passage_score: js.UndefOr[Double] = js.native
+  var passage_score: js.UndefOr[Double] = js.undefined
   /** The content of the extracted passage. */
-  var passage_text: js.UndefOr[String] = js.native
+  var passage_text: js.UndefOr[String] = js.undefined
   /** The position of the first character of the extracted passage in the originating field. */
-  var start_offset: js.UndefOr[Double] = js.native
+  var start_offset: js.UndefOr[Double] = js.undefined
 }
 
 object QueryPassages {
   @scala.inline
-  def apply(): QueryPassages = {
+  def apply(
+    document_id: String = null,
+    end_offset: js.UndefOr[Double] = js.undefined,
+    field: String = null,
+    passage_score: js.UndefOr[Double] = js.undefined,
+    passage_text: String = null,
+    start_offset: js.UndefOr[Double] = js.undefined
+  ): QueryPassages = {
     val __obj = js.Dynamic.literal()
+    if (document_id != null) __obj.updateDynamic("document_id")(document_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(end_offset)) __obj.updateDynamic("end_offset")(end_offset.get.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (!js.isUndefined(passage_score)) __obj.updateDynamic("passage_score")(passage_score.get.asInstanceOf[js.Any])
+    if (passage_text != null) __obj.updateDynamic("passage_text")(passage_text.asInstanceOf[js.Any])
+    if (!js.isUndefined(start_offset)) __obj.updateDynamic("start_offset")(start_offset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryPassages]
   }
-  @scala.inline
-  implicit class QueryPassagesOps[Self <: QueryPassages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_offset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassage_score(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passage_score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassage_score: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passage_score")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassage_text(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passage_text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassage_text: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passage_text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_offset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_offset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

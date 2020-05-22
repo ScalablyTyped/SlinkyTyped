@@ -1,80 +1,57 @@
 package typingsSlinky.googleCloudPubsub.srcPubsubMod
 
+import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
+import typingsSlinky.googleAuthLibrary.jwtclientMod.JWTOptions
+import typingsSlinky.googleAuthLibrary.mod.GoogleAuth
+import typingsSlinky.googleAuthLibrary.oauth2clientMod.OAuth2ClientOptions
+import typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClientOptions
 import typingsSlinky.googleGax.grpcMod.GrpcClientOptions
+import typingsSlinky.googleGax.grpcMod.GrpcModule
 import typingsSlinky.grpcGrpcJs.mod.ChannelCredentials
+import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientConfig extends GrpcClientOptions {
-  var apiEndpoint: js.UndefOr[String] = js.native
-  var port: js.UndefOr[String | Double] = js.native
-  var servicePath: js.UndefOr[String] = js.native
-  var sslCreds: js.UndefOr[ChannelCredentials] = js.native
+  var apiEndpoint: js.UndefOr[String] = js.undefined
+  var port: js.UndefOr[String | Double] = js.undefined
+  var servicePath: js.UndefOr[String] = js.undefined
+  var sslCreds: js.UndefOr[ChannelCredentials] = js.undefined
 }
 
 object ClientConfig {
   @scala.inline
-  def apply(): ClientConfig = {
+  def apply(
+    apiEndpoint: String = null,
+    auth: GoogleAuth = null,
+    clientOptions: JWTOptions | OAuth2ClientOptions | UserRefreshClientOptions = null,
+    credentials: CredentialBody = null,
+    grpc: GrpcModule = null,
+    keyFile: String = null,
+    keyFilename: String = null,
+    port: String | Double = null,
+    projectId: String = null,
+    promise: PromiseConstructor = null,
+    scopes: String | js.Array[String] = null,
+    servicePath: String = null,
+    sslCreds: ChannelCredentials = null
+  ): ClientConfig = {
     val __obj = js.Dynamic.literal()
+    if (apiEndpoint != null) __obj.updateDynamic("apiEndpoint")(apiEndpoint.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (clientOptions != null) __obj.updateDynamic("clientOptions")(clientOptions.asInstanceOf[js.Any])
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (grpc != null) __obj.updateDynamic("grpc")(grpc.asInstanceOf[js.Any])
+    if (keyFile != null) __obj.updateDynamic("keyFile")(keyFile.asInstanceOf[js.Any])
+    if (keyFilename != null) __obj.updateDynamic("keyFilename")(keyFilename.asInstanceOf[js.Any])
+    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
+    if (servicePath != null) __obj.updateDynamic("servicePath")(servicePath.asInstanceOf[js.Any])
+    if (sslCreds != null) __obj.updateDynamic("sslCreds")(sslCreds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientConfig]
   }
-  @scala.inline
-  implicit class ClientConfigOps[Self <: ClientConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServicePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServicePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslCreds(value: ChannelCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCreds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslCreds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCreds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

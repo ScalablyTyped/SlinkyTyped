@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchOptions extends js.Object {
-  var category: js.UndefOr[Category] = js.native
-  var direction: js.UndefOr[asc | desc] = js.native
-  var filter: js.UndefOr[Filter] = js.native
-  var n: js.UndefOr[Double] = js.native
-  var p: js.UndefOr[Double] = js.native
-  var sort: js.UndefOr[String] = js.native
-  var term: js.UndefOr[String] = js.native
+  var category: js.UndefOr[Category] = js.undefined
+  var direction: js.UndefOr[asc | desc] = js.undefined
+  var filter: js.UndefOr[Filter] = js.undefined
+  var n: js.UndefOr[Double] = js.undefined
+  var p: js.UndefOr[Double] = js.undefined
+  var sort: js.UndefOr[String] = js.undefined
+  var term: js.UndefOr[String] = js.undefined
 }
 
 object SearchOptions {
   @scala.inline
-  def apply(): SearchOptions = {
+  def apply(
+    category: Category = null,
+    direction: asc | desc = null,
+    filter: Filter = null,
+    n: js.UndefOr[Double] = js.undefined,
+    p: js.UndefOr[Double] = js.undefined,
+    sort: String = null,
+    term: String = null
+  ): SearchOptions = {
     val __obj = js.Dynamic.literal()
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (!js.isUndefined(n)) __obj.updateDynamic("n")(n.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(p)) __obj.updateDynamic("p")(p.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (term != null) __obj.updateDynamic("term")(term.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchOptions]
   }
-  @scala.inline
-  implicit class SearchOptionsOps[Self <: SearchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: Category): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: asc | desc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Filter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withN(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

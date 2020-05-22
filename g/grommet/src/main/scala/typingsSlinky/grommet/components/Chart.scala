@@ -47,6 +47,8 @@ object Chart {
     @scala.inline
     def color(value: String | Color | js.Array[Value]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
+    def dash(value: Boolean): this.type = set("dash", value.asInstanceOf[js.Any])
+    @scala.inline
     def gap(value: GapType): this.type = set("gap", value.asInstanceOf[js.Any])
     @scala.inline
     def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])

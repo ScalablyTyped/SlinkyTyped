@@ -31,65 +31,18 @@ trait SchemaGatewayConfig extends js.Object {
 
 object SchemaGatewayConfig {
   @scala.inline
-  def apply(): SchemaGatewayConfig = {
+  def apply(
+    gatewayAuthMethod: String = null,
+    gatewayType: String = null,
+    lastAccessedGatewayId: String = null,
+    lastAccessedGatewayTime: String = null
+  ): SchemaGatewayConfig = {
     val __obj = js.Dynamic.literal()
+    if (gatewayAuthMethod != null) __obj.updateDynamic("gatewayAuthMethod")(gatewayAuthMethod.asInstanceOf[js.Any])
+    if (gatewayType != null) __obj.updateDynamic("gatewayType")(gatewayType.asInstanceOf[js.Any])
+    if (lastAccessedGatewayId != null) __obj.updateDynamic("lastAccessedGatewayId")(lastAccessedGatewayId.asInstanceOf[js.Any])
+    if (lastAccessedGatewayTime != null) __obj.updateDynamic("lastAccessedGatewayTime")(lastAccessedGatewayTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGatewayConfig]
   }
-  @scala.inline
-  implicit class SchemaGatewayConfigOps[Self <: SchemaGatewayConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGatewayAuthMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayAuthMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayAuthMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayAuthMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGatewayType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAccessedGatewayId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAccessedGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAccessedGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAccessedGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAccessedGatewayTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAccessedGatewayTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAccessedGatewayTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAccessedGatewayTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

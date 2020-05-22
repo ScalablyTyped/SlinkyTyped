@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigateOptions extends js.Object {
-  var focusClass: js.UndefOr[String] = js.native
-  var position: js.UndefOr[js.Array[Double]] = js.native
-  var rowLooping: js.UndefOr[Boolean] = js.native
-  var toggleMode: js.UndefOr[Boolean] = js.native
+  var focusClass: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[js.Array[Double]] = js.undefined
+  var rowLooping: js.UndefOr[Boolean] = js.undefined
+  var toggleMode: js.UndefOr[Boolean] = js.undefined
 }
 
 object NavigateOptions {
   @scala.inline
-  def apply(): NavigateOptions = {
+  def apply(
+    focusClass: String = null,
+    position: js.Array[Double] = null,
+    rowLooping: js.UndefOr[Boolean] = js.undefined,
+    toggleMode: js.UndefOr[Boolean] = js.undefined
+  ): NavigateOptions = {
     val __obj = js.Dynamic.literal()
+    if (focusClass != null) __obj.updateDynamic("focusClass")(focusClass.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowLooping)) __obj.updateDynamic("rowLooping")(rowLooping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toggleMode)) __obj.updateDynamic("toggleMode")(toggleMode.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigateOptions]
   }
-  @scala.inline
-  implicit class NavigateOptionsOps[Self <: NavigateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocusClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowLooping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowLooping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowLooping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowLooping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggleMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

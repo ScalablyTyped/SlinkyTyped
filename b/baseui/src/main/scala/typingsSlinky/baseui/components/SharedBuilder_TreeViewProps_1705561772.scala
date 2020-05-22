@@ -13,11 +13,11 @@ class SharedBuilder_TreeViewProps_1705561772 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
   @scala.inline
-  def getId(value: /* node */ TreeNode => Double | String): this.type = set("getId", js.Any.fromFunction1(value))
+  def getId(value: /* node */ TreeNode[_] => Double | String): this.type = set("getId", js.Any.fromFunction1(value))
   @scala.inline
   def indentGuides(value: Boolean): this.type = set("indentGuides", value.asInstanceOf[js.Any])
   @scala.inline
-  def onToggle(value: /* node */ TreeNode => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+  def onToggle(value: /* node */ TreeNode[_] => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
   @scala.inline
   def overrides(value: TreeViewOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   @scala.inline

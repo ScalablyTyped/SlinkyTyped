@@ -18,41 +18,14 @@ trait ListApplicationsRequest extends js.Object {
 
 object ListApplicationsRequest {
   @scala.inline
-  def apply(): ListApplicationsRequest = {
+  def apply(
+    ExclusiveStartApplicationName: ApplicationName = null,
+    Limit: js.UndefOr[ListApplicationsInputLimit] = js.undefined
+  ): ListApplicationsRequest = {
     val __obj = js.Dynamic.literal()
+    if (ExclusiveStartApplicationName != null) __obj.updateDynamic("ExclusiveStartApplicationName")(ExclusiveStartApplicationName.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListApplicationsRequest]
   }
-  @scala.inline
-  implicit class ListApplicationsRequestOps[Self <: ListApplicationsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclusiveStartApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusiveStartApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartApplicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: ListApplicationsInputLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

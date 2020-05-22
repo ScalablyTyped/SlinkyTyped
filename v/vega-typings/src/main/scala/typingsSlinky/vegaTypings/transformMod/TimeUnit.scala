@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.week
   - typingsSlinky.vegaTypings.vegaTypingsStrings.day
   - typingsSlinky.vegaTypings.vegaTypingsStrings.date
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.dayofyear
   - typingsSlinky.vegaTypings.vegaTypingsStrings.hours
   - typingsSlinky.vegaTypings.vegaTypingsStrings.minutes
   - typingsSlinky.vegaTypings.vegaTypingsStrings.seconds
@@ -23,6 +24,8 @@ object TimeUnit {
   def date: typingsSlinky.vegaTypings.vegaTypingsStrings.date = "date".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.date]
   @scala.inline
   def day: typingsSlinky.vegaTypings.vegaTypingsStrings.day = "day".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.day]
+  @scala.inline
+  def dayofyear: typingsSlinky.vegaTypings.vegaTypingsStrings.dayofyear = "dayofyear".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dayofyear]
   @scala.inline
   def hours: typingsSlinky.vegaTypings.vegaTypingsStrings.hours = "hours".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.hours]
   @scala.inline

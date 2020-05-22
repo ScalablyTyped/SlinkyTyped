@@ -26,41 +26,11 @@ trait SchemaReportedParallelism extends js.Object {
 
 object SchemaReportedParallelism {
   @scala.inline
-  def apply(): SchemaReportedParallelism = {
+  def apply(isInfinite: js.UndefOr[Boolean] = js.undefined, value: js.UndefOr[Double] = js.undefined): SchemaReportedParallelism = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isInfinite)) __obj.updateDynamic("isInfinite")(isInfinite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportedParallelism]
   }
-  @scala.inline
-  implicit class SchemaReportedParallelismOps[Self <: SchemaReportedParallelism] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsInfinite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInfinite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsInfinite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInfinite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

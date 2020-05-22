@@ -10,4 +10,5 @@ package object mod {
     typingsSlinky.react.mod.Key
   ]
   type ListItemKeySelector = js.Function2[/* index */ scala.Double, /* data */ js.Any, typingsSlinky.react.mod.Key]
+  type ReactElementType = slinky.core.ReactComponentClass[js.Any] | java.lang.String
 }

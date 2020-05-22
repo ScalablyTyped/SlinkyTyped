@@ -7,5 +7,14 @@ import scala.scalajs.js.annotation._
 @JSImport("typescript-services", "SourceMapPosition")
 @js.native
 class SourceMapPosition ()
-  extends typingsSlinky.typescriptServices.TypeScript.SourceMapPosition
+  extends typingsSlinky.typescriptServices.TypeScript.SourceMapPosition {
+  /* CompleteClass */
+  override var emittedColumn: Double = js.native
+  /* CompleteClass */
+  override var emittedLine: Double = js.native
+  /* CompleteClass */
+  override var sourceColumn: Double = js.native
+  /* CompleteClass */
+  override var sourceLine: Double = js.native
+}
 

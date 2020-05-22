@@ -9,18 +9,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TargetInstancesResource extends js.Object {
   /** Retrieves an aggregated list of target instances. */
-  def aggregatedList(request: Alt): Request[TargetInstanceAggregatedList] = js.native
+  def aggregatedList(request: Alt): Request[TargetInstanceAggregatedList]
   /** Deletes the specified TargetInstance resource. */
-  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetInstance): Request[Operation] = js.native
+  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetInstance): Request[Operation]
   /** Returns the specified TargetInstance resource. Get a list of available target instances by making a list() request. */
-  def get(request: QuotaUserTargetInstance): Request[TargetInstance] = js.native
+  def get(request: QuotaUserTargetInstance): Request[TargetInstance]
   /** Creates a TargetInstance resource in the specified project and zone using the data included in the request. */
-  def insert(request: QuotaUser): Request[Operation] = js.native
+  def insert(request: QuotaUser): Request[Operation]
   /** Retrieves a list of TargetInstance resources available to the specified project and zone. */
-  def list(request: Fields): Request[TargetInstanceList] = js.native
+  def list(request: Fields): Request[TargetInstanceList]
 }
 
 object TargetInstancesResource {
@@ -35,43 +34,5 @@ object TargetInstancesResource {
     val __obj = js.Dynamic.literal(aggregatedList = js.Any.fromFunction1(aggregatedList), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[TargetInstancesResource]
   }
-  @scala.inline
-  implicit class TargetInstancesResourceOps[Self <: TargetInstancesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregatedList(value: Alt => Request[TargetInstanceAggregatedList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatedList")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: typingsSlinky.gapiClientCompute.anon.TargetInstance => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: QuotaUserTargetInstance => Request[TargetInstance]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: QuotaUser => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Fields => Request[TargetInstanceList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

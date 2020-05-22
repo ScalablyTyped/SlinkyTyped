@@ -1,5 +1,6 @@
 package typingsSlinky.node.streamMod
 
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.nodeStrings.drain
 import typingsSlinky.node.nodeStrings.finish
@@ -37,7 +38,7 @@ class Duplex () extends Readable {
   val writableLength: Double = js.native
   val writableObjectMode: Boolean = js.native
   def _final(callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def _write(chunk: js.Any, encoding: String, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _write(chunk: js.Any, encoding: BufferEncoding, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   @JSName("addListener")
   def addListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -59,8 +60,8 @@ class Duplex () extends Readable {
   def end(cb: js.Function0[Unit]): Unit = js.native
   def end(chunk: js.Any): Unit = js.native
   def end(chunk: js.Any, cb: js.Function0[Unit]): Unit = js.native
-  def end(chunk: js.Any, encoding: String): Unit = js.native
-  def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
   def on_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -101,11 +102,11 @@ class Duplex () extends Readable {
   def removeListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
-  def setDefaultEncoding(encoding: String): this.type = js.native
+  def setDefaultEncoding(encoding: BufferEncoding): this.type = js.native
   def uncork(): Unit = js.native
   def write(chunk: js.Any): Boolean = js.native
   def write(chunk: js.Any, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
+  def write(chunk: js.Any, encoding: BufferEncoding, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
 }
 

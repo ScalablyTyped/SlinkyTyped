@@ -40,65 +40,18 @@ trait SchemaSourceCrowdingConfig extends js.Object {
 
 object SchemaSourceCrowdingConfig {
   @scala.inline
-  def apply(): SchemaSourceCrowdingConfig = {
+  def apply(
+    field: String = null,
+    numResults: js.UndefOr[Double] = js.undefined,
+    numSuggestions: js.UndefOr[Double] = js.undefined,
+    source: js.UndefOr[Boolean] = js.undefined
+  ): SchemaSourceCrowdingConfig = {
     val __obj = js.Dynamic.literal()
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (!js.isUndefined(numResults)) __obj.updateDynamic("numResults")(numResults.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numSuggestions)) __obj.updateDynamic("numSuggestions")(numSuggestions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(source)) __obj.updateDynamic("source")(source.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceCrowdingConfig]
   }
-  @scala.inline
-  implicit class SchemaSourceCrowdingConfigOps[Self <: SchemaSourceCrowdingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumSuggestions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numSuggestions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumSuggestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numSuggestions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

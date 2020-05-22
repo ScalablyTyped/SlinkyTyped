@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientCrosshairElement")
 @js.native
 class ASPxClientCrosshairElement ()
-  extends typingsSlinky.devexpressWeb.ASPxClientCrosshairElement
+  extends typingsSlinky.devexpressWeb.ASPxClientCrosshairElement {
+  /**
+    * Gets a series that a crosshair element hovers over when implementing a custom draw.
+    */
+  /* CompleteClass */
+  override var Series: typingsSlinky.devexpressWeb.ASPxClientSeries = js.native
+}
 

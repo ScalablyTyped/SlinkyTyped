@@ -1,30 +1,34 @@
 package typingsSlinky.fancybox
 
+import typingsSlinky.fancybox.fancyboxStrings.`inline`
+import typingsSlinky.fancybox.fancyboxStrings.ajax
+import typingsSlinky.fancybox.fancyboxStrings.html
+import typingsSlinky.fancybox.fancyboxStrings.iframe
+import typingsSlinky.fancybox.fancyboxStrings.image
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FancyBoxSlide extends FancyBoxGroupItemWithFilledProps {
   @JSName("$content")
-  var $content: js.UndefOr[JQuery] = js.native
+  var $content: js.UndefOr[JQuery] = js.undefined
   @JSName("$iframe")
-  var $iframe: js.UndefOr[JQuery] = js.native
+  var $iframe: js.UndefOr[JQuery] = js.undefined
   @JSName("$image")
-  var $image: js.UndefOr[JQuery] = js.native
+  var $image: js.UndefOr[JQuery] = js.undefined
   @JSName("$slide")
-  var $slide: js.UndefOr[JQuery] = js.native
+  var $slide: js.UndefOr[JQuery] = js.undefined
   @JSName("$spinner")
-  var $spinner: js.UndefOr[JQuery] = js.native
-  var contentSource: js.UndefOr[String] = js.native
-  var forcedDuration: js.UndefOr[Double] = js.native
-  var height: Double = js.native
-  var isComplete: Boolean = js.native
-  var isLoaded: Boolean = js.native
-  var isLoading: Boolean = js.native
-  var isRevealed: Boolean = js.native
-  var pos: Double = js.native
-  var width: Double = js.native
+  var $spinner: js.UndefOr[JQuery] = js.undefined
+  var contentSource: js.UndefOr[String] = js.undefined
+  var forcedDuration: js.UndefOr[Double] = js.undefined
+  var height: Double
+  var isComplete: Boolean
+  var isLoaded: Boolean
+  var isLoading: Boolean
+  var isRevealed: Boolean
+  var pos: Double
+  var width: Double
 }
 
 object FancyBoxSlide {
@@ -37,144 +41,36 @@ object FancyBoxSlide {
     isRevealed: Boolean,
     pos: Double,
     src: String,
-    width: Double
+    width: Double,
+    $content: JQuery = null,
+    $iframe: JQuery = null,
+    $image: JQuery = null,
+    $slide: JQuery = null,
+    $spinner: JQuery = null,
+    $thumb: JQuery = null,
+    contentSource: String = null,
+    contentType: String = null,
+    forcedDuration: js.UndefOr[Double] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    opts: FancyBoxOptions = null,
+    thumb: js.Any = null,
+    `type`: image | `inline` | ajax | iframe | html = null
   ): FancyBoxSlide = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], isComplete = isComplete.asInstanceOf[js.Any], isLoaded = isLoaded.asInstanceOf[js.Any], isLoading = isLoading.asInstanceOf[js.Any], isRevealed = isRevealed.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if ($content != null) __obj.updateDynamic("$content")($content.asInstanceOf[js.Any])
+    if ($iframe != null) __obj.updateDynamic("$iframe")($iframe.asInstanceOf[js.Any])
+    if ($image != null) __obj.updateDynamic("$image")($image.asInstanceOf[js.Any])
+    if ($slide != null) __obj.updateDynamic("$slide")($slide.asInstanceOf[js.Any])
+    if ($spinner != null) __obj.updateDynamic("$spinner")($spinner.asInstanceOf[js.Any])
+    if ($thumb != null) __obj.updateDynamic("$thumb")($thumb.asInstanceOf[js.Any])
+    if (contentSource != null) __obj.updateDynamic("contentSource")(contentSource.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(forcedDuration)) __obj.updateDynamic("forcedDuration")(forcedDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (opts != null) __obj.updateDynamic("opts")(opts.asInstanceOf[js.Any])
+    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FancyBoxSlide]
   }
-  @scala.inline
-  implicit class FancyBoxSlideOps[Self <: FancyBoxSlide] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLoaded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsRevealed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRevealed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPos(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$content(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$content: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$iframe(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$iframe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$iframe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$iframe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$image(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$image: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$slide(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$slide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$slide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$slide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$spinner(value: JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$spinner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$spinner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$spinner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForcedDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forcedDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForcedDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forcedDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

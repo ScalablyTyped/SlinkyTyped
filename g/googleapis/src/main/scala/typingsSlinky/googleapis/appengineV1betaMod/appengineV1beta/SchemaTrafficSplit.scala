@@ -32,41 +32,11 @@ trait SchemaTrafficSplit extends js.Object {
 
 object SchemaTrafficSplit {
   @scala.inline
-  def apply(): SchemaTrafficSplit = {
+  def apply(allocations: StringDictionary[Double] = null, shardBy: String = null): SchemaTrafficSplit = {
     val __obj = js.Dynamic.literal()
+    if (allocations != null) __obj.updateDynamic("allocations")(allocations.asInstanceOf[js.Any])
+    if (shardBy != null) __obj.updateDynamic("shardBy")(shardBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrafficSplit]
   }
-  @scala.inline
-  implicit class SchemaTrafficSplitOps[Self <: SchemaTrafficSplit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocations(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShardBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shardBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShardBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shardBy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

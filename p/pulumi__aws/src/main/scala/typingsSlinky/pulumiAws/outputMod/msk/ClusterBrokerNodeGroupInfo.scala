@@ -34,54 +34,12 @@ object ClusterBrokerNodeGroupInfo {
     clientSubnets: js.Array[String],
     ebsVolumeSize: Double,
     instanceType: String,
-    securityGroups: js.Array[String]
+    securityGroups: js.Array[String],
+    azDistribution: String = null
   ): ClusterBrokerNodeGroupInfo = {
     val __obj = js.Dynamic.literal(clientSubnets = clientSubnets.asInstanceOf[js.Any], ebsVolumeSize = ebsVolumeSize.asInstanceOf[js.Any], instanceType = instanceType.asInstanceOf[js.Any], securityGroups = securityGroups.asInstanceOf[js.Any])
+    if (azDistribution != null) __obj.updateDynamic("azDistribution")(azDistribution.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterBrokerNodeGroupInfo]
   }
-  @scala.inline
-  implicit class ClusterBrokerNodeGroupInfoOps[Self <: ClusterBrokerNodeGroupInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientSubnets(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSubnets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEbsVolumeSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsVolumeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecurityGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAzDistribution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("azDistribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAzDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("azDistribution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

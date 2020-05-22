@@ -4,117 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILabelOptions extends js.Object {
   /** Enables/disables labels showing the min/max values. */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /** Colour for text of labels. */
-  var fillStyle: js.UndefOr[String] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var fontSize: js.UndefOr[Double] = js.native
-  var intermediateLabelSameAxis: js.UndefOr[Boolean] = js.native
-  var precision: js.UndefOr[Double] = js.native
+  var fillStyle: js.UndefOr[String] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var fontSize: js.UndefOr[Double] = js.undefined
+  var intermediateLabelSameAxis: js.UndefOr[Boolean] = js.undefined
+  var precision: js.UndefOr[Double] = js.undefined
   /** Shows intermediate labels between min and max values along y axis. */
-  var showIntermediateLabels: js.UndefOr[Boolean] = js.native
+  var showIntermediateLabels: js.UndefOr[Boolean] = js.undefined
 }
 
 object ILabelOptions {
   @scala.inline
-  def apply(): ILabelOptions = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    fillStyle: String = null,
+    fontFamily: String = null,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    intermediateLabelSameAxis: js.UndefOr[Boolean] = js.undefined,
+    precision: js.UndefOr[Double] = js.undefined,
+    showIntermediateLabels: js.UndefOr[Boolean] = js.undefined
+  ): ILabelOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (fillStyle != null) __obj.updateDynamic("fillStyle")(fillStyle.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(intermediateLabelSameAxis)) __obj.updateDynamic("intermediateLabelSameAxis")(intermediateLabelSameAxis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showIntermediateLabels)) __obj.updateDynamic("showIntermediateLabels")(showIntermediateLabels.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILabelOptions]
   }
-  @scala.inline
-  implicit class ILabelOptionsOps[Self <: ILabelOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntermediateLabelSameAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intermediateLabelSameAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntermediateLabelSameAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intermediateLabelSameAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowIntermediateLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIntermediateLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowIntermediateLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showIntermediateLabels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

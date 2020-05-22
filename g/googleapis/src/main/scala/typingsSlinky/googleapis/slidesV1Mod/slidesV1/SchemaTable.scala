@@ -46,89 +46,22 @@ trait SchemaTable extends js.Object {
 
 object SchemaTable {
   @scala.inline
-  def apply(): SchemaTable = {
+  def apply(
+    columns: js.UndefOr[Double] = js.undefined,
+    horizontalBorderRows: js.Array[SchemaTableBorderRow] = null,
+    rows: js.UndefOr[Double] = js.undefined,
+    tableColumns: js.Array[SchemaTableColumnProperties] = null,
+    tableRows: js.Array[SchemaTableRow] = null,
+    verticalBorderRows: js.Array[SchemaTableBorderRow] = null
+  ): SchemaTable = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(columns)) __obj.updateDynamic("columns")(columns.get.asInstanceOf[js.Any])
+    if (horizontalBorderRows != null) __obj.updateDynamic("horizontalBorderRows")(horizontalBorderRows.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
+    if (tableColumns != null) __obj.updateDynamic("tableColumns")(tableColumns.asInstanceOf[js.Any])
+    if (tableRows != null) __obj.updateDynamic("tableRows")(tableRows.asInstanceOf[js.Any])
+    if (verticalBorderRows != null) __obj.updateDynamic("verticalBorderRows")(verticalBorderRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTable]
   }
-  @scala.inline
-  implicit class SchemaTableOps[Self <: SchemaTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalBorderRows(value: js.Array[SchemaTableBorderRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalBorderRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalBorderRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalBorderRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableColumns(value: js.Array[SchemaTableColumnProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRows(value: js.Array[SchemaTableRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalBorderRows(value: js.Array[SchemaTableBorderRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalBorderRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalBorderRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalBorderRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

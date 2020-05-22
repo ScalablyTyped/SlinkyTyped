@@ -5,40 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledAutoScalingSettingsDescription extends AutoScalingSettingsDescription {
   /**
     * <p>Information about the scaling policies.</p>
     */
   @JSName("ScalingPolicies")
-  var ScalingPolicies_UnmarshalledAutoScalingSettingsDescription: js.UndefOr[js.Array[UnmarshalledAutoScalingPolicyDescription]] = js.native
+  var ScalingPolicies_UnmarshalledAutoScalingSettingsDescription: js.UndefOr[js.Array[UnmarshalledAutoScalingPolicyDescription]] = js.undefined
 }
 
 object UnmarshalledAutoScalingSettingsDescription {
   @scala.inline
-  def apply(): UnmarshalledAutoScalingSettingsDescription = {
+  def apply(
+    AutoScalingDisabled: js.UndefOr[Boolean] = js.undefined,
+    AutoScalingRoleArn: String = null,
+    MaximumUnits: js.UndefOr[Double] = js.undefined,
+    MinimumUnits: js.UndefOr[Double] = js.undefined,
+    ScalingPolicies: js.Array[UnmarshalledAutoScalingPolicyDescription] = null
+  ): UnmarshalledAutoScalingSettingsDescription = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AutoScalingDisabled)) __obj.updateDynamic("AutoScalingDisabled")(AutoScalingDisabled.get.asInstanceOf[js.Any])
+    if (AutoScalingRoleArn != null) __obj.updateDynamic("AutoScalingRoleArn")(AutoScalingRoleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumUnits)) __obj.updateDynamic("MaximumUnits")(MaximumUnits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinimumUnits)) __obj.updateDynamic("MinimumUnits")(MinimumUnits.get.asInstanceOf[js.Any])
+    if (ScalingPolicies != null) __obj.updateDynamic("ScalingPolicies")(ScalingPolicies.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledAutoScalingSettingsDescription]
   }
-  @scala.inline
-  implicit class UnmarshalledAutoScalingSettingsDescriptionOps[Self <: UnmarshalledAutoScalingSettingsDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScalingPolicies(value: js.Array[UnmarshalledAutoScalingPolicyDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalingPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPolicies")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,8 +12,8 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticTRANSITIONS
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHSSTRING
-import typingsSlinky.semanticUiReact.gridColumnMod.GridOnlyProp
-import typingsSlinky.semanticUiReact.gridGridMod.GridReversedProp
+import typingsSlinky.semanticUiReact.gridColumnMod._GridOnlyProp
+import typingsSlinky.semanticUiReact.gridGridMod._GridReversedProp
 import typingsSlinky.semanticUiReact.iconIconMod.IconCorner
 import typingsSlinky.semanticUiReact.iconIconMod.IconSizeProp
 import typingsSlinky.semanticUiReact.messageMessageMod.MessageSizeProp
@@ -1363,12 +1363,12 @@ object semanticUiReactStrings {
   
   @js.native
   sealed trait computer
-    extends GridOnlyProp
-       with GridReversedProp
-       with SemanticICONS
+    extends SemanticICONS
+       with _GridOnlyProp
+       with _GridReversedProp
   
   @js.native
-  sealed trait `computer vertically` extends GridReversedProp
+  sealed trait `computer vertically` extends _GridReversedProp
   
   @js.native
   sealed trait configure extends SemanticICONS
@@ -3029,7 +3029,7 @@ object semanticUiReactStrings {
   sealed trait `large rectangle` extends js.Object
   
   @js.native
-  sealed trait largeScreen extends GridOnlyProp
+  sealed trait largeScreen extends _GridOnlyProp
   
   @js.native
   sealed trait lastItem extends js.Object
@@ -3496,9 +3496,9 @@ object semanticUiReactStrings {
   
   @js.native
   sealed trait mobile
-    extends GridOnlyProp
-       with GridReversedProp
-       with SemanticICONS
+    extends SemanticICONS
+       with _GridOnlyProp
+       with _GridReversedProp
   
   @js.native
   sealed trait `mobile alternate` extends SemanticICONS
@@ -3510,7 +3510,7 @@ object semanticUiReactStrings {
   sealed trait `mobile leaderboard` extends js.Object
   
   @js.native
-  sealed trait `mobile vertically` extends GridReversedProp
+  sealed trait `mobile vertically` extends _GridReversedProp
   
   @js.native
   sealed trait modx extends SemanticICONS
@@ -5053,18 +5053,18 @@ object semanticUiReactStrings {
   
   @js.native
   sealed trait tablet
-    extends GridOnlyProp
-       with GridReversedProp
-       with SemanticICONS
+    extends SemanticICONS
+       with _GridOnlyProp
+       with _GridReversedProp
   
   @js.native
   sealed trait `tablet alternate` extends SemanticICONS
   
   @js.native
-  sealed trait `tablet mobile` extends GridOnlyProp
+  sealed trait `tablet mobile` extends _GridOnlyProp
   
   @js.native
-  sealed trait `tablet vertically` extends GridReversedProp
+  sealed trait `tablet vertically` extends _GridReversedProp
   
   @js.native
   sealed trait `tachometer alternate` extends SemanticICONS
@@ -5812,7 +5812,7 @@ object semanticUiReactStrings {
   sealed trait `wide skyscraper` extends js.Object
   
   @js.native
-  sealed trait widescreen extends GridOnlyProp
+  sealed trait widescreen extends _GridOnlyProp
   
   @js.native
   sealed trait wifi extends SemanticICONS

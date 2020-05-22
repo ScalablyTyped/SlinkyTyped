@@ -34,77 +34,20 @@ trait ListObjectParentsRequest extends js.Object {
 
 object ListObjectParentsRequest {
   @scala.inline
-  def apply(DirectoryArn: Arn, ObjectReference: ObjectReference): ListObjectParentsRequest = {
+  def apply(
+    DirectoryArn: Arn,
+    ObjectReference: ObjectReference,
+    ConsistencyLevel: ConsistencyLevel = null,
+    IncludeAllLinksToEachParent: js.UndefOr[Bool] = js.undefined,
+    MaxResults: js.UndefOr[NumberResults] = js.undefined,
+    NextToken: NextToken = null
+  ): ListObjectParentsRequest = {
     val __obj = js.Dynamic.literal(DirectoryArn = DirectoryArn.asInstanceOf[js.Any], ObjectReference = ObjectReference.asInstanceOf[js.Any])
+    if (ConsistencyLevel != null) __obj.updateDynamic("ConsistencyLevel")(ConsistencyLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeAllLinksToEachParent)) __obj.updateDynamic("IncludeAllLinksToEachParent")(IncludeAllLinksToEachParent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListObjectParentsRequest]
   }
-  @scala.inline
-  implicit class ListObjectParentsRequestOps[Self <: ListObjectParentsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectReference(value: ObjectReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConsistencyLevel(value: ConsistencyLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistencyLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistencyLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistencyLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeAllLinksToEachParent(value: Bool): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeAllLinksToEachParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAllLinksToEachParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeAllLinksToEachParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: NumberResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VersionedTextDocumentIdentifier extends TextDocumentIdentifier {
   /**
     * The version number of this document. If a versioned text document identifier
@@ -13,7 +12,7 @@ trait VersionedTextDocumentIdentifier extends TextDocumentIdentifier {
     * `null` to indicate that the version is unknown and the content on disk is the
     * truth (as speced with document content ownership).
     */
-  var version: Double | Null = js.native
+  var version: Double | Null
 }
 
 @JSImport("vscode-languageserver-types", "VersionedTextDocumentIdentifier")

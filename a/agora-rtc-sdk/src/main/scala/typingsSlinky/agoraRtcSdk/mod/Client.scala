@@ -24,6 +24,7 @@ import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`network-type-changed`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`peer-leave`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`peer-online`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`playout-device-changed`
+import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`receive-metadata`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`recording-device-changed`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-added`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-fallback`
@@ -33,11 +34,13 @@ import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-reconnect-start`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-removed`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-subscribed`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-type-changed`
+import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-unpublished`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`stream-updated`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`unmute-audio`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`unmute-video`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`volume-indicator`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.audience
+import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.connected
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.error
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.exception
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.host
@@ -47,6 +50,7 @@ import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.liveStreamingStopped
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.liveTranscodingUpdated
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.onTokenPrivilegeDidExpire
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.onTokenPrivilegeWillExpire
+import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.reconnect
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.streamInjectedStatus
 import typingsSlinky.agoraRtcSdk.anon.Attr
 import typingsSlinky.agoraRtcSdk.anon.Bitrate
@@ -68,12 +72,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * The Client object returned by the {@link createClient} method provides access to much of the core AgoraRTC functionality.
+  * The Client interface provides major functions for a voice/video call, such as joining a channel and publishing a stream.
+  *
+  * The Client object is created by the {@link createClient} method and represents the local client.
   */
 @js.native
 trait Client extends js.Object {
   /**
     * Injects an Online Media Stream to a Live Broadcast
+    *
+    * If this method is called successfully, the server pulls the voice or video stream and injects it into a live channel. This is applicable to scenarios where all of the audience members in the channel can watch a live show and interact with each other. See [Inject an Online Media Stream](https://docs.agora.io/en/Interactive%20Broadcast/inject_stream_web?platform=Web) for details.
     *
     * This method call triggers the following callbacks:
     * - On the local client:
@@ -82,14 +90,11 @@ trait Client extends js.Object {
     * - On the remote client:
     *   - `Client.on("stream-added")` and `Client.on("peer-online")`(uid: 666), if the online media stream is injected into the channel.
     *
-    * If this method is called successfully, the server pulls the voice or video stream and injects it into a live channel.
-    * This is applicable to scenarios where all of the audience members in the channel can watch a live show and interact with each other.
-    *
-    * **Note:**
-    *
-    * Ensure that you [enable the RTMP Converter service](../../../cdn_streaming_web#prerequisites) before using this function.
+    * **Note**
+    * - You can only inject one online media stream into the same channel at the same time.
+    * - Ensure that you [enable the RTMP Converter service](../../../cdn_streaming_web#prerequisites) before using this function.
     * @param url URL address of the live streaming. ASCII characters only, and the string length must be greater than 0 and less than 256 bytes.
-    * Valid protocols are RTMP, HLS, and FLV.
+    * Valid protocols are RTMP, HLS, and HTTP-FLV.
     * - Supported FLV audio codec type: AAC.
     * - Supported FLV video codec type: H.264 (AVC).
     * @param config Configuration of the inject stream, see {@link InjectStreamConfig} for details.
@@ -107,7 +112,7 @@ trait Client extends js.Object {
     *
     * This method configures the CDN live streaming before joining a channel.
     *
-    * **Note:**
+    * **Note**
     *
     * Call {@link configPublisher} before {@link Client.join}.
     *
@@ -157,7 +162,7 @@ trait Client extends js.Object {
     *
     * If this method is enabled, the SDK triggers the `"volume-indicator"` callback to report the volumes every two seconds, regardless of whether there are active speakers.
     *
-    * **Note:**
+    * **Note**
     *
     * - If you have multiple web pages running the Web SDK, this function might not work.
     * @example **Sample code**
@@ -176,13 +181,21 @@ trait Client extends js.Object {
     *
     * This method enables the dual-stream mode on the publisher side. We recommend calling this method after joining a channel({@link Client.join}).
     *
-    * Dual streams are a hybrid of a high-video stream and a low-video stream:
+    * Dual streams are a hybrid of a high-quality video stream and a low-quality video stream:
     *
-    * - High-video stream: high bitrate, high resolution
-    * - Low-video stream: low bitrate, low resolution
+    * - High-quality video stream: High bitrate, high resolution.
+    * - Low-quality video stream: Low bitrate, low resolution.
     *
-    * We do not recommend using the track methods ([[addTrack]]/[[removeTrack]]/[[replaceTrack]]) on dual streams, which might cause different performance in the high-video and low-video streams.
+    * We do not recommend using the track methods ([[addTrack]]/[[removeTrack]]/[[replaceTrack]]) on dual streams, which may cause different performance in the high-quality and low-quality video streams.
     *
+    * **Note**
+    *
+    * This method does not apply to the following scenarios:
+    *
+    * -   The stream is created by defining the [[audioSource]] and [[videoSource]] properties.
+    * -   Audio-only mode (audio: true, video: false)
+    * -   Safari browser
+    * -   Screen-sharing scenario
     * @example **Sample code**
     * ``` javascript
     * client.enableDualStream(function() {
@@ -191,15 +204,6 @@ trait Client extends js.Object {
     *   console.log(err)
     * })
     * ```
-    *
-    * **Note:**
-    *
-    * This method does not apply to the following scenarios:
-    *
-    * -   The stream is created by defining the [[audioSource]] and [[videoSource]] properties.
-    * -   Audio-only mode (audio: true, video: false)
-    * -   Safari browser on iOS
-    * -   Screen-sharing scenario
     * @param onSuccess The callback when the method succeeds.
     * @param onFailure The callback when the method fails. The following are common errors:
     * - "IOS_NOT_SUPPORT": Does not support iOS.
@@ -240,7 +244,7 @@ trait Client extends js.Object {
     *
     * This method retrieves the audio statistics of the published stream, including audio codec type, sampling rate, bitrate, and so on.
     *
-    * **Note:**
+    * **Note**
     *
     * - Some of the statistics are calculated after the `stream-published` event, which may take at most 3 seconds.
     * - This method supports the Chrome browser only.
@@ -268,7 +272,7 @@ trait Client extends js.Object {
     *
     * This method retrieves the video statistics of the published stream, including video resolution, bitrate, frame rate, and so on.
     *
-    * **Note:**
+    * **Note**
     *
     * - Some of the statistics are calculated after the `stream-published` event, which may take at most 3 seconds.
     * - This method supports the Chrome browser only.
@@ -306,7 +310,7 @@ trait Client extends js.Object {
     *
     * Currently only the network type information is provided, see [[NetworkType]].
     *
-    * **Note:**
+    * **Note**
     *
     * Chrome 61+ is required for this function, and the compatibility is not guaranteed.
     * See [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) for details.
@@ -329,7 +333,7 @@ trait Client extends js.Object {
     *
     * If this method succeeds, the SDK returns a list of audio output devices in an array of [[MediaDeviceInfo]] objects.
     *
-    * **Note:**
+    * **Note**
     *
     * Only Chrome 49 or later supports this function.
     */
@@ -347,7 +351,7 @@ trait Client extends js.Object {
     *
     * This method retrieves the audio statistics of the remote stream, including audio codec type, packet loss rate, bitrate, and so on.
     *
-    * **Note:**
+    * **Note**
     *
     * - The statistics are calculated after the `stream-subscribed` event, which may take at most 3 seconds.
     * - This method supports the Chrome browser only.
@@ -378,7 +382,7 @@ trait Client extends js.Object {
     *
     * This method retrieves the video statistics of the remote stream, including packet loss rate, video bitrate, frame rate, and so on.
     *
-    * **Note:**
+    * **Note**
     *
     * - The statistics are calculated after the `stream-subscribed` event, which may take at most 3 seconds.
     * - This method supports the Chrome browser only.
@@ -413,7 +417,7 @@ trait Client extends js.Object {
     *
     * This method gets the statistics of the session connection.
     *
-    * **Note:**
+    * **Note**
     *
     * - This method should be called after joining the channel, and it may take at most 3 seconds to retrieve the statistics.
     * - This method supports the Chrome browser only.
@@ -441,7 +445,7 @@ trait Client extends js.Object {
     *
     * Currently only the battery level information is provided, see [[BatteryLevel]].
     *
-    * **Note:**
+    * **Note**
     *
     * This feature is experimental, see [Battery Status API](https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API) for browser compatibility.
     *
@@ -461,7 +465,7 @@ trait Client extends js.Object {
     *
     * This method gets the statistics of the transmission quality to Agora service.
     *
-    * **Note:**
+    * **Note**
     *
     * - Calculation of the statistics may take at most 3 seconds.
     * - This method supports the Chrome browser only.
@@ -539,7 +543,7 @@ trait Client extends js.Object {
     * ```
     * @param tokenOrKey
     * - Low security requirements: Pass `null` as the parameter value.
-    * - High security requirements: Pass the string of the Token or Channel Key as the parameter value. See [Use Security Keys](../../../token) for details.
+    * - High security requirements: Pass the string of the Token or Channel Key as the parameter value. See [Use Security Keys](https://docs.agora.io/en/Agora%20Platform/token?platform=All%20Platforms#use-a-token-for-authentication) for details.
     * @param channel A string that provides a unique channel name for the Agora session. The length must be within 64 bytes. Supported character scopes:
     *
     * - All lowercase English letters: a to z.
@@ -548,18 +552,19 @@ trait Client extends js.Object {
     * - The space character.
     * - Punctuation characters and other symbols, including: "!", "#", "$", "%", "&", "(", ")", "+", "-", ":", ";", "<", "=", ".", ">", "?", "@", "[", "]", "^", "_", " {", "}", "|", "~", ",".
     * @param uid The user ID, an integer or a string, ASCII characters only. Ensure this ID is unique.
-    *            If you set the uid to `null`, the server assigns one and returns it in the `onSuccess` callback.
+    *            If you set the uid to `null` or `0`, the server assigns one and returns it in the `onSuccess` callback.
     *
-    * **Note:**
+    * **Note**
     *
     * - All users in the same channel should have the same type (number or string) of `uid`.
     * - If you use a number as the user ID, it should be a 32-bit unsigned integer with a value ranging from 0 to (2<sup>32</sup>-1).
     * - If you use a string as the user ID, the maximum length is 255 characters.
-    * - You can use string UIDs to interoperate with the Native SDK 2.8 or later. Ensure that the Native SDK uses the User Account to join the channel. See [Use String User Accounts](https://docs.agora.io/en/Interactive%20Broadcast/string_web?platform=Web).
+    * - You can use string UIDs to interoperate with the Native SDK 2.8 or later. Ensure that the Native SDK uses the User Account to join the channel. See [Use String User Accounts](https://docs.agora.io/en/faq/string).
     * @param onSuccess The callback when the method succeeds. The server returns the uid which represents the identity of the user.
     * @param onFailure The callback when the method fails. The following are common errors:
     * - "INVALID_OPERATION": Unable to join the channel. Usually due to calling `Client.join` repeatedly.
     * - "UID_CONFLICT": The `uid` of the local client conflicts with other users in the channel.
+    * - "ERR_REPEAT_JOIN": The local client has already joined the channel.
     * - "SOCKET_ERROR": The SDK disconnects with the Agora server when joining the channel.
     */
   def join(tokenOrKey: String, channel: String, uid: Double): Unit = js.native
@@ -678,6 +683,8 @@ trait Client extends js.Object {
     */
   def off(eventType: String, callback: js.Any): Unit = js.native
   /**
+    * **DEPRECATED** from 3.0.2. Use `Client.on("volume-indicator")` instead.
+    *
     * This callback notifies the application who is the active speaker in the channel.
     * @example **Sample code**
     * ``` javascript
@@ -724,11 +731,8 @@ trait Client extends js.Object {
   /**
     * This callback notifies the peer user that he/she is banned from the channel. Only the banned users receive this callback.
     *
-    * Possible reasons include:
-    * - K_CHANNEL_PERMISSION_INVALID: The user has no permission.
-    * - K_UID_BANNED: The UID is banned.
-    * - K_IP_BANNED: The IP is banned.
-    * - K_CHANNEL_BANNED The channel is banned.
+    * Usually the reason is that the UID is banned (`K_UID_BANNED`(14)).
+    *
     * @example **Sample code**
     * ``` javascript
     * client.on("client-banned", function (evt) {
@@ -755,6 +759,19 @@ trait Client extends js.Object {
     */
   @JSName("on")
   def on_clientrolechanged(event: `client-role-changed`, callback: js.Function1[/* evt */ Role, Unit]): Unit = js.native
+  /**
+    * Occurs when the SDK is connected to the server.
+    *
+    * @example **Sample code**
+    * ``` javascript
+    * client.on("connected", function() {
+    *   console.log("connected");
+    * })
+    * ```
+    *
+    */
+  @JSName("on")
+  def on_connected(event: connected, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Occurs when the network connection state changes.
     *
@@ -839,7 +856,7 @@ trait Client extends js.Object {
     *
     * ![](https://web-cdn.agora.io/docs-files/1547180053430)
     *
-    * **Note:**
+    * **Note**
     *
     * This callback supports only the Chrome browser.
     * @example **Sample code**
@@ -856,7 +873,7 @@ trait Client extends js.Object {
     *
     * The SDK triggers this callback when the local client successfully subscribes to a remote stream and decodes the first audio frame.
     *
-    * **Note:** This callback supports only the Google Chrome browser.
+    * **Note** This callback supports only the Google Chrome browser.
     * @example **Sample code**
     * ``` javascript
     * client.on('first-audio-frame-decode', function (evt) {
@@ -904,7 +921,7 @@ trait Client extends js.Object {
     *
     * The SDK triggers this callback when the live transcoding setting is updated by calling the {@link setLiveTranscoding} method.
     *
-    * **Note:**
+    * **Note**
     *
     * The first call of the {@link setLiveTranscoding} method does not trigger this callback.
     */
@@ -943,7 +960,7 @@ trait Client extends js.Object {
     *
     * This callback reports on the uplink and downlink network conditions of the local user.
     *
-    * **Note:**
+    * **Note**
     *
     * This is an experimental feature and the network quality rating is for reference only.
     *
@@ -972,7 +989,7 @@ trait Client extends js.Object {
     *
     * ```
     *
-    * Note:
+    * Note
     *
     * Chrome 61+ is required for this function, and the compatibility is not guaranteed.
     * See [Network Information API](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) for details.
@@ -1018,7 +1035,7 @@ trait Client extends js.Object {
     * A poor network connection may lead to false detections, so we recommend using the signaling system for reliable offline detection.
     * - A remote user switches the client role from host to audience.
     *
-    * **Note:**
+    * **Note**
     * In live-broadcast channels, the SDK triggers this callback only when a host goes offline.
     *
     * @example **Sample code**
@@ -1047,7 +1064,6 @@ trait Client extends js.Object {
     * - A remote user switches the user role to the host by calling the [[Client.setClientRole]] method after joining the channel.
     * - A remote user/host rejoins the channel after a network interruption.
     * - The host injects an online media stream into the channel by calling the [[Client.addInjectStreamUrl]] method.
-    *
     * @example **Sample code**
     *
     * ```javascript
@@ -1069,12 +1085,42 @@ trait Client extends js.Object {
     *
     * ```
     *
-    * **Note:**
+    * **Note**
     *
     * Only supports Chrome 49+.
     */
   @JSName("on")
   def on_playoutdevicechanged(event: `playout-device-changed`, callback: js.Function1[/* evt */ js.Any, Unit]): Unit = js.native
+  /**
+    *  Occurs when the local user receives metadata.
+    *
+    * **Since**
+    * <br>&emsp;&emsp;&emsp;*3.1.0*
+    *
+    * This callback reports the received metadata and the ID of the user who sends it.
+    * @example **Sample code**
+    * ``` javascript
+    * client.on("receive-metadata", function (evt) {
+    *   console.log("receive metadata from: ", evt.uid);
+    *   console.log("receive metadata: ", evt.metadata);
+    * })
+    * ```
+    */
+  @JSName("on")
+  def on_receivemetadata(event: `receive-metadata`, callback: js.Function1[/* evt */ js.Any, Unit]): Unit = js.native
+  /**
+    * Occurs when the SDK starts reconnecting to the server automatically after the connection is lost.
+    *
+    * @example **Sample code**
+    * ``` javascript
+    * client.on("reconnect", function() {
+    *   console.log("reconnect");
+    * })
+    * ```
+    *
+    */
+  @JSName("on")
+  def on_reconnect(event: reconnect, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Occurs when an audio input device is added or removed.
     * @example **Sample code**
@@ -1096,7 +1142,7 @@ trait Client extends js.Object {
   /**
     * Occurs when the remote stream is added.
     *
-    * **Note:**
+    * **Note**
     *
     * When the local user joins the channel, if other users are already in the channel, the SDK also reports to the app on the existing remote streams.
     * @example **Sample code**
@@ -1119,7 +1165,7 @@ trait Client extends js.Object {
     * If you set `fallbackType` as 2 in [[setStreamFallbackOption]],
     * the SDK triggers this callback when the remote media stream falls back to audio only due to unreliable network conditions or switches back to the video after the network condition improves.
     *
-    * **Note:**
+    * **Note**
     *
     * Once the remote media stream is switched to the low stream due to unreliable network conditions,
     * you can monitor the stream switch between a high stream and low stream in the `stream-type-changed` callback.
@@ -1197,7 +1243,7 @@ trait Client extends js.Object {
   /**
     * Occurs when the type of a video stream changes.
     *
-    * It happens when a high-video stream changes to a low-video stream, or vice versa.
+    * It happens when a high-quality video stream changes to a low-quality video stream, or vice versa.
     *
     * The stream type (streamType):
     *
@@ -1215,6 +1261,19 @@ trait Client extends js.Object {
     */
   @JSName("on")
   def on_streamtypechanged(event: `stream-type-changed`, callback: js.Function1[/* evt */ js.Any, Unit]): Unit = js.native
+  /**
+    * Occurs when the local stream is unpublished.
+    * @example **Sample code**
+    * ``` javascript
+    * client.on("stream-unpublished", function(evt) {
+    *     console.log("local stream unpublished");
+    *     //……
+    * })
+    *
+    * ```
+    */
+  @JSName("on")
+  def on_streamunpublished(event: `stream-unpublished`, callback: js.Function1[/* evt */ js.Any, Unit]): Unit = js.native
   /**
     * Occurs when a remote stream adds or removes a track.
     *
@@ -1275,7 +1334,7 @@ trait Client extends js.Object {
     * - On the local client: `Client.on("stream-published")`
     * - On the remote client: `Client.on("stream-added")`
     *
-    * **Note:**
+    * **Note**
     *
     * In a live broadcast, whoever calls this API is the host.
     * @example **Sample code**
@@ -1329,6 +1388,22 @@ trait Client extends js.Object {
     * @param token Specifies the renewed Token.
     */
   def renewToken(token: String): Unit = js.native
+  /**
+    * Sends metadata.
+    *
+    * **Since**
+    * <br>&emsp;&emsp;&emsp;*3.1.0*
+    *
+    * This method adds metadata in a media stream, which allows you to diversify interactions in live broadcasts.
+    * Example metadata includes shopping links, digital coupons, and online quizzes.
+    *
+    * **Note**
+    * - This function supports the H.264 codec only. Ensure that you set `codec` as `"h264"` in `createClient`。
+    * - Ensure that you call this method after successfully publishing a stream.
+    * @param data String, the metadata to send. The maximum size is 1024 bytes.
+    * @param callback The result of sending metadata.
+    */
+  def sendMetadata(data: String, callback: js.Function1[/* err */ Null | String, Unit]): Unit = js.native
   /**
     * Sets the role of the user.
     *
@@ -1386,7 +1461,7 @@ trait Client extends js.Object {
     *
     * All users in a channel must set the same encryption mode.
     *
-    * **Note:**
+    * **Note**
     *
     * - Ensure you call [[setEncryptionSecret]] and [[setEncryptionMode]] before joining the channel, otherwise the encryption is disabled.
     * - Do not use this method for CDN live streaming.
@@ -1409,7 +1484,7 @@ trait Client extends js.Object {
     *
     * All users in a channel must set the same encryption password.
     *
-    * **Note:**
+    * **Note**
     *
     * - Ensure you call [[setEncryptionSecret]] and [[setEncryptionMode]] before joining the channel, otherwise the encryption is disabled.
     * - Do not use this method for CDN live streaming.
@@ -1424,7 +1499,7 @@ trait Client extends js.Object {
     * This method sets the video layout and audio for CDN live.
     * A successful call of this method to update the transcoding settings triggers the `Client.on("liveTranscodingUpdated")` callback.
     *
-    * **Note:**
+    * **Note**
     *
     * - Ensure that you [enable the RTMP Converter service](../../../cdn_streaming_web#prerequisites) before using this function.
     * - The first call of this method does not trigger the `Client.on("liveTranscodingUpdated")` callback.
@@ -1433,41 +1508,47 @@ trait Client extends js.Object {
     */
   def setLiveTranscoding(coding: LiveTranscoding): Unit = js.native
   /**
-    * Sets the Low-video Stream Parameter
+    * Sets the video profile of the low-quality video stream
     *
-    * If you enabled the dual-stream mode by calling {@link Client.enableDualStream}, use this method to set the low-video stream profile.
+    * If you have enabled the dual-stream mode by calling {@link Client.enableDualStream}, use this method to set the video profile of the low-quality stream.
     *
-    * If you do not set the low-video stream profile, the SDK will assign default values based on your stream video profile.
+    * The default video profile of the low-quality video stream:
+    * - Resolution (width × height): 160 × 120
+    * - Bitrate: 50 Kbps
+    * - Frame rate: 15 fps
     *
-    * **Note:**
-    * - As different web browsers have different restrictions on the video profile, the parameters you set may fail to take effect.
-    * The Firefox browser has a fixed frame rate of 30 fps, therefore the frame rate settings do not work on the Firefox browser.
-    * - Due to limitations of some devices and browsers, the resolution you set may fail to take effect and get adjusted by the browser.
-    * In this case, billings will be calculated based on the actual resolution.
-    * - Call {@link Client.join} before using this method.
-    * - Screen sharing supports the high-video stream only.
-    * @param param Sets the video profile of the low-video stream.
+    * **Note**
+    *
+    * - The low-quality video stream keeps the aspect ratio of the high-quality video stream. If the resolution of the low-quality stream has a different aspect ratio, the SDK automatically adjusts the height of the low-quality stream.
+    * - As different web browsers have different restrictions on the video profile, your settings may not take effect.
+    *   - The Firefox browser has a fixed frame rate of 30 fps, therefore the frame rate setting does not work on the Firefox browser.
+    *   - The resolution you set may not take effect.
+    * - Billings are calculated based on the actual resolution.
+    * - Call this method after calling {@link Client.join} and before calling {@link Client.publish}.
+    * @param param The video profile of the low-quality video stream.
     */
   def setLowStreamParameter(param: Bitrate): Unit = js.native
   def setProxyServer(): Unit = js.native
   /**
     * Deploys a Proxy Server
     *
-    * Use this method to deploy the Nginx server. See [Deploy the Enterprise Proxy](https://docs.agora.io/en/Interactive%20Broadcast/proxy_web?platform=Web) for details.
+    * Use this method to deploy an HTTP proxy server.
     *
-    * **Note:**
+    * You can also use cloud proxy by {@link startProxyServer}. See [Use Cloud Proxy](https://docs.agora.io/en/Agora%20Platform/cloud_proxy_web?platform=Web) for details.
+    *
+    * **Note**
     *
     * - Ensure that you call this API before {@link Client.join}.
     * - Proxy services by different service providers may result in slow performance if you are using the Firefox browser.
     *   Therefore, Agora recommends using the same service provider for the proxy services. If you use different service providers, Agora recommends not using the Firefox browser.
     * @example `client.setProxyServer(proxyServer);`
-    * @param proxyServer Your Nginx server domain name. ASCII characters only, and the string length must be greater than 0 and less than 256 bytes.
+    * @param proxyServer Your proxy server domain name. ASCII characters only, and the string length must be greater than 0 and less than 256 bytes. See {@link ClientConfig.proxyServer} for details.
     */
   def setProxyServer(proxyServer: String): Unit = js.native
   /**
-    * Sets the Remote Video-stream Type
+    * Sets the stream type of a remote stream
     *
-    * When a remote user sends dual streams, this method decides on which stream to receive on the subscriber side. If this method is not used, the subscriber receives the high-video stream.
+    * When a remote user sends dual streams, this method decides on which stream to receive on the subscriber side. If this method is not used, the subscriber receives the high-quality video stream.
     *
     * @example **Sample code**
     * ``` javascript
@@ -1500,18 +1581,18 @@ trait Client extends js.Object {
     *
     * Use this method to set stream fallback option on the receiver.
     *
-    * Under poor network conditions, the SDK can choose to subscribe to the low-video stream or only the audio stream.
+    * Under poor network conditions, the SDK can choose to subscribe to the low-quality video stream or only the audio stream.
     *
-    * If the auto-fallback option is enabled, the SDK triggers the `Client.on("stream-type-changed")` callback when the remote stream changes from a high-video stream to a low-video stream or vice versa, and triggers the `Client.on("stream-fallback")` callback when the remote stream changes from a video stream to an audio-only stream or vice versa.
+    * If the auto-fallback option is enabled, the SDK triggers the `Client.on("stream-type-changed")` callback when the remote stream changes from a high-quality video stream to a low-quality video stream or vice versa, and triggers the `Client.on("stream-fallback")` callback when the remote stream changes from a video stream to an audio-only stream or vice versa.
     *
-    * **Note:**
+    * **Note**
     *
     * This method can only be used when the publisher has enabled the dual-stream mode by {@link enableDualStream}.
     * @param stream The remote stream object.
     * @param fallbackType The fallback option:
     * - 0: Disable the fallback.
-    * - 1: (Default) Automatically subscribe to the low-video stream under poor network.
-    * - 2: Under poor network, the SDK may subscribe to the low-video stream (of lower resolution and lower bitrate) first,
+    * - 1: (Default) Automatically subscribe to the low-quality video stream under poor network.
+    * - 2: Under poor network, the SDK may subscribe to the low-quality video stream (of lower resolution and lower bitrate) first,
     *      but if the network still does not allow displaying the video, the SDK will receive audio only.
     * @example **Sample code**
     * ```javascript
@@ -1534,13 +1615,15 @@ trait Client extends js.Object {
     *
     * Use this method to deploy the TURN server.
     *
-    * **Note:**
+    * You can also use cloud proxy by {@link startProxyServer}. See [Use Cloud Proxy](https://docs.agora.io/en/Agora%20Platform/cloud_proxy_web?platform=Web) for details.
+    *
+    * **Note**
     *
     * Ensure that you call this API before {@link Client.join}.
     * @example `client.setTurnServer(config);`
-    * @param turnServer The TURN server settings.
+    * @param turnServer The TURN server settings. See {@link ClientConfig.turnServer} for details.
     */
-  def setTurnServer(turnServer: Forceturn): Unit = js.native
+  def setTurnServer(turnServer: js.Array[Forceturn]): Unit = js.native
   /**
     * Starts relaying media streams across channels.
     *
@@ -1555,8 +1638,9 @@ trait Client extends js.Object {
     * - `Client.on("channel-media-relay-event")`, which reports the events of the media stream relay.
     *   - If the media stream relay starts successfully, this callback returns `code` 4, reporting that the SDK starts relaying the media stream to the destination channel.
     *
-    * **Note:**
+    * **Note**
     *
+    * - Contact sales-us@agora.io to enable this function.
     * - We do not support string user IDs in this API.
     * - Call this method only after joining a channel.
     * - In a live-broadcast channel, only a host can call this method.
@@ -1590,10 +1674,10 @@ trait Client extends js.Object {
     * When the live stream starts, the SDK triggers the `Client.on("liveStreamingStarted")` callback.
     * If this method call fails, the SDK triggers the `Client.on("liveStreamingFailed")` callback.
     *
-    * **Note:**
+    * **Note**
     *
     * - Only hosts in live-broadcast channels can call this method. Ensure that you set the user role as `"host"` in {@link setClientRole}.
-    * - Call this method after {@link Stream.init}.
+    * - Call this method after the {@link publish} method call succeeds.
     * - Push one live stream at a time. If you need to push several streams, ensure that the current stream starts successfully before pushing the next one.
     * @example **Sample code**
     * ``` javascript
@@ -1674,7 +1758,7 @@ trait Client extends js.Object {
     * @param stream Stream object, which represents the remote stream.
     * @param options Sets whether to receive the video or audio data independently by the `video` and `audio` parameters.
     *
-    * **Note:**
+    * **Note**
     *
     * - `video` and `audio` cannot be set as `false` at the same time. If you need to stop subscribing to the stream, call [[Client.unsubscribe]] instead.
     * - Safari does not support independent subscription. Set `options` as `null` for Safari, otherwise the`SAFARI_NOT_SUPPORTED_FOR_TRACK_SUBSCRIPTION` error occurs.
@@ -1714,6 +1798,10 @@ trait Client extends js.Object {
     * This method unpublishes the local stream.
     *
     * When the stream is unpublished, the `Client.on("stream-removed")` callback is triggered on the remote client.
+    *
+    * **Note**
+    *
+    * In a live broadcast, the user role of a host switches to audience after unpublishing, and the `Client.on("peer-leave")` callback is triggered on the remote client.
     * @example
     * **Sample code**
     * ``` javascript
@@ -1766,7 +1854,7 @@ trait Client extends js.Object {
     * - If the update succeeds, the callback returns `code` 7.
     * - If the update fails, the callback returns `code` 8, and the SDK also triggers the `Client.on("channel-media-relay-state")` callback with `state` 3. In this case, the media relay state is reset, and you need to call {@link startChannelMediaRelay} again to restart the relay.
     *
-    * **Note:**
+    * **Note**
     *
     * - Call this method after {@link startChannelMediaRelay}.
     * - You can add a maximum of four destination channels to a relay.

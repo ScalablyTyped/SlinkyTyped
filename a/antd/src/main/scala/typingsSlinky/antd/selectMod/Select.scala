@@ -6,7 +6,7 @@ import typingsSlinky.antd.antdStrings.SECRET_COMBOBOX_MODE_DO_NOT_USE
 import typingsSlinky.antd.antdStrings.combobox
 import typingsSlinky.antd.antdStrings.multiple
 import typingsSlinky.antd.antdStrings.tags
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

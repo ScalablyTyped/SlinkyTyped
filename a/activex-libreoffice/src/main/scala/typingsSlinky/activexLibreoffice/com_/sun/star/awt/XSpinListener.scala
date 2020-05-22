@@ -8,16 +8,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to receive spin events. */
-@js.native
 trait XSpinListener extends XEventListener {
   /** is invoked when the spin field is spun down. */
-  def down(rEvent: SpinEvent): Unit = js.native
+  def down(rEvent: SpinEvent): Unit
   /** is invoked when the spin field is set to the lower value. */
-  def first(rEvent: SpinEvent): Unit = js.native
+  def first(rEvent: SpinEvent): Unit
   /** is invoked when the spin field is set to the upper value. */
-  def last(rEvent: SpinEvent): Unit = js.native
+  def last(rEvent: SpinEvent): Unit
   /** is invoked when the spin field is spun up. */
-  def up(rEvent: SpinEvent): Unit = js.native
+  def up(rEvent: SpinEvent): Unit
 }
 
 object XSpinListener {
@@ -35,37 +34,5 @@ object XSpinListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), down = js.Any.fromFunction1(down), first = js.Any.fromFunction1(first), last = js.Any.fromFunction1(last), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), up = js.Any.fromFunction1(up))
     __obj.asInstanceOf[XSpinListener]
   }
-  @scala.inline
-  implicit class XSpinListenerOps[Self <: XSpinListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDown(value: SpinEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFirst(value: SpinEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLast(value: SpinEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUp(value: SpinEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

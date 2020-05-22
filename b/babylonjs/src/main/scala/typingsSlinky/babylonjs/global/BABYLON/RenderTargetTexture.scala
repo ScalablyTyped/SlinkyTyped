@@ -73,6 +73,11 @@ class RenderTargetTexture protected ()
     format: js.UndefOr[Double],
     delayAllocation: js.UndefOr[Boolean]
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

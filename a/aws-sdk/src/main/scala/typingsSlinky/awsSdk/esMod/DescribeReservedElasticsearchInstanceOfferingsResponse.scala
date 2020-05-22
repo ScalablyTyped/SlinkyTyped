@@ -18,41 +18,14 @@ trait DescribeReservedElasticsearchInstanceOfferingsResponse extends js.Object {
 
 object DescribeReservedElasticsearchInstanceOfferingsResponse {
   @scala.inline
-  def apply(): DescribeReservedElasticsearchInstanceOfferingsResponse = {
+  def apply(
+    NextToken: NextToken = null,
+    ReservedElasticsearchInstanceOfferings: ReservedElasticsearchInstanceOfferingList = null
+  ): DescribeReservedElasticsearchInstanceOfferingsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ReservedElasticsearchInstanceOfferings != null) __obj.updateDynamic("ReservedElasticsearchInstanceOfferings")(ReservedElasticsearchInstanceOfferings.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeReservedElasticsearchInstanceOfferingsResponse]
   }
-  @scala.inline
-  implicit class DescribeReservedElasticsearchInstanceOfferingsResponseOps[Self <: DescribeReservedElasticsearchInstanceOfferingsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedElasticsearchInstanceOfferings(value: ReservedElasticsearchInstanceOfferingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedElasticsearchInstanceOfferings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedElasticsearchInstanceOfferings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedElasticsearchInstanceOfferings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -20,35 +20,13 @@ trait SecurityConfigurationArgs extends js.Object {
 
 object SecurityConfigurationArgs {
   @scala.inline
-  def apply(encryptionConfiguration: Input[SecurityConfigurationEncryptionConfiguration]): SecurityConfigurationArgs = {
+  def apply(
+    encryptionConfiguration: Input[SecurityConfigurationEncryptionConfiguration],
+    name: Input[String] = null
+  ): SecurityConfigurationArgs = {
     val __obj = js.Dynamic.literal(encryptionConfiguration = encryptionConfiguration.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityConfigurationArgs]
   }
-  @scala.inline
-  implicit class SecurityConfigurationArgsOps[Self <: SecurityConfigurationArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptionConfiguration(value: Input[SecurityConfigurationEncryptionConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

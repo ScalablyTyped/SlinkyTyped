@@ -12,7 +12,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  parseNumbers  :true} & query-string.query-string.ParseOptions */
-@js.native
 trait parseNumberstrueParseOpti extends js.Object {
   /**
   	@default 'none'
@@ -47,17 +46,17 @@ trait parseNumberstrueParseOpti extends js.Object {
   		//=> {foo: ['1', '2', '3']}
   		```
   	*/
-  val arrayFormat: js.UndefOr[bracket | index | comma | separator | none] = js.native
+  val arrayFormat: js.UndefOr[bracket | index | comma | separator | none] = js.undefined
   /**
   	The character used to separate array elements when using `{arrayFormat: 'separator'}`.
   	@default ,
   	*/
-  val arrayFormatSeparator: js.UndefOr[String] = js.native
+  val arrayFormatSeparator: js.UndefOr[String] = js.undefined
   /**
   	Decode the keys and values. URI components are decoded with [`decode-uri-component`](https://github.com/SamVerschueren/decode-uri-component).
   	@default true
   	*/
-  val decode: js.UndefOr[Boolean] = js.native
+  val decode: js.UndefOr[Boolean] = js.undefined
   /**
   	Parse the value as a boolean type instead of string type if it's a boolean.
   	@default false
@@ -68,7 +67,7 @@ trait parseNumberstrueParseOpti extends js.Object {
   	//=> {foo: true}
   	```
   	*/
-  val parseBooleans: js.UndefOr[Boolean] = js.native
+  val parseBooleans: js.UndefOr[Boolean] = js.undefined
   /**
   	Parse the value as a number type instead of string type if it's a number.
   	@default false
@@ -79,7 +78,7 @@ trait parseNumberstrueParseOpti extends js.Object {
   	//=> {foo: 1}
   	```
   	*/
-  var parseNumbers: js.UndefOr[`true` with Boolean] = js.native
+  var parseNumbers: js.UndefOr[`true` with Boolean] = js.undefined
   /**
   	Supports both `Function` as a custom sorting function or `false` to disable sorting.
   	If omitted, keys are sorted using `Array#sort`, which means, converting them to strings and comparing strings in Unicode code point order.
@@ -100,100 +99,27 @@ trait parseNumberstrueParseOpti extends js.Object {
   	//=> {a: 'one', c: 'three', b: 'two'}
   	```
   	*/
-  val sort: js.UndefOr[(js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false`] = js.native
+  val sort: js.UndefOr[(js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false`] = js.undefined
 }
 
 object parseNumberstrueParseOpti {
   @scala.inline
-  def apply(): parseNumberstrueParseOpti = {
+  def apply(
+    arrayFormat: bracket | index | comma | separator | none = null,
+    arrayFormatSeparator: String = null,
+    decode: js.UndefOr[Boolean] = js.undefined,
+    parseBooleans: js.UndefOr[Boolean] = js.undefined,
+    parseNumbers: js.UndefOr[`true` with Boolean] = js.undefined,
+    sort: (js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false` = null
+  ): parseNumberstrueParseOpti = {
     val __obj = js.Dynamic.literal()
+    if (arrayFormat != null) __obj.updateDynamic("arrayFormat")(arrayFormat.asInstanceOf[js.Any])
+    if (arrayFormatSeparator != null) __obj.updateDynamic("arrayFormatSeparator")(arrayFormatSeparator.asInstanceOf[js.Any])
+    if (!js.isUndefined(decode)) __obj.updateDynamic("decode")(decode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(parseBooleans)) __obj.updateDynamic("parseBooleans")(parseBooleans.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(parseNumbers)) __obj.updateDynamic("parseNumbers")(parseNumbers.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[parseNumberstrueParseOpti]
   }
-  @scala.inline
-  implicit class parseNumberstrueParseOptiOps[Self <: parseNumberstrueParseOpti] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayFormat(value: bracket | index | comma | separator | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrayFormatSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormatSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayFormatSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormatSeparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseBooleans(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseBooleans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParseBooleans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseBooleans")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseNumbers(value: `true` with Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParseNumbers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseNumbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortFunction2(value: (/* itemLeft */ String, /* itemRight */ String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSort(value: (js.Function2[/* itemLeft */ String, /* itemRight */ String, Double]) | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,87 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MatterChamferConfig extends js.Object {
   /**
     * The quality of the chamfering. -1 means 'auto'.
     */
-  var quality: js.UndefOr[Double] = js.native
+  var quality: js.UndefOr[Double] = js.undefined
   /**
     * The maximum quality of the chamfering. The higher this value, the more vertices are created.
     */
-  var qualityMax: js.UndefOr[Double] = js.native
+  var qualityMax: js.UndefOr[Double] = js.undefined
   /**
     * The minimum quality of the chamfering. The higher this value, the more vertices are created.
     */
-  var qualityMin: js.UndefOr[Double] = js.native
+  var qualityMin: js.UndefOr[Double] = js.undefined
   /**
     * A single number, or an array, to specify the radius for each vertex.
     */
-  var radius: js.UndefOr[Double | js.Array[Double]] = js.native
+  var radius: js.UndefOr[Double | js.Array[Double]] = js.undefined
 }
 
 object MatterChamferConfig {
   @scala.inline
-  def apply(): MatterChamferConfig = {
+  def apply(
+    quality: js.UndefOr[Double] = js.undefined,
+    qualityMax: js.UndefOr[Double] = js.undefined,
+    qualityMin: js.UndefOr[Double] = js.undefined,
+    radius: Double | js.Array[Double] = null
+  ): MatterChamferConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(qualityMax)) __obj.updateDynamic("qualityMax")(qualityMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(qualityMin)) __obj.updateDynamic("qualityMin")(qualityMin.get.asInstanceOf[js.Any])
+    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatterChamferConfig]
   }
-  @scala.inline
-  implicit class MatterChamferConfigOps[Self <: MatterChamferConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualityMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualityMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualityMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualityMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualityMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualityMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualityMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualityMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

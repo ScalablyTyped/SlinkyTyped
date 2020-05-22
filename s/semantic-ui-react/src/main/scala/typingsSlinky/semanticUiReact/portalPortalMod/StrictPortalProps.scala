@@ -2,44 +2,41 @@ package typingsSlinky.semanticUiReact.portalPortalMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
-import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StrictPortalProps extends js.Object {
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
   /** Controls whether or not the portal should close on a click outside. */
-  var closeOnDocumentClick: js.UndefOr[Boolean] = js.native
+  var closeOnDocumentClick: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should close when escape is pressed is displayed. */
-  var closeOnEscape: js.UndefOr[Boolean] = js.native
+  var closeOnEscape: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls whether or not the portal should close when mousing out of the portal.
     * NOTE: This will prevent `closeOnTriggerMouseLeave` when mousing over the
     * gap from the trigger to the portal.
     */
-  var closeOnPortalMouseLeave: js.UndefOr[Boolean] = js.native
+  var closeOnPortalMouseLeave: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should close on blur of the trigger. */
-  var closeOnTriggerBlur: js.UndefOr[Boolean] = js.native
+  var closeOnTriggerBlur: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should close on click of the trigger. */
-  var closeOnTriggerClick: js.UndefOr[Boolean] = js.native
+  var closeOnTriggerClick: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should close when mousing out of the trigger. */
-  var closeOnTriggerMouseLeave: js.UndefOr[Boolean] = js.native
+  var closeOnTriggerMouseLeave: js.UndefOr[Boolean] = js.undefined
   /** Initial value of open. */
-  var defaultOpen: js.UndefOr[Boolean] = js.native
+  var defaultOpen: js.UndefOr[Boolean] = js.undefined
   /** Event pool namespace that is used to handle component events. */
-  var eventPool: js.UndefOr[String] = js.native
+  var eventPool: js.UndefOr[String] = js.undefined
   /** The node where the portal should mount. */
-  var mountNode: js.UndefOr[js.Any] = js.native
+  var mountNode: js.UndefOr[js.Any] = js.undefined
   /** Milliseconds to wait before opening on mouse over */
-  var mouseEnterDelay: js.UndefOr[Double] = js.native
+  var mouseEnterDelay: js.UndefOr[Double] = js.undefined
   /** Milliseconds to wait before closing on mouse leave */
-  var mouseLeaveDelay: js.UndefOr[Double] = js.native
+  var mouseLeaveDelay: js.UndefOr[Double] = js.undefined
   /**
     * Called when a close event happens
     *
@@ -48,14 +45,14 @@ trait StrictPortalProps extends js.Object {
     */
   var onClose: js.UndefOr[
     js.Function2[/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PortalProps, Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * Called when the portal is mounted on the DOM
     *
     * @param {null}
     * @param {object} data - All props.
     */
-  var onMount: js.UndefOr[js.Function2[/* nothing */ Null, /* data */ PortalProps, Unit]] = js.native
+  var onMount: js.UndefOr[js.Function2[/* nothing */ Null, /* data */ PortalProps, Unit]] = js.undefined
   /**
     * Called when an open event happens
     *
@@ -64,335 +61,78 @@ trait StrictPortalProps extends js.Object {
     */
   var onOpen: js.UndefOr[
     js.Function2[/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PortalProps, Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * Called when the portal is unmounted from the DOM
     *
     * @param {null}
     * @param {object} data - All props.
     */
-  var onUnmount: js.UndefOr[js.Function2[/* nothing */ Null, /* data */ PortalProps, Unit]] = js.native
+  var onUnmount: js.UndefOr[js.Function2[/* nothing */ Null, /* data */ PortalProps, Unit]] = js.undefined
   /** Controls whether or not the portal is displayed. */
-  var open: js.UndefOr[Boolean] = js.native
+  var open: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should open when the trigger is clicked. */
-  var openOnTriggerClick: js.UndefOr[Boolean] = js.native
+  var openOnTriggerClick: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should open on focus of the trigger. */
-  var openOnTriggerFocus: js.UndefOr[Boolean] = js.native
+  var openOnTriggerFocus: js.UndefOr[Boolean] = js.undefined
   /** Controls whether or not the portal should open when mousing over the trigger. */
-  var openOnTriggerMouseEnter: js.UndefOr[Boolean] = js.native
+  var openOnTriggerMouseEnter: js.UndefOr[Boolean] = js.undefined
   /** Element to be rendered in-place where the portal is defined. */
-  var trigger: js.UndefOr[TagMod[Any]] = js.native
+  var trigger: js.UndefOr[TagMod[Any]] = js.undefined
   /** Called with a ref to the trigger node. */
-  var triggerRef: js.UndefOr[Ref[_]] = js.native
+  var triggerRef: js.UndefOr[Ref[_]] = js.undefined
 }
 
 object StrictPortalProps {
   @scala.inline
-  def apply(): StrictPortalProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    closeOnDocumentClick: js.UndefOr[Boolean] = js.undefined,
+    closeOnEscape: js.UndefOr[Boolean] = js.undefined,
+    closeOnPortalMouseLeave: js.UndefOr[Boolean] = js.undefined,
+    closeOnTriggerBlur: js.UndefOr[Boolean] = js.undefined,
+    closeOnTriggerClick: js.UndefOr[Boolean] = js.undefined,
+    closeOnTriggerMouseLeave: js.UndefOr[Boolean] = js.undefined,
+    defaultOpen: js.UndefOr[Boolean] = js.undefined,
+    eventPool: String = null,
+    mountNode: js.Any = null,
+    mouseEnterDelay: js.UndefOr[Double] = js.undefined,
+    mouseLeaveDelay: js.UndefOr[Double] = js.undefined,
+    onClose: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PortalProps) => Unit = null,
+    onMount: (/* nothing */ Null, /* data */ PortalProps) => Unit = null,
+    onOpen: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PortalProps) => Unit = null,
+    onUnmount: (/* nothing */ Null, /* data */ PortalProps) => Unit = null,
+    open: js.UndefOr[Boolean] = js.undefined,
+    openOnTriggerClick: js.UndefOr[Boolean] = js.undefined,
+    openOnTriggerFocus: js.UndefOr[Boolean] = js.undefined,
+    openOnTriggerMouseEnter: js.UndefOr[Boolean] = js.undefined,
+    trigger: TagMod[Any] = null,
+    triggerRef: js.UndefOr[Null | Ref[_]] = js.undefined
+  ): StrictPortalProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnDocumentClick)) __obj.updateDynamic("closeOnDocumentClick")(closeOnDocumentClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnEscape)) __obj.updateDynamic("closeOnEscape")(closeOnEscape.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnPortalMouseLeave)) __obj.updateDynamic("closeOnPortalMouseLeave")(closeOnPortalMouseLeave.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnTriggerBlur)) __obj.updateDynamic("closeOnTriggerBlur")(closeOnTriggerBlur.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnTriggerClick)) __obj.updateDynamic("closeOnTriggerClick")(closeOnTriggerClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnTriggerMouseLeave)) __obj.updateDynamic("closeOnTriggerMouseLeave")(closeOnTriggerMouseLeave.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.get.asInstanceOf[js.Any])
+    if (eventPool != null) __obj.updateDynamic("eventPool")(eventPool.asInstanceOf[js.Any])
+    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseEnterDelay)) __obj.updateDynamic("mouseEnterDelay")(mouseEnterDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseLeaveDelay)) __obj.updateDynamic("mouseLeaveDelay")(mouseLeaveDelay.get.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
+    if (onMount != null) __obj.updateDynamic("onMount")(js.Any.fromFunction2(onMount))
+    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
+    if (onUnmount != null) __obj.updateDynamic("onUnmount")(js.Any.fromFunction2(onUnmount))
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openOnTriggerClick)) __obj.updateDynamic("openOnTriggerClick")(openOnTriggerClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openOnTriggerFocus)) __obj.updateDynamic("openOnTriggerFocus")(openOnTriggerFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openOnTriggerMouseEnter)) __obj.updateDynamic("openOnTriggerMouseEnter")(openOnTriggerMouseEnter.get.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
+    if (!js.isUndefined(triggerRef)) __obj.updateDynamic("triggerRef")(triggerRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictPortalProps]
   }
-  @scala.inline
-  implicit class StrictPortalPropsOps[Self <: StrictPortalProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnDocumentClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnDocumentClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnDocumentClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnDocumentClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnEscape(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEscape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnEscape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEscape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnPortalMouseLeave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnPortalMouseLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnPortalMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnPortalMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnTriggerBlur(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnTriggerBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnTriggerBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnTriggerBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnTriggerClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnTriggerClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnTriggerClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnTriggerClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnTriggerMouseLeave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnTriggerMouseLeave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnTriggerMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnTriggerMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventPool(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventPool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountNode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseEnterDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnterDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseEnterDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnterDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseLeaveDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeaveDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseLeaveDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeaveDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PortalProps) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMount(value: (/* nothing */ Null, /* data */ PortalProps) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMount")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpen(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PortalProps) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUnmount(value: (/* nothing */ Null, /* data */ PortalProps) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnmount")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUnmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenOnTriggerClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnTriggerClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenOnTriggerClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnTriggerClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenOnTriggerFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnTriggerFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenOnTriggerFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnTriggerFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenOnTriggerMouseEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnTriggerMouseEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenOnTriggerMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openOnTriggerMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrigger(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerRefRefObject(value: ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerRefFunction1(value: /* instance */ _ | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTriggerRef(value: Ref[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerRef")(null)
-        ret
-    }
-  }
-  
 }
 

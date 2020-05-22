@@ -7,97 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * ValueSet details if this is coded
   */
-@js.native
 trait OperationDefinitionParameterBinding extends BackboneElement {
   /**
     * Contains extended information for property 'strength'.
     */
-  var _strength: js.UndefOr[Element] = js.native
+  var _strength: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'valueSetUri'.
     */
-  var _valueSetUri: js.UndefOr[Element] = js.native
+  var _valueSetUri: js.UndefOr[Element] = js.undefined
   /**
     * required | extensible | preferred | example
     */
-  var strength: code = js.native
+  var strength: code
   /**
     * Source of value set
     */
-  var valueSetReference: js.UndefOr[Reference] = js.native
+  var valueSetReference: js.UndefOr[Reference] = js.undefined
   /**
     * Source of value set
     */
-  var valueSetUri: js.UndefOr[uri] = js.native
+  var valueSetUri: js.UndefOr[uri] = js.undefined
 }
 
 object OperationDefinitionParameterBinding {
   @scala.inline
-  def apply(strength: code): OperationDefinitionParameterBinding = {
+  def apply(
+    strength: code,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _strength: Element = null,
+    _valueSetUri: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    valueSetReference: Reference = null,
+    valueSetUri: uri = null
+  ): OperationDefinitionParameterBinding = {
     val __obj = js.Dynamic.literal(strength = strength.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_strength != null) __obj.updateDynamic("_strength")(_strength.asInstanceOf[js.Any])
+    if (_valueSetUri != null) __obj.updateDynamic("_valueSetUri")(_valueSetUri.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (valueSetReference != null) __obj.updateDynamic("valueSetReference")(valueSetReference.asInstanceOf[js.Any])
+    if (valueSetUri != null) __obj.updateDynamic("valueSetUri")(valueSetUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[OperationDefinitionParameterBinding]
   }
-  @scala.inline
-  implicit class OperationDefinitionParameterBindingOps[Self <: OperationDefinitionParameterBinding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStrength(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_strength(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_strength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_strength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_strength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_valueSetUri(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueSetUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_valueSetUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueSetUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSetReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSetReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSetUri(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSetUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

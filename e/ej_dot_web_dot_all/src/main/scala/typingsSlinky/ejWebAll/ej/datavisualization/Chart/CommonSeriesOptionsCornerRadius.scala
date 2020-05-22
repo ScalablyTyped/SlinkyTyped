@@ -4,87 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommonSeriesOptionsCornerRadius extends js.Object {
   /** Specifies the radius for the bottom left corner.
     * @Default {0}
     */
-  var bottomLeft: js.UndefOr[Double] = js.native
+  var bottomLeft: js.UndefOr[Double] = js.undefined
   /** Specifies the radius for the bottom right corner.
     * @Default {0}
     */
-  var bottomRight: js.UndefOr[Double] = js.native
+  var bottomRight: js.UndefOr[Double] = js.undefined
   /** Specifies the radius for the top left corner.
     * @Default {0}
     */
-  var topLeft: js.UndefOr[Double] = js.native
+  var topLeft: js.UndefOr[Double] = js.undefined
   /** Specifies the radius for the top right corner.
     * @Default {0}
     */
-  var topRight: js.UndefOr[Double] = js.native
+  var topRight: js.UndefOr[Double] = js.undefined
 }
 
 object CommonSeriesOptionsCornerRadius {
   @scala.inline
-  def apply(): CommonSeriesOptionsCornerRadius = {
+  def apply(
+    bottomLeft: js.UndefOr[Double] = js.undefined,
+    bottomRight: js.UndefOr[Double] = js.undefined,
+    topLeft: js.UndefOr[Double] = js.undefined,
+    topRight: js.UndefOr[Double] = js.undefined
+  ): CommonSeriesOptionsCornerRadius = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bottomLeft)) __obj.updateDynamic("bottomLeft")(bottomLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bottomRight)) __obj.updateDynamic("bottomRight")(bottomRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(topLeft)) __obj.updateDynamic("topLeft")(topLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(topRight)) __obj.updateDynamic("topRight")(topRight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonSeriesOptionsCornerRadius]
   }
-  @scala.inline
-  implicit class CommonSeriesOptionsCornerRadiusOps[Self <: CommonSeriesOptionsCornerRadius] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottomLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottomRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topRight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

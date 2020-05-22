@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SIZE_WIDTHS extends js.Object {
-  var auto: typingsSlinky.baseui.baseuiStrings.auto = js.native
-  var default: `500px` = js.native
-  var full: `100Percentsign` = js.native
+  var auto: typingsSlinky.baseui.baseuiStrings.auto
+  var default: `500px`
+  var full: `100Percentsign`
 }
 
 @JSImport("baseui/modal", "SIZE_WIDTHS")

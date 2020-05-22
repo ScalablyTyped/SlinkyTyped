@@ -1,120 +1,40 @@
 package typingsSlinky.rmcTabs.anon
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rmc-tabs.rmc-tabs/lib/TabPane.PropsType & {  children ? :react.react.ReactNode} */
-@js.native
 trait PropsTypechildrenReactNod extends js.Object {
-  var active: Boolean = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var fixX: js.UndefOr[Boolean] = js.native
-  var fixY: js.UndefOr[Boolean] = js.native
-  var key: js.UndefOr[String] = js.native
-  var role: js.UndefOr[String] = js.native
+  var active: Boolean
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var fixX: js.UndefOr[Boolean] = js.undefined
+  var fixY: js.UndefOr[Boolean] = js.undefined
+  var key: js.UndefOr[String] = js.undefined
+  var role: js.UndefOr[String] = js.undefined
 }
 
 object PropsTypechildrenReactNod {
   @scala.inline
-  def apply(active: Boolean): PropsTypechildrenReactNod = {
+  def apply(
+    active: Boolean,
+    children: TagMod[Any] = null,
+    className: String = null,
+    fixX: js.UndefOr[Boolean] = js.undefined,
+    fixY: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    role: String = null
+  ): PropsTypechildrenReactNod = {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixX)) __obj.updateDynamic("fixX")(fixX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixY)) __obj.updateDynamic("fixY")(fixY.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropsTypechildrenReactNod]
   }
-  @scala.inline
-  implicit class PropsTypechildrenReactNodOps[Self <: PropsTypechildrenReactNod] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

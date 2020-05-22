@@ -4,192 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartSeriesDefaultsLabels extends js.Object {
-  var background: js.UndefOr[String] = js.native
-  var border: js.UndefOr[ChartSeriesDefaultsLabelsBorder] = js.native
-  var color: js.UndefOr[String] = js.native
-  var font: js.UndefOr[String] = js.native
-  var format: js.UndefOr[String] = js.native
-  var from: js.UndefOr[ChartSeriesDefaultsLabelsFrom] = js.native
-  var margin: js.UndefOr[Double | ChartSeriesDefaultsLabelsMargin] = js.native
-  var padding: js.UndefOr[Double | ChartSeriesDefaultsLabelsPadding] = js.native
-  var rotation: js.UndefOr[String | Double] = js.native
-  var template: js.UndefOr[String | js.Function] = js.native
-  var to: js.UndefOr[ChartSeriesDefaultsLabelsTo] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var visual: js.UndefOr[js.Function] = js.native
+  var background: js.UndefOr[String] = js.undefined
+  var border: js.UndefOr[ChartSeriesDefaultsLabelsBorder] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var font: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var from: js.UndefOr[ChartSeriesDefaultsLabelsFrom] = js.undefined
+  var margin: js.UndefOr[Double | ChartSeriesDefaultsLabelsMargin] = js.undefined
+  var padding: js.UndefOr[Double | ChartSeriesDefaultsLabelsPadding] = js.undefined
+  var rotation: js.UndefOr[String | Double] = js.undefined
+  var template: js.UndefOr[String | js.Function] = js.undefined
+  var to: js.UndefOr[ChartSeriesDefaultsLabelsTo] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var visual: js.UndefOr[js.Function] = js.undefined
 }
 
 object ChartSeriesDefaultsLabels {
   @scala.inline
-  def apply(): ChartSeriesDefaultsLabels = {
+  def apply(
+    background: String = null,
+    border: ChartSeriesDefaultsLabelsBorder = null,
+    color: String = null,
+    font: String = null,
+    format: String = null,
+    from: ChartSeriesDefaultsLabelsFrom = null,
+    margin: Double | ChartSeriesDefaultsLabelsMargin = null,
+    padding: Double | ChartSeriesDefaultsLabelsPadding = null,
+    rotation: String | Double = null,
+    template: String | js.Function = null,
+    to: ChartSeriesDefaultsLabelsTo = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    visual: js.Function = null
+  ): ChartSeriesDefaultsLabels = {
     val __obj = js.Dynamic.literal()
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (visual != null) __obj.updateDynamic("visual")(visual.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartSeriesDefaultsLabels]
   }
-  @scala.inline
-  implicit class ChartSeriesDefaultsLabelsOps[Self <: ChartSeriesDefaultsLabels] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ChartSeriesDefaultsLabelsBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: ChartSeriesDefaultsLabelsFrom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double | ChartSeriesDefaultsLabelsMargin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double | ChartSeriesDefaultsLabelsPadding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: ChartSeriesDefaultsLabelsTo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisual(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visual")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,151 +15,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Implements extends js.Object {
-  var body: ClassBodyKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
-  var id: IdentifierKind | Null = js.native
-  var implements: js.UndefOr[js.Array[ClassImplementsKind | TSExpressionWithTypeArgumentsKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
-  var superClass: js.UndefOr[ExpressionKind | Null] = js.native
-  var superTypeParameters: js.UndefOr[TypeParameterInstantiationKind | TSTypeParameterInstantiationKind | Null] = js.native
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.native
+  var body: ClassBodyKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
+  var id: IdentifierKind | Null
+  var implements: js.UndefOr[js.Array[ClassImplementsKind | TSExpressionWithTypeArgumentsKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
+  var superClass: js.UndefOr[ExpressionKind | Null] = js.undefined
+  var superTypeParameters: js.UndefOr[TypeParameterInstantiationKind | TSTypeParameterInstantiationKind | Null] = js.undefined
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.undefined
 }
 
 object Implements {
   @scala.inline
-  def apply(body: ClassBodyKind): Implements = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+  def apply(
+    body: ClassBodyKind,
+    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
+    id: IdentifierKind = null,
+    implements: js.Array[ClassImplementsKind | TSExpressionWithTypeArgumentsKind] = null,
+    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined,
+    superClass: js.UndefOr[Null | ExpressionKind] = js.undefined,
+    superTypeParameters: js.UndefOr[Null | TypeParameterInstantiationKind | TSTypeParameterInstantiationKind] = js.undefined,
+    typeParameters: js.UndefOr[Null | TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
+  ): Implements = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (implements != null) __obj.updateDynamic("implements")(implements.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (!js.isUndefined(superClass)) __obj.updateDynamic("superClass")(superClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(superTypeParameters)) __obj.updateDynamic("superTypeParameters")(superTypeParameters.asInstanceOf[js.Any])
+    if (!js.isUndefined(typeParameters)) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[Implements]
   }
-  @scala.inline
-  implicit class ImplementsOps[Self <: Implements] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: ClassBodyKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
-        ret
-    }
-    @scala.inline
-    def withId(value: IdentifierKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(null)
-        ret
-    }
-    @scala.inline
-    def withImplements(value: js.Array[ClassImplementsKind | TSExpressionWithTypeArgumentsKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImplements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
-        ret
-    }
-    @scala.inline
-    def withSuperClass(value: ExpressionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuperClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuperClassNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superClass")(null)
-        ret
-    }
-    @scala.inline
-    def withSuperTypeParameters(value: TypeParameterInstantiationKind | TSTypeParameterInstantiationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superTypeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuperTypeParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superTypeParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuperTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("superTypeParameters")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TypeParameterDeclarationKind | TSTypeParameterDeclarationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

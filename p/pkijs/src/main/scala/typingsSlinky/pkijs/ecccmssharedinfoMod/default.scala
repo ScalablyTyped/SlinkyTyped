@@ -1,5 +1,7 @@
 package typingsSlinky.pkijs.ecccmssharedinfoMod
 
+import typingsSlinky.asn1js.mod.OctetString
+import typingsSlinky.std.AlgorithmIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +10,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends ECCCMSSharedInfo {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var keyInfo: AlgorithmIdentifier = js.native
+  /* CompleteClass */
+  override var suppPubInfo: OctetString = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

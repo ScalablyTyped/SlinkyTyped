@@ -1,16 +1,15 @@
 package typingsSlinky.awsSdkClientS3Browser.typesPutBucketEncryptionOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PutBucketEncryptionOutput
   extends MetadataBearer
-     with OutputTypesUnion
+     with _OutputTypesUnion
 
 object PutBucketEncryptionOutput {
   @scala.inline

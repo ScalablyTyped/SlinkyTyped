@@ -6,14 +6,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a group of composite materials. */
-@js.native
 trait Printing3DCompositeMaterialGroup extends js.Object {
   /** Gets an list of mixtures that define individual composite materials. Each mixture is defined by listing the proportion of the overall mixture for each base material (values between 0 and 1), where the proportion values are specified in the same order as the base materials in MaterialIndices . */
-  var composites: IVector[Printing3DCompositeMaterial] = js.native
+  var composites: IVector[Printing3DCompositeMaterial]
   /** Gets the identifier (ID) of the base material group that defines the materials used in the composite material group. */
-  var materialGroupId: Double = js.native
+  var materialGroupId: Double
   /** Gets an ordered list of base materials that are used to make the composite materials in the group. The order of base materials is maintained in the mixture values defined by Composites . */
-  var materialIndices: IVector[Double] = js.native
+  var materialIndices: IVector[Double]
 }
 
 object Printing3DCompositeMaterialGroup {
@@ -26,31 +25,5 @@ object Printing3DCompositeMaterialGroup {
     val __obj = js.Dynamic.literal(composites = composites.asInstanceOf[js.Any], materialGroupId = materialGroupId.asInstanceOf[js.Any], materialIndices = materialIndices.asInstanceOf[js.Any])
     __obj.asInstanceOf[Printing3DCompositeMaterialGroup]
   }
-  @scala.inline
-  implicit class Printing3DCompositeMaterialGroupOps[Self <: Printing3DCompositeMaterialGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComposites(value: IVector[Printing3DCompositeMaterial]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaterialGroupId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("materialGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaterialIndices(value: IVector[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("materialIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

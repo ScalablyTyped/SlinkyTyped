@@ -5,93 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FreeBusyResponse extends js.Object {
   /** List of free/busy information for calendars. */
-  var calendars: js.UndefOr[Record[String, FreeBusyCalendar]] = js.native
+  var calendars: js.UndefOr[Record[String, FreeBusyCalendar]] = js.undefined
   /** Expansion of groups. */
-  var groups: js.UndefOr[Record[String, FreeBusyGroup]] = js.native
+  var groups: js.UndefOr[Record[String, FreeBusyGroup]] = js.undefined
   /** Type of the resource ("calendar#freeBusy"). */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The end of the interval. */
-  var timeMax: js.UndefOr[String] = js.native
+  var timeMax: js.UndefOr[String] = js.undefined
   /** The start of the interval. */
-  var timeMin: js.UndefOr[String] = js.native
+  var timeMin: js.UndefOr[String] = js.undefined
 }
 
 object FreeBusyResponse {
   @scala.inline
-  def apply(): FreeBusyResponse = {
+  def apply(
+    calendars: Record[String, FreeBusyCalendar] = null,
+    groups: Record[String, FreeBusyGroup] = null,
+    kind: String = null,
+    timeMax: String = null,
+    timeMin: String = null
+  ): FreeBusyResponse = {
     val __obj = js.Dynamic.literal()
+    if (calendars != null) __obj.updateDynamic("calendars")(calendars.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (timeMax != null) __obj.updateDynamic("timeMax")(timeMax.asInstanceOf[js.Any])
+    if (timeMin != null) __obj.updateDynamic("timeMin")(timeMin.asInstanceOf[js.Any])
     __obj.asInstanceOf[FreeBusyResponse]
   }
-  @scala.inline
-  implicit class FreeBusyResponseOps[Self <: FreeBusyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendars(value: Record[String, FreeBusyCalendar]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: Record[String, FreeBusyGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

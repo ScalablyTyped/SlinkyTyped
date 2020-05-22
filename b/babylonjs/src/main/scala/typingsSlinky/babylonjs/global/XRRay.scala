@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.global
 
 import typingsSlinky.std.DOMPointInit
+import typingsSlinky.std.DOMPointReadOnly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +15,11 @@ class XRRay protected ()
   def this(transformOrOrigin: DOMPointInit) = this()
   def this(transformOrOrigin: typingsSlinky.babylonjs.XRRigidTransform, direction: DOMPointInit) = this()
   def this(transformOrOrigin: DOMPointInit, direction: DOMPointInit) = this()
+  /* CompleteClass */
+  override var direction: DOMPointReadOnly = js.native
+  /* CompleteClass */
+  override var matrix: js.typedarray.Float32Array = js.native
+  /* CompleteClass */
+  override var origin: DOMPointReadOnly = js.native
 }
 

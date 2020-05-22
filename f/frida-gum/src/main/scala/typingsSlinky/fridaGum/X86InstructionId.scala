@@ -64,7 +64,6 @@ object X86InstructionId {
   def jp: typingsSlinky.fridaGum.fridaGumStrings.jp = "jp".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.jp]
   @scala.inline
   def jrcxz: typingsSlinky.fridaGum.fridaGumStrings.jrcxz = "jrcxz".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.jrcxz]
-  @JSName("js")
   @scala.inline
   def js_ : typingsSlinky.fridaGum.fridaGumStrings.js_ = "js".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.js_]
 }

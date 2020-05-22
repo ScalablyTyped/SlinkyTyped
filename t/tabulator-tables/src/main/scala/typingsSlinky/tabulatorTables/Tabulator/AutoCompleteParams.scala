@@ -2,6 +2,8 @@ package typingsSlinky.tabulatorTables.Tabulator
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`true`
+import typingsSlinky.tabulatorTables.tabulatorTablesStrings.asc
+import typingsSlinky.tabulatorTables.tabulatorTablesStrings.desc
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.editor
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.hybrid
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.table
@@ -9,159 +11,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoCompleteParams
   extends SharedEditorParams
      with SharedSelectAutoCompleteEditorParams
-     with EditorParams {
-  var allowEmpty: js.UndefOr[Boolean] = js.native
-  var emptyPlaceholder: js.UndefOr[String | HTMLElement] = js.native
-  var freetext: js.UndefOr[Boolean] = js.native
-  var listItemFormatter: js.UndefOr[js.Function2[/* value */ String, /* text */ String, String]] = js.native
+     with _EditorParams {
+  var allowEmpty: js.UndefOr[Boolean] = js.undefined
+  var emptyPlaceholder: js.UndefOr[String | HTMLElement] = js.undefined
+  var freetext: js.UndefOr[Boolean] = js.undefined
+  var listItemFormatter: js.UndefOr[js.Function2[/* value */ String, /* text */ String, String]] = js.undefined
   var searchFunc: js.UndefOr[
     js.Function2[
       /* term */ String, 
       /* values */ js.Array[String], 
       js.Array[String] | js.Promise[js.Array[String]]
     ]
-  ] = js.native
+  ] = js.undefined
   /**If you return a promise from the searchFunc callback then a "Searching..." placeholder will be displayed until the promise resolved.
     You can customise this placeholder using the searchingPlaceholder option. */
-  var searchingPlaceholder: js.UndefOr[String | HTMLElement] = js.native
-  var showListOnEmpty: js.UndefOr[Boolean] = js.native
-  var values: `true` | js.Array[String] | JSONRecord | String = js.native
-  var verticalNavigation: js.UndefOr[editor | table | hybrid] = js.native
+  var searchingPlaceholder: js.UndefOr[String | HTMLElement] = js.undefined
+  var showListOnEmpty: js.UndefOr[Boolean] = js.undefined
+  var values: `true` | js.Array[String] | JSONRecord | String
+  var verticalNavigation: js.UndefOr[editor | table | hybrid] = js.undefined
 }
 
 object AutoCompleteParams {
   @scala.inline
-  def apply(values: `true` | js.Array[String] | JSONRecord | String): AutoCompleteParams = {
+  def apply(
+    values: `true` | js.Array[String] | JSONRecord | String,
+    allowEmpty: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String = null,
+    elementAttributes: JSONRecord = null,
+    emptyPlaceholder: String | HTMLElement = null,
+    freetext: js.UndefOr[Boolean] = js.undefined,
+    listItemFormatter: (/* value */ String, /* text */ String) => String = null,
+    mask: String = null,
+    maskAutoFill: js.UndefOr[Boolean] = js.undefined,
+    maskLetterChar: String = null,
+    maskNumberChar: String = null,
+    maskWildcardChar: String = null,
+    searchFunc: (/* term */ String, /* values */ js.Array[String]) => js.Array[String] | js.Promise[js.Array[String]] = null,
+    searchingPlaceholder: String | HTMLElement = null,
+    showListOnEmpty: js.UndefOr[Boolean] = js.undefined,
+    sortValuesList: asc | desc = null,
+    verticalNavigation: editor | table | hybrid = null
+  ): AutoCompleteParams = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowEmpty)) __obj.updateDynamic("allowEmpty")(allowEmpty.get.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (elementAttributes != null) __obj.updateDynamic("elementAttributes")(elementAttributes.asInstanceOf[js.Any])
+    if (emptyPlaceholder != null) __obj.updateDynamic("emptyPlaceholder")(emptyPlaceholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(freetext)) __obj.updateDynamic("freetext")(freetext.get.asInstanceOf[js.Any])
+    if (listItemFormatter != null) __obj.updateDynamic("listItemFormatter")(js.Any.fromFunction2(listItemFormatter))
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (!js.isUndefined(maskAutoFill)) __obj.updateDynamic("maskAutoFill")(maskAutoFill.get.asInstanceOf[js.Any])
+    if (maskLetterChar != null) __obj.updateDynamic("maskLetterChar")(maskLetterChar.asInstanceOf[js.Any])
+    if (maskNumberChar != null) __obj.updateDynamic("maskNumberChar")(maskNumberChar.asInstanceOf[js.Any])
+    if (maskWildcardChar != null) __obj.updateDynamic("maskWildcardChar")(maskWildcardChar.asInstanceOf[js.Any])
+    if (searchFunc != null) __obj.updateDynamic("searchFunc")(js.Any.fromFunction2(searchFunc))
+    if (searchingPlaceholder != null) __obj.updateDynamic("searchingPlaceholder")(searchingPlaceholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(showListOnEmpty)) __obj.updateDynamic("showListOnEmpty")(showListOnEmpty.get.asInstanceOf[js.Any])
+    if (sortValuesList != null) __obj.updateDynamic("sortValuesList")(sortValuesList.asInstanceOf[js.Any])
+    if (verticalNavigation != null) __obj.updateDynamic("verticalNavigation")(verticalNavigation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoCompleteParams]
   }
-  @scala.inline
-  implicit class AutoCompleteParamsOps[Self <: AutoCompleteParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValues(value: `true` | js.Array[String] | JSONRecord | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmptyPlaceholderHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmptyPlaceholder(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreetext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freetext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreetext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freetext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItemFormatter(value: (/* value */ String, /* text */ String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemFormatter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutListItemFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchFunc(
-      value: (/* term */ String, /* values */ js.Array[String]) => js.Array[String] | js.Promise[js.Array[String]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFunc")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSearchFunc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFunc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchingPlaceholderHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchingPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearchingPlaceholder(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchingPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchingPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchingPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowListOnEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showListOnEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowListOnEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showListOnEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalNavigation(value: editor | table | hybrid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalNavigation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,20 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InvitationsResource extends js.Object {
   /**
     * Creates and sends out an email invitation to access
     * an Ad Exchange client buyer account.
     */
-  def create(request: Accesstoken): Request[ClientUserInvitation] = js.native
+  def create(request: Accesstoken): Request[ClientUserInvitation]
   /** Retrieves an existing client user invitation. */
-  def get(request: AccountId): Request[ClientUserInvitation] = js.native
+  def get(request: AccountId): Request[ClientUserInvitation]
   /**
     * Lists all the client users invitations for a client
     * with a given account ID.
     */
-  def list(request: Alt): Request[ListClientUserInvitationsResponse] = js.native
+  def list(request: Alt): Request[ListClientUserInvitationsResponse]
 }
 
 object InvitationsResource {
@@ -34,31 +33,5 @@ object InvitationsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[InvitationsResource]
   }
-  @scala.inline
-  implicit class InvitationsResourceOps[Self <: InvitationsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[ClientUserInvitation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: AccountId => Request[ClientUserInvitation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Alt => Request[ListClientUserInvitationsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

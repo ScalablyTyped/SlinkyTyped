@@ -7,75 +7,49 @@ import scala.scalajs.js.annotation._
 /**
   * Which other rules to apply in the context of this rule
   */
-@js.native
 trait StructureMapGroupRuleDependent extends BackboneElement {
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'variable'.
     */
-  var _variable: js.UndefOr[js.Array[Element]] = js.native
+  var _variable: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Name of a rule or group to apply
     */
-  var name: id = js.native
+  var name: id
   /**
     * Variable to pass to the rule or group
     */
-  var variable: js.Array[String] = js.native
+  var variable: js.Array[String]
 }
 
 object StructureMapGroupRuleDependent {
   @scala.inline
-  def apply(name: id, variable: js.Array[String]): StructureMapGroupRuleDependent = {
+  def apply(
+    name: id,
+    variable: js.Array[String],
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _name: Element = null,
+    _variable: js.Array[Element] = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): StructureMapGroupRuleDependent = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], variable = variable.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (_variable != null) __obj.updateDynamic("_variable")(_variable.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureMapGroupRuleDependent]
   }
-  @scala.inline
-  implicit class StructureMapGroupRuleDependentOps[Self <: StructureMapGroupRuleDependent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVariable(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_variable(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_variable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_variable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_variable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

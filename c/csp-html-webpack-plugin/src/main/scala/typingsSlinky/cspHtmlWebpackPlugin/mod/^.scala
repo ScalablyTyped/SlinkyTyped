@@ -1,5 +1,6 @@
 package typingsSlinky.cspHtmlWebpackPlugin.mod
 
+import typingsSlinky.webpack.mod.Compiler_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +15,8 @@ import scala.scalajs.js.annotation._
 class ^ () extends CspHtmlWebpackPlugin {
   def this(policy: Policy) = this()
   def this(policy: Policy, additionalOpts: AdditionalOptions) = this()
+  /* CompleteClass */
+  @JSName("apply")
+  override def apply(compiler: Compiler_): Unit = js.native
 }
 

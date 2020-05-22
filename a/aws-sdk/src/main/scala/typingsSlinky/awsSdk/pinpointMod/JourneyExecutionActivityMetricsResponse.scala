@@ -45,49 +45,5 @@ object JourneyExecutionActivityMetricsResponse {
     val __obj = js.Dynamic.literal(ActivityType = ActivityType.asInstanceOf[js.Any], ApplicationId = ApplicationId.asInstanceOf[js.Any], JourneyActivityId = JourneyActivityId.asInstanceOf[js.Any], JourneyId = JourneyId.asInstanceOf[js.Any], LastEvaluatedTime = LastEvaluatedTime.asInstanceOf[js.Any], Metrics = Metrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[JourneyExecutionActivityMetricsResponse]
   }
-  @scala.inline
-  implicit class JourneyExecutionActivityMetricsResponseOps[Self <: JourneyExecutionActivityMetricsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityType(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplicationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJourneyActivityId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JourneyActivityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJourneyId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JourneyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastEvaluatedTime(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: MapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings related to the ASPxClientCommandConsts.TABLEROWPROPERTIES_DIALOG_COMMAND command parameter.
   */
-@js.native
 trait ASPxClientHtmlEditorTableRowPropertiesCommandArguments extends ASPxClientHtmlEditorCommandArguments {
   /**
     * Contains the style settings specifying the appearance of the specified table row.
     */
-  var styleSettings: ASPxClientHtmlEditorCommandStyleSettings = js.native
+  var styleSettings: ASPxClientHtmlEditorCommandStyleSettings
 }
 
 object ASPxClientHtmlEditorTableRowPropertiesCommandArguments {
@@ -21,19 +20,5 @@ object ASPxClientHtmlEditorTableRowPropertiesCommandArguments {
     val __obj = js.Dynamic.literal(selectedElement = selectedElement.asInstanceOf[js.Any], styleSettings = styleSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientHtmlEditorTableRowPropertiesCommandArguments]
   }
-  @scala.inline
-  implicit class ASPxClientHtmlEditorTableRowPropertiesCommandArgumentsOps[Self <: ASPxClientHtmlEditorTableRowPropertiesCommandArguments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyleSettings(value: ASPxClientHtmlEditorCommandStyleSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

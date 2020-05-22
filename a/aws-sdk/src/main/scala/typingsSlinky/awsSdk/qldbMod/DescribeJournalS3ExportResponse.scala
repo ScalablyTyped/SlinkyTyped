@@ -18,19 +18,5 @@ object DescribeJournalS3ExportResponse {
     val __obj = js.Dynamic.literal(ExportDescription = ExportDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeJournalS3ExportResponse]
   }
-  @scala.inline
-  implicit class DescribeJournalS3ExportResponseOps[Self <: DescribeJournalS3ExportResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportDescription(value: JournalS3ExportDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

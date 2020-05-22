@@ -1,5 +1,6 @@
 package typingsSlinky.reactMovable.components
 
+import org.scalajs.dom.raw.Element
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -25,6 +26,10 @@ object List {
        with StBuildingComponent[tag.type, default[js.Any]] {
     @scala.inline
     def beforeDrag(value: /* params */ Elements => Unit): this.type = set("beforeDrag", js.Any.fromFunction1(value))
+    @scala.inline
+    def container(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerNull: this.type = set("container", null)
   }
   
   def withProps[Value](p: IProps[Value]): Builder[Value] = new Builder[Value](js.Array(this.component, p.asInstanceOf[js.Any]))

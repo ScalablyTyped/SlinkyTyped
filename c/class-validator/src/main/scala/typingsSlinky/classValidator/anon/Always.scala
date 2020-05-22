@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Always extends js.Object {
   /**
     * Indicates if validation must be performed always, no matter of validation groups used.
     */
-  var always: js.UndefOr[Boolean] = js.native
+  var always: js.UndefOr[Boolean] = js.undefined
   /**
     * Constraints set by validation type.
     */
-  var constraints: js.UndefOr[js.Array[_]] = js.native
+  var constraints: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Specifies if validated value is an array and each of its item must be validated.
     */
-  var each: js.UndefOr[Boolean] = js.native
+  var each: js.UndefOr[Boolean] = js.undefined
   /**
     * Validation groups used for this validation.
     */
-  var groups: js.UndefOr[js.Array[String]] = js.native
+  var groups: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Error message used to be used on validation fail.
     * You can use "$value" to use value that was failed by validation.
@@ -37,124 +36,42 @@ trait Always extends js.Object {
       /* constraint2 */ js.UndefOr[js.Any], 
       String
     ])
-  ] = js.native
+  ] = js.undefined
   /**
     * Specific validation type options.
     */
-  var options: js.UndefOr[js.Any] = js.native
+  var options: js.UndefOr[js.Any] = js.undefined
   /**
     * Validation type. Should be one of the ValidationTypes value.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object Always {
   @scala.inline
-  def apply(`type`: String): Always = {
+  def apply(
+    `type`: String,
+    always: js.UndefOr[Boolean] = js.undefined,
+    constraints: js.Array[_] = null,
+    each: js.UndefOr[Boolean] = js.undefined,
+    groups: js.Array[String] = null,
+    message: String | (js.Function3[
+      /* value */ js.UndefOr[js.Any], 
+      /* constraint1 */ js.UndefOr[js.Any], 
+      /* constraint2 */ js.UndefOr[js.Any], 
+      String
+    ]) = null,
+    options: js.Any = null
+  ): Always = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(always)) __obj.updateDynamic("always")(always.get.asInstanceOf[js.Any])
+    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
+    if (!js.isUndefined(each)) __obj.updateDynamic("each")(each.get.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[Always]
   }
-  @scala.inline
-  implicit class AlwaysOps[Self <: Always] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlways(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("always")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlways: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("always")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraints(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEach(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageFunction3(
-      value: (/* value */ js.UndefOr[js.Any], /* constraint1 */ js.UndefOr[js.Any], /* constraint2 */ js.UndefOr[js.Any]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withMessage(
-      value: String | (js.Function3[
-          /* value */ js.UndefOr[js.Any], 
-          /* constraint1 */ js.UndefOr[js.Any], 
-          /* constraint2 */ js.UndefOr[js.Any], 
-          String
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

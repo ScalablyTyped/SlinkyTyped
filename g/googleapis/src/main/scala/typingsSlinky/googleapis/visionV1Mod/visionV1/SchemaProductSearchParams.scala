@@ -39,65 +39,18 @@ trait SchemaProductSearchParams extends js.Object {
 
 object SchemaProductSearchParams {
   @scala.inline
-  def apply(): SchemaProductSearchParams = {
+  def apply(
+    boundingPoly: SchemaBoundingPoly = null,
+    filter: String = null,
+    productCategories: js.Array[String] = null,
+    productSet: String = null
+  ): SchemaProductSearchParams = {
     val __obj = js.Dynamic.literal()
+    if (boundingPoly != null) __obj.updateDynamic("boundingPoly")(boundingPoly.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (productCategories != null) __obj.updateDynamic("productCategories")(productCategories.asInstanceOf[js.Any])
+    if (productSet != null) __obj.updateDynamic("productSet")(productSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProductSearchParams]
   }
-  @scala.inline
-  implicit class SchemaProductSearchParamsOps[Self <: SchemaProductSearchParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingPoly(value: SchemaBoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingPoly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductSet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

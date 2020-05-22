@@ -6,8 +6,7 @@ import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.bufferMod.TranscodeEncoding
 import typingsSlinky.node.childProcessMod.SerializationType
 import typingsSlinky.node.childProcessMod.StdioNull
-import typingsSlinky.node.childProcessMod.StdioOptions
-import typingsSlinky.node.childProcessMod.StdioPipe
+import typingsSlinky.node.childProcessMod._StdioOptions
 import typingsSlinky.node.cryptoMod.CipherCCMTypes
 import typingsSlinky.node.cryptoMod.CipherGCMTypes
 import typingsSlinky.node.cryptoMod.ECDHKeyFormat
@@ -19,6 +18,7 @@ import typingsSlinky.node.cryptoMod.KeyType
 import typingsSlinky.node.cryptoMod.Utf8AsciiBinaryEncoding
 import typingsSlinky.node.cryptoMod.Utf8AsciiLatin1Encoding
 import typingsSlinky.node.dgramMod.SocketType
+import typingsSlinky.node.fsMod.BufferEncodingOption
 import typingsSlinky.node.fsMod.symlink.Type
 import typingsSlinky.node.perfHooksMod.EntryType
 import typingsSlinky.node.tlsMod.SecureVersion
@@ -596,7 +596,7 @@ object nodeStrings {
   sealed trait boolean extends Style
   
   @js.native
-  sealed trait buffer_ extends js.Object
+  sealed trait buffer_ extends BufferEncodingOption
   
   @js.native
   sealed trait `chacha20-poly1305` extends CipherCCMTypes
@@ -718,7 +718,7 @@ object nodeStrings {
   @js.native
   sealed trait ignore
     extends StdioNull
-       with StdioOptions
+       with _StdioOptions
   
   @js.native
   sealed trait information extends js.Object
@@ -726,7 +726,7 @@ object nodeStrings {
   @js.native
   sealed trait inherit
     extends StdioNull
-       with StdioOptions
+       with _StdioOptions
   
   @js.native
   sealed trait inspectorNotification extends js.Object
@@ -820,9 +820,7 @@ object nodeStrings {
   sealed trait ping extends js.Object
   
   @js.native
-  sealed trait pipe
-    extends StdioOptions
-       with StdioPipe
+  sealed trait pipe extends _StdioOptions
   
   @js.native
   sealed trait pkcs1 extends js.Object

@@ -29,21 +29,21 @@ trait ShapeFill extends ClientObject {
   var context_ShapeFill: RequestContext = js.native
   /**
     *
-    * Represents the shape fill foreground color in HTML color format, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange")
+    * Represents the shape fill foreground color in HTML color format, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange")
     *
     * [Api set: ExcelApi 1.9]
     */
   var foregroundColor: String = js.native
   /**
     *
-    * Returns or sets the transparency percentage of the fill as a value from 0.0 (opaque) through 1.0 (clear). Returns null if the shape type does not support transparency or the shape fill has inconsistent transparency, such as with a gradient fill type.
+    * Specifies the transparency percentage of the fill as a value from 0.0 (opaque) through 1.0 (clear). Returns null if the shape type does not support transparency or the shape fill has inconsistent transparency, such as with a gradient fill type.
     *
     * [Api set: ExcelApi 1.9]
     */
   var transparency: Double = js.native
   /**
     *
-    * Returns the fill type of the shape. Read-only. See Excel.ShapeFillType for details.
+    * Returns the fill type of the shape. See Excel.ShapeFillType for details.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -84,7 +84,7 @@ trait ShapeFill extends ClientObject {
     *
     * [Api set: ExcelApi 1.9]
     *
-    * @param color A string that represents the fill color in HTML color format, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * @param color A string that represents the fill color in HTML color format, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     */
   def setSolidColor(color: String): Unit = js.native
   /**

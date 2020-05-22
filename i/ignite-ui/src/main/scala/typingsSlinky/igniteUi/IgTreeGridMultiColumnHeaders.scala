@@ -6,107 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgTreeGridMultiColumnHeaders
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Event fired after the group collapsing has been executed and results are rendered.
-  	 */
-  var groupCollapsed: js.UndefOr[GroupCollapsedEvent] = js.native
+    * Event fired after the group collapsing has been executed and results are rendered.
+    */
+  var groupCollapsed: js.UndefOr[GroupCollapsedEvent] = js.undefined
   /**
-  	 * Event fired before a group collapsing operation is executed.
-  	 */
-  var groupCollapsing: js.UndefOr[GroupCollapsingEvent] = js.native
+    * Event fired before a group collapsing operation is executed.
+    */
+  var groupCollapsing: js.UndefOr[GroupCollapsingEvent] = js.undefined
   /**
-  	 * Event fired after the group expanding has been executed and results are rendered.
-  	 */
-  var groupExpanded: js.UndefOr[GroupExpandedEvent] = js.native
+    * Event fired after the group expanding has been executed and results are rendered.
+    */
+  var groupExpanded: js.UndefOr[GroupExpandedEvent] = js.undefined
   /**
-  	 * Event fired before a group expanding operation is executed.
-  	 */
-  var groupExpanding: js.UndefOr[GroupExpandingEvent] = js.native
+    * Event fired before a group expanding operation is executed.
+    */
+  var groupExpanding: js.UndefOr[GroupExpandingEvent] = js.undefined
   /**
-  	 * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
-  	 */
-  var inherit: js.UndefOr[Boolean] = js.native
+    * This option is inherited from a parent widget and it's not applicable for the igTreeGrid.
+    */
+  var inherit: js.UndefOr[Boolean] = js.undefined
 }
 
 object IgTreeGridMultiColumnHeaders {
   @scala.inline
-  def apply(): IgTreeGridMultiColumnHeaders = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    groupCollapsed: (/* event */ Event, /* ui */ GroupCollapsedEventUIParam) => Unit = null,
+    groupCollapsing: (/* event */ Event, /* ui */ GroupCollapsingEventUIParam) => Unit = null,
+    groupExpanded: (/* event */ Event, /* ui */ GroupExpandedEventUIParam) => Unit = null,
+    groupExpanding: (/* event */ Event, /* ui */ GroupExpandingEventUIParam) => Unit = null,
+    inherit: js.UndefOr[Boolean] = js.undefined
+  ): IgTreeGridMultiColumnHeaders = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (groupCollapsed != null) __obj.updateDynamic("groupCollapsed")(js.Any.fromFunction2(groupCollapsed))
+    if (groupCollapsing != null) __obj.updateDynamic("groupCollapsing")(js.Any.fromFunction2(groupCollapsing))
+    if (groupExpanded != null) __obj.updateDynamic("groupExpanded")(js.Any.fromFunction2(groupExpanded))
+    if (groupExpanding != null) __obj.updateDynamic("groupExpanding")(js.Any.fromFunction2(groupExpanding))
+    if (!js.isUndefined(inherit)) __obj.updateDynamic("inherit")(inherit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgTreeGridMultiColumnHeaders]
   }
-  @scala.inline
-  implicit class IgTreeGridMultiColumnHeadersOps[Self <: IgTreeGridMultiColumnHeaders] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupCollapsed(value: (/* event */ Event, /* ui */ GroupCollapsedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupCollapsed")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGroupCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupCollapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupCollapsing(value: (/* event */ Event, /* ui */ GroupCollapsingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupCollapsing")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGroupCollapsing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupCollapsing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupExpanded(value: (/* event */ Event, /* ui */ GroupExpandedEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupExpanded")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGroupExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupExpanding(value: (/* event */ Event, /* ui */ GroupExpandingEventUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupExpanding")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGroupExpanding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupExpanding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInherit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInherit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -24,149 +24,32 @@ trait SchemaGooglePrivacyDlpV2PrimitiveTransformation extends js.Object {
 
 object SchemaGooglePrivacyDlpV2PrimitiveTransformation {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2PrimitiveTransformation = {
+  def apply(
+    bucketingConfig: SchemaGooglePrivacyDlpV2BucketingConfig = null,
+    characterMaskConfig: SchemaGooglePrivacyDlpV2CharacterMaskConfig = null,
+    cryptoDeterministicConfig: SchemaGooglePrivacyDlpV2CryptoDeterministicConfig = null,
+    cryptoHashConfig: SchemaGooglePrivacyDlpV2CryptoHashConfig = null,
+    cryptoReplaceFfxFpeConfig: SchemaGooglePrivacyDlpV2CryptoReplaceFfxFpeConfig = null,
+    dateShiftConfig: SchemaGooglePrivacyDlpV2DateShiftConfig = null,
+    fixedSizeBucketingConfig: SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig = null,
+    redactConfig: SchemaGooglePrivacyDlpV2RedactConfig = null,
+    replaceConfig: SchemaGooglePrivacyDlpV2ReplaceValueConfig = null,
+    replaceWithInfoTypeConfig: SchemaGooglePrivacyDlpV2ReplaceWithInfoTypeConfig = null,
+    timePartConfig: SchemaGooglePrivacyDlpV2TimePartConfig = null
+  ): SchemaGooglePrivacyDlpV2PrimitiveTransformation = {
     val __obj = js.Dynamic.literal()
+    if (bucketingConfig != null) __obj.updateDynamic("bucketingConfig")(bucketingConfig.asInstanceOf[js.Any])
+    if (characterMaskConfig != null) __obj.updateDynamic("characterMaskConfig")(characterMaskConfig.asInstanceOf[js.Any])
+    if (cryptoDeterministicConfig != null) __obj.updateDynamic("cryptoDeterministicConfig")(cryptoDeterministicConfig.asInstanceOf[js.Any])
+    if (cryptoHashConfig != null) __obj.updateDynamic("cryptoHashConfig")(cryptoHashConfig.asInstanceOf[js.Any])
+    if (cryptoReplaceFfxFpeConfig != null) __obj.updateDynamic("cryptoReplaceFfxFpeConfig")(cryptoReplaceFfxFpeConfig.asInstanceOf[js.Any])
+    if (dateShiftConfig != null) __obj.updateDynamic("dateShiftConfig")(dateShiftConfig.asInstanceOf[js.Any])
+    if (fixedSizeBucketingConfig != null) __obj.updateDynamic("fixedSizeBucketingConfig")(fixedSizeBucketingConfig.asInstanceOf[js.Any])
+    if (redactConfig != null) __obj.updateDynamic("redactConfig")(redactConfig.asInstanceOf[js.Any])
+    if (replaceConfig != null) __obj.updateDynamic("replaceConfig")(replaceConfig.asInstanceOf[js.Any])
+    if (replaceWithInfoTypeConfig != null) __obj.updateDynamic("replaceWithInfoTypeConfig")(replaceWithInfoTypeConfig.asInstanceOf[js.Any])
+    if (timePartConfig != null) __obj.updateDynamic("timePartConfig")(timePartConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2PrimitiveTransformation]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2PrimitiveTransformationOps[Self <: SchemaGooglePrivacyDlpV2PrimitiveTransformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketingConfig(value: SchemaGooglePrivacyDlpV2BucketingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCharacterMaskConfig(value: SchemaGooglePrivacyDlpV2CharacterMaskConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characterMaskConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharacterMaskConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characterMaskConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCryptoDeterministicConfig(value: SchemaGooglePrivacyDlpV2CryptoDeterministicConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoDeterministicConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoDeterministicConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoDeterministicConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCryptoHashConfig(value: SchemaGooglePrivacyDlpV2CryptoHashConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoHashConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoHashConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoHashConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCryptoReplaceFfxFpeConfig(value: SchemaGooglePrivacyDlpV2CryptoReplaceFfxFpeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoReplaceFfxFpeConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoReplaceFfxFpeConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoReplaceFfxFpeConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateShiftConfig(value: SchemaGooglePrivacyDlpV2DateShiftConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateShiftConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateShiftConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateShiftConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedSizeBucketingConfig(value: SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSizeBucketingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedSizeBucketingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSizeBucketingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedactConfig(value: SchemaGooglePrivacyDlpV2RedactConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redactConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedactConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redactConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceConfig(value: SchemaGooglePrivacyDlpV2ReplaceValueConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceWithInfoTypeConfig(value: SchemaGooglePrivacyDlpV2ReplaceWithInfoTypeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWithInfoTypeConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceWithInfoTypeConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceWithInfoTypeConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimePartConfig(value: SchemaGooglePrivacyDlpV2TimePartConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimePartConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

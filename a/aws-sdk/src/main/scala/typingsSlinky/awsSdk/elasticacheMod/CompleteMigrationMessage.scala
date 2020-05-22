@@ -18,35 +18,10 @@ trait CompleteMigrationMessage extends js.Object {
 
 object CompleteMigrationMessage {
   @scala.inline
-  def apply(ReplicationGroupId: String): CompleteMigrationMessage = {
+  def apply(ReplicationGroupId: String, Force: js.UndefOr[Boolean] = js.undefined): CompleteMigrationMessage = {
     val __obj = js.Dynamic.literal(ReplicationGroupId = ReplicationGroupId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Force)) __obj.updateDynamic("Force")(Force.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompleteMigrationMessage]
   }
-  @scala.inline
-  implicit class CompleteMigrationMessageOps[Self <: CompleteMigrationMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

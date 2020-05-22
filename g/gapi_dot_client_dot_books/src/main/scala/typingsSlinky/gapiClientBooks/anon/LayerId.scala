@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LayerId extends js.Object {
-  var allowedCharacterCount: js.UndefOr[Double] = js.native
-  var layerId: js.UndefOr[String] = js.native
-  var limitType: js.UndefOr[String] = js.native
-  var remainingCharacterCount: js.UndefOr[Double] = js.native
-  var updated: js.UndefOr[String] = js.native
+  var allowedCharacterCount: js.UndefOr[Double] = js.undefined
+  var layerId: js.UndefOr[String] = js.undefined
+  var limitType: js.UndefOr[String] = js.undefined
+  var remainingCharacterCount: js.UndefOr[Double] = js.undefined
+  var updated: js.UndefOr[String] = js.undefined
 }
 
 object LayerId {
   @scala.inline
-  def apply(): LayerId = {
+  def apply(
+    allowedCharacterCount: js.UndefOr[Double] = js.undefined,
+    layerId: String = null,
+    limitType: String = null,
+    remainingCharacterCount: js.UndefOr[Double] = js.undefined,
+    updated: String = null
+  ): LayerId = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowedCharacterCount)) __obj.updateDynamic("allowedCharacterCount")(allowedCharacterCount.get.asInstanceOf[js.Any])
+    if (layerId != null) __obj.updateDynamic("layerId")(layerId.asInstanceOf[js.Any])
+    if (limitType != null) __obj.updateDynamic("limitType")(limitType.asInstanceOf[js.Any])
+    if (!js.isUndefined(remainingCharacterCount)) __obj.updateDynamic("remainingCharacterCount")(remainingCharacterCount.get.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerId]
   }
-  @scala.inline
-  implicit class LayerIdOps[Self <: LayerId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedCharacterCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedCharacterCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedCharacterCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedCharacterCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimitType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimitType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limitType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingCharacterCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingCharacterCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingCharacterCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingCharacterCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

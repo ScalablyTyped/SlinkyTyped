@@ -14,6 +14,10 @@ object deserializationErrorMod extends js.Object {
     def this(message: String, json: String) = this()
     var _json: js.Any = js.native
     val json: js.UndefOr[String] = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
 }

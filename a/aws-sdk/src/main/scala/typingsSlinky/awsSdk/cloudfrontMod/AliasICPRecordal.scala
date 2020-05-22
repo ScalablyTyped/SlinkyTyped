@@ -18,41 +18,11 @@ trait AliasICPRecordal extends js.Object {
 
 object AliasICPRecordal {
   @scala.inline
-  def apply(): AliasICPRecordal = {
+  def apply(CNAME: String = null, ICPRecordalStatus: ICPRecordalStatus = null): AliasICPRecordal = {
     val __obj = js.Dynamic.literal()
+    if (CNAME != null) __obj.updateDynamic("CNAME")(CNAME.asInstanceOf[js.Any])
+    if (ICPRecordalStatus != null) __obj.updateDynamic("ICPRecordalStatus")(ICPRecordalStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[AliasICPRecordal]
   }
-  @scala.inline
-  implicit class AliasICPRecordalOps[Self <: AliasICPRecordal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCNAME(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CNAME")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCNAME: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CNAME")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withICPRecordalStatus(value: ICPRecordalStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ICPRecordalStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutICPRecordalStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ICPRecordalStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

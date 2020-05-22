@@ -19,31 +19,5 @@ object TypeofS3 {
     val __obj = js.Dynamic.literal(ManagedUpload = ManagedUpload.asInstanceOf[js.Any], PresignedPost = PresignedPost.asInstanceOf[js.Any], Types = Types.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeofS3]
   }
-  @scala.inline
-  implicit class TypeofS3Ops[Self <: TypeofS3] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedUpload(value: TypeofManagedUpload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresignedPost(value: Instantiable0[PresignedPost]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresignedPost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: TypeofS3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Types")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

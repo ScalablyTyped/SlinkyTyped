@@ -18,35 +18,10 @@ trait DeploymentCommand extends js.Object {
 
 object DeploymentCommand {
   @scala.inline
-  def apply(Name: DeploymentCommandName): DeploymentCommand = {
+  def apply(Name: DeploymentCommandName, Args: DeploymentCommandArgs = null): DeploymentCommand = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (Args != null) __obj.updateDynamic("Args")(Args.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentCommand]
   }
-  @scala.inline
-  implicit class DeploymentCommandOps[Self <: DeploymentCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: DeploymentCommandName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgs(value: DeploymentCommandArgs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Args")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

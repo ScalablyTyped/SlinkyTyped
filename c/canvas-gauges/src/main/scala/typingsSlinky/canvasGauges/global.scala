@@ -1,5 +1,6 @@
 package typingsSlinky.canvasGauges
 
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.canvasGauges.CanvasGauges.AnimationRule
@@ -59,6 +60,40 @@ object global extends js.Object {
       def this(element: HTMLCanvasElement) = this()
       def this(element: HTMLCanvasElement, width: Double) = this()
       def this(element: HTMLCanvasElement, width: Double, height: Double) = this()
+      /* CompleteClass */
+      override var context: CanvasRenderingContext2D = js.native
+      /* CompleteClass */
+      override var contextClone: CanvasRenderingContext2D = js.native
+      /* CompleteClass */
+      override var drawHeight: Double = js.native
+      /* CompleteClass */
+      override var drawWidth: Double = js.native
+      /* CompleteClass */
+      override var drawX: Double = js.native
+      /* CompleteClass */
+      override var drawY: Double = js.native
+      /* CompleteClass */
+      override var element: HTMLCanvasElement = js.native
+      /* CompleteClass */
+      override var elementClone: HTMLCanvasElement = js.native
+      /* CompleteClass */
+      override var height: Double = js.native
+      /* CompleteClass */
+      override var minSide: Double = js.native
+      /* CompleteClass */
+      override var pixelRatio: Double = js.native
+      /* CompleteClass */
+      override var width: Double = js.native
+      /* CompleteClass */
+      override def commit(): typingsSlinky.canvasGauges.CanvasGauges.SmartCanvas = js.native
+      /* CompleteClass */
+      override def destroy(): js.Any = js.native
+      /* CompleteClass */
+      override def init(): js.Any = js.native
+      /* CompleteClass */
+      override def onRedraw(): js.Any = js.native
+      /* CompleteClass */
+      override def redraw(): typingsSlinky.canvasGauges.CanvasGauges.SmartCanvas = js.native
     }
     
     val GenericOptions: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions = js.native

@@ -5,192 +5,54 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<raphael.raphael.RaphaelFontFace> */
-@js.native
 trait PartialRaphaelFontFace extends js.Object {
-  var ascent: js.UndefOr[Double | String] = js.native
-  var bbox: js.UndefOr[String] = js.native
-  var descent: js.UndefOr[Double | String] = js.native
-  var `font-family`: js.UndefOr[String] = js.native
-  var `font-stretch`: js.UndefOr[String] = js.native
-  var `font-style`: js.UndefOr[String] = js.native
-  var `font-weight`: js.UndefOr[Double | String] = js.native
-  var `panose-1`: js.UndefOr[String] = js.native
-  var `underline-position`: js.UndefOr[Double | String] = js.native
-  var `underline-thickness`: js.UndefOr[Double | String] = js.native
-  var `unicode-range`: js.UndefOr[String] = js.native
-  var `units-per-em`: js.UndefOr[Double | String] = js.native
-  var `x-height`: js.UndefOr[Double | String] = js.native
+  var ascent: js.UndefOr[Double | String] = js.undefined
+  var bbox: js.UndefOr[String] = js.undefined
+  var descent: js.UndefOr[Double | String] = js.undefined
+  var `font-family`: js.UndefOr[String] = js.undefined
+  var `font-stretch`: js.UndefOr[String] = js.undefined
+  var `font-style`: js.UndefOr[String] = js.undefined
+  var `font-weight`: js.UndefOr[Double | String] = js.undefined
+  var `panose-1`: js.UndefOr[String] = js.undefined
+  var `underline-position`: js.UndefOr[Double | String] = js.undefined
+  var `underline-thickness`: js.UndefOr[Double | String] = js.undefined
+  var `unicode-range`: js.UndefOr[String] = js.undefined
+  var `units-per-em`: js.UndefOr[Double | String] = js.undefined
+  var `x-height`: js.UndefOr[Double | String] = js.undefined
 }
 
 object PartialRaphaelFontFace {
   @scala.inline
-  def apply(): PartialRaphaelFontFace = {
+  def apply(
+    ascent: Double | String = null,
+    bbox: String = null,
+    descent: Double | String = null,
+    `font-family`: String = null,
+    `font-stretch`: String = null,
+    `font-style`: String = null,
+    `font-weight`: Double | String = null,
+    `panose-1`: String = null,
+    `underline-position`: Double | String = null,
+    `underline-thickness`: Double | String = null,
+    `unicode-range`: String = null,
+    `units-per-em`: Double | String = null,
+    `x-height`: Double | String = null
+  ): PartialRaphaelFontFace = {
     val __obj = js.Dynamic.literal()
+    if (ascent != null) __obj.updateDynamic("ascent")(ascent.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
+    if (descent != null) __obj.updateDynamic("descent")(descent.asInstanceOf[js.Any])
+    if (`font-family` != null) __obj.updateDynamic("font-family")(`font-family`.asInstanceOf[js.Any])
+    if (`font-stretch` != null) __obj.updateDynamic("font-stretch")(`font-stretch`.asInstanceOf[js.Any])
+    if (`font-style` != null) __obj.updateDynamic("font-style")(`font-style`.asInstanceOf[js.Any])
+    if (`font-weight` != null) __obj.updateDynamic("font-weight")(`font-weight`.asInstanceOf[js.Any])
+    if (`panose-1` != null) __obj.updateDynamic("panose-1")(`panose-1`.asInstanceOf[js.Any])
+    if (`underline-position` != null) __obj.updateDynamic("underline-position")(`underline-position`.asInstanceOf[js.Any])
+    if (`underline-thickness` != null) __obj.updateDynamic("underline-thickness")(`underline-thickness`.asInstanceOf[js.Any])
+    if (`unicode-range` != null) __obj.updateDynamic("unicode-range")(`unicode-range`.asInstanceOf[js.Any])
+    if (`units-per-em` != null) __obj.updateDynamic("units-per-em")(`units-per-em`.asInstanceOf[js.Any])
+    if (`x-height` != null) __obj.updateDynamic("x-height")(`x-height`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRaphaelFontFace]
   }
-  @scala.inline
-  implicit class PartialRaphaelFontFaceOps[Self <: PartialRaphaelFontFace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAscent(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAscent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBbox(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescent(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-family`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-family`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-stretch`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-stretch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-stretch`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-stretch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-style`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-style`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-weight`(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-weight`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPanose-1`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panose-1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPanose-1`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panose-1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUnderline-position`(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline-position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUnderline-position`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline-position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUnderline-thickness`(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline-thickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUnderline-thickness`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underline-thickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUnicode-range`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unicode-range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUnicode-range`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unicode-range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUnits-per-em`(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("units-per-em")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUnits-per-em`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("units-per-em")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withX-height`(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutX-height`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-height")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

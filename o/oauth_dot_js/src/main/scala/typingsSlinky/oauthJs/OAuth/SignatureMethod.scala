@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignatureMethod extends js.Object {
-  var key: String = js.native
-  def getSignature(baseString: String): String = js.native
+  var key: String
+  def getSignature(baseString: String): String
   /** Set the key string for signing. */
-  def initialize(name: String, accessor: Accessor): Unit = js.native
+  def initialize(name: String, accessor: Accessor): Unit
   /** Add a signature to the message. */
-  def sign(message: Message): String = js.native
+  def sign(message: Message): String
 }
 
 object SignatureMethod {
@@ -25,37 +24,5 @@ object SignatureMethod {
     val __obj = js.Dynamic.literal(getSignature = js.Any.fromFunction1(getSignature), initialize = js.Any.fromFunction2(initialize), key = key.asInstanceOf[js.Any], sign = js.Any.fromFunction1(sign))
     __obj.asInstanceOf[SignatureMethod]
   }
-  @scala.inline
-  implicit class SignatureMethodOps[Self <: SignatureMethod] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetSignature(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSignature")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInitialize(value: (String, Accessor) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSign(value: Message => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sign")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -55,6 +55,8 @@ class Topic protected () extends js.Object {
   def delete(gaxOpts: CallOptions, callback: EmptyCallback): Unit = js.native
   def exists(): js.Promise[ExistsResponse] = js.native
   def exists(callback: ExistsCallback): Unit = js.native
+  def flush(): js.Promise[Unit] = js.native
+  def flush(callback: EmptyCallback): Unit = js.native
   def get(): js.Promise[GetTopicResponse] = js.native
   def get(callback: GetTopicCallback): Unit = js.native
   def get(gaxOpts: GetTopicOptions): js.Promise[GetTopicResponse] = js.native

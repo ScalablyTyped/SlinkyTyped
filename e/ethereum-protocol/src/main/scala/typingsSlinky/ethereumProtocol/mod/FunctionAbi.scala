@@ -1,5 +1,8 @@
 package typingsSlinky.ethereumProtocol.mod
 
+import typingsSlinky.ethereumProtocol.mod.AbiType.Constructor
+import typingsSlinky.ethereumProtocol.mod.AbiType.Fallback
+import typingsSlinky.ethereumProtocol.mod.AbiType.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +16,35 @@ trait FunctionAbi extends AbiDefinition
 
 object FunctionAbi {
   @scala.inline
-  implicit def apply(value: ConstructorAbi): FunctionAbi = value.asInstanceOf[FunctionAbi]
+  def MethodAbi(
+    constant: Boolean,
+    inputs: js.Array[DataItem],
+    name: String,
+    outputs: js.Array[DataItem],
+    payable: Boolean,
+    stateMutability: StateMutability,
+    `type`: Function
+  ): FunctionAbi = {
+    val __obj = js.Dynamic.literal(constant = constant.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], outputs = outputs.asInstanceOf[js.Any], payable = payable.asInstanceOf[js.Any], stateMutability = stateMutability.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FunctionAbi]
+  }
   @scala.inline
-  implicit def apply(value: FallbackAbi): FunctionAbi = value.asInstanceOf[FunctionAbi]
+  def ConstructorAbi(
+    inputs: js.Array[DataItem],
+    payable: Boolean,
+    stateMutability: ConstructorStateMutability,
+    `type`: Constructor
+  ): FunctionAbi = {
+    val __obj = js.Dynamic.literal(inputs = inputs.asInstanceOf[js.Any], payable = payable.asInstanceOf[js.Any], stateMutability = stateMutability.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FunctionAbi]
+  }
   @scala.inline
-  implicit def apply(value: MethodAbi): FunctionAbi = value.asInstanceOf[FunctionAbi]
+  def FallbackAbi(payable: Boolean, `type`: Fallback): FunctionAbi = {
+    val __obj = js.Dynamic.literal(payable = payable.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FunctionAbi]
+  }
 }
 

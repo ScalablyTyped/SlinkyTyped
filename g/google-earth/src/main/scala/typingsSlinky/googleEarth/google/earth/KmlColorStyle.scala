@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlColorStyle extends KmlObject {
   /**
     * Color and opacity (alpha) values.
     */
-  def getColor(): KmlColor = js.native
+  def getColor(): KmlColor
   /**
     * Specifies which color mode effect to apply to the base color.
     * 
@@ -19,7 +18,7 @@ trait KmlColorStyle extends KmlObject {
     * * GEPlugin.COLOR_INHERIT
     * * GEPlugin.COLOR_RANDOM
     */
-  def getColorMode(): KmlColorModeEnum = js.native
+  def getColorMode(): KmlColorModeEnum
   /**
     * Specifies which color mode effect to apply to the base color.
     * 
@@ -29,7 +28,7 @@ trait KmlColorStyle extends KmlObject {
     * * GEPlugin.COLOR_INHERIT
     * * GEPlugin.COLOR_RANDOM
     */
-  def setColorMode(colorMode: KmlColorModeEnum): Unit = js.native
+  def setColorMode(colorMode: KmlColorModeEnum): Unit
 }
 
 object KmlColorStyle {
@@ -56,31 +55,5 @@ object KmlColorStyle {
     val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getColor = js.Any.fromFunction0(getColor), getColorMode = js.Any.fromFunction0(getColorMode), getId = js.Any.fromFunction0(getId), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setColorMode = js.Any.fromFunction1(setColorMode))
     __obj.asInstanceOf[KmlColorStyle]
   }
-  @scala.inline
-  implicit class KmlColorStyleOps[Self <: KmlColorStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetColor(value: () => KmlColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetColorMode(value: () => KmlColorModeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColorMode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetColorMode(value: KmlColorModeEnum => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setColorMode")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

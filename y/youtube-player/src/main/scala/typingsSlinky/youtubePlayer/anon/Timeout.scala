@@ -9,12 +9,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Timeout extends js.Object {
-  var acceptableStates: js.Tuple3[ENDED, PLAYING, PAUSED] = js.native
-  var stateChangeRequired: `true` = js.native
+  var acceptableStates: js.Tuple3[ENDED, PLAYING, PAUSED]
+  var stateChangeRequired: `true`
   // TRICKY: `seekTo` may not cause a state change if no buffering is required.
-  var timeout: `3000` = js.native
+  var timeout: `3000`
 }
 
 object Timeout {
@@ -23,31 +22,5 @@ object Timeout {
     val __obj = js.Dynamic.literal(acceptableStates = acceptableStates.asInstanceOf[js.Any], stateChangeRequired = stateChangeRequired.asInstanceOf[js.Any], timeout = timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[Timeout]
   }
-  @scala.inline
-  implicit class TimeoutOps[Self <: Timeout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptableStates(value: js.Tuple3[ENDED, PLAYING, PAUSED]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptableStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStateChangeRequired(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChangeRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: `3000`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

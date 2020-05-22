@@ -4,63 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignatureHelpContext extends js.Object {
-  val activeSignatureHelp: js.UndefOr[SignatureHelp] = js.native
-  val isRetrigger: Boolean = js.native
-  val triggerCharacter: js.UndefOr[String] = js.native
-  val triggerKind: SignatureHelpTriggerKind = js.native
+  val activeSignatureHelp: js.UndefOr[SignatureHelp] = js.undefined
+  val isRetrigger: Boolean
+  val triggerCharacter: js.UndefOr[String] = js.undefined
+  val triggerKind: SignatureHelpTriggerKind
 }
 
 object SignatureHelpContext {
   @scala.inline
-  def apply(isRetrigger: Boolean, triggerKind: SignatureHelpTriggerKind): SignatureHelpContext = {
+  def apply(
+    isRetrigger: Boolean,
+    triggerKind: SignatureHelpTriggerKind,
+    activeSignatureHelp: SignatureHelp = null,
+    triggerCharacter: String = null
+  ): SignatureHelpContext = {
     val __obj = js.Dynamic.literal(isRetrigger = isRetrigger.asInstanceOf[js.Any], triggerKind = triggerKind.asInstanceOf[js.Any])
+    if (activeSignatureHelp != null) __obj.updateDynamic("activeSignatureHelp")(activeSignatureHelp.asInstanceOf[js.Any])
+    if (triggerCharacter != null) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpContext]
   }
-  @scala.inline
-  implicit class SignatureHelpContextOps[Self <: SignatureHelpContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsRetrigger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRetrigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerKind(value: SignatureHelpTriggerKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActiveSignatureHelp(value: SignatureHelp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSignatureHelp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveSignatureHelp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSignatureHelp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerCharacter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

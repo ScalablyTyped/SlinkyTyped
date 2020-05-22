@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *
   * @see Association class
   */
-@js.native
 trait AssociationOptions extends js.Object {
   /**
     * The alias of this model, in singular form. See also the `name` option passed to `sequelize.define`. If
@@ -19,18 +18,18 @@ trait AssociationOptions extends js.Object {
     * same alias when eager loading and when getting assocated models. Defaults to the singularized name of
     * target
     */
-  var as: js.UndefOr[String | Plural] = js.native
+  var as: js.UndefOr[String | Plural] = js.undefined
   /**
     * Should on update and on delete constraints be enabled on the foreign key.
     */
-  var constraints: js.UndefOr[Boolean] = js.native
+  var constraints: js.UndefOr[Boolean] = js.undefined
   /**
     * The name of the foreign key in the target table or an object representing the type definition for the
     * foreign column (see `Sequelize.define` for syntax). When using an object, you can add a `name` property
     * to set the name of the column. Defaults to the name of source + primary key of source
     */
-  var foreignKey: js.UndefOr[String | AssociationForeignKeyOptions] = js.native
-  var foreignKeyConstraint: js.UndefOr[Boolean] = js.native
+  var foreignKey: js.UndefOr[String | AssociationForeignKeyOptions] = js.undefined
+  var foreignKeyConstraint: js.UndefOr[Boolean] = js.undefined
   /**
     * Set to true to run before-/afterDestroy hooks when an associated model is deleted because of a cascade.
     * For example if `User.hasOne(Profile, {onDelete: 'cascade', hooks:true})`, the before-/afterDestroy hooks
@@ -39,7 +38,7 @@ trait AssociationOptions extends js.Object {
     *
     * Defaults to false
     */
-  var hooks: js.UndefOr[Boolean] = js.native
+  var hooks: js.UndefOr[Boolean] = js.undefined
   /**
     * What happens when delete occurs.
     *
@@ -47,125 +46,38 @@ trait AssociationOptions extends js.Object {
     *
     * Defaults to 'SET NULL' or 'CASCADE'
     */
-  var onDelete: js.UndefOr[String] = js.native
+  var onDelete: js.UndefOr[String] = js.undefined
   /**
     * What happens when update occurs
     *
     * Defaults to 'CASCADE'
     */
-  var onUpdate: js.UndefOr[String] = js.native
-  var scope: js.UndefOr[AssociationScope] = js.native
+  var onUpdate: js.UndefOr[String] = js.undefined
+  var scope: js.UndefOr[AssociationScope] = js.undefined
 }
 
 object AssociationOptions {
   @scala.inline
-  def apply(): AssociationOptions = {
+  def apply(
+    as: String | Plural = null,
+    constraints: js.UndefOr[Boolean] = js.undefined,
+    foreignKey: String | AssociationForeignKeyOptions = null,
+    foreignKeyConstraint: js.UndefOr[Boolean] = js.undefined,
+    hooks: js.UndefOr[Boolean] = js.undefined,
+    onDelete: String = null,
+    onUpdate: String = null,
+    scope: AssociationScope = null
+  ): AssociationOptions = {
     val __obj = js.Dynamic.literal()
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (!js.isUndefined(constraints)) __obj.updateDynamic("constraints")(constraints.get.asInstanceOf[js.Any])
+    if (foreignKey != null) __obj.updateDynamic("foreignKey")(foreignKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(foreignKeyConstraint)) __obj.updateDynamic("foreignKeyConstraint")(foreignKeyConstraint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hooks)) __obj.updateDynamic("hooks")(hooks.get.asInstanceOf[js.Any])
+    if (onDelete != null) __obj.updateDynamic("onDelete")(onDelete.asInstanceOf[js.Any])
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(onUpdate.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociationOptions]
   }
-  @scala.inline
-  implicit class AssociationOptionsOps[Self <: AssociationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAs(value: String | Plural): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForeignKey(value: String | AssociationForeignKeyOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForeignKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForeignKeyConstraint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyConstraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForeignKeyConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyConstraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHooks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDelete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: AssociationScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

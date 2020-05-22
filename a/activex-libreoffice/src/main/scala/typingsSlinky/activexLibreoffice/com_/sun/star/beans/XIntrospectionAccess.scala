@@ -22,7 +22,6 @@ import scala.scalajs.js.annotation._
   * @@see XPropertySet
   * @@see com::sun::star::beans::XExactName
   */
-@js.native
 trait XIntrospectionAccess extends XInterface {
   /**
     * returns information about which method concepts described in the {@link MethodConcept} constants group are supported by this {@link
@@ -34,7 +33,7 @@ trait XIntrospectionAccess extends XInterface {
     * MethodConcept.INDEXCONTAINER} ;
     * @returns zero or more constants of the {@link MethodConcept} constants group combined by an arithmetical or-operation.
     */
-  val SuppliedMethodConcepts: Double = js.native
+  val SuppliedMethodConcepts: Double
   /**
     * returns information about which property concepts described in the {@link PropertyConcept} constants group are supported by this {@link
     * XIntrospectionAccess} implementation.
@@ -44,7 +43,7 @@ trait XIntrospectionAccess extends XInterface {
     * {@link PropertyConcept.PROPERTYSET} ,{@link PropertyConcept.ATTRIBUTES} and{@link PropertyConcept.METHODS} .
     * @returns zero or more constants of the {@link PropertyConcept} constants group.combined by an arithmetical or-operation.
     */
-  val SuppliedPropertyConcepts: Double = js.native
+  val SuppliedPropertyConcepts: Double
   /**
     * returns the listener types supported by the introspected object.
     *
@@ -52,7 +51,7 @@ trait XIntrospectionAccess extends XInterface {
     * will be one of the elements in the returned sequence.
     * @returns a sequence of the types of listener interfaces which are supported by the introspected object.
     */
-  val SupportedListeners: SafeArray[`type`] = js.native
+  val SupportedListeners: SafeArray[`type`]
   /**
     * returns information about a method if a method with the demanded name exists and if it accords to one of the demanded MethodConcepts. The information
     * is provided as {@link com.sun.star.reflection.XIdlMethod} .
@@ -61,19 +60,19 @@ trait XIntrospectionAccess extends XInterface {
     * @returns A {@link com.sun.star.reflection.XIdlMethod} providing information about and access to the demanded method if a corresponding method exists.
     * @throws NoSuchElementException when a method with the demanded name doesn't exist or if it accords to a wrong {@link MethodConcept} .
     */
-  def getMethod(aName: String, nMethodConcepts: Double): XIdlMethod = js.native
+  def getMethod(aName: String, nMethodConcepts: Double): XIdlMethod
   /**
     * returns a sequence of methods of the introspected object.
     * @param nMethodConcepts zero or more constants of the {@link MethodConcept} constants group combined by an arithmetical or-operation.
     * @returns all methods of the introspected object which accord to the demanded MethodConcepts.
     */
-  def getMethods(nMethodConcepts: Double): SafeArray[XIdlMethod] = js.native
+  def getMethods(nMethodConcepts: Double): SafeArray[XIdlMethod]
   /**
     * returns a sequence of properties of the introspected object
     * @param nPropertyConcepts zero or more constants of the {@link PropertyConcept} constants group combined by an arithmetical or-operation.
     * @returns all properties of the introspected object which accord to the demanded PropertyConcepts.
     */
-  def getProperties(nPropertyConcepts: Double): SafeArray[Property] = js.native
+  def getProperties(nPropertyConcepts: Double): SafeArray[Property]
   /**
     * returns information about a property if a property with the demanded name exists and if it accords to one of the demanded PropertyConcepts. The
     * information is provided as {@link Property} struct.
@@ -82,7 +81,7 @@ trait XIntrospectionAccess extends XInterface {
     * @returns A {@link Property} struct providing information about the demanded property, if a corresponding property exists.
     * @throws NoSuchElementException when a property with the demanded name doesn't exist or if it accords to a wrong {@link PropertyConcept} .
     */
-  def getProperty(aName: String, nPropertyConcepts: Double): Property = js.native
+  def getProperty(aName: String, nPropertyConcepts: Double): Property
   /**
     * returns information about which method concepts described in the {@link MethodConcept} constants group are supported by this {@link
     * XIntrospectionAccess} implementation.
@@ -93,7 +92,7 @@ trait XIntrospectionAccess extends XInterface {
     * MethodConcept.INDEXCONTAINER} ;
     * @returns zero or more constants of the {@link MethodConcept} constants group combined by an arithmetical or-operation.
     */
-  def getSuppliedMethodConcepts(): Double = js.native
+  def getSuppliedMethodConcepts(): Double
   /**
     * returns information about which property concepts described in the {@link PropertyConcept} constants group are supported by this {@link
     * XIntrospectionAccess} implementation.
@@ -103,7 +102,7 @@ trait XIntrospectionAccess extends XInterface {
     * {@link PropertyConcept.PROPERTYSET} ,{@link PropertyConcept.ATTRIBUTES} and{@link PropertyConcept.METHODS} .
     * @returns zero or more constants of the {@link PropertyConcept} constants group.combined by an arithmetical or-operation.
     */
-  def getSuppliedPropertyConcepts(): Double = js.native
+  def getSuppliedPropertyConcepts(): Double
   /**
     * returns the listener types supported by the introspected object.
     *
@@ -111,21 +110,21 @@ trait XIntrospectionAccess extends XInterface {
     * will be one of the elements in the returned sequence.
     * @returns a sequence of the types of listener interfaces which are supported by the introspected object.
     */
-  def getSupportedListeners(): SafeArray[`type`] = js.native
+  def getSupportedListeners(): SafeArray[`type`]
   /**
     * allows to ask if a method with the demanded name exists and if it accords to one of the demanded {@link MethodConcept} .
     * @param aName the name of the method.
     * @param nMethodConcepts zero or more constants of the {@link MethodConcept} constants group combined by an arithmetical or-operation.
     * @returns `TRUE` if the method exists and accords to one of the demanded MethodConcepts, otherwise `FALSE` is returned.
     */
-  def hasMethod(aName: String, nMethodConcepts: Double): Boolean = js.native
+  def hasMethod(aName: String, nMethodConcepts: Double): Boolean
   /**
     * allows to ask if a property with the demanded name exists and if it accords to one of the demanded {@link PropertyConcept} .
     * @param aName the name of the property.
     * @param nPropertyConcepts zero or more constants of the {@link PropertyConcept} constants group combined by an arithmetical or-operation.
     * @returns `TRUE` if the property exists and accords to one of the demanded PropertyConcepts, otherwise `FALSE` is returned.
     */
-  def hasProperty(aName: String, nPropertyConcepts: Double): Boolean = js.native
+  def hasProperty(aName: String, nPropertyConcepts: Double): Boolean
   /**
     * creates an adapter that implements an interface with the specified type.
     *
@@ -147,7 +146,7 @@ trait XIntrospectionAccess extends XInterface {
     * the {@link XExactName} interface has to be supported.
     * @see com.sun.star.beans.XExactName
     */
-  def queryAdapter(aInterfaceType: `type`): XInterface = js.native
+  def queryAdapter(aInterfaceType: `type`): XInterface
 }
 
 object XIntrospectionAccess {
@@ -173,91 +172,5 @@ object XIntrospectionAccess {
     val __obj = js.Dynamic.literal(SuppliedMethodConcepts = SuppliedMethodConcepts.asInstanceOf[js.Any], SuppliedPropertyConcepts = SuppliedPropertyConcepts.asInstanceOf[js.Any], SupportedListeners = SupportedListeners.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMethod = js.Any.fromFunction2(getMethod), getMethods = js.Any.fromFunction1(getMethods), getProperties = js.Any.fromFunction1(getProperties), getProperty = js.Any.fromFunction2(getProperty), getSuppliedMethodConcepts = js.Any.fromFunction0(getSuppliedMethodConcepts), getSuppliedPropertyConcepts = js.Any.fromFunction0(getSuppliedPropertyConcepts), getSupportedListeners = js.Any.fromFunction0(getSupportedListeners), hasMethod = js.Any.fromFunction2(hasMethod), hasProperty = js.Any.fromFunction2(hasProperty), queryAdapter = js.Any.fromFunction1(queryAdapter), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XIntrospectionAccess]
   }
-  @scala.inline
-  implicit class XIntrospectionAccessOps[Self <: XIntrospectionAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuppliedMethodConcepts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppliedMethodConcepts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuppliedPropertyConcepts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppliedPropertyConcepts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedListeners(value: SafeArray[`type`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedListeners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetMethod(value: (String, Double) => XIdlMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMethod")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetMethods(value: Double => SafeArray[XIdlMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMethods")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetProperties(value: Double => SafeArray[Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperties")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetProperty(value: (String, Double) => Property): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetSuppliedMethodConcepts(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSuppliedMethodConcepts")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSuppliedPropertyConcepts(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSuppliedPropertyConcepts")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedListeners(value: () => SafeArray[`type`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedListeners")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasMethod(value: (String, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMethod")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHasProperty(value: (String, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasProperty")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withQueryAdapter(value: `type` => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryAdapter")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

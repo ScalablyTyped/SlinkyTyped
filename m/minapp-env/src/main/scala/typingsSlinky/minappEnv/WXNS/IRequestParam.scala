@@ -5,95 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IRequestParam extends IAPIParam[IRequestSuccessResult] {
-  var data: js.UndefOr[AnyObject | String | ArrayBuffer] = js.native
-  var dataType: js.UndefOr[String] = js.native
-  var header: js.UndefOr[AnyObject] = js.native
-  var method: js.UndefOr[String] = js.native
-  var responseType: js.UndefOr[String] = js.native
-  var url: String = js.native
+  var data: js.UndefOr[AnyObject | String | ArrayBuffer] = js.undefined
+  var dataType: js.UndefOr[String] = js.undefined
+  var header: js.UndefOr[AnyObject] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var responseType: js.UndefOr[String] = js.undefined
+  var url: String
 }
 
 object IRequestParam {
   @scala.inline
-  def apply(url: String): IRequestParam = {
+  def apply(
+    url: String,
+    complete: /* val */ IRequestSuccessResult | IAPIError => Unit = null,
+    data: AnyObject | String | ArrayBuffer = null,
+    dataType: String = null,
+    fail: /* err */ IAPIError => Unit = null,
+    header: AnyObject = null,
+    method: String = null,
+    responseType: String = null,
+    success: IRequestSuccessResult => Unit = null
+  ): IRequestParam = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[IRequestParam]
   }
-  @scala.inline
-  implicit class IRequestParamOps[Self <: IRequestParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: AnyObject | String | ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: AnyObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * If zero arguments are supplied, zero is used for all four sides.
   */
-class Margin () extends MarginLike {
+class Margin () extends js.Object {
   /**
     * If one argument is supplied, that number is used for all four sides.
     * @param {number} m the margin for all four sides.

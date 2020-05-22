@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiKubernetes.outputMod.networking.v1beta1
 
+import typingsSlinky.pulumiKubernetes.outputMod.core.v1.TypedLocalObjectReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,43 +8,27 @@ import scala.scalajs.js.annotation._
 /**
   * IngressBackend describes all endpoints for a given service and port.
   */
-@js.native
 trait IngressBackend extends js.Object {
+  /**
+    * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress
+    * object. If resource is specified, serviceName and servicePort must not be specified.
+    */
+  val resource: TypedLocalObjectReference
   /**
     * Specifies the name of the referenced service.
     */
-  val serviceName: String = js.native
+  val serviceName: String
   /**
     * Specifies the port of the referenced service.
     */
-  val servicePort: Double | String = js.native
+  val servicePort: Double | String
 }
 
 object IngressBackend {
   @scala.inline
-  def apply(serviceName: String, servicePort: Double | String): IngressBackend = {
-    val __obj = js.Dynamic.literal(serviceName = serviceName.asInstanceOf[js.Any], servicePort = servicePort.asInstanceOf[js.Any])
+  def apply(resource: TypedLocalObjectReference, serviceName: String, servicePort: Double | String): IngressBackend = {
+    val __obj = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any], serviceName = serviceName.asInstanceOf[js.Any], servicePort = servicePort.asInstanceOf[js.Any])
     __obj.asInstanceOf[IngressBackend]
   }
-  @scala.inline
-  implicit class IngressBackendOps[Self <: IngressBackend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServicePort(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePort")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

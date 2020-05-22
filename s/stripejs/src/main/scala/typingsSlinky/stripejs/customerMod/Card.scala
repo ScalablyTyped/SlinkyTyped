@@ -22,126 +22,125 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Card extends js.Object {
-  var account: js.UndefOr[String] = js.native
+  var account: js.UndefOr[String] = js.undefined
   /**
     * City/District/Suburb/Town/Village
     */
-  var address_city: String = js.native
+  var address_city: String
   /**
     * The country in which the address is located
     */
-  var address_country: String = js.native
+  var address_country: String
   /**
     * Address line 1 (Street address/PO Box/Company name)
     */
-  var address_line1: String = js.native
+  var address_line1: String
   /**
     * The results of address_line1 if it was provided
     */
-  var address_line1_check: checkStatus = js.native
+  var address_line1_check: checkStatus
   /**
     * Address line 2 (Apartment/Suite/Unit/Building)
     */
-  var address_line2: String = js.native
+  var address_line2: String
   /**
     * State/County/Province/Region.
     */
-  var address_state: String = js.native
+  var address_state: String
   /**
     * ZIP or postal code
     */
-  var address_zip: String = js.native
+  var address_zip: String
   /**
     * The results of address_zip if it was provided
     */
-  var address_zip_check: checkStatus = js.native
+  var address_zip_check: checkStatus
   /**
     * A set of available payout methods for this card
     * NOTE: Only values from this set should be passed as the method when creating a transfer
     */
-  var available_payout_methods: js.Array[standard] | (js.Tuple2[standard, instant]) = js.native
+  var available_payout_methods: js.Array[standard] | (js.Tuple2[standard, instant])
   /**
     * The brand of the card
     */
-  var brand: (`American Express`) | (`Diners Club`) | Discover | JCB | MasterCard | UnionPay | Visa | Unknown = js.native
+  var brand: (`American Express`) | (`Diners Club`) | Discover | JCB | MasterCard | UnionPay | Visa | Unknown
   /**
     * Two-letter ISO code representing the country of the card
     * You could use this attribute to get a sense of the international breakdown of cards you’ve collected
     */
-  var country: String = js.native
+  var country: String
   /**
     * Three-letter ISO code for currency
     * Only applicable on accounts (not customers or recipients).
     * The card can be used as a transfer destination for funds in this currency
     */
-  var currency: js.UndefOr[String] = js.native
+  var currency: js.UndefOr[String] = js.undefined
   /**
     * The customer that this card belongs to
     * NOTE: This attribute will not be in the card object if the card belongs to an account or recipient instead
     */
-  var customer: js.UndefOr[js.Any] = js.native
+  var customer: js.UndefOr[js.Any] = js.undefined
   /**
     * If a CVC was provided, results of the check
     */
-  var cvc_check: checkStatus = js.native
+  var cvc_check: checkStatus
   /**
     * Only applicable on accounts (not customers or recipients)
     * This indicates whether this card is the default external account for its currency
     */
-  var default_for_currency: js.UndefOr[Boolean] = js.native
+  var default_for_currency: js.UndefOr[Boolean] = js.undefined
   /**
     * The last four digits of the device account number.
     * NOTE: For tokenized numbers only
     */
-  var dynamic_last4: String = js.native
+  var dynamic_last4: String
   /**
     * Two-digit number representing the card’s expiration month
     */
-  var exp_month: Double = js.native
+  var exp_month: Double
   /**
     * Four-digit number representing the card’s expiration year
     */
-  var exp_year: Double = js.native
+  var exp_year: Double
   /**
     * Uniquely identifies this particular card number
     */
-  var fingerprint: String = js.native
+  var fingerprint: String
   /**
     * Card funding type
     */
-  var funding: credit | debit | prepaid | unknown_ = js.native
+  var funding: credit | debit | prepaid | unknown_
   /**
     * The unique identifier of the bank account
     */
-  var id: String = js.native
+  var id: String
   /**
     * The last four digits of the card
     */
-  var last4: String = js.native
+  var last4: String
   /**
     * Your own saved information with this card
     */
-  var metadata: StringDictionary[String] = js.native
+  var metadata: StringDictionary[String]
   /**
     * The name of the cardholder
     */
-  var name: String = js.native
+  var name: String
   /**
     * The account this card belongs to.
     * NOTE: This attribute will not be in the card object if the card belongs to a customer or recipient instead.
     */
-  var `object`: card = js.native
+  var `object`: card
   /**
     * The recipient that this card belongs to.
     * NOTE: This attribute will not be in the card object if the card belongs to a customer or account instead
     */
-  var recipient: js.UndefOr[String] = js.native
+  var recipient: js.UndefOr[String] = js.undefined
   /**
     * If the card number is tokenized, this is the method that was used
     */
-  var tokenization_method: apple_pay | android_pay = js.native
+  var tokenization_method: apple_pay | android_pay
 }
 
 object Card {
@@ -169,219 +168,21 @@ object Card {
     metadata: StringDictionary[String],
     name: String,
     `object`: card,
-    tokenization_method: apple_pay | android_pay
+    tokenization_method: apple_pay | android_pay,
+    account: String = null,
+    currency: String = null,
+    customer: js.Any = null,
+    default_for_currency: js.UndefOr[Boolean] = js.undefined,
+    recipient: String = null
   ): Card = {
     val __obj = js.Dynamic.literal(address_city = address_city.asInstanceOf[js.Any], address_country = address_country.asInstanceOf[js.Any], address_line1 = address_line1.asInstanceOf[js.Any], address_line1_check = address_line1_check.asInstanceOf[js.Any], address_line2 = address_line2.asInstanceOf[js.Any], address_state = address_state.asInstanceOf[js.Any], address_zip = address_zip.asInstanceOf[js.Any], address_zip_check = address_zip_check.asInstanceOf[js.Any], available_payout_methods = available_payout_methods.asInstanceOf[js.Any], brand = brand.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], cvc_check = cvc_check.asInstanceOf[js.Any], dynamic_last4 = dynamic_last4.asInstanceOf[js.Any], exp_month = exp_month.asInstanceOf[js.Any], exp_year = exp_year.asInstanceOf[js.Any], fingerprint = fingerprint.asInstanceOf[js.Any], funding = funding.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], last4 = last4.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tokenization_method = tokenization_method.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
+    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
+    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
+    if (!js.isUndefined(default_for_currency)) __obj.updateDynamic("default_for_currency")(default_for_currency.get.asInstanceOf[js.Any])
+    if (recipient != null) __obj.updateDynamic("recipient")(recipient.asInstanceOf[js.Any])
     __obj.asInstanceOf[Card]
   }
-  @scala.inline
-  implicit class CardOps[Self <: Card] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress_city(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_city")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_country(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_line1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_line1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_line1_check(value: checkStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_line1_check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_line2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_line2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_state(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_zip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_zip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_zip_check(value: checkStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_zip_check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvailable_payout_methods(value: js.Array[standard] | (js.Tuple2[standard, instant])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("available_payout_methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrand(
-      value: (`American Express`) | (`Diners Club`) | Discover | JCB | MasterCard | UnionPay | Visa | Unknown
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCvc_check(value: checkStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cvc_check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDynamic_last4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic_last4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExp_month(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExp_year(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exp_year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunding(value: credit | debit | prepaid | unknown_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("funding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLast4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: card): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTokenization_method(value: apple_pay | android_pay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenization_method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomer(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_for_currency(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_for_currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_for_currency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_for_currency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipient(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

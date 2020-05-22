@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFinalizableToString extends js.Object {
   /** Get the resulting CAML query as string */
-  def ToString(): String = js.native
+  def ToString(): String
 }
 
 object IFinalizableToString {
@@ -16,19 +15,5 @@ object IFinalizableToString {
     val __obj = js.Dynamic.literal(ToString = js.Any.fromFunction0(ToString))
     __obj.asInstanceOf[IFinalizableToString]
   }
-  @scala.inline
-  implicit class IFinalizableToStringOps[Self <: IFinalizableToString] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToString")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

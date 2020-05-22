@@ -4,129 +4,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TranslationMetadata extends js.Object {
   /**
     * The absolute URI from which the translation metadata can be downloaded.
     */
-  var downloadUri: js.UndefOr[String] = js.native
+  var downloadUri: js.UndefOr[String] = js.undefined
   /**
     * A comprehensive description of the translation metadata.
     */
-  var fullDescription: js.UndefOr[MultiformatMessageString] = js.native
+  var fullDescription: js.UndefOr[MultiformatMessageString] = js.undefined
   /**
     * The full name associated with the translation metadata.
     */
-  var fullName: js.UndefOr[String] = js.native
+  var fullName: js.UndefOr[String] = js.undefined
   /**
     * The absolute URI from which information related to the translation metadata can be downloaded.
     */
-  var informationUri: js.UndefOr[String] = js.native
+  var informationUri: js.UndefOr[String] = js.undefined
   /**
     * The name associated with the translation metadata.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Key/value pairs that provide additional information about the translation metadata.
     */
-  var properties: js.UndefOr[PropertyBag] = js.native
+  var properties: js.UndefOr[PropertyBag] = js.undefined
   /**
     * A brief description of the translation metadata.
     */
-  var shortDescription: js.UndefOr[MultiformatMessageString] = js.native
+  var shortDescription: js.UndefOr[MultiformatMessageString] = js.undefined
 }
 
 object TranslationMetadata {
   @scala.inline
-  def apply(name: String): TranslationMetadata = {
+  def apply(
+    name: String,
+    downloadUri: String = null,
+    fullDescription: MultiformatMessageString = null,
+    fullName: String = null,
+    informationUri: String = null,
+    properties: PropertyBag = null,
+    shortDescription: MultiformatMessageString = null
+  ): TranslationMetadata = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (downloadUri != null) __obj.updateDynamic("downloadUri")(downloadUri.asInstanceOf[js.Any])
+    if (fullDescription != null) __obj.updateDynamic("fullDescription")(fullDescription.asInstanceOf[js.Any])
+    if (fullName != null) __obj.updateDynamic("fullName")(fullName.asInstanceOf[js.Any])
+    if (informationUri != null) __obj.updateDynamic("informationUri")(informationUri.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (shortDescription != null) __obj.updateDynamic("shortDescription")(shortDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[TranslationMetadata]
   }
-  @scala.inline
-  implicit class TranslationMetadataOps[Self <: TranslationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDownloadUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullDescription(value: MultiformatMessageString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInformationUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("informationUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInformationUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("informationUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: PropertyBag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortDescription(value: MultiformatMessageString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait ThingIndexingConfiguration extends js.Object {
 
 object ThingIndexingConfiguration {
   @scala.inline
-  def apply(thingIndexingMode: ThingIndexingMode): ThingIndexingConfiguration = {
+  def apply(
+    thingIndexingMode: ThingIndexingMode,
+    customFields: Fields = null,
+    managedFields: Fields = null,
+    thingConnectivityIndexingMode: ThingConnectivityIndexingMode = null
+  ): ThingIndexingConfiguration = {
     val __obj = js.Dynamic.literal(thingIndexingMode = thingIndexingMode.asInstanceOf[js.Any])
+    if (customFields != null) __obj.updateDynamic("customFields")(customFields.asInstanceOf[js.Any])
+    if (managedFields != null) __obj.updateDynamic("managedFields")(managedFields.asInstanceOf[js.Any])
+    if (thingConnectivityIndexingMode != null) __obj.updateDynamic("thingConnectivityIndexingMode")(thingConnectivityIndexingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingIndexingConfiguration]
   }
-  @scala.inline
-  implicit class ThingIndexingConfigurationOps[Self <: ThingIndexingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withThingIndexingMode(value: ThingIndexingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingIndexingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomFields(value: Fields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedFields(value: Fields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingConnectivityIndexingMode(value: ThingConnectivityIndexingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingConnectivityIndexingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingConnectivityIndexingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingConnectivityIndexingMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

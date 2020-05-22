@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StripeApplePayPaymentRequest extends js.Object {
-  var billingContact: StripeApplePayPaymentContact = js.native
-  var countryCode: String = js.native
-  var currencyCode: String = js.native
-  var lineItems: js.UndefOr[js.Array[StripeApplePayLineItem]] = js.native
-  var requiredBillingContactFields: js.UndefOr[js.Array[StripeApplePayBillingContactField]] = js.native
-  var requiredShippingContactFields: js.UndefOr[js.Array[StripeApplePayShippingContactField]] = js.native
-  var shippingContact: js.UndefOr[StripeApplePayPaymentContact] = js.native
-  var shippingMethods: js.UndefOr[js.Array[StripeApplePayShippingMethod]] = js.native
-  var shippingType: js.UndefOr[js.Array[StripeApplePayShipping]] = js.native
-  var total: StripeApplePayLineItem = js.native
+  var billingContact: StripeApplePayPaymentContact
+  var countryCode: String
+  var currencyCode: String
+  var lineItems: js.UndefOr[js.Array[StripeApplePayLineItem]] = js.undefined
+  var requiredBillingContactFields: js.UndefOr[js.Array[StripeApplePayBillingContactField]] = js.undefined
+  var requiredShippingContactFields: js.UndefOr[js.Array[StripeApplePayShippingContactField]] = js.undefined
+  var shippingContact: js.UndefOr[StripeApplePayPaymentContact] = js.undefined
+  var shippingMethods: js.UndefOr[js.Array[StripeApplePayShippingMethod]] = js.undefined
+  var shippingType: js.UndefOr[js.Array[StripeApplePayShipping]] = js.undefined
+  var total: StripeApplePayLineItem
 }
 
 object StripeApplePayPaymentRequest {
@@ -24,114 +23,22 @@ object StripeApplePayPaymentRequest {
     billingContact: StripeApplePayPaymentContact,
     countryCode: String,
     currencyCode: String,
-    total: StripeApplePayLineItem
+    total: StripeApplePayLineItem,
+    lineItems: js.Array[StripeApplePayLineItem] = null,
+    requiredBillingContactFields: js.Array[StripeApplePayBillingContactField] = null,
+    requiredShippingContactFields: js.Array[StripeApplePayShippingContactField] = null,
+    shippingContact: StripeApplePayPaymentContact = null,
+    shippingMethods: js.Array[StripeApplePayShippingMethod] = null,
+    shippingType: js.Array[StripeApplePayShipping] = null
   ): StripeApplePayPaymentRequest = {
     val __obj = js.Dynamic.literal(billingContact = billingContact.asInstanceOf[js.Any], countryCode = countryCode.asInstanceOf[js.Any], currencyCode = currencyCode.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    if (lineItems != null) __obj.updateDynamic("lineItems")(lineItems.asInstanceOf[js.Any])
+    if (requiredBillingContactFields != null) __obj.updateDynamic("requiredBillingContactFields")(requiredBillingContactFields.asInstanceOf[js.Any])
+    if (requiredShippingContactFields != null) __obj.updateDynamic("requiredShippingContactFields")(requiredShippingContactFields.asInstanceOf[js.Any])
+    if (shippingContact != null) __obj.updateDynamic("shippingContact")(shippingContact.asInstanceOf[js.Any])
+    if (shippingMethods != null) __obj.updateDynamic("shippingMethods")(shippingMethods.asInstanceOf[js.Any])
+    if (shippingType != null) __obj.updateDynamic("shippingType")(shippingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[StripeApplePayPaymentRequest]
   }
-  @scala.inline
-  implicit class StripeApplePayPaymentRequestOps[Self <: StripeApplePayPaymentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillingContact(value: StripeApplePayPaymentContact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCountryCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrencyCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: StripeApplePayLineItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineItems(value: js.Array[StripeApplePayLineItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredBillingContactFields(value: js.Array[StripeApplePayBillingContactField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredBillingContactFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredBillingContactFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredBillingContactFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredShippingContactFields(value: js.Array[StripeApplePayShippingContactField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredShippingContactFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredShippingContactFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredShippingContactFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingContact(value: StripeApplePayPaymentContact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingContact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingMethods(value: js.Array[StripeApplePayShippingMethod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingMethods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingType(value: js.Array[StripeApplePayShipping]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

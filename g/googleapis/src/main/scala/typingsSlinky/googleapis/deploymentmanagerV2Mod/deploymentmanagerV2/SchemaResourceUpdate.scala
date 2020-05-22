@@ -1,7 +1,7 @@
 package typingsSlinky.googleapis.deploymentmanagerV2Mod.deploymentmanagerV2
 
-import typingsSlinky.googleapis.AnonCode
-import typingsSlinky.googleapis.AnonErrorsArray
+import typingsSlinky.googleapis.anon.Code
+import typingsSlinky.googleapis.anon.ErrorsArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait SchemaResourceUpdate extends js.Object {
     * Output only. If errors are generated during update of the resource, this
     * field will be populated.
     */
-  var error: js.UndefOr[AnonErrorsArray] = js.native
+  var error: js.UndefOr[ErrorsArray] = js.native
   /**
     * Output only. The expanded properties of the resource with reference
     * values expanded. Returned as serialized YAML.
@@ -45,118 +45,31 @@ trait SchemaResourceUpdate extends js.Object {
     * Output only. If warning messages are generated during processing of this
     * resource, this field will be populated.
     */
-  var warnings: js.UndefOr[js.Array[AnonCode]] = js.native
+  var warnings: js.UndefOr[js.Array[Code]] = js.native
 }
 
 object SchemaResourceUpdate {
   @scala.inline
-  def apply(): SchemaResourceUpdate = {
+  def apply(
+    accessControl: SchemaResourceAccessControl = null,
+    error: ErrorsArray = null,
+    finalProperties: String = null,
+    intent: String = null,
+    manifest: String = null,
+    properties: String = null,
+    state: String = null,
+    warnings: js.Array[Code] = null
+  ): SchemaResourceUpdate = {
     val __obj = js.Dynamic.literal()
+    if (accessControl != null) __obj.updateDynamic("accessControl")(accessControl.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (finalProperties != null) __obj.updateDynamic("finalProperties")(finalProperties.asInstanceOf[js.Any])
+    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (manifest != null) __obj.updateDynamic("manifest")(manifest.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourceUpdate]
   }
-  @scala.inline
-  implicit class SchemaResourceUpdateOps[Self <: SchemaResourceUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessControl(value: SchemaResourceAccessControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: AnonErrorsArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalProperties(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[AnonCode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

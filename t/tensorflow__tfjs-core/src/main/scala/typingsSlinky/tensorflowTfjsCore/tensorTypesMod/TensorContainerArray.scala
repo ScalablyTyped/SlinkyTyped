@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TensorContainerArray
   extends Array[TensorContainer]
-     with TensorContainer
+     with _TensorContainer
 

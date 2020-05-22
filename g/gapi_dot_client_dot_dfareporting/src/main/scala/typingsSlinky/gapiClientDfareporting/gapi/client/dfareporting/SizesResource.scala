@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SizesResource extends js.Object {
   /** Gets one size by ID. */
-  def get(request: Fields): Request[Size] = js.native
+  def get(request: Fields): Request[Size]
   /** Inserts a new size. */
-  def insert(request: Key): Request[Size] = js.native
+  def insert(request: Key): Request[Size]
   /** Retrieves a list of sizes, possibly filtered. */
-  def list(request: Height): Request[SizesListResponse] = js.native
+  def list(request: Height): Request[SizesListResponse]
 }
 
 object SizesResource {
@@ -28,31 +27,5 @@ object SizesResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[SizesResource]
   }
-  @scala.inline
-  implicit class SizesResourceOps[Self <: SizesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: Fields => Request[Size]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: Key => Request[Size]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Height => Request[SizesListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

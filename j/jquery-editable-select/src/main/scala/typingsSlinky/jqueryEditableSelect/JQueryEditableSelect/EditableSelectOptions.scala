@@ -12,103 +12,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditableSelectOptions extends js.Object {
   /**
     * Where to append the dropdown list in the DOM.
     */
-  var appendTo: js.UndefOr[String | JQuery] = js.native
+  var appendTo: js.UndefOr[String | JQuery] = js.undefined
   /**
     * Duration of the easings (in milliseconds).
     */
-  var duration: js.UndefOr[Double | fast | slow] = js.native
+  var duration: js.UndefOr[Double | fast | slow] = js.undefined
   /**
     * Easing used for showing and hiding the dropdown list.
     */
-  var effects: js.UndefOr[default | slide | fade] = js.native
+  var effects: js.UndefOr[default | slide | fade] = js.undefined
   /**
     * Filter (or not) items in list while typing.
     */
-  var filter: js.UndefOr[Boolean] = js.native
+  var filter: js.UndefOr[Boolean] = js.undefined
   /**
     * How dropdown list is triggered.
     */
-  var trigger: js.UndefOr[focus | manual] = js.native
+  var trigger: js.UndefOr[focus | manual] = js.undefined
 }
 
 object EditableSelectOptions {
   @scala.inline
-  def apply(): EditableSelectOptions = {
+  def apply(
+    appendTo: String | JQuery = null,
+    duration: Double | fast | slow = null,
+    effects: default | slide | fade = null,
+    filter: js.UndefOr[Boolean] = js.undefined,
+    trigger: focus | manual = null
+  ): EditableSelectOptions = {
     val __obj = js.Dynamic.literal()
+    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (effects != null) __obj.updateDynamic("effects")(effects.asInstanceOf[js.Any])
+    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.get.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditableSelectOptions]
   }
-  @scala.inline
-  implicit class EditableSelectOptionsOps[Self <: EditableSelectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppendTo(value: String | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppendTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double | fast | slow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffects(value: default | slide | fade): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrigger(value: focus | manual): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrigger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

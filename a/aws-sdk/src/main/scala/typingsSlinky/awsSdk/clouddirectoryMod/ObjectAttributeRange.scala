@@ -18,41 +18,11 @@ trait ObjectAttributeRange extends js.Object {
 
 object ObjectAttributeRange {
   @scala.inline
-  def apply(): ObjectAttributeRange = {
+  def apply(AttributeKey: AttributeKey = null, Range: TypedAttributeValueRange = null): ObjectAttributeRange = {
     val __obj = js.Dynamic.literal()
+    if (AttributeKey != null) __obj.updateDynamic("AttributeKey")(AttributeKey.asInstanceOf[js.Any])
+    if (Range != null) __obj.updateDynamic("Range")(Range.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectAttributeRange]
   }
-  @scala.inline
-  implicit class ObjectAttributeRangeOps[Self <: ObjectAttributeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeKey(value: AttributeKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: TypedAttributeValueRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

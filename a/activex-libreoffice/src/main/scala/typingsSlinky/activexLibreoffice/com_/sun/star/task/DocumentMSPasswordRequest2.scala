@@ -14,10 +14,9 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.task.DocumentMSPasswordRequest
   * @since OOo 3.3
   */
-@js.native
 trait DocumentMSPasswordRequest2 extends DocumentMSPasswordRequest {
   /** specifies if the requested password is for opening a document or for modifying it. */
-  var IsRequestPasswordToModify: Boolean = js.native
+  var IsRequestPasswordToModify: Boolean
 }
 
 object DocumentMSPasswordRequest2 {
@@ -33,19 +32,5 @@ object DocumentMSPasswordRequest2 {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], IsRequestPasswordToModify = IsRequestPasswordToModify.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], Mode = Mode.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentMSPasswordRequest2]
   }
-  @scala.inline
-  implicit class DocumentMSPasswordRequest2Ops[Self <: DocumentMSPasswordRequest2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsRequestPasswordToModify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRequestPasswordToModify")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -10,21 +10,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProductsResource extends js.Object {
   /** Retrieves, inserts, and deletes multiple products in a single request. This method can only be called for non-multi-client accounts. */
-  def custombatch(request: DryRun): Request[ProductsCustomBatchResponse] = js.native
+  def custombatch(request: DryRun): Request[ProductsCustomBatchResponse]
   /** Deletes a product from your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def delete(request: UserIp): Request[Unit] = js.native
+  def delete(request: UserIp): Request[Unit]
   /** Retrieves a product from your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def get(request: AltFields): Request[Product] = js.native
+  def get(request: AltFields): Request[Product]
   /**
     * Uploads a product to your Merchant Center account. If an item with the same channel, contentLanguage, offerId, and targetCountry already exists, this
     * method updates that entry. This method can only be called for non-multi-client accounts.
     */
-  def insert(request: MerchantId): Request[Product] = js.native
+  def insert(request: MerchantId): Request[Product]
   /** Lists the products in your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def list(request: IncludeInvalidInsertedItems): Request[ProductsListResponse] = js.native
+  def list(request: IncludeInvalidInsertedItems): Request[ProductsListResponse]
 }
 
 object ProductsResource {
@@ -39,43 +38,5 @@ object ProductsResource {
     val __obj = js.Dynamic.literal(custombatch = js.Any.fromFunction1(custombatch), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ProductsResource]
   }
-  @scala.inline
-  implicit class ProductsResourceOps[Self <: ProductsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustombatch(value: DryRun => Request[ProductsCustomBatchResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custombatch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: UserIp => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: AltFields => Request[Product]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: MerchantId => Request[Product]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: IncludeInvalidInsertedItems => Request[ProductsListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

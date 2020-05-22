@@ -23,41 +23,11 @@ trait SchemaUpdateProjectConfigRequest extends js.Object {
 
 object SchemaUpdateProjectConfigRequest {
   @scala.inline
-  def apply(): SchemaUpdateProjectConfigRequest = {
+  def apply(projectConfig: SchemaProjectConfig = null, updateMask: String = null): SchemaUpdateProjectConfigRequest = {
     val __obj = js.Dynamic.literal()
+    if (projectConfig != null) __obj.updateDynamic("projectConfig")(projectConfig.asInstanceOf[js.Any])
+    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateProjectConfigRequest]
   }
-  @scala.inline
-  implicit class SchemaUpdateProjectConfigRequestOps[Self <: SchemaUpdateProjectConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectConfig(value: SchemaProjectConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

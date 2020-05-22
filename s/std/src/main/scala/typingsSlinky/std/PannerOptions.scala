@@ -4,205 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PannerOptions extends AudioNodeOptions {
-  var coneInnerAngle: js.UndefOr[Double] = js.native
-  var coneOuterAngle: js.UndefOr[Double] = js.native
-  var coneOuterGain: js.UndefOr[Double] = js.native
-  var distanceModel: js.UndefOr[DistanceModelType] = js.native
-  var maxDistance: js.UndefOr[Double] = js.native
-  var orientationX: js.UndefOr[Double] = js.native
-  var orientationY: js.UndefOr[Double] = js.native
-  var orientationZ: js.UndefOr[Double] = js.native
-  var panningModel: js.UndefOr[PanningModelType] = js.native
-  var positionX: js.UndefOr[Double] = js.native
-  var positionY: js.UndefOr[Double] = js.native
-  var positionZ: js.UndefOr[Double] = js.native
-  var refDistance: js.UndefOr[Double] = js.native
-  var rolloffFactor: js.UndefOr[Double] = js.native
+  var coneInnerAngle: js.UndefOr[Double] = js.undefined
+  var coneOuterAngle: js.UndefOr[Double] = js.undefined
+  var coneOuterGain: js.UndefOr[Double] = js.undefined
+  var distanceModel: js.UndefOr[DistanceModelType] = js.undefined
+  var maxDistance: js.UndefOr[Double] = js.undefined
+  var orientationX: js.UndefOr[Double] = js.undefined
+  var orientationY: js.UndefOr[Double] = js.undefined
+  var orientationZ: js.UndefOr[Double] = js.undefined
+  var panningModel: js.UndefOr[PanningModelType] = js.undefined
+  var positionX: js.UndefOr[Double] = js.undefined
+  var positionY: js.UndefOr[Double] = js.undefined
+  var positionZ: js.UndefOr[Double] = js.undefined
+  var refDistance: js.UndefOr[Double] = js.undefined
+  var rolloffFactor: js.UndefOr[Double] = js.undefined
 }
 
 object PannerOptions {
   @scala.inline
-  def apply(): PannerOptions = {
+  def apply(
+    channelCount: js.UndefOr[Double] = js.undefined,
+    channelCountMode: ChannelCountMode = null,
+    channelInterpretation: ChannelInterpretation = null,
+    coneInnerAngle: js.UndefOr[Double] = js.undefined,
+    coneOuterAngle: js.UndefOr[Double] = js.undefined,
+    coneOuterGain: js.UndefOr[Double] = js.undefined,
+    distanceModel: DistanceModelType = null,
+    maxDistance: js.UndefOr[Double] = js.undefined,
+    orientationX: js.UndefOr[Double] = js.undefined,
+    orientationY: js.UndefOr[Double] = js.undefined,
+    orientationZ: js.UndefOr[Double] = js.undefined,
+    panningModel: PanningModelType = null,
+    positionX: js.UndefOr[Double] = js.undefined,
+    positionY: js.UndefOr[Double] = js.undefined,
+    positionZ: js.UndefOr[Double] = js.undefined,
+    refDistance: js.UndefOr[Double] = js.undefined,
+    rolloffFactor: js.UndefOr[Double] = js.undefined
+  ): PannerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(channelCount)) __obj.updateDynamic("channelCount")(channelCount.get.asInstanceOf[js.Any])
+    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
+    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
+    if (!js.isUndefined(coneInnerAngle)) __obj.updateDynamic("coneInnerAngle")(coneInnerAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(coneOuterAngle)) __obj.updateDynamic("coneOuterAngle")(coneOuterAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(coneOuterGain)) __obj.updateDynamic("coneOuterGain")(coneOuterGain.get.asInstanceOf[js.Any])
+    if (distanceModel != null) __obj.updateDynamic("distanceModel")(distanceModel.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDistance)) __obj.updateDynamic("maxDistance")(maxDistance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(orientationX)) __obj.updateDynamic("orientationX")(orientationX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(orientationY)) __obj.updateDynamic("orientationY")(orientationY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(orientationZ)) __obj.updateDynamic("orientationZ")(orientationZ.get.asInstanceOf[js.Any])
+    if (panningModel != null) __obj.updateDynamic("panningModel")(panningModel.asInstanceOf[js.Any])
+    if (!js.isUndefined(positionX)) __obj.updateDynamic("positionX")(positionX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(positionY)) __obj.updateDynamic("positionY")(positionY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(positionZ)) __obj.updateDynamic("positionZ")(positionZ.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refDistance)) __obj.updateDynamic("refDistance")(refDistance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rolloffFactor)) __obj.updateDynamic("rolloffFactor")(rolloffFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PannerOptions]
   }
-  @scala.inline
-  implicit class PannerOptionsOps[Self <: PannerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConeInnerAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coneInnerAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConeInnerAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coneInnerAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConeOuterAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coneOuterAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConeOuterAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coneOuterAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConeOuterGain(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coneOuterGain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConeOuterGain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coneOuterGain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistanceModel(value: DistanceModelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistanceModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientationX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientationX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientationY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientationY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientationZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationZ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientationZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationZ")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanningModel(value: PanningModelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panningModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanningModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panningModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionZ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionZ")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRolloffFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rolloffFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRolloffFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rolloffFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

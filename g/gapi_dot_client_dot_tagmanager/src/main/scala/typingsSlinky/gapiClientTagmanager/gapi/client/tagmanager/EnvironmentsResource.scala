@@ -9,22 +9,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnvironmentsResource extends js.Object {
   /** Creates a GTM Environment. */
-  def create(request: Alt): Request[Environment] = js.native
+  def create(request: Alt): Request[Environment]
   /** Deletes a GTM Environment. */
-  def delete(request: Fields): Request[Unit] = js.native
+  def delete(request: Fields): Request[Unit]
   /** Gets a GTM Environment. */
-  def get(request: Fields): Request[Environment] = js.native
+  def get(request: Fields): Request[Environment]
   /** Lists all GTM Environments of a GTM Container. */
-  def list(request: Key): Request[ListEnvironmentsResponse] = js.native
+  def list(request: Key): Request[ListEnvironmentsResponse]
   /** Updates a GTM Environment. This method supports patch semantics. */
-  def patch(request: Fingerprint): Request[Environment] = js.native
+  def patch(request: Fingerprint): Request[Environment]
   /** Re-generates the authorization code for a GTM Environment. */
-  def reauthorize(request: Fields): Request[Environment] = js.native
+  def reauthorize(request: Fields): Request[Environment]
   /** Updates a GTM Environment. */
-  def update(request: Fingerprint): Request[Environment] = js.native
+  def update(request: Fingerprint): Request[Environment]
 }
 
 object EnvironmentsResource {
@@ -41,55 +40,5 @@ object EnvironmentsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), reauthorize = js.Any.fromFunction1(reauthorize), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[EnvironmentsResource]
   }
-  @scala.inline
-  implicit class EnvironmentsResourceOps[Self <: EnvironmentsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Alt => Request[Environment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Fields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Fields => Request[Environment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Key => Request[ListEnvironmentsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Fingerprint => Request[Environment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReauthorize(value: Fields => Request[Environment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reauthorize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Fingerprint => Request[Environment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

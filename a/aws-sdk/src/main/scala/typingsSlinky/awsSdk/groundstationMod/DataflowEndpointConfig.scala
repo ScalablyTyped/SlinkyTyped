@@ -18,35 +18,10 @@ trait DataflowEndpointConfig extends js.Object {
 
 object DataflowEndpointConfig {
   @scala.inline
-  def apply(dataflowEndpointName: String): DataflowEndpointConfig = {
+  def apply(dataflowEndpointName: String, dataflowEndpointRegion: String = null): DataflowEndpointConfig = {
     val __obj = js.Dynamic.literal(dataflowEndpointName = dataflowEndpointName.asInstanceOf[js.Any])
+    if (dataflowEndpointRegion != null) __obj.updateDynamic("dataflowEndpointRegion")(dataflowEndpointRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataflowEndpointConfig]
   }
-  @scala.inline
-  implicit class DataflowEndpointConfigOps[Self <: DataflowEndpointConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataflowEndpointName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataflowEndpointRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataflowEndpointRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataflowEndpointRegion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

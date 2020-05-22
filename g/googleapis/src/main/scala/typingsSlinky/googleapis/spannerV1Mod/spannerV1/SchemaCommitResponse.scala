@@ -17,29 +17,10 @@ trait SchemaCommitResponse extends js.Object {
 
 object SchemaCommitResponse {
   @scala.inline
-  def apply(): SchemaCommitResponse = {
+  def apply(commitTimestamp: String = null): SchemaCommitResponse = {
     val __obj = js.Dynamic.literal()
+    if (commitTimestamp != null) __obj.updateDynamic("commitTimestamp")(commitTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommitResponse]
   }
-  @scala.inline
-  implicit class SchemaCommitResponseOps[Self <: SchemaCommitResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTimestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

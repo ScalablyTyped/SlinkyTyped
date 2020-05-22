@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Sensors.ProximitySensorDisplayOnOffController")
 @js.native
 abstract class ProximitySensorDisplayOnOffController ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.ProximitySensorDisplayOnOffController
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.ProximitySensorDisplayOnOffController {
+  /** Disconnects this ProximitySensorDisplayOnOffController instance from the service and frees all the allocated resources. */
+  /* CompleteClass */
+  override def close(): Unit = js.native
+}
 

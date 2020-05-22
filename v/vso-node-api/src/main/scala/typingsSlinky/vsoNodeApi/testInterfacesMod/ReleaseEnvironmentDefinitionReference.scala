@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReleaseEnvironmentDefinitionReference extends js.Object {
-  var definitionId: Double = js.native
-  var environmentDefinitionId: Double = js.native
+  var definitionId: Double
+  var environmentDefinitionId: Double
 }
 
 object ReleaseEnvironmentDefinitionReference {
@@ -16,25 +15,5 @@ object ReleaseEnvironmentDefinitionReference {
     val __obj = js.Dynamic.literal(definitionId = definitionId.asInstanceOf[js.Any], environmentDefinitionId = environmentDefinitionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReleaseEnvironmentDefinitionReference]
   }
-  @scala.inline
-  implicit class ReleaseEnvironmentDefinitionReferenceOps[Self <: ReleaseEnvironmentDefinitionReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefinitionId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironmentDefinitionId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentDefinitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

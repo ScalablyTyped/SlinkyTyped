@@ -1,7 +1,6 @@
 package typingsSlinky.semanticUiReact.tableRowMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
@@ -12,211 +11,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StrictTableRowProps extends js.Object {
   /** A row can be active or selected by a user. */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.native
+  var as: js.UndefOr[js.Any] = js.undefined
   /** An element type to render as (string or function). */
-  var cellAs: js.UndefOr[js.Any] = js.native
+  var cellAs: js.UndefOr[js.Any] = js.undefined
   /** Shorthand array of props for TableCell. */
-  var cells: js.UndefOr[SemanticShorthandCollection[TableCellProps]] = js.native
+  var cells: js.UndefOr[SemanticShorthandCollection[TableCellProps]] = js.undefined
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /** A row can be disabled. */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /** A row may call attention to an error or a negative value. */
-  var error: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[Boolean] = js.undefined
   /** A row may let a user know whether a value is bad. */
-  var negative: js.UndefOr[Boolean] = js.native
+  var negative: js.UndefOr[Boolean] = js.undefined
   /** A row may let a user know whether a value is good. */
-  var positive: js.UndefOr[Boolean] = js.native
+  var positive: js.UndefOr[Boolean] = js.undefined
   /** A table row can adjust its text alignment. */
-  var textAlign: js.UndefOr[center | left | right] = js.native
+  var textAlign: js.UndefOr[center | left | right] = js.undefined
   /** A table row can adjust its vertical alignment. */
-  var verticalAlign: js.UndefOr[SemanticVERTICALALIGNMENTS] = js.native
+  var verticalAlign: js.UndefOr[SemanticVERTICALALIGNMENTS] = js.undefined
   /** A row may warn a user. */
-  var warning: js.UndefOr[Boolean] = js.native
+  var warning: js.UndefOr[Boolean] = js.undefined
 }
 
 object StrictTableRowProps {
   @scala.inline
-  def apply(): StrictTableRowProps = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    as: js.Any = null,
+    cellAs: js.Any = null,
+    cells: SemanticShorthandCollection[TableCellProps] = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    error: js.UndefOr[Boolean] = js.undefined,
+    negative: js.UndefOr[Boolean] = js.undefined,
+    positive: js.UndefOr[Boolean] = js.undefined,
+    textAlign: center | left | right = null,
+    verticalAlign: SemanticVERTICALALIGNMENTS = null,
+    warning: js.UndefOr[Boolean] = js.undefined
+  ): StrictTableRowProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (cellAs != null) __obj.updateDynamic("cellAs")(cellAs.asInstanceOf[js.Any])
+    if (cells != null) __obj.updateDynamic("cells")(cells.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(negative)) __obj.updateDynamic("negative")(negative.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.get.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(warning)) __obj.updateDynamic("warning")(warning.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictTableRowProps]
   }
-  @scala.inline
-  implicit class StrictTableRowPropsOps[Self <: StrictTableRowProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellAs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCells(value: SemanticShorthandCollection[TableCellProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: center | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlign(value: SemanticVERTICALALIGNMENTS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

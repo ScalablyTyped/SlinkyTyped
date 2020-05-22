@@ -1,11 +1,11 @@
 package typingsSlinky.googleapis.driveV2Mod.driveV2
 
-import typingsSlinky.googleapis.AnonBackgroundImageLink
-import typingsSlinky.googleapis.AnonBytesUsed
-import typingsSlinky.googleapis.AnonFeatureName
-import typingsSlinky.googleapis.AnonRoleSets
-import typingsSlinky.googleapis.AnonSizeType
-import typingsSlinky.googleapis.AnonTargets
+import typingsSlinky.googleapis.anon.BackgroundImageLink
+import typingsSlinky.googleapis.anon.BytesUsed
+import typingsSlinky.googleapis.anon.FeatureName
+import typingsSlinky.googleapis.anon.RoleSets
+import typingsSlinky.googleapis.anon.SizeType
+import typingsSlinky.googleapis.anon.Targets
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait SchemaAbout extends js.Object {
     * Information about supported additional roles per file type. The most
     * specific type takes precedence.
     */
-  var additionalRoleInfo: js.UndefOr[js.Array[AnonRoleSets]] = js.native
+  var additionalRoleInfo: js.UndefOr[js.Array[RoleSets]] = js.native
   /**
     * Whether the user can create Team Drives.
     */
@@ -36,11 +36,11 @@ trait SchemaAbout extends js.Object {
   /**
     * The allowable export formats.
     */
-  var exportFormats: js.UndefOr[js.Array[AnonTargets]] = js.native
+  var exportFormats: js.UndefOr[js.Array[Targets]] = js.native
   /**
     * List of additional features enabled on this account.
     */
-  var features: js.UndefOr[js.Array[AnonFeatureName]] = js.native
+  var features: js.UndefOr[js.Array[FeatureName]] = js.native
   /**
     * The palette of allowable folder colors as RGB hex strings.
     */
@@ -48,7 +48,7 @@ trait SchemaAbout extends js.Object {
   /**
     * The allowable import formats.
     */
-  var importFormats: js.UndefOr[js.Array[AnonTargets]] = js.native
+  var importFormats: js.UndefOr[js.Array[Targets]] = js.native
   /**
     * A boolean indicating whether the authenticated app is installed by the
     * authenticated user.
@@ -72,7 +72,7 @@ trait SchemaAbout extends js.Object {
     * List of max upload sizes for each file type. The most specific type takes
     * precedence.
     */
-  var maxUploadSizes: js.UndefOr[js.Array[AnonSizeType]] = js.native
+  var maxUploadSizes: js.UndefOr[js.Array[SizeType]] = js.native
   /**
     * The name of the current user.
     */
@@ -84,7 +84,7 @@ trait SchemaAbout extends js.Object {
   /**
     * The amount of storage quota used by different Google services.
     */
-  var quotaBytesByService: js.UndefOr[js.Array[AnonBytesUsed]] = js.native
+  var quotaBytesByService: js.UndefOr[js.Array[BytesUsed]] = js.native
   /**
     * The total number of quota bytes.
     */
@@ -121,7 +121,7 @@ trait SchemaAbout extends js.Object {
   /**
     * A list of themes that are supported for Team Drives.
     */
-  var teamDriveThemes: js.UndefOr[js.Array[AnonBackgroundImageLink]] = js.native
+  var teamDriveThemes: js.UndefOr[js.Array[BackgroundImageLink]] = js.native
   /**
     * The authenticated user.
     */
@@ -130,329 +130,62 @@ trait SchemaAbout extends js.Object {
 
 object SchemaAbout {
   @scala.inline
-  def apply(): SchemaAbout = {
+  def apply(
+    additionalRoleInfo: js.Array[RoleSets] = null,
+    canCreateTeamDrives: js.UndefOr[Boolean] = js.undefined,
+    domainSharingPolicy: String = null,
+    etag: String = null,
+    exportFormats: js.Array[Targets] = null,
+    features: js.Array[FeatureName] = null,
+    folderColorPalette: js.Array[String] = null,
+    importFormats: js.Array[Targets] = null,
+    isCurrentAppInstalled: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    languageCode: String = null,
+    largestChangeId: String = null,
+    maxUploadSizes: js.Array[SizeType] = null,
+    name: String = null,
+    permissionId: String = null,
+    quotaBytesByService: js.Array[BytesUsed] = null,
+    quotaBytesTotal: String = null,
+    quotaBytesUsed: String = null,
+    quotaBytesUsedAggregate: String = null,
+    quotaBytesUsedInTrash: String = null,
+    quotaType: String = null,
+    remainingChangeIds: String = null,
+    rootFolderId: String = null,
+    selfLink: String = null,
+    teamDriveThemes: js.Array[BackgroundImageLink] = null,
+    user: SchemaUser = null
+  ): SchemaAbout = {
     val __obj = js.Dynamic.literal()
+    if (additionalRoleInfo != null) __obj.updateDynamic("additionalRoleInfo")(additionalRoleInfo.asInstanceOf[js.Any])
+    if (!js.isUndefined(canCreateTeamDrives)) __obj.updateDynamic("canCreateTeamDrives")(canCreateTeamDrives.get.asInstanceOf[js.Any])
+    if (domainSharingPolicy != null) __obj.updateDynamic("domainSharingPolicy")(domainSharingPolicy.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (exportFormats != null) __obj.updateDynamic("exportFormats")(exportFormats.asInstanceOf[js.Any])
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
+    if (folderColorPalette != null) __obj.updateDynamic("folderColorPalette")(folderColorPalette.asInstanceOf[js.Any])
+    if (importFormats != null) __obj.updateDynamic("importFormats")(importFormats.asInstanceOf[js.Any])
+    if (!js.isUndefined(isCurrentAppInstalled)) __obj.updateDynamic("isCurrentAppInstalled")(isCurrentAppInstalled.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (largestChangeId != null) __obj.updateDynamic("largestChangeId")(largestChangeId.asInstanceOf[js.Any])
+    if (maxUploadSizes != null) __obj.updateDynamic("maxUploadSizes")(maxUploadSizes.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (permissionId != null) __obj.updateDynamic("permissionId")(permissionId.asInstanceOf[js.Any])
+    if (quotaBytesByService != null) __obj.updateDynamic("quotaBytesByService")(quotaBytesByService.asInstanceOf[js.Any])
+    if (quotaBytesTotal != null) __obj.updateDynamic("quotaBytesTotal")(quotaBytesTotal.asInstanceOf[js.Any])
+    if (quotaBytesUsed != null) __obj.updateDynamic("quotaBytesUsed")(quotaBytesUsed.asInstanceOf[js.Any])
+    if (quotaBytesUsedAggregate != null) __obj.updateDynamic("quotaBytesUsedAggregate")(quotaBytesUsedAggregate.asInstanceOf[js.Any])
+    if (quotaBytesUsedInTrash != null) __obj.updateDynamic("quotaBytesUsedInTrash")(quotaBytesUsedInTrash.asInstanceOf[js.Any])
+    if (quotaType != null) __obj.updateDynamic("quotaType")(quotaType.asInstanceOf[js.Any])
+    if (remainingChangeIds != null) __obj.updateDynamic("remainingChangeIds")(remainingChangeIds.asInstanceOf[js.Any])
+    if (rootFolderId != null) __obj.updateDynamic("rootFolderId")(rootFolderId.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (teamDriveThemes != null) __obj.updateDynamic("teamDriveThemes")(teamDriveThemes.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAbout]
   }
-  @scala.inline
-  implicit class SchemaAboutOps[Self <: SchemaAbout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalRoleInfo(value: js.Array[AnonRoleSets]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalRoleInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalRoleInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalRoleInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanCreateTeamDrives(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canCreateTeamDrives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanCreateTeamDrives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canCreateTeamDrives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainSharingPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainSharingPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainSharingPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainSharingPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportFormats(value: js.Array[AnonTargets]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatures(value: js.Array[AnonFeatureName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolderColorPalette(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderColorPalette")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolderColorPalette: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderColorPalette")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportFormats(value: js.Array[AnonTargets]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCurrentAppInstalled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCurrentAppInstalled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCurrentAppInstalled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCurrentAppInstalled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLargestChangeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largestChangeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLargestChangeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largestChangeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxUploadSizes(value: js.Array[AnonSizeType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUploadSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxUploadSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUploadSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaBytesByService(value: js.Array[AnonBytesUsed]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesByService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaBytesByService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesByService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaBytesTotal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaBytesTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaBytesUsed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaBytesUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaBytesUsedAggregate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsedAggregate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaBytesUsedAggregate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsedAggregate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaBytesUsedInTrash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsedInTrash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaBytesUsedInTrash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaBytesUsedInTrash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingChangeIds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingChangeIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingChangeIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingChangeIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootFolderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootFolderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootFolderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootFolderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeamDriveThemes(value: js.Array[AnonBackgroundImageLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveThemes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeamDriveThemes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveThemes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: SchemaUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

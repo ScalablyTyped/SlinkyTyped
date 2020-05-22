@@ -47,7 +47,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ P in keyof raphael.raphael.RaphaelElement<TTechnology, raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology]> ]: raphael.raphael.RaphaelElement<TTechnology, raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology]>[P] extends (args : any): any? raphael.raphael.RaphaelElementPluginMethod<TTechnology, std.Parameters<raphael.raphael.RaphaelElement<TTechnology, raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology]>[P]>, std.ReturnType<raphael.raphael.RaphaelElement<TTechnology, raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology]>[P]>> : never} */
-@js.native
 trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] extends js.Object {
   var animate: RaphaelElementPluginMethod[
     TTechnology, 
@@ -69,7 +68,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var animateWith: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -100,7 +99,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var attr: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -121,7 +120,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var click: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -136,18 +135,18 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   @JSName("clone")
   var clone_FRaphaelElementPluginRegistry: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[this.type]], 
     ReturnType[js.Function0[this.type]]
-  ] = js.native
+  ]
   var data: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function1[/* key */ String, _]], 
     ReturnType[js.Function1[/* key */ String, _]]
-  ] = js.native
+  ]
   var dblclick: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -162,7 +161,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var drag: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -187,7 +186,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var getBBox: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -196,7 +195,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
     ReturnType[
       js.Function1[/* isWithoutTransform */ js.UndefOr[Boolean], RaphaelAxisAlignedBoundingBox]
     ]
-  ] = js.native
+  ]
   var glow: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -205,12 +204,12 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
     ReturnType[
       js.Function1[/* glow */ js.UndefOr[PartialRaphaelGlowSetting], RaphaelSet[TTechnology]]
     ]
-  ] = js.native
+  ]
   var hide: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[this.type]], 
     ReturnType[js.Function0[this.type]]
-  ] = js.native
+  ]
   var hover: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -231,8 +230,8 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
-  var id: RaphaelElementPluginMethod[TTechnology, Parameters[Double], ReturnType[Double]] = js.native
+  ]
+  var id: RaphaelElementPluginMethod[TTechnology, Parameters[Double], ReturnType[Double]]
   var insertAfter: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -253,7 +252,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var insertBefore: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -274,8 +273,8 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
-  var matrix: RaphaelElementPluginMethod[TTechnology, Parameters[RaphaelMatrix], ReturnType[RaphaelMatrix]] = js.native
+  ]
+  var matrix: RaphaelElementPluginMethod[TTechnology, Parameters[RaphaelMatrix], ReturnType[RaphaelMatrix]]
   var mousedown: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -290,7 +289,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var mousemove: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -305,7 +304,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var mouseout: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -320,7 +319,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var mouseover: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -335,7 +334,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var mouseup: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -350,7 +349,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var next: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -365,7 +364,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
       ]) | Null
     ]
-  ] = js.native
+  ]
   var node: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -374,7 +373,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
     ReturnType[
       /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
     ]
-  ] = js.native
+  ]
   var onDragOver: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -389,17 +388,17 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var paper: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[RaphaelPaper[TTechnology]], 
     ReturnType[RaphaelPaper[TTechnology]]
-  ] = js.native
+  ]
   var pause: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], this.type]], 
     ReturnType[js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], this.type]]
-  ] = js.native
+  ]
   var prev: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -414,23 +413,23 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
       ]) | Null
     ]
-  ] = js.native
+  ]
   var raphael: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.UndefOr[RaphaelStatic[SVG | VML]]], 
     ReturnType[js.UndefOr[RaphaelStatic[SVG | VML]]]
-  ] = js.native
-  var remove: RaphaelElementPluginMethod[TTechnology, Parameters[js.Function0[Unit]], ReturnType[js.Function0[Unit]]] = js.native
+  ]
+  var remove: RaphaelElementPluginMethod[TTechnology, Parameters[js.Function0[Unit]], ReturnType[js.Function0[Unit]]]
   var removeData: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function1[/* key */ js.UndefOr[String], this.type]], 
     ReturnType[js.Function1[/* key */ js.UndefOr[String], this.type]]
-  ] = js.native
+  ]
   var resume: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], this.type]], 
     ReturnType[js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], this.type]]
-  ] = js.native
+  ]
   var rotate: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -439,7 +438,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
     ReturnType[
       js.Function3[/* degrees */ Double, /* centerX */ Double, /* centerY */ Double, this.type]
     ]
-  ] = js.native
+  ]
   var scale: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -460,37 +459,37 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var setTime: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function2[/* animation */ RaphaelAnimation, /* value */ Double, this.type]], 
     ReturnType[js.Function2[/* animation */ RaphaelAnimation, /* value */ Double, this.type]]
-  ] = js.native
+  ]
   var show: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[this.type]], 
     ReturnType[js.Function0[this.type]]
-  ] = js.native
+  ]
   var status: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[js.Array[RaphaelAnimationStatus]]], 
     ReturnType[js.Function0[js.Array[RaphaelAnimationStatus]]]
-  ] = js.native
+  ]
   var stop: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function1[/* animation */ js.UndefOr[RaphaelAnimation], this.type]], 
     ReturnType[js.Function1[/* animation */ js.UndefOr[RaphaelAnimation], this.type]]
-  ] = js.native
+  ]
   var toBack: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[this.type]], 
     ReturnType[js.Function0[this.type]]
-  ] = js.native
+  ]
   var toFront: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[this.type]], 
     ReturnType[js.Function0[this.type]]
-  ] = js.native
+  ]
   var touchcancel: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -505,7 +504,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var touchend: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -520,7 +519,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var touchmove: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -535,7 +534,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var touchstart: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -550,18 +549,18 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
-  var transform: RaphaelElementPluginMethod[TTechnology, Parameters[js.Function0[String]], ReturnType[js.Function0[String]]] = js.native
+  ]
+  var transform: RaphaelElementPluginMethod[TTechnology, Parameters[js.Function0[String]], ReturnType[js.Function0[String]]]
   var translate: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function2[/* deltaX */ Double, /* deltaY */ Double, this.type]], 
     ReturnType[js.Function2[/* deltaX */ Double, /* deltaY */ Double, this.type]]
-  ] = js.native
+  ]
   var `type`: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[RaphaelShapeType | String], 
     ReturnType[RaphaelShapeType | String]
-  ] = js.native
+  ]
   var unclick: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -576,7 +575,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var undblclick: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -591,12 +590,12 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var undrag: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[js.Function0[this.type]], 
     ReturnType[js.Function0[this.type]]
-  ] = js.native
+  ]
   var unhover: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -613,7 +612,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var unmousedown: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -628,7 +627,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var unmousemove: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -643,7 +642,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var unmouseout: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -658,7 +657,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var unmouseover: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -673,7 +672,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var unmouseup: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -688,7 +687,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var untouchcancel: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -703,7 +702,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var untouchend: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -718,7 +717,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var untouchmove: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -733,7 +732,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
   var untouchstart: RaphaelElementPluginMethod[
     TTechnology, 
     Parameters[
@@ -748,7 +747,7 @@ trait RaphaelElementPluginRegistry[TTechnology /* <: RaphaelTechnology */] exten
         this.type
       ]
     ]
-  ] = js.native
+  ]
 }
 
 object RaphaelElementPluginRegistry {
@@ -1656,1321 +1655,5 @@ object RaphaelElementPluginRegistry {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RaphaelElementPluginRegistry[TTechnology]]
   }
-  @scala.inline
-  implicit class RaphaelElementPluginRegistryOps[Self[ttechnology] <: RaphaelElementPluginRegistry[ttechnology], TTechnology] (val x: Self[TTechnology]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TTechnology] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TTechnology]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TTechnology] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TTechnology] with Other]
-    @scala.inline
-    def withAnimate(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function4[
-              /* targetAttributes */ PartialRaphaelAttributes, 
-              /* durationMilliseconds */ Double, 
-              /* easing */ js.UndefOr[RaphaelBuiltinEasingFormula | RaphaelCustomEasingFormula], 
-              /* onAnimationComplete */ js.UndefOr[RaphaelOnAnimationCompleteHandler[RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function4[
-              /* targetAttributes */ PartialRaphaelAttributes, 
-              /* durationMilliseconds */ Double, 
-              /* easing */ js.UndefOr[RaphaelBuiltinEasingFormula | RaphaelCustomEasingFormula], 
-              /* onAnimationComplete */ js.UndefOr[RaphaelOnAnimationCompleteHandler[RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimateWith(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function6[
-              /* otherElement */ RaphaelElement[
-                TTechnology, 
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-              ], 
-              /* otherAnimation */ RaphaelAnimation, 
-              /* targetAttributes */ PartialRaphaelAttributes, 
-              /* durationMilliseconds */ Double, 
-              /* easing */ js.UndefOr[RaphaelBuiltinEasingFormula | RaphaelCustomEasingFormula], 
-              /* onAnimationComplete */ js.UndefOr[RaphaelOnAnimationCompleteHandler[RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function6[
-              /* otherElement */ RaphaelElement[
-                TTechnology, 
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-              ], 
-              /* otherAnimation */ RaphaelAnimation, 
-              /* targetAttributes */ PartialRaphaelAttributes, 
-              /* durationMilliseconds */ Double, 
-              /* easing */ js.UndefOr[RaphaelBuiltinEasingFormula | RaphaelCustomEasingFormula], 
-              /* onAnimationComplete */ js.UndefOr[RaphaelOnAnimationCompleteHandler[RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateWith")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttr(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function2[
-              /* attributeName */ `arrow-end` | `clip-rect` | cursor | cx | cy | fill | `fill-opacity` | font | `font-family` | `font-size` | `font-weight` | height | href | opacity | path | r_ | rx | ry | src | stroke | `stroke-dasharray` | `stroke-linecap` | `stroke-linejoin` | `stroke-miterlimit` | `stroke-opacity` | `stroke-width` | target | text | `text-anchor` | title | transform | width | typingsSlinky.raphael.raphaelStrings.x | y, 
-              /* attributeValue */ js.UndefOr[
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelAttributes['arrow-end' | 'clip-rect' | 'cursor' | 'cx' | 'cy' | 'fill' | 'fill-opacity' | 'font' | 'font-family' | 'font-size' | 'font-weight' | 'height' | 'href' | 'opacity' | 'path' | 'r' | 'rx' | 'ry' | 'src' | 'stroke' | 'stroke-dasharray' | 'stroke-linecap' | 'stroke-linejoin' | 'stroke-miterlimit' | 'stroke-opacity' | 'stroke-width' | 'target' | 'text' | 'text-anchor' | 'title' | 'transform' | 'width' | 'x' | 'y'] */ js.Any
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function2[
-              /* attributeName */ `arrow-end` | `clip-rect` | cursor | cx | cy | fill | `fill-opacity` | font | `font-family` | `font-size` | `font-weight` | height | href | opacity | path | r_ | rx | ry | src | stroke | `stroke-dasharray` | `stroke-linecap` | `stroke-linejoin` | `stroke-miterlimit` | `stroke-opacity` | `stroke-width` | target | text | `text-anchor` | title | transform | width | typingsSlinky.raphael.raphaelStrings.x | y, 
-              /* attributeValue */ js.UndefOr[
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelAttributes['arrow-end' | 'clip-rect' | 'cursor' | 'cx' | 'cy' | 'fill' | 'fill-opacity' | 'font' | 'font-family' | 'font-size' | 'font-weight' | 'height' | 'href' | 'opacity' | 'path' | 'r' | 'rx' | 'ry' | 'src' | 'stroke' | 'stroke-dasharray' | 'stroke-linecap' | 'stroke-linejoin' | 'stroke-miterlimit' | 'stroke-opacity' | 'stroke-width' | 'target' | 'text' | 'text-anchor' | 'title' | 'transform' | 'width' | 'x' | 'y'] */ js.Any
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClick(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClone(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[RaphaelElementPluginRegistry[TTechnology]]], 
-          ReturnType[js.Function0[RaphaelElementPluginRegistry[TTechnology]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function1[/* key */ String, _]], 
-          ReturnType[js.Function1[/* key */ String, _]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDblclick(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDrag(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function6[
-              /* onMoveHandler */ RaphaelDragOnMoveHandler[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* onStartHandler */ RaphaelDragOnStartHandler[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* onEndHandler */ RaphaelDragOnEndHandler[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* moveThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* startThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* endThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function6[
-              /* onMoveHandler */ RaphaelDragOnMoveHandler[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* onStartHandler */ RaphaelDragOnStartHandler[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* onEndHandler */ RaphaelDragOnEndHandler[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* moveThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* startThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* endThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetBBox(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[/* isWithoutTransform */ js.UndefOr[Boolean], RaphaelAxisAlignedBoundingBox]
-          ], 
-          ReturnType[
-            js.Function1[/* isWithoutTransform */ js.UndefOr[Boolean], RaphaelAxisAlignedBoundingBox]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlow(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[/* glow */ js.UndefOr[PartialRaphaelGlowSetting], RaphaelSet[TTechnology]]
-          ], 
-          ReturnType[
-            js.Function1[/* glow */ js.UndefOr[PartialRaphaelGlowSetting], RaphaelSet[TTechnology]]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHide(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[RaphaelElementPluginRegistry[TTechnology]]], 
-          ReturnType[js.Function0[RaphaelElementPluginRegistry[TTechnology]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHover(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function4[
-              /* onHoverInHandler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              /* onHoverOutHandler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              /* hoverInThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* hoverOutThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function4[
-              /* onHoverInHandler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              /* onHoverOutHandler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              /* hoverInThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              /* hoverOutThisContext */ js.UndefOr[RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: RaphaelElementPluginMethod[TTechnology, Parameters[Double], ReturnType[Double]]): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsertAfter(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* element */ RaphaelElement[
-                TTechnology, 
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* element */ RaphaelElement[
-                TTechnology, 
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsertBefore(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* element */ RaphaelElement[
-                TTechnology, 
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* element */ RaphaelElement[
-                TTechnology, 
-                /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatrix(
-      value: RaphaelElementPluginMethod[TTechnology, Parameters[RaphaelMatrix], ReturnType[RaphaelMatrix]]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMousedown(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mousedown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMousemove(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mousemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseout(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseover(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseup(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNext(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            (RaphaelElement[
-              TTechnology, 
-              /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-            ]) | Null
-          ], 
-          ReturnType[
-            (RaphaelElement[
-              TTechnology, 
-              /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-            ]) | Null
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-          ], 
-          ReturnType[
-            /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnDragOver(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* onDragOverHandler */ RaphaelDragOnOverHandler[
-                TTechnology, 
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* onDragOverHandler */ RaphaelDragOnOverHandler[
-                TTechnology, 
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]]
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaper(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[RaphaelPaper[TTechnology]], 
-          ReturnType[RaphaelPaper[TTechnology]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPause(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], RaphaelElementPluginRegistry[TTechnology]]
-          ], 
-          ReturnType[
-            js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], RaphaelElementPluginRegistry[TTechnology]]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrev(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            (RaphaelElement[
-              TTechnology, 
-              /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-            ]) | Null
-          ], 
-          ReturnType[
-            (RaphaelElement[
-              TTechnology, 
-              /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-            ]) | Null
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRaphael(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.UndefOr[RaphaelStatic[SVG | VML]]], 
-          ReturnType[js.UndefOr[RaphaelStatic[SVG | VML]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raphael")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(
-      value: RaphaelElementPluginMethod[TTechnology, Parameters[js.Function0[Unit]], ReturnType[js.Function0[Unit]]]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveData(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[/* key */ js.UndefOr[String], RaphaelElementPluginRegistry[TTechnology]]
-          ], 
-          ReturnType[
-            js.Function1[/* key */ js.UndefOr[String], RaphaelElementPluginRegistry[TTechnology]]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResume(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], RaphaelElementPluginRegistry[TTechnology]]
-          ], 
-          ReturnType[
-            js.Function1[/* anim */ js.UndefOr[RaphaelAnimation], RaphaelElementPluginRegistry[TTechnology]]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRotate(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function3[
-              /* degrees */ Double, 
-              /* centerX */ Double, 
-              /* centerY */ Double, 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function3[
-              /* degrees */ Double, 
-              /* centerX */ Double, 
-              /* centerY */ Double, 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function4[
-              /* scaleFactorX */ Double, 
-              /* scaleFactorY */ Double, 
-              /* centerX */ Double, 
-              /* centerY */ Double, 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function4[
-              /* scaleFactorX */ Double, 
-              /* scaleFactorY */ Double, 
-              /* centerX */ Double, 
-              /* centerY */ Double, 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetTime(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function2[
-              /* animation */ RaphaelAnimation, 
-              /* value */ Double, 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function2[
-              /* animation */ RaphaelAnimation, 
-              /* value */ Double, 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShow(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[RaphaelElementPluginRegistry[TTechnology]]], 
-          ReturnType[js.Function0[RaphaelElementPluginRegistry[TTechnology]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[js.Array[RaphaelAnimationStatus]]], 
-          ReturnType[js.Function0[js.Array[RaphaelAnimationStatus]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStop(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* animation */ js.UndefOr[RaphaelAnimation], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* animation */ js.UndefOr[RaphaelAnimation], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToBack(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[RaphaelElementPluginRegistry[TTechnology]]], 
-          ReturnType[js.Function0[RaphaelElementPluginRegistry[TTechnology]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toBack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToFront(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[RaphaelElementPluginRegistry[TTechnology]]], 
-          ReturnType[js.Function0[RaphaelElementPluginRegistry[TTechnology]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toFront")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTouchcancel(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchcancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTouchend(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTouchmove(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchmove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTouchstart(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransform(
-      value: RaphaelElementPluginMethod[TTechnology, Parameters[js.Function0[String]], ReturnType[js.Function0[String]]]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranslate(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function2[/* deltaX */ Double, /* deltaY */ Double, RaphaelElementPluginRegistry[TTechnology]]
-          ], 
-          ReturnType[
-            js.Function2[/* deltaX */ Double, /* deltaY */ Double, RaphaelElementPluginRegistry[TTechnology]]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[RaphaelShapeType | String], 
-          ReturnType[RaphaelShapeType | String]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnclick(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUndblclick(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undblclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUndrag(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[js.Function0[RaphaelElementPluginRegistry[TTechnology]]], 
-          ReturnType[js.Function0[RaphaelElementPluginRegistry[TTechnology]]]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnhover(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function2[
-              /* onHoverInHandler */ RaphaelBasicEventHandler[_, MouseEvent], 
-              /* onHoverOutHandler */ RaphaelBasicEventHandler[_, MouseEvent], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function2[
-              /* onHoverInHandler */ RaphaelBasicEventHandler[_, MouseEvent], 
-              /* onHoverOutHandler */ RaphaelBasicEventHandler[_, MouseEvent], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unhover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnmousedown(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmousedown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnmousemove(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmousemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnmouseout(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmouseout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnmouseover(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmouseover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnmouseup(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                MouseEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmouseup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUntouchcancel(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untouchcancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUntouchend(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untouchend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUntouchmove(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untouchmove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUntouchstart(
-      value: RaphaelElementPluginMethod[
-          TTechnology, 
-          Parameters[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ], 
-          ReturnType[
-            js.Function1[
-              /* handler */ RaphaelBasicEventHandler[
-                RaphaelUnwrapElement[TTechnology, RaphaelElementPluginRegistry[TTechnology]], 
-                TouchEvent
-              ], 
-              RaphaelElementPluginRegistry[TTechnology]
-            ]
-          ]
-        ]
-    ): Self[TTechnology] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("untouchstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

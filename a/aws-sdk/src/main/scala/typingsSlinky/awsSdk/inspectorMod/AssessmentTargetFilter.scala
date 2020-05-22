@@ -14,29 +14,10 @@ trait AssessmentTargetFilter extends js.Object {
 
 object AssessmentTargetFilter {
   @scala.inline
-  def apply(): AssessmentTargetFilter = {
+  def apply(assessmentTargetNamePattern: NamePattern = null): AssessmentTargetFilter = {
     val __obj = js.Dynamic.literal()
+    if (assessmentTargetNamePattern != null) __obj.updateDynamic("assessmentTargetNamePattern")(assessmentTargetNamePattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssessmentTargetFilter]
   }
-  @scala.inline
-  implicit class AssessmentTargetFilterOps[Self <: AssessmentTargetFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssessmentTargetNamePattern(value: NamePattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargetNamePattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssessmentTargetNamePattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargetNamePattern")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectConfig extends PayPalConfig {
-  var display: js.UndefOr[DisplayName] = js.native
+  var display: js.UndefOr[DisplayName] = js.undefined
 }
 
 object DirectConfig {
   @scala.inline
-  def apply(): DirectConfig = {
+  def apply(display: DisplayName = null): DirectConfig = {
     val __obj = js.Dynamic.literal()
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectConfig]
   }
-  @scala.inline
-  implicit class DirectConfigOps[Self <: DirectConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplay(value: DisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

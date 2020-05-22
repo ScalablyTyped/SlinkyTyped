@@ -2564,6 +2564,14 @@ trait Commands extends js.Object {
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, args: (KeyType | Double)*): js.Promise[Double] = js.native
+  def zpopmax(key: KeyType): js.Promise[js.Array[String]] = js.native
+  def zpopmax(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
+  def zpopmax(key: KeyType, count: Double): js.Promise[js.Array[String]] = js.native
+  def zpopmax(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Unit = js.native
+  def zpopmin(key: KeyType): js.Promise[js.Array[String]] = js.native
+  def zpopmin(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
+  def zpopmin(key: KeyType, count: Double): js.Promise[js.Array[String]] = js.native
+  def zpopmin(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Unit = js.native
   def zrange(key: KeyType, start: Double, stop: Double): js.Promise[js.Array[String]] = js.native
   def zrange(key: KeyType, start: Double, stop: Double, callback: Callback[js.Array[String]]): Unit = js.native
   @JSName("zrange")
@@ -2574,6 +2582,20 @@ trait Commands extends js.Object {
     start: Double,
     stop: Double,
     withScores: WITHSCORES,
+    callback: Callback[js.Array[String]]
+  ): Unit = js.native
+  def zrangebylex(key: KeyType, min: String, max: String): js.Promise[js.Array[String]] = js.native
+  def zrangebylex(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Unit = js.native
+  @JSName("zrangebylex")
+  def zrangebylex_LIMIT(key: KeyType, min: String, max: String, limit: LIMIT, offset: Double, count: Double): js.Promise[js.Array[String]] = js.native
+  @JSName("zrangebylex")
+  def zrangebylex_LIMIT(
+    key: KeyType,
+    min: String,
+    max: String,
+    limit: LIMIT,
+    offset: Double,
+    count: Double,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
   def zrangebyscore(key: KeyType, min: String, max: String): js.Promise[js.Array[String]] = js.native
@@ -2783,6 +2805,8 @@ trait Commands extends js.Object {
   def zrem(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def zrem(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def zrem(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  def zremrangebylex(key: KeyType, min: String, max: String): js.Promise[Double] = js.native
+  def zremrangebylex(key: KeyType, min: String, max: String, callback: Callback[Double]): Unit = js.native
   def zremrangebyrank(key: KeyType, start: Double, stop: Double): js.Promise[Double] = js.native
   def zremrangebyrank(key: KeyType, start: Double, stop: Double, callback: Callback[Double]): Unit = js.native
   def zremrangebyscore(key: KeyType, min: String, max: String): js.Promise[Double] = js.native
@@ -2803,6 +2827,20 @@ trait Commands extends js.Object {
     start: Double,
     stop: Double,
     withScores: WITHSCORES,
+    callback: Callback[js.Array[String]]
+  ): Unit = js.native
+  def zrevrangebylex(key: KeyType, min: String, max: String): js.Promise[js.Array[String]] = js.native
+  def zrevrangebylex(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Unit = js.native
+  @JSName("zrevrangebylex")
+  def zrevrangebylex_LIMIT(key: KeyType, min: String, max: String, limit: LIMIT, offset: Double, count: Double): js.Promise[js.Array[String]] = js.native
+  @JSName("zrevrangebylex")
+  def zrevrangebylex_LIMIT(
+    key: KeyType,
+    min: String,
+    max: String,
+    limit: LIMIT,
+    offset: Double,
+    count: Double,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
   def zrevrangebyscore(key: KeyType, max: String, min: String): js.Promise[js.Array[String]] = js.native

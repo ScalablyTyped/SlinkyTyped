@@ -4,46 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Font2 extends js.Object {
-  var Allcaps: MsoTriState = js.native
-  val Application: js.Any = js.native
-  var AutorotateNumbers: MsoTriState = js.native
-  var BaselineOffset: Double = js.native
-  var Bold: MsoTriState = js.native
-  var Caps: MsoTextCaps = js.native
-  val Creator: Double = js.native
-  var DoubleStrikeThrough: MsoTriState = js.native
-  val Embeddable: MsoTriState = js.native
-  val Embedded: MsoTriState = js.native
-  var Equalize: MsoTriState = js.native
-  val Fill: FillFormat = js.native
-  val Glow: GlowFormat = js.native
-  val Highlight: ColorFormat = js.native
-  var Italic: MsoTriState = js.native
-  var Kerning: Double = js.native
-  val Line: LineFormat = js.native
-  var Name: String = js.native
-  var NameAscii: String = js.native
-  var NameComplexScript: String = js.native
-  var NameFarEast: String = js.native
-  var NameOther: String = js.native
+  var Allcaps: MsoTriState
+  val Application: js.Any
+  var AutorotateNumbers: MsoTriState
+  var BaselineOffset: Double
+  var Bold: MsoTriState
+  var Caps: MsoTextCaps
+  val Creator: Double
+  var DoubleStrikeThrough: MsoTriState
+  val Embeddable: MsoTriState
+  val Embedded: MsoTriState
+  var Equalize: MsoTriState
+  val Fill: FillFormat
+  val Glow: GlowFormat
+  val Highlight: ColorFormat
+  var Italic: MsoTriState
+  var Kerning: Double
+  val Line: LineFormat
+  var Name: String
+  var NameAscii: String
+  var NameComplexScript: String
+  var NameFarEast: String
+  var NameOther: String
   @JSName("Office.Font2_typekey")
-  var OfficeDotFont2_typekey: Font2 = js.native
-  val Parent: js.Any = js.native
-  val Reflection: ReflectionFormat = js.native
-  val Shadow: ShadowFormat = js.native
-  var Size: Double = js.native
-  var Smallcaps: MsoTriState = js.native
-  var SoftEdgeFormat: MsoSoftEdgeType = js.native
-  var Spacing: Double = js.native
-  var Strike: MsoTextStrike = js.native
-  var StrikeThrough: MsoTriState = js.native
-  var Subscript: MsoTriState = js.native
-  var Superscript: MsoTriState = js.native
-  val UnderlineColor: ColorFormat = js.native
-  var UnderlineStyle: MsoTextUnderlineType = js.native
-  var WordArtformat: MsoPresetTextEffect = js.native
+  var OfficeDotFont2_typekey: Font2
+  val Parent: js.Any
+  val Reflection: ReflectionFormat
+  val Shadow: ShadowFormat
+  var Size: Double
+  var Smallcaps: MsoTriState
+  var SoftEdgeFormat: MsoSoftEdgeType
+  var Spacing: Double
+  var Strike: MsoTextStrike
+  var StrikeThrough: MsoTriState
+  var Subscript: MsoTriState
+  var Superscript: MsoTriState
+  val UnderlineColor: ColorFormat
+  var UnderlineStyle: MsoTextUnderlineType
+  var WordArtformat: MsoPresetTextEffect
 }
 
 object Font2 {
@@ -91,235 +90,5 @@ object Font2 {
     __obj.updateDynamic("Office.Font2_typekey")(OfficeDotFont2_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Font2]
   }
-  @scala.inline
-  implicit class Font2Ops[Self <: Font2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllcaps(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Allcaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutorotateNumbers(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutorotateNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaselineOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBold(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaps(value: MsoTextCaps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Caps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDoubleStrikeThrough(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoubleStrikeThrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbeddable(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Embeddable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbedded(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Embedded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEqualize(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Equalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFill(value: FillFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlow(value: GlowFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Glow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHighlight(value: ColorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItalic(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Italic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKerning(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Kerning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLine(value: LineFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameAscii(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameAscii")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameComplexScript(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameComplexScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameFarEast(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameFarEast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameOther(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameOther")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotFont2_typekey(value: Font2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.Font2_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReflection(value: ReflectionFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reflection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShadow(value: ShadowFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSmallcaps(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Smallcaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSoftEdgeFormat(value: MsoSoftEdgeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftEdgeFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrike(value: MsoTextStrike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Strike")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrikeThrough(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrikeThrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscript(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuperscript(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Superscript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnderlineColor(value: ColorFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnderlineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnderlineStyle(value: MsoTextUnderlineType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnderlineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordArtformat(value: MsoPresetTextEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordArtformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

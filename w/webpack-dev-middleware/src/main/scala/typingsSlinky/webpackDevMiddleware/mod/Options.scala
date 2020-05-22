@@ -13,281 +13,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var filename: js.UndefOr[String] = js.native
+  var filename: js.UndefOr[String] = js.undefined
   /**
     * Set the default file system which will be used by webpack as primary destination of generated files
     */
-  var fs: js.UndefOr[typingsSlinky.memoryFs.mod.^] = js.native
+  var fs: js.UndefOr[typingsSlinky.memoryFs.mod.^] = js.undefined
   /** This property allows a user to pass custom HTTP headers on each request. eg. { "X-Custom-Header": "yes" } */
-  var headers: js.UndefOr[StringDictionary[String]] = js.native
+  var headers: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * The index path for web server, defaults to "index.html".
     * If falsy (but not undefined), the server will not respond to requests to the root URL.
     */
-  var index: js.UndefOr[String | Boolean] = js.native
+  var index: js.UndefOr[String | Boolean] = js.undefined
   /**
     * This option instructs the module to operate in 'lazy' mode,
     * meaning that it won't recompile when files change, but rather on each request.
     */
-  var `lazy`: js.UndefOr[Boolean] = js.native
+  var `lazy`: js.UndefOr[Boolean] = js.undefined
   /** This property defines the level of messages that the module will log */
-  var logLevel: js.UndefOr[info | warn | error | trace | debug | silent] = js.native
+  var logLevel: js.UndefOr[info | warn | error | trace | debug | silent] = js.undefined
   /**
     * If true the log output of the module will be prefixed by a timestamp in the HH:mm:ss format.
     * @default false
     */
-  var logTime: js.UndefOr[Boolean] = js.native
+  var logTime: js.UndefOr[Boolean] = js.undefined
   /**
     * In the rare event that a user would like to provide a custom logging interface,
     * this property allows the user to assign one
     */
-  var logger: js.UndefOr[Logger] = js.native
+  var logger: js.UndefOr[Logger] = js.undefined
   /**
     * This property allows a user to pass the list of HTTP request methods accepted by the server.
     * @default [ 'GET', 'HEAD' ]
     */
-  var methods: js.UndefOr[js.Array[String]] = js.native
+  var methods: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * This property allows a user to register custom mime types or extension mappings
     * @default null
     */
-  var mimeTypes: js.UndefOr[MimeTypeMap | OverrideMimeTypeMap | Null] = js.native
+  var mimeTypes: js.UndefOr[MimeTypeMap | OverrideMimeTypeMap | Null] = js.undefined
   /** The public path that the middleware is bound to */
-  var publicPath: String = js.native
+  var publicPath: String
   /** Allows users to provide a custom reporter to handle logging within the module */
-  var reporter: js.UndefOr[Reporter | Null] = js.native
+  var reporter: js.UndefOr[Reporter | Null] = js.undefined
   /** Instructs the module to enable or disable the server-side rendering mode */
-  var serverSideRender: js.UndefOr[Boolean] = js.native
+  var serverSideRender: js.UndefOr[Boolean] = js.undefined
   /** Options for formatting statistics displayed during and after compile */
-  var stats: js.UndefOr[Stats] = js.native
+  var stats: js.UndefOr[Stats] = js.undefined
   /** The module accepts an Object containing options for file watching, which is passed directly to the compiler provided */
-  var watchOptions: js.UndefOr[WatchOptions] = js.native
+  var watchOptions: js.UndefOr[WatchOptions] = js.undefined
   /**
     * If true, the option will instruct the module to write files to the configured location on disk as specified in your webpack config file
     * This option also accepts a Function value, which can be used to filter which files are written to disk
     */
-  var writeToDisk: js.UndefOr[Boolean | (js.Function1[/* filename */ String, Boolean])] = js.native
+  var writeToDisk: js.UndefOr[Boolean | (js.Function1[/* filename */ String, Boolean])] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(publicPath: String): Options = {
+  def apply(
+    publicPath: String,
+    filename: String = null,
+    fs: typingsSlinky.memoryFs.mod.^ = null,
+    headers: StringDictionary[String] = null,
+    index: String | Boolean = null,
+    `lazy`: js.UndefOr[Boolean] = js.undefined,
+    logLevel: info | warn | error | trace | debug | silent = null,
+    logTime: js.UndefOr[Boolean] = js.undefined,
+    logger: Logger = null,
+    methods: js.Array[String] = null,
+    mimeTypes: js.UndefOr[Null | MimeTypeMap | OverrideMimeTypeMap] = js.undefined,
+    reporter: js.UndefOr[
+      Null | ((/* middlewareOptions */ Options, /* reporterOptions */ ReporterOptions) => Unit)
+    ] = js.undefined,
+    serverSideRender: js.UndefOr[Boolean] = js.undefined,
+    stats: Stats = null,
+    watchOptions: WatchOptions = null,
+    writeToDisk: Boolean | (js.Function1[/* filename */ String, Boolean]) = null
+  ): Options = {
     val __obj = js.Dynamic.literal(publicPath = publicPath.asInstanceOf[js.Any])
+    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
+    if (fs != null) __obj.updateDynamic("fs")(fs.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.get.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(logTime)) __obj.updateDynamic("logTime")(logTime.get.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (methods != null) __obj.updateDynamic("methods")(methods.asInstanceOf[js.Any])
+    if (!js.isUndefined(mimeTypes)) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
+    if (!js.isUndefined(reporter)) __obj.updateDynamic("reporter")(if (reporter != null) js.Any.fromFunction2(reporter.asInstanceOf[(/* middlewareOptions */ Options, /* reporterOptions */ ReporterOptions) => Unit]) else null)
+    if (!js.isUndefined(serverSideRender)) __obj.updateDynamic("serverSideRender")(serverSideRender.get.asInstanceOf[js.Any])
+    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
+    if (watchOptions != null) __obj.updateDynamic("watchOptions")(watchOptions.asInstanceOf[js.Any])
+    if (writeToDisk != null) __obj.updateDynamic("writeToDisk")(writeToDisk.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPublicPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFs(value: typingsSlinky.memoryFs.mod.^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: info | warn | error | trace | debug | silent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogTime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: Logger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethods(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeTypes(value: MimeTypeMap | OverrideMimeTypeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeTypesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(null)
-        ret
-    }
-    @scala.inline
-    def withReporter(value: (/* middlewareOptions */ Options, /* reporterOptions */ ReporterOptions) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutReporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReporterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(null)
-        ret
-    }
-    @scala.inline
-    def withServerSideRender(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSideRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: Stats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatchOptions(value: WatchOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteToDiskFunction1(value: /* filename */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWriteToDisk(value: Boolean | (js.Function1[/* filename */ String, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteToDisk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

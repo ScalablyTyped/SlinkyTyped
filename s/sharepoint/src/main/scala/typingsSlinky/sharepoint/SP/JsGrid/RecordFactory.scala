@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RecordFactory extends js.Object {
-  var gridFieldMap: js.Any = js.native
+  var gridFieldMap: js.Any
   /** Create a new record */
-  def MakeRecord(dataPropMap: js.Any, localizedPropMap: js.Any, bKeepRawData: Boolean): IRecord = js.native
+  def MakeRecord(dataPropMap: js.Any, localizedPropMap: js.Any, bKeepRawData: Boolean): IRecord
 }
 
 object RecordFactory {
@@ -17,25 +16,5 @@ object RecordFactory {
     val __obj = js.Dynamic.literal(MakeRecord = js.Any.fromFunction3(MakeRecord), gridFieldMap = gridFieldMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordFactory]
   }
-  @scala.inline
-  implicit class RecordFactoryOps[Self <: RecordFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMakeRecord(value: (js.Any, js.Any, Boolean) => IRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MakeRecord")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGridFieldMap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridFieldMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -42,65 +42,18 @@ trait SchemaPolicy extends js.Object {
 
 object SchemaPolicy {
   @scala.inline
-  def apply(): SchemaPolicy = {
+  def apply(
+    autoUpdatePolicy: String = null,
+    maintenanceWindow: SchemaMaintenanceWindow = null,
+    productAvailabilityPolicy: String = null,
+    productPolicy: js.Array[SchemaProductPolicy] = null
+  ): SchemaPolicy = {
     val __obj = js.Dynamic.literal()
+    if (autoUpdatePolicy != null) __obj.updateDynamic("autoUpdatePolicy")(autoUpdatePolicy.asInstanceOf[js.Any])
+    if (maintenanceWindow != null) __obj.updateDynamic("maintenanceWindow")(maintenanceWindow.asInstanceOf[js.Any])
+    if (productAvailabilityPolicy != null) __obj.updateDynamic("productAvailabilityPolicy")(productAvailabilityPolicy.asInstanceOf[js.Any])
+    if (productPolicy != null) __obj.updateDynamic("productPolicy")(productPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPolicy]
   }
-  @scala.inline
-  implicit class SchemaPolicyOps[Self <: SchemaPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoUpdatePolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdatePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoUpdatePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdatePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintenanceWindow(value: SchemaMaintenanceWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenanceWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintenanceWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenanceWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductAvailabilityPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productAvailabilityPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductAvailabilityPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productAvailabilityPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductPolicy(value: js.Array[SchemaProductPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

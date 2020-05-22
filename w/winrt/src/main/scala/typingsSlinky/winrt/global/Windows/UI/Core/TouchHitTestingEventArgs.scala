@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Core.TouchHitTestingEventArgs")
 @js.native
 class TouchHitTestingEventArgs ()
-  extends typingsSlinky.winrt.Windows.UI.Core.TouchHitTestingEventArgs
+  extends typingsSlinky.winrt.Windows.UI.Core.TouchHitTestingEventArgs {
+  /* CompleteClass */
+  override var handled: Boolean = js.native
+}
 

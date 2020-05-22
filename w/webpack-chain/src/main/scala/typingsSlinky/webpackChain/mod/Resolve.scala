@@ -20,6 +20,8 @@ class Resolve ()
   var plugins: TypedChainedMap[this.type, Plugin[this.type, ResolvePlugin]] = js.native
   def cachePredicate(value: js.Function1[/* data */ Path, Boolean]): this.type = js.native
   def cacheWithContext(value: Boolean): this.type = js.native
+  /* CompleteClass */
+  override def end(): Config = js.native
   def enforceExtension(value: Boolean): this.type = js.native
   def enforceModuleExtension(value: Boolean): this.type = js.native
   def plugin(name: String): Plugin[this.type, ResolvePlugin] = js.native

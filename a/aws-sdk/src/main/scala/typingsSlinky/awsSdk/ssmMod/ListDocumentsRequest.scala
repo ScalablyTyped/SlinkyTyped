@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListDocumentsRequest extends js.Object {
   /**
-    * One or more filters. Use a filter to return a more specific list of results.
+    * This data type is deprecated. Instead, use Filters.
     */
   var DocumentFilterList: js.UndefOr[typingsSlinky.awsSdk.ssmMod.DocumentFilterList] = js.native
   /**
-    * One or more filters. Use a filter to return a more specific list of results.
+    * One or more DocumentKeyValuesFilter objects. Use a filter to return a more specific list of results. For keys, you can specify one or more key-value pair tags that have been applied to a document. Other valid keys include Owner, Name, PlatformTypes, DocumentType, and TargetType. For example, to return documents you own use Key=Owner,Values=Self. To specify a custom key-value pair, use the format Key=tag:tagName,Values=valueName.
     */
   var Filters: js.UndefOr[DocumentKeyValuesFilterList] = js.native
   /**
@@ -26,65 +26,18 @@ trait ListDocumentsRequest extends js.Object {
 
 object ListDocumentsRequest {
   @scala.inline
-  def apply(): ListDocumentsRequest = {
+  def apply(
+    DocumentFilterList: DocumentFilterList = null,
+    Filters: DocumentKeyValuesFilterList = null,
+    MaxResults: js.UndefOr[MaxResults] = js.undefined,
+    NextToken: NextToken = null
+  ): ListDocumentsRequest = {
     val __obj = js.Dynamic.literal()
+    if (DocumentFilterList != null) __obj.updateDynamic("DocumentFilterList")(DocumentFilterList.asInstanceOf[js.Any])
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDocumentsRequest]
   }
-  @scala.inline
-  implicit class ListDocumentsRequestOps[Self <: ListDocumentsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentFilterList(value: DocumentFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentFilterList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentFilterList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentFilterList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: DocumentKeyValuesFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PivotTable extends js.Object {
   /** Each column grouping in the pivot table. */
-  var columns: js.UndefOr[js.Array[PivotGroup]] = js.native
+  var columns: js.UndefOr[js.Array[PivotGroup]] = js.undefined
   /**
     * An optional mapping of filters per source column offset.
     *
@@ -19,105 +18,38 @@ trait PivotTable extends js.Object {
     * For example, if the source was `C10:E15`, a key of `0` will have the filter
     * for column `C`, whereas the key `1` is for column `D`.
     */
-  var criteria: js.UndefOr[Record[String, PivotFilterCriteria]] = js.native
+  var criteria: js.UndefOr[Record[String, PivotFilterCriteria]] = js.undefined
   /** Each row grouping in the pivot table. */
-  var rows: js.UndefOr[js.Array[PivotGroup]] = js.native
+  var rows: js.UndefOr[js.Array[PivotGroup]] = js.undefined
   /** The range the pivot table is reading data from. */
-  var source: js.UndefOr[GridRange] = js.native
+  var source: js.UndefOr[GridRange] = js.undefined
   /**
     * Whether values should be listed horizontally (as columns)
     * or vertically (as rows).
     */
-  var valueLayout: js.UndefOr[String] = js.native
+  var valueLayout: js.UndefOr[String] = js.undefined
   /** A list of values to include in the pivot table. */
-  var values: js.UndefOr[js.Array[PivotValue]] = js.native
+  var values: js.UndefOr[js.Array[PivotValue]] = js.undefined
 }
 
 object PivotTable {
   @scala.inline
-  def apply(): PivotTable = {
+  def apply(
+    columns: js.Array[PivotGroup] = null,
+    criteria: Record[String, PivotFilterCriteria] = null,
+    rows: js.Array[PivotGroup] = null,
+    source: GridRange = null,
+    valueLayout: String = null,
+    values: js.Array[PivotValue] = null
+  ): PivotTable = {
     val __obj = js.Dynamic.literal()
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (criteria != null) __obj.updateDynamic("criteria")(criteria.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (valueLayout != null) __obj.updateDynamic("valueLayout")(valueLayout.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotTable]
   }
-  @scala.inline
-  implicit class PivotTableOps[Self <: PivotTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Array[PivotGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCriteria(value: Record[String, PivotFilterCriteria]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[PivotGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLayout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[PivotValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

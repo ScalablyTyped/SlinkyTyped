@@ -22,41 +22,14 @@ trait GetJobRunRequest extends js.Object {
 
 object GetJobRunRequest {
   @scala.inline
-  def apply(JobName: NameString, RunId: IdString): GetJobRunRequest = {
+  def apply(
+    JobName: NameString,
+    RunId: IdString,
+    PredecessorsIncluded: js.UndefOr[BooleanValue] = js.undefined
+  ): GetJobRunRequest = {
     val __obj = js.Dynamic.literal(JobName = JobName.asInstanceOf[js.Any], RunId = RunId.asInstanceOf[js.Any])
+    if (!js.isUndefined(PredecessorsIncluded)) __obj.updateDynamic("PredecessorsIncluded")(PredecessorsIncluded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetJobRunRequest]
   }
-  @scala.inline
-  implicit class GetJobRunRequestOps[Self <: GetJobRunRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRunId(value: IdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPredecessorsIncluded(value: BooleanValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredecessorsIncluded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredecessorsIncluded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredecessorsIncluded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

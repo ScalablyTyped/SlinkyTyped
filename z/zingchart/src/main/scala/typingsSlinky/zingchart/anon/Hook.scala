@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Hook extends js.Object {
   /**
     * Sets the arrow's end point to that of a charted value. The plot value refers to the set of values in a series, and the index refer
@@ -12,102 +11,45 @@ trait Hook extends js.Object {
     * thin the 1st set of values in the series. Note that 0 refers to the first value or set of values, with 1 being the second value or
     *  set of values, and so on. "node:index=4" | "node:plot=0,index=1" | ...
     */
-  var hook: js.UndefOr[String] = js.native
+  var hook: js.UndefOr[String] = js.undefined
   /**
     * Sets an x-offset for the arrow's end point. Can be used to make adjustments to an arrow's end x ordinate or hook point. 10 | 56 |
     * ...
     */
-  var `offset-x`: js.UndefOr[Double] = js.native
+  var `offset-x`: js.UndefOr[Double] = js.undefined
   /**
     * Sets a y-offset for the arrow's end point. Can be used to make adjustments to an arrow's end y ordinate or hook point. 10 | 56 | .
     * ..
     */
-  var `offset-y`: js.UndefOr[Double] = js.native
+  var `offset-y`: js.UndefOr[Double] = js.undefined
   /**
     * Sets the x ordinate for an arrow's end point. Ordinates are counted in pixels, starting from the top-left corner of the chart. 100
     *  | 450 | ...
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * Sets the y ordinate for an arrow's end point. Ordinates are counted in pixels, starting from the top-left corner of the chart. 100
     *  | 450 | ...
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object Hook {
   @scala.inline
-  def apply(): Hook = {
+  def apply(
+    hook: String = null,
+    `offset-x`: js.UndefOr[Double] = js.undefined,
+    `offset-y`: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): Hook = {
     val __obj = js.Dynamic.literal()
+    if (hook != null) __obj.updateDynamic("hook")(hook.asInstanceOf[js.Any])
+    if (!js.isUndefined(`offset-x`)) __obj.updateDynamic("offset-x")(`offset-x`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`offset-y`)) __obj.updateDynamic("offset-y")(`offset-y`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hook]
   }
-  @scala.inline
-  implicit class HookOps[Self <: Hook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHook(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOffset-x`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOffset-x`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withOffset-y`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutOffset-y`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset-y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

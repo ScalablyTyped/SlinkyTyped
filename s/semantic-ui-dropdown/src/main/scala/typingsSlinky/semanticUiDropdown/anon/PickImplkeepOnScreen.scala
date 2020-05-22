@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-dropdown.SemanticUI.DropdownSettings._Impl, 'keepOnScreen'> */
-@js.native
 trait PickImplkeepOnScreen extends js.Object {
-  var keepOnScreen: Boolean = js.native
+  var keepOnScreen: Boolean
 }
 
 object PickImplkeepOnScreen {
@@ -16,19 +15,5 @@ object PickImplkeepOnScreen {
     val __obj = js.Dynamic.literal(keepOnScreen = keepOnScreen.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplkeepOnScreen]
   }
-  @scala.inline
-  implicit class PickImplkeepOnScreenOps[Self <: PickImplkeepOnScreen] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeepOnScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepOnScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

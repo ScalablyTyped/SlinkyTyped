@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CryptoOneTimeAuthWrap extends js.Object {
   /**
     * Finalize the instance.
@@ -14,13 +13,13 @@ trait CryptoOneTimeAuthWrap extends js.Object {
     *
     * The generated hash is stored in `output`.
     */
-  def `final`(output: Buffer): Unit = js.native
+  def `final`(output: Buffer): Unit
   /**
     * Update the instance with a new piece of data.
     *
     * * `input` should be a buffer of any size.
     */
-  def update(input: Buffer): Unit = js.native
+  def update(input: Buffer): Unit
 }
 
 object CryptoOneTimeAuthWrap {
@@ -30,25 +29,5 @@ object CryptoOneTimeAuthWrap {
     __obj.updateDynamic("final")(js.Any.fromFunction1(`final`))
     __obj.asInstanceOf[CryptoOneTimeAuthWrap]
   }
-  @scala.inline
-  implicit class CryptoOneTimeAuthWrapOps[Self <: CryptoOneTimeAuthWrap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinal(value: Buffer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("final")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Buffer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

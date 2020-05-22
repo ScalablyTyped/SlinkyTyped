@@ -18,41 +18,11 @@ trait ThreatIntelligenceDetail extends js.Object {
 
 object ThreatIntelligenceDetail {
   @scala.inline
-  def apply(): ThreatIntelligenceDetail = {
+  def apply(ThreatListName: String = null, ThreatNames: ThreatNames = null): ThreatIntelligenceDetail = {
     val __obj = js.Dynamic.literal()
+    if (ThreatListName != null) __obj.updateDynamic("ThreatListName")(ThreatListName.asInstanceOf[js.Any])
+    if (ThreatNames != null) __obj.updateDynamic("ThreatNames")(ThreatNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThreatIntelligenceDetail]
   }
-  @scala.inline
-  implicit class ThreatIntelligenceDetailOps[Self <: ThreatIntelligenceDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withThreatListName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatListName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatListName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatListName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatNames(value: ThreatNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

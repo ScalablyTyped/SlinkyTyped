@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @see XDocumentEventBroadcaster
   * @since OOo 3.1
   */
-@js.native
 trait DocumentEvent
   extends typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject {
   /**
@@ -23,19 +22,19 @@ trait DocumentEvent
     *
     * It's the responsibility of the component supporting the {@link XDocumentEventBroadcaster} interface to specify which events it supports.
     */
-  var EventName: String = js.native
+  var EventName: String
   /**
     * contains supplemental information about the event which is being notified
     *
     * The semantics of this additional information needs to be specified by the broadcaster of the event.
     */
-  var Supplement: js.Any = js.native
+  var Supplement: js.Any
   /**
     * denotes the view respectively controller which the event applies to.
     *
     * Might be `NULL` if the event is not related to a concrete view of the document.
     */
-  var ViewController: XController2 = js.native
+  var ViewController: XController2
 }
 
 object DocumentEvent {
@@ -44,31 +43,5 @@ object DocumentEvent {
     val __obj = js.Dynamic.literal(EventName = EventName.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], Supplement = Supplement.asInstanceOf[js.Any], ViewController = ViewController.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentEvent]
   }
-  @scala.inline
-  implicit class DocumentEventOps[Self <: DocumentEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupplement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Supplement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewController(value: XController2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewController")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

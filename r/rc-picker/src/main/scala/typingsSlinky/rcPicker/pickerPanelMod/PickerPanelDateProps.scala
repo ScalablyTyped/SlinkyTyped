@@ -1,86 +1,92 @@
 package typingsSlinky.rcPicker.pickerPanelMod
 
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.TagMod
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
+import typingsSlinky.rcPicker.interfaceMod.Components
 import typingsSlinky.rcPicker.interfaceMod.DisabledTime
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.Locale
+import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.rcPickerStrings.date
+import typingsSlinky.rcPicker.rcPickerStrings.ltr
+import typingsSlinky.rcPicker.rcPickerStrings.rtl
 import typingsSlinky.rcPicker.timePanelMod.SharedTimeProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PickerPanelDateProps[DateType]
   extends PickerPanelSharedProps[DateType]
      with PickerPanelProps[DateType] {
-  var disabledTime: js.UndefOr[DisabledTime[DateType]] = js.native
-  var picker: js.UndefOr[date] = js.native
-  var showTime: js.UndefOr[Boolean | SharedTimeProps[DateType]] = js.native
-  var showToday: js.UndefOr[Boolean] = js.native
+  var disabledTime: js.UndefOr[DisabledTime[DateType]] = js.undefined
+  var picker: js.UndefOr[date] = js.undefined
+  var showTime: js.UndefOr[Boolean | SharedTimeProps[DateType]] = js.undefined
+  var showToday: js.UndefOr[Boolean] = js.undefined
 }
 
 object PickerPanelDateProps {
   @scala.inline
-  def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale): PickerPanelDateProps[DateType] = {
+  def apply[DateType](
+    generateConfig: GenerateConfig[DateType],
+    locale: Locale,
+    className: String = null,
+    components: Components = null,
+    dateRender: (DateType, DateType) => TagMod[Any] = null,
+    defaultPickerValue: DateType = null,
+    defaultValue: DateType = null,
+    direction: ltr | rtl = null,
+    disabledDate: DateType => Boolean = null,
+    disabledTime: /* date */ DateType | Null => DisabledTimes = null,
+    hideHeader: js.UndefOr[Boolean] = js.undefined,
+    mode: PanelMode = null,
+    monthCellRender: (DateType, /* locale */ Locale) => TagMod[Any] = null,
+    onChange: DateType => Unit = null,
+    onMouseDown: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onOk: DateType => Unit = null,
+    onPanelChange: (DateType, /* mode */ PanelMode) => Unit = null,
+    onPickerValueChange: DateType => Unit = null,
+    onSelect: DateType => Unit = null,
+    picker: date = null,
+    pickerValue: DateType = null,
+    prefixCls: String = null,
+    renderExtraFooter: /* mode */ PanelMode => TagMod[Any] = null,
+    showTime: Boolean | SharedTimeProps[DateType] = null,
+    showToday: js.UndefOr[Boolean] = js.undefined,
+    style: CSSProperties = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    value: js.UndefOr[Null | DateType] = js.undefined
+  ): PickerPanelDateProps[DateType] = {
     val __obj = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
+    if (dateRender != null) __obj.updateDynamic("dateRender")(js.Any.fromFunction2(dateRender))
+    if (defaultPickerValue != null) __obj.updateDynamic("defaultPickerValue")(defaultPickerValue.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
+    if (disabledTime != null) __obj.updateDynamic("disabledTime")(js.Any.fromFunction1(disabledTime))
+    if (!js.isUndefined(hideHeader)) __obj.updateDynamic("hideHeader")(hideHeader.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (monthCellRender != null) __obj.updateDynamic("monthCellRender")(js.Any.fromFunction2(monthCellRender))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
+    if (onPanelChange != null) __obj.updateDynamic("onPanelChange")(js.Any.fromFunction2(onPanelChange))
+    if (onPickerValueChange != null) __obj.updateDynamic("onPickerValueChange")(js.Any.fromFunction1(onPickerValueChange))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (picker != null) __obj.updateDynamic("picker")(picker.asInstanceOf[js.Any])
+    if (pickerValue != null) __obj.updateDynamic("pickerValue")(pickerValue.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (renderExtraFooter != null) __obj.updateDynamic("renderExtraFooter")(js.Any.fromFunction1(renderExtraFooter))
+    if (showTime != null) __obj.updateDynamic("showTime")(showTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(showToday)) __obj.updateDynamic("showToday")(showToday.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickerPanelDateProps[DateType]]
   }
-  @scala.inline
-  implicit class PickerPanelDatePropsOps[Self[datetype] <: PickerPanelDateProps[datetype], DateType] (val x: Self[DateType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[DateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[DateType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[DateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[DateType] with Other]
-    @scala.inline
-    def withDisabledTime(value: /* date */ DateType | Null => DisabledTimes): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDisabledTime: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPicker(value: date): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPicker: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTime(value: Boolean | SharedTimeProps[DateType]): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTime: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowToday(value: Boolean): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showToday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowToday: Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showToday")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VerificationCodesCollection extends js.Object {
   // Generate new backup verification codes for the user.
-  def generate(userKey: String): Unit = js.native
+  def generate(userKey: String): Unit
   // Invalidate the current backup verification codes for the user.
-  def invalidate(userKey: String): Unit = js.native
+  def invalidate(userKey: String): Unit
   // Returns the current set of valid backup verification codes for the specified user.
-  def list(userKey: String): VerificationCodes = js.native
+  def list(userKey: String): VerificationCodes
 }
 
 object VerificationCodesCollection {
@@ -21,31 +20,5 @@ object VerificationCodesCollection {
     val __obj = js.Dynamic.literal(generate = js.Any.fromFunction1(generate), invalidate = js.Any.fromFunction1(invalidate), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[VerificationCodesCollection]
   }
-  @scala.inline
-  implicit class VerificationCodesCollectionOps[Self <: VerificationCodesCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGenerate(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInvalidate(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: String => VerificationCodes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

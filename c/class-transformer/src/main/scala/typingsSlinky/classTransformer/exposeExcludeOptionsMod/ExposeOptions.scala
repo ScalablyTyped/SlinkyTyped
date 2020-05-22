@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExposeOptions extends js.Object {
-  var groups: js.UndefOr[js.Array[String]] = js.native
-  var name: js.UndefOr[String] = js.native
-  var since: js.UndefOr[Double] = js.native
-  var toClassOnly: js.UndefOr[Boolean] = js.native
-  var toPlainOnly: js.UndefOr[Boolean] = js.native
-  var until: js.UndefOr[Double] = js.native
+  var groups: js.UndefOr[js.Array[String]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var since: js.UndefOr[Double] = js.undefined
+  var toClassOnly: js.UndefOr[Boolean] = js.undefined
+  var toPlainOnly: js.UndefOr[Boolean] = js.undefined
+  var until: js.UndefOr[Double] = js.undefined
 }
 
 object ExposeOptions {
   @scala.inline
-  def apply(): ExposeOptions = {
+  def apply(
+    groups: js.Array[String] = null,
+    name: String = null,
+    since: js.UndefOr[Double] = js.undefined,
+    toClassOnly: js.UndefOr[Boolean] = js.undefined,
+    toPlainOnly: js.UndefOr[Boolean] = js.undefined,
+    until: js.UndefOr[Double] = js.undefined
+  ): ExposeOptions = {
     val __obj = js.Dynamic.literal()
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(since)) __obj.updateDynamic("since")(since.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toClassOnly)) __obj.updateDynamic("toClassOnly")(toClassOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toPlainOnly)) __obj.updateDynamic("toPlainOnly")(toPlainOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(until)) __obj.updateDynamic("until")(until.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExposeOptions]
   }
-  @scala.inline
-  implicit class ExposeOptionsOps[Self <: ExposeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroups(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSince(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToClassOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toClassOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToClassOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toClassOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToPlainOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPlainOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToPlainOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPlainOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUntil(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUntil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,4 +11,5 @@ package object mod {
     * @type TClock   type of base clock (e.g BrowserClock).
     */
   type InstalledClock[TClock /* <: typingsSlinky.lolex.mod.Clock */] = TClock with typingsSlinky.lolex.mod.InstalledMethods
+  type TimerId = scala.Double | typingsSlinky.lolex.mod.NodeTimer
 }

@@ -8,5 +8,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.Cryptography.Certificates.CertificateStore")
 @js.native
 abstract class CertificateStore ()
-  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.CertificateStore
+  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.CertificateStore {
+  /** Gets the name of the certificate store. */
+  /* CompleteClass */
+  override var name: String = js.native
+  /**
+    * Adds a certificate to the certificate store.
+    * @param certificate The certificate to add to the certificate store.
+    */
+  /* CompleteClass */
+  override def add(certificate: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.Certificate): Unit = js.native
+  /**
+    * Deletes a certificate from the certificate store.
+    * @param certificate The certificate to delete from the certificate store.
+    */
+  /* CompleteClass */
+  override def delete(certificate: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.Certificate): Unit = js.native
+}
 

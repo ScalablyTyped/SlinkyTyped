@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSTypeOperator
   extends Node
      with TSType {
-  var operator: String | Null = js.native
-  var typeAnnotation: TSType = js.native
+  var operator: String | Null
+  var typeAnnotation: TSType
   @JSName("type")
-  var type_TSTypeOperator: typingsSlinky.babelTypes.babelTypesStrings.TSTypeOperator = js.native
+  var type_TSTypeOperator: typingsSlinky.babelTypes.babelTypesStrings.TSTypeOperator
 }
 
 @JSImport("babel-types", "TSTypeOperator")

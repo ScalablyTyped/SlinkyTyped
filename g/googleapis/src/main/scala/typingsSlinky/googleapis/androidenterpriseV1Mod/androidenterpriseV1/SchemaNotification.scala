@@ -55,137 +55,30 @@ trait SchemaNotification extends js.Object {
 
 object SchemaNotification {
   @scala.inline
-  def apply(): SchemaNotification = {
+  def apply(
+    appRestrictionsSchemaChangeEvent: SchemaAppRestrictionsSchemaChangeEvent = null,
+    appUpdateEvent: SchemaAppUpdateEvent = null,
+    enterpriseId: String = null,
+    installFailureEvent: SchemaInstallFailureEvent = null,
+    newDeviceEvent: SchemaNewDeviceEvent = null,
+    newPermissionsEvent: SchemaNewPermissionsEvent = null,
+    notificationType: String = null,
+    productApprovalEvent: SchemaProductApprovalEvent = null,
+    productAvailabilityChangeEvent: SchemaProductAvailabilityChangeEvent = null,
+    timestampMillis: String = null
+  ): SchemaNotification = {
     val __obj = js.Dynamic.literal()
+    if (appRestrictionsSchemaChangeEvent != null) __obj.updateDynamic("appRestrictionsSchemaChangeEvent")(appRestrictionsSchemaChangeEvent.asInstanceOf[js.Any])
+    if (appUpdateEvent != null) __obj.updateDynamic("appUpdateEvent")(appUpdateEvent.asInstanceOf[js.Any])
+    if (enterpriseId != null) __obj.updateDynamic("enterpriseId")(enterpriseId.asInstanceOf[js.Any])
+    if (installFailureEvent != null) __obj.updateDynamic("installFailureEvent")(installFailureEvent.asInstanceOf[js.Any])
+    if (newDeviceEvent != null) __obj.updateDynamic("newDeviceEvent")(newDeviceEvent.asInstanceOf[js.Any])
+    if (newPermissionsEvent != null) __obj.updateDynamic("newPermissionsEvent")(newPermissionsEvent.asInstanceOf[js.Any])
+    if (notificationType != null) __obj.updateDynamic("notificationType")(notificationType.asInstanceOf[js.Any])
+    if (productApprovalEvent != null) __obj.updateDynamic("productApprovalEvent")(productApprovalEvent.asInstanceOf[js.Any])
+    if (productAvailabilityChangeEvent != null) __obj.updateDynamic("productAvailabilityChangeEvent")(productAvailabilityChangeEvent.asInstanceOf[js.Any])
+    if (timestampMillis != null) __obj.updateDynamic("timestampMillis")(timestampMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNotification]
   }
-  @scala.inline
-  implicit class SchemaNotificationOps[Self <: SchemaNotification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppRestrictionsSchemaChangeEvent(value: SchemaAppRestrictionsSchemaChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appRestrictionsSchemaChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppRestrictionsSchemaChangeEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appRestrictionsSchemaChangeEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppUpdateEvent(value: SchemaAppUpdateEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appUpdateEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppUpdateEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appUpdateEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterpriseId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterpriseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallFailureEvent(value: SchemaInstallFailureEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installFailureEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallFailureEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installFailureEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewDeviceEvent(value: SchemaNewDeviceEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeviceEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewDeviceEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeviceEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewPermissionsEvent(value: SchemaNewPermissionsEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPermissionsEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewPermissionsEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPermissionsEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductApprovalEvent(value: SchemaProductApprovalEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productApprovalEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductApprovalEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productApprovalEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductAvailabilityChangeEvent(value: SchemaProductAvailabilityChangeEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productAvailabilityChangeEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductAvailabilityChangeEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productAvailabilityChangeEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampMillis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

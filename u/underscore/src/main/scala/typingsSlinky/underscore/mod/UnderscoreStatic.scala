@@ -11,6 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UnderscoreStatic extends js.Object {
   /**
+    * Current version
+    */
+  val VERSION: String = js.native
+  /**
     * @see _.map
     **/
   var collect: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof _.map */ js.Any = js.native

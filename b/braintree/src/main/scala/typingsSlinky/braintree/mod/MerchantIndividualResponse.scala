@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MerchantIndividualResponse extends js.Object {
-  var addressDetails: MerchantAddressDetails = js.native
-  var dateOfBirth: String = js.native
-  var email: String = js.native
-  var firstName: String = js.native
-  var lastName: String = js.native
-  var phone: js.UndefOr[String] = js.native
-  var ssn: js.UndefOr[String] = js.native
-  var ssnLast4: js.UndefOr[String] = js.native
+  var addressDetails: MerchantAddressDetails
+  var dateOfBirth: String
+  var email: String
+  var firstName: String
+  var lastName: String
+  var phone: js.UndefOr[String] = js.undefined
+  var ssn: js.UndefOr[String] = js.undefined
+  var ssnLast4: js.UndefOr[String] = js.undefined
 }
 
 object MerchantIndividualResponse {
@@ -23,84 +22,16 @@ object MerchantIndividualResponse {
     dateOfBirth: String,
     email: String,
     firstName: String,
-    lastName: String
+    lastName: String,
+    phone: String = null,
+    ssn: String = null,
+    ssnLast4: String = null
   ): MerchantIndividualResponse = {
     val __obj = js.Dynamic.literal(addressDetails = addressDetails.asInstanceOf[js.Any], dateOfBirth = dateOfBirth.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], firstName = firstName.asInstanceOf[js.Any], lastName = lastName.asInstanceOf[js.Any])
+    if (phone != null) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (ssn != null) __obj.updateDynamic("ssn")(ssn.asInstanceOf[js.Any])
+    if (ssnLast4 != null) __obj.updateDynamic("ssnLast4")(ssnLast4.asInstanceOf[js.Any])
     __obj.asInstanceOf[MerchantIndividualResponse]
   }
-  @scala.inline
-  implicit class MerchantIndividualResponseOps[Self <: MerchantIndividualResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddressDetails(value: MerchantAddressDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateOfBirth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOfBirth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsnLast4(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssnLast4")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsnLast4: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssnLast4")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

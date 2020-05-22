@@ -7,68 +7,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateDistributionConfigurationResponse extends js.Object {
   /**
-    *  The idempotency token used to make this request idempotent. 
+    * The idempotency token used to make this request idempotent. 
     */
   var clientToken: js.UndefOr[ClientToken] = js.native
   /**
-    *  The Amazon Resource Name (ARN) of the distribution configuration that was updated by this request. 
+    * The Amazon Resource Name (ARN) of the distribution configuration that was updated by this request. 
     */
   var distributionConfigurationArn: js.UndefOr[DistributionConfigurationArn] = js.native
   /**
-    *  The request ID that uniquely identifies this request. 
+    * The request ID that uniquely identifies this request. 
     */
   var requestId: js.UndefOr[NonEmptyString] = js.native
 }
 
 object UpdateDistributionConfigurationResponse {
   @scala.inline
-  def apply(): UpdateDistributionConfigurationResponse = {
+  def apply(
+    clientToken: ClientToken = null,
+    distributionConfigurationArn: DistributionConfigurationArn = null,
+    requestId: NonEmptyString = null
+  ): UpdateDistributionConfigurationResponse = {
     val __obj = js.Dynamic.literal()
+    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
+    if (distributionConfigurationArn != null) __obj.updateDynamic("distributionConfigurationArn")(distributionConfigurationArn.asInstanceOf[js.Any])
+    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDistributionConfigurationResponse]
   }
-  @scala.inline
-  implicit class UpdateDistributionConfigurationResponseOps[Self <: UpdateDistributionConfigurationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistributionConfigurationArn(value: DistributionConfigurationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionConfigurationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistributionConfigurationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionConfigurationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

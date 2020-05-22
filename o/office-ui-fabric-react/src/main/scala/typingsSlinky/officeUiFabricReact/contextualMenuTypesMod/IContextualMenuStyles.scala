@@ -5,143 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IContextualMenuStyles extends js.Object {
   /**
     * Style for the container which parents all menu items.
     */
-  var container: IStyle = js.native
+  var container: IStyle
   /**
     * Styles for the header item of a ContextualMenu
     */
-  var header: IStyle = js.native
+  var header: IStyle
   /**
     * Styles for the list that contains all menuItems.
     */
-  var list: IStyle = js.native
+  var list: IStyle
   /**
     * Base styles for the root element of all ContextualMenus.
     */
-  var root: IStyle = js.native
+  var root: IStyle
   /**
     * SubComponent styles.
     */
-  var subComponentStyles: IContextualMenuSubComponentStyles = js.native
+  var subComponentStyles: IContextualMenuSubComponentStyles
   /**
     * Style override for the contextual menu title.
     */
-  var title: IStyle = js.native
+  var title: IStyle
 }
 
 object IContextualMenuStyles {
   @scala.inline
-  def apply(subComponentStyles: IContextualMenuSubComponentStyles): IContextualMenuStyles = {
+  def apply(
+    subComponentStyles: IContextualMenuSubComponentStyles,
+    container: js.UndefOr[Null | IStyle] = js.undefined,
+    header: js.UndefOr[Null | IStyle] = js.undefined,
+    list: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    title: js.UndefOr[Null | IStyle] = js.undefined
+  ): IContextualMenuStyles = {
     val __obj = js.Dynamic.literal(subComponentStyles = subComponentStyles.asInstanceOf[js.Any])
+    if (!js.isUndefined(container)) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(header)) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (!js.isUndefined(list)) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(title)) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[IContextualMenuStyles]
   }
-  @scala.inline
-  implicit class IContextualMenuStylesOps[Self <: IContextualMenuStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubComponentStyles(value: IContextualMenuSubComponentStyles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subComponentStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(null)
-        ret
-    }
-    @scala.inline
-    def withList(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -9,8 +9,8 @@ import typingsSlinky.pdfmake.interfacesMod.PageBreak
 import typingsSlinky.pdfmake.interfacesMod.PageOrientation
 import typingsSlinky.pdfmake.interfacesMod.PredefinedPageSize
 import typingsSlinky.pdfmake.interfacesMod.PredefinedTableLayout
-import typingsSlinky.pdfmake.interfacesMod.Size
 import typingsSlinky.pdfmake.interfacesMod.UnorderedListType
+import typingsSlinky.pdfmake.interfacesMod._Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ object pdfmakeStrings {
   sealed trait A9 extends PredefinedPageSize
   
   @js.native
-  sealed trait Asterisk extends Size
+  sealed trait Asterisk extends _Size
   
   @js.native
   sealed trait B0 extends PredefinedPageSize
@@ -200,7 +200,7 @@ object pdfmakeStrings {
   sealed trait alphanumeric extends js.Object
   
   @js.native
-  sealed trait auto extends Size
+  sealed trait auto extends _Size
   
   @js.native
   sealed trait before extends PageBreak

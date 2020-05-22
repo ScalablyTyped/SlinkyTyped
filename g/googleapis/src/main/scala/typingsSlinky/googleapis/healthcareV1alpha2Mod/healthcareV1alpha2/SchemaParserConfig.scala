@@ -23,41 +23,11 @@ trait SchemaParserConfig extends js.Object {
 
 object SchemaParserConfig {
   @scala.inline
-  def apply(): SchemaParserConfig = {
+  def apply(allowNullHeader: js.UndefOr[Boolean] = js.undefined, segmentTerminator: String = null): SchemaParserConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowNullHeader)) __obj.updateDynamic("allowNullHeader")(allowNullHeader.get.asInstanceOf[js.Any])
+    if (segmentTerminator != null) __obj.updateDynamic("segmentTerminator")(segmentTerminator.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaParserConfig]
   }
-  @scala.inline
-  implicit class SchemaParserConfigOps[Self <: SchemaParserConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowNullHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNullHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowNullHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNullHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegmentTerminator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentTerminator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentTerminator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentTerminator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

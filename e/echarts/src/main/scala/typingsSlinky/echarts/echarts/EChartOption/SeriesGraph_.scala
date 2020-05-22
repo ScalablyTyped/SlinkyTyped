@@ -41,7 +41,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-graph
   */
-@js.native
 trait SeriesGraph_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -51,7 +50,7 @@ trait SeriesGraph_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-graph.animation
     */
-  var animation: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean] = js.undefined
   /**
     * Delay before updating the first animation, which supports callback
     * function for different data to have different animation effect.
@@ -67,7 +66,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -83,7 +82,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -95,7 +94,7 @@ trait SeriesGraph_ extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-graph.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.native
+  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -107,7 +106,7 @@ trait SeriesGraph_ extends js.Object {
     * 300
     * @see https://echarts.apache.org/en/option.html#series-graph.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -119,7 +118,7 @@ trait SeriesGraph_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-graph.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasing: js.UndefOr[String] = js.undefined
   /**
     * Easing method used for animation.
     *
@@ -128,7 +127,7 @@ trait SeriesGraph_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-graph.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.native
+  var animationEasingUpdate: js.UndefOr[String] = js.undefined
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -139,7 +138,7 @@ trait SeriesGraph_ extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-graph.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.native
+  var animationThreshold: js.UndefOr[Double] = js.undefined
   /**
     * Distance between component and the bottom side of the container.
     *
@@ -153,7 +152,7 @@ trait SeriesGraph_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-graph.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.undefined
   /**
     * Index of
     * [calendar coordinates](https://echarts.apache.org/en/option.html#calendar)
@@ -163,7 +162,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.calendarIndex
     */
-  var calendarIndex: js.UndefOr[Double] = js.native
+  var calendarIndex: js.UndefOr[Double] = js.undefined
   /**
     * The categories of node, which is optional.
     * If there is a classification of nodes, the category of each node
@@ -178,14 +177,14 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.categories
     */
-  var categories: js.UndefOr[js.Array[CategoryObject]] = js.native
+  var categories: js.UndefOr[js.Array[CategoryObject]] = js.undefined
   /**
     * Configuration about circular layout.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.circular
     */
-  var circular: js.UndefOr[RotateLabel] = js.native
+  var circular: js.UndefOr[RotateLabel] = js.undefined
   /**
     * The coordinate used in the series, whose options are:
     *
@@ -221,7 +220,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.coordinateSystem
     */
-  var coordinateSystem: js.UndefOr[String] = js.native
+  var coordinateSystem: js.UndefOr[String] = js.undefined
   /**
     * The mouse style when mouse hovers on an element, the same as
     * `cursor` property in `CSS`.
@@ -231,7 +230,7 @@ trait SeriesGraph_ extends js.Object {
     * "pointer"
     * @see https://echarts.apache.org/en/option.html#series-graph.cursor
     */
-  var cursor: js.UndefOr[String] = js.native
+  var cursor: js.UndefOr[String] = js.undefined
   /**
     * Nodes list of graph.
     *
@@ -240,7 +239,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.data
     */
-  var data: js.UndefOr[js.Array[DataObject]] = js.native
+  var data: js.UndefOr[js.Array[DataObject]] = js.undefined
   /**
     * If node is draggable.
     * Only available when using force-directed layout.
@@ -248,11 +247,11 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.draggable
     */
-  var draggable: js.UndefOr[Boolean] = js.native
+  var draggable: js.UndefOr[Boolean] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.edgeLabel
     */
-  var edgeLabel: js.UndefOr[FontStyle] = js.native
+  var edgeLabel: js.UndefOr[FontStyle] = js.undefined
   /**
     * Symbol of two ends of edge line.
     *
@@ -268,7 +267,7 @@ trait SeriesGraph_ extends js.Object {
     * "[none', 'none']"
     * @see https://echarts.apache.org/en/option.html#series-graph.edgeSymbol
     */
-  var edgeSymbol: js.UndefOr[js.Array[_] | String] = js.native
+  var edgeSymbol: js.UndefOr[js.Array[_] | String] = js.undefined
   /**
     * Size of symbol of two ends of edge line.
     * Can be an array or a single number.
@@ -282,7 +281,7 @@ trait SeriesGraph_ extends js.Object {
     * 10
     * @see https://echarts.apache.org/en/option.html#series-graph.edgeSymbolSize
     */
-  var edgeSymbolSize: js.UndefOr[js.Array[_] | Double] = js.native
+  var edgeSymbolSize: js.UndefOr[js.Array[_] | Double] = js.undefined
   /**
     * Alias of
     * [links](https://echarts.apache.org/en/option.html#series-graph.links)
@@ -290,18 +289,18 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.edges
     */
-  var edges: js.UndefOr[js.Array[_]] = js.native
+  var edges: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.emphasis
     */
-  var emphasis: js.UndefOr[EdgeLabel] = js.native
+  var emphasis: js.UndefOr[EdgeLabel] = js.undefined
   /**
     * Whether to focus/highlight the hover node and it's adjacencies.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.focusNodeAdjacency
     */
-  var focusNodeAdjacency: js.UndefOr[Boolean] = js.native
+  var focusNodeAdjacency: js.UndefOr[Boolean] = js.undefined
   /**
     * Configuration items about force-directed layout.
     * Force-directed layout simulates spring/charge model, which will
@@ -320,7 +319,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.force
     */
-  var force: js.UndefOr[EdgeLength] = js.native
+  var force: js.UndefOr[EdgeLength] = js.undefined
   /**
     * Index of
     * [geographic coordinate](https://echarts.apache.org/en/option.html#geo)
@@ -330,7 +329,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.geoIndex
     */
-  var geoIndex: js.UndefOr[Double] = js.native
+  var geoIndex: js.UndefOr[Double] = js.undefined
   /**
     * Height of component.
     *
@@ -339,7 +338,7 @@ trait SeriesGraph_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-graph.height
     */
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to enable the highlight animation effect of mousr hover
     * node.
@@ -347,7 +346,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.hoverAnimation
     */
-  var hoverAnimation: js.UndefOr[Boolean] = js.native
+  var hoverAnimation: js.UndefOr[Boolean] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -356,7 +355,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Graphic style of , `emphasis` is the style when it is highlighted,
     * like being hovered by mouse, or highlighted via legend connect.
@@ -364,7 +363,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.itemStyle
     */
-  var itemStyle: js.UndefOr[ShadowOffsetY] = js.native
+  var itemStyle: js.UndefOr[ShadowOffsetY] = js.undefined
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -376,7 +375,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.label
     */
-  var label: js.UndefOr[BorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.undefined
   /**
     * Graph layout.
     *
@@ -404,7 +403,7 @@ trait SeriesGraph_ extends js.Object {
     * "none"
     * @see https://echarts.apache.org/en/option.html#series-graph.layout
     */
-  var layout: js.UndefOr[String] = js.native
+  var layout: js.UndefOr[String] = js.undefined
   /**
     * Distance between component and the left side of the container.
     *
@@ -420,7 +419,7 @@ trait SeriesGraph_ extends js.Object {
     * "center"
     * @see https://echarts.apache.org/en/option.html#series-graph.left
     */
-  var left: js.UndefOr[Double | String] = js.native
+  var left: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -431,7 +430,7 @@ trait SeriesGraph_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-graph.legendHoverLink
     */
-  var legendHoverLink: js.UndefOr[Boolean] = js.native
+  var legendHoverLink: js.UndefOr[Boolean] = js.undefined
   /**
     * The style of edge line.
     * [lineStyle.color](https://echarts.apache.org/en/option.html#series-graph.lineStyle.color)
@@ -441,7 +440,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.lineStyle
     */
-  var lineStyle: js.UndefOr[ShadowColor] = js.native
+  var lineStyle: js.UndefOr[ShadowColor] = js.undefined
   /**
     * Relational data between nodes. Example:
     *
@@ -450,7 +449,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links
     */
-  var links: js.UndefOr[js.Array[LinkObject]] = js.native
+  var links: js.UndefOr[js.Array[LinkObject]] = js.undefined
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -458,21 +457,21 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.markArea
     */
-  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.markLine
     */
-  var markLine: js.UndefOr[AnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.markPoint
     */
-  var markPoint: js.UndefOr[AnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -483,7 +482,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Related zooming ratio of nodes when mouse zooming in or out.
     * When it is set as 0, the node will not zoom as the mouse zooms.
@@ -493,7 +492,7 @@ trait SeriesGraph_ extends js.Object {
     * 0.6
     * @see https://echarts.apache.org/en/option.html#series-graph.nodeScaleRatio
     */
-  var nodeScaleRatio: js.UndefOr[Double] = js.native
+  var nodeScaleRatio: js.UndefOr[Double] = js.undefined
   /**
     * Alias of
     * [data](https://echarts.apache.org/en/option.html#series-graph.data)
@@ -501,7 +500,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.nodes
     */
-  var nodes: js.UndefOr[js.Array[_]] = js.native
+  var nodes: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Index of
     * [polar coordinate](https://echarts.apache.org/en/option.html#polar)
@@ -511,7 +510,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.polarIndex
     */
-  var polarIndex: js.UndefOr[Double] = js.native
+  var polarIndex: js.UndefOr[Double] = js.undefined
   /**
     * Distance between component and the right side of the container.
     *
@@ -525,7 +524,7 @@ trait SeriesGraph_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-graph.right
     */
-  var right: js.UndefOr[Double | String] = js.native
+  var right: js.UndefOr[Double | String] = js.undefined
   /**
     * Whether to enable mouse zooming and translating.
     * `false` by default.
@@ -536,7 +535,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.roam
     */
-  var roam: js.UndefOr[Boolean | String] = js.native
+  var roam: js.UndefOr[Boolean | String] = js.undefined
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -545,7 +544,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.silent
     */
-  var silent: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.undefined
   /**
     * Symbol of node of relation graph.
     *
@@ -586,14 +585,14 @@ trait SeriesGraph_ extends js.Object {
     * "circle"
     * @see https://echarts.apache.org/en/option.html#series-graph.symbol
     */
-  var symbol: js.UndefOr[String] = js.native
+  var symbol: js.UndefOr[String] = js.undefined
   /**
     * Whether to keep aspect for symbols in the form of `path://`.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.symbolKeepAspect
     */
-  var symbolKeepAspect: js.UndefOr[Boolean] = js.native
+  var symbolKeepAspect: js.UndefOr[Boolean] = js.undefined
   /**
     * Offset of node of relation graph symbol relative to original
     * position.
@@ -615,7 +614,7 @@ trait SeriesGraph_ extends js.Object {
     * [0, 0]
     * @see https://echarts.apache.org/en/option.html#series-graph.symbolOffset
     */
-  var symbolOffset: js.UndefOr[js.Array[_]] = js.native
+  var symbolOffset: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Rotate degree of node of relation graph symbol.
     * Note that when `symbol` is set to be `'arrow'` in `markLine`,
@@ -625,7 +624,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.symbolRotate
     */
-  var symbolRotate: js.UndefOr[Double] = js.native
+  var symbolRotate: js.UndefOr[Double] = js.undefined
   /**
     * node of relation graph symbol size.
     * It can be set to single numbers like `10`, or use an array to
@@ -651,14 +650,14 @@ trait SeriesGraph_ extends js.Object {
     * 10
     * @see https://echarts.apache.org/en/option.html#series-graph.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | js.Function | Double] = js.native
+  var symbolSize: js.UndefOr[js.Array[_] | js.Function | Double] = js.undefined
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.tooltip
     */
-  var tooltip: js.UndefOr[ExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.undefined
   /**
     * Distance between component and the top side of the container.
     *
@@ -674,13 +673,13 @@ trait SeriesGraph_ extends js.Object {
     * "middle"
     * @see https://echarts.apache.org/en/option.html#series-graph.top
     */
-  var top: js.UndefOr[Double | String] = js.native
+  var top: js.UndefOr[Double | String] = js.undefined
   /**
     * @default
     * "graph"
     * @see https://echarts.apache.org/en/option.html#series-graph.type
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Width of component.
     *
@@ -689,7 +688,7 @@ trait SeriesGraph_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-graph.width
     */
-  var width: js.UndefOr[Double | String] = js.native
+  var width: js.UndefOr[Double | String] = js.undefined
   /**
     * Index of
     * [x axis](https://echarts.apache.org/en/option.html#xAxis)
@@ -698,7 +697,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.xAxisIndex
     */
-  var xAxisIndex: js.UndefOr[Double] = js.native
+  var xAxisIndex: js.UndefOr[Double] = js.undefined
   /**
     * Index of
     * [y axis](https://echarts.apache.org/en/option.html#yAxis)
@@ -707,7 +706,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.yAxisIndex
     */
-  var yAxisIndex: js.UndefOr[Double] = js.native
+  var yAxisIndex: js.UndefOr[Double] = js.undefined
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -722,7 +721,7 @@ trait SeriesGraph_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-graph.z
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -740,706 +739,129 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesGraph_ {
   @scala.inline
-  def apply(): SeriesGraph_ = {
+  def apply(
+    animation: js.UndefOr[Boolean] = js.undefined,
+    animationDelay: js.Function | Double = null,
+    animationDelayUpdate: js.Function | Double = null,
+    animationDuration: js.Function | Double = null,
+    animationDurationUpdate: js.Function | Double = null,
+    animationEasing: String = null,
+    animationEasingUpdate: String = null,
+    animationThreshold: js.UndefOr[Double] = js.undefined,
+    bottom: Double | String = null,
+    calendarIndex: js.UndefOr[Double] = js.undefined,
+    categories: js.Array[CategoryObject] = null,
+    circular: RotateLabel = null,
+    coordinateSystem: String = null,
+    cursor: String = null,
+    data: js.Array[DataObject] = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    edgeLabel: FontStyle = null,
+    edgeSymbol: js.Array[_] | String = null,
+    edgeSymbolSize: js.Array[_] | Double = null,
+    edges: js.Array[_] = null,
+    emphasis: EdgeLabel = null,
+    focusNodeAdjacency: js.UndefOr[Boolean] = js.undefined,
+    force: EdgeLength = null,
+    geoIndex: js.UndefOr[Double] = js.undefined,
+    height: Double | String = null,
+    hoverAnimation: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    itemStyle: ShadowOffsetY = null,
+    label: BorderRadius = null,
+    layout: String = null,
+    left: Double | String = null,
+    legendHoverLink: js.UndefOr[Boolean] = js.undefined,
+    lineStyle: ShadowColor = null,
+    links: js.Array[LinkObject] = null,
+    markArea: AnimationDelayUpdate = null,
+    markLine: AnimationDelay = null,
+    markPoint: AnimationDuration = null,
+    name: String = null,
+    nodeScaleRatio: js.UndefOr[Double] = js.undefined,
+    nodes: js.Array[_] = null,
+    polarIndex: js.UndefOr[Double] = js.undefined,
+    right: Double | String = null,
+    roam: Boolean | String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    symbol: String = null,
+    symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
+    symbolOffset: js.Array[_] = null,
+    symbolRotate: js.UndefOr[Double] = js.undefined,
+    symbolSize: js.Array[_] | js.Function | Double = null,
+    tooltip: ExtraCssText = null,
+    top: Double | String = null,
+    `type`: String = null,
+    width: Double | String = null,
+    xAxisIndex: js.UndefOr[Double] = js.undefined,
+    yAxisIndex: js.UndefOr[Double] = js.undefined,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): SeriesGraph_ = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
+    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
+    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationThreshold)) __obj.updateDynamic("animationThreshold")(animationThreshold.get.asInstanceOf[js.Any])
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (!js.isUndefined(calendarIndex)) __obj.updateDynamic("calendarIndex")(calendarIndex.get.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (circular != null) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
+    if (coordinateSystem != null) __obj.updateDynamic("coordinateSystem")(coordinateSystem.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (edgeLabel != null) __obj.updateDynamic("edgeLabel")(edgeLabel.asInstanceOf[js.Any])
+    if (edgeSymbol != null) __obj.updateDynamic("edgeSymbol")(edgeSymbol.asInstanceOf[js.Any])
+    if (edgeSymbolSize != null) __obj.updateDynamic("edgeSymbolSize")(edgeSymbolSize.asInstanceOf[js.Any])
+    if (edges != null) __obj.updateDynamic("edges")(edges.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusNodeAdjacency)) __obj.updateDynamic("focusNodeAdjacency")(focusNodeAdjacency.get.asInstanceOf[js.Any])
+    if (force != null) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
+    if (!js.isUndefined(geoIndex)) __obj.updateDynamic("geoIndex")(geoIndex.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverAnimation)) __obj.updateDynamic("hoverAnimation")(hoverAnimation.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (!js.isUndefined(legendHoverLink)) __obj.updateDynamic("legendHoverLink")(legendHoverLink.get.asInstanceOf[js.Any])
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (markArea != null) __obj.updateDynamic("markArea")(markArea.asInstanceOf[js.Any])
+    if (markLine != null) __obj.updateDynamic("markLine")(markLine.asInstanceOf[js.Any])
+    if (markPoint != null) __obj.updateDynamic("markPoint")(markPoint.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodeScaleRatio)) __obj.updateDynamic("nodeScaleRatio")(nodeScaleRatio.get.asInstanceOf[js.Any])
+    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(polarIndex)) __obj.updateDynamic("polarIndex")(polarIndex.get.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (roam != null) __obj.updateDynamic("roam")(roam.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (!js.isUndefined(symbolKeepAspect)) __obj.updateDynamic("symbolKeepAspect")(symbolKeepAspect.get.asInstanceOf[js.Any])
+    if (symbolOffset != null) __obj.updateDynamic("symbolOffset")(symbolOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(symbolRotate)) __obj.updateDynamic("symbolRotate")(symbolRotate.get.asInstanceOf[js.Any])
+    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(xAxisIndex)) __obj.updateDynamic("xAxisIndex")(xAxisIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yAxisIndex)) __obj.updateDynamic("yAxisIndex")(yAxisIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesGraph_]
   }
-  @scala.inline
-  implicit class SeriesGraph_Ops[Self <: SeriesGraph_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelayUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasingUpdate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasingUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottom(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendarIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendarIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Array[CategoryObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCircular(value: RotateLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCircular: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoordinateSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoordinateSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[DataObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeLabel(value: FontStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeSymbol(value: js.Array[_] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSymbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeSymbolSize(value: js.Array[_] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSymbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSymbolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdges(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: EdgeLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusNodeAdjacency(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusNodeAdjacency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusNodeAdjacency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusNodeAdjacency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: EdgeLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeoIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: ShadowOffsetY): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: BorderRadius): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendHoverLink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendHoverLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendHoverLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: ShadowColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Array[LinkObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkArea(value: AnimationDelayUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkLine(value: AnimationDelay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkPoint(value: AnimationDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeScaleRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeScaleRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeScaleRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeScaleRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodes(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolarIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polarIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolarIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polarIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoam(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolKeepAspect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolKeepAspect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolOffset(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolRotate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSize(value: js.Array[_] | js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ExtraCssText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXAxisIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXAxisIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYAxisIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYAxisIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

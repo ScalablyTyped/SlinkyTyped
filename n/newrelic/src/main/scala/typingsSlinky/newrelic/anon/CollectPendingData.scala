@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectPendingData extends js.Object {
-  var collectPendingData: js.UndefOr[Boolean] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var waitForIdle: js.UndefOr[Boolean] = js.native
+  var collectPendingData: js.UndefOr[Boolean] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var waitForIdle: js.UndefOr[Boolean] = js.undefined
 }
 
 object CollectPendingData {
   @scala.inline
-  def apply(): CollectPendingData = {
+  def apply(
+    collectPendingData: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    waitForIdle: js.UndefOr[Boolean] = js.undefined
+  ): CollectPendingData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(collectPendingData)) __obj.updateDynamic("collectPendingData")(collectPendingData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitForIdle)) __obj.updateDynamic("waitForIdle")(waitForIdle.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectPendingData]
   }
-  @scala.inline
-  implicit class CollectPendingDataOps[Self <: CollectPendingData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollectPendingData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectPendingData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectPendingData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectPendingData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForIdle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForIdle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForIdle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForIdle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

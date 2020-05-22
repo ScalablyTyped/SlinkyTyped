@@ -20,29 +20,10 @@ trait SchemaChannelConversionPings extends js.Object {
 
 object SchemaChannelConversionPings {
   @scala.inline
-  def apply(): SchemaChannelConversionPings = {
+  def apply(pings: js.Array[SchemaChannelConversionPing] = null): SchemaChannelConversionPings = {
     val __obj = js.Dynamic.literal()
+    if (pings != null) __obj.updateDynamic("pings")(pings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelConversionPings]
   }
-  @scala.inline
-  implicit class SchemaChannelConversionPingsOps[Self <: SchemaChannelConversionPings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPings(value: js.Array[SchemaChannelConversionPing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

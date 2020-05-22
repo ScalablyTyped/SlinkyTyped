@@ -14,29 +14,10 @@ trait SchemaDatafeedsCustomBatchRequest extends js.Object {
 
 object SchemaDatafeedsCustomBatchRequest {
   @scala.inline
-  def apply(): SchemaDatafeedsCustomBatchRequest = {
+  def apply(entries: js.Array[SchemaDatafeedsCustomBatchRequestEntry] = null): SchemaDatafeedsCustomBatchRequest = {
     val __obj = js.Dynamic.literal()
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDatafeedsCustomBatchRequest]
   }
-  @scala.inline
-  implicit class SchemaDatafeedsCustomBatchRequestOps[Self <: SchemaDatafeedsCustomBatchRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: js.Array[SchemaDatafeedsCustomBatchRequestEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

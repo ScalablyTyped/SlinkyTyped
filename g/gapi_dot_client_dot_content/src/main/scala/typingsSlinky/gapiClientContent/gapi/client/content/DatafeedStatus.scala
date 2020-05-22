@@ -4,163 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DatafeedStatus extends js.Object {
   /** The country for which the status is reported, represented as a  CLDR territory code. */
-  var country: js.UndefOr[String] = js.native
+  var country: js.UndefOr[String] = js.undefined
   /** The ID of the feed for which the status is reported. */
-  var datafeedId: js.UndefOr[String] = js.native
+  var datafeedId: js.UndefOr[String] = js.undefined
   /** The list of errors occurring in the feed. */
-  var errors: js.UndefOr[js.Array[DatafeedStatusError]] = js.native
+  var errors: js.UndefOr[js.Array[DatafeedStatusError]] = js.undefined
   /** The number of items in the feed that were processed. */
-  var itemsTotal: js.UndefOr[String] = js.native
+  var itemsTotal: js.UndefOr[String] = js.undefined
   /** The number of items in the feed that were valid. */
-  var itemsValid: js.UndefOr[String] = js.native
+  var itemsValid: js.UndefOr[String] = js.undefined
   /** Identifies what kind of resource this is. Value: the fixed string "content#datafeedStatus". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The two-letter ISO 639-1 language for which the status is reported. */
-  var language: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.undefined
   /** The last date at which the feed was uploaded. */
-  var lastUploadDate: js.UndefOr[String] = js.native
+  var lastUploadDate: js.UndefOr[String] = js.undefined
   /** The processing status of the feed. */
-  var processingStatus: js.UndefOr[String] = js.native
+  var processingStatus: js.UndefOr[String] = js.undefined
   /** The list of errors occurring in the feed. */
-  var warnings: js.UndefOr[js.Array[DatafeedStatusError]] = js.native
+  var warnings: js.UndefOr[js.Array[DatafeedStatusError]] = js.undefined
 }
 
 object DatafeedStatus {
   @scala.inline
-  def apply(): DatafeedStatus = {
+  def apply(
+    country: String = null,
+    datafeedId: String = null,
+    errors: js.Array[DatafeedStatusError] = null,
+    itemsTotal: String = null,
+    itemsValid: String = null,
+    kind: String = null,
+    language: String = null,
+    lastUploadDate: String = null,
+    processingStatus: String = null,
+    warnings: js.Array[DatafeedStatusError] = null
+  ): DatafeedStatus = {
     val __obj = js.Dynamic.literal()
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (datafeedId != null) __obj.updateDynamic("datafeedId")(datafeedId.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (itemsTotal != null) __obj.updateDynamic("itemsTotal")(itemsTotal.asInstanceOf[js.Any])
+    if (itemsValid != null) __obj.updateDynamic("itemsValid")(itemsValid.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (lastUploadDate != null) __obj.updateDynamic("lastUploadDate")(lastUploadDate.asInstanceOf[js.Any])
+    if (processingStatus != null) __obj.updateDynamic("processingStatus")(processingStatus.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatafeedStatus]
   }
-  @scala.inline
-  implicit class DatafeedStatusOps[Self <: DatafeedStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatafeedId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatafeedId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeedId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: js.Array[DatafeedStatusError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsTotal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsValid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsValid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsValid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUploadDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUploadDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUploadDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUploadDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[DatafeedStatusError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

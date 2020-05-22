@@ -30,71 +30,19 @@ trait KeysAndAttributes extends js.Object {
 
 object KeysAndAttributes {
   @scala.inline
-  def apply(Keys: KeyList): KeysAndAttributes = {
+  def apply(
+    Keys: KeyList,
+    AttributesToGet: AttributeNameList = null,
+    ConsistentRead: js.UndefOr[ConsistentRead] = js.undefined,
+    ExpressionAttributeNames: ExpressionAttributeNameMap = null,
+    ProjectionExpression: ProjectionExpression = null
+  ): KeysAndAttributes = {
     val __obj = js.Dynamic.literal(Keys = Keys.asInstanceOf[js.Any])
+    if (AttributesToGet != null) __obj.updateDynamic("AttributesToGet")(AttributesToGet.asInstanceOf[js.Any])
+    if (!js.isUndefined(ConsistentRead)) __obj.updateDynamic("ConsistentRead")(ConsistentRead.get.asInstanceOf[js.Any])
+    if (ExpressionAttributeNames != null) __obj.updateDynamic("ExpressionAttributeNames")(ExpressionAttributeNames.asInstanceOf[js.Any])
+    if (ProjectionExpression != null) __obj.updateDynamic("ProjectionExpression")(ProjectionExpression.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeysAndAttributes]
   }
-  @scala.inline
-  implicit class KeysAndAttributesOps[Self <: KeysAndAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeys(value: KeyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributesToGet(value: AttributeNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributesToGet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributesToGet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributesToGet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsistentRead(value: ConsistentRead): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistentRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistentRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistentRead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpressionAttributeNames(value: ExpressionAttributeNameMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionAttributeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpressionAttributeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionAttributeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectionExpression(value: ProjectionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectionExpression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

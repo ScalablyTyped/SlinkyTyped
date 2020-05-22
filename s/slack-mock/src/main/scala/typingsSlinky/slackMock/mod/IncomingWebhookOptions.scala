@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncomingWebhookOptions[T] extends js.Object {
-  var body: js.UndefOr[T] = js.native
-  var headers: js.UndefOr[IncomingWebhookHttpHeaders] = js.native
-  var statusCode: js.UndefOr[Double] = js.native
-  var url: js.UndefOr[IncomingWebhookUrl] = js.native
+  var body: js.UndefOr[T] = js.undefined
+  var headers: js.UndefOr[IncomingWebhookHttpHeaders] = js.undefined
+  var statusCode: js.UndefOr[Double] = js.undefined
+  var url: js.UndefOr[IncomingWebhookUrl] = js.undefined
 }
 
 object IncomingWebhookOptions {
   @scala.inline
-  def apply[T](): IncomingWebhookOptions[T] = {
+  def apply[T](
+    body: T = null,
+    headers: IncomingWebhookHttpHeaders = null,
+    statusCode: js.UndefOr[Double] = js.undefined,
+    url: IncomingWebhookUrl = null
+  ): IncomingWebhookOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusCode)) __obj.updateDynamic("statusCode")(statusCode.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncomingWebhookOptions[T]]
   }
-  @scala.inline
-  implicit class IncomingWebhookOptionsOps[Self[t] <: IncomingWebhookOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withBody(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: IncomingWebhookHttpHeaders): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCode: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: IncomingWebhookUrl): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

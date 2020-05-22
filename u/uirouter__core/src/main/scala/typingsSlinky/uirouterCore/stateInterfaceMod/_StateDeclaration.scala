@@ -1,6 +1,5 @@
 package typingsSlinky.uirouterCore.stateInterfaceMod
 
-import typingsSlinky.uirouterCore.anon.InstantiableStateDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +9,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.uirouterCore.anon.InstantiableStateDeclaration
 */
 trait _StateDeclaration extends js.Object
-
-object _StateDeclaration {
-  @scala.inline
-  implicit def apply(value: InstantiableStateDeclaration): _StateDeclaration = value.asInstanceOf[_StateDeclaration]
-  @scala.inline
-  implicit def apply(value: StateDeclaration): _StateDeclaration = value.asInstanceOf[_StateDeclaration]
-}
 

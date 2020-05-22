@@ -7,24 +7,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactPlayerProps
   extends /* otherProps */ StringDictionary[js.Any] {
-  var config: js.UndefOr[Config] = js.native
-  var controls: js.UndefOr[Boolean] = js.native
-  var dailymotionConfig: js.UndefOr[DailyMotionConfig] = js.native
-  var facebookConfig: js.UndefOr[FacebookConfig] = js.native
-  var fileConfig: js.UndefOr[FileConfig] = js.native
-  var height: js.UndefOr[String | Double] = js.native
-  var light: js.UndefOr[Boolean | String] = js.native
-  var loop: js.UndefOr[Boolean] = js.native
-  var muted: js.UndefOr[Boolean] = js.native
-  var onBuffer: js.UndefOr[js.Function0[Unit]] = js.native
-  var onBufferEnd: js.UndefOr[js.Function0[Unit]] = js.native
-  var onDisablePIP: js.UndefOr[js.Function0[Unit]] = js.native
-  var onDuration: js.UndefOr[js.Function1[/* duration */ Double, Unit]] = js.native
-  var onEnablePIP: js.UndefOr[js.Function0[Unit]] = js.native
-  var onEnded: js.UndefOr[js.Function0[Unit]] = js.native
+  var config: js.UndefOr[Config] = js.undefined
+  var controls: js.UndefOr[Boolean] = js.undefined
+  var dailymotionConfig: js.UndefOr[DailyMotionConfig] = js.undefined
+  var facebookConfig: js.UndefOr[FacebookConfig] = js.undefined
+  var fileConfig: js.UndefOr[FileConfig] = js.undefined
+  var height: js.UndefOr[String | Double] = js.undefined
+  var light: js.UndefOr[Boolean | String] = js.undefined
+  var loop: js.UndefOr[Boolean] = js.undefined
+  var muted: js.UndefOr[Boolean] = js.undefined
+  var onBuffer: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onBufferEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onDisablePIP: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onDuration: js.UndefOr[js.Function1[/* duration */ Double, Unit]] = js.undefined
+  var onEnablePIP: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onEnded: js.UndefOr[js.Function0[Unit]] = js.undefined
   var onError: js.UndefOr[
     js.Function4[
       /* error */ js.Any, 
@@ -33,482 +32,109 @@ trait ReactPlayerProps
       /* hlsGlobal */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.native
-  var onPause: js.UndefOr[js.Function0[Unit]] = js.native
-  var onPlay: js.UndefOr[js.Function0[Unit]] = js.native
-  var onProgress: js.UndefOr[js.Function1[/* state */ Loaded, Unit]] = js.native
-  var onReady: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSeek: js.UndefOr[js.Function1[/* seconds */ Double, Unit]] = js.native
-  var onStart: js.UndefOr[js.Function0[Unit]] = js.native
-  var pip: js.UndefOr[Boolean] = js.native
-  var playbackRate: js.UndefOr[Double] = js.native
-  var playing: js.UndefOr[Boolean] = js.native
-  var playsinline: js.UndefOr[Boolean] = js.native
-  var progressInterval: js.UndefOr[Double] = js.native
-  var soundcloudConfig: js.UndefOr[SoundCloudConfig] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var url: js.UndefOr[String | (js.Array[SourceProps | String]) | MediaStream] = js.native
-  var vimeoConfig: js.UndefOr[VimeoConfig] = js.native
-  var volume: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[String | Double] = js.native
-  var wistiaConfig: js.UndefOr[WistiaConfig] = js.native
-  var wrapper: js.UndefOr[js.Any] = js.native
-  var youtubeConfig: js.UndefOr[YouTubeConfig] = js.native
+  ] = js.undefined
+  var onPause: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onPlay: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onProgress: js.UndefOr[js.Function1[/* state */ Loaded, Unit]] = js.undefined
+  var onReady: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSeek: js.UndefOr[js.Function1[/* seconds */ Double, Unit]] = js.undefined
+  var onStart: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var pip: js.UndefOr[Boolean] = js.undefined
+  var playbackRate: js.UndefOr[Double] = js.undefined
+  var playing: js.UndefOr[Boolean] = js.undefined
+  var playsinline: js.UndefOr[Boolean] = js.undefined
+  var progressInterval: js.UndefOr[Double] = js.undefined
+  var soundcloudConfig: js.UndefOr[SoundCloudConfig] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var url: js.UndefOr[String | (js.Array[SourceProps | String]) | MediaStream] = js.undefined
+  var vimeoConfig: js.UndefOr[VimeoConfig] = js.undefined
+  var volume: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.undefined
+  var wistiaConfig: js.UndefOr[WistiaConfig] = js.undefined
+  var wrapper: js.UndefOr[js.Any] = js.undefined
+  var youtubeConfig: js.UndefOr[YouTubeConfig] = js.undefined
 }
 
 object ReactPlayerProps {
   @scala.inline
-  def apply(): ReactPlayerProps = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    config: Config = null,
+    controls: js.UndefOr[Boolean] = js.undefined,
+    dailymotionConfig: DailyMotionConfig = null,
+    facebookConfig: FacebookConfig = null,
+    fileConfig: FileConfig = null,
+    height: String | Double = null,
+    light: Boolean | String = null,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    muted: js.UndefOr[Boolean] = js.undefined,
+    onBuffer: () => Unit = null,
+    onBufferEnd: () => Unit = null,
+    onDisablePIP: () => Unit = null,
+    onDuration: /* duration */ Double => Unit = null,
+    onEnablePIP: () => Unit = null,
+    onEnded: () => Unit = null,
+    onError: (/* error */ js.Any, /* data */ js.UndefOr[js.Any], /* hlsInstance */ js.UndefOr[js.Any], /* hlsGlobal */ js.UndefOr[js.Any]) => Unit = null,
+    onPause: () => Unit = null,
+    onPlay: () => Unit = null,
+    onProgress: /* state */ Loaded => Unit = null,
+    onReady: () => Unit = null,
+    onSeek: /* seconds */ Double => Unit = null,
+    onStart: () => Unit = null,
+    pip: js.UndefOr[Boolean] = js.undefined,
+    playbackRate: js.UndefOr[Double] = js.undefined,
+    playing: js.UndefOr[Boolean] = js.undefined,
+    playsinline: js.UndefOr[Boolean] = js.undefined,
+    progressInterval: js.UndefOr[Double] = js.undefined,
+    soundcloudConfig: SoundCloudConfig = null,
+    style: js.Object = null,
+    url: String | (js.Array[SourceProps | String]) | MediaStream = null,
+    vimeoConfig: VimeoConfig = null,
+    volume: js.UndefOr[Double] = js.undefined,
+    width: String | Double = null,
+    wistiaConfig: WistiaConfig = null,
+    wrapper: js.Any = null,
+    youtubeConfig: YouTubeConfig = null
+  ): ReactPlayerProps = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.get.asInstanceOf[js.Any])
+    if (dailymotionConfig != null) __obj.updateDynamic("dailymotionConfig")(dailymotionConfig.asInstanceOf[js.Any])
+    if (facebookConfig != null) __obj.updateDynamic("facebookConfig")(facebookConfig.asInstanceOf[js.Any])
+    if (fileConfig != null) __obj.updateDynamic("fileConfig")(fileConfig.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (light != null) __obj.updateDynamic("light")(light.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.get.asInstanceOf[js.Any])
+    if (onBuffer != null) __obj.updateDynamic("onBuffer")(js.Any.fromFunction0(onBuffer))
+    if (onBufferEnd != null) __obj.updateDynamic("onBufferEnd")(js.Any.fromFunction0(onBufferEnd))
+    if (onDisablePIP != null) __obj.updateDynamic("onDisablePIP")(js.Any.fromFunction0(onDisablePIP))
+    if (onDuration != null) __obj.updateDynamic("onDuration")(js.Any.fromFunction1(onDuration))
+    if (onEnablePIP != null) __obj.updateDynamic("onEnablePIP")(js.Any.fromFunction0(onEnablePIP))
+    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction0(onEnded))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction4(onError))
+    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction0(onPause))
+    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction0(onPlay))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction0(onReady))
+    if (onSeek != null) __obj.updateDynamic("onSeek")(js.Any.fromFunction1(onSeek))
+    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction0(onStart))
+    if (!js.isUndefined(pip)) __obj.updateDynamic("pip")(pip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(playbackRate)) __obj.updateDynamic("playbackRate")(playbackRate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(playing)) __obj.updateDynamic("playing")(playing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(playsinline)) __obj.updateDynamic("playsinline")(playsinline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressInterval)) __obj.updateDynamic("progressInterval")(progressInterval.get.asInstanceOf[js.Any])
+    if (soundcloudConfig != null) __obj.updateDynamic("soundcloudConfig")(soundcloudConfig.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (vimeoConfig != null) __obj.updateDynamic("vimeoConfig")(vimeoConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(volume)) __obj.updateDynamic("volume")(volume.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (wistiaConfig != null) __obj.updateDynamic("wistiaConfig")(wistiaConfig.asInstanceOf[js.Any])
+    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
+    if (youtubeConfig != null) __obj.updateDynamic("youtubeConfig")(youtubeConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactPlayerProps]
   }
-  @scala.inline
-  implicit class ReactPlayerPropsOps[Self <: ReactPlayerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: Config): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDailymotionConfig(value: DailyMotionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dailymotionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDailymotionConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dailymotionConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacebookConfig(value: FacebookConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebookConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacebookConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebookConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileConfig(value: FileConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLight(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMuted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMuted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBuffer(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBuffer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBufferEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBufferEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBufferEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBufferEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDisablePIP(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisablePIP")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDisablePIP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDisablePIP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDuration(value: /* duration */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDuration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnablePIP(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnablePIP")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnablePIP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnablePIP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(
-      value: (/* error */ js.Any, /* data */ js.UndefOr[js.Any], /* hlsInstance */ js.UndefOr[js.Any], /* hlsGlobal */ js.UndefOr[js.Any]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPause(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlay(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnProgress(value: /* state */ Loaded => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReady(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSeek(value: /* seconds */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeek")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaybackRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playbackRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaybackRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playbackRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaying(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaysinline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playsinline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaysinline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playsinline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoundcloudConfig(value: SoundCloudConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soundcloudConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoundcloudConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soundcloudConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlMediaStream(value: MediaStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String | (js.Array[SourceProps | String]) | MediaStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVimeoConfig(value: VimeoConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vimeoConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVimeoConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vimeoConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWistiaConfig(value: WistiaConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wistiaConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWistiaConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wistiaConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapper(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYoutubeConfig(value: YouTubeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYoutubeConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

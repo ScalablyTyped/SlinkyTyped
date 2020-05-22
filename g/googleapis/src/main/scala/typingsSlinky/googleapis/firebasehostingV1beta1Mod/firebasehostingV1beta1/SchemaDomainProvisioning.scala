@@ -47,113 +47,26 @@ trait SchemaDomainProvisioning extends js.Object {
 
 object SchemaDomainProvisioning {
   @scala.inline
-  def apply(): SchemaDomainProvisioning = {
+  def apply(
+    certChallengeDiscoveredTxt: js.Array[String] = null,
+    certChallengeDns: SchemaCertDnsChallenge = null,
+    certChallengeHttp: SchemaCertHttpChallenge = null,
+    certStatus: String = null,
+    discoveredIps: js.Array[String] = null,
+    dnsFetchTime: String = null,
+    dnsStatus: String = null,
+    expectedIps: js.Array[String] = null
+  ): SchemaDomainProvisioning = {
     val __obj = js.Dynamic.literal()
+    if (certChallengeDiscoveredTxt != null) __obj.updateDynamic("certChallengeDiscoveredTxt")(certChallengeDiscoveredTxt.asInstanceOf[js.Any])
+    if (certChallengeDns != null) __obj.updateDynamic("certChallengeDns")(certChallengeDns.asInstanceOf[js.Any])
+    if (certChallengeHttp != null) __obj.updateDynamic("certChallengeHttp")(certChallengeHttp.asInstanceOf[js.Any])
+    if (certStatus != null) __obj.updateDynamic("certStatus")(certStatus.asInstanceOf[js.Any])
+    if (discoveredIps != null) __obj.updateDynamic("discoveredIps")(discoveredIps.asInstanceOf[js.Any])
+    if (dnsFetchTime != null) __obj.updateDynamic("dnsFetchTime")(dnsFetchTime.asInstanceOf[js.Any])
+    if (dnsStatus != null) __obj.updateDynamic("dnsStatus")(dnsStatus.asInstanceOf[js.Any])
+    if (expectedIps != null) __obj.updateDynamic("expectedIps")(expectedIps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDomainProvisioning]
   }
-  @scala.inline
-  implicit class SchemaDomainProvisioningOps[Self <: SchemaDomainProvisioning] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertChallengeDiscoveredTxt(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certChallengeDiscoveredTxt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertChallengeDiscoveredTxt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certChallengeDiscoveredTxt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertChallengeDns(value: SchemaCertDnsChallenge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certChallengeDns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertChallengeDns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certChallengeDns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertChallengeHttp(value: SchemaCertHttpChallenge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certChallengeHttp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertChallengeHttp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certChallengeHttp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscoveredIps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discoveredIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscoveredIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discoveredIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsFetchTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsFetchTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsFetchTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsFetchTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedIps(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedIps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,14 @@ trait DescribeEventDetailsResponse extends js.Object {
 
 object DescribeEventDetailsResponse {
   @scala.inline
-  def apply(): DescribeEventDetailsResponse = {
+  def apply(
+    failedSet: DescribeEventDetailsFailedSet = null,
+    successfulSet: DescribeEventDetailsSuccessfulSet = null
+  ): DescribeEventDetailsResponse = {
     val __obj = js.Dynamic.literal()
+    if (failedSet != null) __obj.updateDynamic("failedSet")(failedSet.asInstanceOf[js.Any])
+    if (successfulSet != null) __obj.updateDynamic("successfulSet")(successfulSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEventDetailsResponse]
   }
-  @scala.inline
-  implicit class DescribeEventDetailsResponseOps[Self <: DescribeEventDetailsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedSet(value: DescribeEventDetailsFailedSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfulSet(value: DescribeEventDetailsSuccessfulSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfulSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

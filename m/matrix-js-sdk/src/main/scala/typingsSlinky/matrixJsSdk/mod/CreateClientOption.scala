@@ -6,283 +6,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateClientOption extends js.Object {
-  var accessToken: js.UndefOr[String] = js.native
-  var baseUrl: js.UndefOr[String] = js.native
-  var cryptoCallbacks: js.UndefOr[StringDictionary[js.Function1[/* repeated */ js.Any, Unit]]] = js.native
-  var cryptoStore: js.UndefOr[js.Any] = js.native
-  var deviceId: js.UndefOr[String] = js.native
-  var deviceToImport: js.UndefOr[js.Any] = js.native
-  var fallbackICEServerAllowed: js.UndefOr[Boolean] = js.native
-  var forceTURN: js.UndefOr[Boolean] = js.native
-  var idBaseUrl: js.UndefOr[String] = js.native
-  var identityServer: js.UndefOr[GetAccessToken] = js.native
-  var localTimeoutMs: js.UndefOr[Double] = js.native
-  var queryParams: js.UndefOr[js.Any] = js.native
-  var request: js.UndefOr[js.Any] = js.native
-  var scheduler: js.UndefOr[MatrixScheduler] = js.native
-  var store: js.UndefOr[MatrixStore] = js.native
-  var timelineSupport: js.UndefOr[Boolean] = js.native
-  var unstableClientRelationAggregation: js.UndefOr[Boolean] = js.native
-  var useAuthorizationHeader: js.UndefOr[Boolean] = js.native
-  var userId: js.UndefOr[String] = js.native
-  var verificationMethods: js.UndefOr[js.Array[String]] = js.native
+  var accessToken: js.UndefOr[String] = js.undefined
+  var baseUrl: js.UndefOr[String] = js.undefined
+  var cryptoCallbacks: js.UndefOr[StringDictionary[js.Function1[/* repeated */ js.Any, Unit]]] = js.undefined
+  var cryptoStore: js.UndefOr[js.Any] = js.undefined
+  var deviceId: js.UndefOr[String] = js.undefined
+  var deviceToImport: js.UndefOr[js.Any] = js.undefined
+  var fallbackICEServerAllowed: js.UndefOr[Boolean] = js.undefined
+  var forceTURN: js.UndefOr[Boolean] = js.undefined
+  var idBaseUrl: js.UndefOr[String] = js.undefined
+  var identityServer: js.UndefOr[GetAccessToken] = js.undefined
+  var localTimeoutMs: js.UndefOr[Double] = js.undefined
+  var queryParams: js.UndefOr[js.Any] = js.undefined
+  var request: js.UndefOr[js.Any] = js.undefined
+  var scheduler: js.UndefOr[MatrixScheduler] = js.undefined
+  var store: js.UndefOr[MatrixStore] = js.undefined
+  var timelineSupport: js.UndefOr[Boolean] = js.undefined
+  var unstableClientRelationAggregation: js.UndefOr[Boolean] = js.undefined
+  var useAuthorizationHeader: js.UndefOr[Boolean] = js.undefined
+  var userId: js.UndefOr[String] = js.undefined
+  var verificationMethods: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object CreateClientOption {
   @scala.inline
-  def apply(): CreateClientOption = {
+  def apply(
+    accessToken: String = null,
+    baseUrl: String = null,
+    cryptoCallbacks: StringDictionary[js.Function1[/* repeated */ js.Any, Unit]] = null,
+    cryptoStore: js.Any = null,
+    deviceId: String = null,
+    deviceToImport: js.Any = null,
+    fallbackICEServerAllowed: js.UndefOr[Boolean] = js.undefined,
+    forceTURN: js.UndefOr[Boolean] = js.undefined,
+    idBaseUrl: String = null,
+    identityServer: GetAccessToken = null,
+    localTimeoutMs: js.UndefOr[Double] = js.undefined,
+    queryParams: js.Any = null,
+    request: js.Any = null,
+    scheduler: MatrixScheduler = null,
+    store: MatrixStore = null,
+    timelineSupport: js.UndefOr[Boolean] = js.undefined,
+    unstableClientRelationAggregation: js.UndefOr[Boolean] = js.undefined,
+    useAuthorizationHeader: js.UndefOr[Boolean] = js.undefined,
+    userId: String = null,
+    verificationMethods: js.Array[String] = null
+  ): CreateClientOption = {
     val __obj = js.Dynamic.literal()
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (cryptoCallbacks != null) __obj.updateDynamic("cryptoCallbacks")(cryptoCallbacks.asInstanceOf[js.Any])
+    if (cryptoStore != null) __obj.updateDynamic("cryptoStore")(cryptoStore.asInstanceOf[js.Any])
+    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
+    if (deviceToImport != null) __obj.updateDynamic("deviceToImport")(deviceToImport.asInstanceOf[js.Any])
+    if (!js.isUndefined(fallbackICEServerAllowed)) __obj.updateDynamic("fallbackICEServerAllowed")(fallbackICEServerAllowed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceTURN)) __obj.updateDynamic("forceTURN")(forceTURN.get.asInstanceOf[js.Any])
+    if (idBaseUrl != null) __obj.updateDynamic("idBaseUrl")(idBaseUrl.asInstanceOf[js.Any])
+    if (identityServer != null) __obj.updateDynamic("identityServer")(identityServer.asInstanceOf[js.Any])
+    if (!js.isUndefined(localTimeoutMs)) __obj.updateDynamic("localTimeoutMs")(localTimeoutMs.get.asInstanceOf[js.Any])
+    if (queryParams != null) __obj.updateDynamic("queryParams")(queryParams.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (scheduler != null) __obj.updateDynamic("scheduler")(scheduler.asInstanceOf[js.Any])
+    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
+    if (!js.isUndefined(timelineSupport)) __obj.updateDynamic("timelineSupport")(timelineSupport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unstableClientRelationAggregation)) __obj.updateDynamic("unstableClientRelationAggregation")(unstableClientRelationAggregation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useAuthorizationHeader)) __obj.updateDynamic("useAuthorizationHeader")(useAuthorizationHeader.get.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
+    if (verificationMethods != null) __obj.updateDynamic("verificationMethods")(verificationMethods.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateClientOption]
   }
-  @scala.inline
-  implicit class CreateClientOptionOps[Self <: CreateClientOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCryptoCallbacks(value: StringDictionary[js.Function1[/* repeated */ js.Any, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoCallbacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoCallbacks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoCallbacks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCryptoStore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoStore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoStore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoStore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceToImport(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceToImport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceToImport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceToImport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackICEServerAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackICEServerAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackICEServerAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackICEServerAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceTURN(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceTURN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceTURN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceTURN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idBaseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idBaseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentityServer(value: GetAccessToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identityServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identityServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalTimeoutMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localTimeoutMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalTimeoutMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localTimeoutMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduler(value: MatrixScheduler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStore(value: MatrixStore): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimelineSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimelineSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnstableClientRelationAggregation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unstableClientRelationAggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnstableClientRelationAggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unstableClientRelationAggregation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseAuthorizationHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAuthorizationHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseAuthorizationHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAuthorizationHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationMethods(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationMethods")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

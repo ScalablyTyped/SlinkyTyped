@@ -1,6 +1,5 @@
 package typingsSlinky.yaml.typesMod
 
-import typingsSlinky.yaml.typesMod.AST.Node
 import typingsSlinky.yaml.typesMod.Schema.CreateNodeContext
 import typingsSlinky.yaml.typesMod.Schema.Name
 import typingsSlinky.yaml.typesMod.Schema.Options
@@ -19,7 +18,7 @@ class Schema_ protected () extends js.Object {
   var tags: js.Array[Tag] = js.native
   /**
     * Convert any value into a `Node` using this schema, recursively turning
-    * objects into collectsions.
+    * objects into collections.
     *
     * @param wrapScalars If `true`, also wraps plain values in `Scalar` objects;
     *   if undefined or `false` and `value` is not an object, it will be returned
@@ -31,5 +30,13 @@ class Schema_ protected () extends js.Object {
   def createNode(value: js.Any, wrapScalars: Boolean): Node = js.native
   def createNode(value: js.Any, wrapScalars: Boolean, tag: String): Node = js.native
   def createNode(value: js.Any, wrapScalars: Boolean, tag: String, ctx: CreateNodeContext): Node = js.native
+  /**
+    * Convert a key and a value into a `Pair` using this schema, recursively
+    * wrapping all values as `Scalar` or `Collection` nodes.
+    *
+    * @param ctx To not wrap scalars, use a context `{ wrapScalars: false }`
+    */
+  def createPair(key: js.Any, value: js.Any): Pair = js.native
+  def createPair(key: js.Any, value: js.Any, ctx: CreateNodeContext): Pair = js.native
 }
 

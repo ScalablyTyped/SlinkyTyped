@@ -30,65 +30,18 @@ trait SchemaCheckInRequest extends js.Object {
 
 object SchemaCheckInRequest {
   @scala.inline
-  def apply(): SchemaCheckInRequest = {
+  def apply(
+    deadlineExpired: SchemaEmpty = null,
+    event: StringDictionary[js.Any] = null,
+    result: SchemaStatus = null,
+    workerStatus: SchemaWorkerStatus = null
+  ): SchemaCheckInRequest = {
     val __obj = js.Dynamic.literal()
+    if (deadlineExpired != null) __obj.updateDynamic("deadlineExpired")(deadlineExpired.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (workerStatus != null) __obj.updateDynamic("workerStatus")(workerStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckInRequest]
   }
-  @scala.inline
-  implicit class SchemaCheckInRequestOps[Self <: SchemaCheckInRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeadlineExpired(value: SchemaEmpty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineExpired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadlineExpired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadlineExpired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: SchemaStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerStatus(value: SchemaWorkerStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

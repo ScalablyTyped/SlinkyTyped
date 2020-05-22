@@ -26,65 +26,18 @@ trait GetSessionResponse extends js.Object {
 
 object GetSessionResponse {
   @scala.inline
-  def apply(): GetSessionResponse = {
+  def apply(
+    dialogAction: DialogAction = null,
+    recentIntentSummaryView: IntentSummaryList = null,
+    sessionAttributes: StringMap = null,
+    sessionId: String = null
+  ): GetSessionResponse = {
     val __obj = js.Dynamic.literal()
+    if (dialogAction != null) __obj.updateDynamic("dialogAction")(dialogAction.asInstanceOf[js.Any])
+    if (recentIntentSummaryView != null) __obj.updateDynamic("recentIntentSummaryView")(recentIntentSummaryView.asInstanceOf[js.Any])
+    if (sessionAttributes != null) __obj.updateDynamic("sessionAttributes")(sessionAttributes.asInstanceOf[js.Any])
+    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSessionResponse]
   }
-  @scala.inline
-  implicit class GetSessionResponseOps[Self <: GetSessionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDialogAction(value: DialogAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialogAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecentIntentSummaryView(value: IntentSummaryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recentIntentSummaryView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecentIntentSummaryView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recentIntentSummaryView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionAttributes(value: StringMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

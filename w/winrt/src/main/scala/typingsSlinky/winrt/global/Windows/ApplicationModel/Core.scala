@@ -4,6 +4,7 @@ import typingsSlinky.winrt.Windows.ApplicationModel.Core.IFrameworkViewSource
 import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IGetActivationFactory
+import typingsSlinky.winrt.Windows.UI.Core.CoreWindow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,16 @@ object Core extends js.Object {
   
   @js.native
   class CoreApplicationView ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Core.CoreApplicationView
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Core.CoreApplicationView {
+    /* CompleteClass */
+    override var coreWindow: CoreWindow = js.native
+    /* CompleteClass */
+    override var isHosted: Boolean = js.native
+    /* CompleteClass */
+    override var isMain: Boolean = js.native
+    /* CompleteClass */
+    override var onactivated: js.Any = js.native
+  }
   
   /* static members */
   @js.native

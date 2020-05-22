@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Colorsrc extends js.Object {
-  var color: typingsSlinky.plotlyJs.mod.Color = js.native
-  var colorsrc: js.Any = js.native
-  var `type`: radial | horizontal | vertical | none = js.native
-  var typesrc: js.Any = js.native
+  var color: typingsSlinky.plotlyJs.mod.Color
+  var colorsrc: js.Any
+  var `type`: radial | horizontal | vertical | none
+  var typesrc: js.Any
 }
 
 object Colorsrc {
@@ -28,37 +27,5 @@ object Colorsrc {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Colorsrc]
   }
-  @scala.inline
-  implicit class ColorsrcOps[Self <: Colorsrc] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorsrc(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorsrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: radial | horizontal | vertical | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypesrc(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typesrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -30,53 +30,16 @@ trait SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectory extends js.Object
 
 object SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectory {
   @scala.inline
-  def apply(): SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectory = {
+  def apply(
+    digest: SchemaGoogleDevtoolsRemoteexecutionV1testDigest = null,
+    path: String = null,
+    treeDigest: SchemaGoogleDevtoolsRemoteexecutionV1testDigest = null
+  ): SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectory = {
     val __obj = js.Dynamic.literal()
+    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (treeDigest != null) __obj.updateDynamic("treeDigest")(treeDigest.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectory]
   }
-  @scala.inline
-  implicit class SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectoryOps[Self <: SchemaGoogleDevtoolsRemoteexecutionV1testOutputDirectory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDigest(value: SchemaGoogleDevtoolsRemoteexecutionV1testDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeDigest(value: SchemaGoogleDevtoolsRemoteexecutionV1testDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDigest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

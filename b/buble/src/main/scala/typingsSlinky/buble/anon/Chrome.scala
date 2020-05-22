@@ -55,109 +55,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Chrome extends js.Object {
   var chrome: js.UndefOr[
     `48` | `49` | `50` | `51` | `52` | `53` | `54` | `55` | `56` | `57` | `58` | `59` | `60` | `61` | `62` | `63` | `64` | `65` | `66` | `67` | `68` | `69` | `70` | `71`
-  ] = js.native
-  var edge: js.UndefOr[`12` | `13` | `14` | `15` | `16` | `17` | `18` | `19`] = js.native
+  ] = js.undefined
+  var edge: js.UndefOr[`12` | `13` | `14` | `15` | `16` | `17` | `18` | `19`] = js.undefined
   var firefox: js.UndefOr[
     `43` | `44` | `45` | `46` | `47` | `48` | `49` | `50` | `51` | `52` | `53` | `54` | `55` | `56` | `57` | `58` | `59` | `60` | `61` | `62` | `63` | `64`
-  ] = js.native
-  var ie: js.UndefOr[`8` | `9` | `10` | `11`] = js.native
-  var node: js.UndefOr[`0.10` | `0.12` | `4` | `5` | `6` | `8` | `8.3` | `8.7` | `8.10`] = js.native
-  var safari: js.UndefOr[`8` | `9` | `10` | `10.1` | `11` | `11.1` | `12`] = js.native
+  ] = js.undefined
+  var ie: js.UndefOr[`8` | `9` | `10` | `11`] = js.undefined
+  var node: js.UndefOr[`0.10` | `0.12` | `4` | `5` | `6` | `8` | `8.3` | `8.7` | `8.10`] = js.undefined
+  var safari: js.UndefOr[`8` | `9` | `10` | `10.1` | `11` | `11.1` | `12`] = js.undefined
 }
 
 object Chrome {
   @scala.inline
-  def apply(): Chrome = {
+  def apply(
+    chrome: `48` | `49` | `50` | `51` | `52` | `53` | `54` | `55` | `56` | `57` | `58` | `59` | `60` | `61` | `62` | `63` | `64` | `65` | `66` | `67` | `68` | `69` | `70` | `71` = null,
+    edge: `12` | `13` | `14` | `15` | `16` | `17` | `18` | `19` = null,
+    firefox: `43` | `44` | `45` | `46` | `47` | `48` | `49` | `50` | `51` | `52` | `53` | `54` | `55` | `56` | `57` | `58` | `59` | `60` | `61` | `62` | `63` | `64` = null,
+    ie: `8` | `9` | `10` | `11` = null,
+    node: `0.10` | `0.12` | `4` | `5` | `6` | `8` | `8.3` | `8.7` | `8.10` = null,
+    safari: `8` | `9` | `10` | `10.1` | `11` | `11.1` | `12` = null
+  ): Chrome = {
     val __obj = js.Dynamic.literal()
+    if (chrome != null) __obj.updateDynamic("chrome")(chrome.asInstanceOf[js.Any])
+    if (edge != null) __obj.updateDynamic("edge")(edge.asInstanceOf[js.Any])
+    if (firefox != null) __obj.updateDynamic("firefox")(firefox.asInstanceOf[js.Any])
+    if (ie != null) __obj.updateDynamic("ie")(ie.asInstanceOf[js.Any])
+    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
+    if (safari != null) __obj.updateDynamic("safari")(safari.asInstanceOf[js.Any])
     __obj.asInstanceOf[Chrome]
   }
-  @scala.inline
-  implicit class ChromeOps[Self <: Chrome] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChrome(
-      value: `48` | `49` | `50` | `51` | `52` | `53` | `54` | `55` | `56` | `57` | `58` | `59` | `60` | `61` | `62` | `63` | `64` | `65` | `66` | `67` | `68` | `69` | `70` | `71`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdge(value: `12` | `13` | `14` | `15` | `16` | `17` | `18` | `19`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirefox(
-      value: `43` | `44` | `45` | `46` | `47` | `48` | `49` | `50` | `51` | `52` | `53` | `54` | `55` | `56` | `57` | `58` | `59` | `60` | `61` | `62` | `63` | `64`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firefox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirefox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firefox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIe(value: `8` | `9` | `10` | `11`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNode(value: `0.10` | `0.12` | `4` | `5` | `6` | `8` | `8.3` | `8.7` | `8.10`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafari(value: `8` | `9` | `10` | `10.1` | `11` | `11.1` | `12`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safari")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafari: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safari")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

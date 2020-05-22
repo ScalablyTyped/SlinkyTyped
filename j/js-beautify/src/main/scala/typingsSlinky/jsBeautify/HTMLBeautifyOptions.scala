@@ -3,305 +3,91 @@ package typingsSlinky.jsBeautify
 import typingsSlinky.jsBeautify.jsBeautifyStrings.`aligned-multiple`
 import typingsSlinky.jsBeautify.jsBeautifyStrings.`force-aligned`
 import typingsSlinky.jsBeautify.jsBeautifyStrings.`force-expand-multiline`
+import typingsSlinky.jsBeautify.jsBeautifyStrings.`preserve-aligned`
 import typingsSlinky.jsBeautify.jsBeautifyStrings.auto
 import typingsSlinky.jsBeautify.jsBeautifyStrings.force
 import typingsSlinky.jsBeautify.jsBeautifyStrings.keep
+import typingsSlinky.jsBeautify.jsBeautifyStrings.normal
+import typingsSlinky.jsBeautify.jsBeautifyStrings.preserve
 import typingsSlinky.jsBeautify.jsBeautifyStrings.separate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-// See https://github.com/beautify-web/js-beautify/blob/v1.8.2/js/src/html/beautifier.js#L268-L330
-@js.native
-trait HTMLBeautifyOptions extends js.Object {
-  var content_unformatted: js.UndefOr[js.Array[String]] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var end_with_newline: js.UndefOr[Boolean] = js.native
-  var eol: js.UndefOr[String] = js.native
-  var extra_liners: js.UndefOr[js.Array[String]] = js.native
-  var indent_body_inner_html: js.UndefOr[Boolean] = js.native
-  var indent_char: js.UndefOr[String] = js.native
-  var indent_handlebars: js.UndefOr[Boolean] = js.native
-  var indent_head_inner_html: js.UndefOr[Boolean] = js.native
-  var indent_inner_html: js.UndefOr[Boolean] = js.native
-  var indent_scripts: js.UndefOr[keep | separate] = js.native
-  var indent_size: js.UndefOr[Double] = js.native
-  var indent_with_tabs: js.UndefOr[Boolean] = js.native
-  var `inline`: js.UndefOr[js.Array[String]] = js.native
-  var max_preserve_newlines: js.UndefOr[Double] = js.native
-  var preserve_newlines: js.UndefOr[Boolean] = js.native
-  var unformatted: js.UndefOr[js.Array[String]] = js.native
-  var void_elements: js.UndefOr[js.Array[String]] = js.native
-  var wrap_attributes: js.UndefOr[auto | force | `force-expand-multiline` | `force-aligned` | `aligned-multiple`] = js.native
-  var wrap_attributes_indent_size: js.UndefOr[Double] = js.native
-  var wrap_line_length: js.UndefOr[Double] = js.native
+trait HTMLBeautifyOptions extends CoreBeautifyOptions {
+  var content_unformatted: js.UndefOr[js.Array[String]] = js.undefined
+  var extra_liners: js.UndefOr[js.Array[String]] = js.undefined
+  var indent_body_inner_html: js.UndefOr[Boolean] = js.undefined
+  var indent_handlebars: js.UndefOr[Boolean] = js.undefined
+  var indent_head_inner_html: js.UndefOr[Boolean] = js.undefined
+  var indent_inner_html: js.UndefOr[Boolean] = js.undefined
+  var indent_scripts: js.UndefOr[normal | keep | separate] = js.undefined
+  var `inline`: js.UndefOr[js.Array[String]] = js.undefined
+  var unformatted: js.UndefOr[js.Array[String]] = js.undefined
+  var unformatted_content_delimiter: js.UndefOr[String] = js.undefined
+  var void_elements: js.UndefOr[js.Array[String]] = js.undefined
+  var wrap_attributes: js.UndefOr[
+    auto | force | `force-aligned` | `force-expand-multiline` | `aligned-multiple` | preserve | `preserve-aligned`
+  ] = js.undefined
+  var wrap_attributes_indent_size: js.UndefOr[Double] = js.undefined
 }
 
 object HTMLBeautifyOptions {
   @scala.inline
-  def apply(): HTMLBeautifyOptions = {
+  def apply(
+    content_unformatted: js.Array[String] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    end_with_newline: js.UndefOr[Boolean] = js.undefined,
+    eol: String = null,
+    extra_liners: js.Array[String] = null,
+    indent_body_inner_html: js.UndefOr[Boolean] = js.undefined,
+    indent_char: String = null,
+    indent_empty_lines: js.UndefOr[Boolean] = js.undefined,
+    indent_handlebars: js.UndefOr[Boolean] = js.undefined,
+    indent_head_inner_html: js.UndefOr[Boolean] = js.undefined,
+    indent_inner_html: js.UndefOr[Boolean] = js.undefined,
+    indent_level: js.UndefOr[Double] = js.undefined,
+    indent_scripts: normal | keep | separate = null,
+    indent_size: js.UndefOr[Double] = js.undefined,
+    indent_with_tabs: js.UndefOr[Boolean] = js.undefined,
+    `inline`: js.Array[String] = null,
+    max_preserve_newlines: js.UndefOr[Double] = js.undefined,
+    preserve_newlines: js.UndefOr[Boolean] = js.undefined,
+    templating: js.Array[String] = null,
+    unformatted: js.Array[String] = null,
+    unformatted_content_delimiter: String = null,
+    void_elements: js.Array[String] = null,
+    wrap_attributes: auto | force | `force-aligned` | `force-expand-multiline` | `aligned-multiple` | preserve | `preserve-aligned` = null,
+    wrap_attributes_indent_size: js.UndefOr[Double] = js.undefined,
+    wrap_line_length: js.UndefOr[Double] = js.undefined
+  ): HTMLBeautifyOptions = {
     val __obj = js.Dynamic.literal()
+    if (content_unformatted != null) __obj.updateDynamic("content_unformatted")(content_unformatted.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(end_with_newline)) __obj.updateDynamic("end_with_newline")(end_with_newline.get.asInstanceOf[js.Any])
+    if (eol != null) __obj.updateDynamic("eol")(eol.asInstanceOf[js.Any])
+    if (extra_liners != null) __obj.updateDynamic("extra_liners")(extra_liners.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_body_inner_html)) __obj.updateDynamic("indent_body_inner_html")(indent_body_inner_html.get.asInstanceOf[js.Any])
+    if (indent_char != null) __obj.updateDynamic("indent_char")(indent_char.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_empty_lines)) __obj.updateDynamic("indent_empty_lines")(indent_empty_lines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_handlebars)) __obj.updateDynamic("indent_handlebars")(indent_handlebars.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_head_inner_html)) __obj.updateDynamic("indent_head_inner_html")(indent_head_inner_html.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_inner_html)) __obj.updateDynamic("indent_inner_html")(indent_inner_html.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_level)) __obj.updateDynamic("indent_level")(indent_level.get.asInstanceOf[js.Any])
+    if (indent_scripts != null) __obj.updateDynamic("indent_scripts")(indent_scripts.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_size)) __obj.updateDynamic("indent_size")(indent_size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent_with_tabs)) __obj.updateDynamic("indent_with_tabs")(indent_with_tabs.get.asInstanceOf[js.Any])
+    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    if (!js.isUndefined(max_preserve_newlines)) __obj.updateDynamic("max_preserve_newlines")(max_preserve_newlines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserve_newlines)) __obj.updateDynamic("preserve_newlines")(preserve_newlines.get.asInstanceOf[js.Any])
+    if (templating != null) __obj.updateDynamic("templating")(templating.asInstanceOf[js.Any])
+    if (unformatted != null) __obj.updateDynamic("unformatted")(unformatted.asInstanceOf[js.Any])
+    if (unformatted_content_delimiter != null) __obj.updateDynamic("unformatted_content_delimiter")(unformatted_content_delimiter.asInstanceOf[js.Any])
+    if (void_elements != null) __obj.updateDynamic("void_elements")(void_elements.asInstanceOf[js.Any])
+    if (wrap_attributes != null) __obj.updateDynamic("wrap_attributes")(wrap_attributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrap_attributes_indent_size)) __obj.updateDynamic("wrap_attributes_indent_size")(wrap_attributes_indent_size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrap_line_length)) __obj.updateDynamic("wrap_line_length")(wrap_line_length.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLBeautifyOptions]
   }
-  @scala.inline
-  implicit class HTMLBeautifyOptionsOps[Self <: HTMLBeautifyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent_unformatted(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_unformatted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent_unformatted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_unformatted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_with_newline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_with_newline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_with_newline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_with_newline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra_liners(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_liners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra_liners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra_liners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_body_inner_html(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_body_inner_html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_body_inner_html: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_body_inner_html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_char(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_char")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_char: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_char")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_handlebars(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_handlebars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_handlebars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_handlebars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_head_inner_html(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_head_inner_html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_head_inner_html: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_head_inner_html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_inner_html(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_inner_html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_inner_html: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_inner_html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_scripts(value: keep | separate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_scripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_scripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_scripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_size(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent_with_tabs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_with_tabs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent_with_tabs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent_with_tabs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax_preserve_newlines(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_preserve_newlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax_preserve_newlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_preserve_newlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserve_newlines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve_newlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserve_newlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserve_newlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnformatted(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unformatted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnformatted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unformatted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoid_elements(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("void_elements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoid_elements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("void_elements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap_attributes(value: auto | force | `force-expand-multiline` | `force-aligned` | `aligned-multiple`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap_attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap_attributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap_attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap_attributes_indent_size(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap_attributes_indent_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap_attributes_indent_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap_attributes_indent_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap_line_length(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap_line_length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap_line_length: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap_line_length")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

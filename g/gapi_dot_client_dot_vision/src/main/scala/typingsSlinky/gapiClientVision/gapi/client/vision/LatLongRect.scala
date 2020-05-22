@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LatLongRect extends js.Object {
   /** Max lat/long pair. */
-  var maxLatLng: js.UndefOr[LatLng] = js.native
+  var maxLatLng: js.UndefOr[LatLng] = js.undefined
   /** Min lat/long pair. */
-  var minLatLng: js.UndefOr[LatLng] = js.native
+  var minLatLng: js.UndefOr[LatLng] = js.undefined
 }
 
 object LatLongRect {
   @scala.inline
-  def apply(): LatLongRect = {
+  def apply(maxLatLng: LatLng = null, minLatLng: LatLng = null): LatLongRect = {
     val __obj = js.Dynamic.literal()
+    if (maxLatLng != null) __obj.updateDynamic("maxLatLng")(maxLatLng.asInstanceOf[js.Any])
+    if (minLatLng != null) __obj.updateDynamic("minLatLng")(minLatLng.asInstanceOf[js.Any])
     __obj.asInstanceOf[LatLongRect]
   }
-  @scala.inline
-  implicit class LatLongRectOps[Self <: LatLongRect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxLatLng(value: LatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLatLng")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLatLng: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLatLng")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLatLng(value: LatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLatLng")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLatLng: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLatLng")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

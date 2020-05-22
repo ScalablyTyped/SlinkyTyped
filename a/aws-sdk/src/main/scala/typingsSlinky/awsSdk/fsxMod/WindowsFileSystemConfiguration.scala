@@ -23,7 +23,7 @@ trait WindowsFileSystemConfiguration extends js.Object {
     */
   var DailyAutomaticBackupStartTime: js.UndefOr[DailyTime] = js.native
   /**
-    * Specifies the file system deployment type, valid values are the following:    MULTI_AZ_1 - Specifies a high availability file system that is configured for Multi-AZ redundancy to tolerate temporary Availability Zone (AZ) unavailability.    SINGLE_AZ_1 - (Default) Specifies a file system that is configured for single AZ redundancy.  
+    * Specifies the file system deployment type, valid values are the following:    MULTI_AZ_1 - Specifies a high availability file system that is configured for Multi-AZ redundancy to tolerate temporary Availability Zone (AZ) unavailability, and supports SSD and HDD storage.    SINGLE_AZ_1 - (Default) Specifies a file system that is configured for single AZ redundancy, only supports SSD storage.    SINGLE_AZ_2 - Latest generation Single AZ file system. Specifies a file system that is configured for single AZ redundancy and supports SSD and HDD storage.   For more information, see Single-AZ and Multi-AZ File Systems.
     */
   var DeploymentType: js.UndefOr[WindowsDeploymentType] = js.native
   /**
@@ -31,15 +31,15 @@ trait WindowsFileSystemConfiguration extends js.Object {
     */
   var MaintenanceOperationsInProgress: js.UndefOr[FileSystemMaintenanceOperations] = js.native
   /**
-    * For MULTI_AZ_1 deployment types, the IP address of the primary, or preferred, file server. Use this IP address when mounting the file system on Linux SMB clients or Windows SMB clients that are not joined to a Microsoft Active Directory. Applicable for both SINGLE_AZ_1 and MULTI_AZ_1 deployment types. This IP address is temporarily unavailable when the file system is undergoing maintenance. For Linux and Windows SMB clients that are joined to an Active Directory, use the file system's DNSName instead. For more information and instruction on mapping and mounting file shares, see https://docs.aws.amazon.com/fsx/latest/WindowsGuide/accessing-file-shares.html.
+    * For MULTI_AZ_1 deployment types, the IP address of the primary, or preferred, file server. Use this IP address when mounting the file system on Linux SMB clients or Windows SMB clients that are not joined to a Microsoft Active Directory. Applicable for all Windows file system deployment types. This IP address is temporarily unavailable when the file system is undergoing maintenance. For Linux and Windows SMB clients that are joined to an Active Directory, use the file system's DNSName instead. For more information on mapping and mounting file shares, see Accessing File Shares.
     */
   var PreferredFileServerIp: js.UndefOr[IpAddress] = js.native
   /**
-    * For MULTI_AZ_1 deployment types, it specifies the ID of the subnet where the preferred file server is located. Must be one of the two subnet IDs specified in SubnetIds property. Amazon FSx serves traffic from this subnet except in the event of a failover to the secondary file server. For SINGLE_AZ_1 deployment types, this value is the same as that for SubnetIDs.
+    * For MULTI_AZ_1 deployment types, it specifies the ID of the subnet where the preferred file server is located. Must be one of the two subnet IDs specified in SubnetIds property. Amazon FSx serves traffic from this subnet except in the event of a failover to the secondary file server. For SINGLE_AZ_1 and SINGLE_AZ_2 deployment types, this value is the same as that for SubnetIDs. For more information, see Availability and Durability: Single-AZ and Multi-AZ File Systems 
     */
   var PreferredSubnetId: js.UndefOr[SubnetId] = js.native
   /**
-    * For MULTI_AZ_1 deployment types, use this endpoint when performing administrative tasks on the file system using Amazon FSx Remote PowerShell. For SINGLE_AZ_1 deployment types, this is the DNS name of the file system. This endpoint is temporarily unavailable when the file system is undergoing maintenance.
+    * For MULTI_AZ_1 deployment types, use this endpoint when performing administrative tasks on the file system using Amazon FSx Remote PowerShell. For SINGLE_AZ_1 and SINGLE_AZ_2 deployment types, this is the DNS name of the file system. This endpoint is temporarily unavailable when the file system is undergoing maintenance.
     */
   var RemoteAdministrationEndpoint: js.UndefOr[DNSName] = js.native
   var SelfManagedActiveDirectoryConfiguration: js.UndefOr[SelfManagedActiveDirectoryAttributes] = js.native
@@ -55,161 +55,34 @@ trait WindowsFileSystemConfiguration extends js.Object {
 
 object WindowsFileSystemConfiguration {
   @scala.inline
-  def apply(): WindowsFileSystemConfiguration = {
+  def apply(
+    ActiveDirectoryId: DirectoryId = null,
+    AutomaticBackupRetentionDays: js.UndefOr[AutomaticBackupRetentionDays] = js.undefined,
+    CopyTagsToBackups: js.UndefOr[Flag] = js.undefined,
+    DailyAutomaticBackupStartTime: DailyTime = null,
+    DeploymentType: WindowsDeploymentType = null,
+    MaintenanceOperationsInProgress: FileSystemMaintenanceOperations = null,
+    PreferredFileServerIp: IpAddress = null,
+    PreferredSubnetId: SubnetId = null,
+    RemoteAdministrationEndpoint: DNSName = null,
+    SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryAttributes = null,
+    ThroughputCapacity: js.UndefOr[MegabytesPerSecond] = js.undefined,
+    WeeklyMaintenanceStartTime: WeeklyTime = null
+  ): WindowsFileSystemConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ActiveDirectoryId != null) __obj.updateDynamic("ActiveDirectoryId")(ActiveDirectoryId.asInstanceOf[js.Any])
+    if (!js.isUndefined(AutomaticBackupRetentionDays)) __obj.updateDynamic("AutomaticBackupRetentionDays")(AutomaticBackupRetentionDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CopyTagsToBackups)) __obj.updateDynamic("CopyTagsToBackups")(CopyTagsToBackups.get.asInstanceOf[js.Any])
+    if (DailyAutomaticBackupStartTime != null) __obj.updateDynamic("DailyAutomaticBackupStartTime")(DailyAutomaticBackupStartTime.asInstanceOf[js.Any])
+    if (DeploymentType != null) __obj.updateDynamic("DeploymentType")(DeploymentType.asInstanceOf[js.Any])
+    if (MaintenanceOperationsInProgress != null) __obj.updateDynamic("MaintenanceOperationsInProgress")(MaintenanceOperationsInProgress.asInstanceOf[js.Any])
+    if (PreferredFileServerIp != null) __obj.updateDynamic("PreferredFileServerIp")(PreferredFileServerIp.asInstanceOf[js.Any])
+    if (PreferredSubnetId != null) __obj.updateDynamic("PreferredSubnetId")(PreferredSubnetId.asInstanceOf[js.Any])
+    if (RemoteAdministrationEndpoint != null) __obj.updateDynamic("RemoteAdministrationEndpoint")(RemoteAdministrationEndpoint.asInstanceOf[js.Any])
+    if (SelfManagedActiveDirectoryConfiguration != null) __obj.updateDynamic("SelfManagedActiveDirectoryConfiguration")(SelfManagedActiveDirectoryConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(ThroughputCapacity)) __obj.updateDynamic("ThroughputCapacity")(ThroughputCapacity.get.asInstanceOf[js.Any])
+    if (WeeklyMaintenanceStartTime != null) __obj.updateDynamic("WeeklyMaintenanceStartTime")(WeeklyMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowsFileSystemConfiguration]
   }
-  @scala.inline
-  implicit class WindowsFileSystemConfigurationOps[Self <: WindowsFileSystemConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomaticBackupRetentionDays(value: AutomaticBackupRetentionDays): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticBackupRetentionDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticBackupRetentionDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticBackupRetentionDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyTagsToBackups(value: Flag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTagsToBackups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyTagsToBackups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTagsToBackups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDailyAutomaticBackupStartTime(value: DailyTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DailyAutomaticBackupStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDailyAutomaticBackupStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DailyAutomaticBackupStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentType(value: WindowsDeploymentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintenanceOperationsInProgress(value: FileSystemMaintenanceOperations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceOperationsInProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintenanceOperationsInProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceOperationsInProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredFileServerIp(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredFileServerIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredFileServerIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredFileServerIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredSubnetId(value: SubnetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredSubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredSubnetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredSubnetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteAdministrationEndpoint(value: DNSName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteAdministrationEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteAdministrationEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteAdministrationEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfManagedActiveDirectoryConfiguration(value: SelfManagedActiveDirectoryAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfManagedActiveDirectoryConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfManagedActiveDirectoryConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfManagedActiveDirectoryConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThroughputCapacity(value: MegabytesPerSecond): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThroughputCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeeklyMaintenanceStartTime(value: WeeklyTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeeklyMaintenanceStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

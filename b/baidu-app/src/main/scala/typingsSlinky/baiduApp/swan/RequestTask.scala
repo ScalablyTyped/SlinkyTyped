@@ -5,11 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
-	 */
-@js.native
+  * 返回一个 requestTask 对象，通过 requestTask，可中断请求任务。
+  */
 trait RequestTask extends js.Object {
-  def abort(): Unit = js.native
+  def abort(): Unit
 }
 
 object RequestTask {
@@ -18,19 +17,5 @@ object RequestTask {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction0(abort))
     __obj.asInstanceOf[RequestTask]
   }
-  @scala.inline
-  implicit class RequestTaskOps[Self <: RequestTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbort(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

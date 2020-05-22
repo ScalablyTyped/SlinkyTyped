@@ -14,16 +14,15 @@ import scala.scalajs.js.annotation._
   *     var item = form.addSectionHeaderItem();
   *     item.setTitle('Title of new section');
   */
-@js.native
 trait SectionHeaderItem extends js.Object {
-  def duplicate(): SectionHeaderItem = js.native
-  def getHelpText(): String = js.native
-  def getId(): Integer = js.native
-  def getIndex(): Integer = js.native
-  def getTitle(): String = js.native
-  def getType(): ItemType = js.native
-  def setHelpText(text: String): SectionHeaderItem = js.native
-  def setTitle(title: String): SectionHeaderItem = js.native
+  def duplicate(): SectionHeaderItem
+  def getHelpText(): String
+  def getId(): Integer
+  def getIndex(): Integer
+  def getTitle(): String
+  def getType(): ItemType
+  def setHelpText(text: String): SectionHeaderItem
+  def setTitle(title: String): SectionHeaderItem
 }
 
 object SectionHeaderItem {
@@ -41,61 +40,5 @@ object SectionHeaderItem {
     val __obj = js.Dynamic.literal(duplicate = js.Any.fromFunction0(duplicate), getHelpText = js.Any.fromFunction0(getHelpText), getId = js.Any.fromFunction0(getId), getIndex = js.Any.fromFunction0(getIndex), getTitle = js.Any.fromFunction0(getTitle), getType = js.Any.fromFunction0(getType), setHelpText = js.Any.fromFunction1(setHelpText), setTitle = js.Any.fromFunction1(setTitle))
     __obj.asInstanceOf[SectionHeaderItem]
   }
-  @scala.inline
-  implicit class SectionHeaderItemOps[Self <: SectionHeaderItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuplicate(value: () => SectionHeaderItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetHelpText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHelpText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetId(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndex(value: () => Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetType(value: () => ItemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetHelpText(value: String => SectionHeaderItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHelpText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: String => SectionHeaderItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

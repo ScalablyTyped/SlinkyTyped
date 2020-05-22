@@ -4,135 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MetadataDroppedEventUIParam extends js.Object {
   /**
-  	 * A reference to the dragged element.
-  	 */
-  var draggedElement: js.UndefOr[String] = js.native
+    * A reference to the dragged element.
+    */
+  var draggedElement: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the helper.
-  	 */
-  var helper: js.UndefOr[String] = js.native
+    * Gets a reference to the helper.
+    */
+  var helper: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the data.
-  	 */
-  var metadata: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the data.
+    */
+  var metadata: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets the index at which the metadata is inserted.
-  	 */
-  var metadataIndex: js.UndefOr[Double] = js.native
+    * Gets the index at which the metadata is inserted.
+    */
+  var metadataIndex: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets a reference to the offset.
-  	 */
-  var offset: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the offset.
+    */
+  var offset: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the current position of the draggable element.
-  	 */
-  var position: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the current position of the draggable element.
+    */
+  var position: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * A reference to the drop target.
-  	 */
-  var targetElement: js.UndefOr[String] = js.native
+    * A reference to the drop target.
+    */
+  var targetElement: js.UndefOr[String] = js.undefined
 }
 
 object MetadataDroppedEventUIParam {
   @scala.inline
-  def apply(): MetadataDroppedEventUIParam = {
+  def apply(
+    draggedElement: String = null,
+    helper: String = null,
+    metadata: js.Any = null,
+    metadataIndex: js.UndefOr[Double] = js.undefined,
+    offset: js.Any = null,
+    position: js.Any = null,
+    targetElement: String = null
+  ): MetadataDroppedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (draggedElement != null) __obj.updateDynamic("draggedElement")(draggedElement.asInstanceOf[js.Any])
+    if (helper != null) __obj.updateDynamic("helper")(helper.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(metadataIndex)) __obj.updateDynamic("metadataIndex")(metadataIndex.get.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (targetElement != null) __obj.updateDynamic("targetElement")(targetElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetadataDroppedEventUIParam]
   }
-  @scala.inline
-  implicit class MetadataDroppedEventUIParamOps[Self <: MetadataDroppedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDraggedElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggedElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadataIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetElement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

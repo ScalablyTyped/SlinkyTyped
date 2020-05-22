@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IThemeDecoratorArgs extends js.Object {
-  var contextPath: js.UndefOr[String | js.Array[String]] = js.native
-  var memoizeeOpts: js.UndefOr[js.Any] = js.native
-  var themeKey: js.UndefOr[String] = js.native
-  var themeProp: js.UndefOr[String] = js.native
+  var contextPath: js.UndefOr[String | js.Array[String]] = js.undefined
+  var memoizeeOpts: js.UndefOr[js.Any] = js.undefined
+  var themeKey: js.UndefOr[String] = js.undefined
+  var themeProp: js.UndefOr[String] = js.undefined
 }
 
 object IThemeDecoratorArgs {
   @scala.inline
-  def apply(): IThemeDecoratorArgs = {
+  def apply(
+    contextPath: String | js.Array[String] = null,
+    memoizeeOpts: js.Any = null,
+    themeKey: String = null,
+    themeProp: String = null
+  ): IThemeDecoratorArgs = {
     val __obj = js.Dynamic.literal()
+    if (contextPath != null) __obj.updateDynamic("contextPath")(contextPath.asInstanceOf[js.Any])
+    if (memoizeeOpts != null) __obj.updateDynamic("memoizeeOpts")(memoizeeOpts.asInstanceOf[js.Any])
+    if (themeKey != null) __obj.updateDynamic("themeKey")(themeKey.asInstanceOf[js.Any])
+    if (themeProp != null) __obj.updateDynamic("themeProp")(themeProp.asInstanceOf[js.Any])
     __obj.asInstanceOf[IThemeDecoratorArgs]
   }
-  @scala.inline
-  implicit class IThemeDecoratorArgsOps[Self <: IThemeDecoratorArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContextPath(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoizeeOpts(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoizeeOpts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoizeeOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoizeeOpts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemeKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeProp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeProp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemeProp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeProp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

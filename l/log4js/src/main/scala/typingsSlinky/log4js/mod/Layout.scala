@@ -1,5 +1,12 @@
 package typingsSlinky.log4js.mod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.log4js.log4jsStrings.basic
+import typingsSlinky.log4js.log4jsStrings.colored
+import typingsSlinky.log4js.log4jsStrings.coloured
+import typingsSlinky.log4js.log4jsStrings.dummy
+import typingsSlinky.log4js.log4jsStrings.messagePassThrough
+import typingsSlinky.log4js.log4jsStrings.pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +23,42 @@ trait Layout extends js.Object
 
 object Layout {
   @scala.inline
-  implicit def apply(value: BaseLayout): Layout = value.asInstanceOf[Layout]
+  def BaseLayout(`type`: basic): Layout = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Layout]
+  }
   @scala.inline
-  implicit def apply(value: ColoredLayout): Layout = value.asInstanceOf[Layout]
+  def ColoredLayout(`type`: colored | coloured): Layout = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Layout]
+  }
   @scala.inline
-  implicit def apply(value: CustomLayout): Layout = value.asInstanceOf[Layout]
+  def PatternLayout(pattern: String, `type`: pattern, tokens: StringDictionary[Token] = null): Layout = {
+    val __obj = js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (tokens != null) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Layout]
+  }
   @scala.inline
-  implicit def apply(value: DummyLayout): Layout = value.asInstanceOf[Layout]
+  def MessagePassThroughLayout(`type`: messagePassThrough): Layout = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Layout]
+  }
   @scala.inline
-  implicit def apply(value: MessagePassThroughLayout): Layout = value.asInstanceOf[Layout]
+  def CustomLayout(`type`: String, StringDictionary: /* key */ StringDictionary[js.Any] = null): Layout = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    __obj.asInstanceOf[Layout]
+  }
   @scala.inline
-  implicit def apply(value: PatternLayout): Layout = value.asInstanceOf[Layout]
+  def DummyLayout(`type`: dummy): Layout = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Layout]
+  }
 }
 

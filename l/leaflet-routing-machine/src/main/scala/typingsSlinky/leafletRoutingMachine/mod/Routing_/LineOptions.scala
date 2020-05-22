@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LineOptions extends js.Object {
-  var addWaypoints: js.UndefOr[Boolean] = js.native
-  var missingRouteStyles: js.UndefOr[js.Array[PathOptions]] = js.native
-  var styles: js.UndefOr[js.Array[PathOptions]] = js.native
+  var addWaypoints: js.UndefOr[Boolean] = js.undefined
+  var missingRouteStyles: js.UndefOr[js.Array[PathOptions]] = js.undefined
+  var styles: js.UndefOr[js.Array[PathOptions]] = js.undefined
 }
 
 object LineOptions {
   @scala.inline
-  def apply(): LineOptions = {
+  def apply(
+    addWaypoints: js.UndefOr[Boolean] = js.undefined,
+    missingRouteStyles: js.Array[PathOptions] = null,
+    styles: js.Array[PathOptions] = null
+  ): LineOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addWaypoints)) __obj.updateDynamic("addWaypoints")(addWaypoints.get.asInstanceOf[js.Any])
+    if (missingRouteStyles != null) __obj.updateDynamic("missingRouteStyles")(missingRouteStyles.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineOptions]
   }
-  @scala.inline
-  implicit class LineOptionsOps[Self <: LineOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddWaypoints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addWaypoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddWaypoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addWaypoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissingRouteStyles(value: js.Array[PathOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingRouteStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissingRouteStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingRouteStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Array[PathOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

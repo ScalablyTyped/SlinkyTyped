@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends ChannelPool {
   def this(connectFailover: typingsSlinky.stompit.connectFailoverMod.^) = this()
   def this(connectFailover: typingsSlinky.stompit.connectFailoverMod.^, options: ChannelPoolOptions) = this()
+  /* CompleteClass */
+  override def channel(
+    callback: js.Function2[/* err */ js.Error | Null, /* channel */ typingsSlinky.stompit.channelMod.^, Unit]
+  ): Unit = js.native
+  /* CompleteClass */
+  override def close(): Unit = js.native
 }
 

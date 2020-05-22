@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarkRangesOptions extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var done: js.UndefOr[js.Function1[/* marksTotal */ Double, Unit]] = js.native
-  var each: js.UndefOr[js.Function2[/* element */ Element, /* range */ Range, Unit]] = js.native
-  var element: js.UndefOr[String] = js.native
-  var exclude: js.UndefOr[js.Array[String]] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var done: js.UndefOr[js.Function1[/* marksTotal */ Double, Unit]] = js.undefined
+  var each: js.UndefOr[js.Function2[/* element */ Element, /* range */ Range, Unit]] = js.undefined
+  var element: js.UndefOr[String] = js.undefined
+  var exclude: js.UndefOr[js.Array[String]] = js.undefined
   var filter: js.UndefOr[
     js.Function4[
       /* textNode */ Element, 
@@ -21,160 +20,41 @@ trait MarkRangesOptions extends js.Object {
       /* marksTotal */ Double, 
       Boolean
     ]
-  ] = js.native
-  var iframes: js.UndefOr[Boolean] = js.native
-  var iframesTimeout: js.UndefOr[Double] = js.native
-  var log: js.UndefOr[js.Object] = js.native
-  var noMatch: js.UndefOr[js.Function1[/* term */ String, Unit]] = js.native
+  ] = js.undefined
+  var iframes: js.UndefOr[Boolean] = js.undefined
+  var iframesTimeout: js.UndefOr[Double] = js.undefined
+  var log: js.UndefOr[js.Object] = js.undefined
+  var noMatch: js.UndefOr[js.Function1[/* term */ String, Unit]] = js.undefined
 }
 
 object MarkRangesOptions {
   @scala.inline
-  def apply(): MarkRangesOptions = {
+  def apply(
+    className: String = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    done: /* marksTotal */ Double => Unit = null,
+    each: (/* element */ Element, /* range */ Range) => Unit = null,
+    element: String = null,
+    exclude: js.Array[String] = null,
+    filter: (/* textNode */ Element, /* term */ String, /* marksSoFar */ Double, /* marksTotal */ Double) => Boolean = null,
+    iframes: js.UndefOr[Boolean] = js.undefined,
+    iframesTimeout: js.UndefOr[Double] = js.undefined,
+    log: js.Object = null,
+    noMatch: /* term */ String => Unit = null
+  ): MarkRangesOptions = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (done != null) __obj.updateDynamic("done")(js.Any.fromFunction1(done))
+    if (each != null) __obj.updateDynamic("each")(js.Any.fromFunction2(each))
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction4(filter))
+    if (!js.isUndefined(iframes)) __obj.updateDynamic("iframes")(iframes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iframesTimeout)) __obj.updateDynamic("iframesTimeout")(iframesTimeout.get.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
+    if (noMatch != null) __obj.updateDynamic("noMatch")(js.Any.fromFunction1(noMatch))
     __obj.asInstanceOf[MarkRangesOptions]
   }
-  @scala.inline
-  implicit class MarkRangesOptionsOps[Self <: MarkRangesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDone(value: /* marksTotal */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEach(value: (/* element */ Element, /* range */ Range) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutEach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(
-      value: (/* textNode */ Element, /* term */ String, /* marksSoFar */ Double, /* marksTotal */ Double) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIframes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIframes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIframesTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframesTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIframesTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframesTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoMatch(value: /* term */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noMatch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNoMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noMatch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

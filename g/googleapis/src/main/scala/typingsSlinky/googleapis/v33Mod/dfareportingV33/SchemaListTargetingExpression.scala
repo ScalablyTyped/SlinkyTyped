@@ -17,29 +17,10 @@ trait SchemaListTargetingExpression extends js.Object {
 
 object SchemaListTargetingExpression {
   @scala.inline
-  def apply(): SchemaListTargetingExpression = {
+  def apply(expression: String = null): SchemaListTargetingExpression = {
     val __obj = js.Dynamic.literal()
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListTargetingExpression]
   }
-  @scala.inline
-  implicit class SchemaListTargetingExpressionOps[Self <: SchemaListTargetingExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

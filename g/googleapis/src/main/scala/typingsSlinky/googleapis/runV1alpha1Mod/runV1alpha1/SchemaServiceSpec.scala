@@ -43,77 +43,20 @@ trait SchemaServiceSpec extends js.Object {
 
 object SchemaServiceSpec {
   @scala.inline
-  def apply(): SchemaServiceSpec = {
+  def apply(
+    generation: js.UndefOr[Double] = js.undefined,
+    manual: SchemaServiceSpecManualType = null,
+    pinned: SchemaServiceSpecPinnedType = null,
+    release: SchemaServiceSpecReleaseType = null,
+    runLatest: SchemaServiceSpecRunLatest = null
+  ): SchemaServiceSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(generation)) __obj.updateDynamic("generation")(generation.get.asInstanceOf[js.Any])
+    if (manual != null) __obj.updateDynamic("manual")(manual.asInstanceOf[js.Any])
+    if (pinned != null) __obj.updateDynamic("pinned")(pinned.asInstanceOf[js.Any])
+    if (release != null) __obj.updateDynamic("release")(release.asInstanceOf[js.Any])
+    if (runLatest != null) __obj.updateDynamic("runLatest")(runLatest.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServiceSpec]
   }
-  @scala.inline
-  implicit class SchemaServiceSpecOps[Self <: SchemaServiceSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeneration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManual(value: SchemaServiceSpecManualType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manual")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinned(value: SchemaServiceSpecPinnedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelease(value: SchemaServiceSpecReleaseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunLatest(value: SchemaServiceSpecRunLatest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runLatest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunLatest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runLatest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

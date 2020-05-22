@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTTPOptions extends js.Object {
   /**
     * The body of the request.
@@ -18,29 +17,29 @@ trait HTTPOptions extends js.Object {
     * You can also set this to a Buffer object to send raw bytes.
     * If you use a Buffer, you should also set the Content-Type header explicitly to describe what these bytes represent.
     */
-  var body: js.UndefOr[String | Buffer | Object[Attributes]] = js.native
-  var error: js.UndefOr[js.Function1[/* response */ js.Any, Unit]] = js.native
+  var body: js.UndefOr[String | Buffer | Object[Attributes]] = js.undefined
+  var error: js.UndefOr[js.Function1[/* response */ js.Any, Unit]] = js.undefined
   /**
     * Defaults to 'false'.
     */
-  var followRedirects: js.UndefOr[Boolean] = js.native
+  var followRedirects: js.UndefOr[Boolean] = js.undefined
   /**
     * The headers for the request.
     */
-  var headers: js.UndefOr[StringDictionary[String | Double | Boolean]] = js.native
+  var headers: js.UndefOr[StringDictionary[String | Double | Boolean]] = js.undefined
   /**
     * The method of the request (i.e GET, POST, etc).
     */
-  var method: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.undefined
   /**
     * The query portion of the url.
     */
-  var params: js.UndefOr[js.Any] = js.native
-  var success: js.UndefOr[js.Function1[/* response */ js.Any, Unit]] = js.native
+  var params: js.UndefOr[js.Any] = js.undefined
+  var success: js.UndefOr[js.Function1[/* response */ js.Any, Unit]] = js.undefined
   /**
     * The url to send the request to.
     */
-  var url: String = js.native
+  var url: String
 }
 
 /**

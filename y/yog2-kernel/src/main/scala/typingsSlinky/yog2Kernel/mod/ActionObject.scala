@@ -9,264 +9,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActionObject
   extends /* key */ StringDictionary[js.Any] {
-  var copy: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var del: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var delete: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var get: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var head: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var link: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var lock: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var options: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var patch: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var post: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var propfind: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var purge: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var put: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var unlick: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var unlock: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
-  var view: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
+  var copy: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var del: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var delete: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var get: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var head: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var link: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var lock: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var options: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var patch: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var post: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var propfind: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var purge: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var put: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var unlick: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var unlock: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
+  var view: js.UndefOr[RequestHandler[ParamsDictionary, _, _, Query]] = js.undefined
 }
 
 object ActionObject {
   @scala.inline
-  def apply(): ActionObject = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    copy: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    del: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    delete: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    get: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    head: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    link: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    lock: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    options: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    patch: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    post: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    propfind: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    purge: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    put: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    unlick: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    unlock: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null,
+    view: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any = null
+  ): ActionObject = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (copy != null) __obj.updateDynamic("copy")(js.Any.fromFunction3(copy))
+    if (del != null) __obj.updateDynamic("del")(js.Any.fromFunction3(del))
+    if (delete != null) __obj.updateDynamic("delete")(js.Any.fromFunction3(delete))
+    if (get != null) __obj.updateDynamic("get")(js.Any.fromFunction3(get))
+    if (head != null) __obj.updateDynamic("head")(js.Any.fromFunction3(head))
+    if (link != null) __obj.updateDynamic("link")(js.Any.fromFunction3(link))
+    if (lock != null) __obj.updateDynamic("lock")(js.Any.fromFunction3(lock))
+    if (options != null) __obj.updateDynamic("options")(js.Any.fromFunction3(options))
+    if (patch != null) __obj.updateDynamic("patch")(js.Any.fromFunction3(patch))
+    if (post != null) __obj.updateDynamic("post")(js.Any.fromFunction3(post))
+    if (propfind != null) __obj.updateDynamic("propfind")(js.Any.fromFunction3(propfind))
+    if (purge != null) __obj.updateDynamic("purge")(js.Any.fromFunction3(purge))
+    if (put != null) __obj.updateDynamic("put")(js.Any.fromFunction3(put))
+    if (unlick != null) __obj.updateDynamic("unlick")(js.Any.fromFunction3(unlick))
+    if (unlock != null) __obj.updateDynamic("unlock")(js.Any.fromFunction3(unlock))
+    if (view != null) __obj.updateDynamic("view")(js.Any.fromFunction3(view))
     __obj.asInstanceOf[ActionObject]
   }
-  @scala.inline
-  implicit class ActionObjectOps[Self <: ActionObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDel(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelete(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGet(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutGet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHead(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLock(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatch(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPost(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPropfind(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propfind")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPropfind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propfind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurge(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purge")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPurge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPut(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnlick(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlick")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnlick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnlock(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlock")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

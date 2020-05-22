@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.linguistic2.XConversionPropertyType
   * @since OOo 1.1.2
   */
-@js.native
 trait ConversionDictionary
   extends XConversionDictionary
      with XFlushable

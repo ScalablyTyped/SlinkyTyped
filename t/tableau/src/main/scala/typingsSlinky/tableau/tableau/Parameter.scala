@@ -6,33 +6,32 @@ import scala.scalajs.js.annotation._
 
 //#endregion
 //#region Parameter Classes
-@js.native
 trait Parameter extends js.Object {
   /**
     * If the parameter is restricted to a list of allowable values, this property contains the array of those values.
     * Note that this is not a standard collection, but a JavaScript array.
     */
-  def getAllowableValues(): js.Array[DataValue] = js.native
+  def getAllowableValues(): js.Array[DataValue]
   /** The type of allowable values that the parameter can accept. It can be one of the following enumeration items: ALL, LIST, RANGE. */
-  def getAllowableValuesType(): ParameterAllowableValuesType = js.native
+  def getAllowableValuesType(): ParameterAllowableValuesType
   /** The current value of the parameter. */
-  def getCurrentValue(): DataValue = js.native
+  def getCurrentValue(): DataValue
   /** The data type of the parameter can be one of the following: FLOAT, INTEGER, STRING, BOOLEAN, DATE, DATETIME. */
-  def getDataType(): ParameterDataType = js.native
+  def getDataType(): ParameterDataType
   /**
     * If getAllowableValuesType is RANGE and getDataType is DATE or DATETIME,
     * this defines the step date period used in the Parameter UI control slider.
     * Otherwise it’s undefined/null.
     */
-  def getDateStepPeriod(): PeriodType = js.native
+  def getDateStepPeriod(): PeriodType
   /** If getAllowableValuesType is RANGE, this defines the maximum allowable value, inclusive. Otherwise it’s undefined/null. */
-  def getMaxValue(): DataValue = js.native
+  def getMaxValue(): DataValue
   /** If getAllowableValuesType is RANGE, this defines the minimum allowable value, inclusive. Otherwise it’s undefined/null. */
-  def getMinValue(): DataValue = js.native
+  def getMinValue(): DataValue
   /** A unique identifier for the parameter, as specified by the user. */
-  def getName(): String = js.native
+  def getName(): String
   /** If getAllowableValuesType is RANGE, this defines the step size used in the parameter UI control slider. Otherwise it’s undefined/null. */
-  def getStepSize(): Double = js.native
+  def getStepSize(): Double
 }
 
 object Parameter {
@@ -51,67 +50,5 @@ object Parameter {
     val __obj = js.Dynamic.literal(getAllowableValues = js.Any.fromFunction0(getAllowableValues), getAllowableValuesType = js.Any.fromFunction0(getAllowableValuesType), getCurrentValue = js.Any.fromFunction0(getCurrentValue), getDataType = js.Any.fromFunction0(getDataType), getDateStepPeriod = js.Any.fromFunction0(getDateStepPeriod), getMaxValue = js.Any.fromFunction0(getMaxValue), getMinValue = js.Any.fromFunction0(getMinValue), getName = js.Any.fromFunction0(getName), getStepSize = js.Any.fromFunction0(getStepSize))
     __obj.asInstanceOf[Parameter]
   }
-  @scala.inline
-  implicit class ParameterOps[Self <: Parameter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAllowableValues(value: () => js.Array[DataValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowableValues")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAllowableValuesType(value: () => ParameterAllowableValuesType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowableValuesType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentValue(value: () => DataValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDataType(value: () => ParameterDataType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDateStepPeriod(value: () => PeriodType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDateStepPeriod")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxValue(value: () => DataValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinValue(value: () => DataValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStepSize(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStepSize")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

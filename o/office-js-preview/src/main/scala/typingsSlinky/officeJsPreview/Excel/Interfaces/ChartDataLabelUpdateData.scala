@@ -22,29 +22,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the ChartDataLabel object, for use in `chartDataLabel.set({ ... })`. */
-@js.native
 trait ChartDataLabelUpdateData extends js.Object {
   /**
     *
-    * Boolean value representing if data label automatically generates appropriate text based on context.
+    * Specifies if the data label automatically generates appropriate text based on context.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var autoText: js.UndefOr[Boolean] = js.native
+  var autoText: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the format of chart data label.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var format: js.UndefOr[ChartDataLabelFormatUpdateData] = js.native
+  var format: js.UndefOr[ChartDataLabelFormatUpdateData] = js.undefined
   /**
     *
     * String value that represents the formula of chart data label using A1-style notation.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var formula: js.UndefOr[String] = js.native
+  var formula: js.UndefOr[String] = js.undefined
   /**
     *
     * Represents the horizontal alignment for chart data label. See Excel.ChartTextHorizontalAlignment for details.
@@ -52,28 +51,28 @@ trait ChartDataLabelUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var horizontalAlignment: js.UndefOr[ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed] = js.native
+  var horizontalAlignment: js.UndefOr[ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed] = js.undefined
   /**
     *
     * Represents the distance, in points, from the left edge of chart data label to the left edge of chart area. Null if chart data label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var left: js.UndefOr[Double] = js.native
+  var left: js.UndefOr[Double] = js.undefined
   /**
     *
-    * Boolean value representing if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells).
+    * Specifies if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells).
     *
     * [Api set: ExcelApi 1.9]
     */
-  var linkNumberFormat: js.UndefOr[Boolean] = js.native
+  var linkNumberFormat: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * String value that represents the format code for data label.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var numberFormat: js.UndefOr[String] = js.native
+  var numberFormat: js.UndefOr[String] = js.undefined
   /**
     *
     * DataLabelPosition value that represents the position of the data label. See Excel.ChartDataLabelPosition for details.
@@ -82,77 +81,77 @@ trait ChartDataLabelUpdateData extends js.Object {
     */
   var position: js.UndefOr[
     ChartDataLabelPosition | Invalid | None | Center | InsideEnd | InsideBase | OutsideEnd | Left | Right | Top | Bottom | BestFit | Callout
-  ] = js.native
+  ] = js.undefined
   /**
     *
     * String representing the separator used for the data label on a chart.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var separator: js.UndefOr[String] = js.native
+  var separator: js.UndefOr[String] = js.undefined
   /**
     *
-    * Boolean value representing if the data label bubble size is visible or not.
+    * Specifies if the data label bubble size is visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showBubbleSize: js.UndefOr[Boolean] = js.native
+  var showBubbleSize: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if the data label category name is visible or not.
+    * Specifies if the data label category name is visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showCategoryName: js.UndefOr[Boolean] = js.native
+  var showCategoryName: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if the data label legend key is visible or not.
+    * Specifies if the data label legend key is visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showLegendKey: js.UndefOr[Boolean] = js.native
+  var showLegendKey: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if the data label percentage is visible or not.
+    * Specifies if the data label percentage is visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showPercentage: js.UndefOr[Boolean] = js.native
+  var showPercentage: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if the data label series name is visible or not.
+    * Specifies if the data label series name is visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showSeriesName: js.UndefOr[Boolean] = js.native
+  var showSeriesName: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Boolean value representing if the data label value is visible or not.
+    * Specifies if the data label value is visible.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var showValue: js.UndefOr[Boolean] = js.native
+  var showValue: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * String representing the text of the data label on a chart.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /**
     *
     * Represents the angle to which the text is oriented for the chart data label. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var textOrientation: js.UndefOr[Double] = js.native
+  var textOrientation: js.UndefOr[Double] = js.undefined
   /**
     *
     * Represents the distance, in points, from the top edge of chart data label to the top of chart area. Null if chart data label is not visible.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var top: js.UndefOr[Double] = js.native
+  var top: js.UndefOr[Double] = js.undefined
   /**
     *
     * Represents the vertical alignment of chart data label. See Excel.ChartTextVerticalAlignment for details.
@@ -160,252 +159,53 @@ trait ChartDataLabelUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var verticalAlignment: js.UndefOr[ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed] = js.native
+  var verticalAlignment: js.UndefOr[ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed] = js.undefined
 }
 
 object ChartDataLabelUpdateData {
   @scala.inline
-  def apply(): ChartDataLabelUpdateData = {
+  def apply(
+    autoText: js.UndefOr[Boolean] = js.undefined,
+    format: ChartDataLabelFormatUpdateData = null,
+    formula: String = null,
+    horizontalAlignment: ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed = null,
+    left: js.UndefOr[Double] = js.undefined,
+    linkNumberFormat: js.UndefOr[Boolean] = js.undefined,
+    numberFormat: String = null,
+    position: ChartDataLabelPosition | Invalid | None | Center | InsideEnd | InsideBase | OutsideEnd | Left | Right | Top | Bottom | BestFit | Callout = null,
+    separator: String = null,
+    showBubbleSize: js.UndefOr[Boolean] = js.undefined,
+    showCategoryName: js.UndefOr[Boolean] = js.undefined,
+    showLegendKey: js.UndefOr[Boolean] = js.undefined,
+    showPercentage: js.UndefOr[Boolean] = js.undefined,
+    showSeriesName: js.UndefOr[Boolean] = js.undefined,
+    showValue: js.UndefOr[Boolean] = js.undefined,
+    text: String = null,
+    textOrientation: js.UndefOr[Double] = js.undefined,
+    top: js.UndefOr[Double] = js.undefined,
+    verticalAlignment: ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed = null
+  ): ChartDataLabelUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoText)) __obj.updateDynamic("autoText")(autoText.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(linkNumberFormat)) __obj.updateDynamic("linkNumberFormat")(linkNumberFormat.get.asInstanceOf[js.Any])
+    if (numberFormat != null) __obj.updateDynamic("numberFormat")(numberFormat.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (!js.isUndefined(showBubbleSize)) __obj.updateDynamic("showBubbleSize")(showBubbleSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCategoryName)) __obj.updateDynamic("showCategoryName")(showCategoryName.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLegendKey)) __obj.updateDynamic("showLegendKey")(showLegendKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPercentage)) __obj.updateDynamic("showPercentage")(showPercentage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSeriesName)) __obj.updateDynamic("showSeriesName")(showSeriesName.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showValue)) __obj.updateDynamic("showValue")(showValue.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(textOrientation)) __obj.updateDynamic("textOrientation")(textOrientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartDataLabelUpdateData]
   }
-  @scala.inline
-  implicit class ChartDataLabelUpdateDataOps[Self <: ChartDataLabelUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartDataLabelFormatUpdateData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormula(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalAlignment(value: ChartTextHorizontalAlignment | Center | Left | Right | Justify | Distributed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkNumberFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkNumberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkNumberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(
-      value: ChartDataLabelPosition | Invalid | None | Center | InsideEnd | InsideBase | OutsideEnd | Left | Right | Top | Bottom | BestFit | Callout
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBubbleSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBubbleSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowBubbleSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBubbleSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCategoryName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCategoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCategoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCategoryName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLegendKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLegendKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowPercentage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPercentage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowPercentage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPercentage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSeriesName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSeriesName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSeriesName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSeriesName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalAlignment(value: ChartTextVerticalAlignment | Center | Bottom | Top | Justify | Distributed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

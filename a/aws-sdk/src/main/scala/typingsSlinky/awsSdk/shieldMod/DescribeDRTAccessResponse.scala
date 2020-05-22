@@ -18,41 +18,11 @@ trait DescribeDRTAccessResponse extends js.Object {
 
 object DescribeDRTAccessResponse {
   @scala.inline
-  def apply(): DescribeDRTAccessResponse = {
+  def apply(LogBucketList: LogBucketList = null, RoleArn: RoleArn = null): DescribeDRTAccessResponse = {
     val __obj = js.Dynamic.literal()
+    if (LogBucketList != null) __obj.updateDynamic("LogBucketList")(LogBucketList.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDRTAccessResponse]
   }
-  @scala.inline
-  implicit class DescribeDRTAccessResponseOps[Self <: DescribeDRTAccessResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogBucketList(value: LogBucketList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogBucketList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogBucketList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogBucketList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

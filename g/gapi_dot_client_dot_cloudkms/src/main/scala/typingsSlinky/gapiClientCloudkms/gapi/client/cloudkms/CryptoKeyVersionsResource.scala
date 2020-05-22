@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CryptoKeyVersionsResource extends js.Object {
   /**
     * Create a new CryptoKeyVersion in a CryptoKey.
@@ -18,7 +17,7 @@ trait CryptoKeyVersionsResource extends js.Object {
     * state will be set to
     * ENABLED.
     */
-  def create(request: Accesstoken): Request[CryptoKeyVersion] = js.native
+  def create(request: Accesstoken): Request[CryptoKeyVersion]
   /**
     * Schedule a CryptoKeyVersion for destruction.
     *
@@ -33,11 +32,11 @@ trait CryptoKeyVersionsResource extends js.Object {
     * Before the destroy_time is reached,
     * RestoreCryptoKeyVersion may be called to reverse the process.
     */
-  def destroy(request: Alt): Request[CryptoKeyVersion] = js.native
+  def destroy(request: Alt): Request[CryptoKeyVersion]
   /** Returns metadata for a given CryptoKeyVersion. */
-  def get(request: Alt): Request[CryptoKeyVersion] = js.native
+  def get(request: Alt): Request[CryptoKeyVersion]
   /** Lists CryptoKeyVersions. */
-  def list(request: Bearertoken): Request[ListCryptoKeyVersionsResponse] = js.native
+  def list(request: Bearertoken): Request[ListCryptoKeyVersionsResponse]
   /**
     * Update a CryptoKeyVersion's metadata.
     *
@@ -47,7 +46,7 @@ trait CryptoKeyVersionsResource extends js.Object {
     * method. See DestroyCryptoKeyVersion and RestoreCryptoKeyVersion to
     * move between other states.
     */
-  def patch(request: Callback): Request[CryptoKeyVersion] = js.native
+  def patch(request: Callback): Request[CryptoKeyVersion]
   /**
     * Restore a CryptoKeyVersion in the
     * DESTROY_SCHEDULED,
@@ -57,7 +56,7 @@ trait CryptoKeyVersionsResource extends js.Object {
     * will be set to DISABLED,
     * and destroy_time will be cleared.
     */
-  def restore(request: Alt): Request[CryptoKeyVersion] = js.native
+  def restore(request: Alt): Request[CryptoKeyVersion]
 }
 
 object CryptoKeyVersionsResource {
@@ -73,49 +72,5 @@ object CryptoKeyVersionsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), destroy = js.Any.fromFunction1(destroy), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), restore = js.Any.fromFunction1(restore))
     __obj.asInstanceOf[CryptoKeyVersionsResource]
   }
-  @scala.inline
-  implicit class CryptoKeyVersionsResourceOps[Self <: CryptoKeyVersionsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Accesstoken => Request[CryptoKeyVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: Alt => Request[CryptoKeyVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Alt => Request[CryptoKeyVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Bearertoken => Request[ListCryptoKeyVersionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Callback => Request[CryptoKeyVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRestore(value: Alt => Request[CryptoKeyVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

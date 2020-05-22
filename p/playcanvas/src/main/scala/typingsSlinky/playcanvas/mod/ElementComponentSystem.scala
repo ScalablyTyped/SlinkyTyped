@@ -5,16 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @class
-  * @name pc.ElementComponentSystem
-  * @augments pc.ComponentSystem
-  * @classdesc Manages creation of {@link pc.ElementComponent}s.
-  * @param {pc.Application} app - The application.
+  * Manages creation of {@link pc.ElementComponent}s.
+  * @param app - The application.
   */
 @JSImport("playcanvas", "ElementComponentSystem")
 @js.native
 class ElementComponentSystem protected ()
-  extends typingsSlinky.playcanvas.pc.ElementComponentSystem {
+  extends typingsSlinky.playcanvas.pc.EventHandler {
   def this(app: typingsSlinky.playcanvas.pc.Application) = this()
 }
 

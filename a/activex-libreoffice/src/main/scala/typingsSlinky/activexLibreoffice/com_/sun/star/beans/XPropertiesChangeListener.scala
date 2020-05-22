@@ -9,13 +9,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** receives events which get fired whenever a bound property is changed. */
-@js.native
 trait XPropertiesChangeListener extends XEventListener {
   /**
     * gets called when bound properties are changed.
     * @param aEvent contains a sequence of {@link PropertyChangeEvent} objects which describe the event source and the properites that have changed.
     */
-  def propertiesChange(aEvent: SeqEquiv[PropertyChangeEvent]): Unit = js.native
+  def propertiesChange(aEvent: SeqEquiv[PropertyChangeEvent]): Unit
 }
 
 object XPropertiesChangeListener {
@@ -30,19 +29,5 @@ object XPropertiesChangeListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), propertiesChange = js.Any.fromFunction1(propertiesChange), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XPropertiesChangeListener]
   }
-  @scala.inline
-  implicit class XPropertiesChangeListenerOps[Self <: XPropertiesChangeListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPropertiesChange(value: SeqEquiv[PropertyChangeEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertiesChange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

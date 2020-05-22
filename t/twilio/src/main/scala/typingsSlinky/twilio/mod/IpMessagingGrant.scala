@@ -13,5 +13,7 @@ class IpMessagingGrant () extends Grant {
   var key: String = js.native
   var pushCredentialSid: String = js.native
   var serviceSid: String = js.native
+  /* CompleteClass */
+  override def toPayload(): GrantPayload = js.native
 }
 

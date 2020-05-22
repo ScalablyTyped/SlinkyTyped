@@ -6,329 +6,131 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Interfaces
-@js.native
 trait ClientOptions extends AuthOptions {
   /**
   		 * When true will automatically connect to Ably when library is instanced. This is true by default
   		 */
-  var autoConnect: js.UndefOr[Boolean] = js.native
-  var closeOnUnload: js.UndefOr[Boolean] = js.native
-  var defaultTokenParams: js.UndefOr[TokenParams] = js.native
-  var disconnectedRetryTimeout: js.UndefOr[Double] = js.native
+  var autoConnect: js.UndefOr[Boolean] = js.undefined
+  var closeOnUnload: js.UndefOr[Boolean] = js.undefined
+  var defaultTokenParams: js.UndefOr[TokenParams] = js.undefined
+  var disconnectedRetryTimeout: js.UndefOr[Double] = js.undefined
   /**
   		 * When true, messages published on channels by this client will be echoed back to this client.
   		 * This is true by default
   		 */
-  var echoMessages: js.UndefOr[Boolean] = js.native
+  var echoMessages: js.UndefOr[Boolean] = js.undefined
   /**
   		 * Use this only if you have been provided a dedicated environment by Ably
   		 */
-  var environment: js.UndefOr[String] = js.native
-  var fallbackHosts: js.UndefOr[js.Array[String]] = js.native
-  var fallbackHostsUseDefault: js.UndefOr[Boolean] = js.native
-  var idempotentRestPublishing: js.UndefOr[Boolean] = js.native
+  var environment: js.UndefOr[String] = js.undefined
+  var fallbackHosts: js.UndefOr[js.Array[String]] = js.undefined
+  var fallbackHostsUseDefault: js.UndefOr[Boolean] = js.undefined
+  var idempotentRestPublishing: js.UndefOr[Boolean] = js.undefined
   /**
   		 * Logger configuration
   		 */
-  var log: js.UndefOr[LogInfo] = js.native
-  var port: js.UndefOr[Double] = js.native
+  var log: js.UndefOr[LogInfo] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
   /**
   		 * When true, messages will be queued whilst the connection is disconnected. True by default.
   		 */
-  var queueMessages: js.UndefOr[Boolean] = js.native
-  var realtimeHost: js.UndefOr[String] = js.native
+  var queueMessages: js.UndefOr[Boolean] = js.undefined
+  var realtimeHost: js.UndefOr[String] = js.undefined
   /**
   		 * Can be used to explicitly recover a connection.
   		 * See https://www.ably.io/documentation/realtime/connection#connection-state-recovery
   		 */
-  var recover: js.UndefOr[standardCallback | String] = js.native
-  var restHost: js.UndefOr[String] = js.native
-  var suspendedRetryTimeout: js.UndefOr[Double] = js.native
+  var recover: js.UndefOr[standardCallback | String] = js.undefined
+  var restHost: js.UndefOr[String] = js.undefined
+  var suspendedRetryTimeout: js.UndefOr[Double] = js.undefined
   /**
   		 * Use a non-secure connection connection. By default, a TLS connection is used to connect to Ably
   		 */
-  var tls: js.UndefOr[Boolean] = js.native
-  var tlsPort: js.UndefOr[Double] = js.native
-  var transportParams: js.UndefOr[StringDictionary[String]] = js.native
-  var transports: js.UndefOr[js.Array[Transport]] = js.native
+  var tls: js.UndefOr[Boolean] = js.undefined
+  var tlsPort: js.UndefOr[Double] = js.undefined
+  var transportParams: js.UndefOr[StringDictionary[String]] = js.undefined
+  var transports: js.UndefOr[js.Array[Transport]] = js.undefined
   /**
   		 * When true, the more efficient MsgPack binary encoding is used.
   		 * When false, JSON text encoding is used.
   		 */
-  var useBinaryProtocol: js.UndefOr[Boolean] = js.native
+  var useBinaryProtocol: js.UndefOr[Boolean] = js.undefined
 }
 
 object ClientOptions {
   @scala.inline
-  def apply(): ClientOptions = {
+  def apply(
+    authCallback: (/* data */ TokenParams, /* callback */ js.Function2[
+      /* error */ ErrorInfo | String, 
+      /* tokenRequestOrDetails */ TokenDetails | TokenRequest | String, 
+      Unit
+    ]) => Unit = null,
+    authHeaders: StringDictionary[String] = null,
+    authMethod: HTTPMethods = null,
+    authParams: StringDictionary[String] = null,
+    authUrl: String = null,
+    autoConnect: js.UndefOr[Boolean] = js.undefined,
+    clientId: String = null,
+    closeOnUnload: js.UndefOr[Boolean] = js.undefined,
+    defaultTokenParams: TokenParams = null,
+    disconnectedRetryTimeout: js.UndefOr[Double] = js.undefined,
+    echoMessages: js.UndefOr[Boolean] = js.undefined,
+    environment: String = null,
+    fallbackHosts: js.Array[String] = null,
+    fallbackHostsUseDefault: js.UndefOr[Boolean] = js.undefined,
+    idempotentRestPublishing: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    log: LogInfo = null,
+    port: js.UndefOr[Double] = js.undefined,
+    queryTime: js.UndefOr[Boolean] = js.undefined,
+    queueMessages: js.UndefOr[Boolean] = js.undefined,
+    realtimeHost: String = null,
+    recover: standardCallback | String = null,
+    restHost: String = null,
+    suspendedRetryTimeout: js.UndefOr[Double] = js.undefined,
+    tls: js.UndefOr[Boolean] = js.undefined,
+    tlsPort: js.UndefOr[Double] = js.undefined,
+    token: TokenDetails | String = null,
+    tokenDetails: TokenDetails = null,
+    transportParams: StringDictionary[String] = null,
+    transports: js.Array[Transport] = null,
+    useBinaryProtocol: js.UndefOr[Boolean] = js.undefined,
+    useTokenAuth: js.UndefOr[Boolean] = js.undefined
+  ): ClientOptions = {
     val __obj = js.Dynamic.literal()
+    if (authCallback != null) __obj.updateDynamic("authCallback")(js.Any.fromFunction2(authCallback))
+    if (authHeaders != null) __obj.updateDynamic("authHeaders")(authHeaders.asInstanceOf[js.Any])
+    if (authMethod != null) __obj.updateDynamic("authMethod")(authMethod.asInstanceOf[js.Any])
+    if (authParams != null) __obj.updateDynamic("authParams")(authParams.asInstanceOf[js.Any])
+    if (authUrl != null) __obj.updateDynamic("authUrl")(authUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoConnect)) __obj.updateDynamic("autoConnect")(autoConnect.get.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnUnload)) __obj.updateDynamic("closeOnUnload")(closeOnUnload.get.asInstanceOf[js.Any])
+    if (defaultTokenParams != null) __obj.updateDynamic("defaultTokenParams")(defaultTokenParams.asInstanceOf[js.Any])
+    if (!js.isUndefined(disconnectedRetryTimeout)) __obj.updateDynamic("disconnectedRetryTimeout")(disconnectedRetryTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(echoMessages)) __obj.updateDynamic("echoMessages")(echoMessages.get.asInstanceOf[js.Any])
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
+    if (fallbackHosts != null) __obj.updateDynamic("fallbackHosts")(fallbackHosts.asInstanceOf[js.Any])
+    if (!js.isUndefined(fallbackHostsUseDefault)) __obj.updateDynamic("fallbackHostsUseDefault")(fallbackHostsUseDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(idempotentRestPublishing)) __obj.updateDynamic("idempotentRestPublishing")(idempotentRestPublishing.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(queryTime)) __obj.updateDynamic("queryTime")(queryTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(queueMessages)) __obj.updateDynamic("queueMessages")(queueMessages.get.asInstanceOf[js.Any])
+    if (realtimeHost != null) __obj.updateDynamic("realtimeHost")(realtimeHost.asInstanceOf[js.Any])
+    if (recover != null) __obj.updateDynamic("recover")(recover.asInstanceOf[js.Any])
+    if (restHost != null) __obj.updateDynamic("restHost")(restHost.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspendedRetryTimeout)) __obj.updateDynamic("suspendedRetryTimeout")(suspendedRetryTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tls)) __obj.updateDynamic("tls")(tls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tlsPort)) __obj.updateDynamic("tlsPort")(tlsPort.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (tokenDetails != null) __obj.updateDynamic("tokenDetails")(tokenDetails.asInstanceOf[js.Any])
+    if (transportParams != null) __obj.updateDynamic("transportParams")(transportParams.asInstanceOf[js.Any])
+    if (transports != null) __obj.updateDynamic("transports")(transports.asInstanceOf[js.Any])
+    if (!js.isUndefined(useBinaryProtocol)) __obj.updateDynamic("useBinaryProtocol")(useBinaryProtocol.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useTokenAuth)) __obj.updateDynamic("useTokenAuth")(useTokenAuth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptions]
   }
-  @scala.inline
-  implicit class ClientOptionsOps[Self <: ClientOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoConnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConnect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConnect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnUnload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnUnload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnUnload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnUnload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultTokenParams(value: TokenParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTokenParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTokenParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTokenParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisconnectedRetryTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnectedRetryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisconnectedRetryTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnectedRetryTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEchoMessages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("echoMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEchoMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("echoMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackHosts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackHosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackHosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackHostsUseDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackHostsUseDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallbackHostsUseDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackHostsUseDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdempotentRestPublishing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idempotentRestPublishing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdempotentRestPublishing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idempotentRestPublishing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: LogInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueueMessages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queueMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueueMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queueMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealtimeHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realtimeHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealtimeHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realtimeHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecoverFunction2(value: (/* error */ ErrorInfo, /* results */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recover")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRecover(value: standardCallback | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restHost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspendedRetryTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendedRetryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspendedRetryTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendedRetryTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportParams(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransports(value: js.Array[Transport]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseBinaryProtocol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useBinaryProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseBinaryProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useBinaryProtocol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

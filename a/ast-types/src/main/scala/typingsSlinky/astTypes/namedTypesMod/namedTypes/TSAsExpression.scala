@@ -16,19 +16,18 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Pattern, 'type'> */
-@js.native
 trait TSAsExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PatternKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var expression: ExpressionKind = js.native
-  var extra: js.UndefOr[Parenthesized | Null] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression = js.native
-  var typeAnnotation: TSTypeKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var expression: ExpressionKind
+  var extra: js.UndefOr[Parenthesized | Null] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression
+  var typeAnnotation: TSTypeKind
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSAsExpression")

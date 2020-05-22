@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 class OnEntryRecordCommitted protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.OnEntryRecordCommitted {
   def this(origRecKey: String, recordKey: Double, changeKey: IChangeKey) = this()
+  /* CompleteClass */
+  override var changeKey: IChangeKey = js.native
+  /* CompleteClass */
+  override var originalRecordKey: Double = js.native
+  /* CompleteClass */
+  override var recordKey: Double = js.native
 }
 

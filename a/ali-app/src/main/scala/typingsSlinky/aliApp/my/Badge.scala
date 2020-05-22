@@ -9,22 +9,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Badge extends js.Object {
   /** 需要飘红的选项的索引，从0开始 */
-  var index: Double = js.native
+  var index: Double
   /**
-  		 * 自定义飘红文案：
-  		 *
-  		 * 1、type为none/point/more时本文案可不填
-  		 * 2、type为num时本文案为小数或<=0均不显示, >100 显示"..."
-  		 */
-  var text: String = js.native
+    * 自定义飘红文案：
+    *
+    * 1、type为none/point/more时本文案可不填
+    * 2、type为num时本文案为小数或<=0均不显示, >100 显示"..."
+    */
+  var text: String
   /**
-  		 * 飘红类型，支持 none（无红点）/ point（纯红点） / num（数字红点）/ text（文案红点）/ more（...）
-  		 *
-  		 */
-  var `type`: none | point | num | text | more | String = js.native
+    * 飘红类型，支持 none（无红点）/ point（纯红点） / num（数字红点）/ text（文案红点）/ more（...）
+    *
+    */
+  var `type`: none | point | num | text | more | String
 }
 
 object Badge {
@@ -34,31 +33,5 @@ object Badge {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Badge]
   }
-  @scala.inline
-  implicit class BadgeOps[Self <: Badge] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: none | point | num | text | more | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

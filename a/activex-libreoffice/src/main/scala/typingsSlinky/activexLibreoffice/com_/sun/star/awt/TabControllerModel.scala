@@ -11,7 +11,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a standard tab controller model. */
-@js.native
 trait TabControllerModel
   extends XTabControllerModel
      with XPersistObject

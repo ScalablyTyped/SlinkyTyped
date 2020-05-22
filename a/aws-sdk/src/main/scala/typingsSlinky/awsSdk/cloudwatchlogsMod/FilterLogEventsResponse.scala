@@ -22,53 +22,16 @@ trait FilterLogEventsResponse extends js.Object {
 
 object FilterLogEventsResponse {
   @scala.inline
-  def apply(): FilterLogEventsResponse = {
+  def apply(
+    events: FilteredLogEvents = null,
+    nextToken: NextToken = null,
+    searchedLogStreams: SearchedLogStreams = null
+  ): FilterLogEventsResponse = {
     val __obj = js.Dynamic.literal()
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (searchedLogStreams != null) __obj.updateDynamic("searchedLogStreams")(searchedLogStreams.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterLogEventsResponse]
   }
-  @scala.inline
-  implicit class FilterLogEventsResponseOps[Self <: FilterLogEventsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvents(value: FilteredLogEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchedLogStreams(value: SearchedLogStreams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchedLogStreams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchedLogStreams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchedLogStreams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

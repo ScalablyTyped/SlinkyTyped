@@ -66,113 +66,26 @@ trait SchemaAddSubnetworkRequest extends js.Object {
 
 object SchemaAddSubnetworkRequest {
   @scala.inline
-  def apply(): SchemaAddSubnetworkRequest = {
+  def apply(
+    consumer: String = null,
+    consumerNetwork: String = null,
+    description: String = null,
+    ipPrefixLength: js.UndefOr[Double] = js.undefined,
+    region: String = null,
+    requestedAddress: String = null,
+    subnetwork: String = null,
+    subnetworkUsers: js.Array[String] = null
+  ): SchemaAddSubnetworkRequest = {
     val __obj = js.Dynamic.literal()
+    if (consumer != null) __obj.updateDynamic("consumer")(consumer.asInstanceOf[js.Any])
+    if (consumerNetwork != null) __obj.updateDynamic("consumerNetwork")(consumerNetwork.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(ipPrefixLength)) __obj.updateDynamic("ipPrefixLength")(ipPrefixLength.get.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (requestedAddress != null) __obj.updateDynamic("requestedAddress")(requestedAddress.asInstanceOf[js.Any])
+    if (subnetwork != null) __obj.updateDynamic("subnetwork")(subnetwork.asInstanceOf[js.Any])
+    if (subnetworkUsers != null) __obj.updateDynamic("subnetworkUsers")(subnetworkUsers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddSubnetworkRequest]
   }
-  @scala.inline
-  implicit class SchemaAddSubnetworkRequestOps[Self <: SchemaAddSubnetworkRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsumerNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumerNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerNetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpPrefixLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipPrefixLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpPrefixLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipPrefixLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestedAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestedAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetworkUsers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworkUsers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetworkUsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworkUsers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

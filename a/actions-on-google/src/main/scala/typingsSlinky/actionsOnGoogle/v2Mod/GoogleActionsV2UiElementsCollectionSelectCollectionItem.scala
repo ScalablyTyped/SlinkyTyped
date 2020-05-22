@@ -4,92 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsV2UiElementsCollectionSelectCollectionItem extends js.Object {
   /**
     * Body text of the card.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Optional.
     */
-  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.native
+  var image: js.UndefOr[GoogleActionsV2UiElementsImage] = js.undefined
   /**
     * See google.actions.v2.OptionInfo
     * for details.
     * Required.
     */
-  var optionInfo: js.UndefOr[GoogleActionsV2OptionInfo] = js.native
+  var optionInfo: js.UndefOr[GoogleActionsV2OptionInfo] = js.undefined
   /**
     * Title of the collection item. When tapped, this text will be
     * posted back to the conversation verbatim as if the user had typed it.
     * Each title must be unique among the set of collection items.
     * Required.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object GoogleActionsV2UiElementsCollectionSelectCollectionItem {
   @scala.inline
-  def apply(): GoogleActionsV2UiElementsCollectionSelectCollectionItem = {
+  def apply(
+    description: String = null,
+    image: GoogleActionsV2UiElementsImage = null,
+    optionInfo: GoogleActionsV2OptionInfo = null,
+    title: String = null
+  ): GoogleActionsV2UiElementsCollectionSelectCollectionItem = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (optionInfo != null) __obj.updateDynamic("optionInfo")(optionInfo.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2UiElementsCollectionSelectCollectionItem]
   }
-  @scala.inline
-  implicit class GoogleActionsV2UiElementsCollectionSelectCollectionItemOps[Self <: GoogleActionsV2UiElementsCollectionSelectCollectionItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: GoogleActionsV2UiElementsImage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionInfo(value: GoogleActionsV2OptionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

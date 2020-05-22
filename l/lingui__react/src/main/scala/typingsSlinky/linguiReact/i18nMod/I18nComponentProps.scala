@@ -6,56 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait I18nComponentProps extends js.Object {
-  var update: js.UndefOr[Boolean] = js.native
-  var withHash: js.UndefOr[Boolean] = js.native
-  def children(hasI18nI18nHash: I18n): TagMod[Any] = js.native
+  var update: js.UndefOr[Boolean] = js.undefined
+  var withHash: js.UndefOr[Boolean] = js.undefined
+  def children(hasI18nI18nHash: I18n): TagMod[Any]
 }
 
 object I18nComponentProps {
   @scala.inline
-  def apply(children: I18n => TagMod[Any]): I18nComponentProps = {
+  def apply(
+    children: I18n => TagMod[Any],
+    update: js.UndefOr[Boolean] = js.undefined,
+    withHash: js.UndefOr[Boolean] = js.undefined
+  ): I18nComponentProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    if (!js.isUndefined(update)) __obj.updateDynamic("update")(update.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(withHash)) __obj.updateDynamic("withHash")(withHash.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[I18nComponentProps]
   }
-  @scala.inline
-  implicit class I18nComponentPropsOps[Self <: I18nComponentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: I18n => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithHash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withHash")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

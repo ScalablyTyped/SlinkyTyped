@@ -5,32 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** IVBSAXContentHandler interface */
-@js.native
 trait IVBSAXContentHandler extends js.Object {
   @JSName("MSXML2.IVBSAXContentHandler_typekey")
-  var MSXML2DotIVBSAXContentHandler_typekey: IVBSAXContentHandler = js.native
+  var MSXML2DotIVBSAXContentHandler_typekey: IVBSAXContentHandler
   /** Receive an object for locating the origin of SAX document events. */
-  val documentLocator: IVBSAXLocator = js.native
+  val documentLocator: IVBSAXLocator
   /** Receive notification of character data. */
-  def characters(strChars: String): Unit = js.native
+  def characters(strChars: String): Unit
   /** Receive notification of the end of a document. */
-  def endDocument(): Unit = js.native
+  def endDocument(): Unit
   /** Receive notification of the end of an element. */
-  def endElement(strNamespaceURI: String, strLocalName: String, strQName: String): Unit = js.native
+  def endElement(strNamespaceURI: String, strLocalName: String, strQName: String): Unit
   /** End the scope of a prefix-URI mapping. */
-  def endPrefixMapping(strPrefix: String): Unit = js.native
+  def endPrefixMapping(strPrefix: String): Unit
   /** Receive notification of ignorable whitespace in element content. */
-  def ignorableWhitespace(strChars: String): Unit = js.native
+  def ignorableWhitespace(strChars: String): Unit
   /** Receive notification of a processing instruction. */
-  def processingInstruction(strTarget: String, strData: String): Unit = js.native
+  def processingInstruction(strTarget: String, strData: String): Unit
   /** Receive notification of a skipped entity. */
-  def skippedEntity(strName: String): Unit = js.native
+  def skippedEntity(strName: String): Unit
   /** Receive notification of the beginning of a document. */
-  def startDocument(): Unit = js.native
+  def startDocument(): Unit
   /** Receive notification of the beginning of an element. */
-  def startElement(strNamespaceURI: String, strLocalName: String, strQName: String, oAttributes: IVBSAXAttributes): Unit = js.native
+  def startElement(strNamespaceURI: String, strLocalName: String, strQName: String, oAttributes: IVBSAXAttributes): Unit
   /** Begin the scope of a prefix-URI Namespace mapping. */
-  def startPrefixMapping(strPrefix: String, strURI: String): Unit = js.native
+  def startPrefixMapping(strPrefix: String, strURI: String): Unit
 }
 
 object IVBSAXContentHandler {
@@ -53,85 +52,5 @@ object IVBSAXContentHandler {
     __obj.updateDynamic("MSXML2.IVBSAXContentHandler_typekey")(MSXML2DotIVBSAXContentHandler_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVBSAXContentHandler]
   }
-  @scala.inline
-  implicit class IVBSAXContentHandlerOps[Self <: IVBSAXContentHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSXML2DotIVBSAXContentHandler_typekey(value: IVBSAXContentHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSXML2.IVBSAXContentHandler_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharacters(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characters")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDocumentLocator(value: IVBSAXLocator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLocator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndDocument(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEndElement(value: (String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endElement")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEndPrefixMapping(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPrefixMapping")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIgnorableWhitespace(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorableWhitespace")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withProcessingInstruction(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingInstruction")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSkippedEntity(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedEntity")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartDocument(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDocument")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartElement(value: (String, String, String, IVBSAXAttributes) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startElement")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withStartPrefixMapping(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startPrefixMapping")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

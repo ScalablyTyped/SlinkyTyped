@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectionStrategy extends js.Object {
   var cancelUndispatched: js.UndefOr[
     js.Function2[
@@ -14,7 +13,7 @@ trait ConnectionStrategy extends js.Object {
       /* next */ js.Function1[/* message */ Message, js.UndefOr[ResponseMessage]], 
       js.UndefOr[ResponseMessage]
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 @JSImport("vscode-jsonrpc", "ConnectionStrategy")

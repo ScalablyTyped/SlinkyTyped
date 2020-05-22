@@ -7,28 +7,27 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientHint.Showing event.
   */
-@js.native
 trait ASPxClientHintShowingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets a value indicating whether the event should be canceled.
     */
-  var cancel: Boolean = js.native
+  var cancel: Boolean
   /**
     * Gets the object that is the hint's content.
     */
-  var contentElement: js.Any = js.native
+  var contentElement: js.Any
   /**
     * Gets the object that is the hint.
     */
-  var hintElement: js.Any = js.native
+  var hintElement: js.Any
   /**
     * Gets the object that is the hint's target element.
     */
-  var targetElement: js.Any = js.native
+  var targetElement: js.Any
   /**
     * Gets the object that is the hint's title.
     */
-  var titleElement: js.Any = js.native
+  var titleElement: js.Any
 }
 
 object ASPxClientHintShowingEventArgs {
@@ -43,43 +42,5 @@ object ASPxClientHintShowingEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], contentElement = contentElement.asInstanceOf[js.Any], hintElement = hintElement.asInstanceOf[js.Any], targetElement = targetElement.asInstanceOf[js.Any], titleElement = titleElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientHintShowingEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientHintShowingEventArgsOps[Self <: ASPxClientHintShowingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHintElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hintElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitleElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

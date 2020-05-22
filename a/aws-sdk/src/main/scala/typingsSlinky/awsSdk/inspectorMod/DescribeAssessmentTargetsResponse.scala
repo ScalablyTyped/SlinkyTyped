@@ -22,25 +22,5 @@ object DescribeAssessmentTargetsResponse {
     val __obj = js.Dynamic.literal(assessmentTargets = assessmentTargets.asInstanceOf[js.Any], failedItems = failedItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAssessmentTargetsResponse]
   }
-  @scala.inline
-  implicit class DescribeAssessmentTargetsResponseOps[Self <: DescribeAssessmentTargetsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssessmentTargets(value: AssessmentTargetList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailedItems(value: FailedItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

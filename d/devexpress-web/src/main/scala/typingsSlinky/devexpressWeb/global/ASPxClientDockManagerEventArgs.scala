@@ -15,5 +15,10 @@ class ASPxClientDockManagerEventArgs protected ()
     * For internal use only.
     */
   def this(panel: typingsSlinky.devexpressWeb.ASPxClientDockPanel) = this()
+  /**
+    * Gets the panel currently being processed.
+    */
+  /* CompleteClass */
+  override var panel: typingsSlinky.devexpressWeb.ASPxClientDockPanel = js.native
 }
 

@@ -9,90 +9,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LineLayout
   extends Layout
-     with AnyLayout {
-  var `line-cap`: js.UndefOr[butt | round | square] = js.native
-  var `line-join`: js.UndefOr[bevel | round | miter | Expression] = js.native
-  var `line-miter-limit`: js.UndefOr[Double | Expression] = js.native
-  var `line-round-limit`: js.UndefOr[Double | Expression] = js.native
-  var `line-sort-key`: js.UndefOr[Double] = js.native
+     with _AnyLayout {
+  var `line-cap`: js.UndefOr[butt | round | square] = js.undefined
+  var `line-join`: js.UndefOr[bevel | round | miter | Expression] = js.undefined
+  var `line-miter-limit`: js.UndefOr[Double | Expression] = js.undefined
+  var `line-round-limit`: js.UndefOr[Double | Expression] = js.undefined
+  var `line-sort-key`: js.UndefOr[Double] = js.undefined
 }
 
 object LineLayout {
   @scala.inline
-  def apply(): LineLayout = {
+  def apply(
+    `line-cap`: butt | round | square = null,
+    `line-join`: bevel | round | miter | Expression = null,
+    `line-miter-limit`: Double | Expression = null,
+    `line-round-limit`: Double | Expression = null,
+    `line-sort-key`: js.UndefOr[Double] = js.undefined,
+    visibility: Visibility = null
+  ): LineLayout = {
     val __obj = js.Dynamic.literal()
+    if (`line-cap` != null) __obj.updateDynamic("line-cap")(`line-cap`.asInstanceOf[js.Any])
+    if (`line-join` != null) __obj.updateDynamic("line-join")(`line-join`.asInstanceOf[js.Any])
+    if (`line-miter-limit` != null) __obj.updateDynamic("line-miter-limit")(`line-miter-limit`.asInstanceOf[js.Any])
+    if (`line-round-limit` != null) __obj.updateDynamic("line-round-limit")(`line-round-limit`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`line-sort-key`)) __obj.updateDynamic("line-sort-key")(`line-sort-key`.get.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineLayout]
   }
-  @scala.inline
-  implicit class LineLayoutOps[Self <: LineLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withLine-cap`(value: butt | round | square): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLine-cap`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLine-join`(value: bevel | round | miter | Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-join")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLine-join`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-join")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLine-miter-limit`(value: Double | Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-miter-limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLine-miter-limit`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-miter-limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLine-round-limit`(value: Double | Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-round-limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLine-round-limit`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-round-limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLine-sort-key`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-sort-key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLine-sort-key`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line-sort-key")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,9 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * An abstract datatype for specifying an attributed string attribute.
-			 * @deprecated Use [Attribute](Attribute) instead.
-			 */
+  * An abstract datatype for specifying an attributed string attribute.
+  * @deprecated Use [Attribute](Attribute) instead.
+  */
 @JSGlobal("Titanium.UI.iOS.Attribute")
 @js.native
 object Attribute

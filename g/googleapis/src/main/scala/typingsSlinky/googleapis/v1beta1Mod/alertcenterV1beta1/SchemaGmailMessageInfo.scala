@@ -46,113 +46,26 @@ trait SchemaGmailMessageInfo extends js.Object {
 
 object SchemaGmailMessageInfo {
   @scala.inline
-  def apply(): SchemaGmailMessageInfo = {
+  def apply(
+    attachmentsSha256Hash: js.Array[String] = null,
+    date: String = null,
+    md5HashMessageBody: String = null,
+    md5HashSubject: String = null,
+    messageBodySnippet: String = null,
+    messageId: String = null,
+    recipient: String = null,
+    subjectText: String = null
+  ): SchemaGmailMessageInfo = {
     val __obj = js.Dynamic.literal()
+    if (attachmentsSha256Hash != null) __obj.updateDynamic("attachmentsSha256Hash")(attachmentsSha256Hash.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (md5HashMessageBody != null) __obj.updateDynamic("md5HashMessageBody")(md5HashMessageBody.asInstanceOf[js.Any])
+    if (md5HashSubject != null) __obj.updateDynamic("md5HashSubject")(md5HashSubject.asInstanceOf[js.Any])
+    if (messageBodySnippet != null) __obj.updateDynamic("messageBodySnippet")(messageBodySnippet.asInstanceOf[js.Any])
+    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
+    if (recipient != null) __obj.updateDynamic("recipient")(recipient.asInstanceOf[js.Any])
+    if (subjectText != null) __obj.updateDynamic("subjectText")(subjectText.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGmailMessageInfo]
   }
-  @scala.inline
-  implicit class SchemaGmailMessageInfoOps[Self <: SchemaGmailMessageInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachmentsSha256Hash(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentsSha256Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachmentsSha256Hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentsSha256Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5HashMessageBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5HashMessageBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5HashMessageBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5HashMessageBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5HashSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5HashSubject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5HashSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5HashSubject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageBodySnippet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageBodySnippet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageBodySnippet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageBodySnippet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipient(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubjectText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubjectText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

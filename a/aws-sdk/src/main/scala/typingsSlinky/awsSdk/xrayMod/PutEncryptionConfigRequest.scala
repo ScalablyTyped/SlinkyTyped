@@ -18,35 +18,10 @@ trait PutEncryptionConfigRequest extends js.Object {
 
 object PutEncryptionConfigRequest {
   @scala.inline
-  def apply(Type: EncryptionType): PutEncryptionConfigRequest = {
+  def apply(Type: EncryptionType, KeyId: EncryptionKeyId = null): PutEncryptionConfigRequest = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
+    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEncryptionConfigRequest]
   }
-  @scala.inline
-  implicit class PutEncryptionConfigRequestOps[Self <: PutEncryptionConfigRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: EncryptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: EncryptionKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

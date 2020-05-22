@@ -21,14 +21,14 @@ trait GeometricShape extends ClientObject {
   var context_GeometricShape: RequestContext = js.native
   /**
     *
-    * Returns the shape identifier. Read-only.
+    * Returns the shape identifier.
     *
     * [Api set: ExcelApi 1.9]
     */
   val id: String = js.native
   /**
     *
-    * Returns the Shape object for the geometric shape. Read-only.
+    * Returns the Shape object for the geometric shape.
     *
     * [Api set: ExcelApi 1.9]
     */

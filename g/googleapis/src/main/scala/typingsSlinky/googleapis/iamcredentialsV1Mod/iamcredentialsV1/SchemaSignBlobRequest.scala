@@ -26,41 +26,11 @@ trait SchemaSignBlobRequest extends js.Object {
 
 object SchemaSignBlobRequest {
   @scala.inline
-  def apply(): SchemaSignBlobRequest = {
+  def apply(delegates: js.Array[String] = null, payload: String = null): SchemaSignBlobRequest = {
     val __obj = js.Dynamic.literal()
+    if (delegates != null) __obj.updateDynamic("delegates")(delegates.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSignBlobRequest]
   }
-  @scala.inline
-  implicit class SchemaSignBlobRequestOps[Self <: SchemaSignBlobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelegates(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

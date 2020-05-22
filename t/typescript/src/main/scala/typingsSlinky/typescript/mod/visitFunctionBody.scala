@@ -13,11 +13,6 @@ object visitFunctionBody extends js.Object {
     */
   def apply(node: js.UndefOr[FunctionBody], visitor: Visitor, context: TransformationContext): js.UndefOr[FunctionBody] = js.native
   /**
-    * Resumes a suspended lexical environment and visits a concise body, ending the lexical
-    * environment and merging hoisted declarations upon completion.
-    */
-  def apply(node: ConciseBody, visitor: Visitor, context: TransformationContext): ConciseBody = js.native
-  /**
     * Resumes a suspended lexical environment and visits a function body, ending the lexical
     * environment and merging hoisted declarations upon completion.
     */

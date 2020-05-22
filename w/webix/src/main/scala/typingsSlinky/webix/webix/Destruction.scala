@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Destruction extends js.Object {
-  def destructor(): Unit = js.native
+  def destructor(): Unit
 }
 
 object Destruction {
@@ -15,19 +14,5 @@ object Destruction {
     val __obj = js.Dynamic.literal(destructor = js.Any.fromFunction0(destructor))
     __obj.asInstanceOf[Destruction]
   }
-  @scala.inline
-  implicit class DestructionOps[Self <: Destruction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestructor(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destructor")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

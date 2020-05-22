@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Gantt) When using multiple axis, the ticks of two
@@ -21,7 +20,7 @@ trait ChartOptions extends js.Object {
     *
     * Disabled for logarithmic axes.
     */
-  var alignTicks: js.UndefOr[Boolean] = js.native
+  var alignTicks: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Set the overall animation for
     * all chart updating. Animation can be disabled throughout the chart by
@@ -36,32 +35,32 @@ trait ChartOptions extends js.Object {
     *
     *  (see online documentation for example)
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The background color or gradient
     * for the outer chart area.
     */
-  var backgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var backgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The color of the outer chart
     * border.
     */
-  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The corner radius of the outer
     * chart border.
     */
-  var borderRadius: js.UndefOr[Double] = js.native
+  var borderRadius: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel width of the outer
     * chart border.
     */
-  var borderWidth: js.UndefOr[Double] = js.native
+  var borderWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A CSS class name to apply to the
     * charts container `div`, allowing unique CSS styling for each chart.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) In styled mode, this sets how
     * many colors the class names should rotate between. With ten colors,
@@ -69,16 +68,16 @@ trait ChartOptions extends js.Object {
     * `highcharts-color-0` [...] `highcharts-color-9`. The equivalent in
     * non-styled mode is to set colors using the colors setting.
     */
-  var colorCount: js.UndefOr[Double] = js.native
+  var colorCount: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to display errors on the
     * chart. When `false`, the errors will be shown only in the console.
     */
-  var displayErrors: js.UndefOr[Boolean] = js.native
+  var displayErrors: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Event listeners for the chart.
     */
-  var events: js.UndefOr[ChartEventsOptions] = js.native
+  var events: js.UndefOr[ChartEventsOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An explicit height for the
     * chart. If a _number_, the height is given in pixels. If given a
@@ -90,7 +89,7 @@ trait ChartOptions extends js.Object {
     * of the containing element, or 400 pixels if the containing element's
     * height is 0.
     */
-  var height: js.UndefOr[Double | String | Null] = js.native
+  var height: js.UndefOr[Double | String | Null] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) If true, the axes will scale to the
     * remaining visible series once one series is hidden. If false, hiding and
@@ -98,24 +97,24 @@ trait ChartOptions extends js.Object {
     * stacks, once one series within the stack is hidden, the rest of the stack
     * will close in around it even if the axis is not affected.
     */
-  var ignoreHiddenSeries: js.UndefOr[Boolean] = js.native
+  var ignoreHiddenSeries: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Whether to invert the axes so that the x
     * axis is vertical and y axis is horizontal. When `true`, the x axis is
     * reversed by default.
     */
-  var inverted: js.UndefOr[Boolean] = js.native
+  var inverted: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highmaps) Default `mapData` for all series. If set to a string, it
     * functions as an index into the `Highcharts.maps` array. Otherwise it is
     * interpreted as map data.
     */
-  var map: js.UndefOr[String | js.Array[_]] = js.native
+  var map: js.UndefOr[String | js.Array[_]] = js.undefined
   /**
     * (Highmaps) Set lat/lon transformation definitions for the chart. If not
     * defined, these are extracted from the map data.
     */
-  var mapTransforms: js.UndefOr[js.Any] = js.native
+  var mapTransforms: js.UndefOr[js.Any] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The margin between the outer
     * edge of the chart and the plot area. The numbers in the array designate
@@ -128,41 +127,41 @@ trait ChartOptions extends js.Object {
     * addition to the `spacingTop`, `spacingRight`, `spacingBottom` and
     * `spacingLeft` options.
     */
-  var margin: js.UndefOr[Double | js.Array[Double]] = js.native
+  var margin: js.UndefOr[Double | js.Array[Double]] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The margin between the bottom
     * outer edge of the chart and the plot area. Use this to set a fixed pixel
     * value for the margin as opposed to the default dynamic margin. See also
     * `spacingBottom`.
     */
-  var marginBottom: js.UndefOr[Double] = js.native
+  var marginBottom: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The margin between the left
     * outer edge of the chart and the plot area. Use this to set a fixed pixel
     * value for the margin as opposed to the default dynamic margin. See also
     * `spacingLeft`.
     */
-  var marginLeft: js.UndefOr[Double] = js.native
+  var marginLeft: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The margin between the right
     * outer edge of the chart and the plot area. Use this to set a fixed pixel
     * value for the margin as opposed to the default dynamic margin. See also
     * `spacingRight`.
     */
-  var marginRight: js.UndefOr[Double] = js.native
+  var marginRight: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The margin between the top outer
     * edge of the chart and the plot area. Use this to set a fixed pixel value
     * for the margin as opposed to the default dynamic margin. See also
     * `spacingTop`.
     */
-  var marginTop: js.UndefOr[Double] = js.native
+  var marginTop: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Options to render charts in 3 dimensions. This feature
     * requires `highcharts-3d.js`, found in the download package or online at
     * code.highcharts.com/highcharts-3d.js.
     */
-  var options3d: js.UndefOr[Chart3dOptions] = js.native
+  var options3d: js.UndefOr[Chart3dOptions] = js.undefined
   /**
     * (Highcharts, Gantt) Allows setting a key to switch between zooming and
     * panning. Can be one of `alt`, `ctrl`, `meta` (the command key on Mac and
@@ -170,7 +169,7 @@ trait ChartOptions extends js.Object {
     * key properties of the click event argument (`event.altKey`,
     * `event.ctrlKey`, `event.metaKey` and `event.shiftKey`).
     */
-  var panKey: js.UndefOr[OptionsPanKeyValue] = js.native
+  var panKey: js.UndefOr[OptionsPanKeyValue] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Allow panning in a chart. Best used with
     * panKey to combine zooming and panning.
@@ -179,7 +178,7 @@ trait ChartOptions extends js.Object {
     * (default), panning requires two fingers. To allow panning with one
     * finger, set `followTouchMove` to `false`.
     */
-  var panning: js.UndefOr[Boolean] = js.native
+  var panning: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts) Common options for all yAxes rendered in a parallel
     * coordinates plot. This feature requires
@@ -187,14 +186,14 @@ trait ChartOptions extends js.Object {
     *
     * The default options are: (see online documentation for example)
     */
-  var parallelAxes: js.UndefOr[ChartParallelAxesOptions | js.Array[ChartParallelAxesOptions]] = js.native
+  var parallelAxes: js.UndefOr[ChartParallelAxesOptions | js.Array[ChartParallelAxesOptions]] = js.undefined
   /**
     * (Highcharts) Flag to render charts as a parallel coordinates plot. In a
     * parallel coordinates plot (||-coords) by default all required yAxes are
     * generated and the legend is disabled. This feature requires
     * `modules/parallel-coordinates.js`.
     */
-  var parallelCoordinates: js.UndefOr[Boolean] = js.native
+  var parallelCoordinates: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Equivalent to zoomType, but for multitouch
     * gestures only. By default, the `pinchType` is the same as the `zoomType`
@@ -203,12 +202,12 @@ trait ChartOptions extends js.Object {
     * is enabled. When tooltip.followTouchMove is true, pinchType only applies
     * to two-finger touches.
     */
-  var pinchType: js.UndefOr[OptionsPinchTypeValue] = js.native
+  var pinchType: js.UndefOr[OptionsPinchTypeValue] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The background color or gradient
     * for the plot area.
     */
-  var plotBackgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var plotBackgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The URL for an image to use as
     * the plot background. To set an image as the background for the entire
@@ -216,35 +215,35 @@ trait ChartOptions extends js.Object {
     * the image to be applied to exported charts, its URL needs to be
     * accessible by the export server.
     */
-  var plotBackgroundImage: js.UndefOr[String] = js.native
+  var plotBackgroundImage: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The color of the inner chart or
     * plot area border.
     */
-  var plotBorderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var plotBorderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel width of the plot area
     * border.
     */
-  var plotBorderWidth: js.UndefOr[Double] = js.native
+  var plotBorderWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to apply a drop shadow
     * to the plot area. Requires that plotBackgroundColor be set. The shadow
     * can be an object configuration containing `color`, `offsetX`, `offsetY`,
     * `opacity` and `width`.
     */
-  var plotShadow: js.UndefOr[Boolean | CSSObject] = js.native
+  var plotShadow: js.UndefOr[Boolean | CSSObject] = js.undefined
   /**
     * (Highcharts) When true, cartesian charts like line, spline, area and
     * column are transformed into the polar coordinate system. This produces
     * _polar charts_, also known as _radar charts_.
     */
-  var polar: js.UndefOr[Boolean] = js.native
+  var polar: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to reflow the chart to
     * fit the width of the container div on resizing the window.
     */
-  var reflow: js.UndefOr[Boolean] = js.native
+  var reflow: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The HTML element where the chart
     * will be rendered. If it is a string, the element by that id is used. The
@@ -252,12 +251,12 @@ trait ChartOptions extends js.Object {
     * argument of the chart constructor, in which case the option is not
     * needed.
     */
-  var renderTo: js.UndefOr[String | HTMLElement] = js.native
+  var renderTo: js.UndefOr[String | HTMLElement] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The button that appears after a
     * selection zoom, allowing the user to reset zoom.
     */
-  var resetZoomButton: js.UndefOr[ChartResetZoomButtonOptions] = js.native
+  var resetZoomButton: js.UndefOr[ChartResetZoomButtonOptions] = js.undefined
   /**
     * (Highcharts, Gantt) Options for a scrollable plot area. This feature
     * provides a minimum size for the plot area of the chart. If the size gets
@@ -270,25 +269,25 @@ trait ChartOptions extends js.Object {
     * or vertical scrolling, depending on whether the `minWidth` or `minHeight`
     * option is set.
     */
-  var scrollablePlotArea: js.UndefOr[ChartScrollablePlotAreaOptions] = js.native
+  var scrollablePlotArea: js.UndefOr[ChartScrollablePlotAreaOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The background color of the
     * marker square when selecting (zooming in on) an area of the chart.
     */
-  var selectionMarkerFill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var selectionMarkerFill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to apply a drop shadow
     * to the outer chart area. Requires that backgroundColor be set. The shadow
     * can be an object configuration containing `color`, `offsetX`, `offsetY`,
     * `opacity` and `width`.
     */
-  var shadow: js.UndefOr[Boolean | CSSObject] = js.native
+  var shadow: js.UndefOr[Boolean | CSSObject] = js.undefined
   /**
     * (Highcharts, Gantt) Whether to show the axes initially. This only applies
     * to empty charts where series are added dynamically, as axes are
     * automatically added to cartesian series.
     */
-  var showAxes: js.UndefOr[Boolean] = js.native
+  var showAxes: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The distance between the outer
     * edge of the chart and the content, like title or legend, or axis title
@@ -297,38 +296,38 @@ trait ChartOptions extends js.Object {
     * spacingBottom and spacingLeft options for shorthand setting of one
     * option.
     */
-  var spacing: js.UndefOr[js.Array[Double]] = js.native
+  var spacing: js.UndefOr[js.Array[Double]] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The space between the bottom
     * edge of the chart and the content (plot area, axis title and labels,
     * title, subtitle or legend in top position).
     */
-  var spacingBottom: js.UndefOr[Double] = js.native
+  var spacingBottom: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The space between the left edge
     * of the chart and the content (plot area, axis title and labels, title,
     * subtitle or legend in top position).
     */
-  var spacingLeft: js.UndefOr[Double] = js.native
+  var spacingLeft: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The space between the right edge
     * of the chart and the content (plot area, axis title and labels, title,
     * subtitle or legend in top position).
     */
-  var spacingRight: js.UndefOr[Double] = js.native
+  var spacingRight: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The space between the top edge
     * of the chart and the content (plot area, axis title and labels, title,
     * subtitle or legend in top position).
     */
-  var spacingTop: js.UndefOr[Double] = js.native
+  var spacingTop: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Additional CSS styles to apply
     * inline to the container `div`. Note that since the default font styles
     * are applied in the renderer, it is ignorant of the individual chart
     * options and must be set globally.
     */
-  var style: js.UndefOr[CSSObject] = js.native
+  var style: js.UndefOr[CSSObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to apply styled mode.
     * When in styled mode, no presentational attributes or CSS are applied to
@@ -336,7 +335,7 @@ trait ChartOptions extends js.Object {
     * default style sheet is available from
     * `https://code.highcharts.com/css/highcharts.css`.
     */
-  var styledMode: js.UndefOr[Boolean] = js.native
+  var styledMode: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The default series type for the
     * chart. Can be any of the chart types listed under plotOptions and series
@@ -345,657 +344,132 @@ trait ChartOptions extends js.Object {
     * In TypeScript this option has no effect in sense of typing and instead
     * the `type` option must always be set in the series.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An explicit width for the chart.
     * By default (when `null`) the width is calculated from the offset width of
     * the containing element.
     */
-  var width: js.UndefOr[Double | String | Null] = js.native
+  var width: js.UndefOr[Double | String | Null] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Set a key to hold when dragging
     * to zoom the chart. This is useful to avoid zooming while moving points.
     * Should be set different than chart.panKey.
     */
-  var zoomKey: js.UndefOr[OptionsZoomKeyValue] = js.native
+  var zoomKey: js.UndefOr[OptionsZoomKeyValue] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) Decides in what dimensions the user can
     * zoom by dragging the mouse. Can be one of `x`, `y` or `xy`.
     */
-  var zoomType: js.UndefOr[OptionsZoomTypeValue] = js.native
+  var zoomType: js.UndefOr[OptionsZoomTypeValue] = js.undefined
 }
 
 object ChartOptions {
   @scala.inline
-  def apply(): ChartOptions = {
+  def apply(
+    alignTicks: js.UndefOr[Boolean] = js.undefined,
+    animation: Boolean | AnimationOptionsObject = null,
+    backgroundColor: ColorString | GradientColorObject | PatternObject = null,
+    borderColor: ColorString | GradientColorObject | PatternObject = null,
+    borderRadius: js.UndefOr[Double] = js.undefined,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    className: String = null,
+    colorCount: js.UndefOr[Double] = js.undefined,
+    displayErrors: js.UndefOr[Boolean] = js.undefined,
+    events: ChartEventsOptions = null,
+    height: js.UndefOr[Null | Double | String] = js.undefined,
+    ignoreHiddenSeries: js.UndefOr[Boolean] = js.undefined,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    map: String | js.Array[_] = null,
+    mapTransforms: js.Any = null,
+    margin: Double | js.Array[Double] = null,
+    marginBottom: js.UndefOr[Double] = js.undefined,
+    marginLeft: js.UndefOr[Double] = js.undefined,
+    marginRight: js.UndefOr[Double] = js.undefined,
+    marginTop: js.UndefOr[Double] = js.undefined,
+    options3d: Chart3dOptions = null,
+    panKey: OptionsPanKeyValue = null,
+    panning: js.UndefOr[Boolean] = js.undefined,
+    parallelAxes: ChartParallelAxesOptions | js.Array[ChartParallelAxesOptions] = null,
+    parallelCoordinates: js.UndefOr[Boolean] = js.undefined,
+    pinchType: OptionsPinchTypeValue = null,
+    plotBackgroundColor: ColorString | GradientColorObject | PatternObject = null,
+    plotBackgroundImage: String = null,
+    plotBorderColor: ColorString | GradientColorObject | PatternObject = null,
+    plotBorderWidth: js.UndefOr[Double] = js.undefined,
+    plotShadow: Boolean | CSSObject = null,
+    polar: js.UndefOr[Boolean] = js.undefined,
+    reflow: js.UndefOr[Boolean] = js.undefined,
+    renderTo: String | HTMLElement = null,
+    resetZoomButton: ChartResetZoomButtonOptions = null,
+    scrollablePlotArea: ChartScrollablePlotAreaOptions = null,
+    selectionMarkerFill: ColorString | GradientColorObject | PatternObject = null,
+    shadow: Boolean | CSSObject = null,
+    showAxes: js.UndefOr[Boolean] = js.undefined,
+    spacing: js.Array[Double] = null,
+    spacingBottom: js.UndefOr[Double] = js.undefined,
+    spacingLeft: js.UndefOr[Double] = js.undefined,
+    spacingRight: js.UndefOr[Double] = js.undefined,
+    spacingTop: js.UndefOr[Double] = js.undefined,
+    style: CSSObject = null,
+    styledMode: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null,
+    width: js.UndefOr[Null | Double | String] = js.undefined,
+    zoomKey: OptionsZoomKeyValue = null,
+    zoomType: OptionsZoomTypeValue = null
+  ): ChartOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alignTicks)) __obj.updateDynamic("alignTicks")(alignTicks.get.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorCount)) __obj.updateDynamic("colorCount")(colorCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayErrors)) __obj.updateDynamic("displayErrors")(displayErrors.get.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreHiddenSeries)) __obj.updateDynamic("ignoreHiddenSeries")(ignoreHiddenSeries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (mapTransforms != null) __obj.updateDynamic("mapTransforms")(mapTransforms.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginBottom)) __obj.updateDynamic("marginBottom")(marginBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginLeft)) __obj.updateDynamic("marginLeft")(marginLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginRight)) __obj.updateDynamic("marginRight")(marginRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(marginTop)) __obj.updateDynamic("marginTop")(marginTop.get.asInstanceOf[js.Any])
+    if (options3d != null) __obj.updateDynamic("options3d")(options3d.asInstanceOf[js.Any])
+    if (panKey != null) __obj.updateDynamic("panKey")(panKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(panning)) __obj.updateDynamic("panning")(panning.get.asInstanceOf[js.Any])
+    if (parallelAxes != null) __obj.updateDynamic("parallelAxes")(parallelAxes.asInstanceOf[js.Any])
+    if (!js.isUndefined(parallelCoordinates)) __obj.updateDynamic("parallelCoordinates")(parallelCoordinates.get.asInstanceOf[js.Any])
+    if (pinchType != null) __obj.updateDynamic("pinchType")(pinchType.asInstanceOf[js.Any])
+    if (plotBackgroundColor != null) __obj.updateDynamic("plotBackgroundColor")(plotBackgroundColor.asInstanceOf[js.Any])
+    if (plotBackgroundImage != null) __obj.updateDynamic("plotBackgroundImage")(plotBackgroundImage.asInstanceOf[js.Any])
+    if (plotBorderColor != null) __obj.updateDynamic("plotBorderColor")(plotBorderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(plotBorderWidth)) __obj.updateDynamic("plotBorderWidth")(plotBorderWidth.get.asInstanceOf[js.Any])
+    if (plotShadow != null) __obj.updateDynamic("plotShadow")(plotShadow.asInstanceOf[js.Any])
+    if (!js.isUndefined(polar)) __obj.updateDynamic("polar")(polar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reflow)) __obj.updateDynamic("reflow")(reflow.get.asInstanceOf[js.Any])
+    if (renderTo != null) __obj.updateDynamic("renderTo")(renderTo.asInstanceOf[js.Any])
+    if (resetZoomButton != null) __obj.updateDynamic("resetZoomButton")(resetZoomButton.asInstanceOf[js.Any])
+    if (scrollablePlotArea != null) __obj.updateDynamic("scrollablePlotArea")(scrollablePlotArea.asInstanceOf[js.Any])
+    if (selectionMarkerFill != null) __obj.updateDynamic("selectionMarkerFill")(selectionMarkerFill.asInstanceOf[js.Any])
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAxes)) __obj.updateDynamic("showAxes")(showAxes.get.asInstanceOf[js.Any])
+    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacingBottom)) __obj.updateDynamic("spacingBottom")(spacingBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacingLeft)) __obj.updateDynamic("spacingLeft")(spacingLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacingRight)) __obj.updateDynamic("spacingRight")(spacingRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacingTop)) __obj.updateDynamic("spacingTop")(spacingTop.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(styledMode)) __obj.updateDynamic("styledMode")(styledMode.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (zoomKey != null) __obj.updateDynamic("zoomKey")(zoomKey.asInstanceOf[js.Any])
+    if (zoomType != null) __obj.updateDynamic("zoomType")(zoomType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartOptions]
   }
-  @scala.inline
-  implicit class ChartOptionsOps[Self <: ChartOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignTicks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Boolean | AnimationOptionsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: ChartEventsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(null)
-        ret
-    }
-    @scala.inline
-    def withIgnoreHiddenSeries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreHiddenSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreHiddenSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreHiddenSeries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInverted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInverted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: String | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapTransforms(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTransforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapTransforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarginTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarginTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions3d(value: Chart3dOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options3d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions3d: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options3d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanKey(value: OptionsPanKeyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelAxes(value: ChartParallelAxesOptions | js.Array[ChartParallelAxesOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelAxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelAxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelCoordinates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelCoordinates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelCoordinates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelCoordinates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinchType(value: OptionsPinchTypeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinchType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinchType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinchType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBackgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotBackgroundImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBackgroundImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotBackgroundImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBackgroundImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBorderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBorderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBorderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotBorderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlotShadow(value: Boolean | CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlotShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReflow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderToHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderTo(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetZoomButton(value: ChartResetZoomButtonOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoomButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetZoomButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoomButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollablePlotArea(value: ChartScrollablePlotAreaOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollablePlotArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollablePlotArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollablePlotArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMarkerFill(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMarkerFill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMarkerFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMarkerFill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadow(value: Boolean | CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAxes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacingBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacingBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacingLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacingLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacingRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacingRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacingTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacingTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyledMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styledMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyledMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styledMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidthNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(null)
-        ret
-    }
-    @scala.inline
-    def withZoomKey(value: OptionsZoomKeyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomType(value: OptionsZoomTypeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

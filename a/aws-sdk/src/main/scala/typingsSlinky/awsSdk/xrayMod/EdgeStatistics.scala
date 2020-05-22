@@ -30,77 +30,20 @@ trait EdgeStatistics extends js.Object {
 
 object EdgeStatistics {
   @scala.inline
-  def apply(): EdgeStatistics = {
+  def apply(
+    ErrorStatistics: ErrorStatistics = null,
+    FaultStatistics: FaultStatistics = null,
+    OkCount: js.UndefOr[NullableLong] = js.undefined,
+    TotalCount: js.UndefOr[NullableLong] = js.undefined,
+    TotalResponseTime: js.UndefOr[NullableDouble] = js.undefined
+  ): EdgeStatistics = {
     val __obj = js.Dynamic.literal()
+    if (ErrorStatistics != null) __obj.updateDynamic("ErrorStatistics")(ErrorStatistics.asInstanceOf[js.Any])
+    if (FaultStatistics != null) __obj.updateDynamic("FaultStatistics")(FaultStatistics.asInstanceOf[js.Any])
+    if (!js.isUndefined(OkCount)) __obj.updateDynamic("OkCount")(OkCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalCount)) __obj.updateDynamic("TotalCount")(TotalCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalResponseTime)) __obj.updateDynamic("TotalResponseTime")(TotalResponseTime.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeStatistics]
   }
-  @scala.inline
-  implicit class EdgeStatisticsOps[Self <: EdgeStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorStatistics(value: ErrorStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorStatistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaultStatistics(value: FaultStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaultStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaultStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FaultStatistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOkCount(value: NullableLong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OkCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOkCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OkCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalCount(value: NullableLong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalResponseTime(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalResponseTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalResponseTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalResponseTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

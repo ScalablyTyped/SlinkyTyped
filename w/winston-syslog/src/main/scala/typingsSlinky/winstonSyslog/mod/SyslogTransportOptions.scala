@@ -1,157 +1,64 @@
 package typingsSlinky.winstonSyslog.mod
 
+import typingsSlinky.logform.mod.Format_
 import typingsSlinky.winstonTransport.mod.TransportStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SyslogTransportOptions extends TransportStreamOptions {
-  var app_name: js.UndefOr[String] = js.native
-  var eol: js.UndefOr[String] = js.native
-  var facility: js.UndefOr[String] = js.native
-  var host: js.UndefOr[String] = js.native
-  var localhost: js.UndefOr[String] = js.native
-  var path: js.UndefOr[String] = js.native
-  var pid: js.UndefOr[Double] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var protocol: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var app_name: js.UndefOr[String] = js.undefined
+  var eol: js.UndefOr[String] = js.undefined
+  var facility: js.UndefOr[String] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var localhost: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var pid: js.UndefOr[Double] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var protocol: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object SyslogTransportOptions {
   @scala.inline
-  def apply(): SyslogTransportOptions = {
+  def apply(
+    app_name: String = null,
+    close: () => Unit = null,
+    eol: String = null,
+    facility: String = null,
+    format: Format_ = null,
+    handleExceptions: js.UndefOr[Boolean] = js.undefined,
+    host: String = null,
+    level: String = null,
+    localhost: String = null,
+    log: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    logv: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    path: String = null,
+    pid: js.UndefOr[Double] = js.undefined,
+    port: js.UndefOr[Double] = js.undefined,
+    protocol: String = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null
+  ): SyslogTransportOptions = {
     val __obj = js.Dynamic.literal()
+    if (app_name != null) __obj.updateDynamic("app_name")(app_name.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction0(close))
+    if (eol != null) __obj.updateDynamic("eol")(eol.asInstanceOf[js.Any])
+    if (facility != null) __obj.updateDynamic("facility")(facility.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleExceptions)) __obj.updateDynamic("handleExceptions")(handleExceptions.get.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (localhost != null) __obj.updateDynamic("localhost")(localhost.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction2(log))
+    if (logv != null) __obj.updateDynamic("logv")(js.Any.fromFunction2(logv))
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(pid)) __obj.updateDynamic("pid")(pid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyslogTransportOptions]
   }
-  @scala.inline
-  implicit class SyslogTransportOptionsOps[Self <: SyslogTransportOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApp_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApp_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalhost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localhost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalhost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localhost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

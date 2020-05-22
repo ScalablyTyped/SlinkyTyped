@@ -5,43 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Design extends js.Object {
-  val body: Rows = js.native
-  val counters: js.UndefOr[js.Object] = js.native
+  val body: Rows
+  val counters: js.UndefOr[js.Object] = js.undefined
 }
 
 object Design {
   @scala.inline
-  def apply(body: Rows): Design = {
+  def apply(body: Rows, counters: js.Object = null): Design = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+    if (counters != null) __obj.updateDynamic("counters")(counters.asInstanceOf[js.Any])
     __obj.asInstanceOf[Design]
   }
-  @scala.inline
-  implicit class DesignOps[Self <: Design] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Rows): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCounters(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

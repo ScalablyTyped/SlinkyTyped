@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * receives a description of a configuration schema as a sequence of events.
   * @since OOo 1.1.2
   */
-@js.native
 trait XSchemaHandler extends XInterface {
   /**
     * receives notification that the current group has a child node that is an instance of a specified template.
@@ -19,14 +18,14 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there isn't a group node in progress currentlyif there already is a node with t
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def addInstance(aName: String, aTemplate: TemplateIdentifier): Unit = js.native
+  def addInstance(aName: String, aTemplate: TemplateIdentifier): Unit
   /**
     * receives notification that the current set can contain items that are instances of a specified template.
     * @param aItemType specifies a template that is accepted as valid item type for the current set node.
     * @throws com::sun::star::configuration::backend::MalformedDataException if there isn't a set node in progress currentlyif the template is not foundif the
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def addItemType(aItemType: TemplateIdentifier): Unit = js.native
+  def addItemType(aItemType: TemplateIdentifier): Unit
   /**
     * receives notification that a property is added to the current node.
     *
@@ -38,7 +37,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there isn't a group or extensible node in progress currentlyif a property with
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def addProperty(aName: String, aAttributes: Double, aType: `type`): Unit = js.native
+  def addProperty(aName: String, aAttributes: Double, aType: `type`): Unit
   /**
     * receives notification that a property having a default value is added to the current node.
     * @param aName specifies the name of the new property.
@@ -48,7 +47,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there isn't a group or extensible node in progress currentlyif a property with
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def addPropertyWithDefault(aName: String, aAttributes: Double, aDefaultValue: js.Any): Unit = js.native
+  def addPropertyWithDefault(aName: String, aAttributes: Double, aDefaultValue: js.Any): Unit
   /**
     * receives notification that a component description is complete.
     *
@@ -56,7 +55,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if invalid data is detected in the componentif there is a unfinished subnode in pr
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def endComponent(): Unit = js.native
+  def endComponent(): Unit
   /**
     * receives notification that a node description is complete.
     *
@@ -64,7 +63,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if the name is not a the name of the node in progressif invalid data is detected i
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def endNode(): Unit = js.native
+  def endNode(): Unit
   /**
     * receives notification that the current schema description is complete.
     *
@@ -72,7 +71,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if invalid data is detected in the schemaif there is a unfinished component or tem
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def endSchema(): Unit = js.native
+  def endSchema(): Unit
   /**
     * receives notification that a template description is complete.
     *
@@ -80,14 +79,14 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if invalid data is detected in the templateif there is a unfinished subnode in pro
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def endTemplate(): Unit = js.native
+  def endTemplate(): Unit
   /**
     * receives notification that the schema depends on templates from a different component.
     * @param aName specifies the name of the component.
     * @throws com::sun::star::configuration::backend::MalformedDataException if there is a unfinished component or template in progressif no schema is started
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def importComponent(aName: String): Unit = js.native
+  def importComponent(aName: String): Unit
   /**
     * receives notification that a component description is started.
     *
@@ -96,7 +95,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there is a unfinished component or template in progressif no schema is started
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def startComponent(aName: String): Unit = js.native
+  def startComponent(aName: String): Unit
   /**
     * receives notification that a group description is started.
     *
@@ -107,7 +106,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there isn't a group node in progress currentlyif there already is a node with t
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def startGroup(aName: String, aAttributes: Double): Unit = js.native
+  def startGroup(aName: String, aAttributes: Double): Unit
   /**
     * receives notification that a template description is started for a group.
     *
@@ -118,7 +117,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there is a unfinished component or template in progressif no schema is started
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def startGroupTemplate(aTemplate: TemplateIdentifier, aAttributes: Double): Unit = js.native
+  def startGroupTemplate(aTemplate: TemplateIdentifier, aAttributes: Double): Unit
   /**
     * receives notification that a schema description is started.
     *
@@ -126,7 +125,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if a schema is already started (and has not been ended).
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def startSchema(): Unit = js.native
+  def startSchema(): Unit
   /**
     * receives notification that a set description is started.
     *
@@ -138,7 +137,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there isn't a group node in progress currentlyif there already is a node with t
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def startSet(aName: String, aAttributes: Double, aItemType: TemplateIdentifier): Unit = js.native
+  def startSet(aName: String, aAttributes: Double, aItemType: TemplateIdentifier): Unit
   /**
     * receives notification that a template description is started for a set.
     *
@@ -150,7 +149,7 @@ trait XSchemaHandler extends XInterface {
     * @throws com::sun::star::configuration::backend::MalformedDataException if there is a unfinished component or template in progressif no schema is started
     * @throws com::sun::star::lang::WrappedTargetException if an error occurs processing the event.
     */
-  def startSetTemplate(aTemplate: TemplateIdentifier, aAttributes: Double, aItemType: TemplateIdentifier): Unit = js.native
+  def startSetTemplate(aTemplate: TemplateIdentifier, aAttributes: Double, aItemType: TemplateIdentifier): Unit
 }
 
 object XSchemaHandler {
@@ -178,103 +177,5 @@ object XSchemaHandler {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addInstance = js.Any.fromFunction2(addInstance), addItemType = js.Any.fromFunction1(addItemType), addProperty = js.Any.fromFunction3(addProperty), addPropertyWithDefault = js.Any.fromFunction3(addPropertyWithDefault), endComponent = js.Any.fromFunction0(endComponent), endNode = js.Any.fromFunction0(endNode), endSchema = js.Any.fromFunction0(endSchema), endTemplate = js.Any.fromFunction0(endTemplate), importComponent = js.Any.fromFunction1(importComponent), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), startComponent = js.Any.fromFunction1(startComponent), startGroup = js.Any.fromFunction2(startGroup), startGroupTemplate = js.Any.fromFunction2(startGroupTemplate), startSchema = js.Any.fromFunction0(startSchema), startSet = js.Any.fromFunction3(startSet), startSetTemplate = js.Any.fromFunction3(startSetTemplate))
     __obj.asInstanceOf[XSchemaHandler]
   }
-  @scala.inline
-  implicit class XSchemaHandlerOps[Self <: XSchemaHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddInstance(value: (String, TemplateIdentifier) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addInstance")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAddItemType(value: TemplateIdentifier => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addItemType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddProperty(value: (String, Double, `type`) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addProperty")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withAddPropertyWithDefault(value: (String, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPropertyWithDefault")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEndComponent(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endComponent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEndNode(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEndSchema(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endSchema")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEndTemplate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTemplate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withImportComponent(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartComponent(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartGroup(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startGroup")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStartGroupTemplate(value: (TemplateIdentifier, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startGroupTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStartSchema(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startSchema")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartSet(value: (String, Double, TemplateIdentifier) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startSet")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withStartSetTemplate(value: (TemplateIdentifier, Double, TemplateIdentifier) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startSetTemplate")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,14 @@ trait CreatePolicyVersionRequest extends js.Object {
 
 object CreatePolicyVersionRequest {
   @scala.inline
-  def apply(policyDocument: PolicyDocument, policyName: PolicyName): CreatePolicyVersionRequest = {
+  def apply(
+    policyDocument: PolicyDocument,
+    policyName: PolicyName,
+    setAsDefault: js.UndefOr[SetAsDefault] = js.undefined
+  ): CreatePolicyVersionRequest = {
     val __obj = js.Dynamic.literal(policyDocument = policyDocument.asInstanceOf[js.Any], policyName = policyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(setAsDefault)) __obj.updateDynamic("setAsDefault")(setAsDefault.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePolicyVersionRequest]
   }
-  @scala.inline
-  implicit class CreatePolicyVersionRequestOps[Self <: CreatePolicyVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyDocument(value: PolicyDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: PolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetAsDefault(value: SetAsDefault): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetAsDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsDefault")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

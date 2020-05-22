@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChildrenVisibleMin extends js.Object {
   /**
     * Children will not be shown when area size of a node is smaller
@@ -38,7 +37,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.childrenVisibleMin
     */
-  var childrenVisibleMin: js.UndefOr[Double] = js.native
+  var childrenVisibleMin: js.UndefOr[Double] = js.undefined
   /**
     * A color list for a level.
     * Each node in the level will obtain a color from the color
@@ -67,7 +66,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.color
     */
-  var color: js.UndefOr[js.Array[_]] = js.native
+  var color: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * It indicates the range of tranparent rate (color alpha) for
     * nodes in a level . The range of values is 0 ~ 1.
@@ -97,7 +96,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.colorAlpha
     */
-  var colorAlpha: js.UndefOr[js.Array[_]] = js.native
+  var colorAlpha: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Specify the rule according to which each node obtain color
     * from
@@ -164,7 +163,7 @@ trait ChildrenVisibleMin extends js.Object {
     * "index"
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.colorMappingBy
     */
-  var colorMappingBy: js.UndefOr[String] = js.native
+  var colorMappingBy: js.UndefOr[String] = js.undefined
   /**
     * It indicates the range of saturation (color alpha) for nodes
     * in a level . The range of values is 0 ~ 1.
@@ -194,11 +193,11 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.colorSaturation
     */
-  var colorSaturation: js.UndefOr[Double] = js.native
+  var colorSaturation: js.UndefOr[Double] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.emphasis
     */
-  var emphasis: js.UndefOr[UpperLabel] = js.native
+  var emphasis: js.UndefOr[UpperLabel] = js.undefined
   /**
     *
     * > Tps: In treemap, `itemStyle` attribute could appear in
@@ -220,7 +219,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderColorSaturation] = js.native
+  var itemStyle: js.UndefOr[BorderColorSaturation] = js.undefined
   /**
     * `label` decribes the style of the label in each node.
     *
@@ -243,7 +242,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.label
     */
-  var label: js.UndefOr[Ellipsis] = js.native
+  var label: js.UndefOr[Ellipsis] = js.undefined
   /**
     * `upperLabel` is used to specify whether show label when the
     * node has children. When
@@ -290,7 +289,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.upperLabel
     */
-  var upperLabel: js.UndefOr[TextShadowOffsetX] = js.native
+  var upperLabel: js.UndefOr[TextShadowOffsetX] = js.undefined
   /**
     * A node will not be shown when its area size is smaller than
     * this value (unit: px square).
@@ -326,7 +325,7 @@ trait ChildrenVisibleMin extends js.Object {
     * 10
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.visibleMin
     */
-  var visibleMin: js.UndefOr[Double] = js.native
+  var visibleMin: js.UndefOr[Double] = js.undefined
   /**
     * `treemap` is able to map any dimensions of data to visual.
     *
@@ -360,7 +359,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.visualDimension
     */
-  var visualDimension: js.UndefOr[Double] = js.native
+  var visualDimension: js.UndefOr[Double] = js.undefined
   /**
     * The maximal value of current level.
     * Auto-statistics by default.
@@ -373,7 +372,7 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.visualMax
     */
-  var visualMax: js.UndefOr[Double] = js.native
+  var visualMax: js.UndefOr[Double] = js.undefined
   /**
     * The minimal value of current level.
     * Auto-statistics by default.
@@ -386,178 +385,41 @@ trait ChildrenVisibleMin extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels.visualMin
     */
-  var visualMin: js.UndefOr[Double] = js.native
+  var visualMin: js.UndefOr[Double] = js.undefined
 }
 
 object ChildrenVisibleMin {
   @scala.inline
-  def apply(): ChildrenVisibleMin = {
+  def apply(
+    childrenVisibleMin: js.UndefOr[Double] = js.undefined,
+    color: js.Array[_] = null,
+    colorAlpha: js.Array[_] = null,
+    colorMappingBy: String = null,
+    colorSaturation: js.UndefOr[Double] = js.undefined,
+    emphasis: UpperLabel = null,
+    itemStyle: BorderColorSaturation = null,
+    label: Ellipsis = null,
+    upperLabel: TextShadowOffsetX = null,
+    visibleMin: js.UndefOr[Double] = js.undefined,
+    visualDimension: js.UndefOr[Double] = js.undefined,
+    visualMax: js.UndefOr[Double] = js.undefined,
+    visualMin: js.UndefOr[Double] = js.undefined
+  ): ChildrenVisibleMin = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(childrenVisibleMin)) __obj.updateDynamic("childrenVisibleMin")(childrenVisibleMin.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (colorAlpha != null) __obj.updateDynamic("colorAlpha")(colorAlpha.asInstanceOf[js.Any])
+    if (colorMappingBy != null) __obj.updateDynamic("colorMappingBy")(colorMappingBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorSaturation)) __obj.updateDynamic("colorSaturation")(colorSaturation.get.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (upperLabel != null) __obj.updateDynamic("upperLabel")(upperLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibleMin)) __obj.updateDynamic("visibleMin")(visibleMin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visualDimension)) __obj.updateDynamic("visualDimension")(visualDimension.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visualMax)) __obj.updateDynamic("visualMax")(visualMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visualMin)) __obj.updateDynamic("visualMin")(visualMin.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildrenVisibleMin]
   }
-  @scala.inline
-  implicit class ChildrenVisibleMinOps[Self <: ChildrenVisibleMin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildrenVisibleMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenVisibleMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildrenVisibleMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenVisibleMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorAlpha(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMappingBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMappingBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMappingBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMappingBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSaturation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSaturation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSaturation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSaturation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: UpperLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderColorSaturation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: Ellipsis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperLabel(value: TextShadowOffsetX): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibleMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualDimension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualDimension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualDimension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

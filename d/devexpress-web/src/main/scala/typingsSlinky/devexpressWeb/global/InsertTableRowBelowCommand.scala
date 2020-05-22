@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertTableRowBelowCommand")
 @js.native
 class InsertTableRowBelowCommand ()
-  extends typingsSlinky.devexpressWeb.InsertTableRowBelowCommand
+  extends typingsSlinky.devexpressWeb.InsertTableRowBelowCommand {
+  /**
+    * Executes the InsertTableRowBelowCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

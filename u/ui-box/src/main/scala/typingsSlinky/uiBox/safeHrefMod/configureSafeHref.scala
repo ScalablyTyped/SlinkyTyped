@@ -1,0 +1,12 @@
+package typingsSlinky.uiBox.safeHrefMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("ui-box/dist/utils/safeHref", "configureSafeHref")
+@js.native
+object configureSafeHref extends js.Object {
+  def apply(configObject: SafeHrefConfigObj): Unit = js.native
+}
+

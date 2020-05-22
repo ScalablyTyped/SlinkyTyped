@@ -60,6 +60,15 @@ class Renderer () extends IRenderer {
     */
   def renderIcon(data: IRenderData): VirtualElement = js.native
   /**
+    * Render the virtual element for a menu bar item.
+    *
+    * @param data - The data to use for rendering the item.
+    *
+    * @returns A virtual element representing the item.
+    */
+  /* CompleteClass */
+  override def renderItem(data: IRenderData): VirtualElement = js.native
+  /**
     * Render the label element for a menu item.
     *
     * @param data - The data to use for rendering the label.

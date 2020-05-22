@@ -19,41 +19,11 @@ trait AttachmentState extends js.Object {
 
 object AttachmentState {
   @scala.inline
-  def apply(): AttachmentState = {
+  def apply(elb: Input[String] = null, instance: Input[String] = null): AttachmentState = {
     val __obj = js.Dynamic.literal()
+    if (elb != null) __obj.updateDynamic("elb")(elb.asInstanceOf[js.Any])
+    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentState]
   }
-  @scala.inline
-  implicit class AttachmentStateOps[Self <: AttachmentState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElb(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

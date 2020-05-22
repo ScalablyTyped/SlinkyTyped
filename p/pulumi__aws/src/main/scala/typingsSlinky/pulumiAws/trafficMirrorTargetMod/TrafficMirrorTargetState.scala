@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.trafficMirrorTargetMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,57 +20,26 @@ trait TrafficMirrorTargetState extends js.Object {
     * The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
     */
   val networkLoadBalancerArn: js.UndefOr[Input[String]] = js.native
+  /**
+    * Key-value mapping of resource tags.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[_]]] = js.native
 }
 
 object TrafficMirrorTargetState {
   @scala.inline
-  def apply(): TrafficMirrorTargetState = {
+  def apply(
+    description: Input[String] = null,
+    networkInterfaceId: Input[String] = null,
+    networkLoadBalancerArn: Input[String] = null,
+    tags: Input[StringDictionary[_]] = null
+  ): TrafficMirrorTargetState = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (networkInterfaceId != null) __obj.updateDynamic("networkInterfaceId")(networkInterfaceId.asInstanceOf[js.Any])
+    if (networkLoadBalancerArn != null) __obj.updateDynamic("networkLoadBalancerArn")(networkLoadBalancerArn.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficMirrorTargetState]
   }
-  @scala.inline
-  implicit class TrafficMirrorTargetStateOps[Self <: TrafficMirrorTargetState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkInterfaceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkInterfaceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkLoadBalancerArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkLoadBalancerArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkLoadBalancerArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkLoadBalancerArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -57,6 +57,8 @@ object SiderMenu {
     @scala.inline
     def onOpenChange(value: /* openKeys */ WithFalse[js.Array[String]] => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
     @scala.inline
+    def siderMenuStyle(value: CSSProperties): this.type = set("siderMenuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
     def siderWidth(value: Double): this.type = set("siderWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

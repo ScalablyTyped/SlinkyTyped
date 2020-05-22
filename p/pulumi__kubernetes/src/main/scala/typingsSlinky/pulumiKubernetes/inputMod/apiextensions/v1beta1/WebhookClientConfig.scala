@@ -8,20 +8,19 @@ import scala.scalajs.js.annotation._
 /**
   * WebhookClientConfig contains the information to make a TLS connection with the webhook.
   */
-@js.native
 trait WebhookClientConfig extends js.Object {
   /**
     * caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server
     * certificate. If unspecified, system trust roots on the apiserver are used.
     */
-  var caBundle: js.UndefOr[Input[String]] = js.native
+  var caBundle: js.UndefOr[Input[String]] = js.undefined
   /**
     * service is a reference to the service for this webhook. Either service or url must be
     * specified.
     *
     * If the webhook is running within the cluster, then you should use `service`.
     */
-  var service: js.UndefOr[Input[ServiceReference]] = js.native
+  var service: js.UndefOr[Input[ServiceReference]] = js.undefined
   /**
     * url gives the location of the webhook, in standard URL form (`scheme://host:port/path`).
     * Exactly one of `url` or `service` must be specified.
@@ -44,58 +43,17 @@ trait WebhookClientConfig extends js.Object {
     * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments
     * ("#...") and query parameters ("?...") are not allowed, either.
     */
-  var url: js.UndefOr[Input[String]] = js.native
+  var url: js.UndefOr[Input[String]] = js.undefined
 }
 
 object WebhookClientConfig {
   @scala.inline
-  def apply(): WebhookClientConfig = {
+  def apply(caBundle: Input[String] = null, service: Input[ServiceReference] = null, url: Input[String] = null): WebhookClientConfig = {
     val __obj = js.Dynamic.literal()
+    if (caBundle != null) __obj.updateDynamic("caBundle")(caBundle.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookClientConfig]
   }
-  @scala.inline
-  implicit class WebhookClientConfigOps[Self <: WebhookClientConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaBundle(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caBundle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaBundle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caBundle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: Input[ServiceReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

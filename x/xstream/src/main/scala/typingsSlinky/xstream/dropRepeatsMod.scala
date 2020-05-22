@@ -1,5 +1,6 @@
 package typingsSlinky.xstream
 
+import typingsSlinky.xstream.mod.InternalListener
 import typingsSlinky.xstream.mod.Operator
 import typingsSlinky.xstream.mod.Stream
 import scala.scalajs.js
@@ -13,7 +14,25 @@ object dropRepeatsMod extends js.Object {
   class DropRepeatsOperator[T] protected () extends Operator[T, T] {
     def this(ins: Stream[T]) = this()
     def this(ins: Stream[T], fn: js.Function2[/* x */ T, /* y */ T, Boolean]) = this()
+    /* CompleteClass */
+    override var ins: Stream[T] = js.native
+    /* CompleteClass */
+    override var out: Stream[T] = js.native
+    /* CompleteClass */
+    override var `type`: String = js.native
     var v: js.Any = js.native
+    /* CompleteClass */
+    override def _c(): Unit = js.native
+    /* CompleteClass */
+    override def _e(err: js.Any): Unit = js.native
+    /* CompleteClass */
+    override def _n(v: T): Unit = js.native
+    /* CompleteClass */
+    override def _start(listener: InternalListener[T]): Unit = js.native
+    /* CompleteClass */
+    override def _start(out: Stream[T]): Unit = js.native
+    /* CompleteClass */
+    override def _stop(): Unit = js.native
     def isEq(x: T, y: T): Boolean = js.native
   }
   

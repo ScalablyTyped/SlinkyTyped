@@ -17,29 +17,10 @@ trait SchemaUpdateAvailabilityResponse extends js.Object {
 
 object SchemaUpdateAvailabilityResponse {
   @scala.inline
-  def apply(): SchemaUpdateAvailabilityResponse = {
+  def apply(availabilities: js.Array[SchemaAvailability] = null): SchemaUpdateAvailabilityResponse = {
     val __obj = js.Dynamic.literal()
+    if (availabilities != null) __obj.updateDynamic("availabilities")(availabilities.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateAvailabilityResponse]
   }
-  @scala.inline
-  implicit class SchemaUpdateAvailabilityResponseOps[Self <: SchemaUpdateAvailabilityResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilities(value: js.Array[SchemaAvailability]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilities")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

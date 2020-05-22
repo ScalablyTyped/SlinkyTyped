@@ -12,7 +12,7 @@ object Unlink {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Unlink] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Unlink](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Unlink.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Unlink] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Unlink](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Unlink] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Unlink](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Unlink.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Unlink] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Unlink](js.Array(this.component, js.Dictionary.empty))()
 }
 

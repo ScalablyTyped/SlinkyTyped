@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** URLShortcut Object */
-@js.native
 trait WshURLShortcut extends js.Object {
-  val FullName: String = js.native
+  val FullName: String
   @JSName("IWshRuntimeLibrary.WshURLShortcut_typekey")
-  var IWshRuntimeLibraryDotWshURLShortcut_typekey: WshURLShortcut = js.native
-  var TargetPath: String = js.native
-  def Load(PathLink: String): Unit = js.native
-  def Save(): Unit = js.native
+  var IWshRuntimeLibraryDotWshURLShortcut_typekey: WshURLShortcut
+  var TargetPath: String
+  def Load(PathLink: String): Unit
+  def Save(): Unit
 }
 
 object WshURLShortcut {
@@ -28,43 +27,5 @@ object WshURLShortcut {
     __obj.updateDynamic("IWshRuntimeLibrary.WshURLShortcut_typekey")(IWshRuntimeLibraryDotWshURLShortcut_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[WshURLShortcut]
   }
-  @scala.inline
-  implicit class WshURLShortcutOps[Self <: WshURLShortcut] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIWshRuntimeLibraryDotWshURLShortcut_typekey(value: WshURLShortcut): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IWshRuntimeLibrary.WshURLShortcut_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoad(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Load")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSave(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Save")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTargetPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

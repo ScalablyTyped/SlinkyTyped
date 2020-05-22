@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BindingLoggerSettings extends js.Object {
-  var activated: js.UndefOr[Boolean] = js.native
-  var cache: js.UndefOr[Boolean] = js.native
-  var constraint: js.UndefOr[Boolean] = js.native
-  var dynamicValue: js.UndefOr[Boolean] = js.native
-  var factory: js.UndefOr[Boolean] = js.native
-  var implementationType: js.UndefOr[Boolean] = js.native
-  var onActivation: js.UndefOr[Boolean] = js.native
-  var provider: js.UndefOr[Boolean] = js.native
-  var scope: js.UndefOr[Boolean] = js.native
-  var serviceIdentifier: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[Boolean] = js.native
+  var activated: js.UndefOr[Boolean] = js.undefined
+  var cache: js.UndefOr[Boolean] = js.undefined
+  var constraint: js.UndefOr[Boolean] = js.undefined
+  var dynamicValue: js.UndefOr[Boolean] = js.undefined
+  var factory: js.UndefOr[Boolean] = js.undefined
+  var implementationType: js.UndefOr[Boolean] = js.undefined
+  var onActivation: js.UndefOr[Boolean] = js.undefined
+  var provider: js.UndefOr[Boolean] = js.undefined
+  var scope: js.UndefOr[Boolean] = js.undefined
+  var serviceIdentifier: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[Boolean] = js.undefined
 }
 
 object BindingLoggerSettings {
   @scala.inline
-  def apply(): BindingLoggerSettings = {
+  def apply(
+    activated: js.UndefOr[Boolean] = js.undefined,
+    cache: js.UndefOr[Boolean] = js.undefined,
+    constraint: js.UndefOr[Boolean] = js.undefined,
+    dynamicValue: js.UndefOr[Boolean] = js.undefined,
+    factory: js.UndefOr[Boolean] = js.undefined,
+    implementationType: js.UndefOr[Boolean] = js.undefined,
+    onActivation: js.UndefOr[Boolean] = js.undefined,
+    provider: js.UndefOr[Boolean] = js.undefined,
+    scope: js.UndefOr[Boolean] = js.undefined,
+    serviceIdentifier: js.UndefOr[Boolean] = js.undefined,
+    `type`: js.UndefOr[Boolean] = js.undefined
+  ): BindingLoggerSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activated)) __obj.updateDynamic("activated")(activated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constraint)) __obj.updateDynamic("constraint")(constraint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamicValue)) __obj.updateDynamic("dynamicValue")(dynamicValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(factory)) __obj.updateDynamic("factory")(factory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(implementationType)) __obj.updateDynamic("implementationType")(implementationType.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onActivation)) __obj.updateDynamic("onActivation")(onActivation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(provider)) __obj.updateDynamic("provider")(provider.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scope)) __obj.updateDynamic("scope")(scope.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serviceIdentifier)) __obj.updateDynamic("serviceIdentifier")(serviceIdentifier.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BindingLoggerSettings]
   }
-  @scala.inline
-  implicit class BindingLoggerSettingsOps[Self <: BindingLoggerSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImplementationType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImplementationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnActivation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnActivation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvider(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceIdentifier(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

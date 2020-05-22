@@ -22,53 +22,12 @@ trait ListThingRegistrationTaskReportsResponse extends js.Object {
 
 object ListThingRegistrationTaskReportsResponse {
   @scala.inline
-  def apply(): ListThingRegistrationTaskReportsResponse = {
+  def apply(nextToken: NextToken = null, reportType: ReportType = null, resourceLinks: S3FileUrlList = null): ListThingRegistrationTaskReportsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (reportType != null) __obj.updateDynamic("reportType")(reportType.asInstanceOf[js.Any])
+    if (resourceLinks != null) __obj.updateDynamic("resourceLinks")(resourceLinks.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListThingRegistrationTaskReportsResponse]
   }
-  @scala.inline
-  implicit class ListThingRegistrationTaskReportsResponseOps[Self <: ListThingRegistrationTaskReportsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportType(value: ReportType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceLinks(value: S3FileUrlList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLinks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

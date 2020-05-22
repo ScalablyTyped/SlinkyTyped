@@ -1,5 +1,9 @@
 package typingsSlinky.applicationinsightsJs.global
 
+import typingsSlinky.applicationinsightsJs.AI.DataPointType
+import typingsSlinky.applicationinsightsJs.AI.DependencyKind
+import typingsSlinky.applicationinsightsJs.AI.DependencySourceType
+import typingsSlinky.applicationinsightsJs.AI.SeverityLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,35 +13,173 @@ import scala.scalajs.js.annotation._
 object AI extends js.Object {
   @js.native
   class DataPoint ()
-    extends typingsSlinky.applicationinsightsJs.AI.DataPoint
+    extends typingsSlinky.applicationinsightsJs.AI.DataPoint {
+    /* CompleteClass */
+    override var count: Double = js.native
+    /* CompleteClass */
+    override var kind: DataPointType = js.native
+    /* CompleteClass */
+    override var max: Double = js.native
+    /* CompleteClass */
+    override var min: Double = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var stdDev: Double = js.native
+    /* CompleteClass */
+    override var value: Double = js.native
+  }
   
   @js.native
   class EventData ()
-    extends typingsSlinky.applicationinsightsJs.AI.EventData
+    extends typingsSlinky.applicationinsightsJs.AI.EventData {
+    /* CompleteClass */
+    override var measurements: js.Any = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var properties: js.Any = js.native
+    /* CompleteClass */
+    override var ver: Double = js.native
+  }
   
   @js.native
   class ExceptionDetails ()
-    extends typingsSlinky.applicationinsightsJs.AI.ExceptionDetails
+    extends typingsSlinky.applicationinsightsJs.AI.ExceptionDetails {
+    /* CompleteClass */
+    override var hasFullStack: Boolean = js.native
+    /* CompleteClass */
+    override var id: Double = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var outerId: Double = js.native
+    /* CompleteClass */
+    override var parsedStack: js.Array[typingsSlinky.applicationinsightsJs.AI.StackFrame] = js.native
+    /* CompleteClass */
+    override var stack: String = js.native
+    /* CompleteClass */
+    override var typeName: String = js.native
+  }
   
   @js.native
   class MessageData ()
-    extends typingsSlinky.applicationinsightsJs.AI.MessageData
+    extends typingsSlinky.applicationinsightsJs.AI.MessageData {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var properties: js.Any = js.native
+    /* CompleteClass */
+    override var severityLevel: SeverityLevel = js.native
+    /* CompleteClass */
+    override var ver: Double = js.native
+  }
   
   @js.native
   class PageViewData ()
-    extends typingsSlinky.applicationinsightsJs.AI.PageViewData
+    extends typingsSlinky.applicationinsightsJs.AI.PageViewData {
+    /* CompleteClass */
+    override var duration: String = js.native
+    /* CompleteClass */
+    override var measurements: js.Any = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var properties: js.Any = js.native
+    /* CompleteClass */
+    override var referrer: String = js.native
+    /* CompleteClass */
+    override var referrerData: String = js.native
+    /* CompleteClass */
+    override var url: String = js.native
+    /* CompleteClass */
+    override var ver: Double = js.native
+  }
   
   @js.native
   class PageViewPerfData ()
-    extends typingsSlinky.applicationinsightsJs.AI.PageViewPerfData
+    extends typingsSlinky.applicationinsightsJs.AI.PageViewPerfData {
+    /* CompleteClass */
+    override var domProcessing: String = js.native
+    /* CompleteClass */
+    override var duration: String = js.native
+    /* CompleteClass */
+    override var measurements: js.Any = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var networkConnect: String = js.native
+    /* CompleteClass */
+    override var perfTotal: String = js.native
+    /* CompleteClass */
+    override var properties: js.Any = js.native
+    /* CompleteClass */
+    override var receivedResponse: String = js.native
+    /* CompleteClass */
+    override var referrer: String = js.native
+    /* CompleteClass */
+    override var referrerData: String = js.native
+    /* CompleteClass */
+    override var sentRequest: String = js.native
+    /* CompleteClass */
+    override var url: String = js.native
+    /* CompleteClass */
+    override var ver: Double = js.native
+  }
   
   @js.native
   class RemoteDependencyData ()
-    extends typingsSlinky.applicationinsightsJs.AI.RemoteDependencyData
+    extends typingsSlinky.applicationinsightsJs.AI.RemoteDependencyData {
+    /* CompleteClass */
+    override var async: Boolean = js.native
+    /* CompleteClass */
+    override var commandName: String = js.native
+    /* CompleteClass */
+    override var count: Double = js.native
+    /* CompleteClass */
+    override var dependencyKind: DependencyKind = js.native
+    /* CompleteClass */
+    override var dependencySource: DependencySourceType = js.native
+    /* CompleteClass */
+    override var dependencyTypeName: String = js.native
+    /* CompleteClass */
+    override var id: String = js.native
+    /* CompleteClass */
+    override var kind: DataPointType = js.native
+    /* CompleteClass */
+    override var max: Double = js.native
+    /* CompleteClass */
+    override var min: Double = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var properties: js.Any = js.native
+    /* CompleteClass */
+    override var resultCode: String = js.native
+    /* CompleteClass */
+    override var stdDev: Double = js.native
+    /* CompleteClass */
+    override var success: Boolean = js.native
+    /* CompleteClass */
+    override var value: Double = js.native
+    /* CompleteClass */
+    override var ver: Double = js.native
+  }
   
   @js.native
   class StackFrame ()
-    extends typingsSlinky.applicationinsightsJs.AI.StackFrame
+    extends typingsSlinky.applicationinsightsJs.AI.StackFrame {
+    /* CompleteClass */
+    override var assembly: String = js.native
+    /* CompleteClass */
+    override var fileName: String = js.native
+    /* CompleteClass */
+    override var level: Double = js.native
+    /* CompleteClass */
+    override var line: Double = js.native
+    /* CompleteClass */
+    override var method: String = js.native
+  }
   
   @js.native
   object DataPointType extends js.Object {

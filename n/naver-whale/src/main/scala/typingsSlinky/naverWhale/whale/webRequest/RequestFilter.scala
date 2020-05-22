@@ -4,75 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestFilter extends js.Object {
   /** Optional. */
-  var tabId: js.UndefOr[Double] = js.native
+  var tabId: js.UndefOr[Double] = js.undefined
   /**
     * A list of request types. Requests that cannot match any of the types will be filtered out.
     */
-  var types: js.UndefOr[js.Array[typingsSlinky.chrome.chrome.webRequest.ResourceType]] = js.native
+  var types: js.UndefOr[js.Array[typingsSlinky.chrome.chrome.webRequest.ResourceType]] = js.undefined
   /** A list of URLs or URL patterns. Requests that cannot match any of the URLs will be filtered out. */
-  var urls: js.Array[String] = js.native
+  var urls: js.Array[String]
   /** Optional. */
-  var windowId: js.UndefOr[Double] = js.native
+  var windowId: js.UndefOr[Double] = js.undefined
 }
 
 object RequestFilter {
   @scala.inline
-  def apply(urls: js.Array[String]): RequestFilter = {
+  def apply(
+    urls: js.Array[String],
+    tabId: js.UndefOr[Double] = js.undefined,
+    types: js.Array[typingsSlinky.chrome.chrome.webRequest.ResourceType] = null,
+    windowId: js.UndefOr[Double] = js.undefined
+  ): RequestFilter = {
     val __obj = js.Dynamic.literal(urls = urls.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabId)) __obj.updateDynamic("tabId")(tabId.get.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowId)) __obj.updateDynamic("windowId")(windowId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestFilter]
   }
-  @scala.inline
-  implicit class RequestFilterOps[Self <: RequestFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[typingsSlinky.chrome.chrome.webRequest.ResourceType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

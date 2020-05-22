@@ -11,13 +11,25 @@ trait Action extends js.Object {
     */
   var clearTimer: js.UndefOr[ClearTimerAction] = js.native
   /**
+    * Writes to the DynamoDB table that you created. The default action payload contains all attribute-value pairs that have the information about the detector model instance and the event that triggered the action. You can also customize the payload. One column of the DynamoDB table receives all attribute-value pairs in the payload that you specify. For more information, see Actions in AWS IoT Events Developer Guide.
+    */
+  var dynamoDB: js.UndefOr[DynamoDBAction] = js.native
+  /**
+    * Writes to the DynamoDB table that you created. The default action payload contains all attribute-value pairs that have the information about the detector model instance and the event that triggered the action. You can also customize the payload. A separate column of the DynamoDB table receives one attribute-value pair in the payload that you specify. For more information, see Actions in AWS IoT Events Developer Guide.
+    */
+  var dynamoDBv2: js.UndefOr[DynamoDBv2Action] = js.native
+  /**
     * Sends information about the detector model instance and the event that triggered the action to an Amazon Kinesis Data Firehose delivery stream.
     */
   var firehose: js.UndefOr[FirehoseAction] = js.native
   /**
-    * Sends an AWS IoT Events input, passing in information about the detector model instance and the event that triggered the action.
+    * Sends AWS IoT Events input, which passes information about the detector model instance and the event that triggered the action.
     */
   var iotEvents: js.UndefOr[IotEventsAction] = js.native
+  /**
+    * Sends information about the detector model instance and the event that triggered the action to an asset property in AWS IoT SiteWise .
+    */
+  var iotSiteWise: js.UndefOr[IotSiteWiseAction] = js.native
   /**
     * Publishes an MQTT message with the given topic to the AWS IoT message broker.
     */
@@ -50,137 +62,36 @@ trait Action extends js.Object {
 
 object Action {
   @scala.inline
-  def apply(): Action = {
+  def apply(
+    clearTimer: ClearTimerAction = null,
+    dynamoDB: DynamoDBAction = null,
+    dynamoDBv2: DynamoDBv2Action = null,
+    firehose: FirehoseAction = null,
+    iotEvents: IotEventsAction = null,
+    iotSiteWise: IotSiteWiseAction = null,
+    iotTopicPublish: IotTopicPublishAction = null,
+    lambda: LambdaAction = null,
+    resetTimer: ResetTimerAction = null,
+    setTimer: SetTimerAction = null,
+    setVariable: SetVariableAction = null,
+    sns: SNSTopicPublishAction = null,
+    sqs: SqsAction = null
+  ): Action = {
     val __obj = js.Dynamic.literal()
+    if (clearTimer != null) __obj.updateDynamic("clearTimer")(clearTimer.asInstanceOf[js.Any])
+    if (dynamoDB != null) __obj.updateDynamic("dynamoDB")(dynamoDB.asInstanceOf[js.Any])
+    if (dynamoDBv2 != null) __obj.updateDynamic("dynamoDBv2")(dynamoDBv2.asInstanceOf[js.Any])
+    if (firehose != null) __obj.updateDynamic("firehose")(firehose.asInstanceOf[js.Any])
+    if (iotEvents != null) __obj.updateDynamic("iotEvents")(iotEvents.asInstanceOf[js.Any])
+    if (iotSiteWise != null) __obj.updateDynamic("iotSiteWise")(iotSiteWise.asInstanceOf[js.Any])
+    if (iotTopicPublish != null) __obj.updateDynamic("iotTopicPublish")(iotTopicPublish.asInstanceOf[js.Any])
+    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
+    if (resetTimer != null) __obj.updateDynamic("resetTimer")(resetTimer.asInstanceOf[js.Any])
+    if (setTimer != null) __obj.updateDynamic("setTimer")(setTimer.asInstanceOf[js.Any])
+    if (setVariable != null) __obj.updateDynamic("setVariable")(setVariable.asInstanceOf[js.Any])
+    if (sns != null) __obj.updateDynamic("sns")(sns.asInstanceOf[js.Any])
+    if (sqs != null) __obj.updateDynamic("sqs")(sqs.asInstanceOf[js.Any])
     __obj.asInstanceOf[Action]
   }
-  @scala.inline
-  implicit class ActionOps[Self <: Action] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearTimer(value: ClearTimerAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearTimer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearTimer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearTimer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirehose(value: FirehoseAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirehose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIotEvents(value: IotEventsAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iotEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIotEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iotEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIotTopicPublish(value: IotTopicPublishAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iotTopicPublish")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIotTopicPublish: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iotTopicPublish")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambda(value: LambdaAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambda: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResetTimer(value: ResetTimerAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetTimer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResetTimer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetTimer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetTimer(value: SetTimerAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetTimer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetVariable(value: SetVariableAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVariable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVariable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSns(value: SNSTopicPublishAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqs(value: SqsAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

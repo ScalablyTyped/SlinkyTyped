@@ -6,15 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait SimpleEffect[T, P]
-  extends Effect[T]
-     with StrictEffect[T] {
+trait SimpleEffect[T, P] extends js.Object {
   @JSName("@@redux-saga/IO")
-  var `@@redux-sagaSlashIO`: `true` = js.native
-  var combinator: `false` = js.native
-  var payload: P = js.native
-  var `type`: T = js.native
+  var `@@redux-sagaSlashIO`: `true`
+  var combinator: `false`
+  var payload: P
+  var `type`: T
 }
 
 object SimpleEffect {
@@ -25,37 +22,5 @@ object SimpleEffect {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleEffect[T, P]]
   }
-  @scala.inline
-  implicit class SimpleEffectOps[Self[t, p] <: SimpleEffect[t, p], T, P] (val x: Self[T, P]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T, P] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, P]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, P]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, P]) with Other]
-    @scala.inline
-    def `with@@redux-sagaSlashIO`(value: `true`): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("@@redux-saga/IO")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCombinator(value: `false`): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combinator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayload(value: P): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: T): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

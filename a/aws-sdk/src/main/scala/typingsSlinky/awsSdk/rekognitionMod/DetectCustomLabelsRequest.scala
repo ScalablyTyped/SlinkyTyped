@@ -23,53 +23,16 @@ trait DetectCustomLabelsRequest extends js.Object {
 
 object DetectCustomLabelsRequest {
   @scala.inline
-  def apply(Image: Image, ProjectVersionArn: ProjectVersionArn): DetectCustomLabelsRequest = {
+  def apply(
+    Image: Image,
+    ProjectVersionArn: ProjectVersionArn,
+    MaxResults: js.UndefOr[UInteger] = js.undefined,
+    MinConfidence: js.UndefOr[Percent] = js.undefined
+  ): DetectCustomLabelsRequest = {
     val __obj = js.Dynamic.literal(Image = Image.asInstanceOf[js.Any], ProjectVersionArn = ProjectVersionArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinConfidence)) __obj.updateDynamic("MinConfidence")(MinConfidence.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectCustomLabelsRequest]
   }
-  @scala.inline
-  implicit class DetectCustomLabelsRequestOps[Self <: DetectCustomLabelsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectVersionArn(value: ProjectVersionArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: UInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,25 +22,5 @@ object DetachElasticLoadBalancerRequest {
     val __obj = js.Dynamic.literal(ElasticLoadBalancerName = ElasticLoadBalancerName.asInstanceOf[js.Any], LayerId = LayerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetachElasticLoadBalancerRequest]
   }
-  @scala.inline
-  implicit class DetachElasticLoadBalancerRequestOps[Self <: DetachElasticLoadBalancerRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElasticLoadBalancerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticLoadBalancerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

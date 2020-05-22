@@ -4,56 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValidationOptionsWithKey extends ValidationOptions {
-  var audience: js.UndefOr[js.Any] = js.native
-  var bypassExpiration: js.UndefOr[Boolean] = js.native
-  var publicKey: String = js.native
+  var audience: js.UndefOr[js.Any] = js.undefined
+  var bypassExpiration: js.UndefOr[Boolean] = js.undefined
+  var publicKey: String
 }
 
 object ValidationOptionsWithKey {
   @scala.inline
-  def apply(publicKey: String): ValidationOptionsWithKey = {
+  def apply(publicKey: String, audience: js.Any = null, bypassExpiration: js.UndefOr[Boolean] = js.undefined): ValidationOptionsWithKey = {
     val __obj = js.Dynamic.literal(publicKey = publicKey.asInstanceOf[js.Any])
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (!js.isUndefined(bypassExpiration)) __obj.updateDynamic("bypassExpiration")(bypassExpiration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidationOptionsWithKey]
   }
-  @scala.inline
-  implicit class ValidationOptionsWithKeyOps[Self <: ValidationOptionsWithKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPublicKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudience(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBypassExpiration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassExpiration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBypassExpiration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassExpiration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

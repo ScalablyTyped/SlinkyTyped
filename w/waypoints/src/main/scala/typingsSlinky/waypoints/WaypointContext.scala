@@ -7,14 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WaypointContext extends js.Object {
-  var adapter: WaypointAdapter = js.native
-  var element: HTMLElement | Window = js.native
-  var waypoints: Horizontal = js.native
+  var adapter: WaypointAdapter
+  var element: HTMLElement | Window
+  var waypoints: Horizontal
    // http://imakewebthings.com/waypoints/api/context/#waypoints-property
-  def destroy(): Waypoint = js.native
-  def refresh(): Waypoint = js.native
+  def destroy(): Waypoint
+  def refresh(): Waypoint
 }
 
 object WaypointContext {
@@ -29,55 +28,5 @@ object WaypointContext {
     val __obj = js.Dynamic.literal(adapter = adapter.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), element = element.asInstanceOf[js.Any], refresh = js.Any.fromFunction0(refresh), waypoints = waypoints.asInstanceOf[js.Any])
     __obj.asInstanceOf[WaypointContext]
   }
-  @scala.inline
-  implicit class WaypointContextOps[Self <: WaypointContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdapter(value: WaypointAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Waypoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withElementWindow(value: Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElementHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElement(value: HTMLElement | Window): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: () => Waypoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWaypoints(value: Horizontal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waypoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

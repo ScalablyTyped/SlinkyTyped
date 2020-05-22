@@ -85,137 +85,30 @@ trait SchemaApplicationPolicy extends js.Object {
 
 object SchemaApplicationPolicy {
   @scala.inline
-  def apply(): SchemaApplicationPolicy = {
+  def apply(
+    defaultPermissionPolicy: String = null,
+    delegatedScopes: js.Array[String] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    installType: String = null,
+    lockTaskAllowed: js.UndefOr[Boolean] = js.undefined,
+    managedConfiguration: StringDictionary[js.Any] = null,
+    managedConfigurationTemplate: SchemaManagedConfigurationTemplate = null,
+    minimumVersionCode: js.UndefOr[Double] = js.undefined,
+    packageName: String = null,
+    permissionGrants: js.Array[SchemaPermissionGrant] = null
+  ): SchemaApplicationPolicy = {
     val __obj = js.Dynamic.literal()
+    if (defaultPermissionPolicy != null) __obj.updateDynamic("defaultPermissionPolicy")(defaultPermissionPolicy.asInstanceOf[js.Any])
+    if (delegatedScopes != null) __obj.updateDynamic("delegatedScopes")(delegatedScopes.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (installType != null) __obj.updateDynamic("installType")(installType.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockTaskAllowed)) __obj.updateDynamic("lockTaskAllowed")(lockTaskAllowed.get.asInstanceOf[js.Any])
+    if (managedConfiguration != null) __obj.updateDynamic("managedConfiguration")(managedConfiguration.asInstanceOf[js.Any])
+    if (managedConfigurationTemplate != null) __obj.updateDynamic("managedConfigurationTemplate")(managedConfigurationTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumVersionCode)) __obj.updateDynamic("minimumVersionCode")(minimumVersionCode.get.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (permissionGrants != null) __obj.updateDynamic("permissionGrants")(permissionGrants.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApplicationPolicy]
   }
-  @scala.inline
-  implicit class SchemaApplicationPolicyOps[Self <: SchemaApplicationPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultPermissionPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPermissionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPermissionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPermissionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelegatedScopes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegatedScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegatedScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockTaskAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockTaskAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockTaskAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockTaskAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedConfiguration(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedConfigurationTemplate(value: SchemaManagedConfigurationTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfigurationTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedConfigurationTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedConfigurationTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumVersionCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumVersionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumVersionCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionGrants(value: js.Array[SchemaPermissionGrant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionGrants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionGrants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionGrants")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

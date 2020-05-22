@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEffectRendererOptions extends js.Object {
   /**
     * Defines the indices.
     */
-  var indices: js.UndefOr[js.Array[Double]] = js.native
+  var indices: js.UndefOr[js.Array[Double]] = js.undefined
   /**
     * Defines the vertices positions.
     */
-  var positions: js.UndefOr[js.Array[Double]] = js.native
+  var positions: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object IEffectRendererOptions {
   @scala.inline
-  def apply(): IEffectRendererOptions = {
+  def apply(indices: js.Array[Double] = null, positions: js.Array[Double] = null): IEffectRendererOptions = {
     val __obj = js.Dynamic.literal()
+    if (indices != null) __obj.updateDynamic("indices")(indices.asInstanceOf[js.Any])
+    if (positions != null) __obj.updateDynamic("positions")(positions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEffectRendererOptions]
   }
-  @scala.inline
-  implicit class IEffectRendererOptionsOps[Self <: IEffectRendererOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositions(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

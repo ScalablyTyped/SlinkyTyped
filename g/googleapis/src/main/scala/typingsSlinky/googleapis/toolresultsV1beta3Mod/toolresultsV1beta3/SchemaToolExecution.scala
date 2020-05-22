@@ -46,65 +46,18 @@ trait SchemaToolExecution extends js.Object {
 
 object SchemaToolExecution {
   @scala.inline
-  def apply(): SchemaToolExecution = {
+  def apply(
+    commandLineArguments: js.Array[String] = null,
+    exitCode: SchemaToolExitCode = null,
+    toolLogs: js.Array[SchemaFileReference] = null,
+    toolOutputs: js.Array[SchemaToolOutputReference] = null
+  ): SchemaToolExecution = {
     val __obj = js.Dynamic.literal()
+    if (commandLineArguments != null) __obj.updateDynamic("commandLineArguments")(commandLineArguments.asInstanceOf[js.Any])
+    if (exitCode != null) __obj.updateDynamic("exitCode")(exitCode.asInstanceOf[js.Any])
+    if (toolLogs != null) __obj.updateDynamic("toolLogs")(toolLogs.asInstanceOf[js.Any])
+    if (toolOutputs != null) __obj.updateDynamic("toolOutputs")(toolOutputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaToolExecution]
   }
-  @scala.inline
-  implicit class SchemaToolExecutionOps[Self <: SchemaToolExecution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommandLineArguments(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commandLineArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommandLineArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commandLineArguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExitCode(value: SchemaToolExitCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExitCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolLogs(value: js.Array[SchemaFileReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolLogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolLogs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolLogs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolOutputs(value: js.Array[SchemaToolOutputReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolOutputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolOutputs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

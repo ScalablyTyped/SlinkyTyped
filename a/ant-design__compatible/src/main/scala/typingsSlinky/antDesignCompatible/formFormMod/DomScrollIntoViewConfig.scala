@@ -4,135 +4,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DomScrollIntoViewConfig extends js.Object {
   /** 是否和左边界对齐 */
-  var alignWithLeft: js.UndefOr[Boolean] = js.native
+  var alignWithLeft: js.UndefOr[Boolean] = js.undefined
   /** 是否和上边界对齐  */
-  var alignWithTop: js.UndefOr[Boolean] = js.native
+  var alignWithTop: js.UndefOr[Boolean] = js.undefined
   /** 是否允许容器水平滚动 */
-  var allowHorizontalScroll: js.UndefOr[Boolean] = js.native
+  var allowHorizontalScroll: js.UndefOr[Boolean] = js.undefined
   /** 底部偏移量 */
-  var offsetBottom: js.UndefOr[Double] = js.native
+  var offsetBottom: js.UndefOr[Double] = js.undefined
   /** 左侧偏移量 */
-  var offsetLeft: js.UndefOr[Double] = js.native
+  var offsetLeft: js.UndefOr[Double] = js.undefined
   /** 右侧偏移量 */
-  var offsetRight: js.UndefOr[Double] = js.native
+  var offsetRight: js.UndefOr[Double] = js.undefined
   /** 顶部偏移量 */
-  var offsetTop: js.UndefOr[Double] = js.native
+  var offsetTop: js.UndefOr[Double] = js.undefined
   /** 当内容可见时是否允许滚动容器 */
-  var onlyScrollIfNeeded: js.UndefOr[Boolean] = js.native
+  var onlyScrollIfNeeded: js.UndefOr[Boolean] = js.undefined
 }
 
 object DomScrollIntoViewConfig {
   @scala.inline
-  def apply(): DomScrollIntoViewConfig = {
+  def apply(
+    alignWithLeft: js.UndefOr[Boolean] = js.undefined,
+    alignWithTop: js.UndefOr[Boolean] = js.undefined,
+    allowHorizontalScroll: js.UndefOr[Boolean] = js.undefined,
+    offsetBottom: js.UndefOr[Double] = js.undefined,
+    offsetLeft: js.UndefOr[Double] = js.undefined,
+    offsetRight: js.UndefOr[Double] = js.undefined,
+    offsetTop: js.UndefOr[Double] = js.undefined,
+    onlyScrollIfNeeded: js.UndefOr[Boolean] = js.undefined
+  ): DomScrollIntoViewConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alignWithLeft)) __obj.updateDynamic("alignWithLeft")(alignWithLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alignWithTop)) __obj.updateDynamic("alignWithTop")(alignWithTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowHorizontalScroll)) __obj.updateDynamic("allowHorizontalScroll")(allowHorizontalScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetBottom)) __obj.updateDynamic("offsetBottom")(offsetBottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetLeft)) __obj.updateDynamic("offsetLeft")(offsetLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetRight)) __obj.updateDynamic("offsetRight")(offsetRight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetTop)) __obj.updateDynamic("offsetTop")(offsetTop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyScrollIfNeeded)) __obj.updateDynamic("onlyScrollIfNeeded")(onlyScrollIfNeeded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomScrollIntoViewConfig]
   }
-  @scala.inline
-  implicit class DomScrollIntoViewConfigOps[Self <: DomScrollIntoViewConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignWithLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignWithLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignWithLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignWithLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignWithTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignWithTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignWithTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignWithTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowHorizontalScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHorizontalScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowHorizontalScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHorizontalScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyScrollIfNeeded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyScrollIfNeeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyScrollIfNeeded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyScrollIfNeeded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

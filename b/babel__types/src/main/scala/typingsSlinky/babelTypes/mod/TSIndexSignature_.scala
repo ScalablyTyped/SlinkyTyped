@@ -6,67 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSIndexSignature_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSIndexSignature_
   extends TSTypeElement
      with BaseNode {
-  var parameters: js.Array[Identifier_] = js.native
-  var readonly: Boolean | Null = js.native
-  var typeAnnotation: TSTypeAnnotation_ | Null = js.native
+  var parameters: js.Array[Identifier_]
+  var readonly: Boolean | Null
+  var typeAnnotation: TSTypeAnnotation_ | Null
   @JSName("type")
-  var type_TSIndexSignature_ : TSIndexSignature = js.native
+  var type_TSIndexSignature_ : TSIndexSignature
 }
 
 object TSIndexSignature_ {
   @scala.inline
-  def apply(parameters: js.Array[Identifier_], `type`: TSIndexSignature): TSIndexSignature_ = {
-    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
+  def apply(
+    parameters: js.Array[Identifier_],
+    `type`: TSIndexSignature,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    readonly: Boolean = null.asInstanceOf[Boolean],
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSTypeAnnotation_ = null
+  ): TSIndexSignature_ = {
+    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSIndexSignature_]
   }
-  @scala.inline
-  implicit class TSIndexSignature_Ops[Self <: TSIndexSignature_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameters(value: js.Array[Identifier_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSIndexSignature): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadonlyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotation(value: TSTypeAnnotation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
-        ret
-    }
-  }
-  
 }
 

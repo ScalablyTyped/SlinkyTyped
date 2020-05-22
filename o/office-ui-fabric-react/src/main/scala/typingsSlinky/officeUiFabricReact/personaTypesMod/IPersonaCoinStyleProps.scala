@@ -5,98 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPersonaCoinStyleProps extends js.Object {
   /**
     * Custom class name.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Optional custom persona coin size in pixel.
     */
-  var coinSize: js.UndefOr[Double] = js.native
+  var coinSize: js.UndefOr[Double] = js.undefined
   /**
     * Decides whether to display coin for unknown persona
     */
-  var showUnknownPersonaCoin: js.UndefOr[Boolean] = js.native
+  var showUnknownPersonaCoin: js.UndefOr[Boolean] = js.undefined
   /**
     * Decides the size of the control.
     * @defaultvalue PersonaSize.size48
     */
-  var size: js.UndefOr[PersonaSize] = js.native
+  var size: js.UndefOr[PersonaSize] = js.undefined
   /**
     * Theme provided by High-Order Component.
     */
-  var theme: ITheme = js.native
+  var theme: ITheme
 }
 
 object IPersonaCoinStyleProps {
   @scala.inline
-  def apply(theme: ITheme): IPersonaCoinStyleProps = {
+  def apply(
+    theme: ITheme,
+    className: String = null,
+    coinSize: js.UndefOr[Double] = js.undefined,
+    showUnknownPersonaCoin: js.UndefOr[Boolean] = js.undefined,
+    size: PersonaSize = null
+  ): IPersonaCoinStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(coinSize)) __obj.updateDynamic("coinSize")(coinSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showUnknownPersonaCoin)) __obj.updateDynamic("showUnknownPersonaCoin")(showUnknownPersonaCoin.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPersonaCoinStyleProps]
   }
-  @scala.inline
-  implicit class IPersonaCoinStylePropsOps[Self <: IPersonaCoinStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoinSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coinSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoinSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coinSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowUnknownPersonaCoin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showUnknownPersonaCoin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowUnknownPersonaCoin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showUnknownPersonaCoin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: PersonaSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

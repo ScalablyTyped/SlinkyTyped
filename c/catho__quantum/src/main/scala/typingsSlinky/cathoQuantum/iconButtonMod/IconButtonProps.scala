@@ -16,62 +16,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IconButtonProps extends js.Object {
-  var size: js.UndefOr[xsmall | small | medium | large | xlarge] = js.native
-  var skin: js.UndefOr[neutral | primary | secondary | success | warning | error] = js.native
-  var theme: js.UndefOr[Spacing] = js.native
+  var size: js.UndefOr[xsmall | small | medium | large | xlarge] = js.undefined
+  var skin: js.UndefOr[neutral | primary | secondary | success | warning | error] = js.undefined
+  var theme: js.UndefOr[Spacing] = js.undefined
 }
 
 object IconButtonProps {
   @scala.inline
-  def apply(): IconButtonProps = {
+  def apply(
+    size: xsmall | small | medium | large | xlarge = null,
+    skin: neutral | primary | secondary | success | warning | error = null,
+    theme: Spacing = null
+  ): IconButtonProps = {
     val __obj = js.Dynamic.literal()
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[IconButtonProps]
   }
-  @scala.inline
-  implicit class IconButtonPropsOps[Self <: IconButtonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSize(value: xsmall | small | medium | large | xlarge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkin(value: neutral | primary | secondary | success | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Spacing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

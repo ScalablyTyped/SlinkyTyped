@@ -9,28 +9,27 @@ import scala.scalajs.js.annotation._
 /**
   * The arguments object for the `tabDetachRequested` signal.
   */
-@js.native
 trait ITabDetachRequestedArgs[T] extends js.Object {
   /**
     * The current client X position of the mouse.
     */
-  val clientX: Double = js.native
+  val clientX: Double
   /**
     * The current client Y position of the mouse.
     */
-  val clientY: Double = js.native
+  val clientY: Double
   /**
     * The index of the tab to detach.
     */
-  val index: Double = js.native
+  val index: Double
   /**
     * The node representing the tab.
     */
-  val tab: HTMLElement = js.native
+  val tab: HTMLElement
   /**
     * The title for the tab.
     */
-  val title: Title[T] = js.native
+  val title: Title[T]
 }
 
 object ITabDetachRequestedArgs {
@@ -39,43 +38,5 @@ object ITabDetachRequestedArgs {
     val __obj = js.Dynamic.literal(clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], tab = tab.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITabDetachRequestedArgs[T]]
   }
-  @scala.inline
-  implicit class ITabDetachRequestedArgsOps[Self[t] <: ITabDetachRequestedArgs[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withClientX(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientY(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTab(value: HTMLElement): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: Title[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

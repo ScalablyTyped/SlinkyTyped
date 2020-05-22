@@ -15,6 +15,6 @@ package object listenTypesMod {
     /* element */ org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Document | org.scalajs.dom.raw.Window, 
     /* events */ java.lang.String, 
     /* options */ js.UndefOr[typingsSlinky.popmotion.listenTypesMod.EventListenerOptions | scala.Boolean], 
-    typingsSlinky.popmotion.actionMod.Action
+    typingsSlinky.popmotion.actionMod.Action[typingsSlinky.popmotion.actionTypesMod.ColdSubscription]
   ]
 }

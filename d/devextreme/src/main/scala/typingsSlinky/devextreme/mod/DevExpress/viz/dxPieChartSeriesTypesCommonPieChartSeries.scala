@@ -13,219 +13,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxPieChartSeriesTypesCommonPieChartSeries extends js.Object {
-  /** Specifies the data source field that provides arguments for series points. */
-  var argumentField: js.UndefOr[String] = js.native
-  /** Specifies the required type for series arguments. */
-  var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
-  /** An object defining the series border configuration options. */
-  var border: js.UndefOr[ColorDashStyle] = js.native
-  /** Specifies a series color. */
-  var color: js.UndefOr[String] = js.native
-  /** Specifies the chart elements to highlight when a series is hovered over. */
-  var hoverMode: js.UndefOr[none | onlyPoint] = js.native
-  /** An object defining configuration options for a hovered series. */
-  var hoverStyle: js.UndefOr[Hatching] = js.native
-  /** An object defining the label configuration options. */
-  var label: js.UndefOr[ArgumentFormat] = js.native
-  /** Specifies how many points are acceptable to be in a series to display all labels for these points. Otherwise, the labels will not be displayed. */
-  var maxLabelCount: js.UndefOr[Double] = js.native
-  /** Specifies a minimal size of a displayed pie segment. */
-  var minSegmentSize: js.UndefOr[Double] = js.native
-  /** Specifies the chart elements to highlight when the series is selected. */
-  var selectionMode: js.UndefOr[none | onlyPoint] = js.native
-  /** An object defining configuration options for the series when it is selected. */
-  var selectionStyle: js.UndefOr[Hatching] = js.native
-  /** Specifies chart segment grouping options. */
-  var smallValuesGrouping: js.UndefOr[GroupName] = js.native
-  /** Specifies the name of the data source field that provides data about a point. */
-  var tagField: js.UndefOr[String] = js.native
-  /** Specifies the data source field that provides values for series points. */
-  var valueField: js.UndefOr[String] = js.native
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.argumentField */
+  var argumentField: js.UndefOr[String] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.argumentType */
+  var argumentType: js.UndefOr[datetime | numeric | string_] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.border */
+  var border: js.UndefOr[ColorDashStyle] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.color */
+  var color: js.UndefOr[String] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.hoverMode */
+  var hoverMode: js.UndefOr[none | onlyPoint] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.hoverStyle */
+  var hoverStyle: js.UndefOr[Hatching] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.label */
+  var label: js.UndefOr[ArgumentFormat] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.maxLabelCount */
+  var maxLabelCount: js.UndefOr[Double] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.minSegmentSize */
+  var minSegmentSize: js.UndefOr[Double] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.selectionMode */
+  var selectionMode: js.UndefOr[none | onlyPoint] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.selectionStyle */
+  var selectionStyle: js.UndefOr[Hatching] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.smallValuesGrouping */
+  var smallValuesGrouping: js.UndefOr[GroupName] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.tagField */
+  var tagField: js.UndefOr[String] = js.undefined
+  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.valueField */
+  var valueField: js.UndefOr[String] = js.undefined
 }
 
 object dxPieChartSeriesTypesCommonPieChartSeries {
   @scala.inline
-  def apply(): dxPieChartSeriesTypesCommonPieChartSeries = {
+  def apply(
+    argumentField: String = null,
+    argumentType: datetime | numeric | string_ = null,
+    border: ColorDashStyle = null,
+    color: String = null,
+    hoverMode: none | onlyPoint = null,
+    hoverStyle: Hatching = null,
+    label: ArgumentFormat = null,
+    maxLabelCount: js.UndefOr[Double] = js.undefined,
+    minSegmentSize: js.UndefOr[Double] = js.undefined,
+    selectionMode: none | onlyPoint = null,
+    selectionStyle: Hatching = null,
+    smallValuesGrouping: GroupName = null,
+    tagField: String = null,
+    valueField: String = null
+  ): dxPieChartSeriesTypesCommonPieChartSeries = {
     val __obj = js.Dynamic.literal()
+    if (argumentField != null) __obj.updateDynamic("argumentField")(argumentField.asInstanceOf[js.Any])
+    if (argumentType != null) __obj.updateDynamic("argumentType")(argumentType.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
+    if (hoverStyle != null) __obj.updateDynamic("hoverStyle")(hoverStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLabelCount)) __obj.updateDynamic("maxLabelCount")(maxLabelCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minSegmentSize)) __obj.updateDynamic("minSegmentSize")(minSegmentSize.get.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (selectionStyle != null) __obj.updateDynamic("selectionStyle")(selectionStyle.asInstanceOf[js.Any])
+    if (smallValuesGrouping != null) __obj.updateDynamic("smallValuesGrouping")(smallValuesGrouping.asInstanceOf[js.Any])
+    if (tagField != null) __obj.updateDynamic("tagField")(tagField.asInstanceOf[js.Any])
+    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPieChartSeriesTypesCommonPieChartSeries]
   }
-  @scala.inline
-  implicit class dxPieChartSeriesTypesCommonPieChartSeriesOps[Self <: dxPieChartSeriesTypesCommonPieChartSeries] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgumentField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArgumentType(value: datetime | numeric | string_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ColorDashStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverMode(value: none | onlyPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverStyle(value: Hatching): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: ArgumentFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLabelCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLabelCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLabelCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLabelCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSegmentSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSegmentSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSegmentSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSegmentSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: none | onlyPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionStyle(value: Hatching): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmallValuesGrouping(value: GroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallValuesGrouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmallValuesGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallValuesGrouping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

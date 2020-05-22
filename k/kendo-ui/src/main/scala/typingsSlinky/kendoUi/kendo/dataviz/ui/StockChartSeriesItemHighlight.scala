@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StockChartSeriesItemHighlight extends js.Object {
-  var border: js.UndefOr[StockChartSeriesItemHighlightBorder] = js.native
-  var color: js.UndefOr[String] = js.native
-  var line: js.UndefOr[StockChartSeriesItemHighlightLine] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var border: js.UndefOr[StockChartSeriesItemHighlightBorder] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var line: js.UndefOr[StockChartSeriesItemHighlightLine] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object StockChartSeriesItemHighlight {
   @scala.inline
-  def apply(): StockChartSeriesItemHighlight = {
+  def apply(
+    border: StockChartSeriesItemHighlightBorder = null,
+    color: String = null,
+    line: StockChartSeriesItemHighlightLine = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): StockChartSeriesItemHighlight = {
     val __obj = js.Dynamic.literal()
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockChartSeriesItemHighlight]
   }
-  @scala.inline
-  implicit class StockChartSeriesItemHighlightOps[Self <: StockChartSeriesItemHighlight] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorder(value: StockChartSeriesItemHighlightBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: StockChartSeriesItemHighlightLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

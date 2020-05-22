@@ -50,137 +50,30 @@ trait AccessPointDescription extends js.Object {
 
 object AccessPointDescription {
   @scala.inline
-  def apply(): AccessPointDescription = {
+  def apply(
+    AccessPointArn: AccessPointArn = null,
+    AccessPointId: AccessPointId = null,
+    ClientToken: ClientToken = null,
+    FileSystemId: FileSystemId = null,
+    LifeCycleState: LifeCycleState = null,
+    Name: Name = null,
+    OwnerId: AwsAccountId = null,
+    PosixUser: PosixUser = null,
+    RootDirectory: RootDirectory = null,
+    Tags: Tags = null
+  ): AccessPointDescription = {
     val __obj = js.Dynamic.literal()
+    if (AccessPointArn != null) __obj.updateDynamic("AccessPointArn")(AccessPointArn.asInstanceOf[js.Any])
+    if (AccessPointId != null) __obj.updateDynamic("AccessPointId")(AccessPointId.asInstanceOf[js.Any])
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (FileSystemId != null) __obj.updateDynamic("FileSystemId")(FileSystemId.asInstanceOf[js.Any])
+    if (LifeCycleState != null) __obj.updateDynamic("LifeCycleState")(LifeCycleState.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (OwnerId != null) __obj.updateDynamic("OwnerId")(OwnerId.asInstanceOf[js.Any])
+    if (PosixUser != null) __obj.updateDynamic("PosixUser")(PosixUser.asInstanceOf[js.Any])
+    if (RootDirectory != null) __obj.updateDynamic("RootDirectory")(RootDirectory.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessPointDescription]
   }
-  @scala.inline
-  implicit class AccessPointDescriptionOps[Self <: AccessPointDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessPointArn(value: AccessPointArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessPointArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccessPointId(value: AccessPointId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessPointId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSystemId(value: FileSystemId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSystemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifeCycleState(value: LifeCycleState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifeCycleState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifeCycleState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifeCycleState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerId(value: AwsAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosixUser(value: PosixUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PosixUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosixUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PosixUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootDirectory(value: RootDirectory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDirectory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Tags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

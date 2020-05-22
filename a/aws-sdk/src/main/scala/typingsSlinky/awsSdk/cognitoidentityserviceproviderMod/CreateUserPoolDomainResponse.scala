@@ -14,29 +14,10 @@ trait CreateUserPoolDomainResponse extends js.Object {
 
 object CreateUserPoolDomainResponse {
   @scala.inline
-  def apply(): CreateUserPoolDomainResponse = {
+  def apply(CloudFrontDomain: DomainType = null): CreateUserPoolDomainResponse = {
     val __obj = js.Dynamic.literal()
+    if (CloudFrontDomain != null) __obj.updateDynamic("CloudFrontDomain")(CloudFrontDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUserPoolDomainResponse]
   }
-  @scala.inline
-  implicit class CreateUserPoolDomainResponseOps[Self <: CreateUserPoolDomainResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudFrontDomain(value: DomainType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFrontDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontDomain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UIkitGridOptions extends js.Object {
-  var `first-column`: js.UndefOr[String] = js.native
-  var margin: js.UndefOr[String] = js.native
-  var masonry: js.UndefOr[Boolean] = js.native
-  var parallax: js.UndefOr[Double] = js.native
+  var `first-column`: js.UndefOr[String] = js.undefined
+  var margin: js.UndefOr[String] = js.undefined
+  var masonry: js.UndefOr[Boolean] = js.undefined
+  var parallax: js.UndefOr[Double] = js.undefined
 }
 
 object UIkitGridOptions {
   @scala.inline
-  def apply(): UIkitGridOptions = {
+  def apply(
+    `first-column`: String = null,
+    margin: String = null,
+    masonry: js.UndefOr[Boolean] = js.undefined,
+    parallax: js.UndefOr[Double] = js.undefined
+  ): UIkitGridOptions = {
     val __obj = js.Dynamic.literal()
+    if (`first-column` != null) __obj.updateDynamic("first-column")(`first-column`.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(masonry)) __obj.updateDynamic("masonry")(masonry.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(parallax)) __obj.updateDynamic("parallax")(parallax.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIkitGridOptions]
   }
-  @scala.inline
-  implicit class UIkitGridOptionsOps[Self <: UIkitGridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withFirst-column`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first-column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFirst-column`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first-column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasonry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masonry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasonry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masonry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallax")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

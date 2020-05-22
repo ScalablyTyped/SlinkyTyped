@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait relationshipCreateRendererParams extends Object {
   /**
     * The [named string](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) or basemap object of the Esri basemap that will be paired with the output visualization. Determines optimal colors for the output renderer.
@@ -16,7 +15,7 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default gray
     */
-  var basemap: js.UndefOr[String | Basemap] = js.native
+  var basemap: js.UndefOr[String | Basemap] = js.undefined
   /**
     * The method for classifying each field's data values. See [classBreaks](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-classBreaks.html#classBreaks) for more information about each classification type.  **Possible Values:** quantile | equal-interval | natural-breaks
     *
@@ -24,7 +23,7 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default quantile
     */
-  var classificationMethod: js.UndefOr[String] = js.native
+  var classificationMethod: js.UndefOr[String] = js.undefined
   /**
     * **This option only applies to generating renderers for mesh SceneLayers**. Specifies how the symbol's color is applied to the geometry color/texture. See the documentation in [FillSymbol3DLayer.material](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#material) for more context. See the table below for possible values.
     *
@@ -39,7 +38,7 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default replace
     */
-  var colorMixMode: js.UndefOr[String] = js.native
+  var colorMixMode: js.UndefOr[String] = js.undefined
   /**
     * Enables the `defaultSymbol` on the renderer and assigns it to features with no value or that fall outside of the prescribed class breaks.
     *
@@ -47,7 +46,7 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default true
     */
-  var defaultSymbolEnabled: js.UndefOr[Boolean] = js.native
+  var defaultSymbolEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.
     *
@@ -55,19 +54,19 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default none
     */
-  var edgesType: js.UndefOr[String] = js.native
+  var edgesType: js.UndefOr[String] = js.undefined
   /**
     * A numeric field that will be used to explore its relationship with `field2`. In the default visualization, the values of this field are rendered along the vertical axis of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var field1: relationshipCreateRendererParamsField1 = js.native
+  var field1: relationshipCreateRendererParamsField1
   /**
     * A numeric field that will be used to explore its relationship with `field1`. In the default visualization, the values of this field are rendered along the horizontal axis of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var field2: relationshipCreateRendererParamsField2 = js.native
+  var field2: relationshipCreateRendererParamsField2
   /**
     * Determines the orientation of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html). This value does not change the renderer or symbology of any features in the layer. This affects the legend only. See the table below for a description of the possible values. See the class description at the top of this page for a more thorough explanation of how to read the legend.
     *
@@ -82,19 +81,19 @@ trait relationshipCreateRendererParams extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var focus: js.UndefOr[String] = js.native
+  var focus: js.UndefOr[String] = js.undefined
   /**
     * The layer for which the visualization is generated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer = js.native
+  var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer
   /**
     * Provides options for modifying [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) properties describing the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var legendOptions: js.UndefOr[relationshipCreateRendererParamsLegendOptions] = js.native
+  var legendOptions: js.UndefOr[relationshipCreateRendererParamsLegendOptions] = js.undefined
   /**
     * Indicates the number of classes by which to break up the values of each field. More classes give you more detail, but more colors, making the visualization more difficult to understand. There are only three possible values.
     *
@@ -109,7 +108,7 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default 3
     */
-  var numClasses: js.UndefOr[Double] = js.native
+  var numClasses: js.UndefOr[Double] = js.undefined
   /**
     * For polygon layers only. Indicates whether the polygon outline width should vary based on view scale. When set, a valid [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance must be provided in the `view` parameter. This option is not supported for 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
@@ -117,19 +116,19 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default false
     */
-  var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.native
+  var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * In authoring apps, the user may select a pre-defined relationship scheme. Pass the scheme object to this property to avoid getting one based on the `basemap`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var relationshipScheme: js.UndefOr[RelationshipScheme] = js.native
+  var relationshipScheme: js.UndefOr[RelationshipScheme] = js.undefined
   /**
     * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)
     */
-  var signal: js.UndefOr[AbortSignal] = js.native
+  var signal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * For point and polyline layers only. Indicates whether symbol sizes should vary based on view scale. When set, a valid [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance must be provided in the `view` parameter. This option is not supported for 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
@@ -137,7 +136,7 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default false
     */
-  var sizeOptimizationEnabled: js.UndefOr[Boolean] = js.native
+  var sizeOptimizationEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The type of symbol to generate. This depends on the view in which you are working and the desired visualization. This parameter does not need to be specified for layers with a `mesh` geometry type. Possible values are described below.
     *
@@ -152,13 +151,13 @@ trait relationshipCreateRendererParams extends Object {
     *
     * @default 2d
     */
-  var symbolType: js.UndefOr[String] = js.native
+  var symbolType: js.UndefOr[String] = js.undefined
   /**
     * The view instance in which the visualization will be rendered.
     *
     * [Read more...](global.html)
     */
-  var view: View = js.native
+  var view: View
 }
 
 object relationshipCreateRendererParams {
@@ -170,198 +169,36 @@ object relationshipCreateRendererParams {
     hasOwnProperty: PropertyKey => Boolean,
     layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer,
     propertyIsEnumerable: PropertyKey => Boolean,
-    view: View
+    view: View,
+    basemap: String | Basemap = null,
+    classificationMethod: String = null,
+    colorMixMode: String = null,
+    defaultSymbolEnabled: js.UndefOr[Boolean] = js.undefined,
+    edgesType: String = null,
+    focus: String = null,
+    legendOptions: relationshipCreateRendererParamsLegendOptions = null,
+    numClasses: js.UndefOr[Double] = js.undefined,
+    outlineOptimizationEnabled: js.UndefOr[Boolean] = js.undefined,
+    relationshipScheme: RelationshipScheme = null,
+    signal: AbortSignal = null,
+    sizeOptimizationEnabled: js.UndefOr[Boolean] = js.undefined,
+    symbolType: String = null
   ): relationshipCreateRendererParams = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], field1 = field1.asInstanceOf[js.Any], field2 = field2.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), layer = layer.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), view = view.asInstanceOf[js.Any])
+    if (basemap != null) __obj.updateDynamic("basemap")(basemap.asInstanceOf[js.Any])
+    if (classificationMethod != null) __obj.updateDynamic("classificationMethod")(classificationMethod.asInstanceOf[js.Any])
+    if (colorMixMode != null) __obj.updateDynamic("colorMixMode")(colorMixMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultSymbolEnabled)) __obj.updateDynamic("defaultSymbolEnabled")(defaultSymbolEnabled.get.asInstanceOf[js.Any])
+    if (edgesType != null) __obj.updateDynamic("edgesType")(edgesType.asInstanceOf[js.Any])
+    if (focus != null) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
+    if (legendOptions != null) __obj.updateDynamic("legendOptions")(legendOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(numClasses)) __obj.updateDynamic("numClasses")(numClasses.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outlineOptimizationEnabled)) __obj.updateDynamic("outlineOptimizationEnabled")(outlineOptimizationEnabled.get.asInstanceOf[js.Any])
+    if (relationshipScheme != null) __obj.updateDynamic("relationshipScheme")(relationshipScheme.asInstanceOf[js.Any])
+    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeOptimizationEnabled)) __obj.updateDynamic("sizeOptimizationEnabled")(sizeOptimizationEnabled.get.asInstanceOf[js.Any])
+    if (symbolType != null) __obj.updateDynamic("symbolType")(symbolType.asInstanceOf[js.Any])
     __obj.asInstanceOf[relationshipCreateRendererParams]
   }
-  @scala.inline
-  implicit class relationshipCreateRendererParamsOps[Self <: relationshipCreateRendererParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField1(value: relationshipCreateRendererParamsField1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withField2(value: relationshipCreateRendererParamsField2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayer(value: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withView(value: View): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasemap(value: String | Basemap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassificationMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassificationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMixMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMixMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSymbolEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbolEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSymbolEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSymbolEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgesType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgesType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendOptions(value: relationshipCreateRendererParamsLegendOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumClasses(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numClasses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numClasses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineOptimizationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOptimizationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineOptimizationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOptimizationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelationshipScheme(value: RelationshipScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelationshipScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationshipScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeOptimizationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeOptimizationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeOptimizationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeOptimizationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

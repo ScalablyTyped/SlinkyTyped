@@ -26,65 +26,18 @@ trait ManagedScaling extends js.Object {
 
 object ManagedScaling {
   @scala.inline
-  def apply(): ManagedScaling = {
+  def apply(
+    maximumScalingStepSize: js.UndefOr[ManagedScalingStepSize] = js.undefined,
+    minimumScalingStepSize: js.UndefOr[ManagedScalingStepSize] = js.undefined,
+    status: ManagedScalingStatus = null,
+    targetCapacity: js.UndefOr[ManagedScalingTargetCapacity] = js.undefined
+  ): ManagedScaling = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maximumScalingStepSize)) __obj.updateDynamic("maximumScalingStepSize")(maximumScalingStepSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumScalingStepSize)) __obj.updateDynamic("minimumScalingStepSize")(minimumScalingStepSize.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetCapacity)) __obj.updateDynamic("targetCapacity")(targetCapacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedScaling]
   }
-  @scala.inline
-  implicit class ManagedScalingOps[Self <: ManagedScaling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaximumScalingStepSize(value: ManagedScalingStepSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumScalingStepSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumScalingStepSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumScalingStepSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumScalingStepSize(value: ManagedScalingStepSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumScalingStepSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumScalingStepSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumScalingStepSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ManagedScalingStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetCapacity(value: ManagedScalingTargetCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

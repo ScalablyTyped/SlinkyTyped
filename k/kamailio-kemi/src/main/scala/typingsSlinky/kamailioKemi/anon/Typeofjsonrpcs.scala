@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofjsonrpcs extends js.Object {
-  def exec(scmd: String): Double = js.native
+  def exec(scmd: String): Double
 }
 
 object Typeofjsonrpcs {
@@ -15,19 +14,5 @@ object Typeofjsonrpcs {
     val __obj = js.Dynamic.literal(exec = js.Any.fromFunction1(exec))
     __obj.asInstanceOf[Typeofjsonrpcs]
   }
-  @scala.inline
-  implicit class TypeofjsonrpcsOps[Self <: Typeofjsonrpcs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExec(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

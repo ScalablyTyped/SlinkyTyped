@@ -6,11 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @static
-  * @readonly
-  * @type {object}
-  * @name pc.shaderChunks
-  * @description Object containing all default shader chunks used by shader generators.
+  * Object containing all default shader chunks used by shader generators.
   */
 @JSGlobal("pc.shaderChunks")
 @js.native

@@ -13,204 +13,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArgumentFormat extends js.Object {
-  var argumentFormat: js.UndefOr[format] = js.native
-  var backgroundColor: js.UndefOr[String] = js.native
-  var border: js.UndefOr[ColorDashStyle] = js.native
-  var connector: js.UndefOr[ColorVisible] = js.native
-  var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.native
-  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.native
-  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
-  var position: js.UndefOr[columns | inside | outside] = js.native
-  var radialOffset: js.UndefOr[Double] = js.native
-  var rotationAngle: js.UndefOr[Double] = js.native
-  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
+  var argumentFormat: js.UndefOr[format] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  var border: js.UndefOr[ColorDashStyle] = js.undefined
+  var connector: js.UndefOr[ColorVisible] = js.undefined
+  var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.undefined
+  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.undefined
+  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.undefined
+  var position: js.UndefOr[columns | inside | outside] = js.undefined
+  var radialOffset: js.UndefOr[Double] = js.undefined
+  var rotationAngle: js.UndefOr[Double] = js.undefined
+  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var wordWrap: js.UndefOr[normal | breakWord | none] = js.undefined
 }
 
 object ArgumentFormat {
   @scala.inline
-  def apply(): ArgumentFormat = {
+  def apply(
+    argumentFormat: format = null,
+    backgroundColor: String = null,
+    border: ColorDashStyle = null,
+    connector: ColorVisible = null,
+    customizeText: /* pointInfo */ js.Any => String = null,
+    font: typingsSlinky.devextreme.mod.DevExpress.viz.Font = null,
+    format: format = null,
+    position: columns | inside | outside = null,
+    radialOffset: js.UndefOr[Double] = js.undefined,
+    rotationAngle: js.UndefOr[Double] = js.undefined,
+    textOverflow: ellipsis | hide | none = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    wordWrap: normal | breakWord | none = null
+  ): ArgumentFormat = {
     val __obj = js.Dynamic.literal()
+    if (argumentFormat != null) __obj.updateDynamic("argumentFormat")(argumentFormat.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (connector != null) __obj.updateDynamic("connector")(connector.asInstanceOf[js.Any])
+    if (customizeText != null) __obj.updateDynamic("customizeText")(js.Any.fromFunction1(customizeText))
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(radialOffset)) __obj.updateDynamic("radialOffset")(radialOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotationAngle)) __obj.updateDynamic("rotationAngle")(rotationAngle.get.asInstanceOf[js.Any])
+    if (textOverflow != null) __obj.updateDynamic("textOverflow")(textOverflow.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (wordWrap != null) __obj.updateDynamic("wordWrap")(wordWrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArgumentFormat]
   }
-  @scala.inline
-  implicit class ArgumentFormatOps[Self <: ArgumentFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgumentFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withArgumentFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ColorDashStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnector(value: ColorVisible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeText(value: /* pointInfo */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: typingsSlinky.devextreme.mod.DevExpress.viz.Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: columns | inside | outside): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadialOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadialOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radialOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotationAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOverflow(value: ellipsis | hide | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: normal | breakWord | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

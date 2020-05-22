@@ -10,49 +10,18 @@ import scala.scalajs.js.annotation._
   * @see https://github.com/node-modules/utility#date-utils
   * ---------------0^0------------------
   */
-@js.native
 trait IYYYYMMDDHHmmssStaticOptions extends js.Object {
-  var dateSep: js.UndefOr[String] = js.native
-  var timeSep: js.UndefOr[String] = js.native
+  var dateSep: js.UndefOr[String] = js.undefined
+  var timeSep: js.UndefOr[String] = js.undefined
 }
 
 object IYYYYMMDDHHmmssStaticOptions {
   @scala.inline
-  def apply(): IYYYYMMDDHHmmssStaticOptions = {
+  def apply(dateSep: String = null, timeSep: String = null): IYYYYMMDDHHmmssStaticOptions = {
     val __obj = js.Dynamic.literal()
+    if (dateSep != null) __obj.updateDynamic("dateSep")(dateSep.asInstanceOf[js.Any])
+    if (timeSep != null) __obj.updateDynamic("timeSep")(timeSep.asInstanceOf[js.Any])
     __obj.asInstanceOf[IYYYYMMDDHHmmssStaticOptions]
   }
-  @scala.inline
-  implicit class IYYYYMMDDHHmmssStaticOptionsOps[Self <: IYYYYMMDDHHmmssStaticOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateSep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateSep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateSep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateSep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeSep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeSep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSep")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

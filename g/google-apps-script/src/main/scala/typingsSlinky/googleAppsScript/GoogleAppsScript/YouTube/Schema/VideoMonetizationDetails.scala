@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoMonetizationDetails extends js.Object {
-  var access: js.UndefOr[AccessPolicy] = js.native
+  var access: js.UndefOr[AccessPolicy] = js.undefined
 }
 
 object VideoMonetizationDetails {
   @scala.inline
-  def apply(): VideoMonetizationDetails = {
+  def apply(access: AccessPolicy = null): VideoMonetizationDetails = {
     val __obj = js.Dynamic.literal()
+    if (access != null) __obj.updateDynamic("access")(access.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoMonetizationDetails]
   }
-  @scala.inline
-  implicit class VideoMonetizationDetailsOps[Self <: VideoMonetizationDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess(value: AccessPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

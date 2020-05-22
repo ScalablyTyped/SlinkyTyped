@@ -9,62 +9,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OlHTMLAttributes[T] extends HTMLAttributes[T] {
-  var reversed: js.UndefOr[Boolean] = js.native
-  var start: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[`1` | a_ | A | i_ | I] = js.native
+  var reversed: js.UndefOr[Boolean] = js.undefined
+  var start: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[`1` | a_ | A | i_ | I] = js.undefined
 }
 
 object OlHTMLAttributes {
   @scala.inline
-  def apply[T](): OlHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    reversed: js.UndefOr[Boolean] = js.undefined,
+    start: js.UndefOr[Double] = js.undefined,
+    `type`: `1` | a_ | A | i_ | I = null
+  ): OlHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (!js.isUndefined(reversed)) __obj.updateDynamic("reversed")(reversed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class OlHTMLAttributesOps[Self[t] <: OlHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withReversed(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversed: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: `1` | a_ | A | i_ | I): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

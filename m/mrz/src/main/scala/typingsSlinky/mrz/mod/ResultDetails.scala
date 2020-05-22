@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResultDetails extends js.Object {
   /** Index of the end of the field in `line`. */
-  var end: Double = js.native
+  var end: Double
   /** Name of the field in `result.fields`. */
-  var field: /* import warning: importer.ImportType#apply Failed type conversion: 'format' | 'valid' | 'fields' | 'details'['fields'] */ js.Any = js.native
+  var field: /* import warning: importer.ImportType#apply Failed type conversion: 'format' | 'valid' | 'fields' | 'details'['fields'] */ js.Any
   /** Full english term for the field. */
-  var label: String = js.native
+  var label: String
   /** Index of the line where the field is located. */
-  var line: Double = js.native
+  var line: Double
   /** Array of ranges that are necessary to compute this field. */
-  var ranges: js.Array[Range] = js.native
+  var ranges: js.Array[Range]
   /** Index of the start of the field in `line`. */
-  var start: Double = js.native
-  var valid: Boolean = js.native
+  var start: Double
+  var valid: Boolean
   /** Value of the field or `null`. */
-  var value: String | Null = js.native
+  var value: String | Null
 }
 
 object ResultDetails {
@@ -32,74 +31,11 @@ object ResultDetails {
     line: Double,
     ranges: js.Array[Range],
     start: Double,
-    valid: Boolean
+    valid: Boolean,
+    value: String = null
   ): ResultDetails = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], field = field.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], ranges = ranges.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], field = field.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], ranges = ranges.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultDetails]
   }
-  @scala.inline
-  implicit class ResultDetailsOps[Self <: ResultDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withField(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: 'format' | 'valid' | 'fields' | 'details'['fields'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLine(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRanges(value: js.Array[Range]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-  }
-  
 }
 

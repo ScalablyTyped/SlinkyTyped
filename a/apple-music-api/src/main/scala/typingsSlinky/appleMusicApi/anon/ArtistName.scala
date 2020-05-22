@@ -8,32 +8,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArtistName extends js.Object {
-  var albumName: String = js.native
-  var artistName: String = js.native
-  var artwork: js.UndefOr[Artwork] = js.native
-  var contentRating: js.UndefOr[clean | explicit] = js.native
-  var copyright: js.UndefOr[String] = js.native
-  var editorialNotes: js.UndefOr[typingsSlinky.appleMusicApi.AppleMusicApi.EditorialNotes] = js.native
-  var genreNames: js.Array[String] = js.native
-  var isComplete: Boolean = js.native
-  var isMasteredForItunes: Boolean = js.native
-  var isSingle: Boolean = js.native
-  var name: String = js.native
-  var playParams: js.UndefOr[PlayParameters] = js.native
-  var recordLabel: String = js.native
-  var releaseDate: String = js.native
-  var trackCount: Double = js.native
-  var url: String = js.native
+  // albumName might not actually be a required attribute of Album.
+  // There may be a typo in Apple's documentation, their data doesn't
+  // actually return this attribute for the example I picked and the description of the field references music videos, further increasingly the likelihood that it's just a typo):
+  var albumName: js.UndefOr[String] = js.undefined
+  var artistName: String
+  var artwork: js.UndefOr[Artwork] = js.undefined
+  var contentRating: js.UndefOr[clean | explicit] = js.undefined
+  var copyright: js.UndefOr[String] = js.undefined
+  var editorialNotes: js.UndefOr[typingsSlinky.appleMusicApi.AppleMusicApi.EditorialNotes] = js.undefined
+  var genreNames: js.Array[String]
+  var isCompilation: Boolean
+  var isComplete: Boolean
+  var isMasteredForItunes: Boolean
+  var isSingle: Boolean
+  var name: String
+  var playParams: js.UndefOr[PlayParameters] = js.undefined
+  var recordLabel: String
+  var releaseDate: String
+  var trackCount: Double
+  var url: String
 }
 
 object ArtistName {
   @scala.inline
   def apply(
-    albumName: String,
     artistName: String,
     genreNames: js.Array[String],
+    isCompilation: Boolean,
     isComplete: Boolean,
     isMasteredForItunes: Boolean,
     isSingle: Boolean,
@@ -41,144 +44,22 @@ object ArtistName {
     recordLabel: String,
     releaseDate: String,
     trackCount: Double,
-    url: String
+    url: String,
+    albumName: String = null,
+    artwork: Artwork = null,
+    contentRating: clean | explicit = null,
+    copyright: String = null,
+    editorialNotes: typingsSlinky.appleMusicApi.AppleMusicApi.EditorialNotes = null,
+    playParams: PlayParameters = null
   ): ArtistName = {
-    val __obj = js.Dynamic.literal(albumName = albumName.asInstanceOf[js.Any], artistName = artistName.asInstanceOf[js.Any], genreNames = genreNames.asInstanceOf[js.Any], isComplete = isComplete.asInstanceOf[js.Any], isMasteredForItunes = isMasteredForItunes.asInstanceOf[js.Any], isSingle = isSingle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], recordLabel = recordLabel.asInstanceOf[js.Any], releaseDate = releaseDate.asInstanceOf[js.Any], trackCount = trackCount.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(artistName = artistName.asInstanceOf[js.Any], genreNames = genreNames.asInstanceOf[js.Any], isCompilation = isCompilation.asInstanceOf[js.Any], isComplete = isComplete.asInstanceOf[js.Any], isMasteredForItunes = isMasteredForItunes.asInstanceOf[js.Any], isSingle = isSingle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], recordLabel = recordLabel.asInstanceOf[js.Any], releaseDate = releaseDate.asInstanceOf[js.Any], trackCount = trackCount.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (albumName != null) __obj.updateDynamic("albumName")(albumName.asInstanceOf[js.Any])
+    if (artwork != null) __obj.updateDynamic("artwork")(artwork.asInstanceOf[js.Any])
+    if (contentRating != null) __obj.updateDynamic("contentRating")(contentRating.asInstanceOf[js.Any])
+    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
+    if (editorialNotes != null) __obj.updateDynamic("editorialNotes")(editorialNotes.asInstanceOf[js.Any])
+    if (playParams != null) __obj.updateDynamic("playParams")(playParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArtistName]
   }
-  @scala.inline
-  implicit class ArtistNameOps[Self <: ArtistName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlbumName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("albumName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArtistName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artistName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenreNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genreNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsMasteredForItunes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMasteredForItunes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsSingle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSingle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecordLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrackCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArtwork(value: Artwork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentRating(value: clean | explicit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentRating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyright(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditorialNotes(value: typingsSlinky.appleMusicApi.AppleMusicApi.EditorialNotes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorialNotes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditorialNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editorialNotes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayParams(value: PlayParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playParams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

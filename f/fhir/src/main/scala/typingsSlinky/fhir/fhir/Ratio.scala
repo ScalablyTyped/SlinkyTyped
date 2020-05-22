@@ -7,55 +7,37 @@ import scala.scalajs.js.annotation._
 /**
   * A ratio of two Quantity values - a numerator and a denominator
   */
-@js.native
 trait Ratio extends Element {
   /**
     * Denominator value
     */
-  var denominator: js.UndefOr[Quantity] = js.native
+  var denominator: js.UndefOr[Quantity] = js.undefined
   /**
     * Numerator value
     */
-  var numerator: js.UndefOr[Quantity] = js.native
+  var numerator: js.UndefOr[Quantity] = js.undefined
 }
 
 object Ratio {
   @scala.inline
-  def apply(): Ratio = {
+  def apply(
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    denominator: Quantity = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    numerator: Quantity = null
+  ): Ratio = {
     val __obj = js.Dynamic.literal()
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (denominator != null) __obj.updateDynamic("denominator")(denominator.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (numerator != null) __obj.updateDynamic("numerator")(numerator.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ratio]
   }
-  @scala.inline
-  implicit class RatioOps[Self <: Ratio] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDenominator(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("denominator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDenominator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("denominator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumerator(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numerator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaxTimeMS extends js.Object {
-  var maxTimeMS: js.UndefOr[Double] = js.native
-  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.native
+  var maxTimeMS: js.UndefOr[Double] = js.undefined
+  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.undefined
 }
 
 object MaxTimeMS {
   @scala.inline
-  def apply(): MaxTimeMS = {
+  def apply(maxTimeMS: js.UndefOr[Double] = js.undefined, readPreference: ReadPreferenceOrMode = null): MaxTimeMS = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxTimeMS)) __obj.updateDynamic("maxTimeMS")(maxTimeMS.get.asInstanceOf[js.Any])
+    if (readPreference != null) __obj.updateDynamic("readPreference")(readPreference.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxTimeMS]
   }
-  @scala.inline
-  implicit class MaxTimeMSOps[Self <: MaxTimeMS] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxTimeMS(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimeMS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeMS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadPreference(value: ReadPreferenceOrMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

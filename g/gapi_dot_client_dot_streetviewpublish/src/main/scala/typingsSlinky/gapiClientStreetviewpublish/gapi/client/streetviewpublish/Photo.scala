@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Photo extends js.Object {
   /**
     * Absolute time when the photo was captured.
     * When the photo has no exif timestamp, this is used to set a timestamp in
     * the photo metadata.
     */
-  var captureTime: js.UndefOr[String] = js.native
+  var captureTime: js.UndefOr[String] = js.undefined
   /**
     * Connections to other photos. A connection represents the link from this
     * photo to another photo.
     */
-  var connections: js.UndefOr[js.Array[Connection]] = js.native
+  var connections: js.UndefOr[js.Array[Connection]] = js.undefined
   /**
     * Output only. The download URL for the photo bytes. This field is set only
     * when
@@ -24,163 +23,56 @@ trait Photo extends js.Object {
     * is set to
     * PhotoView.INCLUDE_DOWNLOAD_URL.
     */
-  var downloadUrl: js.UndefOr[String] = js.native
+  var downloadUrl: js.UndefOr[String] = js.undefined
   /**
     * Required when updating a photo. Output only when creating a photo.
     * Identifier for the photo, which is unique among all photos in
     * Google.
     */
-  var photoId: js.UndefOr[PhotoId] = js.native
+  var photoId: js.UndefOr[PhotoId] = js.undefined
   /** Places where this photo belongs. */
-  var places: js.UndefOr[js.Array[Place]] = js.native
+  var places: js.UndefOr[js.Array[Place]] = js.undefined
   /** Pose of the photo. */
-  var pose: js.UndefOr[Pose] = js.native
+  var pose: js.UndefOr[Pose] = js.undefined
   /** Output only. The share link for the photo. */
-  var shareLink: js.UndefOr[String] = js.native
+  var shareLink: js.UndefOr[String] = js.undefined
   /** Output only. The thumbnail URL for showing a preview of the given photo. */
-  var thumbnailUrl: js.UndefOr[String] = js.native
+  var thumbnailUrl: js.UndefOr[String] = js.undefined
   /**
     * Required when creating a photo. Input only. The resource URL where the
     * photo bytes are uploaded to.
     */
-  var uploadReference: js.UndefOr[UploadRef] = js.native
+  var uploadReference: js.UndefOr[UploadRef] = js.undefined
   /** Output only. View count of the photo. */
-  var viewCount: js.UndefOr[String] = js.native
+  var viewCount: js.UndefOr[String] = js.undefined
 }
 
 object Photo {
   @scala.inline
-  def apply(): Photo = {
+  def apply(
+    captureTime: String = null,
+    connections: js.Array[Connection] = null,
+    downloadUrl: String = null,
+    photoId: PhotoId = null,
+    places: js.Array[Place] = null,
+    pose: Pose = null,
+    shareLink: String = null,
+    thumbnailUrl: String = null,
+    uploadReference: UploadRef = null,
+    viewCount: String = null
+  ): Photo = {
     val __obj = js.Dynamic.literal()
+    if (captureTime != null) __obj.updateDynamic("captureTime")(captureTime.asInstanceOf[js.Any])
+    if (connections != null) __obj.updateDynamic("connections")(connections.asInstanceOf[js.Any])
+    if (downloadUrl != null) __obj.updateDynamic("downloadUrl")(downloadUrl.asInstanceOf[js.Any])
+    if (photoId != null) __obj.updateDynamic("photoId")(photoId.asInstanceOf[js.Any])
+    if (places != null) __obj.updateDynamic("places")(places.asInstanceOf[js.Any])
+    if (pose != null) __obj.updateDynamic("pose")(pose.asInstanceOf[js.Any])
+    if (shareLink != null) __obj.updateDynamic("shareLink")(shareLink.asInstanceOf[js.Any])
+    if (thumbnailUrl != null) __obj.updateDynamic("thumbnailUrl")(thumbnailUrl.asInstanceOf[js.Any])
+    if (uploadReference != null) __obj.updateDynamic("uploadReference")(uploadReference.asInstanceOf[js.Any])
+    if (viewCount != null) __obj.updateDynamic("viewCount")(viewCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[Photo]
   }
-  @scala.inline
-  implicit class PhotoOps[Self <: Photo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptureTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnections(value: js.Array[Connection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhotoId(value: PhotoId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhotoId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photoId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaces(value: js.Array[Place]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("places")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("places")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPose(value: Pose): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadReference(value: UploadRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

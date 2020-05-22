@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class Task protected () extends EventEmitter {
   /**
-  		 * @name name The name of the Task
-  		 * @param prereqs Prerequisites to be run before this task
-  		 * @param action The action to perform for this task
-  		 * @param opts Perform this task asynchronously. If you flag a task with this option, you must call the global `complete` method inside the task's action, for execution to proceed to the next task.
-  		 */
+    * @name name The name of the Task
+    * @param prereqs Prerequisites to be run before this task
+    * @param action The action to perform for this task
+    * @param opts Perform this task asynchronously. If you flag a task with this option, you must call the global `complete` method inside the task's action, for execution to proceed to the next task.
+    */
   def this(name: String) = this()
   def this(name: String, prereqs: js.Array[String]) = this()
   def this(name: String, prereqs: js.Array[String], action: js.ThisFunction0[/* this */ Task, Unit]) = this()
@@ -35,14 +35,14 @@ class Task protected () extends EventEmitter {
   def complete(): Unit = js.native
   def complete(value: js.Any): Unit = js.native
   /**
-  		 * Runs prerequisites, then this task. If the task has already been run, will not run the task again.
-  		 */
+    * Runs prerequisites, then this task. If the task has already been run, will not run the task again.
+    */
   def invoke(): Unit = js.native
   def on(event: String, listener: js.Function): this.type = js.native
   def once(event: String, listener: js.Function): this.type = js.native
   /**
-  		 * Runs this task, without running any prerequisites. If the task has already been run, it will still run it again.
-  		 */
+    * Runs this task, without running any prerequisites. If the task has already been run, it will still run it again.
+    */
   def reenable(): Unit = js.native
   def removeListener(event: String, listener: js.Function): this.type = js.native
 }

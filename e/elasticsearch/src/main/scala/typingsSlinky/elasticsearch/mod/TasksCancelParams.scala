@@ -4,88 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TasksCancelParams extends GenericParams {
-  var actions: js.UndefOr[NameList] = js.native
-  var nodeId: js.UndefOr[NameList] = js.native
-  var parentNode: js.UndefOr[String] = js.native
-  var parentTask: js.UndefOr[String] = js.native
-  var taskId: js.UndefOr[String] = js.native
+  var actions: js.UndefOr[NameList] = js.undefined
+  var nodeId: js.UndefOr[NameList] = js.undefined
+  var parentNode: js.UndefOr[String] = js.undefined
+  var parentTask: js.UndefOr[String] = js.undefined
+  var taskId: js.UndefOr[String] = js.undefined
 }
 
 object TasksCancelParams {
   @scala.inline
-  def apply(): TasksCancelParams = {
+  def apply(
+    actions: NameList = null,
+    body: js.Any = null,
+    filterPath: String | js.Array[String] = null,
+    ignore: Double | js.Array[Double] = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    nodeId: NameList = null,
+    parentNode: String = null,
+    parentTask: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    taskId: String = null
+  ): TasksCancelParams = {
     val __obj = js.Dynamic.literal()
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (nodeId != null) __obj.updateDynamic("nodeId")(nodeId.asInstanceOf[js.Any])
+    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
+    if (parentTask != null) __obj.updateDynamic("parentTask")(parentTask.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (taskId != null) __obj.updateDynamic("taskId")(taskId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TasksCancelParams]
   }
-  @scala.inline
-  implicit class TasksCancelParamsOps[Self <: TasksCancelParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeId(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentNode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentTask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

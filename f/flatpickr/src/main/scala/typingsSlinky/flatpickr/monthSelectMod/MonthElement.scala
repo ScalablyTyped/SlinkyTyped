@@ -869,10 +869,7 @@ trait MonthElement extends js.Object {
   var onwaiting: (js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null = js.native
   var onwheel: (js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]) | Null = js.native
   var outerHTML: String = js.native
-  /**
-    * Returns the node document. Returns null for documents.
-    */
-  val ownerDocument: Document | Null = js.native
+  val ownerDocument: Document = js.native
   /**
     * Returns the parent element.
     */

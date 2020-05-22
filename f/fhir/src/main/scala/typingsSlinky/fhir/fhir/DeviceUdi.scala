@@ -7,247 +7,111 @@ import scala.scalajs.js.annotation._
 /**
   * Unique Device Identifier (UDI) Barcode string
   */
-@js.native
 trait DeviceUdi extends BackboneElement {
   /**
     * Contains extended information for property 'carrierAIDC'.
     */
-  var _carrierAIDC: js.UndefOr[Element] = js.native
+  var _carrierAIDC: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'carrierHRF'.
     */
-  var _carrierHRF: js.UndefOr[Element] = js.native
+  var _carrierHRF: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'deviceIdentifier'.
     */
-  var _deviceIdentifier: js.UndefOr[Element] = js.native
+  var _deviceIdentifier: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'entryType'.
     */
-  var _entryType: js.UndefOr[Element] = js.native
+  var _entryType: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'issuer'.
     */
-  var _issuer: js.UndefOr[Element] = js.native
+  var _issuer: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'jurisdiction'.
     */
-  var _jurisdiction: js.UndefOr[Element] = js.native
+  var _jurisdiction: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.native
+  var _name: js.UndefOr[Element] = js.undefined
   /**
     * UDI Machine Readable Barcode String
     */
-  var carrierAIDC: js.UndefOr[base64Binary] = js.native
+  var carrierAIDC: js.UndefOr[base64Binary] = js.undefined
   /**
     * UDI Human Readable Barcode String
     */
-  var carrierHRF: js.UndefOr[String] = js.native
+  var carrierHRF: js.UndefOr[String] = js.undefined
   /**
     * Mandatory fixed portion of UDI
     */
-  var deviceIdentifier: js.UndefOr[String] = js.native
+  var deviceIdentifier: js.UndefOr[String] = js.undefined
   /**
     * barcode | rfid | manual +
     */
-  var entryType: js.UndefOr[code] = js.native
+  var entryType: js.UndefOr[code] = js.undefined
   /**
     * UDI Issuing Organization
     */
-  var issuer: js.UndefOr[uri] = js.native
+  var issuer: js.UndefOr[uri] = js.undefined
   /**
     * Regional UDI authority
     */
-  var jurisdiction: js.UndefOr[uri] = js.native
+  var jurisdiction: js.UndefOr[uri] = js.undefined
   /**
     * Device Name as appears on UDI label
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object DeviceUdi {
   @scala.inline
-  def apply(): DeviceUdi = {
+  def apply(
+    _carrierAIDC: Element = null,
+    _carrierHRF: Element = null,
+    _deviceIdentifier: Element = null,
+    _entryType: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _issuer: Element = null,
+    _jurisdiction: Element = null,
+    _name: Element = null,
+    carrierAIDC: base64Binary = null,
+    carrierHRF: String = null,
+    deviceIdentifier: String = null,
+    entryType: code = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    issuer: uri = null,
+    jurisdiction: uri = null,
+    modifierExtension: js.Array[Extension] = null,
+    name: String = null
+  ): DeviceUdi = {
     val __obj = js.Dynamic.literal()
+    if (_carrierAIDC != null) __obj.updateDynamic("_carrierAIDC")(_carrierAIDC.asInstanceOf[js.Any])
+    if (_carrierHRF != null) __obj.updateDynamic("_carrierHRF")(_carrierHRF.asInstanceOf[js.Any])
+    if (_deviceIdentifier != null) __obj.updateDynamic("_deviceIdentifier")(_deviceIdentifier.asInstanceOf[js.Any])
+    if (_entryType != null) __obj.updateDynamic("_entryType")(_entryType.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_issuer != null) __obj.updateDynamic("_issuer")(_issuer.asInstanceOf[js.Any])
+    if (_jurisdiction != null) __obj.updateDynamic("_jurisdiction")(_jurisdiction.asInstanceOf[js.Any])
+    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
+    if (carrierAIDC != null) __obj.updateDynamic("carrierAIDC")(carrierAIDC.asInstanceOf[js.Any])
+    if (carrierHRF != null) __obj.updateDynamic("carrierHRF")(carrierHRF.asInstanceOf[js.Any])
+    if (deviceIdentifier != null) __obj.updateDynamic("deviceIdentifier")(deviceIdentifier.asInstanceOf[js.Any])
+    if (entryType != null) __obj.updateDynamic("entryType")(entryType.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
+    if (jurisdiction != null) __obj.updateDynamic("jurisdiction")(jurisdiction.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceUdi]
   }
-  @scala.inline
-  implicit class DeviceUdiOps[Self <: DeviceUdi] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_carrierAIDC(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_carrierAIDC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_carrierAIDC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_carrierAIDC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_carrierHRF(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_carrierHRF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_carrierHRF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_carrierHRF")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_deviceIdentifier(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deviceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_deviceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deviceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_entryType(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_entryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_entryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_entryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_issuer(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_issuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_issuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_jurisdiction(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_jurisdiction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_jurisdiction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_jurisdiction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_name(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCarrierAIDC(value: base64Binary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierAIDC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCarrierAIDC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierAIDC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCarrierHRF(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierHRF")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCarrierHRF: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("carrierHRF")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntryType(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssuer(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJurisdiction(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJurisdiction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

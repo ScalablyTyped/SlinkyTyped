@@ -8,32 +8,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** offers a registry for implementation objects and provides information about the registered implementations. */
-@js.native
 trait XImplementationRegistration extends XInterface {
   /**
     * @param implementationName specifies the name of the checked implementation.
     * @returns a sequence with names of the missing services to create an instance of this implementation.
     */
-  def checkInstantiation(implementationName: String): SafeArray[String] = js.native
+  def checkInstantiation(implementationName: String): SafeArray[String]
   /**
     * @param aImplementationLoader specifies the name of the needed loader for this type of implementation. For example, the loader "com.sun.star.loader.Share
     * @param aLocation specifies the location of the component with the URL.
     * @returns the names of the implementations registered by the url location.
     */
-  def getImplementations(aImplementationLoader: String, aLocation: String): SafeArray[String] = js.native
+  def getImplementations(aImplementationLoader: String, aLocation: String): SafeArray[String]
   /**
     * registers a component which provides one or more implementations.
     * @param aImplementationLoader the URL of the implementation loader.
     * @param aLocation specifies the location of the component with the URL.
     * @param xReg specifies the registry where the component should be installed. If it is a NULL interface, then the component will be installed in the syste
     */
-  def registerImplementation(aImplementationLoader: String, aLocation: String, xReg: XSimpleRegistry): Unit = js.native
+  def registerImplementation(aImplementationLoader: String, aLocation: String, xReg: XSimpleRegistry): Unit
   /**
     * revokes a component and all their provided implementations from the registry.
     * @param aLocation specifies the location of the component with the URL.
     * @param xReg specifies the registry where the component should be installed. If it is a NULL interface, then the component will be revoked from the syste
     */
-  def revokeImplementation(aLocation: String, xReg: XSimpleRegistry): Boolean = js.native
+  def revokeImplementation(aLocation: String, xReg: XSimpleRegistry): Boolean
 }
 
 object XImplementationRegistration {
@@ -50,37 +49,5 @@ object XImplementationRegistration {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), checkInstantiation = js.Any.fromFunction1(checkInstantiation), getImplementations = js.Any.fromFunction2(getImplementations), queryInterface = js.Any.fromFunction1(queryInterface), registerImplementation = js.Any.fromFunction3(registerImplementation), release = js.Any.fromFunction0(release), revokeImplementation = js.Any.fromFunction2(revokeImplementation))
     __obj.asInstanceOf[XImplementationRegistration]
   }
-  @scala.inline
-  implicit class XImplementationRegistrationOps[Self <: XImplementationRegistration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckInstantiation(value: String => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInstantiation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetImplementations(value: (String, String) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImplementations")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterImplementation(value: (String, String, XSimpleRegistry) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerImplementation")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRevokeImplementation(value: (String, XSimpleRegistry) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revokeImplementation")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

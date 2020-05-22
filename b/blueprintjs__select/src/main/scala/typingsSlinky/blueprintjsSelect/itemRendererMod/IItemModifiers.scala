@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IItemModifiers extends js.Object {
   /** Whether this is the "active" (focused) item, meaning keyboard interactions will act upon it. */
-  var active: Boolean = js.native
+  var active: Boolean
   /** Whether this item is disabled and should ignore interactions. */
-  var disabled: Boolean = js.native
+  var disabled: Boolean
   /** Whether this item matches the predicate. A typical renderer could hide `false` values. */
-  var matchesPredicate: Boolean = js.native
+  var matchesPredicate: Boolean
 }
 
 object IItemModifiers {
@@ -20,31 +19,5 @@ object IItemModifiers {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], matchesPredicate = matchesPredicate.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemModifiers]
   }
-  @scala.inline
-  implicit class IItemModifiersOps[Self <: IItemModifiers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatchesPredicate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchesPredicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

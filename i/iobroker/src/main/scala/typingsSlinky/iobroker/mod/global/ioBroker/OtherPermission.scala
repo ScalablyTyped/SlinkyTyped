@@ -8,12 +8,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OtherPermission extends Permission {
   @JSName("operation")
-  var operation_OtherPermission: execute | http | sendto = js.native
+  var operation_OtherPermission: execute | http | sendto
   @JSName("type")
-  var type_OtherPermission: other = js.native
+  var type_OtherPermission: other
 }
 
 object OtherPermission {
@@ -23,25 +22,5 @@ object OtherPermission {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OtherPermission]
   }
-  @scala.inline
-  implicit class OtherPermissionOps[Self <: OtherPermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperation(value: execute | http | sendto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

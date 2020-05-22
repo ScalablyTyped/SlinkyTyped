@@ -14,29 +14,10 @@ trait SchemaCheckAccessResponse extends js.Object {
 
 object SchemaCheckAccessResponse {
   @scala.inline
-  def apply(): SchemaCheckAccessResponse = {
+  def apply(hasAccess: js.UndefOr[Boolean] = js.undefined): SchemaCheckAccessResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasAccess)) __obj.updateDynamic("hasAccess")(hasAccess.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckAccessResponse]
   }
-  @scala.inline
-  implicit class SchemaCheckAccessResponseOps[Self <: SchemaCheckAccessResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasAccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

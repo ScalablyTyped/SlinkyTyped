@@ -513,9 +513,9 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait devtools
-    extends _Permission
-       with WindowType
+    extends WindowType
        with typingsSlinky.firefoxWebextBrowser.browser.tabs.WindowType
+       with _Permission
   
   @js.native
   sealed trait devtools_child extends APIChildScope
@@ -1058,8 +1058,8 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait privacy
-    extends _Permission
-       with ProfilerFeature
+    extends ProfilerFeature
+       with _Permission
   
   @js.native
   sealed trait private_browsing extends TrackingProtectionModeOption
@@ -1287,8 +1287,8 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait theme
-    extends _Permission
-       with ExtensionType
+    extends ExtensionType
+       with _Permission
   
   @js.native
   sealed trait threads extends ProfilerFeature

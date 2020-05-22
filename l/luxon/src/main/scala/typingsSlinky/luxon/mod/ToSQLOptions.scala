@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToSQLOptions extends js.Object {
-  var includeOffset: js.UndefOr[Boolean] = js.native
-  var includeZone: js.UndefOr[Boolean] = js.native
+  var includeOffset: js.UndefOr[Boolean] = js.undefined
+  var includeZone: js.UndefOr[Boolean] = js.undefined
 }
 
 object ToSQLOptions {
   @scala.inline
-  def apply(): ToSQLOptions = {
+  def apply(includeOffset: js.UndefOr[Boolean] = js.undefined, includeZone: js.UndefOr[Boolean] = js.undefined): ToSQLOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeOffset)) __obj.updateDynamic("includeOffset")(includeOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeZone)) __obj.updateDynamic("includeZone")(includeZone.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToSQLOptions]
   }
-  @scala.inline
-  implicit class ToSQLOptionsOps[Self <: ToSQLOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeOffset(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeZone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeZone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

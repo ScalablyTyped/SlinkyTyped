@@ -22,41 +22,10 @@ trait SetTopicAttributesInput extends js.Object {
 
 object SetTopicAttributesInput {
   @scala.inline
-  def apply(AttributeName: attributeName, TopicArn: topicARN): SetTopicAttributesInput = {
+  def apply(AttributeName: attributeName, TopicArn: topicARN, AttributeValue: attributeValue = null): SetTopicAttributesInput = {
     val __obj = js.Dynamic.literal(AttributeName = AttributeName.asInstanceOf[js.Any], TopicArn = TopicArn.asInstanceOf[js.Any])
+    if (AttributeValue != null) __obj.updateDynamic("AttributeValue")(AttributeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetTopicAttributesInput]
   }
-  @scala.inline
-  implicit class SetTopicAttributesInputOps[Self <: SetTopicAttributesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeName(value: attributeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopicArn(value: topicARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeValue(value: attributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

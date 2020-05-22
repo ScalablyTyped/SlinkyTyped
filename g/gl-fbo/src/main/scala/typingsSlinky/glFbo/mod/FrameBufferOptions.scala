@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FrameBufferOptions extends js.Object {
-  var color: js.UndefOr[Double] = js.native
-  var depth: js.UndefOr[Boolean] = js.native
-  var float: js.UndefOr[Boolean] = js.native
-  var preferFloat: js.UndefOr[Boolean] = js.native
-  var stencil: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[Double] = js.undefined
+  var depth: js.UndefOr[Boolean] = js.undefined
+  var float: js.UndefOr[Boolean] = js.undefined
+  var preferFloat: js.UndefOr[Boolean] = js.undefined
+  var stencil: js.UndefOr[Boolean] = js.undefined
 }
 
 object FrameBufferOptions {
   @scala.inline
-  def apply(): FrameBufferOptions = {
+  def apply(
+    color: js.UndefOr[Double] = js.undefined,
+    depth: js.UndefOr[Boolean] = js.undefined,
+    float: js.UndefOr[Boolean] = js.undefined,
+    preferFloat: js.UndefOr[Boolean] = js.undefined,
+    stencil: js.UndefOr[Boolean] = js.undefined
+  ): FrameBufferOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(float)) __obj.updateDynamic("float")(float.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferFloat)) __obj.updateDynamic("preferFloat")(preferFloat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stencil)) __obj.updateDynamic("stencil")(stencil.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FrameBufferOptions]
   }
-  @scala.inline
-  implicit class FrameBufferOptionsOps[Self <: FrameBufferOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferFloat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferFloat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferFloat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStencil(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stencil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStencil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stencil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PushData extends js.Object {
   /** payload for APNs messages */
-  var apns: js.UndefOr[js.Any] = js.native
+  var apns: js.UndefOr[js.Any] = js.undefined
   /** payload for GCM messages */
-  var gcm: js.UndefOr[js.Any] = js.native
+  var gcm: js.UndefOr[js.Any] = js.undefined
 }
 
 object PushData {
   @scala.inline
-  def apply(): PushData = {
+  def apply(apns: js.Any = null, gcm: js.Any = null): PushData = {
     val __obj = js.Dynamic.literal()
+    if (apns != null) __obj.updateDynamic("apns")(apns.asInstanceOf[js.Any])
+    if (gcm != null) __obj.updateDynamic("gcm")(gcm.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushData]
   }
-  @scala.inline
-  implicit class PushDataOps[Self <: PushData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApns(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcm(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

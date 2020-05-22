@@ -5,31 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config
   extends /* key */ StringDictionary[js.Any] {
-  def get(k: String): js.Any = js.native
+  def get(k: String): js.Any
 }
 
 object Config {
   @scala.inline
-  def apply(get: String => js.Any): Config = {
+  def apply(get: String => js.Any, StringDictionary: /* name */ StringDictionary[js.Any] = null): Config = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

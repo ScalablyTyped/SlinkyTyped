@@ -1,105 +1,33 @@
 package typingsSlinky.chartJs.mod
 
-import org.scalajs.dom.raw.CanvasGradient
-import org.scalajs.dom.raw.CanvasPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AngleLineOptions extends js.Object {
-  var borderDash: js.UndefOr[js.Array[Double]] = js.native
-  var borderDashOffset: js.UndefOr[Double] = js.native
-  var color: js.UndefOr[ChartColor] = js.native
-  var display: js.UndefOr[Boolean] = js.native
-  var lineWidth: js.UndefOr[Double] = js.native
+  var borderDash: js.UndefOr[js.Array[Double]] = js.undefined
+  var borderDashOffset: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[ChartColor] = js.undefined
+  var display: js.UndefOr[Boolean] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.undefined
 }
 
 object AngleLineOptions {
   @scala.inline
-  def apply(): AngleLineOptions = {
+  def apply(
+    borderDash: js.Array[Double] = null,
+    borderDashOffset: js.UndefOr[Double] = js.undefined,
+    color: ChartColor = null,
+    display: js.UndefOr[Boolean] = js.undefined,
+    lineWidth: js.UndefOr[Double] = js.undefined
+  ): AngleLineOptions = {
     val __obj = js.Dynamic.literal()
+    if (borderDash != null) __obj.updateDynamic("borderDash")(borderDash.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderDashOffset)) __obj.updateDynamic("borderDashOffset")(borderDashOffset.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(display)) __obj.updateDynamic("display")(display.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineWidth)) __obj.updateDynamic("lineWidth")(lineWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AngleLineOptions]
   }
-  @scala.inline
-  implicit class AngleLineOptionsOps[Self <: AngleLineOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderDash(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderDash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderDashOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderDashOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorCanvasPattern(value: CanvasPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorCanvasGradient(value: CanvasGradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: ChartColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Coverage data for a JavaScript function.
   */
-@js.native
 trait FunctionCoverage extends js.Object {
   /**
     * JavaScript function name.
     */
-  var functionName: String = js.native
+  var functionName: String
   /**
     * Whether coverage data for this function has block granularity.
     */
-  var isBlockCoverage: Boolean = js.native
+  var isBlockCoverage: Boolean
   /**
     * Source ranges inside the function with coverage data.
     */
-  var ranges: js.Array[CoverageRange] = js.native
+  var ranges: js.Array[CoverageRange]
 }
 
 object FunctionCoverage {
@@ -29,31 +28,5 @@ object FunctionCoverage {
     val __obj = js.Dynamic.literal(functionName = functionName.asInstanceOf[js.Any], isBlockCoverage = isBlockCoverage.asInstanceOf[js.Any], ranges = ranges.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionCoverage]
   }
-  @scala.inline
-  implicit class FunctionCoverageOps[Self <: FunctionCoverage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsBlockCoverage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBlockCoverage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRanges(value: js.Array[CoverageRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

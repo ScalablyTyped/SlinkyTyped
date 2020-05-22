@@ -42,6 +42,14 @@ object componentTabMod extends js.Object {
     var title: String = js.native
     var titleChild: WorksTabTitle = js.native
     var titleElement: js.Any = js.native
+    /**
+      * A callback method that is invoked immediately after
+      * Angular has completed initialization of all of the directive's
+      * content.
+      * It is invoked only once when the directive is instantiated.
+      */
+    /* CompleteClass */
+    override def ngAfterContentInit(): Unit = js.native
     def ngOnInit(): Unit = js.native
   }
   

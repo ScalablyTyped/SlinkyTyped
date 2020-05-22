@@ -10,7 +10,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WindowScrollerProps
   extends /**
   * PLEASE NOTE
@@ -21,124 +20,48 @@ trait WindowScrollerProps
   */
 /* key */ StringDictionary[js.Any] {
   /** Callback to be invoked on-resize: ({ height, width }) */
-  var onResize: js.UndefOr[js.Function1[/* params */ Height, Unit]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* params */ Height, Unit]] = js.undefined
   /** Callback to be invoked on-scroll: ({ scrollLeft, scrollTop }) */
-  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollLeft, Unit]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollLeft, Unit]] = js.undefined
   /** Element to attach scroll event listeners. Defaults to window. */
-  var scrollElement: js.UndefOr[(Window with (/* globalThis */ js.Any)) | Element] = js.native
+  var scrollElement: js.UndefOr[(Window with (/* globalThis */ js.Any)) | Element] = js.undefined
   /**
     * Wait this amount of time after the last scroll event before resetting child `pointer-events`.
     */
-  var scrollingResetTimeInterval: js.UndefOr[Double] = js.native
+  var scrollingResetTimeInterval: js.UndefOr[Double] = js.undefined
   /** Height used for server-side rendering */
-  var serverHeight: js.UndefOr[Double] = js.native
+  var serverHeight: js.UndefOr[Double] = js.undefined
   /** Width used for server-side rendering */
-  var serverWidth: js.UndefOr[Double] = js.native
+  var serverWidth: js.UndefOr[Double] = js.undefined
   /**
     * Function responsible for rendering children.
     * This function should implement the following signature:
     * ({ height, isScrolling, scrollLeft, scrollTop, width, onChildScroll }) => PropTypes.element
     */
-  def children(params: WindowScrollerChildProps): TagMod[Any] = js.native
+  def children(params: WindowScrollerChildProps): TagMod[Any]
 }
 
 object WindowScrollerProps {
   @scala.inline
-  def apply(children: WindowScrollerChildProps => TagMod[Any]): WindowScrollerProps = {
+  def apply(
+    children: WindowScrollerChildProps => TagMod[Any],
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    onResize: /* params */ Height => Unit = null,
+    onScroll: /* params */ ScrollLeft => Unit = null,
+    scrollElement: (Window with (/* globalThis */ js.Any)) | Element = null,
+    scrollingResetTimeInterval: js.UndefOr[Double] = js.undefined,
+    serverHeight: js.UndefOr[Double] = js.undefined,
+    serverWidth: js.UndefOr[Double] = js.undefined
+  ): WindowScrollerProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction1(onResize))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (scrollElement != null) __obj.updateDynamic("scrollElement")(scrollElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollingResetTimeInterval)) __obj.updateDynamic("scrollingResetTimeInterval")(scrollingResetTimeInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverHeight)) __obj.updateDynamic("serverHeight")(serverHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverWidth)) __obj.updateDynamic("serverWidth")(serverWidth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowScrollerProps]
   }
-  @scala.inline
-  implicit class WindowScrollerPropsOps[Self <: WindowScrollerProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: WindowScrollerChildProps => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnResize(value: /* params */ Height => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScroll(value: /* params */ ScrollLeft => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollElementElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollElement(value: (Window with (/* globalThis */ js.Any)) | Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollingResetTimeInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingResetTimeInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollingResetTimeInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingResetTimeInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverWidth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

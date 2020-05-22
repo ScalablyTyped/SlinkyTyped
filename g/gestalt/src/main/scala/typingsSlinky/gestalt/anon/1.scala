@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `1` extends js.Object {
-  var event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, SyntheticFocusEvent[HTMLInputElement]] = js.native
-  var value: String = js.native
+  var event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, SyntheticFocusEvent[HTMLInputElement]]
+  var value: String
 }
 
 object `1` {
@@ -21,27 +20,5 @@ object `1` {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1`]
   }
-  @scala.inline
-  implicit class `1Ops`[Self <: `1`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvent(
-      value: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, SyntheticFocusEvent[HTMLInputElement]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

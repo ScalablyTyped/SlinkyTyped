@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * The base class for parameters related to inserting or changing HTML5 media elements (Audio and Video) in the ASPxHtmlEditor.
   */
-@js.native
 trait ASPxClientHtmlEditorChangeHtml5MediaElementCommandArguments extends ASPxClientHtmlEditorChangeMediaElementCommandArguments {
   /**
     * Determines if a media file will start playing automatically.
     */
-  var autoPlay: Boolean = js.native
+  var autoPlay: Boolean
   /**
     * Determines if a media file repeats indefinitely, or stops when it reaches the last frame.
     */
-  var loop: Boolean = js.native
+  var loop: Boolean
   /**
     * Determines how a media file should be loaded when the page loads.
     */
-  var preloadMode: String = js.native
+  var preloadMode: String
   /**
     * Determines if the media player controls should be displayed.
     */
-  var showPlayerControls: Boolean = js.native
+  var showPlayerControls: Boolean
 }
 
 object ASPxClientHtmlEditorChangeHtml5MediaElementCommandArguments {
@@ -44,37 +43,5 @@ object ASPxClientHtmlEditorChangeHtml5MediaElementCommandArguments {
     val __obj = js.Dynamic.literal(GetCommandName = js.Any.fromFunction0(GetCommandName), align = align.asInstanceOf[js.Any], autoPlay = autoPlay.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loop = loop.asInstanceOf[js.Any], preloadMode = preloadMode.asInstanceOf[js.Any], selectedElement = selectedElement.asInstanceOf[js.Any], showPlayerControls = showPlayerControls.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], styleSettings = styleSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientHtmlEditorChangeHtml5MediaElementCommandArguments]
   }
-  @scala.inline
-  implicit class ASPxClientHtmlEditorChangeHtml5MediaElementCommandArgumentsOps[Self <: ASPxClientHtmlEditorChangeHtml5MediaElementCommandArguments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoPlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreloadMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowPlayerControls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showPlayerControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.typescriptOptional.typesMod
 
+import typingsSlinky.typescriptOptional.typescriptOptionalStrings.empty
+import typingsSlinky.typescriptOptional.typescriptOptionalStrings.present
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,14 @@ trait Option[T] extends js.Object
 
 object Option {
   @scala.inline
-  implicit def apply[T](value: Empty[T]): Option[T] = value.asInstanceOf[Option[T]]
+  def Present[T](kind: present, value: T): Option[T] = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Option[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Present[T]): Option[T] = value.asInstanceOf[Option[T]]
+  def Empty[T](kind: empty): Option[T] = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Option[T]]
+  }
 }
 

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs")
 @js.native
 abstract class MediaStreamSourceSwitchStreamsRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs {
+  /** Gets the object that represents the request to switch the streams. */
+  /* CompleteClass */
+  override var request: typingsSlinky.winrtUwp.Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest = js.native
+}
 

@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * Data for a [[PaymentMethodType|`PaymentMethodType.CARD`]] payment
   * method.
   */
-@js.native
 trait CardInfo extends js.Object {
   /**
     * The billing address associated with the card.
@@ -17,7 +16,7 @@ trait CardInfo extends js.Object {
     * is set as required through
     * [[CardParameters.billingAddressRequired|`CardParameters.billingAddressRequired`]].
     */
-  var billingAddress: js.UndefOr[Address] = js.native
+  var billingAddress: js.UndefOr[Address] = js.undefined
   /**
     * The details about the card.
     *
@@ -30,7 +29,7 @@ trait CardInfo extends js.Object {
     * [[PaymentMethodData.description|`PaymentMethodData.description`]]
     * instead.
     */
-  var cardDetails: String = js.native
+  var cardDetails: String
   /**
     * The card network.
     *
@@ -42,46 +41,15 @@ trait CardInfo extends js.Object {
     * [[PaymentMethodData.description|`PaymentMethodData.description`]]
     * instead.
     */
-  var cardNetwork: CardNetwork = js.native
+  var cardNetwork: CardNetwork
 }
 
 object CardInfo {
   @scala.inline
-  def apply(cardDetails: String, cardNetwork: CardNetwork): CardInfo = {
+  def apply(cardDetails: String, cardNetwork: CardNetwork, billingAddress: Address = null): CardInfo = {
     val __obj = js.Dynamic.literal(cardDetails = cardDetails.asInstanceOf[js.Any], cardNetwork = cardNetwork.asInstanceOf[js.Any])
+    if (billingAddress != null) __obj.updateDynamic("billingAddress")(billingAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardInfo]
   }
-  @scala.inline
-  implicit class CardInfoOps[Self <: CardInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCardDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCardNetwork(value: CardNetwork): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardNetwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBillingAddress(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait AwsIamConfig extends js.Object {
 
 object AwsIamConfig {
   @scala.inline
-  def apply(): AwsIamConfig = {
+  def apply(signingRegion: String = null, signingServiceName: String = null): AwsIamConfig = {
     val __obj = js.Dynamic.literal()
+    if (signingRegion != null) __obj.updateDynamic("signingRegion")(signingRegion.asInstanceOf[js.Any])
+    if (signingServiceName != null) __obj.updateDynamic("signingServiceName")(signingServiceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsIamConfig]
   }
-  @scala.inline
-  implicit class AwsIamConfigOps[Self <: AwsIamConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSigningRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigningServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningServiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingServiceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

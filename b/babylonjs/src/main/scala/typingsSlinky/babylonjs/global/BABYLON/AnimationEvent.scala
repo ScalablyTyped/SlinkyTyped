@@ -28,5 +28,19 @@ class AnimationEvent protected ()
     /** Specifies if the event should be triggered only once**/
   onlyOnce: Boolean
   ) = this()
+  /** The frame for which the event is triggered **/
+  /* CompleteClass */
+  override var frame: Double = js.native
+  /**
+    * Specifies if the animation event is done
+    */
+  /* CompleteClass */
+  override var isDone: Boolean = js.native
+  /** @hidden */
+  /* CompleteClass */
+  override def _clone(): typingsSlinky.babylonjs.BABYLON.AnimationEvent = js.native
+  /** The event to perform when triggered **/
+  /* CompleteClass */
+  override def action(currentFrame: Double): Unit = js.native
 }
 

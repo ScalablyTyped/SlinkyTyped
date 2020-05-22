@@ -8,88 +8,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cases extends js.Object {
-  var cases: js.Array[SwitchCaseKind] = js.native
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
-  var discriminant: ExpressionKind = js.native
-  var lexical: js.UndefOr[Boolean] = js.native
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var cases: js.Array[SwitchCaseKind]
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
+  var discriminant: ExpressionKind
+  var lexical: js.UndefOr[Boolean] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
 }
 
 object Cases {
   @scala.inline
-  def apply(cases: js.Array[SwitchCaseKind], discriminant: ExpressionKind): Cases = {
+  def apply(
+    cases: js.Array[SwitchCaseKind],
+    discriminant: ExpressionKind,
+    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
+    lexical: js.UndefOr[Boolean] = js.undefined,
+    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined
+  ): Cases = {
     val __obj = js.Dynamic.literal(cases = cases.asInstanceOf[js.Any], discriminant = discriminant.asInstanceOf[js.Any])
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(lexical)) __obj.updateDynamic("lexical")(lexical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cases]
   }
-  @scala.inline
-  implicit class CasesOps[Self <: Cases] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCases(value: js.Array[SwitchCaseKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiscriminant(value: ExpressionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discriminant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
-        ret
-    }
-    @scala.inline
-    def withLexical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lexical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLexical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lexical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
-        ret
-    }
-  }
-  
 }
 

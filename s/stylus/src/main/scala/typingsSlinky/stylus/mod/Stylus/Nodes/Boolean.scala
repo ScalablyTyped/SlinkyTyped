@@ -5,20 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Boolean extends Node {
-  var isFalse: scala.Boolean = js.native
-  var isTrue: scala.Boolean = js.native
-  var `val`: scala.Boolean = js.native
+  var isFalse: scala.Boolean
+  var isTrue: scala.Boolean
+  var `val`: scala.Boolean
   /**
     * Return 'Boolean'.
     */
-  def inspect(): java.lang.String = js.native
+  def inspect(): java.lang.String
   /**
     * Negate the value.
     */
   // tslint:disable-next-line no-unnecessary-qualifier
-  def negate(): Boolean = js.native
+  def negate(): Boolean
 }
 
 object Boolean {
@@ -47,43 +46,5 @@ object Boolean {
     __obj.updateDynamic("val")(`val`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Boolean]
   }
-  @scala.inline
-  implicit class BooleanOps[Self <: Boolean] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInspect(value: () => java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsFalse(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFalse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsTrue(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withVal(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

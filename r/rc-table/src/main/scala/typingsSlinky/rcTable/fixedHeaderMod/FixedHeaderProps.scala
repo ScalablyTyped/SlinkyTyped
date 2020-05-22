@@ -12,11 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FixedHeaderProps[RecordType] extends HeaderProps[RecordType] {
-  var colWidths: js.Array[Double] = js.native
-  var columCount: Double = js.native
-  var direction: ltr | rtl = js.native
+  var colWidths: js.Array[Double]
+  var columCount: Double
+  var direction: ltr | rtl
 }
 
 object FixedHeaderProps {
@@ -33,31 +32,5 @@ object FixedHeaderProps {
     val __obj = js.Dynamic.literal(colWidths = colWidths.asInstanceOf[js.Any], columCount = columCount.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
     __obj.asInstanceOf[FixedHeaderProps[RecordType]]
   }
-  @scala.inline
-  implicit class FixedHeaderPropsOps[Self[recordtype] <: FixedHeaderProps[recordtype], RecordType] (val x: Self[RecordType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[RecordType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[RecordType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[RecordType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[RecordType] with Other]
-    @scala.inline
-    def withColWidths(value: js.Array[Double]): Self[RecordType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colWidths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumCount(value: Double): Self[RecordType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirection(value: ltr | rtl): Self[RecordType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PullsCreateReviewCommentReplyResponse extends js.Object {
-  var _links: PullsCreateReviewCommentReplyResponseLinks = js.native
-  var author_association: String = js.native
-  var body: String = js.native
-  var commit_id: String = js.native
-  var created_at: String = js.native
-  var diff_hunk: String = js.native
-  var html_url: String = js.native
-  var id: Double = js.native
-  var node_id: String = js.native
-  var original_commit_id: String = js.native
-  var original_position: Double = js.native
-  var path: String = js.native
-  var position: Double = js.native
-  var pull_request_review_id: Double = js.native
-  var pull_request_url: String = js.native
-  var updated_at: String = js.native
-  var url: String = js.native
-  var user: PullsCreateReviewCommentReplyResponseUser = js.native
+  var _links: PullsCreateReviewCommentReplyResponseLinks
+  var author_association: String
+  var body: String
+  var commit_id: String
+  var created_at: String
+  var diff_hunk: String
+  var html_url: String
+  var id: Double
+  var node_id: String
+  var original_commit_id: String
+  var original_position: Double
+  var path: String
+  var position: Double
+  var pull_request_review_id: Double
+  var pull_request_url: String
+  var updated_at: String
+  var url: String
+  var user: PullsCreateReviewCommentReplyResponseUser
 }
 
 object PullsCreateReviewCommentReplyResponse {
@@ -51,121 +50,5 @@ object PullsCreateReviewCommentReplyResponse {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], author_association = author_association.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], commit_id = commit_id.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], diff_hunk = diff_hunk.asInstanceOf[js.Any], html_url = html_url.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], node_id = node_id.asInstanceOf[js.Any], original_commit_id = original_commit_id.asInstanceOf[js.Any], original_position = original_position.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], pull_request_review_id = pull_request_review_id.asInstanceOf[js.Any], pull_request_url = pull_request_url.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullsCreateReviewCommentReplyResponse]
   }
-  @scala.inline
-  implicit class PullsCreateReviewCommentReplyResponseOps[Self <: PullsCreateReviewCommentReplyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_links(value: PullsCreateReviewCommentReplyResponseLinks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthor_association(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author_association")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommit_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commit_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDiff_hunk(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diff_hunk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginal_commit_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original_commit_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginal_position(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original_position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPull_request_review_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pull_request_review_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPull_request_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pull_request_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: PullsCreateReviewCommentReplyResponseUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

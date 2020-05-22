@@ -10,75 +10,37 @@ import scala.scalajs.js.annotation._
   * requested from MongoDB for write operations.
   * http://mongodb.github.io/node-mongodb-native/3.1/api/global.html#WriteConcern
   */
-@js.native
 trait WriteConcern extends js.Object {
   /**
     * requests acknowledgement from MongoDB that the write operation has
     * been written to the journal
     * @default false
     */
-  var j: js.UndefOr[Boolean] = js.native
+  var j: js.UndefOr[Boolean] = js.undefined
   /**
     * requests acknowledgement that the write operation has
     * propagated to a specified number of mongod hosts
     * @default 1
     */
-  var w: js.UndefOr[scala.Double | majority | String] = js.native
+  var w: js.UndefOr[scala.Double | majority | String] = js.undefined
   /**
     * a time limit, in milliseconds, for the write concern
     */
-  var wtimeout: js.UndefOr[scala.Double] = js.native
+  var wtimeout: js.UndefOr[scala.Double] = js.undefined
 }
 
 object WriteConcern {
   @scala.inline
-  def apply(): WriteConcern = {
+  def apply(
+    j: js.UndefOr[Boolean] = js.undefined,
+    w: scala.Double | majority | String = null,
+    wtimeout: js.UndefOr[scala.Double] = js.undefined
+  ): WriteConcern = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.get.asInstanceOf[js.Any])
+    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
+    if (!js.isUndefined(wtimeout)) __obj.updateDynamic("wtimeout")(wtimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteConcern]
   }
-  @scala.inline
-  implicit class WriteConcernOps[Self <: WriteConcern] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJ(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("j")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("j")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withW(value: scala.Double | majority | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutW: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWtimeout(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wtimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWtimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wtimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

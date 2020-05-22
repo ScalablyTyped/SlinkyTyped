@@ -14,29 +14,10 @@ trait ListCloudFrontOriginAccessIdentitiesResult extends js.Object {
 
 object ListCloudFrontOriginAccessIdentitiesResult {
   @scala.inline
-  def apply(): ListCloudFrontOriginAccessIdentitiesResult = {
+  def apply(CloudFrontOriginAccessIdentityList: CloudFrontOriginAccessIdentityList = null): ListCloudFrontOriginAccessIdentitiesResult = {
     val __obj = js.Dynamic.literal()
+    if (CloudFrontOriginAccessIdentityList != null) __obj.updateDynamic("CloudFrontOriginAccessIdentityList")(CloudFrontOriginAccessIdentityList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCloudFrontOriginAccessIdentitiesResult]
   }
-  @scala.inline
-  implicit class ListCloudFrontOriginAccessIdentitiesResultOps[Self <: ListCloudFrontOriginAccessIdentitiesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudFrontOriginAccessIdentityList(value: CloudFrontOriginAccessIdentityList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentityList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudFrontOriginAccessIdentityList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentityList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

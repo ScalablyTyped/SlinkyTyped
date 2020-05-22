@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait From extends js.Object {
-  var from: String = js.native
-  var many: js.UndefOr[Boolean] = js.native
+  var from: String
+  var many: js.UndefOr[Boolean] = js.undefined
 }
 
 object From {
   @scala.inline
-  def apply(from: String): From = {
+  def apply(from: String, many: js.UndefOr[Boolean] = js.undefined): From = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any])
+    if (!js.isUndefined(many)) __obj.updateDynamic("many")(many.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[From]
   }
-  @scala.inline
-  implicit class FromOps[Self <: From] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMany(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("many")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("many")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

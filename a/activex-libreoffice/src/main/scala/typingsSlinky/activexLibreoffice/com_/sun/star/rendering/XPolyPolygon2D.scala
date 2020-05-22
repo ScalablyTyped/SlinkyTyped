@@ -11,12 +11,11 @@ import scala.scalajs.js.annotation._
   * Generic interface for poly-polygons in 2D.
   * @since OOo 2.0
   */
-@js.native
 trait XPolyPolygon2D extends XInterface {
   /** Query the rule used to determine inside and outside of the poly-polygon. */
-  var FillRule: typingsSlinky.activexLibreoffice.com_.sun.star.rendering.FillRule = js.native
+  var FillRule: typingsSlinky.activexLibreoffice.com_.sun.star.rendering.FillRule
   /** Query number of polygons inside this poly-polygon */
-  val NumberOfPolygons: Double = js.native
+  val NumberOfPolygons: Double
   /**
     * Add the specified poly-polygon at the given position.
     *
@@ -28,22 +27,22 @@ trait XPolyPolygon2D extends XInterface {
     * @param polyPolygon The poly-polygon to add. Note that the content of this poly-polygon is copied, later changes to polyPolygon will have no effect on th
     * @throws a {@link com.sun.star.lang.IllegalArgumentException} , if the {@link XPolyPolygon2D} parameter does not support one of the data-providing derivat
     */
-  def addPolyPolygon(position: RealPoint2D, polyPolygon: XPolyPolygon2D): Unit = js.native
+  def addPolyPolygon(position: RealPoint2D, polyPolygon: XPolyPolygon2D): Unit
   /** Query the rule used to determine inside and outside of the poly-polygon. */
-  def getFillRule(): FillRule = js.native
+  def getFillRule(): FillRule
   /**
     * Query number of points inside given polygon
     * @param polygon The index of the polygon to query the number of points for. Must be in the range [0, {@link getNumberOfPolygons()} -1].
     */
-  def getNumberOfPolygonPoints(polygon: Double): Double = js.native
+  def getNumberOfPolygonPoints(polygon: Double): Double
   /** Query number of polygons inside this poly-polygon */
-  def getNumberOfPolygons(): Double = js.native
+  def getNumberOfPolygons(): Double
   /** Query whether the specified polygon outline is closed. */
-  def isClosed(index: Double): Boolean = js.native
+  def isClosed(index: Double): Boolean
   /** Set the close state of the specified polygon outline. Use -1 as the index to affect all polygons of this poly-polygon. */
-  def setClosed(index: Double, closedState: Boolean): Unit = js.native
+  def setClosed(index: Double, closedState: Boolean): Unit
   /** Set the rule used to determine inside and outside of the poly-polygon. */
-  def setFillRule(fillRule: FillRule): Unit = js.native
+  def setFillRule(fillRule: FillRule): Unit
 }
 
 object XPolyPolygon2D {
@@ -65,67 +64,5 @@ object XPolyPolygon2D {
     val __obj = js.Dynamic.literal(FillRule = FillRule.asInstanceOf[js.Any], NumberOfPolygons = NumberOfPolygons.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPolyPolygon = js.Any.fromFunction2(addPolyPolygon), getFillRule = js.Any.fromFunction0(getFillRule), getNumberOfPolygonPoints = js.Any.fromFunction1(getNumberOfPolygonPoints), getNumberOfPolygons = js.Any.fromFunction0(getNumberOfPolygons), isClosed = js.Any.fromFunction1(isClosed), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setClosed = js.Any.fromFunction2(setClosed), setFillRule = js.Any.fromFunction1(setFillRule))
     __obj.asInstanceOf[XPolyPolygon2D]
   }
-  @scala.inline
-  implicit class XPolyPolygon2DOps[Self <: XPolyPolygon2D] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFillRule(value: FillRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FillRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfPolygons(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfPolygons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddPolyPolygon(value: (RealPoint2D, XPolyPolygon2D) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPolyPolygon")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetFillRule(value: () => FillRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFillRule")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberOfPolygonPoints(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberOfPolygonPoints")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberOfPolygons(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberOfPolygons")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsClosed(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClosed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetClosed(value: (Double, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setClosed")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetFillRule(value: FillRule => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFillRule")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

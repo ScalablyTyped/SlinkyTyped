@@ -4,38 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtremesObject extends js.Object {
   /**
     * The maximum value of the axis' associated series.
     */
-  var dataMax: Double = js.native
+  var dataMax: Double
   /**
     * The minimum value of the axis' associated series.
     */
-  var dataMin: Double = js.native
+  var dataMin: Double
   /**
     * The maximum axis value, either automatic or set manually. If the `max`
     * option is not set, `maxPadding` is 0 and `endOnTick` is false, this value
     * will be the same as `dataMax`.
     */
-  var max: Double = js.native
+  var max: Double
   /**
     * The minimum axis value, either automatic or set manually. If the `min`
     * option is not set, `minPadding` is 0 and `startOnTick` is false, this
     * value will be the same as `dataMin`.
     */
-  var min: Double = js.native
+  var min: Double
   /**
     * The user defined maximum, either from the `max` option or from a zoom or
     * `setExtremes` action.
     */
-  var userMax: Double = js.native
+  var userMax: Double
   /**
     * The user defined minimum, either from the `min` option or from a zoom or
     * `setExtremes` action.
     */
-  var userMin: Double = js.native
+  var userMin: Double
 }
 
 object ExtremesObject {
@@ -44,49 +43,5 @@ object ExtremesObject {
     val __obj = js.Dynamic.literal(dataMax = dataMax.asInstanceOf[js.Any], dataMin = dataMin.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], userMax = userMax.asInstanceOf[js.Any], userMin = userMin.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtremesObject]
   }
-  @scala.inline
-  implicit class ExtremesObjectOps[Self <: ExtremesObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

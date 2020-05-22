@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief uuid 唯一 id 模块
-	* @detail 基础模块。提供唯一 id 的创建于操作,```JavaScript,var uuid = require('uuid');,```
-	*/
+  * @brief uuid 唯一 id 模块
+  * @detail 基础模块。提供唯一 id 的创建于操作,```JavaScript,var uuid = require('uuid');,```
+  */
 @JSImport("uuid", JSImport.Namespace)
 @js.native
 object uuidMod extends js.Object {

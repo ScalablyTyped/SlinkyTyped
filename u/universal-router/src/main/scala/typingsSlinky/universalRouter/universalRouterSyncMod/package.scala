@@ -17,5 +17,6 @@ package object universalRouterSyncMod {
     /* params */ typingsSlinky.universalRouter.universalRouterSyncMod.QueryParams, 
     typingsSlinky.universalRouter.universalRouterSyncMod.Result[R]
   ]
+  type Result[T] = T | scala.Unit
   type Routes[C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.Context */, R] = js.Array[typingsSlinky.universalRouter.universalRouterSyncMod.Route[C, R]]
 }

@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.materialMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable
+import typingsSlinky.babylonjs.animationMod.Animation
 import typingsSlinky.babylonjs.anon.PartialIMaterialCompilati
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.effectMod.Effect
@@ -98,6 +99,11 @@ class Material protected () extends IAnimatable {
     * Specifies if uniform buffers should be used
     */
   var _useUBO: js.Any = js.native
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[Animation]] = js.native
   /**
     * Specifies if the ready state should be checked on each call
     */

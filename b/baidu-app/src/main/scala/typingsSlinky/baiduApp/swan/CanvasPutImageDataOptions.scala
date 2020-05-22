@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CanvasPutImageDataOptions extends CanvasImageDataOptions {
-  var data: js.typedarray.Uint8ClampedArray = js.native
+  var data: js.typedarray.Uint8ClampedArray
 }
 
 object CanvasPutImageDataOptions {
@@ -17,24 +16,16 @@ object CanvasPutImageDataOptions {
     height: Double,
     width: Double,
     x: Double,
-    y: Double
+    y: Double,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: js.Any => Unit = null
   ): CanvasPutImageDataOptions = {
     val __obj = js.Dynamic.literal(canvasId = canvasId.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[CanvasPutImageDataOptions]
   }
-  @scala.inline
-  implicit class CanvasPutImageDataOptionsOps[Self <: CanvasPutImageDataOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: js.typedarray.Uint8ClampedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -15,20 +15,19 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.System
   * @memberof PIXI.systems
   */
-@js.native
 trait StencilSystem extends System {
   /**
     * Pops stencil mask. MaskData is already removed from stack
     *
     * @param {PIXI.DisplayObject} maskObject - object of popped mask data
     */
-  def pop(maskObject: DisplayObject): Unit = js.native
+  def pop(maskObject: DisplayObject): Unit
   /**
     * Applies the Mask and adds it to the current stencil stack.
     *
     * @param {PIXI.MaskData} maskData - The mask data
     */
-  def push(maskData: MaskData): Unit = js.native
+  def push(maskData: MaskData): Unit
 }
 
 object StencilSystem {
@@ -37,25 +36,5 @@ object StencilSystem {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), pop = js.Any.fromFunction1(pop), push = js.Any.fromFunction1(push), renderer = renderer.asInstanceOf[js.Any])
     __obj.asInstanceOf[StencilSystem]
   }
-  @scala.inline
-  implicit class StencilSystemOps[Self <: StencilSystem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPop(value: DisplayObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPush(value: MaskData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

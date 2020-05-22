@@ -17,6 +17,9 @@ object firebasePerformanceStrings {
   sealed trait frame extends EntryType
   
   @js.native
+  sealed trait `invalid String merger input` extends ErrorCode
+  
+  @js.native
   sealed trait `invalid attribute name` extends ErrorCode
   
   @js.native
@@ -26,7 +29,7 @@ object firebasePerformanceStrings {
   sealed trait `invalid cc log` extends ErrorCode
   
   @js.native
-  sealed trait `invalide custom metric name` extends ErrorCode
+  sealed trait `invalid custom metric name` extends ErrorCode
   
   @js.native
   sealed trait mark extends EntryType
@@ -68,13 +71,15 @@ object firebasePerformanceStrings {
   @scala.inline
   def frame: frame = "frame".asInstanceOf[frame]
   @scala.inline
+  def `invalid String merger input`: `invalid String merger input` = ("invalid String merger input").asInstanceOf[`invalid String merger input`]
+  @scala.inline
   def `invalid attribute name`: `invalid attribute name` = ("invalid attribute name").asInstanceOf[`invalid attribute name`]
   @scala.inline
   def `invalid attribute value`: `invalid attribute value` = ("invalid attribute value").asInstanceOf[`invalid attribute value`]
   @scala.inline
   def `invalid cc log`: `invalid cc log` = ("invalid cc log").asInstanceOf[`invalid cc log`]
   @scala.inline
-  def `invalide custom metric name`: `invalide custom metric name` = ("invalide custom metric name").asInstanceOf[`invalide custom metric name`]
+  def `invalid custom metric name`: `invalid custom metric name` = ("invalid custom metric name").asInstanceOf[`invalid custom metric name`]
   @scala.inline
   def mark: mark = "mark".asInstanceOf[mark]
   @scala.inline

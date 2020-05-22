@@ -5,218 +5,60 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<yargs-parser.yargs-parser.Configuration> */
-@js.native
 trait PartialConfiguration extends js.Object {
-  var `boolean-negation`: js.UndefOr[scala.Boolean] = js.native
-  var `camel-case-expansion`: js.UndefOr[scala.Boolean] = js.native
-  var `combine-arrays`: js.UndefOr[scala.Boolean] = js.native
-  var `dot-notation`: js.UndefOr[scala.Boolean] = js.native
-  var `duplicate-arguments-array`: js.UndefOr[scala.Boolean] = js.native
-  var `flatten-duplicate-arrays`: js.UndefOr[scala.Boolean] = js.native
-  var `halt-at-non-option`: js.UndefOr[scala.Boolean] = js.native
-  var `negation-prefix`: js.UndefOr[String] = js.native
-  var `parse-numbers`: js.UndefOr[scala.Boolean] = js.native
-  var `populate--`: js.UndefOr[scala.Boolean] = js.native
-  var `set-placeholder-key`: js.UndefOr[scala.Boolean] = js.native
-  var `short-option-groups`: js.UndefOr[scala.Boolean] = js.native
-  var `strip-aliased`: js.UndefOr[scala.Boolean] = js.native
-  var `strip-dashed`: js.UndefOr[scala.Boolean] = js.native
-  var `unknown-options-as-args`: js.UndefOr[scala.Boolean] = js.native
+  var `boolean-negation`: js.UndefOr[scala.Boolean] = js.undefined
+  var `camel-case-expansion`: js.UndefOr[scala.Boolean] = js.undefined
+  var `combine-arrays`: js.UndefOr[scala.Boolean] = js.undefined
+  var `dot-notation`: js.UndefOr[scala.Boolean] = js.undefined
+  var `duplicate-arguments-array`: js.UndefOr[scala.Boolean] = js.undefined
+  var `flatten-duplicate-arrays`: js.UndefOr[scala.Boolean] = js.undefined
+  var `halt-at-non-option`: js.UndefOr[scala.Boolean] = js.undefined
+  var `negation-prefix`: js.UndefOr[String] = js.undefined
+  var `parse-numbers`: js.UndefOr[scala.Boolean] = js.undefined
+  var `populate--`: js.UndefOr[scala.Boolean] = js.undefined
+  var `set-placeholder-key`: js.UndefOr[scala.Boolean] = js.undefined
+  var `short-option-groups`: js.UndefOr[scala.Boolean] = js.undefined
+  var `strip-aliased`: js.UndefOr[scala.Boolean] = js.undefined
+  var `strip-dashed`: js.UndefOr[scala.Boolean] = js.undefined
+  var `unknown-options-as-args`: js.UndefOr[scala.Boolean] = js.undefined
 }
 
 object PartialConfiguration {
   @scala.inline
-  def apply(): PartialConfiguration = {
+  def apply(
+    `boolean-negation`: js.UndefOr[scala.Boolean] = js.undefined,
+    `camel-case-expansion`: js.UndefOr[scala.Boolean] = js.undefined,
+    `combine-arrays`: js.UndefOr[scala.Boolean] = js.undefined,
+    `dot-notation`: js.UndefOr[scala.Boolean] = js.undefined,
+    `duplicate-arguments-array`: js.UndefOr[scala.Boolean] = js.undefined,
+    `flatten-duplicate-arrays`: js.UndefOr[scala.Boolean] = js.undefined,
+    `halt-at-non-option`: js.UndefOr[scala.Boolean] = js.undefined,
+    `negation-prefix`: String = null,
+    `parse-numbers`: js.UndefOr[scala.Boolean] = js.undefined,
+    `populate--`: js.UndefOr[scala.Boolean] = js.undefined,
+    `set-placeholder-key`: js.UndefOr[scala.Boolean] = js.undefined,
+    `short-option-groups`: js.UndefOr[scala.Boolean] = js.undefined,
+    `strip-aliased`: js.UndefOr[scala.Boolean] = js.undefined,
+    `strip-dashed`: js.UndefOr[scala.Boolean] = js.undefined,
+    `unknown-options-as-args`: js.UndefOr[scala.Boolean] = js.undefined
+  ): PartialConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(`boolean-negation`)) __obj.updateDynamic("boolean-negation")(`boolean-negation`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`camel-case-expansion`)) __obj.updateDynamic("camel-case-expansion")(`camel-case-expansion`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`combine-arrays`)) __obj.updateDynamic("combine-arrays")(`combine-arrays`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`dot-notation`)) __obj.updateDynamic("dot-notation")(`dot-notation`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`duplicate-arguments-array`)) __obj.updateDynamic("duplicate-arguments-array")(`duplicate-arguments-array`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`flatten-duplicate-arrays`)) __obj.updateDynamic("flatten-duplicate-arrays")(`flatten-duplicate-arrays`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`halt-at-non-option`)) __obj.updateDynamic("halt-at-non-option")(`halt-at-non-option`.get.asInstanceOf[js.Any])
+    if (`negation-prefix` != null) __obj.updateDynamic("negation-prefix")(`negation-prefix`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`parse-numbers`)) __obj.updateDynamic("parse-numbers")(`parse-numbers`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`populate--`)) __obj.updateDynamic("populate--")(`populate--`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`set-placeholder-key`)) __obj.updateDynamic("set-placeholder-key")(`set-placeholder-key`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`short-option-groups`)) __obj.updateDynamic("short-option-groups")(`short-option-groups`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`strip-aliased`)) __obj.updateDynamic("strip-aliased")(`strip-aliased`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`strip-dashed`)) __obj.updateDynamic("strip-dashed")(`strip-dashed`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`unknown-options-as-args`)) __obj.updateDynamic("unknown-options-as-args")(`unknown-options-as-args`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialConfiguration]
   }
-  @scala.inline
-  implicit class PartialConfigurationOps[Self <: PartialConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withBoolean-negation`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean-negation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutBoolean-negation`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean-negation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCamel-case-expansion`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camel-case-expansion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCamel-case-expansion`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camel-case-expansion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCombine-arrays`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combine-arrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCombine-arrays`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combine-arrays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDot-notation`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot-notation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDot-notation`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot-notation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDuplicate-arguments-array`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate-arguments-array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDuplicate-arguments-array`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate-arguments-array")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFlatten-duplicate-arrays`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten-duplicate-arrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFlatten-duplicate-arrays`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten-duplicate-arrays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withHalt-at-non-option`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("halt-at-non-option")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutHalt-at-non-option`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("halt-at-non-option")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withNegation-prefix`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negation-prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutNegation-prefix`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negation-prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withParse-numbers`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse-numbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutParse-numbers`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse-numbers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPopulate--`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populate--")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPopulate--`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populate--")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSet-placeholder-key`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set-placeholder-key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSet-placeholder-key`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set-placeholder-key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withShort-option-groups`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-option-groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutShort-option-groups`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-option-groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withStrip-aliased`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-aliased")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutStrip-aliased`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-aliased")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withStrip-dashed`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-dashed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutStrip-dashed`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strip-dashed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUnknown-options-as-args`(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown-options-as-args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUnknown-options-as-args`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown-options-as-args")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

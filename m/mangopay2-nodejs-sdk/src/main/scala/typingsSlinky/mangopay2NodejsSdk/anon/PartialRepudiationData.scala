@@ -11,270 +11,72 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<mangopay2-nodejs-sdk.mangopay2-nodejs-sdk.repudiation.RepudiationData> */
-@js.native
 trait PartialRepudiationData extends js.Object {
-  var AuthorId: js.UndefOr[String] = js.native
-  var CreationDate: js.UndefOr[Double] = js.native
-  var CreditedFunds: js.UndefOr[MoneyData] = js.native
-  var CreditedUserId: js.UndefOr[String] = js.native
-  var CreditedWalletId: js.UndefOr[String] = js.native
-  var DebitedFunds: js.UndefOr[MoneyData] = js.native
-  var DebitedWalletId: js.UndefOr[String] = js.native
-  var ExecutionDate: js.UndefOr[Timestamp] = js.native
-  var Fees: js.UndefOr[MoneyData] = js.native
-  var Id: js.UndefOr[String] = js.native
-  var InitialTransactionId: js.UndefOr[String] = js.native
-  var InitialTransactionType: js.UndefOr[TransactionType] = js.native
-  var Nature: js.UndefOr[REPUDIATION] = js.native
-  var RefundReason: js.UndefOr[typingsSlinky.mangopay2NodejsSdk.mod.refund.RefundReason] = js.native
-  var ResultCode: js.UndefOr[String] = js.native
-  var ResultMessage: js.UndefOr[String] = js.native
-  var Status: js.UndefOr[TransactionStatus] = js.native
-  var Tag: js.UndefOr[String] = js.native
-  var Type: js.UndefOr[TransactionType] = js.native
+  var AuthorId: js.UndefOr[String] = js.undefined
+  var CreationDate: js.UndefOr[Double] = js.undefined
+  var CreditedFunds: js.UndefOr[MoneyData] = js.undefined
+  var CreditedUserId: js.UndefOr[String] = js.undefined
+  var CreditedWalletId: js.UndefOr[String] = js.undefined
+  var DebitedFunds: js.UndefOr[MoneyData] = js.undefined
+  var DebitedWalletId: js.UndefOr[String] = js.undefined
+  var ExecutionDate: js.UndefOr[Timestamp] = js.undefined
+  var Fees: js.UndefOr[MoneyData] = js.undefined
+  var Id: js.UndefOr[String] = js.undefined
+  var InitialTransactionId: js.UndefOr[String] = js.undefined
+  var InitialTransactionType: js.UndefOr[TransactionType] = js.undefined
+  var Nature: js.UndefOr[REPUDIATION] = js.undefined
+  var RefundReason: js.UndefOr[typingsSlinky.mangopay2NodejsSdk.mod.refund.RefundReason] = js.undefined
+  var ResultCode: js.UndefOr[String] = js.undefined
+  var ResultMessage: js.UndefOr[String] = js.undefined
+  var Status: js.UndefOr[TransactionStatus] = js.undefined
+  var Tag: js.UndefOr[String] = js.undefined
+  var Type: js.UndefOr[TransactionType] = js.undefined
 }
 
 object PartialRepudiationData {
   @scala.inline
-  def apply(): PartialRepudiationData = {
+  def apply(
+    AuthorId: String = null,
+    CreationDate: js.UndefOr[Double] = js.undefined,
+    CreditedFunds: MoneyData = null,
+    CreditedUserId: String = null,
+    CreditedWalletId: String = null,
+    DebitedFunds: MoneyData = null,
+    DebitedWalletId: String = null,
+    ExecutionDate: js.UndefOr[Timestamp] = js.undefined,
+    Fees: MoneyData = null,
+    Id: String = null,
+    InitialTransactionId: String = null,
+    InitialTransactionType: TransactionType = null,
+    Nature: REPUDIATION = null,
+    RefundReason: RefundReason = null,
+    ResultCode: String = null,
+    ResultMessage: String = null,
+    Status: TransactionStatus = null,
+    Tag: String = null,
+    Type: TransactionType = null
+  ): PartialRepudiationData = {
     val __obj = js.Dynamic.literal()
+    if (AuthorId != null) __obj.updateDynamic("AuthorId")(AuthorId.asInstanceOf[js.Any])
+    if (!js.isUndefined(CreationDate)) __obj.updateDynamic("CreationDate")(CreationDate.get.asInstanceOf[js.Any])
+    if (CreditedFunds != null) __obj.updateDynamic("CreditedFunds")(CreditedFunds.asInstanceOf[js.Any])
+    if (CreditedUserId != null) __obj.updateDynamic("CreditedUserId")(CreditedUserId.asInstanceOf[js.Any])
+    if (CreditedWalletId != null) __obj.updateDynamic("CreditedWalletId")(CreditedWalletId.asInstanceOf[js.Any])
+    if (DebitedFunds != null) __obj.updateDynamic("DebitedFunds")(DebitedFunds.asInstanceOf[js.Any])
+    if (DebitedWalletId != null) __obj.updateDynamic("DebitedWalletId")(DebitedWalletId.asInstanceOf[js.Any])
+    if (!js.isUndefined(ExecutionDate)) __obj.updateDynamic("ExecutionDate")(ExecutionDate.get.asInstanceOf[js.Any])
+    if (Fees != null) __obj.updateDynamic("Fees")(Fees.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (InitialTransactionId != null) __obj.updateDynamic("InitialTransactionId")(InitialTransactionId.asInstanceOf[js.Any])
+    if (InitialTransactionType != null) __obj.updateDynamic("InitialTransactionType")(InitialTransactionType.asInstanceOf[js.Any])
+    if (Nature != null) __obj.updateDynamic("Nature")(Nature.asInstanceOf[js.Any])
+    if (RefundReason != null) __obj.updateDynamic("RefundReason")(RefundReason.asInstanceOf[js.Any])
+    if (ResultCode != null) __obj.updateDynamic("ResultCode")(ResultCode.asInstanceOf[js.Any])
+    if (ResultMessage != null) __obj.updateDynamic("ResultMessage")(ResultMessage.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRepudiationData]
   }
-  @scala.inline
-  implicit class PartialRepudiationDataOps[Self <: PartialRepudiationData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreditedFunds(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedFunds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreditedFunds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedFunds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreditedUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreditedUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreditedWalletId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedWalletId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreditedWalletId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedWalletId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebitedFunds(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebitedFunds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebitedFunds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebitedFunds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebitedWalletId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebitedWalletId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebitedWalletId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebitedWalletId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionDate(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFees(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFees: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fees")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialTransactionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialTransactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialTransactionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialTransactionType(value: TransactionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialTransactionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialTransactionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialTransactionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNature(value: REPUDIATION): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefundReason(value: RefundReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefundReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefundReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefundReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: TransactionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: TransactionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

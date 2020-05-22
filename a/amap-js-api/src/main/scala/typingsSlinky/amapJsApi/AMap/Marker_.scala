@@ -15,7 +15,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
     */
   def getAnchor(): js.UndefOr[Anchor] = js.native
   /**
-    * 	获取点标记的旋转角度
+    *     获取点标记的旋转角度
     */
   def getAngle(): Double = js.native
   /**
@@ -23,7 +23,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
     */
   def getAnimation(): AnimationName = js.native
   /**
-    * 	获取点标记是否支持鼠标单击事件
+    *     获取点标记是否支持鼠标单击事件
     */
   def getClickable(): Boolean = js.native
   /**
@@ -39,7 +39,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
     */
   def getIcon(): js.UndefOr[String | Icon] = js.native
   /**
-    * 	获取点标记文本标签内容
+    *     获取点标记文本标签内容
     */
   def getLabel(): js.UndefOr[Label] = js.native
   /**
@@ -47,7 +47,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
     */
   def getOffset(): Pixel = js.native
   /**
-    * 	获取点标记的位置
+    *     获取点标记的位置
     */
   def getPosition(): js.UndefOr[LngLat] = js.native
   /**
@@ -100,7 +100,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
   def moveTo(lnglat: LocationValue, speed: Double): Unit = js.native
   def moveTo(lnglat: LocationValue, speed: Double, timingFunction: js.Function1[/* t */ Double, Double]): Unit = js.native
   /**
-    * 	暂定点标记的动画效果
+    *     暂定点标记的动画效果
     */
   def pauseMove(): Boolean = js.native
   /**
@@ -113,7 +113,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
   def setAnchor(): Unit = js.native
   def setAnchor(anchor: Anchor): Unit = js.native
   /**
-    * 	设置点标记的旋转角度
+    *     设置点标记的旋转角度
     * @param angle 旋转角度
     */
   def setAngle(angle: Double): Unit = js.native
@@ -129,7 +129,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
     */
   def setClickable(cilckable: Boolean): Unit = js.native
   /**
-    * 	设置点标记显示内容，可以是HTML要素字符串或者HTML DOM对象
+    *     设置点标记显示内容，可以是HTML要素字符串或者HTML DOM对象
     * @param content 显示内容
     */
   def setContent(content: String): Unit = js.native
@@ -157,7 +157,7 @@ trait Marker_[ExtraData] extends Overlay[ExtraData] {
   def setLabel(): Unit = js.native
   def setLabel(label: Label): Unit = js.native
   /**
-    * 	设置偏移量
+    *     设置偏移量
     * @param offset 偏移量
     */
   def setOffset(offset: Pixel): Unit = js.native

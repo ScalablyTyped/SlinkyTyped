@@ -40,113 +40,26 @@ trait ReplicationRule extends js.Object {
 
 object ReplicationRule {
   @scala.inline
-  def apply(Destination: Destination, Status: ReplicationRuleStatus): ReplicationRule = {
+  def apply(
+    Destination: Destination,
+    Status: ReplicationRuleStatus,
+    DeleteMarkerReplication: DeleteMarkerReplication = null,
+    ExistingObjectReplication: ExistingObjectReplication = null,
+    Filter: ReplicationRuleFilter = null,
+    ID: ID = null,
+    Prefix: Prefix = null,
+    Priority: js.UndefOr[Priority] = js.undefined,
+    SourceSelectionCriteria: SourceSelectionCriteria = null
+  ): ReplicationRule = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+    if (DeleteMarkerReplication != null) __obj.updateDynamic("DeleteMarkerReplication")(DeleteMarkerReplication.asInstanceOf[js.Any])
+    if (ExistingObjectReplication != null) __obj.updateDynamic("ExistingObjectReplication")(ExistingObjectReplication.asInstanceOf[js.Any])
+    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
+    if (ID != null) __obj.updateDynamic("ID")(ID.asInstanceOf[js.Any])
+    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(Priority)) __obj.updateDynamic("Priority")(Priority.get.asInstanceOf[js.Any])
+    if (SourceSelectionCriteria != null) __obj.updateDynamic("SourceSelectionCriteria")(SourceSelectionCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationRule]
   }
-  @scala.inline
-  implicit class ReplicationRuleOps[Self <: ReplicationRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: Destination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ReplicationRuleStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteMarkerReplication(value: DeleteMarkerReplication): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteMarkerReplication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteMarkerReplication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteMarkerReplication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExistingObjectReplication(value: ExistingObjectReplication): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExistingObjectReplication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExistingObjectReplication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExistingObjectReplication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: ReplicationRuleFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withID(value: ID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: Prefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Priority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSelectionCriteria(value: SourceSelectionCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSelectionCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSelectionCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSelectionCriteria")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

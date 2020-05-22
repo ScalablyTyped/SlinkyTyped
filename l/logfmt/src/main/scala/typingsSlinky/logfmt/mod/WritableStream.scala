@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WritableStream extends js.Object {
-  def write(data: String): Unit = js.native
+  def write(data: String): Unit
 }
 
 object WritableStream {
@@ -15,19 +14,5 @@ object WritableStream {
     val __obj = js.Dynamic.literal(write = js.Any.fromFunction1(write))
     __obj.asInstanceOf[WritableStream]
   }
-  @scala.inline
-  implicit class WritableStreamOps[Self <: WritableStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWrite(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ChartTrendlineLabelFormat extends ClientObject {
   /**
     *
-    * Represents the border format, which includes color, linestyle, and weight.
+    * Specifies the border format, which includes color, linestyle, and weight.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -30,14 +30,14 @@ trait ChartTrendlineLabelFormat extends ClientObject {
   var context_ChartTrendlineLabelFormat: RequestContext = js.native
   /**
     *
-    * Represents the fill format of the current chart trendline label.
+    * Specifies the fill format of the current chart trendline label.
     *
     * [Api set: ExcelApi 1.8]
     */
   val fill: ChartFill = js.native
   /**
     *
-    * Represents the font attributes (font name, font size, color, etc.) for a chart trendline label.
+    * Specifies the font attributes (font name, font size, color, etc.) for a chart trendline label.
     *
     * [Api set: ExcelApi 1.8]
     */

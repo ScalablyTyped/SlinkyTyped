@@ -15,5 +15,9 @@ import scala.scalajs.js.annotation._
   */
 class ValidatorConnectionError () extends Error {
   def this(message: String) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

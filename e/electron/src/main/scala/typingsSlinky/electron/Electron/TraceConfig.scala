@@ -4,63 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TraceConfig extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/trace-config
-  var excluded_categories: js.UndefOr[js.Array[String]] = js.native
-  var included_categories: js.UndefOr[js.Array[String]] = js.native
-  var memory_dump_config: js.UndefOr[MemoryDumpConfig] = js.native
+  var excluded_categories: js.UndefOr[js.Array[String]] = js.undefined
+  var included_categories: js.UndefOr[js.Array[String]] = js.undefined
+  var memory_dump_config: js.UndefOr[MemoryDumpConfig] = js.undefined
 }
 
 object TraceConfig {
   @scala.inline
-  def apply(): TraceConfig = {
+  def apply(
+    excluded_categories: js.Array[String] = null,
+    included_categories: js.Array[String] = null,
+    memory_dump_config: MemoryDumpConfig = null
+  ): TraceConfig = {
     val __obj = js.Dynamic.literal()
+    if (excluded_categories != null) __obj.updateDynamic("excluded_categories")(excluded_categories.asInstanceOf[js.Any])
+    if (included_categories != null) __obj.updateDynamic("included_categories")(included_categories.asInstanceOf[js.Any])
+    if (memory_dump_config != null) __obj.updateDynamic("memory_dump_config")(memory_dump_config.asInstanceOf[js.Any])
     __obj.asInstanceOf[TraceConfig]
   }
-  @scala.inline
-  implicit class TraceConfigOps[Self <: TraceConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcluded_categories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excluded_categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcluded_categories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excluded_categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncluded_categories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("included_categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncluded_categories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("included_categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemory_dump_config(value: MemoryDumpConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory_dump_config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemory_dump_config: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory_dump_config")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

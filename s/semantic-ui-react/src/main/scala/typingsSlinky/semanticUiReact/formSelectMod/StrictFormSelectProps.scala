@@ -1,170 +1,206 @@
 package typingsSlinky.semanticUiReact.formSelectMod
 
-import slinky.core.ReactComponentClass
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.ReactNodeArray
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownOnSearchChangeData
+import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
 import typingsSlinky.semanticUiReact.genericMod.HtmlLabelProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
+import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.selectSelectMod.StrictSelectProps
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right`
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.`top left`
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.`top right`
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
+import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.semanticUiReact.formFieldMod.StrictFormFieldProps because var conflicts: as, children, className, disabled, error, `inline`. Inlined content, control, id, label, required, `type`, width */ @js.native
-trait StrictFormSelectProps extends StrictSelectProps {
+- typingsSlinky.semanticUiReact.formFieldMod.StrictFormFieldProps because var conflicts: as, children, className, disabled, error, `inline`. Inlined content, control, id, label, required, `type`, width */ trait StrictFormSelectProps extends StrictSelectProps {
   /** Shorthand for primary content. */
-  var content: js.UndefOr[SemanticShorthandContent] = js.native
+  var content: js.UndefOr[SemanticShorthandContent] = js.undefined
   /** A FormField control prop. */
-  var control: js.UndefOr[js.Any] = js.native
+  var control: js.UndefOr[js.Any] = js.undefined
   /** Individual fields may display an error state along with a message. */
   @JSName("error")
-  var error_StrictFormSelectProps: js.UndefOr[js.Any] = js.native
+  var error_StrictFormSelectProps: js.UndefOr[js.Any] = js.undefined
   /** The id of the control */
-  var id: js.UndefOr[Double | String] = js.native
+  var id: js.UndefOr[Double | String] = js.undefined
   /** Mutually exclusive with children. */
-  var label: js.UndefOr[SemanticShorthandItem[HtmlLabelProps]] = js.native
+  var label: js.UndefOr[SemanticShorthandItem[HtmlLabelProps]] = js.undefined
   /** A field can show that input is mandatory.  Requires a label. */
-  var required: js.UndefOr[js.Any] = js.native
+  var required: js.UndefOr[js.Any] = js.undefined
   /** Passed to the control component (i.e. <input type='password' />) */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /** A field can specify its width in grid columns */
-  var width: js.UndefOr[SemanticWIDTHS] = js.native
+  var width: js.UndefOr[SemanticWIDTHS] = js.undefined
 }
 
 object StrictFormSelectProps {
   @scala.inline
-  def apply(options: js.Array[DropdownItemProps]): StrictFormSelectProps = {
+  def apply(
+    options: js.Array[DropdownItemProps],
+    additionLabel: Double | String | TagMod[Any] = null,
+    additionPosition: top | bottom = null,
+    allowAdditions: js.UndefOr[Boolean] = js.undefined,
+    as: js.Any = null,
+    basic: js.UndefOr[Boolean] = js.undefined,
+    button: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    className: String = null,
+    clearable: js.UndefOr[Boolean] = js.undefined,
+    closeOnBlur: js.UndefOr[Boolean] = js.undefined,
+    closeOnChange: js.UndefOr[Boolean] = js.undefined,
+    closeOnEscape: js.UndefOr[Boolean] = js.undefined,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    content: SemanticShorthandContent = null,
+    control: js.Any = null,
+    deburr: js.UndefOr[Boolean] = js.undefined,
+    defaultOpen: js.UndefOr[Boolean] = js.undefined,
+    defaultSearchQuery: String = null,
+    defaultSelectedLabel: Double | String = null,
+    defaultUpward: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | Boolean | (js.Array[Double | String | Boolean]) = null,
+    direction: left | right = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    error: js.Any = null,
+    floating: js.UndefOr[Boolean] = js.undefined,
+    fluid: js.UndefOr[Boolean] = js.undefined,
+    header: TagMod[Any] = null,
+    icon: js.Any = null,
+    id: Double | String = null,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    item: js.UndefOr[Boolean] = js.undefined,
+    label: SemanticShorthandItem[HtmlLabelProps] = null,
+    labeled: js.UndefOr[Boolean] = js.undefined,
+    lazyLoad: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    minCharacters: js.UndefOr[Double] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    noResultsMessage: TagMod[Any] = null,
+    onAddItem: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onBlur: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onChange: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onClick: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onClose: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onFocus: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onLabelClick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit = null,
+    onMouseDown: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onOpen: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit = null,
+    onSearchChange: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit = null,
+    open: js.UndefOr[Boolean] = js.undefined,
+    openOnFocus: js.UndefOr[Boolean] = js.undefined,
+    placeholder: String = null,
+    pointing: Boolean | left | right | top | (`top left`) | (`top right`) | bottom | (`bottom left`) | (`bottom right`) = null,
+    renderLabel: (/* item */ DropdownItemProps, /* index */ Double, /* defaultLabelProps */ LabelProps) => _ = null,
+    required: js.Any = null,
+    scrolling: js.UndefOr[Boolean] = js.undefined,
+    search: Boolean | (js.Function2[
+      /* options */ js.Array[DropdownItemProps], 
+      /* value */ String, 
+      js.Array[DropdownItemProps]
+    ]) = null,
+    searchInput: js.Any = null,
+    searchQuery: String = null,
+    selectOnBlur: js.UndefOr[Boolean] = js.undefined,
+    selectOnNavigation: js.UndefOr[Boolean] = js.undefined,
+    selectedLabel: Double | String = null,
+    selection: js.Any = null,
+    simple: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: Double | String = null,
+    text: String = null,
+    trigger: TagMod[Any] = null,
+    `type`: String = null,
+    upward: js.UndefOr[Boolean] = js.undefined,
+    value: Boolean | Double | String | (js.Array[Boolean | Double | String]) = null,
+    width: SemanticWIDTHS = null,
+    wrapSelection: js.UndefOr[Boolean] = js.undefined
+  ): StrictFormSelectProps = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    if (additionLabel != null) __obj.updateDynamic("additionLabel")(additionLabel.asInstanceOf[js.Any])
+    if (additionPosition != null) __obj.updateDynamic("additionPosition")(additionPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowAdditions)) __obj.updateDynamic("allowAdditions")(allowAdditions.get.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(button)) __obj.updateDynamic("button")(button.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearable)) __obj.updateDynamic("clearable")(clearable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnBlur)) __obj.updateDynamic("closeOnBlur")(closeOnBlur.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnChange)) __obj.updateDynamic("closeOnChange")(closeOnChange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnEscape)) __obj.updateDynamic("closeOnEscape")(closeOnEscape.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
+    if (!js.isUndefined(deburr)) __obj.updateDynamic("deburr")(deburr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.get.asInstanceOf[js.Any])
+    if (defaultSearchQuery != null) __obj.updateDynamic("defaultSearchQuery")(defaultSearchQuery.asInstanceOf[js.Any])
+    if (defaultSelectedLabel != null) __obj.updateDynamic("defaultSelectedLabel")(defaultSelectedLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultUpward)) __obj.updateDynamic("defaultUpward")(defaultUpward.get.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(floating)) __obj.updateDynamic("floating")(floating.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.get.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(item)) __obj.updateDynamic("item")(item.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(labeled)) __obj.updateDynamic("labeled")(labeled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lazyLoad)) __obj.updateDynamic("lazyLoad")(lazyLoad.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCharacters)) __obj.updateDynamic("minCharacters")(minCharacters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (noResultsMessage != null) __obj.updateDynamic("noResultsMessage")(noResultsMessage.asInstanceOf[js.Any])
+    if (onAddItem != null) __obj.updateDynamic("onAddItem")(js.Any.fromFunction2(onAddItem))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction2(onFocus))
+    if (onLabelClick != null) __obj.updateDynamic("onLabelClick")(js.Any.fromFunction2(onLabelClick))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction2(onMouseDown))
+    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
+    if (onSearchChange != null) __obj.updateDynamic("onSearchChange")(js.Any.fromFunction2(onSearchChange))
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openOnFocus)) __obj.updateDynamic("openOnFocus")(openOnFocus.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (pointing != null) __obj.updateDynamic("pointing")(pointing.asInstanceOf[js.Any])
+    if (renderLabel != null) __obj.updateDynamic("renderLabel")(js.Any.fromFunction3(renderLabel))
+    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrolling)) __obj.updateDynamic("scrolling")(scrolling.get.asInstanceOf[js.Any])
+    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
+    if (searchInput != null) __obj.updateDynamic("searchInput")(searchInput.asInstanceOf[js.Any])
+    if (searchQuery != null) __obj.updateDynamic("searchQuery")(searchQuery.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectOnBlur)) __obj.updateDynamic("selectOnBlur")(selectOnBlur.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectOnNavigation)) __obj.updateDynamic("selectOnNavigation")(selectOnNavigation.get.asInstanceOf[js.Any])
+    if (selectedLabel != null) __obj.updateDynamic("selectedLabel")(selectedLabel.asInstanceOf[js.Any])
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.get.asInstanceOf[js.Any])
+    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(upward)) __obj.updateDynamic("upward")(upward.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapSelection)) __obj.updateDynamic("wrapSelection")(wrapSelection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictFormSelectProps]
   }
-  @scala.inline
-  implicit class StrictFormSelectPropsOps[Self <: StrictFormSelectProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: SemanticShorthandContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControl(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelFunction3(
-      value: (/* component */ ReactComponentClass[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLabel(value: SemanticShorthandItem[HtmlLabelProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: SemanticWIDTHS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

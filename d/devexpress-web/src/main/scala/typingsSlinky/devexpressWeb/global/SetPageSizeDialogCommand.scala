@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SetPageSizeDialogCommand")
 @js.native
 class SetPageSizeDialogCommand ()
-  extends typingsSlinky.devexpressWeb.SetPageSizeDialogCommand
+  extends typingsSlinky.devexpressWeb.SetPageSizeDialogCommand {
+  /**
+    * Executes the SetPageSizeDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

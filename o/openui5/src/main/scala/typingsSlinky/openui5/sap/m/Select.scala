@@ -30,8 +30,8 @@ trait Select extends Control {
     * <code>sap.m.Select</code>.When called, the context of the event handler (its <code>this</code>) will
     * be bound to <code>oListener</code> if specified, otherwise it will be bound to this
     * <code>sap.m.Select</code> itself.This event is fired when the value in the selection field is
-    * changed in combination with one ofthe following actions:<ul>	<li>The focus leaves the selection
-    * field</li>	<li>The <i>Enter</i> key is pressed</li>	<li>The item is pressed</li></ul>
+    * changed in combination with one ofthe following actions:<ul>    <li>The focus leaves the selection
+    * field</li>    <li>The <i>Enter</i> key is pressed</li>    <li>The item is pressed</li></ul>
     * @param oData An application-specific payload object that will be passed to the event handler along
     * with the event object when firing the event
     * @param fnFunction The function to be called when the event occurs

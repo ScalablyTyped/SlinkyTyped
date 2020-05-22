@@ -22,47 +22,15 @@ trait LambdaAction extends js.Object {
 
 object LambdaAction {
   @scala.inline
-  def apply(FunctionArn: AmazonResourceName): LambdaAction = {
+  def apply(
+    FunctionArn: AmazonResourceName,
+    InvocationType: InvocationType = null,
+    TopicArn: AmazonResourceName = null
+  ): LambdaAction = {
     val __obj = js.Dynamic.literal(FunctionArn = FunctionArn.asInstanceOf[js.Any])
+    if (InvocationType != null) __obj.updateDynamic("InvocationType")(InvocationType.asInstanceOf[js.Any])
+    if (TopicArn != null) __obj.updateDynamic("TopicArn")(TopicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaAction]
   }
-  @scala.inline
-  implicit class LambdaActionOps[Self <: LambdaAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvocationType(value: InvocationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvocationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

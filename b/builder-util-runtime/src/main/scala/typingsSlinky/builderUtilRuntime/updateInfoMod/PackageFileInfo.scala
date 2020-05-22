@@ -4,30 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PackageFileInfo extends BlockMapDataHolder {
-  val path: String = js.native
+  val path: String
 }
 
 object PackageFileInfo {
   @scala.inline
-  def apply(path: String, sha512: String): PackageFileInfo = {
+  def apply(
+    path: String,
+    sha512: String,
+    blockMapSize: js.UndefOr[Double] = js.undefined,
+    isAdminRightsRequired: js.UndefOr[Boolean] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined
+  ): PackageFileInfo = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], sha512 = sha512.asInstanceOf[js.Any])
+    if (!js.isUndefined(blockMapSize)) __obj.updateDynamic("blockMapSize")(blockMapSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAdminRightsRequired)) __obj.updateDynamic("isAdminRightsRequired")(isAdminRightsRequired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PackageFileInfo]
   }
-  @scala.inline
-  implicit class PackageFileInfoOps[Self <: PackageFileInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

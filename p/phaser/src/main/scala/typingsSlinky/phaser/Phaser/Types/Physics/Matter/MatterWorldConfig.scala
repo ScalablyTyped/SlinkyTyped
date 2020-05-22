@@ -5,533 +5,215 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MatterWorldConfig extends js.Object {
   /**
     * Automatically call Engine.update every time the game steps.
     */
-  var autoUpdate: js.UndefOr[Boolean] = js.native
+  var autoUpdate: js.UndefOr[Boolean] = js.undefined
   /**
     * The number of constraint iterations to perform each update. The higher the value, the higher quality the simulation will be at the expense of performance.
     */
-  var constraintIterations: js.UndefOr[Double] = js.native
+  var constraintIterations: js.UndefOr[Double] = js.undefined
   /**
     * An optional Number that specifies the time correction factor to apply to the update.
     */
-  var correction: js.UndefOr[Double] = js.native
+  var correction: js.UndefOr[Double] = js.undefined
   /**
     * Controls the Matter Debug Rendering options. If a boolean it will use the default values, otherwise, specify a Debug Config object.
     */
-  var debug: js.UndefOr[Boolean | MatterDebugConfig] = js.native
+  var debug: js.UndefOr[Boolean | MatterDebugConfig] = js.undefined
   /**
     * A flag that specifies whether the engine should allow sleeping via the `Matter.Sleeping` module. Sleeping can improve stability and performance, but often at the expense of accuracy.
     */
-  var enableSleeping: js.UndefOr[Boolean] = js.native
+  var enableSleeping: js.UndefOr[Boolean] = js.undefined
   /**
     * Toggles if the world is enabled or not.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Sets the Resolver friction normal multiplier property.
     */
-  var frictionNormalMultiplier: js.UndefOr[Double] = js.native
+  var frictionNormalMultiplier: js.UndefOr[Double] = js.undefined
   /**
     * This function is called every time the core game loop steps, which is bound to the Request Animation Frame frequency unless otherwise modified.
     */
-  var getDelta: js.UndefOr[js.Function] = js.native
+  var getDelta: js.UndefOr[js.Function] = js.undefined
   /**
     * Sets {@link Phaser.Physics.Matter.World#gravity}. If `false` Gravity will be set to zero.
     */
-  var gravity: js.UndefOr[Vector2Like | Boolean] = js.native
+  var gravity: js.UndefOr[Vector2Like | Boolean] = js.undefined
   /**
     * Should the Matter Attractor Plugin be enabled? An attractors plugin that makes it easy to apply continual forces on bodies. It's possible to simulate effects such as wind, gravity and magnetism.
     */
   @JSName("plugins.attractors")
-  var pluginsDotattractors: js.UndefOr[Boolean] = js.native
+  var pluginsDotattractors: js.UndefOr[Boolean] = js.undefined
   /**
     * Should the Matter Collision Events Plugin be enabled?
     */
   @JSName("plugins.collisionevents")
-  var pluginsDotcollisionevents: js.UndefOr[Boolean] = js.native
+  var pluginsDotcollisionevents: js.UndefOr[Boolean] = js.undefined
   /**
     * Should the Matter Wrap Plugin be enabled? A coordinate wrapping plugin that automatically wraps the position of bodies such that they always stay within the given bounds. Upon crossing a boundary the body will appear on the opposite side of the bounds, while maintaining its velocity.
     */
   @JSName("plugins.wrap")
-  var pluginsDotwrap: js.UndefOr[Boolean] = js.native
+  var pluginsDotwrap: js.UndefOr[Boolean] = js.undefined
   /**
     * Sets the Resolver position dampen property.
     */
-  var positionDampen: js.UndefOr[Double] = js.native
+  var positionDampen: js.UndefOr[Double] = js.undefined
   /**
     * The number of position iterations to perform each update. The higher the value, the higher quality the simulation will be at the expense of performance.
     */
-  var positionIterations: js.UndefOr[Double] = js.native
+  var positionIterations: js.UndefOr[Double] = js.undefined
   /**
     * Sets the Resolver position warming property.
     */
-  var positionWarming: js.UndefOr[Double] = js.native
+  var positionWarming: js.UndefOr[Double] = js.undefined
   /**
     * Sets the Resolver resting threshold property.
     */
-  var restingThresh: js.UndefOr[Double] = js.native
+  var restingThresh: js.UndefOr[Double] = js.undefined
   /**
     * Sets the Resolver resting threshold tangent property.
     */
-  var restingThreshTangent: js.UndefOr[Double] = js.native
+  var restingThreshTangent: js.UndefOr[Double] = js.undefined
   /**
     * Sets the Matter Runner options.
     */
-  var runner: js.UndefOr[MatterRunnerConfig] = js.native
+  var runner: js.UndefOr[MatterRunnerConfig] = js.undefined
   /**
     * Should the world have bounds enabled by default?
     */
-  var setBounds: js.UndefOr[js.Object | Boolean] = js.native
+  var setBounds: js.UndefOr[js.Object | Boolean] = js.undefined
   /**
     * Should the bottom world bounds wall be created?
     */
   @JSName("setBounds.bottom")
-  var setBoundsDotbottom: js.UndefOr[Boolean] = js.native
+  var setBoundsDotbottom: js.UndefOr[Boolean] = js.undefined
   /**
     * The height of the world bounds.
     */
   @JSName("setBounds.height")
-  var setBoundsDotheight: js.UndefOr[Double] = js.native
+  var setBoundsDotheight: js.UndefOr[Double] = js.undefined
   /**
     * Should the left-side world bounds wall be created?
     */
   @JSName("setBounds.left")
-  var setBoundsDotleft: js.UndefOr[Boolean] = js.native
+  var setBoundsDotleft: js.UndefOr[Boolean] = js.undefined
   /**
     * Should the right-side world bounds wall be created?
     */
   @JSName("setBounds.right")
-  var setBoundsDotright: js.UndefOr[Boolean] = js.native
+  var setBoundsDotright: js.UndefOr[Boolean] = js.undefined
   /**
     * The thickness of the walls of the world bounds.
     */
   @JSName("setBounds.thickness")
-  var setBoundsDotthickness: js.UndefOr[Double] = js.native
+  var setBoundsDotthickness: js.UndefOr[Double] = js.undefined
   /**
     * Should the top world bounds wall be created?
     */
   @JSName("setBounds.top")
-  var setBoundsDottop: js.UndefOr[Boolean] = js.native
+  var setBoundsDottop: js.UndefOr[Boolean] = js.undefined
   /**
     * The width of the world bounds.
     */
   @JSName("setBounds.width")
-  var setBoundsDotwidth: js.UndefOr[Double] = js.native
+  var setBoundsDotwidth: js.UndefOr[Double] = js.undefined
   /**
     * The x coordinate of the world bounds.
     */
   @JSName("setBounds.x")
-  var setBoundsDotx: js.UndefOr[Double] = js.native
+  var setBoundsDotx: js.UndefOr[Double] = js.undefined
   /**
     * The y coordinate of the world bounds.
     */
   @JSName("setBounds.y")
-  var setBoundsDoty: js.UndefOr[Double] = js.native
+  var setBoundsDoty: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that specifies the global scaling factor of time for all bodies. A value of `0` freezes the simulation. A value of `0.1` gives a slow-motion effect. A value of `1.2` gives a speed-up effect.
     */
   @JSName("timing.timeScale")
-  var timingDottimeScale: js.UndefOr[Double] = js.native
+  var timingDottimeScale: js.UndefOr[Double] = js.undefined
   /**
     * A `Number` that specifies the current simulation-time in milliseconds starting from `0`. It is incremented on every `Engine.update` by the given `delta` argument.
     */
   @JSName("timing.timestamp")
-  var timingDottimestamp: js.UndefOr[Double] = js.native
+  var timingDottimestamp: js.UndefOr[Double] = js.undefined
   /**
     * The number of velocity iterations to perform each update. The higher the value, the higher quality the simulation will be at the expense of performance.
     */
-  var velocityIterations: js.UndefOr[Double] = js.native
+  var velocityIterations: js.UndefOr[Double] = js.undefined
 }
 
 object MatterWorldConfig {
   @scala.inline
-  def apply(): MatterWorldConfig = {
+  def apply(
+    autoUpdate: js.UndefOr[Boolean] = js.undefined,
+    constraintIterations: js.UndefOr[Double] = js.undefined,
+    correction: js.UndefOr[Double] = js.undefined,
+    debug: Boolean | MatterDebugConfig = null,
+    enableSleeping: js.UndefOr[Boolean] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    frictionNormalMultiplier: js.UndefOr[Double] = js.undefined,
+    getDelta: js.Function = null,
+    gravity: Vector2Like | Boolean = null,
+    pluginsDotattractors: js.UndefOr[Boolean] = js.undefined,
+    pluginsDotcollisionevents: js.UndefOr[Boolean] = js.undefined,
+    pluginsDotwrap: js.UndefOr[Boolean] = js.undefined,
+    positionDampen: js.UndefOr[Double] = js.undefined,
+    positionIterations: js.UndefOr[Double] = js.undefined,
+    positionWarming: js.UndefOr[Double] = js.undefined,
+    restingThresh: js.UndefOr[Double] = js.undefined,
+    restingThreshTangent: js.UndefOr[Double] = js.undefined,
+    runner: MatterRunnerConfig = null,
+    setBounds: js.Object | Boolean = null,
+    setBoundsDotbottom: js.UndefOr[Boolean] = js.undefined,
+    setBoundsDotheight: js.UndefOr[Double] = js.undefined,
+    setBoundsDotleft: js.UndefOr[Boolean] = js.undefined,
+    setBoundsDotright: js.UndefOr[Boolean] = js.undefined,
+    setBoundsDotthickness: js.UndefOr[Double] = js.undefined,
+    setBoundsDottop: js.UndefOr[Boolean] = js.undefined,
+    setBoundsDotwidth: js.UndefOr[Double] = js.undefined,
+    setBoundsDotx: js.UndefOr[Double] = js.undefined,
+    setBoundsDoty: js.UndefOr[Double] = js.undefined,
+    timingDottimeScale: js.UndefOr[Double] = js.undefined,
+    timingDottimestamp: js.UndefOr[Double] = js.undefined,
+    velocityIterations: js.UndefOr[Double] = js.undefined
+  ): MatterWorldConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoUpdate)) __obj.updateDynamic("autoUpdate")(autoUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constraintIterations)) __obj.updateDynamic("constraintIterations")(constraintIterations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(correction)) __obj.updateDynamic("correction")(correction.get.asInstanceOf[js.Any])
+    if (debug != null) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSleeping)) __obj.updateDynamic("enableSleeping")(enableSleeping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frictionNormalMultiplier)) __obj.updateDynamic("frictionNormalMultiplier")(frictionNormalMultiplier.get.asInstanceOf[js.Any])
+    if (getDelta != null) __obj.updateDynamic("getDelta")(getDelta.asInstanceOf[js.Any])
+    if (gravity != null) __obj.updateDynamic("gravity")(gravity.asInstanceOf[js.Any])
+    if (!js.isUndefined(pluginsDotattractors)) __obj.updateDynamic("plugins.attractors")(pluginsDotattractors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pluginsDotcollisionevents)) __obj.updateDynamic("plugins.collisionevents")(pluginsDotcollisionevents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pluginsDotwrap)) __obj.updateDynamic("plugins.wrap")(pluginsDotwrap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(positionDampen)) __obj.updateDynamic("positionDampen")(positionDampen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(positionIterations)) __obj.updateDynamic("positionIterations")(positionIterations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(positionWarming)) __obj.updateDynamic("positionWarming")(positionWarming.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restingThresh)) __obj.updateDynamic("restingThresh")(restingThresh.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restingThreshTangent)) __obj.updateDynamic("restingThreshTangent")(restingThreshTangent.get.asInstanceOf[js.Any])
+    if (runner != null) __obj.updateDynamic("runner")(runner.asInstanceOf[js.Any])
+    if (setBounds != null) __obj.updateDynamic("setBounds")(setBounds.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotbottom)) __obj.updateDynamic("setBounds.bottom")(setBoundsDotbottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotheight)) __obj.updateDynamic("setBounds.height")(setBoundsDotheight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotleft)) __obj.updateDynamic("setBounds.left")(setBoundsDotleft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotright)) __obj.updateDynamic("setBounds.right")(setBoundsDotright.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotthickness)) __obj.updateDynamic("setBounds.thickness")(setBoundsDotthickness.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDottop)) __obj.updateDynamic("setBounds.top")(setBoundsDottop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotwidth)) __obj.updateDynamic("setBounds.width")(setBoundsDotwidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDotx)) __obj.updateDynamic("setBounds.x")(setBoundsDotx.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setBoundsDoty)) __obj.updateDynamic("setBounds.y")(setBoundsDoty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timingDottimeScale)) __obj.updateDynamic("timing.timeScale")(timingDottimeScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timingDottimestamp)) __obj.updateDynamic("timing.timestamp")(timingDottimestamp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(velocityIterations)) __obj.updateDynamic("velocityIterations")(velocityIterations.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatterWorldConfig]
   }
-  @scala.inline
-  implicit class MatterWorldConfigOps[Self <: MatterWorldConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraintIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraintIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraintIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraintIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCorrection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorrection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean | MatterDebugConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSleeping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSleeping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSleeping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSleeping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrictionNormalMultiplier(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionNormalMultiplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrictionNormalMultiplier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frictionNormalMultiplier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetDelta(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: Vector2Like | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPluginsDotattractors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins.attractors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPluginsDotattractors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins.attractors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPluginsDotcollisionevents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins.collisionevents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPluginsDotcollisionevents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins.collisionevents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPluginsDotwrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins.wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPluginsDotwrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins.wrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionDampen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionDampen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionDampen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionDampen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionWarming(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionWarming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionWarming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionWarming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestingThresh(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restingThresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestingThresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restingThresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestingThreshTangent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restingThreshTangent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestingThreshTangent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restingThreshTangent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunner(value: MatterRunnerConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBounds(value: js.Object | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotbottom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotbottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotheight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotheight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotleft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotleft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotright(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotright: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotthickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.thickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotthickness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.thickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDottop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDottop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDotx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDotx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBoundsDoty(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetBoundsDoty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds.y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimingDottimeScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing.timeScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimingDottimeScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing.timeScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimingDottimestamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing.timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimingDottimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing.timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVelocityIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocityIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVelocityIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocityIterations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

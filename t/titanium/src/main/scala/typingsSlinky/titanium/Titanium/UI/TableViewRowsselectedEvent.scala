@@ -6,19 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Fired when user stops two-pan gesture interaction for selecting multiple rows.
-		 * It is used in conjunction with <Titanium.UI.TableView.allowsMultipleSelectionInteraction>.
-		 */
-@js.native
+  * Fired when user stops two-pan gesture interaction for selecting multiple rows.
+  * It is used in conjunction with <Titanium.UI.TableView.allowsMultipleSelectionInteraction>.
+  */
 trait TableViewRowsselectedEvent extends TableViewBaseEvent {
   /**
-  			 * List of rows selected by user.
-  			 */
-  var selectedRows: js.Array[SelectedRowObject] = js.native
+    * List of rows selected by user.
+    */
+  var selectedRows: js.Array[SelectedRowObject]
   /**
-  			 * First row selected when user started interaction.
-  			 */
-  var startingRow: SelectedRowObject = js.native
+    * First row selected when user started interaction.
+    */
+  var startingRow: SelectedRowObject
 }
 
 object TableViewRowsselectedEvent {
@@ -27,25 +26,5 @@ object TableViewRowsselectedEvent {
     val __obj = js.Dynamic.literal(selectedRows = selectedRows.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], startingRow = startingRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableViewRowsselectedEvent]
   }
-  @scala.inline
-  implicit class TableViewRowsselectedEventOps[Self <: TableViewRowsselectedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectedRows(value: js.Array[SelectedRowObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartingRow(value: SelectedRowObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

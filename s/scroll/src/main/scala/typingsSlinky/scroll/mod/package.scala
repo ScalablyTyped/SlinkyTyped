@@ -18,4 +18,5 @@ package object mod {
     /* value */ scala.Double, 
     scala.Unit
   ]
+  type ScrollError = js.Error | scala.Null
 }

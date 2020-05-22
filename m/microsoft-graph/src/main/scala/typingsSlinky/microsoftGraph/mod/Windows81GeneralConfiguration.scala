@@ -4,491 +4,177 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Windows81GeneralConfiguration extends DeviceConfiguration {
   /**
     * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a
     * Microsoft account.
     */
-  var accountsBlockAddingNonMicrosoftAccountEmail: js.UndefOr[Boolean] = js.native
+  var accountsBlockAddingNonMicrosoftAccountEmail: js.UndefOr[Boolean] = js.undefined
   // Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-  var applyOnlyToWindows81: js.UndefOr[Boolean] = js.native
+  var applyOnlyToWindows81: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block auto fill.
-  var browserBlockAutofill: js.UndefOr[Boolean] = js.native
+  var browserBlockAutofill: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block automatic detection of Intranet sites.
-  var browserBlockAutomaticDetectionOfIntranetSites: js.UndefOr[Boolean] = js.native
+  var browserBlockAutomaticDetectionOfIntranetSites: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block enterprise mode access.
-  var browserBlockEnterpriseModeAccess: js.UndefOr[Boolean] = js.native
+  var browserBlockEnterpriseModeAccess: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using JavaScript.
-  var browserBlockJavaScript: js.UndefOr[Boolean] = js.native
+  var browserBlockJavaScript: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block plug-ins.
-  var browserBlockPlugins: js.UndefOr[Boolean] = js.native
+  var browserBlockPlugins: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block popups.
-  var browserBlockPopups: js.UndefOr[Boolean] = js.native
+  var browserBlockPopups: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from sending the do not track header.
-  var browserBlockSendingDoNotTrackHeader: js.UndefOr[Boolean] = js.native
+  var browserBlockSendingDoNotTrackHeader: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block a single word entry on Intranet sites.
-  var browserBlockSingleWordEntryOnIntranetSites: js.UndefOr[Boolean] = js.native
+  var browserBlockSingleWordEntryOnIntranetSites: js.UndefOr[Boolean] = js.undefined
   // The enterprise mode site list location. Could be a local file, local network or http location.
-  var browserEnterpriseModeSiteListLocation: js.UndefOr[String] = js.native
+  var browserEnterpriseModeSiteListLocation: js.UndefOr[String] = js.undefined
   // The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
-  var browserInternetSecurityLevel: js.UndefOr[InternetSiteSecurityLevel] = js.native
+  var browserInternetSecurityLevel: js.UndefOr[InternetSiteSecurityLevel] = js.undefined
   // The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
-  var browserIntranetSecurityLevel: js.UndefOr[SiteSecurityLevel] = js.native
+  var browserIntranetSecurityLevel: js.UndefOr[SiteSecurityLevel] = js.undefined
   // The logging report location.
-  var browserLoggingReportLocation: js.UndefOr[String] = js.native
+  var browserLoggingReportLocation: js.UndefOr[String] = js.undefined
   // Indicates whether or not to require a firewall.
-  var browserRequireFirewall: js.UndefOr[Boolean] = js.native
+  var browserRequireFirewall: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require fraud warning.
-  var browserRequireFraudWarning: js.UndefOr[Boolean] = js.native
+  var browserRequireFraudWarning: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require high security for restricted sites.
-  var browserRequireHighSecurityForRestrictedSites: js.UndefOr[Boolean] = js.native
+  var browserRequireHighSecurityForRestrictedSites: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require the user to use the smart screen filter.
-  var browserRequireSmartScreen: js.UndefOr[Boolean] = js.native
+  var browserRequireSmartScreen: js.UndefOr[Boolean] = js.undefined
   // The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
-  var browserTrustedSitesSecurityLevel: js.UndefOr[SiteSecurityLevel] = js.native
+  var browserTrustedSitesSecurityLevel: js.UndefOr[SiteSecurityLevel] = js.undefined
   // Indicates whether or not to block data roaming.
-  var cellularBlockDataRoaming: js.UndefOr[Boolean] = js.native
+  var cellularBlockDataRoaming: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block diagnostic data submission.
-  var diagnosticsBlockDataSubmission: js.UndefOr[Boolean] = js.native
+  var diagnosticsBlockDataSubmission: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to Block the user from using a pictures password and pin.
-  var passwordBlockPicturePasswordAndPin: js.UndefOr[Boolean] = js.native
+  var passwordBlockPicturePasswordAndPin: js.UndefOr[Boolean] = js.undefined
   // Password expiration in days.
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[Double] = js.undefined
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined
   // The minimum password length.
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[Double] = js.undefined
   // The minutes of inactivity before the screen times out.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.undefined
   // The number of previous passwords to prevent re-use of. Valid values 0 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined
   // The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
+  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.undefined
   // The number of sign in failures before factory reset.
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.undefined
   // Indicates whether or not to require encryption on a mobile device.
-  var storageRequireDeviceEncryption: js.UndefOr[Boolean] = js.native
+  var storageRequireDeviceEncryption: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require automatic updates.
-  var updatesRequireAutomaticUpdates: js.UndefOr[Boolean] = js.native
+  var updatesRequireAutomaticUpdates: js.UndefOr[Boolean] = js.undefined
   /**
     * The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges,
     * notifyOnAppChangesWithoutDimming, neverNotify.
     */
-  var userAccountControlSettings: js.UndefOr[WindowsUserAccountControlSettings] = js.native
+  var userAccountControlSettings: js.UndefOr[WindowsUserAccountControlSettings] = js.undefined
   // The work folders url.
-  var workFoldersUrl: js.UndefOr[String] = js.native
+  var workFoldersUrl: js.UndefOr[String] = js.undefined
 }
 
 object Windows81GeneralConfiguration {
   @scala.inline
-  def apply(): Windows81GeneralConfiguration = {
+  def apply(
+    accountsBlockAddingNonMicrosoftAccountEmail: js.UndefOr[Boolean] = js.undefined,
+    applyOnlyToWindows81: js.UndefOr[Boolean] = js.undefined,
+    assignments: js.Array[DeviceConfigurationAssignment] = null,
+    browserBlockAutofill: js.UndefOr[Boolean] = js.undefined,
+    browserBlockAutomaticDetectionOfIntranetSites: js.UndefOr[Boolean] = js.undefined,
+    browserBlockEnterpriseModeAccess: js.UndefOr[Boolean] = js.undefined,
+    browserBlockJavaScript: js.UndefOr[Boolean] = js.undefined,
+    browserBlockPlugins: js.UndefOr[Boolean] = js.undefined,
+    browserBlockPopups: js.UndefOr[Boolean] = js.undefined,
+    browserBlockSendingDoNotTrackHeader: js.UndefOr[Boolean] = js.undefined,
+    browserBlockSingleWordEntryOnIntranetSites: js.UndefOr[Boolean] = js.undefined,
+    browserEnterpriseModeSiteListLocation: String = null,
+    browserInternetSecurityLevel: InternetSiteSecurityLevel = null,
+    browserIntranetSecurityLevel: SiteSecurityLevel = null,
+    browserLoggingReportLocation: String = null,
+    browserRequireFirewall: js.UndefOr[Boolean] = js.undefined,
+    browserRequireFraudWarning: js.UndefOr[Boolean] = js.undefined,
+    browserRequireHighSecurityForRestrictedSites: js.UndefOr[Boolean] = js.undefined,
+    browserRequireSmartScreen: js.UndefOr[Boolean] = js.undefined,
+    browserTrustedSitesSecurityLevel: SiteSecurityLevel = null,
+    cellularBlockDataRoaming: js.UndefOr[Boolean] = js.undefined,
+    createdDateTime: String = null,
+    description: String = null,
+    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
+    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
+    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
+    diagnosticsBlockDataSubmission: js.UndefOr[Boolean] = js.undefined,
+    displayName: String = null,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    passwordBlockPicturePasswordAndPin: js.UndefOr[Boolean] = js.undefined,
+    passwordExpirationDays: js.UndefOr[Double] = js.undefined,
+    passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLength: js.UndefOr[Double] = js.undefined,
+    passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.undefined,
+    passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined,
+    passwordRequiredType: RequiredPasswordType = null,
+    passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.undefined,
+    storageRequireDeviceEncryption: js.UndefOr[Boolean] = js.undefined,
+    updatesRequireAutomaticUpdates: js.UndefOr[Boolean] = js.undefined,
+    userAccountControlSettings: WindowsUserAccountControlSettings = null,
+    userStatusOverview: DeviceConfigurationUserOverview = null,
+    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined,
+    workFoldersUrl: String = null
+  ): Windows81GeneralConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(accountsBlockAddingNonMicrosoftAccountEmail)) __obj.updateDynamic("accountsBlockAddingNonMicrosoftAccountEmail")(accountsBlockAddingNonMicrosoftAccountEmail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(applyOnlyToWindows81)) __obj.updateDynamic("applyOnlyToWindows81")(applyOnlyToWindows81.get.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockAutofill)) __obj.updateDynamic("browserBlockAutofill")(browserBlockAutofill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockAutomaticDetectionOfIntranetSites)) __obj.updateDynamic("browserBlockAutomaticDetectionOfIntranetSites")(browserBlockAutomaticDetectionOfIntranetSites.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockEnterpriseModeAccess)) __obj.updateDynamic("browserBlockEnterpriseModeAccess")(browserBlockEnterpriseModeAccess.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockJavaScript)) __obj.updateDynamic("browserBlockJavaScript")(browserBlockJavaScript.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockPlugins)) __obj.updateDynamic("browserBlockPlugins")(browserBlockPlugins.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockPopups)) __obj.updateDynamic("browserBlockPopups")(browserBlockPopups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockSendingDoNotTrackHeader)) __obj.updateDynamic("browserBlockSendingDoNotTrackHeader")(browserBlockSendingDoNotTrackHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserBlockSingleWordEntryOnIntranetSites)) __obj.updateDynamic("browserBlockSingleWordEntryOnIntranetSites")(browserBlockSingleWordEntryOnIntranetSites.get.asInstanceOf[js.Any])
+    if (browserEnterpriseModeSiteListLocation != null) __obj.updateDynamic("browserEnterpriseModeSiteListLocation")(browserEnterpriseModeSiteListLocation.asInstanceOf[js.Any])
+    if (browserInternetSecurityLevel != null) __obj.updateDynamic("browserInternetSecurityLevel")(browserInternetSecurityLevel.asInstanceOf[js.Any])
+    if (browserIntranetSecurityLevel != null) __obj.updateDynamic("browserIntranetSecurityLevel")(browserIntranetSecurityLevel.asInstanceOf[js.Any])
+    if (browserLoggingReportLocation != null) __obj.updateDynamic("browserLoggingReportLocation")(browserLoggingReportLocation.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserRequireFirewall)) __obj.updateDynamic("browserRequireFirewall")(browserRequireFirewall.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserRequireFraudWarning)) __obj.updateDynamic("browserRequireFraudWarning")(browserRequireFraudWarning.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserRequireHighSecurityForRestrictedSites)) __obj.updateDynamic("browserRequireHighSecurityForRestrictedSites")(browserRequireHighSecurityForRestrictedSites.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(browserRequireSmartScreen)) __obj.updateDynamic("browserRequireSmartScreen")(browserRequireSmartScreen.get.asInstanceOf[js.Any])
+    if (browserTrustedSitesSecurityLevel != null) __obj.updateDynamic("browserTrustedSitesSecurityLevel")(browserTrustedSitesSecurityLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellularBlockDataRoaming)) __obj.updateDynamic("cellularBlockDataRoaming")(cellularBlockDataRoaming.get.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
+    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(diagnosticsBlockDataSubmission)) __obj.updateDynamic("diagnosticsBlockDataSubmission")(diagnosticsBlockDataSubmission.get.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordBlockPicturePasswordAndPin)) __obj.updateDynamic("passwordBlockPicturePasswordAndPin")(passwordBlockPicturePasswordAndPin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordExpirationDays)) __obj.updateDynamic("passwordExpirationDays")(passwordExpirationDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumCharacterSetCount)) __obj.updateDynamic("passwordMinimumCharacterSetCount")(passwordMinimumCharacterSetCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLength)) __obj.updateDynamic("passwordMinimumLength")(passwordMinimumLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinutesOfInactivityBeforeScreenTimeout)) __obj.updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(passwordMinutesOfInactivityBeforeScreenTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordPreviousPasswordBlockCount)) __obj.updateDynamic("passwordPreviousPasswordBlockCount")(passwordPreviousPasswordBlockCount.get.asInstanceOf[js.Any])
+    if (passwordRequiredType != null) __obj.updateDynamic("passwordRequiredType")(passwordRequiredType.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordSignInFailureCountBeforeFactoryReset)) __obj.updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(passwordSignInFailureCountBeforeFactoryReset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageRequireDeviceEncryption)) __obj.updateDynamic("storageRequireDeviceEncryption")(storageRequireDeviceEncryption.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatesRequireAutomaticUpdates)) __obj.updateDynamic("updatesRequireAutomaticUpdates")(updatesRequireAutomaticUpdates.get.asInstanceOf[js.Any])
+    if (userAccountControlSettings != null) __obj.updateDynamic("userAccountControlSettings")(userAccountControlSettings.asInstanceOf[js.Any])
+    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
+    if (workFoldersUrl != null) __obj.updateDynamic("workFoldersUrl")(workFoldersUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Windows81GeneralConfiguration]
   }
-  @scala.inline
-  implicit class Windows81GeneralConfigurationOps[Self <: Windows81GeneralConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountsBlockAddingNonMicrosoftAccountEmail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountsBlockAddingNonMicrosoftAccountEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountsBlockAddingNonMicrosoftAccountEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountsBlockAddingNonMicrosoftAccountEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplyOnlyToWindows81(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyOnlyToWindows81")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyOnlyToWindows81: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyOnlyToWindows81")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockAutofill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockAutofill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockAutofill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockAutofill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockAutomaticDetectionOfIntranetSites(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockAutomaticDetectionOfIntranetSites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockAutomaticDetectionOfIntranetSites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockAutomaticDetectionOfIntranetSites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockEnterpriseModeAccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockEnterpriseModeAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockEnterpriseModeAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockEnterpriseModeAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockJavaScript(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockJavaScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockJavaScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockJavaScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockPlugins(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockPlugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockPlugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockPopups(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockPopups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockPopups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockPopups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockSendingDoNotTrackHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockSendingDoNotTrackHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockSendingDoNotTrackHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockSendingDoNotTrackHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserBlockSingleWordEntryOnIntranetSites(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockSingleWordEntryOnIntranetSites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserBlockSingleWordEntryOnIntranetSites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserBlockSingleWordEntryOnIntranetSites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserEnterpriseModeSiteListLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserEnterpriseModeSiteListLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserEnterpriseModeSiteListLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserEnterpriseModeSiteListLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserInternetSecurityLevel(value: InternetSiteSecurityLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserInternetSecurityLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserInternetSecurityLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserInternetSecurityLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserIntranetSecurityLevel(value: SiteSecurityLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserIntranetSecurityLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserIntranetSecurityLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserIntranetSecurityLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserLoggingReportLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserLoggingReportLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserLoggingReportLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserLoggingReportLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserRequireFirewall(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireFirewall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserRequireFirewall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireFirewall")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserRequireFraudWarning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireFraudWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserRequireFraudWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireFraudWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserRequireHighSecurityForRestrictedSites(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireHighSecurityForRestrictedSites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserRequireHighSecurityForRestrictedSites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireHighSecurityForRestrictedSites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserRequireSmartScreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireSmartScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserRequireSmartScreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserRequireSmartScreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowserTrustedSitesSecurityLevel(value: SiteSecurityLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserTrustedSitesSecurityLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowserTrustedSitesSecurityLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browserTrustedSitesSecurityLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellularBlockDataRoaming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockDataRoaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellularBlockDataRoaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockDataRoaming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiagnosticsBlockDataSubmission(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticsBlockDataSubmission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagnosticsBlockDataSubmission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticsBlockDataSubmission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordBlockPicturePasswordAndPin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockPicturePasswordAndPin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordBlockPicturePasswordAndPin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockPicturePasswordAndPin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordExpirationDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordExpirationDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumCharacterSetCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumCharacterSetCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinutesOfInactivityBeforeScreenTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordPreviousPasswordBlockCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordPreviousPasswordBlockCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequiredType(value: RequiredPasswordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequiredType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordSignInFailureCountBeforeFactoryReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageRequireDeviceEncryption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireDeviceEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageRequireDeviceEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireDeviceEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatesRequireAutomaticUpdates(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatesRequireAutomaticUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatesRequireAutomaticUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatesRequireAutomaticUpdates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAccountControlSettings(value: WindowsUserAccountControlSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAccountControlSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAccountControlSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAccountControlSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkFoldersUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workFoldersUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkFoldersUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workFoldersUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

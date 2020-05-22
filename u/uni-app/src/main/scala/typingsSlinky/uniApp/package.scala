@@ -9,4 +9,5 @@ package object uniApp {
   type KVInfer[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: T[K]}
     */ typingsSlinky.uniApp.uniAppStrings.KVInfer with org.scalablytyped.runtime.TopLevel[T]
+  type Void[T] = js.UndefOr[T | scala.Null]
 }

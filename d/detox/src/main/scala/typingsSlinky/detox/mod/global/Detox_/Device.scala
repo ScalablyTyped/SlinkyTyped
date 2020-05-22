@@ -1,7 +1,6 @@
 package typingsSlinky.detox.mod.global.Detox_
 
 import typingsSlinky.detox.anon.SourceApp
-import typingsSlinky.detox.detoxBooleans.`true`
 import typingsSlinky.detox.detoxStrings.android
 import typingsSlinky.detox.detoxStrings.ios
 import scala.scalajs.js
@@ -10,6 +9,18 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Device extends js.Object {
+  /**
+    * Holds the environment-unique ID of the device - namely, the adb ID on Android (e.g. emulator-5554) and the Mac-global simulator UDID on iOS,
+    * as used by simctl (e.g. AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE).
+    *
+    * The value will be undefined until the device is properly prepared (i.e. in detox.init())
+    */
+  var id: String = js.native
+  /**
+    * Holds a descriptive name of the device. Example: emulator-5554 (Pixel_API_26)
+    * The value will be undefined until the device is properly prepared (i.e. in detox.init()).
+    */
+  var name: String = js.native
   /**
     * Clears the simulator keychain (iOS Only)
     */
@@ -116,8 +127,7 @@ trait Device extends js.Object {
     * // or
     * await device.setBiometricEnrollment(false);
     */
-  @JSName("setBiometricEnrollment")
-  def setBiometricEnrollment_true(enabled: `true`): js.Promise[Unit] = js.native
+  def setBiometricEnrollment(enabled: Boolean): js.Promise[Unit] = js.native
   /**
     * Note: setLocation is dependent on fbsimctl. if fbsimctl is not installed, the command will fail, it must be installed. Sets the simulator location to the given latitude and longitude.
     * @param lat

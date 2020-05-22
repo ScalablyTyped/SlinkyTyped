@@ -5,283 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SearchRequest extends js.Object {
-  var archived: js.UndefOr[Boolean] = js.native
-  var email: js.UndefOr[String] = js.native
-  var end_creation_date: js.UndefOr[String] = js.native
-  var end_due_date: js.UndefOr[String] = js.native
-  var end_invoice_date: js.UndefOr[String] = js.native
-  var end_payment_date: js.UndefOr[String] = js.native
-  var lower_total_amount: js.UndefOr[Currency] = js.native
-  var number: js.UndefOr[String] = js.native
-  var page: js.UndefOr[Double] = js.native
-  var page_size: js.UndefOr[Double] = js.native
-  var recipient_business_name: js.UndefOr[String] = js.native
-  var recipient_first_name: js.UndefOr[String] = js.native
-  var recipient_last_name: js.UndefOr[String] = js.native
-  var start_creation_date: js.UndefOr[String] = js.native
-  var start_due_date: js.UndefOr[String] = js.native
-  var start_invoice_date: js.UndefOr[String] = js.native
-  var start_payment_date: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
-  var total_count_required: js.UndefOr[Boolean] = js.native
-  var upper_total_amount: js.UndefOr[Currency] = js.native
+  var archived: js.UndefOr[Boolean] = js.undefined
+  var email: js.UndefOr[String] = js.undefined
+  var end_creation_date: js.UndefOr[String] = js.undefined
+  var end_due_date: js.UndefOr[String] = js.undefined
+  var end_invoice_date: js.UndefOr[String] = js.undefined
+  var end_payment_date: js.UndefOr[String] = js.undefined
+  var lower_total_amount: js.UndefOr[Currency] = js.undefined
+  var number: js.UndefOr[String] = js.undefined
+  var page: js.UndefOr[Double] = js.undefined
+  var page_size: js.UndefOr[Double] = js.undefined
+  var recipient_business_name: js.UndefOr[String] = js.undefined
+  var recipient_first_name: js.UndefOr[String] = js.undefined
+  var recipient_last_name: js.UndefOr[String] = js.undefined
+  var start_creation_date: js.UndefOr[String] = js.undefined
+  var start_due_date: js.UndefOr[String] = js.undefined
+  var start_invoice_date: js.UndefOr[String] = js.undefined
+  var start_payment_date: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
+  var total_count_required: js.UndefOr[Boolean] = js.undefined
+  var upper_total_amount: js.UndefOr[Currency] = js.undefined
 }
 
 object SearchRequest {
   @scala.inline
-  def apply(): SearchRequest = {
+  def apply(
+    archived: js.UndefOr[Boolean] = js.undefined,
+    email: String = null,
+    end_creation_date: String = null,
+    end_due_date: String = null,
+    end_invoice_date: String = null,
+    end_payment_date: String = null,
+    lower_total_amount: Currency = null,
+    number: String = null,
+    page: js.UndefOr[Double] = js.undefined,
+    page_size: js.UndefOr[Double] = js.undefined,
+    recipient_business_name: String = null,
+    recipient_first_name: String = null,
+    recipient_last_name: String = null,
+    start_creation_date: String = null,
+    start_due_date: String = null,
+    start_invoice_date: String = null,
+    start_payment_date: String = null,
+    status: String = null,
+    total_count_required: js.UndefOr[Boolean] = js.undefined,
+    upper_total_amount: Currency = null
+  ): SearchRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(archived)) __obj.updateDynamic("archived")(archived.get.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (end_creation_date != null) __obj.updateDynamic("end_creation_date")(end_creation_date.asInstanceOf[js.Any])
+    if (end_due_date != null) __obj.updateDynamic("end_due_date")(end_due_date.asInstanceOf[js.Any])
+    if (end_invoice_date != null) __obj.updateDynamic("end_invoice_date")(end_invoice_date.asInstanceOf[js.Any])
+    if (end_payment_date != null) __obj.updateDynamic("end_payment_date")(end_payment_date.asInstanceOf[js.Any])
+    if (lower_total_amount != null) __obj.updateDynamic("lower_total_amount")(lower_total_amount.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page_size)) __obj.updateDynamic("page_size")(page_size.get.asInstanceOf[js.Any])
+    if (recipient_business_name != null) __obj.updateDynamic("recipient_business_name")(recipient_business_name.asInstanceOf[js.Any])
+    if (recipient_first_name != null) __obj.updateDynamic("recipient_first_name")(recipient_first_name.asInstanceOf[js.Any])
+    if (recipient_last_name != null) __obj.updateDynamic("recipient_last_name")(recipient_last_name.asInstanceOf[js.Any])
+    if (start_creation_date != null) __obj.updateDynamic("start_creation_date")(start_creation_date.asInstanceOf[js.Any])
+    if (start_due_date != null) __obj.updateDynamic("start_due_date")(start_due_date.asInstanceOf[js.Any])
+    if (start_invoice_date != null) __obj.updateDynamic("start_invoice_date")(start_invoice_date.asInstanceOf[js.Any])
+    if (start_payment_date != null) __obj.updateDynamic("start_payment_date")(start_payment_date.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_count_required)) __obj.updateDynamic("total_count_required")(total_count_required.get.asInstanceOf[js.Any])
+    if (upper_total_amount != null) __obj.updateDynamic("upper_total_amount")(upper_total_amount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchRequest]
   }
-  @scala.inline
-  implicit class SearchRequestOps[Self <: SearchRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArchived(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_creation_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_creation_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_creation_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_creation_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_due_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_due_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_due_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_due_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_invoice_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_invoice_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_invoice_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_invoice_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd_payment_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_payment_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd_payment_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_payment_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLower_total_amount(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lower_total_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLower_total_amount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lower_total_amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage_size(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage_size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipient_business_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient_business_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipient_business_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient_business_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipient_first_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient_first_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipient_first_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient_first_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipient_last_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient_last_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipient_last_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recipient_last_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_creation_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_creation_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_creation_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_creation_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_due_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_due_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_due_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_due_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_invoice_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_invoice_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_invoice_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_invoice_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_payment_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_payment_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_payment_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_payment_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal_count_required(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_count_required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal_count_required: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_count_required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpper_total_amount(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upper_total_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpper_total_amount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upper_total_amount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

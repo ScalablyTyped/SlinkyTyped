@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import typingsSlinky.microsoftAjax.Sys.Net.WebRequestExecutor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +11,7 @@ class ProxyWebRequestExecutorFactory protected ()
   extends typingsSlinky.sharepoint.SP.ProxyWebRequestExecutorFactory {
   def this(url: String) = this()
   def this(url: String, options: js.Any) = this()
+  /* CompleteClass */
+  override def createWebRequestExecutor(): WebRequestExecutor = js.native
 }
 

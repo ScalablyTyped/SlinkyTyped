@@ -439,6 +439,11 @@ object TabPane {
   }
   
   def withProps[T](p: TabPaneProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TabPaneProps]))
+  }
   implicit def make[T](companion: TabPane.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

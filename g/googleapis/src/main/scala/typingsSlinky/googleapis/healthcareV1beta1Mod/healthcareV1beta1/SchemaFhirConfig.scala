@@ -19,29 +19,10 @@ trait SchemaFhirConfig extends js.Object {
 
 object SchemaFhirConfig {
   @scala.inline
-  def apply(): SchemaFhirConfig = {
+  def apply(fieldMetadataList: js.Array[SchemaFieldMetadata] = null): SchemaFhirConfig = {
     val __obj = js.Dynamic.literal()
+    if (fieldMetadataList != null) __obj.updateDynamic("fieldMetadataList")(fieldMetadataList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFhirConfig]
   }
-  @scala.inline
-  implicit class SchemaFhirConfigOps[Self <: SchemaFhirConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldMetadataList(value: js.Array[SchemaFieldMetadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMetadataList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldMetadataList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldMetadataList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

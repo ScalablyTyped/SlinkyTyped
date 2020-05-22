@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Params extends js.Object {
   // events
-  var afterchartdraw: js.UndefOr[js.Function0[Unit]] = js.native
-  var aftergriddraw: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.native
-  var beforegriddraw: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.native
-  var beforetoolbarcreated: js.UndefOr[js.Function1[/* toolbar */ Toolbar, Unit]] = js.native
-  var cellclick: js.UndefOr[js.Function1[/* cell */ CellData, Unit]] = js.native
-  var celldoubleclick: js.UndefOr[js.Function1[/* cell */ CellData, Unit]] = js.native
-  var chartclick: js.UndefOr[js.Function1[/* data */ ChartData, Unit]] = js.native
-  var componentFolder: js.UndefOr[String] = js.native
+  var afterchartdraw: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var aftergriddraw: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.undefined
+  var beforegriddraw: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.undefined
+  var beforetoolbarcreated: js.UndefOr[js.Function1[/* toolbar */ Toolbar, Unit]] = js.undefined
+  var cellclick: js.UndefOr[js.Function1[/* cell */ CellData, Unit]] = js.undefined
+  var celldoubleclick: js.UndefOr[js.Function1[/* cell */ CellData, Unit]] = js.undefined
+  var chartclick: js.UndefOr[js.Function1[/* data */ ChartData, Unit]] = js.undefined
+  var componentFolder: js.UndefOr[String] = js.undefined
   // other
-  var container: js.UndefOr[String] = js.native
-  var customizeCell: js.UndefOr[js.Function2[/* cell */ CellBuilder, /* data */ CellData, Unit]] = js.native
+  var container: js.UndefOr[String] = js.undefined
+  var customizeCell: js.UndefOr[js.Function2[/* cell */ CellBuilder, /* data */ CellData, Unit]] = js.undefined
   var customizeContextMenu: js.UndefOr[
     js.Function3[
       /* items */ js.Array[ContextMenuItem], 
@@ -25,638 +24,149 @@ trait Params extends js.Object {
       /* viewType */ String, 
       js.Array[ContextMenuItem]
     ]
-  ] = js.native
-  var datachanged: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.native
-  var dataerror: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.native
-  var datafilecancelled: js.UndefOr[js.Function0[Unit]] = js.native
-  var dataloaded: js.UndefOr[js.Function0[Unit]] = js.native
-  var exportcomplete: js.UndefOr[js.Function0[Unit]] = js.native
-  var exportstart: js.UndefOr[js.Function0[Unit]] = js.native
-  var fieldslistclose: js.UndefOr[js.Function0[Unit]] = js.native
-  var fieldslistopen: js.UndefOr[js.Function0[Unit]] = js.native
-  var filterclose: js.UndefOr[js.Function0[Unit]] = js.native
-  var filteropen: js.UndefOr[js.Function0[Unit]] = js.native
-  var global: js.UndefOr[Report] = js.native
-  var height: js.UndefOr[String | Double] = js.native
-  var licenseKey: js.UndefOr[String] = js.native
-  var loadingdata: js.UndefOr[js.Function0[Unit]] = js.native
-  var loadinglocalization: js.UndefOr[js.Function0[Unit]] = js.native
-  var loadingolapstructure: js.UndefOr[js.Function0[Unit]] = js.native
-  var loadingreportfile: js.UndefOr[js.Function0[Unit]] = js.native
-  var localizationerror: js.UndefOr[js.Function0[Unit]] = js.native
-  var localizationloaded: js.UndefOr[js.Function0[Unit]] = js.native
-  var olapstructureerror: js.UndefOr[js.Function0[Unit]] = js.native
-  var olapstructureloaded: js.UndefOr[js.Function0[Unit]] = js.native
-  var openingreportfile: js.UndefOr[js.Function0[Unit]] = js.native
-  var printcomplete: js.UndefOr[js.Function0[Unit]] = js.native
-  var printstart: js.UndefOr[js.Function0[Unit]] = js.native
-  var querycomplete: js.UndefOr[js.Function0[Unit]] = js.native
-  var queryerror: js.UndefOr[js.Function0[Unit]] = js.native
-  var ready: js.UndefOr[js.Function0[Unit]] = js.native
-  var report: js.UndefOr[Report | String] = js.native
-  var reportchange: js.UndefOr[js.Function0[Unit]] = js.native
-  var reportcomplete: js.UndefOr[js.Function0[Unit]] = js.native
-  var reportfilecancelled: js.UndefOr[js.Function0[Unit]] = js.native
-  var reportfileerror: js.UndefOr[js.Function0[Unit]] = js.native
-  var reportfileloaded: js.UndefOr[js.Function0[Unit]] = js.native
-  var runningquery: js.UndefOr[js.Function0[Unit]] = js.native
+  ] = js.undefined
+  var datachanged: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.undefined
+  var dataerror: js.UndefOr[js.Function1[/* param */ js.Object, Unit]] = js.undefined
+  var datafilecancelled: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var dataloaded: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var exportcomplete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var exportstart: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fieldslistclose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fieldslistopen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var filterclose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var filteropen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var global: js.UndefOr[Report] = js.undefined
+  var height: js.UndefOr[String | Double] = js.undefined
+  var licenseKey: js.UndefOr[String] = js.undefined
+  var loadingdata: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var loadinglocalization: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var loadingolapstructure: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var loadingreportfile: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var localizationerror: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var localizationloaded: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var olapstructureerror: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var olapstructureloaded: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var openingreportfile: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var printcomplete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var printstart: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var querycomplete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var queryerror: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var ready: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var report: js.UndefOr[Report | String] = js.undefined
+  var reportchange: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var reportcomplete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var reportfilecancelled: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var reportfileerror: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var reportfileloaded: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var runningquery: js.UndefOr[js.Function0[Unit]] = js.undefined
   // params
-  var toolbar: js.UndefOr[Boolean] = js.native
-  var update: js.UndefOr[js.Function0[Unit]] = js.native
-  var width: js.UndefOr[String | Double] = js.native
+  var toolbar: js.UndefOr[Boolean] = js.undefined
+  var update: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var width: js.UndefOr[String | Double] = js.undefined
 }
 
 object Params {
   @scala.inline
-  def apply(): Params = {
+  def apply(
+    afterchartdraw: () => Unit = null,
+    aftergriddraw: /* param */ js.Object => Unit = null,
+    beforegriddraw: /* param */ js.Object => Unit = null,
+    beforetoolbarcreated: /* toolbar */ Toolbar => Unit = null,
+    cellclick: /* cell */ CellData => Unit = null,
+    celldoubleclick: /* cell */ CellData => Unit = null,
+    chartclick: /* data */ ChartData => Unit = null,
+    componentFolder: String = null,
+    container: String = null,
+    customizeCell: (/* cell */ CellBuilder, /* data */ CellData) => Unit = null,
+    customizeContextMenu: (/* items */ js.Array[ContextMenuItem], /* data */ CellData | ChartData, /* viewType */ String) => js.Array[ContextMenuItem] = null,
+    datachanged: /* param */ js.Object => Unit = null,
+    dataerror: /* param */ js.Object => Unit = null,
+    datafilecancelled: () => Unit = null,
+    dataloaded: () => Unit = null,
+    exportcomplete: () => Unit = null,
+    exportstart: () => Unit = null,
+    fieldslistclose: () => Unit = null,
+    fieldslistopen: () => Unit = null,
+    filterclose: () => Unit = null,
+    filteropen: () => Unit = null,
+    global: Report = null,
+    height: String | Double = null,
+    licenseKey: String = null,
+    loadingdata: () => Unit = null,
+    loadinglocalization: () => Unit = null,
+    loadingolapstructure: () => Unit = null,
+    loadingreportfile: () => Unit = null,
+    localizationerror: () => Unit = null,
+    localizationloaded: () => Unit = null,
+    olapstructureerror: () => Unit = null,
+    olapstructureloaded: () => Unit = null,
+    openingreportfile: () => Unit = null,
+    printcomplete: () => Unit = null,
+    printstart: () => Unit = null,
+    querycomplete: () => Unit = null,
+    queryerror: () => Unit = null,
+    ready: () => Unit = null,
+    report: Report | String = null,
+    reportchange: () => Unit = null,
+    reportcomplete: () => Unit = null,
+    reportfilecancelled: () => Unit = null,
+    reportfileerror: () => Unit = null,
+    reportfileloaded: () => Unit = null,
+    runningquery: () => Unit = null,
+    toolbar: js.UndefOr[Boolean] = js.undefined,
+    update: () => Unit = null,
+    width: String | Double = null
+  ): Params = {
     val __obj = js.Dynamic.literal()
+    if (afterchartdraw != null) __obj.updateDynamic("afterchartdraw")(js.Any.fromFunction0(afterchartdraw))
+    if (aftergriddraw != null) __obj.updateDynamic("aftergriddraw")(js.Any.fromFunction1(aftergriddraw))
+    if (beforegriddraw != null) __obj.updateDynamic("beforegriddraw")(js.Any.fromFunction1(beforegriddraw))
+    if (beforetoolbarcreated != null) __obj.updateDynamic("beforetoolbarcreated")(js.Any.fromFunction1(beforetoolbarcreated))
+    if (cellclick != null) __obj.updateDynamic("cellclick")(js.Any.fromFunction1(cellclick))
+    if (celldoubleclick != null) __obj.updateDynamic("celldoubleclick")(js.Any.fromFunction1(celldoubleclick))
+    if (chartclick != null) __obj.updateDynamic("chartclick")(js.Any.fromFunction1(chartclick))
+    if (componentFolder != null) __obj.updateDynamic("componentFolder")(componentFolder.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (customizeCell != null) __obj.updateDynamic("customizeCell")(js.Any.fromFunction2(customizeCell))
+    if (customizeContextMenu != null) __obj.updateDynamic("customizeContextMenu")(js.Any.fromFunction3(customizeContextMenu))
+    if (datachanged != null) __obj.updateDynamic("datachanged")(js.Any.fromFunction1(datachanged))
+    if (dataerror != null) __obj.updateDynamic("dataerror")(js.Any.fromFunction1(dataerror))
+    if (datafilecancelled != null) __obj.updateDynamic("datafilecancelled")(js.Any.fromFunction0(datafilecancelled))
+    if (dataloaded != null) __obj.updateDynamic("dataloaded")(js.Any.fromFunction0(dataloaded))
+    if (exportcomplete != null) __obj.updateDynamic("exportcomplete")(js.Any.fromFunction0(exportcomplete))
+    if (exportstart != null) __obj.updateDynamic("exportstart")(js.Any.fromFunction0(exportstart))
+    if (fieldslistclose != null) __obj.updateDynamic("fieldslistclose")(js.Any.fromFunction0(fieldslistclose))
+    if (fieldslistopen != null) __obj.updateDynamic("fieldslistopen")(js.Any.fromFunction0(fieldslistopen))
+    if (filterclose != null) __obj.updateDynamic("filterclose")(js.Any.fromFunction0(filterclose))
+    if (filteropen != null) __obj.updateDynamic("filteropen")(js.Any.fromFunction0(filteropen))
+    if (global != null) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (licenseKey != null) __obj.updateDynamic("licenseKey")(licenseKey.asInstanceOf[js.Any])
+    if (loadingdata != null) __obj.updateDynamic("loadingdata")(js.Any.fromFunction0(loadingdata))
+    if (loadinglocalization != null) __obj.updateDynamic("loadinglocalization")(js.Any.fromFunction0(loadinglocalization))
+    if (loadingolapstructure != null) __obj.updateDynamic("loadingolapstructure")(js.Any.fromFunction0(loadingolapstructure))
+    if (loadingreportfile != null) __obj.updateDynamic("loadingreportfile")(js.Any.fromFunction0(loadingreportfile))
+    if (localizationerror != null) __obj.updateDynamic("localizationerror")(js.Any.fromFunction0(localizationerror))
+    if (localizationloaded != null) __obj.updateDynamic("localizationloaded")(js.Any.fromFunction0(localizationloaded))
+    if (olapstructureerror != null) __obj.updateDynamic("olapstructureerror")(js.Any.fromFunction0(olapstructureerror))
+    if (olapstructureloaded != null) __obj.updateDynamic("olapstructureloaded")(js.Any.fromFunction0(olapstructureloaded))
+    if (openingreportfile != null) __obj.updateDynamic("openingreportfile")(js.Any.fromFunction0(openingreportfile))
+    if (printcomplete != null) __obj.updateDynamic("printcomplete")(js.Any.fromFunction0(printcomplete))
+    if (printstart != null) __obj.updateDynamic("printstart")(js.Any.fromFunction0(printstart))
+    if (querycomplete != null) __obj.updateDynamic("querycomplete")(js.Any.fromFunction0(querycomplete))
+    if (queryerror != null) __obj.updateDynamic("queryerror")(js.Any.fromFunction0(queryerror))
+    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction0(ready))
+    if (report != null) __obj.updateDynamic("report")(report.asInstanceOf[js.Any])
+    if (reportchange != null) __obj.updateDynamic("reportchange")(js.Any.fromFunction0(reportchange))
+    if (reportcomplete != null) __obj.updateDynamic("reportcomplete")(js.Any.fromFunction0(reportcomplete))
+    if (reportfilecancelled != null) __obj.updateDynamic("reportfilecancelled")(js.Any.fromFunction0(reportfilecancelled))
+    if (reportfileerror != null) __obj.updateDynamic("reportfileerror")(js.Any.fromFunction0(reportfileerror))
+    if (reportfileloaded != null) __obj.updateDynamic("reportfileloaded")(js.Any.fromFunction0(reportfileloaded))
+    if (runningquery != null) __obj.updateDynamic("runningquery")(js.Any.fromFunction0(runningquery))
+    if (!js.isUndefined(toolbar)) __obj.updateDynamic("toolbar")(toolbar.get.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction0(update))
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Params]
   }
-  @scala.inline
-  implicit class ParamsOps[Self <: Params] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterchartdraw(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterchartdraw")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterchartdraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterchartdraw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAftergriddraw(value: /* param */ js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aftergriddraw")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAftergriddraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aftergriddraw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforegriddraw(value: /* param */ js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforegriddraw")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforegriddraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforegriddraw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforetoolbarcreated(value: /* toolbar */ Toolbar => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforetoolbarcreated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforetoolbarcreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforetoolbarcreated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellclick(value: /* cell */ CellData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellclick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCelldoubleclick(value: /* cell */ CellData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("celldoubleclick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCelldoubleclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("celldoubleclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChartclick(value: /* data */ ChartData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartclick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChartclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentFolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentFolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentFolder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeCell(value: (/* cell */ CellBuilder, /* data */ CellData) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeCell")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomizeContextMenu(
-      value: (/* items */ js.Array[ContextMenuItem], /* data */ CellData | ChartData, /* viewType */ String) => js.Array[ContextMenuItem]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeContextMenu")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomizeContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatachanged(value: /* param */ js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datachanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDatachanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datachanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataerror(value: /* param */ js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataerror")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDataerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatafilecancelled(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datafilecancelled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDatafilecancelled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datafilecancelled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataloaded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataloaded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDataloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportcomplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportcomplete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutExportcomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportcomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportstart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportstart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutExportstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldslistclose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldslistclose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFieldslistclose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldslistclose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldslistopen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldslistopen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFieldslistopen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldslistopen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterclose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterclose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilterclose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterclose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilteropen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteropen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilteropen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filteropen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobal(value: Report): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingdata(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingdata")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadingdata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingdata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadinglocalization(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadinglocalization")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadinglocalization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadinglocalization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingolapstructure(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingolapstructure")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadingolapstructure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingolapstructure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingreportfile(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingreportfile")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadingreportfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingreportfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizationerror(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizationerror")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutLocalizationerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizationerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalizationloaded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizationloaded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutLocalizationloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localizationloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOlapstructureerror(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("olapstructureerror")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOlapstructureerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("olapstructureerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOlapstructureloaded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("olapstructureloaded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOlapstructureloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("olapstructureloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpeningreportfile(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openingreportfile")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOpeningreportfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openingreportfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintcomplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printcomplete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrintcomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printcomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintstart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printstart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrintstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuerycomplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querycomplete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutQuerycomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("querycomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryerror(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryerror")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutQueryerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReady(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReport(value: Report | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("report")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("report")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportchange(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportchange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReportchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportcomplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportcomplete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReportcomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportcomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportfilecancelled(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportfilecancelled")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReportfilecancelled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportfilecancelled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportfileerror(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportfileerror")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReportfileerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportfileerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportfileloaded(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportfileloaded")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutReportfileloaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportfileloaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunningquery(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runningquery")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRunningquery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runningquery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

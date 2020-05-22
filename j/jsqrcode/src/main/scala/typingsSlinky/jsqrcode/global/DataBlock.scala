@@ -9,6 +9,14 @@ import scala.scalajs.js.annotation._
 class DataBlock protected ()
   extends typingsSlinky.jsqrcode.DataBlock {
   def this(numDataCodewords: Double, codewords: js.Array[Double]) = this()
+  /* CompleteClass */
+  override val Codewords: js.Array[Double] = js.native
+  /* CompleteClass */
+  override val NumDataCodewords: Double = js.native
+  /* CompleteClass */
+  override var codewords: js.Array[Double] = js.native
+  /* CompleteClass */
+  override var numDataCodewords: Double = js.native
 }
 
 /* static members */

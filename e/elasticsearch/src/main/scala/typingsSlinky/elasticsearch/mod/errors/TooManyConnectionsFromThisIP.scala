@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("elasticsearch", "errors.TooManyConnectionsFromThisIP")
 @js.native
-class TooManyConnectionsFromThisIP () extends Error
+class TooManyConnectionsFromThisIP () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

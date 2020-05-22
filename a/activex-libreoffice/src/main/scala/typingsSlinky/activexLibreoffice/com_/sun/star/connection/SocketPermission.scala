@@ -20,12 +20,11 @@ import scala.scalajs.js.annotation._
   * any port between 1024 and 65535 on the local host.
   * @since OOo 1.1.2
   */
-@js.native
 trait SocketPermission extends js.Object {
   /** comma separated actions list */
-  var Actions: String = js.native
+  var Actions: String
   /** target host with optional portrange */
-  var Host: String = js.native
+  var Host: String
 }
 
 object SocketPermission {
@@ -34,25 +33,5 @@ object SocketPermission {
     val __obj = js.Dynamic.literal(Actions = Actions.asInstanceOf[js.Any], Host = Host.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketPermission]
   }
-  @scala.inline
-  implicit class SocketPermissionOps[Self <: SocketPermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

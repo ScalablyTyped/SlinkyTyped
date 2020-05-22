@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Matrix extends js.Object {
   /** Filter matrix */
-  var matrix: js.UndefOr[js.Array[Double]] = js.native
+  var matrix: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object Matrix {
   @scala.inline
-  def apply(): Matrix = {
+  def apply(matrix: js.Array[Double] = null): Matrix = {
     val __obj = js.Dynamic.literal()
+    if (matrix != null) __obj.updateDynamic("matrix")(matrix.asInstanceOf[js.Any])
     __obj.asInstanceOf[Matrix]
   }
-  @scala.inline
-  implicit class MatrixOps[Self <: Matrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMatrix(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,7 +14,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents a range of cells within a table. */
-@js.native
 trait CellRange
   extends CellProperties
      with XCellRange

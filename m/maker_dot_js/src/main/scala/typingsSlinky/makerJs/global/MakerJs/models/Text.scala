@@ -1,5 +1,6 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
+import typingsSlinky.makerJs.MakerJs.IModelMap
 import typingsSlinky.opentypeJs.mod.Font
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,5 +21,8 @@ class Text protected ()
     centerCharacterOrigin: Boolean,
     bezierAccuracy: Double
   ) = this()
+  /* CompleteClass */
+  @JSName("models")
+  override var models_Text: IModelMap = js.native
 }
 

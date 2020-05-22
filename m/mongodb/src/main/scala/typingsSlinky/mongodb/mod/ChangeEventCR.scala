@@ -2,6 +2,7 @@ package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.anon.Coll
+import typingsSlinky.mongodb.anon.Uid
 import typingsSlinky.mongodb.anon.`3`
 import typingsSlinky.mongodb.mongodbStrings.insert
 import typingsSlinky.mongodb.mongodbStrings.replace
@@ -9,13 +10,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChangeEventCR[TSchema /* <: StringDictionary[js.Any] */]
   extends ChangeEventBase[TSchema]
      with ChangeEvent[TSchema] {
-  var documentKey: `3`[TSchema] = js.native
-  var fullDocument: js.UndefOr[TSchema] = js.native
-  var operationType: insert | replace = js.native
+  var documentKey: `3`[TSchema]
+  var fullDocument: js.UndefOr[TSchema] = js.undefined
+  var operationType: insert | replace
 }
 
 object ChangeEventCR {
@@ -25,42 +25,16 @@ object ChangeEventCR {
     clusterTime: typingsSlinky.bson.mod.Timestamp,
     documentKey: `3`[TSchema],
     ns: Coll,
-    operationType: insert | replace
+    operationType: insert | replace,
+    fullDocument: TSchema = null,
+    lsid: Uid = null,
+    txnNumber: js.UndefOr[scala.Double] = js.undefined
   ): ChangeEventCR[TSchema] = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], clusterTime = clusterTime.asInstanceOf[js.Any], documentKey = documentKey.asInstanceOf[js.Any], ns = ns.asInstanceOf[js.Any], operationType = operationType.asInstanceOf[js.Any])
+    if (fullDocument != null) __obj.updateDynamic("fullDocument")(fullDocument.asInstanceOf[js.Any])
+    if (lsid != null) __obj.updateDynamic("lsid")(lsid.asInstanceOf[js.Any])
+    if (!js.isUndefined(txnNumber)) __obj.updateDynamic("txnNumber")(txnNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeEventCR[TSchema]]
   }
-  @scala.inline
-  implicit class ChangeEventCROps[Self[tschema] <: ChangeEventCR[tschema], TSchema] (val x: Self[TSchema]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TSchema] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TSchema]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TSchema] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TSchema] with Other]
-    @scala.inline
-    def withDocumentKey(value: `3`[TSchema]): Self[TSchema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperationType(value: insert | replace): Self[TSchema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullDocument(value: TSchema): Self[TSchema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullDocument: Self[TSchema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullDocument")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

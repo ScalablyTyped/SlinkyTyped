@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait Operation extends js.Object
 
-object Operation {
-  @scala.inline
-  implicit def apply(value: OperationFunction): Operation = value.asInstanceOf[Operation]
-  @scala.inline
-  implicit def apply(value: OperationHandlerArray): Operation = value.asInstanceOf[Operation]
-}
-

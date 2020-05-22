@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cancellationreason extends js.Object {
-  var cancellation_reason: js.UndefOr[PaymentIntentUserProvidedCancellationReason] = js.native
+  var cancellation_reason: js.UndefOr[PaymentIntentUserProvidedCancellationReason] = js.undefined
 }
 
 object Cancellationreason {
   @scala.inline
-  def apply(): Cancellationreason = {
+  def apply(cancellation_reason: PaymentIntentUserProvidedCancellationReason = null): Cancellationreason = {
     val __obj = js.Dynamic.literal()
+    if (cancellation_reason != null) __obj.updateDynamic("cancellation_reason")(cancellation_reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cancellationreason]
   }
-  @scala.inline
-  implicit class CancellationreasonOps[Self <: Cancellationreason] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancellation_reason(value: PaymentIntentUserProvidedCancellationReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancellation_reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancellation_reason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancellation_reason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

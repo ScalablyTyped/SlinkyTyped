@@ -17,29 +17,10 @@ trait SchemaListVoicesResponse extends js.Object {
 
 object SchemaListVoicesResponse {
   @scala.inline
-  def apply(): SchemaListVoicesResponse = {
+  def apply(voices: js.Array[SchemaVoice] = null): SchemaListVoicesResponse = {
     val __obj = js.Dynamic.literal()
+    if (voices != null) __obj.updateDynamic("voices")(voices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListVoicesResponse]
   }
-  @scala.inline
-  implicit class SchemaListVoicesResponseOps[Self <: SchemaListVoicesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVoices(value: js.Array[SchemaVoice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("voices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

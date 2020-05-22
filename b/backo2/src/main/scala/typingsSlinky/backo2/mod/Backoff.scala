@@ -4,48 +4,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Backoff extends js.Object {
   /**
     * The number of previous attempts
     */
-  var attempts: Double = js.native
+  var attempts: Double
   /**
     * The base to which the attempt is raised as an exponent
     */
-  var factor: Double = js.native
+  var factor: Double
   /**
     * An upper bound on the variance around the duration between attempts
     */
-  var jitter: Double = js.native
+  var jitter: Double
   /**
     * An upper bound on the duration between attempts
     */
-  var max: Double = js.native
+  var max: Double
   /**
     * A lower bound on the duration between attempts
     */
-  var ms: Double = js.native
+  var ms: Double
   /**
     * Compute the backoff duration and increment the number of attempts
     */
-  def duration(): Double = js.native
+  def duration(): Double
   /**
     * Reset the number of attempts
     */
-  def reset(): Unit = js.native
+  def reset(): Unit
   /**
     * Set the jitter
     */
-  def setJitter(jitter: Double): Unit = js.native
+  def setJitter(jitter: Double): Unit
   /**
     * Set the maximum duration between attempts
     */
-  def setMax(max: Double): Unit = js.native
+  def setMax(max: Double): Unit
   /**
     * Set the minimum duration between attempts
     */
-  def setMin(min: Double): Unit = js.native
+  def setMin(min: Double): Unit
 }
 
 object Backoff {
@@ -65,73 +64,5 @@ object Backoff {
     val __obj = js.Dynamic.literal(attempts = attempts.asInstanceOf[js.Any], duration = js.Any.fromFunction0(duration), factor = factor.asInstanceOf[js.Any], jitter = jitter.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], ms = ms.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset), setJitter = js.Any.fromFunction1(setJitter), setMax = js.Any.fromFunction1(setMax), setMin = js.Any.fromFunction1(setMin))
     __obj.asInstanceOf[Backoff]
   }
-  @scala.inline
-  implicit class BackoffOps[Self <: Backoff] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttempts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJitter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jitter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReset(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetJitter(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setJitter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMax(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMax")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMin(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMin")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

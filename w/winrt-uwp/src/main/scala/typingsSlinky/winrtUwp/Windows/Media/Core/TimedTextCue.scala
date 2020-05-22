@@ -6,20 +6,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a text cue in a TimedMetadataTrack . */
-@js.native
 trait TimedTextCue extends js.Object {
   /** Gets or sets the TimedTextRegion of the cue, which defines the style of the rendering area for the cue. */
-  var cueRegion: TimedTextRegion = js.native
+  var cueRegion: TimedTextRegion
   /** Gets or sets the TimedTextStyle of the cue, which defines the style of the rendered text. */
-  var cueStyle: TimedTextStyle = js.native
+  var cueStyle: TimedTextStyle
   /** Gets or sets the duration of the cue. */
-  var duration: Double = js.native
+  var duration: Double
   /** Gets or sets an identifier for the cue. */
-  var id: String = js.native
+  var id: String
   /** Gets the collection of TimedTextLine objects that convey the text of the cue. */
-  var lines: IVector[TimedTextLine] = js.native
+  var lines: IVector[TimedTextLine]
   /** Gets the start time of the cue. */
-  var startTime: Double = js.native
+  var startTime: Double
 }
 
 object TimedTextCue {
@@ -35,49 +34,5 @@ object TimedTextCue {
     val __obj = js.Dynamic.literal(cueRegion = cueRegion.asInstanceOf[js.Any], cueStyle = cueStyle.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], lines = lines.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimedTextCue]
   }
-  @scala.inline
-  implicit class TimedTextCueOps[Self <: TimedTextCue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCueRegion(value: TimedTextRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cueRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCueStyle(value: TimedTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cueStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLines(value: IVector[TimedTextLine]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

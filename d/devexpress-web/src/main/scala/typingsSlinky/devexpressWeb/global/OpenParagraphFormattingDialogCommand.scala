@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenParagraphFormattingDialogCommand")
 @js.native
 class OpenParagraphFormattingDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenParagraphFormattingDialogCommand
+  extends typingsSlinky.devexpressWeb.OpenParagraphFormattingDialogCommand {
+  /**
+    * Executes the OpenParagraphFormattingDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

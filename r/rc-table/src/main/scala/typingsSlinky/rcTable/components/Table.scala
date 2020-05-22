@@ -12,6 +12,11 @@ object Table {
   object component extends js.Object
   
   def withProps[RecordType <: DefaultRecordType](p: TableProps[RecordType]): SharedBuilder_TableProps1251172539[RecordType] = new SharedBuilder_TableProps1251172539[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[RecordType <: DefaultRecordType](): SharedBuilder_TableProps1251172539[RecordType] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_TableProps1251172539[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
+  }
   implicit def make[RecordType <: DefaultRecordType](companion: Table.type): SharedBuilder_TableProps1251172539[RecordType] = new SharedBuilder_TableProps1251172539[RecordType](js.Array(this.component, js.Dictionary.empty))()
 }
 

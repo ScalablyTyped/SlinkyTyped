@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModelOptions extends js.Object {
-  var hasTimestamps: js.UndefOr[Boolean] = js.native
-  var parse: js.UndefOr[Boolean] = js.native
-  var tableName: js.UndefOr[String] = js.native
+  var hasTimestamps: js.UndefOr[Boolean] = js.undefined
+  var parse: js.UndefOr[Boolean] = js.undefined
+  var tableName: js.UndefOr[String] = js.undefined
 }
 
 object ModelOptions {
   @scala.inline
-  def apply(): ModelOptions = {
+  def apply(
+    hasTimestamps: js.UndefOr[Boolean] = js.undefined,
+    parse: js.UndefOr[Boolean] = js.undefined,
+    tableName: String = null
+  ): ModelOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasTimestamps)) __obj.updateDynamic("hasTimestamps")(hasTimestamps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(parse)) __obj.updateDynamic("parse")(parse.get.asInstanceOf[js.Any])
+    if (tableName != null) __obj.updateDynamic("tableName")(tableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelOptions]
   }
-  @scala.inline
-  implicit class ModelOptionsOps[Self <: ModelOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasTimestamps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTimestamps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasTimestamps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTimestamps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

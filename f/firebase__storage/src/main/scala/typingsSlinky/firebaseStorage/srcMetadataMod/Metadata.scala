@@ -9,258 +9,72 @@ import scala.scalajs.js.annotation._
 /**
   * @fileoverview Documentation for the metadata format.
   */
-@js.native
 trait Metadata
   extends /* prop */ StringDictionary[js.Any] {
-  var bucket: js.UndefOr[String] = js.native
-  var cacheControl: js.UndefOr[String] = js.native
-  var contentDisposition: js.UndefOr[String] = js.native
-  var contentEncoding: js.UndefOr[String] = js.native
-  var contentLanguage: js.UndefOr[String] = js.native
-  var contentType: js.UndefOr[String] = js.native
-  var customMetadata: js.UndefOr[StringDictionary[String]] = js.native
-  var downloadTokens: js.UndefOr[js.Array[String]] = js.native
-  var fullPath: js.UndefOr[String] = js.native
-  var generation: js.UndefOr[String] = js.native
-  var md5Hash: js.UndefOr[String] = js.native
-  var metageneration: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var ref: js.UndefOr[Reference] = js.native
-  var size: js.UndefOr[Double] = js.native
-  var timeCreated: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var updated: js.UndefOr[String] = js.native
+  var bucket: js.UndefOr[String] = js.undefined
+  var cacheControl: js.UndefOr[String] = js.undefined
+  var contentDisposition: js.UndefOr[String] = js.undefined
+  var contentEncoding: js.UndefOr[String] = js.undefined
+  var contentLanguage: js.UndefOr[String] = js.undefined
+  var contentType: js.UndefOr[String] = js.undefined
+  var customMetadata: js.UndefOr[StringDictionary[String]] = js.undefined
+  var downloadTokens: js.UndefOr[js.Array[String]] = js.undefined
+  var fullPath: js.UndefOr[String] = js.undefined
+  var generation: js.UndefOr[String] = js.undefined
+  var md5Hash: js.UndefOr[String] = js.undefined
+  var metageneration: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var ref: js.UndefOr[Reference] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
+  var timeCreated: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var updated: js.UndefOr[String] = js.undefined
 }
 
 object Metadata {
   @scala.inline
-  def apply(): Metadata = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    bucket: String = null,
+    cacheControl: String = null,
+    contentDisposition: String = null,
+    contentEncoding: String = null,
+    contentLanguage: String = null,
+    contentType: String = null,
+    customMetadata: StringDictionary[String] = null,
+    downloadTokens: js.Array[String] = null,
+    fullPath: String = null,
+    generation: String = null,
+    md5Hash: String = null,
+    metageneration: String = null,
+    name: String = null,
+    ref: Reference = null,
+    size: js.UndefOr[Double] = js.undefined,
+    timeCreated: String = null,
+    `type`: String = null,
+    updated: String = null
+  ): Metadata = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (bucket != null) __obj.updateDynamic("bucket")(bucket.asInstanceOf[js.Any])
+    if (cacheControl != null) __obj.updateDynamic("cacheControl")(cacheControl.asInstanceOf[js.Any])
+    if (contentDisposition != null) __obj.updateDynamic("contentDisposition")(contentDisposition.asInstanceOf[js.Any])
+    if (contentEncoding != null) __obj.updateDynamic("contentEncoding")(contentEncoding.asInstanceOf[js.Any])
+    if (contentLanguage != null) __obj.updateDynamic("contentLanguage")(contentLanguage.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (customMetadata != null) __obj.updateDynamic("customMetadata")(customMetadata.asInstanceOf[js.Any])
+    if (downloadTokens != null) __obj.updateDynamic("downloadTokens")(downloadTokens.asInstanceOf[js.Any])
+    if (fullPath != null) __obj.updateDynamic("fullPath")(fullPath.asInstanceOf[js.Any])
+    if (generation != null) __obj.updateDynamic("generation")(generation.asInstanceOf[js.Any])
+    if (md5Hash != null) __obj.updateDynamic("md5Hash")(md5Hash.asInstanceOf[js.Any])
+    if (metageneration != null) __obj.updateDynamic("metageneration")(metageneration.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (timeCreated != null) __obj.updateDynamic("timeCreated")(timeCreated.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[Metadata]
   }
-  @scala.inline
-  implicit class MetadataOps[Self <: Metadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheControl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentDisposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDisposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomMetadata(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadTokens(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadTokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadTokens")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeneration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd5Hash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd5Hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md5Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetageneration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metageneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetageneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metageneration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRef(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait DataSetSchema extends js.Object {
 
 object DataSetSchema {
   @scala.inline
-  def apply(): DataSetSchema = {
+  def apply(ColumnSchemaList: ColumnSchemaList = null): DataSetSchema = {
     val __obj = js.Dynamic.literal()
+    if (ColumnSchemaList != null) __obj.updateDynamic("ColumnSchemaList")(ColumnSchemaList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSetSchema]
   }
-  @scala.inline
-  implicit class DataSetSchemaOps[Self <: DataSetSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnSchemaList(value: ColumnSchemaList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnSchemaList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSchemaList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnSchemaList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

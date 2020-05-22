@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExecutionArgs extends js.Object {
-  var executionArgs: typingsSlinky.graphql.executeMod.ExecutionArgs = js.native
+  var executionArgs: typingsSlinky.graphql.executeMod.ExecutionArgs
 }
 
 object ExecutionArgs {
@@ -15,19 +14,5 @@ object ExecutionArgs {
     val __obj = js.Dynamic.literal(executionArgs = executionArgs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionArgs]
   }
-  @scala.inline
-  implicit class ExecutionArgsOps[Self <: ExecutionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionArgs(value: typingsSlinky.graphql.executeMod.ExecutionArgs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

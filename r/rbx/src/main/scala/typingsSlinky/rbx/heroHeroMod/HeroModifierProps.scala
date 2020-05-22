@@ -19,64 +19,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeroModifierProps extends js.Object {
   var color: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
-  ] = js.native
-  var gradient: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[small | medium | large | fullheight | `fullheight-with-navbar`] = js.native
+  ] = js.undefined
+  var gradient: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[small | medium | large | fullheight | `fullheight-with-navbar`] = js.undefined
 }
 
 object HeroModifierProps {
   @scala.inline
-  def apply(): HeroModifierProps = {
+  def apply(
+    color: primary | success | info | warning | danger | light | dark | white | black | link = null,
+    gradient: js.UndefOr[Boolean] = js.undefined,
+    size: small | medium | large | fullheight | `fullheight-with-navbar` = null
+  ): HeroModifierProps = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(gradient)) __obj.updateDynamic("gradient")(gradient.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeroModifierProps]
   }
-  @scala.inline
-  implicit class HeroModifierPropsOps[Self <: HeroModifierProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: primary | success | info | warning | danger | light | dark | white | black | link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: small | medium | large | fullheight | `fullheight-with-navbar`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

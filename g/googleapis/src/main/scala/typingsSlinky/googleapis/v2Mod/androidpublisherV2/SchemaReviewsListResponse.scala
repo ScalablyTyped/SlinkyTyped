@@ -13,53 +13,16 @@ trait SchemaReviewsListResponse extends js.Object {
 
 object SchemaReviewsListResponse {
   @scala.inline
-  def apply(): SchemaReviewsListResponse = {
+  def apply(
+    pageInfo: SchemaPageInfo = null,
+    reviews: js.Array[SchemaReview] = null,
+    tokenPagination: SchemaTokenPagination = null
+  ): SchemaReviewsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (pageInfo != null) __obj.updateDynamic("pageInfo")(pageInfo.asInstanceOf[js.Any])
+    if (reviews != null) __obj.updateDynamic("reviews")(reviews.asInstanceOf[js.Any])
+    if (tokenPagination != null) __obj.updateDynamic("tokenPagination")(tokenPagination.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReviewsListResponse]
   }
-  @scala.inline
-  implicit class SchemaReviewsListResponseOps[Self <: SchemaReviewsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageInfo(value: SchemaPageInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviews(value: js.Array[SchemaReview]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviews")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenPagination(value: SchemaTokenPagination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenPagination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenPagination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenPagination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.hubot.mod
 
 import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
-import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.hubot.anon.Listener
 import typingsSlinky.node.NodeJS.Timeout
@@ -10,6 +9,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.node.httpMod.ServerResponse
+import typingsSlinky.qs.mod.ParsedQs
 import typingsSlinky.scopedHttpClient.mod.Options
 import typingsSlinky.scopedHttpClient.mod.ScopedClient
 import scala.scalajs.js
@@ -82,10 +82,10 @@ class Robot[A /* <: Adapter */] protected () extends js.Object {
     * third argument.
     */
   def router(
-    req: Request[ParamsDictionary, _, _, Query],
+    req: Request[ParamsDictionary, _, _, ParsedQs],
     res: typingsSlinky.expressServeStaticCore.mod.Response[_]
   ): js.Any = js.native
-  def router(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
+  def router(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
   def router(req: IncomingMessage, res: typingsSlinky.expressServeStaticCore.mod.Response[_]): js.Any = js.native
   def router(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   def run(): Unit = js.native

@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapParams extends js.Object {
-  var mapParams: js.UndefOr[Boolean] = js.native
-  var overrideParams: js.UndefOr[Boolean] = js.native
-  var reviver: js.UndefOr[js.Any] = js.native
+  var mapParams: js.UndefOr[Boolean] = js.undefined
+  var overrideParams: js.UndefOr[Boolean] = js.undefined
+  var reviver: js.UndefOr[js.Any] = js.undefined
 }
 
 object MapParams {
   @scala.inline
-  def apply(): MapParams = {
+  def apply(
+    mapParams: js.UndefOr[Boolean] = js.undefined,
+    overrideParams: js.UndefOr[Boolean] = js.undefined,
+    reviver: js.Any = null
+  ): MapParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(mapParams)) __obj.updateDynamic("mapParams")(mapParams.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overrideParams)) __obj.updateDynamic("overrideParams")(overrideParams.get.asInstanceOf[js.Any])
+    if (reviver != null) __obj.updateDynamic("reviver")(reviver.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapParams]
   }
-  @scala.inline
-  implicit class MapParamsOps[Self <: MapParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMapParams(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideParams(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviver(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reviver")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

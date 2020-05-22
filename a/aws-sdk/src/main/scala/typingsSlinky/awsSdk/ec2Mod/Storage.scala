@@ -14,29 +14,10 @@ trait Storage extends js.Object {
 
 object Storage {
   @scala.inline
-  def apply(): Storage = {
+  def apply(S3: S3Storage = null): Storage = {
     val __obj = js.Dynamic.literal()
+    if (S3 != null) __obj.updateDynamic("S3")(S3.asInstanceOf[js.Any])
     __obj.asInstanceOf[Storage]
   }
-  @scala.inline
-  implicit class StorageOps[Self <: Storage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3(value: S3Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

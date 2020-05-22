@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfirmCardSetupData extends js.Object {
   /*
     * Pass an object to confirm using data collected by a card or
@@ -13,34 +12,15 @@ trait ConfirmCardSetupData extends js.Object {
     * additional data relevant to the PaymentMethod, such as billing
     * details:
     */
-  var payment_method: js.UndefOr[String | BillingdetailsBillingDetails] = js.native
+  var payment_method: js.UndefOr[String | BillingdetailsBillingDetails] = js.undefined
 }
 
 object ConfirmCardSetupData {
   @scala.inline
-  def apply(): ConfirmCardSetupData = {
+  def apply(payment_method: String | BillingdetailsBillingDetails = null): ConfirmCardSetupData = {
     val __obj = js.Dynamic.literal()
+    if (payment_method != null) __obj.updateDynamic("payment_method")(payment_method.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmCardSetupData]
   }
-  @scala.inline
-  implicit class ConfirmCardSetupDataOps[Self <: ConfirmCardSetupData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayment_method(value: String | BillingdetailsBillingDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayment_method: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

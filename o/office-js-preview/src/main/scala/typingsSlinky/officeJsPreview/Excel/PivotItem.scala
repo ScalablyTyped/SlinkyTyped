@@ -44,7 +44,7 @@ trait PivotItem extends ClientObject {
   var name: String = js.native
   /**
     *
-    * Determines whether the PivotItem is visible or not.
+    * Specifies if the PivotItem is visible.
     *
     * [Api set: ExcelApi 1.8]
     */

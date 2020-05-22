@@ -15,7 +15,7 @@ import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalStyles
 import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -31,7 +31,7 @@ object Modal {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def allowTouchBodyScroll(value: Boolean): this.type = set("allowTouchBodyScroll", value.asInstanceOf[js.Any])
     @scala.inline
@@ -83,7 +83,7 @@ object Modal {
     @scala.inline
     def scrollableContentClassName(value: String): this.type = set("scrollableContentClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IModalStyleProps => Partial[IModalStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IModalStyleProps => DeepPartial[IModalStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IModalStyleProps, IModalStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

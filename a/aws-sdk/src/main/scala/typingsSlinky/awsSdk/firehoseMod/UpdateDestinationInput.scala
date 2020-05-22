@@ -45,96 +45,20 @@ object UpdateDestinationInput {
   def apply(
     CurrentDeliveryStreamVersionId: DeliveryStreamVersionId,
     DeliveryStreamName: DeliveryStreamName,
-    DestinationId: DestinationId
+    DestinationId: DestinationId,
+    ElasticsearchDestinationUpdate: ElasticsearchDestinationUpdate = null,
+    ExtendedS3DestinationUpdate: ExtendedS3DestinationUpdate = null,
+    RedshiftDestinationUpdate: RedshiftDestinationUpdate = null,
+    S3DestinationUpdate: S3DestinationUpdate = null,
+    SplunkDestinationUpdate: SplunkDestinationUpdate = null
   ): UpdateDestinationInput = {
     val __obj = js.Dynamic.literal(CurrentDeliveryStreamVersionId = CurrentDeliveryStreamVersionId.asInstanceOf[js.Any], DeliveryStreamName = DeliveryStreamName.asInstanceOf[js.Any], DestinationId = DestinationId.asInstanceOf[js.Any])
+    if (ElasticsearchDestinationUpdate != null) __obj.updateDynamic("ElasticsearchDestinationUpdate")(ElasticsearchDestinationUpdate.asInstanceOf[js.Any])
+    if (ExtendedS3DestinationUpdate != null) __obj.updateDynamic("ExtendedS3DestinationUpdate")(ExtendedS3DestinationUpdate.asInstanceOf[js.Any])
+    if (RedshiftDestinationUpdate != null) __obj.updateDynamic("RedshiftDestinationUpdate")(RedshiftDestinationUpdate.asInstanceOf[js.Any])
+    if (S3DestinationUpdate != null) __obj.updateDynamic("S3DestinationUpdate")(S3DestinationUpdate.asInstanceOf[js.Any])
+    if (SplunkDestinationUpdate != null) __obj.updateDynamic("SplunkDestinationUpdate")(SplunkDestinationUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDestinationInput]
   }
-  @scala.inline
-  implicit class UpdateDestinationInputOps[Self <: UpdateDestinationInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentDeliveryStreamVersionId(value: DeliveryStreamVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentDeliveryStreamVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeliveryStreamName(value: DeliveryStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationId(value: DestinationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElasticsearchDestinationUpdate(value: ElasticsearchDestinationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchDestinationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearchDestinationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchDestinationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtendedS3DestinationUpdate(value: ExtendedS3DestinationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedS3DestinationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendedS3DestinationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedS3DestinationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedshiftDestinationUpdate(value: RedshiftDestinationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftDestinationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedshiftDestinationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedshiftDestinationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3DestinationUpdate(value: S3DestinationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DestinationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3DestinationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DestinationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplunkDestinationUpdate(value: SplunkDestinationUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SplunkDestinationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplunkDestinationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SplunkDestinationUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

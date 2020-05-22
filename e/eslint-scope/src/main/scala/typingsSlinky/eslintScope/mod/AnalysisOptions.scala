@@ -6,133 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnalysisOptions extends js.Object {
-  var directive: js.UndefOr[Boolean] = js.native
-  var ecmaVersion: js.UndefOr[Double] = js.native
-  var fallback: js.UndefOr[String | (js.Function1[/* node */ js.Object, js.Array[String]])] = js.native
-  var ignoreEval: js.UndefOr[Boolean] = js.native
-  var impliedStrict: js.UndefOr[Boolean] = js.native
-  var nodejsScope: js.UndefOr[Boolean] = js.native
-  var optimistic: js.UndefOr[Boolean] = js.native
-  var sourceType: js.UndefOr[script | module] = js.native
+  var directive: js.UndefOr[Boolean] = js.undefined
+  var ecmaVersion: js.UndefOr[Double] = js.undefined
+  var fallback: js.UndefOr[String | (js.Function1[/* node */ js.Object, js.Array[String]])] = js.undefined
+  var ignoreEval: js.UndefOr[Boolean] = js.undefined
+  var impliedStrict: js.UndefOr[Boolean] = js.undefined
+  var nodejsScope: js.UndefOr[Boolean] = js.undefined
+  var optimistic: js.UndefOr[Boolean] = js.undefined
+  var sourceType: js.UndefOr[script | module] = js.undefined
 }
 
 object AnalysisOptions {
   @scala.inline
-  def apply(): AnalysisOptions = {
+  def apply(
+    directive: js.UndefOr[Boolean] = js.undefined,
+    ecmaVersion: js.UndefOr[Double] = js.undefined,
+    fallback: String | (js.Function1[/* node */ js.Object, js.Array[String]]) = null,
+    ignoreEval: js.UndefOr[Boolean] = js.undefined,
+    impliedStrict: js.UndefOr[Boolean] = js.undefined,
+    nodejsScope: js.UndefOr[Boolean] = js.undefined,
+    optimistic: js.UndefOr[Boolean] = js.undefined,
+    sourceType: script | module = null
+  ): AnalysisOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(directive)) __obj.updateDynamic("directive")(directive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ecmaVersion)) __obj.updateDynamic("ecmaVersion")(ecmaVersion.get.asInstanceOf[js.Any])
+    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreEval)) __obj.updateDynamic("ignoreEval")(ignoreEval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(impliedStrict)) __obj.updateDynamic("impliedStrict")(impliedStrict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nodejsScope)) __obj.updateDynamic("nodejsScope")(nodejsScope.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(optimistic)) __obj.updateDynamic("optimistic")(optimistic.get.asInstanceOf[js.Any])
+    if (sourceType != null) __obj.updateDynamic("sourceType")(sourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalysisOptions]
   }
-  @scala.inline
-  implicit class AnalysisOptionsOps[Self <: AnalysisOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirective(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEcmaVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcmaVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallbackFunction1(value: /* node */ js.Object => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFallback(value: String | (js.Function1[/* node */ js.Object, js.Array[String]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreEval(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpliedStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impliedStrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpliedStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impliedStrict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodejsScope(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodejsScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodejsScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodejsScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimistic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimistic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimistic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimistic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceType(value: script | module): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

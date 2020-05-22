@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import typingsSlinky.sharepoint.SP.JsGrid.ColumnInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,10 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.GanttControl")
 @js.native
 class GanttControl ()
-  extends typingsSlinky.sharepoint.SP.GanttControl
+  extends typingsSlinky.sharepoint.SP.GanttControl {
+  /* CompleteClass */
+  override def get_Columns(): js.Array[ColumnInfo] = js.native
+}
 
 /* static members */
 @JSGlobal("SP.GanttControl")

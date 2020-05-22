@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndexSubId extends js.Object {
-  var index: Double = js.native
-  var subId: `oj-table-footer` | `oj-table-header` = js.native
+  var index: Double
+  var subId: `oj-table-footer` | `oj-table-header`
 }
 
 object IndexSubId {
@@ -18,25 +17,5 @@ object IndexSubId {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], subId = subId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexSubId]
   }
-  @scala.inline
-  implicit class IndexSubIdOps[Self <: IndexSubId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubId(value: `oj-table-footer` | `oj-table-header`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

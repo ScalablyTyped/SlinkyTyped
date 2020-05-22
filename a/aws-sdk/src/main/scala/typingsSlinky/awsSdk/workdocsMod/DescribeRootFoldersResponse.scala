@@ -18,41 +18,11 @@ trait DescribeRootFoldersResponse extends js.Object {
 
 object DescribeRootFoldersResponse {
   @scala.inline
-  def apply(): DescribeRootFoldersResponse = {
+  def apply(Folders: FolderMetadataList = null, Marker: PageMarkerType = null): DescribeRootFoldersResponse = {
     val __obj = js.Dynamic.literal()
+    if (Folders != null) __obj.updateDynamic("Folders")(Folders.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRootFoldersResponse]
   }
-  @scala.inline
-  implicit class DescribeRootFoldersResponseOps[Self <: DescribeRootFoldersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFolders(value: FolderMetadataList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Folders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Folders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: PageMarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

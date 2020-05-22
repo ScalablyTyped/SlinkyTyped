@@ -31,65 +31,18 @@ trait SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation extends js.Object
 
 object SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation = {
+  def apply(
+    categoryEntities: js.Array[SchemaGoogleCloudVideointelligenceV1beta2Entity] = null,
+    entity: SchemaGoogleCloudVideointelligenceV1beta2Entity = null,
+    frames: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelFrame] = null,
+    segments: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelSegment] = null
+  ): SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (categoryEntities != null) __obj.updateDynamic("categoryEntities")(categoryEntities.asInstanceOf[js.Any])
+    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
+    if (frames != null) __obj.updateDynamic("frames")(frames.asInstanceOf[js.Any])
+    if (segments != null) __obj.updateDynamic("segments")(segments.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotationOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategoryEntities(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2Entity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategoryEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryEntities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntity(value: SchemaGoogleCloudVideointelligenceV1beta2Entity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrames(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegments(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelSegment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

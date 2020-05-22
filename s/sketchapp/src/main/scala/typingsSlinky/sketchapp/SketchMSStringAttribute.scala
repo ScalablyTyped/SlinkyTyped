@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SketchMSStringAttribute extends js.Object {
-  var _class: stringAttribute = js.native
-  var attributes: SketchMSAttributes = js.native
+  var _class: stringAttribute
+  var attributes: SketchMSAttributes
 }
 
 object SketchMSStringAttribute {
@@ -17,25 +16,5 @@ object SketchMSStringAttribute {
     val __obj = js.Dynamic.literal(_class = _class.asInstanceOf[js.Any], attributes = attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchMSStringAttribute]
   }
-  @scala.inline
-  implicit class SketchMSStringAttributeOps[Self <: SketchMSStringAttribute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_class(value: stringAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: SketchMSAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

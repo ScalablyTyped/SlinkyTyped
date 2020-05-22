@@ -69,6 +69,11 @@ object utilityLayerRendererMod extends js.Object {
       */
     def _getSharedGizmoLight(): HemisphericLight = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets the camera that is used to render the utility layer (when not set, this will be the last active camera)
       * @param getRigParentIfPossible if the current active camera is a rig camera, should its parent camera be returned
       * @returns the camera that is used when rendering the utility layer

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputParameterCollection extends js.Object {
-  val Count: Double = js.native
+  val Count: Double
   @JSName("InfoPath.InputParameterCollection_typekey")
-  var InfoPathDotInputParameterCollection_typekey: InputParameterCollection = js.native
-  def Item(varIndex: js.Any): InputParameterObject = js.native
+  var InfoPathDotInputParameterCollection_typekey: InputParameterCollection
+  def Item(varIndex: js.Any): InputParameterObject
 }
 
 object InputParameterCollection {
@@ -23,31 +22,5 @@ object InputParameterCollection {
     __obj.updateDynamic("InfoPath.InputParameterCollection_typekey")(InfoPathDotInputParameterCollection_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputParameterCollection]
   }
-  @scala.inline
-  implicit class InputParameterCollectionOps[Self <: InputParameterCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotInputParameterCollection_typekey(value: InputParameterCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.InputParameterCollection_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any => InputParameterObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

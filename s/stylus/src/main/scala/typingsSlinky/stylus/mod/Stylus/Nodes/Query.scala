@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Query extends Node {
-  var nodes: js.Array[QueryExpr] = js.native
-  var predicate: java.lang.String = js.native
-  var resolvedPredicate: java.lang.String = js.native
-  var resolvedType: java.lang.String = js.native
-  var `type`: java.lang.String = js.native
+  var nodes: js.Array[QueryExpr]
+  var predicate: java.lang.String
+  var resolvedPredicate: java.lang.String
+  var resolvedType: java.lang.String
+  var `type`: java.lang.String
   /**
     * Merges this query with the `other`.
     */
-  def merge(other: Query): Query = js.native
+  def merge(other: Query): Query
   /**
     * Push the given `expr`.
     */
-  def push(expr: QueryExpr): scala.Unit = js.native
+  def push(expr: QueryExpr): scala.Unit
 }
 
 object Query {
@@ -50,55 +49,5 @@ object Query {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Query]
   }
-  @scala.inline
-  implicit class QueryOps[Self <: Query] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMerge(value: Query => Query): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNodes(value: js.Array[QueryExpr]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPredicate(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPush(value: QueryExpr => scala.Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResolvedPredicate(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedPredicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResolvedType(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

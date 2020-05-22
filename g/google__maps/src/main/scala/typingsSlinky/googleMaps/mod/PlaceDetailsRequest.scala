@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaceDetailsRequest extends js.Object {
   /**
     * One or more fields, specifying the types of place data to return, separated by a comma.
@@ -13,15 +12,15 @@ trait PlaceDetailsRequest extends js.Object {
     * parameter from a request, ALL possible fields will be returned, and you will be billed accordingly.
     * This applies only to Place Details requests.
     */
-  var fields: js.UndefOr[js.Array[PlaceDetailsRequestField]] = js.native
+  var fields: js.UndefOr[js.Array[PlaceDetailsRequestField]] = js.undefined
   /**
     * The language code, indicating in which language the results should be returned, if possible.
     * Note that some fields may not be available in the requested language.
     * Note that we often update supported languages so this list may not be exhaustive.
     */
-  var language: js.UndefOr[Language] = js.native
+  var language: js.UndefOr[Language] = js.undefined
   /** A textual identifier that uniquely identifies a place, returned from a Place Search. */
-  var placeid: String = js.native
+  var placeid: String
   /**
     * The region code, specified as a ccTLD (country code top-level domain) two-character value.
     * Most ccTLD codes are identical to ISO 3166-1 codes, with some exceptions.
@@ -30,81 +29,29 @@ trait PlaceDetailsRequest extends js.Object {
     * When this parameter is used, the country name is omitted from the resulting `formatted_address`
     * for results in the specified region.
     */
-  var region: js.UndefOr[String] = js.native
+  var region: js.UndefOr[String] = js.undefined
   /**
     * A random string which identifies an autocomplete session for billing purposes.
     * Use this for Place Details requests that are called following an autocomplete request in the same user session
     */
-  var sessiontoken: js.UndefOr[String] = js.native
+  var sessiontoken: js.UndefOr[String] = js.undefined
 }
 
 object PlaceDetailsRequest {
   @scala.inline
-  def apply(placeid: String): PlaceDetailsRequest = {
+  def apply(
+    placeid: String,
+    fields: js.Array[PlaceDetailsRequestField] = null,
+    language: Language = null,
+    region: String = null,
+    sessiontoken: String = null
+  ): PlaceDetailsRequest = {
     val __obj = js.Dynamic.literal(placeid = placeid.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
+    if (sessiontoken != null) __obj.updateDynamic("sessiontoken")(sessiontoken.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaceDetailsRequest]
   }
-  @scala.inline
-  implicit class PlaceDetailsRequestOps[Self <: PlaceDetailsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlaceid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFields(value: js.Array[PlaceDetailsRequestField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: Language): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessiontoken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessiontoken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessiontoken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessiontoken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

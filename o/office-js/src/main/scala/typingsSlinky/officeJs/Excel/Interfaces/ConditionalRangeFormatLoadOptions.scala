@@ -10,116 +10,58 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@js.native
 trait ConditionalRangeFormatLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Collection of border objects that apply to the overall conditional format range.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var borders: js.UndefOr[ConditionalRangeBorderCollectionLoadOptions] = js.native
+  var borders: js.UndefOr[ConditionalRangeBorderCollectionLoadOptions] = js.undefined
   /**
     *
     * Returns the fill object defined on the overall conditional format range.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var fill: js.UndefOr[ConditionalRangeFillLoadOptions] = js.native
+  var fill: js.UndefOr[ConditionalRangeFillLoadOptions] = js.undefined
   /**
     *
     * Returns the font object defined on the overall conditional format range.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var font: js.UndefOr[ConditionalRangeFontLoadOptions] = js.native
+  var font: js.UndefOr[ConditionalRangeFontLoadOptions] = js.undefined
   /**
     *
     * Represents Excel's number format code for the given range. Cleared if null is passed in.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var numberFormat: js.UndefOr[Boolean] = js.native
+  var numberFormat: js.UndefOr[Boolean] = js.undefined
 }
 
 object ConditionalRangeFormatLoadOptions {
   @scala.inline
-  def apply(): ConditionalRangeFormatLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    borders: ConditionalRangeBorderCollectionLoadOptions = null,
+    fill: ConditionalRangeFillLoadOptions = null,
+    font: ConditionalRangeFontLoadOptions = null,
+    numberFormat: js.UndefOr[Boolean] = js.undefined
+  ): ConditionalRangeFormatLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (borders != null) __obj.updateDynamic("borders")(borders.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberFormat)) __obj.updateDynamic("numberFormat")(numberFormat.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalRangeFormatLoadOptions]
   }
-  @scala.inline
-  implicit class ConditionalRangeFormatLoadOptionsOps[Self <: ConditionalRangeFormatLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorders(value: ConditionalRangeBorderCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: ConditionalRangeFillLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: ConditionalRangeFontLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

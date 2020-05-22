@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@js.native
 trait PivotManualFilter extends js.Object {
   /**
     *
@@ -21,34 +20,15 @@ trait PivotManualFilter extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var selectedItems: js.UndefOr[js.Array[String | PivotItem]] = js.native
+  var selectedItems: js.UndefOr[js.Array[String | PivotItem]] = js.undefined
 }
 
 object PivotManualFilter {
   @scala.inline
-  def apply(): PivotManualFilter = {
+  def apply(selectedItems: js.Array[String | PivotItem] = null): PivotManualFilter = {
     val __obj = js.Dynamic.literal()
+    if (selectedItems != null) __obj.updateDynamic("selectedItems")(selectedItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotManualFilter]
   }
-  @scala.inline
-  implicit class PivotManualFilterOps[Self <: PivotManualFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectedItems(value: js.Array[String | PivotItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

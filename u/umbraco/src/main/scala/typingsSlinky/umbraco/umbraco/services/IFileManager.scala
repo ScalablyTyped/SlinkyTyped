@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * that need to attach files.
   * When a route changes successfully, we ensure that the collection is cleared.
   */
-@js.native
 trait IFileManager extends js.Object {
   /**
     * @ngdoc function
@@ -25,7 +24,7 @@ trait IFileManager extends js.Object {
     * @description
     *  Removes all files from the manager
     */
-  def clearFiles(): Unit = js.native
+  def clearFiles(): Unit
   /**
     * @ngdoc function
     * @name umbraco.services.fileManager#getFiles
@@ -35,7 +34,7 @@ trait IFileManager extends js.Object {
     * @description
     *  Returns all of the files attached to the file manager
     */
-  def getFiles(): js.Array[IFile] = js.native
+  def getFiles(): js.Array[IFile]
   /**
     * @ngdoc function
     * @name umbraco.services.fileManager#addFiles
@@ -46,7 +45,7 @@ trait IFileManager extends js.Object {
     *  Attaches files to the current manager for the current editor for a particular property, if an empty array is set
     *   for the files collection that effectively clears the files for the specified editor.
     */
-  def setFiles(propertyAlias: String, files: js.Array[IFile]): Unit = js.native
+  def setFiles(propertyAlias: String, files: js.Array[IFile]): Unit
 }
 
 object IFileManager {
@@ -59,31 +58,5 @@ object IFileManager {
     val __obj = js.Dynamic.literal(clearFiles = js.Any.fromFunction0(clearFiles), getFiles = js.Any.fromFunction0(getFiles), setFiles = js.Any.fromFunction2(setFiles))
     __obj.asInstanceOf[IFileManager]
   }
-  @scala.inline
-  implicit class IFileManagerOps[Self <: IFileManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClearFiles(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearFiles")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFiles(value: () => js.Array[IFile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFiles")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetFiles(value: (String, js.Array[IFile]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFiles")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

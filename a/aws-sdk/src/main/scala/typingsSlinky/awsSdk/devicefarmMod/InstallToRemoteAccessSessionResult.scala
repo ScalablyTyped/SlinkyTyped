@@ -14,29 +14,10 @@ trait InstallToRemoteAccessSessionResult extends js.Object {
 
 object InstallToRemoteAccessSessionResult {
   @scala.inline
-  def apply(): InstallToRemoteAccessSessionResult = {
+  def apply(appUpload: Upload = null): InstallToRemoteAccessSessionResult = {
     val __obj = js.Dynamic.literal()
+    if (appUpload != null) __obj.updateDynamic("appUpload")(appUpload.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstallToRemoteAccessSessionResult]
   }
-  @scala.inline
-  implicit class InstallToRemoteAccessSessionResultOps[Self <: InstallToRemoteAccessSessionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppUpload(value: Upload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appUpload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

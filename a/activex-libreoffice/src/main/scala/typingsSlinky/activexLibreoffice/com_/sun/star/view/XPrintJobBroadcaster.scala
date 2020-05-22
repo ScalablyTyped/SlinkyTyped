@@ -14,12 +14,11 @@ import scala.scalajs.js.annotation._
   * @see XPrintJobListener
   * @since OOo 1.1.2
   */
-@js.native
 trait XPrintJobBroadcaster extends XInterface {
   /** adds an {@link XPrintJobListener} to be notified about print progress. */
-  def addPrintJobListener(xListener: XPrintJobListener): Unit = js.native
+  def addPrintJobListener(xListener: XPrintJobListener): Unit
   /** removes an {@link XPrintJobListener} . */
-  def removePrintJobListener(xListener: XPrintJobListener): Unit = js.native
+  def removePrintJobListener(xListener: XPrintJobListener): Unit
 }
 
 object XPrintJobBroadcaster {
@@ -34,25 +33,5 @@ object XPrintJobBroadcaster {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addPrintJobListener = js.Any.fromFunction1(addPrintJobListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePrintJobListener = js.Any.fromFunction1(removePrintJobListener))
     __obj.asInstanceOf[XPrintJobBroadcaster]
   }
-  @scala.inline
-  implicit class XPrintJobBroadcasterOps[Self <: XPrintJobBroadcaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddPrintJobListener(value: XPrintJobListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPrintJobListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePrintJobListener(value: XPrintJobListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePrintJobListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

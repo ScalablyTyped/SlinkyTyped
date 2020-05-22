@@ -7,67 +7,38 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ModelPrimaryContainer extends js.Object {
+  /**
+    * The DNS host name for the container.
+    */
   var containerHostname: js.UndefOr[String] = js.native
+  /**
+    * Environment variables for the Docker container.
+    * A list of key value pairs.
+    */
   var environment: js.UndefOr[StringDictionary[js.Any]] = js.native
+  /**
+    * The registry path where the inference code image is stored in Amazon ECR.
+    */
   var image: String = js.native
+  /**
+    * The URL for the S3 location where model artifacts are stored.
+    */
   var modelDataUrl: js.UndefOr[String] = js.native
 }
 
 object ModelPrimaryContainer {
   @scala.inline
-  def apply(image: String): ModelPrimaryContainer = {
+  def apply(
+    image: String,
+    containerHostname: String = null,
+    environment: StringDictionary[js.Any] = null,
+    modelDataUrl: String = null
+  ): ModelPrimaryContainer = {
     val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any])
+    if (containerHostname != null) __obj.updateDynamic("containerHostname")(containerHostname.asInstanceOf[js.Any])
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
+    if (modelDataUrl != null) __obj.updateDynamic("modelDataUrl")(modelDataUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelPrimaryContainer]
   }
-  @scala.inline
-  implicit class ModelPrimaryContainerOps[Self <: ModelPrimaryContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerHostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerHostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelDataUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDataUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelDataUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDataUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

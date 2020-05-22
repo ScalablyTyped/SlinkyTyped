@@ -17,29 +17,10 @@ trait SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest extends js
 
 object SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest = {
+  def apply(icon: String = null): SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest = {
     val __obj = js.Dynamic.literal()
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequestOps[Self <: SchemaGoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

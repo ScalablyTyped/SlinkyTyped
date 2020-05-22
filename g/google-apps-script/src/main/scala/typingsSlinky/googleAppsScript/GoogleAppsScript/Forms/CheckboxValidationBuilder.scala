@@ -22,11 +22,10 @@ import scala.scalajs.js.annotation._
   *       .build();
   *     checkBoxItem.setValidation(checkBoxValidation);
   */
-@js.native
 trait CheckboxValidationBuilder extends js.Object {
-  def requireSelectAtLeast(number: Integer): CheckboxValidationBuilder = js.native
-  def requireSelectAtMost(number: Integer): CheckboxValidationBuilder = js.native
-  def requireSelectExactly(number: Integer): CheckboxValidationBuilder = js.native
+  def requireSelectAtLeast(number: Integer): CheckboxValidationBuilder
+  def requireSelectAtMost(number: Integer): CheckboxValidationBuilder
+  def requireSelectExactly(number: Integer): CheckboxValidationBuilder
 }
 
 object CheckboxValidationBuilder {
@@ -39,31 +38,5 @@ object CheckboxValidationBuilder {
     val __obj = js.Dynamic.literal(requireSelectAtLeast = js.Any.fromFunction1(requireSelectAtLeast), requireSelectAtMost = js.Any.fromFunction1(requireSelectAtMost), requireSelectExactly = js.Any.fromFunction1(requireSelectExactly))
     __obj.asInstanceOf[CheckboxValidationBuilder]
   }
-  @scala.inline
-  implicit class CheckboxValidationBuilderOps[Self <: CheckboxValidationBuilder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequireSelectAtLeast(value: Integer => CheckboxValidationBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSelectAtLeast")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequireSelectAtMost(value: Integer => CheckboxValidationBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSelectAtMost")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequireSelectExactly(value: Integer => CheckboxValidationBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSelectExactly")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

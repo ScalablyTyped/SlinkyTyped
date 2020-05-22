@@ -4,257 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Report extends js.Object {
-  var accountId: js.UndefOr[String] = js.native
-  var criteria: js.UndefOr[ReportCriteria] = js.native
-  var crossDimensionReachCriteria: js.UndefOr[ReportCrossDimensionReachCriteria] = js.native
-  var delivery: js.UndefOr[ReportDelivery] = js.native
-  var etag: js.UndefOr[String] = js.native
-  var fileName: js.UndefOr[String] = js.native
-  var floodlightCriteria: js.UndefOr[ReportFloodlightCriteria] = js.native
-  var format: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var lastModifiedTime: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var ownerProfileId: js.UndefOr[String] = js.native
-  var pathToConversionCriteria: js.UndefOr[ReportPathToConversionCriteria] = js.native
-  var reachCriteria: js.UndefOr[ReportReachCriteria] = js.native
-  var schedule: js.UndefOr[ReportSchedule] = js.native
-  var subAccountId: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
+  var criteria: js.UndefOr[ReportCriteria] = js.undefined
+  var crossDimensionReachCriteria: js.UndefOr[ReportCrossDimensionReachCriteria] = js.undefined
+  var delivery: js.UndefOr[ReportDelivery] = js.undefined
+  var etag: js.UndefOr[String] = js.undefined
+  var fileName: js.UndefOr[String] = js.undefined
+  var floodlightCriteria: js.UndefOr[ReportFloodlightCriteria] = js.undefined
+  var format: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var lastModifiedTime: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var ownerProfileId: js.UndefOr[String] = js.undefined
+  var pathToConversionCriteria: js.UndefOr[ReportPathToConversionCriteria] = js.undefined
+  var reachCriteria: js.UndefOr[ReportReachCriteria] = js.undefined
+  var schedule: js.UndefOr[ReportSchedule] = js.undefined
+  var subAccountId: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Report {
   @scala.inline
-  def apply(): Report = {
+  def apply(
+    accountId: String = null,
+    criteria: ReportCriteria = null,
+    crossDimensionReachCriteria: ReportCrossDimensionReachCriteria = null,
+    delivery: ReportDelivery = null,
+    etag: String = null,
+    fileName: String = null,
+    floodlightCriteria: ReportFloodlightCriteria = null,
+    format: String = null,
+    id: String = null,
+    kind: String = null,
+    lastModifiedTime: String = null,
+    name: String = null,
+    ownerProfileId: String = null,
+    pathToConversionCriteria: ReportPathToConversionCriteria = null,
+    reachCriteria: ReportReachCriteria = null,
+    schedule: ReportSchedule = null,
+    subAccountId: String = null,
+    `type`: String = null
+  ): Report = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (criteria != null) __obj.updateDynamic("criteria")(criteria.asInstanceOf[js.Any])
+    if (crossDimensionReachCriteria != null) __obj.updateDynamic("crossDimensionReachCriteria")(crossDimensionReachCriteria.asInstanceOf[js.Any])
+    if (delivery != null) __obj.updateDynamic("delivery")(delivery.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
+    if (floodlightCriteria != null) __obj.updateDynamic("floodlightCriteria")(floodlightCriteria.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lastModifiedTime != null) __obj.updateDynamic("lastModifiedTime")(lastModifiedTime.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (ownerProfileId != null) __obj.updateDynamic("ownerProfileId")(ownerProfileId.asInstanceOf[js.Any])
+    if (pathToConversionCriteria != null) __obj.updateDynamic("pathToConversionCriteria")(pathToConversionCriteria.asInstanceOf[js.Any])
+    if (reachCriteria != null) __obj.updateDynamic("reachCriteria")(reachCriteria.asInstanceOf[js.Any])
+    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
+    if (subAccountId != null) __obj.updateDynamic("subAccountId")(subAccountId.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Report]
   }
-  @scala.inline
-  implicit class ReportOps[Self <: Report] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCriteria(value: ReportCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossDimensionReachCriteria(value: ReportCrossDimensionReachCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossDimensionReachCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossDimensionReachCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossDimensionReachCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelivery(value: ReportDelivery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delivery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelivery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delivery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightCriteria(value: ReportFloodlightCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerProfileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerProfileId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathToConversionCriteria(value: ReportPathToConversionCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathToConversionCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathToConversionCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathToConversionCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReachCriteria(value: ReportReachCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reachCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReachCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reachCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: ReportSchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

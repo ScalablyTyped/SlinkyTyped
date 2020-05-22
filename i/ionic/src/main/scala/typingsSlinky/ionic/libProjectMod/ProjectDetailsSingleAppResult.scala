@@ -1,34 +1,21 @@
 package typingsSlinky.ionic.libProjectMod
 
+import typingsSlinky.ionic.definitionsMod.ProjectType
 import typingsSlinky.ionic.ionicStrings.app
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectDetailsSingleAppResult extends ProjectDetailsResultBase {
-  val context: app = js.native
+  val context: app
 }
 
 object ProjectDetailsSingleAppResult {
   @scala.inline
-  def apply(context: app, errors: js.Array[ProjectDetailsError]): ProjectDetailsSingleAppResult = {
+  def apply(context: app, errors: js.Array[ProjectDetailsError], `type`: ProjectType = null): ProjectDetailsSingleAppResult = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], errors = errors.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectDetailsSingleAppResult]
   }
-  @scala.inline
-  implicit class ProjectDetailsSingleAppResultOps[Self <: ProjectDetailsSingleAppResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: app): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

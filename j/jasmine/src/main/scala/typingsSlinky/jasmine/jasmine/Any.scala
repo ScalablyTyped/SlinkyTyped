@@ -5,10 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.jasmine.jasmine.Expected because Already inherited */ @js.native
+@js.native
 trait Any
   extends AsymmetricMatcher[js.Any]
+     with _Expected[js.Any]
      with  // jasmine.Any can also be a function
 Instantiable1[/* expectedClass */ js.Any, js.Any] {
   def apply(params: js.Any*): js.Any = js.native

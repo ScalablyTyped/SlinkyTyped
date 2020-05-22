@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommonPropertiesOptions extends js.Object {
-  var ignoredProperties: js.UndefOr[js.Array[String] | String] = js.native
-  var vertex1CollectionRestriction: js.UndefOr[js.Array[String] | String] = js.native
-  var vertex2CollectionRestriction: js.UndefOr[js.Array[String] | String] = js.native
+  var ignoredProperties: js.UndefOr[js.Array[String] | String] = js.undefined
+  var vertex1CollectionRestriction: js.UndefOr[js.Array[String] | String] = js.undefined
+  var vertex2CollectionRestriction: js.UndefOr[js.Array[String] | String] = js.undefined
 }
 
 object CommonPropertiesOptions {
   @scala.inline
-  def apply(): CommonPropertiesOptions = {
+  def apply(
+    ignoredProperties: js.Array[String] | String = null,
+    vertex1CollectionRestriction: js.Array[String] | String = null,
+    vertex2CollectionRestriction: js.Array[String] | String = null
+  ): CommonPropertiesOptions = {
     val __obj = js.Dynamic.literal()
+    if (ignoredProperties != null) __obj.updateDynamic("ignoredProperties")(ignoredProperties.asInstanceOf[js.Any])
+    if (vertex1CollectionRestriction != null) __obj.updateDynamic("vertex1CollectionRestriction")(vertex1CollectionRestriction.asInstanceOf[js.Any])
+    if (vertex2CollectionRestriction != null) __obj.updateDynamic("vertex2CollectionRestriction")(vertex2CollectionRestriction.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonPropertiesOptions]
   }
-  @scala.inline
-  implicit class CommonPropertiesOptionsOps[Self <: CommonPropertiesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoredProperties(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoredProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertex1CollectionRestriction(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertex1CollectionRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertex1CollectionRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertex1CollectionRestriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertex2CollectionRestriction(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertex2CollectionRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertex2CollectionRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertex2CollectionRestriction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

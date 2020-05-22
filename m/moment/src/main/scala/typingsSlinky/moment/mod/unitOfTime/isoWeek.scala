@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.moment.momentStrings.isoWeeks
   - typingsSlinky.moment.momentStrings.W
 */
-trait isoWeek extends StartOf
+trait isoWeek extends _StartOf
 
 object isoWeek {
   @scala.inline

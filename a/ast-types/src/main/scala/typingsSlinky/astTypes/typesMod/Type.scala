@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait Type[T] extends js.Object
 
-object Type {
-  @scala.inline
-  implicit def apply[T](value: ArrayType[T]): Type[T] = value.asInstanceOf[Type[T]]
-  @scala.inline
-  implicit def apply[T](value: IdentityType[T]): Type[T] = value.asInstanceOf[Type[T]]
-  @scala.inline
-  implicit def apply[T](value: ObjectType[T]): Type[T] = value.asInstanceOf[Type[T]]
-  @scala.inline
-  implicit def apply[T](value: OrType[T]): Type[T] = value.asInstanceOf[Type[T]]
-  @scala.inline
-  implicit def apply[T](value: PredicateType[T]): Type[T] = value.asInstanceOf[Type[T]]
-}
-

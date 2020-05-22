@@ -28,5 +28,10 @@ class AxisScaleGizmo protected ()
     gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
     parent: Nullable[typingsSlinky.babylonjs.BABYLON.ScaleGizmo]
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

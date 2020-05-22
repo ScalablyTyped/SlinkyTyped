@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Nw extends js.Object {
-  var nw: typingsSlinky.googleMapReact.mod.Coords = js.native
-  var se: typingsSlinky.googleMapReact.mod.Coords = js.native
+  var nw: typingsSlinky.googleMapReact.mod.Coords
+  var se: typingsSlinky.googleMapReact.mod.Coords
 }
 
 object Nw {
@@ -16,25 +15,5 @@ object Nw {
     val __obj = js.Dynamic.literal(nw = nw.asInstanceOf[js.Any], se = se.asInstanceOf[js.Any])
     __obj.asInstanceOf[Nw]
   }
-  @scala.inline
-  implicit class NwOps[Self <: Nw] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNw(value: typingsSlinky.googleMapReact.mod.Coords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSe(value: typingsSlinky.googleMapReact.mod.Coords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("se")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

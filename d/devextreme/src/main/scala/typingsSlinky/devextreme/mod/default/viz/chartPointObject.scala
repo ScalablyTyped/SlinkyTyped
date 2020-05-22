@@ -1,5 +1,6 @@
 package typingsSlinky.devextreme.mod.default.viz
 
+import typingsSlinky.devextreme.mod.DevExpress.viz.chartPointAggregationInfoObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +8,78 @@ import scala.scalajs.js.annotation._
 @JSImport("devextreme", "viz.chartPointObject")
 @js.native
 class chartPointObject ()
-  extends typingsSlinky.devextreme.mod.DevExpress.viz.chartPointObject
+  extends typingsSlinky.devextreme.mod.DevExpress.viz.chartPointObject {
+  /** @name chartPointObject.aggregationInfo */
+  /* CompleteClass */
+  override var aggregationInfo: chartPointAggregationInfoObject = js.native
+  /** @name basePointObject.data */
+  /* CompleteClass */
+  override var data: js.Any = js.native
+  /** @name basePointObject.fullState */
+  /* CompleteClass */
+  override var fullState: Double = js.native
+  /** @name basePointObject.originalArgument */
+  /* CompleteClass */
+  override var originalArgument: String | Double | js.Date = js.native
+  /** @name chartPointObject.originalCloseValue */
+  /* CompleteClass */
+  override var originalCloseValue: Double | String = js.native
+  /** @name chartPointObject.originalHighValue */
+  /* CompleteClass */
+  override var originalHighValue: Double | String = js.native
+  /** @name chartPointObject.originalLowValue */
+  /* CompleteClass */
+  override var originalLowValue: Double | String = js.native
+  /** @name chartPointObject.originalMinValue */
+  /* CompleteClass */
+  override var originalMinValue: String | Double | js.Date = js.native
+  /** @name chartPointObject.originalOpenValue */
+  /* CompleteClass */
+  override var originalOpenValue: Double | String = js.native
+  /** @name basePointObject.originalValue */
+  /* CompleteClass */
+  override var originalValue: String | Double | js.Date = js.native
+  /** @name basePointObject.series */
+  /* CompleteClass */
+  override var series: js.Any = js.native
+  /** @name chartPointObject.size */
+  /* CompleteClass */
+  override var size: Double | String = js.native
+  /** @name basePointObject.tag */
+  /* CompleteClass */
+  override var tag: js.Any = js.native
+  /** @name basePointObject.clearHover() */
+  /* CompleteClass */
+  override def clearHover(): Unit = js.native
+  /** @name basePointObject.clearSelection() */
+  /* CompleteClass */
+  override def clearSelection(): Unit = js.native
+  /** @name chartPointObject.getBoundingRect() */
+  /* CompleteClass */
+  override def getBoundingRect(): js.Any = js.native
+  /** @name basePointObject.getColor() */
+  /* CompleteClass */
+  override def getColor(): String = js.native
+  /** @name basePointObject.getLabel() */
+  /* CompleteClass */
+  override def getLabel(): typingsSlinky.devextreme.mod.DevExpress.viz.baseLabelObject with js.Array[typingsSlinky.devextreme.mod.DevExpress.viz.baseLabelObject] = js.native
+  /** @name basePointObject.hideTooltip() */
+  /* CompleteClass */
+  override def hideTooltip(): Unit = js.native
+  /** @name basePointObject.hover() */
+  /* CompleteClass */
+  override def hover(): Unit = js.native
+  /** @name basePointObject.isHovered() */
+  /* CompleteClass */
+  override def isHovered(): Boolean = js.native
+  /** @name basePointObject.isSelected() */
+  /* CompleteClass */
+  override def isSelected(): Boolean = js.native
+  /** @name basePointObject.select() */
+  /* CompleteClass */
+  override def select(): Unit = js.native
+  /** @name basePointObject.showTooltip() */
+  /* CompleteClass */
+  override def showTooltip(): Unit = js.native
+}
 

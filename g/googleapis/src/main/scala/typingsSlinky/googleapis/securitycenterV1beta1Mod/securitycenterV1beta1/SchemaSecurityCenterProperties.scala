@@ -40,77 +40,20 @@ trait SchemaSecurityCenterProperties extends js.Object {
 
 object SchemaSecurityCenterProperties {
   @scala.inline
-  def apply(): SchemaSecurityCenterProperties = {
+  def apply(
+    resourceName: String = null,
+    resourceOwners: js.Array[String] = null,
+    resourceParent: String = null,
+    resourceProject: String = null,
+    resourceType: String = null
+  ): SchemaSecurityCenterProperties = {
     val __obj = js.Dynamic.literal()
+    if (resourceName != null) __obj.updateDynamic("resourceName")(resourceName.asInstanceOf[js.Any])
+    if (resourceOwners != null) __obj.updateDynamic("resourceOwners")(resourceOwners.asInstanceOf[js.Any])
+    if (resourceParent != null) __obj.updateDynamic("resourceParent")(resourceParent.asInstanceOf[js.Any])
+    if (resourceProject != null) __obj.updateDynamic("resourceProject")(resourceProject.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityCenterProperties]
   }
-  @scala.inline
-  implicit class SchemaSecurityCenterPropertiesOps[Self <: SchemaSecurityCenterProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceOwners(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceOwners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceOwners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceOwners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceProject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

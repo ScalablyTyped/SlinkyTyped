@@ -1,33 +1,33 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.xmldsigjs.ecdsaKeyMod.NamedCurveType
+import typingsSlinky.xmldsigjs.ecdsaKeyMod._NamedCurveType
 import typingsSlinky.xmldsigjs.signedXmlMod.OptionsSignTransform
-import typingsSlinky.xmldsigjs.x509Mod.DigestAlgorithm
+import typingsSlinky.xmldsigjs.x509Mod._DigestAlgorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object xmldsigjsStrings {
   @js.native
-  sealed trait `P-256` extends NamedCurveType
+  sealed trait `P-256` extends _NamedCurveType
   
   @js.native
-  sealed trait `P-384` extends NamedCurveType
+  sealed trait `P-384` extends _NamedCurveType
   
   @js.native
-  sealed trait `P-521` extends NamedCurveType
+  sealed trait `P-521` extends _NamedCurveType
   
   @js.native
-  sealed trait `SHA-1` extends DigestAlgorithm
+  sealed trait `SHA-1` extends _DigestAlgorithm
   
   @js.native
-  sealed trait `SHA-256` extends DigestAlgorithm
+  sealed trait `SHA-256` extends _DigestAlgorithm
   
   @js.native
-  sealed trait `SHA-384` extends DigestAlgorithm
+  sealed trait `SHA-384` extends _DigestAlgorithm
   
   @js.native
-  sealed trait `SHA-512` extends DigestAlgorithm
+  sealed trait `SHA-512` extends _DigestAlgorithm
   
   @js.native
   sealed trait base64 extends OptionsSignTransform

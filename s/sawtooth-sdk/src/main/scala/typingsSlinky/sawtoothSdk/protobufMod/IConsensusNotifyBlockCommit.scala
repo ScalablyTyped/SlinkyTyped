@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IConsensusNotifyBlockCommit extends js.Object {
   /** ConsensusNotifyBlockCommit blockId */
-  var blockId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var blockId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
 }
 
 object IConsensusNotifyBlockCommit {
   @scala.inline
-  def apply(): IConsensusNotifyBlockCommit = {
+  def apply(blockId: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined): IConsensusNotifyBlockCommit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockId)) __obj.updateDynamic("blockId")(blockId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConsensusNotifyBlockCommit]
   }
-  @scala.inline
-  implicit class IConsensusNotifyBlockCommitOps[Self <: IConsensusNotifyBlockCommit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockId(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait StoryStore
-  extends ^[String | js.Symbol] {
+  extends ^[String | js.Symbol, js.Any] {
   var _channel: Channel = js.native
   var _data: StoreData = js.native
   var _error: js.UndefOr[ErrorLike] = js.native

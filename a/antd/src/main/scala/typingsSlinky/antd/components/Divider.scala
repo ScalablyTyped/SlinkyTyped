@@ -29,6 +29,8 @@ object Divider {
     @scala.inline
     def orientation(value: left | right | center): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline
+    def plain(value: Boolean): this.type = set("plain", value.asInstanceOf[js.Any])
+    @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BodyOperationRef extends js.Object {
-  def onUpDown(diff: Double): Unit = js.native
+  def onUpDown(diff: Double): Unit
 }
 
 object BodyOperationRef {
@@ -15,19 +14,5 @@ object BodyOperationRef {
     val __obj = js.Dynamic.literal(onUpDown = js.Any.fromFunction1(onUpDown))
     __obj.asInstanceOf[BodyOperationRef]
   }
-  @scala.inline
-  implicit class BodyOperationRefOps[Self <: BodyOperationRef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnUpDown(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpDown")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

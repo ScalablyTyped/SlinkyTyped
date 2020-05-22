@@ -1,90 +1,66 @@
 package typingsSlinky.blueprintjsCore.sliderMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.multiSliderMod.ISliderBaseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISliderProps extends ISliderBaseProps {
   /**
     * Initial value of the slider. This determines the other end of the
     * track fill: from `initialValue` to `value`.
     * @default 0
     */
-  var initialValue: js.UndefOr[Double] = js.native
+  var initialValue: js.UndefOr[Double] = js.undefined
   /** Callback invoked when the value changes. */
-  var onChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
   /** Callback invoked when the handle is released. */
-  var onRelease: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
+  var onRelease: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
   /**
     * Value of slider.
     * @default 0
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object ISliderProps {
   @scala.inline
-  def apply(): ISliderProps = {
+  def apply(
+    className: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    initialValue: js.UndefOr[Double] = js.undefined,
+    intent: Intent = null,
+    labelPrecision: js.UndefOr[Double] = js.undefined,
+    labelRenderer: Boolean | (js.Function1[/* value */ Double, String | ReactElement]) = null,
+    labelStepSize: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    onChange: /* value */ Double => Unit = null,
+    onRelease: /* value */ Double => Unit = null,
+    showTrackFill: js.UndefOr[Boolean] = js.undefined,
+    stepSize: js.UndefOr[Double] = js.undefined,
+    value: js.UndefOr[Double] = js.undefined,
+    vertical: js.UndefOr[Boolean] = js.undefined
+  ): ISliderProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialValue)) __obj.updateDynamic("initialValue")(initialValue.get.asInstanceOf[js.Any])
+    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelPrecision)) __obj.updateDynamic("labelPrecision")(labelPrecision.get.asInstanceOf[js.Any])
+    if (labelRenderer != null) __obj.updateDynamic("labelRenderer")(labelRenderer.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelStepSize)) __obj.updateDynamic("labelStepSize")(labelStepSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onRelease != null) __obj.updateDynamic("onRelease")(js.Any.fromFunction1(onRelease))
+    if (!js.isUndefined(showTrackFill)) __obj.updateDynamic("showTrackFill")(showTrackFill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepSize)) __obj.updateDynamic("stepSize")(stepSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISliderProps]
   }
-  @scala.inline
-  implicit class ISliderPropsOps[Self <: ISliderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* value */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRelease(value: /* value */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRelease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

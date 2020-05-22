@@ -7,11 +7,10 @@ import scala.scalajs.js.annotation._
 /**
   * A path reference in a walk.
   */
-@js.native
 trait IWalkPath
   extends IRefPathIdInModel
      with IRouteOffset {
-  var pathContext: IPath = js.native
+  var pathContext: IPath
 }
 
 object IWalkPath {
@@ -28,19 +27,5 @@ object IWalkPath {
     val __obj = js.Dynamic.literal(layer = layer.asInstanceOf[js.Any], modelContext = modelContext.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any], pathContext = pathContext.asInstanceOf[js.Any], pathId = pathId.asInstanceOf[js.Any], route = route.asInstanceOf[js.Any], routeKey = routeKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWalkPath]
   }
-  @scala.inline
-  implicit class IWalkPathOps[Self <: IWalkPath] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPathContext(value: IPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

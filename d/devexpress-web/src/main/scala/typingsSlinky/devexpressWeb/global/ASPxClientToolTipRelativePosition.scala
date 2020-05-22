@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientToolTipRelativePosition")
 @js.native
 class ASPxClientToolTipRelativePosition ()
-  extends typingsSlinky.devexpressWeb.ASPxClientToolTipRelativePosition
+  extends typingsSlinky.devexpressWeb.ASPxClientToolTipRelativePosition {
+  /**
+    * Gets the horizontal offset of a tooltip.
+    */
+  /* CompleteClass */
+  override var offsetX: Double = js.native
+  /**
+    * Gets the vertical offset of a tooltip.
+    */
+  /* CompleteClass */
+  override var offsetY: Double = js.native
+}
 

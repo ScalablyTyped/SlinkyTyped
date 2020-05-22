@@ -31,65 +31,18 @@ trait SchemaGoogleFactcheckingFactchecktoolsV1alpha1Claim extends js.Object {
 
 object SchemaGoogleFactcheckingFactchecktoolsV1alpha1Claim {
   @scala.inline
-  def apply(): SchemaGoogleFactcheckingFactchecktoolsV1alpha1Claim = {
+  def apply(
+    claimDate: String = null,
+    claimReview: js.Array[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReview] = null,
+    claimant: String = null,
+    text: String = null
+  ): SchemaGoogleFactcheckingFactchecktoolsV1alpha1Claim = {
     val __obj = js.Dynamic.literal()
+    if (claimDate != null) __obj.updateDynamic("claimDate")(claimDate.asInstanceOf[js.Any])
+    if (claimReview != null) __obj.updateDynamic("claimReview")(claimReview.asInstanceOf[js.Any])
+    if (claimant != null) __obj.updateDynamic("claimant")(claimant.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFactcheckingFactchecktoolsV1alpha1Claim]
   }
-  @scala.inline
-  implicit class SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimOps[Self <: SchemaGoogleFactcheckingFactchecktoolsV1alpha1Claim] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClaimDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClaimReview(value: js.Array[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReview]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimReview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClaimant(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

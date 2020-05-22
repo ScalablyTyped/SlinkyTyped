@@ -4,49 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UTCTimeParams extends LocalHexBlockParams {
-  var value: js.UndefOr[String] = js.native
-  var valueDate: js.UndefOr[js.Date] = js.native
+  var value: js.UndefOr[String] = js.undefined
+  var valueDate: js.UndefOr[js.Date] = js.undefined
 }
 
 object UTCTimeParams {
   @scala.inline
-  def apply(): UTCTimeParams = {
+  def apply(
+    blockLength: js.UndefOr[Double] = js.undefined,
+    error: String = null,
+    isHexOnly: js.UndefOr[scala.Boolean] = js.undefined,
+    value: String = null,
+    valueBeforeDecode: js.typedarray.ArrayBuffer = null,
+    valueDate: js.Date = null,
+    valueHex: js.typedarray.ArrayBuffer = null,
+    warnings: js.Array[String] = null
+  ): UTCTimeParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockLength)) __obj.updateDynamic("blockLength")(blockLength.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHexOnly)) __obj.updateDynamic("isHexOnly")(isHexOnly.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueBeforeDecode != null) __obj.updateDynamic("valueBeforeDecode")(valueBeforeDecode.asInstanceOf[js.Any])
+    if (valueDate != null) __obj.updateDynamic("valueDate")(valueDate.asInstanceOf[js.Any])
+    if (valueHex != null) __obj.updateDynamic("valueHex")(valueHex.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[UTCTimeParams]
   }
-  @scala.inline
-  implicit class UTCTimeParamsOps[Self <: UTCTimeParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

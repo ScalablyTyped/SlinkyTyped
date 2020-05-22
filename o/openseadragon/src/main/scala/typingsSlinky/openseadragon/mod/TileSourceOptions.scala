@@ -5,205 +5,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TileSourceOptions extends js.Object {
-  var ajaxHeaders: js.UndefOr[js.Object] = js.native
-  var ajaxWithCredentials: js.UndefOr[Boolean] = js.native
-  var getTileUrl: js.UndefOr[js.Function3[/* l */ Double, /* x */ Double, /* y */ Double, String]] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var maxLevel: js.UndefOr[Double] = js.native
-  var minLevel: js.UndefOr[Double] = js.native
-  var referenceStripThumbnailUrl: js.UndefOr[String] = js.native
-  var success: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var tileHeight: js.UndefOr[Double] = js.native
-  var tileOverlap: js.UndefOr[Double] = js.native
-  var tileSize: js.UndefOr[Double] = js.native
-  var tileWidth: js.UndefOr[Double] = js.native
-  var url: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var ajaxHeaders: js.UndefOr[js.Object] = js.undefined
+  var ajaxWithCredentials: js.UndefOr[Boolean] = js.undefined
+  var getTileUrl: js.UndefOr[js.Function3[/* l */ Double, /* x */ Double, /* y */ Double, String]] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var maxLevel: js.UndefOr[Double] = js.undefined
+  var minLevel: js.UndefOr[Double] = js.undefined
+  var referenceStripThumbnailUrl: js.UndefOr[String] = js.undefined
+  var success: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var tileHeight: js.UndefOr[Double] = js.undefined
+  var tileOverlap: js.UndefOr[Double] = js.undefined
+  var tileSize: js.UndefOr[Double] = js.undefined
+  var tileWidth: js.UndefOr[Double] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object TileSourceOptions {
   @scala.inline
-  def apply(): TileSourceOptions = {
+  def apply(
+    ajaxHeaders: js.Object = null,
+    ajaxWithCredentials: js.UndefOr[Boolean] = js.undefined,
+    getTileUrl: (/* l */ Double, /* x */ Double, /* y */ Double) => String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    maxLevel: js.UndefOr[Double] = js.undefined,
+    minLevel: js.UndefOr[Double] = js.undefined,
+    referenceStripThumbnailUrl: String = null,
+    success: /* event */ Event => Unit = null,
+    tileHeight: js.UndefOr[Double] = js.undefined,
+    tileOverlap: js.UndefOr[Double] = js.undefined,
+    tileSize: js.UndefOr[Double] = js.undefined,
+    tileWidth: js.UndefOr[Double] = js.undefined,
+    url: String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): TileSourceOptions = {
     val __obj = js.Dynamic.literal()
+    if (ajaxHeaders != null) __obj.updateDynamic("ajaxHeaders")(ajaxHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(ajaxWithCredentials)) __obj.updateDynamic("ajaxWithCredentials")(ajaxWithCredentials.get.asInstanceOf[js.Any])
+    if (getTileUrl != null) __obj.updateDynamic("getTileUrl")(js.Any.fromFunction3(getTileUrl))
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLevel)) __obj.updateDynamic("maxLevel")(maxLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minLevel)) __obj.updateDynamic("minLevel")(minLevel.get.asInstanceOf[js.Any])
+    if (referenceStripThumbnailUrl != null) __obj.updateDynamic("referenceStripThumbnailUrl")(referenceStripThumbnailUrl.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (!js.isUndefined(tileHeight)) __obj.updateDynamic("tileHeight")(tileHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileOverlap)) __obj.updateDynamic("tileOverlap")(tileOverlap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileSize)) __obj.updateDynamic("tileSize")(tileSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileWidth)) __obj.updateDynamic("tileWidth")(tileWidth.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TileSourceOptions]
   }
-  @scala.inline
-  implicit class TileSourceOptionsOps[Self <: TileSourceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxWithCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWithCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxWithCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWithCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetTileUrl(value: (/* l */ Double, /* x */ Double, /* y */ Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTileUrl")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetTileUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTileUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceStripThumbnailUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceStripThumbnailUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceStripThumbnailUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceStripThumbnailUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileOverlap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileOverlap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileOverlap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileOverlap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

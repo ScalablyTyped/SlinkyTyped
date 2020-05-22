@@ -30,65 +30,18 @@ trait SchemaNetworkUtilization extends js.Object {
 
 object SchemaNetworkUtilization {
   @scala.inline
-  def apply(): SchemaNetworkUtilization = {
+  def apply(
+    targetReceivedBytesPerSecond: js.UndefOr[Double] = js.undefined,
+    targetReceivedPacketsPerSecond: js.UndefOr[Double] = js.undefined,
+    targetSentBytesPerSecond: js.UndefOr[Double] = js.undefined,
+    targetSentPacketsPerSecond: js.UndefOr[Double] = js.undefined
+  ): SchemaNetworkUtilization = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(targetReceivedBytesPerSecond)) __obj.updateDynamic("targetReceivedBytesPerSecond")(targetReceivedBytesPerSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetReceivedPacketsPerSecond)) __obj.updateDynamic("targetReceivedPacketsPerSecond")(targetReceivedPacketsPerSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetSentBytesPerSecond)) __obj.updateDynamic("targetSentBytesPerSecond")(targetSentBytesPerSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetSentPacketsPerSecond)) __obj.updateDynamic("targetSentPacketsPerSecond")(targetSentPacketsPerSecond.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkUtilization]
   }
-  @scala.inline
-  implicit class SchemaNetworkUtilizationOps[Self <: SchemaNetworkUtilization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetReceivedBytesPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetReceivedBytesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetReceivedBytesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetReceivedBytesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetReceivedPacketsPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetReceivedPacketsPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetReceivedPacketsPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetReceivedPacketsPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSentBytesPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSentBytesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSentBytesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSentBytesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSentPacketsPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSentPacketsPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSentPacketsPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetSentPacketsPerSecond")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

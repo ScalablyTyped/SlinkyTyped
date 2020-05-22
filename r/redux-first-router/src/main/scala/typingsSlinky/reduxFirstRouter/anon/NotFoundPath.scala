@@ -5,62 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotFoundPath extends js.Object {
-  var notFoundPath: js.UndefOr[String] = js.native
-  var query: js.UndefOr[Query] = js.native
-  var search: js.UndefOr[String] = js.native
+  var notFoundPath: js.UndefOr[String] = js.undefined
+  var query: js.UndefOr[Query] = js.undefined
+  var search: js.UndefOr[String] = js.undefined
 }
 
 object NotFoundPath {
   @scala.inline
-  def apply(): NotFoundPath = {
+  def apply(notFoundPath: String = null, query: Query = null, search: String = null): NotFoundPath = {
     val __obj = js.Dynamic.literal()
+    if (notFoundPath != null) __obj.updateDynamic("notFoundPath")(notFoundPath.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotFoundPath]
   }
-  @scala.inline
-  implicit class NotFoundPathOps[Self <: NotFoundPath] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotFoundPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotFoundPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFoundPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: Query): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

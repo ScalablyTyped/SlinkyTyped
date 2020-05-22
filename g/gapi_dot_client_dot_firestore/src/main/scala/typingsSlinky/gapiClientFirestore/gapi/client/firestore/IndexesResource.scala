@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndexesResource extends js.Object {
   /**
     * Creates the specified index.
@@ -24,13 +23,13 @@ trait IndexesResource extends js.Object {
     *
     * Indexes with a single field cannot be created.
     */
-  def create(request: Key): Request[Operation] = js.native
+  def create(request: Key): Request[Operation]
   /** Deletes an index. */
-  def delete(request: Name): Request[js.Object] = js.native
+  def delete(request: Name): Request[js.Object]
   /** Gets an index. */
-  def get(request: Name): Request[Index] = js.native
+  def get(request: Name): Request[Index]
   /** Lists the indexes that match the specified filters. */
-  def list(request: typingsSlinky.gapiClientFirestore.anon.Filter): Request[ListIndexesResponse] = js.native
+  def list(request: typingsSlinky.gapiClientFirestore.anon.Filter): Request[ListIndexesResponse]
 }
 
 object IndexesResource {
@@ -44,37 +43,5 @@ object IndexesResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[IndexesResource]
   }
-  @scala.inline
-  implicit class IndexesResourceOps[Self <: IndexesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: Key => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: Name => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Name => Request[Index]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: typingsSlinky.gapiClientFirestore.anon.Filter => Request[ListIndexesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

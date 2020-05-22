@@ -14,29 +14,10 @@ trait DescribeServiceActionOutput extends js.Object {
 
 object DescribeServiceActionOutput {
   @scala.inline
-  def apply(): DescribeServiceActionOutput = {
+  def apply(ServiceActionDetail: ServiceActionDetail = null): DescribeServiceActionOutput = {
     val __obj = js.Dynamic.literal()
+    if (ServiceActionDetail != null) __obj.updateDynamic("ServiceActionDetail")(ServiceActionDetail.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeServiceActionOutput]
   }
-  @scala.inline
-  implicit class DescribeServiceActionOutputOps[Self <: DescribeServiceActionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceActionDetail(value: ServiceActionDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceActionDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionDetail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

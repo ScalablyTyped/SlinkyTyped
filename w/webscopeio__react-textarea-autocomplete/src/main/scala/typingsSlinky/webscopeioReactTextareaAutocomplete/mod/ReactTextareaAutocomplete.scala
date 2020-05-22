@@ -14,7 +14,7 @@ trait ReactTextareaAutocomplete[TItem /* <: String | js.Object */]
     */
   def getCaretPosition(): Double = js.native
   /**
-    * 	Returns currently selected word.
+    *     Returns currently selected word.
     */
   def getSelectedText(): js.UndefOr[String] = js.native
   /**

@@ -6,56 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PasswordlessWithEmailParams extends js.Object {
-  var authParams: js.UndefOr[String] = js.native
-  var email: String = js.native
-  var send: js.UndefOr[link | code] = js.native
+  var authParams: js.UndefOr[String] = js.undefined
+  var email: String
+  var send: js.UndefOr[link | code] = js.undefined
 }
 
 object PasswordlessWithEmailParams {
   @scala.inline
-  def apply(email: String): PasswordlessWithEmailParams = {
+  def apply(email: String, authParams: String = null, send: link | code = null): PasswordlessWithEmailParams = {
     val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any])
+    if (authParams != null) __obj.updateDynamic("authParams")(authParams.asInstanceOf[js.Any])
+    if (send != null) __obj.updateDynamic("send")(send.asInstanceOf[js.Any])
     __obj.asInstanceOf[PasswordlessWithEmailParams]
   }
-  @scala.inline
-  implicit class PasswordlessWithEmailParamsOps[Self <: PasswordlessWithEmailParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthParams(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSend(value: link | code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

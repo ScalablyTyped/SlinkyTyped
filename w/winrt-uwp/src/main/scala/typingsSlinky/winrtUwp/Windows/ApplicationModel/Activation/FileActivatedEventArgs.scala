@@ -9,26 +9,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data when an app is activated because it is the app associated with a file. */
-@js.native
 trait FileActivatedEventArgs extends js.Object {
   /** The package family name of the app that launched your app. */
-  var callerPackageFamilyName: String = js.native
+  var callerPackageFamilyName: String
   /** Gets the identifier for the currently shown app view. */
-  var currentlyShownApplicationViewId: Double = js.native
+  var currentlyShownApplicationViewId: Double
   /** Gets the files for which the app was activated. */
-  var files: IVectorView[IStorageItem] = js.native
+  var files: IVectorView[IStorageItem]
   /** Gets the activation type. */
-  var kind: ActivationKind = js.native
+  var kind: ActivationKind
   /** Gets the neighboring files of the files for which the app was activated. */
-  var neighboringFilesQuery: StorageFileQueryResult = js.native
+  var neighboringFilesQuery: StorageFileQueryResult
   /** Gets the execution state of the app before it was activated. */
-  var previousExecutionState: ApplicationExecutionState = js.native
+  var previousExecutionState: ApplicationExecutionState
   /** Gets the splash screen object that provides information about the transition from the splash screen to the activated app. */
-  var splashScreen: SplashScreen = js.native
+  var splashScreen: SplashScreen
   /** Gets the action associated with the activated file. */
-  var verb: String = js.native
+  var verb: String
   /** Provides the object that allows you to set the view for the application. */
-  var viewSwitcher: ActivationViewSwitcher = js.native
+  var viewSwitcher: ActivationViewSwitcher
 }
 
 object FileActivatedEventArgs {
@@ -47,67 +46,5 @@ object FileActivatedEventArgs {
     val __obj = js.Dynamic.literal(callerPackageFamilyName = callerPackageFamilyName.asInstanceOf[js.Any], currentlyShownApplicationViewId = currentlyShownApplicationViewId.asInstanceOf[js.Any], files = files.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], neighboringFilesQuery = neighboringFilesQuery.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], verb = verb.asInstanceOf[js.Any], viewSwitcher = viewSwitcher.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileActivatedEventArgs]
   }
-  @scala.inline
-  implicit class FileActivatedEventArgsOps[Self <: FileActivatedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerPackageFamilyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerPackageFamilyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentlyShownApplicationViewId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentlyShownApplicationViewId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFiles(value: IVectorView[IStorageItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: ActivationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNeighboringFilesQuery(value: StorageFileQueryResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("neighboringFilesQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSplashScreen(value: SplashScreen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewSwitcher(value: ActivationViewSwitcher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewSwitcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

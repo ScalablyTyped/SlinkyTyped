@@ -10,34 +10,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a cryptographic provider that can be used to asynchronously encrypt and decrypt static data or a data stream. */
-@js.native
 trait DataProtectionProvider extends js.Object {
   /**
     * Asynchronously protects static data.
     * @param data Data to protect.
     * @return Represents an asynchronous operation.
     */
-  def protectAsync(data: IBuffer): IPromiseWithIAsyncOperation[IBuffer] = js.native
+  def protectAsync(data: IBuffer): IPromiseWithIAsyncOperation[IBuffer]
   /**
     * Asynchronously protects a data stream.
     * @param src Stream to be protected.
     * @param dest Protected stream.
     * @return Represents an asynchronous action.
     */
-  def protectStreamAsync(src: IInputStream, dest: IOutputStream): IPromiseWithIAsyncAction = js.native
+  def protectStreamAsync(src: IInputStream, dest: IOutputStream): IPromiseWithIAsyncAction
   /**
     * Asynchronously decrypts static data.
     * @param data Data to decrypt.
     * @return Represents an asynchronous operation.
     */
-  def unprotectAsync(data: IBuffer): IPromiseWithIAsyncOperation[IBuffer] = js.native
+  def unprotectAsync(data: IBuffer): IPromiseWithIAsyncOperation[IBuffer]
   /**
     * Asynchronously decrypts a data stream.
     * @param src Stream to decrypt.
     * @param dest Decrypted stream.
     * @return Represents an asynchronous action.
     */
-  def unprotectStreamAsync(src: IInputStream, dest: IOutputStream): IPromiseWithIAsyncAction = js.native
+  def unprotectStreamAsync(src: IInputStream, dest: IOutputStream): IPromiseWithIAsyncAction
 }
 
 object DataProtectionProvider {
@@ -51,37 +50,5 @@ object DataProtectionProvider {
     val __obj = js.Dynamic.literal(protectAsync = js.Any.fromFunction1(protectAsync), protectStreamAsync = js.Any.fromFunction2(protectStreamAsync), unprotectAsync = js.Any.fromFunction1(unprotectAsync), unprotectStreamAsync = js.Any.fromFunction2(unprotectStreamAsync))
     __obj.asInstanceOf[DataProtectionProvider]
   }
-  @scala.inline
-  implicit class DataProtectionProviderOps[Self <: DataProtectionProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtectAsync(value: IBuffer => IPromiseWithIAsyncOperation[IBuffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withProtectStreamAsync(value: (IInputStream, IOutputStream) => IPromiseWithIAsyncAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectStreamAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUnprotectAsync(value: IBuffer => IPromiseWithIAsyncOperation[IBuffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unprotectAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUnprotectStreamAsync(value: (IInputStream, IOutputStream) => IPromiseWithIAsyncAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unprotectStreamAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotXrangePointOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Gantt) Events for each single point.
     */
-  var events: js.UndefOr[PlotXrangePointEventsOptions] = js.native
+  var events: js.UndefOr[PlotXrangePointEventsOptions] = js.undefined
 }
 
 object PlotXrangePointOptions {
   @scala.inline
-  def apply(): PlotXrangePointOptions = {
+  def apply(events: PlotXrangePointEventsOptions = null): PlotXrangePointOptions = {
     val __obj = js.Dynamic.literal()
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotXrangePointOptions]
   }
-  @scala.inline
-  implicit class PlotXrangePointOptionsOps[Self <: PlotXrangePointOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvents(value: PlotXrangePointEventsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,7 +15,7 @@ import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
@@ -30,7 +30,7 @@ object DetailsColumn {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def cellStyleProps(value: ICellStyleProps): this.type = set("cellStyleProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,7 +58,7 @@ object DetailsColumn {
     @scala.inline
     def setDraggedItemIndex(value: /* itemIndex */ Double => Unit): this.type = set("setDraggedItemIndex", js.Any.fromFunction1(value))
     @scala.inline
-    def stylesFunction1(value: IDetailsColumnStyleProps => Partial[IDetailsColumnStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDetailsColumnStyleProps => DeepPartial[IDetailsColumnStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDetailsColumnStyleProps, IDetailsColumnStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

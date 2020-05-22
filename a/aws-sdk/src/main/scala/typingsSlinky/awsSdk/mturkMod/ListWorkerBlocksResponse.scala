@@ -19,53 +19,16 @@ trait ListWorkerBlocksResponse extends js.Object {
 
 object ListWorkerBlocksResponse {
   @scala.inline
-  def apply(): ListWorkerBlocksResponse = {
+  def apply(
+    NextToken: PaginationToken = null,
+    NumResults: js.UndefOr[Integer] = js.undefined,
+    WorkerBlocks: WorkerBlockList = null
+  ): ListWorkerBlocksResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumResults)) __obj.updateDynamic("NumResults")(NumResults.get.asInstanceOf[js.Any])
+    if (WorkerBlocks != null) __obj.updateDynamic("WorkerBlocks")(WorkerBlocks.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListWorkerBlocksResponse]
   }
-  @scala.inline
-  implicit class ListWorkerBlocksResponseOps[Self <: ListWorkerBlocksResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumResults(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerBlocks(value: WorkerBlockList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerBlocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerBlocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerBlocks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

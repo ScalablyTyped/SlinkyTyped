@@ -17,318 +17,72 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Shape> */
-@js.native
 trait PartialShape extends js.Object {
-  var fillcolor: js.UndefOr[String] = js.native
-  var layer: js.UndefOr[below | above] = js.native
-  var line: js.UndefOr[PartialShapeLine] = js.native
-  var name: js.UndefOr[String] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var path: js.UndefOr[String] = js.native
-  var templateitemname: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[rect | circle | line | path] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
-  var x0: js.UndefOr[Datum] = js.native
-  var x1: js.UndefOr[Datum] = js.native
-  var xanchor: js.UndefOr[Double | String] = js.native
-  var xref: js.UndefOr[x | paper] = js.native
-  var xsizemode: js.UndefOr[scaled | pixel] = js.native
-  var y0: js.UndefOr[Datum] = js.native
-  var y1: js.UndefOr[Datum] = js.native
-  var yanchor: js.UndefOr[Double | String] = js.native
-  var yref: js.UndefOr[paper | y] = js.native
-  var ysizemode: js.UndefOr[scaled | pixel] = js.native
+  var fillcolor: js.UndefOr[String] = js.undefined
+  var layer: js.UndefOr[below | above] = js.undefined
+  var line: js.UndefOr[PartialShapeLine] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var templateitemname: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[rect | circle | line | path] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
+  var x0: js.UndefOr[Datum] = js.undefined
+  var x1: js.UndefOr[Datum] = js.undefined
+  var xanchor: js.UndefOr[Double | String] = js.undefined
+  var xref: js.UndefOr[x | paper] = js.undefined
+  var xsizemode: js.UndefOr[scaled | pixel] = js.undefined
+  var y0: js.UndefOr[Datum] = js.undefined
+  var y1: js.UndefOr[Datum] = js.undefined
+  var yanchor: js.UndefOr[Double | String] = js.undefined
+  var yref: js.UndefOr[paper | y] = js.undefined
+  var ysizemode: js.UndefOr[scaled | pixel] = js.undefined
 }
 
 object PartialShape {
   @scala.inline
-  def apply(): PartialShape = {
+  def apply(
+    fillcolor: String = null,
+    layer: below | above = null,
+    line: PartialShapeLine = null,
+    name: String = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    path: String = null,
+    templateitemname: String = null,
+    `type`: rect | circle | line | path = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    x0: js.UndefOr[Null | Datum] = js.undefined,
+    x1: js.UndefOr[Null | Datum] = js.undefined,
+    xanchor: Double | String = null,
+    xref: x | paper = null,
+    xsizemode: scaled | pixel = null,
+    y0: js.UndefOr[Null | Datum] = js.undefined,
+    y1: js.UndefOr[Null | Datum] = js.undefined,
+    yanchor: Double | String = null,
+    yref: paper | y = null,
+    ysizemode: scaled | pixel = null
+  ): PartialShape = {
     val __obj = js.Dynamic.literal()
+    if (fillcolor != null) __obj.updateDynamic("fillcolor")(fillcolor.asInstanceOf[js.Any])
+    if (layer != null) __obj.updateDynamic("layer")(layer.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (templateitemname != null) __obj.updateDynamic("templateitemname")(templateitemname.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x0)) __obj.updateDynamic("x0")(x0.asInstanceOf[js.Any])
+    if (!js.isUndefined(x1)) __obj.updateDynamic("x1")(x1.asInstanceOf[js.Any])
+    if (xanchor != null) __obj.updateDynamic("xanchor")(xanchor.asInstanceOf[js.Any])
+    if (xref != null) __obj.updateDynamic("xref")(xref.asInstanceOf[js.Any])
+    if (xsizemode != null) __obj.updateDynamic("xsizemode")(xsizemode.asInstanceOf[js.Any])
+    if (!js.isUndefined(y0)) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
+    if (!js.isUndefined(y1)) __obj.updateDynamic("y1")(y1.asInstanceOf[js.Any])
+    if (yanchor != null) __obj.updateDynamic("yanchor")(yanchor.asInstanceOf[js.Any])
+    if (yref != null) __obj.updateDynamic("yref")(yref.asInstanceOf[js.Any])
+    if (ysizemode != null) __obj.updateDynamic("ysizemode")(ysizemode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialShape]
   }
-  @scala.inline
-  implicit class PartialShapeOps[Self <: PartialShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFillcolor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillcolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayer(value: below | above): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: PartialShapeLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateitemname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateitemname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateitemname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateitemname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: rect | circle | line | path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX0Date(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX0(value: Datum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX0: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x0")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX0Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x0")(null)
-        ret
-    }
-    @scala.inline
-    def withX1Date(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX1(value: Datum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX1Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(null)
-        ret
-    }
-    @scala.inline
-    def withXanchor(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xanchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXanchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xanchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXref(value: typingsSlinky.plotlyJs.plotlyJsStrings.x | paper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXsizemode(value: scaled | pixel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsizemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXsizemode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xsizemode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY0Date(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY0(value: Datum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY0: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY0Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(null)
-        ret
-    }
-    @scala.inline
-    def withY1Date(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY1(value: Datum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY1Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(null)
-        ret
-    }
-    @scala.inline
-    def withYanchor(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yanchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYanchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yanchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYref(value: paper | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYsizemode(value: scaled | pixel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ysizemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYsizemode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ysizemode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

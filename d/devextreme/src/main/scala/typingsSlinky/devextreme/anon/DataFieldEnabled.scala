@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataFieldEnabled extends js.Object {
-  var dataField: js.UndefOr[String] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.native
+  var dataField: js.UndefOr[String] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var font: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.viz.Font] = js.undefined
 }
 
 object DataFieldEnabled {
   @scala.inline
-  def apply(): DataFieldEnabled = {
+  def apply(
+    dataField: String = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    font: typingsSlinky.devextreme.mod.DevExpress.viz.Font = null
+  ): DataFieldEnabled = {
     val __obj = js.Dynamic.literal()
+    if (dataField != null) __obj.updateDynamic("dataField")(dataField.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataFieldEnabled]
   }
-  @scala.inline
-  implicit class DataFieldEnabledOps[Self <: DataFieldEnabled] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: typingsSlinky.devextreme.mod.DevExpress.viz.Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

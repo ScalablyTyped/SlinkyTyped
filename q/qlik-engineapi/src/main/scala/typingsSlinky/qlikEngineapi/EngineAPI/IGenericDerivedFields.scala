@@ -5,39 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGenericDerivedFields extends IGeneratedAPI {
   /**
     * @returns qField
     */
-  def getDerivedField(qId: String): js.Promise[_] = js.native
+  def getDerivedField(qId: String): js.Promise[_]
   /**
     * @returns qData
     */
-  def getDerivedFieldData(): js.Promise[_] = js.native
+  def getDerivedFieldData(): js.Promise[_]
   /**
     * @returns qFields
     */
-  def getDerivedFields(): js.Promise[_] = js.native
+  def getDerivedFields(): js.Promise[_]
   /**
     * @returns qGroups
     */
-  def getDerivedGroups(): js.Promise[_] = js.native
+  def getDerivedGroups(): js.Promise[_]
   /**
     * @returns qInfo
     */
-  def getInfo(): js.Promise[_] = js.native
+  def getInfo(): js.Promise[_]
   /**
     * @returns qListData
     */
-  def getListData(): js.Promise[_] = js.native
+  def getListData(): js.Promise[_]
   /**
     * Shows the properties of an object.
     * Returns the identifier and the definition of the derived field.
     *
     * @returns - A Promise IGenericDerivedFieldProperties
     */
-  def getProperties(): js.Promise[IGenericDerivedFieldProperties] = js.native
+  def getProperties(): js.Promise[IGenericDerivedFieldProperties]
 }
 
 object IGenericDerivedFields {
@@ -54,55 +53,5 @@ object IGenericDerivedFields {
     val __obj = js.Dynamic.literal(getDerivedField = js.Any.fromFunction1(getDerivedField), getDerivedFieldData = js.Any.fromFunction0(getDerivedFieldData), getDerivedFields = js.Any.fromFunction0(getDerivedFields), getDerivedGroups = js.Any.fromFunction0(getDerivedGroups), getInfo = js.Any.fromFunction0(getInfo), getListData = js.Any.fromFunction0(getListData), getProperties = js.Any.fromFunction0(getProperties))
     __obj.asInstanceOf[IGenericDerivedFields]
   }
-  @scala.inline
-  implicit class IGenericDerivedFieldsOps[Self <: IGenericDerivedFields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDerivedField(value: String => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedField")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDerivedFieldData(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedFieldData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDerivedFields(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedFields")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDerivedGroups(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedGroups")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInfo(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetListData(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getListData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetProperties(value: () => js.Promise[IGenericDerivedFieldProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

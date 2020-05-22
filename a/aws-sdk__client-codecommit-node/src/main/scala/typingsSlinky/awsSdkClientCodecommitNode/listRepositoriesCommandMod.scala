@@ -26,9 +26,16 @@ object listRepositoriesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListRepositoriesInput) = this()
+    /* CompleteClass */
+    override val input: ListRepositoriesInput = js.native
     val middlewareStack: MiddlewareStack[ListRepositoriesInput, ListRepositoriesOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[ListRepositoriesInput, ListRepositoriesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[ListRepositoriesInput, ListRepositoriesOutput] = js.native
   }

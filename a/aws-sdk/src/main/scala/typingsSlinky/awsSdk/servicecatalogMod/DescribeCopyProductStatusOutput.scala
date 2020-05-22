@@ -22,53 +22,16 @@ trait DescribeCopyProductStatusOutput extends js.Object {
 
 object DescribeCopyProductStatusOutput {
   @scala.inline
-  def apply(): DescribeCopyProductStatusOutput = {
+  def apply(
+    CopyProductStatus: CopyProductStatus = null,
+    StatusDetail: StatusDetail = null,
+    TargetProductId: Id = null
+  ): DescribeCopyProductStatusOutput = {
     val __obj = js.Dynamic.literal()
+    if (CopyProductStatus != null) __obj.updateDynamic("CopyProductStatus")(CopyProductStatus.asInstanceOf[js.Any])
+    if (StatusDetail != null) __obj.updateDynamic("StatusDetail")(StatusDetail.asInstanceOf[js.Any])
+    if (TargetProductId != null) __obj.updateDynamic("TargetProductId")(TargetProductId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCopyProductStatusOutput]
   }
-  @scala.inline
-  implicit class DescribeCopyProductStatusOutputOps[Self <: DescribeCopyProductStatusOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopyProductStatus(value: CopyProductStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyProductStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyProductStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyProductStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusDetail(value: StatusDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetProductId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

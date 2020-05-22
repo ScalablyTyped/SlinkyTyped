@@ -14,29 +14,10 @@ trait SchemaRegionDisksResizeRequest extends js.Object {
 
 object SchemaRegionDisksResizeRequest {
   @scala.inline
-  def apply(): SchemaRegionDisksResizeRequest = {
+  def apply(sizeGb: String = null): SchemaRegionDisksResizeRequest = {
     val __obj = js.Dynamic.literal()
+    if (sizeGb != null) __obj.updateDynamic("sizeGb")(sizeGb.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionDisksResizeRequest]
   }
-  @scala.inline
-  implicit class SchemaRegionDisksResizeRequestOps[Self <: SchemaRegionDisksResizeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSizeGb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGb")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

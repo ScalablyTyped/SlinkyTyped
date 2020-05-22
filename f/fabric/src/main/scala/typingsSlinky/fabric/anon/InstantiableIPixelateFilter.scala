@@ -12,9 +12,9 @@ trait InstantiableIPixelateFilter
   extends Instantiable0[IPixelateFilter]
      with Instantiable1[/* options */ Blocksize, IPixelateFilter] {
   /**
-  		 * Returns filter instance from an object representation
-  		 * @param object Object to create an instance from
-  		 */
+    * Returns filter instance from an object representation
+    * @param object Object to create an instance from
+    */
   def fromObject(`object`: js.Any): IPixelateFilter = js.native
 }
 

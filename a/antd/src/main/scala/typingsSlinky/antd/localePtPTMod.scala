@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.anon.DateFormat
-import typingsSlinky.antd.anon.PlaceholderString
+import typingsSlinky.antd.generatePickerMod.PickerLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/date-picker/locale/pt_PT", JSImport.Namespace)
 @js.native
 object localePtPTMod extends js.Object {
-  @js.native
-  object default extends js.Object {
-    var lang: DateFormat = js.native
-    var timePickerLocale: PlaceholderString = js.native
-  }
-  
+  val default: PickerLocale = js.native
 }
 

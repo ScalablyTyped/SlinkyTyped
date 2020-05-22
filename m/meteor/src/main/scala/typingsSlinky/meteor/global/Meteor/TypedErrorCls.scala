@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class TypedErrorCls protected ()
   extends typingsSlinky.meteor.Meteor.TypedError {
   def this(message: String, errorType: String) = this()
+  /* CompleteClass */
+  override var errorType: String = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait LimboDocumentChange extends js.Object
 
-object LimboDocumentChange {
-  @scala.inline
-  implicit def apply(value: AddedLimboDocument): LimboDocumentChange = value.asInstanceOf[LimboDocumentChange]
-  @scala.inline
-  implicit def apply(value: RemovedLimboDocument): LimboDocumentChange = value.asInstanceOf[LimboDocumentChange]
-}
-

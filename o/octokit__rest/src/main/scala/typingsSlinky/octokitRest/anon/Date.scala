@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Date extends js.Object {
-  var date: String = js.native
-  var etag: String = js.native
-  var `last-modified`: String = js.native
-  var link: String = js.native
-  var status: String = js.native
-  var `x-Octokit-media-type`: String = js.native
-  var `x-Octokit-request-id`: String = js.native
-  var `x-ratelimit-limit`: String = js.native
-  var `x-ratelimit-remaining`: String = js.native
-  var `x-ratelimit-reset`: String = js.native
+  var date: String
+  var etag: String
+  var `last-modified`: String
+  var link: String
+  var status: String
+  var `x-Octokit-media-type`: String
+  var `x-Octokit-request-id`: String
+  var `x-ratelimit-limit`: String
+  var `x-ratelimit-remaining`: String
+  var `x-ratelimit-reset`: String
 }
 
 object Date {
@@ -41,73 +40,5 @@ object Date {
     __obj.updateDynamic("x-ratelimit-reset")(`x-ratelimit-reset`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Date]
   }
-  @scala.inline
-  implicit class DateOps[Self <: Date] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withLast-modified`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last-modified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withX-Octokit-media-type`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-Octokit-media-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withX-Octokit-request-id`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-Octokit-request-id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withX-ratelimit-limit`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-ratelimit-limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withX-ratelimit-remaining`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-ratelimit-remaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withX-ratelimit-reset`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x-ratelimit-reset")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

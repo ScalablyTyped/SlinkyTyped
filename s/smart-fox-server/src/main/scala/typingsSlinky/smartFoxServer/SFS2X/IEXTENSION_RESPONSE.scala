@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEXTENSION_RESPONSE extends js.Object {
-  var cmd: String = js.native
-  var params: js.Object = js.native
-  var sourceRoom: Double = js.native
+  var cmd: String
+  var params: js.Object
+  var sourceRoom: Double
 }
 
 object IEXTENSION_RESPONSE {
@@ -17,31 +16,5 @@ object IEXTENSION_RESPONSE {
     val __obj = js.Dynamic.literal(cmd = cmd.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], sourceRoom = sourceRoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEXTENSION_RESPONSE]
   }
-  @scala.inline
-  implicit class IEXTENSION_RESPONSEOps[Self <: IEXTENSION_RESPONSE] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCmd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceRoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

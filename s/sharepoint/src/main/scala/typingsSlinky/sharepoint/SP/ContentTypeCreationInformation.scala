@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentTypeCreationInformation extends ClientValueObject {
-  def get_description(): String = js.native
-  def get_group(): String = js.native
-  def get_name(): String = js.native
-  def get_parentContentType(): ContentType = js.native
-  def set_description(value: String): Unit = js.native
-  def set_group(value: String): Unit = js.native
-  def set_name(value: String): Unit = js.native
-  def set_parentContentType(value: ContentType): Unit = js.native
+  def get_description(): String
+  def get_group(): String
+  def get_name(): String
+  def get_parentContentType(): ContentType
+  def set_description(value: String): Unit
+  def set_group(value: String): Unit
+  def set_name(value: String): Unit
+  def set_parentContentType(value: ContentType): Unit
 }
 
 object ContentTypeCreationInformation {
@@ -36,61 +35,5 @@ object ContentTypeCreationInformation {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_description = js.Any.fromFunction0(get_description), get_group = js.Any.fromFunction0(get_group), get_name = js.Any.fromFunction0(get_name), get_parentContentType = js.Any.fromFunction0(get_parentContentType), get_typeId = js.Any.fromFunction0(get_typeId), set_description = js.Any.fromFunction1(set_description), set_group = js.Any.fromFunction1(set_group), set_name = js.Any.fromFunction1(set_name), set_parentContentType = js.Any.fromFunction1(set_parentContentType), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[ContentTypeCreationInformation]
   }
-  @scala.inline
-  implicit class ContentTypeCreationInformationOps[Self <: ContentTypeCreationInformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_description(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_description")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_group(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_group")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_name(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_name")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_parentContentType(value: () => ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_parentContentType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_description(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_description")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_group(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_group")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_name(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_name")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_parentContentType(value: ContentType => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_parentContentType")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

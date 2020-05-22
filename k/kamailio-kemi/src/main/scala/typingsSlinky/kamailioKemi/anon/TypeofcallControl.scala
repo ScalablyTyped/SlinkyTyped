@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeofcallControl extends js.Object {
-  def call_control(): Double = js.native
+  def call_control(): Double
 }
 
 object TypeofcallControl {
@@ -15,19 +14,5 @@ object TypeofcallControl {
     val __obj = js.Dynamic.literal(call_control = js.Any.fromFunction0(call_control))
     __obj.asInstanceOf[TypeofcallControl]
   }
-  @scala.inline
-  implicit class TypeofcallControlOps[Self <: TypeofcallControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCall_control(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("call_control")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

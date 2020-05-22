@@ -18,19 +18,5 @@ object DescribeSecretRequest {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSecretRequest]
   }
-  @scala.inline
-  implicit class DescribeSecretRequestOps[Self <: DescribeSecretRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecretId(value: SecretIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

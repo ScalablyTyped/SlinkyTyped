@@ -459,6 +459,11 @@ object ToastHeader {
   }
   
   def withProps[T](p: ToastHeaderProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ToastHeaderProps]))
+  }
   implicit def make[T](companion: ToastHeader.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

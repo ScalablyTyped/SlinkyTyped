@@ -14,29 +14,10 @@ trait StartTransactionResult extends js.Object {
 
 object StartTransactionResult {
   @scala.inline
-  def apply(): StartTransactionResult = {
+  def apply(TransactionId: TransactionId = null): StartTransactionResult = {
     val __obj = js.Dynamic.literal()
+    if (TransactionId != null) __obj.updateDynamic("TransactionId")(TransactionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTransactionResult]
   }
-  @scala.inline
-  implicit class StartTransactionResultOps[Self <: StartTransactionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransactionId(value: TransactionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

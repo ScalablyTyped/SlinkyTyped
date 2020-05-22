@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableStyle extends js.Object {
-  var Alignment: WdRowAlignment = js.native
-  var AllowBreakAcrossPage: Double = js.native
-  var AllowPageBreaks: Boolean = js.native
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var Borders: typingsSlinky.activexWord.Word.Borders = js.native
-  var BottomPadding: Double = js.native
-  var ColumnStripe: Double = js.native
-  val Creator: Double = js.native
-  var LeftIndent: Double = js.native
-  var LeftPadding: Double = js.native
-  val Parent: js.Any = js.native
-  var RightPadding: Double = js.native
-  var RowStripe: Double = js.native
-  val Shading: typingsSlinky.activexWord.Word.Shading = js.native
-  var Spacing: Double = js.native
-  var TableDirection: WdTableDirection = js.native
-  var TopPadding: Double = js.native
+  var Alignment: WdRowAlignment
+  var AllowBreakAcrossPage: Double
+  var AllowPageBreaks: Boolean
+  val Application: typingsSlinky.activexWord.Word.Application
+  var Borders: typingsSlinky.activexWord.Word.Borders
+  var BottomPadding: Double
+  var ColumnStripe: Double
+  val Creator: Double
+  var LeftIndent: Double
+  var LeftPadding: Double
+  val Parent: js.Any
+  var RightPadding: Double
+  var RowStripe: Double
+  val Shading: typingsSlinky.activexWord.Word.Shading
+  var Spacing: Double
+  var TableDirection: WdTableDirection
+  var TopPadding: Double
   @JSName("Word.TableStyle_typekey")
-  var WordDotTableStyle_typekey: TableStyle = js.native
-  def Condition(ConditionCode: WdConditionCode): ConditionalStyle = js.native
+  var WordDotTableStyle_typekey: TableStyle
+  def Condition(ConditionCode: WdConditionCode): ConditionalStyle
 }
 
 object TableStyle {
@@ -55,127 +54,5 @@ object TableStyle {
     __obj.updateDynamic("Word.TableStyle_typekey")(WordDotTableStyle_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableStyle]
   }
-  @scala.inline
-  implicit class TableStyleOps[Self <: TableStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: WdRowAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowBreakAcrossPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowBreakAcrossPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowPageBreaks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowPageBreaks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorders(value: Borders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Borders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBottomPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BottomPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnStripe(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnStripe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCondition(value: WdConditionCode => ConditionalStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeftIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LeftIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeftPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LeftPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRightPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RightPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowStripe(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowStripe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShading(value: Shading): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableDirection(value: WdTableDirection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotTableStyle_typekey(value: TableStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.TableStyle_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

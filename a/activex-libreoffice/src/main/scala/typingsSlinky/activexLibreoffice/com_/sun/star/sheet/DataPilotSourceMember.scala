@@ -18,19 +18,18 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.DataPilotSourceLevel
   * @see com.sun.star.sheet.DataPilotSource
   */
-@js.native
 trait DataPilotSourceMember
   extends XNamed
      with XPropertySet {
   /** specifies whether the member is visible. */
-  var IsVisible: Boolean = js.native
+  var IsVisible: Boolean
   /**
     * specifies the member's position in its hierarchy level if sorting is manual.
     * @since OOo 2.4
     */
-  var Position: Boolean = js.native
+  var Position: Boolean
   /** specifies whether details for the member are shown. */
-  var ShowDetails: Boolean = js.native
+  var ShowDetails: Boolean
 }
 
 object DataPilotSourceMember {
@@ -57,31 +56,5 @@ object DataPilotSourceMember {
     val __obj = js.Dynamic.literal(IsVisible = IsVisible.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], ShowDetails = ShowDetails.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getName = js.Any.fromFunction0(getName), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setName = js.Any.fromFunction1(setName), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[DataPilotSourceMember]
   }
-  @scala.inline
-  implicit class DataPilotSourceMemberOps[Self <: DataPilotSourceMember] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowDetails(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

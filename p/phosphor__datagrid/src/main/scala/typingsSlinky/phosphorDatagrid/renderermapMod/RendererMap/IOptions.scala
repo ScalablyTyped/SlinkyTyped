@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * An options object for initializing a renderer map.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The priority of the metadata keys used for matching.
@@ -17,34 +16,15 @@ trait IOptions extends js.Object {
     *
     * The default is `[]`.
     */
-  var priority: js.UndefOr[js.Array[String]] = js.native
+  var priority: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(priority: js.Array[String] = null): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPriority(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

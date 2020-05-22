@@ -42,113 +42,26 @@ trait Item extends js.Object {
 
 object Item {
   @scala.inline
-  def apply(): Item = {
+  def apply(
+    AbsoluteTime: Instant = null,
+    Content: ChatContent = null,
+    ContentType: ChatContentType = null,
+    DisplayName: DisplayName = null,
+    Id: ChatItemId = null,
+    ParticipantId: ParticipantId = null,
+    ParticipantRole: ParticipantRole = null,
+    Type: ChatItemType = null
+  ): Item = {
     val __obj = js.Dynamic.literal()
+    if (AbsoluteTime != null) __obj.updateDynamic("AbsoluteTime")(AbsoluteTime.asInstanceOf[js.Any])
+    if (Content != null) __obj.updateDynamic("Content")(Content.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (ParticipantId != null) __obj.updateDynamic("ParticipantId")(ParticipantId.asInstanceOf[js.Any])
+    if (ParticipantRole != null) __obj.updateDynamic("ParticipantRole")(ParticipantRole.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[Item]
   }
-  @scala.inline
-  implicit class ItemOps[Self <: Item] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbsoluteTime(value: Instant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsoluteTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsoluteTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsoluteTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent(value: ChatContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ChatContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: DisplayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: ChatItemId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParticipantId(value: ParticipantId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParticipantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParticipantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParticipantId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParticipantRole(value: ParticipantRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParticipantRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParticipantRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParticipantRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ChatItemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

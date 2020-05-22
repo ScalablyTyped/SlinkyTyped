@@ -17,29 +17,10 @@ trait SchemaResourcePolicyWeeklyCycle extends js.Object {
 
 object SchemaResourcePolicyWeeklyCycle {
   @scala.inline
-  def apply(): SchemaResourcePolicyWeeklyCycle = {
+  def apply(dayOfWeeks: js.Array[SchemaResourcePolicyWeeklyCycleDayOfWeek] = null): SchemaResourcePolicyWeeklyCycle = {
     val __obj = js.Dynamic.literal()
+    if (dayOfWeeks != null) __obj.updateDynamic("dayOfWeeks")(dayOfWeeks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResourcePolicyWeeklyCycle]
   }
-  @scala.inline
-  implicit class SchemaResourcePolicyWeeklyCycleOps[Self <: SchemaResourcePolicyWeeklyCycle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDayOfWeeks(value: js.Array[SchemaResourcePolicyWeeklyCycleDayOfWeek]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeeks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayOfWeeks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeeks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

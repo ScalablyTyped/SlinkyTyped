@@ -31,65 +31,18 @@ trait SchemaStandardSchedulerSettings extends js.Object {
 
 object SchemaStandardSchedulerSettings {
   @scala.inline
-  def apply(): SchemaStandardSchedulerSettings = {
+  def apply(
+    maxInstances: js.UndefOr[Double] = js.undefined,
+    minInstances: js.UndefOr[Double] = js.undefined,
+    targetCpuUtilization: js.UndefOr[Double] = js.undefined,
+    targetThroughputUtilization: js.UndefOr[Double] = js.undefined
+  ): SchemaStandardSchedulerSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxInstances)) __obj.updateDynamic("maxInstances")(maxInstances.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minInstances)) __obj.updateDynamic("minInstances")(minInstances.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetCpuUtilization)) __obj.updateDynamic("targetCpuUtilization")(targetCpuUtilization.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetThroughputUtilization)) __obj.updateDynamic("targetThroughputUtilization")(targetThroughputUtilization.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStandardSchedulerSettings]
   }
-  @scala.inline
-  implicit class SchemaStandardSchedulerSettingsOps[Self <: SchemaStandardSchedulerSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxInstances(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinInstances(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetCpuUtilization(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCpuUtilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetCpuUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCpuUtilization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetThroughputUtilization(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetThroughputUtilization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetThroughputUtilization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetThroughputUtilization")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

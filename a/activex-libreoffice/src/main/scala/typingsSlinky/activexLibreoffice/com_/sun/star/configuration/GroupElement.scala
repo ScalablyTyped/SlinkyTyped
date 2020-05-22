@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.configuration.SetElement A complementary service, for elements of a dynamic homogeneous container.
   * @see com.sun.star.configuration.AccessRootElement A complementary service, for the root element of a hierarchy.
   */
-@js.native
 trait GroupElement
   extends XHierarchicalName
      with XNamed

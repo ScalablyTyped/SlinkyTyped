@@ -6,147 +6,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryParameters extends js.Object {
-  var headers: js.UndefOr[js.Any] = js.native
-  var overrideMimeType: js.UndefOr[String] = js.native
-  var proxy: js.UndefOr[DefaultProxy] = js.native
-  var queryParameters: js.UndefOr[js.Any] = js.native
-  var request: js.UndefOr[org.scalajs.dom.experimental.Request] = js.native
-  var responseType: js.UndefOr[String] = js.native
-  var retryAttempts: js.UndefOr[Double] = js.native
-  var retryCallback: js.UndefOr[typingsSlinky.cesium.mod.Resource.RetryCallback] = js.native
-  var templateValues: js.UndefOr[js.Any] = js.native
-  var url: String = js.native
+  var headers: js.UndefOr[js.Any] = js.undefined
+  var overrideMimeType: js.UndefOr[String] = js.undefined
+  var proxy: js.UndefOr[DefaultProxy] = js.undefined
+  var queryParameters: js.UndefOr[js.Any] = js.undefined
+  var request: js.UndefOr[org.scalajs.dom.experimental.Request] = js.undefined
+  var responseType: js.UndefOr[String] = js.undefined
+  var retryAttempts: js.UndefOr[Double] = js.undefined
+  var retryCallback: js.UndefOr[typingsSlinky.cesium.mod.Resource.RetryCallback] = js.undefined
+  var templateValues: js.UndefOr[js.Any] = js.undefined
+  var url: String
 }
 
 object QueryParameters {
   @scala.inline
-  def apply(url: String): QueryParameters = {
+  def apply(
+    url: String,
+    headers: js.Any = null,
+    overrideMimeType: String = null,
+    proxy: DefaultProxy = null,
+    queryParameters: js.Any = null,
+    request: org.scalajs.dom.experimental.Request = null,
+    responseType: String = null,
+    retryAttempts: js.UndefOr[Double] = js.undefined,
+    retryCallback: (/* resource */ Resource, /* error */ js.Error) => Unit = null,
+    templateValues: js.Any = null
+  ): QueryParameters = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (overrideMimeType != null) __obj.updateDynamic("overrideMimeType")(overrideMimeType.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (queryParameters != null) __obj.updateDynamic("queryParameters")(queryParameters.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryAttempts)) __obj.updateDynamic("retryAttempts")(retryAttempts.get.asInstanceOf[js.Any])
+    if (retryCallback != null) __obj.updateDynamic("retryCallback")(js.Any.fromFunction2(retryCallback))
+    if (templateValues != null) __obj.updateDynamic("templateValues")(templateValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryParameters]
   }
-  @scala.inline
-  implicit class QueryParametersOps[Self <: QueryParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideMimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideMimeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideMimeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: DefaultProxy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryParameters(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: org.scalajs.dom.experimental.Request): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryAttempts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryAttempts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryCallback(value: (/* resource */ Resource, /* error */ js.Error) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryCallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRetryCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,25 +22,5 @@ object UpdateRelationalDatabaseParametersRequest {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], relationalDatabaseName = relationalDatabaseName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRelationalDatabaseParametersRequest]
   }
-  @scala.inline
-  implicit class UpdateRelationalDatabaseParametersRequestOps[Self <: UpdateRelationalDatabaseParametersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameters(value: RelationalDatabaseParameterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelationalDatabaseName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

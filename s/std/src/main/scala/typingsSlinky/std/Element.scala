@@ -213,6 +213,8 @@ trait Element
   var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var outerHTML: java.lang.String = js.native
+  @JSName("ownerDocument")
+  val ownerDocument_Element: org.scalajs.dom.raw.Document = js.native
   /**
     * Returns the namespace prefix.
     */

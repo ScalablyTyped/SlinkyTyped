@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
 trait Geometry_
   extends Accessor
      with JSONSupport
-     with GoToTarget2D
-     with GoToTarget3D {
+     with _GoToTarget2D
+     with _GoToTarget3D {
   /**
     * The cache is used to store values computed from geometries that need to cleared or recomputed upon mutation. An example is the extent of a polygon.
     *

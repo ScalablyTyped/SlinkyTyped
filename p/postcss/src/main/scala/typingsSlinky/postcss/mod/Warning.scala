@@ -7,29 +7,28 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a plugin warning. It can be created using Result#warn().
   */
-@js.native
 trait Warning extends js.Object {
   /**
     * Column in the input file with this warning's source.
     */
-  var column: Double = js.native
+  var column: Double
   /**
     * The line in the input file with this warning's source.
     */
-  var line: Double = js.native
+  var line: Double
   /**
     * The CSS node that caused the warning.
     */
-  var node: Node = js.native
+  var node: Node
   /**
     * Contains the name of the plugin that created this warning. When you
     * call Result#warn(), it will fill this property automatically.
     */
-  var plugin: String = js.native
+  var plugin: String
   /**
     * Contains the warning message.
     */
-  var text: String = js.native
+  var text: String
 }
 
 object Warning {
@@ -38,43 +37,5 @@ object Warning {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Warning]
   }
-  @scala.inline
-  implicit class WarningOps[Self <: Warning] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLine(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlugin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

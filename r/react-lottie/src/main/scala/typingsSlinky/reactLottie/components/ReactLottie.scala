@@ -2,6 +2,7 @@ package typingsSlinky.reactLottie.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLottie.mod.EventListener
 import typingsSlinky.reactLottie.mod.LottieProps
 import typingsSlinky.reactLottie.mod.Options
@@ -41,6 +42,8 @@ object ReactLottie {
     def segments(value: js.Array[Double]): this.type = set("segments", value.asInstanceOf[js.Any])
     @scala.inline
     def speed(value: Double): this.type = set("speed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

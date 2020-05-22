@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a scroll bar control. */
-@js.native
 trait UnoControlScrollBar
   extends XControl
      with XWindow

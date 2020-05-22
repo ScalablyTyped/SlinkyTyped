@@ -6,296 +6,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VNodeData extends js.Object {
-  var attrs: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var `class`: js.UndefOr[js.Any] = js.native
-  var directives: js.UndefOr[js.Array[VNodeDirective]] = js.native
-  var domProps: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var hook: js.UndefOr[StringDictionary[js.Function]] = js.native
-  var inlineTemplate: js.UndefOr[Render] = js.native
-  var keepAlive: js.UndefOr[Boolean] = js.native
-  var key: js.UndefOr[String | Double] = js.native
-  var nativeOn: js.UndefOr[StringDictionary[js.Function | js.Array[js.Function]]] = js.native
-  var on: js.UndefOr[StringDictionary[js.Function | js.Array[js.Function]]] = js.native
-  var props: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var ref: js.UndefOr[String] = js.native
-  var refInFor: js.UndefOr[Boolean] = js.native
-  var scopedSlots: js.UndefOr[StringDictionary[js.UndefOr[ScopedSlot]]] = js.native
-  var show: js.UndefOr[Boolean] = js.native
-  var slot: js.UndefOr[String] = js.native
-  var staticClass: js.UndefOr[String] = js.native
-  var staticStyle: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var style: js.UndefOr[String | js.Array[js.Object] | js.Object] = js.native
-  var tag: js.UndefOr[String] = js.native
-  var transition: js.UndefOr[js.Object] = js.native
+  var attrs: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var `class`: js.UndefOr[js.Any] = js.undefined
+  var directives: js.UndefOr[js.Array[VNodeDirective]] = js.undefined
+  var domProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var hook: js.UndefOr[StringDictionary[js.Function]] = js.undefined
+  var inlineTemplate: js.UndefOr[Render] = js.undefined
+  var keepAlive: js.UndefOr[Boolean] = js.undefined
+  var key: js.UndefOr[String | Double] = js.undefined
+  var nativeOn: js.UndefOr[StringDictionary[js.Function | js.Array[js.Function]]] = js.undefined
+  var on: js.UndefOr[StringDictionary[js.Function | js.Array[js.Function]]] = js.undefined
+  var props: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var ref: js.UndefOr[String] = js.undefined
+  var refInFor: js.UndefOr[Boolean] = js.undefined
+  var scopedSlots: js.UndefOr[StringDictionary[js.UndefOr[ScopedSlot]]] = js.undefined
+  var show: js.UndefOr[Boolean] = js.undefined
+  var slot: js.UndefOr[String] = js.undefined
+  var staticClass: js.UndefOr[String] = js.undefined
+  var staticStyle: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var style: js.UndefOr[String | js.Array[js.Object] | js.Object] = js.undefined
+  var tag: js.UndefOr[String] = js.undefined
+  var transition: js.UndefOr[js.Object] = js.undefined
 }
 
 object VNodeData {
   @scala.inline
-  def apply(): VNodeData = {
+  def apply(
+    attrs: StringDictionary[js.Any] = null,
+    `class`: js.Any = null,
+    directives: js.Array[VNodeDirective] = null,
+    domProps: StringDictionary[js.Any] = null,
+    hook: StringDictionary[js.Function] = null,
+    inlineTemplate: Render = null,
+    keepAlive: js.UndefOr[Boolean] = js.undefined,
+    key: String | Double = null,
+    nativeOn: StringDictionary[js.Function | js.Array[js.Function]] = null,
+    on: StringDictionary[js.Function | js.Array[js.Function]] = null,
+    props: StringDictionary[js.Any] = null,
+    ref: String = null,
+    refInFor: js.UndefOr[Boolean] = js.undefined,
+    scopedSlots: StringDictionary[js.UndefOr[ScopedSlot]] = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    slot: String = null,
+    staticClass: String = null,
+    staticStyle: StringDictionary[js.Any] = null,
+    style: String | js.Array[js.Object] | js.Object = null,
+    tag: String = null,
+    transition: js.Object = null
+  ): VNodeData = {
     val __obj = js.Dynamic.literal()
+    if (attrs != null) __obj.updateDynamic("attrs")(attrs.asInstanceOf[js.Any])
+    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (domProps != null) __obj.updateDynamic("domProps")(domProps.asInstanceOf[js.Any])
+    if (hook != null) __obj.updateDynamic("hook")(hook.asInstanceOf[js.Any])
+    if (inlineTemplate != null) __obj.updateDynamic("inlineTemplate")(inlineTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (nativeOn != null) __obj.updateDynamic("nativeOn")(nativeOn.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (props != null) __obj.updateDynamic("props")(props.asInstanceOf[js.Any])
+    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (!js.isUndefined(refInFor)) __obj.updateDynamic("refInFor")(refInFor.get.asInstanceOf[js.Any])
+    if (scopedSlots != null) __obj.updateDynamic("scopedSlots")(scopedSlots.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (staticClass != null) __obj.updateDynamic("staticClass")(staticClass.asInstanceOf[js.Any])
+    if (staticStyle != null) __obj.updateDynamic("staticStyle")(staticStyle.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[VNodeData]
   }
-  @scala.inline
-  implicit class VNodeDataOps[Self <: VNodeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttrs(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClass(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectives(value: js.Array[VNodeDirective]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomProps(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHook(value: StringDictionary[js.Function]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineTemplate(value: Render): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepAlive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepAlive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNativeOn(value: StringDictionary[js.Function | js.Array[js.Function]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNativeOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: StringDictionary[js.Function | js.Array[js.Function]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProps(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("props")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefInFor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refInFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefInFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refInFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScopedSlots(value: StringDictionary[js.UndefOr[ScopedSlot]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopedSlots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScopedSlots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopedSlots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticStyle(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("staticStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String | js.Array[js.Object] | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeGameSessionQueuesOutput extends js.Object {
 
 object DescribeGameSessionQueuesOutput {
   @scala.inline
-  def apply(): DescribeGameSessionQueuesOutput = {
+  def apply(GameSessionQueues: GameSessionQueueList = null, NextToken: NonZeroAndMaxString = null): DescribeGameSessionQueuesOutput = {
     val __obj = js.Dynamic.literal()
+    if (GameSessionQueues != null) __obj.updateDynamic("GameSessionQueues")(GameSessionQueues.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeGameSessionQueuesOutput]
   }
-  @scala.inline
-  implicit class DescribeGameSessionQueuesOutputOps[Self <: DescribeGameSessionQueuesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGameSessionQueues(value: GameSessionQueueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionQueues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameSessionQueues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionQueues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

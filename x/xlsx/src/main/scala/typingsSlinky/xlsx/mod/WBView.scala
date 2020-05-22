@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WBView extends js.Object {
   /** Right-to-left mode */
-  var RTL: js.UndefOr[Boolean] = js.native
+  var RTL: js.UndefOr[Boolean] = js.undefined
 }
 
 object WBView {
   @scala.inline
-  def apply(): WBView = {
+  def apply(RTL: js.UndefOr[Boolean] = js.undefined): WBView = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(RTL)) __obj.updateDynamic("RTL")(RTL.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WBView]
   }
-  @scala.inline
-  implicit class WBViewOps[Self <: WBView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRTL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRTL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

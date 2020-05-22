@@ -3,7 +3,6 @@ package typingsSlinky.pulumiAws.lambdaFunctionMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.arnMod.ARN
 import typingsSlinky.pulumiAws.iamMod.Role
-import typingsSlinky.pulumiAws.lambdaMixinsMod.EventHandler
 import typingsSlinky.pulumiAws.outputMod.lambda.FunctionDeadLetterConfig
 import typingsSlinky.pulumiAws.outputMod.lambda.FunctionEnvironment
 import typingsSlinky.pulumiAws.outputMod.lambda.FunctionTracingConfig
@@ -20,9 +19,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@pulumi/aws/lambda/function", "Function")
 @js.native
-class Function protected ()
-  extends CustomResource
-     with EventHandler[js.Any, js.Any] {
+class Function protected () extends CustomResource {
   /**
     * Create a Function resource with the given unique name, arguments, and options.
     *

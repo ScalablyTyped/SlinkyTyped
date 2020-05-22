@@ -1,7 +1,7 @@
 package typingsSlinky.antd.checkboxCheckboxMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait Checkbox
   @JSName("componentWillUnmount")
   def componentWillUnmount_MCheckbox(): Unit = js.native
   def focus(): Unit = js.native
-  def renderCheckbox(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderCheckbox(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   def saveCheckbox(node: js.Any): Unit = js.native
 }
 

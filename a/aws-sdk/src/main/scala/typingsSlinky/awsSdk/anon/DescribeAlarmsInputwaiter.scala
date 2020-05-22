@@ -58,137 +58,30 @@ trait DescribeAlarmsInputwaiter extends js.Object {
 
 object DescribeAlarmsInputwaiter {
   @scala.inline
-  def apply(): DescribeAlarmsInputwaiter = {
+  def apply(
+    $waiter: WaiterConfiguration = null,
+    ActionPrefix: ActionPrefix = null,
+    AlarmNamePrefix: AlarmNamePrefix = null,
+    AlarmNames: AlarmNames = null,
+    AlarmTypes: AlarmTypes = null,
+    ChildrenOfAlarmName: AlarmName = null,
+    MaxRecords: js.UndefOr[MaxRecords] = js.undefined,
+    NextToken: NextToken = null,
+    ParentsOfAlarmName: AlarmName = null,
+    StateValue: StateValue = null
+  ): DescribeAlarmsInputwaiter = {
     val __obj = js.Dynamic.literal()
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
+    if (ActionPrefix != null) __obj.updateDynamic("ActionPrefix")(ActionPrefix.asInstanceOf[js.Any])
+    if (AlarmNamePrefix != null) __obj.updateDynamic("AlarmNamePrefix")(AlarmNamePrefix.asInstanceOf[js.Any])
+    if (AlarmNames != null) __obj.updateDynamic("AlarmNames")(AlarmNames.asInstanceOf[js.Any])
+    if (AlarmTypes != null) __obj.updateDynamic("AlarmTypes")(AlarmTypes.asInstanceOf[js.Any])
+    if (ChildrenOfAlarmName != null) __obj.updateDynamic("ChildrenOfAlarmName")(ChildrenOfAlarmName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxRecords)) __obj.updateDynamic("MaxRecords")(MaxRecords.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ParentsOfAlarmName != null) __obj.updateDynamic("ParentsOfAlarmName")(ParentsOfAlarmName.asInstanceOf[js.Any])
+    if (StateValue != null) __obj.updateDynamic("StateValue")(StateValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAlarmsInputwaiter]
   }
-  @scala.inline
-  implicit class DescribeAlarmsInputwaiterOps[Self <: DescribeAlarmsInputwaiter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionPrefix(value: ActionPrefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmNamePrefix(value: AlarmNamePrefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmNamePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmNamePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmNames(value: AlarmNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmTypes(value: AlarmTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenOfAlarmName(value: AlarmName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChildrenOfAlarmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildrenOfAlarmName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChildrenOfAlarmName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: MaxRecords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentsOfAlarmName(value: AlarmName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentsOfAlarmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentsOfAlarmName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentsOfAlarmName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateValue(value: StateValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

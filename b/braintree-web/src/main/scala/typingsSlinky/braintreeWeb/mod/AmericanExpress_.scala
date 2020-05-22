@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AmericanExpress_ extends js.Object {
   /**
     * @description The current version of the SDK, i.e. `3.0.2`.
     * @type {string}
     */
-  var VERSION: String = js.native
+  var VERSION: String
   /**
     * @static
     * @function create
@@ -21,7 +20,7 @@ trait AmericanExpress_ extends js.Object {
     * @param {callback} callback The second argument, `data`, is the {@link AmericanExpress} instance.
     * @returns {void}
     */
-  def create(options: Client, callback: callback): Unit = js.native
+  def create(options: Client, callback: callback): Unit
   /**
     * Gets the Express Checkout nonce profile given a nonce from American Express.
     * @public
@@ -44,7 +43,7 @@ trait AmericanExpress_ extends js.Object {
     *   });
     * });
     */
-  def getExpressCheckoutProfile(options: Nonce, callback: callback): Unit = js.native
+  def getExpressCheckoutProfile(options: Nonce, callback: callback): Unit
   /**
     * Gets the rewards balance associated with a Braintree nonce.
     * @public
@@ -67,7 +66,7 @@ trait AmericanExpress_ extends js.Object {
     *   });
     * });
     */
-  def getRewardsBalance(options: Nonce, callback: callback): Unit = js.native
+  def getRewardsBalance(options: Nonce, callback: callback): Unit
 }
 
 object AmericanExpress_ {
@@ -81,37 +80,5 @@ object AmericanExpress_ {
     val __obj = js.Dynamic.literal(VERSION = VERSION.asInstanceOf[js.Any], create = js.Any.fromFunction2(create), getExpressCheckoutProfile = js.Any.fromFunction2(getExpressCheckoutProfile), getRewardsBalance = js.Any.fromFunction2(getRewardsBalance))
     __obj.asInstanceOf[AmericanExpress_]
   }
-  @scala.inline
-  implicit class AmericanExpress_Ops[Self <: AmericanExpress_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVERSION(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VERSION")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreate(value: (Client, callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetExpressCheckoutProfile(value: (Nonce, callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExpressCheckoutProfile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetRewardsBalance(value: (Nonce, callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRewardsBalance")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

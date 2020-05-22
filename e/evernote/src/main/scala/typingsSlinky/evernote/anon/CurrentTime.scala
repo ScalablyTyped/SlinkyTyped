@@ -6,101 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CurrentTime extends js.Object {
-  var currentTime: js.UndefOr[Timestamp] = js.native
-  var fullSyncBefore: js.UndefOr[Timestamp] = js.native
-  var updateCount: js.UndefOr[Double] = js.native
-  var uploaded: js.UndefOr[Double] = js.native
-  var userLastUpdated: js.UndefOr[Timestamp] = js.native
-  var userMaxMessageEventId: js.UndefOr[MessageEventID] = js.native
+  var currentTime: js.UndefOr[Timestamp] = js.undefined
+  var fullSyncBefore: js.UndefOr[Timestamp] = js.undefined
+  var updateCount: js.UndefOr[Double] = js.undefined
+  var uploaded: js.UndefOr[Double] = js.undefined
+  var userLastUpdated: js.UndefOr[Timestamp] = js.undefined
+  var userMaxMessageEventId: js.UndefOr[MessageEventID] = js.undefined
 }
 
 object CurrentTime {
   @scala.inline
-  def apply(): CurrentTime = {
+  def apply(
+    currentTime: js.UndefOr[Timestamp] = js.undefined,
+    fullSyncBefore: js.UndefOr[Timestamp] = js.undefined,
+    updateCount: js.UndefOr[Double] = js.undefined,
+    uploaded: js.UndefOr[Double] = js.undefined,
+    userLastUpdated: js.UndefOr[Timestamp] = js.undefined,
+    userMaxMessageEventId: js.UndefOr[MessageEventID] = js.undefined
+  ): CurrentTime = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(currentTime)) __obj.updateDynamic("currentTime")(currentTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullSyncBefore)) __obj.updateDynamic("fullSyncBefore")(fullSyncBefore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateCount)) __obj.updateDynamic("updateCount")(updateCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(uploaded)) __obj.updateDynamic("uploaded")(uploaded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(userLastUpdated)) __obj.updateDynamic("userLastUpdated")(userLastUpdated.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(userMaxMessageEventId)) __obj.updateDynamic("userMaxMessageEventId")(userMaxMessageEventId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentTime]
   }
-  @scala.inline
-  implicit class CurrentTimeOps[Self <: CurrentTime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullSyncBefore(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullSyncBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullSyncBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullSyncBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserLastUpdated(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userLastUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserLastUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userLastUpdated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserMaxMessageEventId(value: MessageEventID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userMaxMessageEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserMaxMessageEventId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userMaxMessageEventId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

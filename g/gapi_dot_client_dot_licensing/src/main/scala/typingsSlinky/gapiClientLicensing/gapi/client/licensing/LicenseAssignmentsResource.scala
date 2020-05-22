@@ -9,22 +9,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LicenseAssignmentsResource extends js.Object {
   /** Revoke License. */
-  def delete(request: Alt): Request[Unit] = js.native
+  def delete(request: Alt): Request[Unit]
   /** Get license assignment of a particular product and sku for a user */
-  def get(request: Alt): Request[LicenseAssignment] = js.native
+  def get(request: Alt): Request[LicenseAssignment]
   /** Assign License. */
-  def insert(request: Fields): Request[LicenseAssignment] = js.native
+  def insert(request: Fields): Request[LicenseAssignment]
   /** List license assignments for given product of the customer. */
-  def listForProduct(request: CustomerId): Request[LicenseAssignmentList] = js.native
+  def listForProduct(request: CustomerId): Request[LicenseAssignmentList]
   /** List license assignments for given product and sku of the customer. */
-  def listForProductAndSku(request: Key): Request[LicenseAssignmentList] = js.native
+  def listForProductAndSku(request: Key): Request[LicenseAssignmentList]
   /** Assign License. This method supports patch semantics. */
-  def patch(request: Alt): Request[LicenseAssignment] = js.native
+  def patch(request: Alt): Request[LicenseAssignment]
   /** Assign License. */
-  def update(request: Alt): Request[LicenseAssignment] = js.native
+  def update(request: Alt): Request[LicenseAssignment]
 }
 
 object LicenseAssignmentsResource {
@@ -41,55 +40,5 @@ object LicenseAssignmentsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), listForProduct = js.Any.fromFunction1(listForProduct), listForProductAndSku = js.Any.fromFunction1(listForProductAndSku), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[LicenseAssignmentsResource]
   }
-  @scala.inline
-  implicit class LicenseAssignmentsResourceOps[Self <: LicenseAssignmentsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Alt => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Alt => Request[LicenseAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: Fields => Request[LicenseAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListForProduct(value: CustomerId => Request[LicenseAssignmentList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listForProduct")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListForProductAndSku(value: Key => Request[LicenseAssignmentList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listForProductAndSku")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Alt => Request[LicenseAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Alt => Request[LicenseAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -6,32 +6,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait HeadingCloseToken extends HeadingToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait HeadingCloseToken extends HeadingToken {
   @JSName("type")
-  var type_HeadingCloseToken: heading_close = js.native
+  var type_HeadingCloseToken: heading_close
 }
 
 object HeadingCloseToken {
   @scala.inline
-  def apply(hLevel: HeadingValue, level: Double, `type`: heading_close): HeadingCloseToken = {
+  def apply(
+    hLevel: HeadingValue,
+    level: Double,
+    `type`: heading_close,
+    lines: js.Tuple2[Double, Double] = null
+  ): HeadingCloseToken = {
     val __obj = js.Dynamic.literal(hLevel = hLevel.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeadingCloseToken]
   }
-  @scala.inline
-  implicit class HeadingCloseTokenOps[Self <: HeadingCloseToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: heading_close): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

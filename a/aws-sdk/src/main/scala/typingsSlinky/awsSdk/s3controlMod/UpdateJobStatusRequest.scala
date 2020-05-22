@@ -26,47 +26,15 @@ trait UpdateJobStatusRequest extends js.Object {
 
 object UpdateJobStatusRequest {
   @scala.inline
-  def apply(AccountId: AccountId, JobId: JobId, RequestedJobStatus: RequestedJobStatus): UpdateJobStatusRequest = {
+  def apply(
+    AccountId: AccountId,
+    JobId: JobId,
+    RequestedJobStatus: RequestedJobStatus,
+    StatusUpdateReason: JobStatusUpdateReason = null
+  ): UpdateJobStatusRequest = {
     val __obj = js.Dynamic.literal(AccountId = AccountId.asInstanceOf[js.Any], JobId = JobId.asInstanceOf[js.Any], RequestedJobStatus = RequestedJobStatus.asInstanceOf[js.Any])
+    if (StatusUpdateReason != null) __obj.updateDynamic("StatusUpdateReason")(StatusUpdateReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJobStatusRequest]
   }
-  @scala.inline
-  implicit class UpdateJobStatusRequestOps[Self <: UpdateJobStatusRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobId(value: JobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestedJobStatus(value: RequestedJobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestedJobStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusUpdateReason(value: JobStatusUpdateReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusUpdateReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateReason")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

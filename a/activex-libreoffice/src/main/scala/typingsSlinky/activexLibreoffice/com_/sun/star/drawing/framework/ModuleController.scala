@@ -12,10 +12,9 @@ import scala.scalajs.js.annotation._
   *
   * The {@link ModuleController} object for an application can be obtained via the {@link XControllerManager} interface.
   */
-@js.native
 trait ModuleController extends XModuleController {
   /** Create a new instance of a {@link ModuleController} as sub controller of the given XController object. */
-  def create(xController: XController): Unit = js.native
+  def create(xController: XController): Unit
 }
 
 object ModuleController {
@@ -24,19 +23,5 @@ object ModuleController {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), requestResource = js.Any.fromFunction1(requestResource))
     __obj.asInstanceOf[ModuleController]
   }
-  @scala.inline
-  implicit class ModuleControllerOps[Self <: ModuleController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: XController => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

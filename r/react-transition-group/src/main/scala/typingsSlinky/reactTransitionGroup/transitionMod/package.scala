@@ -58,5 +58,9 @@ package object transitionMod {
     *
     */
   type Transition = slinky.core.ReactComponentClass[typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps]
+  type TransitionChildren = slinky.core.TagMod[scala.Any] | (js.Function1[
+    /* status */ typingsSlinky.reactTransitionGroup.transitionMod.TransitionStatus, 
+    slinky.core.TagMod[scala.Any]
+  ])
   type TransitionStatus = /* "entering" */ java.lang.String
 }

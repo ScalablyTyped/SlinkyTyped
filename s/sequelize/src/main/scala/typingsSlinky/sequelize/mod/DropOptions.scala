@@ -13,39 +13,25 @@ import scala.scalajs.js.annotation._
 /**
   * Options to pass to Model on drop
   */
-@js.native
 trait DropOptions extends LoggingOptions {
   /**
     * Also drop all objects depending on this table, such as views. Only works in postgres
     */
-  var cascade: js.UndefOr[Boolean] = js.native
+  var cascade: js.UndefOr[Boolean] = js.undefined
 }
 
 object DropOptions {
   @scala.inline
-  def apply(): DropOptions = {
+  def apply(
+    benchmark: js.UndefOr[Boolean] = js.undefined,
+    cascade: js.UndefOr[Boolean] = js.undefined,
+    logging: Boolean | js.Function = null
+  ): DropOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cascade)) __obj.updateDynamic("cascade")(cascade.get.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropOptions]
   }
-  @scala.inline
-  implicit class DropOptionsOps[Self <: DropOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCascade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCascade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

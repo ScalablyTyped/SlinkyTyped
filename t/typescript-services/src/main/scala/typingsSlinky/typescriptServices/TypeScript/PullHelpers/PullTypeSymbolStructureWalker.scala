@@ -7,14 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PullTypeSymbolStructureWalker extends js.Object {
-  def callSignatureWalk(signatureSymbol: PullSignatureSymbol): Boolean = js.native
-  def constructSignatureWalk(signatureSymbol: PullSignatureSymbol): Boolean = js.native
-  def indexSignatureWalk(signatureSymbol: PullSignatureSymbol): Boolean = js.native
-  def memberSymbolWalk(memberSymbol: PullSymbol): Boolean = js.native
-  def signatureParameterWalk(parameterSymbol: PullSymbol): Boolean = js.native
-  def signatureReturnTypeWalk(returnType: PullTypeSymbol): Boolean = js.native
+  def callSignatureWalk(signatureSymbol: PullSignatureSymbol): Boolean
+  def constructSignatureWalk(signatureSymbol: PullSignatureSymbol): Boolean
+  def indexSignatureWalk(signatureSymbol: PullSignatureSymbol): Boolean
+  def memberSymbolWalk(memberSymbol: PullSymbol): Boolean
+  def signatureParameterWalk(parameterSymbol: PullSymbol): Boolean
+  def signatureReturnTypeWalk(returnType: PullTypeSymbol): Boolean
 }
 
 object PullTypeSymbolStructureWalker {
@@ -30,49 +29,5 @@ object PullTypeSymbolStructureWalker {
     val __obj = js.Dynamic.literal(callSignatureWalk = js.Any.fromFunction1(callSignatureWalk), constructSignatureWalk = js.Any.fromFunction1(constructSignatureWalk), indexSignatureWalk = js.Any.fromFunction1(indexSignatureWalk), memberSymbolWalk = js.Any.fromFunction1(memberSymbolWalk), signatureParameterWalk = js.Any.fromFunction1(signatureParameterWalk), signatureReturnTypeWalk = js.Any.fromFunction1(signatureReturnTypeWalk))
     __obj.asInstanceOf[PullTypeSymbolStructureWalker]
   }
-  @scala.inline
-  implicit class PullTypeSymbolStructureWalkerOps[Self <: PullTypeSymbolStructureWalker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallSignatureWalk(value: PullSignatureSymbol => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callSignatureWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withConstructSignatureWalk(value: PullSignatureSymbol => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructSignatureWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIndexSignatureWalk(value: PullSignatureSymbol => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexSignatureWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMemberSymbolWalk(value: PullSymbol => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberSymbolWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSignatureParameterWalk(value: PullSymbol => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureParameterWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSignatureReturnTypeWalk(value: PullTypeSymbol => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureReturnTypeWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

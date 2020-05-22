@@ -15,20 +15,3 @@ import scala.scalajs.js.annotation._
 */
 trait AnySourceImpl extends js.Object
 
-object AnySourceImpl {
-  @scala.inline
-  implicit def apply(value: CanvasSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-  @scala.inline
-  implicit def apply(value: GeoJSONSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-  @scala.inline
-  implicit def apply(value: ImageSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-  @scala.inline
-  implicit def apply(value: RasterDemSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-  @scala.inline
-  implicit def apply(value: RasterSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-  @scala.inline
-  implicit def apply(value: VectorSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-  @scala.inline
-  implicit def apply(value: VideoSource): AnySourceImpl = value.asInstanceOf[AnySourceImpl]
-}
-

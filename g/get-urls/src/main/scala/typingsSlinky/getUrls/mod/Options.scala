@@ -4,76 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options
   extends typingsSlinky.normalizeUrl.mod.Options {
   /**
   		Exclude URLs that match URLs in the given array.
   		@default []
   		*/
-  val exclude: js.UndefOr[js.Array[String]] = js.native
+  val exclude: js.UndefOr[js.Array[String]] = js.undefined
   /**
   		Extract URLs that appear as query parameters in the found URLs.
   		@default false
   		*/
-  val extractFromQueryString: js.UndefOr[Boolean] = js.native
+  val extractFromQueryString: js.UndefOr[Boolean] = js.undefined
   /**
   		Require URLs to have a scheme or leading `www.` to be considered an URL. When `false`, matches against a list of valid TLDs, so it will match URLs like `unicorn.education`.
   		Does not affect URLs in query parameters if using the `extractFromQueryString` option.
   		@default true
   		*/
-  val requireSchemeOrWww: js.UndefOr[Boolean] = js.native
+  val requireSchemeOrWww: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    defaultProtocol: String = null,
+    exclude: js.Array[String] = null,
+    extractFromQueryString: js.UndefOr[Boolean] = js.undefined,
+    forceHttp: js.UndefOr[Boolean] = js.undefined,
+    forceHttps: js.UndefOr[Boolean] = js.undefined,
+    normalizeProtocol: js.UndefOr[Boolean] = js.undefined,
+    removeDirectoryIndex: js.Array[js.RegExp | String] = null,
+    removeQueryParameters: js.Array[js.RegExp | String] = null,
+    removeTrailingSlash: js.UndefOr[Boolean] = js.undefined,
+    requireSchemeOrWww: js.UndefOr[Boolean] = js.undefined,
+    sortQueryParameters: js.UndefOr[Boolean] = js.undefined,
+    stripAuthentication: js.UndefOr[Boolean] = js.undefined,
+    stripHash: js.UndefOr[Boolean] = js.undefined,
+    stripProtocol: js.UndefOr[Boolean] = js.undefined,
+    stripWWW: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (defaultProtocol != null) __obj.updateDynamic("defaultProtocol")(defaultProtocol.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (!js.isUndefined(extractFromQueryString)) __obj.updateDynamic("extractFromQueryString")(extractFromQueryString.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceHttp)) __obj.updateDynamic("forceHttp")(forceHttp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceHttps)) __obj.updateDynamic("forceHttps")(forceHttps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalizeProtocol)) __obj.updateDynamic("normalizeProtocol")(normalizeProtocol.get.asInstanceOf[js.Any])
+    if (removeDirectoryIndex != null) __obj.updateDynamic("removeDirectoryIndex")(removeDirectoryIndex.asInstanceOf[js.Any])
+    if (removeQueryParameters != null) __obj.updateDynamic("removeQueryParameters")(removeQueryParameters.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeTrailingSlash)) __obj.updateDynamic("removeTrailingSlash")(removeTrailingSlash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requireSchemeOrWww)) __obj.updateDynamic("requireSchemeOrWww")(requireSchemeOrWww.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortQueryParameters)) __obj.updateDynamic("sortQueryParameters")(sortQueryParameters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripAuthentication)) __obj.updateDynamic("stripAuthentication")(stripAuthentication.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripHash)) __obj.updateDynamic("stripHash")(stripHash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripProtocol)) __obj.updateDynamic("stripProtocol")(stripProtocol.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripWWW)) __obj.updateDynamic("stripWWW")(stripWWW.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtractFromQueryString(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractFromQueryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtractFromQueryString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractFromQueryString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireSchemeOrWww(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSchemeOrWww")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireSchemeOrWww: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSchemeOrWww")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

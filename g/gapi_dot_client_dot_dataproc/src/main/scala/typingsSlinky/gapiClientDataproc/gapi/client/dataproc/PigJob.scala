@@ -5,127 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PigJob extends js.Object {
   /**
     * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent
     * parallel queries.
     */
-  var continueOnFailure: js.UndefOr[Boolean] = js.native
+  var continueOnFailure: js.UndefOr[Boolean] = js.undefined
   /** Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs. */
-  var jarFileUris: js.UndefOr[js.Array[String]] = js.native
+  var jarFileUris: js.UndefOr[js.Array[String]] = js.undefined
   /** Optional. The runtime log config for job execution. */
-  var loggingConfig: js.UndefOr[LoggingConfig] = js.native
+  var loggingConfig: js.UndefOr[LoggingConfig] = js.undefined
   /**
     * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Cloud Dataproc API may be
     * overwritten. Can include properties set in /etc/hadoop/conf/&#42;-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
     */
-  var properties: js.UndefOr[Record[String, String]] = js.native
+  var properties: js.UndefOr[Record[String, String]] = js.undefined
   /** The HCFS URI of the script that contains the Pig queries. */
-  var queryFileUri: js.UndefOr[String] = js.native
+  var queryFileUri: js.UndefOr[String] = js.undefined
   /** A list of queries. */
-  var queryList: js.UndefOr[QueryList] = js.native
+  var queryList: js.UndefOr[QueryList] = js.undefined
   /** Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]). */
-  var scriptVariables: js.UndefOr[Record[String, String]] = js.native
+  var scriptVariables: js.UndefOr[Record[String, String]] = js.undefined
 }
 
 object PigJob {
   @scala.inline
-  def apply(): PigJob = {
+  def apply(
+    continueOnFailure: js.UndefOr[Boolean] = js.undefined,
+    jarFileUris: js.Array[String] = null,
+    loggingConfig: LoggingConfig = null,
+    properties: Record[String, String] = null,
+    queryFileUri: String = null,
+    queryList: QueryList = null,
+    scriptVariables: Record[String, String] = null
+  ): PigJob = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(continueOnFailure)) __obj.updateDynamic("continueOnFailure")(continueOnFailure.get.asInstanceOf[js.Any])
+    if (jarFileUris != null) __obj.updateDynamic("jarFileUris")(jarFileUris.asInstanceOf[js.Any])
+    if (loggingConfig != null) __obj.updateDynamic("loggingConfig")(loggingConfig.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (queryFileUri != null) __obj.updateDynamic("queryFileUri")(queryFileUri.asInstanceOf[js.Any])
+    if (queryList != null) __obj.updateDynamic("queryList")(queryList.asInstanceOf[js.Any])
+    if (scriptVariables != null) __obj.updateDynamic("scriptVariables")(scriptVariables.asInstanceOf[js.Any])
     __obj.asInstanceOf[PigJob]
   }
-  @scala.inline
-  implicit class PigJobOps[Self <: PigJob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContinueOnFailure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinueOnFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continueOnFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJarFileUris(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jarFileUris")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJarFileUris: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jarFileUris")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingConfig(value: LoggingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryFileUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFileUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryFileUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryFileUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryList(value: QueryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptVariables(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptVariables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptVariables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptVariables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

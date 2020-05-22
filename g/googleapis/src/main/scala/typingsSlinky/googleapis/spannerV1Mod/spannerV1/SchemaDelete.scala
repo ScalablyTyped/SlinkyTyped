@@ -23,41 +23,11 @@ trait SchemaDelete extends js.Object {
 
 object SchemaDelete {
   @scala.inline
-  def apply(): SchemaDelete = {
+  def apply(keySet: SchemaKeySet = null, table: String = null): SchemaDelete = {
     val __obj = js.Dynamic.literal()
+    if (keySet != null) __obj.updateDynamic("keySet")(keySet.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDelete]
   }
-  @scala.inline
-  implicit class SchemaDeleteOps[Self <: SchemaDelete] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeySet(value: SchemaKeySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keySet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeySet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keySet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

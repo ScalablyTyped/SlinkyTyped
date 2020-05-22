@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GanttMessagesViews extends js.Object {
-  var day: js.UndefOr[String] = js.native
-  var end: js.UndefOr[String] = js.native
-  var month: js.UndefOr[String] = js.native
-  var start: js.UndefOr[String] = js.native
-  var week: js.UndefOr[String] = js.native
-  var year: js.UndefOr[String] = js.native
+  var day: js.UndefOr[String] = js.undefined
+  var end: js.UndefOr[String] = js.undefined
+  var month: js.UndefOr[String] = js.undefined
+  var start: js.UndefOr[String] = js.undefined
+  var week: js.UndefOr[String] = js.undefined
+  var year: js.UndefOr[String] = js.undefined
 }
 
 object GanttMessagesViews {
   @scala.inline
-  def apply(): GanttMessagesViews = {
+  def apply(
+    day: String = null,
+    end: String = null,
+    month: String = null,
+    start: String = null,
+    week: String = null,
+    year: String = null
+  ): GanttMessagesViews = {
     val __obj = js.Dynamic.literal()
+    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (week != null) __obj.updateDynamic("week")(week.asInstanceOf[js.Any])
+    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
     __obj.asInstanceOf[GanttMessagesViews]
   }
-  @scala.inline
-  implicit class GanttMessagesViewsOps[Self <: GanttMessagesViews] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeek(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYear(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

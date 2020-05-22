@@ -11,7 +11,7 @@ trait BillingRecord extends js.Object {
     */
   var BillDate: js.UndefOr[js.Date] = js.native
   /**
-    * The name of the domain that the billing record applies to. If the domain name contains characters other than a-z, 0-9, and - (hyphen), such as an internationalized domain name, then this value is in Punycode. For more information, see DNS Domain Name Format in the Amazon Route 53 Developer Guidezzz.
+    * The name of the domain that the billing record applies to. If the domain name contains characters other than a-z, 0-9, and - (hyphen), such as an internationalized domain name, then this value is in Punycode. For more information, see DNS Domain Name Format in the Amazon Route 53 Developer Guide.
     */
   var DomainName: js.UndefOr[typingsSlinky.awsSdk.route53domainsMod.DomainName] = js.native
   /**
@@ -30,77 +30,20 @@ trait BillingRecord extends js.Object {
 
 object BillingRecord {
   @scala.inline
-  def apply(): BillingRecord = {
+  def apply(
+    BillDate: js.Date = null,
+    DomainName: DomainName = null,
+    InvoiceId: InvoiceId = null,
+    Operation: OperationType = null,
+    Price: js.UndefOr[Price] = js.undefined
+  ): BillingRecord = {
     val __obj = js.Dynamic.literal()
+    if (BillDate != null) __obj.updateDynamic("BillDate")(BillDate.asInstanceOf[js.Any])
+    if (DomainName != null) __obj.updateDynamic("DomainName")(DomainName.asInstanceOf[js.Any])
+    if (InvoiceId != null) __obj.updateDynamic("InvoiceId")(InvoiceId.asInstanceOf[js.Any])
+    if (Operation != null) __obj.updateDynamic("Operation")(Operation.asInstanceOf[js.Any])
+    if (!js.isUndefined(Price)) __obj.updateDynamic("Price")(Price.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BillingRecord]
   }
-  @scala.inline
-  implicit class BillingRecordOps[Self <: BillingRecord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BillDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BillDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvoiceId(value: InvoiceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvoiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvoiceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvoiceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: OperationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrice(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

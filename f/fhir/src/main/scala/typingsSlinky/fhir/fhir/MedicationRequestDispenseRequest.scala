@@ -7,119 +7,63 @@ import scala.scalajs.js.annotation._
 /**
   * Medication supply authorization
   */
-@js.native
 trait MedicationRequestDispenseRequest extends BackboneElement {
   /**
     * Contains extended information for property 'numberOfRepeatsAllowed'.
     */
-  var _numberOfRepeatsAllowed: js.UndefOr[Element] = js.native
+  var _numberOfRepeatsAllowed: js.UndefOr[Element] = js.undefined
   /**
     * Number of days supply per dispense
     */
-  var expectedSupplyDuration: js.UndefOr[Duration] = js.native
+  var expectedSupplyDuration: js.UndefOr[Duration] = js.undefined
   /**
     * Number of refills authorized
     */
-  var numberOfRepeatsAllowed: js.UndefOr[positiveInt] = js.native
+  var numberOfRepeatsAllowed: js.UndefOr[positiveInt] = js.undefined
   /**
     * Intended dispenser
     */
-  var performer: js.UndefOr[Reference] = js.native
+  var performer: js.UndefOr[Reference] = js.undefined
   /**
     * Amount of medication to supply per dispense
     */
-  var quantity: js.UndefOr[Quantity] = js.native
+  var quantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Time period supply is authorized for
     */
-  var validityPeriod: js.UndefOr[Period] = js.native
+  var validityPeriod: js.UndefOr[Period] = js.undefined
 }
 
 object MedicationRequestDispenseRequest {
   @scala.inline
-  def apply(): MedicationRequestDispenseRequest = {
+  def apply(
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _numberOfRepeatsAllowed: Element = null,
+    expectedSupplyDuration: Duration = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    numberOfRepeatsAllowed: js.UndefOr[positiveInt] = js.undefined,
+    performer: Reference = null,
+    quantity: Quantity = null,
+    validityPeriod: Period = null
+  ): MedicationRequestDispenseRequest = {
     val __obj = js.Dynamic.literal()
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_numberOfRepeatsAllowed != null) __obj.updateDynamic("_numberOfRepeatsAllowed")(_numberOfRepeatsAllowed.asInstanceOf[js.Any])
+    if (expectedSupplyDuration != null) __obj.updateDynamic("expectedSupplyDuration")(expectedSupplyDuration.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfRepeatsAllowed)) __obj.updateDynamic("numberOfRepeatsAllowed")(numberOfRepeatsAllowed.get.asInstanceOf[js.Any])
+    if (performer != null) __obj.updateDynamic("performer")(performer.asInstanceOf[js.Any])
+    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
+    if (validityPeriod != null) __obj.updateDynamic("validityPeriod")(validityPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[MedicationRequestDispenseRequest]
   }
-  @scala.inline
-  implicit class MedicationRequestDispenseRequestOps[Self <: MedicationRequestDispenseRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_numberOfRepeatsAllowed(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_numberOfRepeatsAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_numberOfRepeatsAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_numberOfRepeatsAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedSupplyDuration(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedSupplyDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedSupplyDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedSupplyDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfRepeatsAllowed(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRepeatsAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfRepeatsAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRepeatsAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformer(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidityPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validityPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidityPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validityPeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

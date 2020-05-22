@@ -12,7 +12,7 @@ object ThreeD {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ThreeD] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ThreeD](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ThreeD.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ThreeD] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.ThreeD](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ThreeD] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ThreeD](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ThreeD.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ThreeD] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.ThreeD](js.Array(this.component, js.Dictionary.empty))()
 }
 

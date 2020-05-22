@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * serializes a DOM tree by generating FastSAX events.
   * @since OOo 3.1
   */
-@js.native
 trait XFastSAXSerializable extends js.Object {
   /**
     * serializes an object (e.g. a DOM tree) that represents an XML document by generating fast SAX events.
@@ -26,7 +25,7 @@ trait XFastSAXSerializable extends js.Object {
     tokenHandler: XFastTokenHandler,
     namespaces: SeqEquiv[StringPair],
     registerNamespaces: SeqEquiv[Pair[String, Double]]
-  ): Unit = js.native
+  ): Unit
 }
 
 object XFastSAXSerializable {
@@ -37,21 +36,5 @@ object XFastSAXSerializable {
     val __obj = js.Dynamic.literal(fastSerialize = js.Any.fromFunction4(fastSerialize))
     __obj.asInstanceOf[XFastSAXSerializable]
   }
-  @scala.inline
-  implicit class XFastSAXSerializableOps[Self <: XFastSAXSerializable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFastSerialize(
-      value: (XFastDocumentHandler, XFastTokenHandler, SeqEquiv[StringPair], SeqEquiv[Pair[String, Double]]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fastSerialize")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

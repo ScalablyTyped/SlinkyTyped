@@ -6,18 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BufferOp extends js.Object {
   /**
     * @param {PrecisionModel}
     *          fixedPM
     */
-  def bufferFixedPrecision(fixedPM: PrecisionModel): Unit = js.native
+  def bufferFixedPrecision(fixedPM: PrecisionModel): Unit
   /**
     * @param {int}
     *          precisionDigits
     */
-  def bufferReducedPrecision2(precisionDigits: Double): Unit = js.native
+  def bufferReducedPrecision2(precisionDigits: Double): Unit
   /**
     * Returns the buffer computed for a geometry for a given buffer distance.
     *
@@ -25,7 +24,7 @@ trait BufferOp extends js.Object {
     *          dist the buffer distance.
     * @return {Geometry} the buffer of the input geometry.
     */
-  def getResultGeometry(dist: Double): Geometry = js.native
+  def getResultGeometry(dist: Double): Geometry
   /**
     * Specifies the end cap style of the generated buffer. The styles supported are
     * {@link #CAP_ROUND}, {@link #CAP_BUTT}, and {@link #CAP_SQUARE}. The
@@ -34,14 +33,14 @@ trait BufferOp extends js.Object {
     * @param {int}
     *          endCapStyle the end cap style to specify.
     */
-  def setEndCapStyle(endCapStyle: Double): Unit = js.native
+  def setEndCapStyle(endCapStyle: Double): Unit
   /**
     * Sets the number of segments used to approximate a angle fillet
     *
     * @param {int}
     *          quadrantSegments the number of segments in a fillet for a quadrant.
     */
-  def setQuadrantSegments(quadrantSegments: Double): Unit = js.native
+  def setQuadrantSegments(quadrantSegments: Double): Unit
 }
 
 object BufferOp {
@@ -56,43 +55,5 @@ object BufferOp {
     val __obj = js.Dynamic.literal(bufferFixedPrecision = js.Any.fromFunction1(bufferFixedPrecision), bufferReducedPrecision2 = js.Any.fromFunction1(bufferReducedPrecision2), getResultGeometry = js.Any.fromFunction1(getResultGeometry), setEndCapStyle = js.Any.fromFunction1(setEndCapStyle), setQuadrantSegments = js.Any.fromFunction1(setQuadrantSegments))
     __obj.asInstanceOf[BufferOp]
   }
-  @scala.inline
-  implicit class BufferOpOps[Self <: BufferOp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBufferFixedPrecision(value: PrecisionModel => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferFixedPrecision")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBufferReducedPrecision2(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferReducedPrecision2")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetResultGeometry(value: Double => Geometry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultGeometry")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetEndCapStyle(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEndCapStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetQuadrantSegments(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setQuadrantSegments")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is supported by objects with data that can be flushed to a data source. */
-@js.native
 trait XFlushable extends XInterface {
   /** adds the specified listener to receive event "flushed." */
-  def addFlushListener(l: XFlushListener): Unit = js.native
+  def addFlushListener(l: XFlushListener): Unit
   /** flushes the data of the object to the connected data source. */
-  def flush(): Unit = js.native
+  def flush(): Unit
   /** removes the specified listener. */
-  def removeFlushListener(l: XFlushListener): Unit = js.native
+  def removeFlushListener(l: XFlushListener): Unit
 }
 
 object XFlushable {
@@ -30,31 +29,5 @@ object XFlushable {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addFlushListener = js.Any.fromFunction1(addFlushListener), flush = js.Any.fromFunction0(flush), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeFlushListener = js.Any.fromFunction1(removeFlushListener))
     __obj.asInstanceOf[XFlushable]
   }
-  @scala.inline
-  implicit class XFlushableOps[Self <: XFlushable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddFlushListener(value: XFlushListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFlushListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveFlushListener(value: XFlushListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFlushListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

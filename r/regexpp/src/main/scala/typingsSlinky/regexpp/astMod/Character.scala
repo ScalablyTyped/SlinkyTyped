@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Character
   extends LeafNode
      with NodeBase
      with CharacterClassElement
      with QuantifiableElement {
   @JSName("parent")
-  var parent_Character: Alternative | Quantifier | CharacterClass | CharacterClassRange = js.native
+  var parent_Character: Alternative | Quantifier | CharacterClass | CharacterClassRange
   @JSName("type")
-  var type_Character: typingsSlinky.regexpp.regexppStrings.Character = js.native
-  var value: Double = js.native
+  var type_Character: typingsSlinky.regexpp.regexppStrings.Character
+  var value: Double
 }
 
 object Character {
@@ -31,31 +30,5 @@ object Character {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Character]
   }
-  @scala.inline
-  implicit class CharacterOps[Self <: Character] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParent(value: Alternative | Quantifier | CharacterClass | CharacterClassRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.regexpp.regexppStrings.Character): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,8 @@
 package typingsSlinky.vegaTypings.markMod
 
-import typingsSlinky.vegaTypings.anon.FieldOrder
-import typingsSlinky.vegaTypings.anon.Order
+import typingsSlinky.vegaTypings.exprMod.ExprRef
+import typingsSlinky.vegaTypings.scaleMod.SortOrder
+import typingsSlinky.vegaTypings.signalMod.SignalRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,16 @@ trait Compare extends js.Object
 
 object Compare {
   @scala.inline
-  implicit def apply(value: FieldOrder): Compare = value.asInstanceOf[Compare]
+  def Order(field: String | ExprRef | SignalRef, order: SortOrder = null): Compare = {
+    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Compare]
+  }
   @scala.inline
-  implicit def apply(value: Order): Compare = value.asInstanceOf[Compare]
+  def FieldOrder(field: js.Array[String | ExprRef | SignalRef], order: js.Array[SortOrder] = null): Compare = {
+    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Compare]
+  }
 }
 

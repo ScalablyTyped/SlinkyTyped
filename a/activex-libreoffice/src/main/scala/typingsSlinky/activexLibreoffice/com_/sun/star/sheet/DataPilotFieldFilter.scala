@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataPilotFieldFilter extends js.Object {
   /** Field name. */
-  var FieldName: String = js.native
+  var FieldName: String
   /**
     * String value that needs to match against, locale independent.
     *
     * This is the underlying value formatted in a standardized way, for example ISO 8601 YYYY-MM-DD for dates.
     */
-  var MatchValue: String = js.native
+  var MatchValue: String
   /**
     * String value that needs to match against, locale dependent.
     *
     * This is the value as name/label as also displayed in the filter popup dialog, maybe formatted by user applied number formats.
     */
-  var MatchValueName: String = js.native
+  var MatchValueName: String
 }
 
 object DataPilotFieldFilter {
@@ -28,31 +27,5 @@ object DataPilotFieldFilter {
     val __obj = js.Dynamic.literal(FieldName = FieldName.asInstanceOf[js.Any], MatchValue = MatchValue.asInstanceOf[js.Any], MatchValueName = MatchValueName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataPilotFieldFilter]
   }
-  @scala.inline
-  implicit class DataPilotFieldFilterOps[Self <: DataPilotFieldFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatchValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatchValueName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchValueName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

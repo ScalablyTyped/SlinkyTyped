@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.anon.EventName
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.CheckboxVisibility
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
@@ -16,7 +15,6 @@ import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -31,62 +29,61 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/DetailsList/DetailsList.types.IDetailsListProps, 'onRenderItemColumn' | 'getCellValueKey'> */
 /* Inlined parent office-ui-fabric-react.office-ui-fabric-react/lib/Utilities.IBaseProps<office-ui-fabric-react.office-ui-fabric-react/lib/components/DetailsList/DetailsRow.types.IDetailsRow> */
 /* Inlined parent office-ui-fabric-react.office-ui-fabric-react/lib/components/DetailsList/DetailsRow.types.IDetailsItemProps */
-@js.native
 trait IDetailsRowBaseProps extends js.Object {
   /**
     * Rules for rendering column cells.
     */
-  var cellStyleProps: js.UndefOr[ICellStyleProps] = js.native
+  var cellStyleProps: js.UndefOr[ICellStyleProps] = js.undefined
   /**
     * Optional pre-rendered content per column. Preferred over onRender or onRenderItemColumn if provided.
     */
-  var cellsByColumn: js.UndefOr[StringDictionary[TagMod[Any]]] = js.native
+  var cellsByColumn: js.UndefOr[StringDictionary[TagMod[Any]]] = js.undefined
   /**
     * Check button's aria label
     */
-  var checkButtonAriaLabel: js.UndefOr[String] = js.native
+  var checkButtonAriaLabel: js.UndefOr[String] = js.undefined
   /**
     * Class name for the checkbox cell
     */
-  var checkboxCellClassName: js.UndefOr[String] = js.native
+  var checkboxCellClassName: js.UndefOr[String] = js.undefined
   /**
     * Checkbox visibility
     */
-  var checkboxVisibility: js.UndefOr[CheckboxVisibility] = js.native
+  var checkboxVisibility: js.UndefOr[CheckboxVisibility] = js.undefined
   /**
     * Overriding class name
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Collapse all visibility
     */
-  var collapseAllVisibility: js.UndefOr[CollapseAllVisibility] = js.native
+  var collapseAllVisibility: js.UndefOr[CollapseAllVisibility] = js.undefined
   /**
     * Column metadata
     */
-  var columns: js.UndefOr[js.Array[IColumn]] = js.native
+  var columns: js.UndefOr[js.Array[IColumn]] = js.undefined
   /**
     * Whether to render in compact mode
     */
-  var compact: js.UndefOr[Boolean] = js.native
+  var compact: js.UndefOr[Boolean] = js.undefined
   /**
     * Ref of the component
     */
-  var componentRef: js.UndefOr[IRefObject[IDetailsRow]] = js.native
+  var componentRef: js.UndefOr[IRefObject[IDetailsRow]] = js.undefined
   /**
     * Handling drag and drop events
     */
-  var dragDropEvents: js.UndefOr[IDragDropEvents] = js.native
+  var dragDropEvents: js.UndefOr[IDragDropEvents] = js.undefined
   /**
     * Helper for the drag and drop
     */
-  var dragDropHelper: js.UndefOr[IDragDropHelper] = js.native
+  var dragDropHelper: js.UndefOr[IDragDropHelper] = js.undefined
   /** Whether to animate updates */
-  var enableUpdateAnimations: js.UndefOr[Boolean] = js.native
+  var enableUpdateAnimations: js.UndefOr[Boolean] = js.undefined
   /**
     * A list of events to register
     */
-  var eventsToRegister: js.UndefOr[js.Array[EventName]] = js.native
+  var eventsToRegister: js.UndefOr[js.Array[EventName]] = js.undefined
   var getCellValueKey: js.UndefOr[
     js.Function3[
       /* item */ js.UndefOr[js.Any], 
@@ -94,43 +91,43 @@ trait IDetailsRowBaseProps extends js.Object {
       /* column */ js.UndefOr[IColumn], 
       String
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Callback for getting the row aria-describedby
     */
-  var getRowAriaDescribedBy: js.UndefOr[js.Function1[/* item */ js.Any, String]] = js.native
+  var getRowAriaDescribedBy: js.UndefOr[js.Function1[/* item */ js.Any, String]] = js.undefined
   /**
     * Callback for getting the row aria label
     */
-  var getRowAriaLabel: js.UndefOr[js.Function1[/* item */ js.Any, String]] = js.native
+  var getRowAriaLabel: js.UndefOr[js.Function1[/* item */ js.Any, String]] = js.undefined
   /**
     * Nesting depth of a grouping
     */
-  var groupNestingDepth: js.UndefOr[Double] = js.native
+  var groupNestingDepth: js.UndefOr[Double] = js.undefined
   /**
     * How much to indent
     */
-  var indentWidth: js.UndefOr[Double] = js.native
+  var indentWidth: js.UndefOr[Double] = js.undefined
   /**
     * Data source for this component
     */
-  var item: js.Any = js.native
+  var item: js.Any
   /**
     * Index of the collection of items of the DetailsList
     */
-  var itemIndex: Double = js.native
+  var itemIndex: Double
   /**
     * Callback for did mount for parent
     */
-  var onDidMount: js.UndefOr[js.Function1[/* row */ js.UndefOr[DetailsRowBase], Unit]] = js.native
+  var onDidMount: js.UndefOr[js.Function1[/* row */ js.UndefOr[DetailsRowBase], Unit]] = js.undefined
   /**
     * Callback for rendering a checkbox
     */
-  var onRenderCheck: js.UndefOr[js.Function1[/* props */ IDetailsRowCheckProps, ReactElement]] = js.native
+  var onRenderCheck: js.UndefOr[js.Function1[/* props */ IDetailsRowCheckProps, ReactElement]] = js.undefined
   /**
     * If provided, can be used to render a custom checkbox
     */
-  var onRenderDetailsCheckbox: js.UndefOr[IRenderFunction[IDetailsCheckboxProps]] = js.native
+  var onRenderDetailsCheckbox: js.UndefOr[IRenderFunction[IDetailsCheckboxProps]] = js.undefined
   var onRenderItemColumn: js.UndefOr[
     js.Function3[
       /* item */ js.UndefOr[js.Any], 
@@ -138,513 +135,130 @@ trait IDetailsRowBaseProps extends js.Object {
       /* column */ js.UndefOr[IColumn], 
       TagMod[Any]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Callback for will mount for parent
     */
-  var onWillUnmount: js.UndefOr[js.Function1[/* row */ js.UndefOr[DetailsRowBase], Unit]] = js.native
+  var onWillUnmount: js.UndefOr[js.Function1[/* row */ js.UndefOr[DetailsRowBase], Unit]] = js.undefined
   /**
     * DOM element into which to render row field
     */
-  var rowFieldsAs: js.UndefOr[ReactComponentClass[IDetailsRowFieldsProps]] = js.native
+  var rowFieldsAs: js.UndefOr[ReactComponentClass[IDetailsRowFieldsProps]] = js.undefined
   /**
     * Minimum width of the row.
     *
     * @defaultvalue 0
     */
-  var rowWidth: js.UndefOr[Double] = js.native
+  var rowWidth: js.UndefOr[Double] = js.undefined
   /**
     * Selection from utilities
     */
-  var selection: js.UndefOr[ISelection[IObjectWithKey]] = js.native
+  var selection: js.UndefOr[ISelection[IObjectWithKey]] = js.undefined
   /**
     * Selection mode
     */
-  var selectionMode: js.UndefOr[SelectionMode] = js.native
+  var selectionMode: js.UndefOr[SelectionMode] = js.undefined
   /**
     * Overriding styles to this row
     */
-  var styles: js.UndefOr[IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles]] = js.native
+  var styles: js.UndefOr[IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles]] = js.undefined
   /**
     * Theme provided by styled() function
     */
-  var theme: js.UndefOr[ITheme] = js.native
+  var theme: js.UndefOr[ITheme] = js.undefined
   /**
     * Whether to use fast icon and check components. The icons can't be targeted by customization
     * but are still customizable via class names.
     * @defaultvalue true
     */
-  var useFastIcons: js.UndefOr[Boolean] = js.native
+  var useFastIcons: js.UndefOr[Boolean] = js.undefined
   /**
     * Rerender DetailsRow only when props changed. Might cause regression when depending on external updates.
     * @defaultvalue false
     */
-  var useReducedRowRenderer: js.UndefOr[Boolean] = js.native
+  var useReducedRowRenderer: js.UndefOr[Boolean] = js.undefined
   /**
     * View port of the virtualized list
     *
     * @deprecated use rowWidth instead
     */
-  var viewport: js.UndefOr[IViewport] = js.native
+  var viewport: js.UndefOr[IViewport] = js.undefined
 }
 
 object IDetailsRowBaseProps {
   @scala.inline
-  def apply(item: js.Any, itemIndex: Double): IDetailsRowBaseProps = {
+  def apply(
+    item: js.Any,
+    itemIndex: Double,
+    cellStyleProps: ICellStyleProps = null,
+    cellsByColumn: StringDictionary[TagMod[Any]] = null,
+    checkButtonAriaLabel: String = null,
+    checkboxCellClassName: String = null,
+    checkboxVisibility: CheckboxVisibility = null,
+    className: String = null,
+    collapseAllVisibility: CollapseAllVisibility = null,
+    columns: js.Array[IColumn] = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    componentRef: IRefObject[IDetailsRow] = null,
+    dragDropEvents: IDragDropEvents = null,
+    dragDropHelper: IDragDropHelper = null,
+    enableUpdateAnimations: js.UndefOr[Boolean] = js.undefined,
+    eventsToRegister: js.Array[EventName] = null,
+    getCellValueKey: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => String = null,
+    getRowAriaDescribedBy: /* item */ js.Any => String = null,
+    getRowAriaLabel: /* item */ js.Any => String = null,
+    groupNestingDepth: js.UndefOr[Double] = js.undefined,
+    indentWidth: js.UndefOr[Double] = js.undefined,
+    onDidMount: /* row */ js.UndefOr[DetailsRowBase] => Unit = null,
+    onRenderCheck: /* props */ IDetailsRowCheckProps => ReactElement = null,
+    onRenderDetailsCheckbox: (/* props */ js.UndefOr[IDetailsCheckboxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsCheckboxProps], ReactElement | Null]]) => ReactElement | Null = null,
+    onRenderItemColumn: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any] = null,
+    onWillUnmount: /* row */ js.UndefOr[DetailsRowBase] => Unit = null,
+    rowFieldsAs: ReactComponentClass[IDetailsRowFieldsProps] = null,
+    rowWidth: js.UndefOr[Double] = js.undefined,
+    selection: ISelection[IObjectWithKey] = null,
+    selectionMode: SelectionMode = null,
+    styles: IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles] = null,
+    theme: ITheme = null,
+    useFastIcons: js.UndefOr[Boolean] = js.undefined,
+    useReducedRowRenderer: js.UndefOr[Boolean] = js.undefined,
+    viewport: IViewport = null
+  ): IDetailsRowBaseProps = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any])
+    if (cellStyleProps != null) __obj.updateDynamic("cellStyleProps")(cellStyleProps.asInstanceOf[js.Any])
+    if (cellsByColumn != null) __obj.updateDynamic("cellsByColumn")(cellsByColumn.asInstanceOf[js.Any])
+    if (checkButtonAriaLabel != null) __obj.updateDynamic("checkButtonAriaLabel")(checkButtonAriaLabel.asInstanceOf[js.Any])
+    if (checkboxCellClassName != null) __obj.updateDynamic("checkboxCellClassName")(checkboxCellClassName.asInstanceOf[js.Any])
+    if (checkboxVisibility != null) __obj.updateDynamic("checkboxVisibility")(checkboxVisibility.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (collapseAllVisibility != null) __obj.updateDynamic("collapseAllVisibility")(collapseAllVisibility.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
+    if (dragDropEvents != null) __obj.updateDynamic("dragDropEvents")(dragDropEvents.asInstanceOf[js.Any])
+    if (dragDropHelper != null) __obj.updateDynamic("dragDropHelper")(dragDropHelper.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableUpdateAnimations)) __obj.updateDynamic("enableUpdateAnimations")(enableUpdateAnimations.get.asInstanceOf[js.Any])
+    if (eventsToRegister != null) __obj.updateDynamic("eventsToRegister")(eventsToRegister.asInstanceOf[js.Any])
+    if (getCellValueKey != null) __obj.updateDynamic("getCellValueKey")(js.Any.fromFunction3(getCellValueKey))
+    if (getRowAriaDescribedBy != null) __obj.updateDynamic("getRowAriaDescribedBy")(js.Any.fromFunction1(getRowAriaDescribedBy))
+    if (getRowAriaLabel != null) __obj.updateDynamic("getRowAriaLabel")(js.Any.fromFunction1(getRowAriaLabel))
+    if (!js.isUndefined(groupNestingDepth)) __obj.updateDynamic("groupNestingDepth")(groupNestingDepth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(indentWidth)) __obj.updateDynamic("indentWidth")(indentWidth.get.asInstanceOf[js.Any])
+    if (onDidMount != null) __obj.updateDynamic("onDidMount")(js.Any.fromFunction1(onDidMount))
+    if (onRenderCheck != null) __obj.updateDynamic("onRenderCheck")(js.Any.fromFunction1(onRenderCheck))
+    if (onRenderDetailsCheckbox != null) __obj.updateDynamic("onRenderDetailsCheckbox")(js.Any.fromFunction2(onRenderDetailsCheckbox))
+    if (onRenderItemColumn != null) __obj.updateDynamic("onRenderItemColumn")(js.Any.fromFunction3(onRenderItemColumn))
+    if (onWillUnmount != null) __obj.updateDynamic("onWillUnmount")(js.Any.fromFunction1(onWillUnmount))
+    if (rowFieldsAs != null) __obj.updateDynamic("rowFieldsAs")(rowFieldsAs.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowWidth)) __obj.updateDynamic("rowWidth")(rowWidth.get.asInstanceOf[js.Any])
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(useFastIcons)) __obj.updateDynamic("useFastIcons")(useFastIcons.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useReducedRowRenderer)) __obj.updateDynamic("useReducedRowRenderer")(useReducedRowRenderer.get.asInstanceOf[js.Any])
+    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDetailsRowBaseProps]
   }
-  @scala.inline
-  implicit class IDetailsRowBasePropsOps[Self <: IDetailsRowBaseProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCellStyleProps(value: ICellStyleProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyleProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellStyleProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyleProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellsByColumn(value: StringDictionary[TagMod[Any]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellsByColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellsByColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellsByColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckButtonAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkButtonAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckButtonAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkButtonAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckboxCellClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxCellClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxCellClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxCellClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckboxVisibility(value: CheckboxVisibility): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxVisibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseAllVisibility(value: CollapseAllVisibility): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAllVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseAllVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAllVisibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[IColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentRefFunction1(value: /* ref */ IDetailsRow | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComponentRefRefObject(value: ReactRef[IDetailsRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRef(value: IRefObject[IDetailsRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragDropEvents(value: IDragDropEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDropEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragDropEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDropEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragDropHelper(value: IDragDropHelper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDropHelper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragDropHelper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDropHelper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableUpdateAnimations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUpdateAnimations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableUpdateAnimations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUpdateAnimations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventsToRegister(value: js.Array[EventName]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventsToRegister")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventsToRegister: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventsToRegister")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetCellValueKey(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCellValueKey")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetCellValueKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCellValueKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRowAriaDescribedBy(value: /* item */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowAriaDescribedBy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRowAriaDescribedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowAriaDescribedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRowAriaLabel(value: /* item */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowAriaLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRowAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupNestingDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupNestingDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupNestingDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupNestingDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndentWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndentWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indentWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDidMount(value: /* row */ js.UndefOr[DetailsRowBase] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidMount")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDidMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDidMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRenderCheck(value: /* props */ IDetailsRowCheckProps => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderCheck")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRenderCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRenderDetailsCheckbox(
-      value: (/* props */ js.UndefOr[IDetailsCheckboxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IDetailsCheckboxProps], ReactElement | Null]]) => ReactElement | Null
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderDetailsCheckbox")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRenderDetailsCheckbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderDetailsCheckbox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRenderItemColumn(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => TagMod[Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderItemColumn")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRenderItemColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRenderItemColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWillUnmount(value: /* row */ js.UndefOr[DetailsRowBase] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWillUnmount")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnWillUnmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWillUnmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowFieldsAsFunctionComponent(value: ReactComponentClass[IDetailsRowFieldsProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFieldsAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowFieldsAsComponentClass(value: ReactComponentClass[IDetailsRowFieldsProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFieldsAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowFieldsAs(value: ReactComponentClass[IDetailsRowFieldsProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFieldsAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowFieldsAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowFieldsAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelection(value: ISelection[IObjectWithKey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: SelectionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStylesFunction1(value: IDetailsRowStyleProps => Partial[IDetailsRowStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStyles(value: IStyleFunctionOrObject[IDetailsRowStyleProps, IDetailsRowStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseFastIcons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFastIcons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseFastIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFastIcons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseReducedRowRenderer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useReducedRowRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseReducedRowRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useReducedRowRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewport(value: IViewport): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

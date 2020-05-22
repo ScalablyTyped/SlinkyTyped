@@ -1,7 +1,6 @@
 package typingsSlinky.reactToolbox.listListItemContentMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.reactToolbox.reactToolboxStrings.auto
 import typingsSlinky.reactToolbox.reactToolboxStrings.large
 import typingsSlinky.reactToolbox.reactToolboxStrings.normal
@@ -9,115 +8,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListItemContentProps extends js.Object {
   /**
     * Main text of the item.
     */
-  var caption: js.UndefOr[TagMod[Any]] = js.native
+  var caption: js.UndefOr[TagMod[Any]] = js.undefined
   /**
     * Children to pass through the component.
     */
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
   /**
     * Secondary text to display under the caption.
     */
-  var legend: js.UndefOr[String] = js.native
+  var legend: js.UndefOr[String] = js.undefined
   /**
     * Object defining the component class name mappings.
     */
-  var theme: js.UndefOr[ListItemContentTheme] = js.native
+  var theme: js.UndefOr[ListItemContentTheme] = js.undefined
   /**
     * List item content type.
     */
-  var `type`: js.UndefOr[auto | normal | large] = js.native
+  var `type`: js.UndefOr[auto | normal | large] = js.undefined
 }
 
 object ListItemContentProps {
   @scala.inline
-  def apply(): ListItemContentProps = {
+  def apply(
+    caption: TagMod[Any] = null,
+    children: TagMod[Any] = null,
+    legend: String = null,
+    theme: ListItemContentTheme = null,
+    `type`: auto | normal | large = null
+  ): ListItemContentProps = {
     val __obj = js.Dynamic.literal()
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListItemContentProps]
   }
-  @scala.inline
-  implicit class ListItemContentPropsOps[Self <: ListItemContentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptionReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegend(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ListItemContentTheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: auto | normal | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

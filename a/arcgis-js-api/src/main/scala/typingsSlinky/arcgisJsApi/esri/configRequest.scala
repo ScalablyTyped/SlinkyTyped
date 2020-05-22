@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait configRequest extends Object {
   /**
     * List of domain suffixes known to support https. This will automatically upgrade requests made to such domains to use https instead of http when the application is not running on http. Note that port numbers should not be included in the domain suffix to be matched.  If no `httpsDomains` list exists , the API redirects all calls using https. If the list exists and a domain of a required http resource is not listed, the API sends the URL as it is specified within the code. Likewise, if the list exists and the domain of a required http resource is listed in it, the API sends an https request to that resource.  The list includes the following domain suffixes by default:
@@ -15,7 +14,7 @@ trait configRequest extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#request)
     */
-  var httpsDomains: js.UndefOr[js.Array[String]] = js.native
+  var httpsDomains: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * **Since:** 4.8 Allows developers to modify requests before or after they are sent. The first interceptor that matches the request URL will be used.  Example:
     * ```js
@@ -46,7 +45,7 @@ trait configRequest extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#request)
     */
-  var interceptors: js.UndefOr[js.Array[RequestInterceptor]] = js.native
+  var interceptors: js.UndefOr[js.Array[RequestInterceptor]] = js.undefined
   /**
     * Maximum number of characters allowed in the URL for HTTP GET requests made by [request](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html). If this limit is exceeded, HTTP POST method will be used.
     *
@@ -54,13 +53,13 @@ trait configRequest extends Object {
     *
     * @default 2000
     */
-  var maxUrlLength: js.UndefOr[Double] = js.native
+  var maxUrlLength: js.UndefOr[Double] = js.undefined
   /**
     * A proxy rule defines a proxy for a set of resources with an identical URL prefix. When using [esriRequest](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html), if a target URL matches a rule, then the request will be sent to the specified proxy. Rather than populating this array directly, use the urlUtils.addProxyRule() method. Rule objects have the following properties:
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#request)
     */
-  var proxyRules: js.UndefOr[js.Array[configRequestProxyRules]] = js.native
+  var proxyRules: js.UndefOr[js.Array[configRequestProxyRules]] = js.undefined
   /**
     * Resource proxy for your application. It is used by the library when communicating with a web server hosted on a domain that is different from the domain where your application is hosted.  The library may or may not use the proxy depending on the type of request made, whether the server support CORS, whether the application is being run on older versions of browsers etc. To keep it simple, it is recommended that you always configure a resource proxy for your application.  You can download the resource proxy from this [GitHub repo](https://github.com/Esri/resource-proxy).
     * ```js
@@ -71,7 +70,7 @@ trait configRequest extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#request)
     */
-  var proxyUrl: js.UndefOr[String] = js.native
+  var proxyUrl: js.UndefOr[String] = js.undefined
   /**
     * Number of milliseconds [request](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html) will wait for response from a server. If a server fails to respond before this time expires, then the request is considered to have encountered an error.
     *
@@ -79,7 +78,7 @@ trait configRequest extends Object {
     *
     * @default 60000
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /**
     * **Since:** 4.9 Indicates whether cross origin requests made to the associated server should include credentials such as cookies and authorization headers.
     * ```js
@@ -90,7 +89,7 @@ trait configRequest extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#request)
     */
-  var trustedServers: js.UndefOr[js.Array[String]] = js.native
+  var trustedServers: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * **Since:** 4.5 Indicates whether `esri/request` will request a credential from `IdentityManager`.
     *
@@ -98,7 +97,7 @@ trait configRequest extends Object {
     *
     * @default true
     */
-  var useIdentity: js.UndefOr[Boolean] = js.native
+  var useIdentity: js.UndefOr[Boolean] = js.undefined
 }
 
 object configRequest {
@@ -106,114 +105,26 @@ object configRequest {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean
+    propertyIsEnumerable: PropertyKey => Boolean,
+    httpsDomains: js.Array[String] = null,
+    interceptors: js.Array[RequestInterceptor] = null,
+    maxUrlLength: js.UndefOr[Double] = js.undefined,
+    proxyRules: js.Array[configRequestProxyRules] = null,
+    proxyUrl: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    trustedServers: js.Array[String] = null,
+    useIdentity: js.UndefOr[Boolean] = js.undefined
   ): configRequest = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
+    if (httpsDomains != null) __obj.updateDynamic("httpsDomains")(httpsDomains.asInstanceOf[js.Any])
+    if (interceptors != null) __obj.updateDynamic("interceptors")(interceptors.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxUrlLength)) __obj.updateDynamic("maxUrlLength")(maxUrlLength.get.asInstanceOf[js.Any])
+    if (proxyRules != null) __obj.updateDynamic("proxyRules")(proxyRules.asInstanceOf[js.Any])
+    if (proxyUrl != null) __obj.updateDynamic("proxyUrl")(proxyUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (trustedServers != null) __obj.updateDynamic("trustedServers")(trustedServers.asInstanceOf[js.Any])
+    if (!js.isUndefined(useIdentity)) __obj.updateDynamic("useIdentity")(useIdentity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[configRequest]
   }
-  @scala.inline
-  implicit class configRequestOps[Self <: configRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpsDomains(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpsDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsDomains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterceptors(value: js.Array[RequestInterceptor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterceptors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxUrlLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUrlLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxUrlLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUrlLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyRules(value: js.Array[configRequestProxyRules]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxyUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrustedServers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trustedServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrustedServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trustedServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseIdentity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useIdentity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

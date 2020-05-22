@@ -11,5 +11,6 @@ package object mod {
   ]
   type Coordinates = js.Tuple2[scala.Double, scala.Double]
   type CoordinatesZ = js.Tuple3[scala.Double, scala.Double, scala.Double]
+  type Padding = scala.Double | typingsSlinky.viewportMercatorProject.anon.Bottom
   type ViewMatrix = js.Array[scala.Double]
 }

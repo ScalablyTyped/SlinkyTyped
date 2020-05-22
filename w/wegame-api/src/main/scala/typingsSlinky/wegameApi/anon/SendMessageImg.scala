@@ -4,142 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SendMessageImg extends js.Object {
-  var complete: js.UndefOr[js.Function0[Unit]] = js.native
-  var fail: js.UndefOr[js.Function0[Unit]] = js.native
+  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * 会话内消息卡片图片路径
     */
-  var sendMessageImg: js.UndefOr[String] = js.native
+  var sendMessageImg: js.UndefOr[String] = js.undefined
   /**
     * 会话内消息卡片路径
     */
-  var sendMessagePath: js.UndefOr[String] = js.native
+  var sendMessagePath: js.UndefOr[String] = js.undefined
   /**
     * 会话内消息卡片标题
     */
-  var sendMessageTitle: js.UndefOr[String] = js.native
+  var sendMessageTitle: js.UndefOr[String] = js.undefined
   /**
     * 会话来源
     */
-  var sessionFrom: js.UndefOr[String] = js.native
+  var sessionFrom: js.UndefOr[String] = js.undefined
   /**
     * 是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话之后会收到一个消息卡片，通过以下三个参数设置卡片的内容
     */
-  var showMessageCard: js.UndefOr[Boolean] = js.native
-  var success: js.UndefOr[js.Function0[Unit]] = js.native
+  var showMessageCard: js.UndefOr[Boolean] = js.undefined
+  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object SendMessageImg {
   @scala.inline
-  def apply(): SendMessageImg = {
+  def apply(
+    complete: () => Unit = null,
+    fail: () => Unit = null,
+    sendMessageImg: String = null,
+    sendMessagePath: String = null,
+    sendMessageTitle: String = null,
+    sessionFrom: String = null,
+    showMessageCard: js.UndefOr[Boolean] = js.undefined,
+    success: () => Unit = null
+  ): SendMessageImg = {
     val __obj = js.Dynamic.literal()
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
+    if (sendMessageImg != null) __obj.updateDynamic("sendMessageImg")(sendMessageImg.asInstanceOf[js.Any])
+    if (sendMessagePath != null) __obj.updateDynamic("sendMessagePath")(sendMessagePath.asInstanceOf[js.Any])
+    if (sendMessageTitle != null) __obj.updateDynamic("sendMessageTitle")(sendMessageTitle.asInstanceOf[js.Any])
+    if (sessionFrom != null) __obj.updateDynamic("sessionFrom")(sessionFrom.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMessageCard)) __obj.updateDynamic("showMessageCard")(showMessageCard.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
     __obj.asInstanceOf[SendMessageImg]
   }
-  @scala.inline
-  implicit class SendMessageImgOps[Self <: SendMessageImg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendMessageImg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessageImg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendMessageImg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessageImg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendMessagePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessagePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendMessagePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessagePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendMessageTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessageTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendMessageTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessageTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMessageCard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMessageCard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMessageCard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMessageCard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

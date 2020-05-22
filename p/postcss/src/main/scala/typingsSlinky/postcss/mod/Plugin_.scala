@@ -5,8 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.postcss.mod.AcceptedPlugin because Already inherited */ @js.native
+@js.native
 trait Plugin_[T] extends Transformer {
   var postcss: Transformer = js.native
   def apply(): Transformer = js.native

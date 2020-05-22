@@ -7,25 +7,24 @@ import scala.scalajs.js.annotation._
 /**
   * Information about the condition of a component.
   */
-@js.native
 trait ComponentCondition extends js.Object {
   /**
     * Condition error code for a component. For example, a health check error code.
     */
-  val error: String = js.native
+  val error: String
   /**
     * Message about the condition for a component. For example, information about a health check.
     */
-  val message: String = js.native
+  val message: String
   /**
     * Status of the condition for a component. Valid values for "Healthy": "True", "False", or
     * "Unknown".
     */
-  val status: String = js.native
+  val status: String
   /**
     * Type of condition for a component. Valid value: "Healthy"
     */
-  val `type`: String = js.native
+  val `type`: String
 }
 
 object ComponentCondition {
@@ -35,37 +34,5 @@ object ComponentCondition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComponentCondition]
   }
-  @scala.inline
-  implicit class ComponentConditionOps[Self <: ComponentCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

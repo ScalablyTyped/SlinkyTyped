@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * specifies accessibility support for a scroll bar.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleScrollBar
   extends XAccessibleExtendedComponent
      with XAccessibleContext

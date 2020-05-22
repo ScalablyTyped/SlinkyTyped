@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextInsertion extends js.Object {
   /** The position in newText the caret should point to after the insertion. */
-  var caretOffset: Double = js.native
-  var newText: java.lang.String = js.native
+  var caretOffset: Double
+  var newText: java.lang.String
 }
 
 object TextInsertion {
@@ -17,25 +16,5 @@ object TextInsertion {
     val __obj = js.Dynamic.literal(caretOffset = caretOffset.asInstanceOf[js.Any], newText = newText.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextInsertion]
   }
-  @scala.inline
-  implicit class TextInsertionOps[Self <: TextInsertion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaretOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caretOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewText(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

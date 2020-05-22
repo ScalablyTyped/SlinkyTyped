@@ -18,41 +18,11 @@ trait DescribeVpcsResult extends js.Object {
 
 object DescribeVpcsResult {
   @scala.inline
-  def apply(): DescribeVpcsResult = {
+  def apply(NextToken: String = null, Vpcs: VpcList = null): DescribeVpcsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Vpcs != null) __obj.updateDynamic("Vpcs")(Vpcs.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpcsResult]
   }
-  @scala.inline
-  implicit class DescribeVpcsResultOps[Self <: DescribeVpcsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcs(value: VpcList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vpcs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vpcs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

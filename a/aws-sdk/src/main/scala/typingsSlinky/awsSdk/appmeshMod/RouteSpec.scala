@@ -31,77 +31,20 @@ trait RouteSpec extends js.Object {
 
 object RouteSpec {
   @scala.inline
-  def apply(): RouteSpec = {
+  def apply(
+    grpcRoute: GrpcRoute = null,
+    http2Route: HttpRoute = null,
+    httpRoute: HttpRoute = null,
+    priority: js.UndefOr[RoutePriority] = js.undefined,
+    tcpRoute: TcpRoute = null
+  ): RouteSpec = {
     val __obj = js.Dynamic.literal()
+    if (grpcRoute != null) __obj.updateDynamic("grpcRoute")(grpcRoute.asInstanceOf[js.Any])
+    if (http2Route != null) __obj.updateDynamic("http2Route")(http2Route.asInstanceOf[js.Any])
+    if (httpRoute != null) __obj.updateDynamic("httpRoute")(httpRoute.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (tcpRoute != null) __obj.updateDynamic("tcpRoute")(tcpRoute.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteSpec]
   }
-  @scala.inline
-  implicit class RouteSpecOps[Self <: RouteSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrpcRoute(value: GrpcRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpcRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrpcRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpcRoute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttp2Route(value: HttpRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http2Route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttp2Route: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http2Route")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpRoute(value: HttpRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRoute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: RoutePriority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTcpRoute(value: TcpRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTcpRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpRoute")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,43 +1,34 @@
 package typingsSlinky.hapiMimos.mod
 
 import typingsSlinky.mimeDb.mod.MimeEntry
+import typingsSlinky.mimeDb.mod.MimeSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MimosOptionsValue extends MimeEntry {
   /**
     * Specify the type value of result objects, defaults to key.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object MimosOptionsValue {
   @scala.inline
-  def apply(): MimosOptionsValue = {
+  def apply(
+    charset: String = null,
+    compressible: js.UndefOr[Boolean] = js.undefined,
+    extensions: js.Array[String] = null,
+    source: MimeSource = null,
+    `type`: String = null
+  ): MimosOptionsValue = {
     val __obj = js.Dynamic.literal()
+    if (charset != null) __obj.updateDynamic("charset")(charset.asInstanceOf[js.Any])
+    if (!js.isUndefined(compressible)) __obj.updateDynamic("compressible")(compressible.get.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MimosOptionsValue]
   }
-  @scala.inline
-  implicit class MimosOptionsValueOps[Self <: MimosOptionsValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,192 +7,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait YouTubeProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var containerClassName: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var onEnd: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
-  var onPause: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
-  var onPlay: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
-  var onPlaybackQualityChange: js.UndefOr[js.Function1[/* event */ DataTarget, Unit]] = js.native
-  var onPlaybackRateChange: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
-  var onReady: js.UndefOr[js.Function1[/* event */ Target, Unit]] = js.native
-  var onStateChange: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
-  var opts: js.UndefOr[Options] = js.native
-  var videoId: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var containerClassName: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var onEnd: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.undefined
+  var onPause: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.undefined
+  var onPlay: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.undefined
+  var onPlaybackQualityChange: js.UndefOr[js.Function1[/* event */ DataTarget, Unit]] = js.undefined
+  var onPlaybackRateChange: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.undefined
+  var onReady: js.UndefOr[js.Function1[/* event */ Target, Unit]] = js.undefined
+  var onStateChange: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.undefined
+  var opts: js.UndefOr[Options] = js.undefined
+  var videoId: js.UndefOr[String] = js.undefined
 }
 
 object YouTubeProps {
   @scala.inline
-  def apply(): YouTubeProps = {
+  def apply(
+    className: String = null,
+    containerClassName: String = null,
+    id: String = null,
+    onEnd: /* event */ Data => Unit = null,
+    onError: /* event */ Data => Unit = null,
+    onPause: /* event */ Data => Unit = null,
+    onPlay: /* event */ Data => Unit = null,
+    onPlaybackQualityChange: /* event */ DataTarget => Unit = null,
+    onPlaybackRateChange: /* event */ Data => Unit = null,
+    onReady: /* event */ Target => Unit = null,
+    onStateChange: /* event */ Data => Unit = null,
+    opts: Options = null,
+    videoId: String = null
+  ): YouTubeProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
+    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
+    if (onPlaybackQualityChange != null) __obj.updateDynamic("onPlaybackQualityChange")(js.Any.fromFunction1(onPlaybackQualityChange))
+    if (onPlaybackRateChange != null) __obj.updateDynamic("onPlaybackRateChange")(js.Any.fromFunction1(onPlaybackRateChange))
+    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction1(onReady))
+    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction1(onStateChange))
+    if (opts != null) __obj.updateDynamic("opts")(opts.asInstanceOf[js.Any])
+    if (videoId != null) __obj.updateDynamic("videoId")(videoId.asInstanceOf[js.Any])
     __obj.asInstanceOf[YouTubeProps]
   }
-  @scala.inline
-  implicit class YouTubePropsOps[Self <: YouTubeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: /* event */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* event */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPause(value: /* event */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlay(value: /* event */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlaybackQualityChange(value: /* event */ DataTarget => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackQualityChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlaybackQualityChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackQualityChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPlaybackRateChange(value: /* event */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackRateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPlaybackRateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackRateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReady(value: /* event */ Target => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStateChange(value: /* event */ Data => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpts(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

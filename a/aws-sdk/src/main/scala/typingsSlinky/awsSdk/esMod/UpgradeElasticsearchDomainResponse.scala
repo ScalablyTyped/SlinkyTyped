@@ -19,53 +19,16 @@ trait UpgradeElasticsearchDomainResponse extends js.Object {
 
 object UpgradeElasticsearchDomainResponse {
   @scala.inline
-  def apply(): UpgradeElasticsearchDomainResponse = {
+  def apply(
+    DomainName: DomainName = null,
+    PerformCheckOnly: js.UndefOr[Boolean] = js.undefined,
+    TargetVersion: ElasticsearchVersionString = null
+  ): UpgradeElasticsearchDomainResponse = {
     val __obj = js.Dynamic.literal()
+    if (DomainName != null) __obj.updateDynamic("DomainName")(DomainName.asInstanceOf[js.Any])
+    if (!js.isUndefined(PerformCheckOnly)) __obj.updateDynamic("PerformCheckOnly")(PerformCheckOnly.get.asInstanceOf[js.Any])
+    if (TargetVersion != null) __obj.updateDynamic("TargetVersion")(TargetVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpgradeElasticsearchDomainResponse]
   }
-  @scala.inline
-  implicit class UpgradeElasticsearchDomainResponseOps[Self <: UpgradeElasticsearchDomainResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformCheckOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformCheckOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformCheckOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformCheckOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetVersion(value: ElasticsearchVersionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -110,6 +110,7 @@ package object jest {
   type ProvidesCallback = js.Function1[/* cb */ typingsSlinky.jest.mod.jest.DoneCallback, js.Any]
   type RejectedValue[T] = js.Any
   type RemoveFirstFromTuple[T /* <: js.Array[_] */] = js.Array[js.Any]
+  type ResolvedValue[T] = js.Any | T
   type SnapshotSerializerPlugin = typingsSlinky.prettyFormat.mod.Plugin
   /**
     * Represents a function that has been spied on.

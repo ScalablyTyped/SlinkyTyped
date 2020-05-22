@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation._
 
 /** This Media Source Extensions API interface represents a source of media data for an HTMLMediaElement object. A MediaSource object can be attached to a HTMLMediaElement to be played in the user agent. */
 @js.native
-trait MediaSource extends EventTarget {
+trait MediaSource
+  extends EventTarget
+     with MediaProvider {
   val activeSourceBuffers: SourceBufferList = js.native
   var duration: Double = js.native
   var onsourceclose: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native

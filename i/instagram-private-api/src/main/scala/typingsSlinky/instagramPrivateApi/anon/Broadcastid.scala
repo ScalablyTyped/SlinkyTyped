@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Broadcastid extends js.Object {
-  var broadcast_id: String = js.native
-  var upload_url: String = js.native
+  var broadcast_id: String
+  var upload_url: String
 }
 
 object Broadcastid {
@@ -16,25 +15,5 @@ object Broadcastid {
     val __obj = js.Dynamic.literal(broadcast_id = broadcast_id.asInstanceOf[js.Any], upload_url = upload_url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Broadcastid]
   }
-  @scala.inline
-  implicit class BroadcastidOps[Self <: Broadcastid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBroadcast_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("broadcast_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpload_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

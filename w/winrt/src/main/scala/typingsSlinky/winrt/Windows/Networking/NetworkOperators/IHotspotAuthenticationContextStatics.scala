@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHotspotAuthenticationContextStatics extends js.Object {
-  def tryGetAuthenticationContext(evenToken: String): Context = js.native
+  def tryGetAuthenticationContext(evenToken: String): Context
 }
 
 object IHotspotAuthenticationContextStatics {
@@ -16,19 +15,5 @@ object IHotspotAuthenticationContextStatics {
     val __obj = js.Dynamic.literal(tryGetAuthenticationContext = js.Any.fromFunction1(tryGetAuthenticationContext))
     __obj.asInstanceOf[IHotspotAuthenticationContextStatics]
   }
-  @scala.inline
-  implicit class IHotspotAuthenticationContextStaticsOps[Self <: IHotspotAuthenticationContextStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTryGetAuthenticationContext(value: String => Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tryGetAuthenticationContext")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

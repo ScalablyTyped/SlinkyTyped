@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnableReturnType extends js.Object {
   /**
     * Unique identifier of the debugger.
     * @experimental
     */
-  var debuggerId: UniqueDebuggerId = js.native
+  var debuggerId: UniqueDebuggerId
 }
 
 object EnableReturnType {
@@ -20,19 +19,5 @@ object EnableReturnType {
     val __obj = js.Dynamic.literal(debuggerId = debuggerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableReturnType]
   }
-  @scala.inline
-  implicit class EnableReturnTypeOps[Self <: EnableReturnType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebuggerId(value: UniqueDebuggerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

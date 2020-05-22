@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListBuildTriggersResponse extends js.Object {
   /** BuildTriggers for the project, sorted by create_time descending. */
-  var triggers: js.UndefOr[js.Array[BuildTrigger]] = js.native
+  var triggers: js.UndefOr[js.Array[BuildTrigger]] = js.undefined
 }
 
 object ListBuildTriggersResponse {
   @scala.inline
-  def apply(): ListBuildTriggersResponse = {
+  def apply(triggers: js.Array[BuildTrigger] = null): ListBuildTriggersResponse = {
     val __obj = js.Dynamic.literal()
+    if (triggers != null) __obj.updateDynamic("triggers")(triggers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBuildTriggersResponse]
   }
-  @scala.inline
-  implicit class ListBuildTriggersResponseOps[Self <: ListBuildTriggersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTriggers(value: js.Array[BuildTrigger]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

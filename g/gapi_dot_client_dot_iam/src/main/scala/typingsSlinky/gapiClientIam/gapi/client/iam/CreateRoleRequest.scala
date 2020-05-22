@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateRoleRequest extends js.Object {
   /** The Role resource to create. */
-  var role: js.UndefOr[Role] = js.native
+  var role: js.UndefOr[Role] = js.undefined
   /** The role id to use for this role. */
-  var roleId: js.UndefOr[String] = js.native
+  var roleId: js.UndefOr[String] = js.undefined
 }
 
 object CreateRoleRequest {
   @scala.inline
-  def apply(): CreateRoleRequest = {
+  def apply(role: Role = null, roleId: String = null): CreateRoleRequest = {
     val __obj = js.Dynamic.literal()
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (roleId != null) __obj.updateDynamic("roleId")(roleId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRoleRequest]
   }
-  @scala.inline
-  implicit class CreateRoleRequestOps[Self <: CreateRoleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRole(value: Role): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

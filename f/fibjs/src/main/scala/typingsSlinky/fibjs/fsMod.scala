@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 文件系统处理模块
-	* @detail 使用方法：,```JavaScript,var fs = require('fs');,```
-	*/
+  * @brief 文件系统处理模块
+  * @detail 使用方法：,```JavaScript,var fs = require('fs');,```
+  */
 @JSImport("fs", JSImport.Namespace)
 @js.native
 object fsMod extends js.Object {

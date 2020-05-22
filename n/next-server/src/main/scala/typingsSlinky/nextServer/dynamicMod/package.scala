@@ -10,6 +10,7 @@ package object dynamicMod {
     /* opts */ typingsSlinky.nextServer.dynamicMod.LoadableOptions[P], 
     slinky.core.ReactComponentClass[P]
   ]
+  type Loader[P] = js.Function0[typingsSlinky.nextServer.dynamicMod.LoaderComponent[P]] | typingsSlinky.nextServer.dynamicMod.LoaderComponent[P]
   type LoaderComponent[P] = js.Promise[slinky.core.ReactComponentClass[P] | typingsSlinky.nextServer.anon.Default[P]]
   type LoaderMap = org.scalablytyped.runtime.StringDictionary[js.Function0[typingsSlinky.nextServer.dynamicMod.Loader[js.Any]]]
 }

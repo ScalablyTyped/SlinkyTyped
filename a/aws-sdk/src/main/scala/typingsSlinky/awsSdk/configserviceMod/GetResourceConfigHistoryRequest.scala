@@ -38,89 +38,22 @@ trait GetResourceConfigHistoryRequest extends js.Object {
 
 object GetResourceConfigHistoryRequest {
   @scala.inline
-  def apply(resourceId: ResourceId, resourceType: ResourceType): GetResourceConfigHistoryRequest = {
+  def apply(
+    resourceId: ResourceId,
+    resourceType: ResourceType,
+    chronologicalOrder: ChronologicalOrder = null,
+    earlierTime: js.Date = null,
+    laterTime: js.Date = null,
+    limit: js.UndefOr[Limit] = js.undefined,
+    nextToken: NextToken = null
+  ): GetResourceConfigHistoryRequest = {
     val __obj = js.Dynamic.literal(resourceId = resourceId.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any])
+    if (chronologicalOrder != null) __obj.updateDynamic("chronologicalOrder")(chronologicalOrder.asInstanceOf[js.Any])
+    if (earlierTime != null) __obj.updateDynamic("earlierTime")(earlierTime.asInstanceOf[js.Any])
+    if (laterTime != null) __obj.updateDynamic("laterTime")(laterTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourceConfigHistoryRequest]
   }
-  @scala.inline
-  implicit class GetResourceConfigHistoryRequestOps[Self <: GetResourceConfigHistoryRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChronologicalOrder(value: ChronologicalOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chronologicalOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChronologicalOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chronologicalOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarlierTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earlierTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarlierTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earlierTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaterTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("laterTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaterTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("laterTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Limit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

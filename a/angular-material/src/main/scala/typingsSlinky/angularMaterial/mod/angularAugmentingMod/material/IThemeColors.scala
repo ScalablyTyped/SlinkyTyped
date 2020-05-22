@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IThemeColors extends js.Object {
-  var accent: IThemePalette = js.native
-  var background: IThemePalette = js.native
-  var primary: IThemePalette = js.native
-  var warn: IThemePalette = js.native
+  var accent: IThemePalette
+  var background: IThemePalette
+  var primary: IThemePalette
+  var warn: IThemePalette
 }
 
 object IThemeColors {
@@ -18,37 +17,5 @@ object IThemeColors {
     val __obj = js.Dynamic.literal(accent = accent.asInstanceOf[js.Any], background = background.asInstanceOf[js.Any], primary = primary.asInstanceOf[js.Any], warn = warn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IThemeColors]
   }
-  @scala.inline
-  implicit class IThemeColorsOps[Self <: IThemeColors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccent(value: IThemePalette): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackground(value: IThemePalette): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: IThemePalette): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarn(value: IThemePalette): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

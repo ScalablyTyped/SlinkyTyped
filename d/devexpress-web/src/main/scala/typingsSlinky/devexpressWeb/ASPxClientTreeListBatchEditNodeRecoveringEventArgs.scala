@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeList.BatchEditNodeRecovering event.
   */
-@js.native
 trait ASPxClientTreeListBatchEditNodeRecoveringEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets the processed node's key value.
     */
-  var nodeKey: String = js.native
+  var nodeKey: String
   /**
     * Gets a hashtable that maintains information about recovered cells.
     */
-  var nodeValues: js.Any = js.native
+  var nodeValues: js.Any
 }
 
 object ASPxClientTreeListBatchEditNodeRecoveringEventArgs {
@@ -25,25 +24,5 @@ object ASPxClientTreeListBatchEditNodeRecoveringEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], nodeKey = nodeKey.asInstanceOf[js.Any], nodeValues = nodeValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientTreeListBatchEditNodeRecoveringEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientTreeListBatchEditNodeRecoveringEventArgsOps[Self <: ASPxClientTreeListBatchEditNodeRecoveringEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,5 +18,44 @@ import scala.scalajs.js.annotation._
   * - `start`: The starting [[Range]] or cursor position to begin the search
   * - `skipCurrent`: Whether or not to include the current line in the search. Default to `false`.
   **/
-class SearchCls () extends Search
+class SearchCls () extends Search {
+  /**
+    * Searches for `options.needle`. If found, this method returns the [[Range `Range`]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
+    * @param session The session to search with
+    **/
+  /* CompleteClass */
+  override def find(session: IEditSession): Range = js.native
+  /**
+    * Searches for all occurances `options.needle`. If found, this method returns an array of [[Range `Range`s]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
+    * @param session The session to search with
+    **/
+  /* CompleteClass */
+  override def findAll(session: IEditSession): js.Array[Range] = js.native
+  /**
+    * [Returns an object containing all the search options.]{: #Search.getOptions}
+    **/
+  /* CompleteClass */
+  override def getOptions(): js.Any = js.native
+  /**
+    * Searches for `options.needle` in `input`, and, if found, replaces it with `replacement`.
+    * @param input The text to search in
+    * @param replacement The replacing text
+    * + (String): If `options.regExp` is `true`, this function returns `input` with the replacement already made. Otherwise, this function just returns `replacement`.<br/>
+    * If `options.needle` was not found, this function returns `null`.
+    **/
+  /* CompleteClass */
+  override def replace(input: String, replacement: String): String = js.native
+  /**
+    * Sets the search options via the `options` parameter.
+    * @param options An object containing all the new search properties
+    **/
+  /* CompleteClass */
+  override def set(options: js.Any): Search = js.native
+  /**
+    * Sets the search options via the `options` parameter.
+    * @param An object containing all the search propertie
+    **/
+  /* CompleteClass */
+  override def setOptions(An: js.Any): Unit = js.native
+}
 

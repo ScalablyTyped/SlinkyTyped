@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiagramShapeDefaultsEditable extends js.Object {
-  var connect: js.UndefOr[Boolean] = js.native
-  var drag: js.UndefOr[Boolean] = js.native
-  var remove: js.UndefOr[Boolean] = js.native
-  var tools: js.UndefOr[js.Array[DiagramShapeDefaultsEditableTool]] = js.native
+  var connect: js.UndefOr[Boolean] = js.undefined
+  var drag: js.UndefOr[Boolean] = js.undefined
+  var remove: js.UndefOr[Boolean] = js.undefined
+  var tools: js.UndefOr[js.Array[DiagramShapeDefaultsEditableTool]] = js.undefined
 }
 
 object DiagramShapeDefaultsEditable {
   @scala.inline
-  def apply(): DiagramShapeDefaultsEditable = {
+  def apply(
+    connect: js.UndefOr[Boolean] = js.undefined,
+    drag: js.UndefOr[Boolean] = js.undefined,
+    remove: js.UndefOr[Boolean] = js.undefined,
+    tools: js.Array[DiagramShapeDefaultsEditableTool] = null
+  ): DiagramShapeDefaultsEditable = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(connect)) __obj.updateDynamic("connect")(connect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(drag)) __obj.updateDynamic("drag")(drag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.get.asInstanceOf[js.Any])
+    if (tools != null) __obj.updateDynamic("tools")(tools.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagramShapeDefaultsEditable]
   }
-  @scala.inline
-  implicit class DiagramShapeDefaultsEditableOps[Self <: DiagramShapeDefaultsEditable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTools(value: js.Array[DiagramShapeDefaultsEditableTool]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

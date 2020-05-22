@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeystonePrepareResult extends js.Object {
-  var middlewares: js.Array[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
+  var middlewares: js.Array[RequestHandler[ParamsDictionary, _, _, Query]]
 }
 
 object KeystonePrepareResult {
@@ -18,19 +17,5 @@ object KeystonePrepareResult {
     val __obj = js.Dynamic.literal(middlewares = middlewares.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeystonePrepareResult]
   }
-  @scala.inline
-  implicit class KeystonePrepareResultOps[Self <: KeystonePrepareResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMiddlewares(value: js.Array[RequestHandler[ParamsDictionary, _, _, Query]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middlewares")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

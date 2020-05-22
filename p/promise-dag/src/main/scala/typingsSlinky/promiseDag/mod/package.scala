@@ -10,4 +10,5 @@ package object mod {
     /* required */ js.UndefOr[js.Array[java.lang.String]], 
     org.scalablytyped.runtime.StringDictionary[P]
   ]
+  type Step = java.lang.String | (js.Function1[/* repeated */ js.Any, js.Thenable[js.Any]])
 }

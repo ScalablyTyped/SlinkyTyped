@@ -5,65 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComposeRequest extends js.Object {
   /** Properties of the resulting object. */
-  var destination: js.UndefOr[Object] = js.native
+  var destination: js.UndefOr[Object] = js.undefined
   /** The kind of item this is. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The list of source objects that will be concatenated into a single object. */
-  var sourceObjects: js.UndefOr[js.Array[Generation]] = js.native
+  var sourceObjects: js.UndefOr[js.Array[Generation]] = js.undefined
 }
 
 object ComposeRequest {
   @scala.inline
-  def apply(): ComposeRequest = {
+  def apply(destination: Object = null, kind: String = null, sourceObjects: js.Array[Generation] = null): ComposeRequest = {
     val __obj = js.Dynamic.literal()
+    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (sourceObjects != null) __obj.updateDynamic("sourceObjects")(sourceObjects.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComposeRequest]
   }
-  @scala.inline
-  implicit class ComposeRequestOps[Self <: ComposeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestination(value: Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceObjects(value: js.Array[Generation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceObjects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceObjects")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

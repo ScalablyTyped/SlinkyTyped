@@ -18,41 +18,11 @@ trait IpSet extends js.Object {
 
 object IpSet {
   @scala.inline
-  def apply(): IpSet = {
+  def apply(IpAddresses: IpAddresses = null, IpFamily: GenericString = null): IpSet = {
     val __obj = js.Dynamic.literal()
+    if (IpAddresses != null) __obj.updateDynamic("IpAddresses")(IpAddresses.asInstanceOf[js.Any])
+    if (IpFamily != null) __obj.updateDynamic("IpFamily")(IpFamily.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpSet]
   }
-  @scala.inline
-  implicit class IpSetOps[Self <: IpSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpAddresses(value: IpAddresses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpFamily(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IpFamily")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

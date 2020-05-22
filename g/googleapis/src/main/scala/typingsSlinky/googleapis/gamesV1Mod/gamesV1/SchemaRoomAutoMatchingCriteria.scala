@@ -34,65 +34,18 @@ trait SchemaRoomAutoMatchingCriteria extends js.Object {
 
 object SchemaRoomAutoMatchingCriteria {
   @scala.inline
-  def apply(): SchemaRoomAutoMatchingCriteria = {
+  def apply(
+    exclusiveBitmask: String = null,
+    kind: String = null,
+    maxAutoMatchingPlayers: js.UndefOr[Double] = js.undefined,
+    minAutoMatchingPlayers: js.UndefOr[Double] = js.undefined
+  ): SchemaRoomAutoMatchingCriteria = {
     val __obj = js.Dynamic.literal()
+    if (exclusiveBitmask != null) __obj.updateDynamic("exclusiveBitmask")(exclusiveBitmask.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAutoMatchingPlayers)) __obj.updateDynamic("maxAutoMatchingPlayers")(maxAutoMatchingPlayers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minAutoMatchingPlayers)) __obj.updateDynamic("minAutoMatchingPlayers")(minAutoMatchingPlayers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoomAutoMatchingCriteria]
   }
-  @scala.inline
-  implicit class SchemaRoomAutoMatchingCriteriaOps[Self <: SchemaRoomAutoMatchingCriteria] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclusiveBitmask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveBitmask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusiveBitmask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveBitmask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAutoMatchingPlayers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAutoMatchingPlayers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAutoMatchingPlayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAutoMatchingPlayers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinAutoMatchingPlayers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAutoMatchingPlayers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinAutoMatchingPlayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minAutoMatchingPlayers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,107 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InteractionProps extends js.Object {
   /**
     * The existing subtree of the JSON tree.
     */
-  var existing_src: js.Object = js.native
+  var existing_src: js.Object
   /**
     * The original value of the entry that is interacted with.
     */
-  var existing_value: js.Object | String | Double | Boolean | Null = js.native
+  var existing_value: js.Object | String | Double | Boolean | Null
   /**
     * The key of the entry that is interacted with.
     */
-  var name: String | Null = js.native
+  var name: String | Null
   /**
     * List of keys.
     */
-  var namespace: js.Array[String | Null] = js.native
+  var namespace: js.Array[String | Null]
   /**
     * The updated value of the entry that is interacted with.
     */
-  var new_value: js.UndefOr[js.Object | String | Double | Boolean | Null] = js.native
+  var new_value: js.UndefOr[js.Object | String | Double | Boolean | Null] = js.undefined
   /**
     * The updated subtree of the JSON tree.
     */
-  var updated_src: js.Object = js.native
+  var updated_src: js.Object
 }
 
 object InteractionProps {
   @scala.inline
-  def apply(existing_src: js.Object, namespace: js.Array[String | Null], updated_src: js.Object): InteractionProps = {
-    val __obj = js.Dynamic.literal(existing_src = existing_src.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any], updated_src = updated_src.asInstanceOf[js.Any])
+  def apply(
+    existing_src: js.Object,
+    namespace: js.Array[String | Null],
+    updated_src: js.Object,
+    existing_value: js.Object | String | Double | Boolean = null,
+    name: String = null,
+    new_value: js.UndefOr[Null | js.Object | String | Double | Boolean] = js.undefined
+  ): InteractionProps = {
+    val __obj = js.Dynamic.literal(existing_src = existing_src.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any], updated_src = updated_src.asInstanceOf[js.Any], existing_value = existing_value.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(new_value)) __obj.updateDynamic("new_value")(new_value.asInstanceOf[js.Any])
     __obj.asInstanceOf[InteractionProps]
   }
-  @scala.inline
-  implicit class InteractionPropsOps[Self <: InteractionProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExisting_src(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("existing_src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: js.Array[String | Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdated_src(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExisting_value(value: js.Object | String | Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("existing_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExisting_valueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("existing_value")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withNew_value(value: js.Object | String | Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNew_value: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new_value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNew_valueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new_value")(null)
-        ret
-    }
-  }
-  
 }
 

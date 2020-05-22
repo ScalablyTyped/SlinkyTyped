@@ -37,7 +37,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-sunburst
   */
-@js.native
 trait SeriesSunburst_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -47,7 +46,7 @@ trait SeriesSunburst_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animation
     */
-  var animation: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean] = js.undefined
   /**
     * Delay before updating the first animation, which supports callback
     * function for different data to have different animation effect.
@@ -63,7 +62,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationDelay
     */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -79,7 +78,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect:
@@ -91,7 +90,7 @@ trait SeriesSunburst_ extends js.Object {
     * 1000
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.native
+  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -103,7 +102,7 @@ trait SeriesSunburst_ extends js.Object {
     * 500
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -115,7 +114,7 @@ trait SeriesSunburst_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasing: js.UndefOr[String] = js.undefined
   /**
     * Easing method used for animation.
     *
@@ -124,7 +123,7 @@ trait SeriesSunburst_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.native
+  var animationEasingUpdate: js.UndefOr[String] = js.undefined
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -135,7 +134,7 @@ trait SeriesSunburst_ extends js.Object {
     * 2000
     * @see https://echarts.apache.org/en/option.html#series-sunburst.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.native
+  var animationThreshold: js.UndefOr[Double] = js.undefined
   /**
     * Center position of Sunburst chart, the first of which is the
     * horizontal position, and the second is the vertical position.
@@ -153,7 +152,7 @@ trait SeriesSunburst_ extends js.Object {
     * ['50%', '50%']
     * @see https://echarts.apache.org/en/option.html#series-sunburst.center
     */
-  var center: js.UndefOr[js.Array[_]] = js.native
+  var center: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The data structure of
     * [series-sunburst.data](https://echarts.apache.org/en/option.html#series-sunburst.data)
@@ -164,7 +163,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data
     */
-  var data: js.UndefOr[js.Array[DataObject]] = js.native
+  var data: js.UndefOr[js.Array[DataObject]] = js.undefined
   /**
     * Item style when mouse is hovering unrelated items. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -173,7 +172,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.downplay
     */
-  var downplay: js.UndefOr[LabelMinAngle] = js.native
+  var downplay: js.UndefOr[LabelMinAngle] = js.undefined
   /**
     * Item style when mouse is hovering. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -182,7 +181,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.emphasis
     */
-  var emphasis: js.UndefOr[LabelMinAngle] = js.native
+  var emphasis: js.UndefOr[LabelMinAngle] = js.undefined
   /**
     * Item style when mouse is hovering related items. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -191,7 +190,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.highlight
     */
-  var highlight: js.UndefOr[LabelMinAngle] = js.native
+  var highlight: js.UndefOr[LabelMinAngle] = js.undefined
   /**
     * When mouse hovers a sector, the sector is emphasized.
     * **If `highlightPolicy` is set to be `'descendant'`, then the
@@ -223,7 +222,7 @@ trait SeriesSunburst_ extends js.Object {
     * "descendant"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy
     */
-  var highlightPolicy: js.UndefOr[String] = js.native
+  var highlightPolicy: js.UndefOr[String] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -232,7 +231,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Style of Sunburst sectors.
     *
@@ -268,7 +267,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.undefined
   /**
     * `label` sets the text style for every sectors.
     *
@@ -290,7 +289,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.label
     */
-  var label: js.UndefOr[MinAngle] = js.native
+  var label: js.UndefOr[MinAngle] = js.undefined
   /**
     * **Multiple levels**
     *
@@ -312,7 +311,7 @@ trait SeriesSunburst_ extends js.Object {
     * []
     * @see https://echarts.apache.org/en/option.html#series-sunburst.levels
     */
-  var levels: js.UndefOr[Downplay] = js.native
+  var levels: js.UndefOr[Downplay] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -323,7 +322,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The action of clicking a sector, which can be:
     *
@@ -338,7 +337,7 @@ trait SeriesSunburst_ extends js.Object {
     * "rootToNode"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.nodeClick
     */
-  var nodeClick: js.UndefOr[Boolean | String] = js.native
+  var nodeClick: js.UndefOr[Boolean | String] = js.undefined
   /**
     * Radius of Sunburst chart. Value can be:
     *
@@ -356,14 +355,14 @@ trait SeriesSunburst_ extends js.Object {
     * [0, '75%']
     * @see https://echarts.apache.org/en/option.html#series-sunburst.radius
     */
-  var radius: js.UndefOr[js.Array[_] | Double | String] = js.native
+  var radius: js.UndefOr[js.Array[_] | Double | String] = js.undefined
   /**
     * If there is no `name`, whether need to render it.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.renderLabelForZeroData
     */
-  var renderLabelForZeroData: js.UndefOr[Boolean] = js.native
+  var renderLabelForZeroData: js.UndefOr[Boolean] = js.undefined
   /**
     * Sorting method that sectors use based on
     * [`value`](https://echarts.apache.org/en/option.html#series-sunburst.data.value)
@@ -379,13 +378,13 @@ trait SeriesSunburst_ extends js.Object {
     * "desc"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.sort
     */
-  var sort: js.UndefOr[js.Function | String] = js.native
+  var sort: js.UndefOr[js.Function | String] = js.undefined
   /**
     * @default
     * "sunburst"
     * @see https://echarts.apache.org/en/option.html#series-sunburst.type
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -400,7 +399,7 @@ trait SeriesSunburst_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-sunburst.z
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -418,334 +417,67 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesSunburst_ {
   @scala.inline
-  def apply(): SeriesSunburst_ = {
+  def apply(
+    animation: js.UndefOr[Boolean] = js.undefined,
+    animationDelay: js.Function | Double = null,
+    animationDelayUpdate: js.Function | Double = null,
+    animationDuration: js.Function | Double = null,
+    animationDurationUpdate: js.Function | Double = null,
+    animationEasing: String = null,
+    animationEasingUpdate: String = null,
+    animationThreshold: js.UndefOr[Double] = js.undefined,
+    center: js.Array[_] = null,
+    data: js.Array[DataObject] = null,
+    downplay: LabelMinAngle = null,
+    emphasis: LabelMinAngle = null,
+    highlight: LabelMinAngle = null,
+    highlightPolicy: String = null,
+    id: String = null,
+    itemStyle: BorderType = null,
+    label: MinAngle = null,
+    levels: Downplay = null,
+    name: String = null,
+    nodeClick: Boolean | String = null,
+    radius: js.Array[_] | Double | String = null,
+    renderLabelForZeroData: js.UndefOr[Boolean] = js.undefined,
+    sort: js.Function | String = null,
+    `type`: String = null,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): SeriesSunburst_ = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
+    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
+    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationThreshold)) __obj.updateDynamic("animationThreshold")(animationThreshold.get.asInstanceOf[js.Any])
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (downplay != null) __obj.updateDynamic("downplay")(downplay.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
+    if (highlightPolicy != null) __obj.updateDynamic("highlightPolicy")(highlightPolicy.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nodeClick != null) __obj.updateDynamic("nodeClick")(nodeClick.asInstanceOf[js.Any])
+    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderLabelForZeroData)) __obj.updateDynamic("renderLabelForZeroData")(renderLabelForZeroData.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesSunburst_]
   }
-  @scala.inline
-  implicit class SeriesSunburst_Ops[Self <: SeriesSunburst_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelayUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDurationUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasingUpdate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasingUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[DataObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownplay(value: LabelMinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: LabelMinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlight(value: LabelMinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: MinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevels(value: Downplay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeClick(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: js.Array[_] | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderLabelForZeroData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderLabelForZeroData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderLabelForZeroData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderLabelForZeroData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: js.Function | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

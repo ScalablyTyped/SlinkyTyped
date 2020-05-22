@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Create extends js.Object {
   /**
     * POST request to the server
@@ -18,7 +17,7 @@ trait Create extends js.Object {
     params: js.Any,
     body: js.Any,
     callback: js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]
-  ): Unit = js.native
+  ): Unit
   /**
     *
     * @param resource name of resourse
@@ -29,7 +28,7 @@ trait Create extends js.Object {
     resource: String,
     params: js.Any,
     callback: js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]
-  ): Unit = js.native
+  ): Unit
   /**
     * GET request to the server
     * @param resource name of resourse
@@ -40,7 +39,7 @@ trait Create extends js.Object {
     resource: String,
     params: js.Any,
     callback: js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]
-  ): Unit = js.native
+  ): Unit
   /**
     *
     * @param resource name of resourse
@@ -53,7 +52,7 @@ trait Create extends js.Object {
     params: js.Any,
     body: js.Any,
     callback: js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]
-  ): Unit = js.native
+  ): Unit
 }
 
 object Create {
@@ -67,41 +66,5 @@ object Create {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction4(create), delete = js.Any.fromFunction3(delete), read = js.Any.fromFunction3(read), update = js.Any.fromFunction4(update))
     __obj.asInstanceOf[Create]
   }
-  @scala.inline
-  implicit class CreateOps[Self <: Create] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(
-      value: (String, js.Any, js.Any, js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: (String, js.Any, js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRead(value: (String, js.Any, js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(
-      value: (String, js.Any, js.Any, js.Function2[/* error */ js.Error, /* data */ js.Any, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

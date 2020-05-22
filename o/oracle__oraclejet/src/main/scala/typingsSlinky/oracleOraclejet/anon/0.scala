@@ -5,36 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `0` extends js.Object {
-  var renderer: (js.Function1[/* context */ TooltipContext, Insert | PreventDefault]) | Null = js.native
+  var renderer: (js.Function1[/* context */ TooltipContext, Insert | PreventDefault]) | Null
 }
 
 object `0` {
   @scala.inline
-  def apply(): `0` = {
-    val __obj = js.Dynamic.literal()
+  def apply(renderer: /* context */ TooltipContext => Insert | PreventDefault = null): `0` = {
+    val __obj = js.Dynamic.literal(renderer = js.Any.fromFunction1(renderer))
     __obj.asInstanceOf[`0`]
   }
-  @scala.inline
-  implicit class `0Ops`[Self <: `0`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRenderer(value: /* context */ TooltipContext => Insert | PreventDefault): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRendererNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.plottable.rTreeSplitStrategiesMod
 
+import typingsSlinky.plottable.rTreeMod.RTreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,5 +17,7 @@ class SplitStrategyLinear () extends IRTreeSplitStrategy {
     * Choose the two farthest-apart entries to begin the split.
     */
   /* private */ def chooseFirstSplit[T](entries: js.Any, nodes: js.Any): js.Any = js.native
+  /* CompleteClass */
+  override def split[T](entries: js.Array[RTreeNode[T]], nodes: NodePair[T]): Unit = js.native
 }
 

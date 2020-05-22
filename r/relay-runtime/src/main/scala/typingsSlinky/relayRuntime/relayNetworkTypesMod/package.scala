@@ -31,5 +31,6 @@ package object relayNetworkTypesMod {
     ], 
     typingsSlinky.relayRuntime.relayObservableMod.RelayObservable[typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse] | typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
   ]
+  type Uploadable = org.scalajs.dom.raw.File | org.scalajs.dom.raw.Blob
   type UploadableMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.relayRuntime.relayNetworkTypesMod.Uploadable]
 }

@@ -1,7 +1,5 @@
 package typingsSlinky.analyticsNode.mod.AnalyticsNode
 
-import typingsSlinky.analyticsNode.anon.AnonymousId
-import typingsSlinky.analyticsNode.anon.UserId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,15 @@ trait Identity extends js.Object
 
 object Identity {
   @scala.inline
-  implicit def apply(value: AnonymousId): Identity = value.asInstanceOf[Identity]
+  def UserId(userId: String | Double): Identity = {
+    val __obj = js.Dynamic.literal(userId = userId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Identity]
+  }
   @scala.inline
-  implicit def apply(value: UserId): Identity = value.asInstanceOf[Identity]
+  def AnonymousId(anonymousId: String | Double, userId: String | Double = null): Identity = {
+    val __obj = js.Dynamic.literal(anonymousId = anonymousId.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Identity]
+  }
 }
 

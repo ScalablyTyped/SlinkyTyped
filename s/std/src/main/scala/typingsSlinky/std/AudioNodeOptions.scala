@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AudioNodeOptions extends js.Object {
-  var channelCount: js.UndefOr[Double] = js.native
-  var channelCountMode: js.UndefOr[ChannelCountMode] = js.native
-  var channelInterpretation: js.UndefOr[ChannelInterpretation] = js.native
+  var channelCount: js.UndefOr[Double] = js.undefined
+  var channelCountMode: js.UndefOr[ChannelCountMode] = js.undefined
+  var channelInterpretation: js.UndefOr[ChannelInterpretation] = js.undefined
 }
 
 object AudioNodeOptions {
   @scala.inline
-  def apply(): AudioNodeOptions = {
+  def apply(
+    channelCount: js.UndefOr[Double] = js.undefined,
+    channelCountMode: ChannelCountMode = null,
+    channelInterpretation: ChannelInterpretation = null
+  ): AudioNodeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(channelCount)) __obj.updateDynamic("channelCount")(channelCount.get.asInstanceOf[js.Any])
+    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
+    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioNodeOptions]
   }
-  @scala.inline
-  implicit class AudioNodeOptionsOps[Self <: AudioNodeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelCountMode(value: ChannelCountMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCountMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelCountMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCountMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelInterpretation(value: ChannelInterpretation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelInterpretation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelInterpretation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelInterpretation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

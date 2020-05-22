@@ -45,10 +45,9 @@ import scala.scalajs.js.annotation._
   *       return htmlOutput;
   *     }
   */
-@js.native
 trait DataViewDefinitionBuilder extends js.Object {
-  def build(): DataViewDefinition = js.native
-  def setColumns(columns: js.Array[_]): DataViewDefinitionBuilder = js.native
+  def build(): DataViewDefinition
+  def setColumns(columns: js.Array[_]): DataViewDefinitionBuilder
 }
 
 object DataViewDefinitionBuilder {
@@ -57,25 +56,5 @@ object DataViewDefinitionBuilder {
     val __obj = js.Dynamic.literal(build = js.Any.fromFunction0(build), setColumns = js.Any.fromFunction1(setColumns))
     __obj.asInstanceOf[DataViewDefinitionBuilder]
   }
-  @scala.inline
-  implicit class DataViewDefinitionBuilderOps[Self <: DataViewDefinitionBuilder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuild(value: () => DataViewDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetColumns(value: js.Array[_] => DataViewDefinitionBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

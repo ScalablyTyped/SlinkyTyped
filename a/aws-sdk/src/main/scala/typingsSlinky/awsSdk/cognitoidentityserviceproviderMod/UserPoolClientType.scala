@@ -86,245 +86,48 @@ trait UserPoolClientType extends js.Object {
 
 object UserPoolClientType {
   @scala.inline
-  def apply(): UserPoolClientType = {
+  def apply(
+    AllowedOAuthFlows: OAuthFlowsType = null,
+    AllowedOAuthFlowsUserPoolClient: js.UndefOr[BooleanType] = js.undefined,
+    AllowedOAuthScopes: ScopeListType = null,
+    AnalyticsConfiguration: AnalyticsConfigurationType = null,
+    CallbackURLs: CallbackURLsListType = null,
+    ClientId: ClientIdType = null,
+    ClientName: ClientNameType = null,
+    ClientSecret: ClientSecretType = null,
+    CreationDate: js.Date = null,
+    DefaultRedirectURI: RedirectUrlType = null,
+    ExplicitAuthFlows: ExplicitAuthFlowsListType = null,
+    LastModifiedDate: js.Date = null,
+    LogoutURLs: LogoutURLsListType = null,
+    PreventUserExistenceErrors: PreventUserExistenceErrorTypes = null,
+    ReadAttributes: ClientPermissionListType = null,
+    RefreshTokenValidity: js.UndefOr[RefreshTokenValidityType] = js.undefined,
+    SupportedIdentityProviders: SupportedIdentityProvidersListType = null,
+    UserPoolId: UserPoolIdType = null,
+    WriteAttributes: ClientPermissionListType = null
+  ): UserPoolClientType = {
     val __obj = js.Dynamic.literal()
+    if (AllowedOAuthFlows != null) __obj.updateDynamic("AllowedOAuthFlows")(AllowedOAuthFlows.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllowedOAuthFlowsUserPoolClient)) __obj.updateDynamic("AllowedOAuthFlowsUserPoolClient")(AllowedOAuthFlowsUserPoolClient.get.asInstanceOf[js.Any])
+    if (AllowedOAuthScopes != null) __obj.updateDynamic("AllowedOAuthScopes")(AllowedOAuthScopes.asInstanceOf[js.Any])
+    if (AnalyticsConfiguration != null) __obj.updateDynamic("AnalyticsConfiguration")(AnalyticsConfiguration.asInstanceOf[js.Any])
+    if (CallbackURLs != null) __obj.updateDynamic("CallbackURLs")(CallbackURLs.asInstanceOf[js.Any])
+    if (ClientId != null) __obj.updateDynamic("ClientId")(ClientId.asInstanceOf[js.Any])
+    if (ClientName != null) __obj.updateDynamic("ClientName")(ClientName.asInstanceOf[js.Any])
+    if (ClientSecret != null) __obj.updateDynamic("ClientSecret")(ClientSecret.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (DefaultRedirectURI != null) __obj.updateDynamic("DefaultRedirectURI")(DefaultRedirectURI.asInstanceOf[js.Any])
+    if (ExplicitAuthFlows != null) __obj.updateDynamic("ExplicitAuthFlows")(ExplicitAuthFlows.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (LogoutURLs != null) __obj.updateDynamic("LogoutURLs")(LogoutURLs.asInstanceOf[js.Any])
+    if (PreventUserExistenceErrors != null) __obj.updateDynamic("PreventUserExistenceErrors")(PreventUserExistenceErrors.asInstanceOf[js.Any])
+    if (ReadAttributes != null) __obj.updateDynamic("ReadAttributes")(ReadAttributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(RefreshTokenValidity)) __obj.updateDynamic("RefreshTokenValidity")(RefreshTokenValidity.get.asInstanceOf[js.Any])
+    if (SupportedIdentityProviders != null) __obj.updateDynamic("SupportedIdentityProviders")(SupportedIdentityProviders.asInstanceOf[js.Any])
+    if (UserPoolId != null) __obj.updateDynamic("UserPoolId")(UserPoolId.asInstanceOf[js.Any])
+    if (WriteAttributes != null) __obj.updateDynamic("WriteAttributes")(WriteAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolClientType]
   }
-  @scala.inline
-  implicit class UserPoolClientTypeOps[Self <: UserPoolClientType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedOAuthFlows(value: OAuthFlowsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOAuthFlows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedOAuthFlows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOAuthFlows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedOAuthFlowsUserPoolClient(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOAuthFlowsUserPoolClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedOAuthFlowsUserPoolClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOAuthFlowsUserPoolClient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedOAuthScopes(value: ScopeListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOAuthScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedOAuthScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowedOAuthScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyticsConfiguration(value: AnalyticsConfigurationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyticsConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyticsConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyticsConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackURLs(value: CallbackURLsListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackURLs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackURLs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackURLs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: ClientIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientName(value: ClientNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientSecret(value: ClientSecretType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRedirectURI(value: RedirectUrlType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRedirectURI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRedirectURI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRedirectURI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplicitAuthFlows(value: ExplicitAuthFlowsListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExplicitAuthFlows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitAuthFlows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExplicitAuthFlows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoutURLs(value: LogoutURLsListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogoutURLs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogoutURLs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogoutURLs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventUserExistenceErrors(value: PreventUserExistenceErrorTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreventUserExistenceErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventUserExistenceErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreventUserExistenceErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadAttributes(value: ClientPermissionListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshTokenValidity(value: RefreshTokenValidityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshTokenValidity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshTokenValidity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshTokenValidity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedIdentityProviders(value: SupportedIdentityProvidersListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedIdentityProviders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedIdentityProviders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedIdentityProviders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPoolId(value: UserPoolIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPoolId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteAttributes(value: ClientPermissionListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

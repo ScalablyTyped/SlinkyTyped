@@ -14,6 +14,16 @@ class Size protected () extends ISize {
     */
   def this(width: Double, height: Double) = this()
   /**
+    * Heighht
+    */
+  /* CompleteClass */
+  override var height: Double = js.native
+  /**
+    * Width
+    */
+  /* CompleteClass */
+  override var width: Double = js.native
+  /**
     * Sums the width and height of two sizes
     * @param otherSize size to add to this size
     * @returns a new Size set as the addition result of the current Size and the given one.

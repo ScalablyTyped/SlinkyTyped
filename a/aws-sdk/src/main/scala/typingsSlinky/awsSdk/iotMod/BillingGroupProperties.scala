@@ -14,29 +14,10 @@ trait BillingGroupProperties extends js.Object {
 
 object BillingGroupProperties {
   @scala.inline
-  def apply(): BillingGroupProperties = {
+  def apply(billingGroupDescription: BillingGroupDescription = null): BillingGroupProperties = {
     val __obj = js.Dynamic.literal()
+    if (billingGroupDescription != null) __obj.updateDynamic("billingGroupDescription")(billingGroupDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[BillingGroupProperties]
   }
-  @scala.inline
-  implicit class BillingGroupPropertiesOps[Self <: BillingGroupProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillingGroupDescription(value: BillingGroupDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingGroupDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

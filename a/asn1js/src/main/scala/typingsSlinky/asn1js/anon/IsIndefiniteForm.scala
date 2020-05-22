@@ -4,56 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsIndefiniteForm extends js.Object {
-  var isIndefiniteForm: js.UndefOr[Boolean] = js.native
-  var length: Double = js.native
-  var longFormUsed: js.UndefOr[Boolean] = js.native
+  var isIndefiniteForm: js.UndefOr[Boolean] = js.undefined
+  var length: Double
+  var longFormUsed: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsIndefiniteForm {
   @scala.inline
-  def apply(length: Double): IsIndefiniteForm = {
+  def apply(
+    length: Double,
+    isIndefiniteForm: js.UndefOr[Boolean] = js.undefined,
+    longFormUsed: js.UndefOr[Boolean] = js.undefined
+  ): IsIndefiniteForm = {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any])
+    if (!js.isUndefined(isIndefiniteForm)) __obj.updateDynamic("isIndefiniteForm")(isIndefiniteForm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(longFormUsed)) __obj.updateDynamic("longFormUsed")(longFormUsed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsIndefiniteForm]
   }
-  @scala.inline
-  implicit class IsIndefiniteFormOps[Self <: IsIndefiniteForm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsIndefiniteForm(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIndefiniteForm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsIndefiniteForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIndefiniteForm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongFormUsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longFormUsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongFormUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longFormUsed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

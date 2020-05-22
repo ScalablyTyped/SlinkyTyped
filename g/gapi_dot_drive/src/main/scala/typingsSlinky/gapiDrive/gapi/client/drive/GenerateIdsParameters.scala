@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GenerateIdsParameters extends js.Object {
-  var maxResults: js.UndefOr[Double] = js.native
-  var space: js.UndefOr[String] = js.native
+  var maxResults: js.UndefOr[Double] = js.undefined
+  var space: js.UndefOr[String] = js.undefined
 }
 
 object GenerateIdsParameters {
   @scala.inline
-  def apply(): GenerateIdsParameters = {
+  def apply(maxResults: js.UndefOr[Double] = js.undefined, space: String = null): GenerateIdsParameters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (space != null) __obj.updateDynamic("space")(space.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateIdsParameters]
   }
-  @scala.inline
-  implicit class GenerateIdsParametersOps[Self <: GenerateIdsParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

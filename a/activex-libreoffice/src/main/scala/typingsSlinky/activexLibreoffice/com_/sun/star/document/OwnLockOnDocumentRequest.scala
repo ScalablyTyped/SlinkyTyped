@@ -10,14 +10,13 @@ import scala.scalajs.js.annotation._
   * Is used for interaction handle to query user decision regarding locked document.
   * @since OOo 3.1
   */
-@js.native
 trait OwnLockOnDocumentRequest extends Exception {
   /** The URL of the locked document. */
-  var DocumentURL: String = js.native
+  var DocumentURL: String
   /** Whether the request is related to storing process */
-  var IsStoring: Boolean = js.native
+  var IsStoring: Boolean
   /** The time from which the document is locked. */
-  var TimeInfo: String = js.native
+  var TimeInfo: String
 }
 
 object OwnLockOnDocumentRequest {
@@ -26,31 +25,5 @@ object OwnLockOnDocumentRequest {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], DocumentURL = DocumentURL.asInstanceOf[js.Any], IsStoring = IsStoring.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], TimeInfo = TimeInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[OwnLockOnDocumentRequest]
   }
-  @scala.inline
-  implicit class OwnLockOnDocumentRequestOps[Self <: OwnLockOnDocumentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsStoring(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsStoring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

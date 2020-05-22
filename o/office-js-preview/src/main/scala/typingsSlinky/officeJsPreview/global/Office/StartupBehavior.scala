@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 // Enumerations
 /**
-  * Provides options to determine the startup behavior of the add-in upon next start-up. 
+  * Provides options to determine the startup behavior of the add-in upon next start-up.
   */
 @JSGlobal("Office.StartupBehavior")
 @js.native

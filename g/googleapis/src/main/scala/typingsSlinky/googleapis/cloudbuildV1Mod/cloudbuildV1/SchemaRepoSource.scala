@@ -41,89 +41,22 @@ trait SchemaRepoSource extends js.Object {
 
 object SchemaRepoSource {
   @scala.inline
-  def apply(): SchemaRepoSource = {
+  def apply(
+    branchName: String = null,
+    commitSha: String = null,
+    dir: String = null,
+    projectId: String = null,
+    repoName: String = null,
+    tagName: String = null
+  ): SchemaRepoSource = {
     val __obj = js.Dynamic.literal()
+    if (branchName != null) __obj.updateDynamic("branchName")(branchName.asInstanceOf[js.Any])
+    if (commitSha != null) __obj.updateDynamic("commitSha")(commitSha.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (repoName != null) __obj.updateDynamic("repoName")(repoName.asInstanceOf[js.Any])
+    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRepoSource]
   }
-  @scala.inline
-  implicit class SchemaRepoSourceOps[Self <: SchemaRepoSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranchName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranchName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommitSha(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitSha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitSha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitSha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepoName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repoName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepoName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repoName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

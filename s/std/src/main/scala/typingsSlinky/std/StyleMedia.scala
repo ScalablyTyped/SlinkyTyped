@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleMedia extends js.Object {
-  val `type`: java.lang.String = js.native
-  def matchMedium(mediaquery: java.lang.String): scala.Boolean = js.native
+  val `type`: java.lang.String
+  def matchMedium(mediaquery: java.lang.String): scala.Boolean
 }
 
 object StyleMedia {
@@ -17,25 +16,5 @@ object StyleMedia {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleMedia]
   }
-  @scala.inline
-  implicit class StyleMediaOps[Self <: org.scalajs.dom.raw.StyleMedia] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMatchMedium(value: java.lang.String => scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchMedium")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

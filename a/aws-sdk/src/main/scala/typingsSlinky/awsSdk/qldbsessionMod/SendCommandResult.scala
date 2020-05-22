@@ -38,101 +38,24 @@ trait SendCommandResult extends js.Object {
 
 object SendCommandResult {
   @scala.inline
-  def apply(): SendCommandResult = {
+  def apply(
+    AbortTransaction: AbortTransactionResult = null,
+    CommitTransaction: CommitTransactionResult = null,
+    EndSession: EndSessionResult = null,
+    ExecuteStatement: ExecuteStatementResult = null,
+    FetchPage: FetchPageResult = null,
+    StartSession: StartSessionResult = null,
+    StartTransaction: StartTransactionResult = null
+  ): SendCommandResult = {
     val __obj = js.Dynamic.literal()
+    if (AbortTransaction != null) __obj.updateDynamic("AbortTransaction")(AbortTransaction.asInstanceOf[js.Any])
+    if (CommitTransaction != null) __obj.updateDynamic("CommitTransaction")(CommitTransaction.asInstanceOf[js.Any])
+    if (EndSession != null) __obj.updateDynamic("EndSession")(EndSession.asInstanceOf[js.Any])
+    if (ExecuteStatement != null) __obj.updateDynamic("ExecuteStatement")(ExecuteStatement.asInstanceOf[js.Any])
+    if (FetchPage != null) __obj.updateDynamic("FetchPage")(FetchPage.asInstanceOf[js.Any])
+    if (StartSession != null) __obj.updateDynamic("StartSession")(StartSession.asInstanceOf[js.Any])
+    if (StartTransaction != null) __obj.updateDynamic("StartTransaction")(StartTransaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendCommandResult]
   }
-  @scala.inline
-  implicit class SendCommandResultOps[Self <: SendCommandResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortTransaction(value: AbortTransactionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortTransaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AbortTransaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommitTransaction(value: CommitTransactionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommitTransaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommitTransaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndSession(value: EndSessionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndSession")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndSession")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecuteStatement(value: ExecuteStatementResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecuteStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecuteStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecuteStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchPage(value: FetchPageResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FetchPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FetchPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartSession(value: StartSessionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartSession")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartSession")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTransaction(value: StartTransactionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTransaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTransaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

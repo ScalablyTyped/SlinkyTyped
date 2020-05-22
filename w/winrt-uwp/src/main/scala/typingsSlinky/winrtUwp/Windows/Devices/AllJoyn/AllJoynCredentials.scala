@@ -7,16 +7,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines properties used when passing credentials during authentication. */
-@js.native
 trait AllJoynCredentials extends js.Object {
   /** The mechanism used for credential authentication. */
-  var authenticationMechanism: AllJoynAuthenticationMechanism = js.native
+  var authenticationMechanism: AllJoynAuthenticationMechanism
   /** The cryptography certificate used for the Rsa and EcdheEcdsa authentication mechanisms. */
-  var certificate: Certificate = js.native
+  var certificate: Certificate
   /** The user name, if any, and password used for authentication. */
-  var passwordCredential: PasswordCredential = js.native
+  var passwordCredential: PasswordCredential
   /** The period of time before provided credentials expire. */
-  var timeout: Double = js.native
+  var timeout: Double
 }
 
 object AllJoynCredentials {
@@ -30,37 +29,5 @@ object AllJoynCredentials {
     val __obj = js.Dynamic.literal(authenticationMechanism = authenticationMechanism.asInstanceOf[js.Any], certificate = certificate.asInstanceOf[js.Any], passwordCredential = passwordCredential.asInstanceOf[js.Any], timeout = timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllJoynCredentials]
   }
-  @scala.inline
-  implicit class AllJoynCredentialsOps[Self <: AllJoynCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationMechanism(value: AllJoynAuthenticationMechanism): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationMechanism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCertificate(value: Certificate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPasswordCredential(value: PasswordCredential): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

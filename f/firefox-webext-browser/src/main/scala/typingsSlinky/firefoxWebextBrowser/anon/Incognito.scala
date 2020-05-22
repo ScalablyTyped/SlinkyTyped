@@ -7,43 +7,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Incognito extends js.Object {
   /** The cookie store ID of the contextual identity. */
-  var cookieStoreId: js.UndefOr[String] = js.native
+  var cookieStoreId: js.UndefOr[String] = js.undefined
   /** URL of the page into which the requested resource will be loaded. */
-  var documentUrl: js.UndefOr[String] = js.native
+  var documentUrl: js.UndefOr[String] = js.undefined
   /**
     * The value 0 indicates that the request happens in the main frame; a positive value indicates the ID of a
     * subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or
     * `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique
     * within a tab.
     */
-  var frameId: Double = js.native
+  var frameId: Double
   /** True for private browsing requests. */
-  var incognito: js.UndefOr[Boolean] = js.native
+  var incognito: js.UndefOr[Boolean] = js.undefined
   /** Standard HTTP method. */
-  var method: String = js.native
+  var method: String
   /** URL of the resource that triggered this request. */
-  var originUrl: js.UndefOr[String] = js.native
+  var originUrl: js.UndefOr[String] = js.undefined
   /** ID of frame that wraps the frame which sent the request. Set to -1 if no parent frame exists. */
-  var parentFrameId: Double = js.native
+  var parentFrameId: Double
   /** The HTTP request headers that have been sent out with this request. */
-  var requestHeaders: js.UndefOr[HttpHeaders] = js.native
+  var requestHeaders: js.UndefOr[HttpHeaders] = js.undefined
   /**
     * The ID of the request. Request IDs are unique within a browser session. As a result, they could be used to
     * relate different events of the same request.
     */
-  var requestId: String = js.native
+  var requestId: String
   /** The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab. */
-  var tabId: Double = js.native
+  var tabId: Double
   /** The time when this signal is triggered, in milliseconds since the epoch. */
-  var timeStamp: Double = js.native
+  var timeStamp: Double
   /** How the requested resource will be used. */
-  var `type`: ResourceType = js.native
-  var url: String = js.native
+  var `type`: ResourceType
+  var url: String
   /** Tracking classification if the request has been classified. */
-  var urlClassification: js.UndefOr[UrlClassification] = js.native
+  var urlClassification: js.UndefOr[UrlClassification] = js.undefined
 }
 
 object Incognito {
@@ -56,139 +55,23 @@ object Incognito {
     tabId: Double,
     timeStamp: Double,
     `type`: ResourceType,
-    url: String
+    url: String,
+    cookieStoreId: String = null,
+    documentUrl: String = null,
+    incognito: js.UndefOr[Boolean] = js.undefined,
+    originUrl: String = null,
+    requestHeaders: HttpHeaders = null,
+    urlClassification: UrlClassification = null
   ): Incognito = {
     val __obj = js.Dynamic.literal(frameId = frameId.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], parentFrameId = parentFrameId.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any], tabId = tabId.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (cookieStoreId != null) __obj.updateDynamic("cookieStoreId")(cookieStoreId.asInstanceOf[js.Any])
+    if (documentUrl != null) __obj.updateDynamic("documentUrl")(documentUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(incognito)) __obj.updateDynamic("incognito")(incognito.get.asInstanceOf[js.Any])
+    if (originUrl != null) __obj.updateDynamic("originUrl")(originUrl.asInstanceOf[js.Any])
+    if (requestHeaders != null) __obj.updateDynamic("requestHeaders")(requestHeaders.asInstanceOf[js.Any])
+    if (urlClassification != null) __obj.updateDynamic("urlClassification")(urlClassification.asInstanceOf[js.Any])
     __obj.asInstanceOf[Incognito]
   }
-  @scala.inline
-  implicit class IncognitoOps[Self <: Incognito] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFrameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCookieStoreId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieStoreId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieStoreId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookieStoreId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncognito(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incognito")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncognito: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incognito")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestHeaders(value: HttpHeaders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlClassification(value: UrlClassification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlClassification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlClassification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlClassification")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

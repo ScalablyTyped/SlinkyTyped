@@ -4,29 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Currentlydue extends js.Object {
   /**
     * Fields that need to be collected to keep the person’s account enabled.
     * If not collected by the account’s current_deadline, these fields appear in past_due as well, and the account is disabled.
     */
-  var currently_due: js.Array[String] = js.native
+  var currently_due: js.Array[String]
   /**
     * Fields that need to be collected assuming all volume thresholds are reached.
     * As fields are needed, they are moved to currently_due and the account’s current_deadline is set.
     */
-  var eventually_due: js.Array[String] = js.native
+  var eventually_due: js.Array[String]
   /**
     * Fields that weren’t collected by the account’s current_deadline.
     * These fields need to be collected to enable payouts for the person’s account.
     */
-  var past_due: js.Array[String] = js.native
+  var past_due: js.Array[String]
   /**
     * Fields that may become required depending on the results of verification or review.
     * An empty array unless an asynchronous verification is pending.
     * If verification fails, the fields in this array become required and move to currently_due or past_due.
     */
-  var pending_verification: js.Array[String] = js.native
+  var pending_verification: js.Array[String]
 }
 
 object Currentlydue {
@@ -40,37 +39,5 @@ object Currentlydue {
     val __obj = js.Dynamic.literal(currently_due = currently_due.asInstanceOf[js.Any], eventually_due = eventually_due.asInstanceOf[js.Any], past_due = past_due.asInstanceOf[js.Any], pending_verification = pending_verification.asInstanceOf[js.Any])
     __obj.asInstanceOf[Currentlydue]
   }
-  @scala.inline
-  implicit class CurrentlydueOps[Self <: Currentlydue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrently_due(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currently_due")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventually_due(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventually_due")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPast_due(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("past_due")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPending_verification(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pending_verification")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

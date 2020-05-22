@@ -4,122 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParsedCommandLine extends js.Object {
-  var compileOnSave: js.UndefOr[Boolean] = js.native
-  var errors: js.Array[Diagnostic] = js.native
-  var fileNames: js.Array[java.lang.String] = js.native
-  var options: CompilerOptions = js.native
-  var projectReferences: js.UndefOr[js.Array[ProjectReference]] = js.native
-  var raw: js.UndefOr[js.Any] = js.native
-  var typeAcquisition: js.UndefOr[TypeAcquisition] = js.native
-  var watchOptions: js.UndefOr[WatchOptions] = js.native
-  var wildcardDirectories: js.UndefOr[MapLike[WatchDirectoryFlags]] = js.native
+  var compileOnSave: js.UndefOr[Boolean] = js.undefined
+  var errors: js.Array[Diagnostic]
+  var fileNames: js.Array[java.lang.String]
+  var options: CompilerOptions
+  var projectReferences: js.UndefOr[js.Array[ProjectReference]] = js.undefined
+  var raw: js.UndefOr[js.Any] = js.undefined
+  var typeAcquisition: js.UndefOr[TypeAcquisition] = js.undefined
+  var watchOptions: js.UndefOr[WatchOptions] = js.undefined
+  var wildcardDirectories: js.UndefOr[MapLike[WatchDirectoryFlags]] = js.undefined
 }
 
 object ParsedCommandLine {
   @scala.inline
-  def apply(errors: js.Array[Diagnostic], fileNames: js.Array[java.lang.String], options: CompilerOptions): ParsedCommandLine = {
+  def apply(
+    errors: js.Array[Diagnostic],
+    fileNames: js.Array[java.lang.String],
+    options: CompilerOptions,
+    compileOnSave: js.UndefOr[Boolean] = js.undefined,
+    projectReferences: js.Array[ProjectReference] = null,
+    raw: js.Any = null,
+    typeAcquisition: TypeAcquisition = null,
+    watchOptions: WatchOptions = null,
+    wildcardDirectories: MapLike[WatchDirectoryFlags] = null
+  ): ParsedCommandLine = {
     val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], fileNames = fileNames.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
+    if (!js.isUndefined(compileOnSave)) __obj.updateDynamic("compileOnSave")(compileOnSave.get.asInstanceOf[js.Any])
+    if (projectReferences != null) __obj.updateDynamic("projectReferences")(projectReferences.asInstanceOf[js.Any])
+    if (raw != null) __obj.updateDynamic("raw")(raw.asInstanceOf[js.Any])
+    if (typeAcquisition != null) __obj.updateDynamic("typeAcquisition")(typeAcquisition.asInstanceOf[js.Any])
+    if (watchOptions != null) __obj.updateDynamic("watchOptions")(watchOptions.asInstanceOf[js.Any])
+    if (wildcardDirectories != null) __obj.updateDynamic("wildcardDirectories")(wildcardDirectories.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsedCommandLine]
   }
-  @scala.inline
-  implicit class ParsedCommandLineOps[Self <: ParsedCommandLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrors(value: js.Array[Diagnostic]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileNames(value: js.Array[java.lang.String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptions(value: CompilerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompileOnSave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compileOnSave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompileOnSave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compileOnSave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectReferences(value: js.Array[ProjectReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectReferences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectReferences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectReferences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeAcquisition(value: TypeAcquisition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAcquisition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeAcquisition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAcquisition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWatchOptions(value: WatchOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWatchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWildcardDirectories(value: MapLike[WatchDirectoryFlags]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wildcardDirectories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWildcardDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wildcardDirectories")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

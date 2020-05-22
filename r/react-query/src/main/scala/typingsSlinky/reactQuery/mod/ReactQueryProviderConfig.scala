@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactQueryProviderConfig extends BaseQueryOptions {
   @JSName("onError")
-  var onError_ReactQueryProviderConfig: js.UndefOr[js.Function2[/* err */ js.Any, /* snapshotValue */ js.UndefOr[js.Any], Unit]] = js.native
-  var onMutate: js.UndefOr[js.Function1[/* variables */ js.Any, js.Promise[_] | _]] = js.native
+  var onError_ReactQueryProviderConfig: js.UndefOr[js.Function2[/* err */ js.Any, /* snapshotValue */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var onMutate: js.UndefOr[js.Function1[/* variables */ js.Any, js.Promise[_] | _]] = js.undefined
   var onSettled: js.UndefOr[
     js.Function3[
       /* data */ js.UndefOr[js.Any], 
@@ -17,8 +16,8 @@ trait ReactQueryProviderConfig extends BaseQueryOptions {
       /* snapshotValue */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.native
-  var onSuccess: js.UndefOr[js.Function2[/* data */ js.Any, /* variables */ js.UndefOr[js.Any], Unit]] = js.native
+  ] = js.undefined
+  var onSuccess: js.UndefOr[js.Function2[/* data */ js.Any, /* variables */ js.UndefOr[js.Any], Unit]] = js.undefined
   var queryKeySerializerFn: js.UndefOr[
     js.Function1[
       /* queryKey */ js.UndefOr[
@@ -26,128 +25,57 @@ trait ReactQueryProviderConfig extends BaseQueryOptions {
       ], 
       (js.Tuple2[String, js.Array[QueryKeyPart]]) | js.Array[js.Any]
     ]
-  ] = js.native
-  var refetchAllOnWindowFocus: js.UndefOr[Boolean] = js.native
-  var throwOnError: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var refetchAllOnWindowFocus: js.UndefOr[Boolean] = js.undefined
+  var throwOnError: js.UndefOr[Boolean] = js.undefined
   /** Defaults to the value of `suspense` if not defined otherwise */
-  var useErrorBoundary: js.UndefOr[Boolean] = js.native
+  var useErrorBoundary: js.UndefOr[Boolean] = js.undefined
 }
 
 object ReactQueryProviderConfig {
   @scala.inline
-  def apply(): ReactQueryProviderConfig = {
+  def apply(
+    cacheTime: js.UndefOr[Double] = js.undefined,
+    manual: js.UndefOr[Boolean] = js.undefined,
+    onError: (/* err */ js.Any, /* snapshotValue */ js.UndefOr[js.Any]) => Unit = null,
+    onMutate: /* variables */ js.Any => js.Promise[_] | _ = null,
+    onSettled: (/* data */ js.UndefOr[js.Any], /* error */ js.Any | Null, /* snapshotValue */ js.UndefOr[js.Any]) => Unit = null,
+    onSuccess: (/* data */ js.Any, /* variables */ js.UndefOr[js.Any]) => Unit = null,
+    queryKeySerializerFn: /* queryKey */ js.UndefOr[
+      js.Array[QueryKeyPart] | String | `false` | (js.Function0[js.UndefOr[js.Array[QueryKeyPart] | String | `false`]])
+    ] => (js.Tuple2[String, js.Array[QueryKeyPart]]) | js.Array[js.Any] = null,
+    refetchAllOnWindowFocus: js.UndefOr[Boolean] = js.undefined,
+    refetchInterval: `false` | Double = null,
+    refetchIntervalInBackground: js.UndefOr[Boolean] = js.undefined,
+    refetchOnMount: js.UndefOr[Boolean] = js.undefined,
+    refetchOnWindowFocus: js.UndefOr[Boolean] = js.undefined,
+    retry: Boolean | Double = null,
+    retryDelay: /* retryAttempt */ Double => Double = null,
+    staleTime: js.UndefOr[Double] = js.undefined,
+    suspense: js.UndefOr[Boolean] = js.undefined,
+    throwOnError: js.UndefOr[Boolean] = js.undefined,
+    useErrorBoundary: js.UndefOr[Boolean] = js.undefined
+  ): ReactQueryProviderConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheTime)) __obj.updateDynamic("cacheTime")(cacheTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(manual)) __obj.updateDynamic("manual")(manual.get.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction2(onError))
+    if (onMutate != null) __obj.updateDynamic("onMutate")(js.Any.fromFunction1(onMutate))
+    if (onSettled != null) __obj.updateDynamic("onSettled")(js.Any.fromFunction3(onSettled))
+    if (onSuccess != null) __obj.updateDynamic("onSuccess")(js.Any.fromFunction2(onSuccess))
+    if (queryKeySerializerFn != null) __obj.updateDynamic("queryKeySerializerFn")(js.Any.fromFunction1(queryKeySerializerFn))
+    if (!js.isUndefined(refetchAllOnWindowFocus)) __obj.updateDynamic("refetchAllOnWindowFocus")(refetchAllOnWindowFocus.get.asInstanceOf[js.Any])
+    if (refetchInterval != null) __obj.updateDynamic("refetchInterval")(refetchInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(refetchIntervalInBackground)) __obj.updateDynamic("refetchIntervalInBackground")(refetchIntervalInBackground.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refetchOnMount)) __obj.updateDynamic("refetchOnMount")(refetchOnMount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refetchOnWindowFocus)) __obj.updateDynamic("refetchOnWindowFocus")(refetchOnWindowFocus.get.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (retryDelay != null) __obj.updateDynamic("retryDelay")(js.Any.fromFunction1(retryDelay))
+    if (!js.isUndefined(staleTime)) __obj.updateDynamic("staleTime")(staleTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspense)) __obj.updateDynamic("suspense")(suspense.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(throwOnError)) __obj.updateDynamic("throwOnError")(throwOnError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useErrorBoundary)) __obj.updateDynamic("useErrorBoundary")(useErrorBoundary.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactQueryProviderConfig]
   }
-  @scala.inline
-  implicit class ReactQueryProviderConfigOps[Self <: ReactQueryProviderConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnError(value: (/* err */ js.Any, /* snapshotValue */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMutate(value: /* variables */ js.Any => js.Promise[_] | _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMutate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMutate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMutate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSettled(
-      value: (/* data */ js.UndefOr[js.Any], /* error */ js.Any | Null, /* snapshotValue */ js.UndefOr[js.Any]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSettled")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSettled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSettled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSuccess(value: (/* data */ js.Any, /* variables */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryKeySerializerFn(
-      value: /* queryKey */ js.UndefOr[
-          js.Array[QueryKeyPart] | String | `false` | (js.Function0[js.UndefOr[js.Array[QueryKeyPart] | String | `false`]])
-        ] => (js.Tuple2[String, js.Array[QueryKeyPart]]) | js.Array[js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryKeySerializerFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutQueryKeySerializerFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryKeySerializerFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefetchAllOnWindowFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchAllOnWindowFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefetchAllOnWindowFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchAllOnWindowFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrowOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throwOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrowOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throwOnError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseErrorBoundary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useErrorBoundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseErrorBoundary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useErrorBoundary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

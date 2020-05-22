@@ -34,77 +34,20 @@ trait SchemaOrderinvoicesCreateRefundInvoiceRequest extends js.Object {
 
 object SchemaOrderinvoicesCreateRefundInvoiceRequest {
   @scala.inline
-  def apply(): SchemaOrderinvoicesCreateRefundInvoiceRequest = {
+  def apply(
+    invoiceId: String = null,
+    operationId: String = null,
+    refundOnlyOption: SchemaOrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption = null,
+    returnOption: SchemaOrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption = null,
+    shipmentInvoices: js.Array[SchemaShipmentInvoice] = null
+  ): SchemaOrderinvoicesCreateRefundInvoiceRequest = {
     val __obj = js.Dynamic.literal()
+    if (invoiceId != null) __obj.updateDynamic("invoiceId")(invoiceId.asInstanceOf[js.Any])
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
+    if (refundOnlyOption != null) __obj.updateDynamic("refundOnlyOption")(refundOnlyOption.asInstanceOf[js.Any])
+    if (returnOption != null) __obj.updateDynamic("returnOption")(returnOption.asInstanceOf[js.Any])
+    if (shipmentInvoices != null) __obj.updateDynamic("shipmentInvoices")(shipmentInvoices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderinvoicesCreateRefundInvoiceRequest]
   }
-  @scala.inline
-  implicit class SchemaOrderinvoicesCreateRefundInvoiceRequestOps[Self <: SchemaOrderinvoicesCreateRefundInvoiceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvoiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvoiceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefundOnlyOption(value: SchemaOrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refundOnlyOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefundOnlyOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refundOnlyOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnOption(value: SchemaOrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipmentInvoices(value: js.Array[SchemaShipmentInvoice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipmentInvoices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipmentInvoices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipmentInvoices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

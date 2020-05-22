@@ -5,127 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Aps extends js.Object {
-  var alert: js.UndefOr[String | ApsAlert] = js.native
-  var badge: js.UndefOr[Double] = js.native
-  var category: js.UndefOr[String] = js.native
-  var `content-available`: js.UndefOr[`1`] = js.native
-  var `launch-image`: js.UndefOr[String] = js.native
-  var `mutable-content`: js.UndefOr[`1`] = js.native
-  var sound: js.UndefOr[String] = js.native
-  var `url-args`: js.UndefOr[js.Array[String]] = js.native
+  var alert: js.UndefOr[String | ApsAlert] = js.undefined
+  var badge: js.UndefOr[Double] = js.undefined
+  var category: js.UndefOr[String] = js.undefined
+  var `content-available`: js.UndefOr[`1`] = js.undefined
+  var `launch-image`: js.UndefOr[String] = js.undefined
+  var `mutable-content`: js.UndefOr[`1`] = js.undefined
+  var sound: js.UndefOr[String] = js.undefined
+  var `url-args`: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Aps {
   @scala.inline
-  def apply(): Aps = {
+  def apply(
+    alert: String | ApsAlert = null,
+    badge: js.UndefOr[Double] = js.undefined,
+    category: String = null,
+    `content-available`: `1` = null,
+    `launch-image`: String = null,
+    `mutable-content`: `1` = null,
+    sound: String = null,
+    `url-args`: js.Array[String] = null
+  ): Aps = {
     val __obj = js.Dynamic.literal()
+    if (alert != null) __obj.updateDynamic("alert")(alert.asInstanceOf[js.Any])
+    if (!js.isUndefined(badge)) __obj.updateDynamic("badge")(badge.get.asInstanceOf[js.Any])
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (`content-available` != null) __obj.updateDynamic("content-available")(`content-available`.asInstanceOf[js.Any])
+    if (`launch-image` != null) __obj.updateDynamic("launch-image")(`launch-image`.asInstanceOf[js.Any])
+    if (`mutable-content` != null) __obj.updateDynamic("mutable-content")(`mutable-content`.asInstanceOf[js.Any])
+    if (sound != null) __obj.updateDynamic("sound")(sound.asInstanceOf[js.Any])
+    if (`url-args` != null) __obj.updateDynamic("url-args")(`url-args`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Aps]
   }
-  @scala.inline
-  implicit class ApsOps[Self <: Aps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlert(value: String | ApsAlert): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withContent-available`(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content-available")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutContent-available`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content-available")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLaunch-image`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launch-image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLaunch-image`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launch-image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMutable-content`(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutable-content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMutable-content`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutable-content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSound(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUrl-args`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url-args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUrl-args`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url-args")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

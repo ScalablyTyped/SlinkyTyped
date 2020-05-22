@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PivotGroupSortValueBucket extends js.Object {
   /**
     * Determines the bucket from which values are chosen to sort.
@@ -17,51 +16,21 @@ trait PivotGroupSortValueBucket extends js.Object {
     * to the "Grand Total" over the column groups. If a single value is listed,
     * this would correspond to using the "Total" of that bucket.
     */
-  var buckets: js.UndefOr[js.Array[ExtendedValue]] = js.native
+  var buckets: js.UndefOr[js.Array[ExtendedValue]] = js.undefined
   /**
     * The offset in the PivotTable.values list which the values in this
     * grouping should be sorted by.
     */
-  var valuesIndex: js.UndefOr[Double] = js.native
+  var valuesIndex: js.UndefOr[Double] = js.undefined
 }
 
 object PivotGroupSortValueBucket {
   @scala.inline
-  def apply(): PivotGroupSortValueBucket = {
+  def apply(buckets: js.Array[ExtendedValue] = null, valuesIndex: js.UndefOr[Double] = js.undefined): PivotGroupSortValueBucket = {
     val __obj = js.Dynamic.literal()
+    if (buckets != null) __obj.updateDynamic("buckets")(buckets.asInstanceOf[js.Any])
+    if (!js.isUndefined(valuesIndex)) __obj.updateDynamic("valuesIndex")(valuesIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotGroupSortValueBucket]
   }
-  @scala.inline
-  implicit class PivotGroupSortValueBucketOps[Self <: PivotGroupSortValueBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuckets(value: js.Array[ExtendedValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuckets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValuesIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuesIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValuesIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuesIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

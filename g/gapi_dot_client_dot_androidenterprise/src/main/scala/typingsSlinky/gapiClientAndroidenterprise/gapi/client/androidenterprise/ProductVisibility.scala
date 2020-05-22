@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProductVisibility extends js.Object {
   /** The product ID that should be made visible to the user. This is required. */
-  var productId: js.UndefOr[String] = js.native
+  var productId: js.UndefOr[String] = js.undefined
   /**
     * This allows to only grant visibility to the specified tracks of the app. For example, if an app has a prod version, a beta version and an alpha version
     * and the enterprise has been granted visibility to both the alpha and beta tracks, if tracks is {"beta", "production"} the user will be able to install
@@ -19,46 +18,16 @@ trait ProductVisibility extends js.Object {
     * The allowed sets are: {} (considered equivalent to {"production"}) {"production"} {"beta", "production"} {"alpha", "beta", "production"} The order of
     * elements is not relevant. Any other set of tracks will be rejected with an error.
     */
-  var tracks: js.UndefOr[js.Array[String]] = js.native
+  var tracks: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ProductVisibility {
   @scala.inline
-  def apply(): ProductVisibility = {
+  def apply(productId: String = null, tracks: js.Array[String] = null): ProductVisibility = {
     val __obj = js.Dynamic.literal()
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
+    if (tracks != null) __obj.updateDynamic("tracks")(tracks.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductVisibility]
   }
-  @scala.inline
-  implicit class ProductVisibilityOps[Self <: ProductVisibility] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTracks(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTracks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

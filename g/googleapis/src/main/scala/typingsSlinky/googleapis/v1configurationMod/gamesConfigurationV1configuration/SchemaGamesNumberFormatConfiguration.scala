@@ -36,65 +36,18 @@ trait SchemaGamesNumberFormatConfiguration extends js.Object {
 
 object SchemaGamesNumberFormatConfiguration {
   @scala.inline
-  def apply(): SchemaGamesNumberFormatConfiguration = {
+  def apply(
+    currencyCode: String = null,
+    numDecimalPlaces: js.UndefOr[Double] = js.undefined,
+    numberFormatType: String = null,
+    suffix: SchemaGamesNumberAffixConfiguration = null
+  ): SchemaGamesNumberFormatConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (currencyCode != null) __obj.updateDynamic("currencyCode")(currencyCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(numDecimalPlaces)) __obj.updateDynamic("numDecimalPlaces")(numDecimalPlaces.get.asInstanceOf[js.Any])
+    if (numberFormatType != null) __obj.updateDynamic("numberFormatType")(numberFormatType.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGamesNumberFormatConfiguration]
   }
-  @scala.inline
-  implicit class SchemaGamesNumberFormatConfigurationOps[Self <: SchemaGamesNumberFormatConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrencyCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrencyCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumDecimalPlaces(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDecimalPlaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumDecimalPlaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDecimalPlaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormatType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormatType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormatType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormatType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: SchemaGamesNumberAffixConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

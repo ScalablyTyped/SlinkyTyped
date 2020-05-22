@@ -5,114 +5,113 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Record<es-feature-detection.es-feature-detection.ES2015Builtins, boolean> */
-@js.native
 trait RecordES2015Builtinsboole extends js.Object {
   @JSName("Array.from")
-  var ArrayDotfrom: Boolean = js.native
+  var ArrayDotfrom: Boolean
   @JSName("Array.of")
-  var ArrayDotof: Boolean = js.native
+  var ArrayDotof: Boolean
   @JSName("Array.prototype.copyWithin")
-  var ArrayDotprototypeDotcopyWithin: Boolean = js.native
+  var ArrayDotprototypeDotcopyWithin: Boolean
   @JSName("Array.prototype.entries")
-  var ArrayDotprototypeDotentries: Boolean = js.native
+  var ArrayDotprototypeDotentries: Boolean
   @JSName("Array.prototype.fill")
-  var ArrayDotprototypeDotfill: Boolean = js.native
+  var ArrayDotprototypeDotfill: Boolean
   @JSName("Array.prototype.find")
-  var ArrayDotprototypeDotfind: Boolean = js.native
+  var ArrayDotprototypeDotfind: Boolean
   @JSName("Array.prototype.findIndex")
-  var ArrayDotprototypeDotfindIndex: Boolean = js.native
+  var ArrayDotprototypeDotfindIndex: Boolean
   @JSName("Array.prototype.keys")
-  var ArrayDotprototypeDotkeys: Boolean = js.native
-  var Map: Boolean = js.native
+  var ArrayDotprototypeDotkeys: Boolean
+  var Map: Boolean
   @JSName("Math.acosh")
-  var MathDotacosh: Boolean = js.native
+  var MathDotacosh: Boolean
   @JSName("Math.asinh")
-  var MathDotasinh: Boolean = js.native
+  var MathDotasinh: Boolean
   @JSName("Math.cbrt")
-  var MathDotcbrt: Boolean = js.native
+  var MathDotcbrt: Boolean
   @JSName("Math.clz32")
-  var MathDotclz32: Boolean = js.native
+  var MathDotclz32: Boolean
   @JSName("Math.cosh")
-  var MathDotcosh: Boolean = js.native
+  var MathDotcosh: Boolean
   @JSName("Math.expm1")
-  var MathDotexpm1: Boolean = js.native
+  var MathDotexpm1: Boolean
   @JSName("Math.fround")
-  var MathDotfround: Boolean = js.native
+  var MathDotfround: Boolean
   @JSName("Math.hypot")
-  var MathDothypot: Boolean = js.native
+  var MathDothypot: Boolean
   @JSName("Math.imul")
-  var MathDotimul: Boolean = js.native
+  var MathDotimul: Boolean
   @JSName("Math.log10")
-  var MathDotlog10: Boolean = js.native
+  var MathDotlog10: Boolean
   @JSName("Math.log1p")
-  var MathDotlog1p: Boolean = js.native
+  var MathDotlog1p: Boolean
   @JSName("Math.log2")
-  var MathDotlog2: Boolean = js.native
+  var MathDotlog2: Boolean
   @JSName("Math.sign")
-  var MathDotsign: Boolean = js.native
+  var MathDotsign: Boolean
   @JSName("Math.sinh")
-  var MathDotsinh: Boolean = js.native
+  var MathDotsinh: Boolean
   @JSName("Math.tanh")
-  var MathDottanh: Boolean = js.native
+  var MathDottanh: Boolean
   @JSName("Math.trunc")
-  var MathDottrunc: Boolean = js.native
+  var MathDottrunc: Boolean
   @JSName("Number.EPSILON")
-  var NumberDotEPSILON: Boolean = js.native
+  var NumberDotEPSILON: Boolean
   @JSName("Number.MAX_SAFE_INTEGER")
-  var NumberDotMAX_SAFE_INTEGER: Boolean = js.native
+  var NumberDotMAX_SAFE_INTEGER: Boolean
   @JSName("Number.MIN_SAFE_INTEGER")
-  var NumberDotMIN_SAFE_INTEGER: Boolean = js.native
+  var NumberDotMIN_SAFE_INTEGER: Boolean
   @JSName("Number.isFinite")
-  var NumberDotisFinite: Boolean = js.native
+  var NumberDotisFinite: Boolean
   @JSName("Number.isInteger")
-  var NumberDotisInteger: Boolean = js.native
+  var NumberDotisInteger: Boolean
   @JSName("Number.isNaN")
-  var NumberDotisNaN: Boolean = js.native
+  var NumberDotisNaN: Boolean
   @JSName("Number.isSafeInteger")
-  var NumberDotisSafeInteger: Boolean = js.native
+  var NumberDotisSafeInteger: Boolean
   @JSName("Number.parseFloat")
-  var NumberDotparseFloat: Boolean = js.native
+  var NumberDotparseFloat: Boolean
   @JSName("Number.parseInt")
-  var NumberDotparseInt: Boolean = js.native
+  var NumberDotparseInt: Boolean
   @JSName("Object.assign")
-  var ObjectDotassign: Boolean = js.native
+  var ObjectDotassign: Boolean
   @JSName("Object.getOwnPropertySymbols")
-  var ObjectDotgetOwnPropertySymbols: Boolean = js.native
+  var ObjectDotgetOwnPropertySymbols: Boolean
   @JSName("Object.is")
-  var ObjectDotis: Boolean = js.native
+  var ObjectDotis: Boolean
   @JSName("Object.prototype.__proto__")
-  var ObjectDotprototypeDot__proto__ : Boolean = js.native
+  var ObjectDotprototypeDot__proto__ : Boolean
   @JSName("Object.setPrototypeOf")
-  var ObjectDotsetPrototypeOf: Boolean = js.native
-  var Promise: Boolean = js.native
-  var Proxy: Boolean = js.native
-  var Reflect: Boolean = js.native
-  var Set: Boolean = js.native
+  var ObjectDotsetPrototypeOf: Boolean
+  var Promise: Boolean
+  var Proxy: Boolean
+  var Reflect: Boolean
+  var Set: Boolean
   @JSName("String.fromCodePoint")
-  var StringDotfromCodePoint: Boolean = js.native
+  var StringDotfromCodePoint: Boolean
   @JSName("String.prototype.codePointAt")
-  var StringDotprototypeDotcodePointAt: Boolean = js.native
+  var StringDotprototypeDotcodePointAt: Boolean
   @JSName("String.prototype.endsWith")
-  var StringDotprototypeDotendsWith: Boolean = js.native
+  var StringDotprototypeDotendsWith: Boolean
   @JSName("String.prototype.includes")
-  var StringDotprototypeDotincludes: Boolean = js.native
+  var StringDotprototypeDotincludes: Boolean
   @JSName("String.prototype.normalize")
-  var StringDotprototypeDotnormalize: Boolean = js.native
+  var StringDotprototypeDotnormalize: Boolean
   @JSName("String.prototype.repeat")
-  var StringDotprototypeDotrepeat: Boolean = js.native
+  var StringDotprototypeDotrepeat: Boolean
   @JSName("String.prototype.startsWith")
-  var StringDotprototypeDotstartsWith: Boolean = js.native
+  var StringDotprototypeDotstartsWith: Boolean
   @JSName("String.raw")
-  var StringDotraw: Boolean = js.native
-  var Symbol: Boolean = js.native
-  var TypedArrays: Boolean = js.native
-  var WeakMap: Boolean = js.native
-  var WeakSet: Boolean = js.native
-  var __all: Boolean = js.native
-  var base64: Boolean = js.native
+  var StringDotraw: Boolean
+  var Symbol: Boolean
+  var TypedArrays: Boolean
+  var WeakMap: Boolean
+  var WeakSet: Boolean
+  var __all: Boolean
+  var base64: Boolean
   @JSName("new.target")
-  var newDottarget: Boolean = js.native
-  var requestAnimationFrame: Boolean = js.native
+  var newDottarget: Boolean
+  var requestAnimationFrame: Boolean
 }
 
 object RecordES2015Builtinsboole {
@@ -228,367 +227,5 @@ object RecordES2015Builtinsboole {
     __obj.updateDynamic("new.target")(newDottarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordES2015Builtinsboole]
   }
-  @scala.inline
-  implicit class RecordES2015BuiltinsbooleOps[Self <: RecordES2015Builtinsboole] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrayDotfrom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotof(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.of")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotprototypeDotcopyWithin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.prototype.copyWithin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotprototypeDotentries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.prototype.entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotprototypeDotfill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.prototype.fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotprototypeDotfind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.prototype.find")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotprototypeDotfindIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.prototype.findIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayDotprototypeDotkeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Array.prototype.keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotacosh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.acosh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotasinh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.asinh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotcbrt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.cbrt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotclz32(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.clz32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotcosh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.cosh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotexpm1(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.expm1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotfround(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.fround")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDothypot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.hypot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotimul(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.imul")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotlog10(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.log10")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotlog1p(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.log1p")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotlog2(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.log2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotsign(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.sign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDotsinh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.sinh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDottanh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.tanh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMathDottrunc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Math.trunc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotEPSILON(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.EPSILON")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotMAX_SAFE_INTEGER(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.MAX_SAFE_INTEGER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotMIN_SAFE_INTEGER(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.MIN_SAFE_INTEGER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotisFinite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.isFinite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotisInteger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.isInteger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotisNaN(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.isNaN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotisSafeInteger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.isSafeInteger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotparseFloat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.parseFloat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberDotparseInt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number.parseInt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectDotassign(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Object.assign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectDotgetOwnPropertySymbols(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Object.getOwnPropertySymbols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectDotis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Object.is")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectDotprototypeDot__proto__(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Object.prototype.__proto__")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectDotsetPrototypeOf(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Object.setPrototypeOf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPromise(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProxy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReflect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reflect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Set")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotfromCodePoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.fromCodePoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotprototypeDotcodePointAt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.prototype.codePointAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotprototypeDotendsWith(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.prototype.endsWith")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotprototypeDotincludes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.prototype.includes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotprototypeDotnormalize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.prototype.normalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotprototypeDotrepeat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.prototype.repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotprototypeDotstartsWith(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.prototype.startsWith")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDotraw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String.raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypedArrays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypedArrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeakMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeakMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeakSet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WeakSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with__all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBase64(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewDottarget(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("new.target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestAnimationFrame(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAnimationFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

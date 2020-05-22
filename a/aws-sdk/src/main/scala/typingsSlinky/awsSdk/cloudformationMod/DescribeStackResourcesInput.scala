@@ -22,53 +22,16 @@ trait DescribeStackResourcesInput extends js.Object {
 
 object DescribeStackResourcesInput {
   @scala.inline
-  def apply(): DescribeStackResourcesInput = {
+  def apply(
+    LogicalResourceId: LogicalResourceId = null,
+    PhysicalResourceId: PhysicalResourceId = null,
+    StackName: StackName = null
+  ): DescribeStackResourcesInput = {
     val __obj = js.Dynamic.literal()
+    if (LogicalResourceId != null) __obj.updateDynamic("LogicalResourceId")(LogicalResourceId.asInstanceOf[js.Any])
+    if (PhysicalResourceId != null) __obj.updateDynamic("PhysicalResourceId")(PhysicalResourceId.asInstanceOf[js.Any])
+    if (StackName != null) __obj.updateDynamic("StackName")(StackName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStackResourcesInput]
   }
-  @scala.inline
-  implicit class DescribeStackResourcesInputOps[Self <: DescribeStackResourcesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogicalResourceId(value: LogicalResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogicalResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhysicalResourceId(value: PhysicalResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhysicalResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackName(value: StackName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

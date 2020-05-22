@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WmxSite extends js.Object {
   /** The user's permission level for the site. */
-  var permissionLevel: js.UndefOr[String] = js.native
+  var permissionLevel: js.UndefOr[String] = js.undefined
   /** The URL of the site. */
-  var siteUrl: js.UndefOr[String] = js.native
+  var siteUrl: js.UndefOr[String] = js.undefined
 }
 
 object WmxSite {
   @scala.inline
-  def apply(): WmxSite = {
+  def apply(permissionLevel: String = null, siteUrl: String = null): WmxSite = {
     val __obj = js.Dynamic.literal()
+    if (permissionLevel != null) __obj.updateDynamic("permissionLevel")(permissionLevel.asInstanceOf[js.Any])
+    if (siteUrl != null) __obj.updateDynamic("siteUrl")(siteUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[WmxSite]
   }
-  @scala.inline
-  implicit class WmxSiteOps[Self <: WmxSite] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermissionLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

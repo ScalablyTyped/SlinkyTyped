@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnNames extends js.Object {
-  var data: String = js.native
-  var expires: String = js.native
-  var session_id: String = js.native
+  var data: String
+  var expires: String
+  var session_id: String
 }
 
 object ColumnNames {
@@ -17,31 +16,5 @@ object ColumnNames {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], expires = expires.asInstanceOf[js.Any], session_id = session_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnNames]
   }
-  @scala.inline
-  implicit class ColumnNamesOps[Self <: ColumnNames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpires(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

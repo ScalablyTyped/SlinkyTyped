@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientStorageAPI extends js.Object {
-  def getAsync(key: String): js.Promise[_] = js.native
-  def setAsync(key: String, value: js.Any): js.Promise[Unit] = js.native
+  def getAsync(key: String): js.Promise[_]
+  def setAsync(key: String, value: js.Any): js.Promise[Unit]
 }
 
 object ClientStorageAPI {
@@ -16,25 +15,5 @@ object ClientStorageAPI {
     val __obj = js.Dynamic.literal(getAsync = js.Any.fromFunction1(getAsync), setAsync = js.Any.fromFunction2(setAsync))
     __obj.asInstanceOf[ClientStorageAPI]
   }
-  @scala.inline
-  implicit class ClientStorageAPIOps[Self <: ClientStorageAPI] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAsync(value: String => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetAsync(value: (String, js.Any) => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

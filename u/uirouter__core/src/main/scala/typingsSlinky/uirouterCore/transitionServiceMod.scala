@@ -68,7 +68,7 @@ object transitionServiceMod extends js.Object {
     var _eventTypes: js.Any = js.native
     /** @hidden */
     var _getEvents: js.Any = js.native
-    /** * @hidden */
+    /** @hidden */
     var _getPathTypes: js.Any = js.native
     /** @internalapi */
     var _pluginapi: TransitionServicePluginAPI = js.native

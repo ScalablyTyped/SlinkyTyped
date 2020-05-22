@@ -4,70 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Atrule extends js.Object {
   @JSName("&.atrule")
-  var AmpersandDotatrule: ColorString = js.native
+  var AmpersandDotatrule: ColorString
   @JSName("&.attr-name")
-  var `AmpersandDotattr-name`: ColorString = js.native
+  var `AmpersandDotattr-name`: ColorString
   @JSName("&.attr-value")
-  var `AmpersandDotattr-value`: ColorString = js.native
+  var `AmpersandDotattr-value`: ColorString
   @JSName("&.bold")
-  var AmpersandDotbold: FontWeight = js.native
+  var AmpersandDotbold: FontWeight
   @JSName("&.boolean")
-  var AmpersandDotboolean: ColorString = js.native
+  var AmpersandDotboolean: ColorString
   @JSName("&.cdata")
-  var AmpersandDotcdata: Color = js.native
+  var AmpersandDotcdata: Color
   @JSName("&.class-name")
-  var `AmpersandDotclass-name`: ColorString = js.native
+  var `AmpersandDotclass-name`: ColorString
   @JSName("&.comment")
-  var AmpersandDotcomment: Color = js.native
+  var AmpersandDotcomment: Color
   @JSName("&.constant")
-  var AmpersandDotconstant: ColorString = js.native
+  var AmpersandDotconstant: ColorString
   @JSName("&.deleted")
-  var AmpersandDotdeleted: ColorString = js.native
+  var AmpersandDotdeleted: ColorString
   @JSName("&.directive.tag .tag")
-  var `AmpersandDotdirectiveDottag Dottag`: BackgroundColor = js.native
+  var `AmpersandDotdirectiveDottag Dottag`: BackgroundColor
   @JSName("&.doctype")
-  var AmpersandDotdoctype: Color = js.native
+  var AmpersandDotdoctype: Color
   @JSName("&.entity")
-  var AmpersandDotentity: ColorString = js.native
+  var AmpersandDotentity: ColorString
   @JSName("&.function")
-  var AmpersandDotfunction: ColorString = js.native
+  var AmpersandDotfunction: ColorString
   @JSName("&.important")
-  var AmpersandDotimportant: FontWeight = js.native
+  var AmpersandDotimportant: FontWeight
   @JSName("&.inserted")
-  var AmpersandDotinserted: ColorString = js.native
+  var AmpersandDotinserted: ColorString
   @JSName("&.italic")
-  var AmpersandDotitalic: FontStyle = js.native
+  var AmpersandDotitalic: FontStyle
   @JSName("&.keyword")
-  var AmpersandDotkeyword: ColorString = js.native
+  var AmpersandDotkeyword: ColorString
   @JSName("&.number")
-  var AmpersandDotnumber: ColorString = js.native
+  var AmpersandDotnumber: ColorString
   @JSName("&.operator")
-  var AmpersandDotoperator: ColorString = js.native
+  var AmpersandDotoperator: ColorString
   @JSName("&.prolog")
-  var AmpersandDotprolog: Color = js.native
+  var AmpersandDotprolog: Color
   @JSName("&.property")
-  var AmpersandDotproperty: ColorString = js.native
+  var AmpersandDotproperty: ColorString
   @JSName("&.punctuation")
-  var AmpersandDotpunctuation: ColorString = js.native
+  var AmpersandDotpunctuation: ColorString
   @JSName("&.regex")
-  var AmpersandDotregex: ColorString = js.native
+  var AmpersandDotregex: ColorString
   @JSName("&.selector")
-  var AmpersandDotselector: ColorString = js.native
+  var AmpersandDotselector: ColorString
   @JSName("&.string")
-  var AmpersandDotstring: ColorString = js.native
+  var AmpersandDotstring: ColorString
   @JSName("&.symbol")
-  var AmpersandDotsymbol: ColorString = js.native
+  var AmpersandDotsymbol: ColorString
   @JSName("&.tag")
-  var AmpersandDottag: ColorString = js.native
+  var AmpersandDottag: ColorString
   @JSName("&.url")
-  var AmpersandDoturl: ColorString = js.native
+  var AmpersandDoturl: ColorString
   @JSName("&.variable")
-  var AmpersandDotvariable: ColorString = js.native
-  var WebkitFontSmoothing: String = js.native
-  var fontFamily: String = js.native
+  var AmpersandDotvariable: ColorString
+  var WebkitFontSmoothing: String
+  var fontFamily: String
 }
 
 object Atrule {
@@ -139,205 +138,5 @@ object Atrule {
     __obj.updateDynamic("&.variable")(AmpersandDotvariable.asInstanceOf[js.Any])
     __obj.asInstanceOf[Atrule]
   }
-  @scala.inline
-  implicit class AtruleOps[Self <: Atrule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmpersandDotatrule(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.atrule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmpersandDotattr-name`(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.attr-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmpersandDotattr-value`(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.attr-value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotbold(value: FontWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotboolean(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.boolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotcdata(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.cdata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmpersandDotclass-name`(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.class-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotcomment(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotconstant(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.constant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotdeleted(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAmpersandDotdirectiveDottag Dottag`(value: BackgroundColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.directive.tag .tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotdoctype(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.doctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotentity(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotfunction(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotimportant(value: FontWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.important")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotinserted(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.inserted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotitalic(value: FontStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.italic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotkeyword(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotnumber(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotoperator(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotprolog(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.prolog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotproperty(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotpunctuation(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.punctuation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotregex(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotselector(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotstring(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotsymbol(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDottag(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDoturl(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmpersandDotvariable(value: ColorString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("&.variable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebkitFontSmoothing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitFontSmoothing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

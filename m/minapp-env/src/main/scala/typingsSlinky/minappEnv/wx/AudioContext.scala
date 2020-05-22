@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AudioContext extends js.Object {
   /** [AudioContext.pause()](AudioContext.pause.md)
     *
     * 暂停音频。 */
-  def pause(): Unit = js.native
+  def pause(): Unit
   /** [AudioContext.play()](AudioContext.play.md)
     *
     * 播放音频。 */
-  def play(): Unit = js.native
+  def play(): Unit
   /** [AudioContext.seek(number position)](AudioContext.seek.md)
     *
     * 跳转到指定位置。 */
   def seek(/** 跳转位置，单位 s */
-  position: Double): Unit = js.native
+  position: Double): Unit
   /** [AudioContext.setSrc(string src)](AudioContext.setSrc.md)
     *
     * 设置音频地址 */
   def setSrc(/** 音频地址 */
-  src: String): Unit = js.native
+  src: String): Unit
 }
 
 object AudioContext {
@@ -32,37 +31,5 @@ object AudioContext {
     val __obj = js.Dynamic.literal(pause = js.Any.fromFunction0(pause), play = js.Any.fromFunction0(play), seek = js.Any.fromFunction1(seek), setSrc = js.Any.fromFunction1(setSrc))
     __obj.asInstanceOf[AudioContext]
   }
-  @scala.inline
-  implicit class AudioContextOps[Self <: AudioContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPause(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPlay(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSeek(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSrc(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSrc")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

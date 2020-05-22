@@ -7,123 +7,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined next-server.next-server/dist/lib/dynamic.LoadableBaseOptions<P> & {  render ? :(props : P, loaded : any): react.react.<global>.JSX.Element} */
-@js.native
 trait DynamicOptions[P] extends js.Object {
-  var loadableGenerated: js.UndefOr[LoadableGeneratedOptions] = js.native
-  var loader: js.UndefOr[Loader[P] | LoaderMap] = js.native
-  var loading: js.UndefOr[js.Function1[/* hasErrorIsLoadingPastDelay */ Error, ReactElement | Null]] = js.native
-  var modules: js.UndefOr[js.Function0[LoaderMap]] = js.native
+  var loadableGenerated: js.UndefOr[LoadableGeneratedOptions] = js.undefined
+  var loader: js.UndefOr[Loader[P] | LoaderMap] = js.undefined
+  var loading: js.UndefOr[js.Function1[/* hasErrorIsLoadingPastDelay */ Error, ReactElement | Null]] = js.undefined
+  var modules: js.UndefOr[js.Function0[LoaderMap]] = js.undefined
   /**
     * @deprecated the modules option has been planned for removal
     */
-  var render: js.UndefOr[js.Function2[/* props */ P, /* loaded */ js.Any, ReactElement]] = js.native
-  var ssr: js.UndefOr[Boolean] = js.native
-  var webpack: js.UndefOr[js.Function0[_]] = js.native
+  var render: js.UndefOr[js.Function2[/* props */ P, /* loaded */ js.Any, ReactElement]] = js.undefined
+  var ssr: js.UndefOr[Boolean] = js.undefined
+  var webpack: js.UndefOr[js.Function0[_]] = js.undefined
 }
 
 object DynamicOptions {
   @scala.inline
-  def apply[P](): DynamicOptions[P] = {
+  def apply[P](
+    loadableGenerated: LoadableGeneratedOptions = null,
+    loader: Loader[P] | LoaderMap = null,
+    loading: /* hasErrorIsLoadingPastDelay */ Error => ReactElement | Null = null,
+    modules: () => LoaderMap = null,
+    render: (/* props */ P, /* loaded */ js.Any) => ReactElement = null,
+    ssr: js.UndefOr[Boolean] = js.undefined,
+    webpack: () => _ = null
+  ): DynamicOptions[P] = {
     val __obj = js.Dynamic.literal()
+    if (loadableGenerated != null) __obj.updateDynamic("loadableGenerated")(loadableGenerated.asInstanceOf[js.Any])
+    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
+    if (loading != null) __obj.updateDynamic("loading")(js.Any.fromFunction1(loading))
+    if (modules != null) __obj.updateDynamic("modules")(js.Any.fromFunction0(modules))
+    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction2(render))
+    if (!js.isUndefined(ssr)) __obj.updateDynamic("ssr")(ssr.get.asInstanceOf[js.Any])
+    if (webpack != null) __obj.updateDynamic("webpack")(js.Any.fromFunction0(webpack))
     __obj.asInstanceOf[DynamicOptions[P]]
   }
-  @scala.inline
-  implicit class DynamicOptionsOps[Self[p] <: DynamicOptions[p], P] (val x: Self[P]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[P] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[P]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[P] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[P] with Other]
-    @scala.inline
-    def withLoadableGenerated(value: LoadableGeneratedOptions): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadableGenerated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadableGenerated: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadableGenerated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaderFunction0(value: () => LoaderComponent[P]): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLoader(value: Loader[P] | LoaderMap): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoader: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoading(value: /* hasErrorIsLoadingPastDelay */ Error => ReactElement | Null): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModules(value: () => LoaderMap): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutModules: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRender(value: (/* props */ P, /* loaded */ js.Any) => ReactElement): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRender: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsr(value: Boolean): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsr: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebpack(value: () => _): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpack")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutWebpack: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpack")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,5 +7,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("RequestTask")
 @js.native
 class RequestTask ()
-  extends typingsSlinky.wegameApi.RequestTask
+  extends typingsSlinky.wegameApi.RequestTask {
+  /**
+    * 中断请求任务
+    */
+  /* CompleteClass */
+  override def abort(): Unit = js.native
+}
 

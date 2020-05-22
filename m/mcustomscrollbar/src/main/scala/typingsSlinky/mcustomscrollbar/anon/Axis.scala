@@ -7,157 +7,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Axis extends js.Object {
   /**
     * Define the mouse-wheel scrolling axis when both vertical and horizontal scrollbars are present.
     * Set axis: "y" (default) for vertical or axis: "x" for horizontal scrolling.
     */
-  var axis: js.UndefOr[x | y] = js.native
+  var axis: js.UndefOr[x | y] = js.undefined
   /**
     * Set the number of pixels one wheel notch scrolls. The default value “auto” uses the OS/browser value.
     */
-  var deltaFactor: js.UndefOr[Double] = js.native
+  var deltaFactor: js.UndefOr[Double] = js.undefined
   /**
     * Set the tags that disable mouse-wheel when cursor is over them.
     * Default value: ["select","option","keygen","datalist","textarea"]
     */
-  var disableOver: js.UndefOr[js.Array[String]] = js.native
+  var disableOver: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Enable or disable content scrolling via mouse-wheel.
     */
-  var enable: js.UndefOr[Boolean] = js.native
+  var enable: js.UndefOr[Boolean] = js.undefined
   /**
     * Invert mouse-wheel scrolling direction.
     * Set to true to scroll down or right when mouse-wheel is turned upwards.
     */
-  var invert: js.UndefOr[Boolean] = js.native
+  var invert: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable or disable mouse-wheel (delta) acceleration.
     * Setting normalizeDelta: true translates mouse-wheel delta value to -1 or 1.
     */
-  var normalizeDelta: js.UndefOr[Boolean] = js.native
+  var normalizeDelta: js.UndefOr[Boolean] = js.undefined
   /**
     * Prevent the default behaviour which automatically scrolls the parent element when end
     * or beginning of scrolling is reached (same bahavior with browser’s native scrollbar).
     */
-  var preventDefault: js.UndefOr[Boolean] = js.native
+  var preventDefault: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the mouse-wheel scrolling amount (in pixels).
     * The default value "auto" adjusts scrolling amount according to scrollable content length.
     */
-  var scrollAmount: js.UndefOr[auto | Double] = js.native
+  var scrollAmount: js.UndefOr[auto | Double] = js.undefined
 }
 
 object Axis {
   @scala.inline
-  def apply(): Axis = {
+  def apply(
+    axis: x | y = null,
+    deltaFactor: js.UndefOr[Double] = js.undefined,
+    disableOver: js.Array[String] = null,
+    enable: js.UndefOr[Boolean] = js.undefined,
+    invert: js.UndefOr[Boolean] = js.undefined,
+    normalizeDelta: js.UndefOr[Boolean] = js.undefined,
+    preventDefault: js.UndefOr[Boolean] = js.undefined,
+    scrollAmount: auto | Double = null
+  ): Axis = {
     val __obj = js.Dynamic.literal()
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (!js.isUndefined(deltaFactor)) __obj.updateDynamic("deltaFactor")(deltaFactor.get.asInstanceOf[js.Any])
+    if (disableOver != null) __obj.updateDynamic("disableOver")(disableOver.asInstanceOf[js.Any])
+    if (!js.isUndefined(enable)) __obj.updateDynamic("enable")(enable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(invert)) __obj.updateDynamic("invert")(invert.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalizeDelta)) __obj.updateDynamic("normalizeDelta")(normalizeDelta.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventDefault)) __obj.updateDynamic("preventDefault")(preventDefault.get.asInstanceOf[js.Any])
+    if (scrollAmount != null) __obj.updateDynamic("scrollAmount")(scrollAmount.asInstanceOf[js.Any])
     __obj.asInstanceOf[Axis]
   }
-  @scala.inline
-  implicit class AxisOps[Self <: Axis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxis(value: typingsSlinky.mcustomscrollbar.mcustomscrollbarStrings.x | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeltaFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeltaFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableOver(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalizeDelta(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalizeDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollAmount(value: auto | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollAmount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

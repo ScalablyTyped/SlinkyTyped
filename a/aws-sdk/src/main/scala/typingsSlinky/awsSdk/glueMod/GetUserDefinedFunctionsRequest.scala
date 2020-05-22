@@ -13,7 +13,7 @@ trait GetUserDefinedFunctionsRequest extends js.Object {
   /**
     * The name of the catalog database where the functions are located.
     */
-  var DatabaseName: NameString = js.native
+  var DatabaseName: js.UndefOr[NameString] = js.native
   /**
     * The maximum number of functions to return in one response.
     */
@@ -30,65 +30,19 @@ trait GetUserDefinedFunctionsRequest extends js.Object {
 
 object GetUserDefinedFunctionsRequest {
   @scala.inline
-  def apply(DatabaseName: NameString, Pattern: NameString): GetUserDefinedFunctionsRequest = {
-    val __obj = js.Dynamic.literal(DatabaseName = DatabaseName.asInstanceOf[js.Any], Pattern = Pattern.asInstanceOf[js.Any])
+  def apply(
+    Pattern: NameString,
+    CatalogId: CatalogIdString = null,
+    DatabaseName: NameString = null,
+    MaxResults: js.UndefOr[PageSize] = js.undefined,
+    NextToken: Token = null
+  ): GetUserDefinedFunctionsRequest = {
+    val __obj = js.Dynamic.literal(Pattern = Pattern.asInstanceOf[js.Any])
+    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
+    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUserDefinedFunctionsRequest]
   }
-  @scala.inline
-  implicit class GetUserDefinedFunctionsRequestOps[Self <: GetUserDefinedFunctionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogId(value: CatalogIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: PageSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

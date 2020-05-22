@@ -17,29 +17,10 @@ trait SchemaAddDealAssociationRequest extends js.Object {
 
 object SchemaAddDealAssociationRequest {
   @scala.inline
-  def apply(): SchemaAddDealAssociationRequest = {
+  def apply(association: SchemaCreativeDealAssociation = null): SchemaAddDealAssociationRequest = {
     val __obj = js.Dynamic.literal()
+    if (association != null) __obj.updateDynamic("association")(association.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddDealAssociationRequest]
   }
-  @scala.inline
-  implicit class SchemaAddDealAssociationRequestOps[Self <: SchemaAddDealAssociationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociation(value: SchemaCreativeDealAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

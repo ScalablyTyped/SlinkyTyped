@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.configuration.backend.XSchemaSupplier
   * @since OOo 1.1.2
   */
-@js.native
 trait XBackend extends XInterface {
   /**
     * creates an update handler for the owner entity layer for a component.
@@ -29,7 +28,7 @@ trait XBackend extends XInterface {
     * @throws com::sun::star::lang::NoSupportException if updates are not supported for this backend
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getOwnUpdateHandler(aComponent: String): XUpdateHandler = js.native
+  def getOwnUpdateHandler(aComponent: String): XUpdateHandler
   /**
     * creates an update handler on an entity's layer for a component.
     * @param aComponent component whose data will be updated
@@ -40,7 +39,7 @@ trait XBackend extends XInterface {
     * @throws com::sun::star::lang::NoSupportException if updates are not supported for this backend
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def getUpdateHandler(aComponent: String, aEntity: String): XUpdateHandler = js.native
+  def getUpdateHandler(aComponent: String, aEntity: String): XUpdateHandler
   /**
     * retrieves the layers associated to an entity for a component.
     * @param aComponent component whose data will be accessed
@@ -50,7 +49,7 @@ trait XBackend extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if the component identifier is invalid or if the entity doesn't exist.
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def listLayers(aComponent: String, aEntity: String): SafeArray[XLayer] = js.native
+  def listLayers(aComponent: String, aEntity: String): SafeArray[XLayer]
   /**
     * retrieves the layers associated to the owner entity for a component.
     * @param aComponent component whose data will be accessed
@@ -59,7 +58,7 @@ trait XBackend extends XInterface {
     * @throws com::sun::star::lang::IllegalArgumentException if the component identifier is invalid
     * @throws com::sun::star::configuration::backend::BackendAccessException if an error occurs while accessing the data.
     */
-  def listOwnLayers(aComponent: String): SafeArray[XLayer] = js.native
+  def listOwnLayers(aComponent: String): SafeArray[XLayer]
 }
 
 object XBackend {
@@ -76,37 +75,5 @@ object XBackend {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getOwnUpdateHandler = js.Any.fromFunction1(getOwnUpdateHandler), getUpdateHandler = js.Any.fromFunction2(getUpdateHandler), listLayers = js.Any.fromFunction2(listLayers), listOwnLayers = js.Any.fromFunction1(listOwnLayers), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XBackend]
   }
-  @scala.inline
-  implicit class XBackendOps[Self <: XBackend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetOwnUpdateHandler(value: String => XUpdateHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOwnUpdateHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpdateHandler(value: (String, String) => XUpdateHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdateHandler")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withListLayers(value: (String, String) => SafeArray[XLayer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listLayers")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withListOwnLayers(value: String => SafeArray[XLayer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listOwnLayers")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

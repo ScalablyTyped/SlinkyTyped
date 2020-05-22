@@ -10,7 +10,7 @@ import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentC
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationStyles
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -26,7 +26,7 @@ object DocumentCardLocation {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -42,7 +42,7 @@ object DocumentCardLocation {
     @scala.inline
     def onClick(value: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def stylesFunction1(value: IDocumentCardLocationStyleProps => Partial[IDocumentCardLocationStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardLocationStyleProps => DeepPartial[IDocumentCardLocationStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardLocationStyleProps, IDocumentCardLocationStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

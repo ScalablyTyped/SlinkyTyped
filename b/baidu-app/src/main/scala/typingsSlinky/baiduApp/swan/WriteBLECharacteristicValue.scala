@@ -4,31 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteBLECharacteristicValue
   extends BaseOptions[js.Any, js.Any] {
   /**
-  		 * 蓝牙特征值的 uuid
-  		 */
-  var characteristicId: String = js.native
+    * 蓝牙特征值的 uuid
+    */
+  var characteristicId: String
   @JSName("complete")
-  var complete_WriteBLECharacteristicValue: js.UndefOr[js.Function0[Unit]] = js.native
+  var complete_WriteBLECharacteristicValue: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
-  		 * 蓝牙设备 id，参考 device 对象
-  		 */
-  var deviceId: String = js.native
+    * 蓝牙设备 id，参考 device 对象
+    */
+  var deviceId: String
   @JSName("fail")
-  var fail_WriteBLECharacteristicValue: js.UndefOr[js.Function0[Unit]] = js.native
+  var fail_WriteBLECharacteristicValue: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
-  		 * 蓝牙特征值对应服务的 uuid
-  		 */
-  var serviceId: String = js.native
+    * 蓝牙特征值对应服务的 uuid
+    */
+  var serviceId: String
   /**
-  		 * 蓝牙设备特征值对应的二进制值
-  		 */
-  var value: js.typedarray.ArrayBuffer = js.native
+    * 蓝牙设备特征值对应的二进制值
+    */
+  var value: js.typedarray.ArrayBuffer
   @JSName("success")
-  def success_MWriteBLECharacteristicValue(res: ErrMsgResponse): Unit = js.native
+  def success_MWriteBLECharacteristicValue(res: ErrMsgResponse): Unit
 }
 
 object WriteBLECharacteristicValue {
@@ -38,72 +37,14 @@ object WriteBLECharacteristicValue {
     deviceId: String,
     serviceId: String,
     success: ErrMsgResponse => Unit,
-    value: js.typedarray.ArrayBuffer
+    value: js.typedarray.ArrayBuffer,
+    complete: () => Unit = null,
+    fail: () => Unit = null
   ): WriteBLECharacteristicValue = {
     val __obj = js.Dynamic.literal(characteristicId = characteristicId.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], serviceId = serviceId.asInstanceOf[js.Any], success = js.Any.fromFunction1(success), value = value.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
     __obj.asInstanceOf[WriteBLECharacteristicValue]
   }
-  @scala.inline
-  implicit class WriteBLECharacteristicValueOps[Self <: WriteBLECharacteristicValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharacteristicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characteristicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: ErrMsgResponse => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

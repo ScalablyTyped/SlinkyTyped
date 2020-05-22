@@ -22,47 +22,11 @@ trait PollForTaskInput extends js.Object {
 
 object PollForTaskInput {
   @scala.inline
-  def apply(workerGroup: String): PollForTaskInput = {
+  def apply(workerGroup: String, hostname: id = null, instanceIdentity: InstanceIdentity = null): PollForTaskInput = {
     val __obj = js.Dynamic.literal(workerGroup = workerGroup.asInstanceOf[js.Any])
+    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
+    if (instanceIdentity != null) __obj.updateDynamic("instanceIdentity")(instanceIdentity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollForTaskInput]
   }
-  @scala.inline
-  implicit class PollForTaskInputOps[Self <: PollForTaskInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkerGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostname(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceIdentity(value: InstanceIdentity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIdentity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

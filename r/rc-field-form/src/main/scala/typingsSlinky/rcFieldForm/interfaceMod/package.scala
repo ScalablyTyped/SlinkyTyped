@@ -12,6 +12,8 @@ package object interfaceMod {
     /* options */ js.UndefOr[typingsSlinky.rcFieldForm.interfaceMod.ValidateOptions], 
     js.Promise[typingsSlinky.rcFieldForm.interfaceMod.Store]
   ]
+  type NamePath = java.lang.String | scala.Double | typingsSlinky.rcFieldForm.interfaceMod.InternalNamePath
+  type Rule = typingsSlinky.rcFieldForm.interfaceMod.RuleObject | typingsSlinky.rcFieldForm.interfaceMod.RuleRender
   type RuleRender = js.Function1[
     /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance, 
     typingsSlinky.rcFieldForm.interfaceMod.RuleObject
@@ -22,6 +24,7 @@ package object interfaceMod {
     /* nameList */ js.UndefOr[js.Array[typingsSlinky.rcFieldForm.interfaceMod.NamePath]], 
     js.Promise[typingsSlinky.rcFieldForm.interfaceMod.Store]
   ]
+  type ValidateMessage = java.lang.String | js.Function0[java.lang.String]
   type Validator = js.Function3[
     /* rule */ typingsSlinky.rcFieldForm.interfaceMod.RuleObject, 
     /* value */ typingsSlinky.rcFieldForm.interfaceMod.StoreValue, 

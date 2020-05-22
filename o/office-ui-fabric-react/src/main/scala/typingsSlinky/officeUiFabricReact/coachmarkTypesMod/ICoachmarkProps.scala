@@ -2,12 +2,12 @@ package typingsSlinky.officeUiFabricReact.coachmarkTypesMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.coachmarkBaseMod.CoachmarkBase
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.Partial
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -15,580 +15,231 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICoachmarkProps extends ClassAttributes[CoachmarkBase] {
   /**
     * Text to announce to screen reader / narrator when Coachmark is displayed
     */
-  var ariaAlertText: js.UndefOr[String] = js.native
+  var ariaAlertText: js.UndefOr[String] = js.undefined
   /**
     * Defines the element id referencing the element containing the description for the Coachmark.
     */
-  var ariaDescribedBy: js.UndefOr[String] = js.native
+  var ariaDescribedBy: js.UndefOr[String] = js.undefined
   /**
     * Defines the text content for the ariaDescribedBy element
     */
-  var ariaDescribedByText: js.UndefOr[String] = js.native
+  var ariaDescribedByText: js.UndefOr[String] = js.undefined
   /**
     *  Defines the element id referencing the element containing label text for Coachmark.
     */
-  var ariaLabelledBy: js.UndefOr[String] = js.native
+  var ariaLabelledBy: js.UndefOr[String] = js.undefined
   /**
     *  Defines the text content for the ariaLabelledBy element
     */
-  var ariaLabelledByText: js.UndefOr[String] = js.native
+  var ariaLabelledByText: js.UndefOr[String] = js.undefined
   /**
     * Beacon color one.
     */
-  var beaconColorOne: js.UndefOr[String] = js.native
+  var beaconColorOne: js.UndefOr[String] = js.undefined
   /**
     * Beacon color two.
     */
-  var beaconColorTwo: js.UndefOr[String] = js.native
+  var beaconColorTwo: js.UndefOr[String] = js.undefined
   /**
     * The height of the Beak component.
     * @deprecated No longer used.
     */
-  var beakHeight: js.UndefOr[Double] = js.native
+  var beakHeight: js.UndefOr[Double] = js.undefined
   /**
     * The width of the Beak component.
     * @deprecated No longer used.
     */
-  var beakWidth: js.UndefOr[Double] = js.native
+  var beakWidth: js.UndefOr[Double] = js.undefined
   /**
     * If provided, additional class name to provide on the root element.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * The starting collapsed state for the Coachmark.  Use `isCollapsed` instead.
     * @defaultvalue true
     * @deprecated Use `isCollapsed` instead.
     */
-  var collapsed: js.UndefOr[Boolean] = js.native
+  var collapsed: js.UndefOr[Boolean] = js.undefined
   /**
     * Color of the Coachmark/TeachingBubble.
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.undefined
   /**
     * Optional callback to access the ICoachmark interface. Use this instead of ref for accessing
     * the public methods and properties of the component.
     */
-  var componentRef: js.UndefOr[IRefObject[ICoachmark]] = js.native
+  var componentRef: js.UndefOr[IRefObject[ICoachmark]] = js.undefined
   /**
     * Delay in milliseconds before Coachmark animation appears.
     * @defaultvalue 0
     */
-  var delayBeforeCoachmarkAnimation: js.UndefOr[Double] = js.native
+  var delayBeforeCoachmarkAnimation: js.UndefOr[Double] = js.undefined
   /**
     * Delay before allowing mouse movements to open the Coachmark.
     * @defaultvalue 3600
     */
-  var delayBeforeMouseOpen: js.UndefOr[Double] = js.native
+  var delayBeforeMouseOpen: js.UndefOr[Double] = js.undefined
   /**
     * The height of the Coachmark.
     * @deprecated No longer used.
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * The starting collapsed state for the Coachmark.
     * @defaultvalue true
     */
-  var isCollapsed: js.UndefOr[Boolean] = js.native
+  var isCollapsed: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not to force the Coachmark/TeachingBubble content to fit within the window bounds.
     * @defaultvalue true
     */
-  var isPositionForced: js.UndefOr[Boolean] = js.native
+  var isPositionForced: js.UndefOr[Boolean] = js.undefined
   /**
     * The distance in pixels the mouse is located
     * before opening up the Coachmark.
     * @defaultvalue 10
     */
-  var mouseProximityOffset: js.UndefOr[Double] = js.native
+  var mouseProximityOffset: js.UndefOr[Double] = js.undefined
   /**
     * Callback when the opening animation completes.
     */
-  var onAnimationOpenEnd: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAnimationOpenEnd: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback when the opening animation begins.
     */
-  var onAnimationOpenStart: js.UndefOr[js.Function0[Unit]] = js.native
+  var onAnimationOpenStart: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Callback when the Coachmark tries to close.
     */
-  var onDismiss: js.UndefOr[js.Function1[/* ev */ js.UndefOr[js.Any], Unit]] = js.native
+  var onDismiss: js.UndefOr[js.Function1[/* ev */ js.UndefOr[js.Any], Unit]] = js.undefined
   /**
     * Callback to run when the mouse moves.
     */
-  var onMouseMove: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.native
+  var onMouseMove: js.UndefOr[js.Function1[/* e */ MouseEvent, Unit]] = js.undefined
   /**
     * If true then the Coachmark beak (arrow pointing towards target) will always be visible as long as
     * Coachmark is visible
     * @defaultvalue false
     */
-  var persistentBeak: js.UndefOr[Boolean] = js.native
+  var persistentBeak: js.UndefOr[Boolean] = js.undefined
   /**
     * Props to pass to the PositioningContainer component. Specify the `directionalHint` to indicate
     * on which edge the Coachmark/TeachingBubble should be positioned.
     * @defaultvalue directionalHint: DirectionalHint.bottomAutoEdge
     */
-  var positioningContainerProps: js.UndefOr[IPositioningContainerProps] = js.native
+  var positioningContainerProps: js.UndefOr[IPositioningContainerProps] = js.undefined
   /**
     * If true then the Coachmark will not dismiss when it loses focus
     * @defaultvalue false
     */
-  var preventDismissOnLostFocus: js.UndefOr[Boolean] = js.native
+  var preventDismissOnLostFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * If true then focus will not be set to the Coachmark when it mounts. Useful in cases where focus on coachmark
     * is causing other components in page to dismiss upon losing focus.
     * @defaultvalue false
     */
-  var preventFocusOnMount: js.UndefOr[Boolean] = js.native
+  var preventFocusOnMount: js.UndefOr[Boolean] = js.undefined
   /**
     * Call to provide customized styling that will layer on top of the variant rules
     */
-  var styles: js.UndefOr[IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles]] = js.native
+  var styles: js.UndefOr[IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles]] = js.undefined
   /**
     * The target that the Coachmark should try to position itself based on.
     */
-  var target: HTMLElement | String | Null = js.native
+  var target: HTMLElement | String | Null
   /**
     * Ref for TeachingBubble
     * @deprecated Coachmark uses `focusFirstChild` utility instead to focus on TeachingBubbleContent
     */
-  var teachingBubbleRef: js.UndefOr[ITeachingBubble] = js.native
+  var teachingBubbleRef: js.UndefOr[ITeachingBubble] = js.undefined
   /**
     * Theme provided by higher order component.
     */
-  var theme: js.UndefOr[ITheme] = js.native
+  var theme: js.UndefOr[ITheme] = js.undefined
   /**
     * The width of the Coachmark.
     * @deprecated No longer used.
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ICoachmarkProps {
   @scala.inline
-  def apply(): ICoachmarkProps = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    ariaAlertText: String = null,
+    ariaDescribedBy: String = null,
+    ariaDescribedByText: String = null,
+    ariaLabelledBy: String = null,
+    ariaLabelledByText: String = null,
+    beaconColorOne: String = null,
+    beaconColorTwo: String = null,
+    beakHeight: js.UndefOr[Double] = js.undefined,
+    beakWidth: js.UndefOr[Double] = js.undefined,
+    className: String = null,
+    collapsed: js.UndefOr[Boolean] = js.undefined,
+    color: String = null,
+    componentRef: IRefObject[ICoachmark] = null,
+    delayBeforeCoachmarkAnimation: js.UndefOr[Double] = js.undefined,
+    delayBeforeMouseOpen: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    isCollapsed: js.UndefOr[Boolean] = js.undefined,
+    isPositionForced: js.UndefOr[Boolean] = js.undefined,
+    key: Key = null,
+    mouseProximityOffset: js.UndefOr[Double] = js.undefined,
+    onAnimationOpenEnd: () => Unit = null,
+    onAnimationOpenStart: () => Unit = null,
+    onDismiss: /* ev */ js.UndefOr[js.Any] => Unit = null,
+    onMouseMove: /* e */ MouseEvent => Unit = null,
+    persistentBeak: js.UndefOr[Boolean] = js.undefined,
+    positioningContainerProps: IPositioningContainerProps = null,
+    preventDismissOnLostFocus: js.UndefOr[Boolean] = js.undefined,
+    preventFocusOnMount: js.UndefOr[Boolean] = js.undefined,
+    ref: js.UndefOr[Null | LegacyRef[CoachmarkBase]] = js.undefined,
+    styles: IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles] = null,
+    target: HTMLElement | String = null,
+    teachingBubbleRef: ITeachingBubble = null,
+    theme: ITheme = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ICoachmarkProps = {
+    val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
+    if (ariaAlertText != null) __obj.updateDynamic("ariaAlertText")(ariaAlertText.asInstanceOf[js.Any])
+    if (ariaDescribedBy != null) __obj.updateDynamic("ariaDescribedBy")(ariaDescribedBy.asInstanceOf[js.Any])
+    if (ariaDescribedByText != null) __obj.updateDynamic("ariaDescribedByText")(ariaDescribedByText.asInstanceOf[js.Any])
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
+    if (ariaLabelledByText != null) __obj.updateDynamic("ariaLabelledByText")(ariaLabelledByText.asInstanceOf[js.Any])
+    if (beaconColorOne != null) __obj.updateDynamic("beaconColorOne")(beaconColorOne.asInstanceOf[js.Any])
+    if (beaconColorTwo != null) __obj.updateDynamic("beaconColorTwo")(beaconColorTwo.asInstanceOf[js.Any])
+    if (!js.isUndefined(beakHeight)) __obj.updateDynamic("beakHeight")(beakHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(beakWidth)) __obj.updateDynamic("beakWidth")(beakWidth.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayBeforeCoachmarkAnimation)) __obj.updateDynamic("delayBeforeCoachmarkAnimation")(delayBeforeCoachmarkAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayBeforeMouseOpen)) __obj.updateDynamic("delayBeforeMouseOpen")(delayBeforeMouseOpen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isCollapsed)) __obj.updateDynamic("isCollapsed")(isCollapsed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPositionForced)) __obj.updateDynamic("isPositionForced")(isPositionForced.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseProximityOffset)) __obj.updateDynamic("mouseProximityOffset")(mouseProximityOffset.get.asInstanceOf[js.Any])
+    if (onAnimationOpenEnd != null) __obj.updateDynamic("onAnimationOpenEnd")(js.Any.fromFunction0(onAnimationOpenEnd))
+    if (onAnimationOpenStart != null) __obj.updateDynamic("onAnimationOpenStart")(js.Any.fromFunction0(onAnimationOpenStart))
+    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (!js.isUndefined(persistentBeak)) __obj.updateDynamic("persistentBeak")(persistentBeak.get.asInstanceOf[js.Any])
+    if (positioningContainerProps != null) __obj.updateDynamic("positioningContainerProps")(positioningContainerProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventDismissOnLostFocus)) __obj.updateDynamic("preventDismissOnLostFocus")(preventDismissOnLostFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventFocusOnMount)) __obj.updateDynamic("preventFocusOnMount")(preventFocusOnMount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (teachingBubbleRef != null) __obj.updateDynamic("teachingBubbleRef")(teachingBubbleRef.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICoachmarkProps]
   }
-  @scala.inline
-  implicit class ICoachmarkPropsOps[Self <: ICoachmarkProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAriaAlertText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaAlertText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaAlertText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaAlertText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaDescribedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaDescribedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaDescribedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaDescribedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaDescribedByText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaDescribedByText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaDescribedByText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaDescribedByText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaLabelledBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaLabelledBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaLabelledByText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledByText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaLabelledByText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledByText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeaconColorOne(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconColorOne")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeaconColorOne: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconColorOne")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeaconColorTwo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconColorTwo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeaconColorTwo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconColorTwo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeakHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beakHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeakHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beakHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeakWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beakWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeakWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beakWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponentRefFunction1(value: /* ref */ ICoachmark | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComponentRefRefObject(value: ReactRef[ICoachmark]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentRef(value: IRefObject[ICoachmark]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponentRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("componentRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayBeforeCoachmarkAnimation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayBeforeCoachmarkAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayBeforeCoachmarkAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayBeforeCoachmarkAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayBeforeMouseOpen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayBeforeMouseOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayBeforeMouseOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayBeforeMouseOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPositionForced(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPositionForced")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPositionForced: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPositionForced")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseProximityOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseProximityOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseProximityOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseProximityOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAnimationOpenEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationOpenEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAnimationOpenEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationOpenEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAnimationOpenStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationOpenStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAnimationOpenStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationOpenStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDismiss(value: /* ev */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseMove(value: /* e */ MouseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistentBeak(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentBeak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistentBeak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentBeak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositioningContainerProps(value: IPositioningContainerProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioningContainerProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositioningContainerProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioningContainerProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventDismissOnLostFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDismissOnLostFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventDismissOnLostFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDismissOnLostFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventFocusOnMount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventFocusOnMount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventFocusOnMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventFocusOnMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStylesFunction1(value: ICoachmarkStyleProps => Partial[ICoachmarkStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStyles(value: IStyleFunctionOrObject[ICoachmarkStyleProps, ICoachmarkStyles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: HTMLElement | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(null)
-        ret
-    }
-    @scala.inline
-    def withTeachingBubbleRef(value: ITeachingBubble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teachingBubbleRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeachingBubbleRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teachingBubbleRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

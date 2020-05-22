@@ -15,20 +15,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.CallExpression, 'type'> */
-@js.native
 trait OptionalCallExpression
   extends ASTNode
      with CallExpressionKind
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var arguments: js.Array[ExpressionKind | SpreadElementKind] = js.native
-  var callee: ExpressionKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var optional: js.UndefOr[Boolean] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.OptionalCallExpression = js.native
-  var typeArguments: js.UndefOr[TypeParameterInstantiationKind] = js.native
+  var arguments: js.Array[ExpressionKind | SpreadElementKind]
+  var callee: ExpressionKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var optional: js.UndefOr[Boolean] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.OptionalCallExpression
+  var typeArguments: js.UndefOr[TypeParameterInstantiationKind] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.OptionalCallExpression")

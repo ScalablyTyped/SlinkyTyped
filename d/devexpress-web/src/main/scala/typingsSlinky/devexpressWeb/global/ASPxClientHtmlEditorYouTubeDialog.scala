@@ -10,5 +10,86 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientHtmlEditorYouTubeDialog")
 @js.native
 class ASPxClientHtmlEditorYouTubeDialog ()
-  extends typingsSlinky.devexpressWeb.ASPxClientHtmlEditorYouTubeDialog
+  extends typingsSlinky.devexpressWeb.ASPxClientHtmlEditorYouTubeDialog {
+  /**
+    * Provides access to the client object of the "Allow fullscreen" check box in the Html Editor's "Insert YouTube Video" dialog.
+    */
+  /* CompleteClass */
+  override def GetAllowFullscreenCheckBox(): typingsSlinky.devexpressWeb.ASPxClientCheckBox = js.native
+  /**
+    * Provides access to the client object of the "Border color" color editor in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetBorderColorColorEdit(): typingsSlinky.devexpressWeb.ASPxClientColorEdit = js.native
+  /**
+    * Provides access to the client object of the "Border style" combo box in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetBorderStyleComboBox(): typingsSlinky.devexpressWeb.ASPxClientComboBox = js.native
+  /**
+    * Provides access to the client object of the "Border width" spin editor in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetBorderWidthSpinEdit(): typingsSlinky.devexpressWeb.ASPxClientSpinEdit = js.native
+  /**
+    * Provides access to the client object of the "Bottom margin" text box in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetBottomMarginTextBox(): typingsSlinky.devexpressWeb.ASPxClientTextBox = js.native
+  /**
+    * Provides access to the client object of the "Cancel" button in the Html Editor's dialogs.
+    */
+  /* CompleteClass */
+  override def GetCancelButton(): typingsSlinky.devexpressWeb.ASPxClientButton = js.native
+  /**
+    * Provides access to the client object of the "Enable privacy-enhanced mode" check box in the Html Editor's YouTube Video dialog.
+    */
+  /* CompleteClass */
+  override def GetConfidentModeCheckBox(): typingsSlinky.devexpressWeb.ASPxClientCheckBox = js.native
+  /**
+    * Provides access to the client object of the "CSS class" combo box in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetCssClassNameComboBox(): typingsSlinky.devexpressWeb.ASPxClientComboBox = js.native
+  /**
+    * Provides access to the client ASPxFormLayout object that arranges all editors in the Html Editor's dialogs.
+    */
+  /* CompleteClass */
+  override def GetFormLayout(): typingsSlinky.devexpressWeb.ASPxClientFormLayout = js.native
+  /**
+    * Provides access to the client object of the "Left margin" text box in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetLeftMarginTextBox(): typingsSlinky.devexpressWeb.ASPxClientTextBox = js.native
+  /**
+    * Provides access to the client object of the "OK" button in the Html Editor's dialogs.
+    */
+  /* CompleteClass */
+  override def GetOkButton(): typingsSlinky.devexpressWeb.ASPxClientButton = js.native
+  /**
+    * Provides access to the client object of the "Right margin" text box in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetRightMarginTextBox(): typingsSlinky.devexpressWeb.ASPxClientTextBox = js.native
+  /**
+    * Provides access to the client object of the "Show player controls" check box in the Html Editor's YouTube Video dialog.
+    */
+  /* CompleteClass */
+  override def GetShowPlayerControlsCheckBox(): typingsSlinky.devexpressWeb.ASPxClientCheckBox = js.native
+  /**
+    * Provides access to the client object of the "Show suggested videos when the video finishes" check box in the Html Editor's YouTube Video dialog.
+    */
+  /* CompleteClass */
+  override def GetShowSameVideosCheckBox(): typingsSlinky.devexpressWeb.ASPxClientCheckBox = js.native
+  /**
+    * Provides access to the client object of the "Show video title and player actions" check box in the Html Editor's YouTube Video dialog.
+    */
+  /* CompleteClass */
+  override def GetShowVideoNameCheckBox(): typingsSlinky.devexpressWeb.ASPxClientCheckBox = js.native
+  /**
+    * Provides access to the client object of the "Top margin" text box in the Html Editor's dialogs (Style Settings).
+    */
+  /* CompleteClass */
+  override def GetTopMarginTextBox(): typingsSlinky.devexpressWeb.ASPxClientTextBox = js.native
+}
 

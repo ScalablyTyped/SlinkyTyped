@@ -26,14 +26,13 @@ import scala.scalajs.js.annotation._
   * output device, like a screen or a printer, Then, the total transformation matrix and the device resolution determine the actual measurement unit.
   * @since OOo 2.0
   */
-@js.native
 trait AffineMatrix2D extends js.Object {
-  var m00: Double = js.native
-  var m01: Double = js.native
-  var m02: Double = js.native
-  var m10: Double = js.native
-  var m11: Double = js.native
-  var m12: Double = js.native
+  var m00: Double
+  var m01: Double
+  var m02: Double
+  var m10: Double
+  var m11: Double
+  var m12: Double
 }
 
 object AffineMatrix2D {
@@ -42,49 +41,5 @@ object AffineMatrix2D {
     val __obj = js.Dynamic.literal(m00 = m00.asInstanceOf[js.Any], m01 = m01.asInstanceOf[js.Any], m02 = m02.asInstanceOf[js.Any], m10 = m10.asInstanceOf[js.Any], m11 = m11.asInstanceOf[js.Any], m12 = m12.asInstanceOf[js.Any])
     __obj.asInstanceOf[AffineMatrix2D]
   }
-  @scala.inline
-  implicit class AffineMatrix2DOps[Self <: AffineMatrix2D] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withM00(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m00")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withM01(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m01")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withM02(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m02")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withM10(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m10")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withM11(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m11")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withM12(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m12")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

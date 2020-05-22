@@ -5,17 +5,18 @@ import typingsSlinky.firebaseFirestore.coreQueryMod.Query
 import typingsSlinky.firebaseFirestore.coreSnapshotVersionMod.SnapshotVersion
 import typingsSlinky.firebaseFirestore.coreTargetMod.Target
 import typingsSlinky.firebaseFirestore.coreTypesMod.BatchId
-import typingsSlinky.firebaseFirestore.coreTypesMod.TargetId
+import typingsSlinky.firebaseFirestore.localLocalDocumentsViewMod.LocalDocumentsView
 import typingsSlinky.firebaseFirestore.localLocalViewChangesMod.LocalViewChanges
 import typingsSlinky.firebaseFirestore.localLruGarbageCollectorMod.LruGarbageCollector
 import typingsSlinky.firebaseFirestore.localLruGarbageCollectorMod.LruResults
+import typingsSlinky.firebaseFirestore.localMutationQueueMod.MutationQueue
 import typingsSlinky.firebaseFirestore.localPersistenceMod.Persistence
 import typingsSlinky.firebaseFirestore.localPersistenceMod.PersistenceTransaction
 import typingsSlinky.firebaseFirestore.localPersistencePromiseMod.PersistencePromise
 import typingsSlinky.firebaseFirestore.localQueryEngineMod.QueryEngine
-import typingsSlinky.firebaseFirestore.localSharedClientStateMod.ClientId
+import typingsSlinky.firebaseFirestore.localRemoteDocumentCacheMod.RemoteDocumentCache
+import typingsSlinky.firebaseFirestore.localTargetCacheMod.TargetCache
 import typingsSlinky.firebaseFirestore.localTargetDataMod.TargetData
-import typingsSlinky.firebaseFirestore.modelCollectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.modelCollectionsMod.MaybeDocumentMap_
 import typingsSlinky.firebaseFirestore.modelDocumentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.modelDocumentMod.MaybeDocument
@@ -24,6 +25,7 @@ import typingsSlinky.firebaseFirestore.modelMutationBatchMod.MutationBatchResult
 import typingsSlinky.firebaseFirestore.modelMutationMod.Mutation
 import typingsSlinky.firebaseFirestore.remoteRemoteEventMod.RemoteEvent
 import typingsSlinky.firebaseFirestore.utilByteStringMod.ByteString
+import typingsSlinky.firebaseFirestore.utilSortedMapMod.SortedMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,35 +45,31 @@ class LocalStore protected () extends js.Object {
     *
     * PORTING NOTE: This is only used for multi-tab synchronization.
     */
-  var lastDocumentChangeReadTime: js.Any = js.native
+  var lastDocumentChangeReadTime: SnapshotVersion = js.native
   /**
     * The "local" view of all documents (layering mutationQueue on top of
     * remoteDocumentCache).
     */
-  var localDocuments: js.Any = js.native
-  /**
-    * The set of document references maintained by any local views.
-    */
-  var localViewReferences: js.Any = js.native
+  var localDocuments: LocalDocumentsView = js.native
   /**
     * The set of all mutations that have been sent but not yet been applied to
     * the backend.
     */
-  var mutationQueue: js.Any = js.native
+  var mutationQueue: MutationQueue = js.native
   /** Manages our in-memory or durable persistence. */
-  var persistence: js.Any = js.native
+  var persistence: Persistence = js.native
   var queryEngine: js.Any = js.native
   /** The set of all cached remote documents. */
-  var remoteDocuments: js.Any = js.native
+  var remoteDocuments: RemoteDocumentCache = js.native
   /** Maps a target to its `TargetData`. */
-  var targetCache: js.Any = js.native
+  var targetCache: TargetCache = js.native
   /**
     * Maps a targetID to data about its target.
     *
     * PORTING NOTE: We are using an immutable data structure on Web to make re-runs
     * of `applyRemoteEvent()` idempotent.
     */
-  var targetDataByTarget: js.Any = js.native
+  var targetDataByTarget: SortedMap[Double, TargetData] = js.native
   /** Maps a target to its targetID. */
   var targetIdByTarget: js.Any = js.native
   /**
@@ -117,7 +115,6 @@ class LocalStore protected () extends js.Object {
     * be used to optimize this query execution.
     */
   def executeQuery(query: Query, usePreviousResults: Boolean): js.Promise[QueryResult] = js.native
-  def getActiveClients(): js.Promise[js.Array[ClientId]] = js.native
   /**
     * Returns the largest (latest) batch id in mutation queue that is pending server response.
     * Returns `BATCHID_UNKNOWN` if the queue is empty.
@@ -131,14 +128,6 @@ class LocalStore protected () extends js.Object {
   /** Returns the last recorded stream token for the current user. */
   def getLastStreamToken(): js.Promise[ByteString] = js.native
   /**
-    * Returns the set of documents that have been updated since the last call.
-    * If this is the first call, returns the set of changes since client
-    * initialization. Further invocations will return document changes since
-    * the point of rejection.
-    */
-  def getNewDocumentChanges(): js.Promise[MaybeDocumentMap_] = js.native
-  def getTarget(targetId: TargetId): js.Promise[Target | Null] = js.native
-  /**
     * Returns the TargetData as seen by the LocalStore, including updates that may
     * have not yet been persisted to the TargetCache.
     */
@@ -151,8 +140,6 @@ class LocalStore protected () extends js.Object {
     */
   def handleUserChange(user: User): js.Promise[UserChangeResult] = js.native
   def localWrite(mutations: js.Array[Mutation]): js.Promise[LocalWriteResult] = js.native
-  /** Returns the local view of the documents affected by a mutation batch. */
-  def lookupMutationDocuments(batchId: BatchId): js.Promise[MaybeDocumentMap_ | Null] = js.native
   /**
     * Gets the mutation batch after the passed in batchId in the mutation queue
     * or null if empty.
@@ -186,26 +173,13 @@ class LocalStore protected () extends js.Object {
     */
   def releaseTarget(targetId: Double, keepPersistedTargetData: Boolean): js.Promise[Unit] = js.native
   /**
-    * Returns the keys of the documents that are associated with the given
-    * target id in the remote table.
-    */
-  def remoteDocumentKeys(targetId: TargetId): js.Promise[DocumentKeySet_] = js.native
-  def removeCachedMutationBatchMetadata(batchId: BatchId): Unit = js.native
-  /**
     * Sets the stream token for the current user without acknowledging any
     * mutation batch. This is usually only useful after a stream handshake or in
     * response to an error that requires clearing the stream token.
     */
   def setLastStreamToken(streamToken: ByteString): js.Promise[Unit] = js.native
-  def setNetworkEnabled(networkEnabled: Boolean): Unit = js.native
   /** Starts the LocalStore. */
   def start(): js.Promise[Unit] = js.native
-  /**
-    * Reads the newest document change from persistence and forwards the internal
-    * synchronization marker so that calls to `getNewDocumentChanges()`
-    * only return changes that happened after client initialization.
-    */
-  def synchronizeLastDocumentChangeReadTime(): js.Promise[Unit] = js.native
 }
 
 /* static members */

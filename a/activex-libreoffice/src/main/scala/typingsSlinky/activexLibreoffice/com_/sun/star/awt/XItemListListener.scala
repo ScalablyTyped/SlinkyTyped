@@ -11,23 +11,22 @@ import scala.scalajs.js.annotation._
   * describes a listener for changes in a item list
   * @see XListItems
   */
-@js.native
 trait XItemListListener extends XEventListener {
   /** is called when the list has been completely cleared, i.e. after an invocation of {@link XItemList.removeAllItems()} */
-  def allItemsRemoved(Event: EventObject): Unit = js.native
+  def allItemsRemoved(Event: EventObject): Unit
   /**
     * is called when the changes to the item list which occurred are too complex to be notified in single events.
     *
     * Consumers of this event should discard their cached information about the current item list, and completely refresh it from the {@link XItemList} 's
     * current state.
     */
-  def itemListChanged(Event: EventObject): Unit = js.native
+  def itemListChanged(Event: EventObject): Unit
   /** is called when an item is inserted into the list */
-  def listItemInserted(Event: ItemListEvent): Unit = js.native
+  def listItemInserted(Event: ItemListEvent): Unit
   /** is called when an item in the list is modified, i.e. its text or image changed */
-  def listItemModified(Event: ItemListEvent): Unit = js.native
+  def listItemModified(Event: ItemListEvent): Unit
   /** is called when an item is removed from the list */
-  def listItemRemoved(Event: ItemListEvent): Unit = js.native
+  def listItemRemoved(Event: ItemListEvent): Unit
 }
 
 object XItemListListener {
@@ -46,43 +45,5 @@ object XItemListListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), allItemsRemoved = js.Any.fromFunction1(allItemsRemoved), disposing = js.Any.fromFunction1(disposing), itemListChanged = js.Any.fromFunction1(itemListChanged), listItemInserted = js.Any.fromFunction1(listItemInserted), listItemModified = js.Any.fromFunction1(listItemModified), listItemRemoved = js.Any.fromFunction1(listItemRemoved), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XItemListListener]
   }
-  @scala.inline
-  implicit class XItemListListenerOps[Self <: XItemListListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllItemsRemoved(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allItemsRemoved")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withItemListChanged(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemListChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListItemInserted(value: ItemListEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemInserted")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListItemModified(value: ItemListEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemModified")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withListItemRemoved(value: ItemListEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemRemoved")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

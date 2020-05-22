@@ -9,6 +9,10 @@ package object mod {
     /* doc */ typingsSlinky.rethinkdb.mod.Expression[js.Any], 
     typingsSlinky.rethinkdb.mod.Expression[U]
   ]
+  type IndexFunction[U] = typingsSlinky.rethinkdb.mod.Expression[U] | js.Array[typingsSlinky.rethinkdb.mod.Expression[U]] | (js.Function1[
+    /* doc */ typingsSlinky.rethinkdb.mod.Expression[js.Any], 
+    typingsSlinky.rethinkdb.mod.Expression[U] | js.Array[typingsSlinky.rethinkdb.mod.Expression[U]]
+  ])
   type JoinFunction[U] = js.Function2[
     /* left */ typingsSlinky.rethinkdb.mod.Expression[js.Any], 
     /* right */ typingsSlinky.rethinkdb.mod.Expression[js.Any], 

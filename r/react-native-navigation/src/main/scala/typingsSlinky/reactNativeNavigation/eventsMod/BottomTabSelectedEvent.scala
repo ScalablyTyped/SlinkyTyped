@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BottomTabSelectedEvent extends js.Object {
-  var selectedTabIndex: Double = js.native
-  var unselectedTabIndex: Double = js.native
+  var selectedTabIndex: Double
+  var unselectedTabIndex: Double
 }
 
 object BottomTabSelectedEvent {
@@ -16,25 +15,5 @@ object BottomTabSelectedEvent {
     val __obj = js.Dynamic.literal(selectedTabIndex = selectedTabIndex.asInstanceOf[js.Any], unselectedTabIndex = unselectedTabIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[BottomTabSelectedEvent]
   }
-  @scala.inline
-  implicit class BottomTabSelectedEventOps[Self <: BottomTabSelectedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectedTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnselectedTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedTabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

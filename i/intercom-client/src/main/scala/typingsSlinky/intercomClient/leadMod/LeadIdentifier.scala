@@ -1,7 +1,5 @@
 package typingsSlinky.intercomClient.leadMod
 
-import typingsSlinky.intercomClient.anon.Id
-import typingsSlinky.intercomClient.anon.Userid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait LeadIdentifier extends js.Object
 
 object LeadIdentifier {
   @scala.inline
-  implicit def apply(value: Id): LeadIdentifier = value.asInstanceOf[LeadIdentifier]
+  def Id(id: String): LeadIdentifier = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LeadIdentifier]
+  }
   @scala.inline
-  implicit def apply(value: Userid): LeadIdentifier = value.asInstanceOf[LeadIdentifier]
+  def Userid(user_id: String): LeadIdentifier = {
+    val __obj = js.Dynamic.literal(user_id = user_id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LeadIdentifier]
+  }
 }
 

@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateTemplate extends js.Object {
   /** Content that will be used to construct a message  yes  For a full description, see the Content Attributes. Maximum length - 20 MBs */
-  var content: CreateTemplateContent | Emailrfc822 = js.native
+  var content: CreateTemplateContent | Emailrfc822
   /** Detailed description of the template  no  Maximum length - 1024 bytes */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Short, unique, alphanumeric ID used to reference the template.
     * At a minimum, id or name is required upon creation.
@@ -18,94 +17,32 @@ trait CreateTemplate extends js.Object {
     * After a template has been created, this property cannot be changed. Maximum length - 64 bytes
     *
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Editable display name  At a minimum, id or name is required upon creation.  The name does not have to be unique. Maximum length - 1024 bytes */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** JSON object in which template options are defined  no  For a full description, see the Options Attributes. */
-  var options: js.UndefOr[CreateTemplateOptions] = js.native
+  var options: js.UndefOr[CreateTemplateOptions] = js.undefined
   /** Whether the template is published or is a draft version  no - defaults to false  A template cannot be changed from published to draft. */
-  var published: js.UndefOr[Boolean] = js.native
+  var published: js.UndefOr[Boolean] = js.undefined
 }
 
 object CreateTemplate {
   @scala.inline
-  def apply(content: CreateTemplateContent | Emailrfc822): CreateTemplate = {
+  def apply(
+    content: CreateTemplateContent | Emailrfc822,
+    description: String = null,
+    id: String = null,
+    name: String = null,
+    options: CreateTemplateOptions = null,
+    published: js.UndefOr[Boolean] = js.undefined
+  ): CreateTemplate = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (!js.isUndefined(published)) __obj.updateDynamic("published")(published.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTemplate]
   }
-  @scala.inline
-  implicit class CreateTemplateOps[Self <: CreateTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: CreateTemplateContent | Emailrfc822): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: CreateTemplateOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublished(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

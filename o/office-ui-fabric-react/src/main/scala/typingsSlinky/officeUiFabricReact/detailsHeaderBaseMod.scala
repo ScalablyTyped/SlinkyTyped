@@ -96,6 +96,9 @@ object detailsHeaderBaseMod extends js.Object {
     def componentDidUpdate_MDetailsHeaderBase(prevProps: IDetailsHeaderBaseProps): Unit = js.native
     @JSName("componentWillUnmount")
     def componentWillUnmount_MDetailsHeaderBase(): Unit = js.native
+    /** sets focus into the header */
+    /* CompleteClass */
+    override def focus(): Boolean = js.native
   }
   
   /* static members */

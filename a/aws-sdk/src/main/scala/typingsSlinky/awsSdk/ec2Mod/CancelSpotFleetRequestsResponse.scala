@@ -18,41 +18,14 @@ trait CancelSpotFleetRequestsResponse extends js.Object {
 
 object CancelSpotFleetRequestsResponse {
   @scala.inline
-  def apply(): CancelSpotFleetRequestsResponse = {
+  def apply(
+    SuccessfulFleetRequests: CancelSpotFleetRequestsSuccessSet = null,
+    UnsuccessfulFleetRequests: CancelSpotFleetRequestsErrorSet = null
+  ): CancelSpotFleetRequestsResponse = {
     val __obj = js.Dynamic.literal()
+    if (SuccessfulFleetRequests != null) __obj.updateDynamic("SuccessfulFleetRequests")(SuccessfulFleetRequests.asInstanceOf[js.Any])
+    if (UnsuccessfulFleetRequests != null) __obj.updateDynamic("UnsuccessfulFleetRequests")(UnsuccessfulFleetRequests.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelSpotFleetRequestsResponse]
   }
-  @scala.inline
-  implicit class CancelSpotFleetRequestsResponseOps[Self <: CancelSpotFleetRequestsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccessfulFleetRequests(value: CancelSpotFleetRequestsSuccessSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulFleetRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulFleetRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulFleetRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsuccessfulFleetRequests(value: CancelSpotFleetRequestsErrorSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnsuccessfulFleetRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnsuccessfulFleetRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnsuccessfulFleetRequests")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

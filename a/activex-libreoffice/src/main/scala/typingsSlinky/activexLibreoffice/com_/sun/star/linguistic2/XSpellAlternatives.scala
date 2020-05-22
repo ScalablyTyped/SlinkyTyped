@@ -15,34 +15,33 @@ import scala.scalajs.js.annotation._
   * words to be used may be provided along with a failure-type that may specify why the word was not correct.
   * @see com.sun.star.linguistic2.SpellFailure
   */
-@js.native
 trait XSpellAlternatives extends XInterface {
   /** @returns the sequence of suggested spelling alternatives. */
-  val Alternatives: SafeArray[String] = js.native
+  val Alternatives: SafeArray[String]
   /** @returns the number of suggested spelling alternatives available. */
-  val AlternativesCount: Double = js.native
+  val AlternativesCount: Double
   /**
     * @returns the type (reason) for spell checking to have failed verification.
     * @see com.sun.star.linguistic2.SpellFailure
     */
-  val FailureType: Double = js.native
+  val FailureType: Double
   /** @returns the Locale which specifies the language of the misspelled word. */
-  val Locale: typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale = js.native
+  val Locale: typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale
   /** @returns the word that was misspelled. */
-  val Word: String = js.native
+  val Word: String
   /** @returns the sequence of suggested spelling alternatives. */
-  def getAlternatives(): SafeArray[String] = js.native
+  def getAlternatives(): SafeArray[String]
   /** @returns the number of suggested spelling alternatives available. */
-  def getAlternativesCount(): Double = js.native
+  def getAlternativesCount(): Double
   /**
     * @returns the type (reason) for spell checking to have failed verification.
     * @see com.sun.star.linguistic2.SpellFailure
     */
-  def getFailureType(): Double = js.native
+  def getFailureType(): Double
   /** @returns the Locale which specifies the language of the misspelled word. */
-  def getLocale(): typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale = js.native
+  def getLocale(): typingsSlinky.activexLibreoffice.com_.sun.star.lang.Locale
   /** @returns the word that was misspelled. */
-  def getWord(): String = js.native
+  def getWord(): String
 }
 
 object XSpellAlternatives {
@@ -65,73 +64,5 @@ object XSpellAlternatives {
     val __obj = js.Dynamic.literal(Alternatives = Alternatives.asInstanceOf[js.Any], AlternativesCount = AlternativesCount.asInstanceOf[js.Any], FailureType = FailureType.asInstanceOf[js.Any], Locale = Locale.asInstanceOf[js.Any], Word = Word.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAlternatives = js.Any.fromFunction0(getAlternatives), getAlternativesCount = js.Any.fromFunction0(getAlternativesCount), getFailureType = js.Any.fromFunction0(getFailureType), getLocale = js.Any.fromFunction0(getLocale), getWord = js.Any.fromFunction0(getWord), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSpellAlternatives]
   }
-  @scala.inline
-  implicit class XSpellAlternativesOps[Self <: XSpellAlternatives] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternatives(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlternativesCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlternativesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailureType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocale(value: Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWord(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAlternatives(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAlternatives")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAlternativesCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAlternativesCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFailureType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFailureType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLocale(value: () => Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocale")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetWord(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWord")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

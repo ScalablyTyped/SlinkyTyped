@@ -1,56 +1,47 @@
 package typingsSlinky.backboneLayoutmanager.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.backbone.mod.Collection
+import typingsSlinky.backbone.mod.EventsHash
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backbone.mod.View
 import typingsSlinky.backbone.mod.ViewOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait LayoutOptions[TModel /* <: Model */] extends ViewOptions[TModel] {
-  var template: js.UndefOr[String] = js.native
-  var views: js.UndefOr[StringDictionary[View[TModel]]] = js.native
+trait LayoutOptions[TModel /* <: Model[_, ModelSetOptions] */] extends ViewOptions[TModel] {
+  var template: js.UndefOr[String] = js.undefined
+  var views: js.UndefOr[StringDictionary[View[TModel]]] = js.undefined
 }
 
 object LayoutOptions {
   @scala.inline
-  def apply[TModel](): LayoutOptions[TModel] = {
+  def apply[TModel](
+    attributes: StringDictionary[js.Any] = null,
+    className: String = null,
+    collection: Collection[_] = null,
+    el: js.Any = null,
+    events: EventsHash = null,
+    id: String = null,
+    model: TModel = null,
+    tagName: String = null,
+    template: String = null,
+    views: StringDictionary[View[TModel]] = null
+  ): LayoutOptions[TModel] = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (collection != null) __obj.updateDynamic("collection")(collection.asInstanceOf[js.Any])
+    if (el != null) __obj.updateDynamic("el")(el.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayoutOptions[TModel]]
   }
-  @scala.inline
-  implicit class LayoutOptionsOps[Self[tmodel] <: LayoutOptions[tmodel], TModel] (val x: Self[TModel]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TModel] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TModel]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TModel] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TModel] with Other]
-    @scala.inline
-    def withTemplate(value: String): Self[TModel] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self[TModel] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViews(value: StringDictionary[View[TModel]]): Self[TModel] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViews: Self[TModel] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

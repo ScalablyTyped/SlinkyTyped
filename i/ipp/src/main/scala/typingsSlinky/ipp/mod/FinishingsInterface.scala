@@ -4,205 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FinishingsInterface extends js.Object {
-  var baling: js.UndefOr[FinishingBailing] = js.native
-  var binding: js.UndefOr[FinishingBinding] = js.native
-  var coating: js.UndefOr[FinishingCoating] = js.native
-  var covering: js.UndefOr[FinishingCovering] = js.native
-  var `finishing-template`: js.UndefOr[Finishings] = js.native
-  var folding: js.UndefOr[js.Array[FinishingFolding]] = js.native
-  var `imposition-template`: js.UndefOr[ImpositionTemplate] = js.native
-  var laminating: js.UndefOr[FinishingLaminating] = js.native
-  var `media-sheets-supported`: js.UndefOr[String] = js.native
-  var `media-size`: js.UndefOr[MediaSize] = js.native
-  var `media-size-name`: js.UndefOr[String] = js.native
-  var punching: js.UndefOr[FinishingPunching] = js.native
-  var stitching: js.UndefOr[FinishingStitching] = js.native
-  var trimming: js.UndefOr[js.Array[FinishingTrimming]] = js.native
+  var baling: js.UndefOr[FinishingBailing] = js.undefined
+  var binding: js.UndefOr[FinishingBinding] = js.undefined
+  var coating: js.UndefOr[FinishingCoating] = js.undefined
+  var covering: js.UndefOr[FinishingCovering] = js.undefined
+  var `finishing-template`: js.UndefOr[Finishings] = js.undefined
+  var folding: js.UndefOr[js.Array[FinishingFolding]] = js.undefined
+  var `imposition-template`: js.UndefOr[ImpositionTemplate] = js.undefined
+  var laminating: js.UndefOr[FinishingLaminating] = js.undefined
+  var `media-sheets-supported`: js.UndefOr[String] = js.undefined
+  var `media-size`: js.UndefOr[MediaSize] = js.undefined
+  var `media-size-name`: js.UndefOr[String] = js.undefined
+  var punching: js.UndefOr[FinishingPunching] = js.undefined
+  var stitching: js.UndefOr[FinishingStitching] = js.undefined
+  var trimming: js.UndefOr[js.Array[FinishingTrimming]] = js.undefined
 }
 
 object FinishingsInterface {
   @scala.inline
-  def apply(): FinishingsInterface = {
+  def apply(
+    baling: FinishingBailing = null,
+    binding: FinishingBinding = null,
+    coating: FinishingCoating = null,
+    covering: FinishingCovering = null,
+    `finishing-template`: Finishings = null,
+    folding: js.Array[FinishingFolding] = null,
+    `imposition-template`: ImpositionTemplate = null,
+    laminating: FinishingLaminating = null,
+    `media-sheets-supported`: String = null,
+    `media-size`: MediaSize = null,
+    `media-size-name`: String = null,
+    punching: FinishingPunching = null,
+    stitching: FinishingStitching = null,
+    trimming: js.Array[FinishingTrimming] = null
+  ): FinishingsInterface = {
     val __obj = js.Dynamic.literal()
+    if (baling != null) __obj.updateDynamic("baling")(baling.asInstanceOf[js.Any])
+    if (binding != null) __obj.updateDynamic("binding")(binding.asInstanceOf[js.Any])
+    if (coating != null) __obj.updateDynamic("coating")(coating.asInstanceOf[js.Any])
+    if (covering != null) __obj.updateDynamic("covering")(covering.asInstanceOf[js.Any])
+    if (`finishing-template` != null) __obj.updateDynamic("finishing-template")(`finishing-template`.asInstanceOf[js.Any])
+    if (folding != null) __obj.updateDynamic("folding")(folding.asInstanceOf[js.Any])
+    if (`imposition-template` != null) __obj.updateDynamic("imposition-template")(`imposition-template`.asInstanceOf[js.Any])
+    if (laminating != null) __obj.updateDynamic("laminating")(laminating.asInstanceOf[js.Any])
+    if (`media-sheets-supported` != null) __obj.updateDynamic("media-sheets-supported")(`media-sheets-supported`.asInstanceOf[js.Any])
+    if (`media-size` != null) __obj.updateDynamic("media-size")(`media-size`.asInstanceOf[js.Any])
+    if (`media-size-name` != null) __obj.updateDynamic("media-size-name")(`media-size-name`.asInstanceOf[js.Any])
+    if (punching != null) __obj.updateDynamic("punching")(punching.asInstanceOf[js.Any])
+    if (stitching != null) __obj.updateDynamic("stitching")(stitching.asInstanceOf[js.Any])
+    if (trimming != null) __obj.updateDynamic("trimming")(trimming.asInstanceOf[js.Any])
     __obj.asInstanceOf[FinishingsInterface]
   }
-  @scala.inline
-  implicit class FinishingsInterfaceOps[Self <: FinishingsInterface] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaling(value: FinishingBailing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinding(value: FinishingBinding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoating(value: FinishingCoating): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCovering(value: FinishingCovering): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("covering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCovering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("covering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFinishing-template`(value: Finishings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finishing-template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFinishing-template`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finishing-template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolding(value: js.Array[FinishingFolding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withImposition-template`(value: ImpositionTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imposition-template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutImposition-template`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imposition-template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaminating(value: FinishingLaminating): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("laminating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaminating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("laminating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMedia-sheets-supported`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-sheets-supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMedia-sheets-supported`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-sheets-supported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMedia-size`(value: MediaSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMedia-size`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMedia-size-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-size-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMedia-size-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media-size-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPunching(value: FinishingPunching): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("punching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPunching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("punching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStitching(value: FinishingStitching): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stitching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStitching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stitching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrimming(value: js.Array[FinishingTrimming]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trimming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrimming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trimming")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

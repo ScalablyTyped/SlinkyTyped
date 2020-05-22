@@ -1,5 +1,10 @@
 package typingsSlinky.webgme.GmeCommon
 
+import typingsSlinky.webgme.webgmeStrings.asset
+import typingsSlinky.webgme.webgmeStrings.boolean
+import typingsSlinky.webgme.webgmeStrings.float
+import typingsSlinky.webgme.webgmeStrings.integer
+import typingsSlinky.webgme.webgmeStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +20,52 @@ trait DefObject extends js.Object
 
 object DefObject {
   @scala.inline
-  implicit def apply(value: DefAssetObject): DefObject = value.asInstanceOf[DefObject]
+  def DefFloatObject(
+    `type`: float,
+    enum: js.Array[Double] = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined
+  ): DefObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DefObject]
+  }
   @scala.inline
-  implicit def apply(value: DefBoolObject): DefObject = value.asInstanceOf[DefObject]
+  def DefAssetObject(`type`: asset): DefObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DefObject]
+  }
   @scala.inline
-  implicit def apply(value: DefFloatObject): DefObject = value.asInstanceOf[DefObject]
+  def DefIntegerObject(
+    `type`: integer,
+    enum: js.Array[Double] = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined
+  ): DefObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DefObject]
+  }
   @scala.inline
-  implicit def apply(value: DefIntegerObject): DefObject = value.asInstanceOf[DefObject]
+  def DefStringObject(`type`: string, enum: js.Array[String] = null, regex: String = null): DefObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
+    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DefObject]
+  }
   @scala.inline
-  implicit def apply(value: DefStringObject): DefObject = value.asInstanceOf[DefObject]
+  def DefBoolObject(`type`: boolean): DefObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DefObject]
+  }
 }
 

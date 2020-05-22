@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Note extends js.Object {
-  var note: js.UndefOr[typingsSlinky.evernote.mod.Types.Note] = js.native
-  var updated: js.UndefOr[Boolean] = js.native
+  var note: js.UndefOr[typingsSlinky.evernote.mod.Types.Note] = js.undefined
+  var updated: js.UndefOr[Boolean] = js.undefined
 }
 
 object Note {
   @scala.inline
-  def apply(): Note = {
+  def apply(note: typingsSlinky.evernote.mod.Types.Note = null, updated: js.UndefOr[Boolean] = js.undefined): Note = {
     val __obj = js.Dynamic.literal()
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (!js.isUndefined(updated)) __obj.updateDynamic("updated")(updated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Note]
   }
-  @scala.inline
-  implicit class NoteOps[Self <: Note] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNote(value: typingsSlinky.evernote.mod.Types.Note): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

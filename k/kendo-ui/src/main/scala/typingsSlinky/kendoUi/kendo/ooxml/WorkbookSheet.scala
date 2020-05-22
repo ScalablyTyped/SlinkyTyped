@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkbookSheet extends js.Object {
-  var columns: js.UndefOr[js.Array[WorkbookSheetColumn]] = js.native
-  var filter: js.UndefOr[WorkbookSheetFilter] = js.native
-  var freezePane: js.UndefOr[WorkbookSheetFreezePane] = js.native
-  var frozenColumns: js.UndefOr[Double] = js.native
-  var frozenRows: js.UndefOr[Double] = js.native
-  var mergedCells: js.UndefOr[js.Any] = js.native
-  var name: js.UndefOr[String] = js.native
-  var rows: js.UndefOr[js.Array[WorkbookSheetRow]] = js.native
-  var showGridLines: js.UndefOr[Boolean] = js.native
-  var title: js.UndefOr[String] = js.native
+  var columns: js.UndefOr[js.Array[WorkbookSheetColumn]] = js.undefined
+  var filter: js.UndefOr[WorkbookSheetFilter] = js.undefined
+  var freezePane: js.UndefOr[WorkbookSheetFreezePane] = js.undefined
+  var frozenColumns: js.UndefOr[Double] = js.undefined
+  var frozenRows: js.UndefOr[Double] = js.undefined
+  var mergedCells: js.UndefOr[js.Any] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var rows: js.UndefOr[js.Array[WorkbookSheetRow]] = js.undefined
+  var showGridLines: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object WorkbookSheet {
   @scala.inline
-  def apply(): WorkbookSheet = {
+  def apply(
+    columns: js.Array[WorkbookSheetColumn] = null,
+    filter: WorkbookSheetFilter = null,
+    freezePane: WorkbookSheetFreezePane = null,
+    frozenColumns: js.UndefOr[Double] = js.undefined,
+    frozenRows: js.UndefOr[Double] = js.undefined,
+    mergedCells: js.Any = null,
+    name: String = null,
+    rows: js.Array[WorkbookSheetRow] = null,
+    showGridLines: js.UndefOr[Boolean] = js.undefined,
+    title: String = null
+  ): WorkbookSheet = {
     val __obj = js.Dynamic.literal()
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (freezePane != null) __obj.updateDynamic("freezePane")(freezePane.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenColumns)) __obj.updateDynamic("frozenColumns")(frozenColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenRows)) __obj.updateDynamic("frozenRows")(frozenRows.get.asInstanceOf[js.Any])
+    if (mergedCells != null) __obj.updateDynamic("mergedCells")(mergedCells.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGridLines)) __obj.updateDynamic("showGridLines")(showGridLines.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookSheet]
   }
-  @scala.inline
-  implicit class WorkbookSheetOps[Self <: WorkbookSheet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Array[WorkbookSheetColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: WorkbookSheetFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreezePane(value: WorkbookSheetFreezePane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freezePane")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreezePane: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freezePane")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozenColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozenColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrozenRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrozenRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergedCells(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergedCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergedCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergedCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[WorkbookSheetRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGridLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGridLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

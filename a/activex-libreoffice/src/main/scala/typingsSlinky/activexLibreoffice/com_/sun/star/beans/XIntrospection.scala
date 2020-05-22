@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * For details see method {@link XIntrospection.inspect()} .
   * @see XIntrospectionAccess
   */
-@js.native
 trait XIntrospection extends XInterface {
   /**
     * inspects the given object.
@@ -44,7 +43,7 @@ trait XIntrospection extends XInterface {
     * considered to be normal methods.
     * @see XIntrospectionAccess
     */
-  def inspect(aObject: js.Any): XIntrospectionAccess = js.native
+  def inspect(aObject: js.Any): XIntrospectionAccess
 }
 
 object XIntrospection {
@@ -58,19 +57,5 @@ object XIntrospection {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), inspect = js.Any.fromFunction1(inspect), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XIntrospection]
   }
-  @scala.inline
-  implicit class XIntrospectionOps[Self <: XIntrospection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInspect(value: js.Any => XIntrospectionAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

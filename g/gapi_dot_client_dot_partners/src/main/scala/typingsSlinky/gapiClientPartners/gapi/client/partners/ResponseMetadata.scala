@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResponseMetadata extends js.Object {
   /** Debug information about this request. */
-  var debugInfo: js.UndefOr[DebugInfo] = js.native
+  var debugInfo: js.UndefOr[DebugInfo] = js.undefined
 }
 
 object ResponseMetadata {
   @scala.inline
-  def apply(): ResponseMetadata = {
+  def apply(debugInfo: DebugInfo = null): ResponseMetadata = {
     val __obj = js.Dynamic.literal()
+    if (debugInfo != null) __obj.updateDynamic("debugInfo")(debugInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseMetadata]
   }
-  @scala.inline
-  implicit class ResponseMetadataOps[Self <: ResponseMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebugInfo(value: DebugInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

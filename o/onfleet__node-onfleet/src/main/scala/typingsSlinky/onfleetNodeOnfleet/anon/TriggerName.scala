@@ -7,10 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TriggerName extends WebhookTriggerType {
-  var triggerId: `1` = js.native
-  var triggerName: TaskEta = js.native
+  var triggerId: `1`
+  var triggerName: TaskEta
 }
 
 object TriggerName {
@@ -19,25 +18,5 @@ object TriggerName {
     val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerName]
   }
-  @scala.inline
-  implicit class TriggerNameOps[Self <: TriggerName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTriggerId(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerName(value: TaskEta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

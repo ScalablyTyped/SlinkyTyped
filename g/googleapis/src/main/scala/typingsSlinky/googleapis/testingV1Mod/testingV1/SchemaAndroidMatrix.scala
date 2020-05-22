@@ -37,65 +37,18 @@ trait SchemaAndroidMatrix extends js.Object {
 
 object SchemaAndroidMatrix {
   @scala.inline
-  def apply(): SchemaAndroidMatrix = {
+  def apply(
+    androidModelIds: js.Array[String] = null,
+    androidVersionIds: js.Array[String] = null,
+    locales: js.Array[String] = null,
+    orientations: js.Array[String] = null
+  ): SchemaAndroidMatrix = {
     val __obj = js.Dynamic.literal()
+    if (androidModelIds != null) __obj.updateDynamic("androidModelIds")(androidModelIds.asInstanceOf[js.Any])
+    if (androidVersionIds != null) __obj.updateDynamic("androidVersionIds")(androidVersionIds.asInstanceOf[js.Any])
+    if (locales != null) __obj.updateDynamic("locales")(locales.asInstanceOf[js.Any])
+    if (orientations != null) __obj.updateDynamic("orientations")(orientations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidMatrix]
   }
-  @scala.inline
-  implicit class SchemaAndroidMatrixOps[Self <: SchemaAndroidMatrix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidModelIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidModelIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidModelIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidModelIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidVersionIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidVersionIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidVersionIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidVersionIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocales(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

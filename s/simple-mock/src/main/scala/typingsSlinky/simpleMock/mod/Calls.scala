@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Calls[T] extends js.Object {
   /**
     * first argument
     */
-  var arg: js.Any = js.native
+  var arg: js.Any
   /**
     * an array of arguments received on the call
     */
-  var args: js.Array[_] = js.native
+  var args: js.Array[_]
   /**
     * the context (this) of the call
     */
-  var context: js.Any = js.native
+  var context: js.Any
   /**
     * autoincrementing number, can be compared to evaluate call order
     */
-  var k: Double = js.native
+  var k: Double
   /**
     * the value returned by the wrapped function
     */
-  var returned: T = js.native
+  var returned: T
   /**
     * the error thrown by the wrapped function
     */
-  var threw: js.Error = js.native
+  var threw: js.Error
 }
 
 object Calls {
@@ -38,49 +37,5 @@ object Calls {
     val __obj = js.Dynamic.literal(arg = arg.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], k = k.asInstanceOf[js.Any], returned = returned.asInstanceOf[js.Any], threw = threw.asInstanceOf[js.Any])
     __obj.asInstanceOf[Calls[T]]
   }
-  @scala.inline
-  implicit class CallsOps[Self[t] <: Calls[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withArg(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgs(value: js.Array[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withK(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("k")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturned(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThrew(value: js.Error): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threw")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

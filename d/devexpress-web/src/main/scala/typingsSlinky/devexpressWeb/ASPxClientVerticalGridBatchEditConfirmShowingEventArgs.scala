@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientVerticalGrid.BatchEditConfirmShowing event.
   */
-@js.native
 trait ASPxClientVerticalGridBatchEditConfirmShowingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets the client identifier of an object that initiates a send request.
     */
-  var requestTriggerID: String = js.native
+  var requestTriggerID: String
 }
 
 object ASPxClientVerticalGridBatchEditConfirmShowingEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientVerticalGridBatchEditConfirmShowingEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], requestTriggerID = requestTriggerID.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientVerticalGridBatchEditConfirmShowingEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientVerticalGridBatchEditConfirmShowingEventArgsOps[Self <: ASPxClientVerticalGridBatchEditConfirmShowingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestTriggerID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTriggerID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

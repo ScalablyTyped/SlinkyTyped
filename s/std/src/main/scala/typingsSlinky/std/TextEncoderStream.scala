@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextEncoderStream
   extends GenericTransformStream
      with TextEncoderCommon {
   @JSName("readable")
-  val readable_TextEncoderStream: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] = js.native
+  val readable_TextEncoderStream: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array]
   @JSName("writable")
-  val writable_TextEncoderStream: WritableStream[java.lang.String] = js.native
+  val writable_TextEncoderStream: WritableStream[java.lang.String]
 }
 
 object TextEncoderStream {
@@ -24,25 +23,5 @@ object TextEncoderStream {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any], readable = readable.asInstanceOf[js.Any], writable = writable.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextEncoderStream]
   }
-  @scala.inline
-  implicit class TextEncoderStreamOps[Self <: TextEncoderStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReadable(value: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWritable(value: WritableStream[java.lang.String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

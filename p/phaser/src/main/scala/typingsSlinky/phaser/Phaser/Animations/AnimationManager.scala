@@ -59,7 +59,7 @@ trait AnimationManager extends EventEmitter {
     * @param key The key under which the Animation should be added. The Animation will be updated with it. Must be unique.
     * @param animation The Animation which should be added to the Animation Manager.
     */
-  def add(key: String, animation: Animation): AnimationManager = js.native
+  def add(key: String, animation: Animation): this.type = js.native
   /**
     * Registers event listeners after the Game boots.
     */
@@ -98,7 +98,34 @@ trait AnimationManager extends EventEmitter {
   def fromJSON(data: JSONAnimations): js.Array[Animation] = js.native
   def fromJSON(data: JSONAnimations, clearCurrentAnimations: Boolean): js.Array[Animation] = js.native
   /**
-    * [description]
+    * Generate an array of {@link Phaser.Types.Animations.AnimationFrame} objects from a texture key and configuration object.
+    * 
+    * Generates objects with string based frame names, as configured by the given {@link Phaser.Types.Animations.GenerateFrameNames}.
+    * 
+    * It's a helper method, designed to make it easier for you to extract all of the frame names from texture atlases.
+    * If you're working with a sprite sheet, see the `generateFrameNumbers` method instead.
+    * 
+    * Example:
+    * 
+    * If you have a texture atlases loaded called `gems` and it contains 6 frames called `ruby_0001`, `ruby_0002`, and so on,
+    * then you can call this method using: `this.anims.generateFrameNames('gems', { prefix: 'ruby_', end: 6, zeroPad: 4 })`.
+    * 
+    * The `end` value tells it to look for 6 frames, incrementally numbered, all starting with the prefix `ruby_`. The `zeroPad`
+    * value tells it how many zeroes pad out the numbers. To create an animation using this method, you can do:
+    * 
+    * ```javascript
+    * this.anims.create({
+    *   key: 'ruby',
+    *   repeat: -1,
+    *   frames: this.anims.generateFrameNames('gems', {
+    *     prefix: 'ruby_',
+    *     end: 6,
+    *     zeroPad: 4
+    *   })
+    * });
+    * ```
+    * 
+    * Please see the animation examples for further details.
     * @param key The key for the texture containing the animation frames.
     * @param config The configuration object for the animation frame names.
     */
@@ -108,6 +135,8 @@ trait AnimationManager extends EventEmitter {
     * Generate an array of {@link Phaser.Types.Animations.AnimationFrame} objects from a texture key and configuration object.
     * 
     * Generates objects with numbered frame names, as configured by the given {@link Phaser.Types.Animations.GenerateFrameNumbers}.
+    * 
+    * If you're working with a texture atlas, see the `generateFrameNames` method instead.
     * @param key The key for the texture containing the animation frames.
     * @param config The configuration object for the animation frames.
     */
@@ -129,23 +158,26 @@ trait AnimationManager extends EventEmitter {
   /**
     * Pause all animations.
     */
-  def pauseAll(): AnimationManager = js.native
-  def play(key: String, child: js.Array[GameObject]): AnimationManager = js.native
+  def pauseAll(): this.type = js.native
+  def play(key: String, child: js.Array[GameObject]): this.type = js.native
   /**
     * Play an animation on the given Game Objects that have an Animation Component.
     * @param key The key of the animation to play on the Game Object.
     * @param child The Game Objects to play the animation on.
     */
-  def play(key: String, child: GameObject): AnimationManager = js.native
+  def play(key: String, child: GameObject): this.type = js.native
   /**
-    * Remove an animation.
+    * Removes an Animation from this Animation Manager, based on the given key.
+    * 
+    * This is a global action. Once an Animation has been removed, no Game Objects
+    * can carry on using it.
     * @param key The key of the animation to remove.
     */
   def remove(key: String): Animation = js.native
   /**
     * Resume all paused animations.
     */
-  def resumeAll(): AnimationManager = js.native
+  def resumeAll(): this.type = js.native
   def staggerPlay[G /* <: js.Array[GameObject] */](key: String, children: js.Array[GameObject]): G = js.native
   def staggerPlay[G /* <: js.Array[GameObject] */](key: String, children: js.Array[GameObject], stagger: Double): G = js.native
   /**
@@ -159,9 +191,11 @@ trait AnimationManager extends EventEmitter {
   def staggerPlay[G /* <: js.Array[GameObject] */](key: String, children: GameObject): G = js.native
   def staggerPlay[G /* <: js.Array[GameObject] */](key: String, children: GameObject, stagger: Double): G = js.native
   /**
-    * Get the animation data as javascript object by giving key, or get the data of all animations as array of objects, if key wasn't provided.
-    * @param key [description]
+    * Returns the Animation data as JavaScript object based on the given key.
+    * Or, if not key is defined, it will return the data of all animations as array of objects.
+    * @param key The animation to get the JSONAnimation data from. If not provided, all animations are returned as an array.
     */
+  def toJSON(): JSONAnimations = js.native
   def toJSON(key: String): JSONAnimations = js.native
 }
 

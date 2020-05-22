@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 trait Opa extends js.Object {
   /**
     * the global configuration of Opa.All of the global values can be overwritten in an individual waitFor
-    * call.The default values are:<ul>		<li>arrangements: A new Opa instance</li>		<li>actions: A new Opa
-    * instance</li>		<li>assertions: A new Opa instance</li>		<li>timeout : 15 seconds, is increased to 5
-    * minutes if running in debug mode e.g. with URL parameter sap-ui-debug=true</li>	
+    * call.The default values are:<ul>        <li>arrangements: A new Opa instance</li>        <li>actions: A new Opa
+    * instance</li>        <li>assertions: A new Opa instance</li>        <li>timeout : 15 seconds, is increased to 5
+    * minutes if running in debug mode e.g. with URL parameter sap-ui-debug=true</li>    
     * <li>pollingInterval: 400 milliseconds</li></ul>You can either directly manipulate the config, or
     * extend it using {@link sap.ui.test.Opa#.extendConfig}
     */
@@ -46,9 +46,9 @@ trait Opa extends js.Object {
   def getContext(): js.Any = js.native
   /**
     * Reset Opa.config to its default values.All of the global values can be overwritten in an individual
-    * waitFor call.The default values are:<ul>		<li>arrangements: A new Opa instance</li>		<li>actions: A
-    * new Opa instance</li>		<li>assertions: A new Opa instance</li>		<li>timeout : 15 seconds, is
-    * increased to 5 minutes if running in debug mode e.g. with URL parameter sap-ui-debug=true</li>	
+    * waitFor call.The default values are:<ul>        <li>arrangements: A new Opa instance</li>        <li>actions: A
+    * new Opa instance</li>        <li>assertions: A new Opa instance</li>        <li>timeout : 15 seconds, is
+    * increased to 5 minutes if running in debug mode e.g. with URL parameter sap-ui-debug=true</li>    
     * <li>pollingInterval: 400 milliseconds</li></ul>
     * @since 1.25
     */

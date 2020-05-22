@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Currency
   extends /* k */ StringDictionary[js.Any] {
-  var currencyCode: java.lang.String = js.native
+  var currencyCode: java.lang.String
 }
 
 @JSImport("js-to-java", "Currency")

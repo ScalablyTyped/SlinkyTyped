@@ -28,41 +28,11 @@ trait SchemaOutputConfig extends js.Object {
 
 object SchemaOutputConfig {
   @scala.inline
-  def apply(): SchemaOutputConfig = {
+  def apply(batchSize: js.UndefOr[Double] = js.undefined, gcsDestination: SchemaGcsDestination = null): SchemaOutputConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
+    if (gcsDestination != null) __obj.updateDynamic("gcsDestination")(gcsDestination.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOutputConfig]
   }
-  @scala.inline
-  implicit class SchemaOutputConfigOps[Self <: SchemaOutputConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcsDestination(value: SchemaGcsDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDestination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

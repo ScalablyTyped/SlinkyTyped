@@ -4,121 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileEncryptionInfo extends js.Object {
   // The key used to encrypt the file content.
-  var encryptionKey: js.UndefOr[Double] = js.native
+  var encryptionKey: js.UndefOr[Double] = js.undefined
   // The file digest prior to encryption.
-  var fileDigest: js.UndefOr[Double] = js.native
+  var fileDigest: js.UndefOr[Double] = js.undefined
   // The file digest algorithm.
-  var fileDigestAlgorithm: js.UndefOr[String] = js.native
+  var fileDigestAlgorithm: js.UndefOr[String] = js.undefined
   // The initialization vector used for the encryption algorithm.
-  var initializationVector: js.UndefOr[Double] = js.native
+  var initializationVector: js.UndefOr[Double] = js.undefined
   // The hash of the encrypted file content + IV (content hash).
-  var mac: js.UndefOr[Double] = js.native
+  var mac: js.UndefOr[Double] = js.undefined
   // The key used to get mac.
-  var macKey: js.UndefOr[Double] = js.native
+  var macKey: js.UndefOr[Double] = js.undefined
   // The profile identifier.
-  var profileIdentifier: js.UndefOr[String] = js.native
+  var profileIdentifier: js.UndefOr[String] = js.undefined
 }
 
 object FileEncryptionInfo {
   @scala.inline
-  def apply(): FileEncryptionInfo = {
+  def apply(
+    encryptionKey: js.UndefOr[Double] = js.undefined,
+    fileDigest: js.UndefOr[Double] = js.undefined,
+    fileDigestAlgorithm: String = null,
+    initializationVector: js.UndefOr[Double] = js.undefined,
+    mac: js.UndefOr[Double] = js.undefined,
+    macKey: js.UndefOr[Double] = js.undefined,
+    profileIdentifier: String = null
+  ): FileEncryptionInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(encryptionKey)) __obj.updateDynamic("encryptionKey")(encryptionKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fileDigest)) __obj.updateDynamic("fileDigest")(fileDigest.get.asInstanceOf[js.Any])
+    if (fileDigestAlgorithm != null) __obj.updateDynamic("fileDigestAlgorithm")(fileDigestAlgorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(initializationVector)) __obj.updateDynamic("initializationVector")(initializationVector.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mac)) __obj.updateDynamic("mac")(mac.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(macKey)) __obj.updateDynamic("macKey")(macKey.get.asInstanceOf[js.Any])
+    if (profileIdentifier != null) __obj.updateDynamic("profileIdentifier")(profileIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileEncryptionInfo]
   }
-  @scala.inline
-  implicit class FileEncryptionInfoOps[Self <: FileEncryptionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptionKey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileDigest(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDigest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileDigestAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDigestAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileDigestAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileDigestAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitializationVector(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationVector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitializationVector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializationVector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMac(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mac")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMac: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mac")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMacKey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMacKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

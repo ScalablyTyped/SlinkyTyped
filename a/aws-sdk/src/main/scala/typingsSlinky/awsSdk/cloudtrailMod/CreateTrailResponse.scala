@@ -62,173 +62,36 @@ trait CreateTrailResponse extends js.Object {
 
 object CreateTrailResponse {
   @scala.inline
-  def apply(): CreateTrailResponse = {
+  def apply(
+    CloudWatchLogsLogGroupArn: String = null,
+    CloudWatchLogsRoleArn: String = null,
+    IncludeGlobalServiceEvents: js.UndefOr[Boolean] = js.undefined,
+    IsMultiRegionTrail: js.UndefOr[Boolean] = js.undefined,
+    IsOrganizationTrail: js.UndefOr[Boolean] = js.undefined,
+    KmsKeyId: String = null,
+    LogFileValidationEnabled: js.UndefOr[Boolean] = js.undefined,
+    Name: String = null,
+    S3BucketName: String = null,
+    S3KeyPrefix: String = null,
+    SnsTopicARN: String = null,
+    SnsTopicName: String = null,
+    TrailARN: String = null
+  ): CreateTrailResponse = {
     val __obj = js.Dynamic.literal()
+    if (CloudWatchLogsLogGroupArn != null) __obj.updateDynamic("CloudWatchLogsLogGroupArn")(CloudWatchLogsLogGroupArn.asInstanceOf[js.Any])
+    if (CloudWatchLogsRoleArn != null) __obj.updateDynamic("CloudWatchLogsRoleArn")(CloudWatchLogsRoleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeGlobalServiceEvents)) __obj.updateDynamic("IncludeGlobalServiceEvents")(IncludeGlobalServiceEvents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsMultiRegionTrail)) __obj.updateDynamic("IsMultiRegionTrail")(IsMultiRegionTrail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsOrganizationTrail)) __obj.updateDynamic("IsOrganizationTrail")(IsOrganizationTrail.get.asInstanceOf[js.Any])
+    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(LogFileValidationEnabled)) __obj.updateDynamic("LogFileValidationEnabled")(LogFileValidationEnabled.get.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
+    if (S3KeyPrefix != null) __obj.updateDynamic("S3KeyPrefix")(S3KeyPrefix.asInstanceOf[js.Any])
+    if (SnsTopicARN != null) __obj.updateDynamic("SnsTopicARN")(SnsTopicARN.asInstanceOf[js.Any])
+    if (SnsTopicName != null) __obj.updateDynamic("SnsTopicName")(SnsTopicName.asInstanceOf[js.Any])
+    if (TrailARN != null) __obj.updateDynamic("TrailARN")(TrailARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTrailResponse]
   }
-  @scala.inline
-  implicit class CreateTrailResponseOps[Self <: CreateTrailResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCloudWatchLogsLogGroupArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogsLogGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchLogsLogGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogsLogGroupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudWatchLogsRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogsRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchLogsRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogsRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeGlobalServiceEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeGlobalServiceEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeGlobalServiceEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeGlobalServiceEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMultiRegionTrail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMultiRegionTrail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMultiRegionTrail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMultiRegionTrail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOrganizationTrail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsOrganizationTrail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOrganizationTrail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsOrganizationTrail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogFileValidationEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFileValidationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogFileValidationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFileValidationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3KeyPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3KeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3KeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3KeyPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsTopicARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsTopicARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsTopicName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsTopicName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnsTopicName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

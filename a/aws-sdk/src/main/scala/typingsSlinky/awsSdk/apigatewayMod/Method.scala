@@ -54,149 +54,32 @@ trait Method extends js.Object {
 
 object Method {
   @scala.inline
-  def apply(): Method = {
+  def apply(
+    apiKeyRequired: js.UndefOr[NullableBoolean] = js.undefined,
+    authorizationScopes: ListOfString = null,
+    authorizationType: String = null,
+    authorizerId: String = null,
+    httpMethod: String = null,
+    methodIntegration: Integration = null,
+    methodResponses: MapOfMethodResponse = null,
+    operationName: String = null,
+    requestModels: MapOfStringToString = null,
+    requestParameters: MapOfStringToBoolean = null,
+    requestValidatorId: String = null
+  ): Method = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(apiKeyRequired)) __obj.updateDynamic("apiKeyRequired")(apiKeyRequired.get.asInstanceOf[js.Any])
+    if (authorizationScopes != null) __obj.updateDynamic("authorizationScopes")(authorizationScopes.asInstanceOf[js.Any])
+    if (authorizationType != null) __obj.updateDynamic("authorizationType")(authorizationType.asInstanceOf[js.Any])
+    if (authorizerId != null) __obj.updateDynamic("authorizerId")(authorizerId.asInstanceOf[js.Any])
+    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
+    if (methodIntegration != null) __obj.updateDynamic("methodIntegration")(methodIntegration.asInstanceOf[js.Any])
+    if (methodResponses != null) __obj.updateDynamic("methodResponses")(methodResponses.asInstanceOf[js.Any])
+    if (operationName != null) __obj.updateDynamic("operationName")(operationName.asInstanceOf[js.Any])
+    if (requestModels != null) __obj.updateDynamic("requestModels")(requestModels.asInstanceOf[js.Any])
+    if (requestParameters != null) __obj.updateDynamic("requestParameters")(requestParameters.asInstanceOf[js.Any])
+    if (requestValidatorId != null) __obj.updateDynamic("requestValidatorId")(requestValidatorId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Method]
   }
-  @scala.inline
-  implicit class MethodOps[Self <: Method] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiKeyRequired(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKeyRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiKeyRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKeyRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizationScopes(value: ListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethodIntegration(value: Integration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodIntegration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethodIntegration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodIntegration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethodResponses(value: MapOfMethodResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodResponses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethodResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methodResponses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestModels(value: MapOfStringToString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestModels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestModels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestModels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestParameters(value: MapOfStringToBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestValidatorId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestValidatorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestValidatorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestValidatorId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

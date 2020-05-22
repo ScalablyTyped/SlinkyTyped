@@ -22,7 +22,6 @@ import scala.scalajs.js.annotation._
   * @see LineDescriptor
   * @since OOo 2.0.3
   */
-@js.native
 trait XPropertyHandler extends XComponent {
   /**
     * retrieve the actuating properties which this handler is interested in
@@ -37,7 +36,7 @@ trait XPropertyHandler extends XComponent {
     *
     * If {@link getSupportedProperties()} returned an empty sequence, this method will not be called
     */
-  val ActuatingProperties: SafeArray[String] = js.native
+  val ActuatingProperties: SafeArray[String]
   /**
     * returns the properties which are to be superseded by this handler
     *
@@ -63,7 +62,7 @@ trait XPropertyHandler extends XComponent {
     * If {@link getSupportedProperties()} returned an empty sequence, this method will not be called.
     * @see XObjectInspectorModel.HandlerFactories
     */
-  val SupersededProperties: SafeArray[String] = js.native
+  val SupersededProperties: SafeArray[String]
   /**
     * returns the properties which the handler can handle
     *
@@ -73,7 +72,7 @@ trait XPropertyHandler extends XComponent {
     *
     * In the case of returning an empty sequence here, the property handler is ignored by all further processing in the object inspector.
     */
-  val SupportedProperties: SafeArray[Property] = js.native
+  val SupportedProperties: SafeArray[Property]
   /**
     * updates the UI of dependent properties when the value of a certain actuating property changed
     *
@@ -92,7 +91,7 @@ trait XPropertyHandler extends XComponent {
     OldValue: js.Any,
     InspectorUI: XObjectInspectorUI,
     FirstTimeInit: Boolean
-  ): Unit = js.native
+  ): Unit
   /**
     * registers a listener for notification about property value changes
     *
@@ -106,7 +105,7 @@ trait XPropertyHandler extends XComponent {
     * @see removePropertyChangeListener
     * @throws com::sun::star::lang::NullPointerException if the listener is `NULL`
     */
-  def addPropertyChangeListener(Listener: XPropertyChangeListener): Unit = js.native
+  def addPropertyChangeListener(Listener: XPropertyChangeListener): Unit
   /**
     * converts a given property value to a control-compatible value
     *
@@ -131,7 +130,7 @@ trait XPropertyHandler extends XComponent {
     * @see getPropertyValue
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     */
-  def convertToControlValue(PropertyName: String, PropertyValue: js.Any, ControlValueType: `type`): js.Any = js.native
+  def convertToControlValue(PropertyName: String, PropertyValue: js.Any, ControlValueType: `type`): js.Any
   /**
     * converts a given control-compatible value to a property value
     *
@@ -148,7 +147,7 @@ trait XPropertyHandler extends XComponent {
     * @see getPropertyValue
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     */
-  def convertToPropertyValue(PropertyName: String, ControlValue: js.Any): js.Any = js.native
+  def convertToPropertyValue(PropertyName: String, ControlValue: js.Any): js.Any
   /**
     * describes the UI to be used to represent the property
     * @param PropertyName the name of the property whose user interface is to be described implementation
@@ -159,7 +158,7 @@ trait XPropertyHandler extends XComponent {
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by this handler
     * @throws com::sun::star::lang::NullPointerException if ControlFactory is `NULL` .
     */
-  def describePropertyLine(PropertyName: String, ControlFactory: XPropertyControlFactory): LineDescriptor = js.native
+  def describePropertyLine(PropertyName: String, ControlFactory: XPropertyControlFactory): LineDescriptor
   /**
     * retrieve the actuating properties which this handler is interested in
     *
@@ -173,19 +172,19 @@ trait XPropertyHandler extends XComponent {
     *
     * If {@link getSupportedProperties()} returned an empty sequence, this method will not be called
     */
-  def getActuatingProperties(): SafeArray[String] = js.native
+  def getActuatingProperties(): SafeArray[String]
   /**
     * returns the state of a property
     * @param PropertyName the name of the property whose state is to be retrieved
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     */
-  def getPropertyState(PropertyName: String): PropertyState = js.native
+  def getPropertyState(PropertyName: String): PropertyState
   /**
     * retrieves the current value of a property
     * @param PropertyName the name of the property whose value is to be retrieved
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     */
-  def getPropertyValue(PropertyName: String): js.Any = js.native
+  def getPropertyValue(PropertyName: String): js.Any
   /**
     * returns the properties which are to be superseded by this handler
     *
@@ -211,7 +210,7 @@ trait XPropertyHandler extends XComponent {
     * If {@link getSupportedProperties()} returned an empty sequence, this method will not be called.
     * @see XObjectInspectorModel.HandlerFactories
     */
-  def getSupersededProperties(): SafeArray[String] = js.native
+  def getSupersededProperties(): SafeArray[String]
   /**
     * returns the properties which the handler can handle
     *
@@ -221,13 +220,13 @@ trait XPropertyHandler extends XComponent {
     *
     * In the case of returning an empty sequence here, the property handler is ignored by all further processing in the object inspector.
     */
-  def getSupportedProperties(): SafeArray[Property] = js.native
+  def getSupportedProperties(): SafeArray[Property]
   /**
     * binds the property handler to a new component
     * @param Component the component to inspect. Must not be `NULL`
     * @throws com::sun::star::lang::NullPointerException if the component is `NULL`
     */
-  def inspect(Component: XInterface): Unit = js.native
+  def inspect(Component: XInterface): Unit
   /**
     * determines whether a given property, which the handler is responsible for, is composable.
     *
@@ -237,7 +236,7 @@ trait XPropertyHandler extends XComponent {
     * @param PropertyName the name of the property whose composability is to be determined
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     */
-  def isComposable(PropertyName: String): Boolean = js.native
+  def isComposable(PropertyName: String): Boolean
   /**
     * called when a browse button belonging to a property UI representation has been clicked
     *
@@ -270,19 +269,19 @@ trait XPropertyHandler extends XComponent {
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     * @throws com::sun::star::lang::NullPointerException if InspectorUI is `NULL`
     */
-  def onInteractivePropertySelection(PropertyName: String, Primary: Boolean, outData: js.Array[_], InspectorUI: XObjectInspectorUI): InteractiveSelectionResult = js.native
+  def onInteractivePropertySelection(PropertyName: String, Primary: Boolean, outData: js.Array[_], InspectorUI: XObjectInspectorUI): InteractiveSelectionResult
   /**
     * revokes a listener for notification about property value changes
     * @see addPropertyChangeListener
     */
-  def removePropertyChangeListener(Listener: XPropertyChangeListener): Unit = js.native
+  def removePropertyChangeListener(Listener: XPropertyChangeListener): Unit
   /**
     * sets the value of a property
     * @param PropertyName the name of the property whose value is to be set
     * @param Value the property value to set
     * @throws com::sun::star::beans::UnknownPropertyException if the given property is not supported by the property handler
     */
-  def setPropertyValue(PropertyName: String, Value: js.Any): Unit = js.native
+  def setPropertyValue(PropertyName: String, Value: js.Any): Unit
   /**
     * suspends the handler
     *
@@ -298,7 +297,7 @@ trait XPropertyHandler extends XComponent {
     * @param Suspend Whether the handler is to be suspended `TRUE` or reactivated ( `FALSE` ). The latter happens if a handler was successfully suspended, but
     * @returns `TRUE` if the handler does allow suspension, `FALSE` if it vetoes it.
     */
-  def suspend(Suspend: Boolean): Boolean = js.native
+  def suspend(Suspend: Boolean): Boolean
 }
 
 object XPropertyHandler {
@@ -333,127 +332,5 @@ object XPropertyHandler {
     val __obj = js.Dynamic.literal(ActuatingProperties = ActuatingProperties.asInstanceOf[js.Any], SupersededProperties = SupersededProperties.asInstanceOf[js.Any], SupportedProperties = SupportedProperties.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), actuatingPropertyChanged = js.Any.fromFunction5(actuatingPropertyChanged), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction1(addPropertyChangeListener), convertToControlValue = js.Any.fromFunction3(convertToControlValue), convertToPropertyValue = js.Any.fromFunction2(convertToPropertyValue), describePropertyLine = js.Any.fromFunction2(describePropertyLine), dispose = js.Any.fromFunction0(dispose), getActuatingProperties = js.Any.fromFunction0(getActuatingProperties), getPropertyState = js.Any.fromFunction1(getPropertyState), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getSupersededProperties = js.Any.fromFunction0(getSupersededProperties), getSupportedProperties = js.Any.fromFunction0(getSupportedProperties), inspect = js.Any.fromFunction1(inspect), isComposable = js.Any.fromFunction1(isComposable), onInteractivePropertySelection = js.Any.fromFunction4(onInteractivePropertySelection), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction1(removePropertyChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), suspend = js.Any.fromFunction1(suspend))
     __obj.asInstanceOf[XPropertyHandler]
   }
-  @scala.inline
-  implicit class XPropertyHandlerOps[Self <: XPropertyHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActuatingProperties(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActuatingProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupersededProperties(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupersededProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedProperties(value: SafeArray[Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActuatingPropertyChanged(value: (String, js.Any, js.Any, XObjectInspectorUI, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actuatingPropertyChanged")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withAddPropertyChangeListener(value: XPropertyChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPropertyChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withConvertToControlValue(value: (String, js.Any, `type`) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertToControlValue")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withConvertToPropertyValue(value: (String, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertToPropertyValue")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDescribePropertyLine(value: (String, XPropertyControlFactory) => LineDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describePropertyLine")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetActuatingProperties(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActuatingProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertyState(value: String => PropertyState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropertyValue(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupersededProperties(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupersededProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedProperties(value: () => SafeArray[Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInspect(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsComposable(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isComposable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnInteractivePropertySelection(value: (String, Boolean, js.Array[_], XObjectInspectorUI) => InteractiveSelectionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInteractivePropertySelection")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePropertyChangeListener(value: XPropertyChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePropertyChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPropertyValue(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPropertyValue")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSuspend(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspend")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -10,48 +10,47 @@ import scala.scalajs.js.annotation._
   *
   * The properties for line ends and line starts are only supported by shapes with open line ends.
   */
-@js.native
 trait LineProperties extends js.Object {
   /** This property defines the rendering of ends of thick lines */
-  var LineCap: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineCap = js.native
+  var LineCap: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineCap
   /** This property contains the line color. */
-  var LineColor: Color = js.native
+  var LineColor: Color
   /** This property contains the dash of the line. */
-  var LineDash: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineDash = js.native
+  var LineDash: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineDash
   /** This property contains the name of the dash of the line. */
-  var LineDashName: String = js.native
+  var LineDashName: String
   /** This property contains the line end in the form of a poly polygon Bezier. */
-  var LineEnd: PolyPolygonBezierCoords = js.native
+  var LineEnd: PolyPolygonBezierCoords
   /** If this property is `TRUE` , the line will end in the center of the polygon. */
-  var LineEndCenter: Boolean = js.native
+  var LineEndCenter: Boolean
   /**
     * This property contains the name of the line end poly polygon Bezier.
     *
     * If this string is empty, no line end polygon is rendered.
     */
-  var LineEndName: String = js.native
+  var LineEndName: String
   /** This property contains the width of the line end polygon. */
-  var LineEndWidth: Double = js.native
+  var LineEndWidth: Double
   /** This property defines the rendering of joints between thick lines */
-  var LineJoint: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineJoint = js.native
+  var LineJoint: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineJoint
   /** This property contains the line start in the form of a poly polygon Bezier. */
-  var LineStart: PolyPolygonBezierCoords = js.native
+  var LineStart: PolyPolygonBezierCoords
   /** If this property is `TRUE` , the line will start from the center of the polygon. */
-  var LineStartCenter: Boolean = js.native
+  var LineStartCenter: Boolean
   /**
     * This property contains the name of the line start poly polygon Bezier.
     *
     * If this string is empty, no line start polygon is rendered.
     */
-  var LineStartName: String = js.native
+  var LineStartName: String
   /** This property contains the width of the line start polygon. */
-  var LineStartWidth: Double = js.native
+  var LineStartWidth: Double
   /** This property contains the type of the line. */
-  var LineStyle: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineStyle = js.native
+  var LineStyle: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.LineStyle
   /** This property contains the extent of transparency. */
-  var LineTransparence: Double = js.native
+  var LineTransparence: Double
   /** This property contains the width of the line in 1/100th mm. */
-  var LineWidth: Double = js.native
+  var LineWidth: Double
 }
 
 object LineProperties {
@@ -77,109 +76,5 @@ object LineProperties {
     val __obj = js.Dynamic.literal(LineCap = LineCap.asInstanceOf[js.Any], LineColor = LineColor.asInstanceOf[js.Any], LineDash = LineDash.asInstanceOf[js.Any], LineDashName = LineDashName.asInstanceOf[js.Any], LineEnd = LineEnd.asInstanceOf[js.Any], LineEndCenter = LineEndCenter.asInstanceOf[js.Any], LineEndName = LineEndName.asInstanceOf[js.Any], LineEndWidth = LineEndWidth.asInstanceOf[js.Any], LineJoint = LineJoint.asInstanceOf[js.Any], LineStart = LineStart.asInstanceOf[js.Any], LineStartCenter = LineStartCenter.asInstanceOf[js.Any], LineStartName = LineStartName.asInstanceOf[js.Any], LineStartWidth = LineStartWidth.asInstanceOf[js.Any], LineStyle = LineStyle.asInstanceOf[js.Any], LineTransparence = LineTransparence.asInstanceOf[js.Any], LineWidth = LineWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineProperties]
   }
-  @scala.inline
-  implicit class LinePropertiesOps[Self <: LineProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLineCap(value: LineCap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineCap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineColor(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineDash(value: LineDash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineDash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineDashName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineDashName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineEnd(value: PolyPolygonBezierCoords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineEndCenter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineEndCenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineEndName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineEndName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineEndWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineEndWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineJoint(value: LineJoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineJoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStart(value: PolyPolygonBezierCoords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStartCenter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineStartCenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStartName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineStartName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStartWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineStartWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: LineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineTransparence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineTransparence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

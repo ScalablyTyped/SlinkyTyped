@@ -1,59 +1,44 @@
 package typingsSlinky.stripe.mod.resources
 
+import typingsSlinky.stripe.mod.IDateFilter
 import typingsSlinky.stripe.mod.IListOptionsCreated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPlanListOptions extends IListOptionsCreated {
   /**
     * Only return plans that are active or inactive (e.g., pass false to list all inactive products).
     */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /**
     * Only return plans for the given product.
     */
-  var product: js.UndefOr[String] = js.native
+  var product: js.UndefOr[String] = js.undefined
 }
 
 object IPlanListOptions {
   @scala.inline
-  def apply(): IPlanListOptions = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    created: String | IDateFilter = null,
+    ending_before: String = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    product: String = null,
+    starting_after: String = null
+  ): IPlanListOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (ending_before != null) __obj.updateDynamic("ending_before")(ending_before.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
+    if (starting_after != null) __obj.updateDynamic("starting_after")(starting_after.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPlanListOptions]
   }
-  @scala.inline
-  implicit class IPlanListOptionsOps[Self <: IPlanListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,24 +6,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains the XML that defines the toast notification that will display at the scheduled time. */
-@js.native
 trait ScheduledToastNotification extends js.Object {
   /** Gets the XML that defines this scheduled toast notification. */
-  var content: XmlDocument = js.native
+  var content: XmlDocument
   /** Gets the time that this toast notification is scheduled to be displayed. */
-  var deliveryTime: js.Date = js.native
+  var deliveryTime: js.Date
   /** Gets or sets the group identifier for the notification. */
-  var group: String = js.native
+  var group: String
   /** Gets a developer-specified value used to identify a specific scheduled toast. */
-  var id: String = js.native
+  var id: String
   /** Gets the maximum number of times to display this notification. */
-  var maximumSnoozeCount: Double = js.native
+  var maximumSnoozeCount: Double
   /** Gets the amount of time between occurrences of the notification. */
-  var snoozeInterval: Double = js.native
+  var snoozeInterval: Double
   /** Gets or sets whether a toast's pop-up UI is displayed on the Windows Phone 8.1 screen. */
-  var suppressPopup: Boolean = js.native
+  var suppressPopup: Boolean
   /** Gets or sets a string that uniquely identifies a toast notification inside a Group . */
-  var tag: String = js.native
+  var tag: String
 }
 
 object ScheduledToastNotification {
@@ -41,61 +40,5 @@ object ScheduledToastNotification {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], deliveryTime = deliveryTime.asInstanceOf[js.Any], group = group.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], maximumSnoozeCount = maximumSnoozeCount.asInstanceOf[js.Any], snoozeInterval = snoozeInterval.asInstanceOf[js.Any], suppressPopup = suppressPopup.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduledToastNotification]
   }
-  @scala.inline
-  implicit class ScheduledToastNotificationOps[Self <: ScheduledToastNotification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: XmlDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeliveryTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximumSnoozeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSnoozeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnoozeInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snoozeInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuppressPopup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

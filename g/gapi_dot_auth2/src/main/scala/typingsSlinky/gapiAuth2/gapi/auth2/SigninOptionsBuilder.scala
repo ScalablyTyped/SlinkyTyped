@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SigninOptionsBuilder extends js.Object {
-  def setAppPackageName(name: String): js.Any = js.native
-  def setFetchBasicProfile(fetch: Boolean): js.Any = js.native
-  def setLoginHint(hint: String): js.Any = js.native
-  def setPrompt(prompt: String): js.Any = js.native
-  def setScope(scope: String): js.Any = js.native
+  def setAppPackageName(name: String): js.Any
+  def setFetchBasicProfile(fetch: Boolean): js.Any
+  def setLoginHint(hint: String): js.Any
+  def setPrompt(prompt: String): js.Any
+  def setScope(scope: String): js.Any
 }
 
 object SigninOptionsBuilder {
@@ -25,43 +24,5 @@ object SigninOptionsBuilder {
     val __obj = js.Dynamic.literal(setAppPackageName = js.Any.fromFunction1(setAppPackageName), setFetchBasicProfile = js.Any.fromFunction1(setFetchBasicProfile), setLoginHint = js.Any.fromFunction1(setLoginHint), setPrompt = js.Any.fromFunction1(setPrompt), setScope = js.Any.fromFunction1(setScope))
     __obj.asInstanceOf[SigninOptionsBuilder]
   }
-  @scala.inline
-  implicit class SigninOptionsBuilderOps[Self <: SigninOptionsBuilder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetAppPackageName(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAppPackageName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFetchBasicProfile(value: Boolean => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFetchBasicProfile")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLoginHint(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLoginHint")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPrompt(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrompt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetScope(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScope")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

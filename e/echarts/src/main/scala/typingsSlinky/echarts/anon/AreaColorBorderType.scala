@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AreaColorBorderType extends js.Object {
   /**
     * Color of the area.
@@ -12,34 +11,15 @@ trait AreaColorBorderType extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.itemStyle.areaColor
     */
-  var areaColor: js.UndefOr[BorderType] = js.native
+  var areaColor: js.UndefOr[BorderType] = js.undefined
 }
 
 object AreaColorBorderType {
   @scala.inline
-  def apply(): AreaColorBorderType = {
+  def apply(areaColor: BorderType = null): AreaColorBorderType = {
     val __obj = js.Dynamic.literal()
+    if (areaColor != null) __obj.updateDynamic("areaColor")(areaColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[AreaColorBorderType]
   }
-  @scala.inline
-  implicit class AreaColorBorderTypeOps[Self <: AreaColorBorderType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAreaColor(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreaColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

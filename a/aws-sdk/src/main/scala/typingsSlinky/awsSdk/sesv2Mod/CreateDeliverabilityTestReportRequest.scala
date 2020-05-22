@@ -26,53 +26,16 @@ trait CreateDeliverabilityTestReportRequest extends js.Object {
 
 object CreateDeliverabilityTestReportRequest {
   @scala.inline
-  def apply(Content: EmailContent, FromEmailAddress: EmailAddress): CreateDeliverabilityTestReportRequest = {
+  def apply(
+    Content: EmailContent,
+    FromEmailAddress: EmailAddress,
+    ReportName: ReportName = null,
+    Tags: TagList = null
+  ): CreateDeliverabilityTestReportRequest = {
     val __obj = js.Dynamic.literal(Content = Content.asInstanceOf[js.Any], FromEmailAddress = FromEmailAddress.asInstanceOf[js.Any])
+    if (ReportName != null) __obj.updateDynamic("ReportName")(ReportName.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeliverabilityTestReportRequest]
   }
-  @scala.inline
-  implicit class CreateDeliverabilityTestReportRequestOps[Self <: CreateDeliverabilityTestReportRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: EmailContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromEmailAddress(value: EmailAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromEmailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReportName(value: ReportName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

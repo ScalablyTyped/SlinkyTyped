@@ -12,26 +12,26 @@ sealed trait AdvertisingState extends js.Object
 @js.native
 object AdvertisingState extends js.Object {
   /**
-  		* A linear ad is playing.
-  		**/
+    * A linear ad is playing.
+    **/
   @js.native
   sealed trait linear extends AdvertisingState
   
   /**
-  		* An ad is loading.
-  		**/
+    * An ad is loading.
+    **/
   @js.native
   sealed trait loading extends AdvertisingState
   
   /**
-  		* A non-linear ad is playing.
-  		**/
+    * A non-linear ad is playing.
+    **/
   @js.native
   sealed trait nonLinear extends AdvertisingState
   
   /**
-  		* No ad is loading or playing.
-  		**/
+    * No ad is loading or playing.
+    **/
   @js.native
   sealed trait none extends AdvertisingState
   

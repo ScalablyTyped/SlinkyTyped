@@ -6,116 +6,38 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Required<std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/DetailsList/DetailsRowCheck.types.IDetailsRowCheckProps, 'theme'>> & std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/DetailsList/DetailsRowCheck.types.IDetailsRowCheckProps, 'compact' | 'isHeader' | 'selected' | 'anySelected' | 'canSelect' | 'className'> & {  isVisible ? :boolean} */
-@js.native
 trait IDetailsRowCheckStyleProps extends js.Object {
-  var anySelected: js.UndefOr[Boolean] = js.native
-  var canSelect: Boolean = js.native
-  var className: js.UndefOr[String] = js.native
-  var compact: js.UndefOr[Boolean] = js.native
-  var isHeader: js.UndefOr[Boolean] = js.native
+  var anySelected: js.UndefOr[Boolean] = js.undefined
+  var canSelect: Boolean
+  var className: js.UndefOr[String] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.undefined
+  var isHeader: js.UndefOr[Boolean] = js.undefined
   /** Is checkbox visible */
-  var isVisible: js.UndefOr[Boolean] = js.native
-  var selected: js.UndefOr[Boolean] = js.native
-  var theme: ITheme = js.native
+  var isVisible: js.UndefOr[Boolean] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.undefined
+  var theme: ITheme
 }
 
 object IDetailsRowCheckStyleProps {
   @scala.inline
-  def apply(canSelect: Boolean, theme: ITheme): IDetailsRowCheckStyleProps = {
+  def apply(
+    canSelect: Boolean,
+    theme: ITheme,
+    anySelected: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    isHeader: js.UndefOr[Boolean] = js.undefined,
+    isVisible: js.UndefOr[Boolean] = js.undefined,
+    selected: js.UndefOr[Boolean] = js.undefined
+  ): IDetailsRowCheckStyleProps = {
     val __obj = js.Dynamic.literal(canSelect = canSelect.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(anySelected)) __obj.updateDynamic("anySelected")(anySelected.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHeader)) __obj.updateDynamic("isHeader")(isHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isVisible)) __obj.updateDynamic("isVisible")(isVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDetailsRowCheckStyleProps]
   }
-  @scala.inline
-  implicit class IDetailsRowCheckStylePropsOps[Self <: IDetailsRowCheckStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnySelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anySelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnySelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anySelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

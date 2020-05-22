@@ -863,14 +863,24 @@ package object mod {
   type Models = org.scalablytyped.runtime.StringDictionary[typingsSlinky.sequelize.mod.Model[js.Any, js.Any, js.Any]]
   type ModelsHashInterface = org.scalablytyped.runtime.StringDictionary[typingsSlinky.sequelize.mod.Model[js.Any, js.Any, js.Any]]
   type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  /**
+    * A hash of attributes to describe your search. See above for examples.
+    *
+    * We did put Object in the end, because there where query might be a JSON Blob. It cripples a bit the
+    * typesafety, but there is no way to pass the tests if we just remove it.
+    */
+  type Primitives = java.lang.String | scala.Double | scala.Boolean | typingsSlinky.node.Buffer
+  type TransactionIsolationLevel = typingsSlinky.sequelize.mod.TransactionIsolationLevelReadUncommitted | typingsSlinky.sequelize.mod.TransactionIsolationLevelReadCommitted | typingsSlinky.sequelize.mod.TransactionIsolationLevelRepeatableRead | typingsSlinky.sequelize.mod.TransactionIsolationLevelSerializable
   type TransactionIsolationLevelReadCommitted = typingsSlinky.sequelize.sequelizeStrings.`READ COMMITTED`
   type TransactionIsolationLevelReadUncommitted = typingsSlinky.sequelize.sequelizeStrings.`READ UNCOMMITTED`
   type TransactionIsolationLevelRepeatableRead = typingsSlinky.sequelize.sequelizeStrings.`REPEATABLE READ`
   type TransactionIsolationLevelSerializable = typingsSlinky.sequelize.sequelizeStrings.SERIALIZABLE
+  type TransactionLockLevel = typingsSlinky.sequelize.mod.TransactionLockLevelUpdate | typingsSlinky.sequelize.mod.TransactionLockLevelShare | typingsSlinky.sequelize.mod.TransactionLockLevelKeyShare | typingsSlinky.sequelize.mod.TransactionLockLevelNoKeyUpdate
   type TransactionLockLevelKeyShare = typingsSlinky.sequelize.sequelizeStrings.`KEY SHARE`
   type TransactionLockLevelNoKeyUpdate = typingsSlinky.sequelize.sequelizeStrings.`NO KEY UPDATE`
   type TransactionLockLevelShare = typingsSlinky.sequelize.sequelizeStrings.SHARE
   type TransactionLockLevelUpdate = typingsSlinky.sequelize.sequelizeStrings.UPDATE
+  type TransactionType = typingsSlinky.sequelize.mod.TransactionTypeDeferred | typingsSlinky.sequelize.mod.TransactionTypeImmediate | typingsSlinky.sequelize.mod.TransactionTypeExclusive
   type TransactionTypeDeferred = typingsSlinky.sequelize.sequelizeStrings.DEFERRED
   type TransactionTypeExclusive = typingsSlinky.sequelize.sequelizeStrings.EXCLUSIVE
   type TransactionTypeImmediate = typingsSlinky.sequelize.sequelizeStrings.IMMEDIATE

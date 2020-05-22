@@ -16,5 +16,20 @@ class TexturePackerFrame protected () extends ITexturePackerFrame {
     * @returns TexturePackerFrame
     */
   def this(id: Double, scale: Vector2, offset: Vector2) = this()
+  /**
+    * The frame ID
+    */
+  /* CompleteClass */
+  override var id: Double = js.native
+  /**
+    * The Frames offset
+    */
+  /* CompleteClass */
+  override var offset: Vector2 = js.native
+  /**
+    * The frames Scale
+    */
+  /* CompleteClass */
+  override var scale: Vector2 = js.native
 }
 

@@ -19,29 +19,10 @@ trait SchemaPublishResponse extends js.Object {
 
 object SchemaPublishResponse {
   @scala.inline
-  def apply(): SchemaPublishResponse = {
+  def apply(messageIds: js.Array[String] = null): SchemaPublishResponse = {
     val __obj = js.Dynamic.literal()
+    if (messageIds != null) __obj.updateDynamic("messageIds")(messageIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPublishResponse]
   }
-  @scala.inline
-  implicit class SchemaPublishResponseOps[Self <: SchemaPublishResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

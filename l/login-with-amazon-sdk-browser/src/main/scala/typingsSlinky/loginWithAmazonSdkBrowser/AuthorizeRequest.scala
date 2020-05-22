@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait AuthorizeRequest extends js.Object
 
-object AuthorizeRequest {
-  @scala.inline
-  implicit def apply(value: AccessTokenRequest): AuthorizeRequest = value.asInstanceOf[AuthorizeRequest]
-  @scala.inline
-  implicit def apply(value: CodeRequest): AuthorizeRequest = value.asInstanceOf[AuthorizeRequest]
-}
-

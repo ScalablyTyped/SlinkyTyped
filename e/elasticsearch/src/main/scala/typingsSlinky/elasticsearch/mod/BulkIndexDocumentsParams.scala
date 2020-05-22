@@ -4,166 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BulkIndexDocumentsParams extends GenericParams {
-  var _source: js.UndefOr[NameList] = js.native
-  var _sourceExclude: js.UndefOr[NameList] = js.native
-  var _sourceInclude: js.UndefOr[NameList] = js.native
-  var fields: js.UndefOr[NameList] = js.native
-  var index: js.UndefOr[String] = js.native
-  var pipeline: js.UndefOr[String] = js.native
-  var refresh: js.UndefOr[Refresh] = js.native
-  var routing: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[TimeSpan] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var waitForActiveShards: js.UndefOr[String] = js.native
+  var _source: js.UndefOr[NameList] = js.undefined
+  var _sourceExclude: js.UndefOr[NameList] = js.undefined
+  var _sourceInclude: js.UndefOr[NameList] = js.undefined
+  var fields: js.UndefOr[NameList] = js.undefined
+  var index: js.UndefOr[String] = js.undefined
+  var pipeline: js.UndefOr[String] = js.undefined
+  var refresh: js.UndefOr[Refresh] = js.undefined
+  var routing: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[TimeSpan] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var waitForActiveShards: js.UndefOr[String] = js.undefined
 }
 
 object BulkIndexDocumentsParams {
   @scala.inline
-  def apply(): BulkIndexDocumentsParams = {
+  def apply(
+    _source: NameList = null,
+    _sourceExclude: NameList = null,
+    _sourceInclude: NameList = null,
+    body: js.Any = null,
+    fields: NameList = null,
+    filterPath: String | js.Array[String] = null,
+    ignore: Double | js.Array[Double] = null,
+    index: String = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    pipeline: String = null,
+    refresh: Refresh = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    routing: String = null,
+    timeout: TimeSpan = null,
+    `type`: String = null,
+    waitForActiveShards: String = null
+  ): BulkIndexDocumentsParams = {
     val __obj = js.Dynamic.literal()
+    if (_source != null) __obj.updateDynamic("_source")(_source.asInstanceOf[js.Any])
+    if (_sourceExclude != null) __obj.updateDynamic("_sourceExclude")(_sourceExclude.asInstanceOf[js.Any])
+    if (_sourceInclude != null) __obj.updateDynamic("_sourceInclude")(_sourceInclude.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (pipeline != null) __obj.updateDynamic("pipeline")(pipeline.asInstanceOf[js.Any])
+    if (refresh != null) __obj.updateDynamic("refresh")(refresh.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (waitForActiveShards != null) __obj.updateDynamic("waitForActiveShards")(waitForActiveShards.asInstanceOf[js.Any])
     __obj.asInstanceOf[BulkIndexDocumentsParams]
   }
-  @scala.inline
-  implicit class BulkIndexDocumentsParamsOps[Self <: BulkIndexDocumentsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_source(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceExclude(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceExclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceExclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceInclude(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceInclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceInclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipeline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipeline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: Refresh): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouting(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: TimeSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForActiveShards(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForActiveShards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForActiveShards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForActiveShards")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

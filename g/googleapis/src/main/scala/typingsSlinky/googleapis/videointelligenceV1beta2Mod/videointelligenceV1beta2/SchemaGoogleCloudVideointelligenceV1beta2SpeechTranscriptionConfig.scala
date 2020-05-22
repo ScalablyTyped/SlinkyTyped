@@ -77,125 +77,28 @@ trait SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig extends
 
 object SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig = {
+  def apply(
+    audioTracks: js.Array[Double] = null,
+    diarizationSpeakerCount: js.UndefOr[Double] = js.undefined,
+    enableAutomaticPunctuation: js.UndefOr[Boolean] = js.undefined,
+    enableSpeakerDiarization: js.UndefOr[Boolean] = js.undefined,
+    enableWordConfidence: js.UndefOr[Boolean] = js.undefined,
+    filterProfanity: js.UndefOr[Boolean] = js.undefined,
+    languageCode: String = null,
+    maxAlternatives: js.UndefOr[Double] = js.undefined,
+    speechContexts: js.Array[SchemaGoogleCloudVideointelligenceV1beta2SpeechContext] = null
+  ): SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig = {
     val __obj = js.Dynamic.literal()
+    if (audioTracks != null) __obj.updateDynamic("audioTracks")(audioTracks.asInstanceOf[js.Any])
+    if (!js.isUndefined(diarizationSpeakerCount)) __obj.updateDynamic("diarizationSpeakerCount")(diarizationSpeakerCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAutomaticPunctuation)) __obj.updateDynamic("enableAutomaticPunctuation")(enableAutomaticPunctuation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSpeakerDiarization)) __obj.updateDynamic("enableSpeakerDiarization")(enableSpeakerDiarization.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableWordConfidence)) __obj.updateDynamic("enableWordConfidence")(enableWordConfidence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterProfanity)) __obj.updateDynamic("filterProfanity")(filterProfanity.get.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAlternatives)) __obj.updateDynamic("maxAlternatives")(maxAlternatives.get.asInstanceOf[js.Any])
+    if (speechContexts != null) __obj.updateDynamic("speechContexts")(speechContexts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfigOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioTracks(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioTracks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioTracks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioTracks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiarizationSpeakerCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diarizationSpeakerCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiarizationSpeakerCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diarizationSpeakerCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAutomaticPunctuation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutomaticPunctuation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAutomaticPunctuation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutomaticPunctuation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSpeakerDiarization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSpeakerDiarization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSpeakerDiarization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSpeakerDiarization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableWordConfidence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWordConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableWordConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWordConfidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterProfanity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterProfanity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterProfanity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterProfanity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAlternatives(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAlternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAlternatives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAlternatives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeechContexts(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2SpeechContext]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speechContexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeechContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speechContexts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

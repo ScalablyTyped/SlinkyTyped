@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JalaaliDateObject extends js.Object {
   /** Jalaali day */
-  var jd: Double = js.native
+  var jd: Double
   /** Jalaali month */
-  var jm: Double = js.native
+  var jm: Double
   /** Jalaali year */
-  var jy: Double = js.native
+  var jy: Double
 }
 
 object JalaaliDateObject {
@@ -20,31 +19,5 @@ object JalaaliDateObject {
     val __obj = js.Dynamic.literal(jd = jd.asInstanceOf[js.Any], jm = jm.asInstanceOf[js.Any], jy = jy.asInstanceOf[js.Any])
     __obj.asInstanceOf[JalaaliDateObject]
   }
-  @scala.inline
-  implicit class JalaaliDateObjectOps[Self <: JalaaliDateObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJm(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

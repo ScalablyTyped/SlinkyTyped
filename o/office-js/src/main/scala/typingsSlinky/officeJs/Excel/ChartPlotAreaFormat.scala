@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait ChartPlotAreaFormat extends ClientObject {
   /**
     *
-    * Represents the border attributes of a chart plotArea.
+    * Specifies the border attributes of a chart plotArea.
     *
     * [Api set: ExcelApi 1.8]
     */
@@ -30,7 +30,7 @@ trait ChartPlotAreaFormat extends ClientObject {
   var context_ChartPlotAreaFormat: RequestContext = js.native
   /**
     *
-    * Represents the fill format of an object, which includes background formatting information.
+    * Specifies the fill format of an object, which includes background formatting information.
     *
     * [Api set: ExcelApi 1.8]
     */

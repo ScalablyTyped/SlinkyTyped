@@ -13,5 +13,12 @@ package object migrationhubconfigMod {
   type HomeRegionControls = js.Array[typingsSlinky.awsSdk.migrationhubconfigMod.HomeRegionControl]
   type RequestedTime = js.Date
   type TargetId = java.lang.String
+  type TargetType = typingsSlinky.awsSdk.awsSdkStrings.ACCOUNT | java.lang.String
   type Token = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2019-06-30`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.migrationhubconfigMod._apiVersion | java.lang.String
 }

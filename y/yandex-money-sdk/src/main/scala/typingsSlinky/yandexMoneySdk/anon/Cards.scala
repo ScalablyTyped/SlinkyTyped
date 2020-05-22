@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cards extends js.Object {
-  var cards: js.UndefOr[Cscrequired] = js.native
-  var wallet: js.UndefOr[Allowed] = js.native
+  var cards: js.UndefOr[Cscrequired] = js.undefined
+  var wallet: js.UndefOr[Allowed] = js.undefined
 }
 
 object Cards {
   @scala.inline
-  def apply(): Cards = {
+  def apply(cards: Cscrequired = null, wallet: Allowed = null): Cards = {
     val __obj = js.Dynamic.literal()
+    if (cards != null) __obj.updateDynamic("cards")(cards.asInstanceOf[js.Any])
+    if (wallet != null) __obj.updateDynamic("wallet")(wallet.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cards]
   }
-  @scala.inline
-  implicit class CardsOps[Self <: Cards] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCards(value: Cscrequired): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWallet(value: Allowed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wallet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWallet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wallet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

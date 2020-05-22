@@ -4,205 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeSliderOptions extends js.Object {
-  var change: js.UndefOr[js.Function1[/* e */ RangeSliderChangeEvent, Unit]] = js.native
-  var largeStep: js.UndefOr[Double] = js.native
-  var leftDragHandleTitle: js.UndefOr[String] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var orientation: js.UndefOr[String] = js.native
-  var rightDragHandleTitle: js.UndefOr[String] = js.native
-  var selectionEnd: js.UndefOr[Double] = js.native
-  var selectionStart: js.UndefOr[Double] = js.native
-  var slide: js.UndefOr[js.Function1[/* e */ RangeSliderSlideEvent, Unit]] = js.native
-  var smallStep: js.UndefOr[Double] = js.native
-  var tickPlacement: js.UndefOr[String] = js.native
-  var tooltip: js.UndefOr[RangeSliderTooltip] = js.native
+  var change: js.UndefOr[js.Function1[/* e */ RangeSliderChangeEvent, Unit]] = js.undefined
+  var largeStep: js.UndefOr[Double] = js.undefined
+  var leftDragHandleTitle: js.UndefOr[String] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var orientation: js.UndefOr[String] = js.undefined
+  var rightDragHandleTitle: js.UndefOr[String] = js.undefined
+  var selectionEnd: js.UndefOr[Double] = js.undefined
+  var selectionStart: js.UndefOr[Double] = js.undefined
+  var slide: js.UndefOr[js.Function1[/* e */ RangeSliderSlideEvent, Unit]] = js.undefined
+  var smallStep: js.UndefOr[Double] = js.undefined
+  var tickPlacement: js.UndefOr[String] = js.undefined
+  var tooltip: js.UndefOr[RangeSliderTooltip] = js.undefined
 }
 
 object RangeSliderOptions {
   @scala.inline
-  def apply(): RangeSliderOptions = {
+  def apply(
+    change: /* e */ RangeSliderChangeEvent => Unit = null,
+    largeStep: js.UndefOr[Double] = js.undefined,
+    leftDragHandleTitle: String = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    orientation: String = null,
+    rightDragHandleTitle: String = null,
+    selectionEnd: js.UndefOr[Double] = js.undefined,
+    selectionStart: js.UndefOr[Double] = js.undefined,
+    slide: /* e */ RangeSliderSlideEvent => Unit = null,
+    smallStep: js.UndefOr[Double] = js.undefined,
+    tickPlacement: String = null,
+    tooltip: RangeSliderTooltip = null
+  ): RangeSliderOptions = {
     val __obj = js.Dynamic.literal()
+    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction1(change))
+    if (!js.isUndefined(largeStep)) __obj.updateDynamic("largeStep")(largeStep.get.asInstanceOf[js.Any])
+    if (leftDragHandleTitle != null) __obj.updateDynamic("leftDragHandleTitle")(leftDragHandleTitle.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (rightDragHandleTitle != null) __obj.updateDynamic("rightDragHandleTitle")(rightDragHandleTitle.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectionEnd)) __obj.updateDynamic("selectionEnd")(selectionEnd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectionStart)) __obj.updateDynamic("selectionStart")(selectionStart.get.asInstanceOf[js.Any])
+    if (slide != null) __obj.updateDynamic("slide")(js.Any.fromFunction1(slide))
+    if (!js.isUndefined(smallStep)) __obj.updateDynamic("smallStep")(smallStep.get.asInstanceOf[js.Any])
+    if (tickPlacement != null) __obj.updateDynamic("tickPlacement")(tickPlacement.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeSliderOptions]
   }
-  @scala.inline
-  implicit class RangeSliderOptionsOps[Self <: RangeSliderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChange(value: /* e */ RangeSliderChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLargeStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLargeStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("largeStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftDragHandleTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftDragHandleTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftDragHandleTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftDragHandleTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightDragHandleTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightDragHandleTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightDragHandleTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightDragHandleTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlide(value: /* e */ RangeSliderSlideEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSlide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmallStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmallStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smallStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickPlacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: RangeSliderTooltip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

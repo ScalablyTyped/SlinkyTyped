@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxPolarChartCommonAxisSettingsStripStyleLabel extends js.Object {
-  /** Specifies font options for a strip label. */
-  var font: js.UndefOr[Font] = js.native
+  /** @name dxPolarChart.Options.commonAxisSettings.stripStyle.label.font */
+  var font: js.UndefOr[Font] = js.undefined
 }
 
 object dxPolarChartCommonAxisSettingsStripStyleLabel {
   @scala.inline
-  def apply(): dxPolarChartCommonAxisSettingsStripStyleLabel = {
+  def apply(font: Font = null): dxPolarChartCommonAxisSettingsStripStyleLabel = {
     val __obj = js.Dynamic.literal()
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartCommonAxisSettingsStripStyleLabel]
   }
-  @scala.inline
-  implicit class dxPolarChartCommonAxisSettingsStripStyleLabelOps[Self <: dxPolarChartCommonAxisSettingsStripStyleLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

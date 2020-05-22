@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttributeDescriptor extends js.Object {
-  var attributeName: String = js.native
-  var containerName: String = js.native
+  var attributeName: String
+  var containerName: String
 }
 
 object AttributeDescriptor {
@@ -16,25 +15,5 @@ object AttributeDescriptor {
     val __obj = js.Dynamic.literal(attributeName = attributeName.asInstanceOf[js.Any], containerName = containerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeDescriptor]
   }
-  @scala.inline
-  implicit class AttributeDescriptorOps[Self <: AttributeDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

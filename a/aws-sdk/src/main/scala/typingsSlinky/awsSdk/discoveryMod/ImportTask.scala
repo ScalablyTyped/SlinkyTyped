@@ -62,173 +62,36 @@ trait ImportTask extends js.Object {
 
 object ImportTask {
   @scala.inline
-  def apply(): ImportTask = {
+  def apply(
+    applicationImportFailure: js.UndefOr[Integer] = js.undefined,
+    applicationImportSuccess: js.UndefOr[Integer] = js.undefined,
+    clientRequestToken: ClientRequestToken = null,
+    errorsAndFailedEntriesZip: S3PresignedUrl = null,
+    importCompletionTime: js.Date = null,
+    importDeletedTime: js.Date = null,
+    importRequestTime: js.Date = null,
+    importTaskId: ImportTaskIdentifier = null,
+    importUrl: ImportURL = null,
+    name: ImportTaskName = null,
+    serverImportFailure: js.UndefOr[Integer] = js.undefined,
+    serverImportSuccess: js.UndefOr[Integer] = js.undefined,
+    status: ImportStatus = null
+  ): ImportTask = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(applicationImportFailure)) __obj.updateDynamic("applicationImportFailure")(applicationImportFailure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(applicationImportSuccess)) __obj.updateDynamic("applicationImportSuccess")(applicationImportSuccess.get.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
+    if (errorsAndFailedEntriesZip != null) __obj.updateDynamic("errorsAndFailedEntriesZip")(errorsAndFailedEntriesZip.asInstanceOf[js.Any])
+    if (importCompletionTime != null) __obj.updateDynamic("importCompletionTime")(importCompletionTime.asInstanceOf[js.Any])
+    if (importDeletedTime != null) __obj.updateDynamic("importDeletedTime")(importDeletedTime.asInstanceOf[js.Any])
+    if (importRequestTime != null) __obj.updateDynamic("importRequestTime")(importRequestTime.asInstanceOf[js.Any])
+    if (importTaskId != null) __obj.updateDynamic("importTaskId")(importTaskId.asInstanceOf[js.Any])
+    if (importUrl != null) __obj.updateDynamic("importUrl")(importUrl.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverImportFailure)) __obj.updateDynamic("serverImportFailure")(serverImportFailure.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverImportSuccess)) __obj.updateDynamic("serverImportSuccess")(serverImportSuccess.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportTask]
   }
-  @scala.inline
-  implicit class ImportTaskOps[Self <: ImportTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationImportFailure(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationImportFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationImportFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationImportFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationImportSuccess(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationImportSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationImportSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationImportSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorsAndFailedEntriesZip(value: S3PresignedUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorsAndFailedEntriesZip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorsAndFailedEntriesZip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorsAndFailedEntriesZip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportCompletionTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importCompletionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportCompletionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importCompletionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportDeletedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importDeletedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportDeletedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importDeletedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportRequestTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importRequestTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportRequestTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importRequestTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportTaskId(value: ImportTaskIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importTaskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportTaskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importTaskId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportUrl(value: ImportURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ImportTaskName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerImportFailure(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverImportFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerImportFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverImportFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerImportSuccess(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverImportSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerImportSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverImportSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ImportStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

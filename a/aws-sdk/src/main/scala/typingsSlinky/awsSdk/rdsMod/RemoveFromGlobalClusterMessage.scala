@@ -18,41 +18,11 @@ trait RemoveFromGlobalClusterMessage extends js.Object {
 
 object RemoveFromGlobalClusterMessage {
   @scala.inline
-  def apply(): RemoveFromGlobalClusterMessage = {
+  def apply(DbClusterIdentifier: String = null, GlobalClusterIdentifier: String = null): RemoveFromGlobalClusterMessage = {
     val __obj = js.Dynamic.literal()
+    if (DbClusterIdentifier != null) __obj.updateDynamic("DbClusterIdentifier")(DbClusterIdentifier.asInstanceOf[js.Any])
+    if (GlobalClusterIdentifier != null) __obj.updateDynamic("GlobalClusterIdentifier")(GlobalClusterIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoveFromGlobalClusterMessage]
   }
-  @scala.inline
-  implicit class RemoveFromGlobalClusterMessageOps[Self <: RemoveFromGlobalClusterMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDbClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DbClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDbClusterIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DbClusterIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalClusterIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalClusterIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

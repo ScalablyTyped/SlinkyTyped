@@ -10,8 +10,7 @@ import scala.scalajs.js.annotation._
 // number.js
 @js.native
 trait Number
-  extends NumberAlias
-     with Instantiable0[Number]
+  extends Instantiable0[Number]
      with Instantiable1[(/* value */ Double) | (/* value */ Number) | (/* value */ String), Number]
      with Instantiable2[/* value */ Double, /* unit */ js.Any, Number] {
   def at(pos: Double): Number = js.native

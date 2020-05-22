@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * This context may be used to initialize authentication tokens to send to an acceptor and to authenticate any token sent back in response.
   * @since OOo 1.1.2
   */
-@js.native
 trait XSSOInitiatorContext extends XSSOContext {
   /**
     * initializes an SSO Token to send to the acceptor side and authenticates an SSO Token returned by the acceptor if the context supports mutual
@@ -24,7 +23,7 @@ trait XSSOInitiatorContext extends XSSOContext {
     * @param Token the SSO token received from the acceptor side in response to an authentication request. This token is ignored on the first call to init and
     * @returns the sequence of bytes to be sent to the acceptor side as part of an authentication request. This sequence will be non zero length for the first c
     */
-  def init(Token: SeqEquiv[Double]): SafeArray[Double] = js.native
+  def init(Token: SeqEquiv[Double]): SafeArray[Double]
 }
 
 object XSSOInitiatorContext {
@@ -46,19 +45,5 @@ object XSSOInitiatorContext {
     val __obj = js.Dynamic.literal(Mechanism = Mechanism.asInstanceOf[js.Any], Mutual = Mutual.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], Target = Target.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMechanism = js.Any.fromFunction0(getMechanism), getMutual = js.Any.fromFunction0(getMutual), getSource = js.Any.fromFunction0(getSource), getTarget = js.Any.fromFunction0(getTarget), init = js.Any.fromFunction1(init), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSSOInitiatorContext]
   }
-  @scala.inline
-  implicit class XSSOInitiatorContextOps[Self <: XSSOInitiatorContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInit(value: SeqEquiv[Double] => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

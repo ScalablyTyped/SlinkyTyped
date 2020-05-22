@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Column extends js.Object {
-  var column: js.UndefOr[js.Any] = js.native
-  var data: js.UndefOr[js.Any] = js.native
-  var formItem: js.UndefOr[js.Any] = js.native
-  var rule: js.UndefOr[js.Any] = js.native
-  var validator: js.UndefOr[js.Any] = js.native
-  var value: js.UndefOr[String | Double] = js.native
+  var column: js.UndefOr[js.Any] = js.undefined
+  var data: js.UndefOr[js.Any] = js.undefined
+  var formItem: js.UndefOr[js.Any] = js.undefined
+  var rule: js.UndefOr[js.Any] = js.undefined
+  var validator: js.UndefOr[js.Any] = js.undefined
+  var value: js.UndefOr[String | Double] = js.undefined
 }
 
 object Column {
   @scala.inline
-  def apply(): Column = {
+  def apply(
+    column: js.Any = null,
+    data: js.Any = null,
+    formItem: js.Any = null,
+    rule: js.Any = null,
+    validator: js.Any = null,
+    value: String | Double = null
+  ): Column = {
     val __obj = js.Dynamic.literal()
+    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (formItem != null) __obj.updateDynamic("formItem")(formItem.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
+    if (validator != null) __obj.updateDynamic("validator")(validator.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Column]
   }
-  @scala.inline
-  implicit class ColumnOps[Self <: Column] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidator(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

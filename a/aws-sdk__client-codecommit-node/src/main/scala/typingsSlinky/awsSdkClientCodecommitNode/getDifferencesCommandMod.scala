@@ -26,9 +26,16 @@ object getDifferencesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetDifferencesInput) = this()
+    /* CompleteClass */
+    override val input: GetDifferencesInput = js.native
     val middlewareStack: MiddlewareStack[GetDifferencesInput, GetDifferencesOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[GetDifferencesInput, GetDifferencesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetDifferencesInput, GetDifferencesOutput] = js.native
   }

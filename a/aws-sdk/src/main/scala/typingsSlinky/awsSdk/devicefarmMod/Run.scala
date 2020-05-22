@@ -134,389 +134,72 @@ trait Run extends js.Object {
 
 object Run {
   @scala.inline
-  def apply(): Run = {
+  def apply(
+    appUpload: AmazonResourceName = null,
+    arn: AmazonResourceName = null,
+    billingMethod: BillingMethod = null,
+    completedJobs: js.UndefOr[Integer] = js.undefined,
+    counters: Counters = null,
+    created: js.Date = null,
+    customerArtifactPaths: CustomerArtifactPaths = null,
+    deviceMinutes: DeviceMinutes = null,
+    devicePoolArn: AmazonResourceName = null,
+    deviceSelectionResult: DeviceSelectionResult = null,
+    eventCount: js.UndefOr[Integer] = js.undefined,
+    jobTimeoutMinutes: js.UndefOr[JobTimeoutMinutes] = js.undefined,
+    locale: String = null,
+    location: Location = null,
+    message: Message = null,
+    name: Name = null,
+    networkProfile: NetworkProfile = null,
+    parsingResultUrl: String = null,
+    platform: DevicePlatform = null,
+    radios: Radios = null,
+    result: ExecutionResult = null,
+    resultCode: ExecutionResultCode = null,
+    seed: js.UndefOr[Integer] = js.undefined,
+    skipAppResign: js.UndefOr[SkipAppResign] = js.undefined,
+    started: js.Date = null,
+    status: ExecutionStatus = null,
+    stopped: js.Date = null,
+    testSpecArn: AmazonResourceName = null,
+    totalJobs: js.UndefOr[Integer] = js.undefined,
+    `type`: TestType = null,
+    webUrl: String = null
+  ): Run = {
     val __obj = js.Dynamic.literal()
+    if (appUpload != null) __obj.updateDynamic("appUpload")(appUpload.asInstanceOf[js.Any])
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (billingMethod != null) __obj.updateDynamic("billingMethod")(billingMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(completedJobs)) __obj.updateDynamic("completedJobs")(completedJobs.get.asInstanceOf[js.Any])
+    if (counters != null) __obj.updateDynamic("counters")(counters.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (customerArtifactPaths != null) __obj.updateDynamic("customerArtifactPaths")(customerArtifactPaths.asInstanceOf[js.Any])
+    if (deviceMinutes != null) __obj.updateDynamic("deviceMinutes")(deviceMinutes.asInstanceOf[js.Any])
+    if (devicePoolArn != null) __obj.updateDynamic("devicePoolArn")(devicePoolArn.asInstanceOf[js.Any])
+    if (deviceSelectionResult != null) __obj.updateDynamic("deviceSelectionResult")(deviceSelectionResult.asInstanceOf[js.Any])
+    if (!js.isUndefined(eventCount)) __obj.updateDynamic("eventCount")(eventCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(jobTimeoutMinutes)) __obj.updateDynamic("jobTimeoutMinutes")(jobTimeoutMinutes.get.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (networkProfile != null) __obj.updateDynamic("networkProfile")(networkProfile.asInstanceOf[js.Any])
+    if (parsingResultUrl != null) __obj.updateDynamic("parsingResultUrl")(parsingResultUrl.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (radios != null) __obj.updateDynamic("radios")(radios.asInstanceOf[js.Any])
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
+    if (resultCode != null) __obj.updateDynamic("resultCode")(resultCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(seed)) __obj.updateDynamic("seed")(seed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipAppResign)) __obj.updateDynamic("skipAppResign")(skipAppResign.get.asInstanceOf[js.Any])
+    if (started != null) __obj.updateDynamic("started")(started.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (stopped != null) __obj.updateDynamic("stopped")(stopped.asInstanceOf[js.Any])
+    if (testSpecArn != null) __obj.updateDynamic("testSpecArn")(testSpecArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalJobs)) __obj.updateDynamic("totalJobs")(totalJobs.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (webUrl != null) __obj.updateDynamic("webUrl")(webUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Run]
   }
-  @scala.inline
-  implicit class RunOps[Self <: Run] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppUpload(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appUpload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBillingMethod(value: BillingMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletedJobs(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedJobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completedJobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCounters(value: Counters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerArtifactPaths(value: CustomerArtifactPaths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerArtifactPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerArtifactPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerArtifactPaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceMinutes(value: DeviceMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevicePoolArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePoolArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevicePoolArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePoolArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceSelectionResult(value: DeviceSelectionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSelectionResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceSelectionResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSelectionResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobTimeoutMinutes(value: JobTimeoutMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobTimeoutMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTimeoutMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkProfile(value: NetworkProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParsingResultUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsingResultUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParsingResultUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsingResultUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: DevicePlatform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadios(value: Radios): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radios")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadios: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radios")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult(value: ExecutionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultCode(value: ExecutionResultCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeed(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipAppResign(value: SkipAppResign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAppResign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipAppResign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAppResign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStarted(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ExecutionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopped(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopped")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestSpecArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSpecArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestSpecArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSpecArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalJobs(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalJobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalJobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: TestType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

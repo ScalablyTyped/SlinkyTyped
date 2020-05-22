@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * DoReloadExParams...
   */
-@js.native
 trait IDoReloadExParams extends js.Object {
   /**
     * Set to true if debug breakpoints are to be honored.
@@ -15,7 +14,7 @@ trait IDoReloadExParams extends js.Object {
     * >> This parameter is optional.
     * >> The default value is false.
     */
-  var qDebug: js.UndefOr[Boolean] = js.native
+  var qDebug: js.UndefOr[Boolean] = js.undefined
   /**
     * Error handling mode
     * One of:
@@ -24,64 +23,27 @@ trait IDoReloadExParams extends js.Object {
     *    2: for ignore; the reload of the script continues even if an error is detected in the script.
     * >> This parameter is optional.
     */
-  var qMode: js.UndefOr[Double] = js.native
+  var qMode: js.UndefOr[Double] = js.undefined
   /**
     * Set to true for partial reload
     * >> This parameter is optional.
     * >> The default value is false.
     */
-  var qPartial: js.UndefOr[Boolean] = js.native
+  var qPartial: js.UndefOr[Boolean] = js.undefined
 }
 
 object IDoReloadExParams {
   @scala.inline
-  def apply(): IDoReloadExParams = {
+  def apply(
+    qDebug: js.UndefOr[Boolean] = js.undefined,
+    qMode: js.UndefOr[Double] = js.undefined,
+    qPartial: js.UndefOr[Boolean] = js.undefined
+  ): IDoReloadExParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(qDebug)) __obj.updateDynamic("qDebug")(qDebug.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(qMode)) __obj.updateDynamic("qMode")(qMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(qPartial)) __obj.updateDynamic("qPartial")(qPartial.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDoReloadExParams]
   }
-  @scala.inline
-  implicit class IDoReloadExParamsOps[Self <: IDoReloadExParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDebug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDebug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQPartial(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qPartial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQPartial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qPartial")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListTheme extends js.Object {
   /**
     * Used for the root element of the list.
     */
-  var list: js.UndefOr[String] = js.native
+  var list: js.UndefOr[String] = js.undefined
 }
 
 object ListTheme {
   @scala.inline
-  def apply(): ListTheme = {
+  def apply(list: String = null): ListTheme = {
     val __obj = js.Dynamic.literal()
+    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTheme]
   }
-  @scala.inline
-  implicit class ListThemeOps[Self <: ListTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withList(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

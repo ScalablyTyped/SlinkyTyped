@@ -7,17 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the result of a single call to a mock function.
   */
-@js.native
 trait MockFunctionResult extends js.Object {
   /**
     * Indicates how the call completed.
     */
-  var `type`: MockFunctionResultType = js.native
+  var `type`: MockFunctionResultType
   /**
     * The value that was either thrown or returned by the function.
     * Undefined when type === 'incomplete'.
     */
-  var value: js.Any = js.native
+  var value: js.Any
 }
 
 object MockFunctionResult {
@@ -27,25 +26,5 @@ object MockFunctionResult {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MockFunctionResult]
   }
-  @scala.inline
-  implicit class MockFunctionResultOps[Self <: MockFunctionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: MockFunctionResultType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

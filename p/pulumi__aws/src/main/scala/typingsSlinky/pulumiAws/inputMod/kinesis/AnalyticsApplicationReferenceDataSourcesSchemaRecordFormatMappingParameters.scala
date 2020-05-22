@@ -7,9 +7,17 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters extends js.Object {
+  /**
+    * Mapping information when the record format uses delimiters.
+    * See CSV Mapping Parameters below for more details.
+    */
   var csv: js.UndefOr[
     Input[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv]
   ] = js.native
+  /**
+    * Mapping information when JSON is the record format on the streaming source.
+    * See JSON Mapping Parameters below for more details.
+    */
   var json: js.UndefOr[
     Input[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson]
   ] = js.native
@@ -17,41 +25,14 @@ trait AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameter
 
 object AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters {
   @scala.inline
-  def apply(): AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters = {
+  def apply(
+    csv: Input[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv] = null,
+    json: Input[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson] = null
+  ): AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters = {
     val __obj = js.Dynamic.literal()
+    if (csv != null) __obj.updateDynamic("csv")(csv.asInstanceOf[js.Any])
+    if (json != null) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters]
   }
-  @scala.inline
-  implicit class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersOps[Self <: AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCsv(value: Input[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJson(value: Input[AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

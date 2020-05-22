@@ -1,5 +1,9 @@
 package typingsSlinky.mendixmodelsdk.iworkingcopyeventMod
 
+import typingsSlinky.mendixmodelsdk.anon.EventId
+import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.buildResult
+import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.workingCopyData
+import typingsSlinky.mendixmodelsdk.transportInterfacesMod.IWorkingCopy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +16,16 @@ trait IWorkingCopyEvent extends js.Object
 
 object IWorkingCopyEvent {
   @scala.inline
-  implicit def apply(value: IBuildResultEvent): IWorkingCopyEvent = value.asInstanceOf[IWorkingCopyEvent]
+  def IWorkingCopyDataEvent(data: IWorkingCopy, `type`: workingCopyData): IWorkingCopyEvent = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IWorkingCopyEvent]
+  }
   @scala.inline
-  implicit def apply(value: IWorkingCopyDataEvent): IWorkingCopyEvent = value.asInstanceOf[IWorkingCopyEvent]
+  def IBuildResultEvent(data: EventId, `type`: buildResult): IWorkingCopyEvent = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IWorkingCopyEvent]
+  }
 }
 

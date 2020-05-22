@@ -7,14 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CancelTextContainer extends js.Object {
-  var cancelText: RegisteredStyle[TextStyle] = js.native
-  var cancelTextContainer: RegisteredStyle[ViewStyle] = js.native
-  var input: RegisteredStyle[TextStyle] = js.native
-  var inputWrapper: RegisteredStyle[ViewStyle] = js.native
-  var search: RegisteredStyle[TextStyle] = js.native
-  var wrapper: RegisteredStyle[ViewStyle] = js.native
+  var cancelText: RegisteredStyle[TextStyle]
+  var cancelTextContainer: RegisteredStyle[ViewStyle]
+  var input: RegisteredStyle[TextStyle]
+  var inputWrapper: RegisteredStyle[ViewStyle]
+  var search: RegisteredStyle[TextStyle]
+  var wrapper: RegisteredStyle[ViewStyle]
 }
 
 object CancelTextContainer {
@@ -30,49 +29,5 @@ object CancelTextContainer {
     val __obj = js.Dynamic.literal(cancelText = cancelText.asInstanceOf[js.Any], cancelTextContainer = cancelTextContainer.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], inputWrapper = inputWrapper.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], wrapper = wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelTextContainer]
   }
-  @scala.inline
-  implicit class CancelTextContainerOps[Self <: CancelTextContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancelText(value: RegisteredStyle[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCancelTextContainer(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelTextContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: RegisteredStyle[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputWrapper(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputWrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearch(value: RegisteredStyle[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWrapper(value: RegisteredStyle[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -28,6 +28,11 @@ class WebXROculusTouchMotionController protected ()
     legacyMapping: Boolean,
     _forceLegacyControllers: Boolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

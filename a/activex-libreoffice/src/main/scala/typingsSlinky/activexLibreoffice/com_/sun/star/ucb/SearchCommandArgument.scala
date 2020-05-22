@@ -10,12 +10,11 @@ import scala.scalajs.js.annotation._
   * The argument for the command "search".
   * @see XCommandProcessor
   */
-@js.native
 trait SearchCommandArgument extends js.Object {
   /** the search criteria. */
-  var Info: SearchInfo = js.native
+  var Info: SearchInfo
   /** the properties for which values shall be provided through the {@link ContentResultSet} returned by the search command. */
-  var Properties: SafeArray[Property] = js.native
+  var Properties: SafeArray[Property]
 }
 
 object SearchCommandArgument {
@@ -24,25 +23,5 @@ object SearchCommandArgument {
     val __obj = js.Dynamic.literal(Info = Info.asInstanceOf[js.Any], Properties = Properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchCommandArgument]
   }
-  @scala.inline
-  implicit class SearchCommandArgumentOps[Self <: SearchCommandArgument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfo(value: SearchInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: SafeArray[Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

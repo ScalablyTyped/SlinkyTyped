@@ -8,69 +8,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ESLintParseResult extends js.Object {
-  var ast: Program = js.native
-  var parserServices: js.UndefOr[ParserServices] = js.native
-  var scopeManager: js.UndefOr[ScopeManager] = js.native
-  var visitorKeys: js.UndefOr[VisitorKeys] = js.native
+  var ast: Program
+  var parserServices: js.UndefOr[ParserServices] = js.undefined
+  var scopeManager: js.UndefOr[ScopeManager] = js.undefined
+  var visitorKeys: js.UndefOr[VisitorKeys] = js.undefined
 }
 
 object ESLintParseResult {
   @scala.inline
-  def apply(ast: Program): ESLintParseResult = {
+  def apply(
+    ast: Program,
+    parserServices: ParserServices = null,
+    scopeManager: ScopeManager = null,
+    visitorKeys: VisitorKeys = null
+  ): ESLintParseResult = {
     val __obj = js.Dynamic.literal(ast = ast.asInstanceOf[js.Any])
+    if (parserServices != null) __obj.updateDynamic("parserServices")(parserServices.asInstanceOf[js.Any])
+    if (scopeManager != null) __obj.updateDynamic("scopeManager")(scopeManager.asInstanceOf[js.Any])
+    if (visitorKeys != null) __obj.updateDynamic("visitorKeys")(visitorKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[ESLintParseResult]
   }
-  @scala.inline
-  implicit class ESLintParseResultOps[Self <: ESLintParseResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAst(value: Program): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParserServices(value: ParserServices): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parserServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParserServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parserServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScopeManager(value: ScopeManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopeManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScopeManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopeManager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisitorKeys(value: VisitorKeys): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visitorKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisitorKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visitorKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

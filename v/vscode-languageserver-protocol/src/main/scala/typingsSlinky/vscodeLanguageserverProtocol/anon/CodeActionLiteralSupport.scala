@@ -4,56 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CodeActionLiteralSupport extends js.Object {
   /**
     * The client support code action literals as a valid
     * response of the `textDocument/codeAction` request.
     */
-  var codeActionLiteralSupport: js.UndefOr[CodeActionKind] = js.native
+  var codeActionLiteralSupport: js.UndefOr[CodeActionKind] = js.undefined
   /**
     * Whether code action supports dynamic registration.
     */
-  var dynamicRegistration: js.UndefOr[Boolean] = js.native
+  var dynamicRegistration: js.UndefOr[Boolean] = js.undefined
 }
 
 object CodeActionLiteralSupport {
   @scala.inline
-  def apply(): CodeActionLiteralSupport = {
+  def apply(
+    codeActionLiteralSupport: CodeActionKind = null,
+    dynamicRegistration: js.UndefOr[Boolean] = js.undefined
+  ): CodeActionLiteralSupport = {
     val __obj = js.Dynamic.literal()
+    if (codeActionLiteralSupport != null) __obj.updateDynamic("codeActionLiteralSupport")(codeActionLiteralSupport.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamicRegistration)) __obj.updateDynamic("dynamicRegistration")(dynamicRegistration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeActionLiteralSupport]
   }
-  @scala.inline
-  implicit class CodeActionLiteralSupportOps[Self <: CodeActionLiteralSupport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeActionLiteralSupport(value: CodeActionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codeActionLiteralSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeActionLiteralSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codeActionLiteralSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicRegistration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRegistration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicRegistration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRegistration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

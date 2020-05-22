@@ -14,29 +14,10 @@ trait BootstrapActionDetail extends js.Object {
 
 object BootstrapActionDetail {
   @scala.inline
-  def apply(): BootstrapActionDetail = {
+  def apply(BootstrapActionConfig: BootstrapActionConfig = null): BootstrapActionDetail = {
     val __obj = js.Dynamic.literal()
+    if (BootstrapActionConfig != null) __obj.updateDynamic("BootstrapActionConfig")(BootstrapActionConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapActionDetail]
   }
-  @scala.inline
-  implicit class BootstrapActionDetailOps[Self <: BootstrapActionDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBootstrapActionConfig(value: BootstrapActionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapActionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootstrapActionConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapActionConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

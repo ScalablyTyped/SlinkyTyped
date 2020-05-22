@@ -4,82 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Accesstoken extends js.Object {
-  var access_token: String = js.native
-  var expires_in: js.UndefOr[Double] = js.native
-  var local_expiry: js.UndefOr[Double] = js.native
-  var scope: js.UndefOr[js.Array[String]] = js.native
-  var token_type: js.UndefOr[String] = js.native
+  var access_token: String
+  var expires_in: js.UndefOr[Double] = js.undefined
+  var local_expiry: js.UndefOr[Double] = js.undefined
+  var scope: js.UndefOr[js.Array[String]] = js.undefined
+  var token_type: js.UndefOr[String] = js.undefined
 }
 
 object Accesstoken {
   @scala.inline
-  def apply(access_token: String): Accesstoken = {
+  def apply(
+    access_token: String,
+    expires_in: js.UndefOr[Double] = js.undefined,
+    local_expiry: js.UndefOr[Double] = js.undefined,
+    scope: js.Array[String] = null,
+    token_type: String = null
+  ): Accesstoken = {
     val __obj = js.Dynamic.literal(access_token = access_token.asInstanceOf[js.Any])
+    if (!js.isUndefined(expires_in)) __obj.updateDynamic("expires_in")(expires_in.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(local_expiry)) __obj.updateDynamic("local_expiry")(local_expiry.get.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (token_type != null) __obj.updateDynamic("token_type")(token_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[Accesstoken]
   }
-  @scala.inline
-  implicit class AccesstokenOps[Self <: Accesstoken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccess_token(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access_token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpires_in(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires_in: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires_in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocal_expiry(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local_expiry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocal_expiry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("local_expiry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

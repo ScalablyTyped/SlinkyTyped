@@ -11,5 +11,12 @@ class ErrorEvent ()
   def this(title: String) = this()
   def this(title: String, message: String) = this()
   def this(title: String, message: String, data: js.Object) = this()
+  // properties
+  /* CompleteClass */
+  override var data: js.Object = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var title: String = js.native
 }
 

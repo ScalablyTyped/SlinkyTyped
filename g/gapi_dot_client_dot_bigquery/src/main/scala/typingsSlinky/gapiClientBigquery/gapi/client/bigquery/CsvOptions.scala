@@ -4,126 +4,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CsvOptions extends js.Object {
   /**
     * [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as
     * null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is
     * returned in the job result. The default value is false.
     */
-  var allowJaggedRows: js.UndefOr[Boolean] = js.native
+  var allowJaggedRows: js.UndefOr[Boolean] = js.undefined
   /** [Optional] Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file. The default value is false. */
-  var allowQuotedNewlines: js.UndefOr[Boolean] = js.native
+  var allowQuotedNewlines: js.UndefOr[Boolean] = js.undefined
   /**
     * [Optional] The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data
     * after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.
     */
-  var encoding: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
   /**
     * [Optional] The separator for fields in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded
     * string to split the data in its raw, binary state. BigQuery also supports the escape sequence "\t" to specify a tab separator. The default value is a
     * comma (',').
     */
-  var fieldDelimiter: js.UndefOr[String] = js.native
+  var fieldDelimiter: js.UndefOr[String] = js.undefined
   /**
     * [Optional] The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first
     * byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ('"'). If your data does not contain quoted
     * sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines
     * property to true.
     */
-  var quote: js.UndefOr[String] = js.native
+  var quote: js.UndefOr[String] = js.undefined
   /**
     * [Optional] The number of rows at the top of a CSV file that BigQuery will skip when reading the data. The default value is 0. This property is useful
     * if you have header rows in the file that should be skipped.
     */
-  var skipLeadingRows: js.UndefOr[String] = js.native
+  var skipLeadingRows: js.UndefOr[String] = js.undefined
 }
 
 object CsvOptions {
   @scala.inline
-  def apply(): CsvOptions = {
+  def apply(
+    allowJaggedRows: js.UndefOr[Boolean] = js.undefined,
+    allowQuotedNewlines: js.UndefOr[Boolean] = js.undefined,
+    encoding: String = null,
+    fieldDelimiter: String = null,
+    quote: String = null,
+    skipLeadingRows: String = null
+  ): CsvOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowJaggedRows)) __obj.updateDynamic("allowJaggedRows")(allowJaggedRows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowQuotedNewlines)) __obj.updateDynamic("allowQuotedNewlines")(allowQuotedNewlines.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (fieldDelimiter != null) __obj.updateDynamic("fieldDelimiter")(fieldDelimiter.asInstanceOf[js.Any])
+    if (quote != null) __obj.updateDynamic("quote")(quote.asInstanceOf[js.Any])
+    if (skipLeadingRows != null) __obj.updateDynamic("skipLeadingRows")(skipLeadingRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[CsvOptions]
   }
-  @scala.inline
-  implicit class CsvOptionsOps[Self <: CsvOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowJaggedRows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowJaggedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowJaggedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowJaggedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowQuotedNewlines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowQuotedNewlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowQuotedNewlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowQuotedNewlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipLeadingRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLeadingRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipLeadingRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLeadingRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

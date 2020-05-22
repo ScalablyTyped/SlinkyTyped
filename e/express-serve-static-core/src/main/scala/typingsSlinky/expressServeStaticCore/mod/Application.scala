@@ -12,6 +12,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.node.httpMod.ServerResponse
+import typingsSlinky.qs.mod.ParsedQs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -111,7 +112,7 @@ trait Application
   @JSName("use")
   var use_Original: (IRouterHandler[this.type] with (IRouterMatcher[this.type, _])) | ApplicationRequestHandler[this.type] = js.native
   def apply(
-    T0: /* req */ Request[ParamsDictionary, js.Any, js.Any, Query],
+    T0: /* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs],
     T1: /* res */ Response[js.Any],
     T2: /* next */ NextFunction
   ): js.Any = js.native
@@ -119,8 +120,8 @@ trait Application
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def apply(req: Request[ParamsDictionary, _, _, Query], res: Response[_]): js.Any = js.native
-  def apply(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
+  def apply(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_]): js.Any = js.native
+  def apply(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
   def apply(req: IncomingMessage, res: Response[_]): js.Any = js.native
   def apply(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   /**
@@ -484,7 +485,7 @@ trait Application
     handlers: ((RequestHandler[P, ResBody, ReqBody, ReqQuery]) | (RequestHandlerParams[P, ResBody, ReqBody, ReqQuery]))*
   ): this.type = js.native
   def use(
-    handlers: ((RequestHandler[ParamsDictionary, _, _, Query]) | (RequestHandlerParams[ParamsDictionary, _, _, Query]))*
+    handlers: ((RequestHandler[ParamsDictionary, _, _, ParsedQs]) | (RequestHandlerParams[ParamsDictionary, _, _, ParsedQs]))*
   ): this.type = js.native
   def use(path: PathParams, subApplication: Application): this.type = js.native
   // tslint:disable-next-line no-unnecessary-generics (This generic is meant to be passed explicitly.)

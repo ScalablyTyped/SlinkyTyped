@@ -5,75 +5,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<azure-sb.azure-sb.Azure.ServiceBus.ICreateNotificationHubOptions> */
-@js.native
 trait CreateNotificationHubOptions extends js.Object {
-  var apns: js.UndefOr[Dictionary[String]] = js.native
-  var gcm: js.UndefOr[Dictionary[String]] = js.native
-  var mpns: js.UndefOr[Dictionary[String]] = js.native
-  var wns: js.UndefOr[Dictionary[String]] = js.native
+  var apns: js.UndefOr[Dictionary[String]] = js.undefined
+  var gcm: js.UndefOr[Dictionary[String]] = js.undefined
+  var mpns: js.UndefOr[Dictionary[String]] = js.undefined
+  var wns: js.UndefOr[Dictionary[String]] = js.undefined
 }
 
 object CreateNotificationHubOptions {
   @scala.inline
-  def apply(): CreateNotificationHubOptions = {
+  def apply(
+    apns: Dictionary[String] = null,
+    gcm: Dictionary[String] = null,
+    mpns: Dictionary[String] = null,
+    wns: Dictionary[String] = null
+  ): CreateNotificationHubOptions = {
     val __obj = js.Dynamic.literal()
+    if (apns != null) __obj.updateDynamic("apns")(apns.asInstanceOf[js.Any])
+    if (gcm != null) __obj.updateDynamic("gcm")(gcm.asInstanceOf[js.Any])
+    if (mpns != null) __obj.updateDynamic("mpns")(mpns.asInstanceOf[js.Any])
+    if (wns != null) __obj.updateDynamic("wns")(wns.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNotificationHubOptions]
   }
-  @scala.inline
-  implicit class CreateNotificationHubOptionsOps[Self <: CreateNotificationHubOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApns(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcm(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMpns(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMpns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWns(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

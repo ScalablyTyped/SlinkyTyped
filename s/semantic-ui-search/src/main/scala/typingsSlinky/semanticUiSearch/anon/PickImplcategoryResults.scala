@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-search.SemanticUI.Search.FieldsSettings._Impl, 'categoryResults'> */
-@js.native
 trait PickImplcategoryResults extends js.Object {
-  var categoryResults: String = js.native
+  var categoryResults: String
 }
 
 object PickImplcategoryResults {
@@ -16,19 +15,5 @@ object PickImplcategoryResults {
     val __obj = js.Dynamic.literal(categoryResults = categoryResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplcategoryResults]
   }
-  @scala.inline
-  implicit class PickImplcategoryResultsOps[Self <: PickImplcategoryResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategoryResults(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

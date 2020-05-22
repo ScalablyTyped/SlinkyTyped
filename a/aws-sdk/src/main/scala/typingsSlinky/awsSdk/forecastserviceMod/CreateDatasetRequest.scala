@@ -34,65 +34,18 @@ trait CreateDatasetRequest extends js.Object {
 
 object CreateDatasetRequest {
   @scala.inline
-  def apply(DatasetName: Name, DatasetType: DatasetType, Domain: Domain, Schema: Schema): CreateDatasetRequest = {
+  def apply(
+    DatasetName: Name,
+    DatasetType: DatasetType,
+    Domain: Domain,
+    Schema: Schema,
+    DataFrequency: Frequency = null,
+    EncryptionConfig: EncryptionConfig = null
+  ): CreateDatasetRequest = {
     val __obj = js.Dynamic.literal(DatasetName = DatasetName.asInstanceOf[js.Any], DatasetType = DatasetType.asInstanceOf[js.Any], Domain = Domain.asInstanceOf[js.Any], Schema = Schema.asInstanceOf[js.Any])
+    if (DataFrequency != null) __obj.updateDynamic("DataFrequency")(DataFrequency.asInstanceOf[js.Any])
+    if (EncryptionConfig != null) __obj.updateDynamic("EncryptionConfig")(EncryptionConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDatasetRequest]
   }
-  @scala.inline
-  implicit class CreateDatasetRequestOps[Self <: CreateDatasetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasetName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatasetType(value: DatasetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatasetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomain(value: Domain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchema(value: Schema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataFrequency(value: Frequency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataFrequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataFrequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionConfig(value: EncryptionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

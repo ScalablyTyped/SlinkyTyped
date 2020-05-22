@@ -22,53 +22,16 @@ trait USD extends js.Object {
 
 object USD {
   @scala.inline
-  def apply(): USD = {
+  def apply(
+    Cents: js.UndefOr[Cents] = js.undefined,
+    Dollars: js.UndefOr[Dollars] = js.undefined,
+    TenthFractionsOfACent: js.UndefOr[TenthFractionsOfACent] = js.undefined
+  ): USD = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Cents)) __obj.updateDynamic("Cents")(Cents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Dollars)) __obj.updateDynamic("Dollars")(Dollars.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TenthFractionsOfACent)) __obj.updateDynamic("TenthFractionsOfACent")(TenthFractionsOfACent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[USD]
   }
-  @scala.inline
-  implicit class USDOps[Self <: USD] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCents(value: Cents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDollars(value: Dollars): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dollars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDollars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dollars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenthFractionsOfACent(value: TenthFractionsOfACent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TenthFractionsOfACent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenthFractionsOfACent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TenthFractionsOfACent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

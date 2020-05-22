@@ -42,113 +42,26 @@ trait AccountSettings extends js.Object {
 
 object AccountSettings {
   @scala.inline
-  def apply(): AccountSettings = {
+  def apply(
+    awsAccountNumber: AWSAccountNumber = null,
+    defaultJobTimeoutMinutes: js.UndefOr[JobTimeoutMinutes] = js.undefined,
+    maxJobTimeoutMinutes: js.UndefOr[JobTimeoutMinutes] = js.undefined,
+    maxSlots: MaxSlotMap = null,
+    skipAppResign: js.UndefOr[SkipAppResign] = js.undefined,
+    trialMinutes: TrialMinutes = null,
+    unmeteredDevices: PurchasedDevicesMap = null,
+    unmeteredRemoteAccessDevices: PurchasedDevicesMap = null
+  ): AccountSettings = {
     val __obj = js.Dynamic.literal()
+    if (awsAccountNumber != null) __obj.updateDynamic("awsAccountNumber")(awsAccountNumber.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultJobTimeoutMinutes)) __obj.updateDynamic("defaultJobTimeoutMinutes")(defaultJobTimeoutMinutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxJobTimeoutMinutes)) __obj.updateDynamic("maxJobTimeoutMinutes")(maxJobTimeoutMinutes.get.asInstanceOf[js.Any])
+    if (maxSlots != null) __obj.updateDynamic("maxSlots")(maxSlots.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipAppResign)) __obj.updateDynamic("skipAppResign")(skipAppResign.get.asInstanceOf[js.Any])
+    if (trialMinutes != null) __obj.updateDynamic("trialMinutes")(trialMinutes.asInstanceOf[js.Any])
+    if (unmeteredDevices != null) __obj.updateDynamic("unmeteredDevices")(unmeteredDevices.asInstanceOf[js.Any])
+    if (unmeteredRemoteAccessDevices != null) __obj.updateDynamic("unmeteredRemoteAccessDevices")(unmeteredRemoteAccessDevices.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountSettings]
   }
-  @scala.inline
-  implicit class AccountSettingsOps[Self <: AccountSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountNumber(value: AWSAccountNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsAccountNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsAccountNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsAccountNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultJobTimeoutMinutes(value: JobTimeoutMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultJobTimeoutMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultJobTimeoutMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultJobTimeoutMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxJobTimeoutMinutes(value: JobTimeoutMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxJobTimeoutMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxJobTimeoutMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxJobTimeoutMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSlots(value: MaxSlotMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSlots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSlots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSlots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipAppResign(value: SkipAppResign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAppResign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipAppResign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAppResign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrialMinutes(value: TrialMinutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrialMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmeteredDevices(value: PurchasedDevicesMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmeteredDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmeteredDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmeteredDevices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmeteredRemoteAccessDevices(value: PurchasedDevicesMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmeteredRemoteAccessDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmeteredRemoteAccessDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmeteredRemoteAccessDevices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

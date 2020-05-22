@@ -4,121 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventStream extends js.Object {
   /**
     * The ID of the application from which events should be published.
     */
-  var ApplicationId: js.UndefOr[String] = js.native
+  var ApplicationId: js.UndefOr[String] = js.undefined
   /**
     * The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
     *  Firehose ARN: arn:aws:firehose:REGION:ACCOUNT_ID:deliverystream/STREAM_NAME
     *  Kinesis ARN: arn:aws:kinesis:REGION:ACCOUNT_ID:stream/STREAM_NAME
     */
-  var DestinationStreamArn: js.UndefOr[String] = js.native
+  var DestinationStreamArn: js.UndefOr[String] = js.undefined
   /**
     * (Deprecated) Your AWS account ID, which you assigned to the ExternalID key in an IAM trust policy. Used by Amazon Pinpoint to assume an IAM role. This requirement is removed, and external IDs are not recommended for IAM roles assumed by Amazon Pinpoint.
     */
-  var ExternalId: js.UndefOr[String] = js.native
+  var ExternalId: js.UndefOr[String] = js.undefined
   /**
     * The date the event stream was last updated in ISO 8601 format.
     */
-  var LastModifiedDate: js.UndefOr[String] = js.native
+  var LastModifiedDate: js.UndefOr[String] = js.undefined
   /**
     * The IAM user who last modified the event stream.
     */
-  var LastUpdatedBy: js.UndefOr[String] = js.native
+  var LastUpdatedBy: js.UndefOr[String] = js.undefined
   /**
     * The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
     */
-  var RoleArn: js.UndefOr[String] = js.native
+  var RoleArn: js.UndefOr[String] = js.undefined
 }
 
 object EventStream {
   @scala.inline
-  def apply(): EventStream = {
+  def apply(
+    ApplicationId: String = null,
+    DestinationStreamArn: String = null,
+    ExternalId: String = null,
+    LastModifiedDate: String = null,
+    LastUpdatedBy: String = null,
+    RoleArn: String = null
+  ): EventStream = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationId != null) __obj.updateDynamic("ApplicationId")(ApplicationId.asInstanceOf[js.Any])
+    if (DestinationStreamArn != null) __obj.updateDynamic("DestinationStreamArn")(DestinationStreamArn.asInstanceOf[js.Any])
+    if (ExternalId != null) __obj.updateDynamic("ExternalId")(ExternalId.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (LastUpdatedBy != null) __obj.updateDynamic("LastUpdatedBy")(LastUpdatedBy.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventStream]
   }
-  @scala.inline
-  implicit class EventStreamOps[Self <: EventStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationStreamArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationStreamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationStreamArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationStreamArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

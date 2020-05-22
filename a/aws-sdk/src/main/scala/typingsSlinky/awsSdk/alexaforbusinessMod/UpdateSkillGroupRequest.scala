@@ -22,53 +22,16 @@ trait UpdateSkillGroupRequest extends js.Object {
 
 object UpdateSkillGroupRequest {
   @scala.inline
-  def apply(): UpdateSkillGroupRequest = {
+  def apply(
+    Description: SkillGroupDescription = null,
+    SkillGroupArn: Arn = null,
+    SkillGroupName: SkillGroupName = null
+  ): UpdateSkillGroupRequest = {
     val __obj = js.Dynamic.literal()
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (SkillGroupArn != null) __obj.updateDynamic("SkillGroupArn")(SkillGroupArn.asInstanceOf[js.Any])
+    if (SkillGroupName != null) __obj.updateDynamic("SkillGroupName")(SkillGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSkillGroupRequest]
   }
-  @scala.inline
-  implicit class UpdateSkillGroupRequestOps[Self <: UpdateSkillGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: SkillGroupDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkillGroupArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkillGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillGroupArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkillGroupName(value: SkillGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkillGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillGroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

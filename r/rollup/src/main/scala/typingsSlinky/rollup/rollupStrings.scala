@@ -1,7 +1,6 @@
 package typingsSlinky.rollup
 
 import typingsSlinky.rollup.mod.ModuleFormat
-import typingsSlinky.rollup.mod.ModuleSideEffectsOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,7 +67,7 @@ object rollupStrings {
   sealed trait named extends js.Object
   
   @js.native
-  sealed trait `no-external` extends ModuleSideEffectsOption
+  sealed trait `no-external` extends js.Object
   
   @js.native
   sealed trait none extends js.Object

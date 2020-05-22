@@ -8,5 +8,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs")
 @js.native
 abstract class BarcodeScannerErrorOccurredEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs {
+  /** Gets the data associated with the ErrorOccurred event. */
+  /* CompleteClass */
+  override var errorData: typingsSlinky.winrtUwp.Windows.Devices.PointOfService.UnifiedPosErrorData = js.native
+  /** Indicates whether it is worthwhile to make another attempt at the operation. */
+  /* CompleteClass */
+  override var isRetriable: Boolean = js.native
+  /** Gets any data that was successfully read. */
+  /* CompleteClass */
+  override var partialInputData: typingsSlinky.winrtUwp.Windows.Devices.PointOfService.BarcodeScannerReport = js.native
+}
 

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RaphaelReadAttributes extends RaphaelAttributes {
   /**
     * The transform property of this element.
     */
   @JSName("transform")
-  var transform_RaphaelReadAttributes: js.Array[RaphaelTransformSegment] = js.native
+  var transform_RaphaelReadAttributes: js.Array[RaphaelTransformSegment]
 }
 
 object RaphaelReadAttributes {
@@ -67,19 +66,5 @@ object RaphaelReadAttributes {
     __obj.updateDynamic("text-anchor")(`text-anchor`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RaphaelReadAttributes]
   }
-  @scala.inline
-  implicit class RaphaelReadAttributesOps[Self <: RaphaelReadAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransform(value: js.Array[RaphaelTransformSegment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

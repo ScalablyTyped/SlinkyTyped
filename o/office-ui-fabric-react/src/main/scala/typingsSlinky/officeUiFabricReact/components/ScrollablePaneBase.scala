@@ -72,7 +72,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -775,7 +775,7 @@ object ScrollablePaneBase {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IScrollablePaneStyleProps => Partial[IScrollablePaneStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IScrollablePaneStyleProps => DeepPartial[IScrollablePaneStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IScrollablePaneStyleProps, IScrollablePaneStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

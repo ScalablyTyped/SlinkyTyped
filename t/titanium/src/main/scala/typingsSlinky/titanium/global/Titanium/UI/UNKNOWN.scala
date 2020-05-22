@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Orientation constant representing an unknown orientation.
-		 */
+  * Orientation constant representing an unknown orientation.
+  */
 @JSGlobal("Titanium.UI.UNKNOWN")
 @js.native
 object UNKNOWN extends TopLevel[Double]

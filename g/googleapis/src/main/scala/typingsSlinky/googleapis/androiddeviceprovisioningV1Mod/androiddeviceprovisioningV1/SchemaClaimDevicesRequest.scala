@@ -19,29 +19,10 @@ trait SchemaClaimDevicesRequest extends js.Object {
 
 object SchemaClaimDevicesRequest {
   @scala.inline
-  def apply(): SchemaClaimDevicesRequest = {
+  def apply(claims: js.Array[SchemaPartnerClaim] = null): SchemaClaimDevicesRequest = {
     val __obj = js.Dynamic.literal()
+    if (claims != null) __obj.updateDynamic("claims")(claims.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClaimDevicesRequest]
   }
-  @scala.inline
-  implicit class SchemaClaimDevicesRequestOps[Self <: SchemaClaimDevicesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClaims(value: js.Array[SchemaPartnerClaim]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claims")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaims: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claims")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

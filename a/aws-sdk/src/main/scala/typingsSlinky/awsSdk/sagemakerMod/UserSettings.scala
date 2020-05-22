@@ -34,89 +34,22 @@ trait UserSettings extends js.Object {
 
 object UserSettings {
   @scala.inline
-  def apply(): UserSettings = {
+  def apply(
+    ExecutionRole: RoleArn = null,
+    JupyterServerAppSettings: JupyterServerAppSettings = null,
+    KernelGatewayAppSettings: KernelGatewayAppSettings = null,
+    SecurityGroups: SecurityGroupIds = null,
+    SharingSettings: SharingSettings = null,
+    TensorBoardAppSettings: TensorBoardAppSettings = null
+  ): UserSettings = {
     val __obj = js.Dynamic.literal()
+    if (ExecutionRole != null) __obj.updateDynamic("ExecutionRole")(ExecutionRole.asInstanceOf[js.Any])
+    if (JupyterServerAppSettings != null) __obj.updateDynamic("JupyterServerAppSettings")(JupyterServerAppSettings.asInstanceOf[js.Any])
+    if (KernelGatewayAppSettings != null) __obj.updateDynamic("KernelGatewayAppSettings")(KernelGatewayAppSettings.asInstanceOf[js.Any])
+    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
+    if (SharingSettings != null) __obj.updateDynamic("SharingSettings")(SharingSettings.asInstanceOf[js.Any])
+    if (TensorBoardAppSettings != null) __obj.updateDynamic("TensorBoardAppSettings")(TensorBoardAppSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserSettings]
   }
-  @scala.inline
-  implicit class UserSettingsOps[Self <: UserSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionRole(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJupyterServerAppSettings(value: JupyterServerAppSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JupyterServerAppSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJupyterServerAppSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JupyterServerAppSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKernelGatewayAppSettings(value: KernelGatewayAppSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelGatewayAppSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKernelGatewayAppSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KernelGatewayAppSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroups(value: SecurityGroupIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharingSettings(value: SharingSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharingSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharingSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharingSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTensorBoardAppSettings(value: TensorBoardAppSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TensorBoardAppSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTensorBoardAppSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TensorBoardAppSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

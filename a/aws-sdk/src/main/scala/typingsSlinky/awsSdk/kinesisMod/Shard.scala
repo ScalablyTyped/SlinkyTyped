@@ -30,59 +30,17 @@ trait Shard extends js.Object {
 
 object Shard {
   @scala.inline
-  def apply(HashKeyRange: HashKeyRange, SequenceNumberRange: SequenceNumberRange, ShardId: ShardId): Shard = {
+  def apply(
+    HashKeyRange: HashKeyRange,
+    SequenceNumberRange: SequenceNumberRange,
+    ShardId: ShardId,
+    AdjacentParentShardId: ShardId = null,
+    ParentShardId: ShardId = null
+  ): Shard = {
     val __obj = js.Dynamic.literal(HashKeyRange = HashKeyRange.asInstanceOf[js.Any], SequenceNumberRange = SequenceNumberRange.asInstanceOf[js.Any], ShardId = ShardId.asInstanceOf[js.Any])
+    if (AdjacentParentShardId != null) __obj.updateDynamic("AdjacentParentShardId")(AdjacentParentShardId.asInstanceOf[js.Any])
+    if (ParentShardId != null) __obj.updateDynamic("ParentShardId")(ParentShardId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Shard]
   }
-  @scala.inline
-  implicit class ShardOps[Self <: Shard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHashKeyRange(value: HashKeyRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HashKeyRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSequenceNumberRange(value: SequenceNumberRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumberRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShardId(value: ShardId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdjacentParentShardId(value: ShardId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjacentParentShardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjacentParentShardId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjacentParentShardId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentShardId(value: ShardId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentShardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentShardId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentShardId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

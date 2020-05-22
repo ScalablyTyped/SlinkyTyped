@@ -4,113 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait listenToCollectionOptions extends js.Object {
   /**
     * The context of your component.
     */
-  var context: js.Object = js.native
+  var context: js.Object
   /**
     * A callback that will be called with any errors such as permissions
     * errors.
     */
-  var onFailure: js.UndefOr[js.Function0[Unit]] = js.native
+  var onFailure: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * A function that receives the created ref as its only argument. You
     * can chain any Firestore queries you want to perform. See
     * [Using Firestore Queries](https://github.com/tylermcginnis/re-base#firestorequeries).
     */
-  var query: js.UndefOr[js.Function0[Unit]] = js.native
+  var query: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Will embed firestore generated document ids inside each document in
     * your collections on the `id` property.
     */
-  var withIds: js.UndefOr[Boolean] = js.native
+  var withIds: js.UndefOr[Boolean] = js.undefined
   /**
     * will embed the DocumentReference inside each document in your
     * collection on the `ref` property.
     */
-  var withRefs: js.UndefOr[Boolean] = js.native
+  var withRefs: js.UndefOr[Boolean] = js.undefined
   /**
     * A callback that will be called with the data.
     */
-  def `then`(): Unit = js.native
+  def `then`(): Unit
 }
 
 object listenToCollectionOptions {
   @scala.inline
-  def apply(context: js.Object, `then`: () => Unit): listenToCollectionOptions = {
+  def apply(
+    context: js.Object,
+    `then`: () => Unit,
+    onFailure: () => Unit = null,
+    query: () => Unit = null,
+    withIds: js.UndefOr[Boolean] = js.undefined,
+    withRefs: js.UndefOr[Boolean] = js.undefined
+  ): listenToCollectionOptions = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any])
     __obj.updateDynamic("then")(js.Any.fromFunction0(`then`))
+    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction0(onFailure))
+    if (query != null) __obj.updateDynamic("query")(js.Any.fromFunction0(query))
+    if (!js.isUndefined(withIds)) __obj.updateDynamic("withIds")(withIds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(withRefs)) __obj.updateDynamic("withRefs")(withRefs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[listenToCollectionOptions]
   }
-  @scala.inline
-  implicit class listenToCollectionOptionsOps[Self <: listenToCollectionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnFailure(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithIds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithRefs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withRefs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithRefs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withRefs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,7 +23,7 @@ trait TextRange extends ClientObject {
   var context_TextRange: RequestContext = js.native
   /**
     *
-    * Returns a ShapeFont object that represents the font attributes for the text range. Read-only.
+    * Returns a ShapeFont object that represents the font attributes for the text range.
     *
     * [Api set: ExcelApi 1.9]
     */

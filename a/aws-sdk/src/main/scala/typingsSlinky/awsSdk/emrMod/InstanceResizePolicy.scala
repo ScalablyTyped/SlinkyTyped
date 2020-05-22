@@ -22,53 +22,16 @@ trait InstanceResizePolicy extends js.Object {
 
 object InstanceResizePolicy {
   @scala.inline
-  def apply(): InstanceResizePolicy = {
+  def apply(
+    InstanceTerminationTimeout: js.UndefOr[Integer] = js.undefined,
+    InstancesToProtect: EC2InstanceIdsList = null,
+    InstancesToTerminate: EC2InstanceIdsList = null
+  ): InstanceResizePolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(InstanceTerminationTimeout)) __obj.updateDynamic("InstanceTerminationTimeout")(InstanceTerminationTimeout.get.asInstanceOf[js.Any])
+    if (InstancesToProtect != null) __obj.updateDynamic("InstancesToProtect")(InstancesToProtect.asInstanceOf[js.Any])
+    if (InstancesToTerminate != null) __obj.updateDynamic("InstancesToTerminate")(InstancesToTerminate.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceResizePolicy]
   }
-  @scala.inline
-  implicit class InstanceResizePolicyOps[Self <: InstanceResizePolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceTerminationTimeout(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTerminationTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTerminationTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTerminationTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancesToProtect(value: EC2InstanceIdsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesToProtect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancesToProtect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesToProtect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancesToTerminate(value: EC2InstanceIdsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesToTerminate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancesToTerminate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesToTerminate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -29,41 +29,14 @@ trait SchemaFeatureSettings extends js.Object {
 
 object SchemaFeatureSettings {
   @scala.inline
-  def apply(): SchemaFeatureSettings = {
+  def apply(
+    splitHealthChecks: js.UndefOr[Boolean] = js.undefined,
+    useContainerOptimizedOs: js.UndefOr[Boolean] = js.undefined
+  ): SchemaFeatureSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(splitHealthChecks)) __obj.updateDynamic("splitHealthChecks")(splitHealthChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useContainerOptimizedOs)) __obj.updateDynamic("useContainerOptimizedOs")(useContainerOptimizedOs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFeatureSettings]
   }
-  @scala.inline
-  implicit class SchemaFeatureSettingsOps[Self <: SchemaFeatureSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSplitHealthChecks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitHealthChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplitHealthChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitHealthChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseContainerOptimizedOs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useContainerOptimizedOs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseContainerOptimizedOs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useContainerOptimizedOs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

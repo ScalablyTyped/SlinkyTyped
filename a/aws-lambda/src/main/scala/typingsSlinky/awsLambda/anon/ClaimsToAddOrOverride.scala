@@ -5,68 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClaimsToAddOrOverride extends js.Object {
-  var claimsToAddOrOverride: js.UndefOr[StringDictionary[String]] = js.native
-  var claimsToSuppress: js.UndefOr[js.Array[String]] = js.native
-  var groupOverrideDetails: js.UndefOr[Null | GroupsToOverride] = js.native
+  var claimsToAddOrOverride: js.UndefOr[StringDictionary[String]] = js.undefined
+  var claimsToSuppress: js.UndefOr[js.Array[String]] = js.undefined
+  var groupOverrideDetails: js.UndefOr[Null | GroupsToOverride] = js.undefined
 }
 
 object ClaimsToAddOrOverride {
   @scala.inline
-  def apply(): ClaimsToAddOrOverride = {
+  def apply(
+    claimsToAddOrOverride: StringDictionary[String] = null,
+    claimsToSuppress: js.Array[String] = null,
+    groupOverrideDetails: js.UndefOr[Null | GroupsToOverride] = js.undefined
+  ): ClaimsToAddOrOverride = {
     val __obj = js.Dynamic.literal()
+    if (claimsToAddOrOverride != null) __obj.updateDynamic("claimsToAddOrOverride")(claimsToAddOrOverride.asInstanceOf[js.Any])
+    if (claimsToSuppress != null) __obj.updateDynamic("claimsToSuppress")(claimsToSuppress.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupOverrideDetails)) __obj.updateDynamic("groupOverrideDetails")(groupOverrideDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimsToAddOrOverride]
   }
-  @scala.inline
-  implicit class ClaimsToAddOrOverrideOps[Self <: ClaimsToAddOrOverride] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClaimsToAddOrOverride(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimsToAddOrOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimsToAddOrOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimsToAddOrOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClaimsToSuppress(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimsToSuppress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClaimsToSuppress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("claimsToSuppress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupOverrideDetails(value: GroupsToOverride): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOverrideDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupOverrideDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOverrideDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupOverrideDetailsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOverrideDetails")(null)
-        ret
-    }
-  }
-  
 }
 

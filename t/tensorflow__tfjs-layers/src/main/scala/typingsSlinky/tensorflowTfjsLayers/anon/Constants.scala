@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Constants extends js.Object {
-  var constants: js.Array[SymbolicTensor | Tensor[Rank]] = js.native
-  var initialState: js.Array[SymbolicTensor | Tensor[Rank]] = js.native
-  var inputs: Tensor[Rank] | SymbolicTensor = js.native
+  var constants: js.Array[SymbolicTensor | Tensor[Rank]]
+  var initialState: js.Array[SymbolicTensor | Tensor[Rank]]
+  var inputs: Tensor[Rank] | SymbolicTensor
 }
 
 object Constants {
@@ -24,31 +23,5 @@ object Constants {
     val __obj = js.Dynamic.literal(constants = constants.asInstanceOf[js.Any], initialState = initialState.asInstanceOf[js.Any], inputs = inputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[Constants]
   }
-  @scala.inline
-  implicit class ConstantsOps[Self <: Constants] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstants(value: js.Array[SymbolicTensor | Tensor[Rank]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialState(value: js.Array[SymbolicTensor | Tensor[Rank]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputs(value: Tensor[Rank] | SymbolicTensor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnId extends js.Object {
-  var columnId: String = js.native
-  var sortAsc: Boolean = js.native
+  var columnId: String
+  var sortAsc: Boolean
 }
 
 object ColumnId {
@@ -16,25 +15,5 @@ object ColumnId {
     val __obj = js.Dynamic.literal(columnId = columnId.asInstanceOf[js.Any], sortAsc = sortAsc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnId]
   }
-  @scala.inline
-  implicit class ColumnIdOps[Self <: ColumnId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSortAsc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortAsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

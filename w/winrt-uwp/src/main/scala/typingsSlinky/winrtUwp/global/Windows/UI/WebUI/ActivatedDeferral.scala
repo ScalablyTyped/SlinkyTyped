@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.WebUI.ActivatedDeferral")
 @js.native
 abstract class ActivatedDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.ActivatedDeferral
+  extends typingsSlinky.winrtUwp.Windows.UI.WebUI.ActivatedDeferral {
+  /** Notifies the system that the app has set up its state and initial UI and is ready to be displayed. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

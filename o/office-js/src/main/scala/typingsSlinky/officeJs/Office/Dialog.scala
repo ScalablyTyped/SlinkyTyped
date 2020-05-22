@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * 
   * **Requirement set**: {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets | DialogApi}
   */
-@js.native
 trait Dialog extends js.Object {
   /**
     * Registers an event handler. The two supported events are:
@@ -20,15 +19,15 @@ trait Dialog extends js.Object {
     *
     * - DialogEventReceived. Triggered when the dialog box has been closed or otherwise unloaded.
     */
-  def addEventHandler(eventType: EventType, handler: js.Function): Unit = js.native
+  def addEventHandler(eventType: EventType, handler: js.Function): Unit
   /**
     * Called from a parent page to close the corresponding dialog box. 
     */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * FOR INTERNAL USE ONLY. DO NOT CALL IN YOUR CODE.
     */
-  def sendMessage(name: String): Unit = js.native
+  def sendMessage(name: String): Unit
 }
 
 object Dialog {
@@ -37,31 +36,5 @@ object Dialog {
     val __obj = js.Dynamic.literal(addEventHandler = js.Any.fromFunction2(addEventHandler), close = js.Any.fromFunction0(close), sendMessage = js.Any.fromFunction1(sendMessage))
     __obj.asInstanceOf[Dialog]
   }
-  @scala.inline
-  implicit class DialogOps[Self <: Dialog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddEventHandler(value: (EventType, js.Function) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventHandler")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSendMessage(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

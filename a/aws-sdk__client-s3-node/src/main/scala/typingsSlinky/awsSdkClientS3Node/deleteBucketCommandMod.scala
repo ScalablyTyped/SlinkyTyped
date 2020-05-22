@@ -27,10 +27,17 @@ object deleteBucketCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteBucketInput) = this()
+    /* CompleteClass */
+    override val input: DeleteBucketInput = js.native
     val middlewareStack: MiddlewareStack[DeleteBucketInput, DeleteBucketOutput, Readable] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[DeleteBucketInput, DeleteBucketOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketInput, DeleteBucketOutput] = js.native
   }

@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * A set of constants for the position value that can be used for the `position` property of
-			 * <ListViewAnimationProperties> when invoking the ListView's `scrollToItem`, `appendSection`,
-			 * `deleteSectionAt`, `insertSectionAt` and `replaceSectionAt` methods.
-			 */
+  * A set of constants for the position value that can be used for the `position` property of
+  * <ListViewAnimationProperties> when invoking the ListView's `scrollToItem`, `appendSection`,
+  * `deleteSectionAt`, `insertSectionAt` and `replaceSectionAt` methods.
+  */
 @JSGlobal("Titanium.UI.iOS.ListViewScrollPosition")
 @js.native
 object ListViewScrollPosition extends js.Object

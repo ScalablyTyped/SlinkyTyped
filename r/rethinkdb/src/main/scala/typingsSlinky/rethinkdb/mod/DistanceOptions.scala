@@ -11,55 +11,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DistanceOptions extends js.Object {
   /**
     * The reference ellipsoid to use for geographic coordinates. Possible values are `WGS84` (the default), a common standard for Earth’s geometry, or `unit_sphere`, a perfect sphere of 1 meter radius.
     */
-  var geoSystem: js.UndefOr[WGS84 | unit_sphere] = js.native
+  var geoSystem: js.UndefOr[WGS84 | unit_sphere] = js.undefined
   /**
     * Unit for the distance. Possible values are `m` (meter, the default), `km` (kilometer), `mi` (international mile), `nm` (nautical mile), `ft` (international foot).
     */
-  var unit: js.UndefOr[m | km | mi | nm | ft] = js.native
+  var unit: js.UndefOr[m | km | mi | nm | ft] = js.undefined
 }
 
 object DistanceOptions {
   @scala.inline
-  def apply(): DistanceOptions = {
+  def apply(geoSystem: WGS84 | unit_sphere = null, unit: m | km | mi | nm | ft = null): DistanceOptions = {
     val __obj = js.Dynamic.literal()
+    if (geoSystem != null) __obj.updateDynamic("geoSystem")(geoSystem.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistanceOptions]
   }
-  @scala.inline
-  implicit class DistanceOptionsOps[Self <: DistanceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoSystem(value: WGS84 | unit_sphere): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: m | km | mi | nm | ft): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,6 +12,7 @@ import typingsSlinky.reResizable.anon.HeightWidth
 import typingsSlinky.reResizable.anon.MaxHeight
 import typingsSlinky.reResizable.anon.NewHeight
 import typingsSlinky.reResizable.anon.Width
+import typingsSlinky.reResizable.mod.global.Window
 import typingsSlinky.reResizable.reResizableStrings.column
 import typingsSlinky.reResizable.reResizableStrings.height
 import typingsSlinky.reResizable.reResizableStrings.row
@@ -72,6 +73,7 @@ class Resizable protected ()
   def sizeStyle: Height = js.native
   def unbindEvents(): Unit = js.native
   def updateSize(size: Size): Unit = js.native
+  def window: Window | Null = js.native
 }
 
 /* static members */

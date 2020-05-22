@@ -3,6 +3,7 @@ package typingsSlinky.angularForms.mod
 import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.OnDestroy
+import typingsSlinky.angularCore.mod.SimpleChanges
 import typingsSlinky.angularForms.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -87,5 +88,20 @@ class NgModel protected ()
     * Internal reference to the view model value.
     */
   var viewModel: js.Any = js.native
+  /**
+    * A callback method that is invoked immediately after the
+    * default change detector has checked data-bound properties
+    * if at least one has changed, and before the view and content
+    * children are checked.
+    * @param changes The changed properties.
+    */
+  /* CompleteClass */
+  override def ngOnChanges(changes: SimpleChanges): Unit = js.native
+  /**
+    * A callback method that performs custom clean-up, invoked immediately
+    * after a directive, pipe, or service instance is destroyed.
+    */
+  /* CompleteClass */
+  override def ngOnDestroy(): Unit = js.native
 }
 

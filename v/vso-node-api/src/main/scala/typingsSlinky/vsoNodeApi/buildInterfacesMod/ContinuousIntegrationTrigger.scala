@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContinuousIntegrationTrigger extends BuildTrigger {
   /**
     * Indicates whether changes should be batched while another CI build is running.
     */
-  var batchChanges: Boolean = js.native
-  var branchFilters: js.Array[String] = js.native
+  var batchChanges: Boolean
+  var branchFilters: js.Array[String]
   /**
     * The maximum number of simultaneous CI builds that will run per branch.
     */
-  var maxConcurrentBuildsPerBranch: Double = js.native
-  var pathFilters: js.Array[String] = js.native
+  var maxConcurrentBuildsPerBranch: Double
+  var pathFilters: js.Array[String]
   /**
     * The polling interval, in seconds.
     */
-  var pollingInterval: Double = js.native
+  var pollingInterval: Double
   /**
     * The ID of the job used to poll an external repository.
     */
-  var pollingJobId: String = js.native
+  var pollingJobId: String
 }
 
 object ContinuousIntegrationTrigger {
@@ -40,49 +39,5 @@ object ContinuousIntegrationTrigger {
     val __obj = js.Dynamic.literal(batchChanges = batchChanges.asInstanceOf[js.Any], branchFilters = branchFilters.asInstanceOf[js.Any], maxConcurrentBuildsPerBranch = maxConcurrentBuildsPerBranch.asInstanceOf[js.Any], pathFilters = pathFilters.asInstanceOf[js.Any], pollingInterval = pollingInterval.asInstanceOf[js.Any], pollingJobId = pollingJobId.asInstanceOf[js.Any], triggerType = triggerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContinuousIntegrationTrigger]
   }
-  @scala.inline
-  implicit class ContinuousIntegrationTriggerOps[Self <: ContinuousIntegrationTrigger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchChanges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranchFilters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxConcurrentBuildsPerBranch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentBuildsPerBranch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPathFilters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPollingInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPollingJobId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pollingJobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

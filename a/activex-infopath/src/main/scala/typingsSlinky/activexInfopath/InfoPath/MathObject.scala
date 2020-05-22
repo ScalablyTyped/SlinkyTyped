@@ -5,15 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MathObject extends js.Object {
   @JSName("InfoPath.MathObject_typekey")
-  var InfoPathDotMathObject_typekey: MathObject = js.native
-  def Avg(pxmllistInput: IXMLDOMNodeList): js.Any = js.native
-  def Eval(pxmllistContext: IXMLDOMNodeList, bstrExpression: String): js.Any = js.native
-  def Max(pxmllistInput: IXMLDOMNodeList): js.Any = js.native
-  def Min(pxmllistInput: IXMLDOMNodeList): js.Any = js.native
-  def Nz(pxmllistInput: IXMLDOMNodeList): js.Any = js.native
+  var InfoPathDotMathObject_typekey: MathObject
+  def Avg(pxmllistInput: IXMLDOMNodeList): js.Any
+  def Eval(pxmllistContext: IXMLDOMNodeList, bstrExpression: String): js.Any
+  def Max(pxmllistInput: IXMLDOMNodeList): js.Any
+  def Min(pxmllistInput: IXMLDOMNodeList): js.Any
+  def Nz(pxmllistInput: IXMLDOMNodeList): js.Any
 }
 
 object MathObject {
@@ -30,49 +29,5 @@ object MathObject {
     __obj.updateDynamic("InfoPath.MathObject_typekey")(InfoPathDotMathObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[MathObject]
   }
-  @scala.inline
-  implicit class MathObjectOps[Self <: MathObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvg(value: IXMLDOMNodeList => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Avg")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEval(value: (IXMLDOMNodeList, String) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eval")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotMathObject_typekey(value: MathObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.MathObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: IXMLDOMNodeList => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMin(value: IXMLDOMNodeList => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Min")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNz(value: IXMLDOMNodeList => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nz")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

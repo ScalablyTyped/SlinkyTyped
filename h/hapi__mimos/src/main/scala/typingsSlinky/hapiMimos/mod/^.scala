@@ -1,5 +1,6 @@
 package typingsSlinky.hapiMimos.mod
 
+import typingsSlinky.mimeDb.mod.MimeEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,5 +12,15 @@ import scala.scalajs.js.annotation._
   */
 class ^ () extends Mimos {
   def this(options: MimosOptions) = this()
+  /**
+    * Returns mime object
+    */
+  /* CompleteClass */
+  override def path(path: String): MimosOptionsValue = js.native
+  /**
+    * Returns mime object
+    */
+  /* CompleteClass */
+  override def `type`(`type`: String): MimeEntry = js.native
 }
 

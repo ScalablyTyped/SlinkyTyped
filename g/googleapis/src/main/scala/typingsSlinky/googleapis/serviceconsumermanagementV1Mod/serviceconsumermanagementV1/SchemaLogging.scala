@@ -39,41 +39,14 @@ trait SchemaLogging extends js.Object {
 
 object SchemaLogging {
   @scala.inline
-  def apply(): SchemaLogging = {
+  def apply(
+    consumerDestinations: js.Array[SchemaLoggingDestination] = null,
+    producerDestinations: js.Array[SchemaLoggingDestination] = null
+  ): SchemaLogging = {
     val __obj = js.Dynamic.literal()
+    if (consumerDestinations != null) __obj.updateDynamic("consumerDestinations")(consumerDestinations.asInstanceOf[js.Any])
+    if (producerDestinations != null) __obj.updateDynamic("producerDestinations")(producerDestinations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLogging]
   }
-  @scala.inline
-  implicit class SchemaLoggingOps[Self <: SchemaLogging] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumerDestinations(value: js.Array[SchemaLoggingDestination]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerDestinations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumerDestinations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerDestinations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProducerDestinations(value: js.Array[SchemaLoggingDestination]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("producerDestinations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProducerDestinations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("producerDestinations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

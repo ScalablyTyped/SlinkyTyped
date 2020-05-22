@@ -90,6 +90,11 @@ class EquiRectangularCubeTextureAssetTask protected ()
     */
   var size: Double = js.native
   /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: EquiRectangularCubeTexture = js.native
+  /**
     * Defines the location of the file to load
     */
   var url: String = js.native

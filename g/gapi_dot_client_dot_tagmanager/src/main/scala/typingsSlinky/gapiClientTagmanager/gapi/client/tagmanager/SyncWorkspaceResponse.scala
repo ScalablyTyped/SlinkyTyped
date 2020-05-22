@@ -4,54 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SyncWorkspaceResponse extends js.Object {
   /**
     * The merge conflict after sync. If this field is not empty, the sync is still treated as successful. But a version cannot be created until all conflicts
     * are resolved.
     */
-  var mergeConflict: js.UndefOr[js.Array[MergeConflict]] = js.native
+  var mergeConflict: js.UndefOr[js.Array[MergeConflict]] = js.undefined
   /** Indicates whether synchronization caused a merge conflict or sync error. */
-  var syncStatus: js.UndefOr[SyncStatus] = js.native
+  var syncStatus: js.UndefOr[SyncStatus] = js.undefined
 }
 
 object SyncWorkspaceResponse {
   @scala.inline
-  def apply(): SyncWorkspaceResponse = {
+  def apply(mergeConflict: js.Array[MergeConflict] = null, syncStatus: SyncStatus = null): SyncWorkspaceResponse = {
     val __obj = js.Dynamic.literal()
+    if (mergeConflict != null) __obj.updateDynamic("mergeConflict")(mergeConflict.asInstanceOf[js.Any])
+    if (syncStatus != null) __obj.updateDynamic("syncStatus")(syncStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyncWorkspaceResponse]
   }
-  @scala.inline
-  implicit class SyncWorkspaceResponseOps[Self <: SyncWorkspaceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMergeConflict(value: js.Array[MergeConflict]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncStatus(value: SyncStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

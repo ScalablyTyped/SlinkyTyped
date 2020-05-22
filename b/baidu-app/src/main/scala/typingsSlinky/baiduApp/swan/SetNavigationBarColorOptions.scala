@@ -7,60 +7,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetNavigationBarColorOptions
   extends BaseOptions[js.Any, js.Any] {
   /**
-  		 * 动画效果
-  		 */
-  var animation: js.UndefOr[Duration] = js.native
+    * 动画效果
+    */
+  var animation: js.UndefOr[Duration] = js.undefined
   /**
-  		 * 背景颜色值，有效值为十六进制颜色
-  		 */
-  var backgroundColor: String = js.native
+    * 背景颜色值，有效值为十六进制颜色
+    */
+  var backgroundColor: String
   /**
-  		 * 前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000
-  		 */
-  var frontColor: Numbersignffffff | Numbersign000000 = js.native
+    * 前景颜色值，包括按钮、标题、状态栏的颜色，仅支持 #ffffff 和 #000000
+    */
+  var frontColor: Numbersignffffff | Numbersign000000
 }
 
 object SetNavigationBarColorOptions {
   @scala.inline
-  def apply(backgroundColor: String, frontColor: Numbersignffffff | Numbersign000000): SetNavigationBarColorOptions = {
+  def apply(
+    backgroundColor: String,
+    frontColor: Numbersignffffff | Numbersign000000,
+    animation: Duration = null,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: js.Any => Unit = null
+  ): SetNavigationBarColorOptions = {
     val __obj = js.Dynamic.literal(backgroundColor = backgroundColor.asInstanceOf[js.Any], frontColor = frontColor.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[SetNavigationBarColorOptions]
   }
-  @scala.inline
-  implicit class SetNavigationBarColorOptionsOps[Self <: SetNavigationBarColorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrontColor(value: Numbersignffffff | Numbersign000000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,40 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChannelId extends js.Object {
   /**
     * The ID that YouTube uses to uniquely identify the channel associated with the activity.
     */
-  var channelId: String = js.native
+  var channelId: String
   /**
     * Channel title for the channel responsible for this activity
     */
-  var channelTitle: String = js.native
+  var channelTitle: String
   /**
     * The description of the resource primarily associated with the activity.
     */
-  var description: String = js.native
+  var description: String
   /**
     * The group ID associated with the activity.
     */
-  var groupId: String = js.native
+  var groupId: String
   /**
     * The date and time that the activity occurred. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
     */
-  var publishedAt: String = js.native
+  var publishedAt: String
   /**
     * A map of thumbnail images associated with the resource that is primarily associated with the activity.
     */
-  var thumbnails: GoogleApiYouTubeThumbnailResource = js.native
+  var thumbnails: GoogleApiYouTubeThumbnailResource
   /**
     * The title of the resource primarily associated with the activity.
     */
-  var title: String = js.native
+  var title: String
   /**
     * The type of activity that the resource describes.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object ChannelId {
@@ -57,61 +56,5 @@ object ChannelId {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelId]
   }
-  @scala.inline
-  implicit class ChannelIdOps[Self <: ChannelId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChannelTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublishedAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThumbnails(value: GoogleApiYouTubeThumbnailResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

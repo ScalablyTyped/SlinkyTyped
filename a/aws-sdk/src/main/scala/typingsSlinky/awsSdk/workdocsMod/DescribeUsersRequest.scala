@@ -50,137 +50,30 @@ trait DescribeUsersRequest extends js.Object {
 
 object DescribeUsersRequest {
   @scala.inline
-  def apply(): DescribeUsersRequest = {
+  def apply(
+    AuthenticationToken: AuthenticationHeaderType = null,
+    Fields: FieldNamesType = null,
+    Include: UserFilterType = null,
+    Limit: js.UndefOr[LimitType] = js.undefined,
+    Marker: PageMarkerType = null,
+    Order: OrderType = null,
+    OrganizationId: IdType = null,
+    Query: SearchQueryType = null,
+    Sort: UserSortType = null,
+    UserIds: UserIdsType = null
+  ): DescribeUsersRequest = {
     val __obj = js.Dynamic.literal()
+    if (AuthenticationToken != null) __obj.updateDynamic("AuthenticationToken")(AuthenticationToken.asInstanceOf[js.Any])
+    if (Fields != null) __obj.updateDynamic("Fields")(Fields.asInstanceOf[js.Any])
+    if (Include != null) __obj.updateDynamic("Include")(Include.asInstanceOf[js.Any])
+    if (!js.isUndefined(Limit)) __obj.updateDynamic("Limit")(Limit.get.asInstanceOf[js.Any])
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (Order != null) __obj.updateDynamic("Order")(Order.asInstanceOf[js.Any])
+    if (OrganizationId != null) __obj.updateDynamic("OrganizationId")(OrganizationId.asInstanceOf[js.Any])
+    if (Query != null) __obj.updateDynamic("Query")(Query.asInstanceOf[js.Any])
+    if (Sort != null) __obj.updateDynamic("Sort")(Sort.asInstanceOf[js.Any])
+    if (UserIds != null) __obj.updateDynamic("UserIds")(UserIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUsersRequest]
   }
-  @scala.inline
-  implicit class DescribeUsersRequestOps[Self <: DescribeUsersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationToken(value: AuthenticationHeaderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: FieldNamesType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: UserFilterType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: LimitType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: PageMarkerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: OrderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationId(value: IdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: SearchQueryType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: UserSortType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserIds(value: UserIdsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

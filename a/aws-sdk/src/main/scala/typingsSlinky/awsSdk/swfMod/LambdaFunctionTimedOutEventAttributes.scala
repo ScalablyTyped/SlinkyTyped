@@ -22,41 +22,10 @@ trait LambdaFunctionTimedOutEventAttributes extends js.Object {
 
 object LambdaFunctionTimedOutEventAttributes {
   @scala.inline
-  def apply(scheduledEventId: EventId, startedEventId: EventId): LambdaFunctionTimedOutEventAttributes = {
+  def apply(scheduledEventId: EventId, startedEventId: EventId, timeoutType: LambdaFunctionTimeoutType = null): LambdaFunctionTimedOutEventAttributes = {
     val __obj = js.Dynamic.literal(scheduledEventId = scheduledEventId.asInstanceOf[js.Any], startedEventId = startedEventId.asInstanceOf[js.Any])
+    if (timeoutType != null) __obj.updateDynamic("timeoutType")(timeoutType.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaFunctionTimedOutEventAttributes]
   }
-  @scala.inline
-  implicit class LambdaFunctionTimedOutEventAttributesOps[Self <: LambdaFunctionTimedOutEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduledEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeoutType(value: LambdaFunctionTimeoutType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

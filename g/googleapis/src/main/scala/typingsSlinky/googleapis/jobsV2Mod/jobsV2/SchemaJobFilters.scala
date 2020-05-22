@@ -141,197 +141,40 @@ trait SchemaJobFilters extends js.Object {
 
 object SchemaJobFilters {
   @scala.inline
-  def apply(): SchemaJobFilters = {
+  def apply(
+    categories: js.Array[String] = null,
+    commuteFilter: SchemaCommutePreference = null,
+    companyNames: js.Array[String] = null,
+    companyTitles: js.Array[String] = null,
+    compensationFilter: SchemaCompensationFilter = null,
+    customAttributeFilter: String = null,
+    customFieldFilters: StringDictionary[SchemaCustomFieldFilter] = null,
+    disableSpellCheck: js.UndefOr[Boolean] = js.undefined,
+    employmentTypes: js.Array[String] = null,
+    extendedCompensationFilter: SchemaExtendedCompensationFilter = null,
+    languageCodes: js.Array[String] = null,
+    locationFilters: js.Array[SchemaLocationFilter] = null,
+    publishDateRange: String = null,
+    query: String = null,
+    tenantJobOnly: js.UndefOr[Boolean] = js.undefined
+  ): SchemaJobFilters = {
     val __obj = js.Dynamic.literal()
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (commuteFilter != null) __obj.updateDynamic("commuteFilter")(commuteFilter.asInstanceOf[js.Any])
+    if (companyNames != null) __obj.updateDynamic("companyNames")(companyNames.asInstanceOf[js.Any])
+    if (companyTitles != null) __obj.updateDynamic("companyTitles")(companyTitles.asInstanceOf[js.Any])
+    if (compensationFilter != null) __obj.updateDynamic("compensationFilter")(compensationFilter.asInstanceOf[js.Any])
+    if (customAttributeFilter != null) __obj.updateDynamic("customAttributeFilter")(customAttributeFilter.asInstanceOf[js.Any])
+    if (customFieldFilters != null) __obj.updateDynamic("customFieldFilters")(customFieldFilters.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableSpellCheck)) __obj.updateDynamic("disableSpellCheck")(disableSpellCheck.get.asInstanceOf[js.Any])
+    if (employmentTypes != null) __obj.updateDynamic("employmentTypes")(employmentTypes.asInstanceOf[js.Any])
+    if (extendedCompensationFilter != null) __obj.updateDynamic("extendedCompensationFilter")(extendedCompensationFilter.asInstanceOf[js.Any])
+    if (languageCodes != null) __obj.updateDynamic("languageCodes")(languageCodes.asInstanceOf[js.Any])
+    if (locationFilters != null) __obj.updateDynamic("locationFilters")(locationFilters.asInstanceOf[js.Any])
+    if (publishDateRange != null) __obj.updateDynamic("publishDateRange")(publishDateRange.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (!js.isUndefined(tenantJobOnly)) __obj.updateDynamic("tenantJobOnly")(tenantJobOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobFilters]
   }
-  @scala.inline
-  implicit class SchemaJobFiltersOps[Self <: SchemaJobFilters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommuteFilter(value: SchemaCommutePreference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commuteFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommuteFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commuteFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyTitles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyTitles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyTitles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyTitles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompensationFilter(value: SchemaCompensationFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompensationFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compensationFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomAttributeFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributeFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomAttributeFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributeFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomFieldFilters(value: StringDictionary[SchemaCustomFieldFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFieldFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomFieldFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFieldFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableSpellCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSpellCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableSpellCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSpellCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmploymentTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("employmentTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmploymentTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("employmentTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtendedCompensationFilter(value: SchemaExtendedCompensationFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedCompensationFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendedCompensationFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedCompensationFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationFilters(value: js.Array[SchemaLocationFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishDateRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishDateRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishDateRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishDateRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenantJobOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantJobOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenantJobOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantJobOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

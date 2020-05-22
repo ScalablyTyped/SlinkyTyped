@@ -4,263 +4,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EmailChannelResponse extends js.Object {
   /**
     * The unique ID of the application to which the email channel belongs.
     */
-  var ApplicationId: js.UndefOr[String] = js.native
+  var ApplicationId: js.UndefOr[String] = js.undefined
   /**
     * The configuration set that you want to use when you send email using the Pinpoint Email API.
     */
-  var ConfigurationSet: js.UndefOr[String] = js.native
+  var ConfigurationSet: js.UndefOr[String] = js.undefined
   /**
     * The date that the settings were last updated in ISO 8601 format.
     */
-  var CreationDate: js.UndefOr[String] = js.native
+  var CreationDate: js.UndefOr[String] = js.undefined
   /**
     * If the channel is enabled for sending messages.
     */
-  var Enabled: js.UndefOr[Boolean] = js.native
+  var Enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The email address used to send emails from.
     */
-  var FromAddress: js.UndefOr[String] = js.native
+  var FromAddress: js.UndefOr[String] = js.undefined
   /**
     * Not used. Retained for backwards compatibility.
     */
-  var HasCredential: js.UndefOr[Boolean] = js.native
+  var HasCredential: js.UndefOr[Boolean] = js.undefined
   /**
     * Channel ID. Not used, only for backwards compatibility.
     */
-  var Id: js.UndefOr[String] = js.native
+  var Id: js.UndefOr[String] = js.undefined
   /**
     * The ARN of an identity verified with SES.
     */
-  var Identity: js.UndefOr[String] = js.native
+  var Identity: js.UndefOr[String] = js.undefined
   /**
     * Is this channel archived
     */
-  var IsArchived: js.UndefOr[Boolean] = js.native
+  var IsArchived: js.UndefOr[Boolean] = js.undefined
   /**
     * Who last updated this entry
     */
-  var LastModifiedBy: js.UndefOr[String] = js.native
+  var LastModifiedBy: js.UndefOr[String] = js.undefined
   /**
     * Last date this was updated
     */
-  var LastModifiedDate: js.UndefOr[String] = js.native
+  var LastModifiedDate: js.UndefOr[String] = js.undefined
   /**
     * Messages per second that can be sent
     */
-  var MessagesPerSecond: js.UndefOr[Double] = js.native
+  var MessagesPerSecond: js.UndefOr[Double] = js.undefined
   /**
     * Platform type. Will be "EMAIL"
     */
-  var Platform: js.UndefOr[String] = js.native
+  var Platform: js.UndefOr[String] = js.undefined
   /**
     * The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service
     */
-  var RoleArn: js.UndefOr[String] = js.native
+  var RoleArn: js.UndefOr[String] = js.undefined
   /**
     * Version of channel
     */
-  var Version: js.UndefOr[Double] = js.native
+  var Version: js.UndefOr[Double] = js.undefined
 }
 
 object EmailChannelResponse {
   @scala.inline
-  def apply(): EmailChannelResponse = {
+  def apply(
+    ApplicationId: String = null,
+    ConfigurationSet: String = null,
+    CreationDate: String = null,
+    Enabled: js.UndefOr[Boolean] = js.undefined,
+    FromAddress: String = null,
+    HasCredential: js.UndefOr[Boolean] = js.undefined,
+    Id: String = null,
+    Identity: String = null,
+    IsArchived: js.UndefOr[Boolean] = js.undefined,
+    LastModifiedBy: String = null,
+    LastModifiedDate: String = null,
+    MessagesPerSecond: js.UndefOr[Double] = js.undefined,
+    Platform: String = null,
+    RoleArn: String = null,
+    Version: js.UndefOr[Double] = js.undefined
+  ): EmailChannelResponse = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationId != null) __obj.updateDynamic("ApplicationId")(ApplicationId.asInstanceOf[js.Any])
+    if (ConfigurationSet != null) __obj.updateDynamic("ConfigurationSet")(ConfigurationSet.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (FromAddress != null) __obj.updateDynamic("FromAddress")(FromAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(HasCredential)) __obj.updateDynamic("HasCredential")(HasCredential.get.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Identity != null) __obj.updateDynamic("Identity")(Identity.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsArchived)) __obj.updateDynamic("IsArchived")(IsArchived.get.asInstanceOf[js.Any])
+    if (LastModifiedBy != null) __obj.updateDynamic("LastModifiedBy")(LastModifiedBy.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(MessagesPerSecond)) __obj.updateDynamic("MessagesPerSecond")(MessagesPerSecond.get.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
+    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(Version)) __obj.updateDynamic("Version")(Version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailChannelResponse]
   }
-  @scala.inline
-  implicit class EmailChannelResponseOps[Self <: EmailChannelResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurationSet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasCredential(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasCredential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsArchived(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsArchived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsArchived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsArchived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagesPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessagesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessagesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

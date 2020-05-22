@@ -18,41 +18,11 @@ trait AuthorizerSummary extends js.Object {
 
 object AuthorizerSummary {
   @scala.inline
-  def apply(): AuthorizerSummary = {
+  def apply(authorizerArn: AuthorizerArn = null, authorizerName: AuthorizerName = null): AuthorizerSummary = {
     val __obj = js.Dynamic.literal()
+    if (authorizerArn != null) __obj.updateDynamic("authorizerArn")(authorizerArn.asInstanceOf[js.Any])
+    if (authorizerName != null) __obj.updateDynamic("authorizerName")(authorizerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizerSummary]
   }
-  @scala.inline
-  implicit class AuthorizerSummaryOps[Self <: AuthorizerSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorizerArn(value: AuthorizerArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizerArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizerName(value: AuthorizerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

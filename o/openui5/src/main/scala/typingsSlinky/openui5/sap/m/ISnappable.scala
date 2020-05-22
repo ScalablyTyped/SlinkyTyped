@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   * to get have the pin/unpin functionality, it must fire the pinUnpinPress event
   * @resource sap/m/library.js
   */
-@js.native
 trait ISnappable extends js.Object
 

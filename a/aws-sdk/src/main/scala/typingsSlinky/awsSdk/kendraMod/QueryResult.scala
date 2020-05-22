@@ -26,65 +26,18 @@ trait QueryResult extends js.Object {
 
 object QueryResult {
   @scala.inline
-  def apply(): QueryResult = {
+  def apply(
+    FacetResults: FacetResultList = null,
+    QueryId: QueryId = null,
+    ResultItems: QueryResultItemList = null,
+    TotalNumberOfResults: js.UndefOr[Integer] = js.undefined
+  ): QueryResult = {
     val __obj = js.Dynamic.literal()
+    if (FacetResults != null) __obj.updateDynamic("FacetResults")(FacetResults.asInstanceOf[js.Any])
+    if (QueryId != null) __obj.updateDynamic("QueryId")(QueryId.asInstanceOf[js.Any])
+    if (ResultItems != null) __obj.updateDynamic("ResultItems")(ResultItems.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalNumberOfResults)) __obj.updateDynamic("TotalNumberOfResults")(TotalNumberOfResults.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryResult]
   }
-  @scala.inline
-  implicit class QueryResultOps[Self <: QueryResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFacetResults(value: FacetResultList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FacetResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacetResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FacetResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryId(value: QueryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultItems(value: QueryResultItemList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalNumberOfResults(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalNumberOfResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalNumberOfResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalNumberOfResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

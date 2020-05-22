@@ -5,218 +5,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PagerOptions extends js.Object {
-  var autoBind: js.UndefOr[Boolean] = js.native
-  var buttonCount: js.UndefOr[Double] = js.native
-  var change: js.UndefOr[js.Function1[/* e */ PagerChangeEvent, Unit]] = js.native
-  var dataSource: js.UndefOr[js.Any | DataSource] = js.native
-  var info: js.UndefOr[Boolean] = js.native
-  var input: js.UndefOr[Boolean] = js.native
-  var linkTemplate: js.UndefOr[String] = js.native
-  var messages: js.UndefOr[PagerMessages] = js.native
-  var name: js.UndefOr[String] = js.native
-  var numeric: js.UndefOr[Boolean] = js.native
-  var pageSizes: js.UndefOr[Boolean | js.Any] = js.native
-  var previousNext: js.UndefOr[Boolean] = js.native
-  var refresh: js.UndefOr[Boolean] = js.native
-  var responsive: js.UndefOr[Boolean] = js.native
-  var selectTemplate: js.UndefOr[String] = js.native
+  var autoBind: js.UndefOr[Boolean] = js.undefined
+  var buttonCount: js.UndefOr[Double] = js.undefined
+  var change: js.UndefOr[js.Function1[/* e */ PagerChangeEvent, Unit]] = js.undefined
+  var dataSource: js.UndefOr[js.Any | DataSource] = js.undefined
+  var info: js.UndefOr[Boolean] = js.undefined
+  var input: js.UndefOr[Boolean] = js.undefined
+  var linkTemplate: js.UndefOr[String] = js.undefined
+  var messages: js.UndefOr[PagerMessages] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var numeric: js.UndefOr[Boolean] = js.undefined
+  var pageSizes: js.UndefOr[Boolean | js.Any] = js.undefined
+  var previousNext: js.UndefOr[Boolean] = js.undefined
+  var refresh: js.UndefOr[Boolean] = js.undefined
+  var responsive: js.UndefOr[Boolean] = js.undefined
+  var selectTemplate: js.UndefOr[String] = js.undefined
 }
 
 object PagerOptions {
   @scala.inline
-  def apply(): PagerOptions = {
+  def apply(
+    autoBind: js.UndefOr[Boolean] = js.undefined,
+    buttonCount: js.UndefOr[Double] = js.undefined,
+    change: /* e */ PagerChangeEvent => Unit = null,
+    dataSource: js.Any | DataSource = null,
+    info: js.UndefOr[Boolean] = js.undefined,
+    input: js.UndefOr[Boolean] = js.undefined,
+    linkTemplate: String = null,
+    messages: PagerMessages = null,
+    name: String = null,
+    numeric: js.UndefOr[Boolean] = js.undefined,
+    pageSizes: Boolean | js.Any = null,
+    previousNext: js.UndefOr[Boolean] = js.undefined,
+    refresh: js.UndefOr[Boolean] = js.undefined,
+    responsive: js.UndefOr[Boolean] = js.undefined,
+    selectTemplate: String = null
+  ): PagerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoBind)) __obj.updateDynamic("autoBind")(autoBind.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(buttonCount)) __obj.updateDynamic("buttonCount")(buttonCount.get.asInstanceOf[js.Any])
+    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction1(change))
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(info)) __obj.updateDynamic("info")(info.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(input)) __obj.updateDynamic("input")(input.get.asInstanceOf[js.Any])
+    if (linkTemplate != null) __obj.updateDynamic("linkTemplate")(linkTemplate.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(numeric)) __obj.updateDynamic("numeric")(numeric.get.asInstanceOf[js.Any])
+    if (pageSizes != null) __obj.updateDynamic("pageSizes")(pageSizes.asInstanceOf[js.Any])
+    if (!js.isUndefined(previousNext)) __obj.updateDynamic("previousNext")(previousNext.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(refresh)) __obj.updateDynamic("refresh")(refresh.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.get.asInstanceOf[js.Any])
+    if (selectTemplate != null) __obj.updateDynamic("selectTemplate")(selectTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[PagerOptions]
   }
-  @scala.inline
-  implicit class PagerOptionsOps[Self <: PagerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoBind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoBind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChange(value: /* e */ PagerChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any | DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: PagerMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumeric(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSizes(value: Boolean | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousNext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

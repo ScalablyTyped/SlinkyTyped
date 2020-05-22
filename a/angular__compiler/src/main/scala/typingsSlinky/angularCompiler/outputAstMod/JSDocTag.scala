@@ -1,7 +1,5 @@
 package typingsSlinky.angularCompiler.outputAstMod
 
-import typingsSlinky.angularCompiler.anon.TagName
-import typingsSlinky.angularCompiler.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,15 @@ trait JSDocTag extends js.Object
 
 object JSDocTag {
   @scala.inline
-  implicit def apply(value: TagName): JSDocTag = value.asInstanceOf[JSDocTag]
+  def TagName(tagName: JSDocTagName | String, text: String = null): JSDocTag = {
+    val __obj = js.Dynamic.literal(tagName = tagName.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JSDocTag]
+  }
   @scala.inline
-  implicit def apply(value: Text): JSDocTag = value.asInstanceOf[JSDocTag]
+  def Text(text: String): JSDocTag = {
+    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JSDocTag]
+  }
 }
 

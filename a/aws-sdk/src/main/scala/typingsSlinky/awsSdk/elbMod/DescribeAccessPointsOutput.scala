@@ -18,41 +18,11 @@ trait DescribeAccessPointsOutput extends js.Object {
 
 object DescribeAccessPointsOutput {
   @scala.inline
-  def apply(): DescribeAccessPointsOutput = {
+  def apply(LoadBalancerDescriptions: LoadBalancerDescriptions = null, NextMarker: Marker = null): DescribeAccessPointsOutput = {
     val __obj = js.Dynamic.literal()
+    if (LoadBalancerDescriptions != null) __obj.updateDynamic("LoadBalancerDescriptions")(LoadBalancerDescriptions.asInstanceOf[js.Any])
+    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAccessPointsOutput]
   }
-  @scala.inline
-  implicit class DescribeAccessPointsOutputOps[Self <: DescribeAccessPointsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancerDescriptions(value: LoadBalancerDescriptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancerDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerDescriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

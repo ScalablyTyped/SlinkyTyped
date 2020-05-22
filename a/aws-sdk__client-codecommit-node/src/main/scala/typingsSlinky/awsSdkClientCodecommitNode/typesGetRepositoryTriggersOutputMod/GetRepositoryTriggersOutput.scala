@@ -7,66 +7,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetRepositoryTriggersOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */
   @JSName("$metadata")
-  var $metadata: ResponseMetadata = js.native
+  var $metadata: ResponseMetadata
   /**
     * <p>The system-generated unique ID for the trigger.</p>
     */
-  var configurationId: js.UndefOr[String] = js.native
+  var configurationId: js.UndefOr[String] = js.undefined
   /**
     * <p>The JSON block of configuration information for each trigger.</p>
     */
-  var triggers: js.UndefOr[js.Array[UnmarshalledRepositoryTrigger]] = js.native
+  var triggers: js.UndefOr[js.Array[UnmarshalledRepositoryTrigger]] = js.undefined
 }
 
 object GetRepositoryTriggersOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): GetRepositoryTriggersOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    configurationId: String = null,
+    triggers: js.Array[UnmarshalledRepositoryTrigger] = null
+  ): GetRepositoryTriggersOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (configurationId != null) __obj.updateDynamic("configurationId")(configurationId.asInstanceOf[js.Any])
+    if (triggers != null) __obj.updateDynamic("triggers")(triggers.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRepositoryTriggersOutput]
   }
-  @scala.inline
-  implicit class GetRepositoryTriggersOutputOps[Self <: GetRepositoryTriggersOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$metadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfigurationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggers(value: js.Array[UnmarshalledRepositoryTrigger]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

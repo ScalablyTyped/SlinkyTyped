@@ -6,78 +6,77 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxOutgoingJob Class */
-@js.native
 trait FaxOutgoingJob extends js.Object {
   /** Available operations, a bit-wise combination of FAX_JOB_OPERATIONS values */
-  val AvailableOperations: FAX_JOB_OPERATIONS_ENUM = js.native
+  val AvailableOperations: FAX_JOB_OPERATIONS_ENUM
   /** Called Station ID */
-  val CSID: String = js.native
+  val CSID: String
   /** Page currently in transmision */
-  val CurrentPage: Double = js.native
+  val CurrentPage: Double
   /** Device ID that transmits the job */
-  val DeviceId: Double = js.native
+  val DeviceId: Double
   /** Document's friendly name */
-  val DocumentName: String = js.native
+  val DocumentName: String
   /** Extended status description */
-  val ExtendedStatus: String = js.native
+  val ExtendedStatus: String
   /** Code of the job's extended status */
-  val ExtendedStatusCode: FAX_JOB_EXTENDED_STATUS_ENUM = js.native
+  val ExtendedStatusCode: FAX_JOB_EXTENDED_STATUS_ENUM
   @JSName("FAXCOMEXLib.FaxOutgoingJob_typekey")
-  var FAXCOMEXLibDotFaxOutgoingJob_typekey: FaxOutgoingJob = js.native
+  var FAXCOMEXLibDotFaxOutgoingJob_typekey: FaxOutgoingJob
   /** Whether to group broadcast receipts */
-  val GroupBroadcastReceipts: Boolean = js.native
+  val GroupBroadcastReceipts: Boolean
   /** Has Cover page */
-  val HasCoverPage: Boolean = js.native
+  val HasCoverPage: Boolean
   /** Unique job ID */
-  val Id: String = js.native
+  val Id: String
   /** Time the job was originally scheduled to be transmitted */
-  val OriginalScheduledTime: VarDate = js.native
+  val OriginalScheduledTime: VarDate
   /** Total number of pages */
-  val Pages: Double = js.native
+  val Pages: Double
   /** Priority of the fax */
-  val Priority: FAX_PRIORITY_TYPE_ENUM = js.native
+  val Priority: FAX_PRIORITY_TYPE_ENUM
   /** Address of the receipt */
-  val ReceiptAddress: String = js.native
+  val ReceiptAddress: String
   /** Type of receipt */
-  val ReceiptType: FAX_RECEIPT_TYPE_ENUM = js.native
+  val ReceiptType: FAX_RECEIPT_TYPE_ENUM
   /** Recipient information object */
-  val Recipient: FaxRecipient = js.native
+  val Recipient: FaxRecipient
   /** Number of failed transmission retries */
-  val Retries: Double = js.native
+  val Retries: Double
   /** When to send the fax */
-  val ScheduleType: FAX_SCHEDULE_TYPE_ENUM = js.native
+  val ScheduleType: FAX_SCHEDULE_TYPE_ENUM
   /** The time the fax job is scheduled to be transmitted */
-  val ScheduledTime: VarDate = js.native
+  val ScheduledTime: VarDate
   /** Sender information object */
-  val Sender: FaxSender = js.native
+  val Sender: FaxSender
   /** Size in bytes of TIFF file */
-  val Size: Double = js.native
+  val Size: Double
   /** Current queue status of the job */
-  val Status: FAX_JOB_STATUS_ENUM = js.native
+  val Status: FAX_JOB_STATUS_ENUM
   /** Cover page's subject field */
-  val Subject: String = js.native
+  val Subject: String
   /** Unique ID the submission process created for the Job */
-  val SubmissionId: String = js.native
+  val SubmissionId: String
   /** Time the job was submitted */
-  val SubmissionTime: VarDate = js.native
+  val SubmissionTime: VarDate
   /** Transmitting Station ID */
-  val TSID: String = js.native
+  val TSID: String
   /** The time the fax job finished its transmission */
-  val TransmissionEnd: VarDate = js.native
+  val TransmissionEnd: VarDate
   /** The time the fax job started its transmission */
-  val TransmissionStart: VarDate = js.native
+  val TransmissionStart: VarDate
   /** Cancel the outbound job */
-  def Cancel(): Unit = js.native
+  def Cancel(): Unit
   /** Copy the job's TIFF image */
-  def CopyTiff(bstrTiffPath: String): Unit = js.native
+  def CopyTiff(bstrTiffPath: String): Unit
   /** Pause the outbound job */
-  def Pause(): Unit = js.native
+  def Pause(): Unit
   /** Refresh the object */
-  def Refresh(): Unit = js.native
+  def Refresh(): Unit
   /** Restart the outbound job */
-  def Restart(): Unit = js.native
+  def Restart(): Unit
   /** Resume the outbound job */
-  def Resume(): Unit = js.native
+  def Resume(): Unit
 }
 
 object FaxOutgoingJob {
@@ -123,223 +122,5 @@ object FaxOutgoingJob {
     __obj.updateDynamic("FAXCOMEXLib.FaxOutgoingJob_typekey")(FAXCOMEXLibDotFaxOutgoingJob_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaxOutgoingJob]
   }
-  @scala.inline
-  implicit class FaxOutgoingJobOps[Self <: FaxOutgoingJob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableOperations(value: FAX_JOB_OPERATIONS_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCSID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CSID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cancel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCopyTiff(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTiff")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCurrentPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtendedStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtendedStatusCode(value: FAX_JOB_EXTENDED_STATUS_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFAXCOMEXLibDotFaxOutgoingJob_typekey(value: FaxOutgoingJob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxOutgoingJob_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupBroadcastReceipts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupBroadcastReceipts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasCoverPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasCoverPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOriginalScheduledTime(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalScheduledTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPause(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPriority(value: FAX_PRIORITY_TYPE_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReceiptAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReceiptAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReceiptType(value: FAX_RECEIPT_TYPE_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReceiptType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipient(value: FaxRecipient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recipient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Refresh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRestart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Restart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResume(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resume")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScheduleType(value: FAX_SCHEDULE_TYPE_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScheduledTime(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSender(value: FaxSender): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: FAX_JOB_STATUS_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmissionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmissionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmissionTime(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmissionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTSID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TSID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransmissionEnd(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransmissionEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransmissionStart(value: VarDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransmissionStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

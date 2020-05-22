@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNative.reactNativeStrings.`number-pad`
   - typingsSlinky.reactNative.reactNativeStrings.`decimal-pad`
 */
-trait KeyboardType extends KeyboardTypeOptions
+trait KeyboardType extends _KeyboardTypeOptions
 
 object KeyboardType {
   @scala.inline

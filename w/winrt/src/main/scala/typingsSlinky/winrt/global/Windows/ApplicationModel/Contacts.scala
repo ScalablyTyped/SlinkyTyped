@@ -2,7 +2,15 @@ package typingsSlinky.winrt.global.Windows.ApplicationModel
 
 import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactFieldCategory
 import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactFieldType
+import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactSelectionMode
+import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.IContactField
+import typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.AddContactResult
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import typingsSlinky.winrt.Windows.Foundation.Uri
+import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStreamReference
+import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStreamWithContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +20,14 @@ import scala.scalajs.js.annotation._
 object Contacts extends js.Object {
   @js.native
   class Contact ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Contact
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Contact {
+    /* CompleteClass */
+    override var fields: IVector[IContactField] = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var thumbnail: IRandomAccessStreamReference = js.native
+  }
   
   @js.native
   class ContactField protected ()
@@ -20,6 +35,14 @@ object Contacts extends js.Object {
     def this(value: String, `type`: ContactFieldType) = this()
     def this(value: String, `type`: ContactFieldType, category: ContactFieldCategory) = this()
     def this(name: String, value: String, `type`: ContactFieldType, category: ContactFieldCategory) = this()
+    /* CompleteClass */
+    override var category: ContactFieldCategory = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var `type`: ContactFieldType = js.native
+    /* CompleteClass */
+    override var value: String = js.native
   }
   
   @js.native
@@ -28,7 +51,24 @@ object Contacts extends js.Object {
   
   @js.native
   class ContactInformation ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactInformation
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactInformation {
+    /* CompleteClass */
+    override var customFields: IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactField] = js.native
+    /* CompleteClass */
+    override var emails: IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactField] = js.native
+    /* CompleteClass */
+    override var instantMessages: IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactInstantMessageField] = js.native
+    /* CompleteClass */
+    override var locations: IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactLocationField] = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var phoneNumbers: IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactField] = js.native
+    /* CompleteClass */
+    override def getThumbnailAsync(): IAsyncOperation[IRandomAccessStreamWithContentType] = js.native
+    /* CompleteClass */
+    override def queryCustomFields(customName: String): IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactField] = js.native
+  }
   
   @js.native
   class ContactInstantMessageField protected ()
@@ -36,6 +76,22 @@ object Contacts extends js.Object {
     def this(userName: String) = this()
     def this(userName: String, category: ContactFieldCategory) = this()
     def this(userName: String, category: ContactFieldCategory, service: String, displayText: String, verb: Uri) = this()
+    /* CompleteClass */
+    override var category: ContactFieldCategory = js.native
+    /* CompleteClass */
+    override var displayText: String = js.native
+    /* CompleteClass */
+    override var launchUri: Uri = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var service: String = js.native
+    /* CompleteClass */
+    override var `type`: ContactFieldType = js.native
+    /* CompleteClass */
+    override var userName: String = js.native
+    /* CompleteClass */
+    override var value: String = js.native
   }
   
   @js.native
@@ -52,11 +108,44 @@ object Contacts extends js.Object {
       country: String,
       postalCode: String
     ) = this()
+    /* CompleteClass */
+    override var category: ContactFieldCategory = js.native
+    /* CompleteClass */
+    override var city: String = js.native
+    /* CompleteClass */
+    override var country: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var postalCode: String = js.native
+    /* CompleteClass */
+    override var region: String = js.native
+    /* CompleteClass */
+    override var street: String = js.native
+    /* CompleteClass */
+    override var `type`: ContactFieldType = js.native
+    /* CompleteClass */
+    override var unstructuredAddress: String = js.native
+    /* CompleteClass */
+    override var value: String = js.native
   }
   
   @js.native
   class ContactPicker ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactPicker
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactPicker {
+    /* CompleteClass */
+    override var commitButtonText: String = js.native
+    /* CompleteClass */
+    override var desiredFields: IVector[String] = js.native
+    /* CompleteClass */
+    override var selectionMode: ContactSelectionMode = js.native
+    /* CompleteClass */
+    override def pickMultipleContactsAsync(): IAsyncOperation[
+        IVectorView[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactInformation]
+      ] = js.native
+    /* CompleteClass */
+    override def pickSingleContactAsync(): IAsyncOperation[typingsSlinky.winrt.Windows.ApplicationModel.Contacts.ContactInformation] = js.native
+  }
   
   @js.native
   class KnownContactField ()
@@ -113,11 +202,27 @@ object Contacts extends js.Object {
   object Provider extends js.Object {
     @js.native
     class ContactPickerUI ()
-      extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
+      extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactPickerUI {
+      /* CompleteClass */
+      override var desiredFields: IVectorView[String] = js.native
+      /* CompleteClass */
+      override var oncontactremoved: js.Any = js.native
+      /* CompleteClass */
+      override var selectionMode: ContactSelectionMode = js.native
+      /* CompleteClass */
+      override def addContact(id: String, contact: typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Contact): AddContactResult = js.native
+      /* CompleteClass */
+      override def containsContact(id: String): Boolean = js.native
+      /* CompleteClass */
+      override def removeContact(id: String): Unit = js.native
+    }
     
     @js.native
     class ContactRemovedEventArgs ()
-      extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs
+      extends typingsSlinky.winrt.Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs {
+      /* CompleteClass */
+      override var id: String = js.native
+    }
     
     @js.native
     object AddContactResult extends js.Object {

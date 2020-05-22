@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignmentSettings {
   // Whether or not to use device execution context for Microsoft Store for Business mobile app.
-  var useDeviceContext: js.UndefOr[Boolean] = js.native
+  var useDeviceContext: js.UndefOr[Boolean] = js.undefined
 }
 
 object MicrosoftStoreForBusinessAppAssignmentSettings {
   @scala.inline
-  def apply(): MicrosoftStoreForBusinessAppAssignmentSettings = {
+  def apply(useDeviceContext: js.UndefOr[Boolean] = js.undefined): MicrosoftStoreForBusinessAppAssignmentSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(useDeviceContext)) __obj.updateDynamic("useDeviceContext")(useDeviceContext.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MicrosoftStoreForBusinessAppAssignmentSettings]
   }
-  @scala.inline
-  implicit class MicrosoftStoreForBusinessAppAssignmentSettingsOps[Self <: MicrosoftStoreForBusinessAppAssignmentSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUseDeviceContext(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDeviceContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseDeviceContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useDeviceContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

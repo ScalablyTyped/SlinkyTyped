@@ -5,121 +5,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProcessOptions extends js.Object {
   /**
     * The path of the CSS source file. You should always set "from", because it is
     * used in source map generation and syntax error messages.
     */
-  var from: js.UndefOr[String] = js.native
+  var from: js.UndefOr[String] = js.undefined
   /**
     * Source map options
     */
-  var map: js.UndefOr[SourceMapOptions | Boolean] = js.native
+  var map: js.UndefOr[SourceMapOptions | Boolean] = js.undefined
   /**
     * Function to generate AST by string.
     */
-  var parser: js.UndefOr[Parser] = js.native
+  var parser: js.UndefOr[Parser] = js.undefined
   /**
     * Class to generate string by AST.
     */
-  var stringifier: js.UndefOr[Stringifier] = js.native
+  var stringifier: js.UndefOr[Stringifier] = js.undefined
   /**
     * Object with parse and stringify.
     */
-  var syntax: js.UndefOr[Syntax] = js.native
+  var syntax: js.UndefOr[Syntax] = js.undefined
   /**
     * The path where you'll put the output CSS file. You should always set "to"
     * to generate correct source maps.
     */
-  var to: js.UndefOr[String] = js.native
+  var to: js.UndefOr[String] = js.undefined
 }
 
 object ProcessOptions {
   @scala.inline
-  def apply(): ProcessOptions = {
+  def apply(
+    from: String = null,
+    map: SourceMapOptions | Boolean = null,
+    parser: (/* css */ ParserInput, /* opts */ js.UndefOr[PickProcessOptionsmapfrom]) => Root_ = null,
+    stringifier: (/* node */ Node, /* builder */ Builder) => Unit = null,
+    syntax: Syntax = null,
+    to: String = null
+  ): ProcessOptions = {
     val __obj = js.Dynamic.literal()
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (parser != null) __obj.updateDynamic("parser")(js.Any.fromFunction2(parser))
+    if (stringifier != null) __obj.updateDynamic("stringifier")(js.Any.fromFunction2(stringifier))
+    if (syntax != null) __obj.updateDynamic("syntax")(syntax.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessOptions]
   }
-  @scala.inline
-  implicit class ProcessOptionsOps[Self <: ProcessOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: SourceMapOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParser(value: (/* css */ ParserInput, /* opts */ js.UndefOr[PickProcessOptionsmapfrom]) => Root_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringifier(value: (/* node */ Node, /* builder */ Builder) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringifier")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutStringifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyntax(value: Syntax): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyntax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

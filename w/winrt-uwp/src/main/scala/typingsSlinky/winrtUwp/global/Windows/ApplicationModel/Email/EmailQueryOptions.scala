@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Email
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,5 +22,20 @@ class EmailQueryOptions ()
     * @param fields The fields against which to search.
     */
   def this(text: String, fields: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailQuerySearchFields) = this()
+  /** Gets the identifiers for the folders in which to search. */
+  /* CompleteClass */
+  override var folderIds: IVector[String] = js.native
+  /** Gets or sets the kind of emails for which to query. */
+  /* CompleteClass */
+  override var kind: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailQueryKind = js.native
+  /** Gets or sets the direction of the sort for the query results. */
+  /* CompleteClass */
+  override var sortDirection: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailQuerySortDirection = js.native
+  /** Gets or sets a Boolean value indicating whether the query results should be sorted. */
+  /* CompleteClass */
+  override var sortProperty: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailQuerySortProperty = js.native
+  /** Gets the text to search for. */
+  /* CompleteClass */
+  override var textSearch: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailQueryTextSearch = js.native
 }
 

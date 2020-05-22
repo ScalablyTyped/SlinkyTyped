@@ -26,9 +26,16 @@ object updateTableCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UpdateTableInput) = this()
+    /* CompleteClass */
+    override val input: UpdateTableInput = js.native
     val middlewareStack: MiddlewareStack[UpdateTableInput, UpdateTableOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[UpdateTableInput, UpdateTableOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UpdateTableInput, UpdateTableOutput] = js.native
   }

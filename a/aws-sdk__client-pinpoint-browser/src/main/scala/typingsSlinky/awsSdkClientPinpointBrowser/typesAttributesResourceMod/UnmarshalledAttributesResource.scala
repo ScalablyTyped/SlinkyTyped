@@ -4,40 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledAttributesResource extends AttributesResource {
   /**
     * The attributes for the application.
     */
   @JSName("Attributes")
-  var Attributes_UnmarshalledAttributesResource: js.UndefOr[js.Array[String]] = js.native
+  var Attributes_UnmarshalledAttributesResource: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object UnmarshalledAttributesResource {
   @scala.inline
-  def apply(): UnmarshalledAttributesResource = {
+  def apply(ApplicationId: String = null, AttributeType: String = null, Attributes: js.Array[String] = null): UnmarshalledAttributesResource = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationId != null) __obj.updateDynamic("ApplicationId")(ApplicationId.asInstanceOf[js.Any])
+    if (AttributeType != null) __obj.updateDynamic("AttributeType")(AttributeType.asInstanceOf[js.Any])
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledAttributesResource]
   }
-  @scala.inline
-  implicit class UnmarshalledAttributesResourceOps[Self <: UnmarshalledAttributesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

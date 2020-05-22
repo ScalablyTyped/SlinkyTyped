@@ -1,5 +1,9 @@
 package typingsSlinky.reactColor.hueMod
 
+import slinky.core.TagMod
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.reactColor.mod.Color
 import typingsSlinky.reactColor.mod.ColorResult
 import typingsSlinky.reactColor.mod.CustomPickerProps
 import typingsSlinky.reactColor.reactColorStrings.horizontal
@@ -8,36 +12,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HueProps extends CustomPickerProps[Hue] {
-  var direction: js.UndefOr[horizontal | vertical] = js.native
+  var direction: js.UndefOr[horizontal | vertical] = js.undefined
 }
 
 object HueProps {
   @scala.inline
-  def apply(onChange: /* color */ ColorResult => Unit): HueProps = {
+  def apply(
+    onChange: /* color */ ColorResult => Unit,
+    color: Color = null,
+    direction: horizontal | vertical = null,
+    key: Key = null,
+    pointer: TagMod[Any] = null,
+    ref: js.UndefOr[Null | LegacyRef[Hue]] = js.undefined
+  ): HueProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (pointer != null) __obj.updateDynamic("pointer")(pointer.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[HueProps]
   }
-  @scala.inline
-  implicit class HuePropsOps[Self <: HueProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

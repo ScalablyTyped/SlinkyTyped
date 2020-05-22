@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class Generator () extends SparqlGenerator {
   def this(options: GeneratorOptions) = this()
+  /* CompleteClass */
+  override def stringify(query: SparqlQuery): String = js.native
 }
 
 @JSImport("sparqljs", "Generator")

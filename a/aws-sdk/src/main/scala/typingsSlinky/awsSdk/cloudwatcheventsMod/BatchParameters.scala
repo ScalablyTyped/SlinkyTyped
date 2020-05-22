@@ -26,53 +26,16 @@ trait BatchParameters extends js.Object {
 
 object BatchParameters {
   @scala.inline
-  def apply(JobDefinition: String, JobName: String): BatchParameters = {
+  def apply(
+    JobDefinition: String,
+    JobName: String,
+    ArrayProperties: BatchArrayProperties = null,
+    RetryStrategy: BatchRetryStrategy = null
+  ): BatchParameters = {
     val __obj = js.Dynamic.literal(JobDefinition = JobDefinition.asInstanceOf[js.Any], JobName = JobName.asInstanceOf[js.Any])
+    if (ArrayProperties != null) __obj.updateDynamic("ArrayProperties")(ArrayProperties.asInstanceOf[js.Any])
+    if (RetryStrategy != null) __obj.updateDynamic("RetryStrategy")(RetryStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchParameters]
   }
-  @scala.inline
-  implicit class BatchParametersOps[Self <: BatchParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobDefinition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArrayProperties(value: BatchArrayProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryStrategy(value: BatchRetryStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryStrategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

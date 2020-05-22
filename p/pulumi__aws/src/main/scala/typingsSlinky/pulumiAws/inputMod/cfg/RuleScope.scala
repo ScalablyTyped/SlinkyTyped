@@ -31,65 +31,18 @@ trait RuleScope extends js.Object {
 
 object RuleScope {
   @scala.inline
-  def apply(): RuleScope = {
+  def apply(
+    complianceResourceId: Input[String] = null,
+    complianceResourceTypes: Input[js.Array[Input[String]]] = null,
+    tagKey: Input[String] = null,
+    tagValue: Input[String] = null
+  ): RuleScope = {
     val __obj = js.Dynamic.literal()
+    if (complianceResourceId != null) __obj.updateDynamic("complianceResourceId")(complianceResourceId.asInstanceOf[js.Any])
+    if (complianceResourceTypes != null) __obj.updateDynamic("complianceResourceTypes")(complianceResourceTypes.asInstanceOf[js.Any])
+    if (tagKey != null) __obj.updateDynamic("tagKey")(tagKey.asInstanceOf[js.Any])
+    if (tagValue != null) __obj.updateDynamic("tagValue")(tagValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleScope]
   }
-  @scala.inline
-  implicit class RuleScopeOps[Self <: RuleScope] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplianceResourceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplianceResourceTypes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceResourceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceResourceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceResourceTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagKey(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagValue(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

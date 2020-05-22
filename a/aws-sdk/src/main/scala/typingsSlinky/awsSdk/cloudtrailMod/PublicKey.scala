@@ -26,71 +26,18 @@ trait PublicKey extends js.Object {
 
 object PublicKey {
   @scala.inline
-  def apply(): PublicKey = {
+  def apply(
+    Fingerprint: String = null,
+    ValidityEndTime: js.Date = null,
+    ValidityStartTime: js.Date = null,
+    Value: ByteBuffer = null
+  ): PublicKey = {
     val __obj = js.Dynamic.literal()
+    if (Fingerprint != null) __obj.updateDynamic("Fingerprint")(Fingerprint.asInstanceOf[js.Any])
+    if (ValidityEndTime != null) __obj.updateDynamic("ValidityEndTime")(ValidityEndTime.asInstanceOf[js.Any])
+    if (ValidityStartTime != null) __obj.updateDynamic("ValidityStartTime")(ValidityStartTime.asInstanceOf[js.Any])
+    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublicKey]
   }
-  @scala.inline
-  implicit class PublicKeyOps[Self <: PublicKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidityEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidityEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidityEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidityEndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidityStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidityStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidityStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidityStartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: ByteBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -59,26 +59,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LayoutAxis extends Axis {
-  var anchor: free | AxisName = js.native
-  var angle: js.Any = js.native
-  var automargin: Boolean = js.native
-  var autotick: Boolean = js.native
-  var constrain: range | domain = js.native
-  var constraintoward: left | center | right | top | middle | bottom = js.native
-  var domain: js.Array[Double] = js.native
-  var fixedrange: Boolean = js.native
-  var layer: (`above traces`) | (`below traces`) = js.native
-  var overlaying: free | AxisName = js.native
-  var position: Double = js.native
-  var rangeselector: PartialRangeSelector = js.native
-  var rangeslider: PartialRangeSlider = js.native
-  var scaleanchor: AxisName = js.native
-  var scaleratio: Double = js.native
-  var side: top | bottom | left | right | clockwise | counterclockwise = js.native
-  var spikedash: String = js.native
-  var spikemode: String = js.native
+  var anchor: free | AxisName
+  var angle: js.Any
+  var automargin: Boolean
+  var autotick: Boolean
+  var constrain: range | domain
+  var constraintoward: left | center | right | top | middle | bottom
+  var domain: js.Array[Double]
+  var fixedrange: Boolean
+  var layer: (`above traces`) | (`below traces`)
+  var overlaying: free | AxisName
+  var position: Double
+  var rangeselector: PartialRangeSelector
+  var rangeslider: PartialRangeSlider
+  var scaleanchor: AxisName
+  var scaleratio: Double
+  var side: top | bottom | left | right | clockwise | counterclockwise
+  var spikedash: String
+  var spikemode: String
 }
 
 object LayoutAxis {
@@ -153,121 +152,5 @@ object LayoutAxis {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayoutAxis]
   }
-  @scala.inline
-  implicit class LayoutAxisOps[Self <: LayoutAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchor(value: free | AxisName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutomargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutotick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autotick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstrain(value: range | domain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstraintoward(value: left | center | right | top | middle | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraintoward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDomain(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFixedrange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedrange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayer(value: (`above traces`) | (`below traces`)): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverlaying(value: free | AxisName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlaying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRangeselector(value: PartialRangeSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeselector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRangeslider(value: PartialRangeSlider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeslider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScaleanchor(value: AxisName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleanchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScaleratio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleratio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSide(value: top | bottom | left | right | clockwise | counterclockwise): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpikedash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spikedash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpikemode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spikemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

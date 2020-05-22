@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("mapbox-gl", "Point")
 @js.native
-class Point protected () extends PointLike {
+class Point protected () extends js.Object {
   def this(x: Double, y: Double) = this()
   var x: Double = js.native
   var y: Double = js.native

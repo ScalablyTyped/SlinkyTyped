@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectsResource extends js.Object {
-  var histories: HistoriesResource = js.native
+  var histories: HistoriesResource
   /**
     * Gets the Tool Results settings for a project.
     *
@@ -16,7 +15,7 @@ trait ProjectsResource extends js.Object {
     *
     * - PERMISSION_DENIED - if the user is not authorized to read from project
     */
-  def getSettings(request: AltFields): Request[ProjectSettings] = js.native
+  def getSettings(request: AltFields): Request[ProjectSettings]
   /**
     * Creates resources for settings which have not yet been set.
     *
@@ -36,7 +35,7 @@ trait ProjectsResource extends js.Object {
     *
     * - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage
     */
-  def initializeSettings(request: AltFields): Request[ProjectSettings] = js.native
+  def initializeSettings(request: AltFields): Request[ProjectSettings]
 }
 
 object ProjectsResource {
@@ -49,31 +48,5 @@ object ProjectsResource {
     val __obj = js.Dynamic.literal(getSettings = js.Any.fromFunction1(getSettings), histories = histories.asInstanceOf[js.Any], initializeSettings = js.Any.fromFunction1(initializeSettings))
     __obj.asInstanceOf[ProjectsResource]
   }
-  @scala.inline
-  implicit class ProjectsResourceOps[Self <: ProjectsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetSettings(value: AltFields => Request[ProjectSettings]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSettings")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHistories(value: HistoriesResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitializeSettings(value: AltFields => Request[ProjectSettings]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializeSettings")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

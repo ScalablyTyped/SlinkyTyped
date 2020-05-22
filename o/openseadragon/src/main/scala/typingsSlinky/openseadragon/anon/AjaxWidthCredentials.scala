@@ -4,82 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AjaxWidthCredentials extends js.Object {
-  var ajaxWidthCredentials: js.UndefOr[String | Boolean] = js.native
-  var buildPyramid: js.UndefOr[Boolean] = js.native
-  var crossOriginPolicy: js.UndefOr[String | Boolean] = js.native
-  var url: String = js.native
-  var useCanvas: js.UndefOr[Boolean] = js.native
+  var ajaxWidthCredentials: js.UndefOr[String | Boolean] = js.undefined
+  var buildPyramid: js.UndefOr[Boolean] = js.undefined
+  var crossOriginPolicy: js.UndefOr[String | Boolean] = js.undefined
+  var url: String
+  var useCanvas: js.UndefOr[Boolean] = js.undefined
 }
 
 object AjaxWidthCredentials {
   @scala.inline
-  def apply(url: String): AjaxWidthCredentials = {
+  def apply(
+    url: String,
+    ajaxWidthCredentials: String | Boolean = null,
+    buildPyramid: js.UndefOr[Boolean] = js.undefined,
+    crossOriginPolicy: String | Boolean = null,
+    useCanvas: js.UndefOr[Boolean] = js.undefined
+  ): AjaxWidthCredentials = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (ajaxWidthCredentials != null) __obj.updateDynamic("ajaxWidthCredentials")(ajaxWidthCredentials.asInstanceOf[js.Any])
+    if (!js.isUndefined(buildPyramid)) __obj.updateDynamic("buildPyramid")(buildPyramid.get.asInstanceOf[js.Any])
+    if (crossOriginPolicy != null) __obj.updateDynamic("crossOriginPolicy")(crossOriginPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(useCanvas)) __obj.updateDynamic("useCanvas")(useCanvas.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AjaxWidthCredentials]
   }
-  @scala.inline
-  implicit class AjaxWidthCredentialsOps[Self <: AjaxWidthCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAjaxWidthCredentials(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWidthCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxWidthCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWidthCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuildPyramid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildPyramid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuildPyramid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildPyramid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOriginPolicy(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOriginPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseCanvas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCanvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useCanvas")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,27 +10,26 @@ import scala.scalajs.js.annotation._
   * This structure collects all necessary information to describe the memory layout of a bitmap having floating point color channels
   * @since OOo 2.0
   */
-@js.native
 trait FloatingPointBitmapLayout extends js.Object {
-  var ColorSpace: XColorSpace = js.native
+  var ColorSpace: XColorSpace
   /**
     * Endianness of the pixel values.
     *
     * This value must be one of the Endianness constants
     */
-  var Endianness: Double = js.native
+  var Endianness: Double
   /**
     * Format type of this bitmap.
     *
     * This value must be one of the {@link FloatingPointBitmapFormat} constants.
     */
-  var Format: Double = js.native
+  var Format: Double
   /**
     * Number of color components per pixel.
     *
     * This value must not be negative
     */
-  var NumComponents: Double = js.native
+  var NumComponents: Double
   /**
     * Byte offset between the start of two consecutive planes.
     *
@@ -39,25 +38,25 @@ trait FloatingPointBitmapLayout extends js.Object {
     * pixel lies consecutively in memory. For a planar layout, the first channel of all pixel is stored consecutive, followed by the second channel, and so
     * forth.
     */
-  var PlaneStride: Double = js.native
+  var PlaneStride: Double
   /**
     * Number of data bytes per scanline.
     *
     * This value must not be negative
     */
-  var ScanLineBytes: Double = js.native
+  var ScanLineBytes: Double
   /**
     * Byte offset between the start of two consecutive scanlines.
     *
     * This value is permitted to be negative, denoting a bitmap whose content is flipped at the x axis.
     */
-  var ScanLineStride: Double = js.native
+  var ScanLineStride: Double
   /**
     * Number of scanlines for this bitmap.
     *
     * This value must not be negative
     */
-  var ScanLines: Double = js.native
+  var ScanLines: Double
 }
 
 object FloatingPointBitmapLayout {
@@ -75,61 +74,5 @@ object FloatingPointBitmapLayout {
     val __obj = js.Dynamic.literal(ColorSpace = ColorSpace.asInstanceOf[js.Any], Endianness = Endianness.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], NumComponents = NumComponents.asInstanceOf[js.Any], PlaneStride = PlaneStride.asInstanceOf[js.Any], ScanLineBytes = ScanLineBytes.asInstanceOf[js.Any], ScanLineStride = ScanLineStride.asInstanceOf[js.Any], ScanLines = ScanLines.asInstanceOf[js.Any])
     __obj.asInstanceOf[FloatingPointBitmapLayout]
   }
-  @scala.inline
-  implicit class FloatingPointBitmapLayoutOps[Self <: FloatingPointBitmapLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorSpace(value: XColorSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndianness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Endianness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumComponents(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumComponents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaneStride(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaneStride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScanLineBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanLineBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScanLineStride(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanLineStride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScanLines(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

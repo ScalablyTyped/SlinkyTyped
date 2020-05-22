@@ -13,6 +13,10 @@ class WebKitPoint ()
   extends typingsSlinky.std.WebKitPoint {
   def this(x: Double) = this()
   def this(x: Double, y: Double) = this()
+  /* CompleteClass */
+  override var x: Double = js.native
+  /* CompleteClass */
+  override var y: Double = js.native
 }
 
 @JSGlobal("WebKitPoint")

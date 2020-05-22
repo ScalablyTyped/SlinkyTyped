@@ -30,7 +30,7 @@ trait TableStyle extends ClientObject {
   var name: String = js.native
   /**
     *
-    * Specifies whether this TableStyle object is read-only. Read-only.
+    * Specifies if this TableStyle object is read-only.
     *
     * [Api set: ExcelApi 1.10]
     */

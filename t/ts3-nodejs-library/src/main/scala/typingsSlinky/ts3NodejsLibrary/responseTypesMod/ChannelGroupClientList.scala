@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChannelGroupClientList extends js.Object {
-  var cgid: js.UndefOr[Double] = js.native
-  var cid: js.UndefOr[Double] = js.native
-  var cldbid: js.UndefOr[Double] = js.native
+  var cgid: js.UndefOr[Double] = js.undefined
+  var cid: js.UndefOr[Double] = js.undefined
+  var cldbid: js.UndefOr[Double] = js.undefined
 }
 
 object ChannelGroupClientList {
   @scala.inline
-  def apply(): ChannelGroupClientList = {
+  def apply(
+    cgid: js.UndefOr[Double] = js.undefined,
+    cid: js.UndefOr[Double] = js.undefined,
+    cldbid: js.UndefOr[Double] = js.undefined
+  ): ChannelGroupClientList = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cgid)) __obj.updateDynamic("cgid")(cgid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cid)) __obj.updateDynamic("cid")(cid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cldbid)) __obj.updateDynamic("cldbid")(cldbid.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelGroupClientList]
   }
-  @scala.inline
-  implicit class ChannelGroupClientListOps[Self <: ChannelGroupClientList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCgid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cgid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCgid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cgid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCldbid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cldbid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCldbid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cldbid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

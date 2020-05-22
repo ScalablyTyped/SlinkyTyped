@@ -46,125 +46,28 @@ trait InputDescription extends js.Object {
 
 object InputDescription {
   @scala.inline
-  def apply(): InputDescription = {
+  def apply(
+    InAppStreamNames: InAppStreamNames = null,
+    InputId: Id = null,
+    InputParallelism: InputParallelism = null,
+    InputProcessingConfigurationDescription: InputProcessingConfigurationDescription = null,
+    InputSchema: SourceSchema = null,
+    InputStartingPositionConfiguration: InputStartingPositionConfiguration = null,
+    KinesisFirehoseInputDescription: KinesisFirehoseInputDescription = null,
+    KinesisStreamsInputDescription: KinesisStreamsInputDescription = null,
+    NamePrefix: InAppStreamName = null
+  ): InputDescription = {
     val __obj = js.Dynamic.literal()
+    if (InAppStreamNames != null) __obj.updateDynamic("InAppStreamNames")(InAppStreamNames.asInstanceOf[js.Any])
+    if (InputId != null) __obj.updateDynamic("InputId")(InputId.asInstanceOf[js.Any])
+    if (InputParallelism != null) __obj.updateDynamic("InputParallelism")(InputParallelism.asInstanceOf[js.Any])
+    if (InputProcessingConfigurationDescription != null) __obj.updateDynamic("InputProcessingConfigurationDescription")(InputProcessingConfigurationDescription.asInstanceOf[js.Any])
+    if (InputSchema != null) __obj.updateDynamic("InputSchema")(InputSchema.asInstanceOf[js.Any])
+    if (InputStartingPositionConfiguration != null) __obj.updateDynamic("InputStartingPositionConfiguration")(InputStartingPositionConfiguration.asInstanceOf[js.Any])
+    if (KinesisFirehoseInputDescription != null) __obj.updateDynamic("KinesisFirehoseInputDescription")(KinesisFirehoseInputDescription.asInstanceOf[js.Any])
+    if (KinesisStreamsInputDescription != null) __obj.updateDynamic("KinesisStreamsInputDescription")(KinesisStreamsInputDescription.asInstanceOf[js.Any])
+    if (NamePrefix != null) __obj.updateDynamic("NamePrefix")(NamePrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputDescription]
   }
-  @scala.inline
-  implicit class InputDescriptionOps[Self <: InputDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInAppStreamNames(value: InAppStreamNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InAppStreamNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInAppStreamNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InAppStreamNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputParallelism(value: InputParallelism): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputParallelism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputParallelism: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputParallelism")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputProcessingConfigurationDescription(value: InputProcessingConfigurationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputProcessingConfigurationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputProcessingConfigurationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputProcessingConfigurationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputSchema(value: SourceSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputStartingPositionConfiguration(value: InputStartingPositionConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStartingPositionConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputStartingPositionConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStartingPositionConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisFirehoseInputDescription(value: KinesisFirehoseInputDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseInputDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisFirehoseInputDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseInputDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisStreamsInputDescription(value: KinesisStreamsInputDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamsInputDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisStreamsInputDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamsInputDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamePrefix(value: InAppStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NamePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NamePrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

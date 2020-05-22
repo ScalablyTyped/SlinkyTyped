@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait lists_ extends js.Object {
-  var numbering: numbering = js.native
+  var numbering: numbering
 }
 
 object lists_ {
@@ -16,19 +15,5 @@ object lists_ {
     val __obj = js.Dynamic.literal(numbering = numbering.asInstanceOf[js.Any])
     __obj.asInstanceOf[lists_]
   }
-  @scala.inline
-  implicit class lists_Ops[Self <: lists_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumbering(value: numbering): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numbering")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

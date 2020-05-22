@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-classBreaks.html)
   */
-@js.native
 trait classBreaks extends js.Object {
   /**
     * Generates class breaks for an input field (or expression) of a [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html) based on a given classification method and normalization type.
@@ -41,7 +40,7 @@ trait classBreaks extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def classBreaks(params: classBreaksClassBreaksParams): js.Promise[ClassBreaksResult] = js.native
+  def classBreaks(params: classBreaksClassBreaksParams): js.Promise[ClassBreaksResult]
 }
 
 object classBreaks {
@@ -50,19 +49,5 @@ object classBreaks {
     val __obj = js.Dynamic.literal(classBreaks = js.Any.fromFunction1(classBreaks))
     __obj.asInstanceOf[classBreaks]
   }
-  @scala.inline
-  implicit class classBreaksOps[Self <: classBreaks] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassBreaks(value: classBreaksClassBreaksParams => js.Promise[ClassBreaksResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classBreaks")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

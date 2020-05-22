@@ -18,151 +18,63 @@ import scala.scalajs.js.annotation._
   * };
   * ```
   */
-@js.native
 trait IModel extends js.Object {
   /**
     * Optional exporter options for this model.
     */
-  var exporterOptions: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var exporterOptions: js.UndefOr[StringDictionary[js.Any]] = js.undefined
   /**
     * Optional layer of this model.
     */
-  var layer: js.UndefOr[String] = js.native
+  var layer: js.UndefOr[String] = js.undefined
   /**
     * Optional array of models within this model.
     */
-  var models: js.UndefOr[IModelMap] = js.native
+  var models: js.UndefOr[IModelMap] = js.undefined
   /**
     * An author may wish to add notes to this model instance.
     */
-  var notes: js.UndefOr[String] = js.native
+  var notes: js.UndefOr[String] = js.undefined
   /**
     * Optional origin location of this model.
     */
-  var origin: js.UndefOr[IPoint] = js.native
+  var origin: js.UndefOr[IPoint] = js.undefined
   /**
     * Optional array of path objects in this model.
     */
-  var paths: js.UndefOr[IPathMap] = js.native
+  var paths: js.UndefOr[IPathMap] = js.undefined
   /**
     * A model may want to specify its type, but this value is not employed yet.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Optional unit system of this model. See UnitType for possible values.
     */
-  var units: js.UndefOr[String] = js.native
+  var units: js.UndefOr[String] = js.undefined
 }
 
 object IModel {
   @scala.inline
-  def apply(): IModel = {
+  def apply(
+    exporterOptions: StringDictionary[js.Any] = null,
+    layer: String = null,
+    models: IModelMap = null,
+    notes: String = null,
+    origin: IPoint = null,
+    paths: IPathMap = null,
+    `type`: String = null,
+    units: String = null
+  ): IModel = {
     val __obj = js.Dynamic.literal()
+    if (exporterOptions != null) __obj.updateDynamic("exporterOptions")(exporterOptions.asInstanceOf[js.Any])
+    if (layer != null) __obj.updateDynamic("layer")(layer.asInstanceOf[js.Any])
+    if (models != null) __obj.updateDynamic("models")(models.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
     __obj.asInstanceOf[IModel]
   }
-  @scala.inline
-  implicit class IModelOps[Self <: IModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExporterOptions(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exporterOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExporterOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exporterOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModels(value: IModelMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: IPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaths(value: IPathMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnits(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

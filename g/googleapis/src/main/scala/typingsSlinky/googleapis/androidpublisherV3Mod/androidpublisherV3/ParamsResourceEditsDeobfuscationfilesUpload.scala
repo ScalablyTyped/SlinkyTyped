@@ -4,7 +4,7 @@ import typingsSlinky.googleAuthLibrary.mod.Compute
 import typingsSlinky.googleAuthLibrary.mod.JWT
 import typingsSlinky.googleAuthLibrary.mod.OAuth2Client
 import typingsSlinky.googleAuthLibrary.mod.UserRefreshClient
-import typingsSlinky.googleapis.AnonBody
+import typingsSlinky.googleapis.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait ParamsResourceEditsDeobfuscationfilesUpload extends StandardParameters {
   /**
     * Media metadata
     */
-  var media: js.UndefOr[AnonBody] = js.native
+  var media: js.UndefOr[Body] = js.native
   /**
     * Unique identifier of the Android app for which the deobfuscatiuon files
     * are being uploaded; for example, "com.spiffygame".
@@ -40,89 +40,36 @@ trait ParamsResourceEditsDeobfuscationfilesUpload extends StandardParameters {
 
 object ParamsResourceEditsDeobfuscationfilesUpload {
   @scala.inline
-  def apply(): ParamsResourceEditsDeobfuscationfilesUpload = {
+  def apply(
+    alt: String = null,
+    apkVersionCode: js.UndefOr[Double] = js.undefined,
+    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
+    deobfuscationFileType: String = null,
+    editId: String = null,
+    fields: String = null,
+    key: String = null,
+    media: Body = null,
+    oauth_token: String = null,
+    packageName: String = null,
+    prettyPrint: js.UndefOr[Boolean] = js.undefined,
+    quotaUser: String = null,
+    userIp: String = null
+  ): ParamsResourceEditsDeobfuscationfilesUpload = {
     val __obj = js.Dynamic.literal()
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (!js.isUndefined(apkVersionCode)) __obj.updateDynamic("apkVersionCode")(apkVersionCode.get.asInstanceOf[js.Any])
+    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
+    if (deobfuscationFileType != null) __obj.updateDynamic("deobfuscationFileType")(deobfuscationFileType.asInstanceOf[js.Any])
+    if (editId != null) __obj.updateDynamic("editId")(editId.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.get.asInstanceOf[js.Any])
+    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
+    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceEditsDeobfuscationfilesUpload]
   }
-  @scala.inline
-  implicit class ParamsResourceEditsDeobfuscationfilesUploadOps[Self <: ParamsResourceEditsDeobfuscationfilesUpload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApkVersionCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apkVersionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApkVersionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apkVersionCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeobfuscationFileType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deobfuscationFileType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeobfuscationFileType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deobfuscationFileType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: AnonBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

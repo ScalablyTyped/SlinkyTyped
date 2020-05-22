@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * Spec to control the desired behavior of rolling update.
   */
-@js.native
 trait RollingUpdateDeployment extends js.Object {
   /**
     * The maximum number of pods that can be scheduled above the desired number of pods. Value
@@ -20,7 +19,7 @@ trait RollingUpdateDeployment extends js.Object {
     * scaled up further, ensuring that total number of pods running at any time during the update
     * is at most 130% of desired pods.
     */
-  var maxSurge: js.UndefOr[Input[Double | String]] = js.native
+  var maxSurge: js.UndefOr[Input[Double | String]] = js.undefined
   /**
     * The maximum number of pods that can be unavailable during the update. Value can be an
     * absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is
@@ -31,46 +30,16 @@ trait RollingUpdateDeployment extends js.Object {
     * ensuring that the total number of pods available at all times during the update is at least
     * 70% of desired pods.
     */
-  var maxUnavailable: js.UndefOr[Input[Double | String]] = js.native
+  var maxUnavailable: js.UndefOr[Input[Double | String]] = js.undefined
 }
 
 object RollingUpdateDeployment {
   @scala.inline
-  def apply(): RollingUpdateDeployment = {
+  def apply(maxSurge: Input[Double | String] = null, maxUnavailable: Input[Double | String] = null): RollingUpdateDeployment = {
     val __obj = js.Dynamic.literal()
+    if (maxSurge != null) __obj.updateDynamic("maxSurge")(maxSurge.asInstanceOf[js.Any])
+    if (maxUnavailable != null) __obj.updateDynamic("maxUnavailable")(maxUnavailable.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollingUpdateDeployment]
   }
-  @scala.inline
-  implicit class RollingUpdateDeploymentOps[Self <: RollingUpdateDeployment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxSurge(value: Input[Double | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSurge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSurge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSurge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxUnavailable(value: Input[Double | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxUnavailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

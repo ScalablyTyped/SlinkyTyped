@@ -60,125 +60,28 @@ trait SchemaPricingSchedule extends js.Object {
 
 object SchemaPricingSchedule {
   @scala.inline
-  def apply(): SchemaPricingSchedule = {
+  def apply(
+    capCostOption: String = null,
+    disregardOverdelivery: js.UndefOr[Boolean] = js.undefined,
+    endDate: String = null,
+    flighted: js.UndefOr[Boolean] = js.undefined,
+    floodlightActivityId: String = null,
+    pricingPeriods: js.Array[SchemaPricingSchedulePricingPeriod] = null,
+    pricingType: String = null,
+    startDate: String = null,
+    testingStartDate: String = null
+  ): SchemaPricingSchedule = {
     val __obj = js.Dynamic.literal()
+    if (capCostOption != null) __obj.updateDynamic("capCostOption")(capCostOption.asInstanceOf[js.Any])
+    if (!js.isUndefined(disregardOverdelivery)) __obj.updateDynamic("disregardOverdelivery")(disregardOverdelivery.get.asInstanceOf[js.Any])
+    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(flighted)) __obj.updateDynamic("flighted")(flighted.get.asInstanceOf[js.Any])
+    if (floodlightActivityId != null) __obj.updateDynamic("floodlightActivityId")(floodlightActivityId.asInstanceOf[js.Any])
+    if (pricingPeriods != null) __obj.updateDynamic("pricingPeriods")(pricingPeriods.asInstanceOf[js.Any])
+    if (pricingType != null) __obj.updateDynamic("pricingType")(pricingType.asInstanceOf[js.Any])
+    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
+    if (testingStartDate != null) __obj.updateDynamic("testingStartDate")(testingStartDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPricingSchedule]
   }
-  @scala.inline
-  implicit class SchemaPricingScheduleOps[Self <: SchemaPricingSchedule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapCostOption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capCostOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapCostOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capCostOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisregardOverdelivery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disregardOverdelivery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisregardOverdelivery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disregardOverdelivery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlighted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flighted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlighted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flighted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloodlightActivityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloodlightActivityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPricingPeriods(value: js.Array[SchemaPricingSchedulePricingPeriod]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingPeriods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPricingPeriods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingPeriods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPricingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPricingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestingStartDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testingStartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestingStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testingStartDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

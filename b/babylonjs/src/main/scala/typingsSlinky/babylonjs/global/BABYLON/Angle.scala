@@ -14,6 +14,20 @@ class Angle protected ()
     * @param radians the angle in radians
     */
   def this(radians: Double) = this()
+  /* CompleteClass */
+  override var _radians: js.Any = js.native
+  /**
+    * Get value in degrees
+    * @returns the Angle value in degrees (float)
+    */
+  /* CompleteClass */
+  override def degrees(): Double = js.native
+  /**
+    * Get value in radians
+    * @returns the Angle value in radians (float)
+    */
+  /* CompleteClass */
+  override def radians(): Double = js.native
 }
 
 /* static members */

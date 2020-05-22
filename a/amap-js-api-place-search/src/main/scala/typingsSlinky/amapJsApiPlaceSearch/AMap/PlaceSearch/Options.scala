@@ -11,266 +11,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * 是否自动调整地图视野使绘制的Marker点都处于视口的可见范围
     */
-  var autoFitView: js.UndefOr[Boolean] = js.native
+  var autoFitView: js.UndefOr[Boolean] = js.undefined
   /**
     * 是否按照层级展示子POI数据
     * children=1，展示子节点POI数据，children=0，不展示子节点数据
     */
-  var children: js.UndefOr[Double] = js.native
+  var children: js.UndefOr[Double] = js.undefined
   /**
     * 兴趣点城市
     */
-  var city: js.UndefOr[String] = js.native
+  var city: js.UndefOr[String] = js.undefined
   /**
     * 是否强制限制在设置的城市内搜索
     */
-  var citylimit: js.UndefOr[Boolean] = js.native
+  var citylimit: js.UndefOr[Boolean] = js.undefined
   /**
     * 是否返回详细信息
     * base返回基本地址信息；all返回基本+详细信息
     */
-  var extensions: js.UndefOr[base | all] = js.native
+  var extensions: js.UndefOr[base | all] = js.undefined
   /**
     * 检索语言类型
     */
-  var lang: js.UndefOr[Lang] = js.native
+  var lang: js.UndefOr[Lang] = js.undefined
   /**
     * Map对象
     */
-  var map: js.UndefOr[Map] = js.native
+  var map: js.UndefOr[Map] = js.undefined
   /**
     * 页码
     */
-  var pageIndex: js.UndefOr[Double] = js.native
+  var pageIndex: js.UndefOr[Double] = js.undefined
   /**
     * 单页显示结果条数
     */
-  var pageSize: js.UndefOr[Double] = js.native
+  var pageSize: js.UndefOr[Double] = js.undefined
   /**
     * 结果列表的HTML容器id或容器元素
     */
-  var panel: js.UndefOr[String | HTMLElement] = js.native
-  var rankBy: js.UndefOr[String] = js.native
+  var panel: js.UndefOr[String | HTMLElement] = js.undefined
+  var rankBy: js.UndefOr[String] = js.undefined
   // internal
-  var renderEngine: js.UndefOr[String] = js.native
+  var renderEngine: js.UndefOr[String] = js.undefined
   /**
     * 绘制的UI风格
     */
-  var renderStyle: js.UndefOr[newpc | default] = js.native
+  var renderStyle: js.UndefOr[newpc | default] = js.undefined
   /**
     * 是否在地图上显示周边搜索的圆或者范围搜索的多边形
     */
-  var showCover: js.UndefOr[Boolean] = js.native
+  var showCover: js.UndefOr[Boolean] = js.undefined
   /**
     * 兴趣点类别，多个类别用“|”分割
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    autoFitView: js.UndefOr[Boolean] = js.undefined,
+    children: js.UndefOr[Double] = js.undefined,
+    city: String = null,
+    citylimit: js.UndefOr[Boolean] = js.undefined,
+    extensions: base | all = null,
+    lang: Lang = null,
+    map: Map = null,
+    pageIndex: js.UndefOr[Double] = js.undefined,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    panel: String | HTMLElement = null,
+    rankBy: String = null,
+    renderEngine: String = null,
+    renderStyle: newpc | default = null,
+    showCover: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoFitView)) __obj.updateDynamic("autoFitView")(autoFitView.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(children)) __obj.updateDynamic("children")(children.get.asInstanceOf[js.Any])
+    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
+    if (!js.isUndefined(citylimit)) __obj.updateDynamic("citylimit")(citylimit.get.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageIndex)) __obj.updateDynamic("pageIndex")(pageIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (panel != null) __obj.updateDynamic("panel")(panel.asInstanceOf[js.Any])
+    if (rankBy != null) __obj.updateDynamic("rankBy")(rankBy.asInstanceOf[js.Any])
+    if (renderEngine != null) __obj.updateDynamic("renderEngine")(renderEngine.asInstanceOf[js.Any])
+    if (renderStyle != null) __obj.updateDynamic("renderStyle")(renderStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCover)) __obj.updateDynamic("showCover")(showCover.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoFitView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFitView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFitView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFitView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCitylimit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("citylimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCitylimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("citylimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: base | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: Lang): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: Map): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanelHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPanel(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRankBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRankBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rankBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderEngine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderEngine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderStyle(value: newpc | default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCover(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

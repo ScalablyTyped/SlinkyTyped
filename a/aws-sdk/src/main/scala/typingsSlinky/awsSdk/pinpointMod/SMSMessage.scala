@@ -15,6 +15,10 @@ trait SMSMessage extends js.Object {
     */
   var Keyword: js.UndefOr[string] = js.native
   /**
+    * The URL of an image or video to display in the SMS message.
+    */
+  var MediaUrl: js.UndefOr[string] = js.native
+  /**
     * The SMS message type. Valid values are: TRANSACTIONAL, the message is critical or time-sensitive, such as a one-time password that supports a customer transaction; and, PROMOTIONAL, the message is not critical or time-sensitive, such as a marketing message.
     */
   var MessageType: js.UndefOr[typingsSlinky.awsSdk.pinpointMod.MessageType] = js.native
@@ -34,89 +38,24 @@ trait SMSMessage extends js.Object {
 
 object SMSMessage {
   @scala.inline
-  def apply(): SMSMessage = {
+  def apply(
+    Body: string = null,
+    Keyword: string = null,
+    MediaUrl: string = null,
+    MessageType: MessageType = null,
+    OriginationNumber: string = null,
+    SenderId: string = null,
+    Substitutions: MapOfListOfString = null
+  ): SMSMessage = {
     val __obj = js.Dynamic.literal()
+    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
+    if (Keyword != null) __obj.updateDynamic("Keyword")(Keyword.asInstanceOf[js.Any])
+    if (MediaUrl != null) __obj.updateDynamic("MediaUrl")(MediaUrl.asInstanceOf[js.Any])
+    if (MessageType != null) __obj.updateDynamic("MessageType")(MessageType.asInstanceOf[js.Any])
+    if (OriginationNumber != null) __obj.updateDynamic("OriginationNumber")(OriginationNumber.asInstanceOf[js.Any])
+    if (SenderId != null) __obj.updateDynamic("SenderId")(SenderId.asInstanceOf[js.Any])
+    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SMSMessage]
   }
-  @scala.inline
-  implicit class SMSMessageOps[Self <: SMSMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyword(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keyword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keyword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageType(value: MessageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginationNumber(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginationNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginationNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginationNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSenderId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSenderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubstitutions(value: MapOfListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubstitutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

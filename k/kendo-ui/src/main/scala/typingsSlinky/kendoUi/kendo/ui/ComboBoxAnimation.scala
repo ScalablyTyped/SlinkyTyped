@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComboBoxAnimation extends js.Object {
-  var close: js.UndefOr[ComboBoxAnimationClose] = js.native
-  var open: js.UndefOr[ComboBoxAnimationOpen] = js.native
+  var close: js.UndefOr[ComboBoxAnimationClose] = js.undefined
+  var open: js.UndefOr[ComboBoxAnimationOpen] = js.undefined
 }
 
 object ComboBoxAnimation {
   @scala.inline
-  def apply(): ComboBoxAnimation = {
+  def apply(close: ComboBoxAnimationClose = null, open: ComboBoxAnimationOpen = null): ComboBoxAnimation = {
     val __obj = js.Dynamic.literal()
+    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
+    if (open != null) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComboBoxAnimation]
   }
-  @scala.inline
-  implicit class ComboBoxAnimationOps[Self <: ComboBoxAnimation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: ComboBoxAnimationClose): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: ComboBoxAnimationOpen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

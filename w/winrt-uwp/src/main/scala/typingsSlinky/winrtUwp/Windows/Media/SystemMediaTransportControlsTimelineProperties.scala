@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents timeline properties of the SystemMediaTransportControls . Pass an instance of this class to the UpdateTimelineProperties method to update the properties. */
-@js.native
 trait SystemMediaTransportControlsTimelineProperties extends js.Object {
   /** Gets or sets a value representing the end time of the currently playing media item. */
-  var endTime: Double = js.native
+  var endTime: Double
   /** Gets or sets a value indicating the latest time within the currently playing media item to which the user can seek. */
-  var maxSeekTime: Double = js.native
+  var maxSeekTime: Double
   /** Gets or sets a value indicating the earliest time within the currently playing media item to which the user can seek. */
-  var minSeekTime: Double = js.native
+  var minSeekTime: Double
   /** Gets or sets a value representing the current playback position within the currently playing media item. */
-  var position: Double = js.native
+  var position: Double
   /** Gets or sets a value representing the start time of the currently playing media item. */
-  var startTime: Double = js.native
+  var startTime: Double
 }
 
 object SystemMediaTransportControlsTimelineProperties {
@@ -25,43 +24,5 @@ object SystemMediaTransportControlsTimelineProperties {
     val __obj = js.Dynamic.literal(endTime = endTime.asInstanceOf[js.Any], maxSeekTime = maxSeekTime.asInstanceOf[js.Any], minSeekTime = minSeekTime.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SystemMediaTransportControlsTimelineProperties]
   }
-  @scala.inline
-  implicit class SystemMediaTransportControlsTimelinePropertiesOps[Self <: SystemMediaTransportControlsTimelineProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSeekTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeekTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinSeekTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSeekTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

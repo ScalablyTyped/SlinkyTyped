@@ -14,10 +14,14 @@ object global extends js.Object {
   object gapi extends js.Object {
     @js.native
     object client extends js.Object {
-      val apis: ApisResource = js.native
-      /** Load APIs Discovery Service v1 */
+      /** Load API Discovery Service v1 */
       def load(name: discovery, version: v1): js.Thenable[Unit] = js.native
       def load(name: discovery, version: v1, callback: js.Function0[_]): Unit = js.native
+      @js.native
+      object discovery extends js.Object {
+        val apis: ApisResource = js.native
+      }
+      
     }
     
   }

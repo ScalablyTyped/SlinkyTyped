@@ -1,20 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "protractor-browser-logs"
-version := "1.0-dt-20200226Z-46eb80"
+version := "1.0-dt-20200226Z-25510a"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "blocking-proxy" % "1.0.1-486ef7",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "protractor" % "5.4.3-aacfc8",
-  "org.scalablytyped.slinky" %%% "q" % "1.5-dt-20200225Z-9c065c",
-  "org.scalablytyped.slinky" %%% "selenium-webdriver" % "4.0-dt-20200302Z-83fca9",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
-  "org.scalablytyped.slinky" %%% "webdriver-js-extender" % "2.1.0-ac0591")
+  "org.scalablytyped.slinky" %%% "blocking-proxy" % "1.0.1-e4b043",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
+  "org.scalablytyped.slinky" %%% "protractor" % "5.4.4-f3d7a7",
+  "org.scalablytyped.slinky" %%% "q" % "1.5-dt-20200515Z-d29ee5",
+  "org.scalablytyped.slinky" %%% "selenium-webdriver" % "4.0-dt-20200515Z-a2c2aa",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
+  "org.scalablytyped.slinky" %%% "webdriver-js-extender" % "2.1.0-70ddf2")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

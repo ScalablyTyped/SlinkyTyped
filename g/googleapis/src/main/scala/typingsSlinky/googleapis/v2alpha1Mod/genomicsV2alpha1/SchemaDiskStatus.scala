@@ -21,41 +21,11 @@ trait SchemaDiskStatus extends js.Object {
 
 object SchemaDiskStatus {
   @scala.inline
-  def apply(): SchemaDiskStatus = {
+  def apply(freeSpaceBytes: String = null, totalSpaceBytes: String = null): SchemaDiskStatus = {
     val __obj = js.Dynamic.literal()
+    if (freeSpaceBytes != null) __obj.updateDynamic("freeSpaceBytes")(freeSpaceBytes.asInstanceOf[js.Any])
+    if (totalSpaceBytes != null) __obj.updateDynamic("totalSpaceBytes")(totalSpaceBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDiskStatus]
   }
-  @scala.inline
-  implicit class SchemaDiskStatusOps[Self <: SchemaDiskStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFreeSpaceBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSpaceBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreeSpaceBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeSpaceBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalSpaceBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSpaceBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalSpaceBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSpaceBytes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

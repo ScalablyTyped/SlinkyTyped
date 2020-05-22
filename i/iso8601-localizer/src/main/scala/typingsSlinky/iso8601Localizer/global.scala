@@ -11,6 +11,12 @@ object global extends js.Object {
   class ISO8601Localizer protected ()
     extends typingsSlinky.iso8601Localizer.ISO8601Localizer {
     def this(userISO8601: String) = this()
+    /* CompleteClass */
+    override def localize(): String = js.native
+    /* CompleteClass */
+    override def returnAs(as: String): localizer = js.native
+    /* CompleteClass */
+    override def to(offset: Double): localizer = js.native
   }
   
 }

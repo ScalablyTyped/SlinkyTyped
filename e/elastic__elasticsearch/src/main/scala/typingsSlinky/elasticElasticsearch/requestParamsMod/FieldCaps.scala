@@ -2,107 +2,54 @@ package typingsSlinky.elasticElasticsearch.requestParamsMod
 
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.all
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.closed
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.hidden
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.none
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.open
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldCaps extends Generic {
-  var allow_no_indices: js.UndefOr[Boolean] = js.native
-  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.native
-  var fields: js.UndefOr[String | js.Array[String]] = js.native
-  var ignore_unavailable: js.UndefOr[Boolean] = js.native
-  var include_unmapped: js.UndefOr[Boolean] = js.native
-  var index: js.UndefOr[String | js.Array[String]] = js.native
+  var allow_no_indices: js.UndefOr[Boolean] = js.undefined
+  var expand_wildcards: js.UndefOr[open | closed | hidden | none | all] = js.undefined
+  var fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var ignore_unavailable: js.UndefOr[Boolean] = js.undefined
+  var include_unmapped: js.UndefOr[Boolean] = js.undefined
+  var index: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object FieldCaps {
   @scala.inline
-  def apply(): FieldCaps = {
+  def apply(
+    allow_no_indices: js.UndefOr[Boolean] = js.undefined,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    expand_wildcards: open | closed | hidden | none | all = null,
+    fields: String | js.Array[String] = null,
+    filter_path: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    ignore_unavailable: js.UndefOr[Boolean] = js.undefined,
+    include_unmapped: js.UndefOr[Boolean] = js.undefined,
+    index: String | js.Array[String] = null,
+    method: String = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null
+  ): FieldCaps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allow_no_indices)) __obj.updateDynamic("allow_no_indices")(allow_no_indices.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (expand_wildcards != null) __obj.updateDynamic("expand_wildcards")(expand_wildcards.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignore_unavailable)) __obj.updateDynamic("ignore_unavailable")(ignore_unavailable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_unmapped)) __obj.updateDynamic("include_unmapped")(include_unmapped.get.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldCaps]
   }
-  @scala.inline
-  implicit class FieldCapsOps[Self <: FieldCaps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow_no_indices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_no_indices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand_wildcards(value: open | closed | none | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpand_wildcards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnore_unavailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore_unavailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_unmapped(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_unmapped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_unmapped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_unmapped")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,53 +22,16 @@ trait RecommendationSummary extends js.Object {
 
 object RecommendationSummary {
   @scala.inline
-  def apply(): RecommendationSummary = {
+  def apply(
+    accountId: AccountId = null,
+    recommendationResourceType: RecommendationSourceType = null,
+    summaries: Summaries = null
+  ): RecommendationSummary = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (recommendationResourceType != null) __obj.updateDynamic("recommendationResourceType")(recommendationResourceType.asInstanceOf[js.Any])
+    if (summaries != null) __obj.updateDynamic("summaries")(summaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecommendationSummary]
   }
-  @scala.inline
-  implicit class RecommendationSummaryOps[Self <: RecommendationSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendationResourceType(value: RecommendationSourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendationResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationResourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaries(value: Summaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummaries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

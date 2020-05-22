@@ -7,69 +7,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueueOptions extends js.Object {
-  var hostId: js.UndefOr[String] = js.native
-  var name: String = js.native
-  var prefix: js.UndefOr[bull | bq | String] = js.native
-  var `type`: js.UndefOr[bull | bee] = js.native
+  var hostId: js.UndefOr[String] = js.undefined
+  var name: String
+  var prefix: js.UndefOr[bull | bq | String] = js.undefined
+  var `type`: js.UndefOr[bull | bee] = js.undefined
 }
 
 object QueueOptions {
   @scala.inline
-  def apply(name: String): QueueOptions = {
+  def apply(name: String, hostId: String = null, prefix: bull | bq | String = null, `type`: bull | bee = null): QueueOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (hostId != null) __obj.updateDynamic("hostId")(hostId.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueueOptions]
   }
-  @scala.inline
-  implicit class QueueOptionsOps[Self <: QueueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: bull | bq | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: bull | bee): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,5 +9,24 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Initializes a new instance of the FocusSettings class. */
 class FocusSettings ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Devices.FocusSettings
+  extends typingsSlinky.winrtUwp.Windows.Media.Devices.FocusSettings {
+  /** Gets or sets a value indicating the auto focus range setting. */
+  /* CompleteClass */
+  override var autoFocusRange: typingsSlinky.winrtUwp.Windows.Media.Devices.AutoFocusRange = js.native
+  /** Gets or sets a value that indicates to the driver if it should disable determining a focus position when the focus search fails. */
+  /* CompleteClass */
+  override var disableDriverFallback: Boolean = js.native
+  /** Gets or sets a value indicating the manual focus distance setting. */
+  /* CompleteClass */
+  override var distance: typingsSlinky.winrtUwp.Windows.Media.Devices.ManualFocusDistance = js.native
+  /** Gets or sets a value indicating the focus mode setting. */
+  /* CompleteClass */
+  override var mode: typingsSlinky.winrtUwp.Windows.Media.Devices.FocusMode = js.native
+  /** Gets or sets the focus value setting. */
+  /* CompleteClass */
+  override var value: Double = js.native
+  /** Gets or sets a value indicating whether the capture device should wait for focus before capturing. */
+  /* CompleteClass */
+  override var waitForFocus: Boolean = js.native
+}
 

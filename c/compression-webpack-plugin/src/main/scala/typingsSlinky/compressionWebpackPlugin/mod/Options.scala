@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait Options[O] extends js.Object
 
-object Options {
-  @scala.inline
-  implicit def apply[O](value: CustomOptions[O]): Options[O] = value.asInstanceOf[Options[O]]
-  @scala.inline
-  implicit def apply[O](value: ZlibOptions): Options[O] = value.asInstanceOf[Options[O]]
-}
-

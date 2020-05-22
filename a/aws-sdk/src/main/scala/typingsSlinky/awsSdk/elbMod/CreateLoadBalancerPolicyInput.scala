@@ -26,47 +26,15 @@ trait CreateLoadBalancerPolicyInput extends js.Object {
 
 object CreateLoadBalancerPolicyInput {
   @scala.inline
-  def apply(LoadBalancerName: AccessPointName, PolicyName: PolicyName, PolicyTypeName: PolicyTypeName): CreateLoadBalancerPolicyInput = {
+  def apply(
+    LoadBalancerName: AccessPointName,
+    PolicyName: PolicyName,
+    PolicyTypeName: PolicyTypeName,
+    PolicyAttributes: PolicyAttributes = null
+  ): CreateLoadBalancerPolicyInput = {
     val __obj = js.Dynamic.literal(LoadBalancerName = LoadBalancerName.asInstanceOf[js.Any], PolicyName = PolicyName.asInstanceOf[js.Any], PolicyTypeName = PolicyTypeName.asInstanceOf[js.Any])
+    if (PolicyAttributes != null) __obj.updateDynamic("PolicyAttributes")(PolicyAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLoadBalancerPolicyInput]
   }
-  @scala.inline
-  implicit class CreateLoadBalancerPolicyInputOps[Self <: CreateLoadBalancerPolicyInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancerName(value: AccessPointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: PolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyTypeName(value: PolicyTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyTypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyAttributes(value: PolicyAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

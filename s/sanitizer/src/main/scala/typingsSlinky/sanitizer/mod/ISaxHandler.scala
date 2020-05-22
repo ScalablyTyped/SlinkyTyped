@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISaxHandler extends js.Object {
-  def cdata(text: String, param: js.Any): Unit = js.native
-  def comment(text: String, param: js.Any): Unit = js.native
-  def endDoc(param: js.Any): Unit = js.native
-  def endTag(name: String, param: js.Any): Unit = js.native
-  def pcdata(text: String, param: js.Any): Unit = js.native
-  def rcdata(text: String, param: js.Any): Unit = js.native
-  def startDoc(param: js.Any): Unit = js.native
-  def startTag(name: String, attribs: js.Array[String], param: js.Any): Unit = js.native
+  def cdata(text: String, param: js.Any): Unit
+  def comment(text: String, param: js.Any): Unit
+  def endDoc(param: js.Any): Unit
+  def endTag(name: String, param: js.Any): Unit
+  def pcdata(text: String, param: js.Any): Unit
+  def rcdata(text: String, param: js.Any): Unit
+  def startDoc(param: js.Any): Unit
+  def startTag(name: String, attribs: js.Array[String], param: js.Any): Unit
 }
 
 object ISaxHandler {
@@ -31,61 +30,5 @@ object ISaxHandler {
     val __obj = js.Dynamic.literal(cdata = js.Any.fromFunction2(cdata), comment = js.Any.fromFunction2(comment), endDoc = js.Any.fromFunction1(endDoc), endTag = js.Any.fromFunction2(endTag), pcdata = js.Any.fromFunction2(pcdata), rcdata = js.Any.fromFunction2(rcdata), startDoc = js.Any.fromFunction1(startDoc), startTag = js.Any.fromFunction3(startTag))
     __obj.asInstanceOf[ISaxHandler]
   }
-  @scala.inline
-  implicit class ISaxHandlerOps[Self <: ISaxHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCdata(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withComment(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEndDoc(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDoc")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEndTag(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTag")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPcdata(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pcdata")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRcdata(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rcdata")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStartDoc(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDoc")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartTag(value: (String, js.Array[String], js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTag")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

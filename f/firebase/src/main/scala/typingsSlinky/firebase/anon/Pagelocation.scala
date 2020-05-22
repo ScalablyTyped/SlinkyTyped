@@ -5,63 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Pagelocation
   extends /* key */ StringDictionary[js.Any] {
-  var page_location: js.UndefOr[String] = js.native
-  var page_path: js.UndefOr[String] = js.native
-  var page_title: js.UndefOr[String] = js.native
+  var page_location: js.UndefOr[String] = js.undefined
+  var page_path: js.UndefOr[String] = js.undefined
+  var page_title: js.UndefOr[String] = js.undefined
 }
 
 object Pagelocation {
   @scala.inline
-  def apply(): Pagelocation = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    page_location: String = null,
+    page_path: String = null,
+    page_title: String = null
+  ): Pagelocation = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (page_location != null) __obj.updateDynamic("page_location")(page_location.asInstanceOf[js.Any])
+    if (page_path != null) __obj.updateDynamic("page_path")(page_path.asInstanceOf[js.Any])
+    if (page_title != null) __obj.updateDynamic("page_title")(page_title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pagelocation]
   }
-  @scala.inline
-  implicit class PagelocationOps[Self <: Pagelocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPage_location(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage_location: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage_path(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage_title(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage_title: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

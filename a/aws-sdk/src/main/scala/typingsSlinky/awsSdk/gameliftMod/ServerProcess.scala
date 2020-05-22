@@ -22,41 +22,14 @@ trait ServerProcess extends js.Object {
 
 object ServerProcess {
   @scala.inline
-  def apply(ConcurrentExecutions: PositiveInteger, LaunchPath: NonZeroAndMaxString): ServerProcess = {
+  def apply(
+    ConcurrentExecutions: PositiveInteger,
+    LaunchPath: NonZeroAndMaxString,
+    Parameters: NonZeroAndMaxString = null
+  ): ServerProcess = {
     val __obj = js.Dynamic.literal(ConcurrentExecutions = ConcurrentExecutions.asInstanceOf[js.Any], LaunchPath = LaunchPath.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerProcess]
   }
-  @scala.inline
-  implicit class ServerProcessOps[Self <: ServerProcess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConcurrentExecutions(value: PositiveInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConcurrentExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLaunchPath(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameters(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

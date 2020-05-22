@@ -18,29 +18,10 @@ trait SchemaInstancesStartWithEncryptionKeyRequest extends js.Object {
 
 object SchemaInstancesStartWithEncryptionKeyRequest {
   @scala.inline
-  def apply(): SchemaInstancesStartWithEncryptionKeyRequest = {
+  def apply(disks: js.Array[SchemaCustomerEncryptionKeyProtectedDisk] = null): SchemaInstancesStartWithEncryptionKeyRequest = {
     val __obj = js.Dynamic.literal()
+    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesStartWithEncryptionKeyRequest]
   }
-  @scala.inline
-  implicit class SchemaInstancesStartWithEncryptionKeyRequestOps[Self <: SchemaInstancesStartWithEncryptionKeyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisks(value: js.Array[SchemaCustomerEncryptionKeyProtectedDisk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

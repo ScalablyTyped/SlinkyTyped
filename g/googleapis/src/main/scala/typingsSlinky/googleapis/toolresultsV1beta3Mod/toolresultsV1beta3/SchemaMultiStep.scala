@@ -26,53 +26,16 @@ trait SchemaMultiStep extends js.Object {
 
 object SchemaMultiStep {
   @scala.inline
-  def apply(): SchemaMultiStep = {
+  def apply(
+    multistepNumber: js.UndefOr[Double] = js.undefined,
+    primaryStep: SchemaPrimaryStep = null,
+    primaryStepId: String = null
+  ): SchemaMultiStep = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(multistepNumber)) __obj.updateDynamic("multistepNumber")(multistepNumber.get.asInstanceOf[js.Any])
+    if (primaryStep != null) __obj.updateDynamic("primaryStep")(primaryStep.asInstanceOf[js.Any])
+    if (primaryStepId != null) __obj.updateDynamic("primaryStepId")(primaryStepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMultiStep]
   }
-  @scala.inline
-  implicit class SchemaMultiStepOps[Self <: SchemaMultiStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMultistepNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multistepNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultistepNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multistepNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryStep(value: SchemaPrimaryStep): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryStepId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryStepId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryStepId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryStepId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

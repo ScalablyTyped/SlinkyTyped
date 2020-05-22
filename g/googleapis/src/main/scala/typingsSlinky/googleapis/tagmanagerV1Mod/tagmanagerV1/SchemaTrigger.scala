@@ -154,353 +154,66 @@ trait SchemaTrigger extends js.Object {
 
 object SchemaTrigger {
   @scala.inline
-  def apply(): SchemaTrigger = {
+  def apply(
+    accountId: String = null,
+    autoEventFilter: js.Array[SchemaCondition] = null,
+    checkValidation: SchemaParameter = null,
+    containerId: String = null,
+    continuousTimeMinMilliseconds: SchemaParameter = null,
+    customEventFilter: js.Array[SchemaCondition] = null,
+    eventName: SchemaParameter = null,
+    filter: js.Array[SchemaCondition] = null,
+    fingerprint: String = null,
+    horizontalScrollPercentageList: SchemaParameter = null,
+    interval: SchemaParameter = null,
+    intervalSeconds: SchemaParameter = null,
+    limit: SchemaParameter = null,
+    maxTimerLengthSeconds: SchemaParameter = null,
+    name: String = null,
+    parameter: js.Array[SchemaParameter] = null,
+    parentFolderId: String = null,
+    selector: SchemaParameter = null,
+    totalTimeMinMilliseconds: SchemaParameter = null,
+    triggerId: String = null,
+    `type`: String = null,
+    uniqueTriggerId: SchemaParameter = null,
+    verticalScrollPercentageList: SchemaParameter = null,
+    visibilitySelector: SchemaParameter = null,
+    visiblePercentageMax: SchemaParameter = null,
+    visiblePercentageMin: SchemaParameter = null,
+    waitForTags: SchemaParameter = null,
+    waitForTagsTimeout: SchemaParameter = null
+  ): SchemaTrigger = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (autoEventFilter != null) __obj.updateDynamic("autoEventFilter")(autoEventFilter.asInstanceOf[js.Any])
+    if (checkValidation != null) __obj.updateDynamic("checkValidation")(checkValidation.asInstanceOf[js.Any])
+    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
+    if (continuousTimeMinMilliseconds != null) __obj.updateDynamic("continuousTimeMinMilliseconds")(continuousTimeMinMilliseconds.asInstanceOf[js.Any])
+    if (customEventFilter != null) __obj.updateDynamic("customEventFilter")(customEventFilter.asInstanceOf[js.Any])
+    if (eventName != null) __obj.updateDynamic("eventName")(eventName.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
+    if (horizontalScrollPercentageList != null) __obj.updateDynamic("horizontalScrollPercentageList")(horizontalScrollPercentageList.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (intervalSeconds != null) __obj.updateDynamic("intervalSeconds")(intervalSeconds.asInstanceOf[js.Any])
+    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
+    if (maxTimerLengthSeconds != null) __obj.updateDynamic("maxTimerLengthSeconds")(maxTimerLengthSeconds.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parameter != null) __obj.updateDynamic("parameter")(parameter.asInstanceOf[js.Any])
+    if (parentFolderId != null) __obj.updateDynamic("parentFolderId")(parentFolderId.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (totalTimeMinMilliseconds != null) __obj.updateDynamic("totalTimeMinMilliseconds")(totalTimeMinMilliseconds.asInstanceOf[js.Any])
+    if (triggerId != null) __obj.updateDynamic("triggerId")(triggerId.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (uniqueTriggerId != null) __obj.updateDynamic("uniqueTriggerId")(uniqueTriggerId.asInstanceOf[js.Any])
+    if (verticalScrollPercentageList != null) __obj.updateDynamic("verticalScrollPercentageList")(verticalScrollPercentageList.asInstanceOf[js.Any])
+    if (visibilitySelector != null) __obj.updateDynamic("visibilitySelector")(visibilitySelector.asInstanceOf[js.Any])
+    if (visiblePercentageMax != null) __obj.updateDynamic("visiblePercentageMax")(visiblePercentageMax.asInstanceOf[js.Any])
+    if (visiblePercentageMin != null) __obj.updateDynamic("visiblePercentageMin")(visiblePercentageMin.asInstanceOf[js.Any])
+    if (waitForTags != null) __obj.updateDynamic("waitForTags")(waitForTags.asInstanceOf[js.Any])
+    if (waitForTagsTimeout != null) __obj.updateDynamic("waitForTagsTimeout")(waitForTagsTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrigger]
   }
-  @scala.inline
-  implicit class SchemaTriggerOps[Self <: SchemaTrigger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoEventFilter(value: js.Array[SchemaCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEventFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoEventFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoEventFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckValidation(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContinuousTimeMinMilliseconds(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuousTimeMinMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContinuousTimeMinMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("continuousTimeMinMilliseconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomEventFilter(value: js.Array[SchemaCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customEventFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomEventFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customEventFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventName(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: js.Array[SchemaCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalScrollPercentageList(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalScrollPercentageList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalScrollPercentageList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalScrollPercentageList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntervalSeconds(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTimerLengthSeconds(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimerLengthSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTimerLengthSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimerLengthSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameter(value: js.Array[SchemaParameter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentFolderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFolderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentFolderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFolderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalTimeMinMilliseconds(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalTimeMinMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalTimeMinMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalTimeMinMilliseconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniqueTriggerId(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueTriggerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniqueTriggerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueTriggerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalScrollPercentageList(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalScrollPercentageList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalScrollPercentageList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalScrollPercentageList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisibilitySelector(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilitySelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibilitySelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibilitySelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisiblePercentageMax(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visiblePercentageMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisiblePercentageMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visiblePercentageMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisiblePercentageMin(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visiblePercentageMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisiblePercentageMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visiblePercentageMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForTags(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForTagsTimeout(value: SchemaParameter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTagsTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForTagsTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTagsTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

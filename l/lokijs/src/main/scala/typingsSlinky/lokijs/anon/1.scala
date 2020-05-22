@@ -4,42 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `1` extends js.Object {
-  var serializationMethod: js.UndefOr[String | Null] = js.native
+  var serializationMethod: js.UndefOr[String | Null] = js.undefined
 }
 
 object `1` {
   @scala.inline
-  def apply(): `1` = {
+  def apply(serializationMethod: js.UndefOr[Null | String] = js.undefined): `1` = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(serializationMethod)) __obj.updateDynamic("serializationMethod")(serializationMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1`]
   }
-  @scala.inline
-  implicit class `1Ops`[Self <: `1`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSerializationMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerializationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerializationMethodNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(null)
-        ret
-    }
-  }
-  
 }
 

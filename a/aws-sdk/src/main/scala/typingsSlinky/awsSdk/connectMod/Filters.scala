@@ -18,41 +18,11 @@ trait Filters extends js.Object {
 
 object Filters {
   @scala.inline
-  def apply(): Filters = {
+  def apply(Channels: Channels = null, Queues: Queues = null): Filters = {
     val __obj = js.Dynamic.literal()
+    if (Channels != null) __obj.updateDynamic("Channels")(Channels.asInstanceOf[js.Any])
+    if (Queues != null) __obj.updateDynamic("Queues")(Queues.asInstanceOf[js.Any])
     __obj.asInstanceOf[Filters]
   }
-  @scala.inline
-  implicit class FiltersOps[Self <: Filters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannels(value: Channels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueues(value: Queues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Queues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Queues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

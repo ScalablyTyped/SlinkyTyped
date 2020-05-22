@@ -22,47 +22,15 @@ trait DeleteInstanceRequest extends js.Object {
 
 object DeleteInstanceRequest {
   @scala.inline
-  def apply(InstanceId: String): DeleteInstanceRequest = {
+  def apply(
+    InstanceId: String,
+    DeleteElasticIp: js.UndefOr[Boolean] = js.undefined,
+    DeleteVolumes: js.UndefOr[Boolean] = js.undefined
+  ): DeleteInstanceRequest = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteElasticIp)) __obj.updateDynamic("DeleteElasticIp")(DeleteElasticIp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteVolumes)) __obj.updateDynamic("DeleteVolumes")(DeleteVolumes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteInstanceRequest]
   }
-  @scala.inline
-  implicit class DeleteInstanceRequestOps[Self <: DeleteInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteElasticIp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteElasticIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteElasticIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteElasticIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteVolumes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteVolumes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteVolumes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteVolumes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

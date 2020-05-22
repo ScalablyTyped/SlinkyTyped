@@ -14,29 +14,10 @@ trait MsSmoothEncryptionSettings extends js.Object {
 
 object MsSmoothEncryptionSettings {
   @scala.inline
-  def apply(): MsSmoothEncryptionSettings = {
+  def apply(SpekeKeyProvider: SpekeKeyProvider = null): MsSmoothEncryptionSettings = {
     val __obj = js.Dynamic.literal()
+    if (SpekeKeyProvider != null) __obj.updateDynamic("SpekeKeyProvider")(SpekeKeyProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[MsSmoothEncryptionSettings]
   }
-  @scala.inline
-  implicit class MsSmoothEncryptionSettingsOps[Self <: MsSmoothEncryptionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpekeKeyProvider(value: SpekeKeyProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpekeKeyProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

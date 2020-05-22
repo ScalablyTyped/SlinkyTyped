@@ -13,108 +13,60 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
   */
-@js.native
 trait PlusNativeObjRichTextStyles extends js.Object {
   /**
     * 富文本内容的水平对齐方式
     * 对整体内容有效，无法单独控制每行的内容。
-    * 	可取值：
-    * 	"left"-字体在指定的区域中水平居左对齐；
-    * 	"center"-字体在指定的区域中水平居中对齐；
-    * 	"right"-字体在指定的区域中水平居右对齐。
-    * 	默认值为"left"。
+    *     可取值：
+    *     "left"-字体在指定的区域中水平居左对齐；
+    *     "center"-字体在指定的区域中水平居中对齐；
+    *     "right"-字体在指定的区域中水平居右对齐。
+    *     默认值为"left"。
     * - left: 富文本内容水平居左对齐
     * - center: 富文本内容水平居中对齐
     * - right: 富文本内容水平居右对齐
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var align: js.UndefOr[left | center | right] = js.native
+  var align: js.UndefOr[left | center | right] = js.undefined
   /**
     * 富文本默认使用的字体名称
-    * 例如"Times New Roman"，	如果指定名称的字体不存在，则使用系统默认字体。
+    * 例如"Times New Roman"，    如果指定名称的字体不存在，则使用系统默认字体。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var family: js.UndefOr[String] = js.native
+  var family: js.UndefOr[String] = js.undefined
   /**
     * 富文本默认使用的字体文件路径
     * 加载字体文件路径，必须为本地路径，如果指定的文件路径无效，则使用系统默认字体。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var fontSrc: js.UndefOr[String] = js.native
+  var fontSrc: js.UndefOr[String] = js.undefined
   /**
     * 点击事件回调函数
     * 如果设置此属性，则表示拦截所有RichText上的点击事件（不透传事件）。
-    * 	如果没有设置此属性，则仅拦截操作包含onclick属性的a/img标签的点击事件。
+    *     如果没有设置此属性，则仅拦截操作包含onclick属性的a/img标签的点击事件。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var onClick: js.UndefOr[js.Function1[/* result */ js.Any, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* result */ js.Any, Unit]] = js.undefined
 }
 
 object PlusNativeObjRichTextStyles {
   @scala.inline
-  def apply(): PlusNativeObjRichTextStyles = {
+  def apply(
+    align: left | center | right = null,
+    family: String = null,
+    fontSrc: String = null,
+    onClick: /* result */ js.Any => Unit = null
+  ): PlusNativeObjRichTextStyles = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
+    if (fontSrc != null) __obj.updateDynamic("fontSrc")(fontSrc.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     __obj.asInstanceOf[PlusNativeObjRichTextStyles]
   }
-  @scala.inline
-  implicit class PlusNativeObjRichTextStylesOps[Self <: PlusNativeObjRichTextStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: left | center | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSrc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* result */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

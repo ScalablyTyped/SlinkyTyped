@@ -15,313 +15,105 @@ import scala.scalajs.js.annotation._
 /* Inlined parent tablesorter.tablesorter/Filtering/Formatter/Options/ComparableOptions.ComparableOptions */
 /* Inlined parent tablesorter.tablesorter/Filtering/Formatter/Options/DelayableOptions.DelayableOptions */
 /* Inlined parent tablesorter.tablesorter/Filtering/Formatter/Options/StrictOptions.StrictOptions */
-@js.native
 trait UISpinnerOptions extends js.Object {
   /**
     * A value indicating whether to add a box for enabling/disabling the control.
     */
-  var addToggle: js.UndefOr[Boolean] = js.native
+  var addToggle: js.UndefOr[Boolean] = js.undefined
   /**
     * The label of the control.
     */
-  var cellText: js.UndefOr[String] = js.native
-  var change: js.UndefOr[SpinnerEvent[js.Object]] = js.native
+  var cellText: js.UndefOr[String] = js.undefined
+  var change: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
   /**
     * The compare-operators supported by the control.
     */
-  var compare: js.UndefOr[String | js.Array[String]] = js.native
-  var create: js.UndefOr[SpinnerEvent[js.Object]] = js.native
-  var culture: js.UndefOr[String] = js.native
+  var compare: js.UndefOr[String | js.Array[String]] = js.undefined
+  var create: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
+  var culture: js.UndefOr[String] = js.undefined
   /**
     * A value indicating whether the value of the filter should be set delayed.
     */
-  var delayed: js.UndefOr[Boolean] = js.native
+  var delayed: js.UndefOr[Boolean] = js.undefined
   /**
     * A value indicating whether the control is initially disabled.
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * A value indicatin whether only exact matching values should be included.
     */
-  var exactMatch: js.UndefOr[Boolean] = js.native
-  var icons: js.UndefOr[js.Any] = js.native
-  var incremental: js.UndefOr[js.Any] = js.native
+  var exactMatch: js.UndefOr[Boolean] = js.undefined
+  var icons: js.UndefOr[js.Any] = js.undefined
+  var incremental: js.UndefOr[js.Any] = js.undefined
   /**
     * The maximum value of the control.
     */
-  var max: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[Double] = js.undefined
   /**
     * The minimum value of the control.
     */
-  var min: js.UndefOr[Double] = js.native
-  var numberFormat: js.UndefOr[String] = js.native
-  var page: js.UndefOr[Double] = js.native
-  var spin: js.UndefOr[SpinnerEvent[SpinnerUIParam]] = js.native
-  var start: js.UndefOr[SpinnerEvent[js.Object]] = js.native
+  var min: js.UndefOr[Double] = js.undefined
+  var numberFormat: js.UndefOr[String] = js.undefined
+  var page: js.UndefOr[Double] = js.undefined
+  var spin: js.UndefOr[SpinnerEvent[SpinnerUIParam]] = js.undefined
+  var start: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
   /**
     * The interval of the control.
     */
-  var step: js.UndefOr[Double] = js.native
-  var stop: js.UndefOr[SpinnerEvent[js.Object]] = js.native
+  var step: js.UndefOr[Double] = js.undefined
+  var stop: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
   /**
     * The default value of the control.
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object UISpinnerOptions {
   @scala.inline
-  def apply(): UISpinnerOptions = {
+  def apply(
+    addToggle: js.UndefOr[Boolean] = js.undefined,
+    cellText: String = null,
+    change: (/* event */ JQueryEventObject, js.Object) => Unit = null,
+    compare: String | js.Array[String] = null,
+    create: (/* event */ JQueryEventObject, js.Object) => Unit = null,
+    culture: String = null,
+    delayed: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    exactMatch: js.UndefOr[Boolean] = js.undefined,
+    icons: js.Any = null,
+    incremental: js.Any = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    numberFormat: String = null,
+    page: js.UndefOr[Double] = js.undefined,
+    spin: (/* event */ JQueryEventObject, SpinnerUIParam) => Unit = null,
+    start: (/* event */ JQueryEventObject, js.Object) => Unit = null,
+    step: js.UndefOr[Double] = js.undefined,
+    stop: (/* event */ JQueryEventObject, js.Object) => Unit = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): UISpinnerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addToggle)) __obj.updateDynamic("addToggle")(addToggle.get.asInstanceOf[js.Any])
+    if (cellText != null) __obj.updateDynamic("cellText")(cellText.asInstanceOf[js.Any])
+    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction2(change))
+    if (compare != null) __obj.updateDynamic("compare")(compare.asInstanceOf[js.Any])
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
+    if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayed)) __obj.updateDynamic("delayed")(delayed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exactMatch)) __obj.updateDynamic("exactMatch")(exactMatch.get.asInstanceOf[js.Any])
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (incremental != null) __obj.updateDynamic("incremental")(incremental.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (numberFormat != null) __obj.updateDynamic("numberFormat")(numberFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (spin != null) __obj.updateDynamic("spin")(js.Any.fromFunction2(spin))
+    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction2(start))
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction2(stop))
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UISpinnerOptions]
   }
-  @scala.inline
-  implicit class UISpinnerOptionsOps[Self <: UISpinnerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddToggle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addToggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addToggle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChange(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompare(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCulture(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("culture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCulture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("culture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExactMatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExactMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncremental(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incremental")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncremental: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incremental")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpin(value: (/* event */ JQueryEventObject, SpinnerUIParam) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spin")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSpin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStop(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

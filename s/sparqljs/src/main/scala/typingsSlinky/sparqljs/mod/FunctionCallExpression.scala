@@ -5,48 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FunctionCallExpression
   extends BaseExpression
-     with Expression {
-  var args: js.Array[Expression] = js.native
-  var function: String = js.native
+     with _Expression {
+  var args: js.Array[Expression]
+  var function: String
   @JSName("type")
-  var type_FunctionCallExpression: functionCall = js.native
+  var type_FunctionCallExpression: functionCall
 }
 
 object FunctionCallExpression {
   @scala.inline
-  def apply(args: js.Array[Expression], function: String, `type`: functionCall): FunctionCallExpression = {
+  def apply(
+    args: js.Array[Expression],
+    function: String,
+    `type`: functionCall,
+    distinct: js.UndefOr[Boolean] = js.undefined
+  ): FunctionCallExpression = {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], function = function.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(distinct)) __obj.updateDynamic("distinct")(distinct.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionCallExpression]
   }
-  @scala.inline
-  implicit class FunctionCallExpressionOps[Self <: FunctionCallExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[Expression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: functionCall): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

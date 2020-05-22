@@ -1,9 +1,9 @@
 package typingsSlinky.googleapis.doubleclicksearchV2Mod.doubleclicksearchV2
 
-import typingsSlinky.googleapis.AnonAdGroupId
-import typingsSlinky.googleapis.AnonChangedAttributesSinceTimestamp
-import typingsSlinky.googleapis.AnonColumn
-import typingsSlinky.googleapis.AnonSortOrder
+import typingsSlinky.googleapis.anon.AdGroupId
+import typingsSlinky.googleapis.anon.ChangedAttributesSinceTimestamp
+import typingsSlinky.googleapis.anon.Column
+import typingsSlinky.googleapis.anon.SortOrder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait SchemaReportRequest extends js.Object {
     * A list of filters to be applied to the report. The maximum number of
     * filters per request is 300.
     */
-  var filters: js.UndefOr[js.Array[AnonColumn]] = js.native
+  var filters: js.UndefOr[js.Array[Column]] = js.native
   /**
     * Determines if removed entities should be included in the report. Defaults
     * to false. Deprecated, please use includeRemovedEntities instead.
@@ -53,13 +53,13 @@ trait SchemaReportRequest extends js.Object {
     * sorting to be performed on the report rows. The maximum number of
     * orderings per request is 300.
     */
-  var orderBy: js.UndefOr[js.Array[AnonSortOrder]] = js.native
+  var orderBy: js.UndefOr[js.Array[SortOrder]] = js.native
   /**
     * The reportScope is a set of IDs that are used to determine which subset
     * of entities will be returned in the report. The full lineage of IDs from
     * the lowest scoped level desired up through agency is required.
     */
-  var reportScope: js.UndefOr[AnonAdGroupId] = js.native
+  var reportScope: js.UndefOr[AdGroupId] = js.native
   /**
     * Determines the type of rows that are returned in the report. For example,
     * if you specify reportType: keyword, each row in the report will contain
@@ -90,7 +90,7 @@ trait SchemaReportRequest extends js.Object {
     * If metrics are requested in a report, this argument will be used to
     * restrict the metrics to a specific time range.
     */
-  var timeRange: js.UndefOr[AnonChangedAttributesSinceTimestamp] = js.native
+  var timeRange: js.UndefOr[ChangedAttributesSinceTimestamp] = js.native
   /**
     * If true, the report would only be created if all the requested stat data
     * are sourced from a single timezone. Defaults to false.
@@ -100,185 +100,38 @@ trait SchemaReportRequest extends js.Object {
 
 object SchemaReportRequest {
   @scala.inline
-  def apply(): SchemaReportRequest = {
+  def apply(
+    columns: js.Array[SchemaReportApiColumnSpec] = null,
+    downloadFormat: String = null,
+    filters: js.Array[Column] = null,
+    includeDeletedEntities: js.UndefOr[Boolean] = js.undefined,
+    includeRemovedEntities: js.UndefOr[Boolean] = js.undefined,
+    maxRowsPerFile: js.UndefOr[Double] = js.undefined,
+    orderBy: js.Array[SortOrder] = null,
+    reportScope: AdGroupId = null,
+    reportType: String = null,
+    rowCount: js.UndefOr[Double] = js.undefined,
+    startRow: js.UndefOr[Double] = js.undefined,
+    statisticsCurrency: String = null,
+    timeRange: ChangedAttributesSinceTimestamp = null,
+    verifySingleTimeZone: js.UndefOr[Boolean] = js.undefined
+  ): SchemaReportRequest = {
     val __obj = js.Dynamic.literal()
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (downloadFormat != null) __obj.updateDynamic("downloadFormat")(downloadFormat.asInstanceOf[js.Any])
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeDeletedEntities)) __obj.updateDynamic("includeDeletedEntities")(includeDeletedEntities.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeRemovedEntities)) __obj.updateDynamic("includeRemovedEntities")(includeRemovedEntities.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRowsPerFile)) __obj.updateDynamic("maxRowsPerFile")(maxRowsPerFile.get.asInstanceOf[js.Any])
+    if (orderBy != null) __obj.updateDynamic("orderBy")(orderBy.asInstanceOf[js.Any])
+    if (reportScope != null) __obj.updateDynamic("reportScope")(reportScope.asInstanceOf[js.Any])
+    if (reportType != null) __obj.updateDynamic("reportType")(reportType.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startRow)) __obj.updateDynamic("startRow")(startRow.get.asInstanceOf[js.Any])
+    if (statisticsCurrency != null) __obj.updateDynamic("statisticsCurrency")(statisticsCurrency.asInstanceOf[js.Any])
+    if (timeRange != null) __obj.updateDynamic("timeRange")(timeRange.asInstanceOf[js.Any])
+    if (!js.isUndefined(verifySingleTimeZone)) __obj.updateDynamic("verifySingleTimeZone")(verifySingleTimeZone.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportRequest]
   }
-  @scala.inline
-  implicit class SchemaReportRequestOps[Self <: SchemaReportRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Array[SchemaReportApiColumnSpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[AnonColumn]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeDeletedEntities(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDeletedEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeDeletedEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDeletedEntities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeRemovedEntities(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRemovedEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeRemovedEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRemovedEntities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRowsPerFile(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRowsPerFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRowsPerFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRowsPerFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBy(value: js.Array[AnonSortOrder]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportScope(value: AnonAdGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatisticsCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticsCurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatisticsCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticsCurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeRange(value: AnonChangedAttributesSinceTimestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifySingleTimeZone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifySingleTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifySingleTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifySingleTimeZone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

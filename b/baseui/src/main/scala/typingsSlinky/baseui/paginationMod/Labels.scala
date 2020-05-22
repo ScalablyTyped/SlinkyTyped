@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Labels extends js.Object {
-  var nextButton: js.UndefOr[String] = js.native
-  var preposition: js.UndefOr[String] = js.native
-  var prevButton: js.UndefOr[String] = js.native
+  var nextButton: js.UndefOr[String] = js.undefined
+  var preposition: js.UndefOr[String] = js.undefined
+  var prevButton: js.UndefOr[String] = js.undefined
 }
 
 object Labels {
   @scala.inline
-  def apply(): Labels = {
+  def apply(nextButton: String = null, preposition: String = null, prevButton: String = null): Labels = {
     val __obj = js.Dynamic.literal()
+    if (nextButton != null) __obj.updateDynamic("nextButton")(nextButton.asInstanceOf[js.Any])
+    if (preposition != null) __obj.updateDynamic("preposition")(preposition.asInstanceOf[js.Any])
+    if (prevButton != null) __obj.updateDynamic("prevButton")(prevButton.asInstanceOf[js.Any])
     __obj.asInstanceOf[Labels]
   }
-  @scala.inline
-  implicit class LabelsOps[Self <: Labels] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevButton(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prevButton")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

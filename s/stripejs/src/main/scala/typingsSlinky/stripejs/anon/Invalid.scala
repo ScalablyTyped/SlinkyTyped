@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Invalid extends js.Object {
-  var base: js.UndefOr[StyleAttributes] = js.native
-  var complete: js.UndefOr[StyleAttributes] = js.native
-  var empty: js.UndefOr[StyleAttributes] = js.native
-  var invalid: js.UndefOr[StyleAttributes] = js.native
+  var base: js.UndefOr[StyleAttributes] = js.undefined
+  var complete: js.UndefOr[StyleAttributes] = js.undefined
+  var empty: js.UndefOr[StyleAttributes] = js.undefined
+  var invalid: js.UndefOr[StyleAttributes] = js.undefined
 }
 
 object Invalid {
   @scala.inline
-  def apply(): Invalid = {
+  def apply(
+    base: StyleAttributes = null,
+    complete: StyleAttributes = null,
+    empty: StyleAttributes = null,
+    invalid: StyleAttributes = null
+  ): Invalid = {
     val __obj = js.Dynamic.literal()
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(complete.asInstanceOf[js.Any])
+    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
+    if (invalid != null) __obj.updateDynamic("invalid")(invalid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invalid]
   }
-  @scala.inline
-  implicit class InvalidOps[Self <: Invalid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBase(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmpty(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalid(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

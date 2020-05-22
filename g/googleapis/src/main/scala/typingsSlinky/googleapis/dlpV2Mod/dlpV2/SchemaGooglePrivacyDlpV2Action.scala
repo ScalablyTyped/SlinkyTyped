@@ -31,65 +31,18 @@ trait SchemaGooglePrivacyDlpV2Action extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Action {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2Action = {
+  def apply(
+    jobNotificationEmails: SchemaGooglePrivacyDlpV2JobNotificationEmails = null,
+    pubSub: SchemaGooglePrivacyDlpV2PublishToPubSub = null,
+    publishSummaryToCscc: SchemaGooglePrivacyDlpV2PublishSummaryToCscc = null,
+    saveFindings: SchemaGooglePrivacyDlpV2SaveFindings = null
+  ): SchemaGooglePrivacyDlpV2Action = {
     val __obj = js.Dynamic.literal()
+    if (jobNotificationEmails != null) __obj.updateDynamic("jobNotificationEmails")(jobNotificationEmails.asInstanceOf[js.Any])
+    if (pubSub != null) __obj.updateDynamic("pubSub")(pubSub.asInstanceOf[js.Any])
+    if (publishSummaryToCscc != null) __obj.updateDynamic("publishSummaryToCscc")(publishSummaryToCscc.asInstanceOf[js.Any])
+    if (saveFindings != null) __obj.updateDynamic("saveFindings")(saveFindings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Action]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2ActionOps[Self <: SchemaGooglePrivacyDlpV2Action] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobNotificationEmails(value: SchemaGooglePrivacyDlpV2JobNotificationEmails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobNotificationEmails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobNotificationEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobNotificationEmails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubSub(value: SchemaGooglePrivacyDlpV2PublishToPubSub): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubSub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubSub: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubSub")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishSummaryToCscc(value: SchemaGooglePrivacyDlpV2PublishSummaryToCscc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishSummaryToCscc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishSummaryToCscc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishSummaryToCscc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveFindings(value: SchemaGooglePrivacyDlpV2SaveFindings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveFindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveFindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveFindings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

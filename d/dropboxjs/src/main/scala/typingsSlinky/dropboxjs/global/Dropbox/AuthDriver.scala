@@ -1,6 +1,7 @@
 package typingsSlinky.dropboxjs.global.Dropbox
 
 import org.scalajs.dom.raw.Storage
+import typingsSlinky.dropboxjs.Dropbox.QueryParamsCallback
 import typingsSlinky.dropboxjs.Dropbox.RedirectOptions
 import typingsSlinky.dropboxjs.anon.Port
 import typingsSlinky.dropboxjs.anon.ReceiverPath
@@ -14,7 +15,25 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Dropbox.AuthDriver")
 @js.native
 class AuthDriver ()
-  extends typingsSlinky.dropboxjs.Dropbox.AuthDriver
+  extends typingsSlinky.dropboxjs.Dropbox.AuthDriver {
+  /* CompleteClass */
+  override def authType(): String = js.native
+  /* CompleteClass */
+  override def doAuthorize(
+    authUrl: String,
+    stateParam: String,
+    client: typingsSlinky.dropboxjs.Dropbox.Client,
+    callback: QueryParamsCallback
+  ): Unit = js.native
+  /* CompleteClass */
+  override def getStateParam(client: typingsSlinky.dropboxjs.Dropbox.Client, callback: js.Function1[/* state */ String, Unit]): Unit = js.native
+  /* CompleteClass */
+  override def onAuthStepChange(client: typingsSlinky.dropboxjs.Dropbox.Client, callback: js.Function0[Unit]): Unit = js.native
+  /* CompleteClass */
+  override def resumeAuthorize(stateParam: String, client: typingsSlinky.dropboxjs.Dropbox.Client, callback: QueryParamsCallback): Unit = js.native
+  /* CompleteClass */
+  override def url(): String = js.native
+}
 
 @JSGlobal("Dropbox.AuthDriver")
 @js.native
@@ -23,6 +42,12 @@ object AuthDriver extends js.Object {
   class BrowserBase protected ()
     extends typingsSlinky.dropboxjs.Dropbox.AuthDriver.BrowserBase {
     def this(options: RememberUser) = this()
+    /* CompleteClass */
+    override def authType(): String = js.native
+    /* CompleteClass */
+    override def locationStateParam(url: String): String = js.native
+    /* CompleteClass */
+    override def onAuthStepChange(client: typingsSlinky.dropboxjs.Dropbox.Client, callback: js.Function0[Unit]): Unit = js.native
   }
   
   @js.native
@@ -64,6 +89,12 @@ object AuthDriver extends js.Object {
   class Redirect ()
     extends typingsSlinky.dropboxjs.Dropbox.AuthDriver.Redirect {
     def this(options: RedirectFile) = this()
+    /* CompleteClass */
+    override def doAuthorize(authUrl: String, stateParam: String, client: typingsSlinky.dropboxjs.Dropbox.Client): Unit = js.native
+    /* CompleteClass */
+    override def resumeAuthorize(stateParam: String, client: typingsSlinky.dropboxjs.Dropbox.Client, callback: QueryParamsCallback): Unit = js.native
+    /* CompleteClass */
+    override def url(): String = js.native
   }
   
   /* static members */

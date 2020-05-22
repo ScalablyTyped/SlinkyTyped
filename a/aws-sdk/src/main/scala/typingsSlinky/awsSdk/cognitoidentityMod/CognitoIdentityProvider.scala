@@ -22,53 +22,16 @@ trait CognitoIdentityProvider extends js.Object {
 
 object CognitoIdentityProvider {
   @scala.inline
-  def apply(): CognitoIdentityProvider = {
+  def apply(
+    ClientId: CognitoIdentityProviderClientId = null,
+    ProviderName: CognitoIdentityProviderName = null,
+    ServerSideTokenCheck: js.UndefOr[CognitoIdentityProviderTokenCheck] = js.undefined
+  ): CognitoIdentityProvider = {
     val __obj = js.Dynamic.literal()
+    if (ClientId != null) __obj.updateDynamic("ClientId")(ClientId.asInstanceOf[js.Any])
+    if (ProviderName != null) __obj.updateDynamic("ProviderName")(ProviderName.asInstanceOf[js.Any])
+    if (!js.isUndefined(ServerSideTokenCheck)) __obj.updateDynamic("ServerSideTokenCheck")(ServerSideTokenCheck.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CognitoIdentityProvider]
   }
-  @scala.inline
-  implicit class CognitoIdentityProviderOps[Self <: CognitoIdentityProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientId(value: CognitoIdentityProviderClientId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProviderName(value: CognitoIdentityProviderName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProviderName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerSideTokenCheck(value: CognitoIdentityProviderTokenCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideTokenCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerSideTokenCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerSideTokenCheck")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MusicGenreFeedResponseRootObject extends js.Object {
-  var alacorn_session_id: String = js.native
-  var items: js.Array[MusicGenreFeedResponseItemsItem] = js.native
-  var page_info: MusicGenreFeedResponsePageInfo = js.native
-  var status: String = js.native
+  var alacorn_session_id: String
+  var items: js.Array[MusicGenreFeedResponseItemsItem]
+  var page_info: MusicGenreFeedResponsePageInfo
+  var status: String
 }
 
 object MusicGenreFeedResponseRootObject {
@@ -23,37 +22,5 @@ object MusicGenreFeedResponseRootObject {
     val __obj = js.Dynamic.literal(alacorn_session_id = alacorn_session_id.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], page_info = page_info.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[MusicGenreFeedResponseRootObject]
   }
-  @scala.inline
-  implicit class MusicGenreFeedResponseRootObjectOps[Self <: MusicGenreFeedResponseRootObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlacorn_session_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alacorn_session_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[MusicGenreFeedResponseItemsItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPage_info(value: MusicGenreFeedResponsePageInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

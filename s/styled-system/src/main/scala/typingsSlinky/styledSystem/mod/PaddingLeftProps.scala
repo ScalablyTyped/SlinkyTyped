@@ -5,81 +5,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Pick<styled-system.styled-system.SpaceProps<ThemeType, styled-system.styled-system.ThemeValue<'space', ThemeType, any>>, 'pl' | 'paddingLeft'> */
-@js.native
 trait PaddingLeftProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Object {
   var paddingLeft: js.UndefOr[
     ResponsiveValue[
       ThemeValue[typingsSlinky.styledSystem.styledSystemStrings.space, ThemeType, _], 
       ThemeType
     ]
-  ] = js.native
+  ] = js.undefined
   var pl: js.UndefOr[
     ResponsiveValue[
       ThemeValue[typingsSlinky.styledSystem.styledSystemStrings.space, ThemeType, _], 
       ThemeType
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object PaddingLeftProps {
   @scala.inline
-  def apply[ThemeType](): PaddingLeftProps[ThemeType] = {
+  def apply[ThemeType](
+    paddingLeft: js.UndefOr[
+      Null | (ResponsiveValue[
+        ThemeValue[typingsSlinky.styledSystem.styledSystemStrings.space, ThemeType, _], 
+        ThemeType
+      ])
+    ] = js.undefined,
+    pl: js.UndefOr[
+      Null | (ResponsiveValue[
+        ThemeValue[typingsSlinky.styledSystem.styledSystemStrings.space, ThemeType, _], 
+        ThemeType
+      ])
+    ] = js.undefined
+  ): PaddingLeftProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(paddingLeft)) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
+    if (!js.isUndefined(pl)) __obj.updateDynamic("pl")(pl.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaddingLeftProps[ThemeType]]
   }
-  @scala.inline
-  implicit class PaddingLeftPropsOps[Self[themetype] <: PaddingLeftProps[themetype], ThemeType] (val x: Self[ThemeType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ThemeType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ThemeType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ThemeType] with Other]
-    @scala.inline
-    def withPaddingLeft(
-      value: ResponsiveValue[
-          ThemeValue[typingsSlinky.styledSystem.styledSystemStrings.space, ThemeType, _], 
-          ThemeType
-        ]
-    ): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaddingLeft: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaddingLeftNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(null)
-        ret
-    }
-    @scala.inline
-    def withPl(
-      value: ResponsiveValue[
-          ThemeValue[typingsSlinky.styledSystem.styledSystemStrings.space, ThemeType, _], 
-          ThemeType
-        ]
-    ): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPl: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pl")(null)
-        ret
-    }
-  }
-  
 }
 

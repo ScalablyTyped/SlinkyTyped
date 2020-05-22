@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait VariableStatement
   extends Statement
      with JSDocContainer
-     with HasJSDoc {
+     with _HasJSDoc {
   var declarationList: VariableDeclarationList = js.native
   @JSName("kind")
   var kind_VariableStatement: typingsSlinky.typescript.mod.SyntaxKind.VariableStatement = js.native

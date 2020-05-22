@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Hi extends js.Object {
-  var hi: js.UndefOr[Latitude] = js.native
-  var lo: js.UndefOr[Latitude] = js.native
+  var hi: js.UndefOr[Latitude] = js.undefined
+  var lo: js.UndefOr[Latitude] = js.undefined
 }
 
 object Hi {
   @scala.inline
-  def apply(): Hi = {
+  def apply(hi: Latitude = null, lo: Latitude = null): Hi = {
     val __obj = js.Dynamic.literal()
+    if (hi != null) __obj.updateDynamic("hi")(hi.asInstanceOf[js.Any])
+    if (lo != null) __obj.updateDynamic("lo")(lo.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hi]
   }
-  @scala.inline
-  implicit class HiOps[Self <: Hi] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHi(value: Latitude): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLo(value: Latitude): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

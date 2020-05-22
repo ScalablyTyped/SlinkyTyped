@@ -10,249 +10,121 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@js.native
 trait DocumentPropertiesLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the author of the workbook.
+    * The author of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var author: js.UndefOr[Boolean] = js.native
+  var author: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the category of the workbook.
+    * The category of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var category: js.UndefOr[Boolean] = js.native
+  var category: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the comments of the workbook.
+    * The comments of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var comments: js.UndefOr[Boolean] = js.native
+  var comments: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the company of the workbook.
+    * The company of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var company: js.UndefOr[Boolean] = js.native
+  var company: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the creation date of the workbook. Read only.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var creationDate: js.UndefOr[Boolean] = js.native
+  var creationDate: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the keywords of the workbook.
+    * The keywords of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var keywords: js.UndefOr[Boolean] = js.native
+  var keywords: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the last author of the workbook. Read only.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var lastAuthor: js.UndefOr[Boolean] = js.native
+  var lastAuthor: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the manager of the workbook.
+    * The manager of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var manager: js.UndefOr[Boolean] = js.native
+  var manager: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the revision number of the workbook. Read only.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var revisionNumber: js.UndefOr[Boolean] = js.native
+  var revisionNumber: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the subject of the workbook.
+    * The subject of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var subject: js.UndefOr[Boolean] = js.native
+  var subject: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets or sets the title of the workbook.
+    * The title of the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var title: js.UndefOr[Boolean] = js.native
+  var title: js.UndefOr[Boolean] = js.undefined
 }
 
 object DocumentPropertiesLoadOptions {
   @scala.inline
-  def apply(): DocumentPropertiesLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    author: js.UndefOr[Boolean] = js.undefined,
+    category: js.UndefOr[Boolean] = js.undefined,
+    comments: js.UndefOr[Boolean] = js.undefined,
+    company: js.UndefOr[Boolean] = js.undefined,
+    creationDate: js.UndefOr[Boolean] = js.undefined,
+    keywords: js.UndefOr[Boolean] = js.undefined,
+    lastAuthor: js.UndefOr[Boolean] = js.undefined,
+    manager: js.UndefOr[Boolean] = js.undefined,
+    revisionNumber: js.UndefOr[Boolean] = js.undefined,
+    subject: js.UndefOr[Boolean] = js.undefined,
+    title: js.UndefOr[Boolean] = js.undefined
+  ): DocumentPropertiesLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(author)) __obj.updateDynamic("author")(author.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(category)) __obj.updateDynamic("category")(category.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(company)) __obj.updateDynamic("company")(company.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(creationDate)) __obj.updateDynamic("creationDate")(creationDate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keywords)) __obj.updateDynamic("keywords")(keywords.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lastAuthor)) __obj.updateDynamic("lastAuthor")(lastAuthor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(manager)) __obj.updateDynamic("manager")(manager.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(revisionNumber)) __obj.updateDynamic("revisionNumber")(revisionNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(title)) __obj.updateDynamic("title")(title.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentPropertiesLoadOptions]
   }
-  @scala.inline
-  implicit class DocumentPropertiesLoadOptionsOps[Self <: DocumentPropertiesLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompany(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastAuthor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAuthor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAuthor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManager(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionNumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

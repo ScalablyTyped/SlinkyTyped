@@ -6,169 +6,50 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-bootstrap-table-next.react-bootstrap-table-next.TableColumnFilterProps<string, T> & {  options  :react-bootstrap-table2-filter.react-bootstrap-table2-filter.MultiSelectFilterOptions | (): react-bootstrap-table2-filter.react-bootstrap-table2-filter.MultiSelectFilterOptions,   comparator ? :react-bootstrap-table2-filter.react-bootstrap-table2-filter.Comparator,   withoutEmptyOption ? :boolean} */
-@js.native
 trait MultiSelectFilterProps[T /* <: js.Object */] extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var comparator: js.UndefOr[Comparator] = js.native
-  var defaultValue: js.UndefOr[js.Any] = js.native
-  var delay: js.UndefOr[Double] = js.native
-  var getFilter: js.UndefOr[js.Function1[/* filter */ String, Unit]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var onFilter: js.UndefOr[js.Function1[/* filterValue */ String, Unit | js.Array[T]]] = js.native
-  var options: MultiSelectFilterOptions | js.Function0[MultiSelectFilterOptions] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var comparator: js.UndefOr[Comparator] = js.undefined
+  var defaultValue: js.UndefOr[js.Any] = js.undefined
+  var delay: js.UndefOr[Double] = js.undefined
+  var getFilter: js.UndefOr[js.Function1[/* filter */ String, Unit]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var onFilter: js.UndefOr[js.Function1[/* filterValue */ String, Unit | js.Array[T]]] = js.undefined
+  var options: MultiSelectFilterOptions | js.Function0[MultiSelectFilterOptions]
+  var placeholder: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
   /**
     * When set the default selection is hidden from dropdown
     */
-  var withoutEmptyOption: js.UndefOr[Boolean] = js.native
+  var withoutEmptyOption: js.UndefOr[Boolean] = js.undefined
 }
 
 object MultiSelectFilterProps {
   @scala.inline
-  def apply[T](options: MultiSelectFilterOptions | js.Function0[MultiSelectFilterOptions]): MultiSelectFilterProps[T] = {
+  def apply[T](
+    options: MultiSelectFilterOptions | js.Function0[MultiSelectFilterOptions],
+    className: String = null,
+    comparator: Comparator = null,
+    defaultValue: js.Any = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    getFilter: /* filter */ String => Unit = null,
+    id: String = null,
+    onFilter: /* filterValue */ String => Unit | js.Array[T] = null,
+    placeholder: String = null,
+    style: CSSProperties = null,
+    withoutEmptyOption: js.UndefOr[Boolean] = js.undefined
+  ): MultiSelectFilterProps[T] = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (comparator != null) __obj.updateDynamic("comparator")(comparator.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (getFilter != null) __obj.updateDynamic("getFilter")(js.Any.fromFunction1(getFilter))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(withoutEmptyOption)) __obj.updateDynamic("withoutEmptyOption")(withoutEmptyOption.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiSelectFilterProps[T]]
   }
-  @scala.inline
-  implicit class MultiSelectFilterPropsOps[Self[t] <: MultiSelectFilterProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withOptionsFunction0(value: () => MultiSelectFilterOptions): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOptions(value: MultiSelectFilterOptions | js.Function0[MultiSelectFilterOptions]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparator(value: Comparator): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparator: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetFilter(value: /* filter */ String => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetFilter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFilter(value: /* filterValue */ String => Unit | js.Array[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFilter: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithoutEmptyOption(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutEmptyOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithoutEmptyOption: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withoutEmptyOption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

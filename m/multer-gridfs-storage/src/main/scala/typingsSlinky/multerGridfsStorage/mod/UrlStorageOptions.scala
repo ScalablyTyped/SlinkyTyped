@@ -1,59 +1,30 @@
 package typingsSlinky.multerGridfsStorage.mod
 
+import org.scalajs.dom.experimental.Request
+import typingsSlinky.multerGridfsStorage.mod.global.Express.Multer.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UrlStorageOptions extends MulterGfsOptions {
-  var cache: js.UndefOr[Boolean | String] = js.native
-  var options: js.UndefOr[js.Any] = js.native
-  var url: String = js.native
+  var cache: js.UndefOr[Boolean | String] = js.undefined
+  var options: js.UndefOr[js.Any] = js.undefined
+  var url: String
 }
 
 object UrlStorageOptions {
   @scala.inline
-  def apply(url: String): UrlStorageOptions = {
+  def apply(
+    url: String,
+    cache: Boolean | String = null,
+    file: (/* req */ Request, /* file */ File) => _ = null,
+    options: js.Any = null
+  ): UrlStorageOptions = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(js.Any.fromFunction2(file))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[UrlStorageOptions]
   }
-  @scala.inline
-  implicit class UrlStorageOptionsOps[Self <: UrlStorageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCache(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

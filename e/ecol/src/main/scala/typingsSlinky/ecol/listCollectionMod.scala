@@ -2,6 +2,8 @@ package typingsSlinky.ecol
 
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.listIteratorMod.ListIterator
@@ -41,6 +43,8 @@ object listCollectionMod extends js.Object {
       * @hidden
       */
     var dispatcher_ : js.Any = js.native
+    /* CompleteClass */
+    override def addEventListener(`type`: Type, listener: Listener[T, List[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -55,19 +59,24 @@ object listCollectionMod extends js.Object {
       * @return Iterator to the first element.
       */
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, List[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    /* CompleteClass */
+    override def dispatchEvent(event: CollectionEvent[T, List[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
+    /**
+      * Test whether container is empty.
+      */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
     /**
       * Iterator to the end.
       *
       * @return Iterator to the end.
       */
-    /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, List[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
@@ -87,17 +96,27 @@ object listCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def erase(pos: Iterator[T]): Iterator[T] = js.native
+    /* CompleteClass */
+    override def hasEventListener(`type`: Type): Boolean = js.native
     /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def pop_front(): Unit = js.native
     /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* InferMemberOverrides */
+    override def push(items: T*): Double = js.native
+    /**
       * Insert an element at the end.
       *
       * @param val Value to insert.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def push_back(`val`: T): Unit = js.native
     /**
@@ -113,7 +132,6 @@ object listCollectionMod extends js.Object {
       * @return Reverse iterator to the first.
       */
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[T] = js.native
     /**
       * @inheritdoc
@@ -127,14 +145,20 @@ object listCollectionMod extends js.Object {
       * @inheritdoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
+    /* CompleteClass */
+    override def removeEventListener(`type`: Type, listener: Listener[T, List[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Reverse iterator to the reverse end.
       *
       * @return Reverse iterator to the end.
       */
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def rend(): ReverseIterator[T] = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

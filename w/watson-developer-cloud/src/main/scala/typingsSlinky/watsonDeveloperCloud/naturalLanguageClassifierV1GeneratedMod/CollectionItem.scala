@@ -5,65 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Response from the classifier for a phrase in a collection. */
-@js.native
 trait CollectionItem extends js.Object {
   /** An array of up to ten class-confidence pairs sorted in descending order of confidence. */
-  var classes: js.UndefOr[js.Array[ClassifiedClass]] = js.native
+  var classes: js.UndefOr[js.Array[ClassifiedClass]] = js.undefined
   /** The submitted phrase. The maximum length is 2048 characters. */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /** The class with the highest confidence. */
-  var top_class: js.UndefOr[String] = js.native
+  var top_class: js.UndefOr[String] = js.undefined
 }
 
 object CollectionItem {
   @scala.inline
-  def apply(): CollectionItem = {
+  def apply(classes: js.Array[ClassifiedClass] = null, text: String = null, top_class: String = null): CollectionItem = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (top_class != null) __obj.updateDynamic("top_class")(top_class.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionItem]
   }
-  @scala.inline
-  implicit class CollectionItemOps[Self <: CollectionItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClasses(value: js.Array[ClassifiedClass]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop_class(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top_class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop_class: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top_class")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

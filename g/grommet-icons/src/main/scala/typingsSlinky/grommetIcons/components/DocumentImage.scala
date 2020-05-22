@@ -12,7 +12,7 @@ object DocumentImage {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentImage] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentImage](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: DocumentImage.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentImage] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.DocumentImage](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.DocumentImage] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.DocumentImage](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DocumentImage.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.DocumentImage] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.DocumentImage](js.Array(this.component, js.Dictionary.empty))()
 }
 

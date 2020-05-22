@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * An object that describes a single piece of media.
   * Properties that are not part of this type description will be retained; so, this can be viewed as a generic metadata storage mechanism as well.
   */
-@js.native
 trait MediaObject
   extends /**
   * Properties that are not part of this type description will be retained; so, this can be viewed as a generic metadata storage mechanism as well.
@@ -19,132 +18,57 @@ trait MediaObject
   /**
     * Unused, except if this object is passed to the MediaSession API.
     */
-  var album: js.UndefOr[String] = js.native
+  var album: js.UndefOr[String] = js.undefined
   /**
     * Unused, except if this object is passed to the MediaSession API.
     */
-  var artist: js.UndefOr[String] = js.native
+  var artist: js.UndefOr[String] = js.undefined
   /**
     * Unused, except if this object is passed to the MediaSession API. If not specified, will be populated via the poster, if available.
     */
-  var artwork: js.UndefOr[js.Array[_]] = js.native
+  var artwork: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * URL to an image that will display before playback.
     */
-  var poster: js.UndefOr[String] = js.native
+  var poster: js.UndefOr[String] = js.undefined
   /**
     * A single source object, an array of source objects, or a string referencing a URL to a media source.
     * It is highly recommended that an object or array of objects is used here, so that source selection algorithms can take the type into account.
     */
-  var src: js.UndefOr[String | SourceObject | js.Array[SourceObject]] = js.native
+  var src: js.UndefOr[String | SourceObject | js.Array[SourceObject]] = js.undefined
   /**
     *  An array of objects to be used to create text tracks, following the native track element format.
     *  For ease of removal, these will be created as "remote" text tracks and set to automatically clean up on source changes.
     */
-  var textTracks: js.UndefOr[js.Array[_]] = js.native
+  var textTracks: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * Unused, except if this object is passed to the MediaSession API.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object MediaObject {
   @scala.inline
-  def apply(): MediaObject = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    album: String = null,
+    artist: String = null,
+    artwork: js.Array[_] = null,
+    poster: String = null,
+    src: String | SourceObject | js.Array[SourceObject] = null,
+    textTracks: js.Array[_] = null,
+    title: String = null
+  ): MediaObject = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (album != null) __obj.updateDynamic("album")(album.asInstanceOf[js.Any])
+    if (artist != null) __obj.updateDynamic("artist")(artist.asInstanceOf[js.Any])
+    if (artwork != null) __obj.updateDynamic("artwork")(artwork.asInstanceOf[js.Any])
+    if (poster != null) __obj.updateDynamic("poster")(poster.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+    if (textTracks != null) __obj.updateDynamic("textTracks")(textTracks.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaObject]
   }
-  @scala.inline
-  implicit class MediaObjectOps[Self <: MediaObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlbum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlbum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArtwork(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artwork")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artwork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoster(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String | SourceObject | js.Array[SourceObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextTracks(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTracks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextTracks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTracks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

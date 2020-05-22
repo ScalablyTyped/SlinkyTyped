@@ -1,14 +1,16 @@
 package typingsSlinky.yaml.parseCstMod.CST
 
+import typingsSlinky.yaml.anon.Handle
+import typingsSlinky.yaml.anon.Verbatim
 import typingsSlinky.yaml.utilMod.Type.BLANK_LINE
+import typingsSlinky.yaml.utilMod.YAMLSyntaxError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlankLine extends Node {
   @JSName("type")
-  var type_BlankLine: BLANK_LINE = js.native
+  var type_BlankLine: BLANK_LINE
 }
 
 object BlankLine {
@@ -19,25 +21,20 @@ object BlankLine {
     jsonLike: Boolean,
     props: js.Array[Range],
     `type`: BLANK_LINE,
-    valueRangeContainsNewline: Boolean
+    valueRangeContainsNewline: Boolean,
+    anchor: String = null,
+    comment: String = null,
+    context: ParseContext = null,
+    error: YAMLSyntaxError = null,
+    range: Range = null,
+    rawValue: String = null,
+    tag: Verbatim | Handle = null,
+    value: String = null,
+    valueRange: Range = null
   ): BlankLine = {
-    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(hasComment = hasComment.asInstanceOf[js.Any], hasProps = hasProps.asInstanceOf[js.Any], jsonLike = jsonLike.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], valueRangeContainsNewline = valueRangeContainsNewline.asInstanceOf[js.Any], anchor = anchor.asInstanceOf[js.Any], comment = comment.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any], rawValue = rawValue.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], valueRange = valueRange.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlankLine]
   }
-  @scala.inline
-  implicit class BlankLineOps[Self <: BlankLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: BLANK_LINE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

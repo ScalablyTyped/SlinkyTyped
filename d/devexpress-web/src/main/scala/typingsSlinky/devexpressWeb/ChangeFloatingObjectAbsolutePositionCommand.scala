@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change a floating object's absolute position.
   */
-@js.native
 trait ChangeFloatingObjectAbsolutePositionCommand extends ChangeFloatingObjectPropertyCommandBase[FloatingObjectAbsolutePositionSettings]
 
 object ChangeFloatingObjectAbsolutePositionCommand {

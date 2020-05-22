@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DebugOnly extends js.Object {
-  var debugOnly: js.UndefOr[Boolean] = js.native
-  var documentation: js.UndefOr[String] = js.native
-  var git: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var prodOnly: js.UndefOr[Boolean] = js.native
-  var summary: js.UndefOr[String] = js.native
-  var testOnly: js.UndefOr[Boolean] = js.native
-  var version: js.UndefOr[String] = js.native
+  var debugOnly: js.UndefOr[Boolean] = js.undefined
+  var documentation: js.UndefOr[String] = js.undefined
+  var git: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var prodOnly: js.UndefOr[Boolean] = js.undefined
+  var summary: js.UndefOr[String] = js.undefined
+  var testOnly: js.UndefOr[Boolean] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object DebugOnly {
   @scala.inline
-  def apply(): DebugOnly = {
+  def apply(
+    debugOnly: js.UndefOr[Boolean] = js.undefined,
+    documentation: String = null,
+    git: String = null,
+    name: String = null,
+    prodOnly: js.UndefOr[Boolean] = js.undefined,
+    summary: String = null,
+    testOnly: js.UndefOr[Boolean] = js.undefined,
+    version: String = null
+  ): DebugOnly = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(debugOnly)) __obj.updateDynamic("debugOnly")(debugOnly.get.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (git != null) __obj.updateDynamic("git")(git.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(prodOnly)) __obj.updateDynamic("prodOnly")(prodOnly.get.asInstanceOf[js.Any])
+    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
+    if (!js.isUndefined(testOnly)) __obj.updateDynamic("testOnly")(testOnly.get.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DebugOnly]
   }
-  @scala.inline
-  implicit class DebugOnlyOps[Self <: DebugOnly] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebugOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("git")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProdOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prodOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProdOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prodOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,24 +22,23 @@ import scala.scalajs.js.annotation._
   * "autoscrolling region", for a predefined period of time, this will result in repeated scroll requests to the Component until the drag Cursor resumes
   * its motion.
   */
-@js.native
 trait XAutoscroll extends XInterface {
   /**
     * Returns the regions describing the autoscrolling region.
     * @returns The regions describing the autoscrolling region or border relative to the geometry of the implementing component.
     */
-  val AutoscrollRegion: js.Any = js.native
+  val AutoscrollRegion: js.Any
   /**
     * Notify the component to autoscroll.
     * @param cursorLocationX X location of the cursor in pixel.
     * @param cursorLocationY Y location of the cursor in pixel.
     */
-  def autoscroll(cursorLocationX: Double, cursorLocationY: Double): Unit = js.native
+  def autoscroll(cursorLocationX: Double, cursorLocationY: Double): Unit
   /**
     * Returns the regions describing the autoscrolling region.
     * @returns The regions describing the autoscrolling region or border relative to the geometry of the implementing component.
     */
-  def getAutoscrollRegion(): js.Any = js.native
+  def getAutoscrollRegion(): js.Any
 }
 
 object XAutoscroll {
@@ -55,31 +54,5 @@ object XAutoscroll {
     val __obj = js.Dynamic.literal(AutoscrollRegion = AutoscrollRegion.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), autoscroll = js.Any.fromFunction2(autoscroll), getAutoscrollRegion = js.Any.fromFunction0(getAutoscrollRegion), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAutoscroll]
   }
-  @scala.inline
-  implicit class XAutoscrollOps[Self <: XAutoscroll] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoscrollRegion(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoscrollRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoscroll(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscroll")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAutoscrollRegion(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoscrollRegion")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

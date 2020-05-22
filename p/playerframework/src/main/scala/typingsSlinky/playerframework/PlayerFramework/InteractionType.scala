@@ -11,26 +11,26 @@ sealed trait InteractionType extends js.Object
 @js.native
 object InteractionType extends js.Object {
   /**
-  		* Indicates both "soft" and "hard" interactions.
-  		**/
+    * Indicates both "soft" and "hard" interactions.
+    **/
   @js.native
   sealed trait all extends InteractionType
   
   /**
-  		* Indicates a "hard" interaction such as a tap, click, or a key is pressed.
-  		**/
+    * Indicates a "hard" interaction such as a tap, click, or a key is pressed.
+    **/
   @js.native
   sealed trait hard extends InteractionType
   
   /**
-  		* Indicates no interaction.
-  		**/
+    * Indicates no interaction.
+    **/
   @js.native
   sealed trait none extends InteractionType
   
   /**
-  		* Indicates a "soft" interaction such as mouse movement or a timeout occurring.
-  		**/
+    * Indicates a "soft" interaction such as mouse movement or a timeout occurring.
+    **/
   @js.native
   sealed trait soft extends InteractionType
   

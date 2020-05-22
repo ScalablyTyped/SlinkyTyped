@@ -7,7 +7,7 @@ import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCard
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleProps
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCardTitleStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -40,7 +40,7 @@ object DocumentCardTitleBase {
     @scala.inline
     def showAsSecondaryTitle(value: Boolean): this.type = set("showAsSecondaryTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDocumentCardTitleStyleProps => Partial[IDocumentCardTitleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardTitleStyleProps => DeepPartial[IDocumentCardTitleStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardTitleStyleProps, IDocumentCardTitleStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

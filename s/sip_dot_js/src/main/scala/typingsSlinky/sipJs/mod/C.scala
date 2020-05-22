@@ -26,7 +26,7 @@ object C extends js.Object {
   val SUBSCRIBE: /* "SUBSCRIBE" */ String = js.native
   val UPDATE: /* "UPDATE" */ String = js.native
   val USER_AGENT: String = js.native
-  val version: /* "0.15.10" */ String = js.native
+  val version: /* "0.15.11" */ String = js.native
   @js.native
   object OPTION_TAGS extends /* option */ StringDictionary[Boolean]
   

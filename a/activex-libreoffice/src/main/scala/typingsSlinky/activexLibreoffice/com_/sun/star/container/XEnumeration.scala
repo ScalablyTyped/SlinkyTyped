@@ -20,16 +20,15 @@ import scala.scalajs.js.annotation._
   *
   * If the object changed, the behavior of the enumeration is not specified. This is not a remote interface.
   */
-@js.native
 trait XEnumeration extends XInterface {
   /** tests whether this enumeration contains more elements. */
-  def hasMoreElements(): Boolean = js.native
+  def hasMoreElements(): Boolean
   /**
     * @returns the next element of this enumeration.
     * @throws NoSuchElementException if no more elements exist.
     * @throws com::sun::star::lang::WrappedTargetException If the implementation has internal reasons for exceptions, then wrap these in a {@link com.sun.star.
     */
-  def nextElement(): js.Any = js.native
+  def nextElement(): js.Any
 }
 
 object XEnumeration {
@@ -44,25 +43,5 @@ object XEnumeration {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), hasMoreElements = js.Any.fromFunction0(hasMoreElements), nextElement = js.Any.fromFunction0(nextElement), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XEnumeration]
   }
-  @scala.inline
-  implicit class XEnumerationOps[Self <: XEnumeration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasMoreElements(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreElements")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNextElement(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextElement")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

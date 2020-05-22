@@ -8,127 +8,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Configuration extends js.Object {
-  var android: js.UndefOr[MultipleNotifications] = js.native
+  var android: js.UndefOr[MultipleNotifications] = js.undefined
   /**
     * The application code of your Application from Push Portal website
     */
-  var applicationCode: String = js.native
-  var defaultMessageStorage: js.UndefOr[Boolean] = js.native
-  var geofencingEnabled: js.UndefOr[Boolean] = js.native
-  var ios: js.UndefOr[ForceCleanup] = js.native
+  var applicationCode: String
+  var defaultMessageStorage: js.UndefOr[Boolean] = js.undefined
+  var geofencingEnabled: js.UndefOr[Boolean] = js.undefined
+  var ios: js.UndefOr[ForceCleanup] = js.undefined
   /**
     * Message storage save callback
     */
-  var messageStorage: js.UndefOr[String] = js.native
-  var notificationCategories: js.UndefOr[js.Array[Actions]] = js.native
-  var privacySettings: js.UndefOr[ApplicationCodePersistingDisabled] = js.native
+  var messageStorage: js.UndefOr[String] = js.undefined
+  var notificationCategories: js.UndefOr[js.Array[Actions]] = js.undefined
+  var privacySettings: js.UndefOr[ApplicationCodePersistingDisabled] = js.undefined
 }
 
 object Configuration {
   @scala.inline
-  def apply(applicationCode: String): Configuration = {
+  def apply(
+    applicationCode: String,
+    android: MultipleNotifications = null,
+    defaultMessageStorage: js.UndefOr[Boolean] = js.undefined,
+    geofencingEnabled: js.UndefOr[Boolean] = js.undefined,
+    ios: ForceCleanup = null,
+    messageStorage: String = null,
+    notificationCategories: js.Array[Actions] = null,
+    privacySettings: ApplicationCodePersistingDisabled = null
+  ): Configuration = {
     val __obj = js.Dynamic.literal(applicationCode = applicationCode.asInstanceOf[js.Any])
+    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultMessageStorage)) __obj.updateDynamic("defaultMessageStorage")(defaultMessageStorage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(geofencingEnabled)) __obj.updateDynamic("geofencingEnabled")(geofencingEnabled.get.asInstanceOf[js.Any])
+    if (ios != null) __obj.updateDynamic("ios")(ios.asInstanceOf[js.Any])
+    if (messageStorage != null) __obj.updateDynamic("messageStorage")(messageStorage.asInstanceOf[js.Any])
+    if (notificationCategories != null) __obj.updateDynamic("notificationCategories")(notificationCategories.asInstanceOf[js.Any])
+    if (privacySettings != null) __obj.updateDynamic("privacySettings")(privacySettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[Configuration]
   }
-  @scala.inline
-  implicit class ConfigurationOps[Self <: Configuration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAndroid(value: MultipleNotifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultMessageStorage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMessageStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultMessageStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMessageStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeofencingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geofencingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeofencingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geofencingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIos(value: ForceCleanup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageStorage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationCategories(value: js.Array[Actions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivacySettings(value: ApplicationCodePersistingDisabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacySettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivacySettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privacySettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

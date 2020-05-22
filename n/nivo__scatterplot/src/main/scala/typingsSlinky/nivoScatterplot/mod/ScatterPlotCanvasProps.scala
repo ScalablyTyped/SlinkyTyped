@@ -1,66 +1,85 @@
 package typingsSlinky.nivoScatterplot.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import slinky.core.TagMod
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.nivoAxes.mod.AxisProps
+import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
+import typingsSlinky.nivoCore.mod.Box
+import typingsSlinky.nivoCore.mod.CssMixBlendMode
+import typingsSlinky.nivoCore.mod.Theme
+import typingsSlinky.nivoLegends.mod.LegendProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScatterPlotCanvasProps extends ScatterPlotProps {
-  var layers: js.UndefOr[js.Array[CustomLayerId | CustomCanvasLayer]] = js.native
-  var pixelRatio: js.UndefOr[Double] = js.native
-  var renderNode: js.UndefOr[NodeCanvasComponent] = js.native
+  var layers: js.UndefOr[js.Array[CustomLayerId | CustomCanvasLayer]] = js.undefined
+  var pixelRatio: js.UndefOr[Double] = js.undefined
+  var renderNode: js.UndefOr[NodeCanvasComponent] = js.undefined
 }
 
 object ScatterPlotCanvasProps {
   @scala.inline
-  def apply(data: js.Array[Serie]): ScatterPlotCanvasProps = {
+  def apply(
+    data: js.Array[Serie],
+    axisBottom: js.UndefOr[Null | AxisProps] = js.undefined,
+    axisLeft: js.UndefOr[Null | AxisProps] = js.undefined,
+    axisRight: js.UndefOr[Null | AxisProps] = js.undefined,
+    axisTop: js.UndefOr[Null | AxisProps] = js.undefined,
+    blendMode: CssMixBlendMode = null,
+    colors: OrdinalColorsInstruction[_] = null,
+    debugMesh: js.UndefOr[Boolean] = js.undefined,
+    enableGridX: js.UndefOr[Boolean] = js.undefined,
+    enableGridY: js.UndefOr[Boolean] = js.undefined,
+    isInteractive: js.UndefOr[Boolean] = js.undefined,
+    layers: js.Array[CustomLayerId | CustomCanvasLayer] = null,
+    legends: js.Array[LegendProps] = null,
+    margin: Box = null,
+    nodeSize: Double | DerivedDatumProp[Double] | DynamicSizeSpec = null,
+    onClick: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    onMouseEnter: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    onMouseLeave: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    onMouseMove: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
+    pixelRatio: js.UndefOr[Double] = js.undefined,
+    renderNode: (/* ctx */ CanvasRenderingContext2D, /* props */ NodeProps) => Unit = null,
+    theme: Theme = null,
+    tooltip: /* hasNode */ js.Any => TagMod[Any] = null,
+    useMesh: js.UndefOr[Boolean] = js.undefined,
+    xFormat: String | ValueFormatter = null,
+    xScale: /* value */ Value => Double = null,
+    yFormat: String | ValueFormatter = null,
+    yScale: /* value */ Value => Double = null
+  ): ScatterPlotCanvasProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisBottom)) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisLeft)) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisRight)) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisTop)) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
+    if (blendMode != null) __obj.updateDynamic("blendMode")(blendMode.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugMesh)) __obj.updateDynamic("debugMesh")(debugMesh.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.get.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
+    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (nodeSize != null) __obj.updateDynamic("nodeSize")(nodeSize.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction2(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction2(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction2(onMouseMove))
+    if (!js.isUndefined(pixelRatio)) __obj.updateDynamic("pixelRatio")(pixelRatio.get.asInstanceOf[js.Any])
+    if (renderNode != null) __obj.updateDynamic("renderNode")(js.Any.fromFunction2(renderNode))
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(js.Any.fromFunction1(tooltip))
+    if (!js.isUndefined(useMesh)) __obj.updateDynamic("useMesh")(useMesh.get.asInstanceOf[js.Any])
+    if (xFormat != null) __obj.updateDynamic("xFormat")(xFormat.asInstanceOf[js.Any])
+    if (xScale != null) __obj.updateDynamic("xScale")(js.Any.fromFunction1(xScale))
+    if (yFormat != null) __obj.updateDynamic("yFormat")(yFormat.asInstanceOf[js.Any])
+    if (yScale != null) __obj.updateDynamic("yScale")(js.Any.fromFunction1(yScale))
     __obj.asInstanceOf[ScatterPlotCanvasProps]
   }
-  @scala.inline
-  implicit class ScatterPlotCanvasPropsOps[Self <: ScatterPlotCanvasProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayers(value: js.Array[CustomLayerId | CustomCanvasLayer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderNode(value: (/* ctx */ CanvasRenderingContext2D, /* props */ NodeProps) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderNode")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderNode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   *
   * @class Runner
   */
-@js.native
 trait Runner extends js.Object {
   /**
     * A `Number` that specifies the time step between updates in milliseconds.
@@ -27,7 +26,7 @@ trait Runner extends js.Object {
     * @type number
     * @default 1000 / 60
     */
-  var delta: Double = js.native
+  var delta: Double
   /**
     * A flag that specifies whether the runner is running or not.
     *
@@ -35,7 +34,7 @@ trait Runner extends js.Object {
     * @type boolean
     * @default true
     */
-  var enabled: Boolean = js.native
+  var enabled: Boolean
   /**
     * A `Boolean` that specifies if the runner should use a fixed timestep (otherwise it is variable).
     * If timing is fixed, then the apparent simulation speed will change depending on the frame rate (but behaviour will be deterministic).
@@ -45,7 +44,7 @@ trait Runner extends js.Object {
     * @type boolean
     * @default false
     */
-  var isFixed: Boolean = js.native
+  var isFixed: Boolean
 }
 
 object Runner {
@@ -54,31 +53,5 @@ object Runner {
     val __obj = js.Dynamic.literal(delta = delta.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], isFixed = isFixed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Runner]
   }
-  @scala.inline
-  implicit class RunnerOps[Self <: Runner] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFixed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

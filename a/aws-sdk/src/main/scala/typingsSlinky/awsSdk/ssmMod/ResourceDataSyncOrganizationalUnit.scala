@@ -14,29 +14,10 @@ trait ResourceDataSyncOrganizationalUnit extends js.Object {
 
 object ResourceDataSyncOrganizationalUnit {
   @scala.inline
-  def apply(): ResourceDataSyncOrganizationalUnit = {
+  def apply(OrganizationalUnitId: ResourceDataSyncOrganizationalUnitId = null): ResourceDataSyncOrganizationalUnit = {
     val __obj = js.Dynamic.literal()
+    if (OrganizationalUnitId != null) __obj.updateDynamic("OrganizationalUnitId")(OrganizationalUnitId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceDataSyncOrganizationalUnit]
   }
-  @scala.inline
-  implicit class ResourceDataSyncOrganizationalUnitOps[Self <: ResourceDataSyncOrganizationalUnit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrganizationalUnitId(value: ResourceDataSyncOrganizationalUnitId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationalUnitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

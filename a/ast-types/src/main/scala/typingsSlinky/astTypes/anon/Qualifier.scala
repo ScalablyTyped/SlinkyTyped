@@ -10,100 +10,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Qualifier extends js.Object {
-  var argument: StringLiteralKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
-  var qualifier: js.UndefOr[IdentifierKind | TSQualifiedNameKind] = js.native
-  var typeParameters: js.UndefOr[TSTypeParameterInstantiationKind | Null] = js.native
+  var argument: StringLiteralKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
+  var qualifier: js.UndefOr[IdentifierKind | TSQualifiedNameKind] = js.undefined
+  var typeParameters: js.UndefOr[TSTypeParameterInstantiationKind | Null] = js.undefined
 }
 
 object Qualifier {
   @scala.inline
-  def apply(argument: StringLiteralKind): Qualifier = {
+  def apply(
+    argument: StringLiteralKind,
+    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
+    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined,
+    qualifier: IdentifierKind | TSQualifiedNameKind = null,
+    typeParameters: js.UndefOr[Null | TSTypeParameterInstantiationKind] = js.undefined
+  ): Qualifier = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (qualifier != null) __obj.updateDynamic("qualifier")(qualifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(typeParameters)) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[Qualifier]
   }
-  @scala.inline
-  implicit class QualifierOps[Self <: Qualifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgument(value: StringLiteralKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
-        ret
-    }
-    @scala.inline
-    def withQualifier(value: IdentifierKind | TSQualifiedNameKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TSTypeParameterInstantiationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

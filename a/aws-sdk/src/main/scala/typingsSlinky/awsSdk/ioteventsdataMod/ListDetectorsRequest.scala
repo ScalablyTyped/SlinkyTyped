@@ -26,59 +26,17 @@ trait ListDetectorsRequest extends js.Object {
 
 object ListDetectorsRequest {
   @scala.inline
-  def apply(detectorModelName: DetectorModelName): ListDetectorsRequest = {
+  def apply(
+    detectorModelName: DetectorModelName,
+    maxResults: js.UndefOr[MaxResults] = js.undefined,
+    nextToken: NextToken = null,
+    stateName: StateName = null
+  ): ListDetectorsRequest = {
     val __obj = js.Dynamic.literal(detectorModelName = detectorModelName.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (stateName != null) __obj.updateDynamic("stateName")(stateName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDetectorsRequest]
   }
-  @scala.inline
-  implicit class ListDetectorsRequestOps[Self <: ListDetectorsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorModelName(value: DetectorModelName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateName(value: StateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

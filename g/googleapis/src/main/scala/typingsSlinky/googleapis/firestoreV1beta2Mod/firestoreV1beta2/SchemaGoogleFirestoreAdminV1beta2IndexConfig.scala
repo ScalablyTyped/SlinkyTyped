@@ -38,65 +38,18 @@ trait SchemaGoogleFirestoreAdminV1beta2IndexConfig extends js.Object {
 
 object SchemaGoogleFirestoreAdminV1beta2IndexConfig {
   @scala.inline
-  def apply(): SchemaGoogleFirestoreAdminV1beta2IndexConfig = {
+  def apply(
+    ancestorField: String = null,
+    indexes: js.Array[SchemaGoogleFirestoreAdminV1beta2Index] = null,
+    reverting: js.UndefOr[Boolean] = js.undefined,
+    usesAncestorConfig: js.UndefOr[Boolean] = js.undefined
+  ): SchemaGoogleFirestoreAdminV1beta2IndexConfig = {
     val __obj = js.Dynamic.literal()
+    if (ancestorField != null) __obj.updateDynamic("ancestorField")(ancestorField.asInstanceOf[js.Any])
+    if (indexes != null) __obj.updateDynamic("indexes")(indexes.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverting)) __obj.updateDynamic("reverting")(reverting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usesAncestorConfig)) __obj.updateDynamic("usesAncestorConfig")(usesAncestorConfig.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFirestoreAdminV1beta2IndexConfig]
   }
-  @scala.inline
-  implicit class SchemaGoogleFirestoreAdminV1beta2IndexConfigOps[Self <: SchemaGoogleFirestoreAdminV1beta2IndexConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAncestorField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ancestorField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAncestorField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ancestorField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexes(value: js.Array[SchemaGoogleFirestoreAdminV1beta2Index]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsesAncestorConfig(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesAncestorConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsesAncestorConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesAncestorConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

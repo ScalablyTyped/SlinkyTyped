@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHotspotAuthenticationEventDetails extends js.Object {
-  var eventToken: String = js.native
+  var eventToken: String
 }
 
 object IHotspotAuthenticationEventDetails {
@@ -15,19 +14,5 @@ object IHotspotAuthenticationEventDetails {
     val __obj = js.Dynamic.literal(eventToken = eventToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHotspotAuthenticationEventDetails]
   }
-  @scala.inline
-  implicit class IHotspotAuthenticationEventDetailsOps[Self <: IHotspotAuthenticationEventDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

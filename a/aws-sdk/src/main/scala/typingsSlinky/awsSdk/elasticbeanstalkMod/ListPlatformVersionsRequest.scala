@@ -7,68 +7,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListPlatformVersionsRequest extends js.Object {
   /**
-    * List only the platforms where the platform member value relates to one of the supplied values.
+    * Criteria for restricting the resulting list of platform versions. The filter is interpreted as a logical conjunction (AND) of the separate PlatformFilter terms.
     */
   var Filters: js.UndefOr[PlatformFilters] = js.native
   /**
-    * The maximum number of platform values returned in one call.
+    * The maximum number of platform version values returned in one call.
     */
   var MaxRecords: js.UndefOr[PlatformMaxRecords] = js.native
   /**
-    * The starting index into the remaining list of platforms. Use the NextToken value from a previous ListPlatformVersion call.
+    * For a paginated request. Specify a token from a previous response page to retrieve the next response page. All other parameter values must be identical to the ones specified in the initial request. If no NextToken is specified, the first page is retrieved.
     */
   var NextToken: js.UndefOr[Token] = js.native
 }
 
 object ListPlatformVersionsRequest {
   @scala.inline
-  def apply(): ListPlatformVersionsRequest = {
+  def apply(
+    Filters: PlatformFilters = null,
+    MaxRecords: js.UndefOr[PlatformMaxRecords] = js.undefined,
+    NextToken: Token = null
+  ): ListPlatformVersionsRequest = {
     val __obj = js.Dynamic.literal()
+    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxRecords)) __obj.updateDynamic("MaxRecords")(MaxRecords.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPlatformVersionsRequest]
   }
-  @scala.inline
-  implicit class ListPlatformVersionsRequestOps[Self <: ListPlatformVersionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: PlatformFilters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: PlatformMaxRecords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

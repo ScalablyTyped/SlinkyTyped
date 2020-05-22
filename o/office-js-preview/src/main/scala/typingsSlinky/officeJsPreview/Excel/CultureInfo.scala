@@ -12,8 +12,7 @@ import scala.scalajs.js.annotation._
   *
   * Provides information based on current system culture settings. This includes the culture names, number formatting, and other culturally dependent settings.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.11]
   */
 @js.native
 trait CultureInfo extends ClientObject {
@@ -30,18 +29,16 @@ trait CultureInfo extends ClientObject {
   val datetimeFormat: DatetimeFormatInfo = js.native
   /**
     *
-    * Gets the culture name in the format languagecode2-country/regioncode2 (e.g. "zh-cn" or "en-us"). This is based on current system settings.
+    * Gets the culture name in the format languagecode2-country/regioncode2 (e.g., "zh-cn" or "en-us"). This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val name: String = js.native
   /**
     *
     * Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.11]
     */
   val numberFormat: NumberFormatInfo = js.native
   /**

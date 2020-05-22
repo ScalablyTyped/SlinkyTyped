@@ -5,78 +5,77 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `rangeAreas.toJSON()`. */
-@js.native
 trait RangeAreasData extends js.Object {
   /**
     *
-    * Returns the RageAreas reference in A1-style. Address value will contain the worksheet name for each rectangular block of cells (e.g. "Sheet1!A1:B4, Sheet1!D1:D4"). Read-only.
+    * Returns the RangeAreas reference in A1-style. Address value will contain the worksheet name for each rectangular block of cells (e.g., "Sheet1!A1:B4, Sheet1!D1:D4").
     *
     * [Api set: ExcelApi 1.9]
     */
-  var address: js.UndefOr[String] = js.native
+  var address: js.UndefOr[String] = js.undefined
   /**
     *
-    * Returns the RageAreas reference in the user locale. Read-only.
+    * Returns the RangeAreas reference in the user locale.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var addressLocal: js.UndefOr[String] = js.native
+  var addressLocal: js.UndefOr[String] = js.undefined
   /**
     *
     * Returns the number of rectangular ranges that comprise this RangeAreas object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var areaCount: js.UndefOr[Double] = js.native
+  var areaCount: js.UndefOr[Double] = js.undefined
   /**
     *
     * Returns a collection of rectangular ranges that comprise this RangeAreas object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var areas: js.UndefOr[js.Array[RangeData]] = js.native
+  var areas: js.UndefOr[js.Array[RangeData]] = js.undefined
   /**
     *
-    * Returns the number of cells in the RangeAreas object, summing up the cell counts of all of the individual rectangular ranges. Returns -1 if the cell count exceeds 2^31-1 (2,147,483,647). Read-only.
+    * Returns the number of cells in the RangeAreas object, summing up the cell counts of all of the individual rectangular ranges. Returns -1 if the cell count exceeds 2^31-1 (2,147,483,647).
     *
     * [Api set: ExcelApi 1.9]
     */
-  var cellCount: js.UndefOr[Double] = js.native
+  var cellCount: js.UndefOr[Double] = js.undefined
   /**
     *
-    * Returns a collection of ConditionalFormats that intersect with any cells in this RangeAreas object. Read-only.
+    * Returns a collection of ConditionalFormats that intersect with any cells in this RangeAreas object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var conditionalFormats: js.UndefOr[js.Array[ConditionalFormatData]] = js.native
+  var conditionalFormats: js.UndefOr[js.Array[ConditionalFormatData]] = js.undefined
   /**
     *
     * Returns a dataValidation object for all ranges in the RangeAreas.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var dataValidation: js.UndefOr[DataValidationData] = js.native
+  var dataValidation: js.UndefOr[DataValidationData] = js.undefined
   /**
     *
-    * Returns a rangeFormat object, encapsulating the the font, fill, borders, alignment, and other properties for all ranges in the RangeAreas object. Read-only.
+    * Returns a RangeFormat object, encapsulating the the font, fill, borders, alignment, and other properties for all ranges in the RangeAreas object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var format: js.UndefOr[RangeFormatData] = js.native
+  var format: js.UndefOr[RangeFormatData] = js.undefined
   /**
     *
-    * Indicates whether all the ranges on this RangeAreas object represent entire columns (e.g., "A:C, Q:Z"). Read-only.
+    * Specifies if all the ranges on this RangeAreas object represent entire columns (e.g., "A:C, Q:Z").
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isEntireColumn: js.UndefOr[Boolean] = js.native
+  var isEntireColumn: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Indicates whether all the ranges on this RangeAreas object represent entire rows (e.g., "1:3, 5:7"). Read-only.
+    * Specifies if all the ranges on this RangeAreas object represent entire rows (e.g., "1:3, 5:7").
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isEntireRow: js.UndefOr[Boolean] = js.native
+  var isEntireRow: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the style for all ranges in this RangeAreas object.
@@ -85,154 +84,37 @@ trait RangeAreasData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var style: js.UndefOr[String] = js.native
+  var style: js.UndefOr[String] = js.undefined
 }
 
 object RangeAreasData {
   @scala.inline
-  def apply(): RangeAreasData = {
+  def apply(
+    address: String = null,
+    addressLocal: String = null,
+    areaCount: js.UndefOr[Double] = js.undefined,
+    areas: js.Array[RangeData] = null,
+    cellCount: js.UndefOr[Double] = js.undefined,
+    conditionalFormats: js.Array[ConditionalFormatData] = null,
+    dataValidation: DataValidationData = null,
+    format: RangeFormatData = null,
+    isEntireColumn: js.UndefOr[Boolean] = js.undefined,
+    isEntireRow: js.UndefOr[Boolean] = js.undefined,
+    style: String = null
+  ): RangeAreasData = {
     val __obj = js.Dynamic.literal()
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (addressLocal != null) __obj.updateDynamic("addressLocal")(addressLocal.asInstanceOf[js.Any])
+    if (!js.isUndefined(areaCount)) __obj.updateDynamic("areaCount")(areaCount.get.asInstanceOf[js.Any])
+    if (areas != null) __obj.updateDynamic("areas")(areas.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellCount)) __obj.updateDynamic("cellCount")(cellCount.get.asInstanceOf[js.Any])
+    if (conditionalFormats != null) __obj.updateDynamic("conditionalFormats")(conditionalFormats.asInstanceOf[js.Any])
+    if (dataValidation != null) __obj.updateDynamic("dataValidation")(dataValidation.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEntireColumn)) __obj.updateDynamic("isEntireColumn")(isEntireColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEntireRow)) __obj.updateDynamic("isEntireRow")(isEntireRow.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeAreasData]
   }
-  @scala.inline
-  implicit class RangeAreasDataOps[Self <: RangeAreasData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddressLocal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddressLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreaCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreaCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreas(value: js.Array[RangeData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditionalFormats(value: js.Array[ConditionalFormatData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionalFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditionalFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionalFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataValidation(value: DataValidationData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: RangeFormatData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEntireColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEntireColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEntireColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEntireColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEntireRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEntireRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEntireRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEntireRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

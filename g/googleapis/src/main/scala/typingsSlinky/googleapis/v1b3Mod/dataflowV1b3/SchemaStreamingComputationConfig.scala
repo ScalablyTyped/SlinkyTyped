@@ -35,77 +35,20 @@ trait SchemaStreamingComputationConfig extends js.Object {
 
 object SchemaStreamingComputationConfig {
   @scala.inline
-  def apply(): SchemaStreamingComputationConfig = {
+  def apply(
+    computationId: String = null,
+    instructions: js.Array[SchemaParallelInstruction] = null,
+    stageName: String = null,
+    systemName: String = null,
+    transformUserNameToStateFamily: StringDictionary[String] = null
+  ): SchemaStreamingComputationConfig = {
     val __obj = js.Dynamic.literal()
+    if (computationId != null) __obj.updateDynamic("computationId")(computationId.asInstanceOf[js.Any])
+    if (instructions != null) __obj.updateDynamic("instructions")(instructions.asInstanceOf[js.Any])
+    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
+    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
+    if (transformUserNameToStateFamily != null) __obj.updateDynamic("transformUserNameToStateFamily")(transformUserNameToStateFamily.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamingComputationConfig]
   }
-  @scala.inline
-  implicit class SchemaStreamingComputationConfigOps[Self <: SchemaStreamingComputationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComputationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstructions(value: js.Array[SchemaParallelInstruction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstructions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instructions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformUserNameToStateFamily(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformUserNameToStateFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformUserNameToStateFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformUserNameToStateFamily")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

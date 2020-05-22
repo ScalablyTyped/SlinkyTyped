@@ -20,35 +20,10 @@ trait TableEventSubscriptionArgs extends js.Object {
 
 object TableEventSubscriptionArgs {
   @scala.inline
-  def apply(startingPosition: TRIM_HORIZON | LATEST): TableEventSubscriptionArgs = {
+  def apply(startingPosition: TRIM_HORIZON | LATEST, batchSize: js.UndefOr[Double] = js.undefined): TableEventSubscriptionArgs = {
     val __obj = js.Dynamic.literal(startingPosition = startingPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableEventSubscriptionArgs]
   }
-  @scala.inline
-  implicit class TableEventSubscriptionArgsOps[Self <: TableEventSubscriptionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartingPosition(value: TRIM_HORIZON | LATEST): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBatchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

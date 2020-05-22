@@ -13,20 +13,19 @@ import scala.scalajs.js.annotation._
   *
   * See [MediaStream](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream) for details.
   */
-@js.native
 trait MediaStream extends js.Object {
   /**
     * (Read-only) A Boolean value that returns `true` if the stream is active, or `false` otherwise.
     *
     * See [active](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/active) for details.
     */
-  var active: Boolean = js.native
+  var active: Boolean
   /**
     * (Read-only) A [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString) containing 36 characters denoting a universally unique identifier (UUID) for the object.
     *
     * See [MediaStream.id](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/id) for details.
     */
-  var id: String = js.native
+  var id: String
 }
 
 object MediaStream {
@@ -35,25 +34,5 @@ object MediaStream {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaStream]
   }
-  @scala.inline
-  implicit class MediaStreamOps[Self <: MediaStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

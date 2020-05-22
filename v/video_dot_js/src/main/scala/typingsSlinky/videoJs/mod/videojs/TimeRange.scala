@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
   * An object that contains ranges of time for various reasons.
   * @see https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges
   */
-@js.native
 trait TimeRange extends js.Object {
   /**
     *           The number of time ranges represented by this Object
     */
-  val length: Double = js.native
+  val length: Double
   /**
     * Returns the time offset at which a specified time range ends.
     *
@@ -22,7 +21,7 @@ trait TimeRange extends js.Object {
     *
     * @return The time that offset at the specified index.
     */
-  def end(index: Double): Double = js.native
+  def end(index: Double): Double
   /**
     * Returns the time offset at which a specified time range begins.
     *
@@ -31,7 +30,7 @@ trait TimeRange extends js.Object {
     *
     * @return The time that offset at the specified index.
     */
-  def start(index: Double): Double = js.native
+  def start(index: Double): Double
 }
 
 object TimeRange {
@@ -40,31 +39,5 @@ object TimeRange {
     val __obj = js.Dynamic.literal(end = js.Any.fromFunction1(end), length = length.asInstanceOf[js.Any], start = js.Any.fromFunction1(start))
     __obj.asInstanceOf[TimeRange]
   }
-  @scala.inline
-  implicit class TimeRangeOps[Self <: TimeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

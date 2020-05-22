@@ -19,41 +19,14 @@ trait SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse extends
 
 object SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse = {
+  def apply(
+    nextPageToken: String = null,
+    products: js.Array[SchemaGoogleCloudPrivatecatalogproducerV1beta1Product] = null
+  ): SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (products != null) __obj.updateDynamic("products")(products.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponseOps[Self <: SchemaGoogleCloudPrivatecatalogproducerV1beta1ListProductsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProducts(value: js.Array[SchemaGoogleCloudPrivatecatalogproducerV1beta1Product]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProducts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,7 +19,7 @@ trait CreateDBProxyRequest extends js.Object {
     */
   var DebugLogging: js.UndefOr[Boolean] = js.native
   /**
-    * The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. Currently, this value is always MYSQL. The engine family applies to both RDS MySQL and Aurora MySQL.
+    * The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. The engine family applies to MySQL and PostgreSQL for both RDS and Aurora.
     */
   var EngineFamily: typingsSlinky.awsSdk.rdsMod.EngineFamily = js.native
   /**
@@ -55,108 +55,20 @@ object CreateDBProxyRequest {
     DBProxyName: String,
     EngineFamily: EngineFamily,
     RoleArn: String,
-    VpcSubnetIds: StringList
+    VpcSubnetIds: StringList,
+    DebugLogging: js.UndefOr[Boolean] = js.undefined,
+    IdleClientTimeout: js.UndefOr[IntegerOptional] = js.undefined,
+    RequireTLS: js.UndefOr[Boolean] = js.undefined,
+    Tags: TagList = null,
+    VpcSecurityGroupIds: StringList = null
   ): CreateDBProxyRequest = {
     val __obj = js.Dynamic.literal(Auth = Auth.asInstanceOf[js.Any], DBProxyName = DBProxyName.asInstanceOf[js.Any], EngineFamily = EngineFamily.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any], VpcSubnetIds = VpcSubnetIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(DebugLogging)) __obj.updateDynamic("DebugLogging")(DebugLogging.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IdleClientTimeout)) __obj.updateDynamic("IdleClientTimeout")(IdleClientTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequireTLS)) __obj.updateDynamic("RequireTLS")(RequireTLS.get.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (VpcSecurityGroupIds != null) __obj.updateDynamic("VpcSecurityGroupIds")(VpcSecurityGroupIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDBProxyRequest]
   }
-  @scala.inline
-  implicit class CreateDBProxyRequestOps[Self <: CreateDBProxyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth(value: UserAuthConfigList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDBProxyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngineFamily(value: EngineFamily): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVpcSubnetIds(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebugLogging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugLogging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugLogging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleClientTimeout(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdleClientTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleClientTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdleClientTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireTLS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireTLS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireTLS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireTLS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcSecurityGroupIds(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcSecurityGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroupIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

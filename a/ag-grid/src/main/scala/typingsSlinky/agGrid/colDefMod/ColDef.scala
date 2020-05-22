@@ -1,7 +1,6 @@
 package typingsSlinky.agGrid.colDefMod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.agGrid.anon.InstantiableAny
 import typingsSlinky.agGrid.anon.InstantiableICellEditorComp
 import typingsSlinky.agGrid.anon.InstantiableICellRendererComp
@@ -20,42 +19,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColDef
   extends AbstractColDef
      with ComponentHolder {
   /** Name of function to use for aggregation. One of [sum,min,max,first,last] or a function. */
-  var aggFunc: js.UndefOr[String | IAggFunc] = js.native
+  var aggFunc: js.UndefOr[String | IAggFunc] = js.undefined
   /** Agg funcs allowed on this column. If missing, all installed agg funcs are allowed.
     * Can be eg ['sum','avg']. This will restrict what the GUI allows to select only.*/
-  var allowedAggFuncs: js.UndefOr[js.Array[String]] = js.native
+  var allowedAggFuncs: js.UndefOr[js.Array[String]] = js.undefined
   /** True if this column should stretch rows height to fit contents */
-  var autoHeight: js.UndefOr[Boolean] = js.native
+  var autoHeight: js.UndefOr[Boolean] = js.undefined
   /** Class to use for the cell. Can be string, array of strings, or function. */
   var cellClass: js.UndefOr[
     String | js.Array[String] | (js.Function1[/* cellClassParams */ CellClassParams, String | js.Array[String]])
-  ] = js.native
+  ] = js.undefined
   /** Rules for applying css classes */
-  var cellClassRules: js.UndefOr[StringDictionary[js.Function | String]] = js.native
+  var cellClassRules: js.UndefOr[StringDictionary[js.Function | String]] = js.undefined
   /** Cell editor */
-  var cellEditor: js.UndefOr[InstantiableICellEditorComp | String] = js.native
-  var cellEditorFramework: js.UndefOr[js.Any] = js.native
-  var cellEditorParams: js.UndefOr[js.Any] = js.native
-  var cellEditorSelector: js.UndefOr[js.Function1[/* params */ DynamicComponentParams, DynamicComponentDef]] = js.native
+  var cellEditor: js.UndefOr[InstantiableICellEditorComp | String] = js.undefined
+  var cellEditorFramework: js.UndefOr[js.Any] = js.undefined
+  var cellEditorParams: js.UndefOr[js.Any] = js.undefined
+  var cellEditorSelector: js.UndefOr[js.Function1[/* params */ DynamicComponentParams, DynamicComponentDef]] = js.undefined
   /** A function for rendering a cell. */
-  var cellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
-  var cellRendererFramework: js.UndefOr[js.Any] = js.native
-  var cellRendererParams: js.UndefOr[js.Any] = js.native
-  var cellRendererSelector: js.UndefOr[js.Function1[/* params */ DynamicComponentParams, DynamicComponentDef]] = js.native
+  var cellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.undefined
+  var cellRendererFramework: js.UndefOr[js.Any] = js.undefined
+  var cellRendererParams: js.UndefOr[js.Any] = js.undefined
+  var cellRendererSelector: js.UndefOr[js.Function1[/* params */ DynamicComponentParams, DynamicComponentDef]] = js.undefined
   /** An object of css values. Or a function returning an object of css values. */
-  var cellStyle: js.UndefOr[js.Object | (js.Function1[/* params */ js.Any, js.Object])] = js.native
+  var cellStyle: js.UndefOr[js.Object | (js.Function1[/* params */ js.Any, js.Object])] = js.undefined
   /** Set to true to render a selection checkbox in the column. */
-  var checkboxSelection: js.UndefOr[Boolean | (js.Function1[/* params */ js.Any, Boolean])] = js.native
+  var checkboxSelection: js.UndefOr[Boolean | (js.Function1[/* params */ js.Any, Boolean])] = js.undefined
   /** The unique ID to give the column. This is optional. If missing, the ID will default to the field.
     *  If both field and colId are missing, a unique ID will be generated.
     *  This ID is used to identify the column in the API for sorting, filtering etc. */
-  var colId: js.UndefOr[String] = js.native
-  var colSpan: js.UndefOr[js.Function1[/* params */ ColSpanParams, Double]] = js.native
+  var colId: js.UndefOr[String] = js.undefined
+  var colSpan: js.UndefOr[js.Function1[/* params */ ColSpanParams, Double]] = js.undefined
   /** Comparator function for custom sorting. */
   var comparator: js.UndefOr[
     js.Function5[
@@ -66,1389 +64,370 @@ trait ColDef
       /* isInverted */ js.UndefOr[Boolean], 
       Double
     ]
-  ] = js.native
+  ] = js.undefined
   /** Set to true if this col is editable, otherwise false. Can also be a function to have different rows editable. */
-  var editable: js.UndefOr[Boolean | IsColumnFunc] = js.native
+  var editable: js.UndefOr[Boolean | IsColumnFunc] = js.undefined
   /** If true, grid will flash cell after cell is refreshed */
-  var enableCellChangeFlash: js.UndefOr[Boolean] = js.native
+  var enableCellChangeFlash: js.UndefOr[Boolean] = js.undefined
   /** If true, GUI will allow adding this columns as a pivot */
-  var enablePivot: js.UndefOr[Boolean] = js.native
+  var enablePivot: js.UndefOr[Boolean] = js.undefined
   /** If true, GUI will allow adding this columns as a row group */
-  var enableRowGroup: js.UndefOr[Boolean] = js.native
+  var enableRowGroup: js.UndefOr[Boolean] = js.undefined
   /** If true, GUI will allow adding this columns as a value */
-  var enableValue: js.UndefOr[Boolean] = js.native
+  var enableValue: js.UndefOr[Boolean] = js.undefined
   /** Comparator for values, used by renderer to know if values have changed. Cells who's values have not changed don't get refreshed. */
   @JSName("equals")
-  var equals_FColDef: js.UndefOr[js.Function2[/* valueA */ js.Any, /* valueB */ js.Any, Boolean]] = js.native
+  var equals_FColDef: js.UndefOr[js.Function2[/* valueA */ js.Any, /* valueB */ js.Any, Boolean]] = js.undefined
   /** The field of the row to get the cells data from */
-  var field: js.UndefOr[String] = js.native
+  var field: js.UndefOr[String] = js.undefined
   /** one of the built in filter names: [set, number, text], or a filter function*/
-  var filter: js.UndefOr[String | InstantiableIFilterComp] = js.native
-  var filterFramework: js.UndefOr[js.Any] = js.native
+  var filter: js.UndefOr[String | InstantiableIFilterComp] = js.undefined
+  var filterFramework: js.UndefOr[js.Any] = js.undefined
   /** The filter params are specific to each filter! */
-  var filterParams: js.UndefOr[js.Any] = js.native
+  var filterParams: js.UndefOr[js.Any] = js.undefined
   /** Expression or function to get the cells value for filtering. */
-  var filterValueGetter: js.UndefOr[(js.Function1[/* params */ ValueGetterParams, _]) | String] = js.native
+  var filterValueGetter: js.UndefOr[(js.Function1[/* params */ ValueGetterParams, _]) | String] = js.undefined
   /** The custom header component to be used for rendering the floating filter. If none specified the default ag-Grid is used**/
-  var floatingFilterComponent: js.UndefOr[InstantiableIFloatingFilterComp] = js.native
-  var floatingFilterComponentFramework: js.UndefOr[InstantiableAny] = js.native
-  var floatingFilterComponentParams: js.UndefOr[js.Any] = js.native
+  var floatingFilterComponent: js.UndefOr[InstantiableIFloatingFilterComp] = js.undefined
+  var floatingFilterComponentFramework: js.UndefOr[InstantiableAny] = js.undefined
+  var floatingFilterComponentParams: js.UndefOr[js.Any] = js.undefined
   /** To create the quick filter text for this column, if toString is not good enough on the value. */
-  var getQuickFilterText: js.UndefOr[js.Function1[/* params */ GetQuickFilterTextParams, String]] = js.native
+  var getQuickFilterText: js.UndefOr[js.Function1[/* params */ GetQuickFilterTextParams, String]] = js.undefined
   /** If true, a 'select all' checkbox will be put into the header */
-  var headerCheckboxSelection: js.UndefOr[Boolean | (js.Function1[/* params */ js.Any, Boolean])] = js.native
+  var headerCheckboxSelection: js.UndefOr[Boolean | (js.Function1[/* params */ js.Any, Boolean])] = js.undefined
   /** If true, the header checkbox selection will work on filtered items*/
-  var headerCheckboxSelectionFilteredOnly: js.UndefOr[Boolean] = js.native
+  var headerCheckboxSelectionFilteredOnly: js.UndefOr[Boolean] = js.undefined
   /** The custom header component to be used for rendering the component header. If none specified the default ag-Grid is used**/
-  var headerComponent: js.UndefOr[String | InstantiableAny] = js.native
+  var headerComponent: js.UndefOr[String | InstantiableAny] = js.undefined
   /** The custom header component to be used for rendering the component header in the hosting framework (ie: React/Angular). If none specified the default ag-Grid is used**/
-  var headerComponentFramework: js.UndefOr[InstantiableAny] = js.native
+  var headerComponentFramework: js.UndefOr[InstantiableAny] = js.undefined
   /** The custom header component parameters**/
-  var headerComponentParams: js.UndefOr[js.Any] = js.native
+  var headerComponentParams: js.UndefOr[js.Any] = js.undefined
   /** Set to true for this column to be hidden. Naturally you might think, it would make more sense to call this field 'visible' and mark it false to hide,
     *  however we want all default values to be false and we want columns to be visible by default. */
-  var hide: js.UndefOr[Boolean] = js.native
+  var hide: js.UndefOr[Boolean] = js.undefined
   /** Icons for this column. Leave blank to use default. */
-  var icons: js.UndefOr[StringDictionary[String]] = js.native
+  var icons: js.UndefOr[StringDictionary[String]] = js.undefined
   /** Function to return the key for a value - use this if the value is an object (not a primitive type) and you
     * want to a) group by this field or b) use set filter on this field. */
-  var keyCreator: js.UndefOr[js.Function] = js.native
+  var keyCreator: js.UndefOr[js.Function] = js.undefined
   /** Set to true to block the user pinning the column, the column can only be pinned via definitions or API */
-  var lockPinned: js.UndefOr[Boolean] = js.native
+  var lockPinned: js.UndefOr[Boolean] = js.undefined
   /** Set to true to make sure this column is always first. Other columns, if movable, cannot move before this column. */
-  var lockPosition: js.UndefOr[Boolean] = js.native
+  var lockPosition: js.UndefOr[Boolean] = js.undefined
   /** Set to true to block the user showing / hiding the column, the column can only be shown / hidden via definitions or API */
-  var lockVisible: js.UndefOr[Boolean] = js.native
+  var lockVisible: js.UndefOr[Boolean] = js.undefined
   /** Max width, in pixels, of the cell */
-  var maxWidth: js.UndefOr[Double] = js.native
+  var maxWidth: js.UndefOr[Double] = js.undefined
   /** The menu tabs to show, and in which order, the valid values for this property are:
     * filterMenuTab, generalMenuTab, columnsMenuTab **/
-  var menuTabs: js.UndefOr[js.Array[String]] = js.native
+  var menuTabs: js.UndefOr[js.Array[String]] = js.undefined
   /** Min width, in pixels, of the cell */
-  var minWidth: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.undefined
   /** Callbacks for editing. See editing section for further details.
     * Return true if the update was successful, or false if not.
     * If false, then skips the UI refresh and no events are emitted.
     * Return false if the values are the same (ie no update). */
-  var newValueHandler: js.UndefOr[js.Function1[/* params */ js.Any, Boolean]] = js.native
+  var newValueHandler: js.UndefOr[js.Function1[/* params */ js.Any, Boolean]] = js.undefined
   /** Function callback, gets called when a cell is clicked. */
-  var onCellClicked: js.UndefOr[js.Function1[/* event */ CellClickedEvent, Unit]] = js.native
+  var onCellClicked: js.UndefOr[js.Function1[/* event */ CellClickedEvent, Unit]] = js.undefined
   /** Function callback, gets called when a cell is right clicked. */
-  var onCellContextMenu: js.UndefOr[js.Function1[/* event */ CellContextMenuEvent, Unit]] = js.native
+  var onCellContextMenu: js.UndefOr[js.Function1[/* event */ CellContextMenuEvent, Unit]] = js.undefined
   /** Function callback, gets called when a cell is double clicked. */
-  var onCellDoubleClicked: js.UndefOr[js.Function1[/* event */ CellDoubleClickedEvent, Unit]] = js.native
+  var onCellDoubleClicked: js.UndefOr[js.Function1[/* event */ CellDoubleClickedEvent, Unit]] = js.undefined
   /** Callbacks for editing.See editing section for further details. */
-  var onCellValueChanged: js.UndefOr[js.Function] = js.native
+  var onCellValueChanged: js.UndefOr[js.Function] = js.undefined
   /** Whether this column is pinned or not. */
-  var pinned: js.UndefOr[Boolean | String] = js.native
+  var pinned: js.UndefOr[Boolean | String] = js.undefined
   /** A function for rendering a pinned row cell. */
-  var pinnedRowCellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
-  var pinnedRowCellRendererFramework: js.UndefOr[js.Any] = js.native
-  var pinnedRowCellRendererParams: js.UndefOr[js.Any] = js.native
+  var pinnedRowCellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.undefined
+  var pinnedRowCellRendererFramework: js.UndefOr[js.Any] = js.undefined
+  var pinnedRowCellRendererParams: js.UndefOr[js.Any] = js.undefined
   /** A function to format a pinned row value, should return a string. Not used for CSV export or copy to clipboard, only for UI cell rendering. */
-  var pinnedRowValueFormatter: js.UndefOr[js.Function1[/* params */ ValueFormatterParams, String]] = js.native
-  var pivot: js.UndefOr[Boolean] = js.native
+  var pinnedRowValueFormatter: js.UndefOr[js.Function1[/* params */ ValueFormatterParams, String]] = js.undefined
+  var pivot: js.UndefOr[Boolean] = js.undefined
   /** Comparator for ordering the pivot columns */
-  var pivotComparator: js.UndefOr[js.Function2[/* valueA */ String, /* valueB */ String, Double]] = js.native
+  var pivotComparator: js.UndefOr[js.Function2[/* valueA */ String, /* valueB */ String, Double]] = js.undefined
   /** To pivot by this column by default, either provide an index (eg pivotIndex=1), or set pivot=true. */
-  var pivotIndex: js.UndefOr[Double] = js.native
+  var pivotIndex: js.UndefOr[Double] = js.undefined
   /** Never set this, it is used internally by grid when doing in-grid pivoting */
-  var pivotTotalColumnIds: js.UndefOr[js.Array[String]] = js.native
+  var pivotTotalColumnIds: js.UndefOr[js.Array[String]] = js.undefined
   /** Never set this, it is used internally by grid when doing in-grid pivoting */
-  var pivotValueColumn: js.UndefOr[Column] = js.native
-  var refData: js.UndefOr[StringDictionary[String]] = js.native
-  var rowDrag: js.UndefOr[Boolean | (js.Function1[/* params */ js.Any, Boolean])] = js.native
-  var rowGroup: js.UndefOr[Boolean] = js.native
+  var pivotValueColumn: js.UndefOr[Column] = js.undefined
+  var refData: js.UndefOr[StringDictionary[String]] = js.undefined
+  var rowDrag: js.UndefOr[Boolean | (js.Function1[/* params */ js.Any, Boolean])] = js.undefined
+  var rowGroup: js.UndefOr[Boolean] = js.undefined
   /** To group by this column by default, either provide an index (eg rowGroupIndex=1), or set rowGroup=true. */
-  var rowGroupIndex: js.UndefOr[Double] = js.native
-  var rowSpan: js.UndefOr[js.Function1[/* params */ RowSpanParams, Double]] = js.native
+  var rowGroupIndex: js.UndefOr[Double] = js.undefined
+  var rowSpan: js.UndefOr[js.Function1[/* params */ RowSpanParams, Double]] = js.undefined
   /** Set to true to have the grid place the values for the group into the cell, or put the name of a grouped column to just show that group. */
-  var showRowGroup: js.UndefOr[String | Boolean] = js.native
+  var showRowGroup: js.UndefOr[String | Boolean] = js.undefined
   /** If true, this cell will be in editing mode after first click. */
-  var singleClickEdit: js.UndefOr[Boolean] = js.native
+  var singleClickEdit: js.UndefOr[Boolean] = js.undefined
   /** If sorting by default, set it here. Set to 'asc' or 'desc' */
-  var sort: js.UndefOr[String] = js.native
+  var sort: js.UndefOr[String] = js.undefined
   /** If sorting more than one column by default, the milliseconds when this column was sorted, so we know what order to sort the columns in. */
-  var sortedAt: js.UndefOr[Double] = js.native
+  var sortedAt: js.UndefOr[Double] = js.undefined
   /** The sort order, provide an array with any of the following in any order ['asc','desc',null] */
-  var sortingOrder: js.UndefOr[js.Array[String]] = js.native
+  var sortingOrder: js.UndefOr[js.Array[String]] = js.undefined
   /** Set to true if you do not want this column to be auto-resizable by double clicking it's edge. */
-  var suppressAutoSize: js.UndefOr[Boolean] = js.native
+  var suppressAutoSize: js.UndefOr[Boolean] = js.undefined
   /** Set to true to not flash this column for value changes */
-  var suppressCellFlash: js.UndefOr[Boolean] = js.native
+  var suppressCellFlash: js.UndefOr[Boolean] = js.undefined
   /** Set to true to not allow filter on this column */
-  var suppressFilter: js.UndefOr[Boolean] = js.native
-  var suppressKeyboardEvent: js.UndefOr[js.Function1[/* params */ SuppressKeyboardEventParams, Boolean]] = js.native
+  var suppressFilter: js.UndefOr[Boolean] = js.undefined
+  var suppressKeyboardEvent: js.UndefOr[js.Function1[/* params */ SuppressKeyboardEventParams, Boolean]] = js.undefined
   /** Set to true if no menu should be shown for this column header. */
-  var suppressMenu: js.UndefOr[Boolean] = js.native
+  var suppressMenu: js.UndefOr[Boolean] = js.undefined
   /** Set to true to not allow moving this column via dragging it's header */
-  var suppressMovable: js.UndefOr[Boolean] = js.native
+  var suppressMovable: js.UndefOr[Boolean] = js.undefined
   /** Set to tru if this col should not be navigable with the tab key. Can also be a function to have different rows editable. */
-  var suppressNavigable: js.UndefOr[Boolean | IsColumnFunc] = js.native
+  var suppressNavigable: js.UndefOr[Boolean | IsColumnFunc] = js.undefined
   /** Set to true if this col should not be allowed take new values from teh clipboard . */
-  var suppressPaste: js.UndefOr[Boolean | IsColumnFunc] = js.native
+  var suppressPaste: js.UndefOr[Boolean | IsColumnFunc] = js.undefined
   /** Set to true if you do not want this column to be resizable by dragging it's edge. */
-  var suppressResize: js.UndefOr[Boolean] = js.native
+  var suppressResize: js.UndefOr[Boolean] = js.undefined
   /** Set to true if you want this columns width to be fixed during 'size to fit' operation. */
-  var suppressSizeToFit: js.UndefOr[Boolean] = js.native
+  var suppressSizeToFit: js.UndefOr[Boolean] = js.undefined
   /** Set to true if no sorting should be done for this column. */
-  var suppressSorting: js.UndefOr[Boolean] = js.native
+  var suppressSorting: js.UndefOr[Boolean] = js.undefined
   /** Cell template to use for cell. Useful for AngularJS cells. */
-  var template: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String] = js.undefined
   /** Cell template URL to load template from to use for cell. Useful for AngularJS cells. */
-  var templateUrl: js.UndefOr[String] = js.native
+  var templateUrl: js.UndefOr[String] = js.undefined
   /** The function used to calculate the tooltip of the object, tooltipField takes precedence*/
-  var tooltip: js.UndefOr[js.Function1[/* params */ TooltipParams, String]] = js.native
+  var tooltip: js.UndefOr[js.Function1[/* params */ TooltipParams, String]] = js.undefined
   /** The field where we get the tooltip on the object */
-  var tooltipField: js.UndefOr[String] = js.native
+  var tooltipField: js.UndefOr[String] = js.undefined
   /**
     * A comma separated string or array of strings containing ColumnType keys which can be used as a template for a column.
     * This helps to reduce duplication of properties when you have a lot of common column properties.
     */
-  var `type`: js.UndefOr[String | js.Array[String]] = js.native
+  var `type`: js.UndefOr[String | js.Array[String]] = js.undefined
   /** Set to true if you want the unsorted icon to be shown when no sort is applied to this column. */
-  var unSortIcon: js.UndefOr[Boolean] = js.native
+  var unSortIcon: js.UndefOr[Boolean] = js.undefined
   /** A function to format a value, should return a string. Not used for CSV export or copy to clipboard, only for UI cell rendering. */
-  var valueFormatter: js.UndefOr[js.Function1[/* params */ ValueFormatterParams, String]] = js.native
+  var valueFormatter: js.UndefOr[js.Function1[/* params */ ValueFormatterParams, String]] = js.undefined
   /** Expression or function to get the cells value. */
-  var valueGetter: js.UndefOr[(js.Function1[/* params */ ValueGetterParams, _]) | String] = js.native
+  var valueGetter: js.UndefOr[(js.Function1[/* params */ ValueGetterParams, _]) | String] = js.undefined
   /** Gets called after editing, converts the value in the cell. */
-  var valueParser: js.UndefOr[js.Function1[/* params */ ValueParserParams, _ | String]] = js.native
+  var valueParser: js.UndefOr[js.Function1[/* params */ ValueParserParams, _ | String]] = js.undefined
   /** If not using a field, then this puts the value into the cell */
-  var valueSetter: js.UndefOr[(js.Function1[/* params */ ValueSetterParams, Boolean]) | String] = js.native
+  var valueSetter: js.UndefOr[(js.Function1[/* params */ ValueSetterParams, Boolean]) | String] = js.undefined
   /** Initial width, in pixels, of the cell */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object ColDef {
   @scala.inline
-  def apply(): ColDef = {
+  def apply(
+    aggFunc: String | IAggFunc = null,
+    allowedAggFuncs: js.Array[String] = null,
+    autoHeight: js.UndefOr[Boolean] = js.undefined,
+    cellClass: String | js.Array[String] | (js.Function1[/* cellClassParams */ CellClassParams, String | js.Array[String]]) = null,
+    cellClassRules: StringDictionary[js.Function | String] = null,
+    cellEditor: InstantiableICellEditorComp | String = null,
+    cellEditorFramework: js.Any = null,
+    cellEditorParams: js.Any = null,
+    cellEditorSelector: /* params */ DynamicComponentParams => DynamicComponentDef = null,
+    cellRenderer: InstantiableICellRendererComp | ICellRendererFunc | String = null,
+    cellRendererFramework: js.Any = null,
+    cellRendererParams: js.Any = null,
+    cellRendererSelector: /* params */ DynamicComponentParams => DynamicComponentDef = null,
+    cellStyle: js.Object | (js.Function1[/* params */ js.Any, js.Object]) = null,
+    checkboxSelection: Boolean | (js.Function1[/* params */ js.Any, Boolean]) = null,
+    colId: String = null,
+    colSpan: /* params */ ColSpanParams => Double = null,
+    columnGroupShow: String = null,
+    comparator: (/* valueA */ js.Any, /* valueB */ js.Any, /* nodeA */ js.UndefOr[RowNode], /* nodeB */ js.UndefOr[RowNode], /* isInverted */ js.UndefOr[Boolean]) => Double = null,
+    editable: Boolean | IsColumnFunc = null,
+    enableCellChangeFlash: js.UndefOr[Boolean] = js.undefined,
+    enablePivot: js.UndefOr[Boolean] = js.undefined,
+    enableRowGroup: js.UndefOr[Boolean] = js.undefined,
+    enableValue: js.UndefOr[Boolean] = js.undefined,
+    equals: (/* valueA */ js.Any, /* valueB */ js.Any) => Boolean = null,
+    field: String = null,
+    filter: String | InstantiableIFilterComp = null,
+    filterFramework: js.Any = null,
+    filterParams: js.Any = null,
+    filterValueGetter: (js.Function1[/* params */ ValueGetterParams, _]) | String = null,
+    floatingFilterComponent: InstantiableIFloatingFilterComp = null,
+    floatingFilterComponentFramework: InstantiableAny = null,
+    floatingFilterComponentParams: js.Any = null,
+    getQuickFilterText: /* params */ GetQuickFilterTextParams => String = null,
+    headerCheckboxSelection: Boolean | (js.Function1[/* params */ js.Any, Boolean]) = null,
+    headerCheckboxSelectionFilteredOnly: js.UndefOr[Boolean] = js.undefined,
+    headerClass: String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]]) = null,
+    headerComponent: String | InstantiableAny = null,
+    headerComponentFramework: InstantiableAny = null,
+    headerComponentParams: js.Any = null,
+    headerName: String = null,
+    headerTooltip: String = null,
+    headerValueGetter: String | js.Function = null,
+    hide: js.UndefOr[Boolean] = js.undefined,
+    icons: StringDictionary[String] = null,
+    keyCreator: js.Function = null,
+    lockPinned: js.UndefOr[Boolean] = js.undefined,
+    lockPosition: js.UndefOr[Boolean] = js.undefined,
+    lockVisible: js.UndefOr[Boolean] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    menuTabs: js.Array[String] = null,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    newValueHandler: /* params */ js.Any => Boolean = null,
+    onCellClicked: /* event */ CellClickedEvent => Unit = null,
+    onCellContextMenu: /* event */ CellContextMenuEvent => Unit = null,
+    onCellDoubleClicked: /* event */ CellDoubleClickedEvent => Unit = null,
+    onCellValueChanged: js.Function = null,
+    pinned: Boolean | String = null,
+    pinnedRowCellRenderer: InstantiableICellRendererComp | ICellRendererFunc | String = null,
+    pinnedRowCellRendererFramework: js.Any = null,
+    pinnedRowCellRendererParams: js.Any = null,
+    pinnedRowValueFormatter: /* params */ ValueFormatterParams => String = null,
+    pivot: js.UndefOr[Boolean] = js.undefined,
+    pivotComparator: (/* valueA */ String, /* valueB */ String) => Double = null,
+    pivotIndex: js.UndefOr[Double] = js.undefined,
+    pivotKeys: js.Array[String] = null,
+    pivotTotalColumnIds: js.Array[String] = null,
+    pivotValueColumn: Column = null,
+    refData: StringDictionary[String] = null,
+    rowDrag: Boolean | (js.Function1[/* params */ js.Any, Boolean]) = null,
+    rowGroup: js.UndefOr[Boolean] = js.undefined,
+    rowGroupIndex: js.UndefOr[Double] = js.undefined,
+    rowSpan: /* params */ RowSpanParams => Double = null,
+    showRowGroup: String | Boolean = null,
+    singleClickEdit: js.UndefOr[Boolean] = js.undefined,
+    sort: String = null,
+    sortedAt: js.UndefOr[Double] = js.undefined,
+    sortingOrder: js.Array[String] = null,
+    suppressAutoSize: js.UndefOr[Boolean] = js.undefined,
+    suppressCellFlash: js.UndefOr[Boolean] = js.undefined,
+    suppressFilter: js.UndefOr[Boolean] = js.undefined,
+    suppressKeyboardEvent: /* params */ SuppressKeyboardEventParams => Boolean = null,
+    suppressMenu: js.UndefOr[Boolean] = js.undefined,
+    suppressMovable: js.UndefOr[Boolean] = js.undefined,
+    suppressNavigable: Boolean | IsColumnFunc = null,
+    suppressPaste: Boolean | IsColumnFunc = null,
+    suppressResize: js.UndefOr[Boolean] = js.undefined,
+    suppressSizeToFit: js.UndefOr[Boolean] = js.undefined,
+    suppressSorting: js.UndefOr[Boolean] = js.undefined,
+    suppressToolPanel: js.UndefOr[Boolean] = js.undefined,
+    template: String = null,
+    templateUrl: String = null,
+    toolPanelClass: String | js.Array[String] | (js.Function1[/* params */ js.Any, String | js.Array[String]]) = null,
+    tooltip: /* params */ TooltipParams => String = null,
+    tooltipField: String = null,
+    `type`: String | js.Array[String] = null,
+    unSortIcon: js.UndefOr[Boolean] = js.undefined,
+    valueFormatter: /* params */ ValueFormatterParams => String = null,
+    valueGetter: (js.Function1[/* params */ ValueGetterParams, _]) | String = null,
+    valueParser: /* params */ ValueParserParams => _ | String = null,
+    valueSetter: (js.Function1[/* params */ ValueSetterParams, Boolean]) | String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ColDef = {
     val __obj = js.Dynamic.literal()
+    if (aggFunc != null) __obj.updateDynamic("aggFunc")(aggFunc.asInstanceOf[js.Any])
+    if (allowedAggFuncs != null) __obj.updateDynamic("allowedAggFuncs")(allowedAggFuncs.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.get.asInstanceOf[js.Any])
+    if (cellClass != null) __obj.updateDynamic("cellClass")(cellClass.asInstanceOf[js.Any])
+    if (cellClassRules != null) __obj.updateDynamic("cellClassRules")(cellClassRules.asInstanceOf[js.Any])
+    if (cellEditor != null) __obj.updateDynamic("cellEditor")(cellEditor.asInstanceOf[js.Any])
+    if (cellEditorFramework != null) __obj.updateDynamic("cellEditorFramework")(cellEditorFramework.asInstanceOf[js.Any])
+    if (cellEditorParams != null) __obj.updateDynamic("cellEditorParams")(cellEditorParams.asInstanceOf[js.Any])
+    if (cellEditorSelector != null) __obj.updateDynamic("cellEditorSelector")(js.Any.fromFunction1(cellEditorSelector))
+    if (cellRenderer != null) __obj.updateDynamic("cellRenderer")(cellRenderer.asInstanceOf[js.Any])
+    if (cellRendererFramework != null) __obj.updateDynamic("cellRendererFramework")(cellRendererFramework.asInstanceOf[js.Any])
+    if (cellRendererParams != null) __obj.updateDynamic("cellRendererParams")(cellRendererParams.asInstanceOf[js.Any])
+    if (cellRendererSelector != null) __obj.updateDynamic("cellRendererSelector")(js.Any.fromFunction1(cellRendererSelector))
+    if (cellStyle != null) __obj.updateDynamic("cellStyle")(cellStyle.asInstanceOf[js.Any])
+    if (checkboxSelection != null) __obj.updateDynamic("checkboxSelection")(checkboxSelection.asInstanceOf[js.Any])
+    if (colId != null) __obj.updateDynamic("colId")(colId.asInstanceOf[js.Any])
+    if (colSpan != null) __obj.updateDynamic("colSpan")(js.Any.fromFunction1(colSpan))
+    if (columnGroupShow != null) __obj.updateDynamic("columnGroupShow")(columnGroupShow.asInstanceOf[js.Any])
+    if (comparator != null) __obj.updateDynamic("comparator")(js.Any.fromFunction5(comparator))
+    if (editable != null) __obj.updateDynamic("editable")(editable.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCellChangeFlash)) __obj.updateDynamic("enableCellChangeFlash")(enableCellChangeFlash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePivot)) __obj.updateDynamic("enablePivot")(enablePivot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRowGroup)) __obj.updateDynamic("enableRowGroup")(enableRowGroup.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableValue)) __obj.updateDynamic("enableValue")(enableValue.get.asInstanceOf[js.Any])
+    if (equals != null) __obj.updateDynamic("equals")(js.Any.fromFunction2(equals))
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (filterFramework != null) __obj.updateDynamic("filterFramework")(filterFramework.asInstanceOf[js.Any])
+    if (filterParams != null) __obj.updateDynamic("filterParams")(filterParams.asInstanceOf[js.Any])
+    if (filterValueGetter != null) __obj.updateDynamic("filterValueGetter")(filterValueGetter.asInstanceOf[js.Any])
+    if (floatingFilterComponent != null) __obj.updateDynamic("floatingFilterComponent")(floatingFilterComponent.asInstanceOf[js.Any])
+    if (floatingFilterComponentFramework != null) __obj.updateDynamic("floatingFilterComponentFramework")(floatingFilterComponentFramework.asInstanceOf[js.Any])
+    if (floatingFilterComponentParams != null) __obj.updateDynamic("floatingFilterComponentParams")(floatingFilterComponentParams.asInstanceOf[js.Any])
+    if (getQuickFilterText != null) __obj.updateDynamic("getQuickFilterText")(js.Any.fromFunction1(getQuickFilterText))
+    if (headerCheckboxSelection != null) __obj.updateDynamic("headerCheckboxSelection")(headerCheckboxSelection.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerCheckboxSelectionFilteredOnly)) __obj.updateDynamic("headerCheckboxSelectionFilteredOnly")(headerCheckboxSelectionFilteredOnly.get.asInstanceOf[js.Any])
+    if (headerClass != null) __obj.updateDynamic("headerClass")(headerClass.asInstanceOf[js.Any])
+    if (headerComponent != null) __obj.updateDynamic("headerComponent")(headerComponent.asInstanceOf[js.Any])
+    if (headerComponentFramework != null) __obj.updateDynamic("headerComponentFramework")(headerComponentFramework.asInstanceOf[js.Any])
+    if (headerComponentParams != null) __obj.updateDynamic("headerComponentParams")(headerComponentParams.asInstanceOf[js.Any])
+    if (headerName != null) __obj.updateDynamic("headerName")(headerName.asInstanceOf[js.Any])
+    if (headerTooltip != null) __obj.updateDynamic("headerTooltip")(headerTooltip.asInstanceOf[js.Any])
+    if (headerValueGetter != null) __obj.updateDynamic("headerValueGetter")(headerValueGetter.asInstanceOf[js.Any])
+    if (!js.isUndefined(hide)) __obj.updateDynamic("hide")(hide.get.asInstanceOf[js.Any])
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (keyCreator != null) __obj.updateDynamic("keyCreator")(keyCreator.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockPinned)) __obj.updateDynamic("lockPinned")(lockPinned.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockPosition)) __obj.updateDynamic("lockPosition")(lockPosition.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lockVisible)) __obj.updateDynamic("lockVisible")(lockVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (menuTabs != null) __obj.updateDynamic("menuTabs")(menuTabs.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (newValueHandler != null) __obj.updateDynamic("newValueHandler")(js.Any.fromFunction1(newValueHandler))
+    if (onCellClicked != null) __obj.updateDynamic("onCellClicked")(js.Any.fromFunction1(onCellClicked))
+    if (onCellContextMenu != null) __obj.updateDynamic("onCellContextMenu")(js.Any.fromFunction1(onCellContextMenu))
+    if (onCellDoubleClicked != null) __obj.updateDynamic("onCellDoubleClicked")(js.Any.fromFunction1(onCellDoubleClicked))
+    if (onCellValueChanged != null) __obj.updateDynamic("onCellValueChanged")(onCellValueChanged.asInstanceOf[js.Any])
+    if (pinned != null) __obj.updateDynamic("pinned")(pinned.asInstanceOf[js.Any])
+    if (pinnedRowCellRenderer != null) __obj.updateDynamic("pinnedRowCellRenderer")(pinnedRowCellRenderer.asInstanceOf[js.Any])
+    if (pinnedRowCellRendererFramework != null) __obj.updateDynamic("pinnedRowCellRendererFramework")(pinnedRowCellRendererFramework.asInstanceOf[js.Any])
+    if (pinnedRowCellRendererParams != null) __obj.updateDynamic("pinnedRowCellRendererParams")(pinnedRowCellRendererParams.asInstanceOf[js.Any])
+    if (pinnedRowValueFormatter != null) __obj.updateDynamic("pinnedRowValueFormatter")(js.Any.fromFunction1(pinnedRowValueFormatter))
+    if (!js.isUndefined(pivot)) __obj.updateDynamic("pivot")(pivot.get.asInstanceOf[js.Any])
+    if (pivotComparator != null) __obj.updateDynamic("pivotComparator")(js.Any.fromFunction2(pivotComparator))
+    if (!js.isUndefined(pivotIndex)) __obj.updateDynamic("pivotIndex")(pivotIndex.get.asInstanceOf[js.Any])
+    if (pivotKeys != null) __obj.updateDynamic("pivotKeys")(pivotKeys.asInstanceOf[js.Any])
+    if (pivotTotalColumnIds != null) __obj.updateDynamic("pivotTotalColumnIds")(pivotTotalColumnIds.asInstanceOf[js.Any])
+    if (pivotValueColumn != null) __obj.updateDynamic("pivotValueColumn")(pivotValueColumn.asInstanceOf[js.Any])
+    if (refData != null) __obj.updateDynamic("refData")(refData.asInstanceOf[js.Any])
+    if (rowDrag != null) __obj.updateDynamic("rowDrag")(rowDrag.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowGroup)) __obj.updateDynamic("rowGroup")(rowGroup.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowGroupIndex)) __obj.updateDynamic("rowGroupIndex")(rowGroupIndex.get.asInstanceOf[js.Any])
+    if (rowSpan != null) __obj.updateDynamic("rowSpan")(js.Any.fromFunction1(rowSpan))
+    if (showRowGroup != null) __obj.updateDynamic("showRowGroup")(showRowGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleClickEdit)) __obj.updateDynamic("singleClickEdit")(singleClickEdit.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortedAt)) __obj.updateDynamic("sortedAt")(sortedAt.get.asInstanceOf[js.Any])
+    if (sortingOrder != null) __obj.updateDynamic("sortingOrder")(sortingOrder.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressAutoSize)) __obj.updateDynamic("suppressAutoSize")(suppressAutoSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressCellFlash)) __obj.updateDynamic("suppressCellFlash")(suppressCellFlash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressFilter)) __obj.updateDynamic("suppressFilter")(suppressFilter.get.asInstanceOf[js.Any])
+    if (suppressKeyboardEvent != null) __obj.updateDynamic("suppressKeyboardEvent")(js.Any.fromFunction1(suppressKeyboardEvent))
+    if (!js.isUndefined(suppressMenu)) __obj.updateDynamic("suppressMenu")(suppressMenu.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressMovable)) __obj.updateDynamic("suppressMovable")(suppressMovable.get.asInstanceOf[js.Any])
+    if (suppressNavigable != null) __obj.updateDynamic("suppressNavigable")(suppressNavigable.asInstanceOf[js.Any])
+    if (suppressPaste != null) __obj.updateDynamic("suppressPaste")(suppressPaste.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressResize)) __obj.updateDynamic("suppressResize")(suppressResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressSizeToFit)) __obj.updateDynamic("suppressSizeToFit")(suppressSizeToFit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressSorting)) __obj.updateDynamic("suppressSorting")(suppressSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressToolPanel)) __obj.updateDynamic("suppressToolPanel")(suppressToolPanel.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
+    if (toolPanelClass != null) __obj.updateDynamic("toolPanelClass")(toolPanelClass.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(js.Any.fromFunction1(tooltip))
+    if (tooltipField != null) __obj.updateDynamic("tooltipField")(tooltipField.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(unSortIcon)) __obj.updateDynamic("unSortIcon")(unSortIcon.get.asInstanceOf[js.Any])
+    if (valueFormatter != null) __obj.updateDynamic("valueFormatter")(js.Any.fromFunction1(valueFormatter))
+    if (valueGetter != null) __obj.updateDynamic("valueGetter")(valueGetter.asInstanceOf[js.Any])
+    if (valueParser != null) __obj.updateDynamic("valueParser")(js.Any.fromFunction1(valueParser))
+    if (valueSetter != null) __obj.updateDynamic("valueSetter")(valueSetter.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColDef]
   }
-  @scala.inline
-  implicit class ColDefOps[Self <: ColDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggFuncFunction1(value: /* input */ js.Array[js.Any] => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggFunc")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAggFunc(value: String | IAggFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggFunc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggFunc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggFunc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedAggFuncs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedAggFuncs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedAggFuncs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedAggFuncs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellClassFunction1(value: /* cellClassParams */ CellClassParams => String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCellClass(
-      value: String | js.Array[String] | (js.Function1[/* cellClassParams */ CellClassParams, String | js.Array[String]])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellClassRules(value: StringDictionary[js.Function | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClassRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellClassRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClassRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellEditor(value: InstantiableICellEditorComp | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellEditorFramework(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditorFramework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellEditorFramework: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditorFramework")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellEditorParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditorParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellEditorParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditorParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellEditorSelector(value: /* params */ DynamicComponentParams => DynamicComponentDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditorSelector")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellEditorSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditorSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellRendererFunction1(value: /* params */ js.Any => HTMLElement | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellRendererFramework(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRendererFramework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellRendererFramework: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRendererFramework")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellRendererParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRendererParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellRendererParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRendererParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellRendererSelector(value: /* params */ DynamicComponentParams => DynamicComponentDef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRendererSelector")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellRendererSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellRendererSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellStyleFunction1(value: /* params */ js.Any => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCellStyle(value: js.Object | (js.Function1[/* params */ js.Any, js.Object])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckboxSelectionFunction1(value: /* params */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCheckboxSelection(value: Boolean | (js.Function1[/* params */ js.Any, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColSpan(value: /* params */ ColSpanParams => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparator(
-      value: (/* valueA */ js.Any, /* valueB */ js.Any, /* nodeA */ js.UndefOr[RowNode], /* nodeB */ js.UndefOr[RowNode], /* isInverted */ js.UndefOr[Boolean]) => Double
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditableFunction1(value: /* params */ IsColumnFuncParams => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEditable(value: Boolean | IsColumnFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCellChangeFlash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCellChangeFlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCellChangeFlash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCellChangeFlash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePivot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePivot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePivot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePivot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableRowGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRowGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRowGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRowGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEquals(value: (/* valueA */ js.Any, /* valueB */ js.Any) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String | InstantiableIFilterComp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterFramework(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterFramework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterFramework: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterFramework")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterValueGetterFunction1(value: /* params */ ValueGetterParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValueGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFilterValueGetter(value: (js.Function1[/* params */ ValueGetterParams, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValueGetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterValueGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValueGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingFilterComponent(value: InstantiableIFloatingFilterComp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingFilterComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingFilterComponentFramework(value: InstantiableAny): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponentFramework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingFilterComponentFramework: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponentFramework")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatingFilterComponentParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponentParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingFilterComponentParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponentParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetQuickFilterText(value: /* params */ GetQuickFilterTextParams => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getQuickFilterText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetQuickFilterText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getQuickFilterText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderCheckboxSelectionFunction1(value: /* params */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCheckboxSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHeaderCheckboxSelection(value: Boolean | (js.Function1[/* params */ js.Any, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCheckboxSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderCheckboxSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCheckboxSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderCheckboxSelectionFilteredOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCheckboxSelectionFilteredOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderCheckboxSelectionFilteredOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerCheckboxSelectionFilteredOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderComponent(value: String | InstantiableAny): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderComponentFramework(value: InstantiableAny): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponentFramework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderComponentFramework: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponentFramework")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderComponentParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponentParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderComponentParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponentParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyCreator(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCreator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyCreator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCreator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockPinned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockPinned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockPinned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockPinned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockPosition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuTabs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuTabs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuTabs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuTabs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewValueHandler(value: /* params */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValueHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNewValueHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValueHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellClicked(value: /* event */ CellClickedEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClicked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellClicked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClicked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellContextMenu(value: /* event */ CellContextMenuEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellDoubleClicked(value: /* event */ CellDoubleClickedEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDoubleClicked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCellDoubleClicked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDoubleClicked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCellValueChanged(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellValueChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCellValueChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCellValueChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinned(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinnedRowCellRendererFunction1(value: /* params */ js.Any => HTMLElement | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPinnedRowCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinnedRowCellRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinnedRowCellRendererFramework(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRendererFramework")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinnedRowCellRendererFramework: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRendererFramework")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinnedRowCellRendererParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRendererParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinnedRowCellRendererParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRendererParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinnedRowValueFormatter(value: /* params */ ValueFormatterParams => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowValueFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPinnedRowValueFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowValueFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotComparator(value: (/* valueA */ String, /* valueB */ String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotComparator")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPivotComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotComparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotTotalColumnIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTotalColumnIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotTotalColumnIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTotalColumnIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotValueColumn(value: Column): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotValueColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotValueColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotValueColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefData(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDragFunction1(value: /* params */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRowDrag(value: Boolean | (js.Function1[/* params */ js.Any, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowGroupIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroupIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowGroupIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGroupIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowSpan(value: /* params */ RowSpanParams => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRowGroup(value: String | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRowGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleClickEdit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleClickEdit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleClickEdit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleClickEdit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortedAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortingOrder(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortingOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressAutoSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressAutoSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressAutoSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressAutoSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressCellFlash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressCellFlash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressCellFlash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressCellFlash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressKeyboardEvent(value: /* params */ SuppressKeyboardEventParams => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressKeyboardEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuppressKeyboardEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressKeyboardEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressMenu(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressMovable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMovable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressMovable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMovable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressNavigableFunction1(value: /* params */ IsColumnFuncParams => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressNavigable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSuppressNavigable(value: Boolean | IsColumnFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressNavigable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressNavigable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressNavigable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressPasteFunction1(value: /* params */ IsColumnFuncParams => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPaste")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSuppressPaste(value: Boolean | IsColumnFunc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPaste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressSizeToFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressSizeToFit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressSizeToFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressSizeToFit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: /* params */ TooltipParams => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnSortIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unSortIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnSortIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unSortIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueFormatter(value: /* params */ ValueFormatterParams => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutValueFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueGetterFunction1(value: /* params */ ValueGetterParams => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueGetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValueGetter(value: (js.Function1[/* params */ ValueGetterParams, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueGetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueGetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueGetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueParser(value: /* params */ ValueParserParams => _ | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueParser")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutValueParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSetterFunction1(value: /* params */ ValueSetterParams => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValueSetter(value: (js.Function1[/* params */ ValueSetterParams, Boolean]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

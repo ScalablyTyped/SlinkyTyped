@@ -21,41 +21,11 @@ trait DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption extends js.O
 
 object DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption {
   @scala.inline
-  def apply(): DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption = {
+  def apply(actionOnTimeout: Input[String] = null, waitTimeInMinutes: Input[Double] = null): DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption = {
     val __obj = js.Dynamic.literal()
+    if (actionOnTimeout != null) __obj.updateDynamic("actionOnTimeout")(actionOnTimeout.asInstanceOf[js.Any])
+    if (waitTimeInMinutes != null) __obj.updateDynamic("waitTimeInMinutes")(waitTimeInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption]
   }
-  @scala.inline
-  implicit class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionOps[Self <: DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionOnTimeout(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionOnTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionOnTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionOnTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitTimeInMinutes(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitTimeInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeInMinutes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Populate extends js.Object {
   /**
     * If true, the `windows.Window` returned will have a `tabs` property that contains a list of the `tabs.Tab`
@@ -12,56 +11,24 @@ trait Populate extends js.Object {
     * manifest file includes the `"tabs"` permission. If false, the `windows.Window` won't have the `tabs`
     * property.
     */
-  var populate: js.UndefOr[Boolean] = js.native
+  var populate: js.UndefOr[Boolean] = js.undefined
   /** One or more tab indices to highlight. */
-  var tabs: js.Array[Double] | Double = js.native
+  var tabs: js.Array[Double] | Double
   /** The window that contains the tabs. */
-  var windowId: js.UndefOr[Double] = js.native
+  var windowId: js.UndefOr[Double] = js.undefined
 }
 
 object Populate {
   @scala.inline
-  def apply(tabs: js.Array[Double] | Double): Populate = {
+  def apply(
+    tabs: js.Array[Double] | Double,
+    populate: js.UndefOr[Boolean] = js.undefined,
+    windowId: js.UndefOr[Double] = js.undefined
+  ): Populate = {
     val __obj = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
+    if (!js.isUndefined(populate)) __obj.updateDynamic("populate")(populate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowId)) __obj.updateDynamic("windowId")(windowId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Populate]
   }
-  @scala.inline
-  implicit class PopulateOps[Self <: Populate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTabs(value: js.Array[Double] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPopulate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopulate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

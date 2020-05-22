@@ -18,41 +18,11 @@ trait DescribeTapeArchivesOutput extends js.Object {
 
 object DescribeTapeArchivesOutput {
   @scala.inline
-  def apply(): DescribeTapeArchivesOutput = {
+  def apply(Marker: Marker = null, TapeArchives: TapeArchives = null): DescribeTapeArchivesOutput = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (TapeArchives != null) __obj.updateDynamic("TapeArchives")(TapeArchives.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTapeArchivesOutput]
   }
-  @scala.inline
-  implicit class DescribeTapeArchivesOutputOps[Self <: DescribeTapeArchivesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: Marker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTapeArchives(value: TapeArchives): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeArchives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTapeArchives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeArchives")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,69 +8,26 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined next-server.next-server/dist/lib/utils.RenderPageResult & {  styles ? :std.Array<react.react.ReactElement> | react.react.ReactFragment} */
-@js.native
 trait DocumentInitialProps extends js.Object {
-  var dataOnly: js.UndefOr[`true`] = js.native
-  var head: js.UndefOr[js.Array[ReactElement | Null]] = js.native
-  var html: String = js.native
-  var styles: js.UndefOr[js.Array[ReactElement] | ReactFragment] = js.native
+  var dataOnly: js.UndefOr[`true`] = js.undefined
+  var head: js.UndefOr[js.Array[ReactElement | Null]] = js.undefined
+  var html: String
+  var styles: js.UndefOr[js.Array[ReactElement] | ReactFragment] = js.undefined
 }
 
 object DocumentInitialProps {
   @scala.inline
-  def apply(html: String): DocumentInitialProps = {
+  def apply(
+    html: String,
+    dataOnly: `true` = null,
+    head: js.Array[ReactElement | Null] = null,
+    styles: js.Array[ReactElement] | ReactFragment = null
+  ): DocumentInitialProps = {
     val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any])
+    if (dataOnly != null) __obj.updateDynamic("dataOnly")(dataOnly.asInstanceOf[js.Any])
+    if (head != null) __obj.updateDynamic("head")(head.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentInitialProps]
   }
-  @scala.inline
-  implicit class DocumentInitialPropsOps[Self <: DocumentInitialProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataOnly(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHead(value: js.Array[ReactElement | Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Array[ReactElement] | ReactFragment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

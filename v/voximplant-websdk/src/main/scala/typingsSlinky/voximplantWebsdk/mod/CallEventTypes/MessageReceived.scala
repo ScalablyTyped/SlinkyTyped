@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		*	Event dispatched when text message is received
-		*/
-@js.native
+  *    Event dispatched when text message is received
+  */
 trait MessageReceived extends VoxImplantCallEvent {
   /**
-  			*	Call that dispatched the event
-  			*/
-  var call: Call = js.native
+    *    Call that dispatched the event
+    */
+  var call: Call
   /**
-  			*	Content of the message
-  			*/
-  var text: String = js.native
+    *    Content of the message
+    */
+  var text: String
 }
 
 object MessageReceived {
@@ -27,25 +26,5 @@ object MessageReceived {
     val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageReceived]
   }
-  @scala.inline
-  implicit class MessageReceivedOps[Self <: MessageReceived] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCall(value: Call): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("call")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait UpdateInputResponse extends js.Object {
 
 object UpdateInputResponse {
   @scala.inline
-  def apply(): UpdateInputResponse = {
+  def apply(inputConfiguration: InputConfiguration = null): UpdateInputResponse = {
     val __obj = js.Dynamic.literal()
+    if (inputConfiguration != null) __obj.updateDynamic("inputConfiguration")(inputConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInputResponse]
   }
-  @scala.inline
-  implicit class UpdateInputResponseOps[Self <: UpdateInputResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputConfiguration(value: InputConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

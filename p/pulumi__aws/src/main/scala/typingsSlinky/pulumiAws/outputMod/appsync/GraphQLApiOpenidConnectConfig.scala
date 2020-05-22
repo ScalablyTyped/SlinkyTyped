@@ -26,59 +26,17 @@ trait GraphQLApiOpenidConnectConfig extends js.Object {
 
 object GraphQLApiOpenidConnectConfig {
   @scala.inline
-  def apply(issuer: String): GraphQLApiOpenidConnectConfig = {
+  def apply(
+    issuer: String,
+    authTtl: js.UndefOr[Double] = js.undefined,
+    clientId: String = null,
+    iatTtl: js.UndefOr[Double] = js.undefined
+  ): GraphQLApiOpenidConnectConfig = {
     val __obj = js.Dynamic.literal(issuer = issuer.asInstanceOf[js.Any])
+    if (!js.isUndefined(authTtl)) __obj.updateDynamic("authTtl")(authTtl.get.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (!js.isUndefined(iatTtl)) __obj.updateDynamic("iatTtl")(iatTtl.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLApiOpenidConnectConfig]
   }
-  @scala.inline
-  implicit class GraphQLApiOpenidConnectConfigOps[Self <: GraphQLApiOpenidConnectConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authTtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authTtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIatTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iatTtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIatTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iatTtl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

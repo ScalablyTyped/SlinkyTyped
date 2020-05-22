@@ -18,41 +18,11 @@ trait SearchTransitGatewayMulticastGroupsResult extends js.Object {
 
 object SearchTransitGatewayMulticastGroupsResult {
   @scala.inline
-  def apply(): SearchTransitGatewayMulticastGroupsResult = {
+  def apply(MulticastGroups: TransitGatewayMulticastGroupList = null, NextToken: String = null): SearchTransitGatewayMulticastGroupsResult = {
     val __obj = js.Dynamic.literal()
+    if (MulticastGroups != null) __obj.updateDynamic("MulticastGroups")(MulticastGroups.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchTransitGatewayMulticastGroupsResult]
   }
-  @scala.inline
-  implicit class SearchTransitGatewayMulticastGroupsResultOps[Self <: SearchTransitGatewayMulticastGroupsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMulticastGroups(value: TransitGatewayMulticastGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MulticastGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulticastGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MulticastGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

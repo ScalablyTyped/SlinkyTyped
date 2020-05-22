@@ -100,7 +100,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StrictModeFactory extends IFactory
 
 object StrictModeFactory {

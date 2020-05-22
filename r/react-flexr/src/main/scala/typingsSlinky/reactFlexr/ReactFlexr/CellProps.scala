@@ -1,5 +1,8 @@
 package typingsSlinky.reactFlexr.ReactFlexr
 
+import slinky.core.TagMod
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import typingsSlinky.reactFlexr.reactFlexrStrings.bottom
 import typingsSlinky.reactFlexr.reactFlexrStrings.center
@@ -8,155 +11,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellProps extends Props[Cell] {
   /**
     * Vertical Align This Cell: top, center, bottom
     */
-  var align: js.UndefOr[top | center | bottom] = js.native
+  var align: js.UndefOr[top | center | bottom] = js.undefined
   /**
     * Like size, but only for desk devices.
     * Accepts 'hidden' as well.
     */
-  var desk: js.UndefOr[String | Double] = js.native
+  var desk: js.UndefOr[String | Double] = js.undefined
   /**
     * Cell will be full height.
     */
-  var flex: js.UndefOr[Boolean] = js.native
+  var flex: js.UndefOr[Boolean] = js.undefined
   /**
     * Override default gutter: '1em', '5%', '10px', etc.
     */
-  var gutter: js.UndefOr[String] = js.native
+  var gutter: js.UndefOr[String] = js.undefined
   /**
     * Like size, but only for lap devices.
     * Accepts 'hidden' as well.
     */
-  var lap: js.UndefOr[String | Double] = js.native
+  var lap: js.UndefOr[String | Double] = js.undefined
   /**
     * Like size, but only for palm devices.
     * Accepts 'hidden' as well.
     */
-  var palm: js.UndefOr[String | Double] = js.native
+  var palm: js.UndefOr[String | Double] = js.undefined
   /**
     * Like size, but only for ( palm + lap ) devices.
     * Accepts 'hidden' as well.
     */
-  var portable: js.UndefOr[String | Double] = js.native
+  var portable: js.UndefOr[String | Double] = js.undefined
   /**
     * Takes a fraction. e.g. 1/6
     */
-  var size: js.UndefOr[String | Double] = js.native
+  var size: js.UndefOr[String | Double] = js.undefined
 }
 
 object CellProps {
   @scala.inline
-  def apply(): CellProps = {
+  def apply(
+    align: top | center | bottom = null,
+    children: TagMod[Any] = null,
+    desk: String | Double = null,
+    flex: js.UndefOr[Boolean] = js.undefined,
+    gutter: String = null,
+    key: Key = null,
+    lap: String | Double = null,
+    palm: String | Double = null,
+    portable: String | Double = null,
+    ref: js.UndefOr[Null | LegacyRef[Cell]] = js.undefined,
+    size: String | Double = null
+  ): CellProps = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (desk != null) __obj.updateDynamic("desk")(desk.asInstanceOf[js.Any])
+    if (!js.isUndefined(flex)) __obj.updateDynamic("flex")(flex.get.asInstanceOf[js.Any])
+    if (gutter != null) __obj.updateDynamic("gutter")(gutter.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (lap != null) __obj.updateDynamic("lap")(lap.asInstanceOf[js.Any])
+    if (palm != null) __obj.updateDynamic("palm")(palm.asInstanceOf[js.Any])
+    if (portable != null) __obj.updateDynamic("portable")(portable.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellProps]
   }
-  @scala.inline
-  implicit class CellPropsOps[Self <: CellProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: top | center | bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesk(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGutter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLap(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPalm(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPalm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortable(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

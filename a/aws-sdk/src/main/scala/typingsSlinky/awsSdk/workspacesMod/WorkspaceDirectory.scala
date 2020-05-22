@@ -74,209 +74,42 @@ trait WorkspaceDirectory extends js.Object {
 
 object WorkspaceDirectory {
   @scala.inline
-  def apply(): WorkspaceDirectory = {
+  def apply(
+    Alias: Alias = null,
+    CustomerUserName: UserName = null,
+    DirectoryId: DirectoryId = null,
+    DirectoryName: DirectoryName = null,
+    DirectoryType: WorkspaceDirectoryType = null,
+    DnsIpAddresses: DnsIpAddresses = null,
+    IamRoleId: ARN = null,
+    RegistrationCode: RegistrationCode = null,
+    SelfservicePermissions: SelfservicePermissions = null,
+    State: WorkspaceDirectoryState = null,
+    SubnetIds: SubnetIds = null,
+    Tenancy: Tenancy = null,
+    WorkspaceAccessProperties: WorkspaceAccessProperties = null,
+    WorkspaceCreationProperties: DefaultWorkspaceCreationProperties = null,
+    WorkspaceSecurityGroupId: SecurityGroupId = null,
+    ipGroupIds: IpGroupIdList = null
+  ): WorkspaceDirectory = {
     val __obj = js.Dynamic.literal()
+    if (Alias != null) __obj.updateDynamic("Alias")(Alias.asInstanceOf[js.Any])
+    if (CustomerUserName != null) __obj.updateDynamic("CustomerUserName")(CustomerUserName.asInstanceOf[js.Any])
+    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
+    if (DirectoryName != null) __obj.updateDynamic("DirectoryName")(DirectoryName.asInstanceOf[js.Any])
+    if (DirectoryType != null) __obj.updateDynamic("DirectoryType")(DirectoryType.asInstanceOf[js.Any])
+    if (DnsIpAddresses != null) __obj.updateDynamic("DnsIpAddresses")(DnsIpAddresses.asInstanceOf[js.Any])
+    if (IamRoleId != null) __obj.updateDynamic("IamRoleId")(IamRoleId.asInstanceOf[js.Any])
+    if (RegistrationCode != null) __obj.updateDynamic("RegistrationCode")(RegistrationCode.asInstanceOf[js.Any])
+    if (SelfservicePermissions != null) __obj.updateDynamic("SelfservicePermissions")(SelfservicePermissions.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (SubnetIds != null) __obj.updateDynamic("SubnetIds")(SubnetIds.asInstanceOf[js.Any])
+    if (Tenancy != null) __obj.updateDynamic("Tenancy")(Tenancy.asInstanceOf[js.Any])
+    if (WorkspaceAccessProperties != null) __obj.updateDynamic("WorkspaceAccessProperties")(WorkspaceAccessProperties.asInstanceOf[js.Any])
+    if (WorkspaceCreationProperties != null) __obj.updateDynamic("WorkspaceCreationProperties")(WorkspaceCreationProperties.asInstanceOf[js.Any])
+    if (WorkspaceSecurityGroupId != null) __obj.updateDynamic("WorkspaceSecurityGroupId")(WorkspaceSecurityGroupId.asInstanceOf[js.Any])
+    if (ipGroupIds != null) __obj.updateDynamic("ipGroupIds")(ipGroupIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspaceDirectory]
   }
-  @scala.inline
-  implicit class WorkspaceDirectoryOps[Self <: WorkspaceDirectory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: Alias): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerUserName(value: UserName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerUserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerUserName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryName(value: DirectoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryType(value: WorkspaceDirectoryType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsIpAddresses(value: DnsIpAddresses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsIpAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRoleId(value: ARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRoleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistrationCode(value: RegistrationCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistrationCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfservicePermissions(value: SelfservicePermissions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfservicePermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfservicePermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfservicePermissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: WorkspaceDirectoryState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetIds(value: SubnetIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenancy(value: Tenancy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenancy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceAccessProperties(value: WorkspaceAccessProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceAccessProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceAccessProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceAccessProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceCreationProperties(value: DefaultWorkspaceCreationProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceCreationProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceCreationProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceCreationProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceSecurityGroupId(value: SecurityGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceSecurityGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceSecurityGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceSecurityGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpGroupIds(value: IpGroupIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipGroupIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpGroupIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipGroupIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

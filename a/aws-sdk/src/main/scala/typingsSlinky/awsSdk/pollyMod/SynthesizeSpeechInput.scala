@@ -46,107 +46,25 @@ trait SynthesizeSpeechInput extends js.Object {
 
 object SynthesizeSpeechInput {
   @scala.inline
-  def apply(OutputFormat: OutputFormat, Text: Text, VoiceId: VoiceId): SynthesizeSpeechInput = {
+  def apply(
+    OutputFormat: OutputFormat,
+    Text: Text,
+    VoiceId: VoiceId,
+    Engine: Engine = null,
+    LanguageCode: LanguageCode = null,
+    LexiconNames: LexiconNameList = null,
+    SampleRate: SampleRate = null,
+    SpeechMarkTypes: SpeechMarkTypeList = null,
+    TextType: TextType = null
+  ): SynthesizeSpeechInput = {
     val __obj = js.Dynamic.literal(OutputFormat = OutputFormat.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], VoiceId = VoiceId.asInstanceOf[js.Any])
+    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
+    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
+    if (LexiconNames != null) __obj.updateDynamic("LexiconNames")(LexiconNames.asInstanceOf[js.Any])
+    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
+    if (SpeechMarkTypes != null) __obj.updateDynamic("SpeechMarkTypes")(SpeechMarkTypes.asInstanceOf[js.Any])
+    if (TextType != null) __obj.updateDynamic("TextType")(TextType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SynthesizeSpeechInput]
   }
-  @scala.inline
-  implicit class SynthesizeSpeechInputOps[Self <: SynthesizeSpeechInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputFormat(value: OutputFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVoiceId(value: VoiceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEngine(value: Engine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: LanguageCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLexiconNames(value: LexiconNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LexiconNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLexiconNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LexiconNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleRate(value: SampleRate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpeechMarkTypes(value: SpeechMarkTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpeechMarkTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpeechMarkTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpeechMarkTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextType(value: TextType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

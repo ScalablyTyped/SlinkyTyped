@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NativeFlow extends Flow {
   /**
     * @param {String} code An authorization code obtained via `asanaAuthorizeUrl`.
@@ -14,7 +13,7 @@ trait NativeFlow extends Flow {
     *     to get a new access token without going through the flow again.
     * @param code
     */
-  def accessToken(code: String): Unit = js.native
+  def accessToken(code: String): Unit
   /**
     * @return {Promise} The access token, which will include a refresh token
     *     that can be stored in the future to create a client without going
@@ -22,7 +21,7 @@ trait NativeFlow extends Flow {
     * @param url
     * @return
     */
-  def promptForCode(url: String): js.Any = js.native
+  def promptForCode(url: String): js.Any
 }
 
 @JSImport("asana", "auth.NativeFlow")

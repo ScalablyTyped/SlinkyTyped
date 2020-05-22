@@ -5,115 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FetchOptions extends js.Object {
   /**
     * isomorphic-fetch options (https://github.github.io/fetch/)
     */
-  var fetchOptions: js.UndefOr[RequestInit] = js.native
+  var fetchOptions: js.UndefOr[RequestInit] = js.undefined
   /**
     * @default false
     */
-  var forceUpdate: js.UndefOr[Boolean] = js.native
+  var forceUpdate: js.UndefOr[Boolean] = js.undefined
   /**
     * @default true
     */
-  var ignoreErrors: js.UndefOr[Boolean] = js.native
+  var ignoreErrors: js.UndefOr[Boolean] = js.undefined
   /**
     * Package name or function that returns promise or value of package name
     */
-  var packageName: js.UndefOr[String | js.Function0[String]] = js.native
+  var packageName: js.UndefOr[String | js.Function0[String]] = js.undefined
   /**
     * provider name or function that returns promise or value of the latest version
     */
-  var provider: js.UndefOr[js.Function0[String] | String] = js.native
+  var provider: js.UndefOr[js.Function0[String] | String] = js.undefined
 }
 
 object FetchOptions {
   @scala.inline
-  def apply(): FetchOptions = {
+  def apply(
+    fetchOptions: RequestInit = null,
+    forceUpdate: js.UndefOr[Boolean] = js.undefined,
+    ignoreErrors: js.UndefOr[Boolean] = js.undefined,
+    packageName: String | js.Function0[String] = null,
+    provider: js.Function0[String] | String = null
+  ): FetchOptions = {
     val __obj = js.Dynamic.literal()
+    if (fetchOptions != null) __obj.updateDynamic("fetchOptions")(fetchOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceUpdate)) __obj.updateDynamic("forceUpdate")(forceUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreErrors)) __obj.updateDynamic("ignoreErrors")(ignoreErrors.get.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (provider != null) __obj.updateDynamic("provider")(provider.asInstanceOf[js.Any])
     __obj.asInstanceOf[FetchOptions]
   }
-  @scala.inline
-  implicit class FetchOptionsOps[Self <: FetchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFetchOptions(value: RequestInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageNameFunction0(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String | js.Function0[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProviderFunction0(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withProvider(value: js.Function0[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

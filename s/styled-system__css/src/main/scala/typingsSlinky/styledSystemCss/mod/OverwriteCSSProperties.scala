@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OverwriteCSSProperties extends js.Object {
   /**
     * The **`box-shadow`** CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the
@@ -22,7 +21,7 @@ trait OverwriteCSSProperties extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/box-shadow
     */
-  var boxShadow: js.UndefOr[BoxShadowProperty | Double] = js.native
+  var boxShadow: js.UndefOr[BoxShadowProperty | Double] = js.undefined
   /**
     * The **`font-weight`** CSS property specifies the weight (or boldness) of the font. The font weights available to you will depend on the `font-family` you are using. Some fonts are only
     * available in `normal` and `bold`.
@@ -35,7 +34,7 @@ trait OverwriteCSSProperties extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-weight
     */
-  var fontWeight: js.UndefOr[FontWeightProperty | String] = js.native
+  var fontWeight: js.UndefOr[FontWeightProperty | String] = js.undefined
   /**
     * The **`z-index`** CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
     *
@@ -47,58 +46,21 @@ trait OverwriteCSSProperties extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/z-index
     */
-  var zIndex: js.UndefOr[ZIndexProperty | String] = js.native
+  var zIndex: js.UndefOr[ZIndexProperty | String] = js.undefined
 }
 
 object OverwriteCSSProperties {
   @scala.inline
-  def apply(): OverwriteCSSProperties = {
+  def apply(
+    boxShadow: BoxShadowProperty | Double = null,
+    fontWeight: FontWeightProperty | String = null,
+    zIndex: ZIndexProperty | String = null
+  ): OverwriteCSSProperties = {
     val __obj = js.Dynamic.literal()
+    if (boxShadow != null) __obj.updateDynamic("boxShadow")(boxShadow.asInstanceOf[js.Any])
+    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
+    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[OverwriteCSSProperties]
   }
-  @scala.inline
-  implicit class OverwriteCSSPropertiesOps[Self <: OverwriteCSSProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoxShadow(value: BoxShadowProperty | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontWeight(value: FontWeightProperty | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: ZIndexProperty | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

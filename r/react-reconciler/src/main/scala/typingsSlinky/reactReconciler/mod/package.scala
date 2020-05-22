@@ -15,6 +15,9 @@ package object mod {
     typingsSlinky.reactReconciler.mod.ExpirationTime, 
     typingsSlinky.std.Set[typingsSlinky.reactReconciler.mod.Interaction]
   ]
+  // shared/ReactTypes
+  type ReactEmpty = js.UndefOr[scala.Null | scala.Boolean]
+  type ReactNodeList = typingsSlinky.reactReconciler.mod.ReactEmpty | slinky.core.TagMod[scala.Any]
   // shared/ReactSideEffectTags
   type SideEffectTag = scala.Double
   // react-reconciler/ReactTypeOfMode

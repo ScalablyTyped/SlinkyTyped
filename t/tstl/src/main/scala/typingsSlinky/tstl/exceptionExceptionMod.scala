@@ -16,6 +16,10 @@ object exceptionExceptionMod extends js.Object {
       * @param message The error messgae.
       */
     def this(message: String) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     /**
       * The error name.
       */

@@ -16,53 +16,52 @@ import scala.scalajs.js.annotation._
   * @deprecated Deprecated
   * @version 1.0
   */
-@js.native
 trait XDataContainer extends XIndexContainer {
   /**
     * returns the content type (MIME Type) of the data container.
     * @returns the content type
     */
-  var ContentType: String = js.native
+  var ContentType: String
   /**
     * returns the data of the data container.
     * @returns the data
     */
-  var Data: SafeArray[Double] = js.native
+  var Data: SafeArray[Double]
   /**
     * Deprecated. Do not use!
     * @deprecated Deprecated
     */
-  var DataURL: String = js.native
+  var DataURL: String
   /**
     * returns the content type (MIME Type) of the data container.
     * @returns the content type
     */
-  def getContentType(): String = js.native
+  def getContentType(): String
   /**
     * returns the data of the data container.
     * @returns the data
     */
-  def getData(): SafeArray[Double] = js.native
+  def getData(): SafeArray[Double]
   /**
     * Deprecated. Do not use!
     * @deprecated Deprecated
     */
-  def getDataURL(): String = js.native
+  def getDataURL(): String
   /**
     * sets the content type (MIME Type) of the data container.
     * @param aType the content type
     */
-  def setContentType(aType: String): Unit = js.native
+  def setContentType(aType: String): Unit
   /**
     * sets the data of the data container.
     * @param aData the data
     */
-  def setData(aData: SeqEquiv[Double]): Unit = js.native
+  def setData(aData: SeqEquiv[Double]): Unit
   /**
     * Deprecated. Do not use!
     * @deprecated Deprecated
     */
-  def setDataURL(aURL: String): Unit = js.native
+  def setDataURL(aURL: String): Unit
 }
 
 object XDataContainer {
@@ -93,67 +92,5 @@ object XDataContainer {
     val __obj = js.Dynamic.literal(ContentType = ContentType.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], Data = Data.asInstanceOf[js.Any], DataURL = DataURL.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByIndex = js.Any.fromFunction1(getByIndex), getContentType = js.Any.fromFunction0(getContentType), getCount = js.Any.fromFunction0(getCount), getData = js.Any.fromFunction0(getData), getDataURL = js.Any.fromFunction0(getDataURL), getElementType = js.Any.fromFunction0(getElementType), hasElements = js.Any.fromFunction0(hasElements), insertByIndex = js.Any.fromFunction2(insertByIndex), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByIndex = js.Any.fromFunction1(removeByIndex), replaceByIndex = js.Any.fromFunction2(replaceByIndex), setContentType = js.Any.fromFunction1(setContentType), setData = js.Any.fromFunction1(setData), setDataURL = js.Any.fromFunction1(setDataURL))
     __obj.asInstanceOf[XDataContainer]
   }
-  @scala.inline
-  implicit class XDataContainerOps[Self <: XDataContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetContentType(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetData(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDataURL(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataURL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetContentType(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContentType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetData(value: SeqEquiv[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDataURL(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDataURL")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

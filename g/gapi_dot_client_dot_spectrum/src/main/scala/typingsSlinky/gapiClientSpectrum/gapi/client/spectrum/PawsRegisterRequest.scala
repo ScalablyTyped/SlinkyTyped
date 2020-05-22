@@ -4,115 +4,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PawsRegisterRequest extends js.Object {
   /** Antenna characteristics, including its height and height type. */
-  var antenna: js.UndefOr[AntennaCharacteristics] = js.native
+  var antenna: js.UndefOr[AntennaCharacteristics] = js.undefined
   /** A DeviceDescriptor is required. */
-  var deviceDesc: js.UndefOr[DeviceDescriptor] = js.native
+  var deviceDesc: js.UndefOr[DeviceDescriptor] = js.undefined
   /** Device owner information is required. */
-  var deviceOwner: js.UndefOr[DeviceOwner] = js.native
+  var deviceOwner: js.UndefOr[DeviceOwner] = js.undefined
   /** A device's geolocation is required. */
-  var location: js.UndefOr[GeoLocation] = js.native
+  var location: js.UndefOr[GeoLocation] = js.undefined
   /**
     * The message type (e.g., INIT_REQ, AVAIL_SPECTRUM_REQ, ...).
     *
     * Required field.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * The PAWS version. Must be exactly 1.0.
     *
     * Required field.
     */
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object PawsRegisterRequest {
   @scala.inline
-  def apply(): PawsRegisterRequest = {
+  def apply(
+    antenna: AntennaCharacteristics = null,
+    deviceDesc: DeviceDescriptor = null,
+    deviceOwner: DeviceOwner = null,
+    location: GeoLocation = null,
+    `type`: String = null,
+    version: String = null
+  ): PawsRegisterRequest = {
     val __obj = js.Dynamic.literal()
+    if (antenna != null) __obj.updateDynamic("antenna")(antenna.asInstanceOf[js.Any])
+    if (deviceDesc != null) __obj.updateDynamic("deviceDesc")(deviceDesc.asInstanceOf[js.Any])
+    if (deviceOwner != null) __obj.updateDynamic("deviceOwner")(deviceOwner.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PawsRegisterRequest]
   }
-  @scala.inline
-  implicit class PawsRegisterRequestOps[Self <: PawsRegisterRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAntenna(value: AntennaCharacteristics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antenna")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAntenna: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("antenna")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceDesc(value: DeviceDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceOwner(value: DeviceOwner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOwner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: GeoLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

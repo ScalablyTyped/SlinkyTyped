@@ -44,65 +44,18 @@ trait SchemaServicePerimeterConfig extends js.Object {
 
 object SchemaServicePerimeterConfig {
   @scala.inline
-  def apply(): SchemaServicePerimeterConfig = {
+  def apply(
+    accessLevels: js.Array[String] = null,
+    resources: js.Array[String] = null,
+    restrictedServices: js.Array[String] = null,
+    unrestrictedServices: js.Array[String] = null
+  ): SchemaServicePerimeterConfig = {
     val __obj = js.Dynamic.literal()
+    if (accessLevels != null) __obj.updateDynamic("accessLevels")(accessLevels.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (restrictedServices != null) __obj.updateDynamic("restrictedServices")(restrictedServices.asInstanceOf[js.Any])
+    if (unrestrictedServices != null) __obj.updateDynamic("unrestrictedServices")(unrestrictedServices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServicePerimeterConfig]
   }
-  @scala.inline
-  implicit class SchemaServicePerimeterConfigOps[Self <: SchemaServicePerimeterConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessLevels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLevels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessLevels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestrictedServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestrictedServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnrestrictedServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unrestrictedServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnrestrictedServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unrestrictedServices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

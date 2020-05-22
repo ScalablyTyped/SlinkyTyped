@@ -11,166 +11,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var inputFormat: js.UndefOr[diff | json] = js.native
-  var matchWordsThreshold: js.UndefOr[Double] = js.native
-  var matching: js.UndefOr[lines | words | none] = js.native
-  var matchingMaxComparisons: js.UndefOr[Double] = js.native
-  var maxLineLengthHighlight: js.UndefOr[Double] = js.native
-  var maxLineSizeInBlockForComparison: js.UndefOr[Double] = js.native
-  var outputFormat: js.UndefOr[`line-by-line` | `side-by-side`] = js.native
-  var rawTemplates: js.UndefOr[js.Object] = js.native
-  var renderNothingWhenEmpty: js.UndefOr[Boolean] = js.native
-  var showFiles: js.UndefOr[Boolean] = js.native
-  var templates: js.UndefOr[js.Object] = js.native
+  var inputFormat: js.UndefOr[diff | json] = js.undefined
+  var matchWordsThreshold: js.UndefOr[Double] = js.undefined
+  var matching: js.UndefOr[lines | words | none] = js.undefined
+  var matchingMaxComparisons: js.UndefOr[Double] = js.undefined
+  var maxLineLengthHighlight: js.UndefOr[Double] = js.undefined
+  var maxLineSizeInBlockForComparison: js.UndefOr[Double] = js.undefined
+  var outputFormat: js.UndefOr[`line-by-line` | `side-by-side`] = js.undefined
+  var rawTemplates: js.UndefOr[js.Object] = js.undefined
+  var renderNothingWhenEmpty: js.UndefOr[Boolean] = js.undefined
+  var showFiles: js.UndefOr[Boolean] = js.undefined
+  var templates: js.UndefOr[js.Object] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    inputFormat: diff | json = null,
+    matchWordsThreshold: js.UndefOr[Double] = js.undefined,
+    matching: lines | words | none = null,
+    matchingMaxComparisons: js.UndefOr[Double] = js.undefined,
+    maxLineLengthHighlight: js.UndefOr[Double] = js.undefined,
+    maxLineSizeInBlockForComparison: js.UndefOr[Double] = js.undefined,
+    outputFormat: `line-by-line` | `side-by-side` = null,
+    rawTemplates: js.Object = null,
+    renderNothingWhenEmpty: js.UndefOr[Boolean] = js.undefined,
+    showFiles: js.UndefOr[Boolean] = js.undefined,
+    templates: js.Object = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (inputFormat != null) __obj.updateDynamic("inputFormat")(inputFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchWordsThreshold)) __obj.updateDynamic("matchWordsThreshold")(matchWordsThreshold.get.asInstanceOf[js.Any])
+    if (matching != null) __obj.updateDynamic("matching")(matching.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchingMaxComparisons)) __obj.updateDynamic("matchingMaxComparisons")(matchingMaxComparisons.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLineLengthHighlight)) __obj.updateDynamic("maxLineLengthHighlight")(maxLineLengthHighlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLineSizeInBlockForComparison)) __obj.updateDynamic("maxLineSizeInBlockForComparison")(maxLineSizeInBlockForComparison.get.asInstanceOf[js.Any])
+    if (outputFormat != null) __obj.updateDynamic("outputFormat")(outputFormat.asInstanceOf[js.Any])
+    if (rawTemplates != null) __obj.updateDynamic("rawTemplates")(rawTemplates.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderNothingWhenEmpty)) __obj.updateDynamic("renderNothingWhenEmpty")(renderNothingWhenEmpty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showFiles)) __obj.updateDynamic("showFiles")(showFiles.get.asInstanceOf[js.Any])
+    if (templates != null) __obj.updateDynamic("templates")(templates.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInputFormat(value: diff | json): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchWordsThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchWordsThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchWordsThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchWordsThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatching(value: lines | words | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchingMaxComparisons(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchingMaxComparisons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchingMaxComparisons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchingMaxComparisons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLineLengthHighlight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLineLengthHighlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLineLengthHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLineLengthHighlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLineSizeInBlockForComparison(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLineSizeInBlockForComparison")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLineSizeInBlockForComparison: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLineSizeInBlockForComparison")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputFormat(value: `line-by-line` | `side-by-side`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawTemplates(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTemplates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTemplates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderNothingWhenEmpty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderNothingWhenEmpty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderNothingWhenEmpty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderNothingWhenEmpty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplates(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

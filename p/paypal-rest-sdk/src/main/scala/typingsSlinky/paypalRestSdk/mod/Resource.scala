@@ -4,193 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Resource extends js.Object {
-  var amount: Amount = js.native
-  val create_time: js.UndefOr[String] = js.native
-  val fmf_details: js.UndefOr[FraudManagementFiltersDetails] = js.native
-  val id: String = js.native
-  val links: js.UndefOr[js.Array[Link]] = js.native
-  val parent_payment: js.UndefOr[String] = js.native
-  val payment_mode: js.UndefOr[String] = js.native
-  val processor_response: js.UndefOr[js.Any] = js.native
-  val protection_eligibility: js.UndefOr[String] = js.native
-  val protection_eligibility_type: js.UndefOr[String] = js.native
-  val reason_code: js.UndefOr[String] = js.native
-  val receipt_id: js.UndefOr[String] = js.native
-  val state: js.UndefOr[String] = js.native
-  val update_time: js.UndefOr[String] = js.native
+  var amount: Amount
+  val create_time: js.UndefOr[String] = js.undefined
+  val fmf_details: js.UndefOr[FraudManagementFiltersDetails] = js.undefined
+  val id: String
+  val links: js.UndefOr[js.Array[Link]] = js.undefined
+  val parent_payment: js.UndefOr[String] = js.undefined
+  val payment_mode: js.UndefOr[String] = js.undefined
+  val processor_response: js.UndefOr[js.Any] = js.undefined
+  val protection_eligibility: js.UndefOr[String] = js.undefined
+  val protection_eligibility_type: js.UndefOr[String] = js.undefined
+  val reason_code: js.UndefOr[String] = js.undefined
+  val receipt_id: js.UndefOr[String] = js.undefined
+  val state: js.UndefOr[String] = js.undefined
+  val update_time: js.UndefOr[String] = js.undefined
 }
 
 object Resource {
   @scala.inline
-  def apply(amount: Amount, id: String): Resource = {
+  def apply(
+    amount: Amount,
+    id: String,
+    create_time: String = null,
+    fmf_details: FraudManagementFiltersDetails = null,
+    links: js.Array[Link] = null,
+    parent_payment: String = null,
+    payment_mode: String = null,
+    processor_response: js.Any = null,
+    protection_eligibility: String = null,
+    protection_eligibility_type: String = null,
+    reason_code: String = null,
+    receipt_id: String = null,
+    state: String = null,
+    update_time: String = null
+  ): Resource = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    if (create_time != null) __obj.updateDynamic("create_time")(create_time.asInstanceOf[js.Any])
+    if (fmf_details != null) __obj.updateDynamic("fmf_details")(fmf_details.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (parent_payment != null) __obj.updateDynamic("parent_payment")(parent_payment.asInstanceOf[js.Any])
+    if (payment_mode != null) __obj.updateDynamic("payment_mode")(payment_mode.asInstanceOf[js.Any])
+    if (processor_response != null) __obj.updateDynamic("processor_response")(processor_response.asInstanceOf[js.Any])
+    if (protection_eligibility != null) __obj.updateDynamic("protection_eligibility")(protection_eligibility.asInstanceOf[js.Any])
+    if (protection_eligibility_type != null) __obj.updateDynamic("protection_eligibility_type")(protection_eligibility_type.asInstanceOf[js.Any])
+    if (reason_code != null) __obj.updateDynamic("reason_code")(reason_code.asInstanceOf[js.Any])
+    if (receipt_id != null) __obj.updateDynamic("receipt_id")(receipt_id.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (update_time != null) __obj.updateDynamic("update_time")(update_time.asInstanceOf[js.Any])
     __obj.asInstanceOf[Resource]
   }
-  @scala.inline
-  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreate_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreate_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create_time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFmf_details(value: FraudManagementFiltersDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fmf_details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFmf_details: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fmf_details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Array[Link]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent_payment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent_payment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent_payment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent_payment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayment_mode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayment_mode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessor_response(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processor_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessor_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processor_response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtection_eligibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection_eligibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtection_eligibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection_eligibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtection_eligibility_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection_eligibility_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtection_eligibility_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection_eligibility_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason_code(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReceipt_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receipt_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReceipt_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receipt_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate_time: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update_time")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

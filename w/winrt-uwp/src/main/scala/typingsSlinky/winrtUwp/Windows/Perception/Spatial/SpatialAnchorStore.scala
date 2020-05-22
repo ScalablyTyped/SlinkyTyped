@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpatialAnchorStore extends js.Object {
-  var clear: js.Any = js.native
-   /* unmapped type */ var getAllSavedAnchors: js.Any = js.native
-   /* unmapped type */ var remove: js.Any = js.native
-   /* unmapped type */ var trySave: js.Any = js.native
+  var clear: js.Any
+   /* unmapped type */ var getAllSavedAnchors: js.Any
+   /* unmapped type */ var remove: js.Any
+   /* unmapped type */ var trySave: js.Any
 }
 
 object SpatialAnchorStore {
@@ -18,37 +17,5 @@ object SpatialAnchorStore {
     val __obj = js.Dynamic.literal(clear = clear.asInstanceOf[js.Any], getAllSavedAnchors = getAllSavedAnchors.asInstanceOf[js.Any], remove = remove.asInstanceOf[js.Any], trySave = trySave.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpatialAnchorStore]
   }
-  @scala.inline
-  implicit class SpatialAnchorStoreOps[Self <: SpatialAnchorStore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClear(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAllSavedAnchors(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllSavedAnchors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrySave(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trySave")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

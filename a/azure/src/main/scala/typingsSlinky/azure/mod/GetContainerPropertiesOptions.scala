@@ -4,36 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetContainerPropertiesOptions extends TimeoutIntervalOptions {
-  var leaseId: js.UndefOr[String] = js.native
+  var leaseId: js.UndefOr[String] = js.undefined
 }
 
 object GetContainerPropertiesOptions {
   @scala.inline
-  def apply(): GetContainerPropertiesOptions = {
+  def apply(
+    leaseId: String = null,
+    locationMode: String = null,
+    maximumExecutionTimeInMs: js.UndefOr[Double] = js.undefined,
+    timeoutIntervalInMs: js.UndefOr[Double] = js.undefined
+  ): GetContainerPropertiesOptions = {
     val __obj = js.Dynamic.literal()
+    if (leaseId != null) __obj.updateDynamic("leaseId")(leaseId.asInstanceOf[js.Any])
+    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumExecutionTimeInMs)) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutIntervalInMs)) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetContainerPropertiesOptions]
   }
-  @scala.inline
-  implicit class GetContainerPropertiesOptionsOps[Self <: GetContainerPropertiesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLeaseId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

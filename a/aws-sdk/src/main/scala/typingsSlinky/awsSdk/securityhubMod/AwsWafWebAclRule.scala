@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AwsWafWebAclRule extends js.Object {
   /**
-    * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the Rule. 
+    * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. 
     */
   var Action: js.UndefOr[WafAction] = js.native
   /**
@@ -19,11 +19,11 @@ trait AwsWafWebAclRule extends js.Object {
     */
   var OverrideAction: js.UndefOr[WafOverrideAction] = js.native
   /**
-    * Specifies the order in which the Rules in a WebACL are evaluated. Rules with a lower value for Priority are evaluated before Rules with a higher value. The value must be a unique integer. If you add multiple Rules to a WebACL, the values do not need to be consecutive.
+    * Specifies the order in which the rules in a WebACL are evaluated. Rules with a lower value for Priority are evaluated before rules with a higher value. The value must be a unique integer. If you add multiple rules to a WebACL, the values do not need to be consecutive.
     */
   var Priority: js.UndefOr[Integer] = js.native
   /**
-    * The identifier for a Rule.
+    * The identifier for a rule.
     */
   var RuleId: js.UndefOr[NonEmptyString] = js.native
   /**
@@ -34,89 +34,22 @@ trait AwsWafWebAclRule extends js.Object {
 
 object AwsWafWebAclRule {
   @scala.inline
-  def apply(): AwsWafWebAclRule = {
+  def apply(
+    Action: WafAction = null,
+    ExcludedRules: WafExcludedRuleList = null,
+    OverrideAction: WafOverrideAction = null,
+    Priority: js.UndefOr[Integer] = js.undefined,
+    RuleId: NonEmptyString = null,
+    Type: NonEmptyString = null
+  ): AwsWafWebAclRule = {
     val __obj = js.Dynamic.literal()
+    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
+    if (ExcludedRules != null) __obj.updateDynamic("ExcludedRules")(ExcludedRules.asInstanceOf[js.Any])
+    if (OverrideAction != null) __obj.updateDynamic("OverrideAction")(OverrideAction.asInstanceOf[js.Any])
+    if (!js.isUndefined(Priority)) __obj.updateDynamic("Priority")(Priority.get.asInstanceOf[js.Any])
+    if (RuleId != null) __obj.updateDynamic("RuleId")(RuleId.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsWafWebAclRule]
   }
-  @scala.inline
-  implicit class AwsWafWebAclRuleOps[Self <: AwsWafWebAclRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: WafAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludedRules(value: WafExcludedRuleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideAction(value: WafOverrideAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OverrideAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OverrideAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

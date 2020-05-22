@@ -4,143 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CandidateWindowParameterProperties extends js.Object {
   /**
     * Optional.
     * Text that is shown at the bottom of the candidate window.
     */
-  var auxiliaryText: js.UndefOr[String] = js.native
+  var auxiliaryText: js.UndefOr[String] = js.undefined
   /**
     * Optional.
     * True to display the auxiliary text, false to hide it.
     */
-  var auxiliaryTextVisible: js.UndefOr[Boolean] = js.native
+  var auxiliaryTextVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional.
     * True to show the cursor, false to hide it.
     */
-  var cursorVisible: js.UndefOr[Boolean] = js.native
+  var cursorVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional.
     * The number of candidates to display per page.
     */
-  var pageSize: js.UndefOr[Double] = js.native
+  var pageSize: js.UndefOr[Double] = js.undefined
   /**
     * Optional.
     * True if the candidate window should be rendered vertical, false to make it horizontal.
     */
-  var vertical: js.UndefOr[Boolean] = js.native
+  var vertical: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional.
     * True to show the Candidate window, false to hide it.
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional.
     * Where to display the candidate window.
     * @since Chrome 28.
     */
-  var windowPosition: js.UndefOr[String] = js.native
+  var windowPosition: js.UndefOr[String] = js.undefined
 }
 
 object CandidateWindowParameterProperties {
   @scala.inline
-  def apply(): CandidateWindowParameterProperties = {
+  def apply(
+    auxiliaryText: String = null,
+    auxiliaryTextVisible: js.UndefOr[Boolean] = js.undefined,
+    cursorVisible: js.UndefOr[Boolean] = js.undefined,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    vertical: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    windowPosition: String = null
+  ): CandidateWindowParameterProperties = {
     val __obj = js.Dynamic.literal()
+    if (auxiliaryText != null) __obj.updateDynamic("auxiliaryText")(auxiliaryText.asInstanceOf[js.Any])
+    if (!js.isUndefined(auxiliaryTextVisible)) __obj.updateDynamic("auxiliaryTextVisible")(auxiliaryTextVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cursorVisible)) __obj.updateDynamic("cursorVisible")(cursorVisible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (windowPosition != null) __obj.updateDynamic("windowPosition")(windowPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[CandidateWindowParameterProperties]
   }
-  @scala.inline
-  implicit class CandidateWindowParameterPropertiesOps[Self <: CandidateWindowParameterProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuxiliaryText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuxiliaryText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuxiliaryTextVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryTextVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuxiliaryTextVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryTextVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursorVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursorVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

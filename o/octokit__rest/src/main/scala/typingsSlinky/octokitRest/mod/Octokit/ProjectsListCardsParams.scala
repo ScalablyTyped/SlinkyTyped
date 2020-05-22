@@ -7,78 +7,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectsListCardsParams extends js.Object {
   /**
     * Filters the project cards that are returned by the card's state. Can be one of `all`,`archived`, or `not_archived`.
     */
-  var archived_state: js.UndefOr[all | archived | not_archived] = js.native
-  var column_id: Double = js.native
+  var archived_state: js.UndefOr[all | archived | not_archived] = js.undefined
+  var column_id: Double
   /**
     * Page number of the results to fetch.
     */
-  var page: js.UndefOr[Double] = js.native
+  var page: js.UndefOr[Double] = js.undefined
   /**
     * Results per page (max 100)
     */
-  var per_page: js.UndefOr[Double] = js.native
+  var per_page: js.UndefOr[Double] = js.undefined
 }
 
 object ProjectsListCardsParams {
   @scala.inline
-  def apply(column_id: Double): ProjectsListCardsParams = {
+  def apply(
+    column_id: Double,
+    archived_state: all | archived | not_archived = null,
+    page: js.UndefOr[Double] = js.undefined,
+    per_page: js.UndefOr[Double] = js.undefined
+  ): ProjectsListCardsParams = {
     val __obj = js.Dynamic.literal(column_id = column_id.asInstanceOf[js.Any])
+    if (archived_state != null) __obj.updateDynamic("archived_state")(archived_state.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(per_page)) __obj.updateDynamic("per_page")(per_page.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsListCardsParams]
   }
-  @scala.inline
-  implicit class ProjectsListCardsParamsOps[Self <: ProjectsListCardsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArchived_state(value: all | archived | not_archived): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived_state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchived_state: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived_state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPer_page(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPer_page: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

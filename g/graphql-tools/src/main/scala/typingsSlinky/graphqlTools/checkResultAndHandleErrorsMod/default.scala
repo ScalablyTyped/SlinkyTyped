@@ -10,5 +10,10 @@ import scala.scalajs.js.annotation._
 class default protected () extends CheckResultAndHandleErrors {
   def this(info: GraphQLResolveInfo) = this()
   def this(info: GraphQLResolveInfo, fieldName: String) = this()
+  /* CompleteClass */
+  override var info: js.Any = js.native
+  /* CompleteClass */
+  @JSName("transformResult")
+  override def transformResult_MCheckResultAndHandleErrors(result: js.Any): js.Any = js.native
 }
 

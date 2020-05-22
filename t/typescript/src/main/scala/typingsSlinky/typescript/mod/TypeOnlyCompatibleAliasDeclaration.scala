@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait TypeOnlyCompatibleAliasDeclaration extends js.Object
 
-object TypeOnlyCompatibleAliasDeclaration {
-  @scala.inline
-  implicit def apply(value: ImportClause): TypeOnlyCompatibleAliasDeclaration = value.asInstanceOf[TypeOnlyCompatibleAliasDeclaration]
-  @scala.inline
-  implicit def apply(value: ImportOrExportSpecifier): TypeOnlyCompatibleAliasDeclaration = value.asInstanceOf[TypeOnlyCompatibleAliasDeclaration]
-  @scala.inline
-  implicit def apply(value: NamespaceImport): TypeOnlyCompatibleAliasDeclaration = value.asInstanceOf[TypeOnlyCompatibleAliasDeclaration]
-}
-

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Derived extends js.Object {
-  var custom: scala.Double = js.native
-  var derived: scala.Double = js.native
-  var system: scala.Double = js.native
+  var custom: scala.Double
+  var derived: scala.Double
+  var system: scala.Double
 }
 
 object Derived {
@@ -17,31 +16,5 @@ object Derived {
     val __obj = js.Dynamic.literal(custom = custom.asInstanceOf[js.Any], derived = derived.asInstanceOf[js.Any], system = system.asInstanceOf[js.Any])
     __obj.asInstanceOf[Derived]
   }
-  @scala.inline
-  implicit class DerivedOps[Self <: Derived] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustom(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDerived(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("derived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystem(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

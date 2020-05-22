@@ -1,7 +1,9 @@
 package typingsSlinky.ionicCliFramework.outputMod
 
 import typingsSlinky.ionicCliFramework.colorsMod.Colors
+import typingsSlinky.ionicCliFramework.tasksMod.TaskChain
 import typingsSlinky.logUpdate.mod.LogUpdate
+import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +17,10 @@ class LogUpdateOutputStrategy ()
   val colors: Colors = js.native
   @JSName("logUpdate")
   val logUpdate_Original: LogUpdate = js.native
+  /* CompleteClass */
+  override val stream: WritableStream = js.native
+  /* CompleteClass */
+  override def createTaskChain(): TaskChain = js.native
   /**
   		Log to `stdout` by overwriting the previous output in the terminal.
   		@param text - The text to log to `stdout`.

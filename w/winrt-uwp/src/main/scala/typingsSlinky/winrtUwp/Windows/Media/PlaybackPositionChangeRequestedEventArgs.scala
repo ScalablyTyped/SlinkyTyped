@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the PlaybackPositionChangeRequested event. */
-@js.native
 trait PlaybackPositionChangeRequestedEventArgs extends js.Object {
   /** Gets a value indicating the requested offset into the media item. */
-  var requestedPlaybackPosition: Double = js.native
+  var requestedPlaybackPosition: Double
 }
 
 object PlaybackPositionChangeRequestedEventArgs {
@@ -17,19 +16,5 @@ object PlaybackPositionChangeRequestedEventArgs {
     val __obj = js.Dynamic.literal(requestedPlaybackPosition = requestedPlaybackPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaybackPositionChangeRequestedEventArgs]
   }
-  @scala.inline
-  implicit class PlaybackPositionChangeRequestedEventArgsOps[Self <: PlaybackPositionChangeRequestedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestedPlaybackPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedPlaybackPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

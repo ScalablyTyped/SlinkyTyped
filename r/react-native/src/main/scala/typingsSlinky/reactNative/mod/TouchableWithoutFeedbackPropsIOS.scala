@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TouchableWithoutFeedbackPropsIOS extends js.Object {
   /**
     * *(Apple TV only)* TV preferred focus (see documentation for the View component).
     *
     * @platform ios
     */
-  var hasTVPreferredFocus: js.UndefOr[Boolean] = js.native
+  var hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * *(Apple TV only)* Object with properties to control Apple TV parallax effects.
     *
@@ -26,46 +25,19 @@ trait TouchableWithoutFeedbackPropsIOS extends js.Object {
     *
     * @platform ios
     */
-  var tvParallaxProperties: js.UndefOr[TVParallaxProperties] = js.native
+  var tvParallaxProperties: js.UndefOr[TVParallaxProperties] = js.undefined
 }
 
 object TouchableWithoutFeedbackPropsIOS {
   @scala.inline
-  def apply(): TouchableWithoutFeedbackPropsIOS = {
+  def apply(
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    tvParallaxProperties: TVParallaxProperties = null
+  ): TouchableWithoutFeedbackPropsIOS = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchableWithoutFeedbackPropsIOS]
   }
-  @scala.inline
-  implicit class TouchableWithoutFeedbackPropsIOSOps[Self <: TouchableWithoutFeedbackPropsIOS] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasTVPreferredFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTVPreferredFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasTVPreferredFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTVPreferredFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTvParallaxProperties(value: TVParallaxProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTvParallaxProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tvParallaxProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

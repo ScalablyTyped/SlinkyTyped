@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomersCollection extends js.Object {
   // Retrieves a customer.
-  def get(customerKey: String): Customer = js.native
+  def get(customerKey: String): Customer
   // Updates a customer. This method supports patch semantics.
-  def patch(resource: Customer, customerKey: String): Customer = js.native
+  def patch(resource: Customer, customerKey: String): Customer
   // Updates a customer.
-  def update(resource: Customer, customerKey: String): Customer = js.native
+  def update(resource: Customer, customerKey: String): Customer
 }
 
 object CustomersCollection {
@@ -25,31 +24,5 @@ object CustomersCollection {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), patch = js.Any.fromFunction2(patch), update = js.Any.fromFunction2(update))
     __obj.asInstanceOf[CustomersCollection]
   }
-  @scala.inline
-  implicit class CustomersCollectionOps[Self <: CustomersCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: String => Customer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: (Customer, String) => Customer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: (Customer, String) => Customer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

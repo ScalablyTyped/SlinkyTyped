@@ -7,351 +7,107 @@ import scala.scalajs.js.annotation._
 /**
   * Options to pass to Mocha.
   */
-@js.native
 trait MochaOptions extends js.Object {
-  var allowUncaught: js.UndefOr[Boolean] = js.native
-  var asyncOnly: js.UndefOr[Boolean] = js.native
+  var allowUncaught: js.UndefOr[Boolean] = js.undefined
+  var asyncOnly: js.UndefOr[Boolean] = js.undefined
   /** bail on the first test failure. */
-  var bail: js.UndefOr[Boolean] = js.native
+  var bail: js.UndefOr[Boolean] = js.undefined
   /** Color TTY output from reporter */
-  var color: js.UndefOr[Boolean] = js.native
-  var delay: js.UndefOr[Boolean] = js.native
-  var enableTimeouts: js.UndefOr[Boolean] = js.native
-  var forbidOnly: js.UndefOr[Boolean] = js.native
-  var forbidPending: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[Boolean] = js.undefined
+  var delay: js.UndefOr[Boolean] = js.undefined
+  var enableTimeouts: js.UndefOr[Boolean] = js.undefined
+  var forbidOnly: js.UndefOr[Boolean] = js.undefined
+  var forbidPending: js.UndefOr[Boolean] = js.undefined
   /** display the full stack trace on failure. */
-  var fullStackTrace: js.UndefOr[Boolean] = js.native
+  var fullStackTrace: js.UndefOr[Boolean] = js.undefined
   /** Array of accepted globals. */
-  var globals: js.UndefOr[js.Array[String]] = js.native
+  var globals: js.UndefOr[js.Array[String]] = js.undefined
   /** string or regexp to filter tests with. */
-  var grep: js.UndefOr[String | js.RegExp] = js.native
+  var grep: js.UndefOr[String | js.RegExp] = js.undefined
   /** Enable growl support. */
-  var growl: js.UndefOr[Boolean] = js.native
+  var growl: js.UndefOr[Boolean] = js.undefined
   /** Do not show diffs at all. */
-  var hideDiff: js.UndefOr[Boolean] = js.native
+  var hideDiff: js.UndefOr[Boolean] = js.undefined
   /** ignore global leaks. */
-  var ignoreLeaks: js.UndefOr[Boolean] = js.native
+  var ignoreLeaks: js.UndefOr[Boolean] = js.undefined
   /** Use inline diffs rather than +/-. */
-  var inlineDiffs: js.UndefOr[Boolean] = js.native
-  var noHighlighting: js.UndefOr[Boolean] = js.native
+  var inlineDiffs: js.UndefOr[Boolean] = js.undefined
+  var noHighlighting: js.UndefOr[Boolean] = js.undefined
   /**
     * Reporter constructor, built-in reporter name, or reporter module path. Defaults to
     * `"spec"`.
     */
-  var reporter: js.UndefOr[String | ReporterConstructor] = js.native
+  var reporter: js.UndefOr[String | ReporterConstructor] = js.undefined
   /** Options to pass to the reporter. */
-  var reporterOptions: js.UndefOr[js.Any] = js.native
+  var reporterOptions: js.UndefOr[js.Any] = js.undefined
   /** number of times to retry failed tests. */
-  var retries: js.UndefOr[Double] = js.native
+  var retries: js.UndefOr[Double] = js.undefined
   /** milliseconds to wait before considering a test slow. */
-  var slow: js.UndefOr[Double] = js.native
+  var slow: js.UndefOr[Double] = js.undefined
   /** timeout in milliseconds or time string like '1s'. */
-  var timeout: js.UndefOr[Double | String] = js.native
+  var timeout: js.UndefOr[Double | String] = js.undefined
   /** Test interfaces ("bdd", "tdd", "exports", etc.). */
-  var ui: js.UndefOr[Interface] = js.native
+  var ui: js.UndefOr[Interface] = js.undefined
   /**
     * Emit color output.
     *
     * @deprecated use `color` instead.
     */
-  var useColors: js.UndefOr[Boolean] = js.native
+  var useColors: js.UndefOr[Boolean] = js.undefined
 }
 
 object MochaOptions {
   @scala.inline
-  def apply(): MochaOptions = {
+  def apply(
+    allowUncaught: js.UndefOr[Boolean] = js.undefined,
+    asyncOnly: js.UndefOr[Boolean] = js.undefined,
+    bail: js.UndefOr[Boolean] = js.undefined,
+    color: js.UndefOr[Boolean] = js.undefined,
+    delay: js.UndefOr[Boolean] = js.undefined,
+    enableTimeouts: js.UndefOr[Boolean] = js.undefined,
+    forbidOnly: js.UndefOr[Boolean] = js.undefined,
+    forbidPending: js.UndefOr[Boolean] = js.undefined,
+    fullStackTrace: js.UndefOr[Boolean] = js.undefined,
+    globals: js.Array[String] = null,
+    grep: String | js.RegExp = null,
+    growl: js.UndefOr[Boolean] = js.undefined,
+    hideDiff: js.UndefOr[Boolean] = js.undefined,
+    ignoreLeaks: js.UndefOr[Boolean] = js.undefined,
+    inlineDiffs: js.UndefOr[Boolean] = js.undefined,
+    noHighlighting: js.UndefOr[Boolean] = js.undefined,
+    reporter: String | ReporterConstructor = null,
+    reporterOptions: js.Any = null,
+    retries: js.UndefOr[Double] = js.undefined,
+    slow: js.UndefOr[Double] = js.undefined,
+    timeout: Double | String = null,
+    ui: Interface = null,
+    useColors: js.UndefOr[Boolean] = js.undefined
+  ): MochaOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUncaught)) __obj.updateDynamic("allowUncaught")(allowUncaught.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(asyncOnly)) __obj.updateDynamic("asyncOnly")(asyncOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bail)) __obj.updateDynamic("bail")(bail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableTimeouts)) __obj.updateDynamic("enableTimeouts")(enableTimeouts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forbidOnly)) __obj.updateDynamic("forbidOnly")(forbidOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forbidPending)) __obj.updateDynamic("forbidPending")(forbidPending.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullStackTrace)) __obj.updateDynamic("fullStackTrace")(fullStackTrace.get.asInstanceOf[js.Any])
+    if (globals != null) __obj.updateDynamic("globals")(globals.asInstanceOf[js.Any])
+    if (grep != null) __obj.updateDynamic("grep")(grep.asInstanceOf[js.Any])
+    if (!js.isUndefined(growl)) __obj.updateDynamic("growl")(growl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDiff)) __obj.updateDynamic("hideDiff")(hideDiff.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreLeaks)) __obj.updateDynamic("ignoreLeaks")(ignoreLeaks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineDiffs)) __obj.updateDynamic("inlineDiffs")(inlineDiffs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noHighlighting)) __obj.updateDynamic("noHighlighting")(noHighlighting.get.asInstanceOf[js.Any])
+    if (reporter != null) __obj.updateDynamic("reporter")(reporter.asInstanceOf[js.Any])
+    if (reporterOptions != null) __obj.updateDynamic("reporterOptions")(reporterOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(slow)) __obj.updateDynamic("slow")(slow.get.asInstanceOf[js.Any])
+    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
+    if (ui != null) __obj.updateDynamic("ui")(ui.asInstanceOf[js.Any])
+    if (!js.isUndefined(useColors)) __obj.updateDynamic("useColors")(useColors.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MochaOptions]
   }
-  @scala.inline
-  implicit class MochaOptionsOps[Self <: MochaOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowUncaught(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUncaught")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUncaught: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUncaught")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsyncOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableTimeouts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTimeouts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableTimeouts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTimeouts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForbidOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forbidOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForbidOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forbidOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForbidPending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forbidPending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForbidPending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forbidPending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullStackTrace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullStackTrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullStackTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullStackTrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobals(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrepRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrep(value: String | js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrowl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrowl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("growl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDiff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDiff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDiff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDiff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreLeaks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreLeaks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreLeaks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreLeaks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineDiffs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineDiffs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineDiffs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineDiffs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoHighlighting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noHighlighting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoHighlighting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noHighlighting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReporter(value: String | ReporterConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReporterOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporterOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReporterOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reporterOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUi(value: Interface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ui")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseColors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useColors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useColors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

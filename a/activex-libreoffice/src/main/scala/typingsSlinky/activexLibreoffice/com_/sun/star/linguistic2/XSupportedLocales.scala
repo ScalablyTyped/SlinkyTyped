@@ -16,17 +16,16 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.lang.Locale
   * @see com.sun.star.uno.XInterface
   */
-@js.native
 trait XSupportedLocales extends XInterface {
   /** @returns the sequence of all supported languages. */
-  val Locales: SafeArray[Locale] = js.native
+  val Locales: SafeArray[Locale]
   /** @returns the sequence of all supported languages. */
-  def getLocales(): SafeArray[Locale] = js.native
+  def getLocales(): SafeArray[Locale]
   /**
     * @param aLocale specifies the language being checked for support by the object.
     * @returns `TRUE` if the language is supported, otherwise `FALSE` .
     */
-  def hasLocale(aLocale: Locale): Boolean = js.native
+  def hasLocale(aLocale: Locale): Boolean
 }
 
 object XSupportedLocales {
@@ -42,31 +41,5 @@ object XSupportedLocales {
     val __obj = js.Dynamic.literal(Locales = Locales.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getLocales = js.Any.fromFunction0(getLocales), hasLocale = js.Any.fromFunction1(hasLocale), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSupportedLocales]
   }
-  @scala.inline
-  implicit class XSupportedLocalesOps[Self <: XSupportedLocales] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocales(value: SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetLocales(value: () => SafeArray[Locale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocales")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasLocale(value: Locale => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

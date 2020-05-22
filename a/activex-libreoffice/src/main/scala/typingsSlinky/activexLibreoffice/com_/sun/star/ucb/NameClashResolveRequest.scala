@@ -19,18 +19,17 @@ import scala.scalajs.js.annotation._
   * @author Kai Sommerfeld
   * @version 1.0
   */
-@js.native
 trait NameClashResolveRequest extends ClassifiedInteractionRequest {
   /** contains the clashing name. */
-  var ClashingName: String = js.native
+  var ClashingName: String
   /**
     * contains a proposal for a new new, non-clashing name.
     *
     * This field may be left empty if the implementation is not able to suggest a new name.
     */
-  var ProposedNewName: String = js.native
+  var ProposedNewName: String
   /** contains the URL of the folder that contains the clashing resource. */
-  var TargetFolderURL: String = js.native
+  var TargetFolderURL: String
 }
 
 object NameClashResolveRequest {
@@ -46,31 +45,5 @@ object NameClashResolveRequest {
     val __obj = js.Dynamic.literal(ClashingName = ClashingName.asInstanceOf[js.Any], Classification = Classification.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], ProposedNewName = ProposedNewName.asInstanceOf[js.Any], TargetFolderURL = TargetFolderURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[NameClashResolveRequest]
   }
-  @scala.inline
-  implicit class NameClashResolveRequestOps[Self <: NameClashResolveRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClashingName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClashingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProposedNewName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedNewName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetFolderURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetFolderURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

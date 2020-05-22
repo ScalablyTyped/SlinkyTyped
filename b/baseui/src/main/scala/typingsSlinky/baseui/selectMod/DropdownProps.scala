@@ -1,9 +1,7 @@
 package typingsSlinky.baseui.selectMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
-import slinky.core.facade.ReactRef
-import typingsSlinky.baseui.anon.Item
+import typingsSlinky.baseui.anon.EventItem
 import typingsSlinky.baseui.anon.OptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -17,307 +15,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropdownProps extends js.Object {
-  var error: js.UndefOr[Boolean] = js.native
-  var getOptionLabel: js.UndefOr[js.Function1[/* args */ OptionState, TagMod[Any]]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var innerRef: js.UndefOr[Ref[_]] = js.native
-  var isLoading: js.UndefOr[Boolean] = js.native
-  var labelKey: js.UndefOr[String] = js.native
-  var maxDropdownHeight: js.UndefOr[String] = js.native
-  var multi: js.UndefOr[Boolean] = js.native
-  var noResultsMsg: js.UndefOr[TagMod[Any]] = js.native
-  var onActiveDescendantChange: js.UndefOr[js.Function1[/* id */ js.UndefOr[String], Unit]] = js.native
-  var onItemSelect: js.UndefOr[OnItemSelect] = js.native
-  var options: js.UndefOr[Value] = js.native
-  var overrides: js.UndefOr[DropdownOverrides] = js.native
-  var required: js.UndefOr[Boolean] = js.native
-  var searchable: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[mini | default_ | compact | large_] = js.native
-  var `type`: js.UndefOr[select | search] = js.native
-  var value: js.UndefOr[Value] = js.native
-  var valueKey: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var error: js.UndefOr[Boolean] = js.undefined
+  var getOptionLabel: js.UndefOr[js.Function1[/* args */ OptionState, TagMod[Any]]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var innerRef: js.UndefOr[Ref[_]] = js.undefined
+  var isLoading: js.UndefOr[Boolean] = js.undefined
+  var labelKey: js.UndefOr[String] = js.undefined
+  var maxDropdownHeight: js.UndefOr[String] = js.undefined
+  var multi: js.UndefOr[Boolean] = js.undefined
+  var noResultsMsg: js.UndefOr[TagMod[Any]] = js.undefined
+  var onActiveDescendantChange: js.UndefOr[js.Function1[/* id */ js.UndefOr[String], Unit]] = js.undefined
+  var onItemSelect: js.UndefOr[OnItemSelect] = js.undefined
+  var options: js.UndefOr[Value] = js.undefined
+  var overrides: js.UndefOr[DropdownOverrides] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var searchable: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[mini | default_ | compact | large_] = js.undefined
+  var `type`: js.UndefOr[select | search] = js.undefined
+  var value: js.UndefOr[Value] = js.undefined
+  var valueKey: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object DropdownProps {
   @scala.inline
-  def apply(): DropdownProps = {
+  def apply(
+    error: js.UndefOr[Boolean] = js.undefined,
+    getOptionLabel: /* args */ OptionState => TagMod[Any] = null,
+    id: String = null,
+    innerRef: js.UndefOr[Null | Ref[_]] = js.undefined,
+    isLoading: js.UndefOr[Boolean] = js.undefined,
+    labelKey: String = null,
+    maxDropdownHeight: String = null,
+    multi: js.UndefOr[Boolean] = js.undefined,
+    noResultsMsg: TagMod[Any] = null,
+    onActiveDescendantChange: /* id */ js.UndefOr[String] => Unit = null,
+    onItemSelect: /* args */ EventItem => js.Any = null,
+    options: Value = null,
+    overrides: DropdownOverrides = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    searchable: js.UndefOr[Boolean] = js.undefined,
+    size: mini | default_ | compact | large_ = null,
+    `type`: select | search = null,
+    value: Value = null,
+    valueKey: String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): DropdownProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.get.asInstanceOf[js.Any])
+    if (getOptionLabel != null) __obj.updateDynamic("getOptionLabel")(js.Any.fromFunction1(getOptionLabel))
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerRef)) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(isLoading)) __obj.updateDynamic("isLoading")(isLoading.get.asInstanceOf[js.Any])
+    if (labelKey != null) __obj.updateDynamic("labelKey")(labelKey.asInstanceOf[js.Any])
+    if (maxDropdownHeight != null) __obj.updateDynamic("maxDropdownHeight")(maxDropdownHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
+    if (noResultsMsg != null) __obj.updateDynamic("noResultsMsg")(noResultsMsg.asInstanceOf[js.Any])
+    if (onActiveDescendantChange != null) __obj.updateDynamic("onActiveDescendantChange")(js.Any.fromFunction1(onActiveDescendantChange))
+    if (onItemSelect != null) __obj.updateDynamic("onItemSelect")(js.Any.fromFunction1(onItemSelect))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchable)) __obj.updateDynamic("searchable")(searchable.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueKey != null) __obj.updateDynamic("valueKey")(valueKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropdownProps]
   }
-  @scala.inline
-  implicit class DropdownPropsOps[Self <: DropdownProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetOptionLabel(value: /* args */ OptionState => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetOptionLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRefRefObject(value: ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInnerRef(value: Ref[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(null)
-        ret
-    }
-    @scala.inline
-    def withIsLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDropdownHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDropdownHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDropdownHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDropdownHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulti(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoResultsMsgReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noResultsMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoResultsMsg(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noResultsMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoResultsMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noResultsMsg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActiveDescendantChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnActiveDescendantChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActiveDescendantChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemSelect(value: /* args */ Item => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: DropdownOverrides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: mini | default_ | compact | large_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: select | search): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

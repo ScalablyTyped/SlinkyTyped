@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListViewMessages extends js.Object {
-  var loadMoreText: js.UndefOr[String] = js.native
-  var pullTemplate: js.UndefOr[String] = js.native
-  var refreshTemplate: js.UndefOr[String] = js.native
-  var releaseTemplate: js.UndefOr[String] = js.native
+  var loadMoreText: js.UndefOr[String] = js.undefined
+  var pullTemplate: js.UndefOr[String] = js.undefined
+  var refreshTemplate: js.UndefOr[String] = js.undefined
+  var releaseTemplate: js.UndefOr[String] = js.undefined
 }
 
 object ListViewMessages {
   @scala.inline
-  def apply(): ListViewMessages = {
+  def apply(
+    loadMoreText: String = null,
+    pullTemplate: String = null,
+    refreshTemplate: String = null,
+    releaseTemplate: String = null
+  ): ListViewMessages = {
     val __obj = js.Dynamic.literal()
+    if (loadMoreText != null) __obj.updateDynamic("loadMoreText")(loadMoreText.asInstanceOf[js.Any])
+    if (pullTemplate != null) __obj.updateDynamic("pullTemplate")(pullTemplate.asInstanceOf[js.Any])
+    if (refreshTemplate != null) __obj.updateDynamic("refreshTemplate")(refreshTemplate.asInstanceOf[js.Any])
+    if (releaseTemplate != null) __obj.updateDynamic("releaseTemplate")(releaseTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListViewMessages]
   }
-  @scala.inline
-  implicit class ListViewMessagesOps[Self <: ListViewMessages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadMoreText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMoreText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadMoreText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMoreText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

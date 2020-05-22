@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   * [Api set: WordApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@js.native
 trait CustomXmlPartScopedCollectionLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the ID of the custom XML part. Read only.
@@ -22,7 +21,7 @@ trait CustomXmlPartScopedCollectionLoadOptions extends js.Object {
     * [Api set: WordApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the namespace URI of the custom XML part. Read only.
@@ -30,58 +29,21 @@ trait CustomXmlPartScopedCollectionLoadOptions extends js.Object {
     * [Api set: WordApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var namespaceUri: js.UndefOr[Boolean] = js.native
+  var namespaceUri: js.UndefOr[Boolean] = js.undefined
 }
 
 object CustomXmlPartScopedCollectionLoadOptions {
   @scala.inline
-  def apply(): CustomXmlPartScopedCollectionLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    namespaceUri: js.UndefOr[Boolean] = js.undefined
+  ): CustomXmlPartScopedCollectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(namespaceUri)) __obj.updateDynamic("namespaceUri")(namespaceUri.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomXmlPartScopedCollectionLoadOptions]
   }
-  @scala.inline
-  implicit class CustomXmlPartScopedCollectionLoadOptionsOps[Self <: CustomXmlPartScopedCollectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespaceUri(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespaceUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

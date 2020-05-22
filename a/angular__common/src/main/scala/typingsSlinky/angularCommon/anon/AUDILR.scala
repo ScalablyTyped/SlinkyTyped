@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AUDILR extends js.Object {
-  var AUD: js.Array[String] = js.native
-  var ILR: js.Array[String] = js.native
-  var JPY: js.Array[String] = js.native
-  var KRW: js.Array[String] = js.native
-  var MOP: js.Array[String] = js.native
-  var TWD: js.Array[String] = js.native
-  var USD: js.Array[String] = js.native
+  var AUD: js.Array[String]
+  var ILR: js.Array[String]
+  var JPY: js.Array[String]
+  var KRW: js.Array[String]
+  var MOP: js.Array[String]
+  var TWD: js.Array[String]
+  var USD: js.Array[String]
 }
 
 object AUDILR {
@@ -29,55 +28,5 @@ object AUDILR {
     val __obj = js.Dynamic.literal(AUD = AUD.asInstanceOf[js.Any], ILR = ILR.asInstanceOf[js.Any], JPY = JPY.asInstanceOf[js.Any], KRW = KRW.asInstanceOf[js.Any], MOP = MOP.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any], USD = USD.asInstanceOf[js.Any])
     __obj.asInstanceOf[AUDILR]
   }
-  @scala.inline
-  implicit class AUDILROps[Self <: AUDILR] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAUD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AUD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withILR(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ILR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJPY(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JPY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKRW(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KRW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMOP(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MOP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTWD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TWD")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUSD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("USD")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

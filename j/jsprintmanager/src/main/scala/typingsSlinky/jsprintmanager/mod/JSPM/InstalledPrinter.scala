@@ -11,6 +11,8 @@ class InstalledPrinter protected () extends IClientPrinter {
   def this(printerName: String, printToDefaultIfNotFound: Boolean) = this()
   def this(printerName: String, printToDefaultIfNotFound: Boolean, trayName: String) = this()
   def this(printerName: String, printToDefaultIfNotFound: Boolean, trayName: String, paperName: String) = this()
+  /* CompleteClass */
+  override var Id: js.Any = js.native
   @JSName("Id")
   var Id_InstalledPrinter: String = js.native
   var _name: js.Any = js.native
@@ -24,5 +26,7 @@ class InstalledPrinter protected () extends IClientPrinter {
   /* private */ def bool2str(value: js.Any): js.Any = js.native
   /* private */ def bool2str(value: js.Any, true_val: js.Any): js.Any = js.native
   /* private */ def bool2str(value: js.Any, true_val: js.Any, false_val: js.Any): js.Any = js.native
+  /* CompleteClass */
+  override def serialize(): js.Any = js.native
 }
 

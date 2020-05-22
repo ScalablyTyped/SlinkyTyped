@@ -18,41 +18,11 @@ trait DescribeParameterGroupsResponse extends js.Object {
 
 object DescribeParameterGroupsResponse {
   @scala.inline
-  def apply(): DescribeParameterGroupsResponse = {
+  def apply(NextToken: String = null, ParameterGroups: ParameterGroupList = null): DescribeParameterGroupsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ParameterGroups != null) __obj.updateDynamic("ParameterGroups")(ParameterGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeParameterGroupsResponse]
   }
-  @scala.inline
-  implicit class DescribeParameterGroupsResponseOps[Self <: DescribeParameterGroupsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameterGroups(value: ParameterGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

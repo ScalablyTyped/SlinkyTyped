@@ -23,65 +23,18 @@ trait CreateMeetingRoomConfiguration extends js.Object {
 
 object CreateMeetingRoomConfiguration {
   @scala.inline
-  def apply(): CreateMeetingRoomConfiguration = {
+  def apply(
+    EndOfMeetingReminder: CreateEndOfMeetingReminder = null,
+    InstantBooking: CreateInstantBooking = null,
+    RequireCheckIn: CreateRequireCheckIn = null,
+    RoomUtilizationMetricsEnabled: js.UndefOr[Boolean] = js.undefined
+  ): CreateMeetingRoomConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (EndOfMeetingReminder != null) __obj.updateDynamic("EndOfMeetingReminder")(EndOfMeetingReminder.asInstanceOf[js.Any])
+    if (InstantBooking != null) __obj.updateDynamic("InstantBooking")(InstantBooking.asInstanceOf[js.Any])
+    if (RequireCheckIn != null) __obj.updateDynamic("RequireCheckIn")(RequireCheckIn.asInstanceOf[js.Any])
+    if (!js.isUndefined(RoomUtilizationMetricsEnabled)) __obj.updateDynamic("RoomUtilizationMetricsEnabled")(RoomUtilizationMetricsEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMeetingRoomConfiguration]
   }
-  @scala.inline
-  implicit class CreateMeetingRoomConfigurationOps[Self <: CreateMeetingRoomConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndOfMeetingReminder(value: CreateEndOfMeetingReminder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOfMeetingReminder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndOfMeetingReminder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndOfMeetingReminder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstantBooking(value: CreateInstantBooking): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstantBooking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstantBooking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstantBooking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireCheckIn(value: CreateRequireCheckIn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireCheckIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireCheckIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireCheckIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoomUtilizationMetricsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomUtilizationMetricsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoomUtilizationMetricsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomUtilizationMetricsEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

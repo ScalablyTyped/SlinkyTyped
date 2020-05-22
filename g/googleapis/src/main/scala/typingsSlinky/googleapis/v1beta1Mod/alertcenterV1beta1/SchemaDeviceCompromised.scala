@@ -21,41 +21,11 @@ trait SchemaDeviceCompromised extends js.Object {
 
 object SchemaDeviceCompromised {
   @scala.inline
-  def apply(): SchemaDeviceCompromised = {
+  def apply(email: String = null, events: js.Array[SchemaDeviceCompromisedSecurityDetail] = null): SchemaDeviceCompromised = {
     val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceCompromised]
   }
-  @scala.inline
-  implicit class SchemaDeviceCompromisedOps[Self <: SchemaDeviceCompromised] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Array[SchemaDeviceCompromisedSecurityDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

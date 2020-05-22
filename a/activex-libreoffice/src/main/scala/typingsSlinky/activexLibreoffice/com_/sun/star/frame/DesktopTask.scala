@@ -17,29 +17,28 @@ import scala.scalajs.js.annotation._
   * use the {@link Frame} service instead of this
   * @deprecated Deprecated
   */
-@js.native
 trait DesktopTask
   extends XFramesSupplier
      with XDesktopTask
      with XPropertySet
      with XWindowArranger {
-  var IsAlwaysVisible: Boolean = js.native
-  var IsDesktop: Boolean = js.native
-  var IsFloating: Boolean = js.native
+  var IsAlwaysVisible: Boolean
+  var IsDesktop: Boolean
+  var IsFloating: Boolean
   /** use th visible state of the frame container window instead of this */
-  var IsVisible: Boolean = js.native
+  var IsVisible: Boolean
   /** use the position of the frame container window instead of this */
-  var Position: Point = js.native
+  var Position: Point
   /** use the size of the frame container window instead of this */
-  var Size: typingsSlinky.activexLibreoffice.com_.sun.star.awt.Size = js.native
+  var Size: typingsSlinky.activexLibreoffice.com_.sun.star.awt.Size
   /** use property {@link Frame.Title} instead of that */
-  var Title: String = js.native
+  var Title: String
   /**
     * use {@link com.sun.star.lang.XInitialization} instead.
     * @deprecated Deprecated
     */
   /* InferMemberOverrides */
-  override def initialize(TaskWindow: XWindow): Unit = js.native
+  override def initialize(TaskWindow: XWindow): Unit
 }
 
 object DesktopTask {
@@ -100,61 +99,5 @@ object DesktopTask {
     val __obj = js.Dynamic.literal(ActiveFrame = ActiveFrame.asInstanceOf[js.Any], ComponentWindow = ComponentWindow.asInstanceOf[js.Any], ContainerWindow = ContainerWindow.asInstanceOf[js.Any], Controller = Controller.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Frames = Frames.asInstanceOf[js.Any], IsAlwaysVisible = IsAlwaysVisible.asInstanceOf[js.Any], IsDesktop = IsDesktop.asInstanceOf[js.Any], IsFloating = IsFloating.asInstanceOf[js.Any], IsVisible = IsVisible.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), activate = js.Any.fromFunction0(activate), addEventListener = js.Any.fromFunction1(addEventListener), addFrameActionListener = js.Any.fromFunction1(addFrameActionListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), arrange = js.Any.fromFunction1(arrange), close = js.Any.fromFunction0(close), contextChanged = js.Any.fromFunction0(contextChanged), deactivate = js.Any.fromFunction0(deactivate), dispose = js.Any.fromFunction0(dispose), findFrame = js.Any.fromFunction2(findFrame), getActiveFrame = js.Any.fromFunction0(getActiveFrame), getComponentWindow = js.Any.fromFunction0(getComponentWindow), getContainerWindow = js.Any.fromFunction0(getContainerWindow), getController = js.Any.fromFunction0(getController), getCreator = js.Any.fromFunction0(getCreator), getFrames = js.Any.fromFunction0(getFrames), getName = js.Any.fromFunction0(getName), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), hasArrangeCommand = js.Any.fromFunction1(hasArrangeCommand), initialize = js.Any.fromFunction1(initialize), isActive = js.Any.fromFunction0(isActive), isTop = js.Any.fromFunction0(isTop), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeFrameActionListener = js.Any.fromFunction1(removeFrameActionListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setActiveFrame = js.Any.fromFunction1(setActiveFrame), setComponent = js.Any.fromFunction2(setComponent), setCreator = js.Any.fromFunction1(setCreator), setName = js.Any.fromFunction1(setName), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[DesktopTask]
   }
-  @scala.inline
-  implicit class DesktopTaskOps[Self <: DesktopTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsAlwaysVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAlwaysVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDesktop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDesktop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFloating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsFloating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialize(value: XWindow => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

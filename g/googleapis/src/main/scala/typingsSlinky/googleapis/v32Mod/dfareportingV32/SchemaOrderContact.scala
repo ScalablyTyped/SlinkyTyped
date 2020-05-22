@@ -36,77 +36,20 @@ trait SchemaOrderContact extends js.Object {
 
 object SchemaOrderContact {
   @scala.inline
-  def apply(): SchemaOrderContact = {
+  def apply(
+    contactInfo: String = null,
+    contactName: String = null,
+    contactTitle: String = null,
+    contactType: String = null,
+    signatureUserProfileId: String = null
+  ): SchemaOrderContact = {
     val __obj = js.Dynamic.literal()
+    if (contactInfo != null) __obj.updateDynamic("contactInfo")(contactInfo.asInstanceOf[js.Any])
+    if (contactName != null) __obj.updateDynamic("contactName")(contactName.asInstanceOf[js.Any])
+    if (contactTitle != null) __obj.updateDynamic("contactTitle")(contactTitle.asInstanceOf[js.Any])
+    if (contactType != null) __obj.updateDynamic("contactType")(contactType.asInstanceOf[js.Any])
+    if (signatureUserProfileId != null) __obj.updateDynamic("signatureUserProfileId")(signatureUserProfileId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderContact]
   }
-  @scala.inline
-  implicit class SchemaOrderContactOps[Self <: SchemaOrderContact] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContactInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContactName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContactTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContactType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignatureUserProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureUserProfileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignatureUserProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureUserProfileId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

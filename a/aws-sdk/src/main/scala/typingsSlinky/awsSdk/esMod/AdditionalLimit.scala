@@ -18,41 +18,11 @@ trait AdditionalLimit extends js.Object {
 
 object AdditionalLimit {
   @scala.inline
-  def apply(): AdditionalLimit = {
+  def apply(LimitName: LimitName = null, LimitValues: LimitValueList = null): AdditionalLimit = {
     val __obj = js.Dynamic.literal()
+    if (LimitName != null) __obj.updateDynamic("LimitName")(LimitName.asInstanceOf[js.Any])
+    if (LimitValues != null) __obj.updateDynamic("LimitValues")(LimitValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdditionalLimit]
   }
-  @scala.inline
-  implicit class AdditionalLimitOps[Self <: AdditionalLimit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLimitName(value: LimitName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimitName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimitValues(value: LimitValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimitValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LimitValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

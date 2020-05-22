@@ -5,24 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Collections extends js.Object {
   /**
     * (server only) Collection of the access tokens.
     */
-  var accessToken: Collection[AccessToken] = js.native
+  var accessToken: Collection[AccessToken]
   /**
     * Collection of the authorization codes.
     */
-  var authCode: Collection[AuthCode] = js.native
+  var authCode: Collection[AuthCode]
   /**
     * (server only) Collection of the clients authorized to use the oauth2 service.
     */
-  var client: Collection[Client] = js.native
+  var client: Collection[Client]
   /**
     * Collection of the refresh tokens.
     */
-  var refreshToken: Collection[RefreshToken] = js.native
+  var refreshToken: Collection[RefreshToken]
 }
 
 object Collections {
@@ -36,37 +35,5 @@ object Collections {
     val __obj = js.Dynamic.literal(accessToken = accessToken.asInstanceOf[js.Any], authCode = authCode.asInstanceOf[js.Any], client = client.asInstanceOf[js.Any], refreshToken = refreshToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[Collections]
   }
-  @scala.inline
-  implicit class CollectionsOps[Self <: Collections] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: Collection[AccessToken]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthCode(value: Collection[AuthCode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClient(value: Collection[Client]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefreshToken(value: Collection[RefreshToken]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

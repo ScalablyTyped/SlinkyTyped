@@ -7,103 +7,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a TrainingPhrase. */
-@js.native
 trait ITrainingPhrase extends js.Object {
   /** TrainingPhrase name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** TrainingPhrase parts */
-  var parts: js.UndefOr[js.Array[IPart] | Null] = js.native
+  var parts: js.UndefOr[js.Array[IPart] | Null] = js.undefined
   /** TrainingPhrase timesAddedCount */
-  var timesAddedCount: js.UndefOr[Double | Null] = js.native
+  var timesAddedCount: js.UndefOr[Double | Null] = js.undefined
   /** TrainingPhrase type */
-  var `type`: js.UndefOr[Type | Null] = js.native
+  var `type`: js.UndefOr[Type | Null] = js.undefined
 }
 
 object ITrainingPhrase {
   @scala.inline
-  def apply(): ITrainingPhrase = {
+  def apply(
+    name: js.UndefOr[Null | String] = js.undefined,
+    parts: js.UndefOr[Null | js.Array[IPart]] = js.undefined,
+    timesAddedCount: js.UndefOr[Null | Double] = js.undefined,
+    `type`: js.UndefOr[Null | Type] = js.undefined
+  ): ITrainingPhrase = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(parts)) __obj.updateDynamic("parts")(parts.asInstanceOf[js.Any])
+    if (!js.isUndefined(timesAddedCount)) __obj.updateDynamic("timesAddedCount")(timesAddedCount.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITrainingPhrase]
   }
-  @scala.inline
-  implicit class ITrainingPhraseOps[Self <: ITrainingPhrase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withParts(value: js.Array[IPart]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(null)
-        ret
-    }
-    @scala.inline
-    def withTimesAddedCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timesAddedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimesAddedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timesAddedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimesAddedCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timesAddedCount")(null)
-        ret
-    }
-    @scala.inline
-    def withType(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-  }
-  
 }
 

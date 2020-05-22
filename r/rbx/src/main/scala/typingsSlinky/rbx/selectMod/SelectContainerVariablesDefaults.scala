@@ -10,10 +10,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectContainerVariablesDefaults extends js.Object {
-  var sizes: small | medium | large = js.native
-  var states: focused | hovered | loading = js.native
+  var sizes: small | medium | large
+  var states: focused | hovered | loading
 }
 
 object SelectContainerVariablesDefaults {
@@ -22,25 +21,5 @@ object SelectContainerVariablesDefaults {
     val __obj = js.Dynamic.literal(sizes = sizes.asInstanceOf[js.Any], states = states.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectContainerVariablesDefaults]
   }
-  @scala.inline
-  implicit class SelectContainerVariablesDefaultsOps[Self <: SelectContainerVariablesDefaults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSizes(value: small | medium | large): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStates(value: focused | hovered | loading): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

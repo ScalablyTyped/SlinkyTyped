@@ -21,41 +21,11 @@ trait SchemaArg extends js.Object {
 
 object SchemaArg {
   @scala.inline
-  def apply(): SchemaArg = {
+  def apply(anyValue: SchemaEmpty = null, exactValue: js.Any = null): SchemaArg = {
     val __obj = js.Dynamic.literal()
+    if (anyValue != null) __obj.updateDynamic("anyValue")(anyValue.asInstanceOf[js.Any])
+    if (exactValue != null) __obj.updateDynamic("exactValue")(exactValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaArg]
   }
-  @scala.inline
-  implicit class SchemaArgOps[Self <: SchemaArg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnyValue(value: SchemaEmpty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExactValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExactValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

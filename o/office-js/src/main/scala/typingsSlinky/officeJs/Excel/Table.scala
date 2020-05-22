@@ -22,14 +22,14 @@ import scala.scalajs.js.annotation._
 trait Table extends ClientObject {
   /**
     *
-    * Represents the AutoFilter object of the table. Read-Only.
+    * Represents the AutoFilter object of the table.
     *
     * [Api set: ExcelApi 1.9]
     */
   val autoFilter: AutoFilter = js.native
   /**
     *
-    * Represents a collection of all the columns in the table. Read-only.
+    * Represents a collection of all the columns in the table.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -39,21 +39,21 @@ trait Table extends ClientObject {
   var context_Table: RequestContext = js.native
   /**
     *
-    * Indicates whether the first column contains special formatting.
+    * Specifies if the first column contains special formatting.
     *
     * [Api set: ExcelApi 1.3]
     */
   var highlightFirstColumn: Boolean = js.native
   /**
     *
-    * Indicates whether the last column contains special formatting.
+    * Specifies if the last column contains special formatting.
     *
     * [Api set: ExcelApi 1.3]
     */
   var highlightLastColumn: Boolean = js.native
   /**
     *
-    * Returns a value that uniquely identifies the table in a given workbook. The value of the identifier remains the same even when the table is renamed. Read-only.
+    * Returns a value that uniquely identifies the table in a given workbook. The value of the identifier remains the same even when the table is renamed.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -94,49 +94,49 @@ trait Table extends ClientObject {
   val onSelectionChanged: EventHandlers[TableSelectionChangedEventArgs] = js.native
   /**
     *
-    * Represents a collection of all the rows in the table. Read-only.
+    * Represents a collection of all the rows in the table.
     *
     * [Api set: ExcelApi 1.1]
     */
   val rows: TableRowCollection = js.native
   /**
     *
-    * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
+    * Specifies if the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
     *
     * [Api set: ExcelApi 1.3]
     */
   var showBandedColumns: Boolean = js.native
   /**
     *
-    * Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
+    * Specifies if the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
     *
     * [Api set: ExcelApi 1.3]
     */
   var showBandedRows: Boolean = js.native
   /**
     *
-    * Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
+    * Specifies if the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
     *
     * [Api set: ExcelApi 1.3]
     */
   var showFilterButton: Boolean = js.native
   /**
     *
-    * Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
+    * Specifies if the header row is visible. This value can be set to show or remove the header row.
     *
     * [Api set: ExcelApi 1.1]
     */
   var showHeaders: Boolean = js.native
   /**
     *
-    * Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
+    * Specifies if the total row is visible. This value can be set to show or remove the total row.
     *
     * [Api set: ExcelApi 1.1]
     */
   var showTotals: Boolean = js.native
   /**
     *
-    * Represents the sorting for the table. Read-only.
+    * Represents the sorting for the table.
     *
     * [Api set: ExcelApi 1.2]
     */
@@ -150,7 +150,7 @@ trait Table extends ClientObject {
   var style: String = js.native
   /**
     *
-    * The worksheet containing the current table. Read-only.
+    * The worksheet containing the current table.
     *
     * [Api set: ExcelApi 1.2]
     */

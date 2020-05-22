@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServicesResource extends js.Object {
   /**
     * Disable a service so it can no longer be used with a
@@ -17,7 +16,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: google.protobuf.Empty>
     */
-  def disable(request: Accesstoken): Request[Operation] = js.native
+  def disable(request: Accesstoken): Request[Operation]
   /**
     * Enable a service so it can be used with a project.
     * See [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
@@ -25,9 +24,9 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: google.protobuf.Empty>
     */
-  def enable(request: Accesstoken): Request[Operation] = js.native
+  def enable(request: Accesstoken): Request[Operation]
   /** List enabled services for the specified consumer. */
-  def list(request: Alt): Request[ListEnabledServicesResponse] = js.native
+  def list(request: Alt): Request[ListEnabledServicesResponse]
   /**
     * Search available services.
     *
@@ -35,7 +34,7 @@ trait ServicesResource extends js.Object {
     * authenticated users, also returns all services the calling user has
     * "servicemanagement.services.bind" permission for.
     */
-  def search(request: Bearertoken): Request[SearchServicesResponse] = js.native
+  def search(request: Bearertoken): Request[SearchServicesResponse]
 }
 
 object ServicesResource {
@@ -49,37 +48,5 @@ object ServicesResource {
     val __obj = js.Dynamic.literal(disable = js.Any.fromFunction1(disable), enable = js.Any.fromFunction1(enable), list = js.Any.fromFunction1(list), search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[ServicesResource]
   }
-  @scala.inline
-  implicit class ServicesResourceOps[Self <: ServicesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisable(value: Accesstoken => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnable(value: Accesstoken => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Alt => Request[ListEnabledServicesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSearch(value: Bearertoken => Request[SearchServicesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

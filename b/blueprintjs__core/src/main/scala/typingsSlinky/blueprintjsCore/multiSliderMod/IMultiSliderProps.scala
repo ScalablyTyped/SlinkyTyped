@@ -1,69 +1,54 @@
 package typingsSlinky.blueprintjsCore.multiSliderMod
 
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMultiSliderProps extends ISliderBaseProps {
   /** Default intent of a track segment, used only if no handle specifies `intentBefore/After`. */
-  var defaultTrackIntent: js.UndefOr[Intent] = js.native
+  var defaultTrackIntent: js.UndefOr[Intent] = js.undefined
   /** Callback invoked when a handle value changes. Receives handle values in sorted order. */
-  var onChange: js.UndefOr[js.Function1[/* values */ js.Array[Double], Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* values */ js.Array[Double], Unit]] = js.undefined
   /** Callback invoked when a handle is released. Receives handle values in sorted order. */
-  var onRelease: js.UndefOr[js.Function1[/* values */ js.Array[Double], Unit]] = js.native
+  var onRelease: js.UndefOr[js.Function1[/* values */ js.Array[Double], Unit]] = js.undefined
 }
 
 object IMultiSliderProps {
   @scala.inline
-  def apply(): IMultiSliderProps = {
+  def apply(
+    className: String = null,
+    defaultTrackIntent: Intent = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    intent: Intent = null,
+    labelPrecision: js.UndefOr[Double] = js.undefined,
+    labelRenderer: Boolean | (js.Function1[/* value */ Double, String | ReactElement]) = null,
+    labelStepSize: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    onChange: /* values */ js.Array[Double] => Unit = null,
+    onRelease: /* values */ js.Array[Double] => Unit = null,
+    showTrackFill: js.UndefOr[Boolean] = js.undefined,
+    stepSize: js.UndefOr[Double] = js.undefined,
+    vertical: js.UndefOr[Boolean] = js.undefined
+  ): IMultiSliderProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (defaultTrackIntent != null) __obj.updateDynamic("defaultTrackIntent")(defaultTrackIntent.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelPrecision)) __obj.updateDynamic("labelPrecision")(labelPrecision.get.asInstanceOf[js.Any])
+    if (labelRenderer != null) __obj.updateDynamic("labelRenderer")(labelRenderer.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelStepSize)) __obj.updateDynamic("labelStepSize")(labelStepSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onRelease != null) __obj.updateDynamic("onRelease")(js.Any.fromFunction1(onRelease))
+    if (!js.isUndefined(showTrackFill)) __obj.updateDynamic("showTrackFill")(showTrackFill.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepSize)) __obj.updateDynamic("stepSize")(stepSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMultiSliderProps]
   }
-  @scala.inline
-  implicit class IMultiSliderPropsOps[Self <: IMultiSliderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultTrackIntent(value: Intent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTrackIntent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultTrackIntent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTrackIntent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: /* values */ js.Array[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRelease(value: /* values */ js.Array[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRelease: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

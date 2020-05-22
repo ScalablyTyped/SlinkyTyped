@@ -11,8 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactTable.reactTableStrings.uniqueCount
   - typingsSlinky.reactTable.reactTableStrings.count
 */
-trait DefaultAggregators
-  extends Aggregator[js.Any]
+trait DefaultAggregators extends js.Object
 
 object DefaultAggregators {
   @scala.inline

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LabelMinAngle extends js.Object {
   /**
     * Style of Sunburst sectors.
@@ -42,7 +41,7 @@ trait LabelMinAngle extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.downplay.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.undefined
   /**
     * `label` sets the text style for every sectors.
     *
@@ -64,46 +63,16 @@ trait LabelMinAngle extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.downplay.label
     */
-  var label: js.UndefOr[MinAngle] = js.native
+  var label: js.UndefOr[MinAngle] = js.undefined
 }
 
 object LabelMinAngle {
   @scala.inline
-  def apply(): LabelMinAngle = {
+  def apply(itemStyle: BorderType = null, label: MinAngle = null): LabelMinAngle = {
     val __obj = js.Dynamic.literal()
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelMinAngle]
   }
-  @scala.inline
-  implicit class LabelMinAngleOps[Self <: LabelMinAngle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItemStyle(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: MinAngle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

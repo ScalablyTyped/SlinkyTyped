@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * This bridge works with the iiop protocol.
   * @see com.sun.star.bridge.Bridge
   */
-@js.native
 trait IiopBridge
   extends XInitialization
      with XBridge

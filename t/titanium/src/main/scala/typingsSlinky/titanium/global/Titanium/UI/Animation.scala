@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * The `Animation` object defines an animation that can be applied to a view.
-		 */
+  * The `Animation` object defines an animation that can be applied to a view.
+  */
 @JSGlobal("Titanium.UI.Animation")
 @js.native
 class Animation ()

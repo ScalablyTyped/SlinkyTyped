@@ -5,24 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** SVGTransform is the interface for one of the component transformations within an SVGTransformList; thus, an SVGTransform object corresponds to a single component (e.g., scale(…) or matrix(…)) within a transform attribute. */
-@js.native
 trait SVGTransform extends js.Object {
-  val SVG_TRANSFORM_MATRIX: Double = js.native
-  val SVG_TRANSFORM_ROTATE: Double = js.native
-  val SVG_TRANSFORM_SCALE: Double = js.native
-  val SVG_TRANSFORM_SKEWX: Double = js.native
-  val SVG_TRANSFORM_SKEWY: Double = js.native
-  val SVG_TRANSFORM_TRANSLATE: Double = js.native
-  val SVG_TRANSFORM_UNKNOWN: Double = js.native
-  val angle: Double = js.native
-  val matrix: org.scalajs.dom.raw.SVGMatrix = js.native
-  val `type`: Double = js.native
-  def setMatrix(matrix: org.scalajs.dom.raw.SVGMatrix): Unit = js.native
-  def setRotate(angle: Double, cx: Double, cy: Double): Unit = js.native
-  def setScale(sx: Double, sy: Double): Unit = js.native
-  def setSkewX(angle: Double): Unit = js.native
-  def setSkewY(angle: Double): Unit = js.native
-  def setTranslate(tx: Double, ty: Double): Unit = js.native
+  val SVG_TRANSFORM_MATRIX: Double
+  val SVG_TRANSFORM_ROTATE: Double
+  val SVG_TRANSFORM_SCALE: Double
+  val SVG_TRANSFORM_SKEWX: Double
+  val SVG_TRANSFORM_SKEWY: Double
+  val SVG_TRANSFORM_TRANSLATE: Double
+  val SVG_TRANSFORM_UNKNOWN: Double
+  val angle: Double
+  val matrix: org.scalajs.dom.raw.SVGMatrix
+  val `type`: Double
+  def setMatrix(matrix: org.scalajs.dom.raw.SVGMatrix): Unit
+  def setRotate(angle: Double, cx: Double, cy: Double): Unit
+  def setScale(sx: Double, sy: Double): Unit
+  def setSkewX(angle: Double): Unit
+  def setSkewY(angle: Double): Unit
+  def setTranslate(tx: Double, ty: Double): Unit
 }
 
 object SVGTransform {
@@ -49,109 +48,5 @@ object SVGTransform {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGTransform]
   }
-  @scala.inline
-  implicit class SVGTransformOps[Self <: org.scalajs.dom.raw.SVGTransform] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSVG_TRANSFORM_MATRIX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_MATRIX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSVG_TRANSFORM_ROTATE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_ROTATE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSVG_TRANSFORM_SCALE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_SCALE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSVG_TRANSFORM_SKEWX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_SKEWX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSVG_TRANSFORM_SKEWY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_SKEWY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSVG_TRANSFORM_TRANSLATE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_TRANSLATE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSVG_TRANSFORM_UNKNOWN(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_UNKNOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatrix(value: org.scalajs.dom.raw.SVGMatrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetMatrix(value: org.scalajs.dom.raw.SVGMatrix => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRotate(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRotate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetScale(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScale")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetSkewX(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSkewX")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSkewY(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSkewY")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTranslate(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTranslate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,570 +4,212 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Model extends js.Object {
   /** Triggered before AJAX content has been loaded.
     */
-  var ajaxBeforeLoad: js.UndefOr[js.Function1[/* e */ AjaxBeforeLoadEventArgs, Unit]] = js.native
+  var ajaxBeforeLoad: js.UndefOr[js.Function1[/* e */ AjaxBeforeLoadEventArgs, Unit]] = js.undefined
   /** Triggered if error occurs in AJAX request.
     */
-  var ajaxError: js.UndefOr[js.Function1[/* e */ AjaxErrorEventArgs, Unit]] = js.native
+  var ajaxError: js.UndefOr[js.Function1[/* e */ AjaxErrorEventArgs, Unit]] = js.undefined
   /** Triggered after AJAX content load action.
     */
-  var ajaxLoad: js.UndefOr[js.Function1[/* e */ AjaxLoadEventArgs, Unit]] = js.native
+  var ajaxLoad: js.UndefOr[js.Function1[/* e */ AjaxLoadEventArgs, Unit]] = js.undefined
   /** Specifies the ajaxSettings option to load the content to the Tab control.
     */
-  var ajaxSettings: js.UndefOr[AjaxSettings] = js.native
+  var ajaxSettings: js.UndefOr[AjaxSettings] = js.undefined
   /** Triggered after a tab item activated.
     */
-  var ajaxSuccess: js.UndefOr[js.Function1[/* e */ AjaxSuccessEventArgs, Unit]] = js.native
+  var ajaxSuccess: js.UndefOr[js.Function1[/* e */ AjaxSuccessEventArgs, Unit]] = js.undefined
   /** Tab items interaction with keyboard keys, like headers active navigation.
     * @Default {true}
     */
-  var allowKeyboardNavigation: js.UndefOr[Boolean] = js.native
+  var allowKeyboardNavigation: js.UndefOr[Boolean] = js.undefined
   /** Triggered before a tab item activated.
     */
-  var beforeActive: js.UndefOr[js.Function1[/* e */ BeforeActiveEventArgs, Unit]] = js.native
+  var beforeActive: js.UndefOr[js.Function1[/* e */ BeforeActiveEventArgs, Unit]] = js.undefined
   /** Triggered before a tab item remove.
     */
-  var beforeItemRemove: js.UndefOr[js.Function1[/* e */ BeforeItemRemoveEventArgs, Unit]] = js.native
+  var beforeItemRemove: js.UndefOr[js.Function1[/* e */ BeforeItemRemoveEventArgs, Unit]] = js.undefined
   /** Allow to collapsing the active item, while click on the active header.
     * @Default {false}
     */
-  var collapsible: js.UndefOr[Boolean] = js.native
+  var collapsible: js.UndefOr[Boolean] = js.undefined
   /** Triggered before a tab item Create.
     */
-  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.native
+  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.undefined
   /** Set the root class for Tab theme. This cssClass API helps to use custom skinning option for Tab control.
     */
-  var cssClass: js.UndefOr[String] = js.native
+  var cssClass: js.UndefOr[String] = js.undefined
   /** Triggered before a tab item destroy.
     */
-  var destroy: js.UndefOr[js.Function1[/* e */ DestroyEventArgs, Unit]] = js.native
+  var destroy: js.UndefOr[js.Function1[/* e */ DestroyEventArgs, Unit]] = js.undefined
   /** Disables the given tab headers and content panels.
     * @Default {[]}
     */
-  var disabledItemIndex: js.UndefOr[js.Array[Double]] = js.native
+  var disabledItemIndex: js.UndefOr[js.Array[Double]] = js.undefined
   /** Specifies the animation behavior of the tab.
     * @Default {true}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.native
+  var enableAnimation: js.UndefOr[Boolean] = js.undefined
   /** Save current model value to browser cookies for state maintains. While refresh the Tab control page the model value apply from browser cookies.
     * @Default {false}
     */
-  var enablePersistence: js.UndefOr[Boolean] = js.native
+  var enablePersistence: js.UndefOr[Boolean] = js.undefined
   /** Display Right to Left direction for headers and panels text of tab.
     * @Default {false}
     */
-  var enableRTL: js.UndefOr[Boolean] = js.native
+  var enableRTL: js.UndefOr[Boolean] = js.undefined
   /** Specify to enable scrolling for Tab header.
     * @Default {false}
     */
-  var enableTabScroll: js.UndefOr[Boolean] = js.native
+  var enableTabScroll: js.UndefOr[Boolean] = js.undefined
   /** When this property is set to false, it disables the tab control.
     * @Default {true}
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /** Enables the given tab headers and content panels.
     * @Default {[]}
     */
-  var enabledItemIndex: js.UndefOr[js.Array[Double]] = js.native
+  var enabledItemIndex: js.UndefOr[js.Array[Double]] = js.undefined
   /** The event API to bind the action for active the tab items.
     * @Default {click}
     */
-  var events: js.UndefOr[String] = js.native
+  var events: js.UndefOr[String] = js.undefined
   /** Specifies the position of Tab header as top, bottom, left or right. See below to get available Position
     * @Default {top}
     */
-  var headerPosition: js.UndefOr[String | Position] = js.native
+  var headerPosition: js.UndefOr[String | Position] = js.undefined
   /** Set the height of the tab header element. Default this property value is null, so height take content height.
     * @Default {null}
     */
-  var headerSize: js.UndefOr[String | Double] = js.native
+  var headerSize: js.UndefOr[String | Double] = js.undefined
   /** Height set the outer panel element. Default this property value is null, so height take content height.
     * @Default {null}
     */
-  var height: js.UndefOr[String | Double] = js.native
+  var height: js.UndefOr[String | Double] = js.undefined
   /** Adjust the content panel height for given option (content, auto and fill), by default panels height adjust based on the content.See below to get available HeightAdjustMode
     * @Default {content}
     */
-  var heightAdjustMode: js.UndefOr[String | HeightAdjustMode] = js.native
+  var heightAdjustMode: js.UndefOr[String | HeightAdjustMode] = js.undefined
   /** Specifies to hide a pane of Tab control.
     * @Default {[]}
     */
-  var hiddenItemIndex: js.UndefOr[js.Array[_]] = js.native
+  var hiddenItemIndex: js.UndefOr[js.Array[_]] = js.undefined
   /** Specifies the HTML Attributes of the Tab.
     * @Default {{}}
     */
-  var htmlAttributes: js.UndefOr[js.Any] = js.native
+  var htmlAttributes: js.UndefOr[js.Any] = js.undefined
   /** The idPrefix property appends the given string on the added tab item idâ€™s in runtime.
     * @Default {ej-tab-}
     */
-  var idPrefix: js.UndefOr[String] = js.native
+  var idPrefix: js.UndefOr[String] = js.undefined
   /** Triggered after a tab item activated.
     */
-  var itemActive: js.UndefOr[js.Function1[/* e */ ItemActiveEventArgs, Unit]] = js.native
+  var itemActive: js.UndefOr[js.Function1[/* e */ ItemActiveEventArgs, Unit]] = js.undefined
   /** Triggered after new tab item add
     */
-  var itemAdd: js.UndefOr[js.Function1[/* e */ ItemAddEventArgs, Unit]] = js.native
+  var itemAdd: js.UndefOr[js.Function1[/* e */ ItemAddEventArgs, Unit]] = js.undefined
   /** Triggered after tab item removed.
     */
-  var itemRemove: js.UndefOr[js.Function1[/* e */ ItemRemoveEventArgs, Unit]] = js.native
+  var itemRemove: js.UndefOr[js.Function1[/* e */ ItemRemoveEventArgs, Unit]] = js.undefined
   /** Specifies the Tab header in active for given index value.
     * @Default {0}
     */
-  var selectedItemIndex: js.UndefOr[Double] = js.native
+  var selectedItemIndex: js.UndefOr[Double] = js.undefined
   /** Display the close button for each tab items. While clicking on the close icon, particular tab item will be removed.
     * @Default {false}
     */
-  var showCloseButton: js.UndefOr[Boolean] = js.native
+  var showCloseButton: js.UndefOr[Boolean] = js.undefined
   /** Display the Reload button for each tab items.
     * @Default {false}
     */
-  var showReloadIcon: js.UndefOr[Boolean] = js.native
+  var showReloadIcon: js.UndefOr[Boolean] = js.undefined
   /** Tab panels and headers to be displayed in rounded corner style.
     * @Default {false}
     */
-  var showRoundedCorner: js.UndefOr[Boolean] = js.native
+  var showRoundedCorner: js.UndefOr[Boolean] = js.undefined
   /** Set the width for outer panel element, if not itâ€™s take parent width.
     * @Default {null}
     */
-  var width: js.UndefOr[String | Double] = js.native
+  var width: js.UndefOr[String | Double] = js.undefined
 }
 
 object Model {
   @scala.inline
-  def apply(): Model = {
+  def apply(
+    ajaxBeforeLoad: /* e */ AjaxBeforeLoadEventArgs => Unit = null,
+    ajaxError: /* e */ AjaxErrorEventArgs => Unit = null,
+    ajaxLoad: /* e */ AjaxLoadEventArgs => Unit = null,
+    ajaxSettings: AjaxSettings = null,
+    ajaxSuccess: /* e */ AjaxSuccessEventArgs => Unit = null,
+    allowKeyboardNavigation: js.UndefOr[Boolean] = js.undefined,
+    beforeActive: /* e */ BeforeActiveEventArgs => Unit = null,
+    beforeItemRemove: /* e */ BeforeItemRemoveEventArgs => Unit = null,
+    collapsible: js.UndefOr[Boolean] = js.undefined,
+    create: /* e */ CreateEventArgs => Unit = null,
+    cssClass: String = null,
+    destroy: /* e */ DestroyEventArgs => Unit = null,
+    disabledItemIndex: js.Array[Double] = null,
+    enableAnimation: js.UndefOr[Boolean] = js.undefined,
+    enablePersistence: js.UndefOr[Boolean] = js.undefined,
+    enableRTL: js.UndefOr[Boolean] = js.undefined,
+    enableTabScroll: js.UndefOr[Boolean] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    enabledItemIndex: js.Array[Double] = null,
+    events: String = null,
+    headerPosition: String | Position = null,
+    headerSize: String | Double = null,
+    height: String | Double = null,
+    heightAdjustMode: String | HeightAdjustMode = null,
+    hiddenItemIndex: js.Array[_] = null,
+    htmlAttributes: js.Any = null,
+    idPrefix: String = null,
+    itemActive: /* e */ ItemActiveEventArgs => Unit = null,
+    itemAdd: /* e */ ItemAddEventArgs => Unit = null,
+    itemRemove: /* e */ ItemRemoveEventArgs => Unit = null,
+    selectedItemIndex: js.UndefOr[Double] = js.undefined,
+    showCloseButton: js.UndefOr[Boolean] = js.undefined,
+    showReloadIcon: js.UndefOr[Boolean] = js.undefined,
+    showRoundedCorner: js.UndefOr[Boolean] = js.undefined,
+    width: String | Double = null
+  ): Model = {
     val __obj = js.Dynamic.literal()
+    if (ajaxBeforeLoad != null) __obj.updateDynamic("ajaxBeforeLoad")(js.Any.fromFunction1(ajaxBeforeLoad))
+    if (ajaxError != null) __obj.updateDynamic("ajaxError")(js.Any.fromFunction1(ajaxError))
+    if (ajaxLoad != null) __obj.updateDynamic("ajaxLoad")(js.Any.fromFunction1(ajaxLoad))
+    if (ajaxSettings != null) __obj.updateDynamic("ajaxSettings")(ajaxSettings.asInstanceOf[js.Any])
+    if (ajaxSuccess != null) __obj.updateDynamic("ajaxSuccess")(js.Any.fromFunction1(ajaxSuccess))
+    if (!js.isUndefined(allowKeyboardNavigation)) __obj.updateDynamic("allowKeyboardNavigation")(allowKeyboardNavigation.get.asInstanceOf[js.Any])
+    if (beforeActive != null) __obj.updateDynamic("beforeActive")(js.Any.fromFunction1(beforeActive))
+    if (beforeItemRemove != null) __obj.updateDynamic("beforeItemRemove")(js.Any.fromFunction1(beforeItemRemove))
+    if (!js.isUndefined(collapsible)) __obj.updateDynamic("collapsible")(collapsible.get.asInstanceOf[js.Any])
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction1(create))
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
+    if (disabledItemIndex != null) __obj.updateDynamic("disabledItemIndex")(disabledItemIndex.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePersistence)) __obj.updateDynamic("enablePersistence")(enablePersistence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRTL)) __obj.updateDynamic("enableRTL")(enableRTL.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableTabScroll)) __obj.updateDynamic("enableTabScroll")(enableTabScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (enabledItemIndex != null) __obj.updateDynamic("enabledItemIndex")(enabledItemIndex.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (headerPosition != null) __obj.updateDynamic("headerPosition")(headerPosition.asInstanceOf[js.Any])
+    if (headerSize != null) __obj.updateDynamic("headerSize")(headerSize.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (heightAdjustMode != null) __obj.updateDynamic("heightAdjustMode")(heightAdjustMode.asInstanceOf[js.Any])
+    if (hiddenItemIndex != null) __obj.updateDynamic("hiddenItemIndex")(hiddenItemIndex.asInstanceOf[js.Any])
+    if (htmlAttributes != null) __obj.updateDynamic("htmlAttributes")(htmlAttributes.asInstanceOf[js.Any])
+    if (idPrefix != null) __obj.updateDynamic("idPrefix")(idPrefix.asInstanceOf[js.Any])
+    if (itemActive != null) __obj.updateDynamic("itemActive")(js.Any.fromFunction1(itemActive))
+    if (itemAdd != null) __obj.updateDynamic("itemAdd")(js.Any.fromFunction1(itemAdd))
+    if (itemRemove != null) __obj.updateDynamic("itemRemove")(js.Any.fromFunction1(itemRemove))
+    if (!js.isUndefined(selectedItemIndex)) __obj.updateDynamic("selectedItemIndex")(selectedItemIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCloseButton)) __obj.updateDynamic("showCloseButton")(showCloseButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showReloadIcon)) __obj.updateDynamic("showReloadIcon")(showReloadIcon.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRoundedCorner)) __obj.updateDynamic("showRoundedCorner")(showRoundedCorner.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
-  @scala.inline
-  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxBeforeLoad(value: /* e */ AjaxBeforeLoadEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxBeforeLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxBeforeLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxBeforeLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxError(value: /* e */ AjaxErrorEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxLoad(value: /* e */ AjaxLoadEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxSettings(value: AjaxSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxSuccess(value: /* e */ AjaxSuccessEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSuccess")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowKeyboardNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowKeyboardNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowKeyboardNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowKeyboardNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeActive(value: /* e */ BeforeActiveEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeActive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeItemRemove(value: /* e */ BeforeItemRemoveEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeItemRemove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeItemRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeItemRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: /* e */ CreateEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: /* e */ DestroyEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDestroy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledItemIndex(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledItemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledItemIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledItemIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePersistence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePersistence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePersistence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePersistence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableRTL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRTL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableTabScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTabScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableTabScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTabScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledItemIndex(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledItemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledItemIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledItemIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderPosition(value: String | Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderSize(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightAdjustMode(value: String | HeightAdjustMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightAdjustMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightAdjustMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightAdjustMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenItemIndex(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenItemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenItemIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenItemIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlAttributes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemActive(value: /* e */ ItemActiveEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemActive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutItemActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemAdd(value: /* e */ ItemAddEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemAdd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutItemAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemRemove(value: /* e */ ItemRemoveEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRemove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutItemRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItemIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItemIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCloseButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCloseButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCloseButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCloseButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowReloadIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showReloadIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowReloadIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showReloadIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRoundedCorner(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRoundedCorner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRoundedCorner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRoundedCorner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

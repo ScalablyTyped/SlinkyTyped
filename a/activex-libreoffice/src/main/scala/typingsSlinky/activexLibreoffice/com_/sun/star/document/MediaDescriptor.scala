@@ -22,35 +22,34 @@ import scala.scalajs.js.annotation._
   * to use it directly or by copying it only.
   * @see com.sun.star.beans.PropertyValue
   */
-@js.native
 trait MediaDescriptor extends js.Object {
   /** May be set by filters or detection services if user has chosen to abort loading/saving, e.g. while entering a password. */
-  var Aborted: Boolean = js.native
+  var Aborted: Boolean
   /**
     * document is a template
     *
     * Loading a component of type "template" creates a new untitled document by default, but setting the "AsTemplate" property to `FALSE` loads the template
     * document for editing. Setting "AsTemplate" to `TRUE` creates a new untitled document out of the loaded document, even if it has not a "template" type.
     */
-  var AsTemplate: Boolean = js.native
+  var AsTemplate: Boolean
   /**
     * the author of the document
     *
     * Only for storing versions in components supporting versioning: author of version.
     */
-  var Author: String = js.native
+  var Author: String
   /**
     * identifier of used character set
     *
     * Defines the character set for document formats that contain single byte characters (if necessary).
     */
-  var CharacterSet: String = js.native
+  var CharacterSet: String
   /**
     * description of document
     *
     * Only for storing versions in components supporting versioning: comment (description) for stored version.
     */
-  var Comment: String = js.native
+  var Comment: String
   /**
     * pack specific properties of caller
     *
@@ -59,15 +58,15 @@ trait MediaDescriptor extends js.Object {
     *
     * For extensibility, it is recommended to use values of type sequence<com.sun.star.beans.NamedValue> with this property.
     */
-  var ComponentData: js.Any = js.native
+  var ComponentData: js.Any
   /** The base URL of the document to be used to resolve relative links. */
-  var DocumentBaseURL: String = js.native
+  var DocumentBaseURL: String
   /**
     * document title
     *
     * This parameter can be used to specify a title for a document.
     */
-  var DocumentTitle: String = js.native
+  var DocumentTitle: String
   /**
     * encryption information for encryption/decryption of documents
     *
@@ -77,28 +76,28 @@ trait MediaDescriptor extends js.Object {
     *
     * The encryption data is generated based on the password.
     */
-  var EncryptionData: SafeArray[NamedValue] = js.native
+  var EncryptionData: SafeArray[NamedValue]
   /**
     * same as {@link MediaDescriptor.URL}
     *
     * It will be supported for compatibility reasons only.
     * @deprecated Deprecated
     */
-  var FileName: String = js.native
+  var FileName: String
   /**
     * additional properties for filter
     *
     * This is a parameter that can be used for any properties specific for a special filter type. It should be used if {@link MediaDescriptor.FilterOptions}
     * isn't enough.
     */
-  var FilterData: js.Any = js.native
+  var FilterData: js.Any
   /**
     * same as {@link MediaDescriptor.FilterOptions}
     *
     * It will be supported for compatibility reasons only.
     * @deprecated Deprecated
     */
-  var FilterFlags: String = js.native
+  var FilterFlags: String
   /**
     * internal filter name
     *
@@ -106,24 +105,24 @@ trait MediaDescriptor extends js.Object {
     * invalid names are ignored. If a name is specified on loading, it still will be verified by a filter detection, but in case of doubt it will be
     * preferred.
     */
-  var FilterName: String = js.native
+  var FilterName: String
   /**
     * additional properties for filter
     *
     * Some filters need additional parameters; use only together with property {@link MediaDescriptor.FilterName} . Details must be documented by the
     * filter. This is an old format for some filters. If a string is not enough, filters can use the property {@link MediaDescriptor.FilterData} .
     */
-  var FilterOptions: String = js.native
+  var FilterOptions: String
   /** specifies the frame containing the document. May be empty. */
-  var Frame: XFrame = js.native
+  var Frame: XFrame
   /**
     * load document invisible
     *
     * Defines if the loaded component is made visible. If this property is not specified, the component is made visible by default.
     */
-  var Hidden: Boolean = js.native
+  var Hidden: Boolean
   /** The hierarchical path to the embedded document from topmost container. */
-  var HierarchicalDocumentName: String = js.native
+  var HierarchicalDocumentName: String
   /**
     * content of document
     *
@@ -131,7 +130,7 @@ trait MediaDescriptor extends js.Object {
     * other properties. It is not allowed to keep a reference to this InputStream after loading the component, and it would be useless, because in general
     * an InputStream is usable for reading only once, except when it also implements the {@link com.sun.star.io.XSeekable} interface.
     */
-  var InputStream: XInputStream = js.native
+  var InputStream: XInputStream
   /**
     * handle exceptional situations
     *
@@ -140,32 +139,32 @@ trait MediaDescriptor extends js.Object {
     * many situations. If no InteractionHandler is set, a suitable exception is thrown. It is not allowed to keep a reference to this object, even not in
     * the loaded or stored component's copy of the {@link MediaDescriptor} provided by its arguments attribute.
     */
-  var InteractionHandler: XInteractionHandler = js.native
+  var InteractionHandler: XInteractionHandler
   /**
     * jump to a marked position after loading
     *
     * This is the same as the text behind a "#" in a http URL. But this syntax with a "#" is not specified in most URL schemas.
     */
-  var JumpMark: String = js.native
+  var JumpMark: String
   /**
     * should the macro be executed. the value should be one from {@link com.sun.star.document.MacroExecMode} constant list.
     * @since OOo 1.1.2
     */
-  var MacroExecutionMode: Double = js.native
+  var MacroExecutionMode: Double
   /**
     * specify mime type of content
     *
     * Type of the medium to load, that must match to one of the types defined in the {@link TypeDetection} configuration (otherwise it's ignored). This
     * bypasses the type detection of the {@link com.sun.star.frame.Desktop} environment, so passing a wrong MediaType will cause failure of loading.
     */
-  var MediaType: String = js.native
+  var MediaType: String
   /**
     * please use the corresponding parameters of this descriptor instead
     *
     * String that summarizes some flags for loading. The string contains capital letters for the flags: ; {{table here, see documentation}}
     * @deprecated Deprecated
     */
-  var OpenFlags: String = js.native
+  var OpenFlags: String
   /**
     * opens a new view for an already loaded document
     *
@@ -173,20 +172,20 @@ trait MediaDescriptor extends js.Object {
     * opened, if not, the component is loaded one more time. Otherwise the behavior depends on the default window handling of the {@link
     * com.sun.star.frame.Desktop} environment.
     */
-  var OpenNewView: Boolean = js.native
+  var OpenNewView: Boolean
   /**
     * a stream to receive the document data.
     *
     * If used when storing a document: writing must be done using this stream. If no stream is provided, the loader will create a stream by itself using the
     * other properties. It is not allowed to keep a reference to this OutputStream after storing the component.
     */
-  var OutputStream: XOutputStream = js.native
+  var OutputStream: XOutputStream
   /**
     * overwrite any existing file
     *
     * For storing only: overwrite any existing file, default is `FALSE` , so an error occurs if the target file already exists.
     */
-  var Overwrite: Boolean = js.native
+  var Overwrite: Boolean
   /**
     * password for loading storing documents
     *
@@ -194,28 +193,28 @@ trait MediaDescriptor extends js.Object {
     * protected document will fail, storing will be done without encryption. If both are provided, the encryption data is used ( if the filter supports it
     * ).
     */
-  var Password: String = js.native
+  var Password: String
   /**
     * contains the data for HTTP post method as a sequence of bytes.
     *
     * Data to send to a location described by the media descriptor to get a result in return that will be loaded as a component (usually in webforms).
     * Default is: no PostData.
     */
-  var PostData: SafeArray[Double] = js.native
+  var PostData: SafeArray[Double]
   /**
     * use {@link MediaDescriptor.PostData} instead of this
     *
     * Same as PostData, but the data is transferred as a string (just for compatibility).
     * @deprecated Deprecated
     */
-  var PostString: String = js.native
+  var PostString: String
   /**
     * show preview
     *
     * Setting this to `TRUE` tells the a loaded component that it is loaded as a preview, so it can optimize loading and viewing for this special purpose.
     * Default is `FALSE` .
     */
-  var Preview: Boolean = js.native
+  var Preview: Boolean
   /**
     * open document readonly
     *
@@ -224,7 +223,7 @@ trait MediaDescriptor extends js.Object {
     * otherwise it will be read/write. This is only a UI related property, opening a document in read only mode will not prevent the component from being
     * modified by API calls, but all modifying functionality in the UI will be disabled or removed.
     */
-  var ReadOnly: Boolean = js.native
+  var ReadOnly: Boolean
   /**
     * name of document referrer
     *
@@ -232,7 +231,7 @@ trait MediaDescriptor extends js.Object {
     * another document. The referrer may be evaluated by the addressed UCB content or the loaded document. Without a referrer the processing of URLs that
     * needs security checks will be denied, e.g. "macro:" URLs. ;  Don't be confused about the wrong spelling; it is kept for compatibility reasons.
     */
-  var Referer: String = js.native
+  var Referer: String
   /**
     * let the document be opened in repair mode
     *
@@ -240,13 +239,13 @@ trait MediaDescriptor extends js.Object {
     * retrieved.
     * @since OOo 1.1.2
     */
-  var RepairPackage: Boolean = js.native
+  var RepairPackage: Boolean
   /**
     * start presentation from a document
     *
     * Tells the component loading the document that a presentation that is in the document is to be started right away.
     */
-  var StartPresentation: Boolean = js.native
+  var StartPresentation: Boolean
   /**
     * can be used for status information
     *
@@ -254,57 +253,57 @@ trait MediaDescriptor extends js.Object {
     * task. The office provides a default implementation for it. It is not allowed to keep a reference to this object, even not in the loaded or stored
     * component's copy of the {@link MediaDescriptor} provided by its arguments attribute.
     */
-  var StatusIndicator: XStatusIndicator = js.native
+  var StatusIndicator: XStatusIndicator
   /**
     * allows to specify the URL that is used next time SaveAs dialog is opened
     *
     * If the parameter is specified, the URL will be used by SaveAs dialog next time as target folder.
     */
-  var SuggestedSaveAsDir: String = js.native
+  var SuggestedSaveAsDir: String
   /**
     * allows to specify the suggested file name that is used next time SaveAs dialog is opened
     *
     * If the parameter is specified, the file name will be suggested by SaveAs dialog next time.
     */
-  var SuggestedSaveAsName: String = js.native
+  var SuggestedSaveAsName: String
   /**
     * name of the template instead of the URL
     *
     * The logical name of a template to load. Together with the MediaDescriptor::TemplateRegion property it can be used instead of the URL of the template.
     * Use always in conjunction with {@link MediaDescriptor.TemplateRegionName} .
     */
-  var TemplateName: String = js.native
+  var TemplateName: String
   /**
     * name of the template instead of the URL
     *
     * See {@link MediaDescriptor.TemplateName} . The template region names are the folder names you see in the templates dialog.
     */
-  var TemplateRegionName: String = js.native
+  var TemplateRegionName: String
   /**
     * URL of the document
     *
     * The location of the component in URL syntax. It must be the full qualified URL and
     */
-  var URL: String = js.native
+  var URL: String
   /**
     * regulate using of compressing
     *
     * For storing: Setting this to `TRUE` means, don't use a zip file to save the document, use a folder instead (only usable for UCB contents, that support
     * folders). Default is `FALSE` .
     */
-  var Unpacked: Boolean = js.native
+  var Unpacked: Boolean
   /**
     * can the document be updated depending from links. the value should be one from {@link com.sun.star.document.UpdateDocMode} constant list.
     * @since OOo 1.1.2
     */
-  var UpdateDocMode: Double = js.native
+  var UpdateDocMode: Double
   /**
     * storage version
     *
     * For components supporting versioning: the number of the version to be loaded or saved. Default is zero and means: no version is created or loaded, the
     * "main" document is processed.
     */
-  var Version: Double = js.native
+  var Version: Double
   /**
     * specifies the name of the view controller to create when loading a document
     *
@@ -315,21 +314,21 @@ trait MediaDescriptor extends js.Object {
     * @see com.sun.star.frame.XController2.ViewControllerName
     * @since OOo 3.0
     */
-  var ViewControllerName: String = js.native
+  var ViewControllerName: String
   /**
     * set special view state
     *
     * Data to set a special view state after loading. The type depends on the component and is usually retrieved from a {@link
     * com.sun.star.frame.Controller} object by its {@link com.sun.star.frame.XController} interface. Default is: no view data.
     */
-  var ViewData: js.Any = js.native
+  var ViewData: js.Any
   /**
     * id of the initial view
     *
     * For components supporting different views: a number to define the view that should be constructed after loading. Default is: zero, and this should be
     * treated by the component as the default view.
     */
-  var ViewId: Double = js.native
+  var ViewId: Double
 }
 
 object MediaDescriptor {
@@ -385,289 +384,5 @@ object MediaDescriptor {
     val __obj = js.Dynamic.literal(Aborted = Aborted.asInstanceOf[js.Any], AsTemplate = AsTemplate.asInstanceOf[js.Any], Author = Author.asInstanceOf[js.Any], CharacterSet = CharacterSet.asInstanceOf[js.Any], Comment = Comment.asInstanceOf[js.Any], ComponentData = ComponentData.asInstanceOf[js.Any], DocumentBaseURL = DocumentBaseURL.asInstanceOf[js.Any], DocumentTitle = DocumentTitle.asInstanceOf[js.Any], EncryptionData = EncryptionData.asInstanceOf[js.Any], FileName = FileName.asInstanceOf[js.Any], FilterData = FilterData.asInstanceOf[js.Any], FilterFlags = FilterFlags.asInstanceOf[js.Any], FilterName = FilterName.asInstanceOf[js.Any], FilterOptions = FilterOptions.asInstanceOf[js.Any], Frame = Frame.asInstanceOf[js.Any], Hidden = Hidden.asInstanceOf[js.Any], HierarchicalDocumentName = HierarchicalDocumentName.asInstanceOf[js.Any], InputStream = InputStream.asInstanceOf[js.Any], InteractionHandler = InteractionHandler.asInstanceOf[js.Any], JumpMark = JumpMark.asInstanceOf[js.Any], MacroExecutionMode = MacroExecutionMode.asInstanceOf[js.Any], MediaType = MediaType.asInstanceOf[js.Any], OpenFlags = OpenFlags.asInstanceOf[js.Any], OpenNewView = OpenNewView.asInstanceOf[js.Any], OutputStream = OutputStream.asInstanceOf[js.Any], Overwrite = Overwrite.asInstanceOf[js.Any], Password = Password.asInstanceOf[js.Any], PostData = PostData.asInstanceOf[js.Any], PostString = PostString.asInstanceOf[js.Any], Preview = Preview.asInstanceOf[js.Any], ReadOnly = ReadOnly.asInstanceOf[js.Any], Referer = Referer.asInstanceOf[js.Any], RepairPackage = RepairPackage.asInstanceOf[js.Any], StartPresentation = StartPresentation.asInstanceOf[js.Any], StatusIndicator = StatusIndicator.asInstanceOf[js.Any], SuggestedSaveAsDir = SuggestedSaveAsDir.asInstanceOf[js.Any], SuggestedSaveAsName = SuggestedSaveAsName.asInstanceOf[js.Any], TemplateName = TemplateName.asInstanceOf[js.Any], TemplateRegionName = TemplateRegionName.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any], Unpacked = Unpacked.asInstanceOf[js.Any], UpdateDocMode = UpdateDocMode.asInstanceOf[js.Any], Version = Version.asInstanceOf[js.Any], ViewControllerName = ViewControllerName.asInstanceOf[js.Any], ViewData = ViewData.asInstanceOf[js.Any], ViewId = ViewId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaDescriptor]
   }
-  @scala.inline
-  implicit class MediaDescriptorOps[Self <: MediaDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAborted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Aborted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAsTemplate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AsTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharacterSet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharacterSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponentData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentBaseURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentBaseURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryptionData(value: SafeArray[NamedValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterFlags(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilterOptions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrame(value: XFrame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHierarchicalDocumentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HierarchicalDocumentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInteractionHandler(value: XInteractionHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InteractionHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJumpMark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JumpMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMacroExecutionMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MacroExecutionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMediaType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenFlags(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpenNewView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenNewView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputStream(value: XOutputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverwrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Overwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostData(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PostData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PostString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Referer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepairPackage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepairPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartPresentation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartPresentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusIndicator(value: XStatusIndicator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuggestedSaveAsDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestedSaveAsDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuggestedSaveAsName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestedSaveAsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateRegionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateRegionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnpacked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unpacked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateDocMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDocMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewControllerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewControllerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

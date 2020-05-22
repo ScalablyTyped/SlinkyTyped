@@ -9,9 +9,9 @@ package object mod {
     StateT, 
     CustomT with (typingsSlinky.koaRouter.mod.IRouterParamContext[StateT, CustomT])
   ]
-  type IParamMiddleware = js.Function3[
+  type IParamMiddleware[STateT, CustomT] = js.Function3[
     /* param */ java.lang.String, 
-    /* ctx */ typingsSlinky.koaRouter.anon.RouterContextany, 
+    /* ctx */ typingsSlinky.koaRouter.mod.RouterContext[STateT, CustomT], 
     /* next */ js.Function0[js.Promise[js.Any]], 
     js.Any
   ]

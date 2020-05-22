@@ -12,7 +12,9 @@ import scala.scalajs.js.annotation._
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
+- typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
+- typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolder because var conflicts: containerAsFolderBase, containerAsProject, documents, folders, id, isLoaded, model, structureTypeName, unit. Inlined name */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.Folder")
 @js.native

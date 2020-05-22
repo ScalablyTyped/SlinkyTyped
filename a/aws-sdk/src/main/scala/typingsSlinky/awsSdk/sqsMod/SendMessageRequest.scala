@@ -38,89 +38,22 @@ trait SendMessageRequest extends js.Object {
 
 object SendMessageRequest {
   @scala.inline
-  def apply(MessageBody: String, QueueUrl: String): SendMessageRequest = {
+  def apply(
+    MessageBody: String,
+    QueueUrl: String,
+    DelaySeconds: js.UndefOr[Integer] = js.undefined,
+    MessageAttributes: MessageBodyAttributeMap = null,
+    MessageDeduplicationId: String = null,
+    MessageGroupId: String = null,
+    MessageSystemAttributes: MessageBodySystemAttributeMap = null
+  ): SendMessageRequest = {
     val __obj = js.Dynamic.literal(MessageBody = MessageBody.asInstanceOf[js.Any], QueueUrl = QueueUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(DelaySeconds)) __obj.updateDynamic("DelaySeconds")(DelaySeconds.get.asInstanceOf[js.Any])
+    if (MessageAttributes != null) __obj.updateDynamic("MessageAttributes")(MessageAttributes.asInstanceOf[js.Any])
+    if (MessageDeduplicationId != null) __obj.updateDynamic("MessageDeduplicationId")(MessageDeduplicationId.asInstanceOf[js.Any])
+    if (MessageGroupId != null) __obj.updateDynamic("MessageGroupId")(MessageGroupId.asInstanceOf[js.Any])
+    if (MessageSystemAttributes != null) __obj.updateDynamic("MessageSystemAttributes")(MessageSystemAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMessageRequest]
   }
-  @scala.inline
-  implicit class SendMessageRequestOps[Self <: SendMessageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueueUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelaySeconds(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DelaySeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelaySeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DelaySeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageAttributes(value: MessageBodyAttributeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageDeduplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageDeduplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageDeduplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageDeduplicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageSystemAttributes(value: MessageBodySystemAttributeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageSystemAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageSystemAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageSystemAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

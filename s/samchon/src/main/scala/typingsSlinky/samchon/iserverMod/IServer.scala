@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IServer extends js.Object {
   /**
     * Add a newly connected remote client.
@@ -24,20 +23,20 @@ trait IServer extends js.Object {
     *
     * @param driver A {@link ICommunicator communicator} with (newly connected) remote client.
     */
-  def addClient(driver: IClientDriver): Unit = js.native
+  def addClient(driver: IClientDriver): Unit
   /**
     * Close server.
     *
     * Close opened server. All remote clients, have connected with this server, are also closed and their call back
     * functions, for closed connection, {@link IClientDriver.onClose} are also called.
     */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Open server.
     *
     * @param port Port number to open.
     */
-  def open(port: Double): Unit = js.native
+  def open(port: Double): Unit
 }
 
 object IServer {
@@ -46,31 +45,5 @@ object IServer {
     val __obj = js.Dynamic.literal(addClient = js.Any.fromFunction1(addClient), close = js.Any.fromFunction0(close), open = js.Any.fromFunction1(open))
     __obj.asInstanceOf[IServer]
   }
-  @scala.inline
-  implicit class IServerOps[Self <: IServer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddClient(value: IClientDriver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addClient")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

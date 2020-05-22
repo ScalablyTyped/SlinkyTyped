@@ -38,101 +38,24 @@ trait FieldToMatch extends js.Object {
 
 object FieldToMatch {
   @scala.inline
-  def apply(): FieldToMatch = {
+  def apply(
+    AllQueryArguments: AllQueryArguments = null,
+    Body: Body = null,
+    Method: Method = null,
+    QueryString: QueryString = null,
+    SingleHeader: SingleHeader = null,
+    SingleQueryArgument: SingleQueryArgument = null,
+    UriPath: UriPath = null
+  ): FieldToMatch = {
     val __obj = js.Dynamic.literal()
+    if (AllQueryArguments != null) __obj.updateDynamic("AllQueryArguments")(AllQueryArguments.asInstanceOf[js.Any])
+    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
+    if (Method != null) __obj.updateDynamic("Method")(Method.asInstanceOf[js.Any])
+    if (QueryString != null) __obj.updateDynamic("QueryString")(QueryString.asInstanceOf[js.Any])
+    if (SingleHeader != null) __obj.updateDynamic("SingleHeader")(SingleHeader.asInstanceOf[js.Any])
+    if (SingleQueryArgument != null) __obj.updateDynamic("SingleQueryArgument")(SingleQueryArgument.asInstanceOf[js.Any])
+    if (UriPath != null) __obj.updateDynamic("UriPath")(UriPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldToMatch]
   }
-  @scala.inline
-  implicit class FieldToMatchOps[Self <: FieldToMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllQueryArguments(value: AllQueryArguments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllQueryArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllQueryArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllQueryArguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: Method): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryString(value: QueryString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleHeader(value: SingleHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleQueryArgument(value: SingleQueryArgument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleQueryArgument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleQueryArgument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleQueryArgument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUriPath(value: UriPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UriPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUriPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UriPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

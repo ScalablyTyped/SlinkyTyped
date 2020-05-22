@@ -26,54 +26,17 @@ trait IdentityPoolRoleAttachmentRoleMapping extends js.Object {
 
 object IdentityPoolRoleAttachmentRoleMapping {
   @scala.inline
-  def apply(identityProvider: String, `type`: String): IdentityPoolRoleAttachmentRoleMapping = {
+  def apply(
+    identityProvider: String,
+    `type`: String,
+    ambiguousRoleResolution: String = null,
+    mappingRules: js.Array[IdentityPoolRoleAttachmentRoleMappingMappingRule] = null
+  ): IdentityPoolRoleAttachmentRoleMapping = {
     val __obj = js.Dynamic.literal(identityProvider = identityProvider.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (ambiguousRoleResolution != null) __obj.updateDynamic("ambiguousRoleResolution")(ambiguousRoleResolution.asInstanceOf[js.Any])
+    if (mappingRules != null) __obj.updateDynamic("mappingRules")(mappingRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityPoolRoleAttachmentRoleMapping]
   }
-  @scala.inline
-  implicit class IdentityPoolRoleAttachmentRoleMappingOps[Self <: IdentityPoolRoleAttachmentRoleMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityProvider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identityProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmbiguousRoleResolution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ambiguousRoleResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmbiguousRoleResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ambiguousRoleResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMappingRules(value: js.Array[IdentityPoolRoleAttachmentRoleMappingMappingRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMappingRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

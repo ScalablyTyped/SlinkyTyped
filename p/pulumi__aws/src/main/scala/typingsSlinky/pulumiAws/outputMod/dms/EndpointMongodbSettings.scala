@@ -16,89 +16,22 @@ trait EndpointMongodbSettings extends js.Object {
 
 object EndpointMongodbSettings {
   @scala.inline
-  def apply(): EndpointMongodbSettings = {
+  def apply(
+    authMechanism: String = null,
+    authSource: String = null,
+    authType: String = null,
+    docsToInvestigate: String = null,
+    extractDocId: String = null,
+    nestingLevel: String = null
+  ): EndpointMongodbSettings = {
     val __obj = js.Dynamic.literal()
+    if (authMechanism != null) __obj.updateDynamic("authMechanism")(authMechanism.asInstanceOf[js.Any])
+    if (authSource != null) __obj.updateDynamic("authSource")(authSource.asInstanceOf[js.Any])
+    if (authType != null) __obj.updateDynamic("authType")(authType.asInstanceOf[js.Any])
+    if (docsToInvestigate != null) __obj.updateDynamic("docsToInvestigate")(docsToInvestigate.asInstanceOf[js.Any])
+    if (extractDocId != null) __obj.updateDynamic("extractDocId")(extractDocId.asInstanceOf[js.Any])
+    if (nestingLevel != null) __obj.updateDynamic("nestingLevel")(nestingLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointMongodbSettings]
   }
-  @scala.inline
-  implicit class EndpointMongodbSettingsOps[Self <: EndpointMongodbSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthMechanism(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authMechanism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthMechanism: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authMechanism")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocsToInvestigate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docsToInvestigate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocsToInvestigate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docsToInvestigate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtractDocId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractDocId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtractDocId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractDocId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNestingLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNestingLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

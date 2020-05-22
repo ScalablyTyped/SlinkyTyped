@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Updatable extends js.Object {
-  var flat: js.UndefOr[Boolean] = js.native
-  var radius: js.UndefOr[Double] = js.native
-  var sideOrientation: js.UndefOr[Double] = js.native
-  var subdivisions: js.UndefOr[Double] = js.native
-  var updatable: js.UndefOr[Boolean] = js.native
+  var flat: js.UndefOr[Boolean] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
+  var sideOrientation: js.UndefOr[Double] = js.undefined
+  var subdivisions: js.UndefOr[Double] = js.undefined
+  var updatable: js.UndefOr[Boolean] = js.undefined
 }
 
 object Updatable {
   @scala.inline
-  def apply(): Updatable = {
+  def apply(
+    flat: js.UndefOr[Boolean] = js.undefined,
+    radius: js.UndefOr[Double] = js.undefined,
+    sideOrientation: js.UndefOr[Double] = js.undefined,
+    subdivisions: js.UndefOr[Double] = js.undefined,
+    updatable: js.UndefOr[Boolean] = js.undefined
+  ): Updatable = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(flat)) __obj.updateDynamic("flat")(flat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sideOrientation)) __obj.updateDynamic("sideOrientation")(sideOrientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subdivisions)) __obj.updateDynamic("subdivisions")(subdivisions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatable)) __obj.updateDynamic("updatable")(updatable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Updatable]
   }
-  @scala.inline
-  implicit class UpdatableOps[Self <: Updatable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSideOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubdivisions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubdivisions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subdivisions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

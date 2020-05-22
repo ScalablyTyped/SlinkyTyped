@@ -16,6 +16,10 @@ object errors extends js.Object {
       */
     def this(message: js.Any) = this()
     var code: Double = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var value: js.Any = js.native
   }
   

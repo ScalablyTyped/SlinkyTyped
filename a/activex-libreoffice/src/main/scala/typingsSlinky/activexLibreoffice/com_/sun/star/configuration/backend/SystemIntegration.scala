@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides access to a configuration data composed of one or more platform backends containing settings used by software modules. */
-@js.native
 trait SystemIntegration
   extends XBackend
      with XInitialization

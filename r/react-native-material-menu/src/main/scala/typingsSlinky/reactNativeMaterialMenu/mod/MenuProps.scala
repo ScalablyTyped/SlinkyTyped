@@ -6,75 +6,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuProps extends js.Object {
-  var animationDuration: js.UndefOr[Double] = js.native
-  var button: js.UndefOr[ReactElement] = js.native
-  var onHidden: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[ViewStyle] = js.native
+  var animationDuration: js.UndefOr[Double] = js.undefined
+  var button: js.UndefOr[ReactElement] = js.undefined
+  var onHidden: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var style: js.UndefOr[ViewStyle] = js.undefined
 }
 
 object MenuProps {
   @scala.inline
-  def apply(): MenuProps = {
+  def apply(
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    button: ReactElement = null,
+    onHidden: () => Unit = null,
+    style: ViewStyle = null
+  ): MenuProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (onHidden != null) __obj.updateDynamic("onHidden")(js.Any.fromFunction0(onHidden))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuProps]
   }
-  @scala.inline
-  implicit class MenuPropsOps[Self <: MenuProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButton(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHidden(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHidden")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

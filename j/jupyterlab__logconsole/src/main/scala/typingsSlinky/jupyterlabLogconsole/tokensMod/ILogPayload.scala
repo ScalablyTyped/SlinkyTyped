@@ -1,5 +1,9 @@
 package typingsSlinky.jupyterlabLogconsole.tokensMod
 
+import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.IOutput
+import typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.html
+import typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.output
+import typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +17,22 @@ trait ILogPayload extends js.Object
 
 object ILogPayload {
   @scala.inline
-  implicit def apply(value: IHtmlLog): ILogPayload = value.asInstanceOf[ILogPayload]
+  def ITextLog(data: String, level: LogLevel, `type`: text): ILogPayload = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ILogPayload]
+  }
   @scala.inline
-  implicit def apply(value: IOutputLog): ILogPayload = value.asInstanceOf[ILogPayload]
+  def IHtmlLog(data: String, level: LogLevel, `type`: html): ILogPayload = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ILogPayload]
+  }
   @scala.inline
-  implicit def apply(value: ITextLog): ILogPayload = value.asInstanceOf[ILogPayload]
+  def IOutputLog(data: IOutput, level: LogLevel, `type`: output): ILogPayload = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ILogPayload]
+  }
 }
 

@@ -24,41 +24,10 @@ trait DistributionOrderedCacheBehaviorLambdaFunctionAssociation extends js.Objec
 
 object DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
   @scala.inline
-  def apply(eventType: String, lambdaArn: String): DistributionOrderedCacheBehaviorLambdaFunctionAssociation = {
+  def apply(eventType: String, lambdaArn: String, includeBody: js.UndefOr[Boolean] = js.undefined): DistributionOrderedCacheBehaviorLambdaFunctionAssociation = {
     val __obj = js.Dynamic.literal(eventType = eventType.asInstanceOf[js.Any], lambdaArn = lambdaArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeBody)) __obj.updateDynamic("includeBody")(includeBody.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionOrderedCacheBehaviorLambdaFunctionAssociation]
   }
-  @scala.inline
-  implicit class DistributionOrderedCacheBehaviorLambdaFunctionAssociationOps[Self <: DistributionOrderedCacheBehaviorLambdaFunctionAssociation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLambdaArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeBody")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

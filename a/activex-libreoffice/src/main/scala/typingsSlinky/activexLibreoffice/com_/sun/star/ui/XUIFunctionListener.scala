@@ -11,14 +11,13 @@ import scala.scalajs.js.annotation._
   * special interface to receive notification that a user interface element will execute a function.
   * @since OOo 2.0
   */
-@js.native
 trait XUIFunctionListener extends XEventListener {
   /**
     * gets called to notify a component that a user interface element wants to execute a function.
     * @param aUIElementName a string which identifies the user interface element that wants to execute a function.
     * @param aCommand a string which identifies the function that has been selected by a user.
     */
-  def functionExecute(aUIElementName: String, aCommand: String): Unit = js.native
+  def functionExecute(aUIElementName: String, aCommand: String): Unit
 }
 
 object XUIFunctionListener {
@@ -33,19 +32,5 @@ object XUIFunctionListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), functionExecute = js.Any.fromFunction2(functionExecute), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XUIFunctionListener]
   }
-  @scala.inline
-  implicit class XUIFunctionListenerOps[Self <: XUIFunctionListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionExecute(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionExecute")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

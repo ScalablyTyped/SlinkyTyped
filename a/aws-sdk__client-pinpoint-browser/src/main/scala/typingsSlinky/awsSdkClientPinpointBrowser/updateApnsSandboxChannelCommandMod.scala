@@ -26,9 +26,16 @@ object updateApnsSandboxChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateApnsSandboxChannelInput) = this()
+    /* CompleteClass */
+    override val input: UpdateApnsSandboxChannelInput = js.native
     val middlewareStack: MiddlewareStack[UpdateApnsSandboxChannelInput, UpdateApnsSandboxChannelOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[UpdateApnsSandboxChannelInput, UpdateApnsSandboxChannelOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[UpdateApnsSandboxChannelInput, UpdateApnsSandboxChannelOutput] = js.native
   }

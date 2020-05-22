@@ -18,17 +18,16 @@ import scala.scalajs.js.annotation._
   * @see XLocaleData for links to DTD of XML locale data files.
   * @since LibreOffice 3.5
   */
-@js.native
 trait Calendar2 extends js.Object {
-  var Days: SafeArray[CalendarItem2] = js.native
-  var Default: Boolean = js.native
-  var Eras: SafeArray[CalendarItem2] = js.native
-  var GenitiveMonths: SafeArray[CalendarItem2] = js.native
-  var MinimumNumberOfDaysForFirstWeek: Double = js.native
-  var Months: SafeArray[CalendarItem2] = js.native
-  var Name: String = js.native
-  var PartitiveMonths: SafeArray[CalendarItem2] = js.native
-  var StartOfWeek: String = js.native
+  var Days: SafeArray[CalendarItem2]
+  var Default: Boolean
+  var Eras: SafeArray[CalendarItem2]
+  var GenitiveMonths: SafeArray[CalendarItem2]
+  var MinimumNumberOfDaysForFirstWeek: Double
+  var Months: SafeArray[CalendarItem2]
+  var Name: String
+  var PartitiveMonths: SafeArray[CalendarItem2]
+  var StartOfWeek: String
 }
 
 object Calendar2 {
@@ -47,67 +46,5 @@ object Calendar2 {
     val __obj = js.Dynamic.literal(Days = Days.asInstanceOf[js.Any], Default = Default.asInstanceOf[js.Any], Eras = Eras.asInstanceOf[js.Any], GenitiveMonths = GenitiveMonths.asInstanceOf[js.Any], MinimumNumberOfDaysForFirstWeek = MinimumNumberOfDaysForFirstWeek.asInstanceOf[js.Any], Months = Months.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], PartitiveMonths = PartitiveMonths.asInstanceOf[js.Any], StartOfWeek = StartOfWeek.asInstanceOf[js.Any])
     __obj.asInstanceOf[Calendar2]
   }
-  @scala.inline
-  implicit class Calendar2Ops[Self <: Calendar2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDays(value: SafeArray[CalendarItem2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEras(value: SafeArray[CalendarItem2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Eras")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGenitiveMonths(value: SafeArray[CalendarItem2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenitiveMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimumNumberOfDaysForFirstWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumNumberOfDaysForFirstWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonths(value: SafeArray[CalendarItem2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPartitiveMonths(value: SafeArray[CalendarItem2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitiveMonths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartOfWeek(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,11 @@
 package typingsSlinky.winrt.global.Windows.Media
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
+import typingsSlinky.winrt.Windows.Media.Protection.IMediaProtectionServiceRequest
 import typingsSlinky.winrt.Windows.Media.Protection.RenewalStatus
+import typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalReasons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +15,12 @@ import scala.scalajs.js.annotation._
 object Protection extends js.Object {
   @js.native
   class ComponentLoadFailedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.Protection.ComponentLoadFailedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.Protection.ComponentLoadFailedEventArgs {
+    /* CompleteClass */
+    override var completion: typingsSlinky.winrt.Windows.Media.Protection.MediaProtectionServiceCompletion = js.native
+    /* CompleteClass */
+    override var information: typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalInformation = js.native
+  }
   
   @js.native
   class ComponentRenewal ()
@@ -19,23 +28,54 @@ object Protection extends js.Object {
   
   @js.native
   class MediaProtectionManager ()
-    extends typingsSlinky.winrt.Windows.Media.Protection.MediaProtectionManager
+    extends typingsSlinky.winrt.Windows.Media.Protection.MediaProtectionManager {
+    /* CompleteClass */
+    override var oncomponentloadfailed: js.Any = js.native
+    /* CompleteClass */
+    override var onrebootneeded: js.Any = js.native
+    /* CompleteClass */
+    override var onservicerequested: js.Any = js.native
+    /* CompleteClass */
+    override var properties: IPropertySet = js.native
+  }
   
   @js.native
   class MediaProtectionServiceCompletion ()
-    extends typingsSlinky.winrt.Windows.Media.Protection.MediaProtectionServiceCompletion
+    extends typingsSlinky.winrt.Windows.Media.Protection.MediaProtectionServiceCompletion {
+    /* CompleteClass */
+    override def complete(success: Boolean): Unit = js.native
+  }
   
   @js.native
   class RevocationAndRenewalInformation ()
-    extends typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalInformation
+    extends typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalInformation {
+    /* CompleteClass */
+    override var items: IVector[typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalItem] = js.native
+  }
   
   @js.native
   class RevocationAndRenewalItem ()
-    extends typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalItem
+    extends typingsSlinky.winrt.Windows.Media.Protection.RevocationAndRenewalItem {
+    /* CompleteClass */
+    override var headerHash: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var publicKeyHash: String = js.native
+    /* CompleteClass */
+    override var reasons: RevocationAndRenewalReasons = js.native
+    /* CompleteClass */
+    override var renewalId: String = js.native
+  }
   
   @js.native
   class ServiceRequestedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.Protection.ServiceRequestedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.Protection.ServiceRequestedEventArgs {
+    /* CompleteClass */
+    override var completion: typingsSlinky.winrt.Windows.Media.Protection.MediaProtectionServiceCompletion = js.native
+    /* CompleteClass */
+    override var request: IMediaProtectionServiceRequest = js.native
+  }
   
   /* static members */
   @js.native

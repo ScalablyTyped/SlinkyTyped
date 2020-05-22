@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("elasticsearch", "errors.PreconditionFailed")
 @js.native
-class PreconditionFailed () extends Error
+class PreconditionFailed () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

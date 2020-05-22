@@ -34,29 +34,10 @@ trait SchemaContext extends js.Object {
 
 object SchemaContext {
   @scala.inline
-  def apply(): SchemaContext = {
+  def apply(rules: js.Array[SchemaContextRule] = null): SchemaContext = {
     val __obj = js.Dynamic.literal()
+    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContext]
   }
-  @scala.inline
-  implicit class SchemaContextOps[Self <: SchemaContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRules(value: js.Array[SchemaContextRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

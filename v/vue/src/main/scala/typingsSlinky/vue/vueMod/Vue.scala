@@ -71,6 +71,18 @@ trait Vue extends js.Object {
   @JSName("$createElement")
   def $createElement(): VNode = js.native
   @JSName("$createElement")
+  def $createElement(tag: (AsyncComponent[_, _, _, _]) | (Component[_, _, _, _])): VNode = js.native
+  @JSName("$createElement")
+  def $createElement(tag: (AsyncComponent[_, _, _, _]) | (Component[_, _, _, _]), children: VNodeChildren): VNode = js.native
+  @JSName("$createElement")
+  def $createElement(tag: (AsyncComponent[_, _, _, _]) | (Component[_, _, _, _]), data: VNodeData): VNode = js.native
+  @JSName("$createElement")
+  def $createElement(
+    tag: (AsyncComponent[_, _, _, _]) | (Component[_, _, _, _]),
+    data: VNodeData,
+    children: VNodeChildren
+  ): VNode = js.native
+  @JSName("$createElement")
   def $createElement(tag: String): VNode = js.native
   @JSName("$createElement")
   def $createElement(tag: String, children: VNodeChildren): VNode = js.native
@@ -126,22 +138,6 @@ trait Vue extends js.Object {
     data: VNodeData,
     children: VNodeChildren
   ): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: AsyncComponent[_, _, _, _]): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: AsyncComponent[_, _, _, _], children: VNodeChildren): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: AsyncComponent[_, _, _, _], data: VNodeData): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: AsyncComponent[_, _, _, _], data: VNodeData, children: VNodeChildren): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: Component[_, _, _, _]): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: Component[_, _, _, _], children: VNodeChildren): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: Component[_, _, _, _], data: VNodeData): VNode = js.native
-  @JSName("$createElement")
-  def $createElement(tag: Component[_, _, _, _], data: VNodeData, children: VNodeChildren): VNode = js.native
   @JSName("$delete")
   def $delete(`object`: js.Object, key: String): Unit = js.native
   @JSName("$delete")

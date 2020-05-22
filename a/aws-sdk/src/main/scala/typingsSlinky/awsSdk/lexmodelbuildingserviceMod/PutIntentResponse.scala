@@ -74,209 +74,42 @@ trait PutIntentResponse extends js.Object {
 
 object PutIntentResponse {
   @scala.inline
-  def apply(): PutIntentResponse = {
+  def apply(
+    checksum: String = null,
+    conclusionStatement: Statement = null,
+    confirmationPrompt: Prompt = null,
+    createVersion: js.UndefOr[Boolean] = js.undefined,
+    createdDate: js.Date = null,
+    description: Description = null,
+    dialogCodeHook: CodeHook = null,
+    followUpPrompt: FollowUpPrompt = null,
+    fulfillmentActivity: FulfillmentActivity = null,
+    lastUpdatedDate: js.Date = null,
+    name: IntentName = null,
+    parentIntentSignature: BuiltinIntentSignature = null,
+    rejectionStatement: Statement = null,
+    sampleUtterances: IntentUtteranceList = null,
+    slots: SlotList = null,
+    version: Version = null
+  ): PutIntentResponse = {
     val __obj = js.Dynamic.literal()
+    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
+    if (conclusionStatement != null) __obj.updateDynamic("conclusionStatement")(conclusionStatement.asInstanceOf[js.Any])
+    if (confirmationPrompt != null) __obj.updateDynamic("confirmationPrompt")(confirmationPrompt.asInstanceOf[js.Any])
+    if (!js.isUndefined(createVersion)) __obj.updateDynamic("createVersion")(createVersion.get.asInstanceOf[js.Any])
+    if (createdDate != null) __obj.updateDynamic("createdDate")(createdDate.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (dialogCodeHook != null) __obj.updateDynamic("dialogCodeHook")(dialogCodeHook.asInstanceOf[js.Any])
+    if (followUpPrompt != null) __obj.updateDynamic("followUpPrompt")(followUpPrompt.asInstanceOf[js.Any])
+    if (fulfillmentActivity != null) __obj.updateDynamic("fulfillmentActivity")(fulfillmentActivity.asInstanceOf[js.Any])
+    if (lastUpdatedDate != null) __obj.updateDynamic("lastUpdatedDate")(lastUpdatedDate.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parentIntentSignature != null) __obj.updateDynamic("parentIntentSignature")(parentIntentSignature.asInstanceOf[js.Any])
+    if (rejectionStatement != null) __obj.updateDynamic("rejectionStatement")(rejectionStatement.asInstanceOf[js.Any])
+    if (sampleUtterances != null) __obj.updateDynamic("sampleUtterances")(sampleUtterances.asInstanceOf[js.Any])
+    if (slots != null) __obj.updateDynamic("slots")(slots.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutIntentResponse]
   }
-  @scala.inline
-  implicit class PutIntentResponseOps[Self <: PutIntentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChecksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConclusionStatement(value: Statement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conclusionStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConclusionStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conclusionStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfirmationPrompt(value: Prompt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmationPrompt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfirmationPrompt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmationPrompt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateVersion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialogCodeHook(value: CodeHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogCodeHook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialogCodeHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogCodeHook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowUpPrompt(value: FollowUpPrompt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followUpPrompt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowUpPrompt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followUpPrompt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFulfillmentActivity(value: FulfillmentActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFulfillmentActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentActivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: IntentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentIntentSignature(value: BuiltinIntentSignature): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIntentSignature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentIntentSignature: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIntentSignature")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectionStatement(value: Statement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectionStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectionStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectionStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleUtterances(value: IntentUtteranceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleUtterances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleUtterances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleUtterances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlots(value: SlotList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Version): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,13 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Rewritten from type alias, can be one of: 
-  - typingsSlinky.stellarBase.mod.AuthFlag.immutable
-  - typingsSlinky.stellarBase.mod.AuthFlag.required
-  - typingsSlinky.stellarBase.mod.AuthFlag.revocable
-*/
-trait AuthFlag extends js.Object
-
 @JSImport("stellar-base", "AuthFlag")
 @js.native
 object AuthFlag extends js.Object {

@@ -21,25 +21,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ojLegendEventMap[K, D] extends dvtBaseComponentEventMap[ojLegendSettableProperties[K, D]] {
-  var asChanged: CustomEvent = js.native
-  var dataChanged: CustomEvent = js.native
-  var drillingChanged: CustomEvent = js.native
-  var expandedChanged: CustomEvent = js.native
-  var halignChanged: CustomEvent = js.native
-  var hiddenCategoriesChanged: CustomEvent = js.native
-  var hideAndShowBehaviorChanged: CustomEvent = js.native
-  var highlightedCategoriesChanged: CustomEvent = js.native
-  var hoverBehaviorChanged: CustomEvent = js.native
-  var hoverBehaviorDelayChanged: CustomEvent = js.native
-  var ojDrill: CustomEvent = js.native
-  var orientationChanged: CustomEvent = js.native
-  var scrollingChanged: CustomEvent = js.native
-  var symbolHeightChanged: CustomEvent = js.native
-  var symbolWidthChanged: CustomEvent = js.native
-  var textStyleChanged: CustomEvent = js.native
-  var valignChanged: CustomEvent = js.native
+  var asChanged: CustomEvent
+  var dataChanged: CustomEvent
+  var drillingChanged: CustomEvent
+  var expandedChanged: CustomEvent
+  var halignChanged: CustomEvent
+  var hiddenCategoriesChanged: CustomEvent
+  var hideAndShowBehaviorChanged: CustomEvent
+  var highlightedCategoriesChanged: CustomEvent
+  var hoverBehaviorChanged: CustomEvent
+  var hoverBehaviorDelayChanged: CustomEvent
+  var ojDrill: CustomEvent
+  var orientationChanged: CustomEvent
+  var scrollingChanged: CustomEvent
+  var symbolHeightChanged: CustomEvent
+  var symbolWidthChanged: CustomEvent
+  var textStyleChanged: CustomEvent
+  var valignChanged: CustomEvent
 }
 
 object ojLegendEventMap {
@@ -160,115 +159,5 @@ object ojLegendEventMap {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], asChanged = asChanged.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], copy = copy.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], cut = cut.asInstanceOf[js.Any], dataChanged = dataChanged.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drillingChanged = drillingChanged.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], expandedChanged = expandedChanged.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], fullscreenchange = fullscreenchange.asInstanceOf[js.Any], fullscreenerror = fullscreenerror.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], halignChanged = halignChanged.asInstanceOf[js.Any], hiddenCategoriesChanged = hiddenCategoriesChanged.asInstanceOf[js.Any], hideAndShowBehaviorChanged = hideAndShowBehaviorChanged.asInstanceOf[js.Any], highlightedCategoriesChanged = highlightedCategoriesChanged.asInstanceOf[js.Any], hoverBehaviorChanged = hoverBehaviorChanged.asInstanceOf[js.Any], hoverBehaviorDelayChanged = hoverBehaviorDelayChanged.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], ojDrill = ojDrill.asInstanceOf[js.Any], orientationChanged = orientationChanged.asInstanceOf[js.Any], paste = paste.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], scrollingChanged = scrollingChanged.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], symbolHeightChanged = symbolHeightChanged.asInstanceOf[js.Any], symbolWidthChanged = symbolWidthChanged.asInstanceOf[js.Any], textStyleChanged = textStyleChanged.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], trackResizeChanged = trackResizeChanged.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], translationsChanged = translationsChanged.asInstanceOf[js.Any], valignChanged = valignChanged.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojLegendEventMap[K, D]]
   }
-  @scala.inline
-  implicit class ojLegendEventMapOps[Self[k, d] <: ojLegendEventMap[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
-    @scala.inline
-    def withAsChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDrillingChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillingChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpandedChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHalignChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("halignChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHiddenCategoriesChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategoriesChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideAndShowBehaviorChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideAndShowBehaviorChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHighlightedCategoriesChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategoriesChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHoverBehaviorChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehaviorChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHoverBehaviorDelayChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehaviorDelayChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOjDrill(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ojDrill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientationChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollingChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbolHeightChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolHeightChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSymbolWidthChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolWidthChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextStyleChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyleChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValignChanged(value: CustomEvent): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valignChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

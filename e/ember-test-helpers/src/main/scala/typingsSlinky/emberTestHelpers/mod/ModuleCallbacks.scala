@@ -5,115 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModuleCallbacks
   extends /* key */ StringDictionary[js.Any] {
-  var afterTeardown: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.native
-  var beforeSetup: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.native
-  var integration: js.UndefOr[Boolean] = js.native
-  var needs: js.UndefOr[js.Array[String]] = js.native
-  var setup: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.native
-  var teardown: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.native
-  var unit: js.UndefOr[Boolean] = js.native
+  var afterTeardown: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var beforeSetup: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var integration: js.UndefOr[Boolean] = js.undefined
+  var needs: js.UndefOr[js.Array[String]] = js.undefined
+  var setup: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var teardown: js.UndefOr[js.Function1[/* assert */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var unit: js.UndefOr[Boolean] = js.undefined
 }
 
 object ModuleCallbacks {
   @scala.inline
-  def apply(): ModuleCallbacks = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    afterTeardown: /* assert */ js.UndefOr[js.Any] => Unit = null,
+    beforeSetup: /* assert */ js.UndefOr[js.Any] => Unit = null,
+    integration: js.UndefOr[Boolean] = js.undefined,
+    needs: js.Array[String] = null,
+    setup: /* assert */ js.UndefOr[js.Any] => Unit = null,
+    teardown: /* assert */ js.UndefOr[js.Any] => Unit = null,
+    unit: js.UndefOr[Boolean] = js.undefined
+  ): ModuleCallbacks = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (afterTeardown != null) __obj.updateDynamic("afterTeardown")(js.Any.fromFunction1(afterTeardown))
+    if (beforeSetup != null) __obj.updateDynamic("beforeSetup")(js.Any.fromFunction1(beforeSetup))
+    if (!js.isUndefined(integration)) __obj.updateDynamic("integration")(integration.get.asInstanceOf[js.Any])
+    if (needs != null) __obj.updateDynamic("needs")(needs.asInstanceOf[js.Any])
+    if (setup != null) __obj.updateDynamic("setup")(js.Any.fromFunction1(setup))
+    if (teardown != null) __obj.updateDynamic("teardown")(js.Any.fromFunction1(teardown))
+    if (!js.isUndefined(unit)) __obj.updateDynamic("unit")(unit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleCallbacks]
   }
-  @scala.inline
-  implicit class ModuleCallbacksOps[Self <: ModuleCallbacks] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterTeardown(value: /* assert */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTeardown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterTeardown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTeardown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeSetup(value: /* assert */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSetup")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNeeds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNeeds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetup(value: /* assert */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeardown(value: /* assert */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teardown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTeardown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teardown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

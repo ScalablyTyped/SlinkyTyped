@@ -48,5 +48,37 @@ class GridField protected ()
     dateOnly: Boolean,
     csrInfo: js.Any
   ) = this()
+  /* CompleteClass */
+  override var csrInfo: js.Any = js.native
+  /* CompleteClass */
+  override var dateOnly: Boolean = js.native
+  /* CompleteClass */
+  override var hasDataValue: Boolean = js.native
+  /* CompleteClass */
+  override var hasLocalizedValue: Boolean = js.native
+  /* CompleteClass */
+  override var key: String = js.native
+  /* CompleteClass */
+  override var textDirection: typingsSlinky.sharepoint.SP.JsGrid.TextDirection = js.native
+  /* CompleteClass */
+  override def CompareSingleDataEqual(dataValue1: js.Any, dataValue2: js.Any): Boolean = js.native
+  /* CompleteClass */
+  override def GetDefaultCellStyleId(): js.Any = js.native
+  /* CompleteClass */
+  override def GetEditMode(): typingsSlinky.sharepoint.SP.JsGrid.EditMode = js.native
+  /* CompleteClass */
+  override def GetIsMultiValue(): Boolean = js.native
+  /* CompleteClass */
+  override def GetMultiValuePropType(): js.Any = js.native
+  /* CompleteClass */
+  override def GetPropType(): js.Any = js.native
+  /* CompleteClass */
+  override def GetSingleValuePropType(): js.Any = js.native
+  /* CompleteClass */
+  override def SetEditMode(mode: typingsSlinky.sharepoint.SP.JsGrid.EditMode): Unit = js.native
+  /* CompleteClass */
+  override def SetIsMultiValue(listSeparator: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def SetSingleValuePropType(svPropType: js.Any): Unit = js.native
 }
 

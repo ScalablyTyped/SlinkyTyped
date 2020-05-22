@@ -14,29 +14,10 @@ trait DeleteDirectConnectGatewayAssociationProposalResult extends js.Object {
 
 object DeleteDirectConnectGatewayAssociationProposalResult {
   @scala.inline
-  def apply(): DeleteDirectConnectGatewayAssociationProposalResult = {
+  def apply(directConnectGatewayAssociationProposal: DirectConnectGatewayAssociationProposal = null): DeleteDirectConnectGatewayAssociationProposalResult = {
     val __obj = js.Dynamic.literal()
+    if (directConnectGatewayAssociationProposal != null) __obj.updateDynamic("directConnectGatewayAssociationProposal")(directConnectGatewayAssociationProposal.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteDirectConnectGatewayAssociationProposalResult]
   }
-  @scala.inline
-  implicit class DeleteDirectConnectGatewayAssociationProposalResultOps[Self <: DeleteDirectConnectGatewayAssociationProposalResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectConnectGatewayAssociationProposal(value: DirectConnectGatewayAssociationProposal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayAssociationProposal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectConnectGatewayAssociationProposal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayAssociationProposal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

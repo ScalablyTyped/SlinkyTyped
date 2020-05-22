@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFileActivatedEventArgs extends IActivatedEventArgs {
-  var files: IVectorView[IStorageItem] = js.native
-  var verb: String = js.native
+  var files: IVectorView[IStorageItem]
+  var verb: String
 }
 
 object IFileActivatedEventArgs {
@@ -24,25 +23,5 @@ object IFileActivatedEventArgs {
     val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], verb = verb.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileActivatedEventArgs]
   }
-  @scala.inline
-  implicit class IFileActivatedEventArgsOps[Self <: IFileActivatedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFiles(value: IVectorView[IStorageItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

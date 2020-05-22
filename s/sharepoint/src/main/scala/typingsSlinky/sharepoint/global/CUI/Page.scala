@@ -9,23 +9,78 @@ import scala.scalajs.js.annotation._
 object Page extends js.Object {
   @js.native
   class CommandDispatcher ()
-    extends typingsSlinky.sharepoint.CUI.Page.CommandDispatcher
+    extends typingsSlinky.sharepoint.CUI.Page.CommandDispatcher {
+    /* CompleteClass */
+    override def executeCommand(commandId: String, properties: js.Any): js.Any = js.native
+  }
   
   @js.native
   class FocusManager ()
-    extends typingsSlinky.sharepoint.CUI.Page.FocusManager
+    extends typingsSlinky.sharepoint.CUI.Page.FocusManager {
+    /* CompleteClass */
+    override def canHandleCommand(commandId: String): Boolean = js.native
+    /* CompleteClass */
+    override def executeCommand(commandId: String, properties: js.Any): js.Any = js.native
+    /* CompleteClass */
+    override def getFocusedComponents(): js.Array[typingsSlinky.sharepoint.CUI.Component] = js.native
+    /* CompleteClass */
+    override def handleCommand(commandId: String, properties: js.Any, sequenceNumber: Double): Boolean = js.native
+    /* CompleteClass */
+    override def releaseAllFoci(): Boolean = js.native
+    /* CompleteClass */
+    override def releaseFocusFromComponent(component: typingsSlinky.sharepoint.CUI.Component): js.Any = js.native
+    /* CompleteClass */
+    override def requestFocusForComponent(component: typingsSlinky.sharepoint.CUI.Component): js.Any = js.native
+  }
   
   @js.native
   class PageComponent ()
-    extends typingsSlinky.sharepoint.CUI.Page.PageComponent
+    extends typingsSlinky.sharepoint.CUI.Page.PageComponent {
+    /* CompleteClass */
+    override def canHandleCommand(commandId: String): Boolean = js.native
+    /* CompleteClass */
+    override def getFocusedCommands(): js.Array[String] = js.native
+    /* CompleteClass */
+    override def getGlobalCommands(): js.Array[String] = js.native
+    /* CompleteClass */
+    override def getId(): String = js.native
+    /* CompleteClass */
+    override def handleCommand(commandId: String, properties: js.Any, sequenceNumber: Double): Boolean = js.native
+    /* CompleteClass */
+    override def init(): scala.Unit = js.native
+    /* CompleteClass */
+    override def isFocusable(): Boolean = js.native
+    /* CompleteClass */
+    override def receiveFocus(): Boolean = js.native
+    /* CompleteClass */
+    override def yieldFocus(): Boolean = js.native
+  }
   
   @js.native
   class PageManager ()
-    extends typingsSlinky.sharepoint.CUI.Page.PageManager
+    extends typingsSlinky.sharepoint.CUI.Page.PageManager {
+    /* CompleteClass */
+    override def add_ribbonInited(value: js.Function0[scala.Unit]): js.Any = js.native
+    /* CompleteClass */
+    override def canHandleCommand(commandId: String): Boolean = js.native
+    /* CompleteClass */
+    override def get_commandDispatcher(): typingsSlinky.sharepoint.CUI.Page.CommandDispatcher = js.native
+    /* CompleteClass */
+    override def get_focusManager(): typingsSlinky.sharepoint.CUI.Page.FocusManager = js.native
+    /* CompleteClass */
+    override def get_undoManager(): typingsSlinky.sharepoint.CUI.Page.UndoManager = js.native
+    /* CompleteClass */
+    override def handleCommand(commandId: String, properties: js.Any, sequenceNumber: Double): Boolean = js.native
+  }
   
   @js.native
   class UndoManager ()
-    extends typingsSlinky.sharepoint.CUI.Page.UndoManager
+    extends typingsSlinky.sharepoint.CUI.Page.UndoManager {
+    /* CompleteClass */
+    override def canHandleCommand(commandId: String): Boolean = js.native
+    /* CompleteClass */
+    override def handleCommand(commandId: String, properties: js.Any, sequenceNumber: Double): Boolean = js.native
+  }
   
   /* static members */
   @js.native

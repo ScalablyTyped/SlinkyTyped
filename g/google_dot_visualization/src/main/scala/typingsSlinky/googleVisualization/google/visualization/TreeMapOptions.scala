@@ -4,335 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeMapOptions extends js.Object {
-  var fontColor: js.UndefOr[String] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var fontSize: js.UndefOr[Double] = js.native
-  var forceIFrame: js.UndefOr[Boolean] = js.native
-  var headerColor: js.UndefOr[String] = js.native
-  var headerHeight: js.UndefOr[Double] = js.native
-  var headerHighlightColor: js.UndefOr[String] = js.native
-  var hintOpacity: js.UndefOr[Double] = js.native
-  var maxColor: js.UndefOr[String] = js.native
-  var maxColorValue: js.UndefOr[Double] = js.native
-  var maxDepth: js.UndefOr[Double] = js.native
-  var maxHighlightColor: js.UndefOr[String] = js.native
-  var maxPostDepth: js.UndefOr[Double] = js.native
-  var midColor: js.UndefOr[String] = js.native
-  var midHighlightColor: js.UndefOr[String] = js.native
-  var minColor: js.UndefOr[String] = js.native
-  var minColorValue: js.UndefOr[Double] = js.native
-  var minHighlightColor: js.UndefOr[String] = js.native
-  var showScale: js.UndefOr[Boolean] = js.native
-  var showTooltips: js.UndefOr[Boolean] = js.native
-  var textStyle: js.UndefOr[ChartTextStyle] = js.native
-  var title: js.UndefOr[String] = js.native
-  var titleTextStyle: js.UndefOr[ChartTextStyle] = js.native
-  var useWeightedAverageForAggregation: js.UndefOr[Boolean] = js.native
+  var fontColor: js.UndefOr[String] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var fontSize: js.UndefOr[Double] = js.undefined
+  var forceIFrame: js.UndefOr[Boolean] = js.undefined
+  var headerColor: js.UndefOr[String] = js.undefined
+  var headerHeight: js.UndefOr[Double] = js.undefined
+  var headerHighlightColor: js.UndefOr[String] = js.undefined
+  var hintOpacity: js.UndefOr[Double] = js.undefined
+  var maxColor: js.UndefOr[String] = js.undefined
+  var maxColorValue: js.UndefOr[Double] = js.undefined
+  var maxDepth: js.UndefOr[Double] = js.undefined
+  var maxHighlightColor: js.UndefOr[String] = js.undefined
+  var maxPostDepth: js.UndefOr[Double] = js.undefined
+  var midColor: js.UndefOr[String] = js.undefined
+  var midHighlightColor: js.UndefOr[String] = js.undefined
+  var minColor: js.UndefOr[String] = js.undefined
+  var minColorValue: js.UndefOr[Double] = js.undefined
+  var minHighlightColor: js.UndefOr[String] = js.undefined
+  var showScale: js.UndefOr[Boolean] = js.undefined
+  var showTooltips: js.UndefOr[Boolean] = js.undefined
+  var textStyle: js.UndefOr[ChartTextStyle] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var titleTextStyle: js.UndefOr[ChartTextStyle] = js.undefined
+  var useWeightedAverageForAggregation: js.UndefOr[Boolean] = js.undefined
 }
 
 object TreeMapOptions {
   @scala.inline
-  def apply(): TreeMapOptions = {
+  def apply(
+    fontColor: String = null,
+    fontFamily: String = null,
+    fontSize: js.UndefOr[Double] = js.undefined,
+    forceIFrame: js.UndefOr[Boolean] = js.undefined,
+    headerColor: String = null,
+    headerHeight: js.UndefOr[Double] = js.undefined,
+    headerHighlightColor: String = null,
+    hintOpacity: js.UndefOr[Double] = js.undefined,
+    maxColor: String = null,
+    maxColorValue: js.UndefOr[Double] = js.undefined,
+    maxDepth: js.UndefOr[Double] = js.undefined,
+    maxHighlightColor: String = null,
+    maxPostDepth: js.UndefOr[Double] = js.undefined,
+    midColor: String = null,
+    midHighlightColor: String = null,
+    minColor: String = null,
+    minColorValue: js.UndefOr[Double] = js.undefined,
+    minHighlightColor: String = null,
+    showScale: js.UndefOr[Boolean] = js.undefined,
+    showTooltips: js.UndefOr[Boolean] = js.undefined,
+    textStyle: ChartTextStyle = null,
+    title: String = null,
+    titleTextStyle: ChartTextStyle = null,
+    useWeightedAverageForAggregation: js.UndefOr[Boolean] = js.undefined
+  ): TreeMapOptions = {
     val __obj = js.Dynamic.literal()
+    if (fontColor != null) __obj.updateDynamic("fontColor")(fontColor.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(fontSize)) __obj.updateDynamic("fontSize")(fontSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceIFrame)) __obj.updateDynamic("forceIFrame")(forceIFrame.get.asInstanceOf[js.Any])
+    if (headerColor != null) __obj.updateDynamic("headerColor")(headerColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerHeight)) __obj.updateDynamic("headerHeight")(headerHeight.get.asInstanceOf[js.Any])
+    if (headerHighlightColor != null) __obj.updateDynamic("headerHighlightColor")(headerHighlightColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(hintOpacity)) __obj.updateDynamic("hintOpacity")(hintOpacity.get.asInstanceOf[js.Any])
+    if (maxColor != null) __obj.updateDynamic("maxColor")(maxColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxColorValue)) __obj.updateDynamic("maxColorValue")(maxColorValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDepth)) __obj.updateDynamic("maxDepth")(maxDepth.get.asInstanceOf[js.Any])
+    if (maxHighlightColor != null) __obj.updateDynamic("maxHighlightColor")(maxHighlightColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPostDepth)) __obj.updateDynamic("maxPostDepth")(maxPostDepth.get.asInstanceOf[js.Any])
+    if (midColor != null) __obj.updateDynamic("midColor")(midColor.asInstanceOf[js.Any])
+    if (midHighlightColor != null) __obj.updateDynamic("midHighlightColor")(midHighlightColor.asInstanceOf[js.Any])
+    if (minColor != null) __obj.updateDynamic("minColor")(minColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(minColorValue)) __obj.updateDynamic("minColorValue")(minColorValue.get.asInstanceOf[js.Any])
+    if (minHighlightColor != null) __obj.updateDynamic("minHighlightColor")(minHighlightColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(showScale)) __obj.updateDynamic("showScale")(showScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTooltips)) __obj.updateDynamic("showTooltips")(showTooltips.get.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleTextStyle != null) __obj.updateDynamic("titleTextStyle")(titleTextStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(useWeightedAverageForAggregation)) __obj.updateDynamic("useWeightedAverageForAggregation")(useWeightedAverageForAggregation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeMapOptions]
   }
-  @scala.inline
-  implicit class TreeMapOptionsOps[Self <: TreeMapOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFontColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceIFrame(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceIFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceIFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceIFrame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderHighlightColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHighlightColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderHighlightColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHighlightColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHintOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hintOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHintOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hintOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxColorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxColorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHighlightColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHighlightColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHighlightColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHighlightColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPostDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPostDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPostDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPostDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMidColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMidColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMidHighlightColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midHighlightColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMidHighlightColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midHighlightColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinColorValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinColorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minColorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHighlightColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHighlightColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHighlightColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHighlightColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowScale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTooltips(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTooltips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: ChartTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleTextStyle(value: ChartTextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTextStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleTextStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseWeightedAverageForAggregation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useWeightedAverageForAggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseWeightedAverageForAggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useWeightedAverageForAggregation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,41 +21,11 @@ trait ProxyProtocolPolicyState extends js.Object {
 
 object ProxyProtocolPolicyState {
   @scala.inline
-  def apply(): ProxyProtocolPolicyState = {
+  def apply(instancePorts: Input[js.Array[Input[String]]] = null, loadBalancer: Input[String] = null): ProxyProtocolPolicyState = {
     val __obj = js.Dynamic.literal()
+    if (instancePorts != null) __obj.updateDynamic("instancePorts")(instancePorts.asInstanceOf[js.Any])
+    if (loadBalancer != null) __obj.updateDynamic("loadBalancer")(loadBalancer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProxyProtocolPolicyState]
   }
-  @scala.inline
-  implicit class ProxyProtocolPolicyStateOps[Self <: ProxyProtocolPolicyState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstancePorts(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePorts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancePorts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePorts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancer(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

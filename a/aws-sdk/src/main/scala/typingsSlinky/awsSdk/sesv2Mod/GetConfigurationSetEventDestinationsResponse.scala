@@ -14,29 +14,10 @@ trait GetConfigurationSetEventDestinationsResponse extends js.Object {
 
 object GetConfigurationSetEventDestinationsResponse {
   @scala.inline
-  def apply(): GetConfigurationSetEventDestinationsResponse = {
+  def apply(EventDestinations: EventDestinations = null): GetConfigurationSetEventDestinationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (EventDestinations != null) __obj.updateDynamic("EventDestinations")(EventDestinations.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConfigurationSetEventDestinationsResponse]
   }
-  @scala.inline
-  implicit class GetConfigurationSetEventDestinationsResponseOps[Self <: GetConfigurationSetEventDestinationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventDestinations(value: EventDestinations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDestinations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventDestinations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDestinations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

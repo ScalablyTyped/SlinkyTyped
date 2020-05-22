@@ -5,143 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a MethodDescriptorProto. */
-@js.native
 trait IMethodDescriptorProto extends js.Object {
   /** MethodDescriptorProto clientStreaming */
-  var clientStreaming: js.UndefOr[Boolean | Null] = js.native
+  var clientStreaming: js.UndefOr[Boolean | Null] = js.undefined
   /** MethodDescriptorProto inputType */
-  var inputType: js.UndefOr[String | Null] = js.native
+  var inputType: js.UndefOr[String | Null] = js.undefined
   /** MethodDescriptorProto name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** MethodDescriptorProto options */
-  var options: js.UndefOr[IMethodOptions | Null] = js.native
+  var options: js.UndefOr[IMethodOptions | Null] = js.undefined
   /** MethodDescriptorProto outputType */
-  var outputType: js.UndefOr[String | Null] = js.native
+  var outputType: js.UndefOr[String | Null] = js.undefined
   /** MethodDescriptorProto serverStreaming */
-  var serverStreaming: js.UndefOr[Boolean | Null] = js.native
+  var serverStreaming: js.UndefOr[Boolean | Null] = js.undefined
 }
 
 object IMethodDescriptorProto {
   @scala.inline
-  def apply(): IMethodDescriptorProto = {
+  def apply(
+    clientStreaming: js.UndefOr[Null | Boolean] = js.undefined,
+    inputType: js.UndefOr[Null | String] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined,
+    options: js.UndefOr[Null | IMethodOptions] = js.undefined,
+    outputType: js.UndefOr[Null | String] = js.undefined,
+    serverStreaming: js.UndefOr[Null | Boolean] = js.undefined
+  ): IMethodDescriptorProto = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clientStreaming)) __obj.updateDynamic("clientStreaming")(clientStreaming.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputType)) __obj.updateDynamic("inputType")(inputType.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(options)) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputType)) __obj.updateDynamic("outputType")(outputType.asInstanceOf[js.Any])
+    if (!js.isUndefined(serverStreaming)) __obj.updateDynamic("serverStreaming")(serverStreaming.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMethodDescriptorProto]
   }
-  @scala.inline
-  implicit class IMethodDescriptorProtoOps[Self <: IMethodDescriptorProto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientStreaming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStreaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientStreaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStreaming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientStreamingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStreaming")(null)
-        ret
-    }
-    @scala.inline
-    def withInputType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputType")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: IMethodOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(null)
-        ret
-    }
-    @scala.inline
-    def withOutputType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputType")(null)
-        ret
-    }
-    @scala.inline
-    def withServerStreaming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverStreaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerStreaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverStreaming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerStreamingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverStreaming")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotBellcurveLastVisiblePriceLabelOptions extends js.Object {
   /**
     * (Highstock) Enable or disable the label.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object PlotBellcurveLastVisiblePriceLabelOptions {
   @scala.inline
-  def apply(): PlotBellcurveLastVisiblePriceLabelOptions = {
+  def apply(enabled: js.UndefOr[Boolean] = js.undefined): PlotBellcurveLastVisiblePriceLabelOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotBellcurveLastVisiblePriceLabelOptions]
   }
-  @scala.inline
-  implicit class PlotBellcurveLastVisiblePriceLabelOptionsOps[Self <: PlotBellcurveLastVisiblePriceLabelOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

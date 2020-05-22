@@ -26,65 +26,18 @@ trait AnalyzeDocumentResponse extends js.Object {
 
 object AnalyzeDocumentResponse {
   @scala.inline
-  def apply(): AnalyzeDocumentResponse = {
+  def apply(
+    AnalyzeDocumentModelVersion: String = null,
+    Blocks: BlockList = null,
+    DocumentMetadata: DocumentMetadata = null,
+    HumanLoopActivationOutput: HumanLoopActivationOutput = null
+  ): AnalyzeDocumentResponse = {
     val __obj = js.Dynamic.literal()
+    if (AnalyzeDocumentModelVersion != null) __obj.updateDynamic("AnalyzeDocumentModelVersion")(AnalyzeDocumentModelVersion.asInstanceOf[js.Any])
+    if (Blocks != null) __obj.updateDynamic("Blocks")(Blocks.asInstanceOf[js.Any])
+    if (DocumentMetadata != null) __obj.updateDynamic("DocumentMetadata")(DocumentMetadata.asInstanceOf[js.Any])
+    if (HumanLoopActivationOutput != null) __obj.updateDynamic("HumanLoopActivationOutput")(HumanLoopActivationOutput.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyzeDocumentResponse]
   }
-  @scala.inline
-  implicit class AnalyzeDocumentResponseOps[Self <: AnalyzeDocumentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalyzeDocumentModelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyzeDocumentModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzeDocumentModelVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyzeDocumentModelVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlocks(value: BlockList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Blocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Blocks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentMetadata(value: DocumentMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHumanLoopActivationOutput(value: HumanLoopActivationOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopActivationOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHumanLoopActivationOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLoopActivationOutput")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

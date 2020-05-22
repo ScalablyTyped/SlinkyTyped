@@ -1,5 +1,6 @@
 package typingsSlinky.readableStream.mod
 
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.readableStream.anon.AfterTransform
 import scala.scalajs.js
@@ -26,7 +27,7 @@ class Transform () extends Duplex {
   ): Unit = js.native
   def _transform(
     chunk: js.Any,
-    encoding: String,
+    encoding: BufferEncoding,
     callback: (js.Function2[/* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[js.Any], Unit]) | TransformCallback
   ): Unit = js.native
 }

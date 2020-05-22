@@ -22,47 +22,15 @@ trait RefreshCacheInput extends js.Object {
 
 object RefreshCacheInput {
   @scala.inline
-  def apply(FileShareARN: FileShareARN): RefreshCacheInput = {
+  def apply(
+    FileShareARN: FileShareARN,
+    FolderList: FolderList = null,
+    Recursive: js.UndefOr[Boolean] = js.undefined
+  ): RefreshCacheInput = {
     val __obj = js.Dynamic.literal(FileShareARN = FileShareARN.asInstanceOf[js.Any])
+    if (FolderList != null) __obj.updateDynamic("FolderList")(FolderList.asInstanceOf[js.Any])
+    if (!js.isUndefined(Recursive)) __obj.updateDynamic("Recursive")(Recursive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefreshCacheInput]
   }
-  @scala.inline
-  implicit class RefreshCacheInputOps[Self <: RefreshCacheInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileShareARN(value: FileShareARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFolderList(value: FolderList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FolderList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolderList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FolderList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recursive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

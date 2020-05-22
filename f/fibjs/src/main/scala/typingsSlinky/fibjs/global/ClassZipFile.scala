@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief zip 文件访问对象
-	* @detail 
-	*/
+  * @brief zip 文件访问对象
+  * @detail 
+  */
 @JSGlobal("Class_ZipFile")
 @js.native
 class ClassZipFile ()

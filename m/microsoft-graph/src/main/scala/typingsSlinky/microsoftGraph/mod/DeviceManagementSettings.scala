@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceManagementSettings extends js.Object {
   // The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
-  var deviceComplianceCheckinThresholdDays: js.UndefOr[Double] = js.native
+  var deviceComplianceCheckinThresholdDays: js.UndefOr[Double] = js.undefined
   // Is feature enabled or not for scheduled action for rule.
-  var isScheduledActionEnabled: js.UndefOr[Boolean] = js.native
+  var isScheduledActionEnabled: js.UndefOr[Boolean] = js.undefined
   // Device should be noncompliant when there is no compliance policy targeted when this is true
-  var secureByDefault: js.UndefOr[Boolean] = js.native
+  var secureByDefault: js.UndefOr[Boolean] = js.undefined
 }
 
 object DeviceManagementSettings {
   @scala.inline
-  def apply(): DeviceManagementSettings = {
+  def apply(
+    deviceComplianceCheckinThresholdDays: js.UndefOr[Double] = js.undefined,
+    isScheduledActionEnabled: js.UndefOr[Boolean] = js.undefined,
+    secureByDefault: js.UndefOr[Boolean] = js.undefined
+  ): DeviceManagementSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deviceComplianceCheckinThresholdDays)) __obj.updateDynamic("deviceComplianceCheckinThresholdDays")(deviceComplianceCheckinThresholdDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isScheduledActionEnabled)) __obj.updateDynamic("isScheduledActionEnabled")(isScheduledActionEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(secureByDefault)) __obj.updateDynamic("secureByDefault")(secureByDefault.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceManagementSettings]
   }
-  @scala.inline
-  implicit class DeviceManagementSettingsOps[Self <: DeviceManagementSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceComplianceCheckinThresholdDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceComplianceCheckinThresholdDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceComplianceCheckinThresholdDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceComplianceCheckinThresholdDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsScheduledActionEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScheduledActionEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsScheduledActionEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScheduledActionEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecureByDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secureByDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecureByDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secureByDefault")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

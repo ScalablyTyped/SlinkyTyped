@@ -18,19 +18,5 @@ object DescribeLocationFsxWindowsRequest {
     val __obj = js.Dynamic.literal(LocationArn = LocationArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLocationFsxWindowsRequest]
   }
-  @scala.inline
-  implicit class DescribeLocationFsxWindowsRequestOps[Self <: DescribeLocationFsxWindowsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocationArn(value: LocationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

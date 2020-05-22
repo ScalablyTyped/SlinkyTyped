@@ -5,115 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPolarChart extends IAbstractChart {
   /** [Config Option] (Array) */
-  var center: js.UndefOr[Array] = js.native
+  var center: js.UndefOr[Array] = js.undefined
   /** [Method] Returns the value of center
-  		* @returns Array
-  		*/
-  var getCenter: js.UndefOr[js.Function0[Array]] = js.native
+    * @returns Array
+    */
+  var getCenter: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Returns the value of radius
-  		* @returns Number
-  		*/
-  var getRadius: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getRadius: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Config Option] (Number) */
-  var radius: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.undefined
   /** [Method] Sets the value of center
-  		* @param center Array The new value.
-  		*/
-  var setCenter: js.UndefOr[js.Function1[/* center */ js.UndefOr[Array], Unit]] = js.native
+    * @param center Array The new value.
+    */
+  var setCenter: js.UndefOr[js.Function1[/* center */ js.UndefOr[Array], Unit]] = js.undefined
   /** [Method] Sets the value of radius
-  		* @param radius Number The new value.
-  		*/
-  var setRadius: js.UndefOr[js.Function1[/* radius */ js.UndefOr[Double], Unit]] = js.native
+    * @param radius Number The new value.
+    */
+  var setRadius: js.UndefOr[js.Function1[/* radius */ js.UndefOr[Double], Unit]] = js.undefined
 }
 
 object IPolarChart {
   @scala.inline
-  def apply(): IPolarChart = {
+  def apply(
+    IAbstractChart: IAbstractChart = null,
+    center: Array = null,
+    getCenter: () => Array = null,
+    getRadius: () => Double = null,
+    radius: js.UndefOr[Double] = js.undefined,
+    setCenter: /* center */ js.UndefOr[Array] => Unit = null,
+    setRadius: /* radius */ js.UndefOr[Double] => Unit = null
+  ): IPolarChart = {
     val __obj = js.Dynamic.literal()
+    if (IAbstractChart != null) js.Dynamic.global.Object.assign(__obj, IAbstractChart)
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (getCenter != null) __obj.updateDynamic("getCenter")(js.Any.fromFunction0(getCenter))
+    if (getRadius != null) __obj.updateDynamic("getRadius")(js.Any.fromFunction0(getRadius))
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (setCenter != null) __obj.updateDynamic("setCenter")(js.Any.fromFunction1(setCenter))
+    if (setRadius != null) __obj.updateDynamic("setRadius")(js.Any.fromFunction1(setRadius))
     __obj.asInstanceOf[IPolarChart]
   }
-  @scala.inline
-  implicit class IPolarChartOps[Self <: IPolarChart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetCenter(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCenter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetRadius(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRadius")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetCenter(value: /* center */ js.UndefOr[Array] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCenter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetRadius(value: /* radius */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRadius")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRadius")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

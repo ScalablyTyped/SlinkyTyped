@@ -4,84 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Start extends js.Object {
   /**
     * 辅助框结束位置，值为原始数据值，支持 callback
     */
-  var end: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.native
+  var end: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.undefined
   /**
     * 辅助框起始位置，值为原始数据值，支持 callback
     */
-  var start: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.native
-  var style: js.UndefOr[FillOpacity] = js.native
+  var start: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.undefined
+  var style: js.UndefOr[FillOpacity] = js.undefined
   /**
     * 指定 giude 是否绘制在 canvas 最上层，默认为 false, 即绘制在最下层
     */
-  var top: js.UndefOr[Boolean] = js.native
+  var top: js.UndefOr[Boolean] = js.undefined
 }
 
 object Start {
   @scala.inline
-  def apply(): Start = {
+  def apply(
+    end: js.Any | js.Function | (js.Array[String | Double]) = null,
+    start: js.Any | js.Function | (js.Array[String | Double]) = null,
+    style: FillOpacity = null,
+    top: js.UndefOr[Boolean] = js.undefined
+  ): Start = {
     val __obj = js.Dynamic.literal()
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Start]
   }
-  @scala.inline
-  implicit class StartOps[Self <: Start] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: js.Any | js.Function | (js.Array[String | Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: js.Any | js.Function | (js.Array[String | Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: FillOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

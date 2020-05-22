@@ -5,135 +5,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellRightClickEventUIParam extends js.Object {
   /**
-  	 * Gets a reference to cell DOM element.
-  	 */
-  var cellElement: js.UndefOr[Element] = js.native
+    * Gets a reference to cell DOM element.
+    */
+  var cellElement: js.UndefOr[Element] = js.undefined
   /**
-  	 * Gets the column index of the DOM element.
-  	 */
-  var colIndex: js.UndefOr[Double] = js.native
+    * Gets the column index of the DOM element.
+    */
+  var colIndex: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets the column key.
-  	 */
-  var colKey: js.UndefOr[String] = js.native
+    * Gets the column key.
+    */
+  var colKey: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the grid.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the grid.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the row DOM element.
-  	 */
-  var row: js.UndefOr[Element] = js.native
+    * Gets a reference to the row DOM element.
+    */
+  var row: js.UndefOr[Element] = js.undefined
   /**
-  	 * Gets the row index.
-  	 */
-  var rowIndex: js.UndefOr[Double] = js.native
+    * Gets the row index.
+    */
+  var rowIndex: js.UndefOr[Double] = js.undefined
   /**
-  	 * Gets the row key.
-  	 */
-  var rowKey: js.UndefOr[js.Any] = js.native
+    * Gets the row key.
+    */
+  var rowKey: js.UndefOr[js.Any] = js.undefined
 }
 
 object CellRightClickEventUIParam {
   @scala.inline
-  def apply(): CellRightClickEventUIParam = {
+  def apply(
+    cellElement: Element = null,
+    colIndex: js.UndefOr[Double] = js.undefined,
+    colKey: String = null,
+    owner: js.Any = null,
+    row: Element = null,
+    rowIndex: js.UndefOr[Double] = js.undefined,
+    rowKey: js.Any = null
+  ): CellRightClickEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (cellElement != null) __obj.updateDynamic("cellElement")(cellElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(colIndex)) __obj.updateDynamic("colIndex")(colIndex.get.asInstanceOf[js.Any])
+    if (colKey != null) __obj.updateDynamic("colKey")(colKey.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowIndex)) __obj.updateDynamic("rowIndex")(rowIndex.get.asInstanceOf[js.Any])
+    if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellRightClickEventUIParam]
   }
-  @scala.inline
-  implicit class CellRightClickEventUIParamOps[Self <: CellRightClickEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCellElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRow(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowKey(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

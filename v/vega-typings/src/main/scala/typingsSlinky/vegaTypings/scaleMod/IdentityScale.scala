@@ -6,47 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IdentityScale
   extends BaseScale
      with Scale {
-  var nice: js.UndefOr[Boolean | SignalRef] = js.native
+  var nice: js.UndefOr[Boolean | SignalRef] = js.undefined
   @JSName("type")
-  var type_IdentityScale: identity = js.native
+  var type_IdentityScale: identity
 }
 
 object IdentityScale {
   @scala.inline
-  def apply(name: String, `type`: identity): IdentityScale = {
+  def apply(
+    name: String,
+    `type`: identity,
+    domain: (js.Array[Null | String | Double | Boolean | SignalRef]) | ScaleData | SignalRef = null,
+    domainMax: Double | SignalRef = null,
+    domainMid: Double | SignalRef = null,
+    domainMin: Double | SignalRef = null,
+    domainRaw: js.UndefOr[Null | js.Array[_] | SignalRef] = js.undefined,
+    nice: Boolean | SignalRef = null,
+    reverse: Boolean | SignalRef = null,
+    round: Boolean | SignalRef = null
+  ): IdentityScale = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (domainMax != null) __obj.updateDynamic("domainMax")(domainMax.asInstanceOf[js.Any])
+    if (domainMid != null) __obj.updateDynamic("domainMid")(domainMid.asInstanceOf[js.Any])
+    if (domainMin != null) __obj.updateDynamic("domainMin")(domainMin.asInstanceOf[js.Any])
+    if (!js.isUndefined(domainRaw)) __obj.updateDynamic("domainRaw")(domainRaw.asInstanceOf[js.Any])
+    if (nice != null) __obj.updateDynamic("nice")(nice.asInstanceOf[js.Any])
+    if (reverse != null) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
+    if (round != null) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityScale]
   }
-  @scala.inline
-  implicit class IdentityScaleOps[Self <: IdentityScale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNice(value: Boolean | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

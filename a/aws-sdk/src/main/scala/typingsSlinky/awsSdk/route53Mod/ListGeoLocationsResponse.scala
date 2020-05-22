@@ -34,71 +34,19 @@ trait ListGeoLocationsResponse extends js.Object {
 
 object ListGeoLocationsResponse {
   @scala.inline
-  def apply(GeoLocationDetailsList: GeoLocationDetailsList, IsTruncated: PageTruncated, MaxItems: PageMaxItems): ListGeoLocationsResponse = {
+  def apply(
+    GeoLocationDetailsList: GeoLocationDetailsList,
+    IsTruncated: PageTruncated,
+    MaxItems: PageMaxItems,
+    NextContinentCode: GeoLocationContinentCode = null,
+    NextCountryCode: GeoLocationCountryCode = null,
+    NextSubdivisionCode: GeoLocationSubdivisionCode = null
+  ): ListGeoLocationsResponse = {
     val __obj = js.Dynamic.literal(GeoLocationDetailsList = GeoLocationDetailsList.asInstanceOf[js.Any], IsTruncated = IsTruncated.asInstanceOf[js.Any], MaxItems = MaxItems.asInstanceOf[js.Any])
+    if (NextContinentCode != null) __obj.updateDynamic("NextContinentCode")(NextContinentCode.asInstanceOf[js.Any])
+    if (NextCountryCode != null) __obj.updateDynamic("NextCountryCode")(NextCountryCode.asInstanceOf[js.Any])
+    if (NextSubdivisionCode != null) __obj.updateDynamic("NextSubdivisionCode")(NextSubdivisionCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGeoLocationsResponse]
   }
-  @scala.inline
-  implicit class ListGeoLocationsResponseOps[Self <: ListGeoLocationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoLocationDetailsList(value: GeoLocationDetailsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocationDetailsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsTruncated(value: PageTruncated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: PageMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextContinentCode(value: GeoLocationContinentCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextContinentCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextContinentCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextContinentCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextCountryCode(value: GeoLocationCountryCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextCountryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextCountryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextCountryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextSubdivisionCode(value: GeoLocationSubdivisionCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextSubdivisionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextSubdivisionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextSubdivisionCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

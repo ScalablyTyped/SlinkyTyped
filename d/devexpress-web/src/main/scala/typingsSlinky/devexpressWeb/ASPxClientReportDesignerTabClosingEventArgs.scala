@@ -8,16 +8,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.ReportTabClosing event.
   */
-@js.native
 trait ASPxClientReportDesignerTabClosingEventArgs extends ASPxClientReportDesignerTabEventArgs {
   /**
     * Specifies whether or not the event was handled.
     */
-  var Handled: Boolean = js.native
+  var Handled: Boolean
   /**
     * Specifies the JQuery Deferred object, which when resolved, forces the report tab to be closed.
     */
-  var ReadyToClose: JQueryDeferred[_] = js.native
+  var ReadyToClose: JQueryDeferred[_]
 }
 
 object ASPxClientReportDesignerTabClosingEventArgs {
@@ -26,25 +25,5 @@ object ASPxClientReportDesignerTabClosingEventArgs {
     val __obj = js.Dynamic.literal(Handled = Handled.asInstanceOf[js.Any], ReadyToClose = ReadyToClose.asInstanceOf[js.Any], Tab = Tab.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientReportDesignerTabClosingEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientReportDesignerTabClosingEventArgsOps[Self <: ASPxClientReportDesignerTabClosingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Handled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadyToClose(value: JQueryDeferred[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadyToClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

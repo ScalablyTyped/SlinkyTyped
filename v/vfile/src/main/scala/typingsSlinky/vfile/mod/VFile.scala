@@ -1,6 +1,5 @@
 package typingsSlinky.vfile.mod
 
-import typingsSlinky.node.BufferEncoding
 import typingsSlinky.unist.mod.Node
 import typingsSlinky.unist.mod.Point
 import typingsSlinky.unist.mod.Position
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VFile extends VFileCompatible {
+trait VFile extends _VFileCompatible {
   /**
     * Current name (including extension) of `vfile`.
     * Cannot contain path separators.

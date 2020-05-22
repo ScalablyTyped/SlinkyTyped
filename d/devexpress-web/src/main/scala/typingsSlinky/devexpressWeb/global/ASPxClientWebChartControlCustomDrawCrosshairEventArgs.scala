@@ -26,5 +26,47 @@ class ASPxClientWebChartControlCustomDrawCrosshairEventArgs protected ()
     crosshairElementGroups: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairElementGroup],
     crosshairLegendElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairLegendElement]
   ) = this()
+  /**
+    * Provides access to the settings of crosshair elements and crosshair group header elements to customize their appearance.
+    */
+  /* CompleteClass */
+  override var crosshairElementGroups: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairElementGroup] = js.native
+  /** @deprecated This property is now obsolete. Use the crosshairElementGroup.CrosshairElements property instead. */
+  /**
+    * Returns crosshair elements settings to custom draw a crosshair cursor.
+    */
+  /* CompleteClass */
+  override var crosshairElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairElement] = js.native
+  /** @deprecated This property is now obsolete. Use the crosshairElementGroup.HeaderElement property instead. */
+  /**
+    * Returns the crosshair group header elements to customize their appearance.
+    */
+  /* CompleteClass */
+  override var crosshairGroupHeaderElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairGroupHeaderElement] = js.native
+  /**
+    * Returns the array of indicator elements that the Crosshair Cursor displays in a legend.
+    */
+  /* CompleteClass */
+  override var crosshairIndicatorLegendElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairIndicatorLegendElement] = js.native
+  /**
+    * Returns the crosshair legend elements to custom draw the Crosshair.
+    */
+  /* CompleteClass */
+  override var crosshairLegendElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairLegendElement] = js.native
+  /**
+    * Returns the crosshair axis label elements to customize their appearance.
+    */
+  /* CompleteClass */
+  override var cursorCrosshairAxisLabelElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairAxisLabelElement] = js.native
+  /**
+    * Gets crosshair line element settings that are used to custom draw a crosshair cursor.
+    */
+  /* CompleteClass */
+  override var cursorCrosshairLineElement: typingsSlinky.devexpressWeb.ASPxClientCrosshairLineElement = js.native
+  /**
+    * Gets or sets a value that specifies whether the event should be finally processed on the server side.
+    */
+  /* CompleteClass */
+  override var processOnServer: Boolean = js.native
 }
 

@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * This interface must be implemented by every animation object. It is used by the {@link XCanvas} interface to render generic animations.
   * @since OOo 2.0
   */
-@js.native
 trait XAnimation extends XInterface {
   /**
     * Request the attribute information for this animation.
@@ -20,14 +19,14 @@ trait XAnimation extends XInterface {
     * This method returns the {@link AnimationAttributes} structure, which defines more closely how to play this animation.
     * @returns the requested {@link AnimationAttributes} structure.
     */
-  val AnimationAttributes: typingsSlinky.activexLibreoffice.com_.sun.star.rendering.AnimationAttributes = js.native
+  val AnimationAttributes: typingsSlinky.activexLibreoffice.com_.sun.star.rendering.AnimationAttributes
   /**
     * Request the attribute information for this animation.
     *
     * This method returns the {@link AnimationAttributes} structure, which defines more closely how to play this animation.
     * @returns the requested {@link AnimationAttributes} structure.
     */
-  def getAnimationAttributes(): typingsSlinky.activexLibreoffice.com_.sun.star.rendering.AnimationAttributes = js.native
+  def getAnimationAttributes(): typingsSlinky.activexLibreoffice.com_.sun.star.rendering.AnimationAttributes
   /**
     * Render the animation content at time t into the specified canvas.
     *
@@ -45,7 +44,7 @@ trait XAnimation extends XInterface {
     * @param t Time instant for which animation content is requested. The range must always be [0,1], where 0 denotes the very beginning, and 1 the end of the
     * @throws com::sun::star::lang::IllegalArgumentException if one of the passed parameters does not lie in the specified, permissible range.
     */
-  def render(canvas: XCanvas, viewState: ViewState, t: Double): Unit = js.native
+  def render(canvas: XCanvas, viewState: ViewState, t: Double): Unit
 }
 
 object XAnimation {
@@ -61,31 +60,5 @@ object XAnimation {
     val __obj = js.Dynamic.literal(AnimationAttributes = AnimationAttributes.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAnimationAttributes = js.Any.fromFunction0(getAnimationAttributes), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), render = js.Any.fromFunction3(render))
     __obj.asInstanceOf[XAnimation]
   }
-  @scala.inline
-  implicit class XAnimationOps[Self <: XAnimation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimationAttributes(value: AnimationAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnimationAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAnimationAttributes(value: () => AnimationAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnimationAttributes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRender(value: (XCanvas, ViewState, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

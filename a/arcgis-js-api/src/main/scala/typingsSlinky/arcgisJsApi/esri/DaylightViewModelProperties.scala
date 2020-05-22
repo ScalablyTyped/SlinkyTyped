@@ -8,7 +8,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DaylightViewModelProperties extends js.Object {
   /**
     * A season can be set instead of a date. Each season uses a fixed date corresponding to the seasonsal equinoxes and solstices.
@@ -17,7 +16,7 @@ trait DaylightViewModelProperties extends js.Object {
     *
     * @default "spring"
     */
-  var currentSeason: js.UndefOr[spring | summer | fall | winter] = js.native
+  var currentSeason: js.UndefOr[spring | summer | fall | winter] = js.undefined
   /**
     * Starts or pauses the daytime animation cycling through the minutes of the day. Set to `true` to start the animation and to `false` to pause it.
     *
@@ -25,13 +24,13 @@ trait DaylightViewModelProperties extends js.Object {
     *
     * @default false
     */
-  var dayPlaying: js.UndefOr[Boolean] = js.native
+  var dayPlaying: js.UndefOr[Boolean] = js.undefined
   /**
     * The calendar date in the timezone given by [utcOffset](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight-DaylightViewModel.html#utcOffset).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight-DaylightViewModel.html#localDate)
     */
-  var localDate: js.UndefOr[DateProperties] = js.native
+  var localDate: js.UndefOr[DateProperties] = js.undefined
   /**
     * Controls the daytime and date animation speed.
     *
@@ -39,25 +38,25 @@ trait DaylightViewModelProperties extends js.Object {
     *
     * @default 1.0
     */
-  var playSpeedMultiplier: js.UndefOr[Double] = js.native
+  var playSpeedMultiplier: js.UndefOr[Double] = js.undefined
   /**
     * Slider position for the time of day in the timezone given by [utcOffset](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight-DaylightViewModel.html#utcOffset). The position represents the time of the day in minutes. Possible values range between 0 and 1440.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight-DaylightViewModel.html#timeSliderPosition)
     */
-  var timeSliderPosition: js.UndefOr[Double] = js.native
+  var timeSliderPosition: js.UndefOr[Double] = js.undefined
   /**
     * The difference in hours between UTC time and the time displayed in the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight-DaylightViewModel.html#utcOffset)
     */
-  var utcOffset: js.UndefOr[Double] = js.native
+  var utcOffset: js.UndefOr[Double] = js.undefined
   /**
     * The view from which the widget will operate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight-DaylightViewModel.html#view)
     */
-  var view: js.UndefOr[SceneViewProperties] = js.native
+  var view: js.UndefOr[SceneViewProperties] = js.undefined
   /**
     * Starts or pauses the date animation cycling through the months of the year. Set to `true` to start the animation and to `false` to pause it.
     *
@@ -65,124 +64,31 @@ trait DaylightViewModelProperties extends js.Object {
     *
     * @default false
     */
-  var yearPlaying: js.UndefOr[Boolean] = js.native
+  var yearPlaying: js.UndefOr[Boolean] = js.undefined
 }
 
 object DaylightViewModelProperties {
   @scala.inline
-  def apply(): DaylightViewModelProperties = {
+  def apply(
+    currentSeason: spring | summer | fall | winter = null,
+    dayPlaying: js.UndefOr[Boolean] = js.undefined,
+    localDate: DateProperties = null,
+    playSpeedMultiplier: js.UndefOr[Double] = js.undefined,
+    timeSliderPosition: js.UndefOr[Double] = js.undefined,
+    utcOffset: js.UndefOr[Double] = js.undefined,
+    view: SceneViewProperties = null,
+    yearPlaying: js.UndefOr[Boolean] = js.undefined
+  ): DaylightViewModelProperties = {
     val __obj = js.Dynamic.literal()
+    if (currentSeason != null) __obj.updateDynamic("currentSeason")(currentSeason.asInstanceOf[js.Any])
+    if (!js.isUndefined(dayPlaying)) __obj.updateDynamic("dayPlaying")(dayPlaying.get.asInstanceOf[js.Any])
+    if (localDate != null) __obj.updateDynamic("localDate")(localDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(playSpeedMultiplier)) __obj.updateDynamic("playSpeedMultiplier")(playSpeedMultiplier.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeSliderPosition)) __obj.updateDynamic("timeSliderPosition")(timeSliderPosition.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(utcOffset)) __obj.updateDynamic("utcOffset")(utcOffset.get.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(yearPlaying)) __obj.updateDynamic("yearPlaying")(yearPlaying.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DaylightViewModelProperties]
   }
-  @scala.inline
-  implicit class DaylightViewModelPropertiesOps[Self <: DaylightViewModelProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentSeason(value: spring | summer | fall | winter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSeason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentSeason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSeason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayPlaying(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPlaying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayPlaying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPlaying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalDateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalDate(value: DateProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaySpeedMultiplier(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playSpeedMultiplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaySpeedMultiplier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playSpeedMultiplier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeSliderPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSliderPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeSliderPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSliderPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtcOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utcOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtcOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utcOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: SceneViewProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYearPlaying(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearPlaying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearPlaying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearPlaying")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

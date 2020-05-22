@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object definitionsMod {
+  type APIResponseData = js.Object | js.Array[js.Object] | java.lang.String
   type CommandInstanceInfo = typingsSlinky.ionicCliFramework.definitionsMod.CommandInstanceInfo[
     typingsSlinky.ionic.definitionsMod.ICommand, 
     typingsSlinky.ionic.definitionsMod.INamespace, 

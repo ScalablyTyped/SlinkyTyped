@@ -19,29 +19,10 @@ trait SchemaIndividualStudentsOptions extends js.Object {
 
 object SchemaIndividualStudentsOptions {
   @scala.inline
-  def apply(): SchemaIndividualStudentsOptions = {
+  def apply(studentIds: js.Array[String] = null): SchemaIndividualStudentsOptions = {
     val __obj = js.Dynamic.literal()
+    if (studentIds != null) __obj.updateDynamic("studentIds")(studentIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIndividualStudentsOptions]
   }
-  @scala.inline
-  implicit class SchemaIndividualStudentsOptionsOps[Self <: SchemaIndividualStudentsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStudentIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("studentIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStudentIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("studentIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

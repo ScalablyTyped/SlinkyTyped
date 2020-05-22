@@ -5,119 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FPSConfig extends js.Object {
   /**
     * Calculate the average frame delta from this many consecutive frame intervals.
     */
-  var deltaHistory: js.UndefOr[integer] = js.native
+  var deltaHistory: js.UndefOr[integer] = js.undefined
   /**
     * Use setTimeout instead of requestAnimationFrame to run the game loop.
     */
-  var forceSetTimeOut: js.UndefOr[Boolean] = js.native
+  var forceSetTimeOut: js.UndefOr[Boolean] = js.undefined
   /**
     * The minimum acceptable rendering rate, in frames per second.
     */
-  var min: js.UndefOr[integer] = js.native
+  var min: js.UndefOr[integer] = js.undefined
   /**
     * The amount of frames the time step counts before we trust the delta values again.
     */
-  var panicMax: js.UndefOr[integer] = js.native
+  var panicMax: js.UndefOr[integer] = js.undefined
   /**
     * Apply delta smoothing during the game update to help avoid spikes?
     */
-  var smoothStep: js.UndefOr[Boolean] = js.native
+  var smoothStep: js.UndefOr[Boolean] = js.undefined
   /**
     * The optimum rendering rate, in frames per second.
     */
-  var target: js.UndefOr[integer] = js.native
+  var target: js.UndefOr[integer] = js.undefined
 }
 
 object FPSConfig {
   @scala.inline
-  def apply(): FPSConfig = {
+  def apply(
+    deltaHistory: js.UndefOr[integer] = js.undefined,
+    forceSetTimeOut: js.UndefOr[Boolean] = js.undefined,
+    min: js.UndefOr[integer] = js.undefined,
+    panicMax: js.UndefOr[integer] = js.undefined,
+    smoothStep: js.UndefOr[Boolean] = js.undefined,
+    target: js.UndefOr[integer] = js.undefined
+  ): FPSConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deltaHistory)) __obj.updateDynamic("deltaHistory")(deltaHistory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceSetTimeOut)) __obj.updateDynamic("forceSetTimeOut")(forceSetTimeOut.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(panicMax)) __obj.updateDynamic("panicMax")(panicMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smoothStep)) __obj.updateDynamic("smoothStep")(smoothStep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(target)) __obj.updateDynamic("target")(target.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FPSConfig]
   }
-  @scala.inline
-  implicit class FPSConfigOps[Self <: FPSConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeltaHistory(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeltaHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceSetTimeOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSetTimeOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceSetTimeOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSetTimeOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanicMax(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panicMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanicMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panicMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmoothStep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmoothStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

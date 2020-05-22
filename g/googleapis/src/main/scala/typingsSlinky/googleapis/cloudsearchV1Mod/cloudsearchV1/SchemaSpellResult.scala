@@ -14,29 +14,10 @@ trait SchemaSpellResult extends js.Object {
 
 object SchemaSpellResult {
   @scala.inline
-  def apply(): SchemaSpellResult = {
+  def apply(suggestedQuery: String = null): SchemaSpellResult = {
     val __obj = js.Dynamic.literal()
+    if (suggestedQuery != null) __obj.updateDynamic("suggestedQuery")(suggestedQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSpellResult]
   }
-  @scala.inline
-  implicit class SchemaSpellResultOps[Self <: SchemaSpellResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuggestedQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedQuery")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

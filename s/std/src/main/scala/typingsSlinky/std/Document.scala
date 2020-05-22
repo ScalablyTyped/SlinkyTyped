@@ -264,7 +264,7 @@ trait Document
     * Returns null if the Document is not currently executing a script or SVG script element (e.g., because the running script is an event handler, or a timeout), or if the currently executing script or SVG script element represents a module script.
     */
   val currentScript: HTMLOrSVGScriptElement | Null = js.native
-  val defaultView: org.scalajs.dom.raw.Window | Null = js.native
+  val defaultView: (org.scalajs.dom.raw.Window with (/* globalThis */ js.Any)) | Null = js.native
   /**
     * Sets or gets a value that indicates whether the document can be edited.
     */
@@ -356,6 +356,8 @@ trait Document
     * Returns document's origin.
     */
   val origin: java.lang.String = js.native
+  @JSName("ownerDocument")
+  val ownerDocument_Document: Null = js.native
   /**
     * Return an HTMLCollection of the embed elements in the Document.
     */

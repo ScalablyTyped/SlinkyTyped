@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/net.html](http://www.html5plus.org/doc/zh_cn/net.html)
   */
-@js.native
 trait PlusNetProgressEvent extends js.Object {
   /**
     * 进度信息是否可计算
@@ -17,92 +16,45 @@ trait PlusNetProgressEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/net.html](http://www.html5plus.org/doc/zh_cn/net.html)
     */
-  var lengthComputable: js.UndefOr[Double] = js.native
+  var lengthComputable: js.UndefOr[Double] = js.undefined
   /**
     * 当前已经接收到的数据长度
     * HTTP请求接收到的数据长度，单位为字节。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/net.html](http://www.html5plus.org/doc/zh_cn/net.html)
     */
-  var loaded: js.UndefOr[Double] = js.native
+  var loaded: js.UndefOr[Double] = js.undefined
   /**
     * 事件的目标对象
     * 通知HTTP请求进度事件的XMLHttpRequest对象。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/net.html](http://www.html5plus.org/doc/zh_cn/net.html)
     */
-  var target: js.UndefOr[PlusNetXMLHttpRequest] = js.native
+  var target: js.UndefOr[PlusNetXMLHttpRequest] = js.undefined
   /**
     * 总数据长度
     * HTTP请求返回的总数据长度，单位为字节。
-    * 	如果无法获取则设置为0。
+    *     如果无法获取则设置为0。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/net.html](http://www.html5plus.org/doc/zh_cn/net.html)
     */
-  var total: js.UndefOr[Double] = js.native
+  var total: js.UndefOr[Double] = js.undefined
 }
 
 object PlusNetProgressEvent {
   @scala.inline
-  def apply(): PlusNetProgressEvent = {
+  def apply(
+    lengthComputable: js.UndefOr[Double] = js.undefined,
+    loaded: js.UndefOr[Double] = js.undefined,
+    target: PlusNetXMLHttpRequest = null,
+    total: js.UndefOr[Double] = js.undefined
+  ): PlusNetProgressEvent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(lengthComputable)) __obj.updateDynamic("lengthComputable")(lengthComputable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loaded)) __obj.updateDynamic("loaded")(loaded.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(total)) __obj.updateDynamic("total")(total.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusNetProgressEvent]
   }
-  @scala.inline
-  implicit class PlusNetProgressEventOps[Self <: PlusNetProgressEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLengthComputable(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthComputable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLengthComputable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthComputable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: PlusNetXMLHttpRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

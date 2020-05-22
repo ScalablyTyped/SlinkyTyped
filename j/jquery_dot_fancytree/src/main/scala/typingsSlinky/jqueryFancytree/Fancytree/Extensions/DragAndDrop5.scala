@@ -6,335 +6,129 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DragAndDrop5
   extends /* extension */ StringDictionary[js.Any] {
   /**
     * Expand nodes after n milliseconds of hovering.
     */
-  var autoExpandMS: js.UndefOr[Double] = js.native
-  var dragDrag: js.UndefOr[js.Function2[/* sourceNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
+  var autoExpandMS: js.UndefOr[Double] = js.undefined
+  var dragDrag: js.UndefOr[js.Function2[/* sourceNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
   /**
     * Events (drag drop)
     */
-  var dragDrop: js.UndefOr[js.Function2[/* node */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
-  var dragEnd: js.UndefOr[js.Function2[/* sourceNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
+  var dragDrop: js.UndefOr[js.Function2[/* node */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
+  var dragEnd: js.UndefOr[js.Function2[/* sourceNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
   /**
     * Callback(targetNode, data), return true, to enable dnd drop
     */
-  var dragEnter: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
+  var dragEnter: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
   /**
     * Callback(targetNode, data), return false to prevent autoExpand
     */
-  var dragExpand: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
-  var dragLeave: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
+  var dragExpand: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
+  var dragLeave: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
   /**
     * Events (drag over)
     */
-  var dragOver: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
+  var dragOver: js.UndefOr[js.Function2[/* targetNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
   /**
     * Callback(sourceNode, data), return true, to enable dnd drag
     */
-  var dragStart: js.UndefOr[js.Function2[/* sourceNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.native
+  var dragStart: js.UndefOr[js.Function2[/* sourceNode */ FancytreeNode, /* data */ js.Any, Unit]] = js.undefined
   /**
     * Additional offset for drop-marker with hitMode = "before"/"after"
     */
-  var dropMarkerInsertOffsetX: js.UndefOr[Double] = js.native
+  var dropMarkerInsertOffsetX: js.UndefOr[Double] = js.undefined
   /**
     * Absolute position offset for .fancytree-drop-marker
     */
-  var dropMarkerOffsetX: js.UndefOr[Double] = js.native
+  var dropMarkerOffsetX: js.UndefOr[Double] = js.undefined
   /**
     * true: Drag multiple (i.e. selected) nodes.
     */
-  var multiSource: js.UndefOr[Boolean] = js.native
+  var multiSource: js.UndefOr[Boolean] = js.undefined
   /**
     * Prevent dropping nodes from different Fancytrees
     */
-  var preventForeignNodes: js.UndefOr[Boolean] = js.native
+  var preventForeignNodes: js.UndefOr[Boolean] = js.undefined
   /**
     * Prevent dropping items other than Fancytree nodes
     */
-  var preventNonNodes: js.UndefOr[Boolean] = js.native
+  var preventNonNodes: js.UndefOr[Boolean] = js.undefined
   /**
     * Prevent dropping nodes on own descendants
     */
-  var preventRecursiveMoves: js.UndefOr[Boolean] = js.native
+  var preventRecursiveMoves: js.UndefOr[Boolean] = js.undefined
   /**
     * Prevent dropping nodes 'before self', etc.
     */
-  var preventVoidMoves: js.UndefOr[Boolean] = js.native
+  var preventVoidMoves: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable auto-scrolling while dragging
     */
-  var scroll: js.UndefOr[Boolean] = js.native
+  var scroll: js.UndefOr[Boolean] = js.undefined
   /**
     * Active top/bottom margin in pixel
     */
-  var scrollSensitivity: js.UndefOr[Double] = js.native
+  var scrollSensitivity: js.UndefOr[Double] = js.undefined
   /**
     * Pixel per event
     */
-  var scrollSpeed: js.UndefOr[Double] = js.native
+  var scrollSpeed: js.UndefOr[Double] = js.undefined
   /**
     * Allow dragging of nodes to different IE windows, default: false
     */
-  var setTextTypeJson: js.UndefOr[Boolean] = js.native
+  var setTextTypeJson: js.UndefOr[Boolean] = js.undefined
 }
 
 object DragAndDrop5 {
   @scala.inline
-  def apply(): DragAndDrop5 = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    autoExpandMS: js.UndefOr[Double] = js.undefined,
+    dragDrag: (/* sourceNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragDrop: (/* node */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragEnd: (/* sourceNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragEnter: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragExpand: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragLeave: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragOver: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dragStart: (/* sourceNode */ FancytreeNode, /* data */ js.Any) => Unit = null,
+    dropMarkerInsertOffsetX: js.UndefOr[Double] = js.undefined,
+    dropMarkerOffsetX: js.UndefOr[Double] = js.undefined,
+    multiSource: js.UndefOr[Boolean] = js.undefined,
+    preventForeignNodes: js.UndefOr[Boolean] = js.undefined,
+    preventNonNodes: js.UndefOr[Boolean] = js.undefined,
+    preventRecursiveMoves: js.UndefOr[Boolean] = js.undefined,
+    preventVoidMoves: js.UndefOr[Boolean] = js.undefined,
+    scroll: js.UndefOr[Boolean] = js.undefined,
+    scrollSensitivity: js.UndefOr[Double] = js.undefined,
+    scrollSpeed: js.UndefOr[Double] = js.undefined,
+    setTextTypeJson: js.UndefOr[Boolean] = js.undefined
+  ): DragAndDrop5 = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(autoExpandMS)) __obj.updateDynamic("autoExpandMS")(autoExpandMS.get.asInstanceOf[js.Any])
+    if (dragDrag != null) __obj.updateDynamic("dragDrag")(js.Any.fromFunction2(dragDrag))
+    if (dragDrop != null) __obj.updateDynamic("dragDrop")(js.Any.fromFunction2(dragDrop))
+    if (dragEnd != null) __obj.updateDynamic("dragEnd")(js.Any.fromFunction2(dragEnd))
+    if (dragEnter != null) __obj.updateDynamic("dragEnter")(js.Any.fromFunction2(dragEnter))
+    if (dragExpand != null) __obj.updateDynamic("dragExpand")(js.Any.fromFunction2(dragExpand))
+    if (dragLeave != null) __obj.updateDynamic("dragLeave")(js.Any.fromFunction2(dragLeave))
+    if (dragOver != null) __obj.updateDynamic("dragOver")(js.Any.fromFunction2(dragOver))
+    if (dragStart != null) __obj.updateDynamic("dragStart")(js.Any.fromFunction2(dragStart))
+    if (!js.isUndefined(dropMarkerInsertOffsetX)) __obj.updateDynamic("dropMarkerInsertOffsetX")(dropMarkerInsertOffsetX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropMarkerOffsetX)) __obj.updateDynamic("dropMarkerOffsetX")(dropMarkerOffsetX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiSource)) __obj.updateDynamic("multiSource")(multiSource.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventForeignNodes)) __obj.updateDynamic("preventForeignNodes")(preventForeignNodes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventNonNodes)) __obj.updateDynamic("preventNonNodes")(preventNonNodes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventRecursiveMoves)) __obj.updateDynamic("preventRecursiveMoves")(preventRecursiveMoves.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventVoidMoves)) __obj.updateDynamic("preventVoidMoves")(preventVoidMoves.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scroll)) __obj.updateDynamic("scroll")(scroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollSensitivity)) __obj.updateDynamic("scrollSensitivity")(scrollSensitivity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollSpeed)) __obj.updateDynamic("scrollSpeed")(scrollSpeed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setTextTypeJson)) __obj.updateDynamic("setTextTypeJson")(setTextTypeJson.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DragAndDrop5]
   }
-  @scala.inline
-  implicit class DragAndDrop5Ops[Self <: DragAndDrop5] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoExpandMS(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpandMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoExpandMS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpandMS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragDrag(value: (/* sourceNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrag")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragDrop(value: (/* node */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragEnd(value: (/* sourceNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragEnter(value: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragExpand(value: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragExpand")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragExpand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragLeave(value: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragOver(value: (/* targetNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOver")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragStart(value: (/* sourceNode */ FancytreeNode, /* data */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropMarkerInsertOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropMarkerInsertOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropMarkerInsertOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropMarkerInsertOffsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropMarkerOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropMarkerOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropMarkerOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropMarkerOffsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiSource(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventForeignNodes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventForeignNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventForeignNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventForeignNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventNonNodes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventNonNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventNonNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventNonNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventRecursiveMoves(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventRecursiveMoves")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventRecursiveMoves: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventRecursiveMoves")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventVoidMoves(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventVoidMoves")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventVoidMoves: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventVoidMoves")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSensitivity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSensitivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSensitivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetTextTypeJson(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextTypeJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetTextTypeJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextTypeJson")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

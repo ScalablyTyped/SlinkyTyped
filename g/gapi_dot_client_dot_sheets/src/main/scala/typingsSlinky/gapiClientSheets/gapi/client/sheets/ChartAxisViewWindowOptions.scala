@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartAxisViewWindowOptions extends js.Object {
   /**
     * The maximum numeric value to be shown in this view window. If unset, will
     * automatically determine a maximum value that looks good for the data.
     */
-  var viewWindowMax: js.UndefOr[Double] = js.native
+  var viewWindowMax: js.UndefOr[Double] = js.undefined
   /**
     * The minimum numeric value to be shown in this view window. If unset, will
     * automatically determine a minimum value that looks good for the data.
     */
-  var viewWindowMin: js.UndefOr[Double] = js.native
+  var viewWindowMin: js.UndefOr[Double] = js.undefined
   /** The view window's mode. */
-  var viewWindowMode: js.UndefOr[String] = js.native
+  var viewWindowMode: js.UndefOr[String] = js.undefined
 }
 
 object ChartAxisViewWindowOptions {
   @scala.inline
-  def apply(): ChartAxisViewWindowOptions = {
+  def apply(
+    viewWindowMax: js.UndefOr[Double] = js.undefined,
+    viewWindowMin: js.UndefOr[Double] = js.undefined,
+    viewWindowMode: String = null
+  ): ChartAxisViewWindowOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(viewWindowMax)) __obj.updateDynamic("viewWindowMax")(viewWindowMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewWindowMin)) __obj.updateDynamic("viewWindowMin")(viewWindowMin.get.asInstanceOf[js.Any])
+    if (viewWindowMode != null) __obj.updateDynamic("viewWindowMode")(viewWindowMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartAxisViewWindowOptions]
   }
-  @scala.inline
-  implicit class ChartAxisViewWindowOptionsOps[Self <: ChartAxisViewWindowOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withViewWindowMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewWindowMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewWindowMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewWindowMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowMin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewWindowMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewWindowMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewWindowMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

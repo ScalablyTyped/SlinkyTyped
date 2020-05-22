@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait AssertionExpression extends HasType
 
-object AssertionExpression {
-  @scala.inline
-  implicit def apply(value: AsExpression): AssertionExpression = value.asInstanceOf[AssertionExpression]
-  @scala.inline
-  implicit def apply(value: TypeAssertion): AssertionExpression = value.asInstanceOf[AssertionExpression]
-}
-

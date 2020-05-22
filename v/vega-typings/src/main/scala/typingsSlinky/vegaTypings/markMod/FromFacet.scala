@@ -1,6 +1,5 @@
 package typingsSlinky.vegaTypings.markMod
 
-import typingsSlinky.vegaTypings.anon.FromfacetFacet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,16 @@ trait FromFacet extends js.Object
 
 object FromFacet {
   @scala.inline
-  implicit def apply(value: From): FromFacet = value.asInstanceOf[FromFacet]
+  def From(data: String = null): FromFacet = {
+    val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FromFacet]
+  }
   @scala.inline
-  implicit def apply(value: FromfacetFacet): FromFacet = value.asInstanceOf[FromFacet]
+  def FromfacetFacet(facet: Facet, data: String = null): FromFacet = {
+    val __obj = js.Dynamic.literal(facet = facet.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FromFacet]
+  }
 }
 

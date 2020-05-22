@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AsyncWriterOptions extends js.Object {
-  var buffer: js.UndefOr[Boolean] = js.native
-  var global: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var buffer: js.UndefOr[Boolean] = js.undefined
+  var global: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object AsyncWriterOptions {
   @scala.inline
-  def apply(): AsyncWriterOptions = {
+  def apply(buffer: js.UndefOr[Boolean] = js.undefined, global: StringDictionary[js.Any] = null): AsyncWriterOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.get.asInstanceOf[js.Any])
+    if (global != null) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsyncWriterOptions]
   }
-  @scala.inline
-  implicit class AsyncWriterOptionsOps[Self <: AsyncWriterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobal(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

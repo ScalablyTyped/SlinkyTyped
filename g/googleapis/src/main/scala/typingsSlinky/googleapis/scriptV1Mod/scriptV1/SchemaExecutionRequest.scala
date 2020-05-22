@@ -50,65 +50,18 @@ trait SchemaExecutionRequest extends js.Object {
 
 object SchemaExecutionRequest {
   @scala.inline
-  def apply(): SchemaExecutionRequest = {
+  def apply(
+    devMode: js.UndefOr[Boolean] = js.undefined,
+    function: String = null,
+    parameters: js.Array[_] = null,
+    sessionState: String = null
+  ): SchemaExecutionRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(devMode)) __obj.updateDynamic("devMode")(devMode.get.asInstanceOf[js.Any])
+    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (sessionState != null) __obj.updateDynamic("sessionState")(sessionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExecutionRequest]
   }
-  @scala.inline
-  implicit class SchemaExecutionRequestOps[Self <: SchemaExecutionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

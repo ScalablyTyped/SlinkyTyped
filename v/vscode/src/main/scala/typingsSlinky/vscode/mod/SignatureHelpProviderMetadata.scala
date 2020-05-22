@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignatureHelpProviderMetadata extends js.Object {
   /**
-  		 * List of characters that re-trigger signature help.
-  		 *
-  		 * These trigger characters are only active when signature help is already showing. All trigger characters
-  		 * are also counted as re-trigger characters.
-  		 */
-  val retriggerCharacters: js.Array[String] = js.native
+    * List of characters that re-trigger signature help.
+    *
+    * These trigger characters are only active when signature help is already showing. All trigger characters
+    * are also counted as re-trigger characters.
+    */
+  val retriggerCharacters: js.Array[String]
   /**
-  		 * List of characters that trigger signature help.
-  		 */
-  val triggerCharacters: js.Array[String] = js.native
+    * List of characters that trigger signature help.
+    */
+  val triggerCharacters: js.Array[String]
 }
 
 object SignatureHelpProviderMetadata {
@@ -25,25 +24,5 @@ object SignatureHelpProviderMetadata {
     val __obj = js.Dynamic.literal(retriggerCharacters = retriggerCharacters.asInstanceOf[js.Any], triggerCharacters = triggerCharacters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpProviderMetadata]
   }
-  @scala.inline
-  implicit class SignatureHelpProviderMetadataOps[Self <: SignatureHelpProviderMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRetriggerCharacters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retriggerCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTriggerCharacters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

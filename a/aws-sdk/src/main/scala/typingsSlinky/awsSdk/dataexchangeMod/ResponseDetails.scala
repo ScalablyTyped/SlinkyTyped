@@ -26,65 +26,18 @@ trait ResponseDetails extends js.Object {
 
 object ResponseDetails {
   @scala.inline
-  def apply(): ResponseDetails = {
+  def apply(
+    ExportAssetToSignedUrl: ExportAssetToSignedUrlResponseDetails = null,
+    ExportAssetsToS3: ExportAssetsToS3ResponseDetails = null,
+    ImportAssetFromSignedUrl: ImportAssetFromSignedUrlResponseDetails = null,
+    ImportAssetsFromS3: ImportAssetsFromS3ResponseDetails = null
+  ): ResponseDetails = {
     val __obj = js.Dynamic.literal()
+    if (ExportAssetToSignedUrl != null) __obj.updateDynamic("ExportAssetToSignedUrl")(ExportAssetToSignedUrl.asInstanceOf[js.Any])
+    if (ExportAssetsToS3 != null) __obj.updateDynamic("ExportAssetsToS3")(ExportAssetsToS3.asInstanceOf[js.Any])
+    if (ImportAssetFromSignedUrl != null) __obj.updateDynamic("ImportAssetFromSignedUrl")(ImportAssetFromSignedUrl.asInstanceOf[js.Any])
+    if (ImportAssetsFromS3 != null) __obj.updateDynamic("ImportAssetsFromS3")(ImportAssetsFromS3.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseDetails]
   }
-  @scala.inline
-  implicit class ResponseDetailsOps[Self <: ResponseDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportAssetToSignedUrl(value: ExportAssetToSignedUrlResponseDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAssetToSignedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportAssetToSignedUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAssetToSignedUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportAssetsToS3(value: ExportAssetsToS3ResponseDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAssetsToS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportAssetsToS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAssetsToS3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportAssetFromSignedUrl(value: ImportAssetFromSignedUrlResponseDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportAssetFromSignedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportAssetFromSignedUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportAssetFromSignedUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportAssetsFromS3(value: ImportAssetsFromS3ResponseDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportAssetsFromS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportAssetsFromS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportAssetsFromS3")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.reactDayPicker
 
-import typingsSlinky.reactDayPicker.anon.AddDayToRange
-import typingsSlinky.reactDayPicker.anon.DayMatchesModifier
-import typingsSlinky.reactDayPicker.commonMod.Modifier
-import typingsSlinky.reactDayPicker.commonMod.RangeModifier
+import typingsSlinky.reactDayPicker.modifiersMod.Modifier
+import typingsSlinky.reactDayPicker.modifiersMod.RangeModifier
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,6 +31,30 @@ object mod extends js.Object {
   }
   
   @js.native
+  object LocaleUtils extends js.Object {
+    def formatDate(date: js.Date): String = js.native
+    def formatDate(date: js.Date, format: String): String = js.native
+    def formatDate(date: js.Date, format: String, locale: String): String = js.native
+    def formatDate(date: js.Date, format: js.Array[String]): String = js.native
+    def formatDate(date: js.Date, format: js.Array[String], locale: String): String = js.native
+    def formatDay(day: js.Date): String = js.native
+    def formatDay(day: js.Date, locale: String): String = js.native
+    def formatMonthTitle(month: js.Date): String = js.native
+    def formatMonthTitle(month: js.Date, locale: String): String = js.native
+    def formatWeekdayLong(weekday: Double): String = js.native
+    def formatWeekdayLong(weekday: Double, locale: String): String = js.native
+    def formatWeekdayShort(weekday: Double): String = js.native
+    def formatWeekdayShort(weekday: Double, locale: String): String = js.native
+    def getFirstDayOfWeek(): Double = js.native
+    def getFirstDayOfWeek(locale: String): Double = js.native
+    def getMonths(): js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
+    def getMonths(locale: String): js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
+    def parseDate(str: String): js.Date = js.native
+    def parseDate(str: String, format: String): js.Date = js.native
+    def parseDate(str: String, format: String, locale: String): js.Date = js.native
+  }
+  
+  @js.native
   object ModifiersUtils extends js.Object {
     def dayMatchesModifier(day: js.Date): Boolean = js.native
     def dayMatchesModifier(day: js.Date, modifier: js.Array[Modifier]): Boolean = js.native
@@ -43,11 +65,11 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var DateUtils: AddDayToRange = js.native
-    var DayModifiers: typingsSlinky.reactDayPicker.commonMod.DayModifiers = js.native
-    var LocaleUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = js.native
-    var Modifiers: typingsSlinky.reactDayPicker.commonMod.Modifiers = js.native
-    var ModifiersUtils: DayMatchesModifier = js.native
+    var DateUtils: typingsSlinky.reactDayPicker.dateUtilsMod.DateUtils = js.native
+    var DayModifiers: typingsSlinky.reactDayPicker.modifiersMod.DayModifiers = js.native
+    var LocaleUtils: typingsSlinky.reactDayPicker.localeUtilsMod.LocaleUtils = js.native
+    var Modifiers: typingsSlinky.reactDayPicker.modifiersMod.Modifiers = js.native
+    var ModifiersUtils: typingsSlinky.reactDayPicker.modifiersMod.ModifiersUtils = js.native
     var VERSION: String = js.native
   }
   

@@ -7,219 +7,103 @@ import scala.scalajs.js.annotation._
 /**
   * A sequence used as reference
   */
-@js.native
 trait SequenceReferenceSeq extends BackboneElement {
   /**
     * Contains extended information for property 'genomeBuild'.
     */
-  var _genomeBuild: js.UndefOr[Element] = js.native
+  var _genomeBuild: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'referenceSeqString'.
     */
-  var _referenceSeqString: js.UndefOr[Element] = js.native
+  var _referenceSeqString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'strand'.
     */
-  var _strand: js.UndefOr[Element] = js.native
+  var _strand: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'windowEnd'.
     */
-  var _windowEnd: js.UndefOr[Element] = js.native
+  var _windowEnd: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'windowStart'.
     */
-  var _windowStart: js.UndefOr[Element] = js.native
+  var _windowStart: js.UndefOr[Element] = js.undefined
   /**
     * Chromosome containing genetic finding
     */
-  var chromosome: js.UndefOr[CodeableConcept] = js.native
+  var chromosome: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'
     */
-  var genomeBuild: js.UndefOr[String] = js.native
+  var genomeBuild: js.UndefOr[String] = js.undefined
   /**
     * Reference identifier
     */
-  var referenceSeqId: js.UndefOr[CodeableConcept] = js.native
+  var referenceSeqId: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * A Pointer to another Sequence entity as reference sequence
     */
-  var referenceSeqPointer: js.UndefOr[Reference] = js.native
+  var referenceSeqPointer: js.UndefOr[Reference] = js.undefined
   /**
     * A string to represent reference sequence
     */
-  var referenceSeqString: js.UndefOr[String] = js.native
+  var referenceSeqString: js.UndefOr[String] = js.undefined
   /**
     * Directionality of DNA ( +1/-1)
     */
-  var strand: js.UndefOr[integer] = js.native
+  var strand: js.UndefOr[integer] = js.undefined
   /**
     * End position of the window on the reference sequence
     */
-  var windowEnd: integer = js.native
+  var windowEnd: integer
   /**
     * Start position of the window on the  reference sequence
     */
-  var windowStart: integer = js.native
+  var windowStart: integer
 }
 
 object SequenceReferenceSeq {
   @scala.inline
-  def apply(windowEnd: integer, windowStart: integer): SequenceReferenceSeq = {
+  def apply(
+    windowEnd: integer,
+    windowStart: integer,
+    _fhir_comments: js.Array[Element] = null,
+    _genomeBuild: Element = null,
+    _id: Element = null,
+    _referenceSeqString: Element = null,
+    _strand: Element = null,
+    _windowEnd: Element = null,
+    _windowStart: Element = null,
+    chromosome: CodeableConcept = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    genomeBuild: String = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    referenceSeqId: CodeableConcept = null,
+    referenceSeqPointer: Reference = null,
+    referenceSeqString: String = null,
+    strand: js.UndefOr[integer] = js.undefined
+  ): SequenceReferenceSeq = {
     val __obj = js.Dynamic.literal(windowEnd = windowEnd.asInstanceOf[js.Any], windowStart = windowStart.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_genomeBuild != null) __obj.updateDynamic("_genomeBuild")(_genomeBuild.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_referenceSeqString != null) __obj.updateDynamic("_referenceSeqString")(_referenceSeqString.asInstanceOf[js.Any])
+    if (_strand != null) __obj.updateDynamic("_strand")(_strand.asInstanceOf[js.Any])
+    if (_windowEnd != null) __obj.updateDynamic("_windowEnd")(_windowEnd.asInstanceOf[js.Any])
+    if (_windowStart != null) __obj.updateDynamic("_windowStart")(_windowStart.asInstanceOf[js.Any])
+    if (chromosome != null) __obj.updateDynamic("chromosome")(chromosome.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (genomeBuild != null) __obj.updateDynamic("genomeBuild")(genomeBuild.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (referenceSeqId != null) __obj.updateDynamic("referenceSeqId")(referenceSeqId.asInstanceOf[js.Any])
+    if (referenceSeqPointer != null) __obj.updateDynamic("referenceSeqPointer")(referenceSeqPointer.asInstanceOf[js.Any])
+    if (referenceSeqString != null) __obj.updateDynamic("referenceSeqString")(referenceSeqString.asInstanceOf[js.Any])
+    if (!js.isUndefined(strand)) __obj.updateDynamic("strand")(strand.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequenceReferenceSeq]
   }
-  @scala.inline
-  implicit class SequenceReferenceSeqOps[Self <: SequenceReferenceSeq] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWindowEnd(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindowStart(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_genomeBuild(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_genomeBuild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_genomeBuild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_genomeBuild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_referenceSeqString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_referenceSeqString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_referenceSeqString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_referenceSeqString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_strand(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_strand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_strand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_strand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_windowEnd(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_windowEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_windowEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_windowEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_windowStart(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_windowStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_windowStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_windowStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChromosome(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chromosome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChromosome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chromosome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenomeBuild(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genomeBuild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenomeBuild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genomeBuild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceSeqId(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSeqId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceSeqId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSeqId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceSeqPointer(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSeqPointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceSeqPointer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSeqPointer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceSeqString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSeqString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceSeqString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSeqString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrand(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,75 +6,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Image extends js.Object {
-  var image: js.UndefOr[String] = js.native
-  var imageOffset: js.UndefOr[Pixel] = js.native
-  var imageSize: js.UndefOr[Size] = js.native
-  var size: js.UndefOr[Size] = js.native
+  var image: js.UndefOr[String] = js.undefined
+  var imageOffset: js.UndefOr[Pixel] = js.undefined
+  var imageSize: js.UndefOr[Size] = js.undefined
+  var size: js.UndefOr[Size] = js.undefined
 }
 
 object Image {
   @scala.inline
-  def apply(): Image = {
+  def apply(image: String = null, imageOffset: Pixel = null, imageSize: Size = null, size: Size = null): Image = {
     val __obj = js.Dynamic.literal()
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (imageOffset != null) __obj.updateDynamic("imageOffset")(imageOffset.asInstanceOf[js.Any])
+    if (imageSize != null) __obj.updateDynamic("imageSize")(imageSize.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Image]
   }
-  @scala.inline
-  implicit class ImageOps[Self <: Image] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageOffset(value: Pixel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,7 +8,23 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BABYLON.WebRequest")
 @js.native
 class WebRequest ()
-  extends typingsSlinky.babylonjs.BABYLON.WebRequest
+  extends typingsSlinky.babylonjs.BABYLON.WebRequest {
+  /**
+    * Returns client's response url
+    */
+  /* CompleteClass */
+  override var responseURL: String = js.native
+  /**
+    * Returns client's status
+    */
+  /* CompleteClass */
+  override var status: Double = js.native
+  /**
+    * Returns client's status as a text
+    */
+  /* CompleteClass */
+  override var statusText: String = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.WebRequest")

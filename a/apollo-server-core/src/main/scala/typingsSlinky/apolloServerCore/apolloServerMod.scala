@@ -33,6 +33,7 @@ object apolloServerMod extends js.Object {
     var graphqlPath: String = js.native
     var initSchema: js.Any = js.native
     var initializeDocumentStore: js.Any = js.native
+    var logger: js.Any = js.native
     var parseOptions: js.Any = js.native
     var playgroundOptions: js.UndefOr[RenderPageOptions] = js.native
     var plugins: js.Array[ApolloServerPlugin[Record[String, _]]] = js.native
@@ -49,6 +50,7 @@ object apolloServerMod extends js.Object {
     /* protected */ def graphQLServerOptions(): js.Promise[GraphQLServerOptions[Record[String, _], _]] = js.native
     /* protected */ def graphQLServerOptions(integrationContextArgument: Record[String, _]): js.Promise[GraphQLServerOptions[Record[String, _], _]] = js.native
     def installSubscriptionHandlers(server: Server): Unit = js.native
+    def installSubscriptionHandlers(server: typingsSlinky.ws.mod.Server): Unit = js.native
     def setGraphQLPath(path: String): Unit = js.native
     def stop(): js.Promise[Unit] = js.native
     /* protected */ def supportsSubscriptions(): Boolean = js.native

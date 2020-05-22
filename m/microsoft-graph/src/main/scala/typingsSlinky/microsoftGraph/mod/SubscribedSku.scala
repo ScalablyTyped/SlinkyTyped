@@ -4,121 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubscribedSku extends Entity {
   // For example, 'User' or 'Company'.
-  var appliesTo: js.UndefOr[String] = js.native
+  var appliesTo: js.UndefOr[String] = js.undefined
   // For example, 'Enabled'.
-  var capabilityStatus: js.UndefOr[String] = js.native
+  var capabilityStatus: js.UndefOr[String] = js.undefined
   // The number of licenses that have been assigned.
-  var consumedUnits: js.UndefOr[Double] = js.native
+  var consumedUnits: js.UndefOr[Double] = js.undefined
   // Information about the number and status of prepaid licenses.
-  var prepaidUnits: js.UndefOr[LicenseUnitsDetail] = js.native
+  var prepaidUnits: js.UndefOr[LicenseUnitsDetail] = js.undefined
   // Information about the service plans that are available with the SKU. Not nullable
-  var servicePlans: js.UndefOr[js.Array[ServicePlanInfo]] = js.native
+  var servicePlans: js.UndefOr[js.Array[ServicePlanInfo]] = js.undefined
   // The unique identifier (GUID) for the service SKU.
-  var skuId: js.UndefOr[String] = js.native
+  var skuId: js.UndefOr[String] = js.undefined
   // The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
-  var skuPartNumber: js.UndefOr[String] = js.native
+  var skuPartNumber: js.UndefOr[String] = js.undefined
 }
 
 object SubscribedSku {
   @scala.inline
-  def apply(): SubscribedSku = {
+  def apply(
+    appliesTo: String = null,
+    capabilityStatus: String = null,
+    consumedUnits: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    prepaidUnits: LicenseUnitsDetail = null,
+    servicePlans: js.Array[ServicePlanInfo] = null,
+    skuId: String = null,
+    skuPartNumber: String = null
+  ): SubscribedSku = {
     val __obj = js.Dynamic.literal()
+    if (appliesTo != null) __obj.updateDynamic("appliesTo")(appliesTo.asInstanceOf[js.Any])
+    if (capabilityStatus != null) __obj.updateDynamic("capabilityStatus")(capabilityStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(consumedUnits)) __obj.updateDynamic("consumedUnits")(consumedUnits.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (prepaidUnits != null) __obj.updateDynamic("prepaidUnits")(prepaidUnits.asInstanceOf[js.Any])
+    if (servicePlans != null) __obj.updateDynamic("servicePlans")(servicePlans.asInstanceOf[js.Any])
+    if (skuId != null) __obj.updateDynamic("skuId")(skuId.asInstanceOf[js.Any])
+    if (skuPartNumber != null) __obj.updateDynamic("skuPartNumber")(skuPartNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscribedSku]
   }
-  @scala.inline
-  implicit class SubscribedSkuOps[Self <: SubscribedSku] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppliesTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliesTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppliesTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliesTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapabilityStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilityStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapabilityStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilityStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsumedUnits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumedUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumedUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumedUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrepaidUnits(value: LicenseUnitsDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepaidUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrepaidUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prepaidUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServicePlans(value: js.Array[ServicePlanInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePlans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServicePlans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePlans")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkuId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuPartNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuPartNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkuPartNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuPartNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.winrt.global.Windows.Networking.Sockets
 
+import typingsSlinky.winrt.Windows.Networking.HostName
+import typingsSlinky.winrt.Windows.Networking.Sockets.BandwidthStatistics
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +9,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Sockets.StreamWebSocketInformation")
 @js.native
 class StreamWebSocketInformation ()
-  extends typingsSlinky.winrt.Windows.Networking.Sockets.StreamWebSocketInformation
+  extends typingsSlinky.winrt.Windows.Networking.Sockets.StreamWebSocketInformation {
+  /* CompleteClass */
+  override var bandwidthStatistics: BandwidthStatistics = js.native
+  /* CompleteClass */
+  override var localAddress: HostName = js.native
+  /* CompleteClass */
+  override var protocol: String = js.native
+}
 

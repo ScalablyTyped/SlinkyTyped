@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Purchase extends js.Object {
   /**
     * A developer-specified string, provided during the purchase of the product.
     */
-  var developerPayload: js.UndefOr[String] = js.native
+  var developerPayload: js.UndefOr[String] = js.undefined
   /**
     * The identifier for the purchase transaction.
     */
-  var paymentID: js.UndefOr[String] = js.native
+  var paymentID: js.UndefOr[String] = js.undefined
   /**
     * The product's game-specified identifier.
     */
-  var productID: js.UndefOr[String] = js.native
+  var productID: js.UndefOr[String] = js.undefined
   /**
     * Unix timestamp of when the purchase occurred.
     */
-  var purchaseTime: js.UndefOr[String] = js.native
+  var purchaseTime: js.UndefOr[String] = js.undefined
   /**
     * A token representing the purchase that may be used to consume the purchase.
     */
-  var purchaseToken: js.UndefOr[String] = js.native
+  var purchaseToken: js.UndefOr[String] = js.undefined
   /**
     * Server-signed encoding of the purchase request.
     */
-  var signedRequest: js.UndefOr[String] = js.native
+  var signedRequest: js.UndefOr[String] = js.undefined
 }
 
 object Purchase {
   @scala.inline
-  def apply(): Purchase = {
+  def apply(
+    developerPayload: String = null,
+    paymentID: String = null,
+    productID: String = null,
+    purchaseTime: String = null,
+    purchaseToken: String = null,
+    signedRequest: String = null
+  ): Purchase = {
     val __obj = js.Dynamic.literal()
+    if (developerPayload != null) __obj.updateDynamic("developerPayload")(developerPayload.asInstanceOf[js.Any])
+    if (paymentID != null) __obj.updateDynamic("paymentID")(paymentID.asInstanceOf[js.Any])
+    if (productID != null) __obj.updateDynamic("productID")(productID.asInstanceOf[js.Any])
+    if (purchaseTime != null) __obj.updateDynamic("purchaseTime")(purchaseTime.asInstanceOf[js.Any])
+    if (purchaseToken != null) __obj.updateDynamic("purchaseToken")(purchaseToken.asInstanceOf[js.Any])
+    if (signedRequest != null) __obj.updateDynamic("signedRequest")(signedRequest.asInstanceOf[js.Any])
     __obj.asInstanceOf[Purchase]
   }
-  @scala.inline
-  implicit class PurchaseOps[Self <: Purchase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeveloperPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloperPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurchaseTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurchaseTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurchaseToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurchaseToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignedRequest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signedRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignedRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signedRequest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

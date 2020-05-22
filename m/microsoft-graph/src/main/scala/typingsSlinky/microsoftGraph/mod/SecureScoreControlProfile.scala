@@ -4,284 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SecureScoreControlProfile extends Entity {
   // Control action type (Config, Review, Behavior).
-  var actionType: js.UndefOr[String] = js.native
+  var actionType: js.UndefOr[String] = js.undefined
   // URL to where the control can be actioned.
-  var actionUrl: js.UndefOr[String] = js.native
+  var actionUrl: js.UndefOr[String] = js.undefined
   // GUID string for tenant ID.
-  var azureTenantId: js.UndefOr[String] = js.native
-  var complianceInformation: js.UndefOr[js.Array[ComplianceInformation]] = js.native
+  var azureTenantId: js.UndefOr[String] = js.undefined
+  var complianceInformation: js.UndefOr[js.Array[ComplianceInformation]] = js.undefined
   // Control action category (Identity, Data, Device, Apps, Infrastructure).
-  var controlCategory: js.UndefOr[String] = js.native
-  var controlStateUpdates: js.UndefOr[js.Array[SecureScoreControlStateUpdate]] = js.native
+  var controlCategory: js.UndefOr[String] = js.undefined
+  var controlStateUpdates: js.UndefOr[js.Array[SecureScoreControlStateUpdate]] = js.undefined
   // Flag to indicate if a control is depreciated.
-  var deprecated: js.UndefOr[Boolean] = js.native
+  var deprecated: js.UndefOr[Boolean] = js.undefined
   // Resource cost of implemmentating control (low, moderate, high).
-  var implementationCost: js.UndefOr[String] = js.native
+  var implementationCost: js.UndefOr[String] = js.undefined
   // Time at which the control profile entity was last modified. The Timestamp type represents date and time
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[String] = js.undefined
   // max attainable score for the control.
-  var maxScore: js.UndefOr[Double] = js.native
+  var maxScore: js.UndefOr[Double] = js.undefined
   // Microsoft's stack ranking of control.
-  var rank: js.UndefOr[Double] = js.native
+  var rank: js.UndefOr[Double] = js.undefined
   // Description of what the control will help remediate.
-  var remediation: js.UndefOr[String] = js.native
+  var remediation: js.UndefOr[String] = js.undefined
   // Description of the impact on users of the remediation.
-  var remediationImpact: js.UndefOr[String] = js.native
+  var remediationImpact: js.UndefOr[String] = js.undefined
   // Service that owns the control (Exchange, Sharepoint, Azure AD).
-  var service: js.UndefOr[String] = js.native
+  var service: js.UndefOr[String] = js.undefined
   // List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
-  var threats: js.UndefOr[js.Array[String]] = js.native
-  var tier: js.UndefOr[String] = js.native
+  var threats: js.UndefOr[js.Array[String]] = js.undefined
+  var tier: js.UndefOr[String] = js.undefined
   // Title of the control.
-  var title: js.UndefOr[String] = js.native
-  var userImpact: js.UndefOr[String] = js.native
-  var vendorInformation: js.UndefOr[SecurityVendorInformation] = js.native
+  var title: js.UndefOr[String] = js.undefined
+  var userImpact: js.UndefOr[String] = js.undefined
+  var vendorInformation: js.UndefOr[SecurityVendorInformation] = js.undefined
 }
 
 object SecureScoreControlProfile {
   @scala.inline
-  def apply(): SecureScoreControlProfile = {
+  def apply(
+    actionType: String = null,
+    actionUrl: String = null,
+    azureTenantId: String = null,
+    complianceInformation: js.Array[ComplianceInformation] = null,
+    controlCategory: String = null,
+    controlStateUpdates: js.Array[SecureScoreControlStateUpdate] = null,
+    deprecated: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    implementationCost: String = null,
+    lastModifiedDateTime: String = null,
+    maxScore: js.UndefOr[Double] = js.undefined,
+    rank: js.UndefOr[Double] = js.undefined,
+    remediation: String = null,
+    remediationImpact: String = null,
+    service: String = null,
+    threats: js.Array[String] = null,
+    tier: String = null,
+    title: String = null,
+    userImpact: String = null,
+    vendorInformation: SecurityVendorInformation = null
+  ): SecureScoreControlProfile = {
     val __obj = js.Dynamic.literal()
+    if (actionType != null) __obj.updateDynamic("actionType")(actionType.asInstanceOf[js.Any])
+    if (actionUrl != null) __obj.updateDynamic("actionUrl")(actionUrl.asInstanceOf[js.Any])
+    if (azureTenantId != null) __obj.updateDynamic("azureTenantId")(azureTenantId.asInstanceOf[js.Any])
+    if (complianceInformation != null) __obj.updateDynamic("complianceInformation")(complianceInformation.asInstanceOf[js.Any])
+    if (controlCategory != null) __obj.updateDynamic("controlCategory")(controlCategory.asInstanceOf[js.Any])
+    if (controlStateUpdates != null) __obj.updateDynamic("controlStateUpdates")(controlStateUpdates.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (implementationCost != null) __obj.updateDynamic("implementationCost")(implementationCost.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxScore)) __obj.updateDynamic("maxScore")(maxScore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rank)) __obj.updateDynamic("rank")(rank.get.asInstanceOf[js.Any])
+    if (remediation != null) __obj.updateDynamic("remediation")(remediation.asInstanceOf[js.Any])
+    if (remediationImpact != null) __obj.updateDynamic("remediationImpact")(remediationImpact.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (threats != null) __obj.updateDynamic("threats")(threats.asInstanceOf[js.Any])
+    if (tier != null) __obj.updateDynamic("tier")(tier.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (userImpact != null) __obj.updateDynamic("userImpact")(userImpact.asInstanceOf[js.Any])
+    if (vendorInformation != null) __obj.updateDynamic("vendorInformation")(vendorInformation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecureScoreControlProfile]
   }
-  @scala.inline
-  implicit class SecureScoreControlProfileOps[Self <: SecureScoreControlProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAzureTenantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("azureTenantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAzureTenantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("azureTenantId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplianceInformation(value: js.Array[ComplianceInformation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceInformation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceInformation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlStateUpdates(value: js.Array[SecureScoreControlStateUpdate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlStateUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlStateUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlStateUpdates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImplementationCost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationCost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImplementationCost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationCost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemediation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remediation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemediation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remediation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemediationImpact(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remediationImpact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemediationImpact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remediationImpact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserImpact(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userImpact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserImpact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userImpact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVendorInformation(value: SecurityVendorInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVendorInformation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorInformation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

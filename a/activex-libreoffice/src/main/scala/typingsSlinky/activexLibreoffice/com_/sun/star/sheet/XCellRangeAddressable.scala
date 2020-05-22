@@ -8,20 +8,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** represents a cell which can be addressed with a {@link com.sun.star.table.CellRangeAddress} . */
-@js.native
 trait XCellRangeAddressable extends XInterface {
   /**
     * returns the address of the cell range in the spreadsheet document.
     *
     * The {@link com.sun.star.table.CellRangeAddress} can be used to address the range within its document.
     */
-  val RangeAddress: CellRangeAddress = js.native
+  val RangeAddress: CellRangeAddress
   /**
     * returns the address of the cell range in the spreadsheet document.
     *
     * The {@link com.sun.star.table.CellRangeAddress} can be used to address the range within its document.
     */
-  def getRangeAddress(): CellRangeAddress = js.native
+  def getRangeAddress(): CellRangeAddress
 }
 
 object XCellRangeAddressable {
@@ -36,25 +35,5 @@ object XCellRangeAddressable {
     val __obj = js.Dynamic.literal(RangeAddress = RangeAddress.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getRangeAddress = js.Any.fromFunction0(getRangeAddress), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCellRangeAddressable]
   }
-  @scala.inline
-  implicit class XCellRangeAddressableOps[Self <: XCellRangeAddressable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRangeAddress(value: CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetRangeAddress(value: () => CellRangeAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRangeAddress")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

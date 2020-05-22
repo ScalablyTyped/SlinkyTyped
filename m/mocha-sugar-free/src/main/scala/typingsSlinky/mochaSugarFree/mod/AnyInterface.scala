@@ -30,10 +30,10 @@ trait AnyInterface extends js.Object {
   @JSName("describe")
   var describe_Original: SuiteFunction = js.native
   /**
-  		 * The detected Mocha interface.
-  		 *
-  		 * @default "bdd"
-  		 */
+    * The detected Mocha interface.
+    *
+    * @default "bdd"
+    */
   var detectedInterface: bdd | tdd | qunit = js.native
   @JSName("it")
   var it_Original: TestFunction = js.native

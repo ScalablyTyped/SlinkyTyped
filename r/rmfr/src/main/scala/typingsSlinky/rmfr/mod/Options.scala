@@ -1,9 +1,9 @@
 package typingsSlinky.rmfr.mod
 
 import typingsSlinky.glob.mod.IOptions
+import typingsSlinky.node.fsMod.Mode
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.Stats
-import typingsSlinky.rimraf.anon.Fn0
 import typingsSlinky.rimraf.anon.FnCall
 import typingsSlinky.rimraf.anon.FnCallPathOptions
 import typingsSlinky.rimraf.anon.Typeofchmod
@@ -19,232 +19,64 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined rimraf.rimraf.Options & {  glob ? :rimraf.rimraf.Options['glob'] | true,   disableGlob ? :never} */
-@js.native
 trait Options extends js.Object {
-  var chmod: js.UndefOr[Typeofchmod] = js.native
-  var chmodSync: js.UndefOr[FnCall] = js.native
+  var chmod: js.UndefOr[Typeofchmod] = js.undefined
+  var chmodSync: js.UndefOr[js.Function2[/* path */ PathLike, /* mode */ Mode, Unit]] = js.undefined
   /** @default false */
-  var disableGlob: js.UndefOr[Boolean] = js.native
-  var emfileWait: js.UndefOr[Double] = js.native
-  var glob: js.UndefOr[(IOptions | `false`) with (js.UndefOr[IOptions | `false` | `true`])] = js.native
-  var lstat: js.UndefOr[Typeoflstat] = js.native
-  var lstatSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.native
-  var maxBusyTries: js.UndefOr[Double] = js.native
-  var readdir: js.UndefOr[Typeofreaddir] = js.native
-  var readdirSync: js.UndefOr[Fn0] = js.native
-  var rmdir: js.UndefOr[Typeofrmdir] = js.native
-  var rmdirSync: js.UndefOr[FnCallPathOptions] = js.native
-  var stat: js.UndefOr[Typeofstat] = js.native
-  var statSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.native
-  var unlink: js.UndefOr[Typeofunlink] = js.native
-  var unlinkSync: js.UndefOr[js.Function1[/* path */ PathLike, Unit]] = js.native
+  var disableGlob: js.UndefOr[Boolean] = js.undefined
+  var emfileWait: js.UndefOr[Double] = js.undefined
+  var glob: js.UndefOr[(IOptions | `false`) with (js.UndefOr[IOptions | `false` | `true`])] = js.undefined
+  var lstat: js.UndefOr[Typeoflstat] = js.undefined
+  var lstatSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.undefined
+  var maxBusyTries: js.UndefOr[Double] = js.undefined
+  var readdir: js.UndefOr[Typeofreaddir] = js.undefined
+  var readdirSync: js.UndefOr[FnCallPathOptions] = js.undefined
+  var rmdir: js.UndefOr[Typeofrmdir] = js.undefined
+  var rmdirSync: js.UndefOr[FnCall] = js.undefined
+  var stat: js.UndefOr[Typeofstat] = js.undefined
+  var statSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.undefined
+  var unlink: js.UndefOr[Typeofunlink] = js.undefined
+  var unlinkSync: js.UndefOr[js.Function1[/* path */ PathLike, Unit]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    chmod: Typeofchmod = null,
+    chmodSync: (/* path */ PathLike, /* mode */ Mode) => Unit = null,
+    disableGlob: js.UndefOr[Boolean] = js.undefined,
+    emfileWait: js.UndefOr[Double] = js.undefined,
+    glob: (IOptions | `false`) with (js.UndefOr[IOptions | `false` | `true`]) = null,
+    lstat: Typeoflstat = null,
+    lstatSync: /* path */ PathLike => Stats = null,
+    maxBusyTries: js.UndefOr[Double] = js.undefined,
+    readdir: Typeofreaddir = null,
+    readdirSync: FnCallPathOptions = null,
+    rmdir: Typeofrmdir = null,
+    rmdirSync: FnCall = null,
+    stat: Typeofstat = null,
+    statSync: /* path */ PathLike => Stats = null,
+    unlink: Typeofunlink = null,
+    unlinkSync: /* path */ PathLike => Unit = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (chmod != null) __obj.updateDynamic("chmod")(chmod.asInstanceOf[js.Any])
+    if (chmodSync != null) __obj.updateDynamic("chmodSync")(js.Any.fromFunction2(chmodSync))
+    if (!js.isUndefined(disableGlob)) __obj.updateDynamic("disableGlob")(disableGlob.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(emfileWait)) __obj.updateDynamic("emfileWait")(emfileWait.get.asInstanceOf[js.Any])
+    if (glob != null) __obj.updateDynamic("glob")(glob.asInstanceOf[js.Any])
+    if (lstat != null) __obj.updateDynamic("lstat")(lstat.asInstanceOf[js.Any])
+    if (lstatSync != null) __obj.updateDynamic("lstatSync")(js.Any.fromFunction1(lstatSync))
+    if (!js.isUndefined(maxBusyTries)) __obj.updateDynamic("maxBusyTries")(maxBusyTries.get.asInstanceOf[js.Any])
+    if (readdir != null) __obj.updateDynamic("readdir")(readdir.asInstanceOf[js.Any])
+    if (readdirSync != null) __obj.updateDynamic("readdirSync")(readdirSync.asInstanceOf[js.Any])
+    if (rmdir != null) __obj.updateDynamic("rmdir")(rmdir.asInstanceOf[js.Any])
+    if (rmdirSync != null) __obj.updateDynamic("rmdirSync")(rmdirSync.asInstanceOf[js.Any])
+    if (stat != null) __obj.updateDynamic("stat")(stat.asInstanceOf[js.Any])
+    if (statSync != null) __obj.updateDynamic("statSync")(js.Any.fromFunction1(statSync))
+    if (unlink != null) __obj.updateDynamic("unlink")(unlink.asInstanceOf[js.Any])
+    if (unlinkSync != null) __obj.updateDynamic("unlinkSync")(js.Any.fromFunction1(unlinkSync))
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChmod(value: Typeofchmod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chmod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChmod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chmod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChmodSync(value: FnCall): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chmodSync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChmodSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chmodSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableGlob(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableGlob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableGlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableGlob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmfileWait(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emfileWait")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmfileWait: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emfileWait")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlob(value: (IOptions | `false`) with (js.UndefOr[IOptions | `false` | `true`])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLstat(value: Typeoflstat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lstat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLstat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lstat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLstatSync(value: /* path */ PathLike => Stats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lstatSync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLstatSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lstatSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBusyTries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBusyTries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBusyTries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBusyTries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReaddir(value: Typeofreaddir): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readdir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReaddir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readdir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReaddirSync(value: Fn0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readdirSync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReaddirSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readdirSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRmdir(value: Typeofrmdir): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rmdir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRmdir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rmdir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRmdirSync(value: FnCallPathOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rmdirSync")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRmdirSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rmdirSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStat(value: Typeofstat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatSync(value: /* path */ PathLike => Stats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statSync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStatSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statSync")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnlink(value: Typeofunlink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnlink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnlinkSync(value: /* path */ PathLike => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlinkSync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnlinkSync: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlinkSync")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

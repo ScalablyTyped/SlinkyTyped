@@ -39,89 +39,22 @@ trait SchemaBatchUpdateValuesByDataFilterResponse extends js.Object {
 
 object SchemaBatchUpdateValuesByDataFilterResponse {
   @scala.inline
-  def apply(): SchemaBatchUpdateValuesByDataFilterResponse = {
+  def apply(
+    responses: js.Array[SchemaUpdateValuesByDataFilterResponse] = null,
+    spreadsheetId: String = null,
+    totalUpdatedCells: js.UndefOr[Double] = js.undefined,
+    totalUpdatedColumns: js.UndefOr[Double] = js.undefined,
+    totalUpdatedRows: js.UndefOr[Double] = js.undefined,
+    totalUpdatedSheets: js.UndefOr[Double] = js.undefined
+  ): SchemaBatchUpdateValuesByDataFilterResponse = {
     val __obj = js.Dynamic.literal()
+    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
+    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalUpdatedCells)) __obj.updateDynamic("totalUpdatedCells")(totalUpdatedCells.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalUpdatedColumns)) __obj.updateDynamic("totalUpdatedColumns")(totalUpdatedColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalUpdatedRows)) __obj.updateDynamic("totalUpdatedRows")(totalUpdatedRows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalUpdatedSheets)) __obj.updateDynamic("totalUpdatedSheets")(totalUpdatedSheets.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchUpdateValuesByDataFilterResponse]
   }
-  @scala.inline
-  implicit class SchemaBatchUpdateValuesByDataFilterResponseOps[Self <: SchemaBatchUpdateValuesByDataFilterResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResponses(value: js.Array[SchemaUpdateValuesByDataFilterResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpreadsheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpreadsheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalUpdatedCells(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalUpdatedCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalUpdatedColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalUpdatedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalUpdatedRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalUpdatedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalUpdatedSheets(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedSheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalUpdatedSheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalUpdatedSheets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

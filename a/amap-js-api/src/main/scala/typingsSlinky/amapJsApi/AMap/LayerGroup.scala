@@ -51,7 +51,7 @@ trait LayerGroup[L] extends Layer {
   ): Boolean = js.native
   def reload(): this.type = js.native
   /**
-    * 	从集合中删除传入的图层实例
+    *     从集合中删除传入的图层实例
     * @param layer 图层
     */
   def removeLayer(layer: L): this.type = js.native

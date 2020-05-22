@@ -7,5 +7,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InfoPath.DateObject")
 @js.native
 class DateObject protected ()
-  extends typingsSlinky.activexInfopath.InfoPath.DateObject
+  extends typingsSlinky.activexInfopath.InfoPath.DateObject {
+  /* CompleteClass */
+  @JSName("InfoPath.DateObject_typekey")
+  override var InfoPathDotDateObject_typekey: typingsSlinky.activexInfopath.InfoPath.DateObject = js.native
+  /* CompleteClass */
+  override def AddDays(pvarDate: js.Any, pvarDays: js.Any): js.Any = js.native
+  /* CompleteClass */
+  override def AddSeconds(pvarTime: js.Any, pvarSeconds: js.Any): js.Any = js.native
+  /* CompleteClass */
+  override def Now(): js.Any = js.native
+  /* CompleteClass */
+  override def Today(): js.Any = js.native
+}
 

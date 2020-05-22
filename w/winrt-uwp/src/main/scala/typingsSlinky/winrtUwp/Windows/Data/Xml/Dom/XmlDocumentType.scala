@@ -5,114 +5,113 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information associated with the document type. */
-@js.native
 trait XmlDocumentType extends js.Object {
   /** Gets the list of attributes of this node. */
-  var attributes: XmlNamedNodeMap = js.native
+  var attributes: XmlNamedNodeMap
   /** Gets a list of children in the current node. */
-  var childNodes: XmlNodeList = js.native
+  var childNodes: XmlNodeList
   /** Gets a list of the entities declared in the <!DOCTYPE> declaration. */
-  var entities: XmlNamedNodeMap = js.native
+  var entities: XmlNamedNodeMap
   /** Gets the first child node. */
-  var firstChild: IXmlNode = js.native
+  var firstChild: IXmlNode
   /** Gets the text from inside the XML. */
-  var innerText: String = js.native
+  var innerText: String
   /** Gets the last child node. */
-  var lastChild: IXmlNode = js.native
+  var lastChild: IXmlNode
   /** Gets the local name, which is the local part of a qualified name. This is called the local part in Namespaces in XML. */
-  var localName: js.Any = js.native
+  var localName: js.Any
   /** A list of the general entities, both external and internal, that are present in this document. */
-  var name: String = js.native
+  var name: String
   /** Returns the Uniform Resource Identifier (URI) for the namespace. */
-  var namespaceUri: js.Any = js.native
+  var namespaceUri: js.Any
   /** Gets the next sibling of the node in the parent's child list. */
-  var nextSibling: IXmlNode = js.native
+  var nextSibling: IXmlNode
   /** Returns the qualified name for attribute, document type, element, entity, or notation nodes. Returns a fixed string for all other node types. */
-  var nodeName: String = js.native
+  var nodeName: String
   /** Gets the XML Document Object Model (DOM) node type, which determines valid values and whether the node can have child nodes. */
-  var nodeType: NodeType = js.native
+  var nodeType: NodeType
   /** Gets or sets the text associated with the node. */
-  var nodeValue: js.Any = js.native
+  var nodeValue: js.Any
   /** Returns a list of the DtdNotation members that are present in the document type declaration. */
-  var notations: XmlNamedNodeMap = js.native
+  var notations: XmlNamedNodeMap
   /** Returns the root of the document that contains the node. */
-  var ownerDocument: XmlDocument = js.native
+  var ownerDocument: XmlDocument
   /** Gets the parent node of the node instance. */
-  var parentNode: IXmlNode = js.native
+  var parentNode: IXmlNode
   /** Gets or sets the namespace prefix. */
-  var prefix: js.Any = js.native
+  var prefix: js.Any
   /** Gets the previous sibling of the node in the parent's child list. */
-  var previousSibling: IXmlNode = js.native
+  var previousSibling: IXmlNode
   /**
     * Appends a new child node as the last child of the node.
     * @param newChild The new child node to be appended to the end of the list of children of this node.
     * @return The new child node successfully appended to the list. If null, no object is created.
     */
-  def appendChild(newChild: IXmlNode): IXmlNode = js.native
+  def appendChild(newChild: IXmlNode): IXmlNode
   /**
     * Clones a new node.
     * @param deep A flag that indicates whether to recursively clone all nodes that are descendants of this node. If true, this method creates a clone of the complete tree below this node. If false, this method clones this node and its attributes only.
     * @return The newly created clone node.
     */
-  def cloneNode(deep: Boolean): IXmlNode = js.native
+  def cloneNode(deep: Boolean): IXmlNode
   /**
     * Returns the XML representation of the node and all its descendants.
     * @return The XML representation of the node and all its descendants.
     */
-  def getXml(): String = js.native
+  def getXml(): String
   /**
     * Determines whether a node has children.
     * @return True if this node has children; otherwise false.
     */
-  def hasChildNodes(): Boolean = js.native
+  def hasChildNodes(): Boolean
   /**
     * Inserts a child node to the left of the specified node, or at the end of the list.
     * @param newChild The address of the new node to be inserted. The node passed here must be a valid child of the current XML DOM document node. For example, if the current node is an attribute, you cannot pass another attribute in the newChild parameter, because an attribute cannot have an attribute as a child. If newChild is a DOCUMENT_FRAGMENT node type, all its children are inserted in order before referenceChild.
     * @param referenceChild The reference node. The node specified is where the newChild node is to be inserted to the left as the preceding sibling in the child list. The node passed here must be a either a child node of the current node or null. If the value is null, the newChild node is inserted at the end of the child list. If the referenceChild node is not a child of the current node, an error is returned.
     * @return On success, the child node that was inserted. If null, no object is created.
     */
-  def insertBefore(newChild: IXmlNode, referenceChild: IXmlNode): IXmlNode = js.native
+  def insertBefore(newChild: IXmlNode, referenceChild: IXmlNode): IXmlNode
   /** Normalizes all descendant elements by combining two or more adjacent text nodes into one unified text node. */
-  def normalize(): Unit = js.native
+  def normalize(): Unit
   /**
     * Removes the specified child node from the list of children and returns it.
     * @param childNode The child node to be removed from the list of children of this node.
     * @return The removed child node. If null, the childNode object is not removed.
     */
-  def removeChild(childNode: IXmlNode): IXmlNode = js.native
+  def removeChild(childNode: IXmlNode): IXmlNode
   /**
     * Replaces the specified old child node with the supplied new child node.
     * @param newChild The new child that is to replace the old child. If null, the referenceChild parameter is removed without a replacement.
     * @param referenceChild The old child that is to be replaced by the new child.
     * @return The old child that is replaced. If null, no object is created.
     */
-  def replaceChild(newChild: IXmlNode, referenceChild: IXmlNode): IXmlNode = js.native
+  def replaceChild(newChild: IXmlNode, referenceChild: IXmlNode): IXmlNode
   /**
     * Applies the specified pattern-matching operation to this node's context and returns the list of matching nodes as an XmlNodeList .
     * @param xpath Specifies an XPath expression.
     * @return The collection of nodes selected by applying the given pattern-matching operation. If no nodes are selected, this method returns an empty collection.
     */
-  def selectNodes(xpath: String): XmlNodeList = js.native
+  def selectNodes(xpath: String): XmlNodeList
   /**
     * Applies the specified pattern-matching operation to this node's context and returns the list of matching nodes as an XmlNodeList .
     * @param xpath Specifies an XPath expression.
     * @param namespaces Contains a string that specifies namespaces for use in XPath expressions when it is necessary to define new namespaces externally. Namespaces are defined in the XML style, as a space-separated list of namespace declaration attributes. You can use this property to set the default namespace as well.
     * @return The collection of nodes selected by applying the given pattern-matching operation. If no nodes are selected, returns an empty collection.
     */
-  def selectNodesNS(xpath: String, namespaces: js.Any): XmlNodeList = js.native
+  def selectNodesNS(xpath: String, namespaces: js.Any): XmlNodeList
   /**
     * Applies the specified pattern-matching operation to this node's context and returns the first matching node.
     * @param xpath Specifies an XPath expression.
     * @return The first node that matches the given pattern-matching operation. If no nodes match the expression, the method returns a null value.
     */
-  def selectSingleNode(xpath: String): IXmlNode = js.native
+  def selectSingleNode(xpath: String): IXmlNode
   /**
     * Applies the specified pattern-matching operation to this node's context and returns the first matching node.
     * @param xpath Specifies an XPath expression.
     * @param namespaces Contains a string that specifies the namespaces to use in XPath expressions when it is necessary to define new namespaces externally. Namespaces are defined in the XML style, as a space-separated list of namespace declaration attributes. You can use this property to set the default namespace as well.
     * @return The first node that matches the given pattern-matching operation. If no nodes match the expression, this method returns a null value.
     */
-  def selectSingleNodeNS(xpath: String, namespaces: js.Any): IXmlNode = js.native
+  def selectSingleNodeNS(xpath: String, namespaces: js.Any): IXmlNode
 }
 
 object XmlDocumentType {
@@ -152,193 +151,5 @@ object XmlDocumentType {
     val __obj = js.Dynamic.literal(appendChild = js.Any.fromFunction1(appendChild), attributes = attributes.asInstanceOf[js.Any], childNodes = childNodes.asInstanceOf[js.Any], cloneNode = js.Any.fromFunction1(cloneNode), entities = entities.asInstanceOf[js.Any], firstChild = firstChild.asInstanceOf[js.Any], getXml = js.Any.fromFunction0(getXml), hasChildNodes = js.Any.fromFunction0(hasChildNodes), innerText = innerText.asInstanceOf[js.Any], insertBefore = js.Any.fromFunction2(insertBefore), lastChild = lastChild.asInstanceOf[js.Any], localName = localName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], namespaceUri = namespaceUri.asInstanceOf[js.Any], nextSibling = nextSibling.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], nodeValue = nodeValue.asInstanceOf[js.Any], normalize = js.Any.fromFunction0(normalize), notations = notations.asInstanceOf[js.Any], ownerDocument = ownerDocument.asInstanceOf[js.Any], parentNode = parentNode.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], previousSibling = previousSibling.asInstanceOf[js.Any], removeChild = js.Any.fromFunction1(removeChild), replaceChild = js.Any.fromFunction2(replaceChild), selectNodes = js.Any.fromFunction1(selectNodes), selectNodesNS = js.Any.fromFunction2(selectNodesNS), selectSingleNode = js.Any.fromFunction1(selectSingleNode), selectSingleNodeNS = js.Any.fromFunction2(selectSingleNodeNS))
     __obj.asInstanceOf[XmlDocumentType]
   }
-  @scala.inline
-  implicit class XmlDocumentTypeOps[Self <: XmlDocumentType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppendChild(value: IXmlNode => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: XmlNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildNodes(value: XmlNodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloneNode(value: Boolean => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEntities(value: XmlNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstChild(value: IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetXml(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getXml")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasChildNodes(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInnerText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInsertBefore(value: (IXmlNode, IXmlNode) => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLastChild(value: IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalName(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespaceUri(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextSibling(value: IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeType(value: NodeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNotations(value: XmlNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerDocument(value: XmlDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentNode(value: IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviousSibling(value: IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoveChild(value: IXmlNode => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReplaceChild(value: (IXmlNode, IXmlNode) => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSelectNodes(value: String => XmlNodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSelectNodesNS(value: (String, js.Any) => XmlNodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodesNS")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSelectSingleNode(value: String => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSingleNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSelectSingleNodeNS(value: (String, js.Any) => IXmlNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSingleNodeNS")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

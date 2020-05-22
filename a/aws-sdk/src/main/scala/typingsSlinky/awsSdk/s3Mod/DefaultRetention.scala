@@ -22,53 +22,16 @@ trait DefaultRetention extends js.Object {
 
 object DefaultRetention {
   @scala.inline
-  def apply(): DefaultRetention = {
+  def apply(
+    Days: js.UndefOr[Days] = js.undefined,
+    Mode: ObjectLockRetentionMode = null,
+    Years: js.UndefOr[Years] = js.undefined
+  ): DefaultRetention = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Days)) __obj.updateDynamic("Days")(Days.get.asInstanceOf[js.Any])
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(Years)) __obj.updateDynamic("Years")(Years.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultRetention]
   }
-  @scala.inline
-  implicit class DefaultRetentionOps[Self <: DefaultRetention] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDays(value: Days): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ObjectLockRetentionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYears(value: Years): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Years")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYears: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Years")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

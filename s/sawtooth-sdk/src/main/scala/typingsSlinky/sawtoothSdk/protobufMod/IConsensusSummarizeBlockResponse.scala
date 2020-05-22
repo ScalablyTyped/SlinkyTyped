@@ -5,63 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IConsensusSummarizeBlockResponse extends js.Object {
   /** ConsensusSummarizeBlockResponse status */
-  var status: js.UndefOr[Status | Null] = js.native
+  var status: js.UndefOr[Status | Null] = js.undefined
   /** ConsensusSummarizeBlockResponse summary */
-  var summary: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var summary: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
 }
 
 object IConsensusSummarizeBlockResponse {
   @scala.inline
-  def apply(): IConsensusSummarizeBlockResponse = {
+  def apply(
+    status: js.UndefOr[Null | Status] = js.undefined,
+    summary: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined
+  ): IConsensusSummarizeBlockResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(summary)) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConsensusSummarizeBlockResponse]
   }
-  @scala.inline
-  implicit class IConsensusSummarizeBlockResponseOps[Self <: IConsensusSummarizeBlockResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(null)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(null)
-        ret
-    }
-  }
-  
 }
 

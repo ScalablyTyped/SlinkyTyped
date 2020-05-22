@@ -27,6 +27,8 @@ object listBucketMetricsConfigurationsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListBucketMetricsConfigurationsInput) = this()
+    /* CompleteClass */
+    override val input: ListBucketMetricsConfigurationsInput = js.native
     val middlewareStack: MiddlewareStack[
         ListBucketMetricsConfigurationsInput, 
         ListBucketMetricsConfigurationsOutput, 
@@ -35,6 +37,11 @@ object listBucketMetricsConfigurationsCommandMod extends js.Object {
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[ListBucketMetricsConfigurationsInput, ListBucketMetricsConfigurationsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[ListBucketMetricsConfigurationsInput, ListBucketMetricsConfigurationsOutput] = js.native
   }

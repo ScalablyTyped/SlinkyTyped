@@ -18,35 +18,10 @@ trait EncryptionConfiguration extends js.Object {
 
 object EncryptionConfiguration {
   @scala.inline
-  def apply(EncryptionOption: EncryptionOption): EncryptionConfiguration = {
+  def apply(EncryptionOption: EncryptionOption, KmsKey: String = null): EncryptionConfiguration = {
     val __obj = js.Dynamic.literal(EncryptionOption = EncryptionOption.asInstanceOf[js.Any])
+    if (KmsKey != null) __obj.updateDynamic("KmsKey")(KmsKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptionConfiguration]
   }
-  @scala.inline
-  implicit class EncryptionConfigurationOps[Self <: EncryptionConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptionOption(value: EncryptionOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKmsKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

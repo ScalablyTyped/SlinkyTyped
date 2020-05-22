@@ -12,8 +12,26 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  implicit def apply(value: OptionsWithQuery): Options = value.asInstanceOf[Options]
+  def OptionsWithQuery(
+    query: String,
+    pageEnd: js.UndefOr[Double] = js.undefined,
+    pageStart: js.UndefOr[Double] = js.undefined
+  ): Options = {
+    val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageEnd)) __obj.updateDynamic("pageEnd")(pageEnd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageStart)) __obj.updateDynamic("pageStart")(pageStart.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Options]
+  }
   @scala.inline
-  implicit def apply(value: OptionsWithSearch): Options = value.asInstanceOf[Options]
+  def OptionsWithSearch(
+    search: String,
+    pageEnd: js.UndefOr[Double] = js.undefined,
+    pageStart: js.UndefOr[Double] = js.undefined
+  ): Options = {
+    val __obj = js.Dynamic.literal(search = search.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageEnd)) __obj.updateDynamic("pageEnd")(pageEnd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageStart)) __obj.updateDynamic("pageStart")(pageStart.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Options]
+  }
 }
 

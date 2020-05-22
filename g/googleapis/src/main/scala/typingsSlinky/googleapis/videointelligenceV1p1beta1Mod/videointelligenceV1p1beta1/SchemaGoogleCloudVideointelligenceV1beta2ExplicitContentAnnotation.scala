@@ -19,29 +19,10 @@ trait SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation extends
 
 object SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation = {
+  def apply(frames: js.Array[SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentFrame] = null): SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (frames != null) __obj.updateDynamic("frames")(frames.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotationOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrames(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

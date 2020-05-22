@@ -15,7 +15,18 @@ object global extends js.Object {
   
   @js.native
   class VRDisplayCapabilities ()
-    extends typingsSlinky.webvrApi.VRDisplayCapabilities
+    extends typingsSlinky.webvrApi.VRDisplayCapabilities {
+    /* CompleteClass */
+    override val canPresent: Boolean = js.native
+    /* CompleteClass */
+    override val hasExternalDisplay: Boolean = js.native
+    /* CompleteClass */
+    override val hasOrientation: Boolean = js.native
+    /* CompleteClass */
+    override val hasPosition: Boolean = js.native
+    /* CompleteClass */
+    override val maxLayers: Double = js.native
+  }
   
   @js.native
   class VRDisplayEvent protected ()
@@ -25,19 +36,66 @@ object global extends js.Object {
   
   @js.native
   class VREyeParameters ()
-    extends typingsSlinky.webvrApi.VREyeParameters
+    extends typingsSlinky.webvrApi.VREyeParameters {
+    /** @deprecated */
+    /* CompleteClass */
+    override val fieldOfView: typingsSlinky.webvrApi.VRFieldOfView = js.native
+    /* CompleteClass */
+    override val offset: js.typedarray.Float32Array = js.native
+    /* CompleteClass */
+    override val renderHeight: Double = js.native
+    /* CompleteClass */
+    override val renderWidth: Double = js.native
+  }
   
   @js.native
   class VRFieldOfView ()
-    extends typingsSlinky.webvrApi.VRFieldOfView
+    extends typingsSlinky.webvrApi.VRFieldOfView {
+    /* CompleteClass */
+    override val downDegrees: Double = js.native
+    /* CompleteClass */
+    override val leftDegrees: Double = js.native
+    /* CompleteClass */
+    override val rightDegrees: Double = js.native
+    /* CompleteClass */
+    override val upDegrees: Double = js.native
+  }
   
   @js.native
   class VRFrameData ()
-    extends typingsSlinky.webvrApi.VRFrameData
+    extends typingsSlinky.webvrApi.VRFrameData {
+    /* CompleteClass */
+    override val leftProjectionMatrix: js.typedarray.Float32Array = js.native
+    /* CompleteClass */
+    override val leftViewMatrix: js.typedarray.Float32Array = js.native
+    /* CompleteClass */
+    override val pose: typingsSlinky.webvrApi.VRPose = js.native
+    /* CompleteClass */
+    override val rightProjectionMatrix: js.typedarray.Float32Array = js.native
+    /* CompleteClass */
+    override val rightViewMatrix: js.typedarray.Float32Array = js.native
+    /* CompleteClass */
+    override val timestamp: Double = js.native
+  }
   
   @js.native
   class VRPose ()
-    extends typingsSlinky.webvrApi.VRPose
+    extends typingsSlinky.webvrApi.VRPose {
+    /* CompleteClass */
+    override val angularAcceleration: js.typedarray.Float32Array | Null = js.native
+    /* CompleteClass */
+    override val angularVelocity: js.typedarray.Float32Array | Null = js.native
+    /* CompleteClass */
+    override val linearAcceleration: js.typedarray.Float32Array | Null = js.native
+    /* CompleteClass */
+    override val linearVelocity: js.typedarray.Float32Array | Null = js.native
+    /* CompleteClass */
+    override val orientation: js.typedarray.Float32Array | Null = js.native
+    /* CompleteClass */
+    override val position: js.typedarray.Float32Array | Null = js.native
+    /* CompleteClass */
+    override val timestamp: Double = js.native
+  }
   
   @js.native
   object VRDisplay

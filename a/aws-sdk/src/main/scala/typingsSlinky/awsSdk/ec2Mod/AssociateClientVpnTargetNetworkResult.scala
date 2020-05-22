@@ -18,41 +18,11 @@ trait AssociateClientVpnTargetNetworkResult extends js.Object {
 
 object AssociateClientVpnTargetNetworkResult {
   @scala.inline
-  def apply(): AssociateClientVpnTargetNetworkResult = {
+  def apply(AssociationId: String = null, Status: AssociationStatus = null): AssociateClientVpnTargetNetworkResult = {
     val __obj = js.Dynamic.literal()
+    if (AssociationId != null) __obj.updateDynamic("AssociationId")(AssociationId.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateClientVpnTargetNetworkResult]
   }
-  @scala.inline
-  implicit class AssociateClientVpnTargetNetworkResultOps[Self <: AssociateClientVpnTargetNetworkResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: AssociationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

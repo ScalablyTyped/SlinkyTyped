@@ -17,29 +17,10 @@ trait SchemaQuotaProperties extends js.Object {
 
 object SchemaQuotaProperties {
   @scala.inline
-  def apply(): SchemaQuotaProperties = {
+  def apply(quotaMode: String = null): SchemaQuotaProperties = {
     val __obj = js.Dynamic.literal()
+    if (quotaMode != null) __obj.updateDynamic("quotaMode")(quotaMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuotaProperties]
   }
-  @scala.inline
-  implicit class SchemaQuotaPropertiesOps[Self <: SchemaQuotaProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuotaMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

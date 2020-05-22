@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KnockoutPunchesStatic extends js.Object {
-  def enableAll(): Unit = js.native
+  def enableAll(): Unit
 }
 
 object KnockoutPunchesStatic {
@@ -15,19 +14,5 @@ object KnockoutPunchesStatic {
     val __obj = js.Dynamic.literal(enableAll = js.Any.fromFunction0(enableAll))
     __obj.asInstanceOf[KnockoutPunchesStatic]
   }
-  @scala.inline
-  implicit class KnockoutPunchesStaticOps[Self <: KnockoutPunchesStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAll")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

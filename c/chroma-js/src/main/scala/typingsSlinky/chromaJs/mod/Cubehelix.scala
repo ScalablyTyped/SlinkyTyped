@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Cubehelix extends js.Object {
   /**
     * gamma factor can be used to emphasise low or high intensity values, default=1
     */
-  def gamma(g: Double): Cubehelix = js.native
+  def gamma(g: Double): Cubehelix
   /**
     * lightness range: default: [0,1] (black -> white)
     */
-  def lightness(l: js.Array[Double]): Cubehelix = js.native
+  def lightness(l: js.Array[Double]): Cubehelix
   /**
     * number (and direction) of hue rotations (e.g. 1=360°, 1.5=`540°``), default=-1.5
     */
-  def rotations(r: Double): Cubehelix = js.native
+  def rotations(r: Double): Cubehelix
   /**
     * You can call cubehelix.scale() to use the cube-helix through the chroma.scale interface.
     */
-  def scale(): Scale[Color] = js.native
+  def scale(): Scale[Color]
   /**
     * Set start color for hue rotation, default=300
     */
-  def start(s: Double): Cubehelix = js.native
+  def start(s: Double): Cubehelix
 }
 
 object Cubehelix {
@@ -40,43 +39,5 @@ object Cubehelix {
     val __obj = js.Dynamic.literal(gamma = js.Any.fromFunction1(gamma), lightness = js.Any.fromFunction1(lightness), rotations = js.Any.fromFunction1(rotations), scale = js.Any.fromFunction0(scale), start = js.Any.fromFunction1(start))
     __obj.asInstanceOf[Cubehelix]
   }
-  @scala.inline
-  implicit class CubehelixOps[Self <: Cubehelix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGamma(value: Double => Cubehelix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gamma")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLightness(value: js.Array[Double] => Cubehelix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lightness")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRotations(value: Double => Cubehelix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotations")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withScale(value: () => Scale[Color]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double => Cubehelix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

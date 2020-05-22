@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 /**
   * File
   */
-@js.native
 trait IFile extends js.Object
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MiddlewareOptions extends js.Object {
-  var queues: js.Array[QueueOptions with ConnectionOptions] = js.native
+  var queues: js.Array[QueueOptions with ConnectionOptions]
 }
 
 object MiddlewareOptions {
@@ -15,19 +14,5 @@ object MiddlewareOptions {
     val __obj = js.Dynamic.literal(queues = queues.asInstanceOf[js.Any])
     __obj.asInstanceOf[MiddlewareOptions]
   }
-  @scala.inline
-  implicit class MiddlewareOptionsOps[Self <: MiddlewareOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQueues(value: js.Array[QueueOptions with ConnectionOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

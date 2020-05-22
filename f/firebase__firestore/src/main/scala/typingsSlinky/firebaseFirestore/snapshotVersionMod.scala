@@ -21,10 +21,8 @@ object snapshotVersionMod extends js.Object {
   /* static members */
   @js.native
   object SnapshotVersion extends js.Object {
-    val MIN: SnapshotVersion = js.native
-    def forDeletedDoc(): SnapshotVersion = js.native
-    def fromMicroseconds(value: Double): SnapshotVersion = js.native
     def fromTimestamp(value: Timestamp): SnapshotVersion = js.native
+    def min(): SnapshotVersion = js.native
   }
   
 }

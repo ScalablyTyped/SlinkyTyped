@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestMatricesResource extends js.Object {
   /**
     * Cancels unfinished test executions in a test matrix.
@@ -20,7 +19,7 @@ trait TestMatricesResource extends js.Object {
     * - INVALID_ARGUMENT - if the request is malformed
     * - NOT_FOUND - if the Test Matrix does not exist
     */
-  def cancel(request: Accesstoken): Request[CancelTestMatrixResponse] = js.native
+  def cancel(request: Accesstoken): Request[CancelTestMatrixResponse]
   /**
     * Request to run a matrix of tests according to the given specifications.
     * Unsupported environments will be returned in the state UNSUPPORTED.
@@ -32,7 +31,7 @@ trait TestMatricesResource extends js.Object {
     * - INVALID_ARGUMENT - if the request is malformed or if the matrix expands
     * to more than 200 supported executions
     */
-  def create(request: Alt): Request[TestMatrix] = js.native
+  def create(request: Alt): Request[TestMatrix]
   /**
     * Check the status of a test matrix.
     *
@@ -42,7 +41,7 @@ trait TestMatricesResource extends js.Object {
     * - INVALID_ARGUMENT - if the request is malformed
     * - NOT_FOUND - if the Test Matrix does not exist
     */
-  def get(request: Accesstoken): Request[TestMatrix] = js.native
+  def get(request: Accesstoken): Request[TestMatrix]
 }
 
 object TestMatricesResource {
@@ -55,31 +54,5 @@ object TestMatricesResource {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[TestMatricesResource]
   }
-  @scala.inline
-  implicit class TestMatricesResourceOps[Self <: TestMatricesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Accesstoken => Request[CancelTestMatrixResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: Alt => Request[TestMatrix]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Accesstoken => Request[TestMatrix]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

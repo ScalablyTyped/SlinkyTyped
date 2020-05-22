@@ -325,6 +325,11 @@ object gpuParticleSystemMod extends js.Object {
       */
     @JSName("clone")
     def clone_GPUParticleSystem(name: String, newEmitter: js.Any): GPUParticleSystem = js.native
+    /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
     def dispose(disposeTexture: Boolean): Unit = js.native
     /**
       * Gets the maximum number of particles active at the same time.

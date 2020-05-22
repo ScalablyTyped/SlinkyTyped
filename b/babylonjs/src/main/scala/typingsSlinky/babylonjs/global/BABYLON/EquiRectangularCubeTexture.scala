@@ -48,6 +48,11 @@ class EquiRectangularCubeTexture protected ()
         js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
       ]
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

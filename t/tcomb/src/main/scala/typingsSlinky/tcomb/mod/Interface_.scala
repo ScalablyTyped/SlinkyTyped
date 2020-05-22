@@ -9,9 +9,7 @@ import scala.scalajs.js.annotation._
 // interface
 //
 @js.native
-trait Interface_[T]
-  extends Type[T]
-     with StructMixin {
+trait Interface_[T] extends Type[T] {
   @JSName("meta")
   var meta_Interface_ : Props = js.native
   @JSName("update")

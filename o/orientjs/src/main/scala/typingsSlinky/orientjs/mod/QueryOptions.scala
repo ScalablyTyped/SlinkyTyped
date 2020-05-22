@@ -9,114 +9,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryOptions extends js.Object {
-  var `class`: js.UndefOr[String] = js.native
-  var fetchPlan: js.UndefOr[js.Any] = js.native
-  var language: js.UndefOr[SQL | Javascript] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var mode: js.UndefOr[s | a | l] = js.native
-  var params: js.UndefOr[js.Any] = js.native
-  var token: js.UndefOr[js.Any] = js.native
+  var `class`: js.UndefOr[String] = js.undefined
+  var fetchPlan: js.UndefOr[js.Any] = js.undefined
+  var language: js.UndefOr[SQL | Javascript] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var mode: js.UndefOr[s | a | l] = js.undefined
+  var params: js.UndefOr[js.Any] = js.undefined
+  var token: js.UndefOr[js.Any] = js.undefined
 }
 
 object QueryOptions {
   @scala.inline
-  def apply(): QueryOptions = {
+  def apply(
+    `class`: String = null,
+    fetchPlan: js.Any = null,
+    language: SQL | Javascript = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    mode: s | a | l = null,
+    params: js.Any = null,
+    token: js.Any = null
+  ): QueryOptions = {
     val __obj = js.Dynamic.literal()
+    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (fetchPlan != null) __obj.updateDynamic("fetchPlan")(fetchPlan.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOptions]
   }
-  @scala.inline
-  implicit class QueryOptionsOps[Self <: QueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchPlan(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchPlan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchPlan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchPlan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: SQL | Javascript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: s | a | l): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -47,448 +47,120 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojchart.ojChartSeriesSettableProperties> */
-@js.native
 trait ojChartSeriesSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var areaColor: js.UndefOr[String] = js.native
-  var areaSvgClassName: js.UndefOr[String] = js.native
-  var areaSvgStyle: js.UndefOr[js.Object] = js.native
-  var assignedToY2: js.UndefOr[on | off] = js.native
-  var borderColor: js.UndefOr[String] = js.native
-  var borderWidth: js.UndefOr[Double] = js.native
-  var boxPlot: js.UndefOr[Q2Color] = js.native
-  var categories: js.UndefOr[js.Array[String]] = js.native
-  var color: js.UndefOr[String] = js.native
-  var displayInLegend: js.UndefOr[on | off | auto] = js.native
-  var drilling: js.UndefOr[on | off | inherit] = js.native
-  var lineStyle: js.UndefOr[dotted | dashed | solid] = js.native
+  var areaColor: js.UndefOr[String] = js.undefined
+  var areaSvgClassName: js.UndefOr[String] = js.undefined
+  var areaSvgStyle: js.UndefOr[js.Object] = js.undefined
+  var assignedToY2: js.UndefOr[on | off] = js.undefined
+  var borderColor: js.UndefOr[String] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.undefined
+  var boxPlot: js.UndefOr[Q2Color] = js.undefined
+  var categories: js.UndefOr[js.Array[String]] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var displayInLegend: js.UndefOr[on | off | auto] = js.undefined
+  var drilling: js.UndefOr[on | off | inherit] = js.undefined
+  var lineStyle: js.UndefOr[dotted | dashed | solid] = js.undefined
   var lineType: js.UndefOr[
     straight | curved | stepped | centeredStepped | segmented | centeredSegmented | none | auto
-  ] = js.native
-  var lineWidth: js.UndefOr[Double] = js.native
-  var markerColor: js.UndefOr[String] = js.native
-  var markerDisplayed: js.UndefOr[on | off | auto] = js.native
+  ] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.undefined
+  var markerColor: js.UndefOr[String] = js.undefined
+  var markerDisplayed: js.UndefOr[on | off | auto] = js.undefined
   var markerShape: js.UndefOr[
     circle | diamond | human | plus | square | star | triangleDown | triangleUp | auto | String
-  ] = js.native
-  var markerSize: js.UndefOr[Double] = js.native
-  var markerSvgClassName: js.UndefOr[String] = js.native
-  var markerSvgStyle: js.UndefOr[js.Object] = js.native
-  var name: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var markerSize: js.UndefOr[Double] = js.undefined
+  var markerSvgClassName: js.UndefOr[String] = js.undefined
+  var markerSvgStyle: js.UndefOr[js.Object] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
   var pattern: js.UndefOr[
     smallChecker | smallCrosshatch | smallDiagonalLeft | smallDiagonalRight | smallDiamond | smallTriangle | largeChecker | largeCrosshatch | largeDiagonalLeft | largeDiagonalRight | largeDiamond | largeTriangle | auto
-  ] = js.native
-  var pieSliceExplode: js.UndefOr[Double] = js.native
-  var shortDesc: js.UndefOr[String] = js.native
-  var source: js.UndefOr[String] = js.native
-  var sourceHover: js.UndefOr[String] = js.native
-  var sourceHoverSelected: js.UndefOr[String] = js.native
-  var sourceSelected: js.UndefOr[String] = js.native
-  var stackCategory: js.UndefOr[String] = js.native
-  var svgClassName: js.UndefOr[String] = js.native
-  var svgStyle: js.UndefOr[js.Object] = js.native
-  var `type`: js.UndefOr[bar | line | area | lineWithArea | candlestick | boxPlot | auto] = js.native
+  ] = js.undefined
+  var pieSliceExplode: js.UndefOr[Double] = js.undefined
+  var shortDesc: js.UndefOr[String] = js.undefined
+  var source: js.UndefOr[String] = js.undefined
+  var sourceHover: js.UndefOr[String] = js.undefined
+  var sourceHoverSelected: js.UndefOr[String] = js.undefined
+  var sourceSelected: js.UndefOr[String] = js.undefined
+  var stackCategory: js.UndefOr[String] = js.undefined
+  var svgClassName: js.UndefOr[String] = js.undefined
+  var svgStyle: js.UndefOr[js.Object] = js.undefined
+  var `type`: js.UndefOr[bar | line | area | lineWithArea | candlestick | boxPlot | auto] = js.undefined
 }
 
 object ojChartSeriesSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojChartSeriesSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    areaColor: String = null,
+    areaSvgClassName: String = null,
+    areaSvgStyle: js.Object = null,
+    assignedToY2: on | off = null,
+    borderColor: String = null,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    boxPlot: Q2Color = null,
+    categories: js.Array[String] = null,
+    color: String = null,
+    displayInLegend: on | off | auto = null,
+    drilling: on | off | inherit = null,
+    lineStyle: dotted | dashed | solid = null,
+    lineType: straight | curved | stepped | centeredStepped | segmented | centeredSegmented | none | auto = null,
+    lineWidth: js.UndefOr[Double] = js.undefined,
+    markerColor: String = null,
+    markerDisplayed: on | off | auto = null,
+    markerShape: circle | diamond | human | plus | square | star | triangleDown | triangleUp | auto | String = null,
+    markerSize: js.UndefOr[Double] = js.undefined,
+    markerSvgClassName: String = null,
+    markerSvgStyle: js.Object = null,
+    name: String = null,
+    pattern: smallChecker | smallCrosshatch | smallDiagonalLeft | smallDiagonalRight | smallDiamond | smallTriangle | largeChecker | largeCrosshatch | largeDiagonalLeft | largeDiagonalRight | largeDiamond | largeTriangle | auto = null,
+    pieSliceExplode: js.UndefOr[Double] = js.undefined,
+    shortDesc: String = null,
+    source: String = null,
+    sourceHover: String = null,
+    sourceHoverSelected: String = null,
+    sourceSelected: String = null,
+    stackCategory: String = null,
+    svgClassName: String = null,
+    svgStyle: js.Object = null,
+    `type`: bar | line | area | lineWithArea | candlestick | boxPlot | auto = null
+  ): ojChartSeriesSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (areaColor != null) __obj.updateDynamic("areaColor")(areaColor.asInstanceOf[js.Any])
+    if (areaSvgClassName != null) __obj.updateDynamic("areaSvgClassName")(areaSvgClassName.asInstanceOf[js.Any])
+    if (areaSvgStyle != null) __obj.updateDynamic("areaSvgStyle")(areaSvgStyle.asInstanceOf[js.Any])
+    if (assignedToY2 != null) __obj.updateDynamic("assignedToY2")(assignedToY2.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (boxPlot != null) __obj.updateDynamic("boxPlot")(boxPlot.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (displayInLegend != null) __obj.updateDynamic("displayInLegend")(displayInLegend.asInstanceOf[js.Any])
+    if (drilling != null) __obj.updateDynamic("drilling")(drilling.asInstanceOf[js.Any])
+    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
+    if (lineType != null) __obj.updateDynamic("lineType")(lineType.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineWidth)) __obj.updateDynamic("lineWidth")(lineWidth.get.asInstanceOf[js.Any])
+    if (markerColor != null) __obj.updateDynamic("markerColor")(markerColor.asInstanceOf[js.Any])
+    if (markerDisplayed != null) __obj.updateDynamic("markerDisplayed")(markerDisplayed.asInstanceOf[js.Any])
+    if (markerShape != null) __obj.updateDynamic("markerShape")(markerShape.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerSize)) __obj.updateDynamic("markerSize")(markerSize.get.asInstanceOf[js.Any])
+    if (markerSvgClassName != null) __obj.updateDynamic("markerSvgClassName")(markerSvgClassName.asInstanceOf[js.Any])
+    if (markerSvgStyle != null) __obj.updateDynamic("markerSvgStyle")(markerSvgStyle.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (!js.isUndefined(pieSliceExplode)) __obj.updateDynamic("pieSliceExplode")(pieSliceExplode.get.asInstanceOf[js.Any])
+    if (shortDesc != null) __obj.updateDynamic("shortDesc")(shortDesc.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (sourceHover != null) __obj.updateDynamic("sourceHover")(sourceHover.asInstanceOf[js.Any])
+    if (sourceHoverSelected != null) __obj.updateDynamic("sourceHoverSelected")(sourceHoverSelected.asInstanceOf[js.Any])
+    if (sourceSelected != null) __obj.updateDynamic("sourceSelected")(sourceSelected.asInstanceOf[js.Any])
+    if (stackCategory != null) __obj.updateDynamic("stackCategory")(stackCategory.asInstanceOf[js.Any])
+    if (svgClassName != null) __obj.updateDynamic("svgClassName")(svgClassName.asInstanceOf[js.Any])
+    if (svgStyle != null) __obj.updateDynamic("svgStyle")(svgStyle.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojChartSeriesSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojChartSeriesSettablePropertiesLenientOps[Self <: ojChartSeriesSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAreaColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreaColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreaSvgClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaSvgClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreaSvgClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaSvgClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreaSvgStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaSvgStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreaSvgStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaSvgStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignedToY2(value: on | off): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedToY2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignedToY2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignedToY2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxPlot(value: Q2Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxPlot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxPlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxPlot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayInLegend(value: on | off | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayInLegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayInLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayInLegend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrilling(value: on | off | inherit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drilling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrilling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drilling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: dotted | dashed | solid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineType(value: straight | curved | stepped | centeredStepped | segmented | centeredSegmented | none | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDisplayed(value: on | off | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerDisplayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDisplayed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerDisplayed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerShape(value: circle | diamond | human | plus | square | star | triangleDown | triangleUp | auto | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerSvgClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSvgClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerSvgClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSvgClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerSvgStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSvgStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerSvgStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSvgStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(
-      value: smallChecker | smallCrosshatch | smallDiagonalLeft | smallDiagonalRight | smallDiamond | smallTriangle | largeChecker | largeCrosshatch | largeDiagonalLeft | largeDiagonalRight | largeDiamond | largeTriangle | auto
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPieSliceExplode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieSliceExplode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPieSliceExplode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieSliceExplode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceHover(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceHoverSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHoverSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceHoverSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceHoverSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: bar | line | area | lineWithArea | candlestick | boxPlot | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,24 +9,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CirclesResource extends js.Object {
   /** Add a person to a circle. Google+ limits certain circle operations, including the number of circle adds. Learn More. */
-  def addPeople(request: CircleId): Request[Circle] = js.native
+  def addPeople(request: CircleId): Request[Circle]
   /** Get a circle. */
-  def get(request: Key): Request[Circle] = js.native
+  def get(request: Key): Request[Circle]
   /** Create a new circle for the authenticated user. */
-  def insert(request: Oauthtoken): Request[Circle] = js.native
+  def insert(request: Oauthtoken): Request[Circle]
   /** List all of the circles for a user. */
-  def list(request: Fields): Request[CircleFeed] = js.native
+  def list(request: Fields): Request[CircleFeed]
   /** Update a circle's description. This method supports patch semantics. */
-  def patch(request: Key): Request[Circle] = js.native
+  def patch(request: Key): Request[Circle]
   /** Delete a circle. */
-  def remove(request: Key): Request[Unit] = js.native
+  def remove(request: Key): Request[Unit]
   /** Remove a person from a circle. */
-  def removePeople(request: CircleId): Request[Unit] = js.native
+  def removePeople(request: CircleId): Request[Unit]
   /** Update a circle's description. */
-  def update(request: Key): Request[Circle] = js.native
+  def update(request: Key): Request[Circle]
 }
 
 object CirclesResource {
@@ -44,61 +43,5 @@ object CirclesResource {
     val __obj = js.Dynamic.literal(addPeople = js.Any.fromFunction1(addPeople), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), remove = js.Any.fromFunction1(remove), removePeople = js.Any.fromFunction1(removePeople), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[CirclesResource]
   }
-  @scala.inline
-  implicit class CirclesResourceOps[Self <: CirclesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddPeople(value: CircleId => Request[Circle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPeople")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Key => Request[Circle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: Oauthtoken => Request[Circle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Fields => Request[CircleFeed]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Key => Request[Circle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Key => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePeople(value: CircleId => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePeople")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Key => Request[Circle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

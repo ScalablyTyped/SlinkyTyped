@@ -19,18 +19,17 @@ import scala.scalajs.js.annotation._
   * @see NoSuchFilterRequest
   * @see com.sun.star.task.XInteractionAbort
   */
-@js.native
 trait XInteractionFilterSelect extends XInteractionContinuation {
   /** used by detection to get selected filter */
-  var Filter: String = js.native
+  var Filter: String
   /** used by detection to get selected filter */
-  def getFilter(): String = js.native
+  def getFilter(): String
   /**
     * used by interaction to set selected filter
     *
     * This value must be saved till another one will be set and must be provided on {@link getFilter()} for interest users.
     */
-  def setFilter(Name: String): Unit = js.native
+  def setFilter(Name: String): Unit
 }
 
 object XInteractionFilterSelect {
@@ -47,31 +46,5 @@ object XInteractionFilterSelect {
     val __obj = js.Dynamic.literal(Filter = Filter.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getFilter = js.Any.fromFunction0(getFilter), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), select = js.Any.fromFunction0(select), setFilter = js.Any.fromFunction1(setFilter))
     __obj.asInstanceOf[XInteractionFilterSelect]
   }
-  @scala.inline
-  implicit class XInteractionFilterSelectOps[Self <: XInteractionFilterSelect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetFilter(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetFilter(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilter")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

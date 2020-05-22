@@ -9,11 +9,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientStoryApi[StoryFnReturnType] extends js.Object {
-  def addDecorator(decorator: DecoratorFunction[StoryFnReturnType]): StoryApi[StoryFnReturnType] = js.native
-  def addParameters(parameter: ParametersjsxAddonParamet): StoryApi[StoryFnReturnType] = js.native
-  def storiesOf(kind: String, module: NodeModule): StoryApi[StoryFnReturnType] with AddWithJSX[StoryFnReturnType] = js.native
+  def addDecorator(decorator: DecoratorFunction[StoryFnReturnType]): StoryApi[StoryFnReturnType]
+  def addParameters(parameter: ParametersjsxAddonParamet): StoryApi[StoryFnReturnType]
+  def storiesOf(kind: String, module: NodeModule): StoryApi[StoryFnReturnType] with AddWithJSX[StoryFnReturnType]
 }
 
 object ClientStoryApi {
@@ -26,31 +25,5 @@ object ClientStoryApi {
     val __obj = js.Dynamic.literal(addDecorator = js.Any.fromFunction1(addDecorator), addParameters = js.Any.fromFunction1(addParameters), storiesOf = js.Any.fromFunction2(storiesOf))
     __obj.asInstanceOf[ClientStoryApi[StoryFnReturnType]]
   }
-  @scala.inline
-  implicit class ClientStoryApiOps[Self[storyfnreturntype] <: ClientStoryApi[storyfnreturntype], StoryFnReturnType] (val x: Self[StoryFnReturnType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[StoryFnReturnType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[StoryFnReturnType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[StoryFnReturnType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[StoryFnReturnType] with Other]
-    @scala.inline
-    def withAddDecorator(value: DecoratorFunction[StoryFnReturnType] => StoryApi[StoryFnReturnType]): Self[StoryFnReturnType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addDecorator")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddParameters(value: ParametersjsxAddonParamet => StoryApi[StoryFnReturnType]): Self[StoryFnReturnType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addParameters")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStoriesOf(value: (String, NodeModule) => StoryApi[StoryFnReturnType] with AddWithJSX[StoryFnReturnType]): Self[StoryFnReturnType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storiesOf")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

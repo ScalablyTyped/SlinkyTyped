@@ -30,77 +30,20 @@ trait AttachmentContent extends js.Object {
 
 object AttachmentContent {
   @scala.inline
-  def apply(): AttachmentContent = {
+  def apply(
+    Hash: AttachmentHash = null,
+    HashType: AttachmentHashType = null,
+    Name: AttachmentName = null,
+    Size: js.UndefOr[ContentLength] = js.undefined,
+    Url: AttachmentUrl = null
+  ): AttachmentContent = {
     val __obj = js.Dynamic.literal()
+    if (Hash != null) __obj.updateDynamic("Hash")(Hash.asInstanceOf[js.Any])
+    if (HashType != null) __obj.updateDynamic("HashType")(HashType.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(Size)) __obj.updateDynamic("Size")(Size.get.asInstanceOf[js.Any])
+    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentContent]
   }
-  @scala.inline
-  implicit class AttachmentContentOps[Self <: AttachmentContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHash(value: AttachmentHash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHashType(value: AttachmentHashType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HashType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHashType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HashType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: AttachmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: ContentLength): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: AttachmentUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

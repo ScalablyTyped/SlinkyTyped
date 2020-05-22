@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeocoderOptions extends js.Object {
   /**
     * Attribution text to include.
@@ -15,7 +14,7 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: 'Geocoding by <a href="https://mapzen.com/projects/search/">Mapzen</a>'
     */
-  var attribution: js.UndefOr[String] = js.native
+  var attribution: js.UndefOr[String] = js.undefined
   /**
     * If true, suggested results are fetched on each keystroke.
     * If false, this is disabled and users must obtain results
@@ -23,7 +22,7 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: true
     */
-  var autocomplete: js.UndefOr[Boolean] = js.native
+  var autocomplete: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, search is bounded by the current map view.
     * You may also provide a custom bounding box in form of a LatLngBounds object.
@@ -31,14 +30,14 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: false.
     */
-  var bounds: js.UndefOr[LatLngBounds_ | Boolean] = js.native
+  var bounds: js.UndefOr[LatLngBounds_ | Boolean] = js.undefined
   /**
     * If true, the search input is always expanded.
     * It does not collapse into a button-only state.
     *
     * Default value: false
     */
-  var expanded: js.UndefOr[Boolean] = js.native
+  var expanded: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, search and autocomplete prioritizes results near the center
     * of the current view.
@@ -47,7 +46,7 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: 'true'.
     */
-  var focus: js.UndefOr[LatLng_ | Boolean] = js.native
+  var focus: js.UndefOr[LatLng_ | Boolean] = js.undefined
   /**
     * If true, the input box will expand to take up the full width of the map container.
     * If an integer breakpoint is provided,
@@ -55,14 +54,14 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: 650
     */
-  var fullWidth: js.UndefOr[Double | Boolean] = js.native
+  var fullWidth: js.UndefOr[Double | Boolean] = js.undefined
   /**
     * Filters results by layers (documentation).
     * If left blank, results will come from all available layers.
     *
     * Default value: null.
     */
-  var layers: js.UndefOr[String | js.Array[_]] = js.native
+  var layers: js.UndefOr[String | js.Array[_]] = js.undefined
   /**
     * If true, search results drops Leaflet's default blue markers onto the map.
     * You may customize this marker's appearance and
@@ -70,13 +69,13 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: true
     */
-  var markers: js.UndefOr[MarkerOptions | Boolean] = js.native
+  var markers: js.UndefOr[MarkerOptions | Boolean] = js.undefined
   /**
     * If true, highlighting a search result pans the map to that location.
     *
     * Default value: true
     */
-  var panToPoint: js.UndefOr[Boolean] = js.native
+  var panToPoint: js.UndefOr[Boolean] = js.undefined
   /**
     * An object of key-value pairs which will be serialized
     * into query parameters that will be passed to the API.
@@ -94,7 +93,7 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: null.
     */
-  var params: js.UndefOr[js.Object] = js.native
+  var params: js.UndefOr[js.Object] = js.undefined
   /**
     * If true, selected results will make a request to the service /place endpoint.
     * If false, this is disabled.
@@ -103,14 +102,14 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: false
     */
-  var place: js.UndefOr[Boolean] = js.native
+  var place: js.UndefOr[Boolean] = js.undefined
   /**
     * Placeholder text to display in the search input box.
     * Set to blank or null to disable.
     *
     * Default value: 'Search'
     */
-  var placeholder: js.UndefOr[String] = js.native
+  var placeholder: js.UndefOr[String] = js.undefined
   /**
     * If true, an icon is used to indicate a polygonal result,
     * matching any non-"venue" or non-"address" layer type.
@@ -119,7 +118,7 @@ trait GeocoderOptions extends js.Object {
     *
     * Default value: true
     */
-  var polygonIcon: js.UndefOr[Boolean | String] = js.native
+  var polygonIcon: js.UndefOr[Boolean | String] = js.undefined
   /**
     * The position of the control (one of the map corners).
     * Can be 'topleft', 'topright', 'bottomleft', or 'bottomright'.
@@ -128,228 +127,59 @@ trait GeocoderOptions extends js.Object {
     */
   var position: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PositionString */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * Tooltip text to display on the search icon. Set to blank or null to disable.
     *
     * Default value: 'Search'
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * Host endpoint for a Pelias-compatible search API.
     *
     * Default value: 'https://search.mapzen.com/v1'.
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object GeocoderOptions {
   @scala.inline
-  def apply(): GeocoderOptions = {
+  def apply(
+    attribution: String = null,
+    autocomplete: js.UndefOr[Boolean] = js.undefined,
+    bounds: LatLngBounds_ | Boolean = null,
+    expanded: js.UndefOr[Boolean] = js.undefined,
+    focus: LatLng_ | Boolean = null,
+    fullWidth: Double | Boolean = null,
+    layers: String | js.Array[_] = null,
+    markers: MarkerOptions | Boolean = null,
+    panToPoint: js.UndefOr[Boolean] = js.undefined,
+    params: js.Object = null,
+    place: js.UndefOr[Boolean] = js.undefined,
+    placeholder: String = null,
+    polygonIcon: Boolean | String = null,
+    position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PositionString */ js.Any = null,
+    title: String = null,
+    url: String = null
+  ): GeocoderOptions = {
     val __obj = js.Dynamic.literal()
+    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
+    if (!js.isUndefined(autocomplete)) __obj.updateDynamic("autocomplete")(autocomplete.get.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (!js.isUndefined(expanded)) __obj.updateDynamic("expanded")(expanded.get.asInstanceOf[js.Any])
+    if (focus != null) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
+    if (fullWidth != null) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
+    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
+    if (!js.isUndefined(panToPoint)) __obj.updateDynamic("panToPoint")(panToPoint.get.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (!js.isUndefined(place)) __obj.updateDynamic("place")(place.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (polygonIcon != null) __obj.updateDynamic("polygonIcon")(polygonIcon.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeocoderOptions]
   }
-  @scala.inline
-  implicit class GeocoderOptionsOps[Self <: GeocoderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttribution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutocomplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounds(value: LatLngBounds_ | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocus(value: LatLng_ | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullWidth(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayers(value: String | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkers(value: MarkerOptions | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanToPoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panToPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanToPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panToPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolygonIcon(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolygonIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PositionString */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

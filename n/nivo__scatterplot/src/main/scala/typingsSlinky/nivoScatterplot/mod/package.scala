@@ -32,6 +32,7 @@ package object mod {
     slinky.core.TagMod[scala.Any]
   ]
   type Scale = js.Function1[/* value */ typingsSlinky.nivoScatterplot.mod.Value, scala.Double]
+  type Value = scala.Double | java.lang.String | js.Date
   type ValueFormatter = js.Function1[
     /* value */ typingsSlinky.nivoScatterplot.mod.Value, 
     java.lang.String | scala.Double

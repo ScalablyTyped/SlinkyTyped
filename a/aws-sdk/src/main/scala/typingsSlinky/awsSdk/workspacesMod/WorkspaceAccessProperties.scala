@@ -38,101 +38,24 @@ trait WorkspaceAccessProperties extends js.Object {
 
 object WorkspaceAccessProperties {
   @scala.inline
-  def apply(): WorkspaceAccessProperties = {
+  def apply(
+    DeviceTypeAndroid: AccessPropertyValue = null,
+    DeviceTypeChromeOs: AccessPropertyValue = null,
+    DeviceTypeIos: AccessPropertyValue = null,
+    DeviceTypeOsx: AccessPropertyValue = null,
+    DeviceTypeWeb: AccessPropertyValue = null,
+    DeviceTypeWindows: AccessPropertyValue = null,
+    DeviceTypeZeroClient: AccessPropertyValue = null
+  ): WorkspaceAccessProperties = {
     val __obj = js.Dynamic.literal()
+    if (DeviceTypeAndroid != null) __obj.updateDynamic("DeviceTypeAndroid")(DeviceTypeAndroid.asInstanceOf[js.Any])
+    if (DeviceTypeChromeOs != null) __obj.updateDynamic("DeviceTypeChromeOs")(DeviceTypeChromeOs.asInstanceOf[js.Any])
+    if (DeviceTypeIos != null) __obj.updateDynamic("DeviceTypeIos")(DeviceTypeIos.asInstanceOf[js.Any])
+    if (DeviceTypeOsx != null) __obj.updateDynamic("DeviceTypeOsx")(DeviceTypeOsx.asInstanceOf[js.Any])
+    if (DeviceTypeWeb != null) __obj.updateDynamic("DeviceTypeWeb")(DeviceTypeWeb.asInstanceOf[js.Any])
+    if (DeviceTypeWindows != null) __obj.updateDynamic("DeviceTypeWindows")(DeviceTypeWindows.asInstanceOf[js.Any])
+    if (DeviceTypeZeroClient != null) __obj.updateDynamic("DeviceTypeZeroClient")(DeviceTypeZeroClient.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspaceAccessProperties]
   }
-  @scala.inline
-  implicit class WorkspaceAccessPropertiesOps[Self <: WorkspaceAccessProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceTypeAndroid(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeAndroid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeAndroid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeAndroid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTypeChromeOs(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeChromeOs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeChromeOs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeChromeOs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTypeIos(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeIos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeIos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeIos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTypeOsx(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeOsx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeOsx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeOsx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTypeWeb(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeWeb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeWeb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeWeb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTypeWindows(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeWindows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeWindows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeWindows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceTypeZeroClient(value: AccessPropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeZeroClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceTypeZeroClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceTypeZeroClient")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

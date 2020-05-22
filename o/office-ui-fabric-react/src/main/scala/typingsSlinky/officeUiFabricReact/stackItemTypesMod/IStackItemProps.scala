@@ -9,130 +9,76 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.initial
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.stretch
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.unset
+import typingsSlinky.uifabricFoundation.ihtmlslotsMod.IHTMLSlot
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStyleableComponentProps
+import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
+import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
+import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IStackItemProps
   extends IStackItemSlots
      with IStyleableComponentProps[IStackItemProps, IStackItemTokens, IStackItemStyles] {
   /**
     * Defines how to align the StackItem along the x-axis (for vertical Stacks) or the y-axis (for horizontal Stacks).
     */
-  var align: js.UndefOr[auto | stretch | baseline | start | center | end] = js.native
+  var align: js.UndefOr[auto | stretch | baseline | start | center | end] = js.undefined
   /**
     * Defines whether the StackItem should be prevented from shrinking.
     * This can be used to prevent a StackItem from shrinking when it is inside of a Stack that has shrinking items.
     * @defaultvalue false
     */
-  var disableShrink: js.UndefOr[Boolean] = js.native
+  var disableShrink: js.UndefOr[Boolean] = js.undefined
   /**
     * Defines how much to grow the StackItem in proportion to its siblings.
     */
-  var grow: js.UndefOr[Boolean | Double | inherit | initial | unset] = js.native
+  var grow: js.UndefOr[Boolean | Double | inherit | initial | unset] = js.undefined
   /**
     * Defines order of the StackItem.
     * @defaultvalue 0
     */
-  var order: js.UndefOr[Double | String] = js.native
+  var order: js.UndefOr[Double | String] = js.undefined
   /**
     * Defines at what ratio should the StackItem shrink to fit the available space.
     */
-  var shrink: js.UndefOr[Boolean | Double | inherit | initial | unset] = js.native
+  var shrink: js.UndefOr[Boolean | Double | inherit | initial | unset] = js.undefined
   /**
     * Defines whether the StackItem should take up 100% of the height of its parent.
     * @defaultvalue true
     */
-  var verticalFill: js.UndefOr[Boolean] = js.native
+  var verticalFill: js.UndefOr[Boolean] = js.undefined
 }
 
 object IStackItemProps {
   @scala.inline
-  def apply(): IStackItemProps = {
+  def apply(
+    align: auto | stretch | baseline | start | center | end = null,
+    className: String = null,
+    disableShrink: js.UndefOr[Boolean] = js.undefined,
+    grow: Boolean | Double | inherit | initial | unset = null,
+    order: Double | String = null,
+    root: IHTMLSlot = null,
+    shrink: Boolean | Double | inherit | initial | unset = null,
+    styles: IStylesFunctionOrObject[IStackItemProps, IStackItemTokens, IStackItemStyles] = null,
+    theme: ITheme = null,
+    tokens: ITokenFunctionOrObject[IStackItemProps, IStackItemTokens] = null,
+    verticalFill: js.UndefOr[Boolean] = js.undefined
+  ): IStackItemProps = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableShrink)) __obj.updateDynamic("disableShrink")(disableShrink.get.asInstanceOf[js.Any])
+    if (grow != null) __obj.updateDynamic("grow")(grow.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (shrink != null) __obj.updateDynamic("shrink")(shrink.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tokens != null) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
+    if (!js.isUndefined(verticalFill)) __obj.updateDynamic("verticalFill")(verticalFill.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStackItemProps]
   }
-  @scala.inline
-  implicit class IStackItemPropsOps[Self <: IStackItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: auto | stretch | baseline | start | center | end): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableShrink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableShrink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableShrink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableShrink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrow(value: Boolean | Double | inherit | initial | unset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShrink(value: Boolean | Double | inherit | initial | unset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShrink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalFill(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalFill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalFill")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

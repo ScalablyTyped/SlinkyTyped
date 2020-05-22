@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LDOptionsBase extends js.Object {
   /**
     * Whether all user attributes (except the user key) should be marked as private, and
@@ -13,20 +12,20 @@ trait LDOptionsBase extends js.Object {
     *
     * By default, this is false.
     */
-  var allAttributesPrivate: js.UndefOr[Boolean] = js.native
+  var allAttributesPrivate: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not to send an analytics event for a flag evaluation even if the same flag was
     * evaluated with the same value within the last five minutes.
     *
     * By default, this is false (duplicate events within five minutes will be dropped).
     */
-  var allowFrequentDuplicateEvents: js.UndefOr[Boolean] = js.native
+  var allowFrequentDuplicateEvents: js.UndefOr[Boolean] = js.undefined
   /**
     * The base URL for the LaunchDarkly server.
     *
     * Most users should use the default value.
     */
-  var baseUrl: js.UndefOr[String] = js.native
+  var baseUrl: js.UndefOr[String] = js.undefined
   /**
     * The initial set of flags to use until the remote set is retrieved.
     *
@@ -36,7 +35,7 @@ trait LDOptionsBase extends js.Object {
     *
     * For more information, see the [SDK Reference Guide](https://docs.launchdarkly.com/docs/js-sdk-reference#section-bootstrapping).
     */
-  var bootstrap: js.UndefOr[localStorage | LDFlagSet] = js.native
+  var bootstrap: js.UndefOr[localStorage | LDFlagSet] = js.undefined
   /**
     * Whether LaunchDarkly should provide additional information about how flag values were
     * calculated.
@@ -45,32 +44,32 @@ trait LDOptionsBase extends js.Object {
     * [[LDClient.variationDetail]] method. Since this increases the size of network requests,
     * such information is not sent unless you set this option to true.
     */
-  var evaluationReasons: js.UndefOr[Boolean] = js.native
+  var evaluationReasons: js.UndefOr[Boolean] = js.undefined
   /**
     * The base URL for the LaunchDarkly events server.
     *
     * Most users should use the default value.
     */
-  var eventsUrl: js.UndefOr[String] = js.native
+  var eventsUrl: js.UndefOr[String] = js.undefined
   /**
     * The interval in between flushes of the analytics events queue, in milliseconds.
     *
     * The default value is 2000ms.
     */
-  var flushInterval: js.UndefOr[Double] = js.native
+  var flushInterval: js.UndefOr[Double] = js.undefined
   /**
     * An object that will perform logging for the client.
     *
     * If not specified, the default is [[createConsoleLogger]] in the browser SDK, or a logger
     * from the `winston` package in Electron.
     */
-  var logger: js.UndefOr[LDLogger] = js.native
+  var logger: js.UndefOr[LDLogger] = js.undefined
   /**
     * The names of user attributes that should be marked as private, and not sent
     * to LaunchDarkly in analytics events. You can also specify this on a per-user basis
     * with [[LDUser.privateAttributeNames]].
     */
-  var privateAttributeNames: js.UndefOr[js.Array[String]] = js.native
+  var privateAttributeNames: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * If specified, enables event sampling so that only some fraction of analytics events will be
     * sent pseudo-randomly.
@@ -78,18 +77,18 @@ trait LDOptionsBase extends js.Object {
     * When set to greater than zero, there is a 1 in `samplingInterval` chance that events will be
     * sent: for example, a value of 20 means that on average 1 in 20, or 5%, of all events will be sent.
     */
-  var samplingInterval: js.UndefOr[Double] = js.native
+  var samplingInterval: js.UndefOr[Double] = js.undefined
   /**
     * Whether to send analytics events back to LaunchDarkly. By default, this is true.
     */
-  var sendEvents: js.UndefOr[Boolean] = js.native
+  var sendEvents: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether analytics events should be sent only when you call variation (true), or also when you
     * call allFlags (false).
     *
     * By default, this is false (events will be sent in both cases).
     */
-  var sendEventsOnlyForVariation: js.UndefOr[Boolean] = js.native
+  var sendEventsOnlyForVariation: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not to include custom HTTP headers when requesting flags from LaunchDarkly.
     *
@@ -98,7 +97,7 @@ trait LDOptionsBase extends js.Object {
     * of custom headers causes browsers to make an extra OPTIONS request (a CORS preflight check)
     * before each flag request, which could affect performance.
     */
-  var sendLDHeaders: js.UndefOr[Boolean] = js.native
+  var sendLDHeaders: js.UndefOr[Boolean] = js.undefined
   /**
     * How long (in milliseconds) to wait after a failure of the stream connection before trying to
     * reconnect.
@@ -106,13 +105,13 @@ trait LDOptionsBase extends js.Object {
     * This only applies if streaming has been enabled by setting [[streaming]] to true or
     * subscribing to `"change"` events. The default is 1000ms.
     */
-  var streamReconnectDelay: js.UndefOr[Double] = js.native
+  var streamReconnectDelay: js.UndefOr[Double] = js.undefined
   /**
     * The base URL for the LaunchDarkly streaming server.
     *
     * Most users should use the default value.
     */
-  var streamUrl: js.UndefOr[String] = js.native
+  var streamUrl: js.UndefOr[String] = js.undefined
   /**
     * Whether or not to open a streaming connection to LaunchDarkly for live flag updates.
     *
@@ -122,7 +121,7 @@ trait LDOptionsBase extends js.Object {
     *
     * This is equivalent to calling `client.setStreaming()` with the same value.
     */
-  var streaming: js.UndefOr[Boolean] = js.native
+  var streaming: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not to use the REPORT verb to fetch flag settings.
     *
@@ -134,226 +133,49 @@ trait LDOptionsBase extends js.Object {
     *
     * Do not use unless advised by LaunchDarkly.
     */
-  var useReport: js.UndefOr[Boolean] = js.native
+  var useReport: js.UndefOr[Boolean] = js.undefined
 }
 
 object LDOptionsBase {
   @scala.inline
-  def apply(): LDOptionsBase = {
+  def apply(
+    allAttributesPrivate: js.UndefOr[Boolean] = js.undefined,
+    allowFrequentDuplicateEvents: js.UndefOr[Boolean] = js.undefined,
+    baseUrl: String = null,
+    bootstrap: localStorage | LDFlagSet = null,
+    evaluationReasons: js.UndefOr[Boolean] = js.undefined,
+    eventsUrl: String = null,
+    flushInterval: js.UndefOr[Double] = js.undefined,
+    logger: LDLogger = null,
+    privateAttributeNames: js.Array[String] = null,
+    samplingInterval: js.UndefOr[Double] = js.undefined,
+    sendEvents: js.UndefOr[Boolean] = js.undefined,
+    sendEventsOnlyForVariation: js.UndefOr[Boolean] = js.undefined,
+    sendLDHeaders: js.UndefOr[Boolean] = js.undefined,
+    streamReconnectDelay: js.UndefOr[Double] = js.undefined,
+    streamUrl: String = null,
+    streaming: js.UndefOr[Boolean] = js.undefined,
+    useReport: js.UndefOr[Boolean] = js.undefined
+  ): LDOptionsBase = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allAttributesPrivate)) __obj.updateDynamic("allAttributesPrivate")(allAttributesPrivate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowFrequentDuplicateEvents)) __obj.updateDynamic("allowFrequentDuplicateEvents")(allowFrequentDuplicateEvents.get.asInstanceOf[js.Any])
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (bootstrap != null) __obj.updateDynamic("bootstrap")(bootstrap.asInstanceOf[js.Any])
+    if (!js.isUndefined(evaluationReasons)) __obj.updateDynamic("evaluationReasons")(evaluationReasons.get.asInstanceOf[js.Any])
+    if (eventsUrl != null) __obj.updateDynamic("eventsUrl")(eventsUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(flushInterval)) __obj.updateDynamic("flushInterval")(flushInterval.get.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (privateAttributeNames != null) __obj.updateDynamic("privateAttributeNames")(privateAttributeNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(samplingInterval)) __obj.updateDynamic("samplingInterval")(samplingInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sendEvents)) __obj.updateDynamic("sendEvents")(sendEvents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sendEventsOnlyForVariation)) __obj.updateDynamic("sendEventsOnlyForVariation")(sendEventsOnlyForVariation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sendLDHeaders)) __obj.updateDynamic("sendLDHeaders")(sendLDHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(streamReconnectDelay)) __obj.updateDynamic("streamReconnectDelay")(streamReconnectDelay.get.asInstanceOf[js.Any])
+    if (streamUrl != null) __obj.updateDynamic("streamUrl")(streamUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(streaming)) __obj.updateDynamic("streaming")(streaming.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useReport)) __obj.updateDynamic("useReport")(useReport.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LDOptionsBase]
   }
-  @scala.inline
-  implicit class LDOptionsBaseOps[Self <: LDOptionsBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllAttributesPrivate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allAttributesPrivate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllAttributesPrivate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allAttributesPrivate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowFrequentDuplicateEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFrequentDuplicateEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowFrequentDuplicateEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFrequentDuplicateEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBootstrap(value: localStorage | LDFlagSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBootstrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvaluationReasons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationReasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationReasons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventsUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventsUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventsUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventsUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlushInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlushInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: LDLogger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateAttributeNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateAttributeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateAttributeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateAttributeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendEvents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendEventsOnlyForVariation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendEventsOnlyForVariation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendEventsOnlyForVariation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendEventsOnlyForVariation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendLDHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendLDHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendLDHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendLDHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamReconnectDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamReconnectDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamReconnectDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamReconnectDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreaming(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streaming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreaming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streaming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseReport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useReport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseReport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useReport")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

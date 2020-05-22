@@ -37,53 +37,16 @@ trait SchemaLayoutPlaceholderIdMapping extends js.Object {
 
 object SchemaLayoutPlaceholderIdMapping {
   @scala.inline
-  def apply(): SchemaLayoutPlaceholderIdMapping = {
+  def apply(
+    layoutPlaceholder: SchemaPlaceholder = null,
+    layoutPlaceholderObjectId: String = null,
+    objectId: String = null
+  ): SchemaLayoutPlaceholderIdMapping = {
     val __obj = js.Dynamic.literal()
+    if (layoutPlaceholder != null) __obj.updateDynamic("layoutPlaceholder")(layoutPlaceholder.asInstanceOf[js.Any])
+    if (layoutPlaceholderObjectId != null) __obj.updateDynamic("layoutPlaceholderObjectId")(layoutPlaceholderObjectId.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLayoutPlaceholderIdMapping]
   }
-  @scala.inline
-  implicit class SchemaLayoutPlaceholderIdMappingOps[Self <: SchemaLayoutPlaceholderIdMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayoutPlaceholder(value: SchemaPlaceholder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayoutPlaceholderObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutPlaceholderObjectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayoutPlaceholderObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutPlaceholderObjectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

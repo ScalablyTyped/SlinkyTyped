@@ -31,71 +31,19 @@ trait MetricAlarmMetricQuery extends js.Object {
 
 object MetricAlarmMetricQuery {
   @scala.inline
-  def apply(id: Input[String]): MetricAlarmMetricQuery = {
+  def apply(
+    id: Input[String],
+    expression: Input[String] = null,
+    label: Input[String] = null,
+    metric: Input[MetricAlarmMetricQueryMetric] = null,
+    returnData: Input[Boolean] = null
+  ): MetricAlarmMetricQuery = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
+    if (returnData != null) __obj.updateDynamic("returnData")(returnData.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricAlarmMetricQuery]
   }
-  @scala.inline
-  implicit class MetricAlarmMetricQueryOps[Self <: MetricAlarmMetricQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpression(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric(value: Input[MetricAlarmMetricQueryMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnData(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

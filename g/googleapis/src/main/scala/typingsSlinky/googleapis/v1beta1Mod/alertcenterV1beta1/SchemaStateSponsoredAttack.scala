@@ -17,29 +17,10 @@ trait SchemaStateSponsoredAttack extends js.Object {
 
 object SchemaStateSponsoredAttack {
   @scala.inline
-  def apply(): SchemaStateSponsoredAttack = {
+  def apply(email: String = null): SchemaStateSponsoredAttack = {
     val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStateSponsoredAttack]
   }
-  @scala.inline
-  implicit class SchemaStateSponsoredAttackOps[Self <: SchemaStateSponsoredAttack] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

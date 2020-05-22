@@ -18,41 +18,11 @@ trait AggregateComplianceCount extends js.Object {
 
 object AggregateComplianceCount {
   @scala.inline
-  def apply(): AggregateComplianceCount = {
+  def apply(ComplianceSummary: ComplianceSummary = null, GroupName: StringWithCharLimit256 = null): AggregateComplianceCount = {
     val __obj = js.Dynamic.literal()
+    if (ComplianceSummary != null) __obj.updateDynamic("ComplianceSummary")(ComplianceSummary.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AggregateComplianceCount]
   }
-  @scala.inline
-  implicit class AggregateComplianceCountOps[Self <: AggregateComplianceCount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplianceSummary(value: ComplianceSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: StringWithCharLimit256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

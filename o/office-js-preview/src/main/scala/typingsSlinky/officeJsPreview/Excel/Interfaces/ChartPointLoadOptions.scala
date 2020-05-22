@@ -10,192 +10,94 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@js.native
 trait ChartPointLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Returns the data label of a chart point.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var dataLabel: js.UndefOr[ChartDataLabelLoadOptions] = js.native
+  var dataLabel: js.UndefOr[ChartDataLabelLoadOptions] = js.undefined
   /**
     *
     * Encapsulates the format properties chart point.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var format: js.UndefOr[ChartPointFormatLoadOptions] = js.native
+  var format: js.UndefOr[ChartPointFormatLoadOptions] = js.undefined
   /**
     *
     * Represents whether a data point has a data label. Not applicable for surface charts.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var hasDataLabel: js.UndefOr[Boolean] = js.native
+  var hasDataLabel: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * HTML color code representation of the marker background color of data point. E.g. #FF0000 represents Red.
+    * HTML color code representation of the marker background color of data point (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.7]
     */
-  var markerBackgroundColor: js.UndefOr[Boolean] = js.native
+  var markerBackgroundColor: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * HTML color code representation of the marker foreground color of data point. E.g. #FF0000 represents Red.
+    * HTML color code representation of the marker foreground color of data point (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.7]
     */
-  var markerForegroundColor: js.UndefOr[Boolean] = js.native
+  var markerForegroundColor: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents marker size of data point.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var markerSize: js.UndefOr[Boolean] = js.native
+  var markerSize: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents marker style of a chart data point. See Excel.ChartMarkerStyle for details.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var markerStyle: js.UndefOr[Boolean] = js.native
+  var markerStyle: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Returns the value of a chart point. Read-only.
+    * Returns the value of a chart point.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var value: js.UndefOr[Boolean] = js.native
+  var value: js.UndefOr[Boolean] = js.undefined
 }
 
 object ChartPointLoadOptions {
   @scala.inline
-  def apply(): ChartPointLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    dataLabel: ChartDataLabelLoadOptions = null,
+    format: ChartPointFormatLoadOptions = null,
+    hasDataLabel: js.UndefOr[Boolean] = js.undefined,
+    markerBackgroundColor: js.UndefOr[Boolean] = js.undefined,
+    markerForegroundColor: js.UndefOr[Boolean] = js.undefined,
+    markerSize: js.UndefOr[Boolean] = js.undefined,
+    markerStyle: js.UndefOr[Boolean] = js.undefined,
+    value: js.UndefOr[Boolean] = js.undefined
+  ): ChartPointLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (dataLabel != null) __obj.updateDynamic("dataLabel")(dataLabel.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasDataLabel)) __obj.updateDynamic("hasDataLabel")(hasDataLabel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerBackgroundColor)) __obj.updateDynamic("markerBackgroundColor")(markerBackgroundColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerForegroundColor)) __obj.updateDynamic("markerForegroundColor")(markerForegroundColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerSize)) __obj.updateDynamic("markerSize")(markerSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerStyle)) __obj.updateDynamic("markerStyle")(markerStyle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartPointLoadOptions]
   }
-  @scala.inline
-  implicit class ChartPointLoadOptionsOps[Self <: ChartPointLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLabel(value: ChartDataLabelLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartPointFormatLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasDataLabel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDataLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasDataLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDataLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerBackgroundColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerBackgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerForegroundColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerForegroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerForegroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerForegroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerStyle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

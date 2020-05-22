@@ -23,10 +23,9 @@ import scala.scalajs.js.annotation._
   *       Logger.log('The user clicked the close button in the dialog\'s title bar.');
   *     }
   */
-@js.native
 trait PromptResponse extends js.Object {
-  def getResponseText(): String = js.native
-  def getSelectedButton(): Button = js.native
+  def getResponseText(): String
+  def getSelectedButton(): Button
 }
 
 object PromptResponse {
@@ -35,25 +34,5 @@ object PromptResponse {
     val __obj = js.Dynamic.literal(getResponseText = js.Any.fromFunction0(getResponseText), getSelectedButton = js.Any.fromFunction0(getSelectedButton))
     __obj.asInstanceOf[PromptResponse]
   }
-  @scala.inline
-  implicit class PromptResponseOps[Self <: PromptResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetResponseText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResponseText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectedButton(value: () => Button): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedButton")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

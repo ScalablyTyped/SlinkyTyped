@@ -12,12 +12,11 @@ import scala.scalajs.js.annotation._
   * provides functions to manage a collection of database ranges.
   * @see com.sun.star.sheet.DatabaseRanges
   */
-@js.native
 trait XDatabaseRanges extends XNameAccess {
   /** adds a new database range to the collection. */
-  def addNewByName(aName: String, aRange: CellRangeAddress): Unit = js.native
+  def addNewByName(aName: String, aRange: CellRangeAddress): Unit
   /** removes a database range from the collection. */
-  def removeByName(aName: String): Unit = js.native
+  def removeByName(aName: String): Unit
 }
 
 object XDatabaseRanges {
@@ -39,25 +38,5 @@ object XDatabaseRanges {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addNewByName = js.Any.fromFunction2(addNewByName), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName))
     __obj.asInstanceOf[XDatabaseRanges]
   }
-  @scala.inline
-  implicit class XDatabaseRangesOps[Self <: XDatabaseRanges] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddNewByName(value: (String, CellRangeAddress) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNewByName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

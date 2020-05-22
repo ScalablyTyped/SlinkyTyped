@@ -30,77 +30,20 @@ trait EmailConfigurationType extends js.Object {
 
 object EmailConfigurationType {
   @scala.inline
-  def apply(): EmailConfigurationType = {
+  def apply(
+    ConfigurationSet: SESConfigurationSet = null,
+    EmailSendingAccount: EmailSendingAccountType = null,
+    From: StringType = null,
+    ReplyToEmailAddress: EmailAddressType = null,
+    SourceArn: ArnType = null
+  ): EmailConfigurationType = {
     val __obj = js.Dynamic.literal()
+    if (ConfigurationSet != null) __obj.updateDynamic("ConfigurationSet")(ConfigurationSet.asInstanceOf[js.Any])
+    if (EmailSendingAccount != null) __obj.updateDynamic("EmailSendingAccount")(EmailSendingAccount.asInstanceOf[js.Any])
+    if (From != null) __obj.updateDynamic("From")(From.asInstanceOf[js.Any])
+    if (ReplyToEmailAddress != null) __obj.updateDynamic("ReplyToEmailAddress")(ReplyToEmailAddress.asInstanceOf[js.Any])
+    if (SourceArn != null) __obj.updateDynamic("SourceArn")(SourceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailConfigurationType]
   }
-  @scala.inline
-  implicit class EmailConfigurationTypeOps[Self <: EmailConfigurationType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationSet(value: SESConfigurationSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailSendingAccount(value: EmailSendingAccountType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailSendingAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailSendingAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailSendingAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplyToEmailAddress(value: EmailAddressType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplyToEmailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplyToEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplyToEmailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceArn(value: ArnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientOptions extends js.Object {
   /**
     * The default expiration in seconds to use. A `0` means never expire,
@@ -13,101 +12,44 @@ trait ClientOptions extends js.Object {
     * treated as a UNIX time (number of seconds since January 1, 1970).
     * @default 0
     */
-  var expires: js.UndefOr[Double] = js.native
+  var expires: js.UndefOr[Double] = js.undefined
   /**
     * How many seconds to wait until retrying a failed server.
     * @default 60
     */
-  var failoverTime: js.UndefOr[Double] = js.native
+  var failoverTime: js.UndefOr[Double] = js.undefined
   /**
     * A logger object that responds to `log(string)` method calls.
     * @default console
     */
-  var logger: js.UndefOr[Log] = js.native
+  var logger: js.UndefOr[Log] = js.undefined
   /**
     * The number of times to retry an operation in lieu of failures.
     * @default 2
     */
-  var retries: js.UndefOr[Double] = js.native
+  var retries: js.UndefOr[Double] = js.undefined
   /**
     * @default 0.2
     */
-  var retry_delay: js.UndefOr[Double] = js.native
+  var retry_delay: js.UndefOr[Double] = js.undefined
 }
 
 object ClientOptions {
   @scala.inline
-  def apply(): ClientOptions = {
+  def apply(
+    expires: js.UndefOr[Double] = js.undefined,
+    failoverTime: js.UndefOr[Double] = js.undefined,
+    logger: Log = null,
+    retries: js.UndefOr[Double] = js.undefined,
+    retry_delay: js.UndefOr[Double] = js.undefined
+  ): ClientOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(expires)) __obj.updateDynamic("expires")(expires.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failoverTime)) __obj.updateDynamic("failoverTime")(failoverTime.get.asInstanceOf[js.Any])
+    if (logger != null) __obj.updateDynamic("logger")(logger.asInstanceOf[js.Any])
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retry_delay)) __obj.updateDynamic("retry_delay")(retry_delay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptions]
   }
-  @scala.inline
-  implicit class ClientOptionsOps[Self <: ClientOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpires(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailoverTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailoverTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogger(value: Log): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry_delay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry_delay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

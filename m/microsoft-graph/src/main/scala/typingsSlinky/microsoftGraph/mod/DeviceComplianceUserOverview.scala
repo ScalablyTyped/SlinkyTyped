@@ -4,121 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeviceComplianceUserOverview extends Entity {
   // Version of the policy for that overview
-  var configurationVersion: js.UndefOr[Double] = js.native
+  var configurationVersion: js.UndefOr[Double] = js.undefined
   // Number of error Users
-  var errorCount: js.UndefOr[Double] = js.native
+  var errorCount: js.UndefOr[Double] = js.undefined
   // Number of failed Users
-  var failedCount: js.UndefOr[Double] = js.native
+  var failedCount: js.UndefOr[Double] = js.undefined
   // Last update time
-  var lastUpdateDateTime: js.UndefOr[String] = js.native
+  var lastUpdateDateTime: js.UndefOr[String] = js.undefined
   // Number of not applicable users
-  var notApplicableCount: js.UndefOr[Double] = js.native
+  var notApplicableCount: js.UndefOr[Double] = js.undefined
   // Number of pending Users
-  var pendingCount: js.UndefOr[Double] = js.native
+  var pendingCount: js.UndefOr[Double] = js.undefined
   // Number of succeeded Users
-  var successCount: js.UndefOr[Double] = js.native
+  var successCount: js.UndefOr[Double] = js.undefined
 }
 
 object DeviceComplianceUserOverview {
   @scala.inline
-  def apply(): DeviceComplianceUserOverview = {
+  def apply(
+    configurationVersion: js.UndefOr[Double] = js.undefined,
+    errorCount: js.UndefOr[Double] = js.undefined,
+    failedCount: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    lastUpdateDateTime: String = null,
+    notApplicableCount: js.UndefOr[Double] = js.undefined,
+    pendingCount: js.UndefOr[Double] = js.undefined,
+    successCount: js.UndefOr[Double] = js.undefined
+  ): DeviceComplianceUserOverview = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(configurationVersion)) __obj.updateDynamic("configurationVersion")(configurationVersion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorCount)) __obj.updateDynamic("errorCount")(errorCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failedCount)) __obj.updateDynamic("failedCount")(failedCount.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastUpdateDateTime != null) __obj.updateDynamic("lastUpdateDateTime")(lastUpdateDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(notApplicableCount)) __obj.updateDynamic("notApplicableCount")(notApplicableCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pendingCount)) __obj.updateDynamic("pendingCount")(pendingCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(successCount)) __obj.updateDynamic("successCount")(successCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceComplianceUserOverview]
   }
-  @scala.inline
-  implicit class DeviceComplianceUserOverviewOps[Self <: DeviceComplianceUserOverview] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdateDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdateDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdateDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotApplicableCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notApplicableCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotApplicableCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notApplicableCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPendingCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,169 +1,48 @@
 package typingsSlinky.uws.mod
 
-import typingsSlinky.uws.anon.Origin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IServerOptions extends js.Object {
-  var clientTracking: js.UndefOr[Boolean] = js.native
-  var disableHixie: js.UndefOr[Boolean] = js.native
-  var handleProtocols: js.UndefOr[js.Any] = js.native
-  var host: js.UndefOr[String] = js.native
-  var noServer: js.UndefOr[Boolean] = js.native
-  var path: js.UndefOr[String] = js.native
-  var perMessageDeflate: js.UndefOr[Boolean | IPerMessageDeflateOptions] = js.native
-  var port: js.UndefOr[Double] = js.native
-  var server: js.UndefOr[typingsSlinky.node.httpMod.Server | typingsSlinky.node.httpsMod.Server] = js.native
-  var verifyClient: js.UndefOr[VerifyClientCallbackAsync | VerifyClientCallbackSync] = js.native
+  var clientTracking: js.UndefOr[Boolean] = js.undefined
+  var disableHixie: js.UndefOr[Boolean] = js.undefined
+  var handleProtocols: js.UndefOr[js.Any] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var noServer: js.UndefOr[Boolean] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var perMessageDeflate: js.UndefOr[Boolean | IPerMessageDeflateOptions] = js.undefined
+  var port: js.UndefOr[Double] = js.undefined
+  var server: js.UndefOr[typingsSlinky.node.httpMod.Server | typingsSlinky.node.httpsMod.Server] = js.undefined
+  var verifyClient: js.UndefOr[VerifyClientCallbackAsync | VerifyClientCallbackSync] = js.undefined
 }
 
 object IServerOptions {
   @scala.inline
-  def apply(): IServerOptions = {
+  def apply(
+    clientTracking: js.UndefOr[Boolean] = js.undefined,
+    disableHixie: js.UndefOr[Boolean] = js.undefined,
+    handleProtocols: js.Any = null,
+    host: String = null,
+    noServer: js.UndefOr[Boolean] = js.undefined,
+    path: String = null,
+    perMessageDeflate: Boolean | IPerMessageDeflateOptions = null,
+    port: js.UndefOr[Double] = js.undefined,
+    server: typingsSlinky.node.httpMod.Server | typingsSlinky.node.httpsMod.Server = null,
+    verifyClient: VerifyClientCallbackAsync | VerifyClientCallbackSync = null
+  ): IServerOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clientTracking)) __obj.updateDynamic("clientTracking")(clientTracking.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableHixie)) __obj.updateDynamic("disableHixie")(disableHixie.get.asInstanceOf[js.Any])
+    if (handleProtocols != null) __obj.updateDynamic("handleProtocols")(handleProtocols.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(noServer)) __obj.updateDynamic("noServer")(noServer.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (perMessageDeflate != null) __obj.updateDynamic("perMessageDeflate")(perMessageDeflate.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
+    if (verifyClient != null) __obj.updateDynamic("verifyClient")(verifyClient.asInstanceOf[js.Any])
     __obj.asInstanceOf[IServerOptions]
   }
-  @scala.inline
-  implicit class IServerOptionsOps[Self <: IServerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientTracking(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTracking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientTracking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTracking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableHixie(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHixie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableHixie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableHixie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleProtocols(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleProtocols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleProtocols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleProtocols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoServer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerMessageDeflate(value: Boolean | IPerMessageDeflateOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perMessageDeflate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerMessageDeflate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perMessageDeflate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: typingsSlinky.node.httpMod.Server | typingsSlinky.node.httpsMod.Server): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifyClientFunction2(value: (/* info */ Origin, /* callback */ js.Function1[/* res */ Boolean, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withVerifyClientFunction1(value: /* info */ Origin => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVerifyClient(value: VerifyClientCallbackAsync | VerifyClientCallbackSync): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifyClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

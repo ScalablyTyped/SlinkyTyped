@@ -17,29 +17,10 @@ trait SchemaDeleteBandingRequest extends js.Object {
 
 object SchemaDeleteBandingRequest {
   @scala.inline
-  def apply(): SchemaDeleteBandingRequest = {
+  def apply(bandedRangeId: js.UndefOr[Double] = js.undefined): SchemaDeleteBandingRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bandedRangeId)) __obj.updateDynamic("bandedRangeId")(bandedRangeId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteBandingRequest]
   }
-  @scala.inline
-  implicit class SchemaDeleteBandingRequestOps[Self <: SchemaDeleteBandingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBandedRangeId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRangeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBandedRangeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRangeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,29 +18,10 @@ trait SchemaListDeviceStatesResponse extends js.Object {
 
 object SchemaListDeviceStatesResponse {
   @scala.inline
-  def apply(): SchemaListDeviceStatesResponse = {
+  def apply(deviceStates: js.Array[SchemaDeviceState] = null): SchemaListDeviceStatesResponse = {
     val __obj = js.Dynamic.literal()
+    if (deviceStates != null) __obj.updateDynamic("deviceStates")(deviceStates.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListDeviceStatesResponse]
   }
-  @scala.inline
-  implicit class SchemaListDeviceStatesResponseOps[Self <: SchemaListDeviceStatesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceStates(value: js.Array[SchemaDeviceState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceStates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

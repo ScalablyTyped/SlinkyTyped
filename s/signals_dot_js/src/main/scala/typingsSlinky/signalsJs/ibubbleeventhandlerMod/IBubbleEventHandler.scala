@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IBubbleEventHandler extends js.Object {
   /**
     * Handler for event bubbling.
@@ -13,7 +12,7 @@ trait IBubbleEventHandler extends js.Object {
     * @param    event The event that bubbled up.
     * @return whether to continue bubbling this event
     */
-  def onEventBubbled(event: IEvent): Boolean = js.native
+  def onEventBubbled(event: IEvent): Boolean
 }
 
 object IBubbleEventHandler {
@@ -22,19 +21,5 @@ object IBubbleEventHandler {
     val __obj = js.Dynamic.literal(onEventBubbled = js.Any.fromFunction1(onEventBubbled))
     __obj.asInstanceOf[IBubbleEventHandler]
   }
-  @scala.inline
-  implicit class IBubbleEventHandlerOps[Self <: IBubbleEventHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnEventBubbled(value: IEvent => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEventBubbled")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

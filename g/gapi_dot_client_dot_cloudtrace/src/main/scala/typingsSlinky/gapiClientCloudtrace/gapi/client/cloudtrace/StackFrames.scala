@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StackFrames extends js.Object {
   /**
     * The number of stack frames that were dropped because there
     * were too many stack frames.
     * If this value is 0, then no stack frames were dropped.
     */
-  var droppedFramesCount: js.UndefOr[Double] = js.native
+  var droppedFramesCount: js.UndefOr[Double] = js.undefined
   /** Stack frames in this call stack. */
-  var frame: js.UndefOr[js.Array[StackFrame]] = js.native
+  var frame: js.UndefOr[js.Array[StackFrame]] = js.undefined
 }
 
 object StackFrames {
   @scala.inline
-  def apply(): StackFrames = {
+  def apply(droppedFramesCount: js.UndefOr[Double] = js.undefined, frame: js.Array[StackFrame] = null): StackFrames = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(droppedFramesCount)) __obj.updateDynamic("droppedFramesCount")(droppedFramesCount.get.asInstanceOf[js.Any])
+    if (frame != null) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackFrames]
   }
-  @scala.inline
-  implicit class StackFramesOps[Self <: StackFrames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDroppedFramesCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedFramesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDroppedFramesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedFramesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: js.Array[StackFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

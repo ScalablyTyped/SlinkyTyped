@@ -10,7 +10,9 @@ import typingsSlinky.firebaseFirestore.persistencePromiseMod.PersistencePromise
 import typingsSlinky.firebaseFirestore.simpleDbMod.SimpleDbStore
 import typingsSlinky.firebaseFirestore.simpleDbMod.SimpleDbTransaction
 import typingsSlinky.firebaseFirestore.targetCacheMod.TargetCache
+import typingsSlinky.firebaseFirestore.targetDataMod.TargetData
 import typingsSlinky.firebaseFirestore.typesMod.ListenSequenceNumber
+import typingsSlinky.firebaseFirestore.typesMod.TargetId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,13 +28,20 @@ object indexeddbTargetCacheMod extends js.Object {
     var saveMetadata: js.Any = js.native
     var saveTargetData: js.Any = js.native
     var serializer: js.Any = js.native
-    var targetIdGenerator: js.Any = js.native
     /**
       * In-place updates the provided metadata to account for values in the given
       * TargetData. Saving is done separately. Returns true if there were any
       * changes to the metadata.
       */
     var updateMetadataFromTargetData: js.Any = js.native
+    /**
+      * Looks up a TargetData entry by target ID.
+      *
+      * @param targetId The target ID of the TargetData entry to look up.
+      * @return The cached TargetData entry, or null if the cache has no entry for
+      * the target.
+      */
+    def getTargetDataForTarget(transaction: PersistenceTransaction, targetId: TargetId): PersistencePromise[TargetData | Null] = js.native
     /**
       * Drops any targets with sequence number less than or equal to the upper bound, excepting those
       * present in `activeTargetIds`. Document associations for the removed targets are also removed.

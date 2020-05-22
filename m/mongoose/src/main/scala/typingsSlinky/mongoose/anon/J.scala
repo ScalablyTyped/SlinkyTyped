@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait J extends js.Object {
-  var j: js.UndefOr[Boolean] = js.native
-  var w: js.UndefOr[Double | String] = js.native
-  var wtimeout: js.UndefOr[Double] = js.native
+  var j: js.UndefOr[Boolean] = js.undefined
+  var w: js.UndefOr[Double | String] = js.undefined
+  var wtimeout: js.UndefOr[Double] = js.undefined
 }
 
 object J {
   @scala.inline
-  def apply(): J = {
+  def apply(
+    j: js.UndefOr[Boolean] = js.undefined,
+    w: Double | String = null,
+    wtimeout: js.UndefOr[Double] = js.undefined
+  ): J = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.get.asInstanceOf[js.Any])
+    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
+    if (!js.isUndefined(wtimeout)) __obj.updateDynamic("wtimeout")(wtimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[J]
   }
-  @scala.inline
-  implicit class JOps[Self <: J] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJ(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("j")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("j")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withW(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutW: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("w")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWtimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wtimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWtimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wtimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

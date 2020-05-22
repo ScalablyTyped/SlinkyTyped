@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkflowTemplate extends js.Object {
-  val Application: js.Any = js.native
-  val Creator: Double = js.native
-  val Description: String = js.native
-  val DocumentLibraryName: String = js.native
-  val DocumentLibraryURL: String = js.native
-  val Id: String = js.native
-  val Name: String = js.native
+  val Application: js.Any
+  val Creator: Double
+  val Description: String
+  val DocumentLibraryName: String
+  val DocumentLibraryURL: String
+  val Id: String
+  val Name: String
   @JSName("Office.WorkflowTemplate_typekey")
-  var OfficeDotWorkflowTemplate_typekey: WorkflowTemplate = js.native
-  def Show(): Double = js.native
+  var OfficeDotWorkflowTemplate_typekey: WorkflowTemplate
+  def Show(): Double
 }
 
 object WorkflowTemplate {
@@ -35,67 +34,5 @@ object WorkflowTemplate {
     __obj.updateDynamic("Office.WorkflowTemplate_typekey")(OfficeDotWorkflowTemplate_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowTemplate]
   }
-  @scala.inline
-  implicit class WorkflowTemplateOps[Self <: WorkflowTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentLibraryName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentLibraryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDocumentLibraryURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentLibraryURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotWorkflowTemplate_typekey(value: WorkflowTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.WorkflowTemplate_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShow(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Show")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

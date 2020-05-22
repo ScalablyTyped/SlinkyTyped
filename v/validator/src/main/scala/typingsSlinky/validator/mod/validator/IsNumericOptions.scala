@@ -4,41 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsNumericOptions extends js.Object {
   /**
     * If `no_symbols` is true, the validator will reject numeric strings that feature a symbol (e.g. `+`, `-`, or `.`).
     *
     * @default false
     */
-  var no_symbols: js.UndefOr[Boolean] = js.native
+  var no_symbols: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsNumericOptions {
   @scala.inline
-  def apply(): IsNumericOptions = {
+  def apply(no_symbols: js.UndefOr[Boolean] = js.undefined): IsNumericOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(no_symbols)) __obj.updateDynamic("no_symbols")(no_symbols.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsNumericOptions]
   }
-  @scala.inline
-  implicit class IsNumericOptionsOps[Self <: IsNumericOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNo_symbols(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_symbols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNo_symbols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_symbols")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

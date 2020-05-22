@@ -15,153 +15,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabsProps extends js.Object {
-  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
-  var activeIndex: js.UndefOr[Double] = js.native
-  var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var children: TagMod[Any] = js.native
-  var flex: js.UndefOr[grow | shrink | Boolean] = js.native
-  var gridArea: js.UndefOr[GridAreaType] = js.native
-  var justify: js.UndefOr[start | center | end] = js.native
-  var margin: js.UndefOr[MarginType] = js.native
-  var messages: js.UndefOr[TabContents] = js.native
-  var onActive: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.native
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.undefined
+  var activeIndex: js.UndefOr[Double] = js.undefined
+  var alignSelf: js.UndefOr[AlignSelfType] = js.undefined
+  var children: TagMod[Any]
+  var flex: js.UndefOr[grow | shrink | Boolean] = js.undefined
+  var gridArea: js.UndefOr[GridAreaType] = js.undefined
+  var justify: js.UndefOr[start | center | end] = js.undefined
+  var margin: js.UndefOr[MarginType] = js.undefined
+  var messages: js.UndefOr[TabContents] = js.undefined
+  var onActive: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.undefined
 }
 
 object TabsProps {
   @scala.inline
-  def apply(): TabsProps = {
+  def apply(
+    a11yTitle: A11yTitleType = null,
+    activeIndex: js.UndefOr[Double] = js.undefined,
+    alignSelf: AlignSelfType = null,
+    children: TagMod[Any] = null,
+    flex: grow | shrink | Boolean = null,
+    gridArea: GridAreaType = null,
+    justify: start | center | end = null,
+    margin: MarginType = null,
+    messages: TabContents = null,
+    onActive: /* index */ Double => Unit = null
+  ): TabsProps = {
     val __obj = js.Dynamic.literal()
+    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeIndex)) __obj.updateDynamic("activeIndex")(activeIndex.get.asInstanceOf[js.Any])
+    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (flex != null) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
+    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
+    if (justify != null) __obj.updateDynamic("justify")(justify.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (onActive != null) __obj.updateDynamic("onActive")(js.Any.fromFunction1(onActive))
     __obj.asInstanceOf[TabsProps]
   }
-  @scala.inline
-  implicit class TabsPropsOps[Self <: TabsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA11yTitle(value: A11yTitleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA11yTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActiveIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignSelf(value: AlignSelfType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlex(value: grow | shrink | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridArea(value: GridAreaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJustify(value: start | center | end): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJustify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: MarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: TabContents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnActive(value: /* index */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActive")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

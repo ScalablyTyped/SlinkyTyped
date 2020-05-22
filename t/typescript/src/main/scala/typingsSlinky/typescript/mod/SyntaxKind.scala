@@ -18,8 +18,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait AmpersandAmpersandToken
-    extends LogicalOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with LogicalOperator
   
   @js.native
   sealed trait AmpersandEqualsToken
@@ -28,8 +28,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait AmpersandToken
-    extends BitwiseOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with BitwiseOperator
   
   @js.native
   sealed trait AnyKeyword
@@ -76,9 +76,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait AsteriskToken
-    extends MultiplicativeOperator
-       with SyntaxKind
+    extends SyntaxKind
        with JSDocSyntaxKind
+       with MultiplicativeOperator
   
   @js.native
   sealed trait AsyncKeyword
@@ -106,8 +106,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait BarBarToken
-    extends LogicalOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with LogicalOperator
   
   @js.native
   sealed trait BarEqualsToken
@@ -116,8 +116,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait BarToken
-    extends BitwiseOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with BitwiseOperator
   
   @js.native
   sealed trait BigIntKeyword
@@ -165,8 +165,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait CaretToken
-    extends BitwiseOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with BitwiseOperator
   
   @js.native
   sealed trait CaseBlock extends SyntaxKind
@@ -220,8 +220,8 @@ object SyntaxKind extends js.Object {
   @js.native
   sealed trait CommaToken
     extends SyntaxKind
-       with BinaryOperator
        with JSDocSyntaxKind
+       with _BinaryOperator
   
   @js.native
   sealed trait ComputedPropertyName extends SyntaxKind
@@ -348,13 +348,13 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait EqualsEqualsEqualsToken
-    extends EqualityOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with EqualityOperator
   
   @js.native
   sealed trait EqualsEqualsToken
-    extends EqualityOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with EqualityOperator
   
   @js.native
   sealed trait EqualsGreaterThanToken extends SyntaxKind
@@ -367,13 +367,13 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait ExclamationEqualsEqualsToken
-    extends EqualityOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with EqualityOperator
   
   @js.native
   sealed trait ExclamationEqualsToken
-    extends EqualityOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with EqualityOperator
   
   @js.native
   sealed trait ExclamationToken
@@ -514,8 +514,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait GreaterThanEqualsToken
-    extends RelationalOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with RelationalOperator
   
   @js.native
   sealed trait GreaterThanGreaterThanEqualsToken
@@ -529,19 +529,19 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait GreaterThanGreaterThanGreaterThanToken
-    extends ShiftOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with ShiftOperator
   
   @js.native
   sealed trait GreaterThanGreaterThanToken
-    extends ShiftOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with ShiftOperator
   
   @js.native
   sealed trait GreaterThanToken
-    extends RelationalOperator
-       with SyntaxKind
+    extends SyntaxKind
        with JSDocSyntaxKind
+       with RelationalOperator
   
   @js.native
   sealed trait HeritageClause extends SyntaxKind
@@ -586,9 +586,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait InKeyword
-    extends RelationalOperator
+    extends KeywordSyntaxKind
        with SyntaxKind
-       with KeywordSyntaxKind
+       with RelationalOperator
   
   @js.native
   sealed trait IndexSignature extends SyntaxKind
@@ -609,9 +609,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait InstanceOfKeyword
-    extends RelationalOperator
+    extends KeywordSyntaxKind
        with SyntaxKind
-       with KeywordSyntaxKind
+       with RelationalOperator
   
   @js.native
   sealed trait InterfaceDeclaration extends SyntaxKind
@@ -652,6 +652,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait JSDocFunctionType extends SyntaxKind
+  
+  @js.native
+  sealed trait JSDocImplementsTag extends SyntaxKind
   
   @js.native
   sealed trait JSDocNamepathType extends SyntaxKind
@@ -814,8 +817,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait LessThanEqualsToken
-    extends RelationalOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with RelationalOperator
   
   @js.native
   sealed trait LessThanLessThanEqualsToken
@@ -824,8 +827,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait LessThanLessThanToken
-    extends ShiftOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with ShiftOperator
   
   @js.native
   sealed trait LessThanSlashToken
@@ -834,10 +837,10 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait LessThanToken
-    extends RelationalOperator
-       with SyntaxKind
+    extends SyntaxKind
        with JSDocSyntaxKind
        with JsxTokenSyntaxKind
+       with RelationalOperator
   
   @js.native
   sealed trait LetKeyword
@@ -875,8 +878,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait MinusToken
-    extends AdditiveOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with AdditiveOperator
        with PrefixUnaryOperator
   
   @js.native
@@ -1018,8 +1021,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait PercentToken
-    extends MultiplicativeOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with MultiplicativeOperator
   
   @js.native
   sealed trait PlusEqualsToken
@@ -1034,8 +1037,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait PlusToken
-    extends AdditiveOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with AdditiveOperator
        with PrefixUnaryOperator
   
   @js.native
@@ -1082,7 +1085,7 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait QuestionQuestionToken
-    extends AssignmentOperatorOrHigher
+    extends _AssignmentOperatorOrHigher
        with SyntaxKind
   
   @js.native
@@ -1144,8 +1147,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait SlashToken
-    extends MultiplicativeOperator
-       with SyntaxKind
+    extends SyntaxKind
+       with MultiplicativeOperator
   
   @js.native
   sealed trait SourceFile extends SyntaxKind
@@ -1548,7 +1551,7 @@ object SyntaxKind extends js.Object {
   object ColonToken
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.ColonToken with Double]
   
-  /* 326 */ @js.native
+  /* 327 */ @js.native
   object CommaListExpression
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.CommaListExpression with Double]
   
@@ -1592,7 +1595,7 @@ object SyntaxKind extends js.Object {
   object ContinueStatement
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.ContinueStatement with Double]
   
-  /* 330 */ @js.native
+  /* 331 */ @js.native
   object Count extends TopLevel[Count with Double]
   
   /* 83 */ @js.native
@@ -1649,7 +1652,7 @@ object SyntaxKind extends js.Object {
   object EmptyStatement
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.EmptyStatement with Double]
   
-  /* 328 */ @js.native
+  /* 329 */ @js.native
   object EndOfDeclarationMarker extends TopLevel[EndOfDeclarationMarker with Double]
   
   /* 1 */ @js.native
@@ -1919,28 +1922,32 @@ object SyntaxKind extends js.Object {
   object JSDocAugmentsTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocAugmentsTag with Double]
   
-  /* 308 */ @js.native
+  /* 309 */ @js.native
   object JSDocAuthorTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocAuthorTag with Double]
   
-  /* 314 */ @js.native
+  /* 315 */ @js.native
   object JSDocCallbackTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocCallbackTag with Double]
   
-  /* 309 */ @js.native
+  /* 310 */ @js.native
   object JSDocClassTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocClassTag with Double]
   
   /* 303 */ @js.native
   object JSDocComment extends TopLevel[JSDocComment with Double]
   
-  /* 315 */ @js.native
+  /* 316 */ @js.native
   object JSDocEnumTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocEnumTag with Double]
   
   /* 300 */ @js.native
   object JSDocFunctionType
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocFunctionType with Double]
+  
+  /* 308 */ @js.native
+  object JSDocImplementsTag
+    extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocImplementsTag with Double]
   
   /* 302 */ @js.native
   object JSDocNamepathType
@@ -1958,31 +1965,31 @@ object SyntaxKind extends js.Object {
   object JSDocOptionalType
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocOptionalType with Double]
   
-  /* 316 */ @js.native
+  /* 317 */ @js.native
   object JSDocParameterTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocParameterTag with Double]
   
-  /* 311 */ @js.native
+  /* 312 */ @js.native
   object JSDocPrivateTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocPrivateTag with Double]
   
-  /* 322 */ @js.native
+  /* 323 */ @js.native
   object JSDocPropertyTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocPropertyTag with Double]
   
-  /* 312 */ @js.native
+  /* 313 */ @js.native
   object JSDocProtectedTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocProtectedTag with Double]
   
-  /* 310 */ @js.native
+  /* 311 */ @js.native
   object JSDocPublicTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocPublicTag with Double]
   
-  /* 313 */ @js.native
+  /* 314 */ @js.native
   object JSDocReadonlyTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocReadonlyTag with Double]
   
-  /* 317 */ @js.native
+  /* 318 */ @js.native
   object JSDocReturnTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocReturnTag with Double]
   
@@ -1994,11 +2001,11 @@ object SyntaxKind extends js.Object {
   object JSDocTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocTag with Double]
   
-  /* 320 */ @js.native
+  /* 321 */ @js.native
   object JSDocTemplateTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocTemplateTag with Double]
   
-  /* 318 */ @js.native
+  /* 319 */ @js.native
   object JSDocThisTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocThisTag with Double]
   
@@ -2010,11 +2017,11 @@ object SyntaxKind extends js.Object {
   object JSDocTypeLiteral
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocTypeLiteral with Double]
   
-  /* 319 */ @js.native
+  /* 320 */ @js.native
   object JSDocTypeTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocTypeTag with Double]
   
-  /* 321 */ @js.native
+  /* 322 */ @js.native
   object JSDocTypedefTag
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.JSDocTypedefTag with Double]
   
@@ -2096,10 +2103,10 @@ object SyntaxKind extends js.Object {
   /* 121 */ @js.native
   object LastFutureReservedWord extends TopLevel[LastFutureReservedWord with Double]
   
-  /* 322 */ @js.native
+  /* 323 */ @js.native
   object LastJSDocNode extends TopLevel[LastJSDocNode with Double]
   
-  /* 322 */ @js.native
+  /* 323 */ @js.native
   object LastJSDocTagNode extends TopLevel[LastJSDocTagNode with Double]
   
   /* 152 */ @js.native
@@ -2154,7 +2161,7 @@ object SyntaxKind extends js.Object {
   /* 186 */ @js.native
   object MappedType extends TopLevel[MappedType with Double]
   
-  /* 327 */ @js.native
+  /* 328 */ @js.native
   object MergeDeclarationMarker extends TopLevel[MergeDeclarationMarker with Double]
   
   /* 219 */ @js.native
@@ -2243,7 +2250,7 @@ object SyntaxKind extends js.Object {
   object NonNullExpression
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.NonNullExpression with Double]
   
-  /* 324 */ @js.native
+  /* 325 */ @js.native
   object NotEmittedStatement
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.NotEmittedStatement with Double]
   
@@ -2300,7 +2307,7 @@ object SyntaxKind extends js.Object {
   /* 182 */ @js.native
   object ParenthesizedType extends TopLevel[ParenthesizedType with Double]
   
-  /* 325 */ @js.native
+  /* 326 */ @js.native
   object PartiallyEmittedExpression
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.PartiallyEmittedExpression with Double]
   
@@ -2456,7 +2463,7 @@ object SyntaxKind extends js.Object {
   /* 144 */ @js.native
   object SymbolKeyword extends TopLevel[SymbolKeyword with Double]
   
-  /* 323 */ @js.native
+  /* 324 */ @js.native
   object SyntaxList
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.SyntaxList with Double]
   
@@ -2464,7 +2471,7 @@ object SyntaxKind extends js.Object {
   object SyntheticExpression
     extends TopLevel[typingsSlinky.typescript.mod.SyntaxKind.SyntheticExpression with Double]
   
-  /* 329 */ @js.native
+  /* 330 */ @js.native
   object SyntheticReferenceExpression extends TopLevel[SyntheticReferenceExpression with Double]
   
   /* 198 */ @js.native

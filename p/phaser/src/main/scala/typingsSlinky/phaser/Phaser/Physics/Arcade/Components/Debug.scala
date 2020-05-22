@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides methods used for setting the debug properties of an Arcade Physics Body.
   */
-@js.native
 trait Debug extends js.Object {
   /**
     * The color of the body outline when it renders to the debug display.
     */
-  var debugBodyColor: Double = js.native
+  var debugBodyColor: Double
   /**
     * Set to `true` to have this body render its outline to the debug display.
     */
-  var debugShowBody: Boolean = js.native
+  var debugShowBody: Boolean
   /**
     * Set to `true` to have this body render a velocity marker to the debug display.
     */
-  var debugShowVelocity: Boolean = js.native
+  var debugShowVelocity: Boolean
   /**
     * Sets the debug values of this body.
     * 
@@ -30,12 +29,12 @@ trait Debug extends js.Object {
     * @param showVelocity Set to `true` to have this body render a velocity marker to the debug display.
     * @param bodyColor The color of the body outline when rendered to the debug display.
     */
-  def setDebug(showBody: Boolean, showVelocity: Boolean, bodyColor: Double): this.type = js.native
+  def setDebug(showBody: Boolean, showVelocity: Boolean, bodyColor: Double): this.type
   /**
     * Sets the color of the body outline when it renders to the debug display.
     * @param value The color of the body outline when rendered to the debug display.
     */
-  def setDebugBodyColor(value: Double): this.type = js.native
+  def setDebugBodyColor(value: Double): this.type
 }
 
 object Debug {
@@ -50,43 +49,5 @@ object Debug {
     val __obj = js.Dynamic.literal(debugBodyColor = debugBodyColor.asInstanceOf[js.Any], debugShowBody = debugShowBody.asInstanceOf[js.Any], debugShowVelocity = debugShowVelocity.asInstanceOf[js.Any], setDebug = js.Any.fromFunction3(setDebug), setDebugBodyColor = js.Any.fromFunction1(setDebugBodyColor))
     __obj.asInstanceOf[Debug]
   }
-  @scala.inline
-  implicit class DebugOps[Self <: Debug] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebugBodyColor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugBodyColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebugShowBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebugShowVelocity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDebug(value: (Boolean, Boolean, Double) => Debug): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDebug")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetDebugBodyColor(value: Double => Debug): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDebugBodyColor")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

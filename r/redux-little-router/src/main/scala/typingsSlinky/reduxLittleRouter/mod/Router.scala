@@ -11,11 +11,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Router extends js.Object {
-  var enhancer: StoreEnhancer[Location, js.Object] = js.native
-  var middleware: Middleware[js.Object, _, Dispatch[AnyAction]] = js.native
-  var reducer: Reducer[Location, AnyAction] = js.native
+  var enhancer: StoreEnhancer[Location, js.Object]
+  var middleware: Middleware[js.Object, _, Dispatch[AnyAction]]
+  var reducer: Reducer[Location, AnyAction]
 }
 
 object Router {
@@ -28,35 +27,5 @@ object Router {
     val __obj = js.Dynamic.literal(enhancer = js.Any.fromFunction1(enhancer), middleware = js.Any.fromFunction1(middleware), reducer = js.Any.fromFunction2(reducer))
     __obj.asInstanceOf[Router]
   }
-  @scala.inline
-  implicit class RouterOps[Self <: Router] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnhancer(
-      value: /* next */ StoreEnhancerStoreCreator[js.Object, js.Object] => StoreEnhancerStoreCreator[Location, js.Object]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enhancer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMiddleware(
-      value: /* api */ MiddlewareAPI[Dispatch[AnyAction], _] => js.Function1[/* next */ Dispatch[AnyAction], js.Function1[/* action */ js.Any, js.Any]]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middleware")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReducer(value: (/* state */ js.UndefOr[Location], AnyAction) => Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reducer")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

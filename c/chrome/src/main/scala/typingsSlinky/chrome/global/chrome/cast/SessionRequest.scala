@@ -22,5 +22,11 @@ class SessionRequest protected ()
     capabilities: js.Array[typingsSlinky.chrome.chrome.cast.Capability],
     timeout: Double
   ) = this()
+  /* CompleteClass */
+  override var appId: String = js.native
+  /* CompleteClass */
+  override var capabilities: js.Array[typingsSlinky.chrome.chrome.cast.Capability] = js.native
+  /* CompleteClass */
+  override var requestSessionTimeout: Double = js.native
 }
 

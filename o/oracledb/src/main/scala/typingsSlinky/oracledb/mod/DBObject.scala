@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class DBObject ()
   extends /* key */ StringDictionary[js.Any]
-     with EnqueueMessage {
+     with _EnqueueMessage {
   /**
     * When dbObject.isCollection is false, this will be an object containing attributes corresponding to the Oracle Database object attributes. 
     */
@@ -53,7 +53,7 @@ class DBObject ()
   def getFirstIndex(): Double = js.native
   /**
     * Returns a JavaScript array containing the ‘index’ keys.
-    */	
+    */    
   def getKeys(): js.Array[String] = js.native
   /**
     * To obtain the last index for later use to obtain a value.
@@ -69,7 +69,7 @@ class DBObject ()
   def getPrevIndex(): Double = js.native
   /**
     * Returns an array of element values as a JavaScript array in key order.
-    */	
+    */    
   def getValues(): js.Array[_] = js.native
   /**
     * Returns true if an element exists in the collection at the given index. Returns false otherwise.

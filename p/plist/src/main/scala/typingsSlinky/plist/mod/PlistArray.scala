@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PlistArray
   extends ReadonlyArray[PlistValue]
-     with PlistValue
+     with _PlistValue
 

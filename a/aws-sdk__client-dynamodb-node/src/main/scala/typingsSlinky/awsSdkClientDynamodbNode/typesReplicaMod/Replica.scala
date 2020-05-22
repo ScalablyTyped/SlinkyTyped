@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Replica extends js.Object {
   /**
     * <p>The region where the replica needs to be created.</p>
     */
-  var RegionName: js.UndefOr[String] = js.native
+  var RegionName: js.UndefOr[String] = js.undefined
 }
 
 object Replica {
   @scala.inline
-  def apply(): Replica = {
+  def apply(RegionName: String = null): Replica = {
     val __obj = js.Dynamic.literal()
+    if (RegionName != null) __obj.updateDynamic("RegionName")(RegionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Replica]
   }
-  @scala.inline
-  implicit class ReplicaOps[Self <: Replica] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,80 +7,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RenderCamera extends Object {
   /**
     * The camera target ("look at") position in the internal Cartesian rendering coordinate system.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var center: ArrayLike[Double] = js.native
+  var center: ArrayLike[Double]
   /**
     * The position of the camera in the internal Cartesian rendering coordinate system.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var eye: ArrayLike[Double] = js.native
+  var eye: ArrayLike[Double]
   /**
     * The distance to the far plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var far: Double = js.native
+  var far: Double
   /**
     * The horizontal field of view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var fovX: Double = js.native
+  var fovX: Double
   /**
     * The vertical field of view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var fovY: Double = js.native
+  var fovY: Double
   /**
     * The distance to the near plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var near: Double = js.native
+  var near: Double
   /**
     * The render pixel ratio. This can be used to adjust screen sizes so that they correctly match up to CSS pixel sizes when rendered in HiDPI.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var pixelRatio: Double = js.native
+  var pixelRatio: Double
   /**
     * A 4x4 matrix that defines the perspective projection transformation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var projectionMatrix: ArrayLike[Double] = js.native
+  var projectionMatrix: ArrayLike[Double]
   /**
     * The camera up vector.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var up: ArrayLike[Double] = js.native
+  var up: ArrayLike[Double]
   /**
     * The inverse transpose of `viewMatrix`, used to transform normals from world space to camera space.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var viewInverseTransposeMatrix: ArrayLike[Double] = js.native
+  var viewInverseTransposeMatrix: ArrayLike[Double]
   /**
     * A 4x4 matrix that transforms coordinates from world space to camera space.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var viewMatrix: ArrayLike[Double] = js.native
+  var viewMatrix: ArrayLike[Double]
   /**
     * The viewport (x, y, width, height).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */
-  var viewport: js.Any = js.native
+  var viewport: js.Any
 }
 
 object RenderCamera {
@@ -105,85 +104,5 @@ object RenderCamera {
     val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], eye = eye.asInstanceOf[js.Any], far = far.asInstanceOf[js.Any], fovX = fovX.asInstanceOf[js.Any], fovY = fovY.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), near = near.asInstanceOf[js.Any], pixelRatio = pixelRatio.asInstanceOf[js.Any], projectionMatrix = projectionMatrix.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), up = up.asInstanceOf[js.Any], viewInverseTransposeMatrix = viewInverseTransposeMatrix.asInstanceOf[js.Any], viewMatrix = viewMatrix.asInstanceOf[js.Any], viewport = viewport.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderCamera]
   }
-  @scala.inline
-  implicit class RenderCameraOps[Self <: RenderCamera] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEye(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eye")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFar(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("far")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFovX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fovX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFovY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fovY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNear(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("near")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPixelRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjectionMatrix(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUp(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewInverseTransposeMatrix(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewInverseTransposeMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewMatrix(value: ArrayLike[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewport(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

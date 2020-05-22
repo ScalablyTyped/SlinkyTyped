@@ -18,41 +18,11 @@ trait BatchDescribeSimulationJobResponse extends js.Object {
 
 object BatchDescribeSimulationJobResponse {
   @scala.inline
-  def apply(): BatchDescribeSimulationJobResponse = {
+  def apply(jobs: SimulationJobs = null, unprocessedJobs: Arns = null): BatchDescribeSimulationJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (jobs != null) __obj.updateDynamic("jobs")(jobs.asInstanceOf[js.Any])
+    if (unprocessedJobs != null) __obj.updateDynamic("unprocessedJobs")(unprocessedJobs.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDescribeSimulationJobResponse]
   }
-  @scala.inline
-  implicit class BatchDescribeSimulationJobResponseOps[Self <: BatchDescribeSimulationJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobs(value: SimulationJobs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnprocessedJobs(value: Arns): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unprocessedJobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnprocessedJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unprocessedJobs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

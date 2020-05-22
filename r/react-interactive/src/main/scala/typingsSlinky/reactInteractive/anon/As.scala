@@ -9,339 +9,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait As extends js.Object {
   // as: string | Component | ReactElement;
-  var as: js.Any = js.native
-  var className: js.UndefOr[String] = js.native
-  var extraTouchNoTap: js.UndefOr[Boolean] = js.native
+  var as: js.Any
+  var className: js.UndefOr[String] = js.undefined
+  var extraTouchNoTap: js.UndefOr[Boolean] = js.undefined
    // Not sure about this type
-  var focusToggleOff: js.UndefOr[Boolean] = js.native
-  var forceState: js.UndefOr[State] = js.native
-  var hover: js.UndefOr[CSSProperties] = js.native
-  var initialState: js.UndefOr[State] = js.native
-  var interactiveChild: js.UndefOr[Boolean] = js.native
-  var mutableProps: js.UndefOr[Boolean] = js.native
-  var nonContainedChild: js.UndefOr[Boolean] = js.native
+  var focusToggleOff: js.UndefOr[Boolean] = js.undefined
+  var forceState: js.UndefOr[State] = js.undefined
+  var hover: js.UndefOr[CSSProperties] = js.undefined
+  var initialState: js.UndefOr[State] = js.undefined
+  var interactiveChild: js.UndefOr[Boolean] = js.undefined
+  var mutableProps: js.UndefOr[Boolean] = js.undefined
+  var nonContainedChild: js.UndefOr[Boolean] = js.undefined
   var onClick: js.UndefOr[
     js.Function2[
       /* event */ SyntheticEvent[org.scalajs.dom.raw.Event, Element], 
       /* clickType */ ClickType, 
       Unit
     ]
-  ] = js.native
-  var onLongPress: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.native
-  var onStateChange: js.UndefOr[js.Function1[/* arg0 */ Event, Unit]] = js.native
-  var onTapFour: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.native
-  var onTapThree: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.native
-  var onTapTwo: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.native
-  var refDOMNode: js.UndefOr[js.Function1[/* node */ js.Any, _]] = js.native
-  var setStateCallback: js.UndefOr[js.Function1[/* arg0 */ NextState, Unit]] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var styleProperty: js.UndefOr[js.Object] = js.native
-  var tapTimeCutoff: js.UndefOr[Double] = js.native
-  var touchActiveTapOnly: js.UndefOr[Boolean] = js.native
-  var wrapperClassName: js.UndefOr[String] = js.native
-  var wrapperStyle: js.UndefOr[CSSProperties] = js.native
+  ] = js.undefined
+  var onLongPress: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.undefined
+  var onStateChange: js.UndefOr[js.Function1[/* arg0 */ Event, Unit]] = js.undefined
+  var onTapFour: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.undefined
+  var onTapThree: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.undefined
+  var onTapTwo: js.UndefOr[js.Function1[/* event */ org.scalajs.dom.raw.Event, Unit]] = js.undefined
+  var refDOMNode: js.UndefOr[js.Function1[/* node */ js.Any, _]] = js.undefined
+  var setStateCallback: js.UndefOr[js.Function1[/* arg0 */ NextState, Unit]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var styleProperty: js.UndefOr[js.Object] = js.undefined
+  var tapTimeCutoff: js.UndefOr[Double] = js.undefined
+  var touchActiveTapOnly: js.UndefOr[Boolean] = js.undefined
+  var wrapperClassName: js.UndefOr[String] = js.undefined
+  var wrapperStyle: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object As {
   @scala.inline
-  def apply(as: js.Any): As = {
+  def apply(
+    as: js.Any,
+    className: String = null,
+    extraTouchNoTap: js.UndefOr[Boolean] = js.undefined,
+    focusToggleOff: js.UndefOr[Boolean] = js.undefined,
+    forceState: State = null,
+    hover: CSSProperties = null,
+    initialState: State = null,
+    interactiveChild: js.UndefOr[Boolean] = js.undefined,
+    mutableProps: js.UndefOr[Boolean] = js.undefined,
+    nonContainedChild: js.UndefOr[Boolean] = js.undefined,
+    onClick: (/* event */ SyntheticEvent[org.scalajs.dom.raw.Event, Element], /* clickType */ ClickType) => Unit = null,
+    onLongPress: /* event */ org.scalajs.dom.raw.Event => Unit = null,
+    onStateChange: /* arg0 */ Event => Unit = null,
+    onTapFour: /* event */ org.scalajs.dom.raw.Event => Unit = null,
+    onTapThree: /* event */ org.scalajs.dom.raw.Event => Unit = null,
+    onTapTwo: /* event */ org.scalajs.dom.raw.Event => Unit = null,
+    refDOMNode: /* node */ js.Any => _ = null,
+    setStateCallback: /* arg0 */ NextState => Unit = null,
+    style: CSSProperties = null,
+    styleProperty: js.Object = null,
+    tapTimeCutoff: js.UndefOr[Double] = js.undefined,
+    touchActiveTapOnly: js.UndefOr[Boolean] = js.undefined,
+    wrapperClassName: String = null,
+    wrapperStyle: CSSProperties = null
+  ): As = {
     val __obj = js.Dynamic.literal(as = as.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(extraTouchNoTap)) __obj.updateDynamic("extraTouchNoTap")(extraTouchNoTap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusToggleOff)) __obj.updateDynamic("focusToggleOff")(focusToggleOff.get.asInstanceOf[js.Any])
+    if (forceState != null) __obj.updateDynamic("forceState")(forceState.asInstanceOf[js.Any])
+    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
+    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactiveChild)) __obj.updateDynamic("interactiveChild")(interactiveChild.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mutableProps)) __obj.updateDynamic("mutableProps")(mutableProps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nonContainedChild)) __obj.updateDynamic("nonContainedChild")(nonContainedChild.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
+    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction1(onStateChange))
+    if (onTapFour != null) __obj.updateDynamic("onTapFour")(js.Any.fromFunction1(onTapFour))
+    if (onTapThree != null) __obj.updateDynamic("onTapThree")(js.Any.fromFunction1(onTapThree))
+    if (onTapTwo != null) __obj.updateDynamic("onTapTwo")(js.Any.fromFunction1(onTapTwo))
+    if (refDOMNode != null) __obj.updateDynamic("refDOMNode")(js.Any.fromFunction1(refDOMNode))
+    if (setStateCallback != null) __obj.updateDynamic("setStateCallback")(js.Any.fromFunction1(setStateCallback))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styleProperty != null) __obj.updateDynamic("styleProperty")(styleProperty.asInstanceOf[js.Any])
+    if (!js.isUndefined(tapTimeCutoff)) __obj.updateDynamic("tapTimeCutoff")(tapTimeCutoff.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(touchActiveTapOnly)) __obj.updateDynamic("touchActiveTapOnly")(touchActiveTapOnly.get.asInstanceOf[js.Any])
+    if (wrapperClassName != null) __obj.updateDynamic("wrapperClassName")(wrapperClassName.asInstanceOf[js.Any])
+    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[As]
   }
-  @scala.inline
-  implicit class AsOps[Self <: As] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtraTouchNoTap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraTouchNoTap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtraTouchNoTap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraTouchNoTap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocusToggleOff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusToggleOff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocusToggleOff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusToggleOff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceState(value: State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHover(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialState(value: State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteractiveChild(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactiveChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteractiveChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactiveChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutableProps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutableProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutableProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutableProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonContainedChild(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonContainedChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonContainedChild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonContainedChild")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(
-      value: (/* event */ SyntheticEvent[org.scalajs.dom.raw.Event, Element], /* clickType */ ClickType) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLongPress(value: /* event */ org.scalajs.dom.raw.Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLongPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStateChange(value: /* arg0 */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTapFour(value: /* event */ org.scalajs.dom.raw.Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTapFour")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTapFour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTapFour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTapThree(value: /* event */ org.scalajs.dom.raw.Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTapThree")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTapThree: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTapThree")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTapTwo(value: /* event */ org.scalajs.dom.raw.Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTapTwo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTapTwo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTapTwo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefDOMNode(value: /* node */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refDOMNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRefDOMNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refDOMNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetStateCallback(value: /* arg0 */ NextState => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStateCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetStateCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStateCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleProperty(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyleProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTapTimeCutoff(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tapTimeCutoff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTapTimeCutoff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tapTimeCutoff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchActiveTapOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchActiveTapOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchActiveTapOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchActiveTapOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapperClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapperClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapperStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapperStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

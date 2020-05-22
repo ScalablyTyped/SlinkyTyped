@@ -18,41 +18,11 @@ trait DescribeManagedRuleGroupResponse extends js.Object {
 
 object DescribeManagedRuleGroupResponse {
   @scala.inline
-  def apply(): DescribeManagedRuleGroupResponse = {
+  def apply(Capacity: js.UndefOr[CapacityUnit] = js.undefined, Rules: RuleSummaries = null): DescribeManagedRuleGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Capacity)) __obj.updateDynamic("Capacity")(Capacity.get.asInstanceOf[js.Any])
+    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeManagedRuleGroupResponse]
   }
-  @scala.inline
-  implicit class DescribeManagedRuleGroupResponseOps[Self <: DescribeManagedRuleGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacity(value: CapacityUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: RuleSummaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

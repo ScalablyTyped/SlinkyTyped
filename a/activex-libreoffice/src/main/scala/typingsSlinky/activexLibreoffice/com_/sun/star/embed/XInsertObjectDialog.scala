@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** allows to create and initialize a new embedded object using GUI dialog. */
-@js.native
 trait XInsertObjectDialog extends XInterface {
   /**
     * creates a new object using GUI dialog.
@@ -24,7 +23,7 @@ trait XInsertObjectDialog extends XInterface {
     * @throws com::sun::star::io::IOException in case of io problems during opening or creation
     * @throws com::sun::star::uno::Exception in case of other problems
     */
-  def createInstanceByDialog(xStorage: XStorage, sEntName: String, lObjArgs: SeqEquiv[PropertyValue]): InsertedObjectInfo = js.native
+  def createInstanceByDialog(xStorage: XStorage, sEntName: String, lObjArgs: SeqEquiv[PropertyValue]): InsertedObjectInfo
 }
 
 object XInsertObjectDialog {
@@ -38,19 +37,5 @@ object XInsertObjectDialog {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createInstanceByDialog = js.Any.fromFunction3(createInstanceByDialog), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XInsertObjectDialog]
   }
-  @scala.inline
-  implicit class XInsertObjectDialogOps[Self <: XInsertObjectDialog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateInstanceByDialog(value: (XStorage, String, SeqEquiv[PropertyValue]) => InsertedObjectInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceByDialog")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

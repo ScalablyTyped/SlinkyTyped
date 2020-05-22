@@ -33,77 +33,20 @@ trait SchemaOrderLegacyPromotionBenefit extends js.Object {
 
 object SchemaOrderLegacyPromotionBenefit {
   @scala.inline
-  def apply(): SchemaOrderLegacyPromotionBenefit = {
+  def apply(
+    discount: SchemaPrice = null,
+    offerIds: js.Array[String] = null,
+    subType: String = null,
+    taxImpact: SchemaPrice = null,
+    `type`: String = null
+  ): SchemaOrderLegacyPromotionBenefit = {
     val __obj = js.Dynamic.literal()
+    if (discount != null) __obj.updateDynamic("discount")(discount.asInstanceOf[js.Any])
+    if (offerIds != null) __obj.updateDynamic("offerIds")(offerIds.asInstanceOf[js.Any])
+    if (subType != null) __obj.updateDynamic("subType")(subType.asInstanceOf[js.Any])
+    if (taxImpact != null) __obj.updateDynamic("taxImpact")(taxImpact.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderLegacyPromotionBenefit]
   }
-  @scala.inline
-  implicit class SchemaOrderLegacyPromotionBenefitOps[Self <: SchemaOrderLegacyPromotionBenefit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiscount(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaxImpact(value: SchemaPrice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taxImpact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaxImpact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taxImpact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

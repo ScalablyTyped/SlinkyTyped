@@ -8,82 +8,39 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a vSphere volume resource.
   */
-@js.native
 trait VsphereVirtualDiskVolumeSource extends js.Object {
   /**
     * Filesystem type to mount. Must be a filesystem type supported by the host operating system.
     * Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
     */
-  var fsType: js.UndefOr[Input[String]] = js.native
+  var fsType: js.UndefOr[Input[String]] = js.undefined
   /**
     * Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
     */
-  var storagePolicyID: js.UndefOr[Input[String]] = js.native
+  var storagePolicyID: js.UndefOr[Input[String]] = js.undefined
   /**
     * Storage Policy Based Management (SPBM) profile name.
     */
-  var storagePolicyName: js.UndefOr[Input[String]] = js.native
+  var storagePolicyName: js.UndefOr[Input[String]] = js.undefined
   /**
     * Path that identifies vSphere volume vmdk
     */
-  var volumePath: Input[String] = js.native
+  var volumePath: Input[String]
 }
 
 object VsphereVirtualDiskVolumeSource {
   @scala.inline
-  def apply(volumePath: Input[String]): VsphereVirtualDiskVolumeSource = {
+  def apply(
+    volumePath: Input[String],
+    fsType: Input[String] = null,
+    storagePolicyID: Input[String] = null,
+    storagePolicyName: Input[String] = null
+  ): VsphereVirtualDiskVolumeSource = {
     val __obj = js.Dynamic.literal(volumePath = volumePath.asInstanceOf[js.Any])
+    if (fsType != null) __obj.updateDynamic("fsType")(fsType.asInstanceOf[js.Any])
+    if (storagePolicyID != null) __obj.updateDynamic("storagePolicyID")(storagePolicyID.asInstanceOf[js.Any])
+    if (storagePolicyName != null) __obj.updateDynamic("storagePolicyName")(storagePolicyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[VsphereVirtualDiskVolumeSource]
   }
-  @scala.inline
-  implicit class VsphereVirtualDiskVolumeSourceOps[Self <: VsphereVirtualDiskVolumeSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVolumePath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFsType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFsType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoragePolicyID(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storagePolicyID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoragePolicyID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storagePolicyID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoragePolicyName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storagePolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoragePolicyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storagePolicyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

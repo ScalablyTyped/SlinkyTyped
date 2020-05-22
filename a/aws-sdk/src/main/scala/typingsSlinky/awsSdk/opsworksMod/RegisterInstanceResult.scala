@@ -14,29 +14,10 @@ trait RegisterInstanceResult extends js.Object {
 
 object RegisterInstanceResult {
   @scala.inline
-  def apply(): RegisterInstanceResult = {
+  def apply(InstanceId: String = null): RegisterInstanceResult = {
     val __obj = js.Dynamic.literal()
+    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterInstanceResult]
   }
-  @scala.inline
-  implicit class RegisterInstanceResultOps[Self <: RegisterInstanceResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

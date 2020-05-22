@@ -4,167 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AfterAtRule extends js.Object {
   /**
     * Controls if a line break comes after an at-rule; e.g. `@charset`; defaults to `false`
     */
-  var afterAtRule: js.UndefOr[Boolean] = js.native
+  var afterAtRule: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes after a block begins; e.g. `@media`; defaults to `false`
     */
-  var afterBlockBegins: js.UndefOr[Boolean] = js.native
+  var afterBlockBegins: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes after a block ends, defaults to `false`
     */
-  var afterBlockEnds: js.UndefOr[Boolean] = js.native
+  var afterBlockEnds: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes after a comment; defaults to `false`
     */
-  var afterComment: js.UndefOr[Boolean] = js.native
+  var afterComment: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes after a property; defaults to `false`
     */
-  var afterProperty: js.UndefOr[Boolean] = js.native
+  var afterProperty: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes after a rule begins; defaults to `false`
     */
-  var afterRuleBegins: js.UndefOr[Boolean] = js.native
+  var afterRuleBegins: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes after a rule ends; defaults to `false`
     */
-  var afterRuleEnds: js.UndefOr[Boolean] = js.native
+  var afterRuleEnds: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes before a block ends; defaults to `false`
     */
-  var beforeBlockEnds: js.UndefOr[Boolean] = js.native
+  var beforeBlockEnds: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls if a line break comes between selectors; defaults to `false`
     */
-  var betweenSelectors: js.UndefOr[Boolean] = js.native
+  var betweenSelectors: js.UndefOr[Boolean] = js.undefined
 }
 
 object AfterAtRule {
   @scala.inline
-  def apply(): AfterAtRule = {
+  def apply(
+    afterAtRule: js.UndefOr[Boolean] = js.undefined,
+    afterBlockBegins: js.UndefOr[Boolean] = js.undefined,
+    afterBlockEnds: js.UndefOr[Boolean] = js.undefined,
+    afterComment: js.UndefOr[Boolean] = js.undefined,
+    afterProperty: js.UndefOr[Boolean] = js.undefined,
+    afterRuleBegins: js.UndefOr[Boolean] = js.undefined,
+    afterRuleEnds: js.UndefOr[Boolean] = js.undefined,
+    beforeBlockEnds: js.UndefOr[Boolean] = js.undefined,
+    betweenSelectors: js.UndefOr[Boolean] = js.undefined
+  ): AfterAtRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(afterAtRule)) __obj.updateDynamic("afterAtRule")(afterAtRule.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterBlockBegins)) __obj.updateDynamic("afterBlockBegins")(afterBlockBegins.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterBlockEnds)) __obj.updateDynamic("afterBlockEnds")(afterBlockEnds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterComment)) __obj.updateDynamic("afterComment")(afterComment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterProperty)) __obj.updateDynamic("afterProperty")(afterProperty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterRuleBegins)) __obj.updateDynamic("afterRuleBegins")(afterRuleBegins.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(afterRuleEnds)) __obj.updateDynamic("afterRuleEnds")(afterRuleEnds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(beforeBlockEnds)) __obj.updateDynamic("beforeBlockEnds")(beforeBlockEnds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(betweenSelectors)) __obj.updateDynamic("betweenSelectors")(betweenSelectors.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AfterAtRule]
   }
-  @scala.inline
-  implicit class AfterAtRuleOps[Self <: AfterAtRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterAtRule(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterAtRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterAtRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterAtRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterBlockBegins(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBlockBegins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterBlockBegins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBlockBegins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterBlockEnds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBlockEnds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterBlockEnds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBlockEnds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterComment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterComment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterProperty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterRuleBegins(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRuleBegins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterRuleBegins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRuleBegins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterRuleEnds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRuleEnds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterRuleEnds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRuleEnds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeBlockEnds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBlockEnds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeforeBlockEnds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBlockEnds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBetweenSelectors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("betweenSelectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBetweenSelectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("betweenSelectors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

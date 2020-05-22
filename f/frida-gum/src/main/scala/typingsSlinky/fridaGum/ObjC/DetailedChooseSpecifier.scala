@@ -4,52 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait DetailedChooseSpecifier extends ChooseSpecifier {
+trait DetailedChooseSpecifier extends js.Object {
   /**
     * Which class to look for instances of. E.g.: `ObjC.classes.UIButton`.
     */
-  var `class`: Object = js.native
+  var `class`: Object
   /**
     * Whether you’re also interested in subclasses matching the given class selector.
     *
     * The default is to also include subclasses.
     */
-  var subclasses: js.UndefOr[Boolean] = js.native
+  var subclasses: js.UndefOr[Boolean] = js.undefined
 }
 
 object DetailedChooseSpecifier {
   @scala.inline
-  def apply(`class`: Object): DetailedChooseSpecifier = {
+  def apply(`class`: Object, subclasses: js.UndefOr[Boolean] = js.undefined): DetailedChooseSpecifier = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subclasses)) __obj.updateDynamic("subclasses")(subclasses.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetailedChooseSpecifier]
   }
-  @scala.inline
-  implicit class DetailedChooseSpecifierOps[Self <: DetailedChooseSpecifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClass(value: Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubclasses(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subclasses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubclasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subclasses")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

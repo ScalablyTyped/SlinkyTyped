@@ -13,5 +13,14 @@ class NgStyle protected ()
      with DoCheck {
   def this(delegate: ɵNgStyleImpl) = this()
   var ngStyle: StringDictionary[js.Any] | Null = js.native
+  /**
+    * A callback method that performs change-detection, invoked
+    * after the default change-detector runs.
+    * See `KeyValueDiffers` and `IterableDiffers` for implementing
+    * custom change checking for collections.
+    *
+    */
+  /* CompleteClass */
+  override def ngDoCheck(): Unit = js.native
 }
 

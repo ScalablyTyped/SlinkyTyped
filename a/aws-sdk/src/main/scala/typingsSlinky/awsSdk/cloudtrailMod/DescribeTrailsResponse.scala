@@ -14,29 +14,10 @@ trait DescribeTrailsResponse extends js.Object {
 
 object DescribeTrailsResponse {
   @scala.inline
-  def apply(): DescribeTrailsResponse = {
+  def apply(trailList: TrailList = null): DescribeTrailsResponse = {
     val __obj = js.Dynamic.literal()
+    if (trailList != null) __obj.updateDynamic("trailList")(trailList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTrailsResponse]
   }
-  @scala.inline
-  implicit class DescribeTrailsResponseOps[Self <: DescribeTrailsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrailList(value: TrailList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

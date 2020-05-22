@@ -10,143 +10,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SegmentDimensions extends js.Object {
   /**
     * Custom segment attributes.
     */
   var Attributes: js.UndefOr[
     StringDictionary[AttributeDimension] | (js.Iterable[js.Tuple2[String, AttributeDimension]])
-  ] = js.native
+  ] = js.undefined
   /**
     * The segment behaviors attributes.
     */
-  var Behavior: js.UndefOr[SegmentBehaviors] = js.native
+  var Behavior: js.UndefOr[SegmentBehaviors] = js.undefined
   /**
     * The segment demographics attributes.
     */
-  var Demographic: js.UndefOr[SegmentDemographics] = js.native
+  var Demographic: js.UndefOr[SegmentDemographics] = js.undefined
   /**
     * The segment location attributes.
     */
-  var Location: js.UndefOr[SegmentLocation] = js.native
+  var Location: js.UndefOr[SegmentLocation] = js.undefined
   /**
     * Custom segment metrics.
     */
   var Metrics: js.UndefOr[
     StringDictionary[MetricDimension] | (js.Iterable[js.Tuple2[String, MetricDimension]])
-  ] = js.native
+  ] = js.undefined
   /**
     * Custom segment user attributes.
     */
   var UserAttributes: js.UndefOr[
     StringDictionary[AttributeDimension] | (js.Iterable[js.Tuple2[String, AttributeDimension]])
-  ] = js.native
+  ] = js.undefined
 }
 
 object SegmentDimensions {
   @scala.inline
-  def apply(): SegmentDimensions = {
+  def apply(
+    Attributes: StringDictionary[AttributeDimension] | (js.Iterable[js.Tuple2[String, AttributeDimension]]) = null,
+    Behavior: SegmentBehaviors = null,
+    Demographic: SegmentDemographics = null,
+    Location: SegmentLocation = null,
+    Metrics: StringDictionary[MetricDimension] | (js.Iterable[js.Tuple2[String, MetricDimension]]) = null,
+    UserAttributes: StringDictionary[AttributeDimension] | (js.Iterable[js.Tuple2[String, AttributeDimension]]) = null
+  ): SegmentDimensions = {
     val __obj = js.Dynamic.literal()
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (Behavior != null) __obj.updateDynamic("Behavior")(Behavior.asInstanceOf[js.Any])
+    if (Demographic != null) __obj.updateDynamic("Demographic")(Demographic.asInstanceOf[js.Any])
+    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
+    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
+    if (UserAttributes != null) __obj.updateDynamic("UserAttributes")(UserAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SegmentDimensions]
   }
-  @scala.inline
-  implicit class SegmentDimensionsOps[Self <: SegmentDimensions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributesIterable(value: js.Iterable[js.Tuple2[String, AttributeDimension]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: StringDictionary[AttributeDimension] | (js.Iterable[js.Tuple2[String, AttributeDimension]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBehavior(value: SegmentBehaviors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDemographic(value: SegmentDemographics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDemographic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: SegmentLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricsIterable(value: js.Iterable[js.Tuple2[String, MetricDimension]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: StringDictionary[MetricDimension] | (js.Iterable[js.Tuple2[String, MetricDimension]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAttributesIterable(value: js.Iterable[js.Tuple2[String, AttributeDimension]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserAttributes(value: StringDictionary[AttributeDimension] | (js.Iterable[js.Tuple2[String, AttributeDimension]])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

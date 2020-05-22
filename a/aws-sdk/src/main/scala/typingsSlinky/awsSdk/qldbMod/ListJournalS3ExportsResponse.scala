@@ -18,41 +18,11 @@ trait ListJournalS3ExportsResponse extends js.Object {
 
 object ListJournalS3ExportsResponse {
   @scala.inline
-  def apply(): ListJournalS3ExportsResponse = {
+  def apply(JournalS3Exports: JournalS3ExportList = null, NextToken: NextToken = null): ListJournalS3ExportsResponse = {
     val __obj = js.Dynamic.literal()
+    if (JournalS3Exports != null) __obj.updateDynamic("JournalS3Exports")(JournalS3Exports.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListJournalS3ExportsResponse]
   }
-  @scala.inline
-  implicit class ListJournalS3ExportsResponseOps[Self <: ListJournalS3ExportsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJournalS3Exports(value: JournalS3ExportList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JournalS3Exports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJournalS3Exports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JournalS3Exports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

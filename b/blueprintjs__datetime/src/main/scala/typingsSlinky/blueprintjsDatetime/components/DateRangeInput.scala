@@ -4,11 +4,12 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
+import typingsSlinky.blueprintjsDatetime.anon.FormatDate
 import typingsSlinky.blueprintjsDatetime.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
 import typingsSlinky.blueprintjsDatetime.dateRangeInputMod.IDateRangeInputProps
-import typingsSlinky.blueprintjsDatetime.dateUtilsMod.DateRange
+import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
@@ -49,7 +50,7 @@ object DateRangeInput {
     @scala.inline
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def localeUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    def localeUtils(value: FormatDate): this.type = set("localeUtils", value.asInstanceOf[js.Any])
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     @scala.inline

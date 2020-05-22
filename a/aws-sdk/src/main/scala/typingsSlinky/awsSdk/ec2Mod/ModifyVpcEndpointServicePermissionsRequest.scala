@@ -26,59 +26,17 @@ trait ModifyVpcEndpointServicePermissionsRequest extends js.Object {
 
 object ModifyVpcEndpointServicePermissionsRequest {
   @scala.inline
-  def apply(ServiceId: VpcEndpointServiceId): ModifyVpcEndpointServicePermissionsRequest = {
+  def apply(
+    ServiceId: VpcEndpointServiceId,
+    AddAllowedPrincipals: ValueStringList = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined,
+    RemoveAllowedPrincipals: ValueStringList = null
+  ): ModifyVpcEndpointServicePermissionsRequest = {
     val __obj = js.Dynamic.literal(ServiceId = ServiceId.asInstanceOf[js.Any])
+    if (AddAllowedPrincipals != null) __obj.updateDynamic("AddAllowedPrincipals")(AddAllowedPrincipals.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
+    if (RemoveAllowedPrincipals != null) __obj.updateDynamic("RemoveAllowedPrincipals")(RemoveAllowedPrincipals.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyVpcEndpointServicePermissionsRequest]
   }
-  @scala.inline
-  implicit class ModifyVpcEndpointServicePermissionsRequestOps[Self <: ModifyVpcEndpointServicePermissionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceId(value: VpcEndpointServiceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddAllowedPrincipals(value: ValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddAllowedPrincipals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddAllowedPrincipals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddAllowedPrincipals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveAllowedPrincipals(value: ValueStringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveAllowedPrincipals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveAllowedPrincipals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveAllowedPrincipals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

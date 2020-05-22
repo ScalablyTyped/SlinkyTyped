@@ -12,18 +12,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Rewritten from type alias, can be one of: 
-  - typingsSlinky.ably.mod.Types.ChannelEvent.FAILED
-  - typingsSlinky.ably.mod.Types.ChannelEvent.INITIALIZED
-  - typingsSlinky.ably.mod.Types.ChannelEvent.SUSPENDED
-  - typingsSlinky.ably.mod.Types.ChannelEvent.ATTACHED
-  - typingsSlinky.ably.mod.Types.ChannelEvent.ATTACHING
-  - typingsSlinky.ably.mod.Types.ChannelEvent.DETACHED
-  - typingsSlinky.ably.mod.Types.ChannelEvent.DETACHING
-  - typingsSlinky.ably.mod.Types.ChannelEvent.UPDATE
-*/
-trait ChannelEvent extends js.Object
-
 @JSImport("ably", "Types.ChannelEvent")
 @js.native
 object ChannelEvent extends js.Object {

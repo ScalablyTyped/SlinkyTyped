@@ -25,41 +25,11 @@ trait SchemaZipInfo extends js.Object {
 
 object SchemaZipInfo {
   @scala.inline
-  def apply(): SchemaZipInfo = {
+  def apply(filesCount: js.UndefOr[Double] = js.undefined, sourceUrl: String = null): SchemaZipInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(filesCount)) __obj.updateDynamic("filesCount")(filesCount.get.asInstanceOf[js.Any])
+    if (sourceUrl != null) __obj.updateDynamic("sourceUrl")(sourceUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaZipInfo]
   }
-  @scala.inline
-  implicit class SchemaZipInfoOps[Self <: SchemaZipInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilesCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

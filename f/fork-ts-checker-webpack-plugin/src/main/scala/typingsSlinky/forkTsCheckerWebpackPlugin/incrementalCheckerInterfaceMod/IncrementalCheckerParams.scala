@@ -1,20 +1,24 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.GetFormattedLints
 import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
+import typingsSlinky.std.ReturnType
 import typingsSlinky.tslint.mod.RuleFailure
 import typingsSlinky.typescript.mod.CompilerOptions
 import typingsSlinky.typescript.mod.Diagnostic
+import typingsSlinky.typescript.mod.ModuleResolutionHost
+import typingsSlinky.typescript.mod.ResolvedModuleWithFailedLookupLocations
+import typingsSlinky.typescript.mod.ResolvedTypeReferenceDirectiveWithFailedLookupLocations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IncrementalCheckerParams extends ApiIncrementalCheckerParams {
-  var vue: Boolean = js.native
-  var watchPaths: js.Array[String] = js.native
-  var workDivision: Double = js.native
-  var workNumber: Double = js.native
+  var vue: Boolean
+  var watchPaths: js.Array[String]
+  var workDivision: Double
+  var workNumber: Double
 }
 
 object IncrementalCheckerParams {
@@ -32,42 +36,16 @@ object IncrementalCheckerParams {
     vue: Boolean,
     watchPaths: js.Array[String],
     workDivision: Double,
-    workNumber: Double
+    workNumber: Double,
+    eslinter: ReturnType[js.Function1[/* eslintOptions */ js.Object, GetFormattedLints]] = null,
+    resolveModuleName: (/* typescript */ Typeofts, /* moduleName */ String, /* containingFile */ String, /* compilerOptions */ CompilerOptions, /* moduleResolutionHost */ ModuleResolutionHost) => ResolvedModuleWithFailedLookupLocations = null,
+    resolveTypeReferenceDirective: (/* typescript */ Typeofts, /* typeDirectiveName */ String, /* containingFile */ String, /* compilerOptions */ CompilerOptions, /* moduleResolutionHost */ ModuleResolutionHost) => ResolvedTypeReferenceDirectiveWithFailedLookupLocations = null
   ): IncrementalCheckerParams = {
     val __obj = js.Dynamic.literal(checkSyntacticErrors = checkSyntacticErrors.asInstanceOf[js.Any], compilerOptions = compilerOptions.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], createNormalizedMessageFromDiagnostic = js.Any.fromFunction1(createNormalizedMessageFromDiagnostic), createNormalizedMessageFromRuleFailure = js.Any.fromFunction1(createNormalizedMessageFromRuleFailure), linterAutoFix = linterAutoFix.asInstanceOf[js.Any], linterConfigFile = linterConfigFile.asInstanceOf[js.Any], programConfigFile = programConfigFile.asInstanceOf[js.Any], typescript = typescript.asInstanceOf[js.Any], vue = vue.asInstanceOf[js.Any], watchPaths = watchPaths.asInstanceOf[js.Any], workDivision = workDivision.asInstanceOf[js.Any], workNumber = workNumber.asInstanceOf[js.Any])
+    if (eslinter != null) __obj.updateDynamic("eslinter")(eslinter.asInstanceOf[js.Any])
+    if (resolveModuleName != null) __obj.updateDynamic("resolveModuleName")(js.Any.fromFunction5(resolveModuleName))
+    if (resolveTypeReferenceDirective != null) __obj.updateDynamic("resolveTypeReferenceDirective")(js.Any.fromFunction5(resolveTypeReferenceDirective))
     __obj.asInstanceOf[IncrementalCheckerParams]
   }
-  @scala.inline
-  implicit class IncrementalCheckerParamsOps[Self <: IncrementalCheckerParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWatchPaths(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("watchPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkDivision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workDivision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

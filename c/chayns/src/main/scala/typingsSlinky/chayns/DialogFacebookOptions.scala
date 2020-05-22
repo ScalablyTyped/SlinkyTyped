@@ -4,89 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DialogFacebookOptions extends js.Object {
-  var button: js.UndefOr[js.Array[DialogFacebookButton]] = js.native
-  var message: js.UndefOr[String] = js.native
-  var multiselect: js.UndefOr[Double] = js.native
-  var preSelected: js.Array[Double] = js.native
-  var quickfind: js.UndefOr[Double] = js.native
-  var title: String = js.native
+  var button: js.UndefOr[js.Array[DialogFacebookButton]] = js.undefined
+  var message: js.UndefOr[String] = js.undefined
+  var multiselect: js.UndefOr[Double] = js.undefined
+  var preSelected: js.Array[Double]
+  var quickfind: js.UndefOr[Double] = js.undefined
+  var title: String
 }
 
 object DialogFacebookOptions {
   @scala.inline
-  def apply(preSelected: js.Array[Double], title: String): DialogFacebookOptions = {
+  def apply(
+    preSelected: js.Array[Double],
+    title: String,
+    button: js.Array[DialogFacebookButton] = null,
+    message: String = null,
+    multiselect: js.UndefOr[Double] = js.undefined,
+    quickfind: js.UndefOr[Double] = js.undefined
+  ): DialogFacebookOptions = {
     val __obj = js.Dynamic.literal(preSelected = preSelected.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiselect)) __obj.updateDynamic("multiselect")(multiselect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quickfind)) __obj.updateDynamic("quickfind")(quickfind.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogFacebookOptions]
   }
-  @scala.inline
-  implicit class DialogFacebookOptionsOps[Self <: DialogFacebookOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreSelected(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withButton(value: js.Array[DialogFacebookButton]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiselect(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuickfind(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickfind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuickfind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickfind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

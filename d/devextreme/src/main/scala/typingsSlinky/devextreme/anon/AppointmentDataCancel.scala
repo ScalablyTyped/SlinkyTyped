@@ -7,90 +7,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppointmentDataCancel extends js.Object {
-  var appointmentData: js.UndefOr[js.Any] = js.native
+  var appointmentData: js.UndefOr[js.Any] = js.undefined
   var cancel: js.UndefOr[
     Boolean | typingsSlinky.devextreme.mod.global.Promise[Boolean] | JQueryPromise[Boolean]
-  ] = js.native
-  var component: js.UndefOr[dxScheduler] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var model: js.UndefOr[js.Any] = js.native
+  ] = js.undefined
+  var component: js.UndefOr[dxScheduler] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
 }
 
 object AppointmentDataCancel {
   @scala.inline
-  def apply(): AppointmentDataCancel = {
+  def apply(
+    appointmentData: js.Any = null,
+    cancel: Boolean | typingsSlinky.devextreme.mod.global.Promise[Boolean] | JQueryPromise[Boolean] = null,
+    component: dxScheduler = null,
+    element: dxElement = null,
+    model: js.Any = null
+  ): AppointmentDataCancel = {
     val __obj = js.Dynamic.literal()
+    if (appointmentData != null) __obj.updateDynamic("appointmentData")(appointmentData.asInstanceOf[js.Any])
+    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentDataCancel]
   }
-  @scala.inline
-  implicit class AppointmentDataCancelOps[Self <: AppointmentDataCancel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppointmentData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppointmentData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: Boolean | typingsSlinky.devextreme.mod.global.Promise[Boolean] | JQueryPromise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponent(value: dxScheduler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,65 +30,18 @@ trait SchemaToken extends js.Object {
 
 object SchemaToken {
   @scala.inline
-  def apply(): SchemaToken = {
+  def apply(
+    dependencyEdge: SchemaDependencyEdge = null,
+    lemma: String = null,
+    partOfSpeech: SchemaPartOfSpeech = null,
+    text: SchemaTextSpan = null
+  ): SchemaToken = {
     val __obj = js.Dynamic.literal()
+    if (dependencyEdge != null) __obj.updateDynamic("dependencyEdge")(dependencyEdge.asInstanceOf[js.Any])
+    if (lemma != null) __obj.updateDynamic("lemma")(lemma.asInstanceOf[js.Any])
+    if (partOfSpeech != null) __obj.updateDynamic("partOfSpeech")(partOfSpeech.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaToken]
   }
-  @scala.inline
-  implicit class SchemaTokenOps[Self <: SchemaToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDependencyEdge(value: SchemaDependencyEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencyEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencyEdge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencyEdge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLemma(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lemma")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLemma: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lemma")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartOfSpeech(value: SchemaPartOfSpeech): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partOfSpeech")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartOfSpeech: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partOfSpeech")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: SchemaTextSpan): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

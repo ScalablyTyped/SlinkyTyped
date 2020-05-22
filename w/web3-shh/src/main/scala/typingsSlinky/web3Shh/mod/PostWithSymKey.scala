@@ -4,30 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PostWithSymKey extends PostBase {
-  var symKeyID: String = js.native
+  var symKeyID: String
 }
 
 object PostWithSymKey {
   @scala.inline
-  def apply(payload: String, symKeyID: String, topic: String, ttl: Double): PostWithSymKey = {
+  def apply(
+    payload: String,
+    symKeyID: String,
+    topic: String,
+    ttl: Double,
+    padding: js.UndefOr[Double] = js.undefined,
+    powTarget: js.UndefOr[Double] = js.undefined,
+    powTime: js.UndefOr[Double] = js.undefined,
+    sig: String = null,
+    targetPeer: js.UndefOr[Double] = js.undefined
+  ): PostWithSymKey = {
     val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any], symKeyID = symKeyID.asInstanceOf[js.Any], topic = topic.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(powTarget)) __obj.updateDynamic("powTarget")(powTarget.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(powTime)) __obj.updateDynamic("powTime")(powTime.get.asInstanceOf[js.Any])
+    if (sig != null) __obj.updateDynamic("sig")(sig.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetPeer)) __obj.updateDynamic("targetPeer")(targetPeer.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostWithSymKey]
   }
-  @scala.inline
-  implicit class PostWithSymKeyOps[Self <: PostWithSymKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSymKeyID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symKeyID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

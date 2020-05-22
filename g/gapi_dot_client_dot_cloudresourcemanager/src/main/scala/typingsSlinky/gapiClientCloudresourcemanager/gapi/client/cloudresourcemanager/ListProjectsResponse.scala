@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListProjectsResponse extends js.Object {
   /**
     * Pagination token.
@@ -19,51 +18,21 @@ trait ListProjectsResponse extends js.Object {
     *
     * Pagination tokens have a limited lifetime.
     */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /**
     * The list of Projects that matched the list filter. This list can
     * be paginated.
     */
-  var projects: js.UndefOr[js.Array[Project]] = js.native
+  var projects: js.UndefOr[js.Array[Project]] = js.undefined
 }
 
 object ListProjectsResponse {
   @scala.inline
-  def apply(): ListProjectsResponse = {
+  def apply(nextPageToken: String = null, projects: js.Array[Project] = null): ListProjectsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (projects != null) __obj.updateDynamic("projects")(projects.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListProjectsResponse]
   }
-  @scala.inline
-  implicit class ListProjectsResponseOps[Self <: ListProjectsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjects(value: js.Array[Project]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projects")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

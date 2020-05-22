@@ -4,321 +4,123 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommonSeriesOptionsMarkerDataLabel extends js.Object {
   /** Angle of the data label in degrees. Only the text gets rotated, whereas the background and border does not rotate.
     * @Default {null}
     */
-  var angle: js.UndefOr[Double] = js.native
+  var angle: js.UndefOr[Double] = js.undefined
   /** Options for customizing the border of the data label.
     */
-  var border: js.UndefOr[CommonSeriesOptionsMarkerDataLabelBorder] = js.native
+  var border: js.UndefOr[CommonSeriesOptionsMarkerDataLabelBorder] = js.undefined
   /** Options for displaying and customizing the line that connects point and data label.
     */
-  var connectorLine: js.UndefOr[CommonSeriesOptionsMarkerDataLabelConnectorLine] = js.native
+  var connectorLine: js.UndefOr[CommonSeriesOptionsMarkerDataLabelConnectorLine] = js.undefined
   /** Enables saturation to the data label.
     * @Default {false}
     */
-  var enableContrastColor: js.UndefOr[Boolean] = js.native
+  var enableContrastColor: js.UndefOr[Boolean] = js.undefined
   /** Enable the wrap option to the data label.
     * @Default {false}
     */
-  var enableWrap: js.UndefOr[Boolean] = js.native
+  var enableWrap: js.UndefOr[Boolean] = js.undefined
   /** Background color of the data label.
     * @Default {null}
     */
-  var fill: js.UndefOr[String] = js.native
+  var fill: js.UndefOr[String] = js.undefined
   /** Options for customizing the data label font.
     */
-  var font: js.UndefOr[CommonSeriesOptionsMarkerDataLabelFont] = js.native
+  var font: js.UndefOr[CommonSeriesOptionsMarkerDataLabelFont] = js.undefined
   /** Horizontal alignment of the data label.
     * @Default {center}
     */
-  var horizontalTextAlignment: js.UndefOr[HorizontalTextAlignment | String] = js.native
+  var horizontalTextAlignment: js.UndefOr[HorizontalTextAlignment | String] = js.undefined
   /** Margin of the text to its background shape. The size of the background shape increases based on the margin applied to its text.
     */
-  var margin: js.UndefOr[CommonSeriesOptionsMarkerDataLabelMargin] = js.native
+  var margin: js.UndefOr[CommonSeriesOptionsMarkerDataLabelMargin] = js.undefined
   /** Maximum label width of the data label.
     * @Default {null}
     */
-  var maximumLabelWidth: js.UndefOr[Double] = js.native
+  var maximumLabelWidth: js.UndefOr[Double] = js.undefined
   /** Options for customizing the datalabel positions
     */
-  var offset: js.UndefOr[CommonSeriesOptionsMarkerDataLabelOffset] = js.native
+  var offset: js.UndefOr[CommonSeriesOptionsMarkerDataLabelOffset] = js.undefined
   /** Opacity of the data label.
     * @Default {1}
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /** Background shape of the data label.
     * @Default {none. See Shape}
     */
-  var shape: js.UndefOr[Shape | String] = js.native
+  var shape: js.UndefOr[Shape | String] = js.undefined
   /** Displays the partially visible labels inside the chart Area
     * @Default {false}
     */
-  var showEdgeLabels: js.UndefOr[Boolean] = js.native
+  var showEdgeLabels: js.UndefOr[Boolean] = js.undefined
   /** Custom template to format the data label content. Use â€œpoint.xâ€ and â€œpoint.yâ€ as a placeholder text to display the corresponding data pointâ€™s x and y value.
     */
-  var template: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String] = js.undefined
   /** Name of a field in data source, where datalabel text is displayed.
     */
-  var textMappingName: js.UndefOr[String] = js.native
+  var textMappingName: js.UndefOr[String] = js.undefined
   /** Specifies the position of the data label. This property can be used only for the series such as column, bar, stacked column, stacked bar, 100% stacked column, 100% stacked bar,
     * candle and OHLC.
     * @Default {top. See TextPosition}
     */
-  var textPosition: js.UndefOr[TextPosition | String] = js.native
+  var textPosition: js.UndefOr[TextPosition | String] = js.undefined
   /** Vertical alignment of the data label.
     * @Default {center}
     */
-  var verticalTextAlignment: js.UndefOr[VerticalTextAlignment | String] = js.native
+  var verticalTextAlignment: js.UndefOr[VerticalTextAlignment | String] = js.undefined
   /** Controls the visibility of the data labels.
     * @Default {false}
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object CommonSeriesOptionsMarkerDataLabel {
   @scala.inline
-  def apply(): CommonSeriesOptionsMarkerDataLabel = {
+  def apply(
+    angle: js.UndefOr[Double] = js.undefined,
+    border: CommonSeriesOptionsMarkerDataLabelBorder = null,
+    connectorLine: CommonSeriesOptionsMarkerDataLabelConnectorLine = null,
+    enableContrastColor: js.UndefOr[Boolean] = js.undefined,
+    enableWrap: js.UndefOr[Boolean] = js.undefined,
+    fill: String = null,
+    font: CommonSeriesOptionsMarkerDataLabelFont = null,
+    horizontalTextAlignment: HorizontalTextAlignment | String = null,
+    margin: CommonSeriesOptionsMarkerDataLabelMargin = null,
+    maximumLabelWidth: js.UndefOr[Double] = js.undefined,
+    offset: CommonSeriesOptionsMarkerDataLabelOffset = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    shape: Shape | String = null,
+    showEdgeLabels: js.UndefOr[Boolean] = js.undefined,
+    template: String = null,
+    textMappingName: String = null,
+    textPosition: TextPosition | String = null,
+    verticalTextAlignment: VerticalTextAlignment | String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): CommonSeriesOptionsMarkerDataLabel = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (connectorLine != null) __obj.updateDynamic("connectorLine")(connectorLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableContrastColor)) __obj.updateDynamic("enableContrastColor")(enableContrastColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableWrap)) __obj.updateDynamic("enableWrap")(enableWrap.get.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (horizontalTextAlignment != null) __obj.updateDynamic("horizontalTextAlignment")(horizontalTextAlignment.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumLabelWidth)) __obj.updateDynamic("maximumLabelWidth")(maximumLabelWidth.get.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (!js.isUndefined(showEdgeLabels)) __obj.updateDynamic("showEdgeLabels")(showEdgeLabels.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (textMappingName != null) __obj.updateDynamic("textMappingName")(textMappingName.asInstanceOf[js.Any])
+    if (textPosition != null) __obj.updateDynamic("textPosition")(textPosition.asInstanceOf[js.Any])
+    if (verticalTextAlignment != null) __obj.updateDynamic("verticalTextAlignment")(verticalTextAlignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonSeriesOptionsMarkerDataLabel]
   }
-  @scala.inline
-  implicit class CommonSeriesOptionsMarkerDataLabelOps[Self <: CommonSeriesOptionsMarkerDataLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: CommonSeriesOptionsMarkerDataLabelBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectorLine(value: CommonSeriesOptionsMarkerDataLabelConnectorLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectorLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableContrastColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableContrastColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableContrastColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableContrastColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: CommonSeriesOptionsMarkerDataLabelFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontalTextAlignment(value: HorizontalTextAlignment | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalTextAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalTextAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalTextAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: CommonSeriesOptionsMarkerDataLabelMargin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumLabelWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumLabelWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumLabelWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumLabelWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: CommonSeriesOptionsMarkerDataLabelOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: Shape | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowEdgeLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showEdgeLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowEdgeLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showEdgeLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextMappingName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textMappingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextMappingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textMappingName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextPosition(value: TextPosition | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerticalTextAlignment(value: VerticalTextAlignment | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalTextAlignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerticalTextAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalTextAlignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

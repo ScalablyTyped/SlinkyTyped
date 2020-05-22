@@ -5,21 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Fired when the events related to a [urlSession](Modules.URLSession) are waiting to be processed.
-		 * Available only on iOS 7 and later.
-		 */
-@js.native
+  * Fired when the events related to a [urlSession](Modules.URLSession) are waiting to be processed.
+  * Available only on iOS 7 and later.
+  */
 trait iOSBackgroundtransferEvent extends iOSBaseEvent {
   /**
-  			 * Unique string identifier for the `backgroundtransfer` event. This identifier should be passed as the argument
-  			 * to the [endBackgroundHandler](Titanium.App.iOS.endBackgroundHandler) method.
-  			 */
-  var handlerId: String = js.native
+    * Unique string identifier for the `backgroundtransfer` event. This identifier should be passed as the argument
+    * to the [endBackgroundHandler](Titanium.App.iOS.endBackgroundHandler) method.
+    */
+  var handlerId: String
   /**
-  			 * The identifier of the URL session requiring attention. If your app was just launched,
-  			 * you can use this identifier to create a new `urlSession` object that can receive the events.
-  			 */
-  var sessionId: String = js.native
+    * The identifier of the URL session requiring attention. If your app was just launched,
+    * you can use this identifier to create a new `urlSession` object that can receive the events.
+    */
+  var sessionId: String
 }
 
 object iOSBackgroundtransferEvent {
@@ -28,25 +27,5 @@ object iOSBackgroundtransferEvent {
     val __obj = js.Dynamic.literal(handlerId = handlerId.asInstanceOf[js.Any], sessionId = sessionId.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[iOSBackgroundtransferEvent]
   }
-  @scala.inline
-  implicit class iOSBackgroundtransferEventOps[Self <: iOSBackgroundtransferEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandlerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

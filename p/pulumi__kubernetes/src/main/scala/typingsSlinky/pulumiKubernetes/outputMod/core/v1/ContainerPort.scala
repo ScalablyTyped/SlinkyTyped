@@ -7,32 +7,31 @@ import scala.scalajs.js.annotation._
 /**
   * ContainerPort represents a network port in a single container.
   */
-@js.native
 trait ContainerPort extends js.Object {
   /**
     * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
     * 65536.
     */
-  val containerPort: Double = js.native
+  val containerPort: Double
   /**
     * What host IP to bind the external port to.
     */
-  val hostIP: String = js.native
+  val hostIP: String
   /**
     * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x
     * < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not
     * need this.
     */
-  val hostPort: Double = js.native
+  val hostPort: Double
   /**
     * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a
     * pod must have a unique name. Name for the port that can be referred to by services.
     */
-  val name: String = js.native
+  val name: String
   /**
     * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
     */
-  val protocol: String = js.native
+  val protocol: String
 }
 
 object ContainerPort {
@@ -41,43 +40,5 @@ object ContainerPort {
     val __obj = js.Dynamic.literal(containerPort = containerPort.asInstanceOf[js.Any], hostIP = hostIP.asInstanceOf[js.Any], hostPort = hostPort.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerPort]
   }
-  @scala.inline
-  implicit class ContainerPortOps[Self <: ContainerPort] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

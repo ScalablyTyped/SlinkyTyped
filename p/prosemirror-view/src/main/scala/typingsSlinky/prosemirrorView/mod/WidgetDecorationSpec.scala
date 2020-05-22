@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WidgetDecorationSpec extends js.Object {
   /**
     * When comparing decorations of this type (in order to decide
@@ -19,11 +18,11 @@ trait WidgetDecorationSpec extends js.Object {
     * the behavior of some event handler, they should get
     * different keys.
     */
-  var key: js.UndefOr[String | Null] = js.native
+  var key: js.UndefOr[String | Null] = js.undefined
   /**
     * The precise set of marks to draw around the widget.
     */
-  var marks: js.UndefOr[js.Array[Mark[_]] | Null] = js.native
+  var marks: js.UndefOr[js.Array[Mark[_]] | Null] = js.undefined
   /**
     * Controls which side of the document position this widget is
     * associated with. When negative, it is drawn before a cursor
@@ -41,99 +40,28 @@ trait WidgetDecorationSpec extends js.Object {
     * the widget is wrapped in—those of the node before when
     * negative, those of the node after when positive.
     */
-  var side: js.UndefOr[Double | Null] = js.native
+  var side: js.UndefOr[Double | Null] = js.undefined
   /**
     * Can be used to control which DOM events, when they bubble out
     * of this widget, the editor view should ignore.
     */
-  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event, Boolean]) | Null] = js.native
+  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event, Boolean]) | Null] = js.undefined
 }
 
 object WidgetDecorationSpec {
   @scala.inline
-  def apply(): WidgetDecorationSpec = {
+  def apply(
+    key: js.UndefOr[Null | String] = js.undefined,
+    marks: js.UndefOr[Null | js.Array[Mark[_]]] = js.undefined,
+    side: js.UndefOr[Null | Double] = js.undefined,
+    stopEvent: js.UndefOr[Null | (/* event */ Event => Boolean)] = js.undefined
+  ): WidgetDecorationSpec = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(marks)) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
+    if (!js.isUndefined(side)) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopEvent)) __obj.updateDynamic("stopEvent")(if (stopEvent != null) js.Any.fromFunction1(stopEvent.asInstanceOf[/* event */ Event => Boolean]) else null)
     __obj.asInstanceOf[WidgetDecorationSpec]
   }
-  @scala.inline
-  implicit class WidgetDecorationSpecOps[Self <: WidgetDecorationSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(null)
-        ret
-    }
-    @scala.inline
-    def withMarks(value: js.Array[Mark[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarksNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(null)
-        ret
-    }
-    @scala.inline
-    def withSide(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(null)
-        ret
-    }
-    @scala.inline
-    def withStopEvent(value: /* event */ Event => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStopEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopEventNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(null)
-        ret
-    }
-  }
-  
 }
 

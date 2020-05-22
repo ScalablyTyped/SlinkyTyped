@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * Git hash of the Titanium build.
-	 */
+  * Git hash of the Titanium build.
+  */
 @JSGlobal("Titanium.buildHash")
 @js.native
 object buildHash extends TopLevel[String]

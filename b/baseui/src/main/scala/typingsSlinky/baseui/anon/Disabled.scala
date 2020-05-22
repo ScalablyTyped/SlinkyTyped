@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Disabled extends js.Object {
   @JSName("$disabled")
-  var $disabled: js.UndefOr[Boolean] = js.native
+  var $disabled: js.UndefOr[Boolean] = js.undefined
   @JSName("$isHighlighted")
-  var $isHighlighted: js.UndefOr[Boolean] = js.native
+  var $isHighlighted: js.UndefOr[Boolean] = js.undefined
   @JSName("$selected")
-  var $selected: js.UndefOr[Boolean] = js.native
+  var $selected: js.UndefOr[Boolean] = js.undefined
 }
 
 object Disabled {
   @scala.inline
-  def apply(): Disabled = {
+  def apply(
+    $disabled: js.UndefOr[Boolean] = js.undefined,
+    $isHighlighted: js.UndefOr[Boolean] = js.undefined,
+    $selected: js.UndefOr[Boolean] = js.undefined
+  ): Disabled = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($disabled)) __obj.updateDynamic("$disabled")($disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($isHighlighted)) __obj.updateDynamic("$isHighlighted")($isHighlighted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($selected)) __obj.updateDynamic("$selected")($selected.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disabled]
   }
-  @scala.inline
-  implicit class DisabledOps[Self <: Disabled] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$disabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$disabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$isHighlighted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$isHighlighted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$selected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$selected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$selected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

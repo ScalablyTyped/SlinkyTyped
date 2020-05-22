@@ -1,43 +1,25 @@
 package typingsSlinky.pQueue.optionsMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultAddOptions extends QueueAddOptions {
   /**
     Priority of operation. Operations with greater priority will be scheduled first.
     @default 0
     */
-  val priority: js.UndefOr[Double] = js.native
+  val priority: js.UndefOr[Double] = js.undefined
 }
 
 object DefaultAddOptions {
   @scala.inline
-  def apply(): DefaultAddOptions = {
+  def apply(StringDictionary: StringDictionary[js.Any] = null, priority: js.UndefOr[Double] = js.undefined): DefaultAddOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultAddOptions]
   }
-  @scala.inline
-  implicit class DefaultAddOptionsOps[Self <: DefaultAddOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

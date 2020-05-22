@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html)
   */
-@js.native
 trait relationship extends js.Object {
   /**
     * Generates a relationship renderer (bivariate choropleth) based on a set of competing numeric fields.  Each feature's category is determined based on the result of an Arcade expression generated internally by this method. You are required provide a `layer`, `view`, `field1` name, and `field2` name to generate this renderer. Optionally, you can set the `focus` to change the rotation of the legend and the `numClasses` parameter to change the grid size of the legend.  Other options are provided for convenience for more involved custom visualization authoring applications.
@@ -66,7 +65,7 @@ trait relationship extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: relationshipCreateRendererParams): js.Promise[relationshipRendererResult] = js.native
+  def createRenderer(params: relationshipCreateRendererParams): js.Promise[relationshipRendererResult]
   /**
     * Updates a relationship renderer (bivariate choropleth) generated from [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer) based on the given input parameters.
     *
@@ -97,7 +96,7 @@ trait relationship extends js.Object {
     * @param params.renderer The relationship renderer (generated from [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)) to update with the other parameters provided in this method.
     *
     */
-  def updateRenderer(params: relationshipUpdateRendererParams): js.Promise[UniqueValueRenderer] = js.native
+  def updateRenderer(params: relationshipUpdateRendererParams): js.Promise[UniqueValueRenderer]
 }
 
 object relationship {
@@ -109,25 +108,5 @@ object relationship {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer), updateRenderer = js.Any.fromFunction1(updateRenderer))
     __obj.asInstanceOf[relationship]
   }
-  @scala.inline
-  implicit class relationshipOps[Self <: relationship] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateRenderer(value: relationshipCreateRendererParams => js.Promise[relationshipRendererResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateRenderer(value: relationshipUpdateRendererParams => js.Promise[UniqueValueRenderer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

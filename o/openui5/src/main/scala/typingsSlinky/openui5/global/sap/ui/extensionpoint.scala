@@ -41,14 +41,14 @@ object extensionpoint extends js.Object {
     * @param oContainer The view or fragment containing the extension point
     * @param sExtName The extensionName used to identify the extension point in the customizing
     * @param fnCreateDefaultContent Optional callback function creating default content, returning an
-    * Array of controls. It is executed			when there's no customizing, if not provided, no default content
+    * Array of controls. It is executed            when there's no customizing, if not provided, no default content
     * will be rendered.
     * @param oTargetControl Optional - use this parameter to attach the extension point to a particular
     * aggregation
     * @param sAggregationName Optional - if provided along with oTargetControl, the extension point
-    * content is added to this particular aggregation at oTargetControl,			if not given, but an
+    * content is added to this particular aggregation at oTargetControl,            if not given, but an
     * oTargetControl is still present, the function will attempt to add the extension point to the default
-    * aggregation of oTargetControl.			If no oTargetControl is provided, sAggregationName will also be
+    * aggregation of oTargetControl.            If no oTargetControl is provided, sAggregationName will also be
     * ignored.
     * @returns an array with 0..n controls created from an ExtensionPoint
     */

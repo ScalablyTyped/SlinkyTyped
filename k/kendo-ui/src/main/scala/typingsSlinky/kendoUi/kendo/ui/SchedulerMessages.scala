@@ -4,309 +4,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SchedulerMessages extends js.Object {
-  var allDay: js.UndefOr[String] = js.native
-  var ariaEventLabel: js.UndefOr[String] = js.native
-  var ariaSlotLabel: js.UndefOr[String] = js.native
-  var cancel: js.UndefOr[String] = js.native
-  var date: js.UndefOr[String] = js.native
-  var defaultRowText: js.UndefOr[String] = js.native
-  var deleteWindowTitle: js.UndefOr[String] = js.native
-  var destroy: js.UndefOr[String] = js.native
-  var editable: js.UndefOr[SchedulerMessagesEditable] = js.native
-  var editor: js.UndefOr[SchedulerMessagesEditor] = js.native
-  var event: js.UndefOr[String] = js.native
-  var next: js.UndefOr[String] = js.native
-  var pdf: js.UndefOr[String] = js.native
-  var previous: js.UndefOr[String] = js.native
-  var recurrenceEditor: js.UndefOr[SchedulerMessagesRecurrenceEditor] = js.native
-  var recurrenceMessages: js.UndefOr[SchedulerMessagesRecurrenceMessages] = js.native
-  var save: js.UndefOr[String] = js.native
-  var showFullDay: js.UndefOr[String] = js.native
-  var showWorkDay: js.UndefOr[String] = js.native
-  var time: js.UndefOr[String] = js.native
-  var today: js.UndefOr[String] = js.native
-  var views: js.UndefOr[SchedulerMessagesViews] = js.native
+  var allDay: js.UndefOr[String] = js.undefined
+  var ariaEventLabel: js.UndefOr[String] = js.undefined
+  var ariaSlotLabel: js.UndefOr[String] = js.undefined
+  var cancel: js.UndefOr[String] = js.undefined
+  var date: js.UndefOr[String] = js.undefined
+  var defaultRowText: js.UndefOr[String] = js.undefined
+  var deleteWindowTitle: js.UndefOr[String] = js.undefined
+  var destroy: js.UndefOr[String] = js.undefined
+  var editable: js.UndefOr[SchedulerMessagesEditable] = js.undefined
+  var editor: js.UndefOr[SchedulerMessagesEditor] = js.undefined
+  var event: js.UndefOr[String] = js.undefined
+  var next: js.UndefOr[String] = js.undefined
+  var pdf: js.UndefOr[String] = js.undefined
+  var previous: js.UndefOr[String] = js.undefined
+  var recurrenceEditor: js.UndefOr[SchedulerMessagesRecurrenceEditor] = js.undefined
+  var recurrenceMessages: js.UndefOr[SchedulerMessagesRecurrenceMessages] = js.undefined
+  var save: js.UndefOr[String] = js.undefined
+  var showFullDay: js.UndefOr[String] = js.undefined
+  var showWorkDay: js.UndefOr[String] = js.undefined
+  var time: js.UndefOr[String] = js.undefined
+  var today: js.UndefOr[String] = js.undefined
+  var views: js.UndefOr[SchedulerMessagesViews] = js.undefined
 }
 
 object SchedulerMessages {
   @scala.inline
-  def apply(): SchedulerMessages = {
+  def apply(
+    allDay: String = null,
+    ariaEventLabel: String = null,
+    ariaSlotLabel: String = null,
+    cancel: String = null,
+    date: String = null,
+    defaultRowText: String = null,
+    deleteWindowTitle: String = null,
+    destroy: String = null,
+    editable: SchedulerMessagesEditable = null,
+    editor: SchedulerMessagesEditor = null,
+    event: String = null,
+    next: String = null,
+    pdf: String = null,
+    previous: String = null,
+    recurrenceEditor: SchedulerMessagesRecurrenceEditor = null,
+    recurrenceMessages: SchedulerMessagesRecurrenceMessages = null,
+    save: String = null,
+    showFullDay: String = null,
+    showWorkDay: String = null,
+    time: String = null,
+    today: String = null,
+    views: SchedulerMessagesViews = null
+  ): SchedulerMessages = {
     val __obj = js.Dynamic.literal()
+    if (allDay != null) __obj.updateDynamic("allDay")(allDay.asInstanceOf[js.Any])
+    if (ariaEventLabel != null) __obj.updateDynamic("ariaEventLabel")(ariaEventLabel.asInstanceOf[js.Any])
+    if (ariaSlotLabel != null) __obj.updateDynamic("ariaSlotLabel")(ariaSlotLabel.asInstanceOf[js.Any])
+    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (defaultRowText != null) __obj.updateDynamic("defaultRowText")(defaultRowText.asInstanceOf[js.Any])
+    if (deleteWindowTitle != null) __obj.updateDynamic("deleteWindowTitle")(deleteWindowTitle.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
+    if (editable != null) __obj.updateDynamic("editable")(editable.asInstanceOf[js.Any])
+    if (editor != null) __obj.updateDynamic("editor")(editor.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (pdf != null) __obj.updateDynamic("pdf")(pdf.asInstanceOf[js.Any])
+    if (previous != null) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
+    if (recurrenceEditor != null) __obj.updateDynamic("recurrenceEditor")(recurrenceEditor.asInstanceOf[js.Any])
+    if (recurrenceMessages != null) __obj.updateDynamic("recurrenceMessages")(recurrenceMessages.asInstanceOf[js.Any])
+    if (save != null) __obj.updateDynamic("save")(save.asInstanceOf[js.Any])
+    if (showFullDay != null) __obj.updateDynamic("showFullDay")(showFullDay.asInstanceOf[js.Any])
+    if (showWorkDay != null) __obj.updateDynamic("showWorkDay")(showWorkDay.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
+    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchedulerMessages]
   }
-  @scala.inline
-  implicit class SchedulerMessagesOps[Self <: SchedulerMessages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaEventLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaEventLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaEventLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaEventLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaSlotLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaSlotLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaSlotLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaSlotLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRowText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRowText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRowText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRowText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteWindowTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteWindowTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteWindowTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteWindowTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestroy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditable(value: SchedulerMessagesEditable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditor(value: SchedulerMessagesEditor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPdf(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pdf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPdf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pdf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrevious(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrevious: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurrenceEditor(value: SchedulerMessagesRecurrenceEditor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceEditor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurrenceEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceEditor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurrenceMessages(value: SchedulerMessagesRecurrenceMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurrenceMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSave(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFullDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFullDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFullDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFullDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowWorkDay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWorkDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowWorkDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWorkDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToday(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViews(value: SchedulerMessagesViews): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,161 +7,80 @@ import scala.scalajs.js.annotation._
 /**
   * Concepts in the code system
   */
-@js.native
 trait CodeSystemConcept extends BackboneElement {
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.native
+  var _code: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'definition'.
     */
-  var _definition: js.UndefOr[Element] = js.native
+  var _definition: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'display'.
     */
-  var _display: js.UndefOr[Element] = js.native
+  var _display: js.UndefOr[Element] = js.undefined
   /**
     * Code that identifies concept
     */
-  var code: typingsSlinky.fhir.fhir.code = js.native
+  var code: typingsSlinky.fhir.fhir.code
   /**
     * Child Concepts (is-a/contains/categorizes)
     */
-  var concept: js.UndefOr[js.Array[CodeSystemConcept]] = js.native
+  var concept: js.UndefOr[js.Array[CodeSystemConcept]] = js.undefined
   /**
     * Formal definition
     */
-  var definition: js.UndefOr[String] = js.native
+  var definition: js.UndefOr[String] = js.undefined
   /**
     * Additional representations for the concept
     */
-  var designation: js.UndefOr[js.Array[CodeSystemConceptDesignation]] = js.native
+  var designation: js.UndefOr[js.Array[CodeSystemConceptDesignation]] = js.undefined
   /**
     * Text to display to the user
     */
-  var display: js.UndefOr[String] = js.native
+  var display: js.UndefOr[String] = js.undefined
   /**
     * Property value for the concept
     */
-  var property: js.UndefOr[js.Array[CodeSystemConceptProperty]] = js.native
+  var property: js.UndefOr[js.Array[CodeSystemConceptProperty]] = js.undefined
 }
 
 object CodeSystemConcept {
   @scala.inline
-  def apply(code: code): CodeSystemConcept = {
+  def apply(
+    code: code,
+    _code: Element = null,
+    _definition: Element = null,
+    _display: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    concept: js.Array[CodeSystemConcept] = null,
+    definition: String = null,
+    designation: js.Array[CodeSystemConceptDesignation] = null,
+    display: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    property: js.Array[CodeSystemConceptProperty] = null
+  ): CodeSystemConcept = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
+    if (_definition != null) __obj.updateDynamic("_definition")(_definition.asInstanceOf[js.Any])
+    if (_display != null) __obj.updateDynamic("_display")(_display.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (concept != null) __obj.updateDynamic("concept")(concept.asInstanceOf[js.Any])
+    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
+    if (designation != null) __obj.updateDynamic("designation")(designation.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeSystemConcept]
   }
-  @scala.inline
-  implicit class CodeSystemConceptOps[Self <: CodeSystemConcept] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_code(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_definition(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_definition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_definition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_display(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_display: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConcept(value: js.Array[CodeSystemConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefinition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesignation(value: js.Array[CodeSystemConceptDesignation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesignation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperty(value: js.Array[CodeSystemConceptProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

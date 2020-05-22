@@ -5,6 +5,7 @@ import typingsSlinky.grpcGrpcJs.channelCredentialsMod.ChannelCredentials
 import typingsSlinky.grpcGrpcJs.channelMod.ConnectivityState
 import typingsSlinky.grpcGrpcJs.channelOptionsMod.ChannelOptions
 import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
+import typingsSlinky.grpcGrpcJs.uriParserMod.GrpcUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +24,7 @@ class Subchannel protected () extends js.Object {
     *     connection
     */
   def this(
-    channelTarget: String,
+    channelTarget: GrpcUri,
     subchannelAddress: SubchannelAddress,
     options: ChannelOptions,
     credentials: ChannelCredentials
@@ -49,6 +50,7 @@ class Subchannel protected () extends js.Object {
     * CONNECTING instead of IDLE when the backoff timeout ends.
     */
   var continueConnecting: js.Any = js.native
+  var createSession: js.Any = js.native
   var credentials: js.Any = js.native
   /**
     * A list of listener functions that will be called when the underlying

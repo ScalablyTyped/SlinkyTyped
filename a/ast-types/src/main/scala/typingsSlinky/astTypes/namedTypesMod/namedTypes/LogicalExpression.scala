@@ -15,18 +15,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
-@js.native
 trait LogicalExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var left: ExpressionKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark = js.native
-  var right: ExpressionKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.LogicalExpression = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var left: ExpressionKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var operator: VerticallineVerticalline | AmpersandAmpersand | QuestionmarkQuestionmark
+  var right: ExpressionKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.LogicalExpression
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.LogicalExpression")

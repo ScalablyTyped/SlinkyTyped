@@ -1,6 +1,16 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.typesPublicEndpointMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.ADM
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS_SANDBOX
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS_VOIP
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.APNS_VOIP_SANDBOX
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BAIDU
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.CUSTOM
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.EMAIL
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.GCM
+import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.SMS
 import typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointDemographicMod.UnmarshalledEndpointDemographic
 import typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointLocationMod.UnmarshalledEndpointLocation
 import typingsSlinky.awsSdkClientPinpointBrowser.typesEndpointUserMod.UnmarshalledEndpointUser
@@ -8,108 +18,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledPublicEndpoint extends PublicEndpoint {
   /**
     * Custom attributes that your app reports to Amazon Pinpoint. You can use these attributes as selection criteria when you create a segment.
     */
   @JSName("Attributes")
-  var Attributes_UnmarshalledPublicEndpoint: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
+  var Attributes_UnmarshalledPublicEndpoint: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
   /**
     * The endpoint demographic attributes.
     */
   @JSName("Demographic")
-  var Demographic_UnmarshalledPublicEndpoint: js.UndefOr[UnmarshalledEndpointDemographic] = js.native
+  var Demographic_UnmarshalledPublicEndpoint: js.UndefOr[UnmarshalledEndpointDemographic] = js.undefined
   /**
     * The endpoint location attributes.
     */
   @JSName("Location")
-  var Location_UnmarshalledPublicEndpoint: js.UndefOr[UnmarshalledEndpointLocation] = js.native
+  var Location_UnmarshalledPublicEndpoint: js.UndefOr[UnmarshalledEndpointLocation] = js.undefined
   /**
     * Custom metrics that your app reports to Amazon Pinpoint.
     */
   @JSName("Metrics")
-  var Metrics_UnmarshalledPublicEndpoint: js.UndefOr[StringDictionary[Double]] = js.native
+  var Metrics_UnmarshalledPublicEndpoint: js.UndefOr[StringDictionary[Double]] = js.undefined
   /**
     * Custom user-specific attributes that your app reports to Amazon Pinpoint.
     */
   @JSName("User")
-  var User_UnmarshalledPublicEndpoint: js.UndefOr[UnmarshalledEndpointUser] = js.native
+  var User_UnmarshalledPublicEndpoint: js.UndefOr[UnmarshalledEndpointUser] = js.undefined
 }
 
 object UnmarshalledPublicEndpoint {
   @scala.inline
-  def apply(): UnmarshalledPublicEndpoint = {
+  def apply(
+    Address: String = null,
+    Attributes: StringDictionary[js.Array[String]] = null,
+    ChannelType: GCM | APNS | APNS_SANDBOX | APNS_VOIP | APNS_VOIP_SANDBOX | ADM | SMS | EMAIL | BAIDU | CUSTOM | String = null,
+    Demographic: UnmarshalledEndpointDemographic = null,
+    EffectiveDate: String = null,
+    EndpointStatus: String = null,
+    Location: UnmarshalledEndpointLocation = null,
+    Metrics: StringDictionary[Double] = null,
+    OptOut: String = null,
+    RequestId: String = null,
+    User: UnmarshalledEndpointUser = null
+  ): UnmarshalledPublicEndpoint = {
     val __obj = js.Dynamic.literal()
+    if (Address != null) __obj.updateDynamic("Address")(Address.asInstanceOf[js.Any])
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
+    if (ChannelType != null) __obj.updateDynamic("ChannelType")(ChannelType.asInstanceOf[js.Any])
+    if (Demographic != null) __obj.updateDynamic("Demographic")(Demographic.asInstanceOf[js.Any])
+    if (EffectiveDate != null) __obj.updateDynamic("EffectiveDate")(EffectiveDate.asInstanceOf[js.Any])
+    if (EndpointStatus != null) __obj.updateDynamic("EndpointStatus")(EndpointStatus.asInstanceOf[js.Any])
+    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
+    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
+    if (OptOut != null) __obj.updateDynamic("OptOut")(OptOut.asInstanceOf[js.Any])
+    if (RequestId != null) __obj.updateDynamic("RequestId")(RequestId.asInstanceOf[js.Any])
+    if (User != null) __obj.updateDynamic("User")(User.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledPublicEndpoint]
   }
-  @scala.inline
-  implicit class UnmarshalledPublicEndpointOps[Self <: UnmarshalledPublicEndpoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: StringDictionary[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDemographic(value: UnmarshalledEndpointDemographic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDemographic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Demographic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: UnmarshalledEndpointLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: UnmarshalledEndpointUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("User")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

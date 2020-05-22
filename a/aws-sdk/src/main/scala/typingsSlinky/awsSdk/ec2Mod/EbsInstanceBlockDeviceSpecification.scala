@@ -18,41 +18,11 @@ trait EbsInstanceBlockDeviceSpecification extends js.Object {
 
 object EbsInstanceBlockDeviceSpecification {
   @scala.inline
-  def apply(): EbsInstanceBlockDeviceSpecification = {
+  def apply(DeleteOnTermination: js.UndefOr[Boolean] = js.undefined, VolumeId: VolumeId = null): EbsInstanceBlockDeviceSpecification = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DeleteOnTermination)) __obj.updateDynamic("DeleteOnTermination")(DeleteOnTermination.get.asInstanceOf[js.Any])
+    if (VolumeId != null) __obj.updateDynamic("VolumeId")(VolumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EbsInstanceBlockDeviceSpecification]
   }
-  @scala.inline
-  implicit class EbsInstanceBlockDeviceSpecificationOps[Self <: EbsInstanceBlockDeviceSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteOnTermination(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteOnTermination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteOnTermination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteOnTermination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: VolumeId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

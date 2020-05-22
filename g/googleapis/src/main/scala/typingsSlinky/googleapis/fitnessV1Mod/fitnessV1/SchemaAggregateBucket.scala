@@ -37,89 +37,22 @@ trait SchemaAggregateBucket extends js.Object {
 
 object SchemaAggregateBucket {
   @scala.inline
-  def apply(): SchemaAggregateBucket = {
+  def apply(
+    activity: js.UndefOr[Double] = js.undefined,
+    dataset: js.Array[SchemaDataset] = null,
+    endTimeMillis: String = null,
+    session: SchemaSession = null,
+    startTimeMillis: String = null,
+    `type`: String = null
+  ): SchemaAggregateBucket = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activity)) __obj.updateDynamic("activity")(activity.get.asInstanceOf[js.Any])
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
+    if (endTimeMillis != null) __obj.updateDynamic("endTimeMillis")(endTimeMillis.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (startTimeMillis != null) __obj.updateDynamic("startTimeMillis")(startTimeMillis.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAggregateBucket]
   }
-  @scala.inline
-  implicit class SchemaAggregateBucketOps[Self <: SchemaAggregateBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataset(value: js.Array[SchemaDataset]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTimeMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: SchemaSession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimeMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

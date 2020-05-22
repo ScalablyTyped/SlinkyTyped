@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestore.sharedClientStateMod
 
+import typingsSlinky.firebaseFirestore.collectionsMod.TargetIdSet_
 import typingsSlinky.firebaseFirestore.sortedSetMod.SortedSet
 import typingsSlinky.firebaseFirestore.typesMod.TargetId
 import scala.scalajs.js
@@ -9,6 +10,8 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/firestore/dist/lib/src/local/shared_client_state", "LocalClientState")
 @js.native
 class LocalClientState () extends ClientState {
+  /* CompleteClass */
+  override val activeTargetIds: TargetIdSet_ = js.native
   @JSName("activeTargetIds")
   var activeTargetIds_LocalClientState: SortedSet[Double] = js.native
   def addQueryTarget(targetId: TargetId): Unit = js.native

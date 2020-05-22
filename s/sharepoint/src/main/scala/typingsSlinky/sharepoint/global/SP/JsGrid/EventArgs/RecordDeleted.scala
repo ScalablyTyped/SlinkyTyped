@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 class RecordDeleted protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.RecordDeleted {
   def this(recordKey: Double, recordIdx: Double, changeKey: IChangeKey) = this()
+  /* CompleteClass */
+  override var changeKey: IChangeKey = js.native
+  /* CompleteClass */
+  override var recordIdx: Double = js.native
+  /* CompleteClass */
+  override var recordKey: Double = js.native
 }
 

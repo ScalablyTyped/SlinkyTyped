@@ -5,283 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LassoConfig extends js.Object {
-  var baseDir: js.UndefOr[String] = js.native
-  var bundles: js.UndefOr[js.Array[Bundle]] = js.native
-  var bundlingEnabled: js.UndefOr[Boolean] = js.native
-  var cspNonceProvider: js.UndefOr[js.Function1[/* out */ js.Any, String]] = js.native
-  var fingerprintInlineCode: js.UndefOr[js.Function1[/* code */ js.Any, String]] = js.native
-  var fingerprintsEnabled: js.UndefOr[Boolean] = js.native
-  var includeSlotNames: js.UndefOr[Boolean] = js.native
-  var minify: js.UndefOr[Boolean] = js.native
-  var minifyCSS: js.UndefOr[Boolean] = js.native
-  var minifyInlineCSSOnly: js.UndefOr[Boolean] = js.native
-  var minifyInlineJSOnly: js.UndefOr[Boolean] = js.native
-  var minifyInlineOnly: js.UndefOr[Boolean] = js.native
-  var minifyJS: js.UndefOr[Boolean] = js.native
-  var noConflict: js.UndefOr[String] = js.native
-  var outputDir: js.UndefOr[String] = js.native
-  var plugins: js.UndefOr[js.Array[CustomPlugin | String]] = js.native
-  var relativeUrlsEnabled: js.UndefOr[Boolean] = js.native
-  var require: js.UndefOr[js.Any] = js.native
-  var resolveCssUrls: js.UndefOr[Boolean] = js.native
-  var urlPrefix: js.UndefOr[String] = js.native
+  var baseDir: js.UndefOr[String] = js.undefined
+  var bundles: js.UndefOr[js.Array[Bundle]] = js.undefined
+  var bundlingEnabled: js.UndefOr[Boolean] = js.undefined
+  var cspNonceProvider: js.UndefOr[js.Function1[/* out */ js.Any, String]] = js.undefined
+  var fingerprintInlineCode: js.UndefOr[js.Function1[/* code */ js.Any, String]] = js.undefined
+  var fingerprintsEnabled: js.UndefOr[Boolean] = js.undefined
+  var includeSlotNames: js.UndefOr[Boolean] = js.undefined
+  var minify: js.UndefOr[Boolean] = js.undefined
+  var minifyCSS: js.UndefOr[Boolean] = js.undefined
+  var minifyInlineCSSOnly: js.UndefOr[Boolean] = js.undefined
+  var minifyInlineJSOnly: js.UndefOr[Boolean] = js.undefined
+  var minifyInlineOnly: js.UndefOr[Boolean] = js.undefined
+  var minifyJS: js.UndefOr[Boolean] = js.undefined
+  var noConflict: js.UndefOr[String] = js.undefined
+  var outputDir: js.UndefOr[String] = js.undefined
+  var plugins: js.UndefOr[js.Array[CustomPlugin | String]] = js.undefined
+  var relativeUrlsEnabled: js.UndefOr[Boolean] = js.undefined
+  var require: js.UndefOr[js.Any] = js.undefined
+  var resolveCssUrls: js.UndefOr[Boolean] = js.undefined
+  var urlPrefix: js.UndefOr[String] = js.undefined
 }
 
 object LassoConfig {
   @scala.inline
-  def apply(): LassoConfig = {
+  def apply(
+    baseDir: String = null,
+    bundles: js.Array[Bundle] = null,
+    bundlingEnabled: js.UndefOr[Boolean] = js.undefined,
+    cspNonceProvider: /* out */ js.Any => String = null,
+    fingerprintInlineCode: /* code */ js.Any => String = null,
+    fingerprintsEnabled: js.UndefOr[Boolean] = js.undefined,
+    includeSlotNames: js.UndefOr[Boolean] = js.undefined,
+    minify: js.UndefOr[Boolean] = js.undefined,
+    minifyCSS: js.UndefOr[Boolean] = js.undefined,
+    minifyInlineCSSOnly: js.UndefOr[Boolean] = js.undefined,
+    minifyInlineJSOnly: js.UndefOr[Boolean] = js.undefined,
+    minifyInlineOnly: js.UndefOr[Boolean] = js.undefined,
+    minifyJS: js.UndefOr[Boolean] = js.undefined,
+    noConflict: String = null,
+    outputDir: String = null,
+    plugins: js.Array[CustomPlugin | String] = null,
+    relativeUrlsEnabled: js.UndefOr[Boolean] = js.undefined,
+    require: js.Any = null,
+    resolveCssUrls: js.UndefOr[Boolean] = js.undefined,
+    urlPrefix: String = null
+  ): LassoConfig = {
     val __obj = js.Dynamic.literal()
+    if (baseDir != null) __obj.updateDynamic("baseDir")(baseDir.asInstanceOf[js.Any])
+    if (bundles != null) __obj.updateDynamic("bundles")(bundles.asInstanceOf[js.Any])
+    if (!js.isUndefined(bundlingEnabled)) __obj.updateDynamic("bundlingEnabled")(bundlingEnabled.get.asInstanceOf[js.Any])
+    if (cspNonceProvider != null) __obj.updateDynamic("cspNonceProvider")(js.Any.fromFunction1(cspNonceProvider))
+    if (fingerprintInlineCode != null) __obj.updateDynamic("fingerprintInlineCode")(js.Any.fromFunction1(fingerprintInlineCode))
+    if (!js.isUndefined(fingerprintsEnabled)) __obj.updateDynamic("fingerprintsEnabled")(fingerprintsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeSlotNames)) __obj.updateDynamic("includeSlotNames")(includeSlotNames.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minify)) __obj.updateDynamic("minify")(minify.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minifyCSS)) __obj.updateDynamic("minifyCSS")(minifyCSS.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minifyInlineCSSOnly)) __obj.updateDynamic("minifyInlineCSSOnly")(minifyInlineCSSOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minifyInlineJSOnly)) __obj.updateDynamic("minifyInlineJSOnly")(minifyInlineJSOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minifyInlineOnly)) __obj.updateDynamic("minifyInlineOnly")(minifyInlineOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minifyJS)) __obj.updateDynamic("minifyJS")(minifyJS.get.asInstanceOf[js.Any])
+    if (noConflict != null) __obj.updateDynamic("noConflict")(noConflict.asInstanceOf[js.Any])
+    if (outputDir != null) __obj.updateDynamic("outputDir")(outputDir.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
+    if (!js.isUndefined(relativeUrlsEnabled)) __obj.updateDynamic("relativeUrlsEnabled")(relativeUrlsEnabled.get.asInstanceOf[js.Any])
+    if (require != null) __obj.updateDynamic("require")(require.asInstanceOf[js.Any])
+    if (!js.isUndefined(resolveCssUrls)) __obj.updateDynamic("resolveCssUrls")(resolveCssUrls.get.asInstanceOf[js.Any])
+    if (urlPrefix != null) __obj.updateDynamic("urlPrefix")(urlPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[LassoConfig]
   }
-  @scala.inline
-  implicit class LassoConfigOps[Self <: LassoConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundles(value: js.Array[Bundle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundlingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundlingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundlingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundlingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCspNonceProvider(value: /* out */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cspNonceProvider")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCspNonceProvider: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cspNonceProvider")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprintInlineCode(value: /* code */ js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintInlineCode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFingerprintInlineCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintInlineCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFingerprintsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprintsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprintsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeSlotNames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSlotNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeSlotNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeSlotNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinifyCSS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyCSS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinifyCSS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyCSS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinifyInlineCSSOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyInlineCSSOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinifyInlineCSSOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyInlineCSSOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinifyInlineJSOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyInlineJSOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinifyInlineJSOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyInlineJSOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinifyInlineOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyInlineOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinifyInlineOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyInlineOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinifyJS(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyJS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinifyJS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minifyJS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoConflict(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: js.Array[CustomPlugin | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativeUrlsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeUrlsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativeUrlsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeUrlsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequire(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequire: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveCssUrls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveCssUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveCssUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveCssUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

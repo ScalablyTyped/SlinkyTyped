@@ -18,41 +18,11 @@ trait ListTopicRuleDestinationsResponse extends js.Object {
 
 object ListTopicRuleDestinationsResponse {
   @scala.inline
-  def apply(): ListTopicRuleDestinationsResponse = {
+  def apply(destinationSummaries: TopicRuleDestinationSummaries = null, nextToken: NextToken = null): ListTopicRuleDestinationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (destinationSummaries != null) __obj.updateDynamic("destinationSummaries")(destinationSummaries.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTopicRuleDestinationsResponse]
   }
-  @scala.inline
-  implicit class ListTopicRuleDestinationsResponseOps[Self <: ListTopicRuleDestinationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationSummaries(value: TopicRuleDestinationSummaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationSummaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationSummaries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationSummaries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

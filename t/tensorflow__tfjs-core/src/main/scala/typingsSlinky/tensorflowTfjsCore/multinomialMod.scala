@@ -1,0 +1,21 @@
+package typingsSlinky.tensorflowTfjsCore
+
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@tensorflow/tfjs-core/dist/ops/multinomial", JSImport.Namespace)
+@js.native
+object multinomialMod extends js.Object {
+  val multinomial: js.Function4[
+    /* logits */ Tensor1D | Tensor2D | TensorLike, 
+    /* numSamples */ Double, 
+    /* seed */ js.UndefOr[Double], 
+    /* normalized */ js.UndefOr[Boolean], 
+    Tensor1D | Tensor2D
+  ] = js.native
+}
+

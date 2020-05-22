@@ -6,103 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a Topic. */
-@js.native
 trait ITopic extends js.Object {
   /** Topic kmsKeyName */
-  var kmsKeyName: js.UndefOr[String | Null] = js.native
+  var kmsKeyName: js.UndefOr[String | Null] = js.undefined
   /** Topic labels */
-  var labels: js.UndefOr[StringDictionary[String] | Null] = js.native
+  var labels: js.UndefOr[StringDictionary[String] | Null] = js.undefined
   /** Topic messageStoragePolicy */
-  var messageStoragePolicy: js.UndefOr[IMessageStoragePolicy | Null] = js.native
+  var messageStoragePolicy: js.UndefOr[IMessageStoragePolicy | Null] = js.undefined
   /** Topic name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
 }
 
 object ITopic {
   @scala.inline
-  def apply(): ITopic = {
+  def apply(
+    kmsKeyName: js.UndefOr[Null | String] = js.undefined,
+    labels: js.UndefOr[Null | StringDictionary[String]] = js.undefined,
+    messageStoragePolicy: js.UndefOr[Null | IMessageStoragePolicy] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined
+  ): ITopic = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(kmsKeyName)) __obj.updateDynamic("kmsKeyName")(kmsKeyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(labels)) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageStoragePolicy)) __obj.updateDynamic("messageStoragePolicy")(messageStoragePolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITopic]
   }
-  @scala.inline
-  implicit class ITopicOps[Self <: ITopic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKmsKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kmsKeyName")(null)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(null)
-        ret
-    }
-    @scala.inline
-    def withMessageStoragePolicy(value: IMessageStoragePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageStoragePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageStoragePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageStoragePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageStoragePolicyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageStoragePolicy")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-  }
-  
 }
 

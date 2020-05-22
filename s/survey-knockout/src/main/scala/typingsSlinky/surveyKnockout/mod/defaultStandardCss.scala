@@ -4,18 +4,20 @@ import typingsSlinky.surveyKnockout.anon.Body
 import typingsSlinky.surveyKnockout.anon.Button
 import typingsSlinky.surveyKnockout.anon.ButtonAdd
 import typingsSlinky.surveyKnockout.anon.CellLabel
+import typingsSlinky.surveyKnockout.anon.ChooseFile
 import typingsSlinky.surveyKnockout.anon.ClearButton
 import typingsSlinky.surveyKnockout.anon.Column
 import typingsSlinky.surveyKnockout.anon.Comment
 import typingsSlinky.surveyKnockout.anon.Complete
 import typingsSlinky.surveyKnockout.anon.Container
 import typingsSlinky.surveyKnockout.anon.Control
+import typingsSlinky.surveyKnockout.anon.Controls
 import typingsSlinky.surveyKnockout.anon.Description
 import typingsSlinky.surveyKnockout.anon.Disabled
 import typingsSlinky.surveyKnockout.anon.Error
-import typingsSlinky.surveyKnockout.anon.FileDecorator
 import typingsSlinky.surveyKnockout.anon.Icon
 import typingsSlinky.surveyKnockout.anon.Image
+import typingsSlinky.surveyKnockout.anon.Item
 import typingsSlinky.surveyKnockout.anon.ItemTitle
 import typingsSlinky.surveyKnockout.anon.Other
 import typingsSlinky.surveyKnockout.anon.Root
@@ -37,11 +39,15 @@ object defaultStandardCss extends js.Object {
   var dropdown: Other = js.native
   var error: Icon = js.native
   var expression: String = js.native
-  var file: FileDecorator = js.native
+  var file: ChooseFile = js.native
   var footer: String = js.native
   var header: String = js.native
+  var headerText: String = js.native
   var html: Root = js.native
-  var imagepicker: Image = js.native
+  var image: Image = js.native
+  var imagepicker: Item = js.native
+  var logo: String = js.native
+  var logoImage: String = js.native
   var matrix: CellLabel = js.native
   var matrixdropdown: Root = js.native
   var matrixdynamic: Button = js.native
@@ -62,6 +68,7 @@ object defaultStandardCss extends js.Object {
   var root: String = js.native
   var row: String = js.native
   var saveData: Error = js.native
+  var signaturepad: Controls = js.native
   var text: String = js.native
   var title: String = js.native
   var window: Body = js.native

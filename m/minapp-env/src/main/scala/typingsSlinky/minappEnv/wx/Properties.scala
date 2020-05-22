@@ -5,17 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** 该特征值支持的操作类型 */
-@js.native
 trait Properties extends js.Object {
   /** 该特征值是否支持 indicate 操作 */
-  var indicate: Boolean = js.native
+  var indicate: Boolean
   /** 该特征值是否支持 notify 操作 */
   @JSName("notify")
-  var notify_FProperties: Boolean = js.native
+  var notify_FProperties: Boolean
   /** 该特征值是否支持 read 操作 */
-  var read: Boolean = js.native
+  var read: Boolean
   /** 该特征值是否支持 write 操作 */
-  var write: Boolean = js.native
+  var write: Boolean
 }
 
 object Properties {
@@ -24,37 +23,5 @@ object Properties {
     val __obj = js.Dynamic.literal(indicate = indicate.asInstanceOf[js.Any], notify = notify.asInstanceOf[js.Any], read = read.asInstanceOf[js.Any], write = write.asInstanceOf[js.Any])
     __obj.asInstanceOf[Properties]
   }
-  @scala.inline
-  implicit class PropertiesOps[Self <: Properties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndicate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

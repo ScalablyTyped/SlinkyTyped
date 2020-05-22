@@ -62,173 +62,36 @@ trait Patch extends js.Object {
 
 object Patch {
   @scala.inline
-  def apply(): Patch = {
+  def apply(
+    Classification: PatchClassification = null,
+    ContentUrl: PatchContentUrl = null,
+    Description: PatchDescription = null,
+    Id: PatchId = null,
+    KbNumber: PatchKbNumber = null,
+    Language: PatchLanguage = null,
+    MsrcNumber: PatchMsrcNumber = null,
+    MsrcSeverity: PatchMsrcSeverity = null,
+    Product: PatchProduct = null,
+    ProductFamily: PatchProductFamily = null,
+    ReleaseDate: js.Date = null,
+    Title: PatchTitle = null,
+    Vendor: PatchVendor = null
+  ): Patch = {
     val __obj = js.Dynamic.literal()
+    if (Classification != null) __obj.updateDynamic("Classification")(Classification.asInstanceOf[js.Any])
+    if (ContentUrl != null) __obj.updateDynamic("ContentUrl")(ContentUrl.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (KbNumber != null) __obj.updateDynamic("KbNumber")(KbNumber.asInstanceOf[js.Any])
+    if (Language != null) __obj.updateDynamic("Language")(Language.asInstanceOf[js.Any])
+    if (MsrcNumber != null) __obj.updateDynamic("MsrcNumber")(MsrcNumber.asInstanceOf[js.Any])
+    if (MsrcSeverity != null) __obj.updateDynamic("MsrcSeverity")(MsrcSeverity.asInstanceOf[js.Any])
+    if (Product != null) __obj.updateDynamic("Product")(Product.asInstanceOf[js.Any])
+    if (ProductFamily != null) __obj.updateDynamic("ProductFamily")(ProductFamily.asInstanceOf[js.Any])
+    if (ReleaseDate != null) __obj.updateDynamic("ReleaseDate")(ReleaseDate.asInstanceOf[js.Any])
+    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
+    if (Vendor != null) __obj.updateDynamic("Vendor")(Vendor.asInstanceOf[js.Any])
     __obj.asInstanceOf[Patch]
   }
-  @scala.inline
-  implicit class PatchOps[Self <: Patch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassification(value: PatchClassification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Classification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Classification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentUrl(value: PatchContentUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: PatchDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: PatchId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKbNumber(value: PatchKbNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KbNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKbNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KbNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: PatchLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsrcNumber(value: PatchMsrcNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MsrcNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsrcNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MsrcNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsrcSeverity(value: PatchMsrcSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MsrcSeverity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsrcSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MsrcSeverity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: PatchProduct): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Product")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductFamily(value: PatchProductFamily): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: PatchTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVendor(value: PatchVendor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vendor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVendor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vendor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

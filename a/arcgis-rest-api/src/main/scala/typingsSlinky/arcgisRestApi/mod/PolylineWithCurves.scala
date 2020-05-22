@@ -4,32 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolylineWithCurves
   extends HasZM
      with Geometry {
-  var curvePaths: js.Array[js.Array[Position | JsonCurve]] = js.native
+  var curvePaths: js.Array[js.Array[Position | JsonCurve]]
 }
 
 object PolylineWithCurves {
   @scala.inline
-  def apply(curvePaths: js.Array[js.Array[Position | JsonCurve]]): PolylineWithCurves = {
+  def apply(
+    curvePaths: js.Array[js.Array[Position | JsonCurve]],
+    hasM: js.UndefOr[Boolean] = js.undefined,
+    hasZ: js.UndefOr[Boolean] = js.undefined,
+    spatialReference: SpatialReference = null
+  ): PolylineWithCurves = {
     val __obj = js.Dynamic.literal(curvePaths = curvePaths.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasM)) __obj.updateDynamic("hasM")(hasM.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasZ)) __obj.updateDynamic("hasZ")(hasZ.get.asInstanceOf[js.Any])
+    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylineWithCurves]
   }
-  @scala.inline
-  implicit class PolylineWithCurvesOps[Self <: PolylineWithCurves] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurvePaths(value: js.Array[js.Array[Position | JsonCurve]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curvePaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

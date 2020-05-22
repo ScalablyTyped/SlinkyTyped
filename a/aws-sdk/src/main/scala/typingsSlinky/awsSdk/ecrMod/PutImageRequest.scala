@@ -11,6 +11,10 @@ trait PutImageRequest extends js.Object {
     */
   var imageManifest: ImageManifest = js.native
   /**
+    * The media type of the image manifest. If you push an image manifest that does not contain the mediaType field, you must specify the imageManifestMediaType in the request.
+    */
+  var imageManifestMediaType: js.UndefOr[MediaType] = js.native
+  /**
     * The tag to associate with the image. This parameter is required for images that use the Docker Image Manifest V2 Schema 2 or OCI formats.
     */
   var imageTag: js.UndefOr[ImageTag] = js.native
@@ -26,53 +30,18 @@ trait PutImageRequest extends js.Object {
 
 object PutImageRequest {
   @scala.inline
-  def apply(imageManifest: ImageManifest, repositoryName: RepositoryName): PutImageRequest = {
+  def apply(
+    imageManifest: ImageManifest,
+    repositoryName: RepositoryName,
+    imageManifestMediaType: MediaType = null,
+    imageTag: ImageTag = null,
+    registryId: RegistryId = null
+  ): PutImageRequest = {
     val __obj = js.Dynamic.literal(imageManifest = imageManifest.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
+    if (imageManifestMediaType != null) __obj.updateDynamic("imageManifestMediaType")(imageManifestMediaType.asInstanceOf[js.Any])
+    if (imageTag != null) __obj.updateDynamic("imageTag")(imageTag.asInstanceOf[js.Any])
+    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutImageRequest]
   }
-  @scala.inline
-  implicit class PutImageRequestOps[Self <: PutImageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageManifest(value: ImageManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositoryName(value: RepositoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImageTag(value: ImageTag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistryId(value: RegistryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

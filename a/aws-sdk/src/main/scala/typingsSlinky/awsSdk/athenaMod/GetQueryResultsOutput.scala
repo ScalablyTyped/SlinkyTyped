@@ -22,53 +22,12 @@ trait GetQueryResultsOutput extends js.Object {
 
 object GetQueryResultsOutput {
   @scala.inline
-  def apply(): GetQueryResultsOutput = {
+  def apply(NextToken: Token = null, ResultSet: ResultSet = null, UpdateCount: js.UndefOr[Long] = js.undefined): GetQueryResultsOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ResultSet != null) __obj.updateDynamic("ResultSet")(ResultSet.asInstanceOf[js.Any])
+    if (!js.isUndefined(UpdateCount)) __obj.updateDynamic("UpdateCount")(UpdateCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetQueryResultsOutput]
   }
-  @scala.inline
-  implicit class GetQueryResultsOutputOps[Self <: GetQueryResultsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultSet(value: ResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateCount(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

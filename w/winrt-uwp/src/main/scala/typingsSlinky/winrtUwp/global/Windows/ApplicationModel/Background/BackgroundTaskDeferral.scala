@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Background.BackgroundTaskDeferral")
 @js.native
 abstract class BackgroundTaskDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.BackgroundTaskDeferral
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.BackgroundTaskDeferral {
+  /** Informs the system that an asynchronous operation associated with a background task has finished. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

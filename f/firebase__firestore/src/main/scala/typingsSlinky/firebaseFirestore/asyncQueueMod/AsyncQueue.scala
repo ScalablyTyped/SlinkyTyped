@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class AsyncQueue () extends js.Object {
   var _isShuttingDown: js.Any = js.native
+  var backoff: js.Any = js.native
   var delayedOperations: js.Any = js.native
   /**
     * Regardless if the queue has initialized shutdown, adds a new operation to the
@@ -20,9 +21,11 @@ class AsyncQueue () extends js.Object {
   var operationInProgress: js.Any = js.native
   /** Called once a DelayedOperation is run or canceled. */
   var removeDelayedOperation: js.Any = js.native
+  var retryableTail: js.Any = js.native
   var tail: js.Any = js.native
   var timerIdsToSkip: js.Any = js.native
   var verifyNotFailed: js.Any = js.native
+  var visibilityHandler: js.Any = js.native
   /**
     * For Tests: Determine if a delayed operation with a particular TimerId
     * exists.
@@ -62,6 +65,15 @@ class AsyncQueue () extends js.Object {
     * is through `enqueueAndForgetEvenAfterShutdown`.
     */
   def enqueueAndInitiateShutdown(op: js.Function0[js.Promise[Unit]]): js.Promise[Unit] = js.native
+  /**
+    * Enqueue a retryable operation.
+    *
+    * A retryable operation is rescheduled with backoff if it fails with a
+    * IndexedDbTransactionError (the error type used by SimpleDb). All
+    * retryable operations are executed in order and only run if all prior
+    * operations were retried successfully.
+    */
+  def enqueueRetryable(op: js.Function0[js.Promise[Unit]]): Unit = js.native
   def isShuttingDown: Boolean = js.native
   /**
     * For Tests: Runs some or all delayed operations early.

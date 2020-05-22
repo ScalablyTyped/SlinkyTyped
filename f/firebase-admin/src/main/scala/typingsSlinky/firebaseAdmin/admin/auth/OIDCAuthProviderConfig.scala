@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
   * provider configuration interface. An OIDC provider can be created via
   * {@link https://firebase.google.com/docs/reference/admin/node/admin.auth.Auth#createProviderConfig `createProviderConfig()`}.
   */
-@js.native
-trait OIDCAuthProviderConfig extends AuthProviderConfig {
+trait OIDCAuthProviderConfig
+  extends typingsSlinky.firebaseAdmin.authMod.admin.auth.AuthProviderConfig {
   /**
     * This is the required client ID used to confirm the audience of an OIDC
     * provider's
     * [ID token](https://openid.net/specs/openid-connect-core-1_0-final.html#IDToken).
     */
-  var clientId: String = js.native
+  var clientId: String
   /**
     * This is the required provider issuer used to match the provider issuer of
     * the ID token and to determine the corresponding OIDC discovery document, eg.
@@ -34,7 +34,7 @@ trait OIDCAuthProviderConfig extends AuthProviderConfig {
     * ID token validation will be performed as defined in the
     * [spec](https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation).
     */
-  var issuer: String = js.native
+  var issuer: String
 }
 
 object OIDCAuthProviderConfig {
@@ -43,25 +43,5 @@ object OIDCAuthProviderConfig {
     val __obj = js.Dynamic.literal(clientId = clientId.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], issuer = issuer.asInstanceOf[js.Any], providerId = providerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[OIDCAuthProviderConfig]
   }
-  @scala.inline
-  implicit class OIDCAuthProviderConfigOps[Self <: OIDCAuthProviderConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

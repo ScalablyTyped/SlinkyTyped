@@ -18,41 +18,11 @@ trait ParameterNameValue extends js.Object {
 
 object ParameterNameValue {
   @scala.inline
-  def apply(): ParameterNameValue = {
+  def apply(ParameterName: String = null, ParameterValue: String = null): ParameterNameValue = {
     val __obj = js.Dynamic.literal()
+    if (ParameterName != null) __obj.updateDynamic("ParameterName")(ParameterName.asInstanceOf[js.Any])
+    if (ParameterValue != null) __obj.updateDynamic("ParameterValue")(ParameterValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParameterNameValue]
   }
-  @scala.inline
-  implicit class ParameterNameValueOps[Self <: ParameterNameValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameterName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameterValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TranslationsResource extends js.Object {
   /**
     * The source language of the initial request, detected automatically, if
@@ -15,85 +14,35 @@ trait TranslationsResource extends js.Object {
     * source language was passed, auto-detection of the language will not
     * occur and this field will be empty.
     */
-  var detectedSourceLanguage: js.UndefOr[String] = js.native
+  var detectedSourceLanguage: js.UndefOr[String] = js.undefined
   /**
     * The `model` type used for this translation. Valid values are
     * listed in public documentation. Can be different from requested `model`.
     * Present only if specific model type was explicitly requested.
     */
-  var model: js.UndefOr[String] = js.native
+  var model: js.UndefOr[String] = js.undefined
   /** Text translated into the target language. */
-  var translatedText: js.UndefOr[String] = js.native
+  var translatedText: js.UndefOr[String] = js.undefined
   /** Translates input text, returning translated text. */
-  def list(request: Alt): Request[TranslationsListResponse] = js.native
+  def list(request: Alt): Request[TranslationsListResponse]
   /** Translates input text, returning translated text. */
-  def translate(request: Bearertoken): Request[TranslationsListResponse] = js.native
+  def translate(request: Bearertoken): Request[TranslationsListResponse]
 }
 
 object TranslationsResource {
   @scala.inline
   def apply(
     list: Alt => Request[TranslationsListResponse],
-    translate: Bearertoken => Request[TranslationsListResponse]
+    translate: Bearertoken => Request[TranslationsListResponse],
+    detectedSourceLanguage: String = null,
+    model: String = null,
+    translatedText: String = null
   ): TranslationsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list), translate = js.Any.fromFunction1(translate))
+    if (detectedSourceLanguage != null) __obj.updateDynamic("detectedSourceLanguage")(detectedSourceLanguage.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (translatedText != null) __obj.updateDynamic("translatedText")(translatedText.asInstanceOf[js.Any])
     __obj.asInstanceOf[TranslationsResource]
   }
-  @scala.inline
-  implicit class TranslationsResourceOps[Self <: TranslationsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withList(value: Alt => Request[TranslationsListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: Bearertoken => Request[TranslationsListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDetectedSourceLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectedSourceLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectedSourceLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectedSourceLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslatedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translatedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslatedText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translatedText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

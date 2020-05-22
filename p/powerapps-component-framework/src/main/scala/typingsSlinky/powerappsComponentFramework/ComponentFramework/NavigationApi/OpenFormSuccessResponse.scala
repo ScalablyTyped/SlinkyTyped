@@ -6,11 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * The object returned when a save is successful for open form.
-		 */
-@js.native
+  * The object returned when a save is successful for open form.
+  */
 trait OpenFormSuccessResponse extends js.Object {
-  var savedEntityReference: js.Array[EntityReference] = js.native
+  var savedEntityReference: js.Array[EntityReference]
 }
 
 object OpenFormSuccessResponse {
@@ -19,19 +18,5 @@ object OpenFormSuccessResponse {
     val __obj = js.Dynamic.literal(savedEntityReference = savedEntityReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenFormSuccessResponse]
   }
-  @scala.inline
-  implicit class OpenFormSuccessResponseOps[Self <: OpenFormSuccessResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSavedEntityReference(value: js.Array[EntityReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savedEntityReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

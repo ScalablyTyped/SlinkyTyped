@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MatchFor extends js.Object {
   /*Whether to match the font size for the HTML-CSS output.*/
-  var `HTML-CSS`: js.UndefOr[Boolean] = js.native
+  var `HTML-CSS`: js.UndefOr[Boolean] = js.undefined
   /*Whether to match the font size for the NativeMML output.*/
-  var NativeMML: js.UndefOr[Boolean] = js.native
+  var NativeMML: js.UndefOr[Boolean] = js.undefined
   /*Whether to match the font size for the SVG output.*/
-  var SVG: js.UndefOr[Boolean] = js.native
+  var SVG: js.UndefOr[Boolean] = js.undefined
 }
 
 object MatchFor {
   @scala.inline
-  def apply(): MatchFor = {
+  def apply(
+    `HTML-CSS`: js.UndefOr[Boolean] = js.undefined,
+    NativeMML: js.UndefOr[Boolean] = js.undefined,
+    SVG: js.UndefOr[Boolean] = js.undefined
+  ): MatchFor = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(`HTML-CSS`)) __obj.updateDynamic("HTML-CSS")(`HTML-CSS`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NativeMML)) __obj.updateDynamic("NativeMML")(NativeMML.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SVG)) __obj.updateDynamic("SVG")(SVG.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchFor]
   }
-  @scala.inline
-  implicit class MatchForOps[Self <: MatchFor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withHTML-CSS`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTML-CSS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutHTML-CSS`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HTML-CSS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNativeMML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NativeMML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNativeMML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NativeMML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSVG(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSVG: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

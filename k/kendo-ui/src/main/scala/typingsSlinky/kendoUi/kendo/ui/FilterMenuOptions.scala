@@ -5,101 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilterMenuOptions extends js.Object {
-  var dataSource: js.UndefOr[js.Any | DataSource] = js.native
-  var extra: js.UndefOr[Boolean] = js.native
-  var field: js.UndefOr[String] = js.native
-  var messages: js.UndefOr[FilterMenuMessages] = js.native
-  var name: js.UndefOr[String] = js.native
-  var operators: js.UndefOr[FilterMenuOperators] = js.native
+  var dataSource: js.UndefOr[js.Any | DataSource] = js.undefined
+  var extra: js.UndefOr[Boolean] = js.undefined
+  var field: js.UndefOr[String] = js.undefined
+  var messages: js.UndefOr[FilterMenuMessages] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var operators: js.UndefOr[FilterMenuOperators] = js.undefined
 }
 
 object FilterMenuOptions {
   @scala.inline
-  def apply(): FilterMenuOptions = {
+  def apply(
+    dataSource: js.Any | DataSource = null,
+    extra: js.UndefOr[Boolean] = js.undefined,
+    field: String = null,
+    messages: FilterMenuMessages = null,
+    name: String = null,
+    operators: FilterMenuOperators = null
+  ): FilterMenuOptions = {
     val __obj = js.Dynamic.literal()
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(extra)) __obj.updateDynamic("extra")(extra.get.asInstanceOf[js.Any])
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (operators != null) __obj.updateDynamic("operators")(operators.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterMenuOptions]
   }
-  @scala.inline
-  implicit class FilterMenuOptionsOps[Self <: FilterMenuOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSource(value: js.Any | DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtra(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: FilterMenuMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperators(value: FilterMenuOperators): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operators")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

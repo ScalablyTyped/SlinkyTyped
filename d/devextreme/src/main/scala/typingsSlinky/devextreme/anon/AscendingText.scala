@@ -7,88 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AscendingText extends js.Object {
-  var ascendingText: js.UndefOr[String] = js.native
-  var clearText: js.UndefOr[String] = js.native
-  var descendingText: js.UndefOr[String] = js.native
-  var mode: js.UndefOr[multiple | none | single_] = js.native
-  var showSortIndexes: js.UndefOr[Boolean] = js.native
+  var ascendingText: js.UndefOr[String] = js.undefined
+  var clearText: js.UndefOr[String] = js.undefined
+  var descendingText: js.UndefOr[String] = js.undefined
+  var mode: js.UndefOr[multiple | none | single_] = js.undefined
+  var showSortIndexes: js.UndefOr[Boolean] = js.undefined
 }
 
 object AscendingText {
   @scala.inline
-  def apply(): AscendingText = {
+  def apply(
+    ascendingText: String = null,
+    clearText: String = null,
+    descendingText: String = null,
+    mode: multiple | none | single_ = null,
+    showSortIndexes: js.UndefOr[Boolean] = js.undefined
+  ): AscendingText = {
     val __obj = js.Dynamic.literal()
+    if (ascendingText != null) __obj.updateDynamic("ascendingText")(ascendingText.asInstanceOf[js.Any])
+    if (clearText != null) __obj.updateDynamic("clearText")(clearText.asInstanceOf[js.Any])
+    if (descendingText != null) __obj.updateDynamic("descendingText")(descendingText.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSortIndexes)) __obj.updateDynamic("showSortIndexes")(showSortIndexes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AscendingText]
   }
-  @scala.inline
-  implicit class AscendingTextOps[Self <: AscendingText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAscendingText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascendingText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAscendingText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ascendingText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescendingText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descendingText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescendingText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descendingText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: multiple | none | single_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSortIndexes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSortIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSortIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSortIndexes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

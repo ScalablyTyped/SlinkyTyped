@@ -12,9 +12,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OtherOs extends Os {
-  var os: aix | android | darwin | freebsd | openbsd | sunos | win32 | cygwin = js.native
+  var os: aix | android | darwin | freebsd | openbsd | sunos | win32 | cygwin
 }
 
 object OtherOs {
@@ -23,19 +22,5 @@ object OtherOs {
     val __obj = js.Dynamic.literal(os = os.asInstanceOf[js.Any])
     __obj.asInstanceOf[OtherOs]
   }
-  @scala.inline
-  implicit class OtherOsOps[Self <: OtherOs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOs(value: aix | android | darwin | freebsd | openbsd | sunos | win32 | cygwin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

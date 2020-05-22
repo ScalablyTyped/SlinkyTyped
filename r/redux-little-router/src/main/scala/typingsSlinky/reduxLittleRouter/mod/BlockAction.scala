@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlockAction extends RouterActions {
-  var payload: BlockCallback = js.native
-  var `type`: /* "ROUTER_BLOCK" */ String = js.native
+  var payload: BlockCallback
+  var `type`: /* "ROUTER_BLOCK" */ String
 }
 
 object BlockAction {
@@ -20,25 +19,5 @@ object BlockAction {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockAction]
   }
-  @scala.inline
-  implicit class BlockActionOps[Self <: BlockAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayload(value: (/* location */ Location, /* action */ js.UndefOr[HistoryAction]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: /* "ROUTER_BLOCK" */ String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

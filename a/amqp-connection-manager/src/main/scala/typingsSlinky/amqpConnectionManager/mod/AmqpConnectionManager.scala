@@ -18,18 +18,18 @@ trait AmqpConnectionManager extends EventEmitter {
   @JSName("addListener")
   def addListener_disconnect(event: disconnect, listener: js.Function1[/* arg */ Err, Unit]): this.type = js.native
   /**
-  	 * Close this AmqpConnectionManager and free all associated resources.
-  	 */
+    * Close this AmqpConnectionManager and free all associated resources.
+    */
   def close(): js.Promise[Unit] = js.native
   /**
-  	 * Create a new ChannelWrapper. This is a proxy for the actual channel (which may or may not exist at any moment, depending on whether or not we are currently connected.)
-  	 * @param opts
-  	 */
+    * Create a new ChannelWrapper. This is a proxy for the actual channel (which may or may not exist at any moment, depending on whether or not we are currently connected.)
+    * @param opts
+    */
   def createChannel(): ChannelWrapper = js.native
   def createChannel(opts: CreateChannelOpts): ChannelWrapper = js.native
   /**
-  	 * Returns true if the AmqpConnectionManager is connected to a broker, false otherwise.
-  	 */
+    * Returns true if the AmqpConnectionManager is connected to a broker, false otherwise.
+    */
   def isConnected(): Boolean = js.native
   @JSName("on")
   def on_connect(

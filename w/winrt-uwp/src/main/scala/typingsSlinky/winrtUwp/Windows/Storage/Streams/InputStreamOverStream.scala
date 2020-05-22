@@ -6,10 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a Windows Runtime input stream for an IStream base implementation. */
-@js.native
 trait InputStreamOverStream extends js.Object {
   /** Closes the current stream and releases system resources. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Returns an asynchronous byte reader object.
     * @param buffer The buffer into which the asynchronous read operation places the bytes that are read.
@@ -17,7 +16,7 @@ trait InputStreamOverStream extends js.Object {
     * @param options Specifies the type of the asynchronous read operation.
     * @return The asynchronous operation.
     */
-  def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double] = js.native
+  def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
 }
 
 object InputStreamOverStream {
@@ -29,27 +28,5 @@ object InputStreamOverStream {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), readAsync = js.Any.fromFunction3(readAsync))
     __obj.asInstanceOf[InputStreamOverStream]
   }
-  @scala.inline
-  implicit class InputStreamOverStreamOps[Self <: InputStreamOverStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReadAsync(
-      value: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsync")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

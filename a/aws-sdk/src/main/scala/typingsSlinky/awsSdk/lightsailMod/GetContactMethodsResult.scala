@@ -14,29 +14,10 @@ trait GetContactMethodsResult extends js.Object {
 
 object GetContactMethodsResult {
   @scala.inline
-  def apply(): GetContactMethodsResult = {
+  def apply(contactMethods: ContactMethodsList = null): GetContactMethodsResult = {
     val __obj = js.Dynamic.literal()
+    if (contactMethods != null) __obj.updateDynamic("contactMethods")(contactMethods.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetContactMethodsResult]
   }
-  @scala.inline
-  implicit class GetContactMethodsResultOps[Self <: GetContactMethodsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContactMethods(value: ContactMethodsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactMethods")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

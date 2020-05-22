@@ -14,29 +14,10 @@ trait SchemaListScreenshotClustersResponse extends js.Object {
 
 object SchemaListScreenshotClustersResponse {
   @scala.inline
-  def apply(): SchemaListScreenshotClustersResponse = {
+  def apply(clusters: js.Array[SchemaScreenshotCluster] = null): SchemaListScreenshotClustersResponse = {
     val __obj = js.Dynamic.literal()
+    if (clusters != null) __obj.updateDynamic("clusters")(clusters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListScreenshotClustersResponse]
   }
-  @scala.inline
-  implicit class SchemaListScreenshotClustersResponseOps[Self <: SchemaListScreenshotClustersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusters(value: js.Array[SchemaScreenshotCluster]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

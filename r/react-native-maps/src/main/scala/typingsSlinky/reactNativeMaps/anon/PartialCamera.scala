@@ -6,88 +6,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-native-maps.react-native-maps.Camera> */
-@js.native
 trait PartialCamera extends js.Object {
-  var altitude: js.UndefOr[Double] = js.native
-  var center: js.UndefOr[LatLng] = js.native
-  var heading: js.UndefOr[Double] = js.native
-  var pitch: js.UndefOr[Double] = js.native
-  var zoom: js.UndefOr[Double] = js.native
+  var altitude: js.UndefOr[Double] = js.undefined
+  var center: js.UndefOr[LatLng] = js.undefined
+  var heading: js.UndefOr[Double] = js.undefined
+  var pitch: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object PartialCamera {
   @scala.inline
-  def apply(): PartialCamera = {
+  def apply(
+    altitude: js.UndefOr[Double] = js.undefined,
+    center: LatLng = null,
+    heading: js.UndefOr[Double] = js.undefined,
+    pitch: js.UndefOr[Double] = js.undefined,
+    zoom: js.UndefOr[Double] = js.undefined
+  ): PartialCamera = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(altitude)) __obj.updateDynamic("altitude")(altitude.get.asInstanceOf[js.Any])
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (!js.isUndefined(heading)) __obj.updateDynamic("heading")(heading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCamera]
   }
-  @scala.inline
-  implicit class PartialCameraOps[Self <: PartialCamera] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitude(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltitude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: LatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeading(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

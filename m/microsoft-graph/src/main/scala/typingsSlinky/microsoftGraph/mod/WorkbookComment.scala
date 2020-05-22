@@ -4,65 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkbookComment extends Entity {
   // The content of comment.
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.undefined
   // Indicates the type for the comment.
-  var contentType: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[String] = js.undefined
   // Read-only. Nullable.
-  var replies: js.UndefOr[js.Array[WorkbookCommentReply]] = js.native
+  var replies: js.UndefOr[js.Array[WorkbookCommentReply]] = js.undefined
 }
 
 object WorkbookComment {
   @scala.inline
-  def apply(): WorkbookComment = {
+  def apply(
+    content: String = null,
+    contentType: String = null,
+    id: String = null,
+    replies: js.Array[WorkbookCommentReply] = null
+  ): WorkbookComment = {
     val __obj = js.Dynamic.literal()
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (replies != null) __obj.updateDynamic("replies")(replies.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookComment]
   }
-  @scala.inline
-  implicit class WorkbookCommentOps[Self <: WorkbookComment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplies(value: js.Array[WorkbookCommentReply]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

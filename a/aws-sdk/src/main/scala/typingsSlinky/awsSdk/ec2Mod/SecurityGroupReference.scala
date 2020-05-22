@@ -22,53 +22,12 @@ trait SecurityGroupReference extends js.Object {
 
 object SecurityGroupReference {
   @scala.inline
-  def apply(): SecurityGroupReference = {
+  def apply(GroupId: String = null, ReferencingVpcId: String = null, VpcPeeringConnectionId: String = null): SecurityGroupReference = {
     val __obj = js.Dynamic.literal()
+    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
+    if (ReferencingVpcId != null) __obj.updateDynamic("ReferencingVpcId")(ReferencingVpcId.asInstanceOf[js.Any])
+    if (VpcPeeringConnectionId != null) __obj.updateDynamic("VpcPeeringConnectionId")(VpcPeeringConnectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityGroupReference]
   }
-  @scala.inline
-  implicit class SecurityGroupReferenceOps[Self <: SecurityGroupReference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferencingVpcId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferencingVpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferencingVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferencingVpcId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcPeeringConnectionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcPeeringConnectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnectionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

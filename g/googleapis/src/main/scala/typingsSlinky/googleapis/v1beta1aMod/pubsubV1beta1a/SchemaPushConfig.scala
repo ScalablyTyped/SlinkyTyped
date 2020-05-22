@@ -19,29 +19,10 @@ trait SchemaPushConfig extends js.Object {
 
 object SchemaPushConfig {
   @scala.inline
-  def apply(): SchemaPushConfig = {
+  def apply(pushEndpoint: String = null): SchemaPushConfig = {
     val __obj = js.Dynamic.literal()
+    if (pushEndpoint != null) __obj.updateDynamic("pushEndpoint")(pushEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPushConfig]
   }
-  @scala.inline
-  implicit class SchemaPushConfigOps[Self <: SchemaPushConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPushEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,47 +22,11 @@ trait CreateDeviceDefinitionVersionRequest extends js.Object {
 
 object CreateDeviceDefinitionVersionRequest {
   @scala.inline
-  def apply(DeviceDefinitionId: string): CreateDeviceDefinitionVersionRequest = {
+  def apply(DeviceDefinitionId: string, AmznClientToken: string = null, Devices: listOfDevice = null): CreateDeviceDefinitionVersionRequest = {
     val __obj = js.Dynamic.literal(DeviceDefinitionId = DeviceDefinitionId.asInstanceOf[js.Any])
+    if (AmznClientToken != null) __obj.updateDynamic("AmznClientToken")(AmznClientToken.asInstanceOf[js.Any])
+    if (Devices != null) __obj.updateDynamic("Devices")(Devices.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeviceDefinitionVersionRequest]
   }
-  @scala.inline
-  implicit class CreateDeviceDefinitionVersionRequestOps[Self <: CreateDeviceDefinitionVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceDefinitionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceDefinitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmznClientToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmznClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevices(value: listOfDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Devices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Devices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

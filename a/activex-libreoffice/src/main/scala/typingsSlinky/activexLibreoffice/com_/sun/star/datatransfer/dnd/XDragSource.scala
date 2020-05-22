@@ -14,19 +14,18 @@ import scala.scalajs.js.annotation._
   * Differently to Java, the association between view and interface is fixed and can not be changed. Otherwise, the AWT messaging would have to be
   * implemented for any window supporting Drag and Drop operations, which would be a real performance issue.
   */
-@js.native
 trait XDragSource extends XInterface {
   /**
     * To get the default cursor for a specified drag action.
     * @param dragAction A drag action as specified in {@link DNDConstants} .
     * @returns The default drag cursor for the specified drag action. The returned value may be used as parameter for the method {@link com.sun.star.datatransfe
     */
-  def getDefaultCursor(dragAction: Double): Double = js.native
+  def getDefaultCursor(dragAction: Double): Double
   /**
     * In order to query if drag image support is available.
     * @returns A boolean indicating whether or not drag image support is available on the underlying platform.
     */
-  def isDragImageSupported(): Boolean = js.native
+  def isDragImageSupported(): Boolean
   /**
     * Starts the drag operation.
     *
@@ -49,7 +48,7 @@ trait XDragSource extends XInterface {
     image: Double,
     trans: XTransferable,
     listener: XDragSourceListener
-  ): Unit = js.native
+  ): Unit
 }
 
 object XDragSource {
@@ -65,31 +64,5 @@ object XDragSource {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getDefaultCursor = js.Any.fromFunction1(getDefaultCursor), isDragImageSupported = js.Any.fromFunction0(isDragImageSupported), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), startDrag = js.Any.fromFunction6(startDrag))
     __obj.asInstanceOf[XDragSource]
   }
-  @scala.inline
-  implicit class XDragSourceOps[Self <: XDragSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDefaultCursor(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultCursor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDragImageSupported(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDragImageSupported")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartDrag(value: (DragGestureEvent, Double, Double, Double, XTransferable, XDragSourceListener) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDrag")(js.Any.fromFunction6(value))
-        ret
-    }
-  }
-  
 }
 

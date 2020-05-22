@@ -11,48 +11,21 @@ trait DeploymentReadyOption extends js.Object {
     */
   var actionOnTimeout: js.UndefOr[DeploymentReadyAction] = js.native
   /**
-    * The number of minutes to wait before the status of a blue/green deployment is changed to Stopped if rerouting is not started manually. Applies only to the STOP_DEPLOYMENT option for actionOnTimeout
+    * The number of minutes to wait before the status of a blue/green deployment is changed to Stopped if rerouting is not started manually. Applies only to the STOP_DEPLOYMENT option for actionOnTimeout.
     */
   var waitTimeInMinutes: js.UndefOr[Duration] = js.native
 }
 
 object DeploymentReadyOption {
   @scala.inline
-  def apply(): DeploymentReadyOption = {
+  def apply(
+    actionOnTimeout: DeploymentReadyAction = null,
+    waitTimeInMinutes: js.UndefOr[Duration] = js.undefined
+  ): DeploymentReadyOption = {
     val __obj = js.Dynamic.literal()
+    if (actionOnTimeout != null) __obj.updateDynamic("actionOnTimeout")(actionOnTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitTimeInMinutes)) __obj.updateDynamic("waitTimeInMinutes")(waitTimeInMinutes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentReadyOption]
   }
-  @scala.inline
-  implicit class DeploymentReadyOptionOps[Self <: DeploymentReadyOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionOnTimeout(value: DeploymentReadyAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionOnTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionOnTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionOnTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitTimeInMinutes(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitTimeInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeInMinutes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

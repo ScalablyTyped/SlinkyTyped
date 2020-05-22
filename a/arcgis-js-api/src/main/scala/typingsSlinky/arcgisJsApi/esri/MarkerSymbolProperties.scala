@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MarkerSymbolProperties extends SymbolProperties {
   /**
     * The angle of the marker relative to the screen in degrees.
@@ -16,13 +15,13 @@ trait MarkerSymbolProperties extends SymbolProperties {
     *
     * @default 0
     */
-  var angle: js.UndefOr[Double] = js.native
+  var angle: js.UndefOr[Double] = js.undefined
   /**
     * The symbol type.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-MarkerSymbol.html#type)
     */
-  var `type`: js.UndefOr[`simple-marker` | `picture-marker`] = js.native
+  var `type`: js.UndefOr[`simple-marker` | `picture-marker`] = js.undefined
   /**
     * The offset on the x-axis in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -30,7 +29,7 @@ trait MarkerSymbolProperties extends SymbolProperties {
     *
     * @default 0
     */
-  var xoffset: js.UndefOr[Double | String] = js.native
+  var xoffset: js.UndefOr[Double | String] = js.undefined
   /**
     * The offset on the y-axis in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -38,70 +37,25 @@ trait MarkerSymbolProperties extends SymbolProperties {
     *
     * @default 0
     */
-  var yoffset: js.UndefOr[Double | String] = js.native
+  var yoffset: js.UndefOr[Double | String] = js.undefined
 }
 
 object MarkerSymbolProperties {
   @scala.inline
-  def apply(): MarkerSymbolProperties = {
+  def apply(
+    angle: js.UndefOr[Double] = js.undefined,
+    color: Color_ | js.Array[Double] | String = null,
+    `type`: `simple-marker` | `picture-marker` = null,
+    xoffset: Double | String = null,
+    yoffset: Double | String = null
+  ): MarkerSymbolProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (xoffset != null) __obj.updateDynamic("xoffset")(xoffset.asInstanceOf[js.Any])
+    if (yoffset != null) __obj.updateDynamic("yoffset")(yoffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkerSymbolProperties]
   }
-  @scala.inline
-  implicit class MarkerSymbolPropertiesOps[Self <: MarkerSymbolProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: `simple-marker` | `picture-marker`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXoffset(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xoffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXoffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xoffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYoffset(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yoffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYoffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yoffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

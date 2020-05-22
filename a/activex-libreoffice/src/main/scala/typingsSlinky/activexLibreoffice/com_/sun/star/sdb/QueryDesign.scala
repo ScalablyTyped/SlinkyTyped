@@ -101,18 +101,17 @@ import scala.scalajs.js.annotation._
   * **CreateView**;  implies a [CommandType]{@link url="#command_type"} of {@link CommandType.TABLE}
   * @see com.sun.star.sdb.ContentLoader
   */
-@js.native
 trait QueryDesign
   extends XController
      with XInitialization {
   /** reflects the designed SQL command at the moment it was last saved by the user. */
-  var ActiveCommand: String = js.native
+  var ActiveCommand: String
   /**
     * specifies whether the user enabled escape processing for the statement being designed.
     * @see DataAccessDescriptor.EscapeProcessing
     * @since OOo 2.4
     */
-  var EscapeProcessing: Boolean = js.native
+  var EscapeProcessing: Boolean
 }
 
 object QueryDesign {
@@ -141,25 +140,5 @@ object QueryDesign {
     val __obj = js.Dynamic.literal(ActiveCommand = ActiveCommand.asInstanceOf[js.Any], EscapeProcessing = EscapeProcessing.asInstanceOf[js.Any], Frame = Frame.asInstanceOf[js.Any], Model = Model.asInstanceOf[js.Any], ViewData = ViewData.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), attachFrame = js.Any.fromFunction1(attachFrame), attachModel = js.Any.fromFunction1(attachModel), dispose = js.Any.fromFunction0(dispose), getFrame = js.Any.fromFunction0(getFrame), getModel = js.Any.fromFunction0(getModel), getViewData = js.Any.fromFunction0(getViewData), initialize = js.Any.fromFunction1(initialize), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), restoreViewData = js.Any.fromFunction1(restoreViewData), suspend = js.Any.fromFunction1(suspend))
     __obj.asInstanceOf[QueryDesign]
   }
-  @scala.inline
-  implicit class QueryDesignOps[Self <: QueryDesign] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEscapeProcessing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EscapeProcessing")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

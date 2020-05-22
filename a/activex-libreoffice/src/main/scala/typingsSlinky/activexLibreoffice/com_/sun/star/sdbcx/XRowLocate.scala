@@ -12,14 +12,13 @@ import scala.scalajs.js.annotation._
   * Bookmarks are only valid in the scope of the current result set and are not interchangeable between result sets. A bookmark could be a complex data
   * structure, so it could not be compared in a safe way. Because of that, a provider has to implement the compare method for bookmarks.
   */
-@js.native
 trait XRowLocate extends XInterface {
   /**
     * returns the bookmark of the current row of a result set.
     * @returns the current bookmark
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  val Bookmark: js.Any = js.native
+  val Bookmark: js.Any
   /**
     * compares two bookmarks and returns an indication of their relative values.
     *
@@ -31,27 +30,27 @@ trait XRowLocate extends XInterface {
     * @see com.sun.star.sdbcx.CompareBookmark
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def compareBookmarks(first: js.Any, second: js.Any): Double = js.native
+  def compareBookmarks(first: js.Any, second: js.Any): Double
   /**
     * returns the bookmark of the current row of a result set.
     * @returns the current bookmark
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def getBookmark(): js.Any = js.native
+  def getBookmark(): js.Any
   /**
     * determines whether the bookmarks of a result set are ordered or not.
     * @returns `TRUE` if so
     * @see com.sun.star.sdbcx.CompareBookmark
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def hasOrderedBookmarks(): Boolean = js.native
+  def hasOrderedBookmarks(): Boolean
   /**
     * returns the hash value for a specified bookmark.
     * @param bookmark the bookmark to hash
     * @returns the hashed value
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def hashBookmark(bookmark: js.Any): Double = js.native
+  def hashBookmark(bookmark: js.Any): Double
   /**
     * moves the cursor a relative number of rows, either positive or negative starting at a given bookmark position.
     *
@@ -62,7 +61,7 @@ trait XRowLocate extends XInterface {
     * @returns `TRUE` if successful
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def moveRelativeToBookmark(bookmark: js.Any, rows: Double): Boolean = js.native
+  def moveRelativeToBookmark(bookmark: js.Any, rows: Double): Boolean
   /**
     * moves the cursor to the row identified by an valid bookmark.
     *
@@ -72,7 +71,7 @@ trait XRowLocate extends XInterface {
     * @returns `TRUE` if successful
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def moveToBookmark(bookmark: js.Any): Boolean = js.native
+  def moveToBookmark(bookmark: js.Any): Boolean
 }
 
 object XRowLocate {
@@ -92,55 +91,5 @@ object XRowLocate {
     val __obj = js.Dynamic.literal(Bookmark = Bookmark.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), compareBookmarks = js.Any.fromFunction2(compareBookmarks), getBookmark = js.Any.fromFunction0(getBookmark), hasOrderedBookmarks = js.Any.fromFunction0(hasOrderedBookmarks), hashBookmark = js.Any.fromFunction1(hashBookmark), moveRelativeToBookmark = js.Any.fromFunction2(moveRelativeToBookmark), moveToBookmark = js.Any.fromFunction1(moveToBookmark), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XRowLocate]
   }
-  @scala.inline
-  implicit class XRowLocateOps[Self <: XRowLocate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBookmark(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bookmark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompareBookmarks(value: (js.Any, js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareBookmarks")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetBookmark(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBookmark")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasOrderedBookmarks(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOrderedBookmarks")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHashBookmark(value: js.Any => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashBookmark")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMoveRelativeToBookmark(value: (js.Any, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveRelativeToBookmark")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withMoveToBookmark(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveToBookmark")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

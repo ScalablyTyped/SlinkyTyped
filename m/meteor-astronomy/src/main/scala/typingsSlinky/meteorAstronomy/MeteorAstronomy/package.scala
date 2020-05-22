@@ -15,9 +15,13 @@ package object MeteorAstronomy {
   {[ P in keyof meteor-astronomy.MeteorAstronomy.FunctionProperties<T> ]: (this : T, args : ...any): any}
     */ typingsSlinky.meteorAstronomy.meteorAstronomyStrings.Helpers with org.scalablytyped.runtime.TopLevel[js.Any]
   type Model[T] = T with typingsSlinky.meteorAstronomy.anon.Copy[T]
+  type ModelField[Field, Doc] = (typingsSlinky.meteorAstronomy.MeteorAstronomy.ModelFullField[Field, Doc]) | typingsSlinky.meteorAstronomy.MeteorAstronomy.TypeOptions
+  type MongoQuery[T] = typingsSlinky.meteor.Mongo.Selector[T] | typingsSlinky.meteor.Mongo.ObjectID | java.lang.String
   type NonFunctionProperties[T] = typingsSlinky.std.Pick[T, typingsSlinky.meteorAstronomy.MeteorAstronomy.NonFunctionPropertyNames[T]]
   type NonFunctionPropertyNames[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends std.Function? never : K}[keyof T] */ js.Any
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type RemoveCallback = js.Function2[/* err */ js.Any, /* result */ js.Any, scala.Unit]
   type SaveAndValidateCallback = js.Function2[/* err */ js.Any, /* id */ js.Any, scala.Unit]
+  type TypeOptions = typingsSlinky.meteorAstronomy.MeteorAstronomy.TypeOptionsPrimitives | js.Array[typingsSlinky.meteorAstronomy.MeteorAstronomy.TypeOptionsPrimitives] | typingsSlinky.meteorAstronomy.MeteorAstronomy.Class[js.Any] | typingsSlinky.meteorAstronomy.MeteorAstronomy.Enum[js.Any]
+  type TypeOptionsPrimitives = (typingsSlinky.std.StringConstructor with org.scalablytyped.runtime.Instantiable0[typingsSlinky.std.global.String]) | (typingsSlinky.std.DateConstructor with (org.scalablytyped.runtime.Instantiable1[/* value */ scala.Double, typingsSlinky.std.global.Date])) | (typingsSlinky.std.BooleanConstructor with org.scalablytyped.runtime.Instantiable0[typingsSlinky.std.global.Boolean]) | (typingsSlinky.std.ObjectConstructor with org.scalablytyped.runtime.Instantiable0[typingsSlinky.std.global.Object]) | (typingsSlinky.std.NumberConstructor with org.scalablytyped.runtime.Instantiable0[typingsSlinky.std.global.Number])
 }

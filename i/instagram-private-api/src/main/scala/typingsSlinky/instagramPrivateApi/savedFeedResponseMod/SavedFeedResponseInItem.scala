@@ -4,58 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SavedFeedResponseInItem extends js.Object {
-  var duration_in_video_in_sec: js.UndefOr[Null] = js.native
-  var position: js.Array[Double | String] = js.native
-  var product: js.UndefOr[SavedFeedResponseProduct] = js.native
-  var start_time_in_video_in_sec: js.UndefOr[Null] = js.native
-  var user: js.UndefOr[SavedFeedResponseUser] = js.native
+  var duration_in_video_in_sec: js.UndefOr[Null] = js.undefined
+  var position: js.Array[Double | String]
+  var product: js.UndefOr[SavedFeedResponseProduct] = js.undefined
+  var start_time_in_video_in_sec: js.UndefOr[Null] = js.undefined
+  var user: js.UndefOr[SavedFeedResponseUser] = js.undefined
 }
 
 object SavedFeedResponseInItem {
   @scala.inline
-  def apply(position: js.Array[Double | String]): SavedFeedResponseInItem = {
+  def apply(
+    position: js.Array[Double | String],
+    product: SavedFeedResponseProduct = null,
+    user: SavedFeedResponseUser = null
+  ): SavedFeedResponseInItem = {
     val __obj = js.Dynamic.literal(position = position.asInstanceOf[js.Any])
+    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavedFeedResponseInItem]
   }
-  @scala.inline
-  implicit class SavedFeedResponseInItemOps[Self <: SavedFeedResponseInItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPosition(value: js.Array[Double | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProduct(value: SavedFeedResponseProduct): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: SavedFeedResponseUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,18 +17,17 @@ import scala.scalajs.js.annotation._
   *
   * NOTE: 'params' can be omitted.
   */
-@js.native
 trait DERInteger extends ASN1Object {
   /**
     * set value by Tom Wu's BigInteger object
     * @param bigIntegerValue to set
     */
-  def setByBigInteger(bigIntegerValue: BigInteger): Unit = js.native
+  def setByBigInteger(bigIntegerValue: BigInteger): Unit
   /**
     * set value by integer value
     * @param integer value to set
     */
-  def setByInteger(intValue: Double): Unit = js.native
+  def setByInteger(intValue: Double): Unit
   /**
     * set value by hex string
     * @param newHexString hexadecimal string of integer value
@@ -40,7 +39,7 @@ trait DERInteger extends ASN1Object {
     * new KJUR.asn1.DERInteger({'int': 123});
     * new KJUR.asn1.DERInteger({'hex': '1fad'});
     */
-  def setValueHex(newHexString: String): Unit = js.native
+  def setValueHex(newHexString: String): Unit
 }
 
 object DERInteger {
@@ -62,31 +61,5 @@ object DERInteger {
     val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setByBigInteger = js.Any.fromFunction1(setByBigInteger), setByInteger = js.Any.fromFunction1(setByInteger), setValueHex = js.Any.fromFunction1(setValueHex))
     __obj.asInstanceOf[DERInteger]
   }
-  @scala.inline
-  implicit class DERIntegerOps[Self <: DERInteger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetByBigInteger(value: BigInteger => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByBigInteger")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetByInteger(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByInteger")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetValueHex(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setValueHex")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

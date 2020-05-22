@@ -11,50 +11,24 @@ import scala.scalajs.js.annotation._
   * matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should
   * not be included within this rule.
   */
-@js.native
 trait IPBlock extends js.Object {
   /**
     * CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24"
     */
-  var cidr: Input[String] = js.native
+  var cidr: Input[String]
   /**
     * Except is a slice of CIDRs that should not be included within an IP Block Valid examples
     * are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR range
     */
-  var except: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  var except: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
 }
 
 object IPBlock {
   @scala.inline
-  def apply(cidr: Input[String]): IPBlock = {
+  def apply(cidr: Input[String], except: Input[js.Array[Input[String]]] = null): IPBlock = {
     val __obj = js.Dynamic.literal(cidr = cidr.asInstanceOf[js.Any])
+    if (except != null) __obj.updateDynamic("except")(except.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPBlock]
   }
-  @scala.inline
-  implicit class IPBlockOps[Self <: IPBlock] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidr(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcept(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("except")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("except")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

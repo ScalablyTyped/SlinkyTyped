@@ -6,167 +6,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GenerateTextureConfig extends js.Object {
   /**
-    * [description]
+    * The HTML Canvas to draw the texture to.
     */
-  var canvas: js.UndefOr[HTMLCanvasElement] = js.native
+  var canvas: js.UndefOr[HTMLCanvasElement] = js.undefined
   /**
-    * [description]
+    * Should the canvas be cleared before the texture is drawn?
     */
-  var clearCanvas: js.UndefOr[Boolean] = js.native
+  var clearCanvas: js.UndefOr[Boolean] = js.undefined
   /**
-    * [description]
+    * An array of data, where each row is a string of single values 0-9A-F, or the period character.
     */
-  var data: js.UndefOr[js.Array[_]] = js.native
+  var data: js.UndefOr[js.Array[_]] = js.undefined
   /**
-    * [description]
+    * The indexed palette that the data cell values map to.
     */
-  var palette: js.UndefOr[Palette] = js.native
+  var palette: js.UndefOr[Palette] = js.undefined
   /**
     * The height of each 'pixel' in the generated texture.
     */
-  var pixelHeight: js.UndefOr[Double] = js.native
+  var pixelHeight: js.UndefOr[Double] = js.undefined
   /**
     * The width of each 'pixel' in the generated texture.
     */
-  var pixelWidth: js.UndefOr[Double] = js.native
+  var pixelWidth: js.UndefOr[Double] = js.undefined
   /**
-    * [description]
+    * A callback to send the canvas to after the texture has been drawn.
     */
-  var postRender: js.UndefOr[GenerateTextureCallback] = js.native
+  var postRender: js.UndefOr[GenerateTextureCallback] = js.undefined
   /**
-    * [description]
+    * A callback to send the canvas to prior to the texture being drawn.
     */
-  var preRender: js.UndefOr[GenerateTextureCallback] = js.native
+  var preRender: js.UndefOr[GenerateTextureCallback] = js.undefined
   /**
-    * [description]
+    * Should the canvas be resized before the texture is drawn?
     */
-  var resizeCanvas: js.UndefOr[Boolean] = js.native
+  var resizeCanvas: js.UndefOr[Boolean] = js.undefined
 }
 
 object GenerateTextureConfig {
   @scala.inline
-  def apply(): GenerateTextureConfig = {
+  def apply(
+    canvas: HTMLCanvasElement = null,
+    clearCanvas: js.UndefOr[Boolean] = js.undefined,
+    data: js.Array[_] = null,
+    palette: Palette = null,
+    pixelHeight: js.UndefOr[Double] = js.undefined,
+    pixelWidth: js.UndefOr[Double] = js.undefined,
+    postRender: (/* canvas */ HTMLCanvasElement, /* context */ CanvasRenderingContext2D) => Unit = null,
+    preRender: (/* canvas */ HTMLCanvasElement, /* context */ CanvasRenderingContext2D) => Unit = null,
+    resizeCanvas: js.UndefOr[Boolean] = js.undefined
+  ): GenerateTextureConfig = {
     val __obj = js.Dynamic.literal()
+    if (canvas != null) __obj.updateDynamic("canvas")(canvas.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearCanvas)) __obj.updateDynamic("clearCanvas")(clearCanvas.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
+    if (!js.isUndefined(pixelHeight)) __obj.updateDynamic("pixelHeight")(pixelHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pixelWidth)) __obj.updateDynamic("pixelWidth")(pixelWidth.get.asInstanceOf[js.Any])
+    if (postRender != null) __obj.updateDynamic("postRender")(js.Any.fromFunction2(postRender))
+    if (preRender != null) __obj.updateDynamic("preRender")(js.Any.fromFunction2(preRender))
+    if (!js.isUndefined(resizeCanvas)) __obj.updateDynamic("resizeCanvas")(resizeCanvas.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateTextureConfig]
   }
-  @scala.inline
-  implicit class GenerateTextureConfigOps[Self <: GenerateTextureConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanvas(value: HTMLCanvasElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearCanvas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearCanvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearCanvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPalette(value: Palette): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPalette: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPixelWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPixelWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostRender(value: (/* canvas */ HTMLCanvasElement, /* context */ CanvasRenderingContext2D) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postRender")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPostRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreRender(value: (/* canvas */ HTMLCanvasElement, /* context */ CanvasRenderingContext2D) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preRender")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPreRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeCanvas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeCanvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeCanvas")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

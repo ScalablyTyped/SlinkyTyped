@@ -1,5 +1,11 @@
 package typingsSlinky.reactAsync.mod
 
+import typingsSlinky.reactAsync.anon.Dictmeta
+import typingsSlinky.reactAsync.reactAsyncBooleans.`true`
+import typingsSlinky.reactAsync.reactAsyncStrings.cancel
+import typingsSlinky.reactAsync.reactAsyncStrings.fulfill
+import typingsSlinky.reactAsync.reactAsyncStrings.reject
+import typingsSlinky.reactAsync.reactAsyncStrings.start
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +20,28 @@ trait AsyncAction[T] extends js.Object
 
 object AsyncAction {
   @scala.inline
-  implicit def apply[T](value: Cancel): AsyncAction[T] = value.asInstanceOf[AsyncAction[T]]
+  def Start[T](meta: Dictmeta, payload: () => js.Promise[Unit], `type`: String with start): AsyncAction[T] = {
+    val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], payload = js.Any.fromFunction0(payload))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AsyncAction[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Fulfill[T]): AsyncAction[T] = value.asInstanceOf[AsyncAction[T]]
+  def Cancel[T](meta: Dictmeta, `type`: String with cancel): AsyncAction[T] = {
+    val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AsyncAction[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Reject): AsyncAction[T] = value.asInstanceOf[AsyncAction[T]]
+  def Fulfill[T](meta: Dictmeta, payload: T, `type`: String with fulfill): AsyncAction[T] = {
+    val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AsyncAction[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Start): AsyncAction[T] = value.asInstanceOf[AsyncAction[T]]
+  def Reject[T](error: `true`, meta: Dictmeta, payload: js.Error, `type`: String with reject): AsyncAction[T] = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AsyncAction[T]]
+  }
 }
 

@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait ChildNode extends Node
 
-object ChildNode {
-  @scala.inline
-  implicit def apply(value: AtRule_): ChildNode = value.asInstanceOf[ChildNode]
-  @scala.inline
-  implicit def apply(value: Comment_): ChildNode = value.asInstanceOf[ChildNode]
-  @scala.inline
-  implicit def apply(value: Declaration): ChildNode = value.asInstanceOf[ChildNode]
-  @scala.inline
-  implicit def apply(value: Rule_): ChildNode = value.asInstanceOf[ChildNode]
-}
-

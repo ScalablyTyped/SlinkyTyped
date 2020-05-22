@@ -12,7 +12,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specialized interface for bitmaps containing IEEE floats as their color components. */
-@js.native
 trait XIeeeFloatBitmap extends XIeeeFloatReadOnlyBitmap {
   /**
     * Set raw data of a bitmap.
@@ -29,7 +28,7 @@ trait XIeeeFloatBitmap extends XIeeeFloatReadOnlyBitmap {
     * @throws com::sun::star::lang::IndexOutOfBoundsException if parts of the given rectangle are outside the permissible bitmap area.
     * @throws com::sun::star::lang::IllegalArgumentException if the given memory layout does not match this bitmap's layout, or if the given data sequence has
     */
-  def setData(data: SeqEquiv[Double], bitmapLayout: FloatingPointBitmapLayout, rect: IntegerRectangle2D): Unit = js.native
+  def setData(data: SeqEquiv[Double], bitmapLayout: FloatingPointBitmapLayout, rect: IntegerRectangle2D): Unit
   /**
     * Set a single pixel of the bitmap with the given color value.
     *
@@ -42,7 +41,7 @@ trait XIeeeFloatBitmap extends XIeeeFloatReadOnlyBitmap {
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the given point is outside the permissible bitmap area.
     * @throws com::sun::star::lang::IllegalArgumentException if the given memory layout does not match this bitmap's layout, or if the given data sequence has
     */
-  def setPixel(color: SeqEquiv[Double], bitmapLayout: FloatingPointBitmapLayout, pos: IntegerPoint2D): Unit = js.native
+  def setPixel(color: SeqEquiv[Double], bitmapLayout: FloatingPointBitmapLayout, pos: IntegerPoint2D): Unit
 }
 
 object XIeeeFloatBitmap {
@@ -65,25 +64,5 @@ object XIeeeFloatBitmap {
     val __obj = js.Dynamic.literal(MemoryLayout = MemoryLayout.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getData = js.Any.fromFunction2(getData), getMemoryLayout = js.Any.fromFunction0(getMemoryLayout), getPixel = js.Any.fromFunction2(getPixel), getScaledBitmap = js.Any.fromFunction2(getScaledBitmap), getSize = js.Any.fromFunction0(getSize), hasAlpha = js.Any.fromFunction0(hasAlpha), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setData = js.Any.fromFunction3(setData), setPixel = js.Any.fromFunction3(setPixel))
     __obj.asInstanceOf[XIeeeFloatBitmap]
   }
-  @scala.inline
-  implicit class XIeeeFloatBitmapOps[Self <: XIeeeFloatBitmap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetData(value: (SeqEquiv[Double], FloatingPointBitmapLayout, IntegerRectangle2D) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetPixel(value: (SeqEquiv[Double], FloatingPointBitmapLayout, IntegerPoint2D) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPixel")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

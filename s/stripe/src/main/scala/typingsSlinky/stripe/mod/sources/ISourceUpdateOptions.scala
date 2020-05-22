@@ -3,53 +3,32 @@ package typingsSlinky.stripe.mod.sources
 import typingsSlinky.stripe.anon.Currency
 import typingsSlinky.stripe.anon.EmailName
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISourceUpdateOptions extends IDataOptionsWithMetadata {
-  var mandate: js.UndefOr[Currency] = js.native
-  var owner: js.UndefOr[EmailName] = js.native
+  var mandate: js.UndefOr[Currency] = js.undefined
+  var owner: js.UndefOr[EmailName] = js.undefined
 }
 
 object ISourceUpdateOptions {
   @scala.inline
-  def apply(): ISourceUpdateOptions = {
+  def apply(
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    mandate: Currency = null,
+    metadata: IOptionsMetadata = null,
+    owner: EmailName = null
+  ): ISourceUpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (mandate != null) __obj.updateDynamic("mandate")(mandate.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISourceUpdateOptions]
   }
-  @scala.inline
-  implicit class ISourceUpdateOptionsOps[Self <: ISourceUpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMandate(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMandate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: EmailName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

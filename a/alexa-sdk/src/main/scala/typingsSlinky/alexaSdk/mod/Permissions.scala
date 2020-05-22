@@ -5,33 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Permissions extends /* key */ StringDictionary[String] {
   /**
     * @deprecated
     */
-  var consentToken: String = js.native
+  var consentToken: String
 }
 
 object Permissions {
   @scala.inline
-  def apply(consentToken: String): Permissions = {
+  def apply(consentToken: String, StringDictionary: /* name */ StringDictionary[String] = null): Permissions = {
     val __obj = js.Dynamic.literal(consentToken = consentToken.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Permissions]
   }
-  @scala.inline
-  implicit class PermissionsOps[Self <: Permissions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsentToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consentToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

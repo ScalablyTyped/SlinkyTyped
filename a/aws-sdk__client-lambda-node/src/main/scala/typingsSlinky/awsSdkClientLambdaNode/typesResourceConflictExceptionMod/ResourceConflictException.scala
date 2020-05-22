@@ -13,7 +13,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResourceConflictException
   extends ServiceException[ResourceConflictExceptionDetails]
      with AddPermissionExceptionsUnion
@@ -24,7 +23,7 @@ trait ResourceConflictException
      with UpdateEventSourceMappingExceptionsUnion
      with UpdateFunctionConfigurationExceptionsUnion {
   @JSName("name")
-  var name_ResourceConflictException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException = js.native
+  var name_ResourceConflictException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException
 }
 
 object ResourceConflictException {
@@ -33,26 +32,12 @@ object ResourceConflictException {
     $metadata: ResponseMetadata,
     details: ResourceConflictExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException
+    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException,
+    stack: String = null
   ): ResourceConflictException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceConflictException]
   }
-  @scala.inline
-  implicit class ResourceConflictExceptionOps[Self <: ResourceConflictException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

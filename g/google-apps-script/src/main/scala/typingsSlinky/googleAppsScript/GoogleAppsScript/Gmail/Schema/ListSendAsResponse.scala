@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListSendAsResponse extends js.Object {
-  var sendAs: js.UndefOr[js.Array[SendAs]] = js.native
+  var sendAs: js.UndefOr[js.Array[SendAs]] = js.undefined
 }
 
 object ListSendAsResponse {
   @scala.inline
-  def apply(): ListSendAsResponse = {
+  def apply(sendAs: js.Array[SendAs] = null): ListSendAsResponse = {
     val __obj = js.Dynamic.literal()
+    if (sendAs != null) __obj.updateDynamic("sendAs")(sendAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSendAsResponse]
   }
-  @scala.inline
-  implicit class ListSendAsResponseOps[Self <: ListSendAsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSendAs(value: js.Array[SendAs]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendAs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,155 +8,67 @@ import scala.scalajs.js.annotation._
   * Defines the options used while creating an XML document with the `begin`
   * function.
   */
-@js.native
 trait BeginOptions extends js.Object {
   /** 
     * Whether decorator strings will be ignored when converting JS 
     * objects
     */
-  var ignoreDecorators: js.UndefOr[Boolean] = js.native
+  var ignoreDecorators: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether attributes with null values will be kept or ignored
     */
-  var keepNullAttributes: js.UndefOr[Boolean] = js.native
+  var keepNullAttributes: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether nodes with null values will be kept or ignored
     */
-  var keepNullNodes: js.UndefOr[Boolean] = js.native
+  var keepNullNodes: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether existing html entities are encoded
     */
-  var noDoubleEncoding: js.UndefOr[Boolean] = js.native
+  var noDoubleEncoding: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether values will be validated and escaped or returned as is
     */
-  var noValidation: js.UndefOr[Boolean] = js.native
+  var noValidation: js.UndefOr[Boolean] = js.undefined
   /** 
     * Whether array items are created as separate nodes when passed 
     * as an object value
     */
-  var separateArrayItems: js.UndefOr[Boolean] = js.native
+  var separateArrayItems: js.UndefOr[Boolean] = js.undefined
   /**
     * A set of functions to use for converting values to strings
     */
-  var stringify: js.UndefOr[XMLStringifier] = js.native
+  var stringify: js.UndefOr[XMLStringifier] = js.undefined
   /** 
     * The default XML writer to use for converting nodes to string. 
     * If the default writer is not set, the built-in XMLStringWriter 
     * will be used instead. 
     */
-  var writer: js.UndefOr[XMLWriter | WriterOptions] = js.native
+  var writer: js.UndefOr[XMLWriter | WriterOptions] = js.undefined
 }
 
 object BeginOptions {
   @scala.inline
-  def apply(): BeginOptions = {
+  def apply(
+    ignoreDecorators: js.UndefOr[Boolean] = js.undefined,
+    keepNullAttributes: js.UndefOr[Boolean] = js.undefined,
+    keepNullNodes: js.UndefOr[Boolean] = js.undefined,
+    noDoubleEncoding: js.UndefOr[Boolean] = js.undefined,
+    noValidation: js.UndefOr[Boolean] = js.undefined,
+    separateArrayItems: js.UndefOr[Boolean] = js.undefined,
+    stringify: XMLStringifier = null,
+    writer: XMLWriter | WriterOptions = null
+  ): BeginOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignoreDecorators)) __obj.updateDynamic("ignoreDecorators")(ignoreDecorators.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepNullAttributes)) __obj.updateDynamic("keepNullAttributes")(keepNullAttributes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepNullNodes)) __obj.updateDynamic("keepNullNodes")(keepNullNodes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noDoubleEncoding)) __obj.updateDynamic("noDoubleEncoding")(noDoubleEncoding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noValidation)) __obj.updateDynamic("noValidation")(noValidation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(separateArrayItems)) __obj.updateDynamic("separateArrayItems")(separateArrayItems.get.asInstanceOf[js.Any])
+    if (stringify != null) __obj.updateDynamic("stringify")(stringify.asInstanceOf[js.Any])
+    if (writer != null) __obj.updateDynamic("writer")(writer.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeginOptions]
   }
-  @scala.inline
-  implicit class BeginOptionsOps[Self <: BeginOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreDecorators(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDecorators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreDecorators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDecorators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepNullAttributes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNullAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepNullAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNullAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepNullNodes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNullNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepNullNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNullNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDoubleEncoding(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDoubleEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDoubleEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDoubleEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoValidation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparateArrayItems(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separateArrayItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparateArrayItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separateArrayItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringify(value: XMLStringifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriter(value: XMLWriter | WriterOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

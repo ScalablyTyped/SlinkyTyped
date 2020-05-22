@@ -8,147 +8,54 @@ import scala.scalajs.js.annotation._
 /**
   * Rendering options
   */
-@js.native
 trait IDialogRenderingOptions extends js.Object {
   /*animation css class, by default set to "fade"*/
-  var animation: js.UndefOr[String] = js.native
+  var animation: js.UndefOr[String] = js.undefined
   /*function called when the modal is submitted*/
-  var callback: js.Function = js.native
+  var callback: js.Function
   /*the DOM element to inject the modal into, by default set to body*/
-  var container: js.UndefOr[HTMLElement] = js.native
+  var container: js.UndefOr[HTMLElement] = js.undefined
   /** 
     * It will set this value as a property on the dialog controller's scope as $scope.dialogData
     */
-  var dialogData: js.UndefOr[js.Any] = js.native
+  var dialogData: js.UndefOr[js.Any] = js.undefined
   /*load template in an iframe, only needed for serverside templates*/
-  var iframe: Boolean = js.native
+  var iframe: Boolean
   /*strips the modal from any animation and wrappers, used when you want to inject a dialog into an existing container*/
-  var `inline`: js.UndefOr[Boolean] = js.native
+  var `inline`: js.UndefOr[Boolean] = js.undefined
   /*modal css class, by default "umb-modal"*/
-  var modalClass: js.UndefOr[String] = js.native
+  var modalClass: js.UndefOr[String] = js.undefined
   /*show the modal instantly*/
-  var show: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.undefined
   /*the url of the template*/
-  var template: String = js.native
+  var template: String
   /*set a width on the modal, only needed for iframes*/
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object IDialogRenderingOptions {
   @scala.inline
-  def apply(callback: js.Function, iframe: Boolean, template: String): IDialogRenderingOptions = {
+  def apply(
+    callback: js.Function,
+    iframe: Boolean,
+    template: String,
+    animation: String = null,
+    container: HTMLElement = null,
+    dialogData: js.Any = null,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    modalClass: String = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): IDialogRenderingOptions = {
     val __obj = js.Dynamic.literal(callback = callback.asInstanceOf[js.Any], iframe = iframe.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (dialogData != null) __obj.updateDynamic("dialogData")(dialogData.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (modalClass != null) __obj.updateDynamic("modalClass")(modalClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDialogRenderingOptions]
   }
-  @scala.inline
-  implicit class IDialogRenderingOptionsOps[Self <: IDialogRenderingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallback(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIframe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDialogData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDialogData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModalClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modalClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModalClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modalClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

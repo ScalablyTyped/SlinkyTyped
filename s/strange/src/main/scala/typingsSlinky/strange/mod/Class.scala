@@ -1,5 +1,6 @@
 package typingsSlinky.strange.mod
 
+import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,5 +22,30 @@ class Class[T /* <: Endpoint */] ()
   def this(begin: T, end: Null, bounds: Bounds) = this()
   def this(begin: Null, end: T, bounds: Bounds) = this()
   def this(begin: Null, end: Null, bounds: Bounds) = this()
+  /**
+    * Returns true if range is collapsed, and false otherwise.
+    */
+  /* CompleteClass */
+  override val collapsed: Boolean = js.native
+  /**
+    * Returns range's end node.
+    */
+  /* CompleteClass */
+  override val endContainer: Node = js.native
+  /**
+    * Returns range's end offset.
+    */
+  /* CompleteClass */
+  override val endOffset: Double = js.native
+  /**
+    * Returns range's start node.
+    */
+  /* CompleteClass */
+  override val startContainer: Node = js.native
+  /**
+    * Returns range's start offset.
+    */
+  /* CompleteClass */
+  override val startOffset: Double = js.native
 }
 

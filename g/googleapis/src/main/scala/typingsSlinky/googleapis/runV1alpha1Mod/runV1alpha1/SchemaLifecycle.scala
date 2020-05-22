@@ -36,41 +36,11 @@ trait SchemaLifecycle extends js.Object {
 
 object SchemaLifecycle {
   @scala.inline
-  def apply(): SchemaLifecycle = {
+  def apply(postStart: SchemaHandler = null, preStop: SchemaHandler = null): SchemaLifecycle = {
     val __obj = js.Dynamic.literal()
+    if (postStart != null) __obj.updateDynamic("postStart")(postStart.asInstanceOf[js.Any])
+    if (preStop != null) __obj.updateDynamic("preStop")(preStop.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLifecycle]
   }
-  @scala.inline
-  implicit class SchemaLifecycleOps[Self <: SchemaLifecycle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPostStart(value: SchemaHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreStop(value: SchemaHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preStop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preStop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

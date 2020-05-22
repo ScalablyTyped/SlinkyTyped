@@ -22,41 +22,10 @@ trait StageDeclaration extends js.Object {
 
 object StageDeclaration {
   @scala.inline
-  def apply(actions: StageActionDeclarationList, name: StageName): StageDeclaration = {
+  def apply(actions: StageActionDeclarationList, name: StageName, blockers: StageBlockerDeclarationList = null): StageDeclaration = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (blockers != null) __obj.updateDynamic("blockers")(blockers.asInstanceOf[js.Any])
     __obj.asInstanceOf[StageDeclaration]
   }
-  @scala.inline
-  implicit class StageDeclarationOps[Self <: StageDeclaration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: StageActionDeclarationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: StageName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlockers(value: StageBlockerDeclarationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DeleteProjectResult extends js.Object {
 
 object DeleteProjectResult {
   @scala.inline
-  def apply(): DeleteProjectResult = {
+  def apply(deletedResources: Resources = null, orphanedResources: Resources = null): DeleteProjectResult = {
     val __obj = js.Dynamic.literal()
+    if (deletedResources != null) __obj.updateDynamic("deletedResources")(deletedResources.asInstanceOf[js.Any])
+    if (orphanedResources != null) __obj.updateDynamic("orphanedResources")(orphanedResources.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteProjectResult]
   }
-  @scala.inline
-  implicit class DeleteProjectResultOps[Self <: DeleteProjectResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletedResources(value: Resources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletedResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrphanedResources(value: Resources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orphanedResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrphanedResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orphanedResources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

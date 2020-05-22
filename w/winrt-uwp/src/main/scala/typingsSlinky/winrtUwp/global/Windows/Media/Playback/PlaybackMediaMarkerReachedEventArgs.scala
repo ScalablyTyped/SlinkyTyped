@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs")
 @js.native
 abstract class PlaybackMediaMarkerReachedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs {
+  /** Gets the PlaybackMediaMarker that was reached. */
+  /* CompleteClass */
+  override var playbackMediaMarker: typingsSlinky.winrtUwp.Windows.Media.Playback.PlaybackMediaMarker = js.native
+}
 

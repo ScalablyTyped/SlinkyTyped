@@ -9,13 +9,12 @@ import scala.scalajs.js.annotation._
   * DEPRECATED 1.9 - This group version of NetworkPolicyPeer is deprecated by
   * networking/v1/NetworkPolicyPeer.
   */
-@js.native
 trait NetworkPolicyPeer extends js.Object {
   /**
     * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the
     * other fields can be.
     */
-  val ipBlock: IPBlock = js.native
+  val ipBlock: IPBlock
   /**
     * Selects Namespaces using cluster-scoped labels. This field follows standard label selector
     * semantics; if present but empty, it selects all namespaces.
@@ -24,7 +23,7 @@ trait NetworkPolicyPeer extends js.Object {
     * PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods
     * in the Namespaces selected by NamespaceSelector.
     */
-  val namespaceSelector: LabelSelector = js.native
+  val namespaceSelector: LabelSelector
   /**
     * This is a label selector which selects Pods. This field follows standard label selector
     * semantics; if present but empty, it selects all pods.
@@ -33,7 +32,7 @@ trait NetworkPolicyPeer extends js.Object {
     * matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects
     * the Pods matching PodSelector in the policy's own Namespace.
     */
-  val podSelector: LabelSelector = js.native
+  val podSelector: LabelSelector
 }
 
 object NetworkPolicyPeer {
@@ -42,31 +41,5 @@ object NetworkPolicyPeer {
     val __obj = js.Dynamic.literal(ipBlock = ipBlock.asInstanceOf[js.Any], namespaceSelector = namespaceSelector.asInstanceOf[js.Any], podSelector = podSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkPolicyPeer]
   }
-  @scala.inline
-  implicit class NetworkPolicyPeerOps[Self <: NetworkPolicyPeer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIpBlock(value: IPBlock): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespaceSelector(value: LabelSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPodSelector(value: LabelSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

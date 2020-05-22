@@ -14,29 +14,10 @@ trait F4vSettings extends js.Object {
 
 object F4vSettings {
   @scala.inline
-  def apply(): F4vSettings = {
+  def apply(MoovPlacement: F4vMoovPlacement = null): F4vSettings = {
     val __obj = js.Dynamic.literal()
+    if (MoovPlacement != null) __obj.updateDynamic("MoovPlacement")(MoovPlacement.asInstanceOf[js.Any])
     __obj.asInstanceOf[F4vSettings]
   }
-  @scala.inline
-  implicit class F4vSettingsOps[Self <: F4vSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMoovPlacement(value: F4vMoovPlacement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoovPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoovPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MoovPlacement")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

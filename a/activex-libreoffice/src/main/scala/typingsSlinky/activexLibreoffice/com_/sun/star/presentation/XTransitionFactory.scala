@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * This interface provides the necessary methods to query and create optional transition effects for a {@link SlideShow}
   * @since OOo 2.4
   */
-@js.native
 trait XTransitionFactory extends XInterface {
   /**
     * Actually create a transition for the given transition id
@@ -31,9 +30,9 @@ trait XTransitionFactory extends XInterface {
     view: XSlideShowView,
     leavingBitmap: XBitmap,
     enteringBitmap: XBitmap
-  ): XTransition = js.native
+  ): XTransition
   /** Checks whether this instance provides an implementation for given transition id. */
-  def hasTransition(transitionType: Double, transitionSubType: Double): Boolean = js.native
+  def hasTransition(transitionType: Double, transitionSubType: Double): Boolean
 }
 
 object XTransitionFactory {
@@ -48,25 +47,5 @@ object XTransitionFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createTransition = js.Any.fromFunction5(createTransition), hasTransition = js.Any.fromFunction2(hasTransition), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTransitionFactory]
   }
-  @scala.inline
-  implicit class XTransitionFactoryOps[Self <: XTransitionFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateTransition(value: (Double, Double, XSlideShowView, XBitmap, XBitmap) => XTransition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTransition")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withHasTransition(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTransition")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

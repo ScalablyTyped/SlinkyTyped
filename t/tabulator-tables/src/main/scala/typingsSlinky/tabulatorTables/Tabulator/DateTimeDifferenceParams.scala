@@ -1,5 +1,6 @@
 package typingsSlinky.tabulatorTables.Tabulator
 
+import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`true`
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.days
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.hours
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.minutes
@@ -12,76 +13,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.tabulatorTables.Tabulator.FormatterParams because Already inherited */ @js.native
-trait DateTimeDifferenceParams extends DateTimeParams {
+- typingsSlinky.tabulatorTables.Tabulator._FormatterParams because Already inherited */ trait DateTimeDifferenceParams extends DateTimeParams {
   // Date Time Difference
-  var date: js.UndefOr[js.Any] = js.native
-  var humanize: js.UndefOr[Boolean] = js.native
-  var suffix: js.UndefOr[Boolean] = js.native
-  var unit: js.UndefOr[years | months | weeks | days | hours | minutes | seconds] = js.native
+  var date: js.UndefOr[js.Any] = js.undefined
+  var humanize: js.UndefOr[Boolean] = js.undefined
+  var suffix: js.UndefOr[Boolean] = js.undefined
+  var unit: js.UndefOr[years | months | weeks | days | hours | minutes | seconds] = js.undefined
 }
 
 object DateTimeDifferenceParams {
   @scala.inline
-  def apply(): DateTimeDifferenceParams = {
+  def apply(
+    date: js.Any = null,
+    humanize: js.UndefOr[Boolean] = js.undefined,
+    inputFormat: String = null,
+    invalidPlaceholder: `true` | String | Double | ValueStringCallback = null,
+    outputFormat: String = null,
+    suffix: js.UndefOr[Boolean] = js.undefined,
+    unit: years | months | weeks | days | hours | minutes | seconds = null
+  ): DateTimeDifferenceParams = {
     val __obj = js.Dynamic.literal()
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (!js.isUndefined(humanize)) __obj.updateDynamic("humanize")(humanize.get.asInstanceOf[js.Any])
+    if (inputFormat != null) __obj.updateDynamic("inputFormat")(inputFormat.asInstanceOf[js.Any])
+    if (invalidPlaceholder != null) __obj.updateDynamic("invalidPlaceholder")(invalidPlaceholder.asInstanceOf[js.Any])
+    if (outputFormat != null) __obj.updateDynamic("outputFormat")(outputFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(suffix)) __obj.updateDynamic("suffix")(suffix.get.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateTimeDifferenceParams]
   }
-  @scala.inline
-  implicit class DateTimeDifferenceParamsOps[Self <: DateTimeDifferenceParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHumanize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("humanize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHumanize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("humanize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: years | months | weeks | days | hours | minutes | seconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -27,41 +27,11 @@ trait SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequest extends js.Ob
 
 object SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequest = {
+  def apply(entityValues: js.Array[String] = null, languageCode: String = null): SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequest = {
     val __obj = js.Dynamic.literal()
+    if (entityValues != null) __obj.updateDynamic("entityValues")(entityValues.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequestOps[Self <: SchemaGoogleCloudDialogflowV2beta1BatchDeleteEntitiesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

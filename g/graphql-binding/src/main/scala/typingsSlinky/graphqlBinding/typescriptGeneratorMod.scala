@@ -31,10 +31,8 @@ object typescriptGeneratorMod extends js.Object {
     def renderDescription(description: Maybe[String]): String = js.native
     def renderFieldName(field: GraphQLField[_, _, StringDictionary[_]]): String = js.native
     def renderFieldName(field: GraphQLInputField): String = js.native
-    def renderFieldType(`type`: GraphQLInputType): String = js.native
-    def renderFieldType(`type`: GraphQLOutputType): String = js.native
-    def renderInputFieldType(`type`: GraphQLInputType): String = js.native
-    def renderInputFieldType(`type`: GraphQLOutputType): String = js.native
+    def renderFieldType(`type`: GraphQLInputType | GraphQLOutputType): String = js.native
+    def renderInputFieldType(`type`: GraphQLInputType | GraphQLOutputType): String = js.native
     def renderInterfaceOrObject(`type`: GraphQLInputObjectType): String = js.native
     def renderInterfaceOrObject(`type`: GraphQLInterfaceType): String = js.native
     def renderInterfaceOrObject(`type`: GraphQLObjectType[_, _, StringDictionary[_]]): String = js.native

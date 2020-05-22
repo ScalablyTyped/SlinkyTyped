@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Subscribable[T]
-  extends SubscribableOrPromise[js.Any] {
+trait Subscribable[T] extends js.Object {
   def subscribe(): Unsubscribable = js.native
   /** @deprecated Use an observer instead of a complete callback */
   def subscribe(next: js.UndefOr[Null], error: js.UndefOr[Null], complete: js.Function0[Unit]): Unsubscribable = js.native

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BingMapsImageryMetadataResponse extends js.Object {
-  var authenticationResultCode: String = js.native
-  var resourceSets: js.Array[ResourceSet] = js.native
-  var statusCode: Double = js.native
-  var statusDescription: String = js.native
+  var authenticationResultCode: String
+  var resourceSets: js.Array[ResourceSet]
+  var statusCode: Double
+  var statusDescription: String
 }
 
 object BingMapsImageryMetadataResponse {
@@ -23,37 +22,5 @@ object BingMapsImageryMetadataResponse {
     val __obj = js.Dynamic.literal(authenticationResultCode = authenticationResultCode.asInstanceOf[js.Any], resourceSets = resourceSets.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any], statusDescription = statusDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[BingMapsImageryMetadataResponse]
   }
-  @scala.inline
-  implicit class BingMapsImageryMetadataResponseOps[Self <: BingMapsImageryMetadataResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationResultCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationResultCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceSets(value: js.Array[ResourceSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

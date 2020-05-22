@@ -21,41 +21,14 @@ trait SchemaServiceAccountDelegationInfo extends js.Object {
 
 object SchemaServiceAccountDelegationInfo {
   @scala.inline
-  def apply(): SchemaServiceAccountDelegationInfo = {
+  def apply(
+    firstPartyPrincipal: SchemaFirstPartyPrincipal = null,
+    thirdPartyPrincipal: SchemaThirdPartyPrincipal = null
+  ): SchemaServiceAccountDelegationInfo = {
     val __obj = js.Dynamic.literal()
+    if (firstPartyPrincipal != null) __obj.updateDynamic("firstPartyPrincipal")(firstPartyPrincipal.asInstanceOf[js.Any])
+    if (thirdPartyPrincipal != null) __obj.updateDynamic("thirdPartyPrincipal")(thirdPartyPrincipal.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServiceAccountDelegationInfo]
   }
-  @scala.inline
-  implicit class SchemaServiceAccountDelegationInfoOps[Self <: SchemaServiceAccountDelegationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirstPartyPrincipal(value: SchemaFirstPartyPrincipal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPartyPrincipal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPartyPrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPartyPrincipal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThirdPartyPrincipal(value: SchemaThirdPartyPrincipal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyPrincipal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThirdPartyPrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thirdPartyPrincipal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

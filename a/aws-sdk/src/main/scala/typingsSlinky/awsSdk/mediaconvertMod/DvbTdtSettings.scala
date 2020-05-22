@@ -14,29 +14,10 @@ trait DvbTdtSettings extends js.Object {
 
 object DvbTdtSettings {
   @scala.inline
-  def apply(): DvbTdtSettings = {
+  def apply(TdtInterval: js.UndefOr[integerMin1000Max30000] = js.undefined): DvbTdtSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(TdtInterval)) __obj.updateDynamic("TdtInterval")(TdtInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DvbTdtSettings]
   }
-  @scala.inline
-  implicit class DvbTdtSettingsOps[Self <: DvbTdtSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTdtInterval(value: integerMin1000Max30000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TdtInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTdtInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TdtInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

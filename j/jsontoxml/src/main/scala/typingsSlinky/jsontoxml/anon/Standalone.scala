@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Standalone extends js.Object {
-  var standalone: js.UndefOr[Boolean] = js.native
+  var standalone: js.UndefOr[Boolean] = js.undefined
 }
 
 object Standalone {
   @scala.inline
-  def apply(): Standalone = {
+  def apply(standalone: js.UndefOr[Boolean] = js.undefined): Standalone = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Standalone]
   }
-  @scala.inline
-  implicit class StandaloneOps[Self <: Standalone] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStandalone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandalone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttributeValue extends js.Object {
   /** A Boolean value represented by `true` or `false`. */
-  var boolValue: js.UndefOr[Boolean] = js.native
+  var boolValue: js.UndefOr[Boolean] = js.undefined
   /** A 64-bit signed integer. */
-  var intValue: js.UndefOr[String] = js.native
+  var intValue: js.UndefOr[String] = js.undefined
   /** A string up to 256 bytes long. */
-  var stringValue: js.UndefOr[TruncatableString] = js.native
+  var stringValue: js.UndefOr[TruncatableString] = js.undefined
 }
 
 object AttributeValue {
   @scala.inline
-  def apply(): AttributeValue = {
+  def apply(
+    boolValue: js.UndefOr[Boolean] = js.undefined,
+    intValue: String = null,
+    stringValue: TruncatableString = null
+  ): AttributeValue = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(boolValue)) __obj.updateDynamic("boolValue")(boolValue.get.asInstanceOf[js.Any])
+    if (intValue != null) __obj.updateDynamic("intValue")(intValue.asInstanceOf[js.Any])
+    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeValue]
   }
-  @scala.inline
-  implicit class AttributeValueOps[Self <: AttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoolValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoolValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: TruncatableString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

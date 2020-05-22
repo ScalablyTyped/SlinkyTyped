@@ -17,29 +17,10 @@ trait SchemaDeleteDimensionGroupResponse extends js.Object {
 
 object SchemaDeleteDimensionGroupResponse {
   @scala.inline
-  def apply(): SchemaDeleteDimensionGroupResponse = {
+  def apply(dimensionGroups: js.Array[SchemaDimensionGroup] = null): SchemaDeleteDimensionGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (dimensionGroups != null) __obj.updateDynamic("dimensionGroups")(dimensionGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteDimensionGroupResponse]
   }
-  @scala.inline
-  implicit class SchemaDeleteDimensionGroupResponseOps[Self <: SchemaDeleteDimensionGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimensionGroups(value: js.Array[SchemaDimensionGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

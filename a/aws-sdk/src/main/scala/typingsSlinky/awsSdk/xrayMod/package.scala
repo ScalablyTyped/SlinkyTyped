@@ -20,6 +20,18 @@ package object xrayMod {
   type EC2InstanceId = java.lang.String
   type EdgeList = js.Array[typingsSlinky.awsSdk.xrayMod.Edge]
   type EncryptionKeyId = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - java.lang.String
+  */
+  type EncryptionStatus = typingsSlinky.awsSdk.xrayMod._EncryptionStatus | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.KMS
+    - java.lang.String
+  */
+  type EncryptionType = typingsSlinky.awsSdk.xrayMod._EncryptionType | java.lang.String
   type EntitySelectorExpression = java.lang.String
   type ErrorRootCauseEntityPath = js.Array[typingsSlinky.awsSdk.xrayMod.ErrorRootCauseEntity]
   type ErrorRootCauseServices = js.Array[typingsSlinky.awsSdk.xrayMod.ErrorRootCauseService]
@@ -55,6 +67,12 @@ package object xrayMod {
   type SamplingRuleRecordList = js.Array[typingsSlinky.awsSdk.xrayMod.SamplingRuleRecord]
   type SamplingStatisticSummaryList = js.Array[typingsSlinky.awsSdk.xrayMod.SamplingStatisticSummary]
   type SamplingStatisticsDocumentList = js.Array[typingsSlinky.awsSdk.xrayMod.SamplingStatisticsDocument]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PartialScan
+    - typingsSlinky.awsSdk.awsSdkStrings.FixedRate
+    - java.lang.String
+  */
+  type SamplingStrategyName = typingsSlinky.awsSdk.xrayMod._SamplingStrategyName | java.lang.String
   type SamplingTargetDocumentList = js.Array[typingsSlinky.awsSdk.xrayMod.SamplingTargetDocument]
   type SegmentDocument = java.lang.String
   type SegmentId = java.lang.String
@@ -66,6 +84,12 @@ package object xrayMod {
   type ServiceType = java.lang.String
   type String = java.lang.String
   type TelemetryRecordList = js.Array[typingsSlinky.awsSdk.xrayMod.TelemetryRecord]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TraceId
+    - typingsSlinky.awsSdk.awsSdkStrings.Event_
+    - java.lang.String
+  */
+  type TimeRangeType = typingsSlinky.awsSdk.xrayMod._TimeRangeType | java.lang.String
   type TimeSeriesServiceStatisticsList = js.Array[typingsSlinky.awsSdk.xrayMod.TimeSeriesServiceStatistics]
   type Timestamp = js.Date
   type TraceAvailabilityZones = js.Array[typingsSlinky.awsSdk.xrayMod.AvailabilityZoneDetail]
@@ -84,4 +108,10 @@ package object xrayMod {
   type UnprocessedTraceSegmentList = js.Array[typingsSlinky.awsSdk.xrayMod.UnprocessedTraceSegment]
   type ValuesWithServiceIds = js.Array[typingsSlinky.awsSdk.xrayMod.ValueWithServiceIds]
   type Version = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2016-04-12`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.xrayMod._apiVersion | java.lang.String
 }

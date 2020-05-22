@@ -4,13 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPassword extends IText
 
 object IPassword {
   @scala.inline
-  def apply(): IPassword = {
+  def apply(IText: IText = null): IPassword = {
     val __obj = js.Dynamic.literal()
+    if (IText != null) js.Dynamic.global.Object.assign(__obj, IText)
     __obj.asInstanceOf[IPassword]
   }
 }

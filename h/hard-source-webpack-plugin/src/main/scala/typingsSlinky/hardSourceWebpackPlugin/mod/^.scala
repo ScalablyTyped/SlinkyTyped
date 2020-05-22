@@ -8,5 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ () extends hardSourceWebpackPlugin {
   def this(options: Options) = this()
+  /* CompleteClass */
+  @JSName("apply")
+  override def apply(args: js.Any*): Unit = js.native
 }
 

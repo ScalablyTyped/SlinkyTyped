@@ -30,53 +30,16 @@ trait SchemaListGroupStatsResponse extends js.Object {
 
 object SchemaListGroupStatsResponse {
   @scala.inline
-  def apply(): SchemaListGroupStatsResponse = {
+  def apply(
+    errorGroupStats: js.Array[SchemaErrorGroupStats] = null,
+    nextPageToken: String = null,
+    timeRangeBegin: String = null
+  ): SchemaListGroupStatsResponse = {
     val __obj = js.Dynamic.literal()
+    if (errorGroupStats != null) __obj.updateDynamic("errorGroupStats")(errorGroupStats.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (timeRangeBegin != null) __obj.updateDynamic("timeRangeBegin")(timeRangeBegin.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListGroupStatsResponse]
   }
-  @scala.inline
-  implicit class SchemaListGroupStatsResponseOps[Self <: SchemaListGroupStatsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorGroupStats(value: js.Array[SchemaErrorGroupStats]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorGroupStats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorGroupStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorGroupStats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeRangeBegin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRangeBegin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeRangeBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeRangeBegin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

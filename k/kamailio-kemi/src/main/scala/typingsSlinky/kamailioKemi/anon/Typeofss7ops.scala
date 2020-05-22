@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofss7ops extends js.Object {
-  def isup_to_json(proto: Double): Double = js.native
+  def isup_to_json(proto: Double): Double
 }
 
 object Typeofss7ops {
@@ -15,19 +14,5 @@ object Typeofss7ops {
     val __obj = js.Dynamic.literal(isup_to_json = js.Any.fromFunction1(isup_to_json))
     __obj.asInstanceOf[Typeofss7ops]
   }
-  @scala.inline
-  implicit class Typeofss7opsOps[Self <: Typeofss7ops] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsup_to_json(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isup_to_json")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

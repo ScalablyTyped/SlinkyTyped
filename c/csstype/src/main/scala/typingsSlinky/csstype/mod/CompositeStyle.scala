@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`source-over`
   - typingsSlinky.csstype.csstypeStrings.xor
 */
-trait CompositeStyle extends WebkitMaskCompositeProperty
+trait CompositeStyle extends _WebkitMaskCompositeProperty
 
 object CompositeStyle {
   @scala.inline

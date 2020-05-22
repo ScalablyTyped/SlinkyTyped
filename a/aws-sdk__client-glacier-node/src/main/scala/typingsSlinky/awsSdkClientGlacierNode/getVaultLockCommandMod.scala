@@ -26,9 +26,16 @@ object getVaultLockCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetVaultLockInput) = this()
+    /* CompleteClass */
+    override val input: GetVaultLockInput = js.native
     val middlewareStack: MiddlewareStack[GetVaultLockInput, GetVaultLockOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: GlacierResolvedConfiguration
+    ): Handler[GetVaultLockInput, GetVaultLockOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[GetVaultLockInput, GetVaultLockOutput] = js.native
   }

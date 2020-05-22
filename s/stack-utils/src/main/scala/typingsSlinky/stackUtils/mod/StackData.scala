@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StackData extends js.Object {
-  var column: js.UndefOr[Double] = js.native
-  var constructor: js.UndefOr[Boolean] = js.native
-  var evalOrigin: js.UndefOr[String] = js.native
-  var file: js.UndefOr[String] = js.native
-  var function: js.UndefOr[String] = js.native
-  var line: js.UndefOr[Double] = js.native
-  var method: js.UndefOr[String] = js.native
-  var native: js.UndefOr[Boolean] = js.native
+  var column: js.UndefOr[Double] = js.undefined
+  var constructor: js.UndefOr[Boolean] = js.undefined
+  var evalOrigin: js.UndefOr[String] = js.undefined
+  var file: js.UndefOr[String] = js.undefined
+  var function: js.UndefOr[String] = js.undefined
+  var line: js.UndefOr[Double] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var native: js.UndefOr[Boolean] = js.undefined
 }
 
 object StackData {
   @scala.inline
-  def apply(): StackData = {
+  def apply(
+    column: js.UndefOr[Double] = js.undefined,
+    constructor: js.UndefOr[Boolean] = js.undefined,
+    evalOrigin: String = null,
+    file: String = null,
+    function: String = null,
+    line: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    native: js.UndefOr[Boolean] = js.undefined
+  ): StackData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constructor)) __obj.updateDynamic("constructor")(constructor.get.asInstanceOf[js.Any])
+    if (evalOrigin != null) __obj.updateDynamic("evalOrigin")(evalOrigin.asInstanceOf[js.Any])
+    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
+    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
+    if (!js.isUndefined(line)) __obj.updateDynamic("line")(line.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(native)) __obj.updateDynamic("native")(native.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackData]
   }
-  @scala.inline
-  implicit class StackDataOps[Self <: StackData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstructor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstructor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvalOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvalOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evalOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

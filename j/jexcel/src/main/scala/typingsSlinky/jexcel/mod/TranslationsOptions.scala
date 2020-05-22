@@ -4,429 +4,131 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TranslationsOptions extends js.Object {
   /** About */
-  var about: js.UndefOr[js.Any] = js.native
+  var about: js.UndefOr[js.Any] = js.undefined
   /** Add comments */
-  var addComments: js.UndefOr[js.Any] = js.native
+  var addComments: js.UndefOr[js.Any] = js.undefined
   /** Are you sure to delete the selected columns? */
-  var areYouSureToDeleteTheSelectedColumns: js.UndefOr[js.Any] = js.native
+  var areYouSureToDeleteTheSelectedColumns: js.UndefOr[js.Any] = js.undefined
   /** Are you sure to delete the selected rows? */
-  var areYouSureToDeleteTheSelectedRows: js.UndefOr[js.Any] = js.native
+  var areYouSureToDeleteTheSelectedRows: js.UndefOr[js.Any] = js.undefined
   /** Cell already merged */
-  var cellAlreadyMerged: js.UndefOr[js.Any] = js.native
+  var cellAlreadyMerged: js.UndefOr[js.Any] = js.undefined
   /** Clear comments */
-  var clearComments: js.UndefOr[js.Any] = js.native
+  var clearComments: js.UndefOr[js.Any] = js.undefined
   /** Comments */
-  var comments: js.UndefOr[js.Any] = js.native
+  var comments: js.UndefOr[js.Any] = js.undefined
   /** Copy... */
-  var copy: js.UndefOr[js.Any] = js.native
+  var copy: js.UndefOr[js.Any] = js.undefined
   /** Delete selected columns */
-  var deleteSelectedColumns: js.UndefOr[js.Any] = js.native
+  var deleteSelectedColumns: js.UndefOr[js.Any] = js.undefined
   /** Delete selected rows */
-  var deleteSelectedRows: js.UndefOr[js.Any] = js.native
+  var deleteSelectedRows: js.UndefOr[js.Any] = js.undefined
   /** Edit comments */
-  var editComments: js.UndefOr[js.Any] = js.native
+  var editComments: js.UndefOr[js.Any] = js.undefined
   /** entries */
-  var entries: js.UndefOr[js.Any] = js.native
+  var entries: js.UndefOr[js.Any] = js.undefined
   /** Insert a new column after */
-  var insertANewColumnAfter: js.UndefOr[js.Any] = js.native
+  var insertANewColumnAfter: js.UndefOr[js.Any] = js.undefined
   /** Insert a new column before */
-  var insertANewColumnBefore: js.UndefOr[js.Any] = js.native
+  var insertANewColumnBefore: js.UndefOr[js.Any] = js.undefined
   /** Insert a new row after */
-  var insertANewRowAfter: js.UndefOr[js.Any] = js.native
+  var insertANewRowAfter: js.UndefOr[js.Any] = js.undefined
   /** Insert a new row before */
-  var insertANewRowBefore: js.UndefOr[js.Any] = js.native
+  var insertANewRowBefore: js.UndefOr[js.Any] = js.undefined
   /** Invalid merged properties */
-  var invalidMergeProperties: js.UndefOr[js.Any] = js.native
+  var invalidMergeProperties: js.UndefOr[js.Any] = js.undefined
   /** No cells selected */
-  var noCellsSelected: js.UndefOr[js.Any] = js.native
+  var noCellsSelected: js.UndefOr[js.Any] = js.undefined
   /** No records found */
-  var noRecordsFound: js.UndefOr[js.Any] = js.native
+  var noRecordsFound: js.UndefOr[js.Any] = js.undefined
   /** Order ascending */
-  var orderAscending: js.UndefOr[js.Any] = js.native
+  var orderAscending: js.UndefOr[js.Any] = js.undefined
   /** Order descending */
-  var orderDescending: js.UndefOr[js.Any] = js.native
+  var orderDescending: js.UndefOr[js.Any] = js.undefined
   /** Paste... */
-  var paste: js.UndefOr[js.Any] = js.native
+  var paste: js.UndefOr[js.Any] = js.undefined
   /** Rename this column */
-  var renameThisColumn: js.UndefOr[js.Any] = js.native
+  var renameThisColumn: js.UndefOr[js.Any] = js.undefined
   /** Save as... */
-  var saveAs: js.UndefOr[js.Any] = js.native
+  var saveAs: js.UndefOr[js.Any] = js.undefined
   /** Show */
-  var show: js.UndefOr[js.Any] = js.native
+  var show: js.UndefOr[js.Any] = js.undefined
   /** Showing page {0} of {1} entries */
-  var showingPage: js.UndefOr[js.Any] = js.native
+  var showingPage: js.UndefOr[js.Any] = js.undefined
   /** There is a conflict with another merged cell */
-  var thereIsAConflictWithAnotherMergedCell: js.UndefOr[js.Any] = js.native
+  var thereIsAConflictWithAnotherMergedCell: js.UndefOr[js.Any] = js.undefined
   /** This action will clear your search results. Are you sure? */
-  var thisActionWillClearYourSearchResultsAreYouSure: js.UndefOr[js.Any] = js.native
+  var thisActionWillClearYourSearchResultsAreYouSure: js.UndefOr[js.Any] = js.undefined
   /** This action will destroy any existing merged cells. Are you sure? */
-  var thisActionWillDestroyAnyExistingMergedCellsAreYouSure: js.UndefOr[js.Any] = js.native
+  var thisActionWillDestroyAnyExistingMergedCellsAreYouSure: js.UndefOr[js.Any] = js.undefined
 }
 
 object TranslationsOptions {
   @scala.inline
-  def apply(): TranslationsOptions = {
+  def apply(
+    about: js.Any = null,
+    addComments: js.Any = null,
+    areYouSureToDeleteTheSelectedColumns: js.Any = null,
+    areYouSureToDeleteTheSelectedRows: js.Any = null,
+    cellAlreadyMerged: js.Any = null,
+    clearComments: js.Any = null,
+    comments: js.Any = null,
+    copy: js.Any = null,
+    deleteSelectedColumns: js.Any = null,
+    deleteSelectedRows: js.Any = null,
+    editComments: js.Any = null,
+    entries: js.Any = null,
+    insertANewColumnAfter: js.Any = null,
+    insertANewColumnBefore: js.Any = null,
+    insertANewRowAfter: js.Any = null,
+    insertANewRowBefore: js.Any = null,
+    invalidMergeProperties: js.Any = null,
+    noCellsSelected: js.Any = null,
+    noRecordsFound: js.Any = null,
+    orderAscending: js.Any = null,
+    orderDescending: js.Any = null,
+    paste: js.Any = null,
+    renameThisColumn: js.Any = null,
+    saveAs: js.Any = null,
+    show: js.Any = null,
+    showingPage: js.Any = null,
+    thereIsAConflictWithAnotherMergedCell: js.Any = null,
+    thisActionWillClearYourSearchResultsAreYouSure: js.Any = null,
+    thisActionWillDestroyAnyExistingMergedCellsAreYouSure: js.Any = null
+  ): TranslationsOptions = {
     val __obj = js.Dynamic.literal()
+    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
+    if (addComments != null) __obj.updateDynamic("addComments")(addComments.asInstanceOf[js.Any])
+    if (areYouSureToDeleteTheSelectedColumns != null) __obj.updateDynamic("areYouSureToDeleteTheSelectedColumns")(areYouSureToDeleteTheSelectedColumns.asInstanceOf[js.Any])
+    if (areYouSureToDeleteTheSelectedRows != null) __obj.updateDynamic("areYouSureToDeleteTheSelectedRows")(areYouSureToDeleteTheSelectedRows.asInstanceOf[js.Any])
+    if (cellAlreadyMerged != null) __obj.updateDynamic("cellAlreadyMerged")(cellAlreadyMerged.asInstanceOf[js.Any])
+    if (clearComments != null) __obj.updateDynamic("clearComments")(clearComments.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (copy != null) __obj.updateDynamic("copy")(copy.asInstanceOf[js.Any])
+    if (deleteSelectedColumns != null) __obj.updateDynamic("deleteSelectedColumns")(deleteSelectedColumns.asInstanceOf[js.Any])
+    if (deleteSelectedRows != null) __obj.updateDynamic("deleteSelectedRows")(deleteSelectedRows.asInstanceOf[js.Any])
+    if (editComments != null) __obj.updateDynamic("editComments")(editComments.asInstanceOf[js.Any])
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
+    if (insertANewColumnAfter != null) __obj.updateDynamic("insertANewColumnAfter")(insertANewColumnAfter.asInstanceOf[js.Any])
+    if (insertANewColumnBefore != null) __obj.updateDynamic("insertANewColumnBefore")(insertANewColumnBefore.asInstanceOf[js.Any])
+    if (insertANewRowAfter != null) __obj.updateDynamic("insertANewRowAfter")(insertANewRowAfter.asInstanceOf[js.Any])
+    if (insertANewRowBefore != null) __obj.updateDynamic("insertANewRowBefore")(insertANewRowBefore.asInstanceOf[js.Any])
+    if (invalidMergeProperties != null) __obj.updateDynamic("invalidMergeProperties")(invalidMergeProperties.asInstanceOf[js.Any])
+    if (noCellsSelected != null) __obj.updateDynamic("noCellsSelected")(noCellsSelected.asInstanceOf[js.Any])
+    if (noRecordsFound != null) __obj.updateDynamic("noRecordsFound")(noRecordsFound.asInstanceOf[js.Any])
+    if (orderAscending != null) __obj.updateDynamic("orderAscending")(orderAscending.asInstanceOf[js.Any])
+    if (orderDescending != null) __obj.updateDynamic("orderDescending")(orderDescending.asInstanceOf[js.Any])
+    if (paste != null) __obj.updateDynamic("paste")(paste.asInstanceOf[js.Any])
+    if (renameThisColumn != null) __obj.updateDynamic("renameThisColumn")(renameThisColumn.asInstanceOf[js.Any])
+    if (saveAs != null) __obj.updateDynamic("saveAs")(saveAs.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (showingPage != null) __obj.updateDynamic("showingPage")(showingPage.asInstanceOf[js.Any])
+    if (thereIsAConflictWithAnotherMergedCell != null) __obj.updateDynamic("thereIsAConflictWithAnotherMergedCell")(thereIsAConflictWithAnotherMergedCell.asInstanceOf[js.Any])
+    if (thisActionWillClearYourSearchResultsAreYouSure != null) __obj.updateDynamic("thisActionWillClearYourSearchResultsAreYouSure")(thisActionWillClearYourSearchResultsAreYouSure.asInstanceOf[js.Any])
+    if (thisActionWillDestroyAnyExistingMergedCellsAreYouSure != null) __obj.updateDynamic("thisActionWillDestroyAnyExistingMergedCellsAreYouSure")(thisActionWillDestroyAnyExistingMergedCellsAreYouSure.asInstanceOf[js.Any])
     __obj.asInstanceOf[TranslationsOptions]
   }
-  @scala.inline
-  implicit class TranslationsOptionsOps[Self <: TranslationsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbout(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddComments(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreYouSureToDeleteTheSelectedColumns(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areYouSureToDeleteTheSelectedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreYouSureToDeleteTheSelectedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areYouSureToDeleteTheSelectedColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreYouSureToDeleteTheSelectedRows(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areYouSureToDeleteTheSelectedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreYouSureToDeleteTheSelectedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areYouSureToDeleteTheSelectedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellAlreadyMerged(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAlreadyMerged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellAlreadyMerged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellAlreadyMerged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearComments(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopy(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteSelectedColumns(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSelectedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteSelectedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSelectedColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteSelectedRows(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSelectedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteSelectedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSelectedRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditComments(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntries(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertANewColumnAfter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewColumnAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertANewColumnAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewColumnAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertANewColumnBefore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewColumnBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertANewColumnBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewColumnBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertANewRowAfter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewRowAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertANewRowAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewRowAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertANewRowBefore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewRowBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertANewRowBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertANewRowBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidMergeProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidMergeProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidMergeProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidMergeProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoCellsSelected(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCellsSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoCellsSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noCellsSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoRecordsFound(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRecordsFound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoRecordsFound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noRecordsFound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderAscending(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderAscending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderAscending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderAscending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderDescending(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderDescending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderDescending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderDescending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaste(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenameThisColumn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renameThisColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenameThisColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renameThisColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveAs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowingPage(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showingPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowingPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showingPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThereIsAConflictWithAnotherMergedCell(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thereIsAConflictWithAnotherMergedCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThereIsAConflictWithAnotherMergedCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thereIsAConflictWithAnotherMergedCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThisActionWillClearYourSearchResultsAreYouSure(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thisActionWillClearYourSearchResultsAreYouSure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThisActionWillClearYourSearchResultsAreYouSure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thisActionWillClearYourSearchResultsAreYouSure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThisActionWillDestroyAnyExistingMergedCellsAreYouSure(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thisActionWillDestroyAnyExistingMergedCellsAreYouSure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThisActionWillDestroyAnyExistingMergedCellsAreYouSure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thisActionWillDestroyAnyExistingMergedCellsAreYouSure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -32,41 +32,14 @@ trait SchemaGooglePrivacyDlpV2KAnonymityConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KAnonymityConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2KAnonymityConfig = {
+  def apply(
+    entityId: SchemaGooglePrivacyDlpV2EntityId = null,
+    quasiIds: js.Array[SchemaGooglePrivacyDlpV2FieldId] = null
+  ): SchemaGooglePrivacyDlpV2KAnonymityConfig = {
     val __obj = js.Dynamic.literal()
+    if (entityId != null) __obj.updateDynamic("entityId")(entityId.asInstanceOf[js.Any])
+    if (quasiIds != null) __obj.updateDynamic("quasiIds")(quasiIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KAnonymityConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2KAnonymityConfigOps[Self <: SchemaGooglePrivacyDlpV2KAnonymityConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityId(value: SchemaGooglePrivacyDlpV2EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuasiIds(value: js.Array[SchemaGooglePrivacyDlpV2FieldId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuasiIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

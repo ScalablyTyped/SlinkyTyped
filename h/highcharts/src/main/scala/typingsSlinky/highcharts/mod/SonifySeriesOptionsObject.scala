@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Options for sonifying a series.
   */
-@js.native
 trait SonifySeriesOptionsObject extends js.Object {
   /**
     * Optionally provide the minimum/maximum data values for the points. If
@@ -16,13 +15,13 @@ trait SonifySeriesOptionsObject extends js.Object {
     * of point data properties to objects with min/max values: (see online
     * documentation for example)
     */
-  var dataExtremes: js.UndefOr[js.Object] = js.native
+  var dataExtremes: js.UndefOr[js.Object] = js.undefined
   /**
     * The duration for playing the points. Note that points might continue
     * to play after the duration has passed, but no new points will start
     * playing.
     */
-  var duration: Double = js.native
+  var duration: Double
   /**
     * Earcons to add to the series.
     */
@@ -30,25 +29,25 @@ trait SonifySeriesOptionsObject extends js.Object {
     js.Array[
       typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.EarconConfiguration
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * The instrument definitions for the points in this series.
     */
   var instruments: js.Array[
     typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.PointInstrumentObject
-  ] = js.native
+  ]
   /**
     * Callback after the series has played.
     */
-  var onEnd: js.UndefOr[js.Function] = js.native
+  var onEnd: js.UndefOr[js.Function] = js.undefined
   /**
     * Callback after a point has finished playing.
     */
-  var onPointEnd: js.UndefOr[js.Function] = js.native
+  var onPointEnd: js.UndefOr[js.Function] = js.undefined
   /**
     * Callback before a point is played.
     */
-  var onPointStart: js.UndefOr[js.Function] = js.native
+  var onPointStart: js.UndefOr[js.Function] = js.undefined
   /**
     * The axis to use for when to play the points. Can be a string with a
     * data property (e.g. `x`), or a function. If it is a function, this
@@ -57,7 +56,7 @@ trait SonifySeriesOptionsObject extends js.Object {
     * first, and the time between points will be proportional to the
     * distance between the numeric values.
     */
-  var pointPlayTime: String | js.Function = js.native
+  var pointPlayTime: String | js.Function
 }
 
 object SonifySeriesOptionsObject {
@@ -67,104 +66,22 @@ object SonifySeriesOptionsObject {
     instruments: js.Array[
       typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.PointInstrumentObject
     ],
-    pointPlayTime: String | js.Function
+    pointPlayTime: String | js.Function,
+    dataExtremes: js.Object = null,
+    earcons: js.Array[
+      typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.EarconConfiguration
+    ] = null,
+    onEnd: js.Function = null,
+    onPointEnd: js.Function = null,
+    onPointStart: js.Function = null
   ): SonifySeriesOptionsObject = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], instruments = instruments.asInstanceOf[js.Any], pointPlayTime = pointPlayTime.asInstanceOf[js.Any])
+    if (dataExtremes != null) __obj.updateDynamic("dataExtremes")(dataExtremes.asInstanceOf[js.Any])
+    if (earcons != null) __obj.updateDynamic("earcons")(earcons.asInstanceOf[js.Any])
+    if (onEnd != null) __obj.updateDynamic("onEnd")(onEnd.asInstanceOf[js.Any])
+    if (onPointEnd != null) __obj.updateDynamic("onPointEnd")(onPointEnd.asInstanceOf[js.Any])
+    if (onPointStart != null) __obj.updateDynamic("onPointStart")(onPointStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[SonifySeriesOptionsObject]
   }
-  @scala.inline
-  implicit class SonifySeriesOptionsObjectOps[Self <: SonifySeriesOptionsObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstruments(
-      value: js.Array[
-          typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.PointInstrumentObject
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instruments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointPlayTime(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPlayTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataExtremes(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataExtremes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataExtremes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataExtremes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarcons(
-      value: js.Array[
-          typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.EarconConfiguration
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earcons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earcons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointEnd(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPointStart(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPointStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

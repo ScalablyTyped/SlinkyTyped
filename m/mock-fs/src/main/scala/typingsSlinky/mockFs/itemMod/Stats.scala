@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Stats extends js.Object {
-  var atime: js.Date = js.native
-  var birthtime: js.Date = js.native
-  var blksize: Double = js.native
-  var ctime: js.Date = js.native
-  var dev: Double = js.native
-  var gid: Double = js.native
-  var ino: Double = js.native
-  var mtime: js.Date = js.native
-  var nlink: Double = js.native
-  var rdev: Double = js.native
-  var uid: Double = js.native
+  var atime: js.Date
+  var birthtime: js.Date
+  var blksize: Double
+  var ctime: js.Date
+  var dev: Double
+  var gid: Double
+  var ino: Double
+  var mtime: js.Date
+  var nlink: Double
+  var rdev: Double
+  var uid: Double
 }
 
 object Stats {
@@ -37,79 +36,5 @@ object Stats {
     val __obj = js.Dynamic.literal(atime = atime.asInstanceOf[js.Any], birthtime = birthtime.asInstanceOf[js.Any], blksize = blksize.asInstanceOf[js.Any], ctime = ctime.asInstanceOf[js.Any], dev = dev.asInstanceOf[js.Any], gid = gid.asInstanceOf[js.Any], ino = ino.asInstanceOf[js.Any], mtime = mtime.asInstanceOf[js.Any], nlink = nlink.asInstanceOf[js.Any], rdev = rdev.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stats]
   }
-  @scala.inline
-  implicit class StatsOps[Self <: Stats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAtime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBirthtime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("birthtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlksize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blksize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCtime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDev(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIno(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ino")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMtime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNlink(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nlink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRdev(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rdev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

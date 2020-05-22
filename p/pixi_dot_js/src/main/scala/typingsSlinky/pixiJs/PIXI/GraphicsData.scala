@@ -10,47 +10,46 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@js.native
 trait GraphicsData extends js.Object {
   /**
     * The style of the fill.
     * @member {PIXI.FillStyle} PIXI.GraphicsData#fillStyle
     */
-  var fillStyle: FillStyle = js.native
+  var fillStyle: FillStyle
   /**
     * The collection of holes.
     * @member {PIXI.GraphicsData[]} PIXI.GraphicsData#holes
     */
-  var holes: js.Array[GraphicsData] = js.native
+  var holes: js.Array[GraphicsData]
   /**
     * The style of the line.
     * @member {PIXI.LineStyle} PIXI.GraphicsData#lineStyle
     */
-  var lineStyle: LineStyle = js.native
+  var lineStyle: LineStyle
   /**
     * The transform matrix.
     * @member {PIXI.Matrix} PIXI.GraphicsData#matrix
     */
-  var matrix: Matrix = js.native
+  var matrix: Matrix
   /**
     * The collection of points.
     * @member {number[]} PIXI.GraphicsData#points
     */
-  var points: js.Array[Double] = js.native
+  var points: js.Array[Double]
   /**
     * The shape object to draw.
     * @member {PIXI.Circle|PIXI.Ellipse|PIXI.Polygon|PIXI.Rectangle|PIXI.RoundedRectangle} PIXI.GraphicsData#shape
     */
-  var shape: Circle | Ellipse | Polygon | Rectangle | RoundedRectangle = js.native
+  var shape: Circle | Ellipse | Polygon | Rectangle | RoundedRectangle
   /**
     * The type of the shape, see the Const.Shapes file for all the existing types,
     * @member {number} PIXI.GraphicsData#type
     */
-  var `type`: Double = js.native
+  var `type`: Double
   /**
     * Destroys the Graphics data.
     */
-  def destroy(): Unit = js.native
+  def destroy(): Unit
 }
 
 object GraphicsData {
@@ -69,61 +68,5 @@ object GraphicsData {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphicsData]
   }
-  @scala.inline
-  implicit class GraphicsDataOps[Self <: GraphicsData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFillStyle(value: FillStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHoles(value: js.Array[GraphicsData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineStyle(value: LineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatrix(value: Matrix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPoints(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShape(value: Circle | Ellipse | Polygon | Rectangle | RoundedRectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

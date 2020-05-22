@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Constraint extends js.Object {
-  def getDefinition(): js.Any = js.native
+  def getDefinition(): js.Any
 }
 
 object Constraint {
@@ -15,19 +14,5 @@ object Constraint {
     val __obj = js.Dynamic.literal(getDefinition = js.Any.fromFunction0(getDefinition))
     __obj.asInstanceOf[Constraint]
   }
-  @scala.inline
-  implicit class ConstraintOps[Self <: Constraint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDefinition(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefinition")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

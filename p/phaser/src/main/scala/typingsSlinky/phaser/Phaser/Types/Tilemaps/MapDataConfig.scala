@@ -7,327 +7,129 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapDataConfig extends js.Object {
   /**
     * An object of Tiled Object Layers.
     */
-  var collision: js.UndefOr[js.Object] = js.native
+  var collision: js.UndefOr[js.Object] = js.undefined
   /**
     * The format of the Tilemap, as defined in Tiled.
     */
-  var format: js.UndefOr[integer] = js.native
+  var format: js.UndefOr[integer] = js.undefined
   /**
     * The height of the entire tilemap.
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * The height in pixels of the entire tilemap.
     */
-  var heightInPixels: js.UndefOr[Double] = js.native
+  var heightInPixels: js.UndefOr[Double] = js.undefined
   /**
     * The collection of images the map uses(specified in Tiled).
     */
-  var imageCollections: js.UndefOr[js.Array[_]] = js.native
+  var imageCollections: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * An array with all the layers configured to the MapData.
     */
-  var images: js.UndefOr[js.Array[_]] = js.native
+  var images: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The layers of the tilemap.
     */
-  var layers: js.UndefOr[js.Array[LayerData]] = js.native
+  var layers: js.UndefOr[js.Array[LayerData]] = js.undefined
   /**
     * The key in the Phaser cache that corresponds to the loaded tilemap data.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * An array of Tiled Image Layers.
     */
-  var objects: js.UndefOr[js.Object] = js.native
+  var objects: js.UndefOr[js.Object] = js.undefined
   /**
     * The orientation of the map data (i.e. orthogonal, isometric, hexagonal), default 'orthogonal'.
     */
-  var orientation: js.UndefOr[String] = js.native
+  var orientation: js.UndefOr[String] = js.undefined
   /**
     * Map specific properties (can be specified in Tiled).
     */
-  var properties: js.UndefOr[Double] = js.native
+  var properties: js.UndefOr[Double] = js.undefined
   /**
     * Determines the draw order of tilemap. Default is right-down.
     */
-  var renderOrder: js.UndefOr[String] = js.native
+  var renderOrder: js.UndefOr[String] = js.undefined
   /**
     * The height of the tiles.
     */
-  var tileHeight: js.UndefOr[Double] = js.native
+  var tileHeight: js.UndefOr[Double] = js.undefined
   /**
     * The width of the tiles.
     */
-  var tileWidth: js.UndefOr[Double] = js.native
+  var tileWidth: js.UndefOr[Double] = js.undefined
   /**
-    * [description]
+    * Array of Tile instances.
     */
-  var tiles: js.UndefOr[js.Array[_]] = js.native
+  var tiles: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The tilesets the map uses.
     */
-  var tilesets: js.UndefOr[js.Array[Tileset]] = js.native
+  var tilesets: js.UndefOr[js.Array[Tileset]] = js.undefined
   /**
     * The version of Tiled the map uses.
     */
-  var version: js.UndefOr[Double] = js.native
+  var version: js.UndefOr[Double] = js.undefined
   /**
     * The width of the entire tilemap.
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /**
     * The width in pixels of the entire tilemap.
     */
-  var widthInPixels: js.UndefOr[Double] = js.native
+  var widthInPixels: js.UndefOr[Double] = js.undefined
 }
 
 object MapDataConfig {
   @scala.inline
-  def apply(): MapDataConfig = {
+  def apply(
+    collision: js.Object = null,
+    format: js.UndefOr[integer] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    heightInPixels: js.UndefOr[Double] = js.undefined,
+    imageCollections: js.Array[_] = null,
+    images: js.Array[_] = null,
+    layers: js.Array[LayerData] = null,
+    name: String = null,
+    objects: js.Object = null,
+    orientation: String = null,
+    properties: js.UndefOr[Double] = js.undefined,
+    renderOrder: String = null,
+    tileHeight: js.UndefOr[Double] = js.undefined,
+    tileWidth: js.UndefOr[Double] = js.undefined,
+    tiles: js.Array[_] = null,
+    tilesets: js.Array[Tileset] = null,
+    version: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    widthInPixels: js.UndefOr[Double] = js.undefined
+  ): MapDataConfig = {
     val __obj = js.Dynamic.literal()
+    if (collision != null) __obj.updateDynamic("collision")(collision.asInstanceOf[js.Any])
+    if (!js.isUndefined(format)) __obj.updateDynamic("format")(format.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(heightInPixels)) __obj.updateDynamic("heightInPixels")(heightInPixels.get.asInstanceOf[js.Any])
+    if (imageCollections != null) __obj.updateDynamic("imageCollections")(imageCollections.asInstanceOf[js.Any])
+    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (objects != null) __obj.updateDynamic("objects")(objects.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(properties)) __obj.updateDynamic("properties")(properties.get.asInstanceOf[js.Any])
+    if (renderOrder != null) __obj.updateDynamic("renderOrder")(renderOrder.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileHeight)) __obj.updateDynamic("tileHeight")(tileHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tileWidth)) __obj.updateDynamic("tileWidth")(tileWidth.get.asInstanceOf[js.Any])
+    if (tiles != null) __obj.updateDynamic("tiles")(tiles.asInstanceOf[js.Any])
+    if (tilesets != null) __obj.updateDynamic("tilesets")(tilesets.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(widthInPixels)) __obj.updateDynamic("widthInPixels")(widthInPixels.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapDataConfig]
   }
-  @scala.inline
-  implicit class MapDataConfigOps[Self <: MapDataConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollision(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightInPixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightInPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightInPixels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightInPixels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageCollections(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageCollections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageCollections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageCollections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImages(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayers(value: js.Array[LayerData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjects(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderOrder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTileWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTileWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiles(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTilesets(value: js.Array[Tileset]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilesets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTilesets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tilesets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidthInPixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthInPixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidthInPixels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthInPixels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

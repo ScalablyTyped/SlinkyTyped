@@ -22,47 +22,11 @@ trait GetMappingRequest extends js.Object {
 
 object GetMappingRequest {
   @scala.inline
-  def apply(Source: CatalogEntry): GetMappingRequest = {
+  def apply(Source: CatalogEntry, Location: Location = null, Sinks: CatalogEntries = null): GetMappingRequest = {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any])
+    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
+    if (Sinks != null) __obj.updateDynamic("Sinks")(Sinks.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMappingRequest]
   }
-  @scala.inline
-  implicit class GetMappingRequestOps[Self <: GetMappingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: CatalogEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSinks(value: CatalogEntries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sinks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

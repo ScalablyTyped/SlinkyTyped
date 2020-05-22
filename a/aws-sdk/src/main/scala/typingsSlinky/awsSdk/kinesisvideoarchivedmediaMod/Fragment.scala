@@ -13,7 +13,7 @@ trait Fragment extends js.Object {
   /**
     * The unique identifier of the fragment. This value monotonically increases based on the ingestion order.
     */
-  var FragmentNumber: js.UndefOr[String] = js.native
+  var FragmentNumber: js.UndefOr[FragmentNumberString] = js.native
   /**
     * The total fragment size, including information about the fragment and contained media data.
     */
@@ -30,77 +30,20 @@ trait Fragment extends js.Object {
 
 object Fragment {
   @scala.inline
-  def apply(): Fragment = {
+  def apply(
+    FragmentLengthInMilliseconds: js.UndefOr[Long] = js.undefined,
+    FragmentNumber: FragmentNumberString = null,
+    FragmentSizeInBytes: js.UndefOr[Long] = js.undefined,
+    ProducerTimestamp: js.Date = null,
+    ServerTimestamp: js.Date = null
+  ): Fragment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(FragmentLengthInMilliseconds)) __obj.updateDynamic("FragmentLengthInMilliseconds")(FragmentLengthInMilliseconds.get.asInstanceOf[js.Any])
+    if (FragmentNumber != null) __obj.updateDynamic("FragmentNumber")(FragmentNumber.asInstanceOf[js.Any])
+    if (!js.isUndefined(FragmentSizeInBytes)) __obj.updateDynamic("FragmentSizeInBytes")(FragmentSizeInBytes.get.asInstanceOf[js.Any])
+    if (ProducerTimestamp != null) __obj.updateDynamic("ProducerTimestamp")(ProducerTimestamp.asInstanceOf[js.Any])
+    if (ServerTimestamp != null) __obj.updateDynamic("ServerTimestamp")(ServerTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fragment]
   }
-  @scala.inline
-  implicit class FragmentOps[Self <: Fragment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFragmentLengthInMilliseconds(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentLengthInMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragmentLengthInMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentLengthInMilliseconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFragmentNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragmentNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFragmentSizeInBytes(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFragmentSizeInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSizeInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProducerTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProducerTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProducerTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProducerTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerTimestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

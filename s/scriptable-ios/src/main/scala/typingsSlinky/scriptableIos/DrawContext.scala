@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * Constructs a new canvas to draw images, shapes and texts on.
   * @see https://docs.scriptable.app/drawcontext/#-new-drawcontext
   */
-@js.native
 trait DrawContext extends js.Object {
   /**
     * _Determines whether the context is opaque._
@@ -18,7 +17,7 @@ trait DrawContext extends js.Object {
     * When enabled your image will be rendered opaque. Default is true.
     * @see https://docs.scriptable.app/drawcontext/#opaque
     */
-  var opaque: Boolean = js.native
+  var opaque: Boolean
   /**
     * _Enable to respect the scale of the screen._
     *
@@ -28,14 +27,14 @@ trait DrawContext extends js.Object {
     * disabled, you may experience that your images looks blurry because essentially the size you have specified will be stretched when rendered on the screen. Default is false.
     * @see https://docs.scriptable.app/drawcontext/#respectscreenscale
     */
-  var respectScreenScale: Boolean = js.native
+  var respectScreenScale: Boolean
   /**
     * _Size of canvas._
     *
     * Specifies the size of the canvas on which you are drawing. The image returned by getImage() will have this exact size, except if respectScreenScale is true.
     * @see https://docs.scriptable.app/drawcontext/#size
     */
-  var size: Size = js.native
+  var size: Size
   /**
     * _Adds a path to the context._
     *
@@ -44,7 +43,7 @@ trait DrawContext extends js.Object {
     * @param path - Path to add to the context.
     * @see https://docs.scriptable.app/drawcontext/#-addpath
     */
-  def addPath(path: Path): Unit = js.native
+  def addPath(path: Path): Unit
   /**
     * _Draws an image at the specified point._
     *
@@ -53,7 +52,7 @@ trait DrawContext extends js.Object {
     * @param point - Point at which to draw top-left corner of the image.
     * @see https://docs.scriptable.app/drawcontext/#-drawimageatpoint
     */
-  def drawImageAtPoint(image: Image, point: Point): Unit = js.native
+  def drawImageAtPoint(image: Image, point: Point): Unit
   /**
     * _Draws an image in the specified rect._
     *
@@ -62,7 +61,7 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle to draw the image in.
     * @see https://docs.scriptable.app/drawcontext/#-drawimageinrect
     */
-  def drawImageInRect(image: Image, rect: Rect): Unit = js.native
+  def drawImageInRect(image: Image, rect: Rect): Unit
   /**
     * _Draws text at a position._
     *
@@ -71,7 +70,7 @@ trait DrawContext extends js.Object {
     * @param pos - Position to draw the top-left of the text at.
     * @see https://docs.scriptable.app/drawcontext/#-drawtext
     */
-  def drawText(text: String, pos: Point): Unit = js.native
+  def drawText(text: String, pos: Point): Unit
   /**
     * _Draws text in a rectangle._
     *
@@ -81,7 +80,7 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle to draw text in.
     * @see https://docs.scriptable.app/drawcontext/#-drawtextinrect
     */
-  def drawTextInRect(text: String, rect: Rect): Unit = js.native
+  def drawTextInRect(text: String, rect: Rect): Unit
   /**
     * _Fills a rectangle._
     *
@@ -89,7 +88,7 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle to fill.
     * @see https://docs.scriptable.app/drawcontext/#-fill
     */
-  def fill(rect: Rect): Unit = js.native
+  def fill(rect: Rect): Unit
   /**
     * _Fills an ellipse._
     *
@@ -97,14 +96,14 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle incapsulating the ellipse to fill.
     * @see https://docs.scriptable.app/drawcontext/#-fillellipse
     */
-  def fillEllipse(rect: Rect): Unit = js.native
+  def fillEllipse(rect: Rect): Unit
   /**
     * _Fills the path that was added the latest._
     *
     * The path that was latest added to the context is filles with the color set using setFillColor.
     * @see https://docs.scriptable.app/drawcontext/#-fillpath
     */
-  def fillPath(): Unit = js.native
+  def fillPath(): Unit
   /**
     * _Fills a rectangle._
     *
@@ -112,14 +111,14 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle to fill.
     * @see https://docs.scriptable.app/drawcontext/#-fillrect
     */
-  def fillRect(rect: Rect): Unit = js.native
+  def fillRect(rect: Rect): Unit
   /**
     * _Retrieves the image._
     *
     * Call this to retrieve the image you have drawn to the context. Note that this should be called before calling endDrawing().
     * @see https://docs.scriptable.app/drawcontext/#-getimage
     */
-  def getImage(): Image = js.native
+  def getImage(): Image
   /**
     * _Sets the fill color._
     *
@@ -128,7 +127,7 @@ trait DrawContext extends js.Object {
     * @param color - Color to set for filling.
     * @see https://docs.scriptable.app/drawcontext/#-setfillcolor
     */
-  def setFillColor(color: Color): Unit = js.native
+  def setFillColor(color: Color): Unit
   /**
     * _Sets the font size used when drawing text._
     *
@@ -136,7 +135,7 @@ trait DrawContext extends js.Object {
     * @param size - Font size to use when drawing text.
     * @see https://docs.scriptable.app/drawcontext/#-setfontsize
     */
-  def setFontSize(size: Double): Unit = js.native
+  def setFontSize(size: Double): Unit
   /**
     * _Sets the line width for stroking._
     *
@@ -144,7 +143,7 @@ trait DrawContext extends js.Object {
     * @param width - Line width to use for stroking.
     * @see https://docs.scriptable.app/drawcontext/#-setlinewidth
     */
-  def setLineWidth(width: Double): Unit = js.native
+  def setLineWidth(width: Double): Unit
   /**
     * _Sets the stroke color._
     *
@@ -153,28 +152,28 @@ trait DrawContext extends js.Object {
     * @param color - Color to set for stroking.
     * @see https://docs.scriptable.app/drawcontext/#-setstrokecolor
     */
-  def setStrokeColor(color: Color): Unit = js.native
+  def setStrokeColor(color: Color): Unit
   /**
     * _Specifies that texts should be center aligned._
     *
     * Sets text alignment to center. Texts drawn after calling this will be center aligned inside the provided rectangle.
     * @see https://docs.scriptable.app/drawcontext/#-settextalignedcenter
     */
-  def setTextAlignedCenter(): Unit = js.native
+  def setTextAlignedCenter(): Unit
   /**
     * _Specifies that texts should be left aligned._
     *
     * Sets text alignment to left. Texts drawn after calling this will be left aligned inside the provided rectangle.
     * @see https://docs.scriptable.app/drawcontext/#-settextalignedleft
     */
-  def setTextAlignedLeft(): Unit = js.native
+  def setTextAlignedLeft(): Unit
   /**
     * _Specifies that texts should be right aligned._
     *
     * Sets text alignment to right. Texts drawn after calling this will be right aligned inside the provided rectangle.
     * @see https://docs.scriptable.app/drawcontext/#-settextalignedright
     */
-  def setTextAlignedRight(): Unit = js.native
+  def setTextAlignedRight(): Unit
   /**
     * _Sets the text color used when drawing text._
     *
@@ -182,7 +181,7 @@ trait DrawContext extends js.Object {
     * @param color - Color to use when drawing text.
     * @see https://docs.scriptable.app/drawcontext/#-settextcolor
     */
-  def setTextColor(color: Color): Unit = js.native
+  def setTextColor(color: Color): Unit
   /**
     * _Strokes a rectangle._
     *
@@ -190,7 +189,7 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle to stroke.
     * @see https://docs.scriptable.app/drawcontext/#-stroke
     */
-  def stroke(rect: Rect): Unit = js.native
+  def stroke(rect: Rect): Unit
   /**
     * _Strokes a rectangle._
     *
@@ -198,14 +197,14 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle incapsulating the ellipse to stroke.
     * @see https://docs.scriptable.app/drawcontext/#-strokeellipse
     */
-  def strokeEllipse(rect: Rect): Unit = js.native
+  def strokeEllipse(rect: Rect): Unit
   /**
     * _Strokes the path that was added the latest._
     *
     * The path that was latest added to the context is stroked with the color set using setStrokeColor and the line widht set using setLineWidth.
     * @see https://docs.scriptable.app/drawcontext/#-strokepath
     */
-  def strokePath(): Unit = js.native
+  def strokePath(): Unit
   /**
     * _Strokes a rectangle._
     *
@@ -213,7 +212,7 @@ trait DrawContext extends js.Object {
     * @param rect - Rectangle to stroke.
     * @see https://docs.scriptable.app/drawcontext/#-strokerect
     */
-  def strokeRect(rect: Rect): Unit = js.native
+  def strokeRect(rect: Rect): Unit
 }
 
 object DrawContext {
@@ -248,163 +247,5 @@ object DrawContext {
     val __obj = js.Dynamic.literal(addPath = js.Any.fromFunction1(addPath), drawImageAtPoint = js.Any.fromFunction2(drawImageAtPoint), drawImageInRect = js.Any.fromFunction2(drawImageInRect), drawText = js.Any.fromFunction2(drawText), drawTextInRect = js.Any.fromFunction2(drawTextInRect), fill = js.Any.fromFunction1(fill), fillEllipse = js.Any.fromFunction1(fillEllipse), fillPath = js.Any.fromFunction0(fillPath), fillRect = js.Any.fromFunction1(fillRect), getImage = js.Any.fromFunction0(getImage), opaque = opaque.asInstanceOf[js.Any], respectScreenScale = respectScreenScale.asInstanceOf[js.Any], setFillColor = js.Any.fromFunction1(setFillColor), setFontSize = js.Any.fromFunction1(setFontSize), setLineWidth = js.Any.fromFunction1(setLineWidth), setStrokeColor = js.Any.fromFunction1(setStrokeColor), setTextAlignedCenter = js.Any.fromFunction0(setTextAlignedCenter), setTextAlignedLeft = js.Any.fromFunction0(setTextAlignedLeft), setTextAlignedRight = js.Any.fromFunction0(setTextAlignedRight), setTextColor = js.Any.fromFunction1(setTextColor), size = size.asInstanceOf[js.Any], stroke = js.Any.fromFunction1(stroke), strokeEllipse = js.Any.fromFunction1(strokeEllipse), strokePath = js.Any.fromFunction0(strokePath), strokeRect = js.Any.fromFunction1(strokeRect))
     __obj.asInstanceOf[DrawContext]
   }
-  @scala.inline
-  implicit class DrawContextOps[Self <: DrawContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddPath(value: Path => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPath")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDrawImageAtPoint(value: (Image, Point) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImageAtPoint")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDrawImageInRect(value: (Image, Rect) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImageInRect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDrawText(value: (String, Point) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawText")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDrawTextInRect(value: (String, Rect) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTextInRect")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFill(value: Rect => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFillEllipse(value: Rect => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillEllipse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFillPath(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillPath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFillRect(value: Rect => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetImage(value: () => Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpaque(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opaque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRespectScreenScale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("respectScreenScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetFillColor(value: Color => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFillColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFontSize(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFontSize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLineWidth(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineWidth")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetStrokeColor(value: Color => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStrokeColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTextAlignedCenter(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlignedCenter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetTextAlignedLeft(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlignedLeft")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetTextAlignedRight(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlignedRight")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetTextColor(value: Color => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStroke(value: Rect => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStrokeEllipse(value: Rect => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeEllipse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStrokePath(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokePath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStrokeRect(value: Rect => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeRect")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object serverCallMod {
+  type HandleCall[RequestType, ResponseType] = (typingsSlinky.grpcGrpcJs.serverCallMod.handleUnaryCall[RequestType, ResponseType]) | (typingsSlinky.grpcGrpcJs.serverCallMod.handleClientStreamingCall[RequestType, ResponseType]) | (typingsSlinky.grpcGrpcJs.serverCallMod.handleServerStreamingCall[RequestType, ResponseType]) | (typingsSlinky.grpcGrpcJs.serverCallMod.handleBidiStreamingCall[RequestType, ResponseType])
   type handleBidiStreamingCall[RequestType, ResponseType] = js.Function1[
     /* call */ typingsSlinky.grpcGrpcJs.serverCallMod.ServerDuplexStream[RequestType, ResponseType], 
     scala.Unit

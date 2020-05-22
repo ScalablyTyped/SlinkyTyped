@@ -9,14 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.std.ArrayBuffer
 */
 trait BufferSource
-  extends BlobPart
-     with BodyInit
-     with IDBValidKey
-
-object BufferSource {
-  @scala.inline
-  implicit def apply(value: js.typedarray.ArrayBuffer): BufferSource = value.asInstanceOf[BufferSource]
-  @scala.inline
-  implicit def apply(value: js.typedarray.ArrayBufferView): BufferSource = value.asInstanceOf[BufferSource]
-}
+  extends _BlobPart
+     with _BodyInit
+     with _IDBValidKey
 

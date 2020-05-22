@@ -14,29 +14,10 @@ trait GetSubscriptionAttributesResponse extends js.Object {
 
 object GetSubscriptionAttributesResponse {
   @scala.inline
-  def apply(): GetSubscriptionAttributesResponse = {
+  def apply(Attributes: SubscriptionAttributesMap = null): GetSubscriptionAttributesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSubscriptionAttributesResponse]
   }
-  @scala.inline
-  implicit class GetSubscriptionAttributesResponseOps[Self <: GetSubscriptionAttributesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: SubscriptionAttributesMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

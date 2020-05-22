@@ -5,41 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSInterfaceBody_
   extends BaseNode
-     with Node {
-  var body: js.Array[TSTypeElement] = js.native
+     with _Node {
+  var body: js.Array[TSTypeElement]
   @JSName("type")
-  var type_TSInterfaceBody_ : TSInterfaceBody = js.native
+  var type_TSInterfaceBody_ : TSInterfaceBody
 }
 
 object TSInterfaceBody_ {
   @scala.inline
-  def apply(body: js.Array[TSTypeElement], `type`: TSInterfaceBody): TSInterfaceBody_ = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+  def apply(
+    body: js.Array[TSTypeElement],
+    `type`: TSInterfaceBody,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): TSInterfaceBody_ = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSInterfaceBody_]
   }
-  @scala.inline
-  implicit class TSInterfaceBody_Ops[Self <: TSInterfaceBody_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: js.Array[TSTypeElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSInterfaceBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

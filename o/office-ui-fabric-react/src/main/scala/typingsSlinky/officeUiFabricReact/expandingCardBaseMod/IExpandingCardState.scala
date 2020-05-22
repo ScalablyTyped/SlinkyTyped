@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IExpandingCardState extends js.Object {
-  var firstFrameRendered: Boolean = js.native
-  var needsScroll: Boolean = js.native
+  var firstFrameRendered: Boolean
+  var needsScroll: Boolean
 }
 
 object IExpandingCardState {
@@ -16,25 +15,5 @@ object IExpandingCardState {
     val __obj = js.Dynamic.literal(firstFrameRendered = firstFrameRendered.asInstanceOf[js.Any], needsScroll = needsScroll.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExpandingCardState]
   }
-  @scala.inline
-  implicit class IExpandingCardStateOps[Self <: IExpandingCardState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFirstFrameRendered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstFrameRendered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNeedsScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

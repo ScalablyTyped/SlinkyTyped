@@ -8,88 +8,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComponentRelation[D, P] extends js.Object {
   /** 关系生命周期函数，当关系在页面节点树中发生改变时触发，触发时机在组件moved生命周期之后 */
-  var linkChanged: js.UndefOr[js.Function1[/* target */ Component[D, P, js.Array[js.Any]], Unit]] = js.native
+  var linkChanged: js.UndefOr[js.Function1[/* target */ Component[D, P, js.Array[js.Any]], Unit]] = js.undefined
   /** 关系生命周期函数，当关系被建立在页面节点树中时触发，触发时机在组件attached生命周期之后 */
-  var linked: js.UndefOr[js.Function1[/* target */ Component[D, P, js.Array[js.Any]], Unit]] = js.native
+  var linked: js.UndefOr[js.Function1[/* target */ Component[D, P, js.Array[js.Any]], Unit]] = js.undefined
   /** 如果这一项被设置，则它表示关联的目标节点所应具有的behavior，所有拥有这一behavior的组件节点都会被关联 */
-  var target: js.UndefOr[String] = js.native
+  var target: js.UndefOr[String] = js.undefined
   /** 目标组件的相对关系，可选的值为 parent 、 child 、 ancestor 、 descendant */
-  var `type`: parent | child | ancestor | descendant = js.native
+  var `type`: parent | child | ancestor | descendant
   /** 关系生命周期函数，当关系脱离页面节点树时触发，触发时机在组件detached生命周期之后 */
-  var unlinked: js.UndefOr[js.Function1[/* target */ Component[D, P, js.Array[js.Any]], Unit]] = js.native
+  var unlinked: js.UndefOr[js.Function1[/* target */ Component[D, P, js.Array[js.Any]], Unit]] = js.undefined
 }
 
 object ComponentRelation {
   @scala.inline
-  def apply[D, P](`type`: parent | child | ancestor | descendant): ComponentRelation[D, P] = {
+  def apply[D, P](
+    `type`: parent | child | ancestor | descendant,
+    linkChanged: /* target */ Component[D, P, js.Array[js.Any]] => Unit = null,
+    linked: /* target */ Component[D, P, js.Array[js.Any]] => Unit = null,
+    target: String = null,
+    unlinked: /* target */ Component[D, P, js.Array[js.Any]] => Unit = null
+  ): ComponentRelation[D, P] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (linkChanged != null) __obj.updateDynamic("linkChanged")(js.Any.fromFunction1(linkChanged))
+    if (linked != null) __obj.updateDynamic("linked")(js.Any.fromFunction1(linked))
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (unlinked != null) __obj.updateDynamic("unlinked")(js.Any.fromFunction1(unlinked))
     __obj.asInstanceOf[ComponentRelation[D, P]]
   }
-  @scala.inline
-  implicit class ComponentRelationOps[Self[d, p] <: ComponentRelation[d, p], D, P] (val x: Self[D, P]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[D, P] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[D, P]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[D, P]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[D, P]) with Other]
-    @scala.inline
-    def withType(value: parent | child | ancestor | descendant): Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinkChanged(value: /* target */ Component[D, P, js.Array[js.Any]] => Unit): Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLinkChanged: Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinked(value: /* target */ Component[D, P, js.Array[js.Any]] => Unit): Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLinked: Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnlinked(value: /* target */ Component[D, P, js.Array[js.Any]] => Unit): Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlinked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUnlinked: Self[D, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unlinked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

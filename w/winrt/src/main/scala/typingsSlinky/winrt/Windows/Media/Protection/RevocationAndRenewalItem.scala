@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RevocationAndRenewalItem extends IRevocationAndRenewalItem
 
 object RevocationAndRenewalItem {

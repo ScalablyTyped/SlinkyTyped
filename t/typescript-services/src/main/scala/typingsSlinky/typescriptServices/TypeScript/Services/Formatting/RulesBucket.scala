@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RulesBucket extends js.Object {
-  var rules: js.Any = js.native
+  var rules: js.Any
   def AddRule(
     rule: Rule,
     specificTokens: Boolean,
     constructionState: js.Array[RulesBucketConstructionState],
     rulesBucketIndex: Double
-  ): Unit = js.native
-  def Rules(): js.Array[Rule] = js.native
+  ): Unit
+  def Rules(): js.Array[Rule]
 }
 
 object RulesBucket {
@@ -26,25 +25,5 @@ object RulesBucket {
     val __obj = js.Dynamic.literal(AddRule = js.Any.fromFunction4(AddRule), Rules = js.Any.fromFunction0(Rules), rules = rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[RulesBucket]
   }
-  @scala.inline
-  implicit class RulesBucketOps[Self <: RulesBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddRule(value: (Rule, Boolean, js.Array[RulesBucketConstructionState], Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddRule")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRules(value: () => js.Array[Rule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

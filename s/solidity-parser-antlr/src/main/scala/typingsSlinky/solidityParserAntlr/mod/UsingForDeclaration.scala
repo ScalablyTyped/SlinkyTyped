@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UsingForDeclaration
   extends BaseASTNode
      with ASTNode {
-  var libraryName: String = js.native
-  var typeName: TypeName = js.native
+  var libraryName: String
+  var typeName: TypeName
   @JSName("type")
-  var type_UsingForDeclaration: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.UsingForDeclaration = js.native
+  var type_UsingForDeclaration: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.UsingForDeclaration
 }
 
 object UsingForDeclaration {
@@ -19,37 +18,15 @@ object UsingForDeclaration {
   def apply(
     libraryName: String,
     `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.UsingForDeclaration,
-    typeName: TypeName
+    typeName: TypeName,
+    loc: Location = null,
+    range: js.Tuple2[Double, Double] = null
   ): UsingForDeclaration = {
     val __obj = js.Dynamic.literal(libraryName = libraryName.asInstanceOf[js.Any], typeName = typeName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[UsingForDeclaration]
   }
-  @scala.inline
-  implicit class UsingForDeclarationOps[Self <: UsingForDeclaration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLibraryName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("libraryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.UsingForDeclaration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: TypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

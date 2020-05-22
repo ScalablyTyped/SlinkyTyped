@@ -6,31 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BrowserUsageCounts
   extends /* key */ StringDictionary[js.Any] {
-  var Days: js.Array[Dictkey] = js.native
+  var Days: js.Array[Dictkey]
 }
 
 object BrowserUsageCounts {
   @scala.inline
-  def apply(Days: js.Array[Dictkey]): BrowserUsageCounts = {
+  def apply(Days: js.Array[Dictkey], StringDictionary: /* name */ StringDictionary[js.Any] = null): BrowserUsageCounts = {
     val __obj = js.Dynamic.literal(Days = Days.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[BrowserUsageCounts]
   }
-  @scala.inline
-  implicit class BrowserUsageCountsOps[Self <: BrowserUsageCounts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDays(value: js.Array[Dictkey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

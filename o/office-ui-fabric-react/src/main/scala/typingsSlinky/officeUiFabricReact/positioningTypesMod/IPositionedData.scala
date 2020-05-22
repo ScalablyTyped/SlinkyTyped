@@ -4,62 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPositionedData extends js.Object {
   /**
     * The finalized alignment edge that the element is aligning too. For instance, RectangleEdge.left means
     * that the left edge of the target should be in line with the left edge of the element being positioned.
     */
-  var alignmentEdge: js.UndefOr[RectangleEdge] = js.native
+  var alignmentEdge: js.UndefOr[RectangleEdge] = js.undefined
   /**
     * The new position of the element.
     */
-  var elementPosition: IPosition = js.native
+  var elementPosition: IPosition
   /**
     * The finalized target edge that element is aligning to. For instance RectangleEdge.bottom would mean
     * that the bottom edge of the target is being aligned to by the RectangleEdge.top of the element
     * that is being positioned.
     */
-  var targetEdge: RectangleEdge = js.native
+  var targetEdge: RectangleEdge
 }
 
 object IPositionedData {
   @scala.inline
-  def apply(elementPosition: IPosition, targetEdge: RectangleEdge): IPositionedData = {
+  def apply(elementPosition: IPosition, targetEdge: RectangleEdge, alignmentEdge: RectangleEdge = null): IPositionedData = {
     val __obj = js.Dynamic.literal(elementPosition = elementPosition.asInstanceOf[js.Any], targetEdge = targetEdge.asInstanceOf[js.Any])
+    if (alignmentEdge != null) __obj.updateDynamic("alignmentEdge")(alignmentEdge.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPositionedData]
   }
-  @scala.inline
-  implicit class IPositionedDataOps[Self <: IPositionedData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElementPosition(value: IPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetEdge(value: RectangleEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlignmentEdge(value: RectangleEdge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignmentEdge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignmentEdge")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

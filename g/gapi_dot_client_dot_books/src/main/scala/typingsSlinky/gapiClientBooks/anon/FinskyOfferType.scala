@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FinskyOfferType extends js.Object {
   /** The finsky offer type (e.g., PURCHASE=0 RENTAL=3) */
-  var finskyOfferType: js.UndefOr[Double] = js.native
+  var finskyOfferType: js.UndefOr[Double] = js.undefined
   /** Indicates whether the offer is giftable. */
-  var giftable: js.UndefOr[Boolean] = js.native
+  var giftable: js.UndefOr[Boolean] = js.undefined
   /** Offer list (=undiscounted) price in Micros. */
-  var listPrice: js.UndefOr[AmountInMicros] = js.native
+  var listPrice: js.UndefOr[AmountInMicros] = js.undefined
   /** The rental duration (for rental offers only). */
-  var rentalDuration: js.UndefOr[Count] = js.native
+  var rentalDuration: js.UndefOr[Count] = js.undefined
   /** Offer retail (=discounted) price in Micros */
-  var retailPrice: js.UndefOr[AmountInMicros] = js.native
+  var retailPrice: js.UndefOr[AmountInMicros] = js.undefined
 }
 
 object FinskyOfferType {
   @scala.inline
-  def apply(): FinskyOfferType = {
+  def apply(
+    finskyOfferType: js.UndefOr[Double] = js.undefined,
+    giftable: js.UndefOr[Boolean] = js.undefined,
+    listPrice: AmountInMicros = null,
+    rentalDuration: Count = null,
+    retailPrice: AmountInMicros = null
+  ): FinskyOfferType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(finskyOfferType)) __obj.updateDynamic("finskyOfferType")(finskyOfferType.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(giftable)) __obj.updateDynamic("giftable")(giftable.get.asInstanceOf[js.Any])
+    if (listPrice != null) __obj.updateDynamic("listPrice")(listPrice.asInstanceOf[js.Any])
+    if (rentalDuration != null) __obj.updateDynamic("rentalDuration")(rentalDuration.asInstanceOf[js.Any])
+    if (retailPrice != null) __obj.updateDynamic("retailPrice")(retailPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[FinskyOfferType]
   }
-  @scala.inline
-  implicit class FinskyOfferTypeOps[Self <: FinskyOfferType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinskyOfferType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finskyOfferType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinskyOfferType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finskyOfferType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGiftable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("giftable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGiftable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("giftable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListPrice(value: AmountInMicros): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPrice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRentalDuration(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rentalDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRentalDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rentalDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetailPrice(value: AmountInMicros): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retailPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetailPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retailPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

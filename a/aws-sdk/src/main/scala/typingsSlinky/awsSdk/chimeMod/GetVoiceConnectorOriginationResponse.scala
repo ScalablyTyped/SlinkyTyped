@@ -14,29 +14,10 @@ trait GetVoiceConnectorOriginationResponse extends js.Object {
 
 object GetVoiceConnectorOriginationResponse {
   @scala.inline
-  def apply(): GetVoiceConnectorOriginationResponse = {
+  def apply(Origination: Origination = null): GetVoiceConnectorOriginationResponse = {
     val __obj = js.Dynamic.literal()
+    if (Origination != null) __obj.updateDynamic("Origination")(Origination.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetVoiceConnectorOriginationResponse]
   }
-  @scala.inline
-  implicit class GetVoiceConnectorOriginationResponseOps[Self <: GetVoiceConnectorOriginationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrigination(value: Origination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Origination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Origination")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

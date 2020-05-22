@@ -10,5 +10,15 @@ import scala.scalajs.js.annotation._
 class IntersectionInfo protected ()
   extends typingsSlinky.babylonjs.BABYLON.IntersectionInfo {
   def this(bu: Nullable[Double], bv: Nullable[Double], distance: Double) = this()
+  /* CompleteClass */
+  override var bu: Nullable[Double] = js.native
+  /* CompleteClass */
+  override var bv: Nullable[Double] = js.native
+  /* CompleteClass */
+  override var distance: Double = js.native
+  /* CompleteClass */
+  override var faceId: Double = js.native
+  /* CompleteClass */
+  override var subMeshId: Double = js.native
 }
 

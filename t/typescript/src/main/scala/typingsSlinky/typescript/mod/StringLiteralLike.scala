@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait StringLiteralLike extends DeclarationName
 
-object StringLiteralLike {
-  @scala.inline
-  implicit def apply(value: NoSubstitutionTemplateLiteral): StringLiteralLike = value.asInstanceOf[StringLiteralLike]
-  @scala.inline
-  implicit def apply(value: StringLiteral): StringLiteralLike = value.asInstanceOf[StringLiteralLike]
-}
-

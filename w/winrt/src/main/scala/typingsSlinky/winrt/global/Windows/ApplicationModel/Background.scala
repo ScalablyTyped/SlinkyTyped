@@ -1,6 +1,7 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel
 
 import typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundAccessStatus
+import typingsSlinky.winrt.Windows.ApplicationModel.Background.IBackgroundCondition
 import typingsSlinky.winrt.Windows.ApplicationModel.Background.IBackgroundTaskRegistration
 import typingsSlinky.winrt.Windows.ApplicationModel.Background.IBackgroundTrigger
 import typingsSlinky.winrt.Windows.ApplicationModel.Background.SystemConditionType
@@ -20,28 +21,67 @@ object Background extends js.Object {
   
   @js.native
   class BackgroundTaskBuilder ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskBuilder
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskBuilder {
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var taskEntryPoint: String = js.native
+    /* CompleteClass */
+    override def addCondition(condition: IBackgroundCondition): Unit = js.native
+    /* CompleteClass */
+    override def register(): typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskRegistration = js.native
+    /* CompleteClass */
+    override def setTrigger(trigger: IBackgroundTrigger): Unit = js.native
+  }
   
   @js.native
   class BackgroundTaskCompletedEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs {
+    /* CompleteClass */
+    override var instanceId: String = js.native
+    /* CompleteClass */
+    override def checkResult(): Unit = js.native
+  }
   
   @js.native
   class BackgroundTaskDeferral ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskDeferral
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskDeferral {
+    /* CompleteClass */
+    override def complete(): Unit = js.native
+  }
   
   @js.native
   class BackgroundTaskProgressEventArgs ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs {
+    /* CompleteClass */
+    override var instanceId: String = js.native
+    /* CompleteClass */
+    override var progress: Double = js.native
+  }
   
   @js.native
   class BackgroundTaskRegistration ()
-    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskRegistration
+    extends typingsSlinky.winrt.Windows.ApplicationModel.Background.BackgroundTaskRegistration {
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var oncompleted: js.Any = js.native
+    /* CompleteClass */
+    override var onprogress: js.Any = js.native
+    /* CompleteClass */
+    override var taskId: String = js.native
+    /* CompleteClass */
+    override def unregister(cancelTask: Boolean): Unit = js.native
+  }
   
   @js.native
   class MaintenanceTrigger protected ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Background.MaintenanceTrigger {
     def this(freshnessTime: Double, oneShot: Boolean) = this()
+    /* CompleteClass */
+    override var freshnessTime: Double = js.native
+    /* CompleteClass */
+    override var oneShot: Boolean = js.native
   }
   
   @js.native
@@ -51,6 +91,8 @@ object Background extends js.Object {
   class NetworkOperatorNotificationTrigger protected ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger {
     def this(networkAccountId: String) = this()
+    /* CompleteClass */
+    override var networkAccountId: String = js.native
   }
   
   @js.native
@@ -62,18 +104,28 @@ object Background extends js.Object {
   class SystemCondition protected ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Background.SystemCondition {
     def this(conditionType: SystemConditionType) = this()
+    /* CompleteClass */
+    override var conditionType: SystemConditionType = js.native
   }
   
   @js.native
   class SystemTrigger protected ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Background.SystemTrigger {
     def this(triggerType: SystemTriggerType, oneShot: Boolean) = this()
+    /* CompleteClass */
+    override var oneShot: Boolean = js.native
+    /* CompleteClass */
+    override var triggerType: SystemTriggerType = js.native
   }
   
   @js.native
   class TimeTrigger protected ()
     extends typingsSlinky.winrt.Windows.ApplicationModel.Background.TimeTrigger {
     def this(freshnessTime: Double, oneShot: Boolean) = this()
+    /* CompleteClass */
+    override var freshnessTime: Double = js.native
+    /* CompleteClass */
+    override var oneShot: Boolean = js.native
   }
   
   @js.native

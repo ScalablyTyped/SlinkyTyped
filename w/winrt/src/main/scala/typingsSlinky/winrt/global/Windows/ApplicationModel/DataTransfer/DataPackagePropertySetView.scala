@@ -1,5 +1,11 @@
 package typingsSlinky.winrt.global.Windows.ApplicationModel.DataTransfer
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrt.Windows.Foundation.Collections.IKeyValuePair
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrt.Windows.Foundation.Uri
+import typingsSlinky.winrt.Windows.Storage.Streams.RandomAccessStreamReference
+import typingsSlinky.winrt.anon.First
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +13,28 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView")
 @js.native
 class DataPackagePropertySetView ()
-  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView
+  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView {
+  /* CompleteClass */
+  override var applicationListingUri: Uri = js.native
+  /* CompleteClass */
+  override var applicationName: String = js.native
+  /* CompleteClass */
+  override var description: String = js.native
+  /* CompleteClass */
+  override var fileTypes: IVectorView[String] = js.native
+  /* CompleteClass */
+  override var size: Double = js.native
+  /* CompleteClass */
+  override var thumbnail: RandomAccessStreamReference = js.native
+  /* CompleteClass */
+  override var title: String = js.native
+  /* CompleteClass */
+  override def first(): IIterator[IKeyValuePair[String, js.Any]] = js.native
+  /* CompleteClass */
+  override def hasKey(key: String): Boolean = js.native
+  /* CompleteClass */
+  override def lookup(key: String): js.Any = js.native
+  /* CompleteClass */
+  override def split(): First[String, js.Any] = js.native
+}
 

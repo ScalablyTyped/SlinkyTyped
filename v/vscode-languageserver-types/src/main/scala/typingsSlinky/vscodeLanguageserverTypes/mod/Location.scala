@@ -4,12 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Location
-  extends Declaration
-     with Definition {
-  var range: Range = js.native
-  var uri: DocumentUri = js.native
+trait Location extends js.Object {
+  var range: Range
+  var uri: DocumentUri
 }
 
 @JSImport("vscode-languageserver-types", "Location")

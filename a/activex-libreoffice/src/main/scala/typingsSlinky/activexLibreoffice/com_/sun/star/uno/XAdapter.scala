@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   * The implementation of {@link XAdapter} must know but not hold the adapted object, because it must not affect the lifetime of the adapted object.
   * @see XWeak for description of concepts.
   */
-@js.native
 trait XAdapter extends XInterface {
   /**
     * adds a reference to the adapter.
     *
     * All added references are called when the adapted object dies.
     */
-  def addReference(xRef: XReference): Unit = js.native
+  def addReference(xRef: XReference): Unit
   /** queries the adapted object if it is alive. */
-  def queryAdapted(): XInterface = js.native
+  def queryAdapted(): XInterface
   /** removes a reference from the adapter. */
-  def removeReference(xRef: XReference): Unit = js.native
+  def removeReference(xRef: XReference): Unit
 }
 
 object XAdapter {
@@ -38,31 +37,5 @@ object XAdapter {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addReference = js.Any.fromFunction1(addReference), queryAdapted = js.Any.fromFunction0(queryAdapted), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeReference = js.Any.fromFunction1(removeReference))
     __obj.asInstanceOf[XAdapter]
   }
-  @scala.inline
-  implicit class XAdapterOps[Self <: XAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddReference(value: XReference => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addReference")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQueryAdapted(value: () => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryAdapted")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveReference(value: XReference => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeReference")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

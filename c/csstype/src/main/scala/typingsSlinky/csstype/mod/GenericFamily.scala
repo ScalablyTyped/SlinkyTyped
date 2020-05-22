@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`sans-serif`
   - typingsSlinky.csstype.csstypeStrings.serif
 */
-trait GenericFamily extends FontFamilyProperty
+trait GenericFamily extends _FontFamilyProperty
 
 object GenericFamily {
   @scala.inline

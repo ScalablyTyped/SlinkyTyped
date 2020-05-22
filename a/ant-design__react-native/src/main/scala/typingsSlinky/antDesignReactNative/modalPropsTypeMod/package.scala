@@ -11,4 +11,5 @@ package object modalPropsTypeMod {
     scala.Unit
   ]
   type CallbackOnBackHandler = js.Function0[scala.Boolean]
+  type CallbackOrActions[T] = typingsSlinky.antDesignReactNative.modalPropsTypeMod.Callback | js.Array[typingsSlinky.antDesignReactNative.modalPropsTypeMod.Action[T]]
 }

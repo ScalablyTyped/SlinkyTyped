@@ -22,53 +22,16 @@ trait HistoryRecordEntry extends js.Object {
 
 object HistoryRecordEntry {
   @scala.inline
-  def apply(): HistoryRecordEntry = {
+  def apply(
+    EventInformation: EventInformation = null,
+    EventType: FleetEventType = null,
+    Timestamp: js.Date = null
+  ): HistoryRecordEntry = {
     val __obj = js.Dynamic.literal()
+    if (EventInformation != null) __obj.updateDynamic("EventInformation")(EventInformation.asInstanceOf[js.Any])
+    if (EventType != null) __obj.updateDynamic("EventType")(EventType.asInstanceOf[js.Any])
+    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryRecordEntry]
   }
-  @scala.inline
-  implicit class HistoryRecordEntryOps[Self <: HistoryRecordEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventInformation(value: EventInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventInformation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventInformation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventType(value: FleetEventType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,53 +23,16 @@ trait ConditionalForwaderState extends js.Object {
 
 object ConditionalForwaderState {
   @scala.inline
-  def apply(): ConditionalForwaderState = {
+  def apply(
+    directoryId: Input[String] = null,
+    dnsIps: Input[js.Array[Input[String]]] = null,
+    remoteDomainName: Input[String] = null
+  ): ConditionalForwaderState = {
     val __obj = js.Dynamic.literal()
+    if (directoryId != null) __obj.updateDynamic("directoryId")(directoryId.asInstanceOf[js.Any])
+    if (dnsIps != null) __obj.updateDynamic("dnsIps")(dnsIps.asInstanceOf[js.Any])
+    if (remoteDomainName != null) __obj.updateDynamic("remoteDomainName")(remoteDomainName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalForwaderState]
   }
-  @scala.inline
-  implicit class ConditionalForwaderStateOps[Self <: ConditionalForwaderState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsIps(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsIps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsIps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsIps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteDomainName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteDomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteDomainName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

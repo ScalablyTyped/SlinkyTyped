@@ -16,41 +16,11 @@ trait SchemaIndividualOutcome extends js.Object {
 
 object SchemaIndividualOutcome {
   @scala.inline
-  def apply(): SchemaIndividualOutcome = {
+  def apply(outcomeSummary: String = null, stepId: String = null): SchemaIndividualOutcome = {
     val __obj = js.Dynamic.literal()
+    if (outcomeSummary != null) __obj.updateDynamic("outcomeSummary")(outcomeSummary.asInstanceOf[js.Any])
+    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIndividualOutcome]
   }
-  @scala.inline
-  implicit class SchemaIndividualOutcomeOps[Self <: SchemaIndividualOutcome] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutcomeSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outcomeSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutcomeSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outcomeSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

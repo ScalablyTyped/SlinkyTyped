@@ -4,127 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateShareMenuOption extends js.Object {
   /** 动态消息的 activityId。通过 [createActivityId]((createActivityId)) 接口获取
     *
     * 最低基础库： `2.4.0` */
-  var activityId: js.UndefOr[String] = js.native
+  var activityId: js.UndefOr[String] = js.undefined
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[UpdateShareMenuCompleteCallback] = js.native
+  var complete: js.UndefOr[UpdateShareMenuCompleteCallback] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[UpdateShareMenuFailCallback] = js.native
+  var fail: js.UndefOr[UpdateShareMenuFailCallback] = js.undefined
   /** 是否是动态消息，详见[动态消息]((updatable-message))
     *
     * 最低基础库： `2.4.0` */
-  var isUpdatableMessage: js.UndefOr[Boolean] = js.native
+  var isUpdatableMessage: js.UndefOr[Boolean] = js.undefined
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[UpdateShareMenuSuccessCallback] = js.native
+  var success: js.UndefOr[UpdateShareMenuSuccessCallback] = js.undefined
   /** 动态消息的模板信息
     *
     * 最低基础库： `2.4.0` */
-  var templateInfo: js.UndefOr[UpdatableMessageFrontEndTemplateInfo] = js.native
+  var templateInfo: js.UndefOr[UpdatableMessageFrontEndTemplateInfo] = js.undefined
   /** 是否使用带 shareTicket 的转发[详情]((转发#获取更多转发信息)) */
-  var withShareTicket: js.UndefOr[Boolean] = js.native
+  var withShareTicket: js.UndefOr[Boolean] = js.undefined
 }
 
 object UpdateShareMenuOption {
   @scala.inline
-  def apply(): UpdateShareMenuOption = {
+  def apply(
+    activityId: String = null,
+    complete: /* res */ GeneralCallbackResult => Unit = null,
+    fail: /* res */ GeneralCallbackResult => Unit = null,
+    isUpdatableMessage: js.UndefOr[Boolean] = js.undefined,
+    success: /* res */ GeneralCallbackResult => Unit = null,
+    templateInfo: UpdatableMessageFrontEndTemplateInfo = null,
+    withShareTicket: js.UndefOr[Boolean] = js.undefined
+  ): UpdateShareMenuOption = {
     val __obj = js.Dynamic.literal()
+    if (activityId != null) __obj.updateDynamic("activityId")(activityId.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (!js.isUndefined(isUpdatableMessage)) __obj.updateDynamic("isUpdatableMessage")(isUpdatableMessage.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (templateInfo != null) __obj.updateDynamic("templateInfo")(templateInfo.asInstanceOf[js.Any])
+    if (!js.isUndefined(withShareTicket)) __obj.updateDynamic("withShareTicket")(withShareTicket.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateShareMenuOption]
   }
-  @scala.inline
-  implicit class UpdateShareMenuOptionOps[Self <: UpdateShareMenuOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsUpdatableMessage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUpdatableMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsUpdatableMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUpdatableMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateInfo(value: UpdatableMessageFrontEndTemplateInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithShareTicket(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withShareTicket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithShareTicket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withShareTicket")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

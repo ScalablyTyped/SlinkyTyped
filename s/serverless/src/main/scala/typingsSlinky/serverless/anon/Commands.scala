@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Commands extends js.Object {
-  var commands: js.UndefOr[StringDictionary[js.Object]] = js.native
-  var lifecycleEvents: js.UndefOr[js.Array[String]] = js.native
-  var options: js.UndefOr[StringDictionary[Required]] = js.native
-  var usage: js.UndefOr[String] = js.native
+  var commands: js.UndefOr[StringDictionary[js.Object]] = js.undefined
+  var lifecycleEvents: js.UndefOr[js.Array[String]] = js.undefined
+  var options: js.UndefOr[StringDictionary[Required]] = js.undefined
+  var usage: js.UndefOr[String] = js.undefined
 }
 
 object Commands {
   @scala.inline
-  def apply(): Commands = {
+  def apply(
+    commands: StringDictionary[js.Object] = null,
+    lifecycleEvents: js.Array[String] = null,
+    options: StringDictionary[Required] = null,
+    usage: String = null
+  ): Commands = {
     val __obj = js.Dynamic.literal()
+    if (commands != null) __obj.updateDynamic("commands")(commands.asInstanceOf[js.Any])
+    if (lifecycleEvents != null) __obj.updateDynamic("lifecycleEvents")(lifecycleEvents.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (usage != null) __obj.updateDynamic("usage")(usage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Commands]
   }
-  @scala.inline
-  implicit class CommandsOps[Self <: Commands] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommands(value: StringDictionary[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleEvents(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: StringDictionary[Required]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Email
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,18 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Email.EmailMailboxChange")
 @js.native
 abstract class EmailMailboxChange ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChange
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChange {
+  /** Gets the type of change that was made to the mailbox. This includes whether it was a folder or message that was changed and whether the item was created, deleted, or modified, or if change tracking was lost for this change. */
+  /* CompleteClass */
+  override var changeType: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxChangeType = js.native
+  /** Gets the folder to which the change applies. */
+  /* CompleteClass */
+  override var folder: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailFolder = js.native
+  /** Gets the flags that indicate what actions have been affected on the mailbox. */
+  /* CompleteClass */
+  override var mailboxActions: IVector[typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMailboxAction] = js.native
+  /** Gets the message to which the change applies. */
+  /* CompleteClass */
+  override var message: typingsSlinky.winrtUwp.Windows.ApplicationModel.Email.EmailMessage = js.native
+}
 

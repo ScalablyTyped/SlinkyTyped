@@ -26,47 +26,15 @@ trait LambdaActivity extends js.Object {
 
 object LambdaActivity {
   @scala.inline
-  def apply(batchSize: ActivityBatchSize, lambdaName: LambdaName, name: ActivityName): LambdaActivity = {
+  def apply(
+    batchSize: ActivityBatchSize,
+    lambdaName: LambdaName,
+    name: ActivityName,
+    next: ActivityName = null
+  ): LambdaActivity = {
     val __obj = js.Dynamic.literal(batchSize = batchSize.asInstanceOf[js.Any], lambdaName = lambdaName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaActivity]
   }
-  @scala.inline
-  implicit class LambdaActivityOps[Self <: LambdaActivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchSize(value: ActivityBatchSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLambdaName(value: LambdaName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: ActivityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNext(value: ActivityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

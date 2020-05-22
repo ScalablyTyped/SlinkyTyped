@@ -35,6 +35,9 @@ object bouncingBehaviorMod extends js.Object {
       * Length of the distance animated by the transition when lower radius is reached
       */
     var lowerRadiusTransitionRange: Double = js.native
+    /** gets or sets behavior's name */
+    /* CompleteClass */
+    override var name: String = js.native
     /**
       * The duration of the animation, in milliseconds
       */
@@ -48,6 +51,12 @@ object bouncingBehaviorMod extends js.Object {
       */
     /* protected */ def _clearAnimationLocks(): Unit = js.native
     /**
+      * Called when the behavior is attached to a target
+      * @param target defines the target where the behavior is attached to
+      */
+    /* CompleteClass */
+    override def attach(target: ArcRotateCamera): Unit = js.native
+    /**
       * Gets a value indicating if the lowerRadiusTransitionRange and upperRadiusTransitionRange are defined automatically
       */
     def autoTransitionRange: Boolean = js.native
@@ -56,6 +65,16 @@ object bouncingBehaviorMod extends js.Object {
       * Transition ranges will be set to 5% of the bounding box diagonal in world space
       */
     def autoTransitionRange(value: Boolean): js.Any = js.native
+    /**
+      * Called when the behavior is detached from its target
+      */
+    /* CompleteClass */
+    override def detach(): Unit = js.native
+    /**
+      * Function called when the behavior needs to be initialized (after attaching it to a target)
+      */
+    /* CompleteClass */
+    override def init(): Unit = js.native
     /**
       * Gets the name of the behavior.
       */

@@ -8,39 +8,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavbarToggleProps
   extends AllHTMLAttributes[NavbarToggle]
      with ClassAttributes[NavbarToggle] {
   @JSName("onClick")
-  var onClick_NavbarToggleProps: js.UndefOr[MouseEventHandler[_]] = js.native
+  var onClick_NavbarToggleProps: js.UndefOr[MouseEventHandler[_]] = js.undefined
 }
 
 object NavbarToggleProps {
   @scala.inline
-  def apply(): NavbarToggleProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[NavbarToggle] = null,
+    ClassAttributes: ClassAttributes[NavbarToggle] = null,
+    onClick: SyntheticMouseEvent[_] => Unit = null
+  ): NavbarToggleProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     __obj.asInstanceOf[NavbarToggleProps]
   }
-  @scala.inline
-  implicit class NavbarTogglePropsOps[Self <: NavbarToggleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

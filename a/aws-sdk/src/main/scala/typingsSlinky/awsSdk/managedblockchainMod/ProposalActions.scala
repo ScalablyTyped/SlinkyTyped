@@ -18,41 +18,11 @@ trait ProposalActions extends js.Object {
 
 object ProposalActions {
   @scala.inline
-  def apply(): ProposalActions = {
+  def apply(Invitations: InviteActionList = null, Removals: RemoveActionList = null): ProposalActions = {
     val __obj = js.Dynamic.literal()
+    if (Invitations != null) __obj.updateDynamic("Invitations")(Invitations.asInstanceOf[js.Any])
+    if (Removals != null) __obj.updateDynamic("Removals")(Removals.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProposalActions]
   }
-  @scala.inline
-  implicit class ProposalActionsOps[Self <: ProposalActions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvitations(value: InviteActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invitations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Invitations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemovals(value: RemoveActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Removals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemovals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Removals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

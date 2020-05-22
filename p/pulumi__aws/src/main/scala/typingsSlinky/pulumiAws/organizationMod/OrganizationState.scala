@@ -54,137 +54,30 @@ trait OrganizationState extends js.Object {
 
 object OrganizationState {
   @scala.inline
-  def apply(): OrganizationState = {
+  def apply(
+    accounts: Input[js.Array[Input[OrganizationAccount]]] = null,
+    arn: Input[String] = null,
+    awsServiceAccessPrincipals: Input[js.Array[Input[String]]] = null,
+    enabledPolicyTypes: Input[js.Array[Input[String]]] = null,
+    featureSet: Input[String] = null,
+    masterAccountArn: Input[String] = null,
+    masterAccountEmail: Input[String] = null,
+    masterAccountId: Input[String] = null,
+    nonMasterAccounts: Input[js.Array[Input[OrganizationNonMasterAccount]]] = null,
+    roots: Input[js.Array[Input[OrganizationRoot]]] = null
+  ): OrganizationState = {
     val __obj = js.Dynamic.literal()
+    if (accounts != null) __obj.updateDynamic("accounts")(accounts.asInstanceOf[js.Any])
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
+    if (awsServiceAccessPrincipals != null) __obj.updateDynamic("awsServiceAccessPrincipals")(awsServiceAccessPrincipals.asInstanceOf[js.Any])
+    if (enabledPolicyTypes != null) __obj.updateDynamic("enabledPolicyTypes")(enabledPolicyTypes.asInstanceOf[js.Any])
+    if (featureSet != null) __obj.updateDynamic("featureSet")(featureSet.asInstanceOf[js.Any])
+    if (masterAccountArn != null) __obj.updateDynamic("masterAccountArn")(masterAccountArn.asInstanceOf[js.Any])
+    if (masterAccountEmail != null) __obj.updateDynamic("masterAccountEmail")(masterAccountEmail.asInstanceOf[js.Any])
+    if (masterAccountId != null) __obj.updateDynamic("masterAccountId")(masterAccountId.asInstanceOf[js.Any])
+    if (nonMasterAccounts != null) __obj.updateDynamic("nonMasterAccounts")(nonMasterAccounts.asInstanceOf[js.Any])
+    if (roots != null) __obj.updateDynamic("roots")(roots.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrganizationState]
   }
-  @scala.inline
-  implicit class OrganizationStateOps[Self <: OrganizationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccounts(value: Input[js.Array[Input[OrganizationAccount]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsServiceAccessPrincipals(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsServiceAccessPrincipals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsServiceAccessPrincipals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsServiceAccessPrincipals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledPolicyTypes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledPolicyTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledPolicyTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabledPolicyTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureSet(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountEmail(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonMasterAccounts(value: Input[js.Array[Input[OrganizationNonMasterAccount]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonMasterAccounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonMasterAccounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonMasterAccounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoots(value: Input[js.Array[Input[OrganizationRoot]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

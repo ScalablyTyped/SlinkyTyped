@@ -5,154 +5,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Manages the user layout configuration in {@link setLiveTranscoding}. */
-@js.native
 trait TranscodingUser extends js.Object {
   /**
-    * Transparency of the video frame.
+    * The transparency level of the video frame.
     *
     * The value ranges between 0.0 and 1.0:
     *
     * - 0.0: Completely transparent.
-    * - 1.0: (Default) Opaque.
+    * - 1.0: Opaque.
     */
-  var alpha: js.UndefOr[Double] = js.native
+  var alpha: Double
   /**
-    * Height of the video.
-    *
-    * Integer only. The value range is [0,10000], and the default value is 640.
-    */
-  var height: js.UndefOr[Double] = js.native
-  /** User ID of the CDN live host. */
-  var uid: js.UndefOr[Double | String] = js.native
-  /**
-    * Width of the video.
+    * The height of the video.
     *
     * Integer only. The value range is [0,10000], and the default value is 360.
     */
-  var width: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
+  /** The user ID of the CDN live host. */
+  var uid: js.UndefOr[Double | String] = js.undefined
+  /**
+    * The width of the video.
+    *
+    * Integer only. The value range is [0,10000], and the default value is 640.
+    */
+  var width: js.UndefOr[Double] = js.undefined
   /**
     * The position of the upper left end of the video on the horizontal axis.
     *
     * Integer only. The value range is [0,10000], and the default value is 0.
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * The position of the upper left end of the video on the vertical axis.
     *
     * Integer only. The value range is [0,10000], and the default value is 0.
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
   /**
-    * Layer position of the video frame.
+    * The layer index of the video frame.
     *
     * Integer only. The value range is [0,100].
     *
     * From v2.3.0, Agora SDK supports setting zOrder as 0.
     *
-    * - 0: (Default) Lowest.
-    * - 100: Highest.
+    * - 0: (Default) Bottom layer.
+    * - 100: Top layer.
     *
     */
-  var zOrder: js.UndefOr[Double] = js.native
+  var zOrder: js.UndefOr[Double] = js.undefined
 }
 
 object TranscodingUser {
   @scala.inline
-  def apply(): TranscodingUser = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    alpha: Double,
+    height: js.UndefOr[Double] = js.undefined,
+    uid: Double | String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined,
+    zOrder: js.UndefOr[Double] = js.undefined
+  ): TranscodingUser = {
+    val __obj = js.Dynamic.literal(alpha = alpha.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zOrder)) __obj.updateDynamic("zOrder")(zOrder.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TranscodingUser]
   }
-  @scala.inline
-  implicit class TranscodingUserOps[Self <: TranscodingUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUid(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZOrder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zOrder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

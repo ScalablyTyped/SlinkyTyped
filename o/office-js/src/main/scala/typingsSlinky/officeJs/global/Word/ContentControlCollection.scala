@@ -1,5 +1,6 @@
 package typingsSlinky.officeJs.global.Word
 
+import typingsSlinky.officeJs.OfficeExtension.ClientRequestContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,5 +14,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Word.ContentControlCollection")
 @js.native
 class ContentControlCollection ()
-  extends typingsSlinky.officeJs.Word.ContentControlCollection
+  extends typingsSlinky.officeJs.Word.ContentControlCollection {
+  /** The request context associated with the object */
+  /* CompleteClass */
+  override var context: ClientRequestContext = js.native
+  /**
+    *  Returns a boolean value for whether the corresponding object is a null object. You must call `context.sync()` before reading the 
+    * isNullObject property.
+    */
+  /* CompleteClass */
+  override var isNullObject: Boolean = js.native
+}
 

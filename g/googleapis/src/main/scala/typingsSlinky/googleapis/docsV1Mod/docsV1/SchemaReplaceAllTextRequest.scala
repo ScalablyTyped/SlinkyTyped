@@ -21,41 +21,11 @@ trait SchemaReplaceAllTextRequest extends js.Object {
 
 object SchemaReplaceAllTextRequest {
   @scala.inline
-  def apply(): SchemaReplaceAllTextRequest = {
+  def apply(containsText: SchemaSubstringMatchCriteria = null, replaceText: String = null): SchemaReplaceAllTextRequest = {
     val __obj = js.Dynamic.literal()
+    if (containsText != null) __obj.updateDynamic("containsText")(containsText.asInstanceOf[js.Any])
+    if (replaceText != null) __obj.updateDynamic("replaceText")(replaceText.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReplaceAllTextRequest]
   }
-  @scala.inline
-  implicit class SchemaReplaceAllTextRequestOps[Self <: SchemaReplaceAllTextRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainsText(value: SchemaSubstringMatchCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainsText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

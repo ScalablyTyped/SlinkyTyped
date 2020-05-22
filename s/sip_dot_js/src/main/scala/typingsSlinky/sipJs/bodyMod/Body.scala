@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Body extends js.Object {
   /**
     * Requests, including new requests defined in extensions to this
@@ -15,7 +14,7 @@ trait Body extends js.Object {
     * responses MAY include a body.
     * https://tools.ietf.org/html/rfc3261#section-7.4
     */
-  var content: String = js.native
+  var content: String
   /**
     * If the Content-Disposition header field is missing, bodies of
     * Content-Type application/sdp imply the disposition "session", while
@@ -27,7 +26,7 @@ trait Body extends js.Object {
     * types are "render".
     * https://tools.ietf.org/html/rfc3261#section-20.11
     */
-  var contentDisposition: String = js.native
+  var contentDisposition: String
   /**
     * The Content-Type header field indicates the media type of the
     * message-body sent to the recipient.  The Content-Type header field
@@ -36,7 +35,7 @@ trait Body extends js.Object {
     * of the specific type has zero length (for example, an empty audio file).
     * https://tools.ietf.org/html/rfc3261#section-20.15
     */
-  var contentType: String = js.native
+  var contentType: String
 }
 
 object Body {
@@ -45,31 +44,5 @@ object Body {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], contentDisposition = contentDisposition.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Body]
   }
-  @scala.inline
-  implicit class BodyOps[Self <: Body] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentDisposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

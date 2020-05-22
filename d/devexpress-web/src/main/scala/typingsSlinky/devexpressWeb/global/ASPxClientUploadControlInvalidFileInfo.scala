@@ -10,5 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientUploadControlInvalidFileInfo")
 @js.native
 class ASPxClientUploadControlInvalidFileInfo ()
-  extends typingsSlinky.devexpressWeb.ASPxClientUploadControlInvalidFileInfo
+  extends typingsSlinky.devexpressWeb.ASPxClientUploadControlInvalidFileInfo {
+  /**
+    * Gets the error type.
+    */
+  /* CompleteClass */
+  override var errorType: typingsSlinky.devexpressWeb.ASPxClientUploadControlValidationErrorTypeConsts = js.native
+  /**
+    * Gets the name of the invalid file.
+    */
+  /* CompleteClass */
+  override var fileName: String = js.native
+  /**
+    * Gets the size of the invalid file.
+    */
+  /* CompleteClass */
+  override var fileSize: Double = js.native
+}
 

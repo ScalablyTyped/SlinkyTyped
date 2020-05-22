@@ -37,65 +37,18 @@ trait SchemaServingRestriction extends js.Object {
 
 object SchemaServingRestriction {
   @scala.inline
-  def apply(): SchemaServingRestriction = {
+  def apply(
+    contexts: js.Array[SchemaServingContext] = null,
+    disapproval: SchemaDisapproval = null,
+    disapprovalReasons: js.Array[SchemaDisapproval] = null,
+    status: String = null
+  ): SchemaServingRestriction = {
     val __obj = js.Dynamic.literal()
+    if (contexts != null) __obj.updateDynamic("contexts")(contexts.asInstanceOf[js.Any])
+    if (disapproval != null) __obj.updateDynamic("disapproval")(disapproval.asInstanceOf[js.Any])
+    if (disapprovalReasons != null) __obj.updateDynamic("disapprovalReasons")(disapprovalReasons.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServingRestriction]
   }
-  @scala.inline
-  implicit class SchemaServingRestrictionOps[Self <: SchemaServingRestriction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContexts(value: js.Array[SchemaServingContext]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContexts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisapproval(value: SchemaDisapproval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disapproval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisapproval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disapproval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisapprovalReasons(value: js.Array[SchemaDisapproval]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disapprovalReasons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisapprovalReasons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disapprovalReasons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

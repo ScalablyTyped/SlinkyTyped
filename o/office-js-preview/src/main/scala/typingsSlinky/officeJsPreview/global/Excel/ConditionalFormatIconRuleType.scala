@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 /**
   *
-  * Represents the types of conditional format values.
+  * Represents the types of icon conditional format.
   *
   * [Api set: ExcelApi 1.6]
   */

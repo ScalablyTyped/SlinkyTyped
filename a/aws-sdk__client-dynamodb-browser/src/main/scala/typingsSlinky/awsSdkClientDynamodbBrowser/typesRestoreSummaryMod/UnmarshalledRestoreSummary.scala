@@ -4,34 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledRestoreSummary extends RestoreSummary {
   /**
     * <p>Point in time or source backup time.</p>
     */
   @JSName("RestoreDateTime")
-  var RestoreDateTime_UnmarshalledRestoreSummary: js.Date = js.native
+  var RestoreDateTime_UnmarshalledRestoreSummary: js.Date
 }
 
 object UnmarshalledRestoreSummary {
   @scala.inline
-  def apply(RestoreDateTime: js.Date, RestoreInProgress: Boolean): UnmarshalledRestoreSummary = {
+  def apply(
+    RestoreDateTime: js.Date,
+    RestoreInProgress: Boolean,
+    SourceBackupArn: String = null,
+    SourceTableArn: String = null
+  ): UnmarshalledRestoreSummary = {
     val __obj = js.Dynamic.literal(RestoreDateTime = RestoreDateTime.asInstanceOf[js.Any], RestoreInProgress = RestoreInProgress.asInstanceOf[js.Any])
+    if (SourceBackupArn != null) __obj.updateDynamic("SourceBackupArn")(SourceBackupArn.asInstanceOf[js.Any])
+    if (SourceTableArn != null) __obj.updateDynamic("SourceTableArn")(SourceTableArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledRestoreSummary]
   }
-  @scala.inline
-  implicit class UnmarshalledRestoreSummaryOps[Self <: UnmarshalledRestoreSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRestoreDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

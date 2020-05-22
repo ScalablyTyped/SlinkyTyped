@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnimationStateAdapter2 extends AnimationStateListener2
 
 object AnimationStateAdapter2 {

@@ -16,25 +16,24 @@ import scala.scalajs.js.annotation._
   * `Contact.persistChanges()` to persist the changes.
   * @see https://docs.scriptable.app/contact/#-new-contact
   */
-@js.native
 trait Contact_ extends js.Object {
   /**
     * _Birthday._
     * @see https://docs.scriptable.app/contact/#birthday
     */
-  var birthday: js.Date = js.native
+  var birthday: js.Date
   /**
     * _Dates._
     *
     * When updating this property, you must set the entire array of dates that you would like to store on the contact. The "identifier" key is optional.
     * @see https://docs.scriptable.app/contact/#dates
     */
-  var dates: js.Array[StringDictionary[_]] = js.native
+  var dates: js.Array[StringDictionary[_]]
   /**
     * _Name of the department associated with the contact._
     * @see https://docs.scriptable.app/contact/#departmentname
     */
-  var departmentName: String = js.native
+  var departmentName: String
   /**
     * _Email addresses._
     *
@@ -53,178 +52,178 @@ trait Contact_ extends js.Object {
     * other keys are optional.
     * @see https://docs.scriptable.app/contact/#emailaddresses
     */
-  var emailAddresses: js.Array[EmailAddresses] = js.native
+  var emailAddresses: js.Array[EmailAddresses]
   /**
     * _Family name._
     * @see https://docs.scriptable.app/contact/#familyname
     */
-  var familyName: String = js.native
+  var familyName: String
   /**
     * _Given name._
     * @see https://docs.scriptable.app/contact/#givenname
     */
-  var givenName: String = js.native
+  var givenName: String
   /**
     * _Uniquely identifies the contact on the device._
     * @see https://docs.scriptable.app/contact/#identifier
     */
-  var identifier: String = js.native
+  var identifier: String
   /**
     * _Profile picture._
     * @see https://docs.scriptable.app/contact/#image
     */
-  var image: Image = js.native
+  var image: Image
   /**
     * _Whether or not birthday is available._
     *
     * The `birthday` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isbirthdayavailable
     */
-  var isBirthdayAvailable: Boolean = js.native
+  var isBirthdayAvailable: Boolean
   /**
     * _Whether or not dates are available._
     *
     * The `date` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isdatesavailable
     */
-  var isDatesAvailable: Boolean = js.native
+  var isDatesAvailable: Boolean
   /**
     * _Whether or not department name is available._
     *
     * The `departmentName` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isdepartmentnameavailable
     */
-  var isDepartmentNameAvailable: Boolean = js.native
+  var isDepartmentNameAvailable: Boolean
   /**
     * _Whether or not email addresses are available._
     *
     * The `emailAddresses` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isemailaddressesavailable
     */
-  var isEmailAddressesAvailable: Boolean = js.native
+  var isEmailAddressesAvailable: Boolean
   /**
     * _Whether or not family name is available._
     *
     * The `familyName` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isfamilynameavailable
     */
-  var isFamilyNameAvailable: Boolean = js.native
+  var isFamilyNameAvailable: Boolean
   /**
     * _Whether or not given name is available._
     *
     * The `givenName` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isgivenameavailable
     */
-  var isGiveNameAvailable: Boolean = js.native
+  var isGiveNameAvailable: Boolean
   /**
     * _Whether or not image is available._
     *
     * The `image` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isimageavailable
     */
-  var isImageAvailable: Boolean = js.native
+  var isImageAvailable: Boolean
   /**
     * _Whether or not job title is available._
     *
     * The `jobTitle` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isjobtitleavailable
     */
-  var isJobTitleAvailable: Boolean = js.native
+  var isJobTitleAvailable: Boolean
   /**
     * _Whether or not middle name is available._
     *
     * The `middleName` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#ismiddlenameavailable
     */
-  var isMiddleNameAvailable: Boolean = js.native
+  var isMiddleNameAvailable: Boolean
   /**
     * _Whether or not name prefix is available._
     *
     * The `namePrefix` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isnameprefixavailable
     */
-  var isNamePrefixAvailable: Boolean = js.native
+  var isNamePrefixAvailable: Boolean
   /**
     * _Whether or not nickname is available._
     *
     * The `nickname` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isnicknameavailable
     */
-  var isNicknameAvailable: Boolean = js.native
+  var isNicknameAvailable: Boolean
   /**
     * _Whether or not note is available._
     *
     * The `note` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isnoteavailable
     */
-  var isNoteAvailable: Boolean = js.native
+  var isNoteAvailable: Boolean
   /**
     * _Whether or not organization name is available._
     *
     * The `organizationName` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isorganizationnameavailable
     */
-  var isOrganizationNameAvailable: Boolean = js.native
+  var isOrganizationNameAvailable: Boolean
   /**
     * _Whether or not phone numbers are available._
     *
     * The `phoneNumbers` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isphonenumbersavailable
     */
-  var isPhoneNumbersAvailable: Boolean = js.native
+  var isPhoneNumbersAvailable: Boolean
   /**
     * _Whether or not postal addresses are available._
     *
     * The `postalAddresses` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#ispostaladdressesavailable
     */
-  var isPostalAddressesAvailable: Boolean = js.native
+  var isPostalAddressesAvailable: Boolean
   /**
     * _Whether or not social profiles are available._
     *
     * The `socialProfiles` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#issocialprofilesavailable
     */
-  var isSocialProfilesAvailable: Boolean = js.native
+  var isSocialProfilesAvailable: Boolean
   /**
     * _Whether or not URL addresses are available._
     *
     * The `urlAddresses` property may not be available if the container does not support it. In that case any value set on the property will be ignored.
     * @see https://docs.scriptable.app/contact/#isurladdressesavailable
     */
-  var isURLAddressesAvailable: Boolean = js.native
+  var isURLAddressesAvailable: Boolean
   /**
     * _The contact's job title._
     * @see https://docs.scriptable.app/contact/#jobtitle
     */
-  var jobTitle: String = js.native
+  var jobTitle: String
   /**
     * _Middle name._
     * @see https://docs.scriptable.app/contact/#middlename
     */
-  var middleName: String = js.native
+  var middleName: String
   /**
     * _Name prefix._
     * @see https://docs.scriptable.app/contact/#nameprefix
     */
-  var namePrefix: String = js.native
+  var namePrefix: String
   /**
     * _Nickname._
     * @see https://docs.scriptable.app/contact/#nickname
     */
-  var nickname: String = js.native
+  var nickname: String
   /**
     * _Note for the contact._
     *
     * For security reasons, a contact's notes cannot be accessed in Siri, the Shortcuts app and in a notification.
     * @see https://docs.scriptable.app/contact/#note
     */
-  var note: String = js.native
+  var note: String
   /**
     * _Name of the organization associated with the contact._
     * @see https://docs.scriptable.app/contact/#organizationname
     */
-  var organizationName: String = js.native
+  var organizationName: String
   /**
     * _Phone numbers._
     *
@@ -243,7 +242,7 @@ trait Contact_ extends js.Object {
     * other keys are optional.
     * @see https://docs.scriptable.app/contact/#phonenumbers
     */
-  var phoneNumbers: js.Array[PhoneNumbers] = js.native
+  var phoneNumbers: js.Array[PhoneNumbers]
   /**
     * _Postal addresses._
     *
@@ -265,7 +264,7 @@ trait Contact_ extends js.Object {
     * When updating this property, you must set the entire array of postal addresses that you would like to store on the contact. The "identifier" key is optional.
     * @see https://docs.scriptable.app/contact/#postaladdresses
     */
-  var postalAddresses: js.Array[PostalAddresses] = js.native
+  var postalAddresses: js.Array[PostalAddresses]
   /**
     * _Social profiles._
     *
@@ -287,14 +286,14 @@ trait Contact_ extends js.Object {
     * When updating this property, you must set the entire array of social profiles that you would like to store on the contact. The "identifier" key is optional.
     * @see https://docs.scriptable.app/contact/#socialprofiles
     */
-  var socialProfiles: js.Array[SocialProfiles] = js.native
+  var socialProfiles: js.Array[SocialProfiles]
   /**
     * _URL addresses._
     *
     * When updating this property, you must set the entire array of URL addresses that you would like to store on the contact. The "identifier" key is optional.
     * @see https://docs.scriptable.app/contact/#urladdresses
     */
-  var urlAddresses: js.Array[StringDictionary[String]] = js.native
+  var urlAddresses: js.Array[StringDictionary[String]]
 }
 
 object Contact_ {
@@ -339,223 +338,5 @@ object Contact_ {
     val __obj = js.Dynamic.literal(birthday = birthday.asInstanceOf[js.Any], dates = dates.asInstanceOf[js.Any], departmentName = departmentName.asInstanceOf[js.Any], emailAddresses = emailAddresses.asInstanceOf[js.Any], familyName = familyName.asInstanceOf[js.Any], givenName = givenName.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], isBirthdayAvailable = isBirthdayAvailable.asInstanceOf[js.Any], isDatesAvailable = isDatesAvailable.asInstanceOf[js.Any], isDepartmentNameAvailable = isDepartmentNameAvailable.asInstanceOf[js.Any], isEmailAddressesAvailable = isEmailAddressesAvailable.asInstanceOf[js.Any], isFamilyNameAvailable = isFamilyNameAvailable.asInstanceOf[js.Any], isGiveNameAvailable = isGiveNameAvailable.asInstanceOf[js.Any], isImageAvailable = isImageAvailable.asInstanceOf[js.Any], isJobTitleAvailable = isJobTitleAvailable.asInstanceOf[js.Any], isMiddleNameAvailable = isMiddleNameAvailable.asInstanceOf[js.Any], isNamePrefixAvailable = isNamePrefixAvailable.asInstanceOf[js.Any], isNicknameAvailable = isNicknameAvailable.asInstanceOf[js.Any], isNoteAvailable = isNoteAvailable.asInstanceOf[js.Any], isOrganizationNameAvailable = isOrganizationNameAvailable.asInstanceOf[js.Any], isPhoneNumbersAvailable = isPhoneNumbersAvailable.asInstanceOf[js.Any], isPostalAddressesAvailable = isPostalAddressesAvailable.asInstanceOf[js.Any], isSocialProfilesAvailable = isSocialProfilesAvailable.asInstanceOf[js.Any], isURLAddressesAvailable = isURLAddressesAvailable.asInstanceOf[js.Any], jobTitle = jobTitle.asInstanceOf[js.Any], middleName = middleName.asInstanceOf[js.Any], namePrefix = namePrefix.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], organizationName = organizationName.asInstanceOf[js.Any], phoneNumbers = phoneNumbers.asInstanceOf[js.Any], postalAddresses = postalAddresses.asInstanceOf[js.Any], socialProfiles = socialProfiles.asInstanceOf[js.Any], urlAddresses = urlAddresses.asInstanceOf[js.Any])
     __obj.asInstanceOf[Contact_]
   }
-  @scala.inline
-  implicit class Contact_Ops[Self <: Contact_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBirthday(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("birthday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDates(value: js.Array[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDepartmentName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("departmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailAddresses(value: js.Array[EmailAddresses]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFamilyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGivenName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsBirthdayAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBirthdayAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDatesAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDatesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDepartmentNameAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDepartmentNameAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEmailAddressesAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmailAddressesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFamilyNameAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFamilyNameAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsGiveNameAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isGiveNameAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsImageAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isImageAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsJobTitleAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isJobTitleAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsMiddleNameAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMiddleNameAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsNamePrefixAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNamePrefixAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsNicknameAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNicknameAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsNoteAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNoteAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsOrganizationNameAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOrganizationNameAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPhoneNumbersAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPhoneNumbersAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsPostalAddressesAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPostalAddressesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsSocialProfilesAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSocialProfilesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsURLAddressesAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isURLAddressesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMiddleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("middleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrganizationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhoneNumbers(value: js.Array[PhoneNumbers]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumbers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPostalAddresses(value: js.Array[PostalAddresses]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSocialProfiles(value: js.Array[SocialProfiles]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socialProfiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrlAddresses(value: js.Array[StringDictionary[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

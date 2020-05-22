@@ -6,62 +6,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait ImageToken extends ContentToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait ImageToken extends ContentToken {
   /**
     * Image alt.
     */
-  var alt: String = js.native
+  var alt: String
   /**
     * Image url.
     */
-  var src: String = js.native
+  var src: String
   /**
     * Image title.
     */
-  var title: String = js.native
+  var title: String
   @JSName("type")
-  var type_ImageToken: image = js.native
+  var type_ImageToken: image
 }
 
 object ImageToken {
   @scala.inline
-  def apply(alt: String, level: Double, src: String, title: String, `type`: image): ImageToken = {
+  def apply(
+    alt: String,
+    level: Double,
+    src: String,
+    title: String,
+    `type`: image,
+    block: js.UndefOr[Boolean] = js.undefined,
+    content: js.Any = null,
+    lines: js.Tuple2[Double, Double] = null
+  ): ImageToken = {
     val __obj = js.Dynamic.literal(alt = alt.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.get.asInstanceOf[js.Any])
+    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageToken]
   }
-  @scala.inline
-  implicit class ImageTokenOps[Self <: ImageToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

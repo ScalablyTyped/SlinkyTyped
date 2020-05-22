@@ -26,31 +26,5 @@ object SshPublicKey {
     val __obj = js.Dynamic.literal(DateImported = DateImported.asInstanceOf[js.Any], SshPublicKeyBody = SshPublicKeyBody.asInstanceOf[js.Any], SshPublicKeyId = SshPublicKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SshPublicKey]
   }
-  @scala.inline
-  implicit class SshPublicKeyOps[Self <: SshPublicKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateImported(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateImported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSshPublicKeyBody(value: SshPublicKeyBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SshPublicKeyBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSshPublicKeyId(value: SshPublicKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SshPublicKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

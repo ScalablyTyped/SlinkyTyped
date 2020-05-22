@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait RemoteTrack extends js.Object
 
-object RemoteTrack {
-  @scala.inline
-  implicit def apply(value: RemoteAudioTrack): RemoteTrack = value.asInstanceOf[RemoteTrack]
-  @scala.inline
-  implicit def apply(value: RemoteDataTrack): RemoteTrack = value.asInstanceOf[RemoteTrack]
-  @scala.inline
-  implicit def apply(value: RemoteVideoTrack): RemoteTrack = value.asInstanceOf[RemoteTrack]
-}
-

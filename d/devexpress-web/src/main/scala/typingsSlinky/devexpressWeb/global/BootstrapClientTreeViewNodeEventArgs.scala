@@ -16,5 +16,10 @@ class BootstrapClientTreeViewNodeEventArgs protected ()
     * @param node An BootstrapClientTreeViewNode object representing the node related to the event.
     */
   def this(node: typingsSlinky.devexpressWeb.BootstrapClientTreeViewNode) = this()
+  /**
+    * Gets a node object related to the event.
+    */
+  /* CompleteClass */
+  override var node: typingsSlinky.devexpressWeb.BootstrapClientTreeViewNode = js.native
 }
 

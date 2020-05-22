@@ -445,6 +445,11 @@ object ListGroupItem {
   }
   
   def withProps[T](p: ListGroupItemProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ListGroupItemProps]))
+  }
   implicit def make[T](companion: ListGroupItem.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

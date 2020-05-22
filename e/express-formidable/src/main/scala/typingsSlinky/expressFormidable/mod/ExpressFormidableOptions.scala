@@ -8,140 +8,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExpressFormidableOptions extends js.Object {
-  var encoding: js.UndefOr[String] = js.native
-  var hash: js.UndefOr[Boolean | sha1 | md5] = js.native
-  var keepExtensions: js.UndefOr[Boolean] = js.native
-  var maxFields: js.UndefOr[Double] = js.native
-  var maxFieldsSize: js.UndefOr[Double] = js.native
-  var maxFileSize: js.UndefOr[Double] = js.native
-  var multiples: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[multipart | urlencoded] = js.native
-  var uploadDir: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
+  var hash: js.UndefOr[Boolean | sha1 | md5] = js.undefined
+  var keepExtensions: js.UndefOr[Boolean] = js.undefined
+  var maxFields: js.UndefOr[Double] = js.undefined
+  var maxFieldsSize: js.UndefOr[Double] = js.undefined
+  var maxFileSize: js.UndefOr[Double] = js.undefined
+  var multiples: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[multipart | urlencoded] = js.undefined
+  var uploadDir: js.UndefOr[String] = js.undefined
 }
 
 object ExpressFormidableOptions {
   @scala.inline
-  def apply(): ExpressFormidableOptions = {
+  def apply(
+    encoding: String = null,
+    hash: Boolean | sha1 | md5 = null,
+    keepExtensions: js.UndefOr[Boolean] = js.undefined,
+    maxFields: js.UndefOr[Double] = js.undefined,
+    maxFieldsSize: js.UndefOr[Double] = js.undefined,
+    maxFileSize: js.UndefOr[Double] = js.undefined,
+    multiples: js.UndefOr[Boolean] = js.undefined,
+    `type`: multipart | urlencoded = null,
+    uploadDir: String = null
+  ): ExpressFormidableOptions = {
     val __obj = js.Dynamic.literal()
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepExtensions)) __obj.updateDynamic("keepExtensions")(keepExtensions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFields)) __obj.updateDynamic("maxFields")(maxFields.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFieldsSize)) __obj.updateDynamic("maxFieldsSize")(maxFieldsSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFileSize)) __obj.updateDynamic("maxFileSize")(maxFileSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiples)) __obj.updateDynamic("multiples")(multiples.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (uploadDir != null) __obj.updateDynamic("uploadDir")(uploadDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpressFormidableOptions]
   }
-  @scala.inline
-  implicit class ExpressFormidableOptionsOps[Self <: ExpressFormidableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHash(value: Boolean | sha1 | md5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepExtensions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepExtensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepExtensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFields(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFieldsSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFieldsSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFieldsSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFieldsSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiples(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiples")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: multipart | urlencoded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadDir")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

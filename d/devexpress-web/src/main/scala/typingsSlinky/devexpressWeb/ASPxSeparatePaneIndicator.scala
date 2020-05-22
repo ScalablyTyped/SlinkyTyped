@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the SeparatePaneIndicator class.
   */
-@js.native
 trait ASPxSeparatePaneIndicator extends ASPxClientIndicator {
   /**
     * Returns the name of the Y-axis that is used to plot the current indicator on a ASPxClientXYDiagram.
     */
-  var axisY: String = js.native
+  var axisY: String
   /**
     * Returns the name of a pane, used to plot the separate pane indicator on an XYDiagram.
     */
-  var pane: String = js.native
+  var pane: String
 }
 
 object ASPxSeparatePaneIndicator {
@@ -25,25 +24,5 @@ object ASPxSeparatePaneIndicator {
     val __obj = js.Dynamic.literal(axisY = axisY.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pane = pane.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxSeparatePaneIndicator]
   }
-  @scala.inline
-  implicit class ASPxSeparatePaneIndicatorOps[Self <: ASPxSeparatePaneIndicator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxisY(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPane(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

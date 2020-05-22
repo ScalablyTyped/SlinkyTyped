@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsInTrial extends js.Object {
   /**
     * Determines if a subscription's plan is in a 30-day free trial or not:
     * - true — The plan is in trial.
     * - false — The plan is not in trial.
     */
-  var isInTrial: js.UndefOr[Boolean] = js.native
+  var isInTrial: js.UndefOr[Boolean] = js.undefined
   /** Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example Epoch converter. */
-  var trialEndTime: js.UndefOr[String] = js.native
+  var trialEndTime: js.UndefOr[String] = js.undefined
 }
 
 object IsInTrial {
   @scala.inline
-  def apply(): IsInTrial = {
+  def apply(isInTrial: js.UndefOr[Boolean] = js.undefined, trialEndTime: String = null): IsInTrial = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isInTrial)) __obj.updateDynamic("isInTrial")(isInTrial.get.asInstanceOf[js.Any])
+    if (trialEndTime != null) __obj.updateDynamic("trialEndTime")(trialEndTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsInTrial]
   }
-  @scala.inline
-  implicit class IsInTrialOps[Self <: IsInTrial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsInTrial(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInTrial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsInTrial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInTrial")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrialEndTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrialEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialEndTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

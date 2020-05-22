@@ -73,6 +73,14 @@ object imagesMod extends js.Object {
       var model_FImage: IModel = js.native
       @JSName("name")
       val name_FImage: String = js.native
+      /**
+        * Returns the qualified name of this element, or
+        * null if this element is not a part of the model,
+        * or if it or one of its namespace containers does not have a
+        * valid name.
+        */
+      /* CompleteClass */
+      override val qualifiedName: String | Null = js.native
       def containerAsImageCollection: ImageCollection = js.native
       def imageData(): js.Any = js.native
       def imageData(newValue: String): js.Any = js.native

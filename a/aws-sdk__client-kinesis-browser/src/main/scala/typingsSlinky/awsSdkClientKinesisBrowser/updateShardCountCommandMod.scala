@@ -26,9 +26,16 @@ object updateShardCountCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateShardCountInput) = this()
+    /* CompleteClass */
+    override val input: UpdateShardCountInput = js.native
     val middlewareStack: MiddlewareStack[UpdateShardCountInput, UpdateShardCountOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KinesisResolvedConfiguration
+    ): Handler[UpdateShardCountInput, UpdateShardCountOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[UpdateShardCountInput, UpdateShardCountOutput] = js.native
   }

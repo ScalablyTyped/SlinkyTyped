@@ -14,29 +14,28 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbc.XDriverManager
   * @see com.sun.star.sdbc.ConnectionProperties
   */
-@js.native
 trait ODBCConnectionProperties extends ConnectionProperties {
   /** specifies the statement which should be executed when asking an "INSERT" statement for the {@link XGeneratedResultSet} (future concept) interface. */
-  var AutoRetrievingStatement: String = js.native
+  var AutoRetrievingStatement: String
   /**
     * specifies the encoding to use to translate the backend data
     *
     * See the [IANA character set list]{@link url="http://www.iana.org/assignments/character-sets"} for a list of valid values.
     */
-  var CharSet: String = js.native
+  var CharSet: String
   /**
     * specifies if retrieving of auto generated values should be enabled or not. If `TRUE` than the statement will support the {@link XGeneratedResultSet}
     * (future concept) interface, otherwise not.
     */
-  var IsAutoRetrievingEnabled: Boolean = js.native
+  var IsAutoRetrievingEnabled: Boolean
   /** should the parameter "?" in prepared statement be substituted with an distinct name */
-  var ParameterNameSubstitution: Boolean = js.native
+  var ParameterNameSubstitution: Boolean
   /** Silent - should the connection be silent. No user interaction while creating the connection. */
-  var Silent: Boolean = js.native
+  var Silent: Boolean
   /** the Timeout after which time a timeout should happen */
-  var Timeout: Double = js.native
+  var Timeout: Double
   /** should the driver should support a catalog. */
-  var UseCatalog: Boolean = js.native
+  var UseCatalog: Boolean
 }
 
 object ODBCConnectionProperties {
@@ -55,55 +54,5 @@ object ODBCConnectionProperties {
     val __obj = js.Dynamic.literal(AutoRetrievingStatement = AutoRetrievingStatement.asInstanceOf[js.Any], CharSet = CharSet.asInstanceOf[js.Any], IsAutoRetrievingEnabled = IsAutoRetrievingEnabled.asInstanceOf[js.Any], ParameterNameSubstitution = ParameterNameSubstitution.asInstanceOf[js.Any], Silent = Silent.asInstanceOf[js.Any], Timeout = Timeout.asInstanceOf[js.Any], UseCatalog = UseCatalog.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[ODBCConnectionProperties]
   }
-  @scala.inline
-  implicit class ODBCConnectionPropertiesOps[Self <: ODBCConnectionProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRetrievingStatement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRetrievingStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharSet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAutoRetrievingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAutoRetrievingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameterNameSubstitution(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterNameSubstitution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseCatalog(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseCatalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

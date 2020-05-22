@@ -31,7 +31,7 @@ trait RangeFont extends ClientObject {
   var bold: Boolean = js.native
   /**
     *
-    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    * HTML color code representation of the text color (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -41,14 +41,14 @@ trait RangeFont extends ClientObject {
   var context_RangeFont: RequestContext = js.native
   /**
     *
-    * Represents the italic status of the font.
+    * Specifies the italic status of the font.
     *
     * [Api set: ExcelApi 1.1]
     */
   var italic: Boolean = js.native
   /**
     *
-    * Font name (e.g. "Calibri")
+    * Font name (e.g., "Calibri")
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -62,14 +62,14 @@ trait RangeFont extends ClientObject {
   var size: Double = js.native
   /**
     *
-    * Represents the strikethrough status of font. A null value indicates that the entire range doesn't have uniform Strikethrough setting.
+    * Specifies the strikethrough status of font. A null value indicates that the entire range doesn't have uniform Strikethrough setting.
     *
     * [Api set: ExcelApi 1.9]
     */
   var strikethrough: Boolean = js.native
   /**
     *
-    * Represents the Subscript status of font.
+    * Specifies the Subscript status of font.
     Returns True if all the fonts of the range are Subscript.
     Returns False if all the fonts of the range are Superscript or normal (neither Superscript, nor Subscript).
     Returns Null otherwise.
@@ -79,7 +79,7 @@ trait RangeFont extends ClientObject {
   var subscript: Boolean = js.native
   /**
     *
-    * Represents the Superscript status of font.
+    * Specifies the Superscript status of font.
     Returns True if all the fonts of the range are Superscript.
     Returns False if all the fonts of the range are Subscript or normal (neither Superscript, nor Subscript).
     Returns Null otherwise.
@@ -89,7 +89,7 @@ trait RangeFont extends ClientObject {
   var superscript: Boolean = js.native
   /**
     *
-    * Returns or sets a double that lightens or darkens a color for Range Font, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
+    * Specifies a double that lightens or darkens a color for Range Font, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
     A null value indicates that the entire range doesn't have uniform font tintAndShade setting.
     *
     * [Api set: ExcelApi 1.9]

@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OtherPullDeclsWalker extends js.Object {
-  var currentlyWalkingOtherDecls: js.Any = js.native
+  var currentlyWalkingOtherDecls: js.Any
   def walkOtherPullDecls(
     currentDecl: PullDecl,
     otherDecls: js.Array[PullDecl],
     callBack: js.Function1[/* otherDecl */ PullDecl, Unit]
-  ): Unit = js.native
+  ): Unit
 }
 
 object OtherPullDeclsWalker {
@@ -24,25 +23,5 @@ object OtherPullDeclsWalker {
     val __obj = js.Dynamic.literal(currentlyWalkingOtherDecls = currentlyWalkingOtherDecls.asInstanceOf[js.Any], walkOtherPullDecls = js.Any.fromFunction3(walkOtherPullDecls))
     __obj.asInstanceOf[OtherPullDeclsWalker]
   }
-  @scala.inline
-  implicit class OtherPullDeclsWalkerOps[Self <: OtherPullDeclsWalker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentlyWalkingOtherDecls(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentlyWalkingOtherDecls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWalkOtherPullDecls(value: (PullDecl, js.Array[PullDecl], js.Function1[/* otherDecl */ PullDecl, Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("walkOtherPullDecls")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

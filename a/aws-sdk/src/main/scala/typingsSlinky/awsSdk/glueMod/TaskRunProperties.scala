@@ -30,77 +30,20 @@ trait TaskRunProperties extends js.Object {
 
 object TaskRunProperties {
   @scala.inline
-  def apply(): TaskRunProperties = {
+  def apply(
+    ExportLabelsTaskRunProperties: ExportLabelsTaskRunProperties = null,
+    FindMatchesTaskRunProperties: FindMatchesTaskRunProperties = null,
+    ImportLabelsTaskRunProperties: ImportLabelsTaskRunProperties = null,
+    LabelingSetGenerationTaskRunProperties: LabelingSetGenerationTaskRunProperties = null,
+    TaskType: TaskType = null
+  ): TaskRunProperties = {
     val __obj = js.Dynamic.literal()
+    if (ExportLabelsTaskRunProperties != null) __obj.updateDynamic("ExportLabelsTaskRunProperties")(ExportLabelsTaskRunProperties.asInstanceOf[js.Any])
+    if (FindMatchesTaskRunProperties != null) __obj.updateDynamic("FindMatchesTaskRunProperties")(FindMatchesTaskRunProperties.asInstanceOf[js.Any])
+    if (ImportLabelsTaskRunProperties != null) __obj.updateDynamic("ImportLabelsTaskRunProperties")(ImportLabelsTaskRunProperties.asInstanceOf[js.Any])
+    if (LabelingSetGenerationTaskRunProperties != null) __obj.updateDynamic("LabelingSetGenerationTaskRunProperties")(LabelingSetGenerationTaskRunProperties.asInstanceOf[js.Any])
+    if (TaskType != null) __obj.updateDynamic("TaskType")(TaskType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskRunProperties]
   }
-  @scala.inline
-  implicit class TaskRunPropertiesOps[Self <: TaskRunProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportLabelsTaskRunProperties(value: ExportLabelsTaskRunProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportLabelsTaskRunProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportLabelsTaskRunProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportLabelsTaskRunProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindMatchesTaskRunProperties(value: FindMatchesTaskRunProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FindMatchesTaskRunProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindMatchesTaskRunProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FindMatchesTaskRunProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportLabelsTaskRunProperties(value: ImportLabelsTaskRunProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportLabelsTaskRunProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportLabelsTaskRunProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportLabelsTaskRunProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelingSetGenerationTaskRunProperties(value: LabelingSetGenerationTaskRunProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingSetGenerationTaskRunProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelingSetGenerationTaskRunProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LabelingSetGenerationTaskRunProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskType(value: TaskType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

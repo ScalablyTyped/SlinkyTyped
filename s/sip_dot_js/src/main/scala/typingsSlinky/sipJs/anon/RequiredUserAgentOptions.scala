@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RequiredUserAgentOptions extends js.Object {
   var allowLegacyNotifications: Boolean = js.native
-  var allowOutOfDialogRefers: Boolean = js.native
   var authorizationPassword: String = js.native
   var authorizationUsername: String = js.native
   var autoStart: Boolean = js.native

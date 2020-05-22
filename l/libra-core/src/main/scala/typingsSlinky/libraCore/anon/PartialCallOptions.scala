@@ -8,94 +8,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<grpc.grpc.CallOptions> */
-@js.native
 trait PartialCallOptions extends js.Object {
-  var credentials: js.UndefOr[CallCredentials] = js.native
-  var deadline: js.UndefOr[Deadline] = js.native
-  var host: js.UndefOr[String] = js.native
-  var parent: js.UndefOr[Call] = js.native
-  var propagate_flags: js.UndefOr[Double] = js.native
+  var credentials: js.UndefOr[CallCredentials] = js.undefined
+  var deadline: js.UndefOr[Deadline] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var parent: js.UndefOr[Call] = js.undefined
+  var propagate_flags: js.UndefOr[Double] = js.undefined
 }
 
 object PartialCallOptions {
   @scala.inline
-  def apply(): PartialCallOptions = {
+  def apply(
+    credentials: CallCredentials = null,
+    deadline: Deadline = null,
+    host: String = null,
+    parent: Call = null,
+    propagate_flags: js.UndefOr[Double] = js.undefined
+  ): PartialCallOptions = {
     val __obj = js.Dynamic.literal()
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (deadline != null) __obj.updateDynamic("deadline")(deadline.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (!js.isUndefined(propagate_flags)) __obj.updateDynamic("propagate_flags")(propagate_flags.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialCallOptions]
   }
-  @scala.inline
-  implicit class PartialCallOptionsOps[Self <: PartialCallOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: CallCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadlineDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeadline(value: Deadline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: Call): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPropagate_flags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagate_flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropagate_flags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagate_flags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

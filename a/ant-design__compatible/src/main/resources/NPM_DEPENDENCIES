@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@ant-design/compatible" : "1.0.1"
+      "@ant-design/compatible" : "1.0.2"
     }
   ],
   "test-dependencies" : [
     {
-      "@ant-design/compatible" : "1.0.1"
+      "@ant-design/compatible" : "1.0.2"
     }
   ],
   "compile-devDependencies" : [

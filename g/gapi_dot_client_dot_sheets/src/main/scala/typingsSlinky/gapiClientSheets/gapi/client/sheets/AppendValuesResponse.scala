@@ -4,69 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppendValuesResponse extends js.Object {
   /** The spreadsheet the updates were applied to. */
-  var spreadsheetId: js.UndefOr[String] = js.native
+  var spreadsheetId: js.UndefOr[String] = js.undefined
   /**
     * The range (in A1 notation) of the table that values are being appended to
     * (before the values were appended).
     * Empty if no table was found.
     */
-  var tableRange: js.UndefOr[String] = js.native
+  var tableRange: js.UndefOr[String] = js.undefined
   /** Information about the updates that were applied. */
-  var updates: js.UndefOr[UpdateValuesResponse] = js.native
+  var updates: js.UndefOr[UpdateValuesResponse] = js.undefined
 }
 
 object AppendValuesResponse {
   @scala.inline
-  def apply(): AppendValuesResponse = {
+  def apply(spreadsheetId: String = null, tableRange: String = null, updates: UpdateValuesResponse = null): AppendValuesResponse = {
     val __obj = js.Dynamic.literal()
+    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
+    if (tableRange != null) __obj.updateDynamic("tableRange")(tableRange.asInstanceOf[js.Any])
+    if (updates != null) __obj.updateDynamic("updates")(updates.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppendValuesResponse]
   }
-  @scala.inline
-  implicit class AppendValuesResponseOps[Self <: AppendValuesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpreadsheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpreadsheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdates(value: UpdateValuesResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

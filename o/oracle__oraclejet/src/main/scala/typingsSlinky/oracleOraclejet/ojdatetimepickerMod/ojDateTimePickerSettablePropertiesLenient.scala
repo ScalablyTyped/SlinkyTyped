@@ -31,390 +31,104 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojdatetimepicker.ojDateTimePickerSettableProperties> */
-@js.native
 trait ojDateTimePickerSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var asyncValidators: js.UndefOr[js.Array[AsyncValidator[String]]] = js.native
-  var autocomplete: js.UndefOr[on | off | String] = js.native
-  var autofocus: js.UndefOr[Boolean] = js.native
-  var converter: js.UndefOr[Converter[String] | RegisteredConverter] = js.native
-  var datePicker: js.UndefOr[ChangeMonth] = js.native
-  var dayFormatter: js.UndefOr[js.Function1[/* param */ DayFormatterInput, Null | all | DayFormatterOutput]] = js.native
-  var dayMetaData: js.UndefOr[StringDictionary[StringDictionary[StringDictionary[Disabled]]]] = js.native
-  var describedBy: js.UndefOr[String] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[ConverterHint] = js.native
-  var help: js.UndefOr[Instruction] = js.native
-  var helpHints: js.UndefOr[Definition] = js.native
-  var keyboardEdit: js.UndefOr[disabled] = js.native
-  var labelHint: js.UndefOr[String] = js.native
-  var max: js.UndefOr[String] = js.native
-  var messagesCustom: js.UndefOr[js.Array[^]] = js.native
-  var min: js.UndefOr[String] = js.native
-  var pickerAttributes: js.UndefOr[Class] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var rawValue: js.UndefOr[String] = js.native
-  var readonly: js.UndefOr[Boolean] = js.native
-  var renderMode: js.UndefOr[jet] = js.native
-  var required: js.UndefOr[Boolean] = js.native
-  var timePicker: js.UndefOr[FooterLayout] = js.native
-  var translations: js.UndefOr[Cancel] = js.native
+  var asyncValidators: js.UndefOr[js.Array[AsyncValidator[String]]] = js.undefined
+  var autocomplete: js.UndefOr[on | off | String] = js.undefined
+  var autofocus: js.UndefOr[Boolean] = js.undefined
+  var converter: js.UndefOr[Converter[String] | RegisteredConverter] = js.undefined
+  var datePicker: js.UndefOr[ChangeMonth] = js.undefined
+  var dayFormatter: js.UndefOr[js.Function1[/* param */ DayFormatterInput, Null | all | DayFormatterOutput]] = js.undefined
+  var dayMetaData: js.UndefOr[StringDictionary[StringDictionary[StringDictionary[Disabled]]]] = js.undefined
+  var describedBy: js.UndefOr[String] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var displayOptions: js.UndefOr[ConverterHint] = js.undefined
+  var help: js.UndefOr[Instruction] = js.undefined
+  var helpHints: js.UndefOr[Definition] = js.undefined
+  var keyboardEdit: js.UndefOr[disabled] = js.undefined
+  var labelHint: js.UndefOr[String] = js.undefined
+  var max: js.UndefOr[String] = js.undefined
+  var messagesCustom: js.UndefOr[js.Array[^]] = js.undefined
+  var min: js.UndefOr[String] = js.undefined
+  var pickerAttributes: js.UndefOr[Class] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var rawValue: js.UndefOr[String] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.undefined
+  var renderMode: js.UndefOr[jet] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var timePicker: js.UndefOr[FooterLayout] = js.undefined
+  var translations: js.UndefOr[Cancel] = js.undefined
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
-  ] = js.native
-  var validators: js.UndefOr[js.Array[Validator[String] | RegisteredValidator]] = js.native
-  var value: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var validators: js.UndefOr[js.Array[Validator[String] | RegisteredValidator]] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object ojDateTimePickerSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojDateTimePickerSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    asyncValidators: js.Array[AsyncValidator[String]] = null,
+    autocomplete: on | off | String = null,
+    autofocus: js.UndefOr[Boolean] = js.undefined,
+    converter: Converter[String] | RegisteredConverter = null,
+    datePicker: ChangeMonth = null,
+    dayFormatter: /* param */ DayFormatterInput => Null | all | DayFormatterOutput = null,
+    dayMetaData: StringDictionary[StringDictionary[StringDictionary[Disabled]]] = null,
+    describedBy: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    displayOptions: ConverterHint = null,
+    help: Instruction = null,
+    helpHints: Definition = null,
+    keyboardEdit: disabled = null,
+    labelHint: String = null,
+    max: String = null,
+    messagesCustom: js.Array[^] = null,
+    min: String = null,
+    pickerAttributes: Class = null,
+    placeholder: String = null,
+    rawValue: String = null,
+    readonly: js.UndefOr[Boolean] = js.undefined,
+    renderMode: jet = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    timePicker: FooterLayout = null,
+    translations: Cancel = null,
+    valid: valid | pending | invalidHidden | invalidShown = null,
+    validators: js.Array[Validator[String] | RegisteredValidator] = null,
+    value: String = null
+  ): ojDateTimePickerSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (asyncValidators != null) __obj.updateDynamic("asyncValidators")(asyncValidators.asInstanceOf[js.Any])
+    if (autocomplete != null) __obj.updateDynamic("autocomplete")(autocomplete.asInstanceOf[js.Any])
+    if (!js.isUndefined(autofocus)) __obj.updateDynamic("autofocus")(autofocus.get.asInstanceOf[js.Any])
+    if (converter != null) __obj.updateDynamic("converter")(converter.asInstanceOf[js.Any])
+    if (datePicker != null) __obj.updateDynamic("datePicker")(datePicker.asInstanceOf[js.Any])
+    if (dayFormatter != null) __obj.updateDynamic("dayFormatter")(js.Any.fromFunction1(dayFormatter))
+    if (dayMetaData != null) __obj.updateDynamic("dayMetaData")(dayMetaData.asInstanceOf[js.Any])
+    if (describedBy != null) __obj.updateDynamic("describedBy")(describedBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (displayOptions != null) __obj.updateDynamic("displayOptions")(displayOptions.asInstanceOf[js.Any])
+    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
+    if (helpHints != null) __obj.updateDynamic("helpHints")(helpHints.asInstanceOf[js.Any])
+    if (keyboardEdit != null) __obj.updateDynamic("keyboardEdit")(keyboardEdit.asInstanceOf[js.Any])
+    if (labelHint != null) __obj.updateDynamic("labelHint")(labelHint.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (messagesCustom != null) __obj.updateDynamic("messagesCustom")(messagesCustom.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (pickerAttributes != null) __obj.updateDynamic("pickerAttributes")(pickerAttributes.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (rawValue != null) __obj.updateDynamic("rawValue")(rawValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.get.asInstanceOf[js.Any])
+    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (timePicker != null) __obj.updateDynamic("timePicker")(timePicker.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
+    if (valid != null) __obj.updateDynamic("valid")(valid.asInstanceOf[js.Any])
+    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojDateTimePickerSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojDateTimePickerSettablePropertiesLenientOps[Self <: ojDateTimePickerSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsyncValidators(value: js.Array[AsyncValidator[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutocomplete(value: on | off | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutofocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutofocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConverter(value: Converter[String] | RegisteredConverter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConverter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("converter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatePicker(value: ChangeMonth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatePicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayFormatter(value: /* param */ DayFormatterInput => Null | all | DayFormatterOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDayFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayMetaData(value: StringDictionary[StringDictionary[StringDictionary[Disabled]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayMetaData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayMetaData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayMetaData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescribedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescribedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("describedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayOptions(value: ConverterHint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelp(value: Instruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelpHints(value: Definition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelpHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardEdit(value: disabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEdit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardEdit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEdit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagesCustom(value: js.Array[^]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagesCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messagesCustom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerAttributes(value: Class): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderMode(value: jet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimePicker(value: FooterLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimePicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: Cancel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValid(value: valid | pending | invalidHidden | invalidShown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidators(value: js.Array[Validator[String] | RegisteredValidator]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

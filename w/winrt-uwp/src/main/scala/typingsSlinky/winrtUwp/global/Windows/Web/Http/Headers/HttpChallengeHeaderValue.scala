@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Web.Http.Headers
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.anon.ChallengeHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +22,15 @@ class HttpChallengeHeaderValue protected ()
     * @param token The SPNEGO token to use with the Negotiate protocol scheme.
     */
   def this(scheme: String, token: String) = this()
+  /** Gets the credentials that contain the authentication information of the user agent for the resource being requested. */
+  /* CompleteClass */
+  override var parameters: IVector[typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpNameValueHeaderValue] = js.native
+  /** Gets the scheme to use for authentication. */
+  /* CompleteClass */
+  override var scheme: String = js.native
+  /** The SPNEGO token to use with the Negotiate protocol scheme. */
+  /* CompleteClass */
+  override var token: String = js.native
 }
 
 /* static members */

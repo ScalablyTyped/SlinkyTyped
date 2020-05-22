@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern clicking on the control's tabs.
   */
-@js.native
 trait ASPxClientTabControlTabClickEventArgs extends ASPxClientTabControlTabCancelEventArgs {
   /**
     * Gets the HTML object that contains the processed tab.
     */
-  var htmlElement: js.Any = js.native
+  var htmlElement: js.Any
   /**
     * Gets a DHTML event object that relates to the processed event.
     */
-  var htmlEvent: js.Any = js.native
+  var htmlEvent: js.Any
 }
 
 object ASPxClientTabControlTabClickEventArgs {
@@ -32,25 +31,5 @@ object ASPxClientTabControlTabClickEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], htmlElement = htmlElement.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any], reloadContentOnCallback = reloadContentOnCallback.asInstanceOf[js.Any], tab = tab.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientTabControlTabClickEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientTabControlTabClickEventArgsOps[Self <: ASPxClientTabControlTabClickEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtmlElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtmlEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

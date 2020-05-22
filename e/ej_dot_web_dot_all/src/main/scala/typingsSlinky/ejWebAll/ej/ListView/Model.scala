@@ -5,606 +5,228 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Model extends js.Object {
   /** Event triggers before the AJAX request happens.
     */
-  var ajaxBeforeLoad: js.UndefOr[js.Function1[/* e */ AjaxBeforeLoadEventArgs, Unit]] = js.native
+  var ajaxBeforeLoad: js.UndefOr[js.Function1[/* e */ AjaxBeforeLoadEventArgs, Unit]] = js.undefined
   /** Event triggers after the AJAX content loaded completely.
     */
-  var ajaxComplete: js.UndefOr[js.Function1[/* e */ AjaxCompleteEventArgs, Unit]] = js.native
+  var ajaxComplete: js.UndefOr[js.Function1[/* e */ AjaxCompleteEventArgs, Unit]] = js.undefined
   /** Event triggers when the AJAX request failed.
     */
-  var ajaxError: js.UndefOr[js.Function1[/* e */ AjaxErrorEventArgs, Unit]] = js.native
+  var ajaxError: js.UndefOr[js.Function1[/* e */ AjaxErrorEventArgs, Unit]] = js.undefined
   /** Specifies the ajaxSettings option to load the items to the ListView control.
     * @Default {null}
     */
-  var ajaxSettings: js.UndefOr[AjaxSettings] = js.native
+  var ajaxSettings: js.UndefOr[AjaxSettings] = js.undefined
   /** Event triggers after the AJAX content loaded successfully.
     */
-  var ajaxSuccess: js.UndefOr[js.Function1[/* e */ AjaxSuccessEventArgs, Unit]] = js.native
+  var ajaxSuccess: js.UndefOr[js.Function1[/* e */ AjaxSuccessEventArgs, Unit]] = js.undefined
   /** Loads the list data on demand via scrolling behavior to improve the applicationâ€™s performance. There are two ways to load data which can be defined using virtualScrollMode
     * property.
     * @Default {false}
     */
-  var allowVirtualScrolling: js.UndefOr[Boolean] = js.native
+  var allowVirtualScrolling: js.UndefOr[Boolean] = js.undefined
   /** Set the index values to be selected on initial loading. This works only when enableCheckMark is set true.
     * @Default {[]}
     */
-  var checkedIndices: js.UndefOr[js.Array[_]] = js.native
+  var checkedIndices: js.UndefOr[js.Array[_]] = js.undefined
   /** Sets the root class for ListView theme. This cssClass API helps to use custom skinning option for ListView control. By defining the root class using this API, we need to include
     * this root class in CSS.
     */
-  var cssClass: js.UndefOr[String] = js.native
+  var cssClass: js.UndefOr[String] = js.undefined
   /** Contains the list of data for generating the ListView items.
     * @Default {[]}
     */
-  var dataSource: js.UndefOr[js.Array[_]] = js.native
+  var dataSource: js.UndefOr[js.Array[_]] = js.undefined
   /** Specifies whether to load AJAX content while selecting item.
     * @Default {false}
     */
-  var enableAjax: js.UndefOr[Boolean] = js.native
+  var enableAjax: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to enable caching the content.
     * @Default {false}
     */
-  var enableCache: js.UndefOr[Boolean] = js.native
+  var enableCache: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to enable check mark for the item.
     * @Default {false}
     */
-  var enableCheckMark: js.UndefOr[Boolean] = js.native
+  var enableCheckMark: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to enable the filtering feature to filter the item.
     * @Default {false}
     */
-  var enableFiltering: js.UndefOr[Boolean] = js.native
+  var enableFiltering: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to group the list item.
     * @Default {false}
     */
-  var enableGroupList: js.UndefOr[Boolean] = js.native
+  var enableGroupList: js.UndefOr[Boolean] = js.undefined
   /** Specifies to maintain the current model value to browser cookies for state maintenance. While refresh the page, the model value will get apply to the control from browser cookies.
     * @Default {false}
     */
-  var enablePersistence: js.UndefOr[Boolean] = js.native
+  var enablePersistence: js.UndefOr[Boolean] = js.undefined
   /** Specifies the field settings to map the datasource.
     */
-  var fieldSettings: js.UndefOr[FieldSettings] = js.native
+  var fieldSettings: js.UndefOr[FieldSettings] = js.undefined
   /** Specifies the text of the back button in the header.
     * @Default {null}
     */
-  var headerBackButtonText: js.UndefOr[String] = js.native
+  var headerBackButtonText: js.UndefOr[String] = js.undefined
   /** Specifies the title of the header.
     * @Default {Title}
     */
-  var headerTitle: js.UndefOr[String] = js.native
+  var headerTitle: js.UndefOr[String] = js.undefined
   /** Specifies the height.
     * @Default {null}
     */
-  var height: js.UndefOr[String | Double] = js.native
+  var height: js.UndefOr[String | Double] = js.undefined
   /** Specifies the number of items to be fetched on each scroll. Note: This property works only with Virtual scrolling.
     * @Default {5}
     */
-  var itemRequestCount: js.UndefOr[Double] = js.native
+  var itemRequestCount: js.UndefOr[Double] = js.undefined
   /** Contains the array of items to be added in ListView.
     * @Default {[]}
     */
-  var items: js.UndefOr[js.Array[_]] = js.native
+  var items: js.UndefOr[js.Array[_]] = js.undefined
   /** Event triggers before the items loaded.
     */
-  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.native
+  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.undefined
   /** Event triggers after the items loaded.
     */
-  var loadComplete: js.UndefOr[js.Function1[/* e */ LoadCompleteEventArgs, Unit]] = js.native
+  var loadComplete: js.UndefOr[js.Function1[/* e */ LoadCompleteEventArgs, Unit]] = js.undefined
   /** Set the localization culture for ListView Widget.
     */
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[String] = js.undefined
   /** Event triggers when mouse down happens on the item.
     */
-  var mouseDown: js.UndefOr[js.Function1[/* e */ MouseDownEventArgs, Unit]] = js.native
+  var mouseDown: js.UndefOr[js.Function1[/* e */ MouseDownEventArgs, Unit]] = js.undefined
   /** Event triggers when mouse up happens on the item.
     */
-  var mouseUp: js.UndefOr[js.Function1[/* e */ MouseUpEventArgs, Unit]] = js.native
+  var mouseUp: js.UndefOr[js.Function1[/* e */ MouseUpEventArgs, Unit]] = js.undefined
   /** Specifies whether to retain the selection of the item.
     * @Default {false}
     */
-  var persistSelection: js.UndefOr[Boolean] = js.native
+  var persistSelection: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to prevent the selection of the item.
     * @Default {false}
     */
-  var preventSelection: js.UndefOr[Boolean] = js.native
+  var preventSelection: js.UndefOr[Boolean] = js.undefined
   /** Specifies the query to execute with the datasource.
     * @Default {null}
     */
-  var query: js.UndefOr[js.Any] = js.native
+  var query: js.UndefOr[js.Any] = js.undefined
   /** Specifies whether need to render the control with the template contents.
     * @Default {false}
     */
-  var renderTemplate: js.UndefOr[Boolean] = js.native
+  var renderTemplate: js.UndefOr[Boolean] = js.undefined
   /** Specifies the index of item which need to be in selected state initially while loading.
     * @Default {0}
     */
-  var selectedItemIndex: js.UndefOr[Double] = js.native
+  var selectedItemIndex: js.UndefOr[Double] = js.undefined
   /** Specifies whether to show the header.
     * @Default {true}
     */
-  var showHeader: js.UndefOr[Boolean] = js.native
+  var showHeader: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to show the back button header.
     * @Default {false}
     */
-  var showHeaderBackButton: js.UndefOr[Boolean] = js.native
+  var showHeaderBackButton: js.UndefOr[Boolean] = js.undefined
   /** Specifies ID of the element contains template contents.
     * @Default {null}
     */
-  var templateId: js.UndefOr[String] = js.native
+  var templateId: js.UndefOr[String] = js.undefined
   /** Specifies the maximum number of items to be fetched. Note: This will work only with Virtual scrolling
     * @Default {5}
     */
-  var totalItemsCount: js.UndefOr[Double] = js.native
+  var totalItemsCount: js.UndefOr[Double] = js.undefined
   /** Specifies the virtual scroll mode to load the list data on demand via scrolling behavior. There are two types of mode.
     * @Default {ej.VirtualScrollMode.Normal}
     */
-  var virtualScrollMode: js.UndefOr[VirtualScrollMode | String] = js.native
+  var virtualScrollMode: js.UndefOr[VirtualScrollMode | String] = js.undefined
   /** Specifies the width.
     * @Default {null}
     */
-  var width: js.UndefOr[String | Double] = js.native
+  var width: js.UndefOr[String | Double] = js.undefined
 }
 
 object Model {
   @scala.inline
-  def apply(): Model = {
+  def apply(
+    ajaxBeforeLoad: /* e */ AjaxBeforeLoadEventArgs => Unit = null,
+    ajaxComplete: /* e */ AjaxCompleteEventArgs => Unit = null,
+    ajaxError: /* e */ AjaxErrorEventArgs => Unit = null,
+    ajaxSettings: AjaxSettings = null,
+    ajaxSuccess: /* e */ AjaxSuccessEventArgs => Unit = null,
+    allowVirtualScrolling: js.UndefOr[Boolean] = js.undefined,
+    checkedIndices: js.Array[_] = null,
+    cssClass: String = null,
+    dataSource: js.Array[_] = null,
+    enableAjax: js.UndefOr[Boolean] = js.undefined,
+    enableCache: js.UndefOr[Boolean] = js.undefined,
+    enableCheckMark: js.UndefOr[Boolean] = js.undefined,
+    enableFiltering: js.UndefOr[Boolean] = js.undefined,
+    enableGroupList: js.UndefOr[Boolean] = js.undefined,
+    enablePersistence: js.UndefOr[Boolean] = js.undefined,
+    fieldSettings: FieldSettings = null,
+    headerBackButtonText: String = null,
+    headerTitle: String = null,
+    height: String | Double = null,
+    itemRequestCount: js.UndefOr[Double] = js.undefined,
+    items: js.Array[_] = null,
+    load: /* e */ LoadEventArgs => Unit = null,
+    loadComplete: /* e */ LoadCompleteEventArgs => Unit = null,
+    locale: String = null,
+    mouseDown: /* e */ MouseDownEventArgs => Unit = null,
+    mouseUp: /* e */ MouseUpEventArgs => Unit = null,
+    persistSelection: js.UndefOr[Boolean] = js.undefined,
+    preventSelection: js.UndefOr[Boolean] = js.undefined,
+    query: js.Any = null,
+    renderTemplate: js.UndefOr[Boolean] = js.undefined,
+    selectedItemIndex: js.UndefOr[Double] = js.undefined,
+    showHeader: js.UndefOr[Boolean] = js.undefined,
+    showHeaderBackButton: js.UndefOr[Boolean] = js.undefined,
+    templateId: String = null,
+    totalItemsCount: js.UndefOr[Double] = js.undefined,
+    virtualScrollMode: VirtualScrollMode | String = null,
+    width: String | Double = null
+  ): Model = {
     val __obj = js.Dynamic.literal()
+    if (ajaxBeforeLoad != null) __obj.updateDynamic("ajaxBeforeLoad")(js.Any.fromFunction1(ajaxBeforeLoad))
+    if (ajaxComplete != null) __obj.updateDynamic("ajaxComplete")(js.Any.fromFunction1(ajaxComplete))
+    if (ajaxError != null) __obj.updateDynamic("ajaxError")(js.Any.fromFunction1(ajaxError))
+    if (ajaxSettings != null) __obj.updateDynamic("ajaxSettings")(ajaxSettings.asInstanceOf[js.Any])
+    if (ajaxSuccess != null) __obj.updateDynamic("ajaxSuccess")(js.Any.fromFunction1(ajaxSuccess))
+    if (!js.isUndefined(allowVirtualScrolling)) __obj.updateDynamic("allowVirtualScrolling")(allowVirtualScrolling.get.asInstanceOf[js.Any])
+    if (checkedIndices != null) __obj.updateDynamic("checkedIndices")(checkedIndices.asInstanceOf[js.Any])
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAjax)) __obj.updateDynamic("enableAjax")(enableAjax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCache)) __obj.updateDynamic("enableCache")(enableCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCheckMark)) __obj.updateDynamic("enableCheckMark")(enableCheckMark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableFiltering)) __obj.updateDynamic("enableFiltering")(enableFiltering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableGroupList)) __obj.updateDynamic("enableGroupList")(enableGroupList.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePersistence)) __obj.updateDynamic("enablePersistence")(enablePersistence.get.asInstanceOf[js.Any])
+    if (fieldSettings != null) __obj.updateDynamic("fieldSettings")(fieldSettings.asInstanceOf[js.Any])
+    if (headerBackButtonText != null) __obj.updateDynamic("headerBackButtonText")(headerBackButtonText.asInstanceOf[js.Any])
+    if (headerTitle != null) __obj.updateDynamic("headerTitle")(headerTitle.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemRequestCount)) __obj.updateDynamic("itemRequestCount")(itemRequestCount.get.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
+    if (loadComplete != null) __obj.updateDynamic("loadComplete")(js.Any.fromFunction1(loadComplete))
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (mouseDown != null) __obj.updateDynamic("mouseDown")(js.Any.fromFunction1(mouseDown))
+    if (mouseUp != null) __obj.updateDynamic("mouseUp")(js.Any.fromFunction1(mouseUp))
+    if (!js.isUndefined(persistSelection)) __obj.updateDynamic("persistSelection")(persistSelection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventSelection)) __obj.updateDynamic("preventSelection")(preventSelection.get.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderTemplate)) __obj.updateDynamic("renderTemplate")(renderTemplate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedItemIndex)) __obj.updateDynamic("selectedItemIndex")(selectedItemIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHeaderBackButton)) __obj.updateDynamic("showHeaderBackButton")(showHeaderBackButton.get.asInstanceOf[js.Any])
+    if (templateId != null) __obj.updateDynamic("templateId")(templateId.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalItemsCount)) __obj.updateDynamic("totalItemsCount")(totalItemsCount.get.asInstanceOf[js.Any])
+    if (virtualScrollMode != null) __obj.updateDynamic("virtualScrollMode")(virtualScrollMode.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
-  @scala.inline
-  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxBeforeLoad(value: /* e */ AjaxBeforeLoadEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxBeforeLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxBeforeLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxBeforeLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxComplete(value: /* e */ AjaxCompleteEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxError(value: /* e */ AjaxErrorEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxSettings(value: AjaxSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxSuccess(value: /* e */ AjaxSuccessEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSuccess")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowVirtualScrolling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowVirtualScrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowVirtualScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowVirtualScrolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckedIndices(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckedIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedIndices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAjax(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAjax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAjax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAjax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCheckMark(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCheckMark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCheckMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCheckMark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableFiltering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFiltering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableFiltering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFiltering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableGroupList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroupList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableGroupList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGroupList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePersistence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePersistence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePersistence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePersistence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldSettings(value: FieldSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderBackButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerBackButtonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderBackButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerBackButtonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemRequestCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRequestCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemRequestCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRequestCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: /* e */ LoadEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadComplete(value: /* e */ LoadCompleteEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseDown(value: /* e */ MouseDownEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseUp(value: /* e */ MouseUpEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderTemplate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItemIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItemIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHeaderBackButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeaderBackButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHeaderBackButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeaderBackButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalItemsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalItemsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalItemsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalItemsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualScrollMode(value: VirtualScrollMode | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualScrollMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualScrollMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualScrollMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

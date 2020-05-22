@@ -6,26 +6,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * `swagger-sails-hook` object implementing the Sails' hook specification.
-	 *
-	 * @see {@link http://sailsjs.com/documentation/concepts/extending-sails/hooks/hook-specification|Sails Hook Docs}
-	 * @see {@link http://sailsjs.com/documentation/anatomy/api/hooks/my-hook/index-js|Sails Hook Example}
-	 */
-@js.native
+  * `swagger-sails-hook` object implementing the Sails' hook specification.
+  *
+  * @see {@link http://sailsjs.com/documentation/concepts/extending-sails/hooks/hook-specification|Sails Hook Docs}
+  * @see {@link http://sailsjs.com/documentation/anatomy/api/hooks/my-hook/index-js|Sails Hook Example}
+  */
 trait SailsHook extends js.Object {
   /**
-  		 * `swagger-sails-hook` specific route bound to a Sails app at load time.
-  		 *
-  		 * It handles any unhandled requests (any routes that aren't bound in the app via a
-  		 * custom route configuration or a blueprint) via the swagger middleware.
-  		 */
-  var routes: After = js.native
+    * `swagger-sails-hook` specific route bound to a Sails app at load time.
+    *
+    * It handles any unhandled requests (any routes that aren't bound in the app via a
+    * custom route configuration or a blueprint) via the swagger middleware.
+    */
+  var routes: After
   /**
-  		 * Perform startup tasks.
-  		 * All Sails configuration is guaranteed to be completed before a hook’s initialize function runs.
-  		 * @param done - called when `swagger-sails-hook`'s startup tasks have finished.
-  		 */
-  def initialize(done: js.Function0[_]): Unit = js.native
+    * Perform startup tasks.
+    * All Sails configuration is guaranteed to be completed before a hook’s initialize function runs.
+    * @param done - called when `swagger-sails-hook`'s startup tasks have finished.
+    */
+  def initialize(done: js.Function0[_]): Unit
 }
 
 object SailsHook {
@@ -34,25 +33,5 @@ object SailsHook {
     val __obj = js.Dynamic.literal(initialize = js.Any.fromFunction1(initialize), routes = routes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SailsHook]
   }
-  @scala.inline
-  implicit class SailsHookOps[Self <: SailsHook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialize(value: js.Function0[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRoutes(value: After): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

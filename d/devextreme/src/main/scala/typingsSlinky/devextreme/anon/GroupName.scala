@@ -7,75 +7,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroupName extends js.Object {
-  var groupName: js.UndefOr[String] = js.native
-  var mode: js.UndefOr[none | smallValueThreshold | topN] = js.native
-  var threshold: js.UndefOr[Double] = js.native
-  var topCount: js.UndefOr[Double] = js.native
+  var groupName: js.UndefOr[String] = js.undefined
+  var mode: js.UndefOr[none | smallValueThreshold | topN] = js.undefined
+  var threshold: js.UndefOr[Double] = js.undefined
+  var topCount: js.UndefOr[Double] = js.undefined
 }
 
 object GroupName {
   @scala.inline
-  def apply(): GroupName = {
+  def apply(
+    groupName: String = null,
+    mode: none | smallValueThreshold | topN = null,
+    threshold: js.UndefOr[Double] = js.undefined,
+    topCount: js.UndefOr[Double] = js.undefined
+  ): GroupName = {
     val __obj = js.Dynamic.literal()
+    if (groupName != null) __obj.updateDynamic("groupName")(groupName.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(threshold)) __obj.updateDynamic("threshold")(threshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(topCount)) __obj.updateDynamic("topCount")(topCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupName]
   }
-  @scala.inline
-  implicit class GroupNameOps[Self <: GroupName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: none | smallValueThreshold | topN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

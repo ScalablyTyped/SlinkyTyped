@@ -22,47 +22,11 @@ trait UpdateWebhookRequest extends js.Object {
 
 object UpdateWebhookRequest {
   @scala.inline
-  def apply(webhookId: WebhookId): UpdateWebhookRequest = {
+  def apply(webhookId: WebhookId, branchName: BranchName = null, description: Description = null): UpdateWebhookRequest = {
     val __obj = js.Dynamic.literal(webhookId = webhookId.asInstanceOf[js.Any])
+    if (branchName != null) __obj.updateDynamic("branchName")(branchName.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWebhookRequest]
   }
-  @scala.inline
-  implicit class UpdateWebhookRequestOps[Self <: UpdateWebhookRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWebhookId(value: WebhookId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhookId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranchName(value: BranchName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranchName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

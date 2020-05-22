@@ -7,55 +7,39 @@ import scala.scalajs.js.annotation._
 /**
   * When the expansion profile imposes designation contraints
   */
-@js.native
 trait ExpansionProfileDesignation extends BackboneElement {
   /**
     * Designations to be excluded
     */
-  var exclude: js.UndefOr[ExpansionProfileDesignationExclude] = js.native
+  var exclude: js.UndefOr[ExpansionProfileDesignationExclude] = js.undefined
   /**
     * Designations to be included
     */
-  var include: js.UndefOr[ExpansionProfileDesignationInclude] = js.native
+  var include: js.UndefOr[ExpansionProfileDesignationInclude] = js.undefined
 }
 
 object ExpansionProfileDesignation {
   @scala.inline
-  def apply(): ExpansionProfileDesignation = {
+  def apply(
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    exclude: ExpansionProfileDesignationExclude = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    include: ExpansionProfileDesignationInclude = null,
+    modifierExtension: js.Array[Extension] = null
+  ): ExpansionProfileDesignation = {
     val __obj = js.Dynamic.literal()
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpansionProfileDesignation]
   }
-  @scala.inline
-  implicit class ExpansionProfileDesignationOps[Self <: ExpansionProfileDesignation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclude(value: ExpansionProfileDesignationExclude): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: ExpansionProfileDesignationInclude): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DbSignUpResults extends js.Object {
   /** user's email */
-  var email: String = js.native
+  var email: String
   /** if the user's email was verified */
-  var emailVerified: Boolean = js.native
+  var emailVerified: Boolean
 }
 
 object DbSignUpResults {
@@ -18,25 +17,5 @@ object DbSignUpResults {
     val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any], emailVerified = emailVerified.asInstanceOf[js.Any])
     __obj.asInstanceOf[DbSignUpResults]
   }
-  @scala.inline
-  implicit class DbSignUpResultsOps[Self <: DbSignUpResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmailVerified(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailVerified")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

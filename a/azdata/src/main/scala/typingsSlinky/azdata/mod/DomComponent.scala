@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.azdata.mod.DomProperties because var conflicts: CSSStyles, ariaLabel, ariaRole, ariaSelected, display, enabled, height, position, width. Inlined html */ @js.native
 trait DomComponent extends Component {
   /**
-  		 * Contents of the DOM component.
-  		 */
+    * Contents of the DOM component.
+    */
   var html: js.UndefOr[String] = js.native
 }
 

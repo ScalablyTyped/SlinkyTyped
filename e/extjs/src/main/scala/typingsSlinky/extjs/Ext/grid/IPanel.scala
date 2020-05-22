@@ -7,42 +7,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPanel extends ITable {
   /** [Method] Reconfigures the grid with a new store columns
-  		* @param store Ext.data.Store The new store.
-  		* @param columns Object[] An array of column configs
-  		*/
+    * @param store Ext.data.Store The new store.
+    * @param columns Object[] An array of column configs
+    */
   var reconfigure: js.UndefOr[
     js.Function2[/* store */ js.UndefOr[IStore], /* columns */ js.UndefOr[Array], Unit]
-  ] = js.native
+  ] = js.undefined
 }
 
 object IPanel {
   @scala.inline
-  def apply(): IPanel = {
+  def apply(
+    ITable: ITable = null,
+    reconfigure: (/* store */ js.UndefOr[IStore], /* columns */ js.UndefOr[Array]) => Unit = null
+  ): IPanel = {
     val __obj = js.Dynamic.literal()
+    if (ITable != null) js.Dynamic.global.Object.assign(__obj, ITable)
+    if (reconfigure != null) __obj.updateDynamic("reconfigure")(js.Any.fromFunction2(reconfigure))
     __obj.asInstanceOf[IPanel]
   }
-  @scala.inline
-  implicit class IPanelOps[Self <: IPanel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReconfigure(value: (/* store */ js.UndefOr[IStore], /* columns */ js.UndefOr[Array]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconfigure")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutReconfigure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reconfigure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

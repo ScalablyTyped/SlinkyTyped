@@ -83,239 +83,46 @@ trait GetObjectRequest extends js.Object {
 
 object GetObjectRequest {
   @scala.inline
-  def apply(Bucket: BucketName, Key: ObjectKey): GetObjectRequest = {
+  def apply(
+    Bucket: BucketName,
+    Key: ObjectKey,
+    IfMatch: IfMatch = null,
+    IfModifiedSince: js.Date = null,
+    IfNoneMatch: IfNoneMatch = null,
+    IfUnmodifiedSince: js.Date = null,
+    PartNumber: js.UndefOr[PartNumber] = js.undefined,
+    Range: Range = null,
+    RequestPayer: RequestPayer = null,
+    ResponseCacheControl: ResponseCacheControl = null,
+    ResponseContentDisposition: ResponseContentDisposition = null,
+    ResponseContentEncoding: ResponseContentEncoding = null,
+    ResponseContentLanguage: ResponseContentLanguage = null,
+    ResponseContentType: ResponseContentType = null,
+    ResponseExpires: js.Date = null,
+    SSECustomerAlgorithm: SSECustomerAlgorithm = null,
+    SSECustomerKey: SSECustomerKey = null,
+    SSECustomerKeyMD5: SSECustomerKeyMD5 = null,
+    VersionId: ObjectVersionId = null
+  ): GetObjectRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any])
+    if (IfMatch != null) __obj.updateDynamic("IfMatch")(IfMatch.asInstanceOf[js.Any])
+    if (IfModifiedSince != null) __obj.updateDynamic("IfModifiedSince")(IfModifiedSince.asInstanceOf[js.Any])
+    if (IfNoneMatch != null) __obj.updateDynamic("IfNoneMatch")(IfNoneMatch.asInstanceOf[js.Any])
+    if (IfUnmodifiedSince != null) __obj.updateDynamic("IfUnmodifiedSince")(IfUnmodifiedSince.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartNumber)) __obj.updateDynamic("PartNumber")(PartNumber.get.asInstanceOf[js.Any])
+    if (Range != null) __obj.updateDynamic("Range")(Range.asInstanceOf[js.Any])
+    if (RequestPayer != null) __obj.updateDynamic("RequestPayer")(RequestPayer.asInstanceOf[js.Any])
+    if (ResponseCacheControl != null) __obj.updateDynamic("ResponseCacheControl")(ResponseCacheControl.asInstanceOf[js.Any])
+    if (ResponseContentDisposition != null) __obj.updateDynamic("ResponseContentDisposition")(ResponseContentDisposition.asInstanceOf[js.Any])
+    if (ResponseContentEncoding != null) __obj.updateDynamic("ResponseContentEncoding")(ResponseContentEncoding.asInstanceOf[js.Any])
+    if (ResponseContentLanguage != null) __obj.updateDynamic("ResponseContentLanguage")(ResponseContentLanguage.asInstanceOf[js.Any])
+    if (ResponseContentType != null) __obj.updateDynamic("ResponseContentType")(ResponseContentType.asInstanceOf[js.Any])
+    if (ResponseExpires != null) __obj.updateDynamic("ResponseExpires")(ResponseExpires.asInstanceOf[js.Any])
+    if (SSECustomerAlgorithm != null) __obj.updateDynamic("SSECustomerAlgorithm")(SSECustomerAlgorithm.asInstanceOf[js.Any])
+    if (SSECustomerKey != null) __obj.updateDynamic("SSECustomerKey")(SSECustomerKey.asInstanceOf[js.Any])
+    if (SSECustomerKeyMD5 != null) __obj.updateDynamic("SSECustomerKeyMD5")(SSECustomerKeyMD5.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectRequest]
   }
-  @scala.inline
-  implicit class GetObjectRequestOps[Self <: GetObjectRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIfMatch(value: IfMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfModifiedSince(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfModifiedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfNoneMatch(value: IfNoneMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfNoneMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfNoneMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfNoneMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfUnmodifiedSince(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfUnmodifiedSince: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartNumber(value: PartNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPayer(value: RequestPayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestPayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseCacheControl(value: ResponseCacheControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCacheControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseCacheControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCacheControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentDisposition(value: ResponseContentDisposition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentDisposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentDisposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentEncoding(value: ResponseContentEncoding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentLanguage(value: ResponseContentLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseContentType(value: ResponseContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseExpires(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseExpires")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseExpires: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseExpires")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerAlgorithm(value: SSECustomerAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerKeyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSSECustomerKey(value: SSECustomerKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSECustomerKeyMD5(value: SSECustomerKeyMD5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSECustomerKeyMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: ObjectVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

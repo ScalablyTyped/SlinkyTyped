@@ -30,77 +30,20 @@ trait ScheduledInstanceRecurrenceRequest extends js.Object {
 
 object ScheduledInstanceRecurrenceRequest {
   @scala.inline
-  def apply(): ScheduledInstanceRecurrenceRequest = {
+  def apply(
+    Frequency: String = null,
+    Interval: js.UndefOr[Integer] = js.undefined,
+    OccurrenceDays: OccurrenceDayRequestSet = null,
+    OccurrenceRelativeToEnd: js.UndefOr[Boolean] = js.undefined,
+    OccurrenceUnit: String = null
+  ): ScheduledInstanceRecurrenceRequest = {
     val __obj = js.Dynamic.literal()
+    if (Frequency != null) __obj.updateDynamic("Frequency")(Frequency.asInstanceOf[js.Any])
+    if (!js.isUndefined(Interval)) __obj.updateDynamic("Interval")(Interval.get.asInstanceOf[js.Any])
+    if (OccurrenceDays != null) __obj.updateDynamic("OccurrenceDays")(OccurrenceDays.asInstanceOf[js.Any])
+    if (!js.isUndefined(OccurrenceRelativeToEnd)) __obj.updateDynamic("OccurrenceRelativeToEnd")(OccurrenceRelativeToEnd.get.asInstanceOf[js.Any])
+    if (OccurrenceUnit != null) __obj.updateDynamic("OccurrenceUnit")(OccurrenceUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduledInstanceRecurrenceRequest]
   }
-  @scala.inline
-  implicit class ScheduledInstanceRecurrenceRequestOps[Self <: ScheduledInstanceRecurrenceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrequency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Frequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrenceDays(value: OccurrenceDayRequestSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OccurrenceDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrenceDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OccurrenceDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrenceRelativeToEnd(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OccurrenceRelativeToEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrenceRelativeToEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OccurrenceRelativeToEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrenceUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OccurrenceUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrenceUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OccurrenceUnit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

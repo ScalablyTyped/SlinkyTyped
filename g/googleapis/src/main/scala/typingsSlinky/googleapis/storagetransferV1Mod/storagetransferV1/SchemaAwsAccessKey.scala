@@ -23,41 +23,11 @@ trait SchemaAwsAccessKey extends js.Object {
 
 object SchemaAwsAccessKey {
   @scala.inline
-  def apply(): SchemaAwsAccessKey = {
+  def apply(accessKeyId: String = null, secretAccessKey: String = null): SchemaAwsAccessKey = {
     val __obj = js.Dynamic.literal()
+    if (accessKeyId != null) __obj.updateDynamic("accessKeyId")(accessKeyId.asInstanceOf[js.Any])
+    if (secretAccessKey != null) __obj.updateDynamic("secretAccessKey")(secretAccessKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAwsAccessKey]
   }
-  @scala.inline
-  implicit class SchemaAwsAccessKeyOps[Self <: SchemaAwsAccessKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretAccessKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretAccessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretAccessKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretAccessKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

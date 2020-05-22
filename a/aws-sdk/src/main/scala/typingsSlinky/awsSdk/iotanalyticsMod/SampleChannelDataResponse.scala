@@ -14,29 +14,10 @@ trait SampleChannelDataResponse extends js.Object {
 
 object SampleChannelDataResponse {
   @scala.inline
-  def apply(): SampleChannelDataResponse = {
+  def apply(payloads: MessagePayloads = null): SampleChannelDataResponse = {
     val __obj = js.Dynamic.literal()
+    if (payloads != null) __obj.updateDynamic("payloads")(payloads.asInstanceOf[js.Any])
     __obj.asInstanceOf[SampleChannelDataResponse]
   }
-  @scala.inline
-  implicit class SampleChannelDataResponseOps[Self <: SampleChannelDataResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayloads(value: MessagePayloads): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloads")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

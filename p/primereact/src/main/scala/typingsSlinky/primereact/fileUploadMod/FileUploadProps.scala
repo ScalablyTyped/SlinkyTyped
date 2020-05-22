@@ -10,387 +10,99 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileUploadProps extends js.Object {
-  var accept: js.UndefOr[String] = js.native
-  var auto: js.UndefOr[Boolean] = js.native
-  var cancelLabel: js.UndefOr[String] = js.native
-  var chooseLabel: js.UndefOr[String] = js.native
-  var className: js.UndefOr[String] = js.native
-  var customUpload: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var id: js.UndefOr[String] = js.native
-  var invalidFileSizeMessageDetail: js.UndefOr[String] = js.native
-  var invalidFileSizeMessageSummary: js.UndefOr[String] = js.native
-  var maxFileSize: js.UndefOr[Double] = js.native
-  var mode: js.UndefOr[String] = js.native
-  var multiple: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var onBeforeSend: js.UndefOr[js.Function1[/* e */ FormData, Unit]] = js.native
-  var onBeforeUpload: js.UndefOr[js.Function1[/* e */ FormData, Unit]] = js.native
-  var onClear: js.UndefOr[js.Function0[Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* e */ Files, Unit]] = js.native
-  var onProgress: js.UndefOr[js.Function1[/* e */ Progress, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ FilesOriginalEvent, Unit]] = js.native
-  var onUpload: js.UndefOr[js.Function1[/* e */ Files, Unit]] = js.native
-  var onValidationFail: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
-  var previewWidth: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var uploadHandler: js.UndefOr[js.Function1[/* e */ FilesAny, Unit]] = js.native
-  var uploadLabel: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
-  var withCredentials: js.UndefOr[Boolean] = js.native
+  var accept: js.UndefOr[String] = js.undefined
+  var auto: js.UndefOr[Boolean] = js.undefined
+  var cancelLabel: js.UndefOr[String] = js.undefined
+  var chooseLabel: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var customUpload: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var invalidFileSizeMessageDetail: js.UndefOr[String] = js.undefined
+  var invalidFileSizeMessageSummary: js.UndefOr[String] = js.undefined
+  var maxFileSize: js.UndefOr[Double] = js.undefined
+  var mode: js.UndefOr[String] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var onBeforeSend: js.UndefOr[js.Function1[/* e */ FormData, Unit]] = js.undefined
+  var onBeforeUpload: js.UndefOr[js.Function1[/* e */ FormData, Unit]] = js.undefined
+  var onClear: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* e */ Files, Unit]] = js.undefined
+  var onProgress: js.UndefOr[js.Function1[/* e */ Progress, Unit]] = js.undefined
+  var onSelect: js.UndefOr[js.Function1[/* e */ FilesOriginalEvent, Unit]] = js.undefined
+  var onUpload: js.UndefOr[js.Function1[/* e */ Files, Unit]] = js.undefined
+  var onValidationFail: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.undefined
+  var previewWidth: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var uploadHandler: js.UndefOr[js.Function1[/* e */ FilesAny, Unit]] = js.undefined
+  var uploadLabel: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
+  var withCredentials: js.UndefOr[Boolean] = js.undefined
 }
 
 object FileUploadProps {
   @scala.inline
-  def apply(): FileUploadProps = {
+  def apply(
+    accept: String = null,
+    auto: js.UndefOr[Boolean] = js.undefined,
+    cancelLabel: String = null,
+    chooseLabel: String = null,
+    className: String = null,
+    customUpload: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    invalidFileSizeMessageDetail: String = null,
+    invalidFileSizeMessageSummary: String = null,
+    maxFileSize: js.UndefOr[Double] = js.undefined,
+    mode: String = null,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    onBeforeSend: /* e */ FormData => Unit = null,
+    onBeforeUpload: /* e */ FormData => Unit = null,
+    onClear: () => Unit = null,
+    onError: /* e */ Files => Unit = null,
+    onProgress: /* e */ Progress => Unit = null,
+    onSelect: /* e */ FilesOriginalEvent => Unit = null,
+    onUpload: /* e */ Files => Unit = null,
+    onValidationFail: /* file */ File => Unit = null,
+    previewWidth: js.UndefOr[Double] = js.undefined,
+    style: js.Object = null,
+    uploadHandler: /* e */ FilesAny => Unit = null,
+    uploadLabel: String = null,
+    url: String = null,
+    withCredentials: js.UndefOr[Boolean] = js.undefined
+  ): FileUploadProps = {
     val __obj = js.Dynamic.literal()
+    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+    if (!js.isUndefined(auto)) __obj.updateDynamic("auto")(auto.get.asInstanceOf[js.Any])
+    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
+    if (chooseLabel != null) __obj.updateDynamic("chooseLabel")(chooseLabel.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(customUpload)) __obj.updateDynamic("customUpload")(customUpload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (invalidFileSizeMessageDetail != null) __obj.updateDynamic("invalidFileSizeMessageDetail")(invalidFileSizeMessageDetail.asInstanceOf[js.Any])
+    if (invalidFileSizeMessageSummary != null) __obj.updateDynamic("invalidFileSizeMessageSummary")(invalidFileSizeMessageSummary.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFileSize)) __obj.updateDynamic("maxFileSize")(maxFileSize.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onBeforeSend != null) __obj.updateDynamic("onBeforeSend")(js.Any.fromFunction1(onBeforeSend))
+    if (onBeforeUpload != null) __obj.updateDynamic("onBeforeUpload")(js.Any.fromFunction1(onBeforeUpload))
+    if (onClear != null) __obj.updateDynamic("onClear")(js.Any.fromFunction0(onClear))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (onUpload != null) __obj.updateDynamic("onUpload")(js.Any.fromFunction1(onUpload))
+    if (onValidationFail != null) __obj.updateDynamic("onValidationFail")(js.Any.fromFunction1(onValidationFail))
+    if (!js.isUndefined(previewWidth)) __obj.updateDynamic("previewWidth")(previewWidth.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (uploadHandler != null) __obj.updateDynamic("uploadHandler")(js.Any.fromFunction1(uploadHandler))
+    if (uploadLabel != null) __obj.updateDynamic("uploadLabel")(uploadLabel.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileUploadProps]
   }
-  @scala.inline
-  implicit class FileUploadPropsOps[Self <: FileUploadProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccept(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuto(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCancelLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChooseLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chooseLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChooseLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chooseLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomUpload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customUpload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidFileSizeMessageDetail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidFileSizeMessageDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidFileSizeMessageDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidFileSizeMessageDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidFileSizeMessageSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidFileSizeMessageSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidFileSizeMessageSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidFileSizeMessageSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeSend(value: /* e */ FormData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeSend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeSend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeSend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBeforeUpload(value: /* e */ FormData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeUpload")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBeforeUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeUpload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* e */ Files => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnProgress(value: /* e */ Progress => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: /* e */ FilesOriginalEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpload(value: /* e */ Files => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpload")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnValidationFail(value: /* file */ File => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onValidationFail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnValidationFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onValidationFail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviewWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviewWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadHandler(value: /* e */ FilesAny => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutUploadHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploadLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploadLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withCredentials")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

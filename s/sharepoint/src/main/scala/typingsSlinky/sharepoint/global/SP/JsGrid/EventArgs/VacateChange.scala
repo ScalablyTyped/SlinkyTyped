@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation._
 class VacateChange protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.VacateChange {
   def this(changeKey: IChangeKey) = this()
+  /* CompleteClass */
+  override var changeKey: IChangeKey = js.native
 }
 

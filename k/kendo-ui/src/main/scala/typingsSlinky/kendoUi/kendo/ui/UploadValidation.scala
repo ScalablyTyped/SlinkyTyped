@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UploadValidation extends js.Object {
-  var allowedExtensions: js.UndefOr[js.Any] = js.native
-  var maxFileSize: js.UndefOr[Double] = js.native
-  var minFileSize: js.UndefOr[Double] = js.native
+  var allowedExtensions: js.UndefOr[js.Any] = js.undefined
+  var maxFileSize: js.UndefOr[Double] = js.undefined
+  var minFileSize: js.UndefOr[Double] = js.undefined
 }
 
 object UploadValidation {
   @scala.inline
-  def apply(): UploadValidation = {
+  def apply(
+    allowedExtensions: js.Any = null,
+    maxFileSize: js.UndefOr[Double] = js.undefined,
+    minFileSize: js.UndefOr[Double] = js.undefined
+  ): UploadValidation = {
     val __obj = js.Dynamic.literal()
+    if (allowedExtensions != null) __obj.updateDynamic("allowedExtensions")(allowedExtensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFileSize)) __obj.updateDynamic("maxFileSize")(maxFileSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minFileSize)) __obj.updateDynamic("minFileSize")(minFileSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadValidation]
   }
-  @scala.inline
-  implicit class UploadValidationOps[Self <: UploadValidation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedExtensions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedExtensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedExtensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinFileSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minFileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minFileSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

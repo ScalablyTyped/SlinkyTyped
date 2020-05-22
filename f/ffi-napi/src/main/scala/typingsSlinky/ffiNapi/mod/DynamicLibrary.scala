@@ -9,14 +9,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DynamicLibrary extends js.Object {
   /** Close library, returns the result of the `dlclose` system function. */
-  def close(): Double = js.native
+  def close(): Double
   /** Get the result of the `dlerror` system function. */
-  def error(): String = js.native
+  def error(): String
   /** Get a symbol from this library. */
-  def get(symbol: String): Buffer = js.native
+  def get(symbol: String): Buffer
 }
 
 @JSImport("ffi-napi", "DynamicLibrary")

@@ -25,41 +25,11 @@ trait SchemaModifyContactGroupMembersRequest extends js.Object {
 
 object SchemaModifyContactGroupMembersRequest {
   @scala.inline
-  def apply(): SchemaModifyContactGroupMembersRequest = {
+  def apply(resourceNamesToAdd: js.Array[String] = null, resourceNamesToRemove: js.Array[String] = null): SchemaModifyContactGroupMembersRequest = {
     val __obj = js.Dynamic.literal()
+    if (resourceNamesToAdd != null) __obj.updateDynamic("resourceNamesToAdd")(resourceNamesToAdd.asInstanceOf[js.Any])
+    if (resourceNamesToRemove != null) __obj.updateDynamic("resourceNamesToRemove")(resourceNamesToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyContactGroupMembersRequest]
   }
-  @scala.inline
-  implicit class SchemaModifyContactGroupMembersRequestOps[Self <: SchemaModifyContactGroupMembersRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceNamesToAdd(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNamesToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceNamesToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNamesToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceNamesToRemove(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNamesToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceNamesToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNamesToRemove")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

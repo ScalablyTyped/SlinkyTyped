@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * An object with survival game info
   */
-@js.native
 trait SurvivalGameInfo extends js.Object {
   /**
     * Current score.
     */
-  var score: Double = js.native
+  var score: Double
   /**
     * Time to the next wave of invaders.
     */
-  var timeToWave: Double = js.native
+  var timeToWave: Double
   /**
     * The number of the next wave.
     */
-  var wave: Double = js.native
+  var wave: Double
 }
 
 object SurvivalGameInfo {
@@ -29,31 +28,5 @@ object SurvivalGameInfo {
     val __obj = js.Dynamic.literal(score = score.asInstanceOf[js.Any], timeToWave = timeToWave.asInstanceOf[js.Any], wave = wave.asInstanceOf[js.Any])
     __obj.asInstanceOf[SurvivalGameInfo]
   }
-  @scala.inline
-  implicit class SurvivalGameInfoOps[Self <: SurvivalGameInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeToWave(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToWave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWave(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wave")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

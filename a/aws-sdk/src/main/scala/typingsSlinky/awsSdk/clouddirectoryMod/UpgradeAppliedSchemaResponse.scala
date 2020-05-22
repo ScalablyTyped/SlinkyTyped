@@ -18,41 +18,11 @@ trait UpgradeAppliedSchemaResponse extends js.Object {
 
 object UpgradeAppliedSchemaResponse {
   @scala.inline
-  def apply(): UpgradeAppliedSchemaResponse = {
+  def apply(DirectoryArn: Arn = null, UpgradedSchemaArn: Arn = null): UpgradeAppliedSchemaResponse = {
     val __obj = js.Dynamic.literal()
+    if (DirectoryArn != null) __obj.updateDynamic("DirectoryArn")(DirectoryArn.asInstanceOf[js.Any])
+    if (UpgradedSchemaArn != null) __obj.updateDynamic("UpgradedSchemaArn")(UpgradedSchemaArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpgradeAppliedSchemaResponse]
   }
-  @scala.inline
-  implicit class UpgradeAppliedSchemaResponseOps[Self <: UpgradeAppliedSchemaResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpgradedSchemaArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradedSchemaArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpgradedSchemaArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradedSchemaArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

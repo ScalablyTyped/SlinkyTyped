@@ -11,14 +11,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenDocumentOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[OpenDocumentCompleteCallback] = js.native
+  var complete: js.UndefOr[OpenDocumentCompleteCallback] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[OpenDocumentFailCallback] = js.native
+  var fail: js.UndefOr[OpenDocumentFailCallback] = js.undefined
   /** 文件路径，可通过 downloadFile 获得 */
-  var filePath: String = js.native
+  var filePath: String
   /** 文件类型，指定文件类型打开文件
     *
     * 可选值：
@@ -31,78 +30,26 @@ trait OpenDocumentOption extends js.Object {
     * - 'pdf': pdf 格式;
     *
     * 最低基础库： `1.4.0` */
-  var fileType: js.UndefOr[doc | docx | xls | xlsx | ppt | pptx | pdf] = js.native
+  var fileType: js.UndefOr[doc | docx | xls | xlsx | ppt | pptx | pdf] = js.undefined
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[OpenDocumentSuccessCallback] = js.native
+  var success: js.UndefOr[OpenDocumentSuccessCallback] = js.undefined
 }
 
 object OpenDocumentOption {
   @scala.inline
-  def apply(filePath: String): OpenDocumentOption = {
+  def apply(
+    filePath: String,
+    complete: /* res */ GeneralCallbackResult => Unit = null,
+    fail: /* res */ GeneralCallbackResult => Unit = null,
+    fileType: doc | docx | xls | xlsx | ppt | pptx | pdf = null,
+    success: /* res */ GeneralCallbackResult => Unit = null
+  ): OpenDocumentOption = {
     val __obj = js.Dynamic.literal(filePath = filePath.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (fileType != null) __obj.updateDynamic("fileType")(fileType.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[OpenDocumentOption]
   }
-  @scala.inline
-  implicit class OpenDocumentOptionOps[Self <: OpenDocumentOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileType(value: doc | docx | xls | xlsx | ppt | pptx | pdf): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

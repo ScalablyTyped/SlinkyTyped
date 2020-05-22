@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PermissionSettings extends js.Object {
   /** Shows or hides the create, edit and delete options in data source pane with the help of ej.ReportDesigner.Permission enum.
     * @Default {ej.ReportDesigner.Permission.All}
     */
-  var dataSource: js.UndefOr[Permission | String] = js.native
+  var dataSource: js.UndefOr[Permission | String] = js.undefined
 }
 
 object PermissionSettings {
   @scala.inline
-  def apply(): PermissionSettings = {
+  def apply(dataSource: Permission | String = null): PermissionSettings = {
     val __obj = js.Dynamic.literal()
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionSettings]
   }
-  @scala.inline
-  implicit class PermissionSettingsOps[Self <: PermissionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSource(value: Permission | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

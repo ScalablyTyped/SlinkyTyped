@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * AttributeSetValue ::= SET OF ANY
   * ```
   */
-@js.native
 trait Attribute extends ASN1Object
 
 object Attribute {

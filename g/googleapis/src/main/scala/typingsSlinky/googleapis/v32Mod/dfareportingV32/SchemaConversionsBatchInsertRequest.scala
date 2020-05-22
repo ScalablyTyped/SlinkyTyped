@@ -28,53 +28,16 @@ trait SchemaConversionsBatchInsertRequest extends js.Object {
 
 object SchemaConversionsBatchInsertRequest {
   @scala.inline
-  def apply(): SchemaConversionsBatchInsertRequest = {
+  def apply(
+    conversions: js.Array[SchemaConversion] = null,
+    encryptionInfo: SchemaEncryptionInfo = null,
+    kind: String = null
+  ): SchemaConversionsBatchInsertRequest = {
     val __obj = js.Dynamic.literal()
+    if (conversions != null) __obj.updateDynamic("conversions")(conversions.asInstanceOf[js.Any])
+    if (encryptionInfo != null) __obj.updateDynamic("encryptionInfo")(encryptionInfo.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConversionsBatchInsertRequest]
   }
-  @scala.inline
-  implicit class SchemaConversionsBatchInsertRequestOps[Self <: SchemaConversionsBatchInsertRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversions(value: js.Array[SchemaConversion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionInfo(value: SchemaEncryptionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

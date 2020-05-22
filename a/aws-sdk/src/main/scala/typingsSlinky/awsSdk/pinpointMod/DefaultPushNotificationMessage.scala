@@ -38,101 +38,24 @@ trait DefaultPushNotificationMessage extends js.Object {
 
 object DefaultPushNotificationMessage {
   @scala.inline
-  def apply(): DefaultPushNotificationMessage = {
+  def apply(
+    Action: Action = null,
+    Body: string = null,
+    Data: MapOfString = null,
+    SilentPush: js.UndefOr[boolean] = js.undefined,
+    Substitutions: MapOfListOfString = null,
+    Title: string = null,
+    Url: string = null
+  ): DefaultPushNotificationMessage = {
     val __obj = js.Dynamic.literal()
+    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
+    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
+    if (Data != null) __obj.updateDynamic("Data")(Data.asInstanceOf[js.Any])
+    if (!js.isUndefined(SilentPush)) __obj.updateDynamic("SilentPush")(SilentPush.get.asInstanceOf[js.Any])
+    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
+    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
+    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultPushNotificationMessage]
   }
-  @scala.inline
-  implicit class DefaultPushNotificationMessageOps[Self <: DefaultPushNotificationMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: Action): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: MapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilentPush(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SilentPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilentPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SilentPush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubstitutions(value: MapOfListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubstitutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

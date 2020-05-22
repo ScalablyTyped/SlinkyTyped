@@ -85,7 +85,18 @@ object ObservableUndoableList extends js.Object {
     * A default, identity serializer.
     */
   @js.native
-  class IdentitySerializer[T /* <: JSONValue */] () extends ISerializer[T]
+  class IdentitySerializer[T /* <: JSONValue */] () extends ISerializer[T] {
+    /**
+      * Deserialize the object from JSON.
+      */
+    /* CompleteClass */
+    override def fromJSON(value: JSONValue): T = js.native
+    /**
+      * Convert the object to JSON.
+      */
+    /* CompleteClass */
+    override def toJSON(value: T): JSONValue = js.native
+  }
   
 }
 

@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChoiceColumn extends js.Object {
   // If true, allows custom values that aren't in the configured choices.
-  var allowTextEntry: js.UndefOr[Boolean] = js.native
+  var allowTextEntry: js.UndefOr[Boolean] = js.undefined
   // The list of values available for this column.
-  var choices: js.UndefOr[js.Array[String]] = js.native
+  var choices: js.UndefOr[js.Array[String]] = js.undefined
   // How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
-  var displayAs: js.UndefOr[String] = js.native
+  var displayAs: js.UndefOr[String] = js.undefined
 }
 
 object ChoiceColumn {
   @scala.inline
-  def apply(): ChoiceColumn = {
+  def apply(
+    allowTextEntry: js.UndefOr[Boolean] = js.undefined,
+    choices: js.Array[String] = null,
+    displayAs: String = null
+  ): ChoiceColumn = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowTextEntry)) __obj.updateDynamic("allowTextEntry")(allowTextEntry.get.asInstanceOf[js.Any])
+    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
+    if (displayAs != null) __obj.updateDynamic("displayAs")(displayAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChoiceColumn]
   }
-  @scala.inline
-  implicit class ChoiceColumnOps[Self <: ChoiceColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowTextEntry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowTextEntry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextEntry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChoices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChoices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayAs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

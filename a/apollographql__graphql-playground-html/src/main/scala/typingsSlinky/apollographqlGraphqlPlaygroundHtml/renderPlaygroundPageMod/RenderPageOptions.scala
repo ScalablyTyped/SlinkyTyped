@@ -4,81 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RenderPageOptions extends MiddlewareOptions {
-  var cdnUrl: js.UndefOr[String] = js.native
-  var faviconUrl: js.UndefOr[String | Null] = js.native
-  var title: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
+  var cdnUrl: js.UndefOr[String] = js.undefined
+  var faviconUrl: js.UndefOr[String | Null] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object RenderPageOptions {
   @scala.inline
-  def apply(): RenderPageOptions = {
+  def apply(
+    cdnUrl: String = null,
+    codeTheme: EditorColours = null,
+    config: js.Any = null,
+    endpoint: String = null,
+    env: js.Any = null,
+    faviconUrl: js.UndefOr[Null | String] = js.undefined,
+    schema: IntrospectionResult = null,
+    settings: ISettings = null,
+    subscriptionEndpoint: String = null,
+    tabs: js.Array[Tab] = null,
+    title: String = null,
+    version: String = null,
+    workspaceName: String = null
+  ): RenderPageOptions = {
     val __obj = js.Dynamic.literal()
+    if (cdnUrl != null) __obj.updateDynamic("cdnUrl")(cdnUrl.asInstanceOf[js.Any])
+    if (codeTheme != null) __obj.updateDynamic("codeTheme")(codeTheme.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (!js.isUndefined(faviconUrl)) __obj.updateDynamic("faviconUrl")(faviconUrl.asInstanceOf[js.Any])
+    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
+    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
+    if (subscriptionEndpoint != null) __obj.updateDynamic("subscriptionEndpoint")(subscriptionEndpoint.asInstanceOf[js.Any])
+    if (tabs != null) __obj.updateDynamic("tabs")(tabs.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (workspaceName != null) __obj.updateDynamic("workspaceName")(workspaceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderPageOptions]
   }
-  @scala.inline
-  implicit class RenderPageOptionsOps[Self <: RenderPageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCdnUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdnUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdnUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdnUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaviconUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faviconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaviconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faviconUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaviconUrlNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faviconUrl")(null)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

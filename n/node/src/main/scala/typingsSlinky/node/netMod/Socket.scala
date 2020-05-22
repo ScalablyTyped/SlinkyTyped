@@ -1,6 +1,7 @@
 package typingsSlinky.node.netMod
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.anon.End
 import typingsSlinky.node.childProcessMod.SendHandle
@@ -70,10 +71,10 @@ class Socket ()
   def end(buffer: String, cb: js.Function0[Unit]): Unit = js.native
   def end(buffer: js.typedarray.Uint8Array): Unit = js.native
   def end(buffer: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: String, encoding: String): Unit = js.native
-  def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: js.typedarray.Uint8Array, encoding: String): Unit = js.native
-  def end(str: js.typedarray.Uint8Array, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: String, encoding: BufferEncoding): Unit = js.native
+  def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
   @JSName("on")
@@ -161,12 +162,12 @@ class Socket ()
   // Extended base methods
   def write(buffer: js.typedarray.Uint8Array): Boolean = js.native
   def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
-  def write(str: String, encoding: String): Boolean = js.native
-  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
-  def write(str: js.typedarray.Uint8Array, encoding: String): Boolean = js.native
+  def write(str: String, encoding: BufferEncoding): Boolean = js.native
+  def write(str: String, encoding: BufferEncoding, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
+  def write(str: js.typedarray.Uint8Array, encoding: BufferEncoding): Boolean = js.native
   def write(
     str: js.typedarray.Uint8Array,
-    encoding: String,
+    encoding: BufferEncoding,
     cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Boolean = js.native
 }

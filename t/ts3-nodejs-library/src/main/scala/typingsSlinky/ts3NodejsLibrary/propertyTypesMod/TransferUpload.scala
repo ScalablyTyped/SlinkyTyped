@@ -4,108 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransferUpload extends js.Object {
   /** channel id to upload to */
-  var cid: js.UndefOr[Double] = js.native
+  var cid: js.UndefOr[Double] = js.undefined
   /** arbitary id to identify the transfer */
-  var clientftfid: js.UndefOr[Double] = js.native
+  var clientftfid: js.UndefOr[Double] = js.undefined
   /** channel password of the channel which will be uploaded to */
-  var cpw: js.UndefOr[String] = js.native
+  var cpw: js.UndefOr[String] = js.undefined
   /** destination filename */
-  var name: String = js.native
+  var name: String
   /** overwrites an existing file */
-  var overwrite: js.UndefOr[Double] = js.native
-  var resume: js.UndefOr[Double] = js.native
+  var overwrite: js.UndefOr[Double] = js.undefined
+  var resume: js.UndefOr[Double] = js.undefined
   /** size of the file */
-  var size: Double = js.native
+  var size: Double
 }
 
 object TransferUpload {
   @scala.inline
-  def apply(name: String, size: Double): TransferUpload = {
+  def apply(
+    name: String,
+    size: Double,
+    cid: js.UndefOr[Double] = js.undefined,
+    clientftfid: js.UndefOr[Double] = js.undefined,
+    cpw: String = null,
+    overwrite: js.UndefOr[Double] = js.undefined,
+    resume: js.UndefOr[Double] = js.undefined
+  ): TransferUpload = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    if (!js.isUndefined(cid)) __obj.updateDynamic("cid")(cid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientftfid)) __obj.updateDynamic("clientftfid")(clientftfid.get.asInstanceOf[js.Any])
+    if (cpw != null) __obj.updateDynamic("cpw")(cpw.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resume)) __obj.updateDynamic("resume")(resume.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferUpload]
   }
-  @scala.inline
-  implicit class TransferUploadOps[Self <: TransferUpload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientftfid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientftfid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientftfid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpw(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwrite(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResume(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

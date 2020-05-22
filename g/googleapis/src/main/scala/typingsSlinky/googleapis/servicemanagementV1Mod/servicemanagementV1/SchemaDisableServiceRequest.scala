@@ -20,29 +20,10 @@ trait SchemaDisableServiceRequest extends js.Object {
 
 object SchemaDisableServiceRequest {
   @scala.inline
-  def apply(): SchemaDisableServiceRequest = {
+  def apply(consumerId: String = null): SchemaDisableServiceRequest = {
     val __obj = js.Dynamic.literal()
+    if (consumerId != null) __obj.updateDynamic("consumerId")(consumerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDisableServiceRequest]
   }
-  @scala.inline
-  implicit class SchemaDisableServiceRequestOps[Self <: SchemaDisableServiceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

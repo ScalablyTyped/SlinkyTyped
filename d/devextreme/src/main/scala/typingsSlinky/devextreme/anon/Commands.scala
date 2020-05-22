@@ -16,57 +16,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Commands extends js.Object {
   var commands: js.UndefOr[
     js.Array[
       cut | copy | paste | selectAll | delete | bringToFront | sendToBack | lock | unlock | insertShapeImage | editShapeImage | deleteShapeImage
     ]
-  ] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object Commands {
   @scala.inline
-  def apply(): Commands = {
+  def apply(
+    commands: js.Array[
+      cut | copy | paste | selectAll | delete | bringToFront | sendToBack | lock | unlock | insertShapeImage | editShapeImage | deleteShapeImage
+    ] = null,
+    enabled: js.UndefOr[Boolean] = js.undefined
+  ): Commands = {
     val __obj = js.Dynamic.literal()
+    if (commands != null) __obj.updateDynamic("commands")(commands.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Commands]
   }
-  @scala.inline
-  implicit class CommandsOps[Self <: Commands] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommands(
-      value: js.Array[
-          cut | copy | paste | selectAll | delete | bringToFront | sendToBack | lock | unlock | insertShapeImage | editShapeImage | deleteShapeImage
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommands: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

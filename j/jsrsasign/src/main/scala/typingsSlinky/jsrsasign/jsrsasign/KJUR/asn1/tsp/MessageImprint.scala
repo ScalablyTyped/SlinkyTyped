@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   * o = new KJUR.asn1.tsp.MessageImprint({hashAlg: 'sha1',
   *                                       hashValue: '1f3dea...'});
   */
-@js.native
 trait MessageImprint extends ASN1Object
 
 object MessageImprint {

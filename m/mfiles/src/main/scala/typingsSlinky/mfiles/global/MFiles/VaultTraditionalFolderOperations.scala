@@ -1,6 +1,7 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.ITraditionalFolderContents
 import typingsSlinky.mfiles.IVaultTraditionalFolderOperations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,10 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.VaultTraditionalFolderOperations")
 @js.native
-class VaultTraditionalFolderOperations () extends IVaultTraditionalFolderOperations
+class VaultTraditionalFolderOperations () extends IVaultTraditionalFolderOperations {
+  /* CompleteClass */
+  override def GetTraditionalFolderContents(Folder: Double): ITraditionalFolderContents = js.native
+}
 
 @JSGlobal("MFiles.VaultTraditionalFolderOperations")
 @js.native

@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictionaryformat extends js.Object {
-  var dictionary_format: js.UndefOr[String] = js.native
-  var dictionary_language: js.UndefOr[String] = js.native
-  var dictionary_locale: js.UndefOr[String] = js.native
-  var dictionary_path: js.UndefOr[String] = js.native
+  var dictionary_format: js.UndefOr[String] = js.undefined
+  var dictionary_language: js.UndefOr[String] = js.undefined
+  var dictionary_locale: js.UndefOr[String] = js.undefined
+  var dictionary_path: js.UndefOr[String] = js.undefined
 }
 
 object Dictionaryformat {
   @scala.inline
-  def apply(): Dictionaryformat = {
+  def apply(
+    dictionary_format: String = null,
+    dictionary_language: String = null,
+    dictionary_locale: String = null,
+    dictionary_path: String = null
+  ): Dictionaryformat = {
     val __obj = js.Dynamic.literal()
+    if (dictionary_format != null) __obj.updateDynamic("dictionary_format")(dictionary_format.asInstanceOf[js.Any])
+    if (dictionary_language != null) __obj.updateDynamic("dictionary_language")(dictionary_language.asInstanceOf[js.Any])
+    if (dictionary_locale != null) __obj.updateDynamic("dictionary_locale")(dictionary_locale.asInstanceOf[js.Any])
+    if (dictionary_path != null) __obj.updateDynamic("dictionary_path")(dictionary_path.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictionaryformat]
   }
-  @scala.inline
-  implicit class DictionaryformatOps[Self <: Dictionaryformat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDictionary_format(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary_format: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDictionary_language(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary_language: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDictionary_locale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary_locale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDictionary_path(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary_path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

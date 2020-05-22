@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DirectorySite extends js.Object {
   /** Whether this directory site is active. */
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /** Directory site contacts. */
-  var contactAssignments: js.UndefOr[js.Array[DirectorySiteContactAssignment]] = js.native
+  var contactAssignments: js.UndefOr[js.Array[DirectorySiteContactAssignment]] = js.undefined
   /** Country ID of this directory site. This is a read-only field. */
-  var countryId: js.UndefOr[String] = js.native
+  var countryId: js.UndefOr[String] = js.undefined
   /**
     * Currency ID of this directory site. This is a read-only field.
     * Possible values are:
@@ -64,13 +63,13 @@ trait DirectorySite extends js.Object {
     * - "48" for HRK
     * - "49" for MXN
     */
-  var currencyId: js.UndefOr[String] = js.native
+  var currencyId: js.UndefOr[String] = js.undefined
   /** Description of this directory site. This is a read-only field. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** ID of this directory site. This is a read-only, auto-generated field. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** Dimension value for the ID of this directory site. This is a read-only, auto-generated field. */
-  var idDimensionValue: js.UndefOr[DimensionValue] = js.native
+  var idDimensionValue: js.UndefOr[DimensionValue] = js.undefined
   /**
     * Tag types for regular placements.
     *
@@ -80,7 +79,7 @@ trait DirectorySite extends js.Object {
     * - "INTERNAL_REDIRECT_INPAGE"
     * - "JAVASCRIPT_INPAGE"
     */
-  var inpageTagFormats: js.UndefOr[js.Array[String]] = js.native
+  var inpageTagFormats: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Tag types for interstitial placements.
     *
@@ -89,200 +88,53 @@ trait DirectorySite extends js.Object {
     * - "INTERNAL_REDIRECT_INTERSTITIAL"
     * - "JAVASCRIPT_INTERSTITIAL"
     */
-  var interstitialTagFormats: js.UndefOr[js.Array[String]] = js.native
+  var interstitialTagFormats: js.UndefOr[js.Array[String]] = js.undefined
   /** Identifies what kind of resource this is. Value: the fixed string "dfareporting#directorySite". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** Name of this directory site. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** Parent directory site ID. */
-  var parentId: js.UndefOr[String] = js.native
+  var parentId: js.UndefOr[String] = js.undefined
   /** Directory site settings. */
-  var settings: js.UndefOr[DirectorySiteSettings] = js.native
+  var settings: js.UndefOr[DirectorySiteSettings] = js.undefined
   /** URL of this directory site. */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object DirectorySite {
   @scala.inline
-  def apply(): DirectorySite = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    contactAssignments: js.Array[DirectorySiteContactAssignment] = null,
+    countryId: String = null,
+    currencyId: String = null,
+    description: String = null,
+    id: String = null,
+    idDimensionValue: DimensionValue = null,
+    inpageTagFormats: js.Array[String] = null,
+    interstitialTagFormats: js.Array[String] = null,
+    kind: String = null,
+    name: String = null,
+    parentId: String = null,
+    settings: DirectorySiteSettings = null,
+    url: String = null
+  ): DirectorySite = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (contactAssignments != null) __obj.updateDynamic("contactAssignments")(contactAssignments.asInstanceOf[js.Any])
+    if (countryId != null) __obj.updateDynamic("countryId")(countryId.asInstanceOf[js.Any])
+    if (currencyId != null) __obj.updateDynamic("currencyId")(currencyId.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (idDimensionValue != null) __obj.updateDynamic("idDimensionValue")(idDimensionValue.asInstanceOf[js.Any])
+    if (inpageTagFormats != null) __obj.updateDynamic("inpageTagFormats")(inpageTagFormats.asInstanceOf[js.Any])
+    if (interstitialTagFormats != null) __obj.updateDynamic("interstitialTagFormats")(interstitialTagFormats.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (parentId != null) __obj.updateDynamic("parentId")(parentId.asInstanceOf[js.Any])
+    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectorySite]
   }
-  @scala.inline
-  implicit class DirectorySiteOps[Self <: DirectorySite] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContactAssignments(value: js.Array[DirectorySiteContactAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactAssignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContactAssignments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contactAssignments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrencyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrencyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInpageTagFormats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inpageTagFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInpageTagFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inpageTagFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterstitialTagFormats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interstitialTagFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterstitialTagFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interstitialTagFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettings(value: DirectorySiteSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

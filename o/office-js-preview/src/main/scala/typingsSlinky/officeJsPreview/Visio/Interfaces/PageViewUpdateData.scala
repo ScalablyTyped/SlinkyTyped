@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the PageView object, for use in "pageView.set({ ... })". */
-@js.native
 trait PageViewUpdateData extends js.Object {
   /**
     *
@@ -13,34 +12,15 @@ trait PageViewUpdateData extends js.Object {
     *
     * [Api set:  1.1]
     */
-  var zoom: js.UndefOr[Double] = js.native
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object PageViewUpdateData {
   @scala.inline
-  def apply(): PageViewUpdateData = {
+  def apply(zoom: js.UndefOr[Double] = js.undefined): PageViewUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageViewUpdateData]
   }
-  @scala.inline
-  implicit class PageViewUpdateDataOps[Self <: PageViewUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

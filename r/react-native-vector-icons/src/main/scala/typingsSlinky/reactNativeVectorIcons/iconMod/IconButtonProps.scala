@@ -1,14 +1,39 @@
 package typingsSlinky.reactNativeVectorIcons.iconMod
 
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.mod.AccessibilityActionInfo
+import typingsSlinky.reactNative.mod.AccessibilityRole
+import typingsSlinky.reactNative.mod.AccessibilityState
+import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.BackgroundPropType
 import typingsSlinky.reactNative.mod.Insets
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
+import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TargetedEvent
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackPropsIOS
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.assertive
+import typingsSlinky.reactNative.reactNativeStrings.auto
+import typingsSlinky.reactNative.reactNativeStrings.balanced
+import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.clip
+import typingsSlinky.reactNative.reactNativeStrings.head
+import typingsSlinky.reactNative.reactNativeStrings.highQuality
+import typingsSlinky.reactNative.reactNativeStrings.middle
+import typingsSlinky.reactNative.reactNativeStrings.no
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.polite
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.simple
+import typingsSlinky.reactNative.reactNativeStrings.tail
+import typingsSlinky.reactNative.reactNativeStrings.yes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,16 +42,15 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.reactNative.mod.AccessibilityPropsIOS because Already inherited
 - typingsSlinky.reactNative.mod.AccessibilityPropsAndroid because Already inherited
 - typingsSlinky.reactNative.mod.AccessibilityProps because Already inherited
-- typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityStates, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined delayLongPress, delayPressIn, delayPressOut, disabled, hitSlop, onBlur, onFocus, onPressIn, onPressOut, pressRetentionOffset
-- typingsSlinky.reactNative.mod.TouchableNativeFeedbackProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityStates, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined background, useForeground
-- typingsSlinky.reactNative.mod.TouchableHighlightProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityStates, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined activeOpacity, onHideUnderlay, onShowUnderlay, underlayColor */ @js.native
-trait IconButtonProps
+- typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined delayLongPress, delayPressIn, delayPressOut, disabled, hitSlop, onBlur, onFocus, onPressIn, onPressOut, pressRetentionOffset
+- typingsSlinky.reactNative.mod.TouchableNativeFeedbackProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined background, useForeground
+- typingsSlinky.reactNative.mod.TouchableHighlightProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined activeOpacity, onHideUnderlay, onShowUnderlay, underlayColor */ trait IconButtonProps
   extends IconProps
      with TouchableWithoutFeedbackPropsIOS {
   /**
     * Determines what the opacity of the wrapped view should be when touch is active.
     */
-  var activeOpacity: js.UndefOr[Double] = js.native
+  var activeOpacity: js.UndefOr[Double] = js.undefined
   /**
     * Determines the type of background drawable that's going to be used to display feedback.
     * It takes an object with type property and extra data depending on the type.
@@ -41,36 +65,36 @@ trait IconButtonProps
     *         outside of the view bounds (see native actionbar buttons as an example of that behavior). This background
     *         type is available on Android API level 21+
     */
-  var background: js.UndefOr[BackgroundPropType] = js.native
+  var background: js.UndefOr[BackgroundPropType] = js.undefined
   /**
     * Background color of the button
     *
     * @default '#007AFF'
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /**
     * Border radius of the button
     * Set to 0 to disable.
     *
     * @default 5
     */
-  var borderRadius: js.UndefOr[Double] = js.native
+  var borderRadius: js.UndefOr[Double] = js.undefined
   /**
     * Delay in ms, from onPressIn, before onLongPress is called.
     */
-  var delayLongPress: js.UndefOr[Double] = js.native
+  var delayLongPress: js.UndefOr[Double] = js.undefined
   /**
     * Delay in ms, from the start of the touch, before onPressIn is called.
     */
-  var delayPressIn: js.UndefOr[Double] = js.native
+  var delayPressIn: js.UndefOr[Double] = js.undefined
   /**
     * Delay in ms, from the release of the touch, before onPressOut is called.
     */
-  var delayPressOut: js.UndefOr[Double] = js.native
+  var delayPressOut: js.UndefOr[Double] = js.undefined
   /**
     * If true, disable all interactions for this component.
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * This defines how far your touch can start away from the button.
     * This is added to pressRetentionOffset when moving off of the button.
@@ -78,37 +102,37 @@ trait IconButtonProps
     * the Z-index of sibling views always takes precedence if a touch hits
     * two overlapping views.
     */
-  var hitSlop: js.UndefOr[Insets] = js.native
+  var hitSlop: js.UndefOr[Insets] = js.undefined
   /**
     * Styles applied to the icon only
     * Good for setting margins or a different color.
     *
     * @default {marginRight: 10}
     */
-  var iconStyle: js.UndefOr[TextStyle] = js.native
+  var iconStyle: js.UndefOr[TextStyle] = js.undefined
   /**
     * When `accessible` is true (which is the default) this may be called when
     * the OS-specific concept of "blur" occurs, meaning the element lost focus.
     * Some platforms may not have the concept of blur.
     */
-  var onBlur: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.undefined
   /**
     * When `accessible` is true (which is the default) this may be called when
     * the OS-specific concept of "focus" occurs. Some platforms may not have
     * the concept of focus.
     */
-  var onFocus: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.undefined
   /**
     *
     * Called immediately after the underlay is hidden
     */
-  var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
-  var onPressIn: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
-  var onPressOut: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onPressIn: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
+  var onPressOut: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.undefined
   /**
     * Called immediately after the underlay is shown
     */
-  var onShowUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
+  var onShowUnderlay: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * When the scroll view is disabled, this defines how far your
     * touch may move off of the button, before deactivating the button.
@@ -117,274 +141,144 @@ trait IconButtonProps
     * while the scroll view is disabled. Ensure you pass in a constant
     * to reduce memory allocations.
     */
-  var pressRetentionOffset: js.UndefOr[Insets] = js.native
+  var pressRetentionOffset: js.UndefOr[Insets] = js.undefined
   /**
     * Style prop inherited from TextProps and TouchableWithoutFeedbackProperties
     * Only exist here so we can have ViewStyle or TextStyle
     *
     */
   @JSName("style")
-  var style_IconButtonProps: js.UndefOr[ViewStyle | TextStyle] = js.native
+  var style_IconButtonProps: js.UndefOr[ViewStyle | TextStyle] = js.undefined
   /**
     * The color of the underlay that will show through when the touch is active.
     */
-  var underlayColor: js.UndefOr[String] = js.native
-  var useForeground: js.UndefOr[Boolean] = js.native
+  var underlayColor: js.UndefOr[String] = js.undefined
+  var useForeground: js.UndefOr[Boolean] = js.undefined
 }
 
 object IconButtonProps {
   @scala.inline
-  def apply(name: String): IconButtonProps = {
+  def apply(
+    name: String,
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
+    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
+    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
+    accessibilityHint: String = null,
+    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
+    accessibilityLabel: String = null,
+    accessibilityLiveRegion: none | polite | assertive = null,
+    accessibilityRole: AccessibilityRole = null,
+    accessibilityState: AccessibilityState = null,
+    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
+    accessibilityValue: AccessibilityValue = null,
+    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
+    accessible: js.UndefOr[Boolean] = js.undefined,
+    activeOpacity: js.UndefOr[Double] = js.undefined,
+    adjustsFontSizeToFit: js.UndefOr[Boolean] = js.undefined,
+    allowFontScaling: js.UndefOr[Boolean] = js.undefined,
+    background: BackgroundPropType = null,
+    backgroundColor: String = null,
+    borderRadius: js.UndefOr[Double] = js.undefined,
+    color: String = null,
+    delayLongPress: js.UndefOr[Double] = js.undefined,
+    delayPressIn: js.UndefOr[Double] = js.undefined,
+    delayPressOut: js.UndefOr[Double] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    ellipsizeMode: head | middle | tail | clip = null,
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Insets = null,
+    iconStyle: TextStyle = null,
+    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
+    lineBreakMode: head | middle | tail | clip = null,
+    maxFontSizeMultiplier: js.UndefOr[Null | Double] = js.undefined,
+    minimumFontScale: js.UndefOr[Double] = js.undefined,
+    nativeID: String = null,
+    numberOfLines: js.UndefOr[Double] = js.undefined,
+    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
+    onAccessibilityEscape: () => Unit = null,
+    onAccessibilityTap: () => Unit = null,
+    onBlur: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
+    onFocus: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
+    onHideUnderlay: () => Unit = null,
+    onLayout: /* event */ LayoutChangeEvent => Unit = null,
+    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onMagicTap: () => Unit = null,
+    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onShowUnderlay: () => Unit = null,
+    pressRetentionOffset: Insets = null,
+    selectable: js.UndefOr[Boolean] = js.undefined,
+    selectionColor: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    style: ViewStyle | TextStyle = null,
+    suppressHighlighting: js.UndefOr[Boolean] = js.undefined,
+    testID: String = null,
+    textBreakStrategy: simple | highQuality | balanced = null,
+    tvParallaxProperties: TVParallaxProperties = null,
+    underlayColor: String = null,
+    useForeground: js.UndefOr[Boolean] = js.undefined
+  ): IconButtonProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
+    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
+    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
+    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
+    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
+    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
+    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeOpacity)) __obj.updateDynamic("activeOpacity")(activeOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(adjustsFontSizeToFit)) __obj.updateDynamic("adjustsFontSizeToFit")(adjustsFontSizeToFit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowFontScaling)) __obj.updateDynamic("allowFontScaling")(allowFontScaling.get.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayLongPress)) __obj.updateDynamic("delayLongPress")(delayLongPress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayPressIn)) __obj.updateDynamic("delayPressIn")(delayPressIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayPressOut)) __obj.updateDynamic("delayPressOut")(delayPressOut.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (ellipsizeMode != null) __obj.updateDynamic("ellipsizeMode")(ellipsizeMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
+    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
+    if (lineBreakMode != null) __obj.updateDynamic("lineBreakMode")(lineBreakMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxFontSizeMultiplier)) __obj.updateDynamic("maxFontSizeMultiplier")(maxFontSizeMultiplier.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumFontScale)) __obj.updateDynamic("minimumFontScale")(minimumFontScale.get.asInstanceOf[js.Any])
+    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfLines)) __obj.updateDynamic("numberOfLines")(numberOfLines.get.asInstanceOf[js.Any])
+    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
+    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
+    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onHideUnderlay != null) __obj.updateDynamic("onHideUnderlay")(js.Any.fromFunction0(onHideUnderlay))
+    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
+    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
+    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
+    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction1(onPressIn))
+    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction1(onPressOut))
+    if (onShowUnderlay != null) __obj.updateDynamic("onShowUnderlay")(js.Any.fromFunction0(onShowUnderlay))
+    if (pressRetentionOffset != null) __obj.updateDynamic("pressRetentionOffset")(pressRetentionOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.get.asInstanceOf[js.Any])
+    if (selectionColor != null) __obj.updateDynamic("selectionColor")(selectionColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressHighlighting)) __obj.updateDynamic("suppressHighlighting")(suppressHighlighting.get.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (textBreakStrategy != null) __obj.updateDynamic("textBreakStrategy")(textBreakStrategy.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
+    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(useForeground)) __obj.updateDynamic("useForeground")(useForeground.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IconButtonProps]
   }
-  @scala.inline
-  implicit class IconButtonPropsOps[Self <: IconButtonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: BackgroundPropType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayLongPress(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayLongPress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayLongPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayLongPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayPressIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayPressIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayPressIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayPressIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelayPressOut(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayPressOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayPressOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayPressOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHitSlop(value: Insets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHitSlop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconStyle(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: SyntheticEvent[NodeHandle, TargetedEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: SyntheticEvent[NodeHandle, TargetedEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHideUnderlay(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideUnderlay")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHideUnderlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideUnderlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPressIn(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPressIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPressOut(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPressOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShowUnderlay(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowUnderlay")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShowUnderlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowUnderlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPressRetentionOffset(value: Insets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pressRetentionOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPressRetentionOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pressRetentionOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: ViewStyle | TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnderlayColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underlayColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnderlayColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underlayColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseForeground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useForeground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseForeground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useForeground")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

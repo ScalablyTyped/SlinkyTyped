@@ -18,16 +18,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ojRadiosetSettableProperties[K, D]
   extends editableValueSettableProperties[js.Any, js.Any, js.Any] {
-  var labelledBy: String | Null = js.native
-  var optionRenderer: js.UndefOr[(js.Function1[/* param0 */ OptionContext[D], Element]) | Null] = js.native
-  var options: (DataProvider[K, D]) | Null = js.native
-  var optionsKeys: js.UndefOr[OptionsKeys] = js.native
-  var required: Boolean = js.native
+  var labelledBy: String | Null
+  var optionRenderer: js.UndefOr[(js.Function1[/* param0 */ OptionContext[D], Element]) | Null] = js.undefined
+  var options: (DataProvider[K, D]) | Null
+  var optionsKeys: js.UndefOr[OptionsKeys] = js.undefined
+  var required: Boolean
   @JSName("translations")
-  var translations_ojRadiosetSettableProperties: Required = js.native
+  var translations_ojRadiosetSettableProperties: Required
 }
 
 object ojRadiosetSettableProperties {
@@ -42,84 +41,17 @@ object ojRadiosetSettableProperties {
     required: Boolean,
     translations: Required,
     valid: valid | pending | invalidHidden | invalidShown,
-    value: js.Any
+    value: js.Any,
+    describedBy: String = null,
+    labelledBy: String = null,
+    optionRenderer: js.UndefOr[Null | (/* param0 */ OptionContext[D] => Element)] = js.undefined,
+    options: DataProvider[K, D] = null,
+    optionsKeys: OptionsKeys = null
   ): ojRadiosetSettableProperties[K, D] = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], describedBy = describedBy.asInstanceOf[js.Any], labelledBy = labelledBy.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
+    if (!js.isUndefined(optionRenderer)) __obj.updateDynamic("optionRenderer")(if (optionRenderer != null) js.Any.fromFunction1(optionRenderer.asInstanceOf[/* param0 */ OptionContext[D] => Element]) else null)
+    if (optionsKeys != null) __obj.updateDynamic("optionsKeys")(optionsKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojRadiosetSettableProperties[K, D]]
   }
-  @scala.inline
-  implicit class ojRadiosetSettablePropertiesOps[Self[k, d] <: ojRadiosetSettableProperties[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
-    @scala.inline
-    def withRequired(value: Boolean): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: Required): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelledBy(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelledBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelledByNull: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelledBy")(null)
-        ret
-    }
-    @scala.inline
-    def withOptionRenderer(value: /* param0 */ OptionContext[D] => Element): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOptionRenderer: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionRendererNull: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionRenderer")(null)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: DataProvider[K, D]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionsNull: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(null)
-        ret
-    }
-    @scala.inline
-    def withOptionsKeys(value: OptionsKeys): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionsKeys: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

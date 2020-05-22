@@ -7,25 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OlkLabel extends js.Object {
-  var Accelerator: String = js.native
-  var AutoSize: Boolean = js.native
-  var BackColor: OLE_COLOR = js.native
-  var BackStyle: OlBackStyle = js.native
-  var BorderStyle: OlBorderStyle = js.native
-  var Caption: String = js.native
-  var Enabled: Boolean = js.native
-  val Font: StdFont = js.native
-  var ForeColor: OLE_COLOR = js.native
-  var MouseIcon: StdPicture = js.native
-  var MousePointer: OlMousePointer = js.native
+  var Accelerator: String
+  var AutoSize: Boolean
+  var BackColor: OLE_COLOR
+  var BackStyle: OlBackStyle
+  var BorderStyle: OlBorderStyle
+  var Caption: String
+  var Enabled: Boolean
+  val Font: StdFont
+  var ForeColor: OLE_COLOR
+  var MouseIcon: StdPicture
+  var MousePointer: OlMousePointer
   @JSName("Outlook.OlkLabel_typekey")
-  var OutlookDotOlkLabel_typekey: OlkLabel = js.native
-  var TextAlign: OlTextAlign = js.native
-  var UseHeaderColor: Boolean = js.native
-  var Value: js.Any = js.native
-  var WordWrap: Boolean = js.native
+  var OutlookDotOlkLabel_typekey: OlkLabel
+  var TextAlign: OlTextAlign
+  var UseHeaderColor: Boolean
+  var Value: js.Any
+  var WordWrap: Boolean
 }
 
 object OlkLabel {
@@ -52,109 +51,5 @@ object OlkLabel {
     __obj.updateDynamic("Outlook.OlkLabel_typekey")(OutlookDotOlkLabel_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlkLabel]
   }
-  @scala.inline
-  implicit class OlkLabelOps[Self <: OlkLabel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccelerator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Accelerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackStyle(value: OlBackStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderStyle(value: OlBorderStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BorderStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: StdFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseIcon(value: StdPicture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MouseIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMousePointer(value: OlMousePointer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MousePointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkLabel_typekey(value: OlkLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkLabel_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: OlTextAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseHeaderColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseHeaderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

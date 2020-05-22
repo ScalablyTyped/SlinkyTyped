@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Lit extends Node {
-  var Value: String = js.native
-  var ValueEnd: Pos = js.native
-  var ValuePos: Pos = js.native
+  var Value: String
+  var ValueEnd: Pos
+  var ValuePos: Pos
 }
 
 object Lit {
@@ -17,31 +16,5 @@ object Lit {
     val __obj = js.Dynamic.literal(End = js.Any.fromFunction0(End), Pos = js.Any.fromFunction0(Pos), Value = Value.asInstanceOf[js.Any], ValueEnd = ValueEnd.asInstanceOf[js.Any], ValuePos = ValuePos.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lit]
   }
-  @scala.inline
-  implicit class LitOps[Self <: Lit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueEnd(value: Pos): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValuePos(value: Pos): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValuePos")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

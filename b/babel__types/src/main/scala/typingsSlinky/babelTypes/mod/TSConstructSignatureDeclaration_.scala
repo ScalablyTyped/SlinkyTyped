@@ -6,67 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSConstructSignatureDeclaration_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSConstructSignatureDeclaration_
   extends TSTypeElement
      with BaseNode {
-  var parameters: js.Array[Identifier_ | RestElement_] = js.native
-  var typeAnnotation: TSTypeAnnotation_ | Null = js.native
-  var typeParameters: TSTypeParameterDeclaration_ | Null = js.native
+  var parameters: js.Array[Identifier_ | RestElement_]
+  var typeAnnotation: TSTypeAnnotation_ | Null
+  var typeParameters: TSTypeParameterDeclaration_ | Null
   @JSName("type")
-  var type_TSConstructSignatureDeclaration_ : TSConstructSignatureDeclaration = js.native
+  var type_TSConstructSignatureDeclaration_ : TSConstructSignatureDeclaration
 }
 
 object TSConstructSignatureDeclaration_ {
   @scala.inline
-  def apply(parameters: js.Array[Identifier_ | RestElement_], `type`: TSConstructSignatureDeclaration): TSConstructSignatureDeclaration_ = {
-    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
+  def apply(
+    parameters: js.Array[Identifier_ | RestElement_],
+    `type`: TSConstructSignatureDeclaration,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSTypeAnnotation_ = null,
+    typeParameters: TSTypeParameterDeclaration_ = null
+  ): TSConstructSignatureDeclaration_ = {
+    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSConstructSignatureDeclaration_]
   }
-  @scala.inline
-  implicit class TSConstructSignatureDeclaration_Ops[Self <: TSConstructSignatureDeclaration_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameters(value: js.Array[Identifier_ | RestElement_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSConstructSignatureDeclaration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotation(value: TSTypeAnnotation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TSTypeParameterDeclaration_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

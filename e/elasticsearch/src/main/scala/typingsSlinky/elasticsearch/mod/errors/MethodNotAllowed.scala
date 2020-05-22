@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("elasticsearch", "errors.MethodNotAllowed")
 @js.native
-class MethodNotAllowed () extends Error
+class MethodNotAllowed () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

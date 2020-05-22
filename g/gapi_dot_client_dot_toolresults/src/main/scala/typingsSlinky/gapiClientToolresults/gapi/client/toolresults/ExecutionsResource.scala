@@ -9,10 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExecutionsResource extends js.Object {
-  var clusters: ClustersResource = js.native
-  var steps: StepsResource = js.native
+  var clusters: ClustersResource
+  var steps: StepsResource
   /**
     * Creates an Execution.
     *
@@ -23,7 +22,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
     * containing History does not exist
     */
-  def create(request: QuotaUser): Request[Execution] = js.native
+  def create(request: QuotaUser): Request[Execution]
   /**
     * Gets an Execution.
     *
@@ -32,7 +31,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution
     * does not exist
     */
-  def get(request: ExecutionId): Request[Execution] = js.native
+  def get(request: ExecutionId): Request[Execution]
   /**
     * Lists Histories for a given Project.
     *
@@ -43,7 +42,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing
     * History does not exist
     */
-  def list(request: PageToken): Request[ListExecutionsResponse] = js.native
+  def list(request: PageToken): Request[ListExecutionsResponse]
   /**
     * Updates an existing Execution with the supplied partial entity.
     *
@@ -52,7 +51,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the
     * requested state transition is illegal - NOT_FOUND - if the containing History does not exist
     */
-  def patch(request: PrettyPrint): Request[Execution] = js.native
+  def patch(request: PrettyPrint): Request[Execution]
 }
 
 object ExecutionsResource {
@@ -68,49 +67,5 @@ object ExecutionsResource {
     val __obj = js.Dynamic.literal(clusters = clusters.asInstanceOf[js.Any], create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), steps = steps.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionsResource]
   }
-  @scala.inline
-  implicit class ExecutionsResourceOps[Self <: ExecutionsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusters(value: ClustersResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreate(value: QuotaUser => Request[Execution]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: ExecutionId => Request[Execution]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: PageToken => Request[ListExecutionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: PrettyPrint => Request[Execution]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSteps(value: StepsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

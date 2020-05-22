@@ -18,41 +18,14 @@ trait GetDevicePoolCompatibilityResult extends js.Object {
 
 object GetDevicePoolCompatibilityResult {
   @scala.inline
-  def apply(): GetDevicePoolCompatibilityResult = {
+  def apply(
+    compatibleDevices: DevicePoolCompatibilityResults = null,
+    incompatibleDevices: DevicePoolCompatibilityResults = null
+  ): GetDevicePoolCompatibilityResult = {
     val __obj = js.Dynamic.literal()
+    if (compatibleDevices != null) __obj.updateDynamic("compatibleDevices")(compatibleDevices.asInstanceOf[js.Any])
+    if (incompatibleDevices != null) __obj.updateDynamic("incompatibleDevices")(incompatibleDevices.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDevicePoolCompatibilityResult]
   }
-  @scala.inline
-  implicit class GetDevicePoolCompatibilityResultOps[Self <: GetDevicePoolCompatibilityResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompatibleDevices(value: DevicePoolCompatibilityResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatibleDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleDevices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncompatibleDevices(value: DevicePoolCompatibilityResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncompatibleDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleDevices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

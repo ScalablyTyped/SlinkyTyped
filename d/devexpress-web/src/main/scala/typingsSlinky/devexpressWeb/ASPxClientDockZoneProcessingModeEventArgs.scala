@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDockZone.AfterDock event.
   */
-@js.native
 trait ASPxClientDockZoneProcessingModeEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets the panel currently being processed.
     */
-  var panel: ASPxClientDockPanel = js.native
+  var panel: ASPxClientDockPanel
 }
 
 object ASPxClientDockZoneProcessingModeEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientDockZoneProcessingModeEventArgs {
     val __obj = js.Dynamic.literal(panel = panel.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientDockZoneProcessingModeEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientDockZoneProcessingModeEventArgsOps[Self <: ASPxClientDockZoneProcessingModeEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPanel(value: ASPxClientDockPanel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

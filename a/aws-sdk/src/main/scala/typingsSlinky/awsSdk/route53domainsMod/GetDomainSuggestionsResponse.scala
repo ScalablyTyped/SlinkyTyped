@@ -14,29 +14,10 @@ trait GetDomainSuggestionsResponse extends js.Object {
 
 object GetDomainSuggestionsResponse {
   @scala.inline
-  def apply(): GetDomainSuggestionsResponse = {
+  def apply(SuggestionsList: DomainSuggestionsList = null): GetDomainSuggestionsResponse = {
     val __obj = js.Dynamic.literal()
+    if (SuggestionsList != null) __obj.updateDynamic("SuggestionsList")(SuggestionsList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDomainSuggestionsResponse]
   }
-  @scala.inline
-  implicit class GetDomainSuggestionsResponseOps[Self <: GetDomainSuggestionsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuggestionsList(value: DomainSuggestionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestionsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestionsList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuggestionsList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

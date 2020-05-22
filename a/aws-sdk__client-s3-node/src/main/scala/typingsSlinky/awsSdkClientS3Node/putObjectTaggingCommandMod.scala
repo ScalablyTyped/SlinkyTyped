@@ -27,10 +27,17 @@ object putObjectTaggingCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutObjectTaggingInput) = this()
+    /* CompleteClass */
+    override val input: PutObjectTaggingInput = js.native
     val middlewareStack: MiddlewareStack[PutObjectTaggingInput, PutObjectTaggingOutput, Readable] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[PutObjectTaggingInput, PutObjectTaggingOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[PutObjectTaggingInput, PutObjectTaggingOutput] = js.native
   }

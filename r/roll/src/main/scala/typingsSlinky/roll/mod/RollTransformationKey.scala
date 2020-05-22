@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.roll.rollStrings.`best-of`
   - typingsSlinky.roll.rollStrings.`worst-of`
 */
-trait RollTransformationKey extends RollTransformation
+trait RollTransformationKey extends js.Object
 
 object RollTransformationKey {
   @scala.inline

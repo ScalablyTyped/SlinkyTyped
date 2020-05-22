@@ -7,44 +7,43 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of a tab control's BootstrapTab or a page control's BootstrapTabPage object.
   */
-@js.native
 trait BootstrapClientTab extends ASPxClientTab {
   /**
     * Gets the CSS class of an icon displayed by the tab when it is active.
     */
-  def GetActiveIconCssClass(): String = js.native
+  def GetActiveIconCssClass(): String
   /**
     * Gets the CSS class of the icon displayed within the tab badge.
     */
-  def GetBadgeIconCssClass(): String = js.native
+  def GetBadgeIconCssClass(): String
   /**
     * Gets the text displayed within the tab badge.
     */
-  def GetBadgeText(): String = js.native
+  def GetBadgeText(): String
   /**
     * Gets the CSS class of the icon displayed by the tab.
     */
-  def GetIconCssClass(): String = js.native
+  def GetIconCssClass(): String
   /**
     * Sets the CSS class of an icon displayed by the tab when it is active.
     * @param cssClass A String containing the name of a CSS class.
     */
-  def SetActiveIconCssClass(cssClass: String): Unit = js.native
+  def SetActiveIconCssClass(cssClass: String): Unit
   /**
     * Sets the CSS class of the icon displayed within the tab badge.
     * @param cssClass A string containing the name of a CSS class.
     */
-  def SetBadgeIconCssClass(cssClass: String): Unit = js.native
+  def SetBadgeIconCssClass(cssClass: String): Unit
   /**
     * Sets the text displayed within the tab badge.
     * @param text A String specifying the badge text.
     */
-  def SetBadgeText(text: String): Unit = js.native
+  def SetBadgeText(text: String): Unit
   /**
     * Sets the CSS class of the icon displayed by the tab.
     * @param cssClass A string containing the name of a CSS class.
     */
-  def SetIconCssClass(cssClass: String): Unit = js.native
+  def SetIconCssClass(cssClass: String): Unit
 }
 
 object BootstrapClientTab {
@@ -77,61 +76,5 @@ object BootstrapClientTab {
     val __obj = js.Dynamic.literal(GetActiveIconCssClass = js.Any.fromFunction0(GetActiveIconCssClass), GetActiveImageUrl = js.Any.fromFunction0(GetActiveImageUrl), GetBadgeIconCssClass = js.Any.fromFunction0(GetBadgeIconCssClass), GetBadgeText = js.Any.fromFunction0(GetBadgeText), GetEnabled = js.Any.fromFunction0(GetEnabled), GetIconCssClass = js.Any.fromFunction0(GetIconCssClass), GetImageUrl = js.Any.fromFunction0(GetImageUrl), GetNavigateUrl = js.Any.fromFunction0(GetNavigateUrl), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), SetActiveIconCssClass = js.Any.fromFunction1(SetActiveIconCssClass), SetActiveImageUrl = js.Any.fromFunction1(SetActiveImageUrl), SetBadgeIconCssClass = js.Any.fromFunction1(SetBadgeIconCssClass), SetBadgeText = js.Any.fromFunction1(SetBadgeText), SetEnabled = js.Any.fromFunction1(SetEnabled), SetIconCssClass = js.Any.fromFunction1(SetIconCssClass), SetImageUrl = js.Any.fromFunction1(SetImageUrl), SetNavigateUrl = js.Any.fromFunction1(SetNavigateUrl), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), index = index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tabControl = tabControl.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapClientTab]
   }
-  @scala.inline
-  implicit class BootstrapClientTabOps[Self <: BootstrapClientTab] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetActiveIconCssClass(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetActiveIconCssClass")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetBadgeIconCssClass(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBadgeIconCssClass")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetBadgeText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBadgeText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIconCssClass(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIconCssClass")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetActiveIconCssClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetActiveIconCssClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetBadgeIconCssClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetBadgeIconCssClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetBadgeText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetBadgeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIconCssClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIconCssClass")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

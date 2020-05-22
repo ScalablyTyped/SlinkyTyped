@@ -4,49 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InitCoordsPayload extends js.Object {
-  var clientOffset: XYCoord | Null = js.native
-  var sourceClientOffset: XYCoord | Null = js.native
+  var clientOffset: XYCoord | Null
+  var sourceClientOffset: XYCoord | Null
 }
 
 object InitCoordsPayload {
   @scala.inline
-  def apply(): InitCoordsPayload = {
-    val __obj = js.Dynamic.literal()
+  def apply(clientOffset: XYCoord = null, sourceClientOffset: XYCoord = null): InitCoordsPayload = {
+    val __obj = js.Dynamic.literal(clientOffset = clientOffset.asInstanceOf[js.Any], sourceClientOffset = sourceClientOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitCoordsPayload]
   }
-  @scala.inline
-  implicit class InitCoordsPayloadOps[Self <: InitCoordsPayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientOffset(value: XYCoord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientOffsetNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientOffset")(null)
-        ret
-    }
-    @scala.inline
-    def withSourceClientOffset(value: XYCoord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceClientOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceClientOffsetNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceClientOffset")(null)
-        ret
-    }
-  }
-  
 }
 

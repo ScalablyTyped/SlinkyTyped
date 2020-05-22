@@ -54,6 +54,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.numberPlussigndelta
 import typingsSlinky.plotlyJs.plotlyJsStrings.outside
 import typingsSlinky.plotlyJs.plotlyJsStrings.percent
 import typingsSlinky.plotlyJs.plotlyJsStrings.points
+import typingsSlinky.plotlyJs.plotlyJsStrings.remainder
 import typingsSlinky.plotlyJs.plotlyJsStrings.sd
 import typingsSlinky.plotlyJs.plotlyJsStrings.skip
 import typingsSlinky.plotlyJs.plotlyJsStrings.spline
@@ -68,6 +69,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.tonext
 import typingsSlinky.plotlyJs.plotlyJsStrings.tonextx
 import typingsSlinky.plotlyJs.plotlyJsStrings.tonexty
 import typingsSlinky.plotlyJs.plotlyJsStrings.toself
+import typingsSlinky.plotlyJs.plotlyJsStrings.total
 import typingsSlinky.plotlyJs.plotlyJsStrings.tozerox
 import typingsSlinky.plotlyJs.plotlyJsStrings.tozeroy
 import typingsSlinky.plotlyJs.plotlyJsStrings.v
@@ -109,1292 +111,303 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.PlotData> */
-@js.native
 trait PartialPlotData extends js.Object {
-  var autobinx: js.UndefOr[Boolean] = js.native
-  var boxmean: js.UndefOr[Boolean | sd] = js.native
-  var colorscale: js.UndefOr[ColorScale] = js.native
-  var connectgaps: js.UndefOr[Boolean] = js.native
-  var customdata: js.UndefOr[js.Array[Datum]] = js.native
-  var delta: js.UndefOr[PartialDelta] = js.native
-  var direction: js.UndefOr[clockwise | counterclockwise] = js.native
-  var domain: js.UndefOr[Partialrowsnumbercolumnsn] = js.native
-  var error_x: js.UndefOr[ErrorBar] = js.native
-  var error_y: js.UndefOr[ErrorBar] = js.native
-  var fill: js.UndefOr[none | tozeroy | tozerox | tonexty | tonextx | toself | tonext] = js.native
-  var fillcolor: js.UndefOr[String] = js.native
-  var gauge: js.UndefOr[PartialGaugeAxis] = js.native
-  var hole: js.UndefOr[Double] = js.native
+  var autobinx: js.UndefOr[Boolean] = js.undefined
+  var boxmean: js.UndefOr[Boolean | sd] = js.undefined
+  var branchvalues: js.UndefOr[total | remainder] = js.undefined
+  var colorscale: js.UndefOr[ColorScale] = js.undefined
+  var connectgaps: js.UndefOr[Boolean] = js.undefined
+  var customdata: js.UndefOr[js.Array[Datum]] = js.undefined
+  var delta: js.UndefOr[PartialDelta] = js.undefined
+  var direction: js.UndefOr[clockwise | counterclockwise] = js.undefined
+  var domain: js.UndefOr[Partialrowsnumbercolumnsn] = js.undefined
+  var error_x: js.UndefOr[ErrorBar] = js.undefined
+  var error_y: js.UndefOr[ErrorBar] = js.undefined
+  var fill: js.UndefOr[none | tozeroy | tozerox | tonexty | tonextx | toself | tonext] = js.undefined
+  var fillcolor: js.UndefOr[String] = js.undefined
+  var gauge: js.UndefOr[PartialGaugeAxis] = js.undefined
+  var hole: js.UndefOr[Double] = js.undefined
   var hoverinfo: js.UndefOr[
     all | name | none | skip | text | x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
-  ] = js.native
-  var hoverlabel: js.UndefOr[PartialHoverLabel] = js.native
-  var hoveron: js.UndefOr[points | fills] = js.native
-  var hovertemplate: js.UndefOr[String | js.Array[String]] = js.native
-  var hovertext: js.UndefOr[String | js.Array[String]] = js.native
-  var labels: js.UndefOr[js.Array[Datum]] = js.native
-  var legendgroup: js.UndefOr[String] = js.native
-  var line: js.UndefOr[PartialScatterLine] = js.native
+  ] = js.undefined
+  var hoverlabel: js.UndefOr[PartialHoverLabel] = js.undefined
+  var hoveron: js.UndefOr[points | fills] = js.undefined
+  var hovertemplate: js.UndefOr[String | js.Array[String]] = js.undefined
+  var hovertext: js.UndefOr[String | js.Array[String]] = js.undefined
+  var labels: js.UndefOr[js.Array[Datum]] = js.undefined
+  var lat: js.UndefOr[js.Array[Datum]] = js.undefined
+  var legendgroup: js.UndefOr[String] = js.undefined
+  var line: js.UndefOr[PartialScatterLine] = js.undefined
   @JSName("line.color")
-  var lineDotcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
+  var lineDotcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
   @JSName("line.dash")
-  var lineDotdash: js.UndefOr[Dash] = js.native
+  var lineDotdash: js.UndefOr[Dash] = js.undefined
   @JSName("line.shape")
-  var lineDotshape: js.UndefOr[linear | spline | hv | vh | hvh | vhv] = js.native
+  var lineDotshape: js.UndefOr[linear | spline | hv | vh | hvh | vhv] = js.undefined
   @JSName("line.simplify")
-  var lineDotsimplify: js.UndefOr[Boolean] = js.native
+  var lineDotsimplify: js.UndefOr[Boolean] = js.undefined
   @JSName("line.smoothing")
-  var lineDotsmoothing: js.UndefOr[Double] = js.native
+  var lineDotsmoothing: js.UndefOr[Double] = js.undefined
   @JSName("line.width")
-  var lineDotwidth: js.UndefOr[Double] = js.native
-  var marker: js.UndefOr[PartialPlotMarker] = js.native
+  var lineDotwidth: js.UndefOr[Double] = js.undefined
+  var lon: js.UndefOr[js.Array[Datum]] = js.undefined
+  var marker: js.UndefOr[PartialPlotMarker] = js.undefined
   @JSName("marker.color")
-  var markerDotcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
+  var markerDotcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
   @JSName("marker.colorbar")
-  var markerDotcolorbar: js.UndefOr[js.Object] = js.native
+  var markerDotcolorbar: js.UndefOr[js.Object] = js.undefined
   @JSName("marker.colorscale")
-  var markerDotcolorscale: js.UndefOr[ColorScale | js.Array[ColorScale]] = js.native
+  var markerDotcolorscale: js.UndefOr[ColorScale | js.Array[ColorScale]] = js.undefined
   @JSName("marker.line")
-  var markerDotline: js.UndefOr[PartialScatterMarkerLine] = js.native
+  var markerDotline: js.UndefOr[PartialScatterMarkerLine] = js.undefined
   @JSName("marker.line.color")
-  var markerDotlineDotcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
+  var markerDotlineDotcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.undefined
   @JSName("marker.line.colorscale")
-  var markerDotlineDotcolorscale: js.UndefOr[ColorScale | js.Array[ColorScale]] = js.native
+  var markerDotlineDotcolorscale: js.UndefOr[ColorScale | js.Array[ColorScale]] = js.undefined
   @JSName("marker.maxdisplayed")
-  var markerDotmaxdisplayed: js.UndefOr[Double] = js.native
+  var markerDotmaxdisplayed: js.UndefOr[Double] = js.undefined
   @JSName("marker.opacity")
-  var markerDotopacity: js.UndefOr[Double | js.Array[Double]] = js.native
+  var markerDotopacity: js.UndefOr[Double | js.Array[Double]] = js.undefined
   @JSName("marker.pad.b")
-  var markerDotpadDotb: js.UndefOr[Double] = js.native
+  var markerDotpadDotb: js.UndefOr[Double] = js.undefined
   @JSName("marker.pad.l")
-  var markerDotpadDotl: js.UndefOr[Double] = js.native
+  var markerDotpadDotl: js.UndefOr[Double] = js.undefined
   @JSName("marker.pad.r")
-  var markerDotpadDotr: js.UndefOr[Double] = js.native
+  var markerDotpadDotr: js.UndefOr[Double] = js.undefined
   @JSName("marker.pad.t")
-  var markerDotpadDott: js.UndefOr[Double] = js.native
+  var markerDotpadDott: js.UndefOr[Double] = js.undefined
   @JSName("marker.showscale")
-  var markerDotshowscale: js.UndefOr[Boolean] = js.native
+  var markerDotshowscale: js.UndefOr[Boolean] = js.undefined
   @JSName("marker.size")
-  var markerDotsize: js.UndefOr[Double | (js.Array[js.Array[Double] | Double])] = js.native
+  var markerDotsize: js.UndefOr[Double | (js.Array[js.Array[Double] | Double])] = js.undefined
   @JSName("marker.sizemax")
-  var markerDotsizemax: js.UndefOr[Double] = js.native
+  var markerDotsizemax: js.UndefOr[Double] = js.undefined
   @JSName("marker.sizemin")
-  var markerDotsizemin: js.UndefOr[Double] = js.native
+  var markerDotsizemin: js.UndefOr[Double] = js.undefined
   @JSName("marker.sizemode")
-  var markerDotsizemode: js.UndefOr[diameter | area] = js.native
+  var markerDotsizemode: js.UndefOr[diameter | area] = js.undefined
   @JSName("marker.sizeref")
-  var markerDotsizeref: js.UndefOr[Double] = js.native
+  var markerDotsizeref: js.UndefOr[Double] = js.undefined
   @JSName("marker.symbol")
-  var markerDotsymbol: js.UndefOr[MarkerSymbol | js.Array[MarkerSymbol]] = js.native
+  var markerDotsymbol: js.UndefOr[MarkerSymbol | js.Array[MarkerSymbol]] = js.undefined
   var mode: js.UndefOr[
     lines | markers | text | linesPlussignmarkers | textPlussignmarkers | textPlussignlines | textPlussignlinesPlussignmarkers | none | gauge | number | delta | numberPlussigndelta | gaugePlussignnumber | gaugePlussignnumberPlussigndelta | gaugePlussigndelta
-  ] = js.native
-  var name: js.UndefOr[String] = js.native
-  var number: js.UndefOr[PartialPlotNumber] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var orientation: js.UndefOr[v | h] = js.native
-  var parents: js.UndefOr[js.Array[String]] = js.native
-  var r: js.UndefOr[js.Array[Datum]] = js.native
-  var rotation: js.UndefOr[Double] = js.native
-  var showlegend: js.UndefOr[Boolean] = js.native
-  var showscale: js.UndefOr[Boolean] = js.native
-  var stackgroup: js.UndefOr[String] = js.native
-  var text: js.UndefOr[String | js.Array[String]] = js.native
-  var textfont: js.UndefOr[PartialFont] = js.native
+  ] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var number: js.UndefOr[PartialPlotNumber] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var orientation: js.UndefOr[v | h] = js.undefined
+  var parents: js.UndefOr[js.Array[String]] = js.undefined
+  var r: js.UndefOr[js.Array[Datum]] = js.undefined
+  var rotation: js.UndefOr[Double] = js.undefined
+  var showlegend: js.UndefOr[Boolean] = js.undefined
+  var showscale: js.UndefOr[Boolean] = js.undefined
+  var stackgroup: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String | js.Array[String]] = js.undefined
+  var textfont: js.UndefOr[PartialFont] = js.undefined
   var textinfo: js.UndefOr[
     label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none
-  ] = js.native
+  ] = js.undefined
   var textposition: js.UndefOr[
     (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside
-  ] = js.native
-  var theta: js.UndefOr[js.Array[Datum]] = js.native
-  var title: js.UndefOr[PartialDataTitle] = js.native
-  var transforms: js.UndefOr[js.Array[DataTransform]] = js.native
-  var transpose: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[PlotType] = js.native
-  var value: js.UndefOr[Double] = js.native
-  var values: js.UndefOr[js.Array[Datum]] = js.native
-  var visible: js.UndefOr[Boolean | legendonly] = js.native
-  var width: js.UndefOr[Double | js.Array[Double]] = js.native
-  var x: js.UndefOr[(js.Array[js.Array[Datum] | Datum]) | TypedArray] = js.native
-  var xaxis: js.UndefOr[String] = js.native
-  var xbins: js.UndefOr[End] = js.native
-  var xgap: js.UndefOr[Double] = js.native
-  var xy: js.UndefOr[js.typedarray.Float32Array] = js.native
-  var y: js.UndefOr[(js.Array[js.Array[Datum] | Datum]) | TypedArray] = js.native
-  var yaxis: js.UndefOr[String] = js.native
-  var ygap: js.UndefOr[Double] = js.native
-  var z: js.UndefOr[(js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray] = js.native
-  var zsmooth: js.UndefOr[fast | best | `false`] = js.native
+  ] = js.undefined
+  var theta: js.UndefOr[js.Array[Datum]] = js.undefined
+  var title: js.UndefOr[PartialDataTitle] = js.undefined
+  var transforms: js.UndefOr[js.Array[DataTransform]] = js.undefined
+  var transpose: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[PlotType] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
+  var values: js.UndefOr[js.Array[Datum]] = js.undefined
+  var visible: js.UndefOr[Boolean | legendonly] = js.undefined
+  var width: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var x: js.UndefOr[(js.Array[js.Array[Datum] | Datum]) | TypedArray] = js.undefined
+  var xaxis: js.UndefOr[String] = js.undefined
+  var xbins: js.UndefOr[End] = js.undefined
+  var xgap: js.UndefOr[Double] = js.undefined
+  var xy: js.UndefOr[js.typedarray.Float32Array] = js.undefined
+  var y: js.UndefOr[(js.Array[js.Array[Datum] | Datum]) | TypedArray] = js.undefined
+  var yaxis: js.UndefOr[String] = js.undefined
+  var ygap: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[(js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray] = js.undefined
+  var zsmooth: js.UndefOr[fast | best | `false`] = js.undefined
 }
 
 object PartialPlotData {
   @scala.inline
-  def apply(): PartialPlotData = {
+  def apply(
+    autobinx: js.UndefOr[Boolean] = js.undefined,
+    boxmean: Boolean | sd = null,
+    branchvalues: total | remainder = null,
+    colorscale: ColorScale = null,
+    connectgaps: js.UndefOr[Boolean] = js.undefined,
+    customdata: js.Array[Datum] = null,
+    delta: PartialDelta = null,
+    direction: clockwise | counterclockwise = null,
+    domain: Partialrowsnumbercolumnsn = null,
+    error_x: ErrorBar = null,
+    error_y: ErrorBar = null,
+    fill: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext = null,
+    fillcolor: String = null,
+    gauge: PartialGaugeAxis = null,
+    hole: js.UndefOr[Double] = js.undefined,
+    hoverinfo: all | name | none | skip | text | x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname = null,
+    hoverlabel: PartialHoverLabel = null,
+    hoveron: points | fills = null,
+    hovertemplate: String | js.Array[String] = null,
+    hovertext: String | js.Array[String] = null,
+    labels: js.Array[Datum] = null,
+    lat: js.Array[Datum] = null,
+    legendgroup: String = null,
+    line: PartialScatterLine = null,
+    lineDotcolor: typingsSlinky.plotlyJs.mod.Color = null,
+    lineDotdash: Dash = null,
+    lineDotshape: linear | spline | hv | vh | hvh | vhv = null,
+    lineDotsimplify: js.UndefOr[Boolean] = js.undefined,
+    lineDotsmoothing: js.UndefOr[Double] = js.undefined,
+    lineDotwidth: js.UndefOr[Double] = js.undefined,
+    lon: js.Array[Datum] = null,
+    marker: PartialPlotMarker = null,
+    markerDotcolor: typingsSlinky.plotlyJs.mod.Color = null,
+    markerDotcolorbar: js.Object = null,
+    markerDotcolorscale: ColorScale | js.Array[ColorScale] = null,
+    markerDotline: PartialScatterMarkerLine = null,
+    markerDotlineDotcolor: typingsSlinky.plotlyJs.mod.Color = null,
+    markerDotlineDotcolorscale: ColorScale | js.Array[ColorScale] = null,
+    markerDotmaxdisplayed: js.UndefOr[Double] = js.undefined,
+    markerDotopacity: Double | js.Array[Double] = null,
+    markerDotpadDotb: js.UndefOr[Double] = js.undefined,
+    markerDotpadDotl: js.UndefOr[Double] = js.undefined,
+    markerDotpadDotr: js.UndefOr[Double] = js.undefined,
+    markerDotpadDott: js.UndefOr[Double] = js.undefined,
+    markerDotshowscale: js.UndefOr[Boolean] = js.undefined,
+    markerDotsize: Double | (js.Array[js.Array[Double] | Double]) = null,
+    markerDotsizemax: js.UndefOr[Double] = js.undefined,
+    markerDotsizemin: js.UndefOr[Double] = js.undefined,
+    markerDotsizemode: diameter | area = null,
+    markerDotsizeref: js.UndefOr[Double] = js.undefined,
+    markerDotsymbol: MarkerSymbol | js.Array[MarkerSymbol] = null,
+    mode: lines | markers | text | linesPlussignmarkers | textPlussignmarkers | textPlussignlines | textPlussignlinesPlussignmarkers | none | gauge | number | delta | numberPlussigndelta | gaugePlussignnumber | gaugePlussignnumberPlussigndelta | gaugePlussigndelta = null,
+    name: String = null,
+    number: PartialPlotNumber = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    orientation: v | h = null,
+    parents: js.Array[String] = null,
+    r: js.Array[Datum] = null,
+    rotation: js.UndefOr[Double] = js.undefined,
+    showlegend: js.UndefOr[Boolean] = js.undefined,
+    showscale: js.UndefOr[Boolean] = js.undefined,
+    stackgroup: String = null,
+    text: String | js.Array[String] = null,
+    textfont: PartialFont = null,
+    textinfo: label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none = null,
+    textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside = null,
+    theta: js.Array[Datum] = null,
+    title: PartialDataTitle = null,
+    transforms: js.Array[DataTransform] = null,
+    transpose: js.UndefOr[Boolean] = js.undefined,
+    `type`: PlotType = null,
+    value: js.UndefOr[Double] = js.undefined,
+    values: js.Array[Datum] = null,
+    visible: Boolean | legendonly = null,
+    width: Double | js.Array[Double] = null,
+    x: (js.Array[js.Array[Datum] | Datum]) | TypedArray = null,
+    xaxis: String = null,
+    xbins: End = null,
+    xgap: js.UndefOr[Double] = js.undefined,
+    xy: js.typedarray.Float32Array = null,
+    y: (js.Array[js.Array[Datum] | Datum]) | TypedArray = null,
+    yaxis: String = null,
+    ygap: js.UndefOr[Double] = js.undefined,
+    z: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray = null,
+    zsmooth: fast | best | `false` = null
+  ): PartialPlotData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autobinx)) __obj.updateDynamic("autobinx")(autobinx.get.asInstanceOf[js.Any])
+    if (boxmean != null) __obj.updateDynamic("boxmean")(boxmean.asInstanceOf[js.Any])
+    if (branchvalues != null) __obj.updateDynamic("branchvalues")(branchvalues.asInstanceOf[js.Any])
+    if (colorscale != null) __obj.updateDynamic("colorscale")(colorscale.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectgaps)) __obj.updateDynamic("connectgaps")(connectgaps.get.asInstanceOf[js.Any])
+    if (customdata != null) __obj.updateDynamic("customdata")(customdata.asInstanceOf[js.Any])
+    if (delta != null) __obj.updateDynamic("delta")(delta.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (error_x != null) __obj.updateDynamic("error_x")(error_x.asInstanceOf[js.Any])
+    if (error_y != null) __obj.updateDynamic("error_y")(error_y.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (fillcolor != null) __obj.updateDynamic("fillcolor")(fillcolor.asInstanceOf[js.Any])
+    if (gauge != null) __obj.updateDynamic("gauge")(gauge.asInstanceOf[js.Any])
+    if (!js.isUndefined(hole)) __obj.updateDynamic("hole")(hole.get.asInstanceOf[js.Any])
+    if (hoverinfo != null) __obj.updateDynamic("hoverinfo")(hoverinfo.asInstanceOf[js.Any])
+    if (hoverlabel != null) __obj.updateDynamic("hoverlabel")(hoverlabel.asInstanceOf[js.Any])
+    if (hoveron != null) __obj.updateDynamic("hoveron")(hoveron.asInstanceOf[js.Any])
+    if (hovertemplate != null) __obj.updateDynamic("hovertemplate")(hovertemplate.asInstanceOf[js.Any])
+    if (hovertext != null) __obj.updateDynamic("hovertext")(hovertext.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (lat != null) __obj.updateDynamic("lat")(lat.asInstanceOf[js.Any])
+    if (legendgroup != null) __obj.updateDynamic("legendgroup")(legendgroup.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (lineDotcolor != null) __obj.updateDynamic("line.color")(lineDotcolor.asInstanceOf[js.Any])
+    if (lineDotdash != null) __obj.updateDynamic("line.dash")(lineDotdash.asInstanceOf[js.Any])
+    if (lineDotshape != null) __obj.updateDynamic("line.shape")(lineDotshape.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineDotsimplify)) __obj.updateDynamic("line.simplify")(lineDotsimplify.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineDotsmoothing)) __obj.updateDynamic("line.smoothing")(lineDotsmoothing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineDotwidth)) __obj.updateDynamic("line.width")(lineDotwidth.get.asInstanceOf[js.Any])
+    if (lon != null) __obj.updateDynamic("lon")(lon.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (markerDotcolor != null) __obj.updateDynamic("marker.color")(markerDotcolor.asInstanceOf[js.Any])
+    if (markerDotcolorbar != null) __obj.updateDynamic("marker.colorbar")(markerDotcolorbar.asInstanceOf[js.Any])
+    if (markerDotcolorscale != null) __obj.updateDynamic("marker.colorscale")(markerDotcolorscale.asInstanceOf[js.Any])
+    if (markerDotline != null) __obj.updateDynamic("marker.line")(markerDotline.asInstanceOf[js.Any])
+    if (markerDotlineDotcolor != null) __obj.updateDynamic("marker.line.color")(markerDotlineDotcolor.asInstanceOf[js.Any])
+    if (markerDotlineDotcolorscale != null) __obj.updateDynamic("marker.line.colorscale")(markerDotlineDotcolorscale.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotmaxdisplayed)) __obj.updateDynamic("marker.maxdisplayed")(markerDotmaxdisplayed.get.asInstanceOf[js.Any])
+    if (markerDotopacity != null) __obj.updateDynamic("marker.opacity")(markerDotopacity.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotpadDotb)) __obj.updateDynamic("marker.pad.b")(markerDotpadDotb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotpadDotl)) __obj.updateDynamic("marker.pad.l")(markerDotpadDotl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotpadDotr)) __obj.updateDynamic("marker.pad.r")(markerDotpadDotr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotpadDott)) __obj.updateDynamic("marker.pad.t")(markerDotpadDott.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotshowscale)) __obj.updateDynamic("marker.showscale")(markerDotshowscale.get.asInstanceOf[js.Any])
+    if (markerDotsize != null) __obj.updateDynamic("marker.size")(markerDotsize.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotsizemax)) __obj.updateDynamic("marker.sizemax")(markerDotsizemax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotsizemin)) __obj.updateDynamic("marker.sizemin")(markerDotsizemin.get.asInstanceOf[js.Any])
+    if (markerDotsizemode != null) __obj.updateDynamic("marker.sizemode")(markerDotsizemode.asInstanceOf[js.Any])
+    if (!js.isUndefined(markerDotsizeref)) __obj.updateDynamic("marker.sizeref")(markerDotsizeref.get.asInstanceOf[js.Any])
+    if (markerDotsymbol != null) __obj.updateDynamic("marker.symbol")(markerDotsymbol.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (parents != null) __obj.updateDynamic("parents")(parents.asInstanceOf[js.Any])
+    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showlegend)) __obj.updateDynamic("showlegend")(showlegend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showscale)) __obj.updateDynamic("showscale")(showscale.get.asInstanceOf[js.Any])
+    if (stackgroup != null) __obj.updateDynamic("stackgroup")(stackgroup.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (textfont != null) __obj.updateDynamic("textfont")(textfont.asInstanceOf[js.Any])
+    if (textinfo != null) __obj.updateDynamic("textinfo")(textinfo.asInstanceOf[js.Any])
+    if (textposition != null) __obj.updateDynamic("textposition")(textposition.asInstanceOf[js.Any])
+    if (theta != null) __obj.updateDynamic("theta")(theta.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (transforms != null) __obj.updateDynamic("transforms")(transforms.asInstanceOf[js.Any])
+    if (!js.isUndefined(transpose)) __obj.updateDynamic("transpose")(transpose.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (visible != null) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+    if (xaxis != null) __obj.updateDynamic("xaxis")(xaxis.asInstanceOf[js.Any])
+    if (xbins != null) __obj.updateDynamic("xbins")(xbins.asInstanceOf[js.Any])
+    if (!js.isUndefined(xgap)) __obj.updateDynamic("xgap")(xgap.get.asInstanceOf[js.Any])
+    if (xy != null) __obj.updateDynamic("xy")(xy.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
+    if (yaxis != null) __obj.updateDynamic("yaxis")(yaxis.asInstanceOf[js.Any])
+    if (!js.isUndefined(ygap)) __obj.updateDynamic("ygap")(ygap.get.asInstanceOf[js.Any])
+    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
+    if (zsmooth != null) __obj.updateDynamic("zsmooth")(zsmooth.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPlotData]
   }
-  @scala.inline
-  implicit class PartialPlotDataOps[Self <: PartialPlotData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutobinx(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autobinx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutobinx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autobinx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxmean(value: Boolean | sd): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxmean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxmean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxmean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorscale(value: ColorScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectgaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectgaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectgaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectgaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomdata(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customdata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomdata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customdata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelta(value: PartialDelta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: clockwise | counterclockwise): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: Partialrowsnumbercolumnsn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError_x(value: ErrorBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_x: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError_y(value: ErrorBar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_y: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFill(value: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFill: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillcolor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillcolor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillcolor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGauge(value: PartialGaugeAxis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gauge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGauge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gauge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHole(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverinfo(
-      value: all | name | none | skip | text | typingsSlinky.plotlyJs.plotlyJsStrings.x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverinfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverinfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverinfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverlabel(value: PartialHoverLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverlabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverlabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverlabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoveron(value: points | fills): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveron")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoveron: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveron")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHovertemplate(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hovertemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHovertemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hovertemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHovertext(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hovertext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHovertext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hovertext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendgroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendgroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendgroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: PartialScatterLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDotcolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDotcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDotdash(value: Dash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.dash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDotdash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.dash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDotshape(value: linear | spline | hv | vh | hvh | vhv): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDotshape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDotsimplify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.simplify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDotsimplify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.simplify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDotsmoothing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.smoothing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDotsmoothing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.smoothing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineDotwidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineDotwidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line.width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: PartialPlotMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotcolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotcolorbar(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.colorbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotcolorbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.colorbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotcolorscale(value: ColorScale | js.Array[ColorScale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.colorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotcolorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.colorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotline(value: PartialScatterMarkerLine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotlineDotcolor(value: typingsSlinky.plotlyJs.mod.Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.line.color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotlineDotcolor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.line.color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotlineDotcolorscale(value: ColorScale | js.Array[ColorScale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.line.colorscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotlineDotcolorscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.line.colorscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotmaxdisplayed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.maxdisplayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotmaxdisplayed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.maxdisplayed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotopacity(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotopacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotpadDotb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotpadDotb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.b")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotpadDotl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.l")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotpadDotl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.l")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotpadDotr(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotpadDotr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.r")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotpadDott(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.t")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotpadDott: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.pad.t")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotshowscale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.showscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotshowscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.showscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotsize(value: Double | (js.Array[js.Array[Double] | Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotsize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotsizemax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizemax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotsizemax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizemax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotsizemin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizemin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotsizemin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizemin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotsizemode(value: diameter | area): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizemode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotsizemode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizemode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotsizeref(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizeref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotsizeref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.sizeref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkerDotsymbol(value: MarkerSymbol | js.Array[MarkerSymbol]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkerDotsymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker.symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(
-      value: lines | markers | text | linesPlussignmarkers | textPlussignmarkers | textPlussignlines | textPlussignlinesPlussignmarkers | none | gauge | number | delta | numberPlussigndelta | gaugePlussignnumber | gaugePlussignnumberPlussigndelta | gaugePlussigndelta
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: PartialPlotNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: v | h): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParents(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withR(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutR: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowlegend(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showlegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowlegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showlegend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowscale(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackgroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackgroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackgroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackgroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextfont(value: PartialFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textfont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextfont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textfont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextinfo(
-      value: label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textinfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextinfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textinfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextposition(
-      value: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheta(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: PartialDataTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransforms(value: js.Array[DataTransform]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranspose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranspose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: PlotType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Array[Datum]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean | legendonly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXInt8Array(value: js.typedarray.Int8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: (js.Array[js.Array[Datum] | Datum]) | TypedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXUint16Array(value: js.typedarray.Uint16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXInt16Array(value: js.typedarray.Int16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXFloat64Array(value: js.typedarray.Float64Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXFloat32Array(value: js.typedarray.Float32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXInt32Array(value: js.typedarray.Int32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXUint32Array(value: js.typedarray.Uint32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXaxis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xaxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXaxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xaxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXbins(value: End): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xbins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXbins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xbins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXgap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xgap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXgap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xgap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXy(value: js.typedarray.Float32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYUint32Array(value: js.typedarray.Uint32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: (js.Array[js.Array[Datum] | Datum]) | TypedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYInt8Array(value: js.typedarray.Int8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYFloat64Array(value: js.typedarray.Float64Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYInt32Array(value: js.typedarray.Int32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYFloat32Array(value: js.typedarray.Float32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYInt16Array(value: js.typedarray.Int16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYUint16Array(value: js.typedarray.Uint16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYaxis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yaxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYaxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yaxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYgap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ygap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYgap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ygap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZInt8Array(value: js.typedarray.Int8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZ(value: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZFloat64Array(value: js.typedarray.Float64Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZInt32Array(value: js.typedarray.Int32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZFloat32Array(value: js.typedarray.Float32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZUint16Array(value: js.typedarray.Uint16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZInt16Array(value: js.typedarray.Int16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZUint32Array(value: js.typedarray.Uint32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZsmooth(value: fast | best | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zsmooth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZsmooth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zsmooth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

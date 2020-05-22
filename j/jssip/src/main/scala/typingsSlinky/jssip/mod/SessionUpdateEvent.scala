@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SessionUpdateEvent extends js.Object {
-  var request: IncomingRequest = js.native
-  def callback(): Unit = js.native
-  def reject(options: SessionRejectOptions): Unit = js.native
+  var request: IncomingRequest
+  def callback(): Unit
+  def reject(options: SessionRejectOptions): Unit
 }
 
 object SessionUpdateEvent {
@@ -17,31 +16,5 @@ object SessionUpdateEvent {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction0(callback), reject = js.Any.fromFunction1(reject), request = request.asInstanceOf[js.Any])
     __obj.asInstanceOf[SessionUpdateEvent]
   }
-  @scala.inline
-  implicit class SessionUpdateEventOps[Self <: SessionUpdateEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReject(value: SessionRejectOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reject")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequest(value: IncomingRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

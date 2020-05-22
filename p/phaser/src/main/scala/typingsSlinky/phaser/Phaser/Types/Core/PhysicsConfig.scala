@@ -1,93 +1,34 @@
 package typingsSlinky.phaser.Phaser.Types.Core
 
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeWorldConfig
-import typingsSlinky.phaser.Phaser.Types.Physics.Impact.WorldConfig
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterWorldConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PhysicsConfig extends js.Object {
   /**
     * Arcade Physics configuration.
     */
-  var arcade: js.UndefOr[ArcadeWorldConfig] = js.native
+  var arcade: js.UndefOr[ArcadeWorldConfig] = js.undefined
   /**
     * The default physics system. It will be started for each scene. Phaser provides 'arcade', 'impact', and 'matter'.
     */
-  var default: js.UndefOr[String] = js.native
-  /**
-    * Impact Physics configuration.
-    */
-  var impact: js.UndefOr[WorldConfig] = js.native
+  var default: js.UndefOr[String] = js.undefined
   /**
     * Matter Physics configuration.
     */
-  var matter: js.UndefOr[MatterWorldConfig] = js.native
+  var matter: js.UndefOr[MatterWorldConfig] = js.undefined
 }
 
 object PhysicsConfig {
   @scala.inline
-  def apply(): PhysicsConfig = {
+  def apply(arcade: ArcadeWorldConfig = null, default: String = null, matter: MatterWorldConfig = null): PhysicsConfig = {
     val __obj = js.Dynamic.literal()
+    if (arcade != null) __obj.updateDynamic("arcade")(arcade.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (matter != null) __obj.updateDynamic("matter")(matter.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhysicsConfig]
   }
-  @scala.inline
-  implicit class PhysicsConfigOps[Self <: PhysicsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArcade(value: ArcadeWorldConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArcade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arcade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpact(value: WorldConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatter(value: MatterWorldConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

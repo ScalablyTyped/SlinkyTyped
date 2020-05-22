@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SIZE extends js.Object {
-  var auto: typingsSlinky.baseui.baseuiStrings.auto = js.native
-  var default: default_ = js.native
-  var full: typingsSlinky.baseui.baseuiStrings.full = js.native
+  var auto: typingsSlinky.baseui.baseuiStrings.auto
+  var default: default_
+  var full: typingsSlinky.baseui.baseuiStrings.full
 }
 
 @JSImport("baseui/drawer", "SIZE")

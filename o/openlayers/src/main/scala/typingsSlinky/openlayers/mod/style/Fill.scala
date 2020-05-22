@@ -31,13 +31,12 @@ class Fill () extends js.Object {
     * @api
     */
   def getColor(): Color_ | ColorLike_ = js.native
-  def setColor(color: ColorLike_): Unit = js.native
   /**
     * Set the color.
     *
     * @param color Color.
     * @api
     */
-  def setColor(color: Color_): Unit = js.native
+  def setColor(color: ColorLike_ | Color_): Unit = js.native
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MessageID extends js.Object {
-  var messageID: String = js.native
+  var messageID: String
 }
 
 object MessageID {
@@ -15,19 +14,5 @@ object MessageID {
     val __obj = js.Dynamic.literal(messageID = messageID.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageID]
   }
-  @scala.inline
-  implicit class MessageIDOps[Self <: MessageID] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,65 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IosCustomConfiguration extends DeviceConfiguration {
   // Payload. (UTF8 encoded byte array)
-  var payload: js.UndefOr[Double] = js.native
+  var payload: js.UndefOr[Double] = js.undefined
   // Payload file name (.mobileconfig
-  var payloadFileName: js.UndefOr[String] = js.native
+  var payloadFileName: js.UndefOr[String] = js.undefined
   // Name that is displayed to the user.
-  var payloadName: js.UndefOr[String] = js.native
+  var payloadName: js.UndefOr[String] = js.undefined
 }
 
 object IosCustomConfiguration {
   @scala.inline
-  def apply(): IosCustomConfiguration = {
+  def apply(
+    assignments: js.Array[DeviceConfigurationAssignment] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
+    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
+    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
+    displayName: String = null,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    payload: js.UndefOr[Double] = js.undefined,
+    payloadFileName: String = null,
+    payloadName: String = null,
+    userStatusOverview: DeviceConfigurationUserOverview = null,
+    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): IosCustomConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
+    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(payload)) __obj.updateDynamic("payload")(payload.get.asInstanceOf[js.Any])
+    if (payloadFileName != null) __obj.updateDynamic("payloadFileName")(payloadFileName.asInstanceOf[js.Any])
+    if (payloadName != null) __obj.updateDynamic("payloadName")(payloadName.asInstanceOf[js.Any])
+    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IosCustomConfiguration]
   }
-  @scala.inline
-  implicit class IosCustomConfigurationOps[Self <: IosCustomConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayload(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadFileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

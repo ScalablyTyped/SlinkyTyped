@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateQueueOptions extends BaseOptions {
   /**
   		 * *(Default: 0)*
@@ -14,7 +13,7 @@ trait CreateQueueOptions extends BaseOptions {
   		 * @type {number}
   		 * @memberof CreateQueueOptions
   		 */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
   		 * *(Default: 65536)*
   		 * The maximum message size in bytes.
@@ -23,7 +22,7 @@ trait CreateQueueOptions extends BaseOptions {
   		 * @type {number}
   		 * @memberof CreateQueueOptions
   		 */
-  var maxsize: js.UndefOr[Double] = js.native
+  var maxsize: js.UndefOr[Double] = js.undefined
   /**
   		 * *(Default: 30)*
   		 * The length of time, in seconds, that a message received from a queue will
@@ -33,58 +32,22 @@ trait CreateQueueOptions extends BaseOptions {
   		 * @type {number}
   		 * @memberof CreateQueueOptions
   		 */
-  var vt: js.UndefOr[Double] = js.native
+  var vt: js.UndefOr[Double] = js.undefined
 }
 
 object CreateQueueOptions {
   @scala.inline
-  def apply(qname: String): CreateQueueOptions = {
+  def apply(
+    qname: String,
+    delay: js.UndefOr[Double] = js.undefined,
+    maxsize: js.UndefOr[Double] = js.undefined,
+    vt: js.UndefOr[Double] = js.undefined
+  ): CreateQueueOptions = {
     val __obj = js.Dynamic.literal(qname = qname.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxsize)) __obj.updateDynamic("maxsize")(maxsize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vt)) __obj.updateDynamic("vt")(vt.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateQueueOptions]
   }
-  @scala.inline
-  implicit class CreateQueueOptionsOps[Self <: CreateQueueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxsize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxsize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxsize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxsize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

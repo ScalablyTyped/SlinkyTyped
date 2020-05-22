@@ -26,53 +26,16 @@ trait SchemaWorkerMessageResponse extends js.Object {
 
 object SchemaWorkerMessageResponse {
   @scala.inline
-  def apply(): SchemaWorkerMessageResponse = {
+  def apply(
+    workerHealthReportResponse: SchemaWorkerHealthReportResponse = null,
+    workerMetricsResponse: SchemaResourceUtilizationReportResponse = null,
+    workerShutdownNoticeResponse: SchemaWorkerShutdownNoticeResponse = null
+  ): SchemaWorkerMessageResponse = {
     val __obj = js.Dynamic.literal()
+    if (workerHealthReportResponse != null) __obj.updateDynamic("workerHealthReportResponse")(workerHealthReportResponse.asInstanceOf[js.Any])
+    if (workerMetricsResponse != null) __obj.updateDynamic("workerMetricsResponse")(workerMetricsResponse.asInstanceOf[js.Any])
+    if (workerShutdownNoticeResponse != null) __obj.updateDynamic("workerShutdownNoticeResponse")(workerShutdownNoticeResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkerMessageResponse]
   }
-  @scala.inline
-  implicit class SchemaWorkerMessageResponseOps[Self <: SchemaWorkerMessageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkerHealthReportResponse(value: SchemaWorkerHealthReportResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHealthReportResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerHealthReportResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHealthReportResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerMetricsResponse(value: SchemaResourceUtilizationReportResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMetricsResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerMetricsResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMetricsResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerShutdownNoticeResponse(value: SchemaWorkerShutdownNoticeResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerShutdownNoticeResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerShutdownNoticeResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerShutdownNoticeResponse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -37,65 +37,18 @@ trait SchemaClickThroughUrl extends js.Object {
 
 object SchemaClickThroughUrl {
   @scala.inline
-  def apply(): SchemaClickThroughUrl = {
+  def apply(
+    computedClickThroughUrl: String = null,
+    customClickThroughUrl: String = null,
+    defaultLandingPage: js.UndefOr[Boolean] = js.undefined,
+    landingPageId: String = null
+  ): SchemaClickThroughUrl = {
     val __obj = js.Dynamic.literal()
+    if (computedClickThroughUrl != null) __obj.updateDynamic("computedClickThroughUrl")(computedClickThroughUrl.asInstanceOf[js.Any])
+    if (customClickThroughUrl != null) __obj.updateDynamic("customClickThroughUrl")(customClickThroughUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultLandingPage)) __obj.updateDynamic("defaultLandingPage")(defaultLandingPage.get.asInstanceOf[js.Any])
+    if (landingPageId != null) __obj.updateDynamic("landingPageId")(landingPageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClickThroughUrl]
   }
-  @scala.inline
-  implicit class SchemaClickThroughUrlOps[Self <: SchemaClickThroughUrl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComputedClickThroughUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computedClickThroughUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputedClickThroughUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computedClickThroughUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomClickThroughUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customClickThroughUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomClickThroughUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customClickThroughUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLandingPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLandingPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLandingPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLandingPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLandingPageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landingPageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLandingPageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landingPageId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

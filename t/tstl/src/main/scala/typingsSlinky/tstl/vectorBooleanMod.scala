@@ -87,24 +87,10 @@ object vectorBooleanMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[Boolean, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Boolean, VectorBoolean, Iterator, ReverseIterator, Boolean] = js.native
-    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Boolean, VectorBoolean, Iterator, ReverseIterator, Boolean] = js.native
     /**
       * Erase elements in range.
       *
@@ -136,27 +122,6 @@ object vectorBooleanMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def front(`val`: Boolean): Unit = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* InferMemberOverrides */
-    override def push_back(`val`: Boolean): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator = js.native
     /**
       * Swap elements.
       *

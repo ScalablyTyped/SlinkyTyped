@@ -8,62 +8,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditPolyVerticesEditOptions extends js.Object {
-  var drawError: js.UndefOr[DrawErrorOptions] = js.native
-  var icon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.native
-  var touchIcon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.native
+  var drawError: js.UndefOr[DrawErrorOptions] = js.undefined
+  var icon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.undefined
+  var touchIcon: js.UndefOr[Icon_[IconOptions] | DivIcon_] = js.undefined
 }
 
 object EditPolyVerticesEditOptions {
   @scala.inline
-  def apply(): EditPolyVerticesEditOptions = {
+  def apply(
+    drawError: DrawErrorOptions = null,
+    icon: Icon_[IconOptions] | DivIcon_ = null,
+    touchIcon: Icon_[IconOptions] | DivIcon_ = null
+  ): EditPolyVerticesEditOptions = {
     val __obj = js.Dynamic.literal()
+    if (drawError != null) __obj.updateDynamic("drawError")(drawError.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (touchIcon != null) __obj.updateDynamic("touchIcon")(touchIcon.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditPolyVerticesEditOptions]
   }
-  @scala.inline
-  implicit class EditPolyVerticesEditOptionsOps[Self <: EditPolyVerticesEditOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDrawError(value: DrawErrorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: Icon_[IconOptions] | DivIcon_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouchIcon(value: Icon_[IconOptions] | DivIcon_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouchIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touchIcon")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

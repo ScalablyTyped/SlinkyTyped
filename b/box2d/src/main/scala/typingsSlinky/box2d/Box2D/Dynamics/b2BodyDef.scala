@@ -5,67 +5,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2BodyDef extends js.Object {
   /**
-  		* Does this body start out active?
-  		**/
-  var active: Boolean = js.native
+    * Does this body start out active?
+    **/
+  var active: Boolean
   /**
-  		* Set this flag to false if this body should never fall asleep. Note that this increases CPU usage.
-  		**/
-  var allowSleep: Boolean = js.native
+    * Set this flag to false if this body should never fall asleep. Note that this increases CPU usage.
+    **/
+  var allowSleep: Boolean
   /**
-  		* The world angle of the body in radians.
-  		**/
-  var angle: Double = js.native
+    * The world angle of the body in radians.
+    **/
+  var angle: Double
   /**
-  		* Angular damping is use to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.
-  		**/
-  var angularDamping: Double = js.native
+    * Angular damping is use to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.
+    **/
+  var angularDamping: Double
   /**
-  		* The angular velocity of the body.
-  		**/
-  var angularVelocity: Double = js.native
+    * The angular velocity of the body.
+    **/
+  var angularVelocity: Double
   /**
-  		* Is this body initially awake or sleeping?
-  		**/
-  var awake: Boolean = js.native
+    * Is this body initially awake or sleeping?
+    **/
+  var awake: Boolean
   /**
-  		* Is this a fast moving body that should be prevented from tunneling through other moving bodies? Note that all bodies are prevented from tunneling through static bodies.
-  		* @warning You should use this flag sparingly since it increases processing time.
-  		**/
-  var bullet: Boolean = js.native
+    * Is this a fast moving body that should be prevented from tunneling through other moving bodies? Note that all bodies are prevented from tunneling through static bodies.
+    * @warning You should use this flag sparingly since it increases processing time.
+    **/
+  var bullet: Boolean
   /**
-  		* Should this body be prevented from rotating? Useful for characters.
-  		**/
-  var fixedRotation: Boolean = js.native
+    * Should this body be prevented from rotating? Useful for characters.
+    **/
+  var fixedRotation: Boolean
   /**
-  		* Scales the inertia tensor.
-  		* @warning Experimental
-  		**/
-  var inertiaScale: Double = js.native
+    * Scales the inertia tensor.
+    * @warning Experimental
+    **/
+  var inertiaScale: Double
   /**
-  		* Linear damping is use to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.
-  		**/
-  var linearDamping: Double = js.native
+    * Linear damping is use to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.
+    **/
+  var linearDamping: Double
   /**
-  		* The linear velocity of the body's origin in world co-ordinates.
-  		**/
-  var linearVelocity: b2Vec2 = js.native
+    * The linear velocity of the body's origin in world co-ordinates.
+    **/
+  var linearVelocity: b2Vec2
   /**
-  		* The world position of the body. Avoid creating bodies at the origin since this can lead to many overlapping shapes.
-  		**/
-  var position: b2Vec2 = js.native
+    * The world position of the body. Avoid creating bodies at the origin since this can lead to many overlapping shapes.
+    **/
+  var position: b2Vec2
   /**
-  		* The body type: static, kinematic, or dynamic. A member of the b2BodyType class .
-  		* @note If a dynamic body would have zero mass, the mass is set to one.
-  		**/
-  var `type`: Double = js.native
+    * The body type: static, kinematic, or dynamic. A member of the b2BodyType class .
+    * @note If a dynamic body would have zero mass, the mass is set to one.
+    **/
+  var `type`: Double
   /**
-  		* Use this to store application specific body data.
-  		**/
-  var userData: js.Any = js.native
+    * Use this to store application specific body data.
+    **/
+  var userData: js.Any
 }
 
 object b2BodyDef {
@@ -90,97 +89,5 @@ object b2BodyDef {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2BodyDef]
   }
-  @scala.inline
-  implicit class b2BodyDefOps[Self <: b2BodyDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowSleep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSleep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngularDamping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularDamping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAngularVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAwake(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awake")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBullet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFixedRotation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInertiaScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inertiaScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearDamping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearDamping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLinearVelocity(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

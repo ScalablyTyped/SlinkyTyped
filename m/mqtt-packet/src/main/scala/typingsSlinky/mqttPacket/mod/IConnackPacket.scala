@@ -6,60 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IConnackPacket
   extends IPacket
      with Packet {
   @JSName("cmd")
-  var cmd_IConnackPacket: connack = js.native
-  var properties: js.UndefOr[AssignedClientIdentifier] = js.native
-  var returnCode: Double = js.native
-  var sessionPresent: Boolean = js.native
+  var cmd_IConnackPacket: connack
+  var properties: js.UndefOr[AssignedClientIdentifier] = js.undefined
+  var returnCode: Double
+  var sessionPresent: Boolean
 }
 
 object IConnackPacket {
   @scala.inline
-  def apply(cmd: connack, returnCode: Double, sessionPresent: Boolean): IConnackPacket = {
+  def apply(
+    cmd: connack,
+    returnCode: Double,
+    sessionPresent: Boolean,
+    length: js.UndefOr[Double] = js.undefined,
+    messageId: js.UndefOr[Double] = js.undefined,
+    properties: AssignedClientIdentifier = null
+  ): IConnackPacket = {
     val __obj = js.Dynamic.literal(cmd = cmd.asInstanceOf[js.Any], returnCode = returnCode.asInstanceOf[js.Any], sessionPresent = sessionPresent.asInstanceOf[js.Any])
+    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageId)) __obj.updateDynamic("messageId")(messageId.get.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConnackPacket]
   }
-  @scala.inline
-  implicit class IConnackPacketOps[Self <: IConnackPacket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCmd(value: connack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturnCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessionPresent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionPresent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: AssignedClientIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

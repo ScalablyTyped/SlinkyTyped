@@ -29,5 +29,5 @@ trait NodeCollection
      with NodeCollectionPosition
      with NodeCollectionTraversing
      with NodeCollectionCompound
-     with CollectionArgument
+     with _CollectionArgument
 

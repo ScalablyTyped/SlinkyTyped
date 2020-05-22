@@ -10,6 +10,7 @@ package object mod {
   type DateTimeFormatOptions = typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatOptions
   type DateTimeFormatResult = typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult
   type DateTimeFormats = typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormats
+  type FallbackLocale = typingsSlinky.vueI18n.mod.VueI18n.FallbackLocale
   type Formatter = typingsSlinky.vueI18n.mod.VueI18n.Formatter
   type I18nOptions = typingsSlinky.vueI18n.mod.VueI18n.I18nOptions
   type IntlAvailability = typingsSlinky.vueI18n.mod.VueI18n.IntlAvailability
@@ -25,6 +26,7 @@ package object mod {
   type NumberFormatToPartsResult = typingsSlinky.vueI18n.mod.VueI18n.NumberFormatToPartsResult
   type NumberFormats = typingsSlinky.vueI18n.mod.VueI18n.NumberFormats
   type Path = typingsSlinky.vueI18n.mod.VueI18n.Path
+  type PostTranslationHandler = typingsSlinky.vueI18n.mod.VueI18n.PostTranslationHandler
   type TranslateResult = typingsSlinky.vueI18n.mod.VueI18n.TranslateResult
   type Values = typingsSlinky.vueI18n.mod.VueI18n.Values
   type VueI18n = typingsSlinky.vueI18n.mod.VueI18n_

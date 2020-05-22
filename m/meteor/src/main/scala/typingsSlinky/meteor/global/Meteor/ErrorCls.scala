@@ -14,5 +14,11 @@ class ErrorCls protected ()
   def this(error: Double, reason: String) = this()
   def this(error: String, reason: String, details: String) = this()
   def this(error: Double, reason: String, details: String) = this()
+  /* CompleteClass */
+  override var error: String | Double = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

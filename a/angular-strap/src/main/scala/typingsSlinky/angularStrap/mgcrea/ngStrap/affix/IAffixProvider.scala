@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAffixProvider extends js.Object {
-  var defaults: IAffixOptions = js.native
+  var defaults: IAffixOptions
 }
 
 object IAffixProvider {
@@ -15,19 +14,5 @@ object IAffixProvider {
     val __obj = js.Dynamic.literal(defaults = defaults.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAffixProvider]
   }
-  @scala.inline
-  implicit class IAffixProviderOps[Self <: IAffixProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaults(value: IAffixOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

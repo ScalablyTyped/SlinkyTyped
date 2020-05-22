@@ -18,35 +18,10 @@ trait BatchGetWorkflowsRequest extends js.Object {
 
 object BatchGetWorkflowsRequest {
   @scala.inline
-  def apply(Names: WorkflowNames): BatchGetWorkflowsRequest = {
+  def apply(Names: WorkflowNames, IncludeGraph: js.UndefOr[NullableBoolean] = js.undefined): BatchGetWorkflowsRequest = {
     val __obj = js.Dynamic.literal(Names = Names.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeGraph)) __obj.updateDynamic("IncludeGraph")(IncludeGraph.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetWorkflowsRequest]
   }
-  @scala.inline
-  implicit class BatchGetWorkflowsRequestOps[Self <: BatchGetWorkflowsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNames(value: WorkflowNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeGraph(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeGraph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeGraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeGraph")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

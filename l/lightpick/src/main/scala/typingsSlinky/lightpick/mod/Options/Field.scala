@@ -474,10 +474,7 @@ trait Field extends js.Object {
   var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null = js.native
   var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null = js.native
   var outerHTML: String = js.native
-  /**
-    * Returns the node document. Returns null for documents.
-    */
-  val ownerDocument: Document | Null = js.native
+  val ownerDocument: Document = js.native
   /**
     * Returns the parent element.
     */

@@ -22,53 +22,11 @@ trait PublishRequest extends js.Object {
 
 object PublishRequest {
   @scala.inline
-  def apply(topic: Topic): PublishRequest = {
+  def apply(topic: Topic, payload: Payload = null, qos: js.UndefOr[Qos] = js.undefined): PublishRequest = {
     val __obj = js.Dynamic.literal(topic = topic.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (!js.isUndefined(qos)) __obj.updateDynamic("qos")(qos.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublishRequest]
   }
-  @scala.inline
-  implicit class PublishRequestOps[Self <: PublishRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTopic(value: Topic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayloadUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPayload(value: Payload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQos(value: Qos): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qos")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

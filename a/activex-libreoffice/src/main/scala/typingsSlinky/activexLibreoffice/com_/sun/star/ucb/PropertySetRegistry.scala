@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service contains the interfaces to implement by objects returned by XPropertySetRegistryFactory::createRegistry(). */
-@js.native
 trait PropertySetRegistry
   extends XNameAccess
      with XPropertySetRegistry

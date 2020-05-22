@@ -26,41 +26,11 @@ trait SchemaSubscriptionDeferralInfo extends js.Object {
 
 object SchemaSubscriptionDeferralInfo {
   @scala.inline
-  def apply(): SchemaSubscriptionDeferralInfo = {
+  def apply(desiredExpiryTimeMillis: String = null, expectedExpiryTimeMillis: String = null): SchemaSubscriptionDeferralInfo = {
     val __obj = js.Dynamic.literal()
+    if (desiredExpiryTimeMillis != null) __obj.updateDynamic("desiredExpiryTimeMillis")(desiredExpiryTimeMillis.asInstanceOf[js.Any])
+    if (expectedExpiryTimeMillis != null) __obj.updateDynamic("expectedExpiryTimeMillis")(expectedExpiryTimeMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubscriptionDeferralInfo]
   }
-  @scala.inline
-  implicit class SchemaSubscriptionDeferralInfoOps[Self <: SchemaSubscriptionDeferralInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesiredExpiryTimeMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredExpiryTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredExpiryTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredExpiryTimeMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedExpiryTimeMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedExpiryTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedExpiryTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedExpiryTimeMillis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

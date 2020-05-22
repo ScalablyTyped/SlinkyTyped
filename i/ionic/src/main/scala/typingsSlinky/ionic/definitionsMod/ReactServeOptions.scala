@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactServeOptions extends ServeOptions {
-  var ci: js.UndefOr[Boolean] = js.native
-  var https: js.UndefOr[Boolean] = js.native
-  var reactEditor: js.UndefOr[String] = js.native
+  var ci: js.UndefOr[Boolean] = js.undefined
+  var https: js.UndefOr[Boolean] = js.undefined
+  var reactEditor: js.UndefOr[String] = js.undefined
 }
 
 object ReactServeOptions {
@@ -24,55 +23,29 @@ object ReactServeOptions {
     livereload: Boolean,
     open: Boolean,
     port: Double,
-    proxy: Boolean
+    proxy: Boolean,
+    browser: String = null,
+    browserOption: String = null,
+    ci: js.UndefOr[Boolean] = js.undefined,
+    externalAddressRequired: js.UndefOr[Boolean] = js.undefined,
+    https: js.UndefOr[Boolean] = js.undefined,
+    platform: String = null,
+    project: String = null,
+    reactEditor: String = null,
+    verbose: js.UndefOr[Boolean] = js.undefined
   ): ReactServeOptions = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], devapp = devapp.asInstanceOf[js.Any], engine = engine.asInstanceOf[js.Any], lab = lab.asInstanceOf[js.Any], labHost = labHost.asInstanceOf[js.Any], labPort = labPort.asInstanceOf[js.Any], livereload = livereload.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], proxy = proxy.asInstanceOf[js.Any])
     __obj.updateDynamic("--")(`--`.asInstanceOf[js.Any])
+    if (browser != null) __obj.updateDynamic("browser")(browser.asInstanceOf[js.Any])
+    if (browserOption != null) __obj.updateDynamic("browserOption")(browserOption.asInstanceOf[js.Any])
+    if (!js.isUndefined(ci)) __obj.updateDynamic("ci")(ci.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(externalAddressRequired)) __obj.updateDynamic("externalAddressRequired")(externalAddressRequired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(https)) __obj.updateDynamic("https")(https.get.asInstanceOf[js.Any])
+    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
+    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
+    if (reactEditor != null) __obj.updateDynamic("reactEditor")(reactEditor.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactServeOptions]
   }
-  @scala.inline
-  implicit class ReactServeOptionsOps[Self <: ReactServeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCi(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ci")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ci")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReactEditor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reactEditor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReactEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reactEditor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

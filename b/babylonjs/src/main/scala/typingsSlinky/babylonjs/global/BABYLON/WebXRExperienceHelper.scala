@@ -11,7 +11,13 @@ import scala.scalajs.js.annotation._
   * @param scene The scene the helper should be created in
   */
 class WebXRExperienceHelper protected ()
-  extends typingsSlinky.babylonjs.BABYLON.WebXRExperienceHelper
+  extends typingsSlinky.babylonjs.BABYLON.WebXRExperienceHelper {
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.WebXRExperienceHelper")

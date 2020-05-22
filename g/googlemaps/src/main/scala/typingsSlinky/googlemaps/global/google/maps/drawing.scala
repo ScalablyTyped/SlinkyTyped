@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** Drawing Library *****/
 @JSGlobal("google.maps.drawing")
 @js.native
 object drawing extends js.Object {

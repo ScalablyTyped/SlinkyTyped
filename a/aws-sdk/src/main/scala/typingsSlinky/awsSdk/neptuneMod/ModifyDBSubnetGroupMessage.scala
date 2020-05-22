@@ -22,41 +22,14 @@ trait ModifyDBSubnetGroupMessage extends js.Object {
 
 object ModifyDBSubnetGroupMessage {
   @scala.inline
-  def apply(DBSubnetGroupName: String, SubnetIds: SubnetIdentifierList): ModifyDBSubnetGroupMessage = {
+  def apply(
+    DBSubnetGroupName: String,
+    SubnetIds: SubnetIdentifierList,
+    DBSubnetGroupDescription: String = null
+  ): ModifyDBSubnetGroupMessage = {
     val __obj = js.Dynamic.literal(DBSubnetGroupName = DBSubnetGroupName.asInstanceOf[js.Any], SubnetIds = SubnetIds.asInstanceOf[js.Any])
+    if (DBSubnetGroupDescription != null) __obj.updateDynamic("DBSubnetGroupDescription")(DBSubnetGroupDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDBSubnetGroupMessage]
   }
-  @scala.inline
-  implicit class ModifyDBSubnetGroupMessageOps[Self <: ModifyDBSubnetGroupMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBSubnetGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubnetIds(value: SubnetIdentifierList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDBSubnetGroupDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroupDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBSubnetGroupDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroupDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

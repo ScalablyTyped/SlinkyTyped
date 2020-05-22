@@ -1,5 +1,6 @@
 package typingsSlinky.pkijs.tstinfoMod
 
+import typingsSlinky.asn1js.mod.Integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,24 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends TSTInfo {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var genTime: js.Date = js.native
+  /* CompleteClass */
+  override var messageImprint: typingsSlinky.pkijs.messageImprintMod.default = js.native
+  /* CompleteClass */
+  override var policy: String = js.native
+  /* CompleteClass */
+  override var serialNumber: Integer = js.native
+  /* CompleteClass */
+  override var version: Double = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
+  /* CompleteClass */
+  override def verify(params: VerifyParams): js.Thenable[Boolean] = js.native
 }
 
 /* static members */

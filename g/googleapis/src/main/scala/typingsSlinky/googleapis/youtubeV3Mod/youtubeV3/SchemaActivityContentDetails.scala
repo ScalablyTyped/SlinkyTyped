@@ -75,149 +75,32 @@ trait SchemaActivityContentDetails extends js.Object {
 
 object SchemaActivityContentDetails {
   @scala.inline
-  def apply(): SchemaActivityContentDetails = {
+  def apply(
+    bulletin: SchemaActivityContentDetailsBulletin = null,
+    channelItem: SchemaActivityContentDetailsChannelItem = null,
+    comment: SchemaActivityContentDetailsComment = null,
+    favorite: SchemaActivityContentDetailsFavorite = null,
+    like: SchemaActivityContentDetailsLike = null,
+    playlistItem: SchemaActivityContentDetailsPlaylistItem = null,
+    promotedItem: SchemaActivityContentDetailsPromotedItem = null,
+    recommendation: SchemaActivityContentDetailsRecommendation = null,
+    social: SchemaActivityContentDetailsSocial = null,
+    subscription: SchemaActivityContentDetailsSubscription = null,
+    upload: SchemaActivityContentDetailsUpload = null
+  ): SchemaActivityContentDetails = {
     val __obj = js.Dynamic.literal()
+    if (bulletin != null) __obj.updateDynamic("bulletin")(bulletin.asInstanceOf[js.Any])
+    if (channelItem != null) __obj.updateDynamic("channelItem")(channelItem.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (favorite != null) __obj.updateDynamic("favorite")(favorite.asInstanceOf[js.Any])
+    if (like != null) __obj.updateDynamic("like")(like.asInstanceOf[js.Any])
+    if (playlistItem != null) __obj.updateDynamic("playlistItem")(playlistItem.asInstanceOf[js.Any])
+    if (promotedItem != null) __obj.updateDynamic("promotedItem")(promotedItem.asInstanceOf[js.Any])
+    if (recommendation != null) __obj.updateDynamic("recommendation")(recommendation.asInstanceOf[js.Any])
+    if (social != null) __obj.updateDynamic("social")(social.asInstanceOf[js.Any])
+    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
+    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaActivityContentDetails]
   }
-  @scala.inline
-  implicit class SchemaActivityContentDetailsOps[Self <: SchemaActivityContentDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBulletin(value: SchemaActivityContentDetailsBulletin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulletin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelItem(value: SchemaActivityContentDetailsChannelItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: SchemaActivityContentDetailsComment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFavorite(value: SchemaActivityContentDetailsFavorite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favorite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFavorite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("favorite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLike(value: SchemaActivityContentDetailsLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("like")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLike: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("like")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaylistItem(value: SchemaActivityContentDetailsPlaylistItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playlistItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaylistItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playlistItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromotedItem(value: SchemaActivityContentDetailsPromotedItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotedItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromotedItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotedItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendation(value: SchemaActivityContentDetailsRecommendation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocial(value: SchemaActivityContentDetailsSocial): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("social")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("social")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: SchemaActivityContentDetailsSubscription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: SchemaActivityContentDetailsUpload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

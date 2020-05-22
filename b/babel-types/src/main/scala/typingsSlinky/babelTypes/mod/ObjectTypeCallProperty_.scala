@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObjectTypeCallProperty_
   extends Node
      with Flow
      with UserWhitespacable {
   @JSName("type")
-  var type_ObjectTypeCallProperty_ : ObjectTypeCallProperty = js.native
-  var value: FlowTypeAnnotation = js.native
+  var type_ObjectTypeCallProperty_ : ObjectTypeCallProperty
+  var value: FlowTypeAnnotation
 }
 
 object ObjectTypeCallProperty_ {
@@ -22,31 +21,17 @@ object ObjectTypeCallProperty_ {
     loc: SourceLocation,
     start: Double,
     `type`: ObjectTypeCallProperty,
-    value: FlowTypeAnnotation
+    value: FlowTypeAnnotation,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
   ): ObjectTypeCallProperty_ = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectTypeCallProperty_]
   }
-  @scala.inline
-  implicit class ObjectTypeCallProperty_Ops[Self <: ObjectTypeCallProperty_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: ObjectTypeCallProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: FlowTypeAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

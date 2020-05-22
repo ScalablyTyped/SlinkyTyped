@@ -164,6 +164,5 @@ import scala.scalajs.js.annotation._
   * | WhiteSmoke           | #F5F5F5 |
   * | Yellow               | #FFFF00 |
   * | YellowGreen          | #9ACD32 | */
-@js.native
 trait Color extends js.Object
 

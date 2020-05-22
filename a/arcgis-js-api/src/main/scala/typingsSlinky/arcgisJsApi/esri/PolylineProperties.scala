@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolylineProperties extends GeometryProperties {
   /**
     * An array of paths, or line segments, that make up the polyline. Each path is a two-dimensional array of numbers representing the coordinates of each vertex in the path in the spatial reference of the view. Each vertex is represented as an array of two, three, or four numbers. The table below shows the various structures of a vertex array.
@@ -19,34 +18,23 @@ trait PolylineProperties extends GeometryProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polyline.html#paths)
     */
-  var paths: js.UndefOr[js.Array[js.Array[js.Array[Double]]]] = js.native
+  var paths: js.UndefOr[js.Array[js.Array[js.Array[Double]]]] = js.undefined
 }
 
 object PolylineProperties {
   @scala.inline
-  def apply(): PolylineProperties = {
+  def apply(
+    hasM: js.UndefOr[Boolean] = js.undefined,
+    hasZ: js.UndefOr[Boolean] = js.undefined,
+    paths: js.Array[js.Array[js.Array[Double]]] = null,
+    spatialReference: SpatialReferenceProperties = null
+  ): PolylineProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasM)) __obj.updateDynamic("hasM")(hasM.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasZ)) __obj.updateDynamic("hasZ")(hasZ.get.asInstanceOf[js.Any])
+    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
+    if (spatialReference != null) __obj.updateDynamic("spatialReference")(spatialReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylineProperties]
   }
-  @scala.inline
-  implicit class PolylinePropertiesOps[Self <: PolylineProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPaths(value: js.Array[js.Array[js.Array[Double]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

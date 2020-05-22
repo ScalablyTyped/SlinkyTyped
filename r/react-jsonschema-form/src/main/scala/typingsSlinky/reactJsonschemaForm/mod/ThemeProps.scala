@@ -7,497 +7,134 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Omit<react-jsonschema-form.react-jsonschema-form.FormProps<T>, 'schema'> */
-@js.native
 trait ThemeProps[T] extends js.Object {
-  var ArrayFieldTemplate: js.UndefOr[ReactComponentClass[ArrayFieldTemplateProps[_]]] = js.native
-  var ErrorList: js.UndefOr[ReactComponentClass[ErrorListProps]] = js.native
-  var FieldTemplate: js.UndefOr[ReactComponentClass[FieldTemplateProps]] = js.native
-  var ObjectFieldTemplate: js.UndefOr[ReactComponentClass[ObjectFieldTemplateProps[_]]] = js.native
-  var acceptcharset: js.UndefOr[String] = js.native
-  var action: js.UndefOr[String] = js.native
-  var additionalMetaSchemas: js.UndefOr[js.Array[js.Object]] = js.native
-  var autocomplete: js.UndefOr[String] = js.native
-  var className: js.UndefOr[String] = js.native
+  var ArrayFieldTemplate: js.UndefOr[ReactComponentClass[ArrayFieldTemplateProps[_]]] = js.undefined
+  var ErrorList: js.UndefOr[ReactComponentClass[ErrorListProps]] = js.undefined
+  var FieldTemplate: js.UndefOr[ReactComponentClass[FieldTemplateProps]] = js.undefined
+  var ObjectFieldTemplate: js.UndefOr[ReactComponentClass[ObjectFieldTemplateProps[_]]] = js.undefined
+  var acceptcharset: js.UndefOr[String] = js.undefined
+  var action: js.UndefOr[String] = js.undefined
+  var additionalMetaSchemas: js.UndefOr[js.Array[js.Object]] = js.undefined
+  var autocomplete: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
   var customFormats: js.UndefOr[
     StringDictionary[String | js.RegExp | (js.Function1[/* data */ String, Boolean])]
-  ] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var enctype: js.UndefOr[String] = js.native
-  var fields: js.UndefOr[StringDictionary[Field]] = js.native
-  var formContext: js.UndefOr[js.Any] = js.native
-  var formData: js.UndefOr[T] = js.native
-  var id: js.UndefOr[String] = js.native
-  var idPrefix: js.UndefOr[String] = js.native
-  var liveOmit: js.UndefOr[Boolean] = js.native
-  var liveValidate: js.UndefOr[Boolean] = js.native
-  var method: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var noHtml5Validate: js.UndefOr[Boolean] = js.native
-  var noValidate: js.UndefOr[Boolean] = js.native
-  var omitExtraData: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var enctype: js.UndefOr[String] = js.undefined
+  var fields: js.UndefOr[StringDictionary[Field]] = js.undefined
+  var formContext: js.UndefOr[js.Any] = js.undefined
+  var formData: js.UndefOr[T] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var idPrefix: js.UndefOr[String] = js.undefined
+  var liveOmit: js.UndefOr[Boolean] = js.undefined
+  var liveValidate: js.UndefOr[Boolean] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var noHtml5Validate: js.UndefOr[Boolean] = js.undefined
+  var noValidate: js.UndefOr[Boolean] = js.undefined
+  var omitExtraData: js.UndefOr[Boolean] = js.undefined
   var onBlur: js.UndefOr[
     js.Function2[/* id */ String, /* value */ Boolean | Double | String | Null, Unit]
-  ] = js.native
-  var onChange: js.UndefOr[js.Function2[/* e */ IChangeEvent[T], /* es */ js.UndefOr[ErrorSchema], _]] = js.native
-  var onError: js.UndefOr[js.Function1[/* e */ js.Any, _]] = js.native
-  var onSubmit: js.UndefOr[js.Function1[/* e */ ISubmitEvent[T], _]] = js.native
-  var safeRenderCompletion: js.UndefOr[Boolean] = js.native
-  var showErrorList: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var onChange: js.UndefOr[js.Function2[/* e */ IChangeEvent[T], /* es */ js.UndefOr[ErrorSchema], _]] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* e */ js.Any, _]] = js.undefined
+  var onFocus: js.UndefOr[
+    js.Function2[/* id */ String, /* value */ Boolean | Double | String | Null, Unit]
+  ] = js.undefined
+  var onSubmit: js.UndefOr[js.Function1[/* e */ ISubmitEvent[T], _]] = js.undefined
+  var safeRenderCompletion: js.UndefOr[Boolean] = js.undefined
+  var showErrorList: js.UndefOr[Boolean] = js.undefined
   var tagName: js.UndefOr[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any
-  ] = js.native
-  var target: js.UndefOr[String] = js.native
-  var transformErrors: js.UndefOr[js.Function1[/* errors */ js.Array[AjvError], js.Array[AjvError]]] = js.native
-  var uiSchema: js.UndefOr[UiSchema] = js.native
-  var validate: js.UndefOr[js.Function2[/* formData */ T, /* errors */ FormValidation, FormValidation]] = js.native
-  var widgets: js.UndefOr[StringDictionary[Widget]] = js.native
+  ] = js.undefined
+  var target: js.UndefOr[String] = js.undefined
+  var transformErrors: js.UndefOr[js.Function1[/* errors */ js.Array[AjvError], js.Array[AjvError]]] = js.undefined
+  var uiSchema: js.UndefOr[UiSchema] = js.undefined
+  var validate: js.UndefOr[js.Function2[/* formData */ T, /* errors */ FormValidation, FormValidation]] = js.undefined
+  var widgets: js.UndefOr[StringDictionary[Widget]] = js.undefined
 }
 
 object ThemeProps {
   @scala.inline
-  def apply[T](): ThemeProps[T] = {
+  def apply[T](
+    ArrayFieldTemplate: ReactComponentClass[ArrayFieldTemplateProps[_]] = null,
+    ErrorList: ReactComponentClass[ErrorListProps] = null,
+    FieldTemplate: ReactComponentClass[FieldTemplateProps] = null,
+    ObjectFieldTemplate: ReactComponentClass[ObjectFieldTemplateProps[_]] = null,
+    acceptcharset: String = null,
+    action: String = null,
+    additionalMetaSchemas: js.Array[js.Object] = null,
+    autocomplete: String = null,
+    className: String = null,
+    customFormats: StringDictionary[String | js.RegExp | (js.Function1[/* data */ String, Boolean])] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    enctype: String = null,
+    fields: StringDictionary[Field] = null,
+    formContext: js.Any = null,
+    formData: T = null,
+    id: String = null,
+    idPrefix: String = null,
+    liveOmit: js.UndefOr[Boolean] = js.undefined,
+    liveValidate: js.UndefOr[Boolean] = js.undefined,
+    method: String = null,
+    name: String = null,
+    noHtml5Validate: js.UndefOr[Boolean] = js.undefined,
+    noValidate: js.UndefOr[Boolean] = js.undefined,
+    omitExtraData: js.UndefOr[Boolean] = js.undefined,
+    onBlur: (/* id */ String, /* value */ Boolean | Double | String | Null) => Unit = null,
+    onChange: (/* e */ IChangeEvent[T], /* es */ js.UndefOr[ErrorSchema]) => _ = null,
+    onError: /* e */ js.Any => _ = null,
+    onFocus: (/* id */ String, /* value */ Boolean | Double | String | Null) => Unit = null,
+    onSubmit: /* e */ ISubmitEvent[T] => _ = null,
+    safeRenderCompletion: js.UndefOr[Boolean] = js.undefined,
+    showErrorList: js.UndefOr[Boolean] = js.undefined,
+    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any = null,
+    target: String = null,
+    transformErrors: /* errors */ js.Array[AjvError] => js.Array[AjvError] = null,
+    uiSchema: UiSchema = null,
+    validate: (/* formData */ T, /* errors */ FormValidation) => FormValidation = null,
+    widgets: StringDictionary[Widget] = null
+  ): ThemeProps[T] = {
     val __obj = js.Dynamic.literal()
+    if (ArrayFieldTemplate != null) __obj.updateDynamic("ArrayFieldTemplate")(ArrayFieldTemplate.asInstanceOf[js.Any])
+    if (ErrorList != null) __obj.updateDynamic("ErrorList")(ErrorList.asInstanceOf[js.Any])
+    if (FieldTemplate != null) __obj.updateDynamic("FieldTemplate")(FieldTemplate.asInstanceOf[js.Any])
+    if (ObjectFieldTemplate != null) __obj.updateDynamic("ObjectFieldTemplate")(ObjectFieldTemplate.asInstanceOf[js.Any])
+    if (acceptcharset != null) __obj.updateDynamic("acceptcharset")(acceptcharset.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (additionalMetaSchemas != null) __obj.updateDynamic("additionalMetaSchemas")(additionalMetaSchemas.asInstanceOf[js.Any])
+    if (autocomplete != null) __obj.updateDynamic("autocomplete")(autocomplete.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (customFormats != null) __obj.updateDynamic("customFormats")(customFormats.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (enctype != null) __obj.updateDynamic("enctype")(enctype.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (formContext != null) __obj.updateDynamic("formContext")(formContext.asInstanceOf[js.Any])
+    if (formData != null) __obj.updateDynamic("formData")(formData.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (idPrefix != null) __obj.updateDynamic("idPrefix")(idPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveOmit)) __obj.updateDynamic("liveOmit")(liveOmit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(liveValidate)) __obj.updateDynamic("liveValidate")(liveValidate.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(noHtml5Validate)) __obj.updateDynamic("noHtml5Validate")(noHtml5Validate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noValidate)) __obj.updateDynamic("noValidate")(noValidate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(omitExtraData)) __obj.updateDynamic("omitExtraData")(omitExtraData.get.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction2(onFocus))
+    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
+    if (!js.isUndefined(safeRenderCompletion)) __obj.updateDynamic("safeRenderCompletion")(safeRenderCompletion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showErrorList)) __obj.updateDynamic("showErrorList")(showErrorList.get.asInstanceOf[js.Any])
+    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (transformErrors != null) __obj.updateDynamic("transformErrors")(js.Any.fromFunction1(transformErrors))
+    if (uiSchema != null) __obj.updateDynamic("uiSchema")(uiSchema.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction2(validate))
+    if (widgets != null) __obj.updateDynamic("widgets")(widgets.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThemeProps[T]]
   }
-  @scala.inline
-  implicit class ThemePropsOps[Self[t] <: ThemeProps[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withArrayFieldTemplate(value: ReactComponentClass[ArrayFieldTemplateProps[_]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayFieldTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayFieldTemplate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayFieldTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorList(value: ReactComponentClass[ErrorListProps]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorList: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldTemplate(value: ReactComponentClass[FieldTemplateProps]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldTemplate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectFieldTemplate(value: ReactComponentClass[ObjectFieldTemplateProps[_]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectFieldTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectFieldTemplate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectFieldTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcceptcharset(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptcharset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptcharset: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptcharset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAction(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalMetaSchemas(value: js.Array[js.Object]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMetaSchemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalMetaSchemas: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMetaSchemas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutocomplete(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocomplete: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomFormats(value: StringDictionary[String | js.RegExp | (js.Function1[/* data */ String, Boolean])]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomFormats: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnctype(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnctype: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enctype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: StringDictionary[Field]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormContext(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormContext: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormData(value: T): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormData: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdPrefix(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdPrefix: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveOmit(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveOmit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveOmit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveOmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiveValidate(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveValidate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiveValidate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("liveValidate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoHtml5Validate(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noHtml5Validate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoHtml5Validate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noHtml5Validate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoValidate(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noValidate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoValidate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noValidate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOmitExtraData(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitExtraData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOmitExtraData: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitExtraData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: (/* id */ String, /* value */ Boolean | Double | String | Null) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* e */ IChangeEvent[T], /* es */ js.UndefOr[ErrorSchema]) => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: /* e */ js.Any => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSubmit(value: /* e */ ISubmitEvent[T] => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSubmit: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeRenderCompletion(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeRenderCompletion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeRenderCompletion: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeRenderCompletion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowErrorList(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrorList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowErrorList: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrorList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 177 */ js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagName: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformErrors(value: /* errors */ js.Array[AjvError] => js.Array[AjvError]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformErrors")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransformErrors: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUiSchema(value: UiSchema): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uiSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUiSchema: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uiSchema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidate(value: (/* formData */ T, /* errors */ FormValidation) => FormValidation): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidgets(value: StringDictionary[Widget]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widgets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidgets: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widgets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

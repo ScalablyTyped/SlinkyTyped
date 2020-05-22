@@ -26,65 +26,18 @@ trait ClassifierMetadata extends js.Object {
 
 object ClassifierMetadata {
   @scala.inline
-  def apply(): ClassifierMetadata = {
+  def apply(
+    EvaluationMetrics: ClassifierEvaluationMetrics = null,
+    NumberOfLabels: js.UndefOr[Integer] = js.undefined,
+    NumberOfTestDocuments: js.UndefOr[Integer] = js.undefined,
+    NumberOfTrainedDocuments: js.UndefOr[Integer] = js.undefined
+  ): ClassifierMetadata = {
     val __obj = js.Dynamic.literal()
+    if (EvaluationMetrics != null) __obj.updateDynamic("EvaluationMetrics")(EvaluationMetrics.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfLabels)) __obj.updateDynamic("NumberOfLabels")(NumberOfLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfTestDocuments)) __obj.updateDynamic("NumberOfTestDocuments")(NumberOfTestDocuments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfTrainedDocuments)) __obj.updateDynamic("NumberOfTrainedDocuments")(NumberOfTrainedDocuments.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassifierMetadata]
   }
-  @scala.inline
-  implicit class ClassifierMetadataOps[Self <: ClassifierMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvaluationMetrics(value: ClassifierEvaluationMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfLabels(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfTestDocuments(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTestDocuments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfTestDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTestDocuments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfTrainedDocuments(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTrainedDocuments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfTrainedDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTrainedDocuments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

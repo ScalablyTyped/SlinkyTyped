@@ -6,41 +6,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait EnumDefaultedMember_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait EnumDefaultedMember_
   extends EnumMember
      with BaseNode {
-  var id: Identifier_ = js.native
+  var id: Identifier_
   @JSName("type")
-  var type_EnumDefaultedMember_ : EnumDefaultedMember = js.native
+  var type_EnumDefaultedMember_ : EnumDefaultedMember
 }
 
 object EnumDefaultedMember_ {
   @scala.inline
-  def apply(id: Identifier_, `type`: EnumDefaultedMember): EnumDefaultedMember_ = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+  def apply(
+    id: Identifier_,
+    `type`: EnumDefaultedMember,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): EnumDefaultedMember_ = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnumDefaultedMember_]
   }
-  @scala.inline
-  implicit class EnumDefaultedMember_Ops[Self <: EnumDefaultedMember_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: EnumDefaultedMember): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

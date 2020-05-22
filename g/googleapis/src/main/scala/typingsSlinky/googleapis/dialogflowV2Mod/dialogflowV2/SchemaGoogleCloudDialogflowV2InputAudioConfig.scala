@@ -39,65 +39,18 @@ trait SchemaGoogleCloudDialogflowV2InputAudioConfig extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2InputAudioConfig {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2InputAudioConfig = {
+  def apply(
+    audioEncoding: String = null,
+    languageCode: String = null,
+    phraseHints: js.Array[String] = null,
+    sampleRateHertz: js.UndefOr[Double] = js.undefined
+  ): SchemaGoogleCloudDialogflowV2InputAudioConfig = {
     val __obj = js.Dynamic.literal()
+    if (audioEncoding != null) __obj.updateDynamic("audioEncoding")(audioEncoding.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (phraseHints != null) __obj.updateDynamic("phraseHints")(phraseHints.asInstanceOf[js.Any])
+    if (!js.isUndefined(sampleRateHertz)) __obj.updateDynamic("sampleRateHertz")(sampleRateHertz.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2InputAudioConfig]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2InputAudioConfigOps[Self <: SchemaGoogleCloudDialogflowV2InputAudioConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhraseHints(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phraseHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhraseHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phraseHints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleRateHertz(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleRateHertz: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRateHertz")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

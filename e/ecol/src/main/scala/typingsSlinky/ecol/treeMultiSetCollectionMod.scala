@@ -3,6 +3,8 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.anon.Iteratoranyanyany
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
@@ -55,6 +57,8 @@ object treeMultiSetCollectionMod extends js.Object {
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[T, InputIterator] */](begin: InputIterator, end: InputIterator): Unit = js.native
     /* InferMemberOverrides */
     /* protected */ override def _Key_eq(x: T, y: T): Boolean = js.native
+    /* CompleteClass */
+    override def addEventListener(`type`: Type, listener: Listener[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -68,7 +72,7 @@ object treeMultiSetCollectionMod extends js.Object {
       *
       * @return Iterator to the first element.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
@@ -87,12 +91,20 @@ object treeMultiSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def count(key: T): Double = js.native
+    /* CompleteClass */
+    override def dispatchEvent(event: CollectionEvent[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
+    /**
+      * Test whether container is empty.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
     /**
       * Iterator to the end.
       *
       * @return Iterator to the end.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
@@ -140,6 +152,8 @@ object treeMultiSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def has(key: T): Boolean = js.native
+    /* CompleteClass */
+    override def hasEventListener(`type`: Type): Boolean = js.native
     /* InferMemberOverrides */
     override def insert(hint: Iterator[T], key: T): Iterator[T] = js.native
     /* InferMemberOverrides */
@@ -153,11 +167,20 @@ object treeMultiSetCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def merge(source: TreeMultiSet[T]): Unit = js.native
     /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def push(items: T*): Double = js.native
+    /**
       * Reverse iterator to the first element in reverse.
       *
       * @return Reverse iterator to the first.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[T] = js.native
     /**
@@ -172,14 +195,22 @@ object treeMultiSetCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
+    /* CompleteClass */
+    override def removeEventListener(`type`: Type, listener: Listener[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Reverse iterator to the reverse end.
       *
       * @return Reverse iterator to the end.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     override def rend(): ReverseIterator[T] = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

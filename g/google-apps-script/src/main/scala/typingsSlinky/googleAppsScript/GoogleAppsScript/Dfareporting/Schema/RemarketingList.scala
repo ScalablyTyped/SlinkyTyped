@@ -4,192 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RemarketingList extends js.Object {
-  var accountId: js.UndefOr[String] = js.native
-  var active: js.UndefOr[Boolean] = js.native
-  var advertiserId: js.UndefOr[String] = js.native
-  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var description: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var lifeSpan: js.UndefOr[String] = js.native
-  var listPopulationRule: js.UndefOr[ListPopulationRule] = js.native
-  var listSize: js.UndefOr[String] = js.native
-  var listSource: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var subaccountId: js.UndefOr[String] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
+  var active: js.UndefOr[Boolean] = js.undefined
+  var advertiserId: js.UndefOr[String] = js.undefined
+  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var lifeSpan: js.UndefOr[String] = js.undefined
+  var listPopulationRule: js.UndefOr[ListPopulationRule] = js.undefined
+  var listSize: js.UndefOr[String] = js.undefined
+  var listSource: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var subaccountId: js.UndefOr[String] = js.undefined
 }
 
 object RemarketingList {
   @scala.inline
-  def apply(): RemarketingList = {
+  def apply(
+    accountId: String = null,
+    active: js.UndefOr[Boolean] = js.undefined,
+    advertiserId: String = null,
+    advertiserIdDimensionValue: DimensionValue = null,
+    description: String = null,
+    id: String = null,
+    kind: String = null,
+    lifeSpan: String = null,
+    listPopulationRule: ListPopulationRule = null,
+    listSize: String = null,
+    listSource: String = null,
+    name: String = null,
+    subaccountId: String = null
+  ): RemarketingList = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
+    if (advertiserIdDimensionValue != null) __obj.updateDynamic("advertiserIdDimensionValue")(advertiserIdDimensionValue.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lifeSpan != null) __obj.updateDynamic("lifeSpan")(lifeSpan.asInstanceOf[js.Any])
+    if (listPopulationRule != null) __obj.updateDynamic("listPopulationRule")(listPopulationRule.asInstanceOf[js.Any])
+    if (listSize != null) __obj.updateDynamic("listSize")(listSize.asInstanceOf[js.Any])
+    if (listSource != null) __obj.updateDynamic("listSource")(listSource.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemarketingList]
   }
-  @scala.inline
-  implicit class RemarketingListOps[Self <: RemarketingList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifeSpan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifeSpan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifeSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifeSpan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListPopulationRule(value: ListPopulationRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPopulationRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListPopulationRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listPopulationRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubaccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubaccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

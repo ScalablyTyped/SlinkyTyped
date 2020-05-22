@@ -14,14 +14,13 @@ import scala.scalajs.js.annotation._
   * By default, an `Array` is a transaction duration reference to an SQL array. By default, an `Array` is implemented using a SQL LOCATOR(array)
   * internally.
   */
-@js.native
 trait XArray extends XInterface {
   /**
     * returns the SDBC type of the elements in the array designated by this `Array` object.
     * @returns a constant from the SDBC types that is the type code for the elements in the array designated by this Array object.
     * @throws SQLException if a database access error occurs.
     */
-  val BaseType: Double = js.native
+  val BaseType: Double
   /**
     * returns the SQL type name of the elements in the array designated by this `Array` object.
     *
@@ -30,7 +29,7 @@ trait XArray extends XInterface {
     * @returns a String that is the database-specific name for a built-in base type or the fully-qualified SQL type name for a base type that is a UDT
     * @throws SQLException if a database access error occurs.
     */
-  val BaseTypeName: String = js.native
+  val BaseTypeName: String
   /**
     * retrieves the contents of the SQL array designated by this `Array` object, using the specified `typeMap` for type map customizations.
     *
@@ -39,7 +38,7 @@ trait XArray extends XInterface {
     * @returns an sequence that contains the ordered elements of the SQL array designated by this object.
     * @throws SQLException if an error occurs while attempting to access the array.
     */
-  def getArray(typeMap: XNameAccess): SafeArray[_] = js.native
+  def getArray(typeMap: XNameAccess): SafeArray[_]
   /**
     * returns an array containing a slice of the SQL array, beginning with the specified `index` and containing up to `count` successive elements of the SQL
     * array.
@@ -49,13 +48,13 @@ trait XArray extends XInterface {
     * @returns an array containing up to `count` consecutive elements of the SQL array, beginning with element `index` .
     * @throws SQLException if an error occurs while attempting to access the array.
     */
-  def getArrayAtIndex(index: Double, count: Double, typeMap: XNameAccess): SafeArray[_] = js.native
+  def getArrayAtIndex(index: Double, count: Double, typeMap: XNameAccess): SafeArray[_]
   /**
     * returns the SDBC type of the elements in the array designated by this `Array` object.
     * @returns a constant from the SDBC types that is the type code for the elements in the array designated by this Array object.
     * @throws SQLException if a database access error occurs.
     */
-  def getBaseType(): Double = js.native
+  def getBaseType(): Double
   /**
     * returns the SQL type name of the elements in the array designated by this `Array` object.
     *
@@ -64,7 +63,7 @@ trait XArray extends XInterface {
     * @returns a String that is the database-specific name for a built-in base type or the fully-qualified SQL type name for a base type that is a UDT
     * @throws SQLException if a database access error occurs.
     */
-  def getBaseTypeName(): String = js.native
+  def getBaseTypeName(): String
   /**
     * returns a result set that contains the elements of the array designated by this `Array` object and uses the given `typeMap` to map the array elements.
     * If the base type of the array does not match a user-defined type in `typeMap` or the `typeMap` is `NULL` , the connection type mapping is used
@@ -77,7 +76,7 @@ trait XArray extends XInterface {
     * @returns a {@link ResultSet} object containing one row for each of the elements in the array designated by this Array object, with the rows in ascending o
     * @throws SQLException if a database access error occurs.
     */
-  def getResultSet(typeMap: XNameAccess): XResultSet = js.native
+  def getResultSet(typeMap: XNameAccess): XResultSet
   /**
     * returns a result set holding the elements of the subarray that starts at index `index` and contains up to `count` successive elements. This method
     * uses the given `typeMap` to map the array elements. If the base type of the array does not match a user-defined type in `typeMap` or the `typeMap` is
@@ -92,7 +91,7 @@ trait XArray extends XInterface {
     * @returns a {@link ResultSet} object containing up to count consecutive elements of the SQL array designated by this Array object, starting at index index.
     * @throws SQLException if a database access error occurs.
     */
-  def getResultSetAtIndex(index: Double, count: Double, typeMap: XNameAccess): XResultSet = js.native
+  def getResultSetAtIndex(index: Double, count: Double, typeMap: XNameAccess): XResultSet
 }
 
 object XArray {
@@ -113,61 +112,5 @@ object XArray {
     val __obj = js.Dynamic.literal(BaseType = BaseType.asInstanceOf[js.Any], BaseTypeName = BaseTypeName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getArray = js.Any.fromFunction1(getArray), getArrayAtIndex = js.Any.fromFunction3(getArrayAtIndex), getBaseType = js.Any.fromFunction0(getBaseType), getBaseTypeName = js.Any.fromFunction0(getBaseTypeName), getResultSet = js.Any.fromFunction1(getResultSet), getResultSetAtIndex = js.Any.fromFunction3(getResultSetAtIndex), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XArray]
   }
-  @scala.inline
-  implicit class XArrayOps[Self <: XArray] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseTypeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaseTypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetArray(value: XNameAccess => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getArray")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetArrayAtIndex(value: (Double, Double, XNameAccess) => SafeArray[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getArrayAtIndex")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetBaseType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBaseType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetBaseTypeName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBaseTypeName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetResultSet(value: XNameAccess => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultSet")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetResultSetAtIndex(value: (Double, Double, XNameAccess) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultSetAtIndex")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

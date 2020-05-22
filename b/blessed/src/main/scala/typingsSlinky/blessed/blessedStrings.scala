@@ -8,7 +8,6 @@ import typingsSlinky.blessed.mod.Widgets.NodeScreenEventType
 import typingsSlinky.blessed.mod.Widgets.TextareaElementEventType
 import typingsSlinky.blessed.mod.Widgets.Types.TAlign
 import typingsSlinky.blessed.mod.Widgets.Types.TMouseAction
-import typingsSlinky.blessed.mod.Widgets.Types.TTopLeft
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,9 +51,7 @@ object blessedStrings {
   sealed trait cd extends js.Object
   
   @js.native
-  sealed trait center
-    extends TAlign
-       with TTopLeft
+  sealed trait center extends TAlign
   
   @js.native
   sealed trait click extends NodeScreenEventType

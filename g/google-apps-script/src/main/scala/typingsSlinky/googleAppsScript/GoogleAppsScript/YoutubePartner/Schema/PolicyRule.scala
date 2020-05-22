@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolicyRule extends js.Object {
-  var action: js.UndefOr[String] = js.native
-  var conditions: js.UndefOr[Conditions] = js.native
-  var subaction: js.UndefOr[js.Array[String]] = js.native
+  var action: js.UndefOr[String] = js.undefined
+  var conditions: js.UndefOr[Conditions] = js.undefined
+  var subaction: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object PolicyRule {
   @scala.inline
-  def apply(): PolicyRule = {
+  def apply(action: String = null, conditions: Conditions = null, subaction: js.Array[String] = null): PolicyRule = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (subaction != null) __obj.updateDynamic("subaction")(subaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyRule]
   }
-  @scala.inline
-  implicit class PolicyRuleOps[Self <: PolicyRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: Conditions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubaction(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

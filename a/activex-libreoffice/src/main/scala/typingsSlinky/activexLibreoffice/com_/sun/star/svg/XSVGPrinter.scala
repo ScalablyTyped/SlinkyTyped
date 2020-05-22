@@ -9,17 +9,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** @deprecated Deprecated */
-@js.native
 trait XSVGPrinter extends XInterface {
-  def endJob(): Unit = js.native
-  def printPage(aPrintPage: SeqEquiv[Double]): Unit = js.native
+  def endJob(): Unit
+  def printPage(aPrintPage: SeqEquiv[Double]): Unit
   def startJob(
     aHandler: XDocumentHandler,
     aJobSetup: SeqEquiv[Double],
     aJobName: String,
     nCopies: Double,
     bCollate: Boolean
-  ): Boolean = js.native
+  ): Boolean
 }
 
 object XSVGPrinter {
@@ -35,31 +34,5 @@ object XSVGPrinter {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), endJob = js.Any.fromFunction0(endJob), printPage = js.Any.fromFunction1(printPage), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), startJob = js.Any.fromFunction5(startJob))
     __obj.asInstanceOf[XSVGPrinter]
   }
-  @scala.inline
-  implicit class XSVGPrinterOps[Self <: XSVGPrinter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndJob(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endJob")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPrintPage(value: SeqEquiv[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printPage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartJob(value: (XDocumentHandler, SeqEquiv[Double], String, Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startJob")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

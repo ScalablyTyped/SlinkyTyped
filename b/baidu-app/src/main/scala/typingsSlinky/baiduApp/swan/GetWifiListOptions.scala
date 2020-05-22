@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetWifiListOptions extends js.Object {
   /** Wi-Fi 列表数据 */
-  var wifiList: js.Array[WiFi] = js.native
+  var wifiList: js.Array[WiFi]
 }
 
 object GetWifiListOptions {
@@ -16,19 +15,5 @@ object GetWifiListOptions {
     val __obj = js.Dynamic.literal(wifiList = wifiList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetWifiListOptions]
   }
-  @scala.inline
-  implicit class GetWifiListOptionsOps[Self <: GetWifiListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWifiList(value: js.Array[WiFi]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

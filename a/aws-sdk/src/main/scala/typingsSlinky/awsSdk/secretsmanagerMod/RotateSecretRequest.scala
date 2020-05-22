@@ -26,59 +26,17 @@ trait RotateSecretRequest extends js.Object {
 
 object RotateSecretRequest {
   @scala.inline
-  def apply(SecretId: SecretIdType): RotateSecretRequest = {
+  def apply(
+    SecretId: SecretIdType,
+    ClientRequestToken: ClientRequestTokenType = null,
+    RotationLambdaARN: RotationLambdaARNType = null,
+    RotationRules: RotationRulesType = null
+  ): RotateSecretRequest = {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
+    if (RotationLambdaARN != null) __obj.updateDynamic("RotationLambdaARN")(RotationLambdaARN.asInstanceOf[js.Any])
+    if (RotationRules != null) __obj.updateDynamic("RotationRules")(RotationRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[RotateSecretRequest]
   }
-  @scala.inline
-  implicit class RotateSecretRequestOps[Self <: RotateSecretRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecretId(value: SecretIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestTokenType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotationLambdaARN(value: RotationLambdaARNType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationLambdaARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationLambdaARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationLambdaARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotationRules(value: RotationRulesType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotationRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

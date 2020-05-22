@@ -11,7 +11,7 @@ trait UpdateVocabularyFilterRequest extends js.Object {
     */
   var VocabularyFilterFileUri: js.UndefOr[Uri] = js.native
   /**
-    * The name of the vocabulary filter to update.
+    * The name of the vocabulary filter to update. If you try to update a vocabulary filter with the same name as a previous vocabulary filter you will receive a ConflictException error.
     */
   var VocabularyFilterName: typingsSlinky.awsSdk.transcribeserviceMod.VocabularyFilterName = js.native
   /**
@@ -22,47 +22,15 @@ trait UpdateVocabularyFilterRequest extends js.Object {
 
 object UpdateVocabularyFilterRequest {
   @scala.inline
-  def apply(VocabularyFilterName: VocabularyFilterName): UpdateVocabularyFilterRequest = {
+  def apply(
+    VocabularyFilterName: VocabularyFilterName,
+    VocabularyFilterFileUri: Uri = null,
+    Words: Words = null
+  ): UpdateVocabularyFilterRequest = {
     val __obj = js.Dynamic.literal(VocabularyFilterName = VocabularyFilterName.asInstanceOf[js.Any])
+    if (VocabularyFilterFileUri != null) __obj.updateDynamic("VocabularyFilterFileUri")(VocabularyFilterFileUri.asInstanceOf[js.Any])
+    if (Words != null) __obj.updateDynamic("Words")(Words.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVocabularyFilterRequest]
   }
-  @scala.inline
-  implicit class UpdateVocabularyFilterRequestOps[Self <: UpdateVocabularyFilterRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVocabularyFilterName(value: VocabularyFilterName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVocabularyFilterFileUri(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterFileUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVocabularyFilterFileUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VocabularyFilterFileUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWords(value: Words): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Words")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Words")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

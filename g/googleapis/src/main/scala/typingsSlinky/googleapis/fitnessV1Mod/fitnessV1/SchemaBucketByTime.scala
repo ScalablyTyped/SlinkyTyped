@@ -17,41 +17,11 @@ trait SchemaBucketByTime extends js.Object {
 
 object SchemaBucketByTime {
   @scala.inline
-  def apply(): SchemaBucketByTime = {
+  def apply(durationMillis: String = null, period: SchemaBucketByTimePeriod = null): SchemaBucketByTime = {
     val __obj = js.Dynamic.literal()
+    if (durationMillis != null) __obj.updateDynamic("durationMillis")(durationMillis.asInstanceOf[js.Any])
+    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBucketByTime]
   }
-  @scala.inline
-  implicit class SchemaBucketByTimeOps[Self <: SchemaBucketByTime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDurationMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: SchemaBucketByTimePeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

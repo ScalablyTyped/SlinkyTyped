@@ -18,41 +18,11 @@ trait EndpointUser extends js.Object {
 
 object EndpointUser {
   @scala.inline
-  def apply(): EndpointUser = {
+  def apply(UserAttributes: MapOfListOfString = null, UserId: string = null): EndpointUser = {
     val __obj = js.Dynamic.literal()
+    if (UserAttributes != null) __obj.updateDynamic("UserAttributes")(UserAttributes.asInstanceOf[js.Any])
+    if (UserId != null) __obj.updateDynamic("UserId")(UserId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointUser]
   }
-  @scala.inline
-  implicit class EndpointUserOps[Self <: EndpointUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserAttributes(value: MapOfListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

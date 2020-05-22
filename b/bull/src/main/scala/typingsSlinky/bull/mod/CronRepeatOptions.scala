@@ -4,55 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CronRepeatOptions extends RepeatOptions {
   /**
     * Cron pattern specifying when the job should execute
     */
-  var cron: String = js.native
+  var cron: String
   /**
     * Start date when the repeat job should start repeating (only with cron).
     */
-  var startDate: js.UndefOr[js.Date | String | Double] = js.native
+  var startDate: js.UndefOr[js.Date | String | Double] = js.undefined
 }
 
 object CronRepeatOptions {
   @scala.inline
-  def apply(cron: String): CronRepeatOptions = {
+  def apply(
+    cron: String,
+    endDate: js.Date | String | Double = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    startDate: js.Date | String | Double = null,
+    tz: String = null
+  ): CronRepeatOptions = {
     val __obj = js.Dynamic.literal(cron = cron.asInstanceOf[js.Any])
+    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
+    if (tz != null) __obj.updateDynamic("tz")(tz.asInstanceOf[js.Any])
     __obj.asInstanceOf[CronRepeatOptions]
   }
-  @scala.inline
-  implicit class CronRepeatOptionsOps[Self <: CronRepeatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCron(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cron")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartDateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: js.Date | String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

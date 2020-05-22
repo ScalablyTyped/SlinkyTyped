@@ -1,42 +1,45 @@
 package typingsSlinky.blueprintjsTable.headerCellMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.blueprintjsTable.resizeHandleMod.ResizeHandle
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IInternalHeaderCellProps extends IHeaderCellProps {
   /**
     * Specifies if the cell is selected.
     */
-  var isSelected: js.UndefOr[Boolean] = js.native
+  var isSelected: js.UndefOr[Boolean] = js.undefined
 }
 
 object IInternalHeaderCellProps {
   @scala.inline
-  def apply(): IInternalHeaderCellProps = {
+  def apply(
+    className: String = null,
+    index: js.UndefOr[Double] = js.undefined,
+    isActive: js.UndefOr[Boolean] = js.undefined,
+    isSelected: js.UndefOr[Boolean] = js.undefined,
+    loading: js.UndefOr[Boolean] = js.undefined,
+    menuRenderer: /* index */ js.UndefOr[Double] => ReactElement = null,
+    name: String = null,
+    reorderHandle: ReactElement = null,
+    resizeHandle: ResizeHandle = null,
+    style: CSSProperties = null
+  ): IInternalHeaderCellProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.get.asInstanceOf[js.Any])
+    if (menuRenderer != null) __obj.updateDynamic("menuRenderer")(js.Any.fromFunction1(menuRenderer))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (reorderHandle != null) __obj.updateDynamic("reorderHandle")(reorderHandle.asInstanceOf[js.Any])
+    if (resizeHandle != null) __obj.updateDynamic("resizeHandle")(resizeHandle.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInternalHeaderCellProps]
   }
-  @scala.inline
-  implicit class IInternalHeaderCellPropsOps[Self <: IInternalHeaderCellProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

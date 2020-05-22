@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** WordAlternativeResults. */
-@js.native
 trait WordAlternativeResults extends js.Object {
   /** An array of alternative hypotheses for a word from the input audio. */
-  var alternatives: js.Array[WordAlternativeResult] = js.native
+  var alternatives: js.Array[WordAlternativeResult]
   /** The end time in seconds of the word from the input audio that corresponds to the word alternatives. */
-  var end_time: Double = js.native
+  var end_time: Double
   /** The start time in seconds of the word from the input audio that corresponds to the word alternatives. */
-  var start_time: Double = js.native
+  var start_time: Double
 }
 
 object WordAlternativeResults {
@@ -21,31 +20,5 @@ object WordAlternativeResults {
     val __obj = js.Dynamic.literal(alternatives = alternatives.asInstanceOf[js.Any], end_time = end_time.asInstanceOf[js.Any], start_time = start_time.asInstanceOf[js.Any])
     __obj.asInstanceOf[WordAlternativeResults]
   }
-  @scala.inline
-  implicit class WordAlternativeResultsOps[Self <: WordAlternativeResults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlternatives(value: js.Array[WordAlternativeResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnd_time(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart_time(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

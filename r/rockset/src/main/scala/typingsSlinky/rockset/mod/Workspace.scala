@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Workspace extends js.Object {
   // number of collections that are immediate children of workspace
-  var collection_count: js.UndefOr[Double] = js.native
+  var collection_count: js.UndefOr[Double] = js.undefined
   // ISO-8601 date of when workspace was created
-  var created_at: js.UndefOr[String] = js.native
+  var created_at: js.UndefOr[String] = js.undefined
   // email of user who created the workspace
-  var created_by: js.UndefOr[String] = js.native
+  var created_by: js.UndefOr[String] = js.undefined
   // longer explanation for the workspace
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   // descriptive label and unique identifier
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object Workspace {
   @scala.inline
-  def apply(): Workspace = {
+  def apply(
+    collection_count: js.UndefOr[Double] = js.undefined,
+    created_at: String = null,
+    created_by: String = null,
+    description: String = null,
+    name: String = null
+  ): Workspace = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(collection_count)) __obj.updateDynamic("collection_count")(collection_count.get.asInstanceOf[js.Any])
+    if (created_at != null) __obj.updateDynamic("created_at")(created_at.asInstanceOf[js.Any])
+    if (created_by != null) __obj.updateDynamic("created_by")(created_by.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Workspace]
   }
-  @scala.inline
-  implicit class WorkspaceOps[Self <: Workspace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollection_count(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollection_count: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collection_count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated_by(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_by")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated_by: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_by")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

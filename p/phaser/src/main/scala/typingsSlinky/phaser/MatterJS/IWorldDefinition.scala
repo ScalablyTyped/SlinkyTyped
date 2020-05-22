@@ -4,49 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IWorldDefinition extends ICompositeDefinition {
-  var bounds: js.UndefOr[IBound] = js.native
-  var gravity: js.UndefOr[Gravity] = js.native
+  var bounds: js.UndefOr[IBound] = js.undefined
+  var gravity: js.UndefOr[Gravity] = js.undefined
 }
 
 object IWorldDefinition {
   @scala.inline
-  def apply(): IWorldDefinition = {
+  def apply(
+    bodies: js.Array[BodyType] = null,
+    bounds: IBound = null,
+    composites: js.Array[CompositeType] = null,
+    constraints: js.Array[ConstraintType] = null,
+    gravity: Gravity = null,
+    id: js.UndefOr[Double] = js.undefined,
+    isModified: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    parent: CompositeType = null,
+    `type`: String = null
+  ): IWorldDefinition = {
     val __obj = js.Dynamic.literal()
+    if (bodies != null) __obj.updateDynamic("bodies")(bodies.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (composites != null) __obj.updateDynamic("composites")(composites.asInstanceOf[js.Any])
+    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
+    if (gravity != null) __obj.updateDynamic("gravity")(gravity.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isModified)) __obj.updateDynamic("isModified")(isModified.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWorldDefinition]
   }
-  @scala.inline
-  implicit class IWorldDefinitionOps[Self <: IWorldDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounds(value: IBound): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: Gravity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

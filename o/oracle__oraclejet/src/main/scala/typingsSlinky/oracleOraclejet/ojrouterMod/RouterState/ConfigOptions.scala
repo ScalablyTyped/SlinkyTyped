@@ -5,114 +5,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-over-type-literal
-@js.native
 trait ConfigOptions extends js.Object {
-  var canEnter: js.UndefOr[js.Function0[Boolean | js.Promise[Boolean]]] = js.native
-  var canExit: js.UndefOr[js.Function0[Boolean | js.Promise[Boolean]]] = js.native
-  var enter: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.native
-  var exit: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.native
-  var isDefault: js.UndefOr[Boolean] = js.native
-  var label: js.UndefOr[String] = js.native
-  var value: js.UndefOr[js.Any] = js.native
+  var canEnter: js.UndefOr[js.Function0[Boolean | js.Promise[Boolean]]] = js.undefined
+  var canExit: js.UndefOr[js.Function0[Boolean | js.Promise[Boolean]]] = js.undefined
+  var enter: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.undefined
+  var exit: js.UndefOr[js.Function0[js.Promise[Unit] | Unit]] = js.undefined
+  var isDefault: js.UndefOr[Boolean] = js.undefined
+  var label: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[js.Any] = js.undefined
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(): ConfigOptions = {
+  def apply(
+    canEnter: () => Boolean | js.Promise[Boolean] = null,
+    canExit: () => Boolean | js.Promise[Boolean] = null,
+    enter: () => js.Promise[Unit] | Unit = null,
+    exit: () => js.Promise[Unit] | Unit = null,
+    isDefault: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    value: js.Any = null
+  ): ConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (canEnter != null) __obj.updateDynamic("canEnter")(js.Any.fromFunction0(canEnter))
+    if (canExit != null) __obj.updateDynamic("canExit")(js.Any.fromFunction0(canExit))
+    if (enter != null) __obj.updateDynamic("enter")(js.Any.fromFunction0(enter))
+    if (exit != null) __obj.updateDynamic("exit")(js.Any.fromFunction0(exit))
+    if (!js.isUndefined(isDefault)) __obj.updateDynamic("isDefault")(isDefault.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
-  @scala.inline
-  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanEnter(value: () => Boolean | js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canEnter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanExit(value: () => Boolean | js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canExit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnter(value: () => js.Promise[Unit] | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit(value: () => js.Promise[Unit] | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

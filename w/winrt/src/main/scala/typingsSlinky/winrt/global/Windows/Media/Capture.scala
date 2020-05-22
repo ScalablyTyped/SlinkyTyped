@@ -1,5 +1,16 @@
 package typingsSlinky.winrt.global.Windows.Media
 
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import typingsSlinky.winrt.Windows.Foundation.Size
+import typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution
+import typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution
+import typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIMode
+import typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIPhotoFormat
+import typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIVideoFormat
+import typingsSlinky.winrt.Windows.Media.Capture.PhotoCaptureSource
+import typingsSlinky.winrt.Windows.Media.Capture.StreamingCaptureMode
+import typingsSlinky.winrt.Windows.Media.Capture.VideoDeviceCharacteristic
+import typingsSlinky.winrt.Windows.Storage.StorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,15 +20,42 @@ import scala.scalajs.js.annotation._
 object Capture extends js.Object {
   @js.native
   class CameraCaptureUI ()
-    extends typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUI
+    extends typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUI {
+    /* CompleteClass */
+    override var photoSettings: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings = js.native
+    /* CompleteClass */
+    override var videoSettings: typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings = js.native
+    /* CompleteClass */
+    override def captureFileAsync(mode: CameraCaptureUIMode): IAsyncOperation[StorageFile] = js.native
+  }
   
   @js.native
   class CameraCaptureUIPhotoCaptureSettings ()
-    extends typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings
+    extends typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings {
+    /* CompleteClass */
+    override var allowCropping: Boolean = js.native
+    /* CompleteClass */
+    override var croppedAspectRatio: Size = js.native
+    /* CompleteClass */
+    override var croppedSizeInPixels: Size = js.native
+    /* CompleteClass */
+    override var format: CameraCaptureUIPhotoFormat = js.native
+    /* CompleteClass */
+    override var maxResolution: CameraCaptureUIMaxPhotoResolution = js.native
+  }
   
   @js.native
   class CameraCaptureUIVideoCaptureSettings ()
-    extends typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings
+    extends typingsSlinky.winrt.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings {
+    /* CompleteClass */
+    override var allowTrimming: Boolean = js.native
+    /* CompleteClass */
+    override var format: CameraCaptureUIVideoFormat = js.native
+    /* CompleteClass */
+    override var maxDurationInSeconds: Double = js.native
+    /* CompleteClass */
+    override var maxResolution: CameraCaptureUIMaxVideoResolution = js.native
+  }
   
   @js.native
   class CameraOptionsUI ()
@@ -29,15 +67,40 @@ object Capture extends js.Object {
   
   @js.native
   class MediaCaptureFailedEventArgs ()
-    extends typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureFailedEventArgs
+    extends typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureFailedEventArgs {
+    /* CompleteClass */
+    override var code: Double = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+  }
   
   @js.native
   class MediaCaptureInitializationSettings ()
-    extends typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureInitializationSettings
+    extends typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureInitializationSettings {
+    /* CompleteClass */
+    override var audioDeviceId: String = js.native
+    /* CompleteClass */
+    override var photoCaptureSource: PhotoCaptureSource = js.native
+    /* CompleteClass */
+    override var streamingCaptureMode: StreamingCaptureMode = js.native
+    /* CompleteClass */
+    override var videoDeviceId: String = js.native
+  }
   
   @js.native
   class MediaCaptureSettings ()
-    extends typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureSettings
+    extends typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureSettings {
+    /* CompleteClass */
+    override var audioDeviceId: String = js.native
+    /* CompleteClass */
+    override var photoCaptureSource: PhotoCaptureSource = js.native
+    /* CompleteClass */
+    override var streamingCaptureMode: StreamingCaptureMode = js.native
+    /* CompleteClass */
+    override var videoDeviceCharacteristic: VideoDeviceCharacteristic = js.native
+    /* CompleteClass */
+    override var videoDeviceId: String = js.native
+  }
   
   @js.native
   object CameraCaptureUIMaxPhotoResolution extends js.Object {

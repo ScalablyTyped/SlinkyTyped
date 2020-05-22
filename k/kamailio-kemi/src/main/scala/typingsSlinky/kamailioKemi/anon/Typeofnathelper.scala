@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofnathelper extends js.Object {
-  def add_contact_alias(): Double = js.native
-  def add_contact_alias_addr(ip_str: String, port_str: String, proto_str: String): Double = js.native
-  def add_rcv_param(upos: Double): Double = js.native
-  def fix_nated_contact(): Double = js.native
-  def fix_nated_register(): Double = js.native
-  def fix_nated_sdp(level: Double): Double = js.native
-  def fix_nated_sdp_ip(level: Double, ip: String): Double = js.native
-  def handle_ruri_alias(): Double = js.native
-  def is_rfc1918(address: String): Double = js.native
-  def nat_uac_test(tests: Double): Double = js.native
-  def set_contact_alias(): Double = js.native
+  def add_contact_alias(): Double
+  def add_contact_alias_addr(ip_str: String, port_str: String, proto_str: String): Double
+  def add_rcv_param(upos: Double): Double
+  def fix_nated_contact(): Double
+  def fix_nated_register(): Double
+  def fix_nated_sdp(level: Double): Double
+  def fix_nated_sdp_ip(level: Double, ip: String): Double
+  def handle_ruri_alias(): Double
+  def is_rfc1918(address: String): Double
+  def nat_uac_test(tests: Double): Double
+  def set_contact_alias(): Double
 }
 
 object Typeofnathelper {
@@ -37,79 +36,5 @@ object Typeofnathelper {
     val __obj = js.Dynamic.literal(add_contact_alias = js.Any.fromFunction0(add_contact_alias), add_contact_alias_addr = js.Any.fromFunction3(add_contact_alias_addr), add_rcv_param = js.Any.fromFunction1(add_rcv_param), fix_nated_contact = js.Any.fromFunction0(fix_nated_contact), fix_nated_register = js.Any.fromFunction0(fix_nated_register), fix_nated_sdp = js.Any.fromFunction1(fix_nated_sdp), fix_nated_sdp_ip = js.Any.fromFunction2(fix_nated_sdp_ip), handle_ruri_alias = js.Any.fromFunction0(handle_ruri_alias), is_rfc1918 = js.Any.fromFunction1(is_rfc1918), nat_uac_test = js.Any.fromFunction1(nat_uac_test), set_contact_alias = js.Any.fromFunction0(set_contact_alias))
     __obj.asInstanceOf[Typeofnathelper]
   }
-  @scala.inline
-  implicit class TypeofnathelperOps[Self <: Typeofnathelper] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd_contact_alias(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_contact_alias")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAdd_contact_alias_addr(value: (String, String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_contact_alias_addr")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withAdd_rcv_param(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_rcv_param")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFix_nated_contact(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fix_nated_contact")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFix_nated_register(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fix_nated_register")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFix_nated_sdp(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fix_nated_sdp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFix_nated_sdp_ip(value: (Double, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fix_nated_sdp_ip")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHandle_ruri_alias(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handle_ruri_alias")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIs_rfc1918(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_rfc1918")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNat_uac_test(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nat_uac_test")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_contact_alias(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_contact_alias")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -23,21 +23,21 @@ trait ChartAxisFormat extends ClientObject {
   var context_ChartAxisFormat: RequestContext = js.native
   /**
     *
-    * Represents chart fill formatting. Read-only.
+    * Specifies chart fill formatting.
     *
     * [Api set: ExcelApi 1.8]
     */
   val fill: ChartFill = js.native
   /**
     *
-    * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
+    * Specifies the font attributes (font name, font size, color, etc.) for a chart axis element.
     *
     * [Api set: ExcelApi 1.1]
     */
   val font: ChartFont = js.native
   /**
     *
-    * Represents chart line formatting. Read-only.
+    * Specifies chart line formatting.
     *
     * [Api set: ExcelApi 1.1]
     */

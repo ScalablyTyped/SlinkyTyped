@@ -14,29 +14,10 @@ trait CreateSAMLProviderResponse extends js.Object {
 
 object CreateSAMLProviderResponse {
   @scala.inline
-  def apply(): CreateSAMLProviderResponse = {
+  def apply(SAMLProviderArn: arnType = null): CreateSAMLProviderResponse = {
     val __obj = js.Dynamic.literal()
+    if (SAMLProviderArn != null) __obj.updateDynamic("SAMLProviderArn")(SAMLProviderArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSAMLProviderResponse]
   }
-  @scala.inline
-  implicit class CreateSAMLProviderResponseOps[Self <: CreateSAMLProviderResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSAMLProviderArn(value: arnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SAMLProviderArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSAMLProviderArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SAMLProviderArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

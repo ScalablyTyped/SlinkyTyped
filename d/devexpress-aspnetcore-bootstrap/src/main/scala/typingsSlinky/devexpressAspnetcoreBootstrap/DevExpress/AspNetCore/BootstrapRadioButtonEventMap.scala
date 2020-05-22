@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BootstrapRadioButtonEventMap extends BootstrapClientEditEventMap {
-  var checkedChanged: ProcessingModeEventArgs = js.native
+  var checkedChanged: ProcessingModeEventArgs
 }
 
 object BootstrapRadioButtonEventMap {
@@ -22,19 +21,5 @@ object BootstrapRadioButtonEventMap {
     val __obj = js.Dynamic.literal(checkedChanged = checkedChanged.asInstanceOf[js.Any], gotFocus = gotFocus.asInstanceOf[js.Any], init = init.asInstanceOf[js.Any], lostFocus = lostFocus.asInstanceOf[js.Any], validation = validation.asInstanceOf[js.Any], valueChanged = valueChanged.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapRadioButtonEventMap]
   }
-  @scala.inline
-  implicit class BootstrapRadioButtonEventMapOps[Self <: BootstrapRadioButtonEventMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckedChanged(value: ProcessingModeEventArgs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

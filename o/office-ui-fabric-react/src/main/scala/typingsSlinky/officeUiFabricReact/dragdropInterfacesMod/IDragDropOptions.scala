@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDragDropOptions extends js.Object {
   /**
     * Whether or not drag action is allowed.
     */
-  var canDrag: js.UndefOr[js.Function1[/* item */ js.UndefOr[js.Any], Boolean]] = js.native
+  var canDrag: js.UndefOr[js.Function1[/* item */ js.UndefOr[js.Any], Boolean]] = js.undefined
   /**
     * Whether or not drop action is allowed.
     */
@@ -22,31 +21,31 @@ trait IDragDropOptions extends js.Object {
       /* dragContext */ js.UndefOr[IDragDropContext], 
       Boolean
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Context associated with drag and drop event.
     */
-  var context: IDragDropContext = js.native
+  var context: IDragDropContext
   /**
     * Map of event name to callback function to subscribe to.
     */
-  var eventMap: js.UndefOr[js.Array[Callback]] = js.native
+  var eventMap: js.UndefOr[js.Array[Callback]] = js.undefined
   /**
     * Unique key to associate with instance.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * On drag end event callback.
     */
   var onDragEnd: js.UndefOr[
     js.Function2[/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent], Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * On drag over element(s) event callback.
     */
   var onDragOver: js.UndefOr[
     js.Function2[/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent], Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * On drag start event callback.
     */
@@ -58,154 +57,48 @@ trait IDragDropOptions extends js.Object {
       /* event */ js.UndefOr[MouseEvent], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * On drop event callback.
     */
   var onDrop: js.UndefOr[
     js.Function2[/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent], Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * Selection index on drag and drop event.
     */
-  var selectionIndex: Double = js.native
+  var selectionIndex: Double
   /**
     * Callback on drop state update.
     */
-  def updateDropState(isDropping: Boolean, event: DragEvent): Unit = js.native
+  def updateDropState(isDropping: Boolean, event: DragEvent): Unit
 }
 
 object IDragDropOptions {
   @scala.inline
-  def apply(context: IDragDropContext, selectionIndex: Double, updateDropState: (Boolean, DragEvent) => Unit): IDragDropOptions = {
+  def apply(
+    context: IDragDropContext,
+    selectionIndex: Double,
+    updateDropState: (Boolean, DragEvent) => Unit,
+    canDrag: /* item */ js.UndefOr[js.Any] => Boolean = null,
+    canDrop: (/* dropContext */ js.UndefOr[IDragDropContext], /* dragContext */ js.UndefOr[IDragDropContext]) => Boolean = null,
+    eventMap: js.Array[Callback] = null,
+    key: String = null,
+    onDragEnd: (/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent]) => Unit = null,
+    onDragOver: (/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent]) => Unit = null,
+    onDragStart: (/* item */ js.UndefOr[js.Any], /* itemIndex */ js.UndefOr[Double], /* selectedItems */ js.UndefOr[js.Array[_]], /* event */ js.UndefOr[MouseEvent]) => Unit = null,
+    onDrop: (/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent]) => Unit = null
+  ): IDragDropOptions = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], selectionIndex = selectionIndex.asInstanceOf[js.Any], updateDropState = js.Any.fromFunction2(updateDropState))
+    if (canDrag != null) __obj.updateDynamic("canDrag")(js.Any.fromFunction1(canDrag))
+    if (canDrop != null) __obj.updateDynamic("canDrop")(js.Any.fromFunction2(canDrop))
+    if (eventMap != null) __obj.updateDynamic("eventMap")(eventMap.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction2(onDragEnd))
+    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction2(onDragOver))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction4(onDragStart))
+    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction2(onDrop))
     __obj.asInstanceOf[IDragDropOptions]
   }
-  @scala.inline
-  implicit class IDragDropOptionsOps[Self <: IDragDropOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: IDragDropContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateDropState(value: (Boolean, DragEvent) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDropState")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCanDrag(value: /* item */ js.UndefOr[js.Any] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDrag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanDrop(
-      value: (/* dropContext */ js.UndefOr[IDragDropContext], /* dragContext */ js.UndefOr[IDragDropContext]) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDrop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventMap(value: js.Array[Callback]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragEnd(value: (/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragOver(value: (/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStart(
-      value: (/* item */ js.UndefOr[js.Any], /* itemIndex */ js.UndefOr[Double], /* selectedItems */ js.UndefOr[js.Array[_]], /* event */ js.UndefOr[MouseEvent]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrop(value: (/* item */ js.UndefOr[js.Any], /* event */ js.UndefOr[DragEvent]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

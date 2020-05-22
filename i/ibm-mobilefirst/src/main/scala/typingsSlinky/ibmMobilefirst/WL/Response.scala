@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Response extends ResponseBase {
-  def getAllHeaders(): Headers = js.native
-  def getHeader(name: js.Any): String = js.native
-  def getHeaderNames(): js.Array[String] = js.native
+  def getAllHeaders(): Headers
+  def getHeader(name: js.Any): String
+  def getHeaderNames(): js.Array[String]
 }
 
 object Response {
@@ -33,31 +32,5 @@ object Response {
     val __obj = js.Dynamic.literal(errorCode = errorCode.asInstanceOf[js.Any], errorMsg = errorMsg.asInstanceOf[js.Any], getAllHeaders = js.Any.fromFunction0(getAllHeaders), getHeader = js.Any.fromFunction1(getHeader), getHeaderNames = js.Any.fromFunction0(getHeaderNames), headerJSON = headerJSON.asInstanceOf[js.Any], invocationContext = invocationContext.asInstanceOf[js.Any], readyState = readyState.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], responseJSON = responseJSON.asInstanceOf[js.Any], responseText = responseText.asInstanceOf[js.Any], responseXML = responseXML.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusText = statusText.asInstanceOf[js.Any])
     __obj.asInstanceOf[Response]
   }
-  @scala.inline
-  implicit class ResponseOps[Self <: Response] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAllHeaders(value: () => Headers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllHeaders")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetHeader(value: js.Any => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeader")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetHeaderNames(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeaderNames")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,41 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceSelectionCriteria extends js.Object {
   /**
     * <p> Container for filter information of selection of KMS Encrypted S3 objects. The element is required if you include <code>SourceSelectionCriteria</code> in the replication configuration. </p>
     */
   var SseKmsEncryptedObjects: js.UndefOr[
     typingsSlinky.awsSdkClientS3Node.typesSseKmsEncryptedObjectsMod.SseKmsEncryptedObjects
-  ] = js.native
+  ] = js.undefined
 }
 
 object SourceSelectionCriteria {
   @scala.inline
-  def apply(): SourceSelectionCriteria = {
+  def apply(SseKmsEncryptedObjects: SseKmsEncryptedObjects = null): SourceSelectionCriteria = {
     val __obj = js.Dynamic.literal()
+    if (SseKmsEncryptedObjects != null) __obj.updateDynamic("SseKmsEncryptedObjects")(SseKmsEncryptedObjects.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceSelectionCriteria]
   }
-  @scala.inline
-  implicit class SourceSelectionCriteriaOps[Self <: SourceSelectionCriteria] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSseKmsEncryptedObjects(value: SseKmsEncryptedObjects): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SseKmsEncryptedObjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSseKmsEncryptedObjects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SseKmsEncryptedObjects")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

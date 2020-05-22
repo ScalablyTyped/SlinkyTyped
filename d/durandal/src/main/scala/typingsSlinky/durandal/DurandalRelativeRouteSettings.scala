@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DurandalRelativeRouteSettings extends js.Object {
-  var dynamicHash: js.UndefOr[String] = js.native
-  var fromParent: js.UndefOr[Boolean] = js.native
-  var moduleId: js.UndefOr[String] = js.native
-  var route: js.UndefOr[String] = js.native
+  var dynamicHash: js.UndefOr[String] = js.undefined
+  var fromParent: js.UndefOr[Boolean] = js.undefined
+  var moduleId: js.UndefOr[String] = js.undefined
+  var route: js.UndefOr[String] = js.undefined
 }
 
 object DurandalRelativeRouteSettings {
   @scala.inline
-  def apply(): DurandalRelativeRouteSettings = {
+  def apply(
+    dynamicHash: String = null,
+    fromParent: js.UndefOr[Boolean] = js.undefined,
+    moduleId: String = null,
+    route: String = null
+  ): DurandalRelativeRouteSettings = {
     val __obj = js.Dynamic.literal()
+    if (dynamicHash != null) __obj.updateDynamic("dynamicHash")(dynamicHash.asInstanceOf[js.Any])
+    if (!js.isUndefined(fromParent)) __obj.updateDynamic("fromParent")(fromParent.get.asInstanceOf[js.Any])
+    if (moduleId != null) __obj.updateDynamic("moduleId")(moduleId.asInstanceOf[js.Any])
+    if (route != null) __obj.updateDynamic("route")(route.asInstanceOf[js.Any])
     __obj.asInstanceOf[DurandalRelativeRouteSettings]
   }
-  @scala.inline
-  implicit class DurandalRelativeRouteSettingsOps[Self <: DurandalRelativeRouteSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDynamicHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromParent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModuleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

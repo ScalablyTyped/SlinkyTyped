@@ -12,13 +12,12 @@ import scala.scalajs.js.annotation._
   * @author Stephan Bergmann
   * @version 1.0
   */
-@js.native
 trait XRemoteContentProviderChangeListener extends XEventListener {
   /**
     * gets called whenever changes to a {@link com.sun.star.ucb.XRemoteContentProviderSupplier} occur.
     * @param Event describes the change that has occurred.
     */
-  def remoteContentProviderChange(Event: RemoteContentProviderChangeEvent): Unit = js.native
+  def remoteContentProviderChange(Event: RemoteContentProviderChangeEvent): Unit
 }
 
 object XRemoteContentProviderChangeListener {
@@ -33,19 +32,5 @@ object XRemoteContentProviderChangeListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), remoteContentProviderChange = js.Any.fromFunction1(remoteContentProviderChange))
     __obj.asInstanceOf[XRemoteContentProviderChangeListener]
   }
-  @scala.inline
-  implicit class XRemoteContentProviderChangeListenerOps[Self <: XRemoteContentProviderChangeListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemoteContentProviderChange(value: RemoteContentProviderChangeEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteContentProviderChange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

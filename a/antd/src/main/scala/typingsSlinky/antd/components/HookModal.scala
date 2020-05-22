@@ -15,11 +15,11 @@ object HookModal {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HookModalProps with RefAttributes[HookModalRef]): typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any]] = new typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HookModalProps with RefAttributes[HookModalRef]): typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object] = new typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(afterClose: () => Unit, config: ModalFuncProps): typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any]] = {
+  def apply(afterClose: () => Unit, config: ModalFuncProps): typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object] = {
     val __props = js.Dynamic.literal(afterClose = js.Any.fromFunction0(afterClose), config = config.asInstanceOf[js.Any])
-    new typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any]](js.Array(this.component, __props.asInstanceOf[HookModalProps with RefAttributes[HookModalRef]]))
+    new typingsSlinky.StBuildingComponent.Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, __props.asInstanceOf[HookModalProps with RefAttributes[HookModalRef]]))
   }
 }
 

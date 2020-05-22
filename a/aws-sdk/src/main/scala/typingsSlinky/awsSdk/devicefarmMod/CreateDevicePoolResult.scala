@@ -14,29 +14,10 @@ trait CreateDevicePoolResult extends js.Object {
 
 object CreateDevicePoolResult {
   @scala.inline
-  def apply(): CreateDevicePoolResult = {
+  def apply(devicePool: DevicePool = null): CreateDevicePoolResult = {
     val __obj = js.Dynamic.literal()
+    if (devicePool != null) __obj.updateDynamic("devicePool")(devicePool.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDevicePoolResult]
   }
-  @scala.inline
-  implicit class CreateDevicePoolResultOps[Self <: CreateDevicePoolResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevicePool(value: DevicePool): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevicePool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePool")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

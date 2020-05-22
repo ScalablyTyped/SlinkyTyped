@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("leaflet", "Point")
 @js.native
-class Point_ protected () extends PointExpression {
+class Point_ protected () extends js.Object {
   def this(x: Double, y: Double) = this()
   def this(x: Double, y: Double, round: Boolean) = this()
   var x: Double = js.native

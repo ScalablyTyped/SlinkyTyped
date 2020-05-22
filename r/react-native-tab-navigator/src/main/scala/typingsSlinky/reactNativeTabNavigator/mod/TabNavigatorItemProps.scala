@@ -7,199 +7,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabNavigatorItemProps extends js.Object {
   /**
     * Allow font scaling for title
     */
-  var allowFontScaling: js.UndefOr[Boolean] = js.native
+  var allowFontScaling: js.UndefOr[Boolean] = js.undefined
   /**
     * Text for Item badge
     */
-  var badgeText: js.UndefOr[String | Double] = js.native
+  var badgeText: js.UndefOr[String | Double] = js.undefined
   /**
     * onPress method for Item
     */
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Returns Item badge
     */
-  var renderBadge: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var renderBadge: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /**
     * Returns Item icon
     */
-  var renderIcon: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var renderIcon: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /**
     * Returns selected Item icon
     */
-  var renderSelectedIcon: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var renderSelectedIcon: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /**
     * Return whether the item is selected
     */
-  var selected: js.UndefOr[Boolean] = js.native
+  var selected: js.UndefOr[Boolean] = js.undefined
   /**
     * Styling for selected Item title
     */
-  var selectedTitleStyle: js.UndefOr[TextStyle] = js.native
+  var selectedTitleStyle: js.UndefOr[TextStyle] = js.undefined
   /**
     * Styling for tab
     */
-  var tabStyle: js.UndefOr[ViewStyle] = js.native
+  var tabStyle: js.UndefOr[ViewStyle] = js.undefined
   /**
     * Item title
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * Styling for Item title
     */
-  var titleStyle: js.UndefOr[TextStyle] = js.native
+  var titleStyle: js.UndefOr[TextStyle] = js.undefined
 }
 
 object TabNavigatorItemProps {
   @scala.inline
-  def apply(): TabNavigatorItemProps = {
+  def apply(
+    allowFontScaling: js.UndefOr[Boolean] = js.undefined,
+    badgeText: String | Double = null,
+    onPress: () => Unit = null,
+    renderBadge: () => ReactElement = null,
+    renderIcon: () => ReactElement = null,
+    renderSelectedIcon: () => ReactElement = null,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    selectedTitleStyle: TextStyle = null,
+    tabStyle: ViewStyle = null,
+    title: String = null,
+    titleStyle: TextStyle = null
+  ): TabNavigatorItemProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowFontScaling)) __obj.updateDynamic("allowFontScaling")(allowFontScaling.get.asInstanceOf[js.Any])
+    if (badgeText != null) __obj.updateDynamic("badgeText")(badgeText.asInstanceOf[js.Any])
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
+    if (renderBadge != null) __obj.updateDynamic("renderBadge")(js.Any.fromFunction0(renderBadge))
+    if (renderIcon != null) __obj.updateDynamic("renderIcon")(js.Any.fromFunction0(renderIcon))
+    if (renderSelectedIcon != null) __obj.updateDynamic("renderSelectedIcon")(js.Any.fromFunction0(renderSelectedIcon))
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (selectedTitleStyle != null) __obj.updateDynamic("selectedTitleStyle")(selectedTitleStyle.asInstanceOf[js.Any])
+    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabNavigatorItemProps]
   }
-  @scala.inline
-  implicit class TabNavigatorItemPropsOps[Self <: TabNavigatorItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowFontScaling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFontScaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowFontScaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFontScaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeText(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderBadge(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBadge")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBadge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderIcon(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderIcon")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderSelectedIcon(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSelectedIcon")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderSelectedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSelectedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedTitleStyle(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTitleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedTitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTitleStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabStyle(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleStyle(value: TextStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

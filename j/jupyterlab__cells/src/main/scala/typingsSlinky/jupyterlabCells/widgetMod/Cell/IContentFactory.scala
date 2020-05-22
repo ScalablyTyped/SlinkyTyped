@@ -19,18 +19,17 @@ import scala.scalajs.js.annotation._
   * provide a single factory object for all notebook/cell/outputarea related
   * widgets.
   */
-@js.native
 trait IContentFactory
   extends typingsSlinky.jupyterlabOutputarea.widgetMod.OutputArea.IContentFactory
      with typingsSlinky.jupyterlabCells.inputareaMod.InputArea.IContentFactory {
   /**
     * Create a new cell header for the parent widget.
     */
-  def createCellFooter(): ICellFooter = js.native
+  def createCellFooter(): ICellFooter
   /**
     * Create a new cell header for the parent widget.
     */
-  def createCellHeader(): ICellHeader = js.native
+  def createCellHeader(): ICellHeader
 }
 
 object IContentFactory {
@@ -46,25 +45,5 @@ object IContentFactory {
     val __obj = js.Dynamic.literal(createCellFooter = js.Any.fromFunction0(createCellFooter), createCellHeader = js.Any.fromFunction0(createCellHeader), createInputPrompt = js.Any.fromFunction0(createInputPrompt), createOutputPrompt = js.Any.fromFunction0(createOutputPrompt), createStdin = js.Any.fromFunction1(createStdin), editorFactory = js.Any.fromFunction1(editorFactory))
     __obj.asInstanceOf[IContentFactory]
   }
-  @scala.inline
-  implicit class IContentFactoryOps[Self <: IContentFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateCellFooter(value: () => ICellFooter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCellFooter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCellHeader(value: () => ICellHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCellHeader")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

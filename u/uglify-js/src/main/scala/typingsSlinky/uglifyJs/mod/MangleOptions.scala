@@ -4,92 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MangleOptions extends js.Object {
   /** Pass true to mangle names visible in scopes where `eval` or with are used. */
-  var eval: js.UndefOr[Boolean] = js.native
+  var eval: js.UndefOr[Boolean] = js.undefined
   /** Pass true to not mangle function names. Useful for code relying on `Function.prototype.name`. */
-  var keep_fnames: js.UndefOr[Boolean] = js.native
-  var properties: js.UndefOr[Boolean | ManglePropertiesOptions] = js.native
+  var keep_fnames: js.UndefOr[Boolean] = js.undefined
+  var properties: js.UndefOr[Boolean | ManglePropertiesOptions] = js.undefined
   /** Pass an array of identifiers that should be excluded from mangling. Example: `["foo", "bar"]`. */
-  var reserved: js.UndefOr[js.Array[String]] = js.native
+  var reserved: js.UndefOr[js.Array[String]] = js.undefined
   /** Pass true to mangle names declared in the top level scope. */
-  var toplevel: js.UndefOr[Boolean] = js.native
+  var toplevel: js.UndefOr[Boolean] = js.undefined
 }
 
 object MangleOptions {
   @scala.inline
-  def apply(): MangleOptions = {
+  def apply(
+    eval: js.UndefOr[Boolean] = js.undefined,
+    keep_fnames: js.UndefOr[Boolean] = js.undefined,
+    properties: Boolean | ManglePropertiesOptions = null,
+    reserved: js.Array[String] = null,
+    toplevel: js.UndefOr[Boolean] = js.undefined
+  ): MangleOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(eval)) __obj.updateDynamic("eval")(eval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keep_fnames)) __obj.updateDynamic("keep_fnames")(keep_fnames.get.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (reserved != null) __obj.updateDynamic("reserved")(reserved.asInstanceOf[js.Any])
+    if (!js.isUndefined(toplevel)) __obj.updateDynamic("toplevel")(toplevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MangleOptions]
   }
-  @scala.inline
-  implicit class MangleOptionsOps[Self <: MangleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEval(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeep_fnames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keep_fnames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeep_fnames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keep_fnames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: Boolean | ManglePropertiesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReserved(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReserved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reserved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToplevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toplevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToplevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toplevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

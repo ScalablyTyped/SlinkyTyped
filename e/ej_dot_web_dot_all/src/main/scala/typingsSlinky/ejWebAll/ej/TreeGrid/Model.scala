@@ -4,1523 +4,545 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Model extends js.Object {
   /** Triggered before every success event of TreeGrid action.
     */
-  var actionBegin: js.UndefOr[js.Function1[/* e */ ActionBeginEventArgs, Unit]] = js.native
+  var actionBegin: js.UndefOr[js.Function1[/* e */ ActionBeginEventArgs, Unit]] = js.undefined
   /** Triggered for every TreeGrid action success event.
     */
-  var actionComplete: js.UndefOr[js.Function1[/* e */ ActionCompleteEventArgs, Unit]] = js.native
+  var actionComplete: js.UndefOr[js.Function1[/* e */ ActionCompleteEventArgs, Unit]] = js.undefined
   /** Enables or disables the option for column reordering
     * @Default {false}
     */
-  var allowColumnReordering: js.UndefOr[Boolean] = js.native
+  var allowColumnReordering: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the ability to resize the column width interactively.
     * @Default {false}
     */
-  var allowColumnResize: js.UndefOr[Boolean] = js.native
+  var allowColumnResize: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the ability to drag and drop the row interactively to reorder the rows.
     * @Default {false}
     */
-  var allowDragAndDrop: js.UndefOr[Boolean] = js.native
+  var allowDragAndDrop: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the ability to filter the data on all the columns. Enabling this property will display a row with editor controls corresponding to each column. You can
     * restrict filtering on particular column by disabling this property directly on that column instance itself.
     * @Default {false}
     */
-  var allowFiltering: js.UndefOr[Boolean] = js.native
+  var allowFiltering: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables keyboard navigation.
     * @Default {true}
     */
-  var allowKeyboardNavigation: js.UndefOr[Boolean] = js.native
+  var allowKeyboardNavigation: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the ability to sort the rows based on multiple columns/fields by clicking on each column header. Rows will be sorted recursively on clicking the column headers.
     * @Default {false}
     */
-  var allowMultiSorting: js.UndefOr[Boolean] = js.native
+  var allowMultiSorting: js.UndefOr[Boolean] = js.undefined
   /** Enables/disables pagination of rows in TreeGrid
     * @Default {false}
     */
-  var allowPaging: js.UndefOr[Boolean] = js.native
+  var allowPaging: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the toolbar searching in TreeGrid.
     * @Default {false}
     */
-  var allowSearching: js.UndefOr[Boolean] = js.native
+  var allowSearching: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the ability to select a row interactively.
     * @Default {true}
     */
-  var allowSelection: js.UndefOr[Boolean] = js.native
+  var allowSelection: js.UndefOr[Boolean] = js.undefined
   /** Enables or disables the ability to sort the rows based on a single field/column by clicking on that column header. When enabled, rows can be sorted only by single field/column.
     * @Default {false}
     */
-  var allowSorting: js.UndefOr[Boolean] = js.native
+  var allowSorting: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value that indicates whether the Content will wrap to the next line if the content exceeds the boundary of the Column Cells.
     * @Default {false}
     */
-  var allowTextWrap: js.UndefOr[Boolean] = js.native
+  var allowTextWrap: js.UndefOr[Boolean] = js.undefined
   /** Specifies the id of the template that has to be applied for alternate rows.
     */
-  var altRowTemplateID: js.UndefOr[String] = js.native
+  var altRowTemplateID: js.UndefOr[String] = js.undefined
   /** Triggered before the printing initiated in TreeGrid.
     */
-  var beforePrint: js.UndefOr[js.Function1[/* e */ BeforePrintEventArgs, Unit]] = js.native
+  var beforePrint: js.UndefOr[js.Function1[/* e */ BeforePrintEventArgs, Unit]] = js.undefined
   /** Triggered while enter the edit mode in the TreeGrid cell
     */
-  var beginEdit: js.UndefOr[js.Function1[/* e */ BeginEditEventArgs, Unit]] = js.native
+  var beginEdit: js.UndefOr[js.Function1[/* e */ BeginEditEventArgs, Unit]] = js.undefined
   /** Triggered after selected a cell
     */
-  var cellSelected: js.UndefOr[js.Function1[/* e */ CellSelectedEventArgs, Unit]] = js.native
+  var cellSelected: js.UndefOr[js.Function1[/* e */ CellSelectedEventArgs, Unit]] = js.undefined
   /** Triggered before selecting a cell
     */
-  var cellSelecting: js.UndefOr[js.Function1[/* e */ CellSelectingEventArgs, Unit]] = js.native
+  var cellSelecting: js.UndefOr[js.Function1[/* e */ CellSelectingEventArgs, Unit]] = js.undefined
   /** Specifies the template for cell tooltip
     * @Default {null}
     */
-  var cellTooltipTemplate: js.UndefOr[String] = js.native
+  var cellTooltipTemplate: js.UndefOr[String] = js.undefined
   /** Specifies the mapping property path for sub tasks in datasource
     */
-  var childMapping: js.UndefOr[String] = js.native
+  var childMapping: js.UndefOr[String] = js.undefined
   /** Triggered after collapsed the TreeGrid record
     */
-  var collapsed: js.UndefOr[js.Function1[/* e */ CollapsedEventArgs, Unit]] = js.native
+  var collapsed: js.UndefOr[js.Function1[/* e */ CollapsedEventArgs, Unit]] = js.undefined
   /** Enables or disables the expandable/collapsible footer summary row. By default expander icon for footer summary will be rendered in first column of first summary row.
     * @Default {false}
     */
-  var collapsibleTotalSummary: js.UndefOr[Boolean] = js.native
+  var collapsibleTotalSummary: js.UndefOr[Boolean] = js.undefined
   /** Triggered while collapsing the TreeGrid record
     */
-  var collapsing: js.UndefOr[js.Function1[/* e */ CollapsingEventArgs, Unit]] = js.native
+  var collapsing: js.UndefOr[js.Function1[/* e */ CollapsingEventArgs, Unit]] = js.undefined
   /** To Specify the column fields to be displayed in the dialog while inserting a column using column menu.
     * @Default {[]}
     */
-  var columnDialogFields: js.UndefOr[js.Array[_]] = js.native
+  var columnDialogFields: js.UndefOr[js.Array[_]] = js.undefined
   /** Triggered while dragging a column
     */
-  var columnDrag: js.UndefOr[js.Function1[/* e */ ColumnDragEventArgs, Unit]] = js.native
+  var columnDrag: js.UndefOr[js.Function1[/* e */ ColumnDragEventArgs, Unit]] = js.undefined
   /** Triggered  when you start to drag a column
     */
-  var columnDragStart: js.UndefOr[js.Function1[/* e */ ColumnDragStartEventArgs, Unit]] = js.native
+  var columnDragStart: js.UndefOr[js.Function1[/* e */ ColumnDragStartEventArgs, Unit]] = js.undefined
   /** Triggered when a column is dropped
     */
-  var columnDrop: js.UndefOr[js.Function1[/* e */ ColumnDropEventArgs, Unit]] = js.native
+  var columnDrop: js.UndefOr[js.Function1[/* e */ ColumnDropEventArgs, Unit]] = js.undefined
   /** Triggered when a column has been resized
     */
-  var columnResizeEnd: js.UndefOr[js.Function1[/* e */ ColumnResizeEndEventArgs, Unit]] = js.native
+  var columnResizeEnd: js.UndefOr[js.Function1[/* e */ ColumnResizeEndEventArgs, Unit]] = js.undefined
   /** Specifies the settings for column resize
     */
-  var columnResizeSettings: js.UndefOr[ColumnResizeSettings] = js.native
+  var columnResizeSettings: js.UndefOr[ColumnResizeSettings] = js.undefined
   /** Triggered while start to resize a column
     */
-  var columnResizeStart: js.UndefOr[js.Function1[/* e */ ColumnResizeStartEventArgs, Unit]] = js.native
+  var columnResizeStart: js.UndefOr[js.Function1[/* e */ ColumnResizeStartEventArgs, Unit]] = js.undefined
   /** Triggered after a column resized
     */
-  var columnResized: js.UndefOr[js.Function1[/* e */ ColumnResizedEventArgs, Unit]] = js.native
+  var columnResized: js.UndefOr[js.Function1[/* e */ ColumnResizedEventArgs, Unit]] = js.undefined
   /** Option for adding columns; each column has the option to bind to a field in the dataSource.
     */
-  var columns: js.UndefOr[js.Array[Column]] = js.native
+  var columns: js.UndefOr[js.Array[Column]] = js.undefined
   /** Defines the common width for all the columns in TreeGrid
     * @Default {150}
     */
-  var commonWidth: js.UndefOr[Double] = js.native
+  var commonWidth: js.UndefOr[Double] = js.undefined
   /** Triggered while Context Menu is rendered in TreeGrid control
     */
-  var contextMenuOpen: js.UndefOr[js.Function1[/* e */ ContextMenuOpenEventArgs, Unit]] = js.native
+  var contextMenuOpen: js.UndefOr[js.Function1[/* e */ ContextMenuOpenEventArgs, Unit]] = js.undefined
   /** Options for displaying and customizing context menu items.
     */
-  var contextMenuSettings: js.UndefOr[ContextMenuSettings] = js.native
+  var contextMenuSettings: js.UndefOr[ContextMenuSettings] = js.undefined
   /** Triggered when TreeGrid is rendered completely
     */
-  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.native
+  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.undefined
   /** Specify the CSS class for TreeGrid to achieve custom theme.
     */
-  var cssClass: js.UndefOr[String] = js.native
+  var cssClass: js.UndefOr[String] = js.undefined
   /** Specifies hierarchical or self-referential data to populate the TreeGrid.
     * @Default {null}
     */
-  var dataSource: js.UndefOr[js.Array[_]] = js.native
+  var dataSource: js.UndefOr[js.Array[_]] = js.undefined
   /** Triggered while rendering details template in TreeGrid
     */
-  var detailsDataBound: js.UndefOr[js.Function1[/* e */ DetailsDataBoundEventArgs, Unit]] = js.native
+  var detailsDataBound: js.UndefOr[js.Function1[/* e */ DetailsDataBoundEventArgs, Unit]] = js.undefined
   /** Triggered when details template pop-up is hidden.
     */
-  var detailsHidden: js.UndefOr[js.Function1[/* e */ DetailsHiddenEventArgs, Unit]] = js.native
+  var detailsHidden: js.UndefOr[js.Function1[/* e */ DetailsHiddenEventArgs, Unit]] = js.undefined
   /** Specifies the row height of the details view
     * @Default {100}
     */
-  var detailsRowHeight: js.UndefOr[Double] = js.native
+  var detailsRowHeight: js.UndefOr[Double] = js.undefined
   /** Triggered when details template pop-up is shown.
     */
-  var detailsShown: js.UndefOr[js.Function1[/* e */ DetailsShownEventArgs, Unit]] = js.native
+  var detailsShown: js.UndefOr[js.Function1[/* e */ DetailsShownEventArgs, Unit]] = js.undefined
   /** Specifies the template for details view
     */
-  var detailsTemplate: js.UndefOr[String] = js.native
+  var detailsTemplate: js.UndefOr[String] = js.undefined
   /** Options for displaying and customizing the tooltip. This tooltip will show the preview of the row that is being dragged.
     */
-  var dragTooltip: js.UndefOr[DragTooltip] = js.native
+  var dragTooltip: js.UndefOr[DragTooltip] = js.undefined
   /** Options for enabling and configuring the editing related operations.
     */
-  var editSettings: js.UndefOr[EditSettings] = js.native
+  var editSettings: js.UndefOr[EditSettings] = js.undefined
   /** Specifies whether to render alternate rows in different background colors.
     * @Default {true}
     */
-  var enableAltRow: js.UndefOr[Boolean] = js.native
+  var enableAltRow: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to load all the rows in collapsed state when the TreeGrid is rendered for the first time.
     * @Default {false}
     */
-  var enableCollapseAll: js.UndefOr[Boolean] = js.native
+  var enableCollapseAll: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value that indicates whether to enable load on demand approach, for rendering child records and page records.
     * @Default {false}
     */
-  var enableLoadOnDemand: js.UndefOr[Boolean] = js.native
+  var enableLoadOnDemand: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to resize TreeGrid whenever window size changes.
     * @Default {false}
     */
-  var enableResize: js.UndefOr[Boolean] = js.native
+  var enableResize: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to render only the visual elements that are visible in the UI. When you enable this property, it will reduce the loading time for loading large number of records.
     * @Default {false}
     */
-  var enableVirtualization: js.UndefOr[Boolean] = js.native
+  var enableVirtualization: js.UndefOr[Boolean] = js.undefined
   /** Triggered after saved the modified cellValue in TreeGrid
     */
-  var endEdit: js.UndefOr[js.Function1[/* e */ EndEditEventArgs, Unit]] = js.native
+  var endEdit: js.UndefOr[js.Function1[/* e */ EndEditEventArgs, Unit]] = js.undefined
   /** Specifies the mapping property path for the expand status of a record in data source.
     */
-  var expandStateMapping: js.UndefOr[String] = js.native
+  var expandStateMapping: js.UndefOr[String] = js.undefined
   /** Triggered after expand the record
     */
-  var expanded: js.UndefOr[js.Function1[/* e */ ExpandedEventArgs, Unit]] = js.native
+  var expanded: js.UndefOr[js.Function1[/* e */ ExpandedEventArgs, Unit]] = js.undefined
   /** Triggered while expanding the TreeGrid record
     */
-  var expanding: js.UndefOr[js.Function1[/* e */ ExpandingEventArgs, Unit]] = js.native
+  var expanding: js.UndefOr[js.Function1[/* e */ ExpandingEventArgs, Unit]] = js.undefined
   /** Options for filtering and customizing filter actions.
     */
-  var filterSettings: js.UndefOr[FilterSettings] = js.native
+  var filterSettings: js.UndefOr[FilterSettings] = js.undefined
   /** Specifies whether to wrap the header text when it is overflown i.e., when it exceeds the header width.
     * @Default {ej.TreeGrid.HeaderTextOverflow.None}
     */
-  var headerTextOverflow: js.UndefOr[HeaderTextOverflow | String] = js.native
+  var headerTextOverflow: js.UndefOr[HeaderTextOverflow | String] = js.undefined
   /** Specifies the name of the field in the dataSource, which contains the id of that row.
     */
-  var idMapping: js.UndefOr[String] = js.native
+  var idMapping: js.UndefOr[String] = js.undefined
   /** Enables or disables the responsiveness of TreeGrid
     * @Default {false}
     */
-  var isResponsive: js.UndefOr[Boolean] = js.native
+  var isResponsive: js.UndefOr[Boolean] = js.undefined
   /** Triggered while Treegrid is loaded
     */
-  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.native
+  var load: js.UndefOr[js.Function1[/* e */ LoadEventArgs, Unit]] = js.undefined
   /** Specifies the localization information to customize the User Interface (UI) to support regional language and culture
     * @Default {en-US}
     */
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[String] = js.undefined
   /** Specifies the options for customizing the pager.
     */
-  var pageSettings: js.UndefOr[PageSettings] = js.native
+  var pageSettings: js.UndefOr[PageSettings] = js.undefined
   /** Specifies the name of the field in the dataSource, which contains the parent's id. This is necessary to form a parent-child hierarchy, if the dataSource contains self-referential
     * data.
     */
-  var parentIdMapping: js.UndefOr[String] = js.native
+  var parentIdMapping: js.UndefOr[String] = js.undefined
   /** Enables or disables internal parsing of a row. When disabled this property, row will be displayed using the defined template without any internal event bindings.
     * @Default {true}
     */
-  var parseRowTemplate: js.UndefOr[Boolean] = js.native
+  var parseRowTemplate: js.UndefOr[Boolean] = js.undefined
   /** Specifies ej.Query to select data from the dataSource. This property is applicable only when the dataSource is ej.DataManager.
     * @Default {null}
     */
-  var query: js.UndefOr[js.Any] = js.native
+  var query: js.UndefOr[js.Any] = js.undefined
   /** Triggered while rendering each cell in the TreeGrid
     */
-  var queryCellInfo: js.UndefOr[js.Function1[/* e */ QueryCellInfoEventArgs, Unit]] = js.native
+  var queryCellInfo: js.UndefOr[js.Function1[/* e */ QueryCellInfoEventArgs, Unit]] = js.undefined
   /** Triggered while clicking a row, even when allowSelection property is disabled.
     */
-  var recordClick: js.UndefOr[js.Function1[/* e */ RecordClickEventArgs, Unit]] = js.native
+  var recordClick: js.UndefOr[js.Function1[/* e */ RecordClickEventArgs, Unit]] = js.undefined
   /** Triggered during record double click action, even when allowSelection property is disabled.
     */
-  var recordDoubleClick: js.UndefOr[js.Function1[/* e */ RecordDoubleClickEventArgs, Unit]] = js.native
+  var recordDoubleClick: js.UndefOr[js.Function1[/* e */ RecordDoubleClickEventArgs, Unit]] = js.undefined
   /** Triggered while rendering each row
     */
-  var rowDataBound: js.UndefOr[js.Function1[/* e */ RowDataBoundEventArgs, Unit]] = js.native
+  var rowDataBound: js.UndefOr[js.Function1[/* e */ RowDataBoundEventArgs, Unit]] = js.undefined
   /** Triggered while dragging a row in TreeGrid control
     */
-  var rowDrag: js.UndefOr[js.Function1[/* e */ RowDragEventArgs, Unit]] = js.native
+  var rowDrag: js.UndefOr[js.Function1[/* e */ RowDragEventArgs, Unit]] = js.undefined
   /** Triggered while start to drag row in TreeGrid control
     */
-  var rowDragStart: js.UndefOr[js.Function1[/* e */ RowDragStartEventArgs, Unit]] = js.native
+  var rowDragStart: js.UndefOr[js.Function1[/* e */ RowDragStartEventArgs, Unit]] = js.undefined
   /** Triggered while drop a row in TreeGrid control
     */
-  var rowDragStop: js.UndefOr[js.Function1[/* e */ RowDragStopEventArgs, Unit]] = js.native
+  var rowDragStop: js.UndefOr[js.Function1[/* e */ RowDragStopEventArgs, Unit]] = js.undefined
   /** Triggered before row drop action begins.
     */
-  var rowDropActionBegin: js.UndefOr[js.Function1[/* e */ RowDropActionBeginEventArgs, Unit]] = js.native
+  var rowDropActionBegin: js.UndefOr[js.Function1[/* e */ RowDropActionBeginEventArgs, Unit]] = js.undefined
   /** Specifies the height of a single row in tree grid. Also, we need to set same height in the CSS style with class name e-rowcell.
     * @Default {30}
     */
-  var rowHeight: js.UndefOr[Double] = js.native
+  var rowHeight: js.UndefOr[Double] = js.undefined
   /** Triggered after the row is selected.
     */
-  var rowSelected: js.UndefOr[js.Function1[/* e */ RowSelectedEventArgs, Unit]] = js.native
+  var rowSelected: js.UndefOr[js.Function1[/* e */ RowSelectedEventArgs, Unit]] = js.undefined
   /** Triggered before the row is going to be selected.
     */
-  var rowSelecting: js.UndefOr[js.Function1[/* e */ RowSelectingEventArgs, Unit]] = js.native
+  var rowSelecting: js.UndefOr[js.Function1[/* e */ RowSelectingEventArgs, Unit]] = js.undefined
   /** Specifies the id of the template to be applied for all the rows.
     */
-  var rowTemplateID: js.UndefOr[String] = js.native
+  var rowTemplateID: js.UndefOr[String] = js.undefined
   /** Specifies the toolbar searching customizations.
     */
-  var searchSettings: js.UndefOr[SearchSettings] = js.native
+  var searchSettings: js.UndefOr[SearchSettings] = js.undefined
   /** Specifies the selected cell information on rendering TreeGrid.
     */
-  var selectedCellIndexes: js.UndefOr[js.Array[SelectedCellIndex]] = js.native
+  var selectedCellIndexes: js.UndefOr[js.Array[SelectedCellIndex]] = js.undefined
   /** Specifies the index of the selected row.
     * @Default {-1}
     */
-  var selectedRowIndex: js.UndefOr[Double] = js.native
+  var selectedRowIndex: js.UndefOr[Double] = js.undefined
   /** Specifies the settings for row and cell selection.
     */
-  var selectionSettings: js.UndefOr[SelectionSettings] = js.native
+  var selectionSettings: js.UndefOr[SelectionSettings] = js.undefined
   /** Controls the visibility of the menu button, which is displayed on the column header. Clicking on this button will show a popup menu. When you choose Columns item from this popup,
     * a list box with column names will be shown, from which you can select/deselect a column name to control the visibility of the respective columns.
     * @Default {false}
     */
-  var showColumnChooser: js.UndefOr[Boolean] = js.native
+  var showColumnChooser: js.UndefOr[Boolean] = js.undefined
   /** Enables/disables the options for inserting , deleting and renaming  columns.
     * @Default {false}
     */
-  var showColumnOptions: js.UndefOr[Boolean] = js.native
+  var showColumnOptions: js.UndefOr[Boolean] = js.undefined
   /** Specifies the visibility of details view
     * @Default {false}
     */
-  var showDetailsRow: js.UndefOr[Boolean] = js.native
+  var showDetailsRow: js.UndefOr[Boolean] = js.undefined
   /** Specifies the visibility of the expander column which is used to expand or collapse the details view
     * @Default {false}
     */
-  var showDetailsRowInfoColumn: js.UndefOr[Boolean] = js.native
+  var showDetailsRowInfoColumn: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to show tooltip when mouse is hovered on the cell.
     * @Default {true}
     */
-  var showGridCellTooltip: js.UndefOr[Boolean] = js.native
+  var showGridCellTooltip: js.UndefOr[Boolean] = js.undefined
   /** Specifies whether to show tooltip for the cells, which has expander button.
     * @Default {true}
     */
-  var showGridExpandCellTooltip: js.UndefOr[Boolean] = js.native
+  var showGridExpandCellTooltip: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value that indicates stacked header should be shown on TreeGrid layout when the property â€œstackedHeaderRowsâ€ is set.
     * @Default {false}
     */
-  var showStackedHeader: js.UndefOr[Boolean] = js.native
+  var showStackedHeader: js.UndefOr[Boolean] = js.undefined
   /** Specifies the visibility of summary row
     * @Default {false}
     */
-  var showSummaryRow: js.UndefOr[Boolean] = js.native
+  var showSummaryRow: js.UndefOr[Boolean] = js.undefined
   /** Specifies the visibility of total summary row for the corresponding summary column
     * @Default {false}
     */
-  var showTotalSummary: js.UndefOr[Boolean] = js.native
+  var showTotalSummary: js.UndefOr[Boolean] = js.undefined
   /** Options for setting width and height for TreeGrid.
     */
-  var sizeSettings: js.UndefOr[SizeSettings] = js.native
+  var sizeSettings: js.UndefOr[SizeSettings] = js.undefined
   /** Options for sorting the rows.
     */
-  var sortSettings: js.UndefOr[SortSettings] = js.native
+  var sortSettings: js.UndefOr[SortSettings] = js.undefined
   /** Gets or sets an object that indicates to managing the collection of stacked header rows for the TreeGrid.
     * @Default {[]}
     */
-  var stackedHeaderRows: js.UndefOr[js.Array[StackedHeaderRow]] = js.native
+  var stackedHeaderRows: js.UndefOr[js.Array[StackedHeaderRow]] = js.undefined
   /** Specifies the summary row collection object to be displayed
     * @Default {[]}
     */
-  var summaryRows: js.UndefOr[js.Array[SummaryRow]] = js.native
+  var summaryRows: js.UndefOr[js.Array[SummaryRow]] = js.undefined
   /** Triggered when toolbar item is clicked in TreeGrid.
     */
-  var toolbarClick: js.UndefOr[js.Function1[/* e */ ToolbarClickEventArgs, Unit]] = js.native
+  var toolbarClick: js.UndefOr[js.Function1[/* e */ ToolbarClickEventArgs, Unit]] = js.undefined
   /** Options for displaying and customizing the toolbar items.
     */
-  var toolbarSettings: js.UndefOr[ToolbarSettings] = js.native
+  var toolbarSettings: js.UndefOr[ToolbarSettings] = js.undefined
   /** Specifies the height of footer summary container.
     * @Default {90}
     */
-  var totalSummaryHeight: js.UndefOr[Double] = js.native
+  var totalSummaryHeight: js.UndefOr[Double] = js.undefined
   /** Specifies the index of the column that needs to have the expander button. By default, cells in the first column contain the expander button.
     * @Default {0}
     */
-  var treeColumnIndex: js.UndefOr[Double] = js.native
+  var treeColumnIndex: js.UndefOr[Double] = js.undefined
 }
 
 object Model {
   @scala.inline
-  def apply(): Model = {
+  def apply(
+    actionBegin: /* e */ ActionBeginEventArgs => Unit = null,
+    actionComplete: /* e */ ActionCompleteEventArgs => Unit = null,
+    allowColumnReordering: js.UndefOr[Boolean] = js.undefined,
+    allowColumnResize: js.UndefOr[Boolean] = js.undefined,
+    allowDragAndDrop: js.UndefOr[Boolean] = js.undefined,
+    allowFiltering: js.UndefOr[Boolean] = js.undefined,
+    allowKeyboardNavigation: js.UndefOr[Boolean] = js.undefined,
+    allowMultiSorting: js.UndefOr[Boolean] = js.undefined,
+    allowPaging: js.UndefOr[Boolean] = js.undefined,
+    allowSearching: js.UndefOr[Boolean] = js.undefined,
+    allowSelection: js.UndefOr[Boolean] = js.undefined,
+    allowSorting: js.UndefOr[Boolean] = js.undefined,
+    allowTextWrap: js.UndefOr[Boolean] = js.undefined,
+    altRowTemplateID: String = null,
+    beforePrint: /* e */ BeforePrintEventArgs => Unit = null,
+    beginEdit: /* e */ BeginEditEventArgs => Unit = null,
+    cellSelected: /* e */ CellSelectedEventArgs => Unit = null,
+    cellSelecting: /* e */ CellSelectingEventArgs => Unit = null,
+    cellTooltipTemplate: String = null,
+    childMapping: String = null,
+    collapsed: /* e */ CollapsedEventArgs => Unit = null,
+    collapsibleTotalSummary: js.UndefOr[Boolean] = js.undefined,
+    collapsing: /* e */ CollapsingEventArgs => Unit = null,
+    columnDialogFields: js.Array[_] = null,
+    columnDrag: /* e */ ColumnDragEventArgs => Unit = null,
+    columnDragStart: /* e */ ColumnDragStartEventArgs => Unit = null,
+    columnDrop: /* e */ ColumnDropEventArgs => Unit = null,
+    columnResizeEnd: /* e */ ColumnResizeEndEventArgs => Unit = null,
+    columnResizeSettings: ColumnResizeSettings = null,
+    columnResizeStart: /* e */ ColumnResizeStartEventArgs => Unit = null,
+    columnResized: /* e */ ColumnResizedEventArgs => Unit = null,
+    columns: js.Array[Column] = null,
+    commonWidth: js.UndefOr[Double] = js.undefined,
+    contextMenuOpen: /* e */ ContextMenuOpenEventArgs => Unit = null,
+    contextMenuSettings: ContextMenuSettings = null,
+    create: /* e */ CreateEventArgs => Unit = null,
+    cssClass: String = null,
+    dataSource: js.Array[_] = null,
+    detailsDataBound: /* e */ DetailsDataBoundEventArgs => Unit = null,
+    detailsHidden: /* e */ DetailsHiddenEventArgs => Unit = null,
+    detailsRowHeight: js.UndefOr[Double] = js.undefined,
+    detailsShown: /* e */ DetailsShownEventArgs => Unit = null,
+    detailsTemplate: String = null,
+    dragTooltip: DragTooltip = null,
+    editSettings: EditSettings = null,
+    enableAltRow: js.UndefOr[Boolean] = js.undefined,
+    enableCollapseAll: js.UndefOr[Boolean] = js.undefined,
+    enableLoadOnDemand: js.UndefOr[Boolean] = js.undefined,
+    enableResize: js.UndefOr[Boolean] = js.undefined,
+    enableVirtualization: js.UndefOr[Boolean] = js.undefined,
+    endEdit: /* e */ EndEditEventArgs => Unit = null,
+    expandStateMapping: String = null,
+    expanded: /* e */ ExpandedEventArgs => Unit = null,
+    expanding: /* e */ ExpandingEventArgs => Unit = null,
+    filterSettings: FilterSettings = null,
+    headerTextOverflow: HeaderTextOverflow | String = null,
+    idMapping: String = null,
+    isResponsive: js.UndefOr[Boolean] = js.undefined,
+    load: /* e */ LoadEventArgs => Unit = null,
+    locale: String = null,
+    pageSettings: PageSettings = null,
+    parentIdMapping: String = null,
+    parseRowTemplate: js.UndefOr[Boolean] = js.undefined,
+    query: js.Any = null,
+    queryCellInfo: /* e */ QueryCellInfoEventArgs => Unit = null,
+    recordClick: /* e */ RecordClickEventArgs => Unit = null,
+    recordDoubleClick: /* e */ RecordDoubleClickEventArgs => Unit = null,
+    rowDataBound: /* e */ RowDataBoundEventArgs => Unit = null,
+    rowDrag: /* e */ RowDragEventArgs => Unit = null,
+    rowDragStart: /* e */ RowDragStartEventArgs => Unit = null,
+    rowDragStop: /* e */ RowDragStopEventArgs => Unit = null,
+    rowDropActionBegin: /* e */ RowDropActionBeginEventArgs => Unit = null,
+    rowHeight: js.UndefOr[Double] = js.undefined,
+    rowSelected: /* e */ RowSelectedEventArgs => Unit = null,
+    rowSelecting: /* e */ RowSelectingEventArgs => Unit = null,
+    rowTemplateID: String = null,
+    searchSettings: SearchSettings = null,
+    selectedCellIndexes: js.Array[SelectedCellIndex] = null,
+    selectedRowIndex: js.UndefOr[Double] = js.undefined,
+    selectionSettings: SelectionSettings = null,
+    showColumnChooser: js.UndefOr[Boolean] = js.undefined,
+    showColumnOptions: js.UndefOr[Boolean] = js.undefined,
+    showDetailsRow: js.UndefOr[Boolean] = js.undefined,
+    showDetailsRowInfoColumn: js.UndefOr[Boolean] = js.undefined,
+    showGridCellTooltip: js.UndefOr[Boolean] = js.undefined,
+    showGridExpandCellTooltip: js.UndefOr[Boolean] = js.undefined,
+    showStackedHeader: js.UndefOr[Boolean] = js.undefined,
+    showSummaryRow: js.UndefOr[Boolean] = js.undefined,
+    showTotalSummary: js.UndefOr[Boolean] = js.undefined,
+    sizeSettings: SizeSettings = null,
+    sortSettings: SortSettings = null,
+    stackedHeaderRows: js.Array[StackedHeaderRow] = null,
+    summaryRows: js.Array[SummaryRow] = null,
+    toolbarClick: /* e */ ToolbarClickEventArgs => Unit = null,
+    toolbarSettings: ToolbarSettings = null,
+    totalSummaryHeight: js.UndefOr[Double] = js.undefined,
+    treeColumnIndex: js.UndefOr[Double] = js.undefined
+  ): Model = {
     val __obj = js.Dynamic.literal()
+    if (actionBegin != null) __obj.updateDynamic("actionBegin")(js.Any.fromFunction1(actionBegin))
+    if (actionComplete != null) __obj.updateDynamic("actionComplete")(js.Any.fromFunction1(actionComplete))
+    if (!js.isUndefined(allowColumnReordering)) __obj.updateDynamic("allowColumnReordering")(allowColumnReordering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowColumnResize)) __obj.updateDynamic("allowColumnResize")(allowColumnResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDragAndDrop)) __obj.updateDynamic("allowDragAndDrop")(allowDragAndDrop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowFiltering)) __obj.updateDynamic("allowFiltering")(allowFiltering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowKeyboardNavigation)) __obj.updateDynamic("allowKeyboardNavigation")(allowKeyboardNavigation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowMultiSorting)) __obj.updateDynamic("allowMultiSorting")(allowMultiSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowPaging)) __obj.updateDynamic("allowPaging")(allowPaging.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSearching)) __obj.updateDynamic("allowSearching")(allowSearching.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSelection)) __obj.updateDynamic("allowSelection")(allowSelection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSorting)) __obj.updateDynamic("allowSorting")(allowSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTextWrap)) __obj.updateDynamic("allowTextWrap")(allowTextWrap.get.asInstanceOf[js.Any])
+    if (altRowTemplateID != null) __obj.updateDynamic("altRowTemplateID")(altRowTemplateID.asInstanceOf[js.Any])
+    if (beforePrint != null) __obj.updateDynamic("beforePrint")(js.Any.fromFunction1(beforePrint))
+    if (beginEdit != null) __obj.updateDynamic("beginEdit")(js.Any.fromFunction1(beginEdit))
+    if (cellSelected != null) __obj.updateDynamic("cellSelected")(js.Any.fromFunction1(cellSelected))
+    if (cellSelecting != null) __obj.updateDynamic("cellSelecting")(js.Any.fromFunction1(cellSelecting))
+    if (cellTooltipTemplate != null) __obj.updateDynamic("cellTooltipTemplate")(cellTooltipTemplate.asInstanceOf[js.Any])
+    if (childMapping != null) __obj.updateDynamic("childMapping")(childMapping.asInstanceOf[js.Any])
+    if (collapsed != null) __obj.updateDynamic("collapsed")(js.Any.fromFunction1(collapsed))
+    if (!js.isUndefined(collapsibleTotalSummary)) __obj.updateDynamic("collapsibleTotalSummary")(collapsibleTotalSummary.get.asInstanceOf[js.Any])
+    if (collapsing != null) __obj.updateDynamic("collapsing")(js.Any.fromFunction1(collapsing))
+    if (columnDialogFields != null) __obj.updateDynamic("columnDialogFields")(columnDialogFields.asInstanceOf[js.Any])
+    if (columnDrag != null) __obj.updateDynamic("columnDrag")(js.Any.fromFunction1(columnDrag))
+    if (columnDragStart != null) __obj.updateDynamic("columnDragStart")(js.Any.fromFunction1(columnDragStart))
+    if (columnDrop != null) __obj.updateDynamic("columnDrop")(js.Any.fromFunction1(columnDrop))
+    if (columnResizeEnd != null) __obj.updateDynamic("columnResizeEnd")(js.Any.fromFunction1(columnResizeEnd))
+    if (columnResizeSettings != null) __obj.updateDynamic("columnResizeSettings")(columnResizeSettings.asInstanceOf[js.Any])
+    if (columnResizeStart != null) __obj.updateDynamic("columnResizeStart")(js.Any.fromFunction1(columnResizeStart))
+    if (columnResized != null) __obj.updateDynamic("columnResized")(js.Any.fromFunction1(columnResized))
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (!js.isUndefined(commonWidth)) __obj.updateDynamic("commonWidth")(commonWidth.get.asInstanceOf[js.Any])
+    if (contextMenuOpen != null) __obj.updateDynamic("contextMenuOpen")(js.Any.fromFunction1(contextMenuOpen))
+    if (contextMenuSettings != null) __obj.updateDynamic("contextMenuSettings")(contextMenuSettings.asInstanceOf[js.Any])
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction1(create))
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (detailsDataBound != null) __obj.updateDynamic("detailsDataBound")(js.Any.fromFunction1(detailsDataBound))
+    if (detailsHidden != null) __obj.updateDynamic("detailsHidden")(js.Any.fromFunction1(detailsHidden))
+    if (!js.isUndefined(detailsRowHeight)) __obj.updateDynamic("detailsRowHeight")(detailsRowHeight.get.asInstanceOf[js.Any])
+    if (detailsShown != null) __obj.updateDynamic("detailsShown")(js.Any.fromFunction1(detailsShown))
+    if (detailsTemplate != null) __obj.updateDynamic("detailsTemplate")(detailsTemplate.asInstanceOf[js.Any])
+    if (dragTooltip != null) __obj.updateDynamic("dragTooltip")(dragTooltip.asInstanceOf[js.Any])
+    if (editSettings != null) __obj.updateDynamic("editSettings")(editSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAltRow)) __obj.updateDynamic("enableAltRow")(enableAltRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCollapseAll)) __obj.updateDynamic("enableCollapseAll")(enableCollapseAll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableLoadOnDemand)) __obj.updateDynamic("enableLoadOnDemand")(enableLoadOnDemand.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableResize)) __obj.updateDynamic("enableResize")(enableResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableVirtualization)) __obj.updateDynamic("enableVirtualization")(enableVirtualization.get.asInstanceOf[js.Any])
+    if (endEdit != null) __obj.updateDynamic("endEdit")(js.Any.fromFunction1(endEdit))
+    if (expandStateMapping != null) __obj.updateDynamic("expandStateMapping")(expandStateMapping.asInstanceOf[js.Any])
+    if (expanded != null) __obj.updateDynamic("expanded")(js.Any.fromFunction1(expanded))
+    if (expanding != null) __obj.updateDynamic("expanding")(js.Any.fromFunction1(expanding))
+    if (filterSettings != null) __obj.updateDynamic("filterSettings")(filterSettings.asInstanceOf[js.Any])
+    if (headerTextOverflow != null) __obj.updateDynamic("headerTextOverflow")(headerTextOverflow.asInstanceOf[js.Any])
+    if (idMapping != null) __obj.updateDynamic("idMapping")(idMapping.asInstanceOf[js.Any])
+    if (!js.isUndefined(isResponsive)) __obj.updateDynamic("isResponsive")(isResponsive.get.asInstanceOf[js.Any])
+    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (pageSettings != null) __obj.updateDynamic("pageSettings")(pageSettings.asInstanceOf[js.Any])
+    if (parentIdMapping != null) __obj.updateDynamic("parentIdMapping")(parentIdMapping.asInstanceOf[js.Any])
+    if (!js.isUndefined(parseRowTemplate)) __obj.updateDynamic("parseRowTemplate")(parseRowTemplate.get.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (queryCellInfo != null) __obj.updateDynamic("queryCellInfo")(js.Any.fromFunction1(queryCellInfo))
+    if (recordClick != null) __obj.updateDynamic("recordClick")(js.Any.fromFunction1(recordClick))
+    if (recordDoubleClick != null) __obj.updateDynamic("recordDoubleClick")(js.Any.fromFunction1(recordDoubleClick))
+    if (rowDataBound != null) __obj.updateDynamic("rowDataBound")(js.Any.fromFunction1(rowDataBound))
+    if (rowDrag != null) __obj.updateDynamic("rowDrag")(js.Any.fromFunction1(rowDrag))
+    if (rowDragStart != null) __obj.updateDynamic("rowDragStart")(js.Any.fromFunction1(rowDragStart))
+    if (rowDragStop != null) __obj.updateDynamic("rowDragStop")(js.Any.fromFunction1(rowDragStop))
+    if (rowDropActionBegin != null) __obj.updateDynamic("rowDropActionBegin")(js.Any.fromFunction1(rowDropActionBegin))
+    if (!js.isUndefined(rowHeight)) __obj.updateDynamic("rowHeight")(rowHeight.get.asInstanceOf[js.Any])
+    if (rowSelected != null) __obj.updateDynamic("rowSelected")(js.Any.fromFunction1(rowSelected))
+    if (rowSelecting != null) __obj.updateDynamic("rowSelecting")(js.Any.fromFunction1(rowSelecting))
+    if (rowTemplateID != null) __obj.updateDynamic("rowTemplateID")(rowTemplateID.asInstanceOf[js.Any])
+    if (searchSettings != null) __obj.updateDynamic("searchSettings")(searchSettings.asInstanceOf[js.Any])
+    if (selectedCellIndexes != null) __obj.updateDynamic("selectedCellIndexes")(selectedCellIndexes.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedRowIndex)) __obj.updateDynamic("selectedRowIndex")(selectedRowIndex.get.asInstanceOf[js.Any])
+    if (selectionSettings != null) __obj.updateDynamic("selectionSettings")(selectionSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColumnChooser)) __obj.updateDynamic("showColumnChooser")(showColumnChooser.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showColumnOptions)) __obj.updateDynamic("showColumnOptions")(showColumnOptions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDetailsRow)) __obj.updateDynamic("showDetailsRow")(showDetailsRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDetailsRowInfoColumn)) __obj.updateDynamic("showDetailsRowInfoColumn")(showDetailsRowInfoColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGridCellTooltip)) __obj.updateDynamic("showGridCellTooltip")(showGridCellTooltip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showGridExpandCellTooltip)) __obj.updateDynamic("showGridExpandCellTooltip")(showGridExpandCellTooltip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showStackedHeader)) __obj.updateDynamic("showStackedHeader")(showStackedHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSummaryRow)) __obj.updateDynamic("showSummaryRow")(showSummaryRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTotalSummary)) __obj.updateDynamic("showTotalSummary")(showTotalSummary.get.asInstanceOf[js.Any])
+    if (sizeSettings != null) __obj.updateDynamic("sizeSettings")(sizeSettings.asInstanceOf[js.Any])
+    if (sortSettings != null) __obj.updateDynamic("sortSettings")(sortSettings.asInstanceOf[js.Any])
+    if (stackedHeaderRows != null) __obj.updateDynamic("stackedHeaderRows")(stackedHeaderRows.asInstanceOf[js.Any])
+    if (summaryRows != null) __obj.updateDynamic("summaryRows")(summaryRows.asInstanceOf[js.Any])
+    if (toolbarClick != null) __obj.updateDynamic("toolbarClick")(js.Any.fromFunction1(toolbarClick))
+    if (toolbarSettings != null) __obj.updateDynamic("toolbarSettings")(toolbarSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalSummaryHeight)) __obj.updateDynamic("totalSummaryHeight")(totalSummaryHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeColumnIndex)) __obj.updateDynamic("treeColumnIndex")(treeColumnIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
-  @scala.inline
-  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionBegin(value: /* e */ ActionBeginEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionBegin")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutActionBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionBegin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionComplete(value: /* e */ ActionCompleteEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutActionComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowColumnReordering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnReordering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowColumnReordering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnReordering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowColumnResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowColumnResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowDragAndDrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDragAndDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDragAndDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDragAndDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowFiltering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFiltering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowFiltering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFiltering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowKeyboardNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowKeyboardNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowKeyboardNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowKeyboardNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowMultiSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMultiSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMultiSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowPaging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPaging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowPaging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPaging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSearching(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSearching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSearching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSearching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowTextWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowTextWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextWrap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAltRowTemplateID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altRowTemplateID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltRowTemplateID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altRowTemplateID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforePrint(value: /* e */ BeforePrintEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforePrint")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforePrint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforePrint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeginEdit(value: /* e */ BeginEditEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginEdit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeginEdit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginEdit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellSelected(value: /* e */ CellSelectedEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellSelecting(value: /* e */ CellSelectingEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelecting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellSelecting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelecting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellTooltipTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTooltipTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellTooltipTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTooltipTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildMapping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsed(value: /* e */ CollapsedEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsibleTotalSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsibleTotalSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsibleTotalSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsibleTotalSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsing(value: /* e */ CollapsingEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCollapsing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnDialogFields(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDialogFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnDialogFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDialogFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnDrag(value: /* e */ ColumnDragEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDrag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnDragStart(value: /* e */ ColumnDragStartEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDragStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnDrop(value: /* e */ ColumnDropEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDrop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResizeEnd(value: /* e */ ColumnResizeEndEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnResizeEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResizeSettings(value: ColumnResizeSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnResizeSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResizeStart(value: /* e */ ColumnResizeStartEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnResizeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResized(value: /* e */ ColumnResizedEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResized")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutColumnResized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommonWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommonWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commonWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenuOpen(value: /* e */ ContextMenuOpenEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuOpen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutContextMenuOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenuSettings(value: ContextMenuSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextMenuSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: /* e */ CreateEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailsDataBound(value: /* e */ DetailsDataBoundEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsDataBound")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDetailsDataBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsDataBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailsHidden(value: /* e */ DetailsHiddenEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsHidden")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDetailsHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailsRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsRowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailsRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsRowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailsShown(value: /* e */ DetailsShownEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsShown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDetailsShown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsShown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailsTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailsTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragTooltip(value: DragTooltip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditSettings(value: EditSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAltRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAltRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAltRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAltRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCollapseAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCollapseAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCollapseAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCollapseAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableLoadOnDemand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLoadOnDemand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableLoadOnDemand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLoadOnDemand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableVirtualization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableVirtualization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableVirtualization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableVirtualization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndEdit(value: /* e */ EndEditEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endEdit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEndEdit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endEdit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandStateMapping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandStateMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandStateMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandStateMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: /* e */ ExpandedEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanding(value: /* e */ ExpandingEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanding")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExpanding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterSettings(value: FilterSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTextOverflow(value: HeaderTextOverflow | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTextOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderTextOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTextOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdMapping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: /* e */ LoadEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSettings(value: PageSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentIdMapping(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIdMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentIdMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentIdMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseRowTemplate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseRowTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParseRowTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseRowTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryCellInfo(value: /* e */ QueryCellInfoEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryCellInfo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutQueryCellInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryCellInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordClick(value: /* e */ RecordClickEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRecordClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordDoubleClick(value: /* e */ RecordDoubleClickEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordDoubleClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRecordDoubleClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordDoubleClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDataBound(value: /* e */ RowDataBoundEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDataBound")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowDataBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDataBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDrag(value: /* e */ RowDragEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDragStart(value: /* e */ RowDragStartEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDragStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDragStop(value: /* e */ RowDragStopEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDragStop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowDragStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDragStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDropActionBegin(value: /* e */ RowDropActionBeginEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDropActionBegin")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowDropActionBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDropActionBegin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowSelected(value: /* e */ RowSelectedEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowSelecting(value: /* e */ RowSelectingEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelecting")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRowSelecting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelecting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowTemplateID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTemplateID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowTemplateID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTemplateID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchSettings(value: SearchSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedCellIndexes(value: js.Array[SelectedCellIndex]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedCellIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedCellIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedCellIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedRowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRowIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionSettings(value: SelectionSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowColumnChooser(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnChooser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowColumnChooser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnChooser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowColumnOptions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowColumnOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDetailsRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDetailsRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDetailsRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDetailsRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDetailsRowInfoColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDetailsRowInfoColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDetailsRowInfoColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDetailsRowInfoColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGridCellTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridCellTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGridCellTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridCellTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowGridExpandCellTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridExpandCellTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowGridExpandCellTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridExpandCellTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowStackedHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showStackedHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowStackedHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showStackedHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSummaryRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSummaryRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSummaryRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSummaryRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTotalSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotalSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTotalSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotalSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeSettings(value: SizeSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortSettings(value: SortSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackedHeaderRows(value: js.Array[StackedHeaderRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedHeaderRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackedHeaderRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedHeaderRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryRows(value: js.Array[SummaryRow]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummaryRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbarClick(value: /* e */ ToolbarClickEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutToolbarClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbarSettings(value: ToolbarSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbarSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalSummaryHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSummaryHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalSummaryHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSummaryHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeColumnIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

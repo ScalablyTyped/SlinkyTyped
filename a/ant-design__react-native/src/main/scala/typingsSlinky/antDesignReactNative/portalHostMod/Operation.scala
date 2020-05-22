@@ -1,8 +1,9 @@
 package typingsSlinky.antDesignReactNative.portalHostMod
 
-import typingsSlinky.antDesignReactNative.anon.ChildrenKey
-import typingsSlinky.antDesignReactNative.anon.KeyNumber
-import typingsSlinky.antDesignReactNative.anon.KeyType
+import slinky.core.TagMod
+import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.mount
+import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.unmount
+import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +17,24 @@ trait Operation extends js.Object
 
 object Operation {
   @scala.inline
-  implicit def apply(value: ChildrenKey): Operation = value.asInstanceOf[Operation]
+  def ChildrenKey(key: Double, `type`: mount, children: TagMod[Any] = null): Operation = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: KeyNumber): Operation = value.asInstanceOf[Operation]
+  def KeyType(key: Double, `type`: update, children: TagMod[Any] = null): Operation = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
   @scala.inline
-  implicit def apply(value: KeyType): Operation = value.asInstanceOf[Operation]
+  def KeyNumber(key: Double, `type`: unmount): Operation = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Operation]
+  }
 }
 

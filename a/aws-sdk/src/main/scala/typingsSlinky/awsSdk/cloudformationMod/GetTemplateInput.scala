@@ -22,53 +22,16 @@ trait GetTemplateInput extends js.Object {
 
 object GetTemplateInput {
   @scala.inline
-  def apply(): GetTemplateInput = {
+  def apply(
+    ChangeSetName: ChangeSetNameOrId = null,
+    StackName: StackName = null,
+    TemplateStage: TemplateStage = null
+  ): GetTemplateInput = {
     val __obj = js.Dynamic.literal()
+    if (ChangeSetName != null) __obj.updateDynamic("ChangeSetName")(ChangeSetName.asInstanceOf[js.Any])
+    if (StackName != null) __obj.updateDynamic("StackName")(StackName.asInstanceOf[js.Any])
+    if (TemplateStage != null) __obj.updateDynamic("TemplateStage")(TemplateStage.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTemplateInput]
   }
-  @scala.inline
-  implicit class GetTemplateInputOps[Self <: GetTemplateInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeSetName(value: ChangeSetNameOrId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeSetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackName(value: StackName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateStage(value: TemplateStage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateStage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateStage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

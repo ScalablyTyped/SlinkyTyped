@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.subtract
 */
 trait CompositingOperator
-  extends MaskLayer[js.Any]
-     with MaskCompositeProperty
+  extends _MaskLayer[js.Any]
+     with _MaskCompositeProperty
 
 object CompositingOperator {
   @scala.inline

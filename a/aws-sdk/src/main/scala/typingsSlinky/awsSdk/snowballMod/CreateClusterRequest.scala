@@ -59,120 +59,22 @@ object CreateClusterRequest {
     JobType: JobType,
     Resources: JobResource,
     RoleARN: RoleARN,
-    ShippingOption: ShippingOption
+    ShippingOption: ShippingOption,
+    Description: String = null,
+    ForwardingAddressId: AddressId = null,
+    KmsKeyARN: KmsKeyARN = null,
+    Notification: Notification = null,
+    SnowballType: SnowballType = null,
+    TaxDocuments: TaxDocuments = null
   ): CreateClusterRequest = {
     val __obj = js.Dynamic.literal(AddressId = AddressId.asInstanceOf[js.Any], JobType = JobType.asInstanceOf[js.Any], Resources = Resources.asInstanceOf[js.Any], RoleARN = RoleARN.asInstanceOf[js.Any], ShippingOption = ShippingOption.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (ForwardingAddressId != null) __obj.updateDynamic("ForwardingAddressId")(ForwardingAddressId.asInstanceOf[js.Any])
+    if (KmsKeyARN != null) __obj.updateDynamic("KmsKeyARN")(KmsKeyARN.asInstanceOf[js.Any])
+    if (Notification != null) __obj.updateDynamic("Notification")(Notification.asInstanceOf[js.Any])
+    if (SnowballType != null) __obj.updateDynamic("SnowballType")(SnowballType.asInstanceOf[js.Any])
+    if (TaxDocuments != null) __obj.updateDynamic("TaxDocuments")(TaxDocuments.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateClusterRequest]
   }
-  @scala.inline
-  implicit class CreateClusterRequestOps[Self <: CreateClusterRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddressId(value: AddressId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJobType(value: JobType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResources(value: JobResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleARN(value: RoleARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShippingOption(value: ShippingOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForwardingAddressId(value: AddressId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingAddressId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForwardingAddressId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingAddressId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyARN(value: KmsKeyARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotification(value: Notification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnowballType(value: SnowballType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnowballType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnowballType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnowballType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaxDocuments(value: TaxDocuments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaxDocuments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaxDocuments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TaxDocuments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -43,101 +43,24 @@ trait SchemaIosInfo extends js.Object {
 
 object SchemaIosInfo {
   @scala.inline
-  def apply(): SchemaIosInfo = {
+  def apply(
+    iosAppStoreId: String = null,
+    iosBundleId: String = null,
+    iosCustomScheme: String = null,
+    iosFallbackLink: String = null,
+    iosIpadBundleId: String = null,
+    iosIpadFallbackLink: String = null,
+    iosMinimumVersion: String = null
+  ): SchemaIosInfo = {
     val __obj = js.Dynamic.literal()
+    if (iosAppStoreId != null) __obj.updateDynamic("iosAppStoreId")(iosAppStoreId.asInstanceOf[js.Any])
+    if (iosBundleId != null) __obj.updateDynamic("iosBundleId")(iosBundleId.asInstanceOf[js.Any])
+    if (iosCustomScheme != null) __obj.updateDynamic("iosCustomScheme")(iosCustomScheme.asInstanceOf[js.Any])
+    if (iosFallbackLink != null) __obj.updateDynamic("iosFallbackLink")(iosFallbackLink.asInstanceOf[js.Any])
+    if (iosIpadBundleId != null) __obj.updateDynamic("iosIpadBundleId")(iosIpadBundleId.asInstanceOf[js.Any])
+    if (iosIpadFallbackLink != null) __obj.updateDynamic("iosIpadFallbackLink")(iosIpadFallbackLink.asInstanceOf[js.Any])
+    if (iosMinimumVersion != null) __obj.updateDynamic("iosMinimumVersion")(iosMinimumVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIosInfo]
   }
-  @scala.inline
-  implicit class SchemaIosInfoOps[Self <: SchemaIosInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIosAppStoreId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosAppStoreId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosAppStoreId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosAppStoreId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosBundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosBundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosCustomScheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosCustomScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosCustomScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosCustomScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosFallbackLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosFallbackLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosFallbackLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosFallbackLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosIpadBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosIpadBundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosIpadBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosIpadBundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosIpadFallbackLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosIpadFallbackLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosIpadFallbackLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosIpadFallbackLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosMinimumVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosMinimumVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosMinimumVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosMinimumVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

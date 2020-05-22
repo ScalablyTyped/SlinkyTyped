@@ -36,6 +36,8 @@ class DevServer ()
   def contentBase(value: js.Array[String]): this.type = js.native
   def contentBase(value: Boolean): this.type = js.native
   def disableHostCheck(value: Boolean): this.type = js.native
+  /* CompleteClass */
+  override def end(): Config = js.native
   def filename(value: String): this.type = js.native
   def headers(value: StringDictionary[String]): this.type = js.native
   def historyApiFallback(value: js.Any): this.type = js.native

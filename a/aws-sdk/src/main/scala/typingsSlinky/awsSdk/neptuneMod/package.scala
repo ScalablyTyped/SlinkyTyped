@@ -5,6 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object neptuneMod {
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.immediate_
+    - typingsSlinky.awsSdk.awsSdkStrings.`pending-reboot`
+    - java.lang.String
+  */
+  type ApplyMethod = typingsSlinky.awsSdk.neptuneMod._ApplyMethod | java.lang.String
   type AttributeValueList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   type AvailabilityZoneList = js.Array[typingsSlinky.awsSdk.neptuneMod.AvailabilityZone]
   type AvailabilityZones = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
@@ -50,6 +56,16 @@ package object neptuneMod {
   type ReadReplicaDBInstanceIdentifierList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   type ReadReplicaIdentifierList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   type SourceIdsList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`db-instance`
+    - typingsSlinky.awsSdk.awsSdkStrings.`db-parameter-group`
+    - typingsSlinky.awsSdk.awsSdkStrings.`db-security-group`
+    - typingsSlinky.awsSdk.awsSdkStrings.`db-snapshot`
+    - typingsSlinky.awsSdk.awsSdkStrings.`db-cluster`
+    - typingsSlinky.awsSdk.awsSdkStrings.`db-cluster-snapshot`
+    - java.lang.String
+  */
+  type SourceType = typingsSlinky.awsSdk.neptuneMod._SourceType | java.lang.String
   type String = java.lang.String
   type SubnetIdentifierList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   type SubnetList = js.Array[typingsSlinky.awsSdk.neptuneMod.Subnet]
@@ -61,4 +77,10 @@ package object neptuneMod {
   type ValidUpgradeTargetList = js.Array[typingsSlinky.awsSdk.neptuneMod.UpgradeTarget]
   type VpcSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   type VpcSecurityGroupMembershipList = js.Array[typingsSlinky.awsSdk.neptuneMod.VpcSecurityGroupMembership]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2014-10-31`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.neptuneMod._apiVersion | java.lang.String
 }

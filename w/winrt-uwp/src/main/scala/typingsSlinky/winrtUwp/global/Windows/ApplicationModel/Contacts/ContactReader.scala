@@ -1,5 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +10,19 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Contacts.ContactReader")
 @js.native
 abstract class ContactReader ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactReader
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactReader {
+  /**
+    * Gets the reason a Contact matched the search query. Returns the properties and substrings that match.
+    * @param contact The Contact for which to get the matching properties.
+    * @return The list of matching properties and match reasons.
+    */
+  /* CompleteClass */
+  override def getMatchingPropertiesWithMatchReason(contact: typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.Contact): IVectorView[typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactMatchReason] = js.native
+  /**
+    * Asynchronously reads a batch of Contact objects from the ContactStore .
+    * @return The batch of contacts read from the ContactStore .
+    */
+  /* CompleteClass */
+  override def readBatchAsync(): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactBatch] = js.native
+}
 

@@ -9,16 +9,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.ObjectWrapper
 */
 trait NativePointerValue
-  extends Arm64CallArgument
-     with ArmCallArgument
-     with MipsCallArgument
-     with NativeArgumentValue
-     with X86CallArgument
-
-object NativePointerValue {
-  @scala.inline
-  implicit def apply(value: NativePointer): NativePointerValue = value.asInstanceOf[NativePointerValue]
-  @scala.inline
-  implicit def apply(value: ObjectWrapper): NativePointerValue = value.asInstanceOf[NativePointerValue]
-}
+  extends _Arm64CallArgument
+     with _ArmCallArgument
+     with _MipsCallArgument
+     with _NativeArgumentValue
+     with _X86CallArgument
 

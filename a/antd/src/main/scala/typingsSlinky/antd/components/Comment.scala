@@ -5,7 +5,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.commentMod.CommentProps
-import typingsSlinky.antd.commentMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +18,7 @@ object Comment {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def actions(value: js.Array[TagMod[Any]]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline

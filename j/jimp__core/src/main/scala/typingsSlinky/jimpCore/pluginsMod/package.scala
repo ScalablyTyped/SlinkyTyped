@@ -15,4 +15,5 @@ package object pluginsMod {
     _, 
     typingsSlinky.jimpCore.jimpCoreStrings.`class` | typingsSlinky.jimpCore.jimpCoreStrings.constants
   ]) with js.Object
+  type JimpPlugin[T /* <: typingsSlinky.jimpCore.etcMod.Image */] = typingsSlinky.jimpCore.pluginsMod.ClassOrConstantPlugin[T] | typingsSlinky.jimpCore.pluginsMod.IllformedPlugin
 }

@@ -1,5 +1,20 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesStrings.BigIntLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.BooleanLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.JSXAttribute
+import typingsSlinky.babelTypes.babelTypesStrings.JSXClosingElement
+import typingsSlinky.babelTypes.babelTypesStrings.JSXClosingFragment
+import typingsSlinky.babelTypes.babelTypesStrings.JSXElement
+import typingsSlinky.babelTypes.babelTypesStrings.JSXExpressionContainer
+import typingsSlinky.babelTypes.babelTypesStrings.JSXFragment
+import typingsSlinky.babelTypes.babelTypesStrings.JSXOpeningElement
+import typingsSlinky.babelTypes.babelTypesStrings.JSXOpeningFragment
+import typingsSlinky.babelTypes.babelTypesStrings.JSXSpreadChild
+import typingsSlinky.babelTypes.babelTypesStrings.JSXText
+import typingsSlinky.babelTypes.babelTypesStrings.NullLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.NumericLiteral
+import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,38 +36,243 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.JSXClosingFragment_
   - typingsSlinky.babelTypes.mod.BigIntLiteral_
 */
-trait Immutable extends Node
+trait Immutable extends _Node
 
 object Immutable {
   @scala.inline
-  implicit def apply(value: BigIntLiteral_): Immutable = value.asInstanceOf[Immutable]
+  def JSXOpeningFragment_(
+    `type`: JSXOpeningFragment,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: BooleanLiteral_): Immutable = value.asInstanceOf[Immutable]
+  def NullLiteral_(
+    `type`: NullLiteral,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXAttribute_): Immutable = value.asInstanceOf[Immutable]
+  def StringLiteral_(
+    `type`: StringLiteral,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXClosingElement_): Immutable = value.asInstanceOf[Immutable]
+  def JSXClosingFragment_(
+    `type`: JSXClosingFragment,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXClosingFragment_): Immutable = value.asInstanceOf[Immutable]
+  def JSXFragment_(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | typingsSlinky.babelTypes.mod.JSXFragment_
+    ],
+    closingFragment: JSXClosingFragment_,
+    openingFragment: JSXOpeningFragment_,
+    `type`: JSXFragment,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXElement_): Immutable = value.asInstanceOf[Immutable]
+  def BooleanLiteral_(
+    `type`: BooleanLiteral,
+    value: Boolean,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXExpressionContainer_): Immutable = value.asInstanceOf[Immutable]
+  def JSXClosingElement_(
+    name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_,
+    `type`: JSXClosingElement,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXFragment_): Immutable = value.asInstanceOf[Immutable]
+  def JSXSpreadChild_(
+    expression: Expression,
+    `type`: JSXSpreadChild,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXOpeningElement_): Immutable = value.asInstanceOf[Immutable]
+  def JSXAttribute_(
+    name: JSXIdentifier_ | JSXNamespacedName_,
+    `type`: JSXAttribute,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    value: JSXElement_ | JSXFragment_ | StringLiteral_ | JSXExpressionContainer_ = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXOpeningFragment_): Immutable = value.asInstanceOf[Immutable]
+  def BigIntLiteral_(
+    `type`: BigIntLiteral,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXSpreadChild_): Immutable = value.asInstanceOf[Immutable]
+  def NumericLiteral_(
+    `type`: NumericLiteral,
+    value: Double,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: JSXText_): Immutable = value.asInstanceOf[Immutable]
+  def JSXExpressionContainer_(
+    expression: Expression | JSXEmptyExpression_,
+    `type`: JSXExpressionContainer,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: NullLiteral_): Immutable = value.asInstanceOf[Immutable]
+  def JSXText_(
+    `type`: JSXText,
+    value: String,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: NumericLiteral_): Immutable = value.asInstanceOf[Immutable]
+  def JSXOpeningElement_(
+    attributes: js.Array[JSXAttribute_ | JSXSpreadAttribute_],
+    name: JSXIdentifier_ | JSXMemberExpression_ | JSXNamespacedName_,
+    selfClosing: Boolean,
+    `type`: JSXOpeningElement,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterInstantiation_ | TSTypeParameterInstantiation_ = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
   @scala.inline
-  implicit def apply(value: StringLiteral_): Immutable = value.asInstanceOf[Immutable]
+  def JSXElement_(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | typingsSlinky.babelTypes.mod.JSXElement_ | JSXFragment_
+    ],
+    openingElement: JSXOpeningElement_,
+    selfClosing: js.Any,
+    `type`: JSXElement,
+    closingElement: JSXClosingElement_ = null,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): Immutable = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any], selfClosing = selfClosing.asInstanceOf[js.Any], closingElement = closingElement.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Immutable]
+  }
 }
 

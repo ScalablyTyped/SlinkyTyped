@@ -8,6 +8,5 @@ import scala.scalajs.js.annotation._
   * The options for the removeAssociation mixin of the belongsToMany association.
   * @see BelongsToManyRemoveAssociationMixin
   */
-@js.native
 trait BelongsToManyRemoveAssociationMixinOptions extends js.Object
 

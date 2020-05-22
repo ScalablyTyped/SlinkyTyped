@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Tooltip extends js.Object {
   /** Specify showCustomLabelTooltip value of linear gauge
     * @Default {false}
     */
-  var showCustomLabelTooltip: js.UndefOr[Boolean] = js.native
+  var showCustomLabelTooltip: js.UndefOr[Boolean] = js.undefined
   /** Specify showLabelTooltip value of linear gauge
     * @Default {false}
     */
-  var showLabelTooltip: js.UndefOr[Boolean] = js.native
+  var showLabelTooltip: js.UndefOr[Boolean] = js.undefined
   /** Specify templateID value of linear gauge
     * @Default {false}
     */
-  var templateID: js.UndefOr[String] = js.native
+  var templateID: js.UndefOr[String] = js.undefined
 }
 
 object Tooltip {
   @scala.inline
-  def apply(): Tooltip = {
+  def apply(
+    showCustomLabelTooltip: js.UndefOr[Boolean] = js.undefined,
+    showLabelTooltip: js.UndefOr[Boolean] = js.undefined,
+    templateID: String = null
+  ): Tooltip = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(showCustomLabelTooltip)) __obj.updateDynamic("showCustomLabelTooltip")(showCustomLabelTooltip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLabelTooltip)) __obj.updateDynamic("showLabelTooltip")(showLabelTooltip.get.asInstanceOf[js.Any])
+    if (templateID != null) __obj.updateDynamic("templateID")(templateID.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tooltip]
   }
-  @scala.inline
-  implicit class TooltipOps[Self <: Tooltip] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShowCustomLabelTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCustomLabelTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCustomLabelTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCustomLabelTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLabelTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabelTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLabelTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabelTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateID")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

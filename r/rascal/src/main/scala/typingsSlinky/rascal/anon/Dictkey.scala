@@ -5,76 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictkey
   extends /* key */ StringDictionary[js.Any] {
-  var channelMax: js.UndefOr[Double] = js.native
-  var connection_timeout: js.UndefOr[Double] = js.native
-  var heartbeat: js.UndefOr[Double] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var channelMax: js.UndefOr[Double] = js.undefined
+  var connection_timeout: js.UndefOr[Double] = js.undefined
+  var heartbeat: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object Dictkey {
   @scala.inline
-  def apply(): Dictkey = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    channelMax: js.UndefOr[Double] = js.undefined,
+    connection_timeout: js.UndefOr[Double] = js.undefined,
+    heartbeat: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): Dictkey = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(channelMax)) __obj.updateDynamic("channelMax")(channelMax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connection_timeout)) __obj.updateDynamic("connection_timeout")(connection_timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(heartbeat)) __obj.updateDynamic("heartbeat")(heartbeat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dictkey]
   }
-  @scala.inline
-  implicit class DictkeyOps[Self <: Dictkey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelMax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnection_timeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnection_timeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connection_timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeartbeat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeartbeat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

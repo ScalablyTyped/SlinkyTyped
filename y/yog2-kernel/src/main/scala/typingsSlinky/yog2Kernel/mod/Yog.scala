@@ -2,11 +2,11 @@ package typingsSlinky.yog2Kernel.mod
 
 import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
-import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.lodash.mod.LoDashImplicitWrapper
 import typingsSlinky.lodash.mod.LoDashStatic
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
+import typingsSlinky.qs.mod.ParsedQs
 import typingsSlinky.yog2Kernel.anon.CleanCache
 import typingsSlinky.yog2Kernel.anon.TypeofRAL
 import typingsSlinky.yog2Kernel.anon.TypeofRALPromise
@@ -115,11 +115,11 @@ trait Yog extends js.Object {
     * third argument.
     */
   def app(
-    req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query],
+    req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, ParsedQs],
     res: typingsSlinky.expressServeStaticCore.mod.Response[_]
   ): js.Any = js.native
   def app(
-    req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query],
+    req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, ParsedQs],
     res: ServerResponse
   ): js.Any = js.native
   def app(req: IncomingMessage, res: typingsSlinky.expressServeStaticCore.mod.Response[_]): js.Any = js.native

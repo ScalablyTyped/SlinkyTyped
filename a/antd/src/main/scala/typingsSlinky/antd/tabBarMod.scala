@@ -2,7 +2,7 @@ package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Animated
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.tabsMod.TabsProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js

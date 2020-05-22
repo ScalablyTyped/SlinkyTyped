@@ -4,107 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StockToolsGuiOptions extends js.Object {
   /**
     * (Highstock) A collection of strings pointing to config options for the
     * toolbar items. Each name refers to unique key from definitions object.
     */
-  var buttons: js.UndefOr[js.Array[_]] = js.native
+  var buttons: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * (Highstock) A CSS class name to apply to the stocktools' div, allowing
     * unique CSS styling for each chart.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * (Highstock) An options object of the buttons definitions. Each name
     * refers to unique key from buttons array.
     */
-  var definitions: js.UndefOr[js.Object | StockToolsGuiDefinitionsOptions] = js.native
+  var definitions: js.UndefOr[js.Object | StockToolsGuiDefinitionsOptions] = js.undefined
   /**
     * (Highstock) Enable or disable the stockTools gui.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) A CSS class name to apply to the container of buttons,
     * allowing unique CSS styling for each chart.
     */
-  var toolbarClassName: js.UndefOr[String] = js.native
+  var toolbarClassName: js.UndefOr[String] = js.undefined
 }
 
 object StockToolsGuiOptions {
   @scala.inline
-  def apply(): StockToolsGuiOptions = {
+  def apply(
+    buttons: js.Array[_] = null,
+    className: String = null,
+    definitions: js.Object | StockToolsGuiDefinitionsOptions = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    toolbarClassName: String = null
+  ): StockToolsGuiOptions = {
     val __obj = js.Dynamic.literal()
+    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (definitions != null) __obj.updateDynamic("definitions")(definitions.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (toolbarClassName != null) __obj.updateDynamic("toolbarClassName")(toolbarClassName.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockToolsGuiOptions]
   }
-  @scala.inline
-  implicit class StockToolsGuiOptionsOps[Self <: StockToolsGuiOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButtons(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefinitions(value: js.Object | StockToolsGuiDefinitionsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefinitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbarClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbarClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarClassName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -53,65 +53,18 @@ trait SchemaApproximateReportedProgress extends js.Object {
 
 object SchemaApproximateReportedProgress {
   @scala.inline
-  def apply(): SchemaApproximateReportedProgress = {
+  def apply(
+    consumedParallelism: SchemaReportedParallelism = null,
+    fractionConsumed: js.UndefOr[Double] = js.undefined,
+    position: SchemaPosition = null,
+    remainingParallelism: SchemaReportedParallelism = null
+  ): SchemaApproximateReportedProgress = {
     val __obj = js.Dynamic.literal()
+    if (consumedParallelism != null) __obj.updateDynamic("consumedParallelism")(consumedParallelism.asInstanceOf[js.Any])
+    if (!js.isUndefined(fractionConsumed)) __obj.updateDynamic("fractionConsumed")(fractionConsumed.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (remainingParallelism != null) __obj.updateDynamic("remainingParallelism")(remainingParallelism.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApproximateReportedProgress]
   }
-  @scala.inline
-  implicit class SchemaApproximateReportedProgressOps[Self <: SchemaApproximateReportedProgress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumedParallelism(value: SchemaReportedParallelism): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumedParallelism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumedParallelism: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumedParallelism")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFractionConsumed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionConsumed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFractionConsumed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionConsumed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: SchemaPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemainingParallelism(value: SchemaReportedParallelism): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingParallelism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemainingParallelism: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingParallelism")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

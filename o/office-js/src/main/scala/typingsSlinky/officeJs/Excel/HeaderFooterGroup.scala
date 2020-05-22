@@ -52,7 +52,7 @@ trait HeaderFooterGroup extends ClientObject {
   val oddPages: HeaderFooter = js.native
   /**
     *
-    * Gets or sets the state of which headers/footers are set. See Excel.HeaderFooterState for details.
+    * The state by which headers/footers are set. See Excel.HeaderFooterState for details.
     *
     * [Api set: ExcelApi 1.9]
     */

@@ -15,18 +15,18 @@ object global extends js.Object {
     class Player protected ()
       extends typingsSlinky.youtube.YT.Player {
       /**
-      		 * Initializes a new instance of the Player class.
-      		 *
-      		 * @param container   DOM element to insert the player's <iframe>.
-      		 * @param options   Player options.
-      		 */
+        * Initializes a new instance of the Player class.
+        *
+        * @param container   DOM element to insert the player's <iframe>.
+        * @param options   Player options.
+        */
       def this(elt: HTMLElement, options: PlayerOptions) = this()
       /**
-      		 * Initializes a new instance of the Player class.
-      		 *
-      		 * @param id   ID of the DOM element to insert the player's <iframe>.
-      		 * @param options   Player options.
-      		 */
+        * Initializes a new instance of the Player class.
+        *
+        * @param id   ID of the DOM element to insert the player's <iframe>.
+        * @param options   Player options.
+        */
       def this(id: String, options: PlayerOptions) = this()
     }
     

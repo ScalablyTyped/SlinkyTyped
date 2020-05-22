@@ -14,65 +14,18 @@ trait SchemaVoterInfoSegmentResult extends js.Object {
 
 object SchemaVoterInfoSegmentResult {
   @scala.inline
-  def apply(): SchemaVoterInfoSegmentResult = {
+  def apply(
+    generatedMillis: String = null,
+    postalAddress: SchemaPostalAddress = null,
+    request: SchemaVoterInfoRequest = null,
+    response: SchemaVoterInfoResponse = null
+  ): SchemaVoterInfoSegmentResult = {
     val __obj = js.Dynamic.literal()
+    if (generatedMillis != null) __obj.updateDynamic("generatedMillis")(generatedMillis.asInstanceOf[js.Any])
+    if (postalAddress != null) __obj.updateDynamic("postalAddress")(postalAddress.asInstanceOf[js.Any])
+    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVoterInfoSegmentResult]
   }
-  @scala.inline
-  implicit class SchemaVoterInfoSegmentResultOps[Self <: SchemaVoterInfoSegmentResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeneratedMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeneratedMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostalAddress(value: SchemaPostalAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest(value: SchemaVoterInfoRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: SchemaVoterInfoResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

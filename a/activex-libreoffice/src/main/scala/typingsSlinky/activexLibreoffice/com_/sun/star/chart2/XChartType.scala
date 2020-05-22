@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XChartType extends XInterface {
   /** A string representation of the chart type. This needs to be the service-name which can be used to create a chart type. */
-  val ChartType: String = js.native
+  val ChartType: String
   /** Returns the role of the XLabeledDataSequence of which the label will be taken to identify the {@link DataSeries} in dialogs or the legend. */
-  val RoleOfSequenceForSeriesLabel: String = js.native
+  val RoleOfSequenceForSeriesLabel: String
   /**
     * Returns a sequence of roles that are understood by this chart type.
     *
@@ -21,28 +20,28 @@ trait XChartType extends XInterface {
     *
     * Note, that this does not involve optional roles, like error-bars.
     */
-  val SupportedMandatoryRoles: SafeArray[String] = js.native
+  val SupportedMandatoryRoles: SafeArray[String]
   /**
     * Returns a sequence of roles that are understood in addition to the mandatory roles (see {@link XChartType.getSupportedMandatoryRoles()} ).
     *
     * An example for an optional role are error-bars.
     */
-  val SupportedOptionalRoles: SafeArray[String] = js.native
+  val SupportedOptionalRoles: SafeArray[String]
   /**
     * Returns a sequence with supported property mapping roles.
     *
     * An example for a property mapping role is FillColor.
     */
-  val SupportedPropertyRoles: SafeArray[String] = js.native
+  val SupportedPropertyRoles: SafeArray[String]
   /**
     * Creates a coordinate systems that fits the chart-type with its current settings and for the given dimension.
     * @throws IllegalArgumentException This chart type cannot be displayed in the given dimension.
     */
-  def createCoordinateSystem(DimensionCount: Double): XCoordinateSystem = js.native
+  def createCoordinateSystem(DimensionCount: Double): XCoordinateSystem
   /** A string representation of the chart type. This needs to be the service-name which can be used to create a chart type. */
-  def getChartType(): String = js.native
+  def getChartType(): String
   /** Returns the role of the XLabeledDataSequence of which the label will be taken to identify the {@link DataSeries} in dialogs or the legend. */
-  def getRoleOfSequenceForSeriesLabel(): String = js.native
+  def getRoleOfSequenceForSeriesLabel(): String
   /**
     * Returns a sequence of roles that are understood by this chart type.
     *
@@ -51,19 +50,19 @@ trait XChartType extends XInterface {
     *
     * Note, that this does not involve optional roles, like error-bars.
     */
-  def getSupportedMandatoryRoles(): SafeArray[String] = js.native
+  def getSupportedMandatoryRoles(): SafeArray[String]
   /**
     * Returns a sequence of roles that are understood in addition to the mandatory roles (see {@link XChartType.getSupportedMandatoryRoles()} ).
     *
     * An example for an optional role are error-bars.
     */
-  def getSupportedOptionalRoles(): SafeArray[String] = js.native
+  def getSupportedOptionalRoles(): SafeArray[String]
   /**
     * Returns a sequence with supported property mapping roles.
     *
     * An example for a property mapping role is FillColor.
     */
-  def getSupportedPropertyRoles(): SafeArray[String] = js.native
+  def getSupportedPropertyRoles(): SafeArray[String]
 }
 
 object XChartType {
@@ -87,79 +86,5 @@ object XChartType {
     val __obj = js.Dynamic.literal(ChartType = ChartType.asInstanceOf[js.Any], RoleOfSequenceForSeriesLabel = RoleOfSequenceForSeriesLabel.asInstanceOf[js.Any], SupportedMandatoryRoles = SupportedMandatoryRoles.asInstanceOf[js.Any], SupportedOptionalRoles = SupportedOptionalRoles.asInstanceOf[js.Any], SupportedPropertyRoles = SupportedPropertyRoles.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), createCoordinateSystem = js.Any.fromFunction1(createCoordinateSystem), getChartType = js.Any.fromFunction0(getChartType), getRoleOfSequenceForSeriesLabel = js.Any.fromFunction0(getRoleOfSequenceForSeriesLabel), getSupportedMandatoryRoles = js.Any.fromFunction0(getSupportedMandatoryRoles), getSupportedOptionalRoles = js.Any.fromFunction0(getSupportedOptionalRoles), getSupportedPropertyRoles = js.Any.fromFunction0(getSupportedPropertyRoles), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XChartType]
   }
-  @scala.inline
-  implicit class XChartTypeOps[Self <: XChartType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChartType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChartType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleOfSequenceForSeriesLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleOfSequenceForSeriesLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedMandatoryRoles(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedMandatoryRoles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedOptionalRoles(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedOptionalRoles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedPropertyRoles(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedPropertyRoles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateCoordinateSystem(value: Double => XCoordinateSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCoordinateSystem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetChartType(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getChartType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRoleOfSequenceForSeriesLabel(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRoleOfSequenceForSeriesLabel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedMandatoryRoles(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedMandatoryRoles")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedOptionalRoles(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedOptionalRoles")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSupportedPropertyRoles(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedPropertyRoles")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

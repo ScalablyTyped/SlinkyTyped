@@ -10,12 +10,11 @@ import scala.scalajs.js.annotation._
   * This is the generic interface for supporting the insertion and removal of named elements.
   * @see XContainer
   */
-@js.native
 trait XNameContainer extends XNameReplace {
   /** inserts the given element at the specified name. */
-  def insertByName(aName: String, aElement: js.Any): Unit = js.native
+  def insertByName(aName: String, aElement: js.Any): Unit
   /** removes the element with the specified name. */
-  def removeByName(Name: String): Unit = js.native
+  def removeByName(Name: String): Unit
 }
 
 object XNameContainer {
@@ -38,25 +37,5 @@ object XNameContainer {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), insertByName = js.Any.fromFunction2(insertByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName), replaceByName = js.Any.fromFunction2(replaceByName))
     __obj.asInstanceOf[XNameContainer]
   }
-  @scala.inline
-  implicit class XNameContainerOps[Self <: XNameContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertByName(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertByName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

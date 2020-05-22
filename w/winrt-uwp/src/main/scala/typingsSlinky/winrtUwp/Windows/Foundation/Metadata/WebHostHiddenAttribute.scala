@@ -5,6 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Identifies the type as one whose functionality is not projected into the specified target language. */
-@js.native
 trait WebHostHiddenAttribute extends js.Object
 

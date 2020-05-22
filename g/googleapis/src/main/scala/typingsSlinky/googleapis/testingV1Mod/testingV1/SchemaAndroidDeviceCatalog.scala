@@ -25,53 +25,16 @@ trait SchemaAndroidDeviceCatalog extends js.Object {
 
 object SchemaAndroidDeviceCatalog {
   @scala.inline
-  def apply(): SchemaAndroidDeviceCatalog = {
+  def apply(
+    models: js.Array[SchemaAndroidModel] = null,
+    runtimeConfiguration: SchemaAndroidRuntimeConfiguration = null,
+    versions: js.Array[SchemaAndroidVersion] = null
+  ): SchemaAndroidDeviceCatalog = {
     val __obj = js.Dynamic.literal()
+    if (models != null) __obj.updateDynamic("models")(models.asInstanceOf[js.Any])
+    if (runtimeConfiguration != null) __obj.updateDynamic("runtimeConfiguration")(runtimeConfiguration.asInstanceOf[js.Any])
+    if (versions != null) __obj.updateDynamic("versions")(versions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidDeviceCatalog]
   }
-  @scala.inline
-  implicit class SchemaAndroidDeviceCatalogOps[Self <: SchemaAndroidDeviceCatalog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModels(value: js.Array[SchemaAndroidModel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntimeConfiguration(value: SchemaAndroidRuntimeConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntimeConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersions(value: js.Array[SchemaAndroidVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

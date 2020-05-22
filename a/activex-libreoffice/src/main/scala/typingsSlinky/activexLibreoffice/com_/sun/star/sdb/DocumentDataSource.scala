@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * @see DataSource
   * @see XDocumentDataSource
   */
-@js.native
 trait DocumentDataSource
   extends DataSource
      with XDocumentDataSource

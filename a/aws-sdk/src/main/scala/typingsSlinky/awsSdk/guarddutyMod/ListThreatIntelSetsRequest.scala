@@ -7,62 +7,30 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListThreatIntelSetsRequest extends js.Object {
   /**
-    * The unique ID of the detector the threatIntelSet is associated with.
+    * The unique ID of the detector that the threatIntelSet is associated with.
     */
   var DetectorId: typingsSlinky.awsSdk.guarddutyMod.DetectorId = js.native
   /**
-    * You can use this parameter to indicate the maximum number of items you want in the response. The default value is 50. The maximum value is 50.
+    * You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50.
     */
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.guarddutyMod.MaxResults] = js.native
   /**
-    * You can use this parameter to paginate results in the response. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action fill nextToken in the request with the value of NextToken from the previous response to continue listing data.
+    * You can use this parameter to paginate results in the response. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data.
     */
   var NextToken: js.UndefOr[String] = js.native
 }
 
 object ListThreatIntelSetsRequest {
   @scala.inline
-  def apply(DetectorId: DetectorId): ListThreatIntelSetsRequest = {
+  def apply(
+    DetectorId: DetectorId,
+    MaxResults: js.UndefOr[MaxResults] = js.undefined,
+    NextToken: String = null
+  ): ListThreatIntelSetsRequest = {
     val __obj = js.Dynamic.literal(DetectorId = DetectorId.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListThreatIntelSetsRequest]
   }
-  @scala.inline
-  implicit class ListThreatIntelSetsRequestOps[Self <: ListThreatIntelSetsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorId(value: DetectorId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

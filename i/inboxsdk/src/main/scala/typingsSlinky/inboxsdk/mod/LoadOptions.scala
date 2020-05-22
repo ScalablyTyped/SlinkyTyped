@@ -12,62 +12,20 @@ import scala.scalajs.js.annotation._
 //   error: () => any;
 //   event: () => any;
 // };
-@js.native
 trait LoadOptions extends js.Object {
-  var appIconUrl: js.UndefOr[String] = js.native
-  var appName: js.UndefOr[String] = js.native
-  var suppressAddonTitle: js.UndefOr[String] = js.native
+  var appIconUrl: js.UndefOr[String] = js.undefined
+  var appName: js.UndefOr[String] = js.undefined
+  var suppressAddonTitle: js.UndefOr[String] = js.undefined
 }
 
 object LoadOptions {
   @scala.inline
-  def apply(): LoadOptions = {
+  def apply(appIconUrl: String = null, appName: String = null, suppressAddonTitle: String = null): LoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (appIconUrl != null) __obj.updateDynamic("appIconUrl")(appIconUrl.asInstanceOf[js.Any])
+    if (appName != null) __obj.updateDynamic("appName")(appName.asInstanceOf[js.Any])
+    if (suppressAddonTitle != null) __obj.updateDynamic("suppressAddonTitle")(suppressAddonTitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadOptions]
   }
-  @scala.inline
-  implicit class LoadOptionsOps[Self <: LoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppIconUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appIconUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppIconUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appIconUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressAddonTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressAddonTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressAddonTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressAddonTitle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

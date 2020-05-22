@@ -16,51 +16,40 @@ import scala.scalajs.js.annotation._
 
 //#endregion
 //#region 权限引导 https://docs.alipay.com/mini/api/show-auth-guide
-@js.native
 trait showAuthGuideOptions
   extends BaseOptions[js.Any, js.Any] {
   /**
-  		 * 引导的权限标识，用于标识该权限类型(如 LBS)
-  		 * 支持的 authType 如下：
-  		 *
-  		 * 权限名称	权限码	支持平台
-  		 * 后台保活权限	BACKGROUNDER	Android
-  		 * 桌面快捷权限	SHORTCUT	Android
-  		 * 麦克风权限	MICROPHONE	iOS
-  		 * 通讯录权限	ADDRESSBOOK	iOS
-  		 * 相机权限	CAMERA	iOS
-  		 * 照片权限	PHOTO	iOS
-  		 * push通知栏权限	NOTIFICATION	iOS
-  		 * 自启动权限	SELFSTARTING	Android
-  		 * lbs总开关	LBSSERVICE	iOS
-  		 * lbs开关(app)	LBS	iOS
-  		 */
-  var authType: BACKGROUNDER | SHORTCUT | MICROPHONE | ADDRESSBOOK | CAMERA | PHOTO | NOTIFICATION | SELFSTARTING | LBSSERVICE | LBS = js.native
+    * 引导的权限标识，用于标识该权限类型(如 LBS)
+    * 支持的 authType 如下：
+    *
+    * 权限名称    权限码    支持平台
+    * 后台保活权限    BACKGROUNDER    Android
+    * 桌面快捷权限    SHORTCUT    Android
+    * 麦克风权限    MICROPHONE    iOS
+    * 通讯录权限    ADDRESSBOOK    iOS
+    * 相机权限    CAMERA    iOS
+    * 照片权限    PHOTO    iOS
+    * push通知栏权限    NOTIFICATION    iOS
+    * 自启动权限    SELFSTARTING    Android
+    * lbs总开关    LBSSERVICE    iOS
+    * lbs开关(app)    LBS    iOS
+    */
+  var authType: BACKGROUNDER | SHORTCUT | MICROPHONE | ADDRESSBOOK | CAMERA | PHOTO | NOTIFICATION | SELFSTARTING | LBSSERVICE | LBS
 }
 
 object showAuthGuideOptions {
   @scala.inline
   def apply(
-    authType: BACKGROUNDER | SHORTCUT | MICROPHONE | ADDRESSBOOK | CAMERA | PHOTO | NOTIFICATION | SELFSTARTING | LBSSERVICE | LBS
+    authType: BACKGROUNDER | SHORTCUT | MICROPHONE | ADDRESSBOOK | CAMERA | PHOTO | NOTIFICATION | SELFSTARTING | LBSSERVICE | LBS,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: js.Any => Unit = null
   ): showAuthGuideOptions = {
     val __obj = js.Dynamic.literal(authType = authType.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[showAuthGuideOptions]
   }
-  @scala.inline
-  implicit class showAuthGuideOptionsOps[Self <: showAuthGuideOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthType(
-      value: BACKGROUNDER | SHORTCUT | MICROPHONE | ADDRESSBOOK | CAMERA | PHOTO | NOTIFICATION | SELFSTARTING | LBSSERVICE | LBS
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

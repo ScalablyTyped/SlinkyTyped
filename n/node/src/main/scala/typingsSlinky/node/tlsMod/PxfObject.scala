@@ -5,49 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PxfObject extends js.Object {
   /**
     * PFX or PKCS12 encoded private key and certificate chain.
     */
-  var buf: String | Buffer = js.native
+  var buf: String | Buffer
   /**
     * Optional passphrase.
     */
-  var passphrase: js.UndefOr[String] = js.native
+  var passphrase: js.UndefOr[String] = js.undefined
 }
 
 object PxfObject {
   @scala.inline
-  def apply(buf: String | Buffer): PxfObject = {
+  def apply(buf: String | Buffer, passphrase: String = null): PxfObject = {
     val __obj = js.Dynamic.literal(buf = buf.asInstanceOf[js.Any])
+    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
     __obj.asInstanceOf[PxfObject]
   }
-  @scala.inline
-  implicit class PxfObjectOps[Self <: PxfObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuf(value: String | Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPassphrase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassphrase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

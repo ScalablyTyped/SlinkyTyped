@@ -2,85 +2,48 @@ package typingsSlinky.grpcGrpcJs.clientMod
 
 import typingsSlinky.grpcGrpcJs.callCredentialsMod.CallCredentials
 import typingsSlinky.grpcGrpcJs.callStreamMod.Deadline
+import typingsSlinky.grpcGrpcJs.clientInterceptorsMod.Interceptor
+import typingsSlinky.grpcGrpcJs.clientInterceptorsMod.InterceptorProvider
+import typingsSlinky.grpcGrpcJs.serverCallMod.ServerDuplexStream
+import typingsSlinky.grpcGrpcJs.serverCallMod.ServerReadableStream
+import typingsSlinky.grpcGrpcJs.serverCallMod.ServerUnaryCall
+import typingsSlinky.grpcGrpcJs.serverCallMod.ServerWritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallOptions extends js.Object {
-  var credentials: js.UndefOr[CallCredentials] = js.native
-  var deadline: js.UndefOr[Deadline] = js.native
-  var host: js.UndefOr[String] = js.native
-  var propagate_flags: js.UndefOr[Double] = js.native
+  var credentials: js.UndefOr[CallCredentials] = js.undefined
+  var deadline: js.UndefOr[Deadline] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var interceptor_providers: js.UndefOr[js.Array[InterceptorProvider]] = js.undefined
+  var interceptors: js.UndefOr[js.Array[Interceptor]] = js.undefined
+  var parent: js.UndefOr[
+    (ServerUnaryCall[_, _]) | (ServerReadableStream[_, _]) | (ServerWritableStream[_, _]) | (ServerDuplexStream[_, _])
+  ] = js.undefined
+  var propagate_flags: js.UndefOr[Double] = js.undefined
 }
 
 object CallOptions {
   @scala.inline
-  def apply(): CallOptions = {
+  def apply(
+    credentials: CallCredentials = null,
+    deadline: Deadline = null,
+    host: String = null,
+    interceptor_providers: js.Array[InterceptorProvider] = null,
+    interceptors: js.Array[Interceptor] = null,
+    parent: (ServerUnaryCall[_, _]) | (ServerReadableStream[_, _]) | (ServerWritableStream[_, _]) | (ServerDuplexStream[_, _]) = null,
+    propagate_flags: js.UndefOr[Double] = js.undefined
+  ): CallOptions = {
     val __obj = js.Dynamic.literal()
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (deadline != null) __obj.updateDynamic("deadline")(deadline.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (interceptor_providers != null) __obj.updateDynamic("interceptor_providers")(interceptor_providers.asInstanceOf[js.Any])
+    if (interceptors != null) __obj.updateDynamic("interceptors")(interceptors.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (!js.isUndefined(propagate_flags)) __obj.updateDynamic("propagate_flags")(propagate_flags.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallOptions]
   }
-  @scala.inline
-  implicit class CallOptionsOps[Self <: CallOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: CallCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadlineDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeadline(value: Deadline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPropagate_flags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagate_flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropagate_flags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagate_flags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

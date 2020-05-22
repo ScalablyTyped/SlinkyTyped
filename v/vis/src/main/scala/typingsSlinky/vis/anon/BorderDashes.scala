@@ -4,92 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BorderDashes extends js.Object {
-  var borderDashes: js.UndefOr[Boolean | js.Array[Double]] = js.native
+  var borderDashes: js.UndefOr[Boolean | js.Array[Double]] = js.undefined
    // only for borders
-  var borderRadius: js.UndefOr[Double] = js.native
+  var borderRadius: js.UndefOr[Double] = js.undefined
        // only for box shape
-  var interpolation: js.UndefOr[Boolean] = js.native
+  var interpolation: js.UndefOr[Boolean] = js.undefined
     // only for image and circularImage shapes
-  var useBorderWithImage: js.UndefOr[Boolean] = js.native
+  var useBorderWithImage: js.UndefOr[Boolean] = js.undefined
     // only for image and circularImage shapes
-  var useImageSize: js.UndefOr[Boolean] = js.native
+  var useImageSize: js.UndefOr[Boolean] = js.undefined
 }
 
 object BorderDashes {
   @scala.inline
-  def apply(): BorderDashes = {
+  def apply(
+    borderDashes: Boolean | js.Array[Double] = null,
+    borderRadius: js.UndefOr[Double] = js.undefined,
+    interpolation: js.UndefOr[Boolean] = js.undefined,
+    useBorderWithImage: js.UndefOr[Boolean] = js.undefined,
+    useImageSize: js.UndefOr[Boolean] = js.undefined
+  ): BorderDashes = {
     val __obj = js.Dynamic.literal()
+    if (borderDashes != null) __obj.updateDynamic("borderDashes")(borderDashes.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interpolation)) __obj.updateDynamic("interpolation")(interpolation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useBorderWithImage)) __obj.updateDynamic("useBorderWithImage")(useBorderWithImage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useImageSize)) __obj.updateDynamic("useImageSize")(useImageSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BorderDashes]
   }
-  @scala.inline
-  implicit class BorderDashesOps[Self <: BorderDashes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderDashes(value: Boolean | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderDashes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterpolation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterpolation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseBorderWithImage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useBorderWithImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseBorderWithImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useBorderWithImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseImageSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useImageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseImageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useImageSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

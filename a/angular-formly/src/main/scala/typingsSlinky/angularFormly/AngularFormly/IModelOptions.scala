@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IModelOptions extends js.Object {
-  var allowInvalid: js.UndefOr[Boolean] = js.native
-  var debounce: js.UndefOr[Double] = js.native
-  var getterSetter: js.UndefOr[String] = js.native
-  var timezone: js.UndefOr[String] = js.native
-  var updateOn: js.UndefOr[String] = js.native
+  var allowInvalid: js.UndefOr[Boolean] = js.undefined
+  var debounce: js.UndefOr[Double] = js.undefined
+  var getterSetter: js.UndefOr[String] = js.undefined
+  var timezone: js.UndefOr[String] = js.undefined
+  var updateOn: js.UndefOr[String] = js.undefined
 }
 
 object IModelOptions {
   @scala.inline
-  def apply(): IModelOptions = {
+  def apply(
+    allowInvalid: js.UndefOr[Boolean] = js.undefined,
+    debounce: js.UndefOr[Double] = js.undefined,
+    getterSetter: String = null,
+    timezone: String = null,
+    updateOn: String = null
+  ): IModelOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowInvalid)) __obj.updateDynamic("allowInvalid")(allowInvalid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debounce)) __obj.updateDynamic("debounce")(debounce.get.asInstanceOf[js.Any])
+    if (getterSetter != null) __obj.updateDynamic("getterSetter")(getterSetter.asInstanceOf[js.Any])
+    if (timezone != null) __obj.updateDynamic("timezone")(timezone.asInstanceOf[js.Any])
+    if (updateOn != null) __obj.updateDynamic("updateOn")(updateOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IModelOptions]
   }
-  @scala.inline
-  implicit class IModelOptionsOps[Self <: IModelOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowInvalid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInvalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowInvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInvalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebounce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebounce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetterSetter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getterSetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetterSetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getterSetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

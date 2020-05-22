@@ -26,65 +26,13 @@ trait SearchResponse extends js.Object {
 
 object SearchResponse {
   @scala.inline
-  def apply(): SearchResponse = {
+  def apply(facets: Facets = null, hits: Hits = null, stats: Stats = null, status: SearchStatus = null): SearchResponse = {
     val __obj = js.Dynamic.literal()
+    if (facets != null) __obj.updateDynamic("facets")(facets.asInstanceOf[js.Any])
+    if (hits != null) __obj.updateDynamic("hits")(hits.asInstanceOf[js.Any])
+    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchResponse]
   }
-  @scala.inline
-  implicit class SearchResponseOps[Self <: SearchResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFacets(value: Facets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHits(value: Hits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: Stats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SearchStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

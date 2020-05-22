@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProductsCustomBatchRequest extends js.Object {
   /** The request entries to be processed in the batch. */
-  var entries: js.UndefOr[js.Array[ProductsCustomBatchRequestEntry]] = js.native
+  var entries: js.UndefOr[js.Array[ProductsCustomBatchRequestEntry]] = js.undefined
 }
 
 object ProductsCustomBatchRequest {
   @scala.inline
-  def apply(): ProductsCustomBatchRequest = {
+  def apply(entries: js.Array[ProductsCustomBatchRequestEntry] = null): ProductsCustomBatchRequest = {
     val __obj = js.Dynamic.literal()
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductsCustomBatchRequest]
   }
-  @scala.inline
-  implicit class ProductsCustomBatchRequestOps[Self <: ProductsCustomBatchRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: js.Array[ProductsCustomBatchRequestEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

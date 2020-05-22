@@ -23,7 +23,6 @@ trait DefaultRouteTableState extends js.Object {
   val propagatingVgws: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
     * A list of route objects. Their keys are documented below.
-    * This argument is processed in [attribute-as-blocks mode](https://www.terraform.io/docs/configuration/attr-as-blocks.html).
     */
   val routes: js.UndefOr[Input[js.Array[Input[DefaultRouteTableRoute]]]] = js.native
   /**
@@ -35,89 +34,22 @@ trait DefaultRouteTableState extends js.Object {
 
 object DefaultRouteTableState {
   @scala.inline
-  def apply(): DefaultRouteTableState = {
+  def apply(
+    defaultRouteTableId: Input[String] = null,
+    ownerId: Input[String] = null,
+    propagatingVgws: Input[js.Array[Input[String]]] = null,
+    routes: Input[js.Array[Input[DefaultRouteTableRoute]]] = null,
+    tags: Input[StringDictionary[_]] = null,
+    vpcId: Input[String] = null
+  ): DefaultRouteTableState = {
     val __obj = js.Dynamic.literal()
+    if (defaultRouteTableId != null) __obj.updateDynamic("defaultRouteTableId")(defaultRouteTableId.asInstanceOf[js.Any])
+    if (ownerId != null) __obj.updateDynamic("ownerId")(ownerId.asInstanceOf[js.Any])
+    if (propagatingVgws != null) __obj.updateDynamic("propagatingVgws")(propagatingVgws.asInstanceOf[js.Any])
+    if (routes != null) __obj.updateDynamic("routes")(routes.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (vpcId != null) __obj.updateDynamic("vpcId")(vpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultRouteTableState]
   }
-  @scala.inline
-  implicit class DefaultRouteTableStateOps[Self <: DefaultRouteTableState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultRouteTableId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRouteTableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTableId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPropagatingVgws(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagatingVgws")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropagatingVgws: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propagatingVgws")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutes(value: Input[js.Array[Input[DefaultRouteTableRoute]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Input[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

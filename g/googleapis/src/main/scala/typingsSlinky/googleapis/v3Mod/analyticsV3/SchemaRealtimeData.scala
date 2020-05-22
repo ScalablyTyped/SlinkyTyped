@@ -1,9 +1,9 @@
 package typingsSlinky.googleapis.v3Mod.analyticsV3
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleapis.AnonAccountId
-import typingsSlinky.googleapis.AnonColumnType
-import typingsSlinky.googleapis.AnonFilters
+import typingsSlinky.googleapis.anon.AccountId
+import typingsSlinky.googleapis.anon.ColumnType
+import typingsSlinky.googleapis.anon.Filters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait SchemaRealtimeData extends js.Object {
     * Column headers that list dimension names followed by the metric names.
     * The order of dimensions and metrics is same as specified in the request.
     */
-  var columnHeaders: js.UndefOr[js.Array[AnonColumnType]] = js.native
+  var columnHeaders: js.UndefOr[js.Array[ColumnType]] = js.native
   /**
     * Unique ID for this data response.
     */
@@ -30,11 +30,11 @@ trait SchemaRealtimeData extends js.Object {
     * Information for the view (profile), for which the real time data was
     * requested.
     */
-  var profileInfo: js.UndefOr[AnonAccountId] = js.native
+  var profileInfo: js.UndefOr[AccountId] = js.native
   /**
     * Real time data request query parameters.
     */
-  var query: js.UndefOr[AnonFilters] = js.native
+  var query: js.UndefOr[Filters] = js.native
   /**
     * Real time data rows, where each row contains a list of dimension values
     * followed by the metric values. The order of dimensions and metrics is
@@ -60,125 +60,28 @@ trait SchemaRealtimeData extends js.Object {
 
 object SchemaRealtimeData {
   @scala.inline
-  def apply(): SchemaRealtimeData = {
+  def apply(
+    columnHeaders: js.Array[ColumnType] = null,
+    id: String = null,
+    kind: String = null,
+    profileInfo: AccountId = null,
+    query: Filters = null,
+    rows: js.Array[js.Array[String]] = null,
+    selfLink: String = null,
+    totalResults: js.UndefOr[Double] = js.undefined,
+    totalsForAllResults: StringDictionary[String] = null
+  ): SchemaRealtimeData = {
     val __obj = js.Dynamic.literal()
+    if (columnHeaders != null) __obj.updateDynamic("columnHeaders")(columnHeaders.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (profileInfo != null) __obj.updateDynamic("profileInfo")(profileInfo.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalResults)) __obj.updateDynamic("totalResults")(totalResults.get.asInstanceOf[js.Any])
+    if (totalsForAllResults != null) __obj.updateDynamic("totalsForAllResults")(totalsForAllResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRealtimeData]
   }
-  @scala.inline
-  implicit class SchemaRealtimeDataOps[Self <: SchemaRealtimeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnHeaders(value: js.Array[AnonColumnType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileInfo(value: AnonAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: AnonFilters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Array[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalsForAllResults(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalsForAllResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalsForAllResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalsForAllResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

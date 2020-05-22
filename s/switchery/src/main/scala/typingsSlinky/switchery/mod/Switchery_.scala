@@ -4,29 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Switchery_ extends js.Object {
   /**
     * Unbinding all event handlers attached to the switch element to prepare the object for garbage collection.
     * @returns {void}
     */
-  def destroy(): Unit = js.native
+  def destroy(): Unit
   /**
     * Disable switch by unbinding attached events and changing opacity to disabledOpacity value
     * @returns {void}
     */
-  def disable(): Unit = js.native
+  def disable(): Unit
   /**
     * Enable disabled switch by re-adding event handlers and changing the opacity to 1.
     * @returns {void}
     */
-  def enable(): Unit = js.native
+  def enable(): Unit
   /**
     * Check if switch is currently disabled by checking the readonly and disabled attributes on the checkbox and the disabled option set via JS.
     *  If any of those are present, the returned value is true.
     * @returns {boolean} whether it's disabled or not.
     */
-  def isDisabled(): Boolean = js.native
+  def isDisabled(): Boolean
 }
 
 object Switchery_ {
@@ -35,37 +34,5 @@ object Switchery_ {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), isDisabled = js.Any.fromFunction0(isDisabled))
     __obj.asInstanceOf[Switchery_]
   }
-  @scala.inline
-  implicit class Switchery_Ops[Self <: Switchery_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisable(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnable(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsDisabled(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

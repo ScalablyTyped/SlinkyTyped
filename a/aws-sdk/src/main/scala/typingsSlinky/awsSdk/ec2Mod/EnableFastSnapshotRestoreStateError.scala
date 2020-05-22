@@ -18,41 +18,11 @@ trait EnableFastSnapshotRestoreStateError extends js.Object {
 
 object EnableFastSnapshotRestoreStateError {
   @scala.inline
-  def apply(): EnableFastSnapshotRestoreStateError = {
+  def apply(Code: String = null, Message: String = null): EnableFastSnapshotRestoreStateError = {
     val __obj = js.Dynamic.literal()
+    if (Code != null) __obj.updateDynamic("Code")(Code.asInstanceOf[js.Any])
+    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableFastSnapshotRestoreStateError]
   }
-  @scala.inline
-  implicit class EnableFastSnapshotRestoreStateErrorOps[Self <: EnableFastSnapshotRestoreStateError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

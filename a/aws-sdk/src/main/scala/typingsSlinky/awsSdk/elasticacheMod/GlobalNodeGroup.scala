@@ -18,41 +18,11 @@ trait GlobalNodeGroup extends js.Object {
 
 object GlobalNodeGroup {
   @scala.inline
-  def apply(): GlobalNodeGroup = {
+  def apply(GlobalNodeGroupId: String = null, Slots: String = null): GlobalNodeGroup = {
     val __obj = js.Dynamic.literal()
+    if (GlobalNodeGroupId != null) __obj.updateDynamic("GlobalNodeGroupId")(GlobalNodeGroupId.asInstanceOf[js.Any])
+    if (Slots != null) __obj.updateDynamic("Slots")(Slots.asInstanceOf[js.Any])
     __obj.asInstanceOf[GlobalNodeGroup]
   }
-  @scala.inline
-  implicit class GlobalNodeGroupOps[Self <: GlobalNodeGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalNodeGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNodeGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalNodeGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalNodeGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlots(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Slots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

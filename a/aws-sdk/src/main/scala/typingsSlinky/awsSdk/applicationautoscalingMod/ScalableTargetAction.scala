@@ -11,48 +11,21 @@ trait ScalableTargetAction extends js.Object {
     */
   var MaxCapacity: js.UndefOr[ResourceCapacity] = js.native
   /**
-    * The minimum capacity.
+    * The minimum capacity. For Lambda provisioned concurrency, the minimum value allowed is 0. For all other resources, the minimum value allowed is 1.
     */
   var MinCapacity: js.UndefOr[ResourceCapacity] = js.native
 }
 
 object ScalableTargetAction {
   @scala.inline
-  def apply(): ScalableTargetAction = {
+  def apply(
+    MaxCapacity: js.UndefOr[ResourceCapacity] = js.undefined,
+    MinCapacity: js.UndefOr[ResourceCapacity] = js.undefined
+  ): ScalableTargetAction = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MaxCapacity)) __obj.updateDynamic("MaxCapacity")(MaxCapacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinCapacity)) __obj.updateDynamic("MinCapacity")(MinCapacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScalableTargetAction]
   }
-  @scala.inline
-  implicit class ScalableTargetActionOps[Self <: ScalableTargetAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxCapacity(value: ResourceCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCapacity(value: ResourceCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

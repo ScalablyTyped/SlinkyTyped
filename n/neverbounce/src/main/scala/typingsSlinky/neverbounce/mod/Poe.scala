@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Poe extends js.Object {
-  def confirm(email: String, result: String, confirmationToken: String, transactionId: String): js.Promise[Response] = js.native
+  def confirm(email: String, result: String, confirmationToken: String, transactionId: String): js.Promise[Response]
 }
 
 object Poe {
@@ -15,19 +14,5 @@ object Poe {
     val __obj = js.Dynamic.literal(confirm = js.Any.fromFunction4(confirm))
     __obj.asInstanceOf[Poe]
   }
-  @scala.inline
-  implicit class PoeOps[Self <: Poe] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfirm(value: (String, String, String, String) => js.Promise[Response]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirm")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

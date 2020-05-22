@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `conditionalFormatRule.toJSON()`. */
-@js.native
 trait ConditionalFormatRuleData extends js.Object {
   /**
     *
@@ -13,72 +12,31 @@ trait ConditionalFormatRuleData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var formula: js.UndefOr[String] = js.native
+  var formula: js.UndefOr[String] = js.undefined
   /**
     *
     * The formula, if required, to evaluate the conditional format rule on in the user's language.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var formulaLocal: js.UndefOr[String] = js.native
+  var formulaLocal: js.UndefOr[String] = js.undefined
   /**
     *
     * The formula, if required, to evaluate the conditional format rule on in R1C1-style notation.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var formulaR1C1: js.UndefOr[String] = js.native
+  var formulaR1C1: js.UndefOr[String] = js.undefined
 }
 
 object ConditionalFormatRuleData {
   @scala.inline
-  def apply(): ConditionalFormatRuleData = {
+  def apply(formula: String = null, formulaLocal: String = null, formulaR1C1: String = null): ConditionalFormatRuleData = {
     val __obj = js.Dynamic.literal()
+    if (formula != null) __obj.updateDynamic("formula")(formula.asInstanceOf[js.Any])
+    if (formulaLocal != null) __obj.updateDynamic("formulaLocal")(formulaLocal.asInstanceOf[js.Any])
+    if (formulaR1C1 != null) __obj.updateDynamic("formulaR1C1")(formulaR1C1.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalFormatRuleData]
   }
-  @scala.inline
-  implicit class ConditionalFormatRuleDataOps[Self <: ConditionalFormatRuleData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormula(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormulaLocal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaLocal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormulaLocal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaLocal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormulaR1C1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaR1C1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormulaR1C1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaR1C1")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

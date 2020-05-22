@@ -1,40 +1,31 @@
 package typingsSlinky.antdMobileRn.listItemNativeMod
 
+import slinky.core.TagMod
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BriefProps
   extends typingsSlinky.antdMobileRn.listPropsTypeMod.BriefProps {
-  var styles: js.UndefOr[typingsSlinky.antdMobileRn.anon.Brief] = js.native
+  var styles: js.UndefOr[typingsSlinky.antdMobileRn.anon.Brief] = js.undefined
 }
 
 object BriefProps {
   @scala.inline
-  def apply(): BriefProps = {
+  def apply(
+    children: TagMod[Any] = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    styles: typingsSlinky.antdMobileRn.anon.Brief = null,
+    wrap: js.UndefOr[Boolean] = js.undefined
+  ): BriefProps = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BriefProps]
   }
-  @scala.inline
-  implicit class BriefPropsOps[Self <: BriefProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStyles(value: typingsSlinky.antdMobileRn.anon.Brief): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

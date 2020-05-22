@@ -16,10 +16,16 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.terser.terserNumbers.`7`
   - typingsSlinky.terser.terserNumbers.`8`
   - typingsSlinky.terser.terserNumbers.`9`
+  - typingsSlinky.terser.terserNumbers.`10`
+  - typingsSlinky.terser.terserNumbers.`11`
 */
 trait ECMA extends js.Object
 
 object ECMA {
+  @scala.inline
+  def `10`: typingsSlinky.terser.terserNumbers.`10` = 10.asInstanceOf[typingsSlinky.terser.terserNumbers.`10`]
+  @scala.inline
+  def `11`: typingsSlinky.terser.terserNumbers.`11` = 11.asInstanceOf[typingsSlinky.terser.terserNumbers.`11`]
   @scala.inline
   def `2015`: typingsSlinky.terser.terserNumbers.`2015` = 2015.asInstanceOf[typingsSlinky.terser.terserNumbers.`2015`]
   @scala.inline

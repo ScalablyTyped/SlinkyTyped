@@ -10,53 +10,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeaderTabsProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any]
      with RippleComponent {
-  var activeTab: js.UndefOr[Double] = js.native
+  var activeTab: js.UndefOr[Double] = js.undefined
   @JSName("onChange")
-  var onChange_HeaderTabsProps: js.UndefOr[FormEventHandler[Header]] = js.native
+  var onChange_HeaderTabsProps: js.UndefOr[FormEventHandler[Header]] = js.undefined
 }
 
 object HeaderTabsProps {
   @scala.inline
-  def apply(): HeaderTabsProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
+    ClassAttributes: ClassAttributes[js.Any] = null,
+    RippleComponent: RippleComponent = null,
+    activeTab: js.UndefOr[Double] = js.undefined,
+    onChange: SyntheticEvent[EventTarget with Header, Event] => Unit = null
+  ): HeaderTabsProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (RippleComponent != null) js.Dynamic.global.Object.assign(__obj, RippleComponent)
+    if (!js.isUndefined(activeTab)) __obj.updateDynamic("activeTab")(activeTab.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[HeaderTabsProps]
   }
-  @scala.inline
-  implicit class HeaderTabsPropsOps[Self <: HeaderTabsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveTab(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with Header, Event] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

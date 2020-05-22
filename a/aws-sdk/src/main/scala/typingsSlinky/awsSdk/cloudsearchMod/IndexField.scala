@@ -26,161 +26,34 @@ trait IndexField extends js.Object {
 
 object IndexField {
   @scala.inline
-  def apply(IndexFieldName: DynamicFieldName, IndexFieldType: IndexFieldType): IndexField = {
+  def apply(
+    IndexFieldName: DynamicFieldName,
+    IndexFieldType: IndexFieldType,
+    DateArrayOptions: DateArrayOptions = null,
+    DateOptions: DateOptions = null,
+    DoubleArrayOptions: DoubleArrayOptions = null,
+    DoubleOptions: DoubleOptions = null,
+    IntArrayOptions: IntArrayOptions = null,
+    IntOptions: IntOptions = null,
+    LatLonOptions: LatLonOptions = null,
+    LiteralArrayOptions: LiteralArrayOptions = null,
+    LiteralOptions: LiteralOptions = null,
+    TextArrayOptions: TextArrayOptions = null,
+    TextOptions: TextOptions = null
+  ): IndexField = {
     val __obj = js.Dynamic.literal(IndexFieldName = IndexFieldName.asInstanceOf[js.Any], IndexFieldType = IndexFieldType.asInstanceOf[js.Any])
+    if (DateArrayOptions != null) __obj.updateDynamic("DateArrayOptions")(DateArrayOptions.asInstanceOf[js.Any])
+    if (DateOptions != null) __obj.updateDynamic("DateOptions")(DateOptions.asInstanceOf[js.Any])
+    if (DoubleArrayOptions != null) __obj.updateDynamic("DoubleArrayOptions")(DoubleArrayOptions.asInstanceOf[js.Any])
+    if (DoubleOptions != null) __obj.updateDynamic("DoubleOptions")(DoubleOptions.asInstanceOf[js.Any])
+    if (IntArrayOptions != null) __obj.updateDynamic("IntArrayOptions")(IntArrayOptions.asInstanceOf[js.Any])
+    if (IntOptions != null) __obj.updateDynamic("IntOptions")(IntOptions.asInstanceOf[js.Any])
+    if (LatLonOptions != null) __obj.updateDynamic("LatLonOptions")(LatLonOptions.asInstanceOf[js.Any])
+    if (LiteralArrayOptions != null) __obj.updateDynamic("LiteralArrayOptions")(LiteralArrayOptions.asInstanceOf[js.Any])
+    if (LiteralOptions != null) __obj.updateDynamic("LiteralOptions")(LiteralOptions.asInstanceOf[js.Any])
+    if (TextArrayOptions != null) __obj.updateDynamic("TextArrayOptions")(TextArrayOptions.asInstanceOf[js.Any])
+    if (TextOptions != null) __obj.updateDynamic("TextOptions")(TextOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexField]
   }
-  @scala.inline
-  implicit class IndexFieldOps[Self <: IndexField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndexFieldName(value: DynamicFieldName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndexFieldType(value: IndexFieldType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexFieldType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDateArrayOptions(value: DateArrayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateArrayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateArrayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateArrayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateOptions(value: DateOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleArrayOptions(value: DoubleArrayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoubleArrayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleArrayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoubleArrayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleOptions(value: DoubleOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoubleOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DoubleOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntArrayOptions(value: IntArrayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntArrayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntArrayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntArrayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntOptions(value: IntOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatLonOptions(value: LatLonOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatLonOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatLonOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatLonOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiteralArrayOptions(value: LiteralArrayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LiteralArrayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiteralArrayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LiteralArrayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLiteralOptions(value: LiteralOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LiteralOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLiteralOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LiteralOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextArrayOptions(value: TextArrayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextArrayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextArrayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextArrayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOptions(value: TextOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

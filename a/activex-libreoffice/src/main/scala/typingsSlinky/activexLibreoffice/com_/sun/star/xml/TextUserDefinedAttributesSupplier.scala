@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * component).
   * @since OOo 2.0.4
   */
-@js.native
 trait TextUserDefinedAttributesSupplier extends js.Object {
   /**
     * This container holds the {@link AttributeData} elements that represent uninterpreted XML attributes of a text.
@@ -20,7 +19,7 @@ trait TextUserDefinedAttributesSupplier extends js.Object {
     *
     * The {@link com.sun.star.container.XNameContainer} supports the service {@link AttributeContainer} .
     */
-  var TextUserDefinedAttributes: XNameContainer = js.native
+  var TextUserDefinedAttributes: XNameContainer
 }
 
 object TextUserDefinedAttributesSupplier {
@@ -29,19 +28,5 @@ object TextUserDefinedAttributesSupplier {
     val __obj = js.Dynamic.literal(TextUserDefinedAttributes = TextUserDefinedAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextUserDefinedAttributesSupplier]
   }
-  @scala.inline
-  implicit class TextUserDefinedAttributesSupplierOps[Self <: TextUserDefinedAttributesSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextUserDefinedAttributes(value: XNameContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextUserDefinedAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

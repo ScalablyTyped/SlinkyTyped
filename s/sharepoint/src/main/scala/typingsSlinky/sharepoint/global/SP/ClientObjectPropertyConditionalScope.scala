@@ -21,5 +21,17 @@ class ClientObjectPropertyConditionalScope protected ()
     valueToCompare: js.Any,
     allowAllActions: Boolean
   ) = this()
+  /* CompleteClass */
+  override def customFromJson(initValue: js.Any): Boolean = js.native
+  /* CompleteClass */
+  override def fromJson(initValue: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def get_testResult(): Boolean = js.native
+  /* CompleteClass */
+  override def startIfFalse(): js.Any = js.native
+  /* CompleteClass */
+  override def startIfTrue(): js.Any = js.native
+  /* CompleteClass */
+  override def startScope(): js.Any = js.native
 }
 

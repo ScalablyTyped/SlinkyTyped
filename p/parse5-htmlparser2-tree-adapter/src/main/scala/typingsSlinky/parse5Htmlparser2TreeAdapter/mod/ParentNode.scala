@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * htmlparser2 tree adapter ParentNode interface.
   */
-@js.native
 trait ParentNode extends Node {
   /**
     * Same as {@link children}. [DOM spec](https://dom.spec.whatwg.org)-compatible alias.
     */
-  var childNodes: js.Array[Node] = js.native
+  var childNodes: js.Array[Node]
   /**
     * Child nodes.
     */
-  var children: js.Array[Node] = js.native
+  var children: js.Array[Node]
   /**
     * First child of the node.
     */
-  var firstChild: Node = js.native
+  var firstChild: Node
   /**
     * Last child of the node.
     */
-  var lastChild: Node = js.native
+  var lastChild: Node
 }
 
 object ParentNode {
@@ -47,37 +46,5 @@ object ParentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParentNode]
   }
-  @scala.inline
-  implicit class ParentNodeOps[Self <: ParentNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildNodes(value: js.Array[Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: js.Array[Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstChild(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastChild(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

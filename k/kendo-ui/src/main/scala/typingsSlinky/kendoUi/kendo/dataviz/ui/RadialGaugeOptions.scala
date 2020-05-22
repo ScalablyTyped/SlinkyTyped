@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RadialGaugeOptions extends js.Object {
-  var gaugeArea: js.UndefOr[RadialGaugeGaugeArea] = js.native
-  var name: js.UndefOr[String] = js.native
-  var pointer: js.UndefOr[js.Array[RadialGaugePointerItem]] = js.native
-  var renderAs: js.UndefOr[String] = js.native
-  var scale: js.UndefOr[RadialGaugeScale] = js.native
-  var theme: js.UndefOr[String] = js.native
-  var transitions: js.UndefOr[Boolean] = js.native
+  var gaugeArea: js.UndefOr[RadialGaugeGaugeArea] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var pointer: js.UndefOr[js.Array[RadialGaugePointerItem]] = js.undefined
+  var renderAs: js.UndefOr[String] = js.undefined
+  var scale: js.UndefOr[RadialGaugeScale] = js.undefined
+  var theme: js.UndefOr[String] = js.undefined
+  var transitions: js.UndefOr[Boolean] = js.undefined
 }
 
 object RadialGaugeOptions {
   @scala.inline
-  def apply(): RadialGaugeOptions = {
+  def apply(
+    gaugeArea: RadialGaugeGaugeArea = null,
+    name: String = null,
+    pointer: js.Array[RadialGaugePointerItem] = null,
+    renderAs: String = null,
+    scale: RadialGaugeScale = null,
+    theme: String = null,
+    transitions: js.UndefOr[Boolean] = js.undefined
+  ): RadialGaugeOptions = {
     val __obj = js.Dynamic.literal()
+    if (gaugeArea != null) __obj.updateDynamic("gaugeArea")(gaugeArea.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (pointer != null) __obj.updateDynamic("pointer")(pointer.asInstanceOf[js.Any])
+    if (renderAs != null) __obj.updateDynamic("renderAs")(renderAs.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(transitions)) __obj.updateDynamic("transitions")(transitions.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadialGaugeOptions]
   }
-  @scala.inline
-  implicit class RadialGaugeOptionsOps[Self <: RadialGaugeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGaugeArea(value: RadialGaugeGaugeArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gaugeArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGaugeArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gaugeArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointer(value: js.Array[RadialGaugePointerItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderAs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: RadialGaugeScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

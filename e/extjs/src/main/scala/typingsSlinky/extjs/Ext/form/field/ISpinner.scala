@@ -5,195 +5,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISpinner extends ITrigger {
   /** [Config Option] (Boolean) */
-  var keyNavEnabled: js.UndefOr[Boolean] = js.native
+  var keyNavEnabled: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var mouseWheelEnabled: js.UndefOr[Boolean] = js.native
+  var mouseWheelEnabled: js.UndefOr[Boolean] = js.undefined
   /** [Method] This method is called when the spinner down button is clicked or when the down arrow key is pressed if keyNavEnabled  */
-  var onSpinDown: js.UndefOr[js.Function0[Unit]] = js.native
+  var onSpinDown: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Method] This method is called when the spinner up button is clicked or when the up arrow key is pressed if keyNavEnabled is */
-  var onSpinUp: js.UndefOr[js.Function0[Unit]] = js.native
+  var onSpinUp: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Method] Sets whether the spinner down button is enabled
-  		* @param enabled Boolean true to enable the button, false to disable it.
-  		*/
-  var setSpinDownEnabled: js.UndefOr[js.Function1[/* enabled */ js.UndefOr[Boolean], Unit]] = js.native
+    * @param enabled Boolean true to enable the button, false to disable it.
+    */
+  var setSpinDownEnabled: js.UndefOr[js.Function1[/* enabled */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Method] Sets whether the spinner up button is enabled
-  		* @param enabled Boolean true to enable the button, false to disable it.
-  		*/
-  var setSpinUpEnabled: js.UndefOr[js.Function1[/* enabled */ js.UndefOr[Boolean], Unit]] = js.native
+    * @param enabled Boolean true to enable the button, false to disable it.
+    */
+  var setSpinUpEnabled: js.UndefOr[js.Function1[/* enabled */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Method] Triggers the spinner to step down fires the spin and spindown events and calls the onSpinDown method  */
-  var spinDown: js.UndefOr[js.Function0[Unit]] = js.native
+  var spinDown: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Property] (Ext.Element) */
-  var spinDownEl: js.UndefOr[IElement] = js.native
+  var spinDownEl: js.UndefOr[IElement] = js.undefined
   /** [Config Option] (Boolean) */
-  var spinDownEnabled: js.UndefOr[Boolean] = js.native
+  var spinDownEnabled: js.UndefOr[Boolean] = js.undefined
   /** [Method] Triggers the spinner to step up fires the spin and spinup events and calls the onSpinUp method  */
-  var spinUp: js.UndefOr[js.Function0[Unit]] = js.native
+  var spinUp: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Property] (Ext.Element) */
-  var spinUpEl: js.UndefOr[IElement] = js.native
+  var spinUpEl: js.UndefOr[IElement] = js.undefined
   /** [Config Option] (Boolean) */
-  var spinUpEnabled: js.UndefOr[Boolean] = js.native
+  var spinUpEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object ISpinner {
   @scala.inline
-  def apply(): ISpinner = {
+  def apply(
+    ITrigger: ITrigger = null,
+    keyNavEnabled: js.UndefOr[Boolean] = js.undefined,
+    mouseWheelEnabled: js.UndefOr[Boolean] = js.undefined,
+    onSpinDown: () => Unit = null,
+    onSpinUp: () => Unit = null,
+    setSpinDownEnabled: /* enabled */ js.UndefOr[Boolean] => Unit = null,
+    setSpinUpEnabled: /* enabled */ js.UndefOr[Boolean] => Unit = null,
+    spinDown: () => Unit = null,
+    spinDownEl: IElement = null,
+    spinDownEnabled: js.UndefOr[Boolean] = js.undefined,
+    spinUp: () => Unit = null,
+    spinUpEl: IElement = null,
+    spinUpEnabled: js.UndefOr[Boolean] = js.undefined
+  ): ISpinner = {
     val __obj = js.Dynamic.literal()
+    if (ITrigger != null) js.Dynamic.global.Object.assign(__obj, ITrigger)
+    if (!js.isUndefined(keyNavEnabled)) __obj.updateDynamic("keyNavEnabled")(keyNavEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseWheelEnabled)) __obj.updateDynamic("mouseWheelEnabled")(mouseWheelEnabled.get.asInstanceOf[js.Any])
+    if (onSpinDown != null) __obj.updateDynamic("onSpinDown")(js.Any.fromFunction0(onSpinDown))
+    if (onSpinUp != null) __obj.updateDynamic("onSpinUp")(js.Any.fromFunction0(onSpinUp))
+    if (setSpinDownEnabled != null) __obj.updateDynamic("setSpinDownEnabled")(js.Any.fromFunction1(setSpinDownEnabled))
+    if (setSpinUpEnabled != null) __obj.updateDynamic("setSpinUpEnabled")(js.Any.fromFunction1(setSpinUpEnabled))
+    if (spinDown != null) __obj.updateDynamic("spinDown")(js.Any.fromFunction0(spinDown))
+    if (spinDownEl != null) __obj.updateDynamic("spinDownEl")(spinDownEl.asInstanceOf[js.Any])
+    if (!js.isUndefined(spinDownEnabled)) __obj.updateDynamic("spinDownEnabled")(spinDownEnabled.get.asInstanceOf[js.Any])
+    if (spinUp != null) __obj.updateDynamic("spinUp")(js.Any.fromFunction0(spinUp))
+    if (spinUpEl != null) __obj.updateDynamic("spinUpEl")(spinUpEl.asInstanceOf[js.Any])
+    if (!js.isUndefined(spinUpEnabled)) __obj.updateDynamic("spinUpEnabled")(spinUpEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISpinner]
   }
-  @scala.inline
-  implicit class ISpinnerOps[Self <: ISpinner] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyNavEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyNavEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyNavEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyNavEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseWheelEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheelEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseWheelEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheelEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSpinDown(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpinDown")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSpinDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpinDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSpinUp(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpinUp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSpinUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSpinUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetSpinDownEnabled(value: /* enabled */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinDownEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetSpinDownEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinDownEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetSpinUpEnabled(value: /* enabled */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinUpEnabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetSpinUpEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSpinUpEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinDown(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDown")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSpinDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinDownEl(value: IElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDownEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpinDownEl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDownEl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinDownEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDownEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpinDownEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDownEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinUp(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinUp")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSpinUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinUpEl(value: IElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinUpEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpinUpEl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinUpEl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinUpEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinUpEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpinUpEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinUpEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

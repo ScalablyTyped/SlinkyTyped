@@ -352,8 +352,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait StyledComponent[InnerProps, StyleProps, Theme /* <: js.Object */]
-  extends FunctionComponent[InnerProps with StyleProps with ThemeTheme[Theme]]
-     with ComponentSelector {
+  extends ComponentSelector
+     with FunctionComponent[InnerProps with StyleProps with ThemeTheme[Theme]] {
   def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], StyleProps, Theme] = js.native
   /**
     * @desc this method is type-unsafe

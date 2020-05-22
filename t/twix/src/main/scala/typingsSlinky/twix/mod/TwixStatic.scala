@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TwixStatic extends js.Object {
-  var formatTemplate: js.UndefOr[js.Function2[/* left */ js.Any, /* right */ js.Any, _]] = js.native
+  var formatTemplate: js.UndefOr[js.Function2[/* left */ js.Any, /* right */ js.Any, _]] = js.undefined
 }
 
 object TwixStatic {
   @scala.inline
-  def apply(): TwixStatic = {
+  def apply(formatTemplate: (/* left */ js.Any, /* right */ js.Any) => _ = null): TwixStatic = {
     val __obj = js.Dynamic.literal()
+    if (formatTemplate != null) __obj.updateDynamic("formatTemplate")(js.Any.fromFunction2(formatTemplate))
     __obj.asInstanceOf[TwixStatic]
   }
-  @scala.inline
-  implicit class TwixStaticOps[Self <: TwixStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormatTemplate(value: (/* left */ js.Any, /* right */ js.Any) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatTemplate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

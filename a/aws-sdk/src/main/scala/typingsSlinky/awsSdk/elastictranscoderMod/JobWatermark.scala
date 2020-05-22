@@ -22,53 +22,16 @@ trait JobWatermark extends js.Object {
 
 object JobWatermark {
   @scala.inline
-  def apply(): JobWatermark = {
+  def apply(
+    Encryption: Encryption = null,
+    InputKey: WatermarkKey = null,
+    PresetWatermarkId: PresetWatermarkId = null
+  ): JobWatermark = {
     val __obj = js.Dynamic.literal()
+    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
+    if (InputKey != null) __obj.updateDynamic("InputKey")(InputKey.asInstanceOf[js.Any])
+    if (PresetWatermarkId != null) __obj.updateDynamic("PresetWatermarkId")(PresetWatermarkId.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobWatermark]
   }
-  @scala.inline
-  implicit class JobWatermarkOps[Self <: JobWatermark] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryption(value: Encryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputKey(value: WatermarkKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPresetWatermarkId(value: PresetWatermarkId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetWatermarkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPresetWatermarkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PresetWatermarkId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait LaunchTemplateCpuOptions extends js.Object {
 
 object LaunchTemplateCpuOptions {
   @scala.inline
-  def apply(): LaunchTemplateCpuOptions = {
+  def apply(CoreCount: js.UndefOr[Integer] = js.undefined, ThreadsPerCore: js.UndefOr[Integer] = js.undefined): LaunchTemplateCpuOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CoreCount)) __obj.updateDynamic("CoreCount")(CoreCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ThreadsPerCore)) __obj.updateDynamic("ThreadsPerCore")(ThreadsPerCore.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateCpuOptions]
   }
-  @scala.inline
-  implicit class LaunchTemplateCpuOptionsOps[Self <: LaunchTemplateCpuOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoreCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoreCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoreCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoreCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadsPerCore(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreadsPerCore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadsPerCore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreadsPerCore")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MSFIDOSignatureAssertion extends MSAssertion {
-  val signature: MSFIDOSignature = js.native
+  val signature: MSFIDOSignature
 }
 
 object MSFIDOSignatureAssertion {
@@ -16,19 +15,5 @@ object MSFIDOSignatureAssertion {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MSFIDOSignatureAssertion]
   }
-  @scala.inline
-  implicit class MSFIDOSignatureAssertionOps[Self <: MSFIDOSignatureAssertion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSignature(value: MSFIDOSignature): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

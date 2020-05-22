@@ -5,36 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A list of Word conversion settings. */
-@js.native
 trait WordSettings extends js.Object {
-  var heading: js.UndefOr[WordHeadingDetection] = js.native
+  var heading: js.UndefOr[WordHeadingDetection] = js.undefined
 }
 
 object WordSettings {
   @scala.inline
-  def apply(): WordSettings = {
+  def apply(heading: WordHeadingDetection = null): WordSettings = {
     val __obj = js.Dynamic.literal()
+    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
     __obj.asInstanceOf[WordSettings]
   }
-  @scala.inline
-  implicit class WordSettingsOps[Self <: WordSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeading(value: WordHeadingDetection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

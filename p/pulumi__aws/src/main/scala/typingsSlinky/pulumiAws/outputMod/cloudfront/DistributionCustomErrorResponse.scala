@@ -31,59 +31,17 @@ trait DistributionCustomErrorResponse extends js.Object {
 
 object DistributionCustomErrorResponse {
   @scala.inline
-  def apply(errorCode: Double): DistributionCustomErrorResponse = {
+  def apply(
+    errorCode: Double,
+    errorCachingMinTtl: js.UndefOr[Double] = js.undefined,
+    responseCode: js.UndefOr[Double] = js.undefined,
+    responsePagePath: String = null
+  ): DistributionCustomErrorResponse = {
     val __obj = js.Dynamic.literal(errorCode = errorCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorCachingMinTtl)) __obj.updateDynamic("errorCachingMinTtl")(errorCachingMinTtl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(responseCode)) __obj.updateDynamic("responseCode")(responseCode.get.asInstanceOf[js.Any])
+    if (responsePagePath != null) __obj.updateDynamic("responsePagePath")(responsePagePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionCustomErrorResponse]
   }
-  @scala.inline
-  implicit class DistributionCustomErrorResponseOps[Self <: DistributionCustomErrorResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorCachingMinTtl(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCachingMinTtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCachingMinTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCachingMinTtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsePagePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsePagePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsePagePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsePagePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -27,10 +27,17 @@ object getBucketNotificationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetBucketNotificationInput) = this()
+    /* CompleteClass */
+    override val input: GetBucketNotificationInput = js.native
     val middlewareStack: MiddlewareStack[GetBucketNotificationInput, GetBucketNotificationOutput, Blob] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: S3ResolvedConfiguration
+    ): Handler[GetBucketNotificationInput, GetBucketNotificationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[GetBucketNotificationInput, GetBucketNotificationOutput] = js.native
   }

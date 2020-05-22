@@ -18,35 +18,10 @@ trait DeleteCacheClusterMessage extends js.Object {
 
 object DeleteCacheClusterMessage {
   @scala.inline
-  def apply(CacheClusterId: String): DeleteCacheClusterMessage = {
+  def apply(CacheClusterId: String, FinalSnapshotIdentifier: String = null): DeleteCacheClusterMessage = {
     val __obj = js.Dynamic.literal(CacheClusterId = CacheClusterId.asInstanceOf[js.Any])
+    if (FinalSnapshotIdentifier != null) __obj.updateDynamic("FinalSnapshotIdentifier")(FinalSnapshotIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCacheClusterMessage]
   }
-  @scala.inline
-  implicit class DeleteCacheClusterMessageOps[Self <: DeleteCacheClusterMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheClusterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFinalSnapshotIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalSnapshotIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalSnapshotIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalSnapshotIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

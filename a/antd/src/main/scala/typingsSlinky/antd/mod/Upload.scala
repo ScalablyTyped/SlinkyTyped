@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("antd", "Upload")
 @js.native
 class Upload protected () extends default {
-  def this(props: UploadProps) = this()
+  def this(props: UploadProps[_]) = this()
 }
 
 /* static members */
@@ -21,6 +21,6 @@ class Upload protected () extends default {
 object Upload extends js.Object {
   var Dragger: Instantiable0[typingsSlinky.antd.draggerMod.default] = js.native
   var defaultProps: Accept = js.native
-  def getDerivedStateFromProps(nextProps: UploadProps): FileList | Null = js.native
+  def getDerivedStateFromProps(nextProps: UploadProps[_]): FileList | Null = js.native
 }
 

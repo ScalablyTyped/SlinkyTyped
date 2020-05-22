@@ -1,6 +1,5 @@
 package typingsSlinky.streamMock
 
-import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.streamMod.WritableOptions
 import typingsSlinky.streamMock.iwritablemockMod.IWritableMock
 import scala.scalajs.js
@@ -16,11 +15,6 @@ object objectWritableMockMod extends js.Object {
     var data_ObjectWritableMock: js.Array[_] = js.native
     @JSName("flatData")
     var flatData_ObjectWritableMock: js.Array[_] = js.native
-    def _write(
-      chunk: js.Any,
-      _encoding: BufferEncoding,
-      callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
-    ): Unit = js.native
   }
   
   @js.native

@@ -25,53 +25,12 @@ trait SchemaFieldFilter extends js.Object {
 
 object SchemaFieldFilter {
   @scala.inline
-  def apply(): SchemaFieldFilter = {
+  def apply(field: SchemaFieldReference = null, op: String = null, value: SchemaValue = null): SchemaFieldFilter = {
     val __obj = js.Dynamic.literal()
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (op != null) __obj.updateDynamic("op")(op.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFieldFilter]
   }
-  @scala.inline
-  implicit class SchemaFieldFilterOps[Self <: SchemaFieldFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: SchemaFieldReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("op")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: SchemaValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

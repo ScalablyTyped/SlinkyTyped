@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AuthProvider extends js.Object {
   /**
     * The list of JWT
@@ -21,19 +20,19 @@ trait AuthProvider extends js.Object {
     * audiences: bookstore_android.apps.googleusercontent.com,
     * bookstore_web.apps.googleusercontent.com
     */
-  var audiences: js.UndefOr[String] = js.native
+  var audiences: js.UndefOr[String] = js.undefined
   /**
     * Redirect URL if JWT token is required but no present or is expired.
     * Implement authorizationUrl of securityDefinitions in OpenAPI spec.
     */
-  var authorizationUrl: js.UndefOr[String] = js.native
+  var authorizationUrl: js.UndefOr[String] = js.undefined
   /**
     * The unique identifier of the auth provider. It will be referred to by
     * `AuthRequirement.provider_id`.
     *
     * Example: "bookstore_auth".
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Identifies the principal that issued the JWT. See
     * https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1
@@ -42,7 +41,7 @@ trait AuthProvider extends js.Object {
     * Example: https://securetoken.google.com
     * Example: 1234567-compute@developer.gserviceaccount.com
     */
-  var issuer: js.UndefOr[String] = js.native
+  var issuer: js.UndefOr[String] = js.undefined
   /**
     * URL of the provider's public key set to validate signature of the JWT. See
     * [OpenID Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata).
@@ -54,82 +53,25 @@ trait AuthProvider extends js.Object {
     *
     * Example: https://www.googleapis.com/oauth2/v1/certs
     */
-  var jwksUri: js.UndefOr[String] = js.native
+  var jwksUri: js.UndefOr[String] = js.undefined
 }
 
 object AuthProvider {
   @scala.inline
-  def apply(): AuthProvider = {
+  def apply(
+    audiences: String = null,
+    authorizationUrl: String = null,
+    id: String = null,
+    issuer: String = null,
+    jwksUri: String = null
+  ): AuthProvider = {
     val __obj = js.Dynamic.literal()
+    if (audiences != null) __obj.updateDynamic("audiences")(audiences.asInstanceOf[js.Any])
+    if (authorizationUrl != null) __obj.updateDynamic("authorizationUrl")(authorizationUrl.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
+    if (jwksUri != null) __obj.updateDynamic("jwksUri")(jwksUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthProvider]
   }
-  @scala.inline
-  implicit class AuthProviderOps[Self <: AuthProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudiences(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudiences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthorizationUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthorizationUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssuer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssuer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJwksUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwksUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwksUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwksUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

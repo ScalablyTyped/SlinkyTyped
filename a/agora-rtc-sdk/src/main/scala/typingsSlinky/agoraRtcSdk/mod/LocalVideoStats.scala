@@ -9,196 +9,68 @@ import scala.scalajs.js.annotation._
   *
   * If {@link getLocalVideoStats} is called successfully, the {@link LocalVideoStatsMap} interface provides the UID and {@link LocalVideoStats} of the local user.
   */
-@js.native
 trait LocalVideoStats extends js.Object {
   /** Frame rate of the captured video, in fps. */
-  val CaptureFrameRate: js.UndefOr[String] = js.native
+  val CaptureFrameRate: js.UndefOr[String] = js.undefined
   /** Height (pixels) of the captured video. */
-  val CaptureResolutionHeight: js.UndefOr[String] = js.native
+  val CaptureResolutionHeight: js.UndefOr[String] = js.undefined
   /** Width (pixels) of the captured video. */
-  val CaptureResolutionWidth: js.UndefOr[String] = js.native
+  val CaptureResolutionWidth: js.UndefOr[String] = js.undefined
   /** Delay from capturing to encoding the local video, in ms. */
-  val EncodeDelay: js.UndefOr[String] = js.native
+  val EncodeDelay: js.UndefOr[String] = js.undefined
   /**
     * Whether the video is muted or not.
     *
     * - "1": Muted.
     * - "0": Unmuted.
     */
-  val MuteState: js.UndefOr[String] = js.native
+  val MuteState: js.UndefOr[String] = js.undefined
   /** Bitrate of the sent video, in Kbps. */
-  val SendBitrate: js.UndefOr[String] = js.native
+  val SendBitrate: js.UndefOr[String] = js.undefined
   /** Frame rate of the sent video, in fps. */
-  val SendFrameRate: js.UndefOr[String] = js.native
+  val SendFrameRate: js.UndefOr[String] = js.undefined
   /** Height of the sent video, in pixels. */
-  val SendResolutionHeight: js.UndefOr[String] = js.native
+  val SendResolutionHeight: js.UndefOr[String] = js.undefined
   /** Width of the sent video, in pixels. */
-  val SendResolutionWidth: js.UndefOr[String] = js.native
+  val SendResolutionWidth: js.UndefOr[String] = js.undefined
   /** Bitrate of the local video set in [[setVideoProfile]]. */
-  val TargetSendBitrate: js.UndefOr[String] = js.native
+  val TargetSendBitrate: js.UndefOr[String] = js.undefined
   /** Total duration of the published video, in seconds. */
-  val TotalDuration: js.UndefOr[String] = js.native
+  val TotalDuration: js.UndefOr[String] = js.undefined
   /** Total freeze time of the encoded video, in seconds. */
-  val TotalFreezeTime: js.UndefOr[String] = js.native
+  val TotalFreezeTime: js.UndefOr[String] = js.undefined
 }
 
 object LocalVideoStats {
   @scala.inline
-  def apply(): LocalVideoStats = {
+  def apply(
+    CaptureFrameRate: String = null,
+    CaptureResolutionHeight: String = null,
+    CaptureResolutionWidth: String = null,
+    EncodeDelay: String = null,
+    MuteState: String = null,
+    SendBitrate: String = null,
+    SendFrameRate: String = null,
+    SendResolutionHeight: String = null,
+    SendResolutionWidth: String = null,
+    TargetSendBitrate: String = null,
+    TotalDuration: String = null,
+    TotalFreezeTime: String = null
+  ): LocalVideoStats = {
     val __obj = js.Dynamic.literal()
+    if (CaptureFrameRate != null) __obj.updateDynamic("CaptureFrameRate")(CaptureFrameRate.asInstanceOf[js.Any])
+    if (CaptureResolutionHeight != null) __obj.updateDynamic("CaptureResolutionHeight")(CaptureResolutionHeight.asInstanceOf[js.Any])
+    if (CaptureResolutionWidth != null) __obj.updateDynamic("CaptureResolutionWidth")(CaptureResolutionWidth.asInstanceOf[js.Any])
+    if (EncodeDelay != null) __obj.updateDynamic("EncodeDelay")(EncodeDelay.asInstanceOf[js.Any])
+    if (MuteState != null) __obj.updateDynamic("MuteState")(MuteState.asInstanceOf[js.Any])
+    if (SendBitrate != null) __obj.updateDynamic("SendBitrate")(SendBitrate.asInstanceOf[js.Any])
+    if (SendFrameRate != null) __obj.updateDynamic("SendFrameRate")(SendFrameRate.asInstanceOf[js.Any])
+    if (SendResolutionHeight != null) __obj.updateDynamic("SendResolutionHeight")(SendResolutionHeight.asInstanceOf[js.Any])
+    if (SendResolutionWidth != null) __obj.updateDynamic("SendResolutionWidth")(SendResolutionWidth.asInstanceOf[js.Any])
+    if (TargetSendBitrate != null) __obj.updateDynamic("TargetSendBitrate")(TargetSendBitrate.asInstanceOf[js.Any])
+    if (TotalDuration != null) __obj.updateDynamic("TotalDuration")(TotalDuration.asInstanceOf[js.Any])
+    if (TotalFreezeTime != null) __obj.updateDynamic("TotalFreezeTime")(TotalFreezeTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalVideoStats]
   }
-  @scala.inline
-  implicit class LocalVideoStatsOps[Self <: LocalVideoStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptureFrameRate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptureFrameRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureFrameRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptureFrameRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptureResolutionHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptureResolutionHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureResolutionHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptureResolutionHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptureResolutionWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptureResolutionWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureResolutionWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptureResolutionWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodeDelay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodeDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodeDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodeDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMuteState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MuteState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMuteState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MuteState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendBitrate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendFrameRate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendFrameRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendFrameRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendFrameRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendResolutionHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendResolutionHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendResolutionHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendResolutionHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendResolutionWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendResolutionWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendResolutionWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendResolutionWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSendBitrate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSendBitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSendBitrate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSendBitrate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalFreezeTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalFreezeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalFreezeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalFreezeTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

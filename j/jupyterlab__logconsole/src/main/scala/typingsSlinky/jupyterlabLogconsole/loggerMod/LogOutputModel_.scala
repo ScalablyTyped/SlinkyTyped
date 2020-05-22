@@ -1,9 +1,12 @@
 package typingsSlinky.jupyterlabLogconsole.loggerMod
 
+import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.ExecutionCount
 import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.IOutput
 import typingsSlinky.jupyterlabLogconsole.loggerMod.LogOutputModel.IOptions
 import typingsSlinky.jupyterlabRendermime.mod.OutputModel
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IMimeModel.ISetDataOptions
+import typingsSlinky.phosphorCoreutils.jsonMod.ReadonlyJSONObject
+import typingsSlinky.phosphorSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +22,49 @@ class LogOutputModel_ protected ()
     * @param options - The model initialization options.
     */
   def this(options: IOptions) = this()
+  /**
+    * A signal emitted when the output model changes.
+    */
+  /* InferMemberOverrides */
+  override val changed: ISignal[this.type, Unit] = js.native
+  /**
+    * The data associated with the model.
+    */
+  /* CompleteClass */
+  override val data: ReadonlyJSONObject = js.native
+  /**
+    * The execution count of the model.
+    */
+  /* InferMemberOverrides */
+  override val executionCount: ExecutionCount = js.native
+  /**
+    * Log level
+    */
+  /* CompleteClass */
+  override val level: FullLogLevel = js.native
+  /**
+    * The metadata associated with the model.
+    *
+    * Among others, it can include an attribute named `fragment`
+    * that stores a URI fragment identifier for the MIME resource.
+    */
+  /* CompleteClass */
+  override val metadata: ReadonlyJSONObject = js.native
+  /**
+    * Date & time when output is logged.
+    */
+  /* CompleteClass */
+  override val timestamp: js.Date = js.native
+  /**
+    * Whether the data in the model is trusted.
+    */
+  /* CompleteClass */
+  override val trusted: Boolean = js.native
+  /**
+    * The output type.
+    */
+  /* InferMemberOverrides */
+  override val `type`: String = js.native
   /**
     * Dispose of the resources used by the output model.
     */

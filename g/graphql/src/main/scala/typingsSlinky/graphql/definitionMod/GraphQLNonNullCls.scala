@@ -8,5 +8,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLNonNullCls protected () extends GraphQLNonNull[GraphQLNullableType] {
   def this(`type`: GraphQLNullableType) = this()
+  /* CompleteClass */
+  override val ofType: GraphQLNullableType = js.native
+  /* CompleteClass */
+  override def inspect(): String = js.native
+  /* CompleteClass */
+  override def toJSON(): String = js.native
 }
 

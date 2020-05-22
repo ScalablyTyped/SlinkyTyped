@@ -7,26 +7,25 @@ import scala.scalajs.js.annotation._
 /**
   * 用户授权结果，参考 type Scope
   */
-@js.native
 trait AuthSetting extends js.Object {
   @JSName("scope.address")
-  var scopeDotaddress: Boolean = js.native
+  var scopeDotaddress: Boolean
   @JSName("scope.camera")
-  var scopeDotcamera: Boolean = js.native
+  var scopeDotcamera: Boolean
   @JSName("scope.invoice")
-  var scopeDotinvoice: Boolean = js.native
+  var scopeDotinvoice: Boolean
   @JSName("scope.invoiceTitle")
-  var scopeDotinvoiceTitle: Boolean = js.native
+  var scopeDotinvoiceTitle: Boolean
   @JSName("scope.record")
-  var scopeDotrecord: Boolean = js.native
+  var scopeDotrecord: Boolean
   @JSName("scope.userInfo")
-  var scopeDotuserInfo: Boolean = js.native
+  var scopeDotuserInfo: Boolean
   @JSName("scope.userLocation")
-  var scopeDotuserLocation: Boolean = js.native
+  var scopeDotuserLocation: Boolean
   @JSName("scope.werun")
-  var scopeDotwerun: Boolean = js.native
+  var scopeDotwerun: Boolean
   @JSName("scope.writePhotosAlbum")
-  var scopeDotwritePhotosAlbum: Boolean = js.native
+  var scopeDotwritePhotosAlbum: Boolean
 }
 
 object AuthSetting {
@@ -54,67 +53,5 @@ object AuthSetting {
     __obj.updateDynamic("scope.writePhotosAlbum")(scopeDotwritePhotosAlbum.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthSetting]
   }
-  @scala.inline
-  implicit class AuthSettingOps[Self <: AuthSetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScopeDotaddress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotcamera(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.camera")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotinvoice(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.invoice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotinvoiceTitle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.invoiceTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotrecord(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.record")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotuserInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.userInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotuserLocation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.userLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotwerun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.werun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScopeDotwritePhotosAlbum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope.writePhotosAlbum")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

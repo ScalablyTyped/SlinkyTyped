@@ -54,125 +54,28 @@ trait SchemaEvent extends js.Object {
 
 object SchemaEvent {
   @scala.inline
-  def apply(): SchemaEvent = {
+  def apply(
+    additionalEventTypes: js.Array[String] = null,
+    eventTimeMillis: String = null,
+    fromUserDeletion: js.UndefOr[Boolean] = js.undefined,
+    move: SchemaMove = null,
+    permissionChanges: js.Array[SchemaPermissionChange] = null,
+    primaryEventType: String = null,
+    rename: SchemaRename = null,
+    target: SchemaTarget = null,
+    user: SchemaUser = null
+  ): SchemaEvent = {
     val __obj = js.Dynamic.literal()
+    if (additionalEventTypes != null) __obj.updateDynamic("additionalEventTypes")(additionalEventTypes.asInstanceOf[js.Any])
+    if (eventTimeMillis != null) __obj.updateDynamic("eventTimeMillis")(eventTimeMillis.asInstanceOf[js.Any])
+    if (!js.isUndefined(fromUserDeletion)) __obj.updateDynamic("fromUserDeletion")(fromUserDeletion.get.asInstanceOf[js.Any])
+    if (move != null) __obj.updateDynamic("move")(move.asInstanceOf[js.Any])
+    if (permissionChanges != null) __obj.updateDynamic("permissionChanges")(permissionChanges.asInstanceOf[js.Any])
+    if (primaryEventType != null) __obj.updateDynamic("primaryEventType")(primaryEventType.asInstanceOf[js.Any])
+    if (rename != null) __obj.updateDynamic("rename")(rename.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEvent]
   }
-  @scala.inline
-  implicit class SchemaEventOps[Self <: SchemaEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalEventTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalEventTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalEventTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalEventTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTimeMillis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTimeMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromUserDeletion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromUserDeletion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromUserDeletion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromUserDeletion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMove(value: SchemaMove): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionChanges(value: js.Array[SchemaPermissionChange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionChanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionChanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionChanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryEventType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryEventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryEventType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRename(value: SchemaRename): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: SchemaTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: SchemaUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,44 +1,33 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`coded-value`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.inherited
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CodedValueDomainProperties extends DomainProperties {
   /**
     * An array of the coded values in the domain. See the object specification table below for the properties each item in the array should contain.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-CodedValueDomain.html#codedValues)
     */
-  var codedValues: js.UndefOr[js.Array[CodedValueDomainCodedValues]] = js.native
+  var codedValues: js.UndefOr[js.Array[CodedValueDomainCodedValues]] = js.undefined
 }
 
 object CodedValueDomainProperties {
   @scala.inline
-  def apply(): CodedValueDomainProperties = {
+  def apply(
+    codedValues: js.Array[CodedValueDomainCodedValues] = null,
+    name: String = null,
+    `type`: range | `coded-value` | inherited = null
+  ): CodedValueDomainProperties = {
     val __obj = js.Dynamic.literal()
+    if (codedValues != null) __obj.updateDynamic("codedValues")(codedValues.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodedValueDomainProperties]
   }
-  @scala.inline
-  implicit class CodedValueDomainPropertiesOps[Self <: CodedValueDomainProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodedValues(value: js.Array[CodedValueDomainCodedValues]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codedValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodedValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codedValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

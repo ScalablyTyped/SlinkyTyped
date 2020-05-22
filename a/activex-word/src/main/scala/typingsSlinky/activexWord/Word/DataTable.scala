@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataTable extends js.Object {
-  val Application: js.Any = js.native
-  var AutoScaleFont: js.Any = js.native
-  val Border: ChartBorder = js.native
-  val Creator: Double = js.native
-  val Font: ChartFont = js.native
-  val Format: ChartFormat = js.native
-  var HasBorderHorizontal: Boolean = js.native
-  var HasBorderOutline: Boolean = js.native
-  var HasBorderVertical: Boolean = js.native
-  val Parent: js.Any = js.native
-  var ShowLegendKey: Boolean = js.native
+  val Application: js.Any
+  var AutoScaleFont: js.Any
+  val Border: ChartBorder
+  val Creator: Double
+  val Font: ChartFont
+  val Format: ChartFormat
+  var HasBorderHorizontal: Boolean
+  var HasBorderOutline: Boolean
+  var HasBorderVertical: Boolean
+  val Parent: js.Any
+  var ShowLegendKey: Boolean
   @JSName("Word.DataTable_typekey")
-  var WordDotDataTable_typekey: DataTable = js.native
-  def Delete(): Unit = js.native
-  def Select(): Unit = js.native
+  var WordDotDataTable_typekey: DataTable
+  def Delete(): Unit
+  def Select(): Unit
 }
 
 object DataTable {
@@ -45,97 +44,5 @@ object DataTable {
     __obj.updateDynamic("Word.DataTable_typekey")(WordDotDataTable_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataTable]
   }
-  @scala.inline
-  implicit class DataTableOps[Self <: DataTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoScaleFont(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScaleFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: ChartBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFont(value: ChartFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasBorderHorizontal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasBorderHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasBorderOutline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasBorderOutline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasBorderVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasBorderVertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withShowLegendKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowLegendKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotDataTable_typekey(value: DataTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.DataTable_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

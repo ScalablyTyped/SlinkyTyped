@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResourceQuotasRemaining extends js.Object {
-  var dailyQuotaTokensRemaining: js.UndefOr[Double] = js.native
-  var hourlyQuotaTokensRemaining: js.UndefOr[Double] = js.native
+  var dailyQuotaTokensRemaining: js.UndefOr[Double] = js.undefined
+  var hourlyQuotaTokensRemaining: js.UndefOr[Double] = js.undefined
 }
 
 object ResourceQuotasRemaining {
   @scala.inline
-  def apply(): ResourceQuotasRemaining = {
+  def apply(
+    dailyQuotaTokensRemaining: js.UndefOr[Double] = js.undefined,
+    hourlyQuotaTokensRemaining: js.UndefOr[Double] = js.undefined
+  ): ResourceQuotasRemaining = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dailyQuotaTokensRemaining)) __obj.updateDynamic("dailyQuotaTokensRemaining")(dailyQuotaTokensRemaining.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hourlyQuotaTokensRemaining)) __obj.updateDynamic("hourlyQuotaTokensRemaining")(hourlyQuotaTokensRemaining.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceQuotasRemaining]
   }
-  @scala.inline
-  implicit class ResourceQuotasRemainingOps[Self <: ResourceQuotasRemaining] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDailyQuotaTokensRemaining(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dailyQuotaTokensRemaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDailyQuotaTokensRemaining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dailyQuotaTokensRemaining")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHourlyQuotaTokensRemaining(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourlyQuotaTokensRemaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourlyQuotaTokensRemaining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourlyQuotaTokensRemaining")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

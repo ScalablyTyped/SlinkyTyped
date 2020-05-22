@@ -5,65 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseLegendItem extends js.Object {
-  /** A legend item marker. */
-  var marker: js.UndefOr[Fill] = js.native
-  /** The text that the legend item displays. */
-  var text: js.UndefOr[String] = js.native
-  /** Indicates and specifies whether the legend item is visible. */
-  var visible: js.UndefOr[Boolean] = js.native
+  /** @name BaseLegendItem.marker */
+  var marker: js.UndefOr[Fill] = js.undefined
+  /** @name BaseLegendItem.text */
+  var text: js.UndefOr[String] = js.undefined
+  /** @name BaseLegendItem.visible */
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object BaseLegendItem {
   @scala.inline
-  def apply(): BaseLegendItem = {
+  def apply(marker: Fill = null, text: String = null, visible: js.UndefOr[Boolean] = js.undefined): BaseLegendItem = {
     val __obj = js.Dynamic.literal()
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseLegendItem]
   }
-  @scala.inline
-  implicit class BaseLegendItemOps[Self <: BaseLegendItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: Fill): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

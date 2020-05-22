@@ -7,59 +7,58 @@ import scala.scalajs.js.annotation._
 /**
   * A rectangular area on a two-dimensional map projection.
   */
-@js.native
 trait MapRect extends js.Object {
   /**
     * The maximum x-axis value of a rectangle.
     */
-  var maxX: Double = js.native
+  var maxX: Double
   /**
     * The maximum y-axis value of a rectangle.
     */
-  var maxY: Double = js.native
+  var maxY: Double
   /**
     * The mid-point along the x-axis of a rectangle.
     */
-  var midX: Double = js.native
+  var midX: Double
   /**
     * The mid-point along the y-axis of a rectangle.
     */
-  var midY: Double = js.native
+  var midY: Double
   /**
     * The minimum x-axis value of a rectangle.
     */
-  var minX: Double = js.native
+  var minX: Double
   /**
     * The minimum y-axis value of a rectangle.
     */
-  var minY: Double = js.native
+  var minY: Double
   /**
     * The origin point of a rectangle.
     */
-  var origin: MapPoint = js.native
+  var origin: MapPoint
   /**
     * The width and height of a rectangle, starting from the origin point.
     */
-  var size: MapSize = js.native
+  var size: MapSize
   /**
     * Returns a copy of a map rectangle.
     */
-  def copy(): MapRect = js.native
+  def copy(): MapRect
   /**
     * Indicates whether two map rectangles are equal.
     *
     * @param anotherRect The map rectangle to equate to.
     */
-  def equals(anotherRect: MapRect): Boolean = js.native
+  def equals(anotherRect: MapRect): Boolean
   /**
     * @param scaleFactor The scale factor.
     * @param scaleCenter The center map point for scaling.
     */
-  def scale(scaleFactor: Double, scaleCenter: MapPoint): MapRect = js.native
+  def scale(scaleFactor: Double, scaleCenter: MapPoint): MapRect
   /**
     * Returns the region that corresponds to a map rectangle.
     */
-  def toCoordinateRegion(): CoordinateRegion = js.native
+  def toCoordinateRegion(): CoordinateRegion
 }
 
 object MapRect {
@@ -81,85 +80,5 @@ object MapRect {
     val __obj = js.Dynamic.literal(copy = js.Any.fromFunction0(copy), equals = js.Any.fromFunction1(equals), maxX = maxX.asInstanceOf[js.Any], maxY = maxY.asInstanceOf[js.Any], midX = midX.asInstanceOf[js.Any], midY = midY.asInstanceOf[js.Any], minX = minX.asInstanceOf[js.Any], minY = minY.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], scale = js.Any.fromFunction2(scale), size = size.asInstanceOf[js.Any], toCoordinateRegion = js.Any.fromFunction0(toCoordinateRegion))
     __obj.asInstanceOf[MapRect]
   }
-  @scala.inline
-  implicit class MapRectOps[Self <: MapRect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: () => MapRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEquals(value: MapRect => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMaxX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMidX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMidY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: MapPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(value: (Double, MapPoint) => MapRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSize(value: MapSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToCoordinateRegion(value: () => CoordinateRegion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toCoordinateRegion")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -26,53 +26,16 @@ trait ValidateConfigurationSettingsMessage extends js.Object {
 
 object ValidateConfigurationSettingsMessage {
   @scala.inline
-  def apply(ApplicationName: ApplicationName, OptionSettings: ConfigurationOptionSettingsList): ValidateConfigurationSettingsMessage = {
+  def apply(
+    ApplicationName: ApplicationName,
+    OptionSettings: ConfigurationOptionSettingsList,
+    EnvironmentName: EnvironmentName = null,
+    TemplateName: ConfigurationTemplateName = null
+  ): ValidateConfigurationSettingsMessage = {
     val __obj = js.Dynamic.literal(ApplicationName = ApplicationName.asInstanceOf[js.Any], OptionSettings = OptionSettings.asInstanceOf[js.Any])
+    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
+    if (TemplateName != null) __obj.updateDynamic("TemplateName")(TemplateName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidateConfigurationSettingsMessage]
   }
-  @scala.inline
-  implicit class ValidateConfigurationSettingsMessageOps[Self <: ValidateConfigurationSettingsMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionSettings(value: ConfigurationOptionSettingsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnvironmentName(value: EnvironmentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: ConfigurationTemplateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

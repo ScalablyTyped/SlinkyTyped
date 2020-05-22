@@ -14,29 +14,10 @@ trait CreateSolutionVersionResponse extends js.Object {
 
 object CreateSolutionVersionResponse {
   @scala.inline
-  def apply(): CreateSolutionVersionResponse = {
+  def apply(solutionVersionArn: Arn = null): CreateSolutionVersionResponse = {
     val __obj = js.Dynamic.literal()
+    if (solutionVersionArn != null) __obj.updateDynamic("solutionVersionArn")(solutionVersionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSolutionVersionResponse]
   }
-  @scala.inline
-  implicit class CreateSolutionVersionResponseOps[Self <: CreateSolutionVersionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSolutionVersionArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionVersionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSolutionVersionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionVersionArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * The options passed to Model.destroy in addition to truncate
   */
-@js.native
 trait TruncateOptions
   extends LoggingOptions
      with SearchPathOptions {
@@ -17,52 +16,33 @@ trait TruncateOptions
     *
     * Defaults to false;
     */
-  var cascade: js.UndefOr[Boolean] = js.native
+  var cascade: js.UndefOr[Boolean] = js.undefined
   /**
     * Delete instead of setting deletedAt to current timestamp (only applicable if paranoid is enabled)
     *
     * Defaults to false;
     */
-  var force: js.UndefOr[Boolean] = js.native
+  var force: js.UndefOr[Boolean] = js.undefined
 }
 
 object TruncateOptions {
   @scala.inline
-  def apply(): TruncateOptions = {
+  def apply(
+    benchmark: js.UndefOr[Boolean] = js.undefined,
+    cascade: js.UndefOr[Boolean] = js.undefined,
+    force: js.UndefOr[Boolean] = js.undefined,
+    logging: Boolean | js.Function = null,
+    searchPath: String = null,
+    transaction: Transaction = null
+  ): TruncateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cascade)) __obj.updateDynamic("cascade")(cascade.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[TruncateOptions]
   }
-  @scala.inline
-  implicit class TruncateOptionsOps[Self <: TruncateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCascade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCascade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

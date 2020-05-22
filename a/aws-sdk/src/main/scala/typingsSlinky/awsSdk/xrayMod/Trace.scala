@@ -22,53 +22,16 @@ trait Trace extends js.Object {
 
 object Trace {
   @scala.inline
-  def apply(): Trace = {
+  def apply(
+    Duration: js.UndefOr[NullableDouble] = js.undefined,
+    Id: TraceId = null,
+    Segments: SegmentList = null
+  ): Trace = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Duration)) __obj.updateDynamic("Duration")(Duration.get.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (Segments != null) __obj.updateDynamic("Segments")(Segments.asInstanceOf[js.Any])
     __obj.asInstanceOf[Trace]
   }
-  @scala.inline
-  implicit class TraceOps[Self <: Trace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDuration(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: TraceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegments(value: SegmentList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Segments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Segments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

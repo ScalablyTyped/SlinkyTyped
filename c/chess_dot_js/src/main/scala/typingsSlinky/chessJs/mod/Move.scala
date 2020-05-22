@@ -2,83 +2,50 @@ package typingsSlinky.chessJs.mod
 
 import typingsSlinky.chessJs.chessJsStrings.b
 import typingsSlinky.chessJs.chessJsStrings.k
+import typingsSlinky.chessJs.chessJsStrings.p
 import typingsSlinky.chessJs.chessJsStrings.w
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Move extends ShortMove {
   /**
     * If an enemy piece was captured this is their type
     */
-  var captured: js.UndefOr[Exclude[PieceType, k]] = js.native
+  var captured: js.UndefOr[Exclude[PieceType, k]] = js.undefined
   /**
     * The color of the piece that moved
     * - "b" for Black
     * - "w" for White
     */
-  var color: b | w = js.native
+  var color: b | w
   /** Flags indicating what occurred, combined into one string */
-  var flags: String = js.native
+  var flags: String
   /**
     * The type of the piece that moved
     */
-  var piece: PieceType = js.native
+  var piece: PieceType
   /** The Standard Algebraic Notation (SAN) representation of the move */
-  var san: String = js.native
+  var san: String
 }
 
 object Move {
   @scala.inline
-  def apply(color: b | w, flags: String, from: Square, piece: PieceType, san: String, to: Square): Move = {
+  def apply(
+    color: b | w,
+    flags: String,
+    from: Square,
+    piece: PieceType,
+    san: String,
+    to: Square,
+    captured: Exclude[PieceType, k] = null,
+    promotion: Exclude[PieceType, p] = null
+  ): Move = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], piece = piece.asInstanceOf[js.Any], san = san.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
+    if (captured != null) __obj.updateDynamic("captured")(captured.asInstanceOf[js.Any])
+    if (promotion != null) __obj.updateDynamic("promotion")(promotion.asInstanceOf[js.Any])
     __obj.asInstanceOf[Move]
   }
-  @scala.inline
-  implicit class MoveOps[Self <: Move] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: b | w): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPiece(value: PieceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("piece")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("san")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaptured(value: Exclude[PieceType, k]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captured")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptured: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captured")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

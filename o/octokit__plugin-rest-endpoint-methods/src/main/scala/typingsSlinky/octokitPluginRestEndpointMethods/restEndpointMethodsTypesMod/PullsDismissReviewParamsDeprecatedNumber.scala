@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PullsDismissReviewParamsDeprecatedNumber extends js.Object {
   /**
     * The message for the pull request review dismissal
     */
-  var message: String = js.native
+  var message: String
   /**
     * @deprecated "number" parameter renamed to "pull_number"
     */
-  var number: Double = js.native
-  var owner: String = js.native
-  var repo: String = js.native
-  var review_id: Double = js.native
+  var number: Double
+  var owner: String
+  var repo: String
+  var review_id: Double
 }
 
 object PullsDismissReviewParamsDeprecatedNumber {
@@ -25,43 +24,5 @@ object PullsDismissReviewParamsDeprecatedNumber {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any], review_id = review_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullsDismissReviewParamsDeprecatedNumber]
   }
-  @scala.inline
-  implicit class PullsDismissReviewParamsDeprecatedNumberOps[Self <: PullsDismissReviewParamsDeprecatedNumber] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReview_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("review_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

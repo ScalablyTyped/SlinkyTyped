@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IResourceIndexerFactory extends js.Object {
-  def createResourceIndexer(projectRoot: Uri): ResourceIndexer = js.native
+  def createResourceIndexer(projectRoot: Uri): ResourceIndexer
 }
 
 object IResourceIndexerFactory {
@@ -16,19 +15,5 @@ object IResourceIndexerFactory {
     val __obj = js.Dynamic.literal(createResourceIndexer = js.Any.fromFunction1(createResourceIndexer))
     __obj.asInstanceOf[IResourceIndexerFactory]
   }
-  @scala.inline
-  implicit class IResourceIndexerFactoryOps[Self <: IResourceIndexerFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateResourceIndexer(value: Uri => ResourceIndexer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createResourceIndexer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

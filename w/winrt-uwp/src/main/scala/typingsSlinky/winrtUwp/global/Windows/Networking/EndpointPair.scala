@@ -22,5 +22,17 @@ class EndpointPair protected ()
     remoteHostName: typingsSlinky.winrtUwp.Windows.Networking.HostName,
     remoteServiceName: String
   ) = this()
+  /** Get or set the local hostname for the EndpointPair object. */
+  /* CompleteClass */
+  override var localHostName: typingsSlinky.winrtUwp.Windows.Networking.HostName = js.native
+  /** Get or set the local service name for the EndpointPair object. */
+  /* CompleteClass */
+  override var localServiceName: String = js.native
+  /** Get or set the remote hostname for the EndpointPair object. */
+  /* CompleteClass */
+  override var remoteHostName: typingsSlinky.winrtUwp.Windows.Networking.HostName = js.native
+  /** Get or set the remote service name for the EndpointPair object. */
+  /* CompleteClass */
+  override var remoteServiceName: String = js.native
 }
 

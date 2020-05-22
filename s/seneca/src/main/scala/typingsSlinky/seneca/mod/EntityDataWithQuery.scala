@@ -5,51 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EntityDataWithQuery
   extends /* plugin_name */ StringDictionary[js.Any] {
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   @JSName("sort$")
-  var sort$: js.UndefOr[js.Any] = js.native
+  var sort$: js.UndefOr[js.Any] = js.undefined
 }
 
 object EntityDataWithQuery {
   @scala.inline
-  def apply(): EntityDataWithQuery = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    id: String = null,
+    sort$: js.Any = null
+  ): EntityDataWithQuery = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (sort$ != null) __obj.updateDynamic("sort$")(sort$.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityDataWithQuery]
   }
-  @scala.inline
-  implicit class EntityDataWithQueryOps[Self <: EntityDataWithQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort$(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort$")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort$: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort$")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

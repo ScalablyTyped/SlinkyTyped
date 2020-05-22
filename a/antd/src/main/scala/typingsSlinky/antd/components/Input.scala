@@ -20,12 +20,16 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.`additions text`
+import typingsSlinky.antd.antdStrings.`datetime-local`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
 import typingsSlinky.antd.antdStrings.assertive
 import typingsSlinky.antd.antdStrings.both
+import typingsSlinky.antd.antdStrings.button
+import typingsSlinky.antd.antdStrings.checkbox
+import typingsSlinky.antd.antdStrings.color
 import typingsSlinky.antd.antdStrings.copy
 import typingsSlinky.antd.antdStrings.date
 import typingsSlinky.antd.antdStrings.decimal
@@ -33,9 +37,12 @@ import typingsSlinky.antd.antdStrings.descending
 import typingsSlinky.antd.antdStrings.dialog
 import typingsSlinky.antd.antdStrings.email
 import typingsSlinky.antd.antdStrings.execute
+import typingsSlinky.antd.antdStrings.file
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
+import typingsSlinky.antd.antdStrings.hidden
 import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.image
 import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
@@ -43,30 +50,39 @@ import typingsSlinky.antd.antdStrings.listbox
 import typingsSlinky.antd.antdStrings.location
 import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
+import typingsSlinky.antd.antdStrings.month
 import typingsSlinky.antd.antdStrings.move
 import typingsSlinky.antd.antdStrings.no
 import typingsSlinky.antd.antdStrings.none
+import typingsSlinky.antd.antdStrings.number
 import typingsSlinky.antd.antdStrings.numeric
 import typingsSlinky.antd.antdStrings.off
 import typingsSlinky.antd.antdStrings.on
 import typingsSlinky.antd.antdStrings.other
 import typingsSlinky.antd.antdStrings.page
+import typingsSlinky.antd.antdStrings.password
 import typingsSlinky.antd.antdStrings.polite
 import typingsSlinky.antd.antdStrings.popup
+import typingsSlinky.antd.antdStrings.radio
+import typingsSlinky.antd.antdStrings.range
 import typingsSlinky.antd.antdStrings.removals
+import typingsSlinky.antd.antdStrings.reset
 import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
+import typingsSlinky.antd.antdStrings.submit
 import typingsSlinky.antd.antdStrings.tel
 import typingsSlinky.antd.antdStrings.text
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.antdStrings.week
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.inputInputMod.InputProps
 import typingsSlinky.antd.inputMod.default
 import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -500,7 +516,12 @@ object Input {
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     @scala.inline
-    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    def `type`(
+      value: LiteralUnion[
+          button | checkbox | color | date | `datetime-local` | email | file | hidden | image | month | number | password | radio | range | reset | search | submit | tel | text | time | url | week, 
+          String
+        ]
+    ): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     @scala.inline

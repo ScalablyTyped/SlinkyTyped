@@ -4,67 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefinedName extends js.Object {
   /** Name comment */
-  var Comment: js.UndefOr[String] = js.native
+  var Comment: js.UndefOr[String] = js.undefined
   /** Name */
-  var Name: String = js.native
+  var Name: String
   /** Reference */
-  var Ref: String = js.native
+  var Ref: String
   /** Scope (undefined for workbook scope) */
-  var Sheet: js.UndefOr[Double] = js.native
+  var Sheet: js.UndefOr[Double] = js.undefined
 }
 
 object DefinedName {
   @scala.inline
-  def apply(Name: String, Ref: String): DefinedName = {
+  def apply(Name: String, Ref: String, Comment: String = null, Sheet: js.UndefOr[Double] = js.undefined): DefinedName = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Ref = Ref.asInstanceOf[js.Any])
+    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
+    if (!js.isUndefined(Sheet)) __obj.updateDynamic("Sheet")(Sheet.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefinedName]
   }
-  @scala.inline
-  implicit class DefinedNameOps[Self <: DefinedName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheet(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sheet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait DescribeProjectRequest extends js.Object {
 
 object DescribeProjectRequest {
   @scala.inline
-  def apply(projectId: ProjectId): DescribeProjectRequest = {
+  def apply(projectId: ProjectId, syncFromResources: js.UndefOr[Boolean] = js.undefined): DescribeProjectRequest = {
     val __obj = js.Dynamic.literal(projectId = projectId.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncFromResources)) __obj.updateDynamic("syncFromResources")(syncFromResources.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProjectRequest]
   }
-  @scala.inline
-  implicit class DescribeProjectRequestOps[Self <: DescribeProjectRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProjectId(value: ProjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSyncFromResources(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncFromResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncFromResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncFromResources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

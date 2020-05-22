@@ -22,53 +22,16 @@ trait Filters extends js.Object {
 
 object Filters {
   @scala.inline
-  def apply(): Filters = {
+  def apply(
+    extendedKeyUsage: ExtendedKeyUsageFilterList = null,
+    keyTypes: KeyAlgorithmList = null,
+    keyUsage: KeyUsageFilterList = null
+  ): Filters = {
     val __obj = js.Dynamic.literal()
+    if (extendedKeyUsage != null) __obj.updateDynamic("extendedKeyUsage")(extendedKeyUsage.asInstanceOf[js.Any])
+    if (keyTypes != null) __obj.updateDynamic("keyTypes")(keyTypes.asInstanceOf[js.Any])
+    if (keyUsage != null) __obj.updateDynamic("keyUsage")(keyUsage.asInstanceOf[js.Any])
     __obj.asInstanceOf[Filters]
   }
-  @scala.inline
-  implicit class FiltersOps[Self <: Filters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtendedKeyUsage(value: ExtendedKeyUsageFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedKeyUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendedKeyUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedKeyUsage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyTypes(value: KeyAlgorithmList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyUsage(value: KeyUsageFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyUsage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

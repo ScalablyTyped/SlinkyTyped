@@ -5,133 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IInvoiceLineItemRetrievalOptions extends IListOptions {
-  var coupon: js.UndefOr[String] = js.native
+  var coupon: js.UndefOr[String] = js.undefined
   /**
     * In the case of upcoming invoices, the customer of the upcoming invoice is required. In other cases it is ignored.
     */
-  var customer: js.UndefOr[String] = js.native
+  var customer: js.UndefOr[String] = js.undefined
   /**
     * In the case of upcoming invoices, the subscription of the upcoming invoice is optional. In other cases it is ignored.
     */
-  var subscription: js.UndefOr[String] = js.native
-  var subscription_plan: js.UndefOr[String] = js.native
-  var subscription_prorate: js.UndefOr[Boolean] = js.native
-  var subscription_proration_date: js.UndefOr[Double] = js.native
-  var subscription_quantity: js.UndefOr[Double] = js.native
-  var subscription_trial_end: js.UndefOr[Double] = js.native
+  var subscription: js.UndefOr[String] = js.undefined
+  var subscription_plan: js.UndefOr[String] = js.undefined
+  var subscription_prorate: js.UndefOr[Boolean] = js.undefined
+  var subscription_proration_date: js.UndefOr[Double] = js.undefined
+  var subscription_quantity: js.UndefOr[Double] = js.undefined
+  var subscription_trial_end: js.UndefOr[Double] = js.undefined
 }
 
 object IInvoiceLineItemRetrievalOptions {
   @scala.inline
-  def apply(): IInvoiceLineItemRetrievalOptions = {
+  def apply(
+    coupon: String = null,
+    customer: String = null,
+    ending_before: String = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    starting_after: String = null,
+    subscription: String = null,
+    subscription_plan: String = null,
+    subscription_prorate: js.UndefOr[Boolean] = js.undefined,
+    subscription_proration_date: js.UndefOr[Double] = js.undefined,
+    subscription_quantity: js.UndefOr[Double] = js.undefined,
+    subscription_trial_end: js.UndefOr[Double] = js.undefined
+  ): IInvoiceLineItemRetrievalOptions = {
     val __obj = js.Dynamic.literal()
+    if (coupon != null) __obj.updateDynamic("coupon")(coupon.asInstanceOf[js.Any])
+    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
+    if (ending_before != null) __obj.updateDynamic("ending_before")(ending_before.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (starting_after != null) __obj.updateDynamic("starting_after")(starting_after.asInstanceOf[js.Any])
+    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
+    if (subscription_plan != null) __obj.updateDynamic("subscription_plan")(subscription_plan.asInstanceOf[js.Any])
+    if (!js.isUndefined(subscription_prorate)) __obj.updateDynamic("subscription_prorate")(subscription_prorate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subscription_proration_date)) __obj.updateDynamic("subscription_proration_date")(subscription_proration_date.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subscription_quantity)) __obj.updateDynamic("subscription_quantity")(subscription_quantity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(subscription_trial_end)) __obj.updateDynamic("subscription_trial_end")(subscription_trial_end.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInvoiceLineItemRetrievalOptions]
   }
-  @scala.inline
-  implicit class IInvoiceLineItemRetrievalOptionsOps[Self <: IInvoiceLineItemRetrievalOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoupon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coupon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoupon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coupon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription_plan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_plan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription_plan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_plan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription_prorate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_prorate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription_prorate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_prorate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription_proration_date(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_proration_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription_proration_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_proration_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription_quantity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription_quantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_quantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription_trial_end(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_trial_end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription_trial_end: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_trial_end")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

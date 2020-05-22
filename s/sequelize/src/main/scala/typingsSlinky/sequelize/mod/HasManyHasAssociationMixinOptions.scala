@@ -8,6 +8,5 @@ import scala.scalajs.js.annotation._
   * The options for the hasAssociation mixin of the hasMany association.
   * @see HasManyHasAssociationMixin
   */
-@js.native
 trait HasManyHasAssociationMixinOptions extends js.Object
 

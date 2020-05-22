@@ -14,29 +14,10 @@ trait UpdateMLModelOutput extends js.Object {
 
 object UpdateMLModelOutput {
   @scala.inline
-  def apply(): UpdateMLModelOutput = {
+  def apply(MLModelId: EntityId = null): UpdateMLModelOutput = {
     val __obj = js.Dynamic.literal()
+    if (MLModelId != null) __obj.updateDynamic("MLModelId")(MLModelId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMLModelOutput]
   }
-  @scala.inline
-  implicit class UpdateMLModelOutputOps[Self <: UpdateMLModelOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMLModelId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMLModelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

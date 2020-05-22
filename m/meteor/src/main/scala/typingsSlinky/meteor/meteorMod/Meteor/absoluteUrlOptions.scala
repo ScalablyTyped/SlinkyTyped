@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait absoluteUrlOptions extends js.Object {
-  var replaceLocalhost: js.UndefOr[Boolean] = js.native
-  var rootUrl: js.UndefOr[String] = js.native
-  var secure: js.UndefOr[Boolean] = js.native
+  var replaceLocalhost: js.UndefOr[Boolean] = js.undefined
+  var rootUrl: js.UndefOr[String] = js.undefined
+  var secure: js.UndefOr[Boolean] = js.undefined
 }
 
 object absoluteUrlOptions {
   @scala.inline
-  def apply(): absoluteUrlOptions = {
+  def apply(
+    replaceLocalhost: js.UndefOr[Boolean] = js.undefined,
+    rootUrl: String = null,
+    secure: js.UndefOr[Boolean] = js.undefined
+  ): absoluteUrlOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(replaceLocalhost)) __obj.updateDynamic("replaceLocalhost")(replaceLocalhost.get.asInstanceOf[js.Any])
+    if (rootUrl != null) __obj.updateDynamic("rootUrl")(rootUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[absoluteUrlOptions]
   }
-  @scala.inline
-  implicit class absoluteUrlOptionsOps[Self <: absoluteUrlOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplaceLocalhost(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceLocalhost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceLocalhost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceLocalhost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

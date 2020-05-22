@@ -4,6 +4,7 @@ import typingsSlinky.angularCore.mod.Injector
 import typingsSlinky.angularCore.mod.NgModuleFactory
 import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.OnDestroy
+import typingsSlinky.angularCore.mod.SimpleChanges
 import typingsSlinky.angularCore.mod.Type
 import typingsSlinky.angularCore.mod.ViewContainerRef
 import scala.scalajs.js
@@ -23,5 +24,20 @@ class NgComponentOutlet protected ()
   var ngComponentOutletContent: js.Array[js.Array[_]] = js.native
   var ngComponentOutletInjector: Injector = js.native
   var ngComponentOutletNgModuleFactory: NgModuleFactory[_] = js.native
+  /**
+    * A callback method that is invoked immediately after the
+    * default change detector has checked data-bound properties
+    * if at least one has changed, and before the view and content
+    * children are checked.
+    * @param changes The changed properties.
+    */
+  /* CompleteClass */
+  override def ngOnChanges(changes: SimpleChanges): Unit = js.native
+  /**
+    * A callback method that performs custom clean-up, invoked immediately
+    * after a directive, pipe, or service instance is destroyed.
+    */
+  /* CompleteClass */
+  override def ngOnDestroy(): Unit = js.native
 }
 

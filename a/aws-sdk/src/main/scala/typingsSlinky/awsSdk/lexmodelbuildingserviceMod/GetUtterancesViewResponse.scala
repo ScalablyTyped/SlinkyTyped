@@ -18,41 +18,11 @@ trait GetUtterancesViewResponse extends js.Object {
 
 object GetUtterancesViewResponse {
   @scala.inline
-  def apply(): GetUtterancesViewResponse = {
+  def apply(botName: BotName = null, utterances: ListsOfUtterances = null): GetUtterancesViewResponse = {
     val __obj = js.Dynamic.literal()
+    if (botName != null) __obj.updateDynamic("botName")(botName.asInstanceOf[js.Any])
+    if (utterances != null) __obj.updateDynamic("utterances")(utterances.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUtterancesViewResponse]
   }
-  @scala.inline
-  implicit class GetUtterancesViewResponseOps[Self <: GetUtterancesViewResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBotName(value: BotName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("botName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBotName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("botName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtterances(value: ListsOfUtterances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utterances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtterances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utterances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

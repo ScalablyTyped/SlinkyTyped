@@ -437,6 +437,11 @@ object ButtonToolbar {
   }
   
   def withProps[T](p: ButtonToolbarProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ButtonToolbarProps]))
+  }
   implicit def make[T](companion: ButtonToolbar.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

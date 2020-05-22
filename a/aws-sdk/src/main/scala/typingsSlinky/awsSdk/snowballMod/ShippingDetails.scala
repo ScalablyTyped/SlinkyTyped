@@ -22,53 +22,16 @@ trait ShippingDetails extends js.Object {
 
 object ShippingDetails {
   @scala.inline
-  def apply(): ShippingDetails = {
+  def apply(
+    InboundShipment: Shipment = null,
+    OutboundShipment: Shipment = null,
+    ShippingOption: ShippingOption = null
+  ): ShippingDetails = {
     val __obj = js.Dynamic.literal()
+    if (InboundShipment != null) __obj.updateDynamic("InboundShipment")(InboundShipment.asInstanceOf[js.Any])
+    if (OutboundShipment != null) __obj.updateDynamic("OutboundShipment")(OutboundShipment.asInstanceOf[js.Any])
+    if (ShippingOption != null) __obj.updateDynamic("ShippingOption")(ShippingOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShippingDetails]
   }
-  @scala.inline
-  implicit class ShippingDetailsOps[Self <: ShippingDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInboundShipment(value: Shipment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InboundShipment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInboundShipment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InboundShipment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutboundShipment(value: Shipment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutboundShipment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutboundShipment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutboundShipment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingOption(value: ShippingOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShippingOption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

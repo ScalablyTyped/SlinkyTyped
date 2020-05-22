@@ -12,7 +12,7 @@ object AlertDialogDescription {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HTMLProps[HTMLDivElement]): SharedBuilder_HTMLProps74936298[LegacyRef[js.Any]] = new SharedBuilder_HTMLProps74936298[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: AlertDialogDescription.type): SharedBuilder_HTMLProps74936298[LegacyRef[js.Any]] = new SharedBuilder_HTMLProps74936298[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: HTMLProps[HTMLDivElement]): SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object] = new SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AlertDialogDescription.type): SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object] = new SharedBuilder_HTMLProps74936298[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

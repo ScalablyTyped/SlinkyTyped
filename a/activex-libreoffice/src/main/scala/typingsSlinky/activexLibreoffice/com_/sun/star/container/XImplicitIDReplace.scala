@@ -7,10 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to replace contents in a collection by an implicit (unique) ID: */
-@js.native
 trait XImplicitIDReplace extends XInterface {
   /** replaces the content which is specified by its implicit (unique) ID with a new content. */
-  def replaceByUniqueID(ID: String, aNewElement: js.Any): Unit = js.native
+  def replaceByUniqueID(ID: String, aNewElement: js.Any): Unit
 }
 
 object XImplicitIDReplace {
@@ -24,19 +23,5 @@ object XImplicitIDReplace {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), replaceByUniqueID = js.Any.fromFunction2(replaceByUniqueID))
     __obj.asInstanceOf[XImplicitIDReplace]
   }
-  @scala.inline
-  implicit class XImplicitIDReplaceOps[Self <: XImplicitIDReplace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplaceByUniqueID(value: (String, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceByUniqueID")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

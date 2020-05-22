@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fontfamily extends js.Object {
   /**
     * To set the font color. 'gray' | '#666699' | ...
     */
-  var `font-color`: js.UndefOr[js.Any] = js.native
+  var `font-color`: js.UndefOr[js.Any] = js.undefined
   /**
     * To set the font family. 'Arial' | 'Georgia' | ...
     */
-  var `font-family`: js.UndefOr[String] = js.native
+  var `font-family`: js.UndefOr[String] = js.undefined
   /**
     * To set the font size. 30 | 24 | 16 | ...
     */
-  var `font-size`: js.UndefOr[Double] = js.native
+  var `font-size`: js.UndefOr[Double] = js.undefined
   /**
     * To set the font style. 'normal' | 'italic'
     */
-  var `font-style`: js.UndefOr[String] = js.native
+  var `font-style`: js.UndefOr[String] = js.undefined
   /**
     * To set the font weight. 'normal' | 'bold'
     */
-  var `font-weight`: js.UndefOr[String] = js.native
+  var `font-weight`: js.UndefOr[String] = js.undefined
   /**
     * To set the visibility of the object. true | false
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object Fontfamily {
   @scala.inline
-  def apply(): Fontfamily = {
+  def apply(
+    `font-color`: js.Any = null,
+    `font-family`: String = null,
+    `font-size`: js.UndefOr[Double] = js.undefined,
+    `font-style`: String = null,
+    `font-weight`: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): Fontfamily = {
     val __obj = js.Dynamic.literal()
+    if (`font-color` != null) __obj.updateDynamic("font-color")(`font-color`.asInstanceOf[js.Any])
+    if (`font-family` != null) __obj.updateDynamic("font-family")(`font-family`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`font-size`)) __obj.updateDynamic("font-size")(`font-size`.get.asInstanceOf[js.Any])
+    if (`font-style` != null) __obj.updateDynamic("font-style")(`font-style`.asInstanceOf[js.Any])
+    if (`font-weight` != null) __obj.updateDynamic("font-weight")(`font-weight`.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fontfamily]
   }
-  @scala.inline
-  implicit class FontfamilyOps[Self <: Fontfamily] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withFont-color`(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-color`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-family`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-family`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-size`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-size`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-style`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-style`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFont-weight`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFont-weight`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

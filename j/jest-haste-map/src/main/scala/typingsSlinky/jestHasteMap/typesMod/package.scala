@@ -23,6 +23,7 @@ package object typesMod {
     java.lang.String, 
     js.UndefOr[java.lang.String | scala.Null]
   ]
+  type HasteRegExp = js.RegExp | (js.Function1[/* str */ java.lang.String, scala.Boolean])
   type IgnoreMatcher = js.Function1[/* item */ java.lang.String, scala.Boolean]
   type Mapper = js.Function1[/* item */ java.lang.String, js.Array[java.lang.String] | scala.Null]
   type MockData = typingsSlinky.std.Map[java.lang.String, typingsSlinky.jestTypes.configMod.Path]

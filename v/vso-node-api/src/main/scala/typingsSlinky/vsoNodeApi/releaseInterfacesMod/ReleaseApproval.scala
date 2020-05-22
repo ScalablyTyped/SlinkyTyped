@@ -5,78 +5,77 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReleaseApproval extends js.Object {
   /**
     * Gets or sets the type of approval.
     */
-  var approvalType: ApprovalType = js.native
+  var approvalType: ApprovalType
   /**
     * Gets the identity who approved.
     */
-  var approvedBy: IdentityRef = js.native
+  var approvedBy: IdentityRef
   /**
     * Gets or sets the identity who should approve.
     */
-  var approver: IdentityRef = js.native
+  var approver: IdentityRef
   /**
     * Gets or sets attempt which specifies as which deployment attempt it belongs.
     */
-  var attempt: Double = js.native
+  var attempt: Double
   /**
     * Gets or sets comments for approval.
     */
-  var comments: String = js.native
+  var comments: String
   /**
     * Gets date on which it got created.
     */
-  var createdOn: js.Date = js.native
+  var createdOn: js.Date
   /**
     * Gets history which specifies all approvals associated with this approval.
     */
-  var history: js.Array[ReleaseApprovalHistory] = js.native
+  var history: js.Array[ReleaseApprovalHistory]
   /**
     * Gets the unique identifier of this field.
     */
-  var id: Double = js.native
+  var id: Double
   /**
     * Gets or sets as approval is automated or not.
     */
-  var isAutomated: Boolean = js.native
-  var isNotificationOn: Boolean = js.native
+  var isAutomated: Boolean
+  var isNotificationOn: Boolean
   /**
     * Gets date on which it got modified.
     */
-  var modifiedOn: js.Date = js.native
+  var modifiedOn: js.Date
   /**
     * Gets or sets rank which specifies the order of the approval. e.g. Same rank denotes parallel approval.
     */
-  var rank: Double = js.native
+  var rank: Double
   /**
     * Gets releaseReference which specifies the reference of the release to which this approval is associated.
     */
-  var release: ReleaseShallowReference = js.native
+  var release: ReleaseShallowReference
   /**
     * Gets releaseDefinitionReference which specifies the reference of the release definition to which this approval is associated.
     */
-  var releaseDefinition: ReleaseDefinitionShallowReference = js.native
+  var releaseDefinition: ReleaseDefinitionShallowReference
   /**
     * Gets releaseEnvironmentReference which specifies the reference of the release environment to which this approval is associated.
     */
-  var releaseEnvironment: ReleaseEnvironmentShallowReference = js.native
+  var releaseEnvironment: ReleaseEnvironmentShallowReference
   /**
     * Gets the revision number.
     */
-  var revision: Double = js.native
+  var revision: Double
   /**
     * Gets or sets the status of the approval.
     */
-  var status: ApprovalStatus = js.native
-  var trialNumber: Double = js.native
+  var status: ApprovalStatus
+  var trialNumber: Double
   /**
     * Gets url to access the approval.
     */
-  var url: String = js.native
+  var url: String
 }
 
 object ReleaseApproval {
@@ -105,127 +104,5 @@ object ReleaseApproval {
     val __obj = js.Dynamic.literal(approvalType = approvalType.asInstanceOf[js.Any], approvedBy = approvedBy.asInstanceOf[js.Any], approver = approver.asInstanceOf[js.Any], attempt = attempt.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], createdOn = createdOn.asInstanceOf[js.Any], history = history.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isAutomated = isAutomated.asInstanceOf[js.Any], isNotificationOn = isNotificationOn.asInstanceOf[js.Any], modifiedOn = modifiedOn.asInstanceOf[js.Any], rank = rank.asInstanceOf[js.Any], release = release.asInstanceOf[js.Any], releaseDefinition = releaseDefinition.asInstanceOf[js.Any], releaseEnvironment = releaseEnvironment.asInstanceOf[js.Any], revision = revision.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], trialNumber = trialNumber.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReleaseApproval]
   }
-  @scala.inline
-  implicit class ReleaseApprovalOps[Self <: ReleaseApproval] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApprovalType(value: ApprovalType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApprovedBy(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approvedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApprover(value: IdentityRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttempt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attempt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHistory(value: js.Array[ReleaseApprovalHistory]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsAutomated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutomated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsNotificationOn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNotificationOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModifiedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelease(value: ReleaseShallowReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseDefinition(value: ReleaseDefinitionShallowReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleaseEnvironment(value: ReleaseEnvironmentShallowReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseEnvironment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRevision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ApprovalStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrialNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

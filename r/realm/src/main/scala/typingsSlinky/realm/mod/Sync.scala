@@ -12,7 +12,10 @@ import typingsSlinky.realm.Realm.Sync.RealmWatchPredicate
 import typingsSlinky.realm.Realm.Sync.SSLConfiguration
 import typingsSlinky.realm.Realm.Sync.SerializedTokenUser
 import typingsSlinky.realm.Realm.Sync.SerializedUser
+import typingsSlinky.realm.Realm.Sync.SubscriptionNotificationCallback
+import typingsSlinky.realm.Realm.Sync.SubscriptionState
 import typingsSlinky.realm.anon.Provider
+import typingsSlinky.realm.realmStrings.adminToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +64,17 @@ object Sync extends js.Object {
   
   @js.native
   class AdminCredentials ()
-    extends typingsSlinky.realm.Realm.Sync.AdminCredentials
+    extends typingsSlinky.realm.Realm.Sync.AdminCredentials {
+    /* CompleteClass */
+    override val identityProvider: String = js.native
+    /* CompleteClass */
+    @JSName("identityProvider")
+    override var identityProvider_AdminCredentials: adminToken = js.native
+    /* CompleteClass */
+    override val token: String = js.native
+    /* CompleteClass */
+    override val userInfo: StringDictionary[js.Any] = js.native
+  }
   
   /**
     * AuthError
@@ -69,23 +82,64 @@ object Sync extends js.Object {
     */
   @js.native
   class AuthError ()
-    extends typingsSlinky.realm.Realm.Sync.AuthError
+    extends typingsSlinky.realm.Realm.Sync.AuthError {
+    /* CompleteClass */
+    override val code: Double = js.native
+    /* CompleteClass */
+    override val `type`: String = js.native
+  }
   
   @js.native
   class Credentials ()
-    extends typingsSlinky.realm.Realm.Sync.Credentials
+    extends typingsSlinky.realm.Realm.Sync.Credentials {
+    /* CompleteClass */
+    override val identityProvider: String = js.native
+    /* CompleteClass */
+    override val token: String = js.native
+    /* CompleteClass */
+    override val userInfo: StringDictionary[js.Any] = js.native
+  }
   
   @js.native
   class Permission ()
-    extends typingsSlinky.realm.Realm.Sync.Permission
+    extends typingsSlinky.realm.Realm.Sync.Permission {
+    /* CompleteClass */
+    override val id: String = js.native
+    /* CompleteClass */
+    override val path: String = js.native
+    /* CompleteClass */
+    override val updatedAt: js.Date = js.native
+    /* CompleteClass */
+    override val userId: String = js.native
+  }
   
   @js.native
   class PermissionChange ()
-    extends typingsSlinky.realm.Realm.Sync.PermissionChange
+    extends typingsSlinky.realm.Realm.Sync.PermissionChange {
+    /* CompleteClass */
+    override var createdAt: js.Date = js.native
+    /* CompleteClass */
+    override var id: String = js.native
+    /* CompleteClass */
+    override var realmUrl: String = js.native
+    /* CompleteClass */
+    override var updatedAt: js.Date = js.native
+    /* CompleteClass */
+    override var userId: String = js.native
+  }
   
   @js.native
   class PermissionOffer ()
-    extends typingsSlinky.realm.Realm.Sync.PermissionOffer
+    extends typingsSlinky.realm.Realm.Sync.PermissionOffer {
+    /* CompleteClass */
+    override var createdAt: js.Date = js.native
+    /* CompleteClass */
+    override var id: String = js.native
+    /* CompleteClass */
+    override var realmUrl: String = js.native
+    /* CompleteClass */
+    override var updatedAt: js.Date = js.native
+  }
   
   /**
     * Session
@@ -101,7 +155,20 @@ object Sync extends js.Object {
     */
   @js.native
   class Subscription ()
-    extends typingsSlinky.realm.Realm.Sync.Subscription
+    extends typingsSlinky.realm.Realm.Sync.Subscription {
+    /* CompleteClass */
+    override val error: String = js.native
+    /* CompleteClass */
+    override val state: SubscriptionState = js.native
+    /* CompleteClass */
+    override def addListener(subscriptionCallback: SubscriptionNotificationCallback): Unit = js.native
+    /* CompleteClass */
+    override def removeAllListeners(): Unit = js.native
+    /* CompleteClass */
+    override def removeListener(subscriptionCallback: SubscriptionNotificationCallback): Unit = js.native
+    /* CompleteClass */
+    override def unsubscribe(): Unit = js.native
+  }
   
   /**
     * User

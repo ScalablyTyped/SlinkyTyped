@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommitRequest extends js.Object {
   /** The type of commit to perform. Defaults to `TRANSACTIONAL`. */
-  var mode: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[String] = js.undefined
   /**
     * The mutations to perform.
     *
@@ -23,64 +22,23 @@ trait CommitRequest extends js.Object {
     * When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
     * entity.
     */
-  var mutations: js.UndefOr[js.Array[Mutation]] = js.native
+  var mutations: js.UndefOr[js.Array[Mutation]] = js.undefined
   /**
     * The identifier of the transaction associated with the commit. A
     * transaction identifier is returned by a call to
     * Datastore.BeginTransaction.
     */
-  var transaction: js.UndefOr[String] = js.native
+  var transaction: js.UndefOr[String] = js.undefined
 }
 
 object CommitRequest {
   @scala.inline
-  def apply(): CommitRequest = {
+  def apply(mode: String = null, mutations: js.Array[Mutation] = null, transaction: String = null): CommitRequest = {
     val __obj = js.Dynamic.literal()
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (mutations != null) __obj.updateDynamic("mutations")(mutations.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommitRequest]
   }
-  @scala.inline
-  implicit class CommitRequestOps[Self <: CommitRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutations(value: js.Array[Mutation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

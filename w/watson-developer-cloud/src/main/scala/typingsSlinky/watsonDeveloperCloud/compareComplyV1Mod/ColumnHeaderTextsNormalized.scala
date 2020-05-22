@@ -5,37 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** If you provide customization input, the normalized version of the column header texts according to the customization; otherwise, the same value as `column_header_texts`. */
-@js.native
 trait ColumnHeaderTextsNormalized extends js.Object {
   /** The normalized version of a column header text. */
-  var text_normalized: js.UndefOr[String] = js.native
+  var text_normalized: js.UndefOr[String] = js.undefined
 }
 
 object ColumnHeaderTextsNormalized {
   @scala.inline
-  def apply(): ColumnHeaderTextsNormalized = {
+  def apply(text_normalized: String = null): ColumnHeaderTextsNormalized = {
     val __obj = js.Dynamic.literal()
+    if (text_normalized != null) __obj.updateDynamic("text_normalized")(text_normalized.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnHeaderTextsNormalized]
   }
-  @scala.inline
-  implicit class ColumnHeaderTextsNormalizedOps[Self <: ColumnHeaderTextsNormalized] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText_normalized(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text_normalized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText_normalized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text_normalized")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

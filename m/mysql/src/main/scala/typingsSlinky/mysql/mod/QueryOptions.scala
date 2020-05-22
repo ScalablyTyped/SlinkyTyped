@@ -1,28 +1,26 @@
 package typingsSlinky.mysql.mod
 
-import typingsSlinky.mysql.anon.UntypedFieldInfotypestrin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryOptions extends js.Object {
   /**
     * Either a boolean or string. If true, tables will be nested objects. If string (e.g. '_'), tables will be
     * nested as tableName_fieldName
     */
-  var nestTables: js.UndefOr[js.Any] = js.native
+  var nestTables: js.UndefOr[js.Any] = js.undefined
   /**
     * The SQL for the query
     */
-  var sql: String = js.native
+  var sql: String
   /**
     * Every operation takes an optional inactivity timeout option. This allows you to specify appropriate timeouts for
     * operations. It is important to note that these timeouts are not part of the MySQL protocol, and rather timeout
     * operations through the client. This means that when a timeout is reached, the connection it occurred on will be
     * destroyed and no further operations can be performed.
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /**
     * Determines if column values should be converted to native JavaScript types. It is not recommended (and may go away / change in the future)
     * to disable type casting, but you can currently do so on either the connection or query level. (Default: true)
@@ -43,86 +41,28 @@ trait QueryOptions extends js.Object {
     *
     * You can find which field function you need to use by looking at: RowDataPacket.prototype._typeCast
     */
-  var typeCast: js.UndefOr[TypeCast] = js.native
+  var typeCast: js.UndefOr[TypeCast] = js.undefined
   /**
     * Values for template query
     */
-  var values: js.UndefOr[js.Any] = js.native
+  var values: js.UndefOr[js.Any] = js.undefined
 }
 
 object QueryOptions {
   @scala.inline
-  def apply(sql: String): QueryOptions = {
+  def apply(
+    sql: String,
+    nestTables: js.Any = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    typeCast: TypeCast = null,
+    values: js.Any = null
+  ): QueryOptions = {
     val __obj = js.Dynamic.literal(sql = sql.asInstanceOf[js.Any])
+    if (nestTables != null) __obj.updateDynamic("nestTables")(nestTables.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (typeCast != null) __obj.updateDynamic("typeCast")(typeCast.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryOptions]
   }
-  @scala.inline
-  implicit class QueryOptionsOps[Self <: QueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSql(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNestTables(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNestTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestTables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeCastFunction2(value: (/* field */ UntypedFieldInfotypestrin, /* next */ js.Function0[Unit]) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeCast")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTypeCast(value: TypeCast): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeCast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeCast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeCast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

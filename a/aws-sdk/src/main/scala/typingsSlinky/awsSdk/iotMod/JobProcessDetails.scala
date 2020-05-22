@@ -46,125 +46,28 @@ trait JobProcessDetails extends js.Object {
 
 object JobProcessDetails {
   @scala.inline
-  def apply(): JobProcessDetails = {
+  def apply(
+    numberOfCanceledThings: js.UndefOr[CanceledThings] = js.undefined,
+    numberOfFailedThings: js.UndefOr[FailedThings] = js.undefined,
+    numberOfInProgressThings: js.UndefOr[InProgressThings] = js.undefined,
+    numberOfQueuedThings: js.UndefOr[QueuedThings] = js.undefined,
+    numberOfRejectedThings: js.UndefOr[RejectedThings] = js.undefined,
+    numberOfRemovedThings: js.UndefOr[RemovedThings] = js.undefined,
+    numberOfSucceededThings: js.UndefOr[SucceededThings] = js.undefined,
+    numberOfTimedOutThings: js.UndefOr[TimedOutThings] = js.undefined,
+    processingTargets: ProcessingTargetNameList = null
+  ): JobProcessDetails = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(numberOfCanceledThings)) __obj.updateDynamic("numberOfCanceledThings")(numberOfCanceledThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfFailedThings)) __obj.updateDynamic("numberOfFailedThings")(numberOfFailedThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfInProgressThings)) __obj.updateDynamic("numberOfInProgressThings")(numberOfInProgressThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfQueuedThings)) __obj.updateDynamic("numberOfQueuedThings")(numberOfQueuedThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfRejectedThings)) __obj.updateDynamic("numberOfRejectedThings")(numberOfRejectedThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfRemovedThings)) __obj.updateDynamic("numberOfRemovedThings")(numberOfRemovedThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfSucceededThings)) __obj.updateDynamic("numberOfSucceededThings")(numberOfSucceededThings.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfTimedOutThings)) __obj.updateDynamic("numberOfTimedOutThings")(numberOfTimedOutThings.get.asInstanceOf[js.Any])
+    if (processingTargets != null) __obj.updateDynamic("processingTargets")(processingTargets.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobProcessDetails]
   }
-  @scala.inline
-  implicit class JobProcessDetailsOps[Self <: JobProcessDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumberOfCanceledThings(value: CanceledThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfCanceledThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfCanceledThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfCanceledThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfFailedThings(value: FailedThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfFailedThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfFailedThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfFailedThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfInProgressThings(value: InProgressThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfInProgressThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfInProgressThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfInProgressThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfQueuedThings(value: QueuedThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfQueuedThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfQueuedThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfQueuedThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfRejectedThings(value: RejectedThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRejectedThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfRejectedThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRejectedThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfRemovedThings(value: RemovedThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRemovedThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfRemovedThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfRemovedThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfSucceededThings(value: SucceededThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSucceededThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfSucceededThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSucceededThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfTimedOutThings(value: TimedOutThings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfTimedOutThings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfTimedOutThings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfTimedOutThings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingTargets(value: ProcessingTargetNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessingTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingTargets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

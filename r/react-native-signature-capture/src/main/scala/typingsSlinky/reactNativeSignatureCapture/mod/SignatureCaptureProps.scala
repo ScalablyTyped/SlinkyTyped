@@ -1,174 +1,218 @@
 package typingsSlinky.reactNativeSignatureCapture.mod
 
+import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.mod.AccessibilityActionInfo
+import typingsSlinky.reactNative.mod.AccessibilityRole
+import typingsSlinky.reactNative.mod.AccessibilityState
+import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.Insets
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NativeTouchEvent
+import typingsSlinky.reactNative.mod.NodeHandle
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewProps
+import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.reactNativeStrings.`box-none`
+import typingsSlinky.reactNative.reactNativeStrings.`box-only`
+import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.assertive
+import typingsSlinky.reactNative.reactNativeStrings.auto
+import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.no
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.polite
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeSignatureCapture.reactNativeSignatureCaptureStrings.landscape
 import typingsSlinky.reactNativeSignatureCapture.reactNativeSignatureCaptureStrings.portrait
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignatureCaptureProps extends ViewProps {
   /**
     * sets the max size of the image maintains aspect ratio,
     *
     * @default 500
     */
-  var maxSize: js.UndefOr[Double] = js.native
+  var maxSize: js.UndefOr[Double] = js.undefined
   /**
     * Triggered when user marks their signature on the canvas.
     * This will not be called when the user does not perform any action on canvas.
     *
     * @param event - the event when a drag is performed
     */
-  var onDragEvent: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.native
+  var onDragEvent: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.undefined
   /**
     * Triggered when saveImage() is called, which return Base64 Encoded String and image file path.
     *
     * @param params - the file path and encoded png
     */
-  var onSaveEvent: js.UndefOr[js.Function1[/* params */ SaveEventParams, Unit]] = js.native
+  var onSaveEvent: js.UndefOr[js.Function1[/* params */ SaveEventParams, Unit]] = js.undefined
   /**
     * Make this props true, if you want to save the image file in external storage.
     * Warning: Image file will be visible in gallery or any other image browsing app
     *
     * @default false
     */
-  var saveImageFileInExtStorage: js.UndefOr[Boolean] = js.native
+  var saveImageFileInExtStorage: js.UndefOr[Boolean] = js.undefined
   /**
     * If this props is made to false, it will hide the dashed border (the border is shown on iOS only).
     *
     * @default false
     */
-  var showBorder: js.UndefOr[Boolean] = js.native
+  var showBorder: js.UndefOr[Boolean] = js.undefined
   /**
     * If this props is made to true, it will display the native buttons "Save" and "Reset".
     *
     * @default false
     */
-  var showNativeButtons: js.UndefOr[Boolean] = js.native
+  var showNativeButtons: js.UndefOr[Boolean] = js.undefined
   /**
     * If this props is made to true, it will display the "x_ _ _ _ _ _ _ _ _ _ _" placeholder indicating where to sign.
     *
     * @default false
     */
-  var showTitleLabel: js.UndefOr[Boolean] = js.native
+  var showTitleLabel: js.UndefOr[Boolean] = js.undefined
   /**
     * Change the screen orientation based on boolean value
     * "portrait" or "landscape"
     */
-  var viewMode: js.UndefOr[portrait | landscape] = js.native
+  var viewMode: js.UndefOr[portrait | landscape] = js.undefined
 }
 
 object SignatureCaptureProps {
   @scala.inline
-  def apply(): SignatureCaptureProps = {
+  def apply(
+    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
+    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
+    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
+    accessibilityHint: String = null,
+    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
+    accessibilityLabel: String = null,
+    accessibilityLiveRegion: none | polite | assertive = null,
+    accessibilityRole: AccessibilityRole = null,
+    accessibilityState: AccessibilityState = null,
+    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
+    accessibilityValue: AccessibilityValue = null,
+    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
+    accessible: js.UndefOr[Boolean] = js.undefined,
+    collapsable: js.UndefOr[Boolean] = js.undefined,
+    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
+    hitSlop: Insets = null,
+    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
+    isTVSelectable: js.UndefOr[Boolean] = js.undefined,
+    maxSize: js.UndefOr[Double] = js.undefined,
+    nativeID: String = null,
+    needsOffscreenAlphaCompositing: js.UndefOr[Boolean] = js.undefined,
+    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
+    onAccessibilityEscape: () => Unit = null,
+    onAccessibilityTap: () => Unit = null,
+    onDragEvent: /* event */ js.Any => Unit = null,
+    onLayout: /* event */ LayoutChangeEvent => Unit = null,
+    onMagicTap: () => Unit = null,
+    onMoveShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onMoveShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onResponderEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderGrant: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderReject: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderRelease: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderTerminate: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onResponderTerminationRequest: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onSaveEvent: /* params */ SaveEventParams => Unit = null,
+    onStartShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onStartShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
+    onTouchCancel: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchEndCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    onTouchStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
+    pointerEvents: `box-none` | none | `box-only` | auto = null,
+    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
+    renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.undefined,
+    saveImageFileInExtStorage: js.UndefOr[Boolean] = js.undefined,
+    shouldRasterizeIOS: js.UndefOr[Boolean] = js.undefined,
+    showBorder: js.UndefOr[Boolean] = js.undefined,
+    showNativeButtons: js.UndefOr[Boolean] = js.undefined,
+    showTitleLabel: js.UndefOr[Boolean] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    testID: String = null,
+    tvParallaxMagnification: js.UndefOr[Double] = js.undefined,
+    tvParallaxProperties: TVParallaxProperties = null,
+    tvParallaxShiftDistanceX: js.UndefOr[Double] = js.undefined,
+    tvParallaxShiftDistanceY: js.UndefOr[Double] = js.undefined,
+    tvParallaxTiltAngle: js.UndefOr[Double] = js.undefined,
+    viewMode: portrait | landscape = null
+  ): SignatureCaptureProps = {
     val __obj = js.Dynamic.literal()
+    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
+    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.get.asInstanceOf[js.Any])
+    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.get.asInstanceOf[js.Any])
+    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
+    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
+    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
+    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
+    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
+    if (accessibilityValue != null) __obj.updateDynamic("accessibilityValue")(accessibilityValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsable)) __obj.updateDynamic("collapsable")(collapsable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(isTVSelectable)) __obj.updateDynamic("isTVSelectable")(isTVSelectable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSize)) __obj.updateDynamic("maxSize")(maxSize.get.asInstanceOf[js.Any])
+    if (nativeID != null) __obj.updateDynamic("nativeID")(nativeID.asInstanceOf[js.Any])
+    if (!js.isUndefined(needsOffscreenAlphaCompositing)) __obj.updateDynamic("needsOffscreenAlphaCompositing")(needsOffscreenAlphaCompositing.get.asInstanceOf[js.Any])
+    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
+    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
+    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
+    if (onDragEvent != null) __obj.updateDynamic("onDragEvent")(js.Any.fromFunction1(onDragEvent))
+    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
+    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
+    if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(onMoveShouldSetResponder))
+    if (onMoveShouldSetResponderCapture != null) __obj.updateDynamic("onMoveShouldSetResponderCapture")(js.Any.fromFunction1(onMoveShouldSetResponderCapture))
+    if (onResponderEnd != null) __obj.updateDynamic("onResponderEnd")(js.Any.fromFunction1(onResponderEnd))
+    if (onResponderGrant != null) __obj.updateDynamic("onResponderGrant")(js.Any.fromFunction1(onResponderGrant))
+    if (onResponderMove != null) __obj.updateDynamic("onResponderMove")(js.Any.fromFunction1(onResponderMove))
+    if (onResponderReject != null) __obj.updateDynamic("onResponderReject")(js.Any.fromFunction1(onResponderReject))
+    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(js.Any.fromFunction1(onResponderRelease))
+    if (onResponderStart != null) __obj.updateDynamic("onResponderStart")(js.Any.fromFunction1(onResponderStart))
+    if (onResponderTerminate != null) __obj.updateDynamic("onResponderTerminate")(js.Any.fromFunction1(onResponderTerminate))
+    if (onResponderTerminationRequest != null) __obj.updateDynamic("onResponderTerminationRequest")(js.Any.fromFunction1(onResponderTerminationRequest))
+    if (onSaveEvent != null) __obj.updateDynamic("onSaveEvent")(js.Any.fromFunction1(onSaveEvent))
+    if (onStartShouldSetResponder != null) __obj.updateDynamic("onStartShouldSetResponder")(js.Any.fromFunction1(onStartShouldSetResponder))
+    if (onStartShouldSetResponderCapture != null) __obj.updateDynamic("onStartShouldSetResponderCapture")(js.Any.fromFunction1(onStartShouldSetResponderCapture))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchEndCapture != null) __obj.updateDynamic("onTouchEndCapture")(js.Any.fromFunction1(onTouchEndCapture))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderToHardwareTextureAndroid)) __obj.updateDynamic("renderToHardwareTextureAndroid")(renderToHardwareTextureAndroid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveImageFileInExtStorage)) __obj.updateDynamic("saveImageFileInExtStorage")(saveImageFileInExtStorage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldRasterizeIOS)) __obj.updateDynamic("shouldRasterizeIOS")(shouldRasterizeIOS.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showBorder)) __obj.updateDynamic("showBorder")(showBorder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showNativeButtons)) __obj.updateDynamic("showNativeButtons")(showNativeButtons.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTitleLabel)) __obj.updateDynamic("showTitleLabel")(showTitleLabel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxMagnification)) __obj.updateDynamic("tvParallaxMagnification")(tvParallaxMagnification.get.asInstanceOf[js.Any])
+    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxShiftDistanceX)) __obj.updateDynamic("tvParallaxShiftDistanceX")(tvParallaxShiftDistanceX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxShiftDistanceY)) __obj.updateDynamic("tvParallaxShiftDistanceY")(tvParallaxShiftDistanceY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tvParallaxTiltAngle)) __obj.updateDynamic("tvParallaxTiltAngle")(tvParallaxTiltAngle.get.asInstanceOf[js.Any])
+    if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureCaptureProps]
   }
-  @scala.inline
-  implicit class SignatureCapturePropsOps[Self <: SignatureCaptureProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragEvent(value: /* event */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSaveEvent(value: /* params */ SaveEventParams => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSaveEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSaveEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSaveEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaveImageFileInExtStorage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveImageFileInExtStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaveImageFileInExtStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveImageFileInExtStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowBorder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowNativeButtons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNativeButtons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowNativeButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNativeButtons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTitleLabel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTitleLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTitleLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTitleLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewMode(value: portrait | landscape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

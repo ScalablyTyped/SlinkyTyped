@@ -1,5 +1,6 @@
 package typingsSlinky.openpgp.mod
 
+import typingsSlinky.openpgp.anon.Email
 import typingsSlinky.openpgp.anon.Err
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ object wkd extends js.Object {
       * @param options.rawBytes Returns Uint8Array instead of parsed key.
       * @returns The public key.
       */
-    def lookup(): js.Promise[js.typedarray.Uint8Array | Err] = js.native
+    def lookup(options: Email): js.Promise[js.typedarray.Uint8Array | Err] = js.native
   }
   
 }

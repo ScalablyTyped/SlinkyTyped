@@ -21,41 +21,11 @@ trait SchemaGooglePrivacyDlpV2BigQueryField extends js.Object {
 
 object SchemaGooglePrivacyDlpV2BigQueryField {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2BigQueryField = {
+  def apply(field: SchemaGooglePrivacyDlpV2FieldId = null, table: SchemaGooglePrivacyDlpV2BigQueryTable = null): SchemaGooglePrivacyDlpV2BigQueryField = {
     val __obj = js.Dynamic.literal()
+    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2BigQueryField]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2BigQueryFieldOps[Self <: SchemaGooglePrivacyDlpV2BigQueryField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: SchemaGooglePrivacyDlpV2BigQueryTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

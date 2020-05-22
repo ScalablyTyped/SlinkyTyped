@@ -6,167 +6,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HubOptions extends js.Object {
   /**
     * Function to handle hub connection errors
     */
-  var errorHandler: js.UndefOr[js.Function1[/* error */ String, Unit]] = js.native
+  var errorHandler: js.UndefOr[js.Function1[/* error */ String, Unit]] = js.undefined
   /**
     * Collection of client side callbacks
     */
-  var listeners: js.UndefOr[StringDictionary[js.Function1[/* repeated */ js.Any, Unit]]] = js.native
+  var listeners: js.UndefOr[StringDictionary[js.Function1[/* repeated */ js.Any, Unit]]] = js.undefined
   /**
     * Enable/disable logging
     */
-  var logging: js.UndefOr[Boolean] = js.native
+  var logging: js.UndefOr[Boolean] = js.undefined
   /**
     * String array of server side methods which the client can call
     */
-  var methods: js.UndefOr[js.Array[String]] = js.native
+  var methods: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Object representing additional query params to be sent on connection
     */
-  var queryParams: js.UndefOr[StringDictionary[String]] = js.native
+  var queryParams: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * Sets the root path for the SignalR web service
     */
-  var rootPath: js.UndefOr[String] = js.native
+  var rootPath: js.UndefOr[String] = js.undefined
   /**
     * Function to handle hub connection state changed event
     */
-  var stateChanged: js.UndefOr[js.Function1[/* state */ StateChanged, Unit]] = js.native
+  var stateChanged: js.UndefOr[js.Function1[/* state */ StateChanged, Unit]] = js.undefined
   /**
     * Sets transport method (e.g    'longPolling'    or    ['webSockets', 'longPolling'] )
     */
-  var transport: js.UndefOr[js.Any] = js.native
+  var transport: js.UndefOr[js.Any] = js.undefined
   /**
     * Use a shared global connection or create a new one just for this hub, defaults to true
     */
-  var useSharedConnection: js.UndefOr[Boolean] = js.native
+  var useSharedConnection: js.UndefOr[Boolean] = js.undefined
 }
 
 object HubOptions {
   @scala.inline
-  def apply(): HubOptions = {
+  def apply(
+    errorHandler: /* error */ String => Unit = null,
+    listeners: StringDictionary[js.Function1[/* repeated */ js.Any, Unit]] = null,
+    logging: js.UndefOr[Boolean] = js.undefined,
+    methods: js.Array[String] = null,
+    queryParams: StringDictionary[String] = null,
+    rootPath: String = null,
+    stateChanged: /* state */ StateChanged => Unit = null,
+    transport: js.Any = null,
+    useSharedConnection: js.UndefOr[Boolean] = js.undefined
+  ): HubOptions = {
     val __obj = js.Dynamic.literal()
+    if (errorHandler != null) __obj.updateDynamic("errorHandler")(js.Any.fromFunction1(errorHandler))
+    if (listeners != null) __obj.updateDynamic("listeners")(listeners.asInstanceOf[js.Any])
+    if (!js.isUndefined(logging)) __obj.updateDynamic("logging")(logging.get.asInstanceOf[js.Any])
+    if (methods != null) __obj.updateDynamic("methods")(methods.asInstanceOf[js.Any])
+    if (queryParams != null) __obj.updateDynamic("queryParams")(queryParams.asInstanceOf[js.Any])
+    if (rootPath != null) __obj.updateDynamic("rootPath")(rootPath.asInstanceOf[js.Any])
+    if (stateChanged != null) __obj.updateDynamic("stateChanged")(js.Any.fromFunction1(stateChanged))
+    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSharedConnection)) __obj.updateDynamic("useSharedConnection")(useSharedConnection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HubOptions]
   }
-  @scala.inline
-  implicit class HubOptionsOps[Self <: HubOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorHandler(value: /* error */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutErrorHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListeners(value: StringDictionary[js.Function1[/* repeated */ js.Any, Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listeners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListeners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listeners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethods(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryParams(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateChanged(value: /* state */ StateChanged => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStateChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransport(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSharedConnection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSharedConnection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSharedConnection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSharedConnection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,6 +25,7 @@ package object optimizerConfigMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Momentum, 
     typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.MomentumOptimizerConfig
   ]
+  type OptimizerSerialization = typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.AdadeltaSerialization | typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.AdagradSerialization | typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.AdamSerialization | typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.AdamaxSerialization | typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.MomentumSerialization | typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.RMSPropSerialization | typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.SGDSerialization
   type RMSPropSerialization = typingsSlinky.tensorflowTfjsLayers.typesMod.BaseSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.RMSProp, 
     typingsSlinky.tensorflowTfjsLayers.optimizerConfigMod.RMSPropOptimizerConfig

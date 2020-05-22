@@ -6,10 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type GraphQLExecutor[TContext] = js.Function1[
-    /* requestContext */ typingsSlinky.apolloServerTypes.mod.WithRequired[
-      typingsSlinky.apolloServerTypes.mod.GraphQLRequestContext[TContext], 
-      typingsSlinky.apolloServerTypes.apolloServerTypesStrings.document | typingsSlinky.apolloServerTypes.apolloServerTypesStrings.operationName | typingsSlinky.apolloServerTypes.apolloServerTypesStrings.operation | typingsSlinky.apolloServerTypes.apolloServerTypesStrings.queryHash
-    ], 
+    /* requestContext */ typingsSlinky.apolloServerTypes.mod.GraphQLRequestContextExecutionDidStart[TContext], 
     typingsSlinky.apolloServerTypes.mod.ValueOrPromise[typingsSlinky.apolloServerTypes.mod.GraphQLExecutionResult]
   ]
   type Mutable[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
@@ -19,6 +16,7 @@ package object mod {
     /* context */ typingsSlinky.graphql.mod.ValidationContext, 
     typingsSlinky.graphql.visitorMod.ASTVisitor
   ]
+  type ValueOrPromise[T] = T | js.Promise[T]
   type VariableValues = org.scalablytyped.runtime.StringDictionary[js.Any]
   type WithRequired[T, K /* <: /* keyof T */ java.lang.String */] = T with (typingsSlinky.std.Required[typingsSlinky.std.Pick[T, K]])
 }

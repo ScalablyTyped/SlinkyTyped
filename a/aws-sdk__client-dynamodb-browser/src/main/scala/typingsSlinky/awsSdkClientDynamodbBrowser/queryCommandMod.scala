@@ -26,9 +26,16 @@ object queryCommandMod extends js.Object {
           Blob
         ] {
     def this(input: QueryInput) = this()
+    /* CompleteClass */
+    override val input: QueryInput = js.native
     val middlewareStack: MiddlewareStack[QueryInput, QueryOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[QueryInput, QueryOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[QueryInput, QueryOutput] = js.native
   }

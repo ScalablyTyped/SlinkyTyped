@@ -4,244 +4,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExplainParams extends GenericParams {
-  var _source: js.UndefOr[NameList] = js.native
-  var _sourceExclude: js.UndefOr[NameList] = js.native
-  var _sourceInclude: js.UndefOr[NameList] = js.native
-  var analyzeWildcard: js.UndefOr[Boolean] = js.native
-  var analyzer: js.UndefOr[String] = js.native
-  var defaultOperator: js.UndefOr[DefaultOperator] = js.native
-  var df: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var index: js.UndefOr[String] = js.native
-  var lenient: js.UndefOr[Boolean] = js.native
-  var lowercaseExpandedTerms: js.UndefOr[Boolean] = js.native
-  var parent: js.UndefOr[String] = js.native
-  var preference: js.UndefOr[String] = js.native
-  var q: js.UndefOr[String] = js.native
-  var routing: js.UndefOr[String] = js.native
-  var storedFields: js.UndefOr[NameList] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var _source: js.UndefOr[NameList] = js.undefined
+  var _sourceExclude: js.UndefOr[NameList] = js.undefined
+  var _sourceInclude: js.UndefOr[NameList] = js.undefined
+  var analyzeWildcard: js.UndefOr[Boolean] = js.undefined
+  var analyzer: js.UndefOr[String] = js.undefined
+  var defaultOperator: js.UndefOr[DefaultOperator] = js.undefined
+  var df: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var index: js.UndefOr[String] = js.undefined
+  var lenient: js.UndefOr[Boolean] = js.undefined
+  var lowercaseExpandedTerms: js.UndefOr[Boolean] = js.undefined
+  var parent: js.UndefOr[String] = js.undefined
+  var preference: js.UndefOr[String] = js.undefined
+  var q: js.UndefOr[String] = js.undefined
+  var routing: js.UndefOr[String] = js.undefined
+  var storedFields: js.UndefOr[NameList] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ExplainParams {
   @scala.inline
-  def apply(): ExplainParams = {
+  def apply(
+    _source: NameList = null,
+    _sourceExclude: NameList = null,
+    _sourceInclude: NameList = null,
+    analyzeWildcard: js.UndefOr[Boolean] = js.undefined,
+    analyzer: String = null,
+    body: js.Any = null,
+    defaultOperator: DefaultOperator = null,
+    df: String = null,
+    filterPath: String | js.Array[String] = null,
+    id: String = null,
+    ignore: Double | js.Array[Double] = null,
+    index: String = null,
+    lenient: js.UndefOr[Boolean] = js.undefined,
+    lowercaseExpandedTerms: js.UndefOr[Boolean] = js.undefined,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    parent: String = null,
+    preference: String = null,
+    q: String = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    routing: String = null,
+    storedFields: NameList = null,
+    `type`: String = null
+  ): ExplainParams = {
     val __obj = js.Dynamic.literal()
+    if (_source != null) __obj.updateDynamic("_source")(_source.asInstanceOf[js.Any])
+    if (_sourceExclude != null) __obj.updateDynamic("_sourceExclude")(_sourceExclude.asInstanceOf[js.Any])
+    if (_sourceInclude != null) __obj.updateDynamic("_sourceInclude")(_sourceInclude.asInstanceOf[js.Any])
+    if (!js.isUndefined(analyzeWildcard)) __obj.updateDynamic("analyzeWildcard")(analyzeWildcard.get.asInstanceOf[js.Any])
+    if (analyzer != null) __obj.updateDynamic("analyzer")(analyzer.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (defaultOperator != null) __obj.updateDynamic("defaultOperator")(defaultOperator.asInstanceOf[js.Any])
+    if (df != null) __obj.updateDynamic("df")(df.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (!js.isUndefined(lenient)) __obj.updateDynamic("lenient")(lenient.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowercaseExpandedTerms)) __obj.updateDynamic("lowercaseExpandedTerms")(lowercaseExpandedTerms.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
+    if (storedFields != null) __obj.updateDynamic("storedFields")(storedFields.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExplainParams]
   }
-  @scala.inline
-  implicit class ExplainParamsOps[Self <: ExplainParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_source(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_source: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceExclude(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceExclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceExclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceInclude(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceInclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceInclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzeWildcard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzeWildcard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzeWildcard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzeWildcard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyzer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyzer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyzer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOperator(value: DefaultOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOperator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDf(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("df")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("df")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLenient(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLenient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lenient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowercaseExpandedTerms(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowercaseExpandedTerms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowercaseExpandedTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowercaseExpandedTerms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRouting(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStoredFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStoredFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storedFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

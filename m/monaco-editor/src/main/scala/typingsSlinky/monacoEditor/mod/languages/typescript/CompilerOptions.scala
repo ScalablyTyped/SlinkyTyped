@@ -5,987 +5,241 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompilerOptions
   extends /* option */ StringDictionary[js.UndefOr[CompilerOptionsValue]] {
-  var allowJs: js.UndefOr[Boolean] = js.native
-  var allowSyntheticDefaultImports: js.UndefOr[Boolean] = js.native
-  var allowUnreachableCode: js.UndefOr[Boolean] = js.native
-  var allowUnusedLabels: js.UndefOr[Boolean] = js.native
-  var alwaysStrict: js.UndefOr[Boolean] = js.native
-  var baseUrl: js.UndefOr[String] = js.native
-  var charset: js.UndefOr[String] = js.native
-  var checkJs: js.UndefOr[Boolean] = js.native
-  var composite: js.UndefOr[Boolean] = js.native
-  var declaration: js.UndefOr[Boolean] = js.native
-  var declarationDir: js.UndefOr[String] = js.native
-  var declarationMap: js.UndefOr[Boolean] = js.native
-  var disableSizeLimit: js.UndefOr[Boolean] = js.native
-  var downlevelIteration: js.UndefOr[Boolean] = js.native
-  var emitBOM: js.UndefOr[Boolean] = js.native
-  var emitDeclarationOnly: js.UndefOr[Boolean] = js.native
-  var emitDecoratorMetadata: js.UndefOr[Boolean] = js.native
-  var esModuleInterop: js.UndefOr[Boolean] = js.native
-  var experimentalDecorators: js.UndefOr[Boolean] = js.native
-  var forceConsistentCasingInFileNames: js.UndefOr[Boolean] = js.native
-  var importHelpers: js.UndefOr[Boolean] = js.native
-  var inlineSourceMap: js.UndefOr[Boolean] = js.native
-  var inlineSources: js.UndefOr[Boolean] = js.native
-  var isolatedModules: js.UndefOr[Boolean] = js.native
-  var jsx: js.UndefOr[JsxEmit] = js.native
-  var jsxFactory: js.UndefOr[String] = js.native
-  var keyofStringsOnly: js.UndefOr[Boolean] = js.native
-  var lib: js.UndefOr[js.Array[String]] = js.native
-  var locale: js.UndefOr[String] = js.native
-  var mapRoot: js.UndefOr[String] = js.native
-  var maxNodeModuleJsDepth: js.UndefOr[Double] = js.native
-  var module: js.UndefOr[ModuleKind] = js.native
-  var moduleResolution: js.UndefOr[ModuleResolutionKind] = js.native
-  var newLine: js.UndefOr[NewLineKind] = js.native
-  var noEmit: js.UndefOr[Boolean] = js.native
-  var noEmitHelpers: js.UndefOr[Boolean] = js.native
-  var noEmitOnError: js.UndefOr[Boolean] = js.native
-  var noErrorTruncation: js.UndefOr[Boolean] = js.native
-  var noFallthroughCasesInSwitch: js.UndefOr[Boolean] = js.native
-  var noImplicitAny: js.UndefOr[Boolean] = js.native
-  var noImplicitReturns: js.UndefOr[Boolean] = js.native
-  var noImplicitThis: js.UndefOr[Boolean] = js.native
-  var noImplicitUseStrict: js.UndefOr[Boolean] = js.native
-  var noLib: js.UndefOr[Boolean] = js.native
-  var noResolve: js.UndefOr[Boolean] = js.native
-  var noStrictGenericChecks: js.UndefOr[Boolean] = js.native
-  var noUnusedLocals: js.UndefOr[Boolean] = js.native
-  var noUnusedParameters: js.UndefOr[Boolean] = js.native
-  var out: js.UndefOr[String] = js.native
-  var outDir: js.UndefOr[String] = js.native
-  var outFile: js.UndefOr[String] = js.native
-  var paths: js.UndefOr[MapLike[js.Array[String]]] = js.native
-  var preserveConstEnums: js.UndefOr[Boolean] = js.native
-  var preserveSymlinks: js.UndefOr[Boolean] = js.native
-  var project: js.UndefOr[String] = js.native
-  var reactNamespace: js.UndefOr[String] = js.native
-  var removeComments: js.UndefOr[Boolean] = js.native
-  var resolveJsonModule: js.UndefOr[Boolean] = js.native
-  var rootDir: js.UndefOr[String] = js.native
-  var rootDirs: js.UndefOr[js.Array[String]] = js.native
-  var skipDefaultLibCheck: js.UndefOr[Boolean] = js.native
-  var skipLibCheck: js.UndefOr[Boolean] = js.native
-  var sourceMap: js.UndefOr[Boolean] = js.native
-  var sourceRoot: js.UndefOr[String] = js.native
-  var strict: js.UndefOr[Boolean] = js.native
-  var strictFunctionTypes: js.UndefOr[Boolean] = js.native
-  var strictNullChecks: js.UndefOr[Boolean] = js.native
-  var strictPropertyInitialization: js.UndefOr[Boolean] = js.native
-  var suppressExcessPropertyErrors: js.UndefOr[Boolean] = js.native
-  var suppressImplicitAnyIndexErrors: js.UndefOr[Boolean] = js.native
-  var target: js.UndefOr[ScriptTarget] = js.native
-  var traceResolution: js.UndefOr[Boolean] = js.native
+  var allowJs: js.UndefOr[Boolean] = js.undefined
+  var allowSyntheticDefaultImports: js.UndefOr[Boolean] = js.undefined
+  var allowUnreachableCode: js.UndefOr[Boolean] = js.undefined
+  var allowUnusedLabels: js.UndefOr[Boolean] = js.undefined
+  var alwaysStrict: js.UndefOr[Boolean] = js.undefined
+  var baseUrl: js.UndefOr[String] = js.undefined
+  var charset: js.UndefOr[String] = js.undefined
+  var checkJs: js.UndefOr[Boolean] = js.undefined
+  var composite: js.UndefOr[Boolean] = js.undefined
+  var declaration: js.UndefOr[Boolean] = js.undefined
+  var declarationDir: js.UndefOr[String] = js.undefined
+  var declarationMap: js.UndefOr[Boolean] = js.undefined
+  var disableSizeLimit: js.UndefOr[Boolean] = js.undefined
+  var downlevelIteration: js.UndefOr[Boolean] = js.undefined
+  var emitBOM: js.UndefOr[Boolean] = js.undefined
+  var emitDeclarationOnly: js.UndefOr[Boolean] = js.undefined
+  var emitDecoratorMetadata: js.UndefOr[Boolean] = js.undefined
+  var esModuleInterop: js.UndefOr[Boolean] = js.undefined
+  var experimentalDecorators: js.UndefOr[Boolean] = js.undefined
+  var forceConsistentCasingInFileNames: js.UndefOr[Boolean] = js.undefined
+  var importHelpers: js.UndefOr[Boolean] = js.undefined
+  var inlineSourceMap: js.UndefOr[Boolean] = js.undefined
+  var inlineSources: js.UndefOr[Boolean] = js.undefined
+  var isolatedModules: js.UndefOr[Boolean] = js.undefined
+  var jsx: js.UndefOr[JsxEmit] = js.undefined
+  var jsxFactory: js.UndefOr[String] = js.undefined
+  var keyofStringsOnly: js.UndefOr[Boolean] = js.undefined
+  var lib: js.UndefOr[js.Array[String]] = js.undefined
+  var locale: js.UndefOr[String] = js.undefined
+  var mapRoot: js.UndefOr[String] = js.undefined
+  var maxNodeModuleJsDepth: js.UndefOr[Double] = js.undefined
+  var module: js.UndefOr[ModuleKind] = js.undefined
+  var moduleResolution: js.UndefOr[ModuleResolutionKind] = js.undefined
+  var newLine: js.UndefOr[NewLineKind] = js.undefined
+  var noEmit: js.UndefOr[Boolean] = js.undefined
+  var noEmitHelpers: js.UndefOr[Boolean] = js.undefined
+  var noEmitOnError: js.UndefOr[Boolean] = js.undefined
+  var noErrorTruncation: js.UndefOr[Boolean] = js.undefined
+  var noFallthroughCasesInSwitch: js.UndefOr[Boolean] = js.undefined
+  var noImplicitAny: js.UndefOr[Boolean] = js.undefined
+  var noImplicitReturns: js.UndefOr[Boolean] = js.undefined
+  var noImplicitThis: js.UndefOr[Boolean] = js.undefined
+  var noImplicitUseStrict: js.UndefOr[Boolean] = js.undefined
+  var noLib: js.UndefOr[Boolean] = js.undefined
+  var noResolve: js.UndefOr[Boolean] = js.undefined
+  var noStrictGenericChecks: js.UndefOr[Boolean] = js.undefined
+  var noUnusedLocals: js.UndefOr[Boolean] = js.undefined
+  var noUnusedParameters: js.UndefOr[Boolean] = js.undefined
+  var out: js.UndefOr[String] = js.undefined
+  var outDir: js.UndefOr[String] = js.undefined
+  var outFile: js.UndefOr[String] = js.undefined
+  var paths: js.UndefOr[MapLike[js.Array[String]]] = js.undefined
+  var preserveConstEnums: js.UndefOr[Boolean] = js.undefined
+  var preserveSymlinks: js.UndefOr[Boolean] = js.undefined
+  var project: js.UndefOr[String] = js.undefined
+  var reactNamespace: js.UndefOr[String] = js.undefined
+  var removeComments: js.UndefOr[Boolean] = js.undefined
+  var resolveJsonModule: js.UndefOr[Boolean] = js.undefined
+  var rootDir: js.UndefOr[String] = js.undefined
+  var rootDirs: js.UndefOr[js.Array[String]] = js.undefined
+  var skipDefaultLibCheck: js.UndefOr[Boolean] = js.undefined
+  var skipLibCheck: js.UndefOr[Boolean] = js.undefined
+  var sourceMap: js.UndefOr[Boolean] = js.undefined
+  var sourceRoot: js.UndefOr[String] = js.undefined
+  var strict: js.UndefOr[Boolean] = js.undefined
+  var strictFunctionTypes: js.UndefOr[Boolean] = js.undefined
+  var strictNullChecks: js.UndefOr[Boolean] = js.undefined
+  var strictPropertyInitialization: js.UndefOr[Boolean] = js.undefined
+  var suppressExcessPropertyErrors: js.UndefOr[Boolean] = js.undefined
+  var suppressImplicitAnyIndexErrors: js.UndefOr[Boolean] = js.undefined
+  var target: js.UndefOr[ScriptTarget] = js.undefined
+  var traceResolution: js.UndefOr[Boolean] = js.undefined
   /** Paths used to compute primary types search locations */
-  var typeRoots: js.UndefOr[js.Array[String]] = js.native
-  var types: js.UndefOr[js.Array[String]] = js.native
+  var typeRoots: js.UndefOr[js.Array[String]] = js.undefined
+  var types: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object CompilerOptions {
   @scala.inline
-  def apply(): CompilerOptions = {
+  def apply(
+    StringDictionary: /* option */ StringDictionary[js.UndefOr[CompilerOptionsValue]] = null,
+    allowJs: js.UndefOr[Boolean] = js.undefined,
+    allowSyntheticDefaultImports: js.UndefOr[Boolean] = js.undefined,
+    allowUnreachableCode: js.UndefOr[Boolean] = js.undefined,
+    allowUnusedLabels: js.UndefOr[Boolean] = js.undefined,
+    alwaysStrict: js.UndefOr[Boolean] = js.undefined,
+    baseUrl: String = null,
+    charset: String = null,
+    checkJs: js.UndefOr[Boolean] = js.undefined,
+    composite: js.UndefOr[Boolean] = js.undefined,
+    declaration: js.UndefOr[Boolean] = js.undefined,
+    declarationDir: String = null,
+    declarationMap: js.UndefOr[Boolean] = js.undefined,
+    disableSizeLimit: js.UndefOr[Boolean] = js.undefined,
+    downlevelIteration: js.UndefOr[Boolean] = js.undefined,
+    emitBOM: js.UndefOr[Boolean] = js.undefined,
+    emitDeclarationOnly: js.UndefOr[Boolean] = js.undefined,
+    emitDecoratorMetadata: js.UndefOr[Boolean] = js.undefined,
+    esModuleInterop: js.UndefOr[Boolean] = js.undefined,
+    experimentalDecorators: js.UndefOr[Boolean] = js.undefined,
+    forceConsistentCasingInFileNames: js.UndefOr[Boolean] = js.undefined,
+    importHelpers: js.UndefOr[Boolean] = js.undefined,
+    inlineSourceMap: js.UndefOr[Boolean] = js.undefined,
+    inlineSources: js.UndefOr[Boolean] = js.undefined,
+    isolatedModules: js.UndefOr[Boolean] = js.undefined,
+    jsx: JsxEmit = null,
+    jsxFactory: String = null,
+    keyofStringsOnly: js.UndefOr[Boolean] = js.undefined,
+    lib: js.Array[String] = null,
+    locale: String = null,
+    mapRoot: String = null,
+    maxNodeModuleJsDepth: js.UndefOr[Double] = js.undefined,
+    module: ModuleKind = null,
+    moduleResolution: ModuleResolutionKind = null,
+    newLine: NewLineKind = null,
+    noEmit: js.UndefOr[Boolean] = js.undefined,
+    noEmitHelpers: js.UndefOr[Boolean] = js.undefined,
+    noEmitOnError: js.UndefOr[Boolean] = js.undefined,
+    noErrorTruncation: js.UndefOr[Boolean] = js.undefined,
+    noFallthroughCasesInSwitch: js.UndefOr[Boolean] = js.undefined,
+    noImplicitAny: js.UndefOr[Boolean] = js.undefined,
+    noImplicitReturns: js.UndefOr[Boolean] = js.undefined,
+    noImplicitThis: js.UndefOr[Boolean] = js.undefined,
+    noImplicitUseStrict: js.UndefOr[Boolean] = js.undefined,
+    noLib: js.UndefOr[Boolean] = js.undefined,
+    noResolve: js.UndefOr[Boolean] = js.undefined,
+    noStrictGenericChecks: js.UndefOr[Boolean] = js.undefined,
+    noUnusedLocals: js.UndefOr[Boolean] = js.undefined,
+    noUnusedParameters: js.UndefOr[Boolean] = js.undefined,
+    out: String = null,
+    outDir: String = null,
+    outFile: String = null,
+    paths: MapLike[js.Array[String]] = null,
+    preserveConstEnums: js.UndefOr[Boolean] = js.undefined,
+    preserveSymlinks: js.UndefOr[Boolean] = js.undefined,
+    project: String = null,
+    reactNamespace: String = null,
+    removeComments: js.UndefOr[Boolean] = js.undefined,
+    resolveJsonModule: js.UndefOr[Boolean] = js.undefined,
+    rootDir: String = null,
+    rootDirs: js.Array[String] = null,
+    skipDefaultLibCheck: js.UndefOr[Boolean] = js.undefined,
+    skipLibCheck: js.UndefOr[Boolean] = js.undefined,
+    sourceMap: js.UndefOr[Boolean] = js.undefined,
+    sourceRoot: String = null,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    strictFunctionTypes: js.UndefOr[Boolean] = js.undefined,
+    strictNullChecks: js.UndefOr[Boolean] = js.undefined,
+    strictPropertyInitialization: js.UndefOr[Boolean] = js.undefined,
+    suppressExcessPropertyErrors: js.UndefOr[Boolean] = js.undefined,
+    suppressImplicitAnyIndexErrors: js.UndefOr[Boolean] = js.undefined,
+    target: ScriptTarget = null,
+    traceResolution: js.UndefOr[Boolean] = js.undefined,
+    typeRoots: js.Array[String] = null,
+    types: js.Array[String] = null
+  ): CompilerOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(allowJs)) __obj.updateDynamic("allowJs")(allowJs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSyntheticDefaultImports)) __obj.updateDynamic("allowSyntheticDefaultImports")(allowSyntheticDefaultImports.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowUnreachableCode)) __obj.updateDynamic("allowUnreachableCode")(allowUnreachableCode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowUnusedLabels)) __obj.updateDynamic("allowUnusedLabels")(allowUnusedLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alwaysStrict)) __obj.updateDynamic("alwaysStrict")(alwaysStrict.get.asInstanceOf[js.Any])
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (charset != null) __obj.updateDynamic("charset")(charset.asInstanceOf[js.Any])
+    if (!js.isUndefined(checkJs)) __obj.updateDynamic("checkJs")(checkJs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composite)) __obj.updateDynamic("composite")(composite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(declaration)) __obj.updateDynamic("declaration")(declaration.get.asInstanceOf[js.Any])
+    if (declarationDir != null) __obj.updateDynamic("declarationDir")(declarationDir.asInstanceOf[js.Any])
+    if (!js.isUndefined(declarationMap)) __obj.updateDynamic("declarationMap")(declarationMap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableSizeLimit)) __obj.updateDynamic("disableSizeLimit")(disableSizeLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(downlevelIteration)) __obj.updateDynamic("downlevelIteration")(downlevelIteration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(emitBOM)) __obj.updateDynamic("emitBOM")(emitBOM.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(emitDeclarationOnly)) __obj.updateDynamic("emitDeclarationOnly")(emitDeclarationOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(emitDecoratorMetadata)) __obj.updateDynamic("emitDecoratorMetadata")(emitDecoratorMetadata.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(esModuleInterop)) __obj.updateDynamic("esModuleInterop")(esModuleInterop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(experimentalDecorators)) __obj.updateDynamic("experimentalDecorators")(experimentalDecorators.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceConsistentCasingInFileNames)) __obj.updateDynamic("forceConsistentCasingInFileNames")(forceConsistentCasingInFileNames.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(importHelpers)) __obj.updateDynamic("importHelpers")(importHelpers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineSourceMap)) __obj.updateDynamic("inlineSourceMap")(inlineSourceMap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineSources)) __obj.updateDynamic("inlineSources")(inlineSources.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isolatedModules)) __obj.updateDynamic("isolatedModules")(isolatedModules.get.asInstanceOf[js.Any])
+    if (jsx != null) __obj.updateDynamic("jsx")(jsx.asInstanceOf[js.Any])
+    if (jsxFactory != null) __obj.updateDynamic("jsxFactory")(jsxFactory.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyofStringsOnly)) __obj.updateDynamic("keyofStringsOnly")(keyofStringsOnly.get.asInstanceOf[js.Any])
+    if (lib != null) __obj.updateDynamic("lib")(lib.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (mapRoot != null) __obj.updateDynamic("mapRoot")(mapRoot.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxNodeModuleJsDepth)) __obj.updateDynamic("maxNodeModuleJsDepth")(maxNodeModuleJsDepth.get.asInstanceOf[js.Any])
+    if (module != null) __obj.updateDynamic("module")(module.asInstanceOf[js.Any])
+    if (moduleResolution != null) __obj.updateDynamic("moduleResolution")(moduleResolution.asInstanceOf[js.Any])
+    if (newLine != null) __obj.updateDynamic("newLine")(newLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(noEmit)) __obj.updateDynamic("noEmit")(noEmit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noEmitHelpers)) __obj.updateDynamic("noEmitHelpers")(noEmitHelpers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noEmitOnError)) __obj.updateDynamic("noEmitOnError")(noEmitOnError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noErrorTruncation)) __obj.updateDynamic("noErrorTruncation")(noErrorTruncation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noFallthroughCasesInSwitch)) __obj.updateDynamic("noFallthroughCasesInSwitch")(noFallthroughCasesInSwitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noImplicitAny)) __obj.updateDynamic("noImplicitAny")(noImplicitAny.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noImplicitReturns)) __obj.updateDynamic("noImplicitReturns")(noImplicitReturns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noImplicitThis)) __obj.updateDynamic("noImplicitThis")(noImplicitThis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noImplicitUseStrict)) __obj.updateDynamic("noImplicitUseStrict")(noImplicitUseStrict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noLib)) __obj.updateDynamic("noLib")(noLib.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noResolve)) __obj.updateDynamic("noResolve")(noResolve.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noStrictGenericChecks)) __obj.updateDynamic("noStrictGenericChecks")(noStrictGenericChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noUnusedLocals)) __obj.updateDynamic("noUnusedLocals")(noUnusedLocals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noUnusedParameters)) __obj.updateDynamic("noUnusedParameters")(noUnusedParameters.get.asInstanceOf[js.Any])
+    if (out != null) __obj.updateDynamic("out")(out.asInstanceOf[js.Any])
+    if (outDir != null) __obj.updateDynamic("outDir")(outDir.asInstanceOf[js.Any])
+    if (outFile != null) __obj.updateDynamic("outFile")(outFile.asInstanceOf[js.Any])
+    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveConstEnums)) __obj.updateDynamic("preserveConstEnums")(preserveConstEnums.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveSymlinks)) __obj.updateDynamic("preserveSymlinks")(preserveSymlinks.get.asInstanceOf[js.Any])
+    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
+    if (reactNamespace != null) __obj.updateDynamic("reactNamespace")(reactNamespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeComments)) __obj.updateDynamic("removeComments")(removeComments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resolveJsonModule)) __obj.updateDynamic("resolveJsonModule")(resolveJsonModule.get.asInstanceOf[js.Any])
+    if (rootDir != null) __obj.updateDynamic("rootDir")(rootDir.asInstanceOf[js.Any])
+    if (rootDirs != null) __obj.updateDynamic("rootDirs")(rootDirs.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipDefaultLibCheck)) __obj.updateDynamic("skipDefaultLibCheck")(skipDefaultLibCheck.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipLibCheck)) __obj.updateDynamic("skipLibCheck")(skipLibCheck.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceMap)) __obj.updateDynamic("sourceMap")(sourceMap.get.asInstanceOf[js.Any])
+    if (sourceRoot != null) __obj.updateDynamic("sourceRoot")(sourceRoot.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strictFunctionTypes)) __obj.updateDynamic("strictFunctionTypes")(strictFunctionTypes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strictNullChecks)) __obj.updateDynamic("strictNullChecks")(strictNullChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strictPropertyInitialization)) __obj.updateDynamic("strictPropertyInitialization")(strictPropertyInitialization.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressExcessPropertyErrors)) __obj.updateDynamic("suppressExcessPropertyErrors")(suppressExcessPropertyErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressImplicitAnyIndexErrors)) __obj.updateDynamic("suppressImplicitAnyIndexErrors")(suppressImplicitAnyIndexErrors.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(traceResolution)) __obj.updateDynamic("traceResolution")(traceResolution.get.asInstanceOf[js.Any])
+    if (typeRoots != null) __obj.updateDynamic("typeRoots")(typeRoots.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompilerOptions]
   }
-  @scala.inline
-  implicit class CompilerOptionsOps[Self <: CompilerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowJs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowJs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowJs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowJs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSyntheticDefaultImports(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSyntheticDefaultImports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSyntheticDefaultImports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSyntheticDefaultImports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowUnreachableCode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnreachableCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUnreachableCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnreachableCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowUnusedLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnusedLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUnusedLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUnusedLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlwaysStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysStrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysStrict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCharset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckJs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkJs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckJs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkJs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComposite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeclaration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeclaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeclarationDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declarationDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeclarationDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declarationDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeclarationMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declarationMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeclarationMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declarationMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableSizeLimit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSizeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableSizeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableSizeLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownlevelIteration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downlevelIteration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownlevelIteration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downlevelIteration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitBOM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitBOM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmitBOM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitBOM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitDeclarationOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitDeclarationOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmitDeclarationOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitDeclarationOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitDecoratorMetadata(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitDecoratorMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmitDecoratorMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitDecoratorMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEsModuleInterop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("esModuleInterop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEsModuleInterop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("esModuleInterop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExperimentalDecorators(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalDecorators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimentalDecorators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalDecorators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceConsistentCasingInFileNames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceConsistentCasingInFileNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceConsistentCasingInFileNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceConsistentCasingInFileNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportHelpers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importHelpers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportHelpers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importHelpers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineSourceMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineSourceMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineSourceMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineSourceMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineSources(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineSources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsolatedModules(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isolatedModules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsolatedModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isolatedModules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsx(value: JsxEmit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsxFactory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsxFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsxFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsxFactory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyofStringsOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyofStringsOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyofStringsOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyofStringsOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLib(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lib")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapRoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxNodeModuleJsDepth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNodeModuleJsDepth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxNodeModuleJsDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNodeModuleJsDepth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModule(value: ModuleKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModuleResolution(value: ModuleResolutionKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModuleResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewLine(value: NewLineKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoEmit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noEmit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoEmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noEmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoEmitHelpers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noEmitHelpers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoEmitHelpers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noEmitHelpers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoEmitOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noEmitOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoEmitOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noEmitOnError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoErrorTruncation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noErrorTruncation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoErrorTruncation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noErrorTruncation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoFallthroughCasesInSwitch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noFallthroughCasesInSwitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoFallthroughCasesInSwitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noFallthroughCasesInSwitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoImplicitAny(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitAny")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoImplicitAny: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitAny")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoImplicitReturns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitReturns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoImplicitReturns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitReturns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoImplicitThis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitThis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoImplicitThis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitThis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoImplicitUseStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitUseStrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoImplicitUseStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noImplicitUseStrict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoLib(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoLib: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noLib")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoResolve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noResolve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoResolve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noResolve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoStrictGenericChecks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noStrictGenericChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoStrictGenericChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noStrictGenericChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoUnusedLocals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUnusedLocals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoUnusedLocals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUnusedLocals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoUnusedParameters(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUnusedParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoUnusedParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noUnusedParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaths(value: MapLike[js.Array[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveConstEnums(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveConstEnums")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveConstEnums: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveConstEnums")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveSymlinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveSymlinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveSymlinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveSymlinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReactNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reactNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReactNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reactNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveJsonModule(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveJsonModule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveJsonModule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveJsonModule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootDirs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDirs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootDirs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootDirs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipDefaultLibCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipDefaultLibCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipDefaultLibCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipDefaultLibCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipLibCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLibCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipLibCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLibCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrictFunctionTypes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictFunctionTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictFunctionTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictFunctionTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrictNullChecks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictNullChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictNullChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictNullChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrictPropertyInitialization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictPropertyInitialization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictPropertyInitialization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictPropertyInitialization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressExcessPropertyErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressExcessPropertyErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressExcessPropertyErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressExcessPropertyErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressImplicitAnyIndexErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressImplicitAnyIndexErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressImplicitAnyIndexErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressImplicitAnyIndexErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: ScriptTarget): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTraceResolution(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTraceResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeRoots(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeRoots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeRoots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeRoots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,41 +21,11 @@ trait SchemaRow extends js.Object {
 
 object SchemaRow {
   @scala.inline
-  def apply(): SchemaRow = {
+  def apply(actualLabel: String = null, entries: js.Array[SchemaEntry] = null): SchemaRow = {
     val __obj = js.Dynamic.literal()
+    if (actualLabel != null) __obj.updateDynamic("actualLabel")(actualLabel.asInstanceOf[js.Any])
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRow]
   }
-  @scala.inline
-  implicit class SchemaRowOps[Self <: SchemaRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntries(value: js.Array[SchemaEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

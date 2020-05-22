@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChaiStatic extends js.Object {
-  var tv4: TV4 = js.native
+  var tv4: TV4
 }
 
 object ChaiStatic {
@@ -16,19 +15,5 @@ object ChaiStatic {
     val __obj = js.Dynamic.literal(tv4 = tv4.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChaiStatic]
   }
-  @scala.inline
-  implicit class ChaiStaticOps[Self <: ChaiStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTv4(value: TV4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tv4")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

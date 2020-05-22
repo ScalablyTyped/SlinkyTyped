@@ -15,6 +15,9 @@ object foundationMod extends js.Object {
   @js.native
   class MDCDataTableFoundation () extends MDCFoundation[MDCDataTableAdapter] {
     def this(adapter: PartialMDCDataTableAdapte) = this()
+    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
+    /* CompleteClass */
+    override def destroy(): Unit = js.native
     /**
       * @return Returns array of row elements.
       */
@@ -31,6 +34,9 @@ object foundationMod extends js.Object {
       * Handles change event originated from row checkboxes.
       */
     def handleRowCheckboxChange(event: Event): Unit = js.native
+    // Subclasses should override this method to perform initialization routines (registering events, etc.)
+    /* CompleteClass */
+    override def init(): Unit = js.native
     /**
       * Re-initializes header row checkbox and row checkboxes when selectable rows are added or removed from table.
       * Use this if registering checkbox is synchronous.

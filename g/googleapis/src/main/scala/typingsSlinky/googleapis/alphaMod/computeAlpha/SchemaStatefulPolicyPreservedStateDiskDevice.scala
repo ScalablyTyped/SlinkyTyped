@@ -18,29 +18,10 @@ trait SchemaStatefulPolicyPreservedStateDiskDevice extends js.Object {
 
 object SchemaStatefulPolicyPreservedStateDiskDevice {
   @scala.inline
-  def apply(): SchemaStatefulPolicyPreservedStateDiskDevice = {
+  def apply(autoDelete: String = null): SchemaStatefulPolicyPreservedStateDiskDevice = {
     val __obj = js.Dynamic.literal()
+    if (autoDelete != null) __obj.updateDynamic("autoDelete")(autoDelete.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStatefulPolicyPreservedStateDiskDevice]
   }
-  @scala.inline
-  implicit class SchemaStatefulPolicyPreservedStateDiskDeviceOps[Self <: SchemaStatefulPolicyPreservedStateDiskDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoDelete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

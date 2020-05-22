@@ -11,6 +11,11 @@ object Resolved {
   object component extends js.Object
   
   def withProps[T](p: Persist[T]): SharedBuilder_Persist_1362630938[T] = new SharedBuilder_Persist_1362630938[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): SharedBuilder_Persist_1362630938[T] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_Persist_1362630938[T](js.Array(this.component, __props.asInstanceOf[Persist[T]]))
+  }
   implicit def make[T](companion: Resolved.type): SharedBuilder_Persist_1362630938[T] = new SharedBuilder_Persist_1362630938[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

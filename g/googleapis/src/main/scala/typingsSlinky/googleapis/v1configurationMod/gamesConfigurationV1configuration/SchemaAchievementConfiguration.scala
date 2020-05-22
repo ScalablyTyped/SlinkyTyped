@@ -51,113 +51,26 @@ trait SchemaAchievementConfiguration extends js.Object {
 
 object SchemaAchievementConfiguration {
   @scala.inline
-  def apply(): SchemaAchievementConfiguration = {
+  def apply(
+    achievementType: String = null,
+    draft: SchemaAchievementConfigurationDetail = null,
+    id: String = null,
+    initialState: String = null,
+    kind: String = null,
+    published: SchemaAchievementConfigurationDetail = null,
+    stepsToUnlock: js.UndefOr[Double] = js.undefined,
+    token: String = null
+  ): SchemaAchievementConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (achievementType != null) __obj.updateDynamic("achievementType")(achievementType.asInstanceOf[js.Any])
+    if (draft != null) __obj.updateDynamic("draft")(draft.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (published != null) __obj.updateDynamic("published")(published.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepsToUnlock)) __obj.updateDynamic("stepsToUnlock")(stepsToUnlock.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAchievementConfiguration]
   }
-  @scala.inline
-  implicit class SchemaAchievementConfigurationOps[Self <: SchemaAchievementConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAchievementType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("achievementType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAchievementType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("achievementType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraft(value: SchemaAchievementConfigurationDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublished(value: SchemaAchievementConfigurationDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublished: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("published")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepsToUnlock(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepsToUnlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepsToUnlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepsToUnlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

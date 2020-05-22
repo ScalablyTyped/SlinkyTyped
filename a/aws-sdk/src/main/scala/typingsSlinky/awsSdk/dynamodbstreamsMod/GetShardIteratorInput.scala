@@ -26,47 +26,15 @@ trait GetShardIteratorInput extends js.Object {
 
 object GetShardIteratorInput {
   @scala.inline
-  def apply(ShardId: ShardId, ShardIteratorType: ShardIteratorType, StreamArn: StreamArn): GetShardIteratorInput = {
+  def apply(
+    ShardId: ShardId,
+    ShardIteratorType: ShardIteratorType,
+    StreamArn: StreamArn,
+    SequenceNumber: SequenceNumber = null
+  ): GetShardIteratorInput = {
     val __obj = js.Dynamic.literal(ShardId = ShardId.asInstanceOf[js.Any], ShardIteratorType = ShardIteratorType.asInstanceOf[js.Any], StreamArn = StreamArn.asInstanceOf[js.Any])
+    if (SequenceNumber != null) __obj.updateDynamic("SequenceNumber")(SequenceNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetShardIteratorInput]
   }
-  @scala.inline
-  implicit class GetShardIteratorInputOps[Self <: GetShardIteratorInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShardId(value: ShardId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShardIteratorType(value: ShardIteratorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShardIteratorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStreamArn(value: StreamArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSequenceNumber(value: SequenceNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequenceNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

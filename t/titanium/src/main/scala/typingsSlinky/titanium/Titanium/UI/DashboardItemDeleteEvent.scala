@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Fired when an item is deleted during editing mode.
-		 */
-@js.native
+  * Fired when an item is deleted during editing mode.
+  */
 trait DashboardItemDeleteEvent extends DashboardItemBaseEvent {
   /**
-  			 * Item that was deleted.
-  			 */
-  var item: DashboardItem = js.native
+    * Item that was deleted.
+    */
+  var item: DashboardItem
 }
 
 object DashboardItemDeleteEvent {
@@ -21,19 +20,5 @@ object DashboardItemDeleteEvent {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashboardItemDeleteEvent]
   }
-  @scala.inline
-  implicit class DashboardItemDeleteEventOps[Self <: DashboardItemDeleteEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: DashboardItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

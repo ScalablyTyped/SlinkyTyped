@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var gzip: js.UndefOr[Boolean] = js.native
-  var pretty: js.UndefOr[Boolean] = js.native
-  var showFiles: js.UndefOr[Boolean] = js.native
-  var showTotal: js.UndefOr[Boolean] = js.native
-  var title: js.UndefOr[String] = js.native
+  var gzip: js.UndefOr[Boolean] = js.undefined
+  var pretty: js.UndefOr[Boolean] = js.undefined
+  var showFiles: js.UndefOr[Boolean] = js.undefined
+  var showTotal: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    gzip: js.UndefOr[Boolean] = js.undefined,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    showFiles: js.UndefOr[Boolean] = js.undefined,
+    showTotal: js.UndefOr[Boolean] = js.undefined,
+    title: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showFiles)) __obj.updateDynamic("showFiles")(showFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTotal)) __obj.updateDynamic("showTotal")(showTotal.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGzip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGzip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPretty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPretty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTotal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

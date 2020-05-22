@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SnapToRoadsRequest extends js.Object {
   /**
     * Whether to interpolate a path to include all points forming the full road-geometry.
@@ -14,7 +13,7 @@ trait SnapToRoadsRequest extends js.Object {
     *
     * @default false
     */
-  var interpolate: js.UndefOr[Boolean] = js.native
+  var interpolate: js.UndefOr[Boolean] = js.undefined
   /**
     * The path to be snapped. The `path` parameter accepts a list of latitude/longitude pairs.
     * Latitude and longitude values should be separated by commas. Coordinates should be separated by the pipe character: `"|"`.
@@ -26,40 +25,15 @@ trait SnapToRoadsRequest extends js.Object {
     *  of points are within 300m of each other. This will also help in handling any isolated, long jumps between
     * consecutive points caused by GPS signal loss, or noise.
     */
-  var path: js.Array[LatLng] = js.native
+  var path: js.Array[LatLng]
 }
 
 object SnapToRoadsRequest {
   @scala.inline
-  def apply(path: js.Array[LatLng]): SnapToRoadsRequest = {
+  def apply(path: js.Array[LatLng], interpolate: js.UndefOr[Boolean] = js.undefined): SnapToRoadsRequest = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (!js.isUndefined(interpolate)) __obj.updateDynamic("interpolate")(interpolate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapToRoadsRequest]
   }
-  @scala.inline
-  implicit class SnapToRoadsRequestOps[Self <: SnapToRoadsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: js.Array[LatLng]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterpolate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterpolate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -41,77 +41,20 @@ trait SchemaMutation extends js.Object {
 
 object SchemaMutation {
   @scala.inline
-  def apply(): SchemaMutation = {
+  def apply(
+    delete: SchemaDelete = null,
+    insert: SchemaWrite = null,
+    insertOrUpdate: SchemaWrite = null,
+    replace: SchemaWrite = null,
+    update: SchemaWrite = null
+  ): SchemaMutation = {
     val __obj = js.Dynamic.literal()
+    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
+    if (insert != null) __obj.updateDynamic("insert")(insert.asInstanceOf[js.Any])
+    if (insertOrUpdate != null) __obj.updateDynamic("insertOrUpdate")(insertOrUpdate.asInstanceOf[js.Any])
+    if (replace != null) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMutation]
   }
-  @scala.inline
-  implicit class SchemaMutationOps[Self <: SchemaMutation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: SchemaDelete): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsert(value: SchemaWrite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertOrUpdate(value: SchemaWrite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertOrUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertOrUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertOrUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplace(value: SchemaWrite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: SchemaWrite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

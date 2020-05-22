@@ -52,90 +52,16 @@ object DescribeMonitoringScheduleResponse {
     MonitoringScheduleArn: MonitoringScheduleArn,
     MonitoringScheduleConfig: MonitoringScheduleConfig,
     MonitoringScheduleName: MonitoringScheduleName,
-    MonitoringScheduleStatus: ScheduleStatus
+    MonitoringScheduleStatus: ScheduleStatus,
+    EndpointName: EndpointName = null,
+    FailureReason: FailureReason = null,
+    LastMonitoringExecutionSummary: MonitoringExecutionSummary = null
   ): DescribeMonitoringScheduleResponse = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], LastModifiedTime = LastModifiedTime.asInstanceOf[js.Any], MonitoringScheduleArn = MonitoringScheduleArn.asInstanceOf[js.Any], MonitoringScheduleConfig = MonitoringScheduleConfig.asInstanceOf[js.Any], MonitoringScheduleName = MonitoringScheduleName.asInstanceOf[js.Any], MonitoringScheduleStatus = MonitoringScheduleStatus.asInstanceOf[js.Any])
+    if (EndpointName != null) __obj.updateDynamic("EndpointName")(EndpointName.asInstanceOf[js.Any])
+    if (FailureReason != null) __obj.updateDynamic("FailureReason")(FailureReason.asInstanceOf[js.Any])
+    if (LastMonitoringExecutionSummary != null) __obj.updateDynamic("LastMonitoringExecutionSummary")(LastMonitoringExecutionSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeMonitoringScheduleResponse]
   }
-  @scala.inline
-  implicit class DescribeMonitoringScheduleResponseOps[Self <: DescribeMonitoringScheduleResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifiedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringScheduleArn(value: MonitoringScheduleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringScheduleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringScheduleConfig(value: MonitoringScheduleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringScheduleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringScheduleName(value: MonitoringScheduleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringScheduleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonitoringScheduleStatus(value: ScheduleStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoringScheduleStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndpointName(value: EndpointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: FailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastMonitoringExecutionSummary(value: MonitoringExecutionSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastMonitoringExecutionSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastMonitoringExecutionSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastMonitoringExecutionSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

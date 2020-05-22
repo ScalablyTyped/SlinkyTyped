@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteResult extends js.Object {
   /**
     * The results of applying each DocumentTransform.FieldTransform, in the
     * same order.
     */
-  var transformResults: js.UndefOr[js.Array[Value]] = js.native
+  var transformResults: js.UndefOr[js.Array[Value]] = js.undefined
   /**
     * The last update time of the document after applying the write. Not set
     * after a `delete`.
@@ -18,46 +17,16 @@ trait WriteResult extends js.Object {
     * If the write did not actually change the document, this will be the
     * previous update_time.
     */
-  var updateTime: js.UndefOr[String] = js.native
+  var updateTime: js.UndefOr[String] = js.undefined
 }
 
 object WriteResult {
   @scala.inline
-  def apply(): WriteResult = {
+  def apply(transformResults: js.Array[Value] = null, updateTime: String = null): WriteResult = {
     val __obj = js.Dynamic.literal()
+    if (transformResults != null) __obj.updateDynamic("transformResults")(transformResults.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteResult]
   }
-  @scala.inline
-  implicit class WriteResultOps[Self <: WriteResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransformResults(value: js.Array[Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

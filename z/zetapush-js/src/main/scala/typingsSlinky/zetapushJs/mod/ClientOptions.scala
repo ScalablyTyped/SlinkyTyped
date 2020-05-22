@@ -4,30 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientOptions extends Options {
-  def authentication(): AbstractHandshake = js.native
+  def authentication(): AbstractHandshake
 }
 
 object ClientOptions {
   @scala.inline
-  def apply(authentication: () => AbstractHandshake, sandboxId: String): ClientOptions = {
+  def apply(
+    authentication: () => AbstractHandshake,
+    sandboxId: String,
+    apiUrl: String = null,
+    forceHttps: js.UndefOr[Boolean] = js.undefined,
+    resource: String = null,
+    transports: js.Array[_] = null
+  ): ClientOptions = {
     val __obj = js.Dynamic.literal(authentication = js.Any.fromFunction0(authentication), sandboxId = sandboxId.asInstanceOf[js.Any])
+    if (apiUrl != null) __obj.updateDynamic("apiUrl")(apiUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceHttps)) __obj.updateDynamic("forceHttps")(forceHttps.get.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (transports != null) __obj.updateDynamic("transports")(transports.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptions]
   }
-  @scala.inline
-  implicit class ClientOptionsOps[Self <: ClientOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthentication(value: () => AbstractHandshake): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FretHandFinger extends Modifier {
-  var finger: Double | String = js.native
-  def setFretHandFinger(number: Double): FretHandFinger = js.native
-  def setOffsetX(x: Double): FretHandFinger = js.native
-  def setOffsetY(y: Double): FretHandFinger = js.native
+  var finger: Double | String
+  def setFretHandFinger(number: Double): FretHandFinger
+  def setOffsetX(x: Double): FretHandFinger
+  def setOffsetY(y: Double): FretHandFinger
 }
 
 object FretHandFinger {
@@ -43,37 +42,5 @@ object FretHandFinger {
     val __obj = js.Dynamic.literal(alignSubNotesWithNote = js.Any.fromFunction2(alignSubNotesWithNote), draw = js.Any.fromFunction0(draw), finger = finger.asInstanceOf[js.Any], getCategory = js.Any.fromFunction0(getCategory), getContext = js.Any.fromFunction0(getContext), getIndex = js.Any.fromFunction0(getIndex), getModifierContext = js.Any.fromFunction0(getModifierContext), getNote = js.Any.fromFunction0(getNote), getPosition = js.Any.fromFunction0(getPosition), getWidth = js.Any.fromFunction0(getWidth), setContext = js.Any.fromFunction1(setContext), setFretHandFinger = js.Any.fromFunction1(setFretHandFinger), setIndex = js.Any.fromFunction1(setIndex), setModifierContext = js.Any.fromFunction1(setModifierContext), setNote = js.Any.fromFunction1(setNote), setOffsetX = js.Any.fromFunction1(setOffsetX), setOffsetY = js.Any.fromFunction1(setOffsetY), setPosition = js.Any.fromFunction1(setPosition), setTextLine = js.Any.fromFunction1(setTextLine), setWidth = js.Any.fromFunction1(setWidth), setXShift = js.Any.fromFunction1(setXShift), setYShift = js.Any.fromFunction1(setYShift))
     __obj.asInstanceOf[FretHandFinger]
   }
-  @scala.inline
-  implicit class FretHandFingerOps[Self <: FretHandFinger] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinger(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetFretHandFinger(value: Double => FretHandFinger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFretHandFinger")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOffsetX(value: Double => FretHandFinger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOffsetX")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOffsetY(value: Double => FretHandFinger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOffsetY")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

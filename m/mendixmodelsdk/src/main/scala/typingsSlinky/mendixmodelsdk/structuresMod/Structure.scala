@@ -2,6 +2,7 @@ package typingsSlinky.mendixmodelsdk.structuresMod
 
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
+import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit
 import scala.scalajs.js
@@ -20,6 +21,23 @@ abstract class Structure protected () extends IStructure {
     _isPartial: Boolean,
     container: IContainer
   ) = this()
+  /* CompleteClass */
+  override val container: IContainer | Null = js.native
+  /* CompleteClass */
+  override var id: String = js.native
+  /* CompleteClass */
+  override var isLoaded: Boolean = js.native
+  /* CompleteClass */
+  override var model: IAbstractModel = js.native
+  /* CompleteClass */
+  override var structureTypeName: String = js.native
+  /**
+    * Unit that owns/contains this thing.
+    */
+  /* CompleteClass */
+  override var unit: IAbstractUnit = js.native
+  /* CompleteClass */
+  override def allProperties(): js.Array[AbstractProperty[_, _]] = js.native
   @JSName("container")
   def container_MStructure: IContainer | Null = js.native
   /**
@@ -31,8 +49,39 @@ abstract class Structure protected () extends IStructure {
   /* protected */ def getContainerAs[T /* <: IContainer */](containerType: js.Any): T = js.native
   @JSName("isLoaded")
   def isLoaded_MStructure: Boolean = js.native
+  /**
+    * Returns all properties when this structure is loaded, otherwise just the public properties.
+    */
+  /* CompleteClass */
+  override def loadedProperties(): js.Array[AbstractProperty[_, _]] = js.native
   @JSName("model")
   def model_MStructure: IAbstractModel = js.native
+  /* CompleteClass */
+  override def publicProperties(): js.Array[AbstractProperty[_, _]] = js.native
+  /**
+    * Renders the structure as plain JSON (without observables magic).
+    * This is intended for debugging and development convenience.
+    * Note that the resulting object is not of the interface type corresponding to this structure.
+    */
+  /* CompleteClass */
+  override def toJSON(): js.Object = js.native
+  /**
+    * Traverses this structure by calling the provided visitor function
+    * on itself and all the structures contained (as part) by it,
+    * in depth-first order, and it returns synchronously after that.
+    */
+  /* CompleteClass */
+  override def traverse(visit: js.Function1[/* structure */ this.type, Unit]): Unit = js.native
+  /**
+    * Traverses this structure, returning immediately when `visit` returns something other than `null`.
+    */
+  /* CompleteClass */
+  override def traverseFind[T](visit: js.Function1[/* structure */ this.type, T]): T | Null = js.native
+  /**
+    * Traverses this structure, only visiting children contained in public properties.
+    */
+  /* CompleteClass */
+  override def traversePublicParts(visit: js.Function1[/* structure */ this.type, Unit]): Unit = js.native
   @JSName("unit")
   def unit_MStructure: IAbstractUnit = js.native
 }

@@ -140,221 +140,44 @@ trait SchemaLogEntry extends js.Object {
 
 object SchemaLogEntry {
   @scala.inline
-  def apply(): SchemaLogEntry = {
+  def apply(
+    httpRequest: SchemaHttpRequest = null,
+    insertId: String = null,
+    jsonPayload: StringDictionary[js.Any] = null,
+    labels: StringDictionary[String] = null,
+    logName: String = null,
+    metadata: SchemaMonitoredResourceMetadata = null,
+    operation: SchemaLogEntryOperation = null,
+    protoPayload: StringDictionary[js.Any] = null,
+    receiveTimestamp: String = null,
+    resource: SchemaMonitoredResource = null,
+    severity: String = null,
+    sourceLocation: SchemaLogEntrySourceLocation = null,
+    spanId: String = null,
+    textPayload: String = null,
+    timestamp: String = null,
+    trace: String = null,
+    traceSampled: js.UndefOr[Boolean] = js.undefined
+  ): SchemaLogEntry = {
     val __obj = js.Dynamic.literal()
+    if (httpRequest != null) __obj.updateDynamic("httpRequest")(httpRequest.asInstanceOf[js.Any])
+    if (insertId != null) __obj.updateDynamic("insertId")(insertId.asInstanceOf[js.Any])
+    if (jsonPayload != null) __obj.updateDynamic("jsonPayload")(jsonPayload.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (logName != null) __obj.updateDynamic("logName")(logName.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
+    if (protoPayload != null) __obj.updateDynamic("protoPayload")(protoPayload.asInstanceOf[js.Any])
+    if (receiveTimestamp != null) __obj.updateDynamic("receiveTimestamp")(receiveTimestamp.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
+    if (sourceLocation != null) __obj.updateDynamic("sourceLocation")(sourceLocation.asInstanceOf[js.Any])
+    if (spanId != null) __obj.updateDynamic("spanId")(spanId.asInstanceOf[js.Any])
+    if (textPayload != null) __obj.updateDynamic("textPayload")(textPayload.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
+    if (trace != null) __obj.updateDynamic("trace")(trace.asInstanceOf[js.Any])
+    if (!js.isUndefined(traceSampled)) __obj.updateDynamic("traceSampled")(traceSampled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLogEntry]
   }
-  @scala.inline
-  implicit class SchemaLogEntryOps[Self <: SchemaLogEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpRequest(value: SchemaHttpRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsonPayload(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: SchemaMonitoredResourceMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: SchemaLogEntryOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtoPayload(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protoPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtoPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protoPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReceiveTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReceiveTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiveTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: SchemaMonitoredResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceLocation(value: SchemaLogEntrySourceLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpanId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spanId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpanId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spanId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTraceSampled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceSampled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTraceSampled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("traceSampled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

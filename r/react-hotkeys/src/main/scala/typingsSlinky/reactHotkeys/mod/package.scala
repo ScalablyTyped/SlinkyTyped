@@ -15,5 +15,19 @@ package object mod {
   {[ key in react-hotkeys.react-hotkeys.ActionName ]: react-hotkeys.react-hotkeys.KeySequence}
     */ typingsSlinky.reactHotkeys.reactHotkeysStrings.KeyMap with org.scalablytyped.runtime.TopLevel[js.Any]
   type KeyName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.reactHotkeys.mod.MouseTrapKeySequence
+    - typingsSlinky.reactHotkeys.mod.KeyMapOptions
+    - typingsSlinky.reactHotkeys.mod.ExtendedKeyMapOptions
+    - js.Array[
+  typingsSlinky.reactHotkeys.mod.KeyMapOptions | typingsSlinky.reactHotkeys.mod.MouseTrapKeySequence]
+  */
+  type KeySequence = typingsSlinky.reactHotkeys.mod._KeySequence | (js.Array[
+    typingsSlinky.reactHotkeys.mod.KeyMapOptions | typingsSlinky.reactHotkeys.mod.MouseTrapKeySequence
+  ]) | typingsSlinky.reactHotkeys.mod.MouseTrapKeySequence
+  type ListOfKeys = java.lang.String | js.Array[java.lang.String]
+  type MouseTrapKeySequence = java.lang.String | js.Array[java.lang.String]
+  type ReactComponent = (slinky.core.ReactComponentClass[typingsSlinky.reactHotkeys.mod.ComponentProps | js.Object]) | java.lang.String
+  type TabIndex = java.lang.String | scala.Double
   type cancelKeyCombinationListener = js.Function0[scala.Unit]
 }

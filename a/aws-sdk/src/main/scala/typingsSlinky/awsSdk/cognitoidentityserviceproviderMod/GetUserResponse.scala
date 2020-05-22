@@ -30,65 +30,18 @@ trait GetUserResponse extends js.Object {
 
 object GetUserResponse {
   @scala.inline
-  def apply(UserAttributes: AttributeListType, Username: UsernameType): GetUserResponse = {
+  def apply(
+    UserAttributes: AttributeListType,
+    Username: UsernameType,
+    MFAOptions: MFAOptionListType = null,
+    PreferredMfaSetting: StringType = null,
+    UserMFASettingList: UserMFASettingListType = null
+  ): GetUserResponse = {
     val __obj = js.Dynamic.literal(UserAttributes = UserAttributes.asInstanceOf[js.Any], Username = Username.asInstanceOf[js.Any])
+    if (MFAOptions != null) __obj.updateDynamic("MFAOptions")(MFAOptions.asInstanceOf[js.Any])
+    if (PreferredMfaSetting != null) __obj.updateDynamic("PreferredMfaSetting")(PreferredMfaSetting.asInstanceOf[js.Any])
+    if (UserMFASettingList != null) __obj.updateDynamic("UserMFASettingList")(UserMFASettingList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUserResponse]
   }
-  @scala.inline
-  implicit class GetUserResponseOps[Self <: GetUserResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserAttributes(value: AttributeListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsername(value: UsernameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMFAOptions(value: MFAOptionListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MFAOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMFAOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MFAOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredMfaSetting(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMfaSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredMfaSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMfaSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserMFASettingList(value: UserMFASettingListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMFASettingList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserMFASettingList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserMFASettingList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

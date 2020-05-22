@@ -4,119 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TooltipHiddenEventUIParam extends js.Object {
   /**
-  	 * Used to get item brush.
-  	 */
-  var actualItemBrush: js.UndefOr[js.Any] = js.native
+    * Used to get item brush.
+    */
+  var actualItemBrush: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get series brush.
-  	 */
-  var actualSeriesBrush: js.UndefOr[js.Any] = js.native
+    * Used to get series brush.
+    */
+  var actualSeriesBrush: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to chart object.
-  	 */
-  var chart: js.UndefOr[js.Any] = js.native
+    * Used to get reference to chart object.
+    */
+  var chart: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to tooltip DOM element.
-  	 */
-  var element: js.UndefOr[js.Any] = js.native
+    * Used to get reference to tooltip DOM element.
+    */
+  var element: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to current series item object.
-  	 */
-  var item: js.UndefOr[js.Any] = js.native
+    * Used to get reference to current series item object.
+    */
+  var item: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Used to get reference to current series object.
-  	 */
-  var series: js.UndefOr[js.Any] = js.native
+    * Used to get reference to current series object.
+    */
+  var series: js.UndefOr[js.Any] = js.undefined
 }
 
 object TooltipHiddenEventUIParam {
   @scala.inline
-  def apply(): TooltipHiddenEventUIParam = {
+  def apply(
+    actualItemBrush: js.Any = null,
+    actualSeriesBrush: js.Any = null,
+    chart: js.Any = null,
+    element: js.Any = null,
+    item: js.Any = null,
+    series: js.Any = null
+  ): TooltipHiddenEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (actualItemBrush != null) __obj.updateDynamic("actualItemBrush")(actualItemBrush.asInstanceOf[js.Any])
+    if (actualSeriesBrush != null) __obj.updateDynamic("actualSeriesBrush")(actualSeriesBrush.asInstanceOf[js.Any])
+    if (chart != null) __obj.updateDynamic("chart")(chart.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipHiddenEventUIParam]
   }
-  @scala.inline
-  implicit class TooltipHiddenEventUIParamOps[Self <: TooltipHiddenEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualItemBrush(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualItemBrush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualItemBrush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualItemBrush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActualSeriesBrush(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualSeriesBrush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActualSeriesBrush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actualSeriesBrush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChart(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

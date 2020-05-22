@@ -34,65 +34,18 @@ trait SchemaAllocationSpecificSKUAllocationReservedInstanceProperties extends js
 
 object SchemaAllocationSpecificSKUAllocationReservedInstanceProperties {
   @scala.inline
-  def apply(): SchemaAllocationSpecificSKUAllocationReservedInstanceProperties = {
+  def apply(
+    guestAccelerators: js.Array[SchemaAcceleratorConfig] = null,
+    localSsds: js.Array[SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk] = null,
+    machineType: String = null,
+    minCpuPlatform: String = null
+  ): SchemaAllocationSpecificSKUAllocationReservedInstanceProperties = {
     val __obj = js.Dynamic.literal()
+    if (guestAccelerators != null) __obj.updateDynamic("guestAccelerators")(guestAccelerators.asInstanceOf[js.Any])
+    if (localSsds != null) __obj.updateDynamic("localSsds")(localSsds.asInstanceOf[js.Any])
+    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
+    if (minCpuPlatform != null) __obj.updateDynamic("minCpuPlatform")(minCpuPlatform.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAllocationSpecificSKUAllocationReservedInstanceProperties]
   }
-  @scala.inline
-  implicit class SchemaAllocationSpecificSKUAllocationReservedInstancePropertiesOps[Self <: SchemaAllocationSpecificSKUAllocationReservedInstanceProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGuestAccelerators(value: js.Array[SchemaAcceleratorConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestAccelerators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuestAccelerators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guestAccelerators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalSsds(value: js.Array[SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localSsds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalSsds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localSsds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMachineType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMachineType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCpuPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCpuPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

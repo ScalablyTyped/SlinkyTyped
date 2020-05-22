@@ -6,7 +6,7 @@ import typingsSlinky.antDesignCompatible.antDesignCompatibleStrings._empty
 import typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.error
 import typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.success
 import typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.validating
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

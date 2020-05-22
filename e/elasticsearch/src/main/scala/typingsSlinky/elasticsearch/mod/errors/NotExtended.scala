@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("elasticsearch", "errors.NotExtended")
 @js.native
-class NotExtended () extends Error
+class NotExtended () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

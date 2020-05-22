@@ -18,14 +18,13 @@ import scala.scalajs.js.annotation._
   * specifies service of a place holder text field.
   * @see com.sun.star.text.TextField
   */
-@js.native
 trait JumpEdit extends TextField_ {
   /** determines a hint that is displayed at the user interface as tip. */
-  var Hint: String = js.native
+  var Hint: String
   /** determines the text of the place holder. */
-  var PlaceHolder: String = js.native
+  var PlaceHolder: String
   /** determines the type of the place holder as described in {@link com.sun.star.text.PlaceholderType} . */
-  var PlaceHolderType: Double = js.native
+  var PlaceHolderType: Double
 }
 
 object JumpEdit {
@@ -61,31 +60,5 @@ object JumpEdit {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], Hint = Hint.asInstanceOf[js.Any], IsFieldDisplayed = IsFieldDisplayed.asInstanceOf[js.Any], IsFieldUsed = IsFieldUsed.asInstanceOf[js.Any], PlaceHolder = PlaceHolder.asInstanceOf[js.Any], PlaceHolderType = PlaceHolderType.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), getPresentation = js.Any.fromFunction1(getPresentation), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[JumpEdit]
   }
-  @scala.inline
-  implicit class JumpEditOps[Self <: JumpEdit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaceHolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaceHolder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaceHolderType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaceHolderType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

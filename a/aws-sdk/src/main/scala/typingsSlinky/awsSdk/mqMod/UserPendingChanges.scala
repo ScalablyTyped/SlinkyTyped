@@ -22,53 +22,16 @@ trait UserPendingChanges extends js.Object {
 
 object UserPendingChanges {
   @scala.inline
-  def apply(): UserPendingChanges = {
+  def apply(
+    ConsoleAccess: js.UndefOr[boolean] = js.undefined,
+    Groups: listOfString = null,
+    PendingChange: ChangeType = null
+  ): UserPendingChanges = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ConsoleAccess)) __obj.updateDynamic("ConsoleAccess")(ConsoleAccess.get.asInstanceOf[js.Any])
+    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
+    if (PendingChange != null) __obj.updateDynamic("PendingChange")(PendingChange.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPendingChanges]
   }
-  @scala.inline
-  implicit class UserPendingChangesOps[Self <: UserPendingChanges] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsoleAccess(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsoleAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsoleAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPendingChange(value: ChangeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

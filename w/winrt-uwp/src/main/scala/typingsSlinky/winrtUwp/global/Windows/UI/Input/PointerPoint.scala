@@ -1,6 +1,8 @@
 package typingsSlinky.winrtUwp.global.Windows.UI.Input
 
+import typingsSlinky.winrtUwp.Windows.Devices.Input.PointerDevice
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
+import typingsSlinky.winrtUwp.Windows.Foundation.Point
 import typingsSlinky.winrtUwp.Windows.UI.Input.IPointerPointTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +12,32 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Input.PointerPoint")
 @js.native
 abstract class PointerPoint ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Input.PointerPoint
+  extends typingsSlinky.winrtUwp.Windows.UI.Input.PointerPoint {
+  /** Gets the ID of an input frame. */
+  /* CompleteClass */
+  override var frameId: Double = js.native
+  /** Gets a value that indicates whether the physical entity (touch, pen/stylus, or mouse button) is pressed down. */
+  /* CompleteClass */
+  override var isInContact: Boolean = js.native
+  /** Gets information about the device associated with the input pointer. */
+  /* CompleteClass */
+  override var pointerDevice: PointerDevice = js.native
+  /** Gets a unique identifier for the input pointer. */
+  /* CompleteClass */
+  override var pointerId: Double = js.native
+  /** Gets the location of the pointer input in client coordinates. */
+  /* CompleteClass */
+  override var position: Point = js.native
+  /** Gets extended information about the input pointer. */
+  /* CompleteClass */
+  override var properties: typingsSlinky.winrtUwp.Windows.UI.Input.PointerPointProperties = js.native
+  /** Gets the raw location of the pointer input in client coordinates. */
+  /* CompleteClass */
+  override var rawPosition: Point = js.native
+  /** Gets the time when the input occurred. */
+  /* CompleteClass */
+  override var timestamp: Double = js.native
+}
 
 /* static members */
 @JSGlobal("Windows.UI.Input.PointerPoint")

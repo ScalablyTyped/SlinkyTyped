@@ -17,29 +17,10 @@ trait SchemaHangoutsChatInfo extends js.Object {
 
 object SchemaHangoutsChatInfo {
   @scala.inline
-  def apply(): SchemaHangoutsChatInfo = {
+  def apply(roomId: js.Array[String] = null): SchemaHangoutsChatInfo = {
     val __obj = js.Dynamic.literal()
+    if (roomId != null) __obj.updateDynamic("roomId")(roomId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHangoutsChatInfo]
   }
-  @scala.inline
-  implicit class SchemaHangoutsChatInfoOps[Self <: SchemaHangoutsChatInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoomId(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roomId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoomId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roomId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

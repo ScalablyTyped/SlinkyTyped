@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExcludeOptions extends js.Object {
-  var toClassOnly: js.UndefOr[Boolean] = js.native
-  var toPlainOnly: js.UndefOr[Boolean] = js.native
+  var toClassOnly: js.UndefOr[Boolean] = js.undefined
+  var toPlainOnly: js.UndefOr[Boolean] = js.undefined
 }
 
 object ExcludeOptions {
   @scala.inline
-  def apply(): ExcludeOptions = {
+  def apply(toClassOnly: js.UndefOr[Boolean] = js.undefined, toPlainOnly: js.UndefOr[Boolean] = js.undefined): ExcludeOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(toClassOnly)) __obj.updateDynamic("toClassOnly")(toClassOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toPlainOnly)) __obj.updateDynamic("toPlainOnly")(toPlainOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExcludeOptions]
   }
-  @scala.inline
-  implicit class ExcludeOptionsOps[Self <: ExcludeOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToClassOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toClassOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToClassOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toClassOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToPlainOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPlainOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToPlainOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPlainOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

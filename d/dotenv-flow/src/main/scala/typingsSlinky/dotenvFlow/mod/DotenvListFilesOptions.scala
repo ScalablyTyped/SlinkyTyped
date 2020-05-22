@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DotenvListFilesOptions extends js.Object {
   /**
     * Node environment (development/test/production/etc,.).
     */
-  var node_env: js.UndefOr[String] = js.native
+  var node_env: js.UndefOr[String] = js.undefined
 }
 
 object DotenvListFilesOptions {
   @scala.inline
-  def apply(): DotenvListFilesOptions = {
+  def apply(node_env: String = null): DotenvListFilesOptions = {
     val __obj = js.Dynamic.literal()
+    if (node_env != null) __obj.updateDynamic("node_env")(node_env.asInstanceOf[js.Any])
     __obj.asInstanceOf[DotenvListFilesOptions]
   }
-  @scala.inline
-  implicit class DotenvListFilesOptionsOps[Self <: DotenvListFilesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNode_env(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node_env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNode_env: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node_env")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

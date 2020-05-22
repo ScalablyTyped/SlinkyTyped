@@ -1,0 +1,22 @@
+package typingsSlinky.wordpressBlockEditor.components
+
+import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.wordpressBlockEditor.richTextMod.RichText.ContentProps
+import typingsSlinky.wordpressBlockEditor.wordpressBlockEditorStrings.code
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object RichTextContentCode {
+  @JSImport("@wordpress/block-editor", "RichText.Content_code")
+  @js.native
+  object component extends js.Object
+  
+  def withProps(p: ContentProps[code]): SharedBuilder_ContentProps_1285456837[LegacyRef[js.Any] with js.Object] = new SharedBuilder_ContentProps_1285456837[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: String): SharedBuilder_ContentProps_1285456837[LegacyRef[js.Any] with js.Object] = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new SharedBuilder_ContentProps_1285456837[LegacyRef[js.Any] with js.Object](js.Array(this.component, __props.asInstanceOf[ContentProps[code]]))
+  }
+}
+

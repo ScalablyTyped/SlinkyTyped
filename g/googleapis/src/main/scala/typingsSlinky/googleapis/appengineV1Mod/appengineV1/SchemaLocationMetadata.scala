@@ -23,41 +23,14 @@ trait SchemaLocationMetadata extends js.Object {
 
 object SchemaLocationMetadata {
   @scala.inline
-  def apply(): SchemaLocationMetadata = {
+  def apply(
+    flexibleEnvironmentAvailable: js.UndefOr[Boolean] = js.undefined,
+    standardEnvironmentAvailable: js.UndefOr[Boolean] = js.undefined
+  ): SchemaLocationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(flexibleEnvironmentAvailable)) __obj.updateDynamic("flexibleEnvironmentAvailable")(flexibleEnvironmentAvailable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(standardEnvironmentAvailable)) __obj.updateDynamic("standardEnvironmentAvailable")(standardEnvironmentAvailable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLocationMetadata]
   }
-  @scala.inline
-  implicit class SchemaLocationMetadataOps[Self <: SchemaLocationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlexibleEnvironmentAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexibleEnvironmentAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlexibleEnvironmentAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flexibleEnvironmentAvailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandardEnvironmentAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardEnvironmentAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandardEnvironmentAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standardEnvironmentAvailable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

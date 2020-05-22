@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FsRoute extends js.Object {
-  var path: String = js.native
-  var route: String = js.native
+  var path: String
+  var route: String
 }
 
 object FsRoute {
@@ -16,25 +15,5 @@ object FsRoute {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], route = route.asInstanceOf[js.Any])
     __obj.asInstanceOf[FsRoute]
   }
-  @scala.inline
-  implicit class FsRouteOps[Self <: FsRoute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

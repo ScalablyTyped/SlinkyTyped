@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait USBDeviceFilter extends js.Object {
-  var classCode: js.UndefOr[Double] = js.native
-  var productId: js.UndefOr[Double] = js.native
-  var protocolCode: js.UndefOr[Double] = js.native
-  var serialNumber: js.UndefOr[String] = js.native
-  var subclassCode: js.UndefOr[Double] = js.native
-  var vendorId: js.UndefOr[Double] = js.native
+  var classCode: js.UndefOr[Double] = js.undefined
+  var productId: js.UndefOr[Double] = js.undefined
+  var protocolCode: js.UndefOr[Double] = js.undefined
+  var serialNumber: js.UndefOr[String] = js.undefined
+  var subclassCode: js.UndefOr[Double] = js.undefined
+  var vendorId: js.UndefOr[Double] = js.undefined
 }
 
 object USBDeviceFilter {
   @scala.inline
-  def apply(): USBDeviceFilter = {
+  def apply(
+    classCode: js.UndefOr[Double] = js.undefined,
+    productId: js.UndefOr[Double] = js.undefined,
+    protocolCode: js.UndefOr[Double] = js.undefined,
+    serialNumber: String = null,
+    subclassCode: js.UndefOr[Double] = js.undefined,
+    vendorId: js.UndefOr[Double] = js.undefined
+  ): USBDeviceFilter = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(classCode)) __obj.updateDynamic("classCode")(classCode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(productId)) __obj.updateDynamic("productId")(productId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(protocolCode)) __obj.updateDynamic("protocolCode")(protocolCode.get.asInstanceOf[js.Any])
+    if (serialNumber != null) __obj.updateDynamic("serialNumber")(serialNumber.asInstanceOf[js.Any])
+    if (!js.isUndefined(subclassCode)) __obj.updateDynamic("subclassCode")(subclassCode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(vendorId)) __obj.updateDynamic("vendorId")(vendorId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[USBDeviceFilter]
   }
-  @scala.inline
-  implicit class USBDeviceFilterOps[Self <: USBDeviceFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocolCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocolCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerialNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubclassCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subclassCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubclassCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subclassCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVendorId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVendorId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

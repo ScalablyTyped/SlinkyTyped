@@ -14,29 +14,10 @@ trait CreateLifecyclePolicyResponse extends js.Object {
 
 object CreateLifecyclePolicyResponse {
   @scala.inline
-  def apply(): CreateLifecyclePolicyResponse = {
+  def apply(PolicyId: PolicyId = null): CreateLifecyclePolicyResponse = {
     val __obj = js.Dynamic.literal()
+    if (PolicyId != null) __obj.updateDynamic("PolicyId")(PolicyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLifecyclePolicyResponse]
   }
-  @scala.inline
-  implicit class CreateLifecyclePolicyResponseOps[Self <: CreateLifecyclePolicyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyId(value: PolicyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

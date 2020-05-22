@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** information needed to export an object in mbx format (supplying an output stream to export into). */
-@js.native
 trait ExportStreamInfo extends js.Object {
   /** tries hard to make message (document) bodies available for export. */
-  var ForceBodies: Boolean = js.native
+  var ForceBodies: Boolean
   /** the output stream to export into. */
-  var Target: XOutputStream = js.native
+  var Target: XOutputStream
 }
 
 object ExportStreamInfo {
@@ -20,25 +19,5 @@ object ExportStreamInfo {
     val __obj = js.Dynamic.literal(ForceBodies = ForceBodies.asInstanceOf[js.Any], Target = Target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportStreamInfo]
   }
-  @scala.inline
-  implicit class ExportStreamInfoOps[Self <: ExportStreamInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceBodies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceBodies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: XOutputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,29 +11,10 @@ trait CreateOptionGroupResult extends js.Object {
 
 object CreateOptionGroupResult {
   @scala.inline
-  def apply(): CreateOptionGroupResult = {
+  def apply(OptionGroup: OptionGroup = null): CreateOptionGroupResult = {
     val __obj = js.Dynamic.literal()
+    if (OptionGroup != null) __obj.updateDynamic("OptionGroup")(OptionGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOptionGroupResult]
   }
-  @scala.inline
-  implicit class CreateOptionGroupResultOps[Self <: CreateOptionGroupResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOptionGroup(value: OptionGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectorOptions extends js.Object {
   /**
     * Can be used to log performance metrics
     */
-  var performanceLogger: js.UndefOr[ProjectorPerformanceLogger] = js.native
+  var performanceLogger: js.UndefOr[ProjectorPerformanceLogger] = js.undefined
   /**
     * May be used to add vendor prefixes when applying inline styles when needed.
     * This function is called when [[styles]] is used.
@@ -23,46 +22,19 @@ trait ProjectorOptions extends js.Object {
     */
   var styleApplyer: js.UndefOr[
     js.Function3[/* domNode */ HTMLElement, /* styleName */ String, /* value */ String, Unit]
-  ] = js.native
+  ] = js.undefined
 }
 
 object ProjectorOptions {
   @scala.inline
-  def apply(): ProjectorOptions = {
+  def apply(
+    performanceLogger: (/* eventType */ PerformanceLoggerEvent, /* trigger */ js.UndefOr[Event]) => Unit = null,
+    styleApplyer: (/* domNode */ HTMLElement, /* styleName */ String, /* value */ String) => Unit = null
+  ): ProjectorOptions = {
     val __obj = js.Dynamic.literal()
+    if (performanceLogger != null) __obj.updateDynamic("performanceLogger")(js.Any.fromFunction2(performanceLogger))
+    if (styleApplyer != null) __obj.updateDynamic("styleApplyer")(js.Any.fromFunction3(styleApplyer))
     __obj.asInstanceOf[ProjectorOptions]
   }
-  @scala.inline
-  implicit class ProjectorOptionsOps[Self <: ProjectorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPerformanceLogger(value: (/* eventType */ PerformanceLoggerEvent, /* trigger */ js.UndefOr[Event]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performanceLogger")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPerformanceLogger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performanceLogger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleApplyer(value: (/* domNode */ HTMLElement, /* styleName */ String, /* value */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleApplyer")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutStyleApplyer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleApplyer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

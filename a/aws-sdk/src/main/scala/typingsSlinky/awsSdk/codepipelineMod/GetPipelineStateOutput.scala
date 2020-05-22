@@ -30,77 +30,20 @@ trait GetPipelineStateOutput extends js.Object {
 
 object GetPipelineStateOutput {
   @scala.inline
-  def apply(): GetPipelineStateOutput = {
+  def apply(
+    created: js.Date = null,
+    pipelineName: PipelineName = null,
+    pipelineVersion: js.UndefOr[PipelineVersion] = js.undefined,
+    stageStates: StageStateList = null,
+    updated: js.Date = null
+  ): GetPipelineStateOutput = {
     val __obj = js.Dynamic.literal()
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (pipelineName != null) __obj.updateDynamic("pipelineName")(pipelineName.asInstanceOf[js.Any])
+    if (!js.isUndefined(pipelineVersion)) __obj.updateDynamic("pipelineVersion")(pipelineVersion.get.asInstanceOf[js.Any])
+    if (stageStates != null) __obj.updateDynamic("stageStates")(stageStates.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPipelineStateOutput]
   }
-  @scala.inline
-  implicit class GetPipelineStateOutputOps[Self <: GetPipelineStateOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineName(value: PipelineName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineVersion(value: PipelineVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageStates(value: StageStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

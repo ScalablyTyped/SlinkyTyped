@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapLayerDefaultsBing extends js.Object {
-  var attribution: js.UndefOr[String] = js.native
-  var culture: js.UndefOr[String] = js.native
-  var imagerySet: js.UndefOr[String] = js.native
-  var key: js.UndefOr[String] = js.native
-  var opacity: js.UndefOr[Double] = js.native
+  var attribution: js.UndefOr[String] = js.undefined
+  var culture: js.UndefOr[String] = js.undefined
+  var imagerySet: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
 }
 
 object MapLayerDefaultsBing {
   @scala.inline
-  def apply(): MapLayerDefaultsBing = {
+  def apply(
+    attribution: String = null,
+    culture: String = null,
+    imagerySet: String = null,
+    key: String = null,
+    opacity: js.UndefOr[Double] = js.undefined
+  ): MapLayerDefaultsBing = {
     val __obj = js.Dynamic.literal()
+    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
+    if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
+    if (imagerySet != null) __obj.updateDynamic("imagerySet")(imagerySet.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapLayerDefaultsBing]
   }
-  @scala.inline
-  implicit class MapLayerDefaultsBingOps[Self <: MapLayerDefaultsBing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttribution(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCulture(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("culture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCulture: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("culture")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImagerySet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagerySet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImagerySet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imagerySet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

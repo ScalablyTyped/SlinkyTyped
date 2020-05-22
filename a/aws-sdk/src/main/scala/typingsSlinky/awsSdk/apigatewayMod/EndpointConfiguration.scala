@@ -18,41 +18,11 @@ trait EndpointConfiguration extends js.Object {
 
 object EndpointConfiguration {
   @scala.inline
-  def apply(): EndpointConfiguration = {
+  def apply(types: ListOfEndpointType = null, vpcEndpointIds: ListOfString = null): EndpointConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    if (vpcEndpointIds != null) __obj.updateDynamic("vpcEndpointIds")(vpcEndpointIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointConfiguration]
   }
-  @scala.inline
-  implicit class EndpointConfigurationOps[Self <: EndpointConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTypes(value: ListOfEndpointType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpointIds(value: ListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcEndpointIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpointIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcEndpointIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

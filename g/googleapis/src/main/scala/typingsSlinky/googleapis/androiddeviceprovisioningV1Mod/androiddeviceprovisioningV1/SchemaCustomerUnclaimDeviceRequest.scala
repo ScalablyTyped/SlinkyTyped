@@ -17,29 +17,10 @@ trait SchemaCustomerUnclaimDeviceRequest extends js.Object {
 
 object SchemaCustomerUnclaimDeviceRequest {
   @scala.inline
-  def apply(): SchemaCustomerUnclaimDeviceRequest = {
+  def apply(device: SchemaDeviceReference = null): SchemaCustomerUnclaimDeviceRequest = {
     val __obj = js.Dynamic.literal()
+    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomerUnclaimDeviceRequest]
   }
-  @scala.inline
-  implicit class SchemaCustomerUnclaimDeviceRequestOps[Self <: SchemaCustomerUnclaimDeviceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDevice(value: SchemaDeviceReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

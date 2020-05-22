@@ -6,33 +6,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtensionRule extends js.Object {
   /**
     * alternative name for this rule.
     */
-  var alias: js.UndefOr[String] = js.native
+  var alias: js.UndefOr[String] = js.undefined
   /**
     * list of arguments accepted by `method`.
     */
-  var args: js.UndefOr[js.Array[RuleArgs | String]] = js.native
+  var args: js.UndefOr[js.Array[RuleArgs | String]] = js.undefined
   /**
     * Dual rule: converts or validates.
     */
-  var convert: js.UndefOr[Boolean] = js.native
-  var manifest: js.UndefOr[Boolean] = js.native
+  var convert: js.UndefOr[Boolean] = js.undefined
+  var manifest: js.UndefOr[Boolean] = js.undefined
   /**
     * rule body.
     */
-  var method: js.UndefOr[RuleMethod | `false`] = js.native
+  var method: js.UndefOr[RuleMethod | `false`] = js.undefined
   /**
     * whether rule supports multiple invocations.
     */
-  var multi: js.UndefOr[Boolean] = js.native
+  var multi: js.UndefOr[Boolean] = js.undefined
   /**
     * undocumented flags.
     */
-  var priority: js.UndefOr[Boolean] = js.native
+  var priority: js.UndefOr[Boolean] = js.undefined
   /**
     * validation function.
     */
@@ -44,126 +43,31 @@ trait ExtensionRule extends js.Object {
       /* options */ js.Any, 
       _
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object ExtensionRule {
   @scala.inline
-  def apply(): ExtensionRule = {
+  def apply(
+    alias: String = null,
+    args: js.Array[RuleArgs | String] = null,
+    convert: js.UndefOr[Boolean] = js.undefined,
+    manifest: js.UndefOr[Boolean] = js.undefined,
+    method: RuleMethod | `false` = null,
+    multi: js.UndefOr[Boolean] = js.undefined,
+    priority: js.UndefOr[Boolean] = js.undefined,
+    validate: (/* value */ js.Any, /* helpers */ js.Any, /* args */ Record[String, _], /* options */ js.Any) => _ = null
+  ): ExtensionRule = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(convert)) __obj.updateDynamic("convert")(convert.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(manifest)) __obj.updateDynamic("manifest")(manifest.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.get.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction4(validate))
     __obj.asInstanceOf[ExtensionRule]
   }
-  @scala.inline
-  implicit class ExtensionRuleOps[Self <: ExtensionRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArgs(value: js.Array[RuleArgs | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConvert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConvert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethodFunction1(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMethod(value: RuleMethod | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulti(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidate(
-      value: (/* value */ js.Any, /* helpers */ js.Any, /* args */ Record[String, _], /* options */ js.Any) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

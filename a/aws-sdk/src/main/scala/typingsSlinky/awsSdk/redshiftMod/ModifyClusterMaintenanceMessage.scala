@@ -34,83 +34,21 @@ trait ModifyClusterMaintenanceMessage extends js.Object {
 
 object ModifyClusterMaintenanceMessage {
   @scala.inline
-  def apply(ClusterIdentifier: String): ModifyClusterMaintenanceMessage = {
+  def apply(
+    ClusterIdentifier: String,
+    DeferMaintenance: js.UndefOr[BooleanOptional] = js.undefined,
+    DeferMaintenanceDuration: js.UndefOr[IntegerOptional] = js.undefined,
+    DeferMaintenanceEndTime: js.Date = null,
+    DeferMaintenanceIdentifier: String = null,
+    DeferMaintenanceStartTime: js.Date = null
+  ): ModifyClusterMaintenanceMessage = {
     val __obj = js.Dynamic.literal(ClusterIdentifier = ClusterIdentifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeferMaintenance)) __obj.updateDynamic("DeferMaintenance")(DeferMaintenance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeferMaintenanceDuration)) __obj.updateDynamic("DeferMaintenanceDuration")(DeferMaintenanceDuration.get.asInstanceOf[js.Any])
+    if (DeferMaintenanceEndTime != null) __obj.updateDynamic("DeferMaintenanceEndTime")(DeferMaintenanceEndTime.asInstanceOf[js.Any])
+    if (DeferMaintenanceIdentifier != null) __obj.updateDynamic("DeferMaintenanceIdentifier")(DeferMaintenanceIdentifier.asInstanceOf[js.Any])
+    if (DeferMaintenanceStartTime != null) __obj.updateDynamic("DeferMaintenanceStartTime")(DeferMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyClusterMaintenanceMessage]
   }
-  @scala.inline
-  implicit class ModifyClusterMaintenanceMessageOps[Self <: ModifyClusterMaintenanceMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeferMaintenance(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferMaintenance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferMaintenanceDuration(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferMaintenanceDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferMaintenanceEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferMaintenanceEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceEndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferMaintenanceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferMaintenanceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferMaintenanceStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferMaintenanceStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferMaintenanceStartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

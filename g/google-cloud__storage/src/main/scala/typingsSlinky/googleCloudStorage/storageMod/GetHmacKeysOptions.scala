@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetHmacKeysOptions extends js.Object {
-  var autoPaginate: js.UndefOr[Boolean] = js.native
-  var maxApiCalls: js.UndefOr[Double] = js.native
-  var maxResults: js.UndefOr[Double] = js.native
-  var pageToken: js.UndefOr[String] = js.native
-  var projectId: js.UndefOr[String] = js.native
-  var serviceAccountEmail: js.UndefOr[String] = js.native
-  var showDeletedKeys: js.UndefOr[Boolean] = js.native
-  var userProject: js.UndefOr[String] = js.native
+  var autoPaginate: js.UndefOr[Boolean] = js.undefined
+  var maxApiCalls: js.UndefOr[Double] = js.undefined
+  var maxResults: js.UndefOr[Double] = js.undefined
+  var pageToken: js.UndefOr[String] = js.undefined
+  var projectId: js.UndefOr[String] = js.undefined
+  var serviceAccountEmail: js.UndefOr[String] = js.undefined
+  var showDeletedKeys: js.UndefOr[Boolean] = js.undefined
+  var userProject: js.UndefOr[String] = js.undefined
 }
 
 object GetHmacKeysOptions {
   @scala.inline
-  def apply(): GetHmacKeysOptions = {
+  def apply(
+    autoPaginate: js.UndefOr[Boolean] = js.undefined,
+    maxApiCalls: js.UndefOr[Double] = js.undefined,
+    maxResults: js.UndefOr[Double] = js.undefined,
+    pageToken: String = null,
+    projectId: String = null,
+    serviceAccountEmail: String = null,
+    showDeletedKeys: js.UndefOr[Boolean] = js.undefined,
+    userProject: String = null
+  ): GetHmacKeysOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoPaginate)) __obj.updateDynamic("autoPaginate")(autoPaginate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxApiCalls)) __obj.updateDynamic("maxApiCalls")(maxApiCalls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
+    if (serviceAccountEmail != null) __obj.updateDynamic("serviceAccountEmail")(serviceAccountEmail.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDeletedKeys)) __obj.updateDynamic("showDeletedKeys")(showDeletedKeys.get.asInstanceOf[js.Any])
+    if (userProject != null) __obj.updateDynamic("userProject")(userProject.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetHmacKeysOptions]
   }
-  @scala.inline
-  implicit class GetHmacKeysOptionsOps[Self <: GetHmacKeysOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoPaginate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoPaginate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxApiCalls(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxApiCalls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxApiCalls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxApiCalls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccountEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccountEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDeletedKeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDeletedKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDeletedKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDeletedKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

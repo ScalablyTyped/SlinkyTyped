@@ -11,4 +11,11 @@ package object mod {
     /* done */ js.Function1[/* data */ typingsSlinky.sass.mod.ImporterReturnType, scala.Unit], 
     typingsSlinky.sass.mod.ImporterReturnType | scala.Unit
   ]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.sass.anon.File
+    - typingsSlinky.sass.anon.Contents
+    - typingsSlinky.std.Error
+    - scala.Null
+  */
+  type ImporterReturnType = typingsSlinky.sass.mod._ImporterReturnType | js.Error | scala.Null
 }

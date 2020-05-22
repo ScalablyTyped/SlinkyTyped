@@ -25,41 +25,14 @@ trait VirtualNodeSpecServiceDiscoveryAwsCloudMap extends js.Object {
 
 object VirtualNodeSpecServiceDiscoveryAwsCloudMap {
   @scala.inline
-  def apply(namespaceName: Input[String], serviceName: Input[String]): VirtualNodeSpecServiceDiscoveryAwsCloudMap = {
+  def apply(
+    namespaceName: Input[String],
+    serviceName: Input[String],
+    attributes: Input[StringDictionary[Input[String]]] = null
+  ): VirtualNodeSpecServiceDiscoveryAwsCloudMap = {
     val __obj = js.Dynamic.literal(namespaceName = namespaceName.asInstanceOf[js.Any], serviceName = serviceName.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualNodeSpecServiceDiscoveryAwsCloudMap]
   }
-  @scala.inline
-  implicit class VirtualNodeSpecServiceDiscoveryAwsCloudMapOps[Self <: VirtualNodeSpecServiceDiscoveryAwsCloudMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamespaceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: Input[StringDictionary[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

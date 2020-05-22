@@ -11,64 +11,33 @@ trait ClientVpnAuthenticationRequest extends js.Object {
     */
   var ActiveDirectory: js.UndefOr[DirectoryServiceAuthenticationRequest] = js.native
   /**
+    * Information about the IAM SAML identity provider to be used, if applicable. You must provide this information if Type is federated-authentication.
+    */
+  var FederatedAuthentication: js.UndefOr[FederatedAuthenticationRequest] = js.native
+  /**
     * Information about the authentication certificates to be used, if applicable. You must provide this information if Type is certificate-authentication.
     */
   var MutualAuthentication: js.UndefOr[CertificateAuthenticationRequest] = js.native
   /**
-    * The type of client authentication to be used. Specify certificate-authentication to use certificate-based authentication, or directory-service-authentication to use Active Directory authentication.
+    * The type of client authentication to be used.
     */
   var Type: js.UndefOr[ClientVpnAuthenticationType] = js.native
 }
 
 object ClientVpnAuthenticationRequest {
   @scala.inline
-  def apply(): ClientVpnAuthenticationRequest = {
+  def apply(
+    ActiveDirectory: DirectoryServiceAuthenticationRequest = null,
+    FederatedAuthentication: FederatedAuthenticationRequest = null,
+    MutualAuthentication: CertificateAuthenticationRequest = null,
+    Type: ClientVpnAuthenticationType = null
+  ): ClientVpnAuthenticationRequest = {
     val __obj = js.Dynamic.literal()
+    if (ActiveDirectory != null) __obj.updateDynamic("ActiveDirectory")(ActiveDirectory.asInstanceOf[js.Any])
+    if (FederatedAuthentication != null) __obj.updateDynamic("FederatedAuthentication")(FederatedAuthentication.asInstanceOf[js.Any])
+    if (MutualAuthentication != null) __obj.updateDynamic("MutualAuthentication")(MutualAuthentication.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientVpnAuthenticationRequest]
   }
-  @scala.inline
-  implicit class ClientVpnAuthenticationRequestOps[Self <: ClientVpnAuthenticationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveDirectory(value: DirectoryServiceAuthenticationRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutualAuthentication(value: CertificateAuthenticationRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MutualAuthentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutualAuthentication: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MutualAuthentication")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ClientVpnAuthenticationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

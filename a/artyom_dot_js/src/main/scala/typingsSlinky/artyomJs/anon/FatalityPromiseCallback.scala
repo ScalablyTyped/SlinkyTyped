@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FatalityPromiseCallback extends js.Object {
-  var fatalityPromiseCallback: js.UndefOr[js.Any] = js.native
-  var lastSay: js.UndefOr[js.Any] = js.native
-  var redirectRecognizedTextOutput: js.UndefOr[js.Any] = js.native
-  var remoteProcessorHandler: js.UndefOr[js.Any] = js.native
+  var fatalityPromiseCallback: js.UndefOr[js.Any] = js.undefined
+  var lastSay: js.UndefOr[js.Any] = js.undefined
+  var redirectRecognizedTextOutput: js.UndefOr[js.Any] = js.undefined
+  var remoteProcessorHandler: js.UndefOr[js.Any] = js.undefined
 }
 
 object FatalityPromiseCallback {
   @scala.inline
-  def apply(): FatalityPromiseCallback = {
+  def apply(
+    fatalityPromiseCallback: js.Any = null,
+    lastSay: js.Any = null,
+    redirectRecognizedTextOutput: js.Any = null,
+    remoteProcessorHandler: js.Any = null
+  ): FatalityPromiseCallback = {
     val __obj = js.Dynamic.literal()
+    if (fatalityPromiseCallback != null) __obj.updateDynamic("fatalityPromiseCallback")(fatalityPromiseCallback.asInstanceOf[js.Any])
+    if (lastSay != null) __obj.updateDynamic("lastSay")(lastSay.asInstanceOf[js.Any])
+    if (redirectRecognizedTextOutput != null) __obj.updateDynamic("redirectRecognizedTextOutput")(redirectRecognizedTextOutput.asInstanceOf[js.Any])
+    if (remoteProcessorHandler != null) __obj.updateDynamic("remoteProcessorHandler")(remoteProcessorHandler.asInstanceOf[js.Any])
     __obj.asInstanceOf[FatalityPromiseCallback]
   }
-  @scala.inline
-  implicit class FatalityPromiseCallbackOps[Self <: FatalityPromiseCallback] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFatalityPromiseCallback(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatalityPromiseCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFatalityPromiseCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatalityPromiseCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSay(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectRecognizedTextOutput(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectRecognizedTextOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectRecognizedTextOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectRecognizedTextOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteProcessorHandler(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteProcessorHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteProcessorHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteProcessorHandler")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

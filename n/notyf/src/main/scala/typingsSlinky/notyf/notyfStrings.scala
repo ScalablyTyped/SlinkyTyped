@@ -1,5 +1,7 @@
 package typingsSlinky.notyf
 
+import typingsSlinky.notyf.notyfOptionsMod.NotyfHorizontalPosition
+import typingsSlinky.notyf.notyfOptionsMod.NotyfVerticalPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,6 +56,9 @@ object notyfStrings {
   sealed trait body extends js.Object
   
   @js.native
+  sealed trait bottom extends NotyfVerticalPosition
+  
+  @js.native
   sealed trait br extends js.Object
   
   @js.native
@@ -64,6 +69,11 @@ object notyfStrings {
   
   @js.native
   sealed trait caption extends js.Object
+  
+  @js.native
+  sealed trait center
+    extends NotyfHorizontalPosition
+       with NotyfVerticalPosition
   
   @js.native
   sealed trait circle extends js.Object
@@ -294,6 +304,9 @@ object notyfStrings {
   sealed trait label extends js.Object
   
   @js.native
+  sealed trait left extends NotyfHorizontalPosition
+  
+  @js.native
   sealed trait legend extends js.Object
   
   @js.native
@@ -396,6 +409,9 @@ object notyfStrings {
   sealed trait rect extends js.Object
   
   @js.native
+  sealed trait right extends NotyfHorizontalPosition
+  
+  @js.native
   sealed trait rp extends js.Object
   
   @js.native
@@ -495,6 +511,9 @@ object notyfStrings {
   sealed trait title extends js.Object
   
   @js.native
+  sealed trait top extends NotyfVerticalPosition
+  
+  @js.native
   sealed trait tr extends js.Object
   
   @js.native
@@ -557,6 +576,8 @@ object notyfStrings {
   @scala.inline
   def body: body = "body".asInstanceOf[body]
   @scala.inline
+  def bottom: bottom = "bottom".asInstanceOf[bottom]
+  @scala.inline
   def br: br = "br".asInstanceOf[br]
   @scala.inline
   def button: button = "button".asInstanceOf[button]
@@ -564,6 +585,8 @@ object notyfStrings {
   def canvas: canvas = "canvas".asInstanceOf[canvas]
   @scala.inline
   def caption: caption = "caption".asInstanceOf[caption]
+  @scala.inline
+  def center: center = "center".asInstanceOf[center]
   @scala.inline
   def circle: circle = "circle".asInstanceOf[circle]
   @scala.inline
@@ -717,6 +740,8 @@ object notyfStrings {
   @scala.inline
   def label: label = "label".asInstanceOf[label]
   @scala.inline
+  def left: left = "left".asInstanceOf[left]
+  @scala.inline
   def legend: legend = "legend".asInstanceOf[legend]
   @scala.inline
   def li: li = "li".asInstanceOf[li]
@@ -785,6 +810,8 @@ object notyfStrings {
   @scala.inline
   def rect: rect = "rect".asInstanceOf[rect]
   @scala.inline
+  def right: right = "right".asInstanceOf[right]
+  @scala.inline
   def rp: rp = "rp".asInstanceOf[rp]
   @scala.inline
   def rt: rt = "rt".asInstanceOf[rt]
@@ -850,6 +877,8 @@ object notyfStrings {
   def time: time = "time".asInstanceOf[time]
   @scala.inline
   def title: title = "title".asInstanceOf[title]
+  @scala.inline
+  def top: top = "top".asInstanceOf[top]
   @scala.inline
   def tr: tr = "tr".asInstanceOf[tr]
   @scala.inline

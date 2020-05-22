@@ -4,368 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Model extends js.Object {
   /** To show the RadialSlider in initial render.
     * @Default {false}
     */
-  var autoOpen: js.UndefOr[Boolean] = js.native
+  var autoOpen: js.UndefOr[Boolean] = js.undefined
   /** Event triggers when the change occurs.
     */
-  var change: js.UndefOr[js.Function1[/* e */ ChangeEventArgs, Unit]] = js.native
+  var change: js.UndefOr[js.Function1[/* e */ ChangeEventArgs, Unit]] = js.undefined
   /** Event triggers when the radial slider is created.
     */
-  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.native
+  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.undefined
   /** Sets the root class for RadialSlider theme. This cssClass API helps to use custom skinning option for RadialSlider control. By defining the root class using this API, we need to
     * include this root class in CSS.
     */
-  var cssClass: js.UndefOr[String] = js.native
+  var cssClass: js.UndefOr[String] = js.undefined
   /** To enable Animation for Radial Slider.
     * @Default {true}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.native
+  var enableAnimation: js.UndefOr[Boolean] = js.undefined
   /** Enable/Disable the Roundoff property of RadialSlider
     * @Default {true}
     */
-  var enableRoundOff: js.UndefOr[Boolean] = js.native
+  var enableRoundOff: js.UndefOr[Boolean] = js.undefined
   /** Specifies the endAngle value for radial slider circle.
     * @Default {360}
     */
-  var endAngle: js.UndefOr[Double] = js.native
+  var endAngle: js.UndefOr[Double] = js.undefined
   /** Specifies the inline for label show or not on given radius.
     * @Default {false}
     */
-  var `inline`: js.UndefOr[Boolean] = js.native
+  var `inline`: js.UndefOr[Boolean] = js.undefined
   /** Specifies innerCircleImageClass, using this property we can give images for center radial circle through CSS classes.
     * @Default {null}
     */
-  var innerCircleImageClass: js.UndefOr[String] = js.native
+  var innerCircleImageClass: js.UndefOr[String] = js.undefined
   /** Specifies the file name of center circle icon
     * @Default {null}
     */
-  var innerCircleImageUrl: js.UndefOr[String] = js.native
+  var innerCircleImageUrl: js.UndefOr[String] = js.undefined
   /** Specifies the Space between the radial slider element and the label.
     * @Default {30}
     */
-  var labelSpace: js.UndefOr[Double] = js.native
+  var labelSpace: js.UndefOr[Double] = js.undefined
   /** Change the Radial Slider ticks value based on the given culture.
     * @Default {en-US}
     */
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[String] = js.undefined
   /** Event triggers when the mouse pointer is dragged over the radial slider.
     */
-  var mouseover: js.UndefOr[js.Function1[/* e */ MouseoverEventArgs, Unit]] = js.native
+  var mouseover: js.UndefOr[js.Function1[/* e */ MouseoverEventArgs, Unit]] = js.undefined
   /** Specifies the radius of radial slider
     * @Default {200}
     */
-  var radius: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.undefined
   /** To show the RadialSlider inner circle.
     * @Default {true}
     */
-  var showInnerCircle: js.UndefOr[Boolean] = js.native
+  var showInnerCircle: js.UndefOr[Boolean] = js.undefined
   /** Event triggers when the Radial slider slides.
     */
-  var slide: js.UndefOr[js.Function1[/* e */ SlideEventArgs, Unit]] = js.native
+  var slide: js.UndefOr[js.Function1[/* e */ SlideEventArgs, Unit]] = js.undefined
   /** Event triggers when the radial slider starts.
     */
-  var start: js.UndefOr[js.Function1[/* e */ StartEventArgs, Unit]] = js.native
+  var start: js.UndefOr[js.Function1[/* e */ StartEventArgs, Unit]] = js.undefined
   /** Specifies the endAngle value for radial slider circle.
     * @Default {0}
     */
-  var startAngle: js.UndefOr[Double] = js.native
+  var startAngle: js.UndefOr[Double] = js.undefined
   /** Event triggers when the radial slider stops.
     */
-  var stop: js.UndefOr[js.Function1[/* e */ StopEventArgs, Unit]] = js.native
+  var stop: js.UndefOr[js.Function1[/* e */ StopEventArgs, Unit]] = js.undefined
   /** Specifies the  strokeWidth for customize the needle, outer circle and inner circle.
     * @Default {2}
     */
-  var strokeWidth: js.UndefOr[Double] = js.native
+  var strokeWidth: js.UndefOr[Double] = js.undefined
   /** Specifies the ticks value of radial slider
     */
-  var ticks: js.UndefOr[js.Array[_]] = js.native
+  var ticks: js.UndefOr[js.Array[_]] = js.undefined
   /** Specifies the value of radial slider
     * @Default {10}
     */
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object Model {
   @scala.inline
-  def apply(): Model = {
+  def apply(
+    autoOpen: js.UndefOr[Boolean] = js.undefined,
+    change: /* e */ ChangeEventArgs => Unit = null,
+    create: /* e */ CreateEventArgs => Unit = null,
+    cssClass: String = null,
+    enableAnimation: js.UndefOr[Boolean] = js.undefined,
+    enableRoundOff: js.UndefOr[Boolean] = js.undefined,
+    endAngle: js.UndefOr[Double] = js.undefined,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    innerCircleImageClass: String = null,
+    innerCircleImageUrl: String = null,
+    labelSpace: js.UndefOr[Double] = js.undefined,
+    locale: String = null,
+    mouseover: /* e */ MouseoverEventArgs => Unit = null,
+    radius: js.UndefOr[Double] = js.undefined,
+    showInnerCircle: js.UndefOr[Boolean] = js.undefined,
+    slide: /* e */ SlideEventArgs => Unit = null,
+    start: /* e */ StartEventArgs => Unit = null,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    stop: /* e */ StopEventArgs => Unit = null,
+    strokeWidth: js.UndefOr[Double] = js.undefined,
+    ticks: js.Array[_] = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): Model = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoOpen)) __obj.updateDynamic("autoOpen")(autoOpen.get.asInstanceOf[js.Any])
+    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction1(change))
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction1(create))
+    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableRoundOff)) __obj.updateDynamic("enableRoundOff")(enableRoundOff.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(endAngle)) __obj.updateDynamic("endAngle")(endAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (innerCircleImageClass != null) __obj.updateDynamic("innerCircleImageClass")(innerCircleImageClass.asInstanceOf[js.Any])
+    if (innerCircleImageUrl != null) __obj.updateDynamic("innerCircleImageUrl")(innerCircleImageUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelSpace)) __obj.updateDynamic("labelSpace")(labelSpace.get.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (mouseover != null) __obj.updateDynamic("mouseover")(js.Any.fromFunction1(mouseover))
+    if (!js.isUndefined(radius)) __obj.updateDynamic("radius")(radius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInnerCircle)) __obj.updateDynamic("showInnerCircle")(showInnerCircle.get.asInstanceOf[js.Any])
+    if (slide != null) __obj.updateDynamic("slide")(js.Any.fromFunction1(slide))
+    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction1(start))
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction1(stop))
+    if (!js.isUndefined(strokeWidth)) __obj.updateDynamic("strokeWidth")(strokeWidth.get.asInstanceOf[js.Any])
+    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
-  @scala.inline
-  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChange(value: /* e */ ChangeEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: /* e */ CreateEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableRoundOff(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRoundOff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableRoundOff: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRoundOff")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerCircleImageClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerCircleImageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerCircleImageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerCircleImageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerCircleImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerCircleImageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerCircleImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerCircleImageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelSpace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseover(value: /* e */ MouseoverEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseover")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMouseover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowInnerCircle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInnerCircle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowInnerCircle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInnerCircle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlide(value: /* e */ SlideEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSlide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: /* e */ StartEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStop(value: /* e */ StopEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicks(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait Alarm extends js.Object {
 
 object Alarm {
   @scala.inline
-  def apply(): Alarm = {
+  def apply(AlarmARN: ResourceName = null, AlarmName: XmlStringMaxLen255 = null): Alarm = {
     val __obj = js.Dynamic.literal()
+    if (AlarmARN != null) __obj.updateDynamic("AlarmARN")(AlarmARN.asInstanceOf[js.Any])
+    if (AlarmName != null) __obj.updateDynamic("AlarmName")(AlarmName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Alarm]
   }
-  @scala.inline
-  implicit class AlarmOps[Self <: Alarm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarmARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmName(value: XmlStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,14 @@ trait SearchTransitGatewayRoutesResult extends js.Object {
 
 object SearchTransitGatewayRoutesResult {
   @scala.inline
-  def apply(): SearchTransitGatewayRoutesResult = {
+  def apply(
+    AdditionalRoutesAvailable: js.UndefOr[Boolean] = js.undefined,
+    Routes: TransitGatewayRouteList = null
+  ): SearchTransitGatewayRoutesResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AdditionalRoutesAvailable)) __obj.updateDynamic("AdditionalRoutesAvailable")(AdditionalRoutesAvailable.get.asInstanceOf[js.Any])
+    if (Routes != null) __obj.updateDynamic("Routes")(Routes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchTransitGatewayRoutesResult]
   }
-  @scala.inline
-  implicit class SearchTransitGatewayRoutesResultOps[Self <: SearchTransitGatewayRoutesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalRoutesAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalRoutesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalRoutesAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalRoutesAvailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutes(value: TransitGatewayRouteList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Routes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Routes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

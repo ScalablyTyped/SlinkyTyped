@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateModel extends js.Object {
-  var author_id: js.UndefOr[ZendeskID] = js.native
-  var body: js.UndefOr[String] = js.native
-  var html_body: js.UndefOr[String] = js.native
-  var public: js.UndefOr[Boolean] = js.native
-  var request_id: js.UndefOr[Double] = js.native
-  var uploads: js.UndefOr[js.Array[String]] = js.native
-  var url: js.UndefOr[String] = js.native
+  var author_id: js.UndefOr[ZendeskID] = js.undefined
+  var body: js.UndefOr[String] = js.undefined
+  var html_body: js.UndefOr[String] = js.undefined
+  var public: js.UndefOr[Boolean] = js.undefined
+  var request_id: js.UndefOr[Double] = js.undefined
+  var uploads: js.UndefOr[js.Array[String]] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object CreateModel {
   @scala.inline
-  def apply(): CreateModel = {
+  def apply(
+    author_id: js.UndefOr[ZendeskID] = js.undefined,
+    body: String = null,
+    html_body: String = null,
+    public: js.UndefOr[Boolean] = js.undefined,
+    request_id: js.UndefOr[Double] = js.undefined,
+    uploads: js.Array[String] = null,
+    url: String = null
+  ): CreateModel = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(author_id)) __obj.updateDynamic("author_id")(author_id.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (html_body != null) __obj.updateDynamic("html_body")(html_body.asInstanceOf[js.Any])
+    if (!js.isUndefined(public)) __obj.updateDynamic("public")(public.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(request_id)) __obj.updateDynamic("request_id")(request_id.get.asInstanceOf[js.Any])
+    if (uploads != null) __obj.updateDynamic("uploads")(uploads.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateModel]
   }
-  @scala.inline
-  implicit class CreateModelOps[Self <: CreateModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor_id(value: ZendeskID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml_body(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml_body: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequest_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequest_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUploads(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUploads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

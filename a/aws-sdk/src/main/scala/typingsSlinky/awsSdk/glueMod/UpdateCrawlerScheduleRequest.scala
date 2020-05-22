@@ -18,35 +18,10 @@ trait UpdateCrawlerScheduleRequest extends js.Object {
 
 object UpdateCrawlerScheduleRequest {
   @scala.inline
-  def apply(CrawlerName: NameString): UpdateCrawlerScheduleRequest = {
+  def apply(CrawlerName: NameString, Schedule: CronExpression = null): UpdateCrawlerScheduleRequest = {
     val __obj = js.Dynamic.literal(CrawlerName = CrawlerName.asInstanceOf[js.Any])
+    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateCrawlerScheduleRequest]
   }
-  @scala.inline
-  implicit class UpdateCrawlerScheduleRequestOps[Self <: UpdateCrawlerScheduleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCrawlerName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: CronExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

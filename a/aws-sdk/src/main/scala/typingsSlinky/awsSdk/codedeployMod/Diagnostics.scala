@@ -26,65 +26,18 @@ trait Diagnostics extends js.Object {
 
 object Diagnostics {
   @scala.inline
-  def apply(): Diagnostics = {
+  def apply(
+    errorCode: LifecycleErrorCode = null,
+    logTail: LogTail = null,
+    message: LifecycleMessage = null,
+    scriptName: ScriptName = null
+  ): Diagnostics = {
     val __obj = js.Dynamic.literal()
+    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
+    if (logTail != null) __obj.updateDynamic("logTail")(logTail.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (scriptName != null) __obj.updateDynamic("scriptName")(scriptName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Diagnostics]
   }
-  @scala.inline
-  implicit class DiagnosticsOps[Self <: Diagnostics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCode(value: LifecycleErrorCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogTail(value: LogTail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logTail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogTail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logTail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: LifecycleMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptName(value: ScriptName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

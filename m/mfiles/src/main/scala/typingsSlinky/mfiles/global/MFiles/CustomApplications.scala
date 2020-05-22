@@ -1,6 +1,7 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.ICustomApplication
 import typingsSlinky.mfiles.ICustomApplications
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,14 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.CustomApplications")
 @js.native
-class CustomApplications () extends ICustomApplications
+class CustomApplications () extends ICustomApplications {
+  /* CompleteClass */
+  override val Count: Double = js.native
+  /* CompleteClass */
+  override def Clone(): ICustomApplications = js.native
+  /* CompleteClass */
+  override def Item(Index: Double): ICustomApplication = js.native
+}
 
 @JSGlobal("MFiles.CustomApplications")
 @js.native

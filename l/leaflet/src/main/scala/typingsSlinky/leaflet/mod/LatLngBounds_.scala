@@ -6,14 +6,12 @@ import scala.scalajs.js.annotation._
 
 @JSImport("leaflet", "LatLngBounds")
 @js.native
-class LatLngBounds_ protected () extends LatLngBoundsExpression {
+class LatLngBounds_ protected () extends js.Object {
   def this(latlngs: LatLngBoundsLiteral) = this()
   def this(southWest: LatLngExpression, northEast: LatLngExpression) = this()
-  def contains(otherBoundsOrLatLng: LatLngBoundsExpression): Boolean = js.native
-  def contains(otherBoundsOrLatLng: LatLngExpression): Boolean = js.native
+  def contains(otherBoundsOrLatLng: LatLngBoundsExpression | LatLngExpression): Boolean = js.native
   def equals(otherBounds: LatLngBoundsExpression): Boolean = js.native
-  def extend(latlngOrBounds: LatLngBoundsExpression): this.type = js.native
-  def extend(latlngOrBounds: LatLngExpression): this.type = js.native
+  def extend(latlngOrBounds: LatLngBoundsExpression | LatLngExpression): this.type = js.native
    // does this modify the current instance or does it return a new one?
   def getCenter(): LatLng_ = js.native
   def getEast(): Double = js.native

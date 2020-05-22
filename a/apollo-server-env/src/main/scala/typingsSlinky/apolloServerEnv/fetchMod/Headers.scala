@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("apollo-server-env/dist/fetch", "Headers")
 @js.native
 class Headers ()
-  extends Iterable[js.Tuple2[String, String]]
-     with HeadersInit {
+  extends Iterable[js.Tuple2[String, String]] {
   def this(init: HeadersInit) = this()
   def append(name: String, value: String): Unit = js.native
   def delete(name: String): Unit = js.native

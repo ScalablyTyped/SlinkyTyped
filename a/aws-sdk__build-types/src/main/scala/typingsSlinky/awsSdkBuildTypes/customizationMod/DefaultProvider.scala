@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultProvider extends js.Object {
   /**
     * A string containing a valid TypeScript expression that evaluates to a
@@ -18,8 +17,8 @@ trait DefaultProvider extends js.Object {
     * If an imported type is used, it must be referred to as a property of the
     * imported package.
     */
-  var expression: String = js.native
-  var `type`: provider = js.native
+  var expression: String
+  var `type`: provider
 }
 
 object DefaultProvider {
@@ -29,25 +28,5 @@ object DefaultProvider {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultProvider]
   }
-  @scala.inline
-  implicit class DefaultProviderOps[Self <: DefaultProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: provider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

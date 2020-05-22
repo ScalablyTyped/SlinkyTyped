@@ -21,29 +21,10 @@ trait SchemaModifyColumnFamiliesRequest extends js.Object {
 
 object SchemaModifyColumnFamiliesRequest {
   @scala.inline
-  def apply(): SchemaModifyColumnFamiliesRequest = {
+  def apply(modifications: js.Array[SchemaModification] = null): SchemaModifyColumnFamiliesRequest = {
     val __obj = js.Dynamic.literal()
+    if (modifications != null) __obj.updateDynamic("modifications")(modifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyColumnFamiliesRequest]
   }
-  @scala.inline
-  implicit class SchemaModifyColumnFamiliesRequestOps[Self <: SchemaModifyColumnFamiliesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModifications(value: js.Array[SchemaModification]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifications")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

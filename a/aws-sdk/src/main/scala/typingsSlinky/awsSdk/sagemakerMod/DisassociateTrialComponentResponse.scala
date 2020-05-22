@@ -18,41 +18,11 @@ trait DisassociateTrialComponentResponse extends js.Object {
 
 object DisassociateTrialComponentResponse {
   @scala.inline
-  def apply(): DisassociateTrialComponentResponse = {
+  def apply(TrialArn: TrialArn = null, TrialComponentArn: TrialComponentArn = null): DisassociateTrialComponentResponse = {
     val __obj = js.Dynamic.literal()
+    if (TrialArn != null) __obj.updateDynamic("TrialArn")(TrialArn.asInstanceOf[js.Any])
+    if (TrialComponentArn != null) __obj.updateDynamic("TrialComponentArn")(TrialComponentArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateTrialComponentResponse]
   }
-  @scala.inline
-  implicit class DisassociateTrialComponentResponseOps[Self <: DisassociateTrialComponentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrialArn(value: TrialArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrialArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrialComponentArn(value: TrialComponentArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialComponentArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrialComponentArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialComponentArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

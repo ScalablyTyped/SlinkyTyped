@@ -12,242 +12,60 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-native-modal-popover.react-native-modal-popover/lib/Popover.PopoverProps> */
-@js.native
 trait PartialPopoverProps extends js.Object {
-  var arrowSize: js.UndefOr[Size] = js.native
-  var arrowStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var backgroundStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var contentStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var displayArea: js.UndefOr[Rect] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[js.Function1[/* show */ Boolean, js.Function1[/* value */ Double, Double]]] = js.native
-  var fromRect: js.UndefOr[Rect] = js.native
-  var onClose: js.UndefOr[js.Function0[Unit]] = js.native
-  var onDismiss: js.UndefOr[js.Function0[Unit]] = js.native
-  var placement: js.UndefOr[Placement | auto] = js.native
-  var popoverStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var supportedOrientations: js.UndefOr[js.Array[Orientation]] = js.native
-  var useNativeDriver: js.UndefOr[Boolean] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var arrowSize: js.UndefOr[Size] = js.undefined
+  var arrowStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var backgroundStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var contentStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var displayArea: js.UndefOr[Rect] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[js.Function1[/* show */ Boolean, js.Function1[/* value */ Double, Double]]] = js.undefined
+  var fromRect: js.UndefOr[Rect] = js.undefined
+  var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var placement: js.UndefOr[Placement | auto] = js.undefined
+  var popoverStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var supportedOrientations: js.UndefOr[js.Array[Orientation]] = js.undefined
+  var useNativeDriver: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialPopoverProps {
   @scala.inline
-  def apply(): PartialPopoverProps = {
+  def apply(
+    arrowSize: Size = null,
+    arrowStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    backgroundStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    contentStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    displayArea: Rect = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    easing: /* show */ Boolean => js.Function1[/* value */ Double, Double] = null,
+    fromRect: Rect = null,
+    onClose: () => Unit = null,
+    onDismiss: () => Unit = null,
+    placement: Placement | auto = null,
+    popoverStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    supportedOrientations: js.Array[Orientation] = null,
+    useNativeDriver: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): PartialPopoverProps = {
     val __obj = js.Dynamic.literal()
+    if (arrowSize != null) __obj.updateDynamic("arrowSize")(arrowSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(arrowStyle)) __obj.updateDynamic("arrowStyle")(arrowStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(backgroundStyle)) __obj.updateDynamic("backgroundStyle")(backgroundStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentStyle)) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
+    if (displayArea != null) __obj.updateDynamic("displayArea")(displayArea.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(js.Any.fromFunction1(easing))
+    if (fromRect != null) __obj.updateDynamic("fromRect")(fromRect.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
+    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
+    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
+    if (!js.isUndefined(popoverStyle)) __obj.updateDynamic("popoverStyle")(popoverStyle.asInstanceOf[js.Any])
+    if (supportedOrientations != null) __obj.updateDynamic("supportedOrientations")(supportedOrientations.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNativeDriver)) __obj.updateDynamic("useNativeDriver")(useNativeDriver.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPopoverProps]
   }
-  @scala.inline
-  implicit class PartialPopoverPropsOps[Self <: PartialPopoverProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArrowSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrowStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrowStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrowStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withBackgroundStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withContentStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withDisplayArea(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: /* show */ Boolean => js.Function1[/* value */ Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDismiss(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: Placement | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopoverStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopoverStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopoverStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withSupportedOrientations(value: js.Array[Orientation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedOrientations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedOrientations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedOrientations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseNativeDriver(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNativeDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

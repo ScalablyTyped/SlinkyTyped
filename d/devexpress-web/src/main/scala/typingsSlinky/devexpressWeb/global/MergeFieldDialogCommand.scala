@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MergeFieldDialogCommand")
 @js.native
 class MergeFieldDialogCommand ()
-  extends typingsSlinky.devexpressWeb.MergeFieldDialogCommand
+  extends typingsSlinky.devexpressWeb.MergeFieldDialogCommand {
+  /**
+    * Executes the MergeFieldDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

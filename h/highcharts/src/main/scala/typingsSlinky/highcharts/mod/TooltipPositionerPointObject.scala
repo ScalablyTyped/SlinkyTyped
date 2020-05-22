@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TooltipPositionerPointObject extends js.Object {
   /**
     * If `tooltip.split` option is enabled and positioner is called for each of
     * the boxes separately, this property indicates the call on the xAxis
     * header, which is not a point itself.
     */
-  var isHeader: Boolean = js.native
-  var negative: Boolean = js.native
+  var isHeader: Boolean
+  var negative: Boolean
   /**
     * The reference point relative to the plot area. Add chart.plotLeft to get
     * the full coordinates.
     */
-  var plotX: Double = js.native
+  var plotX: Double
   /**
     * The reference point relative to the plot area. Add chart.plotTop to get
     * the full coordinates.
     */
-  var plotY: Double = js.native
+  var plotY: Double
 }
 
 object TooltipPositionerPointObject {
@@ -31,37 +30,5 @@ object TooltipPositionerPointObject {
     val __obj = js.Dynamic.literal(isHeader = isHeader.asInstanceOf[js.Any], negative = negative.asInstanceOf[js.Any], plotX = plotX.asInstanceOf[js.Any], plotY = plotY.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipPositionerPointObject]
   }
-  @scala.inline
-  implicit class TooltipPositionerPointObjectOps[Self <: TooltipPositionerPointObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlotX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlotY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plotY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

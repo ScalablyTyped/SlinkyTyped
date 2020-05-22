@@ -1,10 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DatePickerProperties extends WidgetProperties {
   /**
     * Indicates whether the date gets updated when the user changes the month in the drop-down.
@@ -13,70 +13,41 @@ trait DatePickerProperties extends WidgetProperties {
     *
     * @default false
     */
-  var commitOnMonthChange: js.UndefOr[Boolean] = js.native
+  var commitOnMonthChange: js.UndefOr[Boolean] = js.undefined
   /**
     * The input value for the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-DatePicker.html#value)
     */
-  var value: js.UndefOr[js.Any] = js.native
+  var value: js.UndefOr[js.Any] = js.undefined
   /**
     * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [DatePickerViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-DatePickerViewModel.html) class to access all properties and methods on the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-DatePicker.html#viewModel)
     */
-  var viewModel: js.UndefOr[DatePickerViewModel] = js.native
+  var viewModel: js.UndefOr[DatePickerViewModel] = js.undefined
 }
 
 object DatePickerProperties {
   @scala.inline
-  def apply(): DatePickerProperties = {
+  def apply(
+    commitOnMonthChange: js.UndefOr[Boolean] = js.undefined,
+    container: String | HTMLElement = null,
+    destroyed: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    label: String = null,
+    value: js.Any = null,
+    viewModel: DatePickerViewModel = null
+  ): DatePickerProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(commitOnMonthChange)) __obj.updateDynamic("commitOnMonthChange")(commitOnMonthChange.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(destroyed)) __obj.updateDynamic("destroyed")(destroyed.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (viewModel != null) __obj.updateDynamic("viewModel")(viewModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePickerProperties]
   }
-  @scala.inline
-  implicit class DatePickerPropertiesOps[Self <: DatePickerProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitOnMonthChange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitOnMonthChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitOnMonthChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitOnMonthChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: DatePickerViewModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

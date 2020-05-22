@@ -8,114 +8,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JQueryEventModel extends js.Object {
-  var component: js.UndefOr[dxFileUploader] = js.native
-  var element: js.UndefOr[dxElement] = js.native
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
-  var model: js.UndefOr[js.Any] = js.native
-  var previousValue: js.UndefOr[js.Array[org.scalajs.dom.raw.File]] = js.native
-  var value: js.UndefOr[js.Array[org.scalajs.dom.raw.File]] = js.native
+  var component: js.UndefOr[dxFileUploader] = js.undefined
+  var element: js.UndefOr[dxElement] = js.undefined
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
+  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.undefined
+  var model: js.UndefOr[js.Any] = js.undefined
+  var previousValue: js.UndefOr[js.Array[org.scalajs.dom.raw.File]] = js.undefined
+  var value: js.UndefOr[js.Array[org.scalajs.dom.raw.File]] = js.undefined
 }
 
 object JQueryEventModel {
   @scala.inline
-  def apply(): JQueryEventModel = {
+  def apply(
+    component: dxFileUploader = null,
+    element: dxElement = null,
+    event: event = null,
+    jQueryEvent: JQueryEventObject = null,
+    model: js.Any = null,
+    previousValue: js.Array[org.scalajs.dom.raw.File] = null,
+    value: js.Array[org.scalajs.dom.raw.File] = null
+  ): JQueryEventModel = {
     val __obj = js.Dynamic.literal()
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (jQueryEvent != null) __obj.updateDynamic("jQueryEvent")(jQueryEvent.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (previousValue != null) __obj.updateDynamic("previousValue")(previousValue.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[JQueryEventModel]
   }
-  @scala.inline
-  implicit class JQueryEventModelOps[Self <: JQueryEventModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponent(value: dxFileUploader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: dxElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvent(value: event): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJQueryEvent(value: JQueryEventObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJQueryEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousValue(value: js.Array[org.scalajs.dom.raw.File]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Array[org.scalajs.dom.raw.File]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

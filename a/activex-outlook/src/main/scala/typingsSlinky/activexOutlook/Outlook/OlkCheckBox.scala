@@ -7,23 +7,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OlkCheckBox extends js.Object {
-  var Accelerator: String = js.native
-  var Alignment: OlAlignment = js.native
-  var BackColor: OLE_COLOR = js.native
-  var BackStyle: OlBackStyle = js.native
-  var Caption: String = js.native
-  var Enabled: Boolean = js.native
-  val Font: StdFont = js.native
-  var ForeColor: OLE_COLOR = js.native
-  var MouseIcon: StdPicture = js.native
-  var MousePointer: OlMousePointer = js.native
+  var Accelerator: String
+  var Alignment: OlAlignment
+  var BackColor: OLE_COLOR
+  var BackStyle: OlBackStyle
+  var Caption: String
+  var Enabled: Boolean
+  val Font: StdFont
+  var ForeColor: OLE_COLOR
+  var MouseIcon: StdPicture
+  var MousePointer: OlMousePointer
   @JSName("Outlook.OlkCheckBox_typekey")
-  var OutlookDotOlkCheckBox_typekey: OlkCheckBox = js.native
-  var TripleState: Boolean = js.native
-  var Value: js.Any = js.native
-  var WordWrap: Boolean = js.native
+  var OutlookDotOlkCheckBox_typekey: OlkCheckBox
+  var TripleState: Boolean
+  var Value: js.Any
+  var WordWrap: Boolean
 }
 
 object OlkCheckBox {
@@ -48,97 +47,5 @@ object OlkCheckBox {
     __obj.updateDynamic("Outlook.OlkCheckBox_typekey")(OutlookDotOlkCheckBox_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OlkCheckBox]
   }
-  @scala.inline
-  implicit class OlkCheckBoxOps[Self <: OlkCheckBox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccelerator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Accelerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlignment(value: OlAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackStyle(value: OlBackStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: StdFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForeColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseIcon(value: StdPicture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MouseIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMousePointer(value: OlMousePointer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MousePointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotOlkCheckBox_typekey(value: OlkCheckBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.OlkCheckBox_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTripleState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TripleState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

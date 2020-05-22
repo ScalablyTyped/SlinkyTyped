@@ -18,19 +18,5 @@ object SendTaskHeartbeatInput {
     val __obj = js.Dynamic.literal(taskToken = taskToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendTaskHeartbeatInput]
   }
-  @scala.inline
-  implicit class SendTaskHeartbeatInputOps[Self <: SendTaskHeartbeatInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskToken(value: TaskToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

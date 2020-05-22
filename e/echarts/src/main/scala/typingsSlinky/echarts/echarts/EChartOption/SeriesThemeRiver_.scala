@@ -31,7 +31,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-themeRiver
   */
-@js.native
 trait SeriesThemeRiver_ extends js.Object {
   /**
     * Distance between thmemRiver component and the bottom side of
@@ -45,7 +44,7 @@ trait SeriesThemeRiver_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.undefined
   /**
     * The boundary gap of the direction orthogonal with coordinate
     * axis in diagram, which is set to adjust the diagram position,
@@ -57,7 +56,7 @@ trait SeriesThemeRiver_ extends js.Object {
     * ["10%", "10%"]
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.boundaryGap
     */
-  var boundaryGap: js.UndefOr[js.Array[_]] = js.native
+  var boundaryGap: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * coordinate. The theme river adopts sinle time axis.
     *
@@ -66,7 +65,7 @@ trait SeriesThemeRiver_ extends js.Object {
     * ""single""
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.coordinateSystem
     */
-  var coordinateSystem: js.UndefOr[String] = js.native
+  var coordinateSystem: js.UndefOr[String] = js.undefined
   /**
     * Data array of series, which can be in the following forms:
     *
@@ -203,11 +202,11 @@ trait SeriesThemeRiver_ extends js.Object {
     js.Array[
       (js.Array[Unit | Double | String | DataObject]) | DataObject | Double | String | Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis
     */
-  var emphasis: js.UndefOr[LabelTextShadowColor] = js.native
+  var emphasis: js.UndefOr[LabelTextShadowColor] = js.undefined
   /**
     * Height of thmemRiver component.
     *
@@ -218,7 +217,7 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.height
     */
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double | String] = js.undefined
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -227,14 +226,14 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * style of each ribbon-shape river branch in theme river.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.undefined
   /**
     * `label` describes style of text labels with which each ribbon-shape
     * river branch corresponds in theme river.
@@ -242,7 +241,7 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.label
     */
-  var label: js.UndefOr[TextShadowBlur] = js.native
+  var label: js.UndefOr[TextShadowBlur] = js.undefined
   /**
     * Distance between thmemRiver component and the left side of the
     * container.
@@ -259,7 +258,7 @@ trait SeriesThemeRiver_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.left
     */
-  var left: js.UndefOr[Double | String] = js.native
+  var left: js.UndefOr[Double | String] = js.undefined
   /**
     * Distance between thmemRiver component and the right side of the
     * container.
@@ -272,7 +271,7 @@ trait SeriesThemeRiver_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.right
     */
-  var right: js.UndefOr[Double | String] = js.native
+  var right: js.UndefOr[Double | String] = js.undefined
   /**
     * The index of single time axis, which defaults to be 0 because
     * it contains only one axis.
@@ -280,14 +279,14 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.singleAxisIndex
     */
-  var singleAxisIndex: js.UndefOr[Double] = js.native
+  var singleAxisIndex: js.UndefOr[Double] = js.undefined
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.tooltip
     */
-  var tooltip: js.UndefOr[ExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.undefined
   /**
     * Distance between thmemRiver component and the top side of the
     * container.
@@ -304,20 +303,20 @@ trait SeriesThemeRiver_ extends js.Object {
     * 5%
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.top
     */
-  var top: js.UndefOr[Double | String] = js.native
+  var top: js.UndefOr[Double | String] = js.undefined
   /**
     * @default
     * "themeRiver"
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.type
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
   /**
     * Width of thmemRiver component.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.width
     */
-  var width: js.UndefOr[Double | String] = js.native
+  var width: js.UndefOr[Double | String] = js.undefined
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -332,7 +331,7 @@ trait SeriesThemeRiver_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.z
     */
-  var z: js.UndefOr[Double] = js.native
+  var z: js.UndefOr[Double] = js.undefined
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -350,242 +349,53 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.native
+  var zlevel: js.UndefOr[Double] = js.undefined
 }
 
 object SeriesThemeRiver_ {
   @scala.inline
-  def apply(): SeriesThemeRiver_ = {
+  def apply(
+    bottom: Double | String = null,
+    boundaryGap: js.Array[_] = null,
+    coordinateSystem: String = null,
+    data: js.Array[
+      (js.Array[Unit | Double | String | DataObject]) | DataObject | Double | String | Unit
+    ] = null,
+    emphasis: LabelTextShadowColor = null,
+    height: Double | String = null,
+    id: String = null,
+    itemStyle: BorderType = null,
+    label: TextShadowBlur = null,
+    left: Double | String = null,
+    right: Double | String = null,
+    singleAxisIndex: js.UndefOr[Double] = js.undefined,
+    tooltip: ExtraCssText = null,
+    top: Double | String = null,
+    `type`: String = null,
+    width: Double | String = null,
+    z: js.UndefOr[Double] = js.undefined,
+    zlevel: js.UndefOr[Double] = js.undefined
+  ): SeriesThemeRiver_ = {
     val __obj = js.Dynamic.literal()
+    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
+    if (boundaryGap != null) __obj.updateDynamic("boundaryGap")(boundaryGap.asInstanceOf[js.Any])
+    if (coordinateSystem != null) __obj.updateDynamic("coordinateSystem")(coordinateSystem.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
+    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleAxisIndex)) __obj.updateDynamic("singleAxisIndex")(singleAxisIndex.get.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zlevel)) __obj.updateDynamic("zlevel")(zlevel.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesThemeRiver_]
   }
-  @scala.inline
-  implicit class SeriesThemeRiver_Ops[Self <: SeriesThemeRiver_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundaryGap(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundaryGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoordinateSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoordinateSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(
-      value: js.Array[
-          (js.Array[Unit | Double | String | DataObject]) | DataObject | Double | String | Unit
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmphasis(value: LabelTextShadowColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: BorderType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: TextShadowBlur): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleAxisIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleAxisIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleAxisIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleAxisIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: ExtraCssText): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZlevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZlevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

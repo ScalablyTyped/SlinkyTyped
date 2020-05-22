@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.betaMod.computeBeta
 
-import typingsSlinky.googleapis.AnonCode
+import typingsSlinky.googleapis.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,46 +15,16 @@ trait SchemaNodeGroupsScopedList extends js.Object {
     * [Output Only] An informational warning that appears when the nodeGroup
     * list is empty.
     */
-  var warning: js.UndefOr[AnonCode] = js.native
+  var warning: js.UndefOr[Code] = js.native
 }
 
 object SchemaNodeGroupsScopedList {
   @scala.inline
-  def apply(): SchemaNodeGroupsScopedList = {
+  def apply(nodeGroups: js.Array[SchemaNodeGroup] = null, warning: Code = null): SchemaNodeGroupsScopedList = {
     val __obj = js.Dynamic.literal()
+    if (nodeGroups != null) __obj.updateDynamic("nodeGroups")(nodeGroups.asInstanceOf[js.Any])
+    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNodeGroupsScopedList]
   }
-  @scala.inline
-  implicit class SchemaNodeGroupsScopedListOps[Self <: SchemaNodeGroupsScopedList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeGroups(value: js.Array[SchemaNodeGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarning(value: AnonCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

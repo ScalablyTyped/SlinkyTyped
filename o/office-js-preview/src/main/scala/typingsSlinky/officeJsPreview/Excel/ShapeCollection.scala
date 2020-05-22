@@ -98,7 +98,7 @@ trait ShapeCollection extends ClientObject {
   def addTextBox(): Shape = js.native
   def addTextBox(text: String): Shape = js.native
   /**
-    * Returns the number of shapes in the worksheet. Read-only.
+    * Returns the number of shapes in the worksheet.
     *
     * [Api set: ExcelApi 1.9]
     */

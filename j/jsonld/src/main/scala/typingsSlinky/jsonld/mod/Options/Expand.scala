@@ -1,41 +1,34 @@
 package typingsSlinky.jsonld.mod.Options
 
+import typingsSlinky.jsonld.jsonldSpecMod.Context
+import typingsSlinky.jsonld.jsonldSpecMod.RemoteDocument
+import typingsSlinky.jsonld.jsonldSpecMod.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Expand
   extends Common
      with ExpMap {
-  var keepFreeFloatingNodes: js.UndefOr[Boolean] = js.native
+  var keepFreeFloatingNodes: js.UndefOr[Boolean] = js.undefined
 }
 
 object Expand {
   @scala.inline
-  def apply(): Expand = {
+  def apply(
+    base: String = null,
+    documentLoader: (/* url */ Url, /* callback */ js.Function2[/* err */ js.Error, /* remoteDoc */ RemoteDocument, Unit]) => js.Promise[RemoteDocument] = null,
+    expandContext: Context = null,
+    expansionMap: /* info */ js.Any => _ = null,
+    keepFreeFloatingNodes: js.UndefOr[Boolean] = js.undefined
+  ): Expand = {
     val __obj = js.Dynamic.literal()
+    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
+    if (documentLoader != null) __obj.updateDynamic("documentLoader")(js.Any.fromFunction2(documentLoader))
+    if (expandContext != null) __obj.updateDynamic("expandContext")(expandContext.asInstanceOf[js.Any])
+    if (expansionMap != null) __obj.updateDynamic("expansionMap")(js.Any.fromFunction1(expansionMap))
+    if (!js.isUndefined(keepFreeFloatingNodes)) __obj.updateDynamic("keepFreeFloatingNodes")(keepFreeFloatingNodes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expand]
   }
-  @scala.inline
-  implicit class ExpandOps[Self <: Expand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeepFreeFloatingNodes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepFreeFloatingNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepFreeFloatingNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepFreeFloatingNodes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

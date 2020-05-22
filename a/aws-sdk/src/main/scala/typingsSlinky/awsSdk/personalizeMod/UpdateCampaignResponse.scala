@@ -14,29 +14,10 @@ trait UpdateCampaignResponse extends js.Object {
 
 object UpdateCampaignResponse {
   @scala.inline
-  def apply(): UpdateCampaignResponse = {
+  def apply(campaignArn: Arn = null): UpdateCampaignResponse = {
     val __obj = js.Dynamic.literal()
+    if (campaignArn != null) __obj.updateDynamic("campaignArn")(campaignArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateCampaignResponse]
   }
-  @scala.inline
-  implicit class UpdateCampaignResponseOps[Self <: UpdateCampaignResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCampaignArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

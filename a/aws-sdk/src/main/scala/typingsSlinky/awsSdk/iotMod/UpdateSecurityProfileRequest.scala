@@ -7,9 +7,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateSecurityProfileRequest extends js.Object {
   /**
-    * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+    * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.  Note: This API field is deprecated. Please use UpdateSecurityProfileRequest$additionalMetricsToRetainV2 instead.
     */
   var additionalMetricsToRetain: js.UndefOr[AdditionalMetricsToRetainList] = js.native
+  /**
+    * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
+    */
+  var additionalMetricsToRetainV2: js.UndefOr[AdditionalMetricsToRetainV2List] = js.native
   /**
     * Where the alerts are sent. (Alerts are always sent to the console.)
     */
@@ -46,119 +50,29 @@ trait UpdateSecurityProfileRequest extends js.Object {
 
 object UpdateSecurityProfileRequest {
   @scala.inline
-  def apply(securityProfileName: SecurityProfileName): UpdateSecurityProfileRequest = {
+  def apply(
+    securityProfileName: SecurityProfileName,
+    additionalMetricsToRetain: AdditionalMetricsToRetainList = null,
+    additionalMetricsToRetainV2: AdditionalMetricsToRetainV2List = null,
+    alertTargets: AlertTargets = null,
+    behaviors: Behaviors = null,
+    deleteAdditionalMetricsToRetain: js.UndefOr[DeleteAdditionalMetricsToRetain] = js.undefined,
+    deleteAlertTargets: js.UndefOr[DeleteAlertTargets] = js.undefined,
+    deleteBehaviors: js.UndefOr[DeleteBehaviors] = js.undefined,
+    expectedVersion: js.UndefOr[OptionalVersion] = js.undefined,
+    securityProfileDescription: SecurityProfileDescription = null
+  ): UpdateSecurityProfileRequest = {
     val __obj = js.Dynamic.literal(securityProfileName = securityProfileName.asInstanceOf[js.Any])
+    if (additionalMetricsToRetain != null) __obj.updateDynamic("additionalMetricsToRetain")(additionalMetricsToRetain.asInstanceOf[js.Any])
+    if (additionalMetricsToRetainV2 != null) __obj.updateDynamic("additionalMetricsToRetainV2")(additionalMetricsToRetainV2.asInstanceOf[js.Any])
+    if (alertTargets != null) __obj.updateDynamic("alertTargets")(alertTargets.asInstanceOf[js.Any])
+    if (behaviors != null) __obj.updateDynamic("behaviors")(behaviors.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteAdditionalMetricsToRetain)) __obj.updateDynamic("deleteAdditionalMetricsToRetain")(deleteAdditionalMetricsToRetain.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteAlertTargets)) __obj.updateDynamic("deleteAlertTargets")(deleteAlertTargets.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteBehaviors)) __obj.updateDynamic("deleteBehaviors")(deleteBehaviors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expectedVersion)) __obj.updateDynamic("expectedVersion")(expectedVersion.get.asInstanceOf[js.Any])
+    if (securityProfileDescription != null) __obj.updateDynamic("securityProfileDescription")(securityProfileDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSecurityProfileRequest]
   }
-  @scala.inline
-  implicit class UpdateSecurityProfileRequestOps[Self <: UpdateSecurityProfileRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecurityProfileName(value: SecurityProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalMetricsToRetain(value: AdditionalMetricsToRetainList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMetricsToRetain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalMetricsToRetain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMetricsToRetain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlertTargets(value: AlertTargets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlertTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alertTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBehaviors(value: Behaviors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehaviors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteAdditionalMetricsToRetain(value: DeleteAdditionalMetricsToRetain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAdditionalMetricsToRetain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteAdditionalMetricsToRetain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAdditionalMetricsToRetain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteAlertTargets(value: DeleteAlertTargets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAlertTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteAlertTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAlertTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteBehaviors(value: DeleteBehaviors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteBehaviors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteBehaviors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteBehaviors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpectedVersion(value: OptionalVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityProfileDescription(value: SecurityProfileDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityProfileDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

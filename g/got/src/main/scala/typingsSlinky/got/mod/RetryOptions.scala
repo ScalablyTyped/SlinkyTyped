@@ -18,97 +18,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RetryOptions extends js.Object {
   /**
     * Allowed error codes.
     */
-  var errorCodes: js.UndefOr[js.Array[String]] = js.native
-  var maxRetryAfter: js.UndefOr[Double] = js.native
-  var methods: js.UndefOr[js.Array[GET | POST | PUT | HEAD | DELETE | OPTIONS | TRACE]] = js.native
-  var retries: js.UndefOr[Double | RetryFunction] = js.native
-  var statusCodes: js.UndefOr[js.Array[`408` | `413` | `429` | `500` | `502` | `503` | `504`]] = js.native
+  var errorCodes: js.UndefOr[js.Array[String]] = js.undefined
+  var maxRetryAfter: js.UndefOr[Double] = js.undefined
+  var methods: js.UndefOr[js.Array[GET | POST | PUT | HEAD | DELETE | OPTIONS | TRACE]] = js.undefined
+  var retries: js.UndefOr[Double | RetryFunction] = js.undefined
+  var statusCodes: js.UndefOr[js.Array[`408` | `413` | `429` | `500` | `502` | `503` | `504`]] = js.undefined
 }
 
 object RetryOptions {
   @scala.inline
-  def apply(): RetryOptions = {
+  def apply(
+    errorCodes: js.Array[String] = null,
+    maxRetryAfter: js.UndefOr[Double] = js.undefined,
+    methods: js.Array[GET | POST | PUT | HEAD | DELETE | OPTIONS | TRACE] = null,
+    retries: Double | RetryFunction = null,
+    statusCodes: js.Array[`408` | `413` | `429` | `500` | `502` | `503` | `504`] = null
+  ): RetryOptions = {
     val __obj = js.Dynamic.literal()
+    if (errorCodes != null) __obj.updateDynamic("errorCodes")(errorCodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetryAfter)) __obj.updateDynamic("maxRetryAfter")(maxRetryAfter.get.asInstanceOf[js.Any])
+    if (methods != null) __obj.updateDynamic("methods")(methods.asInstanceOf[js.Any])
+    if (retries != null) __obj.updateDynamic("retries")(retries.asInstanceOf[js.Any])
+    if (statusCodes != null) __obj.updateDynamic("statusCodes")(statusCodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetryOptions]
   }
-  @scala.inline
-  implicit class RetryOptionsOps[Self <: RetryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorCodes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRetryAfter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetryAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetryAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetryAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethods(value: js.Array[GET | POST | PUT | HEAD | DELETE | OPTIONS | TRACE]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetriesFunction2(value: (/* retry */ Double, /* error */ js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRetries(value: Double | RetryFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusCodes(value: js.Array[`408` | `413` | `429` | `500` | `502` | `503` | `504`]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCodes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

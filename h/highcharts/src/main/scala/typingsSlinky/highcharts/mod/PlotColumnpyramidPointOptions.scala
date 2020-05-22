@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotColumnpyramidPointOptions extends js.Object {
   /**
     * (Highcharts, Highstock) Events for each single point.
     */
-  var events: js.UndefOr[PlotColumnpyramidPointEventsOptions] = js.native
+  var events: js.UndefOr[PlotColumnpyramidPointEventsOptions] = js.undefined
 }
 
 object PlotColumnpyramidPointOptions {
   @scala.inline
-  def apply(): PlotColumnpyramidPointOptions = {
+  def apply(events: PlotColumnpyramidPointEventsOptions = null): PlotColumnpyramidPointOptions = {
     val __obj = js.Dynamic.literal()
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotColumnpyramidPointOptions]
   }
-  @scala.inline
-  implicit class PlotColumnpyramidPointOptionsOps[Self <: PlotColumnpyramidPointOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvents(value: PlotColumnpyramidPointEventsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

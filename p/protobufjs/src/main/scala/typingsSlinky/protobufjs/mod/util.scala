@@ -56,6 +56,15 @@ object util extends js.Object {
   class Long protected ()
     extends typingsSlinky.protobufjs.mod.Long {
     def this(params: js.Any*) = this()
+    /** High bits */
+    /* CompleteClass */
+    override var high: Double = js.native
+    /** Low bits */
+    /* CompleteClass */
+    override var low: Double = js.native
+    /** Whether unsigned or not */
+    /* CompleteClass */
+    override var unsigned: Boolean = js.native
   }
   
   /** Helper class for working with the low and high bits of a 64 bit value. */
@@ -119,6 +128,10 @@ object util extends js.Object {
     def this(message: String, properties: StringDictionary[js.Any]) = this()
     /** So far decoded message instance. */
     var instance: Message[T] = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   /** Decorator root (TypeScript). */

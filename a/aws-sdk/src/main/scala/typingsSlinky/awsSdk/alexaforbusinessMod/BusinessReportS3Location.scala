@@ -18,41 +18,11 @@ trait BusinessReportS3Location extends js.Object {
 
 object BusinessReportS3Location {
   @scala.inline
-  def apply(): BusinessReportS3Location = {
+  def apply(BucketName: CustomerS3BucketName = null, Path: BusinessReportS3Path = null): BusinessReportS3Location = {
     val __obj = js.Dynamic.literal()
+    if (BucketName != null) __obj.updateDynamic("BucketName")(BucketName.asInstanceOf[js.Any])
+    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
     __obj.asInstanceOf[BusinessReportS3Location]
   }
-  @scala.inline
-  implicit class BusinessReportS3LocationOps[Self <: BusinessReportS3Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketName(value: CustomerS3BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: BusinessReportS3Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

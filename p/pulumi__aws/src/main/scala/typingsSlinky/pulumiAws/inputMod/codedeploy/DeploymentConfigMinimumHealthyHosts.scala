@@ -7,47 +7,26 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DeploymentConfigMinimumHealthyHosts extends js.Object {
+  /**
+    * The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
+    */
   var `type`: js.UndefOr[Input[String]] = js.native
+  /**
+    * The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
+    * a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+    * deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+    * When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
+    */
   var value: js.UndefOr[Input[Double]] = js.native
 }
 
 object DeploymentConfigMinimumHealthyHosts {
   @scala.inline
-  def apply(): DeploymentConfigMinimumHealthyHosts = {
+  def apply(`type`: Input[String] = null, value: Input[Double] = null): DeploymentConfigMinimumHealthyHosts = {
     val __obj = js.Dynamic.literal()
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentConfigMinimumHealthyHosts]
   }
-  @scala.inline
-  implicit class DeploymentConfigMinimumHealthyHostsOps[Self <: DeploymentConfigMinimumHealthyHosts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

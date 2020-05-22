@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
 /**
   * An interface for URL and directory paths used by a Jupyter front-end.
   */
-@js.native
 trait IPaths extends js.Object {
   /**
     * The server directories used by the application, for user information
@@ -29,11 +28,11 @@ trait IPaths extends js.Object {
     * these paths in a request to the server (it would be better to write a
     * server extension to handle these cases).
     */
-  val directories: AppSettings = js.native
+  val directories: AppSettings
   /**
     * The urls used by the application.
     */
-  val urls: App = js.native
+  val urls: App
 }
 
 /**

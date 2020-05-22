@@ -18,41 +18,11 @@ trait ListJobsByPipelineResponse extends js.Object {
 
 object ListJobsByPipelineResponse {
   @scala.inline
-  def apply(): ListJobsByPipelineResponse = {
+  def apply(Jobs: Jobs = null, NextPageToken: Id = null): ListJobsByPipelineResponse = {
     val __obj = js.Dynamic.literal()
+    if (Jobs != null) __obj.updateDynamic("Jobs")(Jobs.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListJobsByPipelineResponse]
   }
-  @scala.inline
-  implicit class ListJobsByPipelineResponseOps[Self <: ListJobsByPipelineResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobs(value: Jobs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Jobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Jobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

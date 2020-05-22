@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Scale")
 @js.native
 class Scale ()
-  extends typingsSlinky.devexpressWeb.Scale
+  extends typingsSlinky.devexpressWeb.Scale {
+  /**
+    * Specifies the image's x-scale factor as a percent.
+    */
+  /* CompleteClass */
+  override var x: Double = js.native
+  /**
+    * Specifies the image's y-scale factor as a percent.
+    */
+  /* CompleteClass */
+  override var y: Double = js.native
+}
 

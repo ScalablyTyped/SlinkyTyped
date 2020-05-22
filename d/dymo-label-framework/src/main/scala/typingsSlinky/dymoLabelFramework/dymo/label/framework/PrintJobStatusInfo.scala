@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Print Job Status Info */
-@js.native
 trait PrintJobStatusInfo extends js.Object {
-  var status: PrintJobStatus = js.native
-  var statusMessage: String = js.native
+  var status: PrintJobStatus
+  var statusMessage: String
 }
 
 object PrintJobStatusInfo {
@@ -17,25 +16,5 @@ object PrintJobStatusInfo {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], statusMessage = statusMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintJobStatusInfo]
   }
-  @scala.inline
-  implicit class PrintJobStatusInfoOps[Self <: PrintJobStatusInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: PrintJobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

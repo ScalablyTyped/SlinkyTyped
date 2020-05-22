@@ -9,409 +9,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
-  var bodyClassName: js.UndefOr[String] = js.native
-  var burgerBarClassName: js.UndefOr[String] = js.native
-  var burgerButtonClassName: js.UndefOr[String] = js.native
-  var className: js.UndefOr[String] = js.native
-  var crossButtonClassName: js.UndefOr[String] = js.native
-  var crossClassName: js.UndefOr[String] = js.native
-  var customBurgerIcon: js.UndefOr[ReactElement | `false`] = js.native
-  var customCrossIcon: js.UndefOr[ReactElement | `false`] = js.native
-  var customOnKeyDown: js.UndefOr[js.Function1[/* event */ SyntheticKeyboardEvent[Element], Unit]] = js.native
-  var disableAutoFocus: js.UndefOr[Boolean] = js.native
-  var disableCloseOnEsc: js.UndefOr[Boolean] = js.native
-  var disableOverlayClick: js.UndefOr[Boolean | js.Function0[Boolean]] = js.native
-  var htmlClassName: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var isOpen: js.UndefOr[Boolean] = js.native
-  var itemClassName: js.UndefOr[String] = js.native
-  var itemListClassName: js.UndefOr[String] = js.native
-  var menuClassName: js.UndefOr[String] = js.native
-  var morphShapeClassName: js.UndefOr[String] = js.native
-  var noOverlay: js.UndefOr[Boolean] = js.native
-  var noTransition: js.UndefOr[Boolean] = js.native
-  var onStateChange: js.UndefOr[js.Function1[/* state */ State, Unit]] = js.native
+  var bodyClassName: js.UndefOr[String] = js.undefined
+  var burgerBarClassName: js.UndefOr[String] = js.undefined
+  var burgerButtonClassName: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var crossButtonClassName: js.UndefOr[String] = js.undefined
+  var crossClassName: js.UndefOr[String] = js.undefined
+  var customBurgerIcon: js.UndefOr[ReactElement | `false`] = js.undefined
+  var customCrossIcon: js.UndefOr[ReactElement | `false`] = js.undefined
+  var customOnKeyDown: js.UndefOr[js.Function1[/* event */ SyntheticKeyboardEvent[Element], Unit]] = js.undefined
+  var disableAutoFocus: js.UndefOr[Boolean] = js.undefined
+  var disableCloseOnEsc: js.UndefOr[Boolean] = js.undefined
+  var disableOverlayClick: js.UndefOr[Boolean | js.Function0[Boolean]] = js.undefined
+  var htmlClassName: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var isOpen: js.UndefOr[Boolean] = js.undefined
+  var itemClassName: js.UndefOr[String] = js.undefined
+  var itemListClassName: js.UndefOr[String] = js.undefined
+  var menuClassName: js.UndefOr[String] = js.undefined
+  var morphShapeClassName: js.UndefOr[String] = js.undefined
+  var noOverlay: js.UndefOr[Boolean] = js.undefined
+  var noTransition: js.UndefOr[Boolean] = js.undefined
+  var onStateChange: js.UndefOr[js.Function1[/* state */ State, Unit]] = js.undefined
   // TODO (Rajab) This can be improved, though I do not know how. From PropTypes:
   // styles && styles.outerContainer ? PropTypes.string.isRequired : PropTypes.string
-  var outerContainerId: js.UndefOr[String] = js.native
-  var overlayClassName: js.UndefOr[String] = js.native
+  var outerContainerId: js.UndefOr[String] = js.undefined
+  var overlayClassName: js.UndefOr[String] = js.undefined
   // TODO (Rajab) This can be improved, though I do not know how. From PropTypes:
   // styles && styles.pageWrap ? PropTypes.string.isRequired : PropTypes.string,
-  var pageWrapId: js.UndefOr[String] = js.native
-  var right: js.UndefOr[Boolean] = js.native
-  var styles: js.UndefOr[PartialStyles] = js.native
-  var width: js.UndefOr[Double | String] = js.native
+  var pageWrapId: js.UndefOr[String] = js.undefined
+  var right: js.UndefOr[Boolean] = js.undefined
+  var styles: js.UndefOr[PartialStyles] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply(): Props = {
+  def apply(
+    bodyClassName: String = null,
+    burgerBarClassName: String = null,
+    burgerButtonClassName: String = null,
+    className: String = null,
+    crossButtonClassName: String = null,
+    crossClassName: String = null,
+    customBurgerIcon: ReactElement | `false` = null,
+    customCrossIcon: ReactElement | `false` = null,
+    customOnKeyDown: /* event */ SyntheticKeyboardEvent[Element] => Unit = null,
+    disableAutoFocus: js.UndefOr[Boolean] = js.undefined,
+    disableCloseOnEsc: js.UndefOr[Boolean] = js.undefined,
+    disableOverlayClick: Boolean | js.Function0[Boolean] = null,
+    htmlClassName: String = null,
+    id: String = null,
+    isOpen: js.UndefOr[Boolean] = js.undefined,
+    itemClassName: String = null,
+    itemListClassName: String = null,
+    menuClassName: String = null,
+    morphShapeClassName: String = null,
+    noOverlay: js.UndefOr[Boolean] = js.undefined,
+    noTransition: js.UndefOr[Boolean] = js.undefined,
+    onStateChange: /* state */ State => Unit = null,
+    outerContainerId: String = null,
+    overlayClassName: String = null,
+    pageWrapId: String = null,
+    right: js.UndefOr[Boolean] = js.undefined,
+    styles: PartialStyles = null,
+    width: Double | String = null
+  ): Props = {
     val __obj = js.Dynamic.literal()
+    if (bodyClassName != null) __obj.updateDynamic("bodyClassName")(bodyClassName.asInstanceOf[js.Any])
+    if (burgerBarClassName != null) __obj.updateDynamic("burgerBarClassName")(burgerBarClassName.asInstanceOf[js.Any])
+    if (burgerButtonClassName != null) __obj.updateDynamic("burgerButtonClassName")(burgerButtonClassName.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (crossButtonClassName != null) __obj.updateDynamic("crossButtonClassName")(crossButtonClassName.asInstanceOf[js.Any])
+    if (crossClassName != null) __obj.updateDynamic("crossClassName")(crossClassName.asInstanceOf[js.Any])
+    if (customBurgerIcon != null) __obj.updateDynamic("customBurgerIcon")(customBurgerIcon.asInstanceOf[js.Any])
+    if (customCrossIcon != null) __obj.updateDynamic("customCrossIcon")(customCrossIcon.asInstanceOf[js.Any])
+    if (customOnKeyDown != null) __obj.updateDynamic("customOnKeyDown")(js.Any.fromFunction1(customOnKeyDown))
+    if (!js.isUndefined(disableAutoFocus)) __obj.updateDynamic("disableAutoFocus")(disableAutoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableCloseOnEsc)) __obj.updateDynamic("disableCloseOnEsc")(disableCloseOnEsc.get.asInstanceOf[js.Any])
+    if (disableOverlayClick != null) __obj.updateDynamic("disableOverlayClick")(disableOverlayClick.asInstanceOf[js.Any])
+    if (htmlClassName != null) __obj.updateDynamic("htmlClassName")(htmlClassName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.get.asInstanceOf[js.Any])
+    if (itemClassName != null) __obj.updateDynamic("itemClassName")(itemClassName.asInstanceOf[js.Any])
+    if (itemListClassName != null) __obj.updateDynamic("itemListClassName")(itemListClassName.asInstanceOf[js.Any])
+    if (menuClassName != null) __obj.updateDynamic("menuClassName")(menuClassName.asInstanceOf[js.Any])
+    if (morphShapeClassName != null) __obj.updateDynamic("morphShapeClassName")(morphShapeClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(noOverlay)) __obj.updateDynamic("noOverlay")(noOverlay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noTransition)) __obj.updateDynamic("noTransition")(noTransition.get.asInstanceOf[js.Any])
+    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction1(onStateChange))
+    if (outerContainerId != null) __obj.updateDynamic("outerContainerId")(outerContainerId.asInstanceOf[js.Any])
+    if (overlayClassName != null) __obj.updateDynamic("overlayClassName")(overlayClassName.asInstanceOf[js.Any])
+    if (pageWrapId != null) __obj.updateDynamic("pageWrapId")(pageWrapId.asInstanceOf[js.Any])
+    if (!js.isUndefined(right)) __obj.updateDynamic("right")(right.get.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBurgerBarClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burgerBarClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBurgerBarClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burgerBarClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBurgerButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burgerButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBurgerButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("burgerButtonClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossButtonClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossButtonClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossButtonClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossButtonClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomBurgerIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customBurgerIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomBurgerIcon(value: ReactElement | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customBurgerIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomBurgerIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customBurgerIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomCrossIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customCrossIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomCrossIcon(value: ReactElement | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customCrossIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomCrossIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customCrossIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomOnKeyDown(value: /* event */ SyntheticKeyboardEvent[Element] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customOnKeyDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomOnKeyDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customOnKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableCloseOnEsc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCloseOnEsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableCloseOnEsc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableCloseOnEsc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableOverlayClickFunction0(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOverlayClick")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisableOverlayClick(value: Boolean | js.Function0[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOverlayClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableOverlayClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOverlayClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemListClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemListClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemListClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemListClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMorphShapeClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("morphShapeClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMorphShapeClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("morphShapeClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoOverlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOverlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOverlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoTransition(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noTransition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStateChange(value: /* state */ State => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOuterContainerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerContainerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOuterContainerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outerContainerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlayClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageWrapId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageWrapId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageWrapId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageWrapId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: PartialStyles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

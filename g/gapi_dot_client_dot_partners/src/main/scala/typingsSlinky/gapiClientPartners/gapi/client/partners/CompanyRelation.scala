@@ -4,301 +4,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompanyRelation extends js.Object {
   /** The primary address for this company. */
-  var address: js.UndefOr[String] = js.native
+  var address: js.UndefOr[String] = js.undefined
   /** Whether the company is a Partner. */
-  var badgeTier: js.UndefOr[String] = js.native
+  var badgeTier: js.UndefOr[String] = js.undefined
   /** Indicates if the user is an admin for this company. */
-  var companyAdmin: js.UndefOr[Boolean] = js.native
+  var companyAdmin: js.UndefOr[Boolean] = js.undefined
   /**
     * The ID of the company. There may be no id if this is a
     * pending company.5
     */
-  var companyId: js.UndefOr[String] = js.native
+  var companyId: js.UndefOr[String] = js.undefined
   /**
     * The timestamp of when affiliation was requested.
     * @OutputOnly
     */
-  var creationTime: js.UndefOr[String] = js.native
+  var creationTime: js.UndefOr[String] = js.undefined
   /**
     * The internal company ID.
     * Only available for a whitelisted set of api clients.
     */
-  var internalCompanyId: js.UndefOr[String] = js.native
+  var internalCompanyId: js.UndefOr[String] = js.undefined
   /** The flag that indicates if the company is pending verification. */
-  var isPending: js.UndefOr[Boolean] = js.native
+  var isPending: js.UndefOr[Boolean] = js.undefined
   /** A URL to a profile photo, e.g. a G+ profile photo. */
-  var logoUrl: js.UndefOr[String] = js.native
+  var logoUrl: js.UndefOr[String] = js.undefined
   /** The AdWords manager account # associated this company. */
-  var managerAccount: js.UndefOr[String] = js.native
+  var managerAccount: js.UndefOr[String] = js.undefined
   /** The name (in the company's primary language) for the company. */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /** The phone number for the company's primary address. */
-  var phoneNumber: js.UndefOr[String] = js.native
+  var phoneNumber: js.UndefOr[String] = js.undefined
   /** The primary location of the company. */
-  var primaryAddress: js.UndefOr[Location] = js.native
+  var primaryAddress: js.UndefOr[Location] = js.undefined
   /** The primary country code of the company. */
-  var primaryCountryCode: js.UndefOr[String] = js.native
+  var primaryCountryCode: js.UndefOr[String] = js.undefined
   /** The primary language code of the company. */
-  var primaryLanguageCode: js.UndefOr[String] = js.native
+  var primaryLanguageCode: js.UndefOr[String] = js.undefined
   /**
     * The timestamp when the user was approved.
     * @OutputOnly
     */
-  var resolvedTimestamp: js.UndefOr[String] = js.native
+  var resolvedTimestamp: js.UndefOr[String] = js.undefined
   /** The segment the company is classified as. */
-  var segment: js.UndefOr[js.Array[String]] = js.native
+  var segment: js.UndefOr[js.Array[String]] = js.undefined
   /** The list of Google Partners specialization statuses for the company. */
-  var specializationStatus: js.UndefOr[js.Array[SpecializationStatus]] = js.native
+  var specializationStatus: js.UndefOr[js.Array[SpecializationStatus]] = js.undefined
   /** The state of relationship, in terms of approvals. */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
   /** The website URL for this company. */
-  var website: js.UndefOr[String] = js.native
+  var website: js.UndefOr[String] = js.undefined
 }
 
 object CompanyRelation {
   @scala.inline
-  def apply(): CompanyRelation = {
+  def apply(
+    address: String = null,
+    badgeTier: String = null,
+    companyAdmin: js.UndefOr[Boolean] = js.undefined,
+    companyId: String = null,
+    creationTime: String = null,
+    internalCompanyId: String = null,
+    isPending: js.UndefOr[Boolean] = js.undefined,
+    logoUrl: String = null,
+    managerAccount: String = null,
+    name: String = null,
+    phoneNumber: String = null,
+    primaryAddress: Location = null,
+    primaryCountryCode: String = null,
+    primaryLanguageCode: String = null,
+    resolvedTimestamp: String = null,
+    segment: js.Array[String] = null,
+    specializationStatus: js.Array[SpecializationStatus] = null,
+    state: String = null,
+    website: String = null
+  ): CompanyRelation = {
     val __obj = js.Dynamic.literal()
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (badgeTier != null) __obj.updateDynamic("badgeTier")(badgeTier.asInstanceOf[js.Any])
+    if (!js.isUndefined(companyAdmin)) __obj.updateDynamic("companyAdmin")(companyAdmin.get.asInstanceOf[js.Any])
+    if (companyId != null) __obj.updateDynamic("companyId")(companyId.asInstanceOf[js.Any])
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (internalCompanyId != null) __obj.updateDynamic("internalCompanyId")(internalCompanyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPending)) __obj.updateDynamic("isPending")(isPending.get.asInstanceOf[js.Any])
+    if (logoUrl != null) __obj.updateDynamic("logoUrl")(logoUrl.asInstanceOf[js.Any])
+    if (managerAccount != null) __obj.updateDynamic("managerAccount")(managerAccount.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (phoneNumber != null) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
+    if (primaryAddress != null) __obj.updateDynamic("primaryAddress")(primaryAddress.asInstanceOf[js.Any])
+    if (primaryCountryCode != null) __obj.updateDynamic("primaryCountryCode")(primaryCountryCode.asInstanceOf[js.Any])
+    if (primaryLanguageCode != null) __obj.updateDynamic("primaryLanguageCode")(primaryLanguageCode.asInstanceOf[js.Any])
+    if (resolvedTimestamp != null) __obj.updateDynamic("resolvedTimestamp")(resolvedTimestamp.asInstanceOf[js.Any])
+    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
+    if (specializationStatus != null) __obj.updateDynamic("specializationStatus")(specializationStatus.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompanyRelation]
   }
-  @scala.inline
-  implicit class CompanyRelationOps[Self <: CompanyRelation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeTier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeTier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeTier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeTier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyAdmin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyAdmin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyAdmin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyAdmin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompanyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompanyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("companyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInternalCompanyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internalCompanyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternalCompanyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internalCompanyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogoUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogoUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logoUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagerAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managerAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagerAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managerAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryAddress(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryCountryCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryCountryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryCountryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryCountryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvedTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegment(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecializationStatus(value: js.Array[SpecializationStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specializationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecializationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specializationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsite(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

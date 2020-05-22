@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ForceWebAudioApi extends js.Object {
-  var forceWebAudioApi: js.UndefOr[Boolean] = js.native
+  var forceWebAudioApi: js.UndefOr[Boolean] = js.undefined
 }
 
 object ForceWebAudioApi {
   @scala.inline
-  def apply(): ForceWebAudioApi = {
+  def apply(forceWebAudioApi: js.UndefOr[Boolean] = js.undefined): ForceWebAudioApi = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(forceWebAudioApi)) __obj.updateDynamic("forceWebAudioApi")(forceWebAudioApi.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForceWebAudioApi]
   }
-  @scala.inline
-  implicit class ForceWebAudioApiOps[Self <: ForceWebAudioApi] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceWebAudioApi(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceWebAudioApi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceWebAudioApi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceWebAudioApi")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

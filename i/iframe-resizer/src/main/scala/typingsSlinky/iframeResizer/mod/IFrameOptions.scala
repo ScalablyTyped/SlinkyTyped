@@ -8,436 +8,178 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line:interface-name
-@js.native
 trait IFrameOptions extends js.Object {
   /**
     * When enabled changes to the Window size or the DOM will cause the iFrame to resize to the new content size.
     * Disable if using size method with custom dimensions.
     */
-  var autoResize: js.UndefOr[Boolean] = js.native
+  var autoResize: js.UndefOr[Boolean] = js.undefined
   /**
     * Override the body background style in the iFrame.
     */
-  var bodyBackground: js.UndefOr[String] = js.native
+  var bodyBackground: js.UndefOr[String] = js.undefined
   /**
     * Override the default body margin style in the iFrame. A string can be any valid value for the
     * CSS margin attribute, for example '8px 3em'. A number value is converted into px.
     */
-  var bodyMargin: js.UndefOr[Double | String] = js.native
+  var bodyMargin: js.UndefOr[Double | String] = js.undefined
   /**
     * Override the default body padding style in the iFrame. A string can be any valid value for the
     * CSS margin attribute, for example '8px 3em'. A number value is converted into px.
     */
-  var bodyPadding: js.UndefOr[Double | String] = js.native
+  var bodyPadding: js.UndefOr[Double | String] = js.undefined
   /**
     * When set to true, only allow incoming messages from the domain listed in the src property of the iFrame tag.
     * If your iFrame navigates between different domains, ports or protocols; then you will need to
     * provide an array of URLs or disable this option.
     */
-  var checkOrigin: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var checkOrigin: js.UndefOr[Boolean | js.Array[String]] = js.undefined
   /**
     * Called when iFrame is closed via parentIFrame.close() or iframe.iframeResizer.close() methods.
     */
-  var closedCallback: js.UndefOr[js.Function1[/* iframeId */ String, Unit]] = js.native
+  var closedCallback: js.UndefOr[js.Function1[/* iframeId */ String, Unit]] = js.undefined
   /**
     * Height calculation method.
     */
-  var heightCalculationMethod: js.UndefOr[HeightCalculationMethod] = js.native
+  var heightCalculationMethod: js.UndefOr[HeightCalculationMethod] = js.undefined
   /**
     * Set iFrame Id
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * When enabled in page linking inside the iFrame and from the iFrame to the parent page will be enabled.
     */
-  var inPageLinks: js.UndefOr[Boolean] = js.native
+  var inPageLinks: js.UndefOr[Boolean] = js.undefined
   /**
     * Initial setup callback function.
     */
-  var initCallback: js.UndefOr[js.Function1[/* iframe */ IFrameComponent, Unit]] = js.native
+  var initCallback: js.UndefOr[js.Function1[/* iframe */ IFrameComponent, Unit]] = js.undefined
   /**
     * In browsers that don't support mutationObserver, such as IE10, the library falls back to using
     * setInterval, to check for changes to the page size.
     */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
   /**
     * Setting the log option to true will make the scripts in both the host page and the iFrame output
     * everything they do to the JavaScript console so you can see the communication between the two scripts.
     */
-  var log: js.UndefOr[Boolean] = js.native
+  var log: js.UndefOr[Boolean] = js.undefined
   /**
     * Set maximum height of iFrame.
     */
-  var maxHeight: js.UndefOr[Double] = js.native
+  var maxHeight: js.UndefOr[Double] = js.undefined
   /**
     * Set maximum width of iFrame.
     */
-  var maxWidth: js.UndefOr[Double] = js.native
+  var maxWidth: js.UndefOr[Double] = js.undefined
   /**
     * Receive message posted from iFrame with the parentIFrame.sendMessage() method.
     */
-  var messageCallback: js.UndefOr[js.Function1[/* data */ IFrameMessageData, Unit]] = js.native
+  var messageCallback: js.UndefOr[js.Function1[/* data */ IFrameMessageData, Unit]] = js.undefined
   /**
     * Set minimum height of iFrame.
     */
-  var minHeight: js.UndefOr[Double] = js.native
+  var minHeight: js.UndefOr[Double] = js.undefined
   /**
     * Set minimum width of iFrame.
     */
-  var minWidth: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.undefined
   /**
     * Listen for resize events from the parent page, or the iFrame. Select the 'child' value if the iFrame
     * can be resized independently of the browser window. Selecting this value can cause issues with some
     * height calculation methods on mobile devices.
     */
-  var resizeFrom: js.UndefOr[parent | child] = js.native
+  var resizeFrom: js.UndefOr[parent | child] = js.undefined
   /**
     * Function called after iFrame resized. Passes in messageData object containing the iFrame, height, width
     * and the type of event that triggered the iFrame to resize.
     */
-  var resizedCallback: js.UndefOr[js.Function1[/* data */ IFrameResizedData, Unit]] = js.native
+  var resizedCallback: js.UndefOr[js.Function1[/* data */ IFrameResizedData, Unit]] = js.undefined
   /**
     * Called before the page is repositioned after a request from the iFrame, due to either an in page link,
     * or a direct request from either parentIFrame.scrollTo() or parentIFrame.scrollToOffset().
     * If this callback function returns false, it will stop the library from repositioning the page, so that
     * you can implement your own animated page scrolling instead.
     */
-  var scrollCallback: js.UndefOr[js.Function1[/* data */ IFrameScrollData, Boolean]] = js.native
+  var scrollCallback: js.UndefOr[js.Function1[/* data */ IFrameScrollData, Boolean]] = js.undefined
   /**
     * Enable scroll bars in iFrame.
     */
-  var scrolling: js.UndefOr[Boolean | auto] = js.native
+  var scrolling: js.UndefOr[Boolean | auto] = js.undefined
   /**
     * Resize iFrame to content height.
     */
-  var sizeHeight: js.UndefOr[Boolean] = js.native
+  var sizeHeight: js.UndefOr[Boolean] = js.undefined
   /**
     * Resize iFrame to content width.
     */
-  var sizeWidth: js.UndefOr[Boolean] = js.native
+  var sizeWidth: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the number of pixels the iFrame content size has to change by, before triggering a resize of the iFrame.
     */
-  var tolerance: js.UndefOr[Double] = js.native
+  var tolerance: js.UndefOr[Double] = js.undefined
   /**
     * Width calculation method.
     */
-  var widthCalculationMethod: js.UndefOr[WidthCalculationMethod] = js.native
+  var widthCalculationMethod: js.UndefOr[WidthCalculationMethod] = js.undefined
 }
 
 object IFrameOptions {
   @scala.inline
-  def apply(): IFrameOptions = {
+  def apply(
+    autoResize: js.UndefOr[Boolean] = js.undefined,
+    bodyBackground: String = null,
+    bodyMargin: Double | String = null,
+    bodyPadding: Double | String = null,
+    checkOrigin: Boolean | js.Array[String] = null,
+    closedCallback: /* iframeId */ String => Unit = null,
+    heightCalculationMethod: HeightCalculationMethod = null,
+    id: String = null,
+    inPageLinks: js.UndefOr[Boolean] = js.undefined,
+    initCallback: /* iframe */ IFrameComponent => Unit = null,
+    interval: js.UndefOr[Double] = js.undefined,
+    log: js.UndefOr[Boolean] = js.undefined,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    messageCallback: /* data */ IFrameMessageData => Unit = null,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    resizeFrom: parent | child = null,
+    resizedCallback: /* data */ IFrameResizedData => Unit = null,
+    scrollCallback: /* data */ IFrameScrollData => Boolean = null,
+    scrolling: Boolean | auto = null,
+    sizeHeight: js.UndefOr[Boolean] = js.undefined,
+    sizeWidth: js.UndefOr[Boolean] = js.undefined,
+    tolerance: js.UndefOr[Double] = js.undefined,
+    widthCalculationMethod: WidthCalculationMethod = null
+  ): IFrameOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoResize)) __obj.updateDynamic("autoResize")(autoResize.get.asInstanceOf[js.Any])
+    if (bodyBackground != null) __obj.updateDynamic("bodyBackground")(bodyBackground.asInstanceOf[js.Any])
+    if (bodyMargin != null) __obj.updateDynamic("bodyMargin")(bodyMargin.asInstanceOf[js.Any])
+    if (bodyPadding != null) __obj.updateDynamic("bodyPadding")(bodyPadding.asInstanceOf[js.Any])
+    if (checkOrigin != null) __obj.updateDynamic("checkOrigin")(checkOrigin.asInstanceOf[js.Any])
+    if (closedCallback != null) __obj.updateDynamic("closedCallback")(js.Any.fromFunction1(closedCallback))
+    if (heightCalculationMethod != null) __obj.updateDynamic("heightCalculationMethod")(heightCalculationMethod.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(inPageLinks)) __obj.updateDynamic("inPageLinks")(inPageLinks.get.asInstanceOf[js.Any])
+    if (initCallback != null) __obj.updateDynamic("initCallback")(js.Any.fromFunction1(initCallback))
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(log)) __obj.updateDynamic("log")(log.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (messageCallback != null) __obj.updateDynamic("messageCallback")(js.Any.fromFunction1(messageCallback))
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (resizeFrom != null) __obj.updateDynamic("resizeFrom")(resizeFrom.asInstanceOf[js.Any])
+    if (resizedCallback != null) __obj.updateDynamic("resizedCallback")(js.Any.fromFunction1(resizedCallback))
+    if (scrollCallback != null) __obj.updateDynamic("scrollCallback")(js.Any.fromFunction1(scrollCallback))
+    if (scrolling != null) __obj.updateDynamic("scrolling")(scrolling.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeHeight)) __obj.updateDynamic("sizeHeight")(sizeHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeWidth)) __obj.updateDynamic("sizeWidth")(sizeWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tolerance)) __obj.updateDynamic("tolerance")(tolerance.get.asInstanceOf[js.Any])
+    if (widthCalculationMethod != null) __obj.updateDynamic("widthCalculationMethod")(widthCalculationMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFrameOptions]
   }
-  @scala.inline
-  implicit class IFrameOptionsOps[Self <: IFrameOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyBackground")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyMargin(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyPadding(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckOrigin(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosedCallback(value: /* iframeId */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closedCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutClosedCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closedCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightCalculationMethod(value: HeightCalculationMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightCalculationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightCalculationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightCalculationMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInPageLinks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inPageLinks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInPageLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inPageLinks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitCallback(value: /* iframe */ IFrameComponent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutInitCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageCallback(value: /* data */ IFrameMessageData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMessageCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeFrom(value: parent | child): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResizeFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizedCallback(value: /* data */ IFrameResizedData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizedCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutResizedCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizedCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollCallback(value: /* data */ IFrameScrollData => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutScrollCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrolling(value: Boolean | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTolerance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTolerance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidthCalculationMethod(value: WidthCalculationMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthCalculationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidthCalculationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthCalculationMethod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,10 @@ trait ContentTypeProfile extends js.Object {
 
 object ContentTypeProfile {
   @scala.inline
-  def apply(ContentType: String, Format: Format): ContentTypeProfile = {
+  def apply(ContentType: String, Format: Format, ProfileId: String = null): ContentTypeProfile = {
     val __obj = js.Dynamic.literal(ContentType = ContentType.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any])
+    if (ProfileId != null) __obj.updateDynamic("ProfileId")(ProfileId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentTypeProfile]
   }
-  @scala.inline
-  implicit class ContentTypeProfileOps[Self <: ContentTypeProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Format): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfileId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProfileId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,23 +7,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** an interface representing an entity with a modifyable title. */
-@js.native
 trait XTitle extends XInterface {
   /**
     * Returns the title of the object.
     * @returns The title.
     */
-  var Title: String = js.native
+  var Title: String
   /**
     * Returns the title of the object.
     * @returns The title.
     */
-  def getTitle(): String = js.native
+  def getTitle(): String
   /**
     * Sets the title of the object.
     * @param sTitle The title.
     */
-  def setTitle(sTitle: String): Unit = js.native
+  def setTitle(sTitle: String): Unit
 }
 
 object XTitle {
@@ -39,31 +38,5 @@ object XTitle {
     val __obj = js.Dynamic.literal(Title = Title.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getTitle = js.Any.fromFunction0(getTitle), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setTitle = js.Any.fromFunction1(setTitle))
     __obj.asInstanceOf[XTitle]
   }
-  @scala.inline
-  implicit class XTitleOps[Self <: XTitle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

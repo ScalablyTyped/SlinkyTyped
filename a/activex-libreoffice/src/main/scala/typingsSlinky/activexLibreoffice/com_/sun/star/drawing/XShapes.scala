@@ -12,18 +12,17 @@ import scala.scalajs.js.annotation._
   * @see MasterPage
   * @see DrawingDocumentDrawView
   */
-@js.native
 trait XShapes extends XIndexAccess {
   /**
     * inserts a {@link Shape} into this collection.
     * @param xShape a {@link Shape} that will be inserted.
     */
-  def add(xShape: XShape): Unit = js.native
+  def add(xShape: XShape): Unit
   /**
     * removes a {@link Shape} from this collection.
     * @param xShape the {@link Shape} will be removed from the collection and disposed.
     */
-  def remove(xShape: XShape): Unit = js.native
+  def remove(xShape: XShape): Unit
 }
 
 object XShapes {
@@ -44,25 +43,5 @@ object XShapes {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), add = js.Any.fromFunction1(add), getByIndex = js.Any.fromFunction1(getByIndex), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), remove = js.Any.fromFunction1(remove))
     __obj.asInstanceOf[XShapes]
   }
-  @scala.inline
-  implicit class XShapesOps[Self <: XShapes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd(value: XShape => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: XShape => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait RevokeClusterSecurityGroupIngressMessage extends js.Object {
 
 object RevokeClusterSecurityGroupIngressMessage {
   @scala.inline
-  def apply(ClusterSecurityGroupName: String): RevokeClusterSecurityGroupIngressMessage = {
+  def apply(
+    ClusterSecurityGroupName: String,
+    CIDRIP: String = null,
+    EC2SecurityGroupName: String = null,
+    EC2SecurityGroupOwnerId: String = null
+  ): RevokeClusterSecurityGroupIngressMessage = {
     val __obj = js.Dynamic.literal(ClusterSecurityGroupName = ClusterSecurityGroupName.asInstanceOf[js.Any])
+    if (CIDRIP != null) __obj.updateDynamic("CIDRIP")(CIDRIP.asInstanceOf[js.Any])
+    if (EC2SecurityGroupName != null) __obj.updateDynamic("EC2SecurityGroupName")(EC2SecurityGroupName.asInstanceOf[js.Any])
+    if (EC2SecurityGroupOwnerId != null) __obj.updateDynamic("EC2SecurityGroupOwnerId")(EC2SecurityGroupOwnerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevokeClusterSecurityGroupIngressMessage]
   }
-  @scala.inline
-  implicit class RevokeClusterSecurityGroupIngressMessageOps[Self <: RevokeClusterSecurityGroupIngressMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterSecurityGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSecurityGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCIDRIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CIDRIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCIDRIP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CIDRIP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEC2SecurityGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2SecurityGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEC2SecurityGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2SecurityGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEC2SecurityGroupOwnerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2SecurityGroupOwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEC2SecurityGroupOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2SecurityGroupOwnerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,41 +23,11 @@ trait SchemaClickThroughUrlSuffixProperties extends js.Object {
 
 object SchemaClickThroughUrlSuffixProperties {
   @scala.inline
-  def apply(): SchemaClickThroughUrlSuffixProperties = {
+  def apply(clickThroughUrlSuffix: String = null, overrideInheritedSuffix: js.UndefOr[Boolean] = js.undefined): SchemaClickThroughUrlSuffixProperties = {
     val __obj = js.Dynamic.literal()
+    if (clickThroughUrlSuffix != null) __obj.updateDynamic("clickThroughUrlSuffix")(clickThroughUrlSuffix.asInstanceOf[js.Any])
+    if (!js.isUndefined(overrideInheritedSuffix)) __obj.updateDynamic("overrideInheritedSuffix")(overrideInheritedSuffix.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClickThroughUrlSuffixProperties]
   }
-  @scala.inline
-  implicit class SchemaClickThroughUrlSuffixPropertiesOps[Self <: SchemaClickThroughUrlSuffixProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClickThroughUrlSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrlSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickThroughUrlSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickThroughUrlSuffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrideInheritedSuffix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideInheritedSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideInheritedSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideInheritedSuffix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

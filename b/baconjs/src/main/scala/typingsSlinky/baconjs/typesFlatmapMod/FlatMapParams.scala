@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FlatMapParams extends js.Object {
-  var desc: js.UndefOr[Desc] = js.native
-  var firstOnly: js.UndefOr[Boolean] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var mapError: js.UndefOr[Boolean] = js.native
+  var desc: js.UndefOr[Desc] = js.undefined
+  var firstOnly: js.UndefOr[Boolean] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var mapError: js.UndefOr[Boolean] = js.undefined
 }
 
 object FlatMapParams {
   @scala.inline
-  def apply(): FlatMapParams = {
+  def apply(
+    desc: Desc = null,
+    firstOnly: js.UndefOr[Boolean] = js.undefined,
+    limit: js.UndefOr[Double] = js.undefined,
+    mapError: js.UndefOr[Boolean] = js.undefined
+  ): FlatMapParams = {
     val __obj = js.Dynamic.literal()
+    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstOnly)) __obj.updateDynamic("firstOnly")(firstOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mapError)) __obj.updateDynamic("mapError")(mapError.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlatMapParams]
   }
-  @scala.inline
-  implicit class FlatMapParamsOps[Self <: FlatMapParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesc(value: Desc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,19 +12,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
-@js.native
 trait TSConditionalType
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSTypeKind {
-  var checkType: TSTypeKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var extendsType: TSTypeKind = js.native
-  var falseType: TSTypeKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var trueType: TSTypeKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSConditionalType = js.native
+  var checkType: TSTypeKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var extendsType: TSTypeKind
+  var falseType: TSTypeKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var trueType: TSTypeKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSConditionalType
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSConditionalType")

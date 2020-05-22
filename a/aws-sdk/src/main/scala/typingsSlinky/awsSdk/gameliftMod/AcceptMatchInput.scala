@@ -26,31 +26,5 @@ object AcceptMatchInput {
     val __obj = js.Dynamic.literal(AcceptanceType = AcceptanceType.asInstanceOf[js.Any], PlayerIds = PlayerIds.asInstanceOf[js.Any], TicketId = TicketId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptMatchInput]
   }
-  @scala.inline
-  implicit class AcceptMatchInputOps[Self <: AcceptMatchInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptanceType(value: AcceptanceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlayerIds(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicketId(value: MatchmakingIdStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -36,19 +36,16 @@ import scala.scalajs.js.annotation._
   * applying gradient fills to the text, or strokes, shadows and more. You can also use custom fonts
   * loaded externally, such as Google or TypeKit Web fonts.
   * 
-  * **Important:** If the font you wish to use has a space or digit in its name, such as
-  * 'Press Start 2P' or 'Roboto Condensed', then you _must_ put the font name in quotes, either
-  * when creating the Text object, or when setting the font via `setFont` or `setFontFamily`. I.e.:
+  * **Important:** The font name must be quoted if it contains certain combinations of digits or
+  * special characters, either when creating the Text object, or when setting the font via `setFont`
+  * or `setFontFamily`, e.g.:
   * 
   * ```javascript
-  * this.add.text(0, 0, 'Hello World', { fontFamily: '"Roboto Condensed"' });
+  * this.add.text(0, 0, 'Hello World', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
   * ```
   * 
-  * Equally, if you wish to provide a list of fallback fonts, then you should ensure they are all
-  * quoted properly, too:
-  * 
   * ```javascript
-  * this.add.text(0, 0, 'Hello World', { fontFamily: 'Verdana, "Times New Roman", Tahoma, serif' });
+  * this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
   * ```
   * 
   * You can only display fonts that are currently loaded and available to the browser: therefore fonts must
@@ -181,18 +178,18 @@ trait Text
     * Alignment only works if the Text object has more than one line of text.
     * @param align The text alignment for multi-line text. Default 'left'.
     */
-  def setAlign(): Text = js.native
-  def setAlign(align: String): Text = js.native
+  def setAlign(): this.type = js.native
+  def setAlign(align: String): this.type = js.native
   /**
     * Set the background color.
     * @param color The background color.
     */
-  def setBackgroundColor(color: String): Text = js.native
+  def setBackgroundColor(color: String): this.type = js.native
   /**
     * Set the text fill color.
     * @param color The text fill color.
     */
-  def setColor(color: String): Text = js.native
+  def setColor(color: String): this.type = js.native
   /**
     * Set the fill style to be used by the Text object.
     * 
@@ -202,8 +199,8 @@ trait Text
     * See the [MDN fillStyle docs](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) for more details.
     * @param color The text fill style. Can be any valid CanvasRenderingContext `fillStyle` value.
     */
-  def setFill(color: String): Text = js.native
-  def setFill(color: js.Any): Text = js.native
+  def setFill(color: String): this.type = js.native
+  def setFill(color: js.Any): this.type = js.native
   /**
     * Set a fixed width and height for the text.
     * 
@@ -211,7 +208,7 @@ trait Text
     * @param width The fixed width to set. `0` disables fixed width.
     * @param height The fixed height to set. `0` disables fixed height.
     */
-  def setFixedSize(width: Double, height: Double): Text = js.native
+  def setFixedSize(width: Double, height: Double): this.type = js.native
   /**
     * Set the font.
     * 
@@ -220,51 +217,51 @@ trait Text
     * If an object is given, the `fontFamily`, `fontSize` and `fontStyle`
     * properties of that object are set.
     * 
-    * **Important:** If the font you wish to use has a space or digit in its name, such as
-    * 'Press Start 2P' or 'Roboto Condensed', then you _must_ put the font name in quotes:
+    * **Important:** The font name must be quoted if it contains certain combinations of digits or
+    * special characters:
     * 
     * ```javascript
-    * Text.setFont('"Roboto Condensed"');
+    * Text.setFont('"Press Start 2P"');
     * ```
     * 
     * Equally, if you wish to provide a list of fallback fonts, then you should ensure they are all
     * quoted properly, too:
     * 
     * ```javascript
-    * Text.setFont('Verdana, "Times New Roman", Tahoma, serif');
+    * Text.setFont('Georgia, "Goudy Bookletter 1911", Times, serif');
     * ```
     * @param font The font family or font settings to set.
     */
-  def setFont(font: String): Text = js.native
+  def setFont(font: String): this.type = js.native
   /**
     * Set the font family.
     * 
-    * **Important:** If the font you wish to use has a space or digit in its name, such as
-    * 'Press Start 2P' or 'Roboto Condensed', then you _must_ put the font name in quotes:
+    * **Important:** The font name must be quoted if it contains certain combinations of digits or
+    * special characters:
     * 
     * ```javascript
-    * Text.setFont('"Roboto Condensed"');
+    * Text.setFont('"Press Start 2P"');
     * ```
     * 
     * Equally, if you wish to provide a list of fallback fonts, then you should ensure they are all
     * quoted properly, too:
     * 
     * ```javascript
-    * Text.setFont('Verdana, "Times New Roman", Tahoma, serif');
+    * Text.setFont('Georgia, "Goudy Bookletter 1911", Times, serif');
     * ```
     * @param family The font family.
     */
-  def setFontFamily(family: String): Text = js.native
+  def setFontFamily(family: String): this.type = js.native
   /**
     * Set the font size.
     * @param size The font size.
     */
-  def setFontSize(size: Double): Text = js.native
+  def setFontSize(size: Double): this.type = js.native
   /**
     * Set the font style.
     * @param style The font style.
     */
-  def setFontStyle(style: String): Text = js.native
+  def setFontStyle(style: String): this.type = js.native
   /**
     * Sets the line spacing value.
     * 
@@ -272,13 +269,13 @@ trait Text
     * This only has an effect if this Text object consists of multiple lines of text.
     * @param value The amount to add to the font height to achieve the overall line height.
     */
-  def setLineSpacing(value: Double): Text = js.native
+  def setLineSpacing(value: Double): this.type = js.native
   /**
     * Set the maximum number of lines to draw.
     * @param max The maximum number of lines to draw. Default 0.
     */
-  def setMaxLines(): Text = js.native
-  def setMaxLines(max: integer): Text = js.native
+  def setMaxLines(): this.type = js.native
+  def setMaxLines(max: integer): this.type = js.native
   /**
     * Set the text padding.
     * 
@@ -290,8 +287,8 @@ trait Text
     * @param right The right padding value.
     * @param bottom The bottom padding value.
     */
-  def setPadding(left: Double, top: Double, right: Double, bottom: Double): Text = js.native
-  def setPadding(left: TextPadding, top: Double, right: Double, bottom: Double): Text = js.native
+  def setPadding(left: Double, top: Double, right: Double, bottom: Double): this.type = js.native
+  def setPadding(left: TextPadding, top: Double, right: Double, bottom: Double): this.type = js.native
   /**
     * Set the resolution used by this Text object.
     * 
@@ -304,7 +301,7 @@ trait Text
     * Therefore, please use with caution, as the more high res Text you have, the more memory it uses.
     * @param value The resolution for this Text object to use.
     */
-  def setResolution(value: Double): Text = js.native
+  def setResolution(value: Double): this.type = js.native
   /**
     * Set the shadow settings.
     * @param x The horizontal shadow offset. Default 0.
@@ -321,52 +318,52 @@ trait Text
     blur: js.UndefOr[Double],
     shadowStroke: js.UndefOr[Boolean],
     shadowFill: js.UndefOr[Boolean]
-  ): Text = js.native
+  ): this.type = js.native
   /**
     * Set the shadow blur radius.
     * @param blur The shadow blur radius.
     */
-  def setShadowBlur(blur: Double): Text = js.native
+  def setShadowBlur(blur: Double): this.type = js.native
   /**
     * Set the shadow color.
     * @param color The shadow color.
     */
-  def setShadowColor(color: String): Text = js.native
+  def setShadowColor(color: String): this.type = js.native
   /**
     * Enable or disable shadow fill.
     * @param enabled Whether shadow fill is enabled or not.
     */
-  def setShadowFill(enabled: Boolean): Text = js.native
+  def setShadowFill(enabled: Boolean): this.type = js.native
   /**
     * Set the shadow offset.
     * @param x The horizontal shadow offset.
     * @param y The vertical shadow offset.
     */
-  def setShadowOffset(x: Double, y: Double): Text = js.native
+  def setShadowOffset(x: Double, y: Double): this.type = js.native
   /**
     * Enable or disable shadow stroke.
     * @param enabled Whether shadow stroke is enabled or not.
     */
-  def setShadowStroke(enabled: Boolean): Text = js.native
+  def setShadowStroke(enabled: Boolean): this.type = js.native
   /**
     * Set the stroke settings.
     * @param color The stroke color.
     * @param thickness The stroke thickness.
     */
-  def setStroke(color: String, thickness: Double): Text = js.native
+  def setStroke(color: String, thickness: Double): this.type = js.native
   /**
     * Set the text style.
     * @param style The style settings to set.
     */
-  def setStyle(style: js.Object): Text = js.native
+  def setStyle(style: js.Object): this.type = js.native
   /**
     * Set the text to display.
     * 
     * An array of strings will be joined with `\n` line breaks.
     * @param value The string, or array of strings, to be set as the content of this Text object.
     */
-  def setText(value: String): Text = js.native
-  def setText(value: js.Array[String]): Text = js.native
+  def setText(value: String): this.type = js.native
+  def setText(value: js.Array[String]): this.type = js.native
   /**
     * Set a custom callback for wrapping lines. Pass in null to remove wrapping by callback.
     * @param callback A custom function that will be responsible for wrapping the
@@ -375,8 +372,8 @@ trait Text
     * newline characters in place to indicate where breaks should happen.
     * @param scope The scope that will be applied when the callback is invoked. Default null.
     */
-  def setWordWrapCallback(callback: TextStyleWordWrapCallback): Text = js.native
-  def setWordWrapCallback(callback: TextStyleWordWrapCallback, scope: js.Object): Text = js.native
+  def setWordWrapCallback(callback: TextStyleWordWrapCallback): this.type = js.native
+  def setWordWrapCallback(callback: TextStyleWordWrapCallback, scope: js.Object): this.type = js.native
   /**
     * Set the width (in pixels) to use for wrapping lines. Pass in null to remove wrapping by width.
     * @param width The maximum width of a line in pixels. Set to null to remove wrapping.
@@ -384,11 +381,11 @@ trait Text
     * algorithm. If true, spaces are collapsed and whitespace is trimmed from lines. If false,
     * spaces and whitespace are left as is. Default false.
     */
-  def setWordWrapWidth(width: Double): Text = js.native
-  def setWordWrapWidth(width: Double, useAdvancedWrap: Boolean): Text = js.native
+  def setWordWrapWidth(width: Double): this.type = js.native
+  def setWordWrapWidth(width: Double, useAdvancedWrap: Boolean): this.type = js.native
   /**
     * Update the displayed text.
     */
-  def updateText(): Text = js.native
+  def updateText(): this.type = js.native
 }
 

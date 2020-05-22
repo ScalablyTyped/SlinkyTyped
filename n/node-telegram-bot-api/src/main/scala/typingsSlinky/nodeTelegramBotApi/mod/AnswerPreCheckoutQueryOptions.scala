@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnswerPreCheckoutQueryOptions extends js.Object {
-  var error_message: js.UndefOr[String] = js.native
+  var error_message: js.UndefOr[String] = js.undefined
 }
 
 object AnswerPreCheckoutQueryOptions {
   @scala.inline
-  def apply(): AnswerPreCheckoutQueryOptions = {
+  def apply(error_message: String = null): AnswerPreCheckoutQueryOptions = {
     val __obj = js.Dynamic.literal()
+    if (error_message != null) __obj.updateDynamic("error_message")(error_message.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnswerPreCheckoutQueryOptions]
   }
-  @scala.inline
-  implicit class AnswerPreCheckoutQueryOptionsOps[Self <: AnswerPreCheckoutQueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError_message(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_message: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

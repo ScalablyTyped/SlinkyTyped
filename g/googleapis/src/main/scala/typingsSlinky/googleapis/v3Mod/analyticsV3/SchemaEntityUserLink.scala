@@ -1,7 +1,7 @@
 package typingsSlinky.googleapis.v3Mod.analyticsV3
 
-import typingsSlinky.googleapis.AnonAccountRef
-import typingsSlinky.googleapis.AnonLocal
+import typingsSlinky.googleapis.anon.AccountRef
+import typingsSlinky.googleapis.anon.Local
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait SchemaEntityUserLink extends js.Object {
     * Entity for this link. It can be an account, a web property, or a view
     * (profile).
     */
-  var entity: js.UndefOr[AnonAccountRef] = js.native
+  var entity: js.UndefOr[AccountRef] = js.native
   /**
     * Entity user link ID
     */
@@ -28,7 +28,7 @@ trait SchemaEntityUserLink extends js.Object {
   /**
     * Permissions the user has for this entity.
     */
-  var permissions: js.UndefOr[AnonLocal] = js.native
+  var permissions: js.UndefOr[Local] = js.native
   /**
     * Self link for this resource.
     */
@@ -41,89 +41,22 @@ trait SchemaEntityUserLink extends js.Object {
 
 object SchemaEntityUserLink {
   @scala.inline
-  def apply(): SchemaEntityUserLink = {
+  def apply(
+    entity: AccountRef = null,
+    id: String = null,
+    kind: String = null,
+    permissions: Local = null,
+    selfLink: String = null,
+    userRef: SchemaUserRef = null
+  ): SchemaEntityUserLink = {
     val __obj = js.Dynamic.literal()
+    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (userRef != null) __obj.updateDynamic("userRef")(userRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEntityUserLink]
   }
-  @scala.inline
-  implicit class SchemaEntityUserLinkOps[Self <: SchemaEntityUserLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntity(value: AnonAccountRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: AnonLocal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserRef(value: SchemaUserRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userRef")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

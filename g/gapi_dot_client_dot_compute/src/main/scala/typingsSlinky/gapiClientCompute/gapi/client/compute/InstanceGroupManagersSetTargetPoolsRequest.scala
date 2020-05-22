@@ -4,58 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InstanceGroupManagersSetTargetPoolsRequest extends js.Object {
   /**
     * The fingerprint of the target pools information. Use this optional property to prevent conflicts when multiple users change the target pools settings
     * concurrently. Obtain the fingerprint with the instanceGroupManagers.get method. Then, include the fingerprint in your request to ensure that you do not
     * overwrite changes that were applied from another concurrent request.
     */
-  var fingerprint: js.UndefOr[String] = js.native
+  var fingerprint: js.UndefOr[String] = js.undefined
   /**
     * The list of target pool URLs that instances in this managed instance group belong to. The managed instance group applies these target pools to all of
     * the instances in the group. Existing instances and new instances in the group all receive these target pool settings.
     */
-  var targetPools: js.UndefOr[js.Array[String]] = js.native
+  var targetPools: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object InstanceGroupManagersSetTargetPoolsRequest {
   @scala.inline
-  def apply(): InstanceGroupManagersSetTargetPoolsRequest = {
+  def apply(fingerprint: String = null, targetPools: js.Array[String] = null): InstanceGroupManagersSetTargetPoolsRequest = {
     val __obj = js.Dynamic.literal()
+    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
+    if (targetPools != null) __obj.updateDynamic("targetPools")(targetPools.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceGroupManagersSetTargetPoolsRequest]
   }
-  @scala.inline
-  implicit class InstanceGroupManagersSetTargetPoolsRequestOps[Self <: InstanceGroupManagersSetTargetPoolsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFingerprint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFingerprint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetPools(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetPools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPools")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

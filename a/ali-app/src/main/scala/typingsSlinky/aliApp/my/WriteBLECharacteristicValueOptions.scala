@@ -4,64 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteBLECharacteristicValueOptions
   extends BaseOptions[js.Any, js.Any] {
   /**
-  		 * 蓝牙特征值的 uuid
-  		 */
-  var characteristicId: String = js.native
+    * 蓝牙特征值的 uuid
+    */
+  var characteristicId: String
   /**
-  		 * 蓝牙设备 id，参考 device 对象
-  		 */
-  var deviceId: String = js.native
+    * 蓝牙设备 id，参考 device 对象
+    */
+  var deviceId: String
   /**
-  		 * 蓝牙特征值对应服务的 uuid
-  		 */
-  var serviceId: String = js.native
+    * 蓝牙特征值对应服务的 uuid
+    */
+  var serviceId: String
   /**
-  		 * 蓝牙设备特征值对应的值，16进制字符串，限制在20字节内
-  		 */
-  var value: String = js.native
+    * 蓝牙设备特征值对应的值，16进制字符串，限制在20字节内
+    */
+  var value: String
 }
 
 object WriteBLECharacteristicValueOptions {
   @scala.inline
-  def apply(characteristicId: String, deviceId: String, serviceId: String, value: String): WriteBLECharacteristicValueOptions = {
+  def apply(
+    characteristicId: String,
+    deviceId: String,
+    serviceId: String,
+    value: String,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: js.Any => Unit = null
+  ): WriteBLECharacteristicValueOptions = {
     val __obj = js.Dynamic.literal(characteristicId = characteristicId.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], serviceId = serviceId.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[WriteBLECharacteristicValueOptions]
   }
-  @scala.inline
-  implicit class WriteBLECharacteristicValueOptionsOps[Self <: WriteBLECharacteristicValueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharacteristicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characteristicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

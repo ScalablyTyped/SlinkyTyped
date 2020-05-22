@@ -1,5 +1,6 @@
 package typingsSlinky.node.streamMod
 
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.nodeStrings.close
@@ -37,7 +38,7 @@ class Writable ()
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _write(
     chunk: js.Any,
-    encoding: String,
+    encoding: BufferEncoding,
     callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
   /**
@@ -79,8 +80,8 @@ class Writable ()
   def emit_unpipe(event: unpipe, src: Readable): Boolean = js.native
   def end(chunk: js.Any): Unit = js.native
   def end(chunk: js.Any, cb: js.Function0[Unit]): Unit = js.native
-  def end(chunk: js.Any, encoding: String): Unit = js.native
-  def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -141,11 +142,15 @@ class Writable ()
   def removeListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
-  def setDefaultEncoding(encoding: String): this.type = js.native
+  def setDefaultEncoding(encoding: BufferEncoding): this.type = js.native
   def uncork(): Unit = js.native
   def write(chunk: js.Any): Boolean = js.native
   def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    chunk: js.Any,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
 }
 

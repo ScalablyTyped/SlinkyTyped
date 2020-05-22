@@ -28,12 +28,9 @@ import scala.scalajs.js.annotation._
 /**
   * A kernel message on the `'control'` channel.
   */
-@js.native
-trait IControlMessage[T /* <: ControlMessageType */]
-  extends IMessage[T]
-     with IShellControlMessage {
+trait IControlMessage[T /* <: ControlMessageType */] extends IMessage[T] {
   @JSName("channel")
-  var channel_IControlMessage: control = js.native
+  var channel_IControlMessage: control
 }
 
 object IControlMessage {
@@ -45,24 +42,12 @@ object IControlMessage {
     ]) | Target | Data | Code | Metadata | Ename | Executioncount | (ReplyContent[IExecuteReply] with IExecuteCount) | Allowstdin | Transient | IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail | js.Object | Password | Cursorpos | CodeString | Executionstate | Name | ((/* import warning: importer.ImportType#apply Failed type conversion: @jupyterlab/services.@jupyterlab/services/lib/kernel/messages.KernelMessage.IDisplayDataMsg['content'] */ js.Any) with TransientDisplayidString) | Arguments | Body | Event,
     header: IHeader[T],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object
+    parent_header: IHeader[MessageType] | js.Object,
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView] = null
   ): IControlMessage[T] = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
+    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IControlMessage[T]]
   }
-  @scala.inline
-  implicit class IControlMessageOps[Self[t] <: IControlMessage[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withChannel(value: control): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

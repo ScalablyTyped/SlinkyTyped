@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var asBytes: js.UndefOr[Boolean] = js.native
-  var asString: js.UndefOr[Boolean] = js.native
-  var encoding: js.UndefOr[binary | String] = js.native
+  var asBytes: js.UndefOr[Boolean] = js.undefined
+  var asString: js.UndefOr[Boolean] = js.undefined
+  var encoding: js.UndefOr[binary | String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    asBytes: js.UndefOr[Boolean] = js.undefined,
+    asString: js.UndefOr[Boolean] = js.undefined,
+    encoding: binary | String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(asBytes)) __obj.updateDynamic("asBytes")(asBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(asString)) __obj.updateDynamic("asString")(asString.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsBytes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsString(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: binary | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

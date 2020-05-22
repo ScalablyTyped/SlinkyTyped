@@ -28,7 +28,7 @@ trait TableRowCollection extends ClientObject {
   var context_TableRowCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of rows in the table. Read-only.
+    * Returns the number of rows in the table.
     *
     * [Api set: ExcelApi 1.1]
     */

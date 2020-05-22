@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait D extends js.Object {
   /**
     * Alias of
@@ -14,14 +13,14 @@ trait D extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.d
     */
-  var d: js.UndefOr[String] = js.native
+  var d: js.UndefOr[String] = js.undefined
   /**
     * The height of the shape of the element.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.height
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * If
     * [width](https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.width)
@@ -50,7 +49,7 @@ trait D extends js.Object {
     * "center"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.layout
     */
-  var layout: js.UndefOr[String] = js.native
+  var layout: js.UndefOr[String] = js.undefined
   /**
     * [SVG PathData](http://www.w3.org/TR/SVG/paths.html#PathData)
     * .
@@ -76,14 +75,14 @@ trait D extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.pathData
     */
-  var pathData: js.UndefOr[String] = js.native
+  var pathData: js.UndefOr[String] = js.undefined
   /**
     * The width of the shape of the element.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.width
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /**
     * The x value of the left-top corner of the element
     * in the coordinate system of its parent.
@@ -91,7 +90,7 @@ trait D extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.x
     */
-  var x: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.undefined
   /**
     * The y value of the left-top corner of the element
     * in the coordinate system of its parent.
@@ -99,106 +98,29 @@ trait D extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_path.shape.y
     */
-  var y: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object D {
   @scala.inline
-  def apply(): D = {
+  def apply(
+    d: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    layout: String = null,
+    pathData: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): D = {
     val __obj = js.Dynamic.literal()
+    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (pathData != null) __obj.updateDynamic("pathData")(pathData.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[D]
   }
-  @scala.inline
-  implicit class DOps[Self <: D] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withD(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutD: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

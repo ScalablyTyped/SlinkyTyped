@@ -14,29 +14,10 @@ trait SupportedOperation extends js.Object {
 
 object SupportedOperation {
   @scala.inline
-  def apply(): SupportedOperation = {
+  def apply(OperationName: String = null): SupportedOperation = {
     val __obj = js.Dynamic.literal()
+    if (OperationName != null) __obj.updateDynamic("OperationName")(OperationName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SupportedOperation]
   }
-  @scala.inline
-  implicit class SupportedOperationOps[Self <: SupportedOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

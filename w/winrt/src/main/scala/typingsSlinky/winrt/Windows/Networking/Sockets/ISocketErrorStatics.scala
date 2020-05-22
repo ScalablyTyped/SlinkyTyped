@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISocketErrorStatics extends js.Object {
-  def getStatus(hresult: Double): SocketErrorStatus = js.native
+  def getStatus(hresult: Double): SocketErrorStatus
 }
 
 object ISocketErrorStatics {
@@ -15,19 +14,5 @@ object ISocketErrorStatics {
     val __obj = js.Dynamic.literal(getStatus = js.Any.fromFunction1(getStatus))
     __obj.asInstanceOf[ISocketErrorStatics]
   }
-  @scala.inline
-  implicit class ISocketErrorStaticsOps[Self <: ISocketErrorStatics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetStatus(value: Double => SocketErrorStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatus")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * imports data into a configuration layer by copying over existing data.
   * @since OOo 1.1.2
   */
-@js.native
 trait CopyImporter
   extends XLayerImporter
      with XInitialization

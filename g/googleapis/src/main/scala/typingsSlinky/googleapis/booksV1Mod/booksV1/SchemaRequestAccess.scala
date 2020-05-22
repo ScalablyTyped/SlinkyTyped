@@ -22,53 +22,16 @@ trait SchemaRequestAccess extends js.Object {
 
 object SchemaRequestAccess {
   @scala.inline
-  def apply(): SchemaRequestAccess = {
+  def apply(
+    concurrentAccess: SchemaConcurrentAccessRestriction = null,
+    downloadAccess: SchemaDownloadAccessRestriction = null,
+    kind: String = null
+  ): SchemaRequestAccess = {
     val __obj = js.Dynamic.literal()
+    if (concurrentAccess != null) __obj.updateDynamic("concurrentAccess")(concurrentAccess.asInstanceOf[js.Any])
+    if (downloadAccess != null) __obj.updateDynamic("downloadAccess")(downloadAccess.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequestAccess]
   }
-  @scala.inline
-  implicit class SchemaRequestAccessOps[Self <: SchemaRequestAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConcurrentAccess(value: SchemaConcurrentAccessRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConcurrentAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownloadAccess(value: SchemaDownloadAccessRestriction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

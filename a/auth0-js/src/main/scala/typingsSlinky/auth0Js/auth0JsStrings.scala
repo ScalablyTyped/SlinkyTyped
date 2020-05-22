@@ -1,14 +1,14 @@
 package typingsSlinky.auth0Js
 
 import typingsSlinky.auth0Js.mod.LibErrorCodes
-import typingsSlinky.auth0Js.mod.SpecErrorCodes
+import typingsSlinky.auth0Js.mod._SpecErrorCodes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object auth0JsStrings {
   @js.native
-  sealed trait account_selection_required extends SpecErrorCodes
+  sealed trait account_selection_required extends _SpecErrorCodes
   
   @js.native
   sealed trait code extends js.Object
@@ -29,10 +29,10 @@ object auth0JsStrings {
   sealed trait interaction_required extends js.Object
   
   @js.native
-  sealed trait invalid_request_object extends SpecErrorCodes
+  sealed trait invalid_request_object extends _SpecErrorCodes
   
   @js.native
-  sealed trait invalid_request_uri extends SpecErrorCodes
+  sealed trait invalid_request_uri extends _SpecErrorCodes
   
   @js.native
   sealed trait invalid_token extends LibErrorCodes
@@ -47,19 +47,22 @@ object auth0JsStrings {
   sealed trait query extends js.Object
   
   @js.native
-  sealed trait registration_not_supported extends SpecErrorCodes
+  sealed trait registration_not_supported extends _SpecErrorCodes
   
   @js.native
   sealed trait request_error extends LibErrorCodes
   
   @js.native
-  sealed trait request_not_supported extends SpecErrorCodes
+  sealed trait request_not_supported extends _SpecErrorCodes
   
   @js.native
-  sealed trait request_uri_not_supported extends SpecErrorCodes
+  sealed trait request_uri_not_supported extends _SpecErrorCodes
   
   @js.native
   sealed trait signUp extends js.Object
+  
+  @js.native
+  sealed trait signup_ extends js.Object
   
   @js.native
   sealed trait sms extends js.Object
@@ -106,6 +109,8 @@ object auth0JsStrings {
   def request_uri_not_supported: request_uri_not_supported = "request_uri_not_supported".asInstanceOf[request_uri_not_supported]
   @scala.inline
   def signUp: signUp = "signUp".asInstanceOf[signUp]
+  @scala.inline
+  def signup_ : signup_ = "signup".asInstanceOf[signup_]
   @scala.inline
   def sms: sms = "sms".asInstanceOf[sms]
   @scala.inline

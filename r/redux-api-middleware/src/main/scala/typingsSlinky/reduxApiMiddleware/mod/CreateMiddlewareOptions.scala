@@ -6,49 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateMiddlewareOptions extends js.Object {
-  var fetch: js.UndefOr[FnCall] = js.native
-  var ok: js.UndefOr[js.Function1[/* res */ Response, Boolean]] = js.native
+  var fetch: js.UndefOr[FnCall] = js.undefined
+  var ok: js.UndefOr[js.Function1[/* res */ Response, Boolean]] = js.undefined
 }
 
 object CreateMiddlewareOptions {
   @scala.inline
-  def apply(): CreateMiddlewareOptions = {
+  def apply(fetch: FnCall = null, ok: /* res */ Response => Boolean = null): CreateMiddlewareOptions = {
     val __obj = js.Dynamic.literal()
+    if (fetch != null) __obj.updateDynamic("fetch")(fetch.asInstanceOf[js.Any])
+    if (ok != null) __obj.updateDynamic("ok")(js.Any.fromFunction1(ok))
     __obj.asInstanceOf[CreateMiddlewareOptions]
   }
-  @scala.inline
-  implicit class CreateMiddlewareOptionsOps[Self <: CreateMiddlewareOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFetch(value: FnCall): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOk(value: /* res */ Response => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ok")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ok")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

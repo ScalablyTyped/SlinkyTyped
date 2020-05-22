@@ -4,176 +4,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Center extends js.Object {
-  var center: js.UndefOr[Size] = js.native
-  var guide: js.UndefOr[Visible] = js.native
-  var item: js.UndefOr[OffsetR] = js.native
+  var center: js.UndefOr[Size] = js.undefined
+  var guide: js.UndefOr[Visible] = js.undefined
+  var item: js.UndefOr[OffsetR] = js.undefined
   /**
     * Gauge Charts Only: To set custom labels that correspond to each tick mark on the scale. If there are more tick marks than labels,
     * the default scale values will be used for the remaining labels. ['A', 'B', 'C', 'D', 'E'] | ...
     */
-  var labels: js.UndefOr[js.Any] = js.native
-  var markers: js.UndefOr[js.Array[Label]] = js.native
-  var `minor-guide`: js.UndefOr[LinecolorLinestyle] = js.native
-  var `minor-tick`: js.UndefOr[Placement] = js.native
+  var labels: js.UndefOr[js.Any] = js.undefined
+  var markers: js.UndefOr[js.Array[Label]] = js.undefined
+  var `minor-guide`: js.UndefOr[LinecolorLinestyle] = js.undefined
+  var `minor-tick`: js.UndefOr[Placement] = js.undefined
   /**
     * Gauge Charts Only: To set the number of minor tick marks displayed between the major tick marks. 9 | 5 | 2 | ...
     */
-  var `minor-ticks`: js.UndefOr[Double] = js.native
-  var ring: js.UndefOr[BorderwidthItems] = js.native
-  var tick: js.UndefOr[Placement] = js.native
+  var `minor-ticks`: js.UndefOr[Double] = js.undefined
+  var ring: js.UndefOr[BorderwidthItems] = js.undefined
+  var tick: js.UndefOr[Placement] = js.undefined
   /**
     * Gauge Charts Only: To set the minimum, maximum, and step scale values. '0:10' | '0:25:5' | ...
     */
-  var values: js.UndefOr[js.Any] = js.native
+  var values: js.UndefOr[js.Any] = js.undefined
 }
 
 object Center {
   @scala.inline
-  def apply(): Center = {
+  def apply(
+    center: Size = null,
+    guide: Visible = null,
+    item: OffsetR = null,
+    labels: js.Any = null,
+    markers: js.Array[Label] = null,
+    `minor-guide`: LinecolorLinestyle = null,
+    `minor-tick`: Placement = null,
+    `minor-ticks`: js.UndefOr[Double] = js.undefined,
+    ring: BorderwidthItems = null,
+    tick: Placement = null,
+    values: js.Any = null
+  ): Center = {
     val __obj = js.Dynamic.literal()
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (guide != null) __obj.updateDynamic("guide")(guide.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
+    if (`minor-guide` != null) __obj.updateDynamic("minor-guide")(`minor-guide`.asInstanceOf[js.Any])
+    if (`minor-tick` != null) __obj.updateDynamic("minor-tick")(`minor-tick`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`minor-ticks`)) __obj.updateDynamic("minor-ticks")(`minor-ticks`.get.asInstanceOf[js.Any])
+    if (ring != null) __obj.updateDynamic("ring")(ring.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[Center]
   }
-  @scala.inline
-  implicit class CenterOps[Self <: Center] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuide(value: Visible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItem(value: OffsetR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkers(value: js.Array[Label]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMinor-guide`(value: LinecolorLinestyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor-guide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMinor-guide`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor-guide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMinor-tick`(value: Placement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor-tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMinor-tick`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor-tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMinor-ticks`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor-ticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMinor-ticks`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minor-ticks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRing(value: BorderwidthItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTick(value: Placement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

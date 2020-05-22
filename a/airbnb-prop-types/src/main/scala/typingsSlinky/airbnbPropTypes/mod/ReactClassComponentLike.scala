@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ReactClassComponentLike
-  extends ReactTypeLike
-     with Instantiable1[/* args (repeated) */ js.Any, ReactComponentLike]
+  extends Instantiable1[/* args (repeated) */ js.Any, ReactComponentLike]
 

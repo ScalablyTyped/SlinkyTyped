@@ -90,6 +90,13 @@ object dialogMod extends js.Object {
     /** Destructor. */
     def dispose(): Unit = js.native
     /**
+      * Increment the local sequence number by one.
+      * It feels like this should be protected, but the current authentication handling currently
+      * needs this to keep the dialog in sync when "auto re-sends" request messages.
+      * @internal
+      */
+    def incrementLocalSequenceNumber(): Unit = js.native
+    /**
       * Requests sent within a dialog, as any other requests, are atomic.  If
       * a particular request is accepted by the UAS, all the state changes
       * associated with it are performed.  If the request is rejected, none

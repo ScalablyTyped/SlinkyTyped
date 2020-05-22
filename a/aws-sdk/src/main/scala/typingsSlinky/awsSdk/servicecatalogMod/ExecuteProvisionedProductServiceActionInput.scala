@@ -30,59 +30,17 @@ trait ExecuteProvisionedProductServiceActionInput extends js.Object {
 
 object ExecuteProvisionedProductServiceActionInput {
   @scala.inline
-  def apply(ExecuteToken: IdempotencyToken, ProvisionedProductId: Id, ServiceActionId: Id): ExecuteProvisionedProductServiceActionInput = {
+  def apply(
+    ExecuteToken: IdempotencyToken,
+    ProvisionedProductId: Id,
+    ServiceActionId: Id,
+    AcceptLanguage: AcceptLanguage = null,
+    Parameters: ExecutionParameterMap = null
+  ): ExecuteProvisionedProductServiceActionInput = {
     val __obj = js.Dynamic.literal(ExecuteToken = ExecuteToken.asInstanceOf[js.Any], ProvisionedProductId = ProvisionedProductId.asInstanceOf[js.Any], ServiceActionId = ServiceActionId.asInstanceOf[js.Any])
+    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteProvisionedProductServiceActionInput]
   }
-  @scala.inline
-  implicit class ExecuteProvisionedProductServiceActionInputOps[Self <: ExecuteProvisionedProductServiceActionInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecuteToken(value: IdempotencyToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecuteToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProvisionedProductId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceActionId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptLanguage(value: AcceptLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: ExecutionParameterMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

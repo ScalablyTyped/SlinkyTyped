@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var clobber: js.UndefOr[Boolean] = js.native
-  var mkdirp: js.UndefOr[Boolean] = js.native
+  var clobber: js.UndefOr[Boolean] = js.undefined
+  var mkdirp: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(clobber: js.UndefOr[Boolean] = js.undefined, mkdirp: js.UndefOr[Boolean] = js.undefined): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(clobber)) __obj.updateDynamic("clobber")(clobber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mkdirp)) __obj.updateDynamic("mkdirp")(mkdirp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClobber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clobber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClobber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clobber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMkdirp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mkdirp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMkdirp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mkdirp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

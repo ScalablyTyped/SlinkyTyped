@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Recolor extends js.Object {
   /**
     * The name of the recolor effect.
@@ -13,7 +12,7 @@ trait Recolor extends js.Object {
     * against the colors in the page's current color scheme. This property is
     * read-only.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * The recolor effect is represented by a gradient, which is a list of color
     * stops.
@@ -22,46 +21,16 @@ trait Recolor extends js.Object {
     * the same position in the color palette and apply to the image. This
     * property is read-only.
     */
-  var recolorStops: js.UndefOr[js.Array[ColorStop]] = js.native
+  var recolorStops: js.UndefOr[js.Array[ColorStop]] = js.undefined
 }
 
 object Recolor {
   @scala.inline
-  def apply(): Recolor = {
+  def apply(name: String = null, recolorStops: js.Array[ColorStop] = null): Recolor = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (recolorStops != null) __obj.updateDynamic("recolorStops")(recolorStops.asInstanceOf[js.Any])
     __obj.asInstanceOf[Recolor]
   }
-  @scala.inline
-  implicit class RecolorOps[Self <: Recolor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecolorStops(value: js.Array[ColorStop]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recolorStops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecolorStops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recolorStops")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

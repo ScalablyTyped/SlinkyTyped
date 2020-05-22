@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CampaignLimits extends js.Object {
   /**
-    * The maximum number of messages that a campaign can send to a single endpoint during a 24-hour period. The maximum value is 100.
+    * The maximum number of messages that a campaign can send to a single endpoint during a 24-hour period. For an application, this value specifies the default limit for the number of messages that campaigns and journeys can send to a single endpoint during a 24-hour period. The maximum value is 100.
     */
   var Daily: js.UndefOr[integer] = js.native
   /**
@@ -15,76 +15,29 @@ trait CampaignLimits extends js.Object {
     */
   var MaximumDuration: js.UndefOr[integer] = js.native
   /**
-    * The maximum number of messages that a campaign can send each second. The minimum value is 50. The maximum value is 20,000.
+    * The maximum number of messages that a campaign can send each second. For an application, this value specifies the default limit for the number of messages that campaigns and journeys can send each second. The minimum value is 50. The maximum value is 20,000.
     */
   var MessagesPerSecond: js.UndefOr[integer] = js.native
   /**
-    * The maximum number of messages that a campaign can send to a single endpoint during the course of the campaign. The maximum value is 100.
+    * The maximum number of messages that a campaign can send to a single endpoint during the course of the campaign. If a campaign recurs, this setting applies to all runs of the campaign. The maximum value is 100.
     */
   var Total: js.UndefOr[integer] = js.native
 }
 
 object CampaignLimits {
   @scala.inline
-  def apply(): CampaignLimits = {
+  def apply(
+    Daily: js.UndefOr[integer] = js.undefined,
+    MaximumDuration: js.UndefOr[integer] = js.undefined,
+    MessagesPerSecond: js.UndefOr[integer] = js.undefined,
+    Total: js.UndefOr[integer] = js.undefined
+  ): CampaignLimits = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Daily)) __obj.updateDynamic("Daily")(Daily.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumDuration)) __obj.updateDynamic("MaximumDuration")(MaximumDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MessagesPerSecond)) __obj.updateDynamic("MessagesPerSecond")(MessagesPerSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Total)) __obj.updateDynamic("Total")(Total.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CampaignLimits]
   }
-  @scala.inline
-  implicit class CampaignLimitsOps[Self <: CampaignLimits] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDaily(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Daily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDaily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Daily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumDuration(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessagesPerSecond(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessagesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessagesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessagesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

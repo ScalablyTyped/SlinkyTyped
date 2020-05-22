@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Plane extends Shape {
-  var worldNormal: Vec3 = js.native
-  var worldNormalNeedsUpdate: Boolean = js.native
-  def calculateWorldAABB(pos: Vec3, quat: Quaternion, min: Double, max: Double): Unit = js.native
-  def computeWorldNormal(quat: Quaternion): Unit = js.native
+  var worldNormal: Vec3
+  var worldNormalNeedsUpdate: Boolean
+  def calculateWorldAABB(pos: Vec3, quat: Quaternion, min: Double, max: Double): Unit
+  def computeWorldNormal(quat: Quaternion): Unit
 }
 
 object Plane {
@@ -30,37 +29,5 @@ object Plane {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Plane]
   }
-  @scala.inline
-  implicit class PlaneOps[Self <: Plane] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalculateWorldAABB(value: (Vec3, Quaternion, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateWorldAABB")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withComputeWorldNormal(value: Quaternion => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeWorldNormal")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWorldNormal(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldNormal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorldNormalNeedsUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldNormalNeedsUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

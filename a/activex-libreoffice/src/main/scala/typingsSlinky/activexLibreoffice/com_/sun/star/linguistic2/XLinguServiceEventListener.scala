@@ -14,10 +14,9 @@ import scala.scalajs.js.annotation._
   * com::sun::star::linguistic2::LinguServiceEvents.
   * @see com.sun.star.linguistic2.XLinguServiceManager
   */
-@js.native
 trait XLinguServiceEventListener extends XEventListener {
   /** @param aLngSvcEvent the event the listener will be informed about. */
-  def processLinguServiceEvent(aLngSvcEvent: LinguServiceEvent): Unit = js.native
+  def processLinguServiceEvent(aLngSvcEvent: LinguServiceEvent): Unit
 }
 
 object XLinguServiceEventListener {
@@ -32,19 +31,5 @@ object XLinguServiceEventListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), processLinguServiceEvent = js.Any.fromFunction1(processLinguServiceEvent), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XLinguServiceEventListener]
   }
-  @scala.inline
-  implicit class XLinguServiceEventListenerOps[Self <: XLinguServiceEventListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProcessLinguServiceEvent(value: LinguServiceEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processLinguServiceEvent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

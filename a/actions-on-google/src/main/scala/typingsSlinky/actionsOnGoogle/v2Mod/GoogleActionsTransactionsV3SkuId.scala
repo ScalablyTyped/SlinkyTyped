@@ -4,72 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsTransactionsV3SkuId extends js.Object {
   /**
     * The identifier of the product SKU used for registration in the developer
     * console.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * The name of the android package under which the sku was registered.
     */
-  var packageName: js.UndefOr[String] = js.native
+  var packageName: js.UndefOr[String] = js.undefined
   /**
     * The type of SKU.
     */
-  var skuType: js.UndefOr[GoogleActionsTransactionsV3SkuIdSkuType] = js.native
+  var skuType: js.UndefOr[GoogleActionsTransactionsV3SkuIdSkuType] = js.undefined
 }
 
 object GoogleActionsTransactionsV3SkuId {
   @scala.inline
-  def apply(): GoogleActionsTransactionsV3SkuId = {
+  def apply(
+    id: String = null,
+    packageName: String = null,
+    skuType: GoogleActionsTransactionsV3SkuIdSkuType = null
+  ): GoogleActionsTransactionsV3SkuId = {
     val __obj = js.Dynamic.literal()
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
+    if (skuType != null) __obj.updateDynamic("skuType")(skuType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsTransactionsV3SkuId]
   }
-  @scala.inline
-  implicit class GoogleActionsTransactionsV3SkuIdOps[Self <: GoogleActionsTransactionsV3SkuId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuType(value: GoogleActionsTransactionsV3SkuIdSkuType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkuType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skuType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

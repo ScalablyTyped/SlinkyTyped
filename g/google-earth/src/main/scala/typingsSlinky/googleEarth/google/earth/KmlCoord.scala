@@ -4,40 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlCoord extends js.Object {
   /**
     * Distance from the earth's surface.
     */
-  def getAltitude(): Double = js.native
+  def getAltitude(): Double
   /**
     * Degrees north or south of the Equator (0 degrees).
     * Values range from -90 degrees (South Pole) to 90 degrees (North Pole).
     */
-  def getLatitude(): Double = js.native
+  def getLatitude(): Double
   /**
     * Angular distance in degrees, relative to the Prime Meridian. Values west of the Meridian range from -180 to 0 degrees.
     * Values east of the Meridian range from 0 to 180 degrees.
     */
-  def getLongitude(): Double = js.native
+  def getLongitude(): Double
   /**
     * Distance from the earth's surface.
     */
-  def setAltitude(altitude: Double): Unit = js.native
+  def setAltitude(altitude: Double): Unit
   /**
     * Sets the latitude, longitude, altitude.
     */
-  def setLatLngAlt(latitude: Double, longitude: Double, altitude: Double): Unit = js.native
+  def setLatLngAlt(latitude: Double, longitude: Double, altitude: Double): Unit
   /**
     * Degrees north or south of the Equator (0 degrees).
     * Values range from -90 degrees (South Pole) to 90 degrees (North Pole).
     */
-  def setLatitude(latitude: Double): Unit = js.native
+  def setLatitude(latitude: Double): Unit
   /**
     * Angular distance in degrees, relative to the Prime Meridian. Values west of the Meridian range from -180 to 0 degrees.
     * Values east of the Meridian range from 0 to 180 degrees.
     */
-  def setLongitude(longitude: Double): Unit = js.native
+  def setLongitude(longitude: Double): Unit
 }
 
 object KmlCoord {
@@ -54,55 +53,5 @@ object KmlCoord {
     val __obj = js.Dynamic.literal(getAltitude = js.Any.fromFunction0(getAltitude), getLatitude = js.Any.fromFunction0(getLatitude), getLongitude = js.Any.fromFunction0(getLongitude), setAltitude = js.Any.fromFunction1(setAltitude), setLatLngAlt = js.Any.fromFunction3(setLatLngAlt), setLatitude = js.Any.fromFunction1(setLatitude), setLongitude = js.Any.fromFunction1(setLongitude))
     __obj.asInstanceOf[KmlCoord]
   }
-  @scala.inline
-  implicit class KmlCoordOps[Self <: KmlCoord] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAltitude(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAltitude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLatitude(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLatitude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLongitude(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLongitude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetAltitude(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAltitude")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLatLngAlt(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLatLngAlt")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetLatitude(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLatitude")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLongitude(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLongitude")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

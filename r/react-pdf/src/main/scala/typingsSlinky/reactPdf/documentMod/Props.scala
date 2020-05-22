@@ -3,7 +3,6 @@ package typingsSlinky.reactPdf.documentMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import slinky.core.facade.ReactRef
 import typingsSlinky.pdfjsDist.mod.PDFDocumentProxy
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactPdf.anon.PageNumber
@@ -18,24 +17,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
-  var children: js.UndefOr[TagMod[Any]] = js.native
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
   /**
     * Defines custom class name(s), that will be added to rendered element.
     * @default 'react-pdf__Document'
     */
-  var className: js.UndefOr[String | js.Array[String]] = js.native
+  var className: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * Defines what the component should display in case of an error.
     * @default 'Failed to load PDF file.'
     */
-  var error: js.UndefOr[String | ReactElement | RenderFunction] = js.native
+  var error: js.UndefOr[String | ReactElement | RenderFunction] = js.undefined
   /**
     * Defines link target for external links rendered in annotations.
     * Defaults to unset, which means that default behavior will be used.
     */
-  var externalLinkTarget: js.UndefOr[_self | _blank | _parent | _top] = js.native
+  var externalLinkTarget: js.UndefOr[_self | _blank | _parent | _top] = js.undefined
   /**
     * Defines what PDF should be displayed.
     * Its value can be an URL,
@@ -49,338 +47,106 @@ trait Props extends js.Object {
     *   withCredentials - a boolean to indicate whether or not to include cookies in the request (defaults to false)
     *  )
     */
-  var file: js.Any = js.native
+  var file: js.Any
   /**
     * A function that behaves like ref,
     * but it's passed to main `<div>` rendered by `<Document>` component.
     */
-  var inputRef: js.UndefOr[LegacyRef[HTMLDivElement]] = js.native
+  var inputRef: js.UndefOr[LegacyRef[HTMLDivElement]] = js.undefined
   /**
     * Defines what the component should display while loading.
     * @default 'Loading PDF…'
     */
-  var loading: js.UndefOr[String | ReactElement | RenderFunction] = js.native
+  var loading: js.UndefOr[String | ReactElement | RenderFunction] = js.undefined
   /**
     * Defines what the component should display in case of no data.
     * @default 'No PDF file specified.'
     */
-  var noData: js.UndefOr[String | ReactElement | RenderFunction] = js.native
+  var noData: js.UndefOr[String | ReactElement | RenderFunction] = js.undefined
   /**
     * Function called when an outline item has been clicked.
     * Usually, you would like to use this callback to move the user wherever they requested to.
     */
-  var onItemClick: js.UndefOr[js.Function1[/* hasPageNumber */ PageNumber, Unit]] = js.native
+  var onItemClick: js.UndefOr[js.Function1[/* hasPageNumber */ PageNumber, Unit]] = js.undefined
   /**
     * Function called in case of an error while loading a document.
     */
-  var onLoadError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
+  var onLoadError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
   /**
     * Function called when the document is successfully loaded.
     */
-  var onLoadSuccess: js.UndefOr[js.Function1[/* pdf */ PDFDocumentProxy, Unit]] = js.native
+  var onLoadSuccess: js.UndefOr[js.Function1[/* pdf */ PDFDocumentProxy, Unit]] = js.undefined
   /**
     * Function called when a password-protected PDF is loaded.
     * Defaults to a function that prompts the user for password.
     */
-  var onPassword: js.UndefOr[js.Function1[/* callback */ js.Function1[/* repeated */ js.Any, _], Unit]] = js.native
+  var onPassword: js.UndefOr[js.Function1[/* callback */ js.Function1[/* repeated */ js.Any, _], Unit]] = js.undefined
   /**
     * Function called in case of an error while retrieving document source from `file` prop.
     */
-  var onSourceError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
+  var onSourceError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
   /**
     * Function called when document source is successfully retrieved from `file` prop.
     */
-  var onSourceSuccess: js.UndefOr[js.Function0[Unit]] = js.native
+  var onSourceSuccess: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * An object in which additional parameters to be passed to PDF.js can be defined.
     * For a full list of possible parameters, check PDF.js documentation on DocumentInitParameters.
     */
-  var options: js.UndefOr[js.Any] = js.native
+  var options: js.UndefOr[js.Any] = js.undefined
   /**
     * Defines the rendering mode of the document.
     * @default 'canvas'
     */
-  var renderMode: js.UndefOr[canvas | svg | none] = js.native
+  var renderMode: js.UndefOr[canvas | svg | none] = js.undefined
   /**
     * Defines the rotation of the document in degrees.
     * If provided, will change rotation globally,
     * even for the pages which were given rotate prop of their own.
     * 90 = rotated to the right, 180 = upside down, 270 = rotated to the left.
     */
-  var rotate: js.UndefOr[Double] = js.native
+  var rotate: js.UndefOr[Double] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply(file: js.Any): Props = {
+  def apply(
+    file: js.Any,
+    children: TagMod[Any] = null,
+    className: String | js.Array[String] = null,
+    error: String | ReactElement | RenderFunction = null,
+    externalLinkTarget: _self | _blank | _parent | _top = null,
+    inputRef: js.UndefOr[Null | LegacyRef[HTMLDivElement]] = js.undefined,
+    loading: String | ReactElement | RenderFunction = null,
+    noData: String | ReactElement | RenderFunction = null,
+    onItemClick: /* hasPageNumber */ PageNumber => Unit = null,
+    onLoadError: /* error */ js.Error => Unit = null,
+    onLoadSuccess: /* pdf */ PDFDocumentProxy => Unit = null,
+    onPassword: /* callback */ js.Function1[/* repeated */ js.Any, _] => Unit = null,
+    onSourceError: /* error */ js.Error => Unit = null,
+    onSourceSuccess: () => Unit = null,
+    options: js.Any = null,
+    renderMode: canvas | svg | none = null,
+    rotate: js.UndefOr[Double] = js.undefined
+  ): Props = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (externalLinkTarget != null) __obj.updateDynamic("externalLinkTarget")(externalLinkTarget.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputRef)) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
+    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
+    if (noData != null) __obj.updateDynamic("noData")(noData.asInstanceOf[js.Any])
+    if (onItemClick != null) __obj.updateDynamic("onItemClick")(js.Any.fromFunction1(onItemClick))
+    if (onLoadError != null) __obj.updateDynamic("onLoadError")(js.Any.fromFunction1(onLoadError))
+    if (onLoadSuccess != null) __obj.updateDynamic("onLoadSuccess")(js.Any.fromFunction1(onLoadSuccess))
+    if (onPassword != null) __obj.updateDynamic("onPassword")(js.Any.fromFunction1(onPassword))
+    if (onSourceError != null) __obj.updateDynamic("onSourceError")(js.Any.fromFunction1(onSourceError))
+    if (onSourceSuccess != null) __obj.updateDynamic("onSourceSuccess")(js.Any.fromFunction0(onSourceSuccess))
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotate)) __obj.updateDynamic("rotate")(rotate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorFunction0(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withError(value: String | ReactElement | RenderFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalLinkTarget(value: _self | _blank | _parent | _top): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalLinkTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalLinkTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalLinkTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputRefRefObject(value: ReactRef[HTMLDivElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInputRef(value: LegacyRef[HTMLDivElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(null)
-        ret
-    }
-    @scala.inline
-    def withLoadingReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadingFunction0(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLoading(value: String | ReactElement | RenderFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDataReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoDataFunction0(value: () => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNoData(value: String | ReactElement | RenderFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemClick(value: /* hasPageNumber */ PageNumber => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadError(value: /* error */ js.Error => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadSuccess(value: /* pdf */ PDFDocumentProxy => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadSuccess")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPassword(value: /* callback */ js.Function1[/* repeated */ js.Any, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassword")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSourceError(value: /* error */ js.Error => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSourceError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSourceSuccess(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceSuccess")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSourceSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceSuccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderMode(value: canvas | svg | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

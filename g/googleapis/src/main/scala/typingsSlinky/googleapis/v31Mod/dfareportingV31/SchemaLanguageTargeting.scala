@@ -19,29 +19,10 @@ trait SchemaLanguageTargeting extends js.Object {
 
 object SchemaLanguageTargeting {
   @scala.inline
-  def apply(): SchemaLanguageTargeting = {
+  def apply(languages: js.Array[SchemaLanguage] = null): SchemaLanguageTargeting = {
     val __obj = js.Dynamic.literal()
+    if (languages != null) __obj.updateDynamic("languages")(languages.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLanguageTargeting]
   }
-  @scala.inline
-  implicit class SchemaLanguageTargetingOps[Self <: SchemaLanguageTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguages(value: js.Array[SchemaLanguage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

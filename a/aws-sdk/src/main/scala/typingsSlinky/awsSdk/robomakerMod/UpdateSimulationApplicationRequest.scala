@@ -38,66 +38,14 @@ object UpdateSimulationApplicationRequest {
     application: Arn,
     robotSoftwareSuite: RobotSoftwareSuite,
     simulationSoftwareSuite: SimulationSoftwareSuite,
-    sources: SourceConfigs
+    sources: SourceConfigs,
+    currentRevisionId: RevisionId = null,
+    renderingEngine: RenderingEngine = null
   ): UpdateSimulationApplicationRequest = {
     val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], robotSoftwareSuite = robotSoftwareSuite.asInstanceOf[js.Any], simulationSoftwareSuite = simulationSoftwareSuite.asInstanceOf[js.Any], sources = sources.asInstanceOf[js.Any])
+    if (currentRevisionId != null) __obj.updateDynamic("currentRevisionId")(currentRevisionId.asInstanceOf[js.Any])
+    if (renderingEngine != null) __obj.updateDynamic("renderingEngine")(renderingEngine.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSimulationApplicationRequest]
   }
-  @scala.inline
-  implicit class UpdateSimulationApplicationRequestOps[Self <: UpdateSimulationApplicationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRobotSoftwareSuite(value: RobotSoftwareSuite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("robotSoftwareSuite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSimulationSoftwareSuite(value: SimulationSoftwareSuite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationSoftwareSuite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSources(value: SourceConfigs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentRevisionId(value: RevisionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderingEngine(value: RenderingEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingEngine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderingEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingEngine")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

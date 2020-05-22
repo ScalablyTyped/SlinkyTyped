@@ -22,53 +22,16 @@ trait AddInstanceFleetOutput extends js.Object {
 
 object AddInstanceFleetOutput {
   @scala.inline
-  def apply(): AddInstanceFleetOutput = {
+  def apply(
+    ClusterArn: ArnType = null,
+    ClusterId: XmlStringMaxLen256 = null,
+    InstanceFleetId: InstanceFleetId = null
+  ): AddInstanceFleetOutput = {
     val __obj = js.Dynamic.literal()
+    if (ClusterArn != null) __obj.updateDynamic("ClusterArn")(ClusterArn.asInstanceOf[js.Any])
+    if (ClusterId != null) __obj.updateDynamic("ClusterId")(ClusterId.asInstanceOf[js.Any])
+    if (InstanceFleetId != null) __obj.updateDynamic("InstanceFleetId")(InstanceFleetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddInstanceFleetOutput]
   }
-  @scala.inline
-  implicit class AddInstanceFleetOutputOps[Self <: AddInstanceFleetOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterArn(value: ArnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterId(value: XmlStringMaxLen256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceFleetId(value: InstanceFleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceFleetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFleetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

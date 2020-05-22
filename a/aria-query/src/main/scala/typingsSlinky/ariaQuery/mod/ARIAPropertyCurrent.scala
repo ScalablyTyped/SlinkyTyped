@@ -1,7 +1,5 @@
 package typingsSlinky.ariaQuery.mod
 
-import typingsSlinky.ariaQuery.ariaQueryStrings.`false`
-import typingsSlinky.ariaQuery.ariaQueryStrings.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,9 +22,6 @@ object ARIAPropertyCurrent {
   def date: typingsSlinky.ariaQuery.ariaQueryStrings.date = "date".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.date]
   @scala.inline
   def `false`: typingsSlinky.ariaQuery.ariaQueryBooleans.`false` = false.asInstanceOf[typingsSlinky.ariaQuery.ariaQueryBooleans.`false`]
-  @JSName("false")
-  @scala.inline
-  def false_false: `false` = "false".asInstanceOf[`false`]
   @scala.inline
   def location: typingsSlinky.ariaQuery.ariaQueryStrings.location = "location".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.location]
   @scala.inline
@@ -37,8 +32,5 @@ object ARIAPropertyCurrent {
   def time: typingsSlinky.ariaQuery.ariaQueryStrings.time = "time".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.time]
   @scala.inline
   def `true`: typingsSlinky.ariaQuery.ariaQueryBooleans.`true` = true.asInstanceOf[typingsSlinky.ariaQuery.ariaQueryBooleans.`true`]
-  @JSName("true")
-  @scala.inline
-  def true_true: `true` = "true".asInstanceOf[`true`]
 }
 

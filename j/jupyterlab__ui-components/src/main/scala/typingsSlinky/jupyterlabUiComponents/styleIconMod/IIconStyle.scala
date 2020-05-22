@@ -5,55 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IIconStyle extends NestedCSSProperties {
   /**
     * center the icon svg in its container
     */
-  var center: js.UndefOr[Boolean] = js.native
+  var center: js.UndefOr[Boolean] = js.undefined
   /**
     * the kind of the icon, associated with a default stylesheet
     */
-  var kind: js.UndefOr[IconKindType] = js.native
+  var kind: js.UndefOr[IconKindType] = js.undefined
 }
 
 object IIconStyle {
   @scala.inline
-  def apply(): IIconStyle = {
+  def apply(
+    NestedCSSProperties: NestedCSSProperties = null,
+    center: js.UndefOr[Boolean] = js.undefined,
+    kind: IconKindType = null
+  ): IIconStyle = {
     val __obj = js.Dynamic.literal()
+    if (NestedCSSProperties != null) js.Dynamic.global.Object.assign(__obj, NestedCSSProperties)
+    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIconStyle]
   }
-  @scala.inline
-  implicit class IIconStyleOps[Self <: IIconStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCenter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: IconKindType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

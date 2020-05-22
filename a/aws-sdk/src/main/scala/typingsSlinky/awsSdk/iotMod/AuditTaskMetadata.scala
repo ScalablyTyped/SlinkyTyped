@@ -22,53 +22,12 @@ trait AuditTaskMetadata extends js.Object {
 
 object AuditTaskMetadata {
   @scala.inline
-  def apply(): AuditTaskMetadata = {
+  def apply(taskId: AuditTaskId = null, taskStatus: AuditTaskStatus = null, taskType: AuditTaskType = null): AuditTaskMetadata = {
     val __obj = js.Dynamic.literal()
+    if (taskId != null) __obj.updateDynamic("taskId")(taskId.asInstanceOf[js.Any])
+    if (taskStatus != null) __obj.updateDynamic("taskStatus")(taskStatus.asInstanceOf[js.Any])
+    if (taskType != null) __obj.updateDynamic("taskType")(taskType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditTaskMetadata]
   }
-  @scala.inline
-  implicit class AuditTaskMetadataOps[Self <: AuditTaskMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskId(value: AuditTaskId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskStatus(value: AuditTaskStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskType(value: AuditTaskType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

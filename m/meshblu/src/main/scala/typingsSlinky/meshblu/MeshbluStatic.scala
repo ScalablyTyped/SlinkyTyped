@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MeshbluStatic extends js.Object {
   /**
-  	 * Establish a secure socket.io connection to Meshblu.
-  	 * @param opt
-  	 * @returns A Meshblu Connection.
-  	 */
-  def createConnection(opt: ConnectionOptions): Connection = js.native
+    * Establish a secure socket.io connection to Meshblu.
+    * @param opt
+    * @returns A Meshblu Connection.
+    */
+  def createConnection(opt: ConnectionOptions): Connection
 }
 
 object MeshbluStatic {
@@ -22,19 +21,5 @@ object MeshbluStatic {
     val __obj = js.Dynamic.literal(createConnection = js.Any.fromFunction1(createConnection))
     __obj.asInstanceOf[MeshbluStatic]
   }
-  @scala.inline
-  implicit class MeshbluStaticOps[Self <: MeshbluStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateConnection(value: ConnectionOptions => Connection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createConnection")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

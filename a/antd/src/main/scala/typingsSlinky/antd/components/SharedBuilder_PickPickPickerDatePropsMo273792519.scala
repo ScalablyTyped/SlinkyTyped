@@ -9,7 +9,6 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.anon.Lang
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -47,6 +46,7 @@ import typingsSlinky.antd.antdStrings.text
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
@@ -163,6 +163,8 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
   @scala.inline
+  def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+  @scala.inline
   def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
   @scala.inline
   def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
@@ -199,9 +201,11 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
   @scala.inline
+  def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+  @scala.inline
   def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
   @scala.inline
-  def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
+  def locale(value: PickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
   @scala.inline
   def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline

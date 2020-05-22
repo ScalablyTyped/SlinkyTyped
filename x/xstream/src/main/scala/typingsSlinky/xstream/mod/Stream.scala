@@ -19,8 +19,14 @@ class Stream[T] () extends InternalListener[T] {
   var _target: Stream[T] = js.native
   var ctor: js.Any = js.native
   def _add(il: InternalListener[T]): Unit = js.native
+  /* CompleteClass */
+  override def _c(): Unit = js.native
+  /* CompleteClass */
+  override def _e(err: js.Any): Unit = js.native
   def _hasNoSinks(x: InternalListener[_], trace: js.Array[_]): Boolean = js.native
   /* protected */ def _map[U](project: js.Function1[/* t */ T, U]): Stream[U] | MemoryStream[U] = js.native
+  /* CompleteClass */
+  override def _n(v: T): Unit = js.native
   def _pruneCycles(): Unit = js.native
   def _remove(il: InternalListener[T]): Unit = js.native
   def _stopNow(): Unit = js.native

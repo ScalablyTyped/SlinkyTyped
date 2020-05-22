@@ -20,8 +20,8 @@ trait KiiBucket extends js.Object {
     * @return A KiiACL object associated with this KiiObject
     *
     * @example
-    *     	var bucket = . . .; // a KiiBucket
-    *     	var acl = bucket.acl();
+    *         var bucket = . . .; // a KiiBucket
+    *         var acl = bucket.acl();
     */
   def acl(): KiiACL = js.native
   /**

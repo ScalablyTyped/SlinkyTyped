@@ -14,29 +14,10 @@ trait Regex extends js.Object {
 
 object Regex {
   @scala.inline
-  def apply(): Regex = {
+  def apply(RegexString: RegexPatternString = null): Regex = {
     val __obj = js.Dynamic.literal()
+    if (RegexString != null) __obj.updateDynamic("RegexString")(RegexString.asInstanceOf[js.Any])
     __obj.asInstanceOf[Regex]
   }
-  @scala.inline
-  implicit class RegexOps[Self <: Regex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegexString(value: RegexPatternString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegexString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

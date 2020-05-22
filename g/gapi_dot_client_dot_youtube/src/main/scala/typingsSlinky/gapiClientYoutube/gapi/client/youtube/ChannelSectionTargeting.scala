@@ -4,65 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChannelSectionTargeting extends js.Object {
   /** The country the channel section is targeting. */
-  var countries: js.UndefOr[js.Array[String]] = js.native
+  var countries: js.UndefOr[js.Array[String]] = js.undefined
   /** The language the channel section is targeting. */
-  var languages: js.UndefOr[js.Array[String]] = js.native
+  var languages: js.UndefOr[js.Array[String]] = js.undefined
   /** The region the channel section is targeting. */
-  var regions: js.UndefOr[js.Array[String]] = js.native
+  var regions: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ChannelSectionTargeting {
   @scala.inline
-  def apply(): ChannelSectionTargeting = {
+  def apply(
+    countries: js.Array[String] = null,
+    languages: js.Array[String] = null,
+    regions: js.Array[String] = null
+  ): ChannelSectionTargeting = {
     val __obj = js.Dynamic.literal()
+    if (countries != null) __obj.updateDynamic("countries")(countries.asInstanceOf[js.Any])
+    if (languages != null) __obj.updateDynamic("languages")(languages.asInstanceOf[js.Any])
+    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelSectionTargeting]
   }
-  @scala.inline
-  implicit class ChannelSectionTargetingOps[Self <: ChannelSectionTargeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountries(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

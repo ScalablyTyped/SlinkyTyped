@@ -27,10 +27,17 @@ object deleteBucketReplicationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteBucketReplicationInput) = this()
+    /* CompleteClass */
+    override val input: DeleteBucketReplicationInput = js.native
     val middlewareStack: MiddlewareStack[DeleteBucketReplicationInput, DeleteBucketReplicationOutput, Readable] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[DeleteBucketReplicationInput, DeleteBucketReplicationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketReplicationInput, DeleteBucketReplicationOutput] = js.native
   }

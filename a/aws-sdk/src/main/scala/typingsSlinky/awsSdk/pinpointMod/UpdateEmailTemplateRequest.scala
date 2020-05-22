@@ -23,53 +23,16 @@ trait UpdateEmailTemplateRequest extends js.Object {
 
 object UpdateEmailTemplateRequest {
   @scala.inline
-  def apply(EmailTemplateRequest: EmailTemplateRequest, TemplateName: string): UpdateEmailTemplateRequest = {
+  def apply(
+    EmailTemplateRequest: EmailTemplateRequest,
+    TemplateName: string,
+    CreateNewVersion: js.UndefOr[boolean] = js.undefined,
+    Version: string = null
+  ): UpdateEmailTemplateRequest = {
     val __obj = js.Dynamic.literal(EmailTemplateRequest = EmailTemplateRequest.asInstanceOf[js.Any], TemplateName = TemplateName.asInstanceOf[js.Any])
+    if (!js.isUndefined(CreateNewVersion)) __obj.updateDynamic("CreateNewVersion")(CreateNewVersion.get.asInstanceOf[js.Any])
+    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEmailTemplateRequest]
   }
-  @scala.inline
-  implicit class UpdateEmailTemplateRequestOps[Self <: UpdateEmailTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailTemplateRequest(value: EmailTemplateRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailTemplateRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreateNewVersion(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateNewVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateNewVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateNewVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

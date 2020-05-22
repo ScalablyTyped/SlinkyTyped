@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableStyle extends js.Object {
-  var tableColumnProperties: js.UndefOr[js.Array[TableColumnProperties]] = js.native
+  var tableColumnProperties: js.UndefOr[js.Array[TableColumnProperties]] = js.undefined
 }
 
 object TableStyle {
   @scala.inline
-  def apply(): TableStyle = {
+  def apply(tableColumnProperties: js.Array[TableColumnProperties] = null): TableStyle = {
     val __obj = js.Dynamic.literal()
+    if (tableColumnProperties != null) __obj.updateDynamic("tableColumnProperties")(tableColumnProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableStyle]
   }
-  @scala.inline
-  implicit class TableStyleOps[Self <: TableStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTableColumnProperties(value: js.Array[TableColumnProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumnProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableColumnProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableColumnProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,114 +6,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkboxPlugin extends js.Object {
-  var cacheDidUpdate: js.UndefOr[CacheDidUpdateCallback] = js.native
-  var cacheKeyWillBeUsed: js.UndefOr[CacheKeyWillBeUsedCallback] = js.native
-  var cacheWillUpdate: js.UndefOr[CacheWillUpdateCallback] = js.native
-  var cachedResponseWillBeUsed: js.UndefOr[CachedResponseWillBeUsedCallback] = js.native
-  var fetchDidFail: js.UndefOr[FetchDidFailCallback] = js.native
-  var fetchDidSucceed: js.UndefOr[FetchDidSucceedCallback] = js.native
-  var requestWillFetch: js.UndefOr[RequestWillFetchCallback] = js.native
+  var cacheDidUpdate: js.UndefOr[CacheDidUpdateCallback] = js.undefined
+  var cacheKeyWillBeUsed: js.UndefOr[CacheKeyWillBeUsedCallback] = js.undefined
+  var cacheWillUpdate: js.UndefOr[CacheWillUpdateCallback] = js.undefined
+  var cachedResponseWillBeUsed: js.UndefOr[CachedResponseWillBeUsedCallback] = js.undefined
+  var fetchDidFail: js.UndefOr[FetchDidFailCallback] = js.undefined
+  var fetchDidSucceed: js.UndefOr[FetchDidSucceedCallback] = js.undefined
+  var requestWillFetch: js.UndefOr[RequestWillFetchCallback] = js.undefined
 }
 
 object WorkboxPlugin {
   @scala.inline
-  def apply(): WorkboxPlugin = {
+  def apply(
+    cacheDidUpdate: /* param */ CacheDidUpdateCallbackParam => js.Promise[Unit] = null,
+    cacheKeyWillBeUsed: /* param */ CacheKeyWillBeUsedCallbackParam => js.Promise[Request | String] = null,
+    cacheWillUpdate: /* param */ CacheWillUpdateCallbackParamParam => js.Promise[js.UndefOr[Response]] = null,
+    cachedResponseWillBeUsed: /* param */ CachedResponseWillBeUsedCallbackParam => js.Promise[js.UndefOr[Response]] = null,
+    fetchDidFail: /* param */ FetchDidFailCallbackParam => js.Promise[Unit] = null,
+    fetchDidSucceed: /* param */ FetchDidSucceedCallbackParam => js.Promise[Response] = null,
+    requestWillFetch: /* param */ RequestWillFetchCallbackParam => js.Promise[js.UndefOr[Request]] = null
+  ): WorkboxPlugin = {
     val __obj = js.Dynamic.literal()
+    if (cacheDidUpdate != null) __obj.updateDynamic("cacheDidUpdate")(js.Any.fromFunction1(cacheDidUpdate))
+    if (cacheKeyWillBeUsed != null) __obj.updateDynamic("cacheKeyWillBeUsed")(js.Any.fromFunction1(cacheKeyWillBeUsed))
+    if (cacheWillUpdate != null) __obj.updateDynamic("cacheWillUpdate")(js.Any.fromFunction1(cacheWillUpdate))
+    if (cachedResponseWillBeUsed != null) __obj.updateDynamic("cachedResponseWillBeUsed")(js.Any.fromFunction1(cachedResponseWillBeUsed))
+    if (fetchDidFail != null) __obj.updateDynamic("fetchDidFail")(js.Any.fromFunction1(fetchDidFail))
+    if (fetchDidSucceed != null) __obj.updateDynamic("fetchDidSucceed")(js.Any.fromFunction1(fetchDidSucceed))
+    if (requestWillFetch != null) __obj.updateDynamic("requestWillFetch")(js.Any.fromFunction1(requestWillFetch))
     __obj.asInstanceOf[WorkboxPlugin]
   }
-  @scala.inline
-  implicit class WorkboxPluginOps[Self <: WorkboxPlugin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheDidUpdate(value: /* param */ CacheDidUpdateCallbackParam => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDidUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCacheDidUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDidUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheKeyWillBeUsed(value: /* param */ CacheKeyWillBeUsedCallbackParam => js.Promise[Request | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKeyWillBeUsed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCacheKeyWillBeUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheKeyWillBeUsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheWillUpdate(value: /* param */ CacheWillUpdateCallbackParamParam => js.Promise[js.UndefOr[Response]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheWillUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCacheWillUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheWillUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCachedResponseWillBeUsed(value: /* param */ CachedResponseWillBeUsedCallbackParam => js.Promise[js.UndefOr[Response]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedResponseWillBeUsed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCachedResponseWillBeUsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedResponseWillBeUsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchDidFail(value: /* param */ FetchDidFailCallbackParam => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchDidFail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFetchDidFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchDidFail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchDidSucceed(value: /* param */ FetchDidSucceedCallbackParam => js.Promise[Response]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchDidSucceed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFetchDidSucceed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchDidSucceed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestWillFetch(value: /* param */ RequestWillFetchCallbackParam => js.Promise[js.UndefOr[Request]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestWillFetch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestWillFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestWillFetch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

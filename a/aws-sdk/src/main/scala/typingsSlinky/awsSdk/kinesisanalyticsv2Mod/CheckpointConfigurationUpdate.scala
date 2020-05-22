@@ -26,65 +26,18 @@ trait CheckpointConfigurationUpdate extends js.Object {
 
 object CheckpointConfigurationUpdate {
   @scala.inline
-  def apply(): CheckpointConfigurationUpdate = {
+  def apply(
+    CheckpointIntervalUpdate: js.UndefOr[CheckpointInterval] = js.undefined,
+    CheckpointingEnabledUpdate: js.UndefOr[BooleanObject] = js.undefined,
+    ConfigurationTypeUpdate: ConfigurationType = null,
+    MinPauseBetweenCheckpointsUpdate: js.UndefOr[MinPauseBetweenCheckpoints] = js.undefined
+  ): CheckpointConfigurationUpdate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CheckpointIntervalUpdate)) __obj.updateDynamic("CheckpointIntervalUpdate")(CheckpointIntervalUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CheckpointingEnabledUpdate)) __obj.updateDynamic("CheckpointingEnabledUpdate")(CheckpointingEnabledUpdate.get.asInstanceOf[js.Any])
+    if (ConfigurationTypeUpdate != null) __obj.updateDynamic("ConfigurationTypeUpdate")(ConfigurationTypeUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinPauseBetweenCheckpointsUpdate)) __obj.updateDynamic("MinPauseBetweenCheckpointsUpdate")(MinPauseBetweenCheckpointsUpdate.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckpointConfigurationUpdate]
   }
-  @scala.inline
-  implicit class CheckpointConfigurationUpdateOps[Self <: CheckpointConfigurationUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckpointIntervalUpdate(value: CheckpointInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointIntervalUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckpointIntervalUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointIntervalUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckpointingEnabledUpdate(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointingEnabledUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckpointingEnabledUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CheckpointingEnabledUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurationTypeUpdate(value: ConfigurationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationTypeUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationTypeUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationTypeUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinPauseBetweenCheckpointsUpdate(value: MinPauseBetweenCheckpoints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinPauseBetweenCheckpointsUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinPauseBetweenCheckpointsUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinPauseBetweenCheckpointsUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

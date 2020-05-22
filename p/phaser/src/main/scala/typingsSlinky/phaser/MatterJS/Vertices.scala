@@ -13,6 +13,5 @@ import scala.scalajs.js.annotation._
   *
   * @class Vertices
   */
-@js.native
 trait Vertices extends js.Object
 

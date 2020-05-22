@@ -18,41 +18,11 @@ trait DescribeSubscribersForNotificationResponse extends js.Object {
 
 object DescribeSubscribersForNotificationResponse {
   @scala.inline
-  def apply(): DescribeSubscribersForNotificationResponse = {
+  def apply(NextToken: GenericString = null, Subscribers: Subscribers = null): DescribeSubscribersForNotificationResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Subscribers != null) __obj.updateDynamic("Subscribers")(Subscribers.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSubscribersForNotificationResponse]
   }
-  @scala.inline
-  implicit class DescribeSubscribersForNotificationResponseOps[Self <: DescribeSubscribersForNotificationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscribers(value: Subscribers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscribers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscribers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscribers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

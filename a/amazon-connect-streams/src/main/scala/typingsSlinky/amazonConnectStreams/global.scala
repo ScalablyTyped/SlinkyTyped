@@ -3,6 +3,7 @@ package typingsSlinky.amazonConnectStreams
 import typingsSlinky.amazonConnectStreams.connect.AgentCallback
 import typingsSlinky.amazonConnectStreams.connect.ContactCallback
 import typingsSlinky.amazonConnectStreams.connect.Core
+import typingsSlinky.amazonConnectStreams.connect.EndpointType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,22 @@ object global extends js.Object {
   object connect extends js.Object {
     @js.native
     class Endpoint ()
-      extends typingsSlinky.amazonConnectStreams.connect.Endpoint
+      extends typingsSlinky.amazonConnectStreams.connect.Endpoint {
+      /* CompleteClass */
+      override var agentLogin: String = js.native
+      /* CompleteClass */
+      override var endpointARN: String = js.native
+      /* CompleteClass */
+      override var endpointId: String = js.native
+      /* CompleteClass */
+      override var name: String = js.native
+      /* CompleteClass */
+      override var phoneNumber: String = js.native
+      /* CompleteClass */
+      override var queue: String = js.native
+      /* CompleteClass */
+      override var `type`: EndpointType = js.native
+    }
     
     var core: Core = js.native
     /**

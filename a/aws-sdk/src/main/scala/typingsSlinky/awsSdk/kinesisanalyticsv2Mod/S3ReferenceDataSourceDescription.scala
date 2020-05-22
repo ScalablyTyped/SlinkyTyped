@@ -22,41 +22,10 @@ trait S3ReferenceDataSourceDescription extends js.Object {
 
 object S3ReferenceDataSourceDescription {
   @scala.inline
-  def apply(BucketARN: BucketARN, FileKey: FileKey): S3ReferenceDataSourceDescription = {
+  def apply(BucketARN: BucketARN, FileKey: FileKey, ReferenceRoleARN: RoleARN = null): S3ReferenceDataSourceDescription = {
     val __obj = js.Dynamic.literal(BucketARN = BucketARN.asInstanceOf[js.Any], FileKey = FileKey.asInstanceOf[js.Any])
+    if (ReferenceRoleARN != null) __obj.updateDynamic("ReferenceRoleARN")(ReferenceRoleARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3ReferenceDataSourceDescription]
   }
-  @scala.inline
-  implicit class S3ReferenceDataSourceDescriptionOps[Self <: S3ReferenceDataSourceDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketARN(value: BucketARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileKey(value: FileKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReferenceRoleARN(value: RoleARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceRoleARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceRoleARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceRoleARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

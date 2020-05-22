@@ -11,4 +11,10 @@ package object mod {
     /* config */ js.Any, 
     typingsSlinky.textMaskCore.mod.PipeResult
   ]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.textMaskCore.mod.PipeAddResult
+    - java.lang.String
+    - typingsSlinky.textMaskCore.textMaskCoreBooleans.`false`
+  */
+  type PipeResult = typingsSlinky.textMaskCore.mod._PipeResult | java.lang.String
 }

@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief zeroMQ 消息队列模块
-	* @detail 基础模块。提供 zeroMQ 消息队列支撑。,```JavaScript,var zmq = require('zmq');,```
-	*/
+  * @brief zeroMQ 消息队列模块
+  * @detail 基础模块。提供 zeroMQ 消息队列支撑。,```JavaScript,var zmq = require('zmq');,```
+  */
 @JSImport("zmq", JSImport.Namespace)
 @js.native
 object zmqMod extends js.Object {

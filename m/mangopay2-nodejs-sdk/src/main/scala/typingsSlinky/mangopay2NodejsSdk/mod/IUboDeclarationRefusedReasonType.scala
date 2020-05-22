@@ -7,21 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IUboDeclarationRefusedReasonType extends js.Object {
   /**
     * When at least one natural user should not be declared as UBO
     */
-  var InvalidDeclaredUbo: INVALID_DECLARED_UBO = js.native
+  var InvalidDeclaredUbo: INVALID_DECLARED_UBO
   /**
     * When at least one natural user declared as UBO has been created
     * with wrong details (i.e. date of birth, country of residence)
     */
-  var InvalidUboDetails: INVALID_UBO_DETAILS = js.native
+  var InvalidUboDetails: INVALID_UBO_DETAILS
   /**
     * When at least one natural user is missing on the declaration
     */
-  var MissingUbo: MISSING_UBO = js.native
+  var MissingUbo: MISSING_UBO
 }
 
 object IUboDeclarationRefusedReasonType {
@@ -34,31 +33,5 @@ object IUboDeclarationRefusedReasonType {
     val __obj = js.Dynamic.literal(InvalidDeclaredUbo = InvalidDeclaredUbo.asInstanceOf[js.Any], InvalidUboDetails = InvalidUboDetails.asInstanceOf[js.Any], MissingUbo = MissingUbo.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUboDeclarationRefusedReasonType]
   }
-  @scala.inline
-  implicit class IUboDeclarationRefusedReasonTypeOps[Self <: IUboDeclarationRefusedReasonType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidDeclaredUbo(value: INVALID_DECLARED_UBO): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidDeclaredUbo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvalidUboDetails(value: INVALID_UBO_DETAILS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidUboDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMissingUbo(value: MISSING_UBO): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingUbo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

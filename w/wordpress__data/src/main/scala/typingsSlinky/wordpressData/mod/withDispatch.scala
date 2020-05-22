@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressData.mod
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.wordpressData.anon.Select
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +16,6 @@ object withDispatch extends js.Object {
       /* registry */ Select, 
       DP
     ]
-  ): js.Function1[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<P & IP & DP> */ /* component */ js.Any, 
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<P> */ _
-  ] = js.native
+  ): js.Function1[/* component */ ReactComponentClass[P with IP with DP], ReactComponentClass[P]] = js.native
 }
 

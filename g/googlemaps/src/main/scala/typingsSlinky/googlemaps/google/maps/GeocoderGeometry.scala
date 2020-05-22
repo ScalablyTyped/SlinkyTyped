@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GeocoderGeometry extends js.Object {
-  var bounds: LatLngBounds = js.native
-  var location: LatLng = js.native
-  var location_type: GeocoderLocationType = js.native
-  var viewport: LatLngBounds = js.native
+  var bounds: LatLngBounds
+  var location: LatLng
+  var location_type: GeocoderLocationType
+  var viewport: LatLngBounds
 }
 
 object GeocoderGeometry {
@@ -23,37 +22,5 @@ object GeocoderGeometry {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], location_type = location_type.asInstanceOf[js.Any], viewport = viewport.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeocoderGeometry]
   }
-  @scala.inline
-  implicit class GeocoderGeometryOps[Self <: GeocoderGeometry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounds(value: LatLngBounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: LatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation_type(value: GeocoderLocationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewport(value: LatLngBounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -34,6 +34,7 @@ object optionListMod extends js.Object {
     var prefixCls: String = js.native
     var searchValue: String = js.native
     var values: Set[RawValueType] = js.native
+    var virtual: js.UndefOr[Boolean] = js.native
     /** Tell Select that some value is now active to make accessibility work */
     def onActiveValue(value: RawValueType, index: Double): Unit = js.native
     def onSelect(value: RawValueType, option: Selected): Unit = js.native

@@ -18,41 +18,11 @@ trait CompareFacesMatch extends js.Object {
 
 object CompareFacesMatch {
   @scala.inline
-  def apply(): CompareFacesMatch = {
+  def apply(Face: ComparedFace = null, Similarity: js.UndefOr[Percent] = js.undefined): CompareFacesMatch = {
     val __obj = js.Dynamic.literal()
+    if (Face != null) __obj.updateDynamic("Face")(Face.asInstanceOf[js.Any])
+    if (!js.isUndefined(Similarity)) __obj.updateDynamic("Similarity")(Similarity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompareFacesMatch]
   }
-  @scala.inline
-  implicit class CompareFacesMatchOps[Self <: CompareFacesMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFace(value: ComparedFace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimilarity(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Similarity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimilarity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Similarity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

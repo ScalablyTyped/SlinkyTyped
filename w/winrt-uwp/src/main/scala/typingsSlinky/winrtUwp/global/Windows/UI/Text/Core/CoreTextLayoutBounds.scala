@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.UI.Text.Core
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.UI.Text.Core.CoreTextLayoutBounds")
 @js.native
 abstract class CoreTextLayoutBounds ()
-  extends typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextLayoutBounds
+  extends typingsSlinky.winrtUwp.Windows.UI.Text.Core.CoreTextLayoutBounds {
+  /** Gets or sets the bounding box in screen coordinates of a text input control. */
+  /* CompleteClass */
+  override var controlBounds: Rect = js.native
+  /** Gets or sets the bounding box in screen coordinates of a range of text. */
+  /* CompleteClass */
+  override var textBounds: Rect = js.native
+}
 

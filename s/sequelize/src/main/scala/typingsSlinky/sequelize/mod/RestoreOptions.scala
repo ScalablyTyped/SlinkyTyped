@@ -7,104 +7,50 @@ import scala.scalajs.js.annotation._
 /**
   * Options for Model.restore
   */
-@js.native
 trait RestoreOptions extends LoggingOptions {
   /**
     * Run before / after bulk restore hooks?
     */
-  var hooks: js.UndefOr[Boolean] = js.native
+  var hooks: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to true, restore will find all records within the where parameter and will execute before / after
     * bulkRestore hooks on each row
     */
-  var individualHooks: js.UndefOr[Boolean] = js.native
+  var individualHooks: js.UndefOr[Boolean] = js.undefined
   /**
     * How many rows to undelete
     */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /**
     * Transaction to run query under
     */
-  var transaction: js.UndefOr[Transaction] = js.native
+  var transaction: js.UndefOr[Transaction] = js.undefined
   /**
     * Filter the restore
     */
-  var where: js.UndefOr[AnyWhereOptions] = js.native
+  var where: js.UndefOr[AnyWhereOptions] = js.undefined
 }
 
 object RestoreOptions {
   @scala.inline
-  def apply(): RestoreOptions = {
+  def apply(
+    benchmark: js.UndefOr[Boolean] = js.undefined,
+    hooks: js.UndefOr[Boolean] = js.undefined,
+    individualHooks: js.UndefOr[Boolean] = js.undefined,
+    limit: js.UndefOr[Double] = js.undefined,
+    logging: Boolean | js.Function = null,
+    transaction: Transaction = null,
+    where: AnyWhereOptions = null
+  ): RestoreOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hooks)) __obj.updateDynamic("hooks")(hooks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(individualHooks)) __obj.updateDynamic("individualHooks")(individualHooks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreOptions]
   }
-  @scala.inline
-  implicit class RestoreOptionsOps[Self <: RestoreOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHooks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndividualHooks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("individualHooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndividualHooks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("individualHooks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: Transaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhere(value: AnyWhereOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhere: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

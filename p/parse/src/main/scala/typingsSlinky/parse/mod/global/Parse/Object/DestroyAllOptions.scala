@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DestroyAllOptions
   extends BatchSizeOption
      with SessionTokenOption
@@ -15,8 +14,15 @@ trait DestroyAllOptions
 
 object DestroyAllOptions {
   @scala.inline
-  def apply(): DestroyAllOptions = {
+  def apply(
+    batchSize: js.UndefOr[Double] = js.undefined,
+    sessionToken: String = null,
+    useMasterKey: js.UndefOr[Boolean] = js.undefined
+  ): DestroyAllOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
+    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMasterKey)) __obj.updateDynamic("useMasterKey")(useMasterKey.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestroyAllOptions]
   }
 }

@@ -4,111 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyledGridProps extends js.Object {
   @JSName("$align")
-  var $align: js.UndefOr[Responsive[ALIGNMENT]] = js.native
+  var $align: js.UndefOr[Responsive[ALIGNMENT]] = js.undefined
   @JSName("$behavior")
-  var $behavior: js.UndefOr[BEHAVIOR] = js.native
+  var $behavior: js.UndefOr[BEHAVIOR] = js.undefined
   @JSName("$gridGutters")
-  var $gridGutters: js.UndefOr[Responsive[Double]] = js.native
+  var $gridGutters: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$gridMargins")
-  var $gridMargins: js.UndefOr[Responsive[Double]] = js.native
+  var $gridMargins: js.UndefOr[Responsive[Double]] = js.undefined
   @JSName("$gridMaxWidth")
-  var $gridMaxWidth: js.UndefOr[Double] = js.native
+  var $gridMaxWidth: js.UndefOr[Double] = js.undefined
   @JSName("$gridUnit")
   var $gridUnit: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
-  ] = js.native
+  ] = js.undefined
 }
 
 object StyledGridProps {
   @scala.inline
-  def apply(): StyledGridProps = {
+  def apply(
+    $align: Responsive[ALIGNMENT] = null,
+    $behavior: BEHAVIOR = null,
+    $gridGutters: Responsive[Double] = null,
+    $gridMargins: Responsive[Double] = null,
+    $gridMaxWidth: js.UndefOr[Double] = js.undefined,
+    $gridUnit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any = null
+  ): StyledGridProps = {
     val __obj = js.Dynamic.literal()
+    if ($align != null) __obj.updateDynamic("$align")($align.asInstanceOf[js.Any])
+    if ($behavior != null) __obj.updateDynamic("$behavior")($behavior.asInstanceOf[js.Any])
+    if ($gridGutters != null) __obj.updateDynamic("$gridGutters")($gridGutters.asInstanceOf[js.Any])
+    if ($gridMargins != null) __obj.updateDynamic("$gridMargins")($gridMargins.asInstanceOf[js.Any])
+    if (!js.isUndefined($gridMaxWidth)) __obj.updateDynamic("$gridMaxWidth")($gridMaxWidth.get.asInstanceOf[js.Any])
+    if ($gridUnit != null) __obj.updateDynamic("$gridUnit")($gridUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyledGridProps]
   }
-  @scala.inline
-  implicit class StyledGridPropsOps[Self <: StyledGridProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$align(value: Responsive[ALIGNMENT]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$align: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$behavior(value: BEHAVIOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$behavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$behavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$behavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridGutters(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridGutters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridGutters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridGutters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridMargins(value: Responsive[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridMargins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridMargins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridMargins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$gridUnit(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$gridUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$gridUnit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

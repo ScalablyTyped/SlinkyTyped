@@ -23,84 +23,27 @@ trait ListPresetsRequest extends js.Object {
     */
   var NextToken: js.UndefOr[string] = js.native
   /**
-    * When you request lists of resources, you can optionally specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
+    * Optional. When you request lists of resources, you can specify whether they are sorted in ASCENDING or DESCENDING order. Default varies by resource.
     */
   var Order: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.Order] = js.native
 }
 
 object ListPresetsRequest {
   @scala.inline
-  def apply(): ListPresetsRequest = {
+  def apply(
+    Category: string = null,
+    ListBy: PresetListBy = null,
+    MaxResults: js.UndefOr[integerMin1Max20] = js.undefined,
+    NextToken: string = null,
+    Order: Order = null
+  ): ListPresetsRequest = {
     val __obj = js.Dynamic.literal()
+    if (Category != null) __obj.updateDynamic("Category")(Category.asInstanceOf[js.Any])
+    if (ListBy != null) __obj.updateDynamic("ListBy")(ListBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Order != null) __obj.updateDynamic("Order")(Order.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPresetsRequest]
   }
-  @scala.inline
-  implicit class ListPresetsRequestOps[Self <: ListPresetsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListBy(value: PresetListBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: integerMin1Max20): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Order): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

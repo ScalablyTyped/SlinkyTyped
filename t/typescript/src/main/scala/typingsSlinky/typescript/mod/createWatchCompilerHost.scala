@@ -41,6 +41,16 @@ object createWatchCompilerHost extends js.Object {
     reportWatchStatus: WatchStatusReporter,
     watchOptionsToExtend: WatchOptions
   ): WatchCompilerHostOfConfigFile[T] = js.native
+  def apply[T /* <: BuilderProgram */](
+    configFileName: java.lang.String,
+    optionsToExtend: js.UndefOr[CompilerOptions],
+    system: System,
+    createProgram: CreateProgram_[T],
+    reportDiagnostic: DiagnosticReporter,
+    reportWatchStatus: WatchStatusReporter,
+    watchOptionsToExtend: WatchOptions,
+    extraFileExtensions: js.Array[FileExtensionInfo]
+  ): WatchCompilerHostOfConfigFile[T] = js.native
   def apply[T /* <: BuilderProgram */](rootFiles: js.Array[java.lang.String], options: CompilerOptions, system: System): WatchCompilerHostOfFilesAndCompilerOptions[T] = js.native
   def apply[T /* <: BuilderProgram */](
     rootFiles: js.Array[java.lang.String],

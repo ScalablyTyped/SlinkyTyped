@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait predominantCategories extends js.Object {
   /**
     * Determines predominant categories for a layer based on a given set of competing numeric fields and returns the number of features belonging to each category.
@@ -18,7 +17,7 @@ trait predominantCategories extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def predominantCategories(params: predominantCategoriesPredominantCategoriesParams): js.Promise[PredominantCategoriesResult] = js.native
+  def predominantCategories(params: predominantCategoriesPredominantCategoriesParams): js.Promise[PredominantCategoriesResult]
 }
 
 object predominantCategories {
@@ -29,19 +28,5 @@ object predominantCategories {
     val __obj = js.Dynamic.literal(predominantCategories = js.Any.fromFunction1(predominantCategories))
     __obj.asInstanceOf[predominantCategories]
   }
-  @scala.inline
-  implicit class predominantCategoriesOps[Self <: predominantCategories] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPredominantCategories(value: predominantCategoriesPredominantCategoriesParams => js.Promise[PredominantCategoriesResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predominantCategories")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

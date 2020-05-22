@@ -4,40 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlIcon extends KmlLink {
   /**
     * Gets the height (<gx:h>), in pixels, of the icon.
     */
-  def getH(): Double = js.native
+  def getH(): Double
   /**
     * Gets the width (<gx:w>), in pixels, of the icon.
     */
-  def getW(): Double = js.native
+  def getW(): Double
   /**
     * Gets the offset from the left (<gx:x>), in pixels, of the icon.
     */
-  def getX(): Double = js.native
+  def getX(): Double
   /**
     * Gets the offset from the bottom (<gx:y>), in pixels, of the icon.
     */
-  def getY(): Double = js.native
+  def getY(): Double
   /**
     * Specifies the height (<gx:h>), in pixels, of the icon to use.
     */
-  def setH(h: Double): Unit = js.native
+  def setH(h: Double): Unit
   /**
     * Specifies the width (<gx:w>), in pixels, of the icon to use.
     */
-  def setW(w: Double): Unit = js.native
+  def setW(w: Double): Unit
   /**
     * Specifies the icon's offset (<gx:x>), in pixels from the left side of its icon palette, if a palette has been specified in the <href> element.
     */
-  def setX(x: Double): Double = js.native
+  def setX(x: Double): Double
   /**
     * Specifies the offset (<gx:y>), in pixels from the bottom of its icon palette, if a palette has been specified in the <href> element.
     */
-  def setY(y: Double): Unit = js.native
+  def setY(y: Double): Unit
 }
 
 object KmlIcon {
@@ -83,61 +82,5 @@ object KmlIcon {
     val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getH = js.Any.fromFunction0(getH), getHref = js.Any.fromFunction0(getHref), getId = js.Any.fromFunction0(getId), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getRefreshInterval = js.Any.fromFunction0(getRefreshInterval), getRefreshMode = js.Any.fromFunction0(getRefreshMode), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), getViewBoundScale = js.Any.fromFunction0(getViewBoundScale), getViewFormat = js.Any.fromFunction0(getViewFormat), getViewRefreshMode = js.Any.fromFunction0(getViewRefreshMode), getViewRefreshTime = js.Any.fromFunction0(getViewRefreshTime), getW = js.Any.fromFunction0(getW), getX = js.Any.fromFunction0(getX), getY = js.Any.fromFunction0(getY), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setH = js.Any.fromFunction1(setH), setHref = js.Any.fromFunction1(setHref), setRefreshInterval = js.Any.fromFunction1(setRefreshInterval), setRefreshMode = js.Any.fromFunction1(setRefreshMode), setViewBoundScale = js.Any.fromFunction1(setViewBoundScale), setViewFormat = js.Any.fromFunction1(setViewFormat), setViewRefreshMode = js.Any.fromFunction1(setViewRefreshMode), setViewRefreshTime = js.Any.fromFunction1(setViewRefreshTime), setW = js.Any.fromFunction1(setW), setX = js.Any.fromFunction1(setX), setY = js.Any.fromFunction1(setY))
     __obj.asInstanceOf[KmlIcon]
   }
-  @scala.inline
-  implicit class KmlIconOps[Self <: KmlIcon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetH(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getH")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetW(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getW")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetX(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getX")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetY(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getY")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetH(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setH")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetW(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setW")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetX(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setX")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetY(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setY")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

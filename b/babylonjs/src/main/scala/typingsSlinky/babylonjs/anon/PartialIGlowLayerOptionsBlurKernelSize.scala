@@ -7,107 +7,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<babylonjs.BABYLON.IGlowLayerOptions> */
-@js.native
 trait PartialIGlowLayerOptionsBlurKernelSize extends js.Object {
-  var blurKernelSize: js.UndefOr[Double] = js.native
-  var camera: js.UndefOr[Nullable[Camera]] = js.native
-  var mainTextureFixedSize: js.UndefOr[Double] = js.native
-  var mainTextureRatio: js.UndefOr[Double] = js.native
-  var mainTextureSamples: js.UndefOr[Double] = js.native
-  var renderingGroupId: js.UndefOr[Double] = js.native
+  var blurKernelSize: js.UndefOr[Double] = js.undefined
+  var camera: js.UndefOr[Nullable[Camera]] = js.undefined
+  var mainTextureFixedSize: js.UndefOr[Double] = js.undefined
+  var mainTextureRatio: js.UndefOr[Double] = js.undefined
+  var mainTextureSamples: js.UndefOr[Double] = js.undefined
+  var renderingGroupId: js.UndefOr[Double] = js.undefined
 }
 
 object PartialIGlowLayerOptionsBlurKernelSize {
   @scala.inline
-  def apply(): PartialIGlowLayerOptionsBlurKernelSize = {
+  def apply(
+    blurKernelSize: js.UndefOr[Double] = js.undefined,
+    camera: js.UndefOr[Null | Nullable[Camera]] = js.undefined,
+    mainTextureFixedSize: js.UndefOr[Double] = js.undefined,
+    mainTextureRatio: js.UndefOr[Double] = js.undefined,
+    mainTextureSamples: js.UndefOr[Double] = js.undefined,
+    renderingGroupId: js.UndefOr[Double] = js.undefined
+  ): PartialIGlowLayerOptionsBlurKernelSize = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blurKernelSize)) __obj.updateDynamic("blurKernelSize")(blurKernelSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(camera)) __obj.updateDynamic("camera")(camera.asInstanceOf[js.Any])
+    if (!js.isUndefined(mainTextureFixedSize)) __obj.updateDynamic("mainTextureFixedSize")(mainTextureFixedSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mainTextureRatio)) __obj.updateDynamic("mainTextureRatio")(mainTextureRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mainTextureSamples)) __obj.updateDynamic("mainTextureSamples")(mainTextureSamples.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderingGroupId)) __obj.updateDynamic("renderingGroupId")(renderingGroupId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIGlowLayerOptionsBlurKernelSize]
   }
-  @scala.inline
-  implicit class PartialIGlowLayerOptionsBlurKernelSizeOps[Self <: PartialIGlowLayerOptionsBlurKernelSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlurKernelSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurKernelSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlurKernelSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurKernelSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCamera(value: Nullable[Camera]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCamera: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(null)
-        ret
-    }
-    @scala.inline
-    def withMainTextureFixedSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureFixedSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainTextureFixedSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureFixedSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainTextureRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainTextureRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMainTextureSamples(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureSamples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMainTextureSamples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mainTextureSamples")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderingGroupId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderingGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderingGroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

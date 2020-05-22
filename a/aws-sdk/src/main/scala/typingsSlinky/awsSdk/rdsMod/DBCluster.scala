@@ -135,7 +135,7 @@ trait DBCluster extends js.Object {
     */
   var Engine: js.UndefOr[String] = js.native
   /**
-    * The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster.
+    * The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster.   global engine mode only applies for global database clusters created with Aurora MySQL version 5.6.10a. For higher Aurora MySQL versions, the clusters in a global database use provisioned engine mode. To check if a DB cluster is part of a global database, use DescribeGlobalClusters instead of checking the EngineMode return value from DescribeDBClusters.  
     */
   var EngineMode: js.UndefOr[String] = js.native
   /**
@@ -187,7 +187,7 @@ trait DBCluster extends js.Object {
     */
   var PreferredMaintenanceWindow: js.UndefOr[String] = js.native
   /**
-    * Contains one or more identifiers of the Read Replicas associated with this DB cluster.
+    * Contains one or more identifiers of the read replicas associated with this DB cluster.
     */
   var ReadReplicaIdentifiers: js.UndefOr[ReadReplicaIdentifierList] = js.native
   /**
@@ -195,7 +195,7 @@ trait DBCluster extends js.Object {
     */
   var ReaderEndpoint: js.UndefOr[String] = js.native
   /**
-    * Contains the identifier of the source DB cluster if this DB cluster is a Read Replica.
+    * Contains the identifier of the source DB cluster if this DB cluster is a read replica.
     */
   var ReplicationSourceIdentifier: js.UndefOr[String] = js.native
   var ScalingConfigurationInfo: js.UndefOr[typingsSlinky.awsSdk.rdsMod.ScalingConfigurationInfo] = js.native
@@ -215,641 +215,114 @@ trait DBCluster extends js.Object {
 
 object DBCluster {
   @scala.inline
-  def apply(): DBCluster = {
+  def apply(
+    ActivityStreamKinesisStreamName: String = null,
+    ActivityStreamKmsKeyId: String = null,
+    ActivityStreamMode: ActivityStreamMode = null,
+    ActivityStreamStatus: ActivityStreamStatus = null,
+    AllocatedStorage: js.UndefOr[IntegerOptional] = js.undefined,
+    AssociatedRoles: DBClusterRoles = null,
+    AvailabilityZones: AvailabilityZones = null,
+    BacktrackConsumedChangeRecords: js.UndefOr[LongOptional] = js.undefined,
+    BacktrackWindow: js.UndefOr[LongOptional] = js.undefined,
+    BackupRetentionPeriod: js.UndefOr[IntegerOptional] = js.undefined,
+    Capacity: js.UndefOr[IntegerOptional] = js.undefined,
+    CharacterSetName: String = null,
+    CloneGroupId: String = null,
+    ClusterCreateTime: js.Date = null,
+    CopyTagsToSnapshot: js.UndefOr[BooleanOptional] = js.undefined,
+    CrossAccountClone: js.UndefOr[BooleanOptional] = js.undefined,
+    CustomEndpoints: StringList = null,
+    DBClusterArn: String = null,
+    DBClusterIdentifier: String = null,
+    DBClusterMembers: DBClusterMemberList = null,
+    DBClusterOptionGroupMemberships: DBClusterOptionGroupMemberships = null,
+    DBClusterParameterGroup: String = null,
+    DBSubnetGroup: String = null,
+    DatabaseName: String = null,
+    DbClusterResourceId: String = null,
+    DeletionProtection: js.UndefOr[BooleanOptional] = js.undefined,
+    DomainMemberships: DomainMembershipList = null,
+    EarliestBacktrackTime: js.Date = null,
+    EarliestRestorableTime: js.Date = null,
+    EnabledCloudwatchLogsExports: LogTypeList = null,
+    Endpoint: String = null,
+    Engine: String = null,
+    EngineMode: String = null,
+    EngineVersion: String = null,
+    HostedZoneId: String = null,
+    HttpEndpointEnabled: js.UndefOr[BooleanOptional] = js.undefined,
+    IAMDatabaseAuthenticationEnabled: js.UndefOr[BooleanOptional] = js.undefined,
+    KmsKeyId: String = null,
+    LatestRestorableTime: js.Date = null,
+    MasterUsername: String = null,
+    MultiAZ: js.UndefOr[BooleanOptional] = js.undefined,
+    PercentProgress: String = null,
+    Port: js.UndefOr[IntegerOptional] = js.undefined,
+    PreferredBackupWindow: String = null,
+    PreferredMaintenanceWindow: String = null,
+    ReadReplicaIdentifiers: ReadReplicaIdentifierList = null,
+    ReaderEndpoint: String = null,
+    ReplicationSourceIdentifier: String = null,
+    ScalingConfigurationInfo: ScalingConfigurationInfo = null,
+    Status: String = null,
+    StorageEncrypted: js.UndefOr[Boolean] = js.undefined,
+    VpcSecurityGroups: VpcSecurityGroupMembershipList = null
+  ): DBCluster = {
     val __obj = js.Dynamic.literal()
+    if (ActivityStreamKinesisStreamName != null) __obj.updateDynamic("ActivityStreamKinesisStreamName")(ActivityStreamKinesisStreamName.asInstanceOf[js.Any])
+    if (ActivityStreamKmsKeyId != null) __obj.updateDynamic("ActivityStreamKmsKeyId")(ActivityStreamKmsKeyId.asInstanceOf[js.Any])
+    if (ActivityStreamMode != null) __obj.updateDynamic("ActivityStreamMode")(ActivityStreamMode.asInstanceOf[js.Any])
+    if (ActivityStreamStatus != null) __obj.updateDynamic("ActivityStreamStatus")(ActivityStreamStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllocatedStorage)) __obj.updateDynamic("AllocatedStorage")(AllocatedStorage.get.asInstanceOf[js.Any])
+    if (AssociatedRoles != null) __obj.updateDynamic("AssociatedRoles")(AssociatedRoles.asInstanceOf[js.Any])
+    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
+    if (!js.isUndefined(BacktrackConsumedChangeRecords)) __obj.updateDynamic("BacktrackConsumedChangeRecords")(BacktrackConsumedChangeRecords.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(BacktrackWindow)) __obj.updateDynamic("BacktrackWindow")(BacktrackWindow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(BackupRetentionPeriod)) __obj.updateDynamic("BackupRetentionPeriod")(BackupRetentionPeriod.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Capacity)) __obj.updateDynamic("Capacity")(Capacity.get.asInstanceOf[js.Any])
+    if (CharacterSetName != null) __obj.updateDynamic("CharacterSetName")(CharacterSetName.asInstanceOf[js.Any])
+    if (CloneGroupId != null) __obj.updateDynamic("CloneGroupId")(CloneGroupId.asInstanceOf[js.Any])
+    if (ClusterCreateTime != null) __obj.updateDynamic("ClusterCreateTime")(ClusterCreateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(CopyTagsToSnapshot)) __obj.updateDynamic("CopyTagsToSnapshot")(CopyTagsToSnapshot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CrossAccountClone)) __obj.updateDynamic("CrossAccountClone")(CrossAccountClone.get.asInstanceOf[js.Any])
+    if (CustomEndpoints != null) __obj.updateDynamic("CustomEndpoints")(CustomEndpoints.asInstanceOf[js.Any])
+    if (DBClusterArn != null) __obj.updateDynamic("DBClusterArn")(DBClusterArn.asInstanceOf[js.Any])
+    if (DBClusterIdentifier != null) __obj.updateDynamic("DBClusterIdentifier")(DBClusterIdentifier.asInstanceOf[js.Any])
+    if (DBClusterMembers != null) __obj.updateDynamic("DBClusterMembers")(DBClusterMembers.asInstanceOf[js.Any])
+    if (DBClusterOptionGroupMemberships != null) __obj.updateDynamic("DBClusterOptionGroupMemberships")(DBClusterOptionGroupMemberships.asInstanceOf[js.Any])
+    if (DBClusterParameterGroup != null) __obj.updateDynamic("DBClusterParameterGroup")(DBClusterParameterGroup.asInstanceOf[js.Any])
+    if (DBSubnetGroup != null) __obj.updateDynamic("DBSubnetGroup")(DBSubnetGroup.asInstanceOf[js.Any])
+    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
+    if (DbClusterResourceId != null) __obj.updateDynamic("DbClusterResourceId")(DbClusterResourceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeletionProtection)) __obj.updateDynamic("DeletionProtection")(DeletionProtection.get.asInstanceOf[js.Any])
+    if (DomainMemberships != null) __obj.updateDynamic("DomainMemberships")(DomainMemberships.asInstanceOf[js.Any])
+    if (EarliestBacktrackTime != null) __obj.updateDynamic("EarliestBacktrackTime")(EarliestBacktrackTime.asInstanceOf[js.Any])
+    if (EarliestRestorableTime != null) __obj.updateDynamic("EarliestRestorableTime")(EarliestRestorableTime.asInstanceOf[js.Any])
+    if (EnabledCloudwatchLogsExports != null) __obj.updateDynamic("EnabledCloudwatchLogsExports")(EnabledCloudwatchLogsExports.asInstanceOf[js.Any])
+    if (Endpoint != null) __obj.updateDynamic("Endpoint")(Endpoint.asInstanceOf[js.Any])
+    if (Engine != null) __obj.updateDynamic("Engine")(Engine.asInstanceOf[js.Any])
+    if (EngineMode != null) __obj.updateDynamic("EngineMode")(EngineMode.asInstanceOf[js.Any])
+    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
+    if (HostedZoneId != null) __obj.updateDynamic("HostedZoneId")(HostedZoneId.asInstanceOf[js.Any])
+    if (!js.isUndefined(HttpEndpointEnabled)) __obj.updateDynamic("HttpEndpointEnabled")(HttpEndpointEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IAMDatabaseAuthenticationEnabled)) __obj.updateDynamic("IAMDatabaseAuthenticationEnabled")(IAMDatabaseAuthenticationEnabled.get.asInstanceOf[js.Any])
+    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
+    if (LatestRestorableTime != null) __obj.updateDynamic("LatestRestorableTime")(LatestRestorableTime.asInstanceOf[js.Any])
+    if (MasterUsername != null) __obj.updateDynamic("MasterUsername")(MasterUsername.asInstanceOf[js.Any])
+    if (!js.isUndefined(MultiAZ)) __obj.updateDynamic("MultiAZ")(MultiAZ.get.asInstanceOf[js.Any])
+    if (PercentProgress != null) __obj.updateDynamic("PercentProgress")(PercentProgress.asInstanceOf[js.Any])
+    if (!js.isUndefined(Port)) __obj.updateDynamic("Port")(Port.get.asInstanceOf[js.Any])
+    if (PreferredBackupWindow != null) __obj.updateDynamic("PreferredBackupWindow")(PreferredBackupWindow.asInstanceOf[js.Any])
+    if (PreferredMaintenanceWindow != null) __obj.updateDynamic("PreferredMaintenanceWindow")(PreferredMaintenanceWindow.asInstanceOf[js.Any])
+    if (ReadReplicaIdentifiers != null) __obj.updateDynamic("ReadReplicaIdentifiers")(ReadReplicaIdentifiers.asInstanceOf[js.Any])
+    if (ReaderEndpoint != null) __obj.updateDynamic("ReaderEndpoint")(ReaderEndpoint.asInstanceOf[js.Any])
+    if (ReplicationSourceIdentifier != null) __obj.updateDynamic("ReplicationSourceIdentifier")(ReplicationSourceIdentifier.asInstanceOf[js.Any])
+    if (ScalingConfigurationInfo != null) __obj.updateDynamic("ScalingConfigurationInfo")(ScalingConfigurationInfo.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (!js.isUndefined(StorageEncrypted)) __obj.updateDynamic("StorageEncrypted")(StorageEncrypted.get.asInstanceOf[js.Any])
+    if (VpcSecurityGroups != null) __obj.updateDynamic("VpcSecurityGroups")(VpcSecurityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBCluster]
   }
-  @scala.inline
-  implicit class DBClusterOps[Self <: DBCluster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityStreamKinesisStreamName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamKinesisStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityStreamKinesisStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamKinesisStreamName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityStreamKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamKmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityStreamKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamKmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityStreamMode(value: ActivityStreamMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityStreamMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActivityStreamStatus(value: ActivityStreamStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivityStreamStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivityStreamStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllocatedStorage(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocatedStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocatedStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssociatedRoles(value: DBClusterRoles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedRoles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociatedRoles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedRoles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZones(value: AvailabilityZones): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBacktrackConsumedChangeRecords(value: LongOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackConsumedChangeRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBacktrackConsumedChangeRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackConsumedChangeRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBacktrackWindow(value: LongOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBacktrackWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackupRetentionPeriod(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRetentionPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackupRetentionPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupRetentionPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapacity(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCharacterSetName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharacterSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharacterSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CharacterSetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloneGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloneGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloneGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloneGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterCreateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterCreateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterCreateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyTagsToSnapshot(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTagsToSnapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyTagsToSnapshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTagsToSnapshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossAccountClone(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrossAccountClone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossAccountClone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CrossAccountClone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomEndpoints(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomEndpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomEndpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBClusterArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBClusterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBClusterIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBClusterMembers(value: DBClusterMemberList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterMembers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBClusterMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterMembers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBClusterOptionGroupMemberships(value: DBClusterOptionGroupMemberships): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterOptionGroupMemberships")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBClusterOptionGroupMemberships: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterOptionGroupMemberships")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBClusterParameterGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterParameterGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBClusterParameterGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterParameterGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBSubnetGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBSubnetGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSubnetGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabaseName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabaseName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDbClusterResourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DbClusterResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDbClusterResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DbClusterResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletionProtection(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainMemberships(value: DomainMembershipList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainMemberships")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainMemberships: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainMemberships")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarliestBacktrackTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestBacktrackTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarliestBacktrackTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestBacktrackTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarliestRestorableTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestRestorableTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarliestRestorableTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EarliestRestorableTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabledCloudwatchLogsExports(value: LogTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnabledCloudwatchLogsExports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabledCloudwatchLogsExports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnabledCloudwatchLogsExports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Engine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostedZoneId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostedZoneId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpEndpointEnabled(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpEndpointEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpEndpointEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpEndpointEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIAMDatabaseAuthenticationEnabled(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMDatabaseAuthenticationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIAMDatabaseAuthenticationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMDatabaseAuthenticationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKmsKeyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatestRestorableTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestRestorableTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatestRestorableTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestRestorableTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUsername")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUsername")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiAZ(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZ")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiAZ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiAZ")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentProgress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PercentProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PercentProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredBackupWindow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredBackupWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredBackupWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredBackupWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredMaintenanceWindow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredMaintenanceWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadReplicaIdentifiers(value: ReadReplicaIdentifierList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadReplicaIdentifiers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadReplicaIdentifiers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadReplicaIdentifiers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReaderEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReaderEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReaderEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReaderEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationSourceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationSourceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationSourceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationSourceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalingConfigurationInfo(value: ScalingConfigurationInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingConfigurationInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalingConfigurationInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingConfigurationInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageEncrypted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageEncrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageEncrypted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcSecurityGroups(value: VpcSecurityGroupMembershipList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcSecurityGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroups")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

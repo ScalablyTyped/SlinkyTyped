@@ -1,138 +1,62 @@
 package typingsSlinky.consul.mod.Agent.Check
 
 import typingsSlinky.consul.mod.CommonOptions
+import typingsSlinky.node.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegisterOptions extends CommonOptions {
-  var http: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var interval: js.UndefOr[String] = js.native
-  var name: String = js.native
-  var notes: js.UndefOr[String] = js.native
-  var script: js.UndefOr[String] = js.native
-  var serviceid: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
-  var ttl: js.UndefOr[String] = js.native
+  var http: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var interval: js.UndefOr[String] = js.undefined
+  var name: String
+  var notes: js.UndefOr[String] = js.undefined
+  var script: js.UndefOr[String] = js.undefined
+  var serviceid: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
+  var ttl: js.UndefOr[String] = js.undefined
 }
 
 object RegisterOptions {
   @scala.inline
-  def apply(name: String): RegisterOptions = {
+  def apply(
+    name: String,
+    consistent: js.UndefOr[Boolean] = js.undefined,
+    ctx: EventEmitter = null,
+    dc: String = null,
+    http: String = null,
+    id: String = null,
+    interval: String = null,
+    notes: String = null,
+    script: String = null,
+    serviceid: String = null,
+    stale: js.UndefOr[Boolean] = js.undefined,
+    status: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    token: String = null,
+    ttl: String = null,
+    wait: String = null,
+    wan: js.UndefOr[Boolean] = js.undefined
+  ): RegisterOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(consistent)) __obj.updateDynamic("consistent")(consistent.get.asInstanceOf[js.Any])
+    if (ctx != null) __obj.updateDynamic("ctx")(ctx.asInstanceOf[js.Any])
+    if (dc != null) __obj.updateDynamic("dc")(dc.asInstanceOf[js.Any])
+    if (http != null) __obj.updateDynamic("http")(http.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (script != null) __obj.updateDynamic("script")(script.asInstanceOf[js.Any])
+    if (serviceid != null) __obj.updateDynamic("serviceid")(serviceid.asInstanceOf[js.Any])
+    if (!js.isUndefined(stale)) __obj.updateDynamic("stale")(stale.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
+    if (wait != null) __obj.updateDynamic("wait")(wait.asInstanceOf[js.Any])
+    if (!js.isUndefined(wan)) __obj.updateDynamic("wan")(wan.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterOptions]
   }
-  @scala.inline
-  implicit class RegisterOptionsOps[Self <: RegisterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHttp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScript(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTtl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

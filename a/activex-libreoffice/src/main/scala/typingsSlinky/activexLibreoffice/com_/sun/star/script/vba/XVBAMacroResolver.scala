@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Converts VBA macro names to script URLs and vice versa. */
-@js.native
 trait XVBAMacroResolver extends js.Object {
   /**
     * Returns the VBA macro name for a macro with the passed script URL.
@@ -13,14 +12,14 @@ trait XVBAMacroResolver extends js.Object {
     * @returns The VBA macro name referring to a macro with the passed script URL.
     * @throws com::sun::star::lang::IllegalArgumentException if a macro with the passed name does not exist.
     */
-  def resolveScriptURLtoVBAMacro(aScriptURL: String): String = js.native
+  def resolveScriptURLtoVBAMacro(aScriptURL: String): String
   /**
     * Returns the script URL representing the passed VBA macro name.
     * @param aVBAMacroName The VBA macro name to be resolved to a script URL. The macro name may consist of up to three parts, divided by periods. The first t
     * @returns The script URL referring to the passed VBA macro.
     * @throws com::sun::star::lang::IllegalArgumentException if a macro with the passed name does not exist.
     */
-  def resolveVBAMacroToScriptURL(aVBAMacroName: String): String = js.native
+  def resolveVBAMacroToScriptURL(aVBAMacroName: String): String
 }
 
 object XVBAMacroResolver {
@@ -29,25 +28,5 @@ object XVBAMacroResolver {
     val __obj = js.Dynamic.literal(resolveScriptURLtoVBAMacro = js.Any.fromFunction1(resolveScriptURLtoVBAMacro), resolveVBAMacroToScriptURL = js.Any.fromFunction1(resolveVBAMacroToScriptURL))
     __obj.asInstanceOf[XVBAMacroResolver]
   }
-  @scala.inline
-  implicit class XVBAMacroResolverOps[Self <: XVBAMacroResolver] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResolveScriptURLtoVBAMacro(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveScriptURLtoVBAMacro")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResolveVBAMacroToScriptURL(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveVBAMacroToScriptURL")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

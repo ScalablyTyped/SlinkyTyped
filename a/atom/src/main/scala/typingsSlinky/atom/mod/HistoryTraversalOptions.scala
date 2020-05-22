@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HistoryTraversalOptions extends js.Object {
   /** Restore snapshot of selections marker layer to given selectionsMarkerLayer. */
-  var selectionsMarkerLayer: js.UndefOr[MarkerLayer] = js.native
+  var selectionsMarkerLayer: js.UndefOr[MarkerLayer] = js.undefined
 }
 
 object HistoryTraversalOptions {
   @scala.inline
-  def apply(): HistoryTraversalOptions = {
+  def apply(selectionsMarkerLayer: MarkerLayer = null): HistoryTraversalOptions = {
     val __obj = js.Dynamic.literal()
+    if (selectionsMarkerLayer != null) __obj.updateDynamic("selectionsMarkerLayer")(selectionsMarkerLayer.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryTraversalOptions]
   }
-  @scala.inline
-  implicit class HistoryTraversalOptionsOps[Self <: HistoryTraversalOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectionsMarkerLayer(value: MarkerLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionsMarkerLayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionsMarkerLayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionsMarkerLayer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -80,5 +80,10 @@ class TextureAssetTask protected ()
     */
   samplingMode: Double
   ) = this()
+  /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: typingsSlinky.babylonjs.BABYLON.Texture = js.native
 }
 

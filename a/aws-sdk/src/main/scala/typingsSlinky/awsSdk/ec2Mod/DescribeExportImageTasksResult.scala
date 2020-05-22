@@ -18,41 +18,11 @@ trait DescribeExportImageTasksResult extends js.Object {
 
 object DescribeExportImageTasksResult {
   @scala.inline
-  def apply(): DescribeExportImageTasksResult = {
+  def apply(ExportImageTasks: ExportImageTaskList = null, NextToken: NextToken = null): DescribeExportImageTasksResult = {
     val __obj = js.Dynamic.literal()
+    if (ExportImageTasks != null) __obj.updateDynamic("ExportImageTasks")(ExportImageTasks.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeExportImageTasksResult]
   }
-  @scala.inline
-  implicit class DescribeExportImageTasksResultOps[Self <: DescribeExportImageTasksResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportImageTasks(value: ExportImageTaskList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportImageTasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportImageTasks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportImageTasks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

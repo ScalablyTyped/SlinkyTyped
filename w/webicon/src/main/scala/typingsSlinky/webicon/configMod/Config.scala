@@ -14,351 +14,143 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config extends js.Object {
   /**
     * A set of alias-names for icon-sets.
     */
-  var alias: js.UndefOr[IdentityMap[String, AliasOptions]] = js.native
+  var alias: js.UndefOr[IdentityMap[String, AliasOptions]] = js.undefined
   /**
     * An alias of the `defaultSource`-property.
     */
   var default: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['defaultSource'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * The default icon-set to provide.
     */
-  var defaultIconSetUrl: js.UndefOr[String | SvgIconSetOptions | SvgCumulativeIconSetOptions] = js.native
+  var defaultIconSetUrl: js.UndefOr[String | SvgIconSetOptions | SvgCumulativeIconSetOptions] = js.undefined
   /**
     * The default icon-set to use.
     */
-  var defaultSource: js.UndefOr[String | Identifiable] = js.native
+  var defaultSource: js.UndefOr[String | Identifiable] = js.undefined
   /**
     * An alias of the `defaultIconSetUrl`-property.
     */
   var defaultSvgIconSetUrl: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['defaultIconSetUrl'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * The default size for svg-icons.
     */
-  var defaultSvgIconSize: js.UndefOr[Double | SizeableOptions] = js.native
+  var defaultSvgIconSize: js.UndefOr[Double | SizeableOptions] = js.undefined
   /**
     * An alias of the `defaultIconSetUrl`-property.
     */
   var defaultSvgSetUrl: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['defaultIconSetUrl'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * An alias of the `fonts`-property.
     */
   var font: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['fonts'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * A set of icon-fonts to provide.
     */
-  var fonts: js.UndefOr[IdentityMap[CssClassConfig, CssIconSetOptions]] = js.native
+  var fonts: js.UndefOr[IdentityMap[CssClassConfig, CssIconSetOptions]] = js.undefined
   /**
     * An alias of the `icons`-property.
     */
   var icon: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['icons'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * An alias of the `svgSets`-property.
     */
   var iconSet: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * An alias of the `svgSets`-property.
     */
   var iconSets: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * The icons to provide.
     */
-  var icons: js.UndefOr[IdentityMap[String, ImageIconOptions | SvgIconOptions]] = js.native
+  var icons: js.UndefOr[IdentityMap[String, ImageIconOptions | SvgIconOptions]] = js.undefined
   /**
     * An alias of the `alias`-property.
     */
   var sourceAlias: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['alias'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * An alias of the `sprites`-property.
     */
   var sprite: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['sprites'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * A set of sprite-icons to provide.
     */
-  var sprites: js.UndefOr[IdentityMap[CssClassConfig, CssIconSetOptions]] = js.native
+  var sprites: js.UndefOr[IdentityMap[CssClassConfig, CssIconSetOptions]] = js.undefined
   /**
     * An alias of the `svgSets`-property.
     */
   var svgSet: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     * The svg-sets to provide.
     */
-  var svgSets: js.UndefOr[IdentityMap[String, SvgIconSetOptions | SvgCumulativeIconSetOptions]] = js.native
+  var svgSets: js.UndefOr[IdentityMap[String, SvgIconSetOptions | SvgCumulativeIconSetOptions]] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    alias: IdentityMap[String, AliasOptions] = null,
+    default: /* import warning: importer.ImportType#apply Failed type conversion: this['defaultSource'] */ js.Any = null,
+    defaultIconSetUrl: String | SvgIconSetOptions | SvgCumulativeIconSetOptions = null,
+    defaultSource: String | Identifiable = null,
+    defaultSvgIconSetUrl: /* import warning: importer.ImportType#apply Failed type conversion: this['defaultIconSetUrl'] */ js.Any = null,
+    defaultSvgIconSize: Double | SizeableOptions = null,
+    defaultSvgSetUrl: /* import warning: importer.ImportType#apply Failed type conversion: this['defaultIconSetUrl'] */ js.Any = null,
+    font: /* import warning: importer.ImportType#apply Failed type conversion: this['fonts'] */ js.Any = null,
+    fonts: IdentityMap[CssClassConfig, CssIconSetOptions] = null,
+    icon: /* import warning: importer.ImportType#apply Failed type conversion: this['icons'] */ js.Any = null,
+    iconSet: /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any = null,
+    iconSets: /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any = null,
+    icons: IdentityMap[String, ImageIconOptions | SvgIconOptions] = null,
+    sourceAlias: /* import warning: importer.ImportType#apply Failed type conversion: this['alias'] */ js.Any = null,
+    sprite: /* import warning: importer.ImportType#apply Failed type conversion: this['sprites'] */ js.Any = null,
+    sprites: IdentityMap[CssClassConfig, CssIconSetOptions] = null,
+    svgSet: /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any = null,
+    svgSets: IdentityMap[String, SvgIconSetOptions | SvgCumulativeIconSetOptions] = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (defaultIconSetUrl != null) __obj.updateDynamic("defaultIconSetUrl")(defaultIconSetUrl.asInstanceOf[js.Any])
+    if (defaultSource != null) __obj.updateDynamic("defaultSource")(defaultSource.asInstanceOf[js.Any])
+    if (defaultSvgIconSetUrl != null) __obj.updateDynamic("defaultSvgIconSetUrl")(defaultSvgIconSetUrl.asInstanceOf[js.Any])
+    if (defaultSvgIconSize != null) __obj.updateDynamic("defaultSvgIconSize")(defaultSvgIconSize.asInstanceOf[js.Any])
+    if (defaultSvgSetUrl != null) __obj.updateDynamic("defaultSvgSetUrl")(defaultSvgSetUrl.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (fonts != null) __obj.updateDynamic("fonts")(fonts.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (iconSet != null) __obj.updateDynamic("iconSet")(iconSet.asInstanceOf[js.Any])
+    if (iconSets != null) __obj.updateDynamic("iconSets")(iconSets.asInstanceOf[js.Any])
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (sourceAlias != null) __obj.updateDynamic("sourceAlias")(sourceAlias.asInstanceOf[js.Any])
+    if (sprite != null) __obj.updateDynamic("sprite")(sprite.asInstanceOf[js.Any])
+    if (sprites != null) __obj.updateDynamic("sprites")(sprites.asInstanceOf[js.Any])
+    if (svgSet != null) __obj.updateDynamic("svgSet")(svgSet.asInstanceOf[js.Any])
+    if (svgSets != null) __obj.updateDynamic("svgSets")(svgSets.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: IdentityMap[String, AliasOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['defaultSource'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultIconSetUrl(value: String | SvgIconSetOptions | SvgCumulativeIconSetOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIconSetUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultIconSetUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIconSetUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSource(value: String | Identifiable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSvgIconSetUrl(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['defaultIconSetUrl'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSvgIconSetUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSvgIconSetUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSvgIconSetUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSvgIconSize(value: Double | SizeableOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSvgIconSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSvgIconSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSvgIconSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSvgSetUrl(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['defaultIconSetUrl'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSvgSetUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSvgSetUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSvgSetUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['fonts'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFonts(value: IdentityMap[CssClassConfig, CssIconSetOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFonts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['icons'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconSet(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconSets(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: IdentityMap[String, ImageIconOptions | SvgIconOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceAlias(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['alias'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAlias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAlias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAlias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSprite(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['sprites'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sprite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSprite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sprite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSprites(value: IdentityMap[CssClassConfig, CssIconSetOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sprites")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSprites: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sprites")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgSet(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: this['svgSets'] */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgSets(value: IdentityMap[String, SvgIconSetOptions | SvgCumulativeIconSetOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgSets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgSets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

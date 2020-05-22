@@ -27,53 +27,16 @@ trait SchemaAnalyzeSentimentResponse extends js.Object {
 
 object SchemaAnalyzeSentimentResponse {
   @scala.inline
-  def apply(): SchemaAnalyzeSentimentResponse = {
+  def apply(
+    documentSentiment: SchemaSentiment = null,
+    language: String = null,
+    sentences: js.Array[SchemaSentence] = null
+  ): SchemaAnalyzeSentimentResponse = {
     val __obj = js.Dynamic.literal()
+    if (documentSentiment != null) __obj.updateDynamic("documentSentiment")(documentSentiment.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (sentences != null) __obj.updateDynamic("sentences")(sentences.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnalyzeSentimentResponse]
   }
-  @scala.inline
-  implicit class SchemaAnalyzeSentimentResponseOps[Self <: SchemaAnalyzeSentimentResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentSentiment(value: SchemaSentiment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSentiment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentSentiment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSentiment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentences(value: js.Array[SchemaSentence]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

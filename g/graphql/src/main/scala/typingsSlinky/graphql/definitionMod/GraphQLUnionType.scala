@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLUnionType protected ()
   extends GraphQLAbstractType
-     with GraphQLCompositeType
-     with GraphQLNamedType
-     with GraphQLNullableType
-     with GraphQLOutputType
-     with GraphQLType {
+     with _GraphQLCompositeType
+     with _GraphQLNamedType
+     with _GraphQLNullableType
+     with _GraphQLOutputType
+     with _GraphQLType {
   def this(config: GraphQLUnionTypeConfig[_, _]) = this()
   var astNode: Maybe[UnionTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CornerRadius extends js.Object {
-  var cornerRadius: js.UndefOr[Double] = js.native
-  var flyoutStyle: js.UndefOr[CSSProperties] = js.native
-  var pointerLength: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var cornerRadius: js.UndefOr[Double] = js.undefined
+  var flyoutStyle: js.UndefOr[CSSProperties] = js.undefined
+  var pointerLength: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object CornerRadius {
   @scala.inline
-  def apply(): CornerRadius = {
+  def apply(
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    flyoutStyle: CSSProperties = null,
+    pointerLength: js.UndefOr[Double] = js.undefined,
+    style: CSSProperties = null
+  ): CornerRadius = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (flyoutStyle != null) __obj.updateDynamic("flyoutStyle")(flyoutStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointerLength)) __obj.updateDynamic("pointerLength")(pointerLength.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[CornerRadius]
   }
-  @scala.inline
-  implicit class CornerRadiusOps[Self <: CornerRadius] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCornerRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCornerRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlyoutStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flyoutStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlyoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flyoutStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointerLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointerLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

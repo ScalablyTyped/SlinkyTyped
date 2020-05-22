@@ -4,64 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InviteSignUrl extends js.Object {
   // True to do a room initial sync on the resulting room. If false, the returned Room object will have no current state. Default: true.
-  var inviteSignUrl: js.UndefOr[Boolean] = js.native
-  var syncRoom: js.UndefOr[Boolean] = js.native
+  var inviteSignUrl: js.UndefOr[Boolean] = js.undefined
+  var syncRoom: js.UndefOr[Boolean] = js.undefined
   // If the caller has a keypair 3pid invite, the signing URL is passed in this parameter.
-  var viaServers: js.UndefOr[js.Array[String]] = js.native
+  var viaServers: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object InviteSignUrl {
   @scala.inline
-  def apply(): InviteSignUrl = {
+  def apply(
+    inviteSignUrl: js.UndefOr[Boolean] = js.undefined,
+    syncRoom: js.UndefOr[Boolean] = js.undefined,
+    viaServers: js.Array[String] = null
+  ): InviteSignUrl = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(inviteSignUrl)) __obj.updateDynamic("inviteSignUrl")(inviteSignUrl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncRoom)) __obj.updateDynamic("syncRoom")(syncRoom.get.asInstanceOf[js.Any])
+    if (viaServers != null) __obj.updateDynamic("viaServers")(viaServers.asInstanceOf[js.Any])
     __obj.asInstanceOf[InviteSignUrl]
   }
-  @scala.inline
-  implicit class InviteSignUrlOps[Self <: InviteSignUrl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInviteSignUrl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteSignUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInviteSignUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteSignUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncRoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncRoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncRoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncRoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViaServers(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viaServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViaServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viaServers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

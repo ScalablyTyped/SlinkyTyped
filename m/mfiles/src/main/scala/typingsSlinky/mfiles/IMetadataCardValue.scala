@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMetadataCardValue extends js.Object {
-  val HasIcon: Boolean = js.native
-  val ID: String = js.native
-  val IconURL: String = js.native
-  val IsMultiValue: Boolean = js.native
-  val Item: Double = js.native
-  val Name: String = js.native
-  val State: js.Any = js.native
-  val Version: Double = js.native
-  def IsDeleted(): Boolean = js.native
-  def IsHidden(): Boolean = js.native
+  val HasIcon: Boolean
+  val ID: String
+  val IconURL: String
+  val IsMultiValue: Boolean
+  val Item: Double
+  val Name: String
+  val State: js.Any
+  val Version: Double
+  def IsDeleted(): Boolean
+  def IsHidden(): Boolean
 }
 
 object IMetadataCardValue {
@@ -35,73 +34,5 @@ object IMetadataCardValue {
     val __obj = js.Dynamic.literal(HasIcon = HasIcon.asInstanceOf[js.Any], ID = ID.asInstanceOf[js.Any], IconURL = IconURL.asInstanceOf[js.Any], IsDeleted = js.Any.fromFunction0(IsDeleted), IsHidden = js.Any.fromFunction0(IsHidden), IsMultiValue = IsMultiValue.asInstanceOf[js.Any], Item = Item.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any], Version = Version.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMetadataCardValue]
   }
-  @scala.inline
-  implicit class IMetadataCardValueOps[Self <: IMetadataCardValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIconURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IconURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDeleted(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDeleted")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsHidden(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsHidden")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsMultiValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMultiValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

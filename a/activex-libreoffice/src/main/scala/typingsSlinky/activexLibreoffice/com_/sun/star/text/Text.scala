@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.text.TextFrame
   * @see com.sun.star.table.Cell
   */
-@js.native
 trait Text
   extends XText
      with XEnumerationAccess
@@ -65,7 +64,7 @@ trait Text
     * {@link com.sun.star.beans.PropertyValues} RedlineSuccessorData (contains the same properties except for the RedlineSuccessorData)
     * @see StartRedline
     */
-  var EndRedline: PropertyValues = js.native
+  var EndRedline: PropertyValues
   /**
     * contains the properties of a redline at the start of the document. ;  The sequence contains the following properties
     *
@@ -108,7 +107,7 @@ trait Text
     * {@link com.sun.star.beans.PropertyValues} RedlineSuccessorData (contains the same properties except for the RedlineSuccessorData)
     * @see EndRedline
     */
-  var StartRedline: PropertyValues = js.native
+  var StartRedline: PropertyValues
 }
 
 object Text {
@@ -146,25 +145,5 @@ object Text {
     val __obj = js.Dynamic.literal(ElementType = ElementType.asInstanceOf[js.Any], End = End.asInstanceOf[js.Any], EndRedline = EndRedline.asInstanceOf[js.Any], Start = Start.asInstanceOf[js.Any], StartRedline = StartRedline.asInstanceOf[js.Any], String = String.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), compareRegionEnds = js.Any.fromFunction2(compareRegionEnds), compareRegionStarts = js.Any.fromFunction2(compareRegionStarts), createEnumeration = js.Any.fromFunction0(createEnumeration), createTextCursor = js.Any.fromFunction0(createTextCursor), createTextCursorByRange = js.Any.fromFunction1(createTextCursorByRange), getElementType = js.Any.fromFunction0(getElementType), getEnd = js.Any.fromFunction0(getEnd), getStart = js.Any.fromFunction0(getStart), getString = js.Any.fromFunction0(getString), getText = js.Any.fromFunction0(getText), hasElements = js.Any.fromFunction0(hasElements), insertControlCharacter = js.Any.fromFunction3(insertControlCharacter), insertString = js.Any.fromFunction3(insertString), insertTextContent = js.Any.fromFunction3(insertTextContent), insertTextContentAfter = js.Any.fromFunction2(insertTextContentAfter), insertTextContentBefore = js.Any.fromFunction2(insertTextContentBefore), moveTextRange = js.Any.fromFunction2(moveTextRange), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeTextContent = js.Any.fromFunction1(removeTextContent), setString = js.Any.fromFunction1(setString))
     __obj.asInstanceOf[Text]
   }
-  @scala.inline
-  implicit class TextOps[Self <: Text] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndRedline(value: PropertyValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndRedline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartRedline(value: PropertyValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartRedline")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

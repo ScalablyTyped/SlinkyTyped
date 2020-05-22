@@ -18,41 +18,11 @@ trait GetResourcesOutput extends js.Object {
 
 object GetResourcesOutput {
   @scala.inline
-  def apply(): GetResourcesOutput = {
+  def apply(PaginationToken: PaginationToken = null, ResourceTagMappingList: ResourceTagMappingList = null): GetResourcesOutput = {
     val __obj = js.Dynamic.literal()
+    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
+    if (ResourceTagMappingList != null) __obj.updateDynamic("ResourceTagMappingList")(ResourceTagMappingList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourcesOutput]
   }
-  @scala.inline
-  implicit class GetResourcesOutputOps[Self <: GetResourcesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPaginationToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTagMappingList(value: ResourceTagMappingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTagMappingList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTagMappingList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTagMappingList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

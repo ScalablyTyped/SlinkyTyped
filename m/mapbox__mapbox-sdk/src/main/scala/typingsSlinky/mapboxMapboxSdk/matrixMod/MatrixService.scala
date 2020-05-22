@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MatrixService extends js.Object {
   /**
     * Get a duration and/or distance matrix showing travel times and distances between coordinates.
     * @param request
     */
-  def getMatrix(request: MatrixRequest): MapiRequest = js.native
+  def getMatrix(request: MatrixRequest): MapiRequest
 }
 
 object MatrixService {
@@ -20,19 +19,5 @@ object MatrixService {
     val __obj = js.Dynamic.literal(getMatrix = js.Any.fromFunction1(getMatrix))
     __obj.asInstanceOf[MatrixService]
   }
-  @scala.inline
-  implicit class MatrixServiceOps[Self <: MatrixService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetMatrix(value: MatrixRequest => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMatrix")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

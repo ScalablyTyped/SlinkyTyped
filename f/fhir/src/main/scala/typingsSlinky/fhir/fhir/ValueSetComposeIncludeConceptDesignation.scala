@@ -7,97 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * Additional representations for this concept
   */
-@js.native
 trait ValueSetComposeIncludeConceptDesignation extends BackboneElement {
   /**
     * Contains extended information for property 'language'.
     */
-  var _language: js.UndefOr[Element] = js.native
+  var _language: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'value'.
     */
-  var _value: js.UndefOr[Element] = js.native
+  var _value: js.UndefOr[Element] = js.undefined
   /**
     * Human language of the designation
     */
-  var language: js.UndefOr[code] = js.native
+  var language: js.UndefOr[code] = js.undefined
   /**
     * Details how this designation would be used
     */
-  var use: js.UndefOr[Coding] = js.native
+  var use: js.UndefOr[Coding] = js.undefined
   /**
     * The text value for this designation
     */
-  var value: String = js.native
+  var value: String
 }
 
 object ValueSetComposeIncludeConceptDesignation {
   @scala.inline
-  def apply(value: String): ValueSetComposeIncludeConceptDesignation = {
+  def apply(
+    value: String,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _language: Element = null,
+    _value: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    language: code = null,
+    modifierExtension: js.Array[Extension] = null,
+    use: Coding = null
+  ): ValueSetComposeIncludeConceptDesignation = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_value != null) __obj.updateDynamic("_value")(_value.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueSetComposeIncludeConceptDesignation]
   }
-  @scala.inline
-  implicit class ValueSetComposeIncludeConceptDesignationOps[Self <: ValueSetComposeIncludeConceptDesignation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_language(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_language: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_value(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_value: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse(value: Coding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

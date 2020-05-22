@@ -14,29 +14,10 @@ trait CreatePlayerSessionOutput extends js.Object {
 
 object CreatePlayerSessionOutput {
   @scala.inline
-  def apply(): CreatePlayerSessionOutput = {
+  def apply(PlayerSession: PlayerSession = null): CreatePlayerSessionOutput = {
     val __obj = js.Dynamic.literal()
+    if (PlayerSession != null) __obj.updateDynamic("PlayerSession")(PlayerSession.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePlayerSessionOutput]
   }
-  @scala.inline
-  implicit class CreatePlayerSessionOutputOps[Self <: CreatePlayerSessionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlayerSession(value: PlayerSession): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSession")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayerSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerSession")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

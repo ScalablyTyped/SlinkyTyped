@@ -106,10 +106,10 @@ trait Opa5 extends Object {
   def iTeardownMyUIComponent(): js.Any = js.native
   /**
     * Resets Opa.config to its default values.See {@link sap.ui.test.Opa5#waitFor} for the
-    * descriptionDefault values for OPA5 are:<ul>	<li>viewNamespace: empty string</li>	<li>arrangements:
-    * instance of OPA5</li>	<li>actions: instance of OPA5</li>	<li>assertions: instance of OPA5</li>
-    * <li>visible: true</li>	<li>timeout : 15 seconds, is increased to 5 minutes if running in debug mode
-    * e.g. with URL parameter sap-ui-debug=true</li>	<li>pollingInterval: 400 milliseconds</li></ul>
+    * descriptionDefault values for OPA5 are:<ul>    <li>viewNamespace: empty string</li>    <li>arrangements:
+    * instance of OPA5</li>    <li>actions: instance of OPA5</li>    <li>assertions: instance of OPA5</li>
+    * <li>visible: true</li>    <li>timeout : 15 seconds, is increased to 5 minutes if running in debug mode
+    * e.g. with URL parameter sap-ui-debug=true</li>    <li>pollingInterval: 400 milliseconds</li></ul>
     * @since 1.25
     */
   def resetConfig(): Unit = js.native

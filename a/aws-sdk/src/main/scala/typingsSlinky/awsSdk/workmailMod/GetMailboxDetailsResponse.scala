@@ -18,41 +18,14 @@ trait GetMailboxDetailsResponse extends js.Object {
 
 object GetMailboxDetailsResponse {
   @scala.inline
-  def apply(): GetMailboxDetailsResponse = {
+  def apply(
+    MailboxQuota: js.UndefOr[MailboxQuota] = js.undefined,
+    MailboxSize: js.UndefOr[MailboxSize] = js.undefined
+  ): GetMailboxDetailsResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MailboxQuota)) __obj.updateDynamic("MailboxQuota")(MailboxQuota.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MailboxSize)) __obj.updateDynamic("MailboxSize")(MailboxSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMailboxDetailsResponse]
   }
-  @scala.inline
-  implicit class GetMailboxDetailsResponseOps[Self <: GetMailboxDetailsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMailboxQuota(value: MailboxQuota): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MailboxQuota")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMailboxQuota: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MailboxQuota")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMailboxSize(value: MailboxSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MailboxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMailboxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MailboxSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

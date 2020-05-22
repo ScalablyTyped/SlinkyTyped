@@ -23,20 +23,19 @@ import scala.scalajs.js.annotation._
   * A {@link com.sun.star.sdbc.SQLException} will be thrown if a driver does not support a metadata method. In the case of methods that return an {@link
   * XResultSet} , either an {@link XResultSet} (which may be empty) is returned or a {@link SQLException} is thrown.
   */
-@js.native
 trait XDatabaseMetaData extends XInterface {
   /**
     * return the separator between catalog and table name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val CatalogSeparator: String = js.native
+  val CatalogSeparator: String
   /**
     * return the database vendor's preferred term for "catalog"
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val CatalogTerm: String = js.native
+  val CatalogTerm: String
   /**
     * gets the catalog names available in this database. The results are ordered by catalog name.
     *
@@ -46,188 +45,188 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row has a single String column that is a catalog name
     * @throws SQLException if a database access error occurs.
     */
-  val Catalogs: XResultSet = js.native
+  val Catalogs: XResultSet
   /**
     * retrieves the connection that produced this metadata object.
     * @returns the {@link Connection} object
     * @throws SQLException if a database access error occurs.
     */
-  val Connection: XConnection = js.native
+  val Connection: XConnection
   /** returns the name of the database product. */
-  val DatabaseProductName: String = js.native
+  val DatabaseProductName: String
   /** returns the version of the database product. */
-  val DatabaseProductVersion: String = js.native
+  val DatabaseProductVersion: String
   /**
     * return the database default transaction isolation level. The values are defined in {@link com.sun.star.sdbc.TransactionIsolation} .
     * @returns `TRUE` if so
     * @see com.sun.star.sdbc.XConnection
     * @throws SQLException if a database access error occurs.
     */
-  val DefaultTransactionIsolation: Double = js.native
+  val DefaultTransactionIsolation: Double
   /** returns the SDBC driver major version number. */
-  val DriverMajorVersion: Double = js.native
+  val DriverMajorVersion: Double
   /** returns the SDBC driver minor version number. */
-  val DriverMinorVersion: Double = js.native
+  val DriverMinorVersion: Double
   /** returns the name of the SDBC driver. */
-  val DriverName: String = js.native
+  val DriverName: String
   /** returns the version number of the SDBC driver. */
-  val DriverVersion: String = js.native
+  val DriverVersion: String
   /**
     * gets all the "extra" characters that can be used in unquoted identifier names (those beyond a-z, A-Z, 0-9 and _).
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val ExtraNameCharacters: String = js.native
+  val ExtraNameCharacters: String
   /**
     * What's the string used to quote SQL identifiers? This returns a space " " if identifier quoting is not supported.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val IdentifierQuoteString: String = js.native
+  val IdentifierQuoteString: String
   /**
     * return the maximal number of hex characters in an inline binary literal
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxBinaryLiteralLength: Double = js.native
+  val MaxBinaryLiteralLength: Double
   /**
     * return the maximum length of a catalog name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxCatalogNameLength: Double = js.native
+  val MaxCatalogNameLength: Double
   /**
     * return the max length for a character literal
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxCharLiteralLength: Double = js.native
+  val MaxCharLiteralLength: Double
   /**
     * return the limit on column name length
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxColumnNameLength: Double = js.native
+  val MaxColumnNameLength: Double
   /**
     * return the maximum number of columns in a "GROUP BY" clause
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxColumnsInGroupBy: Double = js.native
+  val MaxColumnsInGroupBy: Double
   /**
     * return the maximum number of columns allowed in an index
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxColumnsInIndex: Double = js.native
+  val MaxColumnsInIndex: Double
   /**
     * return the maximum number of columns in an "ORDER BY" clause
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxColumnsInOrderBy: Double = js.native
+  val MaxColumnsInOrderBy: Double
   /**
     * return the maximum number of columns in a "SELECT" list
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxColumnsInSelect: Double = js.native
+  val MaxColumnsInSelect: Double
   /**
     * return the maximum number of columns in a table
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxColumnsInTable: Double = js.native
+  val MaxColumnsInTable: Double
   /**
     * return the number of active connections at a time to this database.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxConnections: Double = js.native
+  val MaxConnections: Double
   /**
     * return the maximum cursor name length
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxCursorNameLength: Double = js.native
+  val MaxCursorNameLength: Double
   /**
     * return the maximum length of an index (in bytes)
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxIndexLength: Double = js.native
+  val MaxIndexLength: Double
   /**
     * return the maximum length of a procedure name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxProcedureNameLength: Double = js.native
+  val MaxProcedureNameLength: Double
   /**
     * return the maximum length of a single row.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxRowSize: Double = js.native
+  val MaxRowSize: Double
   /**
     * return the maximum length allowed for a schema name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxSchemaNameLength: Double = js.native
+  val MaxSchemaNameLength: Double
   /**
     * return the maximum length of a SQL statement
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxStatementLength: Double = js.native
+  val MaxStatementLength: Double
   /**
     * return the maximal number of open active statements at one time to this database
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxStatements: Double = js.native
+  val MaxStatements: Double
   /**
     * return the maximum length of a table name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxTableNameLength: Double = js.native
+  val MaxTableNameLength: Double
   /**
     * return the maximum number of tables in a SELECT statement
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxTablesInSelect: Double = js.native
+  val MaxTablesInSelect: Double
   /**
     * return the maximum length of a user name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val MaxUserNameLength: Double = js.native
+  val MaxUserNameLength: Double
   /**
     * gets a comma-separated list of math functions. These are the X/Open CLI math function names used in the SDBC function escape clause.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val NumericFunctions: String = js.native
+  val NumericFunctions: String
   /**
     * return the database vendor's preferred term for "procedure"
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val ProcedureTerm: String = js.native
+  val ProcedureTerm: String
   /**
     * gets a comma-separated list of all a database's SQL keywords that are NOT also SQL92 keywords.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val SQLKeywords: String = js.native
+  val SQLKeywords: String
   /**
     * return the database vendor's preferred term for "schema"
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val SchemaTerm: String = js.native
+  val SchemaTerm: String
   /**
     * Gets the schema names available in this database. The results are ordered by schema name.
     *
@@ -237,7 +236,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row has a single String column that is a schema name
     * @throws SQLException if a database access error occurs.
     */
-  val Schemas: XResultSet = js.native
+  val Schemas: XResultSet
   /**
     * gets the string that can be used to escape wildcard characters. This is the string that can be used to escape "_" or "%" in the string pattern style
     * catalog search parameters.
@@ -248,19 +247,19 @@ trait XDatabaseMetaData extends XInterface {
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val SearchStringEscape: String = js.native
+  val SearchStringEscape: String
   /**
     * gets a comma-separated list of string functions. These are the X/Open CLI string function names used in the SDBC function escape clause.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val StringFunctions: String = js.native
+  val StringFunctions: String
   /**
     * gets a comma-separated list of system functions. These are the X/Open CLI system function names used in the SDBC function escape clause.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val SystemFunctions: String = js.native
+  val SystemFunctions: String
   /**
     * gets the table types available in this database. The results are ordered by table type.
     *
@@ -270,13 +269,13 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row has a single String column that is a table type
     * @throws SQLException if a database access error occurs.
     */
-  val TableTypes: XResultSet = js.native
+  val TableTypes: XResultSet
   /**
     * gets a comma-separated list of time and date functions.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  val TimeDateFunctions: String = js.native
+  val TimeDateFunctions: String
   /**
     * gets a description of all the standard SQL types supported by this database. They are ordered by DATA_TYPE and then by how closely the data type maps
     * to the corresponding SDBC SQL type.
@@ -295,35 +294,35 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a SQL type description
     * @throws SQLException if a database access error occurs.
     */
-  val TypeInfo: XResultSet = js.native
+  val TypeInfo: XResultSet
   /** returns the URL for the database connection */
-  val URL: String = js.native
+  val URL: String
   /** returns the user name from this database connection. */
-  val UserName: String = js.native
+  val UserName: String
   /**
     * Can all the procedures returned by getProcedures be called by the current user?
     * @returns `TRUE` if the user is allowed to call all procedures returned by getProcedures otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def allProceduresAreCallable(): Boolean = js.native
+  def allProceduresAreCallable(): Boolean
   /**
     * Can all the tables returned by getTable be SELECTed by the current user?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def allTablesAreSelectable(): Boolean = js.native
+  def allTablesAreSelectable(): Boolean
   /**
     * does a data definition statement within a transaction force the transaction to commit?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def dataDefinitionCausesTransactionCommit(): Boolean = js.native
+  def dataDefinitionCausesTransactionCommit(): Boolean
   /**
     * is a data definition statement within a transaction ignored?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def dataDefinitionIgnoredInTransactions(): Boolean = js.native
+  def dataDefinitionIgnoredInTransactions(): Boolean
   /**
     * indicates whether or not a visible row delete can be detected by calling {@link com.sun.star.sdbc.XResultSet.rowDeleted()} . If {@link
     * deletesAreDetected()} returns `FALSE` , then deleted rows are removed from the result set.
@@ -331,13 +330,13 @@ trait XDatabaseMetaData extends XInterface {
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def deletesAreDetected(setType: Double): Boolean = js.native
+  def deletesAreDetected(setType: Double): Boolean
   /**
     * Did {@link getMaxRowSize()} include LONGVARCHAR and LONGVARBINARY blobs?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def doesMaxRowSizeIncludeBlobs(): Boolean = js.native
+  def doesMaxRowSizeIncludeBlobs(): Boolean
   /**
     * gets a description of a table's optimal set of columns that uniquely identifies a row. They are ordered by SCOPE.
     *
@@ -356,19 +355,19 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a column description
     * @throws SQLException if a database access error occurs.
     */
-  def getBestRowIdentifier(catalog: js.Any, schema: String, table: String, scope: Double, nullable: Boolean): XResultSet = js.native
+  def getBestRowIdentifier(catalog: js.Any, schema: String, table: String, scope: Double, nullable: Boolean): XResultSet
   /**
     * return the separator between catalog and table name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getCatalogSeparator(): String = js.native
+  def getCatalogSeparator(): String
   /**
     * return the database vendor's preferred term for "catalog"
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getCatalogTerm(): String = js.native
+  def getCatalogTerm(): String
   /**
     * gets the catalog names available in this database. The results are ordered by catalog name.
     *
@@ -378,7 +377,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row has a single String column that is a catalog name
     * @throws SQLException if a database access error occurs.
     */
-  def getCatalogs(): XResultSet = js.native
+  def getCatalogs(): XResultSet
   /**
     * gets a description of the access rights for a table's columns.
     *
@@ -397,7 +396,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a column privilege description
     * @throws SQLException if a database access error occurs.
     */
-  def getColumnPrivileges(catalog: js.Any, schema: String, table: String, columnNamePattern: String): XResultSet = js.native
+  def getColumnPrivileges(catalog: js.Any, schema: String, table: String, columnNamePattern: String): XResultSet
   /**
     * gets a description of table columns available in the specified catalog.
     *
@@ -423,13 +422,13 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a column description
     * @throws SQLException if a database access error occurs.
     */
-  def getColumns(catalog: js.Any, schemaPattern: String, tableNamePattern: String, columnNamePattern: String): XResultSet = js.native
+  def getColumns(catalog: js.Any, schemaPattern: String, tableNamePattern: String, columnNamePattern: String): XResultSet
   /**
     * retrieves the connection that produced this metadata object.
     * @returns the {@link Connection} object
     * @throws SQLException if a database access error occurs.
     */
-  def getConnection(): XConnection = js.native
+  def getConnection(): XConnection
   /**
     * gets a description of the foreign key columns in the foreign key table that reference the primary key columns of the primary key table (describe how
     * one table imports another's key.) This should normally return a single foreign key/primary key pair (most tables only import a foreign key from a
@@ -466,26 +465,26 @@ trait XDatabaseMetaData extends XInterface {
     foreignCatalog: js.Any,
     foreignSchema: String,
     foreignTable: String
-  ): XResultSet = js.native
+  ): XResultSet
   /** returns the name of the database product. */
-  def getDatabaseProductName(): String = js.native
+  def getDatabaseProductName(): String
   /** returns the version of the database product. */
-  def getDatabaseProductVersion(): String = js.native
+  def getDatabaseProductVersion(): String
   /**
     * return the database default transaction isolation level. The values are defined in {@link com.sun.star.sdbc.TransactionIsolation} .
     * @returns `TRUE` if so
     * @see com.sun.star.sdbc.XConnection
     * @throws SQLException if a database access error occurs.
     */
-  def getDefaultTransactionIsolation(): Double = js.native
+  def getDefaultTransactionIsolation(): Double
   /** returns the SDBC driver major version number. */
-  def getDriverMajorVersion(): Double = js.native
+  def getDriverMajorVersion(): Double
   /** returns the SDBC driver minor version number. */
-  def getDriverMinorVersion(): Double = js.native
+  def getDriverMinorVersion(): Double
   /** returns the name of the SDBC driver. */
-  def getDriverName(): String = js.native
+  def getDriverName(): String
   /** returns the version number of the SDBC driver. */
-  def getDriverVersion(): String = js.native
+  def getDriverVersion(): String
   /**
     * gets a description of the foreign key columns that reference a table's primary key columns (the foreign keys exported by a table). They are ordered by
     * FKTABLE_CAT, FKTABLE_SCHEM, FKTABLE_NAME, and KEY_SEQ.
@@ -511,19 +510,19 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a foreign key column description
     * @throws SQLException if a database access error occurs.
     */
-  def getExportedKeys(catalog: js.Any, schema: String, table: String): XResultSet = js.native
+  def getExportedKeys(catalog: js.Any, schema: String, table: String): XResultSet
   /**
     * gets all the "extra" characters that can be used in unquoted identifier names (those beyond a-z, A-Z, 0-9 and _).
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getExtraNameCharacters(): String = js.native
+  def getExtraNameCharacters(): String
   /**
     * What's the string used to quote SQL identifiers? This returns a space " " if identifier quoting is not supported.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getIdentifierQuoteString(): String = js.native
+  def getIdentifierQuoteString(): String
   /**
     * gets a description of the primary key columns that are referenced by a table's foreign key columns (the primary keys imported by a table). They are
     * ordered by PKTABLE_CAT, PKTABLE_SCHEM, PKTABLE_NAME, and KEY_SEQ.
@@ -550,7 +549,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a primary key column description
     * @throws SQLException if a database access error occurs.
     */
-  def getImportedKeys(catalog: js.Any, schema: String, table: String): XResultSet = js.native
+  def getImportedKeys(catalog: js.Any, schema: String, table: String): XResultSet
   /**
     * gets a description of a table's indices and statistics. They are ordered by NON_UNIQUE, TYPE, INDEX_NAME, and ORDINAL_POSITION.
     *
@@ -575,133 +574,133 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is an index column description
     * @throws SQLException if a database access error occurs.
     */
-  def getIndexInfo(catalog: js.Any, schema: String, table: String, unique: Boolean, approximate: Boolean): XResultSet = js.native
+  def getIndexInfo(catalog: js.Any, schema: String, table: String, unique: Boolean, approximate: Boolean): XResultSet
   /**
     * return the maximal number of hex characters in an inline binary literal
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxBinaryLiteralLength(): Double = js.native
+  def getMaxBinaryLiteralLength(): Double
   /**
     * return the maximum length of a catalog name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxCatalogNameLength(): Double = js.native
+  def getMaxCatalogNameLength(): Double
   /**
     * return the max length for a character literal
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxCharLiteralLength(): Double = js.native
+  def getMaxCharLiteralLength(): Double
   /**
     * return the limit on column name length
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxColumnNameLength(): Double = js.native
+  def getMaxColumnNameLength(): Double
   /**
     * return the maximum number of columns in a "GROUP BY" clause
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxColumnsInGroupBy(): Double = js.native
+  def getMaxColumnsInGroupBy(): Double
   /**
     * return the maximum number of columns allowed in an index
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxColumnsInIndex(): Double = js.native
+  def getMaxColumnsInIndex(): Double
   /**
     * return the maximum number of columns in an "ORDER BY" clause
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxColumnsInOrderBy(): Double = js.native
+  def getMaxColumnsInOrderBy(): Double
   /**
     * return the maximum number of columns in a "SELECT" list
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxColumnsInSelect(): Double = js.native
+  def getMaxColumnsInSelect(): Double
   /**
     * return the maximum number of columns in a table
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxColumnsInTable(): Double = js.native
+  def getMaxColumnsInTable(): Double
   /**
     * return the number of active connections at a time to this database.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxConnections(): Double = js.native
+  def getMaxConnections(): Double
   /**
     * return the maximum cursor name length
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxCursorNameLength(): Double = js.native
+  def getMaxCursorNameLength(): Double
   /**
     * return the maximum length of an index (in bytes)
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxIndexLength(): Double = js.native
+  def getMaxIndexLength(): Double
   /**
     * return the maximum length of a procedure name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxProcedureNameLength(): Double = js.native
+  def getMaxProcedureNameLength(): Double
   /**
     * return the maximum length of a single row.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxRowSize(): Double = js.native
+  def getMaxRowSize(): Double
   /**
     * return the maximum length allowed for a schema name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxSchemaNameLength(): Double = js.native
+  def getMaxSchemaNameLength(): Double
   /**
     * return the maximum length of a SQL statement
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxStatementLength(): Double = js.native
+  def getMaxStatementLength(): Double
   /**
     * return the maximal number of open active statements at one time to this database
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxStatements(): Double = js.native
+  def getMaxStatements(): Double
   /**
     * return the maximum length of a table name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxTableNameLength(): Double = js.native
+  def getMaxTableNameLength(): Double
   /**
     * return the maximum number of tables in a SELECT statement
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxTablesInSelect(): Double = js.native
+  def getMaxTablesInSelect(): Double
   /**
     * return the maximum length of a user name
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getMaxUserNameLength(): Double = js.native
+  def getMaxUserNameLength(): Double
   /**
     * gets a comma-separated list of math functions. These are the X/Open CLI math function names used in the SDBC function escape clause.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getNumericFunctions(): String = js.native
+  def getNumericFunctions(): String
   /**
     * gets a description of a table's primary key columns. They are ordered by COLUMN_NAME.
     *
@@ -716,7 +715,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a primary key column description
     * @throws SQLException if a database access error occurs.
     */
-  def getPrimaryKeys(catalog: js.Any, schema: String, table: String): XResultSet = js.native
+  def getPrimaryKeys(catalog: js.Any, schema: String, table: String): XResultSet
   /**
     * gets a description of a catalog's stored procedure parameters and result columns.
     *
@@ -742,13 +741,13 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row describes a stored procedure parameter or column
     * @throws SQLException if a database access error occurs.
     */
-  def getProcedureColumns(catalog: js.Any, schemaPattern: String, procedureNamePattern: String, columnNamePattern: String): XResultSet = js.native
+  def getProcedureColumns(catalog: js.Any, schemaPattern: String, procedureNamePattern: String, columnNamePattern: String): XResultSet
   /**
     * return the database vendor's preferred term for "procedure"
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getProcedureTerm(): String = js.native
+  def getProcedureTerm(): String
   /**
     * Gets a description of the stored procedures available in a catalog.
     *
@@ -766,19 +765,19 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a procedure description
     * @throws SQLException if a database access error occurs.
     */
-  def getProcedures(catalog: js.Any, schemaPattern: String, procedureNamePattern: String): XResultSet = js.native
+  def getProcedures(catalog: js.Any, schemaPattern: String, procedureNamePattern: String): XResultSet
   /**
     * gets a comma-separated list of all a database's SQL keywords that are NOT also SQL92 keywords.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getSQLKeywords(): String = js.native
+  def getSQLKeywords(): String
   /**
     * return the database vendor's preferred term for "schema"
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getSchemaTerm(): String = js.native
+  def getSchemaTerm(): String
   /**
     * Gets the schema names available in this database. The results are ordered by schema name.
     *
@@ -788,7 +787,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row has a single String column that is a schema name
     * @throws SQLException if a database access error occurs.
     */
-  def getSchemas(): XResultSet = js.native
+  def getSchemas(): XResultSet
   /**
     * gets the string that can be used to escape wildcard characters. This is the string that can be used to escape "_" or "%" in the string pattern style
     * catalog search parameters.
@@ -799,19 +798,19 @@ trait XDatabaseMetaData extends XInterface {
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getSearchStringEscape(): String = js.native
+  def getSearchStringEscape(): String
   /**
     * gets a comma-separated list of string functions. These are the X/Open CLI string function names used in the SDBC function escape clause.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getStringFunctions(): String = js.native
+  def getStringFunctions(): String
   /**
     * gets a comma-separated list of system functions. These are the X/Open CLI system function names used in the SDBC function escape clause.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getSystemFunctions(): String = js.native
+  def getSystemFunctions(): String
   /**
     * gets a description of the access rights for each table available in a catalog. Note that a table privilege applies to one or more columns in the
     * table. It would be wrong to assume that this privilege applies to all columns (this may be `TRUE` for some systems but is not `TRUE` for all.)
@@ -830,7 +829,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a table privilege description
     * @throws SQLException if a database access error occurs.
     */
-  def getTablePrivileges(catalog: js.Any, schemaPattern: String, tableNamePattern: String): XResultSet = js.native
+  def getTablePrivileges(catalog: js.Any, schemaPattern: String, tableNamePattern: String): XResultSet
   /**
     * gets the table types available in this database. The results are ordered by table type.
     *
@@ -840,7 +839,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row has a single String column that is a table type
     * @throws SQLException if a database access error occurs.
     */
-  def getTableTypes(): XResultSet = js.native
+  def getTableTypes(): XResultSet
   /**
     * gets a description of tables available in a catalog.
     *
@@ -861,13 +860,13 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a table description
     * @throws SQLException if a database access error occurs.
     */
-  def getTables(catalog: js.Any, schemaPattern: String, tableNamePattern: String, types: SeqEquiv[String]): XResultSet = js.native
+  def getTables(catalog: js.Any, schemaPattern: String, tableNamePattern: String, types: SeqEquiv[String]): XResultSet
   /**
     * gets a comma-separated list of time and date functions.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def getTimeDateFunctions(): String = js.native
+  def getTimeDateFunctions(): String
   /**
     * gets a description of all the standard SQL types supported by this database. They are ordered by DATA_TYPE and then by how closely the data type maps
     * to the corresponding SDBC SQL type.
@@ -886,7 +885,7 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a SQL type description
     * @throws SQLException if a database access error occurs.
     */
-  def getTypeInfo(): XResultSet = js.native
+  def getTypeInfo(): XResultSet
   /**
     * Gets a description of the user-defined types defined in a particular schema. Schema-specific UDTs may have type OBJECT, STRUCT, or DISTINCT.
     *
@@ -907,11 +906,11 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a type description
     * @throws SQLException if a database access error occurs.
     */
-  def getUDTs(catalog: js.Any, schemaPattern: String, typeNamePattern: String, types: SeqEquiv[Double]): XResultSet = js.native
+  def getUDTs(catalog: js.Any, schemaPattern: String, typeNamePattern: String, types: SeqEquiv[Double]): XResultSet
   /** returns the URL for the database connection */
-  def getURL(): String = js.native
+  def getURL(): String
   /** returns the user name from this database connection. */
-  def getUserName(): String = js.native
+  def getUserName(): String
   /**
     * gets a description of a table's columns that are automatically updated when any value in a row is updated. They are unordered.
     *
@@ -927,197 +926,197 @@ trait XDatabaseMetaData extends XInterface {
     * @returns each row is a column description
     * @throws SQLException if a database access error occurs.
     */
-  def getVersionColumns(catalog: js.Any, schema: String, table: String): XResultSet = js.native
+  def getVersionColumns(catalog: js.Any, schema: String, table: String): XResultSet
   /**
     * indicates whether or not a visible row insert can be detected by calling {@link com.sun.star.sdbc.XResultSet.rowInserted()} .()
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def insertsAreDetected(setType: Double): Boolean = js.native
+  def insertsAreDetected(setType: Double): Boolean
   /**
     * Does a catalog appear at the start of a qualified table name? (Otherwise it appears at the end)
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def isCatalogAtStart(): Boolean = js.native
+  def isCatalogAtStart(): Boolean
   /**
     * checks if the database in read-only mode.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def isReadOnly(): Boolean = js.native
+  def isReadOnly(): Boolean
   /**
     * are concatenations between NULL and non-NULL values NULL?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def nullPlusNonNullIsNull(): Boolean = js.native
+  def nullPlusNonNullIsNull(): Boolean
   /**
     * Are NULL values sorted at the end, regardless of sort order?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def nullsAreSortedAtEnd(): Boolean = js.native
+  def nullsAreSortedAtEnd(): Boolean
   /**
     * Are NULL values sorted at the start regardless of sort order?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def nullsAreSortedAtStart(): Boolean = js.native
+  def nullsAreSortedAtStart(): Boolean
   /**
     * Are NULL values sorted high?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def nullsAreSortedHigh(): Boolean = js.native
+  def nullsAreSortedHigh(): Boolean
   /**
     * Are NULL values sorted low?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def nullsAreSortedLow(): Boolean = js.native
+  def nullsAreSortedLow(): Boolean
   /**
     * indicates whether deletes made by others are visible.
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def othersDeletesAreVisible(setType: Double): Boolean = js.native
+  def othersDeletesAreVisible(setType: Double): Boolean
   /**
     * indicates whether inserts made by others are visible.
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def othersInsertsAreVisible(setType: Double): Boolean = js.native
+  def othersInsertsAreVisible(setType: Double): Boolean
   /**
     * indicates whether updates made by others are visible.
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def othersUpdatesAreVisible(setType: Double): Boolean = js.native
+  def othersUpdatesAreVisible(setType: Double): Boolean
   /**
     * indicates whether a result set's own deletes are visible.
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def ownDeletesAreVisible(setType: Double): Boolean = js.native
+  def ownDeletesAreVisible(setType: Double): Boolean
   /**
     * indicates whether a result set's own inserts are visible.
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def ownInsertsAreVisible(setType: Double): Boolean = js.native
+  def ownInsertsAreVisible(setType: Double): Boolean
   /**
     * indicates whether a result set's own updates are visible.
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def ownUpdatesAreVisible(setType: Double): Boolean = js.native
+  def ownUpdatesAreVisible(setType: Double): Boolean
   /**
     * Does the database treat mixed case unquoted SQL identifiers as case insensitive and store them in lower case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def storesLowerCaseIdentifiers(): Boolean = js.native
+  def storesLowerCaseIdentifiers(): Boolean
   /**
     * Does the database treat mixed case quoted SQL identifiers as case insensitive and store them in lower case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def storesLowerCaseQuotedIdentifiers(): Boolean = js.native
+  def storesLowerCaseQuotedIdentifiers(): Boolean
   /**
     * Does the database treat mixed case unquoted SQL identifiers as case insensitive and store them in mixed case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def storesMixedCaseIdentifiers(): Boolean = js.native
+  def storesMixedCaseIdentifiers(): Boolean
   /**
     * Does the database treat mixed case quoted SQL identifiers as case insensitive and store them in mixed case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def storesMixedCaseQuotedIdentifiers(): Boolean = js.native
+  def storesMixedCaseQuotedIdentifiers(): Boolean
   /**
     * Does the database treat mixed case unquoted SQL identifiers as case insensitive and store them in upper case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def storesUpperCaseIdentifiers(): Boolean = js.native
+  def storesUpperCaseIdentifiers(): Boolean
   /**
     * Does the database treat mixed case quoted SQL identifiers as case insensitive and store them in upper case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def storesUpperCaseQuotedIdentifiers(): Boolean = js.native
+  def storesUpperCaseQuotedIdentifiers(): Boolean
   /**
     * @returns `TRUE` , if the database supports ANSI92 entry level SQL grammar, otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def supportsANSI92EntryLevelSQL(): Boolean = js.native
+  def supportsANSI92EntryLevelSQL(): Boolean
   /**
     * @returns `TRUE` , if the database supports ANSI92 full SQL grammar, otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def supportsANSI92FullSQL(): Boolean = js.native
+  def supportsANSI92FullSQL(): Boolean
   /**
     * @returns `TRUE` , if the database supports ANSI92 intermediate SQL grammar, otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def supportsANSI92IntermediateSQL(): Boolean = js.native
+  def supportsANSI92IntermediateSQL(): Boolean
   /**
     * support the Database "ALTER TABLE" with add column?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsAlterTableWithAddColumn(): Boolean = js.native
+  def supportsAlterTableWithAddColumn(): Boolean
   /**
     * support the Database "ALTER TABLE" with drop column?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsAlterTableWithDropColumn(): Boolean = js.native
+  def supportsAlterTableWithDropColumn(): Boolean
   /**
     * indicates whether the driver supports batch updates.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsBatchUpdates(): Boolean = js.native
+  def supportsBatchUpdates(): Boolean
   /**
     * Can a catalog name be used in a data manipulation statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCatalogsInDataManipulation(): Boolean = js.native
+  def supportsCatalogsInDataManipulation(): Boolean
   /**
     * Can a catalog name be used in an index definition statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCatalogsInIndexDefinitions(): Boolean = js.native
+  def supportsCatalogsInIndexDefinitions(): Boolean
   /**
     * Can a catalog name be used in a privilege definition statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCatalogsInPrivilegeDefinitions(): Boolean = js.native
+  def supportsCatalogsInPrivilegeDefinitions(): Boolean
   /**
     * Can a catalog name be used in a procedure call statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCatalogsInProcedureCalls(): Boolean = js.native
+  def supportsCatalogsInProcedureCalls(): Boolean
   /**
     * Can a catalog name be used in a table definition statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCatalogsInTableDefinitions(): Boolean = js.native
+  def supportsCatalogsInTableDefinitions(): Boolean
   /**
     * support the Database column aliasing?
     *
@@ -1125,177 +1124,177 @@ trait XDatabaseMetaData extends XInterface {
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsColumnAliasing(): Boolean = js.native
+  def supportsColumnAliasing(): Boolean
   /**
     * `TRUE` , if the Database supports the CONVERT between the given SQL types otherwise `FALSE` .
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsConvert(fromType: Double, toType: Double): Boolean = js.native
+  def supportsConvert(fromType: Double, toType: Double): Boolean
   /**
     * `TRUE` , if the database supports ODBC Core SQL grammar, otherwise `FALSE` .
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCoreSQLGrammar(): Boolean = js.native
+  def supportsCoreSQLGrammar(): Boolean
   /**
     * Are correlated subqueries supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsCorrelatedSubqueries(): Boolean = js.native
+  def supportsCorrelatedSubqueries(): Boolean
   /**
     * support the Database both data definition and data manipulation statements within a transaction?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsDataDefinitionAndDataManipulationTransactions(): Boolean = js.native
+  def supportsDataDefinitionAndDataManipulationTransactions(): Boolean
   /**
     * are only data manipulation statements within a transaction supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsDataManipulationTransactionsOnly(): Boolean = js.native
+  def supportsDataManipulationTransactionsOnly(): Boolean
   /**
     * If table correlation names are supported, are they restricted to be different from the names of the tables?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsDifferentTableCorrelationNames(): Boolean = js.native
+  def supportsDifferentTableCorrelationNames(): Boolean
   /**
     * Are expressions in "ORDER BY" lists supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsExpressionsInOrderBy(): Boolean = js.native
+  def supportsExpressionsInOrderBy(): Boolean
   /**
     * `TRUE` , if the database supports ODBC Extended SQL grammar, otherwise `FALSE` .
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsExtendedSQLGrammar(): Boolean = js.native
+  def supportsExtendedSQLGrammar(): Boolean
   /**
     * @returns `TRUE` , if full nested outer joins are supported, otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def supportsFullOuterJoins(): Boolean = js.native
+  def supportsFullOuterJoins(): Boolean
   /**
     * Is some form of "GROUP BY" clause supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsGroupBy(): Boolean = js.native
+  def supportsGroupBy(): Boolean
   /**
     * Can a "GROUP BY" clause add columns not in the SELECT provided it specifies all the columns in the SELECT?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsGroupByBeyondSelect(): Boolean = js.native
+  def supportsGroupByBeyondSelect(): Boolean
   /**
     * Can a "GROUP BY" clause use columns not in the SELECT?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsGroupByUnrelated(): Boolean = js.native
+  def supportsGroupByUnrelated(): Boolean
   /**
     * returns `TRUE` , if the Database supports SQL Integrity Enhancement Facility, otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def supportsIntegrityEnhancementFacility(): Boolean = js.native
+  def supportsIntegrityEnhancementFacility(): Boolean
   /**
     * Is the escape character in "LIKE" clauses supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsLikeEscapeClause(): Boolean = js.native
+  def supportsLikeEscapeClause(): Boolean
   /**
     * @returns `TRUE` , if there is limited support for outer joins. (This will be `TRUE` if supportFullOuterJoins is `TRUE` .) `FALSE` is returned otherwise.
     * @throws SQLException if a database access error occurs.
     */
-  def supportsLimitedOuterJoins(): Boolean = js.native
+  def supportsLimitedOuterJoins(): Boolean
   /**
     * `TRUE` , if the database supports ODBC Minimum SQL grammar, otherwise `FALSE` .
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsMinimumSQLGrammar(): Boolean = js.native
+  def supportsMinimumSQLGrammar(): Boolean
   /**
     * use the database "mixed case unquoted SQL identifiers" case sensitive.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsMixedCaseIdentifiers(): Boolean = js.native
+  def supportsMixedCaseIdentifiers(): Boolean
   /**
     * Does the database treat mixed case quoted SQL identifiers as case sensitive and as a result store them in mixed case?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsMixedCaseQuotedIdentifiers(): Boolean = js.native
+  def supportsMixedCaseQuotedIdentifiers(): Boolean
   /**
     * Are multiple XResultSets from a single execute supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsMultipleResultSets(): Boolean = js.native
+  def supportsMultipleResultSets(): Boolean
   /**
     * Can we have multiple transactions open at once (on different connections)?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsMultipleTransactions(): Boolean = js.native
+  def supportsMultipleTransactions(): Boolean
   /**
     * Can columns be defined as non-nullable?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsNonNullableColumns(): Boolean = js.native
+  def supportsNonNullableColumns(): Boolean
   /**
     * Can cursors remain open across commits?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsOpenCursorsAcrossCommit(): Boolean = js.native
+  def supportsOpenCursorsAcrossCommit(): Boolean
   /**
     * Can cursors remain open across rollbacks?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsOpenCursorsAcrossRollback(): Boolean = js.native
+  def supportsOpenCursorsAcrossRollback(): Boolean
   /**
     * Can statements remain open across commits?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsOpenStatementsAcrossCommit(): Boolean = js.native
+  def supportsOpenStatementsAcrossCommit(): Boolean
   /**
     * Can statements remain open across rollbacks?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsOpenStatementsAcrossRollback(): Boolean = js.native
+  def supportsOpenStatementsAcrossRollback(): Boolean
   /**
     * Can an "ORDER BY" clause use columns not in the SELECT statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsOrderByUnrelated(): Boolean = js.native
+  def supportsOrderByUnrelated(): Boolean
   /**
     * @returns `TRUE` , if some form of outer join is supported, otherwise `FALSE` .
     * @throws SQLException if a database access error occurs.
     */
-  def supportsOuterJoins(): Boolean = js.native
+  def supportsOuterJoins(): Boolean
   /**
     * Is positioned DELETE supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsPositionedDelete(): Boolean = js.native
+  def supportsPositionedDelete(): Boolean
   /**
     * Is positioned UPDATE supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsPositionedUpdate(): Boolean = js.native
+  def supportsPositionedUpdate(): Boolean
   /**
     * Does the database support the concurrency type in combination with the given result set type?
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
@@ -1303,137 +1302,137 @@ trait XDatabaseMetaData extends XInterface {
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsResultSetConcurrency(setType: Double, concurrency: Double): Boolean = js.native
+  def supportsResultSetConcurrency(setType: Double, concurrency: Double): Boolean
   /**
     * Does the database support the given result set type?
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsResultSetType(setType: Double): Boolean = js.native
+  def supportsResultSetType(setType: Double): Boolean
   /**
     * Can a schema name be used in a data manipulation statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSchemasInDataManipulation(): Boolean = js.native
+  def supportsSchemasInDataManipulation(): Boolean
   /**
     * Can a schema name be used in an index definition statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSchemasInIndexDefinitions(): Boolean = js.native
+  def supportsSchemasInIndexDefinitions(): Boolean
   /**
     * Can a schema name be used in a privilege definition statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSchemasInPrivilegeDefinitions(): Boolean = js.native
+  def supportsSchemasInPrivilegeDefinitions(): Boolean
   /**
     * Can a schema name be used in a procedure call statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSchemasInProcedureCalls(): Boolean = js.native
+  def supportsSchemasInProcedureCalls(): Boolean
   /**
     * Can a schema name be used in a table definition statement?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSchemasInTableDefinitions(): Boolean = js.native
+  def supportsSchemasInTableDefinitions(): Boolean
   /**
     * Is SELECT for UPDATE supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSelectForUpdate(): Boolean = js.native
+  def supportsSelectForUpdate(): Boolean
   /**
     * Are stored procedure calls using the stored procedure escape syntax supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsStoredProcedures(): Boolean = js.native
+  def supportsStoredProcedures(): Boolean
   /**
     * Are subqueries in comparison expressions supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSubqueriesInComparisons(): Boolean = js.native
+  def supportsSubqueriesInComparisons(): Boolean
   /**
     * Are subqueries in "exists" expressions supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSubqueriesInExists(): Boolean = js.native
+  def supportsSubqueriesInExists(): Boolean
   /**
     * Are subqueries in "in" statements supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSubqueriesInIns(): Boolean = js.native
+  def supportsSubqueriesInIns(): Boolean
   /**
     * Are subqueries in quantified expressions supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsSubqueriesInQuantifieds(): Boolean = js.native
+  def supportsSubqueriesInQuantifieds(): Boolean
   /**
     * Are table correlation names supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsTableCorrelationNames(): Boolean = js.native
+  def supportsTableCorrelationNames(): Boolean
   /**
     * Does this database support the given transaction isolation level?
     * @returns `TRUE` if so
     * @see com.sun.star.sdbc.Connection
     * @throws SQLException if a database access error occurs.
     */
-  def supportsTransactionIsolationLevel(level: Double): Boolean = js.native
+  def supportsTransactionIsolationLevel(level: Double): Boolean
   /**
     * support the Database transactions? If not, invoking the method {@link com.sun.star.sdbc.XConnection.commit()} is a noop and the isolation level is
     * TransactionIsolation_NONE.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsTransactions(): Boolean = js.native
+  def supportsTransactions(): Boolean
   /**
     * `TRUE` , if the Database supports the CONVERT function between SQL types, otherwise `FALSE` .
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsTypeConversion(): Boolean = js.native
+  def supportsTypeConversion(): Boolean
   /**
     * Is SQL UNION supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsUnion(): Boolean = js.native
+  def supportsUnion(): Boolean
   /**
     * Is SQL UNION ALL supported?
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def supportsUnionAll(): Boolean = js.native
+  def supportsUnionAll(): Boolean
   /**
     * indicates whether or not a visible row update can be detected by calling the method `XResultSet.rowUpdated` .
     * @param setType defined in {@link com.sun.star.sdbc.ResultSetType}
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def updatesAreDetected(setType: Double): Boolean = js.native
+  def updatesAreDetected(setType: Double): Boolean
   /**
     * use the database one local file to save for each table.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def usesLocalFilePerTable(): Boolean = js.native
+  def usesLocalFilePerTable(): Boolean
   /**
     * use the database local files to save the tables.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def usesLocalFiles(): Boolean = js.native
+  def usesLocalFiles(): Boolean
 }
 
 object XDatabaseMetaData {
@@ -1641,1183 +1640,5 @@ object XDatabaseMetaData {
     val __obj = js.Dynamic.literal(CatalogSeparator = CatalogSeparator.asInstanceOf[js.Any], CatalogTerm = CatalogTerm.asInstanceOf[js.Any], Catalogs = Catalogs.asInstanceOf[js.Any], Connection = Connection.asInstanceOf[js.Any], DatabaseProductName = DatabaseProductName.asInstanceOf[js.Any], DatabaseProductVersion = DatabaseProductVersion.asInstanceOf[js.Any], DefaultTransactionIsolation = DefaultTransactionIsolation.asInstanceOf[js.Any], DriverMajorVersion = DriverMajorVersion.asInstanceOf[js.Any], DriverMinorVersion = DriverMinorVersion.asInstanceOf[js.Any], DriverName = DriverName.asInstanceOf[js.Any], DriverVersion = DriverVersion.asInstanceOf[js.Any], ExtraNameCharacters = ExtraNameCharacters.asInstanceOf[js.Any], IdentifierQuoteString = IdentifierQuoteString.asInstanceOf[js.Any], MaxBinaryLiteralLength = MaxBinaryLiteralLength.asInstanceOf[js.Any], MaxCatalogNameLength = MaxCatalogNameLength.asInstanceOf[js.Any], MaxCharLiteralLength = MaxCharLiteralLength.asInstanceOf[js.Any], MaxColumnNameLength = MaxColumnNameLength.asInstanceOf[js.Any], MaxColumnsInGroupBy = MaxColumnsInGroupBy.asInstanceOf[js.Any], MaxColumnsInIndex = MaxColumnsInIndex.asInstanceOf[js.Any], MaxColumnsInOrderBy = MaxColumnsInOrderBy.asInstanceOf[js.Any], MaxColumnsInSelect = MaxColumnsInSelect.asInstanceOf[js.Any], MaxColumnsInTable = MaxColumnsInTable.asInstanceOf[js.Any], MaxConnections = MaxConnections.asInstanceOf[js.Any], MaxCursorNameLength = MaxCursorNameLength.asInstanceOf[js.Any], MaxIndexLength = MaxIndexLength.asInstanceOf[js.Any], MaxProcedureNameLength = MaxProcedureNameLength.asInstanceOf[js.Any], MaxRowSize = MaxRowSize.asInstanceOf[js.Any], MaxSchemaNameLength = MaxSchemaNameLength.asInstanceOf[js.Any], MaxStatementLength = MaxStatementLength.asInstanceOf[js.Any], MaxStatements = MaxStatements.asInstanceOf[js.Any], MaxTableNameLength = MaxTableNameLength.asInstanceOf[js.Any], MaxTablesInSelect = MaxTablesInSelect.asInstanceOf[js.Any], MaxUserNameLength = MaxUserNameLength.asInstanceOf[js.Any], NumericFunctions = NumericFunctions.asInstanceOf[js.Any], ProcedureTerm = ProcedureTerm.asInstanceOf[js.Any], SQLKeywords = SQLKeywords.asInstanceOf[js.Any], SchemaTerm = SchemaTerm.asInstanceOf[js.Any], Schemas = Schemas.asInstanceOf[js.Any], SearchStringEscape = SearchStringEscape.asInstanceOf[js.Any], StringFunctions = StringFunctions.asInstanceOf[js.Any], SystemFunctions = SystemFunctions.asInstanceOf[js.Any], TableTypes = TableTypes.asInstanceOf[js.Any], TimeDateFunctions = TimeDateFunctions.asInstanceOf[js.Any], TypeInfo = TypeInfo.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), allProceduresAreCallable = js.Any.fromFunction0(allProceduresAreCallable), allTablesAreSelectable = js.Any.fromFunction0(allTablesAreSelectable), dataDefinitionCausesTransactionCommit = js.Any.fromFunction0(dataDefinitionCausesTransactionCommit), dataDefinitionIgnoredInTransactions = js.Any.fromFunction0(dataDefinitionIgnoredInTransactions), deletesAreDetected = js.Any.fromFunction1(deletesAreDetected), doesMaxRowSizeIncludeBlobs = js.Any.fromFunction0(doesMaxRowSizeIncludeBlobs), getBestRowIdentifier = js.Any.fromFunction5(getBestRowIdentifier), getCatalogSeparator = js.Any.fromFunction0(getCatalogSeparator), getCatalogTerm = js.Any.fromFunction0(getCatalogTerm), getCatalogs = js.Any.fromFunction0(getCatalogs), getColumnPrivileges = js.Any.fromFunction4(getColumnPrivileges), getColumns = js.Any.fromFunction4(getColumns), getConnection = js.Any.fromFunction0(getConnection), getCrossReference = js.Any.fromFunction6(getCrossReference), getDatabaseProductName = js.Any.fromFunction0(getDatabaseProductName), getDatabaseProductVersion = js.Any.fromFunction0(getDatabaseProductVersion), getDefaultTransactionIsolation = js.Any.fromFunction0(getDefaultTransactionIsolation), getDriverMajorVersion = js.Any.fromFunction0(getDriverMajorVersion), getDriverMinorVersion = js.Any.fromFunction0(getDriverMinorVersion), getDriverName = js.Any.fromFunction0(getDriverName), getDriverVersion = js.Any.fromFunction0(getDriverVersion), getExportedKeys = js.Any.fromFunction3(getExportedKeys), getExtraNameCharacters = js.Any.fromFunction0(getExtraNameCharacters), getIdentifierQuoteString = js.Any.fromFunction0(getIdentifierQuoteString), getImportedKeys = js.Any.fromFunction3(getImportedKeys), getIndexInfo = js.Any.fromFunction5(getIndexInfo), getMaxBinaryLiteralLength = js.Any.fromFunction0(getMaxBinaryLiteralLength), getMaxCatalogNameLength = js.Any.fromFunction0(getMaxCatalogNameLength), getMaxCharLiteralLength = js.Any.fromFunction0(getMaxCharLiteralLength), getMaxColumnNameLength = js.Any.fromFunction0(getMaxColumnNameLength), getMaxColumnsInGroupBy = js.Any.fromFunction0(getMaxColumnsInGroupBy), getMaxColumnsInIndex = js.Any.fromFunction0(getMaxColumnsInIndex), getMaxColumnsInOrderBy = js.Any.fromFunction0(getMaxColumnsInOrderBy), getMaxColumnsInSelect = js.Any.fromFunction0(getMaxColumnsInSelect), getMaxColumnsInTable = js.Any.fromFunction0(getMaxColumnsInTable), getMaxConnections = js.Any.fromFunction0(getMaxConnections), getMaxCursorNameLength = js.Any.fromFunction0(getMaxCursorNameLength), getMaxIndexLength = js.Any.fromFunction0(getMaxIndexLength), getMaxProcedureNameLength = js.Any.fromFunction0(getMaxProcedureNameLength), getMaxRowSize = js.Any.fromFunction0(getMaxRowSize), getMaxSchemaNameLength = js.Any.fromFunction0(getMaxSchemaNameLength), getMaxStatementLength = js.Any.fromFunction0(getMaxStatementLength), getMaxStatements = js.Any.fromFunction0(getMaxStatements), getMaxTableNameLength = js.Any.fromFunction0(getMaxTableNameLength), getMaxTablesInSelect = js.Any.fromFunction0(getMaxTablesInSelect), getMaxUserNameLength = js.Any.fromFunction0(getMaxUserNameLength), getNumericFunctions = js.Any.fromFunction0(getNumericFunctions), getPrimaryKeys = js.Any.fromFunction3(getPrimaryKeys), getProcedureColumns = js.Any.fromFunction4(getProcedureColumns), getProcedureTerm = js.Any.fromFunction0(getProcedureTerm), getProcedures = js.Any.fromFunction3(getProcedures), getSQLKeywords = js.Any.fromFunction0(getSQLKeywords), getSchemaTerm = js.Any.fromFunction0(getSchemaTerm), getSchemas = js.Any.fromFunction0(getSchemas), getSearchStringEscape = js.Any.fromFunction0(getSearchStringEscape), getStringFunctions = js.Any.fromFunction0(getStringFunctions), getSystemFunctions = js.Any.fromFunction0(getSystemFunctions), getTablePrivileges = js.Any.fromFunction3(getTablePrivileges), getTableTypes = js.Any.fromFunction0(getTableTypes), getTables = js.Any.fromFunction4(getTables), getTimeDateFunctions = js.Any.fromFunction0(getTimeDateFunctions), getTypeInfo = js.Any.fromFunction0(getTypeInfo), getUDTs = js.Any.fromFunction4(getUDTs), getURL = js.Any.fromFunction0(getURL), getUserName = js.Any.fromFunction0(getUserName), getVersionColumns = js.Any.fromFunction3(getVersionColumns), insertsAreDetected = js.Any.fromFunction1(insertsAreDetected), isCatalogAtStart = js.Any.fromFunction0(isCatalogAtStart), isReadOnly = js.Any.fromFunction0(isReadOnly), nullPlusNonNullIsNull = js.Any.fromFunction0(nullPlusNonNullIsNull), nullsAreSortedAtEnd = js.Any.fromFunction0(nullsAreSortedAtEnd), nullsAreSortedAtStart = js.Any.fromFunction0(nullsAreSortedAtStart), nullsAreSortedHigh = js.Any.fromFunction0(nullsAreSortedHigh), nullsAreSortedLow = js.Any.fromFunction0(nullsAreSortedLow), othersDeletesAreVisible = js.Any.fromFunction1(othersDeletesAreVisible), othersInsertsAreVisible = js.Any.fromFunction1(othersInsertsAreVisible), othersUpdatesAreVisible = js.Any.fromFunction1(othersUpdatesAreVisible), ownDeletesAreVisible = js.Any.fromFunction1(ownDeletesAreVisible), ownInsertsAreVisible = js.Any.fromFunction1(ownInsertsAreVisible), ownUpdatesAreVisible = js.Any.fromFunction1(ownUpdatesAreVisible), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), storesLowerCaseIdentifiers = js.Any.fromFunction0(storesLowerCaseIdentifiers), storesLowerCaseQuotedIdentifiers = js.Any.fromFunction0(storesLowerCaseQuotedIdentifiers), storesMixedCaseIdentifiers = js.Any.fromFunction0(storesMixedCaseIdentifiers), storesMixedCaseQuotedIdentifiers = js.Any.fromFunction0(storesMixedCaseQuotedIdentifiers), storesUpperCaseIdentifiers = js.Any.fromFunction0(storesUpperCaseIdentifiers), storesUpperCaseQuotedIdentifiers = js.Any.fromFunction0(storesUpperCaseQuotedIdentifiers), supportsANSI92EntryLevelSQL = js.Any.fromFunction0(supportsANSI92EntryLevelSQL), supportsANSI92FullSQL = js.Any.fromFunction0(supportsANSI92FullSQL), supportsANSI92IntermediateSQL = js.Any.fromFunction0(supportsANSI92IntermediateSQL), supportsAlterTableWithAddColumn = js.Any.fromFunction0(supportsAlterTableWithAddColumn), supportsAlterTableWithDropColumn = js.Any.fromFunction0(supportsAlterTableWithDropColumn), supportsBatchUpdates = js.Any.fromFunction0(supportsBatchUpdates), supportsCatalogsInDataManipulation = js.Any.fromFunction0(supportsCatalogsInDataManipulation), supportsCatalogsInIndexDefinitions = js.Any.fromFunction0(supportsCatalogsInIndexDefinitions), supportsCatalogsInPrivilegeDefinitions = js.Any.fromFunction0(supportsCatalogsInPrivilegeDefinitions), supportsCatalogsInProcedureCalls = js.Any.fromFunction0(supportsCatalogsInProcedureCalls), supportsCatalogsInTableDefinitions = js.Any.fromFunction0(supportsCatalogsInTableDefinitions), supportsColumnAliasing = js.Any.fromFunction0(supportsColumnAliasing), supportsConvert = js.Any.fromFunction2(supportsConvert), supportsCoreSQLGrammar = js.Any.fromFunction0(supportsCoreSQLGrammar), supportsCorrelatedSubqueries = js.Any.fromFunction0(supportsCorrelatedSubqueries), supportsDataDefinitionAndDataManipulationTransactions = js.Any.fromFunction0(supportsDataDefinitionAndDataManipulationTransactions), supportsDataManipulationTransactionsOnly = js.Any.fromFunction0(supportsDataManipulationTransactionsOnly), supportsDifferentTableCorrelationNames = js.Any.fromFunction0(supportsDifferentTableCorrelationNames), supportsExpressionsInOrderBy = js.Any.fromFunction0(supportsExpressionsInOrderBy), supportsExtendedSQLGrammar = js.Any.fromFunction0(supportsExtendedSQLGrammar), supportsFullOuterJoins = js.Any.fromFunction0(supportsFullOuterJoins), supportsGroupBy = js.Any.fromFunction0(supportsGroupBy), supportsGroupByBeyondSelect = js.Any.fromFunction0(supportsGroupByBeyondSelect), supportsGroupByUnrelated = js.Any.fromFunction0(supportsGroupByUnrelated), supportsIntegrityEnhancementFacility = js.Any.fromFunction0(supportsIntegrityEnhancementFacility), supportsLikeEscapeClause = js.Any.fromFunction0(supportsLikeEscapeClause), supportsLimitedOuterJoins = js.Any.fromFunction0(supportsLimitedOuterJoins), supportsMinimumSQLGrammar = js.Any.fromFunction0(supportsMinimumSQLGrammar), supportsMixedCaseIdentifiers = js.Any.fromFunction0(supportsMixedCaseIdentifiers), supportsMixedCaseQuotedIdentifiers = js.Any.fromFunction0(supportsMixedCaseQuotedIdentifiers), supportsMultipleResultSets = js.Any.fromFunction0(supportsMultipleResultSets), supportsMultipleTransactions = js.Any.fromFunction0(supportsMultipleTransactions), supportsNonNullableColumns = js.Any.fromFunction0(supportsNonNullableColumns), supportsOpenCursorsAcrossCommit = js.Any.fromFunction0(supportsOpenCursorsAcrossCommit), supportsOpenCursorsAcrossRollback = js.Any.fromFunction0(supportsOpenCursorsAcrossRollback), supportsOpenStatementsAcrossCommit = js.Any.fromFunction0(supportsOpenStatementsAcrossCommit), supportsOpenStatementsAcrossRollback = js.Any.fromFunction0(supportsOpenStatementsAcrossRollback), supportsOrderByUnrelated = js.Any.fromFunction0(supportsOrderByUnrelated), supportsOuterJoins = js.Any.fromFunction0(supportsOuterJoins), supportsPositionedDelete = js.Any.fromFunction0(supportsPositionedDelete), supportsPositionedUpdate = js.Any.fromFunction0(supportsPositionedUpdate), supportsResultSetConcurrency = js.Any.fromFunction2(supportsResultSetConcurrency), supportsResultSetType = js.Any.fromFunction1(supportsResultSetType), supportsSchemasInDataManipulation = js.Any.fromFunction0(supportsSchemasInDataManipulation), supportsSchemasInIndexDefinitions = js.Any.fromFunction0(supportsSchemasInIndexDefinitions), supportsSchemasInPrivilegeDefinitions = js.Any.fromFunction0(supportsSchemasInPrivilegeDefinitions), supportsSchemasInProcedureCalls = js.Any.fromFunction0(supportsSchemasInProcedureCalls), supportsSchemasInTableDefinitions = js.Any.fromFunction0(supportsSchemasInTableDefinitions), supportsSelectForUpdate = js.Any.fromFunction0(supportsSelectForUpdate), supportsStoredProcedures = js.Any.fromFunction0(supportsStoredProcedures), supportsSubqueriesInComparisons = js.Any.fromFunction0(supportsSubqueriesInComparisons), supportsSubqueriesInExists = js.Any.fromFunction0(supportsSubqueriesInExists), supportsSubqueriesInIns = js.Any.fromFunction0(supportsSubqueriesInIns), supportsSubqueriesInQuantifieds = js.Any.fromFunction0(supportsSubqueriesInQuantifieds), supportsTableCorrelationNames = js.Any.fromFunction0(supportsTableCorrelationNames), supportsTransactionIsolationLevel = js.Any.fromFunction1(supportsTransactionIsolationLevel), supportsTransactions = js.Any.fromFunction0(supportsTransactions), supportsTypeConversion = js.Any.fromFunction0(supportsTypeConversion), supportsUnion = js.Any.fromFunction0(supportsUnion), supportsUnionAll = js.Any.fromFunction0(supportsUnionAll), updatesAreDetected = js.Any.fromFunction1(updatesAreDetected), usesLocalFilePerTable = js.Any.fromFunction0(usesLocalFilePerTable), usesLocalFiles = js.Any.fromFunction0(usesLocalFiles))
     __obj.asInstanceOf[XDatabaseMetaData]
   }
-  @scala.inline
-  implicit class XDatabaseMetaDataOps[Self <: XDatabaseMetaData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCatalogSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogTerm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogTerm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogs(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Catalogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnection(value: XConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Connection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatabaseProductName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseProductName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDatabaseProductVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseProductVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultTransactionIsolation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultTransactionIsolation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDriverMajorVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriverMajorVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDriverMinorVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriverMinorVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDriverName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriverName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDriverVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriverVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtraNameCharacters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraNameCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentifierQuoteString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentifierQuoteString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxBinaryLiteralLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxBinaryLiteralLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxCatalogNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCatalogNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxCharLiteralLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCharLiteralLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumnNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxColumnNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumnsInGroupBy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxColumnsInGroupBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumnsInIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxColumnsInIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumnsInOrderBy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxColumnsInOrderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumnsInSelect(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxColumnsInSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxColumnsInTable(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxColumnsInTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxConnections(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConnections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxCursorNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCursorNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxIndexLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxIndexLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxProcedureNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxProcedureNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxRowSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSchemaNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSchemaNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxStatementLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxStatementLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxStatements(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxStatements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxTableNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTableNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxTablesInSelect(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTablesInSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxUserNameLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxUserNameLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumericFunctions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumericFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProcedureTerm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcedureTerm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSQLKeywords(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SQLKeywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemaTerm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaTerm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemas(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearchStringEscape(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchStringEscape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringFunctions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemFunctions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SystemFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableTypes(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeDateFunctions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeDateFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeInfo(value: XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllProceduresAreCallable(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allProceduresAreCallable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAllTablesAreSelectable(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allTablesAreSelectable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDataDefinitionCausesTransactionCommit(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDefinitionCausesTransactionCommit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDataDefinitionIgnoredInTransactions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDefinitionIgnoredInTransactions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDeletesAreDetected(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletesAreDetected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDoesMaxRowSizeIncludeBlobs(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doesMaxRowSizeIncludeBlobs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetBestRowIdentifier(value: (js.Any, String, String, Double, Boolean) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBestRowIdentifier")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withGetCatalogSeparator(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCatalogSeparator")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCatalogTerm(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCatalogTerm")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCatalogs(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCatalogs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetColumnPrivileges(value: (js.Any, String, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumnPrivileges")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetColumns(value: (js.Any, String, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumns")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetConnection(value: () => XConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConnection")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCrossReference(value: (js.Any, String, String, js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCrossReference")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withGetDatabaseProductName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDatabaseProductName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDatabaseProductVersion(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDatabaseProductVersion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDefaultTransactionIsolation(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultTransactionIsolation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDriverMajorVersion(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDriverMajorVersion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDriverMinorVersion(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDriverMinorVersion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDriverName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDriverName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDriverVersion(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDriverVersion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetExportedKeys(value: (js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExportedKeys")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetExtraNameCharacters(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtraNameCharacters")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIdentifierQuoteString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIdentifierQuoteString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetImportedKeys(value: (js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getImportedKeys")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetIndexInfo(value: (js.Any, String, String, Boolean, Boolean) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndexInfo")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxBinaryLiteralLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxBinaryLiteralLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxCatalogNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxCatalogNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxCharLiteralLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxCharLiteralLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxColumnNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColumnNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxColumnsInGroupBy(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColumnsInGroupBy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxColumnsInIndex(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColumnsInIndex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxColumnsInOrderBy(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColumnsInOrderBy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxColumnsInSelect(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColumnsInSelect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxColumnsInTable(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxColumnsInTable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxConnections(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxConnections")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxCursorNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxCursorNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxIndexLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxIndexLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxProcedureNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxProcedureNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxRowSize(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxRowSize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxSchemaNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxSchemaNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxStatementLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxStatementLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxStatements(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxStatements")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxTableNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxTableNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxTablesInSelect(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxTablesInSelect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxUserNameLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxUserNameLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumericFunctions(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumericFunctions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPrimaryKeys(value: (js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrimaryKeys")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetProcedureColumns(value: (js.Any, String, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProcedureColumns")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetProcedureTerm(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProcedureTerm")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetProcedures(value: (js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProcedures")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetSQLKeywords(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSQLKeywords")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSchemaTerm(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSchemaTerm")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSchemas(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSchemas")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSearchStringEscape(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSearchStringEscape")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStringFunctions(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStringFunctions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSystemFunctions(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSystemFunctions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTablePrivileges(value: (js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTablePrivileges")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetTableTypes(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTableTypes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTables(value: (js.Any, String, String, SeqEquiv[String]) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTables")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetTimeDateFunctions(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimeDateFunctions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeInfo(value: () => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUDTs(value: (js.Any, String, String, SeqEquiv[Double]) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUDTs")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetURL(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getURL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUserName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetVersionColumns(value: (js.Any, String, String) => XResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVersionColumns")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withInsertsAreDetected(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertsAreDetected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsCatalogAtStart(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCatalogAtStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsReadOnly(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnly")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNullPlusNonNullIsNull(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullPlusNonNullIsNull")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNullsAreSortedAtEnd(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullsAreSortedAtEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNullsAreSortedAtStart(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullsAreSortedAtStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNullsAreSortedHigh(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullsAreSortedHigh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNullsAreSortedLow(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullsAreSortedLow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOthersDeletesAreVisible(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("othersDeletesAreVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOthersInsertsAreVisible(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("othersInsertsAreVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOthersUpdatesAreVisible(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("othersUpdatesAreVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOwnDeletesAreVisible(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownDeletesAreVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOwnInsertsAreVisible(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownInsertsAreVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOwnUpdatesAreVisible(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownUpdatesAreVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStoresLowerCaseIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storesLowerCaseIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStoresLowerCaseQuotedIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storesLowerCaseQuotedIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStoresMixedCaseIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storesMixedCaseIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStoresMixedCaseQuotedIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storesMixedCaseQuotedIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStoresUpperCaseIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storesUpperCaseIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStoresUpperCaseQuotedIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storesUpperCaseQuotedIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsANSI92EntryLevelSQL(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsANSI92EntryLevelSQL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsANSI92FullSQL(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsANSI92FullSQL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsANSI92IntermediateSQL(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsANSI92IntermediateSQL")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsAlterTableWithAddColumn(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsAlterTableWithAddColumn")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsAlterTableWithDropColumn(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsAlterTableWithDropColumn")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsBatchUpdates(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsBatchUpdates")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCatalogsInDataManipulation(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCatalogsInDataManipulation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCatalogsInIndexDefinitions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCatalogsInIndexDefinitions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCatalogsInPrivilegeDefinitions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCatalogsInPrivilegeDefinitions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCatalogsInProcedureCalls(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCatalogsInProcedureCalls")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCatalogsInTableDefinitions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCatalogsInTableDefinitions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsColumnAliasing(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsColumnAliasing")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsConvert(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsConvert")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCoreSQLGrammar(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCoreSQLGrammar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsCorrelatedSubqueries(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCorrelatedSubqueries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsDataDefinitionAndDataManipulationTransactions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsDataDefinitionAndDataManipulationTransactions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsDataManipulationTransactionsOnly(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsDataManipulationTransactionsOnly")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsDifferentTableCorrelationNames(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsDifferentTableCorrelationNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsExpressionsInOrderBy(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsExpressionsInOrderBy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsExtendedSQLGrammar(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsExtendedSQLGrammar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsFullOuterJoins(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsFullOuterJoins")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsGroupBy(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsGroupBy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsGroupByBeyondSelect(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsGroupByBeyondSelect")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsGroupByUnrelated(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsGroupByUnrelated")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsIntegrityEnhancementFacility(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsIntegrityEnhancementFacility")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsLikeEscapeClause(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsLikeEscapeClause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsLimitedOuterJoins(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsLimitedOuterJoins")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsMinimumSQLGrammar(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMinimumSQLGrammar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsMixedCaseIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMixedCaseIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsMixedCaseQuotedIdentifiers(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMixedCaseQuotedIdentifiers")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsMultipleResultSets(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMultipleResultSets")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsMultipleTransactions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMultipleTransactions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsNonNullableColumns(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNonNullableColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsOpenCursorsAcrossCommit(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOpenCursorsAcrossCommit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsOpenCursorsAcrossRollback(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOpenCursorsAcrossRollback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsOpenStatementsAcrossCommit(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOpenStatementsAcrossCommit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsOpenStatementsAcrossRollback(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOpenStatementsAcrossRollback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsOrderByUnrelated(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOrderByUnrelated")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsOuterJoins(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOuterJoins")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsPositionedDelete(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsPositionedDelete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsPositionedUpdate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsPositionedUpdate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsResultSetConcurrency(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsResultSetConcurrency")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsResultSetType(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsResultSetType")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSchemasInDataManipulation(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSchemasInDataManipulation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSchemasInIndexDefinitions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSchemasInIndexDefinitions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSchemasInPrivilegeDefinitions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSchemasInPrivilegeDefinitions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSchemasInProcedureCalls(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSchemasInProcedureCalls")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSchemasInTableDefinitions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSchemasInTableDefinitions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSelectForUpdate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSelectForUpdate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsStoredProcedures(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsStoredProcedures")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSubqueriesInComparisons(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSubqueriesInComparisons")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSubqueriesInExists(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSubqueriesInExists")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSubqueriesInIns(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSubqueriesInIns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsSubqueriesInQuantifieds(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSubqueriesInQuantifieds")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsTableCorrelationNames(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsTableCorrelationNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsTransactionIsolationLevel(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsTransactionIsolationLevel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsTransactions(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsTransactions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsTypeConversion(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsTypeConversion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsUnion(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsUnion")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSupportsUnionAll(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsUnionAll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUpdatesAreDetected(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatesAreDetected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUsesLocalFilePerTable(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesLocalFilePerTable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUsesLocalFiles(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usesLocalFiles")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

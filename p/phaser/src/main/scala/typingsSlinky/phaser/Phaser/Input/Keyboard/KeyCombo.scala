@@ -32,68 +32,67 @@ import scala.scalajs.js.annotation._
   * this.input.keyboard.createCombo('PHASER');
   * ```
   */
-@js.native
 trait KeyCombo extends js.Object {
   /**
     * The current keyCode the combo is waiting for.
     */
-  var current: integer = js.native
+  var current: integer
   /**
     * If the combo matches, will it delete itself?
     */
-  var deleteOnMatch: Boolean = js.native
+  var deleteOnMatch: Boolean
   /**
     * A flag that controls if this Key Combo is actively processing keys or not.
     */
-  var enabled: Boolean = js.native
+  var enabled: Boolean
   /**
     * The current index of the key being waited for in the 'keys' string.
     */
-  var index: integer = js.native
+  var index: integer
   /**
     * An array of the keycodes that comprise this combo.
     */
-  var keyCodes: js.Array[_] = js.native
+  var keyCodes: js.Array[_]
   /**
     * A reference to the Keyboard Manager
     */
-  var manager: KeyboardPlugin = js.native
+  var manager: KeyboardPlugin
   /**
     * Has this Key Combo been matched yet?
     */
-  var matched: Boolean = js.native
+  var matched: Boolean
   /**
     * The max delay in ms between each key press. Above this the combo is reset. 0 means disabled.
     */
-  var maxKeyDelay: integer = js.native
+  var maxKeyDelay: integer
   /**
     * How far complete is this combo? A value between 0 and 1.
     */
-  val progress: Double = js.native
+  val progress: Double
   /**
     * If previously matched and they press the first key of the combo again, will it reset?
     */
-  var resetOnMatch: Boolean = js.native
+  var resetOnMatch: Boolean
   /**
     * If they press the wrong key do we reset the combo?
     */
-  var resetOnWrongKey: Boolean = js.native
+  var resetOnWrongKey: Boolean
   /**
     * The length of this combo (in keycodes)
     */
-  var size: Double = js.native
+  var size: Double
   /**
     * The time the previous key in the combo was matched.
     */
-  var timeLastMatched: Double = js.native
+  var timeLastMatched: Double
   /**
     * The time the entire combo was matched.
     */
-  var timeMatched: Double = js.native
+  var timeMatched: Double
   /**
     * Destroys this Key Combo and all of its references.
     */
-  def destroy(): Unit = js.native
+  def destroy(): Unit
 }
 
 object KeyCombo {
@@ -118,103 +117,5 @@ object KeyCombo {
     val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], deleteOnMatch = deleteOnMatch.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), enabled = enabled.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], keyCodes = keyCodes.asInstanceOf[js.Any], manager = manager.asInstanceOf[js.Any], matched = matched.asInstanceOf[js.Any], maxKeyDelay = maxKeyDelay.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], resetOnMatch = resetOnMatch.asInstanceOf[js.Any], resetOnWrongKey = resetOnWrongKey.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], timeLastMatched = timeLastMatched.asInstanceOf[js.Any], timeMatched = timeMatched.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyCombo]
   }
-  @scala.inline
-  implicit class KeyComboOps[Self <: KeyCombo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrent(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteOnMatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOnMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyCodes(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManager(value: KeyboardPlugin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMatched(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matched")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxKeyDelay(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeyDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgress(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResetOnMatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResetOnWrongKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnWrongKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeLastMatched(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeLastMatched")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeMatched(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMatched")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -23,6 +23,7 @@ object surveyStrings extends js.Object {
   var confirmDelete: String = js.native
   var confirmRemoveAllFiles: String = js.native
   var confirmRemoveFile: String = js.native
+  var editText: String = js.native
   var emptySurvey: String = js.native
   var exceedMaxSize: String = js.native
   var invalidEmail: String = js.native
@@ -47,7 +48,9 @@ object surveyStrings extends js.Object {
   var pageNextText: String = js.native
   var pagePrevText: String = js.native
   var panelDynamicProgressText: String = js.native
+  var previewText: String = js.native
   var progressText: String = js.native
+  var questionTitlePatternText: String = js.native
   var questionsProgressText: String = js.native
   var removeFileCaption: String = js.native
   var removePanel: String = js.native

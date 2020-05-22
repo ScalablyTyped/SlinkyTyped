@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShapeLayer extends Layer_ {
   @JSName("options")
-  var options_ShapeLayer: ShapeLayerOptions = js.native
-  def setDataSource(): Unit = js.native
+  var options_ShapeLayer: ShapeLayerOptions
+  def setDataSource(): Unit
 }
 
 object ShapeLayer {
@@ -24,25 +23,5 @@ object ShapeLayer {
     val __obj = js.Dynamic.literal(hide = js.Any.fromFunction0(hide), map = map.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], setDataSource = js.Any.fromFunction0(setDataSource), show = js.Any.fromFunction0(show))
     __obj.asInstanceOf[ShapeLayer]
   }
-  @scala.inline
-  implicit class ShapeLayerOps[Self <: ShapeLayer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOptions(value: ShapeLayerOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDataSource(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDataSource")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

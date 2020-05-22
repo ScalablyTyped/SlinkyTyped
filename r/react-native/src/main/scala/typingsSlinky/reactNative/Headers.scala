@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Headers extends HeadersInit {
+trait Headers extends js.Object {
   def append(name: String, value: String): Unit = js.native
   def delete(name: String): Unit = js.native
   def forEach(callback: js.Function): Unit = js.native

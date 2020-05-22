@@ -50,131 +50,29 @@ trait StaticImageActivateScheduleActionSettings extends js.Object {
 
 object StaticImageActivateScheduleActionSettings {
   @scala.inline
-  def apply(Image: InputLocation): StaticImageActivateScheduleActionSettings = {
+  def apply(
+    Image: InputLocation,
+    Duration: js.UndefOr[integerMin0] = js.undefined,
+    FadeIn: js.UndefOr[integerMin0] = js.undefined,
+    FadeOut: js.UndefOr[integerMin0] = js.undefined,
+    Height: js.UndefOr[integerMin1] = js.undefined,
+    ImageX: js.UndefOr[integerMin0] = js.undefined,
+    ImageY: js.UndefOr[integerMin0] = js.undefined,
+    Layer: js.UndefOr[integerMin0Max7] = js.undefined,
+    Opacity: js.UndefOr[integerMin0Max100] = js.undefined,
+    Width: js.UndefOr[integerMin1] = js.undefined
+  ): StaticImageActivateScheduleActionSettings = {
     val __obj = js.Dynamic.literal(Image = Image.asInstanceOf[js.Any])
+    if (!js.isUndefined(Duration)) __obj.updateDynamic("Duration")(Duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FadeIn)) __obj.updateDynamic("FadeIn")(FadeIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FadeOut)) __obj.updateDynamic("FadeOut")(FadeOut.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Height)) __obj.updateDynamic("Height")(Height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ImageX)) __obj.updateDynamic("ImageX")(ImageX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ImageY)) __obj.updateDynamic("ImageY")(ImageY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Layer)) __obj.updateDynamic("Layer")(Layer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Opacity)) __obj.updateDynamic("Opacity")(Opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Width)) __obj.updateDynamic("Width")(Width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticImageActivateScheduleActionSettings]
   }
-  @scala.inline
-  implicit class StaticImageActivateScheduleActionSettingsOps[Self <: StaticImageActivateScheduleActionSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImage(value: InputLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFadeIn(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FadeIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFadeIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FadeIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFadeOut(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FadeOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFadeOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FadeOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageX(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageY(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayer(value: integerMin0Max7): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Layer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: integerMin0Max100): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: integerMin1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

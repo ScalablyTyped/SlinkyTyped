@@ -22,53 +22,16 @@ trait TargetInstances extends js.Object {
 
 object TargetInstances {
   @scala.inline
-  def apply(): TargetInstances = {
+  def apply(
+    autoScalingGroups: AutoScalingGroupNameList = null,
+    ec2TagSet: EC2TagSet = null,
+    tagFilters: EC2TagFilterList = null
+  ): TargetInstances = {
     val __obj = js.Dynamic.literal()
+    if (autoScalingGroups != null) __obj.updateDynamic("autoScalingGroups")(autoScalingGroups.asInstanceOf[js.Any])
+    if (ec2TagSet != null) __obj.updateDynamic("ec2TagSet")(ec2TagSet.asInstanceOf[js.Any])
+    if (tagFilters != null) __obj.updateDynamic("tagFilters")(tagFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetInstances]
   }
-  @scala.inline
-  implicit class TargetInstancesOps[Self <: TargetInstances] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroups(value: AutoScalingGroupNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEc2TagSet(value: EC2TagSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2TagSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEc2TagSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2TagSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFilters(value: EC2TagFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

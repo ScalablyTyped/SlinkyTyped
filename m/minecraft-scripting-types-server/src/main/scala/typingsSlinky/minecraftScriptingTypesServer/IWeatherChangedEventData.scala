@@ -8,20 +8,19 @@ import scala.scalajs.js.annotation._
 /**
   * This event is triggered whenever the weather changes. It contains information about the weather it is changing to.
   */
-@js.native
 trait IWeatherChangedEventData extends js.Object {
   /**
     * The name of the dimension where the weather change happened
     */
-  var dimension: Dimension = js.native
+  var dimension: Dimension
   /**
     * Tells if the new weather has lightning
     */
-  var lightning: Boolean = js.native
+  var lightning: Boolean
   /**
     * Tells if the new weather has rain
     */
-  var raining: Boolean = js.native
+  var raining: Boolean
 }
 
 object IWeatherChangedEventData {
@@ -30,31 +29,5 @@ object IWeatherChangedEventData {
     val __obj = js.Dynamic.literal(dimension = dimension.asInstanceOf[js.Any], lightning = lightning.asInstanceOf[js.Any], raining = raining.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWeatherChangedEventData]
   }
-  @scala.inline
-  implicit class IWeatherChangedEventDataOps[Self <: IWeatherChangedEventData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDimension(value: Dimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLightning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lightning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRaining(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raining")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

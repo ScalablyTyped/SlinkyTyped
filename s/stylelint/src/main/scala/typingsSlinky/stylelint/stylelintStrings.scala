@@ -1,15 +1,15 @@
 package typingsSlinky.stylelint
 
-import typingsSlinky.stylelint.mod.FormatterType
 import typingsSlinky.stylelint.mod.Severity
 import typingsSlinky.stylelint.mod.SyntaxType
+import typingsSlinky.stylelint.mod._FormatterType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object stylelintStrings {
   @js.native
-  sealed trait compact extends FormatterType
+  sealed trait compact extends _FormatterType
   
   @js.native
   sealed trait `css-in-js` extends SyntaxType
@@ -21,7 +21,7 @@ object stylelintStrings {
   sealed trait html extends SyntaxType
   
   @js.native
-  sealed trait json extends FormatterType
+  sealed trait json extends _FormatterType
   
   @js.native
   sealed trait less extends SyntaxType
@@ -36,16 +36,16 @@ object stylelintStrings {
   sealed trait scss extends SyntaxType
   
   @js.native
-  sealed trait string extends FormatterType
+  sealed trait string extends _FormatterType
   
   @js.native
   sealed trait sugarss extends SyntaxType
   
   @js.native
-  sealed trait unix extends FormatterType
+  sealed trait unix extends _FormatterType
   
   @js.native
-  sealed trait verbose extends FormatterType
+  sealed trait verbose extends _FormatterType
   
   @js.native
   sealed trait warning extends Severity

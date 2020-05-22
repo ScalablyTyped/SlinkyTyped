@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.colorPickerBaseMod.ColorComponent
 import typingsSlinky.officeUiFabricReact.docPageTypesMod.ApiKind
 import typingsSlinky.officeUiFabricReact.docPageTypesMod.PageKind
 import typingsSlinky.officeUiFabricReact.scrollablePaneTypesMod.ScrollbarVisibility
@@ -30,7 +31,7 @@ object officeUiFabricReactStrings {
   sealed trait _empty extends js.Object
   
   @js.native
-  sealed trait a extends js.Object
+  sealed trait a extends ColorComponent
   
   @js.native
   sealed trait absolute extends js.Object
@@ -51,6 +52,9 @@ object officeUiFabricReactStrings {
   sealed trait all extends js.Object
   
   @js.native
+  sealed trait alpha extends js.Object
+  
+  @js.native
   sealed trait always extends ScrollbarVisibility
   
   @js.native
@@ -66,7 +70,7 @@ object officeUiFabricReactStrings {
        with ScrollbarVisibility
   
   @js.native
-  sealed trait b extends js.Object
+  sealed trait b extends ColorComponent
   
   @js.native
   sealed trait baseline extends Alignment
@@ -82,6 +86,9 @@ object officeUiFabricReactStrings {
   
   @js.native
   sealed trait blockingBackground extends js.Object
+  
+  @js.native
+  sealed trait blockingIcon extends js.Object
   
   @js.native
   sealed trait blue extends js.Object
@@ -216,6 +223,9 @@ object officeUiFabricReactStrings {
   sealed trait errorBackground extends js.Object
   
   @js.native
+  sealed trait errorIcon extends js.Object
+  
+  @js.native
   sealed trait execute extends js.Object
   
   @js.native
@@ -225,7 +235,7 @@ object officeUiFabricReactStrings {
   sealed trait focusBorder extends js.Object
   
   @js.native
-  sealed trait g extends js.Object
+  sealed trait g extends ColorComponent
   
   @js.native
   sealed trait grammar extends js.Object
@@ -264,7 +274,7 @@ object officeUiFabricReactStrings {
   sealed trait h6 extends js.Object
   
   @js.native
-  sealed trait hex extends js.Object
+  sealed trait hex extends ColorComponent
   
   @js.native
   sealed trait hidden
@@ -273,6 +283,15 @@ object officeUiFabricReactStrings {
   
   @js.native
   sealed trait horizontal extends js.Object
+  
+  @js.native
+  sealed trait hue extends js.Object
+  
+  @js.native
+  sealed trait infoBackground extends js.Object
+  
+  @js.native
+  sealed trait infoIcon extends js.Object
   
   @js.native
   sealed trait inherit extends js.Object
@@ -416,6 +435,12 @@ object officeUiFabricReactStrings {
   sealed trait menuitemcheckbox extends js.Object
   
   @js.native
+  sealed trait messageLink extends js.Object
+  
+  @js.native
+  sealed trait messageLinkHovered extends js.Object
+  
+  @js.native
   sealed trait method extends js.Object
   
   @js.native
@@ -524,7 +549,7 @@ object officeUiFabricReactStrings {
   sealed trait purpleLight extends js.Object
   
   @js.native
-  sealed trait r extends js.Object
+  sealed trait r extends ColorComponent
   
   @js.native
   sealed trait red extends js.Object
@@ -552,6 +577,12 @@ object officeUiFabricReactStrings {
   
   @js.native
   sealed trait search extends js.Object
+  
+  @js.native
+  sealed trait severeWarningBackground extends js.Object
+  
+  @js.native
+  sealed trait severeWarningIcon extends js.Object
   
   @js.native
   sealed trait shrink extends js.Object
@@ -596,10 +627,16 @@ object officeUiFabricReactStrings {
   sealed trait successBackground extends js.Object
   
   @js.native
+  sealed trait successIcon extends js.Object
+  
+  @js.native
   sealed trait superLarge extends js.Object
   
   @js.native
   sealed trait switch extends js.Object
+  
+  @js.native
+  sealed trait t extends ColorComponent
   
   @js.native
   sealed trait teal extends js.Object
@@ -653,6 +690,9 @@ object officeUiFabricReactStrings {
   sealed trait top extends SpinnerLabelPosition
   
   @js.native
+  sealed trait transparency extends js.Object
+  
+  @js.native
   sealed trait tree extends js.Object
   
   @js.native
@@ -692,6 +732,9 @@ object officeUiFabricReactStrings {
   
   @js.native
   sealed trait warningHighlight extends js.Object
+  
+  @js.native
+  sealed trait warningIcon extends js.Object
   
   @js.native
   sealed trait white extends js.Object
@@ -753,6 +796,8 @@ object officeUiFabricReactStrings {
   @scala.inline
   def all: all = "all".asInstanceOf[all]
   @scala.inline
+  def alpha: alpha = "alpha".asInstanceOf[alpha]
+  @scala.inline
   def always: always = "always".asInstanceOf[always]
   @scala.inline
   def ascending: ascending = "ascending".asInstanceOf[ascending]
@@ -772,6 +817,8 @@ object officeUiFabricReactStrings {
   def block: block = "block".asInstanceOf[block]
   @scala.inline
   def blockingBackground: blockingBackground = "blockingBackground".asInstanceOf[blockingBackground]
+  @scala.inline
+  def blockingIcon: blockingIcon = "blockingIcon".asInstanceOf[blockingIcon]
   @scala.inline
   def blue: blue = "blue".asInstanceOf[blue]
   @scala.inline
@@ -861,6 +908,8 @@ object officeUiFabricReactStrings {
   @scala.inline
   def errorBackground: errorBackground = "errorBackground".asInstanceOf[errorBackground]
   @scala.inline
+  def errorIcon: errorIcon = "errorIcon".asInstanceOf[errorIcon]
+  @scala.inline
   def execute: execute = "execute".asInstanceOf[execute]
   @scala.inline
   def extendComponent: extendComponent = "extendComponent".asInstanceOf[extendComponent]
@@ -898,6 +947,12 @@ object officeUiFabricReactStrings {
   def hidden: hidden = "hidden".asInstanceOf[hidden]
   @scala.inline
   def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
+  @scala.inline
+  def hue: hue = "hue".asInstanceOf[hue]
+  @scala.inline
+  def infoBackground: infoBackground = "infoBackground".asInstanceOf[infoBackground]
+  @scala.inline
+  def infoIcon: infoIcon = "infoIcon".asInstanceOf[infoIcon]
   @scala.inline
   def inherit: inherit = "inherit".asInstanceOf[inherit]
   @scala.inline
@@ -993,6 +1048,10 @@ object officeUiFabricReactStrings {
   @scala.inline
   def menuitemcheckbox: menuitemcheckbox = "menuitemcheckbox".asInstanceOf[menuitemcheckbox]
   @scala.inline
+  def messageLink: messageLink = "messageLink".asInstanceOf[messageLink]
+  @scala.inline
+  def messageLinkHovered: messageLinkHovered = "messageLinkHovered".asInstanceOf[messageLinkHovered]
+  @scala.inline
   def method: method = "method".asInstanceOf[method]
   @scala.inline
   def mixed: mixed = "mixed".asInstanceOf[mixed]
@@ -1085,6 +1144,10 @@ object officeUiFabricReactStrings {
   @scala.inline
   def search: search = "search".asInstanceOf[search]
   @scala.inline
+  def severeWarningBackground: severeWarningBackground = "severeWarningBackground".asInstanceOf[severeWarningBackground]
+  @scala.inline
+  def severeWarningIcon: severeWarningIcon = "severeWarningIcon".asInstanceOf[severeWarningIcon]
+  @scala.inline
   def shrink: shrink = "shrink".asInstanceOf[shrink]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
@@ -1113,9 +1176,13 @@ object officeUiFabricReactStrings {
   @scala.inline
   def successBackground: successBackground = "successBackground".asInstanceOf[successBackground]
   @scala.inline
+  def successIcon: successIcon = "successIcon".asInstanceOf[successIcon]
+  @scala.inline
   def superLarge: superLarge = "superLarge".asInstanceOf[superLarge]
   @scala.inline
   def switch: switch = "switch".asInstanceOf[switch]
+  @scala.inline
+  def t: t = "t".asInstanceOf[t]
   @scala.inline
   def teal: teal = "teal".asInstanceOf[teal]
   @scala.inline
@@ -1151,6 +1218,8 @@ object officeUiFabricReactStrings {
   @scala.inline
   def top: top = "top".asInstanceOf[top]
   @scala.inline
+  def transparency: transparency = "transparency".asInstanceOf[transparency]
+  @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
   @scala.inline
   def `true`: `true` = "true".asInstanceOf[`true`]
@@ -1176,6 +1245,8 @@ object officeUiFabricReactStrings {
   def warningBackground: warningBackground = "warningBackground".asInstanceOf[warningBackground]
   @scala.inline
   def warningHighlight: warningHighlight = "warningHighlight".asInstanceOf[warningHighlight]
+  @scala.inline
+  def warningIcon: warningIcon = "warningIcon".asInstanceOf[warningIcon]
   @scala.inline
   def white: white = "white".asInstanceOf[white]
   @scala.inline

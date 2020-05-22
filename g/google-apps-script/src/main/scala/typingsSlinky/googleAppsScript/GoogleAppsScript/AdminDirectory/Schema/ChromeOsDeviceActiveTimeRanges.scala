@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChromeOsDeviceActiveTimeRanges extends js.Object {
-  var activeTime: js.UndefOr[Double] = js.native
-  var date: js.UndefOr[String] = js.native
+  var activeTime: js.UndefOr[Double] = js.undefined
+  var date: js.UndefOr[String] = js.undefined
 }
 
 object ChromeOsDeviceActiveTimeRanges {
   @scala.inline
-  def apply(): ChromeOsDeviceActiveTimeRanges = {
+  def apply(activeTime: js.UndefOr[Double] = js.undefined, date: String = null): ChromeOsDeviceActiveTimeRanges = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activeTime)) __obj.updateDynamic("activeTime")(activeTime.get.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChromeOsDeviceActiveTimeRanges]
   }
-  @scala.inline
-  implicit class ChromeOsDeviceActiveTimeRangesOps[Self <: ChromeOsDeviceActiveTimeRanges] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,77 +30,20 @@ trait ProvisionedThroughputDescription extends js.Object {
 
 object ProvisionedThroughputDescription {
   @scala.inline
-  def apply(): ProvisionedThroughputDescription = {
+  def apply(
+    LastDecreaseDateTime: js.Date = null,
+    LastIncreaseDateTime: js.Date = null,
+    NumberOfDecreasesToday: js.UndefOr[PositiveLongObject] = js.undefined,
+    ReadCapacityUnits: js.UndefOr[NonNegativeLongObject] = js.undefined,
+    WriteCapacityUnits: js.UndefOr[NonNegativeLongObject] = js.undefined
+  ): ProvisionedThroughputDescription = {
     val __obj = js.Dynamic.literal()
+    if (LastDecreaseDateTime != null) __obj.updateDynamic("LastDecreaseDateTime")(LastDecreaseDateTime.asInstanceOf[js.Any])
+    if (LastIncreaseDateTime != null) __obj.updateDynamic("LastIncreaseDateTime")(LastIncreaseDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfDecreasesToday)) __obj.updateDynamic("NumberOfDecreasesToday")(NumberOfDecreasesToday.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReadCapacityUnits)) __obj.updateDynamic("ReadCapacityUnits")(ReadCapacityUnits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(WriteCapacityUnits)) __obj.updateDynamic("WriteCapacityUnits")(WriteCapacityUnits.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionedThroughputDescription]
   }
-  @scala.inline
-  implicit class ProvisionedThroughputDescriptionOps[Self <: ProvisionedThroughputDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastDecreaseDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDecreaseDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDecreaseDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDecreaseDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastIncreaseDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastIncreaseDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastIncreaseDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastIncreaseDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfDecreasesToday(value: PositiveLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfDecreasesToday")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfDecreasesToday: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfDecreasesToday")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadCapacityUnits(value: NonNegativeLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadCapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWriteCapacityUnits(value: NonNegativeLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWriteCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCapacityUnits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

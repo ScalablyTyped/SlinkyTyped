@@ -6,43 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Page extends js.Object {
-  var page: ExtensionURL = js.native
-  var persistent: js.UndefOr[PersistentBackgroundProperty] = js.native
+  var page: ExtensionURL
+  var persistent: js.UndefOr[PersistentBackgroundProperty] = js.undefined
 }
 
 object Page {
   @scala.inline
-  def apply(page: ExtensionURL): Page = {
+  def apply(page: ExtensionURL, persistent: js.UndefOr[PersistentBackgroundProperty] = js.undefined): Page = {
     val __obj = js.Dynamic.literal(page = page.asInstanceOf[js.Any])
+    if (!js.isUndefined(persistent)) __obj.updateDynamic("persistent")(persistent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Page]
   }
-  @scala.inline
-  implicit class PageOps[Self <: Page] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPage(value: ExtensionURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPersistent(value: PersistentBackgroundProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

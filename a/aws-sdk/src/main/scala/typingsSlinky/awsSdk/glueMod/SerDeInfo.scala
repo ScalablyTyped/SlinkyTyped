@@ -22,53 +22,12 @@ trait SerDeInfo extends js.Object {
 
 object SerDeInfo {
   @scala.inline
-  def apply(): SerDeInfo = {
+  def apply(Name: NameString = null, Parameters: ParametersMap = null, SerializationLibrary: NameString = null): SerDeInfo = {
     val __obj = js.Dynamic.literal()
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
+    if (SerializationLibrary != null) __obj.updateDynamic("SerializationLibrary")(SerializationLibrary.asInstanceOf[js.Any])
     __obj.asInstanceOf[SerDeInfo]
   }
-  @scala.inline
-  implicit class SerDeInfoOps[Self <: SerDeInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: ParametersMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerializationLibrary(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SerializationLibrary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerializationLibrary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SerializationLibrary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

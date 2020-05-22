@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PointConstraintDefinition extends js.Object {
-  var id: Double = js.native
-  var objecta: Object3D = js.native
-  var objectb: Object3D = js.native
-  var positiona: Vector3 = js.native
-  var positionb: Vector3 = js.native
-  var `type`: String = js.native
+  var id: Double
+  var objecta: Object3D
+  var objectb: Object3D
+  var positiona: Vector3
+  var positionb: Vector3
+  var `type`: String
 }
 
 object PointConstraintDefinition {
@@ -30,49 +29,5 @@ object PointConstraintDefinition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointConstraintDefinition]
   }
-  @scala.inline
-  implicit class PointConstraintDefinitionOps[Self <: PointConstraintDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjecta(value: Object3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objecta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectb(value: Object3D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositiona(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positiona")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositionb(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

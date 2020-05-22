@@ -6,82 +6,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CopyDirOptions extends js.Object {
-  var filter: js.UndefOr[Filter | Null] = js.native
-  var isUseHardLink: js.UndefOr[(js.Function1[/* file */ String, Boolean]) | Null] = js.native
-  var transformer: js.UndefOr[FileTransformer | Null] = js.native
+  var filter: js.UndefOr[Filter | Null] = js.undefined
+  var isUseHardLink: js.UndefOr[(js.Function1[/* file */ String, Boolean]) | Null] = js.undefined
+  var transformer: js.UndefOr[FileTransformer | Null] = js.undefined
 }
 
 object CopyDirOptions {
   @scala.inline
-  def apply(): CopyDirOptions = {
+  def apply(
+    filter: js.UndefOr[Null | ((/* file */ String, /* stat */ Stats) => Boolean)] = js.undefined,
+    isUseHardLink: js.UndefOr[Null | (/* file */ String => Boolean)] = js.undefined,
+    transformer: js.UndefOr[
+      Null | (/* file */ String => (js.Promise[Null | String | Buffer | CopyFileTransformer]) | Null | String | Buffer | CopyFileTransformer)
+    ] = js.undefined
+  ): CopyDirOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(if (filter != null) js.Any.fromFunction2(filter.asInstanceOf[(/* file */ String, /* stat */ Stats) => Boolean]) else null)
+    if (!js.isUndefined(isUseHardLink)) __obj.updateDynamic("isUseHardLink")(if (isUseHardLink != null) js.Any.fromFunction1(isUseHardLink.asInstanceOf[/* file */ String => Boolean]) else null)
+    if (!js.isUndefined(transformer)) __obj.updateDynamic("transformer")(if (transformer != null) js.Any.fromFunction1(transformer.asInstanceOf[/* file */ String => (js.Promise[Null | String | Buffer | CopyFileTransformer]) | Null | String | Buffer | CopyFileTransformer]) else null)
     __obj.asInstanceOf[CopyDirOptions]
   }
-  @scala.inline
-  implicit class CopyDirOptionsOps[Self <: CopyDirOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: (/* file */ String, /* stat */ Stats) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(null)
-        ret
-    }
-    @scala.inline
-    def withIsUseHardLink(value: /* file */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUseHardLink")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsUseHardLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUseHardLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsUseHardLinkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUseHardLink")(null)
-        ret
-    }
-    @scala.inline
-    def withTransformer(
-      value: /* file */ String => (js.Promise[Null | String | Buffer | CopyFileTransformer]) | Null | String | Buffer | CopyFileTransformer
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTransformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(null)
-        ret
-    }
-  }
-  
 }
 

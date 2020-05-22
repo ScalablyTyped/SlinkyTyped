@@ -16,114 +16,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeflateFunctionOptions extends js.Object {
-  var dictionary: js.UndefOr[js.Any] = js.native
-  var level: js.UndefOr[`-1` | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`] = js.native
-  var memLevel: js.UndefOr[Double] = js.native
-  var raw: js.UndefOr[Boolean] = js.native
-  var strategy: js.UndefOr[StrategyValues] = js.native
-  var to: js.UndefOr[string] = js.native
-  var windowBits: js.UndefOr[Double] = js.native
+  var dictionary: js.UndefOr[js.Any] = js.undefined
+  var level: js.UndefOr[`-1` | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`] = js.undefined
+  var memLevel: js.UndefOr[Double] = js.undefined
+  var raw: js.UndefOr[Boolean] = js.undefined
+  var strategy: js.UndefOr[StrategyValues] = js.undefined
+  var to: js.UndefOr[string] = js.undefined
+  var windowBits: js.UndefOr[Double] = js.undefined
 }
 
 object DeflateFunctionOptions {
   @scala.inline
-  def apply(): DeflateFunctionOptions = {
+  def apply(
+    dictionary: js.Any = null,
+    level: `-1` | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` = null,
+    memLevel: js.UndefOr[Double] = js.undefined,
+    raw: js.UndefOr[Boolean] = js.undefined,
+    strategy: StrategyValues = null,
+    to: string = null,
+    windowBits: js.UndefOr[Double] = js.undefined
+  ): DeflateFunctionOptions = {
     val __obj = js.Dynamic.literal()
+    if (dictionary != null) __obj.updateDynamic("dictionary")(dictionary.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(memLevel)) __obj.updateDynamic("memLevel")(memLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
+    if (strategy != null) __obj.updateDynamic("strategy")(strategy.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowBits)) __obj.updateDynamic("windowBits")(windowBits.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeflateFunctionOptions]
   }
-  @scala.inline
-  implicit class DeflateFunctionOptionsOps[Self <: DeflateFunctionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDictionary(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: `-1` | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrategy(value: StrategyValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowBits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowBits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowBits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowBits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

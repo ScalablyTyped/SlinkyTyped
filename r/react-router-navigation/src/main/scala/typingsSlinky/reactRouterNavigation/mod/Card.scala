@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Card
   extends RouteProps
      with NavBarProps {
-  var key: String = js.native
+  var key: String
 }
 
 @JSImport("react-router-navigation", "Card")

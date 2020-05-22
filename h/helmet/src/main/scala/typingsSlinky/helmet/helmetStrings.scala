@@ -1,47 +1,47 @@
 package typingsSlinky.helmet
 
-import typingsSlinky.helmet.mod.HelmetCspRequireSriForValue
-import typingsSlinky.helmet.mod.HelmetCspSandboxDirective
+import typingsSlinky.helmet.mod._HelmetCspRequireSriForValue
+import typingsSlinky.helmet.mod._HelmetCspSandboxDirective
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object helmetStrings {
   @js.native
-  sealed trait `allow-forms` extends HelmetCspSandboxDirective
+  sealed trait `allow-forms` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-modals` extends HelmetCspSandboxDirective
+  sealed trait `allow-modals` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-orientation-lock` extends HelmetCspSandboxDirective
+  sealed trait `allow-orientation-lock` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-pointer-lock` extends HelmetCspSandboxDirective
+  sealed trait `allow-pointer-lock` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-popups` extends HelmetCspSandboxDirective
+  sealed trait `allow-popups` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-popups-to-escape-sandbox` extends HelmetCspSandboxDirective
+  sealed trait `allow-popups-to-escape-sandbox` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-presentation` extends HelmetCspSandboxDirective
+  sealed trait `allow-presentation` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-same-origin` extends HelmetCspSandboxDirective
+  sealed trait `allow-same-origin` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-scripts` extends HelmetCspSandboxDirective
+  sealed trait `allow-scripts` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait `allow-top-navigation` extends HelmetCspSandboxDirective
+  sealed trait `allow-top-navigation` extends _HelmetCspSandboxDirective
   
   @js.native
-  sealed trait script extends HelmetCspRequireSriForValue
+  sealed trait script extends _HelmetCspRequireSriForValue
   
   @js.native
-  sealed trait style extends HelmetCspRequireSriForValue
+  sealed trait style extends _HelmetCspRequireSriForValue
   
   @scala.inline
   def `allow-forms`: `allow-forms` = "allow-forms".asInstanceOf[`allow-forms`]

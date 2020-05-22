@@ -1,5 +1,6 @@
 package typingsSlinky.graphqlTools.convertEnumValuesMod
 
+import typingsSlinky.graphql.mod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends ConvertEnumValues {
   def this(enumValueMap: js.Object) = this()
+  /* CompleteClass */
+  override var enumValueMap: js.Any = js.native
+  /* CompleteClass */
+  @JSName("transformSchema")
+  override def transformSchema_MConvertEnumValues(schema: GraphQLSchema): GraphQLSchema = js.native
 }
 

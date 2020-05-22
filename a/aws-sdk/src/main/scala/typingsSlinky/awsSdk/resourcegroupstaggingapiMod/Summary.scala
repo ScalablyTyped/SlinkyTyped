@@ -34,89 +34,22 @@ trait Summary extends js.Object {
 
 object Summary {
   @scala.inline
-  def apply(): Summary = {
+  def apply(
+    LastUpdated: LastUpdated = null,
+    NonCompliantResources: js.UndefOr[NonCompliantResources] = js.undefined,
+    Region: Region = null,
+    ResourceType: AmazonResourceType = null,
+    TargetId: TargetId = null,
+    TargetIdType: TargetIdType = null
+  ): Summary = {
     val __obj = js.Dynamic.literal()
+    if (LastUpdated != null) __obj.updateDynamic("LastUpdated")(LastUpdated.asInstanceOf[js.Any])
+    if (!js.isUndefined(NonCompliantResources)) __obj.updateDynamic("NonCompliantResources")(NonCompliantResources.get.asInstanceOf[js.Any])
+    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
+    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
+    if (TargetId != null) __obj.updateDynamic("TargetId")(TargetId.asInstanceOf[js.Any])
+    if (TargetIdType != null) __obj.updateDynamic("TargetIdType")(TargetIdType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Summary]
   }
-  @scala.inline
-  implicit class SummaryOps[Self <: Summary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastUpdated(value: LastUpdated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonCompliantResources(value: NonCompliantResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonCompliantResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegion(value: Region): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: AmazonResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetId(value: TargetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetIdType(value: TargetIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIdType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetIdType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIdType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

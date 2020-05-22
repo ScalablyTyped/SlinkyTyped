@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoForwarding extends js.Object {
-  var disposition: js.UndefOr[String] = js.native
-  var emailAddress: js.UndefOr[String] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
+  var disposition: js.UndefOr[String] = js.undefined
+  var emailAddress: js.UndefOr[String] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoForwarding {
   @scala.inline
-  def apply(): AutoForwarding = {
+  def apply(
+    disposition: String = null,
+    emailAddress: String = null,
+    enabled: js.UndefOr[Boolean] = js.undefined
+  ): AutoForwarding = {
     val __obj = js.Dynamic.literal()
+    if (disposition != null) __obj.updateDynamic("disposition")(disposition.asInstanceOf[js.Any])
+    if (emailAddress != null) __obj.updateDynamic("emailAddress")(emailAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoForwarding]
   }
-  @scala.inline
-  implicit class AutoForwardingOps[Self <: AutoForwarding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisposition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disposition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisposition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disposition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

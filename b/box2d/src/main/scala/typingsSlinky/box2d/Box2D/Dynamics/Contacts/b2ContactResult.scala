@@ -7,36 +7,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2ContactResult extends js.Object {
   /**
-  		* The contact id identifies the features in contact.
-  		**/
-  var id: b2ContactID = js.native
+    * The contact id identifies the features in contact.
+    **/
+  var id: b2ContactID
   /**
-  		* Points from shape1 to shape2.
-  		**/
-  var normal: b2Vec2 = js.native
+    * Points from shape1 to shape2.
+    **/
+  var normal: b2Vec2
   /**
-  		* The normal impulse applied to body2.
-  		**/
-  var normalImpulse: Double = js.native
+    * The normal impulse applied to body2.
+    **/
+  var normalImpulse: Double
   /**
-  		* Position in world coordinates.
-  		**/
-  var position: b2Vec2 = js.native
+    * Position in world coordinates.
+    **/
+  var position: b2Vec2
   /**
-  		* The first shape.
-  		**/
-  var shape1: b2Shape = js.native
+    * The first shape.
+    **/
+  var shape1: b2Shape
   /**
-  		* The second shape.
-  		**/
-  var shape2: b2Shape = js.native
+    * The second shape.
+    **/
+  var shape2: b2Shape
   /**
-  		* The tangent impulse applied to body2.
-  		**/
-  var tangentImpulse: Double = js.native
+    * The tangent impulse applied to body2.
+    **/
+  var tangentImpulse: Double
 }
 
 object b2ContactResult {
@@ -53,55 +52,5 @@ object b2ContactResult {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], normal = normal.asInstanceOf[js.Any], normalImpulse = normalImpulse.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], shape1 = shape1.asInstanceOf[js.Any], shape2 = shape2.asInstanceOf[js.Any], tangentImpulse = tangentImpulse.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2ContactResult]
   }
-  @scala.inline
-  implicit class b2ContactResultOps[Self <: b2ContactResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: b2ContactID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormal(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalImpulse(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalImpulse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShape1(value: b2Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShape2(value: b2Shape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTangentImpulse(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tangentImpulse")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

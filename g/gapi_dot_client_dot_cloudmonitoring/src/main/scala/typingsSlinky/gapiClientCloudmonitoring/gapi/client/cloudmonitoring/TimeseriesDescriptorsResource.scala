@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeseriesDescriptorsResource extends js.Object {
   /**
     * List the descriptors of the time series that match the metric and labels values and that have data points in the interval. Large responses are
     * paginated; use the nextPageToken returned in the response to request subsequent pages of results by setting the pageToken query parameter to the value
     * of the nextPageToken.
     */
-  def list(request: Aggregator): Request[ListTimeseriesDescriptorsResponse] = js.native
+  def list(request: Aggregator): Request[ListTimeseriesDescriptorsResponse]
 }
 
 object TimeseriesDescriptorsResource {
@@ -22,19 +21,5 @@ object TimeseriesDescriptorsResource {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[TimeseriesDescriptorsResource]
   }
-  @scala.inline
-  implicit class TimeseriesDescriptorsResourceOps[Self <: TimeseriesDescriptorsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withList(value: Aggregator => Request[ListTimeseriesDescriptorsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

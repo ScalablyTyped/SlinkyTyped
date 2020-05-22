@@ -10,7 +10,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a control for displaying fixed hyperlink. */
-@js.native
 trait UnoControlFixedHyperlink
   extends XControl
      with XWindow

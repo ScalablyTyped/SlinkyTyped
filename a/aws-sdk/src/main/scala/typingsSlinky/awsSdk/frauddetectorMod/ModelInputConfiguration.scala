@@ -26,59 +26,17 @@ trait ModelInputConfiguration extends js.Object {
 
 object ModelInputConfiguration {
   @scala.inline
-  def apply(isOpaque: IsOpaque): ModelInputConfiguration = {
+  def apply(
+    isOpaque: IsOpaque,
+    csvInputTemplate: String = null,
+    format: ModelInputDataFormat = null,
+    jsonInputTemplate: String = null
+  ): ModelInputConfiguration = {
     val __obj = js.Dynamic.literal(isOpaque = isOpaque.asInstanceOf[js.Any])
+    if (csvInputTemplate != null) __obj.updateDynamic("csvInputTemplate")(csvInputTemplate.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (jsonInputTemplate != null) __obj.updateDynamic("jsonInputTemplate")(jsonInputTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelInputConfiguration]
   }
-  @scala.inline
-  implicit class ModelInputConfigurationOps[Self <: ModelInputConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsOpaque(value: IsOpaque): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpaque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCsvInputTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvInputTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvInputTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvInputTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ModelInputDataFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsonInputTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonInputTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonInputTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonInputTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

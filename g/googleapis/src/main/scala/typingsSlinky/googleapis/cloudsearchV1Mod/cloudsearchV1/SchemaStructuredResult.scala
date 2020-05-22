@@ -17,29 +17,10 @@ trait SchemaStructuredResult extends js.Object {
 
 object SchemaStructuredResult {
   @scala.inline
-  def apply(): SchemaStructuredResult = {
+  def apply(person: SchemaPerson = null): SchemaStructuredResult = {
     val __obj = js.Dynamic.literal()
+    if (person != null) __obj.updateDynamic("person")(person.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStructuredResult]
   }
-  @scala.inline
-  implicit class SchemaStructuredResultOps[Self <: SchemaStructuredResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPerson(value: SchemaPerson): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("person")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("person")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

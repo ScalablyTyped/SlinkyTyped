@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetCookiesOptions extends js.Object {
-  var allPaths: js.UndefOr[Boolean] = js.native
-  var expire: js.UndefOr[Boolean] = js.native
-  var http: js.UndefOr[Boolean] = js.native
-  var now: js.UndefOr[js.Date] = js.native
-  var secure: js.UndefOr[Boolean] = js.native
+  var allPaths: js.UndefOr[Boolean] = js.undefined
+  var expire: js.UndefOr[Boolean] = js.undefined
+  var http: js.UndefOr[Boolean] = js.undefined
+  var now: js.UndefOr[js.Date] = js.undefined
+  var secure: js.UndefOr[Boolean] = js.undefined
 }
 
 object GetCookiesOptions {
   @scala.inline
-  def apply(): GetCookiesOptions = {
+  def apply(
+    allPaths: js.UndefOr[Boolean] = js.undefined,
+    expire: js.UndefOr[Boolean] = js.undefined,
+    http: js.UndefOr[Boolean] = js.undefined,
+    now: js.Date = null,
+    secure: js.UndefOr[Boolean] = js.undefined
+  ): GetCookiesOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allPaths)) __obj.updateDynamic("allPaths")(allPaths.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expire)) __obj.updateDynamic("expire")(expire.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(http)) __obj.updateDynamic("http")(http.get.asInstanceOf[js.Any])
+    if (now != null) __obj.updateDynamic("now")(now.asInstanceOf[js.Any])
+    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCookiesOptions]
   }
-  @scala.inline
-  implicit class GetCookiesOptionsOps[Self <: GetCookiesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllPaths(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allPaths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpire(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expire")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpire: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expire")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNow(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

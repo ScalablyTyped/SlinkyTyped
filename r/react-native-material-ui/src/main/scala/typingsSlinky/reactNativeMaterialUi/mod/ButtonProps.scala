@@ -6,166 +6,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ButtonProps extends js.Object {
-  var accent: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[String | ReactElement] = js.native
-  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var primary: js.UndefOr[Boolean] = js.native
-  var raised: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[Text] = js.native
-  var testID: js.UndefOr[String] = js.native
-  var text: String = js.native
-  var upperCase: js.UndefOr[Boolean] = js.native
+  var accent: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var icon: js.UndefOr[String | ReactElement] = js.undefined
+  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var primary: js.UndefOr[Boolean] = js.undefined
+  var raised: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[Text] = js.undefined
+  var testID: js.UndefOr[String] = js.undefined
+  var text: String
+  var upperCase: js.UndefOr[Boolean] = js.undefined
 }
 
 object ButtonProps {
   @scala.inline
-  def apply(text: String): ButtonProps = {
+  def apply(
+    text: String,
+    accent: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    icon: String | ReactElement = null,
+    onLongPress: () => Unit = null,
+    onPress: () => Unit = null,
+    primary: js.UndefOr[Boolean] = js.undefined,
+    raised: js.UndefOr[Boolean] = js.undefined,
+    style: Text = null,
+    testID: String = null,
+    upperCase: js.UndefOr[Boolean] = js.undefined
+  ): ButtonProps = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    if (!js.isUndefined(accent)) __obj.updateDynamic("accent")(accent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
+    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(raised)) __obj.updateDynamic("raised")(raised.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
+    if (!js.isUndefined(upperCase)) __obj.updateDynamic("upperCase")(upperCase.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonProps]
   }
-  @scala.inline
-  implicit class ButtonPropsOps[Self <: ButtonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLongPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLongPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaised(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raised")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaised: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raised")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperCase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperCase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperCase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperCase")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

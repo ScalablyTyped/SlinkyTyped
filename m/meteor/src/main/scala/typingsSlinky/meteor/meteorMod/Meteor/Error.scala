@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Error
   extends typingsSlinky.std.Error {
-  var details: js.UndefOr[String] = js.native
-  var error: String | Double = js.native
-  var reason: js.UndefOr[String] = js.native
+  var details: js.UndefOr[String] = js.undefined
+  var error: String | Double
+  var reason: js.UndefOr[String] = js.undefined
 }
 
 /** User **/

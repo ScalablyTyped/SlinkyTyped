@@ -6,22 +6,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data when an app is activated to video call a contact. */
-@js.native
 trait ContactVideoCallActivatedEventArgs extends js.Object {
   /** Gets the contact for the video call. */
-  var contact: Contact = js.native
+  var contact: Contact
   /** Gets the activation type. */
-  var kind: ActivationKind = js.native
+  var kind: ActivationKind
   /** Gets the execution state of the app before it was activated. */
-  var previousExecutionState: ApplicationExecutionState = js.native
+  var previousExecutionState: ApplicationExecutionState
   /** Gets the identifier of the service used for the video call. */
-  var serviceId: String = js.native
+  var serviceId: String
   /** Gets the user identifier of the service used for the video call. */
-  var serviceUserId: String = js.native
+  var serviceUserId: String
   /** Gets the splash screen object, which provides information about the transition from the splash screen to the activated app. */
-  var splashScreen: SplashScreen = js.native
+  var splashScreen: SplashScreen
   /** Gets the action to be performed. */
-  var verb: String = js.native
+  var verb: String
 }
 
 object ContactVideoCallActivatedEventArgs {
@@ -38,55 +37,5 @@ object ContactVideoCallActivatedEventArgs {
     val __obj = js.Dynamic.literal(contact = contact.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], serviceId = serviceId.asInstanceOf[js.Any], serviceUserId = serviceUserId.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], verb = verb.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactVideoCallActivatedEventArgs]
   }
-  @scala.inline
-  implicit class ContactVideoCallActivatedEventArgsOps[Self <: ContactVideoCallActivatedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContact(value: Contact): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: ActivationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSplashScreen(value: SplashScreen): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

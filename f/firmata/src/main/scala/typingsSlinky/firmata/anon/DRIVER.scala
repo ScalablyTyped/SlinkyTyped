@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DRIVER extends js.Object {
-  var DRIVER: STEPPER_TYPE = js.native
-  var FOUR_WIRE: STEPPER_TYPE = js.native
-  var TWO_WIRE: STEPPER_TYPE = js.native
+  var DRIVER: STEPPER_TYPE
+  var FOUR_WIRE: STEPPER_TYPE
+  var TWO_WIRE: STEPPER_TYPE
 }
 
 object DRIVER {
@@ -18,31 +17,5 @@ object DRIVER {
     val __obj = js.Dynamic.literal(DRIVER = DRIVER.asInstanceOf[js.Any], FOUR_WIRE = FOUR_WIRE.asInstanceOf[js.Any], TWO_WIRE = TWO_WIRE.asInstanceOf[js.Any])
     __obj.asInstanceOf[DRIVER]
   }
-  @scala.inline
-  implicit class DRIVEROps[Self <: DRIVER] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDRIVER(value: STEPPER_TYPE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DRIVER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFOUR_WIRE(value: STEPPER_TYPE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FOUR_WIRE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTWO_WIRE(value: STEPPER_TYPE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TWO_WIRE")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

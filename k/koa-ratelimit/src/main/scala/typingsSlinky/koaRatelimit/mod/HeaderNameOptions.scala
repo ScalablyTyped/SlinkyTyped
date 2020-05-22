@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeaderNameOptions extends js.Object {
   /**
     * The amount of requests remaining in the current limiting period.
     */
-  var remaining: String = js.native
+  var remaining: String
   /**
     * The time, expressed as a UNIX epoch timestamp, at which your rate-limit expires.
     */
-  var reset: String = js.native
+  var reset: String
   /**
     * The total amount of requests a client may make during a limiting period.
     */
-  var total: String = js.native
+  var total: String
 }
 
 object HeaderNameOptions {
@@ -26,31 +25,5 @@ object HeaderNameOptions {
     val __obj = js.Dynamic.literal(remaining = remaining.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderNameOptions]
   }
-  @scala.inline
-  implicit class HeaderNameOptionsOps[Self <: HeaderNameOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemaining(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

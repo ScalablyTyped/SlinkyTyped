@@ -105,4 +105,10 @@ package object elastictranscoderMod {
   type WatermarkSizingPolicy = java.lang.String
   type ZeroTo255String = java.lang.String
   type ZeroTo512String = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2012-09-25`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.elastictranscoderMod._apiVersion | java.lang.String
 }

@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSImport("webpack-chain", "Plugins")
 @js.native
 class Plugins[Parent, PluginType /* <: typingsSlinky.tapable.mod.Tapable.Plugin */] ()
-  extends typingsSlinky.webpackChain.mod._Config.TypedChainedMap[Parent, Plugin[Parent, PluginType]]
+  extends typingsSlinky.webpackChain.mod._Config.TypedChainedMap[Parent, Plugin[Parent, PluginType]] {
+  /* CompleteClass */
+  override def end(): Parent = js.native
+}
 

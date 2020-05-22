@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReedSolomonDecoder extends js.Object {
-  var field: GF256 = js.native
-  def decode(received: GF256, twoS: js.Array[Double]): Unit = js.native
-  def findErrorLocations(errorLocator: GF256Poly): js.Array[Double] = js.native
-  def findErrorMagnitudes(errorEvaluator: GF256Poly, errorLocations: js.Array[Double], dataMatrix: Boolean): js.Array[Double] = js.native
-  def runEuclideanAlgorithm(a: GF256Poly, b: GF256Poly, R: Double): js.Tuple2[GF256Poly, GF256Poly] = js.native
+  var field: GF256
+  def decode(received: GF256, twoS: js.Array[Double]): Unit
+  def findErrorLocations(errorLocator: GF256Poly): js.Array[Double]
+  def findErrorMagnitudes(errorEvaluator: GF256Poly, errorLocations: js.Array[Double], dataMatrix: Boolean): js.Array[Double]
+  def runEuclideanAlgorithm(a: GF256Poly, b: GF256Poly, R: Double): js.Tuple2[GF256Poly, GF256Poly]
 }
 
 object ReedSolomonDecoder {
@@ -25,43 +24,5 @@ object ReedSolomonDecoder {
     val __obj = js.Dynamic.literal(decode = js.Any.fromFunction2(decode), field = field.asInstanceOf[js.Any], findErrorLocations = js.Any.fromFunction1(findErrorLocations), findErrorMagnitudes = js.Any.fromFunction3(findErrorMagnitudes), runEuclideanAlgorithm = js.Any.fromFunction3(runEuclideanAlgorithm))
     __obj.asInstanceOf[ReedSolomonDecoder]
   }
-  @scala.inline
-  implicit class ReedSolomonDecoderOps[Self <: ReedSolomonDecoder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecode(value: (GF256, js.Array[Double]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withField(value: GF256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFindErrorLocations(value: GF256Poly => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findErrorLocations")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFindErrorMagnitudes(value: (GF256Poly, js.Array[Double], Boolean) => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findErrorMagnitudes")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRunEuclideanAlgorithm(value: (GF256Poly, GF256Poly, Double) => js.Tuple2[GF256Poly, GF256Poly]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runEuclideanAlgorithm")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

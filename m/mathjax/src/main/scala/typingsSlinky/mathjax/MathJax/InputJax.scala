@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InputJax extends js.Object {
   /*The directory where the jax files are stored (e.g., "[MathJax]/jax/input/TeX").*/
-  var directory: String = js.native
+  var directory: String
   /*The name of the ElementJax class that this input jax will produce (typically mml, as that is the only
     * ElementJax at the moment).
     */
-  var elementJax: String = js.native
+  var elementJax: String
   /*The name of the jax.*/
-  var id: String = js.native
+  var id: String
   /*The version number of the jax.*/
-  var version: String = js.native
+  var version: String
   /*This is the method that the MathJax.Hub calls when it needs the input jax to process the given math <script>.
     * Its default action is to do the following:
     *
@@ -27,12 +26,12 @@ trait InputJax extends js.Object {
     * Once the jax.js file has loaded, this method is replaced by the jax’s Translate() method (see below), so that
     * subsequent calls to Process() will perform the appropriate translation.
     */
-  def Process(script: js.Any, state: js.Any): js.Any = js.native
+  def Process(script: js.Any, state: js.Any): js.Any
   /*This registers the MIME-type associated with this input jax so that MathJax knows to call this input jax when
     * it sees a <script> of that type. An input jax can register more than one type, but it will be responsible for
     * distinguishing elements of the various types from one another.
     */
-  def Register(mimetype: String): Unit = js.native
+  def Register(mimetype: String): Unit
   /*This is the main routine called by MathJax when a <script> of the appropriate type is found. The default
     * Translate() method throws an error indicating that Translate() hasn’t been defined, so when the jax.js file
     * loads, it should override the default Translate() with its own version that does the actual translation.
@@ -40,11 +39,11 @@ trait InputJax extends js.Object {
     * The translation process should include the creation of an Element Jax that stores the data needed for this
     * element.
     */
-  def Translate(script: js.Any, state: js.Any): ElementJax = js.native
+  def Translate(script: js.Any, state: js.Any): ElementJax
   /*This implements the element jax’s needsUpdate() method, and returns true if the jax needs to be rerendered
     * (i.e., the text has changed), and false otherwise.
     */
-  def needsUpdate(element: js.Any): Boolean = js.native
+  def needsUpdate(element: js.Any): Boolean
 }
 
 object InputJax {
@@ -62,61 +61,5 @@ object InputJax {
     val __obj = js.Dynamic.literal(Process = js.Any.fromFunction2(Process), Register = js.Any.fromFunction1(Register), Translate = js.Any.fromFunction2(Translate), directory = directory.asInstanceOf[js.Any], elementJax = elementJax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], needsUpdate = js.Any.fromFunction1(needsUpdate), version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputJax]
   }
-  @scala.inline
-  implicit class InputJaxOps[Self <: InputJax] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProcess(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRegister(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Register")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTranslate(value: (js.Any, js.Any) => ElementJax): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Translate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElementJax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementJax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNeedsUpdate(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("needsUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

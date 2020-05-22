@@ -1,39 +1,28 @@
 package typingsSlinky.css.mod
 
+import typingsSlinky.css.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Stylesheet extends Node {
-  var stylesheet: js.UndefOr[StyleRules] = js.native
+  var stylesheet: js.UndefOr[StyleRules] = js.undefined
 }
 
 object Stylesheet {
   @scala.inline
-  def apply(): Stylesheet = {
+  def apply(
+    parent: Node = null,
+    position: Content = null,
+    stylesheet: StyleRules = null,
+    `type`: String = null
+  ): Stylesheet = {
     val __obj = js.Dynamic.literal()
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (stylesheet != null) __obj.updateDynamic("stylesheet")(stylesheet.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stylesheet]
   }
-  @scala.inline
-  implicit class StylesheetOps[Self <: Stylesheet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStylesheet(value: StyleRules): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStylesheet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

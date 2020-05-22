@@ -10,76 +10,72 @@ import scala.scalajs.js.annotation._
   * @interface Options
   * @extends SassOptions
   */
-@js.native
 trait Options extends SassOptions {
-  var bundleExec: js.UndefOr[Boolean] = js.native
-  var container: js.UndefOr[String] = js.native
+  var bundleExec: js.UndefOr[Boolean] = js.undefined
+  var container: js.UndefOr[String] = js.undefined
   @JSName("sourcemap")
-  var sourcemap_Options: js.UndefOr[Boolean] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
+  var sourcemap_Options: js.UndefOr[Boolean] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    bundleExec: js.UndefOr[Boolean] = js.undefined,
+    cacheLocation: String = null,
+    check: js.UndefOr[Boolean] = js.undefined,
+    compass: js.UndefOr[Boolean] = js.undefined,
+    container: String = null,
+    debugInfo: js.UndefOr[Boolean] = js.undefined,
+    defaultEncoding: String = null,
+    force: js.UndefOr[Boolean] = js.undefined,
+    interactive: js.UndefOr[Boolean] = js.undefined,
+    lineComments: js.UndefOr[Boolean] = js.undefined,
+    lineNumbers: js.UndefOr[Boolean] = js.undefined,
+    loadPath: String | js.Array[String] = null,
+    noCache: js.UndefOr[Boolean] = js.undefined,
+    precision: js.UndefOr[Double] = js.undefined,
+    quiet: js.UndefOr[Boolean] = js.undefined,
+    require: String = null,
+    scss: js.UndefOr[Boolean] = js.undefined,
+    sourcemap: js.UndefOr[Boolean] = js.undefined,
+    stdin: js.UndefOr[Boolean] = js.undefined,
+    stopOnError: js.UndefOr[Boolean] = js.undefined,
+    style: String = null,
+    trace: js.UndefOr[Boolean] = js.undefined,
+    unixNewlines: js.UndefOr[Boolean] = js.undefined,
+    update: String = null,
+    verbose: js.UndefOr[Boolean] = js.undefined,
+    watch: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bundleExec)) __obj.updateDynamic("bundleExec")(bundleExec.get.asInstanceOf[js.Any])
+    if (cacheLocation != null) __obj.updateDynamic("cacheLocation")(cacheLocation.asInstanceOf[js.Any])
+    if (!js.isUndefined(check)) __obj.updateDynamic("check")(check.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compass)) __obj.updateDynamic("compass")(compass.get.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugInfo)) __obj.updateDynamic("debugInfo")(debugInfo.get.asInstanceOf[js.Any])
+    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineComments)) __obj.updateDynamic("lineComments")(lineComments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineNumbers)) __obj.updateDynamic("lineNumbers")(lineNumbers.get.asInstanceOf[js.Any])
+    if (loadPath != null) __obj.updateDynamic("loadPath")(loadPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(noCache)) __obj.updateDynamic("noCache")(noCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quiet)) __obj.updateDynamic("quiet")(quiet.get.asInstanceOf[js.Any])
+    if (require != null) __obj.updateDynamic("require")(require.asInstanceOf[js.Any])
+    if (!js.isUndefined(scss)) __obj.updateDynamic("scss")(scss.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourcemap)) __obj.updateDynamic("sourcemap")(sourcemap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stdin)) __obj.updateDynamic("stdin")(stdin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopOnError)) __obj.updateDynamic("stopOnError")(stopOnError.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(trace)) __obj.updateDynamic("trace")(trace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unixNewlines)) __obj.updateDynamic("unixNewlines")(unixNewlines.get.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
+    if (watch != null) __obj.updateDynamic("watch")(watch.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBundleExec(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleExec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleExec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleExec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcemap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourcemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

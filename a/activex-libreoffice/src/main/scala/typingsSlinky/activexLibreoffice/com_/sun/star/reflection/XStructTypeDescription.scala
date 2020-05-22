@@ -25,28 +25,27 @@ import scala.scalajs.js.annotation._
   * com.sun.star.reflection.XStructTypeDescription.getTypeArguments()} return an empty sequence.
   * @since OOo 2.0
   */
-@js.native
 trait XStructTypeDescription extends XCompoundTypeDescription {
   /**
     * Returns the type arguments of an instantiated polymorphic struct type.
     * @returns a sequence of all type arguments, in the correct order; for a plain struct type, or a polymorphic struct type template, an empty sequence is returned
     */
-  val TypeArguments: SafeArray[XTypeDescription] = js.native
+  val TypeArguments: SafeArray[XTypeDescription]
   /**
     * Returns the type parameters of a polymorphic struct type template.
     * @returns a sequence of the names of all type parameters, in the correct order; for a plain struct type, or an instantiated polymorphic struct type, an emp
     */
-  val TypeParameters: SafeArray[String] = js.native
+  val TypeParameters: SafeArray[String]
   /**
     * Returns the type arguments of an instantiated polymorphic struct type.
     * @returns a sequence of all type arguments, in the correct order; for a plain struct type, or a polymorphic struct type template, an empty sequence is returned
     */
-  def getTypeArguments(): SafeArray[XTypeDescription] = js.native
+  def getTypeArguments(): SafeArray[XTypeDescription]
   /**
     * Returns the type parameters of a polymorphic struct type template.
     * @returns a sequence of the names of all type parameters, in the correct order; for a plain struct type, or an instantiated polymorphic struct type, an emp
     */
-  def getTypeParameters(): SafeArray[String] = js.native
+  def getTypeParameters(): SafeArray[String]
 }
 
 object XStructTypeDescription {
@@ -73,37 +72,5 @@ object XStructTypeDescription {
     val __obj = js.Dynamic.literal(BaseType = BaseType.asInstanceOf[js.Any], MemberNames = MemberNames.asInstanceOf[js.Any], MemberTypes = MemberTypes.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], TypeArguments = TypeArguments.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], TypeParameters = TypeParameters.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getBaseType = js.Any.fromFunction0(getBaseType), getMemberNames = js.Any.fromFunction0(getMemberNames), getMemberTypes = js.Any.fromFunction0(getMemberTypes), getName = js.Any.fromFunction0(getName), getTypeArguments = js.Any.fromFunction0(getTypeArguments), getTypeClass = js.Any.fromFunction0(getTypeClass), getTypeParameters = js.Any.fromFunction0(getTypeParameters), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XStructTypeDescription]
   }
-  @scala.inline
-  implicit class XStructTypeDescriptionOps[Self <: XStructTypeDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTypeArguments(value: SafeArray[XTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetTypeArguments(value: () => SafeArray[XTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeArguments")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeParameters(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeParameters")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

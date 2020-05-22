@@ -7,5 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("xmldsigjs", "DigestMethod")
 @js.native
 class DigestMethod ()
-  extends typingsSlinky.xmldsigjs.digestMethodMod.DigestMethod
+  extends typingsSlinky.xmldsigjs.xmlMod.DigestMethod {
+  def this(hashNamespace: String) = this()
+}
 

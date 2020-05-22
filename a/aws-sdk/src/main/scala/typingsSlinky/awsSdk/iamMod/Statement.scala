@@ -26,65 +26,18 @@ trait Statement extends js.Object {
 
 object Statement {
   @scala.inline
-  def apply(): Statement = {
+  def apply(
+    EndPosition: Position = null,
+    SourcePolicyId: PolicyIdentifierType = null,
+    SourcePolicyType: PolicySourceType = null,
+    StartPosition: Position = null
+  ): Statement = {
     val __obj = js.Dynamic.literal()
+    if (EndPosition != null) __obj.updateDynamic("EndPosition")(EndPosition.asInstanceOf[js.Any])
+    if (SourcePolicyId != null) __obj.updateDynamic("SourcePolicyId")(SourcePolicyId.asInstanceOf[js.Any])
+    if (SourcePolicyType != null) __obj.updateDynamic("SourcePolicyType")(SourcePolicyType.asInstanceOf[js.Any])
+    if (StartPosition != null) __obj.updateDynamic("StartPosition")(StartPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
-  @scala.inline
-  implicit class StatementOps[Self <: Statement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcePolicyId(value: PolicyIdentifierType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePolicyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcePolicyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePolicyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcePolicyType(value: PolicySourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePolicyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcePolicyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePolicyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartPosition(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

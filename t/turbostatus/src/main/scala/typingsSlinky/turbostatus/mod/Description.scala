@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Description extends js.Object {
-  var commitsSinceTag: String | `false` = js.native
-  var hash: String = js.native
-  var nearestTag: String | `false` = js.native
+  var commitsSinceTag: String | `false`
+  var hash: String
+  var nearestTag: String | `false`
 }
 
 object Description {
@@ -18,31 +17,5 @@ object Description {
     val __obj = js.Dynamic.literal(commitsSinceTag = commitsSinceTag.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], nearestTag = nearestTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[Description]
   }
-  @scala.inline
-  implicit class DescriptionOps[Self <: Description] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitsSinceTag(value: String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitsSinceTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHash(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNearestTag(value: String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nearestTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

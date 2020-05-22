@@ -14,29 +14,10 @@ trait ImportSourceCredentialsOutput extends js.Object {
 
 object ImportSourceCredentialsOutput {
   @scala.inline
-  def apply(): ImportSourceCredentialsOutput = {
+  def apply(arn: NonEmptyString = null): ImportSourceCredentialsOutput = {
     val __obj = js.Dynamic.literal()
+    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportSourceCredentialsOutput]
   }
-  @scala.inline
-  implicit class ImportSourceCredentialsOutputOps[Self <: ImportSourceCredentialsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

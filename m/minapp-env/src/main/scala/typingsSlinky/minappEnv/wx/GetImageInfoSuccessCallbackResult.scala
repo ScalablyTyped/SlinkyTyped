@@ -12,10 +12,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetImageInfoSuccessCallbackResult extends js.Object {
   /** 图片原始高度，单位px。不考虑旋转。 */
-  var height: Double = js.native
+  var height: Double
   /** [拍照时设备方向](http://sylvana.net/jpegcrop/exif_orientation.html)
     *
     * 可选值：
@@ -29,15 +28,15 @@ trait GetImageInfoSuccessCallbackResult extends js.Object {
     * - 'left': 逆时针旋转90度，对应 Exif 中的 8;
     *
     * 最低基础库： `1.9.90` */
-  var orientation: up | `up-mirrored` | down | `down-mirrored` | `left-mirrored` | right | `right-mirrored` | left = js.native
+  var orientation: up | `up-mirrored` | down | `down-mirrored` | `left-mirrored` | right | `right-mirrored` | left
   /** 图片的本地路径 */
-  var path: String = js.native
+  var path: String
   /** 图片格式
     *
     * 最低基础库： `1.9.90` */
-  var `type`: String = js.native
+  var `type`: String
   /** 图片原始宽度，单位px。不考虑旋转。 */
-  var width: Double = js.native
+  var width: Double
 }
 
 object GetImageInfoSuccessCallbackResult {
@@ -53,45 +52,5 @@ object GetImageInfoSuccessCallbackResult {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetImageInfoSuccessCallbackResult]
   }
-  @scala.inline
-  implicit class GetImageInfoSuccessCallbackResultOps[Self <: GetImageInfoSuccessCallbackResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrientation(
-      value: up | `up-mirrored` | down | `down-mirrored` | `left-mirrored` | right | `right-mirrored` | left
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

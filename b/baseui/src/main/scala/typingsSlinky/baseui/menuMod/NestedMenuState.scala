@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NestedMenuState extends js.Object {
-  var menus: js.Array[Ref[HTMLElement]] = js.native
+  var menus: js.Array[Ref[HTMLElement]]
 }
 
 object NestedMenuState {
@@ -17,19 +16,5 @@ object NestedMenuState {
     val __obj = js.Dynamic.literal(menus = menus.asInstanceOf[js.Any])
     __obj.asInstanceOf[NestedMenuState]
   }
-  @scala.inline
-  implicit class NestedMenuStateOps[Self <: NestedMenuState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMenus(value: js.Array[Ref[HTMLElement]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menus")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

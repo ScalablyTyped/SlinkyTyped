@@ -11,8 +11,17 @@ trait AnalyticsApplicationReferenceDataSources extends js.Object {
     * The ARN of the Kinesis Analytics Application.
     */
   var id: js.UndefOr[Input[String]] = js.native
+  /**
+    * The S3 configuration for the reference data source. See S3 Reference below for more details.
+    */
   var s3: Input[AnalyticsApplicationReferenceDataSourcesS3] = js.native
+  /**
+    * The Schema format of the data in the streaming source. See Source Schema below for more details.
+    */
   var schema: Input[AnalyticsApplicationReferenceDataSourcesSchema] = js.native
+  /**
+    * The in-application Table Name.
+    */
   var tableName: Input[String] = js.native
 }
 
@@ -21,48 +30,12 @@ object AnalyticsApplicationReferenceDataSources {
   def apply(
     s3: Input[AnalyticsApplicationReferenceDataSourcesS3],
     schema: Input[AnalyticsApplicationReferenceDataSourcesSchema],
-    tableName: Input[String]
+    tableName: Input[String],
+    id: Input[String] = null
   ): AnalyticsApplicationReferenceDataSources = {
     val __obj = js.Dynamic.literal(s3 = s3.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], tableName = tableName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationReferenceDataSources]
   }
-  @scala.inline
-  implicit class AnalyticsApplicationReferenceDataSourcesOps[Self <: AnalyticsApplicationReferenceDataSources] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3(value: Input[AnalyticsApplicationReferenceDataSourcesS3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchema(value: Input[AnalyticsApplicationReferenceDataSourcesSchema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTableName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

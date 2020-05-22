@@ -19,9 +19,17 @@ trait UpdateProvisioningTemplateRequest extends js.Object {
     */
   var enabled: js.UndefOr[Enabled] = js.native
   /**
+    * Updates the pre-provisioning hook template.
+    */
+  var preProvisioningHook: js.UndefOr[ProvisioningHook] = js.native
+  /**
     * The ARN of the role associated with the provisioning template. This IoT role grants permission to provision a device.
     */
   var provisioningRoleArn: js.UndefOr[RoleArn] = js.native
+  /**
+    * Removes pre-provisioning hook template.
+    */
+  var removePreProvisioningHook: js.UndefOr[RemoveHook] = js.native
   /**
     * The name of the fleet provisioning template.
     */
@@ -30,71 +38,23 @@ trait UpdateProvisioningTemplateRequest extends js.Object {
 
 object UpdateProvisioningTemplateRequest {
   @scala.inline
-  def apply(templateName: TemplateName): UpdateProvisioningTemplateRequest = {
+  def apply(
+    templateName: TemplateName,
+    defaultVersionId: js.UndefOr[TemplateVersionId] = js.undefined,
+    description: TemplateDescription = null,
+    enabled: js.UndefOr[Enabled] = js.undefined,
+    preProvisioningHook: ProvisioningHook = null,
+    provisioningRoleArn: RoleArn = null,
+    removePreProvisioningHook: js.UndefOr[RemoveHook] = js.undefined
+  ): UpdateProvisioningTemplateRequest = {
     val __obj = js.Dynamic.literal(templateName = templateName.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultVersionId)) __obj.updateDynamic("defaultVersionId")(defaultVersionId.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (preProvisioningHook != null) __obj.updateDynamic("preProvisioningHook")(preProvisioningHook.asInstanceOf[js.Any])
+    if (provisioningRoleArn != null) __obj.updateDynamic("provisioningRoleArn")(provisioningRoleArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(removePreProvisioningHook)) __obj.updateDynamic("removePreProvisioningHook")(removePreProvisioningHook.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateProvisioningTemplateRequest]
   }
-  @scala.inline
-  implicit class UpdateProvisioningTemplateRequestOps[Self <: UpdateProvisioningTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemplateName(value: TemplateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultVersionId(value: TemplateVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: TemplateDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningRoleArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

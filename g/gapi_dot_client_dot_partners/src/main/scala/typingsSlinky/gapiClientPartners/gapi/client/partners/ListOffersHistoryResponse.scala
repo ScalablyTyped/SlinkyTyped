@@ -4,107 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListOffersHistoryResponse extends js.Object {
   /** True if the user has the option to show entire company history. */
-  var canShowEntireCompany: js.UndefOr[Boolean] = js.native
+  var canShowEntireCompany: js.UndefOr[Boolean] = js.undefined
   /** Supply this token in a ListOffersHistoryRequest to retrieve the next page. */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** Historical offers meeting request. */
-  var offers: js.UndefOr[js.Array[HistoricalOffer]] = js.native
+  var offers: js.UndefOr[js.Array[HistoricalOffer]] = js.undefined
   /** Current response metadata. */
-  var responseMetadata: js.UndefOr[ResponseMetadata] = js.native
+  var responseMetadata: js.UndefOr[ResponseMetadata] = js.undefined
   /** True if this response is showing entire company history. */
-  var showingEntireCompany: js.UndefOr[Boolean] = js.native
+  var showingEntireCompany: js.UndefOr[Boolean] = js.undefined
   /** Number of results across all pages. */
-  var totalResults: js.UndefOr[Double] = js.native
+  var totalResults: js.UndefOr[Double] = js.undefined
 }
 
 object ListOffersHistoryResponse {
   @scala.inline
-  def apply(): ListOffersHistoryResponse = {
+  def apply(
+    canShowEntireCompany: js.UndefOr[Boolean] = js.undefined,
+    nextPageToken: String = null,
+    offers: js.Array[HistoricalOffer] = null,
+    responseMetadata: ResponseMetadata = null,
+    showingEntireCompany: js.UndefOr[Boolean] = js.undefined,
+    totalResults: js.UndefOr[Double] = js.undefined
+  ): ListOffersHistoryResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(canShowEntireCompany)) __obj.updateDynamic("canShowEntireCompany")(canShowEntireCompany.get.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (offers != null) __obj.updateDynamic("offers")(offers.asInstanceOf[js.Any])
+    if (responseMetadata != null) __obj.updateDynamic("responseMetadata")(responseMetadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(showingEntireCompany)) __obj.updateDynamic("showingEntireCompany")(showingEntireCompany.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalResults)) __obj.updateDynamic("totalResults")(totalResults.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOffersHistoryResponse]
   }
-  @scala.inline
-  implicit class ListOffersHistoryResponseOps[Self <: ListOffersHistoryResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanShowEntireCompany(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canShowEntireCompany")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanShowEntireCompany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canShowEntireCompany")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffers(value: js.Array[HistoricalOffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseMetadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowingEntireCompany(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showingEntireCompany")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowingEntireCompany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showingEntireCompany")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.yaml.typesMod
 
-import typingsSlinky.yaml.typesMod.AST.Collection
 import typingsSlinky.yaml.typesMod.AST.NodeToJsonContext
+import typingsSlinky.yaml.typesMod.Schema.StringifyContext
 import typingsSlinky.yaml.utilMod.Type.FLOW_SEQ
 import typingsSlinky.yaml.utilMod.Type.SEQ
 import scala.scalajs.js
@@ -30,5 +30,8 @@ class YAMLSeq () extends Collection {
   def set(key: Double, value: js.Any): Unit = js.native
   def set(key: Scalar, value: js.Any): Unit = js.native
   def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Array[_] = js.native
+  def toString(ctx: StringifyContext): String = js.native
+  def toString(ctx: StringifyContext, onComment: js.Function0[Unit]): String = js.native
+  def toString(ctx: StringifyContext, onComment: js.Function0[Unit], onChompKeep: js.Function0[Unit]): String = js.native
 }
 

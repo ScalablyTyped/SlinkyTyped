@@ -7,82 +7,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RoadsReqOptions extends js.Object {
-  var basicAuth: js.UndefOr[Pw] = js.native
-  var followRedirects: js.UndefOr[Boolean] = js.native
-  var request: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions = js.native
-  var requestBody: js.UndefOr[String] = js.native
-  var response: js.UndefOr[Encoding] = js.native
+  var basicAuth: js.UndefOr[Pw] = js.undefined
+  var followRedirects: js.UndefOr[Boolean] = js.undefined
+  var request: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions
+  var requestBody: js.UndefOr[String] = js.undefined
+  var response: js.UndefOr[Encoding] = js.undefined
 }
 
 object RoadsReqOptions {
   @scala.inline
-  def apply(request: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions): RoadsReqOptions = {
+  def apply(
+    request: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions,
+    basicAuth: Pw = null,
+    followRedirects: js.UndefOr[Boolean] = js.undefined,
+    requestBody: String = null,
+    response: Encoding = null
+  ): RoadsReqOptions = {
     val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any])
+    if (basicAuth != null) __obj.updateDynamic("basicAuth")(basicAuth.asInstanceOf[js.Any])
+    if (!js.isUndefined(followRedirects)) __obj.updateDynamic("followRedirects")(followRedirects.get.asInstanceOf[js.Any])
+    if (requestBody != null) __obj.updateDynamic("requestBody")(requestBody.asInstanceOf[js.Any])
+    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoadsReqOptions]
   }
-  @scala.inline
-  implicit class RoadsReqOptionsOps[Self <: RoadsReqOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequest(value: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasicAuth(value: Pw): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasicAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowRedirects(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowRedirects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponse(value: Encoding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

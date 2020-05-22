@@ -14,29 +14,10 @@ trait CreateGatewayGroupResponse extends js.Object {
 
 object CreateGatewayGroupResponse {
   @scala.inline
-  def apply(): CreateGatewayGroupResponse = {
+  def apply(GatewayGroupArn: Arn = null): CreateGatewayGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (GatewayGroupArn != null) __obj.updateDynamic("GatewayGroupArn")(GatewayGroupArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGatewayGroupResponse]
   }
-  @scala.inline
-  implicit class CreateGatewayGroupResponseOps[Self <: CreateGatewayGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGatewayGroupArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayGroupArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayGroupArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

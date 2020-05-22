@@ -22,47 +22,11 @@ trait GetSecretVersionArgs extends js.Object {
 
 object GetSecretVersionArgs {
   @scala.inline
-  def apply(secretId: String): GetSecretVersionArgs = {
+  def apply(secretId: String, versionId: String = null, versionStage: String = null): GetSecretVersionArgs = {
     val __obj = js.Dynamic.literal(secretId = secretId.asInstanceOf[js.Any])
+    if (versionId != null) __obj.updateDynamic("versionId")(versionId.asInstanceOf[js.Any])
+    if (versionStage != null) __obj.updateDynamic("versionStage")(versionStage.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSecretVersionArgs]
   }
-  @scala.inline
-  implicit class GetSecretVersionArgsOps[Self <: GetSecretVersionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecretId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionStage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionStage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionStage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

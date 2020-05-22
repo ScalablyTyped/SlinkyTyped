@@ -1,6 +1,7 @@
 package typingsSlinky.agGrid.bodyDropTargetMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.agGrid.dragAndDropServiceMod.DragSourceType
 import typingsSlinky.agGrid.dragAndDropServiceMod.DraggingEvent
 import typingsSlinky.agGrid.dragAndDropServiceMod.DropTarget
 import typingsSlinky.agGrid.gridPanelMod.GridPanel
@@ -22,12 +23,17 @@ class BodyDropTarget protected () extends DropTarget {
   var gridPanel: js.Any = js.native
   var moveColumnController: js.Any = js.native
   var pinned: js.Any = js.native
+  /** The main container that will get the drop. */
+  /* CompleteClass */
+  override def getContainer(): HTMLElement = js.native
   /* private */ def getDropType(draggingEvent: js.Any): js.Any = js.native
   @JSName("getIconName")
   def getIconName_MBodyDropTarget(): String = js.native
   @JSName("getSecondaryContainers")
   def getSecondaryContainers_MBodyDropTarget(): js.Array[HTMLElement] = js.native
   /* private */ def init(): js.Any = js.native
+  /* CompleteClass */
+  override def isInterestedIn(`type`: DragSourceType): Boolean = js.native
   @JSName("onDragEnter")
   def onDragEnter_MBodyDropTarget(draggingEvent: DraggingEvent): Unit = js.native
   @JSName("onDragLeave")

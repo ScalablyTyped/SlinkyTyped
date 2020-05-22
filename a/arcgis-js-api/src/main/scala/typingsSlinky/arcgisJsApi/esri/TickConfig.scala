@@ -15,20 +15,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TickConfig extends Object {
   /**
     * Callback for formatting tick labels.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
-  var labelFormatFunction: js.UndefOr[SliderLabelFormatter] = js.native
+  var labelFormatFunction: js.UndefOr[SliderLabelFormatter] = js.undefined
   /**
     * Indicates whether to render labels for the ticks.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
-  var labelsVisible: js.UndefOr[Boolean] = js.native
+  var labelsVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * The mode or method of positioning ticks along the slider track. See the table below for a list of possible values.
     *
@@ -41,19 +40,19 @@ trait TickConfig extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
-  var mode: count | percent | position = js.native
+  var mode: count | percent | position
   /**
     * Callback that fires for each tick. You can override default behaviors and styles with this property.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
-  var tickCreatedFunction: js.UndefOr[TickCreatedFunction] = js.native
+  var tickCreatedFunction: js.UndefOr[TickCreatedFunction] = js.undefined
   /**
     * Indicates where ticks will be rendered below the track. See the description for `mode` for more information about how this property is interpreted by each mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
-  var values: Double | js.Array[Double] = js.native
+  var values: Double | js.Array[Double]
 }
 
 object TickConfig {
@@ -63,70 +62,16 @@ object TickConfig {
     hasOwnProperty: PropertyKey => Boolean,
     mode: count | percent | position,
     propertyIsEnumerable: PropertyKey => Boolean,
-    values: Double | js.Array[Double]
+    values: Double | js.Array[Double],
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
+    labelsVisible: js.UndefOr[Boolean] = js.undefined,
+    tickCreatedFunction: (/* value */ Double, /* tickElement */ HTMLElement, /* labelElement */ js.UndefOr[HTMLElement]) => Unit = null
   ): TickConfig = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), mode = mode.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), values = values.asInstanceOf[js.Any])
+    if (labelFormatFunction != null) __obj.updateDynamic("labelFormatFunction")(js.Any.fromFunction3(labelFormatFunction))
+    if (!js.isUndefined(labelsVisible)) __obj.updateDynamic("labelsVisible")(labelsVisible.get.asInstanceOf[js.Any])
+    if (tickCreatedFunction != null) __obj.updateDynamic("tickCreatedFunction")(js.Any.fromFunction3(tickCreatedFunction))
     __obj.asInstanceOf[TickConfig]
   }
-  @scala.inline
-  implicit class TickConfigOps[Self <: TickConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: count | percent | position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValues(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabelFormatFunction(
-      value: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatFunction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutLabelFormatFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelsVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickCreatedFunction(
-      value: (/* value */ Double, /* tickElement */ HTMLElement, /* labelElement */ js.UndefOr[HTMLElement]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickCreatedFunction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTickCreatedFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickCreatedFunction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

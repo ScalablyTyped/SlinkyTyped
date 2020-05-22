@@ -7,33 +7,34 @@ import scala.scalajs.js.annotation._
 /**
   * @deprecated
   */
-@js.native
 trait MenuShareQQ extends ShareTimelineConfig {
   /**
     * 分享描述
     */
-  var desc: String = js.native
+  var desc: String
 }
 
 object MenuShareQQ {
   @scala.inline
-  def apply(desc: String, link: String, title: String): MenuShareQQ = {
+  def apply(
+    desc: String,
+    link: String,
+    title: String,
+    cancel: () => Unit = null,
+    complete: /* res */ js.UndefOr[js.Any] => Unit = null,
+    fail: /* error */ js.UndefOr[js.Any] => Unit = null,
+    imgUrl: String = null,
+    success: /* res */ js.UndefOr[js.Any] => Unit = null,
+    trigger: () => Unit = null
+  ): MenuShareQQ = {
     val __obj = js.Dynamic.literal(desc = desc.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction0(cancel))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (imgUrl != null) __obj.updateDynamic("imgUrl")(imgUrl.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (trigger != null) __obj.updateDynamic("trigger")(js.Any.fromFunction0(trigger))
     __obj.asInstanceOf[MenuShareQQ]
   }
-  @scala.inline
-  implicit class MenuShareQQOps[Self <: MenuShareQQ] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

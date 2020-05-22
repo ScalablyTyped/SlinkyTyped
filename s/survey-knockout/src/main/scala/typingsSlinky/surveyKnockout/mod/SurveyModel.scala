@@ -2,15 +2,15 @@ package typingsSlinky.surveyKnockout.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.File
-import typingsSlinky.surveyKnockout.anon.Calculations
 import typingsSlinky.surveyKnockout.anon.CanAddRow
+import typingsSlinky.surveyKnockout.anon.IncludeEmpty
 import typingsSlinky.surveyKnockout.surveyKnockoutStrings.autogonext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.surveyKnockout.mod.ISurvey because var conflicts: isLoadingFromJson. Inlined currentPage, pages, getCss, isPageStarted, pageVisibilityChanged, panelVisibilityChanged, questionVisibilityChanged, questionsOrder, questionAdded, panelAdded, questionRemoved, panelRemoved, questionRenamed, validateQuestion, validatePanel, hasVisibleQuestionByValueName, questionCountByValueName, processHtml, getSurveyMarkdownHtml, isDisplayMode, isDesignMode, areInvisibleElementsShowing, isUpdateValueTextOnTyping, requiredText, beforeSettingQuestionErrors, getQuestionTitleTemplate, getUpdatedQuestionTitle, questionStartIndex, questionTitleLocation, questionDescriptionLocation, questionErrorLocation, storeOthersAsComment, maxTextLength, maxOthersLength, clearValueOnDisableItems, uploadFiles, downloadFile, clearFiles, updateChoicesFromServer, updateQuestionCssClasses, updatePanelCssClasses, updatePageCssClasses, afterRenderQuestion, afterRenderQuestionInput, afterRenderPanel, afterRenderPage, getQuestionByValueNameFromArray, matrixRowAdded, matrixBeforeRowAdded, matrixRowRemoved, matrixAllowRemoveRow, matrixCellCreated, matrixAfterCellRender, matrixCellValueChanged, matrixCellValueChanging, matrixCellValidate, dynamicPanelAdded, dynamicPanelRemoved, dynamicPanelItemValueChanged, dragAndDropAllow */ @JSImport("survey-knockout", "SurveyModel")
+- typingsSlinky.surveyKnockout.mod.ISurvey because var conflicts: isLoadingFromJson. Inlined currentPage, pages, getCss, isPageStarted, pageVisibilityChanged, panelVisibilityChanged, questionVisibilityChanged, questionsOrder, questionCreated, questionAdded, panelAdded, questionRemoved, panelRemoved, questionRenamed, validateQuestion, validatePanel, hasVisibleQuestionByValueName, questionCountByValueName, processHtml, getSurveyMarkdownHtml, isDisplayMode, isDesignMode, areInvisibleElementsShowing, areEmptyElementsHidden, isUpdateValueTextOnTyping, state, cancelPreviewByPage, requiredText, beforeSettingQuestionErrors, questionTitlePattern, getUpdatedQuestionTitle, questionStartIndex, questionTitleLocation, questionDescriptionLocation, questionErrorLocation, storeOthersAsComment, maxTextLength, maxOthersLength, clearValueOnDisableItems, uploadFiles, downloadFile, clearFiles, updateChoicesFromServer, updateQuestionCssClasses, updatePanelCssClasses, updatePageCssClasses, afterRenderQuestion, afterRenderQuestionInput, afterRenderPanel, afterRenderPage, getQuestionByValueNameFromArray, matrixRowAdded, matrixBeforeRowAdded, matrixRowRemoved, matrixAllowRemoveRow, matrixCellCreated, matrixAfterCellRender, matrixCellValueChanged, matrixCellValueChanging, matrixCellValidate, dynamicPanelAdded, dynamicPanelRemoved, dynamicPanelItemValueChanged, dragAndDropAllow, scrollElementToTop */ @JSImport("survey-knockout", "SurveyModel")
 @js.native
 class SurveyModel ()
   extends Base
@@ -30,6 +30,7 @@ class SurveyModel ()
     * @see goNextPageAutomatic
     */
   var allowCompleteSurveyAutomatic: Boolean = js.native
+  val areEmptyElementsHidden: Boolean = js.native
   val areInvisibleElementsShowing: Boolean = js.native
   /**
     * Gets or sets a list of calculated values in the survey.
@@ -92,6 +93,7 @@ class SurveyModel ()
     * @see locale
     */
   var completedBeforeHtml: String = js.native
+  val completedCss: String = js.native
   /**
     * Gets or sets the HTML content displayed on the complete page. Use this property to change the default complete page text.
     * @see showCompletedPage
@@ -114,6 +116,12 @@ class SurveyModel ()
     */
   var cookieName: String = js.native
   var css: js.Any = js.native
+  val cssNavigationComplete: String = js.native
+  val cssNavigationEdit: String = js.native
+  val cssNavigationNext: String = js.native
+  val cssNavigationPrev: String = js.native
+  val cssNavigationPreview: String = js.native
+  val cssNavigationStart: String = js.native
   /**
     * Gets or sets the current survey page. If a survey is rendered, then this property returns a page that a user can see/edit.
     */
@@ -136,6 +144,14 @@ class SurveyModel ()
     * @see title
     */
   var description: String = js.native
+  /**
+    *  Gets or sets the 'Edit' button caption.
+    * @see locale
+    * @see showPreviewBeforeComplete
+    * @see previewText
+    * @see cancelPreview
+    */
+  var editText: String = js.native
   /**
     * Returns the text that is displayed when there are no any visible pages and questiona.
     */
@@ -172,6 +188,7 @@ class SurveyModel ()
     * @see state
     */
   val hasCookie: Boolean = js.native
+  val hasLogo: Boolean = js.native
   /**
     * Gets or sets whether to hide all required errors.
     */
@@ -183,6 +200,8 @@ class SurveyModel ()
     * @see mode
     */
   var ignoreValidation: Boolean = js.native
+  val isCancelPreviewButtonVisible: Boolean = js.native
+  val isCompleteButtonVisible: Boolean = js.native
   /**
     * Returns `true`, if the current page contains errors, for example, the required question is empty or a question validation is failed.
     * @see nextPage
@@ -194,8 +213,9 @@ class SurveyModel ()
     */
   val isDesignMode: Boolean = js.native
   /**
-    * Returns `true` if the survey is in display mode.
+    * Returns `true` if the survey is in display mode or in preview mode.
     * @see mode
+    * @see showPreviewBeforeComplete
     */
   val isDisplayMode: Boolean = js.native
   /**
@@ -215,11 +235,15 @@ class SurveyModel ()
     * Gets whether the current page is the last one.
     */
   val isLastPage: Boolean = js.native
+  val isLogoAfter: Boolean = js.native
+  val isLogoBefore: Boolean = js.native
   /**
     * Returns the navigation buttons (i.e., 'Prev', 'Next', or 'Complete') position.
     */
   val isNavigationButtonsShowing: String = js.native
+  val isPreviewButtonVisible: Boolean = js.native
   val isShowPrevButton: Boolean = js.native
+  val isShowPreviewBeforeComplete: Boolean = js.native
   val isShowProgressBarOnBottom: Boolean = js.native
   val isShowProgressBarOnTop: Boolean = js.native
   /**
@@ -250,9 +274,12 @@ class SurveyModel ()
   val locCompletedBeforeHtml: LocalizableString = js.native
   val locCompletedHtml: LocalizableString = js.native
   val locDescription: LocalizableString = js.native
+  val locEditText: LocalizableString = js.native
   val locLoadingHtml: LocalizableString = js.native
+  val locLogo: LocalizableString = js.native
   val locPageNextText: LocalizableString = js.native
   val locPagePrevText: LocalizableString = js.native
+  val locPreviewText: LocalizableString = js.native
   val locQuestionTitleTemplate: LocalizableString = js.native
   val locStartSurveyText: LocalizableString = js.native
   val locTitle: LocalizableString = js.native
@@ -261,6 +288,32 @@ class SurveyModel ()
     * You can set it to 'de' - German, 'fr' - French and so on. The library has built-in localization for several languages. The library has a multi-language support as well.
     */
   var locale: String = js.native
+  /**
+    * Gets or sets a survey logo.
+    * @see title
+    */
+  var logo: String = js.native
+  val logoClassNames: String = js.native
+  /**
+    * The logo fit mode.
+    * @see logo
+    */
+  var logoFit: String = js.native
+  /**
+    * Gets or sets a survey logo height.
+    * @see logo
+    */
+  var logoHeight: Double = js.native
+  /**
+    * Gets or sets a survey logo position.
+    * @see logo
+    */
+  var logoPosition: String = js.native
+  /**
+    * Gets or sets a survey logo width.
+    * @see logo
+    */
+  var logoWidth: Double = js.native
   /**
     * Gets or sets the default maximum length for question comments and others
     *
@@ -312,6 +365,12 @@ class SurveyModel ()
     * @see navigateToUrl
     */
   var navigateToUrlOnCondition: js.Array[UrlConditionItem] = js.native
+  /**
+    * The event is fired right after a page is rendered in DOM. Use it to modify HTML elements.
+    * <br/> `sender` - the survey object that fires the event.
+    * <br/> `options.htmlElement` - an HTML element bound to the survey header object.
+    */
+  var onAfterRenderHeader: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
   /**
     * The event is fired right after a page is rendered in DOM. Use it to modify HTML elements.
     * <br/> `sender` - the survey object that fires the event.
@@ -614,6 +673,7 @@ class SurveyModel ()
     * The event is fired on adding a new row in Matrix Dynamic question.
     * <br/> `sender` - the survey object that fires the event
     * <br/> `options.question` - a matrix question.
+    * <br/> `options.row` - a new added row.
     * @see QuestionMatrixDynamicModel
     * @see QuestionMatrixDynamicModel.visibleRows
     */
@@ -713,8 +773,21 @@ class SurveyModel ()
     * <br/> `options.parentPanel` - a container where a new question is located. It can be a page or panel.
     * <br/> `options.rootPanel` - typically, it is a page.
     * @see Question
+    * @see onQuestionCreated
     */
   var onQuestionAdded: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
+  /**
+    * The event is fired on creating a new question.
+    * Unlike the onQuestionAdded event, this event calls for all question created in survey including inside: a page, panel, matrix cell, dynamic panel and multiple text.
+    * or inside a matrix cell or it can be a text question in multiple text items or inside a panel of a panel dynamic.
+    * You can use this event to set up properties to a question based on it's type for all questions, regardless where they are located, on the page or inside a matrix cell.
+    * Please note: If you want to use this event for questions loaded from JSON then you have to create survey with empty/null JSON parameter, assign the event and call survey.fromJSON(yourJSON) function.
+    * <br/> `sender` - the survey object that fires the event.
+    * <br/> `options.question` - a newly created question object.
+    * @see Question
+    * @see onQuestionAdded
+    */
+  var onQuestionCreated: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
   /**
     * The event is fired on removing a question from survey.
     * <br/> `sender` - the survey object that fires the event.
@@ -723,6 +796,16 @@ class SurveyModel ()
     * @see Question
     */
   var onQuestionRemoved: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
+  /**
+    * Use this event to control scrolling element to top. You can cancel the default behavior by setting options.cancel property to true.
+    * <br/> `sender` - the survey object that fires the event.
+    * <br/> `options.element` - an element that is going to be scrolled on top.
+    * <br/> `options.question` - a question that is going to be scrolled on top. It can be null if options.page is not null.
+    * <br/> `options.page` - a page that is going to be scrolled on top. It can be null if options.question is not null.
+    * <br/> `options.elementId` - the unique element DOM Id.
+    * <br/> `options.cancel` - set this property to true to cancel the default scrolling.
+    */
+  var onScrollingElementToTop: Event[js.Function2[/* sender */ this.type, /* options */ _, _], _] = js.native
   /**
     * The event fires when it gets response from the [dxsurvey.com](http://www.dxsurvey.com) service on saving survey results. Use it to find out if the results have been saved successfully.
     * <br/> `sender` - the survey object that fires the event.
@@ -891,6 +974,14 @@ class SurveyModel ()
   val pages: js.Array[IPage | PageModel] = js.native
   val platformName: String = js.native
   /**
+    *  Gets or sets the 'Preview' button caption.
+    * @see locale
+    * @see showPreviewBeforeComplete
+    * @see editText
+    * @see showPreview
+    */
+  var previewText: String = js.native
+  /**
     * Returns the HTML content, that is shown to a user that had completed the survey before.
     * @see completedHtml
     * @see cookieName
@@ -943,6 +1034,7 @@ class SurveyModel ()
   var questionErrorLocation: String = js.native
   /**
     * Gets or sets the first question index. The first question index is '1' by default. You may start it from '100' or from 'A', by setting '100' or 'A' to this property.
+    * You can set the start index to "(1)" or "# A)" or "a)" to render question number as (1), # A) and a) accordingly.
     * @see Question.title
     * @see requiredText
     */
@@ -960,8 +1052,17 @@ class SurveyModel ()
     */
   var questionTitleLocation: String = js.native
   /**
-    * Gets or sets a question title template.
+    * Set the pattern for question title. Default is "numTitleRequire", 1. What is your name? *,
+    * You can set it to numRequireTitle: 1. * What is your name?
+    * You can set it to requireNumTitle: * 1. What is your name?
+    * You can set it to numTitle (remove require symbol completely): 1. What is your name?
     * @see QuestionModel.title
+    */
+  var questionTitlePattern: String = js.native
+  /**
+    * Gets or sets a question title template. Obsolete, please use questionTitlePattern
+    * @see QuestionModel.title
+    * @see questionTitlePattern
     */
   var questionTitleTemplate: String = js.native
   /**
@@ -989,6 +1090,7 @@ class SurveyModel ()
     * @see Question.title
     */
   var requiredText: String = js.native
+  var runningPages: js.Any = js.native
   /**
     * Gets or sets whether to save survey results on completing every page. If the property value is set to `true`, the `onPartialSend` event is fired.
     * @see onPartialSend
@@ -1028,6 +1130,10 @@ class SurveyModel ()
     * @see showNavigationButtons
     */
   var showPrevButton: Boolean = js.native
+  /**
+    * Set this property to "showAllQuestions" or "showAnsweredQuestions" to preview results to a user before he/she completes the survey.
+    */
+  var showPreviewBeforeComplete: String = js.native
   /**
     * Gets or sets the survey progress bar position.
     *
@@ -1181,6 +1287,7 @@ class SurveyModel ()
     * @see addNewPage
     */
   def addPage(page: PageModel): Unit = js.native
+  def afterRenderHeader(htmlElement: js.Any): Unit = js.native
   def afterRenderPage(htmlElement: js.Any): js.Any = js.native
   @JSName("afterRenderPage")
   def afterRenderPage_Unit(htmlElement: js.Any): Unit = js.native
@@ -1195,6 +1302,16 @@ class SurveyModel ()
   def afterRenderQuestion_Unit(question: IQuestion, htmlElement: js.Any): Unit = js.native
   /* protected */ def afterRenderSurvey(htmlElement: js.Any): Unit = js.native
   def beforeSettingQuestionErrors(question: IQuestion, errors: js.Array[SurveyError]): Unit = js.native
+  /**
+    * Canel preview and go back to the "running" state.
+    * @param curPage - a new current page. If the parameter is underfined then the last page becomes current.
+    * @see showPreviewBeforeComplete
+    * @see showPreview
+    * @see state
+    */
+  def cancelPreview(): Unit = js.native
+  def cancelPreview(curPage: js.Any): Unit = js.native
+  def cancelPreviewByPage(panel: IPanel): js.Any = js.native
   /**
     * Clears the survey data and state. If the survey has a `completed` state, it will get a `running` state.
     * @param clearData clear the data
@@ -1248,6 +1365,8 @@ class SurveyModel ()
     * @see doComplete
     */
   def completeLastPage(): Boolean = js.native
+  /* CompleteClass */
+  override def copyTriggerValue(name: String, fromName: String): js.Any = js.native
   /* protected */ def createNewPage(name: String): PageModel = js.native
   /* protected */ def createSurveyService(): dxSurveyService = js.native
   /* protected */ def currentPageChanged(newValue: PageModel, oldValue: PageModel): Unit = js.native
@@ -1260,6 +1379,10 @@ class SurveyModel ()
     */
   def deleteCookie(): Unit = js.native
   def deleteDataValueCore(valuesHash: js.Any, key: String): Unit = js.native
+  /**
+    * Use this method to dispose survey model properly.
+    */
+  def dispose(): Unit = js.native
   /**
     * Completes the survey.
     *
@@ -1321,6 +1444,10 @@ class SurveyModel ()
     * Sets the input focus to the first question with the input field.
     */
   def focusFirstQuestion(): Unit = js.native
+  /* CompleteClass */
+  override def focusQuestion(name: String): Boolean = js.native
+  /* CompleteClass */
+  override def geSurveyData(): ISurveyData = js.native
   /**
     * Returns a list of all survey's panels.
     */
@@ -1331,9 +1458,9 @@ class SurveyModel ()
     * Returns a list of all questions in a survey.
     * @param visibleOnly set it `true`, if you want to get only visible questions
     */
-  def getAllQuestions(): js.Array[IQuestion] = js.native
-  def getAllQuestions(visibleOnly: Boolean): js.Array[IQuestion] = js.native
-  def getAllQuestions(visibleOnly: Boolean, includingDesignTime: Boolean): js.Array[IQuestion] = js.native
+  def getAllQuestions(): js.Array[Question] = js.native
+  def getAllQuestions(visibleOnly: Boolean): js.Array[Question] = js.native
+  def getAllQuestions(visibleOnly: Boolean, includingDesignTime: Boolean): js.Array[Question] = js.native
   /**
     * Returns an amount of corrected quiz answers.
     */
@@ -1341,13 +1468,21 @@ class SurveyModel ()
   def getCorrectedAnswers(): Double = js.native
   def getCss(): js.Any = js.native
   def getDataValueCore(valuesHash: js.Any, key: String): js.Any = js.native
+  /* CompleteClass */
+  override def getErrorCustomText(text: String, error: SurveyError): String = js.native
   /**
     * Returns an amount of incorrect quiz answers.
     */
   def getInCorrectedAnswerCount(): Double = js.native
   def getInCorrectedAnswers(): Double = js.native
   def getLocString(str: String): js.Any = js.native
+  /* CompleteClass */
+  override def getLocale(): String = js.native
+  /* CompleteClass */
+  override def getMarkdownHtml(text: String): String = js.native
   def getNavigateToUrl(): String = js.native
+  /* CompleteClass */
+  override def getObjects(pages: js.Array[String], questions: js.Array[String]): js.Array[_] = js.native
   def getPage(index: Double): PageModel = js.native
   /**
     * Returns a page on which an element (question or panel) is placed.
@@ -1385,7 +1520,9 @@ class SurveyModel ()
     * Set `options.includeEmpty` to `false` if you want to skip empty answers.
     */
   def getPlainData(): js.Array[_] = js.native
-  def getPlainData(options: Calculations): js.Array[_] = js.native
+  def getPlainData(options: IncludeEmpty): js.Array[_] = js.native
+  /* CompleteClass */
+  override def getProcessedText(text: String): String = js.native
   /**
     * Returns the progress that a user made while going through the survey.
     */
@@ -1408,12 +1545,7 @@ class SurveyModel ()
   def getQuestionByValueName(valueName: String): IQuestion = js.native
   def getQuestionByValueName(valueName: String, caseInsensitive: Boolean): IQuestion = js.native
   def getQuestionByValueNameFromArray(valueName: String, name: String, index: Double): IQuestion = js.native
-  /**
-    * Returns a question title template.
-    * @see questionTitleTemplate
-    * @see QuestionModel.title
-    */
-  def getQuestionTitleTemplate(): String = js.native
+  def getQuestionTitlePatternOptions(): js.Array[_] = js.native
   /**
     * Gets a list of questions by their names.
     * @param names an array of question names
@@ -1438,7 +1570,11 @@ class SurveyModel ()
     * @see onGetResult
     */
   def getResult(resultId: String, name: String): Unit = js.native
+  /* CompleteClass */
+  override def getSurvey(): ISurvey = js.native
   def getSurveyMarkdownHtml(element: Base, text: String): String = js.native
+  /* CompleteClass */
+  override def getTextProcessor(): ITextProcessor = js.native
   /* protected */ def getUnbindValue(value: js.Any): js.Any = js.native
   def getUpdatedQuestionTitle(question: IQuestion, title: String): String = js.native
   /**
@@ -1482,9 +1618,9 @@ class SurveyModel ()
   def matrixCellValueChanging(question: IQuestion, options: js.Any): js.Any = js.native
   @JSName("matrixCellValueChanging")
   def matrixCellValueChanging_Unit(question: IQuestion, options: js.Any): Unit = js.native
-  def matrixRowAdded(question: IQuestion): js.Any = js.native
+  def matrixRowAdded(question: IQuestion, row: js.Any): js.Any = js.native
   @JSName("matrixRowAdded")
-  def matrixRowAdded_Unit(question: IQuestion): Unit = js.native
+  def matrixRowAdded_Unit(question: IQuestion, row: js.Any): Unit = js.native
   def matrixRowRemoved(question: IQuestion, rowIndex: Double, row: js.Any): js.Any = js.native
   @JSName("matrixRowRemoved")
   def matrixRowRemoved_Unit(question: IQuestion, rowIndex: Double, row: js.Any): Unit = js.native
@@ -1528,10 +1664,15 @@ class SurveyModel ()
     */
   def prevPage(): Boolean = js.native
   def processHtml(html: String): String = js.native
+  /* CompleteClass */
+  override def processText(text: String, returnDisplayValue: Boolean): String = js.native
+  /* CompleteClass */
+  override def processTextEx(text: String, returnDisplayValue: Boolean, doEncoding: Boolean): js.Any = js.native
   def questionAdded(question: IQuestion, index: Double, parentPanel: js.Any, rootPanel: js.Any): js.Any = js.native
   @JSName("questionAdded")
   def questionAdded_Unit(question: IQuestion, index: Double, parentPanel: js.Any, rootPanel: js.Any): Unit = js.native
   def questionCountByValueName(valueName: String): Double = js.native
+  def questionCreated(question: IQuestion): js.Any = js.native
   /* protected */ def questionOnValueChanging(valueName: String, newValue: js.Any): js.Any = js.native
   def questionRemoved(question: IQuestion): js.Any = js.native
   @JSName("questionRemoved")
@@ -1555,6 +1696,7 @@ class SurveyModel ()
     * @param expression
     */
   def runExpression(expression: String): js.Any = js.native
+  def scrollElementToTop(element: ISurveyElement, question: IQuestion, page: IPage, id: String): js.Any = js.native
   def scrollToTopOnPageChange(): Unit = js.native
   /**
     * Sends a survey result to the [dxsurvey.com](http://www.dxsurvey.com) service.
@@ -1575,6 +1717,8 @@ class SurveyModel ()
     * @see getComment
     */
   def setComment(name: String, newValue: String): Unit = js.native
+  /* CompleteClass */
+  override def setCompleted(): js.Any = js.native
   /* protected */ def setCompletedState(value: String, text: String): Unit = js.native
   /**
     * Set the cookie with `cookieName` in user's browser. It is done automatically on survey complete if the `cookieName` property value is not empty.
@@ -1590,6 +1734,8 @@ class SurveyModel ()
     */
   def setDesignMode(value: Boolean): Unit = js.native
   def setJsonObject(jsonObj: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def setTriggerValue(name: String, value: js.Any, isVariable: Boolean): js.Any = js.native
   /**
     * Sets a question value (answer). It runs all triggers and conditions (`visibleIf` properties).
     *
@@ -1603,6 +1749,13 @@ class SurveyModel ()
     * @see goNextPageAutomatic
     */
   def setValue(name: String, newQuestionValue: js.Any): Unit = js.native
+  /**
+    * Show preview for the survey. Go to the "preview" state
+    * @see showPreviewBeforeComplete
+    * @see cancelPreview
+    * @see state
+    */
+  def showPreview(): Boolean = js.native
   /**
     * Starts the survey. Changes the survey mode from "starting" to "running". Call this function if your survey has a start page, otherwise this function does nothing.
     * @see firstPageIsStarted
@@ -1624,6 +1777,7 @@ class SurveyModel ()
   /* protected */ def tryGoNextPageAutomatic(name: String): Unit = js.native
   def updateChoicesFromServer(question: IQuestion, choices: js.Array[_ | ItemValue], serverResult: js.Any): js.Array[ItemValue] = js.native
   /* protected */ def updateCustomWidgets(page: PageModel): Unit = js.native
+  /* protected */ def updateElementCss(): Unit = js.native
   def updatePageCssClasses(page: IPage, cssClasses: js.Any): Unit = js.native
   def updatePageCssClasses(panel: IPanel, cssClasses: js.Any): js.Any = js.native
   def updatePanelCssClasses(panel: IPanel, cssClasses: js.Any): js.Any = js.native
@@ -1634,6 +1788,7 @@ class SurveyModel ()
   def updateQuestionCssClasses_Unit(question: IQuestion, cssClasses: js.Any): Unit = js.native
   /* protected */ def updateQuestionValue(valueName: String, newValue: js.Any): Unit = js.native
   def uploadFiles(
+    question: IQuestion,
     name: String,
     files: js.Array[File],
     uploadingCallback: js.Function2[/* status */ String, /* data */ js.Any, _]
@@ -1645,6 +1800,7 @@ class SurveyModel ()
   ): Unit = js.native
   /**
     * Uploads a file to server.
+    * @param question a file question object
     * @param name a question name
     * @param file an uploaded file
     * @param storeDataAsText set it to `true` to encode file content into the survey results
@@ -1652,6 +1808,7 @@ class SurveyModel ()
     */
   @JSName("uploadFiles")
   def uploadFiles_Unit(
+    question: IQuestion,
     name: String,
     files: js.Array[File],
     uploadingCallback: js.Function2[/* status */ String, /* data */ js.Any, _]

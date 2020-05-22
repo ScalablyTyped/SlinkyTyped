@@ -18,19 +18,5 @@ object EntityRecognizerEntityList {
     val __obj = js.Dynamic.literal(S3Uri = S3Uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityRecognizerEntityList]
   }
-  @scala.inline
-  implicit class EntityRecognizerEntityListOps[Self <: EntityRecognizerEntityList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3Uri(value: S3Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

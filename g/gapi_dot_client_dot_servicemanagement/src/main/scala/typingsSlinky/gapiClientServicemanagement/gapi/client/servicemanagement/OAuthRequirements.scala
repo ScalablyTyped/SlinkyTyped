@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OAuthRequirements extends js.Object {
   /**
     * The list of publicly documented OAuth scopes that are allowed access. An
@@ -15,34 +14,15 @@ trait OAuthRequirements extends js.Object {
     * canonical_scopes: https://www.googleapis.com/auth/calendar,
     * https://www.googleapis.com/auth/calendar.read
     */
-  var canonicalScopes: js.UndefOr[String] = js.native
+  var canonicalScopes: js.UndefOr[String] = js.undefined
 }
 
 object OAuthRequirements {
   @scala.inline
-  def apply(): OAuthRequirements = {
+  def apply(canonicalScopes: String = null): OAuthRequirements = {
     val __obj = js.Dynamic.literal()
+    if (canonicalScopes != null) __obj.updateDynamic("canonicalScopes")(canonicalScopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuthRequirements]
   }
-  @scala.inline
-  implicit class OAuthRequirementsOps[Self <: OAuthRequirements] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanonicalScopes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canonicalScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanonicalScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canonicalScopes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

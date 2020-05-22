@@ -83,149 +83,32 @@ trait SchemaNetworkPeering extends js.Object {
 
 object SchemaNetworkPeering {
   @scala.inline
-  def apply(): SchemaNetworkPeering = {
+  def apply(
+    advertisePeerSubnetsViaRouters: js.UndefOr[Boolean] = js.undefined,
+    autoCreateRoutes: js.UndefOr[Boolean] = js.undefined,
+    exchangeSubnetRoutes: js.UndefOr[Boolean] = js.undefined,
+    exportCustomRoutes: js.UndefOr[Boolean] = js.undefined,
+    exportSubnetRoutesWithPublicIp: js.UndefOr[Boolean] = js.undefined,
+    importCustomRoutes: js.UndefOr[Boolean] = js.undefined,
+    importSubnetRoutesWithPublicIp: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    network: String = null,
+    state: String = null,
+    stateDetails: String = null
+  ): SchemaNetworkPeering = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(advertisePeerSubnetsViaRouters)) __obj.updateDynamic("advertisePeerSubnetsViaRouters")(advertisePeerSubnetsViaRouters.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoCreateRoutes)) __obj.updateDynamic("autoCreateRoutes")(autoCreateRoutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exchangeSubnetRoutes)) __obj.updateDynamic("exchangeSubnetRoutes")(exchangeSubnetRoutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exportCustomRoutes)) __obj.updateDynamic("exportCustomRoutes")(exportCustomRoutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exportSubnetRoutesWithPublicIp)) __obj.updateDynamic("exportSubnetRoutesWithPublicIp")(exportSubnetRoutesWithPublicIp.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(importCustomRoutes)) __obj.updateDynamic("importCustomRoutes")(importCustomRoutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(importSubnetRoutesWithPublicIp)) __obj.updateDynamic("importSubnetRoutesWithPublicIp")(importSubnetRoutesWithPublicIp.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (network != null) __obj.updateDynamic("network")(network.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (stateDetails != null) __obj.updateDynamic("stateDetails")(stateDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkPeering]
   }
-  @scala.inline
-  implicit class SchemaNetworkPeeringOps[Self <: SchemaNetworkPeering] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertisePeerSubnetsViaRouters(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisePeerSubnetsViaRouters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertisePeerSubnetsViaRouters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisePeerSubnetsViaRouters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoCreateRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreateRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCreateRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCreateRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExchangeSubnetRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchangeSubnetRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExchangeSubnetRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exchangeSubnetRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportCustomRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportCustomRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportCustomRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportCustomRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExportSubnetRoutesWithPublicIp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportSubnetRoutesWithPublicIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportSubnetRoutesWithPublicIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportSubnetRoutesWithPublicIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportCustomRoutes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importCustomRoutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportCustomRoutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importCustomRoutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportSubnetRoutesWithPublicIp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importSubnetRoutesWithPublicIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportSubnetRoutesWithPublicIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importSubnetRoutesWithPublicIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateDetails(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

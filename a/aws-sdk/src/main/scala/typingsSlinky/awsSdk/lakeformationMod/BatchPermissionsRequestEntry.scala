@@ -30,71 +30,19 @@ trait BatchPermissionsRequestEntry extends js.Object {
 
 object BatchPermissionsRequestEntry {
   @scala.inline
-  def apply(Id: Identifier): BatchPermissionsRequestEntry = {
+  def apply(
+    Id: Identifier,
+    Permissions: PermissionList = null,
+    PermissionsWithGrantOption: PermissionList = null,
+    Principal: DataLakePrincipal = null,
+    Resource: Resource = null
+  ): BatchPermissionsRequestEntry = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
+    if (Permissions != null) __obj.updateDynamic("Permissions")(Permissions.asInstanceOf[js.Any])
+    if (PermissionsWithGrantOption != null) __obj.updateDynamic("PermissionsWithGrantOption")(PermissionsWithGrantOption.asInstanceOf[js.Any])
+    if (Principal != null) __obj.updateDynamic("Principal")(Principal.asInstanceOf[js.Any])
+    if (Resource != null) __obj.updateDynamic("Resource")(Resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchPermissionsRequestEntry]
   }
-  @scala.inline
-  implicit class BatchPermissionsRequestEntryOps[Self <: BatchPermissionsRequestEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermissions(value: PermissionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Permissions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionsWithGrantOption(value: PermissionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsWithGrantOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionsWithGrantOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsWithGrantOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrincipal(value: DataLakePrincipal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Principal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Principal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: Resource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

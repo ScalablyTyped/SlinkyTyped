@@ -4,57 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateVersionData extends js.Object {
-  var attributes: js.UndefOr[CreateStorageDataAttributes] = js.native
-  var relationships: js.UndefOr[CreateVersionDataRelationships] = js.native
-  var `type`: String = js.native
+  var attributes: js.UndefOr[CreateStorageDataAttributes] = js.undefined
+  var relationships: js.UndefOr[CreateVersionDataRelationships] = js.undefined
+  var `type`: String
 }
 
 object CreateVersionData {
   @scala.inline
-  def apply(`type`: String): CreateVersionData = {
+  def apply(
+    `type`: String,
+    attributes: CreateStorageDataAttributes = null,
+    relationships: CreateVersionDataRelationships = null
+  ): CreateVersionData = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (relationships != null) __obj.updateDynamic("relationships")(relationships.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVersionData]
   }
-  @scala.inline
-  implicit class CreateVersionDataOps[Self <: CreateVersionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: CreateStorageDataAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelationships(value: CreateVersionDataRelationships): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationships")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelationships: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relationships")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.transducersJs.mod
 
+import typingsSlinky.transducersJs.transducersJsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class ReducedCls[T] protected () extends Reduced[T] {
   def this(value: T) = this()
+  /* CompleteClass */
+  @JSName("@@transducer/reduced")
+  override var `@@transducerSlashreduced`: `true` = js.native
+  /* CompleteClass */
+  @JSName("@@transducer/value")
+  override var `@@transducerSlashvalue`: T = js.native
 }
 

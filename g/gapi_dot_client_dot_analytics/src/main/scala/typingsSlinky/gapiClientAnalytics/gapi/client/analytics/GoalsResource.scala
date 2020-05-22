@@ -8,18 +8,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoalsResource extends js.Object {
   /** Gets a goal to which the user has access. */
-  def get(request: GoalId): Request[Goal] = js.native
+  def get(request: GoalId): Request[Goal]
   /** Create a new goal. */
-  def insert(request: ProfileId): Request[Goal] = js.native
+  def insert(request: ProfileId): Request[Goal]
   /** Lists goals to which the user has access. */
-  def list(request: Startindex): Request[Goals] = js.native
+  def list(request: Startindex): Request[Goals]
   /** Updates an existing goal. This method supports patch semantics. */
-  def patch(request: GoalId): Request[Goal] = js.native
+  def patch(request: GoalId): Request[Goal]
   /** Updates an existing goal. */
-  def update(request: GoalId): Request[Goal] = js.native
+  def update(request: GoalId): Request[Goal]
 }
 
 object GoalsResource {
@@ -34,43 +33,5 @@ object GoalsResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[GoalsResource]
   }
-  @scala.inline
-  implicit class GoalsResourceOps[Self <: GoalsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: GoalId => Request[Goal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: ProfileId => Request[Goal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Startindex => Request[Goals]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: GoalId => Request[Goal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: GoalId => Request[Goal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -192,6 +192,11 @@ object pointsCloudSystemMod extends js.Object {
     def computeParticleTexture: Boolean = js.native
     def computeParticleTexture(`val`: Boolean): js.Any = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * This function does nothing. It may be overwritten to set all the particle first values.
       * The PCS doesn't call this function, you may have to call it by your own.
       * doc :

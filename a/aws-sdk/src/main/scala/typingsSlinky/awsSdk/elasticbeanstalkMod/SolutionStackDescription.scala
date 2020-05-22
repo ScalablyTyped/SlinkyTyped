@@ -18,41 +18,11 @@ trait SolutionStackDescription extends js.Object {
 
 object SolutionStackDescription {
   @scala.inline
-  def apply(): SolutionStackDescription = {
+  def apply(PermittedFileTypes: SolutionStackFileTypeList = null, SolutionStackName: SolutionStackName = null): SolutionStackDescription = {
     val __obj = js.Dynamic.literal()
+    if (PermittedFileTypes != null) __obj.updateDynamic("PermittedFileTypes")(PermittedFileTypes.asInstanceOf[js.Any])
+    if (SolutionStackName != null) __obj.updateDynamic("SolutionStackName")(SolutionStackName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SolutionStackDescription]
   }
-  @scala.inline
-  implicit class SolutionStackDescriptionOps[Self <: SolutionStackDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermittedFileTypes(value: SolutionStackFileTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermittedFileTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermittedFileTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermittedFileTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSolutionStackName(value: SolutionStackName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionStackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSolutionStackName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SolutionStackName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

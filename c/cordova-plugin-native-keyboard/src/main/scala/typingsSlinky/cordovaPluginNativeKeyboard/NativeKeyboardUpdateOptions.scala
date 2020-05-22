@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NativeKeyboardUpdateOptions extends js.Object {
   /**
     * Position the cursor anywhere in the text range. Defaults to the end of the text.
     */
-  var caretIndex: js.UndefOr[Double] = js.native
+  var caretIndex: js.UndefOr[Double] = js.undefined
   /**
     * If false or omitted no changes to the keyboard state are made.
     */
-  var showKeyboard: js.UndefOr[Boolean] = js.native
+  var showKeyboard: js.UndefOr[Boolean] = js.undefined
   /**
     * Replace the messenger's text by this. The current text remains if omitted.
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object NativeKeyboardUpdateOptions {
   @scala.inline
-  def apply(): NativeKeyboardUpdateOptions = {
+  def apply(
+    caretIndex: js.UndefOr[Double] = js.undefined,
+    showKeyboard: js.UndefOr[Boolean] = js.undefined,
+    text: String = null
+  ): NativeKeyboardUpdateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(caretIndex)) __obj.updateDynamic("caretIndex")(caretIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showKeyboard)) __obj.updateDynamic("showKeyboard")(showKeyboard.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[NativeKeyboardUpdateOptions]
   }
-  @scala.inline
-  implicit class NativeKeyboardUpdateOptionsOps[Self <: NativeKeyboardUpdateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaretIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caretIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaretIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caretIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowKeyboard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showKeyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showKeyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait renderersRenderer extends js.Object
 
-object renderersRenderer {
-  @scala.inline
-  implicit def apply(value: HeatmapRenderer): renderersRenderer = value.asInstanceOf[renderersRenderer]
-  @scala.inline
-  implicit def apply(value: RendererWithVisualVariables): renderersRenderer = value.asInstanceOf[renderersRenderer]
-}
-

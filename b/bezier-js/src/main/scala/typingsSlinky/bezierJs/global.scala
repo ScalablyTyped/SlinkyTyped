@@ -50,6 +50,22 @@ object global extends js.Object {
     class PolyBezier protected ()
       extends typingsSlinky.bezierJs.BezierJs.PolyBezier {
       def this(curves: js.Array[typingsSlinky.bezierJs.BezierJs.Bezier]) = this()
+      /* CompleteClass */
+      override var _3d: js.Any = js.native
+      /* CompleteClass */
+      override var curves: js.Array[typingsSlinky.bezierJs.BezierJs.Bezier] = js.native
+      /* CompleteClass */
+      override var points: js.Array[Point] = js.native
+      /* CompleteClass */
+      override def addCurve(curve: typingsSlinky.bezierJs.BezierJs.Bezier): Unit = js.native
+      /* CompleteClass */
+      override def bbox(): BBox = js.native
+      /* CompleteClass */
+      override def curve(idx: Double): typingsSlinky.bezierJs.BezierJs.Bezier = js.native
+      /* CompleteClass */
+      override def length(): Double = js.native
+      /* CompleteClass */
+      override def offset(d: Double): typingsSlinky.bezierJs.BezierJs.PolyBezier = js.native
     }
     
     /* static members */

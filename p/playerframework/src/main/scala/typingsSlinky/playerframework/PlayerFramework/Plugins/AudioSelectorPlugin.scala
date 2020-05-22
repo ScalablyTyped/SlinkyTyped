@@ -8,22 +8,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AudioSelectorPlugin extends PluginBase {
   /**
-  			* Not available in phone.
-  			**/
-  var alignment: String = js.native
+    * Not available in phone.
+    **/
+  var alignment: String
   /**
-  			* Not available in phone.
-  			**/
-  var anchor: HTMLElement = js.native
+    * Not available in phone.
+    **/
+  var anchor: HTMLElement
   /**
-  			* Not available in phone.
-  			**/
-  var placement: String = js.native
-  def hide(): Unit = js.native
-  def show(): Unit = js.native
+    * Not available in phone.
+    **/
+  var placement: String
+  def hide(): Unit
+  def show(): Unit
 }
 
 object AudioSelectorPlugin {
@@ -46,43 +45,5 @@ object AudioSelectorPlugin {
     val __obj = js.Dynamic.literal(alignment = alignment.asInstanceOf[js.Any], anchor = anchor.asInstanceOf[js.Any], currentMediaSource = currentMediaSource.asInstanceOf[js.Any], hide = js.Any.fromFunction0(hide), isActive = isActive.asInstanceOf[js.Any], isEnabled = isEnabled.asInstanceOf[js.Any], isLoaded = isLoaded.asInstanceOf[js.Any], load = js.Any.fromFunction0(load), mediaPlayer = mediaPlayer.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], show = js.Any.fromFunction0(show), unload = js.Any.fromFunction0(unload), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[AudioSelectorPlugin]
   }
-  @scala.inline
-  implicit class AudioSelectorPluginOps[Self <: AudioSelectorPlugin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchor(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPlacement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

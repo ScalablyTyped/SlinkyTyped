@@ -5,95 +5,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Positions extends js.Object {
-  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.native
-  var extrudedHeight: js.UndefOr[Double] = js.native
-  var granularity: js.UndefOr[Double] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var perPositionHeight: js.UndefOr[Boolean] = js.native
-  var positions: js.Array[Cartesian3] = js.native
+  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.undefined
+  var extrudedHeight: js.UndefOr[Double] = js.undefined
+  var granularity: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var perPositionHeight: js.UndefOr[Boolean] = js.undefined
+  var positions: js.Array[Cartesian3]
 }
 
 object Positions {
   @scala.inline
-  def apply(positions: js.Array[Cartesian3]): Positions = {
+  def apply(
+    positions: js.Array[Cartesian3],
+    ellipsoid: typingsSlinky.cesium.mod.Ellipsoid = null,
+    extrudedHeight: js.UndefOr[Double] = js.undefined,
+    granularity: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    perPositionHeight: js.UndefOr[Boolean] = js.undefined
+  ): Positions = {
     val __obj = js.Dynamic.literal(positions = positions.asInstanceOf[js.Any])
+    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
+    if (!js.isUndefined(extrudedHeight)) __obj.updateDynamic("extrudedHeight")(extrudedHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(granularity)) __obj.updateDynamic("granularity")(granularity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(perPositionHeight)) __obj.updateDynamic("perPositionHeight")(perPositionHeight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Positions]
   }
-  @scala.inline
-  implicit class PositionsOps[Self <: Positions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPositions(value: js.Array[Cartesian3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEllipsoid(value: typingsSlinky.cesium.mod.Ellipsoid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEllipsoid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtrudedHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtrudedHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGranularity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGranularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerPositionHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerPositionHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

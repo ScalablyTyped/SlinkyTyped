@@ -8,9 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HistoriesResource extends js.Object {
-  var executions: ExecutionsResource = js.native
+  var executions: ExecutionsResource
   /**
     * Creates a History.
     *
@@ -21,7 +20,7 @@ trait HistoriesResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
     * containing project does not exist
     */
-  def create(request: RequestId): Request[History] = js.native
+  def create(request: RequestId): Request[History]
   /**
     * Gets a History.
     *
@@ -30,7 +29,7 @@ trait HistoriesResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does
     * not exist
     */
-  def get(request: UserIp): Request[History] = js.native
+  def get(request: UserIp): Request[History]
   /**
     * Lists Histories for a given Project.
     *
@@ -42,7 +41,7 @@ trait HistoriesResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does
     * not exist
     */
-  def list(request: FilterByName): Request[ListHistoriesResponse] = js.native
+  def list(request: FilterByName): Request[ListHistoriesResponse]
 }
 
 object HistoriesResource {
@@ -56,37 +55,5 @@ object HistoriesResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), executions = executions.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[HistoriesResource]
   }
-  @scala.inline
-  implicit class HistoriesResourceOps[Self <: HistoriesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: RequestId => Request[History]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExecutions(value: ExecutionsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGet(value: UserIp => Request[History]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: FilterByName => Request[ListHistoriesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

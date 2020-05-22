@@ -26,65 +26,18 @@ trait ThingTypeDefinition extends js.Object {
 
 object ThingTypeDefinition {
   @scala.inline
-  def apply(): ThingTypeDefinition = {
+  def apply(
+    thingTypeArn: ThingTypeArn = null,
+    thingTypeMetadata: ThingTypeMetadata = null,
+    thingTypeName: ThingTypeName = null,
+    thingTypeProperties: ThingTypeProperties = null
+  ): ThingTypeDefinition = {
     val __obj = js.Dynamic.literal()
+    if (thingTypeArn != null) __obj.updateDynamic("thingTypeArn")(thingTypeArn.asInstanceOf[js.Any])
+    if (thingTypeMetadata != null) __obj.updateDynamic("thingTypeMetadata")(thingTypeMetadata.asInstanceOf[js.Any])
+    if (thingTypeName != null) __obj.updateDynamic("thingTypeName")(thingTypeName.asInstanceOf[js.Any])
+    if (thingTypeProperties != null) __obj.updateDynamic("thingTypeProperties")(thingTypeProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThingTypeDefinition]
   }
-  @scala.inline
-  implicit class ThingTypeDefinitionOps[Self <: ThingTypeDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withThingTypeArn(value: ThingTypeArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingTypeArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingTypeMetadata(value: ThingTypeMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingTypeMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingTypeName(value: ThingTypeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingTypeProperties(value: ThingTypeProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingTypeProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingTypeProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

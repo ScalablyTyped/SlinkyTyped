@@ -4,140 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AreaHTMLAttributes[T] extends HTMLAttributes[T] {
-  var alt: js.UndefOr[String] = js.native
-  var coords: js.UndefOr[String] = js.native
-  var download: js.UndefOr[js.Any] = js.native
-  var href: js.UndefOr[String] = js.native
-  var hrefLang: js.UndefOr[String] = js.native
-  var media: js.UndefOr[String] = js.native
-  var rel: js.UndefOr[String] = js.native
-  var shape: js.UndefOr[String] = js.native
-  var target: js.UndefOr[String] = js.native
+  var alt: js.UndefOr[String] = js.undefined
+  var coords: js.UndefOr[String] = js.undefined
+  var download: js.UndefOr[js.Any] = js.undefined
+  var href: js.UndefOr[String] = js.undefined
+  var hrefLang: js.UndefOr[String] = js.undefined
+  var media: js.UndefOr[String] = js.undefined
+  var rel: js.UndefOr[String] = js.undefined
+  var shape: js.UndefOr[String] = js.undefined
+  var target: js.UndefOr[String] = js.undefined
 }
 
 object AreaHTMLAttributes {
   @scala.inline
-  def apply[T](): AreaHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    alt: String = null,
+    coords: String = null,
+    download: js.Any = null,
+    href: String = null,
+    hrefLang: String = null,
+    media: String = null,
+    rel: String = null,
+    shape: String = null,
+    target: String = null
+  ): AreaHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (coords != null) __obj.updateDynamic("coords")(coords.asInstanceOf[js.Any])
+    if (download != null) __obj.updateDynamic("download")(download.asInstanceOf[js.Any])
+    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+    if (hrefLang != null) __obj.updateDynamic("hrefLang")(hrefLang.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (rel != null) __obj.updateDynamic("rel")(rel.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[AreaHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class AreaHTMLAttributesOps[Self[t] <: AreaHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAlt(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlt: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoords(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoords: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownload(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownload: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHref(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHref: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHrefLang(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefLang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHrefLang: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefLang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRel(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRel: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

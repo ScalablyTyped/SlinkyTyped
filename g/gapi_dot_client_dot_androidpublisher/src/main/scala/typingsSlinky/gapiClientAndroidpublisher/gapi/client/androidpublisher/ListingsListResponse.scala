@@ -4,50 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListingsListResponse extends js.Object {
   /** Identifies what kind of resource this is. Value: the fixed string "androidpublisher#listingsListResponse". */
-  var kind: js.UndefOr[String] = js.native
-  var listings: js.UndefOr[js.Array[Listing]] = js.native
+  var kind: js.UndefOr[String] = js.undefined
+  var listings: js.UndefOr[js.Array[Listing]] = js.undefined
 }
 
 object ListingsListResponse {
   @scala.inline
-  def apply(): ListingsListResponse = {
+  def apply(kind: String = null, listings: js.Array[Listing] = null): ListingsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (listings != null) __obj.updateDynamic("listings")(listings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListingsListResponse]
   }
-  @scala.inline
-  implicit class ListingsListResponseOps[Self <: ListingsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListings(value: js.Array[Listing]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

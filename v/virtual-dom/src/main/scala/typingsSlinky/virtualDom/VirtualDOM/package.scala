@@ -12,4 +12,5 @@ package object VirtualDOM {
     /* renderOptions */ typingsSlinky.virtualDom.VirtualDOM.VPatchOptions[T], 
     T
   ]
+  type VChild = (js.Array[java.lang.String | typingsSlinky.virtualDom.VirtualDOM.VTree]) | typingsSlinky.virtualDom.VirtualDOM.VTree | java.lang.String
 }

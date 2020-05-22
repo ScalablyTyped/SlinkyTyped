@@ -24,23 +24,22 @@ import scala.scalajs.js.annotation._
   * A typical calling sequence of transliteration is  1. {@link getAvailableModules()} 2. {@link loadModulesByImplNames()} 3. {@link equals()} or another
   * one is  1. {@link loadModule()} 2. {@link transliterate()}
   */
-@js.native
 trait XTransliteration extends XInterface {
   /**
     * Unique ASCII name to identify a module. This name is used to get its localized name for menus, dialogs etc. The behavior is undefined for {@link
     * TransliterationType.CASCADE} modules.
     */
-  val Name: String = js.native
+  val Name: String
   /**
     * Return the attribute(s) associated with this transliteration object, as defined in {@link TransliterationType} . The value is determined by the
     * transliteration modules. For example, for UPPERCASE_LOWERCASE, a ONE_TO_ONE is returned, for IGNORE_CASE, IGNORE is returned.
     */
-  val Type: Double = js.native
+  val Type: Double
   /**
     * Compare 2 strings as per this transliteration. It translates both strings before comparing them.
     * @returns 1 if the first string is greater than the second string ;  0 if the first string is equal to the second string ;  -1 if the first string is less
     */
-  def compareString(aStr1: String, aStr2: String): Double = js.native
+  def compareString(aStr1: String, aStr2: String): Double
   /**
     * Compare 2 substrings as per this transliteration. It translates both substrings before comparing them.
     * @param aStr1 First string.
@@ -51,7 +50,7 @@ trait XTransliteration extends XInterface {
     * @param nLen2 Length (from offset) of the second substring.
     * @returns 1 if the first substring is greater than the second substring ;  0 if the first substring is equal to the second substring ;  -1 if the first sub
     */
-  def compareSubstring(aStr1: String, nOff1: Double, nLen1: Double, aStr2: String, nOff2: Double, nLen2: Double): Double = js.native
+  def compareSubstring(aStr1: String, nOff1: Double, nLen1: Double, aStr2: String, nOff2: Double, nLen2: Double): Double
   /**
     * Match two substrings and find if they are equivalent as per this transliteration.
     *
@@ -79,27 +78,27 @@ trait XTransliteration extends XInterface {
     nPos2: Double,
     nCount2: Double,
     rMatch2: js.Array[Double]
-  ): Boolean = js.native
+  ): Boolean
   /** @deprecated DeprecatedFor internal use, this method is supported to get the "transliteration", which equals() is based on. */
-  def folding(aInStr: String, nStartPos: Double, nCount: Double, rOffset: js.Array[SeqEquiv[Double]]): String = js.native
+  def folding(aInStr: String, nStartPos: Double, nCount: Double, rOffset: js.Array[SeqEquiv[Double]]): String
   /**
     * List the available transliteration modules for a given locale. It can be filtered based on its type.
     * @param nType A bitmask field of values defined in {@link TransliterationType}
     * @param aLocale The locale for which the modules are requested.
     */
-  def getAvailableModules(aLocale: Locale, nType: Double): SafeArray[String] = js.native
+  def getAvailableModules(aLocale: Locale, nType: Double): SafeArray[String]
   /**
     * Unique ASCII name to identify a module. This name is used to get its localized name for menus, dialogs etc. The behavior is undefined for {@link
     * TransliterationType.CASCADE} modules.
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Return the attribute(s) associated with this transliteration object, as defined in {@link TransliterationType} . The value is determined by the
     * transliteration modules. For example, for UPPERCASE_LOWERCASE, a ONE_TO_ONE is returned, for IGNORE_CASE, IGNORE is returned.
     */
-  def getType(): Double = js.native
+  def getType(): Double
   /** Load instance of predefined module - old style method. */
-  def loadModule(eModType: TransliterationModules, aLocale: Locale): Unit = js.native
+  def loadModule(eModType: TransliterationModules, aLocale: Locale): Unit
   /**
     * Load instance of UNO registered module.
     *
@@ -111,16 +110,16 @@ trait XTransliteration extends XInterface {
     * @param aImplName The module's {implName} under which it is registered with com.sun.star.i18n.Transliteration.l10n.{implName}.
     * @param aLocale The locale for which the module is requested.
     */
-  def loadModuleByImplName(aImplName: String, aLocale: Locale): Unit = js.native
+  def loadModuleByImplName(aImplName: String, aLocale: Locale): Unit
   /** Load a sequence of instances of predefined modules - supersedes method {@link XTransliteration.loadModule()} . */
-  def loadModuleNew(aModType: SeqEquiv[TransliterationModulesNew], aLocale: Locale): Unit = js.native
+  def loadModuleNew(aModType: SeqEquiv[TransliterationModulesNew], aLocale: Locale): Unit
   /**
     * Load a sequence of instances of transliteration modules. Output of one module is fed as input to the next module in the sequence. The object created
     * by this call has {@link TransliterationType} CASCADE and IGNORE types.
     * @param aImplNameList Only IGNORE type modules can be specified.
     * @param aLocale The locale for which the modules are requested.
     */
-  def loadModulesByImplNames(aImplNameList: SeqEquiv[String], aLocale: Locale): Unit = js.native
+  def loadModulesByImplNames(aImplNameList: SeqEquiv[String], aLocale: Locale): Unit
   /**
     * Transliterate a substring. This method can be called if the object doesn't have {@link TransliterationType} IGNORE attribute.
     * @param aInStr The input string.
@@ -128,7 +127,7 @@ trait XTransliteration extends XInterface {
     * @param nCount Number of code points to be transliterated.
     * @param rOffset To find the grapheme of input string corresponding to the grapheme of output string, rOffset provides the offset array whose index is the
     */
-  def transliterate(aInStr: String, nStartPos: Double, nCount: Double, rOffset: js.Array[SeqEquiv[Double]]): String = js.native
+  def transliterate(aInStr: String, nStartPos: Double, nCount: Double, rOffset: js.Array[SeqEquiv[Double]]): String
   /**
     * Transliterate one set of characters to another.
     *
@@ -139,7 +138,7 @@ trait XTransliteration extends XInterface {
     * Use this transliteration to create regular expressions like [a-i]  -  > [A-Ia-i].
     * @returns String sequence containing corresponding transliterated pairs of characters to represent a range.
     */
-  def transliterateRange(aStr1: String, aStr2: String): SafeArray[String] = js.native
+  def transliterateRange(aStr1: String, aStr2: String): SafeArray[String]
 }
 
 object XTransliteration {
@@ -167,105 +166,5 @@ object XTransliteration {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), compareString = js.Any.fromFunction2(compareString), compareSubstring = js.Any.fromFunction6(compareSubstring), equals = js.Any.fromFunction8(equals), folding = js.Any.fromFunction4(folding), getAvailableModules = js.Any.fromFunction2(getAvailableModules), getName = js.Any.fromFunction0(getName), getType = js.Any.fromFunction0(getType), loadModule = js.Any.fromFunction2(loadModule), loadModuleByImplName = js.Any.fromFunction2(loadModuleByImplName), loadModuleNew = js.Any.fromFunction2(loadModuleNew), loadModulesByImplNames = js.Any.fromFunction2(loadModulesByImplNames), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), transliterate = js.Any.fromFunction4(transliterate), transliterateRange = js.Any.fromFunction2(transliterateRange))
     __obj.asInstanceOf[XTransliteration]
   }
-  @scala.inline
-  implicit class XTransliterationOps[Self <: XTransliteration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompareString(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCompareSubstring(value: (String, Double, Double, String, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareSubstring")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withEquals(
-      value: (String, Double, Double, js.Array[Double], String, Double, Double, js.Array[Double]) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction8(value))
-        ret
-    }
-    @scala.inline
-    def withFolding(value: (String, Double, Double, js.Array[SeqEquiv[Double]]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folding")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetAvailableModules(value: (Locale, Double) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableModules")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetType(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLoadModule(value: (TransliterationModules, Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModule")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLoadModuleByImplName(value: (String, Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModuleByImplName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLoadModuleNew(value: (SeqEquiv[TransliterationModulesNew], Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModuleNew")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLoadModulesByImplNames(value: (SeqEquiv[String], Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModulesByImplNames")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTransliterate(value: (String, Double, Double, js.Array[SeqEquiv[Double]]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transliterate")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withTransliterateRange(value: (String, String) => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transliterateRange")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

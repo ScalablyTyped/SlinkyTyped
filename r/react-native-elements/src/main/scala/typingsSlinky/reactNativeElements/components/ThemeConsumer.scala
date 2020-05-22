@@ -18,6 +18,11 @@ object ThemeConsumer {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.ThemeConsumer[js.Any]]
   
   def withProps[T](p: ThemeConsumerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ThemeConsumerProps[T]]))
+  }
   implicit def make[T](companion: ThemeConsumer.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

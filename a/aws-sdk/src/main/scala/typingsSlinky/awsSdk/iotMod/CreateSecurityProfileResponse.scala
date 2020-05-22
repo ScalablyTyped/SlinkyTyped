@@ -18,41 +18,11 @@ trait CreateSecurityProfileResponse extends js.Object {
 
 object CreateSecurityProfileResponse {
   @scala.inline
-  def apply(): CreateSecurityProfileResponse = {
+  def apply(securityProfileArn: SecurityProfileArn = null, securityProfileName: SecurityProfileName = null): CreateSecurityProfileResponse = {
     val __obj = js.Dynamic.literal()
+    if (securityProfileArn != null) __obj.updateDynamic("securityProfileArn")(securityProfileArn.asInstanceOf[js.Any])
+    if (securityProfileName != null) __obj.updateDynamic("securityProfileName")(securityProfileName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSecurityProfileResponse]
   }
-  @scala.inline
-  implicit class CreateSecurityProfileResponseOps[Self <: CreateSecurityProfileResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecurityProfileArn(value: SecurityProfileArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityProfileArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityProfileName(value: SecurityProfileName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

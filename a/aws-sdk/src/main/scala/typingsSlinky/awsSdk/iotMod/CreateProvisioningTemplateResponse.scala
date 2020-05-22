@@ -22,53 +22,16 @@ trait CreateProvisioningTemplateResponse extends js.Object {
 
 object CreateProvisioningTemplateResponse {
   @scala.inline
-  def apply(): CreateProvisioningTemplateResponse = {
+  def apply(
+    defaultVersionId: js.UndefOr[TemplateVersionId] = js.undefined,
+    templateArn: TemplateArn = null,
+    templateName: TemplateName = null
+  ): CreateProvisioningTemplateResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultVersionId)) __obj.updateDynamic("defaultVersionId")(defaultVersionId.get.asInstanceOf[js.Any])
+    if (templateArn != null) __obj.updateDynamic("templateArn")(templateArn.asInstanceOf[js.Any])
+    if (templateName != null) __obj.updateDynamic("templateName")(templateName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProvisioningTemplateResponse]
   }
-  @scala.inline
-  implicit class CreateProvisioningTemplateResponseOps[Self <: CreateProvisioningTemplateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultVersionId(value: TemplateVersionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateArn(value: TemplateArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: TemplateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

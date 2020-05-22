@@ -24,6 +24,7 @@ package object supportMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.supportMod.ClientApiVersions
   type CommunicationBody = java.lang.String
   type CommunicationList = js.Array[typingsSlinky.awsSdk.supportMod.Communication]
+  type Data = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.supportMod.Blob | java.lang.String
   type DisplayId = java.lang.String
   type Double = scala.Double
   type ExpiryTime = java.lang.String
@@ -54,4 +55,10 @@ package object supportMod {
   type TrustedAdvisorCheckRefreshStatusList = js.Array[typingsSlinky.awsSdk.supportMod.TrustedAdvisorCheckRefreshStatus]
   type TrustedAdvisorCheckSummaryList = js.Array[typingsSlinky.awsSdk.supportMod.TrustedAdvisorCheckSummary]
   type TrustedAdvisorResourceDetailList = js.Array[typingsSlinky.awsSdk.supportMod.TrustedAdvisorResourceDetail]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2013-04-15`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.supportMod._apiVersion | java.lang.String
 }

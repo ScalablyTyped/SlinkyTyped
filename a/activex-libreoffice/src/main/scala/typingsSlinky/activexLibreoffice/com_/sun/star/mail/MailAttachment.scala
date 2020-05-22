@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.mail.XMailMessage
   * @since OOo 2.0
   */
-@js.native
 trait MailAttachment extends js.Object {
   /**
     * The actual data which should be attached to a mail message. It is expected that the transferable delivers the data as sequence of bytes. Although a
@@ -18,9 +17,9 @@ trait MailAttachment extends js.Object {
     * of the data is a sequence of bytes.
     * @see com.sun.star.datatransfer.XTransferable
     */
-  var Data: XTransferable = js.native
+  var Data: XTransferable
   /** The name of the attachment as seen by the recipient of the mail message. ReadableName must not be empty. */
-  var ReadableName: String = js.native
+  var ReadableName: String
 }
 
 object MailAttachment {
@@ -29,25 +28,5 @@ object MailAttachment {
     val __obj = js.Dynamic.literal(Data = Data.asInstanceOf[js.Any], ReadableName = ReadableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[MailAttachment]
   }
-  @scala.inline
-  implicit class MailAttachmentOps[Self <: MailAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: XTransferable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

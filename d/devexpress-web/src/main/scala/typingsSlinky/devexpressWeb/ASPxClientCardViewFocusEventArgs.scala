@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the corresponding event.
   */
-@js.native
 trait ASPxClientCardViewFocusEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets whether card focusing has been changed on the server.
     */
-  var isChangedOnServer: Boolean = js.native
+  var isChangedOnServer: Boolean
 }
 
 object ASPxClientCardViewFocusEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientCardViewFocusEventArgs {
     val __obj = js.Dynamic.literal(isChangedOnServer = isChangedOnServer.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientCardViewFocusEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientCardViewFocusEventArgsOps[Self <: ASPxClientCardViewFocusEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsChangedOnServer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isChangedOnServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

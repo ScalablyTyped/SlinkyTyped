@@ -1,31 +1,31 @@
 package typingsSlinky.stripe.mod.orders
 
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
+import typingsSlinky.stripe.mod.IOptionsMetadata
 import typingsSlinky.stripe.mod.cards.ICardSourceCreationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOrderPayOptions extends IDataOptionsWithMetadata {
   /**
     * A fee in cents/pence that will be applied to the order and transferred to the application owner's Stripe account. To use an application
     * fee, the request must be made on behalf of another account, using the Stripe-Account header or OAuth key. For more information, see
     * the application fees documentation.
     */
-  var application_fee: js.UndefOr[Double] = js.native
+  var application_fee: js.UndefOr[Double] = js.undefined
   /**
     * The ID of an existing customer that will be charged in this request.
     *
     * Either customer or source is required
     */
-  var customer: js.UndefOr[String] = js.native
+  var customer: js.UndefOr[String] = js.undefined
   /**
     * The email address of the customer placing the order. If a customer is specified, that customer's email address will be used.
     *
     * Optional, but required if not previously specified.
     */
-  var email: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.undefined
   /**
     * A payment source to be charged, such as a credit card. If you also pass a customer ID, the source must be the ID of a source belonging
     * to the customer. Otherwise, if you do not pass a customer ID, the source you provide must either be a token, like the ones returned
@@ -34,70 +34,29 @@ trait IOrderPayOptions extends IDataOptionsWithMetadata {
     *
     * Either source or customer is required
     */
-  var source: js.UndefOr[String | ICardSourceCreationOptions] = js.native
+  var source: js.UndefOr[String | ICardSourceCreationOptions] = js.undefined
 }
 
 object IOrderPayOptions {
   @scala.inline
-  def apply(): IOrderPayOptions = {
+  def apply(
+    application_fee: js.UndefOr[Double] = js.undefined,
+    customer: String = null,
+    email: String = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    metadata: IOptionsMetadata = null,
+    source: String | ICardSourceCreationOptions = null
+  ): IOrderPayOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(application_fee)) __obj.updateDynamic("application_fee")(application_fee.get.asInstanceOf[js.Any])
+    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOrderPayOptions]
   }
-  @scala.inline
-  implicit class IOrderPayOptionsOps[Self <: IOrderPayOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication_fee(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application_fee")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplication_fee: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application_fee")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String | ICardSourceCreationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

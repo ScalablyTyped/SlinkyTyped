@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Affects extends js.Object {
-  var affects: js.UndefOr[js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]] = js.native
-  var removed: js.UndefOr[js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]] = js.native
+  var affects: js.UndefOr[js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]] = js.undefined
+  var removed: js.UndefOr[js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]] = js.undefined
 }
 
 object Affects {
   @scala.inline
-  def apply(): Affects = {
+  def apply(
+    affects: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query] = null,
+    removed: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query] = null
+  ): Affects = {
     val __obj = js.Dynamic.literal()
+    if (affects != null) __obj.updateDynamic("affects")(affects.asInstanceOf[js.Any])
+    if (removed != null) __obj.updateDynamic("removed")(removed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Affects]
   }
-  @scala.inline
-  implicit class AffectsOps[Self <: Affects] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAffects(value: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAffects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("affects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoved(value: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

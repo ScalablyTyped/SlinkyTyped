@@ -6,18 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2GearJoint extends b2Joint {
   /**
-  		* Get the gear ratio.
-  		* @return Gear ratio.
-  		**/
-  def GetRatio(): Double = js.native
+    * Get the gear ratio.
+    * @return Gear ratio.
+    **/
+  def GetRatio(): Double
   /**
-  		* Set the gear ratio.
-  		* @param force New gear ratio.
-  		**/
-  def SetRatio(ratio: Double): Unit = js.native
+    * Set the gear ratio.
+    * @param force New gear ratio.
+    **/
+  def SetRatio(ratio: Double): Unit
 }
 
 object b2GearJoint {
@@ -40,25 +39,5 @@ object b2GearJoint {
     val __obj = js.Dynamic.literal(GetAnchorA = js.Any.fromFunction0(GetAnchorA), GetAnchorB = js.Any.fromFunction0(GetAnchorB), GetBodyA = js.Any.fromFunction0(GetBodyA), GetBodyB = js.Any.fromFunction0(GetBodyB), GetNext = js.Any.fromFunction0(GetNext), GetRatio = js.Any.fromFunction0(GetRatio), GetReactionForce = js.Any.fromFunction1(GetReactionForce), GetReactionTorque = js.Any.fromFunction1(GetReactionTorque), GetType = js.Any.fromFunction0(GetType), GetUserData = js.Any.fromFunction0(GetUserData), IsActive = js.Any.fromFunction0(IsActive), SetRatio = js.Any.fromFunction1(SetRatio), SetUserData = js.Any.fromFunction1(SetUserData))
     __obj.asInstanceOf[b2GearJoint]
   }
-  @scala.inline
-  implicit class b2GearJointOps[Self <: b2GearJoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetRatio(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRatio")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetRatio(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRatio")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

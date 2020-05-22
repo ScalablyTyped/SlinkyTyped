@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDashboardItemWidgetEventArgs")
 @js.native
 class ASPxClientDashboardItemWidgetEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDashboardItemWidgetEventArgs
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardItemWidgetEventArgs {
+  /**
+    * Gets the component name of the dashboard item for which the event was raised.
+    */
+  /* CompleteClass */
+  override var ItemName: String = js.native
+  /**
+    * Returns an underlying widget corresponding to the current dashboard item.
+    */
+  /* CompleteClass */
+  override def GetWidget(): js.Any = js.native
+}
 

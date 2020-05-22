@@ -50,137 +50,30 @@ trait Resolver extends js.Object {
 
 object Resolver {
   @scala.inline
-  def apply(): Resolver = {
+  def apply(
+    cachingConfig: CachingConfig = null,
+    dataSourceName: ResourceName = null,
+    fieldName: ResourceName = null,
+    kind: ResolverKind = null,
+    pipelineConfig: PipelineConfig = null,
+    requestMappingTemplate: MappingTemplate = null,
+    resolverArn: String = null,
+    responseMappingTemplate: MappingTemplate = null,
+    syncConfig: SyncConfig = null,
+    typeName: ResourceName = null
+  ): Resolver = {
     val __obj = js.Dynamic.literal()
+    if (cachingConfig != null) __obj.updateDynamic("cachingConfig")(cachingConfig.asInstanceOf[js.Any])
+    if (dataSourceName != null) __obj.updateDynamic("dataSourceName")(dataSourceName.asInstanceOf[js.Any])
+    if (fieldName != null) __obj.updateDynamic("fieldName")(fieldName.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (pipelineConfig != null) __obj.updateDynamic("pipelineConfig")(pipelineConfig.asInstanceOf[js.Any])
+    if (requestMappingTemplate != null) __obj.updateDynamic("requestMappingTemplate")(requestMappingTemplate.asInstanceOf[js.Any])
+    if (resolverArn != null) __obj.updateDynamic("resolverArn")(resolverArn.asInstanceOf[js.Any])
+    if (responseMappingTemplate != null) __obj.updateDynamic("responseMappingTemplate")(responseMappingTemplate.asInstanceOf[js.Any])
+    if (syncConfig != null) __obj.updateDynamic("syncConfig")(syncConfig.asInstanceOf[js.Any])
+    if (typeName != null) __obj.updateDynamic("typeName")(typeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Resolver]
   }
-  @scala.inline
-  implicit class ResolverOps[Self <: Resolver] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCachingConfig(value: CachingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCachingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSourceName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: ResolverKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineConfig(value: PipelineConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestMappingTemplate(value: MappingTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMappingTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestMappingTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMappingTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolverArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolverArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolverArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolverArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseMappingTemplate(value: MappingTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMappingTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseMappingTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMappingTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncConfig(value: SyncConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

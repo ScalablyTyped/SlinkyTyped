@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.hostMod
 
+import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
@@ -13,11 +14,14 @@ class SyncHost () extends HostBase {
   var readFileSyncCallback: js.UndefOr[js.Any] = js.native
   var writeFileSyncCallback: js.UndefOr[js.Any] = js.native
   def getSourceFileSync(file: String): js.UndefOr[SourceFile] = js.native
-  def getSourceFileSync(file: String, cancellationToken: CancellationToken): js.UndefOr[SourceFile] = js.native
+  def getSourceFileSync(file: String, cancelable: Cancelable): js.UndefOr[SourceFile] = js.native
+  def getSourceFileSync(file: String, cancelable: CancellationToken): js.UndefOr[SourceFile] = js.native
   def readFileSync(file: String): js.UndefOr[String] = js.native
-  def readFileSync(file: String, cancellationToken: CancellationToken): js.UndefOr[String] = js.native
+  def readFileSync(file: String, cancelable: Cancelable): js.UndefOr[String] = js.native
+  def readFileSync(file: String, cancelable: CancellationToken): js.UndefOr[String] = js.native
   def writeFileSync(file: String, text: String): Unit = js.native
-  def writeFileSync(file: String, text: String, cancellationToken: CancellationToken): Unit = js.native
+  def writeFileSync(file: String, text: String, cancelable: Cancelable): Unit = js.native
+  def writeFileSync(file: String, text: String, cancelable: CancellationToken): Unit = js.native
 }
 
 /* static members */

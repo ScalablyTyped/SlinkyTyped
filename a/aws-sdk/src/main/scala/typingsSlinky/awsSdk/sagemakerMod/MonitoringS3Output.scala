@@ -22,41 +22,14 @@ trait MonitoringS3Output extends js.Object {
 
 object MonitoringS3Output {
   @scala.inline
-  def apply(LocalPath: ProcessingLocalPath, S3Uri: MonitoringS3Uri): MonitoringS3Output = {
+  def apply(
+    LocalPath: ProcessingLocalPath,
+    S3Uri: MonitoringS3Uri,
+    S3UploadMode: ProcessingS3UploadMode = null
+  ): MonitoringS3Output = {
     val __obj = js.Dynamic.literal(LocalPath = LocalPath.asInstanceOf[js.Any], S3Uri = S3Uri.asInstanceOf[js.Any])
+    if (S3UploadMode != null) __obj.updateDynamic("S3UploadMode")(S3UploadMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitoringS3Output]
   }
-  @scala.inline
-  implicit class MonitoringS3OutputOps[Self <: MonitoringS3Output] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocalPath(value: ProcessingLocalPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS3Uri(value: MonitoringS3Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withS3UploadMode(value: ProcessingS3UploadMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3UploadMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3UploadMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3UploadMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

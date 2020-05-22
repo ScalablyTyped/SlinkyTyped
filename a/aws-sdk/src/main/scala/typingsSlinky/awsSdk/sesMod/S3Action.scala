@@ -26,59 +26,17 @@ trait S3Action extends js.Object {
 
 object S3Action {
   @scala.inline
-  def apply(BucketName: S3BucketName): S3Action = {
+  def apply(
+    BucketName: S3BucketName,
+    KmsKeyArn: AmazonResourceName = null,
+    ObjectKeyPrefix: S3KeyPrefix = null,
+    TopicArn: AmazonResourceName = null
+  ): S3Action = {
     val __obj = js.Dynamic.literal(BucketName = BucketName.asInstanceOf[js.Any])
+    if (KmsKeyArn != null) __obj.updateDynamic("KmsKeyArn")(KmsKeyArn.asInstanceOf[js.Any])
+    if (ObjectKeyPrefix != null) __obj.updateDynamic("ObjectKeyPrefix")(ObjectKeyPrefix.asInstanceOf[js.Any])
+    if (TopicArn != null) __obj.updateDynamic("TopicArn")(TopicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Action]
   }
-  @scala.inline
-  implicit class S3ActionOps[Self <: S3Action] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketName(value: S3BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKmsKeyArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKmsKeyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectKeyPrefix(value: S3KeyPrefix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectKeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectKeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectKeyPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

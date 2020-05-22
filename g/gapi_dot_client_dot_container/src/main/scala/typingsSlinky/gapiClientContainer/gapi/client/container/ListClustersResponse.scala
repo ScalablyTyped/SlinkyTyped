@@ -4,57 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListClustersResponse extends js.Object {
   /**
     * A list of clusters in the project in the specified zone, or
     * across all ones.
     */
-  var clusters: js.UndefOr[js.Array[Cluster]] = js.native
+  var clusters: js.UndefOr[js.Array[Cluster]] = js.undefined
   /**
     * If any zones are listed here, the list of clusters returned
     * may be missing those zones.
     */
-  var missingZones: js.UndefOr[js.Array[String]] = js.native
+  var missingZones: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ListClustersResponse {
   @scala.inline
-  def apply(): ListClustersResponse = {
+  def apply(clusters: js.Array[Cluster] = null, missingZones: js.Array[String] = null): ListClustersResponse = {
     val __obj = js.Dynamic.literal()
+    if (clusters != null) __obj.updateDynamic("clusters")(clusters.asInstanceOf[js.Any])
+    if (missingZones != null) __obj.updateDynamic("missingZones")(missingZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListClustersResponse]
   }
-  @scala.inline
-  implicit class ListClustersResponseOps[Self <: ListClustersResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusters(value: js.Array[Cluster]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissingZones(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissingZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingZones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

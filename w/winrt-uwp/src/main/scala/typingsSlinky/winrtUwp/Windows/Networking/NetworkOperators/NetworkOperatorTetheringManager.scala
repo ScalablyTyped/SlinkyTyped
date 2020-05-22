@@ -8,40 +8,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This interface exposes the methods and properties used to control and configure tethering capabilities for a specific network account. */
-@js.native
 trait NetworkOperatorTetheringManager extends js.Object {
   /** Gets the current number of connected clients on the tethering network. */
-  var clientCount: Double = js.native
+  var clientCount: Double
   /** Gets the maximum number of client connections over a tethered network. */
-  var maxClientCount: Double = js.native
+  var maxClientCount: Double
   /** Gets the current operational state of the tethering feature. Possible values are defined by TetheringOperationalState */
-  var tetheringOperationalState: TetheringOperationalState = js.native
+  var tetheringOperationalState: TetheringOperationalState
   /**
     * Use this method to provide tethering network configuration details for the tethering network.
     * @param configuration Provides a network account ID (SSID) and specifies the passphrase used for authentication when establishing a tethered network connection.
     * @return The asynchronous action.
     */
-  def configureAccessPointAsync(configuration: NetworkOperatorTetheringAccessPointConfiguration): IPromiseWithIAsyncAction = js.native
+  def configureAccessPointAsync(configuration: NetworkOperatorTetheringAccessPointConfiguration): IPromiseWithIAsyncAction
   /**
     * Gets the current access point configuration for a network account as defined by a NetworkOperatorTetheringAccessPointConfiguration object.
     * @return Indicates the network account id and specifies the pass-phrase used for authentication when establishing a connection over the tethering network.
     */
-  def getCurrentAccessPointConfiguration(): NetworkOperatorTetheringAccessPointConfiguration = js.native
+  def getCurrentAccessPointConfiguration(): NetworkOperatorTetheringAccessPointConfiguration
   /**
     * Retrieves a list of tethering clients for this NetworkOperatorTetheringManager .
     * @return A list of clients.
     */
-  def getTetheringClients(): IVectorView[NetworkOperatorTetheringClient] = js.native
+  def getTetheringClients(): IVectorView[NetworkOperatorTetheringClient]
   /**
     * Establishes the tethering network.
     * @return The result of the tethering network operation.
     */
-  def startTetheringAsync(): IPromiseWithIAsyncOperation[NetworkOperatorTetheringOperationResult] = js.native
+  def startTetheringAsync(): IPromiseWithIAsyncOperation[NetworkOperatorTetheringOperationResult]
   /**
     * Shuts down the tethering network.
     * @return The result of the tethering network operation.
     */
-  def stopTetheringAsync(): IPromiseWithIAsyncOperation[NetworkOperatorTetheringOperationResult] = js.native
+  def stopTetheringAsync(): IPromiseWithIAsyncOperation[NetworkOperatorTetheringOperationResult]
 }
 
 object NetworkOperatorTetheringManager {
@@ -59,61 +58,5 @@ object NetworkOperatorTetheringManager {
     val __obj = js.Dynamic.literal(clientCount = clientCount.asInstanceOf[js.Any], configureAccessPointAsync = js.Any.fromFunction1(configureAccessPointAsync), getCurrentAccessPointConfiguration = js.Any.fromFunction0(getCurrentAccessPointConfiguration), getTetheringClients = js.Any.fromFunction0(getTetheringClients), maxClientCount = maxClientCount.asInstanceOf[js.Any], startTetheringAsync = js.Any.fromFunction0(startTetheringAsync), stopTetheringAsync = js.Any.fromFunction0(stopTetheringAsync), tetheringOperationalState = tetheringOperationalState.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkOperatorTetheringManager]
   }
-  @scala.inline
-  implicit class NetworkOperatorTetheringManagerOps[Self <: NetworkOperatorTetheringManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfigureAccessPointAsync(value: NetworkOperatorTetheringAccessPointConfiguration => IPromiseWithIAsyncAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configureAccessPointAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentAccessPointConfiguration(value: () => NetworkOperatorTetheringAccessPointConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentAccessPointConfiguration")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTetheringClients(value: () => IVectorView[NetworkOperatorTetheringClient]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTetheringClients")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withMaxClientCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxClientCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTetheringAsync(value: () => IPromiseWithIAsyncOperation[NetworkOperatorTetheringOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTetheringAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStopTetheringAsync(value: () => IPromiseWithIAsyncOperation[NetworkOperatorTetheringOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopTetheringAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTetheringOperationalState(value: TetheringOperationalState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetheringOperationalState")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

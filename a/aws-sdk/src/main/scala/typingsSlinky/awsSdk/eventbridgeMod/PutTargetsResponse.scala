@@ -18,41 +18,14 @@ trait PutTargetsResponse extends js.Object {
 
 object PutTargetsResponse {
   @scala.inline
-  def apply(): PutTargetsResponse = {
+  def apply(
+    FailedEntries: PutTargetsResultEntryList = null,
+    FailedEntryCount: js.UndefOr[Integer] = js.undefined
+  ): PutTargetsResponse = {
     val __obj = js.Dynamic.literal()
+    if (FailedEntries != null) __obj.updateDynamic("FailedEntries")(FailedEntries.asInstanceOf[js.Any])
+    if (!js.isUndefined(FailedEntryCount)) __obj.updateDynamic("FailedEntryCount")(FailedEntryCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutTargetsResponse]
   }
-  @scala.inline
-  implicit class PutTargetsResponseOps[Self <: PutTargetsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedEntries(value: PutTargetsResultEntryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedEntries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedEntryCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedEntryCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedEntryCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedEntryCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

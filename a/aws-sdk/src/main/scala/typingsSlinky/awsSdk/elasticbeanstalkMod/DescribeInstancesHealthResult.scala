@@ -22,53 +22,16 @@ trait DescribeInstancesHealthResult extends js.Object {
 
 object DescribeInstancesHealthResult {
   @scala.inline
-  def apply(): DescribeInstancesHealthResult = {
+  def apply(
+    InstanceHealthList: InstanceHealthList = null,
+    NextToken: NextToken = null,
+    RefreshedAt: js.Date = null
+  ): DescribeInstancesHealthResult = {
     val __obj = js.Dynamic.literal()
+    if (InstanceHealthList != null) __obj.updateDynamic("InstanceHealthList")(InstanceHealthList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (RefreshedAt != null) __obj.updateDynamic("RefreshedAt")(RefreshedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeInstancesHealthResult]
   }
-  @scala.inline
-  implicit class DescribeInstancesHealthResultOps[Self <: DescribeInstancesHealthResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceHealthList(value: InstanceHealthList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceHealthList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceHealthList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceHealthList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshedAt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

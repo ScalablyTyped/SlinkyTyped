@@ -12,62 +12,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CircularLoaderProps extends js.Object {
-  var size: js.UndefOr[medium | large | xlarge | xxlarge | xxxlarge] = js.native
-  var skin: js.UndefOr[primary | secondary] = js.native
-  var theme: js.UndefOr[Gutter] = js.native
+  var size: js.UndefOr[medium | large | xlarge | xxlarge | xxxlarge] = js.undefined
+  var skin: js.UndefOr[primary | secondary] = js.undefined
+  var theme: js.UndefOr[Gutter] = js.undefined
 }
 
 object CircularLoaderProps {
   @scala.inline
-  def apply(): CircularLoaderProps = {
+  def apply(
+    size: medium | large | xlarge | xxlarge | xxxlarge = null,
+    skin: primary | secondary = null,
+    theme: Gutter = null
+  ): CircularLoaderProps = {
     val __obj = js.Dynamic.literal()
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[CircularLoaderProps]
   }
-  @scala.inline
-  implicit class CircularLoaderPropsOps[Self <: CircularLoaderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSize(value: medium | large | xlarge | xxlarge | xxxlarge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkin(value: primary | secondary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Gutter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

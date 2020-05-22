@@ -12,8 +12,14 @@ trait Host extends js.Object
 
 object Host {
   @scala.inline
-  implicit def apply(value: DefaultHost): Host = value.asInstanceOf[Host]
+  def DefaultHost(host: String, port: Double): Host = {
+    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Host]
+  }
   @scala.inline
-  implicit def apply(value: SocketHost): Host = value.asInstanceOf[Host]
+  def SocketHost(ipc: String): Host = {
+    val __obj = js.Dynamic.literal(ipc = ipc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Host]
+  }
 }
 

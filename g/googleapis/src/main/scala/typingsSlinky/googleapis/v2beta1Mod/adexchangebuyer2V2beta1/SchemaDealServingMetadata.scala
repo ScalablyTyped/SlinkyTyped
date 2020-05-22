@@ -17,29 +17,10 @@ trait SchemaDealServingMetadata extends js.Object {
 
 object SchemaDealServingMetadata {
   @scala.inline
-  def apply(): SchemaDealServingMetadata = {
+  def apply(dealPauseStatus: SchemaDealPauseStatus = null): SchemaDealServingMetadata = {
     val __obj = js.Dynamic.literal()
+    if (dealPauseStatus != null) __obj.updateDynamic("dealPauseStatus")(dealPauseStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDealServingMetadata]
   }
-  @scala.inline
-  implicit class SchemaDealServingMetadataOps[Self <: SchemaDealServingMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDealPauseStatus(value: SchemaDealPauseStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dealPauseStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDealPauseStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dealPauseStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

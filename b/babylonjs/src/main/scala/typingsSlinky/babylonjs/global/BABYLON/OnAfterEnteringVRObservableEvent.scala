@@ -7,5 +7,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BABYLON.OnAfterEnteringVRObservableEvent")
 @js.native
 class OnAfterEnteringVRObservableEvent ()
-  extends typingsSlinky.babylonjs.BABYLON.OnAfterEnteringVRObservableEvent
+  extends typingsSlinky.babylonjs.BABYLON.OnAfterEnteringVRObservableEvent {
+  /**
+    * If entering vr was successful
+    */
+  /* CompleteClass */
+  override var success: Boolean = js.native
+}
 

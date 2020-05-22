@@ -38,101 +38,24 @@ trait VideoSelector extends js.Object {
 
 object VideoSelector {
   @scala.inline
-  def apply(): VideoSelector = {
+  def apply(
+    AlphaBehavior: AlphaBehavior = null,
+    ColorSpace: ColorSpace = null,
+    ColorSpaceUsage: ColorSpaceUsage = null,
+    Hdr10Metadata: Hdr10Metadata = null,
+    Pid: js.UndefOr[integerMin1Max2147483647] = js.undefined,
+    ProgramNumber: js.UndefOr[integerMinNegative2147483648Max2147483647] = js.undefined,
+    Rotate: InputRotate = null
+  ): VideoSelector = {
     val __obj = js.Dynamic.literal()
+    if (AlphaBehavior != null) __obj.updateDynamic("AlphaBehavior")(AlphaBehavior.asInstanceOf[js.Any])
+    if (ColorSpace != null) __obj.updateDynamic("ColorSpace")(ColorSpace.asInstanceOf[js.Any])
+    if (ColorSpaceUsage != null) __obj.updateDynamic("ColorSpaceUsage")(ColorSpaceUsage.asInstanceOf[js.Any])
+    if (Hdr10Metadata != null) __obj.updateDynamic("Hdr10Metadata")(Hdr10Metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(Pid)) __obj.updateDynamic("Pid")(Pid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgramNumber)) __obj.updateDynamic("ProgramNumber")(ProgramNumber.get.asInstanceOf[js.Any])
+    if (Rotate != null) __obj.updateDynamic("Rotate")(Rotate.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoSelector]
   }
-  @scala.inline
-  implicit class VideoSelectorOps[Self <: VideoSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlphaBehavior(value: AlphaBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlphaBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlphaBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlphaBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSpace(value: ColorSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSpaceUsage(value: ColorSpaceUsage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSpaceUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpaceUsage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHdr10Metadata(value: Hdr10Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHdr10Metadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Hdr10Metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPid(value: integerMin1Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgramNumber(value: integerMinNegative2147483648Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgramNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotate(value: InputRotate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rotate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

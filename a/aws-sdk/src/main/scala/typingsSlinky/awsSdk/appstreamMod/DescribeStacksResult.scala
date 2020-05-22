@@ -18,41 +18,11 @@ trait DescribeStacksResult extends js.Object {
 
 object DescribeStacksResult {
   @scala.inline
-  def apply(): DescribeStacksResult = {
+  def apply(NextToken: String = null, Stacks: StackList = null): DescribeStacksResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Stacks != null) __obj.updateDynamic("Stacks")(Stacks.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStacksResult]
   }
-  @scala.inline
-  implicit class DescribeStacksResultOps[Self <: DescribeStacksResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStacks(value: StackList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStacks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stacks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

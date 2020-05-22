@@ -7,413 +7,111 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined javascript-obfuscator.javascript-obfuscator/src/types/options/TInputOptions.TInputOptions */
-@js.native
 trait ObfuscatorOptions
   extends /* key */ StringDictionary[js.Any] {
-  var compact: js.UndefOr[Boolean] = js.native
-  var controlFlowFlattening: js.UndefOr[Boolean] = js.native
-  var controlFlowFlatteningThreshold: js.UndefOr[Double] = js.native
-  var deadCodeInjection: js.UndefOr[Boolean] = js.native
-  var deadCodeInjectionThreshold: js.UndefOr[Double] = js.native
-  var debugProtection: js.UndefOr[Boolean] = js.native
-  var debugProtectionInterval: js.UndefOr[Boolean] = js.native
-  var disableConsoleOutput: js.UndefOr[Boolean] = js.native
-  var domainLock: js.UndefOr[js.Array[String]] = js.native
+  var compact: js.UndefOr[Boolean] = js.undefined
+  var controlFlowFlattening: js.UndefOr[Boolean] = js.undefined
+  var controlFlowFlatteningThreshold: js.UndefOr[Double] = js.undefined
+  var deadCodeInjection: js.UndefOr[Boolean] = js.undefined
+  var deadCodeInjectionThreshold: js.UndefOr[Double] = js.undefined
+  var debugProtection: js.UndefOr[Boolean] = js.undefined
+  var debugProtectionInterval: js.UndefOr[Boolean] = js.undefined
+  var disableConsoleOutput: js.UndefOr[Boolean] = js.undefined
+  var domainLock: js.UndefOr[js.Array[String]] = js.undefined
   var identifierNamesGenerator: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IdentifierNamesGenerator */ js.Any
-  ] = js.native
-  var identifiersPrefix: js.UndefOr[String] = js.native
-  var inputFileName: js.UndefOr[String] = js.native
-  var log: js.UndefOr[Boolean] = js.native
-  var renameGlobals: js.UndefOr[Boolean] = js.native
-  var reservedNames: js.UndefOr[js.Array[String]] = js.native
-  var reservedStrings: js.UndefOr[js.Array[String]] = js.native
-  var rotateStringArray: js.UndefOr[Boolean] = js.native
-  var seed: js.UndefOr[Double] = js.native
-  var selfDefending: js.UndefOr[Boolean] = js.native
-  var sourceMap: js.UndefOr[Boolean] = js.native
-  var sourceMapBaseUrl: js.UndefOr[String] = js.native
-  var sourceMapFileName: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var identifiersPrefix: js.UndefOr[String] = js.undefined
+  var inputFileName: js.UndefOr[String] = js.undefined
+  var log: js.UndefOr[Boolean] = js.undefined
+  var renameGlobals: js.UndefOr[Boolean] = js.undefined
+  var reservedNames: js.UndefOr[js.Array[String]] = js.undefined
+  var reservedStrings: js.UndefOr[js.Array[String]] = js.undefined
+  var rotateStringArray: js.UndefOr[Boolean] = js.undefined
+  var seed: js.UndefOr[Double] = js.undefined
+  var selfDefending: js.UndefOr[Boolean] = js.undefined
+  var sourceMap: js.UndefOr[Boolean] = js.undefined
+  var sourceMapBaseUrl: js.UndefOr[String] = js.undefined
+  var sourceMapFileName: js.UndefOr[String] = js.undefined
   var sourceMapMode: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SourceMapMode */ js.Any
-  ] = js.native
-  var stringArray: js.UndefOr[Boolean] = js.native
-  var stringArrayEncoding: js.UndefOr[TStringArrayEncoding] = js.native
-  var stringArrayThreshold: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var stringArray: js.UndefOr[Boolean] = js.undefined
+  var stringArrayEncoding: js.UndefOr[TStringArrayEncoding] = js.undefined
+  var stringArrayThreshold: js.UndefOr[Double] = js.undefined
   var target: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationTarget */ js.Any
-  ] = js.native
-  var transformObjectKeys: js.UndefOr[Boolean] = js.native
-  var unicodeEscapeSequence: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var transformObjectKeys: js.UndefOr[Boolean] = js.undefined
+  var unicodeEscapeSequence: js.UndefOr[Boolean] = js.undefined
 }
 
 object ObfuscatorOptions {
   @scala.inline
-  def apply(): ObfuscatorOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    compact: js.UndefOr[Boolean] = js.undefined,
+    controlFlowFlattening: js.UndefOr[Boolean] = js.undefined,
+    controlFlowFlatteningThreshold: js.UndefOr[Double] = js.undefined,
+    deadCodeInjection: js.UndefOr[Boolean] = js.undefined,
+    deadCodeInjectionThreshold: js.UndefOr[Double] = js.undefined,
+    debugProtection: js.UndefOr[Boolean] = js.undefined,
+    debugProtectionInterval: js.UndefOr[Boolean] = js.undefined,
+    disableConsoleOutput: js.UndefOr[Boolean] = js.undefined,
+    domainLock: js.Array[String] = null,
+    identifierNamesGenerator: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IdentifierNamesGenerator */ js.Any = null,
+    identifiersPrefix: String = null,
+    inputFileName: String = null,
+    log: js.UndefOr[Boolean] = js.undefined,
+    renameGlobals: js.UndefOr[Boolean] = js.undefined,
+    reservedNames: js.Array[String] = null,
+    reservedStrings: js.Array[String] = null,
+    rotateStringArray: js.UndefOr[Boolean] = js.undefined,
+    seed: js.UndefOr[Double] = js.undefined,
+    selfDefending: js.UndefOr[Boolean] = js.undefined,
+    sourceMap: js.UndefOr[Boolean] = js.undefined,
+    sourceMapBaseUrl: String = null,
+    sourceMapFileName: String = null,
+    sourceMapMode: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SourceMapMode */ js.Any = null,
+    stringArray: js.UndefOr[Boolean] = js.undefined,
+    stringArrayEncoding: TStringArrayEncoding = null,
+    stringArrayThreshold: js.UndefOr[Double] = js.undefined,
+    target: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationTarget */ js.Any = null,
+    transformObjectKeys: js.UndefOr[Boolean] = js.undefined,
+    unicodeEscapeSequence: js.UndefOr[Boolean] = js.undefined
+  ): ObfuscatorOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(controlFlowFlattening)) __obj.updateDynamic("controlFlowFlattening")(controlFlowFlattening.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(controlFlowFlatteningThreshold)) __obj.updateDynamic("controlFlowFlatteningThreshold")(controlFlowFlatteningThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deadCodeInjection)) __obj.updateDynamic("deadCodeInjection")(deadCodeInjection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deadCodeInjectionThreshold)) __obj.updateDynamic("deadCodeInjectionThreshold")(deadCodeInjectionThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugProtection)) __obj.updateDynamic("debugProtection")(debugProtection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugProtectionInterval)) __obj.updateDynamic("debugProtectionInterval")(debugProtectionInterval.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableConsoleOutput)) __obj.updateDynamic("disableConsoleOutput")(disableConsoleOutput.get.asInstanceOf[js.Any])
+    if (domainLock != null) __obj.updateDynamic("domainLock")(domainLock.asInstanceOf[js.Any])
+    if (identifierNamesGenerator != null) __obj.updateDynamic("identifierNamesGenerator")(identifierNamesGenerator.asInstanceOf[js.Any])
+    if (identifiersPrefix != null) __obj.updateDynamic("identifiersPrefix")(identifiersPrefix.asInstanceOf[js.Any])
+    if (inputFileName != null) __obj.updateDynamic("inputFileName")(inputFileName.asInstanceOf[js.Any])
+    if (!js.isUndefined(log)) __obj.updateDynamic("log")(log.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(renameGlobals)) __obj.updateDynamic("renameGlobals")(renameGlobals.get.asInstanceOf[js.Any])
+    if (reservedNames != null) __obj.updateDynamic("reservedNames")(reservedNames.asInstanceOf[js.Any])
+    if (reservedStrings != null) __obj.updateDynamic("reservedStrings")(reservedStrings.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotateStringArray)) __obj.updateDynamic("rotateStringArray")(rotateStringArray.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(seed)) __obj.updateDynamic("seed")(seed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selfDefending)) __obj.updateDynamic("selfDefending")(selfDefending.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceMap)) __obj.updateDynamic("sourceMap")(sourceMap.get.asInstanceOf[js.Any])
+    if (sourceMapBaseUrl != null) __obj.updateDynamic("sourceMapBaseUrl")(sourceMapBaseUrl.asInstanceOf[js.Any])
+    if (sourceMapFileName != null) __obj.updateDynamic("sourceMapFileName")(sourceMapFileName.asInstanceOf[js.Any])
+    if (sourceMapMode != null) __obj.updateDynamic("sourceMapMode")(sourceMapMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(stringArray)) __obj.updateDynamic("stringArray")(stringArray.get.asInstanceOf[js.Any])
+    if (stringArrayEncoding != null) __obj.updateDynamic("stringArrayEncoding")(stringArrayEncoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(stringArrayThreshold)) __obj.updateDynamic("stringArrayThreshold")(stringArrayThreshold.get.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(transformObjectKeys)) __obj.updateDynamic("transformObjectKeys")(transformObjectKeys.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unicodeEscapeSequence)) __obj.updateDynamic("unicodeEscapeSequence")(unicodeEscapeSequence.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObfuscatorOptions]
   }
-  @scala.inline
-  implicit class ObfuscatorOptionsOps[Self <: ObfuscatorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlFlowFlattening(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlFlowFlattening")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlFlowFlattening: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlFlowFlattening")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlFlowFlatteningThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlFlowFlatteningThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlFlowFlatteningThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlFlowFlatteningThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadCodeInjection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadCodeInjection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadCodeInjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadCodeInjection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadCodeInjectionThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadCodeInjectionThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadCodeInjectionThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadCodeInjectionThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebugProtection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugProtection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugProtection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebugProtectionInterval(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugProtectionInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugProtectionInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugProtectionInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableConsoleOutput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableConsoleOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableConsoleOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableConsoleOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainLock(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifierNamesGenerator(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IdentifierNamesGenerator */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifierNamesGenerator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifierNamesGenerator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifierNamesGenerator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifiersPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifiersPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifiersPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifiersPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenameGlobals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renameGlobals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenameGlobals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renameGlobals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedStrings(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedStrings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedStrings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservedStrings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotateStringArray(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateStringArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotateStringArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateStringArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfDefending(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfDefending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfDefending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfDefending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMapBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapBaseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMapBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapBaseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMapFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapFileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMapFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapFileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMapMode(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SourceMapMode */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMapMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringArray(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringArrayEncoding(value: TStringArrayEncoding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringArrayEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringArrayEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringArrayEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringArrayThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringArrayThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringArrayThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringArrayThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObfuscationTarget */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformObjectKeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformObjectKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformObjectKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformObjectKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnicodeEscapeSequence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeEscapeSequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnicodeEscapeSequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unicodeEscapeSequence")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

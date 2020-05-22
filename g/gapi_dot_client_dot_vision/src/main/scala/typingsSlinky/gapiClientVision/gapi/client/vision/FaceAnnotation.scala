@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FaceAnnotation extends js.Object {
   /** Anger likelihood. */
-  var angerLikelihood: js.UndefOr[String] = js.native
+  var angerLikelihood: js.UndefOr[String] = js.undefined
   /** Blurred likelihood. */
-  var blurredLikelihood: js.UndefOr[String] = js.native
+  var blurredLikelihood: js.UndefOr[String] = js.undefined
   /**
     * The bounding polygon around the face. The coordinates of the bounding box
     * are in the original image's scale, as returned in `ImageParams`.
@@ -19,9 +18,9 @@ trait FaceAnnotation extends js.Object {
     * `BoundingPoly` (the polygon will be unbounded) if only a partial face
     * appears in the image to be annotated.
     */
-  var boundingPoly: js.UndefOr[BoundingPoly] = js.native
+  var boundingPoly: js.UndefOr[BoundingPoly] = js.undefined
   /** Detection confidence. Range [0, 1]. */
-  var detectionConfidence: js.UndefOr[Double] = js.native
+  var detectionConfidence: js.UndefOr[Double] = js.undefined
   /**
     * The `fd_bounding_poly` bounding polygon is tighter than the
     * `boundingPoly`, and encloses only the skin part of the face. Typically, it
@@ -30,233 +29,76 @@ trait FaceAnnotation extends js.Object {
     * landmarker results, only on the initial face detection, hence
     * the <code>fd</code> (face detection) prefix.
     */
-  var fdBoundingPoly: js.UndefOr[BoundingPoly] = js.native
+  var fdBoundingPoly: js.UndefOr[BoundingPoly] = js.undefined
   /** Headwear likelihood. */
-  var headwearLikelihood: js.UndefOr[String] = js.native
+  var headwearLikelihood: js.UndefOr[String] = js.undefined
   /** Joy likelihood. */
-  var joyLikelihood: js.UndefOr[String] = js.native
+  var joyLikelihood: js.UndefOr[String] = js.undefined
   /** Face landmarking confidence. Range [0, 1]. */
-  var landmarkingConfidence: js.UndefOr[Double] = js.native
+  var landmarkingConfidence: js.UndefOr[Double] = js.undefined
   /** Detected face landmarks. */
-  var landmarks: js.UndefOr[js.Array[Landmark]] = js.native
+  var landmarks: js.UndefOr[js.Array[Landmark]] = js.undefined
   /**
     * Yaw angle, which indicates the leftward/rightward angle that the face is
     * pointing relative to the vertical plane perpendicular to the image. Range
     * [-180,180].
     */
-  var panAngle: js.UndefOr[Double] = js.native
+  var panAngle: js.UndefOr[Double] = js.undefined
   /**
     * Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
     * of the face relative to the image vertical about the axis perpendicular to
     * the face. Range [-180,180].
     */
-  var rollAngle: js.UndefOr[Double] = js.native
+  var rollAngle: js.UndefOr[Double] = js.undefined
   /** Sorrow likelihood. */
-  var sorrowLikelihood: js.UndefOr[String] = js.native
+  var sorrowLikelihood: js.UndefOr[String] = js.undefined
   /** Surprise likelihood. */
-  var surpriseLikelihood: js.UndefOr[String] = js.native
+  var surpriseLikelihood: js.UndefOr[String] = js.undefined
   /**
     * Pitch angle, which indicates the upwards/downwards angle that the face is
     * pointing relative to the image's horizontal plane. Range [-180,180].
     */
-  var tiltAngle: js.UndefOr[Double] = js.native
+  var tiltAngle: js.UndefOr[Double] = js.undefined
   /** Under-exposed likelihood. */
-  var underExposedLikelihood: js.UndefOr[String] = js.native
+  var underExposedLikelihood: js.UndefOr[String] = js.undefined
 }
 
 object FaceAnnotation {
   @scala.inline
-  def apply(): FaceAnnotation = {
+  def apply(
+    angerLikelihood: String = null,
+    blurredLikelihood: String = null,
+    boundingPoly: BoundingPoly = null,
+    detectionConfidence: js.UndefOr[Double] = js.undefined,
+    fdBoundingPoly: BoundingPoly = null,
+    headwearLikelihood: String = null,
+    joyLikelihood: String = null,
+    landmarkingConfidence: js.UndefOr[Double] = js.undefined,
+    landmarks: js.Array[Landmark] = null,
+    panAngle: js.UndefOr[Double] = js.undefined,
+    rollAngle: js.UndefOr[Double] = js.undefined,
+    sorrowLikelihood: String = null,
+    surpriseLikelihood: String = null,
+    tiltAngle: js.UndefOr[Double] = js.undefined,
+    underExposedLikelihood: String = null
+  ): FaceAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (angerLikelihood != null) __obj.updateDynamic("angerLikelihood")(angerLikelihood.asInstanceOf[js.Any])
+    if (blurredLikelihood != null) __obj.updateDynamic("blurredLikelihood")(blurredLikelihood.asInstanceOf[js.Any])
+    if (boundingPoly != null) __obj.updateDynamic("boundingPoly")(boundingPoly.asInstanceOf[js.Any])
+    if (!js.isUndefined(detectionConfidence)) __obj.updateDynamic("detectionConfidence")(detectionConfidence.get.asInstanceOf[js.Any])
+    if (fdBoundingPoly != null) __obj.updateDynamic("fdBoundingPoly")(fdBoundingPoly.asInstanceOf[js.Any])
+    if (headwearLikelihood != null) __obj.updateDynamic("headwearLikelihood")(headwearLikelihood.asInstanceOf[js.Any])
+    if (joyLikelihood != null) __obj.updateDynamic("joyLikelihood")(joyLikelihood.asInstanceOf[js.Any])
+    if (!js.isUndefined(landmarkingConfidence)) __obj.updateDynamic("landmarkingConfidence")(landmarkingConfidence.get.asInstanceOf[js.Any])
+    if (landmarks != null) __obj.updateDynamic("landmarks")(landmarks.asInstanceOf[js.Any])
+    if (!js.isUndefined(panAngle)) __obj.updateDynamic("panAngle")(panAngle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rollAngle)) __obj.updateDynamic("rollAngle")(rollAngle.get.asInstanceOf[js.Any])
+    if (sorrowLikelihood != null) __obj.updateDynamic("sorrowLikelihood")(sorrowLikelihood.asInstanceOf[js.Any])
+    if (surpriseLikelihood != null) __obj.updateDynamic("surpriseLikelihood")(surpriseLikelihood.asInstanceOf[js.Any])
+    if (!js.isUndefined(tiltAngle)) __obj.updateDynamic("tiltAngle")(tiltAngle.get.asInstanceOf[js.Any])
+    if (underExposedLikelihood != null) __obj.updateDynamic("underExposedLikelihood")(underExposedLikelihood.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaceAnnotation]
   }
-  @scala.inline
-  implicit class FaceAnnotationOps[Self <: FaceAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngerLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angerLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngerLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angerLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlurredLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurredLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlurredLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurredLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoundingPoly(value: BoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingPoly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetectionConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectionConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectionConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectionConfidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFdBoundingPoly(value: BoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fdBoundingPoly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFdBoundingPoly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fdBoundingPoly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadwearLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headwearLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadwearLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headwearLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJoyLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joyLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJoyLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joyLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLandmarkingConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landmarkingConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLandmarkingConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landmarkingConfidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLandmarks(value: js.Array[Landmark]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landmarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLandmarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("landmarks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRollAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRollAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSorrowLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorrowLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSorrowLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorrowLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurpriseLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surpriseLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurpriseLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surpriseLikelihood")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiltAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiltAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiltAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiltAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnderExposedLikelihood(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underExposedLikelihood")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnderExposedLikelihood: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("underExposedLikelihood")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

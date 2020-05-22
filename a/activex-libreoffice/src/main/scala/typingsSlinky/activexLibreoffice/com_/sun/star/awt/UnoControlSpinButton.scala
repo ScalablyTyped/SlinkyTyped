@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   *
   * The model of an {@link UnoControlSpinButton} control must support the {@link UnoControlSpinButtonModel} service.
   */
-@js.native
 trait UnoControlSpinButton
   extends XControl
      with XWindow

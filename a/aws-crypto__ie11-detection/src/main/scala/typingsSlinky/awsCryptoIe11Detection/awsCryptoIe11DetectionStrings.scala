@@ -1,24 +1,24 @@
 package typingsSlinky.awsCryptoIe11Detection
 
 import typingsSlinky.awsCryptoIe11Detection.msSubtleCryptoMod.Ie11DigestAlgorithm
-import typingsSlinky.awsCryptoIe11Detection.msSubtleCryptoMod.Ie11EncryptionAlgorithm
 import typingsSlinky.awsCryptoIe11Detection.msSubtleCryptoMod.KeyUsage
+import typingsSlinky.awsCryptoIe11Detection.msSubtleCryptoMod._Ie11EncryptionAlgorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object awsCryptoIe11DetectionStrings {
   @js.native
-  sealed trait `AES-CBC` extends Ie11EncryptionAlgorithm
+  sealed trait `AES-CBC` extends _Ie11EncryptionAlgorithm
   
   @js.native
-  sealed trait `AES-GCM` extends Ie11EncryptionAlgorithm
+  sealed trait `AES-GCM` extends _Ie11EncryptionAlgorithm
   
   @js.native
   sealed trait HMAC extends js.Object
   
   @js.native
-  sealed trait `RSA-OAEP` extends Ie11EncryptionAlgorithm
+  sealed trait `RSA-OAEP` extends _Ie11EncryptionAlgorithm
   
   @js.native
   sealed trait `RSAES-PKCS1-v1_5` extends js.Object

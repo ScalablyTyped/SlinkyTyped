@@ -14,12 +14,11 @@ import scala.scalajs.js.annotation._
   * State is set to {@link DispatchResultState.DONTKNOW} , Result is empty.
   * @see DispatchResultState
   */
-@js.native
 trait DispatchResultEvent extends EventObject {
   /** describes result for given **State** */
-  var Result: js.Any = js.native
+  var Result: js.Any
   /** describes state of dispatch */
-  var State: Double = js.native
+  var State: Double
 }
 
 object DispatchResultEvent {
@@ -28,25 +27,5 @@ object DispatchResultEvent {
     val __obj = js.Dynamic.literal(Result = Result.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any])
     __obj.asInstanceOf[DispatchResultEvent]
   }
-  @scala.inline
-  implicit class DispatchResultEventOps[Self <: DispatchResultEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResult(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

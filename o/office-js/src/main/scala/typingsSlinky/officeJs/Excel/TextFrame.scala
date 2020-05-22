@@ -47,7 +47,7 @@ import scala.scalajs.js.annotation._
 trait TextFrame extends ClientObject {
   /**
     *
-    * Gets or sets the automatic sizing settings for the text frame. A text frame can be set to automatically fit the text to the text frame, to automatically fit the text frame to the text, or not perform any automatic sizing.
+    * The automatic sizing settings for the text frame. A text frame can be set to automatically fit the text to the text frame, to automatically fit the text frame to the text, or not perform any automatic sizing.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -64,7 +64,7 @@ trait TextFrame extends ClientObject {
   var context_TextFrame: RequestContext = js.native
   /**
     *
-    * Specifies whether the text frame contains text.
+    * Specifies if the text frame contains text.
     *
     * [Api set: ExcelApi 1.9]
     */

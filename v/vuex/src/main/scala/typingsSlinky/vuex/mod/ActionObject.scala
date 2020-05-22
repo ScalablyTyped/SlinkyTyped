@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ActionObject[S, R] extends Action[S, R] {
+trait ActionObject[S, R] extends js.Object {
   @JSName("handler")
   var handler_Original: ActionHandler[S, R] = js.native
   var root: js.UndefOr[Boolean] = js.native

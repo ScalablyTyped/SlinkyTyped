@@ -4,432 +4,158 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WindowsPhone81GeneralConfiguration extends DeviceConfiguration {
   // Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
-  var applyOnlyToWindowsPhone81: js.UndefOr[Boolean] = js.native
+  var applyOnlyToWindowsPhone81: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block copy paste.
-  var appsBlockCopyPaste: js.UndefOr[Boolean] = js.native
+  var appsBlockCopyPaste: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block bluetooth.
-  var bluetoothBlocked: js.UndefOr[Boolean] = js.native
+  var bluetoothBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block camera.
-  var cameraBlocked: js.UndefOr[Boolean] = js.native
+  var cameraBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
-  var cellularBlockWifiTethering: js.UndefOr[Boolean] = js.native
+  var cellularBlockWifiTethering: js.UndefOr[Boolean] = js.undefined
   // List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
-  var compliantAppListType: js.UndefOr[AppListType] = js.native
+  var compliantAppListType: js.UndefOr[AppListType] = js.undefined
   /**
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection
     * can contain a maximum of 10000 elements.
     */
-  var compliantAppsList: js.UndefOr[js.Array[AppListItem]] = js.native
+  var compliantAppsList: js.UndefOr[js.Array[AppListItem]] = js.undefined
   // Indicates whether or not to block diagnostic data submission.
-  var diagnosticDataBlockSubmission: js.UndefOr[Boolean] = js.native
+  var diagnosticDataBlockSubmission: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block custom email accounts.
-  var emailBlockAddingAccounts: js.UndefOr[Boolean] = js.native
+  var emailBlockAddingAccounts: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block location services.
-  var locationServicesBlocked: js.UndefOr[Boolean] = js.native
+  var locationServicesBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block using a Microsoft Account.
-  var microsoftAccountBlocked: js.UndefOr[Boolean] = js.native
+  var microsoftAccountBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block Near-Field Communication.
-  var nfcBlocked: js.UndefOr[Boolean] = js.native
+  var nfcBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block syncing the calendar.
-  var passwordBlockSimple: js.UndefOr[Boolean] = js.native
+  var passwordBlockSimple: js.UndefOr[Boolean] = js.undefined
   // Number of days before the password expires.
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[Double] = js.undefined
   // Number of character sets a password must contain.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined
   // Minimum length of passwords.
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[Double] = js.undefined
   // Minutes of inactivity before screen timeout.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.undefined
   // Number of previous passwords to block. Valid values 0 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined
   // Indicates whether or not to require a password.
-  var passwordRequired: js.UndefOr[Boolean] = js.native
+  var passwordRequired: js.UndefOr[Boolean] = js.undefined
   // Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
-  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
+  var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.undefined
   // Number of sign in failures allowed before factory reset.
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.undefined
   // Indicates whether or not to block screenshots.
-  var screenCaptureBlocked: js.UndefOr[Boolean] = js.native
+  var screenCaptureBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block removable storage.
-  var storageBlockRemovableStorage: js.UndefOr[Boolean] = js.native
+  var storageBlockRemovableStorage: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to require encryption.
-  var storageRequireEncryption: js.UndefOr[Boolean] = js.native
+  var storageRequireEncryption: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the web browser.
-  var webBrowserBlocked: js.UndefOr[Boolean] = js.native
+  var webBrowserBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
-  var wifiBlockAutomaticConnectHotspots: js.UndefOr[Boolean] = js.native
+  var wifiBlockAutomaticConnectHotspots: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
-  var wifiBlockHotspotReporting: js.UndefOr[Boolean] = js.native
+  var wifiBlockHotspotReporting: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block Wi-Fi.
-  var wifiBlocked: js.UndefOr[Boolean] = js.native
+  var wifiBlocked: js.UndefOr[Boolean] = js.undefined
   // Indicates whether or not to block the Windows Store.
-  var windowsStoreBlocked: js.UndefOr[Boolean] = js.native
+  var windowsStoreBlocked: js.UndefOr[Boolean] = js.undefined
 }
 
 object WindowsPhone81GeneralConfiguration {
   @scala.inline
-  def apply(): WindowsPhone81GeneralConfiguration = {
+  def apply(
+    applyOnlyToWindowsPhone81: js.UndefOr[Boolean] = js.undefined,
+    appsBlockCopyPaste: js.UndefOr[Boolean] = js.undefined,
+    assignments: js.Array[DeviceConfigurationAssignment] = null,
+    bluetoothBlocked: js.UndefOr[Boolean] = js.undefined,
+    cameraBlocked: js.UndefOr[Boolean] = js.undefined,
+    cellularBlockWifiTethering: js.UndefOr[Boolean] = js.undefined,
+    compliantAppListType: AppListType = null,
+    compliantAppsList: js.Array[AppListItem] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
+    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
+    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
+    diagnosticDataBlockSubmission: js.UndefOr[Boolean] = js.undefined,
+    displayName: String = null,
+    emailBlockAddingAccounts: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    locationServicesBlocked: js.UndefOr[Boolean] = js.undefined,
+    microsoftAccountBlocked: js.UndefOr[Boolean] = js.undefined,
+    nfcBlocked: js.UndefOr[Boolean] = js.undefined,
+    passwordBlockSimple: js.UndefOr[Boolean] = js.undefined,
+    passwordExpirationDays: js.UndefOr[Double] = js.undefined,
+    passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.undefined,
+    passwordMinimumLength: js.UndefOr[Double] = js.undefined,
+    passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.undefined,
+    passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.undefined,
+    passwordRequired: js.UndefOr[Boolean] = js.undefined,
+    passwordRequiredType: RequiredPasswordType = null,
+    passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.undefined,
+    screenCaptureBlocked: js.UndefOr[Boolean] = js.undefined,
+    storageBlockRemovableStorage: js.UndefOr[Boolean] = js.undefined,
+    storageRequireEncryption: js.UndefOr[Boolean] = js.undefined,
+    userStatusOverview: DeviceConfigurationUserOverview = null,
+    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined,
+    webBrowserBlocked: js.UndefOr[Boolean] = js.undefined,
+    wifiBlockAutomaticConnectHotspots: js.UndefOr[Boolean] = js.undefined,
+    wifiBlockHotspotReporting: js.UndefOr[Boolean] = js.undefined,
+    wifiBlocked: js.UndefOr[Boolean] = js.undefined,
+    windowsStoreBlocked: js.UndefOr[Boolean] = js.undefined
+  ): WindowsPhone81GeneralConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(applyOnlyToWindowsPhone81)) __obj.updateDynamic("applyOnlyToWindowsPhone81")(applyOnlyToWindowsPhone81.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(appsBlockCopyPaste)) __obj.updateDynamic("appsBlockCopyPaste")(appsBlockCopyPaste.get.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothBlocked)) __obj.updateDynamic("bluetoothBlocked")(bluetoothBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cameraBlocked)) __obj.updateDynamic("cameraBlocked")(cameraBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellularBlockWifiTethering)) __obj.updateDynamic("cellularBlockWifiTethering")(cellularBlockWifiTethering.get.asInstanceOf[js.Any])
+    if (compliantAppListType != null) __obj.updateDynamic("compliantAppListType")(compliantAppListType.asInstanceOf[js.Any])
+    if (compliantAppsList != null) __obj.updateDynamic("compliantAppsList")(compliantAppsList.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
+    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(diagnosticDataBlockSubmission)) __obj.updateDynamic("diagnosticDataBlockSubmission")(diagnosticDataBlockSubmission.get.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(emailBlockAddingAccounts)) __obj.updateDynamic("emailBlockAddingAccounts")(emailBlockAddingAccounts.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(locationServicesBlocked)) __obj.updateDynamic("locationServicesBlocked")(locationServicesBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(microsoftAccountBlocked)) __obj.updateDynamic("microsoftAccountBlocked")(microsoftAccountBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nfcBlocked)) __obj.updateDynamic("nfcBlocked")(nfcBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordBlockSimple)) __obj.updateDynamic("passwordBlockSimple")(passwordBlockSimple.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordExpirationDays)) __obj.updateDynamic("passwordExpirationDays")(passwordExpirationDays.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumCharacterSetCount)) __obj.updateDynamic("passwordMinimumCharacterSetCount")(passwordMinimumCharacterSetCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinimumLength)) __obj.updateDynamic("passwordMinimumLength")(passwordMinimumLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordMinutesOfInactivityBeforeScreenTimeout)) __obj.updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(passwordMinutesOfInactivityBeforeScreenTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordPreviousPasswordBlockCount)) __obj.updateDynamic("passwordPreviousPasswordBlockCount")(passwordPreviousPasswordBlockCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordRequired)) __obj.updateDynamic("passwordRequired")(passwordRequired.get.asInstanceOf[js.Any])
+    if (passwordRequiredType != null) __obj.updateDynamic("passwordRequiredType")(passwordRequiredType.asInstanceOf[js.Any])
+    if (!js.isUndefined(passwordSignInFailureCountBeforeFactoryReset)) __obj.updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(passwordSignInFailureCountBeforeFactoryReset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenCaptureBlocked)) __obj.updateDynamic("screenCaptureBlocked")(screenCaptureBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageBlockRemovableStorage)) __obj.updateDynamic("storageBlockRemovableStorage")(storageBlockRemovableStorage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageRequireEncryption)) __obj.updateDynamic("storageRequireEncryption")(storageRequireEncryption.get.asInstanceOf[js.Any])
+    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(webBrowserBlocked)) __obj.updateDynamic("webBrowserBlocked")(webBrowserBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wifiBlockAutomaticConnectHotspots)) __obj.updateDynamic("wifiBlockAutomaticConnectHotspots")(wifiBlockAutomaticConnectHotspots.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wifiBlockHotspotReporting)) __obj.updateDynamic("wifiBlockHotspotReporting")(wifiBlockHotspotReporting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wifiBlocked)) __obj.updateDynamic("wifiBlocked")(wifiBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsStoreBlocked)) __obj.updateDynamic("windowsStoreBlocked")(windowsStoreBlocked.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowsPhone81GeneralConfiguration]
   }
-  @scala.inline
-  implicit class WindowsPhone81GeneralConfigurationOps[Self <: WindowsPhone81GeneralConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyOnlyToWindowsPhone81(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyOnlyToWindowsPhone81")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyOnlyToWindowsPhone81: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyOnlyToWindowsPhone81")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppsBlockCopyPaste(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appsBlockCopyPaste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppsBlockCopyPaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appsBlockCopyPaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCameraBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellularBlockWifiTethering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockWifiTethering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellularBlockWifiTethering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellularBlockWifiTethering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompliantAppListType(value: AppListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantAppListType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompliantAppListType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantAppListType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompliantAppsList(value: js.Array[AppListItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantAppsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompliantAppsList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantAppsList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiagnosticDataBlockSubmission(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticDataBlockSubmission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagnosticDataBlockSubmission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagnosticDataBlockSubmission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailBlockAddingAccounts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailBlockAddingAccounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailBlockAddingAccounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailBlockAddingAccounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationServicesBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServicesBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationServicesBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationServicesBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMicrosoftAccountBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microsoftAccountBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMicrosoftAccountBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("microsoftAccountBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNfcBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfcBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNfcBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nfcBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordBlockSimple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockSimple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordBlockSimple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordBlockSimple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordExpirationDays(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordExpirationDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpirationDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumCharacterSetCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumCharacterSetCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumCharacterSetCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinimumLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinimumLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinimumLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordMinutesOfInactivityBeforeScreenTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordMinutesOfInactivityBeforeScreenTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordPreviousPasswordBlockCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordPreviousPasswordBlockCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPreviousPasswordBlockCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequiredType(value: RequiredPasswordType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequiredType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequiredType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordSignInFailureCountBeforeFactoryReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignInFailureCountBeforeFactoryReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenCaptureBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenCaptureBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageBlockRemovableStorage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageBlockRemovableStorage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageBlockRemovableStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageBlockRemovableStorage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageRequireEncryption(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageRequireEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageRequireEncryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebBrowserBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webBrowserBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebBrowserBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webBrowserBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWifiBlockAutomaticConnectHotspots(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiBlockAutomaticConnectHotspots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWifiBlockAutomaticConnectHotspots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiBlockAutomaticConnectHotspots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWifiBlockHotspotReporting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiBlockHotspotReporting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWifiBlockHotspotReporting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiBlockHotspotReporting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWifiBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWifiBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsStoreBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsStoreBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsStoreBlocked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

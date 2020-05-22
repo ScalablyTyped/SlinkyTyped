@@ -4,37 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Notifications extends js.Object {
-  var android: AndroidNotifications = js.native
+  var android: AndroidNotifications
   /**
     * Cancels all notifications
     */
-  def cancelAllNotifications(): Unit = js.native
+  def cancelAllNotifications(): Unit
   /**
     * Cancels a notification by ID
     */
-  def cancelNotification(notificationId: String): Unit = js.native
-  def displayNotification(notification: Notification): js.Promise[Unit] = js.native
+  def cancelNotification(notificationId: String): Unit
+  def displayNotification(notification: Notification): js.Promise[Unit]
   /**
     * Returns the current badge number on the app icon.
     */
-  def getBadge(): js.Promise[Double] = js.native
-  def getInitialNotification(): js.Promise[NotificationOpen] = js.native
-  def getScheduledNotifications(): js.Promise[js.Array[Notification]] = js.native
-  def onNotification(listener: js.Function1[/* notification */ Notification, _]): js.Function0[_] = js.native
-  def onNotificationDisplayed(listener: js.Function1[/* notification */ Notification, _]): js.Function0[_] = js.native
-  def onNotificationOpened(listener: js.Function1[/* notificationOpen */ NotificationOpen, _]): js.Function0[_] = js.native
-  def removeAllDeliveredNotifications(): Unit = js.native
-  def removeDeliveredNotification(notificationId: String): Unit = js.native
+  def getBadge(): js.Promise[Double]
+  def getInitialNotification(): js.Promise[NotificationOpen]
+  def getScheduledNotifications(): js.Promise[js.Array[Notification]]
+  def onNotification(listener: js.Function1[/* notification */ Notification, _]): js.Function0[_]
+  def onNotificationDisplayed(listener: js.Function1[/* notification */ Notification, _]): js.Function0[_]
+  def onNotificationOpened(listener: js.Function1[/* notificationOpen */ NotificationOpen, _]): js.Function0[_]
+  def removeAllDeliveredNotifications(): Unit
+  def removeDeliveredNotification(notificationId: String): Unit
   /**
     * Schedule a local notification to be shown on the device.
     */
-  def scheduleNotification(notification: Notification, schedule: Schedule): js.Any = js.native
+  def scheduleNotification(notification: Notification, schedule: Schedule): js.Any
   /**
     * Sets the badge number on the iOS app icon.
     */
-  def setBadge(badge: Double): Unit = js.native
+  def setBadge(badge: Double): Unit
 }
 
 object Notifications {
@@ -58,97 +57,5 @@ object Notifications {
     val __obj = js.Dynamic.literal(android = android.asInstanceOf[js.Any], cancelAllNotifications = js.Any.fromFunction0(cancelAllNotifications), cancelNotification = js.Any.fromFunction1(cancelNotification), displayNotification = js.Any.fromFunction1(displayNotification), getBadge = js.Any.fromFunction0(getBadge), getInitialNotification = js.Any.fromFunction0(getInitialNotification), getScheduledNotifications = js.Any.fromFunction0(getScheduledNotifications), onNotification = js.Any.fromFunction1(onNotification), onNotificationDisplayed = js.Any.fromFunction1(onNotificationDisplayed), onNotificationOpened = js.Any.fromFunction1(onNotificationOpened), removeAllDeliveredNotifications = js.Any.fromFunction0(removeAllDeliveredNotifications), removeDeliveredNotification = js.Any.fromFunction1(removeDeliveredNotification), scheduleNotification = js.Any.fromFunction2(scheduleNotification), setBadge = js.Any.fromFunction1(setBadge))
     __obj.asInstanceOf[Notifications]
   }
-  @scala.inline
-  implicit class NotificationsOps[Self <: Notifications] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroid(value: AndroidNotifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCancelAllNotifications(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelAllNotifications")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCancelNotification(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelNotification")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisplayNotification(value: Notification => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayNotification")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetBadge(value: () => js.Promise[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBadge")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInitialNotification(value: () => js.Promise[NotificationOpen]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInitialNotification")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetScheduledNotifications(value: () => js.Promise[js.Array[Notification]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScheduledNotifications")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnNotification(value: js.Function1[/* notification */ Notification, _] => js.Function0[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotification")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnNotificationDisplayed(value: js.Function1[/* notification */ Notification, _] => js.Function0[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotificationDisplayed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnNotificationOpened(value: js.Function1[/* notificationOpen */ NotificationOpen, _] => js.Function0[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotificationOpened")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveAllDeliveredNotifications(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllDeliveredNotifications")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveDeliveredNotification(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDeliveredNotification")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withScheduleNotification(value: (Notification, Schedule) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleNotification")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetBadge(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBadge")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

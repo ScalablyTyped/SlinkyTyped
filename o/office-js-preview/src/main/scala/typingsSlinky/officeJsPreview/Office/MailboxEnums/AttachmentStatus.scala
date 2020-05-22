@@ -9,11 +9,11 @@ sealed trait AttachmentStatus extends js.Object
 
 /**
   * Specifies whether an attachment was added to or removed from an item.
-  * 
+  *
   * [Api set: Mailbox 1.8]
-  * 
+  *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @JSGlobal("Office.MailboxEnums.AttachmentStatus")

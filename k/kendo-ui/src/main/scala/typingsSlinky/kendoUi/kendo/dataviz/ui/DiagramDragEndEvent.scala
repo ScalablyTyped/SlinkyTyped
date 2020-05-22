@@ -4,62 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiagramDragEndEvent extends DiagramEvent {
-  var connectionHandle: js.UndefOr[String] = js.native
-  var connections: js.UndefOr[js.Any] = js.native
-  var shapes: js.UndefOr[js.Any] = js.native
+  var connectionHandle: js.UndefOr[String] = js.undefined
+  var connections: js.UndefOr[js.Any] = js.undefined
+  var shapes: js.UndefOr[js.Any] = js.undefined
 }
 
 object DiagramDragEndEvent {
   @scala.inline
-  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: Diagram): DiagramDragEndEvent = {
+  def apply(
+    isDefaultPrevented: () => Boolean,
+    preventDefault: js.Function,
+    sender: Diagram,
+    connectionHandle: String = null,
+    connections: js.Any = null,
+    shapes: js.Any = null
+  ): DiagramDragEndEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (connectionHandle != null) __obj.updateDynamic("connectionHandle")(connectionHandle.asInstanceOf[js.Any])
+    if (connections != null) __obj.updateDynamic("connections")(connections.asInstanceOf[js.Any])
+    if (shapes != null) __obj.updateDynamic("shapes")(shapes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagramDragEndEvent]
   }
-  @scala.inline
-  implicit class DiagramDragEndEventOps[Self <: DiagramDragEndEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionHandle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionHandle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionHandle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionHandle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnections(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShapes(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShapes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

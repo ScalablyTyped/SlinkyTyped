@@ -2,13 +2,40 @@ package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.M.Toast
+import typingsSlinky.materializeCss.M.ToastOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("materialize-css", "Toast")
 @js.native
-class Toast_ () extends Toast
+class Toast_ () extends Toast {
+  /**
+    * The DOM element the plugin was initialized with
+    */
+  /* CompleteClass */
+  override var el: Element = js.native
+  /**
+    * The options the instance was initialized with
+    */
+  /* CompleteClass */
+  override var options: ToastOptions = js.native
+  /**
+    * Describes the current pan state of the Toast.
+    */
+  /* CompleteClass */
+  override var panning: Boolean = js.native
+  /**
+    * The remaining amount of time in ms that the toast will stay before dismissal.
+    */
+  /* CompleteClass */
+  override var timeRemaining: Double = js.native
+  /**
+    * remove a specific toast
+    */
+  /* CompleteClass */
+  override def dismiss(): Unit = js.native
+}
 
 /* static members */
 @JSImport("materialize-css", "Toast")

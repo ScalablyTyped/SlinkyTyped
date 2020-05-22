@@ -36,6 +36,8 @@ object Reactour {
     @scala.inline
     def disableDotsNavigation(value: Boolean): this.type = set("disableDotsNavigation", value.asInstanceOf[js.Any])
     @scala.inline
+    def disableFocusLock(value: Boolean): this.type = set("disableFocusLock", value.asInstanceOf[js.Any])
+    @scala.inline
     def disableInteraction(value: Boolean): this.type = set("disableInteraction", value.asInstanceOf[js.Any])
     @scala.inline
     def disableKeyboardNavigation(value: Boolean | (js.Array[esc | right | left])): this.type = set("disableKeyboardNavigation", value.asInstanceOf[js.Any])

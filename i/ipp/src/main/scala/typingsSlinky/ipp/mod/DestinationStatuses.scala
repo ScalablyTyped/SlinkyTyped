@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DestinationStatuses extends js.Object {
-  var `destination-uri`: js.UndefOr[String] = js.native
-  var `images-completed`: js.UndefOr[Double] = js.native
-  var `transmission-status`: js.UndefOr[TransmissionStatus] = js.native
+  var `destination-uri`: js.UndefOr[String] = js.undefined
+  var `images-completed`: js.UndefOr[Double] = js.undefined
+  var `transmission-status`: js.UndefOr[TransmissionStatus] = js.undefined
 }
 
 object DestinationStatuses {
   @scala.inline
-  def apply(): DestinationStatuses = {
+  def apply(
+    `destination-uri`: String = null,
+    `images-completed`: js.UndefOr[Double] = js.undefined,
+    `transmission-status`: TransmissionStatus = null
+  ): DestinationStatuses = {
     val __obj = js.Dynamic.literal()
+    if (`destination-uri` != null) __obj.updateDynamic("destination-uri")(`destination-uri`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`images-completed`)) __obj.updateDynamic("images-completed")(`images-completed`.get.asInstanceOf[js.Any])
+    if (`transmission-status` != null) __obj.updateDynamic("transmission-status")(`transmission-status`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestinationStatuses]
   }
-  @scala.inline
-  implicit class DestinationStatusesOps[Self <: DestinationStatuses] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withDestination-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withImages-completed`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images-completed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutImages-completed`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images-completed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTransmission-status`(value: TransmissionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transmission-status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTransmission-status`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transmission-status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

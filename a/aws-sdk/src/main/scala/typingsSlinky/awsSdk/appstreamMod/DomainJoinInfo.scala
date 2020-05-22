@@ -18,41 +18,14 @@ trait DomainJoinInfo extends js.Object {
 
 object DomainJoinInfo {
   @scala.inline
-  def apply(): DomainJoinInfo = {
+  def apply(
+    DirectoryName: DirectoryName = null,
+    OrganizationalUnitDistinguishedName: OrganizationalUnitDistinguishedName = null
+  ): DomainJoinInfo = {
     val __obj = js.Dynamic.literal()
+    if (DirectoryName != null) __obj.updateDynamic("DirectoryName")(DirectoryName.asInstanceOf[js.Any])
+    if (OrganizationalUnitDistinguishedName != null) __obj.updateDynamic("OrganizationalUnitDistinguishedName")(OrganizationalUnitDistinguishedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainJoinInfo]
   }
-  @scala.inline
-  implicit class DomainJoinInfoOps[Self <: DomainJoinInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryName(value: DirectoryName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationalUnitDistinguishedName(value: OrganizationalUnitDistinguishedName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationalUnitDistinguishedName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitDistinguishedName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

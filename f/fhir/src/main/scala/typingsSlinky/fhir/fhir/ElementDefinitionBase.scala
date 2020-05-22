@@ -7,101 +7,58 @@ import scala.scalajs.js.annotation._
 /**
   * Base definition information for tools
   */
-@js.native
 trait ElementDefinitionBase extends Element {
   /**
     * Contains extended information for property 'max'.
     */
-  var _max: js.UndefOr[Element] = js.native
+  var _max: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'min'.
     */
-  var _min: js.UndefOr[Element] = js.native
+  var _min: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'path'.
     */
-  var _path: js.UndefOr[Element] = js.native
+  var _path: js.UndefOr[Element] = js.undefined
   /**
     * Max cardinality of the base element
     */
-  var max: String = js.native
+  var max: String
   /**
     * Min cardinality of the base element
     */
-  var min: unsignedInt = js.native
+  var min: unsignedInt
   /**
     * Path that identifies the base element
     */
-  var path: String = js.native
+  var path: String
 }
 
 object ElementDefinitionBase {
   @scala.inline
-  def apply(max: String, min: unsignedInt, path: String): ElementDefinitionBase = {
+  def apply(
+    max: String,
+    min: unsignedInt,
+    path: String,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _max: Element = null,
+    _min: Element = null,
+    _path: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null
+  ): ElementDefinitionBase = {
     val __obj = js.Dynamic.literal(max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_max != null) __obj.updateDynamic("_max")(_max.asInstanceOf[js.Any])
+    if (_min != null) __obj.updateDynamic("_min")(_min.asInstanceOf[js.Any])
+    if (_path != null) __obj.updateDynamic("_path")(_path.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementDefinitionBase]
   }
-  @scala.inline
-  implicit class ElementDefinitionBaseOps[Self <: ElementDefinitionBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: unsignedInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_max(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_max: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_min(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_min: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_path(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

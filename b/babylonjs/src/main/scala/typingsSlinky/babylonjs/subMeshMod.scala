@@ -225,6 +225,21 @@ object subMeshMod extends js.Object {
       trianglePredicate: TrianglePickingPredicate
     ): Nullable[IntersectionInfo] = js.native
     /**
+      * Checks if a cullable object (mesh...) is in the camera frustum
+      * Unlike isInFrustum this cheks the full bounding box
+      * @param frustumPlanes Camera near/planes
+      * @returns true if the object is in frustum otherwise false
+      */
+    /* CompleteClass */
+    override def isCompletelyInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
+    /**
+      * Checks if the object or part of the object is in the frustum
+      * @param frustumPlanes Camera near/planes
+      * @returns true if the object is in frustum otherwise false
+      */
+    /* CompleteClass */
+    override def isInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
+    /**
       * Sets a new updated BoundingInfo object to the submesh
       * @param data defines an optional position array to use to determine the bounding info
       * @returns the SubMesh

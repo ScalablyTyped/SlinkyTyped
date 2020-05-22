@@ -25,41 +25,11 @@ trait SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse extends 
 
 object SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse = {
+  def apply(fhirStore: String = null, inputSize: String = null): SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse = {
     val __obj = js.Dynamic.literal()
+    if (fhirStore != null) __obj.updateDynamic("fhirStore")(fhirStore.asInstanceOf[js.Any])
+    if (inputSize != null) __obj.updateDynamic("inputSize")(inputSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponseOps[Self <: SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFhirStore(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFhirStore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

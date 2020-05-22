@@ -22,41 +22,11 @@ trait SchemaFindingTypeStats extends js.Object {
 
 object SchemaFindingTypeStats {
   @scala.inline
-  def apply(): SchemaFindingTypeStats = {
+  def apply(findingCount: js.UndefOr[Double] = js.undefined, findingType: String = null): SchemaFindingTypeStats = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(findingCount)) __obj.updateDynamic("findingCount")(findingCount.get.asInstanceOf[js.Any])
+    if (findingType != null) __obj.updateDynamic("findingType")(findingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFindingTypeStats]
   }
-  @scala.inline
-  implicit class SchemaFindingTypeStatsOps[Self <: SchemaFindingTypeStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFindingCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

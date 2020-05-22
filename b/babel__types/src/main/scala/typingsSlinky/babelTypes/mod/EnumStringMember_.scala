@@ -6,48 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait EnumStringMember_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait EnumStringMember_
   extends EnumMember
      with BaseNode {
-  var id: Identifier_ = js.native
-  var init: StringLiteral_ = js.native
+  var id: Identifier_
+  var init: StringLiteral_
   @JSName("type")
-  var type_EnumStringMember_ : EnumStringMember = js.native
+  var type_EnumStringMember_ : EnumStringMember
 }
 
 object EnumStringMember_ {
   @scala.inline
-  def apply(id: Identifier_, init: StringLiteral_, `type`: EnumStringMember): EnumStringMember_ = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], init = init.asInstanceOf[js.Any])
+  def apply(
+    id: Identifier_,
+    init: StringLiteral_,
+    `type`: EnumStringMember,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): EnumStringMember_ = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], init = init.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnumStringMember_]
   }
-  @scala.inline
-  implicit class EnumStringMember_Ops[Self <: EnumStringMember_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInit(value: StringLiteral_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: EnumStringMember): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

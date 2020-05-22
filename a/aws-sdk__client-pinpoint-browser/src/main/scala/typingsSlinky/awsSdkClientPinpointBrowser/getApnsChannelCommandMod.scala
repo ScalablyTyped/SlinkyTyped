@@ -26,9 +26,16 @@ object getApnsChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetApnsChannelInput) = this()
+    /* CompleteClass */
+    override val input: GetApnsChannelInput = js.native
     val middlewareStack: MiddlewareStack[GetApnsChannelInput, GetApnsChannelOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[GetApnsChannelInput, GetApnsChannelOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetApnsChannelInput, GetApnsChannelOutput] = js.native
   }

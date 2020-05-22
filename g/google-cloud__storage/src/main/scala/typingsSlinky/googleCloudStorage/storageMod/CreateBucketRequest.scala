@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateBucketRequest extends js.Object {
-  var coldline: js.UndefOr[Boolean] = js.native
-  var dra: js.UndefOr[Boolean] = js.native
-  var location: js.UndefOr[String] = js.native
-  var multiRegional: js.UndefOr[Boolean] = js.native
-  var nearline: js.UndefOr[Boolean] = js.native
-  var regional: js.UndefOr[Boolean] = js.native
-  var requesterPays: js.UndefOr[Boolean] = js.native
-  var retentionPolicy: js.UndefOr[js.Object] = js.native
-  var standard: js.UndefOr[Boolean] = js.native
-  var userProject: js.UndefOr[String] = js.native
+  var coldline: js.UndefOr[Boolean] = js.undefined
+  var dra: js.UndefOr[Boolean] = js.undefined
+  var location: js.UndefOr[String] = js.undefined
+  var multiRegional: js.UndefOr[Boolean] = js.undefined
+  var nearline: js.UndefOr[Boolean] = js.undefined
+  var regional: js.UndefOr[Boolean] = js.undefined
+  var requesterPays: js.UndefOr[Boolean] = js.undefined
+  var retentionPolicy: js.UndefOr[js.Object] = js.undefined
+  var standard: js.UndefOr[Boolean] = js.undefined
+  var userProject: js.UndefOr[String] = js.undefined
 }
 
 object CreateBucketRequest {
   @scala.inline
-  def apply(): CreateBucketRequest = {
+  def apply(
+    coldline: js.UndefOr[Boolean] = js.undefined,
+    dra: js.UndefOr[Boolean] = js.undefined,
+    location: String = null,
+    multiRegional: js.UndefOr[Boolean] = js.undefined,
+    nearline: js.UndefOr[Boolean] = js.undefined,
+    regional: js.UndefOr[Boolean] = js.undefined,
+    requesterPays: js.UndefOr[Boolean] = js.undefined,
+    retentionPolicy: js.Object = null,
+    standard: js.UndefOr[Boolean] = js.undefined,
+    userProject: String = null
+  ): CreateBucketRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(coldline)) __obj.updateDynamic("coldline")(coldline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dra)) __obj.updateDynamic("dra")(dra.get.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiRegional)) __obj.updateDynamic("multiRegional")(multiRegional.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nearline)) __obj.updateDynamic("nearline")(nearline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(regional)) __obj.updateDynamic("regional")(regional.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requesterPays)) __obj.updateDynamic("requesterPays")(requesterPays.get.asInstanceOf[js.Any])
+    if (retentionPolicy != null) __obj.updateDynamic("retentionPolicy")(retentionPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(standard)) __obj.updateDynamic("standard")(standard.get.asInstanceOf[js.Any])
+    if (userProject != null) __obj.updateDynamic("userProject")(userProject.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBucketRequest]
   }
-  @scala.inline
-  implicit class CreateBucketRequestOps[Self <: CreateBucketRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColdline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coldline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColdline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coldline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDra(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiRegional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiRegional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiRegional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiRegional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNearline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nearline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNearline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nearline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequesterPays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requesterPays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequesterPays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requesterPays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetentionPolicy(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetentionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStandard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStandard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("standard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserProject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserProject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userProject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

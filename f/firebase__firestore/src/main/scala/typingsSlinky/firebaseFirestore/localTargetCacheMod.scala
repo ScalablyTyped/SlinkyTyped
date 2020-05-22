@@ -80,14 +80,6 @@ object localTargetCacheMod extends js.Object {
       */
     def getTargetData(transaction: PersistenceTransaction, target: Target): PersistencePromise[TargetData | Null] = js.native
     /**
-      * Looks up a TargetData entry by target ID.
-      *
-      * @param targetId The target ID of the TargetData entry to look up.
-      * @return The cached TargetData entry, or null if the cache has no entry for
-      * the target.
-      */
-    def getTargetDataForTarget(txn: PersistenceTransaction, targetId: TargetId): PersistencePromise[TargetData | Null] = js.native
-    /**
       * Removes the given document keys from the cached query results of the
       * given target ID.
       *

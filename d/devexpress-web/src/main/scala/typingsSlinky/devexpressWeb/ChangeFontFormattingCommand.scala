@@ -7,17 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change the font formatting of characters in a selected range.
   */
-@js.native
 trait ChangeFontFormattingCommand extends CommandBase {
   /**
     * Executes the ChangeFontFormattingCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param settings A  FontFormattingSettings object specifying font formatting settings.
     */
-  def execute(settings: FontFormattingSettings): Boolean = js.native
+  def execute(settings: FontFormattingSettings): Boolean
   /**
     * Gets information about the command's state.
     */
-  def getState(): CommandState[FontFormattingSettings] = js.native
+  def getState(): CommandState[FontFormattingSettings]
 }
 
 object ChangeFontFormattingCommand {
@@ -26,25 +25,5 @@ object ChangeFontFormattingCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[ChangeFontFormattingCommand]
   }
-  @scala.inline
-  implicit class ChangeFontFormattingCommandOps[Self <: ChangeFontFormattingCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: FontFormattingSettings => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetState(value: () => CommandState[FontFormattingSettings]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

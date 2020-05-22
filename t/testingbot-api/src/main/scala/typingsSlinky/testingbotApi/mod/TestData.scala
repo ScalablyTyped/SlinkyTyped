@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TestData extends js.Object {
-  var build: js.UndefOr[String] = js.native
-  var groups: js.UndefOr[String] = js.native
-  var `test[extra]`: js.UndefOr[String] = js.native
-  var `test[name]`: js.UndefOr[String] = js.native
-  var `test[status_message]`: js.UndefOr[String] = js.native
-  var `test[success]`: js.UndefOr[TestSuccess] = js.native
+  var build: js.UndefOr[String] = js.undefined
+  var groups: js.UndefOr[String] = js.undefined
+  var `test[extra]`: js.UndefOr[String] = js.undefined
+  var `test[name]`: js.UndefOr[String] = js.undefined
+  var `test[status_message]`: js.UndefOr[String] = js.undefined
+  var `test[success]`: js.UndefOr[TestSuccess] = js.undefined
 }
 
 object TestData {
   @scala.inline
-  def apply(): TestData = {
+  def apply(
+    build: String = null,
+    groups: String = null,
+    `test[extra]`: String = null,
+    `test[name]`: String = null,
+    `test[status_message]`: String = null,
+    `test[success]`: TestSuccess = null
+  ): TestData = {
     val __obj = js.Dynamic.literal()
+    if (build != null) __obj.updateDynamic("build")(build.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (`test[extra]` != null) __obj.updateDynamic("test[extra]")(`test[extra]`.asInstanceOf[js.Any])
+    if (`test[name]` != null) __obj.updateDynamic("test[name]")(`test[name]`.asInstanceOf[js.Any])
+    if (`test[status_message]` != null) __obj.updateDynamic("test[status_message]")(`test[status_message]`.asInstanceOf[js.Any])
+    if (`test[success]` != null) __obj.updateDynamic("test[success]")(`test[success]`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestData]
   }
-  @scala.inline
-  implicit class TestDataOps[Self <: TestData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBuild(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuild: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTest[extra]`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[extra]")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTest[extra]`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[extra]")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTest[name]`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[name]")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTest[name]`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[name]")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTest[status_message]`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[status_message]")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTest[status_message]`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[status_message]")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withTest[success]`(value: TestSuccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[success]")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutTest[success]`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test[success]")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

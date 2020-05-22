@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs")
 @js.native
 abstract class SpeechRecognitionHypothesisGeneratedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs {
+  /** Gets a recognition result fragment returned by the speech recognizer during an ongoing dictation session. */
+  /* CompleteClass */
+  override var hypothesis: typingsSlinky.winrtUwp.Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis = js.native
+}
 

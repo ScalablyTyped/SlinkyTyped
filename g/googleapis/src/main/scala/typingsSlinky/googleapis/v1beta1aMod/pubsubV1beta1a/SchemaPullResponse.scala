@@ -22,41 +22,11 @@ trait SchemaPullResponse extends js.Object {
 
 object SchemaPullResponse {
   @scala.inline
-  def apply(): SchemaPullResponse = {
+  def apply(ackId: String = null, pubsubEvent: SchemaPubsubEvent = null): SchemaPullResponse = {
     val __obj = js.Dynamic.literal()
+    if (ackId != null) __obj.updateDynamic("ackId")(ackId.asInstanceOf[js.Any])
+    if (pubsubEvent != null) __obj.updateDynamic("pubsubEvent")(pubsubEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPullResponse]
   }
-  @scala.inline
-  implicit class SchemaPullResponseOps[Self <: SchemaPullResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAckId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubsubEvent(value: SchemaPubsubEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubsubEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubEvent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

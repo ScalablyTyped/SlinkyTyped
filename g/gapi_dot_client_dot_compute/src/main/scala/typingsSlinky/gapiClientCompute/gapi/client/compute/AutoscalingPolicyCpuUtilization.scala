@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoscalingPolicyCpuUtilization extends js.Object {
   /**
     * The target CPU utilization that the autoscaler should maintain. Must be a float value in the range (0, 1]. If not specified, the default is 0.6.
@@ -15,34 +14,15 @@ trait AutoscalingPolicyCpuUtilization extends js.Object {
     * If the average CPU is above the target utilization, the autoscaler scales up until it reaches the maximum number of instances you specified or until
     * the average utilization reaches the target utilization.
     */
-  var utilizationTarget: js.UndefOr[Double] = js.native
+  var utilizationTarget: js.UndefOr[Double] = js.undefined
 }
 
 object AutoscalingPolicyCpuUtilization {
   @scala.inline
-  def apply(): AutoscalingPolicyCpuUtilization = {
+  def apply(utilizationTarget: js.UndefOr[Double] = js.undefined): AutoscalingPolicyCpuUtilization = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(utilizationTarget)) __obj.updateDynamic("utilizationTarget")(utilizationTarget.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoscalingPolicyCpuUtilization]
   }
-  @scala.inline
-  implicit class AutoscalingPolicyCpuUtilizationOps[Self <: AutoscalingPolicyCpuUtilization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUtilizationTarget(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtilizationTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,7 +6,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.Checked
-import typingsSlinky.antd.treeMod.default
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.treeTreeMod.AntdTreeNodeAttribute
 import typingsSlinky.antd.treeTreeMod.TreeProps
@@ -23,7 +22,10 @@ import typingsSlinky.rcTree.mod.OnMouseEnterData
 import typingsSlinky.rcTree.mod.OnMouseLeaveData
 import typingsSlinky.rcTree.mod.OnRightClickData
 import typingsSlinky.rcTree.mod.SelectData
+import typingsSlinky.rcTree.mod.default
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +38,7 @@ object Tree {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def autoExpandParent(value: Boolean): this.type = set("autoExpandParent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,25 +48,45 @@ object Tree {
     @scala.inline
     def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
-    def checkedKeys(value: js.Array[String] | Checked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
+    def checkedKeys(
+      value: (js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]) | Checked
+    ): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultCheckedKeys(value: js.Array[String]): this.type = set("defaultCheckedKeys", value.asInstanceOf[js.Any])
+    def defaultCheckedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): this.type = set("defaultCheckedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultExpandAll(value: Boolean): this.type = set("defaultExpandAll", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultExpandParent(value: Boolean): this.type = set("defaultExpandParent", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultExpandedKeys(value: js.Array[String]): this.type = set("defaultExpandedKeys", value.asInstanceOf[js.Any])
+    def defaultExpandedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): this.type = set("defaultExpandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+    def defaultSelectedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
-    def expandedKeys(value: js.Array[String]): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
+    def expandedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def filterAntTreeNode(value: ReactComponentClass[AntTreeNodeProps] => Boolean): this.type = set("filterAntTreeNode", js.Any.fromFunction1(value))
     @scala.inline
@@ -78,7 +100,11 @@ object Tree {
     @scala.inline
     def loadData(value: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_]): this.type = set("loadData", js.Any.fromFunction1(value))
     @scala.inline
-    def loadedKeys(value: js.Array[String]): this.type = set("loadedKeys", value.asInstanceOf[js.Any])
+    def loadedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): this.type = set("loadedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
@@ -110,7 +136,11 @@ object Tree {
     @scala.inline
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    def selectedKeys(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+        ]
+    ): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -121,7 +151,7 @@ object Tree {
     def switcherIcon(value: ReactElement): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TreeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: TreeProps with RefAttributes[default]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tree.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdatePullRequestStatusInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
@@ -17,88 +16,41 @@ trait UpdatePullRequestStatusInput extends InputTypesUnion {
     * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal
     */
   @JSName("$abortSignal")
-  var $abortSignal: js.UndefOr[AbortSignal] = js.native
+  var $abortSignal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * Per-request HTTP configuration options. If set, any options specified will override the corresponding HTTP option set on the client for this command.
     */
   @JSName("$httpOptions")
-  var $httpOptions: js.UndefOr[NodeHttpOptions] = js.native
+  var $httpOptions: js.UndefOr[NodeHttpOptions] = js.undefined
   /**
     * The maximum number of times this operation should be retried. If set, this value will override the `maxRetries` configuration set on the client for this command.
     */
   @JSName("$maxRetries")
-  var $maxRetries: js.UndefOr[Double] = js.native
+  var $maxRetries: js.UndefOr[Double] = js.undefined
   /**
     * <p>The system-generated ID of the pull request. To get this ID, use <a>ListPullRequests</a>.</p>
     */
-  var pullRequestId: String = js.native
+  var pullRequestId: String
   /**
     * <p>The status of the pull request. The only valid operations are to update the status from <code>OPEN</code> to <code>OPEN</code>, <code>OPEN</code> to <code>CLOSED</code> or from from <code>CLOSED</code> to <code>CLOSED</code>.</p>
     */
-  var pullRequestStatus: OPEN | CLOSED | String = js.native
+  var pullRequestStatus: OPEN | CLOSED | String
 }
 
 object UpdatePullRequestStatusInput {
   @scala.inline
-  def apply(pullRequestId: String, pullRequestStatus: OPEN | CLOSED | String): UpdatePullRequestStatusInput = {
+  def apply(
+    pullRequestId: String,
+    pullRequestStatus: OPEN | CLOSED | String,
+    $abortSignal: AbortSignal = null,
+    $httpOptions: NodeHttpOptions = null,
+    $maxRetries: js.UndefOr[Double] = js.undefined
+  ): UpdatePullRequestStatusInput = {
     val __obj = js.Dynamic.literal(pullRequestId = pullRequestId.asInstanceOf[js.Any], pullRequestStatus = pullRequestStatus.asInstanceOf[js.Any])
+    if ($abortSignal != null) __obj.updateDynamic("$abortSignal")($abortSignal.asInstanceOf[js.Any])
+    if ($httpOptions != null) __obj.updateDynamic("$httpOptions")($httpOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined($maxRetries)) __obj.updateDynamic("$maxRetries")($maxRetries.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdatePullRequestStatusInput]
   }
-  @scala.inline
-  implicit class UpdatePullRequestStatusInputOps[Self <: UpdatePullRequestStatusInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPullRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPullRequestStatus(value: OPEN | CLOSED | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$abortSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$abortSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$httpOptions(value: NodeHttpOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$httpOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$maxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$maxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

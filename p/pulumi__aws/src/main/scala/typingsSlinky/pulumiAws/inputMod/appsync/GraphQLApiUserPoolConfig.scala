@@ -27,53 +27,16 @@ trait GraphQLApiUserPoolConfig extends js.Object {
 
 object GraphQLApiUserPoolConfig {
   @scala.inline
-  def apply(defaultAction: Input[String], userPoolId: Input[String]): GraphQLApiUserPoolConfig = {
+  def apply(
+    defaultAction: Input[String],
+    userPoolId: Input[String],
+    appIdClientRegex: Input[String] = null,
+    awsRegion: Input[String] = null
+  ): GraphQLApiUserPoolConfig = {
     val __obj = js.Dynamic.literal(defaultAction = defaultAction.asInstanceOf[js.Any], userPoolId = userPoolId.asInstanceOf[js.Any])
+    if (appIdClientRegex != null) __obj.updateDynamic("appIdClientRegex")(appIdClientRegex.asInstanceOf[js.Any])
+    if (awsRegion != null) __obj.updateDynamic("awsRegion")(awsRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLApiUserPoolConfig]
   }
-  @scala.inline
-  implicit class GraphQLApiUserPoolConfigOps[Self <: GraphQLApiUserPoolConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultAction(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserPoolId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppIdClientRegex(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appIdClientRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppIdClientRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appIdClientRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsRegion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsRegion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

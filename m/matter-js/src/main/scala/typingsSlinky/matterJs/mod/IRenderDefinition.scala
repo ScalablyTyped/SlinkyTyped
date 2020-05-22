@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IRenderDefinition extends js.Object {
   /**
     * A `Bounds` object that specifies the drawing view region.
@@ -18,7 +17,7 @@ trait IRenderDefinition extends js.Object {
     * @property bounds
     * @type bounds
     */
-  var bounds: js.UndefOr[Bounds] = js.native
+  var bounds: js.UndefOr[Bounds] = js.undefined
   /**
     * The canvas element to render to. If not specified, one will be created if `render.element` has been specified.
     *
@@ -26,21 +25,21 @@ trait IRenderDefinition extends js.Object {
     * @type HTMLCanvasElement
     * @default null
     */
-  var canvas: js.UndefOr[HTMLCanvasElement] = js.native
+  var canvas: js.UndefOr[HTMLCanvasElement] = js.undefined
   /**
     * The 2d rendering context from the `render.canvas` element.
     *
     * @property context
     * @type CanvasRenderingContext2D
     */
-  var context: js.UndefOr[CanvasRenderingContext2D] = js.native
+  var context: js.UndefOr[CanvasRenderingContext2D] = js.undefined
   /**
     * A back-reference to the `Matter.Render` module.
     *
     * @property controller
     * @type render
     */
-  var controller: js.UndefOr[js.Any] = js.native
+  var controller: js.UndefOr[js.Any] = js.undefined
   /**
     * A reference to the element where the canvas is to be inserted (if `render.canvas` has not been specified)
     *
@@ -49,133 +48,51 @@ trait IRenderDefinition extends js.Object {
     * @default null
     * @deprecated
     */
-  var element: js.UndefOr[HTMLElement] = js.native
+  var element: js.UndefOr[HTMLElement] = js.undefined
   /**
     * A reference to the `Matter.Engine` instance to be used.
     *
     * @property engine
     * @type engine
     */
-  var engine: Engine = js.native
+  var engine: Engine
   /**
     * The configuration options of the renderer.
     *
     * @property options
     * @type {}
     */
-  var options: js.UndefOr[IRendererOptions] = js.native
+  var options: js.UndefOr[IRendererOptions] = js.undefined
   /**
     * The sprite texture cache.
     *
     * @property textures
     * @type {}
     */
-  var textures: js.UndefOr[js.Any] = js.native
+  var textures: js.UndefOr[js.Any] = js.undefined
 }
 
 object IRenderDefinition {
   @scala.inline
-  def apply(engine: Engine): IRenderDefinition = {
+  def apply(
+    engine: Engine,
+    bounds: Bounds = null,
+    canvas: HTMLCanvasElement = null,
+    context: CanvasRenderingContext2D = null,
+    controller: js.Any = null,
+    element: HTMLElement = null,
+    options: IRendererOptions = null,
+    textures: js.Any = null
+  ): IRenderDefinition = {
     val __obj = js.Dynamic.literal(engine = engine.asInstanceOf[js.Any])
+    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
+    if (canvas != null) __obj.updateDynamic("canvas")(canvas.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (textures != null) __obj.updateDynamic("textures")(textures.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRenderDefinition]
   }
-  @scala.inline
-  implicit class IRenderDefinitionOps[Self <: IRenderDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngine(value: Engine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBounds(value: Bounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanvas(value: HTMLCanvasElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: CanvasRenderingContext2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withController(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutController: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: IRendererOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextures(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textures")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

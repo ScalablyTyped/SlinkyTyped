@@ -4,44 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BehaviorModel extends js.Object {
   /**
     * Is the behavior abstract (i.e. can not be associated with any work item type)
     */
-  var `abstract`: Boolean = js.native
+  var `abstract`: Boolean
   /**
     * Color
     */
-  var color: String = js.native
+  var color: String
   /**
     * Description
     */
-  var description: String = js.native
+  var description: String
   /**
     * Behavior Id
     */
-  var id: String = js.native
+  var id: String
   /**
     * Parent behavior reference
     */
-  var inherits: WorkItemBehaviorReference = js.native
+  var inherits: WorkItemBehaviorReference
   /**
     * Behavior Name
     */
-  var name: String = js.native
+  var name: String
   /**
     * Is the behavior overrides a behavior from system process
     */
-  var overridden: Boolean = js.native
+  var overridden: Boolean
   /**
     * Rank
     */
-  var rank: Double = js.native
+  var rank: Double
   /**
     * Url of the behavior
     */
-  var url: String = js.native
+  var url: String
 }
 
 object BehaviorModel {
@@ -61,67 +60,5 @@ object BehaviorModel {
     __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BehaviorModel]
   }
-  @scala.inline
-  implicit class BehaviorModelOps[Self <: BehaviorModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbstract(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abstract")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInherits(value: WorkItemBehaviorReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverridden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overridden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

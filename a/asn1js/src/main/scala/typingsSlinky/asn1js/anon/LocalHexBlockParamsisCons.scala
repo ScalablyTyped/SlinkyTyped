@@ -5,140 +5,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined asn1js.asn1js.LocalHexBlockParams & {  isConstructed ? :boolean,   tagClass ? :number,   tagNumber ? :number} */
-@js.native
 trait LocalHexBlockParamsisCons extends js.Object {
-  var blockLength: js.UndefOr[Double] = js.native
-  var error: js.UndefOr[String] = js.native
-  var isConstructed: js.UndefOr[Boolean] = js.native
-  var isHexOnly: js.UndefOr[Boolean] = js.native
-  var tagClass: js.UndefOr[Double] = js.native
-  var tagNumber: js.UndefOr[Double] = js.native
-  var valueBeforeDecode: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
-  var valueHex: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
-  var warnings: js.UndefOr[js.Array[String]] = js.native
+  var blockLength: js.UndefOr[Double] = js.undefined
+  var error: js.UndefOr[String] = js.undefined
+  var isConstructed: js.UndefOr[Boolean] = js.undefined
+  var isHexOnly: js.UndefOr[Boolean] = js.undefined
+  var tagClass: js.UndefOr[Double] = js.undefined
+  var tagNumber: js.UndefOr[Double] = js.undefined
+  var valueBeforeDecode: js.UndefOr[js.typedarray.ArrayBuffer] = js.undefined
+  var valueHex: js.UndefOr[js.typedarray.ArrayBuffer] = js.undefined
+  var warnings: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object LocalHexBlockParamsisCons {
   @scala.inline
-  def apply(): LocalHexBlockParamsisCons = {
+  def apply(
+    blockLength: js.UndefOr[Double] = js.undefined,
+    error: String = null,
+    isConstructed: js.UndefOr[Boolean] = js.undefined,
+    isHexOnly: js.UndefOr[Boolean] = js.undefined,
+    tagClass: js.UndefOr[Double] = js.undefined,
+    tagNumber: js.UndefOr[Double] = js.undefined,
+    valueBeforeDecode: js.typedarray.ArrayBuffer = null,
+    valueHex: js.typedarray.ArrayBuffer = null,
+    warnings: js.Array[String] = null
+  ): LocalHexBlockParamsisCons = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockLength)) __obj.updateDynamic("blockLength")(blockLength.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (!js.isUndefined(isConstructed)) __obj.updateDynamic("isConstructed")(isConstructed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHexOnly)) __obj.updateDynamic("isHexOnly")(isHexOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tagClass)) __obj.updateDynamic("tagClass")(tagClass.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tagNumber)) __obj.updateDynamic("tagNumber")(tagNumber.get.asInstanceOf[js.Any])
+    if (valueBeforeDecode != null) __obj.updateDynamic("valueBeforeDecode")(valueBeforeDecode.asInstanceOf[js.Any])
+    if (valueHex != null) __obj.updateDynamic("valueHex")(valueHex.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalHexBlockParamsisCons]
   }
-  @scala.inline
-  implicit class LocalHexBlockParamsisConsOps[Self <: LocalHexBlockParamsisCons] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsConstructed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConstructed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsConstructed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isConstructed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHexOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHexOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHexOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagClass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueBeforeDecode(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBeforeDecode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueBeforeDecode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBeforeDecode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueHex(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueHex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueHex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueHex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,71 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MetadataOptions extends js.Object {
   /**
     * An array of keys that should not be added to the metadata object.
     */
-  var fillExcept: js.UndefOr[js.Array[String]] = js.native
+  var fillExcept: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * An array of keys that will be added to the metadata object.
     */
-  var fillWith: js.UndefOr[js.Array[String]] = js.native
+  var fillWith: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The name of the key used for the metadata object. Defaults to `metadata`.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
 }
 
 object MetadataOptions {
   @scala.inline
-  def apply(): MetadataOptions = {
+  def apply(fillExcept: js.Array[String] = null, fillWith: js.Array[String] = null, key: String = null): MetadataOptions = {
     val __obj = js.Dynamic.literal()
+    if (fillExcept != null) __obj.updateDynamic("fillExcept")(fillExcept.asInstanceOf[js.Any])
+    if (fillWith != null) __obj.updateDynamic("fillWith")(fillWith.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetadataOptions]
   }
-  @scala.inline
-  implicit class MetadataOptionsOps[Self <: MetadataOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFillExcept(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillExcept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillExcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillExcept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFillWith(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillWith")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFillWith: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fillWith")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

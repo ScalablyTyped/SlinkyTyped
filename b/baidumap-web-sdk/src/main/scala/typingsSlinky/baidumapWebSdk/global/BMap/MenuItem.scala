@@ -15,5 +15,13 @@ class MenuItem protected ()
     callback: js.Function1[/* point */ typingsSlinky.baidumapWebSdk.BMap.Point, Unit],
     opts: MenuItemOptions
   ) = this()
+  /* CompleteClass */
+  override def disable(): Unit = js.native
+  /* CompleteClass */
+  override def enable(): Unit = js.native
+  /* CompleteClass */
+  override def setIcon(iconUrl: String): Unit = js.native
+  /* CompleteClass */
+  override def setText(text: String): Unit = js.native
 }
 

@@ -23,61 +23,60 @@ import scala.scalajs.js.annotation._
   * indices for retrieving data include the maximal table size  -  256 columns and 32000 rows  -  minus one.
   * @since OOo 1.1.2
   */
-@js.native
 trait XAccessibleTable extends XInterface {
   /**
     * Returns the caption for the table.
     * @returns If the table has a caption then a reference to it is returned, else an empty reference is returned.
     */
-  val AccessibleCaption: XAccessible = js.native
+  val AccessibleCaption: XAccessible
   /**
     * Returns the number of used columns in the table.
     *
     * The implementation, however, may allow the access of columns beyond this number.
     * @returns Returns the number of used columns in the table or 0 for an empty table.
     */
-  val AccessibleColumnCount: Double = js.native
+  val AccessibleColumnCount: Double
   /**
     * Returns the column headers as an {@link XAccessibleTable} object.
     *
     * Content and size of the returned table are implementation dependent.
     * @returns Returns always a valid reference to an {@link XAccessibleTable} object.
     */
-  val AccessibleColumnHeaders: XAccessibleTable = js.native
+  val AccessibleColumnHeaders: XAccessibleTable
   /**
     * Returns the number of used rows in the table.
     *
     * The implementation, however, may allow the access of columns beyond this number.
     * @returns Returns the number of used rows in the table or 0 for an empty table.
     */
-  val AccessibleRowCount: Double = js.native
+  val AccessibleRowCount: Double
   /**
     * Returns the row headers as an {@link XAccessibleTable} object.
     *
     * Content and size of the returned table are implementation dependent.
     * @returns Returns always a valid reference to an {@link XAccessibleTable} object.
     */
-  val AccessibleRowHeaders: XAccessibleTable = js.native
+  val AccessibleRowHeaders: XAccessibleTable
   /**
     * Returns the summary description of the table.
     * @returns Returns a reference to an implementation dependent {@link XAccessible} object representing the table's summary or an empty reference if the table
     */
-  val AccessibleSummary: XAccessible = js.native
+  val AccessibleSummary: XAccessible
   /**
     * Returns a list of the indices of completely selected columns in a table.
     * @returns The returned sequence contains indices of all completely selected columns in the table. This sequence is in ascending order. If no column is sele
     */
-  val SelectedAccessibleColumns: SafeArray[Double] = js.native
+  val SelectedAccessibleColumns: SafeArray[Double]
   /**
     * Returns a list of the indices of completely selected rows in a table.
     * @returns The returned sequence contains indices of all completely selected rows in the table. This sequence is in ascending order. If no row is selected t
     */
-  val SelectedAccessibleRows: SafeArray[Double] = js.native
+  val SelectedAccessibleRows: SafeArray[Double]
   /**
     * Returns the caption for the table.
     * @returns If the table has a caption then a reference to it is returned, else an empty reference is returned.
     */
-  def getAccessibleCaption(): XAccessible = js.native
+  def getAccessibleCaption(): XAccessible
   /**
     * Returns the {@link XAccessible} object at the specified row and column in the table.
     *
@@ -88,28 +87,28 @@ trait XAccessibleTable extends XInterface {
     * @returns If both row and column index are valid then the corresponding {@link XAccessible} object is returned that represents the requested cell regardles
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified column and/or row index is not valid, i.e. lies not inside the valid range of 0
     */
-  def getAccessibleCellAt(nRow: Double, nColumn: Double): XAccessible = js.native
+  def getAccessibleCellAt(nRow: Double, nColumn: Double): XAccessible
   /**
     * Translate the given child index into the corresponding column index.
     * @param nChildIndex Index of the child of the table for which to return the column index.
     * @returns Returns the column index of the cell of the specified child or the index of the first column if the child spans multiple columns.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if nChildIndex addresses an invalid column.
     */
-  def getAccessibleColumn(nChildIndex: Double): Double = js.native
+  def getAccessibleColumn(nChildIndex: Double): Double
   /**
     * Returns the number of used columns in the table.
     *
     * The implementation, however, may allow the access of columns beyond this number.
     * @returns Returns the number of used columns in the table or 0 for an empty table.
     */
-  def getAccessibleColumnCount(): Double = js.native
+  def getAccessibleColumnCount(): Double
   /**
     * Returns the description text of the specified column in the table.
     * @param nColumn The index of the column for which to retrieve the description.
     * @returns Returns the description text of the specified row in the table if such a description exists. Otherwise an empty string is returned.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified column index is not valid, i.e. lies not inside the valid range of 0 up to {@lin
     */
-  def getAccessibleColumnDescription(nColumn: Double): String = js.native
+  def getAccessibleColumnDescription(nColumn: Double): String
   /**
     * Returns the number of columns occupied by the {@link Accessible} at the specified row and column in the table.
     *
@@ -119,14 +118,14 @@ trait XAccessibleTable extends XInterface {
     * @returns Returns the column extent of the specified.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified column index is not valid, i.e. lies not inside the valid range of 0 up to {@lin
     */
-  def getAccessibleColumnExtentAt(nRow: Double, nColumn: Double): Double = js.native
+  def getAccessibleColumnExtentAt(nRow: Double, nColumn: Double): Double
   /**
     * Returns the column headers as an {@link XAccessibleTable} object.
     *
     * Content and size of the returned table are implementation dependent.
     * @returns Returns always a valid reference to an {@link XAccessibleTable} object.
     */
-  def getAccessibleColumnHeaders(): XAccessibleTable = js.native
+  def getAccessibleColumnHeaders(): XAccessibleTable
   /**
     * Returns the child index of the accessible object that spans the specified cell.
     *
@@ -135,28 +134,28 @@ trait XAccessibleTable extends XInterface {
     * @param nColumn Row index of the accessible object for which to return the child index.
     * @returns Child index of the specified accessible object or -1 if one or both of the given indices is/are invalid.
     */
-  def getAccessibleIndex(nRow: Double, nColumn: Double): Double = js.native
+  def getAccessibleIndex(nRow: Double, nColumn: Double): Double
   /**
     * Translate the given child index into the corresponding row index.
     * @param nChildIndex Index of the child of the table for which to return the row index.
     * @returns Returns the row index of the cell of the specified child or the index of the first row if the child spans multiple rows.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if nChildIndex addresses an invalid row.
     */
-  def getAccessibleRow(nChildIndex: Double): Double = js.native
+  def getAccessibleRow(nChildIndex: Double): Double
   /**
     * Returns the number of used rows in the table.
     *
     * The implementation, however, may allow the access of columns beyond this number.
     * @returns Returns the number of used rows in the table or 0 for an empty table.
     */
-  def getAccessibleRowCount(): Double = js.native
+  def getAccessibleRowCount(): Double
   /**
     * Returns the description text of the specified row in the table.
     * @param nRow The index of the row for which to retrieve the description.
     * @returns Returns the description text of the specified row in the table if such a description exists. Otherwise an empty string is returned.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified row index is not valid, i.e. lies not inside the valid range of 0 up to {@link X
     */
-  def getAccessibleRowDescription(nRow: Double): String = js.native
+  def getAccessibleRowDescription(nRow: Double): String
   /**
     * Returns the number of rows occupied by the {@link Accessible} at the specified row and column in the table.
     *
@@ -166,50 +165,50 @@ trait XAccessibleTable extends XInterface {
     * @returns Returns the row extent of the specified cell.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified row index is not valid, i.e. lies not inside the valid range of 0 up to {@link X
     */
-  def getAccessibleRowExtentAt(nRow: Double, nColumn: Double): Double = js.native
+  def getAccessibleRowExtentAt(nRow: Double, nColumn: Double): Double
   /**
     * Returns the row headers as an {@link XAccessibleTable} object.
     *
     * Content and size of the returned table are implementation dependent.
     * @returns Returns always a valid reference to an {@link XAccessibleTable} object.
     */
-  def getAccessibleRowHeaders(): XAccessibleTable = js.native
+  def getAccessibleRowHeaders(): XAccessibleTable
   /**
     * Returns the summary description of the table.
     * @returns Returns a reference to an implementation dependent {@link XAccessible} object representing the table's summary or an empty reference if the table
     */
-  def getAccessibleSummary(): XAccessible = js.native
+  def getAccessibleSummary(): XAccessible
   /**
     * Returns a list of the indices of completely selected columns in a table.
     * @returns The returned sequence contains indices of all completely selected columns in the table. This sequence is in ascending order. If no column is sele
     */
-  def getSelectedAccessibleColumns(): SafeArray[Double] = js.native
+  def getSelectedAccessibleColumns(): SafeArray[Double]
   /**
     * Returns a list of the indices of completely selected rows in a table.
     * @returns The returned sequence contains indices of all completely selected rows in the table. This sequence is in ascending order. If no row is selected t
     */
-  def getSelectedAccessibleRows(): SafeArray[Double] = js.native
+  def getSelectedAccessibleRows(): SafeArray[Double]
   /**
     * Returns a boolean value indicating whether the specified column is completely selected.
     * @param nColumn Index of the column for which to determine whether it is selected.
     * @returns Returns `TRUE` if the specified column is selected completely and `FALSE` otherwise.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified column index is not valid, i.e. lies not inside the valid range of 0 up to {@lin
     */
-  def isAccessibleColumnSelected(nColumn: Double): Boolean = js.native
+  def isAccessibleColumnSelected(nColumn: Double): Boolean
   /**
     * Returns a boolean value indicating whether the specified row is completely selected.
     * @param nRow Index of the row for which to determine whether it is selected.
     * @returns Returns `TRUE` if the specified row is selected completely and `FALSE` otherwise.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the specified row index is not valid, i.e. lies not inside the valid range of 0 up to {@link X
     */
-  def isAccessibleRowSelected(nRow: Double): Boolean = js.native
+  def isAccessibleRowSelected(nRow: Double): Boolean
   /**
     * Returns a boolean value indicating whether the accessible at the specified row and column is selected.
     * @param nRow Row index of the cell for which to determine if the accessible object that spans that cell is selected.
     * @param nColumn Column index of the cell for which to determine if the accessible object that spans that cell is selected.
     * @returns Returns `TRUE` if the given row and column indices are valid and the specified accessible object is selected. Otherwise `FALSE` is returned.
     */
-  def isAccessibleSelected(nRow: Double, nColumn: Double): Boolean = js.native
+  def isAccessibleSelected(nRow: Double, nColumn: Double): Boolean
 }
 
 object XAccessibleTable {
@@ -249,175 +248,5 @@ object XAccessibleTable {
     val __obj = js.Dynamic.literal(AccessibleCaption = AccessibleCaption.asInstanceOf[js.Any], AccessibleColumnCount = AccessibleColumnCount.asInstanceOf[js.Any], AccessibleColumnHeaders = AccessibleColumnHeaders.asInstanceOf[js.Any], AccessibleRowCount = AccessibleRowCount.asInstanceOf[js.Any], AccessibleRowHeaders = AccessibleRowHeaders.asInstanceOf[js.Any], AccessibleSummary = AccessibleSummary.asInstanceOf[js.Any], SelectedAccessibleColumns = SelectedAccessibleColumns.asInstanceOf[js.Any], SelectedAccessibleRows = SelectedAccessibleRows.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getAccessibleCaption = js.Any.fromFunction0(getAccessibleCaption), getAccessibleCellAt = js.Any.fromFunction2(getAccessibleCellAt), getAccessibleColumn = js.Any.fromFunction1(getAccessibleColumn), getAccessibleColumnCount = js.Any.fromFunction0(getAccessibleColumnCount), getAccessibleColumnDescription = js.Any.fromFunction1(getAccessibleColumnDescription), getAccessibleColumnExtentAt = js.Any.fromFunction2(getAccessibleColumnExtentAt), getAccessibleColumnHeaders = js.Any.fromFunction0(getAccessibleColumnHeaders), getAccessibleIndex = js.Any.fromFunction2(getAccessibleIndex), getAccessibleRow = js.Any.fromFunction1(getAccessibleRow), getAccessibleRowCount = js.Any.fromFunction0(getAccessibleRowCount), getAccessibleRowDescription = js.Any.fromFunction1(getAccessibleRowDescription), getAccessibleRowExtentAt = js.Any.fromFunction2(getAccessibleRowExtentAt), getAccessibleRowHeaders = js.Any.fromFunction0(getAccessibleRowHeaders), getAccessibleSummary = js.Any.fromFunction0(getAccessibleSummary), getSelectedAccessibleColumns = js.Any.fromFunction0(getSelectedAccessibleColumns), getSelectedAccessibleRows = js.Any.fromFunction0(getSelectedAccessibleRows), isAccessibleColumnSelected = js.Any.fromFunction1(isAccessibleColumnSelected), isAccessibleRowSelected = js.Any.fromFunction1(isAccessibleRowSelected), isAccessibleSelected = js.Any.fromFunction2(isAccessibleSelected), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAccessibleTable]
   }
-  @scala.inline
-  implicit class XAccessibleTableOps[Self <: XAccessibleTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessibleCaption(value: XAccessible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleCaption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleColumnCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleColumnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleColumnHeaders(value: XAccessibleTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleColumnHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleRowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleRowHeaders(value: XAccessibleTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleRowHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessibleSummary(value: XAccessible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessibleSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedAccessibleColumns(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedAccessibleColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedAccessibleRows(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedAccessibleRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleCaption(value: () => XAccessible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleCaption")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleCellAt(value: (Double, Double) => XAccessible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleCellAt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleColumn(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleColumn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleColumnCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleColumnCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleColumnDescription(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleColumnDescription")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleColumnExtentAt(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleColumnExtentAt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleColumnHeaders(value: () => XAccessibleTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleColumnHeaders")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleIndex(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleRow(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleRowCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleRowCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleRowDescription(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleRowDescription")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleRowExtentAt(value: (Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleRowExtentAt")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleRowHeaders(value: () => XAccessibleTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleRowHeaders")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccessibleSummary(value: () => XAccessible): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibleSummary")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectedAccessibleColumns(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedAccessibleColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectedAccessibleRows(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedAccessibleRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsAccessibleColumnSelected(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAccessibleColumnSelected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsAccessibleRowSelected(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAccessibleRowSelected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsAccessibleSelected(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAccessibleSelected")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

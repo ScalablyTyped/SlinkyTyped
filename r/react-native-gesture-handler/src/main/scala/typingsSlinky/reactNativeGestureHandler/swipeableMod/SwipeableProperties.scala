@@ -1,7 +1,6 @@
 package typingsSlinky.reactNativeGestureHandler.swipeableMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.StyleProp
@@ -16,43 +15,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Pick<react-native-gesture-handler.react-native-gesture-handler.PanGestureHandlerProperties, react-native-gesture-handler.react-native-gesture-handler/Swipeable.SwipeableExcludes> */
-@js.native
 trait SwipeableProperties extends js.Object {
-  var activeOffsetX: js.UndefOr[Double | js.Array[Double]] = js.native
-  var activeOffsetY: js.UndefOr[Double | js.Array[Double]] = js.native
-  var avgTouches: js.UndefOr[Boolean] = js.native
-  var childrenContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var failOffsetX: js.UndefOr[Double | js.Array[Double]] = js.native
-  var failOffsetY: js.UndefOr[Double | js.Array[Double]] = js.native
-  var friction: js.UndefOr[Double] = js.native
-  var hitSlop: js.UndefOr[Double | Bottom | Left | Right | Height | BottomHeight] = js.native
-  var id: js.UndefOr[String] = js.native
-  var leftThreshold: js.UndefOr[Double] = js.native
-  var maxDeltaX: js.UndefOr[Double] = js.native
-  var maxDeltaY: js.UndefOr[Double] = js.native
-  var maxPointers: js.UndefOr[Double] = js.native
-  var minDeltaX: js.UndefOr[Double] = js.native
-  var minDeltaY: js.UndefOr[Double] = js.native
-  var minDist: js.UndefOr[Double] = js.native
-  var minOffsetX: js.UndefOr[Double] = js.native
-  var minOffsetY: js.UndefOr[Double] = js.native
-  var minPointers: js.UndefOr[Double] = js.native
-  var minVelocity: js.UndefOr[Double] = js.native
-  var minVelocityX: js.UndefOr[Double] = js.native
-  var minVelocityY: js.UndefOr[Double] = js.native
-  var onSwipeableClose: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableLeftOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableLeftWillOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableRightOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableRightWillOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableWillClose: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSwipeableWillOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var overshootFriction: js.UndefOr[Double] = js.native
-  var overshootLeft: js.UndefOr[Boolean] = js.native
-  var overshootRight: js.UndefOr[Boolean] = js.native
+  var activeOffsetX: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var activeOffsetY: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var avgTouches: js.UndefOr[Boolean] = js.undefined
+  var childrenContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var failOffsetX: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var failOffsetY: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var friction: js.UndefOr[Double] = js.undefined
+  var hitSlop: js.UndefOr[Double | Bottom | Left | Right | Height | BottomHeight] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var leftThreshold: js.UndefOr[Double] = js.undefined
+  var maxDeltaX: js.UndefOr[Double] = js.undefined
+  var maxDeltaY: js.UndefOr[Double] = js.undefined
+  var maxPointers: js.UndefOr[Double] = js.undefined
+  var minDeltaX: js.UndefOr[Double] = js.undefined
+  var minDeltaY: js.UndefOr[Double] = js.undefined
+  var minDist: js.UndefOr[Double] = js.undefined
+  var minOffsetX: js.UndefOr[Double] = js.undefined
+  var minOffsetY: js.UndefOr[Double] = js.undefined
+  var minPointers: js.UndefOr[Double] = js.undefined
+  var minVelocity: js.UndefOr[Double] = js.undefined
+  var minVelocityX: js.UndefOr[Double] = js.undefined
+  var minVelocityY: js.UndefOr[Double] = js.undefined
+  var onSwipeableClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableLeftOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableLeftWillOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableRightOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableRightWillOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableWillClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onSwipeableWillOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var overshootFriction: js.UndefOr[Double] = js.undefined
+  var overshootLeft: js.UndefOr[Boolean] = js.undefined
+  var overshootRight: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * This map describes the values to use as inputRange for extra interpolation:
@@ -69,7 +67,7 @@ trait SwipeableProperties extends js.Object {
       /* dragAnimatedValue */ AnimatedInterpolation, 
       TagMod[Any]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     *
     * This map describes the values to use as inputRange for extra interpolation:
@@ -86,583 +84,104 @@ trait SwipeableProperties extends js.Object {
       /* dragAnimatedValue */ AnimatedInterpolation, 
       TagMod[Any]
     ]
-  ] = js.native
-  var rightThreshold: js.UndefOr[Double] = js.native
-  var shouldCancelWhenOutside: js.UndefOr[Boolean] = js.native
-  var simultaneousHandlers: js.UndefOr[Ref[_] | js.Array[Ref[_]]] = js.native
-  var useNativeAnimations: js.UndefOr[Boolean] = js.native
-  var waitFor: js.UndefOr[Ref[_] | js.Array[Ref[_]]] = js.native
+  ] = js.undefined
+  var rightThreshold: js.UndefOr[Double] = js.undefined
+  var shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined
+  var simultaneousHandlers: js.UndefOr[Ref[_] | js.Array[Ref[_]]] = js.undefined
+  var useNativeAnimations: js.UndefOr[Boolean] = js.undefined
+  var waitFor: js.UndefOr[Ref[_] | js.Array[Ref[_]]] = js.undefined
 }
 
 object SwipeableProperties {
   @scala.inline
-  def apply(): SwipeableProperties = {
+  def apply(
+    activeOffsetX: Double | js.Array[Double] = null,
+    activeOffsetY: Double | js.Array[Double] = null,
+    avgTouches: js.UndefOr[Boolean] = js.undefined,
+    childrenContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    containerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    failOffsetX: Double | js.Array[Double] = null,
+    failOffsetY: Double | js.Array[Double] = null,
+    friction: js.UndefOr[Double] = js.undefined,
+    hitSlop: Double | Bottom | Left | Right | Height | BottomHeight = null,
+    id: String = null,
+    leftThreshold: js.UndefOr[Double] = js.undefined,
+    maxDeltaX: js.UndefOr[Double] = js.undefined,
+    maxDeltaY: js.UndefOr[Double] = js.undefined,
+    maxPointers: js.UndefOr[Double] = js.undefined,
+    minDeltaX: js.UndefOr[Double] = js.undefined,
+    minDeltaY: js.UndefOr[Double] = js.undefined,
+    minDist: js.UndefOr[Double] = js.undefined,
+    minOffsetX: js.UndefOr[Double] = js.undefined,
+    minOffsetY: js.UndefOr[Double] = js.undefined,
+    minPointers: js.UndefOr[Double] = js.undefined,
+    minVelocity: js.UndefOr[Double] = js.undefined,
+    minVelocityX: js.UndefOr[Double] = js.undefined,
+    minVelocityY: js.UndefOr[Double] = js.undefined,
+    onSwipeableClose: () => Unit = null,
+    onSwipeableLeftOpen: () => Unit = null,
+    onSwipeableLeftWillOpen: () => Unit = null,
+    onSwipeableOpen: () => Unit = null,
+    onSwipeableRightOpen: () => Unit = null,
+    onSwipeableRightWillOpen: () => Unit = null,
+    onSwipeableWillClose: () => Unit = null,
+    onSwipeableWillOpen: () => Unit = null,
+    overshootFriction: js.UndefOr[Double] = js.undefined,
+    overshootLeft: js.UndefOr[Boolean] = js.undefined,
+    overshootRight: js.UndefOr[Boolean] = js.undefined,
+    renderLeftActions: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
+    renderRightActions: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any] = null,
+    rightThreshold: js.UndefOr[Double] = js.undefined,
+    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
+    simultaneousHandlers: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined,
+    useNativeAnimations: js.UndefOr[Boolean] = js.undefined,
+    waitFor: js.UndefOr[Null | Ref[_] | js.Array[Ref[_]]] = js.undefined
+  ): SwipeableProperties = {
     val __obj = js.Dynamic.literal()
+    if (activeOffsetX != null) __obj.updateDynamic("activeOffsetX")(activeOffsetX.asInstanceOf[js.Any])
+    if (activeOffsetY != null) __obj.updateDynamic("activeOffsetY")(activeOffsetY.asInstanceOf[js.Any])
+    if (!js.isUndefined(avgTouches)) __obj.updateDynamic("avgTouches")(avgTouches.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(childrenContainerStyle)) __obj.updateDynamic("childrenContainerStyle")(childrenContainerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerStyle)) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (failOffsetX != null) __obj.updateDynamic("failOffsetX")(failOffsetX.asInstanceOf[js.Any])
+    if (failOffsetY != null) __obj.updateDynamic("failOffsetY")(failOffsetY.asInstanceOf[js.Any])
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(leftThreshold)) __obj.updateDynamic("leftThreshold")(leftThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDeltaX)) __obj.updateDynamic("maxDeltaX")(maxDeltaX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDeltaY)) __obj.updateDynamic("maxDeltaY")(maxDeltaY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPointers)) __obj.updateDynamic("maxPointers")(maxPointers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDeltaX)) __obj.updateDynamic("minDeltaX")(minDeltaX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDeltaY)) __obj.updateDynamic("minDeltaY")(minDeltaY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDist)) __obj.updateDynamic("minDist")(minDist.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minOffsetX)) __obj.updateDynamic("minOffsetX")(minOffsetX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minOffsetY)) __obj.updateDynamic("minOffsetY")(minOffsetY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minPointers)) __obj.updateDynamic("minPointers")(minPointers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minVelocity)) __obj.updateDynamic("minVelocity")(minVelocity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minVelocityX)) __obj.updateDynamic("minVelocityX")(minVelocityX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minVelocityY)) __obj.updateDynamic("minVelocityY")(minVelocityY.get.asInstanceOf[js.Any])
+    if (onSwipeableClose != null) __obj.updateDynamic("onSwipeableClose")(js.Any.fromFunction0(onSwipeableClose))
+    if (onSwipeableLeftOpen != null) __obj.updateDynamic("onSwipeableLeftOpen")(js.Any.fromFunction0(onSwipeableLeftOpen))
+    if (onSwipeableLeftWillOpen != null) __obj.updateDynamic("onSwipeableLeftWillOpen")(js.Any.fromFunction0(onSwipeableLeftWillOpen))
+    if (onSwipeableOpen != null) __obj.updateDynamic("onSwipeableOpen")(js.Any.fromFunction0(onSwipeableOpen))
+    if (onSwipeableRightOpen != null) __obj.updateDynamic("onSwipeableRightOpen")(js.Any.fromFunction0(onSwipeableRightOpen))
+    if (onSwipeableRightWillOpen != null) __obj.updateDynamic("onSwipeableRightWillOpen")(js.Any.fromFunction0(onSwipeableRightWillOpen))
+    if (onSwipeableWillClose != null) __obj.updateDynamic("onSwipeableWillClose")(js.Any.fromFunction0(onSwipeableWillClose))
+    if (onSwipeableWillOpen != null) __obj.updateDynamic("onSwipeableWillOpen")(js.Any.fromFunction0(onSwipeableWillOpen))
+    if (!js.isUndefined(overshootFriction)) __obj.updateDynamic("overshootFriction")(overshootFriction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overshootLeft)) __obj.updateDynamic("overshootLeft")(overshootLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overshootRight)) __obj.updateDynamic("overshootRight")(overshootRight.get.asInstanceOf[js.Any])
+    if (renderLeftActions != null) __obj.updateDynamic("renderLeftActions")(js.Any.fromFunction2(renderLeftActions))
+    if (renderRightActions != null) __obj.updateDynamic("renderRightActions")(js.Any.fromFunction2(renderRightActions))
+    if (!js.isUndefined(rightThreshold)) __obj.updateDynamic("rightThreshold")(rightThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(simultaneousHandlers)) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(useNativeAnimations)) __obj.updateDynamic("useNativeAnimations")(useNativeAnimations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitFor)) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwipeableProperties]
   }
-  @scala.inline
-  implicit class SwipeablePropertiesOps[Self <: SwipeableProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveOffsetX(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOffsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActiveOffsetY(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOffsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveOffsetY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOffsetY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvgTouches(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avgTouches")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvgTouches: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avgTouches")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildrenContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailOffsetX(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOffsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailOffsetY(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOffsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailOffsetY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOffsetY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHitSlop(value: Double | Bottom | Left | Right | Height | BottomHeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHitSlop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDeltaX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeltaX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDeltaX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeltaX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDeltaY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeltaY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDeltaY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeltaY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPointers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPointers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDeltaX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeltaX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDeltaX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeltaX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDeltaY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeltaY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDeltaY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDeltaY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDist(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minOffsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minOffsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinOffsetY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minOffsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinOffsetY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minOffsetY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinPointers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinPointers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPointers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minVelocity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinVelocityX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minVelocityX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinVelocityX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minVelocityX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinVelocityY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minVelocityY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinVelocityY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minVelocityY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableLeftOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableLeftOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableLeftOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableLeftOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableLeftWillOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableLeftWillOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableLeftWillOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableLeftWillOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableRightOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableRightOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableRightOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableRightOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableRightWillOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableRightWillOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableRightWillOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableRightWillOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableWillClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableWillClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableWillClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableWillClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSwipeableWillOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableWillOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSwipeableWillOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeableWillOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOvershootFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootFriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOvershootFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootFriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOvershootLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOvershootLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOvershootRight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOvershootRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderLeftActions(
-      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderLeftActions")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderLeftActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderLeftActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderRightActions(
-      value: (/* progressAnimatedValue */ AnimatedInterpolation, /* dragAnimatedValue */ AnimatedInterpolation) => TagMod[Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderRightActions")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderRightActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderRightActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldCancelWhenOutside(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldCancelWhenOutside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldCancelWhenOutside: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldCancelWhenOutside")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimultaneousHandlersRefObject(value: ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simultaneousHandlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSimultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simultaneousHandlers")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSimultaneousHandlers(value: Ref[_] | js.Array[Ref[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simultaneousHandlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimultaneousHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simultaneousHandlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimultaneousHandlersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simultaneousHandlers")(null)
-        ret
-    }
-    @scala.inline
-    def withUseNativeAnimations(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeAnimations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseNativeAnimations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeAnimations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForRefObject(value: ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWaitForFunction1(value: /* instance */ _ | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWaitFor(value: Ref[_] | js.Array[Ref[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(null)
-        ret
-    }
-  }
-  
 }
 

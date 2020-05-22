@@ -28,53 +28,16 @@ trait SchemaCustomAttributeHistogramResult extends js.Object {
 
 object SchemaCustomAttributeHistogramResult {
   @scala.inline
-  def apply(): SchemaCustomAttributeHistogramResult = {
+  def apply(
+    key: String = null,
+    longValueHistogramResult: SchemaNumericBucketingResult = null,
+    stringValueHistogramResult: StringDictionary[Double] = null
+  ): SchemaCustomAttributeHistogramResult = {
     val __obj = js.Dynamic.literal()
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (longValueHistogramResult != null) __obj.updateDynamic("longValueHistogramResult")(longValueHistogramResult.asInstanceOf[js.Any])
+    if (stringValueHistogramResult != null) __obj.updateDynamic("stringValueHistogramResult")(stringValueHistogramResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomAttributeHistogramResult]
   }
-  @scala.inline
-  implicit class SchemaCustomAttributeHistogramResultOps[Self <: SchemaCustomAttributeHistogramResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongValueHistogramResult(value: SchemaNumericBucketingResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longValueHistogramResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongValueHistogramResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longValueHistogramResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValueHistogramResult(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValueHistogramResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValueHistogramResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValueHistogramResult")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

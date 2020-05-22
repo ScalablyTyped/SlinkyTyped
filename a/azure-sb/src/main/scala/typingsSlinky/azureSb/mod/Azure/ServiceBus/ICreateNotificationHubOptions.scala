@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICreateNotificationHubOptions extends js.Object {
-  var apns: Dictionary[String] = js.native
-  var gcm: Dictionary[String] = js.native
-  var mpns: Dictionary[String] = js.native
-  var wns: Dictionary[String] = js.native
+  var apns: Dictionary[String]
+  var gcm: Dictionary[String]
+  var mpns: Dictionary[String]
+  var wns: Dictionary[String]
 }
 
 object ICreateNotificationHubOptions {
@@ -23,37 +22,5 @@ object ICreateNotificationHubOptions {
     val __obj = js.Dynamic.literal(apns = apns.asInstanceOf[js.Any], gcm = gcm.asInstanceOf[js.Any], mpns = mpns.asInstanceOf[js.Any], wns = wns.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICreateNotificationHubOptions]
   }
-  @scala.inline
-  implicit class ICreateNotificationHubOptionsOps[Self <: ICreateNotificationHubOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApns(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGcm(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMpns(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWns(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wns")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.sharepoint.global.SP
 
+import typingsSlinky.sharepoint.IEnumerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,5 +14,7 @@ class ClientObjectList[T] protected ()
     objectPath: typingsSlinky.sharepoint.SP.ObjectPath,
     childItemType: js.Any
   ) = this()
+  /* CompleteClass */
+  override def getEnumerator(): IEnumerator[T] = js.native
 }
 

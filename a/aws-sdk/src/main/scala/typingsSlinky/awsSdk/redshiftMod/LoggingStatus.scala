@@ -34,89 +34,22 @@ trait LoggingStatus extends js.Object {
 
 object LoggingStatus {
   @scala.inline
-  def apply(): LoggingStatus = {
+  def apply(
+    BucketName: String = null,
+    LastFailureMessage: String = null,
+    LastFailureTime: js.Date = null,
+    LastSuccessfulDeliveryTime: js.Date = null,
+    LoggingEnabled: js.UndefOr[Boolean] = js.undefined,
+    S3KeyPrefix: String = null
+  ): LoggingStatus = {
     val __obj = js.Dynamic.literal()
+    if (BucketName != null) __obj.updateDynamic("BucketName")(BucketName.asInstanceOf[js.Any])
+    if (LastFailureMessage != null) __obj.updateDynamic("LastFailureMessage")(LastFailureMessage.asInstanceOf[js.Any])
+    if (LastFailureTime != null) __obj.updateDynamic("LastFailureTime")(LastFailureTime.asInstanceOf[js.Any])
+    if (LastSuccessfulDeliveryTime != null) __obj.updateDynamic("LastSuccessfulDeliveryTime")(LastSuccessfulDeliveryTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(LoggingEnabled)) __obj.updateDynamic("LoggingEnabled")(LoggingEnabled.get.asInstanceOf[js.Any])
+    if (S3KeyPrefix != null) __obj.updateDynamic("S3KeyPrefix")(S3KeyPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggingStatus]
   }
-  @scala.inline
-  implicit class LoggingStatusOps[Self <: LoggingStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastFailureMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailureMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastFailureMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailureMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastFailureTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailureTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastFailureTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailureTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSuccessfulDeliveryTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulDeliveryTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSuccessfulDeliveryTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulDeliveryTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3KeyPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3KeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3KeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3KeyPrefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

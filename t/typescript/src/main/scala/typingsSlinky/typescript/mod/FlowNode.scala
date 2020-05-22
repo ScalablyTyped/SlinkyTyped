@@ -19,22 +19,92 @@ trait FlowNode extends js.Object
 
 object FlowNode {
   @scala.inline
-  implicit def apply(value: AfterFinallyFlow): FlowNode = value.asInstanceOf[FlowNode]
+  def PreFinallyFlow(antecedent: FlowNode, flags: FlowFlags, lock: FlowLock, id: js.UndefOr[Double] = js.undefined): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], lock = lock.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowArrayMutation): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowAssignment(
+    antecedent: FlowNode,
+    flags: FlowFlags,
+    node: Expression | VariableDeclaration | BindingElement,
+    id: js.UndefOr[Double] = js.undefined
+  ): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowAssignment): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowLabel(flags: FlowFlags, antecedents: js.Array[FlowNode] = null, id: js.UndefOr[Double] = js.undefined): FlowNode = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any])
+    if (antecedents != null) __obj.updateDynamic("antecedents")(antecedents.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowCall): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowStart(
+    flags: FlowFlags,
+    id: js.UndefOr[Double] = js.undefined,
+    node: FunctionExpression | ArrowFunction | MethodDeclaration = null
+  ): FlowNode = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowCondition): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowSwitchClause(
+    antecedent: FlowNode,
+    clauseEnd: Double,
+    clauseStart: Double,
+    flags: FlowFlags,
+    switchStatement: SwitchStatement,
+    id: js.UndefOr[Double] = js.undefined
+  ): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], clauseEnd = clauseEnd.asInstanceOf[js.Any], clauseStart = clauseStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], switchStatement = switchStatement.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowLabel): FlowNode = value.asInstanceOf[FlowNode]
+  def AfterFinallyFlow(
+    antecedent: FlowNode,
+    flags: FlowFlags,
+    id: js.UndefOr[Double] = js.undefined,
+    locked: js.UndefOr[Boolean] = js.undefined
+  ): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(locked)) __obj.updateDynamic("locked")(locked.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowStart): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowCondition(antecedent: FlowNode, flags: FlowFlags, node: Expression, id: js.UndefOr[Double] = js.undefined): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: FlowSwitchClause): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowCall(
+    antecedent: FlowNode,
+    flags: FlowFlags,
+    node: CallExpression,
+    id: js.UndefOr[Double] = js.undefined
+  ): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
   @scala.inline
-  implicit def apply(value: PreFinallyFlow): FlowNode = value.asInstanceOf[FlowNode]
+  def FlowArrayMutation(
+    antecedent: FlowNode,
+    flags: FlowFlags,
+    node: CallExpression | BinaryExpression,
+    id: js.UndefOr[Double] = js.undefined
+  ): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FlowNode]
+  }
 }
 

@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OverflowProps extends js.Object {
-  val overflow: js.UndefOr[ResponsiveValue[OverflowProperty]] = js.native
+  val overflow: js.UndefOr[ResponsiveValue[OverflowProperty]] = js.undefined
 }
 
 object OverflowProps {
   @scala.inline
-  def apply(): OverflowProps = {
+  def apply(overflow: ResponsiveValue[OverflowProperty] = null): OverflowProps = {
     val __obj = js.Dynamic.literal()
+    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
     __obj.asInstanceOf[OverflowProps]
   }
-  @scala.inline
-  implicit class OverflowPropsOps[Self <: OverflowProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOverflow(value: ResponsiveValue[OverflowProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

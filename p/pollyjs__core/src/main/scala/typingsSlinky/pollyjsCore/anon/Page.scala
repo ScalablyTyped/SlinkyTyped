@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Page extends js.Object {
-  var page: js.UndefOr[js.Any] = js.native
-  var requestResourceTypes: js.UndefOr[js.Array[String]] = js.native
+  var page: js.UndefOr[js.Any] = js.undefined
+  var requestResourceTypes: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Page {
   @scala.inline
-  def apply(): Page = {
+  def apply(page: js.Any = null, requestResourceTypes: js.Array[String] = null): Page = {
     val __obj = js.Dynamic.literal()
+    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
+    if (requestResourceTypes != null) __obj.updateDynamic("requestResourceTypes")(requestResourceTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Page]
   }
-  @scala.inline
-  implicit class PageOps[Self <: Page] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPage(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestResourceTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestResourceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestResourceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestResourceTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

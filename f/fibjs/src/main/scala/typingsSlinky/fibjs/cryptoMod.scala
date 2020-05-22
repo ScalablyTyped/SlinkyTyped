@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 加密算法模块
-	* @detail 使用方法：,```JavaScript,var crypto = require('crypto');,```
-	*/
+  * @brief 加密算法模块
+  * @detail 使用方法：,```JavaScript,var crypto = require('crypto');,```
+  */
 @JSImport("crypto", JSImport.Namespace)
 @js.native
 object cryptoMod extends js.Object {

@@ -6,68 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegistererUnregisterOptions extends js.Object {
   /**
     * If true, unregister all contacts.
     * @defaultValue false
     */
-  var all: js.UndefOr[Boolean] = js.native
+  var all: js.UndefOr[Boolean] = js.undefined
   /** See `core` API. */
-  var requestDelegate: js.UndefOr[OutgoingRequestDelegate] = js.native
+  var requestDelegate: js.UndefOr[OutgoingRequestDelegate] = js.undefined
   /** See `core` API. */
-  var requestOptions: js.UndefOr[RequestOptions] = js.native
+  var requestOptions: js.UndefOr[RequestOptions] = js.undefined
 }
 
 object RegistererUnregisterOptions {
   @scala.inline
-  def apply(): RegistererUnregisterOptions = {
+  def apply(
+    all: js.UndefOr[Boolean] = js.undefined,
+    requestDelegate: OutgoingRequestDelegate = null,
+    requestOptions: RequestOptions = null
+  ): RegistererUnregisterOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.get.asInstanceOf[js.Any])
+    if (requestDelegate != null) __obj.updateDynamic("requestDelegate")(requestDelegate.asInstanceOf[js.Any])
+    if (requestOptions != null) __obj.updateDynamic("requestOptions")(requestOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegistererUnregisterOptions]
   }
-  @scala.inline
-  implicit class RegistererUnregisterOptionsOps[Self <: RegistererUnregisterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestDelegate(value: OutgoingRequestDelegate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestDelegate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestDelegate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestDelegate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestOptions(value: RequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

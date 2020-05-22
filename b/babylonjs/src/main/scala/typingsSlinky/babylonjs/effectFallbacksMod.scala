@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.iEffectFallbacksMod.IEffectFallbacks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +16,11 @@ object effectFallbacksMod extends js.Object {
     var _defines: js.Any = js.native
     var _maxRank: js.Any = js.native
     var _mesh: js.Any = js.native
+    /**
+      * Checks to see if more fallbacks are still availible.
+      */
+    /* CompleteClass */
+    override var hasMoreFallbacks: Boolean = js.native
     /**
       * Sets the mesh to use CPU skinning when needing to fallback.
       * @param rank The rank of the fallback (Lower ranks will be fallbacked to first)
@@ -32,6 +38,19 @@ object effectFallbacksMod extends js.Object {
       */
     @JSName("hasMoreFallbacks")
     def hasMoreFallbacks_MEffectFallbacks: Boolean = js.native
+    /**
+      * Removes the defines that should be removed when falling back.
+      * @param currentDefines defines the current define statements for the shader.
+      * @param effect defines the current effect we try to compile
+      * @returns The resulting defines with defines of the current rank removed.
+      */
+    /* CompleteClass */
+    override def reduce(currentDefines: String, effect: Effect): String = js.native
+    /**
+      * Removes the fallback from the bound mesh.
+      */
+    /* CompleteClass */
+    override def unBindMesh(): Unit = js.native
   }
   
 }

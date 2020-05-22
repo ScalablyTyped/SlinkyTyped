@@ -22,7 +22,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of a text document.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleTextDocumentView
   extends XAccessibleContext
      with XAccessibleComponent

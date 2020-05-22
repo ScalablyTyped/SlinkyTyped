@@ -14,29 +14,10 @@ trait SchemaInterconnectsGetDiagnosticsResponse extends js.Object {
 
 object SchemaInterconnectsGetDiagnosticsResponse {
   @scala.inline
-  def apply(): SchemaInterconnectsGetDiagnosticsResponse = {
+  def apply(result: SchemaInterconnectDiagnostics = null): SchemaInterconnectsGetDiagnosticsResponse = {
     val __obj = js.Dynamic.literal()
+    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInterconnectsGetDiagnosticsResponse]
   }
-  @scala.inline
-  implicit class SchemaInterconnectsGetDiagnosticsResponseOps[Self <: SchemaInterconnectsGetDiagnosticsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResult(value: SchemaInterconnectDiagnostics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

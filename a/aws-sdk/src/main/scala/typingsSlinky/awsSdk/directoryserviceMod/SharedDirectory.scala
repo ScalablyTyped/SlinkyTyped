@@ -46,125 +46,28 @@ trait SharedDirectory extends js.Object {
 
 object SharedDirectory {
   @scala.inline
-  def apply(): SharedDirectory = {
+  def apply(
+    CreatedDateTime: js.Date = null,
+    LastUpdatedDateTime: js.Date = null,
+    OwnerAccountId: CustomerId = null,
+    OwnerDirectoryId: DirectoryId = null,
+    ShareMethod: ShareMethod = null,
+    ShareNotes: Notes = null,
+    ShareStatus: ShareStatus = null,
+    SharedAccountId: CustomerId = null,
+    SharedDirectoryId: DirectoryId = null
+  ): SharedDirectory = {
     val __obj = js.Dynamic.literal()
+    if (CreatedDateTime != null) __obj.updateDynamic("CreatedDateTime")(CreatedDateTime.asInstanceOf[js.Any])
+    if (LastUpdatedDateTime != null) __obj.updateDynamic("LastUpdatedDateTime")(LastUpdatedDateTime.asInstanceOf[js.Any])
+    if (OwnerAccountId != null) __obj.updateDynamic("OwnerAccountId")(OwnerAccountId.asInstanceOf[js.Any])
+    if (OwnerDirectoryId != null) __obj.updateDynamic("OwnerDirectoryId")(OwnerDirectoryId.asInstanceOf[js.Any])
+    if (ShareMethod != null) __obj.updateDynamic("ShareMethod")(ShareMethod.asInstanceOf[js.Any])
+    if (ShareNotes != null) __obj.updateDynamic("ShareNotes")(ShareNotes.asInstanceOf[js.Any])
+    if (ShareStatus != null) __obj.updateDynamic("ShareStatus")(ShareStatus.asInstanceOf[js.Any])
+    if (SharedAccountId != null) __obj.updateDynamic("SharedAccountId")(SharedAccountId.asInstanceOf[js.Any])
+    if (SharedDirectoryId != null) __obj.updateDynamic("SharedDirectoryId")(SharedDirectoryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedDirectory]
   }
-  @scala.inline
-  implicit class SharedDirectoryOps[Self <: SharedDirectory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerAccountId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerDirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerDirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareMethod(value: ShareMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareNotes(value: Notes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareNotes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareNotes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareStatus(value: ShareStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedAccountId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharedDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDirectoryId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

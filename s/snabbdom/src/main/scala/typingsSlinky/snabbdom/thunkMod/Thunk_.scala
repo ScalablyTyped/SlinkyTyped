@@ -1,35 +1,34 @@
 package typingsSlinky.snabbdom.thunkMod
 
+import org.scalajs.dom.raw.Node
+import typingsSlinky.snabbdom.vnodeMod.Key
 import typingsSlinky.snabbdom.vnodeMod.VNode_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Thunk_ extends VNode_ {
   @JSName("data")
-  var data_Thunk_ : ThunkData = js.native
+  var data_Thunk_ : ThunkData
 }
 
 object Thunk_ {
   @scala.inline
-  def apply(data: ThunkData): Thunk_ = {
+  def apply(
+    data: ThunkData,
+    children: js.Array[VNode_ | String] = null,
+    elm: Node = null,
+    key: Key = null,
+    sel: String = null,
+    text: String = null
+  ): Thunk_ = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (elm != null) __obj.updateDynamic("elm")(elm.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (sel != null) __obj.updateDynamic("sel")(sel.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Thunk_]
   }
-  @scala.inline
-  implicit class Thunk_Ops[Self <: Thunk_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: ThunkData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

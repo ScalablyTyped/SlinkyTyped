@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IByNameReferrable extends js.Object {
   /**
     * Returns the qualified name of this element, or
@@ -12,34 +11,14 @@ trait IByNameReferrable extends js.Object {
     * or if it or one of its namespace containers does not have a
     * valid name.
     */
-  val qualifiedName: String | Null = js.native
+  val qualifiedName: String | Null
 }
 
 object IByNameReferrable {
   @scala.inline
-  def apply(): IByNameReferrable = {
-    val __obj = js.Dynamic.literal()
+  def apply(qualifiedName: String = null): IByNameReferrable = {
+    val __obj = js.Dynamic.literal(qualifiedName = qualifiedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IByNameReferrable]
   }
-  @scala.inline
-  implicit class IByNameReferrableOps[Self <: IByNameReferrable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQualifiedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifiedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQualifiedNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifiedName")(null)
-        ret
-    }
-  }
-  
 }
 

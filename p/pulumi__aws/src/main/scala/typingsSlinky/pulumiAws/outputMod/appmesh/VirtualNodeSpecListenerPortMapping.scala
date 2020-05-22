@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VirtualNodeSpecListenerPortMapping extends js.Object {
   /**
-    * The destination port for the health check request. This port must match the port defined in the `portMapping` for the listener.
+    * The port used for the port mapping.
     */
   var port: Double = js.native
   /**
-    * The protocol for the health check request. Valid values are `http` and `tcp`.
+    * The protocol used for the port mapping. Valid values are `http` and `tcp`.
     */
   var protocol: String = js.native
 }
@@ -22,25 +22,5 @@ object VirtualNodeSpecListenerPortMapping {
     val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualNodeSpecListenerPortMapping]
   }
-  @scala.inline
-  implicit class VirtualNodeSpecListenerPortMappingOps[Self <: VirtualNodeSpecListenerPortMapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

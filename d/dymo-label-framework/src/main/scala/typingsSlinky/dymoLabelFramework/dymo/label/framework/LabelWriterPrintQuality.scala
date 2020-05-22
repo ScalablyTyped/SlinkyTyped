@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 sealed trait LabelWriterPrintQuality extends js.Object
 
 /**
-	 * Enumeration that specifies the print quality when printing to a LabelWriter printer.
-	 */
+  * Enumeration that specifies the print quality when printing to a LabelWriter printer.
+  */
 @JSGlobal("dymo.label.framework.LabelWriterPrintQuality")
 @js.native
 object LabelWriterPrintQuality extends js.Object {

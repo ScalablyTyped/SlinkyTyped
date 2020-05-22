@@ -20,41 +20,14 @@ trait SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponse ext
 
 object SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponse = {
+  def apply(
+    associations: js.Array[SchemaGoogleCloudPrivatecatalogproducerV1beta1Association] = null,
+    nextPageToken: String = null
+  ): SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (associations != null) __obj.updateDynamic("associations")(associations.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponseOps[Self <: SchemaGoogleCloudPrivatecatalogproducerV1beta1ListAssociationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociations(value: js.Array[SchemaGoogleCloudPrivatecatalogproducerV1beta1Association]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

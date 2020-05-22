@@ -653,6 +653,11 @@ object FormGroup {
   }
   
   def withProps[T](p: FormGroupProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[FormGroupProps]))
+  }
   implicit def make[T](companion: FormGroup.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

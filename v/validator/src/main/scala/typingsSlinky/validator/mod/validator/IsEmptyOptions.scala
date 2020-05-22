@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsEmptyOptions extends js.Object {
   /**
     * @default false
     */
-  var ignore_whitespace: js.UndefOr[Boolean] = js.native
+  var ignore_whitespace: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsEmptyOptions {
   @scala.inline
-  def apply(): IsEmptyOptions = {
+  def apply(ignore_whitespace: js.UndefOr[Boolean] = js.undefined): IsEmptyOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignore_whitespace)) __obj.updateDynamic("ignore_whitespace")(ignore_whitespace.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsEmptyOptions]
   }
-  @scala.inline
-  implicit class IsEmptyOptionsOps[Self <: IsEmptyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnore_whitespace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_whitespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore_whitespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_whitespace")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

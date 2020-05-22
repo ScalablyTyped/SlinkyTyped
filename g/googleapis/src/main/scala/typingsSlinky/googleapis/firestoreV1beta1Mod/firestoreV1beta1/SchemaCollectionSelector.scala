@@ -23,41 +23,11 @@ trait SchemaCollectionSelector extends js.Object {
 
 object SchemaCollectionSelector {
   @scala.inline
-  def apply(): SchemaCollectionSelector = {
+  def apply(allDescendants: js.UndefOr[Boolean] = js.undefined, collectionId: String = null): SchemaCollectionSelector = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allDescendants)) __obj.updateDynamic("allDescendants")(allDescendants.get.asInstanceOf[js.Any])
+    if (collectionId != null) __obj.updateDynamic("collectionId")(collectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCollectionSelector]
   }
-  @scala.inline
-  implicit class SchemaCollectionSelectorOps[Self <: SchemaCollectionSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllDescendants(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDescendants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllDescendants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allDescendants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollectionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

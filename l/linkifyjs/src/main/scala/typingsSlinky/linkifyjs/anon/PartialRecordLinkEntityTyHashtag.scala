@@ -5,75 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Record<linkifyjs.linkifyjs.LinkEntityType, string | null>> */
-@js.native
 trait PartialRecordLinkEntityTyHashtag extends js.Object {
-  var email: js.UndefOr[String] = js.native
-  var hashtag: js.UndefOr[String] = js.native
-  var mention: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.undefined
+  var hashtag: js.UndefOr[String] = js.undefined
+  var mention: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object PartialRecordLinkEntityTyHashtag {
   @scala.inline
-  def apply(): PartialRecordLinkEntityTyHashtag = {
+  def apply(email: String = null, hashtag: String = null, mention: String = null, url: String = null): PartialRecordLinkEntityTyHashtag = {
     val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (hashtag != null) __obj.updateDynamic("hashtag")(hashtag.asInstanceOf[js.Any])
+    if (mention != null) __obj.updateDynamic("mention")(mention.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRecordLinkEntityTyHashtag]
   }
-  @scala.inline
-  implicit class PartialRecordLinkEntityTyHashtagOps[Self <: PartialRecordLinkEntityTyHashtag] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHashtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHashtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMention(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mention")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMention: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mention")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

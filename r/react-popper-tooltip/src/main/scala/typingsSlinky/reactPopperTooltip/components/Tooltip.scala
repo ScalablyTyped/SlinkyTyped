@@ -1,6 +1,7 @@
 package typingsSlinky.reactPopperTooltip.components
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MutationObserverInit
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -44,13 +45,14 @@ object Tooltip {
     clearScheduled: () => Unit,
     closeOnOutOfBoundaries: Boolean,
     hideTooltip: () => Unit,
+    mutationObserverOptions: MutationObserverInit,
     placement: Placement,
     scheduleUpdate: () => Unit,
     style: CSSProperties,
     tooltip: TooltipArg => TagMod[Any],
     trigger: Trigger
   ): Builder = {
-    val __props = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), placement = placement.asInstanceOf[js.Any], scheduleUpdate = js.Any.fromFunction0(scheduleUpdate), style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], scheduleUpdate = js.Any.fromFunction0(scheduleUpdate), style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
   }
 }

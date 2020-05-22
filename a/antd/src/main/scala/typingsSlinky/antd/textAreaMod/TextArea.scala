@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -22,7 +22,7 @@ trait TextArea
   def handleChange(e: ChangeEvent[HTMLTextAreaElement]): Unit = js.native
   def handleKeyDown(e: SyntheticKeyboardEvent[HTMLTextAreaElement]): Unit = js.native
   def handleReset(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def renderComponent(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderComponent(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   def renderTextArea(prefixCls: String): ReactElement = js.native
   def saveClearableInput(clearableInput: typingsSlinky.antd.clearableLabeledInputMod.default): Unit = js.native
   def saveTextArea(resizableTextArea: typingsSlinky.antd.resizableTextAreaMod.default): Unit = js.native

@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModifyCourseWorkAssigneesRequest extends js.Object {
-  var assigneeMode: js.UndefOr[String] = js.native
-  var modifyIndividualStudentsOptions: js.UndefOr[ModifyIndividualStudentsOptions] = js.native
+  var assigneeMode: js.UndefOr[String] = js.undefined
+  var modifyIndividualStudentsOptions: js.UndefOr[ModifyIndividualStudentsOptions] = js.undefined
 }
 
 object ModifyCourseWorkAssigneesRequest {
   @scala.inline
-  def apply(): ModifyCourseWorkAssigneesRequest = {
+  def apply(
+    assigneeMode: String = null,
+    modifyIndividualStudentsOptions: ModifyIndividualStudentsOptions = null
+  ): ModifyCourseWorkAssigneesRequest = {
     val __obj = js.Dynamic.literal()
+    if (assigneeMode != null) __obj.updateDynamic("assigneeMode")(assigneeMode.asInstanceOf[js.Any])
+    if (modifyIndividualStudentsOptions != null) __obj.updateDynamic("modifyIndividualStudentsOptions")(modifyIndividualStudentsOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyCourseWorkAssigneesRequest]
   }
-  @scala.inline
-  implicit class ModifyCourseWorkAssigneesRequestOps[Self <: ModifyCourseWorkAssigneesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssigneeMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssigneeMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assigneeMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifyIndividualStudentsOptions(value: ModifyIndividualStudentsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyIndividualStudentsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifyIndividualStudentsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyIndividualStudentsOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

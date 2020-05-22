@@ -6,246 +6,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestInit extends js.Object {
-  var agent: js.UndefOr[RequestAgent | `false`] = js.native
-  var body: js.UndefOr[BodyInit] = js.native
-  var cache: js.UndefOr[RequestCache] = js.native
+  var agent: js.UndefOr[RequestAgent | `false`] = js.undefined
+  var body: js.UndefOr[BodyInit] = js.undefined
+  var cache: js.UndefOr[RequestCache] = js.undefined
   // Cloudflare Workers accept a `cf` property to control Cloudflare features
   // See https://developers.cloudflare.com/workers/reference/cloudflare-features/
-  var cf: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var compress: js.UndefOr[Boolean] = js.native
-  var credentials: js.UndefOr[RequestCredentials] = js.native
+  var cf: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var compress: js.UndefOr[Boolean] = js.undefined
+  var credentials: js.UndefOr[RequestCredentials] = js.undefined
   // The following properties are node-fetch extensions
-  var follow: js.UndefOr[Double] = js.native
-  var headers: js.UndefOr[HeadersInit] = js.native
-  var integrity: js.UndefOr[String] = js.native
-  var method: js.UndefOr[String] = js.native
-  var mode: js.UndefOr[RequestMode] = js.native
-  var redirect: js.UndefOr[RequestRedirect] = js.native
-  var referrer: js.UndefOr[String] = js.native
-  var referrerPolicy: js.UndefOr[ReferrerPolicy] = js.native
-  var size: js.UndefOr[Double] = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var follow: js.UndefOr[Double] = js.undefined
+  var headers: js.UndefOr[HeadersInit] = js.undefined
+  var integrity: js.UndefOr[String] = js.undefined
+  var method: js.UndefOr[String] = js.undefined
+  var mode: js.UndefOr[RequestMode] = js.undefined
+  var redirect: js.UndefOr[RequestRedirect] = js.undefined
+  var referrer: js.UndefOr[String] = js.undefined
+  var referrerPolicy: js.UndefOr[ReferrerPolicy] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object RequestInit {
   @scala.inline
-  def apply(): RequestInit = {
+  def apply(
+    agent: RequestAgent | `false` = null,
+    body: BodyInit = null,
+    cache: RequestCache = null,
+    cf: StringDictionary[js.Any] = null,
+    compress: js.UndefOr[Boolean] = js.undefined,
+    credentials: RequestCredentials = null,
+    follow: js.UndefOr[Double] = js.undefined,
+    headers: HeadersInit = null,
+    integrity: String = null,
+    method: String = null,
+    mode: RequestMode = null,
+    redirect: RequestRedirect = null,
+    referrer: String = null,
+    referrerPolicy: ReferrerPolicy = null,
+    size: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): RequestInit = {
     val __obj = js.Dynamic.literal()
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (cf != null) __obj.updateDynamic("cf")(cf.asInstanceOf[js.Any])
+    if (!js.isUndefined(compress)) __obj.updateDynamic("compress")(compress.get.asInstanceOf[js.Any])
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (!js.isUndefined(follow)) __obj.updateDynamic("follow")(follow.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
+    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
+    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestInit]
   }
-  @scala.inline
-  implicit class RequestInitOps[Self <: RequestInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgent(value: RequestAgent | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBodyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: BodyInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCache(value: RequestCache): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCf(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentials(value: RequestCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("follow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: HeadersInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: RequestMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirect(value: RequestRedirect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferrer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferrer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferrerPolicy(value: ReferrerPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferrerPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,57 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Doc[Content /* <: js.Object */] extends js.Object {
-  var doc: js.UndefOr[ExistingDocument[Content with AllDocsMeta]] = js.native
-  var id: js.Any = js.native
-  var key: js.Any = js.native
-  var value: js.Any = js.native
+  var doc: js.UndefOr[ExistingDocument[Content with AllDocsMeta]] = js.undefined
+  var id: js.Any
+  var key: js.Any
+  var value: js.Any
 }
 
 object Doc {
   @scala.inline
-  def apply[Content](id: js.Any, key: js.Any, value: js.Any): Doc[Content] = {
+  def apply[Content](id: js.Any, key: js.Any, value: js.Any, doc: ExistingDocument[Content with AllDocsMeta] = null): Doc[Content] = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (doc != null) __obj.updateDynamic("doc")(doc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Doc[Content]]
   }
-  @scala.inline
-  implicit class DocOps[Self[content] <: Doc[content], Content] (val x: Self[Content]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Content] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Content]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[Content] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Content] with Other]
-    @scala.inline
-    def withId(value: js.Any): Self[Content] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: js.Any): Self[Content] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self[Content] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDoc(value: ExistingDocument[Content with AllDocsMeta]): Self[Content] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoc: Self[Content] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

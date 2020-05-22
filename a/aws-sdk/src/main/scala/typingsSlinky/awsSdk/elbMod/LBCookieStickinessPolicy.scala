@@ -18,41 +18,14 @@ trait LBCookieStickinessPolicy extends js.Object {
 
 object LBCookieStickinessPolicy {
   @scala.inline
-  def apply(): LBCookieStickinessPolicy = {
+  def apply(
+    CookieExpirationPeriod: js.UndefOr[CookieExpirationPeriod] = js.undefined,
+    PolicyName: PolicyName = null
+  ): LBCookieStickinessPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CookieExpirationPeriod)) __obj.updateDynamic("CookieExpirationPeriod")(CookieExpirationPeriod.get.asInstanceOf[js.Any])
+    if (PolicyName != null) __obj.updateDynamic("PolicyName")(PolicyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[LBCookieStickinessPolicy]
   }
-  @scala.inline
-  implicit class LBCookieStickinessPolicyOps[Self <: LBCookieStickinessPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCookieExpirationPeriod(value: CookieExpirationPeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CookieExpirationPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieExpirationPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CookieExpirationPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: PolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

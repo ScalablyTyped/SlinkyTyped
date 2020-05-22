@@ -54,149 +54,32 @@ trait ReplicationTaskStats extends js.Object {
 
 object ReplicationTaskStats {
   @scala.inline
-  def apply(): ReplicationTaskStats = {
+  def apply(
+    ElapsedTimeMillis: js.UndefOr[Long] = js.undefined,
+    FreshStartDate: js.Date = null,
+    FullLoadFinishDate: js.Date = null,
+    FullLoadProgressPercent: js.UndefOr[Integer] = js.undefined,
+    FullLoadStartDate: js.Date = null,
+    StartDate: js.Date = null,
+    StopDate: js.Date = null,
+    TablesErrored: js.UndefOr[Integer] = js.undefined,
+    TablesLoaded: js.UndefOr[Integer] = js.undefined,
+    TablesLoading: js.UndefOr[Integer] = js.undefined,
+    TablesQueued: js.UndefOr[Integer] = js.undefined
+  ): ReplicationTaskStats = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ElapsedTimeMillis)) __obj.updateDynamic("ElapsedTimeMillis")(ElapsedTimeMillis.get.asInstanceOf[js.Any])
+    if (FreshStartDate != null) __obj.updateDynamic("FreshStartDate")(FreshStartDate.asInstanceOf[js.Any])
+    if (FullLoadFinishDate != null) __obj.updateDynamic("FullLoadFinishDate")(FullLoadFinishDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(FullLoadProgressPercent)) __obj.updateDynamic("FullLoadProgressPercent")(FullLoadProgressPercent.get.asInstanceOf[js.Any])
+    if (FullLoadStartDate != null) __obj.updateDynamic("FullLoadStartDate")(FullLoadStartDate.asInstanceOf[js.Any])
+    if (StartDate != null) __obj.updateDynamic("StartDate")(StartDate.asInstanceOf[js.Any])
+    if (StopDate != null) __obj.updateDynamic("StopDate")(StopDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(TablesErrored)) __obj.updateDynamic("TablesErrored")(TablesErrored.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TablesLoaded)) __obj.updateDynamic("TablesLoaded")(TablesLoaded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TablesLoading)) __obj.updateDynamic("TablesLoading")(TablesLoading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TablesQueued)) __obj.updateDynamic("TablesQueued")(TablesQueued.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationTaskStats]
   }
-  @scala.inline
-  implicit class ReplicationTaskStatsOps[Self <: ReplicationTaskStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElapsedTimeMillis(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElapsedTimeMillis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElapsedTimeMillis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElapsedTimeMillis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreshStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FreshStartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreshStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FreshStartDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadFinishDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadFinishDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadFinishDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadFinishDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadProgressPercent(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadProgressPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadProgressPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadProgressPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullLoadStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadStartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullLoadStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullLoadStartDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StopDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StopDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTablesErrored(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesErrored")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTablesErrored: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesErrored")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTablesLoaded(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesLoaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTablesLoaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesLoaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTablesLoading(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTablesLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTablesQueued(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesQueued")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTablesQueued: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TablesQueued")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

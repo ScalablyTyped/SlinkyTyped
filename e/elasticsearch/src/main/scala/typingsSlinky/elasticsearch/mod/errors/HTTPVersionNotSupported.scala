@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("elasticsearch", "errors.HTTPVersionNotSupported")
 @js.native
-class HTTPVersionNotSupported () extends Error
+class HTTPVersionNotSupported () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

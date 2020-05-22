@@ -9,25 +9,25 @@ sealed trait EventType extends js.Object
 
 /**
   * Specifies the kind of event that was raised. Returned by the `type` property of an `*EventArgs` object.
-  * 
-  * Add-ins for Project support the `Office.EventType.ResourceSelectionChanged`, `Office.EventType.TaskSelectionChanged`, and 
+  *
+  * Add-ins for Project support the `Office.EventType.ResourceSelectionChanged`, `Office.EventType.TaskSelectionChanged`, and
   * `Office.EventType.ViewSelectionChanged` event types.
-  * 
+  *
   * Only task pane add-ins for Outlook support Mailbox API set event types.
-  * 
+  *
   * @remarks
-  * 
+  *
   * **`BindingDataChanged` and `BindingSelectionChanged` hosts**: Excel, Word.
-  * 
+  *
   */
 @JSGlobal("Office.EventType")
 @js.native
 object EventType extends js.Object {
   /**
     * A Document.ActiveViewChanged event was raised.
-    * 
-    * @remarks 
-    * 
+    *
+    * @remarks
+    *
     * **Hosts**: PowerPoint
     */
   @js.native
@@ -35,10 +35,10 @@ object EventType extends js.Object {
   
   /**
     * Triggers when any date or time of the selected appointment or series is changed in Outlook. Supported with task pane only.
-    * 
+    *
     * The event handler receives an argument of type
     * {@link https://docs.microsoft.com/javascript/api/outlook/office.appointmenttimechangedeventargs?view=outlook-js-1.7 | Office.AppointmentTimeChangedEventArgs}.
-    * 
+    *
     * [Api set: Mailbox 1.7]
     */
   @js.native
@@ -46,34 +46,34 @@ object EventType extends js.Object {
   
   /**
     * Triggers when an attachment is added to or removed from an item. Supported with task pane only.
-    * 
+    *
     * The event handler receives an argument of type
     * {@link https://docs.microsoft.com/javascript/api/outlook/office.attachmentschangedeventargs?view=outlook-js-1.8 | Office.AttachmentsChangedEventArgs}.
-    * 
+    *
     * [Api set: Mailbox 1.8]
     */
   @js.native
   sealed trait AttachmentsChanged extends EventType
   
   /**
-    * Occurs when data within the binding is changed. 
-    * To add an event handler for the BindingDataChanged event of a binding, use the addHandlerAsync method of the Binding object. 
+    * Occurs when data within the binding is changed.
+    * To add an event handler for the BindingDataChanged event of a binding, use the addHandlerAsync method of the Binding object.
     * The event handler receives an argument of type {@link Office.BindingDataChangedEventArgs}.
-    * 
-    * @remarks 
-    * 
+    *
+    * @remarks
+    *
     * **Hosts**: Excel, Word
     */
   @js.native
   sealed trait BindingDataChanged extends EventType
   
   /**
-    * Occurs when the selection is changed within the binding. To add an event handler for the BindingSelectionChanged event of a binding, use 
+    * Occurs when the selection is changed within the binding. To add an event handler for the BindingSelectionChanged event of a binding, use
     * the addHandlerAsync method of the Binding object. The event handler receives an argument of type {@link Office.BindingSelectionChangedEventArgs}.
-    * 
-    * @remarks 
-    * 
-    * **Hosts**: Excel, Word 
+    *
+    * @remarks
+    *
+    * **Hosts**: Excel, Word
     */
   @js.native
   sealed trait BindingSelectionChanged extends EventType
@@ -92,17 +92,17 @@ object EventType extends js.Object {
   
   /**
     * Triggers when a host page sends a message to a child dialog box with `messageChild`.
-    * 
-    * @beta 
+    *
+    * @beta
     */
   @js.native
   sealed trait DialogParentMessageReceived extends EventType
   
   /**
     * Triggers when a document-level selection happens.
-    * 
-    * @remarks 
-    * 
+    *
+    * @remarks
+    *
     * **Hosts**: Excel, Word
     */
   @js.native
@@ -110,10 +110,10 @@ object EventType extends js.Object {
   
   /**
     * Triggers when the appointment location is changed in Outlook. Supported with task pane only.
-    * 
+    *
     * The event handler receives an argument of type
     * {@link https://docs.microsoft.com/javascript/api/outlook/office.enhancedlocationschangedeventargs?view=outlook-js-1.8 | Office.EnhancedLocationsChangedEventArgs}.
-    * 
+    *
     * [Api set: Mailbox 1.8]
     */
   @js.native
@@ -121,7 +121,7 @@ object EventType extends js.Object {
   
   /**
     * Triggers when a different Outlook item is selected for viewing while the task pane is pinned. Supported with task pane only.
-    * 
+    *
     * [Api set: Mailbox 1.5]
     */
   @js.native
@@ -147,12 +147,12 @@ object EventType extends js.Object {
   
   /**
     * Triggers when the OfficeTheme is changed in Outlook. Supported with task pane only.
-    * 
+    *
     * The event handler receives an argument of type
     * {@link https://docs.microsoft.com/javascript/api/outlook/office.officethemechangedeventargs?view=outlook-js-preview | Office.OfficeThemeChangedEventArgs}.
-    * 
+    *
     * [Api set: Mailbox Preview]
-    * 
+    *
     * @beta
     */
   @js.native
@@ -160,10 +160,10 @@ object EventType extends js.Object {
   
   /**
     * Triggers when the recipient list of the selected item or the appointment location is changed in Outlook. Supported with task pane only.
-    * 
+    *
     * The event handler receives an argument of type
     * {@link https://docs.microsoft.com/javascript/api/outlook/office.recipientschangedeventargs?view=outlook-js-1.7 | Office.RecipientsChangedEventArgs}.
-    * 
+    *
     * [Api set: Mailbox 1.7]
     */
   @js.native
@@ -171,10 +171,10 @@ object EventType extends js.Object {
   
   /**
     * Triggers when the recurrence pattern of the selected series is changed in Outlook. Supported with task pane only.
-    * 
+    *
     * The event handler receives an argument of type
     * {@link https://docs.microsoft.com/javascript/api/outlook/office.recurrencechangedeventargs?view=outlook-js-1.7 | Office.RecurrenceChangedEventArgs}.
-    * 
+    *
     * [Api set: Mailbox 1.7]
     */
   @js.native
@@ -188,9 +188,9 @@ object EventType extends js.Object {
   
   /**
     * A Settings.settingsChanged event was raised.
-    * 
-    * @remarks 
-    * 
+    *
+    * @remarks
+    *
     * **Hosts**: Excel, PowerPoint, Word
     */
   @js.native

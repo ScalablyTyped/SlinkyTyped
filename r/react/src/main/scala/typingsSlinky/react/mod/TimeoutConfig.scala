@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeoutConfig extends js.Object {
   /**
     * This timeout (in milliseconds) tells React how long to wait before showing the next state.
@@ -13,7 +12,7 @@ trait TimeoutConfig extends js.Object {
     *
     * **NOTE: We recommend that you share Suspense Config between different modules.**
     */
-  var timeoutMs: Double = js.native
+  var timeoutMs: Double
 }
 
 object TimeoutConfig {
@@ -22,19 +21,5 @@ object TimeoutConfig {
     val __obj = js.Dynamic.literal(timeoutMs = timeoutMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeoutConfig]
   }
-  @scala.inline
-  implicit class TimeoutConfigOps[Self <: TimeoutConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimeoutMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

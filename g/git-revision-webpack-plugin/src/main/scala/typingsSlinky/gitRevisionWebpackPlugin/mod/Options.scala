@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var branch: js.UndefOr[Boolean] = js.native
-  var branchCommand: js.UndefOr[String] = js.native
-  var commithashCommand: js.UndefOr[String] = js.native
-  var gitWorkTree: js.UndefOr[String] = js.native
-  var lightweightTags: js.UndefOr[Boolean] = js.native
-  var versionCommand: js.UndefOr[String] = js.native
+  var branch: js.UndefOr[Boolean] = js.undefined
+  var branchCommand: js.UndefOr[String] = js.undefined
+  var commithashCommand: js.UndefOr[String] = js.undefined
+  var gitWorkTree: js.UndefOr[String] = js.undefined
+  var lightweightTags: js.UndefOr[Boolean] = js.undefined
+  var versionCommand: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    branch: js.UndefOr[Boolean] = js.undefined,
+    branchCommand: String = null,
+    commithashCommand: String = null,
+    gitWorkTree: String = null,
+    lightweightTags: js.UndefOr[Boolean] = js.undefined,
+    versionCommand: String = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(branch)) __obj.updateDynamic("branch")(branch.get.asInstanceOf[js.Any])
+    if (branchCommand != null) __obj.updateDynamic("branchCommand")(branchCommand.asInstanceOf[js.Any])
+    if (commithashCommand != null) __obj.updateDynamic("commithashCommand")(commithashCommand.asInstanceOf[js.Any])
+    if (gitWorkTree != null) __obj.updateDynamic("gitWorkTree")(gitWorkTree.asInstanceOf[js.Any])
+    if (!js.isUndefined(lightweightTags)) __obj.updateDynamic("lightweightTags")(lightweightTags.get.asInstanceOf[js.Any])
+    if (versionCommand != null) __obj.updateDynamic("versionCommand")(versionCommand.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBranch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBranchCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBranchCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("branchCommand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommithashCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commithashCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommithashCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commithashCommand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGitWorkTree(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gitWorkTree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGitWorkTree: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gitWorkTree")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLightweightTags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lightweightTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLightweightTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lightweightTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCommand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCommand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

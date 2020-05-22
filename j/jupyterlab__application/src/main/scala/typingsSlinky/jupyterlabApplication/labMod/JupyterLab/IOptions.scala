@@ -17,35 +17,34 @@ import scala.scalajs.js.annotation._
   */
 /* Inlined parent @jupyterlab/application.@jupyterlab/application/lib/frontend.JupyterFrontEnd.IOptions<@jupyterlab/application.@jupyterlab/application/lib/shell.LabShell, any> */
 /* Inlined parent std.Partial<@jupyterlab/application.@jupyterlab/application/lib/lab.JupyterLab.IInfo> */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The command linker used by the application.
     */
-  var commandLinker: js.UndefOr[CommandLinker] = js.native
+  var commandLinker: js.UndefOr[CommandLinker] = js.undefined
   /**
     * A custom renderer for the context menu.
     */
-  var contextMenuRenderer: js.UndefOr[IRenderer] = js.native
-  var deferred: js.UndefOr[Matches] = js.native
-  var devMode: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[Matches] = js.native
+  var contextMenuRenderer: js.UndefOr[IRenderer] = js.undefined
+  var deferred: js.UndefOr[Matches] = js.undefined
+  var devMode: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Matches] = js.undefined
   /**
     * The document registry instance used by the application.
     */
-  var docRegistry: js.UndefOr[DocumentRegistry] = js.native
-  var filesCached: js.UndefOr[Boolean] = js.native
-  var mimeExtensions: js.UndefOr[js.Array[IExtensionModule]] = js.native
-  var paths: js.UndefOr[PartialIPaths] = js.native
+  var docRegistry: js.UndefOr[DocumentRegistry] = js.undefined
+  var filesCached: js.UndefOr[Boolean] = js.undefined
+  var mimeExtensions: js.UndefOr[js.Array[IExtensionModule]] = js.undefined
+  var paths: js.UndefOr[PartialIPaths] = js.undefined
   /**
     * Promise that resolves when state is first restored, returning layout
     * description.
     */
-  var restored: js.UndefOr[js.Promise[_]] = js.native
+  var restored: js.UndefOr[js.Promise[_]] = js.undefined
   /**
     * The service manager used by the application.
     */
-  var serviceManager: js.UndefOr[ServiceManager] = js.native
+  var serviceManager: js.UndefOr[ServiceManager] = js.undefined
   /**
     * The shell widget to use for the application.
     *
@@ -53,160 +52,38 @@ trait IOptions extends js.Object {
     *
     * The application will attach the widget to the DOM.
     */
-  var shell: LabShell = js.native
+  var shell: LabShell
 }
 
 object IOptions {
   @scala.inline
-  def apply(shell: LabShell): IOptions = {
+  def apply(
+    shell: LabShell,
+    commandLinker: CommandLinker = null,
+    contextMenuRenderer: IRenderer = null,
+    deferred: Matches = null,
+    devMode: js.UndefOr[Boolean] = js.undefined,
+    disabled: Matches = null,
+    docRegistry: DocumentRegistry = null,
+    filesCached: js.UndefOr[Boolean] = js.undefined,
+    mimeExtensions: js.Array[IExtensionModule] = null,
+    paths: PartialIPaths = null,
+    restored: js.Promise[_] = null,
+    serviceManager: ServiceManager = null
+  ): IOptions = {
     val __obj = js.Dynamic.literal(shell = shell.asInstanceOf[js.Any])
+    if (commandLinker != null) __obj.updateDynamic("commandLinker")(commandLinker.asInstanceOf[js.Any])
+    if (contextMenuRenderer != null) __obj.updateDynamic("contextMenuRenderer")(contextMenuRenderer.asInstanceOf[js.Any])
+    if (deferred != null) __obj.updateDynamic("deferred")(deferred.asInstanceOf[js.Any])
+    if (!js.isUndefined(devMode)) __obj.updateDynamic("devMode")(devMode.get.asInstanceOf[js.Any])
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (docRegistry != null) __obj.updateDynamic("docRegistry")(docRegistry.asInstanceOf[js.Any])
+    if (!js.isUndefined(filesCached)) __obj.updateDynamic("filesCached")(filesCached.get.asInstanceOf[js.Any])
+    if (mimeExtensions != null) __obj.updateDynamic("mimeExtensions")(mimeExtensions.asInstanceOf[js.Any])
+    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
+    if (restored != null) __obj.updateDynamic("restored")(restored.asInstanceOf[js.Any])
+    if (serviceManager != null) __obj.updateDynamic("serviceManager")(serviceManager.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShell(value: LabShell): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommandLinker(value: CommandLinker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commandLinker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommandLinker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commandLinker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenuRenderer(value: IRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuRenderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextMenuRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuRenderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferred(value: Matches): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferred")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferred: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferred")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Matches): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocRegistry(value: DocumentRegistry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docRegistry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocRegistry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docRegistry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilesCached(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filesCached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilesCached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filesCached")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeExtensions(value: js.Array[IExtensionModule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeExtensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeExtensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaths(value: PartialIPaths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestored(value: js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restored")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestored: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restored")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceManager(value: ServiceManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceManager")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

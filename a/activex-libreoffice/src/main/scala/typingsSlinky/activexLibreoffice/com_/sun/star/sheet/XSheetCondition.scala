@@ -12,50 +12,49 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.TableConditionalEntry
   * @see com.sun.star.sheet.TableValidation
   */
-@js.native
 trait XSheetCondition extends XInterface {
   /**
     * returns either the comparison value, which is used in the condition, or the first value if two values are needed for the operator.
     * @returns a formula, a numeric constant, or a string constant in quotes.
     */
-  var Formula1: String = js.native
+  var Formula1: String
   /**
     * if two values are needed for the operator, this method returns the second one.
     * @returns a formula, a numeric constant, or a string constant in quotes.
     */
-  var Formula2: String = js.native
+  var Formula2: String
   /** returns the operator in the condition. */
-  var Operator: ConditionOperator = js.native
+  var Operator: ConditionOperator
   /** returns the position in the document which is used as a base for relative references in the formulas. */
-  var SourcePosition: CellAddress = js.native
+  var SourcePosition: CellAddress
   /**
     * returns either the comparison value, which is used in the condition, or the first value if two values are needed for the operator.
     * @returns a formula, a numeric constant, or a string constant in quotes.
     */
-  def getFormula1(): String = js.native
+  def getFormula1(): String
   /**
     * if two values are needed for the operator, this method returns the second one.
     * @returns a formula, a numeric constant, or a string constant in quotes.
     */
-  def getFormula2(): String = js.native
+  def getFormula2(): String
   /** returns the operator in the condition. */
-  def getOperator(): ConditionOperator = js.native
+  def getOperator(): ConditionOperator
   /** returns the position in the document which is used as a base for relative references in the formulas. */
-  def getSourcePosition(): CellAddress = js.native
+  def getSourcePosition(): CellAddress
   /**
     * sets either the comparison value, which is used in the condition, or the first value if two values are needed for the operator.
     * @param aFormula1 a formula, a numeric constant, or a string constant in quotes.
     */
-  def setFormula1(aFormula1: String): Unit = js.native
+  def setFormula1(aFormula1: String): Unit
   /**
     * if two values are needed for the operator, this method sets the second one.
     * @param aFormula2 a formula, a numeric constant, or a string constant in quotes.
     */
-  def setFormula2(aFormula2: String): Unit = js.native
+  def setFormula2(aFormula2: String): Unit
   /** sets the operator in the condition. */
-  def setOperator(nOperator: ConditionOperator): Unit = js.native
+  def setOperator(nOperator: ConditionOperator): Unit
   /** sets the position in the document which is used as a base for relative references in the formulas. */
-  def setSourcePosition(aSourcePosition: CellAddress): Unit = js.native
+  def setSourcePosition(aSourcePosition: CellAddress): Unit
 }
 
 object XSheetCondition {
@@ -80,85 +79,5 @@ object XSheetCondition {
     val __obj = js.Dynamic.literal(Formula1 = Formula1.asInstanceOf[js.Any], Formula2 = Formula2.asInstanceOf[js.Any], Operator = Operator.asInstanceOf[js.Any], SourcePosition = SourcePosition.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getFormula1 = js.Any.fromFunction0(getFormula1), getFormula2 = js.Any.fromFunction0(getFormula2), getOperator = js.Any.fromFunction0(getOperator), getSourcePosition = js.Any.fromFunction0(getSourcePosition), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setFormula1 = js.Any.fromFunction1(setFormula1), setFormula2 = js.Any.fromFunction1(setFormula2), setOperator = js.Any.fromFunction1(setOperator), setSourcePosition = js.Any.fromFunction1(setSourcePosition))
     __obj.asInstanceOf[XSheetCondition]
   }
-  @scala.inline
-  implicit class XSheetConditionOps[Self <: XSheetCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormula1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Formula1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormula2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Formula2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperator(value: ConditionOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourcePosition(value: CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetFormula1(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormula1")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFormula2(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormula2")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetOperator(value: () => ConditionOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOperator")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSourcePosition(value: () => CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSourcePosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetFormula1(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormula1")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFormula2(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormula2")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOperator(value: ConditionOperator => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOperator")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSourcePosition(value: CellAddress => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSourcePosition")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

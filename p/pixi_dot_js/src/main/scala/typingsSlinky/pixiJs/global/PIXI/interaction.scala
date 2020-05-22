@@ -33,7 +33,58 @@ object interaction extends js.Object {
     */
   @js.native
   class InteractionEvent ()
-    extends typingsSlinky.pixiJs.PIXI.interaction.InteractionEvent
+    extends typingsSlinky.pixiJs.PIXI.interaction.InteractionEvent {
+    /**
+      * The object whose event listener’s callback is currently being invoked.
+      *
+      * @member {PIXI.DisplayObject} PIXI.interaction.InteractionEvent#currentTarget
+      */
+    /* CompleteClass */
+    override var currentTarget: typingsSlinky.pixiJs.PIXI.DisplayObject = js.native
+    /**
+      * InteractionData related to this event
+      *
+      * @member {PIXI.interaction.InteractionData} PIXI.interaction.InteractionEvent#data
+      */
+    /* CompleteClass */
+    override var data: typingsSlinky.pixiJs.PIXI.interaction.InteractionData = js.native
+    /**
+      * Whether this event will continue propagating in the tree.
+      *
+      * Remaining events for the {@link stopsPropagatingAt} object
+      * will still be dispatched.
+      *
+      * @member {boolean} PIXI.interaction.InteractionEvent#stopped
+      */
+    /* CompleteClass */
+    override var stopped: Boolean = js.native
+    /**
+      * The object which caused this event to be dispatched.
+      * For listener callback see {@link PIXI.interaction.InteractionEvent.currentTarget}.
+      *
+      * @member {PIXI.DisplayObject} PIXI.interaction.InteractionEvent#target
+      */
+    /* CompleteClass */
+    override var target: typingsSlinky.pixiJs.PIXI.DisplayObject = js.native
+    /**
+      * Type of the event
+      *
+      * @member {string} PIXI.interaction.InteractionEvent#type
+      */
+    /* CompleteClass */
+    override var `type`: String = js.native
+    /**
+      * Resets the event.
+      */
+    /* CompleteClass */
+    override def reset(): Unit = js.native
+    /**
+      * Prevents event from reaching any objects other than the current object.
+      *
+      */
+    /* CompleteClass */
+    override def stopPropagation(): Unit = js.native
+  }
   
   /**
     * The interaction manager deals with mouse, touch and pointer events.

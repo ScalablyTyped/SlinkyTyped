@@ -9,102 +9,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PostProcessPopupParams extends js.Object {
-  var column: js.UndefOr[Column] = js.native
-  var ePopup: HTMLElement = js.native
-  var eventSource: js.UndefOr[HTMLElement] = js.native
-  var mouseEvent: js.UndefOr[MouseEvent | Touch] = js.native
-  var rowNode: js.UndefOr[RowNode] = js.native
-  var `type`: String = js.native
+  var column: js.UndefOr[Column] = js.undefined
+  var ePopup: HTMLElement
+  var eventSource: js.UndefOr[HTMLElement] = js.undefined
+  var mouseEvent: js.UndefOr[MouseEvent | Touch] = js.undefined
+  var rowNode: js.UndefOr[RowNode] = js.undefined
+  var `type`: String
 }
 
 object PostProcessPopupParams {
   @scala.inline
-  def apply(ePopup: HTMLElement, `type`: String): PostProcessPopupParams = {
+  def apply(
+    ePopup: HTMLElement,
+    `type`: String,
+    column: Column = null,
+    eventSource: HTMLElement = null,
+    mouseEvent: MouseEvent | Touch = null,
+    rowNode: RowNode = null
+  ): PostProcessPopupParams = {
     val __obj = js.Dynamic.literal(ePopup = ePopup.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
+    if (eventSource != null) __obj.updateDynamic("eventSource")(eventSource.asInstanceOf[js.Any])
+    if (mouseEvent != null) __obj.updateDynamic("mouseEvent")(mouseEvent.asInstanceOf[js.Any])
+    if (rowNode != null) __obj.updateDynamic("rowNode")(rowNode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostProcessPopupParams]
   }
-  @scala.inline
-  implicit class PostProcessPopupParamsOps[Self <: PostProcessPopupParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEPopup(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ePopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumn(value: Column): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventSource(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseEventTouch(value: Touch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseEventMouseEvent(value: MouseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMouseEvent(value: MouseEvent | Touch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowNode(value: RowNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

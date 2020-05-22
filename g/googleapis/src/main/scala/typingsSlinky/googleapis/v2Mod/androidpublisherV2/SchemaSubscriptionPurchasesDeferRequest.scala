@@ -14,29 +14,10 @@ trait SchemaSubscriptionPurchasesDeferRequest extends js.Object {
 
 object SchemaSubscriptionPurchasesDeferRequest {
   @scala.inline
-  def apply(): SchemaSubscriptionPurchasesDeferRequest = {
+  def apply(deferralInfo: SchemaSubscriptionDeferralInfo = null): SchemaSubscriptionPurchasesDeferRequest = {
     val __obj = js.Dynamic.literal()
+    if (deferralInfo != null) __obj.updateDynamic("deferralInfo")(deferralInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubscriptionPurchasesDeferRequest]
   }
-  @scala.inline
-  implicit class SchemaSubscriptionPurchasesDeferRequestOps[Self <: SchemaSubscriptionPurchasesDeferRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeferralInfo(value: SchemaSubscriptionDeferralInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferralInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferralInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferralInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,73 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FileSystemManagerRemoveSavedFileOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[FileSystemManagerRemoveSavedFileCompleteCallback] = js.native
+  var complete: js.UndefOr[FileSystemManagerRemoveSavedFileCompleteCallback] = js.undefined
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[FileSystemManagerRemoveSavedFileFailCallback] = js.native
+  var fail: js.UndefOr[FileSystemManagerRemoveSavedFileFailCallback] = js.undefined
   /** 需要删除的文件路径 */
-  var filePath: String = js.native
+  var filePath: String
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[FileSystemManagerRemoveSavedFileSuccessCallback] = js.native
+  var success: js.UndefOr[FileSystemManagerRemoveSavedFileSuccessCallback] = js.undefined
 }
 
 object FileSystemManagerRemoveSavedFileOption {
   @scala.inline
-  def apply(filePath: String): FileSystemManagerRemoveSavedFileOption = {
+  def apply(
+    filePath: String,
+    complete: /* res */ GeneralCallbackResult => Unit = null,
+    fail: /* result */ RemoveSavedFileFailCallbackResult => Unit = null,
+    success: /* res */ GeneralCallbackResult => Unit = null
+  ): FileSystemManagerRemoveSavedFileOption = {
     val __obj = js.Dynamic.literal(filePath = filePath.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[FileSystemManagerRemoveSavedFileOption]
   }
-  @scala.inline
-  implicit class FileSystemManagerRemoveSavedFileOptionOps[Self <: FileSystemManagerRemoveSavedFileOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* result */ RemoveSavedFileFailCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

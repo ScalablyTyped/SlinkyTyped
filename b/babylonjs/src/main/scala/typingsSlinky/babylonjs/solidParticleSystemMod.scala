@@ -381,6 +381,11 @@ object solidParticleSystemMod extends js.Object {
     def digest(mesh: Mesh): SolidParticleSystem = js.native
     def digest(mesh: Mesh, options: Delta): SolidParticleSystem = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets if the SPS is created as expandable at construction time.
       * Default : `false`
       */

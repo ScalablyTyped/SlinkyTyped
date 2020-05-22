@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.getPrefixListMod
 
+import typingsSlinky.pulumiAws.inputMod.GetPrefixListFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetPrefixListArgs extends js.Object {
   /**
-    * The name of the prefix list to select.
+    * Configuration block(s) for filtering. Detailed below.
+    */
+  val filters: js.UndefOr[js.Array[GetPrefixListFilter]] = js.native
+  /**
+    * The name of the filter field. Valid values can be found in the [EC2 DescribePrefixLists API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePrefixLists.html).
     */
   val name: js.UndefOr[String] = js.native
   /**
@@ -18,41 +23,12 @@ trait GetPrefixListArgs extends js.Object {
 
 object GetPrefixListArgs {
   @scala.inline
-  def apply(): GetPrefixListArgs = {
+  def apply(filters: js.Array[GetPrefixListFilter] = null, name: String = null, prefixListId: String = null): GetPrefixListArgs = {
     val __obj = js.Dynamic.literal()
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (prefixListId != null) __obj.updateDynamic("prefixListId")(prefixListId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPrefixListArgs]
   }
-  @scala.inline
-  implicit class GetPrefixListArgsOps[Self <: GetPrefixListArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixListId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixListId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixListId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixListId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

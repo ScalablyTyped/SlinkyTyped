@@ -43,89 +43,22 @@ trait SchemaGoogleCloudMlV1HyperparameterOutput extends js.Object {
 
 object SchemaGoogleCloudMlV1HyperparameterOutput {
   @scala.inline
-  def apply(): SchemaGoogleCloudMlV1HyperparameterOutput = {
+  def apply(
+    allMetrics: js.Array[SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric] = null,
+    builtInAlgorithmOutput: SchemaGoogleCloudMlV1BuiltInAlgorithmOutput = null,
+    finalMetric: SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric = null,
+    hyperparameters: StringDictionary[String] = null,
+    isTrialStoppedEarly: js.UndefOr[Boolean] = js.undefined,
+    trialId: String = null
+  ): SchemaGoogleCloudMlV1HyperparameterOutput = {
     val __obj = js.Dynamic.literal()
+    if (allMetrics != null) __obj.updateDynamic("allMetrics")(allMetrics.asInstanceOf[js.Any])
+    if (builtInAlgorithmOutput != null) __obj.updateDynamic("builtInAlgorithmOutput")(builtInAlgorithmOutput.asInstanceOf[js.Any])
+    if (finalMetric != null) __obj.updateDynamic("finalMetric")(finalMetric.asInstanceOf[js.Any])
+    if (hyperparameters != null) __obj.updateDynamic("hyperparameters")(hyperparameters.asInstanceOf[js.Any])
+    if (!js.isUndefined(isTrialStoppedEarly)) __obj.updateDynamic("isTrialStoppedEarly")(isTrialStoppedEarly.get.asInstanceOf[js.Any])
+    if (trialId != null) __obj.updateDynamic("trialId")(trialId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1HyperparameterOutput]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudMlV1HyperparameterOutputOps[Self <: SchemaGoogleCloudMlV1HyperparameterOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllMetrics(value: js.Array[SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuiltInAlgorithmOutput(value: SchemaGoogleCloudMlV1BuiltInAlgorithmOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("builtInAlgorithmOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuiltInAlgorithmOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("builtInAlgorithmOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalMetric(value: SchemaGoogleCloudMlV1HyperparameterOutputHyperparameterMetric): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalMetric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalMetric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHyperparameters(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperparameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHyperparameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperparameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsTrialStoppedEarly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrialStoppedEarly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsTrialStoppedEarly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrialStoppedEarly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrialId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrialId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trialId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

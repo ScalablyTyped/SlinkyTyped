@@ -22,53 +22,16 @@ trait Range extends js.Object {
 
 object Range {
   @scala.inline
-  def apply(): Range = {
+  def apply(
+    From: js.UndefOr[Integer] = js.undefined,
+    Step: js.UndefOr[IntegerOptional] = js.undefined,
+    To: js.UndefOr[Integer] = js.undefined
+  ): Range = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(From)) __obj.updateDynamic("From")(From.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Step)) __obj.updateDynamic("Step")(Step.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(To)) __obj.updateDynamic("To")(To.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Range]
   }
-  @scala.inline
-  implicit class RangeOps[Self <: Range] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrom(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("To")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("To")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

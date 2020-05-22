@@ -17,77 +17,20 @@ trait PartialStyleRulesInputAdo extends js.Object {
 
 object PartialStyleRulesInputAdo {
   @scala.inline
-  def apply(): PartialStyleRulesInputAdo = {
+  def apply(
+    disablePointerEvents: CSSProperties = null,
+    filled: CSSProperties = null,
+    positionEnd: CSSProperties = null,
+    positionStart: CSSProperties = null,
+    root: CSSProperties = null
+  ): PartialStyleRulesInputAdo = {
     val __obj = js.Dynamic.literal()
+    if (disablePointerEvents != null) __obj.updateDynamic("disablePointerEvents")(disablePointerEvents.asInstanceOf[js.Any])
+    if (filled != null) __obj.updateDynamic("filled")(filled.asInstanceOf[js.Any])
+    if (positionEnd != null) __obj.updateDynamic("positionEnd")(positionEnd.asInstanceOf[js.Any])
+    if (positionStart != null) __obj.updateDynamic("positionStart")(positionStart.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesInputAdo]
   }
-  @scala.inline
-  implicit class PartialStyleRulesInputAdoOps[Self <: PartialStyleRulesInputAdo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisablePointerEvents(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePointerEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePointerEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePointerEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilled(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionEnd(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionStart(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

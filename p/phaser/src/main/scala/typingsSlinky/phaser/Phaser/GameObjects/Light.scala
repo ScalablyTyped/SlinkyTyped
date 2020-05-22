@@ -13,44 +13,43 @@ import scala.scalajs.js.annotation._
   * 
   * They can also simply be used to represent a point light for your own purposes.
   */
-@js.native
 trait Light extends js.Object {
   /**
     * The blue color of the light. A value between 0 and 1.
     */
-  var b: Double = js.native
+  var b: Double
   /**
     * The green color of the light. A value between 0 and 1.
     */
-  var g: Double = js.native
+  var g: Double
   /**
     * The intensity of the light.
     */
-  var intensity: Double = js.native
+  var intensity: Double
   /**
     * The red color of the light. A value between 0 and 1.
     */
-  var r: Double = js.native
+  var r: Double
   /**
     * The radius of the light.
     */
-  var radius: Double = js.native
+  var radius: Double
   /**
     * The horizontal scroll factor of the light.
     */
-  var scrollFactorX: Double = js.native
+  var scrollFactorX: Double
   /**
     * The vertical scroll factor of the light.
     */
-  var scrollFactorY: Double = js.native
+  var scrollFactorY: Double
   /**
     * The horizontal position of the light.
     */
-  var x: Double = js.native
+  var x: Double
   /**
     * The vertical position of the light.
     */
-  var y: Double = js.native
+  var y: Double
   /**
     * Set the properties of the light.
     * 
@@ -64,34 +63,34 @@ trait Light extends js.Object {
     * @param b The blue color. A value between 0 and 1.
     * @param intensity The intensity of the light.
     */
-  def set(x: Double, y: Double, radius: Double, r: Double, g: Double, b: Double, intensity: Double): Light = js.native
+  def set(x: Double, y: Double, radius: Double, r: Double, g: Double, b: Double, intensity: Double): this.type
   /**
     * Set the color of the light from a single integer RGB value.
     * @param rgb The integer RGB color of the light.
     */
-  def setColor(rgb: Double): Light = js.native
+  def setColor(rgb: Double): this.type
   /**
     * Set the intensity of the light.
     * @param intensity The intensity of the light.
     */
-  def setIntensity(intensity: Double): Light = js.native
+  def setIntensity(intensity: Double): this.type
   /**
     * Set the position of the light.
     * @param x The horizontal position of the light.
     * @param y The vertical position of the light.
     */
-  def setPosition(x: Double, y: Double): Light = js.native
+  def setPosition(x: Double, y: Double): this.type
   /**
     * Set the radius of the light.
     * @param radius The radius of the light.
     */
-  def setRadius(radius: Double): Light = js.native
+  def setRadius(radius: Double): this.type
   /**
     * Set the scroll factor of the light.
     * @param x The horizontal scroll factor of the light.
     * @param y The vertical scroll factor of the light.
     */
-  def setScrollFactor(x: Double, y: Double): Light = js.native
+  def setScrollFactor(x: Double, y: Double): this.type
 }
 
 object Light {
@@ -116,103 +115,5 @@ object Light {
     val __obj = js.Dynamic.literal(b = b.asInstanceOf[js.Any], g = g.asInstanceOf[js.Any], intensity = intensity.asInstanceOf[js.Any], r = r.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any], scrollFactorX = scrollFactorX.asInstanceOf[js.Any], scrollFactorY = scrollFactorY.asInstanceOf[js.Any], set = js.Any.fromFunction7(set), setColor = js.Any.fromFunction1(setColor), setIntensity = js.Any.fromFunction1(setIntensity), setPosition = js.Any.fromFunction2(setPosition), setRadius = js.Any.fromFunction1(setRadius), setScrollFactor = js.Any.fromFunction2(setScrollFactor), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[Light]
   }
-  @scala.inline
-  implicit class LightOps[Self <: Light] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withB(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withG(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntensity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intensity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withR(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollFactorX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollFactorX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollFactorY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollFactorY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSet(value: (Double, Double, Double, Double, Double, Double, Double) => Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withSetColor(value: Double => Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setColor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIntensity(value: Double => Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIntensity")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetPosition(value: (Double, Double) => Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPosition")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetRadius(value: Double => Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRadius")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetScrollFactor(value: (Double, Double) => Light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollFactor")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

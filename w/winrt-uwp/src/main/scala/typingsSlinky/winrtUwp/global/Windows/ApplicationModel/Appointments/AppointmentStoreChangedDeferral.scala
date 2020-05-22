@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral")
 @js.native
 abstract class AppointmentStoreChangedDeferral ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral {
+  /** Informs the system that an asynchronous operation associated with an AppointmentStore has finished. */
+  /* CompleteClass */
+  override def complete(): Unit = js.native
+}
 

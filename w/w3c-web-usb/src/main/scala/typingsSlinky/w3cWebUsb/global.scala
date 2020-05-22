@@ -15,11 +15,26 @@ object global extends js.Object {
   class USBAlternateInterface protected ()
     extends typingsSlinky.w3cWebUsb.USBAlternateInterface {
     def this(deviceInterface: typingsSlinky.w3cWebUsb.USBInterface, alternateSetting: Double) = this()
+    /* CompleteClass */
+    override val alternateSetting: Double = js.native
+    /* CompleteClass */
+    override val endpoints: js.Array[USBEndpoint] = js.native
+    /* CompleteClass */
+    override val interfaceClass: Double = js.native
+    /* CompleteClass */
+    override val interfaceProtocol: Double = js.native
+    /* CompleteClass */
+    override val interfaceSubclass: Double = js.native
   }
   
   @js.native
   class USBConfiguration ()
-    extends typingsSlinky.w3cWebUsb.USBConfiguration
+    extends typingsSlinky.w3cWebUsb.USBConfiguration {
+    /* CompleteClass */
+    override val configurationValue: Double = js.native
+    /* CompleteClass */
+    override val interfaces: js.Array[typingsSlinky.w3cWebUsb.USBInterface] = js.native
+  }
   
   @js.native
   class USBConnectionEvent protected ()
@@ -42,6 +57,14 @@ object global extends js.Object {
   class USBInterface protected ()
     extends typingsSlinky.w3cWebUsb.USBInterface {
     def this(configuration: typingsSlinky.w3cWebUsb.USBConfiguration, interfaceNumber: Double) = this()
+    /* CompleteClass */
+    override val alternate: typingsSlinky.w3cWebUsb.USBAlternateInterface = js.native
+    /* CompleteClass */
+    override val alternates: js.Array[typingsSlinky.w3cWebUsb.USBAlternateInterface] = js.native
+    /* CompleteClass */
+    override val claimed: Boolean = js.native
+    /* CompleteClass */
+    override val interfaceNumber: Double = js.native
   }
   
   @js.native
@@ -59,6 +82,8 @@ object global extends js.Object {
       packets: js.Array[typingsSlinky.w3cWebUsb.USBIsochronousInTransferPacket],
       data: js.typedarray.DataView
     ) = this()
+    /* CompleteClass */
+    override val packets: js.Array[typingsSlinky.w3cWebUsb.USBIsochronousInTransferPacket] = js.native
   }
   
   @js.native
@@ -66,12 +91,18 @@ object global extends js.Object {
     extends typingsSlinky.w3cWebUsb.USBIsochronousOutTransferPacket {
     def this(status: USBTransferStatus) = this()
     def this(status: USBTransferStatus, bytesWritten: Double) = this()
+    /* CompleteClass */
+    override val bytesWritten: Double = js.native
+    /* CompleteClass */
+    override val status: USBTransferStatus = js.native
   }
   
   @js.native
   class USBIsochronousOutTransferResult protected ()
     extends typingsSlinky.w3cWebUsb.USBIsochronousOutTransferResult {
     def this(packets: js.Array[typingsSlinky.w3cWebUsb.USBIsochronousOutTransferPacket]) = this()
+    /* CompleteClass */
+    override val packets: js.Array[typingsSlinky.w3cWebUsb.USBIsochronousOutTransferPacket] = js.native
   }
   
   @js.native
@@ -79,6 +110,10 @@ object global extends js.Object {
     extends typingsSlinky.w3cWebUsb.USBOutTransferResult {
     def this(status: USBTransferStatus) = this()
     def this(status: USBTransferStatus, bytesWriten: Double) = this()
+    /* CompleteClass */
+    override val bytesWritten: Double = js.native
+    /* CompleteClass */
+    override val status: USBTransferStatus = js.native
   }
   
 }

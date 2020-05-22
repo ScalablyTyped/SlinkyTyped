@@ -104,7 +104,7 @@ class Duplex ()
   @JSName("prependOnceListener")
   def prependOnceListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def push(chunk: js.Any): Boolean = js.native
-  def push(chunk: js.Any, encoding: String): Boolean = js.native
+  def push(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
   @JSName("removeListener")
   def removeListener_data(event: data, listener: js.Function1[/* chunk */ js.Any, Unit]): this.type = js.native
   @JSName("removeListener")

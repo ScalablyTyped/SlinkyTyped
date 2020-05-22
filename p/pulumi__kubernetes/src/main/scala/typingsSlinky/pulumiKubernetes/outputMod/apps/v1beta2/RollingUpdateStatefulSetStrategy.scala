@@ -8,13 +8,12 @@ import scala.scalajs.js.annotation._
   * RollingUpdateStatefulSetStrategy is used to communicate parameter for
   * RollingUpdateStatefulSetStrategyType.
   */
-@js.native
 trait RollingUpdateStatefulSetStrategy extends js.Object {
   /**
     * Partition indicates the ordinal at which the StatefulSet should be partitioned. Default
     * value is 0.
     */
-  val partition: Double = js.native
+  val partition: Double
 }
 
 object RollingUpdateStatefulSetStrategy {
@@ -23,19 +22,5 @@ object RollingUpdateStatefulSetStrategy {
     val __obj = js.Dynamic.literal(partition = partition.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollingUpdateStatefulSetStrategy]
   }
-  @scala.inline
-  implicit class RollingUpdateStatefulSetStrategyOps[Self <: RollingUpdateStatefulSetStrategy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPartition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partition")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

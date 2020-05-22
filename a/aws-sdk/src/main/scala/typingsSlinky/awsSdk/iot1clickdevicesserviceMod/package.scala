@@ -8,6 +8,12 @@ package object iot1clickdevicesserviceMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.iot1clickdevicesserviceMod.ClientApiVersions
   type DeviceAttributes = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.iot1clickdevicesserviceMod.string]
   type MaxResults = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2018-05-14`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.iot1clickdevicesserviceMod._apiVersion | java.lang.String
   type boolean = scala.Boolean
   type doubleMin0Max100 = scala.Double
   type integer = scala.Double

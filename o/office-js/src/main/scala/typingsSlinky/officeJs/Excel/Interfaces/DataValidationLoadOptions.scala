@@ -11,48 +11,47 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@js.native
 trait DataValidationLoadOptions extends js.Object {
   /**
     Specifying `$all` for the LoadOptions loads all the scalar properties (e.g.: `Range.address`) but not the navigational properties (e.g.: `Range.format.fill.color`).
     */
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Error alert when user enters invalid data.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var errorAlert: js.UndefOr[Boolean] = js.native
+  var errorAlert: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Ignore blanks: no data validation will be performed on blank cells, it defaults to true.
+    * Specifies if data validation will be performed on blank cells, it defaults to true.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var ignoreBlanks: js.UndefOr[Boolean] = js.native
+  var ignoreBlanks: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Prompt when users select a cell.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var prompt: js.UndefOr[Boolean] = js.native
+  var prompt: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Data validation rule that contains different type of data validation criteria.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var rule: js.UndefOr[Boolean] = js.native
+  var rule: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Type of the data validation, see Excel.DataValidationType for details.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var `type`: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents if all cell values are valid according to the data validation rules.
@@ -61,106 +60,29 @@ trait DataValidationLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var valid: js.UndefOr[Boolean] = js.native
+  var valid: js.UndefOr[Boolean] = js.undefined
 }
 
 object DataValidationLoadOptions {
   @scala.inline
-  def apply(): DataValidationLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    errorAlert: js.UndefOr[Boolean] = js.undefined,
+    ignoreBlanks: js.UndefOr[Boolean] = js.undefined,
+    prompt: js.UndefOr[Boolean] = js.undefined,
+    rule: js.UndefOr[Boolean] = js.undefined,
+    `type`: js.UndefOr[Boolean] = js.undefined,
+    valid: js.UndefOr[Boolean] = js.undefined
+  ): DataValidationLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorAlert)) __obj.updateDynamic("errorAlert")(errorAlert.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreBlanks)) __obj.updateDynamic("ignoreBlanks")(ignoreBlanks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(prompt)) __obj.updateDynamic("prompt")(prompt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rule)) __obj.updateDynamic("rule")(rule.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valid)) __obj.updateDynamic("valid")(valid.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataValidationLoadOptions]
   }
-  @scala.inline
-  implicit class DataValidationLoadOptionsOps[Self <: DataValidationLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorAlert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorAlert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorAlert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorAlert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreBlanks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBlanks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreBlanks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBlanks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrompt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prompt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrompt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prompt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

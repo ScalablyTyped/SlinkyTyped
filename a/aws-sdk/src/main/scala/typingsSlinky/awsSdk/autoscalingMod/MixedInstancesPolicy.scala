@@ -18,41 +18,11 @@ trait MixedInstancesPolicy extends js.Object {
 
 object MixedInstancesPolicy {
   @scala.inline
-  def apply(): MixedInstancesPolicy = {
+  def apply(InstancesDistribution: InstancesDistribution = null, LaunchTemplate: LaunchTemplate = null): MixedInstancesPolicy = {
     val __obj = js.Dynamic.literal()
+    if (InstancesDistribution != null) __obj.updateDynamic("InstancesDistribution")(InstancesDistribution.asInstanceOf[js.Any])
+    if (LaunchTemplate != null) __obj.updateDynamic("LaunchTemplate")(LaunchTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[MixedInstancesPolicy]
   }
-  @scala.inline
-  implicit class MixedInstancesPolicyOps[Self <: MixedInstancesPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstancesDistribution(value: InstancesDistribution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesDistribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancesDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesDistribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchTemplate(value: LaunchTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

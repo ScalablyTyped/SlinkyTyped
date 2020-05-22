@@ -32,65 +32,18 @@ trait SchemaCreateContainerVersionResponse extends js.Object {
 
 object SchemaCreateContainerVersionResponse {
   @scala.inline
-  def apply(): SchemaCreateContainerVersionResponse = {
+  def apply(
+    compilerError: js.UndefOr[Boolean] = js.undefined,
+    containerVersion: SchemaContainerVersion = null,
+    newWorkspacePath: String = null,
+    syncStatus: SchemaSyncStatus = null
+  ): SchemaCreateContainerVersionResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(compilerError)) __obj.updateDynamic("compilerError")(compilerError.get.asInstanceOf[js.Any])
+    if (containerVersion != null) __obj.updateDynamic("containerVersion")(containerVersion.asInstanceOf[js.Any])
+    if (newWorkspacePath != null) __obj.updateDynamic("newWorkspacePath")(newWorkspacePath.asInstanceOf[js.Any])
+    if (syncStatus != null) __obj.updateDynamic("syncStatus")(syncStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateContainerVersionResponse]
   }
-  @scala.inline
-  implicit class SchemaCreateContainerVersionResponseOps[Self <: SchemaCreateContainerVersionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompilerError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compilerError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompilerError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compilerError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerVersion(value: SchemaContainerVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewWorkspacePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWorkspacePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewWorkspacePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newWorkspacePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncStatus(value: SchemaSyncStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

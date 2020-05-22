@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueueRemoveItemsRequest extends js.Object {
-  var customData: js.Object = js.native
-  var itemIds: js.Array[Double] = js.native
+  var customData: js.Object
+  var itemIds: js.Array[Double]
 }
 
 object QueueRemoveItemsRequest {
@@ -16,25 +15,5 @@ object QueueRemoveItemsRequest {
     val __obj = js.Dynamic.literal(customData = customData.asInstanceOf[js.Any], itemIds = itemIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueueRemoveItemsRequest]
   }
-  @scala.inline
-  implicit class QueueRemoveItemsRequestOps[Self <: QueueRemoveItemsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomData(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemIds(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

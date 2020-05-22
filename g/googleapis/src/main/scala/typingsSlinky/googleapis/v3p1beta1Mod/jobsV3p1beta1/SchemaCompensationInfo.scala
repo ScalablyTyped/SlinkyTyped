@@ -33,53 +33,16 @@ trait SchemaCompensationInfo extends js.Object {
 
 object SchemaCompensationInfo {
   @scala.inline
-  def apply(): SchemaCompensationInfo = {
+  def apply(
+    annualizedBaseCompensationRange: SchemaCompensationRange = null,
+    annualizedTotalCompensationRange: SchemaCompensationRange = null,
+    entries: js.Array[SchemaCompensationEntry] = null
+  ): SchemaCompensationInfo = {
     val __obj = js.Dynamic.literal()
+    if (annualizedBaseCompensationRange != null) __obj.updateDynamic("annualizedBaseCompensationRange")(annualizedBaseCompensationRange.asInstanceOf[js.Any])
+    if (annualizedTotalCompensationRange != null) __obj.updateDynamic("annualizedTotalCompensationRange")(annualizedTotalCompensationRange.asInstanceOf[js.Any])
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCompensationInfo]
   }
-  @scala.inline
-  implicit class SchemaCompensationInfoOps[Self <: SchemaCompensationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnualizedBaseCompensationRange(value: SchemaCompensationRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedBaseCompensationRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnualizedBaseCompensationRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedBaseCompensationRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnnualizedTotalCompensationRange(value: SchemaCompensationRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedTotalCompensationRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnualizedTotalCompensationRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annualizedTotalCompensationRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntries(value: js.Array[SchemaCompensationEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

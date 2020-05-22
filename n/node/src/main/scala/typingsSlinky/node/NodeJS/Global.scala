@@ -75,7 +75,6 @@ trait Global extends js.Object {
   var Float64Array: Float64ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Float64Array]) = js.native
   @JSName("Function")
   var Function_Original: FunctionConstructor with (Instantiable1[/* args (repeated) */ String, Function]) = js.native
-  var GLOBAL: Global = js.native
   var Infinity: Double = js.native
   var Int16Array: Int16ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int16Array]) = js.native
   var Int32Array: Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], typingsSlinky.std.global.Int32Array]) = js.native
@@ -147,10 +146,6 @@ trait Global extends js.Object {
   var process: Process = js.native
   @JSName("queueMicrotask")
   var queueMicrotask_Original: js.Function1[/* callback */ js.Function0[Unit], Unit] = js.native
-  /**
-    * @deprecated Use `global`.
-    */
-  var root: Global = js.native
   var undefined: js.UndefOr[scala.Nothing] = js.native
   var v8debug: js.UndefOr[js.Any] = js.native
   def Array(): js.Array[_] = js.native

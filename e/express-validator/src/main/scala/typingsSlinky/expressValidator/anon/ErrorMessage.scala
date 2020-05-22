@@ -1,83 +1,36 @@
 package typingsSlinky.expressValidator.anon
 
 import typingsSlinky.expressValidator.baseMod.DynamicMessageCreator
-import typingsSlinky.expressValidator.baseMod.Meta
 import typingsSlinky.expressValidator.schemaMod.ValidatorSchemaOptions
 import typingsSlinky.std.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait ErrorMessage[K /* <: /* keyof express-validator.express-validator/src/chain/validators.Validators<any> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 70 */ js.Any */] extends ValidatorSchemaOptions[K] {
-  var errorMessage: js.UndefOr[DynamicMessageCreator | js.Any] = js.native
-  var negated: js.UndefOr[Boolean] = js.native
+trait ErrorMessage[K /* <: /* keyof express-validator.express-validator/src/chain/validators.Validators<any> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 79 */ js.Any */] extends ValidatorSchemaOptions[K] {
+  var errorMessage: js.UndefOr[DynamicMessageCreator | js.Any] = js.undefined
+  var negated: js.UndefOr[Boolean] = js.undefined
   var options: js.UndefOr[
     (Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: express-validator.express-validator/src/chain/validators.Validators<any>[K] */ js.Any
     ]) | (/* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<express-validator.express-validator/src/chain/validators.Validators<any>[K]>[0] */ js.Any)
-  ] = js.native
+  ] = js.undefined
 }
 
 object ErrorMessage {
   @scala.inline
-  def apply[K](): ErrorMessage[K] = {
+  def apply[K](
+    errorMessage: DynamicMessageCreator | js.Any = null,
+    negated: js.UndefOr[Boolean] = js.undefined,
+    options: (Parameters[
+      /* import warning: importer.ImportType#apply Failed type conversion: express-validator.express-validator/src/chain/validators.Validators<any>[K] */ js.Any
+    ]) | (/* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<express-validator.express-validator/src/chain/validators.Validators<any>[K]>[0] */ js.Any) = null
+  ): ErrorMessage[K] = {
     val __obj = js.Dynamic.literal()
+    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(negated)) __obj.updateDynamic("negated")(negated.get.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorMessage[K]]
   }
-  @scala.inline
-  implicit class ErrorMessageOps[Self[k] <: ErrorMessage[k], K] (val x: Self[K]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[K] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[K] with Other]
-    @scala.inline
-    def withErrorMessageFunction2(value: (/* value */ js.Any, /* meta */ Meta) => js.Any): Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withErrorMessage(value: DynamicMessageCreator | js.Any): Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNegated(value: Boolean): Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNegated: Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(
-      value: (Parameters[
-          /* import warning: importer.ImportType#apply Failed type conversion: express-validator.express-validator/src/chain/validators.Validators<any>[K] */ js.Any
-        ]) | (/* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<express-validator.express-validator/src/chain/validators.Validators<any>[K]>[0] */ js.Any)
-    ): Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self[K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

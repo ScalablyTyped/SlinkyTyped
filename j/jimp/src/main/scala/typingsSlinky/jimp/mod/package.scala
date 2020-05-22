@@ -13,4 +13,5 @@ package object mod {
     /* coords */ typingsSlinky.jimp.anon.X, 
     U
   ]
+  type PrintableText = js.Any | typingsSlinky.jimp.anon.AlignmentX
 }

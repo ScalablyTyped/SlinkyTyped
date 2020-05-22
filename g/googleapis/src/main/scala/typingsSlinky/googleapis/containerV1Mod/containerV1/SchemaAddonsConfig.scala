@@ -35,65 +35,18 @@ trait SchemaAddonsConfig extends js.Object {
 
 object SchemaAddonsConfig {
   @scala.inline
-  def apply(): SchemaAddonsConfig = {
+  def apply(
+    horizontalPodAutoscaling: SchemaHorizontalPodAutoscaling = null,
+    httpLoadBalancing: SchemaHttpLoadBalancing = null,
+    kubernetesDashboard: SchemaKubernetesDashboard = null,
+    networkPolicyConfig: SchemaNetworkPolicyConfig = null
+  ): SchemaAddonsConfig = {
     val __obj = js.Dynamic.literal()
+    if (horizontalPodAutoscaling != null) __obj.updateDynamic("horizontalPodAutoscaling")(horizontalPodAutoscaling.asInstanceOf[js.Any])
+    if (httpLoadBalancing != null) __obj.updateDynamic("httpLoadBalancing")(httpLoadBalancing.asInstanceOf[js.Any])
+    if (kubernetesDashboard != null) __obj.updateDynamic("kubernetesDashboard")(kubernetesDashboard.asInstanceOf[js.Any])
+    if (networkPolicyConfig != null) __obj.updateDynamic("networkPolicyConfig")(networkPolicyConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddonsConfig]
   }
-  @scala.inline
-  implicit class SchemaAddonsConfigOps[Self <: SchemaAddonsConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHorizontalPodAutoscaling(value: SchemaHorizontalPodAutoscaling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalPodAutoscaling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontalPodAutoscaling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalPodAutoscaling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpLoadBalancing(value: SchemaHttpLoadBalancing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpLoadBalancing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpLoadBalancing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpLoadBalancing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKubernetesDashboard(value: SchemaKubernetesDashboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kubernetesDashboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKubernetesDashboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kubernetesDashboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkPolicyConfig(value: SchemaNetworkPolicyConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkPolicyConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkPolicyConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkPolicyConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

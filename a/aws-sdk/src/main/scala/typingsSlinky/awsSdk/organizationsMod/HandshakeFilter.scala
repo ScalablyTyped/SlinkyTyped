@@ -18,41 +18,11 @@ trait HandshakeFilter extends js.Object {
 
 object HandshakeFilter {
   @scala.inline
-  def apply(): HandshakeFilter = {
+  def apply(ActionType: ActionType = null, ParentHandshakeId: HandshakeId = null): HandshakeFilter = {
     val __obj = js.Dynamic.literal()
+    if (ActionType != null) __obj.updateDynamic("ActionType")(ActionType.asInstanceOf[js.Any])
+    if (ParentHandshakeId != null) __obj.updateDynamic("ParentHandshakeId")(ParentHandshakeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandshakeFilter]
   }
-  @scala.inline
-  implicit class HandshakeFilterOps[Self <: HandshakeFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionType(value: ActionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentHandshakeId(value: HandshakeId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentHandshakeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentHandshakeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentHandshakeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

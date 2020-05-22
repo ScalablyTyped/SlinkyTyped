@@ -12,8 +12,15 @@ trait ReaderArgument extends js.Object
 
 object ReaderArgument {
   @scala.inline
-  implicit def apply(value: ReaderLiteral): ReaderArgument = value.asInstanceOf[ReaderArgument]
+  def ReaderLiteral(kind: String, name: String, value: js.Any): ReaderArgument = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderArgument]
+  }
   @scala.inline
-  implicit def apply(value: ReaderVariable): ReaderArgument = value.asInstanceOf[ReaderArgument]
+  def ReaderVariable(kind: String, name: String, variableName: String, `type`: js.UndefOr[Null | String] = js.undefined): ReaderArgument = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], variableName = variableName.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderArgument]
+  }
 }
 

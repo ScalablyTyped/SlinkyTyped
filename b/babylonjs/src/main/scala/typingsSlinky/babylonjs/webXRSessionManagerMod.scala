@@ -72,6 +72,11 @@ object webXRSessionManagerMod extends js.Object {
       */
     var viewerReferenceSpace: XRReferenceSpace = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Stops the xrSession and restores the render loop
       * @returns Promise which resolves after it exits XR
       */

@@ -6,109 +6,50 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.cytoscape.mod.LayoutOptions because Already inherited */ @js.native
-trait PresetLayoutOptions
+- typingsSlinky.cytoscape.mod.LayoutOptions because Already inherited */ trait PresetLayoutOptions
   extends BaseLayoutOptions
      with AnimatedLayoutOptions {
   // whether to fit to viewport
-  var fit: js.UndefOr[Boolean] = js.native
+  var fit: js.UndefOr[Boolean] = js.undefined
   @JSName("name")
-  var name_PresetLayoutOptions: preset = js.native
+  var name_PresetLayoutOptions: preset
   // padding on fit
-  var padding: js.UndefOr[Double] = js.native
+  var padding: js.UndefOr[Double] = js.undefined
   // the pan level to set (prob want fit = false if set)
-  var pan: js.UndefOr[Double] = js.native
+  var pan: js.UndefOr[Double] = js.undefined
   // map of (node id) => (position obj); or function(node){ return somPos; }
-  var positions: js.UndefOr[NodePositionMap | NodePositionFunction] = js.native
+  var positions: js.UndefOr[NodePositionMap | NodePositionFunction] = js.undefined
   // the zoom level to set (prob want fit = false if set)
-  var zoom: js.UndefOr[Double] = js.native
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object PresetLayoutOptions {
   @scala.inline
-  def apply(name: preset): PresetLayoutOptions = {
+  def apply(
+    name: preset,
+    animate: js.UndefOr[Boolean] = js.undefined,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    animationEasing: js.UndefOr[Boolean] = js.undefined,
+    fit: js.UndefOr[Boolean] = js.undefined,
+    padding: js.UndefOr[Double] = js.undefined,
+    pan: js.UndefOr[Double] = js.undefined,
+    positions: NodePositionMap | NodePositionFunction = null,
+    ready: /* e */ LayoutEventObject => Unit = null,
+    stop: /* e */ LayoutEventObject => Unit = null,
+    zoom: js.UndefOr[Double] = js.undefined
+  ): PresetLayoutOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationEasing)) __obj.updateDynamic("animationEasing")(animationEasing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fit)) __obj.updateDynamic("fit")(fit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pan)) __obj.updateDynamic("pan")(pan.get.asInstanceOf[js.Any])
+    if (positions != null) __obj.updateDynamic("positions")(positions.asInstanceOf[js.Any])
+    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
+    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction1(stop))
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresetLayoutOptions]
   }
-  @scala.inline
-  implicit class PresetLayoutOptionsOps[Self <: PresetLayoutOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: preset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPan(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionsFunction1(value: /* nodeid */ String => Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPositions(value: NodePositionMap | NodePositionFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

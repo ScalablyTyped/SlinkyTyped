@@ -7,13 +7,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CellFocusedEvent extends AgGridEvent {
-  var column: Column = js.native
-  var floating: String = js.native
-  var forceBrowserFocus: Boolean = js.native
-  var rowIndex: Double = js.native
-  var rowPinned: String = js.native
+  var column: Column
+  var floating: String
+  var forceBrowserFocus: Boolean
+  var rowIndex: Double
+  var rowPinned: String
 }
 
 object CellFocusedEvent {
@@ -32,43 +31,5 @@ object CellFocusedEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellFocusedEvent]
   }
-  @scala.inline
-  implicit class CellFocusedEventOps[Self <: CellFocusedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumn(value: Column): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFloating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForceBrowserFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceBrowserFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowPinned(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowPinned")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

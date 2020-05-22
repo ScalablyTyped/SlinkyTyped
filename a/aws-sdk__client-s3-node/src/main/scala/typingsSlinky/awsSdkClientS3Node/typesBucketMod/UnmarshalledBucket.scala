@@ -4,40 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledBucket extends Bucket {
   /**
     * <p>Date the bucket was created.</p>
     */
   @JSName("CreationDate")
-  var CreationDate_UnmarshalledBucket: js.UndefOr[js.Date] = js.native
+  var CreationDate_UnmarshalledBucket: js.UndefOr[js.Date] = js.undefined
 }
 
 object UnmarshalledBucket {
   @scala.inline
-  def apply(): UnmarshalledBucket = {
+  def apply(CreationDate: js.Date = null, Name: String = null): UnmarshalledBucket = {
     val __obj = js.Dynamic.literal()
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledBucket]
   }
-  @scala.inline
-  implicit class UnmarshalledBucketOps[Self <: UnmarshalledBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

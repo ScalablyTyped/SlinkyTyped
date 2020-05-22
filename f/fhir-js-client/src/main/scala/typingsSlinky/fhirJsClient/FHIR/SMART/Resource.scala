@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a FHIR resource
   */
-@js.native
 trait Resource
   extends /**
   * Making this interface extendable since this is not a complete type definition of FHIR Resource
@@ -17,28 +16,15 @@ trait Resource
   /**
     * The type of resource. All FHIR resources must have a resource type.
     */
-  var resourceType: String = js.native
+  var resourceType: String
 }
 
 object Resource {
   @scala.inline
-  def apply(resourceType: String): Resource = {
+  def apply(resourceType: String, StringDictionary: /* name */ StringDictionary[js.Any] = null): Resource = {
     val __obj = js.Dynamic.literal(resourceType = resourceType.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Resource]
   }
-  @scala.inline
-  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

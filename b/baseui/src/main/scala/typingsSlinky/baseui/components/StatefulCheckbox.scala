@@ -39,6 +39,8 @@ object StatefulCheckbox {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
     def initialState(value: typingsSlinky.baseui.checkboxMod.initialState): this.type = set("initialState", value.asInstanceOf[js.Any])
     @scala.inline
     def inputRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])

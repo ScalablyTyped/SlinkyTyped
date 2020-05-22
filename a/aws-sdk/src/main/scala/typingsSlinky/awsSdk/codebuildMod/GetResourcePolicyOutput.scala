@@ -14,29 +14,10 @@ trait GetResourcePolicyOutput extends js.Object {
 
 object GetResourcePolicyOutput {
   @scala.inline
-  def apply(): GetResourcePolicyOutput = {
+  def apply(policy: NonEmptyString = null): GetResourcePolicyOutput = {
     val __obj = js.Dynamic.literal()
+    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourcePolicyOutput]
   }
-  @scala.inline
-  implicit class GetResourcePolicyOutputOps[Self <: GetResourcePolicyOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicy(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

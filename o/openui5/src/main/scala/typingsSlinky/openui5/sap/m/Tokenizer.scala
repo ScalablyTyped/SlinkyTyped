@@ -74,7 +74,7 @@ trait Tokenizer extends Control {
     * Fires event <code>tokenChange</code> to attached listeners.Expects the following event
     * parameters:<ul><li><code>type</code> of type <code>string</code>type of tokenChange event.There are
     * four TokenChange types: "added", "removed", "removedAll", "tokensChanged".Use
-    * Tokenizer.TokenChangeType.Added for "added",	Tokenizer.TokenChangeType.Removed for "removed",
+    * Tokenizer.TokenChangeType.Added for "added",    Tokenizer.TokenChangeType.Removed for "removed",
     * Tokenizer.TokenChangeType.RemovedAll for "removedAll" and Tokenizer.TokenChangeType.TokensChanged
     * for "tokensChanged".</li><li><code>token</code> of type <code>sap.m.Token</code>the added token or
     * removed token.This parameter is used when tokenChange type is "added" or

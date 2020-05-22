@@ -9,28 +9,14 @@ trait DescribeRuntimeConfigurationInput extends js.Object {
   /**
     * A unique identifier for a fleet to get the runtime configuration for. You can use either the fleet ID or ARN value.
     */
-  var FleetId: typingsSlinky.awsSdk.gameliftMod.FleetId = js.native
+  var FleetId: FleetIdOrArn = js.native
 }
 
 object DescribeRuntimeConfigurationInput {
   @scala.inline
-  def apply(FleetId: FleetId): DescribeRuntimeConfigurationInput = {
+  def apply(FleetId: FleetIdOrArn): DescribeRuntimeConfigurationInput = {
     val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRuntimeConfigurationInput]
   }
-  @scala.inline
-  implicit class DescribeRuntimeConfigurationInputOps[Self <: DescribeRuntimeConfigurationInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFleetId(value: FleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

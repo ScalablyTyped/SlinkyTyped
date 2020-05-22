@@ -45,89 +45,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeStatic extends js.Object {
-  var Arguments: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Arguments] = js.native
-  var Atblock: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Atblock] = js.native
-  var Atrule: Instantiable1[/* type */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Atrule] = js.native
+  var Arguments: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Arguments]
+  var Atblock: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Atblock]
+  var Atrule: Instantiable1[/* type */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Atrule]
   var BinOp: Instantiable3[
     /* op */ String, 
     /* left */ Expression, 
     /* right */ Expression, 
     typingsSlinky.stylus.mod.Stylus.Nodes.BinOp
-  ] = js.native
+  ]
   var Block: Instantiable1[
     /* parent */ typingsSlinky.stylus.mod.Stylus.Nodes.Block, 
     typingsSlinky.stylus.mod.Stylus.Nodes.Block
-  ] = js.native
-  var Boolean: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Boolean] = js.native
-  var Call: Instantiable2[/* name */ String, /* args */ Expression, typingsSlinky.stylus.mod.Stylus.Nodes.Call] = js.native
-  var Charset: Instantiable1[/* val */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Charset] = js.native
+  ]
+  var Boolean: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Boolean]
+  var Call: Instantiable2[/* name */ String, /* args */ Expression, typingsSlinky.stylus.mod.Stylus.Nodes.Call]
+  var Charset: Instantiable1[/* val */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Charset]
   var Comment: Instantiable3[
     /* str */ String, 
     /* suppress */ Boolean, 
     /* inline */ Boolean, 
     typingsSlinky.stylus.mod.Stylus.Nodes.Comment
-  ] = js.native
-  var Each: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Each] = js.native
-  var Expression: Instantiable1[/* isList */ Boolean, typingsSlinky.stylus.mod.Stylus.Nodes.Expression] = js.native
-  var Extend: Instantiable1[/* selectors */ js.Array[Selector], typingsSlinky.stylus.mod.Stylus.Nodes.Extend] = js.native
+  ]
+  var Each: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Each]
+  var Expression: Instantiable1[/* isList */ Boolean, typingsSlinky.stylus.mod.Stylus.Nodes.Expression]
+  var Extend: Instantiable1[/* selectors */ js.Array[Selector], typingsSlinky.stylus.mod.Stylus.Nodes.Extend]
   var Function: Instantiable3[
     /* name */ String, 
     /* params */ Params, 
     /* body */ Block, 
     typingsSlinky.stylus.mod.Stylus.Nodes.Function
-  ] = js.native
-  var Group: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Group] = js.native
-  var HSLA: TypeofHSLA = js.native
-  var Ident: Instantiable2[/* name */ String, /* val */ Node, typingsSlinky.stylus.mod.Stylus.Nodes.Ident] = js.native
+  ]
+  var Group: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Group]
+  var HSLA: TypeofHSLA
+  var Ident: Instantiable2[/* name */ String, /* val */ Node, typingsSlinky.stylus.mod.Stylus.Nodes.Ident]
   var If: Instantiable2[
     /* cond */ Expression, 
     /* negate */ Boolean, 
     typingsSlinky.stylus.mod.Stylus.Nodes.If
-  ] = js.native
-  var Import: Instantiable1[/* path */ Expression, typingsSlinky.stylus.mod.Stylus.Nodes.Import] = js.native
-  var Keyframes: Instantiable1[/* segs */ js.Array[Node], typingsSlinky.stylus.mod.Stylus.Nodes.Keyframes] = js.native
-  var Literal: Instantiable1[/* str */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Literal] = js.native
-  var Media: Instantiable1[/* val */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Media] = js.native
-  var Member: Instantiable2[/* left */ Node, /* right */ Node, typingsSlinky.stylus.mod.Stylus.Nodes.Member] = js.native
+  ]
+  var Import: Instantiable1[/* path */ Expression, typingsSlinky.stylus.mod.Stylus.Nodes.Import]
+  var Keyframes: Instantiable1[/* segs */ js.Array[Node], typingsSlinky.stylus.mod.Stylus.Nodes.Keyframes]
+  var Literal: Instantiable1[/* str */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Literal]
+  var Media: Instantiable1[/* val */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Media]
+  var Member: Instantiable2[/* left */ Node, /* right */ Node, typingsSlinky.stylus.mod.Stylus.Nodes.Member]
   var Namespace: Instantiable2[
     /* val */ String, 
     /* prefix */ String, 
     typingsSlinky.stylus.mod.Stylus.Nodes.Namespace
-  ] = js.native
-  var Node: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Node] = js.native
-  var Null: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Null] = js.native
-  var Object: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Object] = js.native
-  var Params: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Params] = js.native
+  ]
+  var Node: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Node]
+  var Null: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Null]
+  var Object: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Object]
+  var Params: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Params]
   var Property: Instantiable2[
     /* segs */ js.Array[Node], 
     /* expr */ Expression, 
     typingsSlinky.stylus.mod.Stylus.Nodes.Property
-  ] = js.native
-  var Query: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Query] = js.native
-  var QueryExpr: Instantiable1[/* segs */ js.Array[Node], typingsSlinky.stylus.mod.Stylus.Nodes.QueryExpr] = js.native
-  var QueryList: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.QueryList] = js.native
-  var RGBA: TypeofRGBA = js.native
-  var Return: Instantiable1[/* expr */ Expression, typingsSlinky.stylus.mod.Stylus.Nodes.Return] = js.native
-  var Root: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Root] = js.native
-  var Selector: Instantiable1[/* segs */ js.Array[Node], typingsSlinky.stylus.mod.Stylus.Nodes.Selector] = js.native
-  var String: Instantiable1[/* val */ java.lang.String, typingsSlinky.stylus.mod.Stylus.Nodes.String] = js.native
+  ]
+  var Query: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Query]
+  var QueryExpr: Instantiable1[/* segs */ js.Array[Node], typingsSlinky.stylus.mod.Stylus.Nodes.QueryExpr]
+  var QueryList: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.QueryList]
+  var RGBA: TypeofRGBA
+  var Return: Instantiable1[/* expr */ Expression, typingsSlinky.stylus.mod.Stylus.Nodes.Return]
+  var Root: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Root]
+  var Selector: Instantiable1[/* segs */ js.Array[Node], typingsSlinky.stylus.mod.Stylus.Nodes.Selector]
+  var String: Instantiable1[/* val */ java.lang.String, typingsSlinky.stylus.mod.Stylus.Nodes.String]
   var Ternary: Instantiable3[
     /* op */ String, 
     /* trueExpr */ Expression, 
     /* falseExpr */ Expression, 
     typingsSlinky.stylus.mod.Stylus.Nodes.Ternary
-  ] = js.native
+  ]
   var UnaryOp: Instantiable2[
     /* op */ String, 
     /* expr */ Expression, 
     typingsSlinky.stylus.mod.Stylus.Nodes.UnaryOp
-  ] = js.native
-  var Unit: Instantiable2[/* val */ Double, /* type */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Unit] = js.native
-  var `false`: typingsSlinky.stylus.mod.Stylus.Nodes.Boolean = js.native
-  var `null`: Null = js.native
-  var `true`: typingsSlinky.stylus.mod.Stylus.Nodes.Boolean = js.native
+  ]
+  var Unit: Instantiable2[/* val */ Double, /* type */ String, typingsSlinky.stylus.mod.Stylus.Nodes.Unit]
+  var `false`: typingsSlinky.stylus.mod.Stylus.Nodes.Boolean
+  var `null`: Null
+  var `true`: typingsSlinky.stylus.mod.Stylus.Nodes.Boolean
 }
 
 object NodeStatic {
@@ -182,261 +181,5 @@ object NodeStatic {
     __obj.updateDynamic("true")(`true`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeStatic]
   }
-  @scala.inline
-  implicit class NodeStaticOps[Self <: NodeStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArguments(value: Instantiable0[Arguments]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAtblock(value: Instantiable0[Atblock]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Atblock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAtrule(value: Instantiable1[/* type */ String, Atrule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Atrule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBinOp(value: Instantiable3[/* op */ String, /* left */ Expression, /* right */ Expression, BinOp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BinOp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlock(value: Instantiable1[/* parent */ Block, Block]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoolean(value: Instantiable0[typingsSlinky.stylus.mod.Stylus.Nodes.Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Boolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCall(value: Instantiable2[/* name */ String, /* args */ Expression, Call]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Call")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharset(value: Instantiable1[/* val */ String, Charset]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: Instantiable3[/* str */ String, /* suppress */ Boolean, /* inline */ Boolean, Comment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEach(value: Instantiable0[Each]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Each")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpression(value: Instantiable1[/* isList */ Boolean, Expression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtend(value: Instantiable1[/* selectors */ js.Array[Selector], Extend]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Extend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunction(value: Instantiable3[/* name */ String, /* params */ Params, /* body */ Block, Function]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroup(value: Instantiable0[Group]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHSLA(value: TypeofHSLA): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HSLA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdent(value: Instantiable2[/* name */ String, /* val */ Node, Ident]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ident")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIf(value: Instantiable2[/* cond */ Expression, /* negate */ Boolean, If]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("If")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImport(value: Instantiable1[/* path */ Expression, Import]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Import")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyframes(value: Instantiable1[/* segs */ js.Array[Node], Keyframes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keyframes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLiteral(value: Instantiable1[/* str */ String, Literal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMedia(value: Instantiable1[/* val */ String, Media]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMember(value: Instantiable2[/* left */ Node, /* right */ Node, Member]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Member")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: Instantiable2[/* val */ String, /* prefix */ String, Namespace]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(value: Instantiable0[Node]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNull(value: Instantiable0[Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Null")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObject(value: Instantiable0[Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParams(value: Instantiable0[Params]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperty(value: Instantiable2[/* segs */ js.Array[Node], /* expr */ Expression, Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Property")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery(value: Instantiable0[Query]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryExpr(value: Instantiable1[/* segs */ js.Array[Node], QueryExpr]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryList(value: Instantiable0[QueryList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRGBA(value: TypeofRGBA): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RGBA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReturn(value: Instantiable1[/* expr */ Expression, Return]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Return")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoot(value: Instantiable0[Root]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelector(value: Instantiable1[/* segs */ js.Array[Node], Selector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withString(value: Instantiable1[/* val */ String, typingsSlinky.stylus.mod.Stylus.Nodes.String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTernary(
-      value: Instantiable3[/* op */ String, /* trueExpr */ Expression, /* falseExpr */ Expression, Ternary]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Ternary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnaryOp(value: Instantiable2[/* op */ String, /* expr */ Expression, UnaryOp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnaryOp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnit(value: Instantiable2[/* val */ Double, /* type */ String, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFalse(value: typingsSlinky.stylus.mod.Stylus.Nodes.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("false")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrue(value: typingsSlinky.stylus.mod.Stylus.Nodes.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("true")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

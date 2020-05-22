@@ -19,6 +19,24 @@ class PyramidTileId protected ()
   def this(x: Double, y: Double, zoom: Double) = this()
   def this(x: Double, y: Double, zoom: Double, width: Double) = this()
   def this(x: Double, y: Double, zoom: Double, width: Double, height: Double) = this()
+  /** The height of the tile. */
+  /* CompleteClass */
+  override var pixelHeight: Double = js.native
+  /** The width of the tile. */
+  /* CompleteClass */
+  override var pixelWidth: Double = js.native
+  /** The quadkey ID of the tile. */
+  /* CompleteClass */
+  override var quadKey: String = js.native
+  /** The x tile coordinate. */
+  /* CompleteClass */
+  override var x: Double = js.native
+  /** The y tile coordinate. */
+  /* CompleteClass */
+  override var y: Double = js.native
+  /** The zoom level of the tile. */
+  /* CompleteClass */
+  override var zoom: Double = js.native
 }
 
 /* static members */

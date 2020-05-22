@@ -5,55 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InventoryLevelListOptions extends BasicListOptions {
   /**
     * A comma-separated list of inventory item IDs.
     */
-  var inventory_item_ids: js.UndefOr[String] = js.native
+  var inventory_item_ids: js.UndefOr[String] = js.undefined
   /**
     * A comma-separated list of location IDs.
     */
-  var location_ids: js.UndefOr[String] = js.native
+  var location_ids: js.UndefOr[String] = js.undefined
 }
 
 object InventoryLevelListOptions {
   @scala.inline
-  def apply(): InventoryLevelListOptions = {
+  def apply(
+    inventory_item_ids: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    location_ids: String = null,
+    page: js.UndefOr[Double] = js.undefined
+  ): InventoryLevelListOptions = {
     val __obj = js.Dynamic.literal()
+    if (inventory_item_ids != null) __obj.updateDynamic("inventory_item_ids")(inventory_item_ids.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (location_ids != null) __obj.updateDynamic("location_ids")(location_ids.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InventoryLevelListOptions]
   }
-  @scala.inline
-  implicit class InventoryLevelListOptionsOps[Self <: InventoryLevelListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInventory_item_ids(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory_item_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventory_item_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory_item_ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation_ids(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location_ids")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

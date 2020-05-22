@@ -39,65 +39,18 @@ trait SchemaFormat extends js.Object {
 
 object SchemaFormat {
   @scala.inline
-  def apply(): SchemaFormat = {
+  def apply(
+    formatComplexity: SchemaFormatComplexity = null,
+    formatType: String = null,
+    resources: js.Array[SchemaFile] = null,
+    root: SchemaFile = null
+  ): SchemaFormat = {
     val __obj = js.Dynamic.literal()
+    if (formatComplexity != null) __obj.updateDynamic("formatComplexity")(formatComplexity.asInstanceOf[js.Any])
+    if (formatType != null) __obj.updateDynamic("formatType")(formatType.asInstanceOf[js.Any])
+    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFormat]
   }
-  @scala.inline
-  implicit class SchemaFormatOps[Self <: SchemaFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormatComplexity(value: SchemaFormatComplexity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatComplexity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatComplexity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatComplexity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[SchemaFile]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: SchemaFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

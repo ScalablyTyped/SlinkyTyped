@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAMFStringOptions extends js.Object {
-  var unit: String = js.native
+  var unit: String
 }
 
 object IAMFStringOptions {
@@ -15,19 +14,5 @@ object IAMFStringOptions {
     val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAMFStringOptions]
   }
-  @scala.inline
-  implicit class IAMFStringOptionsOps[Self <: IAMFStringOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

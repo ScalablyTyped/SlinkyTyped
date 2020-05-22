@@ -26,59 +26,17 @@ trait UserPhoneConfig extends js.Object {
 
 object UserPhoneConfig {
   @scala.inline
-  def apply(PhoneType: PhoneType): UserPhoneConfig = {
+  def apply(
+    PhoneType: PhoneType,
+    AfterContactWorkTimeLimit: js.UndefOr[AfterContactWorkTimeLimit] = js.undefined,
+    AutoAccept: js.UndefOr[AutoAccept] = js.undefined,
+    DeskPhoneNumber: PhoneNumber = null
+  ): UserPhoneConfig = {
     val __obj = js.Dynamic.literal(PhoneType = PhoneType.asInstanceOf[js.Any])
+    if (!js.isUndefined(AfterContactWorkTimeLimit)) __obj.updateDynamic("AfterContactWorkTimeLimit")(AfterContactWorkTimeLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(AutoAccept)) __obj.updateDynamic("AutoAccept")(AutoAccept.get.asInstanceOf[js.Any])
+    if (DeskPhoneNumber != null) __obj.updateDynamic("DeskPhoneNumber")(DeskPhoneNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPhoneConfig]
   }
-  @scala.inline
-  implicit class UserPhoneConfigOps[Self <: UserPhoneConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPhoneType(value: PhoneType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAfterContactWorkTimeLimit(value: AfterContactWorkTimeLimit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AfterContactWorkTimeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAfterContactWorkTimeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AfterContactWorkTimeLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoAccept(value: AutoAccept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAccept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAccept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeskPhoneNumber(value: PhoneNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeskPhoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeskPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeskPhoneNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

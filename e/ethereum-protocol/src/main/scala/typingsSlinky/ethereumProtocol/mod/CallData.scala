@@ -1,39 +1,34 @@
 package typingsSlinky.ethereumProtocol.mod
 
+import typingsSlinky.bignumberJs.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallData extends CallTxDataBase {
-  var from: js.UndefOr[String] = js.native
+  var from: js.UndefOr[String] = js.undefined
 }
 
 object CallData {
   @scala.inline
-  def apply(): CallData = {
+  def apply(
+    data: String = null,
+    from: String = null,
+    gas: Double | String | default = null,
+    gasPrice: Double | String | default = null,
+    nonce: js.UndefOr[Double] = js.undefined,
+    to: String = null,
+    value: Double | String | default = null
+  ): CallData = {
     val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (gas != null) __obj.updateDynamic("gas")(gas.asInstanceOf[js.Any])
+    if (gasPrice != null) __obj.updateDynamic("gasPrice")(gasPrice.asInstanceOf[js.Any])
+    if (!js.isUndefined(nonce)) __obj.updateDynamic("nonce")(nonce.get.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallData]
   }
-  @scala.inline
-  implicit class CallDataOps[Self <: CallData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -68,7 +68,7 @@ object getFadedOverflowStyleMod extends js.Object {
   ): IRawStyle = js.native
   def getFadedOverflowStyle(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
@@ -125,20 +125,20 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal,
     width: String
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal,
     width: String,
     height: String
@@ -146,7 +146,7 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal,
     width: String,
     height: Double
@@ -154,14 +154,14 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal,
     width: Double
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal,
     width: Double,
     height: String
@@ -169,7 +169,7 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_horizontal(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: horizontal,
     width: Double,
     height: Double
@@ -229,20 +229,20 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical,
     width: String
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical,
     width: String,
     height: String
@@ -250,7 +250,7 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical,
     width: String,
     height: Double
@@ -258,14 +258,14 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical,
     width: Double
   ): IRawStyle = js.native
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical,
     width: Double,
     height: String
@@ -273,7 +273,7 @@ object getFadedOverflowStyleMod extends js.Object {
   @JSName("getFadedOverflowStyle")
   def getFadedOverflowStyle_vertical(
     theme: ITheme,
-    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 89 */ js.Any,
+    color: /* keyof @uifabric/styling.@uifabric/styling/lib/interfaces/ISemanticColors.ISemanticColors */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any,
     direction: vertical,
     width: Double,
     height: Double

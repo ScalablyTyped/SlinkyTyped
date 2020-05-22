@@ -14,16 +14,16 @@ class b2Body ()
 @js.native
 object b2Body extends js.Object {
   /**
-  		* Dynamic Body
-  		**/
+    * Dynamic Body
+    **/
   var b2_dynamicBody: Double = js.native
   /**
-  		* Kinematic Body
-  		**/
+    * Kinematic Body
+    **/
   var b2_kinematicBody: Double = js.native
   /**
-  		* Static Body
-  		**/
+    * Static Body
+    **/
   var b2_staticBody: Double = js.native
 }
 

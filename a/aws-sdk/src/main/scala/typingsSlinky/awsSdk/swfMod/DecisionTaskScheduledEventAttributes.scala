@@ -22,47 +22,15 @@ trait DecisionTaskScheduledEventAttributes extends js.Object {
 
 object DecisionTaskScheduledEventAttributes {
   @scala.inline
-  def apply(taskList: TaskList): DecisionTaskScheduledEventAttributes = {
+  def apply(
+    taskList: TaskList,
+    startToCloseTimeout: DurationInSecondsOptional = null,
+    taskPriority: TaskPriority = null
+  ): DecisionTaskScheduledEventAttributes = {
     val __obj = js.Dynamic.literal(taskList = taskList.asInstanceOf[js.Any])
+    if (startToCloseTimeout != null) __obj.updateDynamic("startToCloseTimeout")(startToCloseTimeout.asInstanceOf[js.Any])
+    if (taskPriority != null) __obj.updateDynamic("taskPriority")(taskPriority.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecisionTaskScheduledEventAttributes]
   }
-  @scala.inline
-  implicit class DecisionTaskScheduledEventAttributesOps[Self <: DecisionTaskScheduledEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskList(value: TaskList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startToCloseTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartToCloseTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startToCloseTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskPriority(value: TaskPriority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskPriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskPriority")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

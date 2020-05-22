@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeferredContentProps extends js.Object {
-  var onLoad: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onLoad: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
 }
 
 object DeferredContentProps {
   @scala.inline
-  def apply(): DeferredContentProps = {
+  def apply(onLoad: /* event */ Event => Unit = null): DeferredContentProps = {
     val __obj = js.Dynamic.literal()
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
     __obj.asInstanceOf[DeferredContentProps]
   }
-  @scala.inline
-  implicit class DeferredContentPropsOps[Self <: DeferredContentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnLoad(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

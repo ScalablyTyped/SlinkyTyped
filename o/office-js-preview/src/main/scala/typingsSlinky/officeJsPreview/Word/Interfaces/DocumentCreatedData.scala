@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling "documentCreated.toJSON()". */
-@js.native
 trait DocumentCreatedData extends js.Object {
   /**
     *
@@ -14,7 +13,7 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.3]
     * @beta
     */
-  var body: js.UndefOr[BodyData] = js.native
+  var body: js.UndefOr[BodyData] = js.undefined
   /**
     *
     * Gets the collection of content control objects in the document. This includes content controls in the body of the document, headers, footers, textboxes, etc.. Read-only.
@@ -22,7 +21,7 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.3]
     * @beta
     */
-  var contentControls: js.UndefOr[js.Array[ContentControlData]] = js.native
+  var contentControls: js.UndefOr[js.Array[ContentControlData]] = js.undefined
   /**
     *
     * Gets the custom XML parts in the document. Read-only.
@@ -30,7 +29,7 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.4]
     * @beta
     */
-  var customXmlParts: js.UndefOr[js.Array[CustomXmlPartData]] = js.native
+  var customXmlParts: js.UndefOr[js.Array[CustomXmlPartData]] = js.undefined
   /**
     *
     * Gets the properties of the document. Read-only.
@@ -38,7 +37,7 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.3]
     * @beta
     */
-  var properties: js.UndefOr[DocumentPropertiesData] = js.native
+  var properties: js.UndefOr[DocumentPropertiesData] = js.undefined
   /**
     *
     * Indicates whether the changes in the document have been saved. A value of true indicates that the document hasn't changed since it was saved. Read-only.
@@ -46,7 +45,7 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.3]
     * @beta
     */
-  var saved: js.UndefOr[Boolean] = js.native
+  var saved: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the collection of section objects in the document. Read-only.
@@ -54,7 +53,7 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.3]
     * @beta
     */
-  var sections: js.UndefOr[js.Array[SectionData]] = js.native
+  var sections: js.UndefOr[js.Array[SectionData]] = js.undefined
   /**
     *
     * Gets the add-in's settings in the document. Read-only.
@@ -62,106 +61,29 @@ trait DocumentCreatedData extends js.Object {
     * [Api set: WordApiHiddenDocument 1.4]
     * @beta
     */
-  var settings: js.UndefOr[js.Array[SettingData]] = js.native
+  var settings: js.UndefOr[js.Array[SettingData]] = js.undefined
 }
 
 object DocumentCreatedData {
   @scala.inline
-  def apply(): DocumentCreatedData = {
+  def apply(
+    body: BodyData = null,
+    contentControls: js.Array[ContentControlData] = null,
+    customXmlParts: js.Array[CustomXmlPartData] = null,
+    properties: DocumentPropertiesData = null,
+    saved: js.UndefOr[Boolean] = js.undefined,
+    sections: js.Array[SectionData] = null,
+    settings: js.Array[SettingData] = null
+  ): DocumentCreatedData = {
     val __obj = js.Dynamic.literal()
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (contentControls != null) __obj.updateDynamic("contentControls")(contentControls.asInstanceOf[js.Any])
+    if (customXmlParts != null) __obj.updateDynamic("customXmlParts")(customXmlParts.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (!js.isUndefined(saved)) __obj.updateDynamic("saved")(saved.get.asInstanceOf[js.Any])
+    if (sections != null) __obj.updateDynamic("sections")(sections.asInstanceOf[js.Any])
+    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentCreatedData]
   }
-  @scala.inline
-  implicit class DocumentCreatedDataOps[Self <: DocumentCreatedData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: BodyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentControls(value: js.Array[ContentControlData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomXmlParts(value: js.Array[CustomXmlPartData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customXmlParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomXmlParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customXmlParts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: DocumentPropertiesData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSaved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSaved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSections(value: js.Array[SectionData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettings(value: js.Array[SettingData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

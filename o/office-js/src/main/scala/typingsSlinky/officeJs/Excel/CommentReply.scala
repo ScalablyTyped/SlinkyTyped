@@ -34,7 +34,7 @@ trait CommentReply extends ClientObject {
   val authorName: String = js.native
   /**
     *
-    * Gets or sets the comment reply's content. The string is plain text.
+    * The comment reply's content. The string is plain text.
     *
     * [Api set: ExcelApi 1.10]
     */
@@ -51,23 +51,30 @@ trait CommentReply extends ClientObject {
   val creationDate: js.Date = js.native
   /**
     *
-    * Represents the comment reply identifier. Read-only.
+    * Specifies the comment reply identifier.
     *
     * [Api set: ExcelApi 1.10]
     */
   val id: String = js.native
   /**
     *
-    * Gets the entities (e.g. people) that are mentioned in comments.
+    * The entities (e.g., people) that are mentioned in comments.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     */
   val mentions: js.Array[CommentMention] = js.native
   /**
     *
-    * Gets the rich comment content (e.g. mentions in comments). This string is not meant to be displayed to end-users. Your add-in should only use this to parse rich comment content.
+    * The comment reply status. A value of "true" means the reply is in the resolved state.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
+    */
+  val resolved: Boolean = js.native
+  /**
+    *
+    * The rich comment content (e.g., mentions in comments). This string is not meant to be displayed to end-users. Your add-in should only use this to parse rich comment content.
+    *
+    * [Api set: ExcelApi 1.11]
     */
   val richContent: String = js.native
   /**
@@ -121,7 +128,7 @@ trait CommentReply extends ClientObject {
   /**
     * Updates the comment content with a specially formatted string and a list of mentions.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     *
     * @param contentWithMentions The content for the comment. This contains a specially formatted string and a list of mentions that will be parsed into the string when displayed by Excel.
     */

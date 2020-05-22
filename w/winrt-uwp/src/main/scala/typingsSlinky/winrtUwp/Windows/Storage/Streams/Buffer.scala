@@ -5,13 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a default implementation of the IBuffer interface and its related interfaces. */
-@js.native
 trait Buffer extends js.Object {
-  var byteLength: js.Any = js.native
+  var byteLength: js.Any
    /* unmapped type */ /** Gets the maximum number of bytes that the buffer can hold. */
-  var capacity: Double = js.native
+  var capacity: Double
   /** Gets the number of bytes currently in use in the buffer. */
-  var length: Double = js.native
+  var length: Double
 }
 
 object Buffer {
@@ -20,31 +19,5 @@ object Buffer {
     val __obj = js.Dynamic.literal(byteLength = byteLength.asInstanceOf[js.Any], capacity = capacity.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any])
     __obj.asInstanceOf[Buffer]
   }
-  @scala.inline
-  implicit class BufferOps[Self <: Buffer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withByteLength(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("byteLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

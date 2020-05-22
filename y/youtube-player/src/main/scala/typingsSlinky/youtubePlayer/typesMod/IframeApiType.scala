@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IframeApiType extends js.Object {
-  var Player: Instantiable = js.native
+  var Player: Instantiable
 }
 
 object IframeApiType {
@@ -16,19 +15,5 @@ object IframeApiType {
     val __obj = js.Dynamic.literal(Player = Player.asInstanceOf[js.Any])
     __obj.asInstanceOf[IframeApiType]
   }
-  @scala.inline
-  implicit class IframeApiTypeOps[Self <: IframeApiType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPlayer(value: Instantiable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Player")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.DataPilotTables
   * @see com.sun.star.sheet.DataPilotTable
   */
-@js.native
 trait XDataPilotTables extends XNameAccess {
   /**
     * creates a data pilot descriptor.
@@ -23,7 +22,7 @@ trait XDataPilotTables extends XNameAccess {
     * This descriptor can be used with XDataPilotTables::addTable().
     * @see com.sun.star.sheet.DataPilotDescriptor
     */
-  def createDataPilotDescriptor(): XDataPilotDescriptor = js.native
+  def createDataPilotDescriptor(): XDataPilotDescriptor
   /**
     * creates a new data pilot table and adds it to the collection.
     * @param aName the name of the data pilot table used in the collection.
@@ -31,9 +30,9 @@ trait XDataPilotTables extends XNameAccess {
     * @param xDescriptor the descriptor containing the settings of the data pilot table.
     * @see com.sun.star.sheet.DataPilotDescriptor
     */
-  def insertNewByName(aName: String, OutputAddress: CellAddress, xDescriptor: XDataPilotDescriptor): Unit = js.native
+  def insertNewByName(aName: String, OutputAddress: CellAddress, xDescriptor: XDataPilotDescriptor): Unit
   /** deletes a data pilot table from the collection. */
-  def removeByName(aName: String): Unit = js.native
+  def removeByName(aName: String): Unit
 }
 
 object XDataPilotTables {
@@ -56,31 +55,5 @@ object XDataPilotTables {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), createDataPilotDescriptor = js.Any.fromFunction0(createDataPilotDescriptor), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), insertNewByName = js.Any.fromFunction3(insertNewByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName))
     __obj.asInstanceOf[XDataPilotTables]
   }
-  @scala.inline
-  implicit class XDataPilotTablesOps[Self <: XDataPilotTables] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateDataPilotDescriptor(value: () => XDataPilotDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDataPilotDescriptor")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInsertNewByName(value: (String, CellAddress, XDataPilotDescriptor) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNewByName")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

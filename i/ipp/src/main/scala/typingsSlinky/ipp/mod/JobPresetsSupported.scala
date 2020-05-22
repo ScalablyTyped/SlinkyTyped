@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JobPresetsSupported extends js.Object {
-  var `preset-name`: js.UndefOr[String] = js.native
+  var `preset-name`: js.UndefOr[String] = js.undefined
 }
 
 object JobPresetsSupported {
   @scala.inline
-  def apply(): JobPresetsSupported = {
+  def apply(`preset-name`: String = null): JobPresetsSupported = {
     val __obj = js.Dynamic.literal()
+    if (`preset-name` != null) __obj.updateDynamic("preset-name")(`preset-name`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobPresetsSupported]
   }
-  @scala.inline
-  implicit class JobPresetsSupportedOps[Self <: JobPresetsSupported] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withPreset-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preset-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPreset-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preset-name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

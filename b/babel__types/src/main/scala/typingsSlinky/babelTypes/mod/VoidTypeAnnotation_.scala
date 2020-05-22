@@ -6,36 +6,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait VoidTypeAnnotation_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait VoidTypeAnnotation_
   extends Flow
      with BaseNode
      with FlowBaseAnnotation
      with FlowType {
   @JSName("type")
-  var type_VoidTypeAnnotation_ : VoidTypeAnnotation = js.native
+  var type_VoidTypeAnnotation_ : VoidTypeAnnotation
 }
 
 object VoidTypeAnnotation_ {
   @scala.inline
-  def apply(`type`: VoidTypeAnnotation): VoidTypeAnnotation_ = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    `type`: VoidTypeAnnotation,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): VoidTypeAnnotation_ = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoidTypeAnnotation_]
   }
-  @scala.inline
-  implicit class VoidTypeAnnotation_Ops[Self <: VoidTypeAnnotation_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: VoidTypeAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

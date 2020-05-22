@@ -6,88 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BadgePropsTypes extends js.Object {
-  var corner: js.UndefOr[Boolean] = js.native
-  var dot: js.UndefOr[Boolean] = js.native
-  var overflowCount: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[large | small] = js.native
-  var text: js.UndefOr[js.Any] = js.native
+  var corner: js.UndefOr[Boolean] = js.undefined
+  var dot: js.UndefOr[Boolean] = js.undefined
+  var overflowCount: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[large | small] = js.undefined
+  var text: js.UndefOr[js.Any] = js.undefined
 }
 
 object BadgePropsTypes {
   @scala.inline
-  def apply(): BadgePropsTypes = {
+  def apply(
+    corner: js.UndefOr[Boolean] = js.undefined,
+    dot: js.UndefOr[Boolean] = js.undefined,
+    overflowCount: js.UndefOr[Double] = js.undefined,
+    size: large | small = null,
+    text: js.Any = null
+  ): BadgePropsTypes = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(corner)) __obj.updateDynamic("corner")(corner.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overflowCount)) __obj.updateDynamic("overflowCount")(overflowCount.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgePropsTypes]
   }
-  @scala.inline
-  implicit class BadgePropsTypesOps[Self <: BadgePropsTypes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCorner(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("corner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCorner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("corner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverflowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverflowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: large | small): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

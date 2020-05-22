@@ -4,147 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RendererOptions extends js.Object {
-  var dashColor: js.UndefOr[String] = js.native
-  var defaultIndentation: js.UndefOr[Double] = js.native
+  var dashColor: js.UndefOr[String] = js.undefined
+  var defaultIndentation: js.UndefOr[Double] = js.undefined
   /**
     * Define behavior for Array objects
     */
-  var emptyArrayMsg: js.UndefOr[String] = js.native
+  var emptyArrayMsg: js.UndefOr[String] = js.undefined
     // default: (empty)
-  var inlineArrays: js.UndefOr[Boolean] = js.native
-  var keysColor: js.UndefOr[String] = js.native
-  var noAlign: js.UndefOr[Boolean] = js.native
+  var inlineArrays: js.UndefOr[Boolean] = js.undefined
+  var keysColor: js.UndefOr[String] = js.undefined
+  var noAlign: js.UndefOr[Boolean] = js.undefined
   /**
     * Color definition
     */
-  var noColor: js.UndefOr[Boolean] = js.native
-  var numberColor: js.UndefOr[String] = js.native
-  var stringColor: js.UndefOr[String] = js.native
+  var noColor: js.UndefOr[Boolean] = js.undefined
+  var numberColor: js.UndefOr[String] = js.undefined
+  var stringColor: js.UndefOr[String] = js.undefined
 }
 
 object RendererOptions {
   @scala.inline
-  def apply(): RendererOptions = {
+  def apply(
+    dashColor: String = null,
+    defaultIndentation: js.UndefOr[Double] = js.undefined,
+    emptyArrayMsg: String = null,
+    inlineArrays: js.UndefOr[Boolean] = js.undefined,
+    keysColor: String = null,
+    noAlign: js.UndefOr[Boolean] = js.undefined,
+    noColor: js.UndefOr[Boolean] = js.undefined,
+    numberColor: String = null,
+    stringColor: String = null
+  ): RendererOptions = {
     val __obj = js.Dynamic.literal()
+    if (dashColor != null) __obj.updateDynamic("dashColor")(dashColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultIndentation)) __obj.updateDynamic("defaultIndentation")(defaultIndentation.get.asInstanceOf[js.Any])
+    if (emptyArrayMsg != null) __obj.updateDynamic("emptyArrayMsg")(emptyArrayMsg.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineArrays)) __obj.updateDynamic("inlineArrays")(inlineArrays.get.asInstanceOf[js.Any])
+    if (keysColor != null) __obj.updateDynamic("keysColor")(keysColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(noAlign)) __obj.updateDynamic("noAlign")(noAlign.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noColor)) __obj.updateDynamic("noColor")(noColor.get.asInstanceOf[js.Any])
+    if (numberColor != null) __obj.updateDynamic("numberColor")(numberColor.asInstanceOf[js.Any])
+    if (stringColor != null) __obj.updateDynamic("stringColor")(stringColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[RendererOptions]
   }
-  @scala.inline
-  implicit class RendererOptionsOps[Self <: RendererOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDashColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dashColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultIndentation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIndentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultIndentation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultIndentation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmptyArrayMsg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyArrayMsg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmptyArrayMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyArrayMsg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineArrays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineArrays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineArrays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineArrays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeysColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keysColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeysColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keysColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoAlign(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

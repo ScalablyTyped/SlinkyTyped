@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LinkedContentReferenceSuggestionState extends js.Object {
-  var sheetsChartReferenceSuggestionState: js.UndefOr[SheetsChartReferenceSuggestionState] = js.native
+  var sheetsChartReferenceSuggestionState: js.UndefOr[SheetsChartReferenceSuggestionState] = js.undefined
 }
 
 object LinkedContentReferenceSuggestionState {
   @scala.inline
-  def apply(): LinkedContentReferenceSuggestionState = {
+  def apply(sheetsChartReferenceSuggestionState: SheetsChartReferenceSuggestionState = null): LinkedContentReferenceSuggestionState = {
     val __obj = js.Dynamic.literal()
+    if (sheetsChartReferenceSuggestionState != null) __obj.updateDynamic("sheetsChartReferenceSuggestionState")(sheetsChartReferenceSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkedContentReferenceSuggestionState]
   }
-  @scala.inline
-  implicit class LinkedContentReferenceSuggestionStateOps[Self <: LinkedContentReferenceSuggestionState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSheetsChartReferenceSuggestionState(value: SheetsChartReferenceSuggestionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChartReferenceSuggestionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetsChartReferenceSuggestionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChartReferenceSuggestionState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

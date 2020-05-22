@@ -30,77 +30,20 @@ trait WorkspaceCreationProperties extends js.Object {
 
 object WorkspaceCreationProperties {
   @scala.inline
-  def apply(): WorkspaceCreationProperties = {
+  def apply(
+    CustomSecurityGroupId: SecurityGroupId = null,
+    DefaultOu: DefaultOu = null,
+    EnableInternetAccess: js.UndefOr[BooleanObject] = js.undefined,
+    EnableMaintenanceMode: js.UndefOr[BooleanObject] = js.undefined,
+    UserEnabledAsLocalAdministrator: js.UndefOr[BooleanObject] = js.undefined
+  ): WorkspaceCreationProperties = {
     val __obj = js.Dynamic.literal()
+    if (CustomSecurityGroupId != null) __obj.updateDynamic("CustomSecurityGroupId")(CustomSecurityGroupId.asInstanceOf[js.Any])
+    if (DefaultOu != null) __obj.updateDynamic("DefaultOu")(DefaultOu.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnableInternetAccess)) __obj.updateDynamic("EnableInternetAccess")(EnableInternetAccess.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnableMaintenanceMode)) __obj.updateDynamic("EnableMaintenanceMode")(EnableMaintenanceMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UserEnabledAsLocalAdministrator)) __obj.updateDynamic("UserEnabledAsLocalAdministrator")(UserEnabledAsLocalAdministrator.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspaceCreationProperties]
   }
-  @scala.inline
-  implicit class WorkspaceCreationPropertiesOps[Self <: WorkspaceCreationProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomSecurityGroupId(value: SecurityGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomSecurityGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSecurityGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomSecurityGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOu(value: DefaultOu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultOu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultOu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableInternetAccess(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableInternetAccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableInternetAccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableInternetAccess")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableMaintenanceMode(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableMaintenanceMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMaintenanceMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableMaintenanceMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserEnabledAsLocalAdministrator(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserEnabledAsLocalAdministrator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserEnabledAsLocalAdministrator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserEnabledAsLocalAdministrator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IChartistCardinalInterpolationOptions extends IChartistInterpolationOptions {
-  var tension: js.UndefOr[Double] = js.native
+  var tension: js.UndefOr[Double] = js.undefined
 }
 
 object IChartistCardinalInterpolationOptions {
   @scala.inline
-  def apply(): IChartistCardinalInterpolationOptions = {
+  def apply(fillHoles: js.UndefOr[Boolean] = js.undefined, tension: js.UndefOr[Double] = js.undefined): IChartistCardinalInterpolationOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fillHoles)) __obj.updateDynamic("fillHoles")(fillHoles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tension)) __obj.updateDynamic("tension")(tension.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChartistCardinalInterpolationOptions]
   }
-  @scala.inline
-  implicit class IChartistCardinalInterpolationOptionsOps[Self <: IChartistCardinalInterpolationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tension")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LivePlayerContext extends js.Object {
   /** 退出全屏 */
-  def exitFullScreen(options: BaseOptions[_, _]): Unit = js.native
+  def exitFullScreen(options: BaseOptions[_, _]): Unit
   /** 静音 */
-  def mute(options: BaseOptions[_, _]): Unit = js.native
+  def mute(options: BaseOptions[_, _]): Unit
   /** 播放 */
-  def play(options: BaseOptions[_, _]): Unit = js.native
+  def play(options: BaseOptions[_, _]): Unit
   /** 进入全屏 */
-  def requestFullScreen(options: RequestFullScreenOptions): Unit = js.native
+  def requestFullScreen(options: RequestFullScreenOptions): Unit
   /** 停止 */
-  def stop(options: BaseOptions[_, _]): Unit = js.native
+  def stop(options: BaseOptions[_, _]): Unit
 }
 
 object LivePlayerContext {
@@ -30,43 +29,5 @@ object LivePlayerContext {
     val __obj = js.Dynamic.literal(exitFullScreen = js.Any.fromFunction1(exitFullScreen), mute = js.Any.fromFunction1(mute), play = js.Any.fromFunction1(play), requestFullScreen = js.Any.fromFunction1(requestFullScreen), stop = js.Any.fromFunction1(stop))
     __obj.asInstanceOf[LivePlayerContext]
   }
-  @scala.inline
-  implicit class LivePlayerContextOps[Self <: LivePlayerContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExitFullScreen(value: BaseOptions[_, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitFullScreen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMute(value: BaseOptions[_, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPlay(value: BaseOptions[_, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRequestFullScreen(value: RequestFullScreenOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullScreen")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStop(value: BaseOptions[_, _] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

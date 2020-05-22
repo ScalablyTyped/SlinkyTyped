@@ -4,36 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait File extends FileBase {
-  var file_path: js.UndefOr[String] = js.native
+  var file_path: js.UndefOr[String] = js.undefined
 }
 
 object File {
   @scala.inline
-  def apply(file_id: String): File = {
+  def apply(file_id: String, file_path: String = null, file_size: js.UndefOr[Double] = js.undefined): File = {
     val __obj = js.Dynamic.literal(file_id = file_id.asInstanceOf[js.Any])
+    if (file_path != null) __obj.updateDynamic("file_path")(file_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(file_size)) __obj.updateDynamic("file_size")(file_size.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[File]
   }
-  @scala.inline
-  implicit class FileOps[Self <: File] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile_path(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFile_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file_path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

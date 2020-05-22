@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * See [Build send requests](/docs/cloud-messaging/send-message)
   * for code samples and detailed documentation.
   */
-@js.native
 trait MessagingOptions
   extends /* key */ StringDictionary[js.UndefOr[js.Any]] {
   /**
@@ -30,7 +29,7 @@ trait MessagingOptions
     *
     * **Default value:** None
     */
-  var collapseKey: js.UndefOr[String] = js.native
+  var collapseKey: js.UndefOr[String] = js.undefined
   /**
     * On iOS, use this field to represent `content-available` in the APNs payload.
     * When a notification or data message is sent and this is set to `true`, an
@@ -39,7 +38,7 @@ trait MessagingOptions
     *
     * **Default value:** `false`
     */
-  var contentAvailable: js.UndefOr[Boolean] = js.native
+  var contentAvailable: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not the message should actually be sent. When set to `true`,
     * allows developers to test a request without actually sending a message. When
@@ -47,7 +46,7 @@ trait MessagingOptions
     *
     * **Default value:** `false`
     */
-  var dryRun: js.UndefOr[Boolean] = js.native
+  var dryRun: js.UndefOr[Boolean] = js.undefined
   /**
     * On iOS, use this field to represent `mutable-content` in the APNs payload.
     * When a notification is sent and this is set to `true`, the content of the
@@ -58,7 +57,7 @@ trait MessagingOptions
     *
     * **Default value:** `false`
     */
-  var mutableContent: js.UndefOr[Boolean] = js.native
+  var mutableContent: js.UndefOr[Boolean] = js.undefined
   /**
     * The priority of the message. Valid values are `"normal"` and `"high".` On
     * iOS, these correspond to APNs priorities `5` and `10`.
@@ -78,14 +77,14 @@ trait MessagingOptions
     * **Default value:** `"high"` for notification messages, `"normal"` for data
     * messages
     */
-  var priority: js.UndefOr[String] = js.native
+  var priority: js.UndefOr[String] = js.undefined
   /**
     * The package name of the application which the registration tokens must match
     * in order to receive the message.
     *
     * **Default value:** None
     */
-  var restrictedPackageName: js.UndefOr[String] = js.native
+  var restrictedPackageName: js.UndefOr[String] = js.undefined
   /**
     * How long (in seconds) the message should be kept in FCM storage if the device
     * is offline. The maximum time to live supported is four weeks, and the default
@@ -94,106 +93,31 @@ trait MessagingOptions
     *
     * **Default value:** `2419200` (representing four weeks, in seconds)
     */
-  var timeToLive: js.UndefOr[Double] = js.native
+  var timeToLive: js.UndefOr[Double] = js.undefined
 }
 
 object MessagingOptions {
   @scala.inline
-  def apply(): MessagingOptions = {
+  def apply(
+    StringDictionary: /* key */ StringDictionary[js.UndefOr[js.Any]] = null,
+    collapseKey: String = null,
+    contentAvailable: js.UndefOr[Boolean] = js.undefined,
+    dryRun: js.UndefOr[Boolean] = js.undefined,
+    mutableContent: js.UndefOr[Boolean] = js.undefined,
+    priority: String = null,
+    restrictedPackageName: String = null,
+    timeToLive: js.UndefOr[Double] = js.undefined
+  ): MessagingOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (collapseKey != null) __obj.updateDynamic("collapseKey")(collapseKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentAvailable)) __obj.updateDynamic("contentAvailable")(contentAvailable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dryRun)) __obj.updateDynamic("dryRun")(dryRun.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mutableContent)) __obj.updateDynamic("mutableContent")(mutableContent.get.asInstanceOf[js.Any])
+    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
+    if (restrictedPackageName != null) __obj.updateDynamic("restrictedPackageName")(restrictedPackageName.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeToLive)) __obj.updateDynamic("timeToLive")(timeToLive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessagingOptions]
   }
-  @scala.inline
-  implicit class MessagingOptionsOps[Self <: MessagingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollapseKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAvailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutableContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutableContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutableContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutableContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestrictedPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedPackageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestrictedPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictedPackageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeToLive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToLive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeToLive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToLive")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

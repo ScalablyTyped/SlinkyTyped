@@ -4,98 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrintProgressChangedEventArgs extends js.Object {
   /** returns ReportViewer container Id.
     */
-  var containerId: js.UndefOr[String] = js.native
+  var containerId: js.UndefOr[String] = js.undefined
   /** returns the currentPage value
     */
-  var currentPage: js.UndefOr[String] = js.native
+  var currentPage: js.UndefOr[String] = js.undefined
   /** true if the event should be handled; otherwise, false.
     */
-  var handled: js.UndefOr[Boolean] = js.native
+  var handled: js.UndefOr[Boolean] = js.undefined
   /** returns the stage of export processing.
     */
-  var stage: js.UndefOr[String] = js.native
+  var stage: js.UndefOr[String] = js.undefined
   /** returns the totalPages value
     */
-  var totalPages: js.UndefOr[String] = js.native
+  var totalPages: js.UndefOr[String] = js.undefined
 }
 
 object PrintProgressChangedEventArgs {
   @scala.inline
-  def apply(): PrintProgressChangedEventArgs = {
+  def apply(
+    containerId: String = null,
+    currentPage: String = null,
+    handled: js.UndefOr[Boolean] = js.undefined,
+    stage: String = null,
+    totalPages: String = null
+  ): PrintProgressChangedEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
+    if (currentPage != null) __obj.updateDynamic("currentPage")(currentPage.asInstanceOf[js.Any])
+    if (!js.isUndefined(handled)) __obj.updateDynamic("handled")(handled.get.asInstanceOf[js.Any])
+    if (stage != null) __obj.updateDynamic("stage")(stage.asInstanceOf[js.Any])
+    if (totalPages != null) __obj.updateDynamic("totalPages")(totalPages.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintProgressChangedEventArgs]
   }
-  @scala.inline
-  implicit class PrintProgressChangedEventArgsOps[Self <: PrintProgressChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentPage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalPages(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalPages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

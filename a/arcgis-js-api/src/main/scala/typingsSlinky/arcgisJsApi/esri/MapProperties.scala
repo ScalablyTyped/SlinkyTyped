@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MapProperties extends LayersMixinProperties {
   /**
     * Specifies a basemap for the map. The basemap is a set of tile layers that give geographic context to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) and the other [operational layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers) in the map.  This value can be an instance of [Basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) or one of the strings listed in the table below.
@@ -32,7 +31,7 @@ trait MapProperties extends LayersMixinProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap)
     */
-  var basemap: js.UndefOr[BasemapProperties | String] = js.native
+  var basemap: js.UndefOr[BasemapProperties | String] = js.undefined
   /**
     * Specifies the surface properties for the map. This property is only relevant when adding the map to a 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). It renders the terrain or topographical variations in the real world on the map's surface with a collection of [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html).  This value can be an instance of [Ground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html), or one of the following strings:
     *   * `world-elevation` for a default instance of ground using the [Terrain3D Service](https://www.arcgis.com/home/item.html?id=7029fb60158543ad845c7e1527af11e4).
@@ -43,46 +42,21 @@ trait MapProperties extends LayersMixinProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#ground)
     */
-  var ground: js.UndefOr[GroundProperties | String] = js.native
+  var ground: js.UndefOr[GroundProperties | String] = js.undefined
 }
 
 object MapProperties {
   @scala.inline
-  def apply(): MapProperties = {
+  def apply(
+    basemap: BasemapProperties | String = null,
+    ground: GroundProperties | String = null,
+    layers: CollectionProperties[LayerProperties] | js.Array[LayerProperties] = null
+  ): MapProperties = {
     val __obj = js.Dynamic.literal()
+    if (basemap != null) __obj.updateDynamic("basemap")(basemap.asInstanceOf[js.Any])
+    if (ground != null) __obj.updateDynamic("ground")(ground.asInstanceOf[js.Any])
+    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapProperties]
   }
-  @scala.inline
-  implicit class MapPropertiesOps[Self <: MapProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBasemap(value: BasemapProperties | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGround(value: GroundProperties | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ground")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGround: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ground")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

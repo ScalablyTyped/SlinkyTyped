@@ -22,25 +22,5 @@ object Audio {
     val __obj = js.Dynamic.literal(Locale = Locale.asInstanceOf[js.Any], Location = Location.asInstanceOf[js.Any])
     __obj.asInstanceOf[Audio]
   }
-  @scala.inline
-  implicit class AudioOps[Self <: Audio] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocale(value: Locale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: AudioLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

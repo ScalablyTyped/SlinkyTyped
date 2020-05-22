@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ErrorContext extends js.Object {
   /**
     * The HTTP request which was processed when the error was
     * triggered.
     */
-  var httpRequest: js.UndefOr[HttpRequestContext] = js.native
+  var httpRequest: js.UndefOr[HttpRequestContext] = js.undefined
   /**
     * The location in the source code where the decision was made to
     * report the error, usually the place where it was logged.
@@ -18,12 +17,12 @@ trait ErrorContext extends js.Object {
     * exception is logged, usually close to the place where it was
     * caught.
     */
-  var reportLocation: js.UndefOr[SourceLocation] = js.native
+  var reportLocation: js.UndefOr[SourceLocation] = js.undefined
   /**
     * Source code that was used to build the executable which has
     * caused the given error message.
     */
-  var sourceReferences: js.UndefOr[js.Array[SourceReference]] = js.native
+  var sourceReferences: js.UndefOr[js.Array[SourceReference]] = js.undefined
   /**
     * The user who caused or was affected by the crash.
     * This can be a user ID, an email address, or an arbitrary token that
@@ -34,70 +33,23 @@ trait ErrorContext extends js.Object {
     * distinguish affected users. See `affected_users_count` in
     * `ErrorGroupStats`.
     */
-  var user: js.UndefOr[String] = js.native
+  var user: js.UndefOr[String] = js.undefined
 }
 
 object ErrorContext {
   @scala.inline
-  def apply(): ErrorContext = {
+  def apply(
+    httpRequest: HttpRequestContext = null,
+    reportLocation: SourceLocation = null,
+    sourceReferences: js.Array[SourceReference] = null,
+    user: String = null
+  ): ErrorContext = {
     val __obj = js.Dynamic.literal()
+    if (httpRequest != null) __obj.updateDynamic("httpRequest")(httpRequest.asInstanceOf[js.Any])
+    if (reportLocation != null) __obj.updateDynamic("reportLocation")(reportLocation.asInstanceOf[js.Any])
+    if (sourceReferences != null) __obj.updateDynamic("sourceReferences")(sourceReferences.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorContext]
   }
-  @scala.inline
-  implicit class ErrorContextOps[Self <: ErrorContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpRequest(value: HttpRequestContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportLocation(value: SourceLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceReferences(value: js.Array[SourceReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceReferences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceReferences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceReferences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

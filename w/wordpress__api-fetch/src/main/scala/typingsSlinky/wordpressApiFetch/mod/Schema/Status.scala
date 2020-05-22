@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
-import typingsSlinky.wordpressApiFetch.anon.PickBaseStatusStatus
-import typingsSlinky.wordpressApiFetch.anon.PickBaseStatusStatusEmbedded
+import typingsSlinky.std.Record
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +16,46 @@ trait Status[T /* <: Context */] extends js.Object
 
 object Status {
   @scala.inline
-  implicit def apply[T](value: BaseStatus): Status[T] = value.asInstanceOf[Status[T]]
+  def BaseStatus[T](
+    _links: Record[String, js.Array[Dictk]],
+    name: String,
+    `private`: Boolean,
+    `protected`: Boolean,
+    public: Boolean,
+    queryable: Boolean,
+    show_in_list: Boolean,
+    slug: String,
+    _embedded: Record[String, js.Array[_]] = null
+  ): Status[T] = {
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], public = public.asInstanceOf[js.Any], queryable = queryable.asInstanceOf[js.Any], show_in_list = show_in_list.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
+    __obj.updateDynamic("protected")(`protected`.asInstanceOf[js.Any])
+    if (_embedded != null) __obj.updateDynamic("_embedded")(_embedded.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Status[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: PickBaseStatusStatus): Status[T] = value.asInstanceOf[Status[T]]
+  def PickBaseStatusStatusEmbedded[T](
+    _links: Record[String, js.Array[Dictk]],
+    name: String,
+    public: Boolean,
+    queryable: Boolean,
+    slug: String,
+    _embedded: Record[String, js.Array[_]] = null
+  ): Status[T] = {
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], public = public.asInstanceOf[js.Any], queryable = queryable.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
+    if (_embedded != null) __obj.updateDynamic("_embedded")(_embedded.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Status[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: PickBaseStatusStatusEmbedded): Status[T] = value.asInstanceOf[Status[T]]
+  def PickBaseStatusStatus[T](
+    _links: Record[String, js.Array[Dictk]],
+    name: String,
+    slug: String,
+    _embedded: Record[String, js.Array[_]] = null
+  ): Status[T] = {
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
+    if (_embedded != null) __obj.updateDynamic("_embedded")(_embedded.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Status[T]]
+  }
 }
 

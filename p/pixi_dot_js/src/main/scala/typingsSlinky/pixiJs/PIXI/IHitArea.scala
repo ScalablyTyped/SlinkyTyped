@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @interface IHitArea
   * @memberof PIXI
   */
-@js.native
 trait IHitArea extends js.Object {
   /**
     * Checks whether the x and y coordinates given are contained within this area
@@ -28,7 +27,7 @@ trait IHitArea extends js.Object {
     * @param {number} y - The Y coordinate of the point to test
     * @return {boolean} Whether the x/y coordinates are within this area
     */
-  def contains(x: Double, y: Double): Boolean = js.native
+  def contains(x: Double, y: Double): Boolean
 }
 
 object IHitArea {
@@ -37,19 +36,5 @@ object IHitArea {
     val __obj = js.Dynamic.literal(contains = js.Any.fromFunction2(contains))
     __obj.asInstanceOf[IHitArea]
   }
-  @scala.inline
-  implicit class IHitAreaOps[Self <: IHitArea] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContains(value: (Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

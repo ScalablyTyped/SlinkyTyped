@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.ucb.HierarchyRootFolderContent
   * @see com.sun.star.ucb.HierarchyFolderContent
   */
-@js.native
 trait HierarchyLinkContent
   extends XCommandProcessor2
      with XComponent

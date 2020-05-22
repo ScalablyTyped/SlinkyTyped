@@ -11,35 +11,34 @@ import scala.scalajs.js.annotation._
   * 
   * This simulates the effect of gravity over large distances (as between planets, for example).
   */
-@js.native
 trait GravityWell extends js.Object {
   /**
     * The active state of the Gravity Well. An inactive Gravity Well will not influence any particles.
     */
-  var active: Boolean = js.native
+  var active: Boolean
   /**
     * The minimum distance for which the gravity force is calculated.
     */
-  var epsilon: Double = js.native
+  var epsilon: Double
   /**
     * The strength of the gravity force - larger numbers produce a stronger force.
     */
-  var power: Double = js.native
+  var power: Double
   /**
     * The x coordinate of the Gravity Well, in world space.
     */
-  var x: Double = js.native
+  var x: Double
   /**
     * The y coordinate of the Gravity Well, in world space.
     */
-  var y: Double = js.native
+  var y: Double
   /**
     * Takes a Particle and updates it based on the properties of this Gravity Well.
     * @param particle The Particle to update.
     * @param delta The delta time in ms.
     * @param step The delta value divided by 1000.
     */
-  def update(particle: Particle, delta: Double, step: Double): Unit = js.native
+  def update(particle: Particle, delta: Double, step: Double): Unit
 }
 
 object GravityWell {
@@ -55,49 +54,5 @@ object GravityWell {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], epsilon = epsilon.asInstanceOf[js.Any], power = power.asInstanceOf[js.Any], update = js.Any.fromFunction3(update), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[GravityWell]
   }
-  @scala.inline
-  implicit class GravityWellOps[Self <: GravityWell] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEpsilon(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epsilon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPower(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("power")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: (Particle, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

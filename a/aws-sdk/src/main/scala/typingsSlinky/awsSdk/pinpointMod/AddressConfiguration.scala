@@ -34,89 +34,22 @@ trait AddressConfiguration extends js.Object {
 
 object AddressConfiguration {
   @scala.inline
-  def apply(): AddressConfiguration = {
+  def apply(
+    BodyOverride: string = null,
+    ChannelType: ChannelType = null,
+    Context: MapOfString = null,
+    RawContent: string = null,
+    Substitutions: MapOfListOfString = null,
+    TitleOverride: string = null
+  ): AddressConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (BodyOverride != null) __obj.updateDynamic("BodyOverride")(BodyOverride.asInstanceOf[js.Any])
+    if (ChannelType != null) __obj.updateDynamic("ChannelType")(ChannelType.asInstanceOf[js.Any])
+    if (Context != null) __obj.updateDynamic("Context")(Context.asInstanceOf[js.Any])
+    if (RawContent != null) __obj.updateDynamic("RawContent")(RawContent.asInstanceOf[js.Any])
+    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
+    if (TitleOverride != null) __obj.updateDynamic("TitleOverride")(TitleOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddressConfiguration]
   }
-  @scala.inline
-  implicit class AddressConfigurationOps[Self <: AddressConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyOverride(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BodyOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BodyOverride")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelType(value: ChannelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: MapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRawContent(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RawContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRawContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RawContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubstitutions(value: MapOfListOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubstitutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleOverride(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TitleOverride")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleOverride: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TitleOverride")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

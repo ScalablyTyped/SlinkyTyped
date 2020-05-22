@@ -4,9 +4,11 @@ import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLTexture
+import typingsSlinky.phaser.CameraRotateCallback
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Fade
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Flash
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Pan
+import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.RotateTo
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Shake
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Effects.Zoom
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Flip
@@ -152,6 +154,18 @@ trait Camera
     */
   var pipeline: js.Any = js.native
   /**
+    * If this Camera is rendering to a texture (via `setRenderToTexture`) then you
+    * have the option to control if it should also render to the Game canvas as well.
+    * 
+    * By default, a Camera will render both to its texture and to the Game canvas.
+    * 
+    * However, if you set ths property to `false` it will only render to the texture
+    * and skip rendering to the Game canvas.
+    * 
+    * Setting this property if the Camera isn't rendering to a texture has no effect.
+    */
+  var renderToGame: Boolean = js.native
+  /**
     * Is this Camera rendering directly to the canvas or to a texture?
     * 
     * Enable rendering to texture with the method `setRenderToTexture` (just enabling this boolean won't be enough)
@@ -161,6 +175,11 @@ trait Camera
     * To properly remove a render texture you should call the `clearRenderToTexture()` method.
     */
   var renderToTexture: Boolean = js.native
+  /**
+    * The Camera Rotate To effect handler.
+    * To rotate this camera see the `Camera.rotateTo` method.
+    */
+  var rotateToEffect: RotateTo = js.native
   /**
     * The Camera Shake effect handler.
     * To shake this camera see the `Camera.shake` method.
@@ -178,7 +197,7 @@ trait Camera
     * If you only wish to temporarily disable rendering to a texture then you can toggle the
     * property `renderToTexture` instead.
     */
-  def clearRenderToTexture(): Camera = js.native
+  def clearRenderToTexture(): this.type = js.native
   /**
     * Fades the Camera from transparent to the given color over the duration specified.
     * @param duration The duration of the effect in milliseconds. Default 1000.
@@ -198,7 +217,7 @@ trait Camera
     force: js.UndefOr[Boolean],
     callback: js.UndefOr[js.Function],
     context: js.UndefOr[js.Any]
-  ): Camera = js.native
+  ): this.type = js.native
   /**
     * Fades the Camera from the given color to transparent over the duration specified.
     * @param duration The duration of the effect in milliseconds. Default 1000.
@@ -218,7 +237,7 @@ trait Camera
     force: js.UndefOr[Boolean],
     callback: js.UndefOr[js.Function],
     context: js.UndefOr[js.Any]
-  ): Camera = js.native
+  ): this.type = js.native
   /**
     * Fades the Camera in from the given color over the duration specified.
     * @param duration The duration of the effect in milliseconds. Default 1000.
@@ -236,7 +255,7 @@ trait Camera
     blue: js.UndefOr[integer],
     callback: js.UndefOr[js.Function],
     context: js.UndefOr[js.Any]
-  ): Camera = js.native
+  ): this.type = js.native
   /**
     * Fades the Camera out to the given color over the duration specified.
     * This is an alias for Camera.fade that forces the fade to start, regardless of existing fades.
@@ -255,7 +274,7 @@ trait Camera
     blue: js.UndefOr[integer],
     callback: js.UndefOr[js.Function],
     context: js.UndefOr[js.Any]
-  ): Camera = js.native
+  ): this.type = js.native
   /**
     * Flashes the Camera by setting it to the given color immediately and then fading it away again quickly over the duration specified.
     * @param duration The duration of the effect in milliseconds. Default 250.
@@ -275,7 +294,7 @@ trait Camera
     force: js.UndefOr[Boolean],
     callback: js.UndefOr[js.Function],
     context: js.UndefOr[js.Any]
-  ): Camera = js.native
+  ): this.type = js.native
   /**
     * This effect will scroll the Camera so that the center of its viewport finishes at the given destination,
     * over the duration and with the ease specified.
@@ -289,11 +308,11 @@ trait Camera
     * the current camera scroll x coordinate and the current camera scroll y coordinate.
     * @param context The context in which the callback is invoked. Defaults to the Scene to which the Camera belongs.
     */
-  def pan(x: Double, y: Double): Camera = js.native
-  def pan(x: Double, y: Double, duration: integer): Camera = js.native
-  def pan(x: Double, y: Double, duration: integer, ease: String): Camera = js.native
-  def pan(x: Double, y: Double, duration: integer, ease: String, force: Boolean): Camera = js.native
-  def pan(x: Double, y: Double, duration: integer, ease: String, force: Boolean, callback: CameraPanCallback): Camera = js.native
+  def pan(x: Double, y: Double): this.type = js.native
+  def pan(x: Double, y: Double, duration: integer): this.type = js.native
+  def pan(x: Double, y: Double, duration: integer, ease: String): this.type = js.native
+  def pan(x: Double, y: Double, duration: integer, ease: String, force: Boolean): this.type = js.native
+  def pan(x: Double, y: Double, duration: integer, ease: String, force: Boolean, callback: CameraPanCallback): this.type = js.native
   def pan(
     x: Double,
     y: Double,
@@ -302,9 +321,9 @@ trait Camera
     force: Boolean,
     callback: CameraPanCallback,
     context: js.Any
-  ): Camera = js.native
-  def pan(x: Double, y: Double, duration: integer, ease: js.Function): Camera = js.native
-  def pan(x: Double, y: Double, duration: integer, ease: js.Function, force: Boolean): Camera = js.native
+  ): this.type = js.native
+  def pan(x: Double, y: Double, duration: integer, ease: js.Function): this.type = js.native
+  def pan(x: Double, y: Double, duration: integer, ease: js.Function, force: Boolean): this.type = js.native
   def pan(
     x: Double,
     y: Double,
@@ -312,7 +331,7 @@ trait Camera
     ease: js.Function,
     force: Boolean,
     callback: CameraPanCallback
-  ): Camera = js.native
+  ): this.type = js.native
   def pan(
     x: Double,
     y: Double,
@@ -321,12 +340,34 @@ trait Camera
     force: Boolean,
     callback: CameraPanCallback,
     context: js.Any
-  ): Camera = js.native
+  ): this.type = js.native
   /**
     * Resets any active FX, such as a fade, flash or shake. Useful to call after a fade in order to
     * remove the fade.
     */
-  def resetFX(): Camera = js.native
+  def resetFX(): this.type = js.native
+  /**
+    * This effect will rotate the Camera so that the viewport finishes at the given angle in radians,
+    * over the duration and with the ease specified.
+    * @param radians The destination angle in radians to rotate the Camera viewport to. If the angle is positive then the rotation is clockwise else anticlockwise
+    * @param shortestPath If shortest path is set to true the camera will rotate in the quickest direction clockwise or anti-clockwise. Default false.
+    * @param duration The duration of the effect in milliseconds. Default 1000.
+    * @param ease The ease to use for the rotation. Can be any of the Phaser Easing constants or a custom function. Default 'Linear'.
+    * @param force Force the rotation effect to start immediately, even if already running. Default false.
+    * @param callback This callback will be invoked every frame for the duration of the effect.
+    * It is sent four arguments: A reference to the camera, a progress amount between 0 and 1 indicating how complete the effect is,
+    * the current camera rotation angle in radians.
+    * @param context The context in which the callback is invoked. Defaults to the Scene to which the Camera belongs.
+    */
+  def rotateTo(
+    radians: Double,
+    shortestPath: js.UndefOr[Boolean],
+    duration: js.UndefOr[integer],
+    ease: js.UndefOr[js.Function | String],
+    force: js.UndefOr[Boolean],
+    callback: js.UndefOr[CameraRotateCallback],
+    context: js.UndefOr[js.Any]
+  ): Camera = js.native
   /**
     * Sets the Camera dead zone.
     * 
@@ -345,9 +386,9 @@ trait Camera
     * @param width The width of the deadzone rectangle in pixels. If not specified the deadzone is removed.
     * @param height The height of the deadzone rectangle in pixels.
     */
-  def setDeadzone(): Camera = js.native
-  def setDeadzone(width: Double): Camera = js.native
-  def setDeadzone(width: Double, height: Double): Camera = js.native
+  def setDeadzone(): this.type = js.native
+  def setDeadzone(width: Double): this.type = js.native
+  def setDeadzone(width: Double, height: Double): this.type = js.native
   /**
     * Sets the horizontal and vertical offset of the camera from its follow target.
     * The values are subtracted from the targets position during the Cameras update step.
@@ -380,9 +421,9 @@ trait Camera
     * Call this method with no arguments to clear any previously set pipeline.
     * @param pipeline The WebGL Pipeline to render with, can be either a string which is the name of the pipeline, or a pipeline reference. Or if left empty it will clear the pipeline.
     */
-  def setPipeline(): Camera = js.native
-  def setPipeline(pipeline: String): Camera = js.native
-  def setPipeline(pipeline: WebGLPipeline): Camera = js.native
+  def setPipeline(): this.type = js.native
+  def setPipeline(pipeline: String): this.type = js.native
+  def setPipeline(pipeline: WebGLPipeline): this.type = js.native
   /**
     * Sets the Camera to render to a texture instead of to the main canvas.
     * 
@@ -409,15 +450,21 @@ trait Camera
     * You should not enable this unless you plan on actually using the texture it creates
     * somehow, otherwise you're just doubling the work required to render your game.
     * 
+    * If you only require the Camera to render to a texture, and not also to the Game,
+    * them set the `renderToGame` parameter to `false`.
+    * 
     * To temporarily disable rendering to a texture, toggle the `renderToTexture` boolean.
     * 
     * If you no longer require the Camera to render to a texture, call the `clearRenderToTexture` method,
     * which will delete the respective textures and free-up resources.
     * @param pipeline An optional WebGL Pipeline to render with, can be either a string which is the name of the pipeline, or a pipeline reference.
+    * @param renderToGame If you do not need the Camera to still render to the Game, set this parameter to `false`. Default true.
     */
-  def setRenderToTexture(): Camera = js.native
-  def setRenderToTexture(pipeline: String): Camera = js.native
-  def setRenderToTexture(pipeline: WebGLPipeline): Camera = js.native
+  def setRenderToTexture(): this.type = js.native
+  def setRenderToTexture(pipeline: String): this.type = js.native
+  def setRenderToTexture(pipeline: String, renderToGame: Boolean): this.type = js.native
+  def setRenderToTexture(pipeline: WebGLPipeline): this.type = js.native
+  def setRenderToTexture(pipeline: WebGLPipeline, renderToGame: Boolean): this.type = js.native
   /**
     * Shakes the Camera by the given intensity over the duration specified.
     * @param duration The duration of the effect in milliseconds. Default 100.
@@ -427,16 +474,16 @@ trait Camera
     * It is sent two arguments: A reference to the camera and a progress amount between 0 and 1 indicating how complete the effect is.
     * @param context The context in which the callback is invoked. Defaults to the Scene to which the Camera belongs.
     */
-  def shake(): Camera = js.native
-  def shake(duration: integer): Camera = js.native
-  def shake(duration: integer, intensity: Double): Camera = js.native
-  def shake(duration: integer, intensity: Double, force: Boolean): Camera = js.native
-  def shake(duration: integer, intensity: Double, force: Boolean, callback: js.Function): Camera = js.native
-  def shake(duration: integer, intensity: Double, force: Boolean, callback: js.Function, context: js.Any): Camera = js.native
-  def shake(duration: integer, intensity: Vector2): Camera = js.native
-  def shake(duration: integer, intensity: Vector2, force: Boolean): Camera = js.native
-  def shake(duration: integer, intensity: Vector2, force: Boolean, callback: js.Function): Camera = js.native
-  def shake(duration: integer, intensity: Vector2, force: Boolean, callback: js.Function, context: js.Any): Camera = js.native
+  def shake(): this.type = js.native
+  def shake(duration: integer): this.type = js.native
+  def shake(duration: integer, intensity: Double): this.type = js.native
+  def shake(duration: integer, intensity: Double, force: Boolean): this.type = js.native
+  def shake(duration: integer, intensity: Double, force: Boolean, callback: js.Function): this.type = js.native
+  def shake(duration: integer, intensity: Double, force: Boolean, callback: js.Function, context: js.Any): this.type = js.native
+  def shake(duration: integer, intensity: Vector2): this.type = js.native
+  def shake(duration: integer, intensity: Vector2, force: Boolean): this.type = js.native
+  def shake(duration: integer, intensity: Vector2, force: Boolean, callback: js.Function): this.type = js.native
+  def shake(duration: integer, intensity: Vector2, force: Boolean, callback: js.Function, context: js.Any): this.type = js.native
   def startFollow(target: js.Object): this.type = js.native
   def startFollow(target: js.Object, roundPixels: Boolean): this.type = js.native
   def startFollow(target: js.Object, roundPixels: Boolean, lerpX: Double): this.type = js.native
@@ -486,7 +533,7 @@ trait Camera
   /**
     * Stops a Camera from following a Game Object, if previously set via `Camera.startFollow`.
     */
-  def stopFollow(): Camera = js.native
+  def stopFollow(): this.type = js.native
   /**
     * This effect will zoom the Camera to the given scale, over the duration and with the ease specified.
     * @param zoom The target Camera zoom value.
@@ -498,11 +545,11 @@ trait Camera
     * the current camera scroll x coordinate and the current camera scroll y coordinate.
     * @param context The context in which the callback is invoked. Defaults to the Scene to which the Camera belongs.
     */
-  def zoomTo(zoom: Double): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer, ease: String): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer, ease: String, force: Boolean): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer, ease: String, force: Boolean, callback: CameraPanCallback): Camera = js.native
+  def zoomTo(zoom: Double): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer, ease: String): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer, ease: String, force: Boolean): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer, ease: String, force: Boolean, callback: CameraPanCallback): this.type = js.native
   def zoomTo(
     zoom: Double,
     duration: integer,
@@ -510,10 +557,10 @@ trait Camera
     force: Boolean,
     callback: CameraPanCallback,
     context: js.Any
-  ): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer, ease: js.Function): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer, ease: js.Function, force: Boolean): Camera = js.native
-  def zoomTo(zoom: Double, duration: integer, ease: js.Function, force: Boolean, callback: CameraPanCallback): Camera = js.native
+  ): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer, ease: js.Function): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer, ease: js.Function, force: Boolean): this.type = js.native
+  def zoomTo(zoom: Double, duration: integer, ease: js.Function, force: Boolean, callback: CameraPanCallback): this.type = js.native
   def zoomTo(
     zoom: Double,
     duration: integer,
@@ -521,6 +568,6 @@ trait Camera
     force: Boolean,
     callback: CameraPanCallback,
     context: js.Any
-  ): Camera = js.native
+  ): this.type = js.native
 }
 

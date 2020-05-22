@@ -15,4 +15,5 @@ package object mod {
   type MessageCallback = js.Function1[/* message */ java.lang.String, scala.Unit]
   type QueryFilter = org.scalablytyped.runtime.StringDictionary[typingsSlinky.clearbladejsNode.mod.QueryFilterValue]
   type QueryFilterValue = org.scalablytyped.runtime.StringDictionary[typingsSlinky.clearbladejsNode.mod.QueryValue]
+  type QueryValue = java.lang.String | scala.Double | scala.Boolean
 }

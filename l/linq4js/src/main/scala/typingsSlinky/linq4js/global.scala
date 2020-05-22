@@ -14,17 +14,32 @@ object global extends js.Object {
     class EvaluateCommand protected ()
       extends typingsSlinky.linq4js.Linq4JS.EvaluateCommand {
       def this(command: String, identifier: String*) = this()
+      /* CompleteClass */
+      override var Command: String = js.native
+      /* CompleteClass */
+      override var Finder: Array[js.RegExp] = js.native
+      /* CompleteClass */
+      override var SplitRegex: Array[js.RegExp] = js.native
     }
     
     @js.native
     class EvaluateCommandResult protected ()
       extends typingsSlinky.linq4js.Linq4JS.EvaluateCommandResult {
       def this(cmd: String, fn: String) = this()
+      /* CompleteClass */
+      override var Command: String = js.native
+      /* CompleteClass */
+      override var DynamicFunction: String = js.native
     }
     
     @js.native
     class GeneratedEntity ()
-      extends typingsSlinky.linq4js.Linq4JS.GeneratedEntity
+      extends typingsSlinky.linq4js.Linq4JS.GeneratedEntity {
+      /* CompleteClass */
+      override var Id: Double = js.native
+      /* CompleteClass */
+      override var _GeneratedId_ : Double = js.native
+    }
     
     @js.native
     class Helper ()
@@ -34,12 +49,20 @@ object global extends js.Object {
     class OrderEntry protected ()
       extends typingsSlinky.linq4js.Linq4JS.OrderEntry {
       def this(_direction: OrderDirection, _valueSelector: js.Function1[/* item */ js.Any, _]) = this()
+      /* CompleteClass */
+      override var Direction: OrderDirection = js.native
+      /* CompleteClass */
+      override def ValueSelector(item: js.Any): js.Any = js.native
     }
     
     @js.native
     class SelectEntry protected ()
       extends typingsSlinky.linq4js.Linq4JS.SelectEntry {
       def this(n: String, p: String) = this()
+      /* CompleteClass */
+      override var name: String = js.native
+      /* CompleteClass */
+      override var property: String = js.native
     }
     
     /* static members */

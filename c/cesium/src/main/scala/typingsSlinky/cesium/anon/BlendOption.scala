@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlendOption extends js.Object {
-  var blendOption: js.UndefOr[typingsSlinky.cesium.mod.BlendOption] = js.native
-  var debugShowBoundingVolume: js.UndefOr[Boolean] = js.native
-  var modelMatrix: js.UndefOr[Matrix4] = js.native
-  var scene: js.UndefOr[typingsSlinky.cesium.mod.Scene] = js.native
+  var blendOption: js.UndefOr[typingsSlinky.cesium.mod.BlendOption] = js.undefined
+  var debugShowBoundingVolume: js.UndefOr[Boolean] = js.undefined
+  var modelMatrix: js.UndefOr[Matrix4] = js.undefined
+  var scene: js.UndefOr[typingsSlinky.cesium.mod.Scene] = js.undefined
 }
 
 object BlendOption {
   @scala.inline
-  def apply(): BlendOption = {
+  def apply(
+    blendOption: typingsSlinky.cesium.mod.BlendOption = null,
+    debugShowBoundingVolume: js.UndefOr[Boolean] = js.undefined,
+    modelMatrix: Matrix4 = null,
+    scene: typingsSlinky.cesium.mod.Scene = null
+  ): BlendOption = {
     val __obj = js.Dynamic.literal()
+    if (blendOption != null) __obj.updateDynamic("blendOption")(blendOption.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugShowBoundingVolume)) __obj.updateDynamic("debugShowBoundingVolume")(debugShowBoundingVolume.get.asInstanceOf[js.Any])
+    if (modelMatrix != null) __obj.updateDynamic("modelMatrix")(modelMatrix.asInstanceOf[js.Any])
+    if (scene != null) __obj.updateDynamic("scene")(scene.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlendOption]
   }
-  @scala.inline
-  implicit class BlendOptionOps[Self <: BlendOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlendOption(value: typingsSlinky.cesium.mod.BlendOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blendOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlendOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blendOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebugShowBoundingVolume(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBoundingVolume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugShowBoundingVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBoundingVolume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelMatrix(value: Matrix4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScene(value: typingsSlinky.cesium.mod.Scene): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScene: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

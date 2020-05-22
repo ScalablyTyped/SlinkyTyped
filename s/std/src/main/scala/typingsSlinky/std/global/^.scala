@@ -13,6 +13,7 @@ import org.scalajs.dom.raw.Performance
 import org.scalajs.dom.raw.Screen
 import org.scalajs.dom.raw.StyleMedia
 import org.scalajs.dom.raw.Window
+import typingsSlinky.std.AggregateErrorConstructor
 import typingsSlinky.std.ArrayBufferConstructor
 import typingsSlinky.std.ArrayConstructor
 import typingsSlinky.std.BigInt64ArrayConstructor
@@ -61,6 +62,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ^ extends js.Object {
   var ActiveXObject: typingsSlinky.std.ActiveXObject = js.native
+  var AggregateError: AggregateErrorConstructor = js.native
   var Array: ArrayConstructor = js.native
   var ArrayBuffer: ArrayBufferConstructor = js.native
   var Atomics: typingsSlinky.std.Atomics = js.native
@@ -68,7 +70,6 @@ object ^ extends js.Object {
   var BigInt64Array: BigInt64ArrayConstructor = js.native
   var BigUint64Array: BigUint64ArrayConstructor = js.native
   var Boolean: BooleanConstructor = js.native
-  var CSS: typingsSlinky.std.CSS = js.native
   var DataView: DataViewConstructor = js.native
   var Date: DateConstructor = js.native
   var Enumerator: EnumeratorConstructor = js.native

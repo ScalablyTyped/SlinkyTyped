@@ -22,41 +22,14 @@ trait CreateLBCookieStickinessPolicyInput extends js.Object {
 
 object CreateLBCookieStickinessPolicyInput {
   @scala.inline
-  def apply(LoadBalancerName: AccessPointName, PolicyName: PolicyName): CreateLBCookieStickinessPolicyInput = {
+  def apply(
+    LoadBalancerName: AccessPointName,
+    PolicyName: PolicyName,
+    CookieExpirationPeriod: js.UndefOr[CookieExpirationPeriod] = js.undefined
+  ): CreateLBCookieStickinessPolicyInput = {
     val __obj = js.Dynamic.literal(LoadBalancerName = LoadBalancerName.asInstanceOf[js.Any], PolicyName = PolicyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(CookieExpirationPeriod)) __obj.updateDynamic("CookieExpirationPeriod")(CookieExpirationPeriod.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLBCookieStickinessPolicyInput]
   }
-  @scala.inline
-  implicit class CreateLBCookieStickinessPolicyInputOps[Self <: CreateLBCookieStickinessPolicyInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancerName(value: AccessPointName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: PolicyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCookieExpirationPeriod(value: CookieExpirationPeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CookieExpirationPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookieExpirationPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CookieExpirationPeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

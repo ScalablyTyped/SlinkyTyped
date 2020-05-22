@@ -10,34 +10,33 @@ import scala.scalajs.js.annotation._
   *
   * Note: ListObject is used by the GetLayout method to display the properties of a list object.
   */
-@js.native
 trait IListObject extends js.Object {
   /**
     * Set of data.
     * Is empty if nothing has been defined in qInitialDataFetch in ListObjectDef.
     */
-  var qDataPages: js.Array[INxDataPage] = js.native
+  var qDataPages: js.Array[INxDataPage]
   /**
     * Information about the dimension.
     */
-  var qDimensionInfo: INxDimensionInfo = js.native
+  var qDimensionInfo: INxDimensionInfo
   /**
     * This parameter is optional and is displayed in case of error.
     */
-  var qError: js.UndefOr[INxValidationError] = js.native
+  var qError: js.UndefOr[INxValidationError] = js.undefined
   /**
     * Lists the expressions in the list object.
     */
-  var qExpressions: js.Array[INxListObjectExpression] = js.native
+  var qExpressions: js.Array[INxListObjectExpression]
   /**
     * Defines the size of a list object.
     */
-  var qSize: ISize = js.native
+  var qSize: ISize
   /**
     * Name of the alternate state.
     * Default is current selections $.
     */
-  var qStateName: String = js.native
+  var qStateName: String
 }
 
 object IListObject {
@@ -47,60 +46,12 @@ object IListObject {
     qDimensionInfo: INxDimensionInfo,
     qExpressions: js.Array[INxListObjectExpression],
     qSize: ISize,
-    qStateName: String
+    qStateName: String,
+    qError: INxValidationError = null
   ): IListObject = {
     val __obj = js.Dynamic.literal(qDataPages = qDataPages.asInstanceOf[js.Any], qDimensionInfo = qDimensionInfo.asInstanceOf[js.Any], qExpressions = qExpressions.asInstanceOf[js.Any], qSize = qSize.asInstanceOf[js.Any], qStateName = qStateName.asInstanceOf[js.Any])
+    if (qError != null) __obj.updateDynamic("qError")(qError.asInstanceOf[js.Any])
     __obj.asInstanceOf[IListObject]
   }
-  @scala.inline
-  implicit class IListObjectOps[Self <: IListObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQDataPages(value: js.Array[INxDataPage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDataPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQDimensionInfo(value: INxDimensionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qDimensionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQExpressions(value: js.Array[INxListObjectExpression]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSize(value: ISize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQStateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qStateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQError(value: INxValidationError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

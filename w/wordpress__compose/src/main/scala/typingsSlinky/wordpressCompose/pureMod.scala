@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressCompose
 
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object pureMod extends js.Object {
   // prettier-ignore
-  def default[T /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<any> */ js.Any */](component: T): js.Any = js.native
+  def default[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[_] = js.native
 }
 

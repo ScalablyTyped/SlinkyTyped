@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A command environment that can be used to deal with WebDAV/HTTP specific commands. */
-@js.native
 trait XWebDAVCommandEnvironment extends XCommandEnvironment {
   /**
     * This method gets called while assembling an WebDAV/HTTP request. The returned headername-headervalue pairs will be appended to the list of request
@@ -18,7 +17,7 @@ trait XWebDAVCommandEnvironment extends XCommandEnvironment {
     * @param eMethod The WebDAV/HTTP method ("GET","PUT","MKCOL",...) as defined in WebDAVHTTPMethod.
     * @returns A sequence of header name, header value pairs. The header names must be the plain names and contain no trailing ":".
     */
-  def getUserRequestHeaders(aURI: String, eMethod: WebDAVHTTPMethod): SafeArray[StringPair] = js.native
+  def getUserRequestHeaders(aURI: String, eMethod: WebDAVHTTPMethod): SafeArray[StringPair]
 }
 
 object XWebDAVCommandEnvironment {
@@ -36,19 +35,5 @@ object XWebDAVCommandEnvironment {
     val __obj = js.Dynamic.literal(InteractionHandler = InteractionHandler.asInstanceOf[js.Any], ProgressHandler = ProgressHandler.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getInteractionHandler = js.Any.fromFunction0(getInteractionHandler), getProgressHandler = js.Any.fromFunction0(getProgressHandler), getUserRequestHeaders = js.Any.fromFunction2(getUserRequestHeaders), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XWebDAVCommandEnvironment]
   }
-  @scala.inline
-  implicit class XWebDAVCommandEnvironmentOps[Self <: XWebDAVCommandEnvironment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetUserRequestHeaders(value: (String, WebDAVHTTPMethod) => SafeArray[StringPair]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserRequestHeaders")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

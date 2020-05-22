@@ -26,59 +26,17 @@ trait ListTrafficPolicyInstancesByHostedZoneRequest extends js.Object {
 
 object ListTrafficPolicyInstancesByHostedZoneRequest {
   @scala.inline
-  def apply(HostedZoneId: ResourceId): ListTrafficPolicyInstancesByHostedZoneRequest = {
+  def apply(
+    HostedZoneId: ResourceId,
+    MaxItems: PageMaxItems = null,
+    TrafficPolicyInstanceNameMarker: DNSName = null,
+    TrafficPolicyInstanceTypeMarker: RRType = null
+  ): ListTrafficPolicyInstancesByHostedZoneRequest = {
     val __obj = js.Dynamic.literal(HostedZoneId = HostedZoneId.asInstanceOf[js.Any])
+    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
+    if (TrafficPolicyInstanceNameMarker != null) __obj.updateDynamic("TrafficPolicyInstanceNameMarker")(TrafficPolicyInstanceNameMarker.asInstanceOf[js.Any])
+    if (TrafficPolicyInstanceTypeMarker != null) __obj.updateDynamic("TrafficPolicyInstanceTypeMarker")(TrafficPolicyInstanceTypeMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTrafficPolicyInstancesByHostedZoneRequest]
   }
-  @scala.inline
-  implicit class ListTrafficPolicyInstancesByHostedZoneRequestOps[Self <: ListTrafficPolicyInstancesByHostedZoneRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHostedZoneId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HostedZoneId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: PageMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyInstanceNameMarker(value: DNSName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyInstanceNameMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficPolicyInstanceNameMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyInstanceNameMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyInstanceTypeMarker(value: RRType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyInstanceTypeMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficPolicyInstanceTypeMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyInstanceTypeMarker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

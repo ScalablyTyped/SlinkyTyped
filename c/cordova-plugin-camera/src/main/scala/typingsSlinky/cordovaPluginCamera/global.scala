@@ -25,6 +25,29 @@ object global extends js.Object {
     def this(x: Double, y: Double, width: Double) = this()
     def this(x: Double, y: Double, width: Double, height: Double) = this()
     def this(x: Double, y: Double, width: Double, height: Double, arrowDir: Double) = this()
+    /**
+      * Direction the arrow on the popover should point. Defined in Camera.PopoverArrowDirection
+      * Matches iOS UIPopoverArrowDirection constants.
+      *      ARROW_UP : 1,        
+      *      ARROW_DOWN : 2,
+      *      ARROW_LEFT : 4,
+      *      ARROW_RIGHT : 8,
+      *      ARROW_ANY : 15
+      */
+    /* CompleteClass */
+    override var arrowDir: Double = js.native
+    /* CompleteClass */
+    override var height: Double = js.native
+    /* CompleteClass */
+    override var popoverHeight: Double = js.native
+    /* CompleteClass */
+    override var popoverWidth: Double = js.native
+    /* CompleteClass */
+    override var width: Double = js.native
+    /* CompleteClass */
+    override var x: Double = js.native
+    /* CompleteClass */
+    override var y: Double = js.native
   }
   
   @js.native

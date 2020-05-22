@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DealTermsNonGuaranteedFixedPriceTerms extends js.Object {
   /** Fixed price for the specified buyer. */
-  var fixedPrices: js.UndefOr[js.Array[PricePerBuyer]] = js.native
+  var fixedPrices: js.UndefOr[js.Array[PricePerBuyer]] = js.undefined
 }
 
 object DealTermsNonGuaranteedFixedPriceTerms {
   @scala.inline
-  def apply(): DealTermsNonGuaranteedFixedPriceTerms = {
+  def apply(fixedPrices: js.Array[PricePerBuyer] = null): DealTermsNonGuaranteedFixedPriceTerms = {
     val __obj = js.Dynamic.literal()
+    if (fixedPrices != null) __obj.updateDynamic("fixedPrices")(fixedPrices.asInstanceOf[js.Any])
     __obj.asInstanceOf[DealTermsNonGuaranteedFixedPriceTerms]
   }
-  @scala.inline
-  implicit class DealTermsNonGuaranteedFixedPriceTermsOps[Self <: DealTermsNonGuaranteedFixedPriceTerms] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFixedPrices(value: js.Array[PricePerBuyer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPrices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedPrices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPrices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

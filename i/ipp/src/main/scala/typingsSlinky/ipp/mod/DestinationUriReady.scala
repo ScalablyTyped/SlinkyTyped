@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DestinationUriReady extends js.Object {
-  var `destination-attributes`: js.UndefOr[js.Array[js.Object]] = js.native
-  var `destination-attributes-supported`: js.UndefOr[js.Array[String]] = js.native
-  var `destination-info`: js.UndefOr[String] = js.native
-  var `destination-is-directory`: js.UndefOr[Boolean] = js.native
-  var `destination-mandatory-access-attributes`: js.UndefOr[js.Array[String]] = js.native
-  var `destination-name`: js.UndefOr[String] = js.native
-  var `destination-oauth-scope`: js.UndefOr[js.Array[String]] = js.native
-  var `destination-oauth-token`: js.UndefOr[js.Array[String]] = js.native
-  var `destination-oauth-uri`: js.UndefOr[String] = js.native
-  var `destination-uri`: js.UndefOr[String] = js.native
+  var `destination-attributes`: js.UndefOr[js.Array[js.Object]] = js.undefined
+  var `destination-attributes-supported`: js.UndefOr[js.Array[String]] = js.undefined
+  var `destination-info`: js.UndefOr[String] = js.undefined
+  var `destination-is-directory`: js.UndefOr[Boolean] = js.undefined
+  var `destination-mandatory-access-attributes`: js.UndefOr[js.Array[String]] = js.undefined
+  var `destination-name`: js.UndefOr[String] = js.undefined
+  var `destination-oauth-scope`: js.UndefOr[js.Array[String]] = js.undefined
+  var `destination-oauth-token`: js.UndefOr[js.Array[String]] = js.undefined
+  var `destination-oauth-uri`: js.UndefOr[String] = js.undefined
+  var `destination-uri`: js.UndefOr[String] = js.undefined
 }
 
 object DestinationUriReady {
   @scala.inline
-  def apply(): DestinationUriReady = {
+  def apply(
+    `destination-attributes`: js.Array[js.Object] = null,
+    `destination-attributes-supported`: js.Array[String] = null,
+    `destination-info`: String = null,
+    `destination-is-directory`: js.UndefOr[Boolean] = js.undefined,
+    `destination-mandatory-access-attributes`: js.Array[String] = null,
+    `destination-name`: String = null,
+    `destination-oauth-scope`: js.Array[String] = null,
+    `destination-oauth-token`: js.Array[String] = null,
+    `destination-oauth-uri`: String = null,
+    `destination-uri`: String = null
+  ): DestinationUriReady = {
     val __obj = js.Dynamic.literal()
+    if (`destination-attributes` != null) __obj.updateDynamic("destination-attributes")(`destination-attributes`.asInstanceOf[js.Any])
+    if (`destination-attributes-supported` != null) __obj.updateDynamic("destination-attributes-supported")(`destination-attributes-supported`.asInstanceOf[js.Any])
+    if (`destination-info` != null) __obj.updateDynamic("destination-info")(`destination-info`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`destination-is-directory`)) __obj.updateDynamic("destination-is-directory")(`destination-is-directory`.get.asInstanceOf[js.Any])
+    if (`destination-mandatory-access-attributes` != null) __obj.updateDynamic("destination-mandatory-access-attributes")(`destination-mandatory-access-attributes`.asInstanceOf[js.Any])
+    if (`destination-name` != null) __obj.updateDynamic("destination-name")(`destination-name`.asInstanceOf[js.Any])
+    if (`destination-oauth-scope` != null) __obj.updateDynamic("destination-oauth-scope")(`destination-oauth-scope`.asInstanceOf[js.Any])
+    if (`destination-oauth-token` != null) __obj.updateDynamic("destination-oauth-token")(`destination-oauth-token`.asInstanceOf[js.Any])
+    if (`destination-oauth-uri` != null) __obj.updateDynamic("destination-oauth-uri")(`destination-oauth-uri`.asInstanceOf[js.Any])
+    if (`destination-uri` != null) __obj.updateDynamic("destination-uri")(`destination-uri`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestinationUriReady]
   }
-  @scala.inline
-  implicit class DestinationUriReadyOps[Self <: DestinationUriReady] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withDestination-attributes`(value: js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-attributes`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-attributes-supported`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-attributes-supported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-attributes-supported`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-attributes-supported")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-info`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-info`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-is-directory`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-is-directory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-is-directory`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-is-directory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-mandatory-access-attributes`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-mandatory-access-attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-mandatory-access-attributes`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-mandatory-access-attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-oauth-scope`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-oauth-scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-oauth-scope`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-oauth-scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-oauth-token`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-oauth-token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-oauth-token`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-oauth-token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-oauth-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-oauth-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-oauth-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-oauth-uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDestination-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDestination-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination-uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

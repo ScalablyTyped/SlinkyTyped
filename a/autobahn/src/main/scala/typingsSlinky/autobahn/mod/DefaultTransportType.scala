@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.autobahn.autobahnStrings.longpoll
   - typingsSlinky.autobahn.autobahnStrings.rawsocket
 */
-trait DefaultTransportType extends TransportType
+trait DefaultTransportType extends js.Object
 
 object DefaultTransportType {
   @scala.inline

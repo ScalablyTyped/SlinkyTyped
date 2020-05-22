@@ -5,49 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IBaseButtonProps extends IButtonProps {
-  var baseClassName: js.UndefOr[String] = js.native
-  var variantClassName: js.UndefOr[String] = js.native
+  var baseClassName: js.UndefOr[String] = js.undefined
+  var variantClassName: js.UndefOr[String] = js.undefined
 }
 
 object IBaseButtonProps {
   @scala.inline
-  def apply(): IBaseButtonProps = {
+  def apply(IButtonProps: IButtonProps = null, baseClassName: String = null, variantClassName: String = null): IBaseButtonProps = {
     val __obj = js.Dynamic.literal()
+    if (IButtonProps != null) js.Dynamic.global.Object.assign(__obj, IButtonProps)
+    if (baseClassName != null) __obj.updateDynamic("baseClassName")(baseClassName.asInstanceOf[js.Any])
+    if (variantClassName != null) __obj.updateDynamic("variantClassName")(variantClassName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBaseButtonProps]
   }
-  @scala.inline
-  implicit class IBaseButtonPropsOps[Self <: IBaseButtonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariantClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariantClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variantClassName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

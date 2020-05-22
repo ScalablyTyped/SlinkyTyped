@@ -20,140 +20,38 @@ import scala.scalajs.js.annotation._
   * @property transit {H.map.layer.TileLayer=} - map tiles with public transit lines highlighted
   * @property labels {H.map.layer.TileLayer=} - transparent map tiles with labels only
   */
-@js.native
 trait MapType extends js.Object {
-  var base: TileLayer = js.native
-  var basenight: js.UndefOr[TileLayer | Null] = js.native
-  var labels: TileLayer = js.native
-  var map: TileLayer = js.native
-  var mapnight: js.UndefOr[TileLayer | Null] = js.native
-  var trafficincidents: js.UndefOr[MarkerTileLayer | Null] = js.native
-  var transit: js.UndefOr[TileLayer] = js.native
-  var xbase: TileLayer = js.native
-  var xbasenight: js.UndefOr[TileLayer | Null] = js.native
+  var base: TileLayer
+  var basenight: js.UndefOr[TileLayer | Null] = js.undefined
+  var labels: TileLayer
+  var map: TileLayer
+  var mapnight: js.UndefOr[TileLayer | Null] = js.undefined
+  var trafficincidents: js.UndefOr[MarkerTileLayer | Null] = js.undefined
+  var transit: js.UndefOr[TileLayer] = js.undefined
+  var xbase: TileLayer
+  var xbasenight: js.UndefOr[TileLayer | Null] = js.undefined
 }
 
 object MapType {
   @scala.inline
-  def apply(base: TileLayer, labels: TileLayer, map: TileLayer, xbase: TileLayer): MapType = {
+  def apply(
+    base: TileLayer,
+    labels: TileLayer,
+    map: TileLayer,
+    xbase: TileLayer,
+    basenight: js.UndefOr[Null | TileLayer] = js.undefined,
+    mapnight: js.UndefOr[Null | TileLayer] = js.undefined,
+    trafficincidents: js.UndefOr[Null | MarkerTileLayer] = js.undefined,
+    transit: TileLayer = null,
+    xbasenight: js.UndefOr[Null | TileLayer] = js.undefined
+  ): MapType = {
     val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any], xbase = xbase.asInstanceOf[js.Any])
+    if (!js.isUndefined(basenight)) __obj.updateDynamic("basenight")(basenight.asInstanceOf[js.Any])
+    if (!js.isUndefined(mapnight)) __obj.updateDynamic("mapnight")(mapnight.asInstanceOf[js.Any])
+    if (!js.isUndefined(trafficincidents)) __obj.updateDynamic("trafficincidents")(trafficincidents.asInstanceOf[js.Any])
+    if (transit != null) __obj.updateDynamic("transit")(transit.asInstanceOf[js.Any])
+    if (!js.isUndefined(xbasenight)) __obj.updateDynamic("xbasenight")(xbasenight.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapType]
   }
-  @scala.inline
-  implicit class MapTypeOps[Self <: MapType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBase(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabels(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMap(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXbase(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xbase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBasenight(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basenight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasenight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basenight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasenightNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basenight")(null)
-        ret
-    }
-    @scala.inline
-    def withMapnight(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapnight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapnight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapnight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapnightNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapnight")(null)
-        ret
-    }
-    @scala.inline
-    def withTrafficincidents(value: MarkerTileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficincidents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficincidents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficincidents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficincidentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficincidents")(null)
-        ret
-    }
-    @scala.inline
-    def withTransit(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXbasenight(value: TileLayer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xbasenight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXbasenight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xbasenight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXbasenightNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xbasenight")(null)
-        ret
-    }
-  }
-  
 }
 

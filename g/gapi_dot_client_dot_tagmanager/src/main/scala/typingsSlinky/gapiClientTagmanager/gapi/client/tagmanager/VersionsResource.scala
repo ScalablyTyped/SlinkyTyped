@@ -9,22 +9,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VersionsResource extends js.Object {
   /** Deletes a Container Version. */
-  def delete(request: Fields): Request[Unit] = js.native
+  def delete(request: Fields): Request[Unit]
   /** Gets a Container Version. */
-  def get(request: ContainerVersionId): Request[ContainerVersion] = js.native
+  def get(request: ContainerVersionId): Request[ContainerVersion]
   /** Gets the live (i.e. published) container version */
-  def live(request: Alt): Request[ContainerVersion] = js.native
+  def live(request: Alt): Request[ContainerVersion]
   /** Publishes a Container Version. */
-  def publish(request: Fingerprint): Request[PublishContainerVersionResponse] = js.native
+  def publish(request: Fingerprint): Request[PublishContainerVersionResponse]
   /** Sets the latest version used for synchronization of workspaces when detecting conflicts and errors. */
-  def set_latest(request: Fields): Request[ContainerVersion] = js.native
+  def set_latest(request: Fields): Request[ContainerVersion]
   /** Undeletes a Container Version. */
-  def undelete(request: Fields): Request[ContainerVersion] = js.native
+  def undelete(request: Fields): Request[ContainerVersion]
   /** Updates a Container Version. */
-  def update(request: Fingerprint): Request[ContainerVersion] = js.native
+  def update(request: Fingerprint): Request[ContainerVersion]
 }
 
 object VersionsResource {
@@ -41,55 +40,5 @@ object VersionsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), live = js.Any.fromFunction1(live), publish = js.Any.fromFunction1(publish), set_latest = js.Any.fromFunction1(set_latest), undelete = js.Any.fromFunction1(undelete), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[VersionsResource]
   }
-  @scala.inline
-  implicit class VersionsResourceOps[Self <: VersionsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Fields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: ContainerVersionId => Request[ContainerVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLive(value: Alt => Request[ContainerVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("live")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPublish(value: Fingerprint => Request[PublishContainerVersionResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publish")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_latest(value: Fields => Request[ContainerVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_latest")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUndelete(value: Fields => Request[ContainerVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undelete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Fingerprint => Request[ContainerVersion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

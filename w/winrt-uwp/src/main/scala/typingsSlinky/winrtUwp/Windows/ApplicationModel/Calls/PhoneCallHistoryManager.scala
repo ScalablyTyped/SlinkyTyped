@@ -5,6 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides APIs for the application to get access to the PhoneCallHistoryStore . */
-@js.native
 trait PhoneCallHistoryManager extends js.Object
 

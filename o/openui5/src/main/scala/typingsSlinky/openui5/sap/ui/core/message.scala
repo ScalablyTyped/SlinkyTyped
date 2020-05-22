@@ -45,7 +45,7 @@ object message extends js.Object {
       * object
       * @param oObject The sap.ui.base.ManageObject
       * @param bHandleValidation Handle validation for this object. If set to true validation/parse events
-      * creates Messages and cancel event.					If set to false only the event will be canceled, but no
+      * creates Messages and cancel event.                    If set to false only the event will be canceled, but no
       * messages will be created
       */
     def registerObject(oObject: ManagedObject, bHandleValidation: Boolean): Unit = js.native

@@ -6,106 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSPropertySignature_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSPropertySignature_
   extends TSTypeElement
      with BaseNode {
-  var computed: Boolean | Null = js.native
-  var initializer: Expression | Null = js.native
-  var key: Expression = js.native
-  var optional: Boolean | Null = js.native
-  var readonly: Boolean | Null = js.native
-  var typeAnnotation: TSTypeAnnotation_ | Null = js.native
+  var computed: Boolean | Null
+  var initializer: Expression | Null
+  var key: Expression
+  var optional: Boolean | Null
+  var readonly: Boolean | Null
+  var typeAnnotation: TSTypeAnnotation_ | Null
   @JSName("type")
-  var type_TSPropertySignature_ : TSPropertySignature = js.native
+  var type_TSPropertySignature_ : TSPropertySignature
 }
 
 object TSPropertySignature_ {
   @scala.inline
-  def apply(key: Expression, `type`: TSPropertySignature): TSPropertySignature_ = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+  def apply(
+    key: Expression,
+    `type`: TSPropertySignature,
+    computed: Boolean = null.asInstanceOf[Boolean],
+    end: Double = null.asInstanceOf[Double],
+    initializer: Expression = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    optional: Boolean = null.asInstanceOf[Boolean],
+    readonly: Boolean = null.asInstanceOf[Boolean],
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeAnnotation: TSTypeAnnotation_ = null
+  ): TSPropertySignature_ = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], initializer = initializer.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSPropertySignature_]
   }
-  @scala.inline
-  implicit class TSPropertySignature_Ops[Self <: TSPropertySignature_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSPropertySignature): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComputed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComputedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(null)
-        ret
-    }
-    @scala.inline
-    def withInitializer(value: Expression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitializerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(null)
-        ret
-    }
-    @scala.inline
-    def withOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionalNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(null)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadonlyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotation(value: TSTypeAnnotation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeAnnotationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
-        ret
-    }
-  }
-  
 }
 

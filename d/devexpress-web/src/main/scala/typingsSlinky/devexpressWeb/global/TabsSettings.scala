@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("TabsSettings")
 @js.native
 class TabsSettings ()
-  extends typingsSlinky.devexpressWeb.TabsSettings
+  extends typingsSlinky.devexpressWeb.TabsSettings {
+  /**
+    * Specifies the default distance between tab stops.
+    */
+  /* CompleteClass */
+  override var defaultTabStop: Double = js.native
+  /**
+    * Gets or sets a list of tab stops.
+    */
+  /* CompleteClass */
+  override var tabs: js.Array[typingsSlinky.devexpressWeb.TabSettings] = js.native
+}
 

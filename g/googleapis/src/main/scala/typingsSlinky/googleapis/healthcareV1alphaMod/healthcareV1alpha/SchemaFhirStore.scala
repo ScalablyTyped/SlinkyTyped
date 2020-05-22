@@ -59,77 +59,20 @@ trait SchemaFhirStore extends js.Object {
 
 object SchemaFhirStore {
   @scala.inline
-  def apply(): SchemaFhirStore = {
+  def apply(
+    disableReferentialIntegrity: js.UndefOr[Boolean] = js.undefined,
+    disableResourceVersioning: js.UndefOr[Boolean] = js.undefined,
+    enableUpdateCreate: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    notificationConfig: SchemaNotificationConfig = null
+  ): SchemaFhirStore = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableReferentialIntegrity)) __obj.updateDynamic("disableReferentialIntegrity")(disableReferentialIntegrity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableResourceVersioning)) __obj.updateDynamic("disableResourceVersioning")(disableResourceVersioning.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableUpdateCreate)) __obj.updateDynamic("enableUpdateCreate")(enableUpdateCreate.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (notificationConfig != null) __obj.updateDynamic("notificationConfig")(notificationConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFhirStore]
   }
-  @scala.inline
-  implicit class SchemaFhirStoreOps[Self <: SchemaFhirStore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableReferentialIntegrity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableReferentialIntegrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableReferentialIntegrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableReferentialIntegrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableResourceVersioning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableResourceVersioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableResourceVersioning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableResourceVersioning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableUpdateCreate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUpdateCreate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableUpdateCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUpdateCreate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationConfig(value: SchemaNotificationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

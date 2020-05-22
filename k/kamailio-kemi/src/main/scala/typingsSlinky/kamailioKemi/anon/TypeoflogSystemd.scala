@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeoflogSystemd extends js.Object {
-  def sd_journal_print(slev: String, stxt: String): Double = js.native
-  def sd_journal_send_xvap(xname: String): Double = js.native
+  def sd_journal_print(slev: String, stxt: String): Double
+  def sd_journal_send_xvap(xname: String): Double
 }
 
 object TypeoflogSystemd {
@@ -16,25 +15,5 @@ object TypeoflogSystemd {
     val __obj = js.Dynamic.literal(sd_journal_print = js.Any.fromFunction2(sd_journal_print), sd_journal_send_xvap = js.Any.fromFunction1(sd_journal_send_xvap))
     __obj.asInstanceOf[TypeoflogSystemd]
   }
-  @scala.inline
-  implicit class TypeoflogSystemdOps[Self <: TypeoflogSystemd] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSd_journal_print(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sd_journal_print")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSd_journal_send_xvap(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sd_journal_send_xvap")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

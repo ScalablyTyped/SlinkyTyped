@@ -4,36 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryTablesOptions extends TimeoutIntervalOptions {
-  var nextTableName: js.UndefOr[String] = js.native
+  var nextTableName: js.UndefOr[String] = js.undefined
 }
 
 object QueryTablesOptions {
   @scala.inline
-  def apply(): QueryTablesOptions = {
+  def apply(
+    locationMode: String = null,
+    maximumExecutionTimeInMs: js.UndefOr[Double] = js.undefined,
+    nextTableName: String = null,
+    timeoutIntervalInMs: js.UndefOr[Double] = js.undefined
+  ): QueryTablesOptions = {
     val __obj = js.Dynamic.literal()
+    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumExecutionTimeInMs)) __obj.updateDynamic("maximumExecutionTimeInMs")(maximumExecutionTimeInMs.get.asInstanceOf[js.Any])
+    if (nextTableName != null) __obj.updateDynamic("nextTableName")(nextTableName.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutIntervalInMs)) __obj.updateDynamic("timeoutIntervalInMs")(timeoutIntervalInMs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryTablesOptions]
   }
-  @scala.inline
-  implicit class QueryTablesOptionsOps[Self <: QueryTablesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextTableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextTableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

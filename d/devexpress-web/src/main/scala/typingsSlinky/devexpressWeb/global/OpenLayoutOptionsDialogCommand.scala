@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("OpenLayoutOptionsDialogCommand")
 @js.native
 class OpenLayoutOptionsDialogCommand ()
-  extends typingsSlinky.devexpressWeb.OpenLayoutOptionsDialogCommand
+  extends typingsSlinky.devexpressWeb.OpenLayoutOptionsDialogCommand {
+  /**
+    * Executes the OpenLayoutOptionsDialogCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

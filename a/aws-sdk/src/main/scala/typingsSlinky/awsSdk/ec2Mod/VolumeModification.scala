@@ -58,161 +58,34 @@ trait VolumeModification extends js.Object {
 
 object VolumeModification {
   @scala.inline
-  def apply(): VolumeModification = {
+  def apply(
+    EndTime: js.Date = null,
+    ModificationState: VolumeModificationState = null,
+    OriginalIops: js.UndefOr[Integer] = js.undefined,
+    OriginalSize: js.UndefOr[Integer] = js.undefined,
+    OriginalVolumeType: VolumeType = null,
+    Progress: js.UndefOr[Long] = js.undefined,
+    StartTime: js.Date = null,
+    StatusMessage: String = null,
+    TargetIops: js.UndefOr[Integer] = js.undefined,
+    TargetSize: js.UndefOr[Integer] = js.undefined,
+    TargetVolumeType: VolumeType = null,
+    VolumeId: String = null
+  ): VolumeModification = {
     val __obj = js.Dynamic.literal()
+    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
+    if (ModificationState != null) __obj.updateDynamic("ModificationState")(ModificationState.asInstanceOf[js.Any])
+    if (!js.isUndefined(OriginalIops)) __obj.updateDynamic("OriginalIops")(OriginalIops.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(OriginalSize)) __obj.updateDynamic("OriginalSize")(OriginalSize.get.asInstanceOf[js.Any])
+    if (OriginalVolumeType != null) __obj.updateDynamic("OriginalVolumeType")(OriginalVolumeType.asInstanceOf[js.Any])
+    if (!js.isUndefined(Progress)) __obj.updateDynamic("Progress")(Progress.get.asInstanceOf[js.Any])
+    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
+    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(TargetIops)) __obj.updateDynamic("TargetIops")(TargetIops.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TargetSize)) __obj.updateDynamic("TargetSize")(TargetSize.get.asInstanceOf[js.Any])
+    if (TargetVolumeType != null) __obj.updateDynamic("TargetVolumeType")(TargetVolumeType.asInstanceOf[js.Any])
+    if (VolumeId != null) __obj.updateDynamic("VolumeId")(VolumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeModification]
   }
-  @scala.inline
-  implicit class VolumeModificationOps[Self <: VolumeModification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModificationState(value: VolumeModificationState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModificationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModificationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModificationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalIops(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalIops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalIops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalSize(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalVolumeType(value: VolumeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalVolumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalVolumeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalVolumeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgress(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Progress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetIops(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetIops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetSize(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetVolumeType(value: VolumeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVolumeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetVolumeType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVolumeType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientOptionsCredentials extends js.Object {
-  var client_email: String = js.native
-  var private_key: String = js.native
+  var client_email: String
+  var private_key: String
 }
 
 object ClientOptionsCredentials {
@@ -16,25 +15,5 @@ object ClientOptionsCredentials {
     val __obj = js.Dynamic.literal(client_email = client_email.asInstanceOf[js.Any], private_key = private_key.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptionsCredentials]
   }
-  @scala.inline
-  implicit class ClientOptionsCredentialsOps[Self <: ClientOptionsCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClient_email(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivate_key(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private_key")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

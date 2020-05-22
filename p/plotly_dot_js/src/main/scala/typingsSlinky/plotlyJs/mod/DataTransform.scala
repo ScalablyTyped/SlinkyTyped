@@ -11,166 +11,48 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.Transform> */
-@js.native
 trait DataTransform extends js.Object {
-  var aggregations: js.UndefOr[js.Array[TransformAggregation]] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var groups: js.UndefOr[String | (js.Array[Double | String])] = js.native
-  var nameformat: js.UndefOr[String] = js.native
-  var operation: js.UndefOr[String] = js.native
-  var order: js.UndefOr[ascending | descending] = js.native
-  var preservegaps: js.UndefOr[Boolean] = js.native
-  var styles: js.UndefOr[js.Array[TransformStyle]] = js.native
-  var target: js.UndefOr[Double | String | (js.Array[Double | String])] = js.native
-  var `type`: js.UndefOr[aggregate | filter | groupby | sort] = js.native
-  var value: js.UndefOr[js.Any] = js.native
+  var aggregations: js.UndefOr[js.Array[TransformAggregation]] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var groups: js.UndefOr[String | (js.Array[Double | String])] = js.undefined
+  var nameformat: js.UndefOr[String] = js.undefined
+  var operation: js.UndefOr[String] = js.undefined
+  var order: js.UndefOr[ascending | descending] = js.undefined
+  var preservegaps: js.UndefOr[Boolean] = js.undefined
+  var styles: js.UndefOr[js.Array[TransformStyle]] = js.undefined
+  var target: js.UndefOr[Double | String | (js.Array[Double | String])] = js.undefined
+  var `type`: js.UndefOr[aggregate | filter | groupby | sort] = js.undefined
+  var value: js.UndefOr[js.Any] = js.undefined
 }
 
 object DataTransform {
   @scala.inline
-  def apply(): DataTransform = {
+  def apply(
+    aggregations: js.Array[TransformAggregation] = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    groups: String | (js.Array[Double | String]) = null,
+    nameformat: String = null,
+    operation: String = null,
+    order: ascending | descending = null,
+    preservegaps: js.UndefOr[Boolean] = js.undefined,
+    styles: js.Array[TransformStyle] = null,
+    target: Double | String | (js.Array[Double | String]) = null,
+    `type`: aggregate | filter | groupby | sort = null,
+    value: js.Any = null
+  ): DataTransform = {
     val __obj = js.Dynamic.literal()
+    if (aggregations != null) __obj.updateDynamic("aggregations")(aggregations.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (nameformat != null) __obj.updateDynamic("nameformat")(nameformat.asInstanceOf[js.Any])
+    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (!js.isUndefined(preservegaps)) __obj.updateDynamic("preservegaps")(preservegaps.get.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataTransform]
   }
-  @scala.inline
-  implicit class DataTransformOps[Self <: DataTransform] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregations(value: js.Array[TransformAggregation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: String | (js.Array[Double | String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameformat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameformat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameformat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameformat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: ascending | descending): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreservegaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservegaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreservegaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preservegaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Array[TransformStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Double | String | (js.Array[Double | String])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: aggregate | filter | groupby | sort): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -56,77 +56,20 @@ trait SchemaPartitionQueryRequest extends js.Object {
 
 object SchemaPartitionQueryRequest {
   @scala.inline
-  def apply(): SchemaPartitionQueryRequest = {
+  def apply(
+    paramTypes: StringDictionary[SchemaType] = null,
+    params: StringDictionary[js.Any] = null,
+    partitionOptions: SchemaPartitionOptions = null,
+    sql: String = null,
+    transaction: SchemaTransactionSelector = null
+  ): SchemaPartitionQueryRequest = {
     val __obj = js.Dynamic.literal()
+    if (paramTypes != null) __obj.updateDynamic("paramTypes")(paramTypes.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (partitionOptions != null) __obj.updateDynamic("partitionOptions")(partitionOptions.asInstanceOf[js.Any])
+    if (sql != null) __obj.updateDynamic("sql")(sql.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPartitionQueryRequest]
   }
-  @scala.inline
-  implicit class SchemaPartitionQueryRequestOps[Self <: SchemaPartitionQueryRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParamTypes(value: StringDictionary[SchemaType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParamTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionOptions(value: SchemaPartitionOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSql(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSql: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: SchemaTransactionSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

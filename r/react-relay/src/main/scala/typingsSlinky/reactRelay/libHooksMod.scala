@@ -3,9 +3,9 @@ package typingsSlinky.reactRelay
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ClassicElement
-import typingsSlinky.reactRelay.anon.Data
 import typingsSlinky.reactRelay.anon.EntryPointReference
 import typingsSlinky.reactRelay.anon.FetchKey
+import typingsSlinky.reactRelay.anon.FnCall
 import typingsSlinky.reactRelay.anon.NetworkCacheConfig
 import typingsSlinky.reactRelay.entryPointTypesMod.EntryPoint
 import typingsSlinky.reactRelay.entryPointTypesMod.EntryPointProps
@@ -23,10 +23,15 @@ import typingsSlinky.reactRelay.useBlockingPaginationFragmentMod.KeyType
 import typingsSlinky.reactRelay.useBlockingPaginationFragmentMod.ReturnType
 import typingsSlinky.reactRelay.useFragmentMod.ArrayKeyReturnType
 import typingsSlinky.reactRelay.useFragmentMod.ArrayKeyType
+import typingsSlinky.reactRelay.useMutationMod.UseMutationConfig
+import typingsSlinky.relayRuntime.commitMutationMod.MutationConfig
+import typingsSlinky.relayRuntime.commitMutationMod.MutationParameters
 import typingsSlinky.relayRuntime.mod.Observable
 import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
+import typingsSlinky.relayRuntime.requestSubscriptionMod.GraphQLSubscriptionConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -154,6 +159,11 @@ object libHooksMod extends js.Object {
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
     options: FetchKey
   ): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
+  def useMutation[TMutation /* <: MutationParameters */](mutation: GraphQLTaggedNode): js.Tuple2[js.Function1[/* config */ UseMutationConfig[TMutation], Disposable], Boolean] = js.native
+  def useMutation[TMutation /* <: MutationParameters */](
+    mutation: GraphQLTaggedNode,
+    commitMutationFn: js.Function2[/* environment */ Environment, /* config */ MutationConfig[TMutation], Disposable]
+  ): js.Tuple2[js.Function1[/* config */ UseMutationConfig[TMutation], Disposable], Boolean] = js.native
   def usePaginationFragment[TQuery /* <: OperationType */, TKey /* <: typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): // tslint:disable-next-line no-unnecessary-generics
   typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.ReturnType[
     TQuery, 
@@ -167,7 +177,29 @@ object libHooksMod extends js.Object {
     typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.Call[typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.KeyReturnType[TKey]] | Null
   ] = js.native
   def usePreloadedQuery[TQuery /* <: OperationType */](gqlQuery: GraphQLTaggedNode, preloadedQuery: PreloadedQuery[TQuery, EnvironmentProviderOptions]): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
-  def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: Data */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactRelay.useRefetchableFragmentMod.ReturnType[TQuery, TKey] = js.native
+  def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: typingsSlinky.reactRelay.useRefetchableFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): // tslint:disable-next-line:no-unnecessary-generics
+  typingsSlinky.reactRelay.useRefetchableFragmentMod.ReturnType[
+    TQuery, 
+    TKey, 
+    typingsSlinky.reactRelay.useRefetchableFragmentMod.Call[typingsSlinky.reactRelay.useRefetchableFragmentMod.KeyReturnType[TKey]] | Null
+  ] = js.native
+  def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: typingsSlinky.reactRelay.useRefetchableFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): // tslint:disable-next-line:no-unnecessary-generics
+  typingsSlinky.reactRelay.useRefetchableFragmentMod.ReturnType[
+    TQuery, 
+    TKey, 
+    typingsSlinky.reactRelay.useRefetchableFragmentMod.Call[typingsSlinky.reactRelay.useRefetchableFragmentMod.KeyReturnType[TKey]] | Null
+  ] = js.native
   def useRelayEnvironment(): typingsSlinky.relayRuntime.mod.Environment = js.native
+  def useSubscription[TSubscriptionPayload /* <: OperationType */](
+    // The actual subtype of OperationType is required to allow for type inferrence inside GraphQLSubscriptionConfig.
+  // tslint:disable-next-line:no-unnecessary-generics
+  config: GraphQLSubscriptionConfig[TSubscriptionPayload]
+  ): Unit = js.native
+  def useSubscription[TSubscriptionPayload /* <: OperationType */](
+    // The actual subtype of OperationType is required to allow for type inferrence inside GraphQLSubscriptionConfig.
+  // tslint:disable-next-line:no-unnecessary-generics
+  config: GraphQLSubscriptionConfig[TSubscriptionPayload],
+    requestSubscriptionFn: FnCall
+  ): Unit = js.native
 }
 

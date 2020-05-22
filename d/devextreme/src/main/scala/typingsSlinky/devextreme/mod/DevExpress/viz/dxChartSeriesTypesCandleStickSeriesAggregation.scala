@@ -6,39 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Configures data aggregation for the series. */
-@js.native
+/** @name dxChartSeriesTypes.CandleStickSeries.aggregation */
 trait dxChartSeriesTypesCandleStickSeriesAggregation extends dxChartSeriesTypesCommonSeriesAggregation {
-  /** Specifies how to aggregate series points. */
+  /** @name dxChartSeriesTypes.CandleStickSeries.aggregation.method */
   @JSName("method")
-  var method_dxChartSeriesTypesCandleStickSeriesAggregation: js.UndefOr[ohlc | custom] = js.native
+  var method_dxChartSeriesTypesCandleStickSeriesAggregation: js.UndefOr[ohlc | custom] = js.undefined
 }
 
 object dxChartSeriesTypesCandleStickSeriesAggregation {
   @scala.inline
-  def apply(): dxChartSeriesTypesCandleStickSeriesAggregation = {
+  def apply(
+    calculate: (/* aggregationInfo */ chartPointAggregationInfoObject, /* series */ chartSeriesObject) => _ | js.Array[_] = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    method: ohlc | custom = null
+  ): dxChartSeriesTypesCandleStickSeriesAggregation = {
     val __obj = js.Dynamic.literal()
+    if (calculate != null) __obj.updateDynamic("calculate")(js.Any.fromFunction2(calculate))
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesCandleStickSeriesAggregation]
   }
-  @scala.inline
-  implicit class dxChartSeriesTypesCandleStickSeriesAggregationOps[Self <: dxChartSeriesTypesCandleStickSeriesAggregation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMethod(value: ohlc | custom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

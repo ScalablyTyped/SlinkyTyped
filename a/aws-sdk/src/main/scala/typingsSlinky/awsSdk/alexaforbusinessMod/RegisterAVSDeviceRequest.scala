@@ -40,43 +40,5 @@ object RegisterAVSDeviceRequest {
     val __obj = js.Dynamic.literal(AmazonId = AmazonId.asInstanceOf[js.Any], ClientId = ClientId.asInstanceOf[js.Any], DeviceSerialNumber = DeviceSerialNumber.asInstanceOf[js.Any], ProductId = ProductId.asInstanceOf[js.Any], UserCode = UserCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterAVSDeviceRequest]
   }
-  @scala.inline
-  implicit class RegisterAVSDeviceRequestOps[Self <: RegisterAVSDeviceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmazonId(value: AmazonId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientId(value: ClientId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceSerialNumber(value: DeviceSerialNumberForAVS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceSerialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProductId(value: ProductId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserCode(value: UserCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

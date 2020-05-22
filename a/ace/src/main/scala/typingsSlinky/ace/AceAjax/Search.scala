@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Search extends js.Object {
   /**
     * Searches for `options.needle`. If found, this method returns the [[Range `Range`]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
     * @param session The session to search with
     **/
-  def find(session: IEditSession): Range = js.native
+  def find(session: IEditSession): Range
   /**
     * Searches for all occurances `options.needle`. If found, this method returns an array of [[Range `Range`s]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
     * @param session The session to search with
     **/
-  def findAll(session: IEditSession): js.Array[Range] = js.native
+  def findAll(session: IEditSession): js.Array[Range]
   /**
     * [Returns an object containing all the search options.]{: #Search.getOptions}
     **/
-  def getOptions(): js.Any = js.native
+  def getOptions(): js.Any
   /**
     * Searches for `options.needle` in `input`, and, if found, replaces it with `replacement`.
     * @param input The text to search in
@@ -27,17 +26,17 @@ trait Search extends js.Object {
     * + (String): If `options.regExp` is `true`, this function returns `input` with the replacement already made. Otherwise, this function just returns `replacement`.<br/>
     * If `options.needle` was not found, this function returns `null`.
     **/
-  def replace(input: String, replacement: String): String = js.native
+  def replace(input: String, replacement: String): String
   /**
     * Sets the search options via the `options` parameter.
     * @param options An object containing all the new search properties
     **/
-  def set(options: js.Any): Search = js.native
+  def set(options: js.Any): Search
   /**
     * Sets the search options via the `options` parameter.
     * @param An object containing all the search propertie
     **/
-  def setOptions(An: js.Any): Unit = js.native
+  def setOptions(An: js.Any): Unit
 }
 
 object Search {
@@ -53,49 +52,5 @@ object Search {
     val __obj = js.Dynamic.literal(find = js.Any.fromFunction1(find), findAll = js.Any.fromFunction1(findAll), getOptions = js.Any.fromFunction0(getOptions), replace = js.Any.fromFunction2(replace), set = js.Any.fromFunction1(set), setOptions = js.Any.fromFunction1(setOptions))
     __obj.asInstanceOf[Search]
   }
-  @scala.inline
-  implicit class SearchOps[Self <: Search] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFind(value: IEditSession => Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFindAll(value: IEditSession => js.Array[Range]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findAll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetOptions(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReplace(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: js.Any => Search): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOptions(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

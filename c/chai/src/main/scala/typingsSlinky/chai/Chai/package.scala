@@ -50,12 +50,15 @@ package object Chai {
     /* message */ js.UndefOr[java.lang.String], 
     typingsSlinky.chai.Chai.Assertion
   ]
+  type Message = java.lang.String | js.Function0[java.lang.String]
   type NumberComparer = js.Function2[
     /* value */ scala.Double | js.Date, 
     /* message */ js.UndefOr[java.lang.String], 
     typingsSlinky.chai.Chai.Assertion
   ]
+  type ObjectProperty = java.lang.String | js.Symbol | scala.Double
   type Operator = java.lang.String
+  type OperatorComparable = js.UndefOr[scala.Boolean | scala.Null | scala.Double | java.lang.String | js.Date]
   type PropertyChange = js.Function3[
     /* object */ typingsSlinky.chai.Object, 
     /* property */ js.UndefOr[java.lang.String], 

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoStats extends js.Object {
   /** 视频高度 */
-  var framesHeight: Double = js.native
+  var framesHeight: Double
   /** 视频宽度 */
-  var framesWidth: Double = js.native
+  var framesWidth: Double
 }
 
 object VideoStats {
@@ -18,25 +17,5 @@ object VideoStats {
     val __obj = js.Dynamic.literal(framesHeight = framesHeight.asInstanceOf[js.Any], framesWidth = framesWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoStats]
   }
-  @scala.inline
-  implicit class VideoStatsOps[Self <: VideoStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFramesHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framesHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFramesWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("framesWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

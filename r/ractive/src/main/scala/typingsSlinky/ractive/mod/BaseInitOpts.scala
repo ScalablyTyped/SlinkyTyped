@@ -5,393 +5,137 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseInitOpts[T /* <: Ractive[T] */] extends BaseParseOpts {
   /** Adaptors to be applied. */
-  var adapt: js.UndefOr[js.Array[Adaptor | String]] = js.native
+  var adapt: js.UndefOr[js.Array[Adaptor | String]] = js.undefined
   /** A map of adaptors. */
-  var adaptors: js.UndefOr[Registry[Adaptor]] = js.native
+  var adaptors: js.UndefOr[Registry[Adaptor]] = js.undefined
   /** If set to false, disallow expressions in the template. */
-  var allowExpressions: js.UndefOr[Boolean] = js.native
+  var allowExpressions: js.UndefOr[Boolean] = js.undefined
   /** If true, this instance can occupy the target element with other existing instances rather than cause them to unrender. */
-  var append: js.UndefOr[Boolean] = js.native
+  var append: js.UndefOr[Boolean] = js.undefined
   /* A map of components */
-  var components: js.UndefOr[Registry[Component]] = js.native
+  var components: js.UndefOr[Registry[Component]] = js.undefined
   /** A map of computations */
-  var computed: js.UndefOr[StringDictionary[Computation[T]]] = js.native
+  var computed: js.UndefOr[StringDictionary[Computation[T]]] = js.undefined
   /** A map of decorators */
-  var decorators: js.UndefOr[Registry[Decorator[T]]] = js.native
+  var decorators: js.UndefOr[Registry[Decorator[T]]] = js.undefined
   /** Whether or not to use event delegation around suitabe iterative sections. Defaults to true. */
-  var delegate: js.UndefOr[Boolean] = js.native
+  var delegate: js.UndefOr[Boolean] = js.undefined
   /** A map of easings */
-  var easing: js.UndefOr[Registry[Easing]] = js.native
+  var easing: js.UndefOr[Registry[Easing]] = js.undefined
   /** A map of custom events */
-  var events: js.UndefOr[Registry[EventPlugin[T]]] = js.native
+  var events: js.UndefOr[Registry[EventPlugin[T]]] = js.undefined
   /** A map of helper functions */
-  var helpers: js.UndefOr[Registry[Helper]] = js.native
+  var helpers: js.UndefOr[Registry[Helper]] = js.undefined
   /** A map of interpolators for use with animate */
-  var interpolators: js.UndefOr[Registry[Interpolator]] = js.native
+  var interpolators: js.UndefOr[Registry[Interpolator]] = js.undefined
   /** Whether or not twoway bindings default to lazy. */
-  var `lazy`: js.UndefOr[Boolean] = js.native
+  var `lazy`: js.UndefOr[Boolean] = js.undefined
   /** Whether or not an element can transition if one of its parent elements is also transitioning. */
-  var nestedTransitions: js.UndefOr[Boolean] = js.native
+  var nestedTransitions: js.UndefOr[Boolean] = js.undefined
   /** Whether or not to skip element intro transitions when the instance is being renered initially. */
-  var noIntro: js.UndefOr[Boolean] = js.native
+  var noIntro: js.UndefOr[Boolean] = js.undefined
   /** Whether or not to skip outro transitions when the instance is being unrendered. */
-  var noOutro: js.UndefOr[Boolean] = js.native
+  var noOutro: js.UndefOr[Boolean] = js.undefined
   /** A map of observers */
-  var observe: js.UndefOr[Registry[ObserverCallback[T] | ObserverDescriptor[T]]] = js.native
+  var observe: js.UndefOr[Registry[ObserverCallback[T] | ObserverDescriptor[T]]] = js.undefined
   /** A map of event listeners */
-  var on: js.UndefOr[Registry[ListenerCallback[T] | ListenerDescriptor[T]]] = js.native
+  var on: js.UndefOr[Registry[ListenerCallback[T] | ListenerDescriptor[T]]] = js.undefined
   /** A map of partials */
-  var partials: js.UndefOr[Registry[Partial]] = js.native
+  var partials: js.UndefOr[Registry[Partial]] = js.undefined
   /** Whether or not to consider instance memners like set when resolving values in the template. */
-  var resolveInstanceMembers: js.UndefOr[Boolean] = js.native
+  var resolveInstanceMembers: js.UndefOr[Boolean] = js.undefined
   /** Whether or not to invalidate computation dependencies when a computed value or one of its children is set. */
-  var syncComputedChildren: js.UndefOr[Boolean] = js.native
+  var syncComputedChildren: js.UndefOr[Boolean] = js.undefined
   /** The template to use when rendering. */
-  var template: js.UndefOr[Template] = js.native
+  var template: js.UndefOr[Template] = js.undefined
   /** A map of transitions */
-  var transitions: js.UndefOr[Registry[Transition]] = js.native
+  var transitions: js.UndefOr[Registry[Transition]] = js.undefined
   /** Whether or not to use transitions as elements are added and removed from the DOM. */
-  var transitionsEnabled: js.UndefOr[Boolean] = js.native
+  var transitionsEnabled: js.UndefOr[Boolean] = js.undefined
   /** Whether or not to use twoway bindings by default. */
-  var twoway: js.UndefOr[Boolean] = js.native
+  var twoway: js.UndefOr[Boolean] = js.undefined
   /** Whether or not to issue a warning when an ambiguous reference fails to resolve to the immediate context. */
-  var warnAboutAmbiguity: js.UndefOr[Boolean] = js.native
+  var warnAboutAmbiguity: js.UndefOr[Boolean] = js.undefined
 }
 
 object BaseInitOpts {
   @scala.inline
-  def apply[T](): BaseInitOpts[T] = {
+  def apply[T](
+    adapt: js.Array[Adaptor | String] = null,
+    adaptors: Registry[Adaptor] = null,
+    allowExpressions: js.UndefOr[Boolean] = js.undefined,
+    append: js.UndefOr[Boolean] = js.undefined,
+    components: Registry[Component] = null,
+    computed: StringDictionary[Computation[T]] = null,
+    contextLines: js.UndefOr[Double] = js.undefined,
+    csp: js.UndefOr[Boolean] = js.undefined,
+    decorators: Registry[Decorator[T]] = null,
+    delegate: js.UndefOr[Boolean] = js.undefined,
+    delimiters: ParseDelimiters = null,
+    easing: Registry[Easing] = null,
+    events: Registry[EventPlugin[T]] = null,
+    helpers: Registry[Helper] = null,
+    interpolators: Registry[Interpolator] = null,
+    `lazy`: js.UndefOr[Boolean] = js.undefined,
+    nestedTransitions: js.UndefOr[Boolean] = js.undefined,
+    noIntro: js.UndefOr[Boolean] = js.undefined,
+    noOutro: js.UndefOr[Boolean] = js.undefined,
+    observe: Registry[ObserverCallback[T] | ObserverDescriptor[T]] = null,
+    on: Registry[ListenerCallback[T] | ListenerDescriptor[T]] = null,
+    partials: Registry[Partial] = null,
+    preserveWhitespace: js.UndefOr[Boolean] = js.undefined,
+    resolveInstanceMembers: js.UndefOr[Boolean] = js.undefined,
+    sanitize: Boolean | SanitizeOpts = null,
+    staticDelimiters: ParseDelimiters = null,
+    staticTripleDelimiters: ParseDelimiters = null,
+    stripComments: js.UndefOr[Boolean] = js.undefined,
+    syncComputedChildren: js.UndefOr[Boolean] = js.undefined,
+    template: Template = null,
+    transitions: Registry[Transition] = null,
+    transitionsEnabled: js.UndefOr[Boolean] = js.undefined,
+    tripleDelimiters: ParseDelimiters = null,
+    twoway: js.UndefOr[Boolean] = js.undefined,
+    warnAboutAmbiguity: js.UndefOr[Boolean] = js.undefined
+  ): BaseInitOpts[T] = {
     val __obj = js.Dynamic.literal()
+    if (adapt != null) __obj.updateDynamic("adapt")(adapt.asInstanceOf[js.Any])
+    if (adaptors != null) __obj.updateDynamic("adaptors")(adaptors.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowExpressions)) __obj.updateDynamic("allowExpressions")(allowExpressions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(append)) __obj.updateDynamic("append")(append.get.asInstanceOf[js.Any])
+    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
+    if (computed != null) __obj.updateDynamic("computed")(computed.asInstanceOf[js.Any])
+    if (!js.isUndefined(contextLines)) __obj.updateDynamic("contextLines")(contextLines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(csp)) __obj.updateDynamic("csp")(csp.get.asInstanceOf[js.Any])
+    if (decorators != null) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
+    if (!js.isUndefined(delegate)) __obj.updateDynamic("delegate")(delegate.get.asInstanceOf[js.Any])
+    if (delimiters != null) __obj.updateDynamic("delimiters")(delimiters.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (helpers != null) __obj.updateDynamic("helpers")(helpers.asInstanceOf[js.Any])
+    if (interpolators != null) __obj.updateDynamic("interpolators")(interpolators.asInstanceOf[js.Any])
+    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nestedTransitions)) __obj.updateDynamic("nestedTransitions")(nestedTransitions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noIntro)) __obj.updateDynamic("noIntro")(noIntro.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noOutro)) __obj.updateDynamic("noOutro")(noOutro.get.asInstanceOf[js.Any])
+    if (observe != null) __obj.updateDynamic("observe")(observe.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (partials != null) __obj.updateDynamic("partials")(partials.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveWhitespace)) __obj.updateDynamic("preserveWhitespace")(preserveWhitespace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(resolveInstanceMembers)) __obj.updateDynamic("resolveInstanceMembers")(resolveInstanceMembers.get.asInstanceOf[js.Any])
+    if (sanitize != null) __obj.updateDynamic("sanitize")(sanitize.asInstanceOf[js.Any])
+    if (staticDelimiters != null) __obj.updateDynamic("staticDelimiters")(staticDelimiters.asInstanceOf[js.Any])
+    if (staticTripleDelimiters != null) __obj.updateDynamic("staticTripleDelimiters")(staticTripleDelimiters.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripComments)) __obj.updateDynamic("stripComments")(stripComments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncComputedChildren)) __obj.updateDynamic("syncComputedChildren")(syncComputedChildren.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (transitions != null) __obj.updateDynamic("transitions")(transitions.asInstanceOf[js.Any])
+    if (!js.isUndefined(transitionsEnabled)) __obj.updateDynamic("transitionsEnabled")(transitionsEnabled.get.asInstanceOf[js.Any])
+    if (tripleDelimiters != null) __obj.updateDynamic("tripleDelimiters")(tripleDelimiters.asInstanceOf[js.Any])
+    if (!js.isUndefined(twoway)) __obj.updateDynamic("twoway")(twoway.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnAboutAmbiguity)) __obj.updateDynamic("warnAboutAmbiguity")(warnAboutAmbiguity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseInitOpts[T]]
   }
-  @scala.inline
-  implicit class BaseInitOptsOps[Self[t] <: BaseInitOpts[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withAdapt(value: js.Array[Adaptor | String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapt: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdaptors(value: Registry[Adaptor]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adaptors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdaptors: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adaptors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowExpressions(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowExpressions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppend(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppend: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponents(value: Registry[Component]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponents: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputed(value: StringDictionary[Computation[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputed: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecorators(value: Registry[Decorator[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecorators: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelegate(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: Registry[Easing]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: Registry[EventPlugin[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelpers(value: Registry[Helper]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelpers: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helpers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterpolators(value: Registry[Interpolator]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterpolators: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazy(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazy: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNestedTransitions(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedTransitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNestedTransitions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedTransitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoIntro(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noIntro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoIntro: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noIntro")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoOutro(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOutro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoOutro: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOutro")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObserve(value: Registry[ObserverCallback[T] | ObserverDescriptor[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObserve: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("observe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: Registry[ListenerCallback[T] | ListenerDescriptor[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartials(value: Registry[Partial]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartials: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolveInstanceMembers(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveInstanceMembers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolveInstanceMembers: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveInstanceMembers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncComputedChildren(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncComputedChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncComputedChildren: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncComputedChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateFunction1(value: /* helper */ ParseHelper => String | (js.Array[js.Object | String]) | ParsedTemplate): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: Template): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitions(value: Registry[Transition]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitions: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionsEnabled(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionsEnabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTwoway(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTwoway: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("twoway")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnAboutAmbiguity(value: Boolean): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnAboutAmbiguity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnAboutAmbiguity: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnAboutAmbiguity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait ObjectLockConfiguration extends js.Object {
 
 object ObjectLockConfiguration {
   @scala.inline
-  def apply(): ObjectLockConfiguration = {
+  def apply(ObjectLockEnabled: ObjectLockEnabled = null, Rule: ObjectLockRule = null): ObjectLockConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ObjectLockEnabled != null) __obj.updateDynamic("ObjectLockEnabled")(ObjectLockEnabled.asInstanceOf[js.Any])
+    if (Rule != null) __obj.updateDynamic("Rule")(Rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectLockConfiguration]
   }
-  @scala.inline
-  implicit class ObjectLockConfigurationOps[Self <: ObjectLockConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObjectLockEnabled(value: ObjectLockEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLockEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectLockEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: ObjectLockRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

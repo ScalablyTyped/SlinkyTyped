@@ -1,18 +1,21 @@
 package typingsSlinky.tensorflowTfjsLayers.mergeMod
 
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DotLayerArgs extends LayerArgs {
   /**
     * Axis or axes along which the dot product will be taken.
     *
     * Integer or an Array of integers.
     */
-  var axes: Double | (js.Tuple2[Double, Double]) = js.native
+  var axes: Double | (js.Tuple2[Double, Double])
   /**
     * Whether to L2-normalize samples along the dot product axis
     * before taking the dot product.
@@ -20,40 +23,34 @@ trait DotLayerArgs extends LayerArgs {
     * If set to `true`, the output of the dot product isthe cosine
     * proximity between the two samples.
     */
-  var normalize: js.UndefOr[Boolean] = js.native
+  var normalize: js.UndefOr[Boolean] = js.undefined
 }
 
 object DotLayerArgs {
   @scala.inline
-  def apply(axes: Double | (js.Tuple2[Double, Double])): DotLayerArgs = {
+  def apply(
+    axes: Double | (js.Tuple2[Double, Double]),
+    batchInputShape: Shape = null,
+    batchSize: js.UndefOr[Double] = js.undefined,
+    dtype: DataType = null,
+    inputDType: DataType = null,
+    inputShape: Shape = null,
+    name: String = null,
+    normalize: js.UndefOr[Boolean] = js.undefined,
+    trainable: js.UndefOr[Boolean] = js.undefined,
+    weights: js.Array[Tensor[Rank]] = null
+  ): DotLayerArgs = {
     val __obj = js.Dynamic.literal(axes = axes.asInstanceOf[js.Any])
+    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
+    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
+    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
+    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalize)) __obj.updateDynamic("normalize")(normalize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.get.asInstanceOf[js.Any])
+    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[DotLayerArgs]
   }
-  @scala.inline
-  implicit class DotLayerArgsOps[Self <: DotLayerArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxes(value: Double | (js.Tuple2[Double, Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

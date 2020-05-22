@@ -24,41 +24,11 @@ trait SchemaAsset extends js.Object {
 
 object SchemaAsset {
   @scala.inline
-  def apply(): SchemaAsset = {
+  def apply(androidApp: SchemaAndroidAppAsset = null, web: SchemaWebAsset = null): SchemaAsset = {
     val __obj = js.Dynamic.literal()
+    if (androidApp != null) __obj.updateDynamic("androidApp")(androidApp.asInstanceOf[js.Any])
+    if (web != null) __obj.updateDynamic("web")(web.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAsset]
   }
-  @scala.inline
-  implicit class SchemaAssetOps[Self <: SchemaAsset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidApp(value: SchemaAndroidAppAsset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidApp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidApp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidApp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeb(value: SchemaWebAsset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("web")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("web")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

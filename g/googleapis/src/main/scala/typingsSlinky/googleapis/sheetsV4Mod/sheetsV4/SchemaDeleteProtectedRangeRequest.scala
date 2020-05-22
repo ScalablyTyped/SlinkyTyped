@@ -17,29 +17,10 @@ trait SchemaDeleteProtectedRangeRequest extends js.Object {
 
 object SchemaDeleteProtectedRangeRequest {
   @scala.inline
-  def apply(): SchemaDeleteProtectedRangeRequest = {
+  def apply(protectedRangeId: js.UndefOr[Double] = js.undefined): SchemaDeleteProtectedRangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(protectedRangeId)) __obj.updateDynamic("protectedRangeId")(protectedRangeId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteProtectedRangeRequest]
   }
-  @scala.inline
-  implicit class SchemaDeleteProtectedRangeRequestOps[Self <: SchemaDeleteProtectedRangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProtectedRangeId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRangeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtectedRangeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protectedRangeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

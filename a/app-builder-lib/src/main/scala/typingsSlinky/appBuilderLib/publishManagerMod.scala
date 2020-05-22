@@ -10,6 +10,7 @@ import typingsSlinky.builderUtilRuntime.publishOptionsMod.PublishConfiguration
 import typingsSlinky.electronPublish.mod.PublishContext
 import typingsSlinky.electronPublish.mod.PublishOptions
 import typingsSlinky.electronPublish.mod.Publisher
+import typingsSlinky.electronPublish.multiProgressMod.MultiProgress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +23,15 @@ object publishManagerMod extends js.Object {
     def this(packager: Packager, publishOptions: PublishOptions) = this()
     def this(packager: Packager, publishOptions: PublishOptions, cancellationToken: CancellationToken) = this()
     var artifactCreatedWithoutExplicitPublishConfig: js.Any = js.native
+    /* CompleteClass */
+    override val cancellationToken: CancellationToken = js.native
     var getAppInfo: js.Any = js.native
     var getOrCreatePublisher: js.Any = js.native
     val isPublish: Boolean = js.native
     val nameToPublisher: js.Any = js.native
     val packager: js.Any = js.native
+    /* CompleteClass */
+    override val progress: MultiProgress | Null = js.native
     val publishOptions: js.Any = js.native
     val taskManager: js.Any = js.native
     val updateFileWriteTask: js.Any = js.native

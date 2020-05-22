@@ -1,16 +1,16 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThrowEvent extends Event {
-  var dataInputAssociations: js.Array[DataInputAssociation] = js.native
-  var dataInputs: js.Array[DataInput] = js.native
-  var eventDefinitionRef: js.Array[EventDefinition] = js.native
-  var eventDefinitions: js.Array[EventDefinition] = js.native
-  var inputSet: InputSet = js.native
+  var dataInputAssociations: js.Array[DataInputAssociation]
+  var dataInputs: js.Array[DataInput]
+  var eventDefinitionRef: js.Array[EventDefinition]
+  var eventDefinitions: js.Array[EventDefinition]
+  var inputSet: InputSet
 }
 
 object ThrowEvent {
@@ -32,48 +32,20 @@ object ThrowEvent {
     monitoring: Monitoring,
     outgoing: js.Array[SequenceFlow],
     outgoingConversationLinks: js.Array[ConversationLink],
-    properties: js.Array[Property]
+    properties: js.Array[Property],
+    $attrs: StringDictionary[js.Any] = null,
+    documentation: js.Array[Documentation] = null,
+    extensionDefinitions: js.Array[ExtensionDefinition] = null,
+    extensionElements: ExtensionElements = null,
+    name: String = null
   ): ThrowEvent = {
     val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], auditing = auditing.asInstanceOf[js.Any], categoryValueRef = categoryValueRef.asInstanceOf[js.Any], dataInputAssociations = dataInputAssociations.asInstanceOf[js.Any], dataInputs = dataInputs.asInstanceOf[js.Any], eventDefinitionRef = eventDefinitionRef.asInstanceOf[js.Any], eventDefinitions = eventDefinitions.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], incoming = incoming.asInstanceOf[js.Any], incomingConversationLinks = incomingConversationLinks.asInstanceOf[js.Any], inputSet = inputSet.asInstanceOf[js.Any], lanes = lanes.asInstanceOf[js.Any], monitoring = monitoring.asInstanceOf[js.Any], outgoing = outgoing.asInstanceOf[js.Any], outgoingConversationLinks = outgoingConversationLinks.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any])
+    if ($attrs != null) __obj.updateDynamic("$attrs")($attrs.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (extensionDefinitions != null) __obj.updateDynamic("extensionDefinitions")(extensionDefinitions.asInstanceOf[js.Any])
+    if (extensionElements != null) __obj.updateDynamic("extensionElements")(extensionElements.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThrowEvent]
   }
-  @scala.inline
-  implicit class ThrowEventOps[Self <: ThrowEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataInputAssociations(value: js.Array[DataInputAssociation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInputAssociations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataInputs(value: js.Array[DataInput]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventDefinitionRef(value: js.Array[EventDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventDefinitionRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventDefinitions(value: js.Array[EventDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventDefinitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInputSet(value: InputSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

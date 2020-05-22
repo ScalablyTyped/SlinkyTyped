@@ -14,29 +14,10 @@ trait DescribeDocumentClassificationJobResponse extends js.Object {
 
 object DescribeDocumentClassificationJobResponse {
   @scala.inline
-  def apply(): DescribeDocumentClassificationJobResponse = {
+  def apply(DocumentClassificationJobProperties: DocumentClassificationJobProperties = null): DescribeDocumentClassificationJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (DocumentClassificationJobProperties != null) __obj.updateDynamic("DocumentClassificationJobProperties")(DocumentClassificationJobProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDocumentClassificationJobResponse]
   }
-  @scala.inline
-  implicit class DescribeDocumentClassificationJobResponseOps[Self <: DescribeDocumentClassificationJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentClassificationJobProperties(value: DocumentClassificationJobProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentClassificationJobProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentClassificationJobProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentClassificationJobProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

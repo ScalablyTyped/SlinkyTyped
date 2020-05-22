@@ -12,14 +12,3 @@ import scala.scalajs.js.annotation._
 */
 trait Principal extends js.Object
 
-object Principal {
-  @scala.inline
-  def Asterisk: typingsSlinky.pulumiAws.pulumiAwsStrings.Asterisk = "*".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.Asterisk]
-  @scala.inline
-  implicit def apply(value: AWSPrincipal): Principal = value.asInstanceOf[Principal]
-  @scala.inline
-  implicit def apply(value: FederatedPrincipal): Principal = value.asInstanceOf[Principal]
-  @scala.inline
-  implicit def apply(value: ServicePrincipal): Principal = value.asInstanceOf[Principal]
-}
-

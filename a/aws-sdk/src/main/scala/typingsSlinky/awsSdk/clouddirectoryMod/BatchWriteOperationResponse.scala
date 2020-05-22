@@ -70,197 +70,40 @@ trait BatchWriteOperationResponse extends js.Object {
 
 object BatchWriteOperationResponse {
   @scala.inline
-  def apply(): BatchWriteOperationResponse = {
+  def apply(
+    AddFacetToObject: BatchAddFacetToObjectResponse = null,
+    AttachObject: BatchAttachObjectResponse = null,
+    AttachPolicy: BatchAttachPolicyResponse = null,
+    AttachToIndex: BatchAttachToIndexResponse = null,
+    AttachTypedLink: BatchAttachTypedLinkResponse = null,
+    CreateIndex: BatchCreateIndexResponse = null,
+    CreateObject: BatchCreateObjectResponse = null,
+    DeleteObject: BatchDeleteObjectResponse = null,
+    DetachFromIndex: BatchDetachFromIndexResponse = null,
+    DetachObject: BatchDetachObjectResponse = null,
+    DetachPolicy: BatchDetachPolicyResponse = null,
+    DetachTypedLink: BatchDetachTypedLinkResponse = null,
+    RemoveFacetFromObject: BatchRemoveFacetFromObjectResponse = null,
+    UpdateLinkAttributes: BatchUpdateLinkAttributesResponse = null,
+    UpdateObjectAttributes: BatchUpdateObjectAttributesResponse = null
+  ): BatchWriteOperationResponse = {
     val __obj = js.Dynamic.literal()
+    if (AddFacetToObject != null) __obj.updateDynamic("AddFacetToObject")(AddFacetToObject.asInstanceOf[js.Any])
+    if (AttachObject != null) __obj.updateDynamic("AttachObject")(AttachObject.asInstanceOf[js.Any])
+    if (AttachPolicy != null) __obj.updateDynamic("AttachPolicy")(AttachPolicy.asInstanceOf[js.Any])
+    if (AttachToIndex != null) __obj.updateDynamic("AttachToIndex")(AttachToIndex.asInstanceOf[js.Any])
+    if (AttachTypedLink != null) __obj.updateDynamic("AttachTypedLink")(AttachTypedLink.asInstanceOf[js.Any])
+    if (CreateIndex != null) __obj.updateDynamic("CreateIndex")(CreateIndex.asInstanceOf[js.Any])
+    if (CreateObject != null) __obj.updateDynamic("CreateObject")(CreateObject.asInstanceOf[js.Any])
+    if (DeleteObject != null) __obj.updateDynamic("DeleteObject")(DeleteObject.asInstanceOf[js.Any])
+    if (DetachFromIndex != null) __obj.updateDynamic("DetachFromIndex")(DetachFromIndex.asInstanceOf[js.Any])
+    if (DetachObject != null) __obj.updateDynamic("DetachObject")(DetachObject.asInstanceOf[js.Any])
+    if (DetachPolicy != null) __obj.updateDynamic("DetachPolicy")(DetachPolicy.asInstanceOf[js.Any])
+    if (DetachTypedLink != null) __obj.updateDynamic("DetachTypedLink")(DetachTypedLink.asInstanceOf[js.Any])
+    if (RemoveFacetFromObject != null) __obj.updateDynamic("RemoveFacetFromObject")(RemoveFacetFromObject.asInstanceOf[js.Any])
+    if (UpdateLinkAttributes != null) __obj.updateDynamic("UpdateLinkAttributes")(UpdateLinkAttributes.asInstanceOf[js.Any])
+    if (UpdateObjectAttributes != null) __obj.updateDynamic("UpdateObjectAttributes")(UpdateObjectAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchWriteOperationResponse]
   }
-  @scala.inline
-  implicit class BatchWriteOperationResponseOps[Self <: BatchWriteOperationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddFacetToObject(value: BatchAddFacetToObjectResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddFacetToObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddFacetToObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddFacetToObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachObject(value: BatchAttachObjectResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachPolicy(value: BatchAttachPolicyResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachToIndex(value: BatchAttachToIndexResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachToIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachToIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachToIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachTypedLink(value: BatchAttachTypedLinkResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachTypedLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachTypedLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachTypedLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateIndex(value: BatchCreateIndexResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateObject(value: BatchCreateObjectResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteObject(value: BatchDeleteObjectResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetachFromIndex(value: BatchDetachFromIndexResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachFromIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetachFromIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachFromIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetachObject(value: BatchDetachObjectResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetachObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetachPolicy(value: BatchDetachPolicyResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetachPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetachTypedLink(value: BatchDetachTypedLinkResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachTypedLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetachTypedLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachTypedLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveFacetFromObject(value: BatchRemoveFacetFromObjectResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveFacetFromObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveFacetFromObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveFacetFromObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateLinkAttributes(value: BatchUpdateLinkAttributesResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateLinkAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateLinkAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateLinkAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateObjectAttributes(value: BatchUpdateObjectAttributesResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateObjectAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateObjectAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateObjectAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

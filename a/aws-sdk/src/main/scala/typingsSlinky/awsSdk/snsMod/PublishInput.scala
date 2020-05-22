@@ -38,95 +38,23 @@ trait PublishInput extends js.Object {
 
 object PublishInput {
   @scala.inline
-  def apply(Message: message): PublishInput = {
+  def apply(
+    Message: message,
+    MessageAttributes: MessageAttributeMap = null,
+    MessageStructure: messageStructure = null,
+    PhoneNumber: String = null,
+    Subject: subject = null,
+    TargetArn: String = null,
+    TopicArn: topicARN = null
+  ): PublishInput = {
     val __obj = js.Dynamic.literal(Message = Message.asInstanceOf[js.Any])
+    if (MessageAttributes != null) __obj.updateDynamic("MessageAttributes")(MessageAttributes.asInstanceOf[js.Any])
+    if (MessageStructure != null) __obj.updateDynamic("MessageStructure")(MessageStructure.asInstanceOf[js.Any])
+    if (PhoneNumber != null) __obj.updateDynamic("PhoneNumber")(PhoneNumber.asInstanceOf[js.Any])
+    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
+    if (TargetArn != null) __obj.updateDynamic("TargetArn")(TargetArn.asInstanceOf[js.Any])
+    if (TopicArn != null) __obj.updateDynamic("TopicArn")(TopicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublishInput]
   }
-  @scala.inline
-  implicit class PublishInputOps[Self <: PublishInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: message): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessageAttributes(value: MessageAttributeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageStructure(value: messageStructure): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageStructure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageStructure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageStructure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: subject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopicArn(value: topicARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopicArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

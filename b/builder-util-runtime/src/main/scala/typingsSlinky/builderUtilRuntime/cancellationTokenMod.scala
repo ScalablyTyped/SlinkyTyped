@@ -10,7 +10,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object cancellationTokenMod extends js.Object {
   @js.native
-  class CancellationError () extends Error
+  class CancellationError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
   class CancellationToken () extends EventEmitter {

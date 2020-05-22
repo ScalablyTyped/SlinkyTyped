@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * A command to split the selected table cells based on the specified options.
   */
-@js.native
 trait SplitTableCellsCommand extends js.Object {
   /**
     * Executes the SplitTableCellsCommand command with the specified parameters. true if the command has been successfully executed; false if the command execution has failed.
@@ -15,11 +14,11 @@ trait SplitTableCellsCommand extends js.Object {
     * @param columnCount An integer value specifying a number of columns in the split table cells.
     * @param mergeBeforeSplit true to merge the selected cells before the splitting; otherwise, false.
     */
-  def execute(rowCount: Double, columnCount: Double, mergeBeforeSplit: Boolean): Boolean = js.native
+  def execute(rowCount: Double, columnCount: Double, mergeBeforeSplit: Boolean): Boolean
   /**
     * Gets information about the command's state.
     */
-  def getState(): SimpleCommandState = js.native
+  def getState(): SimpleCommandState
 }
 
 object SplitTableCellsCommand {
@@ -28,25 +27,5 @@ object SplitTableCellsCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction3(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[SplitTableCellsCommand]
   }
-  @scala.inline
-  implicit class SplitTableCellsCommandOps[Self <: SplitTableCellsCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: (Double, Double, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetState(value: () => SimpleCommandState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

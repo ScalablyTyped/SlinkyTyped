@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * NetworkPolicySpec provides the specification of a NetworkPolicy
   */
-@js.native
 trait NetworkPolicySpec extends js.Object {
   /**
     * List of egress rules to be applied to the selected pods. Outgoing traffic is allowed if
@@ -18,7 +17,7 @@ trait NetworkPolicySpec extends js.Object {
     * NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it
     * selects are isolated by default). This field is beta-level in 1.8
     */
-  val egress: js.Array[NetworkPolicyEgressRule] = js.native
+  val egress: js.Array[NetworkPolicyEgressRule]
   /**
     * List of ingress rules to be applied to the selected pods. Traffic is allowed to a pod if
     * there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the
@@ -27,7 +26,7 @@ trait NetworkPolicySpec extends js.Object {
     * the pod. If this field is empty then this NetworkPolicy does not allow any traffic (and
     * serves solely to ensure that the pods it selects are isolated by default)
     */
-  val ingress: js.Array[NetworkPolicyIngressRule] = js.native
+  val ingress: js.Array[NetworkPolicyIngressRule]
   /**
     * Selects the pods to which this NetworkPolicy object applies. The array of ingress rules is
     * applied to any pods selected by this field. Multiple network policies can select the same
@@ -35,7 +34,7 @@ trait NetworkPolicySpec extends js.Object {
     * is NOT optional and follows standard label selector semantics. An empty podSelector matches
     * all pods in this namespace.
     */
-  val podSelector: LabelSelector = js.native
+  val podSelector: LabelSelector
   /**
     * List of rule types that the NetworkPolicy relates to. Valid options are "Ingress",
     * "Egress", or "Ingress,Egress". If this field is not specified, it will default based on the
@@ -47,7 +46,7 @@ trait NetworkPolicySpec extends js.Object {
     * (since such a policy would not include an Egress section and would otherwise default to
     * just [ "Ingress" ]). This field is beta-level in 1.8
     */
-  val policyTypes: js.Array[String] = js.native
+  val policyTypes: js.Array[String]
 }
 
 object NetworkPolicySpec {
@@ -61,37 +60,5 @@ object NetworkPolicySpec {
     val __obj = js.Dynamic.literal(egress = egress.asInstanceOf[js.Any], ingress = ingress.asInstanceOf[js.Any], podSelector = podSelector.asInstanceOf[js.Any], policyTypes = policyTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkPolicySpec]
   }
-  @scala.inline
-  implicit class NetworkPolicySpecOps[Self <: NetworkPolicySpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEgress(value: js.Array[NetworkPolicyEgressRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("egress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIngress(value: js.Array[NetworkPolicyIngressRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ingress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPodSelector(value: LabelSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

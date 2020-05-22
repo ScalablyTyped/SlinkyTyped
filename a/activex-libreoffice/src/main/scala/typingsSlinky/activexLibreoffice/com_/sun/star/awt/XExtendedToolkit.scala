@@ -20,52 +20,51 @@ import scala.scalajs.js.annotation._
   * @deprecated DeprecatedThis interface was only implemented in an intermediate developer release anyway.
   * @since OOo 1.1.2
   */
-@js.native
 trait XExtendedToolkit extends XInterface {
   /**
     * Return the currently active top-level window, i.e. which has currently the input focus.
     * @returns The returned reference may be empty when no top-level window is active.
     */
-  val ActiveTopWindow: XTopWindow = js.native
+  val ActiveTopWindow: XTopWindow
   /**
     * This function returns the number of currently existing top-level windows.
     * @returns Returns the number of top-level windows. This includes all top-level windows, regardless of whether they are iconized, visible, or active.
     */
-  val TopWindowCount: Double = js.native
+  val TopWindowCount: Double
   /**
     * Add a new listener that is called on {@link com.sun.star.awt.FocusEvent} . Use this focus broadcaster to keep track of the object that currently has
     * the input focus.
     * @param xListener If this is a valid reference it is inserted into the list of listeners. It is the task of the caller to not register the same listener
     */
-  def addFocusListener(xListener: XFocusListener): Unit = js.native
+  def addFocusListener(xListener: XFocusListener): Unit
   /**
     * Add a new listener that is called on {@link com.sun.star.awt.KeyEvent} . Every listener is given the opportunity to consume the event, i.e. prevent
     * the not yet called listeners from being called.
     * @param xHandler If this is a valid reference it is inserted into the list of handlers. It is the task of the caller to not register the same handler twi
     */
-  def addKeyHandler(xHandler: XKeyHandler): Unit = js.native
+  def addKeyHandler(xHandler: XKeyHandler): Unit
   /**
     * Add a new listener that is called for events that involve {@link com.sun.star.awt.XTopWindow} . After having obtained the current list of existing
     * top-level windows you can keep this list up-to-date by listening to opened or closed top-level windows. Wait for activations or deactivations of
     * top-level windows to keep track of the currently active frame.
     * @param xListener If this is a valid reference it is inserted into the list of listeners. It is the task of the caller to not register the same listener
     */
-  def addTopWindowListener(xListener: XTopWindowListener): Unit = js.native
+  def addTopWindowListener(xListener: XTopWindowListener): Unit
   /**
     * Broadcasts the a focusGained on all registered focus listeners
     * @param source The object that has gained the input focus. It should implement {@link com.sun.star.accessibility.XAccessible} .
     */
-  def fireFocusGained(source: XInterface): Unit = js.native
+  def fireFocusGained(source: XInterface): Unit
   /**
     * Broadcasts the a focusGained on all registered focus listeners
     * @param source The object that has lost the input focus. It should implement {@link com.sun.star.accessibility.XAccessible} .
     */
-  def fireFocusLost(source: XInterface): Unit = js.native
+  def fireFocusLost(source: XInterface): Unit
   /**
     * Return the currently active top-level window, i.e. which has currently the input focus.
     * @returns The returned reference may be empty when no top-level window is active.
     */
-  def getActiveTopWindow(): XTopWindow = js.native
+  def getActiveTopWindow(): XTopWindow
   /**
     * Return a reference to the specified top-level window. Note that the number of top-level windows may change between a call to {@link
     * getTopWindowCount()} and successive calls to this function.
@@ -73,27 +72,27 @@ trait XExtendedToolkit extends XInterface {
     * @returns The returned value is a valid reference to a top-level window.
     * @throws IndexOutOfBoundsException when the specified index is outside the valid range.
     */
-  def getTopWindow(nIndex: Double): XTopWindow = js.native
+  def getTopWindow(nIndex: Double): XTopWindow
   /**
     * This function returns the number of currently existing top-level windows.
     * @returns Returns the number of top-level windows. This includes all top-level windows, regardless of whether they are iconized, visible, or active.
     */
-  def getTopWindowCount(): Double = js.native
+  def getTopWindowCount(): Double
   /**
     * Remove the specified listener from the list of listeners.
     * @param xListener If the reference is empty then nothing will be changed. If the listener has been registered twice (or more) then all references will be
     */
-  def removeFocusListener(xListener: XFocusListener): Unit = js.native
+  def removeFocusListener(xListener: XFocusListener): Unit
   /**
     * Remove the specified listener from the list of listeners.
     * @param xHandler If the reference is empty then nothing will be changed. If the handler has been registered twice (or more) then all references will be r
     */
-  def removeKeyHandler(xHandler: XKeyHandler): Unit = js.native
+  def removeKeyHandler(xHandler: XKeyHandler): Unit
   /**
     * Remove the specified listener from the list of listeners.
     * @param xListener If the reference is empty then nothing will be changed. If the listener has been registered twice (or more) then all references will be
     */
-  def removeTopWindowListener(xListener: XTopWindowListener): Unit = js.native
+  def removeTopWindowListener(xListener: XTopWindowListener): Unit
 }
 
 object XExtendedToolkit {
@@ -119,91 +118,5 @@ object XExtendedToolkit {
     val __obj = js.Dynamic.literal(ActiveTopWindow = ActiveTopWindow.asInstanceOf[js.Any], TopWindowCount = TopWindowCount.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addFocusListener = js.Any.fromFunction1(addFocusListener), addKeyHandler = js.Any.fromFunction1(addKeyHandler), addTopWindowListener = js.Any.fromFunction1(addTopWindowListener), fireFocusGained = js.Any.fromFunction1(fireFocusGained), fireFocusLost = js.Any.fromFunction1(fireFocusLost), getActiveTopWindow = js.Any.fromFunction0(getActiveTopWindow), getTopWindow = js.Any.fromFunction1(getTopWindow), getTopWindowCount = js.Any.fromFunction0(getTopWindowCount), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeFocusListener = js.Any.fromFunction1(removeFocusListener), removeKeyHandler = js.Any.fromFunction1(removeKeyHandler), removeTopWindowListener = js.Any.fromFunction1(removeTopWindowListener))
     __obj.asInstanceOf[XExtendedToolkit]
   }
-  @scala.inline
-  implicit class XExtendedToolkitOps[Self <: XExtendedToolkit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveTopWindow(value: XTopWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveTopWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopWindowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TopWindowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddFocusListener(value: XFocusListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFocusListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddKeyHandler(value: XKeyHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addKeyHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddTopWindowListener(value: XTopWindowListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTopWindowListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFireFocusGained(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireFocusGained")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFireFocusLost(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireFocusLost")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetActiveTopWindow(value: () => XTopWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveTopWindow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTopWindow(value: Double => XTopWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTopWindow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetTopWindowCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTopWindowCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveFocusListener(value: XFocusListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFocusListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveKeyHandler(value: XKeyHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeKeyHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveTopWindowListener(value: XTopWindowListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTopWindowListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

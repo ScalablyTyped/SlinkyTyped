@@ -80,6 +80,8 @@ object ReactJsonschemaForm {
     @scala.inline
     def onError(value: /* e */ js.Any => _): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
+    def onFocus(value: (/* id */ String, /* value */ Boolean | Double | String | Null) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
+    @scala.inline
     def onSubmit(value: /* e */ ISubmitEvent[T] => _): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
     def safeRenderCompletion(value: Boolean): this.type = set("safeRenderCompletion", value.asInstanceOf[js.Any])

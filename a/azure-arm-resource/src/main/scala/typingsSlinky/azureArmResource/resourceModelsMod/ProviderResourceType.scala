@@ -5,103 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProviderResourceType extends js.Object {
   /**
     * The aliases that are supported by this resource type.
     */
-  var aliases: js.UndefOr[js.Array[AliasType]] = js.native
+  var aliases: js.UndefOr[js.Array[AliasType]] = js.undefined
   /**
     * The API version.
     */
-  var apiVersions: js.UndefOr[js.Array[String]] = js.native
+  var apiVersions: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The collection of locations where this resource type can be created.
     */
-  var locations: js.UndefOr[js.Array[String]] = js.native
+  var locations: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The properties.
     */
-  var properties: js.UndefOr[StringDictionary[String]] = js.native
+  var properties: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * The resource type.
     */
-  var resourceType: js.UndefOr[String] = js.native
+  var resourceType: js.UndefOr[String] = js.undefined
 }
 
 object ProviderResourceType {
   @scala.inline
-  def apply(): ProviderResourceType = {
+  def apply(
+    aliases: js.Array[AliasType] = null,
+    apiVersions: js.Array[String] = null,
+    locations: js.Array[String] = null,
+    properties: StringDictionary[String] = null,
+    resourceType: String = null
+  ): ProviderResourceType = {
     val __obj = js.Dynamic.literal()
+    if (aliases != null) __obj.updateDynamic("aliases")(aliases.asInstanceOf[js.Any])
+    if (apiVersions != null) __obj.updateDynamic("apiVersions")(apiVersions.asInstanceOf[js.Any])
+    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProviderResourceType]
   }
-  @scala.inline
-  implicit class ProviderResourceTypeOps[Self <: ProviderResourceType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAliases(value: js.Array[AliasType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aliases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiVersions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocations(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

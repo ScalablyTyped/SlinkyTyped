@@ -4,321 +4,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BoardConfig extends js.Object {
-  var appearSpeed: js.UndefOr[Double | SpeedType] = js.native
-  var draggable: js.UndefOr[Boolean] = js.native
-  var dropOffBoard: js.UndefOr[DropOffBoardType] = js.native
-  var moveSpeed: js.UndefOr[Double | SpeedType] = js.native
-  var onChange: js.UndefOr[Callback] = js.native
-  var onDragMove: js.UndefOr[Callback] = js.native
-  var onDragStart: js.UndefOr[Callback] = js.native
-  var onDrop: js.UndefOr[Callback] = js.native
-  var onMouseoutSquare: js.UndefOr[Callback] = js.native
-  var onMouseoverSquare: js.UndefOr[Callback] = js.native
-  var onMoveEnd: js.UndefOr[Callback] = js.native
-  var onSnapEnd: js.UndefOr[Callback] = js.native
-  var onSnapbackEnd: js.UndefOr[Callback] = js.native
-  var orientation: js.UndefOr[OrientationType] = js.native
-  var pieceTheme: js.UndefOr[String | Callback] = js.native
-  var position: js.UndefOr[PositionType] = js.native
-  var showErrors: js.UndefOr[Boolean | String | Callback] = js.native
-  var showNotation: js.UndefOr[Boolean] = js.native
-  var snapSpeed: js.UndefOr[Double | SpeedType] = js.native
-  var snapbackSpeed: js.UndefOr[Double | SpeedType] = js.native
-  var sparePieces: js.UndefOr[Boolean] = js.native
-  var trashSpeed: js.UndefOr[Double | SpeedType] = js.native
+  var appearSpeed: js.UndefOr[Double | SpeedType] = js.undefined
+  var draggable: js.UndefOr[Boolean] = js.undefined
+  var dropOffBoard: js.UndefOr[DropOffBoardType] = js.undefined
+  var moveSpeed: js.UndefOr[Double | SpeedType] = js.undefined
+  var onChange: js.UndefOr[Callback] = js.undefined
+  var onDragMove: js.UndefOr[Callback] = js.undefined
+  var onDragStart: js.UndefOr[Callback] = js.undefined
+  var onDrop: js.UndefOr[Callback] = js.undefined
+  var onMouseoutSquare: js.UndefOr[Callback] = js.undefined
+  var onMouseoverSquare: js.UndefOr[Callback] = js.undefined
+  var onMoveEnd: js.UndefOr[Callback] = js.undefined
+  var onSnapEnd: js.UndefOr[Callback] = js.undefined
+  var onSnapbackEnd: js.UndefOr[Callback] = js.undefined
+  var orientation: js.UndefOr[OrientationType] = js.undefined
+  var pieceTheme: js.UndefOr[String | Callback] = js.undefined
+  var position: js.UndefOr[PositionType] = js.undefined
+  var showErrors: js.UndefOr[Boolean | String | Callback] = js.undefined
+  var showNotation: js.UndefOr[Boolean] = js.undefined
+  var snapSpeed: js.UndefOr[Double | SpeedType] = js.undefined
+  var snapbackSpeed: js.UndefOr[Double | SpeedType] = js.undefined
+  var sparePieces: js.UndefOr[Boolean] = js.undefined
+  var trashSpeed: js.UndefOr[Double | SpeedType] = js.undefined
 }
 
 object BoardConfig {
   @scala.inline
-  def apply(): BoardConfig = {
+  def apply(
+    appearSpeed: Double | SpeedType = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    dropOffBoard: DropOffBoardType = null,
+    moveSpeed: Double | SpeedType = null,
+    onChange: () => Unit = null,
+    onDragMove: () => Unit = null,
+    onDragStart: () => Unit = null,
+    onDrop: () => Unit = null,
+    onMouseoutSquare: () => Unit = null,
+    onMouseoverSquare: () => Unit = null,
+    onMoveEnd: () => Unit = null,
+    onSnapEnd: () => Unit = null,
+    onSnapbackEnd: () => Unit = null,
+    orientation: OrientationType = null,
+    pieceTheme: String | Callback = null,
+    position: PositionType = null,
+    showErrors: Boolean | String | Callback = null,
+    showNotation: js.UndefOr[Boolean] = js.undefined,
+    snapSpeed: Double | SpeedType = null,
+    snapbackSpeed: Double | SpeedType = null,
+    sparePieces: js.UndefOr[Boolean] = js.undefined,
+    trashSpeed: Double | SpeedType = null
+  ): BoardConfig = {
     val __obj = js.Dynamic.literal()
+    if (appearSpeed != null) __obj.updateDynamic("appearSpeed")(appearSpeed.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (dropOffBoard != null) __obj.updateDynamic("dropOffBoard")(dropOffBoard.asInstanceOf[js.Any])
+    if (moveSpeed != null) __obj.updateDynamic("moveSpeed")(moveSpeed.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction0(onChange))
+    if (onDragMove != null) __obj.updateDynamic("onDragMove")(js.Any.fromFunction0(onDragMove))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction0(onDragStart))
+    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction0(onDrop))
+    if (onMouseoutSquare != null) __obj.updateDynamic("onMouseoutSquare")(js.Any.fromFunction0(onMouseoutSquare))
+    if (onMouseoverSquare != null) __obj.updateDynamic("onMouseoverSquare")(js.Any.fromFunction0(onMouseoverSquare))
+    if (onMoveEnd != null) __obj.updateDynamic("onMoveEnd")(js.Any.fromFunction0(onMoveEnd))
+    if (onSnapEnd != null) __obj.updateDynamic("onSnapEnd")(js.Any.fromFunction0(onSnapEnd))
+    if (onSnapbackEnd != null) __obj.updateDynamic("onSnapbackEnd")(js.Any.fromFunction0(onSnapbackEnd))
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (pieceTheme != null) __obj.updateDynamic("pieceTheme")(pieceTheme.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (showErrors != null) __obj.updateDynamic("showErrors")(showErrors.asInstanceOf[js.Any])
+    if (!js.isUndefined(showNotation)) __obj.updateDynamic("showNotation")(showNotation.get.asInstanceOf[js.Any])
+    if (snapSpeed != null) __obj.updateDynamic("snapSpeed")(snapSpeed.asInstanceOf[js.Any])
+    if (snapbackSpeed != null) __obj.updateDynamic("snapbackSpeed")(snapbackSpeed.asInstanceOf[js.Any])
+    if (!js.isUndefined(sparePieces)) __obj.updateDynamic("sparePieces")(sparePieces.get.asInstanceOf[js.Any])
+    if (trashSpeed != null) __obj.updateDynamic("trashSpeed")(trashSpeed.asInstanceOf[js.Any])
     __obj.asInstanceOf[BoardConfig]
   }
-  @scala.inline
-  implicit class BoardConfigOps[Self <: BoardConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppearSpeed(value: Double | SpeedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppearSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropOffBoard(value: DropOffBoardType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropOffBoard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropOffBoard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropOffBoard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoveSpeed(value: Double | SpeedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoveSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moveSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragMove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDragStart(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDrop(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseoutSquare(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseoutSquare")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseoutSquare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseoutSquare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseoverSquare(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseoverSquare")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseoverSquare: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseoverSquare")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMoveEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMoveEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSnapEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSnapEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSnapEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSnapEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSnapbackEnd(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSnapbackEnd")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSnapbackEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSnapbackEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: OrientationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPieceThemeFunction0(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieceTheme")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPieceTheme(value: String | Callback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieceTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPieceTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieceTheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: PositionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowErrorsFunction0(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrors")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withShowErrors(value: Boolean | String | Callback): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowNotation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowNotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapSpeed(value: Double | SpeedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapbackSpeed(value: Double | SpeedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapbackSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapbackSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapbackSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSparePieces(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sparePieces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSparePieces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sparePieces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrashSpeed(value: Double | SpeedType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trashSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrashSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trashSpeed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

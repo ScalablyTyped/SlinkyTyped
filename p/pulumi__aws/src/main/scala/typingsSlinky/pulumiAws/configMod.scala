@@ -2,6 +2,7 @@ package typingsSlinky.pulumiAws
 
 import typingsSlinky.pulumiAws.anon.Accessanalyzer
 import typingsSlinky.pulumiAws.anon.ExternalId
+import typingsSlinky.pulumiAws.anon.KeyPrefixes
 import typingsSlinky.pulumiAws.regionMod.Region
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,8 +16,7 @@ object configMod extends js.Object {
   var assumeRole: js.UndefOr[ExternalId] = js.native
   var endpoints: js.UndefOr[js.Array[Accessanalyzer]] = js.native
   var forbiddenAccountIds: js.UndefOr[js.Array[String]] = js.native
-  var ignoreTagPrefixes: js.UndefOr[js.Array[String]] = js.native
-  var ignoreTags: js.UndefOr[js.Array[String]] = js.native
+  var ignoreTags: js.UndefOr[KeyPrefixes] = js.native
   var insecure: js.UndefOr[Boolean] = js.native
   var maxRetries: js.UndefOr[Double] = js.native
   var profile: js.UndefOr[String] = js.native

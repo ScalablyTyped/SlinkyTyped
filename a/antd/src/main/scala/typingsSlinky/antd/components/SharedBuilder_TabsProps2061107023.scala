@@ -38,6 +38,8 @@ class SharedBuilder_TabsProps2061107023[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def hideAdd(value: Boolean): this.type = set("hideAdd", value.asInstanceOf[js.Any])
   @scala.inline
+  def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
+  @scala.inline
   def onChange(value: /* activeKey */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   @scala.inline
   def onEdit(

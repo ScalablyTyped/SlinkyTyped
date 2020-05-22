@@ -8,18 +8,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Manages secure stop messages. */
-@js.native
 trait IPlayReadySecureStopServiceRequest extends IPlayReadyServiceRequest {
   /** Gets the current publisher certificate property. */
-  var publisherCertificate: Double = js.native
+  var publisherCertificate: Double
   /** Gets the secure stop session identifier property. */
-  var sessionID: String = js.native
+  var sessionID: String
   /** Gets the secure stop session's start time property. */
-  var startTime: js.Date = js.native
+  var startTime: js.Date
   /** Gets the secure stop session's stopped flag property which indicates whether the secure stop session for this request was cleanly shut down. */
-  var stopped: Boolean = js.native
+  var stopped: Boolean
   /** Gets the secure stop session's update/stop time property. */
-  var updateTime: js.Date = js.native
+  var updateTime: js.Date
 }
 
 object IPlayReadySecureStopServiceRequest {
@@ -44,43 +43,5 @@ object IPlayReadySecureStopServiceRequest {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPlayReadySecureStopServiceRequest]
   }
-  @scala.inline
-  implicit class IPlayReadySecureStopServiceRequestOps[Self <: IPlayReadySecureStopServiceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPublisherCertificate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherCertificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessionID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStopped(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

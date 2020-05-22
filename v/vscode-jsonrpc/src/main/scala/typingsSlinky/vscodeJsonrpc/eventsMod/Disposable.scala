@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Disposable extends js.Object {
   /**
     * Dispose this object.
     */
-  def dispose(): Unit = js.native
+  def dispose(): Unit
 }
 
 @JSImport("vscode-jsonrpc/lib/events", "Disposable")

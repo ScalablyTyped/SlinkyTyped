@@ -7,39 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Options that you may provide when creating a directions object.
   */
-@js.native
 trait DirectionsConstructorOptions extends js.Object {
   /**
     * A language ID that determines the language for route information.
     */
-  var language: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.undefined
 }
 
 object DirectionsConstructorOptions {
   @scala.inline
-  def apply(): DirectionsConstructorOptions = {
+  def apply(language: String = null): DirectionsConstructorOptions = {
     val __obj = js.Dynamic.literal()
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsConstructorOptions]
   }
-  @scala.inline
-  implicit class DirectionsConstructorOptionsOps[Self <: DirectionsConstructorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

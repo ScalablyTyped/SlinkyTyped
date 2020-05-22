@@ -39,77 +39,20 @@ trait SchemaMatchingJob extends js.Object {
 
 object SchemaMatchingJob {
   @scala.inline
-  def apply(): SchemaMatchingJob = {
+  def apply(
+    commuteInfo: SchemaCommuteInfo = null,
+    job: SchemaJob = null,
+    jobSummary: String = null,
+    jobTitleSnippet: String = null,
+    searchTextSnippet: String = null
+  ): SchemaMatchingJob = {
     val __obj = js.Dynamic.literal()
+    if (commuteInfo != null) __obj.updateDynamic("commuteInfo")(commuteInfo.asInstanceOf[js.Any])
+    if (job != null) __obj.updateDynamic("job")(job.asInstanceOf[js.Any])
+    if (jobSummary != null) __obj.updateDynamic("jobSummary")(jobSummary.asInstanceOf[js.Any])
+    if (jobTitleSnippet != null) __obj.updateDynamic("jobTitleSnippet")(jobTitleSnippet.asInstanceOf[js.Any])
+    if (searchTextSnippet != null) __obj.updateDynamic("searchTextSnippet")(searchTextSnippet.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMatchingJob]
   }
-  @scala.inline
-  implicit class SchemaMatchingJobOps[Self <: SchemaMatchingJob] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommuteInfo(value: SchemaCommuteInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commuteInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommuteInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commuteInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJob(value: SchemaJob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobSummary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobTitleSnippet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTitleSnippet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobTitleSnippet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobTitleSnippet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchTextSnippet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchTextSnippet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchTextSnippet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchTextSnippet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

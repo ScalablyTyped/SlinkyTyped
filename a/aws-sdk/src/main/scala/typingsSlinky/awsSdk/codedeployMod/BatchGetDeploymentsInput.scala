@@ -18,19 +18,5 @@ object BatchGetDeploymentsInput {
     val __obj = js.Dynamic.literal(deploymentIds = deploymentIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetDeploymentsInput]
   }
-  @scala.inline
-  implicit class BatchGetDeploymentsInputOps[Self <: BatchGetDeploymentsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentIds(value: DeploymentsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

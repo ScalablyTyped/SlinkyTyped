@@ -4,68 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IntersectionObserverInit extends js.Object {
-  var root: js.UndefOr[org.scalajs.dom.raw.Element | Null] = js.native
-  var rootMargin: js.UndefOr[java.lang.String] = js.native
-  var threshold: js.UndefOr[Double | js.Array[Double]] = js.native
+  var root: js.UndefOr[org.scalajs.dom.raw.Element | Null] = js.undefined
+  var rootMargin: js.UndefOr[java.lang.String] = js.undefined
+  var threshold: js.UndefOr[Double | js.Array[Double]] = js.undefined
 }
 
 object IntersectionObserverInit {
   @scala.inline
-  def apply(): IntersectionObserverInit = {
+  def apply(
+    root: js.UndefOr[Null | org.scalajs.dom.raw.Element] = js.undefined,
+    rootMargin: java.lang.String = null,
+    threshold: Double | js.Array[Double] = null
+  ): IntersectionObserverInit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (rootMargin != null) __obj.updateDynamic("rootMargin")(rootMargin.asInstanceOf[js.Any])
+    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntersectionObserverInit]
   }
-  @scala.inline
-  implicit class IntersectionObserverInitOps[Self <: IntersectionObserverInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoot(value: org.scalajs.dom.raw.Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withRootMargin(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreshold(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

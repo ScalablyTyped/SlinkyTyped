@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Base64 extends js.Object {
-  var base64: String = js.native
+  var base64: String
 }
 
 object Base64 {
@@ -15,19 +14,5 @@ object Base64 {
     val __obj = js.Dynamic.literal(base64 = base64.asInstanceOf[js.Any])
     __obj.asInstanceOf[Base64]
   }
-  @scala.inline
-  implicit class Base64Ops[Self <: Base64] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBase64(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("base64")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,25 +1,25 @@
 package typingsSlinky.pvtsutils
 
-import typingsSlinky.pvtsutils.convertMod.BufferEncoding
+import typingsSlinky.pvtsutils.convertMod._BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object pvtsutilsStrings {
   @js.native
-  sealed trait base64 extends BufferEncoding
+  sealed trait base64 extends _BufferEncoding
   
   @js.native
-  sealed trait base64url extends BufferEncoding
+  sealed trait base64url extends _BufferEncoding
   
   @js.native
-  sealed trait binary extends BufferEncoding
+  sealed trait binary extends _BufferEncoding
   
   @js.native
-  sealed trait hex extends BufferEncoding
+  sealed trait hex extends _BufferEncoding
   
   @js.native
-  sealed trait utf8 extends BufferEncoding
+  sealed trait utf8 extends _BufferEncoding
   
   @scala.inline
   def base64: base64 = "base64".asInstanceOf[base64]

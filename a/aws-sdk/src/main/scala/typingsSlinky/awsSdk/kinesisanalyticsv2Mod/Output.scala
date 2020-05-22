@@ -30,65 +30,18 @@ trait Output extends js.Object {
 
 object Output {
   @scala.inline
-  def apply(DestinationSchema: DestinationSchema, Name: InAppStreamName): Output = {
+  def apply(
+    DestinationSchema: DestinationSchema,
+    Name: InAppStreamName,
+    KinesisFirehoseOutput: KinesisFirehoseOutput = null,
+    KinesisStreamsOutput: KinesisStreamsOutput = null,
+    LambdaOutput: LambdaOutput = null
+  ): Output = {
     val __obj = js.Dynamic.literal(DestinationSchema = DestinationSchema.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (KinesisFirehoseOutput != null) __obj.updateDynamic("KinesisFirehoseOutput")(KinesisFirehoseOutput.asInstanceOf[js.Any])
+    if (KinesisStreamsOutput != null) __obj.updateDynamic("KinesisStreamsOutput")(KinesisStreamsOutput.asInstanceOf[js.Any])
+    if (LambdaOutput != null) __obj.updateDynamic("LambdaOutput")(LambdaOutput.asInstanceOf[js.Any])
     __obj.asInstanceOf[Output]
   }
-  @scala.inline
-  implicit class OutputOps[Self <: Output] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationSchema(value: DestinationSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: InAppStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKinesisFirehoseOutput(value: KinesisFirehoseOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisFirehoseOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisFirehoseOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesisStreamsOutput(value: KinesisStreamsOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamsOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesisStreamsOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KinesisStreamsOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambdaOutput(value: LambdaOutput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaOutput")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

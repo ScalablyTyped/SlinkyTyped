@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   *
   * - StringExpressionContainer
   */
-@js.native
 trait IStringExpressionContainer extends js.Object {
   /**
     * Expression for Example (Non-calculated string expression container):
@@ -19,7 +18,7 @@ trait IStringExpressionContainer extends js.Object {
     *
     * Result is:  stringValue = myTable.Title;
     */
-  var qStringExpression: String = js.native
+  var qStringExpression: String
 }
 
 object IStringExpressionContainer {
@@ -28,19 +27,5 @@ object IStringExpressionContainer {
     val __obj = js.Dynamic.literal(qStringExpression = qStringExpression.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStringExpressionContainer]
   }
-  @scala.inline
-  implicit class IStringExpressionContainerOps[Self <: IStringExpressionContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQStringExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qStringExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

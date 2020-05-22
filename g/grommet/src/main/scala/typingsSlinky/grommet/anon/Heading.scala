@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Heading extends js.Object {
-  var heading: js.UndefOr[Level] = js.native
-  var icons: js.UndefOr[Previous] = js.native
-  var large: js.UndefOr[DaySize] = js.native
-  var medium: js.UndefOr[DaySize] = js.native
-  var small: js.UndefOr[DaySize] = js.native
+  var heading: js.UndefOr[Level] = js.undefined
+  var icons: js.UndefOr[Previous] = js.undefined
+  var large: js.UndefOr[DaySize] = js.undefined
+  var medium: js.UndefOr[DaySize] = js.undefined
+  var small: js.UndefOr[DaySize] = js.undefined
 }
 
 object Heading {
   @scala.inline
-  def apply(): Heading = {
+  def apply(
+    heading: Level = null,
+    icons: Previous = null,
+    large: DaySize = null,
+    medium: DaySize = null,
+    small: DaySize = null
+  ): Heading = {
     val __obj = js.Dynamic.literal()
+    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (large != null) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
+    if (medium != null) __obj.updateDynamic("medium")(medium.asInstanceOf[js.Any])
+    if (small != null) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
     __obj.asInstanceOf[Heading]
   }
-  @scala.inline
-  implicit class HeadingOps[Self <: Heading] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeading(value: Level): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: Previous): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLarge(value: DaySize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedium(value: DaySize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedium: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmall(value: DaySize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

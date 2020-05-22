@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Transmit extends js.Object {
-  var Transmit: String = js.native
+  var Transmit: String
 }
 
 object Transmit {
@@ -15,19 +14,5 @@ object Transmit {
     val __obj = js.Dynamic.literal(Transmit = Transmit.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transmit]
   }
-  @scala.inline
-  implicit class TransmitOps[Self <: Transmit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransmit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Transmit")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

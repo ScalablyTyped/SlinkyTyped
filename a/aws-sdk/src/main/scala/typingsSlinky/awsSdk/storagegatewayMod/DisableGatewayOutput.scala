@@ -14,29 +14,10 @@ trait DisableGatewayOutput extends js.Object {
 
 object DisableGatewayOutput {
   @scala.inline
-  def apply(): DisableGatewayOutput = {
+  def apply(GatewayARN: GatewayARN = null): DisableGatewayOutput = {
     val __obj = js.Dynamic.literal()
+    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisableGatewayOutput]
   }
-  @scala.inline
-  implicit class DisableGatewayOutputOps[Self <: DisableGatewayOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGatewayARN(value: GatewayARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

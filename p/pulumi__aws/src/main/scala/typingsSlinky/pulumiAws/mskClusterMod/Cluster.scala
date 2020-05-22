@@ -5,6 +5,7 @@ import typingsSlinky.pulumiAws.outputMod.msk.ClusterBrokerNodeGroupInfo
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterClientAuthentication
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterConfigurationInfo
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterEncryptionInfo
+import typingsSlinky.pulumiAws.outputMod.msk.ClusterLoggingInfo
 import typingsSlinky.pulumiAws.outputMod.msk.ClusterOpenMonitoring
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -72,6 +73,10 @@ class Cluster protected () extends CustomResource {
     * Specify the desired Kafka software version.
     */
   val kafkaVersion: Output_[String] = js.native
+  /**
+    * Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
+    */
+  val loggingInfo: Output_[js.UndefOr[ClusterLoggingInfo]] = js.native
   /**
     * The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
     */

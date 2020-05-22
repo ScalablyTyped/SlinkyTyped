@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultResolver[Schema /* <: JSONSchema */] extends js.Object {
   /**
     * ### Default resolver
@@ -34,36 +33,17 @@ trait DefaultResolver[Schema /* <: JSONSchema */] extends js.Object {
       /* options */ Options_[Schema], 
       _
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object DefaultResolver {
   @scala.inline
-  def apply[Schema](): DefaultResolver[Schema] = {
+  def apply[Schema](
+    defaultResolver: (/* values */ js.Array[_], /* path */ js.Array[String], /* mergeSchemas */ MergeSchemas, /* options */ Options_[Schema]) => _ = null
+  ): DefaultResolver[Schema] = {
     val __obj = js.Dynamic.literal()
+    if (defaultResolver != null) __obj.updateDynamic("defaultResolver")(js.Any.fromFunction4(defaultResolver))
     __obj.asInstanceOf[DefaultResolver[Schema]]
   }
-  @scala.inline
-  implicit class DefaultResolverOps[Self[schema] <: DefaultResolver[schema], Schema] (val x: Self[Schema]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Schema] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Schema]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[Schema] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Schema] with Other]
-    @scala.inline
-    def withDefaultResolver(
-      value: (/* values */ js.Array[_], /* path */ js.Array[String], /* mergeSchemas */ MergeSchemas, /* options */ Options_[Schema]) => _
-    ): Self[Schema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResolver")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutDefaultResolver: Self[Schema] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResolver")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

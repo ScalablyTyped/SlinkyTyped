@@ -8,39 +8,33 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.cytoscape.mod.ExportOptions because Already inherited
-- typingsSlinky.cytoscape.mod.ExportStringOptions because var conflicts: bg, full, maxHeight, maxWidth, scale. Inlined output */ @js.native
-trait ExportJpgStringOptions extends ExportJpgOptions {
+- typingsSlinky.cytoscape.mod.ExportStringOptions because var conflicts: bg, full, maxHeight, maxWidth, scale. Inlined output */ trait ExportJpgStringOptions extends ExportJpgOptions {
   /**
     * output Whether the output should be 'base64uri' (default), 'base64', or 'blob'.
     */
-  var output: js.UndefOr[base64uri | base64] = js.native
+  var output: js.UndefOr[base64uri | base64] = js.undefined
 }
 
 object ExportJpgStringOptions {
   @scala.inline
-  def apply(): ExportJpgStringOptions = {
+  def apply(
+    bg: String = null,
+    full: js.UndefOr[Boolean] = js.undefined,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    output: base64uri | base64 = null,
+    quality: js.UndefOr[Double] = js.undefined,
+    scale: js.UndefOr[Double] = js.undefined
+  ): ExportJpgStringOptions = {
     val __obj = js.Dynamic.literal()
+    if (bg != null) __obj.updateDynamic("bg")(bg.asInstanceOf[js.Any])
+    if (!js.isUndefined(full)) __obj.updateDynamic("full")(full.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportJpgStringOptions]
   }
-  @scala.inline
-  implicit class ExportJpgStringOptionsOps[Self <: ExportJpgStringOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutput(value: base64uri | base64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

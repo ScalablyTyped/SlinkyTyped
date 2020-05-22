@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** extends the {@link XFormsSupplier} with convenience methods */
-@js.native
 trait XFormsSupplier2 extends XFormsSupplier {
   /**
     * determines whether there are currently forms available at all
@@ -18,7 +17,7 @@ trait XFormsSupplier2 extends XFormsSupplier {
     * Semantically, {@link hasForms()} is equivalent to calling XElementAccess::hasElements() on the container returned by {@link XFormsSupplier.getForms()}
     * . But when using the latter, the implementation is forced to create a empty container, which might be potentially expensive.
     */
-  def hasForms(): Boolean = js.native
+  def hasForms(): Boolean
 }
 
 object XFormsSupplier2 {
@@ -34,19 +33,5 @@ object XFormsSupplier2 {
     val __obj = js.Dynamic.literal(Forms = Forms.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getForms = js.Any.fromFunction0(getForms), hasForms = js.Any.fromFunction0(hasForms), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XFormsSupplier2]
   }
-  @scala.inline
-  implicit class XFormsSupplier2Ops[Self <: XFormsSupplier2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasForms(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasForms")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

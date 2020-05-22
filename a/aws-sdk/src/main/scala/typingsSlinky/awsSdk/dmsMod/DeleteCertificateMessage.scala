@@ -18,19 +18,5 @@ object DeleteCertificateMessage {
     val __obj = js.Dynamic.literal(CertificateArn = CertificateArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCertificateMessage]
   }
-  @scala.inline
-  implicit class DeleteCertificateMessageOps[Self <: DeleteCertificateMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

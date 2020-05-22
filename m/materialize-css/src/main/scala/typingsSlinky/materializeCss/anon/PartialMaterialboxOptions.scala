@@ -6,101 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.MaterialboxOptions> */
-@js.native
 trait PartialMaterialboxOptions extends js.Object {
-  var inDuration: js.UndefOr[Double] = js.native
-  var onCloseEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
-  var onCloseStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
-  var onOpenEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
-  var onOpenStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.native
-  var outDuration: js.UndefOr[Double] = js.native
+  var inDuration: js.UndefOr[Double] = js.undefined
+  var onCloseEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
+  var onCloseStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
+  var onOpenEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
+  var onOpenStart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* el */ Element, Unit]] = js.undefined
+  var outDuration: js.UndefOr[Double] = js.undefined
 }
 
 object PartialMaterialboxOptions {
   @scala.inline
-  def apply(): PartialMaterialboxOptions = {
+  def apply(
+    inDuration: js.UndefOr[Double] = js.undefined,
+    onCloseEnd: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit] = null,
+    onCloseStart: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit] = null,
+    onOpenEnd: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit] = null,
+    onOpenStart: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit] = null,
+    outDuration: js.UndefOr[Double] = js.undefined
+  ): PartialMaterialboxOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(inDuration)) __obj.updateDynamic("inDuration")(inDuration.get.asInstanceOf[js.Any])
+    if (onCloseEnd != null) __obj.updateDynamic("onCloseEnd")(onCloseEnd.asInstanceOf[js.Any])
+    if (onCloseStart != null) __obj.updateDynamic("onCloseStart")(onCloseStart.asInstanceOf[js.Any])
+    if (onOpenEnd != null) __obj.updateDynamic("onOpenEnd")(onOpenEnd.asInstanceOf[js.Any])
+    if (onOpenStart != null) __obj.updateDynamic("onOpenStart")(onOpenStart.asInstanceOf[js.Any])
+    if (!js.isUndefined(outDuration)) __obj.updateDynamic("outDuration")(outDuration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialMaterialboxOptions]
   }
-  @scala.inline
-  implicit class PartialMaterialboxOptionsOps[Self <: PartialMaterialboxOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCloseEnd(value: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCloseEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCloseStart(value: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnCloseStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCloseStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpenEnd(value: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOpenEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpenStart(value: js.ThisFunction1[PartialMaterialboxOptions, /* el */ Element, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnOpenStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

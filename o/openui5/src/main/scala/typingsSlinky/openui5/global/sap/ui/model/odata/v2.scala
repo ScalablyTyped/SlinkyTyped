@@ -50,7 +50,7 @@ object v2 extends js.Object {
     /**
       * Constructor for a new ODataModel.
       * @param sServiceUrl base uri of the service to request data from; additional URL parameters appended
-      * here will be appended to every request								can be passed with the mParameters object as well:
+      * here will be appended to every request                                can be passed with the mParameters object as well:
       * [mParameters.serviceUrl] A serviceURl is required!
       * @param mParameters (optional) a map which contains the following parameter properties:
       */

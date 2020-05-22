@@ -6,62 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHoverCardState extends js.Object {
-  var isHoverCardVisible: js.UndefOr[Boolean] = js.native
-  var mode: js.UndefOr[ExpandingCardMode] = js.native
-  var openMode: js.UndefOr[OpenCardMode] = js.native
+  var isHoverCardVisible: js.UndefOr[Boolean] = js.undefined
+  var mode: js.UndefOr[ExpandingCardMode] = js.undefined
+  var openMode: js.UndefOr[OpenCardMode] = js.undefined
 }
 
 object IHoverCardState {
   @scala.inline
-  def apply(): IHoverCardState = {
+  def apply(
+    isHoverCardVisible: js.UndefOr[Boolean] = js.undefined,
+    mode: ExpandingCardMode = null,
+    openMode: OpenCardMode = null
+  ): IHoverCardState = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isHoverCardVisible)) __obj.updateDynamic("isHoverCardVisible")(isHoverCardVisible.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (openMode != null) __obj.updateDynamic("openMode")(openMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHoverCardState]
   }
-  @scala.inline
-  implicit class IHoverCardStateOps[Self <: IHoverCardState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsHoverCardVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHoverCardVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHoverCardVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHoverCardVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ExpandingCardMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenMode(value: OpenCardMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

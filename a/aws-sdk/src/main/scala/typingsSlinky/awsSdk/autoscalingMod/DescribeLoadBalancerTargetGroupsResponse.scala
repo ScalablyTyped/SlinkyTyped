@@ -18,41 +18,11 @@ trait DescribeLoadBalancerTargetGroupsResponse extends js.Object {
 
 object DescribeLoadBalancerTargetGroupsResponse {
   @scala.inline
-  def apply(): DescribeLoadBalancerTargetGroupsResponse = {
+  def apply(LoadBalancerTargetGroups: LoadBalancerTargetGroupStates = null, NextToken: XmlString = null): DescribeLoadBalancerTargetGroupsResponse = {
     val __obj = js.Dynamic.literal()
+    if (LoadBalancerTargetGroups != null) __obj.updateDynamic("LoadBalancerTargetGroups")(LoadBalancerTargetGroups.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLoadBalancerTargetGroupsResponse]
   }
-  @scala.inline
-  implicit class DescribeLoadBalancerTargetGroupsResponseOps[Self <: DescribeLoadBalancerTargetGroupsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadBalancerTargetGroups(value: LoadBalancerTargetGroupStates): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerTargetGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancerTargetGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerTargetGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: XmlString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

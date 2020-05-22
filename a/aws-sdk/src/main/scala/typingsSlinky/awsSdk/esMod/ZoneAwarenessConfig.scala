@@ -14,29 +14,10 @@ trait ZoneAwarenessConfig extends js.Object {
 
 object ZoneAwarenessConfig {
   @scala.inline
-  def apply(): ZoneAwarenessConfig = {
+  def apply(AvailabilityZoneCount: js.UndefOr[IntegerClass] = js.undefined): ZoneAwarenessConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AvailabilityZoneCount)) __obj.updateDynamic("AvailabilityZoneCount")(AvailabilityZoneCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZoneAwarenessConfig]
   }
-  @scala.inline
-  implicit class ZoneAwarenessConfigOps[Self <: ZoneAwarenessConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZoneCount(value: IntegerClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZoneCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZoneCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZoneCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

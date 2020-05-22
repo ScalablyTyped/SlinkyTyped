@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation._
 /**
   * {@link http://gruntjs.com/api/grunt.log}
   */
-@js.native
 trait LogModule extends CommonLogging[LogModule] {
-  var notverbose: NotVerboseLogModule = js.native
-  var verbose: VerboseLogModule = js.native
+  var notverbose: NotVerboseLogModule
+  var verbose: VerboseLogModule
 }
 
 object LogModule {
@@ -31,25 +30,5 @@ object LogModule {
     val __obj = js.Dynamic.literal(error = js.Any.fromFunction1(error), errorlns = js.Any.fromFunction1(errorlns), notverbose = notverbose.asInstanceOf[js.Any], ok = js.Any.fromFunction1(ok), oklns = js.Any.fromFunction1(oklns), subhead = js.Any.fromFunction1(subhead), verbose = verbose.asInstanceOf[js.Any], warn = js.Any.fromFunction1(warn), write = js.Any.fromFunction1(write), writeflags = js.Any.fromFunction1(writeflags), writeln = js.Any.fromFunction1(writeln))
     __obj.asInstanceOf[LogModule]
   }
-  @scala.inline
-  implicit class LogModuleOps[Self <: LogModule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotverbose(value: NotVerboseLogModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notverbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: VerboseLogModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

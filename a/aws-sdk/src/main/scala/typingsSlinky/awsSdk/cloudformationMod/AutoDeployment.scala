@@ -18,41 +18,14 @@ trait AutoDeployment extends js.Object {
 
 object AutoDeployment {
   @scala.inline
-  def apply(): AutoDeployment = {
+  def apply(
+    Enabled: js.UndefOr[AutoDeploymentNullable] = js.undefined,
+    RetainStacksOnAccountRemoval: js.UndefOr[RetainStacksOnAccountRemovalNullable] = js.undefined
+  ): AutoDeployment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RetainStacksOnAccountRemoval)) __obj.updateDynamic("RetainStacksOnAccountRemoval")(RetainStacksOnAccountRemoval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoDeployment]
   }
-  @scala.inline
-  implicit class AutoDeploymentOps[Self <: AutoDeployment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: AutoDeploymentNullable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetainStacksOnAccountRemoval(value: RetainStacksOnAccountRemovalNullable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainStacksOnAccountRemoval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainStacksOnAccountRemoval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainStacksOnAccountRemoval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,10 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the semantic properties of a recognized phrase in a Speech Recognition Grammar Specification (SRGS) grammar. */
-@js.native
 trait SpeechRecognitionSemanticInterpretation extends js.Object {
   /** Gets a dictionary of the semantic properties. */
-  var properties: IMapView[String, IVectorView[_]] = js.native
+  var properties: IMapView[String, IVectorView[_]]
 }
 
 object SpeechRecognitionSemanticInterpretation {
@@ -19,19 +18,5 @@ object SpeechRecognitionSemanticInterpretation {
     val __obj = js.Dynamic.literal(properties = properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechRecognitionSemanticInterpretation]
   }
-  @scala.inline
-  implicit class SpeechRecognitionSemanticInterpretationOps[Self <: SpeechRecognitionSemanticInterpretation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: IMapView[String, IVectorView[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

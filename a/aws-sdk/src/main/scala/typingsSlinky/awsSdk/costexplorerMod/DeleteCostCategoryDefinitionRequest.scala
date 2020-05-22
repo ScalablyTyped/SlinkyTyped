@@ -18,19 +18,5 @@ object DeleteCostCategoryDefinitionRequest {
     val __obj = js.Dynamic.literal(CostCategoryArn = CostCategoryArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCostCategoryDefinitionRequest]
   }
-  @scala.inline
-  implicit class DeleteCostCategoryDefinitionRequestOps[Self <: DeleteCostCategoryDefinitionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCostCategoryArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CostCategoryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

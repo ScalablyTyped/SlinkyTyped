@@ -5,102 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait User extends js.Object {
-  var accessToken: String | Null = js.native
+  var accessToken: String | Null
   /**
     * Deprecated
     */
-  var accessTokenExpirationDate: Double | Null = js.native
-  var idToken: String | Null = js.native
-  var scopes: js.UndefOr[js.Array[String]] = js.native
+  var accessTokenExpirationDate: Double | Null
+  var idToken: String | Null
+  var scopes: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Not null only if a valid webClientId and offlineAccess: true was
     * specified in configure().
     */
-  var serverAuthCode: String | Null = js.native
-  var user: Email = js.native
+  var serverAuthCode: String | Null
+  var user: Email
 }
 
 object User {
   @scala.inline
-  def apply(user: Email): User = {
-    val __obj = js.Dynamic.literal(user = user.asInstanceOf[js.Any])
+  def apply(
+    user: Email,
+    accessToken: String = null,
+    accessTokenExpirationDate: Double = null.asInstanceOf[Double],
+    idToken: String = null,
+    scopes: js.Array[String] = null,
+    serverAuthCode: String = null
+  ): User = {
+    val __obj = js.Dynamic.literal(user = user.asInstanceOf[js.Any], accessToken = accessToken.asInstanceOf[js.Any], accessTokenExpirationDate = accessTokenExpirationDate.asInstanceOf[js.Any], idToken = idToken.asInstanceOf[js.Any], serverAuthCode = serverAuthCode.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
   }
-  @scala.inline
-  implicit class UserOps[Self <: User] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUser(value: Email): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessTokenNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(null)
-        ret
-    }
-    @scala.inline
-    def withAccessTokenExpirationDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessTokenExpirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessTokenExpirationDateNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessTokenExpirationDate")(null)
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdTokenNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(null)
-        ret
-    }
-    @scala.inline
-    def withScopes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerAuthCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverAuthCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerAuthCodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverAuthCode")(null)
-        ret
-    }
-  }
-  
 }
 

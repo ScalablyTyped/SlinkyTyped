@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.googleMaps.googleMapsStrings.street_address
   - typingsSlinky.googleMaps.googleMapsStrings.floor
   - typingsSlinky.googleMaps.googleMapsStrings.establishment
   - typingsSlinky.googleMaps.googleMapsStrings.point_of_interest
@@ -12,7 +13,6 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googleMaps.googleMapsStrings.post_box
   - typingsSlinky.googleMaps.googleMapsStrings.postal_town
   - typingsSlinky.googleMaps.googleMapsStrings.room
-  - typingsSlinky.googleMaps.googleMapsStrings.street_number
   - typingsSlinky.googleMaps.googleMapsStrings.bus_station
   - typingsSlinky.googleMaps.googleMapsStrings.train_station
   - typingsSlinky.googleMaps.googleMapsStrings.transit_station
@@ -37,7 +37,7 @@ object GeocodingAddressComponentType {
   @scala.inline
   def room: typingsSlinky.googleMaps.googleMapsStrings.room = "room".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.room]
   @scala.inline
-  def street_number: typingsSlinky.googleMaps.googleMapsStrings.street_number = "street_number".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.street_number]
+  def street_address: typingsSlinky.googleMaps.googleMapsStrings.street_address = "street_address".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.street_address]
   @scala.inline
   def train_station: typingsSlinky.googleMaps.googleMapsStrings.train_station = "train_station".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.train_station]
   @scala.inline

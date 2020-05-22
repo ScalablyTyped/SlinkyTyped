@@ -5,62 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<node-zookeeper-client.node-zookeeper-client.Option> */
-@js.native
 trait PartialOption extends js.Object {
-  var retries: js.UndefOr[Double] = js.native
-  var sessionTimeout: js.UndefOr[Double] = js.native
-  var spinDelay: js.UndefOr[Double] = js.native
+  var retries: js.UndefOr[Double] = js.undefined
+  var sessionTimeout: js.UndefOr[Double] = js.undefined
+  var spinDelay: js.UndefOr[Double] = js.undefined
 }
 
 object PartialOption {
   @scala.inline
-  def apply(): PartialOption = {
+  def apply(
+    retries: js.UndefOr[Double] = js.undefined,
+    sessionTimeout: js.UndefOr[Double] = js.undefined,
+    spinDelay: js.UndefOr[Double] = js.undefined
+  ): PartialOption = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(retries)) __obj.updateDynamic("retries")(retries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sessionTimeout)) __obj.updateDynamic("sessionTimeout")(sessionTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spinDelay)) __obj.updateDynamic("spinDelay")(spinDelay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOption]
   }
-  @scala.inline
-  implicit class PartialOptionOps[Self <: PartialOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpinDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpinDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spinDelay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

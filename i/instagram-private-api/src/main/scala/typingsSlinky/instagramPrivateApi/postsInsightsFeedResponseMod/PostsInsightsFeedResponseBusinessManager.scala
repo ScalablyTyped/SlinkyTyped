@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PostsInsightsFeedResponseBusinessManager extends js.Object {
-  var top_posts_unit: PostsInsightsFeedResponseTopPostsUnit = js.native
+  var top_posts_unit: PostsInsightsFeedResponseTopPostsUnit
 }
 
 object PostsInsightsFeedResponseBusinessManager {
@@ -15,19 +14,5 @@ object PostsInsightsFeedResponseBusinessManager {
     val __obj = js.Dynamic.literal(top_posts_unit = top_posts_unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostsInsightsFeedResponseBusinessManager]
   }
-  @scala.inline
-  implicit class PostsInsightsFeedResponseBusinessManagerOps[Self <: PostsInsightsFeedResponseBusinessManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTop_posts_unit(value: PostsInsightsFeedResponseTopPostsUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top_posts_unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

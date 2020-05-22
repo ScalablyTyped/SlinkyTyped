@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`table-row`
   - typingsSlinky.csstype.csstypeStrings.`table-row-group`
 */
-trait DisplayInternal extends DisplayProperty
+trait DisplayInternal extends _DisplayProperty
 
 object DisplayInternal {
   @scala.inline

@@ -8,20 +8,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreativeFieldsResource extends js.Object {
   /** Deletes an existing creative field. */
-  def delete(request: Fields): Request[Unit] = js.native
+  def delete(request: Fields): Request[Unit]
   /** Gets one creative field by ID. */
-  def get(request: Fields): Request[CreativeField] = js.native
+  def get(request: Fields): Request[CreativeField]
   /** Inserts a new creative field. */
-  def insert(request: Key): Request[CreativeField] = js.native
+  def insert(request: Key): Request[CreativeField]
   /** Retrieves a list of creative fields, possibly filtered. This method supports paging. */
-  def list(request: SearchString): Request[CreativeFieldsListResponse] = js.native
+  def list(request: SearchString): Request[CreativeFieldsListResponse]
   /** Updates an existing creative field. This method supports patch semantics. */
-  def patch(request: Fields): Request[CreativeField] = js.native
+  def patch(request: Fields): Request[CreativeField]
   /** Updates an existing creative field. */
-  def update(request: Key): Request[CreativeField] = js.native
+  def update(request: Key): Request[CreativeField]
 }
 
 object CreativeFieldsResource {
@@ -37,49 +36,5 @@ object CreativeFieldsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[CreativeFieldsResource]
   }
-  @scala.inline
-  implicit class CreativeFieldsResourceOps[Self <: CreativeFieldsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Fields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Fields => Request[CreativeField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: Key => Request[CreativeField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: SearchString => Request[CreativeFieldsListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: Fields => Request[CreativeField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: Key => Request[CreativeField]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.xstream.fromDiagramMod
 
+import typingsSlinky.xstream.mod.InternalListener
 import typingsSlinky.xstream.mod.InternalProducer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,5 +18,9 @@ class DiagramProducer protected ()
   var tasks: js.Any = js.native
   var timeUnit: js.Any = js.native
   var values: js.Any = js.native
+  /* CompleteClass */
+  override def _start(listener: InternalListener[js.Any]): Unit = js.native
+  /* CompleteClass */
+  override def _stop(): Unit = js.native
 }
 

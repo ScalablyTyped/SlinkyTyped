@@ -19,8 +19,8 @@ import scala.scalajs.js.annotation._
 // transform.js
 @js.native
 trait Element
-  extends MatrixAlias
-     with ViewBoxAlias
+  extends _MatrixAlias
+     with _ViewBoxAlias
      with Instantiable0[Element] {
   var clipper: ClipPath = js.native
   var masker: Mask = js.native

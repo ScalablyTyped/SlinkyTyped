@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentFormatDetails extends js.Object {
-  var `document-format`: js.UndefOr[MimeMediaType] = js.native
-  var `document-format-device-id`: js.UndefOr[String] = js.native
-  var `document-format-version`: js.UndefOr[String] = js.native
-  var `document-natural-language`: js.UndefOr[js.Array[String]] = js.native
-  var `document-source-application-name`: js.UndefOr[String] = js.native
-  var `document-source-application-version`: js.UndefOr[String] = js.native
-  var `document-source-os-name`: js.UndefOr[String] = js.native
-  var `document-source-os-version`: js.UndefOr[String] = js.native
+  var `document-format`: js.UndefOr[MimeMediaType] = js.undefined
+  var `document-format-device-id`: js.UndefOr[String] = js.undefined
+  var `document-format-version`: js.UndefOr[String] = js.undefined
+  var `document-natural-language`: js.UndefOr[js.Array[String]] = js.undefined
+  var `document-source-application-name`: js.UndefOr[String] = js.undefined
+  var `document-source-application-version`: js.UndefOr[String] = js.undefined
+  var `document-source-os-name`: js.UndefOr[String] = js.undefined
+  var `document-source-os-version`: js.UndefOr[String] = js.undefined
 }
 
 object DocumentFormatDetails {
   @scala.inline
-  def apply(): DocumentFormatDetails = {
+  def apply(
+    `document-format`: MimeMediaType = null,
+    `document-format-device-id`: String = null,
+    `document-format-version`: String = null,
+    `document-natural-language`: js.Array[String] = null,
+    `document-source-application-name`: String = null,
+    `document-source-application-version`: String = null,
+    `document-source-os-name`: String = null,
+    `document-source-os-version`: String = null
+  ): DocumentFormatDetails = {
     val __obj = js.Dynamic.literal()
+    if (`document-format` != null) __obj.updateDynamic("document-format")(`document-format`.asInstanceOf[js.Any])
+    if (`document-format-device-id` != null) __obj.updateDynamic("document-format-device-id")(`document-format-device-id`.asInstanceOf[js.Any])
+    if (`document-format-version` != null) __obj.updateDynamic("document-format-version")(`document-format-version`.asInstanceOf[js.Any])
+    if (`document-natural-language` != null) __obj.updateDynamic("document-natural-language")(`document-natural-language`.asInstanceOf[js.Any])
+    if (`document-source-application-name` != null) __obj.updateDynamic("document-source-application-name")(`document-source-application-name`.asInstanceOf[js.Any])
+    if (`document-source-application-version` != null) __obj.updateDynamic("document-source-application-version")(`document-source-application-version`.asInstanceOf[js.Any])
+    if (`document-source-os-name` != null) __obj.updateDynamic("document-source-os-name")(`document-source-os-name`.asInstanceOf[js.Any])
+    if (`document-source-os-version` != null) __obj.updateDynamic("document-source-os-version")(`document-source-os-version`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentFormatDetails]
   }
-  @scala.inline
-  implicit class DocumentFormatDetailsOps[Self <: DocumentFormatDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withDocument-format`(value: MimeMediaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-format`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-format-device-id`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format-device-id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-format-device-id`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format-device-id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-format-version`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format-version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-format-version`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-format-version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-natural-language`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-natural-language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-natural-language`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-natural-language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-source-application-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-application-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-source-application-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-application-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-source-application-version`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-application-version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-source-application-version`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-application-version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-source-os-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-os-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-source-os-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-os-name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withDocument-source-os-version`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-os-version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutDocument-source-os-version`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document-source-os-version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

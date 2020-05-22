@@ -82,221 +82,44 @@ trait BurninDestinationSettings extends js.Object {
 
 object BurninDestinationSettings {
   @scala.inline
-  def apply(): BurninDestinationSettings = {
+  def apply(
+    Alignment: BurninSubtitleAlignment = null,
+    BackgroundColor: BurninSubtitleBackgroundColor = null,
+    BackgroundOpacity: js.UndefOr[integerMin0Max255] = js.undefined,
+    FontColor: BurninSubtitleFontColor = null,
+    FontOpacity: js.UndefOr[integerMin0Max255] = js.undefined,
+    FontResolution: js.UndefOr[integerMin96Max600] = js.undefined,
+    FontScript: FontScript = null,
+    FontSize: js.UndefOr[integerMin0Max96] = js.undefined,
+    OutlineColor: BurninSubtitleOutlineColor = null,
+    OutlineSize: js.UndefOr[integerMin0Max10] = js.undefined,
+    ShadowColor: BurninSubtitleShadowColor = null,
+    ShadowOpacity: js.UndefOr[integerMin0Max255] = js.undefined,
+    ShadowXOffset: js.UndefOr[integerMinNegative2147483648Max2147483647] = js.undefined,
+    ShadowYOffset: js.UndefOr[integerMinNegative2147483648Max2147483647] = js.undefined,
+    TeletextSpacing: BurninSubtitleTeletextSpacing = null,
+    XPosition: js.UndefOr[integerMin0Max2147483647] = js.undefined,
+    YPosition: js.UndefOr[integerMin0Max2147483647] = js.undefined
+  ): BurninDestinationSettings = {
     val __obj = js.Dynamic.literal()
+    if (Alignment != null) __obj.updateDynamic("Alignment")(Alignment.asInstanceOf[js.Any])
+    if (BackgroundColor != null) __obj.updateDynamic("BackgroundColor")(BackgroundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(BackgroundOpacity)) __obj.updateDynamic("BackgroundOpacity")(BackgroundOpacity.get.asInstanceOf[js.Any])
+    if (FontColor != null) __obj.updateDynamic("FontColor")(FontColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(FontOpacity)) __obj.updateDynamic("FontOpacity")(FontOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FontResolution)) __obj.updateDynamic("FontResolution")(FontResolution.get.asInstanceOf[js.Any])
+    if (FontScript != null) __obj.updateDynamic("FontScript")(FontScript.asInstanceOf[js.Any])
+    if (!js.isUndefined(FontSize)) __obj.updateDynamic("FontSize")(FontSize.get.asInstanceOf[js.Any])
+    if (OutlineColor != null) __obj.updateDynamic("OutlineColor")(OutlineColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(OutlineSize)) __obj.updateDynamic("OutlineSize")(OutlineSize.get.asInstanceOf[js.Any])
+    if (ShadowColor != null) __obj.updateDynamic("ShadowColor")(ShadowColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShadowOpacity)) __obj.updateDynamic("ShadowOpacity")(ShadowOpacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShadowXOffset)) __obj.updateDynamic("ShadowXOffset")(ShadowXOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShadowYOffset)) __obj.updateDynamic("ShadowYOffset")(ShadowYOffset.get.asInstanceOf[js.Any])
+    if (TeletextSpacing != null) __obj.updateDynamic("TeletextSpacing")(TeletextSpacing.asInstanceOf[js.Any])
+    if (!js.isUndefined(XPosition)) __obj.updateDynamic("XPosition")(XPosition.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(YPosition)) __obj.updateDynamic("YPosition")(YPosition.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BurninDestinationSettings]
   }
-  @scala.inline
-  implicit class BurninDestinationSettingsOps[Self <: BurninDestinationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: BurninSubtitleAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: BurninSubtitleBackgroundColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundOpacity(value: integerMin0Max255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackgroundOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontColor(value: BurninSubtitleFontColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontOpacity(value: integerMin0Max255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontResolution(value: integerMin96Max600): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontResolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontResolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontScript(value: FontScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: integerMin0Max96): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineColor(value: BurninSubtitleOutlineColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineSize(value: integerMin0Max10): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutlineSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowColor(value: BurninSubtitleShadowColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowOpacity(value: integerMin0Max255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowXOffset(value: integerMinNegative2147483648Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowXOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowXOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowXOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowYOffset(value: integerMinNegative2147483648Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowYOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowYOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShadowYOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeletextSpacing(value: BurninSubtitleTeletextSpacing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeletextSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXPosition(value: integerMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYPosition(value: integerMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

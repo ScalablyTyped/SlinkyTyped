@@ -5,14 +5,17 @@ import typingsSlinky.ionicCore.elementInterfaceMod.AnchorInterface
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
 import typingsSlinky.ionicCore.ionicCoreStrings.block
+import typingsSlinky.ionicCore.ionicCoreStrings.button
 import typingsSlinky.ionicCore.ionicCoreStrings.clear
 import typingsSlinky.ionicCore.ionicCoreStrings.default
 import typingsSlinky.ionicCore.ionicCoreStrings.full
 import typingsSlinky.ionicCore.ionicCoreStrings.large
 import typingsSlinky.ionicCore.ionicCoreStrings.outline
+import typingsSlinky.ionicCore.ionicCoreStrings.reset
 import typingsSlinky.ionicCore.ionicCoreStrings.round
 import typingsSlinky.ionicCore.ionicCoreStrings.small
 import typingsSlinky.ionicCore.ionicCoreStrings.solid
+import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
@@ -38,6 +41,8 @@ object buttonMod extends js.Object {
       * For more information on colors, see [theming](/docs/theming/basics).
       */
     var color: js.UndefOr[Color] = js.native
+    /* CompleteClass */
+    override var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     /**
       * Set to `"block"` for a full-width button or to `"full"` for a full-width button
@@ -82,6 +87,8 @@ object buttonMod extends js.Object {
       * If `true`, activates a button with a heavier font weight.
       */
     var strong: Boolean = js.native
+    /* CompleteClass */
+    override var `type`: submit | reset | button = js.native
     @JSName("componentWillLoad")
     def componentWillLoad_MButton(): Unit = js.native
     @JSName("render")

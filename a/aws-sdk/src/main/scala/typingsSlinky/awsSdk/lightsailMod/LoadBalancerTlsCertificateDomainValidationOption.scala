@@ -18,41 +18,11 @@ trait LoadBalancerTlsCertificateDomainValidationOption extends js.Object {
 
 object LoadBalancerTlsCertificateDomainValidationOption {
   @scala.inline
-  def apply(): LoadBalancerTlsCertificateDomainValidationOption = {
+  def apply(domainName: DomainName = null, validationStatus: LoadBalancerTlsCertificateDomainStatus = null): LoadBalancerTlsCertificateDomainValidationOption = {
     val __obj = js.Dynamic.literal()
+    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
+    if (validationStatus != null) __obj.updateDynamic("validationStatus")(validationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerTlsCertificateDomainValidationOption]
   }
-  @scala.inline
-  implicit class LoadBalancerTlsCertificateDomainValidationOptionOps[Self <: LoadBalancerTlsCertificateDomainValidationOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainName(value: DomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationStatus(value: LoadBalancerTlsCertificateDomainStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

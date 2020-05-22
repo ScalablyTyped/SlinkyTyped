@@ -5,157 +5,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * 'left', 'right', or 'center'
     */
-  var align: js.UndefOr[AlignType] = js.native
+  var align: js.UndefOr[AlignType] = js.undefined
   /**
     *  If true then will display a cross to close the popup.
     */
-  var allow_dismiss: js.UndefOr[Boolean] = js.native
+  var allow_dismiss: js.UndefOr[Boolean] = js.undefined
   /**
     * Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * Which element to append to
     */
-  var ele: js.UndefOr[String] = js.native
+  var ele: js.UndefOr[String] = js.undefined
   /**
     * Offset Options
     */
-  var offset: js.UndefOr[OffsetOption] = js.native
+  var offset: js.UndefOr[OffsetOption] = js.undefined
   /**
     * Spacing between consecutively stacked growls.
     */
-  var stackup_spacing: js.UndefOr[Double] = js.native
+  var stackup_spacing: js.UndefOr[Double] = js.undefined
   /**
     * Values of (null, 'info', 'danger', 'success', 'warning') or another value
     */
-  var `type`: js.UndefOr[AlertType] = js.native
+  var `type`: js.UndefOr[AlertType] = js.undefined
   /**
     * Integer or 'auto'
     */
-  var width: js.UndefOr[Double | auto] = js.native
+  var width: js.UndefOr[Double | auto] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    align: AlignType = null,
+    allow_dismiss: js.UndefOr[Boolean] = js.undefined,
+    delay: js.UndefOr[Double] = js.undefined,
+    ele: String = null,
+    offset: OffsetOption = null,
+    stackup_spacing: js.UndefOr[Double] = js.undefined,
+    `type`: js.UndefOr[Null | AlertType] = js.undefined,
+    width: Double | auto = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(allow_dismiss)) __obj.updateDynamic("allow_dismiss")(allow_dismiss.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (ele != null) __obj.updateDynamic("ele")(ele.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (!js.isUndefined(stackup_spacing)) __obj.updateDynamic("stackup_spacing")(stackup_spacing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: AlignType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_dismiss(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_dismiss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_dismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_dismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ele")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ele")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: OffsetOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackup_spacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackup_spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackup_spacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackup_spacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: AlertType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

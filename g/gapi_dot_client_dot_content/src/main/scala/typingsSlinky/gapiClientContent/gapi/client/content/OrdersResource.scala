@@ -11,41 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrdersResource extends js.Object {
   /** Marks an order as acknowledged. This method can only be called for non-multi-client accounts. */
-  def acknowledge(request: OrderId): Request[OrdersAcknowledgeResponse] = js.native
+  def acknowledge(request: OrderId): Request[OrdersAcknowledgeResponse]
   /** Sandbox only. Moves a test order from state "inProgress" to state "pendingShipment". This method can only be called for non-multi-client accounts. */
-  def advancetestorder(request: OrderId): Request[OrdersAdvanceTestOrderResponse] = js.native
+  def advancetestorder(request: OrderId): Request[OrdersAdvanceTestOrderResponse]
   /** Cancels all line items in an order, making a full refund. This method can only be called for non-multi-client accounts. */
-  def cancel(request: OrderId): Request[OrdersCancelResponse] = js.native
+  def cancel(request: OrderId): Request[OrdersCancelResponse]
   /** Cancels a line item, making a full refund. This method can only be called for non-multi-client accounts. */
-  def cancellineitem(request: OrderId): Request[OrdersCancelLineItemResponse] = js.native
+  def cancellineitem(request: OrderId): Request[OrdersCancelLineItemResponse]
   /** Sandbox only. Creates a test order. This method can only be called for non-multi-client accounts. */
-  def createtestorder(request: QuotaUser): Request[OrdersCreateTestOrderResponse] = js.native
+  def createtestorder(request: QuotaUser): Request[OrdersCreateTestOrderResponse]
   /** Retrieves or modifies multiple orders in a single request. This method can only be called for non-multi-client accounts. */
-  def custombatch(request: Alt): Request[OrdersCustomBatchResponse] = js.native
+  def custombatch(request: Alt): Request[OrdersCustomBatchResponse]
   /** Retrieves an order from your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def get(request: OrderId): Request[Order] = js.native
+  def get(request: OrderId): Request[Order]
   /** Retrieves an order using merchant order id. This method can only be called for non-multi-client accounts. */
-  def getbymerchantorderid(request: MerchantOrderId): Request[OrdersGetByMerchantOrderIdResponse] = js.native
+  def getbymerchantorderid(request: MerchantOrderId): Request[OrdersGetByMerchantOrderIdResponse]
   /**
     * Sandbox only. Retrieves an order template that can be used to quickly create a new order in sandbox. This method can only be called for
     * non-multi-client accounts.
     */
-  def gettestordertemplate(request: TemplateName): Request[OrdersGetTestOrderTemplateResponse] = js.native
+  def gettestordertemplate(request: TemplateName): Request[OrdersGetTestOrderTemplateResponse]
   /** Lists the orders in your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def list(request: Acknowledged): Request[OrdersListResponse] = js.native
+  def list(request: Acknowledged): Request[OrdersListResponse]
   /** Refund a portion of the order, up to the full amount paid. This method can only be called for non-multi-client accounts. */
-  def refund(request: OrderId): Request[OrdersRefundResponse] = js.native
+  def refund(request: OrderId): Request[OrdersRefundResponse]
   /** Returns a line item. This method can only be called for non-multi-client accounts. */
-  def returnlineitem(request: OrderId): Request[OrdersReturnLineItemResponse] = js.native
+  def returnlineitem(request: OrderId): Request[OrdersReturnLineItemResponse]
   /** Marks line item(s) as shipped. This method can only be called for non-multi-client accounts. */
-  def shiplineitems(request: OrderId): Request[OrdersShipLineItemsResponse] = js.native
+  def shiplineitems(request: OrderId): Request[OrdersShipLineItemsResponse]
   /** Updates the merchant order ID for a given order. This method can only be called for non-multi-client accounts. */
-  def updatemerchantorderid(request: OrderId): Request[OrdersUpdateMerchantOrderIdResponse] = js.native
+  def updatemerchantorderid(request: OrderId): Request[OrdersUpdateMerchantOrderIdResponse]
   /** Updates a shipment's status, carrier, and/or tracking ID. This method can only be called for non-multi-client accounts. */
-  def updateshipment(request: OrderId): Request[OrdersUpdateShipmentResponse] = js.native
+  def updateshipment(request: OrderId): Request[OrdersUpdateShipmentResponse]
 }
 
 object OrdersResource {
@@ -70,103 +69,5 @@ object OrdersResource {
     val __obj = js.Dynamic.literal(acknowledge = js.Any.fromFunction1(acknowledge), advancetestorder = js.Any.fromFunction1(advancetestorder), cancel = js.Any.fromFunction1(cancel), cancellineitem = js.Any.fromFunction1(cancellineitem), createtestorder = js.Any.fromFunction1(createtestorder), custombatch = js.Any.fromFunction1(custombatch), get = js.Any.fromFunction1(get), getbymerchantorderid = js.Any.fromFunction1(getbymerchantorderid), gettestordertemplate = js.Any.fromFunction1(gettestordertemplate), list = js.Any.fromFunction1(list), refund = js.Any.fromFunction1(refund), returnlineitem = js.Any.fromFunction1(returnlineitem), shiplineitems = js.Any.fromFunction1(shiplineitems), updatemerchantorderid = js.Any.fromFunction1(updatemerchantorderid), updateshipment = js.Any.fromFunction1(updateshipment))
     __obj.asInstanceOf[OrdersResource]
   }
-  @scala.inline
-  implicit class OrdersResourceOps[Self <: OrdersResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcknowledge(value: OrderId => Request[OrdersAcknowledgeResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acknowledge")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAdvancetestorder(value: OrderId => Request[OrdersAdvanceTestOrderResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advancetestorder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCancel(value: OrderId => Request[OrdersCancelResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCancellineitem(value: OrderId => Request[OrdersCancelLineItemResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancellineitem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreatetestorder(value: QuotaUser => Request[OrdersCreateTestOrderResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createtestorder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCustombatch(value: Alt => Request[OrdersCustomBatchResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custombatch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: OrderId => Request[Order]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetbymerchantorderid(value: MerchantOrderId => Request[OrdersGetByMerchantOrderIdResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getbymerchantorderid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGettestordertemplate(value: TemplateName => Request[OrdersGetTestOrderTemplateResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gettestordertemplate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Acknowledged => Request[OrdersListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRefund(value: OrderId => Request[OrdersRefundResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refund")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReturnlineitem(value: OrderId => Request[OrdersReturnLineItemResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnlineitem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShiplineitems(value: OrderId => Request[OrdersShipLineItemsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiplineitems")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdatemerchantorderid(value: OrderId => Request[OrdersUpdateMerchantOrderIdResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatemerchantorderid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateshipment(value: OrderId => Request[OrdersUpdateShipmentResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateshipment")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

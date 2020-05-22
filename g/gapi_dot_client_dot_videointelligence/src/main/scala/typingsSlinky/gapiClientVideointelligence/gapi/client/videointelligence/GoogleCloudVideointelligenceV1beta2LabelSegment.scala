@@ -4,51 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleCloudVideointelligenceV1beta2LabelSegment extends js.Object {
   /** Confidence that the label is accurate. Range: [0, 1]. */
-  var confidence: js.UndefOr[Double] = js.native
+  var confidence: js.UndefOr[Double] = js.undefined
   /** Video segment where a label was detected. */
-  var segment: js.UndefOr[GoogleCloudVideointelligenceV1beta2VideoSegment] = js.native
+  var segment: js.UndefOr[GoogleCloudVideointelligenceV1beta2VideoSegment] = js.undefined
 }
 
 object GoogleCloudVideointelligenceV1beta2LabelSegment {
   @scala.inline
-  def apply(): GoogleCloudVideointelligenceV1beta2LabelSegment = {
+  def apply(
+    confidence: js.UndefOr[Double] = js.undefined,
+    segment: GoogleCloudVideointelligenceV1beta2VideoSegment = null
+  ): GoogleCloudVideointelligenceV1beta2LabelSegment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(confidence)) __obj.updateDynamic("confidence")(confidence.get.asInstanceOf[js.Any])
+    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudVideointelligenceV1beta2LabelSegment]
   }
-  @scala.inline
-  implicit class GoogleCloudVideointelligenceV1beta2LabelSegmentOps[Self <: GoogleCloudVideointelligenceV1beta2LabelSegment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegment(value: GoogleCloudVideointelligenceV1beta2VideoSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

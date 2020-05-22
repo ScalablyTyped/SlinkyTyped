@@ -14,48 +14,47 @@ import scala.scalajs.js.annotation._
   * Note that not all diagrams are capable of displaying a **y** -axis, e.g., the {@link PieDiagram} .
   * @see XDiagram
   */
-@js.native
 trait XAxisYSupplier extends XInterface {
   /**
     * @returns the properties of the **y** -axis of the diagram.  The returned property set contains scaling properties as well as formatting properties.
     * @see ChartAxis
     */
-  val YAxis: XPropertySet = js.native
+  val YAxis: XPropertySet
   /**
     * @returns the **y** -axis title shape.
     * @see ChartTitle
     */
-  val YAxisTitle: XShape = js.native
+  val YAxisTitle: XShape
   /**
     * @returns the properties of the help grid (minor grid) of the **y** -axis of the diagram.
     * @see ChartGrid
     */
-  val YHelpGrid: XPropertySet = js.native
+  val YHelpGrid: XPropertySet
   /**
     * @returns the properties of the main grid (major grid) of the **y** -axis of the diagram.
     * @see ChartGrid
     */
-  val YMainGrid: XPropertySet = js.native
+  val YMainGrid: XPropertySet
   /**
     * @returns the properties of the **y** -axis of the diagram.  The returned property set contains scaling properties as well as formatting properties.
     * @see ChartAxis
     */
-  def getYAxis(): XPropertySet = js.native
+  def getYAxis(): XPropertySet
   /**
     * @returns the **y** -axis title shape.
     * @see ChartTitle
     */
-  def getYAxisTitle(): XShape = js.native
+  def getYAxisTitle(): XShape
   /**
     * @returns the properties of the help grid (minor grid) of the **y** -axis of the diagram.
     * @see ChartGrid
     */
-  def getYHelpGrid(): XPropertySet = js.native
+  def getYHelpGrid(): XPropertySet
   /**
     * @returns the properties of the main grid (major grid) of the **y** -axis of the diagram.
     * @see ChartGrid
     */
-  def getYMainGrid(): XPropertySet = js.native
+  def getYMainGrid(): XPropertySet
 }
 
 object XAxisYSupplier {
@@ -76,61 +75,5 @@ object XAxisYSupplier {
     val __obj = js.Dynamic.literal(YAxis = YAxis.asInstanceOf[js.Any], YAxisTitle = YAxisTitle.asInstanceOf[js.Any], YHelpGrid = YHelpGrid.asInstanceOf[js.Any], YMainGrid = YMainGrid.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getYAxis = js.Any.fromFunction0(getYAxis), getYAxisTitle = js.Any.fromFunction0(getYAxisTitle), getYHelpGrid = js.Any.fromFunction0(getYHelpGrid), getYMainGrid = js.Any.fromFunction0(getYMainGrid), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAxisYSupplier]
   }
-  @scala.inline
-  implicit class XAxisYSupplierOps[Self <: XAxisYSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withYAxis(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYAxisTitle(value: XShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YAxisTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYHelpGrid(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YHelpGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYMainGrid(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YMainGrid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetYAxis(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYAxis")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetYAxisTitle(value: () => XShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYAxisTitle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetYHelpGrid(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYHelpGrid")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetYMainGrid(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getYMainGrid")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

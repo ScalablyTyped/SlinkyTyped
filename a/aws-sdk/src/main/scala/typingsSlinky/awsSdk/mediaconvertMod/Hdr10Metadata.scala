@@ -58,161 +58,34 @@ trait Hdr10Metadata extends js.Object {
 
 object Hdr10Metadata {
   @scala.inline
-  def apply(): Hdr10Metadata = {
+  def apply(
+    BluePrimaryX: js.UndefOr[integerMin0Max50000] = js.undefined,
+    BluePrimaryY: js.UndefOr[integerMin0Max50000] = js.undefined,
+    GreenPrimaryX: js.UndefOr[integerMin0Max50000] = js.undefined,
+    GreenPrimaryY: js.UndefOr[integerMin0Max50000] = js.undefined,
+    MaxContentLightLevel: js.UndefOr[integerMin0Max65535] = js.undefined,
+    MaxFrameAverageLightLevel: js.UndefOr[integerMin0Max65535] = js.undefined,
+    MaxLuminance: js.UndefOr[integerMin0Max2147483647] = js.undefined,
+    MinLuminance: js.UndefOr[integerMin0Max2147483647] = js.undefined,
+    RedPrimaryX: js.UndefOr[integerMin0Max50000] = js.undefined,
+    RedPrimaryY: js.UndefOr[integerMin0Max50000] = js.undefined,
+    WhitePointX: js.UndefOr[integerMin0Max50000] = js.undefined,
+    WhitePointY: js.UndefOr[integerMin0Max50000] = js.undefined
+  ): Hdr10Metadata = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(BluePrimaryX)) __obj.updateDynamic("BluePrimaryX")(BluePrimaryX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(BluePrimaryY)) __obj.updateDynamic("BluePrimaryY")(BluePrimaryY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(GreenPrimaryX)) __obj.updateDynamic("GreenPrimaryX")(GreenPrimaryX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(GreenPrimaryY)) __obj.updateDynamic("GreenPrimaryY")(GreenPrimaryY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxContentLightLevel)) __obj.updateDynamic("MaxContentLightLevel")(MaxContentLightLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxFrameAverageLightLevel)) __obj.updateDynamic("MaxFrameAverageLightLevel")(MaxFrameAverageLightLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxLuminance)) __obj.updateDynamic("MaxLuminance")(MaxLuminance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinLuminance)) __obj.updateDynamic("MinLuminance")(MinLuminance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RedPrimaryX)) __obj.updateDynamic("RedPrimaryX")(RedPrimaryX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RedPrimaryY)) __obj.updateDynamic("RedPrimaryY")(RedPrimaryY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(WhitePointX)) __obj.updateDynamic("WhitePointX")(WhitePointX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(WhitePointY)) __obj.updateDynamic("WhitePointY")(WhitePointY.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hdr10Metadata]
   }
-  @scala.inline
-  implicit class Hdr10MetadataOps[Self <: Hdr10Metadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBluePrimaryX(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BluePrimaryX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluePrimaryX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BluePrimaryX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluePrimaryY(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BluePrimaryY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluePrimaryY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BluePrimaryY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreenPrimaryX(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GreenPrimaryX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreenPrimaryX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GreenPrimaryX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGreenPrimaryY(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GreenPrimaryY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGreenPrimaryY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GreenPrimaryY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxContentLightLevel(value: integerMin0Max65535): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxContentLightLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxContentLightLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxContentLightLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxFrameAverageLightLevel(value: integerMin0Max65535): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFrameAverageLightLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxFrameAverageLightLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxFrameAverageLightLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLuminance(value: integerMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLuminance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLuminance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLuminance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinLuminance(value: integerMin0Max2147483647): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinLuminance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinLuminance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinLuminance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedPrimaryX(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedPrimaryX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedPrimaryX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedPrimaryX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedPrimaryY(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedPrimaryY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedPrimaryY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RedPrimaryY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhitePointX(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitePointX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitePointX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitePointX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhitePointY(value: integerMin0Max50000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitePointY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitePointY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitePointY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

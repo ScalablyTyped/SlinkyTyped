@@ -7,56 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebHookData extends Event {
-  var organization: js.UndefOr[OrganizationSummary] = js.native
-  var repository: js.UndefOr[Repository] = js.native
-  var sender: UserSummary = js.native
+  var organization: js.UndefOr[OrganizationSummary] = js.undefined
+  var repository: js.UndefOr[Repository] = js.undefined
+  var sender: UserSummary
 }
 
 object WebHookData {
   @scala.inline
-  def apply(action: String, sender: UserSummary): WebHookData = {
+  def apply(
+    action: String,
+    sender: UserSummary,
+    organization: OrganizationSummary = null,
+    repository: Repository = null
+  ): WebHookData = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
+    if (organization != null) __obj.updateDynamic("organization")(organization.asInstanceOf[js.Any])
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebHookData]
   }
-  @scala.inline
-  implicit class WebHookDataOps[Self <: WebHookData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSender(value: UserSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrganization(value: OrganizationSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepository(value: Repository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

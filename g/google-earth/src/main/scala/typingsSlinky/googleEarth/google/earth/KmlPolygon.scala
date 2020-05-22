@@ -4,21 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlPolygon extends KmlExtrudableGeometry {
   /**
     * Contains a LinearRing element.
     * You can specify multiple innerBoundary properties, which create multiple cut-outs inside the Polygon.
     */
-  def getInnerBoundaries(): GELinearRingContainer = js.native
+  def getInnerBoundaries(): GELinearRingContainer
   /**
     * Contains a LinearRing element.
     */
-  def getOuterBoundary(): KmlLinearRing = js.native
+  def getOuterBoundary(): KmlLinearRing
   /**
     * Contains a LinearRing element.
     */
-  def setOuterBoundary(outerBoundary: KmlLinearRing): Unit = js.native
+  def setOuterBoundary(outerBoundary: KmlLinearRing): Unit
 }
 
 object KmlPolygon {
@@ -51,31 +50,5 @@ object KmlPolygon {
     val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getAltitudeMode = js.Any.fromFunction0(getAltitudeMode), getExtrude = js.Any.fromFunction0(getExtrude), getId = js.Any.fromFunction0(getId), getInnerBoundaries = js.Any.fromFunction0(getInnerBoundaries), getOuterBoundary = js.Any.fromFunction0(getOuterBoundary), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getTessellate = js.Any.fromFunction0(getTessellate), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setAltitudeMode = js.Any.fromFunction1(setAltitudeMode), setExtrude = js.Any.fromFunction1(setExtrude), setOuterBoundary = js.Any.fromFunction1(setOuterBoundary), setTessellate = js.Any.fromFunction1(setTessellate))
     __obj.asInstanceOf[KmlPolygon]
   }
-  @scala.inline
-  implicit class KmlPolygonOps[Self <: KmlPolygon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetInnerBoundaries(value: () => GELinearRingContainer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInnerBoundaries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetOuterBoundary(value: () => KmlLinearRing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOuterBoundary")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetOuterBoundary(value: KmlLinearRing => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOuterBoundary")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

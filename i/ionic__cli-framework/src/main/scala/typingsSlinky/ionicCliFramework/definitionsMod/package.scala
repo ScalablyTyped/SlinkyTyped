@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 package object definitionsMod {
   type CommandLineInputs = js.Array[java.lang.String]
   type CommandMapGetter[C /* <: typingsSlinky.ionicCliFramework.definitionsMod.ICommand[C, N, M, I, O] */, N /* <: typingsSlinky.ionicCliFramework.definitionsMod.INamespace[C, N, M, I, O] */, M /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[I, O] */, I /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput */, O /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */] = js.Function0[js.Promise[C]]
+  type CommandOptionType = typingsSlinky.std.StringConstructor | typingsSlinky.std.BooleanConstructor
   type CommandPathItem[C /* <: typingsSlinky.ionicCliFramework.definitionsMod.ICommand[C, N, M, I, O] */, N /* <: typingsSlinky.ionicCliFramework.definitionsMod.INamespace[C, N, M, I, O] */, M /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[I, O] */, I /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput */, O /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */] = js.Tuple2[java.lang.String, C | N]
   type HydratedCommandMetadata[C /* <: typingsSlinky.ionicCliFramework.definitionsMod.ICommand[C, N, M, I, O] */, N /* <: typingsSlinky.ionicCliFramework.definitionsMod.INamespace[C, N, M, I, O] */, M /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[I, O] */, I /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput */, O /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */] = M with (typingsSlinky.ionicCliFramework.anon.Aliases[C, N, M, I, O])
   type HydratedCommandMetadataOption[O /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */] = typingsSlinky.std.Required[O]
@@ -20,6 +21,7 @@ package object definitionsMod {
   ]
   type NamespaceMapGetter[C /* <: typingsSlinky.ionicCliFramework.definitionsMod.ICommand[C, N, M, I, O] */, N /* <: typingsSlinky.ionicCliFramework.definitionsMod.INamespace[C, N, M, I, O] */, M /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[I, O] */, I /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput */, O /* <: typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption */] = js.Function0[js.Promise[N]]
   type NamespaceMetadata = typingsSlinky.ionicCliFramework.definitionsMod.Metadata
+  type ParsedArg = js.UndefOr[java.lang.String | scala.Boolean | scala.Null | js.Array[java.lang.String]]
   type Validator = js.Function2[
     /* input */ js.UndefOr[java.lang.String], 
     /* key */ js.UndefOr[java.lang.String], 

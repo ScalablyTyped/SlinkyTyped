@@ -7,177 +7,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JumpListItem extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/jump-list-item
   /**
     * The command line arguments when program is executed. Should only be set if type
     * is task.
     */
-  var args: js.UndefOr[String] = js.native
+  var args: js.UndefOr[String] = js.undefined
   /**
     * Description of the task (displayed in a tooltip). Should only be set if type is
     * task.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * The index of the icon in the resource file. If a resource file contains multiple
     * icons this value can be used to specify the zero-based index of the icon that
     * should be displayed for this task. If a resource file contains only one icon,
     * this property should be set to zero.
     */
-  var iconIndex: js.UndefOr[Double] = js.native
+  var iconIndex: js.UndefOr[Double] = js.undefined
   /**
     * The absolute path to an icon to be displayed in a Jump List, which can be an
     * arbitrary resource file that contains an icon (e.g. .ico, .exe, .dll). You can
     * usually specify process.execPath to show the program icon.
     */
-  var iconPath: js.UndefOr[String] = js.native
+  var iconPath: js.UndefOr[String] = js.undefined
   /**
     * Path of the file to open, should only be set if type is file.
     */
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.undefined
   /**
     * Path of the program to execute, usually you should specify process.execPath
     * which opens the current program. Should only be set if type is task.
     */
-  var program: js.UndefOr[String] = js.native
+  var program: js.UndefOr[String] = js.undefined
   /**
     * The text to be displayed for the item in the Jump List. Should only be set if
     * type is task.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * One of the following:
     */
-  var `type`: js.UndefOr[task | separator | file] = js.native
+  var `type`: js.UndefOr[task | separator | file] = js.undefined
   /**
     * The working directory. Default is empty.
     */
-  var workingDirectory: js.UndefOr[String] = js.native
+  var workingDirectory: js.UndefOr[String] = js.undefined
 }
 
 object JumpListItem {
   @scala.inline
-  def apply(): JumpListItem = {
+  def apply(
+    args: String = null,
+    description: String = null,
+    iconIndex: js.UndefOr[Double] = js.undefined,
+    iconPath: String = null,
+    path: String = null,
+    program: String = null,
+    title: String = null,
+    `type`: task | separator | file = null,
+    workingDirectory: String = null
+  ): JumpListItem = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconIndex)) __obj.updateDynamic("iconIndex")(iconIndex.get.asInstanceOf[js.Any])
+    if (iconPath != null) __obj.updateDynamic("iconPath")(iconPath.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (program != null) __obj.updateDynamic("program")(program.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (workingDirectory != null) __obj.updateDynamic("workingDirectory")(workingDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[JumpListItem]
   }
-  @scala.inline
-  implicit class JumpListItemOps[Self <: JumpListItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgram(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgram: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: task | separator | file): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkingDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkingDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

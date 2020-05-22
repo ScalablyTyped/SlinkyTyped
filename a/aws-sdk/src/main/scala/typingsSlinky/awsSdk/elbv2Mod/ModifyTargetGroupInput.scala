@@ -50,131 +50,29 @@ trait ModifyTargetGroupInput extends js.Object {
 
 object ModifyTargetGroupInput {
   @scala.inline
-  def apply(TargetGroupArn: TargetGroupArn): ModifyTargetGroupInput = {
+  def apply(
+    TargetGroupArn: TargetGroupArn,
+    HealthCheckEnabled: js.UndefOr[HealthCheckEnabled] = js.undefined,
+    HealthCheckIntervalSeconds: js.UndefOr[HealthCheckIntervalSeconds] = js.undefined,
+    HealthCheckPath: Path = null,
+    HealthCheckPort: HealthCheckPort = null,
+    HealthCheckProtocol: ProtocolEnum = null,
+    HealthCheckTimeoutSeconds: js.UndefOr[HealthCheckTimeoutSeconds] = js.undefined,
+    HealthyThresholdCount: js.UndefOr[HealthCheckThresholdCount] = js.undefined,
+    Matcher: Matcher = null,
+    UnhealthyThresholdCount: js.UndefOr[HealthCheckThresholdCount] = js.undefined
+  ): ModifyTargetGroupInput = {
     val __obj = js.Dynamic.literal(TargetGroupArn = TargetGroupArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthCheckEnabled)) __obj.updateDynamic("HealthCheckEnabled")(HealthCheckEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthCheckIntervalSeconds)) __obj.updateDynamic("HealthCheckIntervalSeconds")(HealthCheckIntervalSeconds.get.asInstanceOf[js.Any])
+    if (HealthCheckPath != null) __obj.updateDynamic("HealthCheckPath")(HealthCheckPath.asInstanceOf[js.Any])
+    if (HealthCheckPort != null) __obj.updateDynamic("HealthCheckPort")(HealthCheckPort.asInstanceOf[js.Any])
+    if (HealthCheckProtocol != null) __obj.updateDynamic("HealthCheckProtocol")(HealthCheckProtocol.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthCheckTimeoutSeconds)) __obj.updateDynamic("HealthCheckTimeoutSeconds")(HealthCheckTimeoutSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HealthyThresholdCount)) __obj.updateDynamic("HealthyThresholdCount")(HealthyThresholdCount.get.asInstanceOf[js.Any])
+    if (Matcher != null) __obj.updateDynamic("Matcher")(Matcher.asInstanceOf[js.Any])
+    if (!js.isUndefined(UnhealthyThresholdCount)) __obj.updateDynamic("UnhealthyThresholdCount")(UnhealthyThresholdCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyTargetGroupInput]
   }
-  @scala.inline
-  implicit class ModifyTargetGroupInputOps[Self <: ModifyTargetGroupInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetGroupArn(value: TargetGroupArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthCheckEnabled(value: HealthCheckEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckIntervalSeconds(value: HealthCheckIntervalSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckIntervalSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckIntervalSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckIntervalSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckPath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckPort(value: HealthCheckPort): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckProtocol(value: ProtocolEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheckTimeoutSeconds(value: HealthCheckTimeoutSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckTimeoutSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckTimeoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckTimeoutSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthyThresholdCount(value: HealthCheckThresholdCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthyThresholdCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthyThresholdCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthyThresholdCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatcher(value: Matcher): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Matcher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Matcher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnhealthyThresholdCount(value: HealthCheckThresholdCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnhealthyThresholdCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnhealthyThresholdCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnhealthyThresholdCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

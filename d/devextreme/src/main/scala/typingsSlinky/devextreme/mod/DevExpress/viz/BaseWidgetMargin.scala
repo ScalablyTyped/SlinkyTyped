@@ -4,80 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Generates space around the widget. */
-@js.native
+/** @name BaseWidget.Options.margin */
 trait BaseWidgetMargin extends js.Object {
-  /** Specifies the bottom margin of the widget in pixels. */
-  var bottom: js.UndefOr[Double] = js.native
-  /** Specifies the left margin of the widget in pixels. */
-  var left: js.UndefOr[Double] = js.native
-  /** Specifies the right margin of the widget in pixels. */
-  var right: js.UndefOr[Double] = js.native
-  /** Specifies the top margin of the widget in pixels. */
-  var top: js.UndefOr[Double] = js.native
+  /** @name BaseWidget.Options.margin.bottom */
+  var bottom: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.margin.left */
+  var left: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.margin.right */
+  var right: js.UndefOr[Double] = js.undefined
+  /** @name BaseWidget.Options.margin.top */
+  var top: js.UndefOr[Double] = js.undefined
 }
 
 object BaseWidgetMargin {
   @scala.inline
-  def apply(): BaseWidgetMargin = {
+  def apply(
+    bottom: js.UndefOr[Double] = js.undefined,
+    left: js.UndefOr[Double] = js.undefined,
+    right: js.UndefOr[Double] = js.undefined,
+    top: js.UndefOr[Double] = js.undefined
+  ): BaseWidgetMargin = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bottom)) __obj.updateDynamic("bottom")(bottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(right)) __obj.updateDynamic("right")(right.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseWidgetMargin]
   }
-  @scala.inline
-  implicit class BaseWidgetMarginOps[Self <: BaseWidgetMargin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

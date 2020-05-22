@@ -11,7 +11,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This is a container for custom presentations. */
-@js.native
 trait CustomPresentationAccess
   extends XNameContainer
      with XSingleServiceFactory

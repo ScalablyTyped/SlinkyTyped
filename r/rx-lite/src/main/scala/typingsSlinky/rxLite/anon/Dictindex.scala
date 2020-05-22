@@ -5,30 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dictindex[T] extends /* index */ NumberDictionary[T] {
-  var length: Double = js.native
+  var length: Double
 }
 
 object Dictindex {
   @scala.inline
-  def apply[T](length: Double): Dictindex[T] = {
+  def apply[T](length: Double, NumberDictionary: /* n */ NumberDictionary[T] = null): Dictindex[T] = {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any])
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[Dictindex[T]]
   }
-  @scala.inline
-  implicit class DictindexOps[Self[t] <: Dictindex[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withLength(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

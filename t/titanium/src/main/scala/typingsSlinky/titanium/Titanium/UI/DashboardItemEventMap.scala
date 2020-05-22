@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DashboardItemEventMap extends ProxyEventMap {
-  var click: DashboardItemClickEvent = js.native
-  var delete: DashboardItemDeleteEvent = js.native
-  var move: DashboardItemMoveEvent = js.native
+  var click: DashboardItemClickEvent
+  var delete: DashboardItemDeleteEvent
+  var move: DashboardItemMoveEvent
 }
 
 object DashboardItemEventMap {
@@ -18,31 +17,5 @@ object DashboardItemEventMap {
     val __obj = js.Dynamic.literal(click = click.asInstanceOf[js.Any], delete = delete.asInstanceOf[js.Any], move = move.asInstanceOf[js.Any])
     __obj.asInstanceOf[DashboardItemEventMap]
   }
-  @scala.inline
-  implicit class DashboardItemEventMapOps[Self <: DashboardItemEventMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClick(value: DashboardItemClickEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: DashboardItemDeleteEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMove(value: DashboardItemMoveEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

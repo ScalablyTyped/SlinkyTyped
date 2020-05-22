@@ -1,8 +1,8 @@
 package typingsSlinky.node
 
 import typingsSlinky.node.anon.Data
-import typingsSlinky.node.cryptoMod.KeyLike
-import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.cryptoMod._KeyLike
+import typingsSlinky.node.fsMod._PathLike
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,8 +16,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Buffer
   extends Uint8Array
-     with KeyLike
-     with PathLike {
+     with _KeyLike
+     with _PathLike {
   def compare(otherBuffer: js.typedarray.Uint8Array): Double = js.native
   def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double): Double = js.native
   def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
@@ -105,9 +105,9 @@ trait Buffer
   def swap32(): Buffer = js.native
   def swap64(): Buffer = js.native
   def toJSON(): Data = js.native
-  def toString(encoding: java.lang.String): java.lang.String = js.native
-  def toString(encoding: java.lang.String, start: Double): java.lang.String = js.native
-  def toString(encoding: java.lang.String, start: Double, end: Double): java.lang.String = js.native
+  def toString(encoding: BufferEncoding): java.lang.String = js.native
+  def toString(encoding: BufferEncoding, start: Double): java.lang.String = js.native
+  def toString(encoding: BufferEncoding, start: Double, end: Double): java.lang.String = js.native
   def write(string: java.lang.String): Double = js.native
   def write(string: java.lang.String, encoding: BufferEncoding): Double = js.native
   def write(string: java.lang.String, offset: Double): Double = js.native

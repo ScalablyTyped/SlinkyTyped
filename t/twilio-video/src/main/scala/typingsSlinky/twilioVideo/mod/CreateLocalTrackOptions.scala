@@ -1,67 +1,66 @@
 package typingsSlinky.twilioVideo.mod
 
+import org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet
+import typingsSlinky.std.ConstrainBoolean
+import typingsSlinky.std.ConstrainDOMString
+import typingsSlinky.std.ConstrainDouble
+import typingsSlinky.std.ConstrainULong
 import typingsSlinky.std.MediaTrackConstraints
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateLocalTrackOptions extends MediaTrackConstraints {
   // In API reference logLevel is not optional, but in the Twilio examples it is
-  var logLevel: js.UndefOr[LogLevel | LogLevels] = js.native
-  var name: js.UndefOr[String] = js.native
-  var workaroundWebKitBug180748: js.UndefOr[Boolean] = js.native
+  var logLevel: js.UndefOr[LogLevel | LogLevels] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var workaroundWebKitBug180748: js.UndefOr[Boolean] = js.undefined
 }
 
 object CreateLocalTrackOptions {
   @scala.inline
-  def apply(): CreateLocalTrackOptions = {
+  def apply(
+    advanced: js.Array[MediaTrackConstraintSet] = null,
+    aspectRatio: ConstrainDouble = null,
+    autoGainControl: ConstrainBoolean = null,
+    channelCount: ConstrainULong = null,
+    deviceId: ConstrainDOMString = null,
+    echoCancellation: ConstrainBoolean = null,
+    facingMode: ConstrainDOMString = null,
+    frameRate: ConstrainDouble = null,
+    groupId: ConstrainDOMString = null,
+    height: ConstrainULong = null,
+    latency: ConstrainDouble = null,
+    logLevel: LogLevel | LogLevels = null,
+    name: String = null,
+    noiseSuppression: ConstrainBoolean = null,
+    resizeMode: ConstrainDOMString = null,
+    sampleRate: ConstrainULong = null,
+    sampleSize: ConstrainULong = null,
+    width: ConstrainULong = null,
+    workaroundWebKitBug180748: js.UndefOr[Boolean] = js.undefined
+  ): CreateLocalTrackOptions = {
     val __obj = js.Dynamic.literal()
+    if (advanced != null) __obj.updateDynamic("advanced")(advanced.asInstanceOf[js.Any])
+    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
+    if (autoGainControl != null) __obj.updateDynamic("autoGainControl")(autoGainControl.asInstanceOf[js.Any])
+    if (channelCount != null) __obj.updateDynamic("channelCount")(channelCount.asInstanceOf[js.Any])
+    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
+    if (echoCancellation != null) __obj.updateDynamic("echoCancellation")(echoCancellation.asInstanceOf[js.Any])
+    if (facingMode != null) __obj.updateDynamic("facingMode")(facingMode.asInstanceOf[js.Any])
+    if (frameRate != null) __obj.updateDynamic("frameRate")(frameRate.asInstanceOf[js.Any])
+    if (groupId != null) __obj.updateDynamic("groupId")(groupId.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (latency != null) __obj.updateDynamic("latency")(latency.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (noiseSuppression != null) __obj.updateDynamic("noiseSuppression")(noiseSuppression.asInstanceOf[js.Any])
+    if (resizeMode != null) __obj.updateDynamic("resizeMode")(resizeMode.asInstanceOf[js.Any])
+    if (sampleRate != null) __obj.updateDynamic("sampleRate")(sampleRate.asInstanceOf[js.Any])
+    if (sampleSize != null) __obj.updateDynamic("sampleSize")(sampleSize.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(workaroundWebKitBug180748)) __obj.updateDynamic("workaroundWebKitBug180748")(workaroundWebKitBug180748.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateLocalTrackOptions]
   }
-  @scala.inline
-  implicit class CreateLocalTrackOptionsOps[Self <: CreateLocalTrackOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogLevel(value: LogLevel | LogLevels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkaroundWebKitBug180748(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workaroundWebKitBug180748")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkaroundWebKitBug180748: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workaroundWebKitBug180748")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -34,95 +34,22 @@ trait GetPublicKeyResponse extends js.Object {
 
 object GetPublicKeyResponse {
   @scala.inline
-  def apply(): GetPublicKeyResponse = {
+  def apply(
+    CustomerMasterKeySpec: CustomerMasterKeySpec = null,
+    EncryptionAlgorithms: EncryptionAlgorithmSpecList = null,
+    KeyId: KeyIdType = null,
+    KeyUsage: KeyUsageType = null,
+    PublicKey: PublicKeyType = null,
+    SigningAlgorithms: SigningAlgorithmSpecList = null
+  ): GetPublicKeyResponse = {
     val __obj = js.Dynamic.literal()
+    if (CustomerMasterKeySpec != null) __obj.updateDynamic("CustomerMasterKeySpec")(CustomerMasterKeySpec.asInstanceOf[js.Any])
+    if (EncryptionAlgorithms != null) __obj.updateDynamic("EncryptionAlgorithms")(EncryptionAlgorithms.asInstanceOf[js.Any])
+    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
+    if (KeyUsage != null) __obj.updateDynamic("KeyUsage")(KeyUsage.asInstanceOf[js.Any])
+    if (PublicKey != null) __obj.updateDynamic("PublicKey")(PublicKey.asInstanceOf[js.Any])
+    if (SigningAlgorithms != null) __obj.updateDynamic("SigningAlgorithms")(SigningAlgorithms.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPublicKeyResponse]
   }
-  @scala.inline
-  implicit class GetPublicKeyResponseOps[Self <: GetPublicKeyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerMasterKeySpec(value: CustomerMasterKeySpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerMasterKeySpec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerMasterKeySpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerMasterKeySpec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionAlgorithms(value: EncryptionAlgorithmSpecList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAlgorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAlgorithms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: KeyIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyUsage(value: KeyUsageType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUsage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyUsage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUsage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKeyUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: PublicKeyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigningAlgorithms(value: SigningAlgorithmSpecList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAlgorithms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningAlgorithms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAlgorithms")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

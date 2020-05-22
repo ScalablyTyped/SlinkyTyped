@@ -16,5 +16,10 @@ class BootstrapClientAccordionGroupEventArgs protected ()
     * @param group An BootstrapAccordionGroup object representing the group related to the event.
     */
   def this(group: typingsSlinky.devexpressWeb.BootstrapClientAccordionGroup) = this()
+  /**
+    * Gets the group object related to the event.
+    */
+  /* CompleteClass */
+  override var group: typingsSlinky.devexpressWeb.BootstrapClientAccordionGroup = js.native
 }
 

@@ -4,62 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Addressline1check extends js.Object {
-  var address_line1_check: Boolean | Null = js.native
-  var address_postal_code_check: Boolean | Null = js.native
-  var cvc_check: Boolean | Null = js.native
+  var address_line1_check: Boolean | Null
+  var address_postal_code_check: Boolean | Null
+  var cvc_check: Boolean | Null
 }
 
 object Addressline1check {
   @scala.inline
-  def apply(): Addressline1check = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    address_line1_check: Boolean = null.asInstanceOf[Boolean],
+    address_postal_code_check: Boolean = null.asInstanceOf[Boolean],
+    cvc_check: Boolean = null.asInstanceOf[Boolean]
+  ): Addressline1check = {
+    val __obj = js.Dynamic.literal(address_line1_check = address_line1_check.asInstanceOf[js.Any], address_postal_code_check = address_postal_code_check.asInstanceOf[js.Any], cvc_check = cvc_check.asInstanceOf[js.Any])
     __obj.asInstanceOf[Addressline1check]
   }
-  @scala.inline
-  implicit class Addressline1checkOps[Self <: Addressline1check] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress_line1_check(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_line1_check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_line1_checkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_line1_check")(null)
-        ret
-    }
-    @scala.inline
-    def withAddress_postal_code_check(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_postal_code_check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddress_postal_code_checkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address_postal_code_check")(null)
-        ret
-    }
-    @scala.inline
-    def withCvc_check(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cvc_check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCvc_checkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cvc_check")(null)
-        ret
-    }
-  }
-  
 }
 

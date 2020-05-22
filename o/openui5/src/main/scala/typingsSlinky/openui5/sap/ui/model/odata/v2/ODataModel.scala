@@ -17,10 +17,10 @@ trait ODataModel extends Model {
     * by calling the getServiceMetadata() method.
     * @param vUrl Either one URL as string or an array or URL strings
     * @returns The Promise to load the given URL(s), resolved if all URLs have been loaded, rejected if at
-    * least one fails to load.					 If this promise resolves it returns the following parameters:					
-    * annotations: The annotation object					 entitySets: An array of EntitySet objects containing the
-    * newly merged EntitySets from a $metadata requests.								 the structure is the same as in the
-    * metadata object reached by the getServiceMetadata() method.								 For non $metadata requests the
+    * least one fails to load.                     If this promise resolves it returns the following parameters:                    
+    * annotations: The annotation object                     entitySets: An array of EntitySet objects containing the
+    * newly merged EntitySets from a $metadata requests.                                 the structure is the same as in the
+    * metadata object reached by the getServiceMetadata() method.                                 For non $metadata requests the
     * array will be empty.
     */
   def addAnnotationUrl(vUrl: String): JQueryPromise[_] = js.native
@@ -135,8 +135,8 @@ trait ODataModel extends Model {
   /**
     * Trigger a POST request to the odata service that was specified in the model constructor. Please note
     * that deep creates are not supportedand may not work.
-    * @param sPath A string containing the path to the collection where an entry		should be created. The
-    * path is concatenated to the sServiceUrl		which was specified in the model constructor.
+    * @param sPath A string containing the path to the collection where an entry        should be created. The
+    * path is concatenated to the sServiceUrl        which was specified in the model constructor.
     * @param oData data of the entry that should be created.
     * @param mParameters Optional parameter map containing any of the following properties:
     * @returns an object which has an <code>abort</code> function to abort the current request.
@@ -399,8 +399,8 @@ trait ODataModel extends Model {
   /**
     * Trigger a GET request to the odata service that was specified in the model constructor.The data will
     * be stored in the model. The requested data is returned with the response.
-    * @param sPath A string containing the path to the data which should		be retrieved. The path is
-    * concatenated to the sServiceUrl		which was specified in the model constructor.
+    * @param sPath A string containing the path to the data which should        be retrieved. The path is
+    * concatenated to the sServiceUrl        which was specified in the model constructor.
     * @param mParameters Optional parameter map containing any of the following properties:
     * @returns an object which has an <code>abort</code> function to abort the current request.
     */
@@ -417,7 +417,7 @@ trait ODataModel extends Model {
   def refreshMetadata(): JQueryPromise[_] = js.native
   /**
     * refresh XSRF token by performing a GET request against the service root URL.
-    * @param fnSuccess a callback function which is called when the data has           					 been
+    * @param fnSuccess a callback function which is called when the data has                                been
     * successfully retrieved.
     * @param fnError a callback function which is called when the request failed. The handler can have the
     * parameter: oError which contains additional error information.
@@ -427,7 +427,7 @@ trait ODataModel extends Model {
   def refreshSecurityToken(fnSuccess: js.Any, fnError: js.Any): js.Any = js.native
   /**
     * Trigger a DELETE request to the odata service that was specified in the model constructor.
-    * @param sPath A string containing the path to the data that should be removed.		The path is
+    * @param sPath A string containing the path to the data that should be removed.        The path is
     * concatenated to the sServiceUrl which was specified in the model constructor.
     * @param mParameters Optional, can contain the following attributes:
     * @returns an object which has an <code>abort</code> function to abort the current request.
@@ -436,7 +436,7 @@ trait ODataModel extends Model {
   def remove(sPath: String, mParameters: js.Any): js.Any = js.native
   /**
     * Resets the collected changes by the setProperty method.
-    * @param aPath Array of paths that should be resetted.							If no array is passed all changes will be
+    * @param aPath Array of paths that should be resetted.                            If no array is passed all changes will be
     * resetted.
     */
   def resetChanges(aPath: js.Array[_]): Unit = js.native
@@ -448,8 +448,8 @@ trait ODataModel extends Model {
   /**
     * Definition of batchGroups per EntityType for "TwoWay" changes
     * @param mGroups A map containing the definition of bacthGroups for TwoWay changes. The Map has
-    * thefollowing format:{		"EntityTypeName": {			batchGroupId: "ID",			[changeSetId: "ID",]			[single:
-    * true/false,]		}}bacthGroupId: Defines the bacthGroup for changes of the defined
+    * thefollowing format:{        "EntityTypeName": {            batchGroupId: "ID",            [changeSetId: "ID",]            [single:
+    * true/false,]        }}bacthGroupId: Defines the bacthGroup for changes of the defined
     * EntityTypeNamechangeSetId: Defines a changeSetId wich bundles the changes for the EntityType.single:
     * Defines if every change will get an own changeSet (true)
     */
@@ -457,8 +457,8 @@ trait ODataModel extends Model {
   /**
     * Definition of groups per EntityType for "TwoWay" changes
     * @param mGroups A map containing the definition of bacthGroups for TwoWay changes. The Map has
-    * thefollowing format:{		"EntityTypeName": {			groupId: "ID",			[changeSetId: "ID",]			[single:
-    * true/false,]		}}GroupId: Defines the Group for changes of the defined EntityTypeNamechangeSetId:
+    * thefollowing format:{        "EntityTypeName": {            groupId: "ID",            [changeSetId: "ID",]            [single:
+    * true/false,]        }}GroupId: Defines the Group for changes of the defined EntityTypeNamechangeSetId:
     * Defines a changeSetId wich bundles the changes for the EntityType.single: Defines if every change
     * will get an own changeSet (true)
     */
@@ -540,8 +540,8 @@ trait ODataModel extends Model {
     * update method used is defined by the global <code>defaultUpdateMethod</code> parameter which is
     * sap.ui.model.odata.UpdateMethod.Merge by default.Please note that deep updates are not supported and
     * may not work. These should be done seperate on the entry directly.
-    * @param sPath A string containing the path to the data that should be updated.		The path is
-    * concatenated to the sServiceUrl which was specified		in the model constructor.
+    * @param sPath A string containing the path to the data that should be updated.        The path is
+    * concatenated to the sServiceUrl which was specified        in the model constructor.
     * @param oData data of the entry that should be updated.
     * @param mParameters Optional, can contain the following attributes:
     * @returns an object which has an <code>abort</code> function to abort the current request.

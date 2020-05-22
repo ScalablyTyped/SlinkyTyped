@@ -35,6 +35,7 @@ package object coreMod {
   type ClassPrivateProperty = typingsSlinky.astTypes.nodesMod.ClassPrivateProperty
   type ClassProperty = typingsSlinky.astTypes.nodesMod.ClassProperty
   type ClassPropertyDefinition = typingsSlinky.astTypes.nodesMod.ClassPropertyDefinition
+  type Collection = typingsSlinky.jscodeshift.collectionMod.Collection[js.Any]
   type Comment = typingsSlinky.astTypes.nodesMod.Comment
   type CommentBlock = typingsSlinky.astTypes.nodesMod.CommentBlock
   type CommentLine = typingsSlinky.astTypes.nodesMod.CommentLine

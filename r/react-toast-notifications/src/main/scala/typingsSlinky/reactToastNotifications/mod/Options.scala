@@ -4,56 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var appearance: AppearanceTypes = js.native
-  var autoDismiss: js.UndefOr[Boolean] = js.native
-  var onDismiss: js.UndefOr[js.Function1[/* id */ String, Unit]] = js.native
+  var appearance: AppearanceTypes
+  var autoDismiss: js.UndefOr[Boolean] = js.undefined
+  var onDismiss: js.UndefOr[js.Function1[/* id */ String, Unit]] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(appearance: AppearanceTypes): Options = {
+  def apply(
+    appearance: AppearanceTypes,
+    autoDismiss: js.UndefOr[Boolean] = js.undefined,
+    onDismiss: /* id */ String => Unit = null
+  ): Options = {
     val __obj = js.Dynamic.literal(appearance = appearance.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoDismiss)) __obj.updateDynamic("autoDismiss")(autoDismiss.get.asInstanceOf[js.Any])
+    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppearance(value: AppearanceTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoDismiss(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDismiss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDismiss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDismiss(value: /* id */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDismiss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CPUTimerQuery extends js.Object {
-  var endMs: js.UndefOr[Double] = js.native
-  var startMs: Double = js.native
+  var endMs: js.UndefOr[Double] = js.undefined
+  var startMs: Double
 }
 
 object CPUTimerQuery {
   @scala.inline
-  def apply(startMs: Double): CPUTimerQuery = {
+  def apply(startMs: Double, endMs: js.UndefOr[Double] = js.undefined): CPUTimerQuery = {
     val __obj = js.Dynamic.literal(startMs = startMs.asInstanceOf[js.Any])
+    if (!js.isUndefined(endMs)) __obj.updateDynamic("endMs")(endMs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CPUTimerQuery]
   }
-  @scala.inline
-  implicit class CPUTimerQueryOps[Self <: CPUTimerQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endMs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

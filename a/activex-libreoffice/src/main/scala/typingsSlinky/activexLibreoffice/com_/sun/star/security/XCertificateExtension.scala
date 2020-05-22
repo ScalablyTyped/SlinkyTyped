@@ -12,14 +12,13 @@ import scala.scalajs.js.annotation._
   *
   * This interface represents a x509 certificate.
   */
-@js.native
 trait XCertificateExtension extends XInterface {
   /** Get the extension object identifier in string. */
-  var ExtensionId: SafeArray[Double] = js.native
+  var ExtensionId: SafeArray[Double]
   /** Get the extension value */
-  var ExtensionValue: SafeArray[Double] = js.native
+  var ExtensionValue: SafeArray[Double]
   /** Check whether it is a critical extension */
-  def isCritical(): Boolean = js.native
+  def isCritical(): Boolean
 }
 
 object XCertificateExtension {
@@ -35,31 +34,5 @@ object XCertificateExtension {
     val __obj = js.Dynamic.literal(ExtensionId = ExtensionId.asInstanceOf[js.Any], ExtensionValue = ExtensionValue.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), isCritical = js.Any.fromFunction0(isCritical), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCertificateExtension]
   }
-  @scala.inline
-  implicit class XCertificateExtensionOps[Self <: XCertificateExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtensionId(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtensionValue(value: SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsCritical(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCritical")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

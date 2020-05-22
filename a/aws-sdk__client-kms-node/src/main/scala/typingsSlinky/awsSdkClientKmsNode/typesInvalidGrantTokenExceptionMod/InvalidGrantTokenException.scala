@@ -13,7 +13,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InvalidGrantTokenException
   extends ServiceException[InvalidGrantTokenExceptionDetails]
      with CreateGrantExceptionsUnion
@@ -24,7 +23,7 @@ trait InvalidGrantTokenException
      with ReEncryptExceptionsUnion
      with RetireGrantExceptionsUnion {
   @JSName("name")
-  var name_InvalidGrantTokenException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.InvalidGrantTokenException = js.native
+  var name_InvalidGrantTokenException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.InvalidGrantTokenException
 }
 
 object InvalidGrantTokenException {
@@ -33,24 +32,12 @@ object InvalidGrantTokenException {
     $metadata: ResponseMetadata,
     details: InvalidGrantTokenExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.InvalidGrantTokenException
+    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.InvalidGrantTokenException,
+    stack: String = null
   ): InvalidGrantTokenException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidGrantTokenException]
   }
-  @scala.inline
-  implicit class InvalidGrantTokenExceptionOps[Self <: InvalidGrantTokenException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.InvalidGrantTokenException): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

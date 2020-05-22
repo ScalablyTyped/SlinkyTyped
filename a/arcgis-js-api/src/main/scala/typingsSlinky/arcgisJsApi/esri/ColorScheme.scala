@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +15,76 @@ trait ColorScheme extends js.Object
 
 object ColorScheme {
   @scala.inline
-  implicit def apply(value: ColorSchemeForMesh): ColorScheme = value.asInstanceOf[ColorScheme]
+  def ColorSchemeForPoint(
+    colors: js.Array[Color_],
+    colorsForClassBreaks: js.Array[ColorSchemeForPointColorsForClassBreaks],
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => Boolean,
+    id: String,
+    name: String,
+    noDataColor: Color_,
+    opacity: Double,
+    outline: ColorSchemeForPointOutline,
+    propertyIsEnumerable: PropertyKey => Boolean,
+    size: Double,
+    tags: js.Array[String],
+    theme: String
+  ): ColorScheme = {
+    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], colorsForClassBreaks = colorsForClassBreaks.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], noDataColor = noDataColor.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], outline = outline.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), size = size.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColorScheme]
+  }
   @scala.inline
-  implicit def apply(value: ColorSchemeForPoint): ColorScheme = value.asInstanceOf[ColorScheme]
+  def ColorSchemeForPolyline(
+    colors: js.Array[Color_],
+    colorsForClassBreaks: js.Array[ColorSchemeForPolylineColorsForClassBreaks],
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => Boolean,
+    id: String,
+    name: String,
+    noDataColor: Color_,
+    opacity: Double,
+    propertyIsEnumerable: PropertyKey => Boolean,
+    tags: js.Array[String],
+    theme: String,
+    width: Double
+  ): ColorScheme = {
+    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], colorsForClassBreaks = colorsForClassBreaks.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], noDataColor = noDataColor.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), tags = tags.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColorScheme]
+  }
   @scala.inline
-  implicit def apply(value: ColorSchemeForPolygon): ColorScheme = value.asInstanceOf[ColorScheme]
+  def ColorSchemeForPolygon(
+    colors: js.Array[Color_],
+    colorsForClassBreaks: js.Array[ColorSchemeForPolygonColorsForClassBreaks],
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => Boolean,
+    id: String,
+    name: String,
+    noDataColor: Color_,
+    opacity: Double,
+    outline: ColorSchemeForPolygonOutline,
+    propertyIsEnumerable: PropertyKey => Boolean,
+    tags: js.Array[String],
+    theme: String
+  ): ColorScheme = {
+    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], colorsForClassBreaks = colorsForClassBreaks.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], noDataColor = noDataColor.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], outline = outline.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), tags = tags.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColorScheme]
+  }
   @scala.inline
-  implicit def apply(value: ColorSchemeForPolyline): ColorScheme = value.asInstanceOf[ColorScheme]
+  def ColorSchemeForMesh(
+    colors: js.Array[Color_],
+    colorsForClassBreaks: js.Array[ColorSchemeForMeshColorsForClassBreaks],
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => Boolean,
+    id: String,
+    name: String,
+    noDataColor: Color_,
+    opacity: Double,
+    propertyIsEnumerable: PropertyKey => Boolean,
+    tags: js.Array[String],
+    theme: String
+  ): ColorScheme = {
+    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], colorsForClassBreaks = colorsForClassBreaks.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], noDataColor = noDataColor.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), tags = tags.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColorScheme]
+  }
 }
 

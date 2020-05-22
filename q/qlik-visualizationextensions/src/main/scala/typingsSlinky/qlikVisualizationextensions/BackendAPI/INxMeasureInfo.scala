@@ -4,61 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INxMeasureInfo extends js.Object {
   /**
     * Length of the longest value in the field.
     * Integer
     */
-  var qApprMaxGlyphCount: Double = js.native
+  var qApprMaxGlyphCount: Double
   /**
     * List of attribute dimensions.
     */
-  var qAttrDimInfo: js.Array[INxMeasureInfo] = js.native
+  var qAttrDimInfo: js.Array[INxMeasureInfo]
   /**
     * List of attribute expressions.
     */
-  var qAttrExprInfo: js.Array[INxAttrExprInfo] = js.native
+  var qAttrExprInfo: js.Array[INxAttrExprInfo]
   /**
     * Number of distinct field values.
     * Integer
     */
-  var qCardinal: Double = js.native
+  var qCardinal: Double
   /**
     * This parameter is optional. Gives information on the error.
     */
-  var qError: INxValidationError = js.native
+  var qError: INxValidationError
   /**
     * Corresponds to the label of the measure. If the label is not defined then the measure name is used.
     * String
     */
-  var qFallbackTitle: String = js.native
+  var qFallbackTitle: String
   /**
     * This parameter is set to true if qNumFormat is set to U (unknown).
     * The engine guesses the type of the field based on the field's expression.
     */
-  var qIsAutoFormat: Boolean = js.native
+  var qIsAutoFormat: Boolean
   /**
     * Highest value in the range.
     */
-  var qMax: Double = js.native
+  var qMax: Double
   /**
     * Lowest value in the range.
     */
-  var qMin: Double = js.native
+  var qMin: Double
   /**
     * Format of the field. This parameter is optional.
     * One of: N for no sorting, A for sorting ascending, D for sorting descending
     */
-  var qNumFormat: IFieldAttributes = js.native
+  var qNumFormat: IFieldAttributes
   /**
     * If set to true, it inverts the sort criteria in the field.
     */
-  var qReverseSort: Boolean = js.native
+  var qReverseSort: Boolean
   /**
     * Sort indicator. This parameter is optional. The default value is no sorting.
     */
-  var qSortIndicator: SortIndicatorType = js.native
+  var qSortIndicator: SortIndicatorType
 }
 
 object INxMeasureInfo {
@@ -80,85 +79,5 @@ object INxMeasureInfo {
     val __obj = js.Dynamic.literal(qApprMaxGlyphCount = qApprMaxGlyphCount.asInstanceOf[js.Any], qAttrDimInfo = qAttrDimInfo.asInstanceOf[js.Any], qAttrExprInfo = qAttrExprInfo.asInstanceOf[js.Any], qCardinal = qCardinal.asInstanceOf[js.Any], qError = qError.asInstanceOf[js.Any], qFallbackTitle = qFallbackTitle.asInstanceOf[js.Any], qIsAutoFormat = qIsAutoFormat.asInstanceOf[js.Any], qMax = qMax.asInstanceOf[js.Any], qMin = qMin.asInstanceOf[js.Any], qNumFormat = qNumFormat.asInstanceOf[js.Any], qReverseSort = qReverseSort.asInstanceOf[js.Any], qSortIndicator = qSortIndicator.asInstanceOf[js.Any])
     __obj.asInstanceOf[INxMeasureInfo]
   }
-  @scala.inline
-  implicit class INxMeasureInfoOps[Self <: INxMeasureInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQApprMaxGlyphCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qApprMaxGlyphCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQAttrDimInfo(value: js.Array[INxMeasureInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttrDimInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQAttrExprInfo(value: js.Array[INxAttrExprInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttrExprInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQCardinal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qCardinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQError(value: INxValidationError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQFallbackTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qFallbackTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQIsAutoFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIsAutoFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qMin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQNumFormat(value: IFieldAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNumFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQReverseSort(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qReverseSort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSortIndicator(value: SortIndicatorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qSortIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

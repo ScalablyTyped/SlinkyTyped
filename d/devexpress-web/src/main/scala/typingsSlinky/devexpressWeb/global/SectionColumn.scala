@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SectionColumn")
 @js.native
 class SectionColumn ()
-  extends typingsSlinky.devexpressWeb.SectionColumn
+  extends typingsSlinky.devexpressWeb.SectionColumn {
+  /**
+    * Specifies the space between adjacent section columns.
+    */
+  /* CompleteClass */
+  override var spacing: Double = js.native
+  /**
+    * Specifies the width of the section column.
+    */
+  /* CompleteClass */
+  override var width: Double = js.native
+}
 

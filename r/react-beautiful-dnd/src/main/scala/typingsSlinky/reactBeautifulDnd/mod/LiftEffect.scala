@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LiftEffect extends js.Object {
-  var displacedBy: DisplacedBy = js.native
-  var effected: DraggableIdMap = js.native
-  var inVirtualList: Boolean = js.native
+  var displacedBy: DisplacedBy
+  var effected: DraggableIdMap
+  var inVirtualList: Boolean
 }
 
 object LiftEffect {
@@ -17,31 +16,5 @@ object LiftEffect {
     val __obj = js.Dynamic.literal(displacedBy = displacedBy.asInstanceOf[js.Any], effected = effected.asInstanceOf[js.Any], inVirtualList = inVirtualList.asInstanceOf[js.Any])
     __obj.asInstanceOf[LiftEffect]
   }
-  @scala.inline
-  implicit class LiftEffectOps[Self <: LiftEffect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplacedBy(value: DisplacedBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEffected(value: DraggableIdMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInVirtualList(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inVirtualList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -33,77 +33,20 @@ trait SchemaGdataDiffChecksumsResponse extends js.Object {
 
 object SchemaGdataDiffChecksumsResponse {
   @scala.inline
-  def apply(): SchemaGdataDiffChecksumsResponse = {
+  def apply(
+    checksumsLocation: SchemaGdataCompositeMedia = null,
+    chunkSizeBytes: String = null,
+    objectLocation: SchemaGdataCompositeMedia = null,
+    objectSizeBytes: String = null,
+    objectVersion: String = null
+  ): SchemaGdataDiffChecksumsResponse = {
     val __obj = js.Dynamic.literal()
+    if (checksumsLocation != null) __obj.updateDynamic("checksumsLocation")(checksumsLocation.asInstanceOf[js.Any])
+    if (chunkSizeBytes != null) __obj.updateDynamic("chunkSizeBytes")(chunkSizeBytes.asInstanceOf[js.Any])
+    if (objectLocation != null) __obj.updateDynamic("objectLocation")(objectLocation.asInstanceOf[js.Any])
+    if (objectSizeBytes != null) __obj.updateDynamic("objectSizeBytes")(objectSizeBytes.asInstanceOf[js.Any])
+    if (objectVersion != null) __obj.updateDynamic("objectVersion")(objectVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGdataDiffChecksumsResponse]
   }
-  @scala.inline
-  implicit class SchemaGdataDiffChecksumsResponseOps[Self <: SchemaGdataDiffChecksumsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChecksumsLocation(value: SchemaGdataCompositeMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksumsLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksumsLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksumsLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChunkSizeBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectLocation(value: SchemaGdataCompositeMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectSizeBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

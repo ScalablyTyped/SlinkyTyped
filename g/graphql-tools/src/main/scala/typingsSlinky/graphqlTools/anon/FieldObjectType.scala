@@ -8,10 +8,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldObjectType extends js.Object {
-  var field: GraphQLField[_, _, StringDictionary[_]] = js.native
-  var objectType: (GraphQLObjectType[_, _, StringDictionary[_]]) | GraphQLInterfaceType = js.native
+  var field: GraphQLField[_, _, StringDictionary[_]]
+  var objectType: (GraphQLObjectType[_, _, StringDictionary[_]]) | GraphQLInterfaceType
 }
 
 object FieldObjectType {
@@ -23,25 +22,5 @@ object FieldObjectType {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], objectType = objectType.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldObjectType]
   }
-  @scala.inline
-  implicit class FieldObjectTypeOps[Self <: FieldObjectType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: GraphQLField[_, _, StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjectType(value: (GraphQLObjectType[_, _, StringDictionary[_]]) | GraphQLInterfaceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

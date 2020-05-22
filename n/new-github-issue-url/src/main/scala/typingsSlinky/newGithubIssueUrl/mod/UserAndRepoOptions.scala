@@ -4,45 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserAndRepoOptions
   extends CommonOptions
      with Options {
   /**
   		GitHub repo.
   		*/
-  val repo: String = js.native
+  val repo: String
   /**
   		GitHub username or organization.
   		*/
-  val user: String = js.native
+  val user: String
 }
 
 object UserAndRepoOptions {
   @scala.inline
-  def apply(repo: String, user: String): UserAndRepoOptions = {
+  def apply(
+    repo: String,
+    user: String,
+    assignee: String = null,
+    body: String = null,
+    labels: js.Array[String] = null,
+    milestone: String = null,
+    projects: js.Array[String] = null,
+    template: String = null,
+    title: String = null
+  ): UserAndRepoOptions = {
     val __obj = js.Dynamic.literal(repo = repo.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
+    if (assignee != null) __obj.updateDynamic("assignee")(assignee.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (milestone != null) __obj.updateDynamic("milestone")(milestone.asInstanceOf[js.Any])
+    if (projects != null) __obj.updateDynamic("projects")(projects.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserAndRepoOptions]
   }
-  @scala.inline
-  implicit class UserAndRepoOptionsOps[Self <: UserAndRepoOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRepo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

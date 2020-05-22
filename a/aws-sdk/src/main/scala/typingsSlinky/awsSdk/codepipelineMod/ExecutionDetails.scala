@@ -22,53 +22,16 @@ trait ExecutionDetails extends js.Object {
 
 object ExecutionDetails {
   @scala.inline
-  def apply(): ExecutionDetails = {
+  def apply(
+    externalExecutionId: ExecutionId = null,
+    percentComplete: js.UndefOr[Percentage] = js.undefined,
+    summary: ExecutionSummary = null
+  ): ExecutionDetails = {
     val __obj = js.Dynamic.literal()
+    if (externalExecutionId != null) __obj.updateDynamic("externalExecutionId")(externalExecutionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(percentComplete)) __obj.updateDynamic("percentComplete")(percentComplete.get.asInstanceOf[js.Any])
+    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionDetails]
   }
-  @scala.inline
-  implicit class ExecutionDetailsOps[Self <: ExecutionDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExternalExecutionId(value: ExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalExecutionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentComplete(value: Percentage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: ExecutionSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

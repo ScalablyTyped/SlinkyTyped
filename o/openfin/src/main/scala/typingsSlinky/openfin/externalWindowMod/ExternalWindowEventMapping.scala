@@ -12,29 +12,32 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined openfin.openfin/_v2/api/events/base.BaseEventMap & std.Pick<openfin.openfin/_v2/api/events/window.WindowEventMapping<string, string>, 'begin-user-bounds-changing' | 'blurred' | 'bounds-changed' | 'bounds-changing' | 'closed' | 'closing' | 'disabled-movement-bounds-changed' | 'disabled-movement-bounds-changing' | 'end-user-bounds-changing' | 'focused' | 'group-changed' | 'hidden' | 'maximized' | 'minimized' | 'restored' | 'shown' | 'user-movement-disabled' | 'user-movement-enabled'> */
-@js.native
 trait ExternalWindowEventMapping[Topic, Type]
-  extends /* name */ StringDictionary[js.Any] {
-  var `begin-user-bounds-changing`: WindowBeginBoundsChangingEvent[String, String] = js.native
-  var blurred: WindowEvent[String, String] = js.native
-  var `bounds-changed`: WindowBoundsChange[String, String] = js.native
-  var `bounds-changing`: WindowBoundsChange[String, String] = js.native
-  var closed: WindowEvent[String, String] = js.native
-  var closing: WindowEvent[String, String] = js.native
-  var `disabled-movement-bounds-changed`: WindowBoundsChange[String, String] = js.native
-  var `disabled-movement-bounds-changing`: WindowBoundsChange[String, String] = js.native
-  var `end-user-bounds-changing`: WindowEndBoundsChangingEvent[String, String] = js.native
-  var focused: WindowEvent[String, String] = js.native
-  var `group-changed`: WindowGroupChanged[String, String] = js.native
-  var hidden: WindowHiddenEvent[String, String] = js.native
-  var listenerRemoved: String = js.native
-  var maximized: WindowEvent[String, String] = js.native
-  var minimized: WindowEvent[String, String] = js.native
-  var newListener: String = js.native
-  var restored: WindowEvent[String, String] = js.native
-  var shown: WindowEvent[String, String] = js.native
-  var `user-movement-disabled`: WindowEvent[String, String] = js.native
-  var `user-movement-enabled`: WindowEvent[String, String] = js.native
+  extends /**
+  * @hidden
+  * Custom properties and metadata. This can be extended in specific context object.
+  */
+/* key */ StringDictionary[js.Any] {
+  var `begin-user-bounds-changing`: WindowBeginBoundsChangingEvent[String, String]
+  var blurred: WindowEvent[String, String]
+  var `bounds-changed`: WindowBoundsChange[String, String]
+  var `bounds-changing`: WindowBoundsChange[String, String]
+  var closed: WindowEvent[String, String]
+  var closing: WindowEvent[String, String]
+  var `disabled-movement-bounds-changed`: WindowBoundsChange[String, String]
+  var `disabled-movement-bounds-changing`: WindowBoundsChange[String, String]
+  var `end-user-bounds-changing`: WindowEndBoundsChangingEvent[String, String]
+  var focused: WindowEvent[String, String]
+  var `group-changed`: WindowGroupChanged[String, String]
+  var hidden: WindowHiddenEvent[String, String]
+  var listenerRemoved: String
+  var maximized: WindowEvent[String, String]
+  var minimized: WindowEvent[String, String]
+  var newListener: String
+  var restored: WindowEvent[String, String]
+  var shown: WindowEvent[String, String]
+  var `user-movement-disabled`: WindowEvent[String, String]
+  var `user-movement-enabled`: WindowEvent[String, String]
 }
 
 object ExternalWindowEventMapping {
@@ -59,7 +62,8 @@ object ExternalWindowEventMapping {
     restored: WindowEvent[String, String],
     shown: WindowEvent[String, String],
     `user-movement-disabled`: WindowEvent[String, String],
-    `user-movement-enabled`: WindowEvent[String, String]
+    `user-movement-enabled`: WindowEvent[String, String],
+    StringDictionary: /* name */ StringDictionary[js.Any] = null
   ): ExternalWindowEventMapping[Topic, Type] = {
     val __obj = js.Dynamic.literal(blurred = blurred.asInstanceOf[js.Any], closed = closed.asInstanceOf[js.Any], closing = closing.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], hidden = hidden.asInstanceOf[js.Any], listenerRemoved = listenerRemoved.asInstanceOf[js.Any], maximized = maximized.asInstanceOf[js.Any], minimized = minimized.asInstanceOf[js.Any], newListener = newListener.asInstanceOf[js.Any], restored = restored.asInstanceOf[js.Any], shown = shown.asInstanceOf[js.Any])
     __obj.updateDynamic("begin-user-bounds-changing")(`begin-user-bounds-changing`.asInstanceOf[js.Any])
@@ -71,135 +75,8 @@ object ExternalWindowEventMapping {
     __obj.updateDynamic("group-changed")(`group-changed`.asInstanceOf[js.Any])
     __obj.updateDynamic("user-movement-disabled")(`user-movement-disabled`.asInstanceOf[js.Any])
     __obj.updateDynamic("user-movement-enabled")(`user-movement-enabled`.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[ExternalWindowEventMapping[Topic, Type]]
   }
-  @scala.inline
-  implicit class ExternalWindowEventMappingOps[Self[topic, `type`] <: ExternalWindowEventMapping[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
-    @scala.inline
-    def `withBegin-user-bounds-changing`(value: WindowBeginBoundsChangingEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("begin-user-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlurred(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurred")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBounds-changed`(value: WindowBoundsChange[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withBounds-changing`(value: WindowBoundsChange[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClosed(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClosing(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDisabled-movement-bounds-changed`(value: WindowBoundsChange[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled-movement-bounds-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDisabled-movement-bounds-changing`(value: WindowBoundsChange[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled-movement-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withEnd-user-bounds-changing`(value: WindowEndBoundsChangingEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end-user-bounds-changing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocused(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withGroup-changed`(value: WindowGroupChanged[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group-changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHidden(value: WindowHiddenEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListenerRemoved(value: String): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listenerRemoved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximized(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimized(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewListener(value: String): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newListener")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRestored(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restored")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShown(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withUser-movement-disabled`(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user-movement-disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withUser-movement-enabled`(value: WindowEvent[String, String]): Self[Topic, Type] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user-movement-enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

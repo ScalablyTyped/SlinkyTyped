@@ -94,25 +94,25 @@ object Geom extends js.Object {
       * Sets this Circle to be empty with a radius of zero.
       * Does not change its position.
       */
-    def setEmpty(): Circle = js.native
+    def setEmpty(): this.type = js.native
     /**
       * Sets the position of this Circle.
       * @param x The x position of the center of the circle. Default 0.
       * @param y The y position of the center of the circle. Default 0.
       */
-    def setPosition(): Circle = js.native
-    def setPosition(x: Double): Circle = js.native
-    def setPosition(x: Double, y: Double): Circle = js.native
+    def setPosition(): this.type = js.native
+    def setPosition(x: Double): this.type = js.native
+    def setPosition(x: Double, y: Double): this.type = js.native
     /**
       * Sets the x, y and radius of this circle.
       * @param x The x position of the center of the circle. Default 0.
       * @param y The y position of the center of the circle. Default 0.
       * @param radius The radius of the circle. Default 0.
       */
-    def setTo(): Circle = js.native
-    def setTo(x: Double): Circle = js.native
-    def setTo(x: Double, y: Double): Circle = js.native
-    def setTo(x: Double, y: Double, radius: Double): Circle = js.native
+    def setTo(): this.type = js.native
+    def setTo(x: Double): this.type = js.native
+    def setTo(x: Double, y: Double): this.type = js.native
+    def setTo(x: Double, y: Double, radius: Double): this.type = js.native
   }
   
   /**
@@ -208,21 +208,21 @@ object Geom extends js.Object {
       * Sets this Ellipse to be empty with a width and height of zero.
       * Does not change its position.
       */
-    def setEmpty(): Ellipse = js.native
+    def setEmpty(): this.type = js.native
     /**
       * Sets the position of this Ellipse.
       * @param x The x position of the center of the ellipse.
       * @param y The y position of the center of the ellipse.
       */
-    def setPosition(x: Double, y: Double): Ellipse = js.native
+    def setPosition(x: Double, y: Double): this.type = js.native
     /**
       * Sets the size of this Ellipse.
       * Does not change its position.
       * @param width The width of the ellipse.
       * @param height The height of the ellipse. Default width.
       */
-    def setSize(width: Double): Ellipse = js.native
-    def setSize(width: Double, height: Double): Ellipse = js.native
+    def setSize(width: Double): this.type = js.native
+    def setSize(width: Double, height: Double): this.type = js.native
     /**
       * Sets the x, y, width and height of this ellipse.
       * @param x The x position of the center of the ellipse.
@@ -230,7 +230,7 @@ object Geom extends js.Object {
       * @param width The width of the ellipse.
       * @param height The height of the ellipse.
       */
-    def setTo(x: Double, y: Double, width: Double, height: Double): Ellipse = js.native
+    def setTo(x: Double, y: Double, width: Double, height: Double): this.type = js.native
   }
   
   /**
@@ -321,11 +321,11 @@ object Geom extends js.Object {
       * @param x2 The x coordinate of the lines ending point. Default 0.
       * @param y2 The y coordinate of the lines ending point. Default 0.
       */
-    def setTo(): Line = js.native
-    def setTo(x1: Double): Line = js.native
-    def setTo(x1: Double, y1: Double): Line = js.native
-    def setTo(x1: Double, y1: Double, x2: Double): Line = js.native
-    def setTo(x1: Double, y1: Double, x2: Double, y2: Double): Line = js.native
+    def setTo(): this.type = js.native
+    def setTo(x1: Double): this.type = js.native
+    def setTo(x1: Double, y1: Double): this.type = js.native
+    def setTo(x1: Double, y1: Double, x2: Double): this.type = js.native
+    def setTo(x1: Double, y1: Double, x2: Double, y2: Double): this.type = js.native
   }
   
   /**
@@ -351,9 +351,9 @@ object Geom extends js.Object {
       * @param x The x coordinate of this Point. Default 0.
       * @param y The y coordinate of this Point. Default x.
       */
-    def setTo(): Point = js.native
-    def setTo(x: Double): Point = js.native
-    def setTo(x: Double, y: Double): Point = js.native
+    def setTo(): this.type = js.native
+    def setTo(x: Double): this.type = js.native
+    def setTo(x: Double, y: Double): this.type = js.native
   }
   
   /**
@@ -414,7 +414,7 @@ object Geom extends js.Object {
       * `setTo` may also be called without any arguments to remove all points.
       * @param points Points defining the perimeter of this polygon. Please check function description above for the different supported formats.
       */
-    def setTo(points: js.Array[_]): Polygon = js.native
+    def setTo(points: js.Array[_]): this.type = js.native
   }
   
   /**
@@ -534,21 +534,21 @@ object Geom extends js.Object {
     /**
       * Resets the position, width, and height of the Rectangle to 0.
       */
-    def setEmpty(): Rectangle = js.native
+    def setEmpty(): this.type = js.native
     /**
       * Sets the position of the Rectangle.
       * @param x The X coordinate of the top left corner of the Rectangle.
       * @param y The Y coordinate of the top left corner of the Rectangle. Default x.
       */
-    def setPosition(x: Double): Rectangle = js.native
-    def setPosition(x: Double, y: Double): Rectangle = js.native
+    def setPosition(x: Double): this.type = js.native
+    def setPosition(x: Double, y: Double): this.type = js.native
     /**
       * Sets the width and height of the Rectangle.
       * @param width The width to set the Rectangle to.
       * @param height The height to set the Rectangle to. Default width.
       */
-    def setSize(width: Double): Rectangle = js.native
-    def setSize(width: Double, height: Double): Rectangle = js.native
+    def setSize(width: Double): this.type = js.native
+    def setSize(width: Double, height: Double): this.type = js.native
     /**
       * Sets the position, width, and height of the Rectangle.
       * @param x The X coordinate of the top left corner of the Rectangle.
@@ -556,7 +556,7 @@ object Geom extends js.Object {
       * @param width The width of the Rectangle.
       * @param height The height of the Rectangle.
       */
-    def setTo(x: Double, y: Double, width: Double, height: Double): Rectangle = js.native
+    def setTo(x: Double, y: Double, width: Double, height: Double): this.type = js.native
   }
   
   /**
@@ -673,7 +673,7 @@ object Geom extends js.Object {
       y2: js.UndefOr[Double],
       x3: js.UndefOr[Double],
       y3: js.UndefOr[Double]
-    ): Triangle = js.native
+    ): this.type = js.native
   }
   
 }

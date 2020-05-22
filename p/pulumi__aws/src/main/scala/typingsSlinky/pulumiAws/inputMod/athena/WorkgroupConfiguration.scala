@@ -27,65 +27,18 @@ trait WorkgroupConfiguration extends js.Object {
 
 object WorkgroupConfiguration {
   @scala.inline
-  def apply(): WorkgroupConfiguration = {
+  def apply(
+    bytesScannedCutoffPerQuery: Input[Double] = null,
+    enforceWorkgroupConfiguration: Input[Boolean] = null,
+    publishCloudwatchMetricsEnabled: Input[Boolean] = null,
+    resultConfiguration: Input[WorkgroupConfigurationResultConfiguration] = null
+  ): WorkgroupConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (bytesScannedCutoffPerQuery != null) __obj.updateDynamic("bytesScannedCutoffPerQuery")(bytesScannedCutoffPerQuery.asInstanceOf[js.Any])
+    if (enforceWorkgroupConfiguration != null) __obj.updateDynamic("enforceWorkgroupConfiguration")(enforceWorkgroupConfiguration.asInstanceOf[js.Any])
+    if (publishCloudwatchMetricsEnabled != null) __obj.updateDynamic("publishCloudwatchMetricsEnabled")(publishCloudwatchMetricsEnabled.asInstanceOf[js.Any])
+    if (resultConfiguration != null) __obj.updateDynamic("resultConfiguration")(resultConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkgroupConfiguration]
   }
-  @scala.inline
-  implicit class WorkgroupConfigurationOps[Self <: WorkgroupConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBytesScannedCutoffPerQuery(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesScannedCutoffPerQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBytesScannedCutoffPerQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesScannedCutoffPerQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforceWorkgroupConfiguration(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceWorkgroupConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforceWorkgroupConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceWorkgroupConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishCloudwatchMetricsEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishCloudwatchMetricsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishCloudwatchMetricsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishCloudwatchMetricsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultConfiguration(value: Input[WorkgroupConfigurationResultConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

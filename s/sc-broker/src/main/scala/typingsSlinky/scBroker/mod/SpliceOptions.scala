@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SpliceOptions extends js.Object {
-  var count: js.UndefOr[Double] = js.native
-  var getValue: js.UndefOr[Boolean] = js.native
-  var index: js.UndefOr[Double] = js.native
-  var items: js.UndefOr[js.Array[_]] = js.native
-  var noAck: js.UndefOr[Boolean] = js.native
+  var count: js.UndefOr[Double] = js.undefined
+  var getValue: js.UndefOr[Boolean] = js.undefined
+  var index: js.UndefOr[Double] = js.undefined
+  var items: js.UndefOr[js.Array[_]] = js.undefined
+  var noAck: js.UndefOr[Boolean] = js.undefined
 }
 
 object SpliceOptions {
   @scala.inline
-  def apply(): SpliceOptions = {
+  def apply(
+    count: js.UndefOr[Double] = js.undefined,
+    getValue: js.UndefOr[Boolean] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    items: js.Array[_] = null,
+    noAck: js.UndefOr[Boolean] = js.undefined
+  ): SpliceOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(getValue)) __obj.updateDynamic("getValue")(getValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (!js.isUndefined(noAck)) __obj.updateDynamic("noAck")(noAck.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpliceOptions]
   }
-  @scala.inline
-  implicit class SpliceOptionsOps[Self <: SpliceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoAck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoAck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAck")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsOverlapping extends js.Object {
-  var isOverlapping: scala.Double = js.native
-  var oK: scala.Double = js.native
+  var isOverlapping: scala.Double
+  var oK: scala.Double
 }
 
 object IsOverlapping {
@@ -16,25 +15,5 @@ object IsOverlapping {
     val __obj = js.Dynamic.literal(isOverlapping = isOverlapping.asInstanceOf[js.Any], oK = oK.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsOverlapping]
   }
-  @scala.inline
-  implicit class IsOverlappingOps[Self <: IsOverlapping] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsOverlapping(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOverlapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOK(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oK")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

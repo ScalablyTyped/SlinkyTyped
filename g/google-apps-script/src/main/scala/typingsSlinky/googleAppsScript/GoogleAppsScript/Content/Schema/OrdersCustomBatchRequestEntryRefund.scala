@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrdersCustomBatchRequestEntryRefund extends js.Object {
-  var amount: js.UndefOr[Price] = js.native
-  var amountPretax: js.UndefOr[Price] = js.native
-  var amountTax: js.UndefOr[Price] = js.native
-  var reason: js.UndefOr[String] = js.native
-  var reasonText: js.UndefOr[String] = js.native
+  var amount: js.UndefOr[Price] = js.undefined
+  var amountPretax: js.UndefOr[Price] = js.undefined
+  var amountTax: js.UndefOr[Price] = js.undefined
+  var reason: js.UndefOr[String] = js.undefined
+  var reasonText: js.UndefOr[String] = js.undefined
 }
 
 object OrdersCustomBatchRequestEntryRefund {
   @scala.inline
-  def apply(): OrdersCustomBatchRequestEntryRefund = {
+  def apply(
+    amount: Price = null,
+    amountPretax: Price = null,
+    amountTax: Price = null,
+    reason: String = null,
+    reasonText: String = null
+  ): OrdersCustomBatchRequestEntryRefund = {
     val __obj = js.Dynamic.literal()
+    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
+    if (amountPretax != null) __obj.updateDynamic("amountPretax")(amountPretax.asInstanceOf[js.Any])
+    if (amountTax != null) __obj.updateDynamic("amountTax")(amountTax.asInstanceOf[js.Any])
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (reasonText != null) __obj.updateDynamic("reasonText")(reasonText.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrdersCustomBatchRequestEntryRefund]
   }
-  @scala.inline
-  implicit class OrdersCustomBatchRequestEntryRefundOps[Self <: OrdersCustomBatchRequestEntryRefund] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmountPretax(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amountPretax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmountPretax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amountPretax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmountTax(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amountTax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmountTax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amountTax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

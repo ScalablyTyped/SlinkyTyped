@@ -19,28 +19,27 @@ import scala.scalajs.js.annotation._
   * node state to the debug if the last is provided.
   *
   */
-@js.native
 trait Tick extends js.Object {
   /**
     * Callback when closing a node (called by BaseNode).
     */
-  def _closeNode(node: js.Any): Unit = js.native
+  def _closeNode(node: js.Any): Unit
   /**
     * Called when entering a node (called by BaseNode).
     */
-  def _enterNode(node: js.Any): Unit = js.native
+  def _enterNode(node: js.Any): Unit
   /**
     * Callback when exiting a node (called by BaseNode).
     */
-  def _exitNode(node: js.Any): Unit = js.native
+  def _exitNode(node: js.Any): Unit
   /**
     * Callback when opening a node (called by BaseNode).
     */
-  def _openNode(node: js.Any): Unit = js.native
+  def _openNode(node: js.Any): Unit
   /**
     * Callback when ticking a node (called by BaseNode).
     */
-  def _tickNode(node: js.Any): Unit = js.native
+  def _tickNode(node: js.Any): Unit
 }
 
 object Tick {
@@ -55,43 +54,5 @@ object Tick {
     val __obj = js.Dynamic.literal(_closeNode = js.Any.fromFunction1(_closeNode), _enterNode = js.Any.fromFunction1(_enterNode), _exitNode = js.Any.fromFunction1(_exitNode), _openNode = js.Any.fromFunction1(_openNode), _tickNode = js.Any.fromFunction1(_tickNode))
     __obj.asInstanceOf[Tick]
   }
-  @scala.inline
-  implicit class TickOps[Self <: Tick] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_closeNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_closeNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_enterNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_enterNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_exitNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_exitNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_openNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_openNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_tickNode(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_tickNode")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

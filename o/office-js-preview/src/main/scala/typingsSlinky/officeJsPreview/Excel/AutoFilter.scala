@@ -22,21 +22,21 @@ trait AutoFilter extends ClientObject {
   var context_AutoFilter: RequestContext = js.native
   /**
     *
-    * An array that holds all the filter criteria in the autofiltered range. Read-Only.
+    * An array that holds all the filter criteria in the autofiltered range.
     *
     * [Api set: ExcelApi 1.9]
     */
   val criteria: js.Array[FilterCriteria] = js.native
   /**
     *
-    * Indicates if the AutoFilter is enabled or not. Read-Only.
+    * Specifies if the AutoFilter is enabled.
     *
     * [Api set: ExcelApi 1.9]
     */
   val enabled: Boolean = js.native
   /**
     *
-    * Indicates if the AutoFilter has filter criteria. Read-Only.
+    * Specifies if the AutoFilter has filter criteria.
     *
     * [Api set: ExcelApi 1.9]
     */

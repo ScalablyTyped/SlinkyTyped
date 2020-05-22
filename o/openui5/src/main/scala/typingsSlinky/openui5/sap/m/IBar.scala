@@ -10,6 +10,5 @@ import scala.scalajs.js.annotation._
   * method and return false
   * @resource sap/m/library.js
   */
-@js.native
 trait IBar extends js.Object
 

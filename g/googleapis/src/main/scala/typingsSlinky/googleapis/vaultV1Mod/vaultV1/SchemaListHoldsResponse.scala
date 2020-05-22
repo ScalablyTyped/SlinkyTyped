@@ -22,41 +22,11 @@ trait SchemaListHoldsResponse extends js.Object {
 
 object SchemaListHoldsResponse {
   @scala.inline
-  def apply(): SchemaListHoldsResponse = {
+  def apply(holds: js.Array[SchemaHold] = null, nextPageToken: String = null): SchemaListHoldsResponse = {
     val __obj = js.Dynamic.literal()
+    if (holds != null) __obj.updateDynamic("holds")(holds.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListHoldsResponse]
   }
-  @scala.inline
-  implicit class SchemaListHoldsResponseOps[Self <: SchemaListHoldsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHolds(value: js.Array[SchemaHold]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHolds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

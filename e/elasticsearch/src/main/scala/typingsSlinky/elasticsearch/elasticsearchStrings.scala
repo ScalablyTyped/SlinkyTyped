@@ -4,8 +4,8 @@ import typingsSlinky.elasticsearch.mod.CatBytes
 import typingsSlinky.elasticsearch.mod.Conflicts
 import typingsSlinky.elasticsearch.mod.DefaultOperator
 import typingsSlinky.elasticsearch.mod.ExpandWildcards
-import typingsSlinky.elasticsearch.mod.Refresh
 import typingsSlinky.elasticsearch.mod.VersionType
+import typingsSlinky.elasticsearch.mod._Refresh
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object elasticsearchStrings {
   sealed trait OR extends DefaultOperator
   
   @js.native
-  sealed trait _empty extends Refresh
+  sealed trait _empty extends _Refresh
   
   @js.native
   sealed trait abort extends Conflicts
@@ -162,7 +162,7 @@ object elasticsearchStrings {
   sealed trait wait extends js.Object
   
   @js.native
-  sealed trait wait_for extends Refresh
+  sealed trait wait_for extends _Refresh
   
   @js.native
   sealed trait yellow extends js.Object

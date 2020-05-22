@@ -10,9 +10,7 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line:no-empty-interface
 @JSImport("rax", "Component")
 @js.native
-class Component[P, S, SS] protected ()
-  extends ComponentLifecycle[P, S, SS]
-     with RaxInstance {
+class Component[P, S, SS] protected () extends ComponentLifecycle[P, S, SS] {
   def this(props: P) = this()
   val props: P with ReadonlychildrenRaxNode = js.native
   var state: S = js.native

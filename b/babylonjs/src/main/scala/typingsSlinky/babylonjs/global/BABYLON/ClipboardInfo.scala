@@ -24,6 +24,16 @@ class ClipboardInfo protected ()
     */
   event: ClipboardEvent
   ) = this()
+  /**
+    * Defines the related dom event
+    */
+  /* CompleteClass */
+  override var event: ClipboardEvent = js.native
+  /**
+    * Defines the type of event (BABYLON.ClipboardEventTypes)
+    */
+  /* CompleteClass */
+  override var `type`: Double = js.native
 }
 
 /* static members */

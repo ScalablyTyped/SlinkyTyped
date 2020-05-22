@@ -49,125 +49,28 @@ trait SchemaParallelInstruction extends js.Object {
 
 object SchemaParallelInstruction {
   @scala.inline
-  def apply(): SchemaParallelInstruction = {
+  def apply(
+    flatten: SchemaFlattenInstruction = null,
+    name: String = null,
+    originalName: String = null,
+    outputs: js.Array[SchemaInstructionOutput] = null,
+    parDo: SchemaParDoInstruction = null,
+    partialGroupByKey: SchemaPartialGroupByKeyInstruction = null,
+    read: SchemaReadInstruction = null,
+    systemName: String = null,
+    write: SchemaWriteInstruction = null
+  ): SchemaParallelInstruction = {
     val __obj = js.Dynamic.literal()
+    if (flatten != null) __obj.updateDynamic("flatten")(flatten.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (originalName != null) __obj.updateDynamic("originalName")(originalName.asInstanceOf[js.Any])
+    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
+    if (parDo != null) __obj.updateDynamic("parDo")(parDo.asInstanceOf[js.Any])
+    if (partialGroupByKey != null) __obj.updateDynamic("partialGroupByKey")(partialGroupByKey.asInstanceOf[js.Any])
+    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
+    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
+    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaParallelInstruction]
   }
-  @scala.inline
-  implicit class SchemaParallelInstructionOps[Self <: SchemaParallelInstruction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFlatten(value: SchemaFlattenInstruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlatten: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputs(value: js.Array[SchemaInstructionOutput]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParDo(value: SchemaParDoInstruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parDo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParDo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parDo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartialGroupByKey(value: SchemaPartialGroupByKeyInstruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialGroupByKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartialGroupByKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialGroupByKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRead(value: SchemaReadInstruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrite(value: SchemaWriteInstruction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

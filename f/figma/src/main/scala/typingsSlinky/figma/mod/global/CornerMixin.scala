@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CornerMixin extends js.Object {
-  var cornerRadius: Double | js.Symbol = js.native
-  var cornerSmoothing: Double = js.native
+  var cornerRadius: Double | js.Symbol
+  var cornerSmoothing: Double
 }
 
 object CornerMixin {
@@ -16,25 +15,5 @@ object CornerMixin {
     val __obj = js.Dynamic.literal(cornerRadius = cornerRadius.asInstanceOf[js.Any], cornerSmoothing = cornerSmoothing.asInstanceOf[js.Any])
     __obj.asInstanceOf[CornerMixin]
   }
-  @scala.inline
-  implicit class CornerMixinOps[Self <: CornerMixin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCornerRadius(value: Double | js.Symbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCornerSmoothing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerSmoothing")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

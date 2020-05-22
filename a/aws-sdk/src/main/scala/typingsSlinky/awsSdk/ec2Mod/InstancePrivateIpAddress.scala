@@ -26,65 +26,18 @@ trait InstancePrivateIpAddress extends js.Object {
 
 object InstancePrivateIpAddress {
   @scala.inline
-  def apply(): InstancePrivateIpAddress = {
+  def apply(
+    Association: InstanceNetworkInterfaceAssociation = null,
+    Primary: js.UndefOr[Boolean] = js.undefined,
+    PrivateDnsName: String = null,
+    PrivateIpAddress: String = null
+  ): InstancePrivateIpAddress = {
     val __obj = js.Dynamic.literal()
+    if (Association != null) __obj.updateDynamic("Association")(Association.asInstanceOf[js.Any])
+    if (!js.isUndefined(Primary)) __obj.updateDynamic("Primary")(Primary.get.asInstanceOf[js.Any])
+    if (PrivateDnsName != null) __obj.updateDynamic("PrivateDnsName")(PrivateDnsName.asInstanceOf[js.Any])
+    if (PrivateIpAddress != null) __obj.updateDynamic("PrivateIpAddress")(PrivateIpAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstancePrivateIpAddress]
   }
-  @scala.inline
-  implicit class InstancePrivateIpAddressOps[Self <: InstancePrivateIpAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociation(value: InstanceNetworkInterfaceAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Association")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Association")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateDnsName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateDnsName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateDnsName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateIpAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIpAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

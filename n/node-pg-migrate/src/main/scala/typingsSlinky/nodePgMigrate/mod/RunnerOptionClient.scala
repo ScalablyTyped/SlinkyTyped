@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RunnerOptionClient extends js.Object {
-  var dbClient: Client = js.native
+  var dbClient: Client
 }
 
 object RunnerOptionClient {
@@ -16,19 +15,5 @@ object RunnerOptionClient {
     val __obj = js.Dynamic.literal(dbClient = dbClient.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunnerOptionClient]
   }
-  @scala.inline
-  implicit class RunnerOptionClientOps[Self <: RunnerOptionClient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDbClient(value: Client): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dbClient")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

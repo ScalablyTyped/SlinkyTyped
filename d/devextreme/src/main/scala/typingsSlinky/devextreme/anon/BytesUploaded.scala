@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BytesUploaded extends js.Object {
-  var bytesUploaded: js.UndefOr[Double] = js.native
-  var chunkBlob: js.UndefOr[Blob] = js.native
-  var chunkCount: js.UndefOr[Double] = js.native
-  var chunkIndex: js.UndefOr[Double] = js.native
-  var customData: js.UndefOr[js.Any] = js.native
+  var bytesUploaded: js.UndefOr[Double] = js.undefined
+  var chunkBlob: js.UndefOr[Blob] = js.undefined
+  var chunkCount: js.UndefOr[Double] = js.undefined
+  var chunkIndex: js.UndefOr[Double] = js.undefined
+  var customData: js.UndefOr[js.Any] = js.undefined
 }
 
 object BytesUploaded {
   @scala.inline
-  def apply(): BytesUploaded = {
+  def apply(
+    bytesUploaded: js.UndefOr[Double] = js.undefined,
+    chunkBlob: Blob = null,
+    chunkCount: js.UndefOr[Double] = js.undefined,
+    chunkIndex: js.UndefOr[Double] = js.undefined,
+    customData: js.Any = null
+  ): BytesUploaded = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bytesUploaded)) __obj.updateDynamic("bytesUploaded")(bytesUploaded.get.asInstanceOf[js.Any])
+    if (chunkBlob != null) __obj.updateDynamic("chunkBlob")(chunkBlob.asInstanceOf[js.Any])
+    if (!js.isUndefined(chunkCount)) __obj.updateDynamic("chunkCount")(chunkCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(chunkIndex)) __obj.updateDynamic("chunkIndex")(chunkIndex.get.asInstanceOf[js.Any])
+    if (customData != null) __obj.updateDynamic("customData")(customData.asInstanceOf[js.Any])
     __obj.asInstanceOf[BytesUploaded]
   }
-  @scala.inline
-  implicit class BytesUploadedOps[Self <: BytesUploaded] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBytesUploaded(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesUploaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBytesUploaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesUploaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChunkBlob(value: Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkBlob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkBlob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkBlob")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChunkCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChunkIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

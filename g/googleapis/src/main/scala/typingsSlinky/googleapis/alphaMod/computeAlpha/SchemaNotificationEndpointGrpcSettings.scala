@@ -36,65 +36,18 @@ trait SchemaNotificationEndpointGrpcSettings extends js.Object {
 
 object SchemaNotificationEndpointGrpcSettings {
   @scala.inline
-  def apply(): SchemaNotificationEndpointGrpcSettings = {
+  def apply(
+    authority: String = null,
+    endpoint: String = null,
+    payloadName: String = null,
+    retryDurationSec: js.UndefOr[Double] = js.undefined
+  ): SchemaNotificationEndpointGrpcSettings = {
     val __obj = js.Dynamic.literal()
+    if (authority != null) __obj.updateDynamic("authority")(authority.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
+    if (payloadName != null) __obj.updateDynamic("payloadName")(payloadName.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryDurationSec)) __obj.updateDynamic("retryDurationSec")(retryDurationSec.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNotificationEndpointGrpcSettings]
   }
-  @scala.inline
-  implicit class SchemaNotificationEndpointGrpcSettingsOps[Self <: SchemaNotificationEndpointGrpcSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthority(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryDurationSec(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDurationSec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryDurationSec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDurationSec")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

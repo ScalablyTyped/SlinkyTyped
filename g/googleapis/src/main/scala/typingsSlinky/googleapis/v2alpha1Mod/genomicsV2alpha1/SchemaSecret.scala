@@ -26,41 +26,11 @@ trait SchemaSecret extends js.Object {
 
 object SchemaSecret {
   @scala.inline
-  def apply(): SchemaSecret = {
+  def apply(cipherText: String = null, keyName: String = null): SchemaSecret = {
     val __obj = js.Dynamic.literal()
+    if (cipherText != null) __obj.updateDynamic("cipherText")(cipherText.asInstanceOf[js.Any])
+    if (keyName != null) __obj.updateDynamic("keyName")(keyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecret]
   }
-  @scala.inline
-  implicit class SchemaSecretOps[Self <: SchemaSecret] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCipherText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cipherText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCipherText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cipherText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

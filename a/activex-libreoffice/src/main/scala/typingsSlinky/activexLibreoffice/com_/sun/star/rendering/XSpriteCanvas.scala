@@ -14,7 +14,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specialization of a {@link XCanvas} , where moving, animated objects (called sprites) are supported. */
-@js.native
 trait XSpriteCanvas extends XCanvas {
   /**
     * Create a cloned version of an already existing sprite object.
@@ -24,7 +23,7 @@ trait XSpriteCanvas extends XCanvas {
     * @param original The original sprite to copy the content from. This sprite must have been created by the same {@link XSpriteCanvas} instance as this meth
     * @returns an interface to a sprite object.
     */
-  def createClonedSprite(original: XSprite): XSprite = js.native
+  def createClonedSprite(original: XSprite): XSprite
   /**
     * Create a custom, user-handles-it-all sprite object.
     *
@@ -32,9 +31,9 @@ trait XSpriteCanvas extends XCanvas {
     * @param spriteSize The required size of the sprite in device coordinates. Everything that is rendered outside this area might be clipped on output. Both
     * @returns an interface to a custom sprite object.
     */
-  def createCustomSprite(spriteSize: RealSize2D): XCustomSprite = js.native
+  def createCustomSprite(spriteSize: RealSize2D): XCustomSprite
   /** Create a sprite object from the specified animation sequence. A sprite is a back-buffered object with its own, independent animation. */
-  def createSpriteFromAnimation(animation: XAnimation): XAnimatedSprite = js.native
+  def createSpriteFromAnimation(animation: XAnimation): XAnimatedSprite
   /**
     * Create a sprite object from the specified animation sequence.
     *
@@ -43,7 +42,7 @@ trait XSpriteCanvas extends XCanvas {
     * @param interpolationMode Value of {@link InterpolationMode} , to determine whether and how to interpolate between the provided bitmaps, if animation run
     * @throws VolatileContentDestroyedException if at least one of the bitmap is volatile, and its content has been destroyed by the system.
     */
-  def createSpriteFromBitmaps(animationBitmaps: SeqEquiv[XBitmap], interpolationMode: Double): XAnimatedSprite = js.native
+  def createSpriteFromBitmaps(animationBitmaps: SeqEquiv[XBitmap], interpolationMode: Double): XAnimatedSprite
   /**
     * Tells the sprite canvas to now update the screen representation.
     *
@@ -55,7 +54,7 @@ trait XSpriteCanvas extends XCanvas {
     * @param bUpdateAll When `TRUE` , update the whole screen. When `FALSE` , implementation is permitted to restrict update to areas the canvas itself change
     * @returns `TRUE` , if the screen update was successfully performed
     */
-  def updateScreen(bUpdateAll: Boolean): Boolean = js.native
+  def updateScreen(bUpdateAll: Boolean): Boolean
 }
 
 object XSpriteCanvas {
@@ -93,43 +92,5 @@ object XSpriteCanvas {
     val __obj = js.Dynamic.literal(Device = Device.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), clear = js.Any.fromFunction0(clear), createClonedSprite = js.Any.fromFunction1(createClonedSprite), createCustomSprite = js.Any.fromFunction1(createCustomSprite), createFont = js.Any.fromFunction3(createFont), createSpriteFromAnimation = js.Any.fromFunction1(createSpriteFromAnimation), createSpriteFromBitmaps = js.Any.fromFunction2(createSpriteFromBitmaps), drawBezier = js.Any.fromFunction4(drawBezier), drawBitmap = js.Any.fromFunction3(drawBitmap), drawBitmapModulated = js.Any.fromFunction3(drawBitmapModulated), drawLine = js.Any.fromFunction4(drawLine), drawPoint = js.Any.fromFunction3(drawPoint), drawPolyPolygon = js.Any.fromFunction3(drawPolyPolygon), drawText = js.Any.fromFunction5(drawText), drawTextLayout = js.Any.fromFunction3(drawTextLayout), fillPolyPolygon = js.Any.fromFunction3(fillPolyPolygon), fillTextureMappedPolyPolygon = js.Any.fromFunction5(fillTextureMappedPolyPolygon), fillTexturedPolyPolygon = js.Any.fromFunction4(fillTexturedPolyPolygon), getDevice = js.Any.fromFunction0(getDevice), queryAvailableFonts = js.Any.fromFunction2(queryAvailableFonts), queryInterface = js.Any.fromFunction1(queryInterface), queryStrokeShapes = js.Any.fromFunction4(queryStrokeShapes), release = js.Any.fromFunction0(release), strokePolyPolygon = js.Any.fromFunction4(strokePolyPolygon), strokeTextureMappedPolyPolygon = js.Any.fromFunction6(strokeTextureMappedPolyPolygon), strokeTexturedPolyPolygon = js.Any.fromFunction5(strokeTexturedPolyPolygon), updateScreen = js.Any.fromFunction1(updateScreen))
     __obj.asInstanceOf[XSpriteCanvas]
   }
-  @scala.inline
-  implicit class XSpriteCanvasOps[Self <: XSpriteCanvas] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateClonedSprite(value: XSprite => XSprite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createClonedSprite")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCustomSprite(value: RealSize2D => XCustomSprite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCustomSprite")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateSpriteFromAnimation(value: XAnimation => XAnimatedSprite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSpriteFromAnimation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateSpriteFromBitmaps(value: (SeqEquiv[XBitmap], Double) => XAnimatedSprite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSpriteFromBitmaps")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateScreen(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateScreen")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

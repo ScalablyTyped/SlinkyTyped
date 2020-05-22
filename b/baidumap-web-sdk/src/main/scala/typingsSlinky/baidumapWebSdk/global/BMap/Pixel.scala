@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class Pixel protected ()
   extends typingsSlinky.baidumapWebSdk.BMap.Pixel {
   def this(x: Double, y: Double) = this()
+  /* CompleteClass */
+  override var x: Double = js.native
+  /* CompleteClass */
+  override var y: Double = js.native
+  /* CompleteClass */
+  override def equals(other: typingsSlinky.baidumapWebSdk.BMap.Pixel): Boolean = js.native
 }
 

@@ -22,47 +22,15 @@ trait Task extends js.Object {
 
 object Task {
   @scala.inline
-  def apply(Status: Status): Task = {
+  def apply(
+    Status: Status,
+    ProgressPercent: js.UndefOr[ProgressPercent] = js.undefined,
+    StatusDetail: StatusDetail = null
+  ): Task = {
     val __obj = js.Dynamic.literal(Status = Status.asInstanceOf[js.Any])
+    if (!js.isUndefined(ProgressPercent)) __obj.updateDynamic("ProgressPercent")(ProgressPercent.get.asInstanceOf[js.Any])
+    if (StatusDetail != null) __obj.updateDynamic("StatusDetail")(StatusDetail.asInstanceOf[js.Any])
     __obj.asInstanceOf[Task]
   }
-  @scala.inline
-  implicit class TaskOps[Self <: Task] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProgressPercent(value: ProgressPercent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressPercent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressPercent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressPercent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusDetail(value: StatusDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

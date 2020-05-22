@@ -29,53 +29,16 @@ trait SchemaPrincipal extends js.Object {
 
 object SchemaPrincipal {
   @scala.inline
-  def apply(): SchemaPrincipal = {
+  def apply(
+    groupResourceName: String = null,
+    gsuitePrincipal: SchemaGSuitePrincipal = null,
+    userResourceName: String = null
+  ): SchemaPrincipal = {
     val __obj = js.Dynamic.literal()
+    if (groupResourceName != null) __obj.updateDynamic("groupResourceName")(groupResourceName.asInstanceOf[js.Any])
+    if (gsuitePrincipal != null) __obj.updateDynamic("gsuitePrincipal")(gsuitePrincipal.asInstanceOf[js.Any])
+    if (userResourceName != null) __obj.updateDynamic("userResourceName")(userResourceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPrincipal]
   }
-  @scala.inline
-  implicit class SchemaPrincipalOps[Self <: SchemaPrincipal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupResourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupResourceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGsuitePrincipal(value: SchemaGSuitePrincipal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuitePrincipal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGsuitePrincipal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gsuitePrincipal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserResourceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userResourceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserResourceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userResourceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

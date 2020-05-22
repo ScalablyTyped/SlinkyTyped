@@ -6,361 +6,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Customer extends js.Object {
-  var address: js.UndefOr[Addresszip] = js.native
-  var arr: js.UndefOr[Double] = js.native
-  var attributes: js.UndefOr[Attributes_] = js.native
-  var `billing-system-type`: js.UndefOr[String] = js.native
-  var `billing-system-url`: js.UndefOr[String] = js.native
-  var `chartmogul-url`: js.UndefOr[String] = js.native
-  var city: js.UndefOr[String] = js.native
-  var company: js.UndefOr[String] = js.native
-  var country: js.UndefOr[String] = js.native
-  var currency: js.UndefOr[String] = js.native
-  var `currency-sign`: js.UndefOr[String] = js.native
-  var `customer-since`: js.UndefOr[String] = js.native
-  var data_source_uuid: js.UndefOr[String] = js.native
-  var data_source_uuids: js.UndefOr[Strings] = js.native
-  var email: js.UndefOr[String] = js.native
-  var external_id: js.UndefOr[String] = js.native
-  var external_ids: js.UndefOr[Strings] = js.native
-  var free_trial_started_at: js.UndefOr[String] = js.native
-  var id: js.UndefOr[Double] = js.native
-  var lead_created_at: js.UndefOr[String] = js.native
-  var mrr: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var state: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
-  var uuid: js.UndefOr[String] = js.native
-  var zip: js.UndefOr[String] = js.native
+  var address: js.UndefOr[Addresszip] = js.undefined
+  var arr: js.UndefOr[Double] = js.undefined
+  var attributes: js.UndefOr[Attributes_] = js.undefined
+  var `billing-system-type`: js.UndefOr[String] = js.undefined
+  var `billing-system-url`: js.UndefOr[String] = js.undefined
+  var `chartmogul-url`: js.UndefOr[String] = js.undefined
+  var city: js.UndefOr[String] = js.undefined
+  var company: js.UndefOr[String] = js.undefined
+  var country: js.UndefOr[String] = js.undefined
+  var currency: js.UndefOr[String] = js.undefined
+  var `currency-sign`: js.UndefOr[String] = js.undefined
+  var `customer-since`: js.UndefOr[String] = js.undefined
+  var data_source_uuid: js.UndefOr[String] = js.undefined
+  var data_source_uuids: js.UndefOr[Strings] = js.undefined
+  var email: js.UndefOr[String] = js.undefined
+  var external_id: js.UndefOr[String] = js.undefined
+  var external_ids: js.UndefOr[Strings] = js.undefined
+  var free_trial_started_at: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[Double] = js.undefined
+  var lead_created_at: js.UndefOr[String] = js.undefined
+  var mrr: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
+  var uuid: js.UndefOr[String] = js.undefined
+  var zip: js.UndefOr[String] = js.undefined
 }
 
 object Customer {
   @scala.inline
-  def apply(): Customer = {
+  def apply(
+    address: Addresszip = null,
+    arr: js.UndefOr[Double] = js.undefined,
+    attributes: Attributes_ = null,
+    `billing-system-type`: String = null,
+    `billing-system-url`: String = null,
+    `chartmogul-url`: String = null,
+    city: String = null,
+    company: String = null,
+    country: String = null,
+    currency: String = null,
+    `currency-sign`: String = null,
+    `customer-since`: String = null,
+    data_source_uuid: String = null,
+    data_source_uuids: Strings = null,
+    email: String = null,
+    external_id: String = null,
+    external_ids: Strings = null,
+    free_trial_started_at: String = null,
+    id: js.UndefOr[Double] = js.undefined,
+    lead_created_at: String = null,
+    mrr: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    state: String = null,
+    status: String = null,
+    uuid: String = null,
+    zip: String = null
+  ): Customer = {
     val __obj = js.Dynamic.literal()
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (!js.isUndefined(arr)) __obj.updateDynamic("arr")(arr.get.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (`billing-system-type` != null) __obj.updateDynamic("billing-system-type")(`billing-system-type`.asInstanceOf[js.Any])
+    if (`billing-system-url` != null) __obj.updateDynamic("billing-system-url")(`billing-system-url`.asInstanceOf[js.Any])
+    if (`chartmogul-url` != null) __obj.updateDynamic("chartmogul-url")(`chartmogul-url`.asInstanceOf[js.Any])
+    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
+    if (company != null) __obj.updateDynamic("company")(company.asInstanceOf[js.Any])
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
+    if (`currency-sign` != null) __obj.updateDynamic("currency-sign")(`currency-sign`.asInstanceOf[js.Any])
+    if (`customer-since` != null) __obj.updateDynamic("customer-since")(`customer-since`.asInstanceOf[js.Any])
+    if (data_source_uuid != null) __obj.updateDynamic("data_source_uuid")(data_source_uuid.asInstanceOf[js.Any])
+    if (data_source_uuids != null) __obj.updateDynamic("data_source_uuids")(data_source_uuids.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (external_id != null) __obj.updateDynamic("external_id")(external_id.asInstanceOf[js.Any])
+    if (external_ids != null) __obj.updateDynamic("external_ids")(external_ids.asInstanceOf[js.Any])
+    if (free_trial_started_at != null) __obj.updateDynamic("free_trial_started_at")(free_trial_started_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (lead_created_at != null) __obj.updateDynamic("lead_created_at")(lead_created_at.asInstanceOf[js.Any])
+    if (!js.isUndefined(mrr)) __obj.updateDynamic("mrr")(mrr.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
+    if (zip != null) __obj.updateDynamic("zip")(zip.asInstanceOf[js.Any])
     __obj.asInstanceOf[Customer]
   }
-  @scala.inline
-  implicit class CustomerOps[Self <: typingsSlinky.chartmogulNode.mod.Customer.Customer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: Addresszip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArr(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: Attributes_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withBilling-system-type`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing-system-type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutBilling-system-type`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing-system-type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withBilling-system-url`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing-system-url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutBilling-system-url`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing-system-url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withChartmogul-url`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartmogul-url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutChartmogul-url`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartmogul-url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompany(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCurrency-sign`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency-sign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCurrency-sign`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency-sign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCustomer-since`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer-since")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCustomer-since`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer-since")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData_source_uuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData_source_uuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData_source_uuids(value: Strings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData_source_uuids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_source_uuids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternal_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternal_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternal_ids(value: Strings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternal_ids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external_ids")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFree_trial_started_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("free_trial_started_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFree_trial_started_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("free_trial_started_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLead_created_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lead_created_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLead_created_at: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lead_created_at")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMrr(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mrr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMrr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mrr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

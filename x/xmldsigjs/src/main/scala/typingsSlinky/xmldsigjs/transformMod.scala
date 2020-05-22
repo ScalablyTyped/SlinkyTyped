@@ -2,8 +2,8 @@ package typingsSlinky.xmldsigjs
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.Node
-import typingsSlinky.xmlCore.mod.IXmlSerializable
 import typingsSlinky.xmlCore.mod.XmlObject
+import typingsSlinky.xmlCore.typesMod.IXmlSerializable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

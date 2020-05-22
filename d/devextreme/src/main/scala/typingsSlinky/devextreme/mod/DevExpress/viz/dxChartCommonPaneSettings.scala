@@ -5,51 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxChartCommonPaneSettings extends js.Object {
-  /** Specifies the color of the pane's background. */
-  var backgroundColor: js.UndefOr[String] = js.native
-  /** Configures the pane border. */
-  var border: js.UndefOr[Left] = js.native
+  /** @name dxChart.Options.commonPaneSettings.backgroundColor */
+  var backgroundColor: js.UndefOr[String] = js.undefined
+  /** @name dxChart.Options.commonPaneSettings.border */
+  var border: js.UndefOr[Left] = js.undefined
 }
 
 object dxChartCommonPaneSettings {
   @scala.inline
-  def apply(): dxChartCommonPaneSettings = {
+  def apply(backgroundColor: String = null, border: Left = null): dxChartCommonPaneSettings = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartCommonPaneSettings]
   }
-  @scala.inline
-  implicit class dxChartCommonPaneSettingsOps[Self <: dxChartCommonPaneSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Left): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

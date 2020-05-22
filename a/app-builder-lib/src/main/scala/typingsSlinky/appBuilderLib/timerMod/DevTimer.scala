@@ -10,6 +10,8 @@ class DevTimer protected () extends Timer {
   def this(label: String) = this()
   val label: js.Any = js.native
   var start: js.Any = js.native
+  /* CompleteClass */
+  override def end(): Unit = js.native
   def endAndGet(): String = js.native
 }
 

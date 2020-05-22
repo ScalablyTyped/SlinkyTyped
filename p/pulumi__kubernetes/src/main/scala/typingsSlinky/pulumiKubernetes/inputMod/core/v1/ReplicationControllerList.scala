@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 /**
   * ReplicationControllerList is a collection of replication controllers.
   */
-@js.native
 trait ReplicationControllerList extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -17,12 +16,12 @@ trait ReplicationControllerList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]] = js.native
+  var apiVersion: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]] = js.undefined
   /**
     * List of replication controllers. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
     */
-  var items: Input[js.Array[Input[ReplicationController]]] = js.native
+  var items: Input[js.Array[Input[ReplicationController]]]
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -31,69 +30,27 @@ trait ReplicationControllerList extends js.Object {
     */
   var kind: js.UndefOr[
     Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ReplicationControllerList]
-  ] = js.native
+  ] = js.undefined
   /**
     * Standard list metadata. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var metadata: js.UndefOr[Input[ListMeta]] = js.native
+  var metadata: js.UndefOr[Input[ListMeta]] = js.undefined
 }
 
 object ReplicationControllerList {
   @scala.inline
-  def apply(items: Input[js.Array[Input[ReplicationController]]]): ReplicationControllerList = {
+  def apply(
+    items: Input[js.Array[Input[ReplicationController]]],
+    apiVersion: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1] = null,
+    kind: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ReplicationControllerList] = null,
+    metadata: Input[ListMeta] = null
+  ): ReplicationControllerList = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationControllerList]
   }
-  @scala.inline
-  implicit class ReplicationControllerListOps[Self <: ReplicationControllerList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: Input[js.Array[Input[ReplicationController]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApiVersion(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ReplicationControllerList]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Input[ListMeta]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

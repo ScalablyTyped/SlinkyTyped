@@ -37,65 +37,18 @@ trait SchemaHttpQueryParameterMatch extends js.Object {
 
 object SchemaHttpQueryParameterMatch {
   @scala.inline
-  def apply(): SchemaHttpQueryParameterMatch = {
+  def apply(
+    exactMatch: String = null,
+    name: String = null,
+    presentMatch: js.UndefOr[Boolean] = js.undefined,
+    regexMatch: String = null
+  ): SchemaHttpQueryParameterMatch = {
     val __obj = js.Dynamic.literal()
+    if (exactMatch != null) __obj.updateDynamic("exactMatch")(exactMatch.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(presentMatch)) __obj.updateDynamic("presentMatch")(presentMatch.get.asInstanceOf[js.Any])
+    if (regexMatch != null) __obj.updateDynamic("regexMatch")(regexMatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpQueryParameterMatch]
   }
-  @scala.inline
-  implicit class SchemaHttpQueryParameterMatchOps[Self <: SchemaHttpQueryParameterMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExactMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExactMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exactMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPresentMatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presentMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPresentMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("presentMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegexMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regexMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegexMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regexMatch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

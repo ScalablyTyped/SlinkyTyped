@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChromeExtensionFlow extends BaseBrowserFlow {
   /**
     * Runs the receiver code to send the Oauth result to the requesting tab.
     */
-  def runReceiver(): Unit = js.native
+  def runReceiver(): Unit
 }
 
 @JSImport("asana", "auth.ChromeExtensionFlow")

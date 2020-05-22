@@ -8,32 +8,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies a post read from the server. */
-@js.native
 trait SocialPost extends ClientValueObject {
   /** Specifies an image, document preview, or video preview attachment */
-  def get_attachment(): SocialAttachment = js.native
+  def get_attachment(): SocialAttachment
   /** Describes attributes about the post, such as whether the current user can delete or like the post.  */
-  def get_attributes(): SocialPostAttributes = js.native
+  def get_attributes(): SocialPostAttributes
   /** Specifies the author of the post as an index to the social thread's Actors array. */
-  def get_authorIndex(): Double = js.native
+  def get_authorIndex(): Double
   /** Specifies the date and time that the post was created on the server. */
-  def get_createdTime(): String = js.native
+  def get_createdTime(): String
   /** Specifies the unique identifier of the post. */
-  def get_id(): String = js.native
+  def get_id(): String
   /** Specifies information about users who like the post. */
-  def get_likerInfo(): SocialPostActorInfo = js.native
+  def get_likerInfo(): SocialPostActorInfo
   /** Specifies the date and time that the post was last modified on the server. */
-  def get_modifiedTime(): String = js.native
+  def get_modifiedTime(): String
   /** An array of objects in a post, where each object represents a user, document, site, tag, or link. */
-  def get_overlays(): js.Array[SocialDataOverlay] = js.native
+  def get_overlays(): js.Array[SocialDataOverlay]
   /** Specifies whether a post is the root post or a reply post in a thread */
-  def get_postType(): SocialPostType = js.native
+  def get_postType(): SocialPostType
   /** Specifies the URI of the image to be displayed with the post.  */
-  def get_preferredImageUri(): String = js.native
+  def get_preferredImageUri(): String
   /** Specifies the link to a web site associated with the application that created the post. */
-  def get_source(): SocialLink = js.native
+  def get_source(): SocialLink
   /** Specifies the text of the post. */
-  def get_text(): String = js.native
+  def get_text(): String
 }
 
 object SocialPost {
@@ -60,85 +59,5 @@ object SocialPost {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_attachment = js.Any.fromFunction0(get_attachment), get_attributes = js.Any.fromFunction0(get_attributes), get_authorIndex = js.Any.fromFunction0(get_authorIndex), get_createdTime = js.Any.fromFunction0(get_createdTime), get_id = js.Any.fromFunction0(get_id), get_likerInfo = js.Any.fromFunction0(get_likerInfo), get_modifiedTime = js.Any.fromFunction0(get_modifiedTime), get_overlays = js.Any.fromFunction0(get_overlays), get_postType = js.Any.fromFunction0(get_postType), get_preferredImageUri = js.Any.fromFunction0(get_preferredImageUri), get_source = js.Any.fromFunction0(get_source), get_text = js.Any.fromFunction0(get_text), get_typeId = js.Any.fromFunction0(get_typeId), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[SocialPost]
   }
-  @scala.inline
-  implicit class SocialPostOps[Self <: SocialPost] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_attachment(value: () => SocialAttachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_attachment")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_attributes(value: () => SocialPostAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_attributes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_authorIndex(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_authorIndex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_createdTime(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_createdTime")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_id(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_id")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_likerInfo(value: () => SocialPostActorInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_likerInfo")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_modifiedTime(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_modifiedTime")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_overlays(value: () => js.Array[SocialDataOverlay]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_overlays")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_postType(value: () => SocialPostType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_postType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_preferredImageUri(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_preferredImageUri")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_source(value: () => SocialLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_source")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_text(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_text")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

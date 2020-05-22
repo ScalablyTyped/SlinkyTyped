@@ -23,53 +23,16 @@ trait TrailEventSelector extends js.Object {
 
 object TrailEventSelector {
   @scala.inline
-  def apply(): TrailEventSelector = {
+  def apply(
+    dataResources: Input[js.Array[Input[TrailEventSelectorDataResource]]] = null,
+    includeManagementEvents: Input[Boolean] = null,
+    readWriteType: Input[String] = null
+  ): TrailEventSelector = {
     val __obj = js.Dynamic.literal()
+    if (dataResources != null) __obj.updateDynamic("dataResources")(dataResources.asInstanceOf[js.Any])
+    if (includeManagementEvents != null) __obj.updateDynamic("includeManagementEvents")(includeManagementEvents.asInstanceOf[js.Any])
+    if (readWriteType != null) __obj.updateDynamic("readWriteType")(readWriteType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrailEventSelector]
   }
-  @scala.inline
-  implicit class TrailEventSelectorOps[Self <: TrailEventSelector] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataResources(value: Input[js.Array[Input[TrailEventSelectorDataResource]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeManagementEvents(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeManagementEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeManagementEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeManagementEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadWriteType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readWriteType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadWriteType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readWriteType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

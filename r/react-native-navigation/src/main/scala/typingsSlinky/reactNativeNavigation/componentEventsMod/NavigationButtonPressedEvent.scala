@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationButtonPressedEvent extends ComponentEvent {
-  var buttonId: String = js.native
+  var buttonId: String
 }
 
 object NavigationButtonPressedEvent {
@@ -15,19 +14,5 @@ object NavigationButtonPressedEvent {
     val __obj = js.Dynamic.literal(buttonId = buttonId.asInstanceOf[js.Any], componentId = componentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationButtonPressedEvent]
   }
-  @scala.inline
-  implicit class NavigationButtonPressedEventOps[Self <: NavigationButtonPressedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButtonId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

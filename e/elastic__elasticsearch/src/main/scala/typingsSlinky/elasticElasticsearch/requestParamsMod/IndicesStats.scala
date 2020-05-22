@@ -3,6 +3,7 @@ package typingsSlinky.elasticElasticsearch.requestParamsMod
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.all
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.closed
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.cluster
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.hidden
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.indices
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.none
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.open
@@ -11,179 +12,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndicesStats extends Generic {
-  var completion_fields: js.UndefOr[String | js.Array[String]] = js.native
-  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.native
-  var fielddata_fields: js.UndefOr[String | js.Array[String]] = js.native
-  var fields: js.UndefOr[String | js.Array[String]] = js.native
-  var forbid_closed_indices: js.UndefOr[Boolean] = js.native
-  var groups: js.UndefOr[String | js.Array[String]] = js.native
-  var include_segment_file_sizes: js.UndefOr[Boolean] = js.native
-  var include_unloaded_segments: js.UndefOr[Boolean] = js.native
-  var index: js.UndefOr[String | js.Array[String]] = js.native
-  var level: js.UndefOr[cluster | indices | shards] = js.native
-  var metric: js.UndefOr[String | js.Array[String]] = js.native
-  var types: js.UndefOr[String | js.Array[String]] = js.native
+  var completion_fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var expand_wildcards: js.UndefOr[open | closed | hidden | none | all] = js.undefined
+  var fielddata_fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var fields: js.UndefOr[String | js.Array[String]] = js.undefined
+  var forbid_closed_indices: js.UndefOr[Boolean] = js.undefined
+  var groups: js.UndefOr[String | js.Array[String]] = js.undefined
+  var include_segment_file_sizes: js.UndefOr[Boolean] = js.undefined
+  var include_unloaded_segments: js.UndefOr[Boolean] = js.undefined
+  var index: js.UndefOr[String | js.Array[String]] = js.undefined
+  var level: js.UndefOr[cluster | indices | shards] = js.undefined
+  var metric: js.UndefOr[String | js.Array[String]] = js.undefined
+  var types: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object IndicesStats {
   @scala.inline
-  def apply(): IndicesStats = {
+  def apply(
+    completion_fields: String | js.Array[String] = null,
+    error_trace: js.UndefOr[Boolean] = js.undefined,
+    expand_wildcards: open | closed | hidden | none | all = null,
+    fielddata_fields: String | js.Array[String] = null,
+    fields: String | js.Array[String] = null,
+    filter_path: String | js.Array[String] = null,
+    forbid_closed_indices: js.UndefOr[Boolean] = js.undefined,
+    groups: String | js.Array[String] = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    include_segment_file_sizes: js.UndefOr[Boolean] = js.undefined,
+    include_unloaded_segments: js.UndefOr[Boolean] = js.undefined,
+    index: String | js.Array[String] = null,
+    level: cluster | indices | shards = null,
+    method: String = null,
+    metric: String | js.Array[String] = null,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    source: String = null,
+    types: String | js.Array[String] = null
+  ): IndicesStats = {
     val __obj = js.Dynamic.literal()
+    if (completion_fields != null) __obj.updateDynamic("completion_fields")(completion_fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.get.asInstanceOf[js.Any])
+    if (expand_wildcards != null) __obj.updateDynamic("expand_wildcards")(expand_wildcards.asInstanceOf[js.Any])
+    if (fielddata_fields != null) __obj.updateDynamic("fielddata_fields")(fielddata_fields.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
+    if (!js.isUndefined(forbid_closed_indices)) __obj.updateDynamic("forbid_closed_indices")(forbid_closed_indices.get.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_segment_file_sizes)) __obj.updateDynamic("include_segment_file_sizes")(include_segment_file_sizes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_unloaded_segments)) __obj.updateDynamic("include_unloaded_segments")(include_unloaded_segments.get.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesStats]
   }
-  @scala.inline
-  implicit class IndicesStatsOps[Self <: IndicesStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletion_fields(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completion_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletion_fields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completion_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand_wildcards(value: open | closed | none | all): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpand_wildcards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFielddata_fields(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fielddata_fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFielddata_fields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fielddata_fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForbid_closed_indices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forbid_closed_indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForbid_closed_indices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forbid_closed_indices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_segment_file_sizes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_segment_file_sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_segment_file_sizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_segment_file_sizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_unloaded_segments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_unloaded_segments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_unloaded_segments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_unloaded_segments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: cluster | indices | shards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

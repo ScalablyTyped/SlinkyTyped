@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectionRange extends js.Object {
   /**
     * The parent selection range containing this range. Therefore `parent.range` must contain `this.range`.
     */
-  var parent: js.UndefOr[SelectionRange] = js.native
+  var parent: js.UndefOr[SelectionRange] = js.undefined
   /**
     * The [range](#Range) of this selection range.
     */
-  var range: Range = js.native
+  var range: Range
 }
 
 @JSImport("vscode-languageserver-types", "SelectionRange")

@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#events/event-object
   */
-@js.native
 trait AbstractEventObject extends js.Object {
   /** a reference to the corresponding core Core */
-  var cy: Core = js.native
+  var cy: Core
   /** the event namespace string (e.g. "foo" for "foo.tap") */
-  var namespace: String = js.native
+  var namespace: String
   /** indicates the element or core that first caused the event */
-  var target: js.Any = js.native
+  var target: js.Any
   /** Unix epoch time of event in milliseconds */
-  var timeStamp: Double = js.native
+  var timeStamp: Double
   /** the event type string (e.g. "tap") */
-  var `type`: UserInputDeviceEventName | UserInputDeviceEventNameExt = js.native
-  def isDefaultPrevented(): Boolean = js.native
-  def isImmediatePropagationStopped(): Boolean = js.native
-  def isPropagationStopped(): Boolean = js.native
-  def preventDefault(): Unit = js.native
-  def stopImmediatePropagation(): Unit = js.native
-  def stopPropagation(): Unit = js.native
+  var `type`: UserInputDeviceEventName | UserInputDeviceEventNameExt
+  def isDefaultPrevented(): Boolean
+  def isImmediatePropagationStopped(): Boolean
+  def isPropagationStopped(): Boolean
+  def preventDefault(): Unit
+  def stopImmediatePropagation(): Unit
+  def stopPropagation(): Unit
 }
 
 object AbstractEventObject {
@@ -46,79 +45,5 @@ object AbstractEventObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbstractEventObject]
   }
-  @scala.inline
-  implicit class AbstractEventObjectOps[Self <: AbstractEventObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCy(value: Core): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDefaultPrevented(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultPrevented")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsImmediatePropagationStopped(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isImmediatePropagationStopped")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsPropagationStopped(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPropagationStopped")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreventDefault(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStopImmediatePropagation(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStopPropagation(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: UserInputDeviceEventName | UserInputDeviceEventNameExt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

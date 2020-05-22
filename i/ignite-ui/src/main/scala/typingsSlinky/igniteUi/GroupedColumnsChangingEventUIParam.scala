@@ -4,135 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroupedColumnsChangingEventUIParam extends js.Object {
   /**
-  	 * Gets a reference to the current child grid element, in case it's an hierarchical grid(not set if called from modal dialog).
-  	 */
-  var grid: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the current child grid element, in case it's an hierarchical grid(not set if called from modal dialog).
+    */
+  var grid: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the current groupedColumns.
-  	 */
-  var groupedColumns: js.UndefOr[js.Array[_]] = js.native
+    * Gets a reference to the current groupedColumns.
+    */
+  var groupedColumns: js.UndefOr[js.Array[_]] = js.undefined
   /**
-  	 * Gets a reference to the current column's key that's being grouped(not set if called from modal dialog).
-  	 */
-  var key: js.UndefOr[String] = js.native
+    * Gets a reference to the current column's key that's being grouped(not set if called from modal dialog).
+    */
+  var key: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the current layout object, if any(not set if called from modal dialog).
-  	 */
-  var layout: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the current layout object, if any(not set if called from modal dialog).
+    */
+  var layout: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets the object of the new grouped columns that should be applied.(it is set ONLY if called from modal dialog)
-  	 */
-  var newGroupedColumns: js.UndefOr[js.Any] = js.native
+    * Gets the object of the new grouped columns that should be applied.(it is set ONLY if called from modal dialog)
+    */
+  var newGroupedColumns: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets access the GroupBy widget object.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets access the GroupBy widget object.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets which user interaction triggers the event - possible options are dragAndDrop|modalDialog|sortStateChanged|removeButton|regroup.
-  	 */
-  var triggeredBy: js.UndefOr[String] = js.native
+    * Gets which user interaction triggers the event - possible options are dragAndDrop|modalDialog|sortStateChanged|removeButton|regroup.
+    */
+  var triggeredBy: js.UndefOr[String] = js.undefined
 }
 
 object GroupedColumnsChangingEventUIParam {
   @scala.inline
-  def apply(): GroupedColumnsChangingEventUIParam = {
+  def apply(
+    grid: js.Any = null,
+    groupedColumns: js.Array[_] = null,
+    key: String = null,
+    layout: js.Any = null,
+    newGroupedColumns: js.Any = null,
+    owner: js.Any = null,
+    triggeredBy: String = null
+  ): GroupedColumnsChangingEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (groupedColumns != null) __obj.updateDynamic("groupedColumns")(groupedColumns.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (newGroupedColumns != null) __obj.updateDynamic("newGroupedColumns")(newGroupedColumns.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (triggeredBy != null) __obj.updateDynamic("triggeredBy")(triggeredBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupedColumnsChangingEventUIParam]
   }
-  @scala.inline
-  implicit class GroupedColumnsChangingEventUIParamOps[Self <: GroupedColumnsChangingEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGrid(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupedColumns(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewGroupedColumns(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGroupedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewGroupedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newGroupedColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggeredBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggeredBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggeredBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggeredBy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,478 +10,120 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Invoice extends js.Object {
-  var allow_partial_payment: js.UndefOr[Boolean] = js.native
-  var allow_tip: js.UndefOr[Boolean] = js.native
-  var attachments: js.UndefOr[js.Array[FileAttachment]] = js.native
-  var billing_info: js.UndefOr[js.Array[BillingInfo]] = js.native
-  var cc_info: js.UndefOr[js.Array[Participant]] = js.native
-  var custom: js.UndefOr[CustomAmount] = js.native
-  var discount: js.UndefOr[Cost] = js.native
-  val id: js.UndefOr[String] = js.native
-  var invoice_date: js.UndefOr[String] = js.native
-  var items: js.UndefOr[js.Array[InvoiceItem]] = js.native
-  val links: js.UndefOr[js.Array[Link]] = js.native
-  var logo_url: js.UndefOr[String] = js.native
-  var merchant_info: js.UndefOr[Merchant] = js.native
-  var merchant_memo: js.UndefOr[String] = js.native
-  val metadata: js.UndefOr[Cancelledby] = js.native
-  var minimum_amount_due: js.UndefOr[Currency] = js.native
-  var note: js.UndefOr[String] = js.native
-  var number: js.UndefOr[String] = js.native
-  val paid_amount: js.UndefOr[Other] = js.native
-  val payment_summary: js.UndefOr[Other] = js.native
-  var payment_term: js.UndefOr[PaymentTerm] = js.native
-  val payments: js.UndefOr[js.Array[PaymentDetail]] = js.native
-  var phone: js.UndefOr[Phone] = js.native
-  var reference: js.UndefOr[String] = js.native
-  val refunded_amount: js.UndefOr[Other] = js.native
-  val refunds: js.UndefOr[js.Array[Detail]] = js.native
-  var shipping_cost: js.UndefOr[ShippingCost] = js.native
-  var shipping_info: js.UndefOr[Address] = js.native
-  val status: js.UndefOr[String] = js.native
-  var tax_calculated_after_discount: js.UndefOr[Boolean] = js.native
-  var tax_inclusive: js.UndefOr[Boolean] = js.native
-  var template_id: js.UndefOr[String] = js.native
-  var terms: js.UndefOr[String] = js.native
-  val total_amount: js.UndefOr[Currency] = js.native
-  val uri: js.UndefOr[String] = js.native
+  var allow_partial_payment: js.UndefOr[Boolean] = js.undefined
+  var allow_tip: js.UndefOr[Boolean] = js.undefined
+  var attachments: js.UndefOr[js.Array[FileAttachment]] = js.undefined
+  var billing_info: js.UndefOr[js.Array[BillingInfo]] = js.undefined
+  var cc_info: js.UndefOr[js.Array[Participant]] = js.undefined
+  var custom: js.UndefOr[CustomAmount] = js.undefined
+  var discount: js.UndefOr[Cost] = js.undefined
+  val id: js.UndefOr[String] = js.undefined
+  var invoice_date: js.UndefOr[String] = js.undefined
+  var items: js.UndefOr[js.Array[InvoiceItem]] = js.undefined
+  val links: js.UndefOr[js.Array[Link]] = js.undefined
+  var logo_url: js.UndefOr[String] = js.undefined
+  var merchant_info: js.UndefOr[Merchant] = js.undefined
+  var merchant_memo: js.UndefOr[String] = js.undefined
+  val metadata: js.UndefOr[Cancelledby] = js.undefined
+  var minimum_amount_due: js.UndefOr[Currency] = js.undefined
+  var note: js.UndefOr[String] = js.undefined
+  var number: js.UndefOr[String] = js.undefined
+  val paid_amount: js.UndefOr[Other] = js.undefined
+  val payment_summary: js.UndefOr[Other] = js.undefined
+  var payment_term: js.UndefOr[PaymentTerm] = js.undefined
+  val payments: js.UndefOr[js.Array[PaymentDetail]] = js.undefined
+  var phone: js.UndefOr[Phone] = js.undefined
+  var reference: js.UndefOr[String] = js.undefined
+  val refunded_amount: js.UndefOr[Other] = js.undefined
+  val refunds: js.UndefOr[js.Array[Detail]] = js.undefined
+  var shipping_cost: js.UndefOr[ShippingCost] = js.undefined
+  var shipping_info: js.UndefOr[Address] = js.undefined
+  val status: js.UndefOr[String] = js.undefined
+  var tax_calculated_after_discount: js.UndefOr[Boolean] = js.undefined
+  var tax_inclusive: js.UndefOr[Boolean] = js.undefined
+  var template_id: js.UndefOr[String] = js.undefined
+  var terms: js.UndefOr[String] = js.undefined
+  val total_amount: js.UndefOr[Currency] = js.undefined
+  val uri: js.UndefOr[String] = js.undefined
 }
 
 object Invoice {
   @scala.inline
-  def apply(): Invoice = {
+  def apply(
+    allow_partial_payment: js.UndefOr[Boolean] = js.undefined,
+    allow_tip: js.UndefOr[Boolean] = js.undefined,
+    attachments: js.Array[FileAttachment] = null,
+    billing_info: js.Array[BillingInfo] = null,
+    cc_info: js.Array[Participant] = null,
+    custom: CustomAmount = null,
+    discount: Cost = null,
+    id: String = null,
+    invoice_date: String = null,
+    items: js.Array[InvoiceItem] = null,
+    links: js.Array[Link] = null,
+    logo_url: String = null,
+    merchant_info: Merchant = null,
+    merchant_memo: String = null,
+    metadata: Cancelledby = null,
+    minimum_amount_due: Currency = null,
+    note: String = null,
+    number: String = null,
+    paid_amount: Other = null,
+    payment_summary: Other = null,
+    payment_term: PaymentTerm = null,
+    payments: js.Array[PaymentDetail] = null,
+    phone: Phone = null,
+    reference: String = null,
+    refunded_amount: Other = null,
+    refunds: js.Array[Detail] = null,
+    shipping_cost: ShippingCost = null,
+    shipping_info: Address = null,
+    status: String = null,
+    tax_calculated_after_discount: js.UndefOr[Boolean] = js.undefined,
+    tax_inclusive: js.UndefOr[Boolean] = js.undefined,
+    template_id: String = null,
+    terms: String = null,
+    total_amount: Currency = null,
+    uri: String = null
+  ): Invoice = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allow_partial_payment)) __obj.updateDynamic("allow_partial_payment")(allow_partial_payment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allow_tip)) __obj.updateDynamic("allow_tip")(allow_tip.get.asInstanceOf[js.Any])
+    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
+    if (billing_info != null) __obj.updateDynamic("billing_info")(billing_info.asInstanceOf[js.Any])
+    if (cc_info != null) __obj.updateDynamic("cc_info")(cc_info.asInstanceOf[js.Any])
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (discount != null) __obj.updateDynamic("discount")(discount.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (invoice_date != null) __obj.updateDynamic("invoice_date")(invoice_date.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (logo_url != null) __obj.updateDynamic("logo_url")(logo_url.asInstanceOf[js.Any])
+    if (merchant_info != null) __obj.updateDynamic("merchant_info")(merchant_info.asInstanceOf[js.Any])
+    if (merchant_memo != null) __obj.updateDynamic("merchant_memo")(merchant_memo.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (minimum_amount_due != null) __obj.updateDynamic("minimum_amount_due")(minimum_amount_due.asInstanceOf[js.Any])
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
+    if (paid_amount != null) __obj.updateDynamic("paid_amount")(paid_amount.asInstanceOf[js.Any])
+    if (payment_summary != null) __obj.updateDynamic("payment_summary")(payment_summary.asInstanceOf[js.Any])
+    if (payment_term != null) __obj.updateDynamic("payment_term")(payment_term.asInstanceOf[js.Any])
+    if (payments != null) __obj.updateDynamic("payments")(payments.asInstanceOf[js.Any])
+    if (phone != null) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (reference != null) __obj.updateDynamic("reference")(reference.asInstanceOf[js.Any])
+    if (refunded_amount != null) __obj.updateDynamic("refunded_amount")(refunded_amount.asInstanceOf[js.Any])
+    if (refunds != null) __obj.updateDynamic("refunds")(refunds.asInstanceOf[js.Any])
+    if (shipping_cost != null) __obj.updateDynamic("shipping_cost")(shipping_cost.asInstanceOf[js.Any])
+    if (shipping_info != null) __obj.updateDynamic("shipping_info")(shipping_info.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(tax_calculated_after_discount)) __obj.updateDynamic("tax_calculated_after_discount")(tax_calculated_after_discount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tax_inclusive)) __obj.updateDynamic("tax_inclusive")(tax_inclusive.get.asInstanceOf[js.Any])
+    if (template_id != null) __obj.updateDynamic("template_id")(template_id.asInstanceOf[js.Any])
+    if (terms != null) __obj.updateDynamic("terms")(terms.asInstanceOf[js.Any])
+    if (total_amount != null) __obj.updateDynamic("total_amount")(total_amount.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invoice]
   }
-  @scala.inline
-  implicit class InvoiceOps[Self <: Invoice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow_partial_payment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_partial_payment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_partial_payment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_partial_payment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_tip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_tip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_tip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_tip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachments(value: js.Array[FileAttachment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBilling_info(value: js.Array[BillingInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBilling_info: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCc_info(value: js.Array[Participant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cc_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCc_info: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cc_info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom(value: CustomAmount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiscount(value: Cost): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiscount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("discount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvoice_date(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvoice_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[InvoiceItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Array[Link]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogo_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogo_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMerchant_info(value: Merchant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchant_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMerchant_info: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchant_info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMerchant_memo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchant_memo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMerchant_memo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchant_memo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Cancelledby): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum_amount_due(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_amount_due")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum_amount_due: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_amount_due")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaid_amount(value: Other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paid_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaid_amount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paid_amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayment_summary(value: Other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayment_summary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayment_term(value: PaymentTerm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayment_term: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_term")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayments(value: js.Array[PaymentDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhone(value: Phone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefunded_amount(value: Other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refunded_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefunded_amount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refunded_amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefunds(value: js.Array[Detail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refunds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefunds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refunds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipping_cost(value: ShippingCost): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_cost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipping_cost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_cost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipping_info(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipping_info: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax_calculated_after_discount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_calculated_after_discount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax_calculated_after_discount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_calculated_after_discount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTax_inclusive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_inclusive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTax_inclusive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tax_inclusive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerms(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal_amount(value: Currency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal_amount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

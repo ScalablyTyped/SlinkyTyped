@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkflowConfigurationOptions extends js.Object {
-  var taskRouting: js.UndefOr[TaskRoutingConfigurationOptions] = js.native
-  var task_routing: js.UndefOr[TaskRoutingConfigurationOptions] = js.native
+  var taskRouting: js.UndefOr[TaskRoutingConfigurationOptions] = js.undefined
+  var task_routing: js.UndefOr[TaskRoutingConfigurationOptions] = js.undefined
 }
 
 object WorkflowConfigurationOptions {
   @scala.inline
-  def apply(): WorkflowConfigurationOptions = {
+  def apply(
+    taskRouting: TaskRoutingConfigurationOptions = null,
+    task_routing: TaskRoutingConfigurationOptions = null
+  ): WorkflowConfigurationOptions = {
     val __obj = js.Dynamic.literal()
+    if (taskRouting != null) __obj.updateDynamic("taskRouting")(taskRouting.asInstanceOf[js.Any])
+    if (task_routing != null) __obj.updateDynamic("task_routing")(task_routing.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowConfigurationOptions]
   }
-  @scala.inline
-  implicit class WorkflowConfigurationOptionsOps[Self <: WorkflowConfigurationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskRouting(value: TaskRoutingConfigurationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskRouting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskRouting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskRouting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTask_routing(value: TaskRoutingConfigurationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task_routing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTask_routing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task_routing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

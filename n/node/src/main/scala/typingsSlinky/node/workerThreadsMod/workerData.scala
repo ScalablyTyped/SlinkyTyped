@@ -8,7 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("worker_threads", "workerData")
 @js.native
 object workerData
-  extends TopLevel[
-      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof assert */ js.Any
-    ]
+  extends TopLevel[js.Any]
 

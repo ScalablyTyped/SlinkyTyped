@@ -4,100 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebDetection extends js.Object {
   /**
     * Fully matching images from the Internet.
     * Can include resized copies of the query image.
     */
-  var fullMatchingImages: js.UndefOr[js.Array[WebImage]] = js.native
+  var fullMatchingImages: js.UndefOr[js.Array[WebImage]] = js.undefined
   /** Web pages containing the matching images from the Internet. */
-  var pagesWithMatchingImages: js.UndefOr[js.Array[WebPage]] = js.native
+  var pagesWithMatchingImages: js.UndefOr[js.Array[WebPage]] = js.undefined
   /**
     * Partial matching images from the Internet.
     * Those images are similar enough to share some key-point features. For
     * example an original image will likely have partial matching for its crops.
     */
-  var partialMatchingImages: js.UndefOr[js.Array[WebImage]] = js.native
+  var partialMatchingImages: js.UndefOr[js.Array[WebImage]] = js.undefined
   /** The visually similar image results. */
-  var visuallySimilarImages: js.UndefOr[js.Array[WebImage]] = js.native
+  var visuallySimilarImages: js.UndefOr[js.Array[WebImage]] = js.undefined
   /** Deduced entities from similar images on the Internet. */
-  var webEntities: js.UndefOr[js.Array[WebEntity]] = js.native
+  var webEntities: js.UndefOr[js.Array[WebEntity]] = js.undefined
 }
 
 object WebDetection {
   @scala.inline
-  def apply(): WebDetection = {
+  def apply(
+    fullMatchingImages: js.Array[WebImage] = null,
+    pagesWithMatchingImages: js.Array[WebPage] = null,
+    partialMatchingImages: js.Array[WebImage] = null,
+    visuallySimilarImages: js.Array[WebImage] = null,
+    webEntities: js.Array[WebEntity] = null
+  ): WebDetection = {
     val __obj = js.Dynamic.literal()
+    if (fullMatchingImages != null) __obj.updateDynamic("fullMatchingImages")(fullMatchingImages.asInstanceOf[js.Any])
+    if (pagesWithMatchingImages != null) __obj.updateDynamic("pagesWithMatchingImages")(pagesWithMatchingImages.asInstanceOf[js.Any])
+    if (partialMatchingImages != null) __obj.updateDynamic("partialMatchingImages")(partialMatchingImages.asInstanceOf[js.Any])
+    if (visuallySimilarImages != null) __obj.updateDynamic("visuallySimilarImages")(visuallySimilarImages.asInstanceOf[js.Any])
+    if (webEntities != null) __obj.updateDynamic("webEntities")(webEntities.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebDetection]
   }
-  @scala.inline
-  implicit class WebDetectionOps[Self <: WebDetection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullMatchingImages(value: js.Array[WebImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMatchingImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullMatchingImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMatchingImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPagesWithMatchingImages(value: js.Array[WebPage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagesWithMatchingImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPagesWithMatchingImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagesWithMatchingImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartialMatchingImages(value: js.Array[WebImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialMatchingImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartialMatchingImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialMatchingImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisuallySimilarImages(value: js.Array[WebImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visuallySimilarImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisuallySimilarImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visuallySimilarImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebEntities(value: js.Array[WebEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webEntities")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

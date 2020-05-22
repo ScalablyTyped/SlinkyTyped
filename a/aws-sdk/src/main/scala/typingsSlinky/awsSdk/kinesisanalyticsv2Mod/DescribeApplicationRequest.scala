@@ -18,35 +18,13 @@ trait DescribeApplicationRequest extends js.Object {
 
 object DescribeApplicationRequest {
   @scala.inline
-  def apply(ApplicationName: ApplicationName): DescribeApplicationRequest = {
+  def apply(
+    ApplicationName: ApplicationName,
+    IncludeAdditionalDetails: js.UndefOr[BooleanObject] = js.undefined
+  ): DescribeApplicationRequest = {
     val __obj = js.Dynamic.literal(ApplicationName = ApplicationName.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeAdditionalDetails)) __obj.updateDynamic("IncludeAdditionalDetails")(IncludeAdditionalDetails.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeApplicationRequest]
   }
-  @scala.inline
-  implicit class DescribeApplicationRequestOps[Self <: DescribeApplicationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncludeAdditionalDetails(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeAdditionalDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeAdditionalDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeAdditionalDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

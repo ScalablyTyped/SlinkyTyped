@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsEmailOptions extends js.Object {
-  var allow_display_name: js.UndefOr[Boolean] = js.native
-  var allow_utf8_local_part: js.UndefOr[Boolean] = js.native
-  var require_tld: js.UndefOr[Boolean] = js.native
+  var allow_display_name: js.UndefOr[Boolean] = js.undefined
+  var allow_utf8_local_part: js.UndefOr[Boolean] = js.undefined
+  var require_tld: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsEmailOptions {
   @scala.inline
-  def apply(): IsEmailOptions = {
+  def apply(
+    allow_display_name: js.UndefOr[Boolean] = js.undefined,
+    allow_utf8_local_part: js.UndefOr[Boolean] = js.undefined,
+    require_tld: js.UndefOr[Boolean] = js.undefined
+  ): IsEmailOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allow_display_name)) __obj.updateDynamic("allow_display_name")(allow_display_name.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allow_utf8_local_part)) __obj.updateDynamic("allow_utf8_local_part")(allow_utf8_local_part.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(require_tld)) __obj.updateDynamic("require_tld")(require_tld.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsEmailOptions]
   }
-  @scala.inline
-  implicit class IsEmailOptionsOps[Self <: IsEmailOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow_display_name(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_display_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_display_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_display_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_utf8_local_part(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_utf8_local_part")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_utf8_local_part: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_utf8_local_part")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequire_tld(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require_tld")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequire_tld: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require_tld")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

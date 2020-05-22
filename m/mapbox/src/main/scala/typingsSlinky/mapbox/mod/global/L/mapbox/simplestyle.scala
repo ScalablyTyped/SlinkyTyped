@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object simplestyle extends js.Object {
   /**
-  			 * Given a GeoJSON Feature with optional simplestyle-spec properties, return an options object formatted to be used as Leaflet Path options.
-  			 */
+    * Given a GeoJSON Feature with optional simplestyle-spec properties, return an options object formatted to be used as Leaflet Path options.
+    */
   def style(feature: js.Any): js.Any = js.native
 }
 

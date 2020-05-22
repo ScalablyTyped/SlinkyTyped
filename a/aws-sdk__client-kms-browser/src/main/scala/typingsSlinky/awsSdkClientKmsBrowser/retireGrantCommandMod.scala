@@ -26,9 +26,16 @@ object retireGrantCommandMod extends js.Object {
           Blob
         ] {
     def this(input: RetireGrantInput) = this()
+    /* CompleteClass */
+    override val input: RetireGrantInput = js.native
     val middlewareStack: MiddlewareStack[RetireGrantInput, RetireGrantOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KMSResolvedConfiguration
+    ): Handler[RetireGrantInput, RetireGrantOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[RetireGrantInput, RetireGrantOutput] = js.native
   }

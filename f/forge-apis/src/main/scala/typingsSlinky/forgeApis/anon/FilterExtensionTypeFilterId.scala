@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilterExtensionTypeFilterId extends js.Object {
-  var filterExtensionType: js.UndefOr[js.Array[String]] = js.native
-  var filterId: js.UndefOr[js.Array[String]] = js.native
+  var filterExtensionType: js.UndefOr[js.Array[String]] = js.undefined
+  var filterId: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object FilterExtensionTypeFilterId {
   @scala.inline
-  def apply(): FilterExtensionTypeFilterId = {
+  def apply(filterExtensionType: js.Array[String] = null, filterId: js.Array[String] = null): FilterExtensionTypeFilterId = {
     val __obj = js.Dynamic.literal()
+    if (filterExtensionType != null) __obj.updateDynamic("filterExtensionType")(filterExtensionType.asInstanceOf[js.Any])
+    if (filterId != null) __obj.updateDynamic("filterId")(filterId.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterExtensionTypeFilterId]
   }
-  @scala.inline
-  implicit class FilterExtensionTypeFilterIdOps[Self <: FilterExtensionTypeFilterId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterExtensionType(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterExtensionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterExtensionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterExtensionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterId(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

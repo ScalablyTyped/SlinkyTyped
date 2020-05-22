@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RegisteredStyleBrand extends js.Object {
-  var __registeredStyleBrand: ViewStyle | TextStyle | ImageStyle = js.native
+  var __registeredStyleBrand: ViewStyle | TextStyle | ImageStyle
 }
 
 object RegisteredStyleBrand {
@@ -18,19 +17,5 @@ object RegisteredStyleBrand {
     val __obj = js.Dynamic.literal(__registeredStyleBrand = __registeredStyleBrand.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisteredStyleBrand]
   }
-  @scala.inline
-  implicit class RegisteredStyleBrandOps[Self <: RegisteredStyleBrand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with__registeredStyleBrand(value: ViewStyle | TextStyle | ImageStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__registeredStyleBrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

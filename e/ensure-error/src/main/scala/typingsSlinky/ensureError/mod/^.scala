@@ -24,6 +24,6 @@ object ^ extends js.Object {
   //=> [NonError: 10]
   ```
   */
-  def apply[T](input: T): NonError | T = js.native
+  def apply[T](input: T): IfAny[T, js.Error, NonError | T] = js.native
 }
 

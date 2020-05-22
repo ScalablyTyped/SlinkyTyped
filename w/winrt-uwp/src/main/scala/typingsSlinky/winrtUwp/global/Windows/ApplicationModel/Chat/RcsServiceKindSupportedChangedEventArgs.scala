@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs")
 @js.native
 abstract class RcsServiceKindSupportedChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs {
+  /** Gets the type of the Rich Communication Services (RCS) service. */
+  /* CompleteClass */
+  override var serviceKind: typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.RcsServiceKind = js.native
+}
 

@@ -19,29 +19,10 @@ trait SchemaAsymmetricSignRequest extends js.Object {
 
 object SchemaAsymmetricSignRequest {
   @scala.inline
-  def apply(): SchemaAsymmetricSignRequest = {
+  def apply(digest: SchemaDigest = null): SchemaAsymmetricSignRequest = {
     val __obj = js.Dynamic.literal()
+    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAsymmetricSignRequest]
   }
-  @scala.inline
-  implicit class SchemaAsymmetricSignRequestOps[Self <: SchemaAsymmetricSignRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDigest(value: SchemaDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

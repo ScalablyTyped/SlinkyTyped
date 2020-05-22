@@ -17,18 +17,15 @@ import scala.scalajs.js.annotation._
   */
 class Details () extends IDetails {
   def this(properties: IDetails) = this()
+  /** Details deprecatedVariables. */
+  @JSName("deprecatedVariables")
+  var deprecatedVariables_Details: StringDictionary[js.typedarray.Uint8Array] = js.native
   /** Details operationName. */
   @JSName("operationName")
   var operationName_Details: String = js.native
-  /** Details rawQuery. */
-  @JSName("rawQuery")
-  var rawQuery_Details: String = js.native
   /** Details variablesJson. */
   @JSName("variablesJson")
   var variablesJson_Details: StringDictionary[String] = js.native
-  /** Details variables. */
-  @JSName("variables")
-  var variables_Details: StringDictionary[js.typedarray.Uint8Array] = js.native
   /**
     * Converts this Details to JSON.
     * @returns JSON object

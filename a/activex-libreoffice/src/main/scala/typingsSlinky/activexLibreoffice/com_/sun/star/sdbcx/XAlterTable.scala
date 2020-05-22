@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is used for creating and appending new objects to a specific container. */
-@js.native
 trait XAlterTable extends XInterface {
   /**
     * is intended to alter an existing column identified by its position. This operation must be atomic, in that it is done in one step.s
@@ -17,14 +16,14 @@ trait XAlterTable extends XInterface {
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the given index does not denote an existing column.
     */
-  def alterColumnByIndex(index: Double, descriptor: XPropertySet): Unit = js.native
+  def alterColumnByIndex(index: Double, descriptor: XPropertySet): Unit
   /**
     * is intended to alter an existing column identified by its name. This operation must be atomic, in that it is done in one step.s
     * @param colName the column name which to alter
     * @param descriptor the new descriptor for the new column
     * @throws com::sun::star::sdbc::SQLException if a database access error occurs.
     */
-  def alterColumnByName(colName: String, descriptor: XPropertySet): Unit = js.native
+  def alterColumnByName(colName: String, descriptor: XPropertySet): Unit
 }
 
 object XAlterTable {
@@ -39,25 +38,5 @@ object XAlterTable {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), alterColumnByIndex = js.Any.fromFunction2(alterColumnByIndex), alterColumnByName = js.Any.fromFunction2(alterColumnByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XAlterTable]
   }
-  @scala.inline
-  implicit class XAlterTableOps[Self <: XAlterTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlterColumnByIndex(value: (Double, XPropertySet) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alterColumnByIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAlterColumnByName(value: (String, XPropertySet) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alterColumnByName")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

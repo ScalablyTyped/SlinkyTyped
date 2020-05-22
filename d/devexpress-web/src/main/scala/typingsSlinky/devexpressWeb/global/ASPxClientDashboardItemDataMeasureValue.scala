@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ASPxClientDashboardItemDataMeasureValue")
 @js.native
 class ASPxClientDashboardItemDataMeasureValue ()
-  extends typingsSlinky.devexpressWeb.ASPxClientDashboardItemDataMeasureValue
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardItemDataMeasureValue {
+  /**
+    * Gets the measure display text.
+    */
+  /* CompleteClass */
+  override def GetDisplayText(): String = js.native
+  /**
+    * Gets the measure value.
+    */
+  /* CompleteClass */
+  override def GetValue(): js.Any = js.native
+}
 

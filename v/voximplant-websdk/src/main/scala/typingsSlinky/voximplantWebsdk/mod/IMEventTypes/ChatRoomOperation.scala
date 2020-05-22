@@ -7,22 +7,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		*	Event dispatched when chat room participant was banned/unbanned
-		*/
-@js.native
+  *    Event dispatched when chat room participant was banned/unbanned
+  */
 trait ChatRoomOperation extends VoxImplantIMEvent {
   /**
-  			* Operation type
-  			*/
-  var operation: ChatRoomOperationType = js.native
+    * Operation type
+    */
+  var operation: ChatRoomOperationType
   /**
-  			* Operation result: true/false - success/failure
-  			*/
-  var result: Boolean = js.native
+    * Operation result: true/false - success/failure
+    */
+  var result: Boolean
   /**
-  			* Room id
-  			*/
-  var room: String = js.native
+    * Room id
+    */
+  var room: String
 }
 
 object ChatRoomOperation {
@@ -31,31 +30,5 @@ object ChatRoomOperation {
     val __obj = js.Dynamic.literal(operation = operation.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChatRoomOperation]
   }
-  @scala.inline
-  implicit class ChatRoomOperationOps[Self <: ChatRoomOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperation(value: ChatRoomOperationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

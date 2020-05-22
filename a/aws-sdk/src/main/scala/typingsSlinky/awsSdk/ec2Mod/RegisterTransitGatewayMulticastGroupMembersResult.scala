@@ -14,29 +14,10 @@ trait RegisterTransitGatewayMulticastGroupMembersResult extends js.Object {
 
 object RegisterTransitGatewayMulticastGroupMembersResult {
   @scala.inline
-  def apply(): RegisterTransitGatewayMulticastGroupMembersResult = {
+  def apply(RegisteredMulticastGroupMembers: TransitGatewayMulticastRegisteredGroupMembers = null): RegisterTransitGatewayMulticastGroupMembersResult = {
     val __obj = js.Dynamic.literal()
+    if (RegisteredMulticastGroupMembers != null) __obj.updateDynamic("RegisteredMulticastGroupMembers")(RegisteredMulticastGroupMembers.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterTransitGatewayMulticastGroupMembersResult]
   }
-  @scala.inline
-  implicit class RegisterTransitGatewayMulticastGroupMembersResultOps[Self <: RegisterTransitGatewayMulticastGroupMembersResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegisteredMulticastGroupMembers(value: TransitGatewayMulticastRegisteredGroupMembers): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredMulticastGroupMembers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegisteredMulticastGroupMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredMulticastGroupMembers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

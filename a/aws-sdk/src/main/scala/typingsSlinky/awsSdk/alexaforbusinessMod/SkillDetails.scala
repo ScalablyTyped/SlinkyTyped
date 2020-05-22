@@ -50,137 +50,30 @@ trait SkillDetails extends js.Object {
 
 object SkillDetails {
   @scala.inline
-  def apply(): SkillDetails = {
+  def apply(
+    BulletPoints: BulletPoints = null,
+    DeveloperInfo: DeveloperInfo = null,
+    EndUserLicenseAgreement: EndUserLicenseAgreement = null,
+    GenericKeywords: GenericKeywords = null,
+    InvocationPhrase: InvocationPhrase = null,
+    NewInThisVersionBulletPoints: NewInThisVersionBulletPoints = null,
+    ProductDescription: ProductDescription = null,
+    ReleaseDate: ReleaseDate = null,
+    Reviews: Reviews = null,
+    SkillTypes: SkillTypes = null
+  ): SkillDetails = {
     val __obj = js.Dynamic.literal()
+    if (BulletPoints != null) __obj.updateDynamic("BulletPoints")(BulletPoints.asInstanceOf[js.Any])
+    if (DeveloperInfo != null) __obj.updateDynamic("DeveloperInfo")(DeveloperInfo.asInstanceOf[js.Any])
+    if (EndUserLicenseAgreement != null) __obj.updateDynamic("EndUserLicenseAgreement")(EndUserLicenseAgreement.asInstanceOf[js.Any])
+    if (GenericKeywords != null) __obj.updateDynamic("GenericKeywords")(GenericKeywords.asInstanceOf[js.Any])
+    if (InvocationPhrase != null) __obj.updateDynamic("InvocationPhrase")(InvocationPhrase.asInstanceOf[js.Any])
+    if (NewInThisVersionBulletPoints != null) __obj.updateDynamic("NewInThisVersionBulletPoints")(NewInThisVersionBulletPoints.asInstanceOf[js.Any])
+    if (ProductDescription != null) __obj.updateDynamic("ProductDescription")(ProductDescription.asInstanceOf[js.Any])
+    if (ReleaseDate != null) __obj.updateDynamic("ReleaseDate")(ReleaseDate.asInstanceOf[js.Any])
+    if (Reviews != null) __obj.updateDynamic("Reviews")(Reviews.asInstanceOf[js.Any])
+    if (SkillTypes != null) __obj.updateDynamic("SkillTypes")(SkillTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkillDetails]
   }
-  @scala.inline
-  implicit class SkillDetailsOps[Self <: SkillDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBulletPoints(value: BulletPoints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulletPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulletPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BulletPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeveloperInfo(value: DeveloperInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloperInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndUserLicenseAgreement(value: EndUserLicenseAgreement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndUserLicenseAgreement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndUserLicenseAgreement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndUserLicenseAgreement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenericKeywords(value: GenericKeywords): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenericKeywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenericKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenericKeywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvocationPhrase(value: InvocationPhrase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationPhrase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvocationPhrase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationPhrase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewInThisVersionBulletPoints(value: NewInThisVersionBulletPoints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewInThisVersionBulletPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewInThisVersionBulletPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewInThisVersionBulletPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductDescription(value: ProductDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseDate(value: ReleaseDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReviews(value: Reviews): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reviews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReviews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reviews")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkillTypes(value: SkillTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkillTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

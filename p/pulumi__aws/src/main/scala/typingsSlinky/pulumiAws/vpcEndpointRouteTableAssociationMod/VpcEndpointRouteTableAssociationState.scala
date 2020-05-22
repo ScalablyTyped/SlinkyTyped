@@ -19,41 +19,11 @@ trait VpcEndpointRouteTableAssociationState extends js.Object {
 
 object VpcEndpointRouteTableAssociationState {
   @scala.inline
-  def apply(): VpcEndpointRouteTableAssociationState = {
+  def apply(routeTableId: Input[String] = null, vpcEndpointId: Input[String] = null): VpcEndpointRouteTableAssociationState = {
     val __obj = js.Dynamic.literal()
+    if (routeTableId != null) __obj.updateDynamic("routeTableId")(routeTableId.asInstanceOf[js.Any])
+    if (vpcEndpointId != null) __obj.updateDynamic("vpcEndpointId")(vpcEndpointId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcEndpointRouteTableAssociationState]
   }
-  @scala.inline
-  implicit class VpcEndpointRouteTableAssociationStateOps[Self <: VpcEndpointRouteTableAssociationState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRouteTableId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeTableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRouteTableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeTableId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcEndpointId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcEndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcEndpointId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcEndpointId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

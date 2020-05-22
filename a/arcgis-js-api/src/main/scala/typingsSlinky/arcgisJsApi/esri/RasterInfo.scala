@@ -20,26 +20,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RasterInfo extends JSONSupport {
   /**
     * The raster attribute table associated with an imagery layer. It returns categorical mapping of pixel values such as class, group, or category, or membership.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#attributeTable)
     */
-  var attributeTable: FeatureSet = js.native
+  var attributeTable: FeatureSet
   /**
     * Raster band count.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#bandCount)
     */
-  var bandCount: Double = js.native
+  var bandCount: Double
   /**
     * Raster colormap that can be used to display the imagery layer. Each element in the array defines the pixel value and the red, green, and blue color values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#colormap)
     */
-  var colormap: js.Array[js.Array[Double]] = js.native
+  var colormap: js.Array[js.Array[Double]]
   /**
     * Raster data type controls how the data is rendered by default.
     *
@@ -56,49 +55,49 @@ trait RasterInfo extends JSONSupport {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#dataType)
     */
-  var dataType: generic | elevation | thematic | processed | scientific | `vector-uv` | `vector-magdir` = js.native
+  var dataType: generic | elevation | thematic | processed | scientific | `vector-uv` | `vector-magdir`
   /**
     * The minimum and maximum X and Y coordinates of a bounding box containing all the raster data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#extent)
     */
-  var extent: Extent = js.native
+  var extent: Extent
   /**
     * Raster height (row count) in pixels.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#height)
     */
-  var height: Double = js.native
+  var height: Double
   /**
     * Raster histograms return basic name-value pairs for number of bins, min and max bounding values, counts of pixels in each bin.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#histograms)
     */
-  var histograms: js.Array[_] = js.native
+  var histograms: js.Array[_]
   /**
     * Raster key properties.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#keyProperties)
     */
-  var keyProperties: js.Any = js.native
+  var keyProperties: js.Any
   /**
     * The multidimensional information associated with the raster.  If defined, multidimensional information contains various "dimensions" of data for a particular value, such as time, depth, altitude, etc. Defining slices of particular dimensions in the layer is handled with the [multidimensionalDefinition](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-MosaicRule.html#multidimensionalDefinition) property of the [mosaicRule](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#mosaicRule).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#multidimensionalInfo)
     */
-  var multidimensionalInfo: js.Any = js.native
+  var multidimensionalInfo: js.Any
   /**
     * The pixel value representing no available information. Can be a number (same value for all bands) or array (specific value for each band).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#noDataValue)
     */
-  var noDataValue: Double | js.Array[Double] = js.native
+  var noDataValue: Double | js.Array[Double]
   /**
     * Raster pixel size. Specifies the pixel size being identified on the x and y axis. Defaults to the base resolution of the dataset when not specified.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#pixelSize)
     */
-  var pixelSize: RasterInfoPixelSize = js.native
+  var pixelSize: RasterInfoPixelSize
   /**
     * Pixel type for the raster data source.
     *
@@ -117,25 +116,25 @@ trait RasterInfo extends JSONSupport {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#pixelType)
     */
-  var pixelType: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64 = js.native
+  var pixelType: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64
   /**
     * The spatial reference of the raster.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#spatialReference)
     */
-  var spatialReference: SpatialReference = js.native
+  var spatialReference: SpatialReference
   /**
     * Raster band statistics. These include the minimum value in the raster, maximum value, mean of all values, and standard deviation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#statistics)
     */
-  var statistics: js.Array[RasterInfoStatistics] = js.native
+  var statistics: js.Array[RasterInfoStatistics]
   /**
     * Raster width (column count) in pixels.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RasterInfo.html#width)
     */
-  var width: Double = js.native
+  var width: Double
 }
 
 object RasterInfo {
@@ -161,103 +160,5 @@ object RasterInfo {
     val __obj = js.Dynamic.literal(attributeTable = attributeTable.asInstanceOf[js.Any], bandCount = bandCount.asInstanceOf[js.Any], colormap = colormap.asInstanceOf[js.Any], dataType = dataType.asInstanceOf[js.Any], extent = extent.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], histograms = histograms.asInstanceOf[js.Any], keyProperties = keyProperties.asInstanceOf[js.Any], multidimensionalInfo = multidimensionalInfo.asInstanceOf[js.Any], noDataValue = noDataValue.asInstanceOf[js.Any], pixelSize = pixelSize.asInstanceOf[js.Any], pixelType = pixelType.asInstanceOf[js.Any], spatialReference = spatialReference.asInstanceOf[js.Any], statistics = statistics.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[RasterInfo]
   }
-  @scala.inline
-  implicit class RasterInfoOps[Self <: RasterInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeTable(value: FeatureSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBandCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bandCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColormap(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colormap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataType(value: generic | elevation | thematic | processed | scientific | `vector-uv` | `vector-magdir`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtent(value: Extent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHistograms(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histograms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyProperties(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMultidimensionalInfo(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multidimensionalInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNoDataValue(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPixelSize(value: RasterInfoPixelSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPixelType(value: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpatialReference(value: SpatialReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatistics(value: js.Array[RasterInfoStatistics]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

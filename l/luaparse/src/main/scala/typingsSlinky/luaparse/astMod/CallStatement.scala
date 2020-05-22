@@ -1,39 +1,27 @@
 package typingsSlinky.luaparse.astMod
 
+import typingsSlinky.luaparse.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallStatement
-  extends Statement
+  extends _Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.CallStatement] {
-  var expression: CallExpression | StringCallExpression | TableCallExpression = js.native
+  var expression: CallExpression | StringCallExpression | TableCallExpression
 }
 
 object CallStatement {
   @scala.inline
   def apply(
     expression: CallExpression | StringCallExpression | TableCallExpression,
-    `type`: typingsSlinky.luaparse.luaparseStrings.CallStatement
+    `type`: typingsSlinky.luaparse.luaparseStrings.CallStatement,
+    loc: End = null
   ): CallStatement = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[CallStatement]
   }
-  @scala.inline
-  implicit class CallStatementOps[Self <: CallStatement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: CallExpression | StringCallExpression | TableCallExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

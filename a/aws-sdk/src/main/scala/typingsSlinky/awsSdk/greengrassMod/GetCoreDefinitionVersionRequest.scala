@@ -22,25 +22,5 @@ object GetCoreDefinitionVersionRequest {
     val __obj = js.Dynamic.literal(CoreDefinitionId = CoreDefinitionId.asInstanceOf[js.Any], CoreDefinitionVersionId = CoreDefinitionVersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCoreDefinitionVersionRequest]
   }
-  @scala.inline
-  implicit class GetCoreDefinitionVersionRequestOps[Self <: GetCoreDefinitionVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoreDefinitionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoreDefinitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCoreDefinitionVersionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoreDefinitionVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

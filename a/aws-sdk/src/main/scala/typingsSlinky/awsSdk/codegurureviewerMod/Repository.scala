@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Repository extends js.Object {
   /**
+    *  Information about a Bitbucket Cloud repository. 
+    */
+  var Bitbucket: js.UndefOr[ThirdPartySourceRepository] = js.native
+  /**
     * Information about an AWS CodeCommit repository.
     */
   var CodeCommit: js.UndefOr[CodeCommitRepository] = js.native
@@ -14,29 +18,11 @@ trait Repository extends js.Object {
 
 object Repository {
   @scala.inline
-  def apply(): Repository = {
+  def apply(Bitbucket: ThirdPartySourceRepository = null, CodeCommit: CodeCommitRepository = null): Repository = {
     val __obj = js.Dynamic.literal()
+    if (Bitbucket != null) __obj.updateDynamic("Bitbucket")(Bitbucket.asInstanceOf[js.Any])
+    if (CodeCommit != null) __obj.updateDynamic("CodeCommit")(CodeCommit.asInstanceOf[js.Any])
     __obj.asInstanceOf[Repository]
   }
-  @scala.inline
-  implicit class RepositoryOps[Self <: Repository] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeCommit(value: CodeCommitRepository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeCommit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeCommit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeCommit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

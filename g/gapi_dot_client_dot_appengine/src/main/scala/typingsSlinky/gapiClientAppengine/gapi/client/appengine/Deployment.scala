@@ -5,68 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Deployment extends js.Object {
   /** The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment. */
-  var container: js.UndefOr[ContainerInfo] = js.native
+  var container: js.UndefOr[ContainerInfo] = js.undefined
   /**
     * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials
     * supplied with this call.
     */
-  var files: js.UndefOr[Record[String, FileInfo]] = js.native
+  var files: js.UndefOr[Record[String, FileInfo]] = js.undefined
   /** The zip file for this deployment, if this is a zip deployment. */
-  var zip: js.UndefOr[ZipInfo] = js.native
+  var zip: js.UndefOr[ZipInfo] = js.undefined
 }
 
 object Deployment {
   @scala.inline
-  def apply(): Deployment = {
+  def apply(container: ContainerInfo = null, files: Record[String, FileInfo] = null, zip: ZipInfo = null): Deployment = {
     val __obj = js.Dynamic.literal()
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (zip != null) __obj.updateDynamic("zip")(zip.asInstanceOf[js.Any])
     __obj.asInstanceOf[Deployment]
   }
-  @scala.inline
-  implicit class DeploymentOps[Self <: Deployment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: ContainerInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: Record[String, FileInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZip(value: ZipInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

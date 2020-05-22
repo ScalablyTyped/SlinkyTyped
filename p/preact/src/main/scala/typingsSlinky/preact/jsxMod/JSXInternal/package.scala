@@ -21,6 +21,7 @@ package object JSXInternal {
     typingsSlinky.preact.jsxMod.JSXInternal.TargetedEvent[Target, org.scalajs.dom.raw.Event]
   ]
   type KeyboardEventHandler[Target /* <: org.scalajs.dom.raw.EventTarget */] = typingsSlinky.preact.jsxMod.JSXInternal.EventHandler[typingsSlinky.preact.jsxMod.JSXInternal.TargetedKeyboardEvent[Target]]
+  type LibraryManagedAttributes[Component, Props] = Props | (typingsSlinky.preact.jsxMod.Defaultize[Props, js.Any])
   type MouseEventHandler[Target /* <: org.scalajs.dom.raw.EventTarget */] = typingsSlinky.preact.jsxMod.JSXInternal.EventHandler[typingsSlinky.preact.jsxMod.JSXInternal.TargetedMouseEvent[Target]]
   type PointerEventHandler[Target /* <: org.scalajs.dom.raw.EventTarget */] = typingsSlinky.preact.jsxMod.JSXInternal.EventHandler[typingsSlinky.preact.jsxMod.JSXInternal.TargetedPointerEvent[Target]]
   type TargetedEvent[Target /* <: org.scalajs.dom.raw.EventTarget */, TypedEvent /* <: org.scalajs.dom.raw.Event */] = (typingsSlinky.std.Omit[TypedEvent, typingsSlinky.preact.preactStrings.currentTarget]) with typingsSlinky.preact.anon.CurrentTarget[Target]

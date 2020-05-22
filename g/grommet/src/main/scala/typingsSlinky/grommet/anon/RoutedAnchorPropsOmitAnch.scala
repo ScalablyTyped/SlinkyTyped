@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.anon
 
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.grommet.grommetStrings.large
@@ -22,204 +21,53 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined grommet.grommet/components/RoutedAnchor.RoutedAnchorProps & grommet.grommet/utils.Omit<grommet.grommet/components/Anchor.AnchorProps, 'href'> */
-@js.native
 trait RoutedAnchorPropsOmitAnch extends js.Object {
-  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
-  var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var as: js.UndefOr[PolymorphicType] = js.native
-  var color: js.UndefOr[ColorType] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var gridArea: js.UndefOr[GridAreaType] = js.native
-  var icon: js.UndefOr[ReactElement] = js.native
-  var label: js.UndefOr[TagMod[Any]] = js.native
-  var margin: js.UndefOr[MarginType] = js.native
-  var method: js.UndefOr[push | replace] = js.native
-  var path: String = js.native
-  var reverse: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[xsmall | small | medium | large | xlarge | xxlarge | String] = js.native
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.undefined
+  var alignSelf: js.UndefOr[AlignSelfType] = js.undefined
+  var as: js.UndefOr[PolymorphicType] = js.undefined
+  var color: js.UndefOr[ColorType] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var gridArea: js.UndefOr[GridAreaType] = js.undefined
+  var icon: js.UndefOr[ReactElement] = js.undefined
+  var label: js.UndefOr[TagMod[Any]] = js.undefined
+  var margin: js.UndefOr[MarginType] = js.undefined
+  var method: js.UndefOr[push | replace] = js.undefined
+  var path: String
+  var reverse: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[xsmall | small | medium | large | xlarge | xxlarge | String] = js.undefined
 }
 
 object RoutedAnchorPropsOmitAnch {
   @scala.inline
-  def apply(path: String): RoutedAnchorPropsOmitAnch = {
+  def apply(
+    path: String,
+    a11yTitle: A11yTitleType = null,
+    alignSelf: AlignSelfType = null,
+    as: PolymorphicType = null,
+    color: ColorType = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    gridArea: GridAreaType = null,
+    icon: ReactElement = null,
+    label: TagMod[Any] = null,
+    margin: MarginType = null,
+    method: push | replace = null,
+    reverse: js.UndefOr[Boolean] = js.undefined,
+    size: xsmall | small | medium | large | xlarge | xxlarge | String = null
+  ): RoutedAnchorPropsOmitAnch = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
+    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoutedAnchorPropsOmitAnch]
   }
-  @scala.inline
-  implicit class RoutedAnchorPropsOmitAnchOps[Self <: RoutedAnchorPropsOmitAnch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withA11yTitle(value: A11yTitleType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutA11yTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlignSelf(value: AlignSelfType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignSelf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsFunctionComponent(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAsComponentClass(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAs(value: PolymorphicType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: ColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridArea(value: GridAreaType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: MarginType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: push | replace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: xsmall | small | medium | large | xlarge | xxlarge | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

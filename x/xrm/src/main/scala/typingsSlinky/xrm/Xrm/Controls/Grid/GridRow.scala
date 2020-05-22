@@ -10,18 +10,17 @@ import scala.scalajs.js.annotation._
   * returned by Grid.getRows and Grid.getSelectedRows methods.
   * In V9 - this is essentailly a form context
   */
-@js.native
 trait GridRow extends js.Object {
   /**
     * Provides methods to work with the row data.
     */
-  var data: Data = js.native
+  var data: Data
   /**
     * Returns the GridRowData for the GridRow.
     * @deprecated Deprecated in V9 - use data field instead
     * @returns The data.
     */
-  def getData(): GridRowData = js.native
+  def getData(): GridRowData
 }
 
 object GridRow {
@@ -30,25 +29,5 @@ object GridRow {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], getData = js.Any.fromFunction0(getData))
     __obj.asInstanceOf[GridRow]
   }
-  @scala.inline
-  implicit class GridRowOps[Self <: GridRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withData(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetData(value: () => GridRowData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

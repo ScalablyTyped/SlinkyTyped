@@ -5,199 +5,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IInspectorOptions extends js.Object {
   /**
     * Display in embed mode (both panes on the right)
     */
-  var embedMode: js.UndefOr[Boolean] = js.native
+  var embedMode: js.UndefOr[Boolean] = js.undefined
   /**
     * Allow the panes to be closed by users (default: true)
     */
-  var enableClose: js.UndefOr[Boolean] = js.native
+  var enableClose: js.UndefOr[Boolean] = js.undefined
   /**
     * Allow the panes to popup (default: true)
     */
-  var enablePopup: js.UndefOr[Boolean] = js.native
+  var enablePopup: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional list of extensibility entries
     */
-  var explorerExtensibility: js.UndefOr[js.Array[IExplorerExtensibilityGroup]] = js.native
+  var explorerExtensibility: js.UndefOr[js.Array[IExplorerExtensibilityGroup]] = js.undefined
   /**
     * HTML element to use as root (the parent of the rendering canvas will be used as default value)
     */
-  var globalRoot: js.UndefOr[HTMLElement] = js.native
+  var globalRoot: js.UndefOr[HTMLElement] = js.undefined
   /**
     * let the Inspector handles resize of the canvas when panes are resized (default to true)
     */
-  var handleResize: js.UndefOr[Boolean] = js.native
+  var handleResize: js.UndefOr[Boolean] = js.undefined
   /**
     * Optional initial tab (default to DebugLayerTab.Properties)
     */
-  var initialTab: js.UndefOr[DebugLayerTab] = js.native
+  var initialTab: js.UndefOr[DebugLayerTab] = js.undefined
   /**
     * Optional URL to get the inspector script from (by default it uses the babylonjs CDN).
     */
-  var inspectorURL: js.UndefOr[String] = js.native
+  var inspectorURL: js.UndefOr[String] = js.undefined
   /**
     * Display in overlay mode (default: false)
     */
-  var overlay: js.UndefOr[Boolean] = js.native
+  var overlay: js.UndefOr[Boolean] = js.undefined
   /**
     * Display the Scene explorer
     */
-  var showExplorer: js.UndefOr[Boolean] = js.native
+  var showExplorer: js.UndefOr[Boolean] = js.undefined
   /**
     * Display the property inspector
     */
-  var showInspector: js.UndefOr[Boolean] = js.native
+  var showInspector: js.UndefOr[Boolean] = js.undefined
 }
 
 object IInspectorOptions {
   @scala.inline
-  def apply(): IInspectorOptions = {
+  def apply(
+    embedMode: js.UndefOr[Boolean] = js.undefined,
+    enableClose: js.UndefOr[Boolean] = js.undefined,
+    enablePopup: js.UndefOr[Boolean] = js.undefined,
+    explorerExtensibility: js.Array[IExplorerExtensibilityGroup] = null,
+    globalRoot: HTMLElement = null,
+    handleResize: js.UndefOr[Boolean] = js.undefined,
+    initialTab: DebugLayerTab = null,
+    inspectorURL: String = null,
+    overlay: js.UndefOr[Boolean] = js.undefined,
+    showExplorer: js.UndefOr[Boolean] = js.undefined,
+    showInspector: js.UndefOr[Boolean] = js.undefined
+  ): IInspectorOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(embedMode)) __obj.updateDynamic("embedMode")(embedMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableClose)) __obj.updateDynamic("enableClose")(enableClose.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enablePopup)) __obj.updateDynamic("enablePopup")(enablePopup.get.asInstanceOf[js.Any])
+    if (explorerExtensibility != null) __obj.updateDynamic("explorerExtensibility")(explorerExtensibility.asInstanceOf[js.Any])
+    if (globalRoot != null) __obj.updateDynamic("globalRoot")(globalRoot.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleResize)) __obj.updateDynamic("handleResize")(handleResize.get.asInstanceOf[js.Any])
+    if (initialTab != null) __obj.updateDynamic("initialTab")(initialTab.asInstanceOf[js.Any])
+    if (inspectorURL != null) __obj.updateDynamic("inspectorURL")(inspectorURL.asInstanceOf[js.Any])
+    if (!js.isUndefined(overlay)) __obj.updateDynamic("overlay")(overlay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showExplorer)) __obj.updateDynamic("showExplorer")(showExplorer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInspector)) __obj.updateDynamic("showInspector")(showInspector.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInspectorOptions]
   }
-  @scala.inline
-  implicit class IInspectorOptionsOps[Self <: IInspectorOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmbedMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embedMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmbedMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embedMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnablePopup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnablePopup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePopup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplorerExtensibility(value: js.Array[IExplorerExtensibilityGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explorerExtensibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplorerExtensibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explorerExtensibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalRoot(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalRoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandleResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandleResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialTab(value: DebugLayerTab): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInspectorURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectorURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInspectorURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectorURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowExplorer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showExplorer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowExplorer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showExplorer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowInspector(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInspector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowInspector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showInspector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

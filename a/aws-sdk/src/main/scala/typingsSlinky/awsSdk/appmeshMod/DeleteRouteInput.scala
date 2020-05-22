@@ -27,47 +27,15 @@ trait DeleteRouteInput extends js.Object {
 
 object DeleteRouteInput {
   @scala.inline
-  def apply(meshName: ResourceName, routeName: ResourceName, virtualRouterName: ResourceName): DeleteRouteInput = {
+  def apply(
+    meshName: ResourceName,
+    routeName: ResourceName,
+    virtualRouterName: ResourceName,
+    meshOwner: AccountId = null
+  ): DeleteRouteInput = {
     val __obj = js.Dynamic.literal(meshName = meshName.asInstanceOf[js.Any], routeName = routeName.asInstanceOf[js.Any], virtualRouterName = virtualRouterName.asInstanceOf[js.Any])
+    if (meshOwner != null) __obj.updateDynamic("meshOwner")(meshOwner.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRouteInput]
   }
-  @scala.inline
-  implicit class DeleteRouteInputOps[Self <: DeleteRouteInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMeshName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meshName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRouteName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVirtualRouterName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualRouterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeshOwner(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meshOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeshOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meshOwner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

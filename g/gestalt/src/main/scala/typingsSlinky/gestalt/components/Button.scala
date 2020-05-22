@@ -15,6 +15,7 @@ import typingsSlinky.gestalt.gestaltStrings.submit
 import typingsSlinky.gestalt.gestaltStrings.transparent
 import typingsSlinky.gestalt.gestaltStrings.white
 import typingsSlinky.gestalt.mod.ButtonProps
+import typingsSlinky.gestalt.mod.Icons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,6 +39,8 @@ object Button {
     def color(value: blue | gray | red | transparent | white): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconEnd(value: Icons): this.type = set("iconEnd", value.asInstanceOf[js.Any])
     @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     @scala.inline

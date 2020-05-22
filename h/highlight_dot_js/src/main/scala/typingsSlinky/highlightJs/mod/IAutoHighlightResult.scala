@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IAutoHighlightResult extends IHighlightResultBase {
-  var second_best: js.UndefOr[IAutoHighlightResult] = js.native
+  var second_best: js.UndefOr[IAutoHighlightResult] = js.undefined
 }
 
 object IAutoHighlightResult {
   @scala.inline
-  def apply(language: String, relevance: Double, value: String): IAutoHighlightResult = {
+  def apply(language: String, relevance: Double, value: String, second_best: IAutoHighlightResult = null): IAutoHighlightResult = {
     val __obj = js.Dynamic.literal(language = language.asInstanceOf[js.Any], relevance = relevance.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (second_best != null) __obj.updateDynamic("second_best")(second_best.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAutoHighlightResult]
   }
-  @scala.inline
-  implicit class IAutoHighlightResultOps[Self <: IAutoHighlightResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecond_best(value: IAutoHighlightResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second_best")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecond_best: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second_best")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

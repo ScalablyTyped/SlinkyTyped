@@ -11,18 +11,17 @@ import scala.scalajs.js.annotation._
   * handles blocks of {@link AutoTextEntry} .
   * @see AutoTextContainer
   */
-@js.native
 trait XAutoTextContainer extends XNameAccess {
   /**
     * creates a new AutoText group.
     * @param aGroupName the name of the {@link AutoTextContainer}  The name must follow the pattern `groupname*pathid` , where:  `groupname` should contain on
     */
-  def insertNewByName(aGroupName: String): XAutoTextGroup = js.native
+  def insertNewByName(aGroupName: String): XAutoTextGroup
   /**
     * deletes the specified AutoText group.
     * @param aGroupName see the documentation for {@link XAutoTextContainer.insertNewByName()}
     */
-  def removeByName(aGroupName: String): Unit = js.native
+  def removeByName(aGroupName: String): Unit
 }
 
 object XAutoTextContainer {
@@ -44,25 +43,5 @@ object XAutoTextContainer {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), insertNewByName = js.Any.fromFunction1(insertNewByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName))
     __obj.asInstanceOf[XAutoTextContainer]
   }
-  @scala.inline
-  implicit class XAutoTextContainerOps[Self <: XAutoTextContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertNewByName(value: String => XAutoTextGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNewByName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

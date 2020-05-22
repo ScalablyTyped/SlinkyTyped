@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * The configuration changes are read from a {@link XLayer} and stored into a {@link Backend} .
   * @since OOo 1.1.2
   */
-@js.native
 trait Importer
   extends XLayerImporter
      with XInitialization

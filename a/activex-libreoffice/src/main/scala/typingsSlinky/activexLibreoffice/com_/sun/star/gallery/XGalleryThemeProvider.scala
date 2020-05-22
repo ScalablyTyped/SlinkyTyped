@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * This interface extends the interface {@link com.sun.star.container.XNameAccess} which provides access to existing Gallery themes collection.
   * @see com.sun.star.container.XNameAccess
   */
-@js.native
 trait XGalleryThemeProvider extends XNameAccess {
   /**
     * creates a new Gallery theme and adds it to the collection.
@@ -21,13 +20,13 @@ trait XGalleryThemeProvider extends XNameAccess {
     * @returns {@link XGalleryTheme} The created theme interface
     * @see com.sun.star.container.ElementExistException
     */
-  def insertNewByName(ThemeName: String): XGalleryTheme = js.native
+  def insertNewByName(ThemeName: String): XGalleryTheme
   /**
     * deletes a Gallery theme from the collection.
     * @param ThemeName The name of the Gallery theme to be removed. The theme with the given name must exist.
     * @see com.sun.star.container.NoSuchElementException
     */
-  def removeByName(ThemeName: String): Unit = js.native
+  def removeByName(ThemeName: String): Unit
 }
 
 object XGalleryThemeProvider {
@@ -49,25 +48,5 @@ object XGalleryThemeProvider {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), insertNewByName = js.Any.fromFunction1(insertNewByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName))
     __obj.asInstanceOf[XGalleryThemeProvider]
   }
-  @scala.inline
-  implicit class XGalleryThemeProviderOps[Self <: XGalleryThemeProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertNewByName(value: String => XGalleryTheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNewByName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

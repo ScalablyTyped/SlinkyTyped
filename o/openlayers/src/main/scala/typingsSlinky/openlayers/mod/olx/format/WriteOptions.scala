@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteOptions extends js.Object {
-  var dataProjection: ProjectionLike = js.native
-  var decimals: js.UndefOr[Double] = js.native
-  var featureProjection: js.UndefOr[ProjectionLike] = js.native
-  var rightHanded: js.UndefOr[Boolean] = js.native
+  var dataProjection: ProjectionLike
+  var decimals: js.UndefOr[Double] = js.undefined
+  var featureProjection: js.UndefOr[ProjectionLike] = js.undefined
+  var rightHanded: js.UndefOr[Boolean] = js.undefined
 }
 
 object WriteOptions {
   @scala.inline
-  def apply(): WriteOptions = {
+  def apply(
+    dataProjection: ProjectionLike = null,
+    decimals: js.UndefOr[Double] = js.undefined,
+    featureProjection: ProjectionLike = null,
+    rightHanded: js.UndefOr[Boolean] = js.undefined
+  ): WriteOptions = {
     val __obj = js.Dynamic.literal()
+    if (dataProjection != null) __obj.updateDynamic("dataProjection")(dataProjection.asInstanceOf[js.Any])
+    if (!js.isUndefined(decimals)) __obj.updateDynamic("decimals")(decimals.get.asInstanceOf[js.Any])
+    if (featureProjection != null) __obj.updateDynamic("featureProjection")(featureProjection.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightHanded)) __obj.updateDynamic("rightHanded")(rightHanded.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteOptions]
   }
-  @scala.inline
-  implicit class WriteOptionsOps[Self <: WriteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataProjection(value: ProjectionLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataProjection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataProjection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimals(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureProjection(value: ProjectionLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureProjection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureProjection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightHanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightHanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightHanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightHanded")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

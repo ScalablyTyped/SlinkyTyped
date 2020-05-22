@@ -1,9 +1,6 @@
 package typingsSlinky.apolloEngineReporting.agentMod
 
-import typingsSlinky.apolloEngineReporting.anon.All
-import typingsSlinky.apolloEngineReporting.anon.ExceptNames
-import typingsSlinky.apolloEngineReporting.anon.None
-import typingsSlinky.apolloEngineReporting.anon.OnlyNames
+import typingsSlinky.apolloEngineReporting.apolloEngineReportingBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,12 +15,24 @@ trait SendValuesBaseOptions extends VariableValueOptions
 
 object SendValuesBaseOptions {
   @scala.inline
-  implicit def apply(value: All): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
+  def OnlyNames(onlyNames: js.Array[String]): SendValuesBaseOptions = {
+    val __obj = js.Dynamic.literal(onlyNames = onlyNames.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendValuesBaseOptions]
+  }
   @scala.inline
-  implicit def apply(value: ExceptNames): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
+  def ExceptNames(exceptNames: js.Array[String]): SendValuesBaseOptions = {
+    val __obj = js.Dynamic.literal(exceptNames = exceptNames.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendValuesBaseOptions]
+  }
   @scala.inline
-  implicit def apply(value: None): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
+  def All(all: `true`): SendValuesBaseOptions = {
+    val __obj = js.Dynamic.literal(all = all.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendValuesBaseOptions]
+  }
   @scala.inline
-  implicit def apply(value: OnlyNames): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
+  def None(none: `true`): SendValuesBaseOptions = {
+    val __obj = js.Dynamic.literal(none = none.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SendValuesBaseOptions]
+  }
 }
 

@@ -5,39 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IRefundListOptions extends IListOptions {
   /**
     * Only return refunds for the charge specified by this charge ID.
     */
-  var charge: js.UndefOr[String] = js.native
+  var charge: js.UndefOr[String] = js.undefined
 }
 
 object IRefundListOptions {
   @scala.inline
-  def apply(): IRefundListOptions = {
+  def apply(
+    charge: String = null,
+    ending_before: String = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    starting_after: String = null
+  ): IRefundListOptions = {
     val __obj = js.Dynamic.literal()
+    if (charge != null) __obj.updateDynamic("charge")(charge.asInstanceOf[js.Any])
+    if (ending_before != null) __obj.updateDynamic("ending_before")(ending_before.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (starting_after != null) __obj.updateDynamic("starting_after")(starting_after.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRefundListOptions]
   }
-  @scala.inline
-  implicit class IRefundListOptionsOps[Self <: IRefundListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charge")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

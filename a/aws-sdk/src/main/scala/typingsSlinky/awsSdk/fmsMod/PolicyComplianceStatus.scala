@@ -38,101 +38,24 @@ trait PolicyComplianceStatus extends js.Object {
 
 object PolicyComplianceStatus {
   @scala.inline
-  def apply(): PolicyComplianceStatus = {
+  def apply(
+    EvaluationResults: EvaluationResults = null,
+    IssueInfoMap: IssueInfoMap = null,
+    LastUpdated: js.Date = null,
+    MemberAccount: AWSAccountId = null,
+    PolicyId: PolicyId = null,
+    PolicyName: ResourceName = null,
+    PolicyOwner: AWSAccountId = null
+  ): PolicyComplianceStatus = {
     val __obj = js.Dynamic.literal()
+    if (EvaluationResults != null) __obj.updateDynamic("EvaluationResults")(EvaluationResults.asInstanceOf[js.Any])
+    if (IssueInfoMap != null) __obj.updateDynamic("IssueInfoMap")(IssueInfoMap.asInstanceOf[js.Any])
+    if (LastUpdated != null) __obj.updateDynamic("LastUpdated")(LastUpdated.asInstanceOf[js.Any])
+    if (MemberAccount != null) __obj.updateDynamic("MemberAccount")(MemberAccount.asInstanceOf[js.Any])
+    if (PolicyId != null) __obj.updateDynamic("PolicyId")(PolicyId.asInstanceOf[js.Any])
+    if (PolicyName != null) __obj.updateDynamic("PolicyName")(PolicyName.asInstanceOf[js.Any])
+    if (PolicyOwner != null) __obj.updateDynamic("PolicyOwner")(PolicyOwner.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyComplianceStatus]
   }
-  @scala.inline
-  implicit class PolicyComplianceStatusOps[Self <: PolicyComplianceStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvaluationResults(value: EvaluationResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssueInfoMap(value: IssueInfoMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IssueInfoMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssueInfoMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IssueInfoMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberAccount(value: AWSAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemberAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyId(value: PolicyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyOwner(value: AWSAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyOwner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyOwner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

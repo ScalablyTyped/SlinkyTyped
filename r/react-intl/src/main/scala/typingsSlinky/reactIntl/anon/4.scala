@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `4`[P /* <: WrappedComponentProps[IntlPropName] */, IntlPropName /* <: String */] extends js.Object {
-  var WrappedComponent: ReactComponentClass[P] = js.native
+  var WrappedComponent: ReactComponentClass[P]
 }
 
 object `4` {
@@ -17,19 +16,5 @@ object `4` {
     val __obj = js.Dynamic.literal(WrappedComponent = WrappedComponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[`4`[P, IntlPropName]]
   }
-  @scala.inline
-  implicit class `4Ops`[Self[p, intlpropname] <: `4`[p, intlpropname], P, IntlPropName] (val x: Self[P, IntlPropName]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[P, IntlPropName] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[P, IntlPropName]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[P, IntlPropName]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[P, IntlPropName]) with Other]
-    @scala.inline
-    def withWrappedComponent(value: ReactComponentClass[P]): Self[P, IntlPropName] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WrappedComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -57,135 +57,34 @@ trait MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters extends 
 
 object MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters {
   @scala.inline
-  def apply(): MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters = {
+  def apply(
+    comment: Input[String] = null,
+    documentHash: Input[String] = null,
+    documentHashType: Input[String] = null,
+    notificationConfig: Input[
+      MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig
+    ] = null,
+    outputS3Bucket: Input[String] = null,
+    outputS3KeyPrefix: Input[String] = null,
+    parameters: Input[
+      js.Array[
+        Input[MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter]
+      ]
+    ] = null,
+    serviceRoleArn: Input[String] = null,
+    timeoutSeconds: Input[Double] = null
+  ): MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters = {
     val __obj = js.Dynamic.literal()
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (documentHash != null) __obj.updateDynamic("documentHash")(documentHash.asInstanceOf[js.Any])
+    if (documentHashType != null) __obj.updateDynamic("documentHashType")(documentHashType.asInstanceOf[js.Any])
+    if (notificationConfig != null) __obj.updateDynamic("notificationConfig")(notificationConfig.asInstanceOf[js.Any])
+    if (outputS3Bucket != null) __obj.updateDynamic("outputS3Bucket")(outputS3Bucket.asInstanceOf[js.Any])
+    if (outputS3KeyPrefix != null) __obj.updateDynamic("outputS3KeyPrefix")(outputS3KeyPrefix.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (serviceRoleArn != null) __obj.updateDynamic("serviceRoleArn")(serviceRoleArn.asInstanceOf[js.Any])
+    if (timeoutSeconds != null) __obj.updateDynamic("timeoutSeconds")(timeoutSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters]
   }
-  @scala.inline
-  implicit class MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersOps[Self <: MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComment(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentHash(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocumentHashType(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHashType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentHashType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentHashType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationConfig(
-      value: Input[
-          MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputS3Bucket(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputS3Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputS3Bucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputS3Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputS3KeyPrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputS3KeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputS3KeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputS3KeyPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(
-      value: Input[
-          js.Array[
-            Input[MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter]
-          ]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutSeconds(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

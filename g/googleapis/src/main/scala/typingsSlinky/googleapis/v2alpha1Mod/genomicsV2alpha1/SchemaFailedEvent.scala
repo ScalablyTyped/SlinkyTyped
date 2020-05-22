@@ -22,41 +22,11 @@ trait SchemaFailedEvent extends js.Object {
 
 object SchemaFailedEvent {
   @scala.inline
-  def apply(): SchemaFailedEvent = {
+  def apply(cause: String = null, code: String = null): SchemaFailedEvent = {
     val __obj = js.Dynamic.literal()
+    if (cause != null) __obj.updateDynamic("cause")(cause.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFailedEvent]
   }
-  @scala.inline
-  implicit class SchemaFailedEventOps[Self <: SchemaFailedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCause(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

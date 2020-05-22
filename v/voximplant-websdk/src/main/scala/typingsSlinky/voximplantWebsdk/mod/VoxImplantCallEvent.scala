@@ -1,14 +1,5 @@
 package typingsSlinky.voximplantWebsdk.mod
 
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.Connected
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.Disconnected
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.Failed
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.InfoReceived
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.MessageReceived
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.ProgressToneStart
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.ProgressToneStop
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.TransferComplete
-import typingsSlinky.voximplantWebsdk.mod.CallEventTypes.TransferFailed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,22 +19,53 @@ trait VoxImplantCallEvent extends js.Object
 
 object VoxImplantCallEvent {
   @scala.inline
-  implicit def apply(value: Connected): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def ProgressToneStart(call: Call): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: Disconnected): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def Disconnected(call: Call, headers: js.Object = null): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: Failed): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def ProgressToneStop(call: Call): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: InfoReceived): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def InfoReceived(body: String, call: Call, mimeType: String, headers: js.Object = null): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], call = call.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: MessageReceived): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def Failed(call: Call, code: Double, reason: String, headers: js.Object = null): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: ProgressToneStart): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def TransferFailed(call: Call): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: ProgressToneStop): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def TransferComplete(call: Call): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: TransferComplete): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def Connected(call: Call, headers: js.Object = null): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
   @scala.inline
-  implicit def apply(value: TransferFailed): VoxImplantCallEvent = value.asInstanceOf[VoxImplantCallEvent]
+  def MessageReceived(call: Call, text: String): VoxImplantCallEvent = {
+    val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VoxImplantCallEvent]
+  }
 }
 

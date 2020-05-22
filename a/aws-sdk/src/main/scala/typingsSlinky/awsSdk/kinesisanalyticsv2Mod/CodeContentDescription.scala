@@ -26,65 +26,18 @@ trait CodeContentDescription extends js.Object {
 
 object CodeContentDescription {
   @scala.inline
-  def apply(): CodeContentDescription = {
+  def apply(
+    CodeMD5: CodeMD5 = null,
+    CodeSize: js.UndefOr[CodeSize] = js.undefined,
+    S3ApplicationCodeLocationDescription: S3ApplicationCodeLocationDescription = null,
+    TextContent: TextContent = null
+  ): CodeContentDescription = {
     val __obj = js.Dynamic.literal()
+    if (CodeMD5 != null) __obj.updateDynamic("CodeMD5")(CodeMD5.asInstanceOf[js.Any])
+    if (!js.isUndefined(CodeSize)) __obj.updateDynamic("CodeSize")(CodeSize.get.asInstanceOf[js.Any])
+    if (S3ApplicationCodeLocationDescription != null) __obj.updateDynamic("S3ApplicationCodeLocationDescription")(S3ApplicationCodeLocationDescription.asInstanceOf[js.Any])
+    if (TextContent != null) __obj.updateDynamic("TextContent")(TextContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeContentDescription]
   }
-  @scala.inline
-  implicit class CodeContentDescriptionOps[Self <: CodeContentDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeMD5(value: CodeMD5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeMD5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeMD5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeMD5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodeSize(value: CodeSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3ApplicationCodeLocationDescription(value: S3ApplicationCodeLocationDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ApplicationCodeLocationDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3ApplicationCodeLocationDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ApplicationCodeLocationDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextContent(value: TextContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextContent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

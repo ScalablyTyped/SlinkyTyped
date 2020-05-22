@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CreateTimeFieldCommand")
 @js.native
 class CreateTimeFieldCommand ()
-  extends typingsSlinky.devexpressWeb.CreateTimeFieldCommand
+  extends typingsSlinky.devexpressWeb.CreateTimeFieldCommand {
+  /**
+    * Executes the CreateTimeFieldCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

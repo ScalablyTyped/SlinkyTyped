@@ -4,167 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimerEventConfig extends js.Object {
   /**
     * Additional arguments to be passed to the `callback`.
     */
-  var args: js.UndefOr[js.Array[_]] = js.native
+  var args: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The callback which will be called when the Timer Event fires.
     */
-  var callback: js.UndefOr[js.Function] = js.native
+  var callback: js.UndefOr[js.Function] = js.undefined
   /**
     * The scope (`this` object) with which to invoke the `callback`.
     */
-  var callbackScope: js.UndefOr[js.Any] = js.native
+  var callbackScope: js.UndefOr[js.Any] = js.undefined
   /**
     * The delay after which the Timer Event should fire, in milliseconds.
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * `true` if the Timer Event should repeat indefinitely.
     */
-  var loop: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.undefined
   /**
     * `true` if the Timer Event should be paused.
     */
-  var paused: js.UndefOr[Boolean] = js.native
+  var paused: js.UndefOr[Boolean] = js.undefined
   /**
     * The total number of times the Timer Event will repeat before finishing.
     */
-  var repeat: js.UndefOr[Double] = js.native
+  var repeat: js.UndefOr[Double] = js.undefined
   /**
     * The initial elapsed time in milliseconds. Useful if you want a long duration with repeat, but for the first loop to fire quickly.
     */
-  var startAt: js.UndefOr[Double] = js.native
+  var startAt: js.UndefOr[Double] = js.undefined
   /**
     * The scale of the elapsed time.
     */
-  var timeScale: js.UndefOr[Double] = js.native
+  var timeScale: js.UndefOr[Double] = js.undefined
 }
 
 object TimerEventConfig {
   @scala.inline
-  def apply(): TimerEventConfig = {
+  def apply(
+    args: js.Array[_] = null,
+    callback: js.Function = null,
+    callbackScope: js.Any = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    paused: js.UndefOr[Boolean] = js.undefined,
+    repeat: js.UndefOr[Double] = js.undefined,
+    startAt: js.UndefOr[Double] = js.undefined,
+    timeScale: js.UndefOr[Double] = js.undefined
+  ): TimerEventConfig = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
+    if (callbackScope != null) __obj.updateDynamic("callbackScope")(callbackScope.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(repeat)) __obj.updateDynamic("repeat")(repeat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAt)) __obj.updateDynamic("startAt")(startAt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeScale)) __obj.updateDynamic("timeScale")(timeScale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimerEventConfig]
   }
-  @scala.inline
-  implicit class TimerEventConfigOps[Self <: TimerEventConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackScope(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepeat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepeat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

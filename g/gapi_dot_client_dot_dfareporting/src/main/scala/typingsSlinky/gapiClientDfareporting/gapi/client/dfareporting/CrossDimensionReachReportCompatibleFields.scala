@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CrossDimensionReachReportCompatibleFields extends js.Object {
   /** Dimensions which are compatible to be selected in the "breakdown" section of the report. */
-  var breakdown: js.UndefOr[js.Array[Dimension]] = js.native
+  var breakdown: js.UndefOr[js.Array[Dimension]] = js.undefined
   /** Dimensions which are compatible to be selected in the "dimensionFilters" section of the report. */
-  var dimensionFilters: js.UndefOr[js.Array[Dimension]] = js.native
+  var dimensionFilters: js.UndefOr[js.Array[Dimension]] = js.undefined
   /** The kind of resource this is, in this case dfareporting#crossDimensionReachReportCompatibleFields. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** Metrics which are compatible to be selected in the "metricNames" section of the report. */
-  var metrics: js.UndefOr[js.Array[Metric]] = js.native
+  var metrics: js.UndefOr[js.Array[Metric]] = js.undefined
   /** Metrics which are compatible to be selected in the "overlapMetricNames" section of the report. */
-  var overlapMetrics: js.UndefOr[js.Array[Metric]] = js.native
+  var overlapMetrics: js.UndefOr[js.Array[Metric]] = js.undefined
 }
 
 object CrossDimensionReachReportCompatibleFields {
   @scala.inline
-  def apply(): CrossDimensionReachReportCompatibleFields = {
+  def apply(
+    breakdown: js.Array[Dimension] = null,
+    dimensionFilters: js.Array[Dimension] = null,
+    kind: String = null,
+    metrics: js.Array[Metric] = null,
+    overlapMetrics: js.Array[Metric] = null
+  ): CrossDimensionReachReportCompatibleFields = {
     val __obj = js.Dynamic.literal()
+    if (breakdown != null) __obj.updateDynamic("breakdown")(breakdown.asInstanceOf[js.Any])
+    if (dimensionFilters != null) __obj.updateDynamic("dimensionFilters")(dimensionFilters.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (overlapMetrics != null) __obj.updateDynamic("overlapMetrics")(overlapMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrossDimensionReachReportCompatibleFields]
   }
-  @scala.inline
-  implicit class CrossDimensionReachReportCompatibleFieldsOps[Self <: CrossDimensionReachReportCompatibleFields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBreakdown(value: js.Array[Dimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensionFilters(value: js.Array[Dimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[Metric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlapMetrics(value: js.Array[Metric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlapMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlapMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlapMetrics")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,32 @@
 package typingsSlinky.esquery.mod
 
+import typingsSlinky.esquery.esqueryStrings.Asterisk
+import typingsSlinky.esquery.esqueryStrings.Equalssign
+import typingsSlinky.esquery.esqueryStrings.ExclamationmarkEqualssign
+import typingsSlinky.esquery.esqueryStrings.Greaterthansign
+import typingsSlinky.esquery.esqueryStrings.GreaterthansignEqualssign
+import typingsSlinky.esquery.esqueryStrings.Lessthansign
+import typingsSlinky.esquery.esqueryStrings.LessthansignEqualssign
+import typingsSlinky.esquery.esqueryStrings.`class`
+import typingsSlinky.esquery.esqueryStrings.`nth-child`
+import typingsSlinky.esquery.esqueryStrings.`nth-last-child`
+import typingsSlinky.esquery.esqueryStrings.`type`
+import typingsSlinky.esquery.esqueryStrings.adjacent
+import typingsSlinky.esquery.esqueryStrings.attribute
+import typingsSlinky.esquery.esqueryStrings.child
+import typingsSlinky.esquery.esqueryStrings.compound
+import typingsSlinky.esquery.esqueryStrings.declaration
+import typingsSlinky.esquery.esqueryStrings.descendant
+import typingsSlinky.esquery.esqueryStrings.expression
+import typingsSlinky.esquery.esqueryStrings.field
+import typingsSlinky.esquery.esqueryStrings.function
+import typingsSlinky.esquery.esqueryStrings.has
+import typingsSlinky.esquery.esqueryStrings.identifier
+import typingsSlinky.esquery.esqueryStrings.not
+import typingsSlinky.esquery.esqueryStrings.pattern
+import typingsSlinky.esquery.esqueryStrings.sibling
+import typingsSlinky.esquery.esqueryStrings.statement
+import typingsSlinky.esquery.esqueryStrings.wildcard
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,36 +56,149 @@ trait Selector extends js.Object
 
 object Selector {
   @scala.inline
-  implicit def apply(value: Adjacent): Selector = value.asInstanceOf[Selector]
+  def Type(`type`: `type`, value: String): Selector = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Attribute): Selector = value.asInstanceOf[Selector]
+  def Wildcard(`type`: wildcard, value: Asterisk, subject: js.UndefOr[Boolean] = js.undefined): Selector = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Child): Selector = value.asInstanceOf[Selector]
+  def Negation(selectors: js.Array[SubjectSelector], `type`: not, subject: js.UndefOr[Boolean] = js.undefined): Selector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Class): Selector = value.asInstanceOf[Selector]
+  def Has(selectors: js.Array[SubjectSelector], `type`: has, subject: js.UndefOr[Boolean] = js.undefined): Selector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Descendant): Selector = value.asInstanceOf[Selector]
+  def Class(name: declaration | expression | function | pattern | statement, `type`: `class`): Selector = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Field): Selector = value.asInstanceOf[Selector]
+  def Adjacent(
+    left: SubjectSelector,
+    right: SubjectSelector,
+    `type`: adjacent,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): Selector = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Has): Selector = value.asInstanceOf[Selector]
+  def Attribute(
+    name: String,
+    `type`: attribute,
+    operator: Equalssign | ExclamationmarkEqualssign | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign = null,
+    subject: js.UndefOr[Boolean] = js.undefined,
+    value: Literal | RegExpLiteral | Type = null
+  ): Selector = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (operator != null) __obj.updateDynamic("operator")(operator.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Identifier): Selector = value.asInstanceOf[Selector]
+  def NthChild(index: NumericLiteral, `type`: `nth-child`, subject: js.UndefOr[Boolean] = js.undefined): Selector = {
+    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Matches_): Selector = value.asInstanceOf[Selector]
+  def Child(
+    left: SubjectSelector,
+    right: SubjectSelector,
+    `type`: child,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): Selector = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Negation): Selector = value.asInstanceOf[Selector]
+  def Field(name: String, `type`: field): Selector = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: NthChild): Selector = value.asInstanceOf[Selector]
+  def NthLastChild(index: NumericLiteral, `type`: `nth-last-child`, subject: js.UndefOr[Boolean] = js.undefined): Selector = {
+    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: NthLastChild): Selector = value.asInstanceOf[Selector]
+  def Matches_(
+    selectors: js.Array[SubjectSelector],
+    `type`: typingsSlinky.esquery.esqueryStrings.matches,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): Selector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Sequence): Selector = value.asInstanceOf[Selector]
+  def Identifier(`type`: identifier, value: String, subject: js.UndefOr[Boolean] = js.undefined): Selector = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Sibling): Selector = value.asInstanceOf[Selector]
+  def Sequence(
+    selectors: js.Array[SubjectSelector],
+    `type`: compound,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): Selector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Type): Selector = value.asInstanceOf[Selector]
+  def Descendant(
+    left: SubjectSelector,
+    right: SubjectSelector,
+    `type`: descendant,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): Selector = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
   @scala.inline
-  implicit def apply(value: Wildcard): Selector = value.asInstanceOf[Selector]
+  def Sibling(
+    left: SubjectSelector,
+    right: SubjectSelector,
+    `type`: sibling,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): Selector = {
+    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Selector]
+  }
 }
 

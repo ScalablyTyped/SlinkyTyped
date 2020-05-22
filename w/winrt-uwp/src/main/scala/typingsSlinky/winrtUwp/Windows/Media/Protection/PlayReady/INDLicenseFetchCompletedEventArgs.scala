@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Gets custom data from a PlayReady-ND license fetch operation. This custom data is an argument from a PlayReady-ND LicenseFetchCompleted event. */
-@js.native
 trait INDLicenseFetchCompletedEventArgs extends js.Object {
   /** Gets custom data from a license fetch response. */
-  var responseCustomData: INDCustomData = js.native
+  var responseCustomData: INDCustomData
 }
 
 object INDLicenseFetchCompletedEventArgs {
@@ -17,19 +16,5 @@ object INDLicenseFetchCompletedEventArgs {
     val __obj = js.Dynamic.literal(responseCustomData = responseCustomData.asInstanceOf[js.Any])
     __obj.asInstanceOf[INDLicenseFetchCompletedEventArgs]
   }
-  @scala.inline
-  implicit class INDLicenseFetchCompletedEventArgsOps[Self <: INDLicenseFetchCompletedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResponseCustomData(value: INDCustomData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCustomData")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

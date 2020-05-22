@@ -31,71 +31,19 @@ trait TaskDefinitionVolumeDockerVolumeConfiguration extends js.Object {
 
 object TaskDefinitionVolumeDockerVolumeConfiguration {
   @scala.inline
-  def apply(scope: String): TaskDefinitionVolumeDockerVolumeConfiguration = {
+  def apply(
+    scope: String,
+    autoprovision: js.UndefOr[Boolean] = js.undefined,
+    driver: String = null,
+    driverOpts: StringDictionary[String] = null,
+    labels: StringDictionary[String] = null
+  ): TaskDefinitionVolumeDockerVolumeConfiguration = {
     val __obj = js.Dynamic.literal(scope = scope.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoprovision)) __obj.updateDynamic("autoprovision")(autoprovision.get.asInstanceOf[js.Any])
+    if (driver != null) __obj.updateDynamic("driver")(driver.asInstanceOf[js.Any])
+    if (driverOpts != null) __obj.updateDynamic("driverOpts")(driverOpts.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskDefinitionVolumeDockerVolumeConfiguration]
   }
-  @scala.inline
-  implicit class TaskDefinitionVolumeDockerVolumeConfigurationOps[Self <: TaskDefinitionVolumeDockerVolumeConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoprovision(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoprovision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoprovision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoprovision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriver(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriverOpts(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driverOpts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriverOpts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driverOpts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

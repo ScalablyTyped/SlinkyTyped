@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Doing extends js.Object {
-  var doing: scala.Double = js.native
-  var done: scala.Double = js.native
-  var followed: scala.Double = js.native
+  var doing: scala.Double
+  var done: scala.Double
+  var followed: scala.Double
 }
 
 object Doing {
@@ -17,31 +16,5 @@ object Doing {
     val __obj = js.Dynamic.literal(doing = doing.asInstanceOf[js.Any], done = done.asInstanceOf[js.Any], followed = followed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Doing]
   }
-  @scala.inline
-  implicit class DoingOps[Self <: Doing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoing(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDone(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFollowed(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

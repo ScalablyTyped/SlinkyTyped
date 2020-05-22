@@ -19,6 +19,5 @@ import scala.scalajs.js.annotation._
   *     checkboxGridItem.setValidation(checkboxGridValidation);
   */
 // tslint:disable-next-line: no-empty-interface
-@js.native
 trait CheckboxGridValidation extends js.Object
 

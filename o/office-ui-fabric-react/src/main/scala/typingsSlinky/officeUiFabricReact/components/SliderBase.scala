@@ -12,7 +12,7 @@ import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderProps
 import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderStyleProps
 import typingsSlinky.officeUiFabricReact.sliderTypesMod.ISliderStyles
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -66,7 +66,7 @@ object SliderBase {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: ISliderStyleProps => Partial[ISliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: ISliderStyleProps => DeepPartial[ISliderStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[ISliderStyleProps, ISliderStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

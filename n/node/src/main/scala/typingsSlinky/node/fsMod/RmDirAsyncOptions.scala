@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RmDirAsyncOptions extends RmDirOptions {
   /**
     * If an `EBUSY`, `EMFILE`, `ENFILE`, `ENOTEMPTY`, or
@@ -14,52 +13,27 @@ trait RmDirAsyncOptions extends RmDirOptions {
     * `true`.
     * @default 0
     */
-  var maxRetries: js.UndefOr[Double] = js.native
+  var maxRetries: js.UndefOr[Double] = js.undefined
   /**
     * The amount of time in milliseconds to wait between retries.
     * This option is ignored if the `recursive` option is not `true`.
     * @default 100
     */
-  var retryDelay: js.UndefOr[Double] = js.native
+  var retryDelay: js.UndefOr[Double] = js.undefined
 }
 
 object RmDirAsyncOptions {
   @scala.inline
-  def apply(): RmDirAsyncOptions = {
+  def apply(
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    recursive: js.UndefOr[Boolean] = js.undefined,
+    retryDelay: js.UndefOr[Double] = js.undefined
+  ): RmDirAsyncOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryDelay)) __obj.updateDynamic("retryDelay")(retryDelay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RmDirAsyncOptions]
   }
-  @scala.inline
-  implicit class RmDirAsyncOptionsOps[Self <: RmDirAsyncOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryDelay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

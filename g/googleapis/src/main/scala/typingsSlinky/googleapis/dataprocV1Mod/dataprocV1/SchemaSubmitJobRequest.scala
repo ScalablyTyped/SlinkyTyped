@@ -27,41 +27,11 @@ trait SchemaSubmitJobRequest extends js.Object {
 
 object SchemaSubmitJobRequest {
   @scala.inline
-  def apply(): SchemaSubmitJobRequest = {
+  def apply(job: SchemaJob = null, requestId: String = null): SchemaSubmitJobRequest = {
     val __obj = js.Dynamic.literal()
+    if (job != null) __obj.updateDynamic("job")(job.asInstanceOf[js.Any])
+    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSubmitJobRequest]
   }
-  @scala.inline
-  implicit class SchemaSubmitJobRequestOps[Self <: SchemaSubmitJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJob(value: SchemaJob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJob: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * @ngdoc service
   * @name umbraco.resources.userResource
   **/
-@js.native
 trait IUserResource extends js.Object {
-  def disableUser(userId: Double): Unit = js.native
+  def disableUser(userId: Double): Unit
 }
 
 object IUserResource {
@@ -19,19 +18,5 @@ object IUserResource {
     val __obj = js.Dynamic.literal(disableUser = js.Any.fromFunction1(disableUser))
     __obj.asInstanceOf[IUserResource]
   }
-  @scala.inline
-  implicit class IUserResourceOps[Self <: IUserResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableUser(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableUser")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

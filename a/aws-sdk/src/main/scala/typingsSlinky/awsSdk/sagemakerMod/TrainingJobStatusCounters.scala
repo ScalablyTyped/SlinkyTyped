@@ -30,77 +30,20 @@ trait TrainingJobStatusCounters extends js.Object {
 
 object TrainingJobStatusCounters {
   @scala.inline
-  def apply(): TrainingJobStatusCounters = {
+  def apply(
+    Completed: js.UndefOr[TrainingJobStatusCounter] = js.undefined,
+    InProgress: js.UndefOr[TrainingJobStatusCounter] = js.undefined,
+    NonRetryableError: js.UndefOr[TrainingJobStatusCounter] = js.undefined,
+    RetryableError: js.UndefOr[TrainingJobStatusCounter] = js.undefined,
+    Stopped: js.UndefOr[TrainingJobStatusCounter] = js.undefined
+  ): TrainingJobStatusCounters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Completed)) __obj.updateDynamic("Completed")(Completed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InProgress)) __obj.updateDynamic("InProgress")(InProgress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NonRetryableError)) __obj.updateDynamic("NonRetryableError")(NonRetryableError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RetryableError)) __obj.updateDynamic("RetryableError")(RetryableError.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Stopped)) __obj.updateDynamic("Stopped")(Stopped.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrainingJobStatusCounters]
   }
-  @scala.inline
-  implicit class TrainingJobStatusCountersOps[Self <: TrainingJobStatusCounters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompleted(value: TrainingJobStatusCounter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Completed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Completed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInProgress(value: TrainingJobStatusCounter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonRetryableError(value: TrainingJobStatusCounter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonRetryableError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonRetryableError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NonRetryableError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryableError(value: TrainingJobStatusCounter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryableError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryableError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryableError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopped(value: TrainingJobStatusCounter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopped: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopped")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

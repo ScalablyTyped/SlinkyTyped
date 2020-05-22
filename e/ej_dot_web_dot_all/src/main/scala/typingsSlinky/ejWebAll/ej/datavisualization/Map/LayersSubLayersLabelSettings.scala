@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LayersSubLayersLabelSettings extends js.Object {
   /** enable or disable the enableSmartLabel property
     * @Default {false}
     */
-  var enableSmartLabel: js.UndefOr[Boolean] = js.native
+  var enableSmartLabel: js.UndefOr[Boolean] = js.undefined
   /** set the labelLength property
     * @Default {'2'}
     */
-  var labelLength: js.UndefOr[Double] = js.native
+  var labelLength: js.UndefOr[Double] = js.undefined
   /** set the labelPath property
     * @Default {null}
     */
-  var labelPath: js.UndefOr[String] = js.native
+  var labelPath: js.UndefOr[String] = js.undefined
   /** The property specifies whether to show labels or not.
     * @Default {false}
     */
-  var showLabels: js.UndefOr[Boolean] = js.native
+  var showLabels: js.UndefOr[Boolean] = js.undefined
   /** set the smartLabelSize property
     * @Default {fixed}
     */
-  var smartLabelSize: js.UndefOr[LabelSize | String] = js.native
+  var smartLabelSize: js.UndefOr[LabelSize | String] = js.undefined
 }
 
 object LayersSubLayersLabelSettings {
   @scala.inline
-  def apply(): LayersSubLayersLabelSettings = {
+  def apply(
+    enableSmartLabel: js.UndefOr[Boolean] = js.undefined,
+    labelLength: js.UndefOr[Double] = js.undefined,
+    labelPath: String = null,
+    showLabels: js.UndefOr[Boolean] = js.undefined,
+    smartLabelSize: LabelSize | String = null
+  ): LayersSubLayersLabelSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enableSmartLabel)) __obj.updateDynamic("enableSmartLabel")(enableSmartLabel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(labelLength)) __obj.updateDynamic("labelLength")(labelLength.get.asInstanceOf[js.Any])
+    if (labelPath != null) __obj.updateDynamic("labelPath")(labelPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLabels)) __obj.updateDynamic("showLabels")(showLabels.get.asInstanceOf[js.Any])
+    if (smartLabelSize != null) __obj.updateDynamic("smartLabelSize")(smartLabelSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayersSubLayersLabelSettings]
   }
-  @scala.inline
-  implicit class LayersSubLayersLabelSettingsOps[Self <: LayersSubLayersLabelSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableSmartLabel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSmartLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSmartLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSmartLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmartLabelSize(value: LabelSize | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartLabelSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmartLabelSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartLabelSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

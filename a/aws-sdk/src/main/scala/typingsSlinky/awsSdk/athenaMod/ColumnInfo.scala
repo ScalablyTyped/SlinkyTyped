@@ -50,125 +50,28 @@ trait ColumnInfo extends js.Object {
 
 object ColumnInfo {
   @scala.inline
-  def apply(Name: String, Type: String): ColumnInfo = {
+  def apply(
+    Name: String,
+    Type: String,
+    CaseSensitive: js.UndefOr[Boolean] = js.undefined,
+    CatalogName: String = null,
+    Label: String = null,
+    Nullable: ColumnNullable = null,
+    Precision: js.UndefOr[Integer] = js.undefined,
+    Scale: js.UndefOr[Integer] = js.undefined,
+    SchemaName: String = null,
+    TableName: String = null
+  ): ColumnInfo = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
+    if (!js.isUndefined(CaseSensitive)) __obj.updateDynamic("CaseSensitive")(CaseSensitive.get.asInstanceOf[js.Any])
+    if (CatalogName != null) __obj.updateDynamic("CatalogName")(CatalogName.asInstanceOf[js.Any])
+    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
+    if (Nullable != null) __obj.updateDynamic("Nullable")(Nullable.asInstanceOf[js.Any])
+    if (!js.isUndefined(Precision)) __obj.updateDynamic("Precision")(Precision.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Scale)) __obj.updateDynamic("Scale")(Scale.get.asInstanceOf[js.Any])
+    if (SchemaName != null) __obj.updateDynamic("SchemaName")(SchemaName.asInstanceOf[js.Any])
+    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnInfo]
   }
-  @scala.inline
-  implicit class ColumnInfoOps[Self <: ColumnInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCatalogName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNullable(value: ColumnNullable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nullable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNullable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nullable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScale(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,60 +15,29 @@ trait Severity extends js.Object {
     */
   var Normalized: js.UndefOr[Integer] = js.native
   /**
-    * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+    * The native severity from the finding product that generated the finding.
+    */
+  var Original: js.UndefOr[NonEmptyString] = js.native
+  /**
+    * Deprecated. This attribute is being deprecated. Instead of providing Product, provide Original. The native severity as defined by the AWS service or integrated partner product that generated the finding.
     */
   var Product: js.UndefOr[Double] = js.native
 }
 
 object Severity {
   @scala.inline
-  def apply(): Severity = {
+  def apply(
+    Label: SeverityLabel = null,
+    Normalized: js.UndefOr[Integer] = js.undefined,
+    Original: NonEmptyString = null,
+    Product: js.UndefOr[Double] = js.undefined
+  ): Severity = {
     val __obj = js.Dynamic.literal()
+    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
+    if (!js.isUndefined(Normalized)) __obj.updateDynamic("Normalized")(Normalized.get.asInstanceOf[js.Any])
+    if (Original != null) __obj.updateDynamic("Original")(Original.asInstanceOf[js.Any])
+    if (!js.isUndefined(Product)) __obj.updateDynamic("Product")(Product.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Severity]
   }
-  @scala.inline
-  implicit class SeverityOps[Self <: Severity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabel(value: SeverityLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalized(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Normalized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Normalized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduct(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Product")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Product")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

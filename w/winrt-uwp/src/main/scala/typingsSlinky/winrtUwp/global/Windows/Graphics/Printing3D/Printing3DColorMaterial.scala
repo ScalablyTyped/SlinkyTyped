@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Graphics.Printing3D
 
+import typingsSlinky.winrtUwp.Windows.UI.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +10,12 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Creates an instance of the Printing3DColorMaterial class. */
 class Printing3DColorMaterial ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DColorMaterial
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3DColorMaterial {
+  /** Gets or sets the color of the material. */
+  /* CompleteClass */
+  override var color: Color = js.native
+  /** Gets or sets the color value of the material. */
+  /* CompleteClass */
+  override var value: Double = js.native
+}
 

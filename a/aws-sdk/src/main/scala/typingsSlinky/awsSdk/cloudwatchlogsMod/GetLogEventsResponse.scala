@@ -22,53 +22,16 @@ trait GetLogEventsResponse extends js.Object {
 
 object GetLogEventsResponse {
   @scala.inline
-  def apply(): GetLogEventsResponse = {
+  def apply(
+    events: OutputLogEvents = null,
+    nextBackwardToken: NextToken = null,
+    nextForwardToken: NextToken = null
+  ): GetLogEventsResponse = {
     val __obj = js.Dynamic.literal()
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (nextBackwardToken != null) __obj.updateDynamic("nextBackwardToken")(nextBackwardToken.asInstanceOf[js.Any])
+    if (nextForwardToken != null) __obj.updateDynamic("nextForwardToken")(nextForwardToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLogEventsResponse]
   }
-  @scala.inline
-  implicit class GetLogEventsResponseOps[Self <: GetLogEventsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvents(value: OutputLogEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextBackwardToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextBackwardToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextBackwardToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextBackwardToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextForwardToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextForwardToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextForwardToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextForwardToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait ListS3ResourcesResult extends js.Object {
 
 object ListS3ResourcesResult {
   @scala.inline
-  def apply(): ListS3ResourcesResult = {
+  def apply(nextToken: NextToken = null, s3Resources: S3ResourcesClassification = null): ListS3ResourcesResult = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (s3Resources != null) __obj.updateDynamic("s3Resources")(s3Resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListS3ResourcesResult]
   }
-  @scala.inline
-  implicit class ListS3ResourcesResultOps[Self <: ListS3ResourcesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Resources(value: S3ResourcesClassification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Resources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Resources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

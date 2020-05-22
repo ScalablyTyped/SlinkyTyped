@@ -13,15 +13,14 @@ import scala.scalajs.js.annotation._
   * @see NumberFormatter
   * @since OOo 1.1.2
   */
-@js.native
 trait NumberFormatsSupplier extends XNumberFormatsSupplier {
   /** Create using default locale. */
-  def createWithDefaultLocale(): Unit = js.native
+  def createWithDefaultLocale(): Unit
   /**
     * Create using specific locale.
     * @param Locale the locale of the number formats supplier
     */
-  def createWithLocale(Locale: Locale): Unit = js.native
+  def createWithLocale(Locale: Locale): Unit
 }
 
 object NumberFormatsSupplier {
@@ -40,25 +39,5 @@ object NumberFormatsSupplier {
     val __obj = js.Dynamic.literal(NumberFormatSettings = NumberFormatSettings.asInstanceOf[js.Any], NumberFormats = NumberFormats.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), createWithDefaultLocale = js.Any.fromFunction0(createWithDefaultLocale), createWithLocale = js.Any.fromFunction1(createWithLocale), getNumberFormatSettings = js.Any.fromFunction0(getNumberFormatSettings), getNumberFormats = js.Any.fromFunction0(getNumberFormats), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[NumberFormatsSupplier]
   }
-  @scala.inline
-  implicit class NumberFormatsSupplierOps[Self <: NumberFormatsSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateWithDefaultLocale(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithDefaultLocale")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateWithLocale(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

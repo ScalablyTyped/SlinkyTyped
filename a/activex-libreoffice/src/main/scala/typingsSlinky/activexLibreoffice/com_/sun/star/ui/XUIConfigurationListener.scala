@@ -11,23 +11,22 @@ import scala.scalajs.js.annotation._
   * supplies information about changes of a user interface configuration manager.
   * @since OOo 2.0
   */
-@js.native
 trait XUIConfigurationListener extends XEventListener {
   /**
     * is invoked when a configuration has inserted an user interface element.
     * @param Event provides information about the element which has been inserted.
     */
-  def elementInserted(Event: ConfigurationEvent): Unit = js.native
+  def elementInserted(Event: ConfigurationEvent): Unit
   /**
     * is invoked when a configuration has removed an user interface element.
     * @param Event provides information about the element which has been removed.
     */
-  def elementRemoved(Event: ConfigurationEvent): Unit = js.native
+  def elementRemoved(Event: ConfigurationEvent): Unit
   /**
     * is invoked when a configuration has replaced an user interface element.
     * @param Event provides information about the element which has been inserted/replaced.
     */
-  def elementReplaced(Event: ConfigurationEvent): Unit = js.native
+  def elementReplaced(Event: ConfigurationEvent): Unit
 }
 
 object XUIConfigurationListener {
@@ -44,31 +43,5 @@ object XUIConfigurationListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), elementInserted = js.Any.fromFunction1(elementInserted), elementRemoved = js.Any.fromFunction1(elementRemoved), elementReplaced = js.Any.fromFunction1(elementReplaced), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XUIConfigurationListener]
   }
-  @scala.inline
-  implicit class XUIConfigurationListenerOps[Self <: XUIConfigurationListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElementInserted(value: ConfigurationEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementInserted")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withElementRemoved(value: ConfigurationEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementRemoved")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withElementReplaced(value: ConfigurationEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementReplaced")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

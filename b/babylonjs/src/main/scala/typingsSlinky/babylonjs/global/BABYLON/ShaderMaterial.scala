@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.PartialIShaderMaterialOpt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,6 +31,11 @@ class ShaderMaterial protected ()
     shaderPath: js.Any,
     options: PartialIShaderMaterialOpt
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 
 /* static members */

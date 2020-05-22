@@ -43,79 +43,20 @@ trait ExcludePackages extends js.Object {
 
 object ExcludePackages {
   @scala.inline
-  def apply(): ExcludePackages = {
+  def apply(
+    excludePackages: js.Array[String] = null,
+    factoryFunc: () => Handler = null,
+    func: (js.Any, /* context */ Context, /* callback */ js.Function2[/* error */ js.UndefOr[js.Any], /* result */ js.UndefOr[js.Any], Unit]) => js.Promise[js.Any] | Unit = null,
+    includePackages: js.Array[String] = null,
+    includePaths: js.Array[String] = null
+  ): ExcludePackages = {
     val __obj = js.Dynamic.literal()
+    if (excludePackages != null) __obj.updateDynamic("excludePackages")(excludePackages.asInstanceOf[js.Any])
+    if (factoryFunc != null) __obj.updateDynamic("factoryFunc")(js.Any.fromFunction0(factoryFunc))
+    if (func != null) __obj.updateDynamic("func")(js.Any.fromFunction3(func))
+    if (includePackages != null) __obj.updateDynamic("includePackages")(includePackages.asInstanceOf[js.Any])
+    if (includePaths != null) __obj.updateDynamic("includePaths")(includePaths.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExcludePackages]
   }
-  @scala.inline
-  implicit class ExcludePackagesOps[Self <: ExcludePackages] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExcludePackages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePackages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludePackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePackages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactoryFunc(value: () => Handler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factoryFunc")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutFactoryFunc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factoryFunc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunc(
-      value: (js.Any, /* context */ Context, /* callback */ js.Function2[/* error */ js.UndefOr[js.Any], /* result */ js.UndefOr[js.Any], Unit]) => js.Promise[js.Any] | Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("func")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutFunc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("func")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludePackages(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePackages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludePackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePackages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludePaths(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludePaths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includePaths")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

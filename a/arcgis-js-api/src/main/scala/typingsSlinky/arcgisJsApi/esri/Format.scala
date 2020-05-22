@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Format extends js.Object {
   /**
     * Contains information that describes how this Format should be converted.  This property should only be set when creating a custom Format.
@@ -13,7 +12,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var conversionInfo: ConversionInfo = js.native
+  var conversionInfo: ConversionInfo
   /**
     * A array of [Coordinate Segments](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#CoordinateSegment).  Each segment represents a section of the Format's coordinate.
     *
@@ -21,7 +20,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var coordinateSegments: js.Array[CoordinateSegment] = js.native
+  var coordinateSegments: js.Array[CoordinateSegment]
   /**
     * A string that serves as a pattern describing how this Format should be displayed.  The pattern should contain all of aliases specified by the Format's [coordinateSegments property](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#coordinateSegments).
     *
@@ -29,7 +28,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var currentPattern: String = js.native
+  var currentPattern: String
   /**
     * The default pattern describing how this Format should be displayed.  See [currentPattern](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#currentPattern).
     *
@@ -37,7 +36,7 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var defaultPattern: String = js.native
+  var defaultPattern: String
   /**
     * The name of the coordinate.  A [CoordinateConversion](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion.html) widget should not contain multiple Formats with the same name.
     *
@@ -45,19 +44,19 @@ trait Format extends js.Object {
     *
     * @default null
     */
-  var name: String = js.native
+  var name: String
   /**
     * The [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) for this format.  Coordinates generated for a format will be derived from points in this spatial reference.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#spatialReference)
     */
-  var spatialReference: SpatialReference = js.native
+  var spatialReference: SpatialReference
   /**
     * The view model of the [CoordinateConversion](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion.html) widget that is utilizing this format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#viewModel)
     */
-  var viewModel: CoordinateConversionViewModel = js.native
+  var viewModel: CoordinateConversionViewModel
 }
 
 object Format {
@@ -74,55 +73,5 @@ object Format {
     val __obj = js.Dynamic.literal(conversionInfo = conversionInfo.asInstanceOf[js.Any], coordinateSegments = coordinateSegments.asInstanceOf[js.Any], currentPattern = currentPattern.asInstanceOf[js.Any], defaultPattern = defaultPattern.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], spatialReference = spatialReference.asInstanceOf[js.Any], viewModel = viewModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Format]
   }
-  @scala.inline
-  implicit class FormatOps[Self <: Format] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversionInfo(value: ConversionInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCoordinateSegments(value: js.Array[CoordinateSegment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSegments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpatialReference(value: SpatialReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withViewModel(value: CoordinateConversionViewModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

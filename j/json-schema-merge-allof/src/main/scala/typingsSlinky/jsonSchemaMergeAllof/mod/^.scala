@@ -27,8 +27,6 @@ object ^ extends js.Object {
     options: (Options_[JSONSchema7] with IgnoreAdditionalProperties) | Options_[JSONSchema7]
   ): JSONSchema7 = js.native
   def apply(rootSchema: JSONSchema): JSONSchema = js.native
-  def apply(rootSchema: JSONSchema46): JSONSchema46 = js.native
-  def apply(rootSchema: JSONSchema46, options: Options_[JSONSchema46]): JSONSchema46 = js.native
   def apply(rootSchema: JSONSchema, options: Options_[JSONSchema]): JSONSchema = js.native
 }
 

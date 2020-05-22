@@ -7,241 +7,110 @@ import scala.scalajs.js.annotation._
 /**
   * Additional items
   */
-@js.native
 trait ClaimItemDetail extends BackboneElement {
   /**
     * Contains extended information for property 'factor'.
     */
-  var _factor: js.UndefOr[Element] = js.native
+  var _factor: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sequence'.
     */
-  var _sequence: js.UndefOr[Element] = js.native
+  var _sequence: js.UndefOr[Element] = js.undefined
   /**
     * Type of service or product
     */
-  var category: js.UndefOr[CodeableConcept] = js.native
+  var category: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Price scaling factor
     */
-  var factor: js.UndefOr[decimal] = js.native
+  var factor: js.UndefOr[decimal] = js.undefined
   /**
     * Service/Product billing modifiers
     */
-  var modifier: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var modifier: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Total additional item cost
     */
-  var net: js.UndefOr[Money] = js.native
+  var net: js.UndefOr[Money] = js.undefined
   /**
     * Program specific reason for item inclusion
     */
-  var programCode: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var programCode: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * Count of Products or Services
     */
-  var quantity: js.UndefOr[Quantity] = js.native
+  var quantity: js.UndefOr[Quantity] = js.undefined
   /**
     * Revenue or cost center code
     */
-  var revenue: js.UndefOr[CodeableConcept] = js.native
+  var revenue: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Service instance
     */
-  var sequence: positiveInt = js.native
+  var sequence: positiveInt
   /**
     * Billing Code
     */
-  var service: js.UndefOr[CodeableConcept] = js.native
+  var service: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Additional items
     */
-  var subDetail: js.UndefOr[js.Array[ClaimItemDetailSubDetail]] = js.native
+  var subDetail: js.UndefOr[js.Array[ClaimItemDetailSubDetail]] = js.undefined
   /**
     * Unique Device Identifier
     */
-  var udi: js.UndefOr[js.Array[Reference]] = js.native
+  var udi: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Fee, charge or cost per point
     */
-  var unitPrice: js.UndefOr[Money] = js.native
+  var unitPrice: js.UndefOr[Money] = js.undefined
 }
 
 object ClaimItemDetail {
   @scala.inline
-  def apply(sequence: positiveInt): ClaimItemDetail = {
+  def apply(
+    sequence: positiveInt,
+    _factor: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _sequence: Element = null,
+    category: CodeableConcept = null,
+    extension: js.Array[Extension] = null,
+    factor: js.UndefOr[decimal] = js.undefined,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifier: js.Array[CodeableConcept] = null,
+    modifierExtension: js.Array[Extension] = null,
+    net: Money = null,
+    programCode: js.Array[CodeableConcept] = null,
+    quantity: Quantity = null,
+    revenue: CodeableConcept = null,
+    service: CodeableConcept = null,
+    subDetail: js.Array[ClaimItemDetailSubDetail] = null,
+    udi: js.Array[Reference] = null,
+    unitPrice: Money = null
+  ): ClaimItemDetail = {
     val __obj = js.Dynamic.literal(sequence = sequence.asInstanceOf[js.Any])
+    if (_factor != null) __obj.updateDynamic("_factor")(_factor.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_sequence != null) __obj.updateDynamic("_sequence")(_sequence.asInstanceOf[js.Any])
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (!js.isUndefined(factor)) __obj.updateDynamic("factor")(factor.get.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (net != null) __obj.updateDynamic("net")(net.asInstanceOf[js.Any])
+    if (programCode != null) __obj.updateDynamic("programCode")(programCode.asInstanceOf[js.Any])
+    if (quantity != null) __obj.updateDynamic("quantity")(quantity.asInstanceOf[js.Any])
+    if (revenue != null) __obj.updateDynamic("revenue")(revenue.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (subDetail != null) __obj.updateDynamic("subDetail")(subDetail.asInstanceOf[js.Any])
+    if (udi != null) __obj.updateDynamic("udi")(udi.asInstanceOf[js.Any])
+    if (unitPrice != null) __obj.updateDynamic("unitPrice")(unitPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimItemDetail]
   }
-  @scala.inline
-  implicit class ClaimItemDetailOps[Self <: ClaimItemDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSequence(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_factor(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_factor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sequence(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sequence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sequence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactor(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifier(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNet(value: Money): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("net")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("net")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgramCode(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("programCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgramCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("programCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Quantity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevenue(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revenue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevenue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revenue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubDetail(value: js.Array[ClaimItemDetailSubDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUdi(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("udi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUdi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("udi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPrice(value: Money): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

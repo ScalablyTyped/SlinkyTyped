@@ -4,49 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait SimpleValidatorConfig extends SimpleValidator {
-  var message: String = js.native
-  var validateIf: js.UndefOr[(js.Function1[/* context */ ValidatorContext, Boolean]) | Boolean] = js.native
+trait SimpleValidatorConfig extends js.Object {
+  var message: String
+  var validateIf: js.UndefOr[(js.Function1[/* context */ ValidatorContext, Boolean]) | Boolean] = js.undefined
 }
 
 object SimpleValidatorConfig {
   @scala.inline
-  def apply(message: String): SimpleValidatorConfig = {
+  def apply(
+    message: String,
+    validateIf: (js.Function1[/* context */ ValidatorContext, Boolean]) | Boolean = null
+  ): SimpleValidatorConfig = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    if (validateIf != null) __obj.updateDynamic("validateIf")(validateIf.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleValidatorConfig]
   }
-  @scala.inline
-  implicit class SimpleValidatorConfigOps[Self <: SimpleValidatorConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValidateIfFunction1(value: /* context */ ValidatorContext => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateIf")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValidateIf(value: (js.Function1[/* context */ ValidatorContext, Boolean]) | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateIf")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidateIf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validateIf")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

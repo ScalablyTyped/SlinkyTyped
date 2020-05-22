@@ -33,7 +33,7 @@ object RSVP extends js.Object {
   val off: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof EventTarget.off */ js.Any = js.native
   val on: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof EventTarget.on */ js.Any = js.native
   def all[T](values: js.Array[T | js.Thenable[T]]): js.Promise[js.Array[T]] = js.native
-  def all[TAll](values: js.Iterable[TAll | js.Thenable[TAll]]): js.Promise[js.Array[TAll]] = js.native
+  def all[T](values: js.Iterable[T | js.Thenable[T]]): js.Promise[js.Array[T]] = js.native
   def all[T1, T2](values: js.Tuple2[T1 | js.Thenable[T1], T2 | js.Thenable[T2]]): js.Promise[js.Tuple2[T1, T2]] = js.native
   def all[T1, T2, T3](values: js.Tuple3[T1 | js.Thenable[T1], T2 | js.Thenable[T2], T3 | js.Thenable[T3]]): js.Promise[js.Tuple3[T1, T2, T3]] = js.native
   def all[T1, T2, T3, T4](

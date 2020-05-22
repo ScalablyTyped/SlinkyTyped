@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaintenancePolicy extends js.Object {
   /** Specifies the maintenance window in which maintenance may be performed. */
-  var window: js.UndefOr[MaintenanceWindow] = js.native
+  var window: js.UndefOr[MaintenanceWindow] = js.undefined
 }
 
 object MaintenancePolicy {
   @scala.inline
-  def apply(): MaintenancePolicy = {
+  def apply(window: MaintenanceWindow = null): MaintenancePolicy = {
     val __obj = js.Dynamic.literal()
+    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenancePolicy]
   }
-  @scala.inline
-  implicit class MaintenancePolicyOps[Self <: MaintenancePolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWindow(value: MaintenanceWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

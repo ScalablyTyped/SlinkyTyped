@@ -13,5 +13,16 @@ import scala.scalajs.js.annotation._
   * Initializes a new instance of the ASPxClientListEditCustomHighlightingEventArgs class.
   */
 class ASPxClientListEditCustomHighlightingEventArgs ()
-  extends typingsSlinky.devexpressWeb.ASPxClientListEditCustomHighlightingEventArgs
+  extends typingsSlinky.devexpressWeb.ASPxClientListEditCustomHighlightingEventArgs {
+  /**
+    * Gets a string that is a filter condition for the editor's items typed by a user.
+    */
+  /* CompleteClass */
+  override var filter: String = js.native
+  /**
+    * Specifies rules according to which the editor highlights the filtered items.
+    */
+  /* CompleteClass */
+  override var highlighting: js.Any = js.native
+}
 

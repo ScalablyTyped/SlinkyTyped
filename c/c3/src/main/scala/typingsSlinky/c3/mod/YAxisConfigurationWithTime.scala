@@ -1,53 +1,44 @@
 package typingsSlinky.c3.mod
 
+import typingsSlinky.c3.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait YAxisConfigurationWithTime extends YAxisConfiguration {
   @JSName("tick")
-  var tick_YAxisConfigurationWithTime: js.UndefOr[YTickConfigurationWithTime] = js.native
-  var `type`: js.UndefOr[js.Any] = js.native
+  var tick_YAxisConfigurationWithTime: js.UndefOr[YTickConfigurationWithTime] = js.undefined
+  var `type`: js.UndefOr[js.Any] = js.undefined
 }
 
 object YAxisConfigurationWithTime {
   @scala.inline
-  def apply(): YAxisConfigurationWithTime = {
+  def apply(
+    center: js.UndefOr[Double] = js.undefined,
+    default: js.Tuple2[Double, Double] = null,
+    inner: js.UndefOr[Boolean] = js.undefined,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    label: String | Position = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    padding: Padding = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    tick: YTickConfigurationWithTime = null,
+    `type`: js.Any = null
+  ): YAxisConfigurationWithTime = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (!js.isUndefined(inner)) __obj.updateDynamic("inner")(inner.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAxisConfigurationWithTime]
   }
-  @scala.inline
-  implicit class YAxisConfigurationWithTimeOps[Self <: YAxisConfigurationWithTime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTick(value: YTickConfigurationWithTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

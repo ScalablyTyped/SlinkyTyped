@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.frame.LayoutManagerEvents
   * @since OOo 2.0
   */
-@js.native
 trait XLayoutManagerListener extends XEventListener {
   /**
     * is invoked when a layout manager has made a certain operation.
@@ -24,7 +23,7 @@ trait XLayoutManagerListener extends XEventListener {
     * @param eLayoutEvent identifies the layout event that has occurred.
     * @param aInfo provides additional information about the event. The type of info depends on the event.
     */
-  def layoutEvent(aSource: EventObject, eLayoutEvent: Double, aInfo: js.Any): Unit = js.native
+  def layoutEvent(aSource: EventObject, eLayoutEvent: Double, aInfo: js.Any): Unit
 }
 
 object XLayoutManagerListener {
@@ -39,19 +38,5 @@ object XLayoutManagerListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), layoutEvent = js.Any.fromFunction3(layoutEvent), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XLayoutManagerListener]
   }
-  @scala.inline
-  implicit class XLayoutManagerListenerOps[Self <: XLayoutManagerListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayoutEvent(value: (EventObject, Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutEvent")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -8,192 +8,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaQueryMatchers extends js.Object {
-  var aspectRatio: js.UndefOr[String] = js.native
-  var color: js.UndefOr[Boolean] = js.native
-  var colorIndex: js.UndefOr[Boolean] = js.native
-  var deviceAspectRatio: js.UndefOr[String] = js.native
-  var deviceHeight: js.UndefOr[Double | String] = js.native
-  var deviceWidth: js.UndefOr[Double | String] = js.native
-  var height: js.UndefOr[Double | String] = js.native
-  var monochrome: js.UndefOr[Boolean] = js.native
-  var orientation: js.UndefOr[portrait | landscape] = js.native
-  var resolution: js.UndefOr[Double | String] = js.native
-  var scan: js.UndefOr[progressive | interlace] = js.native
-  var `type`: js.UndefOr[MediaQueryType] = js.native
-  var width: js.UndefOr[Double | String] = js.native
+  var aspectRatio: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[Boolean] = js.undefined
+  var colorIndex: js.UndefOr[Boolean] = js.undefined
+  var deviceAspectRatio: js.UndefOr[String] = js.undefined
+  var deviceHeight: js.UndefOr[Double | String] = js.undefined
+  var deviceWidth: js.UndefOr[Double | String] = js.undefined
+  var height: js.UndefOr[Double | String] = js.undefined
+  var monochrome: js.UndefOr[Boolean] = js.undefined
+  var orientation: js.UndefOr[portrait | landscape] = js.undefined
+  var resolution: js.UndefOr[Double | String] = js.undefined
+  var scan: js.UndefOr[progressive | interlace] = js.undefined
+  var `type`: js.UndefOr[MediaQueryType] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object MediaQueryMatchers {
   @scala.inline
-  def apply(): MediaQueryMatchers = {
+  def apply(
+    aspectRatio: String = null,
+    color: js.UndefOr[Boolean] = js.undefined,
+    colorIndex: js.UndefOr[Boolean] = js.undefined,
+    deviceAspectRatio: String = null,
+    deviceHeight: Double | String = null,
+    deviceWidth: Double | String = null,
+    height: Double | String = null,
+    monochrome: js.UndefOr[Boolean] = js.undefined,
+    orientation: portrait | landscape = null,
+    resolution: Double | String = null,
+    scan: progressive | interlace = null,
+    `type`: MediaQueryType = null,
+    width: Double | String = null
+  ): MediaQueryMatchers = {
     val __obj = js.Dynamic.literal()
+    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorIndex)) __obj.updateDynamic("colorIndex")(colorIndex.get.asInstanceOf[js.Any])
+    if (deviceAspectRatio != null) __obj.updateDynamic("deviceAspectRatio")(deviceAspectRatio.asInstanceOf[js.Any])
+    if (deviceHeight != null) __obj.updateDynamic("deviceHeight")(deviceHeight.asInstanceOf[js.Any])
+    if (deviceWidth != null) __obj.updateDynamic("deviceWidth")(deviceWidth.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(monochrome)) __obj.updateDynamic("monochrome")(monochrome.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
+    if (scan != null) __obj.updateDynamic("scan")(scan.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaQueryMatchers]
   }
-  @scala.inline
-  implicit class MediaQueryMatchersOps[Self <: MediaQueryMatchers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorIndex(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonochrome(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monochrome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonochrome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monochrome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: portrait | landscape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolution(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScan(value: progressive | interlace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: MediaQueryType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

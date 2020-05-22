@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@js.native
 trait WorksheetDeletedEventArgs extends js.Object {
   /**
     *
@@ -21,21 +20,21 @@ trait WorksheetDeletedEventArgs extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var source: EventSource | Local | Remote = js.native
+  var source: EventSource | Local | Remote
   /**
     *
     * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var `type`: WorksheetDeleted = js.native
+  var `type`: WorksheetDeleted
   /**
     *
     * Gets the id of the worksheet that is deleted from the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var worksheetId: String = js.native
+  var worksheetId: String
 }
 
 object WorksheetDeletedEventArgs {
@@ -45,31 +44,5 @@ object WorksheetDeletedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetDeletedEventArgs]
   }
-  @scala.inline
-  implicit class WorksheetDeletedEventArgsOps[Self <: WorksheetDeletedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: EventSource | Local | Remote): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: WorksheetDeleted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorksheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

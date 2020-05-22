@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait DebugAdapterDescriptor extends js.Object
 
-object DebugAdapterDescriptor {
-  @scala.inline
-  implicit def apply(value: DebugAdapterExecutable): DebugAdapterDescriptor = value.asInstanceOf[DebugAdapterDescriptor]
-  @scala.inline
-  implicit def apply(value: DebugAdapterInlineImplementation): DebugAdapterDescriptor = value.asInstanceOf[DebugAdapterDescriptor]
-  @scala.inline
-  implicit def apply(value: DebugAdapterServer): DebugAdapterDescriptor = value.asInstanceOf[DebugAdapterDescriptor]
-}
-

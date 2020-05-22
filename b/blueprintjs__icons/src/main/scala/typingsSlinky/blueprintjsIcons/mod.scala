@@ -599,6 +599,7 @@ object mod extends js.Object {
     val CUBE_REMOVE: /* "cube-remove" */ String = js.native
     val CURVED_RANGE_CHART: /* "curved-range-chart" */ String = js.native
     val CUT: /* "cut" */ String = js.native
+    val CYCLE: /* "cycle" */ String = js.native
     val DASHBOARD: /* "dashboard" */ String = js.native
     val DATABASE: /* "database" */ String = js.native
     val DATA_LINEAGE: /* "data-lineage" */ String = js.native
@@ -704,6 +705,7 @@ object mod extends js.Object {
     val HAND_LEFT: /* "hand-left" */ String = js.native
     val HAND_RIGHT: /* "hand-right" */ String = js.native
     val HAND_UP: /* "hand-up" */ String = js.native
+    val HAT: /* "hat" */ String = js.native
     val HEADER: /* "header" */ String = js.native
     val HEADER_ONE: /* "header-one" */ String = js.native
     val HEADER_TWO: /* "header-two" */ String = js.native
@@ -732,6 +734,7 @@ object mod extends js.Object {
     val INBOX_UPDATE: /* "inbox-update" */ String = js.native
     val INFO_SIGN: /* "info-sign" */ String = js.native
     val INHERITANCE: /* "inheritance" */ String = js.native
+    val INHERITED_GROUP: /* "inherited-group" */ String = js.native
     val INNER_JOIN: /* "inner-join" */ String = js.native
     val INSERT: /* "insert" */ String = js.native
     val INTERSECTION: /* "intersection" */ String = js.native
@@ -871,6 +874,7 @@ object mod extends js.Object {
     val RING: /* "ring" */ String = js.native
     val ROTATE_DOCUMENT: /* "rotate-document" */ String = js.native
     val ROTATE_PAGE: /* "rotate-page" */ String = js.native
+    val ROUTE: /* "route" */ String = js.native
     val SATELLITE: /* "satellite" */ String = js.native
     val SAVED: /* "saved" */ String = js.native
     val SCATTER_PLOT: /* "scatter-plot" */ String = js.native
@@ -975,6 +979,7 @@ object mod extends js.Object {
     val VERTICAL_BAR_CHART_DESC: /* "vertical-bar-chart-desc" */ String = js.native
     val VERTICAL_DISTRIBUTION: /* "vertical-distribution" */ String = js.native
     val VIDEO: /* "video" */ String = js.native
+    val VIRUS: /* "virus" */ String = js.native
     val VOLUME_DOWN: /* "volume-down" */ String = js.native
     val VOLUME_OFF: /* "volume-off" */ String = js.native
     val VOLUME_UP: /* "volume-up" */ String = js.native

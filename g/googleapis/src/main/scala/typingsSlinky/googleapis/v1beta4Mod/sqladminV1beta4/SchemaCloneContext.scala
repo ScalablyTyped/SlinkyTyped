@@ -31,65 +31,18 @@ trait SchemaCloneContext extends js.Object {
 
 object SchemaCloneContext {
   @scala.inline
-  def apply(): SchemaCloneContext = {
+  def apply(
+    binLogCoordinates: SchemaBinLogCoordinates = null,
+    destinationInstanceName: String = null,
+    kind: String = null,
+    pitrTimestampMs: String = null
+  ): SchemaCloneContext = {
     val __obj = js.Dynamic.literal()
+    if (binLogCoordinates != null) __obj.updateDynamic("binLogCoordinates")(binLogCoordinates.asInstanceOf[js.Any])
+    if (destinationInstanceName != null) __obj.updateDynamic("destinationInstanceName")(destinationInstanceName.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (pitrTimestampMs != null) __obj.updateDynamic("pitrTimestampMs")(pitrTimestampMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCloneContext]
   }
-  @scala.inline
-  implicit class SchemaCloneContextOps[Self <: SchemaCloneContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinLogCoordinates(value: SchemaBinLogCoordinates): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binLogCoordinates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinLogCoordinates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binLogCoordinates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationInstanceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationInstanceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationInstanceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationInstanceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitrTimestampMs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitrTimestampMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitrTimestampMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitrTimestampMs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,49 +11,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InitializationOptions extends js.Object {
   /** Allow comments over the cells: bool */
-  var allowComments: js.UndefOr[Boolean] = js.native
+  var allowComments: js.UndefOr[Boolean] = js.undefined
   /** Allow delete a column: bool */
-  var allowDeleteColumn: js.UndefOr[Boolean] = js.native
+  var allowDeleteColumn: js.UndefOr[Boolean] = js.undefined
   /** Allow delete a row: bool */
-  var allowDeleteRow: js.UndefOr[Boolean] = js.native
+  var allowDeleteRow: js.UndefOr[Boolean] = js.undefined
   /** Allow table export: bool */
-  var allowExport: js.UndefOr[Boolean] = js.native
+  var allowExport: js.UndefOr[Boolean] = js.undefined
   /** Allow insert a new column: bool */
-  var allowInsertColumn: js.UndefOr[Boolean] = js.native
+  var allowInsertColumn: js.UndefOr[Boolean] = js.undefined
   /** Allow insert a new row: bool */
-  var allowInsertRow: js.UndefOr[Boolean] = js.native
+  var allowInsertRow: js.UndefOr[Boolean] = js.undefined
   /** Allow user to create a new column: bool */
-  var allowManualInsertColumn: js.UndefOr[Boolean] = js.native
+  var allowManualInsertColumn: js.UndefOr[Boolean] = js.undefined
   /** Allow user to insert a new row: bool */
-  var allowManualInsertRow: js.UndefOr[Boolean] = js.native
+  var allowManualInsertRow: js.UndefOr[Boolean] = js.undefined
   /** Allow rename a column: bool */
-  var allowRenameColumn: js.UndefOr[Boolean] = js.native
+  var allowRenameColumn: js.UndefOr[Boolean] = js.undefined
   /** Auto increment actions when using the dragging corner */
-  var autoIncrement: js.UndefOr[js.Any] = js.native
+  var autoIncrement: js.UndefOr[js.Any] = js.undefined
   /** Allow column dragging: bool */
-  var columnDrag: js.UndefOr[Boolean] = js.native
+  var columnDrag: js.UndefOr[Boolean] = js.undefined
   /** Allow column resizing: bool */
-  var columnResize: js.UndefOr[Boolean] = js.native
+  var columnResize: js.UndefOr[Boolean] = js.undefined
   /** Allow column sorting: bool */
-  var columnSorting: js.UndefOr[Boolean] = js.native
+  var columnSorting: js.UndefOr[Boolean] = js.undefined
   /** Column type, title, width, align, dropdown options, text wrapping, mask, etc.: object */
-  var columns: js.UndefOr[js.Array[Column]] = js.native
+  var columns: js.UndefOr[js.Array[Column]] = js.undefined
   /** Context menu content: function() { return customMenu } */
   // tslint:disable-next-line ban-types
-  var contextMenu: js.UndefOr[js.Function] = js.native
+  var contextMenu: js.UndefOr[js.Function] = js.undefined
   /** When is true copy and export will bring formula results, if false will bring formulas: boolean */
-  var copyCompatibility: js.UndefOr[Boolean] = js.native
+  var copyCompatibility: js.UndefOr[Boolean] = js.undefined
   /** Load a external CSV file from this URL: string */
-  var csv: js.UndefOr[String] = js.native
+  var csv: js.UndefOr[String] = js.undefined
   /** Default delimiter for the CSV file: string */
-  var csvDelimiter: js.UndefOr[String] = js.native
+  var csvDelimiter: js.UndefOr[String] = js.undefined
   /** Default filename for a download method: string */
-  var csvFileName: js.UndefOr[String] = js.native
+  var csvFileName: js.UndefOr[String] = js.undefined
   /** Load header titles from the CSV file: bool */
-  var csvHeaders: js.UndefOr[Boolean] = js.native
+  var csvHeaders: js.UndefOr[Boolean] = js.undefined
   /** Load this data into the javascript table: array */
   var data: js.UndefOr[
     js.Array[
@@ -61,65 +60,65 @@ trait InitializationOptions extends js.Object {
   {[ title in string | number ]: jexcel.jexcel.CellValue}
     */ typingsSlinky.jexcel.jexcelStrings.InitializationOptions with TopLevel[js.Any]) | js.Array[CellValue]
     ]
-  ] = js.native
+  ] = js.undefined
   /** Default align for a new column: [center, left, right] */
-  var defaultColAlign: js.UndefOr[center | left | right] = js.native
+  var defaultColAlign: js.UndefOr[center | left | right] = js.undefined
   /** Default width for a new column: integer */
-  var defaultColWidth: js.UndefOr[Double] = js.native
+  var defaultColWidth: js.UndefOr[Double] = js.undefined
   /** Allow table edition: bool */
-  var editable: js.UndefOr[Boolean] = js.native
+  var editable: js.UndefOr[Boolean] = js.undefined
   /** Fullscreen mode */
-  var fullscreen: js.UndefOr[Boolean] = js.native
+  var fullscreen: js.UndefOr[Boolean] = js.undefined
   /** Include header titles on download: bool */
-  var includeHeadersOnDownload: js.UndefOr[Boolean] = js.native
+  var includeHeadersOnDownload: js.UndefOr[Boolean] = js.undefined
   /** Activate the table lazyloading */
-  var lazyLoading: js.UndefOr[Boolean] = js.native
+  var lazyLoading: js.UndefOr[Boolean] = js.undefined
   /** Activate the loading spin */
-  var loadingSpin: js.UndefOr[Boolean] = js.native
+  var loadingSpin: js.UndefOr[Boolean] = js.undefined
   /** Cells to be merged in the table initialization: object */
-  var mergeCells: js.UndefOr[Record[String, _]] = js.native
+  var mergeCells: js.UndefOr[Record[String, _]] = js.undefined
   /** Meta information: object */
-  var meta: js.UndefOr[Record[String, _]] = js.native
+  var meta: js.UndefOr[Record[String, _]] = js.undefined
   /** Minimum table dimensions: [cols, rows] */
-  var minDimensions: js.UndefOr[js.Array[Double] | (js.Tuple2[js.UndefOr[Double], Double])] = js.native
+  var minDimensions: js.UndefOr[js.Array[Double] | (js.Tuple2[js.UndefOr[Double], Double])] = js.undefined
   /** Minimum number of spare cols: [integer] */
-  var minSpareCols: js.UndefOr[js.Array[Double]] = js.native
+  var minSpareCols: js.UndefOr[js.Array[Double]] = js.undefined
   /** Minimum number of spare rows: [integer] */
-  var minSpareRows: js.UndefOr[js.Array[Double]] = js.native
+  var minSpareRows: js.UndefOr[js.Array[Double]] = js.undefined
   /** Define the nested headers, including title, colspan, etc: object */
-  var nestedHeaders: js.UndefOr[js.Array[js.Array[Colspan]]] = js.native
+  var nestedHeaders: js.UndefOr[js.Array[js.Array[Colspan]]] = js.undefined
   /** Break the table by pages */
-  var pagination: js.UndefOr[Double] = js.native
+  var pagination: js.UndefOr[Double] = js.undefined
   /** Number of records per page: 25,50,75,100 for example. */
-  var paginationOptions: js.UndefOr[js.Array[Double]] = js.native
+  var paginationOptions: js.UndefOr[js.Array[Double]] = js.undefined
   /** Enable execution of formulas inside the table */
-  var parseFormulas: js.UndefOr[js.Any] = js.native
+  var parseFormulas: js.UndefOr[js.Any] = js.undefined
   /** Allow row dragging: bool */
-  var rowDrag: js.UndefOr[Boolean] = js.native
+  var rowDrag: js.UndefOr[Boolean] = js.undefined
   /** Allow row resizing: bool */
-  var rowResize: js.UndefOr[Boolean] = js.native
+  var rowResize: js.UndefOr[Boolean] = js.undefined
   /** Row properties: height.: object */
-  var rows: js.UndefOr[Record[String, _]] = js.native
+  var rows: js.UndefOr[Record[String, _]] = js.undefined
   /** Allow search in the table */
-  var search: js.UndefOr[Boolean] = js.native
+  var search: js.UndefOr[Boolean] = js.undefined
   /** Allow selection copy: bool */
-  var selectionCopy: js.UndefOr[Boolean] = js.native
+  var selectionCopy: js.UndefOr[Boolean] = js.undefined
   /**
     * Cells style in the table initialization: object
     * key: cellIndex. (e.g.) "A1", "C20"
     * value: css value. (e.g.) "background-color: orange;"
     */
-  var style: js.UndefOr[StringDictionary[String]] = js.native
+  var style: js.UndefOr[StringDictionary[String]] = js.undefined
   /** Force the max height of the table: CSS String */
-  var tableHeight: js.UndefOr[String] = js.native
+  var tableHeight: js.UndefOr[String] = js.undefined
   /** Allow table overflow: bool */
-  var tableOverflow: js.UndefOr[Boolean] = js.native
+  var tableOverflow: js.UndefOr[Boolean] = js.undefined
   /** Force the max width of the table: CSS String */
-  var tableWidth: js.UndefOr[String] = js.native
+  var tableWidth: js.UndefOr[String] = js.undefined
   /** All messages to be customized */
-  var text: js.UndefOr[Record[String, _]] = js.native
+  var text: js.UndefOr[Record[String, _]] = js.undefined
   /** Add custom toolbars: object */
-  var toolbar: js.UndefOr[js.Array[Record[String, _]]] = js.native
+  var toolbar: js.UndefOr[js.Array[Record[String, _]]] = js.undefined
   /** Method to config custom script execution. NOTE: This does not work with lazyLoading, Pagination or Search options. */
   var updateTable: js.UndefOr[
     js.Function7[
@@ -132,646 +131,125 @@ trait InitializationOptions extends js.Object {
       /* cellName */ js.Any, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /** Load a external json file from this URL: string */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
   /** Global text wrapping: bool */
-  var wordWrap: js.UndefOr[Boolean] = js.native
+  var wordWrap: js.UndefOr[Boolean] = js.undefined
 }
 
 object InitializationOptions {
   @scala.inline
-  def apply(): InitializationOptions = {
+  def apply(
+    allowComments: js.UndefOr[Boolean] = js.undefined,
+    allowDeleteColumn: js.UndefOr[Boolean] = js.undefined,
+    allowDeleteRow: js.UndefOr[Boolean] = js.undefined,
+    allowExport: js.UndefOr[Boolean] = js.undefined,
+    allowInsertColumn: js.UndefOr[Boolean] = js.undefined,
+    allowInsertRow: js.UndefOr[Boolean] = js.undefined,
+    allowManualInsertColumn: js.UndefOr[Boolean] = js.undefined,
+    allowManualInsertRow: js.UndefOr[Boolean] = js.undefined,
+    allowRenameColumn: js.UndefOr[Boolean] = js.undefined,
+    autoIncrement: js.Any = null,
+    columnDrag: js.UndefOr[Boolean] = js.undefined,
+    columnResize: js.UndefOr[Boolean] = js.undefined,
+    columnSorting: js.UndefOr[Boolean] = js.undefined,
+    columns: js.Array[Column] = null,
+    contextMenu: js.Function = null,
+    copyCompatibility: js.UndefOr[Boolean] = js.undefined,
+    csv: String = null,
+    csvDelimiter: String = null,
+    csvFileName: String = null,
+    csvHeaders: js.UndefOr[Boolean] = js.undefined,
+    data: js.Array[
+      (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ title in string | number ]: jexcel.jexcel.CellValue}
+    */ typingsSlinky.jexcel.jexcelStrings.InitializationOptions with TopLevel[js.Any]) | js.Array[CellValue]
+    ] = null,
+    defaultColAlign: center | left | right = null,
+    defaultColWidth: js.UndefOr[Double] = js.undefined,
+    editable: js.UndefOr[Boolean] = js.undefined,
+    fullscreen: js.UndefOr[Boolean] = js.undefined,
+    includeHeadersOnDownload: js.UndefOr[Boolean] = js.undefined,
+    lazyLoading: js.UndefOr[Boolean] = js.undefined,
+    loadingSpin: js.UndefOr[Boolean] = js.undefined,
+    mergeCells: Record[String, _] = null,
+    meta: Record[String, _] = null,
+    minDimensions: js.Array[Double] | (js.Tuple2[js.UndefOr[Double], Double]) = null,
+    minSpareCols: js.Array[Double] = null,
+    minSpareRows: js.Array[Double] = null,
+    nestedHeaders: js.Array[js.Array[Colspan]] = null,
+    pagination: js.UndefOr[Double] = js.undefined,
+    paginationOptions: js.Array[Double] = null,
+    parseFormulas: js.Any = null,
+    rowDrag: js.UndefOr[Boolean] = js.undefined,
+    rowResize: js.UndefOr[Boolean] = js.undefined,
+    rows: Record[String, _] = null,
+    search: js.UndefOr[Boolean] = js.undefined,
+    selectionCopy: js.UndefOr[Boolean] = js.undefined,
+    style: StringDictionary[String] = null,
+    tableHeight: String = null,
+    tableOverflow: js.UndefOr[Boolean] = js.undefined,
+    tableWidth: String = null,
+    text: Record[String, _] = null,
+    toolbar: js.Array[Record[String, _]] = null,
+    updateTable: (/* instance */ js.Any, /* cell */ js.Any, /* col */ js.Any, /* row */ js.Any, /* val */ js.Any, /* label */ js.Any, /* cellName */ js.Any) => Unit = null,
+    url: String = null,
+    wordWrap: js.UndefOr[Boolean] = js.undefined
+  ): InitializationOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowComments)) __obj.updateDynamic("allowComments")(allowComments.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDeleteColumn)) __obj.updateDynamic("allowDeleteColumn")(allowDeleteColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDeleteRow)) __obj.updateDynamic("allowDeleteRow")(allowDeleteRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowExport)) __obj.updateDynamic("allowExport")(allowExport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowInsertColumn)) __obj.updateDynamic("allowInsertColumn")(allowInsertColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowInsertRow)) __obj.updateDynamic("allowInsertRow")(allowInsertRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowManualInsertColumn)) __obj.updateDynamic("allowManualInsertColumn")(allowManualInsertColumn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowManualInsertRow)) __obj.updateDynamic("allowManualInsertRow")(allowManualInsertRow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowRenameColumn)) __obj.updateDynamic("allowRenameColumn")(allowRenameColumn.get.asInstanceOf[js.Any])
+    if (autoIncrement != null) __obj.updateDynamic("autoIncrement")(autoIncrement.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnDrag)) __obj.updateDynamic("columnDrag")(columnDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnResize)) __obj.updateDynamic("columnResize")(columnResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnSorting)) __obj.updateDynamic("columnSorting")(columnSorting.get.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (!js.isUndefined(copyCompatibility)) __obj.updateDynamic("copyCompatibility")(copyCompatibility.get.asInstanceOf[js.Any])
+    if (csv != null) __obj.updateDynamic("csv")(csv.asInstanceOf[js.Any])
+    if (csvDelimiter != null) __obj.updateDynamic("csvDelimiter")(csvDelimiter.asInstanceOf[js.Any])
+    if (csvFileName != null) __obj.updateDynamic("csvFileName")(csvFileName.asInstanceOf[js.Any])
+    if (!js.isUndefined(csvHeaders)) __obj.updateDynamic("csvHeaders")(csvHeaders.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (defaultColAlign != null) __obj.updateDynamic("defaultColAlign")(defaultColAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultColWidth)) __obj.updateDynamic("defaultColWidth")(defaultColWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fullscreen)) __obj.updateDynamic("fullscreen")(fullscreen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeHeadersOnDownload)) __obj.updateDynamic("includeHeadersOnDownload")(includeHeadersOnDownload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lazyLoading)) __obj.updateDynamic("lazyLoading")(lazyLoading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loadingSpin)) __obj.updateDynamic("loadingSpin")(loadingSpin.get.asInstanceOf[js.Any])
+    if (mergeCells != null) __obj.updateDynamic("mergeCells")(mergeCells.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (minDimensions != null) __obj.updateDynamic("minDimensions")(minDimensions.asInstanceOf[js.Any])
+    if (minSpareCols != null) __obj.updateDynamic("minSpareCols")(minSpareCols.asInstanceOf[js.Any])
+    if (minSpareRows != null) __obj.updateDynamic("minSpareRows")(minSpareRows.asInstanceOf[js.Any])
+    if (nestedHeaders != null) __obj.updateDynamic("nestedHeaders")(nestedHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(pagination)) __obj.updateDynamic("pagination")(pagination.get.asInstanceOf[js.Any])
+    if (paginationOptions != null) __obj.updateDynamic("paginationOptions")(paginationOptions.asInstanceOf[js.Any])
+    if (parseFormulas != null) __obj.updateDynamic("parseFormulas")(parseFormulas.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowDrag)) __obj.updateDynamic("rowDrag")(rowDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowResize)) __obj.updateDynamic("rowResize")(rowResize.get.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (!js.isUndefined(search)) __obj.updateDynamic("search")(search.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectionCopy)) __obj.updateDynamic("selectionCopy")(selectionCopy.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tableHeight != null) __obj.updateDynamic("tableHeight")(tableHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(tableOverflow)) __obj.updateDynamic("tableOverflow")(tableOverflow.get.asInstanceOf[js.Any])
+    if (tableWidth != null) __obj.updateDynamic("tableWidth")(tableWidth.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
+    if (updateTable != null) __obj.updateDynamic("updateTable")(js.Any.fromFunction7(updateTable))
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(wordWrap)) __obj.updateDynamic("wordWrap")(wordWrap.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitializationOptions]
   }
-  @scala.inline
-  implicit class InitializationOptionsOps[Self <: InitializationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowComments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowComments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowDeleteColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleteColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDeleteColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleteColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowDeleteRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleteRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDeleteRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleteRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowExport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowExport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowInsertColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInsertColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowInsertColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInsertColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowInsertRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInsertRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowInsertRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInsertRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowManualInsertColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowManualInsertColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowManualInsertColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowManualInsertColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowManualInsertRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowManualInsertRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowManualInsertRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowManualInsertRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowRenameColumn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRenameColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowRenameColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRenameColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoIncrement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoIncrement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIncrement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[Column]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextMenu(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCopyCompatibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyCompatibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopyCompatibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyCompatibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsv(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvFileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvFileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(
-      value: js.Array[
-          (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
-    {[ title in string | number ]: jexcel.jexcel.CellValue}
-      */ typingsSlinky.jexcel.jexcelStrings.InitializationOptions with TopLevel[js.Any]) | js.Array[CellValue]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultColAlign(value: center | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultColWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullscreen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullscreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeHeadersOnDownload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeHeadersOnDownload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeHeadersOnDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeHeadersOnDownload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazyLoading(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazyLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingSpin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingSpin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingSpin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingSpin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeCells(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeta(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDimensions(value: js.Array[Double] | (js.Tuple2[js.UndefOr[Double], Double])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSpareCols(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpareCols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSpareCols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpareCols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSpareRows(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpareRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSpareRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpareRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNestedHeaders(value: js.Array[js.Array[Colspan]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNestedHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPagination(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPagination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaginationOptions(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paginationOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParseFormulas(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseFormulas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParseFormulas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseFormulas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionCopy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionCopy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionCopy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableOverflow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbar(value: js.Array[Record[String, _]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTable(
-      value: (/* instance */ js.Any, /* cell */ js.Any, /* col */ js.Any, /* row */ js.Any, /* val */ js.Any, /* label */ js.Any, /* cellName */ js.Any) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTable")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

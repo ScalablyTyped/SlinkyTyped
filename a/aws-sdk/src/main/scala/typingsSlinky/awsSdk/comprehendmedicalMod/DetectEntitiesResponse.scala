@@ -26,53 +26,16 @@ trait DetectEntitiesResponse extends js.Object {
 
 object DetectEntitiesResponse {
   @scala.inline
-  def apply(Entities: EntityList, ModelVersion: String): DetectEntitiesResponse = {
+  def apply(
+    Entities: EntityList,
+    ModelVersion: String,
+    PaginationToken: String = null,
+    UnmappedAttributes: UnmappedAttributeList = null
+  ): DetectEntitiesResponse = {
     val __obj = js.Dynamic.literal(Entities = Entities.asInstanceOf[js.Any], ModelVersion = ModelVersion.asInstanceOf[js.Any])
+    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
+    if (UnmappedAttributes != null) __obj.updateDynamic("UnmappedAttributes")(UnmappedAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectEntitiesResponse]
   }
-  @scala.inline
-  implicit class DetectEntitiesResponseOps[Self <: DetectEntitiesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntities(value: EntityList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaginationToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmappedAttributes(value: UnmappedAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnmappedAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmappedAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnmappedAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

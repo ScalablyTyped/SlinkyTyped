@@ -26,53 +26,12 @@ trait SchemaAmpUrl extends js.Object {
 
 object SchemaAmpUrl {
   @scala.inline
-  def apply(): SchemaAmpUrl = {
+  def apply(ampUrl: String = null, cdnAmpUrl: String = null, originalUrl: String = null): SchemaAmpUrl = {
     val __obj = js.Dynamic.literal()
+    if (ampUrl != null) __obj.updateDynamic("ampUrl")(ampUrl.asInstanceOf[js.Any])
+    if (cdnAmpUrl != null) __obj.updateDynamic("cdnAmpUrl")(cdnAmpUrl.asInstanceOf[js.Any])
+    if (originalUrl != null) __obj.updateDynamic("originalUrl")(originalUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAmpUrl]
   }
-  @scala.inline
-  implicit class SchemaAmpUrlOps[Self <: SchemaAmpUrl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmpUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ampUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmpUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ampUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdnAmpUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdnAmpUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCdnAmpUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdnAmpUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

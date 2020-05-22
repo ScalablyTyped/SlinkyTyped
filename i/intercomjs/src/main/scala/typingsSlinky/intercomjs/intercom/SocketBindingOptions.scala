@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SocketBindingOptions extends js.Object {
-   /* boolean | (name: string, message: any)=>any */ var receive: js.UndefOr[js.Any] = js.native
-  var send: js.UndefOr[js.Any] = js.native
+   /* boolean | (name: string, message: any)=>any */ var receive: js.UndefOr[js.Any] = js.undefined
+  var send: js.UndefOr[js.Any] = js.undefined
 }
 
 object SocketBindingOptions {
   @scala.inline
-  def apply(): SocketBindingOptions = {
+  def apply(receive: js.Any = null, send: js.Any = null): SocketBindingOptions = {
     val __obj = js.Dynamic.literal()
+    if (receive != null) __obj.updateDynamic("receive")(receive.asInstanceOf[js.Any])
+    if (send != null) __obj.updateDynamic("send")(send.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketBindingOptions]
   }
-  @scala.inline
-  implicit class SocketBindingOptionsOps[Self <: SocketBindingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReceive(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReceive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSend(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,18 +7,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OCSPResponse extends js.Object {
-  var responseBytes: js.UndefOr[typingsSlinky.pkijs.responseBytesMod.default] = js.native
-  var responseStatus: Enumerated = js.native
+  var responseBytes: js.UndefOr[typingsSlinky.pkijs.responseBytesMod.default] = js.undefined
+  var responseStatus: Enumerated
   /**
     * Making OCSP Request for specific certificate
     * @param {Certificate} certificate Certificate making OCSP Request for
     * @param {CreateFroCertificateParams} parameters Additional parameters
     * @returns {Promise}
     */
-  def createForCertificate(certificate: typingsSlinky.pkijs.certificateMod.default, parameters: CreateFroCertificateParams): js.Thenable[Unit] = js.native
-  def fromSchema(schema: js.Any): Unit = js.native
+  def createForCertificate(certificate: typingsSlinky.pkijs.certificateMod.default, parameters: CreateFroCertificateParams): js.Thenable[Unit]
+  def fromSchema(schema: js.Any): Unit
   /**
     * Get OCSP response status for specific certificate
     * @param {Certificate} certificate
@@ -28,9 +27,9 @@ trait OCSPResponse extends js.Object {
   def getCertificateStatus(
     certificate: typingsSlinky.pkijs.certificateMod.default,
     issuerCertificate: typingsSlinky.pkijs.certificateMod.default
-  ): js.Thenable[GetCertificateStatusResult] = js.native
-  def toJSON(): js.Any = js.native
-  def toSchema(): js.Any = js.native
+  ): js.Thenable[GetCertificateStatusResult]
+  def toJSON(): js.Any
+  def toSchema(): js.Any
 }
 
 object OCSPResponse {
@@ -41,70 +40,12 @@ object OCSPResponse {
     getCertificateStatus: (typingsSlinky.pkijs.certificateMod.default, typingsSlinky.pkijs.certificateMod.default) => js.Thenable[GetCertificateStatusResult],
     responseStatus: Enumerated,
     toJSON: () => js.Any,
-    toSchema: () => js.Any
+    toSchema: () => js.Any,
+    responseBytes: typingsSlinky.pkijs.responseBytesMod.default = null
   ): OCSPResponse = {
     val __obj = js.Dynamic.literal(createForCertificate = js.Any.fromFunction2(createForCertificate), fromSchema = js.Any.fromFunction1(fromSchema), getCertificateStatus = js.Any.fromFunction2(getCertificateStatus), responseStatus = responseStatus.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), toSchema = js.Any.fromFunction0(toSchema))
+    if (responseBytes != null) __obj.updateDynamic("responseBytes")(responseBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[OCSPResponse]
   }
-  @scala.inline
-  implicit class OCSPResponseOps[Self <: OCSPResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateForCertificate(
-      value: (typingsSlinky.pkijs.certificateMod.default, CreateFroCertificateParams) => js.Thenable[Unit]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createForCertificate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFromSchema(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromSchema")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCertificateStatus(
-      value: (typingsSlinky.pkijs.certificateMod.default, typingsSlinky.pkijs.certificateMod.default) => js.Thenable[GetCertificateStatusResult]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCertificateStatus")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withResponseStatus(value: Enumerated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToJSON(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withToSchema(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toSchema")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResponseBytes(value: typingsSlinky.pkijs.responseBytesMod.default): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBytes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

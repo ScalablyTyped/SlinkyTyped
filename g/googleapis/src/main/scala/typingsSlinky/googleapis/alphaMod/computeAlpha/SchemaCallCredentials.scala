@@ -38,65 +38,18 @@ trait SchemaCallCredentials extends js.Object {
 
 object SchemaCallCredentials {
   @scala.inline
-  def apply(): SchemaCallCredentials = {
+  def apply(
+    accessToken: String = null,
+    callCredentialType: String = null,
+    fromPlugin: SchemaMetadataCredentialsFromPlugin = null,
+    jwtServiceAccount: SchemaServiceAccountJwtAccessCredentials = null
+  ): SchemaCallCredentials = {
     val __obj = js.Dynamic.literal()
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
+    if (callCredentialType != null) __obj.updateDynamic("callCredentialType")(callCredentialType.asInstanceOf[js.Any])
+    if (fromPlugin != null) __obj.updateDynamic("fromPlugin")(fromPlugin.asInstanceOf[js.Any])
+    if (jwtServiceAccount != null) __obj.updateDynamic("jwtServiceAccount")(jwtServiceAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCallCredentials]
   }
-  @scala.inline
-  implicit class SchemaCallCredentialsOps[Self <: SchemaCallCredentials] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallCredentialType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callCredentialType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallCredentialType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callCredentialType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFromPlugin(value: SchemaMetadataCredentialsFromPlugin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPlugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromPlugin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPlugin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJwtServiceAccount(value: SchemaServiceAccountJwtAccessCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtServiceAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwtServiceAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwtServiceAccount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

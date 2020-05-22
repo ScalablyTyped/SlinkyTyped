@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * An image consumer is a component which wants to display or just receive an image from an image producer.
   * @see XImageProducer
   */
-@js.native
 trait XImageConsumer extends XInterface {
   /**
     * is called for the notification of the degree to which the image is delivered.
@@ -22,9 +21,9 @@ trait XImageConsumer extends XInterface {
     * of a multi-frame animation has been completed, or when an error in loading or producing the image has occurred. The image consumer should remove
     * itself from the list of consumers registered with the image producer at this time, unless it is interested in successive frames.
     */
-  def complete(Status: Double, xProducer: XImageProducer): Unit = js.native
+  def complete(Status: Double, xProducer: XImageProducer): Unit
   /** initializes the consumer with image dimensions. */
-  def init(Width: Double, Height: Double): Unit = js.native
+  def init(Width: Double, Height: Double): Unit
   /** changes color model for next pixels typically called once after initialization. */
   def setColorModel(
     BitCount: Double,
@@ -33,7 +32,7 @@ trait XImageConsumer extends XInterface {
     GreenMask: Double,
     BlueMask: Double,
     AlphaMask: Double
-  ): Unit = js.native
+  ): Unit
   /**
     * delivers a chunk of pixels as `long` values.
     *
@@ -49,7 +48,7 @@ trait XImageConsumer extends XInterface {
     aProducerData: SeqEquiv[Double],
     nOffset: Double,
     nScanSize: Double
-  ): Unit = js.native
+  ): Unit
   /**
     * delivers a chunk of pixels as `byte` values.
     *
@@ -65,7 +64,7 @@ trait XImageConsumer extends XInterface {
     aProducerData: SeqEquiv[Double],
     nOffset: Double,
     nScanSize: Double
-  ): Unit = js.native
+  ): Unit
 }
 
 object XImageConsumer {
@@ -83,43 +82,5 @@ object XImageConsumer {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), complete = js.Any.fromFunction2(complete), init = js.Any.fromFunction2(init), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setColorModel = js.Any.fromFunction6(setColorModel), setPixelsByBytes = js.Any.fromFunction7(setPixelsByBytes), setPixelsByLongs = js.Any.fromFunction7(setPixelsByLongs))
     __obj.asInstanceOf[XImageConsumer]
   }
-  @scala.inline
-  implicit class XImageConsumerOps[Self <: XImageConsumer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplete(value: (Double, XImageProducer) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInit(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetColorModel(value: (Double, SeqEquiv[Double], Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setColorModel")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withSetPixelsByBytes(value: (Double, Double, Double, Double, SeqEquiv[Double], Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPixelsByBytes")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withSetPixelsByLongs(value: (Double, Double, Double, Double, SeqEquiv[Double], Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPixelsByLongs")(js.Any.fromFunction7(value))
-        ret
-    }
-  }
-  
 }
 

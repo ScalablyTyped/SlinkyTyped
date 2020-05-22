@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends RomanNumeral {
   def this(value: String) = this()
   def this(value: Double) = this()
+  /* CompleteClass */
+  override def toInt(): Double = js.native
 }
 

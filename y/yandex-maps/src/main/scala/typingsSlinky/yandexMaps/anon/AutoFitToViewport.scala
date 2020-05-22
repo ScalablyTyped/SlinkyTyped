@@ -7,114 +7,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoFitToViewport extends js.Object {
-  var autoFitToViewport: js.UndefOr[none | ifNull | always] = js.native
-  var controls: js.UndefOr[js.Array[String]] = js.native
-  var direction: js.UndefOr[js.Array[Double] | String] = js.native
-  var hotkeysEnabled: js.UndefOr[Boolean] = js.native
-  var scrollZoomBehavior: js.UndefOr[Boolean] = js.native
-  var span: js.UndefOr[js.Array[Double] | String] = js.native
-  var suppressMapOpenBlock: js.UndefOr[Boolean] = js.native
+  var autoFitToViewport: js.UndefOr[none | ifNull | always] = js.undefined
+  var controls: js.UndefOr[js.Array[String]] = js.undefined
+  var direction: js.UndefOr[js.Array[Double] | String] = js.undefined
+  var hotkeysEnabled: js.UndefOr[Boolean] = js.undefined
+  var scrollZoomBehavior: js.UndefOr[Boolean] = js.undefined
+  var span: js.UndefOr[js.Array[Double] | String] = js.undefined
+  var suppressMapOpenBlock: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoFitToViewport {
   @scala.inline
-  def apply(): AutoFitToViewport = {
+  def apply(
+    autoFitToViewport: none | ifNull | always = null,
+    controls: js.Array[String] = null,
+    direction: js.Array[Double] | String = null,
+    hotkeysEnabled: js.UndefOr[Boolean] = js.undefined,
+    scrollZoomBehavior: js.UndefOr[Boolean] = js.undefined,
+    span: js.Array[Double] | String = null,
+    suppressMapOpenBlock: js.UndefOr[Boolean] = js.undefined
+  ): AutoFitToViewport = {
     val __obj = js.Dynamic.literal()
+    if (autoFitToViewport != null) __obj.updateDynamic("autoFitToViewport")(autoFitToViewport.asInstanceOf[js.Any])
+    if (controls != null) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(hotkeysEnabled)) __obj.updateDynamic("hotkeysEnabled")(hotkeysEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollZoomBehavior)) __obj.updateDynamic("scrollZoomBehavior")(scrollZoomBehavior.get.asInstanceOf[js.Any])
+    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressMapOpenBlock)) __obj.updateDynamic("suppressMapOpenBlock")(suppressMapOpenBlock.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoFitToViewport]
   }
-  @scala.inline
-  implicit class AutoFitToViewportOps[Self <: AutoFitToViewport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoFitToViewport(value: none | ifNull | always): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFitToViewport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFitToViewport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFitToViewport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControls(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: js.Array[Double] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHotkeysEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotkeysEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHotkeysEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hotkeysEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollZoomBehavior(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollZoomBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollZoomBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollZoomBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpan(value: js.Array[Double] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuppressMapOpenBlock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMapOpenBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuppressMapOpenBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMapOpenBlock")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

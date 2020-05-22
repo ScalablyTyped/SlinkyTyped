@@ -1,5 +1,7 @@
 package typingsSlinky.sharepoint.global.SP.Social
 
+import typingsSlinky.sharepoint.SP.SerializationContext
+import typingsSlinky.sharepoint.SP.XmlWriter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +11,24 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.Social.SocialLink")
 @js.native
 class SocialLink ()
-  extends typingsSlinky.sharepoint.SP.Social.SocialLink
+  extends typingsSlinky.sharepoint.SP.Social.SocialLink {
+  /* CompleteClass */
+  override def customFromJson(obj: js.Any): Boolean = js.native
+  /* CompleteClass */
+  override def customWriteToXml(writer: XmlWriter, serializationContext: SerializationContext): Boolean = js.native
+  /* CompleteClass */
+  override def fromJson(obj: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def get_text(): String = js.native
+  /* CompleteClass */
+  override def get_typeId(): String = js.native
+  /* CompleteClass */
+  override def get_uri(): String = js.native
+  /* CompleteClass */
+  override def set_text(value: String): String = js.native
+  /* CompleteClass */
+  override def set_uri(value: String): String = js.native
+  /* CompleteClass */
+  override def writeToXml(writer: XmlWriter, serializationContext: SerializationContext): Unit = js.native
+}
 

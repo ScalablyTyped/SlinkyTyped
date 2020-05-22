@@ -12,7 +12,10 @@ import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStrings
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStyles
 import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
-import typingsSlinky.std.Partial
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.alpha
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.none
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -33,6 +36,8 @@ object ColorPicker {
     def alphaLabel(value: String): this.type = set("alphaLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def alphaSliderHidden(value: Boolean): this.type = set("alphaSliderHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alphaType(value: alpha | transparency | none): this.type = set("alphaType", value.asInstanceOf[js.Any])
     @scala.inline
     def blueLabel(value: String): this.type = set("blueLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -56,7 +61,7 @@ object ColorPicker {
     @scala.inline
     def strings(value: IColorPickerStrings): this.type = set("strings", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IColorPickerStyleProps => Partial[IColorPickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IColorPickerStyleProps => DeepPartial[IColorPickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IColorPickerStyleProps, IColorPickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

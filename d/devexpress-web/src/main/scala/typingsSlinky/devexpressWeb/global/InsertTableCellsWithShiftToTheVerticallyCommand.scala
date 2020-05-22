@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InsertTableCellsWithShiftToTheVerticallyCommand")
 @js.native
 class InsertTableCellsWithShiftToTheVerticallyCommand ()
-  extends typingsSlinky.devexpressWeb.InsertTableCellsWithShiftToTheVerticallyCommand
+  extends typingsSlinky.devexpressWeb.InsertTableCellsWithShiftToTheVerticallyCommand {
+  /**
+    * Executes the InsertTableCellsWithShiftToTheVerticallyCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.SimpleCommandState = js.native
+}
 

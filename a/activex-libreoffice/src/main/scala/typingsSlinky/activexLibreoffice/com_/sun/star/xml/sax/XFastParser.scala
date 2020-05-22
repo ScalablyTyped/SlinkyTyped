@@ -46,43 +46,42 @@ import scala.scalajs.js.annotation._
   * XFastDocumentHandler.endDocument()} .
   * @see http://wiki.openoffice.org/wiki/FastParser
   */
-@js.native
 trait XFastParser extends XInterface {
   /** Gets the namespace url string. */
-  def getNamespaceURL(prefix: String): String = js.native
+  def getNamespaceURL(prefix: String): String
   /**
     * parses an XML document from a stream.
     *
     * Set the desired handlers before calling this method.
     */
-  def parseStream(aInputSource: InputSource): Unit = js.native
+  def parseStream(aInputSource: InputSource): Unit
   /**
     * registers a known namespace url with the given integer token. ;
     * @param NamespaceURL the namespace URL.
     * @param NamespaceToken an integer token that must be greater than {@link FastToken.NAMESPACE} .
     */
-  def registerNamespace(NamespaceURL: String, NamespaceToken: Double): Unit = js.native
+  def registerNamespace(NamespaceURL: String, NamespaceToken: Double): Unit
   /** allows an application to register a DTD-Handler. */
-  def setEntityResolver(Resolver: XEntityResolver): Unit = js.native
+  def setEntityResolver(Resolver: XEntityResolver): Unit
   /**
     * allows an application to register an error event handler.
     *
     * Note that the error handler can throw an exception when an error or warning occurs. Note that an exception is thrown by the parser when an
     * unrecoverable (fatal) error occurs.
     */
-  def setErrorHandler(Handler: XErrorHandler): Unit = js.native
+  def setErrorHandler(Handler: XErrorHandler): Unit
   /** Application must register a document event handler to get sax events for the parsed stream. */
-  def setFastDocumentHandler(Handler: XFastDocumentHandler): Unit = js.native
+  def setFastDocumentHandler(Handler: XFastDocumentHandler): Unit
   /**
     * sets a locale specified for localization of warnings and error messages.
     *
     * Set the language of the error messages. Useful when the parsing errors will be presented to the user.
     */
-  def setLocale(locale: Locale): Unit = js.native
+  def setLocale(locale: Locale): Unit
   /** @since LibreOffice 5.3 */
-  def setNamespaceHandler(Handler: XFastNamespaceHandler): Unit = js.native
+  def setNamespaceHandler(Handler: XFastNamespaceHandler): Unit
   /** must be registered to translate known XML names to integer tokens. */
-  def setTokenHandler(Handler: XFastTokenHandler): Unit = js.native
+  def setTokenHandler(Handler: XFastTokenHandler): Unit
 }
 
 object XFastParser {
@@ -104,67 +103,5 @@ object XFastParser {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getNamespaceURL = js.Any.fromFunction1(getNamespaceURL), parseStream = js.Any.fromFunction1(parseStream), queryInterface = js.Any.fromFunction1(queryInterface), registerNamespace = js.Any.fromFunction2(registerNamespace), release = js.Any.fromFunction0(release), setEntityResolver = js.Any.fromFunction1(setEntityResolver), setErrorHandler = js.Any.fromFunction1(setErrorHandler), setFastDocumentHandler = js.Any.fromFunction1(setFastDocumentHandler), setLocale = js.Any.fromFunction1(setLocale), setNamespaceHandler = js.Any.fromFunction1(setNamespaceHandler), setTokenHandler = js.Any.fromFunction1(setTokenHandler))
     __obj.asInstanceOf[XFastParser]
   }
-  @scala.inline
-  implicit class XFastParserOps[Self <: XFastParser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetNamespaceURL(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNamespaceURL")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParseStream(value: InputSource => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseStream")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterNamespace(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerNamespace")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetEntityResolver(value: XEntityResolver => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEntityResolver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetErrorHandler(value: XErrorHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setErrorHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFastDocumentHandler(value: XFastDocumentHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFastDocumentHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLocale(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocale")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetNamespaceHandler(value: XFastNamespaceHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNamespaceHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTokenHandler(value: XFastTokenHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTokenHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

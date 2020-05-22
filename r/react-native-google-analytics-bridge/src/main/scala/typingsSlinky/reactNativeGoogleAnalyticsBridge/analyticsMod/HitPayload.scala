@@ -9,140 +9,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HitPayload extends js.Object {
-  var customDimensions: js.UndefOr[CustomDimensionsByIndex | CustomDimensionsByField] = js.native
-  var customMetrics: js.UndefOr[CustomMetrics] = js.native
-  var impressionList: js.UndefOr[String] = js.native
-  var impressionProducts: js.UndefOr[js.Array[Product]] = js.native
-  var impressionSource: js.UndefOr[String] = js.native
-  var productAction: js.UndefOr[ProductAction] = js.native
-  var products: js.UndefOr[js.Array[Product]] = js.native
-  var session: js.UndefOr[SessionState] = js.native
-  var utmCampaignUrl: js.UndefOr[String] = js.native
+  var customDimensions: js.UndefOr[CustomDimensionsByIndex | CustomDimensionsByField] = js.undefined
+  var customMetrics: js.UndefOr[CustomMetrics] = js.undefined
+  var impressionList: js.UndefOr[String] = js.undefined
+  var impressionProducts: js.UndefOr[js.Array[Product]] = js.undefined
+  var impressionSource: js.UndefOr[String] = js.undefined
+  var productAction: js.UndefOr[ProductAction] = js.undefined
+  var products: js.UndefOr[js.Array[Product]] = js.undefined
+  var session: js.UndefOr[SessionState] = js.undefined
+  var utmCampaignUrl: js.UndefOr[String] = js.undefined
 }
 
 object HitPayload {
   @scala.inline
-  def apply(): HitPayload = {
+  def apply(
+    customDimensions: CustomDimensionsByIndex | CustomDimensionsByField = null,
+    customMetrics: CustomMetrics = null,
+    impressionList: String = null,
+    impressionProducts: js.Array[Product] = null,
+    impressionSource: String = null,
+    productAction: ProductAction = null,
+    products: js.Array[Product] = null,
+    session: SessionState = null,
+    utmCampaignUrl: String = null
+  ): HitPayload = {
     val __obj = js.Dynamic.literal()
+    if (customDimensions != null) __obj.updateDynamic("customDimensions")(customDimensions.asInstanceOf[js.Any])
+    if (customMetrics != null) __obj.updateDynamic("customMetrics")(customMetrics.asInstanceOf[js.Any])
+    if (impressionList != null) __obj.updateDynamic("impressionList")(impressionList.asInstanceOf[js.Any])
+    if (impressionProducts != null) __obj.updateDynamic("impressionProducts")(impressionProducts.asInstanceOf[js.Any])
+    if (impressionSource != null) __obj.updateDynamic("impressionSource")(impressionSource.asInstanceOf[js.Any])
+    if (productAction != null) __obj.updateDynamic("productAction")(productAction.asInstanceOf[js.Any])
+    if (products != null) __obj.updateDynamic("products")(products.asInstanceOf[js.Any])
+    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
+    if (utmCampaignUrl != null) __obj.updateDynamic("utmCampaignUrl")(utmCampaignUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[HitPayload]
   }
-  @scala.inline
-  implicit class HitPayloadOps[Self <: HitPayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomDimensions(value: CustomDimensionsByIndex | CustomDimensionsByField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customDimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomMetrics(value: CustomMetrics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpressionList(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpressionList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpressionProducts(value: js.Array[Product]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionProducts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpressionProducts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionProducts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImpressionSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImpressionSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductAction(value: ProductAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProducts(value: js.Array[Product]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProducts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: SessionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtmCampaignUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaignUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtmCampaignUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaignUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

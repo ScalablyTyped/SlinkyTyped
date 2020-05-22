@@ -14,29 +14,10 @@ trait ListThingPrincipalsResponse extends js.Object {
 
 object ListThingPrincipalsResponse {
   @scala.inline
-  def apply(): ListThingPrincipalsResponse = {
+  def apply(principals: Principals = null): ListThingPrincipalsResponse = {
     val __obj = js.Dynamic.literal()
+    if (principals != null) __obj.updateDynamic("principals")(principals.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListThingPrincipalsResponse]
   }
-  @scala.inline
-  implicit class ListThingPrincipalsResponseOps[Self <: ListThingPrincipalsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipals(value: Principals): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principals")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

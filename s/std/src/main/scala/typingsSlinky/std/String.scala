@@ -109,7 +109,8 @@ trait String
   def localeCompare(that: java.lang.String, locales: js.Array[java.lang.String]): Double = js.native
   def localeCompare(that: java.lang.String, locales: js.Array[java.lang.String], options: CollatorOptions): Double = js.native
   /**
-    * Matches a string an object that supports being matched against, and returns an array containing the results of that search.
+    * Matches a string or an object that supports being matched against, and returns an array
+    * containing the results of that search, or null if no matches are found.
     * @param matcher An object that supports being matched against.
     */
   def `match`(matcher: Match): RegExpMatchArray | Null = js.native
@@ -212,6 +213,26 @@ trait String
     */
   def replace(
     searchValue: `0`,
+    replacer: js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String]
+  ): java.lang.String = js.native
+  /**
+    * Replace all instances of a substring in a string, using a regular expression or search string.
+    * @param searchValue A string to search for.
+    * @param replaceValue A string containing the text to replace for every successful match of searchValue in this string.
+    */
+  def replaceAll(searchValue: java.lang.String, replaceValue: java.lang.String): java.lang.String = js.native
+  /**
+    * Replace all instances of a substring in a string, using a regular expression or search string.
+    * @param searchValue A string to search for.
+    * @param replacer A function that returns the replacement text.
+    */
+  def replaceAll(
+    searchValue: java.lang.String,
+    replacer: js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String]
+  ): java.lang.String = js.native
+  def replaceAll(searchValue: js.RegExp, replaceValue: java.lang.String): java.lang.String = js.native
+  def replaceAll(
+    searchValue: js.RegExp,
     replacer: js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String]
   ): java.lang.String = js.native
   /**

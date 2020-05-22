@@ -55,113 +55,26 @@ trait SchemaWorkItemServiceState extends js.Object {
 
 object SchemaWorkItemServiceState {
   @scala.inline
-  def apply(): SchemaWorkItemServiceState = {
+  def apply(
+    harnessData: StringDictionary[js.Any] = null,
+    leaseExpireTime: String = null,
+    metricShortId: js.Array[SchemaMetricShortId] = null,
+    nextReportIndex: String = null,
+    reportStatusInterval: String = null,
+    splitRequest: SchemaApproximateSplitRequest = null,
+    suggestedStopPoint: SchemaApproximateProgress = null,
+    suggestedStopPosition: SchemaPosition = null
+  ): SchemaWorkItemServiceState = {
     val __obj = js.Dynamic.literal()
+    if (harnessData != null) __obj.updateDynamic("harnessData")(harnessData.asInstanceOf[js.Any])
+    if (leaseExpireTime != null) __obj.updateDynamic("leaseExpireTime")(leaseExpireTime.asInstanceOf[js.Any])
+    if (metricShortId != null) __obj.updateDynamic("metricShortId")(metricShortId.asInstanceOf[js.Any])
+    if (nextReportIndex != null) __obj.updateDynamic("nextReportIndex")(nextReportIndex.asInstanceOf[js.Any])
+    if (reportStatusInterval != null) __obj.updateDynamic("reportStatusInterval")(reportStatusInterval.asInstanceOf[js.Any])
+    if (splitRequest != null) __obj.updateDynamic("splitRequest")(splitRequest.asInstanceOf[js.Any])
+    if (suggestedStopPoint != null) __obj.updateDynamic("suggestedStopPoint")(suggestedStopPoint.asInstanceOf[js.Any])
+    if (suggestedStopPosition != null) __obj.updateDynamic("suggestedStopPosition")(suggestedStopPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkItemServiceState]
   }
-  @scala.inline
-  implicit class SchemaWorkItemServiceStateOps[Self <: SchemaWorkItemServiceState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHarnessData(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("harnessData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHarnessData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("harnessData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeaseExpireTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseExpireTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeaseExpireTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseExpireTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricShortId(value: js.Array[SchemaMetricShortId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricShortId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricShortId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricShortId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextReportIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextReportIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextReportIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextReportIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportStatusInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportStatusInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportStatusInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportStatusInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplitRequest(value: SchemaApproximateSplitRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplitRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("splitRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedStopPoint(value: SchemaApproximateProgress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedStopPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedStopPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedStopPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggestedStopPosition(value: SchemaPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedStopPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggestedStopPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedStopPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

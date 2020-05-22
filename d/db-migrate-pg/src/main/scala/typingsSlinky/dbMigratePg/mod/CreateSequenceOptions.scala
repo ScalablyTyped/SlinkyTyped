@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateSequenceOptions extends js.Object {
-  var temp: js.UndefOr[Boolean] = js.native
+  var temp: js.UndefOr[Boolean] = js.undefined
 }
 
 object CreateSequenceOptions {
   @scala.inline
-  def apply(): CreateSequenceOptions = {
+  def apply(temp: js.UndefOr[Boolean] = js.undefined): CreateSequenceOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(temp)) __obj.updateDynamic("temp")(temp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSequenceOptions]
   }
-  @scala.inline
-  implicit class CreateSequenceOptionsOps[Self <: CreateSequenceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTemp(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoRender extends js.Object {
   /*
     * autoRender the result into ctx.body, defaults to true
     */
-  var autoRender: js.UndefOr[Boolean] = js.native
+  var autoRender: js.UndefOr[Boolean] = js.undefined
   /*
     * replace consolidate as default engine source
     */
-  var engineSource: js.UndefOr[js.Any] = js.native
+  var engineSource: js.UndefOr[js.Any] = js.undefined
   /*
     * default extension for your views
     */
-  var extension: js.UndefOr[String] = js.native
+  var extension: js.UndefOr[String] = js.undefined
   /*
     * map a file extension to an engine
     */
-  var map: js.UndefOr[js.Any] = js.native
+  var map: js.UndefOr[js.Any] = js.undefined
   /*
     * these options will get passed to the view engine
     */
-  var options: js.UndefOr[js.Any] = js.native
+  var options: js.UndefOr[js.Any] = js.undefined
 }
 
 object AutoRender {
   @scala.inline
-  def apply(): AutoRender = {
+  def apply(
+    autoRender: js.UndefOr[Boolean] = js.undefined,
+    engineSource: js.Any = null,
+    extension: String = null,
+    map: js.Any = null,
+    options: js.Any = null
+  ): AutoRender = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoRender)) __obj.updateDynamic("autoRender")(autoRender.get.asInstanceOf[js.Any])
+    if (engineSource != null) __obj.updateDynamic("engineSource")(engineSource.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoRender]
   }
-  @scala.inline
-  implicit class AutoRenderOps[Self <: AutoRender] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRender(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRender")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngineSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engineSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

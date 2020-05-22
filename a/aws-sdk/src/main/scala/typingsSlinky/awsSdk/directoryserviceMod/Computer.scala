@@ -22,53 +22,12 @@ trait Computer extends js.Object {
 
 object Computer {
   @scala.inline
-  def apply(): Computer = {
+  def apply(ComputerAttributes: Attributes = null, ComputerId: SID = null, ComputerName: ComputerName = null): Computer = {
     val __obj = js.Dynamic.literal()
+    if (ComputerAttributes != null) __obj.updateDynamic("ComputerAttributes")(ComputerAttributes.asInstanceOf[js.Any])
+    if (ComputerId != null) __obj.updateDynamic("ComputerId")(ComputerId.asInstanceOf[js.Any])
+    if (ComputerName != null) __obj.updateDynamic("ComputerName")(ComputerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Computer]
   }
-  @scala.inline
-  implicit class ComputerOps[Self <: Computer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComputerAttributes(value: Attributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputerAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputerId(value: SID): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputerName(value: ComputerName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComputerName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

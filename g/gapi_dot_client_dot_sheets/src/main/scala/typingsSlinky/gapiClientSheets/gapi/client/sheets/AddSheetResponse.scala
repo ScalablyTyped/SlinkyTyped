@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AddSheetResponse extends js.Object {
   /** The properties of the newly added sheet. */
-  var properties: js.UndefOr[SheetProperties] = js.native
+  var properties: js.UndefOr[SheetProperties] = js.undefined
 }
 
 object AddSheetResponse {
   @scala.inline
-  def apply(): AddSheetResponse = {
+  def apply(properties: SheetProperties = null): AddSheetResponse = {
     val __obj = js.Dynamic.literal()
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddSheetResponse]
   }
-  @scala.inline
-  implicit class AddSheetResponseOps[Self <: AddSheetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: SheetProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

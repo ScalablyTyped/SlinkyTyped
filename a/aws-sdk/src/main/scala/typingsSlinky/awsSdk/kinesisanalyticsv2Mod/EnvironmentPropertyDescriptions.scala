@@ -14,29 +14,10 @@ trait EnvironmentPropertyDescriptions extends js.Object {
 
 object EnvironmentPropertyDescriptions {
   @scala.inline
-  def apply(): EnvironmentPropertyDescriptions = {
+  def apply(PropertyGroupDescriptions: PropertyGroups = null): EnvironmentPropertyDescriptions = {
     val __obj = js.Dynamic.literal()
+    if (PropertyGroupDescriptions != null) __obj.updateDynamic("PropertyGroupDescriptions")(PropertyGroupDescriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentPropertyDescriptions]
   }
-  @scala.inline
-  implicit class EnvironmentPropertyDescriptionsOps[Self <: EnvironmentPropertyDescriptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPropertyGroupDescriptions(value: PropertyGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyGroupDescriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPropertyGroupDescriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyGroupDescriptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

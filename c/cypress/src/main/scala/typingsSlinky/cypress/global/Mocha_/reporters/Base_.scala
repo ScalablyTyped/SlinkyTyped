@@ -3,6 +3,7 @@ package typingsSlinky.cypress.global.Mocha_.reporters
 import typingsSlinky.cypress.Mocha.IRunner
 import typingsSlinky.cypress.Mocha.MochaOptions
 import typingsSlinky.cypress.Mocha.Runner
+import typingsSlinky.cypress.Mocha.Stats
 import typingsSlinky.cypress.Mocha.Test
 import typingsSlinky.cypress.Mocha.reporters.Base
 import typingsSlinky.cypress.Mocha.reporters.Base.ColorMap
@@ -27,6 +28,28 @@ class Base_ protected () extends Base {
   def this(runner: Runner) = this()
   def this(runner: IRunner, options: MochaOptions) = this()
   def this(runner: Runner, options: MochaOptions) = this()
+  /**
+    * Test failures
+    */
+  /* CompleteClass */
+  override var failures: js.Array[Test] = js.native
+  /**
+    * The configured runner
+    */
+  /* CompleteClass */
+  override var runner: Runner = js.native
+  /**
+    * Test run statistics
+    */
+  /* CompleteClass */
+  override var stats: Stats = js.native
+  /**
+    * Output common epilogue used by many of the bundled reporters.
+    *
+    * @see https://mochajs.org/api/Mocha.reporters.Base.html#.Base#epilogue
+    */
+  /* CompleteClass */
+  override def epilogue(): Unit = js.native
 }
 
 @JSGlobal("Mocha.reporters.Base")

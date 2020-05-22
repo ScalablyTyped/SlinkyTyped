@@ -10,103 +10,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormGroupProps
   extends AllHTMLAttributes[HTMLDivElement]
      with ClassAttributes[HTMLDivElement]
      with /* key */ StringDictionary[js.Any] {
-  var check: js.UndefOr[Boolean] = js.native
-  var cssModule: js.UndefOr[CSSModule] = js.native
-  var `inline`: js.UndefOr[Boolean] = js.native
-  var row: js.UndefOr[Boolean] = js.native
-  var tag: js.UndefOr[String | ReactComponentClass[_]] = js.native
+  var check: js.UndefOr[Boolean] = js.undefined
+  var cssModule: js.UndefOr[CSSModule] = js.undefined
+  var `inline`: js.UndefOr[Boolean] = js.undefined
+  var row: js.UndefOr[Boolean] = js.undefined
+  var tag: js.UndefOr[String | ReactComponentClass[_]] = js.undefined
 }
 
 object FormGroupProps {
   @scala.inline
-  def apply(): FormGroupProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[HTMLDivElement] = null,
+    ClassAttributes: ClassAttributes[HTMLDivElement] = null,
+    StringDictionary: /* key */ StringDictionary[js.Any] = null,
+    check: js.UndefOr[Boolean] = js.undefined,
+    cssModule: CSSModule = null,
+    `inline`: js.UndefOr[Boolean] = js.undefined,
+    row: js.UndefOr[Boolean] = js.undefined,
+    tag: String | ReactComponentClass[_] = null
+  ): FormGroupProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(check)) __obj.updateDynamic("check")(check.get.asInstanceOf[js.Any])
+    if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
+    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(row)) __obj.updateDynamic("row")(row.get.asInstanceOf[js.Any])
+    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormGroupProps]
   }
-  @scala.inline
-  implicit class FormGroupPropsOps[Self <: FormGroupProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheck(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssModule(value: CSSModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssModule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssModule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssModule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFunctionComponent(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTagComponentClass(value: ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String | ReactComponentClass[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

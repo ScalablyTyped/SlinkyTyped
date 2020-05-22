@@ -26,9 +26,16 @@ object decryptCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DecryptInput) = this()
+    /* CompleteClass */
+    override val input: DecryptInput = js.native
     val middlewareStack: MiddlewareStack[DecryptInput, DecryptOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: KMSResolvedConfiguration
+    ): Handler[DecryptInput, DecryptOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[DecryptInput, DecryptOutput] = js.native
   }

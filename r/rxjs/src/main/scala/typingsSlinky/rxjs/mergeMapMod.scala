@@ -7,6 +7,7 @@ import typingsSlinky.rxjs.subscriptionMod.Subscription
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.ObservedValueOf
 import typingsSlinky.rxjs.typesMod.OperatorFunction
+import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +21,8 @@ object mergeMapMod extends js.Object {
     def this(project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]], concurrent: Double) = this()
     var concurrent: js.Any = js.native
     var project: js.Any = js.native
+    /* CompleteClass */
+    override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
   }
   
   @js.native

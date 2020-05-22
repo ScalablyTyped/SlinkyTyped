@@ -13,6 +13,7 @@ package object initializerConfigMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Identity, 
     typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.IdentityConfig
   ]
+  type InitializerSerialization = typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.ZerosSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.OnesSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.ConstantSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.RandomUniformSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.RandomNormalSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.TruncatedNormalSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.IdentitySerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.VarianceScalingSerialization | typingsSlinky.tensorflowTfjsLayers.initializerConfigMod.OrthogonalSerialization
   type OnesSerialization = typingsSlinky.tensorflowTfjsLayers.typesMod.BaseSerialization[typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Ones, js.Object]
   type OrthogonalSerialization = typingsSlinky.tensorflowTfjsLayers.typesMod.BaseSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Orthogonal, 

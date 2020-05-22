@@ -9,6 +9,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends XmlParser {
   def this(oPar: ParserParameters) = this()
+  /* CompleteClass */
+  override var errors: js.Array[js.Error] = js.native
+  /**
+    * Parses a xml string
+    * @param xml  XML string to parse
+    * @param cb Callback function with error and the result (an Node)
+    * @returns whenever or not there where any errors
+    */
+  /* CompleteClass */
+  override def parseString(xml: String, cb: js.Function2[/* err */ Null | js.Array[js.Error], /* xmlNode */ Node, Unit]): Boolean = js.native
 }
 
 @JSImport("xmljs", JSImport.Namespace)

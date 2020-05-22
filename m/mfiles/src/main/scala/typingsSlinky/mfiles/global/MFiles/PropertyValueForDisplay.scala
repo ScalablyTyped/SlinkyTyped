@@ -1,14 +1,35 @@
 package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IPropertyValue
 import typingsSlinky.mfiles.IPropertyValueForDisplay
+import typingsSlinky.mfiles.MFiles.MFBuiltInPropertyDef
+import typingsSlinky.mfiles.MFiles.MFContentType
+import typingsSlinky.mfiles.MFiles.MFDataType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.PropertyValueForDisplay")
 @js.native
-class PropertyValueForDisplay () extends IPropertyValueForDisplay
+class PropertyValueForDisplay () extends IPropertyValueForDisplay {
+  /* CompleteClass */
+  override val ContentType: MFContentType = js.native
+  /* CompleteClass */
+  override val DataType: MFDataType = js.native
+  /* CompleteClass */
+  override val DisplayValue: String = js.native
+  /* CompleteClass */
+  override val PropertyDef: MFBuiltInPropertyDef | Double = js.native
+  /* CompleteClass */
+  override val PropertyDefName: String = js.native
+  /* CompleteClass */
+  override val PropertyValue: IPropertyValue = js.native
+  /* CompleteClass */
+  override val ReadOnly: Boolean = js.native
+  /* CompleteClass */
+  override def Clone(): IPropertyValueForDisplay = js.native
+}
 
 @JSGlobal("MFiles.PropertyValueForDisplay")
 @js.native

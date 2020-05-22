@@ -10,5 +10,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChangeTableCellShadingCommand")
 @js.native
 class ChangeTableCellShadingCommand ()
-  extends typingsSlinky.devexpressWeb.ChangeTableCellShadingCommand
+  extends typingsSlinky.devexpressWeb.ChangeTableCellShadingCommand {
+  /**
+    * Executes the ChangeTableCellShadingCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
+    * @param color A string specifying the color of the selected cells' shading. May be specified as a color name or a hex color value.
+    */
+  /* CompleteClass */
+  override def execute(color: String): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[String] = js.native
+}
 

@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ToBitmapOptions extends js.Object {
   /**
     * Defaults to 1.0.
     */
-  var scaleFactor: js.UndefOr[Double] = js.native
+  var scaleFactor: js.UndefOr[Double] = js.undefined
 }
 
 object ToBitmapOptions {
   @scala.inline
-  def apply(): ToBitmapOptions = {
+  def apply(scaleFactor: js.UndefOr[Double] = js.undefined): ToBitmapOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(scaleFactor)) __obj.updateDynamic("scaleFactor")(scaleFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToBitmapOptions]
   }
-  @scala.inline
-  implicit class ToBitmapOptionsOps[Self <: ToBitmapOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScaleFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

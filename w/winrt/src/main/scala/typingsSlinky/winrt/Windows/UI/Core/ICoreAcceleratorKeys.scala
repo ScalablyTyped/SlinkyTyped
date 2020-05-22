@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICoreAcceleratorKeys extends js.Object {
-  var onacceleratorkeyactivated: js.Any = js.native
+  var onacceleratorkeyactivated: js.Any
 }
 
 object ICoreAcceleratorKeys {
@@ -15,19 +14,5 @@ object ICoreAcceleratorKeys {
     val __obj = js.Dynamic.literal(onacceleratorkeyactivated = onacceleratorkeyactivated.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICoreAcceleratorKeys]
   }
-  @scala.inline
-  implicit class ICoreAcceleratorKeysOps[Self <: ICoreAcceleratorKeys] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnacceleratorkeyactivated(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onacceleratorkeyactivated")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

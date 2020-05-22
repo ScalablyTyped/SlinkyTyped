@@ -22,42 +22,11 @@ trait WebhookFilterGroupFilter extends js.Object {
 
 object WebhookFilterGroupFilter {
   @scala.inline
-  def apply(pattern: String, `type`: String): WebhookFilterGroupFilter = {
+  def apply(pattern: String, `type`: String, excludeMatchedPattern: js.UndefOr[Boolean] = js.undefined): WebhookFilterGroupFilter = {
     val __obj = js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludeMatchedPattern)) __obj.updateDynamic("excludeMatchedPattern")(excludeMatchedPattern.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookFilterGroupFilter]
   }
-  @scala.inline
-  implicit class WebhookFilterGroupFilterOps[Self <: WebhookFilterGroupFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludeMatchedPattern(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeMatchedPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeMatchedPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeMatchedPattern")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

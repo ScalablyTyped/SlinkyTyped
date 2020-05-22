@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DetectFormat extends js.Object {
   /**
     * When set to true format of the strings values may be detected based
@@ -27,7 +26,7 @@ trait DetectFormat extends js.Object {
     *
     * @default true
     */
-  var detectFormat: js.UndefOr[Boolean] = js.native
+  var detectFormat: js.UndefOr[Boolean] = js.undefined
   /**
     * By providing custom function you will be able to modify any string
     * value (including nested ones) and pre-process it before it gets
@@ -45,48 +44,19 @@ trait DetectFormat extends js.Object {
       /* defaultFnc */ js.Function1[/* value */ String, JSONSchema3or4], 
       JSONSchema3or4
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object DetectFormat {
   @scala.inline
-  def apply(): DetectFormat = {
+  def apply(
+    detectFormat: js.UndefOr[Boolean] = js.undefined,
+    preProcessFnc: (/* value */ String, /* defaultFnc */ js.Function1[/* value */ String, JSONSchema3or4]) => JSONSchema3or4 = null
+  ): DetectFormat = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(detectFormat)) __obj.updateDynamic("detectFormat")(detectFormat.get.asInstanceOf[js.Any])
+    if (preProcessFnc != null) __obj.updateDynamic("preProcessFnc")(js.Any.fromFunction2(preProcessFnc))
     __obj.asInstanceOf[DetectFormat]
   }
-  @scala.inline
-  implicit class DetectFormatOps[Self <: DetectFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreProcessFnc(
-      value: (/* value */ String, /* defaultFnc */ js.Function1[/* value */ String, JSONSchema3or4]) => JSONSchema3or4
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preProcessFnc")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutPreProcessFnc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preProcessFnc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

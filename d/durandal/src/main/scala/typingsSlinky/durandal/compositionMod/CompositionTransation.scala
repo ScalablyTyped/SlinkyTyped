@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompositionTransation extends js.Object {
   /**
     * Registers a callback which will be invoked when the current composition transaction has completed. The transaction includes all parent and children compositions.
     * @param {function} callback The callback to be invoked when composition is complete.
     */
-  def complete(callback: js.Function): Unit = js.native
+  def complete(callback: js.Function): Unit
 }
 
 object CompositionTransation {
@@ -19,19 +18,5 @@ object CompositionTransation {
     val __obj = js.Dynamic.literal(complete = js.Any.fromFunction1(complete))
     __obj.asInstanceOf[CompositionTransation]
   }
-  @scala.inline
-  implicit class CompositionTransationOps[Self <: CompositionTransation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComplete(value: js.Function => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

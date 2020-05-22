@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReplacedTabId extends js.Object {
   /** The ID of the tab that was replaced. */
-  var replacedTabId: Double = js.native
+  var replacedTabId: Double
   /** The ID of the tab that replaced the old tab. */
-  var tabId: Double = js.native
+  var tabId: Double
   /** The time when the replacement happened, in milliseconds since the epoch. */
-  var timeStamp: Double = js.native
+  var timeStamp: Double
 }
 
 object ReplacedTabId {
@@ -20,31 +19,5 @@ object ReplacedTabId {
     val __obj = js.Dynamic.literal(replacedTabId = replacedTabId.asInstanceOf[js.Any], tabId = tabId.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplacedTabId]
   }
-  @scala.inline
-  implicit class ReplacedTabIdOps[Self <: ReplacedTabId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplacedTabId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replacedTabId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTabId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeStamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

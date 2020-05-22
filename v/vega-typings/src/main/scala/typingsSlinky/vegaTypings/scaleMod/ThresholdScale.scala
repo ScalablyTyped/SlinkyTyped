@@ -6,91 +6,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThresholdScale
   extends BaseScale
      with Scale {
-  var nice: js.UndefOr[Boolean | Double | SignalRef] = js.native
-  var padding: js.UndefOr[Double | SignalRef] = js.native
-  var range: js.UndefOr[RangeScheme] = js.native
+  var nice: js.UndefOr[Boolean | Double | SignalRef] = js.undefined
+  var padding: js.UndefOr[Double | SignalRef] = js.undefined
+  var range: js.UndefOr[RangeScheme] = js.undefined
   @JSName("type")
-  var type_ThresholdScale: js.UndefOr[threshold] = js.native
-  var zero: js.UndefOr[Boolean | SignalRef] = js.native
+  var type_ThresholdScale: js.UndefOr[threshold] = js.undefined
+  var zero: js.UndefOr[Boolean | SignalRef] = js.undefined
 }
 
 object ThresholdScale {
   @scala.inline
-  def apply(name: String): ThresholdScale = {
+  def apply(
+    name: String,
+    domain: (js.Array[Null | String | Double | Boolean | SignalRef]) | ScaleData | SignalRef = null,
+    domainMax: Double | SignalRef = null,
+    domainMid: Double | SignalRef = null,
+    domainMin: Double | SignalRef = null,
+    domainRaw: js.UndefOr[Null | js.Array[_] | SignalRef] = js.undefined,
+    nice: Boolean | Double | SignalRef = null,
+    padding: Double | SignalRef = null,
+    range: RangeScheme = null,
+    reverse: Boolean | SignalRef = null,
+    round: Boolean | SignalRef = null,
+    `type`: threshold = null,
+    zero: Boolean | SignalRef = null
+  ): ThresholdScale = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (domainMax != null) __obj.updateDynamic("domainMax")(domainMax.asInstanceOf[js.Any])
+    if (domainMid != null) __obj.updateDynamic("domainMid")(domainMid.asInstanceOf[js.Any])
+    if (domainMin != null) __obj.updateDynamic("domainMin")(domainMin.asInstanceOf[js.Any])
+    if (!js.isUndefined(domainRaw)) __obj.updateDynamic("domainRaw")(domainRaw.asInstanceOf[js.Any])
+    if (nice != null) __obj.updateDynamic("nice")(nice.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (reverse != null) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
+    if (round != null) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (zero != null) __obj.updateDynamic("zero")(zero.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThresholdScale]
   }
-  @scala.inline
-  implicit class ThresholdScaleOps[Self <: ThresholdScale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNice(value: Boolean | Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: RangeScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: threshold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZero(value: Boolean | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zero")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZero: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zero")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

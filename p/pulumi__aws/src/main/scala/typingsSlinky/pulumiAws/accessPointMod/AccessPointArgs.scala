@@ -9,6 +9,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AccessPointArgs extends js.Object {
+  /**
+    * The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
+    */
   val accountId: js.UndefOr[Input[String]] = js.native
   /**
     * The name of the bucket that you want to associate this access point with.
@@ -34,83 +37,21 @@ trait AccessPointArgs extends js.Object {
 
 object AccessPointArgs {
   @scala.inline
-  def apply(bucket: Input[String]): AccessPointArgs = {
+  def apply(
+    bucket: Input[String],
+    accountId: Input[String] = null,
+    name: Input[String] = null,
+    policy: Input[String] = null,
+    publicAccessBlockConfiguration: Input[AccessPointPublicAccessBlockConfiguration] = null,
+    vpcConfiguration: Input[AccessPointVpcConfiguration] = null
+  ): AccessPointArgs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any])
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
+    if (publicAccessBlockConfiguration != null) __obj.updateDynamic("publicAccessBlockConfiguration")(publicAccessBlockConfiguration.asInstanceOf[js.Any])
+    if (vpcConfiguration != null) __obj.updateDynamic("vpcConfiguration")(vpcConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessPointArgs]
   }
-  @scala.inline
-  implicit class AccessPointArgsOps[Self <: AccessPointArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicAccessBlockConfiguration(value: Input[AccessPointPublicAccessBlockConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicAccessBlockConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicAccessBlockConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicAccessBlockConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcConfiguration(value: Input[AccessPointVpcConfiguration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,5 +11,13 @@ class default protected () extends Breadcrumb {
   def this(name: String, metaData: js.Object) = this()
   def this(name: String, metaData: js.Object, `type`: String) = this()
   def this(name: String, metaData: js.Object, `type`: String, timestamp: String) = this()
+  /* CompleteClass */
+  override var metaData: js.Object = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+  /* CompleteClass */
+  override var timestamp: String = js.native
+  /* CompleteClass */
+  override var `type`: String = js.native
 }
 

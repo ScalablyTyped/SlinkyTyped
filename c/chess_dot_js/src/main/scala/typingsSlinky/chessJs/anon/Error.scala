@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Error extends js.Object {
   /**
     * The string "No errors." if valid. Otherwise a string explaining why
     * it is not valid.
     */
-  var error: String = js.native
+  var error: String
   /**
     * If not valid, then this will a type of error used internally in
     * chess.js. Otherwise 0.
     */
-  var error_number: Double = js.native
+  var error_number: Double
   /** Indicates if the fen is valid or not. */
-  var valid: Boolean = js.native
+  var valid: Boolean
 }
 
 object Error {
@@ -26,31 +25,5 @@ object Error {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], error_number = error_number.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any])
     __obj.asInstanceOf[Error]
   }
-  @scala.inline
-  implicit class ErrorOps[Self <: Error] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError_number(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valid")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

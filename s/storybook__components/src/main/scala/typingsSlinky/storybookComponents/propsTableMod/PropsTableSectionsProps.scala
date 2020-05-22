@@ -13,29 +13,10 @@ trait PropsTableSectionsProps extends PropsTableProps {
 
 object PropsTableSectionsProps {
   @scala.inline
-  def apply(): PropsTableSectionsProps = {
+  def apply(sections: Record[String, js.Array[PropDef]] = null): PropsTableSectionsProps = {
     val __obj = js.Dynamic.literal()
+    if (sections != null) __obj.updateDynamic("sections")(sections.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropsTableSectionsProps]
   }
-  @scala.inline
-  implicit class PropsTableSectionsPropsOps[Self <: PropsTableSectionsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSections(value: Record[String, js.Array[PropDef]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -15,7 +15,7 @@ trait InstancePatchState extends js.Object {
     */
   var FailedCount: js.UndefOr[PatchFailedCount] = js.native
   /**
-    * An https URL or an Amazon S3 path-style URL to a list of patches to be installed. This patch installation list, which you maintain in an Amazon S3 bucket in YAML format and specify in the SSM document AWS-RunPatchBaseline, overrides the patches specified by the default patch baseline. For more information about the InstallOverrideList parameter, see About the SSM Document AWS-RunPatchBaseline in the AWS Systems Manager User Guide.
+    * An https URL or an Amazon S3 path-style URL to a list of patches to be installed. This patch installation list, which you maintain in an S3 bucket in YAML format and specify in the SSM document AWS-RunPatchBaseline, overrides the patches specified by the default patch baseline. For more information about the InstallOverrideList parameter, see About the SSM document AWS-RunPatchBaseline in the AWS Systems Manager User Guide.
     */
   var InstallOverrideList: js.UndefOr[typingsSlinky.awsSdk.ssmMod.InstallOverrideList] = js.native
   /**
@@ -92,210 +92,36 @@ object InstancePatchState {
     Operation: PatchOperationType,
     OperationEndTime: js.Date,
     OperationStartTime: js.Date,
-    PatchGroup: PatchGroup
+    PatchGroup: PatchGroup,
+    FailedCount: js.UndefOr[PatchFailedCount] = js.undefined,
+    InstallOverrideList: InstallOverrideList = null,
+    InstalledCount: js.UndefOr[PatchInstalledCount] = js.undefined,
+    InstalledOtherCount: js.UndefOr[PatchInstalledOtherCount] = js.undefined,
+    InstalledPendingRebootCount: js.UndefOr[PatchInstalledPendingRebootCount] = js.undefined,
+    InstalledRejectedCount: js.UndefOr[PatchInstalledRejectedCount] = js.undefined,
+    LastNoRebootInstallOperationTime: js.Date = null,
+    MissingCount: js.UndefOr[PatchMissingCount] = js.undefined,
+    NotApplicableCount: js.UndefOr[PatchNotApplicableCount] = js.undefined,
+    OwnerInformation: OwnerInformation = null,
+    RebootOption: RebootOption = null,
+    SnapshotId: SnapshotId = null,
+    UnreportedNotApplicableCount: js.UndefOr[PatchUnreportedNotApplicableCount] = js.undefined
   ): InstancePatchState = {
     val __obj = js.Dynamic.literal(BaselineId = BaselineId.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any], Operation = Operation.asInstanceOf[js.Any], OperationEndTime = OperationEndTime.asInstanceOf[js.Any], OperationStartTime = OperationStartTime.asInstanceOf[js.Any], PatchGroup = PatchGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(FailedCount)) __obj.updateDynamic("FailedCount")(FailedCount.get.asInstanceOf[js.Any])
+    if (InstallOverrideList != null) __obj.updateDynamic("InstallOverrideList")(InstallOverrideList.asInstanceOf[js.Any])
+    if (!js.isUndefined(InstalledCount)) __obj.updateDynamic("InstalledCount")(InstalledCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InstalledOtherCount)) __obj.updateDynamic("InstalledOtherCount")(InstalledOtherCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InstalledPendingRebootCount)) __obj.updateDynamic("InstalledPendingRebootCount")(InstalledPendingRebootCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InstalledRejectedCount)) __obj.updateDynamic("InstalledRejectedCount")(InstalledRejectedCount.get.asInstanceOf[js.Any])
+    if (LastNoRebootInstallOperationTime != null) __obj.updateDynamic("LastNoRebootInstallOperationTime")(LastNoRebootInstallOperationTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(MissingCount)) __obj.updateDynamic("MissingCount")(MissingCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NotApplicableCount)) __obj.updateDynamic("NotApplicableCount")(NotApplicableCount.get.asInstanceOf[js.Any])
+    if (OwnerInformation != null) __obj.updateDynamic("OwnerInformation")(OwnerInformation.asInstanceOf[js.Any])
+    if (RebootOption != null) __obj.updateDynamic("RebootOption")(RebootOption.asInstanceOf[js.Any])
+    if (SnapshotId != null) __obj.updateDynamic("SnapshotId")(SnapshotId.asInstanceOf[js.Any])
+    if (!js.isUndefined(UnreportedNotApplicableCount)) __obj.updateDynamic("UnreportedNotApplicableCount")(UnreportedNotApplicableCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstancePatchState]
   }
-  @scala.inline
-  implicit class InstancePatchStateOps[Self <: InstancePatchState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaselineId(value: BaselineId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperation(value: PatchOperationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperationEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperationStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OperationStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatchGroup(value: PatchGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatchGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFailedCount(value: PatchFailedCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallOverrideList(value: InstallOverrideList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstallOverrideList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallOverrideList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstallOverrideList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstalledCount(value: PatchInstalledCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstalledCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstalledOtherCount(value: PatchInstalledOtherCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledOtherCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstalledOtherCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledOtherCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstalledPendingRebootCount(value: PatchInstalledPendingRebootCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledPendingRebootCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstalledPendingRebootCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledPendingRebootCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstalledRejectedCount(value: PatchInstalledRejectedCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledRejectedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstalledRejectedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstalledRejectedCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastNoRebootInstallOperationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastNoRebootInstallOperationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastNoRebootInstallOperationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastNoRebootInstallOperationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissingCount(value: PatchMissingCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissingCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotApplicableCount(value: PatchNotApplicableCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotApplicableCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotApplicableCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotApplicableCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerInformation(value: OwnerInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerInformation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerInformation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRebootOption(value: RebootOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RebootOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRebootOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RebootOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotId(value: SnapshotId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnreportedNotApplicableCount(value: PatchUnreportedNotApplicableCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnreportedNotApplicableCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnreportedNotApplicableCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnreportedNotApplicableCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

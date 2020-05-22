@@ -51,7 +51,6 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@js.native
 trait PivotDateFilter extends js.Object {
   /**
     *
@@ -60,15 +59,15 @@ trait PivotDateFilter extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var comparator: js.UndefOr[FilterDatetime] = js.native
+  var comparator: js.UndefOr[FilterDatetime] = js.undefined
   /**
     *
-    * Indicates the condition for the filter, which defines the necessary filtering criteria.
+    * Specifies the condition for the filter, which defines the necessary filtering criteria.
     *
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var condition: DateFilterCondition | Unknown_ | Equals | Before | BeforeOrEqualTo | After | AfterOrEqualTo | Between | Tomorrow | Today | Yesterday | NextWeek | ThisWeek | LastWeek | NextMonth | ThisMonth | LastMonth | NextQuarter | ThisQuarter | LastQuarter | NextYear | ThisYear | LastYear | YearToDate | AllDatesInPeriodQuarter1 | AllDatesInPeriodQuarter2 | AllDatesInPeriodQuarter3 | AllDatesInPeriodQuarter4 | AllDatesInPeriodJanuary | AllDatesInPeriodFebruary | AllDatesInPeriodMarch | AllDatesInPeriodApril | AllDatesInPeriodMay | AllDatesInPeriodJune | AllDatesInPeriodJuly | AllDatesInPeriodAugust | AllDatesInPeriodSeptember | AllDatesInPeriodOctober | AllDatesInPeriodNovember | AllDatesInPeriodDecember = js.native
+  var condition: DateFilterCondition | Unknown_ | Equals | Before | BeforeOrEqualTo | After | AfterOrEqualTo | Between | Tomorrow | Today | Yesterday | NextWeek | ThisWeek | LastWeek | NextMonth | ThisMonth | LastMonth | NextQuarter | ThisQuarter | LastQuarter | NextYear | ThisYear | LastYear | YearToDate | AllDatesInPeriodQuarter1 | AllDatesInPeriodQuarter2 | AllDatesInPeriodQuarter3 | AllDatesInPeriodQuarter4 | AllDatesInPeriodJanuary | AllDatesInPeriodFebruary | AllDatesInPeriodMarch | AllDatesInPeriodApril | AllDatesInPeriodMay | AllDatesInPeriodJune | AllDatesInPeriodJuly | AllDatesInPeriodAugust | AllDatesInPeriodSeptember | AllDatesInPeriodOctober | AllDatesInPeriodNovember | AllDatesInPeriodDecember
   /**
     *
     * If true, filter *excludes* items that meet criteria. The default is false (filter to include items that meet criteria).
@@ -76,7 +75,7 @@ trait PivotDateFilter extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var exclusive: js.UndefOr[Boolean] = js.native
+  var exclusive: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The lower-bound of the range for the `Between` filter condition.
@@ -84,7 +83,7 @@ trait PivotDateFilter extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var lowerBound: js.UndefOr[FilterDatetime] = js.native
+  var lowerBound: js.UndefOr[FilterDatetime] = js.undefined
   /**
     *
     * The upper-bound of the range for the `Between` filter condition.
@@ -92,7 +91,7 @@ trait PivotDateFilter extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var upperBound: js.UndefOr[FilterDatetime] = js.native
+  var upperBound: js.UndefOr[FilterDatetime] = js.undefined
   /**
     *
     * For `Equals`, `Before`, `After`, and `Between` filter conditions, indicates if comparisons should be made as whole days.
@@ -100,92 +99,26 @@ trait PivotDateFilter extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var wholeDays: js.UndefOr[Boolean] = js.native
+  var wholeDays: js.UndefOr[Boolean] = js.undefined
 }
 
 object PivotDateFilter {
   @scala.inline
   def apply(
-    condition: DateFilterCondition | Unknown_ | Equals | Before | BeforeOrEqualTo | After | AfterOrEqualTo | Between | Tomorrow | Today | Yesterday | NextWeek | ThisWeek | LastWeek | NextMonth | ThisMonth | LastMonth | NextQuarter | ThisQuarter | LastQuarter | NextYear | ThisYear | LastYear | YearToDate | AllDatesInPeriodQuarter1 | AllDatesInPeriodQuarter2 | AllDatesInPeriodQuarter3 | AllDatesInPeriodQuarter4 | AllDatesInPeriodJanuary | AllDatesInPeriodFebruary | AllDatesInPeriodMarch | AllDatesInPeriodApril | AllDatesInPeriodMay | AllDatesInPeriodJune | AllDatesInPeriodJuly | AllDatesInPeriodAugust | AllDatesInPeriodSeptember | AllDatesInPeriodOctober | AllDatesInPeriodNovember | AllDatesInPeriodDecember
+    condition: DateFilterCondition | Unknown_ | Equals | Before | BeforeOrEqualTo | After | AfterOrEqualTo | Between | Tomorrow | Today | Yesterday | NextWeek | ThisWeek | LastWeek | NextMonth | ThisMonth | LastMonth | NextQuarter | ThisQuarter | LastQuarter | NextYear | ThisYear | LastYear | YearToDate | AllDatesInPeriodQuarter1 | AllDatesInPeriodQuarter2 | AllDatesInPeriodQuarter3 | AllDatesInPeriodQuarter4 | AllDatesInPeriodJanuary | AllDatesInPeriodFebruary | AllDatesInPeriodMarch | AllDatesInPeriodApril | AllDatesInPeriodMay | AllDatesInPeriodJune | AllDatesInPeriodJuly | AllDatesInPeriodAugust | AllDatesInPeriodSeptember | AllDatesInPeriodOctober | AllDatesInPeriodNovember | AllDatesInPeriodDecember,
+    comparator: FilterDatetime = null,
+    exclusive: js.UndefOr[Boolean] = js.undefined,
+    lowerBound: FilterDatetime = null,
+    upperBound: FilterDatetime = null,
+    wholeDays: js.UndefOr[Boolean] = js.undefined
   ): PivotDateFilter = {
     val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any])
+    if (comparator != null) __obj.updateDynamic("comparator")(comparator.asInstanceOf[js.Any])
+    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.get.asInstanceOf[js.Any])
+    if (lowerBound != null) __obj.updateDynamic("lowerBound")(lowerBound.asInstanceOf[js.Any])
+    if (upperBound != null) __obj.updateDynamic("upperBound")(upperBound.asInstanceOf[js.Any])
+    if (!js.isUndefined(wholeDays)) __obj.updateDynamic("wholeDays")(wholeDays.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PivotDateFilter]
   }
-  @scala.inline
-  implicit class PivotDateFilterOps[Self <: PivotDateFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCondition(
-      value: DateFilterCondition | Unknown_ | Equals | Before | BeforeOrEqualTo | After | AfterOrEqualTo | Between | Tomorrow | Today | Yesterday | NextWeek | ThisWeek | LastWeek | NextMonth | ThisMonth | LastMonth | NextQuarter | ThisQuarter | LastQuarter | NextYear | ThisYear | LastYear | YearToDate | AllDatesInPeriodQuarter1 | AllDatesInPeriodQuarter2 | AllDatesInPeriodQuarter3 | AllDatesInPeriodQuarter4 | AllDatesInPeriodJanuary | AllDatesInPeriodFebruary | AllDatesInPeriodMarch | AllDatesInPeriodApril | AllDatesInPeriodMay | AllDatesInPeriodJune | AllDatesInPeriodJuly | AllDatesInPeriodAugust | AllDatesInPeriodSeptember | AllDatesInPeriodOctober | AllDatesInPeriodNovember | AllDatesInPeriodDecember
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComparator(value: FilterDatetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclusive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclusive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowerBound(value: FilterDatetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowerBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperBound(value: FilterDatetime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWholeDays(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wholeDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWholeDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wholeDays")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

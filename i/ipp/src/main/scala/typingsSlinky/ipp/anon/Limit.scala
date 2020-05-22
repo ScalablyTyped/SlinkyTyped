@@ -6,130 +6,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Limit extends js.Object {
-  var `attributes-charset`: js.UndefOr[CharacterSet] = js.native
-  var `attributes-natural-language`: js.UndefOr[String] = js.native
-  var limit: js.UndefOr[Double] = js.native
-  var `my-jobs`: js.UndefOr[Boolean] = js.native
-  var `printer-uri`: js.UndefOr[String] = js.native
+  var `attributes-charset`: js.UndefOr[CharacterSet] = js.undefined
+  var `attributes-natural-language`: js.UndefOr[String] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
+  var `my-jobs`: js.UndefOr[Boolean] = js.undefined
+  var `printer-uri`: js.UndefOr[String] = js.undefined
   var `requested-attributes`: js.UndefOr[
     js.Array[
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 204 */ js.Any
     ]
-  ] = js.native
-  var `requesting-user-name`: String = js.native
-  var `which-jobs`: js.UndefOr[WhichJobs] = js.native
+  ] = js.undefined
+  var `requesting-user-name`: String
+  var `which-jobs`: js.UndefOr[WhichJobs] = js.undefined
 }
 
 object Limit {
   @scala.inline
-  def apply(`requesting-user-name`: String): Limit = {
+  def apply(
+    `requesting-user-name`: String,
+    `attributes-charset`: CharacterSet = null,
+    `attributes-natural-language`: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    `my-jobs`: js.UndefOr[Boolean] = js.undefined,
+    `printer-uri`: String = null,
+    `requested-attributes`: js.Array[
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 204 */ js.Any
+    ] = null,
+    `which-jobs`: WhichJobs = null
+  ): Limit = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("requesting-user-name")(`requesting-user-name`.asInstanceOf[js.Any])
+    if (`attributes-charset` != null) __obj.updateDynamic("attributes-charset")(`attributes-charset`.asInstanceOf[js.Any])
+    if (`attributes-natural-language` != null) __obj.updateDynamic("attributes-natural-language")(`attributes-natural-language`.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`my-jobs`)) __obj.updateDynamic("my-jobs")(`my-jobs`.get.asInstanceOf[js.Any])
+    if (`printer-uri` != null) __obj.updateDynamic("printer-uri")(`printer-uri`.asInstanceOf[js.Any])
+    if (`requested-attributes` != null) __obj.updateDynamic("requested-attributes")(`requested-attributes`.asInstanceOf[js.Any])
+    if (`which-jobs` != null) __obj.updateDynamic("which-jobs")(`which-jobs`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Limit]
   }
-  @scala.inline
-  implicit class LimitOps[Self <: Limit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withRequesting-user-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requesting-user-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withAttributes-charset`(value: CharacterSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAttributes-charset`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-charset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAttributes-natural-language`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-natural-language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAttributes-natural-language`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes-natural-language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withMy-jobs`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("my-jobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutMy-jobs`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("my-jobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPrinter-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printer-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPrinter-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printer-uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withRequested-attributes`(
-      value: js.Array[
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 204 */ js.Any
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requested-attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutRequested-attributes`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requested-attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withWhich-jobs`(value: WhichJobs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("which-jobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutWhich-jobs`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("which-jobs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

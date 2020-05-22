@@ -7,43 +7,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `7` extends js.Object {
-  var newValue: auto | soft | hard = js.native
-  var oldValue: js.UndefOr[auto | soft | hard] = js.native
+  var newValue: auto | soft | hard
+  var oldValue: js.UndefOr[auto | soft | hard] = js.undefined
 }
 
 object `7` {
   @scala.inline
-  def apply(newValue: auto | soft | hard): `7` = {
+  def apply(newValue: auto | soft | hard, oldValue: auto | soft | hard = null): `7` = {
     val __obj = js.Dynamic.literal(newValue = newValue.asInstanceOf[js.Any])
+    if (oldValue != null) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[`7`]
   }
-  @scala.inline
-  implicit class `7Ops`[Self <: `7`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewValue(value: auto | soft | hard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: auto | soft | hard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

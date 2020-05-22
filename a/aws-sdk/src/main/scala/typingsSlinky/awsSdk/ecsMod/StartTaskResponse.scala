@@ -18,41 +18,11 @@ trait StartTaskResponse extends js.Object {
 
 object StartTaskResponse {
   @scala.inline
-  def apply(): StartTaskResponse = {
+  def apply(failures: Failures = null, tasks: Tasks = null): StartTaskResponse = {
     val __obj = js.Dynamic.literal()
+    if (failures != null) __obj.updateDynamic("failures")(failures.asInstanceOf[js.Any])
+    if (tasks != null) __obj.updateDynamic("tasks")(tasks.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTaskResponse]
   }
-  @scala.inline
-  implicit class StartTaskResponseOps[Self <: StartTaskResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailures(value: Failures): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTasks(value: Tasks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTasks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,71 +6,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LifecycleRuleFilter extends js.Object {
   /**
     * <p>This is used in a Lifecycle Rule Filter to apply a logical AND to two or more predicates. The Lifecycle Rule will apply to any object matching all of the predicates configured inside the And operator.</p>
     */
-  var And: js.UndefOr[LifecycleRuleAndOperator] = js.native
+  var And: js.UndefOr[LifecycleRuleAndOperator] = js.undefined
   /**
     * <p>Prefix identifying one or more objects to which the rule applies.</p>
     */
-  var Prefix: js.UndefOr[String] = js.native
+  var Prefix: js.UndefOr[String] = js.undefined
   /**
     * <p>This tag must exist in the object's tag set in order for the rule to apply.</p>
     */
-  var Tag: js.UndefOr[typingsSlinky.awsSdkClientS3Browser.typesTagMod.Tag] = js.native
+  var Tag: js.UndefOr[typingsSlinky.awsSdkClientS3Browser.typesTagMod.Tag] = js.undefined
 }
 
 object LifecycleRuleFilter {
   @scala.inline
-  def apply(): LifecycleRuleFilter = {
+  def apply(And: LifecycleRuleAndOperator = null, Prefix: String = null, Tag: Tag = null): LifecycleRuleFilter = {
     val __obj = js.Dynamic.literal()
+    if (And != null) __obj.updateDynamic("And")(And.asInstanceOf[js.Any])
+    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
+    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecycleRuleFilter]
   }
-  @scala.inline
-  implicit class LifecycleRuleFilterOps[Self <: LifecycleRuleFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnd(value: LifecycleRuleAndOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("And")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("And")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTag(value: Tag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

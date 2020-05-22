@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.egressOnlyInternetGatewayMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,6 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EgressOnlyInternetGatewayArgs extends js.Object {
   /**
+    * A mapping of tags to assign to the resource.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[_]]] = js.native
+  /**
     * The VPC ID to create in.
     */
   val vpcId: Input[String] = js.native
@@ -15,23 +20,10 @@ trait EgressOnlyInternetGatewayArgs extends js.Object {
 
 object EgressOnlyInternetGatewayArgs {
   @scala.inline
-  def apply(vpcId: Input[String]): EgressOnlyInternetGatewayArgs = {
+  def apply(vpcId: Input[String], tags: Input[StringDictionary[_]] = null): EgressOnlyInternetGatewayArgs = {
     val __obj = js.Dynamic.literal(vpcId = vpcId.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[EgressOnlyInternetGatewayArgs]
   }
-  @scala.inline
-  implicit class EgressOnlyInternetGatewayArgsOps[Self <: EgressOnlyInternetGatewayArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpcId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

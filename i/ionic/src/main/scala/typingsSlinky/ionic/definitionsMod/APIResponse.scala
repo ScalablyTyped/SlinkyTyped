@@ -12,8 +12,14 @@ trait APIResponse extends js.Object
 
 object APIResponse {
   @scala.inline
-  implicit def apply(value: APIResponseError): APIResponse = value.asInstanceOf[APIResponse]
+  def APIResponseSuccess(data: APIResponseData, meta: APIResponseMeta): APIResponse = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
+    __obj.asInstanceOf[APIResponse]
+  }
   @scala.inline
-  implicit def apply(value: APIResponseSuccess): APIResponse = value.asInstanceOf[APIResponse]
+  def APIResponseError(error: APIResponseErrorError, meta: APIResponseMeta): APIResponse = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
+    __obj.asInstanceOf[APIResponse]
+  }
 }
 

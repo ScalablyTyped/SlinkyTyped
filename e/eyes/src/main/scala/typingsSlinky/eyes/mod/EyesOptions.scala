@@ -6,93 +6,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EyesOptions extends js.Object {
   /** Don't output functions at all */
-  var hideFunctions: js.UndefOr[Boolean] = js.native
+  var hideFunctions: js.UndefOr[Boolean] = js.undefined
   /** Truncate output if longer */
-  var maxLength: js.UndefOr[Double] = js.native
+  var maxLength: js.UndefOr[Double] = js.undefined
   /** Indent object literals */
-  var pretty: js.UndefOr[Boolean] = js.native
+  var pretty: js.UndefOr[Boolean] = js.undefined
   /** Stream to write to, or null */
-  var stream: js.UndefOr[WritableStream] = js.native
+  var stream: js.UndefOr[WritableStream] = js.undefined
   /** Styles applied to stdout */
-  var styles: js.UndefOr[All] = js.native
+  var styles: js.UndefOr[All] = js.undefined
 }
 
 object EyesOptions {
   @scala.inline
-  def apply(): EyesOptions = {
+  def apply(
+    hideFunctions: js.UndefOr[Boolean] = js.undefined,
+    maxLength: js.UndefOr[Double] = js.undefined,
+    pretty: js.UndefOr[Boolean] = js.undefined,
+    stream: WritableStream = null,
+    styles: All = null
+  ): EyesOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hideFunctions)) __obj.updateDynamic("hideFunctions")(hideFunctions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLength)) __obj.updateDynamic("maxLength")(maxLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.get.asInstanceOf[js.Any])
+    if (stream != null) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[EyesOptions]
   }
-  @scala.inline
-  implicit class EyesOptionsOps[Self <: EyesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHideFunctions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideFunctions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideFunctions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPretty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPretty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStream(value: WritableStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: All): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

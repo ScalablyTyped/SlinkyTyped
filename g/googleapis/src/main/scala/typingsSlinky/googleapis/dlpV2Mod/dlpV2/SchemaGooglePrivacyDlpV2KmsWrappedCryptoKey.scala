@@ -24,41 +24,11 @@ trait SchemaGooglePrivacyDlpV2KmsWrappedCryptoKey extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KmsWrappedCryptoKey {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2KmsWrappedCryptoKey = {
+  def apply(cryptoKeyName: String = null, wrappedKey: String = null): SchemaGooglePrivacyDlpV2KmsWrappedCryptoKey = {
     val __obj = js.Dynamic.literal()
+    if (cryptoKeyName != null) __obj.updateDynamic("cryptoKeyName")(cryptoKeyName.asInstanceOf[js.Any])
+    if (wrappedKey != null) __obj.updateDynamic("wrappedKey")(wrappedKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KmsWrappedCryptoKey]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2KmsWrappedCryptoKeyOps[Self <: SchemaGooglePrivacyDlpV2KmsWrappedCryptoKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCryptoKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKeyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCryptoKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKeyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrappedKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappedKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrappedKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrappedKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

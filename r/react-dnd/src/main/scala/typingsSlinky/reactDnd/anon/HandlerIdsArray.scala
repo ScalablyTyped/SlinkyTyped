@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HandlerIdsArray extends js.Object {
-  var handlerIds: js.UndefOr[js.Array[Identifier]] = js.native
+  var handlerIds: js.UndefOr[js.Array[Identifier]] = js.undefined
 }
 
 object HandlerIdsArray {
   @scala.inline
-  def apply(): HandlerIdsArray = {
+  def apply(handlerIds: js.Array[Identifier] = null): HandlerIdsArray = {
     val __obj = js.Dynamic.literal()
+    if (handlerIds != null) __obj.updateDynamic("handlerIds")(handlerIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandlerIdsArray]
   }
-  @scala.inline
-  implicit class HandlerIdsArrayOps[Self <: HandlerIdsArray] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandlerIds(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandlerIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

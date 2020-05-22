@@ -12,28 +12,27 @@ import scala.scalajs.js.annotation._
   * This interface should be supported, if it is possible to access the data at the new position quickly. You should not support this interface, if you
   * have a continuous stream, for example, a video stream.
   */
-@js.native
 trait XSeekable extends XInterface {
   /**
     * returns the length of the stream.
     * @returns the length of the storage medium on which the stream works.
     */
-  val Length: Double = js.native
+  val Length: Double
   /**
     * returns the current offset of the stream.
     * @returns the current offset in this stream.
     */
-  val Position: Double = js.native
+  val Position: Double
   /**
     * returns the length of the stream.
     * @returns the length of the storage medium on which the stream works.
     */
-  def getLength(): Double = js.native
+  def getLength(): Double
   /**
     * returns the current offset of the stream.
     * @returns the current offset in this stream.
     */
-  def getPosition(): Double = js.native
+  def getPosition(): Double
   /**
     * changes the seek pointer to a new location relative to the beginning of the stream.
     *
@@ -41,7 +40,7 @@ trait XSeekable extends XInterface {
     * seek before the beginning of the stream or after the end of the stream.
     * @throws com::sun::star::lang::IllegalArgumentException in case location is negative or greater than {@link XSeekable.getLength()} .
     */
-  def seek(location: Double): Unit = js.native
+  def seek(location: Double): Unit
 }
 
 object XSeekable {
@@ -59,43 +58,5 @@ object XSeekable {
     val __obj = js.Dynamic.literal(Length = Length.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getLength = js.Any.fromFunction0(getLength), getPosition = js.Any.fromFunction0(getPosition), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), seek = js.Any.fromFunction1(seek))
     __obj.asInstanceOf[XSeekable]
   }
-  @scala.inline
-  implicit class XSeekableOps[Self <: XSeekable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPosition(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSeek(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

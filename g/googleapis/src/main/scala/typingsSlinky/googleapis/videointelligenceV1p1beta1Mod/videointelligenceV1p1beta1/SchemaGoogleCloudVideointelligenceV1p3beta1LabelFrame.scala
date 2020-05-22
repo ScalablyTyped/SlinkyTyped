@@ -22,41 +22,11 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrame extends js.Object {
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrame {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrame = {
+  def apply(confidence: js.UndefOr[Double] = js.undefined, timeOffset: String = null): SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrame = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(confidence)) __obj.updateDynamic("confidence")(confidence.get.asInstanceOf[js.Any])
+    if (timeOffset != null) __obj.updateDynamic("timeOffset")(timeOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrame]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrameOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1LabelFrame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeOffset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

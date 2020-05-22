@@ -48,77 +48,20 @@ trait SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends js.Object
 
 object SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer = {
+  def apply(
+    answer: String = null,
+    faqQuestion: String = null,
+    matchConfidence: js.UndefOr[Double] = js.undefined,
+    matchConfidenceLevel: String = null,
+    source: String = null
+  ): SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer = {
     val __obj = js.Dynamic.literal()
+    if (answer != null) __obj.updateDynamic("answer")(answer.asInstanceOf[js.Any])
+    if (faqQuestion != null) __obj.updateDynamic("faqQuestion")(faqQuestion.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchConfidence)) __obj.updateDynamic("matchConfidence")(matchConfidence.get.asInstanceOf[js.Any])
+    if (matchConfidenceLevel != null) __obj.updateDynamic("matchConfidenceLevel")(matchConfidenceLevel.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerOps[Self <: SchemaGoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnswer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("answer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaqQuestion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faqQuestion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaqQuestion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faqQuestion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchConfidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchConfidenceLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchConfidenceLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchConfidenceLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchConfidenceLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

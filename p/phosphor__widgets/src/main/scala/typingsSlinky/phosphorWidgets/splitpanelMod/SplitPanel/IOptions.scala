@@ -8,14 +8,13 @@ import scala.scalajs.js.annotation._
 /**
   * An options object for initializing a split panel.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The content alignment of the panel.
     *
     * The default is `'start'`.
     */
-  var alignment: js.UndefOr[Alignment] = js.native
+  var alignment: js.UndefOr[Alignment] = js.undefined
   /**
     * The split layout to use for the split panel.
     *
@@ -23,100 +22,43 @@ trait IOptions extends js.Object {
     *
     * The default is a new `SplitLayout`.
     */
-  var layout: js.UndefOr[SplitLayout] = js.native
+  var layout: js.UndefOr[SplitLayout] = js.undefined
   /**
     * The layout orientation of the panel.
     *
     * The default is `'horizontal'`.
     */
-  var orientation: js.UndefOr[Orientation] = js.native
+  var orientation: js.UndefOr[Orientation] = js.undefined
   /**
     * The renderer to use for the split panel.
     *
     * The default is a shared renderer instance.
     */
-  var renderer: js.UndefOr[IRenderer] = js.native
+  var renderer: js.UndefOr[IRenderer] = js.undefined
   /**
     * The spacing between items in the panel.
     *
     * The default is `4`.
     */
-  var spacing: js.UndefOr[Double] = js.native
+  var spacing: js.UndefOr[Double] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(
+    alignment: Alignment = null,
+    layout: SplitLayout = null,
+    orientation: Orientation = null,
+    renderer: IRenderer = null,
+    spacing: js.UndefOr[Double] = js.undefined
+  ): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (renderer != null) __obj.updateDynamic("renderer")(renderer.asInstanceOf[js.Any])
+    if (!js.isUndefined(spacing)) __obj.updateDynamic("spacing")(spacing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: Alignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: SplitLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: Orientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderer(value: IRenderer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

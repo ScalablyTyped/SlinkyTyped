@@ -21,432 +21,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AggregateByCategory extends js.Object {
-  var aggregateByCategory: js.UndefOr[Boolean] = js.native
-  var aggregationGroupWidth: js.UndefOr[Double] = js.native
+  var aggregateByCategory: js.UndefOr[Boolean] = js.undefined
+  var aggregationGroupWidth: js.UndefOr[Double] = js.undefined
   var aggregationInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  var allowDecimals: js.UndefOr[Boolean] = js.native
-  var breakStyle: js.UndefOr[Line] = js.native
-  var breaks: js.UndefOr[js.Array[ScaleBreak]] = js.native
-  var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
-  var endOnTick: js.UndefOr[Boolean] = js.native
-  var endValue: js.UndefOr[Double | js.Date | String] = js.native
-  var holidays: js.UndefOr[js.Array[js.Date | Double | String]] = js.native
-  var label: js.UndefOr[OverlappingBehavior] = js.native
-  var linearThreshold: js.UndefOr[Double] = js.native
-  var logarithmBase: js.UndefOr[Double] = js.native
-  var marker: js.UndefOr[Label] = js.native
+  ] = js.undefined
+  var allowDecimals: js.UndefOr[Boolean] = js.undefined
+  var breakStyle: js.UndefOr[Line] = js.undefined
+  var breaks: js.UndefOr[js.Array[ScaleBreak]] = js.undefined
+  var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.undefined
+  var endOnTick: js.UndefOr[Boolean] = js.undefined
+  var endValue: js.UndefOr[Double | js.Date | String] = js.undefined
+  var holidays: js.UndefOr[js.Array[js.Date | Double | String]] = js.undefined
+  var label: js.UndefOr[OverlappingBehavior] = js.undefined
+  var linearThreshold: js.UndefOr[Double] = js.undefined
+  var logarithmBase: js.UndefOr[Double] = js.undefined
+  var marker: js.UndefOr[Label] = js.undefined
   var maxRange: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
+  ] = js.undefined
   var minRange: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  var minorTick: js.UndefOr[ColorOpacity] = js.native
-  var minorTickCount: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var minorTick: js.UndefOr[ColorOpacity] = js.undefined
+  var minorTickCount: js.UndefOr[Double] = js.undefined
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  var placeholderHeight: js.UndefOr[Double] = js.native
-  var showCustomBoundaryTicks: js.UndefOr[Boolean] = js.native
-  var singleWorkdays: js.UndefOr[js.Array[js.Date | Double | String]] = js.native
-  var startValue: js.UndefOr[Double | js.Date | String] = js.native
-  var tick: js.UndefOr[OpacityWidth] = js.native
+  ] = js.undefined
+  var placeholderHeight: js.UndefOr[Double] = js.undefined
+  var showCustomBoundaryTicks: js.UndefOr[Boolean] = js.undefined
+  var singleWorkdays: js.UndefOr[js.Array[js.Date | Double | String]] = js.undefined
+  var startValue: js.UndefOr[Double | js.Date | String] = js.undefined
+  var tick: js.UndefOr[OpacityWidth] = js.undefined
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  var `type`: js.UndefOr[continuous | discrete | logarithmic | semidiscrete] = js.native
-  var valueType: js.UndefOr[datetime | numeric | string_] = js.native
-  var workWeek: js.UndefOr[js.Array[Double]] = js.native
-  var workdaysOnly: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var `type`: js.UndefOr[continuous | discrete | logarithmic | semidiscrete] = js.undefined
+  var valueType: js.UndefOr[datetime | numeric | string_] = js.undefined
+  var workWeek: js.UndefOr[js.Array[Double]] = js.undefined
+  var workdaysOnly: js.UndefOr[Boolean] = js.undefined
 }
 
 object AggregateByCategory {
   @scala.inline
-  def apply(): AggregateByCategory = {
+  def apply(
+    aggregateByCategory: js.UndefOr[Boolean] = js.undefined,
+    aggregationGroupWidth: js.UndefOr[Double] = js.undefined,
+    aggregationInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    allowDecimals: js.UndefOr[Boolean] = js.undefined,
+    breakStyle: Line = null,
+    breaks: js.Array[ScaleBreak] = null,
+    categories: js.Array[Double | String | js.Date] = null,
+    endOnTick: js.UndefOr[Boolean] = js.undefined,
+    endValue: Double | js.Date | String = null,
+    holidays: js.Array[js.Date | Double | String] = null,
+    label: OverlappingBehavior = null,
+    linearThreshold: js.UndefOr[Double] = js.undefined,
+    logarithmBase: js.UndefOr[Double] = js.undefined,
+    marker: Label = null,
+    maxRange: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    minRange: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    minorTick: ColorOpacity = null,
+    minorTickCount: js.UndefOr[Double] = js.undefined,
+    minorTickInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    placeholderHeight: js.UndefOr[Double] = js.undefined,
+    showCustomBoundaryTicks: js.UndefOr[Boolean] = js.undefined,
+    singleWorkdays: js.Array[js.Date | Double | String] = null,
+    startValue: Double | js.Date | String = null,
+    tick: OpacityWidth = null,
+    tickInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    `type`: continuous | discrete | logarithmic | semidiscrete = null,
+    valueType: datetime | numeric | string_ = null,
+    workWeek: js.Array[Double] = null,
+    workdaysOnly: js.UndefOr[Boolean] = js.undefined
+  ): AggregateByCategory = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(aggregateByCategory)) __obj.updateDynamic("aggregateByCategory")(aggregateByCategory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(aggregationGroupWidth)) __obj.updateDynamic("aggregationGroupWidth")(aggregationGroupWidth.get.asInstanceOf[js.Any])
+    if (aggregationInterval != null) __obj.updateDynamic("aggregationInterval")(aggregationInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.get.asInstanceOf[js.Any])
+    if (breakStyle != null) __obj.updateDynamic("breakStyle")(breakStyle.asInstanceOf[js.Any])
+    if (breaks != null) __obj.updateDynamic("breaks")(breaks.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (!js.isUndefined(endOnTick)) __obj.updateDynamic("endOnTick")(endOnTick.get.asInstanceOf[js.Any])
+    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
+    if (holidays != null) __obj.updateDynamic("holidays")(holidays.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(linearThreshold)) __obj.updateDynamic("linearThreshold")(linearThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logarithmBase)) __obj.updateDynamic("logarithmBase")(logarithmBase.get.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
+    if (maxRange != null) __obj.updateDynamic("maxRange")(maxRange.asInstanceOf[js.Any])
+    if (minRange != null) __obj.updateDynamic("minRange")(minRange.asInstanceOf[js.Any])
+    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
+    if (!js.isUndefined(minorTickCount)) __obj.updateDynamic("minorTickCount")(minorTickCount.get.asInstanceOf[js.Any])
+    if (minorTickInterval != null) __obj.updateDynamic("minorTickInterval")(minorTickInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(placeholderHeight)) __obj.updateDynamic("placeholderHeight")(placeholderHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCustomBoundaryTicks)) __obj.updateDynamic("showCustomBoundaryTicks")(showCustomBoundaryTicks.get.asInstanceOf[js.Any])
+    if (singleWorkdays != null) __obj.updateDynamic("singleWorkdays")(singleWorkdays.asInstanceOf[js.Any])
+    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
+    if (tickInterval != null) __obj.updateDynamic("tickInterval")(tickInterval.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (valueType != null) __obj.updateDynamic("valueType")(valueType.asInstanceOf[js.Any])
+    if (workWeek != null) __obj.updateDynamic("workWeek")(workWeek.asInstanceOf[js.Any])
+    if (!js.isUndefined(workdaysOnly)) __obj.updateDynamic("workdaysOnly")(workdaysOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AggregateByCategory]
   }
-  @scala.inline
-  implicit class AggregateByCategoryOps[Self <: AggregateByCategory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregateByCategory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateByCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregateByCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateByCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAggregationGroupWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationGroupWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationGroupWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationGroupWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAggregationInterval(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregationInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowDecimals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreakStyle(value: Line): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreakStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breakStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBreaks(value: js.Array[ScaleBreak]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBreaks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Array[Double | String | js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndOnTick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndOnTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndValue(value: Double | js.Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHolidays(value: js.Array[js.Date | Double | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holidays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHolidays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("holidays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: OverlappingBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinearThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinearThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogarithmBase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogarithmBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: Label): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRange(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinRange(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTick(value: ColorOpacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTickCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTickCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTickInterval(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTickInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCustomBoundaryTicks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCustomBoundaryTicks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCustomBoundaryTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCustomBoundaryTicks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleWorkdays(value: js.Array[js.Date | Double | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleWorkdays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleWorkdays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleWorkdays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartValueDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartValue(value: Double | js.Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTick(value: OpacityWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickInterval(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: continuous | discrete | logarithmic | semidiscrete): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueType(value: datetime | numeric | string_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkWeek(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkWeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workWeek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkdaysOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workdaysOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkdaysOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workdaysOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

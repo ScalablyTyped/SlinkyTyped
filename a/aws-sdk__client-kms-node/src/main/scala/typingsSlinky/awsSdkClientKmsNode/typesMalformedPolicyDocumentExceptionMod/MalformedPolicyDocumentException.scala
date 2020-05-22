@@ -8,13 +8,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MalformedPolicyDocumentException
   extends ServiceException[MalformedPolicyDocumentExceptionDetails]
      with CreateKeyExceptionsUnion
      with PutKeyPolicyExceptionsUnion {
   @JSName("name")
-  var name_MalformedPolicyDocumentException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.MalformedPolicyDocumentException = js.native
+  var name_MalformedPolicyDocumentException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.MalformedPolicyDocumentException
 }
 
 object MalformedPolicyDocumentException {
@@ -23,26 +22,12 @@ object MalformedPolicyDocumentException {
     $metadata: ResponseMetadata,
     details: MalformedPolicyDocumentExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.MalformedPolicyDocumentException
+    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.MalformedPolicyDocumentException,
+    stack: String = null
   ): MalformedPolicyDocumentException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[MalformedPolicyDocumentException]
   }
-  @scala.inline
-  implicit class MalformedPolicyDocumentExceptionOps[Self <: MalformedPolicyDocumentException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.MalformedPolicyDocumentException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

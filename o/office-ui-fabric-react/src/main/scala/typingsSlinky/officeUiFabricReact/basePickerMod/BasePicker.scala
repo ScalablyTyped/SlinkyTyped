@@ -74,7 +74,7 @@ class BasePicker[T, P /* <: IBasePickerProps[T] */] protected ()
   def UNSAFE_componentWillReceiveProps_MBasePicker(newProps: P): Unit = js.native
   @JSName("UNSAFE_componentWillUpdate")
   def UNSAFE_componentWillUpdate_MBasePicker(newProps: P, newState: IBasePickerState): Unit = js.native
-  /* protected */ def _isFocusZoneInnerKeystroke(ev: SyntheticKeyboardEvent[HTMLElement]): Boolean = js.native
+  /* protected */ def _shouldFocusZoneEnterInnerZone(ev: SyntheticKeyboardEvent[HTMLElement]): Boolean = js.native
   /* protected */ def addItem(item: T): Unit = js.native
   /* protected */ def addItemByIndex(index: Double): Unit = js.native
   /* protected */ def canAddItems(): Boolean = js.native

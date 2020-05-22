@@ -4,78 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PendingEventOrdering extends js.Object {
   // Optional. The token which a data store can use to remember the state of the room. What this means is dependent on the store implementation.
-  var pendingEventOrdering: js.UndefOr[String] = js.native
-  var storageToken: js.UndefOr[js.Any] = js.native
+  var pendingEventOrdering: js.UndefOr[String] = js.undefined
+  var storageToken: js.UndefOr[js.Any] = js.undefined
   // <optional> Controls where pending messages appear in a room's timeline. If "chronological", messages will appear in the timeline
-  var timelineSupport: js.UndefOr[Boolean] = js.native
+  var timelineSupport: js.UndefOr[Boolean] = js.undefined
   // <optional> false Set to true to enable improved timeline support.
-  var unstableClientRelationAggregation: js.UndefOr[Boolean] = js.native
+  var unstableClientRelationAggregation: js.UndefOr[Boolean] = js.undefined
 }
 
 object PendingEventOrdering {
   @scala.inline
-  def apply(): PendingEventOrdering = {
+  def apply(
+    pendingEventOrdering: String = null,
+    storageToken: js.Any = null,
+    timelineSupport: js.UndefOr[Boolean] = js.undefined,
+    unstableClientRelationAggregation: js.UndefOr[Boolean] = js.undefined
+  ): PendingEventOrdering = {
     val __obj = js.Dynamic.literal()
+    if (pendingEventOrdering != null) __obj.updateDynamic("pendingEventOrdering")(pendingEventOrdering.asInstanceOf[js.Any])
+    if (storageToken != null) __obj.updateDynamic("storageToken")(storageToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(timelineSupport)) __obj.updateDynamic("timelineSupport")(timelineSupport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unstableClientRelationAggregation)) __obj.updateDynamic("unstableClientRelationAggregation")(unstableClientRelationAggregation.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PendingEventOrdering]
   }
-  @scala.inline
-  implicit class PendingEventOrderingOps[Self <: PendingEventOrdering] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPendingEventOrdering(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingEventOrdering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingEventOrdering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingEventOrdering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageToken(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimelineSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimelineSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnstableClientRelationAggregation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unstableClientRelationAggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnstableClientRelationAggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unstableClientRelationAggregation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

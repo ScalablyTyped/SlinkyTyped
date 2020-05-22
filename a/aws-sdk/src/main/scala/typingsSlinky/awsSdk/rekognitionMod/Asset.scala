@@ -11,29 +11,10 @@ trait Asset extends js.Object {
 
 object Asset {
   @scala.inline
-  def apply(): Asset = {
+  def apply(GroundTruthManifest: GroundTruthManifest = null): Asset = {
     val __obj = js.Dynamic.literal()
+    if (GroundTruthManifest != null) __obj.updateDynamic("GroundTruthManifest")(GroundTruthManifest.asInstanceOf[js.Any])
     __obj.asInstanceOf[Asset]
   }
-  @scala.inline
-  implicit class AssetOps[Self <: Asset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroundTruthManifest(value: GroundTruthManifest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroundTruthManifest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroundTruthManifest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroundTruthManifest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

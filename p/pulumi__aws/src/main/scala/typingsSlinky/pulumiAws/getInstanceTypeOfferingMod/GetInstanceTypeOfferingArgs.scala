@@ -23,53 +23,16 @@ trait GetInstanceTypeOfferingArgs extends js.Object {
 
 object GetInstanceTypeOfferingArgs {
   @scala.inline
-  def apply(): GetInstanceTypeOfferingArgs = {
+  def apply(
+    filters: js.Array[GetInstanceTypeOfferingFilter] = null,
+    locationType: String = null,
+    preferredInstanceTypes: js.Array[String] = null
+  ): GetInstanceTypeOfferingArgs = {
     val __obj = js.Dynamic.literal()
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (locationType != null) __obj.updateDynamic("locationType")(locationType.asInstanceOf[js.Any])
+    if (preferredInstanceTypes != null) __obj.updateDynamic("preferredInstanceTypes")(preferredInstanceTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstanceTypeOfferingArgs]
   }
-  @scala.inline
-  implicit class GetInstanceTypeOfferingArgsOps[Self <: GetInstanceTypeOfferingArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: js.Array[GetInstanceTypeOfferingFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredInstanceTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredInstanceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredInstanceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredInstanceTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,228 +4,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserSecurityState extends js.Object {
   // AAD User object identifier (GUID) - represents the physical/multi-account user entity.
-  var aadUserId: js.UndefOr[String] = js.native
+  var aadUserId: js.UndefOr[String] = js.undefined
   // Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
-  var accountName: js.UndefOr[String] = js.native
+  var accountName: js.UndefOr[String] = js.undefined
   // NetBIOS/Active Directory domain of user account (that is, domain/account format).
-  var domainName: js.UndefOr[String] = js.native
+  var domainName: js.UndefOr[String] = js.undefined
   // For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
-  var emailRole: js.UndefOr[EmailRole] = js.native
+  var emailRole: js.UndefOr[EmailRole] = js.undefined
   // Indicates whether the user logged on through a VPN.
-  var isVpn: js.UndefOr[Boolean] = js.native
+  var isVpn: js.UndefOr[Boolean] = js.undefined
   /**
     * Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and
     * is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     */
-  var logonDateTime: js.UndefOr[String] = js.native
+  var logonDateTime: js.UndefOr[String] = js.undefined
   // User sign-in ID.
-  var logonId: js.UndefOr[String] = js.native
+  var logonId: js.UndefOr[String] = js.undefined
   // IP Address the sign-in request originated from.
-  var logonIp: js.UndefOr[String] = js.native
+  var logonIp: js.UndefOr[String] = js.undefined
   // Location (by IP address mapping) associated with a user sign-in event by this user.
-  var logonLocation: js.UndefOr[String] = js.native
+  var logonLocation: js.UndefOr[String] = js.undefined
   // Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-  var logonType: js.UndefOr[LogonType] = js.native
+  var logonType: js.UndefOr[LogonType] = js.undefined
   // Active Directory (on-premises) Security Identifier (SID) of the user.
-  var onPremisesSecurityIdentifier: js.UndefOr[String] = js.native
+  var onPremisesSecurityIdentifier: js.UndefOr[String] = js.undefined
   /**
     * Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a
     * percentage.
     */
-  var riskScore: js.UndefOr[String] = js.native
+  var riskScore: js.UndefOr[String] = js.undefined
   /**
     * User account type (group membership), per Windows definition. Possible values are: unknown, standard, power,
     * administrator.
     */
-  var userAccountType: js.UndefOr[UserAccountSecurityType] = js.native
+  var userAccountType: js.UndefOr[UserAccountSecurityType] = js.undefined
   // User sign-in name - internet format: (user account name)@(user account DNS domain name).
-  var userPrincipalName: js.UndefOr[String] = js.native
+  var userPrincipalName: js.UndefOr[String] = js.undefined
 }
 
 object UserSecurityState {
   @scala.inline
-  def apply(): UserSecurityState = {
+  def apply(
+    aadUserId: String = null,
+    accountName: String = null,
+    domainName: String = null,
+    emailRole: EmailRole = null,
+    isVpn: js.UndefOr[Boolean] = js.undefined,
+    logonDateTime: String = null,
+    logonId: String = null,
+    logonIp: String = null,
+    logonLocation: String = null,
+    logonType: LogonType = null,
+    onPremisesSecurityIdentifier: String = null,
+    riskScore: String = null,
+    userAccountType: UserAccountSecurityType = null,
+    userPrincipalName: String = null
+  ): UserSecurityState = {
     val __obj = js.Dynamic.literal()
+    if (aadUserId != null) __obj.updateDynamic("aadUserId")(aadUserId.asInstanceOf[js.Any])
+    if (accountName != null) __obj.updateDynamic("accountName")(accountName.asInstanceOf[js.Any])
+    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
+    if (emailRole != null) __obj.updateDynamic("emailRole")(emailRole.asInstanceOf[js.Any])
+    if (!js.isUndefined(isVpn)) __obj.updateDynamic("isVpn")(isVpn.get.asInstanceOf[js.Any])
+    if (logonDateTime != null) __obj.updateDynamic("logonDateTime")(logonDateTime.asInstanceOf[js.Any])
+    if (logonId != null) __obj.updateDynamic("logonId")(logonId.asInstanceOf[js.Any])
+    if (logonIp != null) __obj.updateDynamic("logonIp")(logonIp.asInstanceOf[js.Any])
+    if (logonLocation != null) __obj.updateDynamic("logonLocation")(logonLocation.asInstanceOf[js.Any])
+    if (logonType != null) __obj.updateDynamic("logonType")(logonType.asInstanceOf[js.Any])
+    if (onPremisesSecurityIdentifier != null) __obj.updateDynamic("onPremisesSecurityIdentifier")(onPremisesSecurityIdentifier.asInstanceOf[js.Any])
+    if (riskScore != null) __obj.updateDynamic("riskScore")(riskScore.asInstanceOf[js.Any])
+    if (userAccountType != null) __obj.updateDynamic("userAccountType")(userAccountType.asInstanceOf[js.Any])
+    if (userPrincipalName != null) __obj.updateDynamic("userPrincipalName")(userPrincipalName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserSecurityState]
   }
-  @scala.inline
-  implicit class UserSecurityStateOps[Self <: UserSecurityState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAadUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aadUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAadUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aadUserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccountName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomainName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailRole(value: EmailRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailRole")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVpn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVpn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsVpn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVpn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogonDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogonDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogonId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogonId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogonIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogonIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogonLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogonLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogonType(value: LogonType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogonType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logonType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPremisesSecurityIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesSecurityIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPremisesSecurityIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesSecurityIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRiskScore(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("riskScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRiskScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("riskScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAccountType(value: UserAccountSecurityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAccountType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAccountType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAccountType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPrincipalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPrincipalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPrincipalName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userPrincipalName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

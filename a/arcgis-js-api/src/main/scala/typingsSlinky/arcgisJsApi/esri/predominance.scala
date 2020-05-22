@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html)
   */
-@js.native
 trait predominance extends js.Object {
   /**
     * Generates a predominance renderer based on a set of competing numeric fields.  Visualizing predominance involves coloring a [layer’s](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) features based on which attribute among a set of competing numeric attributes wins or beats the others in total count. Common applications of this include visualizing election results, survey results, and demographic majorities.  For example, suppose you have a layer of U.S. counties with fields containing the total sales of various crops: wheat, soybeans, corn, cotton, and vegetables. If a feature has the following values for each field:
@@ -68,7 +67,7 @@ trait predominance extends js.Object {
     * @param params.edgesType Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.
     *
     */
-  def createRenderer(params: predominanceCreateRendererParams): js.Promise[predominanceRendererResult] = js.native
+  def createRenderer(params: predominanceCreateRendererParams): js.Promise[predominanceRendererResult]
 }
 
 object predominance {
@@ -77,19 +76,5 @@ object predominance {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[predominance]
   }
-  @scala.inline
-  implicit class predominanceOps[Self <: predominance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateRenderer(value: predominanceCreateRendererParams => js.Promise[predominanceRendererResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

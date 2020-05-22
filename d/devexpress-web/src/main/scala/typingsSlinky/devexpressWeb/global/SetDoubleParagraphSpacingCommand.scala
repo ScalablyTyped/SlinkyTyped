@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SetDoubleParagraphSpacingCommand")
 @js.native
 class SetDoubleParagraphSpacingCommand ()
-  extends typingsSlinky.devexpressWeb.SetDoubleParagraphSpacingCommand
+  extends typingsSlinky.devexpressWeb.SetDoubleParagraphSpacingCommand {
+  /**
+    * Executes the SetDoubleParagraphSpacingCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[Boolean] = js.native
+}
 

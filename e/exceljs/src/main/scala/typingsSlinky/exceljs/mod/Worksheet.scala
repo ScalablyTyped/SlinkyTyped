@@ -77,6 +77,10 @@ trait Worksheet extends js.Object {
   	 */
   def addBackgroundImage(imageId: Double): Unit = js.native
   /**
+  	 * add conditionalFormattingOptions
+  	 */
+  def addConditionalFormatting(cf: ConditionalFormattingOptions): Unit = js.native
+  /**
   	 * Using the image id from `Workbook.addImage`,
   	 * embed an image within the worksheet to cover a range
   	 */
@@ -100,6 +104,10 @@ trait Worksheet extends js.Object {
   def commit(): Unit = js.native
   def deleteColumnKey(key: String): Unit = js.native
   def destroy(): Unit = js.native
+  /**
+  	 * Duplicate rows and insert new rows
+  	 */
+  def duplicateRow(rowNum: Double, count: Double, insert: Boolean): Unit = js.native
   def eachColumnKey(callback: js.Function2[/* col */ PartialColumnAlignment, /* index */ Double, Unit]): Unit = js.native
   /**
   	 * Iterate over all rows that have values in a worksheet
@@ -168,6 +176,10 @@ trait Worksheet extends js.Object {
   	 */
   def getTable(name: String): Table = js.native
   /**
+  	 *  fetch table
+  	 */
+  def getTables(): js.Array[js.Tuple2[Table, Unit]] = js.native
+  /**
   	 * Merge cells, either:
   	 *
   	 * tlbr string, e.g. `'A4:B5'`
@@ -204,6 +216,14 @@ trait Worksheet extends js.Object {
   	 * Worksheet protection
   	 */
   def protect(password: String, options: PartialWorksheetProtectio): js.Promise[Unit] = js.native
+  /**
+  	 * delete conditionalFormattingOptions
+  	 */
+  def removeConditionalFormatting(filter: js.Any): Unit = js.native
+  /**
+  	 * delete table by name or id
+  	 */
+  def removeTable(name: String): Unit = js.native
   def setColumnKey(key: String, value: PartialColumn): Unit = js.native
   /**
   	 * Cut one or more columns (columns to the right are shifted left)

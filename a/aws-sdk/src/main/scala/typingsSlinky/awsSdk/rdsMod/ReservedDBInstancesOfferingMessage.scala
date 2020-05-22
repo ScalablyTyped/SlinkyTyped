@@ -18,41 +18,11 @@ trait ReservedDBInstancesOfferingMessage extends js.Object {
 
 object ReservedDBInstancesOfferingMessage {
   @scala.inline
-  def apply(): ReservedDBInstancesOfferingMessage = {
+  def apply(Marker: String = null, ReservedDBInstancesOfferings: ReservedDBInstancesOfferingList = null): ReservedDBInstancesOfferingMessage = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (ReservedDBInstancesOfferings != null) __obj.updateDynamic("ReservedDBInstancesOfferings")(ReservedDBInstancesOfferings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservedDBInstancesOfferingMessage]
   }
-  @scala.inline
-  implicit class ReservedDBInstancesOfferingMessageOps[Self <: ReservedDBInstancesOfferingMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservedDBInstancesOfferings(value: ReservedDBInstancesOfferingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstancesOfferings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedDBInstancesOfferings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedDBInstancesOfferings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

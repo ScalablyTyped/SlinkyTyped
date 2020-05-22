@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProjectTemplate extends js.Object {
-  val Application: typingsSlinky.activexVbide.VBIDE.Application = js.native
-  val Parent: typingsSlinky.activexVbide.VBIDE.Application = js.native
+  val Application: typingsSlinky.activexVbide.VBIDE.Application
+  val Parent: typingsSlinky.activexVbide.VBIDE.Application
   @JSName("VBIDE.ProjectTemplate_typekey")
-  var VBIDEDotProjectTemplate_typekey: ProjectTemplate = js.native
+  var VBIDEDotProjectTemplate_typekey: ProjectTemplate
 }
 
 object ProjectTemplate {
@@ -19,31 +18,5 @@ object ProjectTemplate {
     __obj.updateDynamic("VBIDE.ProjectTemplate_typekey")(VBIDEDotProjectTemplate_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectTemplate]
   }
-  @scala.inline
-  implicit class ProjectTemplateOps[Self <: ProjectTemplate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVBIDEDotProjectTemplate_typekey(value: ProjectTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VBIDE.ProjectTemplate_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

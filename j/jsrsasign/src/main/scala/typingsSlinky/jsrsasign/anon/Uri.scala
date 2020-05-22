@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Uri extends js.Object {
-  var array: js.UndefOr[js.Array[ASN1Object]] = js.native
-  var uri: js.UndefOr[String] = js.native
+  var array: js.UndefOr[js.Array[ASN1Object]] = js.undefined
+  var uri: js.UndefOr[String] = js.undefined
 }
 
 object Uri {
   @scala.inline
-  def apply(): Uri = {
+  def apply(array: js.Array[ASN1Object] = null, uri: String = null): Uri = {
     val __obj = js.Dynamic.literal()
+    if (array != null) __obj.updateDynamic("array")(array.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[Uri]
   }
-  @scala.inline
-  implicit class UriOps[Self <: Uri] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArray(value: js.Array[ASN1Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

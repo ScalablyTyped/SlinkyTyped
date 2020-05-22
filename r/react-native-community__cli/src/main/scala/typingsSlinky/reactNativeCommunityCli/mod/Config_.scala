@@ -8,24 +8,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config_ extends js.Object {
   // An array of assets as defined by the user
-  var assets: js.Array[String] = js.native
+  var assets: js.Array[String]
   // An array of commands that are present in 3rd party packages
-  var commands: js.Array[Command] = js.native
+  var commands: js.Array[Command]
   // Map of the dependencies that are present in the project
-  var dependencies: StringDictionary[Assets] = js.native
+  var dependencies: StringDictionary[Assets]
   // Haste configuration resolved based on available plugins
-  var haste: typingsSlinky.reactNativeCommunityCli.anon.Platforms = js.native
+  var haste: typingsSlinky.reactNativeCommunityCli.anon.Platforms
   // Map of available platforms (built-ins and dynamically loaded)
-  var platforms: Dictname = js.native
+  var platforms: Dictname
   // Object that contains configuration for a project (null, when platform not available)
-  var project: Record[String, _] = js.native
+  var project: Record[String, _]
   // Path to React Native source
-  var reactNativePath: String = js.native
+  var reactNativePath: String
   // Root where the configuration has been resolved from
-  var root: String = js.native
+  var root: String
 }
 
 object Config_ {
@@ -43,61 +42,5 @@ object Config_ {
     val __obj = js.Dynamic.literal(assets = assets.asInstanceOf[js.Any], commands = commands.asInstanceOf[js.Any], dependencies = dependencies.asInstanceOf[js.Any], haste = haste.asInstanceOf[js.Any], platforms = platforms.asInstanceOf[js.Any], project = project.asInstanceOf[js.Any], reactNativePath = reactNativePath.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config_]
   }
-  @scala.inline
-  implicit class Config_Ops[Self <: Config_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssets(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommands(value: js.Array[Command]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: StringDictionary[Assets]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHaste(value: typingsSlinky.reactNativeCommunityCli.anon.Platforms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("haste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlatforms(value: Dictname): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProject(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReactNativePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reactNativePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

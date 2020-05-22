@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetWorkspaceStatusResponse extends js.Object {
-  var mergeConflict: js.UndefOr[js.Array[MergeConflict]] = js.native
-  var workspaceChange: js.UndefOr[js.Array[Entity]] = js.native
+  var mergeConflict: js.UndefOr[js.Array[MergeConflict]] = js.undefined
+  var workspaceChange: js.UndefOr[js.Array[Entity]] = js.undefined
 }
 
 object GetWorkspaceStatusResponse {
   @scala.inline
-  def apply(): GetWorkspaceStatusResponse = {
+  def apply(mergeConflict: js.Array[MergeConflict] = null, workspaceChange: js.Array[Entity] = null): GetWorkspaceStatusResponse = {
     val __obj = js.Dynamic.literal()
+    if (mergeConflict != null) __obj.updateDynamic("mergeConflict")(mergeConflict.asInstanceOf[js.Any])
+    if (workspaceChange != null) __obj.updateDynamic("workspaceChange")(workspaceChange.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetWorkspaceStatusResponse]
   }
-  @scala.inline
-  implicit class GetWorkspaceStatusResponseOps[Self <: GetWorkspaceStatusResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMergeConflict(value: js.Array[MergeConflict]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkspaceChange(value: js.Array[Entity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkspaceChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceChange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

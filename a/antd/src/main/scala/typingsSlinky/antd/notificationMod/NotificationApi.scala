@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotificationApi extends NotificationInstance {
-  def close(key: String): Unit = js.native
-  def config(options: ConfigProps): Unit = js.native
-  def destroy(): Unit = js.native
-  def useNotification(): js.Tuple2[NotificationInstance, ReactElement] = js.native
-  def warn(args: ArgsProps): Unit = js.native
+  def close(key: String): Unit
+  def config(options: ConfigProps): Unit
+  def destroy(): Unit
+  def useNotification(): js.Tuple2[NotificationInstance, ReactElement]
+  def warn(args: ArgsProps): Unit
 }
 
 object NotificationApi {
@@ -31,43 +30,5 @@ object NotificationApi {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction1(close), config = js.Any.fromFunction1(config), destroy = js.Any.fromFunction0(destroy), error = js.Any.fromFunction1(error), info = js.Any.fromFunction1(info), open = js.Any.fromFunction1(open), success = js.Any.fromFunction1(success), useNotification = js.Any.fromFunction0(useNotification), warn = js.Any.fromFunction1(warn), warning = js.Any.fromFunction1(warning))
     __obj.asInstanceOf[NotificationApi]
   }
-  @scala.inline
-  implicit class NotificationApiOps[Self <: NotificationApi] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withConfig(value: ConfigProps => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUseNotification(value: () => js.Tuple2[NotificationInstance, ReactElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useNotification")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWarn(value: ArgsProps => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

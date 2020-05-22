@@ -18,41 +18,11 @@ trait ShareDetails extends js.Object {
 
 object ShareDetails {
   @scala.inline
-  def apply(): ShareDetails = {
+  def apply(ShareErrors: ShareErrors = null, SuccessfulShares: SuccessfulShares = null): ShareDetails = {
     val __obj = js.Dynamic.literal()
+    if (ShareErrors != null) __obj.updateDynamic("ShareErrors")(ShareErrors.asInstanceOf[js.Any])
+    if (SuccessfulShares != null) __obj.updateDynamic("SuccessfulShares")(SuccessfulShares.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareDetails]
   }
-  @scala.inline
-  implicit class ShareDetailsOps[Self <: ShareDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShareErrors(value: ShareErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfulShares(value: SuccessfulShares): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulShares")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfulShares: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SuccessfulShares")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CoverageVariable extends js.Object {
-  var coverageVariable: js.UndefOr[String] = js.native
+  var coverageVariable: js.UndefOr[String] = js.undefined
 }
 
 object CoverageVariable {
   @scala.inline
-  def apply(): CoverageVariable = {
+  def apply(coverageVariable: String = null): CoverageVariable = {
     val __obj = js.Dynamic.literal()
+    if (coverageVariable != null) __obj.updateDynamic("coverageVariable")(coverageVariable.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoverageVariable]
   }
-  @scala.inline
-  implicit class CoverageVariableOps[Self <: CoverageVariable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoverageVariable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageVariable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoverageVariable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageVariable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

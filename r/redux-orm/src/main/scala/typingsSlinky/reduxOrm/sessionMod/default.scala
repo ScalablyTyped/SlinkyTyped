@@ -2,10 +2,15 @@ package typingsSlinky.reduxOrm.sessionMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.reduxOrm.databaseMod.Database
+import typingsSlinky.reduxOrm.databaseMod.QueryResult
+import typingsSlinky.reduxOrm.databaseMod.QuerySpec
+import typingsSlinky.reduxOrm.databaseMod.UpdateSpec
+import typingsSlinky.reduxOrm.modelMod.ModelType
 import typingsSlinky.reduxOrm.ormMod.IndexedModelClasses
 import typingsSlinky.reduxOrm.ormMod.ORM
 import typingsSlinky.reduxOrm.ormMod.OrmState
 import typingsSlinky.std.Extract
+import typingsSlinky.std.InstanceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,5 +67,51 @@ Extract[
     withMutations: Boolean,
     batchToken: BatchToken
   ) = this()
+  /**
+    * list of bound {@link Model} classes bound to this session, bootstrapped during {@link @ORM.register}.
+    *
+    * @see {@link ModelType}
+    */
+  /* CompleteClass */
+  override val sessionBoundModels: js.Array[
+    ModelType[
+      InstanceType[
+        /* import warning: importer.ImportType#apply Failed type conversion: I[keyof I] */ js.Any
+      ]
+    ]
+  ] = js.native
+  /**
+    * Current {@link OrmState}, specific to registered schema
+    */
+  /* CompleteClass */
+  override val state: OrmState[I] = js.native
+  /**
+    * Applies update to a model state.
+    *
+    * @param  update - the update command object.
+    *
+    * @returns query result.
+    *
+    * @see {@link DbAction}
+    * @see {@link UpdateSpec}
+    * @see {@link DbActionResult}
+    * @see {@link UpdateResult}
+    */
+  /* CompleteClass */
+  override def applyUpdate[P](update: UpdateSpec[P]): P = js.native
+  /**
+    * Executes query against model state.
+    *
+    * @param query - the query command object.
+    *
+    * @returns query result.
+    *
+    * @see {@link QueryType}
+    * @see {@link QueryClause}
+    * @see {@link QuerySpec}
+    * @see {@link QueryResult}
+    */
+  /* CompleteClass */
+  override def query(query: QuerySpec): QueryResult[js.Object] = js.native
 }
 

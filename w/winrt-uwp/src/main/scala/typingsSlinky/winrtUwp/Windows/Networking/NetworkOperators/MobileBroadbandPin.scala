@@ -6,54 +6,53 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains the properties and methods associated with a mobile broadband PIN. */
-@js.native
 trait MobileBroadbandPin extends js.Object {
   /** Gets the number of attempts remaining before the mobile broadband PIN is blocked. */
-  var attemptsRemaining: Double = js.native
+  var attemptsRemaining: Double
   /** Gets a boolean value that indicates if the mobile broadband PIN is enabled. */
-  var enabled: Boolean = js.native
+  var enabled: Boolean
   /** Gets the format for a mobile broadband PIN. */
-  var format: MobileBroadbandPinFormat = js.native
+  var format: MobileBroadbandPinFormat
   /** Gets the lock state for a mobile broadband PIN. */
-  var lockState: MobileBroadbandPinLockState = js.native
+  var lockState: MobileBroadbandPinLockState
   /** Gets the maximum length, in bytes, of the mobile broadband PIN. */
-  var maxLength: Double = js.native
+  var maxLength: Double
   /** Gets the minimum length, in bytes, of the mobile broadband PIN. */
-  var minLength: Double = js.native
+  var minLength: Double
   /** Gets the PIN type for a mobile broadband PIN. */
-  var `type`: MobileBroadbandPinType = js.native
+  var `type`: MobileBroadbandPinType
   /**
     * Starts an asynchronous operation to change an already-enabled mobile broadband PIN.
     * @param currentPin The current mobile broadband PIN.
     * @param newPin The new mobile broadband PIN.
     * @return An asynchronous operation that returns the result.
     */
-  def changeAsync(currentPin: String, newPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult] = js.native
+  def changeAsync(currentPin: String, newPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]
   /**
     * Starts an asynchronous operation to disable a previously-enabled mobile broadband PIN.
     * @param currentPin The current mobile broadband PIN.
     * @return An asynchronous operation that returns the result.
     */
-  def disableAsync(currentPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult] = js.native
+  def disableAsync(currentPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]
   /**
     * Starts an asynchronous operation to enable a previously-disabled mobile broadband PIN.
     * @param currentPin The current mobile broadband PIN.
     * @return An asynchronous operation that returns the result.
     */
-  def enableAsync(currentPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult] = js.native
+  def enableAsync(currentPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]
   /**
     * Starts an asynchronous operation to get the current mobile broadband PIN from the user.
     * @param currentPin The current mobile broadband PIN.
     * @return An asynchronous operation that returns the result.
     */
-  def enterAsync(currentPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult] = js.native
+  def enterAsync(currentPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]
   /**
     * Starts an asynchronous operation to unblock a previously-blocked mobile broadband PIN using a PIN unlock key (PUK).
     * @param pinUnblockKey The PIN unblock key.
     * @param newPin The new mobile broadband PIN.
     * @return An asynchronous operation that returns the result.
     */
-  def unblockAsync(pinUnblockKey: String, newPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult] = js.native
+  def unblockAsync(pinUnblockKey: String, newPin: String): IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]
 }
 
 object MobileBroadbandPin {
@@ -76,85 +75,5 @@ object MobileBroadbandPin {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MobileBroadbandPin]
   }
-  @scala.inline
-  implicit class MobileBroadbandPinOps[Self <: MobileBroadbandPin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttemptsRemaining(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptsRemaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangeAsync(value: (String, String) => IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDisableAsync(value: String => IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnableAsync(value: String => IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnterAsync(value: String => IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormat(value: MobileBroadbandPinFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLockState(value: MobileBroadbandPinLockState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: MobileBroadbandPinType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnblockAsync(value: (String, String) => IPromiseWithIAsyncOperation[MobileBroadbandPinOperationResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unblockAsync")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

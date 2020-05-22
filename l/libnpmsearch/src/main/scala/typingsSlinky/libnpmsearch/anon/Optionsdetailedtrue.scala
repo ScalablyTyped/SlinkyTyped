@@ -20,7 +20,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined libnpmsearch.libnpmsearch.Options & {  detailed  :true} */
-@js.native
 trait Optionsdetailedtrue
   extends /* key */ StringDictionary[js.Any] {
   /**
@@ -28,15 +27,15 @@ trait Optionsdetailedtrue
     * This is a legacy authentication token supported only for
     * compatibility. Please use `opts.token` instead.
     */
-  var _auth: js.UndefOr[String] = js.native
+  var _auth: js.UndefOr[String] = js.undefined
   /**
     * Alias for `token`.
     */
-  var _authToken: js.UndefOr[String] = js.native
+  var _authToken: js.UndefOr[String] = js.undefined
   /**
     * Alias for `password`
     */
-  var _password: js.UndefOr[String] = js.native
+  var _password: js.UndefOr[String] = js.undefined
   /**
     * An `Agent` instance to be shared across requests. This allows
     * multiple concurrent fetch requests to happen on the same socket.
@@ -46,9 +45,9 @@ trait Optionsdetailedtrue
     * agents are already automatically managed internally when this option
     * is not passed through.
     */
-  var agent: js.UndefOr[Agent] = js.native
-  var `always-auth`: js.UndefOr[Boolean] = js.native
-  var alwaysAuth: js.UndefOr[Boolean] = js.native
+  var agent: js.UndefOr[Agent] = js.undefined
+  var `always-auth`: js.UndefOr[Boolean] = js.undefined
+  var alwaysAuth: js.UndefOr[Boolean] = js.undefined
   /**
     * Request body to send through the outgoing request. Buffers and
     * Streams will be passed through as-is, with a default `content-type`
@@ -58,7 +57,7 @@ trait Optionsdetailedtrue
     *
     * Use `opts.headers` to set the content-type to something else.
     */
-  var body: js.UndefOr[Buffer | Stream | js.Object | String] = js.native
+  var body: js.UndefOr[Buffer | Stream | js.Object | String] = js.undefined
   /**
     * The Certificate Authority signing certificate that is trusted for SSL
     * connections to the registry. Values should be in PEM format (Windows
@@ -79,7 +78,7 @@ trait Optionsdetailedtrue
     *
     * See also `opts.strictSSL`, `opts.ca` and `opts.key`
     */
-  var ca: js.UndefOr[String | Buffer | (js.Array[String | Buffer]) | Null] = js.native
+  var ca: js.UndefOr[String | Buffer | (js.Array[String | Buffer]) | Null] = js.undefined
   /**
     * The location of the http cache directory. If provided, certain
     * cachable requests will be cached according to
@@ -89,7 +88,7 @@ trait Optionsdetailedtrue
     *
     * See also `offline`, `preferOffline`, and `preferOnline`.
     */
-  var cache: js.UndefOr[String] = js.native
+  var cache: js.UndefOr[String] = js.undefined
   /**
     * A client certificate to pass when accessing the registry. Values
     * should be in PEM format (Windows calls it "Base-64 encoded X.509
@@ -106,73 +105,73 @@ trait Optionsdetailedtrue
     *
     * See also: `opts.ca` and `opts.key`
     */
-  var cert: js.UndefOr[String] = js.native
+  var cert: js.UndefOr[String] = js.undefined
   /**
     * If true, returns an object with `package`, `score`, and `searchScore`
     * fields, with `package` being what would usually be returned, and the
     * other two containing details about how that package scored. Useful
     * for UIs. Default: `false`
     */
-  var detailed: js.UndefOr[Boolean with `true`] = js.native
-  var email: js.UndefOr[String] = js.native
+  var detailed: js.UndefOr[Boolean with `true`] = js.undefined
+  var email: js.UndefOr[String] = js.undefined
   /**
     * The "retries" config for `retry` to use when fetching packages from
     * the registry.
     *
     * See also `opts.retry` to provide all retry options as a single object.
     */
-  var fetchRetries: js.UndefOr[Double] = js.native
+  var fetchRetries: js.UndefOr[Double] = js.undefined
   /**
     * The "factor" config for `retry` to use when fetching packages.
     *
     * See also `opts.retry` to provide all retry options as a single
     * object.
     */
-  var fetchRetryFactor: js.UndefOr[Double] = js.native
+  var fetchRetryFactor: js.UndefOr[Double] = js.undefined
   /**
     * The "maxTimeout" config for `retry` to use when fetching packages.
     *
     * See also `opts.retry` to provide all retry options as a single
     * object.
     */
-  var fetchRetryMaxtimeout: js.UndefOr[Double] = js.native
+  var fetchRetryMaxtimeout: js.UndefOr[Double] = js.undefined
   /**
     * The "minTimeout" config for `retry` to use when fetching packages.
     *
     * See also `opts.retry` to provide all retry options as a single
     * object.
     */
-  var fetchRetryMintimeout: js.UndefOr[Double] = js.native
+  var fetchRetryMintimeout: js.UndefOr[Double] = js.undefined
   /**
     * If present, other auth-related values in `opts` will be completely
     * ignored, including `alwaysAuth`, `email`, and `otp`, when calculating
     * auth for a request, and the auth details in `opts.forceAuth` will be
     * used instead.
     */
-  var forceAuth: js.UndefOr[PartialAuthOptions] = js.native
+  var forceAuth: js.UndefOr[PartialAuthOptions] = js.undefined
   /**
     * Offset number for results. Used with `opts.limit` for pagination.
     * Default: `0`
     */
-  var from: js.UndefOr[Double] = js.native
+  var from: js.UndefOr[Double] = js.undefined
   /**
     * If true, `npm-registry-fetch` will set the `Content-Encoding` header
     * to `gzip` and use `zlib.gzip()` or `zlib.createGzip()` to gzip-encode
     * `opts.body`.
     */
-  var gzip: js.UndefOr[Boolean] = js.native
+  var gzip: js.UndefOr[Boolean] = js.undefined
   /**
     * Additional headers for the outgoing request. This option can also be
     * used to override headers automatically generated by
     * `npm-registry-fetch`, such as `Content-Type`.
     */
-  var headers: js.UndefOr[Record[String, String]] = js.native
+  var headers: js.UndefOr[Record[String, String]] = js.undefined
   /**
     * If true, the response body will be thrown away and `res.body` set to
     * `null`. This will prevent dangling response sockets for requests
     * where you don't usually care what the response body is.
     */
-  var ignoreBody: js.UndefOr[Boolean] = js.native
+  var ignoreBody: js.UndefOr[Boolean] = js.undefined
   /**
     * If provided, the response body's will be verified against this
     * integrity string, using [`ssri`](https://npm.im/ssri). If
@@ -189,12 +188,12 @@ trait Optionsdetailedtrue
     * information, so `EINTEGRITY` errors can happen if `opts.cache` is
     * used, even if `opts.integrity` is not passed in.
     */
-  var integrity: js.UndefOr[String | Integrity] = js.native
+  var integrity: js.UndefOr[String | Integrity] = js.undefined
   /**
     * This is used to populate the `npm-in-ci` request header sent to the
     * registry.
     */
-  var isFromCI: js.UndefOr[Boolean] = js.native
+  var isFromCI: js.UndefOr[Boolean] = js.undefined
   /**
     * A client key to pass when accessing the registry. Values should be in
     * PEM format with newlines replaced by the string `'\n'`. For example:
@@ -210,54 +209,54 @@ trait Optionsdetailedtrue
     *
     * See also: `opts.ca` and `opts.cert`
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * Number of results to limit the query to. Default: `20`
     */
-  var limit: js.UndefOr[Double] = js.native
+  var limit: js.UndefOr[Double] = js.undefined
   /**
     * The IP address of the local interface to use when making connections
     * to the registry.
     *
     * See also `opts.proxy`
     */
-  var localAddress: js.UndefOr[String] = js.native
+  var localAddress: js.UndefOr[String] = js.undefined
   /**
     * Logger object to use for logging operation details.
     */
-  var log: js.UndefOr[Logger] = js.native
+  var log: js.UndefOr[Logger] = js.undefined
   /**
     * Decimal number between `0` and `1` that defines the weight of
     * `maintenance` metrics when scoring and sorting packages.
     * Default: `0.65` (same as `opts.sortBy: 'optimal'`)
     */
-  var maintenance: js.UndefOr[Double] = js.native
+  var maintenance: js.UndefOr[Double] = js.undefined
   /**
     * When using `fetch.json.stream()` (NOT `fetch.json()`), this will be
     * passed down to `JSONStream` as the second argument to
     * `JSONStream.parse`, and can be used to transform stream data before
     * output.
     */
-  var mapJSON: js.UndefOr[js.Function1[/* v */ js.Any, _]] = js.native
+  var mapJSON: js.UndefOr[js.Function1[/* v */ js.Any, _]] = js.undefined
   /**
     * Maximum number of sockets to keep open during requests. Has no effect
     * if `opts.agent` is used.
     */
-  var maxSockets: js.UndefOr[Double] = js.native
+  var maxSockets: js.UndefOr[Double] = js.undefined
   /**
     * HTTP method to use for the outgoing request. Case-insensitive.
     */
-  var method: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.undefined
   /**
     * If true, proxying will be disabled even if `opts.proxy` is used.
     */
-  var noproxy: js.UndefOr[Boolean] = js.native
+  var noproxy: js.UndefOr[Boolean] = js.undefined
   /**
     * If provided, will be sent in the `npm-session` header. This header is
     * used by the npm registry to identify individual user sessions
     * (usually individual invocations of the CLI).
     */
-  var npmSession: js.UndefOr[String] = js.native
+  var npmSession: js.UndefOr[String] = js.undefined
   /**
     * Force offline mode: no network requests will be done during install.
     * To allow `npm-registry-fetch` to fill in missing cache data, see
@@ -265,13 +264,13 @@ trait Optionsdetailedtrue
     *
     * This option is only really useful if you're also using `opts.cache`.
     */
-  var offline: js.UndefOr[Boolean] = js.native
+  var offline: js.UndefOr[Boolean] = js.undefined
   /**
     * This is a one-time password from a two-factor authenticator. It is
     * required for certain registry interactions when two-factor auth is
     * enabled for a user account.
     */
-  var otp: js.UndefOr[Double | String] = js.native
+  var otp: js.UndefOr[Double | String] = js.undefined
   /**
     * Password used for basic authentication. For the more modern
     * authentication method, please use the (more secure) `opts.token`
@@ -287,13 +286,13 @@ trait Optionsdetailedtrue
     *
     * See also `opts.username`
     */
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.undefined
   /**
     * Decimal number between `0` and `1` that defines the weight of
     * `popularity` metrics when scoring and sorting packages.
     * Default: `0.98` (same as `opts.sortBy: 'optimal'`)
     */
-  var popularity: js.UndefOr[Double] = js.native
+  var popularity: js.UndefOr[Double] = js.undefined
   /**
     * If true, staleness checks for cached data will be bypassed, but
     * missing data will be requested from the server. To force full offline
@@ -301,31 +300,31 @@ trait Optionsdetailedtrue
     *
     * This option is generally only useful if you're also using `opts.cache`.
     */
-  var preferOffline: js.UndefOr[Boolean] = js.native
+  var preferOffline: js.UndefOr[Boolean] = js.undefined
   /**
     * If true, staleness checks for cached data will be forced, making the
     * CLI look for updates immediately even for fresh package data.
     *
     * This option is generally only useful if you're also using `opts.cache`.
     */
-  var preferOnline: js.UndefOr[Boolean] = js.native
+  var preferOnline: js.UndefOr[Boolean] = js.undefined
   /**
     * If provided, will be sent in the npm-scope header. This header is
     * used by the npm registry to identify the toplevel package scope that
     * a particular project installation is using.
     */
-  var projectScope: js.UndefOr[String] = js.native
+  var projectScope: js.UndefOr[String] = js.undefined
   /**
     * A proxy to use for outgoing http requests. If not passed in, the
     * `HTTP(S)_PROXY` environment variable will be used.
     */
-  var proxy: js.UndefOr[String] = js.native
+  var proxy: js.UndefOr[String] = js.undefined
   /**
     * Decimal number between `0` and `1` that defines the weight of
     * `quality` metrics when scoring and sorting packages.
     * Default: `0.5` (same as `opts.sortBy: 'optimal'`)
     */
-  var quality: js.UndefOr[Double] = js.native
+  var quality: js.UndefOr[Double] = js.undefined
   /**
     * If provided, the request URI will have a query string appended to it
     * using this query. If `opts.query` is an object, it will be converted
@@ -334,7 +333,7 @@ trait Optionsdetailedtrue
     * If the request URI already has a query string, it will be merged with
     * `opts.query`, preferring `opts.query` values.
     */
-  var query: js.UndefOr[String | js.Object] = js.native
+  var query: js.UndefOr[String | js.Object] = js.undefined
   /**
     * Registry configuration for a request. If a request URL only includes
     * the URL path, this registry setting will be prepended. This
@@ -346,12 +345,12 @@ trait Optionsdetailedtrue
     * See also `opts.scope`, `opts.spec`, and `opts.<scope>:registry` which
     * can all affect the actual registry URL used by the outgoing request.
     */
-  var registry: js.UndefOr[String] = js.native
+  var registry: js.UndefOr[String] = js.undefined
   /**
     * Single-object configuration for request retry settings. If passed in,
     * will override individually-passed `fetchRetry*` settings.
     */
-  var retry: js.UndefOr[PartialFetchRetryOptions] = js.native
+  var retry: js.UndefOr[PartialFetchRetryOptions] = js.undefined
   /**
     * Associate an operation with a scope for a scoped registry. This
     * option can force lookup of scope-specific registries and
@@ -360,29 +359,29 @@ trait Optionsdetailedtrue
     * See also `opts.<scope>:registry` and `opts.spec` for interactions
     * with this option.
     */
-  var scope: js.UndefOr[String] = js.native
+  var scope: js.UndefOr[String] = js.undefined
   /**
     * Used as a shorthand to set `opts.quality`, `opts.maintenance`, and
     * `opts.popularity` with values that prioritize each one.
     */
-  var sortBy: js.UndefOr[optimal | quality | maintenance | popularity] = js.native
+  var sortBy: js.UndefOr[optimal | quality | maintenance | popularity] = js.undefined
   /**
     * If provided, can be used to automatically configure `opts.scope`
     * based on a specific package name. Non-registry package specs will
     * throw an error.
     */
-  var spec: js.UndefOr[String | Result] = js.native
+  var spec: js.UndefOr[String | Result] = js.undefined
   /**
     * Whether or not to do SSL key validation when making requests to the
     * registry via https.
     *
     * See also `opts.ca`.
     */
-  var strictSSL: js.UndefOr[Boolean] = js.native
+  var strictSSL: js.UndefOr[Boolean] = js.undefined
   /**
     * Time before a hanging request times out.
     */
-  var timeout: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.undefined
   /**
     * Authentication token string.
     *
@@ -395,11 +394,11 @@ trait Optionsdetailedtrue
     * }
     * ```
     */
-  var token: js.UndefOr[String] = js.native
+  var token: js.UndefOr[String] = js.undefined
   /**
     * User agent string to send in the `User-Agent` header.
     */
-  var userAgent: js.UndefOr[String] = js.native
+  var userAgent: js.UndefOr[String] = js.undefined
   /**
     * Username used for basic authentication. For the more modern
     * authentication method, please use the (more secure) `opts.token`
@@ -415,664 +414,123 @@ trait Optionsdetailedtrue
     *
     * See also `opts.password`
     */
-  var username: js.UndefOr[String] = js.native
+  var username: js.UndefOr[String] = js.undefined
 }
 
 object Optionsdetailedtrue {
   @scala.inline
-  def apply(): Optionsdetailedtrue = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    _auth: String = null,
+    _authToken: String = null,
+    _password: String = null,
+    agent: Agent = null,
+    `always-auth`: js.UndefOr[Boolean] = js.undefined,
+    alwaysAuth: js.UndefOr[Boolean] = js.undefined,
+    body: Buffer | Stream | js.Object | String = null,
+    ca: js.UndefOr[Null | String | Buffer | (js.Array[String | Buffer])] = js.undefined,
+    cache: String = null,
+    cert: String = null,
+    detailed: js.UndefOr[Boolean with `true`] = js.undefined,
+    email: String = null,
+    fetchRetries: js.UndefOr[Double] = js.undefined,
+    fetchRetryFactor: js.UndefOr[Double] = js.undefined,
+    fetchRetryMaxtimeout: js.UndefOr[Double] = js.undefined,
+    fetchRetryMintimeout: js.UndefOr[Double] = js.undefined,
+    forceAuth: PartialAuthOptions = null,
+    from: js.UndefOr[Double] = js.undefined,
+    gzip: js.UndefOr[Boolean] = js.undefined,
+    headers: Record[String, String] = null,
+    ignoreBody: js.UndefOr[Boolean] = js.undefined,
+    integrity: String | Integrity = null,
+    isFromCI: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    localAddress: String = null,
+    log: Logger = null,
+    maintenance: js.UndefOr[Double] = js.undefined,
+    mapJSON: /* v */ js.Any => _ = null,
+    maxSockets: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    noproxy: js.UndefOr[Boolean] = js.undefined,
+    npmSession: String = null,
+    offline: js.UndefOr[Boolean] = js.undefined,
+    otp: Double | String = null,
+    password: String = null,
+    popularity: js.UndefOr[Double] = js.undefined,
+    preferOffline: js.UndefOr[Boolean] = js.undefined,
+    preferOnline: js.UndefOr[Boolean] = js.undefined,
+    projectScope: String = null,
+    proxy: String = null,
+    quality: js.UndefOr[Double] = js.undefined,
+    query: String | js.Object = null,
+    registry: String = null,
+    retry: PartialFetchRetryOptions = null,
+    scope: String = null,
+    sortBy: optimal | quality | maintenance | popularity = null,
+    spec: String | Result = null,
+    strictSSL: js.UndefOr[Boolean] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    token: String = null,
+    userAgent: String = null,
+    username: String = null
+  ): Optionsdetailedtrue = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (_auth != null) __obj.updateDynamic("_auth")(_auth.asInstanceOf[js.Any])
+    if (_authToken != null) __obj.updateDynamic("_authToken")(_authToken.asInstanceOf[js.Any])
+    if (_password != null) __obj.updateDynamic("_password")(_password.asInstanceOf[js.Any])
+    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
+    if (!js.isUndefined(`always-auth`)) __obj.updateDynamic("always-auth")(`always-auth`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(alwaysAuth)) __obj.updateDynamic("alwaysAuth")(alwaysAuth.get.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (!js.isUndefined(ca)) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
+    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
+    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
+    if (!js.isUndefined(detailed)) __obj.updateDynamic("detailed")(detailed.get.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(fetchRetries)) __obj.updateDynamic("fetchRetries")(fetchRetries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fetchRetryFactor)) __obj.updateDynamic("fetchRetryFactor")(fetchRetryFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fetchRetryMaxtimeout)) __obj.updateDynamic("fetchRetryMaxtimeout")(fetchRetryMaxtimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fetchRetryMintimeout)) __obj.updateDynamic("fetchRetryMintimeout")(fetchRetryMintimeout.get.asInstanceOf[js.Any])
+    if (forceAuth != null) __obj.updateDynamic("forceAuth")(forceAuth.asInstanceOf[js.Any])
+    if (!js.isUndefined(from)) __obj.updateDynamic("from")(from.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.get.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreBody)) __obj.updateDynamic("ignoreBody")(ignoreBody.get.asInstanceOf[js.Any])
+    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFromCI)) __obj.updateDynamic("isFromCI")(isFromCI.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
+    if (!js.isUndefined(maintenance)) __obj.updateDynamic("maintenance")(maintenance.get.asInstanceOf[js.Any])
+    if (mapJSON != null) __obj.updateDynamic("mapJSON")(js.Any.fromFunction1(mapJSON))
+    if (!js.isUndefined(maxSockets)) __obj.updateDynamic("maxSockets")(maxSockets.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(noproxy)) __obj.updateDynamic("noproxy")(noproxy.get.asInstanceOf[js.Any])
+    if (npmSession != null) __obj.updateDynamic("npmSession")(npmSession.asInstanceOf[js.Any])
+    if (!js.isUndefined(offline)) __obj.updateDynamic("offline")(offline.get.asInstanceOf[js.Any])
+    if (otp != null) __obj.updateDynamic("otp")(otp.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(popularity)) __obj.updateDynamic("popularity")(popularity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferOffline)) __obj.updateDynamic("preferOffline")(preferOffline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferOnline)) __obj.updateDynamic("preferOnline")(preferOnline.get.asInstanceOf[js.Any])
+    if (projectScope != null) __obj.updateDynamic("projectScope")(projectScope.asInstanceOf[js.Any])
+    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (registry != null) __obj.updateDynamic("registry")(registry.asInstanceOf[js.Any])
+    if (retry != null) __obj.updateDynamic("retry")(retry.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (sortBy != null) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
+    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
+    if (!js.isUndefined(strictSSL)) __obj.updateDynamic("strictSSL")(strictSSL.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
+    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[Optionsdetailedtrue]
   }
-  @scala.inline
-  implicit class OptionsdetailedtrueOps[Self <: Optionsdetailedtrue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_auth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_auth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_authToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_authToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_authToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_authToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_password(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_password: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAgent(value: Agent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAlways-auth`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("always-auth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAlways-auth`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("always-auth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlwaysAuth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysAuth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: Buffer | Stream | js.Object | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCa(value: String | Buffer | (js.Array[String | Buffer])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCa: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(null)
-        ret
-    }
-    @scala.inline
-    def withCache(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCert(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailed(value: Boolean with `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detailed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchRetryFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetryFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchRetryFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetryFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchRetryMaxtimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetryMaxtimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchRetryMaxtimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetryMaxtimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchRetryMintimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetryMintimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchRetryMintimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchRetryMintimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceAuth(value: PartialAuthOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAuth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceAuth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAuth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGzip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGzip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrity(value: String | Integrity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFromCI(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFromCI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFromCI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFromCI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLog(value: Logger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaintenance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaintenance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maintenance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapJSON(value: /* v */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapJSON")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMapJSON: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapJSON")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSockets(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSockets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSockets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSockets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoproxy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noproxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoproxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noproxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNpmSession(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("npmSession")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNpmSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("npmSession")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOtp(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopularity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popularity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferOffline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferOffline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferOffline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferOffline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferOnline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferOnline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferOnline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferOnline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProxy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegistry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegistry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetry(value: PartialFetchRetryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortBy(value: optimal | quality | maintenance | popularity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpec(value: String | Result): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrictSSL(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictSSL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictSSL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictSSL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsername(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsername: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

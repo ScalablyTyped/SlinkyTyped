@@ -27,65 +27,18 @@ trait SchemaOperationMetadata extends js.Object {
 
 object SchemaOperationMetadata {
   @scala.inline
-  def apply(): SchemaOperationMetadata = {
+  def apply(
+    apiMethodName: String = null,
+    counter: SchemaProgressCounter = null,
+    createTime: String = null,
+    endTime: String = null
+  ): SchemaOperationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (apiMethodName != null) __obj.updateDynamic("apiMethodName")(apiMethodName.asInstanceOf[js.Any])
+    if (counter != null) __obj.updateDynamic("counter")(counter.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperationMetadata]
   }
-  @scala.inline
-  implicit class SchemaOperationMetadataOps[Self <: SchemaOperationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiMethodName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiMethodName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiMethodName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiMethodName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCounter(value: SchemaProgressCounter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

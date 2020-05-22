@@ -10,153 +10,45 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined yandex-maps.yandex-maps.control.IBaseButtonParametersOptions & {  collapseOnBlur ? :boolean,   expandOnClick ? :boolean,   popupFloat ? :'left' | 'right'} */
-@js.native
 trait IBaseButtonParametersOptiAdjustMapMargin extends js.Object {
-  var adjustMapMargin: js.UndefOr[Boolean] = js.native
-  var collapseOnBlur: js.UndefOr[Boolean] = js.native
-  var expandOnClick: js.UndefOr[Boolean] = js.native
-  var float: js.UndefOr[none | left | right] = js.native
-  var floatIndex: js.UndefOr[Double] = js.native
-  var layout: js.UndefOr[IClassConstructor[ISelectableControlLayout] | String] = js.native
-  var maxWidth: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.native
-  var popupFloat: js.UndefOr[left | right] = js.native
-  var position: js.UndefOr[Bottom] = js.native
-  var visible: js.UndefOr[Boolean] = js.native
+  var adjustMapMargin: js.UndefOr[Boolean] = js.undefined
+  var collapseOnBlur: js.UndefOr[Boolean] = js.undefined
+  var expandOnClick: js.UndefOr[Boolean] = js.undefined
+  var float: js.UndefOr[none | left | right] = js.undefined
+  var floatIndex: js.UndefOr[Double] = js.undefined
+  var layout: js.UndefOr[IClassConstructor[ISelectableControlLayout] | String] = js.undefined
+  var maxWidth: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.undefined
+  var popupFloat: js.UndefOr[left | right] = js.undefined
+  var position: js.UndefOr[Bottom] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object IBaseButtonParametersOptiAdjustMapMargin {
   @scala.inline
-  def apply(): IBaseButtonParametersOptiAdjustMapMargin = {
+  def apply(
+    adjustMapMargin: js.UndefOr[Boolean] = js.undefined,
+    collapseOnBlur: js.UndefOr[Boolean] = js.undefined,
+    expandOnClick: js.UndefOr[Boolean] = js.undefined,
+    float: none | left | right = null,
+    floatIndex: js.UndefOr[Double] = js.undefined,
+    layout: IClassConstructor[ISelectableControlLayout] | String = null,
+    maxWidth: (js.Array[js.Array[Double] | Double]) | Double = null,
+    popupFloat: left | right = null,
+    position: Bottom = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): IBaseButtonParametersOptiAdjustMapMargin = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(adjustMapMargin)) __obj.updateDynamic("adjustMapMargin")(adjustMapMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapseOnBlur)) __obj.updateDynamic("collapseOnBlur")(collapseOnBlur.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandOnClick)) __obj.updateDynamic("expandOnClick")(expandOnClick.get.asInstanceOf[js.Any])
+    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
+    if (!js.isUndefined(floatIndex)) __obj.updateDynamic("floatIndex")(floatIndex.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
+    if (popupFloat != null) __obj.updateDynamic("popupFloat")(popupFloat.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBaseButtonParametersOptiAdjustMapMargin]
   }
-  @scala.inline
-  implicit class IBaseButtonParametersOptiAdjustMapMarginOps[Self <: IBaseButtonParametersOptiAdjustMapMargin] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdjustMapMargin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustMapMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustMapMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustMapMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseOnBlur(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnBlur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseOnBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandOnClick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloat(value: none | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: IClassConstructor[ISelectableControlLayout] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: (js.Array[js.Array[Double] | Double]) | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupFloat(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupFloat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupFloat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupFloat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Bottom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

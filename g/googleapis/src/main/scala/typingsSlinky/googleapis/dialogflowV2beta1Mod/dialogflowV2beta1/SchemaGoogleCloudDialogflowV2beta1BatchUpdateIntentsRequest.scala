@@ -40,77 +40,20 @@ trait SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest extends js.Obj
 
 object SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest = {
+  def apply(
+    intentBatchInline: SchemaGoogleCloudDialogflowV2beta1IntentBatch = null,
+    intentBatchUri: String = null,
+    intentView: String = null,
+    languageCode: String = null,
+    updateMask: String = null
+  ): SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest = {
     val __obj = js.Dynamic.literal()
+    if (intentBatchInline != null) __obj.updateDynamic("intentBatchInline")(intentBatchInline.asInstanceOf[js.Any])
+    if (intentBatchUri != null) __obj.updateDynamic("intentBatchUri")(intentBatchUri.asInstanceOf[js.Any])
+    if (intentView != null) __obj.updateDynamic("intentView")(intentView.asInstanceOf[js.Any])
+    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
+    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequestOps[Self <: SchemaGoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIntentBatchInline(value: SchemaGoogleCloudDialogflowV2beta1IntentBatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentBatchInline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntentBatchInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentBatchInline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntentBatchUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentBatchUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntentBatchUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentBatchUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntentView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntentView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateMask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "ng-facebook"
-version := "0.0-unknown-dt-20200225Z-ce9d1e"
+version := "0.0-unknown-dt-20200515Z-c25b8c"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "angular" % "1.7-dt-20200331Z-257f44",
-  "org.scalablytyped.slinky" %%% "facebook-js-sdk" % "3.3-dt-20200225Z-4398de",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "angular" % "1.7-dt-20200515Z-5d601b",
+  "org.scalablytyped.slinky" %%% "facebook-js-sdk" % "3.3-dt-20200515Z-17c601",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

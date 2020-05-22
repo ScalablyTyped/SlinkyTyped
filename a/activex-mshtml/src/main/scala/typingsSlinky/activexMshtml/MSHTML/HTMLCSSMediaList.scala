@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTMLCSSMediaList extends js.Object {
   @JSName("MSHTML.HTMLCSSMediaList_typekey")
-  var MSHTMLDotHTMLCSSMediaList_typekey: HTMLCSSMediaList = js.native
-  val length: Double = js.native
-  var mediaText: String = js.native
-  def appendMedium(bstrMedium: String): Unit = js.native
-  def deleteMedium(bstrMedium: String): Unit = js.native
-  def item(index: Double): String = js.native
+  var MSHTMLDotHTMLCSSMediaList_typekey: HTMLCSSMediaList
+  val length: Double
+  var mediaText: String
+  def appendMedium(bstrMedium: String): Unit
+  def deleteMedium(bstrMedium: String): Unit
+  def item(index: Double): String
 }
 
 object HTMLCSSMediaList {
@@ -29,49 +28,5 @@ object HTMLCSSMediaList {
     __obj.updateDynamic("MSHTML.HTMLCSSMediaList_typekey")(MSHTMLDotHTMLCSSMediaList_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLCSSMediaList]
   }
-  @scala.inline
-  implicit class HTMLCSSMediaListOps[Self <: HTMLCSSMediaList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotHTMLCSSMediaList_typekey(value: HTMLCSSMediaList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.HTMLCSSMediaList_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAppendMedium(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appendMedium")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteMedium(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteMedium")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMediaText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaText")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

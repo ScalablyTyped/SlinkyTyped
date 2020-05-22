@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait FunctionOrConstructorTypeNode extends js.Object
 
-object FunctionOrConstructorTypeNode {
-  @scala.inline
-  implicit def apply(value: ConstructorTypeNode): FunctionOrConstructorTypeNode = value.asInstanceOf[FunctionOrConstructorTypeNode]
-  @scala.inline
-  implicit def apply(value: FunctionTypeNode): FunctionOrConstructorTypeNode = value.asInstanceOf[FunctionOrConstructorTypeNode]
-}
-

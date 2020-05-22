@@ -8,59 +8,58 @@ import scala.scalajs.js.annotation._
   * ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as
   * read/write once. ISCSI volumes support ownership management and SELinux relabeling.
   */
-@js.native
 trait ISCSIPersistentVolumeSource extends js.Object {
   /**
     * whether support iSCSI Discovery CHAP authentication
     */
-  val chapAuthDiscovery: Boolean = js.native
+  val chapAuthDiscovery: Boolean
   /**
     * whether support iSCSI Session CHAP authentication
     */
-  val chapAuthSession: Boolean = js.native
+  val chapAuthSession: Boolean
   /**
     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
     * is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
     * inferred to be "ext4" if unspecified. More info:
     * https://kubernetes.io/docs/concepts/storage/volumes#iscsi
     */
-  val fsType: String = js.native
+  val fsType: String
   /**
     * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface
     * simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the
     * connection.
     */
-  val initiatorName: String = js.native
+  val initiatorName: String
   /**
     * Target iSCSI Qualified Name.
     */
-  val iqn: String = js.native
+  val iqn: String
   /**
     * iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
     */
-  val iscsiInterface: String = js.native
+  val iscsiInterface: String
   /**
     * iSCSI Target Lun number.
     */
-  val lun: Double = js.native
+  val lun: Double
   /**
     * iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other
     * than default (typically TCP ports 860 and 3260).
     */
-  val portals: js.Array[String] = js.native
+  val portals: js.Array[String]
   /**
     * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
     */
-  val readOnly: Boolean = js.native
+  val readOnly: Boolean
   /**
     * CHAP Secret for iSCSI target and initiator authentication
     */
-  val secretRef: SecretReference = js.native
+  val secretRef: SecretReference
   /**
     * iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than
     * default (typically TCP ports 860 and 3260).
     */
-  val targetPortal: String = js.native
+  val targetPortal: String
 }
 
 object ISCSIPersistentVolumeSource {
@@ -81,79 +80,5 @@ object ISCSIPersistentVolumeSource {
     val __obj = js.Dynamic.literal(chapAuthDiscovery = chapAuthDiscovery.asInstanceOf[js.Any], chapAuthSession = chapAuthSession.asInstanceOf[js.Any], fsType = fsType.asInstanceOf[js.Any], initiatorName = initiatorName.asInstanceOf[js.Any], iqn = iqn.asInstanceOf[js.Any], iscsiInterface = iscsiInterface.asInstanceOf[js.Any], lun = lun.asInstanceOf[js.Any], portals = portals.asInstanceOf[js.Any], readOnly = readOnly.asInstanceOf[js.Any], secretRef = secretRef.asInstanceOf[js.Any], targetPortal = targetPortal.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISCSIPersistentVolumeSource]
   }
-  @scala.inline
-  implicit class ISCSIPersistentVolumeSourceOps[Self <: ISCSIPersistentVolumeSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChapAuthDiscovery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chapAuthDiscovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChapAuthSession(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chapAuthSession")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFsType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitiatorName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiatorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIqn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iqn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIscsiInterface(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iscsiInterface")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLun(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPortals(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecretRef(value: SecretReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetPortal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetPortal")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

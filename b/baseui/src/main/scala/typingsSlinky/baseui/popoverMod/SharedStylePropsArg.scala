@@ -17,111 +17,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SharedStylePropsArg extends js.Object {
   @JSName("$arrowOffset")
-  var $arrowOffset: js.UndefOr[Offset] = js.native
+  var $arrowOffset: js.UndefOr[Offset] = js.undefined
   @JSName("$isAnimating")
-  var $isAnimating: js.UndefOr[Boolean] = js.native
+  var $isAnimating: js.UndefOr[Boolean] = js.undefined
   @JSName("$isOpen")
-  var $isOpen: js.UndefOr[Boolean] = js.native
+  var $isOpen: js.UndefOr[Boolean] = js.undefined
   @JSName("$placement")
   var $placement: js.UndefOr[
     topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
-  ] = js.native
+  ] = js.undefined
   @JSName("$popoverOffset")
-  var $popoverOffset: js.UndefOr[Offset] = js.native
+  var $popoverOffset: js.UndefOr[Offset] = js.undefined
   @JSName("$showArrow")
-  var $showArrow: js.UndefOr[Boolean] = js.native
+  var $showArrow: js.UndefOr[Boolean] = js.undefined
 }
 
 object SharedStylePropsArg {
   @scala.inline
-  def apply(): SharedStylePropsArg = {
+  def apply(
+    $arrowOffset: Offset = null,
+    $isAnimating: js.UndefOr[Boolean] = js.undefined,
+    $isOpen: js.UndefOr[Boolean] = js.undefined,
+    $placement: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top = null,
+    $popoverOffset: Offset = null,
+    $showArrow: js.UndefOr[Boolean] = js.undefined
+  ): SharedStylePropsArg = {
     val __obj = js.Dynamic.literal()
+    if ($arrowOffset != null) __obj.updateDynamic("$arrowOffset")($arrowOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined($isAnimating)) __obj.updateDynamic("$isAnimating")($isAnimating.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($isOpen)) __obj.updateDynamic("$isOpen")($isOpen.get.asInstanceOf[js.Any])
+    if ($placement != null) __obj.updateDynamic("$placement")($placement.asInstanceOf[js.Any])
+    if ($popoverOffset != null) __obj.updateDynamic("$popoverOffset")($popoverOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined($showArrow)) __obj.updateDynamic("$showArrow")($showArrow.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedStylePropsArg]
   }
-  @scala.inline
-  implicit class SharedStylePropsArgOps[Self <: SharedStylePropsArg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$arrowOffset(value: Offset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$arrowOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$arrowOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$arrowOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$isAnimating(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isAnimating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$isAnimating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isAnimating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$isOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$isOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$isOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$placement(
-      value: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$placement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$placement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$placement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$popoverOffset(value: Offset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$popoverOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$popoverOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$popoverOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$showArrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$showArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$showArrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$showArrow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,29 +21,10 @@ trait SchemaDisableServiceRequest extends js.Object {
 
 object SchemaDisableServiceRequest {
   @scala.inline
-  def apply(): SchemaDisableServiceRequest = {
+  def apply(disableDependentServices: js.UndefOr[Boolean] = js.undefined): SchemaDisableServiceRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disableDependentServices)) __obj.updateDynamic("disableDependentServices")(disableDependentServices.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDisableServiceRequest]
   }
-  @scala.inline
-  implicit class SchemaDisableServiceRequestOps[Self <: SchemaDisableServiceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableDependentServices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDependentServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableDependentServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDependentServices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

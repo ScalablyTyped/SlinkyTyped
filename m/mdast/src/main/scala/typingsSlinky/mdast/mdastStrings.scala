@@ -1,7 +1,7 @@
 package typingsSlinky.mdast
 
-import typingsSlinky.mdast.mod.AlignType
 import typingsSlinky.mdast.mod.ReferenceType
+import typingsSlinky.mdast.mod._AlignType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ object mdastStrings {
   sealed trait break extends js.Object
   
   @js.native
-  sealed trait center extends AlignType
+  sealed trait center extends _AlignType
   
   @js.native
   sealed trait code extends js.Object
@@ -59,7 +59,7 @@ object mdastStrings {
   sealed trait inlineCode extends js.Object
   
   @js.native
-  sealed trait left extends AlignType
+  sealed trait left extends _AlignType
   
   @js.native
   sealed trait link extends js.Object
@@ -77,7 +77,7 @@ object mdastStrings {
   sealed trait paragraph extends js.Object
   
   @js.native
-  sealed trait right extends AlignType
+  sealed trait right extends _AlignType
   
   @js.native
   sealed trait root extends js.Object

@@ -17,29 +17,10 @@ trait SchemaAccountInfo extends js.Object {
 
 object SchemaAccountInfo {
   @scala.inline
-  def apply(): SchemaAccountInfo = {
+  def apply(emails: js.Array[String] = null): SchemaAccountInfo = {
     val __obj = js.Dynamic.literal()
+    if (emails != null) __obj.updateDynamic("emails")(emails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountInfo]
   }
-  @scala.inline
-  implicit class SchemaAccountInfoOps[Self <: SchemaAccountInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmails(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the client event that occurs after a spelling check is complete.
   */
-@js.native
 trait ASPxClientSpellCheckerAfterCheckEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the text that has been checked.
     */
-  var checkedText: String = js.native
+  var checkedText: String
   /**
     * Gets the programmatic identifier assigned to the control which has been checked.
     */
-  var controlId: String = js.native
+  var controlId: String
   /**
     * Gets a value specifying whether spell checking is finished or stopped by the user.
     */
-  var reason: String = js.native
+  var reason: String
 }
 
 object ASPxClientSpellCheckerAfterCheckEventArgs {
@@ -29,31 +28,5 @@ object ASPxClientSpellCheckerAfterCheckEventArgs {
     val __obj = js.Dynamic.literal(checkedText = checkedText.asInstanceOf[js.Any], controlId = controlId.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientSpellCheckerAfterCheckEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientSpellCheckerAfterCheckEventArgsOps[Self <: ASPxClientSpellCheckerAfterCheckEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckedText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControlId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

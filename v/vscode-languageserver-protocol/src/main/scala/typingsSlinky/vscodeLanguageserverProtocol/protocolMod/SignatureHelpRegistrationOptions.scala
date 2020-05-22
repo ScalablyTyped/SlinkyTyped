@@ -4,15 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SignatureHelpRegistrationOptions
   extends TextDocumentRegistrationOptions
      with SignatureHelpOptions
 
 object SignatureHelpRegistrationOptions {
   @scala.inline
-  def apply(): SignatureHelpRegistrationOptions = {
-    val __obj = js.Dynamic.literal()
+  def apply(documentSelector: DocumentSelector = null, triggerCharacters: js.Array[String] = null): SignatureHelpRegistrationOptions = {
+    val __obj = js.Dynamic.literal(documentSelector = documentSelector.asInstanceOf[js.Any])
+    if (triggerCharacters != null) __obj.updateDynamic("triggerCharacters")(triggerCharacters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpRegistrationOptions]
   }
 }

@@ -5,61 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** UtteranceAnalysis. */
-@js.native
 trait UtteranceAnalysis extends js.Object {
   /** **`2017-09-21`:** An error message if the utterance contains more than 500 characters. The service does not analyze the utterance. **`2016-05-19`:** Not returned. */
-  var error: js.UndefOr[String] = js.native
+  var error: js.UndefOr[String] = js.undefined
   /** An array of `ToneChatScore` objects that provides results for the most prevalent tones of the utterance. The array includes results for any tone whose score is at least 0.5. The array is empty if no tone has a score that meets this threshold. */
-  var tones: js.Array[ToneChatScore] = js.native
+  var tones: js.Array[ToneChatScore]
   /** The unique identifier of the utterance. The first utterance has ID 0, and the ID of each subsequent utterance is incremented by one. */
-  var utterance_id: Double = js.native
+  var utterance_id: Double
   /** The text of the utterance. */
-  var utterance_text: String = js.native
+  var utterance_text: String
 }
 
 object UtteranceAnalysis {
   @scala.inline
-  def apply(tones: js.Array[ToneChatScore], utterance_id: Double, utterance_text: String): UtteranceAnalysis = {
+  def apply(tones: js.Array[ToneChatScore], utterance_id: Double, utterance_text: String, error: String = null): UtteranceAnalysis = {
     val __obj = js.Dynamic.literal(tones = tones.asInstanceOf[js.Any], utterance_id = utterance_id.asInstanceOf[js.Any], utterance_text = utterance_text.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     __obj.asInstanceOf[UtteranceAnalysis]
   }
-  @scala.inline
-  implicit class UtteranceAnalysisOps[Self <: UtteranceAnalysis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTones(value: js.Array[ToneChatScore]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUtterance_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utterance_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUtterance_text(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utterance_text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

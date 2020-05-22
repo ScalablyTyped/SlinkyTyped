@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-line:no-empty-interface
-@js.native
 trait RecordProcessor extends js.Object {
   /**
     * Called once by the KCL before any calls to processRecords. Any initialization
@@ -15,7 +14,7 @@ trait RecordProcessor extends js.Object {
     * @param completeCallback - The callback that must be invoked
     *          once the initialization operation is complete.
     */
-  def initialize(initializeInput: InitializeInput, completeCallback: Callback): Unit = js.native
+  def initialize(initializeInput: InitializeInput, completeCallback: Callback): Unit
   /**
     * Called by the KCL to indicate that this record processor should shut down.
     * After the lease lost operation is complete, there will not be any more calls to
@@ -26,7 +25,7 @@ trait RecordProcessor extends js.Object {
     * @param completeCallback  The callback must be invoked once lease
     *             lost operations are completed.
     */
-  def leaseLost(leaseLostInput: LeaseLossInput, completeCallback: Callback): Unit = js.native
+  def leaseLost(leaseLostInput: LeaseLossInput, completeCallback: Callback): Unit
   /**
     * Called by KCL with a list of records to be processed and checkpointed.
     * A record looks like:
@@ -43,7 +42,7 @@ trait RecordProcessor extends js.Object {
     *             once all records are processed and checkpoint (optional) is
     *             complete.
     */
-  def processRecords(processRecordsInput: ProcessRecordsInput, completeCallback: Callback): Unit = js.native
+  def processRecords(processRecordsInput: ProcessRecordsInput, completeCallback: Callback): Unit
   /**
     * Called by the KCL to indicate that this record processor should shutdown.
     * After the shard ended operation is complete, there will not be any more calls to
@@ -55,7 +54,7 @@ trait RecordProcessor extends js.Object {
     * @param completeCallback      The callback must be invoked once shard
     *               ended operations are completed.
     */
-  def shardEnded(shardEndedInput: ShardEndedInput, completeCallback: Callback): Unit = js.native
+  def shardEnded(shardEndedInput: ShardEndedInput, completeCallback: Callback): Unit
 }
 
 object RecordProcessor {
@@ -69,37 +68,5 @@ object RecordProcessor {
     val __obj = js.Dynamic.literal(initialize = js.Any.fromFunction2(initialize), leaseLost = js.Any.fromFunction2(leaseLost), processRecords = js.Any.fromFunction2(processRecords), shardEnded = js.Any.fromFunction2(shardEnded))
     __obj.asInstanceOf[RecordProcessor]
   }
-  @scala.inline
-  implicit class RecordProcessorOps[Self <: RecordProcessor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialize(value: (InitializeInput, Callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLeaseLost(value: (LeaseLossInput, Callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseLost")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withProcessRecords(value: (ProcessRecordsInput, Callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processRecords")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withShardEnded(value: (ShardEndedInput, Callback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shardEnded")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

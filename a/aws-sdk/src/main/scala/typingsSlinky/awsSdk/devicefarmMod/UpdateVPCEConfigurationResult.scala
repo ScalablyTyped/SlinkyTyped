@@ -14,29 +14,10 @@ trait UpdateVPCEConfigurationResult extends js.Object {
 
 object UpdateVPCEConfigurationResult {
   @scala.inline
-  def apply(): UpdateVPCEConfigurationResult = {
+  def apply(vpceConfiguration: VPCEConfiguration = null): UpdateVPCEConfigurationResult = {
     val __obj = js.Dynamic.literal()
+    if (vpceConfiguration != null) __obj.updateDynamic("vpceConfiguration")(vpceConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateVPCEConfigurationResult]
   }
-  @scala.inline
-  implicit class UpdateVPCEConfigurationResultOps[Self <: UpdateVPCEConfigurationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpceConfiguration(value: VPCEConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpceConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpceConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

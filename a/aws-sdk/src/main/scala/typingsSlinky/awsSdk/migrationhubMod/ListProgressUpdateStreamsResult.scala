@@ -18,41 +18,11 @@ trait ListProgressUpdateStreamsResult extends js.Object {
 
 object ListProgressUpdateStreamsResult {
   @scala.inline
-  def apply(): ListProgressUpdateStreamsResult = {
+  def apply(NextToken: Token = null, ProgressUpdateStreamSummaryList: ProgressUpdateStreamSummaryList = null): ListProgressUpdateStreamsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (ProgressUpdateStreamSummaryList != null) __obj.updateDynamic("ProgressUpdateStreamSummaryList")(ProgressUpdateStreamSummaryList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListProgressUpdateStreamsResult]
   }
-  @scala.inline
-  implicit class ListProgressUpdateStreamsResultOps[Self <: ListProgressUpdateStreamsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressUpdateStreamSummaryList(value: ProgressUpdateStreamSummaryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStreamSummaryList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressUpdateStreamSummaryList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStreamSummaryList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

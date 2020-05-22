@@ -7,66 +7,65 @@ import scala.scalajs.js.annotation._
 /**
   * Represents an individual item of the Spreadsheet's context menu.
   */
-@js.native
 trait ASPxClientSpreadsheetPopupMenuItem extends js.Object {
   /**
     * Gets or sets a value that specifies whether the current menu item starts a group.
     */
-  var beginGroup: Boolean = js.native
+  var beginGroup: Boolean
   /**
     * Gets or sets a value that indicates whether the menu item is enabled, allowing the item to respond to end-user interactions.
     */
-  var enabled: Boolean = js.native
+  var enabled: Boolean
   /**
     * Gets or sets the CSS class name defining the menu item's image.
     */
-  var imageClassName: String = js.native
+  var imageClassName: String
   /**
     * Gets or sets the URL of the menu item's image.
     */
-  var imageUrl: String = js.native
+  var imageUrl: String
   /**
     * Gets or sets the unique identifier name for the current menu item.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Gets or sets an URL which defines the navigation location.
     */
-  var navigateUrl: String = js.native
+  var navigateUrl: String
   /**
     * Gets the immediate parent menu item to which the current menu item belongs.
     */
-  var parent: ASPxClientSpreadsheetPopupMenuItem = js.native
+  var parent: ASPxClientSpreadsheetPopupMenuItem
   /**
     * Gets or sets the window or frame at which to target the contents of the URL associated with the current menu item.
     */
-  var target: String = js.native
+  var target: String
   /**
     * Gets or sets the text content of the current menu item.
     */
-  var text: String = js.native
+  var text: String
   /**
     * Gets or sets the current menu item's tooltip text.
     */
-  var tooltip: String = js.native
+  var tooltip: String
   /**
     * Returns the menu item's sub-item with the specified index. An ASPxClientSpreadsheetPopupMenuItem object representing the found sub-item.
     * @param index An integer value specifying the index of the sub-item within a collection of the current menu item's submenu items.
     */
-  def GetItem(index: Double): ASPxClientSpreadsheetPopupMenuItem = js.native
+  def GetItem(index: Double): ASPxClientSpreadsheetPopupMenuItem
   /**
     * Returns the menu item's sub-item with the specified ASPxClientSpreadsheetPopupMenuItem.name property value. An ASPxClientSpreadsheetPopupMenuItem object representing the found sub-item.
     * @param name A string value specifying the ASPxClientSpreadsheetPopupMenuItem.name property value of the sub-item to find.
     */
-  def GetItemByName(name: String): ASPxClientSpreadsheetPopupMenuItem = js.native
+  def GetItemByName(name: String): ASPxClientSpreadsheetPopupMenuItem
   /**
     * Returns the total number of the menu item's child items (submenu items).
     */
-  def GetItemCount(): Double = js.native
+  def GetItemCount(): Double
   /**
     * Gets a collection that contains the submenu items of the current menu item.
     */
-  def GetSubItems(): ASPxClientSpreadsheetPopupMenuItemCollection = js.native
+  def GetSubItems(): ASPxClientSpreadsheetPopupMenuItemCollection
 }
 
 object ASPxClientSpreadsheetPopupMenuItem {
@@ -90,97 +89,5 @@ object ASPxClientSpreadsheetPopupMenuItem {
     val __obj = js.Dynamic.literal(GetItem = js.Any.fromFunction1(GetItem), GetItemByName = js.Any.fromFunction1(GetItemByName), GetItemCount = js.Any.fromFunction0(GetItemCount), GetSubItems = js.Any.fromFunction0(GetSubItems), beginGroup = beginGroup.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], imageClassName = imageClassName.asInstanceOf[js.Any], imageUrl = imageUrl.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], navigateUrl = navigateUrl.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientSpreadsheetPopupMenuItem]
   }
-  @scala.inline
-  implicit class ASPxClientSpreadsheetPopupMenuItemOps[Self <: ASPxClientSpreadsheetPopupMenuItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetItem(value: Double => ASPxClientSpreadsheetPopupMenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetItemByName(value: String => ASPxClientSpreadsheetPopupMenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemByName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetItemCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSubItems(value: () => ASPxClientSpreadsheetPopupMenuItemCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSubItems")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withBeginGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImageClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigateUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigateUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: ASPxClientSpreadsheetPopupMenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

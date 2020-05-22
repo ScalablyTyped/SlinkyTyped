@@ -4,13 +4,15 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.anon.AutoComplete
 import typingsSlinky.antd.anon.Ghost
+import typingsSlinky.antd.anon.Size
 import typingsSlinky.antd.anon.ValidateMessages
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
+import typingsSlinky.antd.configProviderContextMod.CSPConfig
 import typingsSlinky.antd.configProviderMod.ConfigProviderProps
 import typingsSlinky.antd.configProviderMod.default
-import typingsSlinky.antd.contextMod.CSPConfig
 import typingsSlinky.antd.localeProviderMod.Locale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
@@ -39,6 +41,10 @@ object ConfigProvider {
     @scala.inline
     def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
     @scala.inline
+    def getTargetContainer(value: () => HTMLElement): this.type = set("getTargetContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def input(value: AutoComplete): this.type = set("input", value.asInstanceOf[js.Any])
+    @scala.inline
     def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def pageHeader(value: Ghost): this.type = set("pageHeader", value.asInstanceOf[js.Any])
@@ -46,6 +52,8 @@ object ConfigProvider {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def renderEmpty(value: /* componentName */ js.UndefOr[String] => TagMod[Any]): this.type = set("renderEmpty", js.Any.fromFunction1(value))
+    @scala.inline
+    def space(value: Size): this.type = set("space", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ConfigProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

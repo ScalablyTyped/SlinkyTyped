@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HashChange extends js.Object {
-  var hashChange: js.UndefOr[js.Any] = js.native
-  var pushState: js.UndefOr[js.Any] = js.native
+  var hashChange: js.UndefOr[js.Any] = js.undefined
+  var pushState: js.UndefOr[js.Any] = js.undefined
 }
 
 object HashChange {
   @scala.inline
-  def apply(): HashChange = {
+  def apply(hashChange: js.Any = null, pushState: js.Any = null): HashChange = {
     val __obj = js.Dynamic.literal()
+    if (hashChange != null) __obj.updateDynamic("hashChange")(hashChange.asInstanceOf[js.Any])
+    if (pushState != null) __obj.updateDynamic("pushState")(pushState.asInstanceOf[js.Any])
     __obj.asInstanceOf[HashChange]
   }
-  @scala.inline
-  implicit class HashChangeOps[Self <: HashChange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHashChange(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHashChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPushState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

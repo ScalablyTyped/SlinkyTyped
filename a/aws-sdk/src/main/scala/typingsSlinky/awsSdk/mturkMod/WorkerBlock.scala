@@ -18,41 +18,11 @@ trait WorkerBlock extends js.Object {
 
 object WorkerBlock {
   @scala.inline
-  def apply(): WorkerBlock = {
+  def apply(Reason: String = null, WorkerId: CustomerId = null): WorkerBlock = {
     val __obj = js.Dynamic.literal()
+    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
+    if (WorkerId != null) __obj.updateDynamic("WorkerId")(WorkerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerBlock]
   }
-  @scala.inline
-  implicit class WorkerBlockOps[Self <: WorkerBlock] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

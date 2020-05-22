@@ -14,29 +14,10 @@ trait AccessControlListConfiguration extends js.Object {
 
 object AccessControlListConfiguration {
   @scala.inline
-  def apply(): AccessControlListConfiguration = {
+  def apply(KeyPath: S3ObjectKey = null): AccessControlListConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (KeyPath != null) __obj.updateDynamic("KeyPath")(KeyPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessControlListConfiguration]
   }
-  @scala.inline
-  implicit class AccessControlListConfigurationOps[Self <: AccessControlListConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyPath(value: S3ObjectKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,29 +12,10 @@ trait AnalyticsApplicationInputsStartingPositionConfiguration extends js.Object 
 
 object AnalyticsApplicationInputsStartingPositionConfiguration {
   @scala.inline
-  def apply(): AnalyticsApplicationInputsStartingPositionConfiguration = {
+  def apply(startingPosition: Input[String] = null): AnalyticsApplicationInputsStartingPositionConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (startingPosition != null) __obj.updateDynamic("startingPosition")(startingPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationInputsStartingPositionConfiguration]
   }
-  @scala.inline
-  implicit class AnalyticsApplicationInputsStartingPositionConfigurationOps[Self <: AnalyticsApplicationInputsStartingPositionConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStartingPosition(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartingPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startingPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

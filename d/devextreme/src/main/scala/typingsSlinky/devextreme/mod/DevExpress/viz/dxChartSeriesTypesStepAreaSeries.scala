@@ -1,151 +1,127 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.anon.ColorLevel
+import typingsSlinky.devextreme.anon.DisplayMode
+import typingsSlinky.devextreme.devextremeStrings.dash
+import typingsSlinky.devextreme.devextremeStrings.dot
 import typingsSlinky.devextreme.devextremeStrings.excludePoints
 import typingsSlinky.devextreme.devextremeStrings.includePoints
+import typingsSlinky.devextreme.devextremeStrings.longDash
 import typingsSlinky.devextreme.devextremeStrings.nearestPoint
 import typingsSlinky.devextreme.devextremeStrings.none
+import typingsSlinky.devextreme.devextremeStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** Describes settings supported by a series of the step rea type. */
-@js.native
+/** @name dxChartSeriesTypes.StepAreaSeries */
 trait dxChartSeriesTypesStepAreaSeries extends dxChartSeriesTypesCommonSeries {
-  /** Configures data aggregation for the series. */
+  /** @name dxChartSeriesTypes.StepAreaSeries.aggregation */
   @JSName("aggregation")
-  var aggregation_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesAggregation] = js.native
-  /** Configures the series border (in area-like series) or the series point border (in bar-like and bubble series). */
+  var aggregation_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesAggregation] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.border */
   @JSName("border")
-  var border_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesBorder] = js.native
-  /** Specifies series elements to be highlighted when a user points to a series. */
+  var border_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesBorder] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.hoverMode */
   @JSName("hoverMode")
-  var hoverMode_dxChartSeriesTypesStepAreaSeries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
-  /** Configures the appearance adopted by the series when a user points to it. */
+  var hoverMode_dxChartSeriesTypesStepAreaSeries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.hoverStyle */
   @JSName("hoverStyle")
-  var hoverStyle_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesHoverStyle] = js.native
-  /** Configures point labels. */
+  var hoverStyle_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesHoverStyle] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.label */
   @JSName("label")
-  var label_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesLabel] = js.native
-  /** Configures series points in scatter, line- and area-like series. */
+  var label_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesLabel] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.point */
   @JSName("point")
-  var point_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesPoint] = js.native
-  /** Specifies series elements to be highlighted when a user selects a series. */
+  var point_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesPoint] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.selectionMode */
   @JSName("selectionMode")
-  var selectionMode_dxChartSeriesTypesStepAreaSeries: js.UndefOr[includePoints | excludePoints | none] = js.native
-  /** Configures the appearance adopted by the series when a user selects it. */
+  var selectionMode_dxChartSeriesTypesStepAreaSeries: js.UndefOr[includePoints | excludePoints | none] = js.undefined
+  /** @name dxChartSeriesTypes.StepAreaSeries.selectionStyle */
   @JSName("selectionStyle")
-  var selectionStyle_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesSelectionStyle] = js.native
+  var selectionStyle_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesSelectionStyle] = js.undefined
 }
 
 object dxChartSeriesTypesStepAreaSeries {
   @scala.inline
-  def apply(): dxChartSeriesTypesStepAreaSeries = {
+  def apply(
+    aggregation: dxChartSeriesTypesStepAreaSeriesAggregation = null,
+    argumentField: String = null,
+    axis: String = null,
+    barOverlapGroup: String = null,
+    barPadding: js.UndefOr[Double] = js.undefined,
+    barWidth: js.UndefOr[Double] = js.undefined,
+    border: dxChartSeriesTypesStepAreaSeriesBorder = null,
+    closeValueField: String = null,
+    color: String = null,
+    cornerRadius: js.UndefOr[Double] = js.undefined,
+    dashStyle: dash | dot | longDash | solid = null,
+    highValueField: String = null,
+    hoverMode: nearestPoint | includePoints | excludePoints | none = null,
+    hoverStyle: dxChartSeriesTypesStepAreaSeriesHoverStyle = null,
+    ignoreEmptyPoints: js.UndefOr[Boolean] = js.undefined,
+    innerColor: String = null,
+    label: dxChartSeriesTypesStepAreaSeriesLabel = null,
+    lowValueField: String = null,
+    maxLabelCount: js.UndefOr[Double] = js.undefined,
+    minBarSize: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    openValueField: String = null,
+    pane: String = null,
+    point: dxChartSeriesTypesStepAreaSeriesPoint = null,
+    rangeValue1Field: String = null,
+    rangeValue2Field: String = null,
+    reduction: ColorLevel = null,
+    selectionMode: includePoints | excludePoints | none = null,
+    selectionStyle: dxChartSeriesTypesStepAreaSeriesSelectionStyle = null,
+    showInLegend: js.UndefOr[Boolean] = js.undefined,
+    sizeField: String = null,
+    stack: String = null,
+    tagField: String = null,
+    valueErrorBar: DisplayMode = null,
+    valueField: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): dxChartSeriesTypesStepAreaSeries = {
     val __obj = js.Dynamic.literal()
+    if (aggregation != null) __obj.updateDynamic("aggregation")(aggregation.asInstanceOf[js.Any])
+    if (argumentField != null) __obj.updateDynamic("argumentField")(argumentField.asInstanceOf[js.Any])
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (barOverlapGroup != null) __obj.updateDynamic("barOverlapGroup")(barOverlapGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(barPadding)) __obj.updateDynamic("barPadding")(barPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(barWidth)) __obj.updateDynamic("barWidth")(barWidth.get.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (closeValueField != null) __obj.updateDynamic("closeValueField")(closeValueField.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(cornerRadius)) __obj.updateDynamic("cornerRadius")(cornerRadius.get.asInstanceOf[js.Any])
+    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
+    if (highValueField != null) __obj.updateDynamic("highValueField")(highValueField.asInstanceOf[js.Any])
+    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
+    if (hoverStyle != null) __obj.updateDynamic("hoverStyle")(hoverStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreEmptyPoints)) __obj.updateDynamic("ignoreEmptyPoints")(ignoreEmptyPoints.get.asInstanceOf[js.Any])
+    if (innerColor != null) __obj.updateDynamic("innerColor")(innerColor.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (lowValueField != null) __obj.updateDynamic("lowValueField")(lowValueField.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLabelCount)) __obj.updateDynamic("maxLabelCount")(maxLabelCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minBarSize)) __obj.updateDynamic("minBarSize")(minBarSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (openValueField != null) __obj.updateDynamic("openValueField")(openValueField.asInstanceOf[js.Any])
+    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
+    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
+    if (rangeValue1Field != null) __obj.updateDynamic("rangeValue1Field")(rangeValue1Field.asInstanceOf[js.Any])
+    if (rangeValue2Field != null) __obj.updateDynamic("rangeValue2Field")(rangeValue2Field.asInstanceOf[js.Any])
+    if (reduction != null) __obj.updateDynamic("reduction")(reduction.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (selectionStyle != null) __obj.updateDynamic("selectionStyle")(selectionStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.get.asInstanceOf[js.Any])
+    if (sizeField != null) __obj.updateDynamic("sizeField")(sizeField.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (tagField != null) __obj.updateDynamic("tagField")(tagField.asInstanceOf[js.Any])
+    if (valueErrorBar != null) __obj.updateDynamic("valueErrorBar")(valueErrorBar.asInstanceOf[js.Any])
+    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesStepAreaSeries]
   }
-  @scala.inline
-  implicit class dxChartSeriesTypesStepAreaSeriesOps[Self <: dxChartSeriesTypesStepAreaSeries] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregation(value: dxChartSeriesTypesStepAreaSeriesAggregation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: dxChartSeriesTypesStepAreaSeriesBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverMode(value: nearestPoint | includePoints | excludePoints | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverStyle(value: dxChartSeriesTypesStepAreaSeriesHoverStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: dxChartSeriesTypesStepAreaSeriesLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoint(value: dxChartSeriesTypesStepAreaSeriesPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: includePoints | excludePoints | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionStyle(value: dxChartSeriesTypesStepAreaSeriesSelectionStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

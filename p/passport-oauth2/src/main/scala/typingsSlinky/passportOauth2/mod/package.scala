@@ -14,4 +14,44 @@ package object mod {
     /* info */ js.UndefOr[js.Object], 
     scala.Unit
   ]
+  type VerifyFunction = (js.Function4[
+    /* accessToken */ java.lang.String, 
+    /* refreshToken */ java.lang.String, 
+    /* profile */ js.Any, 
+    /* verified */ typingsSlinky.passportOauth2.mod.VerifyCallback, 
+    scala.Unit
+  ]) | (js.Function5[
+    /* accessToken */ java.lang.String, 
+    /* refreshToken */ java.lang.String, 
+    /* results */ js.Any, 
+    /* profile */ js.Any, 
+    /* verified */ typingsSlinky.passportOauth2.mod.VerifyCallback, 
+    scala.Unit
+  ])
+  type VerifyFunctionWithRequest = (js.Function5[
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
+    /* accessToken */ java.lang.String, 
+    /* refreshToken */ java.lang.String, 
+    /* profile */ js.Any, 
+    /* verified */ typingsSlinky.passportOauth2.mod.VerifyCallback, 
+    scala.Unit
+  ]) | (js.Function6[
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
+    /* accessToken */ java.lang.String, 
+    /* refreshToken */ java.lang.String, 
+    /* results */ js.Any, 
+    /* profile */ js.Any, 
+    /* verified */ typingsSlinky.passportOauth2.mod.VerifyCallback, 
+    scala.Unit
+  ])
 }

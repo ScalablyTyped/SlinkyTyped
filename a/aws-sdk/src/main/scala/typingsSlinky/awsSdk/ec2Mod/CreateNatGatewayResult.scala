@@ -18,41 +18,11 @@ trait CreateNatGatewayResult extends js.Object {
 
 object CreateNatGatewayResult {
   @scala.inline
-  def apply(): CreateNatGatewayResult = {
+  def apply(ClientToken: String = null, NatGateway: NatGateway = null): CreateNatGatewayResult = {
     val __obj = js.Dynamic.literal()
+    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
+    if (NatGateway != null) __obj.updateDynamic("NatGateway")(NatGateway.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNatGatewayResult]
   }
-  @scala.inline
-  implicit class CreateNatGatewayResultOps[Self <: CreateNatGatewayResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNatGateway(value: NatGateway): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NatGateway")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNatGateway: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NatGateway")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

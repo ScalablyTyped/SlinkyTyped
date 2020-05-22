@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides dialogs implementing the {@link com.sun.star.awt.XDialog} interface. */
-@js.native
 trait XDialogProvider extends XInterface {
   /**
     * creates a dialog for the given URL.
@@ -15,7 +14,7 @@ trait XDialogProvider extends XInterface {
     * @returns a dialog implementing the {@link com.sun.star.awt.XDialog} interface.
     * @throws com::sun::star::lang::IllegalArgumentException if no dialog for the given URL is found or if the URL is invalid.
     */
-  def createDialog(URL: String): XDialog = js.native
+  def createDialog(URL: String): XDialog
 }
 
 object XDialogProvider {
@@ -29,19 +28,5 @@ object XDialogProvider {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createDialog = js.Any.fromFunction1(createDialog), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDialogProvider]
   }
-  @scala.inline
-  implicit class XDialogProviderOps[Self <: XDialogProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateDialog(value: String => XDialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDialog")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

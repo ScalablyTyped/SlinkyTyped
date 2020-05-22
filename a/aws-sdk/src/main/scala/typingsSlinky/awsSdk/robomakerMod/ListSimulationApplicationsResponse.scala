@@ -18,41 +18,14 @@ trait ListSimulationApplicationsResponse extends js.Object {
 
 object ListSimulationApplicationsResponse {
   @scala.inline
-  def apply(): ListSimulationApplicationsResponse = {
+  def apply(
+    nextToken: PaginationToken = null,
+    simulationApplicationSummaries: SimulationApplicationSummaries = null
+  ): ListSimulationApplicationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (simulationApplicationSummaries != null) __obj.updateDynamic("simulationApplicationSummaries")(simulationApplicationSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSimulationApplicationsResponse]
   }
-  @scala.inline
-  implicit class ListSimulationApplicationsResponseOps[Self <: ListSimulationApplicationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimulationApplicationSummaries(value: SimulationApplicationSummaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplicationSummaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimulationApplicationSummaries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplicationSummaries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait TriggerPredicate extends js.Object {
 
 object TriggerPredicate {
   @scala.inline
-  def apply(conditions: js.Array[TriggerPredicateCondition]): TriggerPredicate = {
+  def apply(conditions: js.Array[TriggerPredicateCondition], logical: String = null): TriggerPredicate = {
     val __obj = js.Dynamic.literal(conditions = conditions.asInstanceOf[js.Any])
+    if (logical != null) __obj.updateDynamic("logical")(logical.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerPredicate]
   }
-  @scala.inline
-  implicit class TriggerPredicateOps[Self <: TriggerPredicate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditions(value: js.Array[TriggerPredicateCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogical(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logical")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LayerParams extends js.Object {
-  var classes: js.UndefOr[String | js.Array[String]] = js.native
+  var classes: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object LayerParams {
   @scala.inline
-  def apply(): LayerParams = {
+  def apply(classes: String | js.Array[String] = null): LayerParams = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerParams]
   }
-  @scala.inline
-  implicit class LayerParamsOps[Self <: LayerParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClasses(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

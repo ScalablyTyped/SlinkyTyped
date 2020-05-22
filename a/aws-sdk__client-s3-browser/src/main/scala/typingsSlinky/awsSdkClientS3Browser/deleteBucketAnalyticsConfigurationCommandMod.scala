@@ -27,6 +27,8 @@ object deleteBucketAnalyticsConfigurationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteBucketAnalyticsConfigurationInput) = this()
+    /* CompleteClass */
+    override val input: DeleteBucketAnalyticsConfigurationInput = js.native
     val middlewareStack: MiddlewareStack[
         DeleteBucketAnalyticsConfigurationInput, 
         DeleteBucketAnalyticsConfigurationOutput, 
@@ -35,6 +37,11 @@ object deleteBucketAnalyticsConfigurationCommandMod extends js.Object {
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: S3ResolvedConfiguration
+    ): Handler[DeleteBucketAnalyticsConfigurationInput, DeleteBucketAnalyticsConfigurationOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketAnalyticsConfigurationInput, DeleteBucketAnalyticsConfigurationOutput] = js.native
   }

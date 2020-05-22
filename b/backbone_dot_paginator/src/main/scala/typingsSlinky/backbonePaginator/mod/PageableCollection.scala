@@ -3,6 +3,7 @@ package typingsSlinky.backbonePaginator.mod
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.CollectionFetchOptions
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backbonePaginator.anon.TypeofPageableCollection
 import typingsSlinky.jquery.JQueryXHR
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("backbone", "PageableCollection")
 @js.native
-class PageableCollection[TModel /* <: Model */] () extends Collection[TModel] {
+class PageableCollection[TModel /* <: Model[_, ModelSetOptions] */] () extends Collection[TModel] {
   def this(models: js.Array[TModel]) = this()
   def this(models: js.Array[TModel], options: PageableInitialOptions) = this()
   var fullCollection: Collection[TModel] = js.native

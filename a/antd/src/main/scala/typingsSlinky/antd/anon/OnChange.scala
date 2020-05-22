@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnChange[DateType] extends js.Object {
-  var `type`: CalendarMode = js.native
-  var value: DateType = js.native
-  def onChange(date: DateType): Unit = js.native
-  def onTypeChange(`type`: CalendarMode): Unit = js.native
+  var `type`: CalendarMode
+  var value: DateType
+  def onChange(date: DateType): Unit
+  def onTypeChange(`type`: CalendarMode): Unit
 }
 
 object OnChange {
@@ -25,37 +24,5 @@ object OnChange {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnChange[DateType]]
   }
-  @scala.inline
-  implicit class OnChangeOps[Self[datetype] <: OnChange[datetype], DateType] (val x: Self[DateType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[DateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[DateType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[DateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[DateType] with Other]
-    @scala.inline
-    def withOnChange(value: DateType => Unit): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnTypeChange(value: CalendarMode => Unit): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTypeChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: CalendarMode): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: DateType): Self[DateType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

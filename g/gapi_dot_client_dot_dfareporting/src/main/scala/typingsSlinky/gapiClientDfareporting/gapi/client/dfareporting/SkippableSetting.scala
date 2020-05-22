@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkippableSetting extends js.Object {
   /** Identifies what kind of resource this is. Value: the fixed string "dfareporting#skippableSetting". */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** Amount of time to play videos served to this placement before counting a view. Applicable when skippable is true. */
-  var progressOffset: js.UndefOr[VideoOffset] = js.native
+  var progressOffset: js.UndefOr[VideoOffset] = js.undefined
   /** Amount of time to play videos served to this placement before the skip button should appear. Applicable when skippable is true. */
-  var skipOffset: js.UndefOr[VideoOffset] = js.native
+  var skipOffset: js.UndefOr[VideoOffset] = js.undefined
   /** Whether the user can skip creatives served to this placement. */
-  var skippable: js.UndefOr[Boolean] = js.native
+  var skippable: js.UndefOr[Boolean] = js.undefined
 }
 
 object SkippableSetting {
   @scala.inline
-  def apply(): SkippableSetting = {
+  def apply(
+    kind: String = null,
+    progressOffset: VideoOffset = null,
+    skipOffset: VideoOffset = null,
+    skippable: js.UndefOr[Boolean] = js.undefined
+  ): SkippableSetting = {
     val __obj = js.Dynamic.literal()
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (progressOffset != null) __obj.updateDynamic("progressOffset")(progressOffset.asInstanceOf[js.Any])
+    if (skipOffset != null) __obj.updateDynamic("skipOffset")(skipOffset.asInstanceOf[js.Any])
+    if (!js.isUndefined(skippable)) __obj.updateDynamic("skippable")(skippable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkippableSetting]
   }
-  @scala.inline
-  implicit class SkippableSettingOps[Self <: SkippableSetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressOffset(value: VideoOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipOffset(value: VideoOffset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

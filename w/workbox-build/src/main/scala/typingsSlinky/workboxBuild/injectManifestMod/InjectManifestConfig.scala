@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InjectManifestConfig extends js.Object {
   /**
     * A list of entries to be precached, in addition to any entries that are
@@ -15,7 +14,7 @@ trait InjectManifestConfig extends js.Object {
     *
     * @default true
     */
-  var additionalManifestEntries: js.UndefOr[js.Array[ManifestEntry]] = js.native
+  var additionalManifestEntries: js.UndefOr[js.Array[ManifestEntry]] = js.undefined
   /**
     * Assets that match this will be assumed to be uniquely versioned via their
     * URL, and exempted from the normal HTTP cache-busting that's done when
@@ -24,11 +23,11 @@ trait InjectManifestConfig extends js.Object {
     * you provide a RegExp that will detect that, as it will reduce the bandwidth
     * consumed when precaching.
     */
-  var dontCacheBustURLsMatching: js.UndefOr[js.RegExp] = js.native
+  var dontCacheBustURLsMatching: js.UndefOr[js.RegExp] = js.undefined
   /**
     * The local directory you wish to match `globPatterns` against. The path is relative to the current directory.
     */
-  var globDirectory: String = js.native
+  var globDirectory: String
   /**
     * Determines whether or not symlinks are followed when generating the precache
     * manifest. For more information, see the definition of `follow` in the `glob`
@@ -36,7 +35,7 @@ trait InjectManifestConfig extends js.Object {
     *
     * @default true
     */
-  var globFollow: js.UndefOr[Boolean] = js.native
+  var globFollow: js.UndefOr[Boolean] = js.undefined
   /**
     * A set of patterns matching files to always exclude when generating the
     * precache manifest. For more information, see the definition of `ignore` in the `glob`
@@ -44,7 +43,7 @@ trait InjectManifestConfig extends js.Object {
     *
     * @default ['node_modules/ **']
     */
-  var globIgnores: js.UndefOr[js.Array[String]] = js.native
+  var globIgnores: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Files matching any of these patterns will be included in the precache
     * manifest. For more information, see the
@@ -52,7 +51,7 @@ trait InjectManifestConfig extends js.Object {
     *
     * @default ['**.{js,css,html}']
     */
-  var globPatterns: js.UndefOr[js.Array[String]] = js.native
+  var globPatterns: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * If true, an error reading a directory when generating a precache manifest
     * will cause the build to fail. If false, the problematic directory will be
@@ -61,20 +60,20 @@ trait InjectManifestConfig extends js.Object {
     *
     * @default true
     */
-  var globStrict: js.UndefOr[Boolean] = js.native
+  var globStrict: js.UndefOr[Boolean] = js.undefined
   /**
     * The string to find inside of the `swSrc` file. Once found, it will be replaced by
     * the generated precache manifest.
     *
     * @default 'self.__WB_MANIFEST'
     */
-  var injectionPoint: js.UndefOr[String] = js.native
+  var injectionPoint: js.UndefOr[String] = js.undefined
   /**
     * One or more functions which will be applied sequentially against the
     * generated manifest. If `modifyURLPrefix` or `dontCacheBustURLsMatching` are
     * also specified, their corresponding transformations will be applied first.
     */
-  var manifestTransforms: js.UndefOr[js.Array[ManifestTransform]] = js.native
+  var manifestTransforms: js.UndefOr[js.Array[ManifestTransform]] = js.undefined
   /**
     * This value can be used to determine the maximum size of files that will be
     * precached. This prevents you from inadvertently precaching very large files
@@ -82,13 +81,13 @@ trait InjectManifestConfig extends js.Object {
     *
     * @default 2097152
     */
-  var maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.native
+  var maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.undefined
   /**
     * If set to 'production', then an optimized service worker bundle that excludes
     * debugging info will be produced. If not explicitly configured here, the `mode`
     * value configured in the current `webpack` compiltion will be used.
     */
-  var mode: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[String] = js.undefined
   /**
     * A mapping of prefixes that, if present in an entry in the precache manifest,
     * will be replaced with the corresponding value. This can be used to, for example,
@@ -97,17 +96,17 @@ trait InjectManifestConfig extends js.Object {
     * you can use the `manifestTransforms` option and provide a function that modifies
     * the entries in the manifest using whatever logic you provide.
     */
-  var modifyURLPrefix: js.UndefOr[StringDictionary[String]] = js.native
+  var modifyURLPrefix: js.UndefOr[StringDictionary[String]] = js.undefined
   /**
     * The path and filename of the service worker file that will be created by the
     * build process, relative to the current working directory. It must end in '.js'.
     */
-  var swDest: String = js.native
+  var swDest: String
   /**
     * The path and filename of the service worker file that will be created by
     * the build process, relative to the current working directory. It must end in '.js'.
     */
-  var swSrc: String = js.native
+  var swSrc: String
   /**
     * If a URL is rendered based on some server-side logic, its contents may depend
     * on multiple files or on some other unique string value. The keys in this object
@@ -117,184 +116,42 @@ trait InjectManifestConfig extends js.Object {
     * it will be interpreted as unique versioning information that you've generated
     * for a given URL.
     */
-  var templatedURLs: js.UndefOr[js.Object] = js.native
+  var templatedURLs: js.UndefOr[js.Object] = js.undefined
 }
 
 object InjectManifestConfig {
   @scala.inline
-  def apply(globDirectory: String, swDest: String, swSrc: String): InjectManifestConfig = {
+  def apply(
+    globDirectory: String,
+    swDest: String,
+    swSrc: String,
+    additionalManifestEntries: js.Array[ManifestEntry] = null,
+    dontCacheBustURLsMatching: js.RegExp = null,
+    globFollow: js.UndefOr[Boolean] = js.undefined,
+    globIgnores: js.Array[String] = null,
+    globPatterns: js.Array[String] = null,
+    globStrict: js.UndefOr[Boolean] = js.undefined,
+    injectionPoint: String = null,
+    manifestTransforms: js.Array[ManifestTransform] = null,
+    maximumFileSizeToCacheInBytes: js.UndefOr[Double] = js.undefined,
+    mode: String = null,
+    modifyURLPrefix: StringDictionary[String] = null,
+    templatedURLs: js.Object = null
+  ): InjectManifestConfig = {
     val __obj = js.Dynamic.literal(globDirectory = globDirectory.asInstanceOf[js.Any], swDest = swDest.asInstanceOf[js.Any], swSrc = swSrc.asInstanceOf[js.Any])
+    if (additionalManifestEntries != null) __obj.updateDynamic("additionalManifestEntries")(additionalManifestEntries.asInstanceOf[js.Any])
+    if (dontCacheBustURLsMatching != null) __obj.updateDynamic("dontCacheBustURLsMatching")(dontCacheBustURLsMatching.asInstanceOf[js.Any])
+    if (!js.isUndefined(globFollow)) __obj.updateDynamic("globFollow")(globFollow.get.asInstanceOf[js.Any])
+    if (globIgnores != null) __obj.updateDynamic("globIgnores")(globIgnores.asInstanceOf[js.Any])
+    if (globPatterns != null) __obj.updateDynamic("globPatterns")(globPatterns.asInstanceOf[js.Any])
+    if (!js.isUndefined(globStrict)) __obj.updateDynamic("globStrict")(globStrict.get.asInstanceOf[js.Any])
+    if (injectionPoint != null) __obj.updateDynamic("injectionPoint")(injectionPoint.asInstanceOf[js.Any])
+    if (manifestTransforms != null) __obj.updateDynamic("manifestTransforms")(manifestTransforms.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumFileSizeToCacheInBytes)) __obj.updateDynamic("maximumFileSizeToCacheInBytes")(maximumFileSizeToCacheInBytes.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (modifyURLPrefix != null) __obj.updateDynamic("modifyURLPrefix")(modifyURLPrefix.asInstanceOf[js.Any])
+    if (templatedURLs != null) __obj.updateDynamic("templatedURLs")(templatedURLs.asInstanceOf[js.Any])
     __obj.asInstanceOf[InjectManifestConfig]
   }
-  @scala.inline
-  implicit class InjectManifestConfigOps[Self <: InjectManifestConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwDest(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swDest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSwSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionalManifestEntries(value: js.Array[ManifestEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalManifestEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalManifestEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalManifestEntries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDontCacheBustURLsMatching(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dontCacheBustURLsMatching")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDontCacheBustURLsMatching: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dontCacheBustURLsMatching")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobFollow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globFollow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobFollow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globFollow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobIgnores(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globIgnores")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobIgnores: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globIgnores")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobPatterns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPatterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobPatterns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globPatterns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globStrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globStrict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInjectionPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectionPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInjectionPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("injectionPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManifestTransforms(value: js.Array[ManifestTransform]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestTransforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManifestTransforms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestTransforms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumFileSizeToCacheInBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFileSizeToCacheInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumFileSizeToCacheInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFileSizeToCacheInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifyURLPrefix(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyURLPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifyURLPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyURLPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplatedURLs(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templatedURLs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplatedURLs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templatedURLs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

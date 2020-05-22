@@ -33,6 +33,12 @@ object SpatialDataService extends js.Object {
       */
     def this(propertyName: String, operator: String, value: js.Any) = this()
     def this(propertyName: String, operator: FilterCompareOperator, value: js.Any) = this()
+    /**
+      * Executes the filter logic against a JSON object and returns a boolean indicating if the object meets the requirements of the Filter.
+      * @returns A boolean indicating if the specified object meets the requirements of the Filter.
+      */
+    /* CompleteClass */
+    override def execute(`object`: js.Any): Boolean = js.native
   }
   
   @js.native
@@ -47,6 +53,12 @@ object SpatialDataService extends js.Object {
       */
     def this(filters: js.Array[IFilter], operator: FilterLogicalOperator) = this()
     def this(filters: js.Array[IFilter], operator: FilterLogicalOperator, not: Boolean) = this()
+    /**
+      * Executes the filter logic against a JSON object and returns a boolean indicating if the object meets the requirements of the Filter.
+      * @returns A boolean indicating if the specified object meets the requirements of the Filter.
+      */
+    /* CompleteClass */
+    override def execute(`object`: js.Any): Boolean = js.native
   }
   
   @js.native

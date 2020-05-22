@@ -4,56 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Indices extends js.Object {
-  var alias: String = js.native
-  var index: js.UndefOr[String] = js.native
-  var indices: js.UndefOr[js.Array[String]] = js.native
+  var alias: String
+  var index: js.UndefOr[String] = js.undefined
+  var indices: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object Indices {
   @scala.inline
-  def apply(alias: String): Indices = {
+  def apply(alias: String, index: String = null, indices: js.Array[String] = null): Indices = {
     val __obj = js.Dynamic.literal(alias = alias.asInstanceOf[js.Any])
+    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
+    if (indices != null) __obj.updateDynamic("indices")(indices.asInstanceOf[js.Any])
     __obj.asInstanceOf[Indices]
   }
-  @scala.inline
-  implicit class IndicesOps[Self <: Indices] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlias(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

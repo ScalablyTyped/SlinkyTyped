@@ -50,131 +50,29 @@ trait CreateDeploymentInput extends js.Object {
 
 object CreateDeploymentInput {
   @scala.inline
-  def apply(applicationName: ApplicationName): CreateDeploymentInput = {
+  def apply(
+    applicationName: ApplicationName,
+    autoRollbackConfiguration: AutoRollbackConfiguration = null,
+    deploymentConfigName: DeploymentConfigName = null,
+    deploymentGroupName: DeploymentGroupName = null,
+    description: Description = null,
+    fileExistsBehavior: FileExistsBehavior = null,
+    ignoreApplicationStopFailures: js.UndefOr[Boolean] = js.undefined,
+    revision: RevisionLocation = null,
+    targetInstances: TargetInstances = null,
+    updateOutdatedInstancesOnly: js.UndefOr[Boolean] = js.undefined
+  ): CreateDeploymentInput = {
     val __obj = js.Dynamic.literal(applicationName = applicationName.asInstanceOf[js.Any])
+    if (autoRollbackConfiguration != null) __obj.updateDynamic("autoRollbackConfiguration")(autoRollbackConfiguration.asInstanceOf[js.Any])
+    if (deploymentConfigName != null) __obj.updateDynamic("deploymentConfigName")(deploymentConfigName.asInstanceOf[js.Any])
+    if (deploymentGroupName != null) __obj.updateDynamic("deploymentGroupName")(deploymentGroupName.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (fileExistsBehavior != null) __obj.updateDynamic("fileExistsBehavior")(fileExistsBehavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreApplicationStopFailures)) __obj.updateDynamic("ignoreApplicationStopFailures")(ignoreApplicationStopFailures.get.asInstanceOf[js.Any])
+    if (revision != null) __obj.updateDynamic("revision")(revision.asInstanceOf[js.Any])
+    if (targetInstances != null) __obj.updateDynamic("targetInstances")(targetInstances.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateOutdatedInstancesOnly)) __obj.updateDynamic("updateOutdatedInstancesOnly")(updateOutdatedInstancesOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeploymentInput]
   }
-  @scala.inline
-  implicit class CreateDeploymentInputOps[Self <: CreateDeploymentInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoRollbackConfiguration(value: AutoRollbackConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRollbackConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRollbackConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRollbackConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentConfigName(value: DeploymentConfigName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentConfigName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentGroupName(value: DeploymentGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileExistsBehavior(value: FileExistsBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExistsBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileExistsBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExistsBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreApplicationStopFailures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreApplicationStopFailures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreApplicationStopFailures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreApplicationStopFailures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevision(value: RevisionLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetInstances(value: TargetInstances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateOutdatedInstancesOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOutdatedInstancesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateOutdatedInstancesOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOutdatedInstancesOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

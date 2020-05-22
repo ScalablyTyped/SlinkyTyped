@@ -31,6 +31,11 @@ class SceneOptimizer protected ()
     autoGeneratePriorities: Boolean,
     improvementMode: Boolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

@@ -18,41 +18,11 @@ trait ApplicationCodeConfigurationUpdate extends js.Object {
 
 object ApplicationCodeConfigurationUpdate {
   @scala.inline
-  def apply(): ApplicationCodeConfigurationUpdate = {
+  def apply(CodeContentTypeUpdate: CodeContentType = null, CodeContentUpdate: CodeContentUpdate = null): ApplicationCodeConfigurationUpdate = {
     val __obj = js.Dynamic.literal()
+    if (CodeContentTypeUpdate != null) __obj.updateDynamic("CodeContentTypeUpdate")(CodeContentTypeUpdate.asInstanceOf[js.Any])
+    if (CodeContentUpdate != null) __obj.updateDynamic("CodeContentUpdate")(CodeContentUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationCodeConfigurationUpdate]
   }
-  @scala.inline
-  implicit class ApplicationCodeConfigurationUpdateOps[Self <: ApplicationCodeConfigurationUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeContentTypeUpdate(value: CodeContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeContentTypeUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeContentTypeUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeContentTypeUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCodeContentUpdate(value: CodeContentUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeContentUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCodeContentUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeContentUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

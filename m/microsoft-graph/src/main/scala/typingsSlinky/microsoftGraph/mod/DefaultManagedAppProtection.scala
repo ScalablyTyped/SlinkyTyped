@@ -4,197 +4,133 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultManagedAppProtection extends ManagedAppProtection {
   /**
     * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings,
     * afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
     */
-  var appDataEncryptionType: js.UndefOr[ManagedAppDataEncryptionType] = js.native
+  var appDataEncryptionType: js.UndefOr[ManagedAppDataEncryptionType] = js.undefined
   // List of apps to which the policy is deployed.
-  var apps: js.UndefOr[js.Array[ManagedMobileApp]] = js.native
+  var apps: js.UndefOr[js.Array[ManagedMobileApp]] = js.undefined
   // A set of string key and string value pairs to be sent to the affected users, unalterned by this service
-  var customSettings: js.UndefOr[js.Array[KeyValuePair]] = js.native
+  var customSettings: js.UndefOr[js.Array[KeyValuePair]] = js.undefined
   // Count of apps to which the current policy is deployed.
-  var deployedAppCount: js.UndefOr[Double] = js.native
+  var deployedAppCount: js.UndefOr[Double] = js.undefined
   // Navigation property to deployment summary of the configuration.
-  var deploymentSummary: js.UndefOr[ManagedAppPolicyDeploymentSummary] = js.native
+  var deploymentSummary: js.UndefOr[ManagedAppPolicyDeploymentSummary] = js.undefined
   // When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
-  var disableAppEncryptionIfDeviceEncryptionIsEnabled: js.UndefOr[Boolean] = js.native
+  var disableAppEncryptionIfDeviceEncryptionIsEnabled: js.UndefOr[Boolean] = js.undefined
   // Indicates whether managed-app data should be encrypted. (Android only)
-  var encryptAppData: js.UndefOr[Boolean] = js.native
+  var encryptAppData: js.UndefOr[Boolean] = js.undefined
   // Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
-  var faceIdBlocked: js.UndefOr[Boolean] = js.native
+  var faceIdBlocked: js.UndefOr[Boolean] = js.undefined
   /**
     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android
     * only)
     */
-  var minimumRequiredPatchVersion: js.UndefOr[String] = js.native
+  var minimumRequiredPatchVersion: js.UndefOr[String] = js.undefined
   // Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-  var minimumRequiredSdkVersion: js.UndefOr[String] = js.native
+  var minimumRequiredSdkVersion: js.UndefOr[String] = js.undefined
   // Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-  var minimumWarningPatchVersion: js.UndefOr[String] = js.native
+  var minimumWarningPatchVersion: js.UndefOr[String] = js.undefined
   // Indicates whether screen capture is blocked. (Android only)
-  var screenCaptureBlocked: js.UndefOr[Boolean] = js.native
+  var screenCaptureBlocked: js.UndefOr[Boolean] = js.undefined
 }
 
 object DefaultManagedAppProtection {
   @scala.inline
-  def apply(): DefaultManagedAppProtection = {
+  def apply(
+    allowedDataStorageLocations: js.Array[ManagedAppDataStorageLocation] = null,
+    allowedInboundDataTransferSources: ManagedAppDataTransferLevel = null,
+    allowedOutboundClipboardSharingLevel: ManagedAppClipboardSharingLevel = null,
+    allowedOutboundDataTransferDestinations: ManagedAppDataTransferLevel = null,
+    appDataEncryptionType: ManagedAppDataEncryptionType = null,
+    apps: js.Array[ManagedMobileApp] = null,
+    contactSyncBlocked: js.UndefOr[Boolean] = js.undefined,
+    createdDateTime: String = null,
+    customSettings: js.Array[KeyValuePair] = null,
+    dataBackupBlocked: js.UndefOr[Boolean] = js.undefined,
+    deployedAppCount: js.UndefOr[Double] = js.undefined,
+    deploymentSummary: ManagedAppPolicyDeploymentSummary = null,
+    description: String = null,
+    deviceComplianceRequired: js.UndefOr[Boolean] = js.undefined,
+    disableAppEncryptionIfDeviceEncryptionIsEnabled: js.UndefOr[Boolean] = js.undefined,
+    disableAppPinIfDevicePinIsSet: js.UndefOr[Boolean] = js.undefined,
+    displayName: String = null,
+    encryptAppData: js.UndefOr[Boolean] = js.undefined,
+    faceIdBlocked: js.UndefOr[Boolean] = js.undefined,
+    fingerprintBlocked: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    managedBrowserToOpenLinksRequired: js.UndefOr[Boolean] = js.undefined,
+    maximumPinRetries: js.UndefOr[Double] = js.undefined,
+    minimumPinLength: js.UndefOr[Double] = js.undefined,
+    minimumRequiredAppVersion: String = null,
+    minimumRequiredOsVersion: String = null,
+    minimumRequiredPatchVersion: String = null,
+    minimumRequiredSdkVersion: String = null,
+    minimumWarningAppVersion: String = null,
+    minimumWarningOsVersion: String = null,
+    minimumWarningPatchVersion: String = null,
+    organizationalCredentialsRequired: js.UndefOr[Boolean] = js.undefined,
+    periodBeforePinReset: String = null,
+    periodOfflineBeforeAccessCheck: String = null,
+    periodOfflineBeforeWipeIsEnforced: String = null,
+    periodOnlineBeforeAccessCheck: String = null,
+    pinCharacterSet: ManagedAppPinCharacterSet = null,
+    pinRequired: js.UndefOr[Boolean] = js.undefined,
+    printBlocked: js.UndefOr[Boolean] = js.undefined,
+    saveAsBlocked: js.UndefOr[Boolean] = js.undefined,
+    screenCaptureBlocked: js.UndefOr[Boolean] = js.undefined,
+    simplePinBlocked: js.UndefOr[Boolean] = js.undefined,
+    version: String = null
+  ): DefaultManagedAppProtection = {
     val __obj = js.Dynamic.literal()
+    if (allowedDataStorageLocations != null) __obj.updateDynamic("allowedDataStorageLocations")(allowedDataStorageLocations.asInstanceOf[js.Any])
+    if (allowedInboundDataTransferSources != null) __obj.updateDynamic("allowedInboundDataTransferSources")(allowedInboundDataTransferSources.asInstanceOf[js.Any])
+    if (allowedOutboundClipboardSharingLevel != null) __obj.updateDynamic("allowedOutboundClipboardSharingLevel")(allowedOutboundClipboardSharingLevel.asInstanceOf[js.Any])
+    if (allowedOutboundDataTransferDestinations != null) __obj.updateDynamic("allowedOutboundDataTransferDestinations")(allowedOutboundDataTransferDestinations.asInstanceOf[js.Any])
+    if (appDataEncryptionType != null) __obj.updateDynamic("appDataEncryptionType")(appDataEncryptionType.asInstanceOf[js.Any])
+    if (apps != null) __obj.updateDynamic("apps")(apps.asInstanceOf[js.Any])
+    if (!js.isUndefined(contactSyncBlocked)) __obj.updateDynamic("contactSyncBlocked")(contactSyncBlocked.get.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (customSettings != null) __obj.updateDynamic("customSettings")(customSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataBackupBlocked)) __obj.updateDynamic("dataBackupBlocked")(dataBackupBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deployedAppCount)) __obj.updateDynamic("deployedAppCount")(deployedAppCount.get.asInstanceOf[js.Any])
+    if (deploymentSummary != null) __obj.updateDynamic("deploymentSummary")(deploymentSummary.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(deviceComplianceRequired)) __obj.updateDynamic("deviceComplianceRequired")(deviceComplianceRequired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableAppEncryptionIfDeviceEncryptionIsEnabled)) __obj.updateDynamic("disableAppEncryptionIfDeviceEncryptionIsEnabled")(disableAppEncryptionIfDeviceEncryptionIsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableAppPinIfDevicePinIsSet)) __obj.updateDynamic("disableAppPinIfDevicePinIsSet")(disableAppPinIfDevicePinIsSet.get.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(encryptAppData)) __obj.updateDynamic("encryptAppData")(encryptAppData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(faceIdBlocked)) __obj.updateDynamic("faceIdBlocked")(faceIdBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fingerprintBlocked)) __obj.updateDynamic("fingerprintBlocked")(fingerprintBlocked.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(managedBrowserToOpenLinksRequired)) __obj.updateDynamic("managedBrowserToOpenLinksRequired")(managedBrowserToOpenLinksRequired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumPinRetries)) __obj.updateDynamic("maximumPinRetries")(maximumPinRetries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumPinLength)) __obj.updateDynamic("minimumPinLength")(minimumPinLength.get.asInstanceOf[js.Any])
+    if (minimumRequiredAppVersion != null) __obj.updateDynamic("minimumRequiredAppVersion")(minimumRequiredAppVersion.asInstanceOf[js.Any])
+    if (minimumRequiredOsVersion != null) __obj.updateDynamic("minimumRequiredOsVersion")(minimumRequiredOsVersion.asInstanceOf[js.Any])
+    if (minimumRequiredPatchVersion != null) __obj.updateDynamic("minimumRequiredPatchVersion")(minimumRequiredPatchVersion.asInstanceOf[js.Any])
+    if (minimumRequiredSdkVersion != null) __obj.updateDynamic("minimumRequiredSdkVersion")(minimumRequiredSdkVersion.asInstanceOf[js.Any])
+    if (minimumWarningAppVersion != null) __obj.updateDynamic("minimumWarningAppVersion")(minimumWarningAppVersion.asInstanceOf[js.Any])
+    if (minimumWarningOsVersion != null) __obj.updateDynamic("minimumWarningOsVersion")(minimumWarningOsVersion.asInstanceOf[js.Any])
+    if (minimumWarningPatchVersion != null) __obj.updateDynamic("minimumWarningPatchVersion")(minimumWarningPatchVersion.asInstanceOf[js.Any])
+    if (!js.isUndefined(organizationalCredentialsRequired)) __obj.updateDynamic("organizationalCredentialsRequired")(organizationalCredentialsRequired.get.asInstanceOf[js.Any])
+    if (periodBeforePinReset != null) __obj.updateDynamic("periodBeforePinReset")(periodBeforePinReset.asInstanceOf[js.Any])
+    if (periodOfflineBeforeAccessCheck != null) __obj.updateDynamic("periodOfflineBeforeAccessCheck")(periodOfflineBeforeAccessCheck.asInstanceOf[js.Any])
+    if (periodOfflineBeforeWipeIsEnforced != null) __obj.updateDynamic("periodOfflineBeforeWipeIsEnforced")(periodOfflineBeforeWipeIsEnforced.asInstanceOf[js.Any])
+    if (periodOnlineBeforeAccessCheck != null) __obj.updateDynamic("periodOnlineBeforeAccessCheck")(periodOnlineBeforeAccessCheck.asInstanceOf[js.Any])
+    if (pinCharacterSet != null) __obj.updateDynamic("pinCharacterSet")(pinCharacterSet.asInstanceOf[js.Any])
+    if (!js.isUndefined(pinRequired)) __obj.updateDynamic("pinRequired")(pinRequired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(printBlocked)) __obj.updateDynamic("printBlocked")(printBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(saveAsBlocked)) __obj.updateDynamic("saveAsBlocked")(saveAsBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenCaptureBlocked)) __obj.updateDynamic("screenCaptureBlocked")(screenCaptureBlocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(simplePinBlocked)) __obj.updateDynamic("simplePinBlocked")(simplePinBlocked.get.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultManagedAppProtection]
   }
-  @scala.inline
-  implicit class DefaultManagedAppProtectionOps[Self <: DefaultManagedAppProtection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppDataEncryptionType(value: ManagedAppDataEncryptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appDataEncryptionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppDataEncryptionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appDataEncryptionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApps(value: js.Array[ManagedMobileApp]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomSettings(value: js.Array[KeyValuePair]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeployedAppCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployedAppCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeployedAppCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deployedAppCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentSummary(value: ManagedAppPolicyDeploymentSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableAppEncryptionIfDeviceEncryptionIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAppEncryptionIfDeviceEncryptionIsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableAppEncryptionIfDeviceEncryptionIsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAppEncryptionIfDeviceEncryptionIsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptAppData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptAppData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptAppData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptAppData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFaceIdBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faceIdBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFaceIdBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faceIdBlocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumRequiredPatchVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRequiredPatchVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumRequiredPatchVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRequiredPatchVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumRequiredSdkVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRequiredSdkVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumRequiredSdkVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRequiredSdkVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumWarningPatchVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumWarningPatchVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumWarningPatchVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumWarningPatchVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenCaptureBlocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureBlocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenCaptureBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureBlocked")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

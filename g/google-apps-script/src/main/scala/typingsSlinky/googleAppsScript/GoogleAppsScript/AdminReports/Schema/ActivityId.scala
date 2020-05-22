@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActivityId extends js.Object {
-  var applicationName: js.UndefOr[String] = js.native
-  var customerId: js.UndefOr[String] = js.native
-  var time: js.UndefOr[String] = js.native
-  var uniqueQualifier: js.UndefOr[String] = js.native
+  var applicationName: js.UndefOr[String] = js.undefined
+  var customerId: js.UndefOr[String] = js.undefined
+  var time: js.UndefOr[String] = js.undefined
+  var uniqueQualifier: js.UndefOr[String] = js.undefined
 }
 
 object ActivityId {
   @scala.inline
-  def apply(): ActivityId = {
+  def apply(
+    applicationName: String = null,
+    customerId: String = null,
+    time: String = null,
+    uniqueQualifier: String = null
+  ): ActivityId = {
     val __obj = js.Dynamic.literal()
+    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
+    if (customerId != null) __obj.updateDynamic("customerId")(customerId.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (uniqueQualifier != null) __obj.updateDynamic("uniqueQualifier")(uniqueQualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityId]
   }
-  @scala.inline
-  implicit class ActivityIdOps[Self <: ActivityId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniqueQualifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueQualifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniqueQualifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueQualifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

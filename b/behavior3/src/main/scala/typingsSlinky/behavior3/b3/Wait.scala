@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * Wait a few seconds.
   *
   */
-@js.native
 trait Wait extends BaseNode
 
 object Wait {

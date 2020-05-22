@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.IntResult")
 @js.native
 class IntResult ()
-  extends typingsSlinky.sharepoint.SP.IntResult
+  extends typingsSlinky.sharepoint.SP.IntResult {
+  /* CompleteClass */
+  override def get_value(): Double = js.native
+}
 

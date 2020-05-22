@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KnockstrapCarouselDefaults extends js.Object {
-  var controlsTemplate: KnockstrapCarouselDefaultsControlsTemplate = js.native
-  var css: String = js.native
-  var indicatorsTemplate: KnockstrapCarouselDefaultsIndicatorsTemplate = js.native
-  var itemTemplate: KnockstrapCarouselDefaultsItemTemplate = js.native
+  var controlsTemplate: KnockstrapCarouselDefaultsControlsTemplate
+  var css: String
+  var indicatorsTemplate: KnockstrapCarouselDefaultsIndicatorsTemplate
+  var itemTemplate: KnockstrapCarouselDefaultsItemTemplate
 }
 
 object KnockstrapCarouselDefaults {
@@ -23,37 +22,5 @@ object KnockstrapCarouselDefaults {
     val __obj = js.Dynamic.literal(controlsTemplate = controlsTemplate.asInstanceOf[js.Any], css = css.asInstanceOf[js.Any], indicatorsTemplate = indicatorsTemplate.asInstanceOf[js.Any], itemTemplate = itemTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockstrapCarouselDefaults]
   }
-  @scala.inline
-  implicit class KnockstrapCarouselDefaultsOps[Self <: KnockstrapCarouselDefaults] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withControlsTemplate(value: KnockstrapCarouselDefaultsControlsTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCss(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndicatorsTemplate(value: KnockstrapCarouselDefaultsIndicatorsTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorsTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemTemplate(value: KnockstrapCarouselDefaultsItemTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,55 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaxHeight extends js.Object {
-  var extend: js.UndefOr[ExtendType] = js.native
-  var maxHeight: js.UndefOr[String] = js.native
+  var extend: js.UndefOr[ExtendType] = js.undefined
+  var maxHeight: js.UndefOr[String] = js.undefined
 }
 
 object MaxHeight {
   @scala.inline
-  def apply(): MaxHeight = {
+  def apply(extend: ExtendType = null, maxHeight: String = null): MaxHeight = {
     val __obj = js.Dynamic.literal()
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxHeight]
   }
-  @scala.inline
-  implicit class MaxHeightOps[Self <: MaxHeight] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtendFunction1(value: /* args */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExtend(value: ExtendType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

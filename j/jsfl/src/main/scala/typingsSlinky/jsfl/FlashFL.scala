@@ -72,11 +72,11 @@ trait FlashFL extends js.Object {
   def findObjectInDocByType(elementType: String, document: FlashDocument): js.Array[_] = js.native
   def getAppMemoryInfo(memType: Double): js.Any = js.native
   /*
-  	 * Method; retrieves the DOM (Document object) of the currently active document (FLA file).
-  	 * If one or more documents are open but a document does not currently have focus (for
-  	 * example, if a JSFL file has focus), retrieves the DOM of the most recently active document.
-  	 * getDocumentDOM(): Document;
-  	 */
+    * Method; retrieves the DOM (Document object) of the currently active document (FLA file).
+    * If one or more documents are open but a document does not currently have focus (for
+    * example, if a JSFL file has focus), retrieves the DOM of the most recently active document.
+    * getDocumentDOM(): Document;
+    */
   def getDocumentDOM(): FlashDocument = js.native
   //getProject();
   def getSwfPanel(): js.Any = js.native

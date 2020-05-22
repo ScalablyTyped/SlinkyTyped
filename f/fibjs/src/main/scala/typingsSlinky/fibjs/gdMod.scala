@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 图像文件处理模块
-	* @detail 基础模块。可用于创建和操作图像文件，引用方式：,```JavaScript,var gd = require('gd');,```
-	*/
+  * @brief 图像文件处理模块
+  * @detail 基础模块。可用于创建和操作图像文件，引用方式：,```JavaScript,var gd = require('gd');,```
+  */
 @JSImport("gd", JSImport.Namespace)
 @js.native
 object gdMod extends js.Object {

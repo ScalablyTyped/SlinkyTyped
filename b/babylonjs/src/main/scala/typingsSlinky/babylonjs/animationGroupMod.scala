@@ -89,6 +89,11 @@ object animationGroupMod extends js.Object {
     def clone(newName: String): AnimationGroup = js.native
     def clone(newName: String, targetConverter: js.Function1[/* oldTarget */ js.Any, _]): AnimationGroup = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets the first frame
       */
     def from: Double = js.native

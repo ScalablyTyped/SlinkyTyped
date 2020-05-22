@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Touchscreen extends js.Object {
   /**
     * Dispatches a touchstart and touchend event.
     * @param x The x position.
     * @param y The y position.
     */
-  def tap(x: Double, y: Double): js.Promise[Unit] = js.native
+  def tap(x: Double, y: Double): js.Promise[Unit]
 }
 
 object Touchscreen {
@@ -20,19 +19,5 @@ object Touchscreen {
     val __obj = js.Dynamic.literal(tap = js.Any.fromFunction2(tap))
     __obj.asInstanceOf[Touchscreen]
   }
-  @scala.inline
-  implicit class TouchscreenOps[Self <: Touchscreen] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTap(value: (Double, Double) => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tap")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

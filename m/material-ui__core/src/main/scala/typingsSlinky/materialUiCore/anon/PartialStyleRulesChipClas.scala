@@ -34,281 +34,54 @@ trait PartialStyleRulesChipClas extends js.Object {
 
 object PartialStyleRulesChipClas {
   @scala.inline
-  def apply(): PartialStyleRulesChipClas = {
+  def apply(
+    avatar: CSSProperties = null,
+    avatarChildren: CSSProperties = null,
+    avatarPrimary: CSSProperties = null,
+    avatarSecondary: CSSProperties = null,
+    clickable: CSSProperties = null,
+    clickablePrimary: CSSProperties = null,
+    clickableSecondary: CSSProperties = null,
+    colorPrimary: CSSProperties = null,
+    colorSecondary: CSSProperties = null,
+    deletable: CSSProperties = null,
+    deletablePrimary: CSSProperties = null,
+    deletableSecondary: CSSProperties = null,
+    deleteIcon: CSSProperties = null,
+    deleteIconOutlinedColorPrimary: CSSProperties = null,
+    deleteIconOutlinedColorSecondary: CSSProperties = null,
+    deleteIconPrimary: CSSProperties = null,
+    deleteIconSecondary: CSSProperties = null,
+    label: CSSProperties = null,
+    outlined: CSSProperties = null,
+    outlinedPrimary: CSSProperties = null,
+    outlinedSecondary: CSSProperties = null,
+    root: CSSProperties = null
+  ): PartialStyleRulesChipClas = {
     val __obj = js.Dynamic.literal()
+    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
+    if (avatarChildren != null) __obj.updateDynamic("avatarChildren")(avatarChildren.asInstanceOf[js.Any])
+    if (avatarPrimary != null) __obj.updateDynamic("avatarPrimary")(avatarPrimary.asInstanceOf[js.Any])
+    if (avatarSecondary != null) __obj.updateDynamic("avatarSecondary")(avatarSecondary.asInstanceOf[js.Any])
+    if (clickable != null) __obj.updateDynamic("clickable")(clickable.asInstanceOf[js.Any])
+    if (clickablePrimary != null) __obj.updateDynamic("clickablePrimary")(clickablePrimary.asInstanceOf[js.Any])
+    if (clickableSecondary != null) __obj.updateDynamic("clickableSecondary")(clickableSecondary.asInstanceOf[js.Any])
+    if (colorPrimary != null) __obj.updateDynamic("colorPrimary")(colorPrimary.asInstanceOf[js.Any])
+    if (colorSecondary != null) __obj.updateDynamic("colorSecondary")(colorSecondary.asInstanceOf[js.Any])
+    if (deletable != null) __obj.updateDynamic("deletable")(deletable.asInstanceOf[js.Any])
+    if (deletablePrimary != null) __obj.updateDynamic("deletablePrimary")(deletablePrimary.asInstanceOf[js.Any])
+    if (deletableSecondary != null) __obj.updateDynamic("deletableSecondary")(deletableSecondary.asInstanceOf[js.Any])
+    if (deleteIcon != null) __obj.updateDynamic("deleteIcon")(deleteIcon.asInstanceOf[js.Any])
+    if (deleteIconOutlinedColorPrimary != null) __obj.updateDynamic("deleteIconOutlinedColorPrimary")(deleteIconOutlinedColorPrimary.asInstanceOf[js.Any])
+    if (deleteIconOutlinedColorSecondary != null) __obj.updateDynamic("deleteIconOutlinedColorSecondary")(deleteIconOutlinedColorSecondary.asInstanceOf[js.Any])
+    if (deleteIconPrimary != null) __obj.updateDynamic("deleteIconPrimary")(deleteIconPrimary.asInstanceOf[js.Any])
+    if (deleteIconSecondary != null) __obj.updateDynamic("deleteIconSecondary")(deleteIconSecondary.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (outlined != null) __obj.updateDynamic("outlined")(outlined.asInstanceOf[js.Any])
+    if (outlinedPrimary != null) __obj.updateDynamic("outlinedPrimary")(outlinedPrimary.asInstanceOf[js.Any])
+    if (outlinedSecondary != null) __obj.updateDynamic("outlinedSecondary")(outlinedSecondary.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesChipClas]
   }
-  @scala.inline
-  implicit class PartialStyleRulesChipClasOps[Self <: PartialStyleRulesChipClas] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatar(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvatarChildren(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarChildren")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatarChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarChildren")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvatarPrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatarPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAvatarSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvatarSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickablePrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickablePrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickablePrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickablePrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickableSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickableSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickableSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickableSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorPrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletable(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletablePrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletablePrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletablePrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletablePrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletableSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletableSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletableSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletableSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteIcon(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteIconOutlinedColorPrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconOutlinedColorPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteIconOutlinedColorPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconOutlinedColorPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteIconOutlinedColorSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconOutlinedColorSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteIconOutlinedColorSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconOutlinedColorSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteIconPrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteIconPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteIconSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteIconSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteIconSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlined(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlined")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlinedPrimary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlinedPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlinedSecondary(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedSecondary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlinedSecondary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlinedSecondary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

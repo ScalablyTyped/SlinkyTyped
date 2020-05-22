@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoPreventDefault extends js.Object {
-  var autoPreventDefault: js.UndefOr[Boolean] = js.native
-  var interactionFrequency: js.UndefOr[Double] = js.native
-  var useSystemTicker: js.UndefOr[Double] = js.native
+  var autoPreventDefault: js.UndefOr[Boolean] = js.undefined
+  var interactionFrequency: js.UndefOr[Double] = js.undefined
+  var useSystemTicker: js.UndefOr[Double] = js.undefined
 }
 
 object AutoPreventDefault {
   @scala.inline
-  def apply(): AutoPreventDefault = {
+  def apply(
+    autoPreventDefault: js.UndefOr[Boolean] = js.undefined,
+    interactionFrequency: js.UndefOr[Double] = js.undefined,
+    useSystemTicker: js.UndefOr[Double] = js.undefined
+  ): AutoPreventDefault = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoPreventDefault)) __obj.updateDynamic("autoPreventDefault")(autoPreventDefault.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactionFrequency)) __obj.updateDynamic("interactionFrequency")(interactionFrequency.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSystemTicker)) __obj.updateDynamic("useSystemTicker")(useSystemTicker.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoPreventDefault]
   }
-  @scala.inline
-  implicit class AutoPreventDefaultOps[Self <: AutoPreventDefault] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoPreventDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPreventDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoPreventDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPreventDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteractionFrequency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionFrequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteractionFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionFrequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSystemTicker(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSystemTicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSystemTicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSystemTicker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

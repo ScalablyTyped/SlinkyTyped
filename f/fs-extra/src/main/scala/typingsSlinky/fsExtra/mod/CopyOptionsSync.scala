@@ -4,37 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CopyOptionsSync extends CopyOptions {
   @JSName("filter")
-  var filter_CopyOptionsSync: js.UndefOr[CopyFilterSync] = js.native
+  var filter_CopyOptionsSync: js.UndefOr[CopyFilterSync] = js.undefined
 }
 
 object CopyOptionsSync {
   @scala.inline
-  def apply(): CopyOptionsSync = {
+  def apply(
+    dereference: js.UndefOr[Boolean] = js.undefined,
+    errorOnExist: js.UndefOr[Boolean] = js.undefined,
+    filter: (/* src */ String, /* dest */ String) => Boolean = null,
+    overwrite: js.UndefOr[Boolean] = js.undefined,
+    preserveTimestamps: js.UndefOr[Boolean] = js.undefined,
+    recursive: js.UndefOr[Boolean] = js.undefined
+  ): CopyOptionsSync = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dereference)) __obj.updateDynamic("dereference")(dereference.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorOnExist)) __obj.updateDynamic("errorOnExist")(errorOnExist.get.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction2(filter))
+    if (!js.isUndefined(overwrite)) __obj.updateDynamic("overwrite")(overwrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveTimestamps)) __obj.updateDynamic("preserveTimestamps")(preserveTimestamps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyOptionsSync]
   }
-  @scala.inline
-  implicit class CopyOptionsSyncOps[Self <: CopyOptionsSync] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: (/* src */ String, /* dest */ String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

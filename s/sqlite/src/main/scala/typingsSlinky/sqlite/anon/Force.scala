@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Force extends js.Object {
-  var force: js.UndefOr[String] = js.native
-  var migrationsPath: js.UndefOr[String] = js.native
-  var table: js.UndefOr[String] = js.native
+  var force: js.UndefOr[String] = js.undefined
+  var migrationsPath: js.UndefOr[String] = js.undefined
+  var table: js.UndefOr[String] = js.undefined
 }
 
 object Force {
   @scala.inline
-  def apply(): Force = {
+  def apply(force: String = null, migrationsPath: String = null, table: String = null): Force = {
     val __obj = js.Dynamic.literal()
+    if (force != null) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
+    if (migrationsPath != null) __obj.updateDynamic("migrationsPath")(migrationsPath.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[Force]
   }
-  @scala.inline
-  implicit class ForceOps[Self <: Force] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForce(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMigrationsPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationsPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMigrationsPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migrationsPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,41 +21,11 @@ trait SchemaDeviceFile extends js.Object {
 
 object SchemaDeviceFile {
   @scala.inline
-  def apply(): SchemaDeviceFile = {
+  def apply(obbFile: SchemaObbFile = null, regularFile: SchemaRegularFile = null): SchemaDeviceFile = {
     val __obj = js.Dynamic.literal()
+    if (obbFile != null) __obj.updateDynamic("obbFile")(obbFile.asInstanceOf[js.Any])
+    if (regularFile != null) __obj.updateDynamic("regularFile")(regularFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceFile]
   }
-  @scala.inline
-  implicit class SchemaDeviceFileOps[Self <: SchemaDeviceFile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObbFile(value: SchemaObbFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obbFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObbFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("obbFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegularFile(value: SchemaRegularFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regularFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegularFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regularFile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

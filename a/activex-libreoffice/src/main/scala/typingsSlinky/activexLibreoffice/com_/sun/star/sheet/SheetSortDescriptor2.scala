@@ -14,31 +14,30 @@ import scala.scalajs.js.annotation._
   * This service extends the {@link com.sun.star.table.TableSortDescriptor2} service with spreadsheet specific properties.
   * @since OOo 1.1.2
   */
-@js.native
 trait SheetSortDescriptor2 extends TableSortDescriptor2 {
   /** specifies if cell formats are moved with the contents they belong to. */
-  var BindFormatsToContent: Boolean = js.native
+  var BindFormatsToContent: Boolean
   /**
     * specifies whether the first row or column (depending on {@link com.sun.star.table.TableSortDescriptor.Orientation} ) is a header which should not be
     * sorted.
     */
-  var ContainsHeader: Boolean = js.native
+  var ContainsHeader: Boolean
   /** specifies if the sorted data should be copied to another position in the document. */
-  var CopyOutputData: Boolean = js.native
+  var CopyOutputData: Boolean
   /** specifies if a user defined sorting list is used. */
-  var IsUserListEnabled: Boolean = js.native
+  var IsUserListEnabled: Boolean
   /**
     * specifies the position where sorted data are to be copied.
     *
     * This property is only used, if {@link SheetSortDescriptor.CopyOutputData} is `TRUE` .
     */
-  var OutputPosition: CellAddress = js.native
+  var OutputPosition: CellAddress
   /**
     * specifies which user defined sorting list is used.
     *
     * This property is only used, if {@link SheetSortDescriptor.IsUserListEnabled} is `TRUE` .
     */
-  var UserListIndex: Double = js.native
+  var UserListIndex: Double
 }
 
 object SheetSortDescriptor2 {
@@ -57,49 +56,5 @@ object SheetSortDescriptor2 {
     val __obj = js.Dynamic.literal(BindFormatsToContent = BindFormatsToContent.asInstanceOf[js.Any], ContainsHeader = ContainsHeader.asInstanceOf[js.Any], CopyOutputData = CopyOutputData.asInstanceOf[js.Any], IsSortColumns = IsSortColumns.asInstanceOf[js.Any], IsUserListEnabled = IsUserListEnabled.asInstanceOf[js.Any], MaxSortFieldsCount = MaxSortFieldsCount.asInstanceOf[js.Any], OutputPosition = OutputPosition.asInstanceOf[js.Any], SortFields = SortFields.asInstanceOf[js.Any], UserListIndex = UserListIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[SheetSortDescriptor2]
   }
-  @scala.inline
-  implicit class SheetSortDescriptor2Ops[Self <: SheetSortDescriptor2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBindFormatsToContent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BindFormatsToContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainsHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopyOutputData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyOutputData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsUserListEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsUserListEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutputPosition(value: CellAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserListIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserListIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

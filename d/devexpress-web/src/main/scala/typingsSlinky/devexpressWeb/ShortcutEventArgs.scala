@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the client-side ASPxClientScheduler.Shortcut event.
   */
-@js.native
 trait ShortcutEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of a command associated with the keyboard shortcut.
     */
-  var commandName: String = js.native
+  var commandName: String
   /**
     * Gets or sets whether an event is handled, and that default actions are not required.
     */
-  var handled: Boolean = js.native
+  var handled: Boolean
   /**
     * Gets an object containing information about a keyboard shortcut event.
     */
-  var htmlEvent: js.Any = js.native
+  var htmlEvent: js.Any
 }
 
 object ShortcutEventArgs {
@@ -29,31 +28,5 @@ object ShortcutEventArgs {
     val __obj = js.Dynamic.literal(commandName = commandName.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShortcutEventArgs]
   }
-  @scala.inline
-  implicit class ShortcutEventArgsOps[Self <: ShortcutEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommandName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commandName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHandled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtmlEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

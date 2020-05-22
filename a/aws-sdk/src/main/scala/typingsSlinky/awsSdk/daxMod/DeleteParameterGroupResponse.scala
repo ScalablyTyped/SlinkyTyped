@@ -14,29 +14,10 @@ trait DeleteParameterGroupResponse extends js.Object {
 
 object DeleteParameterGroupResponse {
   @scala.inline
-  def apply(): DeleteParameterGroupResponse = {
+  def apply(DeletionMessage: String = null): DeleteParameterGroupResponse = {
     val __obj = js.Dynamic.literal()
+    if (DeletionMessage != null) __obj.updateDynamic("DeletionMessage")(DeletionMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteParameterGroupResponse]
   }
-  @scala.inline
-  implicit class DeleteParameterGroupResponseOps[Self <: DeleteParameterGroupResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletionMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletionMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

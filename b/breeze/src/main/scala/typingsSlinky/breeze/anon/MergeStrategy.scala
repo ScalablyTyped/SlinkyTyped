@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MergeStrategy extends js.Object {
-  var mergeStrategy: js.UndefOr[MergeStrategySymbol] = js.native
-  var metadataVersionFn: js.UndefOr[js.Function1[/* any */ js.Any, Unit]] = js.native
+  var mergeStrategy: js.UndefOr[MergeStrategySymbol] = js.undefined
+  var metadataVersionFn: js.UndefOr[js.Function1[/* any */ js.Any, Unit]] = js.undefined
 }
 
 object MergeStrategy {
   @scala.inline
-  def apply(): MergeStrategy = {
+  def apply(mergeStrategy: MergeStrategySymbol = null, metadataVersionFn: /* any */ js.Any => Unit = null): MergeStrategy = {
     val __obj = js.Dynamic.literal()
+    if (mergeStrategy != null) __obj.updateDynamic("mergeStrategy")(mergeStrategy.asInstanceOf[js.Any])
+    if (metadataVersionFn != null) __obj.updateDynamic("metadataVersionFn")(js.Any.fromFunction1(metadataVersionFn))
     __obj.asInstanceOf[MergeStrategy]
   }
-  @scala.inline
-  implicit class MergeStrategyOps[Self <: MergeStrategy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMergeStrategy(value: MergeStrategySymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadataVersionFn(value: /* any */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataVersionFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMetadataVersionFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataVersionFn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

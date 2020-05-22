@@ -45,53 +45,16 @@ trait SchemaEnumPropertyOptions extends js.Object {
 
 object SchemaEnumPropertyOptions {
   @scala.inline
-  def apply(): SchemaEnumPropertyOptions = {
+  def apply(
+    operatorOptions: SchemaEnumOperatorOptions = null,
+    orderedRanking: String = null,
+    possibleValues: js.Array[SchemaEnumValuePair] = null
+  ): SchemaEnumPropertyOptions = {
     val __obj = js.Dynamic.literal()
+    if (operatorOptions != null) __obj.updateDynamic("operatorOptions")(operatorOptions.asInstanceOf[js.Any])
+    if (orderedRanking != null) __obj.updateDynamic("orderedRanking")(orderedRanking.asInstanceOf[js.Any])
+    if (possibleValues != null) __obj.updateDynamic("possibleValues")(possibleValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEnumPropertyOptions]
   }
-  @scala.inline
-  implicit class SchemaEnumPropertyOptionsOps[Self <: SchemaEnumPropertyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperatorOptions(value: SchemaEnumOperatorOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatorOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderedRanking(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedRanking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderedRanking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedRanking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPossibleValues(value: js.Array[SchemaEnumValuePair]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("possibleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPossibleValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("possibleValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

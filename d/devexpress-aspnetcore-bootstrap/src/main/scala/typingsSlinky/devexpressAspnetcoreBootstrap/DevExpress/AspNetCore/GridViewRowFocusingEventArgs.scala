@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridViewRowFocusingEventArgs extends GridViewRowCancelEventArgs {
-  val htmlEvent: js.Any = js.native
+  val htmlEvent: js.Any
 }
 
 object GridViewRowFocusingEventArgs {
@@ -15,19 +14,5 @@ object GridViewRowFocusingEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any], visibleIndex = visibleIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridViewRowFocusingEventArgs]
   }
-  @scala.inline
-  implicit class GridViewRowFocusingEventArgsOps[Self <: GridViewRowFocusingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtmlEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

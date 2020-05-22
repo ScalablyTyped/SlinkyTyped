@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PointPropType extends js.Object {
-  var x: Double = js.native
-  var y: Double = js.native
+  var x: Double
+  var y: Double
 }
 
 @JSImport("react-native", "PointPropType")

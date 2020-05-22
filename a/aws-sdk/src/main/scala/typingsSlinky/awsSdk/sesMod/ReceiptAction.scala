@@ -38,101 +38,24 @@ trait ReceiptAction extends js.Object {
 
 object ReceiptAction {
   @scala.inline
-  def apply(): ReceiptAction = {
+  def apply(
+    AddHeaderAction: AddHeaderAction = null,
+    BounceAction: BounceAction = null,
+    LambdaAction: LambdaAction = null,
+    S3Action: S3Action = null,
+    SNSAction: SNSAction = null,
+    StopAction: StopAction = null,
+    WorkmailAction: WorkmailAction = null
+  ): ReceiptAction = {
     val __obj = js.Dynamic.literal()
+    if (AddHeaderAction != null) __obj.updateDynamic("AddHeaderAction")(AddHeaderAction.asInstanceOf[js.Any])
+    if (BounceAction != null) __obj.updateDynamic("BounceAction")(BounceAction.asInstanceOf[js.Any])
+    if (LambdaAction != null) __obj.updateDynamic("LambdaAction")(LambdaAction.asInstanceOf[js.Any])
+    if (S3Action != null) __obj.updateDynamic("S3Action")(S3Action.asInstanceOf[js.Any])
+    if (SNSAction != null) __obj.updateDynamic("SNSAction")(SNSAction.asInstanceOf[js.Any])
+    if (StopAction != null) __obj.updateDynamic("StopAction")(StopAction.asInstanceOf[js.Any])
+    if (WorkmailAction != null) __obj.updateDynamic("WorkmailAction")(WorkmailAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReceiptAction]
   }
-  @scala.inline
-  implicit class ReceiptActionOps[Self <: ReceiptAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddHeaderAction(value: AddHeaderAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddHeaderAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddHeaderAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddHeaderAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBounceAction(value: BounceAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBounceAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambdaAction(value: LambdaAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3Action(value: S3Action): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Action: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSNSAction(value: SNSAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SNSAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSNSAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SNSAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopAction(value: StopAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StopAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StopAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkmailAction(value: WorkmailAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkmailAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkmailAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkmailAction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

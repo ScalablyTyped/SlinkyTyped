@@ -4,43 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Data extends js.Object {
   @JSName(" $data")
-  val Space$data: js.UndefOr[js.Any | Null] = js.native
+  val Space$data: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object Data {
   @scala.inline
-  def apply(): Data = {
+  def apply(Space$data: js.Array[_] = null): Data = {
     val __obj = js.Dynamic.literal()
+    if (Space$data != null) __obj.updateDynamic(" $data")(Space$data.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
-  @scala.inline
-  implicit class DataOps[Self <: Data] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpace$data(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(" $data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpace$data: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(" $data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpace$dataNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(" $data")(null)
-        ret
-    }
-  }
-  
 }
 

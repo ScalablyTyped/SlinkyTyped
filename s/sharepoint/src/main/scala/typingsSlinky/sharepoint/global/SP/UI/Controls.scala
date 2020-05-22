@@ -1,6 +1,7 @@
 package typingsSlinky.sharepoint.global.SP.UI
 
 import typingsSlinky.sharepoint.SP.UI.Controls.INavigationOptions
+import typingsSlinky.sharepoint.SP.UI.Controls.ISettingsLink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +17,52 @@ object Controls extends js.Object {
   class Navigation protected ()
     extends typingsSlinky.sharepoint.SP.UI.Controls.Navigation {
     def this(placeholderDOMElementId: String, options: INavigationOptions) = this()
+    /* CompleteClass */
+    override def get_appHelpPageOnClick(): String = js.native
+    /* CompleteClass */
+    override def get_appHelpPageUrl(): String = js.native
+    /* CompleteClass */
+    override def get_appIconUrl(): String = js.native
+    /* CompleteClass */
+    override def get_appStartPage(): String = js.native
+    /* CompleteClass */
+    override def get_appTitle(): String = js.native
+    /* CompleteClass */
+    override def get_appTitleIconUrl(): String = js.native
+    /* CompleteClass */
+    override def get_assetId(): String = js.native
+    /* CompleteClass */
+    override def get_rightToLeft(): Boolean = js.native
+    /* CompleteClass */
+    override def get_settingsLinks(): js.Array[ISettingsLink] = js.native
+    /* CompleteClass */
+    override def get_siteTitle(): String = js.native
+    /* CompleteClass */
+    override def get_siteUrl(): String = js.native
+    /* CompleteClass */
+    override def remove(): Unit = js.native
+    /* CompleteClass */
+    override def setBottomHeaderVisible(value: Boolean): Unit = js.native
+    /* CompleteClass */
+    override def setTopHeaderVisible(value: Boolean): Unit = js.native
+    /* CompleteClass */
+    override def setVisible(value: Boolean): Unit = js.native
+    /* CompleteClass */
+    override def set_appHelpPageOnClick(value: String): String = js.native
+    /* CompleteClass */
+    override def set_appHelpPageUrl(value: String): String = js.native
+    /* CompleteClass */
+    override def set_appIconUrl(value: String): String = js.native
+    /* CompleteClass */
+    override def set_appStartPage(value: String): String = js.native
+    /* CompleteClass */
+    override def set_appTitle(value: String): String = js.native
+    /* CompleteClass */
+    override def set_appTitleIconUrl(value: String): String = js.native
+    /* CompleteClass */
+    override def set_rightToLeft(value: Boolean): Boolean = js.native
+    /* CompleteClass */
+    override def set_settingsLinks(value: js.Array[ISettingsLink]): js.Array[ISettingsLink] = js.native
   }
   
   @js.native
@@ -23,7 +70,12 @@ object Controls extends js.Object {
   
   @js.native
   class SettingsLink ()
-    extends typingsSlinky.sharepoint.SP.UI.Controls.SettingsLink
+    extends typingsSlinky.sharepoint.SP.UI.Controls.SettingsLink {
+    /* CompleteClass */
+    override var displayName: String = js.native
+    /* CompleteClass */
+    override var linkUrl: String = js.native
+  }
   
   /* static members */
   @js.native

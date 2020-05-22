@@ -27,21 +27,21 @@ trait CustomProperty extends ClientObject {
   var context_CustomProperty: RequestContext = js.native
   /**
     *
-    * Gets the key of the custom property. Read only.
+    * The key of the custom property.
     *
     * [Api set: ExcelApi 1.7]
     */
   val key: String = js.native
   /**
     *
-    * Gets the value type of the custom property. Read only.
+    * The type of the value used for the custom property.
     *
     * [Api set: ExcelApi 1.7]
     */
   val `type`: DocumentPropertyType | Number | Boolean | Date | typingsSlinky.officeJsPreview.officeJsPreviewStrings.String | Float = js.native
   /**
     *
-    * Gets or sets the value of the custom property.
+    * The value of the custom property.
     *
     * [Api set: ExcelApi 1.7]
     */

@@ -88,161 +88,34 @@ trait SchemaTreemapChartSpec extends js.Object {
 
 object SchemaTreemapChartSpec {
   @scala.inline
-  def apply(): SchemaTreemapChartSpec = {
+  def apply(
+    colorData: SchemaChartData = null,
+    colorScale: SchemaTreemapChartColorScale = null,
+    headerColor: SchemaColor = null,
+    hideTooltips: js.UndefOr[Boolean] = js.undefined,
+    hintedLevels: js.UndefOr[Double] = js.undefined,
+    labels: SchemaChartData = null,
+    levels: js.UndefOr[Double] = js.undefined,
+    maxValue: js.UndefOr[Double] = js.undefined,
+    minValue: js.UndefOr[Double] = js.undefined,
+    parentLabels: SchemaChartData = null,
+    sizeData: SchemaChartData = null,
+    textFormat: SchemaTextFormat = null
+  ): SchemaTreemapChartSpec = {
     val __obj = js.Dynamic.literal()
+    if (colorData != null) __obj.updateDynamic("colorData")(colorData.asInstanceOf[js.Any])
+    if (colorScale != null) __obj.updateDynamic("colorScale")(colorScale.asInstanceOf[js.Any])
+    if (headerColor != null) __obj.updateDynamic("headerColor")(headerColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideTooltips)) __obj.updateDynamic("hideTooltips")(hideTooltips.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hintedLevels)) __obj.updateDynamic("hintedLevels")(hintedLevels.get.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (!js.isUndefined(levels)) __obj.updateDynamic("levels")(levels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValue)) __obj.updateDynamic("maxValue")(maxValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minValue)) __obj.updateDynamic("minValue")(minValue.get.asInstanceOf[js.Any])
+    if (parentLabels != null) __obj.updateDynamic("parentLabels")(parentLabels.asInstanceOf[js.Any])
+    if (sizeData != null) __obj.updateDynamic("sizeData")(sizeData.asInstanceOf[js.Any])
+    if (textFormat != null) __obj.updateDynamic("textFormat")(textFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTreemapChartSpec]
   }
-  @scala.inline
-  implicit class SchemaTreemapChartSpecOps[Self <: SchemaTreemapChartSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorData(value: SchemaChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorScale(value: SchemaTreemapChartColorScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderColor(value: SchemaColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideTooltips(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideTooltips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHintedLevels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hintedLevels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHintedLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hintedLevels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: SchemaChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentLabels(value: SchemaChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeData(value: SchemaChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextFormat(value: SchemaTextFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

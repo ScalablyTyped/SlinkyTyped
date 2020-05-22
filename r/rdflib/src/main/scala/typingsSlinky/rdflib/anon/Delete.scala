@@ -1,53 +1,32 @@
 package typingsSlinky.rdflib.anon
 
-import typingsSlinky.rdflib.mod.Statement
+import typingsSlinky.rdflib.statementMod.default
+import typingsSlinky.rdflib.typesMod.GraphType
+import typingsSlinky.rdflib.typesMod.ObjectType
+import typingsSlinky.rdflib.typesMod.PredicateType
+import typingsSlinky.rdflib.typesMod.SubjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Delete extends js.Object {
-  var delete: js.UndefOr[js.Array[Statement]] = js.native
-  var patch: js.UndefOr[js.Array[Statement]] = js.native
+  var delete: js.UndefOr[js.Array[default[SubjectType, PredicateType, ObjectType, GraphType]]] = js.undefined
+  var patch: js.UndefOr[js.Array[default[SubjectType, PredicateType, ObjectType, GraphType]]] = js.undefined
+  var where: js.UndefOr[js.Any] = js.undefined
 }
 
 object Delete {
   @scala.inline
-  def apply(): Delete = {
+  def apply(
+    delete: js.Array[default[SubjectType, PredicateType, ObjectType, GraphType]] = null,
+    patch: js.Array[default[SubjectType, PredicateType, ObjectType, GraphType]] = null,
+    where: js.Any = null
+  ): Delete = {
     val __obj = js.Dynamic.literal()
+    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
+    if (patch != null) __obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[Delete]
   }
-  @scala.inline
-  implicit class DeleteOps[Self <: Delete] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: js.Array[Statement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatch(value: js.Array[Statement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

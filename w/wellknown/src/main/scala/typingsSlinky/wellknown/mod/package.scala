@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type GeoJSONGeometry = typingsSlinky.wellknown.mod.GeoJSONPoint | typingsSlinky.wellknown.mod.GeoJSONMultiPoint | typingsSlinky.wellknown.mod.GeoJSONLineString | typingsSlinky.wellknown.mod.GeoJSONMultiLineString | typingsSlinky.wellknown.mod.GeoJSONPolygon | typingsSlinky.wellknown.mod.GeoJSONMultiPolygon | scala.Null
   type GeoJSONLineString = typingsSlinky.wellknown.mod.Geometry[
     typingsSlinky.wellknown.wellknownStrings.LineString, 
     js.Array[typingsSlinky.wellknown.mod.GeoJSONPosition]
@@ -29,4 +30,5 @@ package object mod {
     typingsSlinky.wellknown.wellknownStrings.Polygon, 
     js.Array[js.Array[typingsSlinky.wellknown.mod.GeoJSONPosition]]
   ]
+  type GeoJSONPosition = (js.Tuple2[scala.Double, scala.Double]) | (js.Tuple3[scala.Double, scala.Double, scala.Double])
 }

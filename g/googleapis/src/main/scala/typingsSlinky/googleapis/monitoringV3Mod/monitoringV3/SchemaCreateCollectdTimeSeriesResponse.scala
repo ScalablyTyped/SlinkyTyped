@@ -19,29 +19,10 @@ trait SchemaCreateCollectdTimeSeriesResponse extends js.Object {
 
 object SchemaCreateCollectdTimeSeriesResponse {
   @scala.inline
-  def apply(): SchemaCreateCollectdTimeSeriesResponse = {
+  def apply(payloadErrors: js.Array[SchemaCollectdPayloadError] = null): SchemaCreateCollectdTimeSeriesResponse = {
     val __obj = js.Dynamic.literal()
+    if (payloadErrors != null) __obj.updateDynamic("payloadErrors")(payloadErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateCollectdTimeSeriesResponse]
   }
-  @scala.inline
-  implicit class SchemaCreateCollectdTimeSeriesResponseOps[Self <: SchemaCreateCollectdTimeSeriesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPayloadErrors(value: js.Array[SchemaCollectdPayloadError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayloadErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadErrors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,26 +8,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JsonParseOptionItem extends js.Object {
   /**
     * if deflated bodies will be inflated. (default: true)
     */
-  var inflate: js.UndefOr[Boolean] = js.native
+  var inflate: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls the maximum request body size.
     * If this is a number, then the value specifies the number of bytes; if it is a string, the value is passed to the bytes library for parsing.
     * Defaults to '100kb'
     */
-  var limit: js.UndefOr[String | Double] = js.native
+  var limit: js.UndefOr[String | Double] = js.undefined
   /**
     * passed to JSON.parse().
     */
-  var receiver: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.native
+  var receiver: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.undefined
   /**
     * only parse objects and arrays. (default: true)
     */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /**
     * The type option is used to determine what media type the middleware will parse.
     * This option can be a function or a string.
@@ -36,7 +35,7 @@ trait JsonParseOptionItem extends js.Object {
     */
   var `type`: js.UndefOr[
     (js.Function1[/* req */ Request_[ParamsDictionary, _, _, Query], String]) | String
-  ] = js.native
+  ] = js.undefined
   /**
     * The verify option, if supplied, is called as verify(req, res, buf, encoding), where buf is a Buffer of the raw request body and encoding is the encoding of the request.
     * The parsing can be aborted by throwing an error.
@@ -49,102 +48,27 @@ trait JsonParseOptionItem extends js.Object {
       /* encoding */ String, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object JsonParseOptionItem {
   @scala.inline
-  def apply(): JsonParseOptionItem = {
+  def apply(
+    inflate: js.UndefOr[Boolean] = js.undefined,
+    limit: String | Double = null,
+    receiver: (/* key */ String, /* value */ js.Any) => _ = null,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    `type`: (js.Function1[/* req */ Request_[ParamsDictionary, _, _, Query], String]) | String = null,
+    verify: (/* req */ Request_[ParamsDictionary, _, _, Query], /* res */ Response, /* buf */ Buffer, /* encoding */ String) => Unit = null
+  ): JsonParseOptionItem = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(inflate)) __obj.updateDynamic("inflate")(inflate.get.asInstanceOf[js.Any])
+    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
+    if (receiver != null) __obj.updateDynamic("receiver")(js.Any.fromFunction2(receiver))
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (verify != null) __obj.updateDynamic("verify")(js.Any.fromFunction4(verify))
     __obj.asInstanceOf[JsonParseOptionItem]
   }
-  @scala.inline
-  implicit class JsonParseOptionItemOps[Self <: JsonParseOptionItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInflate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inflate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInflate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inflate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReceiver(value: (/* key */ String, /* value */ js.Any) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutReceiver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeFunction1(value: /* req */ Request_[ParamsDictionary, _, _, Query] => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: (js.Function1[/* req */ Request_[ParamsDictionary, _, _, Query], String]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerify(
-      value: (/* req */ Request_[ParamsDictionary, _, _, Query], /* res */ Response, /* buf */ Buffer, /* encoding */ String) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutVerify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

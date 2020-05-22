@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.trafficMirrorSessionMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +25,10 @@ trait TrafficMirrorSessionArgs extends js.Object {
     */
   val sessionNumber: Input[Double] = js.native
   /**
+    * Key-value mapping of resource tags.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[_]]] = js.native
+  /**
     * ID of the traffic mirror filter to be used
     */
   val trafficMirrorFilterId: Input[String] = js.native
@@ -43,78 +48,18 @@ object TrafficMirrorSessionArgs {
     networkInterfaceId: Input[String],
     sessionNumber: Input[Double],
     trafficMirrorFilterId: Input[String],
-    trafficMirrorTargetId: Input[String]
+    trafficMirrorTargetId: Input[String],
+    description: Input[String] = null,
+    packetLength: Input[Double] = null,
+    tags: Input[StringDictionary[_]] = null,
+    virtualNetworkId: Input[Double] = null
   ): TrafficMirrorSessionArgs = {
     val __obj = js.Dynamic.literal(networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], sessionNumber = sessionNumber.asInstanceOf[js.Any], trafficMirrorFilterId = trafficMirrorFilterId.asInstanceOf[js.Any], trafficMirrorTargetId = trafficMirrorTargetId.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (packetLength != null) __obj.updateDynamic("packetLength")(packetLength.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (virtualNetworkId != null) __obj.updateDynamic("virtualNetworkId")(virtualNetworkId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrafficMirrorSessionArgs]
   }
-  @scala.inline
-  implicit class TrafficMirrorSessionArgsOps[Self <: TrafficMirrorSessionArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkInterfaceId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessionNumber(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficMirrorFilterId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficMirrorFilterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficMirrorTargetId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficMirrorTargetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPacketLength(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPacketLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packetLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualNetworkId(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualNetworkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualNetworkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualNetworkId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

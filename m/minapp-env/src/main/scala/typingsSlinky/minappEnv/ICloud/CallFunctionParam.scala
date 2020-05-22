@@ -1,59 +1,36 @@
 package typingsSlinky.minappEnv.ICloud
 
+import typingsSlinky.minappEnv.IAPIError
+import typingsSlinky.minappEnv.ICloudConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CallFunctionParam extends ICloudAPIParam[CallFunctionResult] {
-  var data: js.UndefOr[CallFunctionData] = js.native
-  var name: String = js.native
-  var slow: js.UndefOr[Boolean] = js.native
+  var data: js.UndefOr[CallFunctionData] = js.undefined
+  var name: String
+  var slow: js.UndefOr[Boolean] = js.undefined
 }
 
 object CallFunctionParam {
   @scala.inline
-  def apply(name: String): CallFunctionParam = {
+  def apply(
+    name: String,
+    complete: /* val */ CallFunctionResult | IAPIError => Unit = null,
+    config: ICloudConfig = null,
+    data: CallFunctionData = null,
+    fail: /* err */ IAPIError => Unit = null,
+    slow: js.UndefOr[Boolean] = js.undefined,
+    success: CallFunctionResult => Unit = null
+  ): CallFunctionParam = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (!js.isUndefined(slow)) __obj.updateDynamic("slow")(slow.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[CallFunctionParam]
   }
-  @scala.inline
-  implicit class CallFunctionParamOps[Self <: CallFunctionParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: CallFunctionData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

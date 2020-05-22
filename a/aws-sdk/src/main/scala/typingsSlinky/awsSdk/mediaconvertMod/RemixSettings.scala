@@ -22,53 +22,16 @@ trait RemixSettings extends js.Object {
 
 object RemixSettings {
   @scala.inline
-  def apply(): RemixSettings = {
+  def apply(
+    ChannelMapping: ChannelMapping = null,
+    ChannelsIn: js.UndefOr[integerMin1Max64] = js.undefined,
+    ChannelsOut: js.UndefOr[integerMin1Max64] = js.undefined
+  ): RemixSettings = {
     val __obj = js.Dynamic.literal()
+    if (ChannelMapping != null) __obj.updateDynamic("ChannelMapping")(ChannelMapping.asInstanceOf[js.Any])
+    if (!js.isUndefined(ChannelsIn)) __obj.updateDynamic("ChannelsIn")(ChannelsIn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ChannelsOut)) __obj.updateDynamic("ChannelsOut")(ChannelsOut.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemixSettings]
   }
-  @scala.inline
-  implicit class RemixSettingsOps[Self <: RemixSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelMapping(value: ChannelMapping): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelsIn(value: integerMin1Max64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelsIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannelsOut(value: integerMin1Max64): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannelsOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsOut")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

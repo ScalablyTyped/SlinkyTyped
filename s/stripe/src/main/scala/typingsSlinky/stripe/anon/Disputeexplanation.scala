@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Disputeexplanation extends js.Object {
   /**
     * Brief freeform text explaining why you are disputing this transaction.
     */
-  var dispute_explanation: String = js.native
+  var dispute_explanation: String
   /**
     * (ID of a file upload) Additional file evidence supporting your dispute.
     */
-  var uncategorized_file: String = js.native
+  var uncategorized_file: String
 }
 
 object Disputeexplanation {
@@ -22,25 +21,5 @@ object Disputeexplanation {
     val __obj = js.Dynamic.literal(dispute_explanation = dispute_explanation.asInstanceOf[js.Any], uncategorized_file = uncategorized_file.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disputeexplanation]
   }
-  @scala.inline
-  implicit class DisputeexplanationOps[Self <: Disputeexplanation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDispute_explanation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispute_explanation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUncategorized_file(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uncategorized_file")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -21,29 +21,10 @@ trait SchemaExportDicomDataRequest extends js.Object {
 
 object SchemaExportDicomDataRequest {
   @scala.inline
-  def apply(): SchemaExportDicomDataRequest = {
+  def apply(outputConfig: SchemaOutputConfig = null): SchemaExportDicomDataRequest = {
     val __obj = js.Dynamic.literal()
+    if (outputConfig != null) __obj.updateDynamic("outputConfig")(outputConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExportDicomDataRequest]
   }
-  @scala.inline
-  implicit class SchemaExportDicomDataRequestOps[Self <: SchemaExportDicomDataRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputConfig(value: SchemaOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

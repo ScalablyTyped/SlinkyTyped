@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeginInstallTypes extends InstallTypes {
   @JSName("kind")
-  val kind_BeginInstallTypes: EventBeginInstallTypes = js.native
+  val kind_BeginInstallTypes: EventBeginInstallTypes
 }
 
 object BeginInstallTypes {
@@ -22,19 +21,5 @@ object BeginInstallTypes {
     val __obj = js.Dynamic.literal(eventId = eventId.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], packagesToInstall = packagesToInstall.asInstanceOf[js.Any], projectName = projectName.asInstanceOf[js.Any], typingsInstallerVersion = typingsInstallerVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeginInstallTypes]
   }
-  @scala.inline
-  implicit class BeginInstallTypesOps[Self <: BeginInstallTypes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: EventBeginInstallTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

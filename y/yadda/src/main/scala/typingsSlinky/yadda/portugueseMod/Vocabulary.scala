@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Vocabulary
   extends typingsSlinky.yadda.englishMod.Vocabulary {
-  var dada: String = js.native
-  var dadas: String = js.native
-  var dado: String = js.native
-  var dados: String = js.native
-  var entao: String = js.native
-  var quando: String = js.native
-  var se: String = js.native
-  var seja: String = js.native
-  var sejam: String = js.native
+  var dada: String
+  var dadas: String
+  var dado: String
+  var dados: String
+  var entao: String
+  var quando: String
+  var se: String
+  var seja: String
+  var sejam: String
 }
 
 object Vocabulary {
@@ -45,67 +44,5 @@ object Vocabulary {
     __obj.updateDynamic("then")(`then`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vocabulary]
   }
-  @scala.inline
-  implicit class VocabularyOps[Self <: Vocabulary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDada(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dada")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDadas(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dadas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDado(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dado")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDados(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dados")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntao(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entao")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuando(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quando")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSe(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("se")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeja(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seja")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSejam(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sejam")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

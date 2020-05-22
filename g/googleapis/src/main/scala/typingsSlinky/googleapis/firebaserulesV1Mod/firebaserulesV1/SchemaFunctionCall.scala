@@ -22,41 +22,11 @@ trait SchemaFunctionCall extends js.Object {
 
 object SchemaFunctionCall {
   @scala.inline
-  def apply(): SchemaFunctionCall = {
+  def apply(args: js.Array[_] = null, function: String = null): SchemaFunctionCall = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFunctionCall]
   }
-  @scala.inline
-  implicit class SchemaFunctionCallOps[Self <: SchemaFunctionCall] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

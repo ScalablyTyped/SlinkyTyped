@@ -16,5 +16,10 @@ class ASPxClientRibbonMinimizationStateEventArgs protected ()
     * @param ribbonState The integer value indicating the new ribbon minimization state.
     */
   def this(ribbonState: Double) = this()
+  /**
+    * Returns the value indicating the new ribbon state.
+    */
+  /* CompleteClass */
+  override var ribbonState: Double = js.native
 }
 

@@ -18,18 +18,53 @@ trait TypeDefinition extends Definition
 
 object TypeDefinition {
   @scala.inline
-  implicit def apply(value: EnumTypeDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def UnionTypeDefinition(kind: String, name: Name, types: js.Array[NamedType], loc: Location = null): TypeDefinition = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
   @scala.inline
-  implicit def apply(value: InputObjectTypeDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def InterfaceTypeDefinition(fields: js.Array[FieldDefinition], kind: String, name: Name, loc: Location = null): TypeDefinition = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
   @scala.inline
-  implicit def apply(value: InterfaceTypeDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def InputObjectTypeDefinition(fields: js.Array[InputValueDefinition], kind: String, name: Name, loc: Location = null): TypeDefinition = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def ObjectTypeDefinition(
+    fields: js.Array[FieldDefinition],
+    kind: String,
+    name: Name,
+    interfaces: js.Array[NamedType] = null,
+    loc: Location = null
+  ): TypeDefinition = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (interfaces != null) __obj.updateDynamic("interfaces")(interfaces.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
   @scala.inline
-  implicit def apply(value: ScalarTypeDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def EnumTypeDefinition(kind: String, name: Name, values: js.Array[EnumValueDefinition], loc: Location = null): TypeDefinition = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
   @scala.inline
-  implicit def apply(value: TypeExtensionDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def TypeExtensionDefinition(definition: ObjectTypeDefinition, kind: String, loc: Location = null): TypeDefinition = {
+    val __obj = js.Dynamic.literal(definition = definition.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
   @scala.inline
-  implicit def apply(value: UnionTypeDefinition): TypeDefinition = value.asInstanceOf[TypeDefinition]
+  def ScalarTypeDefinition(kind: String, name: Name, loc: Location = null): TypeDefinition = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinition]
+  }
 }
 

@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation._
 
 /*Tracks the parent object for complex editors by exposing it as an object reference via editorState.current.entity
   * it is possible to modify this object, so should be used with care */
-@js.native
 trait IState extends js.Object {
   /**
     * @ngdoc function
@@ -23,7 +22,7 @@ trait IState extends js.Object {
     * editorState.current can not be overwritten, you should only read values from it
     * since modifying individual properties should be handled by the property editors
     */
-  def getCurrent(): js.Any = js.native
+  def getCurrent(): js.Any
   /**
     * @ngdoc function
     * @name umbraco.services.angularHelper#reset
@@ -34,7 +33,7 @@ trait IState extends js.Object {
     * Since the editorstate entity is read-only, you cannot set it to null
     * only through the reset() method
     */
-  def reset(): Unit = js.native
+  def reset(): Unit
   /**
     * @ngdoc function
     * @name umbraco.services.angularHelper#set
@@ -47,7 +46,7 @@ trait IState extends js.Object {
     * like the content editor, where the model is modified by several
     * child controllers.
     */
-  def set(entity: js.Object): Unit = js.native
+  def set(entity: js.Object): Unit
 }
 
 object IState {
@@ -56,31 +55,5 @@ object IState {
     val __obj = js.Dynamic.literal(getCurrent = js.Any.fromFunction0(getCurrent), reset = js.Any.fromFunction0(reset), set = js.Any.fromFunction1(set))
     __obj.asInstanceOf[IState]
   }
-  @scala.inline
-  implicit class IStateOps[Self <: IState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCurrent(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReset(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

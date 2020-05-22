@@ -8,88 +8,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoaderOptions extends js.Object {
-  var baseURL: js.UndefOr[String] = js.native
-  var defaultProtocol: js.UndefOr[http | https | String] = js.native
-  var http: js.UndefOr[RequestInit] = js.native
-  var mode: js.UndefOr[file | http] = js.native
-  var target: js.UndefOr[String] = js.native
+  var baseURL: js.UndefOr[String] = js.undefined
+  var defaultProtocol: js.UndefOr[http | https | String] = js.undefined
+  var http: js.UndefOr[RequestInit] = js.undefined
+  var mode: js.UndefOr[file | http] = js.undefined
+  var target: js.UndefOr[String] = js.undefined
 }
 
 object LoaderOptions {
   @scala.inline
-  def apply(): LoaderOptions = {
+  def apply(
+    baseURL: String = null,
+    defaultProtocol: http | https | String = null,
+    http: RequestInit = null,
+    mode: file | http = null,
+    target: String = null
+  ): LoaderOptions = {
     val __obj = js.Dynamic.literal()
+    if (baseURL != null) __obj.updateDynamic("baseURL")(baseURL.asInstanceOf[js.Any])
+    if (defaultProtocol != null) __obj.updateDynamic("defaultProtocol")(defaultProtocol.asInstanceOf[js.Any])
+    if (http != null) __obj.updateDynamic("http")(http.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoaderOptions]
   }
-  @scala.inline
-  implicit class LoaderOptionsOps[Self <: LoaderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultProtocol(value: http | https | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProtocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProtocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttp(value: RequestInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: file | http): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

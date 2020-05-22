@@ -7,71 +7,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TitleEncode extends js.Object {
   /**
     * Custom encoding for the title container group.
     */
-  var group: js.UndefOr[GuideEncodeEntry[GroupEncodeEntry]] = js.native
+  var group: js.UndefOr[GuideEncodeEntry[GroupEncodeEntry]] = js.undefined
   /**
     * Custom encoding for the subtitle text.
     */
-  var subtitle: js.UndefOr[GuideEncodeEntry[TextEncodeEntry]] = js.native
+  var subtitle: js.UndefOr[GuideEncodeEntry[TextEncodeEntry]] = js.undefined
   /**
     * Custom encoding for the title text.
     */
-  var title: js.UndefOr[GuideEncodeEntry[TextEncodeEntry]] = js.native
+  var title: js.UndefOr[GuideEncodeEntry[TextEncodeEntry]] = js.undefined
 }
 
 object TitleEncode {
   @scala.inline
-  def apply(): TitleEncode = {
+  def apply(
+    group: GuideEncodeEntry[GroupEncodeEntry] = null,
+    subtitle: GuideEncodeEntry[TextEncodeEntry] = null,
+    title: GuideEncodeEntry[TextEncodeEntry] = null
+  ): TitleEncode = {
     val __obj = js.Dynamic.literal()
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TitleEncode]
   }
-  @scala.inline
-  implicit class TitleEncodeOps[Self <: TitleEncode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroup(value: GuideEncodeEntry[GroupEncodeEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitle(value: GuideEncodeEntry[TextEncodeEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: GuideEncodeEntry[TextEncodeEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

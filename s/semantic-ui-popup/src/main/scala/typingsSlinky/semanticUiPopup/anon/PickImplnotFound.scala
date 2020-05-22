@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-popup.SemanticUI.Popup.ErrorSettings._Impl, 'notFound'> */
-@js.native
 trait PickImplnotFound extends js.Object {
-  var notFound: String = js.native
+  var notFound: String
 }
 
 object PickImplnotFound {
@@ -16,19 +15,5 @@ object PickImplnotFound {
     val __obj = js.Dynamic.literal(notFound = notFound.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplnotFound]
   }
-  @scala.inline
-  implicit class PickImplnotFoundOps[Self <: PickImplnotFound] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotFound(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notFound")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

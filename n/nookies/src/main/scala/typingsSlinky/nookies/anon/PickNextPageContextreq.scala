@@ -6,36 +6,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<next.next.NextPageContext, 'req'> */
-@js.native
 trait PickNextPageContextreq extends js.Object {
-  var req: js.UndefOr[IncomingMessage] = js.native
+  var req: js.UndefOr[IncomingMessage] = js.undefined
 }
 
 object PickNextPageContextreq {
   @scala.inline
-  def apply(): PickNextPageContextreq = {
+  def apply(req: IncomingMessage = null): PickNextPageContextreq = {
     val __obj = js.Dynamic.literal()
+    if (req != null) __obj.updateDynamic("req")(req.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickNextPageContextreq]
   }
-  @scala.inline
-  implicit class PickNextPageContextreqOps[Self <: PickNextPageContextreq] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReq(value: IncomingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("req")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReq: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("req")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

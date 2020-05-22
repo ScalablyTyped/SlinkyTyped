@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * The `copy table wizard` described by this interfaces cares for those, and other, settings.
   * @since OOo 2.4
   */
-@js.native
 trait XCopyTableWizard extends XExecutableDialog {
   /**
     * specifies that a new primary key is to be created in the target database
@@ -34,7 +33,7 @@ trait XCopyTableWizard extends XExecutableDialog {
     * When a primary key is to be created by the wizard, it will be an auto-increment column, if possible.
     * @throws com::sun::star::lang::IllegalArgumentException if the target database does not support primary keys
     */
-  var CreatePrimaryKey: Optional[String] = js.native
+  var CreatePrimaryKey: Optional[String]
   /**
     * specifies the name of the table in the destination database.
     *
@@ -45,7 +44,7 @@ trait XCopyTableWizard extends XExecutableDialog {
     *
     * Changing this attribute while the dialog is running is not supported, the result of such an attempt is undefined.
     */
-  var DestinationTableName: String = js.native
+  var DestinationTableName: String
   /**
     * specifies the basic operation for the wizard to execute.
     *
@@ -58,18 +57,18 @@ trait XCopyTableWizard extends XExecutableDialog {
     * Changing this attribute while the dialog is running is not supported, the result of such an attempt is undefined.
     * @throws IllegalArgumentException if you attempt to set an invalid operation, or if the given operation is not supported by the target database type, e.g.
     */
-  var Operation: Double = js.native
+  var Operation: Double
   /**
     * specifies that the first row should be used to identify column names.
     *
     * This attribute is ignored when the source defines the column names which isn't the case when only a part of a table should be copied e.g. in the RTF
     * format or in the HTML format.
     */
-  var UseHeaderLineAsColumnNames: Boolean = js.native
+  var UseHeaderLineAsColumnNames: Boolean
   /** adds a listener which is to be notified of progress in the copy operation */
-  def addCopyTableListener(Listener: XCopyTableListener): Unit = js.native
+  def addCopyTableListener(Listener: XCopyTableListener): Unit
   /** removes a listener */
-  def removeCopyTableListener(Listener: XCopyTableListener): Unit = js.native
+  def removeCopyTableListener(Listener: XCopyTableListener): Unit
 }
 
 object XCopyTableWizard {
@@ -90,49 +89,5 @@ object XCopyTableWizard {
     val __obj = js.Dynamic.literal(CreatePrimaryKey = CreatePrimaryKey.asInstanceOf[js.Any], DestinationTableName = DestinationTableName.asInstanceOf[js.Any], Operation = Operation.asInstanceOf[js.Any], UseHeaderLineAsColumnNames = UseHeaderLineAsColumnNames.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addCopyTableListener = js.Any.fromFunction1(addCopyTableListener), execute = js.Any.fromFunction0(execute), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeCopyTableListener = js.Any.fromFunction1(removeCopyTableListener), setTitle = js.Any.fromFunction1(setTitle))
     __obj.asInstanceOf[XCopyTableWizard]
   }
-  @scala.inline
-  implicit class XCopyTableWizardOps[Self <: XCopyTableWizard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatePrimaryKey(value: Optional[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatePrimaryKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestinationTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationTableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseHeaderLineAsColumnNames(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseHeaderLineAsColumnNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddCopyTableListener(value: XCopyTableListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCopyTableListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveCopyTableListener(value: XCopyTableListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCopyTableListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

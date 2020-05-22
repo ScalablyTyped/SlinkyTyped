@@ -4,43 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LCDI2COption extends LCDGeneralOption {
-  var backlight: js.UndefOr[Double] = js.native
-  var controller: String = js.native
+  var backlight: js.UndefOr[Double] = js.undefined
+  var controller: String
 }
 
 object LCDI2COption {
   @scala.inline
-  def apply(controller: String): LCDI2COption = {
+  def apply(
+    controller: String,
+    backlight: js.UndefOr[Double] = js.undefined,
+    cols: js.UndefOr[Double] = js.undefined,
+    rows: js.UndefOr[Double] = js.undefined
+  ): LCDI2COption = {
     val __obj = js.Dynamic.literal(controller = controller.asInstanceOf[js.Any])
+    if (!js.isUndefined(backlight)) __obj.updateDynamic("backlight")(backlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cols)) __obj.updateDynamic("cols")(cols.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LCDI2COption]
   }
-  @scala.inline
-  implicit class LCDI2COptionOps[Self <: LCDI2COption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withController(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBacklight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBacklight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

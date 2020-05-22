@@ -38,83 +38,21 @@ trait CreateIntegrationResponseRequest extends js.Object {
 
 object CreateIntegrationResponseRequest {
   @scala.inline
-  def apply(ApiId: string, IntegrationId: string, IntegrationResponseKey: SelectionKey): CreateIntegrationResponseRequest = {
+  def apply(
+    ApiId: string,
+    IntegrationId: string,
+    IntegrationResponseKey: SelectionKey,
+    ContentHandlingStrategy: ContentHandlingStrategy = null,
+    ResponseParameters: IntegrationParameters = null,
+    ResponseTemplates: TemplateMap = null,
+    TemplateSelectionExpression: SelectionExpression = null
+  ): CreateIntegrationResponseRequest = {
     val __obj = js.Dynamic.literal(ApiId = ApiId.asInstanceOf[js.Any], IntegrationId = IntegrationId.asInstanceOf[js.Any], IntegrationResponseKey = IntegrationResponseKey.asInstanceOf[js.Any])
+    if (ContentHandlingStrategy != null) __obj.updateDynamic("ContentHandlingStrategy")(ContentHandlingStrategy.asInstanceOf[js.Any])
+    if (ResponseParameters != null) __obj.updateDynamic("ResponseParameters")(ResponseParameters.asInstanceOf[js.Any])
+    if (ResponseTemplates != null) __obj.updateDynamic("ResponseTemplates")(ResponseTemplates.asInstanceOf[js.Any])
+    if (TemplateSelectionExpression != null) __obj.updateDynamic("TemplateSelectionExpression")(TemplateSelectionExpression.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIntegrationResponseRequest]
   }
-  @scala.inline
-  implicit class CreateIntegrationResponseRequestOps[Self <: CreateIntegrationResponseRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntegrationId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntegrationResponseKey(value: SelectionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegrationResponseKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentHandlingStrategy(value: ContentHandlingStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentHandlingStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentHandlingStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentHandlingStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseParameters(value: IntegrationParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseTemplates(value: TemplateMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseTemplates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseTemplates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateSelectionExpression(value: SelectionExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSelectionExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateSelectionExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateSelectionExpression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

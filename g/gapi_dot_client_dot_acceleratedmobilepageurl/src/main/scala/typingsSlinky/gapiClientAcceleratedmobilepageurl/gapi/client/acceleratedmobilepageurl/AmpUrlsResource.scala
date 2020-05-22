@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AmpUrlsResource extends js.Object {
   /**
     * Returns AMP URL(s) and equivalent
     * [AMP Cache URL(s)](/amp/cache/overview#amp-cache-url-format).
     */
-  def batchGet(request: Accesstoken): Request[BatchGetAmpUrlsResponse] = js.native
+  def batchGet(request: Accesstoken): Request[BatchGetAmpUrlsResponse]
 }
 
 object AmpUrlsResource {
@@ -21,19 +20,5 @@ object AmpUrlsResource {
     val __obj = js.Dynamic.literal(batchGet = js.Any.fromFunction1(batchGet))
     __obj.asInstanceOf[AmpUrlsResource]
   }
-  @scala.inline
-  implicit class AmpUrlsResourceOps[Self <: AmpUrlsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchGet(value: Accesstoken => Request[BatchGetAmpUrlsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchGet")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

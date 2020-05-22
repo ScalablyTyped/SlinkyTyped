@@ -4,205 +4,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParseConfig extends js.Object {
                 // default: false
-  var comments: js.UndefOr[Boolean] = js.native
+  var comments: js.UndefOr[Boolean] = js.undefined
     // default: undefined
-  var complete: js.UndefOr[js.Function1[/* results */ ParseResult, Unit]] = js.native
-  var delimiter: js.UndefOr[String] = js.native
+  var complete: js.UndefOr[js.Function1[/* results */ ParseResult, Unit]] = js.undefined
+  var delimiter: js.UndefOr[String] = js.undefined
               // default: false
-  var download: js.UndefOr[Boolean] = js.native
+  var download: js.UndefOr[Boolean] = js.undefined
                 // default: false
-  var dynamicTyping: js.UndefOr[Boolean] = js.native
+  var dynamicTyping: js.UndefOr[Boolean] = js.undefined
                 // default: 0
-  var encoding: js.UndefOr[String] = js.native
+  var encoding: js.UndefOr[String] = js.undefined
         // default: false
-  var fastMode: js.UndefOr[Boolean] = js.native
+  var fastMode: js.UndefOr[Boolean] = js.undefined
                 // default: ""
-  var header: js.UndefOr[Boolean] = js.native
+  var header: js.UndefOr[Boolean] = js.undefined
               // default: ""
-  var newline: js.UndefOr[String] = js.native
+  var newline: js.UndefOr[String] = js.undefined
          // default: false
-  var preview: js.UndefOr[Double] = js.native
+  var preview: js.UndefOr[Double] = js.undefined
               // default: false
-  var skipEmptyLines: js.UndefOr[Boolean] = js.native
+  var skipEmptyLines: js.UndefOr[Boolean] = js.undefined
               // default: undefined
   // Callbacks
-  var step: js.UndefOr[js.Function2[/* results */ ParseResult, /* parser */ Parser, Unit]] = js.native
+  var step: js.UndefOr[js.Function2[/* results */ ParseResult, /* parser */ Parser, Unit]] = js.undefined
                // default: ""
-  var worker: js.UndefOr[Boolean] = js.native
+  var worker: js.UndefOr[Boolean] = js.undefined
 }
 
 object ParseConfig {
   @scala.inline
-  def apply(): ParseConfig = {
+  def apply(
+    comments: js.UndefOr[Boolean] = js.undefined,
+    complete: /* results */ ParseResult => Unit = null,
+    delimiter: String = null,
+    download: js.UndefOr[Boolean] = js.undefined,
+    dynamicTyping: js.UndefOr[Boolean] = js.undefined,
+    encoding: String = null,
+    fastMode: js.UndefOr[Boolean] = js.undefined,
+    header: js.UndefOr[Boolean] = js.undefined,
+    newline: String = null,
+    preview: js.UndefOr[Double] = js.undefined,
+    skipEmptyLines: js.UndefOr[Boolean] = js.undefined,
+    step: (/* results */ ParseResult, /* parser */ Parser) => Unit = null,
+    worker: js.UndefOr[Boolean] = js.undefined
+  ): ParseConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.get.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(download)) __obj.updateDynamic("download")(download.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamicTyping)) __obj.updateDynamic("dynamicTyping")(dynamicTyping.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(fastMode)) __obj.updateDynamic("fastMode")(fastMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(header)) __obj.updateDynamic("header")(header.get.asInstanceOf[js.Any])
+    if (newline != null) __obj.updateDynamic("newline")(newline.asInstanceOf[js.Any])
+    if (!js.isUndefined(preview)) __obj.updateDynamic("preview")(preview.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipEmptyLines)) __obj.updateDynamic("skipEmptyLines")(skipEmptyLines.get.asInstanceOf[js.Any])
+    if (step != null) __obj.updateDynamic("step")(js.Any.fromFunction2(step))
+    if (!js.isUndefined(worker)) __obj.updateDynamic("worker")(worker.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseConfig]
   }
-  @scala.inline
-  implicit class ParseConfigOps[Self <: ParseConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* results */ ParseResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicTyping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicTyping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicTyping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicTyping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFastMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fastMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFastMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fastMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreview(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipEmptyLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipEmptyLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipEmptyLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipEmptyLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: (/* results */ ParseResult, /* parser */ Parser) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

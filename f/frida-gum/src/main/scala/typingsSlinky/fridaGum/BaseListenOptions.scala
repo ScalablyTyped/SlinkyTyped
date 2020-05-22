@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseListenOptions extends js.Object {
   /**
     * Listen backlog. Defaults to 10.
     */
-  var backlog: js.UndefOr[Double] = js.native
+  var backlog: js.UndefOr[Double] = js.undefined
 }
 
 object BaseListenOptions {
   @scala.inline
-  def apply(): BaseListenOptions = {
+  def apply(backlog: js.UndefOr[Double] = js.undefined): BaseListenOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(backlog)) __obj.updateDynamic("backlog")(backlog.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseListenOptions]
   }
-  @scala.inline
-  implicit class BaseListenOptionsOps[Self <: BaseListenOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBacklog(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBacklog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backlog")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

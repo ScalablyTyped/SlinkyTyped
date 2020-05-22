@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Angle extends js.Object {
-  var angle: js.UndefOr[Double] = js.native
-  var normal: js.UndefOr[Vector3] = js.native
-  var position: js.UndefOr[Vector3] = js.native
-  var size: js.UndefOr[Vector3] = js.native
+  var angle: js.UndefOr[Double] = js.undefined
+  var normal: js.UndefOr[Vector3] = js.undefined
+  var position: js.UndefOr[Vector3] = js.undefined
+  var size: js.UndefOr[Vector3] = js.undefined
 }
 
 object Angle {
   @scala.inline
-  def apply(): Angle = {
+  def apply(
+    angle: js.UndefOr[Double] = js.undefined,
+    normal: Vector3 = null,
+    position: Vector3 = null,
+    size: Vector3 = null
+  ): Angle = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (normal != null) __obj.updateDynamic("normal")(normal.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Angle]
   }
-  @scala.inline
-  implicit class AngleOps[Self <: Angle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormal(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

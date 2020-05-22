@@ -34,83 +34,21 @@ trait ModifyHsmRequest extends js.Object {
 
 object ModifyHsmRequest {
   @scala.inline
-  def apply(HsmArn: HsmArn): ModifyHsmRequest = {
+  def apply(
+    HsmArn: HsmArn,
+    EniIp: IpAddress = null,
+    ExternalId: ExternalId = null,
+    IamRoleArn: IamRoleArn = null,
+    SubnetId: SubnetId = null,
+    SyslogIp: IpAddress = null
+  ): ModifyHsmRequest = {
     val __obj = js.Dynamic.literal(HsmArn = HsmArn.asInstanceOf[js.Any])
+    if (EniIp != null) __obj.updateDynamic("EniIp")(EniIp.asInstanceOf[js.Any])
+    if (ExternalId != null) __obj.updateDynamic("ExternalId")(ExternalId.asInstanceOf[js.Any])
+    if (IamRoleArn != null) __obj.updateDynamic("IamRoleArn")(IamRoleArn.asInstanceOf[js.Any])
+    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
+    if (SyslogIp != null) __obj.updateDynamic("SyslogIp")(SyslogIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyHsmRequest]
   }
-  @scala.inline
-  implicit class ModifyHsmRequestOps[Self <: ModifyHsmRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHsmArn(value: HsmArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEniIp(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEniIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalId(value: ExternalId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRoleArn(value: IamRoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetId(value: SubnetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyslogIp(value: IpAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyslogIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyslogIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SyslogIp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

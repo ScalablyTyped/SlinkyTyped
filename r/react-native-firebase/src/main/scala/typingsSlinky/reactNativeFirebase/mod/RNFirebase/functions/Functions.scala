@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * `FirebaseFunctions` represents a Functions app, and is the entry point for
   * all Functions operations.
   */
-@js.native
 trait Functions
   extends /* key */ StringDictionary[js.Any] {
   /**
@@ -19,7 +18,7 @@ trait Functions
     * @param name The name of the https callable function.
     * @return The `HttpsCallable` instance.
     */
-  def httpsCallable[Params, Result](name: String): HttpsCallable[Params, Result] = js.native
+  def httpsCallable[Params, Result](name: String): HttpsCallable[Params, Result]
   /**
     * Changes this instance to point to a Cloud Functions emulator running
     * locally.
@@ -29,37 +28,19 @@ trait Functions
     * @param origin the origin string of the local emulator started via firebase tools
     * "http://10.0.0.8:1337".
     */
-  def useFunctionsEmulator(origin: String): js.Promise[Null] = js.native
+  def useFunctionsEmulator(origin: String): js.Promise[Null]
 }
 
 object Functions {
   @scala.inline
   def apply(
     httpsCallable: String => HttpsCallable[js.Any, js.Any],
-    useFunctionsEmulator: String => js.Promise[Null]
+    useFunctionsEmulator: String => js.Promise[Null],
+    StringDictionary: /* name */ StringDictionary[js.Any] = null
   ): Functions = {
     val __obj = js.Dynamic.literal(httpsCallable = js.Any.fromFunction1(httpsCallable), useFunctionsEmulator = js.Any.fromFunction1(useFunctionsEmulator))
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[Functions]
   }
-  @scala.inline
-  implicit class FunctionsOps[Self <: Functions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpsCallable(value: String => HttpsCallable[js.Any, js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpsCallable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUseFunctionsEmulator(value: String => js.Promise[Null]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useFunctionsEmulator")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

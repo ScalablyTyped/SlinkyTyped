@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait subscribeCompleteArgs extends baseResponseArgs {
   /**
     * Whether the call to client.subscribe was triggered by a reconnection after network failure.
     */
-  var isResubscribe: Boolean = js.native
+  var isResubscribe: Boolean
 }
 
 object subscribeCompleteArgs {
@@ -18,19 +17,5 @@ object subscribeCompleteArgs {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], clientId = clientId.asInstanceOf[js.Any], isResubscribe = isResubscribe.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[subscribeCompleteArgs]
   }
-  @scala.inline
-  implicit class subscribeCompleteArgsOps[Self <: subscribeCompleteArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsResubscribe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResubscribe")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

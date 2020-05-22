@@ -11,9 +11,9 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/form/util", JSImport.Namespace)
 @js.native
 object formUtilMod extends js.Object {
-  /* import warning: RemoveDifficultInheritance.summarizeChanges 
-  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RcFormInstance * / any */ @js.native
-  trait FormInstance extends js.Object {
+  @js.native
+  trait FormInstance
+    extends typingsSlinky.rcFieldForm.interfaceMod.FormInstance {
     var __INTERNAL__ : Name = js.native
     def scrollToField(name: String): Unit = js.native
     def scrollToField(name: String, options: Options[_]): Unit = js.native

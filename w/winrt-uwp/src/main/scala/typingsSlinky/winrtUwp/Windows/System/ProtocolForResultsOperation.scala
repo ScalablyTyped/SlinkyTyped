@@ -6,13 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result to the application that launched the current application for results. */
-@js.native
 trait ProtocolForResultsOperation extends js.Object {
   /**
     * Indicates that the application activated for results is ready to return to the application that launched it for results.
     * @param data The data to return to the application that activated this app.
     */
-  def reportCompleted(data: ValueSet): Unit = js.native
+  def reportCompleted(data: ValueSet): Unit
 }
 
 object ProtocolForResultsOperation {
@@ -21,19 +20,5 @@ object ProtocolForResultsOperation {
     val __obj = js.Dynamic.literal(reportCompleted = js.Any.fromFunction1(reportCompleted))
     __obj.asInstanceOf[ProtocolForResultsOperation]
   }
-  @scala.inline
-  implicit class ProtocolForResultsOperationOps[Self <: ProtocolForResultsOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReportCompleted(value: ValueSet => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportCompleted")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

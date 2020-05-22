@@ -1,6 +1,9 @@
 package typingsSlinky.stremioAddonSdk.mod
 
 import typingsSlinky.stremioAddonSdk.anon.DefaultVideo
+import typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.landscape
+import typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.regular
+import typingsSlinky.stremioAddonSdk.stremioAddonSdkStrings.square
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +13,12 @@ import scala.scalajs.js.annotation._
   *
   * This description is displayed when the user selects an item form the catalog.
   */
-@js.native
 trait MetaDetail extends MetaPreview {
   /**
     * Human-readable that describes all the significant awards.
     */
-  var awards: js.UndefOr[String] = js.native
-  var behaviourHints: js.UndefOr[DefaultVideo] = js.native
+  var awards: js.UndefOr[String] = js.undefined
+  var behaviourHints: js.UndefOr[DefaultVideo] = js.undefined
   /**
     * Array of members of the cast.
     *
@@ -24,11 +26,11 @@ trait MetaDetail extends MetaPreview {
     *
     * @deprecated
     */
-  var cast: js.UndefOr[js.Array[String]] = js.native
+  var cast: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Official country of origin.
     */
-  var country: js.UndefOr[String] = js.native
+  var country: js.UndefOr[String] = js.undefined
   /**
     * Array of directors.
     *
@@ -36,7 +38,7 @@ trait MetaDetail extends MetaPreview {
     *
     * @deprecated
     */
-  var director: js.UndefOr[js.Array[String]] = js.native
+  var director: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * genre/categories of the content.
     *
@@ -44,22 +46,22 @@ trait MetaDetail extends MetaPreview {
     *
     * **WARNING: this will soon be deprecated, use 'links' instead**
     */
-  var genres: js.UndefOr[js.Array[String]] = js.native
+  var genres: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * IMDb rating, which should be a number from 0.0 to 10.0.
     */
-  var imdbRating: js.UndefOr[String] = js.native
+  var imdbRating: js.UndefOr[String] = js.undefined
   /**
     * Spoken language.
     */
-  var language: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.undefined
   /**
     * Can be used to link to internal pages of Stremio.
     *
     * example: array of actor / genre / director links.
     */
-  var links: js.UndefOr[js.Array[MetaLink]] = js.native
-  var releaseInfo: js.UndefOr[String] = js.native
+  var links: js.UndefOr[js.Array[MetaLink]] = js.undefined
+  var releaseInfo: js.UndefOr[String] = js.undefined
   /**
     * ISO 8601, initial release date.
     *
@@ -67,207 +69,73 @@ trait MetaDetail extends MetaPreview {
     *
     * e.g. "2010-12-06T05:00:00.000Z"
     */
-  var released: js.UndefOr[String] = js.native
+  var released: js.UndefOr[String] = js.undefined
   /**
     * Human-readable expected runtime.
     *
     * e.g. "120m"
     */
-  var runtime: js.UndefOr[String] = js.native
+  var runtime: js.UndefOr[String] = js.undefined
   /**
     * Used for channel and series.
     *
     * If you do not provide this (e.g. for movie), Stremio assumes this meta item has one video, and it's ID is equal to the meta item id.
     */
-  var videos: js.UndefOr[js.Array[MetaVideo]] = js.native
+  var videos: js.UndefOr[js.Array[MetaVideo]] = js.undefined
   /**
     * URL to official website.
     */
-  var website: js.UndefOr[String] = js.native
+  var website: js.UndefOr[String] = js.undefined
 }
 
 object MetaDetail {
   @scala.inline
-  def apply(id: String, name: String, `type`: ContentType): MetaDetail = {
+  def apply(
+    id: String,
+    name: String,
+    `type`: ContentType,
+    awards: String = null,
+    background: String = null,
+    behaviourHints: DefaultVideo = null,
+    cast: js.Array[String] = null,
+    country: String = null,
+    description: String = null,
+    director: js.Array[String] = null,
+    genres: js.Array[String] = null,
+    imdbRating: String = null,
+    language: String = null,
+    links: js.Array[MetaLink] = null,
+    logo: String = null,
+    poster: String = null,
+    posterShape: square | regular | landscape = null,
+    releaseInfo: String = null,
+    released: String = null,
+    runtime: String = null,
+    videos: js.Array[MetaVideo] = null,
+    website: String = null
+  ): MetaDetail = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (awards != null) __obj.updateDynamic("awards")(awards.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (behaviourHints != null) __obj.updateDynamic("behaviourHints")(behaviourHints.asInstanceOf[js.Any])
+    if (cast != null) __obj.updateDynamic("cast")(cast.asInstanceOf[js.Any])
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (director != null) __obj.updateDynamic("director")(director.asInstanceOf[js.Any])
+    if (genres != null) __obj.updateDynamic("genres")(genres.asInstanceOf[js.Any])
+    if (imdbRating != null) __obj.updateDynamic("imdbRating")(imdbRating.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
+    if (poster != null) __obj.updateDynamic("poster")(poster.asInstanceOf[js.Any])
+    if (posterShape != null) __obj.updateDynamic("posterShape")(posterShape.asInstanceOf[js.Any])
+    if (releaseInfo != null) __obj.updateDynamic("releaseInfo")(releaseInfo.asInstanceOf[js.Any])
+    if (released != null) __obj.updateDynamic("released")(released.asInstanceOf[js.Any])
+    if (runtime != null) __obj.updateDynamic("runtime")(runtime.asInstanceOf[js.Any])
+    if (videos != null) __obj.updateDynamic("videos")(videos.asInstanceOf[js.Any])
+    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetaDetail]
   }
-  @scala.inline
-  implicit class MetaDetailOps[Self <: MetaDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwards(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awards")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwards: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awards")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBehaviourHints(value: DefaultVideo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviourHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBehaviourHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviourHints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCast(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCast: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirector(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("director")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("director")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenres(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genres")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenres: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genres")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImdbRating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imdbRating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImdbRating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imdbRating")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Array[MetaLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseInfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleased(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("released")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleased: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("released")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuntime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideos(value: js.Array[MetaVideo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsite(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

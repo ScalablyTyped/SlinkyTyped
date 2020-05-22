@@ -9,101 +9,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxValidationGroupResult extends js.Object {
-  /** An array of the validation rules that failed. */
+  /** @name dxValidationGroupResult.brokenRules */
   var brokenRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
     ]
-  ] = js.native
-  /** A promise that is fulfilled when all async rules are validated. */
-  var complete: js.UndefOr[Promise[dxValidationGroupResult] | JQueryPromise[dxValidationGroupResult]] = js.native
-  /** Indicates whether all the rules checked for the group are satisfied. */
-  var isValid: js.UndefOr[Boolean] = js.native
-  /** Indicates the validation status. */
-  var status: js.UndefOr[valid | invalid | pending] = js.native
-  /** Validator widgets included in the validated group. */
-  var validators: js.UndefOr[js.Array[_]] = js.native
+  ] = js.undefined
+  /** @name dxValidationGroupResult.complete */
+  var complete: js.UndefOr[Promise[dxValidationGroupResult] | JQueryPromise[dxValidationGroupResult]] = js.undefined
+  /** @name dxValidationGroupResult.isValid */
+  var isValid: js.UndefOr[Boolean] = js.undefined
+  /** @name dxValidationGroupResult.status */
+  var status: js.UndefOr[valid | invalid | pending] = js.undefined
+  /** @name dxValidationGroupResult.validators */
+  var validators: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object dxValidationGroupResult {
   @scala.inline
-  def apply(): dxValidationGroupResult = {
+  def apply(
+    brokenRules: js.Array[
+      RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
+    ] = null,
+    complete: Promise[dxValidationGroupResult] | JQueryPromise[dxValidationGroupResult] = null,
+    isValid: js.UndefOr[Boolean] = js.undefined,
+    status: valid | invalid | pending = null,
+    validators: js.Array[_] = null
+  ): dxValidationGroupResult = {
     val __obj = js.Dynamic.literal()
+    if (brokenRules != null) __obj.updateDynamic("brokenRules")(brokenRules.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(complete.asInstanceOf[js.Any])
+    if (!js.isUndefined(isValid)) __obj.updateDynamic("isValid")(isValid.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxValidationGroupResult]
   }
-  @scala.inline
-  implicit class dxValidationGroupResultOps[Self <: dxValidationGroupResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrokenRules(
-      value: js.Array[
-          RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brokenRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokenRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brokenRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: Promise[dxValidationGroupResult] | JQueryPromise[dxValidationGroupResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsValid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsValid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: valid | invalid | pending): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidators(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

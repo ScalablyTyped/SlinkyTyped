@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProxyConfiguration extends IProxyConfiguration
 
 object ProxyConfiguration {

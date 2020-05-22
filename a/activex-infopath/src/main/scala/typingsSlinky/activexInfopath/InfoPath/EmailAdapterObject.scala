@@ -5,23 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EmailAdapterObject extends js.Object {
-  var AttachmentFileName: String = js.native
-  var AttachmentType: XdAttachmentType = js.native
-  var BCC: String = js.native
-  var CC: String = js.native
+  var AttachmentFileName: String
+  var AttachmentType: XdAttachmentType
+  var BCC: String
+  var CC: String
   @JSName("InfoPath.EmailAdapterObject_typekey")
-  var InfoPathDotEmailAdapterObject_typekey: EmailAdapterObject = js.native
-  var Intro: String = js.native
-  val Name: String = js.native
-  val QueryAllowed: Boolean = js.native
-  var Subject: String = js.native
-  val SubmitAllowed: Boolean = js.native
-  var To: String = js.native
-  def Query(): Unit = js.native
-  def Submit(): Unit = js.native
-  def SubmitData(pData: IXMLDOMNode): Unit = js.native
+  var InfoPathDotEmailAdapterObject_typekey: EmailAdapterObject
+  var Intro: String
+  val Name: String
+  val QueryAllowed: Boolean
+  var Subject: String
+  val SubmitAllowed: Boolean
+  var To: String
+  def Query(): Unit
+  def Submit(): Unit
+  def SubmitData(pData: IXMLDOMNode): Unit
 }
 
 object EmailAdapterObject {
@@ -46,97 +45,5 @@ object EmailAdapterObject {
     __obj.updateDynamic("InfoPath.EmailAdapterObject_typekey")(InfoPathDotEmailAdapterObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailAdapterObject]
   }
-  @scala.inline
-  implicit class EmailAdapterObjectOps[Self <: EmailAdapterObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachmentFileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachmentFileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachmentType(value: XdAttachmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachmentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBCC(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BCC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCC(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInfoPathDotEmailAdapterObject_typekey(value: EmailAdapterObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.EmailAdapterObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntro(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Intro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Submit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSubmitAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmitData(value: IXMLDOMNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("To")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

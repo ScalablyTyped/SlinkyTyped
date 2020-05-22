@@ -25,10 +25,6 @@ object global extends js.Object {
   var ALLOC_STATIC: Double = js.native
   var IDBFS: FileSystemType = js.native
   var MEMFS: FileSystemType = js.native
-  // By default Emscripten emits a single global Module.  Users setting -s
-  // MODULARIZE=1 -s EXPORT_NAME=MyMod should declare their own types, e.g.
-  // declare var MyMod: EmscriptenModule;
-  var Module: EmscriptenModule = js.native
   var NODEFS: FileSystemType = js.native
   def UTF16ToString(ptr: Double): String = js.native
   def UTF32ToString(ptr: Double): String = js.native

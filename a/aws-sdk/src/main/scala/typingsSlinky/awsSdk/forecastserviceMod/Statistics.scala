@@ -42,113 +42,26 @@ trait Statistics extends js.Object {
 
 object Statistics {
   @scala.inline
-  def apply(): Statistics = {
+  def apply(
+    Avg: js.UndefOr[Double] = js.undefined,
+    Count: js.UndefOr[Integer] = js.undefined,
+    CountDistinct: js.UndefOr[Integer] = js.undefined,
+    CountNan: js.UndefOr[Integer] = js.undefined,
+    CountNull: js.UndefOr[Integer] = js.undefined,
+    Max: String = null,
+    Min: String = null,
+    Stddev: js.UndefOr[Double] = js.undefined
+  ): Statistics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Avg)) __obj.updateDynamic("Avg")(Avg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Count)) __obj.updateDynamic("Count")(Count.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CountDistinct)) __obj.updateDynamic("CountDistinct")(CountDistinct.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CountNan)) __obj.updateDynamic("CountNan")(CountNan.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(CountNull)) __obj.updateDynamic("CountNull")(CountNull.get.asInstanceOf[js.Any])
+    if (Max != null) __obj.updateDynamic("Max")(Max.asInstanceOf[js.Any])
+    if (Min != null) __obj.updateDynamic("Min")(Min.asInstanceOf[js.Any])
+    if (!js.isUndefined(Stddev)) __obj.updateDynamic("Stddev")(Stddev.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statistics]
   }
-  @scala.inline
-  implicit class StatisticsOps[Self <: Statistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Avg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Avg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountDistinct(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountDistinct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountDistinct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountDistinct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountNan(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountNan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountNan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountNan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountNull(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CountNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStddev(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stddev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStddev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stddev")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

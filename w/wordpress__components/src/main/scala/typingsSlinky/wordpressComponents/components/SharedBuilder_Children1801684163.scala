@@ -1,0 +1,13 @@
+package typingsSlinky.wordpressComponents.components
+
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@scala.inline
+class SharedBuilder_Children1801684163[R <: js.Object] (val args: js.Array[js.Any])
+  extends AnyVal
+     with StBuildingComponent[tag.type, R]
+

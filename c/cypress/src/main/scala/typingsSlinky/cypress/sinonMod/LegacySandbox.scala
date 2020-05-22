@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LegacySandbox extends js.Object {
-  var sandbox: `1` = js.native
+  var sandbox: `1`
 }
 
 object LegacySandbox {
@@ -16,19 +15,5 @@ object LegacySandbox {
     val __obj = js.Dynamic.literal(sandbox = sandbox.asInstanceOf[js.Any])
     __obj.asInstanceOf[LegacySandbox]
   }
-  @scala.inline
-  implicit class LegacySandboxOps[Self <: LegacySandbox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSandbox(value: `1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

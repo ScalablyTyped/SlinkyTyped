@@ -4,95 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColInfo extends js.Object {
   /** Excel's "Max Digit Width" unit, always integral */
-  var MDW: js.UndefOr[Double] = js.native
+  var MDW: js.UndefOr[Double] = js.undefined
   /* --- visibility --- */
   /** if true, the column is hidden */
-  var hidden: js.UndefOr[Boolean] = js.native
+  var hidden: js.UndefOr[Boolean] = js.undefined
   /** width in "characters" */
-  var wch: js.UndefOr[Double] = js.native
+  var wch: js.UndefOr[Double] = js.undefined
   /* --- column width --- */
   /** width in Excel's "Max Digit Width", width*256 is integral */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   /** width in screen pixels */
-  var wpx: js.UndefOr[Double] = js.native
+  var wpx: js.UndefOr[Double] = js.undefined
 }
 
 object ColInfo {
   @scala.inline
-  def apply(): ColInfo = {
+  def apply(
+    MDW: js.UndefOr[Double] = js.undefined,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    wch: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined,
+    wpx: js.UndefOr[Double] = js.undefined
+  ): ColInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MDW)) __obj.updateDynamic("MDW")(MDW.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wch)) __obj.updateDynamic("wch")(wch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wpx)) __obj.updateDynamic("wpx")(wpx.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColInfo]
   }
-  @scala.inline
-  implicit class ColInfoOps[Self <: ColInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMDW(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MDW")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMDW: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MDW")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWpx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wpx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWpx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wpx")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

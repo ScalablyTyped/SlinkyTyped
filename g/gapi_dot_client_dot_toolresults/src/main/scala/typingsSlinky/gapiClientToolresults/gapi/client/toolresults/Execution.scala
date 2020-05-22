@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Execution extends js.Object {
   /**
     * The time when the Execution status transitioned to COMPLETE.
@@ -13,7 +12,7 @@ trait Execution extends js.Object {
     *
     * - In response: set if the execution state is COMPLETE. - In create/update request: never set
     */
-  var completionTime: js.UndefOr[Timestamp] = js.native
+  var completionTime: js.UndefOr[Timestamp] = js.undefined
   /**
     * The time when the Execution was created.
     *
@@ -21,7 +20,7 @@ trait Execution extends js.Object {
     *
     * - In response: always set - In create/update request: never set
     */
-  var creationTime: js.UndefOr[Timestamp] = js.native
+  var creationTime: js.UndefOr[Timestamp] = js.undefined
   /**
     * A unique identifier within a History for this Execution.
     *
@@ -29,19 +28,19 @@ trait Execution extends js.Object {
     *
     * - In response always set - In create/update request: never set
     */
-  var executionId: js.UndefOr[String] = js.native
+  var executionId: js.UndefOr[String] = js.undefined
   /**
     * Classify the result, for example into SUCCESS or FAILURE
     *
     * - In response: present if set by create/update request - In create/update request: optional
     */
-  var outcome: js.UndefOr[Outcome] = js.native
+  var outcome: js.UndefOr[Outcome] = js.undefined
   /**
     * Lightweight information about execution request.
     *
     * - In response: present if set by create - In create: optional - In update: optional
     */
-  var specification: js.UndefOr[Specification] = js.native
+  var specification: js.UndefOr[Specification] = js.undefined
   /**
     * The initial state is IN_PROGRESS.
     *
@@ -56,112 +55,35 @@ trait Execution extends js.Object {
     *
     * - In response always set - In create/update request: optional
     */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
   /**
     * TestExecution Matrix ID that the TestExecutionService uses.
     *
     * - In response: present if set by create - In create: optional - In update: never set
     */
-  var testExecutionMatrixId: js.UndefOr[String] = js.native
+  var testExecutionMatrixId: js.UndefOr[String] = js.undefined
 }
 
 object Execution {
   @scala.inline
-  def apply(): Execution = {
+  def apply(
+    completionTime: Timestamp = null,
+    creationTime: Timestamp = null,
+    executionId: String = null,
+    outcome: Outcome = null,
+    specification: Specification = null,
+    state: String = null,
+    testExecutionMatrixId: String = null
+  ): Execution = {
     val __obj = js.Dynamic.literal()
+    if (completionTime != null) __obj.updateDynamic("completionTime")(completionTime.asInstanceOf[js.Any])
+    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
+    if (executionId != null) __obj.updateDynamic("executionId")(executionId.asInstanceOf[js.Any])
+    if (outcome != null) __obj.updateDynamic("outcome")(outcome.asInstanceOf[js.Any])
+    if (specification != null) __obj.updateDynamic("specification")(specification.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (testExecutionMatrixId != null) __obj.updateDynamic("testExecutionMatrixId")(testExecutionMatrixId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Execution]
   }
-  @scala.inline
-  implicit class ExecutionOps[Self <: Execution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletionTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutcome(value: Outcome): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutcome: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpecification(value: Specification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpecification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("specification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestExecutionMatrixId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testExecutionMatrixId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestExecutionMatrixId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testExecutionMatrixId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

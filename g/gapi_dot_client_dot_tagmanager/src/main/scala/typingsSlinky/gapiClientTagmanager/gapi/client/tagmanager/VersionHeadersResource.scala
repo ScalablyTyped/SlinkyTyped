@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VersionHeadersResource extends js.Object {
   /** Gets the latest container version header */
-  def latest(request: Alt): Request[ContainerVersionHeader] = js.native
+  def latest(request: Alt): Request[ContainerVersionHeader]
   /** Lists all Container Versions of a GTM Container. */
-  def list(request: IncludeDeleted): Request[ListContainerVersionsResponse] = js.native
+  def list(request: IncludeDeleted): Request[ListContainerVersionsResponse]
 }
 
 object VersionHeadersResource {
@@ -24,25 +23,5 @@ object VersionHeadersResource {
     val __obj = js.Dynamic.literal(latest = js.Any.fromFunction1(latest), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[VersionHeadersResource]
   }
-  @scala.inline
-  implicit class VersionHeadersResourceOps[Self <: VersionHeadersResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLatest(value: Alt => Request[ContainerVersionHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: IncludeDeleted => Request[ListContainerVersionsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

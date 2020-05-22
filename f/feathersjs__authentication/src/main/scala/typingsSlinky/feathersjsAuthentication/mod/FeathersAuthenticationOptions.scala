@@ -6,127 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeathersAuthenticationOptions extends js.Object {
-  var cookie: js.UndefOr[Enabled] = js.native
-  var entity: js.UndefOr[String] = js.native
-  var header: js.UndefOr[String] = js.native
-  var jwt: js.UndefOr[Algorithm] = js.native
-  var passReqToCallback: js.UndefOr[Boolean] = js.native
-  var path: js.UndefOr[String] = js.native
-  var service: js.UndefOr[String] = js.native
-  var session: js.UndefOr[Boolean] = js.native
+  var cookie: js.UndefOr[Enabled] = js.undefined
+  var entity: js.UndefOr[String] = js.undefined
+  var header: js.UndefOr[String] = js.undefined
+  var jwt: js.UndefOr[Algorithm] = js.undefined
+  var passReqToCallback: js.UndefOr[Boolean] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var service: js.UndefOr[String] = js.undefined
+  var session: js.UndefOr[Boolean] = js.undefined
 }
 
 object FeathersAuthenticationOptions {
   @scala.inline
-  def apply(): FeathersAuthenticationOptions = {
+  def apply(
+    cookie: Enabled = null,
+    entity: String = null,
+    header: String = null,
+    jwt: Algorithm = null,
+    passReqToCallback: js.UndefOr[Boolean] = js.undefined,
+    path: String = null,
+    service: String = null,
+    session: js.UndefOr[Boolean] = js.undefined
+  ): FeathersAuthenticationOptions = {
     val __obj = js.Dynamic.literal()
+    if (cookie != null) __obj.updateDynamic("cookie")(cookie.asInstanceOf[js.Any])
+    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (jwt != null) __obj.updateDynamic("jwt")(jwt.asInstanceOf[js.Any])
+    if (!js.isUndefined(passReqToCallback)) __obj.updateDynamic("passReqToCallback")(passReqToCallback.get.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
+    if (!js.isUndefined(session)) __obj.updateDynamic("session")(session.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeathersAuthenticationOptions]
   }
-  @scala.inline
-  implicit class FeathersAuthenticationOptionsOps[Self <: FeathersAuthenticationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCookie(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCookie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJwt(value: Algorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassReqToCallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassReqToCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSession(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

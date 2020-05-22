@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormProvider {
-  @JSImport("rc-field-form/lib", "FormProvider")
+  @JSImport("rc-field-form", "FormProvider")
   @js.native
   object component extends js.Object
   

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.vegaTypings.anon.Bind
 import typingsSlinky.vegaTypings.autosizeMod.AutoSize
 import typingsSlinky.vegaTypings.colorMod.Color
+import typingsSlinky.vegaTypings.localeMod.Locale
 import typingsSlinky.vegaTypings.paddingMod.Padding
 import typingsSlinky.vegaTypings.signalMod.InitSignal
 import typingsSlinky.vegaTypings.signalMod.NewSignal
@@ -14,449 +15,118 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<std.Record<vega-typings.vega-typings/types/spec/config.MarkConfigKeys, vega-typings.vega-typings/types/spec/config.MarkConfig>> */
 /* Inlined parent std.Partial<std.Record<vega-typings.vega-typings/types/spec/config.AxisConfigKeys, vega-typings.vega-typings/types/spec/config.AxisConfig>> */
-@js.native
 trait Config extends js.Object {
-  var arc: js.UndefOr[MarkConfig] = js.native
-  var area: js.UndefOr[MarkConfig] = js.native
-  var autosize: js.UndefOr[AutoSize | SignalRef] = js.native
-  var axis: js.UndefOr[AxisConfig] = js.native
-  var axisBand: js.UndefOr[AxisConfig] = js.native
-  var axisBottom: js.UndefOr[AxisConfig] = js.native
-  var axisLeft: js.UndefOr[AxisConfig] = js.native
-  var axisRight: js.UndefOr[AxisConfig] = js.native
-  var axisTop: js.UndefOr[AxisConfig] = js.native
-  var axisX: js.UndefOr[AxisConfig] = js.native
-  var axisY: js.UndefOr[AxisConfig] = js.native
-  var background: js.UndefOr[Null | Color | SignalRef] = js.native
+  var arc: js.UndefOr[MarkConfig] = js.undefined
+  var area: js.UndefOr[MarkConfig] = js.undefined
+  var autosize: js.UndefOr[AutoSize | SignalRef] = js.undefined
+  var axis: js.UndefOr[AxisConfig] = js.undefined
+  var axisBand: js.UndefOr[AxisConfig] = js.undefined
+  var axisBottom: js.UndefOr[AxisConfig] = js.undefined
+  var axisLeft: js.UndefOr[AxisConfig] = js.undefined
+  var axisRight: js.UndefOr[AxisConfig] = js.undefined
+  var axisTop: js.UndefOr[AxisConfig] = js.undefined
+  var axisX: js.UndefOr[AxisConfig] = js.undefined
+  var axisY: js.UndefOr[AxisConfig] = js.undefined
+  var background: js.UndefOr[Null | Color | SignalRef] = js.undefined
    // TODO
-  var events: js.UndefOr[Bind] = js.native
-  var group: js.UndefOr[js.Any] = js.native
-  var image: js.UndefOr[MarkConfig] = js.native
-  var legend: js.UndefOr[LegendConfig] = js.native
-  var line: js.UndefOr[MarkConfig] = js.native
+  var events: js.UndefOr[Bind] = js.undefined
+  var group: js.UndefOr[js.Any] = js.undefined
+  var image: js.UndefOr[MarkConfig] = js.undefined
+  var legend: js.UndefOr[LegendConfig] = js.undefined
+  var line: js.UndefOr[MarkConfig] = js.undefined
   /**
     * A delimiter, such as a newline character, upon which to break text strings into multiple lines. This property provides a global default for text marks, which is overridden by mark or style config settings, and by the "lineBreak" mark encoding channel. If signal-valued, either string or regular expression (regexp) values are valid.
     */
-  var lineBreak: js.UndefOr[String | SignalRef] = js.native
-  var mark: js.UndefOr[MarkConfig] = js.native
-  var padding: js.UndefOr[Padding | SignalRef] = js.native
-  var path: js.UndefOr[MarkConfig] = js.native
-  var projection: js.UndefOr[ProjectionConfig] = js.native
-  var range: js.UndefOr[RangeConfig] = js.native
-  var rect: js.UndefOr[MarkConfig] = js.native
-  var rule: js.UndefOr[MarkConfig] = js.native
-  var shape: js.UndefOr[MarkConfig] = js.native
-  var signals: js.UndefOr[js.Array[InitSignal | NewSignal]] = js.native
-  var style: js.UndefOr[StringDictionary[MarkConfig]] = js.native
-  var symbol: js.UndefOr[MarkConfig] = js.native
-  var text: js.UndefOr[MarkConfig] = js.native
-  var title: js.UndefOr[TitleConfig] = js.native
-  var trail: js.UndefOr[MarkConfig] = js.native
+  var lineBreak: js.UndefOr[String | SignalRef] = js.undefined
+  var locale: js.UndefOr[Locale] = js.undefined
+  var mark: js.UndefOr[MarkConfig] = js.undefined
+  var padding: js.UndefOr[Padding | SignalRef] = js.undefined
+  var path: js.UndefOr[MarkConfig] = js.undefined
+  var projection: js.UndefOr[ProjectionConfig] = js.undefined
+  var range: js.UndefOr[RangeConfig] = js.undefined
+  var rect: js.UndefOr[MarkConfig] = js.undefined
+  var rule: js.UndefOr[MarkConfig] = js.undefined
+  var shape: js.UndefOr[MarkConfig] = js.undefined
+  var signals: js.UndefOr[js.Array[InitSignal | NewSignal]] = js.undefined
+  var style: js.UndefOr[StringDictionary[MarkConfig]] = js.undefined
+  var symbol: js.UndefOr[MarkConfig] = js.undefined
+  var text: js.UndefOr[MarkConfig] = js.undefined
+  var title: js.UndefOr[TitleConfig] = js.undefined
+  var trail: js.UndefOr[MarkConfig] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    arc: MarkConfig = null,
+    area: MarkConfig = null,
+    autosize: AutoSize | SignalRef = null,
+    axis: AxisConfig = null,
+    axisBand: AxisConfig = null,
+    axisBottom: AxisConfig = null,
+    axisLeft: AxisConfig = null,
+    axisRight: AxisConfig = null,
+    axisTop: AxisConfig = null,
+    axisX: AxisConfig = null,
+    axisY: AxisConfig = null,
+    background: js.UndefOr[Null | Color | SignalRef] = js.undefined,
+    events: Bind = null,
+    group: js.Any = null,
+    image: MarkConfig = null,
+    legend: LegendConfig = null,
+    line: MarkConfig = null,
+    lineBreak: String | SignalRef = null,
+    locale: Locale = null,
+    mark: MarkConfig = null,
+    padding: Padding | SignalRef = null,
+    path: MarkConfig = null,
+    projection: ProjectionConfig = null,
+    range: RangeConfig = null,
+    rect: MarkConfig = null,
+    rule: MarkConfig = null,
+    shape: MarkConfig = null,
+    signals: js.Array[InitSignal | NewSignal] = null,
+    style: StringDictionary[MarkConfig] = null,
+    symbol: MarkConfig = null,
+    text: MarkConfig = null,
+    title: TitleConfig = null,
+    trail: MarkConfig = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (arc != null) __obj.updateDynamic("arc")(arc.asInstanceOf[js.Any])
+    if (area != null) __obj.updateDynamic("area")(area.asInstanceOf[js.Any])
+    if (autosize != null) __obj.updateDynamic("autosize")(autosize.asInstanceOf[js.Any])
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (axisBand != null) __obj.updateDynamic("axisBand")(axisBand.asInstanceOf[js.Any])
+    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
+    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
+    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
+    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
+    if (axisX != null) __obj.updateDynamic("axisX")(axisX.asInstanceOf[js.Any])
+    if (axisY != null) __obj.updateDynamic("axisY")(axisY.asInstanceOf[js.Any])
+    if (!js.isUndefined(background)) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
+    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (lineBreak != null) __obj.updateDynamic("lineBreak")(lineBreak.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (mark != null) __obj.updateDynamic("mark")(mark.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (rect != null) __obj.updateDynamic("rect")(rect.asInstanceOf[js.Any])
+    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (signals != null) __obj.updateDynamic("signals")(signals.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (trail != null) __obj.updateDynamic("trail")(trail.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArc(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArea(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosize(value: AutoSize | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxis(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisBand(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisBand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisBottom(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisLeft(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisRight(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisRight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisTop(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisX(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisY(value: AxisConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: Color | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(null)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: Bind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegend(value: LegendConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineBreak(value: String | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineBreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMark(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Padding | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: ProjectionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: RangeConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRect(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRule(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignals(value: js.Array[InitSignal | NewSignal]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StringDictionary[MarkConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: TitleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrail(value: MarkConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

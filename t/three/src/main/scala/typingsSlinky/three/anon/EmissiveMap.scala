@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EmissiveMap extends js.Object {
-  var emissiveMap: IUniform = js.native
+  var emissiveMap: IUniform
 }
 
 object EmissiveMap {
@@ -16,19 +15,5 @@ object EmissiveMap {
     val __obj = js.Dynamic.literal(emissiveMap = emissiveMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmissiveMap]
   }
-  @scala.inline
-  implicit class EmissiveMapOps[Self <: EmissiveMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmissiveMap(value: IUniform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emissiveMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

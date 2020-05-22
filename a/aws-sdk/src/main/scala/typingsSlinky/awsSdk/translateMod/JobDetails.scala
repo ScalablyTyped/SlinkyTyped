@@ -22,53 +22,16 @@ trait JobDetails extends js.Object {
 
 object JobDetails {
   @scala.inline
-  def apply(): JobDetails = {
+  def apply(
+    DocumentsWithErrorsCount: js.UndefOr[Integer] = js.undefined,
+    InputDocumentsCount: js.UndefOr[Integer] = js.undefined,
+    TranslatedDocumentsCount: js.UndefOr[Integer] = js.undefined
+  ): JobDetails = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DocumentsWithErrorsCount)) __obj.updateDynamic("DocumentsWithErrorsCount")(DocumentsWithErrorsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InputDocumentsCount)) __obj.updateDynamic("InputDocumentsCount")(InputDocumentsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TranslatedDocumentsCount)) __obj.updateDynamic("TranslatedDocumentsCount")(TranslatedDocumentsCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobDetails]
   }
-  @scala.inline
-  implicit class JobDetailsOps[Self <: JobDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentsWithErrorsCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentsWithErrorsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocumentsWithErrorsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentsWithErrorsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputDocumentsCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDocumentsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputDocumentsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDocumentsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslatedDocumentsCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TranslatedDocumentsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslatedDocumentsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TranslatedDocumentsCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

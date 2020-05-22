@@ -65,6 +65,7 @@ trait Reference extends Query {
     * ```
     */
   var parent: Reference | Null = js.native
+  /** @deprecated Removed in next major release to match Web SDK typings. */
   var path: String = js.native
   /**
     * The root `Reference` of the Database.

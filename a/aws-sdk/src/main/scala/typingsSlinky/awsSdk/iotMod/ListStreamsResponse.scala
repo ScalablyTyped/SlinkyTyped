@@ -18,41 +18,11 @@ trait ListStreamsResponse extends js.Object {
 
 object ListStreamsResponse {
   @scala.inline
-  def apply(): ListStreamsResponse = {
+  def apply(nextToken: NextToken = null, streams: StreamsSummary = null): ListStreamsResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
+    if (streams != null) __obj.updateDynamic("streams")(streams.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStreamsResponse]
   }
-  @scala.inline
-  implicit class ListStreamsResponseOps[Self <: ListStreamsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreams(value: StreamsSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

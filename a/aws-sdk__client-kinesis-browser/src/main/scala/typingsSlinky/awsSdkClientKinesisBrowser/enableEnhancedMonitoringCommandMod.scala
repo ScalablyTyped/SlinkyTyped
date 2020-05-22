@@ -26,9 +26,16 @@ object enableEnhancedMonitoringCommandMod extends js.Object {
           Blob
         ] {
     def this(input: EnableEnhancedMonitoringInput) = this()
+    /* CompleteClass */
+    override val input: EnableEnhancedMonitoringInput = js.native
     val middlewareStack: MiddlewareStack[EnableEnhancedMonitoringInput, EnableEnhancedMonitoringOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KinesisResolvedConfiguration
+    ): Handler[EnableEnhancedMonitoringInput, EnableEnhancedMonitoringOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[EnableEnhancedMonitoringInput, EnableEnhancedMonitoringOutput] = js.native
   }

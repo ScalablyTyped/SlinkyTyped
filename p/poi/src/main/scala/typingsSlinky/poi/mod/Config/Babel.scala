@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Babel extends js.Object {
-  var jsx: js.UndefOr[String] = js.native
-  var namedImports: js.UndefOr[String | NamedImportsOptions] = js.native
-  var transpileModules: js.UndefOr[String | js.Array[String]] = js.native
+  var jsx: js.UndefOr[String] = js.undefined
+  var namedImports: js.UndefOr[String | NamedImportsOptions] = js.undefined
+  var transpileModules: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 @JSImport("poi", "Config.Babel")

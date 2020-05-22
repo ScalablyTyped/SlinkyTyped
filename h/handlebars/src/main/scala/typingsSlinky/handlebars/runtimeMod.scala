@@ -21,12 +21,24 @@ object runtimeMod extends js.Object {
     extends typingsSlinky.handlebars.Handlebars.Exception {
     def this(message: String) = this()
     def this(message: String, node: Node) = this()
+    /* CompleteClass */
+    override var description: String = js.native
+    /* CompleteClass */
+    override var fileName: String = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+    /* CompleteClass */
+    override var number: Double = js.native
   }
   
   @js.native
   class SafeString protected ()
     extends typingsSlinky.handlebars.Handlebars.SafeString {
     def this(str: String) = this()
+    /* CompleteClass */
+    override def toHTML(): String = js.native
   }
   
   @js.native

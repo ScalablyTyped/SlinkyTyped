@@ -6,48 +6,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2MouseJoint extends b2Joint {
   /**
-  		* Gets the damping ratio.
-  		* @return Damping ratio.
-  		**/
-  def GetDampingRatio(): Double = js.native
+    * Gets the damping ratio.
+    * @return Damping ratio.
+    **/
+  def GetDampingRatio(): Double
   /**
-  		* Gets the frequency.
-  		* @return Frequency.
-  		**/
-  def GetFrequency(): Double = js.native
+    * Gets the frequency.
+    * @return Frequency.
+    **/
+  def GetFrequency(): Double
   /**
-  		* Gets the max force.
-  		* @return Max force.
-  		**/
-  def GetMaxForce(): Double = js.native
+    * Gets the max force.
+    * @return Max force.
+    **/
+  def GetMaxForce(): Double
   /**
-  		* Gets the target.
-  		* @return Target.
-  		**/
-  def GetTarget(): b2Vec2 = js.native
+    * Gets the target.
+    * @return Target.
+    **/
+  def GetTarget(): b2Vec2
   /**
-  		* Sets the damping ratio.
-  		* @param ratio New damping ratio.
-  		**/
-  def SetDampingRatio(ratio: Double): Unit = js.native
+    * Sets the damping ratio.
+    * @param ratio New damping ratio.
+    **/
+  def SetDampingRatio(ratio: Double): Unit
   /**
-  		* Sets the frequency.
-  		* @param hz New frequency (hertz).
-  		**/
-  def SetFrequency(hz: Double): Unit = js.native
+    * Sets the frequency.
+    * @param hz New frequency (hertz).
+    **/
+  def SetFrequency(hz: Double): Unit
   /**
-  		* Sets the max force.
-  		* @param maxForce New max force.
-  		**/
-  def SetMaxForce(maxForce: Double): Unit = js.native
+    * Sets the max force.
+    * @param maxForce New max force.
+    **/
+  def SetMaxForce(maxForce: Double): Unit
   /**
-  		* Use this to update the target point.
-  		* @param target New target.
-  		**/
-  def SetTarget(target: b2Vec2): Unit = js.native
+    * Use this to update the target point.
+    * @param target New target.
+    **/
+  def SetTarget(target: b2Vec2): Unit
 }
 
 object b2MouseJoint {
@@ -76,61 +75,5 @@ object b2MouseJoint {
     val __obj = js.Dynamic.literal(GetAnchorA = js.Any.fromFunction0(GetAnchorA), GetAnchorB = js.Any.fromFunction0(GetAnchorB), GetBodyA = js.Any.fromFunction0(GetBodyA), GetBodyB = js.Any.fromFunction0(GetBodyB), GetDampingRatio = js.Any.fromFunction0(GetDampingRatio), GetFrequency = js.Any.fromFunction0(GetFrequency), GetMaxForce = js.Any.fromFunction0(GetMaxForce), GetNext = js.Any.fromFunction0(GetNext), GetReactionForce = js.Any.fromFunction1(GetReactionForce), GetReactionTorque = js.Any.fromFunction1(GetReactionTorque), GetTarget = js.Any.fromFunction0(GetTarget), GetType = js.Any.fromFunction0(GetType), GetUserData = js.Any.fromFunction0(GetUserData), IsActive = js.Any.fromFunction0(IsActive), SetDampingRatio = js.Any.fromFunction1(SetDampingRatio), SetFrequency = js.Any.fromFunction1(SetFrequency), SetMaxForce = js.Any.fromFunction1(SetMaxForce), SetTarget = js.Any.fromFunction1(SetTarget), SetUserData = js.Any.fromFunction1(SetUserData))
     __obj.asInstanceOf[b2MouseJoint]
   }
-  @scala.inline
-  implicit class b2MouseJointOps[Self <: b2MouseJoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDampingRatio(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDampingRatio")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFrequency(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFrequency")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMaxForce(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMaxForce")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTarget(value: () => b2Vec2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTarget")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDampingRatio(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDampingRatio")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFrequency(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFrequency")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMaxForce(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetMaxForce")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTarget(value: b2Vec2 => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetTarget")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

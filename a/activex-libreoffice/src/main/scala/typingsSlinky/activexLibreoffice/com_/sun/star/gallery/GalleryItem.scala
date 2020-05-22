@@ -12,7 +12,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** service to get access to the properties of a single Gallery item */
-@js.native
 trait GalleryItem
   extends XGalleryItem
      with XPropertySet {
@@ -21,33 +20,33 @@ trait GalleryItem
     *
     * This is an optional property and may not available for every item
     */
-  var Drawing: XComponent = js.native
+  var Drawing: XComponent
   /**
     * The type of the Gallery item
     * @see GalleryItemType
     */
-  var GalleryItemType: Double = js.native
+  var GalleryItemType: Double
   /**
     * the graphic content of the Gallery item
     *
     * This is an optional property and may not available for every item
     */
-  var Graphic: XGraphic = js.native
+  var Graphic: XGraphic
   /**
     * the thumbnail of the Gallery item
     *
     * The thumbnail may be either a pixel or a vector graphic
     */
-  var Thumbnail: XGraphic = js.native
+  var Thumbnail: XGraphic
   /** the title of the Gallery item */
-  var Title: String = js.native
+  var Title: String
   /**
     * the URL of the Gallery item
     *
     * The interpretation of the URL depends on the type of the Gallery item. In case of graphic and media items, the URL is a "real" URL, in case of
     * drawings it is a private URL
     */
-  var URL: String = js.native
+  var URL: String
 }
 
 object GalleryItem {
@@ -76,49 +75,5 @@ object GalleryItem {
     val __obj = js.Dynamic.literal(Drawing = Drawing.asInstanceOf[js.Any], GalleryItemType = GalleryItemType.asInstanceOf[js.Any], Graphic = Graphic.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Thumbnail = Thumbnail.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getType = js.Any.fromFunction0(getType), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[GalleryItem]
   }
-  @scala.inline
-  implicit class GalleryItemOps[Self <: GalleryItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDrawing(value: XComponent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Drawing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGalleryItemType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GalleryItemType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGraphic(value: XGraphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Graphic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: XGraphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

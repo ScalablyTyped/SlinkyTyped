@@ -4,93 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TiffOptions extends OutputOptions {
   /** Compression options: lzw, deflate, jpeg, ccittfax4 (optional, default 'jpeg') */
-  var compression: js.UndefOr[String] = js.native
+  var compression: js.UndefOr[String] = js.undefined
   /** Compression predictor options: none, horizontal, float (optional, default 'horizontal') */
-  var predictor: js.UndefOr[String] = js.native
+  var predictor: js.UndefOr[String] = js.undefined
   /** Squash 8-bit images down to 1 bit (optional, default false) */
-  var squash: js.UndefOr[Boolean] = js.native
+  var squash: js.UndefOr[Boolean] = js.undefined
   /** Horizontal resolution in pixels/mm (optional, default 1.0) */
-  var xres: js.UndefOr[Double] = js.native
+  var xres: js.UndefOr[Double] = js.undefined
   /** Vertical resolution in pixels/mm (optional, default 1.0) */
-  var yres: js.UndefOr[Double] = js.native
+  var yres: js.UndefOr[Double] = js.undefined
 }
 
 object TiffOptions {
   @scala.inline
-  def apply(): TiffOptions = {
+  def apply(
+    compression: String = null,
+    force: js.UndefOr[Boolean] = js.undefined,
+    predictor: String = null,
+    quality: js.UndefOr[Double] = js.undefined,
+    squash: js.UndefOr[Boolean] = js.undefined,
+    xres: js.UndefOr[Double] = js.undefined,
+    yres: js.UndefOr[Double] = js.undefined
+  ): TiffOptions = {
     val __obj = js.Dynamic.literal()
+    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (predictor != null) __obj.updateDynamic("predictor")(predictor.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(squash)) __obj.updateDynamic("squash")(squash.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xres)) __obj.updateDynamic("xres")(xres.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yres)) __obj.updateDynamic("yres")(yres.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TiffOptions]
   }
-  @scala.inline
-  implicit class TiffOptionsOps[Self <: TiffOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPredictor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predictor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSquash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("squash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSquash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("squash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXres(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xres")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXres: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xres")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYres(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yres")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYres: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yres")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

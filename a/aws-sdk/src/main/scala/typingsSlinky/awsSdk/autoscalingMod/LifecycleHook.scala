@@ -46,125 +46,28 @@ trait LifecycleHook extends js.Object {
 
 object LifecycleHook {
   @scala.inline
-  def apply(): LifecycleHook = {
+  def apply(
+    AutoScalingGroupName: ResourceName = null,
+    DefaultResult: LifecycleActionResult = null,
+    GlobalTimeout: js.UndefOr[GlobalTimeout] = js.undefined,
+    HeartbeatTimeout: js.UndefOr[HeartbeatTimeout] = js.undefined,
+    LifecycleHookName: AsciiStringMaxLen255 = null,
+    LifecycleTransition: LifecycleTransition = null,
+    NotificationMetadata: XmlStringMaxLen1023 = null,
+    NotificationTargetARN: ResourceName = null,
+    RoleARN: ResourceName = null
+  ): LifecycleHook = {
     val __obj = js.Dynamic.literal()
+    if (AutoScalingGroupName != null) __obj.updateDynamic("AutoScalingGroupName")(AutoScalingGroupName.asInstanceOf[js.Any])
+    if (DefaultResult != null) __obj.updateDynamic("DefaultResult")(DefaultResult.asInstanceOf[js.Any])
+    if (!js.isUndefined(GlobalTimeout)) __obj.updateDynamic("GlobalTimeout")(GlobalTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HeartbeatTimeout)) __obj.updateDynamic("HeartbeatTimeout")(HeartbeatTimeout.get.asInstanceOf[js.Any])
+    if (LifecycleHookName != null) __obj.updateDynamic("LifecycleHookName")(LifecycleHookName.asInstanceOf[js.Any])
+    if (LifecycleTransition != null) __obj.updateDynamic("LifecycleTransition")(LifecycleTransition.asInstanceOf[js.Any])
+    if (NotificationMetadata != null) __obj.updateDynamic("NotificationMetadata")(NotificationMetadata.asInstanceOf[js.Any])
+    if (NotificationTargetARN != null) __obj.updateDynamic("NotificationTargetARN")(NotificationTargetARN.asInstanceOf[js.Any])
+    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecycleHook]
   }
-  @scala.inline
-  implicit class LifecycleHookOps[Self <: LifecycleHook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultResult(value: LifecycleActionResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTimeout(value: GlobalTimeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeartbeatTimeout(value: HeartbeatTimeout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeartbeatTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeartbeatTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeartbeatTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleHookName(value: AsciiStringMaxLen255): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleHookName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycleTransition(value: LifecycleTransition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleTransition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationMetadata(value: XmlStringMaxLen1023): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationTargetARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationTargetARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationTargetARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationTargetARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleARN(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

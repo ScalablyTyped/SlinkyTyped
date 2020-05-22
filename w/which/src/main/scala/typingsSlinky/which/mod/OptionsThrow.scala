@@ -6,37 +6,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Options that ask for a thrown error if executable is not found (the default behavior) */
-@js.native
 trait OptionsThrow extends Options {
   @JSName("nothrow")
-  var nothrow_OptionsThrow: js.UndefOr[`false`] = js.native
+  var nothrow_OptionsThrow: js.UndefOr[`false`] = js.undefined
 }
 
 object OptionsThrow {
   @scala.inline
-  def apply(): OptionsThrow = {
+  def apply(
+    all: js.UndefOr[Boolean] = js.undefined,
+    nothrow: `false` = null,
+    path: String = null,
+    pathExt: String = null
+  ): OptionsThrow = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.get.asInstanceOf[js.Any])
+    if (nothrow != null) __obj.updateDynamic("nothrow")(nothrow.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (pathExt != null) __obj.updateDynamic("pathExt")(pathExt.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsThrow]
   }
-  @scala.inline
-  implicit class OptionsThrowOps[Self <: OptionsThrow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNothrow(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nothrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNothrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nothrow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

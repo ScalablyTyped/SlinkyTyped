@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends BinaryCarrier {
   def this(buffer: ArrayLike[Double]) = this()
+  /* CompleteClass */
+  override var buffer: ArrayLike[Double] = js.native
 }
 

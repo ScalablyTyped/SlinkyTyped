@@ -9,32 +9,31 @@ import scala.scalajs.js.annotation._
   *
   * https://github.com/Project-OSRM/osrm-backend/blob/master/docs/http.md#annotation-object
   */
-@js.native
 trait Annotation extends js.Object {
   /**
     * The index of the datasource for the speed between each pair of coordinates. 0 is the default profile, other values are supplied via --segment-speed-file to osrm-contract
     */
-  var datasources: js.Array[Double] = js.native
+  var datasources: js.Array[Double]
   /**
     * The distance, in metres, between each pair of coordinates
     */
-  var distance: js.Array[Double] = js.native
+  var distance: js.Array[Double]
   /**
     * The duration between each pair of coordinates, in seconds. Does not include the duration of any turns.
     */
-  var duration: js.Array[Double] = js.native
+  var duration: js.Array[Double]
   /**
     * The OSM node ID for each coordinate along the route, excluding the first/last user-supplied coordinates
     */
-  var nodes: js.Array[Double] = js.native
+  var nodes: js.Array[Double]
   /**
     * Convenience field, calculation of distance / duration rounded to one decimal place
     */
-  var speed: js.Array[Double] = js.native
+  var speed: js.Array[Double]
   /**
     * The weights between each pair of coordinates. Does not include any turn costs.
     */
-  var weight: js.Array[Double] = js.native
+  var weight: js.Array[Double]
 }
 
 object Annotation {
@@ -50,49 +49,5 @@ object Annotation {
     val __obj = js.Dynamic.literal(datasources = datasources.asInstanceOf[js.Any], distance = distance.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any], speed = speed.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[Annotation]
   }
-  @scala.inline
-  implicit class AnnotationOps[Self <: Annotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasources(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDistance(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodes(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpeed(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeight(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

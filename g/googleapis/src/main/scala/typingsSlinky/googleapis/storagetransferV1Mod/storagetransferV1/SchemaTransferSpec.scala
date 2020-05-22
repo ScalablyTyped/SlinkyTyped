@@ -42,89 +42,22 @@ trait SchemaTransferSpec extends js.Object {
 
 object SchemaTransferSpec {
   @scala.inline
-  def apply(): SchemaTransferSpec = {
+  def apply(
+    awsS3DataSource: SchemaAwsS3Data = null,
+    gcsDataSink: SchemaGcsData = null,
+    gcsDataSource: SchemaGcsData = null,
+    httpDataSource: SchemaHttpData = null,
+    objectConditions: SchemaObjectConditions = null,
+    transferOptions: SchemaTransferOptions = null
+  ): SchemaTransferSpec = {
     val __obj = js.Dynamic.literal()
+    if (awsS3DataSource != null) __obj.updateDynamic("awsS3DataSource")(awsS3DataSource.asInstanceOf[js.Any])
+    if (gcsDataSink != null) __obj.updateDynamic("gcsDataSink")(gcsDataSink.asInstanceOf[js.Any])
+    if (gcsDataSource != null) __obj.updateDynamic("gcsDataSource")(gcsDataSource.asInstanceOf[js.Any])
+    if (httpDataSource != null) __obj.updateDynamic("httpDataSource")(httpDataSource.asInstanceOf[js.Any])
+    if (objectConditions != null) __obj.updateDynamic("objectConditions")(objectConditions.asInstanceOf[js.Any])
+    if (transferOptions != null) __obj.updateDynamic("transferOptions")(transferOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTransferSpec]
   }
-  @scala.inline
-  implicit class SchemaTransferSpecOps[Self <: SchemaTransferSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsS3DataSource(value: SchemaAwsS3Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsS3DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsS3DataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsS3DataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcsDataSink(value: SchemaGcsData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDataSink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsDataSink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDataSink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcsDataSource(value: SchemaGcsData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcsDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsDataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpDataSource(value: SchemaHttpData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpDataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpDataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectConditions(value: SchemaObjectConditions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectConditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransferOptions(value: SchemaTransferOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransferOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transferOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -17,9 +17,6 @@ object watchFile extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  /**
-    * Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed.
-    */
   def apply(
     filename: PathLike,
     options: js.UndefOr[Interval | typingsSlinky.node.anon.Interval],

@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-dropdown.SemanticUI.Dropdown.SelectorSettings._Impl, 'remove'> */
-@js.native
 trait PickImplremove extends js.Object {
-  var remove: String = js.native
+  var remove: String
 }
 
 object PickImplremove {
@@ -16,19 +15,5 @@ object PickImplremove {
     val __obj = js.Dynamic.literal(remove = remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplremove]
   }
-  @scala.inline
-  implicit class PickImplremoveOps[Self <: PickImplremove] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRemove(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

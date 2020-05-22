@@ -4,179 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollapsibleOptions extends js.Object {
-  var collapseCueText: js.UndefOr[String] = js.native
-  var collapsed: js.UndefOr[Boolean] = js.native
-  var collapsedIcon: js.UndefOr[String] = js.native
-  var contentTheme: js.UndefOr[String] = js.native
-  var expandCueText: js.UndefOr[String] = js.native
-  var expandedIcon: js.UndefOr[String] = js.native
-  var heading: js.UndefOr[String] = js.native
-  var iconpos: js.UndefOr[String] = js.native
-  var initSelector: js.UndefOr[String] = js.native
-  var inset: js.UndefOr[Boolean] = js.native
-  var mini: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[String] = js.native
+  var collapseCueText: js.UndefOr[String] = js.undefined
+  var collapsed: js.UndefOr[Boolean] = js.undefined
+  var collapsedIcon: js.UndefOr[String] = js.undefined
+  var contentTheme: js.UndefOr[String] = js.undefined
+  var expandCueText: js.UndefOr[String] = js.undefined
+  var expandedIcon: js.UndefOr[String] = js.undefined
+  var heading: js.UndefOr[String] = js.undefined
+  var iconpos: js.UndefOr[String] = js.undefined
+  var initSelector: js.UndefOr[String] = js.undefined
+  var inset: js.UndefOr[Boolean] = js.undefined
+  var mini: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[String] = js.undefined
 }
 
 object CollapsibleOptions {
   @scala.inline
-  def apply(): CollapsibleOptions = {
+  def apply(
+    collapseCueText: String = null,
+    collapsed: js.UndefOr[Boolean] = js.undefined,
+    collapsedIcon: String = null,
+    contentTheme: String = null,
+    expandCueText: String = null,
+    expandedIcon: String = null,
+    heading: String = null,
+    iconpos: String = null,
+    initSelector: String = null,
+    inset: js.UndefOr[Boolean] = js.undefined,
+    mini: js.UndefOr[Boolean] = js.undefined,
+    theme: String = null
+  ): CollapsibleOptions = {
     val __obj = js.Dynamic.literal()
+    if (collapseCueText != null) __obj.updateDynamic("collapseCueText")(collapseCueText.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.get.asInstanceOf[js.Any])
+    if (collapsedIcon != null) __obj.updateDynamic("collapsedIcon")(collapsedIcon.asInstanceOf[js.Any])
+    if (contentTheme != null) __obj.updateDynamic("contentTheme")(contentTheme.asInstanceOf[js.Any])
+    if (expandCueText != null) __obj.updateDynamic("expandCueText")(expandCueText.asInstanceOf[js.Any])
+    if (expandedIcon != null) __obj.updateDynamic("expandedIcon")(expandedIcon.asInstanceOf[js.Any])
+    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
+    if (iconpos != null) __obj.updateDynamic("iconpos")(iconpos.asInstanceOf[js.Any])
+    if (initSelector != null) __obj.updateDynamic("initSelector")(initSelector.asInstanceOf[js.Any])
+    if (!js.isUndefined(inset)) __obj.updateDynamic("inset")(inset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mini)) __obj.updateDynamic("mini")(mini.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollapsibleOptions]
   }
-  @scala.inline
-  implicit class CollapsibleOptionsOps[Self <: CollapsibleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollapseCueText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseCueText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseCueText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseCueText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsedIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandCueText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandCueText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandCueText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandCueText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandedIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeading(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconpos(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconpos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconpos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconpos")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initSelector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInset(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMini(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mini")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMini: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mini")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

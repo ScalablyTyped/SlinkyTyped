@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Useragent extends js.Object {
-  var date: js.UndefOr[Double] = js.native
-  var ip: js.UndefOr[String] = js.native
-  var user_agent: js.UndefOr[String] = js.native
+  var date: js.UndefOr[Double] = js.undefined
+  var ip: js.UndefOr[String] = js.undefined
+  var user_agent: js.UndefOr[String] = js.undefined
 }
 
 object Useragent {
   @scala.inline
-  def apply(): Useragent = {
+  def apply(date: js.UndefOr[Double] = js.undefined, ip: String = null, user_agent: String = null): Useragent = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(date)) __obj.updateDynamic("date")(date.get.asInstanceOf[js.Any])
+    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
+    if (user_agent != null) __obj.updateDynamic("user_agent")(user_agent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Useragent]
   }
-  @scala.inline
-  implicit class UseragentOps[Self <: Useragent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_agent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_agent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_agent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

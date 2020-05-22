@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Form extends js.Object {
-  def formFor(name: String, `object`: js.Any, content_callback: js.Function): FormBuilder = js.native
+  def formFor(name: String, `object`: js.Any, content_callback: js.Function): FormBuilder
 }
 
 object Form {
@@ -15,19 +14,5 @@ object Form {
     val __obj = js.Dynamic.literal(formFor = js.Any.fromFunction3(formFor))
     __obj.asInstanceOf[Form]
   }
-  @scala.inline
-  implicit class FormOps[Self <: Form] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormFor(value: (String, js.Any, js.Function) => FormBuilder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formFor")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

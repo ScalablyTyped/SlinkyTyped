@@ -6,22 +6,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxOutgoingMessage Class */
-@js.native
 trait FaxOutgoingMessage extends IFaxOutgoingMessage {
   @JSName("FAXCOMEXLib.FaxOutgoingMessage_typekey")
-  var FAXCOMEXLibDotFaxOutgoingMessage_typekey: FaxOutgoingMessage = js.native
+  var FAXCOMEXLibDotFaxOutgoingMessage_typekey: FaxOutgoingMessage
   /** Has Cover page */
-  val HasCoverPage: Boolean = js.native
+  val HasCoverPage: Boolean
   /** Read flag on the message */
-  var Read: Boolean = js.native
+  var Read: Boolean
   /** Address of the receipt */
-  val ReceiptAddress: String = js.native
+  val ReceiptAddress: String
   /** Type of the receipt */
-  val ReceiptType: FAX_RECEIPT_TYPE_ENUM = js.native
+  val ReceiptType: FAX_RECEIPT_TYPE_ENUM
   /** Refresh the object */
-  def Refresh(): Unit = js.native
+  def Refresh(): Unit
   /** Save the object */
-  def Save(): Unit = js.native
+  def Save(): Unit
 }
 
 object FaxOutgoingMessage {
@@ -58,55 +57,5 @@ object FaxOutgoingMessage {
     __obj.updateDynamic("FAXCOMEXLib.FaxOutgoingMessage_typekey")(FAXCOMEXLibDotFaxOutgoingMessage_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaxOutgoingMessage]
   }
-  @scala.inline
-  implicit class FaxOutgoingMessageOps[Self <: FaxOutgoingMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFAXCOMEXLibDotFaxOutgoingMessage_typekey(value: FaxOutgoingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxOutgoingMessage_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasCoverPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasCoverPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Read")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReceiptAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReceiptAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReceiptType(value: FAX_RECEIPT_TYPE_ENUM): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReceiptType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Refresh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSave(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Save")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

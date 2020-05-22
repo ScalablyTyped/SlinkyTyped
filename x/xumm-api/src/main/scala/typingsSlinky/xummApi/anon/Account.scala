@@ -1,117 +1,36 @@
 package typingsSlinky.xummApi.anon
 
+import typingsSlinky.xummApi.mod.XummTransactionApprovalType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Account extends js.Object {
-  var account: String | Null = js.native
-  var dispatched_result: String | Null = js.native
-  var dispatched_to: String | Null = js.native
-  var hex: String | Null = js.native
-  var multisign_account: String | Null = js.native
-  var resolved_at: String | Null = js.native
-  var txid: String | Null = js.native
+  var account: String | Null
+  var approved_with: js.UndefOr[XummTransactionApprovalType] = js.undefined
+  var dispatched_result: String | Null
+  var dispatched_to: String | Null
+  var hex: String | Null
+  var multisign_account: String | Null
+  var resolved_at: String | Null
+  var txid: String | Null
 }
 
 object Account {
   @scala.inline
-  def apply(): Account = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    account: String = null,
+    approved_with: XummTransactionApprovalType = null,
+    dispatched_result: String = null,
+    dispatched_to: String = null,
+    hex: String = null,
+    multisign_account: String = null,
+    resolved_at: String = null,
+    txid: String = null
+  ): Account = {
+    val __obj = js.Dynamic.literal(account = account.asInstanceOf[js.Any], dispatched_result = dispatched_result.asInstanceOf[js.Any], dispatched_to = dispatched_to.asInstanceOf[js.Any], hex = hex.asInstanceOf[js.Any], multisign_account = multisign_account.asInstanceOf[js.Any], resolved_at = resolved_at.asInstanceOf[js.Any], txid = txid.asInstanceOf[js.Any])
+    if (approved_with != null) __obj.updateDynamic("approved_with")(approved_with.asInstanceOf[js.Any])
     __obj.asInstanceOf[Account]
   }
-  @scala.inline
-  implicit class AccountOps[Self <: Account] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(null)
-        ret
-    }
-    @scala.inline
-    def withDispatched_result(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatched_result")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDispatched_resultNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatched_result")(null)
-        ret
-    }
-    @scala.inline
-    def withDispatched_to(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatched_to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDispatched_toNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatched_to")(null)
-        ret
-    }
-    @scala.inline
-    def withHex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHexNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(null)
-        ret
-    }
-    @scala.inline
-    def withMultisign_account(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multisign_account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMultisign_accountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multisign_account")(null)
-        ret
-    }
-    @scala.inline
-    def withResolved_at(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolved_at")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResolved_atNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolved_at")(null)
-        ret
-    }
-    @scala.inline
-    def withTxid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("txid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTxidNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("txid")(null)
-        ret
-    }
-  }
-  
 }
 

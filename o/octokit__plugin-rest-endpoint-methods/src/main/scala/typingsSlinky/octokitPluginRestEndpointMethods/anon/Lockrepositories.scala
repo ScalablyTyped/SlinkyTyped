@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Lockrepositories extends js.Object {
-  var exclude_attachments: Type = js.native
-  var lock_repositories: Type = js.native
+  var exclude_attachments: Type
+  var lock_repositories: Type
   @JSName("org")
-  var org_ : Required = js.native
-  var repositories: Required = js.native
+  var org_ : Required
+  var repositories: Required
 }
 
 object Lockrepositories {
@@ -20,37 +19,5 @@ object Lockrepositories {
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lockrepositories]
   }
-  @scala.inline
-  implicit class LockrepositoriesOps[Self <: Lockrepositories] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExclude_attachments(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude_attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLock_repositories(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lock_repositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrg_(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepositories(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

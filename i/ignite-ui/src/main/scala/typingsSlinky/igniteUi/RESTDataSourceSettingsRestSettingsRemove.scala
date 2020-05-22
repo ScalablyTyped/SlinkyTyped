@@ -5,75 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RESTDataSourceSettingsRestSettingsRemove
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Specifies whether update requests will be sent in batches
-  	 */
-  var batch: js.UndefOr[Boolean] = js.native
+    * Specifies whether update requests will be sent in batches
+    */
+  var batch: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Specifies a remote URL template. Use ${id} in place of the resource id.
-  	 */
-  var template: js.UndefOr[String] = js.native
+    * Specifies a remote URL template. Use ${id} in place of the resource id.
+    */
+  var template: js.UndefOr[String] = js.undefined
   /**
-  	 * Specifies a remote URL to which remove requests will be sent. This will be used for both batch and non-batch, however if template is also set, this URL will only be used for batch requests.
-  	 */
-  var url: js.UndefOr[String] = js.native
+    * Specifies a remote URL to which remove requests will be sent. This will be used for both batch and non-batch, however if template is also set, this URL will only be used for batch requests.
+    */
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object RESTDataSourceSettingsRestSettingsRemove {
   @scala.inline
-  def apply(): RESTDataSourceSettingsRestSettingsRemove = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    batch: js.UndefOr[Boolean] = js.undefined,
+    template: String = null,
+    url: String = null
+  ): RESTDataSourceSettingsRestSettingsRemove = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(batch)) __obj.updateDynamic("batch")(batch.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[RESTDataSourceSettingsRestSettingsRemove]
   }
-  @scala.inline
-  implicit class RESTDataSourceSettingsRestSettingsRemoveOps[Self <: RESTDataSourceSettingsRestSettingsRemove] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

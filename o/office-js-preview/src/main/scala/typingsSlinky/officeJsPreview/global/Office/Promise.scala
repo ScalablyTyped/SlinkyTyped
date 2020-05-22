@@ -23,7 +23,7 @@ class Promise[T] protected ()
       ]) = this()
 }
 
-/** A Promise object. Promises can be chained via ".then", and errors can be caught via ".catch". 
+/** A Promise object. Promises can be chained via ".then", and errors can be caught via ".catch".
   * When a browser-provided native Promise implementation is available, Office.Promise will switch to use the native Promise instead.
   */
 @JSGlobal("Office.Promise")

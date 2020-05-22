@@ -11,10 +11,16 @@ object unaryopPackedGpuMod extends js.Object {
   @js.native
   class UnaryOpPackedProgram protected () extends GPGPUProgram {
     def this(aShape: js.Array[Double], opSnippet: String) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
     @JSName("packedInputs")
     var packedInputs_UnaryOpPackedProgram: Boolean = js.native
     @JSName("packedOutput")
     var packedOutput_UnaryOpPackedProgram: Boolean = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
   val ELU: /* "\n  vec4 result;\n\n  result.r = (x.r >= 0.0) ? x.r : (exp(x.r) - 1.0);\n  result.g = (x.g >= 0.0) ? x.g : (exp(x.g) - 1.0);\n  result.b = (x.b >= 0.0) ? x.b : (exp(x.b) - 1.0);\n  result.a = (x.a >= 0.0) ? x.a : (exp(x.a) - 1.0);\n\n  return result;\n" */ String = js.native

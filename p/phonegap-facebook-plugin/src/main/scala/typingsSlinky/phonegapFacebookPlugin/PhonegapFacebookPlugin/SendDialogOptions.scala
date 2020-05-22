@@ -10,17 +10,16 @@ import scala.scalajs.js.annotation._
   *
   * For use with showDialog() of method type 'send'.
   */
-@js.native
 trait SendDialogOptions extends BaseDialogOptions {
   /**
     * Required parameter. The URL that is being sent in the message.
     */
-  var link: String = js.native
+  var link: String
   /**
     * A user ID of a recipient. Once the dialog comes up, the sender can specify additional people, and groups
     * addresses as recipients. Sending content to a Facebook group will post it to the group's wall.
     */
-  var to: String = js.native
+  var to: String
 }
 
 object SendDialogOptions {
@@ -29,25 +28,5 @@ object SendDialogOptions {
     val __obj = js.Dynamic.literal(link = link.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendDialogOptions]
   }
-  @scala.inline
-  implicit class SendDialogOptionsOps[Self <: SendDialogOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

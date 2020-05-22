@@ -1,5 +1,8 @@
 package typingsSlinky.antdMobileRn.noticeBarIndexNativeMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.antdMobileRn.antdMobileRnStrings.closable
+import typingsSlinky.antdMobileRn.antdMobileRnStrings.link
 import typingsSlinky.antdMobileRn.marqueeNativeMod.MarqueeProps
 import typingsSlinky.antdMobileRn.noticeBarPropsTypeMod.NoticeBarPropsType
 import typingsSlinky.antdMobileRn.noticeBarStyleIndexNativeMod.INoticeBarStyle
@@ -9,68 +12,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NoticeNativeProps extends NoticeBarPropsType {
-  var marqueeProps: js.UndefOr[MarqueeProps] = js.native
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var styles: js.UndefOr[INoticeBarStyle] = js.native
+  var marqueeProps: js.UndefOr[MarqueeProps] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var styles: js.UndefOr[INoticeBarStyle] = js.undefined
 }
 
 object NoticeNativeProps {
   @scala.inline
-  def apply(): NoticeNativeProps = {
+  def apply(
+    action: ReactElement = null,
+    icon: ReactElement = null,
+    marqueeProps: MarqueeProps = null,
+    mode: closable | link = null,
+    onClick: () => Unit = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    styles: INoticeBarStyle = null
+  ): NoticeNativeProps = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (marqueeProps != null) __obj.updateDynamic("marqueeProps")(marqueeProps.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoticeNativeProps]
   }
-  @scala.inline
-  implicit class NoticeNativePropsOps[Self <: NoticeNativeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarqueeProps(value: MarqueeProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marqueeProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarqueeProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marqueeProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: INoticeBarStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

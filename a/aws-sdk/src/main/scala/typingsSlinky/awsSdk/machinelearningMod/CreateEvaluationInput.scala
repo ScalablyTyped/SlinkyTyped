@@ -26,47 +26,15 @@ trait CreateEvaluationInput extends js.Object {
 
 object CreateEvaluationInput {
   @scala.inline
-  def apply(EvaluationDataSourceId: EntityId, EvaluationId: EntityId, MLModelId: EntityId): CreateEvaluationInput = {
+  def apply(
+    EvaluationDataSourceId: EntityId,
+    EvaluationId: EntityId,
+    MLModelId: EntityId,
+    EvaluationName: EntityName = null
+  ): CreateEvaluationInput = {
     val __obj = js.Dynamic.literal(EvaluationDataSourceId = EvaluationDataSourceId.asInstanceOf[js.Any], EvaluationId = EvaluationId.asInstanceOf[js.Any], MLModelId = MLModelId.asInstanceOf[js.Any])
+    if (EvaluationName != null) __obj.updateDynamic("EvaluationName")(EvaluationName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateEvaluationInput]
   }
-  @scala.inline
-  implicit class CreateEvaluationInputOps[Self <: CreateEvaluationInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEvaluationDataSourceId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationDataSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvaluationId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMLModelId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvaluationName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

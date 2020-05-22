@@ -4,69 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StackTrace extends js.Object {
   /** Exception cluster ID */
-  var clusterId: js.UndefOr[String] = js.native
+  var clusterId: js.UndefOr[String] = js.undefined
   /**
     * The stack trace message.
     *
     * Required
     */
-  var exception: js.UndefOr[String] = js.native
+  var exception: js.UndefOr[String] = js.undefined
   /** Exception report ID */
-  var reportId: js.UndefOr[String] = js.native
+  var reportId: js.UndefOr[String] = js.undefined
 }
 
 object StackTrace {
   @scala.inline
-  def apply(): StackTrace = {
+  def apply(clusterId: String = null, exception: String = null, reportId: String = null): StackTrace = {
     val __obj = js.Dynamic.literal()
+    if (clusterId != null) __obj.updateDynamic("clusterId")(clusterId.asInstanceOf[js.Any])
+    if (exception != null) __obj.updateDynamic("exception")(exception.asInstanceOf[js.Any])
+    if (reportId != null) __obj.updateDynamic("reportId")(reportId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackTrace]
   }
-  @scala.inline
-  implicit class StackTraceOps[Self <: StackTrace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withException(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutException: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exception")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,41 +25,11 @@ trait SchemaMasterAuthorizedNetworksConfig extends js.Object {
 
 object SchemaMasterAuthorizedNetworksConfig {
   @scala.inline
-  def apply(): SchemaMasterAuthorizedNetworksConfig = {
+  def apply(cidrBlocks: js.Array[SchemaCidrBlock] = null, enabled: js.UndefOr[Boolean] = js.undefined): SchemaMasterAuthorizedNetworksConfig = {
     val __obj = js.Dynamic.literal()
+    if (cidrBlocks != null) __obj.updateDynamic("cidrBlocks")(cidrBlocks.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMasterAuthorizedNetworksConfig]
   }
-  @scala.inline
-  implicit class SchemaMasterAuthorizedNetworksConfigOps[Self <: SchemaMasterAuthorizedNetworksConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidrBlocks(value: js.Array[SchemaCidrBlock]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidrBlocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidrBlocks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

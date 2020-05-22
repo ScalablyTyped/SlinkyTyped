@@ -15,65 +15,13 @@ trait PartialEasing extends js.Object {
 
 object PartialEasing {
   @scala.inline
-  def apply(): PartialEasing = {
+  def apply(easeIn: String = null, easeInOut: String = null, easeOut: String = null, sharp: String = null): PartialEasing = {
     val __obj = js.Dynamic.literal()
+    if (easeIn != null) __obj.updateDynamic("easeIn")(easeIn.asInstanceOf[js.Any])
+    if (easeInOut != null) __obj.updateDynamic("easeInOut")(easeInOut.asInstanceOf[js.Any])
+    if (easeOut != null) __obj.updateDynamic("easeOut")(easeOut.asInstanceOf[js.Any])
+    if (sharp != null) __obj.updateDynamic("sharp")(sharp.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialEasing]
   }
-  @scala.inline
-  implicit class PartialEasingOps[Self <: PartialEasing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEaseIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEaseIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEaseInOut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeInOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEaseInOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeInOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEaseOut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEaseOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easeOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSharp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sharp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

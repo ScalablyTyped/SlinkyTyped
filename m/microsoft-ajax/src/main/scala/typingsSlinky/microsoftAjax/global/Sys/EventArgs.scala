@@ -16,7 +16,13 @@ import scala.scalajs.js.annotation._
   * Initializes a new instance of the EventArgs class.
   */
 class EventArgs ()
-  extends typingsSlinky.microsoftAjax.Sys.EventArgs
+  extends typingsSlinky.microsoftAjax.Sys.EventArgs {
+  /**
+    * An object of type EventArgs that is used as a convenient way to specify an empty EventArgs instance.
+    */
+  /* CompleteClass */
+  override var Empty: typingsSlinky.microsoftAjax.Sys.EventArgs = js.native
+}
 
 /* static members */
 @JSGlobal("Sys.EventArgs")

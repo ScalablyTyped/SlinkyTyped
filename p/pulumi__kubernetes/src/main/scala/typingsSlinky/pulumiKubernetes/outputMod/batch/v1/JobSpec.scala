@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
 /**
   * JobSpec describes how the job execution will look like.
   */
-@js.native
 trait JobSpec extends js.Object {
   /**
     * Specifies the duration in seconds relative to the startTime that the job may be active
     * before the system tries to terminate it; value must be positive integer
     */
-  val activeDeadlineSeconds: Double = js.native
+  val activeDeadlineSeconds: Double
   /**
     * Specifies the number of retries before marking this job failed. Defaults to 6
     */
-  val backoffLimit: Double = js.native
+  val backoffLimit: Double
   /**
     * Specifies the desired number of successfully finished pods the job should be run with.
     * Setting to nil means that the success of any pod signals the success of all pods, and
@@ -27,7 +26,7 @@ trait JobSpec extends js.Object {
     * limited to 1 and the success of that pod signals the success of the job. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
     */
-  val completions: Double = js.native
+  val completions: Double
   /**
     * manualSelector controls generation of pod labels and pod selectors. Leave `manualSelector`
     * unset unless you are certain what you are doing. When false or unset, the system pick
@@ -38,7 +37,7 @@ trait JobSpec extends js.Object {
     * More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/#specifying-your-own-pod-selector
     */
-  val manualSelector: Boolean = js.native
+  val manualSelector: Boolean
   /**
     * Specifies the maximum desired number of pods the job should run at any given time. The
     * actual number of pods running in steady state will be less than this number when
@@ -46,18 +45,18 @@ trait JobSpec extends js.Object {
     * do is less than max parallelism. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
     */
-  val parallelism: Double = js.native
+  val parallelism: Double
   /**
     * A label query over pods that should match the pod count. Normally, the system sets this
     * field for you. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
     */
-  val selector: LabelSelector = js.native
+  val selector: LabelSelector
   /**
     * Describes the pod that will be created when executing a job. More info:
     * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
     */
-  val template: PodTemplateSpec = js.native
+  val template: PodTemplateSpec
   /**
     * ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution (either
     * Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job finishes,
@@ -67,7 +66,7 @@ trait JobSpec extends js.Object {
     * immediately after it finishes. This field is alpha-level and is only honored by servers
     * that enable the TTLAfterFinished feature.
     */
-  val ttlSecondsAfterFinished: Double = js.native
+  val ttlSecondsAfterFinished: Double
 }
 
 object JobSpec {
@@ -85,61 +84,5 @@ object JobSpec {
     val __obj = js.Dynamic.literal(activeDeadlineSeconds = activeDeadlineSeconds.asInstanceOf[js.Any], backoffLimit = backoffLimit.asInstanceOf[js.Any], completions = completions.asInstanceOf[js.Any], manualSelector = manualSelector.asInstanceOf[js.Any], parallelism = parallelism.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], ttlSecondsAfterFinished = ttlSecondsAfterFinished.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobSpec]
   }
-  @scala.inline
-  implicit class JobSpecOps[Self <: JobSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveDeadlineSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeDeadlineSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackoffLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backoffLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompletions(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManualSelector(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParallelism(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelector(value: LabelSelector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: PodTemplateSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTtlSecondsAfterFinished(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ttlSecondsAfterFinished")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

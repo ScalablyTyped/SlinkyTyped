@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BrowserPlatformDetails extends js.Object {
-  var args: js.UndefOr[js.Array[String]] = js.native
-  var command: js.UndefOr[String] = js.native
-  var cwd: js.UndefOr[String] = js.native
-  var defaultLocation: js.UndefOr[String] = js.native
+  var args: js.UndefOr[js.Array[String]] = js.undefined
+  var command: js.UndefOr[String] = js.undefined
+  var cwd: js.UndefOr[String] = js.undefined
+  var defaultLocation: js.UndefOr[String] = js.undefined
   var getCommand: js.UndefOr[
     js.Function3[
       /* browser */ BrowserPlatformDetails, 
@@ -17,175 +16,46 @@ trait BrowserPlatformDetails extends js.Object {
       /* args */ js.Array[String], 
       String
     ]
-  ] = js.native
-  var imageName: js.UndefOr[String] = js.native
-  var multi: js.UndefOr[Boolean] = js.native
-  var opensTab: js.UndefOr[Boolean] = js.native
-  var pathQuery: js.UndefOr[String] = js.native
-  var plistPath: js.UndefOr[String] = js.native
-  var process: js.UndefOr[String] = js.native
-  var versionKey: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var imageName: js.UndefOr[String] = js.undefined
+  var multi: js.UndefOr[Boolean] = js.undefined
+  var opensTab: js.UndefOr[Boolean] = js.undefined
+  var pathQuery: js.UndefOr[String] = js.undefined
+  var plistPath: js.UndefOr[String] = js.undefined
+  var process: js.UndefOr[String] = js.undefined
+  var versionKey: js.UndefOr[String] = js.undefined
 }
 
 object BrowserPlatformDetails {
   @scala.inline
-  def apply(): BrowserPlatformDetails = {
+  def apply(
+    args: js.Array[String] = null,
+    command: String = null,
+    cwd: String = null,
+    defaultLocation: String = null,
+    getCommand: (/* browser */ BrowserPlatformDetails, /* url */ String, /* args */ js.Array[String]) => String = null,
+    imageName: String = null,
+    multi: js.UndefOr[Boolean] = js.undefined,
+    opensTab: js.UndefOr[Boolean] = js.undefined,
+    pathQuery: String = null,
+    plistPath: String = null,
+    process: String = null,
+    versionKey: String = null
+  ): BrowserPlatformDetails = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (defaultLocation != null) __obj.updateDynamic("defaultLocation")(defaultLocation.asInstanceOf[js.Any])
+    if (getCommand != null) __obj.updateDynamic("getCommand")(js.Any.fromFunction3(getCommand))
+    if (imageName != null) __obj.updateDynamic("imageName")(imageName.asInstanceOf[js.Any])
+    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opensTab)) __obj.updateDynamic("opensTab")(opensTab.get.asInstanceOf[js.Any])
+    if (pathQuery != null) __obj.updateDynamic("pathQuery")(pathQuery.asInstanceOf[js.Any])
+    if (plistPath != null) __obj.updateDynamic("plistPath")(plistPath.asInstanceOf[js.Any])
+    if (process != null) __obj.updateDynamic("process")(process.asInstanceOf[js.Any])
+    if (versionKey != null) __obj.updateDynamic("versionKey")(versionKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrowserPlatformDetails]
   }
-  @scala.inline
-  implicit class BrowserPlatformDetailsOps[Self <: BrowserPlatformDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetCommand(
-      value: (/* browser */ BrowserPlatformDetails, /* url */ String, /* args */ js.Array[String]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommand")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCommand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulti(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpensTab(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opensTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpensTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opensTab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPathQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlistPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plistPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlistPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plistPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcess(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("process")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,233 +9,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EmojiProps extends js.Object {
   /** defaults to returning a png from unpkg.com-hosted emoji-datasource-${set} */
-  var backgroundImageFn: js.UndefOr[BackgroundImageFn] = js.native
-  var emoji: String | EmojiData = js.native
+  var backgroundImageFn: js.UndefOr[BackgroundImageFn] = js.undefined
+  var emoji: String | EmojiData
   var fallback: js.UndefOr[
     js.Function2[/* emoji */ EmojiData, /* props */ this.type, ReactComponentClass[js.Object]]
-  ] = js.native
-  var forceSize: js.UndefOr[Boolean] = js.native
-  var html: js.UndefOr[Boolean] = js.native
-  var native: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var forceSize: js.UndefOr[Boolean] = js.undefined
+  var html: js.UndefOr[Boolean] = js.undefined
+  var native: js.UndefOr[Boolean] = js.undefined
   var onClick: js.UndefOr[
     js.Function2[/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement], Unit]
-  ] = js.native
+  ] = js.undefined
   var onLeave: js.UndefOr[
     js.Function2[/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement], Unit]
-  ] = js.native
+  ] = js.undefined
   var onOver: js.UndefOr[
     js.Function2[/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement], Unit]
-  ] = js.native
+  ] = js.undefined
   /** defaults to 'apple' */
-  var set: js.UndefOr[EmojiSet] = js.native
+  var set: js.UndefOr[EmojiSet] = js.undefined
   /** defaults to 52 */
-  var sheetColumns: js.UndefOr[Double] = js.native
+  var sheetColumns: js.UndefOr[Double] = js.undefined
   /** defaults to 52 */
-  var sheetRows: js.UndefOr[Double] = js.native
+  var sheetRows: js.UndefOr[Double] = js.undefined
   /** defaults to 64 */
-  var sheetSize: js.UndefOr[EmojiSheetSize] = js.native
-  var size: Double = js.native
+  var sheetSize: js.UndefOr[EmojiSheetSize] = js.undefined
+  var size: Double
   /** defaults to 1 */
-  var skin: js.UndefOr[EmojiSkin] = js.native
-  var tooltip: js.UndefOr[Boolean] = js.native
+  var skin: js.UndefOr[EmojiSkin] = js.undefined
+  var tooltip: js.UndefOr[Boolean] = js.undefined
 }
 
 object EmojiProps {
   @scala.inline
-  def apply(emoji: String | EmojiData, size: Double): EmojiProps = {
+  def apply(
+    emoji: String | EmojiData,
+    size: Double,
+    backgroundImageFn: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String = null,
+    fallback: (/* emoji */ EmojiData, EmojiProps) => ReactComponentClass[js.Object] = null,
+    forceSize: js.UndefOr[Boolean] = js.undefined,
+    html: js.UndefOr[Boolean] = js.undefined,
+    native: js.UndefOr[Boolean] = js.undefined,
+    onClick: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
+    onLeave: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
+    onOver: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
+    set: EmojiSet = null,
+    sheetColumns: js.UndefOr[Double] = js.undefined,
+    sheetRows: js.UndefOr[Double] = js.undefined,
+    sheetSize: EmojiSheetSize = null,
+    skin: EmojiSkin = null,
+    tooltip: js.UndefOr[Boolean] = js.undefined
+  ): EmojiProps = {
     val __obj = js.Dynamic.literal(emoji = emoji.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    if (backgroundImageFn != null) __obj.updateDynamic("backgroundImageFn")(js.Any.fromFunction2(backgroundImageFn))
+    if (fallback != null) __obj.updateDynamic("fallback")(js.Any.fromFunction2(fallback))
+    if (!js.isUndefined(forceSize)) __obj.updateDynamic("forceSize")(forceSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(native)) __obj.updateDynamic("native")(native.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (onLeave != null) __obj.updateDynamic("onLeave")(js.Any.fromFunction2(onLeave))
+    if (onOver != null) __obj.updateDynamic("onOver")(js.Any.fromFunction2(onOver))
+    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetColumns)) __obj.updateDynamic("sheetColumns")(sheetColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetRows)) __obj.updateDynamic("sheetRows")(sheetRows.get.asInstanceOf[js.Any])
+    if (sheetSize != null) __obj.updateDynamic("sheetSize")(sheetSize.asInstanceOf[js.Any])
+    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
+    if (!js.isUndefined(tooltip)) __obj.updateDynamic("tooltip")(tooltip.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmojiProps]
   }
-  @scala.inline
-  implicit class EmojiPropsOps[Self <: EmojiProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmoji(value: String | EmojiData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emoji")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackgroundImageFn(value: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageFn")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundImageFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFallback(value: (/* emoji */ EmojiData, EmojiProps) => ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceSize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("native")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLeave(value: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeave")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOver(value: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOver")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSet(value: EmojiSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetSize(value: EmojiSheetSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkin(value: EmojiSkin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

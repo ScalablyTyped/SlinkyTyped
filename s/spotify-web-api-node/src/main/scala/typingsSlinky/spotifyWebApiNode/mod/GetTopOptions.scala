@@ -7,36 +7,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetTopOptions extends PaginationOptions {
-  var time_range: js.UndefOr[long_term | medium_term | short_term] = js.native
+  var time_range: js.UndefOr[long_term | medium_term | short_term] = js.undefined
 }
 
 object GetTopOptions {
   @scala.inline
-  def apply(): GetTopOptions = {
+  def apply(
+    limit: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    time_range: long_term | medium_term | short_term = null
+  ): GetTopOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (time_range != null) __obj.updateDynamic("time_range")(time_range.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTopOptions]
   }
-  @scala.inline
-  implicit class GetTopOptionsOps[Self <: GetTopOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTime_range(value: long_term | medium_term | short_term): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime_range: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

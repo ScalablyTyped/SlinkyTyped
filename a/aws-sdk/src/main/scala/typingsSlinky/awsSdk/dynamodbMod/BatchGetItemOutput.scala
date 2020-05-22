@@ -22,53 +22,16 @@ trait BatchGetItemOutput extends js.Object {
 
 object BatchGetItemOutput {
   @scala.inline
-  def apply(): BatchGetItemOutput = {
+  def apply(
+    ConsumedCapacity: ConsumedCapacityMultiple = null,
+    Responses: BatchGetResponseMap = null,
+    UnprocessedKeys: BatchGetRequestMap = null
+  ): BatchGetItemOutput = {
     val __obj = js.Dynamic.literal()
+    if (ConsumedCapacity != null) __obj.updateDynamic("ConsumedCapacity")(ConsumedCapacity.asInstanceOf[js.Any])
+    if (Responses != null) __obj.updateDynamic("Responses")(Responses.asInstanceOf[js.Any])
+    if (UnprocessedKeys != null) __obj.updateDynamic("UnprocessedKeys")(UnprocessedKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGetItemOutput]
   }
-  @scala.inline
-  implicit class BatchGetItemOutputOps[Self <: BatchGetItemOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumedCapacity(value: ConsumedCapacityMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumedCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsumedCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponses(value: BatchGetResponseMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Responses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Responses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnprocessedKeys(value: BatchGetRequestMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnprocessedKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

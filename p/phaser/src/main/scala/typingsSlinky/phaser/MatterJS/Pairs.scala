@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   *
   * @class Pairs
   */
-@js.native
 trait Pairs extends js.Object
 

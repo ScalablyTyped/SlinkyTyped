@@ -6,17 +6,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Location extends js.Object {
   /**
     * Get the `offset` (`number`) for a line and column-based `position` in the bound file.
     * Returns `-1` when given invalid or out of bounds input.
     */
-  def toOffset(position: Column): Double = js.native
+  def toOffset(position: Column): Double
   /**
     * Get the line and column-based `position` for `offset` in the bound file.
     */
-  def toPosition(offset: Double): Line = js.native
+  def toPosition(offset: Double): Line
 }
 
 object Location {
@@ -25,25 +24,5 @@ object Location {
     val __obj = js.Dynamic.literal(toOffset = js.Any.fromFunction1(toOffset), toPosition = js.Any.fromFunction1(toPosition))
     __obj.asInstanceOf[Location]
   }
-  @scala.inline
-  implicit class LocationOps[Self <: Location] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withToOffset(value: Column => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toOffset")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withToPosition(value: Double => Line): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toPosition")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

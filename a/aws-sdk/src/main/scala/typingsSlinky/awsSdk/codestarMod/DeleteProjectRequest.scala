@@ -22,47 +22,15 @@ trait DeleteProjectRequest extends js.Object {
 
 object DeleteProjectRequest {
   @scala.inline
-  def apply(id: ProjectId): DeleteProjectRequest = {
+  def apply(
+    id: ProjectId,
+    clientRequestToken: ClientRequestToken = null,
+    deleteStack: js.UndefOr[DeleteStack] = js.undefined
+  ): DeleteProjectRequest = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteStack)) __obj.updateDynamic("deleteStack")(deleteStack.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteProjectRequest]
   }
-  @scala.inline
-  implicit class DeleteProjectRequestOps[Self <: DeleteProjectRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: ProjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteStack(value: DeleteStack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteStack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteStack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteStack")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

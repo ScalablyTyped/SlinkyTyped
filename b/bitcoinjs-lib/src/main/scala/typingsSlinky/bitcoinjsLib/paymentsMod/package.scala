@@ -12,5 +12,6 @@ package object paymentsMod {
   ]
   type PaymentFunction = js.Function0[typingsSlinky.bitcoinjsLib.paymentsMod.Payment]
   type Stack = js.Array[typingsSlinky.bitcoinjsLib.paymentsMod.StackElement]
+  type StackElement = typingsSlinky.node.Buffer | scala.Double
   type StackFunction = js.Function0[typingsSlinky.bitcoinjsLib.paymentsMod.Stack]
 }

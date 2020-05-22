@@ -14,5 +14,17 @@ class ECBlocks protected ()
     ecBlocks1: typingsSlinky.jsqrcode.ECB,
     ecBlocks2: typingsSlinky.jsqrcode.ECB
   ) = this()
+  /* CompleteClass */
+  override val ECCodewordsPerBlock: Double = js.native
+  /* CompleteClass */
+  override val NumBlocks: Double = js.native
+  /* CompleteClass */
+  override val TotalECCodewords: Double = js.native
+  /* CompleteClass */
+  override var ecBlocks: js.Array[typingsSlinky.jsqrcode.ECB] | (js.Tuple2[typingsSlinky.jsqrcode.ECB, typingsSlinky.jsqrcode.ECB]) = js.native
+  /* CompleteClass */
+  override var ecCodewordsPerBlock: Double = js.native
+  /* CompleteClass */
+  override def getECBlocks(): js.Array[typingsSlinky.jsqrcode.ECB] | (js.Tuple2[typingsSlinky.jsqrcode.ECB, typingsSlinky.jsqrcode.ECB]) = js.native
 }
 

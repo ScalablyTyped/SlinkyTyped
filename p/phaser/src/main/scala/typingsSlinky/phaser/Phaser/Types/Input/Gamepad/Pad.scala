@@ -8,16 +8,15 @@ import scala.scalajs.js.annotation._
 /**
   * The Gamepad object, as extracted from GamepadEvent.
   */
-@js.native
 trait Pad extends js.Object {
   /**
     * The ID of the Gamepad.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The index of the Gamepad.
     */
-  var index: integer = js.native
+  var index: integer
 }
 
 object Pad {
@@ -26,25 +25,5 @@ object Pad {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pad]
   }
-  @scala.inline
-  implicit class PadOps[Self <: Pad] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndex(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

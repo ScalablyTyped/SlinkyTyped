@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConnectedContext extends js.Object {
   /**
-  		 * The connection information for the selected object.
-  		 * Note that the connection is not guaranteed to be in a connected
-  		 * state on click.
-  		 */
-  var connectionProfile: IConnectionProfile = js.native
+    * The connection information for the selected object.
+    * Note that the connection is not guaranteed to be in a connected
+    * state on click.
+    */
+  var connectionProfile: IConnectionProfile
 }
 
 object ConnectedContext {
@@ -20,19 +19,5 @@ object ConnectedContext {
     val __obj = js.Dynamic.literal(connectionProfile = connectionProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectedContext]
   }
-  @scala.inline
-  implicit class ConnectedContextOps[Self <: ConnectedContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionProfile(value: IConnectionProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

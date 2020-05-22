@@ -6,90 +6,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElementTreeWriteOptions extends js.Object {
-  var default_namespace: js.UndefOr[String] = js.native
-  var encoding: js.UndefOr[String] = js.native
+  var default_namespace: js.UndefOr[String] = js.undefined
+  var encoding: js.UndefOr[String] = js.undefined
    // default is 'utf-8'
-  var indent: js.UndefOr[Double] = js.native
-  var method: js.UndefOr[xml | text] = js.native
+  var indent: js.UndefOr[Double] = js.undefined
+  var method: js.UndefOr[xml | text] = js.undefined
    // default is 'xml'
-  var xml_declaration: js.UndefOr[Boolean] = js.native
+  var xml_declaration: js.UndefOr[Boolean] = js.undefined
 }
 
 object ElementTreeWriteOptions {
   @scala.inline
-  def apply(): ElementTreeWriteOptions = {
+  def apply(
+    default_namespace: String = null,
+    encoding: String = null,
+    indent: js.UndefOr[Double] = js.undefined,
+    method: xml | text = null,
+    xml_declaration: js.UndefOr[Boolean] = js.undefined
+  ): ElementTreeWriteOptions = {
     val __obj = js.Dynamic.literal()
+    if (default_namespace != null) __obj.updateDynamic("default_namespace")(default_namespace.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(indent)) __obj.updateDynamic("indent")(indent.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(xml_declaration)) __obj.updateDynamic("xml_declaration")(xml_declaration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementTreeWriteOptions]
   }
-  @scala.inline
-  implicit class ElementTreeWriteOptionsOps[Self <: ElementTreeWriteOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefault_namespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_namespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: xml | text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXml_declaration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml_declaration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXml_declaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml_declaration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

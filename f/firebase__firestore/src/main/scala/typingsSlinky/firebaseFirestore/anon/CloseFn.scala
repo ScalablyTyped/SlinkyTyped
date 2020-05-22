@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CloseFn[I] extends js.Object {
-  def closeFn(): Unit = js.native
-  def sendFn(msg: I): Unit = js.native
+  def closeFn(): Unit
+  def sendFn(msg: I): Unit
 }
 
 object CloseFn {
@@ -16,25 +15,5 @@ object CloseFn {
     val __obj = js.Dynamic.literal(closeFn = js.Any.fromFunction0(closeFn), sendFn = js.Any.fromFunction1(sendFn))
     __obj.asInstanceOf[CloseFn[I]]
   }
-  @scala.inline
-  implicit class CloseFnOps[Self[i] <: CloseFn[i], I] (val x: Self[I]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[I] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[I]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[I] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[I] with Other]
-    @scala.inline
-    def withCloseFn(value: () => Unit): Self[I] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeFn")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSendFn(value: I => Unit): Self[I] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendFn")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

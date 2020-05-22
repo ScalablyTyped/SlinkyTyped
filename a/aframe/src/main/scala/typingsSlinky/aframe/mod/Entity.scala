@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.aframe.aframeStrings.`child-attached`
 import typingsSlinky.aframe.aframeStrings.`child-detached`
 import typingsSlinky.aframe.aframeStrings.componentchanged
+import typingsSlinky.aframe.aframeStrings.componentinitialized
 import typingsSlinky.aframe.aframeStrings.componentremoved
 import typingsSlinky.aframe.aframeStrings.loaded
 import typingsSlinky.aframe.aframeStrings.pause
@@ -15,6 +16,7 @@ import typingsSlinky.aframe.aframeStrings.schemachanged
 import typingsSlinky.aframe.aframeStrings.stateadded
 import typingsSlinky.aframe.aframeStrings.stateremoved
 import typingsSlinky.aframe.anon.ComponentName
+import typingsSlinky.aframe.anon.Data
 import typingsSlinky.aframe.anon.El
 import typingsSlinky.aframe.anon.Id
 import typingsSlinky.aframe.anon.Name
@@ -55,6 +57,17 @@ trait Entity[C] extends ANode {
   def addEventListener_componentchanged(
     `type`: componentchanged,
     listener: js.Function1[/* event */ Event with DetailEvent[Id], Unit],
+    useCapture: Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_componentinitialized(
+    `type`: componentinitialized,
+    listener: js.Function1[/* event */ Event with DetailEvent[Data], Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_componentinitialized(
+    `type`: componentinitialized,
+    listener: js.Function1[/* event */ Event with DetailEvent[Data], Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -117,6 +130,7 @@ trait Entity[C] extends ANode {
     useCapture: Boolean
   ): Unit = js.native
   def addState(name: String): Unit = js.native
+  def destroy(): Unit = js.native
   def flushToDOM(): Unit = js.native
   def flushToDOM(recursive: Boolean): Unit = js.native
   @JSName("getAttribute")
@@ -126,8 +140,8 @@ trait Entity[C] extends ANode {
   @JSName("getAttribute")
   def getAttribute_scale(`type`: scale): Coordinate = js.native
   /**
-  	 * @deprecated since 0.4.0
-  	 */
+    * @deprecated since 0.4.0
+    */
   def getComputedAttribute(attr: String): Component[_, System[_]] = js.native
   def getDOMAttribute(attr: String): js.Any = js.native
   def getObject3D(`type`: String): Object3D = js.native

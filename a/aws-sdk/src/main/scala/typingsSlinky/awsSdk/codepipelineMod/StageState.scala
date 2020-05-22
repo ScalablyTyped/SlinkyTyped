@@ -26,65 +26,18 @@ trait StageState extends js.Object {
 
 object StageState {
   @scala.inline
-  def apply(): StageState = {
+  def apply(
+    actionStates: ActionStateList = null,
+    inboundTransitionState: TransitionState = null,
+    latestExecution: StageExecution = null,
+    stageName: StageName = null
+  ): StageState = {
     val __obj = js.Dynamic.literal()
+    if (actionStates != null) __obj.updateDynamic("actionStates")(actionStates.asInstanceOf[js.Any])
+    if (inboundTransitionState != null) __obj.updateDynamic("inboundTransitionState")(inboundTransitionState.asInstanceOf[js.Any])
+    if (latestExecution != null) __obj.updateDynamic("latestExecution")(latestExecution.asInstanceOf[js.Any])
+    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[StageState]
   }
-  @scala.inline
-  implicit class StageStateOps[Self <: StageState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionStates(value: ActionStateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInboundTransitionState(value: TransitionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inboundTransitionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInboundTransitionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inboundTransitionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatestExecution(value: StageExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latestExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatestExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latestExecution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageName(value: StageName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,6 +14,7 @@ trait Iconv extends WritableStream {
   def convert(input: Buffer): Buffer = js.native
   def convert(input: Buffer, encoding: String): Buffer = js.native
   def end(buffer: Buffer, cb: js.Function): Unit = js.native
+  def end(input: String, encoding: String): Unit = js.native
   def end(input: Buffer): Unit = js.native
   def end(input: Buffer, encoding: String): Unit = js.native
   def end(str: String, cb: js.Function): Unit = js.native
@@ -23,6 +24,7 @@ trait Iconv extends WritableStream {
   def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   def write(buffer: String, cb: js.Function): Boolean = js.native
   def write(buffer: Buffer, cb: js.Function): Boolean = js.native
+  def write(input: String, encoding: String): Boolean = js.native
   // copy from NodeJS.WritableStream for compatibility
   def write(input: Buffer): Boolean = js.native
   def write(input: Buffer, encoding: String): Boolean = js.native

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHTMLDocument extends js.Object {
   @JSName("MSHTML.IHTMLDocument_typekey")
-  var MSHTMLDotIHTMLDocument_typekey: IHTMLDocument = js.native
-  val Script: js.Any = js.native
+  var MSHTMLDotIHTMLDocument_typekey: IHTMLDocument
+  val Script: js.Any
 }
 
 object IHTMLDocument {
@@ -18,25 +17,5 @@ object IHTMLDocument {
     __obj.updateDynamic("MSHTML.IHTMLDocument_typekey")(MSHTMLDotIHTMLDocument_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHTMLDocument]
   }
-  @scala.inline
-  implicit class IHTMLDocumentOps[Self <: IHTMLDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotIHTMLDocument_typekey(value: IHTMLDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.IHTMLDocument_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScript(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Script")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

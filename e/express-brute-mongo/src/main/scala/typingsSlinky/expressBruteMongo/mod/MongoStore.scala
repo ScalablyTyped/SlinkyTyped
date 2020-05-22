@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 /**
   * @summary MongoDB store adapter.
   */
-@js.native
 trait MongoStore extends js.Object
 

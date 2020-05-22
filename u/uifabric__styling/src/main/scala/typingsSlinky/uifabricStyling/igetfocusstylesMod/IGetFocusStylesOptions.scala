@@ -7,142 +7,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IGetFocusStylesOptions extends js.Object {
   /**
     * Color of the border.
     * @defaultvalue theme.palette.white
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[String] = js.undefined
   /**
     * Style for high contrast mode.
     */
-  var highContrastStyle: js.UndefOr[IRawStyle] = js.native
+  var highContrastStyle: js.UndefOr[IRawStyle] = js.undefined
   /**
     * The number of pixels to inset the border.
     * @defaultvalue 0
     */
-  var inset: js.UndefOr[Double] = js.native
+  var inset: js.UndefOr[Double] = js.undefined
   /**
     * If the styles should apply on `:focus` pseudo element.
     * @defaultvalue true
     */
-  var isFocusedOnly: js.UndefOr[Boolean] = js.native
+  var isFocusedOnly: js.UndefOr[Boolean] = js.undefined
   /**
     * Color of the outline.
     * @defaultvalue theme.palette.neutralSecondary
     */
-  var outlineColor: js.UndefOr[String] = js.native
+  var outlineColor: js.UndefOr[String] = js.undefined
   /**
     * The positioning applied to the container.
     * Must be 'relative' or 'absolute' so that the focus border can live around it.
     * @defaultvalue 'relative'
     */
-  var position: js.UndefOr[relative | absolute] = js.native
+  var position: js.UndefOr[relative | absolute] = js.undefined
   /**
     * The width of the border in pixels.
     * @defaultvalue 1
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object IGetFocusStylesOptions {
   @scala.inline
-  def apply(): IGetFocusStylesOptions = {
+  def apply(
+    borderColor: String = null,
+    highContrastStyle: IRawStyle = null,
+    inset: js.UndefOr[Double] = js.undefined,
+    isFocusedOnly: js.UndefOr[Boolean] = js.undefined,
+    outlineColor: String = null,
+    position: relative | absolute = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): IGetFocusStylesOptions = {
     val __obj = js.Dynamic.literal()
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (highContrastStyle != null) __obj.updateDynamic("highContrastStyle")(highContrastStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(inset)) __obj.updateDynamic("inset")(inset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFocusedOnly)) __obj.updateDynamic("isFocusedOnly")(isFocusedOnly.get.asInstanceOf[js.Any])
+    if (outlineColor != null) __obj.updateDynamic("outlineColor")(outlineColor.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGetFocusStylesOptions]
   }
-  @scala.inline
-  implicit class IGetFocusStylesOptionsOps[Self <: IGetFocusStylesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighContrastStyle(value: IRawStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highContrastStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighContrastStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highContrastStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFocusedOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocusedOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFocusedOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocusedOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: relative | absolute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

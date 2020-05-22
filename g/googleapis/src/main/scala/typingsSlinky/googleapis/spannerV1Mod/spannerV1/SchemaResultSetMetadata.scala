@@ -28,41 +28,11 @@ trait SchemaResultSetMetadata extends js.Object {
 
 object SchemaResultSetMetadata {
   @scala.inline
-  def apply(): SchemaResultSetMetadata = {
+  def apply(rowType: SchemaStructType = null, transaction: SchemaTransaction = null): SchemaResultSetMetadata = {
     val __obj = js.Dynamic.literal()
+    if (rowType != null) __obj.updateDynamic("rowType")(rowType.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResultSetMetadata]
   }
-  @scala.inline
-  implicit class SchemaResultSetMetadataOps[Self <: SchemaResultSetMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRowType(value: SchemaStructType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: SchemaTransaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

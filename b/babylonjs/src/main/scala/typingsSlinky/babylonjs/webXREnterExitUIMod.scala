@@ -36,6 +36,11 @@ object webXREnterExitUIMod extends js.Object {
     /** version of the options passed to this UI */
     var options: WebXREnterExitUIOptions = js.native
     var scene: js.Any = js.native
+    /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
   }
   
   @js.native

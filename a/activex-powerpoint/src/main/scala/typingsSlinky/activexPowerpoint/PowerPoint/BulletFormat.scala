@@ -5,23 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BulletFormat extends js.Object {
-  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
-  var Character: Double = js.native
-  val Font: typingsSlinky.activexPowerpoint.PowerPoint.Font = js.native
-  val Number: Double = js.native
-  val Parent: js.Any = js.native
+  val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application
+  var Character: Double
+  val Font: typingsSlinky.activexPowerpoint.PowerPoint.Font
+  val Number: Double
+  val Parent: js.Any
   @JSName("PowerPoint.BulletFormat_typekey")
-  var PowerPointDotBulletFormat_typekey: BulletFormat = js.native
-  var RelativeSize: Double = js.native
-  var StartValue: Double = js.native
-  var Style: PpNumberedBulletStyle = js.native
-  var Type: PpBulletType = js.native
-  var UseTextColor: MsoTriState = js.native
-  var UseTextFont: MsoTriState = js.native
-  var Visible: MsoTriState = js.native
-  def Picture(Picture: String): Unit = js.native
+  var PowerPointDotBulletFormat_typekey: BulletFormat
+  var RelativeSize: Double
+  var StartValue: Double
+  var Style: PpNumberedBulletStyle
+  var Type: PpBulletType
+  var UseTextColor: MsoTriState
+  var UseTextFont: MsoTriState
+  var Visible: MsoTriState
+  def Picture(Picture: String): Unit
 }
 
 object BulletFormat {
@@ -46,97 +45,5 @@ object BulletFormat {
     __obj.updateDynamic("PowerPoint.BulletFormat_typekey")(PowerPointDotBulletFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[BulletFormat]
   }
-  @scala.inline
-  implicit class BulletFormatOps[Self <: BulletFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCharacter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Character")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPicture(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Picture")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotBulletFormat_typekey(value: BulletFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.BulletFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelativeSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelativeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyle(value: PpNumberedBulletStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: PpBulletType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseTextColor(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseTextFont(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseTextFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

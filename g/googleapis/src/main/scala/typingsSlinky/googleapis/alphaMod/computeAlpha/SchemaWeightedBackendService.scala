@@ -40,53 +40,16 @@ trait SchemaWeightedBackendService extends js.Object {
 
 object SchemaWeightedBackendService {
   @scala.inline
-  def apply(): SchemaWeightedBackendService = {
+  def apply(
+    backendService: String = null,
+    headerAction: SchemaHttpHeaderAction = null,
+    weight: js.UndefOr[Double] = js.undefined
+  ): SchemaWeightedBackendService = {
     val __obj = js.Dynamic.literal()
+    if (backendService != null) __obj.updateDynamic("backendService")(backendService.asInstanceOf[js.Any])
+    if (headerAction != null) __obj.updateDynamic("headerAction")(headerAction.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWeightedBackendService]
   }
-  @scala.inline
-  implicit class SchemaWeightedBackendServiceOps[Self <: SchemaWeightedBackendService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackendService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackendService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backendService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderAction(value: SchemaHttpHeaderAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

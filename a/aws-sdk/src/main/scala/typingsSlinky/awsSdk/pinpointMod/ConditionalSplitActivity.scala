@@ -26,65 +26,18 @@ trait ConditionalSplitActivity extends js.Object {
 
 object ConditionalSplitActivity {
   @scala.inline
-  def apply(): ConditionalSplitActivity = {
+  def apply(
+    Condition: Condition = null,
+    EvaluationWaitTime: WaitTime = null,
+    FalseActivity: string = null,
+    TrueActivity: string = null
+  ): ConditionalSplitActivity = {
     val __obj = js.Dynamic.literal()
+    if (Condition != null) __obj.updateDynamic("Condition")(Condition.asInstanceOf[js.Any])
+    if (EvaluationWaitTime != null) __obj.updateDynamic("EvaluationWaitTime")(EvaluationWaitTime.asInstanceOf[js.Any])
+    if (FalseActivity != null) __obj.updateDynamic("FalseActivity")(FalseActivity.asInstanceOf[js.Any])
+    if (TrueActivity != null) __obj.updateDynamic("TrueActivity")(TrueActivity.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalSplitActivity]
   }
-  @scala.inline
-  implicit class ConditionalSplitActivityOps[Self <: ConditionalSplitActivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCondition(value: Condition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvaluationWaitTime(value: WaitTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationWaitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationWaitTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationWaitTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFalseActivity(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FalseActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFalseActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FalseActivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrueActivity(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrueActivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrueActivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrueActivity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

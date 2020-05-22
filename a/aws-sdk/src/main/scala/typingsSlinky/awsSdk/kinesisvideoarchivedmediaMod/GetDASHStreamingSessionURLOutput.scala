@@ -14,29 +14,10 @@ trait GetDASHStreamingSessionURLOutput extends js.Object {
 
 object GetDASHStreamingSessionURLOutput {
   @scala.inline
-  def apply(): GetDASHStreamingSessionURLOutput = {
+  def apply(DASHStreamingSessionURL: DASHStreamingSessionURL = null): GetDASHStreamingSessionURLOutput = {
     val __obj = js.Dynamic.literal()
+    if (DASHStreamingSessionURL != null) __obj.updateDynamic("DASHStreamingSessionURL")(DASHStreamingSessionURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDASHStreamingSessionURLOutput]
   }
-  @scala.inline
-  implicit class GetDASHStreamingSessionURLOutputOps[Self <: GetDASHStreamingSessionURLOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDASHStreamingSessionURL(value: DASHStreamingSessionURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DASHStreamingSessionURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDASHStreamingSessionURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DASHStreamingSessionURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.firebaseFirestore
 
-import typingsSlinky.firebaseFirestore.anon.ChangedDocs
 import typingsSlinky.firebaseFirestore.anon.TrackRemovals
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentMap_
@@ -30,7 +29,7 @@ object remoteDocumentCacheMod extends js.Object {
       * Cached NoDocument entries have no bearing on query results.
       *
       * @param query The query to match documents against.
-      * @param sinceReadTime If not set to SnapshotVersion.MIN, return only
+      * @param sinceReadTime If not set to SnapshotVersion.min(), return only
       *     documents that have been read since this snapshot version (exclusive).
       * @return The set of matching documents.
       */
@@ -51,16 +50,6 @@ object remoteDocumentCacheMod extends js.Object {
       * cached.
       */
     def getEntry(transaction: PersistenceTransaction, documentKey: DocumentKey): PersistencePromise[MaybeDocument | Null] = js.native
-    /**
-      * Returns the read time of the most recently read document in the cache, or
-      * SnapshotVersion.MIN if not available.
-      */
-    def getLastReadTime(transaction: PersistenceTransaction): PersistencePromise[SnapshotVersion] = js.native
-    /**
-      * Returns the set of documents that have changed since the specified read
-      * time.
-      */
-    def getNewDocumentChanges(transaction: PersistenceTransaction, sinceReadTime: SnapshotVersion): PersistencePromise[ChangedDocs] = js.native
     /**
       * Get an estimate of the size of the document cache. Note that for eager
       * garbage collection, we don't track sizes so this will return 0.

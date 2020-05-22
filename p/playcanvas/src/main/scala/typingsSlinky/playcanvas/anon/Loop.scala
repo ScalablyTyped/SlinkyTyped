@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Loop extends js.Object {
-  var fps: js.UndefOr[Double] = js.native
-  var loop: js.UndefOr[js.Any] = js.native
-  var name: js.UndefOr[String] = js.native
-  var spriteAsset: js.UndefOr[Double] = js.native
+  var fps: js.UndefOr[Double] = js.undefined
+  var loop: js.UndefOr[js.Any] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var spriteAsset: js.UndefOr[Double] = js.undefined
 }
 
 object Loop {
   @scala.inline
-  def apply(): Loop = {
+  def apply(
+    fps: js.UndefOr[Double] = js.undefined,
+    loop: js.Any = null,
+    name: String = null,
+    spriteAsset: js.UndefOr[Double] = js.undefined
+  ): Loop = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fps)) __obj.updateDynamic("fps")(fps.get.asInstanceOf[js.Any])
+    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(spriteAsset)) __obj.updateDynamic("spriteAsset")(spriteAsset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loop]
   }
-  @scala.inline
-  implicit class LoopOps[Self <: Loop] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpriteAsset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spriteAsset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpriteAsset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spriteAsset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

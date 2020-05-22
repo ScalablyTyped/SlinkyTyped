@@ -13,21 +13,20 @@ import scala.scalajs.js.annotation._
   * A {@link ResultSet} maintains a cursor pointing to its current row of data. Initially the cursor is positioned before the first row. The "next" method
   * moves the cursor to the next row.
   */
-@js.native
 trait XResultSet extends XInterface {
   /**
     * retrieves the current row number. The first row is number 1, the second number 2, and so on.
     * @returns the current position
     * @throws SQLException if a database access error occurs.
     */
-  val Row: Double = js.native
+  val Row: Double
   /**
     * returns the {@link Statement} that produced this {@link com.sun.star.sdbc.ResultSet} object. If the result set was generated some other way, such as
     * by an {@link com.sun.star.sdbc.XDatabaseMetaData} method, this method returns `NULL` .
     * @returns the statement object
     * @throws SQLException if a database access error occurs.
     */
-  val Statement: XInterface = js.native
+  val Statement: XInterface
   /**
     * moves the cursor to the given row number in the result set.
     *
@@ -42,54 +41,54 @@ trait XResultSet extends XInterface {
     * Note: Calling `absolute(1)` is the same as calling {@link com.sun.star.sdbc.XResultSet.first()} . Calling `moveToPosition(-1)` is the same as calling
     * `moveToLast()` .
     */
-  def absolute(row: Double): Boolean = js.native
+  def absolute(row: Double): Boolean
   /**
     * moves the cursor to the end of the result set, just after the last row. Has no effect if the result set contains no rows.
     * @throws SQLException if a database access error occurs.
     */
-  def afterLast(): Unit = js.native
+  def afterLast(): Unit
   /**
     * moves the cursor to the front of the result set, just before the first row. Has no effect if the result set contains no rows.
     * @throws SQLException if a database access error occurs.
     */
-  def beforeFirst(): Unit = js.native
+  def beforeFirst(): Unit
   /**
     * moves the cursor to the first row in the result set.
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def first(): Boolean = js.native
+  def first(): Boolean
   /**
     * retrieves the current row number. The first row is number 1, the second number 2, and so on.
     * @returns the current position
     * @throws SQLException if a database access error occurs.
     */
-  def getRow(): Double = js.native
+  def getRow(): Double
   /**
     * returns the {@link Statement} that produced this {@link com.sun.star.sdbc.ResultSet} object. If the result set was generated some other way, such as
     * by an {@link com.sun.star.sdbc.XDatabaseMetaData} method, this method returns `NULL` .
     * @returns the statement object
     * @throws SQLException if a database access error occurs.
     */
-  def getStatement(): XInterface = js.native
+  def getStatement(): XInterface
   /**
     * indicates whether the cursor is after the last row in the result set.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def isAfterLast(): Boolean = js.native
+  def isAfterLast(): Boolean
   /**
     * indicates whether the cursor is before the first row in the result set.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def isBeforeFirst(): Boolean = js.native
+  def isBeforeFirst(): Boolean
   /**
     * indicates whether the cursor is on the first row of the result set.
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def isFirst(): Boolean = js.native
+  def isFirst(): Boolean
   /**
     * indicates whether the cursor is on the last row of the result set.
     *
@@ -98,13 +97,13 @@ trait XResultSet extends XInterface {
     * @returns `TRUE` if so
     * @throws SQLException if a database access error occurs.
     */
-  def isLast(): Boolean = js.native
+  def isLast(): Boolean
   /**
     * moves the cursor to the last row in the result set.
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def last(): Boolean = js.native
+  def last(): Boolean
   /**
     * moves the cursor down one row from its current position.
     *
@@ -116,7 +115,7 @@ trait XResultSet extends XInterface {
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def next(): Boolean = js.native
+  def next(): Boolean
   /**
     * moves the cursor to the previous row in the result set.
     *
@@ -124,7 +123,7 @@ trait XResultSet extends XInterface {
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def previous(): Boolean = js.native
+  def previous(): Boolean
   /**
     * refreshes the current row with its most recent value in the database. Cannot be called when on the insert row. The `refreshRow` method provides a way
     * for an application to explicitly tell the SDBC driver to refetch a row(s) from the database. An application may want to call `refreshRow` when caching
@@ -134,7 +133,7 @@ trait XResultSet extends XInterface {
     * are lost. Calling the method `refreshRow` frequently will likely slow performance.
     * @throws SQLException if a database access error occurs.
     */
-  def refreshRow(): Unit = js.native
+  def refreshRow(): Unit
   /**
     * moves the cursor a relative number of rows, either positive or negative.
     *
@@ -147,26 +146,26 @@ trait XResultSet extends XInterface {
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def relative(rows: Double): Boolean = js.native
+  def relative(rows: Double): Boolean
   /**
     * indicates whether a row has been deleted. A deleted row may leave a visible "hole" in a result set. This method can be used to detect holes in a
     * result set. The value returned depends on whether or not the result set can detect deletions.
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def rowDeleted(): Boolean = js.native
+  def rowDeleted(): Boolean
   /**
     * indicates whether the current row has had an insertion. The value returned depends on whether or not the result set can detect visible inserts.
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def rowInserted(): Boolean = js.native
+  def rowInserted(): Boolean
   /**
     * indicates whether the current row has been updated. The value returned depends on whether or not the result set can detect updates.
     * @returns `TRUE` if successful
     * @throws SQLException if a database access error occurs.
     */
-  def rowUpdated(): Boolean = js.native
+  def rowUpdated(): Boolean
 }
 
 object XResultSet {
@@ -199,133 +198,5 @@ object XResultSet {
     val __obj = js.Dynamic.literal(Row = Row.asInstanceOf[js.Any], Statement = Statement.asInstanceOf[js.Any], absolute = js.Any.fromFunction1(absolute), acquire = js.Any.fromFunction0(acquire), afterLast = js.Any.fromFunction0(afterLast), beforeFirst = js.Any.fromFunction0(beforeFirst), first = js.Any.fromFunction0(first), getRow = js.Any.fromFunction0(getRow), getStatement = js.Any.fromFunction0(getStatement), isAfterLast = js.Any.fromFunction0(isAfterLast), isBeforeFirst = js.Any.fromFunction0(isBeforeFirst), isFirst = js.Any.fromFunction0(isFirst), isLast = js.Any.fromFunction0(isLast), last = js.Any.fromFunction0(last), next = js.Any.fromFunction0(next), previous = js.Any.fromFunction0(previous), queryInterface = js.Any.fromFunction1(queryInterface), refreshRow = js.Any.fromFunction0(refreshRow), relative = js.Any.fromFunction1(relative), release = js.Any.fromFunction0(release), rowDeleted = js.Any.fromFunction0(rowDeleted), rowInserted = js.Any.fromFunction0(rowInserted), rowUpdated = js.Any.fromFunction0(rowUpdated))
     __obj.asInstanceOf[XResultSet]
   }
-  @scala.inline
-  implicit class XResultSetOps[Self <: XResultSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Row")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatement(value: XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbsolute(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAfterLast(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLast")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withBeforeFirst(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFirst")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFirst(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRow(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetStatement(value: () => XInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsAfterLast(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAfterLast")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsBeforeFirst(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBeforeFirst")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsFirst(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirst")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsLast(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLast")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLast(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNext(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPrevious(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRefreshRow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshRow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRelative(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRowDeleted(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDeleted")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRowInserted(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowInserted")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRowUpdated(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowUpdated")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

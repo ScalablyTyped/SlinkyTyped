@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * NodeAddress contains information for the node's address.
   */
-@js.native
 trait NodeAddress extends js.Object {
   /**
     * The node address.
     */
-  val address: String = js.native
+  val address: String
   /**
     * Node address type, one of Hostname, ExternalIP or InternalIP.
     */
-  val `type`: String = js.native
+  val `type`: String
 }
 
 object NodeAddress {
@@ -26,25 +25,5 @@ object NodeAddress {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeAddress]
   }
-  @scala.inline
-  implicit class NodeAddressOps[Self <: NodeAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

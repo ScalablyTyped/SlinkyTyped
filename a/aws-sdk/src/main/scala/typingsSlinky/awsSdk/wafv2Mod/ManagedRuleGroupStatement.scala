@@ -22,41 +22,10 @@ trait ManagedRuleGroupStatement extends js.Object {
 
 object ManagedRuleGroupStatement {
   @scala.inline
-  def apply(Name: EntityName, VendorName: VendorName): ManagedRuleGroupStatement = {
+  def apply(Name: EntityName, VendorName: VendorName, ExcludedRules: ExcludedRules = null): ManagedRuleGroupStatement = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], VendorName = VendorName.asInstanceOf[js.Any])
+    if (ExcludedRules != null) __obj.updateDynamic("ExcludedRules")(ExcludedRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedRuleGroupStatement]
   }
-  @scala.inline
-  implicit class ManagedRuleGroupStatementOps[Self <: ManagedRuleGroupStatement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVendorName(value: VendorName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VendorName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludedRules(value: ExcludedRules): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedRules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

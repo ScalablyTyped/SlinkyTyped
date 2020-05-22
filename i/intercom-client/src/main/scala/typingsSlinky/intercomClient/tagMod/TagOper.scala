@@ -1,5 +1,7 @@
 package typingsSlinky.intercomClient.tagMod
 
+import typingsSlinky.intercomClient.anon.Id
+import typingsSlinky.intercomClient.userMod.UserIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,14 @@ trait TagOper extends js.Object
 
 object TagOper {
   @scala.inline
-  implicit def apply(value: TagCompanies): TagOper = value.asInstanceOf[TagOper]
+  def TagCompanies(name: String, users: js.Array[Id]): TagOper = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TagOper]
+  }
   @scala.inline
-  implicit def apply(value: TagUsers): TagOper = value.asInstanceOf[TagOper]
+  def TagUsers(name: String, users: js.Array[UserIdentifier]): TagOper = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TagOper]
+  }
 }
 

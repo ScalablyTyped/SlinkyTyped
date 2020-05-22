@@ -4,175 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TermsAndConditions extends Entity {
   /**
     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms
     * and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
     */
-  var acceptanceStatement: js.UndefOr[String] = js.native
+  var acceptanceStatement: js.UndefOr[String] = js.undefined
   // The list of acceptance statuses for this T&amp;C policy.
-  var acceptanceStatuses: js.UndefOr[js.Array[TermsAndConditionsAcceptanceStatus]] = js.native
+  var acceptanceStatuses: js.UndefOr[js.Array[TermsAndConditionsAcceptanceStatus]] = js.undefined
   // The list of assignments for this T&amp;C policy.
-  var assignments: js.UndefOr[js.Array[TermsAndConditionsAssignment]] = js.native
+  var assignments: js.UndefOr[js.Array[TermsAndConditionsAssignment]] = js.undefined
   /**
     * Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user
     * on prompts to accept the T&amp;C policy.
     */
-  var bodyText: js.UndefOr[String] = js.native
+  var bodyText: js.UndefOr[String] = js.undefined
   // DateTime the object was created.
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[String] = js.undefined
   // Administrator-supplied description of the T&amp;C policy.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   // Administrator-supplied name for the T&amp;C policy.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   // DateTime the object was last modified.
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[String] = js.undefined
   /**
     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C
     * policy.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and
     * wishes to require users to re-accept the modified T&amp;C policy.
     */
-  var version: js.UndefOr[Double] = js.native
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object TermsAndConditions {
   @scala.inline
-  def apply(): TermsAndConditions = {
+  def apply(
+    acceptanceStatement: String = null,
+    acceptanceStatuses: js.Array[TermsAndConditionsAcceptanceStatus] = null,
+    assignments: js.Array[TermsAndConditionsAssignment] = null,
+    bodyText: String = null,
+    createdDateTime: String = null,
+    description: String = null,
+    displayName: String = null,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    title: String = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): TermsAndConditions = {
     val __obj = js.Dynamic.literal()
+    if (acceptanceStatement != null) __obj.updateDynamic("acceptanceStatement")(acceptanceStatement.asInstanceOf[js.Any])
+    if (acceptanceStatuses != null) __obj.updateDynamic("acceptanceStatuses")(acceptanceStatuses.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (bodyText != null) __obj.updateDynamic("bodyText")(bodyText.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TermsAndConditions]
   }
-  @scala.inline
-  implicit class TermsAndConditionsOps[Self <: TermsAndConditions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptanceStatement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptanceStatement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptanceStatement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptanceStatement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAcceptanceStatuses(value: js.Array[TermsAndConditionsAcceptanceStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptanceStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptanceStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptanceStatuses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignments(value: js.Array[TermsAndConditionsAssignment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

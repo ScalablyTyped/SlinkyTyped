@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFocusedCellCoordinates extends ICellCoordinates {
-  var focusSelectionIndex: Double = js.native
+  var focusSelectionIndex: Double
 }
 
 object IFocusedCellCoordinates {
@@ -15,19 +14,5 @@ object IFocusedCellCoordinates {
     val __obj = js.Dynamic.literal(col = col.asInstanceOf[js.Any], focusSelectionIndex = focusSelectionIndex.asInstanceOf[js.Any], row = row.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFocusedCellCoordinates]
   }
-  @scala.inline
-  implicit class IFocusedCellCoordinatesOps[Self <: IFocusedCellCoordinates] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFocusSelectionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusSelectionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

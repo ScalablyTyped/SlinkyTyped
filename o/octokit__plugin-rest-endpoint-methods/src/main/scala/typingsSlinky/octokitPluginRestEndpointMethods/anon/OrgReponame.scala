@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrgReponame extends js.Object {
-  var migration_id: Required = js.native
+  var migration_id: Required
   @JSName("org")
-  var org_ : Required = js.native
-  var repo_name: Required = js.native
+  var org_ : Required
+  var repo_name: Required
 }
 
 object OrgReponame {
@@ -19,31 +18,5 @@ object OrgReponame {
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgReponame]
   }
-  @scala.inline
-  implicit class OrgReponameOps[Self <: OrgReponame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMigration_id(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migration_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrg_(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepo_name(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repo_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

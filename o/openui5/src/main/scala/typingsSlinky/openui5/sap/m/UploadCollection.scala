@@ -415,12 +415,12 @@ trait UploadCollection extends Control {
     * instead.</li><li><code>status</code> of type <code>string</code>Status Code of the completed upload
     * event. This parameter is deprecated since version 1.28.0., use parameter files
     * instead.</li><li><code>files</code> of type <code>object[]</code>A list of uploaded files. Each
-    * entry contains the following members.fileName	: The name of a file to be uploaded.response	:
+    * entry contains the following members.fileName    : The name of a file to be uploaded.response    :
     * Response message which comes from the server. On the server side, this response has to be put within
     * the 'body' tags of the response document of the iFrame. It can consist of a return code and an
     * optional message. This does not work in cross-domain scenarios.responseRaw : HTTP-Response which
     * comes from the server. This property is not supported by Internet Explorer Versions lower than
-    * 9.status	: Status of the XHR request. This property is not supported by Internet Explorer 9 and
+    * 9.status    : Status of the XHR request. This property is not supported by Internet Explorer 9 and
     * lower.headers : HTTP-Response-Headers which come from the server. Provided as a JSON-map, i.e. each
     * header-field is reflected by a property in the header-object, with the property value reflecting the
     * header-field's content. This property is not supported by Internet Explorer 9 and lower.Since

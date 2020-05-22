@@ -1,53 +1,44 @@
 package typingsSlinky.reactNativeScrollableTabView.mod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScrollableTabBarProps extends DefaultTabBarProps {
-  var scrollOffset: js.UndefOr[Double] = js.native
-  var tabsContainerStyle: js.UndefOr[ViewStyle] = js.native
+  var scrollOffset: js.UndefOr[Double] = js.undefined
+  var tabsContainerStyle: js.UndefOr[ViewStyle] = js.undefined
 }
 
 object ScrollableTabBarProps {
   @scala.inline
-  def apply(): ScrollableTabBarProps = {
+  def apply(
+    activeTextColor: String = null,
+    backgroundColor: String = null,
+    inactiveTextColor: String = null,
+    renderTab: (/* name */ String, /* pageIndex */ Double, /* isTabActive */ Boolean, /* onPressHandler */ js.Function1[/* pageNumber */ Double, Unit], /* onLayoutHandler */ js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]) => ReactElement = null,
+    scrollOffset: js.UndefOr[Double] = js.undefined,
+    style: ViewStyle = null,
+    tabStyle: ViewStyle = null,
+    tabsContainerStyle: ViewStyle = null,
+    textStyle: TextStyle = null,
+    underlineStyle: ViewStyle = null
+  ): ScrollableTabBarProps = {
     val __obj = js.Dynamic.literal()
+    if (activeTextColor != null) __obj.updateDynamic("activeTextColor")(activeTextColor.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (inactiveTextColor != null) __obj.updateDynamic("inactiveTextColor")(inactiveTextColor.asInstanceOf[js.Any])
+    if (renderTab != null) __obj.updateDynamic("renderTab")(js.Any.fromFunction5(renderTab))
+    if (!js.isUndefined(scrollOffset)) __obj.updateDynamic("scrollOffset")(scrollOffset.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
+    if (tabsContainerStyle != null) __obj.updateDynamic("tabsContainerStyle")(tabsContainerStyle.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
+    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollableTabBarProps]
   }
-  @scala.inline
-  implicit class ScrollableTabBarPropsOps[Self <: ScrollableTabBarProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScrollOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabsContainerStyle(value: ViewStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabsContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabsContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabsContainerStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

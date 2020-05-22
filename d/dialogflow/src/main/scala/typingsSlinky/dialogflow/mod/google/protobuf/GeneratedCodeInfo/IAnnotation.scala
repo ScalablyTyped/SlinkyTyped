@@ -5,103 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an Annotation. */
-@js.native
 trait IAnnotation extends js.Object {
   /** Annotation begin */
-  var begin: js.UndefOr[Double | Null] = js.native
+  var begin: js.UndefOr[Double | Null] = js.undefined
   /** Annotation end */
-  var end: js.UndefOr[Double | Null] = js.native
+  var end: js.UndefOr[Double | Null] = js.undefined
   /** Annotation path */
-  var path: js.UndefOr[js.Array[Double] | Null] = js.native
+  var path: js.UndefOr[js.Array[Double] | Null] = js.undefined
   /** Annotation sourceFile */
-  var sourceFile: js.UndefOr[String | Null] = js.native
+  var sourceFile: js.UndefOr[String | Null] = js.undefined
 }
 
 object IAnnotation {
   @scala.inline
-  def apply(): IAnnotation = {
+  def apply(
+    begin: js.UndefOr[Null | Double] = js.undefined,
+    end: js.UndefOr[Null | Double] = js.undefined,
+    path: js.UndefOr[Null | js.Array[Double]] = js.undefined,
+    sourceFile: js.UndefOr[Null | String] = js.undefined
+  ): IAnnotation = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(begin)) __obj.updateDynamic("begin")(begin.asInstanceOf[js.Any])
+    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (!js.isUndefined(path)) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceFile)) __obj.updateDynamic("sourceFile")(sourceFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAnnotation]
   }
-  @scala.inline
-  implicit class IAnnotationOps[Self <: IAnnotation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBegin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBegin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeginNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("begin")(null)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(null)
-        ret
-    }
-    @scala.inline
-    def withPath(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPathNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(null)
-        ret
-    }
-    @scala.inline
-    def withSourceFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFileNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(null)
-        ret
-    }
-  }
-  
 }
 

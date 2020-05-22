@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppUpdateEvent extends js.Object {
   /** The id of the product (e.g. "app:com.google.android.gm") that was updated. This field will always be present. */
-  var productId: js.UndefOr[String] = js.native
+  var productId: js.UndefOr[String] = js.undefined
 }
 
 object AppUpdateEvent {
   @scala.inline
-  def apply(): AppUpdateEvent = {
+  def apply(productId: String = null): AppUpdateEvent = {
     val __obj = js.Dynamic.literal()
+    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppUpdateEvent]
   }
-  @scala.inline
-  implicit class AppUpdateEventOps[Self <: AppUpdateEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProductId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

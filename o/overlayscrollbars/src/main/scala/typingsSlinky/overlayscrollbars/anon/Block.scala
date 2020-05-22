@@ -2,85 +2,36 @@ package typingsSlinky.overlayscrollbars.anon
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.overlayscrollbars.mod.BlockBehavior
-import typingsSlinky.overlayscrollbars.mod.Coordinates
 import typingsSlinky.overlayscrollbars.mod.JQuery
 import typingsSlinky.overlayscrollbars.mod.Margin
 import typingsSlinky.overlayscrollbars.mod.ScrollBehavior
+import typingsSlinky.overlayscrollbars.mod._Coordinates
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Block extends Coordinates {
-  var block: js.UndefOr[BlockBehavior | XY | (js.Tuple2[BlockBehavior, BlockBehavior])] = js.native
-  var el: HTMLElement | JQuery = js.native
+trait Block extends _Coordinates {
+  var block: js.UndefOr[BlockBehavior | XY | (js.Tuple2[BlockBehavior, BlockBehavior])] = js.undefined
+  var el: HTMLElement | JQuery
   var margin: js.UndefOr[
     Margin | Bottom | (js.Tuple2[Margin, Margin]) | (js.Tuple4[Margin, Margin, Margin, Margin])
-  ] = js.native
-  var scroll: js.UndefOr[ScrollBehavior | Y | (js.Tuple2[ScrollBehavior, ScrollBehavior])] = js.native
+  ] = js.undefined
+  var scroll: js.UndefOr[ScrollBehavior | Y | (js.Tuple2[ScrollBehavior, ScrollBehavior])] = js.undefined
 }
 
 object Block {
   @scala.inline
-  def apply(el: HTMLElement | JQuery): Block = {
+  def apply(
+    el: HTMLElement | JQuery,
+    block: BlockBehavior | XY | (js.Tuple2[BlockBehavior, BlockBehavior]) = null,
+    margin: Margin | Bottom | (js.Tuple2[Margin, Margin]) | (js.Tuple4[Margin, Margin, Margin, Margin]) = null,
+    scroll: ScrollBehavior | Y | (js.Tuple2[ScrollBehavior, ScrollBehavior]) = null
+  ): Block = {
     val __obj = js.Dynamic.literal(el = el.asInstanceOf[js.Any])
+    if (block != null) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (scroll != null) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
     __obj.asInstanceOf[Block]
   }
-  @scala.inline
-  implicit class BlockOps[Self <: Block] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("el")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEl(value: HTMLElement | JQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("el")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlock(value: BlockBehavior | XY | (js.Tuple2[BlockBehavior, BlockBehavior])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Margin | Bottom | (js.Tuple2[Margin, Margin]) | (js.Tuple4[Margin, Margin, Margin, Margin])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScroll(value: ScrollBehavior | Y | (js.Tuple2[ScrollBehavior, ScrollBehavior])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

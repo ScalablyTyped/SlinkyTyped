@@ -37,77 +37,20 @@ trait SchemaUser extends js.Object {
 
 object SchemaUser {
   @scala.inline
-  def apply(): SchemaUser = {
+  def apply(
+    isDeleted: js.UndefOr[Boolean] = js.undefined,
+    isMe: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    permissionId: String = null,
+    photo: SchemaPhoto = null
+  ): SchemaUser = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isDeleted)) __obj.updateDynamic("isDeleted")(isDeleted.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMe)) __obj.updateDynamic("isMe")(isMe.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (permissionId != null) __obj.updateDynamic("permissionId")(permissionId.asInstanceOf[js.Any])
+    if (photo != null) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUser]
   }
-  @scala.inline
-  implicit class SchemaUserOps[Self <: SchemaUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoto(value: SchemaPhoto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

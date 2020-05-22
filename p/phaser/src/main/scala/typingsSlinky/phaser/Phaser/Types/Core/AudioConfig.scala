@@ -8,71 +8,33 @@ import scala.scalajs.js.annotation._
 /**
   * Config object containing various sound settings.
   */
-@js.native
 trait AudioConfig extends js.Object {
   /**
     * An existing Web Audio context.
     */
-  var context: js.UndefOr[AudioContext] = js.native
+  var context: js.UndefOr[AudioContext] = js.undefined
   /**
     * Use HTML5 Audio instead of Web Audio.
     */
-  var disableWebAudio: js.UndefOr[Boolean] = js.native
+  var disableWebAudio: js.UndefOr[Boolean] = js.undefined
   /**
     * Disable all audio output.
     */
-  var noAudio: js.UndefOr[Boolean] = js.native
+  var noAudio: js.UndefOr[Boolean] = js.undefined
 }
 
 object AudioConfig {
   @scala.inline
-  def apply(): AudioConfig = {
+  def apply(
+    context: AudioContext = null,
+    disableWebAudio: js.UndefOr[Boolean] = js.undefined,
+    noAudio: js.UndefOr[Boolean] = js.undefined
+  ): AudioConfig = {
     val __obj = js.Dynamic.literal()
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableWebAudio)) __obj.updateDynamic("disableWebAudio")(disableWebAudio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noAudio)) __obj.updateDynamic("noAudio")(noAudio.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioConfig]
   }
-  @scala.inline
-  implicit class AudioConfigOps[Self <: AudioConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: AudioContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableWebAudio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWebAudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableWebAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWebAudio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoAudio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoAudio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noAudio")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

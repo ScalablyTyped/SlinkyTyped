@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   *
   * VolumeAttachment objects are non-namespaced.
   */
-@js.native
 trait VolumeAttachment extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -20,29 +19,29 @@ trait VolumeAttachment extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: storageDotk8sDotioSlashv1beta1 = js.native
+  val apiVersion: storageDotk8sDotioSlashv1beta1
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.VolumeAttachment = js.native
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.VolumeAttachment
   /**
     * Standard object metadata. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  val metadata: ObjectMeta = js.native
+  val metadata: ObjectMeta
   /**
     * Specification of the desired attach/detach volume behavior. Populated by the Kubernetes
     * system.
     */
-  val spec: VolumeAttachmentSpec = js.native
+  val spec: VolumeAttachmentSpec
   /**
     * Status of the VolumeAttachment request. Populated by the entity completing the attach or
     * detach operation, i.e. the external-attacher.
     */
-  val status: VolumeAttachmentStatus = js.native
+  val status: VolumeAttachmentStatus
 }
 
 object VolumeAttachment {
@@ -57,43 +56,5 @@ object VolumeAttachment {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], spec = spec.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeAttachment]
   }
-  @scala.inline
-  implicit class VolumeAttachmentOps[Self <: VolumeAttachment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: storageDotk8sDotioSlashv1beta1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.VolumeAttachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: ObjectMeta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpec(value: VolumeAttachmentSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: VolumeAttachmentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

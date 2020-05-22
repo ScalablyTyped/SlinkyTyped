@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Nice extends js.Object {
-  var count: js.UndefOr[Double | SignalRef] = js.native
-  var nice: js.UndefOr[Double | SignalRef] = js.native
+  var count: js.UndefOr[Double | SignalRef] = js.undefined
+  var nice: js.UndefOr[Double | SignalRef] = js.undefined
 }
 
 object Nice {
   @scala.inline
-  def apply(): Nice = {
+  def apply(count: Double | SignalRef = null, nice: Double | SignalRef = null): Nice = {
     val __obj = js.Dynamic.literal()
+    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
+    if (nice != null) __obj.updateDynamic("nice")(nice.asInstanceOf[js.Any])
     __obj.asInstanceOf[Nice]
   }
-  @scala.inline
-  implicit class NiceOps[Self <: Nice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNice(value: Double | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

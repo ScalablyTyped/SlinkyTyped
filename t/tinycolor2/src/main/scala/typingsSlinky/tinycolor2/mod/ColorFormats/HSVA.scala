@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.tinycolor2.mod.ColorInput because Already inherited
-- typingsSlinky.tinycolor2.mod.ColorInputWithoutInstance because Already inherited */ @js.native
-trait HSVA extends HSV {
-  var a: Double = js.native
+- typingsSlinky.tinycolor2.mod._ColorInput because Already inherited
+- typingsSlinky.tinycolor2.mod._ColorInputWithoutInstance because Already inherited */ trait HSVA extends HSV {
+  var a: Double
 }
 
 object HSVA {
@@ -17,19 +16,5 @@ object HSVA {
     val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], h = h.asInstanceOf[js.Any], s = s.asInstanceOf[js.Any], v = v.asInstanceOf[js.Any])
     __obj.asInstanceOf[HSVA]
   }
-  @scala.inline
-  implicit class HSVAOps[Self <: HSVA] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withA(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

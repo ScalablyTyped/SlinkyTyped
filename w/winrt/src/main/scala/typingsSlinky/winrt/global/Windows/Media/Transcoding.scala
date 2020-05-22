@@ -1,5 +1,7 @@
 package typingsSlinky.winrt.global.Windows.Media
 
+import typingsSlinky.winrt.Windows.Foundation.IAsyncActionWithProgress
+import typingsSlinky.winrt.Windows.Media.Transcoding.TranscodeFailureReason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +15,14 @@ object Transcoding extends js.Object {
   
   @js.native
   class PrepareTranscodeResult ()
-    extends typingsSlinky.winrt.Windows.Media.Transcoding.PrepareTranscodeResult
+    extends typingsSlinky.winrt.Windows.Media.Transcoding.PrepareTranscodeResult {
+    /* CompleteClass */
+    override var canTranscode: Boolean = js.native
+    /* CompleteClass */
+    override var failureReason: TranscodeFailureReason = js.native
+    /* CompleteClass */
+    override def transcodeAsync(): IAsyncActionWithProgress[Double] = js.native
+  }
   
   @js.native
   object TranscodeFailureReason extends js.Object {

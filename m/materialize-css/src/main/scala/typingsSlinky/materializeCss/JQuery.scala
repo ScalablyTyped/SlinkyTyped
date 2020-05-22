@@ -48,7 +48,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JQuery extends MElements {
+trait JQuery extends js.Object {
   def autocomplete(): JQuery = js.native
   // Pick<T,K> to check methods exist.
   def autocomplete(method: /* keyof materialize-css.anon.PickAutocompleteopenclose */ open | close | destroy): JQuery = js.native

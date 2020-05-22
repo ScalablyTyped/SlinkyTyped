@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThemeWebPage extends Control {
-  def add_themeDisplayUpdated(value: js.Function2[/* sender */ js.Any, /* e */ EventArgs, Unit]): Unit = js.native
-  def get_thmxThemes(): js.Any = js.native
-  def onThemeSelectionChanged(evt: DomEvent): Unit = js.native
-  def remove_themeDisplayUpdated(value: js.Function2[/* sender */ js.Any, /* e */ EventArgs, Unit]): Unit = js.native
-  def set_thmxThemes(value: js.Any): Unit = js.native
-  def updateThemeDisplay(): Unit = js.native
+  def add_themeDisplayUpdated(value: js.Function2[/* sender */ js.Any, /* e */ EventArgs, Unit]): Unit
+  def get_thmxThemes(): js.Any
+  def onThemeSelectionChanged(evt: DomEvent): Unit
+  def remove_themeDisplayUpdated(value: js.Function2[/* sender */ js.Any, /* e */ EventArgs, Unit]): Unit
+  def set_thmxThemes(value: js.Any): Unit
+  def updateThemeDisplay(): Unit
 }
 
 object ThemeWebPage {
@@ -52,49 +51,5 @@ object ThemeWebPage {
     val __obj = js.Dynamic.literal(addCssClass = js.Any.fromFunction1(addCssClass), add_disposing = js.Any.fromFunction1(add_disposing), add_propertyChanged = js.Any.fromFunction1(add_propertyChanged), add_themeDisplayUpdated = js.Any.fromFunction1(add_themeDisplayUpdated), beginUpdate = js.Any.fromFunction0(beginUpdate), dispose = js.Any.fromFunction0(dispose), endUpdate = js.Any.fromFunction0(endUpdate), get_element = js.Any.fromFunction0(get_element), get_events = js.Any.fromFunction0(get_events), get_id = js.Any.fromFunction0(get_id), get_isInitialized = js.Any.fromFunction0(get_isInitialized), get_isUpdating = js.Any.fromFunction0(get_isUpdating), get_thmxThemes = js.Any.fromFunction0(get_thmxThemes), initialize = js.Any.fromFunction0(initialize), onBubbleEvent = js.Any.fromFunction2(onBubbleEvent), onThemeSelectionChanged = js.Any.fromFunction1(onThemeSelectionChanged), raiseBubbleEvent = js.Any.fromFunction2(raiseBubbleEvent), raisePropertyChanged = js.Any.fromFunction1(raisePropertyChanged), removeCssClass = js.Any.fromFunction1(removeCssClass), remove_disposing = js.Any.fromFunction1(remove_disposing), remove_propertyChanged = js.Any.fromFunction1(remove_propertyChanged), remove_themeDisplayUpdated = js.Any.fromFunction1(remove_themeDisplayUpdated), set_id = js.Any.fromFunction1(set_id), set_thmxThemes = js.Any.fromFunction1(set_thmxThemes), toggleCssClass = js.Any.fromFunction1(toggleCssClass), updateThemeDisplay = js.Any.fromFunction0(updateThemeDisplay), updated = js.Any.fromFunction0(updated))
     __obj.asInstanceOf[ThemeWebPage]
   }
-  @scala.inline
-  implicit class ThemeWebPageOps[Self <: ThemeWebPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdd_themeDisplayUpdated(value: js.Function2[/* sender */ js.Any, /* e */ EventArgs, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("add_themeDisplayUpdated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet_thmxThemes(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_thmxThemes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOnThemeSelectionChanged(value: DomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onThemeSelectionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove_themeDisplayUpdated(value: js.Function2[/* sender */ js.Any, /* e */ EventArgs, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_themeDisplayUpdated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_thmxThemes(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_thmxThemes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateThemeDisplay(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateThemeDisplay")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

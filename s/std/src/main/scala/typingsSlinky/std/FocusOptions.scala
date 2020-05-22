@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FocusOptions extends js.Object {
-  var preventScroll: js.UndefOr[scala.Boolean] = js.native
+  var preventScroll: js.UndefOr[scala.Boolean] = js.undefined
 }
 
 object FocusOptions {
   @scala.inline
-  def apply(): FocusOptions = {
+  def apply(preventScroll: js.UndefOr[scala.Boolean] = js.undefined): FocusOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(preventScroll)) __obj.updateDynamic("preventScroll")(preventScroll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FocusOptions]
   }
-  @scala.inline
-  implicit class FocusOptionsOps[Self <: FocusOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreventScroll(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventScroll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

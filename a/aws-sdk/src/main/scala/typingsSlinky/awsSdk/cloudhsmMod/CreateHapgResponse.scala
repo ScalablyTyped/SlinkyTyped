@@ -14,29 +14,10 @@ trait CreateHapgResponse extends js.Object {
 
 object CreateHapgResponse {
   @scala.inline
-  def apply(): CreateHapgResponse = {
+  def apply(HapgArn: HapgArn = null): CreateHapgResponse = {
     val __obj = js.Dynamic.literal()
+    if (HapgArn != null) __obj.updateDynamic("HapgArn")(HapgArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHapgResponse]
   }
-  @scala.inline
-  implicit class CreateHapgResponseOps[Self <: CreateHapgResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHapgArn(value: HapgArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHapgArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HapgArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

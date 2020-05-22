@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 class b2World protected ()
   extends typingsSlinky.box2d.Box2D.Dynamics.b2World {
   /**
-  		* Creates a new world.
-  		* @param gravity The world gravity vector.
-  		* @param doSleep Improvie performance by not simulating inactive bodies.
-  		**/
+    * Creates a new world.
+    * @param gravity The world gravity vector.
+    * @param doSleep Improvie performance by not simulating inactive bodies.
+    **/
   def this(gravity: b2Vec2, doSleep: Boolean) = this()
 }
 
@@ -22,12 +22,12 @@ class b2World protected ()
 @js.native
 object b2World extends js.Object {
   /**
-  		* Locked
-  		**/
+    * Locked
+    **/
   var e_locked: Double = js.native
   /**
-  		* New Fixture
-  		**/
+    * New Fixture
+    **/
   var e_newFixture: Double = js.native
 }
 

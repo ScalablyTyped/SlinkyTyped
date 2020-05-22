@@ -26,9 +26,16 @@ object listIdentitiesCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListIdentitiesInput) = this()
+    /* CompleteClass */
+    override val input: ListIdentitiesInput = js.native
     val middlewareStack: MiddlewareStack[ListIdentitiesInput, ListIdentitiesOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: CognitoIdentityResolvedConfiguration
+    ): Handler[ListIdentitiesInput, ListIdentitiesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[ListIdentitiesInput, ListIdentitiesOutput] = js.native
   }

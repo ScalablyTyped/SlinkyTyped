@@ -39,53 +39,12 @@ trait SchemaDisk extends js.Object {
 
 object SchemaDisk {
   @scala.inline
-  def apply(): SchemaDisk = {
+  def apply(diskType: String = null, mountPoint: String = null, sizeGb: js.UndefOr[Double] = js.undefined): SchemaDisk = {
     val __obj = js.Dynamic.literal()
+    if (diskType != null) __obj.updateDynamic("diskType")(diskType.asInstanceOf[js.Any])
+    if (mountPoint != null) __obj.updateDynamic("mountPoint")(mountPoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeGb)) __obj.updateDynamic("sizeGb")(sizeGb.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDisk]
   }
-  @scala.inline
-  implicit class SchemaDiskOps[Self <: SchemaDisk] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiskType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountPoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeGb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGb")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

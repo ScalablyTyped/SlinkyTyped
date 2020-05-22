@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BigInteger extends BigNumber {
+trait BigInteger extends js.Object {
   /**
     * Returns the absolute value of a bigInt.
     */

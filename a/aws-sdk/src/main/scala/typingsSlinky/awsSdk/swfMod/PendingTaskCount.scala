@@ -18,35 +18,10 @@ trait PendingTaskCount extends js.Object {
 
 object PendingTaskCount {
   @scala.inline
-  def apply(count: Count): PendingTaskCount = {
+  def apply(count: Count, truncated: js.UndefOr[Truncated] = js.undefined): PendingTaskCount = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
+    if (!js.isUndefined(truncated)) __obj.updateDynamic("truncated")(truncated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PendingTaskCount]
   }
-  @scala.inline
-  implicit class PendingTaskCountOps[Self <: PendingTaskCount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Count): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTruncated(value: Truncated): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTruncated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("truncated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

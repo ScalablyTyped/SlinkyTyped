@@ -23,53 +23,16 @@ trait SchemaLiveChatUserBannedMessageDetails extends js.Object {
 
 object SchemaLiveChatUserBannedMessageDetails {
   @scala.inline
-  def apply(): SchemaLiveChatUserBannedMessageDetails = {
+  def apply(
+    banDurationSeconds: String = null,
+    banType: String = null,
+    bannedUserDetails: SchemaChannelProfileDetails = null
+  ): SchemaLiveChatUserBannedMessageDetails = {
     val __obj = js.Dynamic.literal()
+    if (banDurationSeconds != null) __obj.updateDynamic("banDurationSeconds")(banDurationSeconds.asInstanceOf[js.Any])
+    if (banType != null) __obj.updateDynamic("banType")(banType.asInstanceOf[js.Any])
+    if (bannedUserDetails != null) __obj.updateDynamic("bannedUserDetails")(bannedUserDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveChatUserBannedMessageDetails]
   }
-  @scala.inline
-  implicit class SchemaLiveChatUserBannedMessageDetailsOps[Self <: SchemaLiveChatUserBannedMessageDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBanDurationSeconds(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banDurationSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBanDurationSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banDurationSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBanType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBanType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("banType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBannedUserDetails(value: SchemaChannelProfileDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannedUserDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBannedUserDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bannedUserDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

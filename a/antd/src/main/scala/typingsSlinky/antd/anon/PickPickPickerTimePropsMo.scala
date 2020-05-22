@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.`additions text`
@@ -44,6 +43,7 @@ import typingsSlinky.antd.antdStrings.text
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
@@ -59,1431 +59,345 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Pick<std.Pick<rc-picker.rc-picker/lib/Picker.PickerTimeProps<moment.moment.Moment>, 'value' | 'style' | 'direction' | 'className' | 'prefixCls' | 'getPopupContainer' | 'onChange' | 'disabled' | 'onClick' | 'open' | 'suffixIcon' | 'clearIcon' | 'mode' | 'defaultValue' | 'allowClear' | 'defaultOpen' | 'dropdownClassName' | 'dropdownAlign' | 'transitionName' | 'autoFocus' | 'placeholder' | 'tabIndex' | 'onSelect' | 'onBlur' | 'onFocus' | 'onMouseDown' | 'onMouseEnter' | 'onMouseLeave' | 'aria-activedescendant' | 'aria-atomic' | 'aria-autocomplete' | 'aria-busy' | 'aria-checked' | 'aria-colcount' | 'aria-colindex' | 'aria-colspan' | 'aria-controls' | 'aria-current' | 'aria-describedby' | 'aria-details' | 'aria-disabled' | 'aria-dropeffect' | 'aria-errormessage' | 'aria-expanded' | 'aria-flowto' | 'aria-grabbed' | 'aria-haspopup' | 'aria-hidden' | 'aria-invalid' | 'aria-keyshortcuts' | 'aria-label' | 'aria-labelledby' | 'aria-level' | 'aria-live' | 'aria-modal' | 'aria-multiline' | 'aria-multiselectable' | 'aria-orientation' | 'aria-owns' | 'aria-placeholder' | 'aria-posinset' | 'aria-pressed' | 'aria-readonly' | 'aria-relevant' | 'aria-required' | 'aria-roledescription' | 'aria-rowcount' | 'aria-rowindex' | 'aria-rowspan' | 'aria-selected' | 'aria-setsize' | 'aria-sort' | 'aria-valuemax' | 'aria-valuemin' | 'aria-valuenow' | 'aria-valuetext' | 'role' | 'onContextMenu' | 'onMouseUp' | 'name' | 'onOpenChange' | 'picker' | 'defaultPickerValue' | 'disabledDate' | 'dateRender' | 'monthCellRender' | 'renderExtraFooter' | 'onPanelChange' | 'onOk' | 'format' | 'showHour' | 'showMinute' | 'showSecond' | 'use12Hours' | 'hourStep' | 'minuteStep' | 'secondStep' | 'hideDisabledOptions' | 'disabledHours' | 'disabledMinutes' | 'disabledSeconds' | 'popupStyle' | 'inputReadOnly' | 'pickerRef' | 'defaultOpenValue'> & {  locale ? :{  lang  :{  locale  :string,   monthBeforeYear ? :boolean | undefined,   yearFormat  :string,   monthFormat ? :string | undefined,   today  :string,   now  :string,   backToToday  :string,   ok  :string,   timeSelect  :string,   dateSelect  :string,   weekSelect ? :string | undefined,   clear  :string,   month  :string,   year  :string,   previousMonth  :string,   nextMonth  :string,   monthSelect  :string,   yearSelect  :string,   decadeSelect  :string,   dayFormat  :string,   dateFormat  :string,   dateTimeFormat  :string,   previousYear  :string,   nextYear  :string,   previousDecade  :string,   nextDecade  :string,   previousCentury  :string,   nextCentury  :string,   shortWeekDays ? :std.Array<string> | undefined,   shortMonths ? :std.Array<string> | undefined,   placeholder  :string,   yearPlaceholder  :string,   monthPlaceholder  :string,   weekPlaceholder  :string,   rangePlaceholder  :std.Array<string>,   rangeYearPlaceholder  :std.Array<string>,   rangeMonthPlaceholder  :std.Array<string>,   rangeWeekPlaceholder  :std.Array<string>},   timePickerLocale  :{  placeholder  :string,   rangePlaceholder  :std.Array<string>}} | undefined,   size ? :antd.antd/lib/button.ButtonSize,   bordered ? :boolean | undefined}, 'value' | 'style' | 'direction' | 'className' | 'prefixCls' | 'locale' | 'size' | 'getPopupContainer' | 'onChange' | 'disabled' | 'onClick' | 'open' | 'suffixIcon' | 'clearIcon' | 'mode' | 'defaultValue' | 'allowClear' | 'defaultOpen' | 'dropdownClassName' | 'dropdownAlign' | 'transitionName' | 'autoFocus' | 'placeholder' | 'tabIndex' | 'onSelect' | 'onBlur' | 'onFocus' | 'onMouseDown' | 'onMouseEnter' | 'onMouseLeave' | 'aria-activedescendant' | 'aria-atomic' | 'aria-autocomplete' | 'aria-busy' | 'aria-checked' | 'aria-colcount' | 'aria-colindex' | 'aria-colspan' | 'aria-controls' | 'aria-current' | 'aria-describedby' | 'aria-details' | 'aria-disabled' | 'aria-dropeffect' | 'aria-errormessage' | 'aria-expanded' | 'aria-flowto' | 'aria-grabbed' | 'aria-haspopup' | 'aria-hidden' | 'aria-invalid' | 'aria-keyshortcuts' | 'aria-label' | 'aria-labelledby' | 'aria-level' | 'aria-live' | 'aria-modal' | 'aria-multiline' | 'aria-multiselectable' | 'aria-orientation' | 'aria-owns' | 'aria-placeholder' | 'aria-posinset' | 'aria-pressed' | 'aria-readonly' | 'aria-relevant' | 'aria-required' | 'aria-roledescription' | 'aria-rowcount' | 'aria-rowindex' | 'aria-rowspan' | 'aria-selected' | 'aria-setsize' | 'aria-sort' | 'aria-valuemax' | 'aria-valuemin' | 'aria-valuenow' | 'aria-valuetext' | 'bordered' | 'role' | 'onContextMenu' | 'onMouseUp' | 'name' | 'onOpenChange' | 'defaultPickerValue' | 'disabledDate' | 'dateRender' | 'monthCellRender' | 'renderExtraFooter' | 'onPanelChange' | 'onOk' | 'format' | 'showHour' | 'showMinute' | 'showSecond' | 'use12Hours' | 'hourStep' | 'minuteStep' | 'secondStep' | 'hideDisabledOptions' | 'disabledHours' | 'disabledMinutes' | 'disabledSeconds' | 'popupStyle' | 'inputReadOnly' | 'pickerRef' | 'defaultOpenValue'> */
-@js.native
+/* Inlined std.Pick<std.Pick<rc-picker.rc-picker/lib/Picker.PickerTimeProps<moment.moment.Moment>, 'style' | 'direction' | 'prefixCls' | 'className' | 'disabled' | 'open' | 'aria-label' | 'autoComplete' | 'autoFocus' | 'name' | 'placeholder' | 'value' | 'defaultValue' | 'id' | 'tabIndex' | 'role' | 'aria-activedescendant' | 'aria-atomic' | 'aria-autocomplete' | 'aria-busy' | 'aria-checked' | 'aria-colcount' | 'aria-colindex' | 'aria-colspan' | 'aria-controls' | 'aria-current' | 'aria-describedby' | 'aria-details' | 'aria-disabled' | 'aria-dropeffect' | 'aria-errormessage' | 'aria-expanded' | 'aria-flowto' | 'aria-grabbed' | 'aria-haspopup' | 'aria-hidden' | 'aria-invalid' | 'aria-keyshortcuts' | 'aria-labelledby' | 'aria-level' | 'aria-live' | 'aria-modal' | 'aria-multiline' | 'aria-multiselectable' | 'aria-orientation' | 'aria-owns' | 'aria-placeholder' | 'aria-posinset' | 'aria-pressed' | 'aria-readonly' | 'aria-relevant' | 'aria-required' | 'aria-roledescription' | 'aria-rowcount' | 'aria-rowindex' | 'aria-rowspan' | 'aria-selected' | 'aria-setsize' | 'aria-sort' | 'aria-valuemax' | 'aria-valuemin' | 'aria-valuenow' | 'aria-valuetext' | 'onFocus' | 'onBlur' | 'onChange' | 'onClick' | 'onContextMenu' | 'onMouseDown' | 'onMouseEnter' | 'onMouseLeave' | 'onMouseUp' | 'onSelect' | 'picker' | 'mode' | 'defaultPickerValue' | 'disabledDate' | 'dateRender' | 'monthCellRender' | 'renderExtraFooter' | 'onPanelChange' | 'onOk' | 'dropdownClassName' | 'dropdownAlign' | 'popupStyle' | 'transitionName' | 'allowClear' | 'defaultOpen' | 'inputReadOnly' | 'format' | 'suffixIcon' | 'clearIcon' | 'getPopupContainer' | 'onOpenChange' | 'pickerRef' | 'showHour' | 'showMinute' | 'showSecond' | 'use12Hours' | 'hourStep' | 'minuteStep' | 'secondStep' | 'hideDisabledOptions' | 'disabledHours' | 'disabledMinutes' | 'disabledSeconds' | 'defaultOpenValue'> & {  locale ? :antd.antd/lib/date-picker/generatePicker.PickerLocale | undefined,   size ? :antd.antd/lib/button.ButtonSize,   bordered ? :boolean | undefined}, 'size' | 'style' | 'direction' | 'prefixCls' | 'className' | 'disabled' | 'open' | 'aria-label' | 'autoComplete' | 'autoFocus' | 'name' | 'placeholder' | 'value' | 'defaultValue' | 'id' | 'tabIndex' | 'role' | 'aria-activedescendant' | 'aria-atomic' | 'aria-autocomplete' | 'aria-busy' | 'aria-checked' | 'aria-colcount' | 'aria-colindex' | 'aria-colspan' | 'aria-controls' | 'aria-current' | 'aria-describedby' | 'aria-details' | 'aria-disabled' | 'aria-dropeffect' | 'aria-errormessage' | 'aria-expanded' | 'aria-flowto' | 'aria-grabbed' | 'aria-haspopup' | 'aria-hidden' | 'aria-invalid' | 'aria-keyshortcuts' | 'aria-labelledby' | 'aria-level' | 'aria-live' | 'aria-modal' | 'aria-multiline' | 'aria-multiselectable' | 'aria-orientation' | 'aria-owns' | 'aria-placeholder' | 'aria-posinset' | 'aria-pressed' | 'aria-readonly' | 'aria-relevant' | 'aria-required' | 'aria-roledescription' | 'aria-rowcount' | 'aria-rowindex' | 'aria-rowspan' | 'aria-selected' | 'aria-setsize' | 'aria-sort' | 'aria-valuemax' | 'aria-valuemin' | 'aria-valuenow' | 'aria-valuetext' | 'onFocus' | 'onBlur' | 'onChange' | 'onClick' | 'onContextMenu' | 'onMouseDown' | 'onMouseEnter' | 'onMouseLeave' | 'onMouseUp' | 'onSelect' | 'locale' | 'mode' | 'defaultPickerValue' | 'disabledDate' | 'dateRender' | 'monthCellRender' | 'renderExtraFooter' | 'onPanelChange' | 'onOk' | 'dropdownClassName' | 'dropdownAlign' | 'popupStyle' | 'transitionName' | 'allowClear' | 'defaultOpen' | 'inputReadOnly' | 'format' | 'suffixIcon' | 'clearIcon' | 'getPopupContainer' | 'onOpenChange' | 'pickerRef' | 'showHour' | 'showMinute' | 'showSecond' | 'use12Hours' | 'hourStep' | 'minuteStep' | 'secondStep' | 'hideDisabledOptions' | 'disabledHours' | 'disabledMinutes' | 'disabledSeconds' | 'defaultOpenValue' | 'bordered'> */
 trait PickPickPickerTimePropsMo extends js.Object {
-  var allowClear: js.UndefOr[Boolean] = js.native
-  var `aria-activedescendant`: js.UndefOr[String] = js.native
-  var `aria-atomic`: js.UndefOr[Boolean] = js.native
-  var `aria-autocomplete`: js.UndefOr[none | `inline` | list | both] = js.native
-  var `aria-busy`: js.UndefOr[Boolean] = js.native
-  var `aria-checked`: js.UndefOr[Boolean | mixed] = js.native
-  var `aria-colcount`: js.UndefOr[Double] = js.native
-  var `aria-colindex`: js.UndefOr[Double] = js.native
-  var `aria-colspan`: js.UndefOr[Double] = js.native
-  var `aria-controls`: js.UndefOr[String] = js.native
-  var `aria-current`: js.UndefOr[Boolean | page | step | location | date | time] = js.native
-  var `aria-describedby`: js.UndefOr[String] = js.native
-  var `aria-details`: js.UndefOr[String] = js.native
-  var `aria-disabled`: js.UndefOr[Boolean] = js.native
-  var `aria-dropeffect`: js.UndefOr[none | copy | execute | link | move | popup] = js.native
-  var `aria-errormessage`: js.UndefOr[String] = js.native
-  var `aria-expanded`: js.UndefOr[Boolean] = js.native
-  var `aria-flowto`: js.UndefOr[String] = js.native
-  var `aria-grabbed`: js.UndefOr[Boolean] = js.native
-  var `aria-haspopup`: js.UndefOr[Boolean | menu | listbox | tree | grid | dialog] = js.native
-  var `aria-hidden`: js.UndefOr[Boolean] = js.native
-  var `aria-invalid`: js.UndefOr[Boolean | grammar | spelling] = js.native
-  var `aria-keyshortcuts`: js.UndefOr[String] = js.native
-  var `aria-label`: js.UndefOr[String] = js.native
-  var `aria-labelledby`: js.UndefOr[String] = js.native
-  var `aria-level`: js.UndefOr[Double] = js.native
-  var `aria-live`: js.UndefOr[off | assertive | polite] = js.native
-  var `aria-modal`: js.UndefOr[Boolean] = js.native
-  var `aria-multiline`: js.UndefOr[Boolean] = js.native
-  var `aria-multiselectable`: js.UndefOr[Boolean] = js.native
-  var `aria-orientation`: js.UndefOr[horizontal | vertical] = js.native
-  var `aria-owns`: js.UndefOr[String] = js.native
-  var `aria-placeholder`: js.UndefOr[String] = js.native
-  var `aria-posinset`: js.UndefOr[Double] = js.native
-  var `aria-pressed`: js.UndefOr[Boolean | mixed] = js.native
-  var `aria-readonly`: js.UndefOr[Boolean] = js.native
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
-  var `aria-required`: js.UndefOr[Boolean] = js.native
-  var `aria-roledescription`: js.UndefOr[String] = js.native
-  var `aria-rowcount`: js.UndefOr[Double] = js.native
-  var `aria-rowindex`: js.UndefOr[Double] = js.native
-  var `aria-rowspan`: js.UndefOr[Double] = js.native
-  var `aria-selected`: js.UndefOr[Boolean] = js.native
-  var `aria-setsize`: js.UndefOr[Double] = js.native
-  var `aria-sort`: js.UndefOr[none | ascending | descending | other] = js.native
-  var `aria-valuemax`: js.UndefOr[Double] = js.native
-  var `aria-valuemin`: js.UndefOr[Double] = js.native
-  var `aria-valuenow`: js.UndefOr[Double] = js.native
-  var `aria-valuetext`: js.UndefOr[String] = js.native
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var bordered: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[String] = js.native
-  var clearIcon: js.UndefOr[TagMod[Any]] = js.native
-  var dateRender: js.UndefOr[DateRender[Moment]] = js.native
-  var defaultOpen: js.UndefOr[Boolean] = js.native
-  var defaultOpenValue: js.UndefOr[Moment] = js.native
-  var defaultPickerValue: js.UndefOr[Moment] = js.native
-  var defaultValue: js.UndefOr[Moment] = js.native
-  var direction: js.UndefOr[ltr | rtl] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var disabledDate: js.UndefOr[js.Function1[/* date */ Moment, Boolean]] = js.native
-  var disabledHours: js.UndefOr[js.Function0[js.Array[Double]]] = js.native
-  var disabledMinutes: js.UndefOr[js.Function1[/* hour */ Double, js.Array[Double]]] = js.native
-  var disabledSeconds: js.UndefOr[js.Function2[/* hour */ Double, /* minute */ Double, js.Array[Double]]] = js.native
+  var allowClear: js.UndefOr[Boolean] = js.undefined
+  var `aria-activedescendant`: js.UndefOr[String] = js.undefined
+  var `aria-atomic`: js.UndefOr[Boolean] = js.undefined
+  var `aria-autocomplete`: js.UndefOr[none | `inline` | list | both] = js.undefined
+  var `aria-busy`: js.UndefOr[Boolean] = js.undefined
+  var `aria-checked`: js.UndefOr[Boolean | mixed] = js.undefined
+  var `aria-colcount`: js.UndefOr[Double] = js.undefined
+  var `aria-colindex`: js.UndefOr[Double] = js.undefined
+  var `aria-colspan`: js.UndefOr[Double] = js.undefined
+  var `aria-controls`: js.UndefOr[String] = js.undefined
+  var `aria-current`: js.UndefOr[Boolean | page | step | location | date | time] = js.undefined
+  var `aria-describedby`: js.UndefOr[String] = js.undefined
+  var `aria-details`: js.UndefOr[String] = js.undefined
+  var `aria-disabled`: js.UndefOr[Boolean] = js.undefined
+  var `aria-dropeffect`: js.UndefOr[none | copy | execute | link | move | popup] = js.undefined
+  var `aria-errormessage`: js.UndefOr[String] = js.undefined
+  var `aria-expanded`: js.UndefOr[Boolean] = js.undefined
+  var `aria-flowto`: js.UndefOr[String] = js.undefined
+  var `aria-grabbed`: js.UndefOr[Boolean] = js.undefined
+  var `aria-haspopup`: js.UndefOr[Boolean | menu | listbox | tree | grid | dialog] = js.undefined
+  var `aria-hidden`: js.UndefOr[Boolean] = js.undefined
+  var `aria-invalid`: js.UndefOr[Boolean | grammar | spelling] = js.undefined
+  var `aria-keyshortcuts`: js.UndefOr[String] = js.undefined
+  var `aria-label`: js.UndefOr[String] = js.undefined
+  var `aria-labelledby`: js.UndefOr[String] = js.undefined
+  var `aria-level`: js.UndefOr[Double] = js.undefined
+  var `aria-live`: js.UndefOr[off | assertive | polite] = js.undefined
+  var `aria-modal`: js.UndefOr[Boolean] = js.undefined
+  var `aria-multiline`: js.UndefOr[Boolean] = js.undefined
+  var `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined
+  var `aria-orientation`: js.UndefOr[horizontal | vertical] = js.undefined
+  var `aria-owns`: js.UndefOr[String] = js.undefined
+  var `aria-placeholder`: js.UndefOr[String] = js.undefined
+  var `aria-posinset`: js.UndefOr[Double] = js.undefined
+  var `aria-pressed`: js.UndefOr[Boolean | mixed] = js.undefined
+  var `aria-readonly`: js.UndefOr[Boolean] = js.undefined
+  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.undefined
+  var `aria-required`: js.UndefOr[Boolean] = js.undefined
+  var `aria-roledescription`: js.UndefOr[String] = js.undefined
+  var `aria-rowcount`: js.UndefOr[Double] = js.undefined
+  var `aria-rowindex`: js.UndefOr[Double] = js.undefined
+  var `aria-rowspan`: js.UndefOr[Double] = js.undefined
+  var `aria-selected`: js.UndefOr[Boolean] = js.undefined
+  var `aria-setsize`: js.UndefOr[Double] = js.undefined
+  var `aria-sort`: js.UndefOr[none | ascending | descending | other] = js.undefined
+  var `aria-valuemax`: js.UndefOr[Double] = js.undefined
+  var `aria-valuemin`: js.UndefOr[Double] = js.undefined
+  var `aria-valuenow`: js.UndefOr[Double] = js.undefined
+  var `aria-valuetext`: js.UndefOr[String] = js.undefined
+  var autoComplete: js.UndefOr[String] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var bordered: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var clearIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var dateRender: js.UndefOr[DateRender[Moment]] = js.undefined
+  var defaultOpen: js.UndefOr[Boolean] = js.undefined
+  var defaultOpenValue: js.UndefOr[Moment] = js.undefined
+  var defaultPickerValue: js.UndefOr[Moment] = js.undefined
+  var defaultValue: js.UndefOr[Moment] = js.undefined
+  var direction: js.UndefOr[ltr | rtl] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabledDate: js.UndefOr[js.Function1[/* date */ Moment, Boolean]] = js.undefined
+  var disabledHours: js.UndefOr[js.Function0[js.Array[Double]]] = js.undefined
+  var disabledMinutes: js.UndefOr[js.Function1[/* hour */ Double, js.Array[Double]]] = js.undefined
+  var disabledSeconds: js.UndefOr[js.Function2[/* hour */ Double, /* minute */ Double, js.Array[Double]]] = js.undefined
   var dropdownAlign: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ] = js.native
-  var dropdownClassName: js.UndefOr[String] = js.native
-  var format: js.UndefOr[String | js.Array[String]] = js.native
-  var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.native
-  var hideDisabledOptions: js.UndefOr[Boolean] = js.native
-  var hourStep: js.UndefOr[Double] = js.native
-  var inputReadOnly: js.UndefOr[Boolean] = js.native
-  var locale: js.UndefOr[Lang] = js.native
-  var minuteStep: js.UndefOr[Double] = js.native
-  var mode: js.UndefOr[PanelMode] = js.native
-  var monthCellRender: js.UndefOr[MonthCellRender[Moment]] = js.native
-  var name: js.UndefOr[String] = js.native
-  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
-  var onChange: js.UndefOr[js.Function2[/* value */ Moment | Null, /* dateString */ String, Unit]] = js.native
-  var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onContextMenu: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
-  var onMouseDown: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onMouseUp: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
-  var onOk: js.UndefOr[js.Function1[/* date */ Moment, Unit]] = js.native
-  var onOpenChange: js.UndefOr[js.Function1[/* open */ Boolean, Unit]] = js.native
-  var onPanelChange: js.UndefOr[OnPanelChange[Moment]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* value */ Moment, Unit]] = js.native
-  var open: js.UndefOr[Boolean] = js.native
-  var pickerRef: js.UndefOr[MutableRefObject[PickerRefConfig]] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var popupStyle: js.UndefOr[CSSProperties] = js.native
-  var prefixCls: js.UndefOr[String] = js.native
-  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, TagMod[Any]]] = js.native
-  var role: js.UndefOr[String] = js.native
-  var secondStep: js.UndefOr[Double] = js.native
-  var showHour: js.UndefOr[Boolean] = js.native
-  var showMinute: js.UndefOr[Boolean] = js.native
-  var showSecond: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[SizeType] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var suffixIcon: js.UndefOr[TagMod[Any]] = js.native
-  var tabIndex: js.UndefOr[Double] = js.native
-  var transitionName: js.UndefOr[String] = js.native
-  var use12Hours: js.UndefOr[Boolean] = js.native
-  var value: js.UndefOr[Moment] = js.native
+  ] = js.undefined
+  var dropdownClassName: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String | js.Array[String]] = js.undefined
+  var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.undefined
+  var hideDisabledOptions: js.UndefOr[Boolean] = js.undefined
+  var hourStep: js.UndefOr[Double] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var inputReadOnly: js.UndefOr[Boolean] = js.undefined
+  var locale: js.UndefOr[PickerLocale] = js.undefined
+  var minuteStep: js.UndefOr[Double] = js.undefined
+  var mode: js.UndefOr[PanelMode] = js.undefined
+  var monthCellRender: js.UndefOr[MonthCellRender[Moment]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
+  var onChange: js.UndefOr[js.Function2[/* value */ Moment | Null, /* dateString */ String, Unit]] = js.undefined
+  var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onContextMenu: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
+  var onMouseDown: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onMouseUp: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var onOk: js.UndefOr[js.Function1[/* date */ Moment, Unit]] = js.undefined
+  var onOpenChange: js.UndefOr[js.Function1[/* open */ Boolean, Unit]] = js.undefined
+  var onPanelChange: js.UndefOr[OnPanelChange[Moment]] = js.undefined
+  var onSelect: js.UndefOr[js.Function1[/* value */ Moment, Unit]] = js.undefined
+  var open: js.UndefOr[Boolean] = js.undefined
+  var pickerRef: js.UndefOr[MutableRefObject[PickerRefConfig]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var popupStyle: js.UndefOr[CSSProperties] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
+  var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, TagMod[Any]]] = js.undefined
+  var role: js.UndefOr[String] = js.undefined
+  var secondStep: js.UndefOr[Double] = js.undefined
+  var showHour: js.UndefOr[Boolean] = js.undefined
+  var showMinute: js.UndefOr[Boolean] = js.undefined
+  var showSecond: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[SizeType] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var suffixIcon: js.UndefOr[TagMod[Any]] = js.undefined
+  var tabIndex: js.UndefOr[Double] = js.undefined
+  var transitionName: js.UndefOr[String] = js.undefined
+  var use12Hours: js.UndefOr[Boolean] = js.undefined
+  var value: js.UndefOr[Moment] = js.undefined
 }
 
 object PickPickPickerTimePropsMo {
   @scala.inline
-  def apply(): PickPickPickerTimePropsMo = {
+  def apply(
+    allowClear: js.UndefOr[Boolean] = js.undefined,
+    `aria-activedescendant`: String = null,
+    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
+    `aria-autocomplete`: none | `inline` | list | both = null,
+    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
+    `aria-checked`: Boolean | mixed = null,
+    `aria-colcount`: js.UndefOr[Double] = js.undefined,
+    `aria-colindex`: js.UndefOr[Double] = js.undefined,
+    `aria-colspan`: js.UndefOr[Double] = js.undefined,
+    `aria-controls`: String = null,
+    `aria-current`: Boolean | page | step | location | date | time = null,
+    `aria-describedby`: String = null,
+    `aria-details`: String = null,
+    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
+    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
+    `aria-errormessage`: String = null,
+    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
+    `aria-flowto`: String = null,
+    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
+    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
+    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
+    `aria-invalid`: Boolean | grammar | spelling = null,
+    `aria-keyshortcuts`: String = null,
+    `aria-label`: String = null,
+    `aria-labelledby`: String = null,
+    `aria-level`: js.UndefOr[Double] = js.undefined,
+    `aria-live`: off | assertive | polite = null,
+    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
+    `aria-orientation`: horizontal | vertical = null,
+    `aria-owns`: String = null,
+    `aria-placeholder`: String = null,
+    `aria-posinset`: js.UndefOr[Double] = js.undefined,
+    `aria-pressed`: Boolean | mixed = null,
+    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
+    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
+    `aria-required`: js.UndefOr[Boolean] = js.undefined,
+    `aria-roledescription`: String = null,
+    `aria-rowcount`: js.UndefOr[Double] = js.undefined,
+    `aria-rowindex`: js.UndefOr[Double] = js.undefined,
+    `aria-rowspan`: js.UndefOr[Double] = js.undefined,
+    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
+    `aria-setsize`: js.UndefOr[Double] = js.undefined,
+    `aria-sort`: none | ascending | descending | other = null,
+    `aria-valuemax`: js.UndefOr[Double] = js.undefined,
+    `aria-valuemin`: js.UndefOr[Double] = js.undefined,
+    `aria-valuenow`: js.UndefOr[Double] = js.undefined,
+    `aria-valuetext`: String = null,
+    autoComplete: String = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    bordered: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    clearIcon: TagMod[Any] = null,
+    dateRender: (Moment, Moment) => TagMod[Any] = null,
+    defaultOpen: js.UndefOr[Boolean] = js.undefined,
+    defaultOpenValue: Moment = null,
+    defaultPickerValue: Moment = null,
+    defaultValue: Moment = null,
+    direction: ltr | rtl = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    disabledDate: /* date */ Moment => Boolean = null,
+    disabledHours: () => js.Array[Double] = null,
+    disabledMinutes: /* hour */ Double => js.Array[Double] = null,
+    disabledSeconds: (/* hour */ Double, /* minute */ Double) => js.Array[Double] = null,
+    dropdownAlign: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any = null,
+    dropdownClassName: String = null,
+    format: String | js.Array[String] = null,
+    getPopupContainer: /* node */ HTMLElement => HTMLElement = null,
+    hideDisabledOptions: js.UndefOr[Boolean] = js.undefined,
+    hourStep: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    inputReadOnly: js.UndefOr[Boolean] = js.undefined,
+    locale: PickerLocale = null,
+    minuteStep: js.UndefOr[Double] = js.undefined,
+    mode: PanelMode = null,
+    monthCellRender: (Moment, /* locale */ typingsSlinky.rcPicker.interfaceMod.Locale) => TagMod[Any] = null,
+    name: String = null,
+    onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
+    onChange: (/* value */ Moment | Null, /* dateString */ String) => Unit = null,
+    onClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onContextMenu: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
+    onMouseDown: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onMouseEnter: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onMouseLeave: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onMouseUp: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
+    onOk: /* date */ Moment => Unit = null,
+    onOpenChange: /* open */ Boolean => Unit = null,
+    onPanelChange: (Moment, /* mode */ PanelMode) => Unit = null,
+    onSelect: /* value */ Moment => Unit = null,
+    open: js.UndefOr[Boolean] = js.undefined,
+    pickerRef: MutableRefObject[PickerRefConfig] = null,
+    placeholder: String = null,
+    popupStyle: CSSProperties = null,
+    prefixCls: String = null,
+    renderExtraFooter: /* mode */ PanelMode => TagMod[Any] = null,
+    role: String = null,
+    secondStep: js.UndefOr[Double] = js.undefined,
+    showHour: js.UndefOr[Boolean] = js.undefined,
+    showMinute: js.UndefOr[Boolean] = js.undefined,
+    showSecond: js.UndefOr[Boolean] = js.undefined,
+    size: SizeType = null,
+    style: CSSProperties = null,
+    suffixIcon: TagMod[Any] = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    transitionName: String = null,
+    use12Hours: js.UndefOr[Boolean] = js.undefined,
+    value: Moment = null
+  ): PickPickPickerTimePropsMo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.get.asInstanceOf[js.Any])
+    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.get.asInstanceOf[js.Any])
+    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.get.asInstanceOf[js.Any])
+    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-colcount`)) __obj.updateDynamic("aria-colcount")(`aria-colcount`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-colindex`)) __obj.updateDynamic("aria-colindex")(`aria-colindex`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-colspan`)) __obj.updateDynamic("aria-colspan")(`aria-colspan`.get.asInstanceOf[js.Any])
+    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.get.asInstanceOf[js.Any])
+    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.get.asInstanceOf[js.Any])
+    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.get.asInstanceOf[js.Any])
+    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.get.asInstanceOf[js.Any])
+    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-level`)) __obj.updateDynamic("aria-level")(`aria-level`.get.asInstanceOf[js.Any])
+    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.get.asInstanceOf[js.Any])
+    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-posinset`)) __obj.updateDynamic("aria-posinset")(`aria-posinset`.get.asInstanceOf[js.Any])
+    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.get.asInstanceOf[js.Any])
+    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.get.asInstanceOf[js.Any])
+    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-rowcount`)) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-rowindex`)) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-rowspan`)) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-setsize`)) __obj.updateDynamic("aria-setsize")(`aria-setsize`.get.asInstanceOf[js.Any])
+    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-valuemax`)) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-valuemin`)) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-valuenow`)) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.get.asInstanceOf[js.Any])
+    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (clearIcon != null) __obj.updateDynamic("clearIcon")(clearIcon.asInstanceOf[js.Any])
+    if (dateRender != null) __obj.updateDynamic("dateRender")(js.Any.fromFunction2(dateRender))
+    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.get.asInstanceOf[js.Any])
+    if (defaultOpenValue != null) __obj.updateDynamic("defaultOpenValue")(defaultOpenValue.asInstanceOf[js.Any])
+    if (defaultPickerValue != null) __obj.updateDynamic("defaultPickerValue")(defaultPickerValue.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
+    if (disabledHours != null) __obj.updateDynamic("disabledHours")(js.Any.fromFunction0(disabledHours))
+    if (disabledMinutes != null) __obj.updateDynamic("disabledMinutes")(js.Any.fromFunction1(disabledMinutes))
+    if (disabledSeconds != null) __obj.updateDynamic("disabledSeconds")(js.Any.fromFunction2(disabledSeconds))
+    if (dropdownAlign != null) __obj.updateDynamic("dropdownAlign")(dropdownAlign.asInstanceOf[js.Any])
+    if (dropdownClassName != null) __obj.updateDynamic("dropdownClassName")(dropdownClassName.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
+    if (!js.isUndefined(hideDisabledOptions)) __obj.updateDynamic("hideDisabledOptions")(hideDisabledOptions.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hourStep)) __obj.updateDynamic("hourStep")(hourStep.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputReadOnly)) __obj.updateDynamic("inputReadOnly")(inputReadOnly.get.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (!js.isUndefined(minuteStep)) __obj.updateDynamic("minuteStep")(minuteStep.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (monthCellRender != null) __obj.updateDynamic("monthCellRender")(js.Any.fromFunction2(monthCellRender))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
+    if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
+    if (onPanelChange != null) __obj.updateDynamic("onPanelChange")(js.Any.fromFunction2(onPanelChange))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
+    if (pickerRef != null) __obj.updateDynamic("pickerRef")(pickerRef.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (popupStyle != null) __obj.updateDynamic("popupStyle")(popupStyle.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
+    if (renderExtraFooter != null) __obj.updateDynamic("renderExtraFooter")(js.Any.fromFunction1(renderExtraFooter))
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (!js.isUndefined(secondStep)) __obj.updateDynamic("secondStep")(secondStep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showHour)) __obj.updateDynamic("showHour")(showHour.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMinute)) __obj.updateDynamic("showMinute")(showMinute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSecond)) __obj.updateDynamic("showSecond")(showSecond.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
+    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickPickPickerTimePropsMo]
   }
-  @scala.inline
-  implicit class PickPickPickerTimePropsMoOps[Self <: PickPickPickerTimePropsMo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowClear(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowClear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowClear: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowClear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-activedescendant`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-activedescendant`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-atomic`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-atomic`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-autocomplete`(value: none | `inline` | list | both): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-autocomplete`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-busy`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-busy`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-checked`(value: Boolean | mixed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-checked`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-colcount`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-colcount`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-colindex`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-colindex`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-colspan`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-colspan`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-controls`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-controls`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-current`(value: Boolean | page | step | location | date | time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-current`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-describedby`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-describedby`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-details`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-details`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-disabled`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-disabled`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-dropeffect`(value: none | copy | execute | link | move | popup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-dropeffect`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-errormessage`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-errormessage`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-expanded`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-expanded`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-flowto`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-flowto`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-grabbed`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-grabbed`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-haspopup`(value: Boolean | menu | listbox | tree | grid | dialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-haspopup`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-hidden`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-hidden`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-invalid`(value: Boolean | grammar | spelling): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-invalid`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-keyshortcuts`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-keyshortcuts`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-label`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-label`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-labelledby`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-labelledby`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-level`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-level`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-live`(value: off | assertive | polite): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-live`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-modal`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-modal`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-multiline`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-multiline`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-multiselectable`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-multiselectable`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-orientation`(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-orientation`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-owns`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-owns`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-placeholder`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-placeholder`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-posinset`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-posinset`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-pressed`(value: Boolean | mixed): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-pressed`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-readonly`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-readonly`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-relevant`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-required`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-required`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-roledescription`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-roledescription`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-rowcount`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-rowcount`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-rowindex`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-rowindex`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-rowspan`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-rowspan`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-selected`(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-selected`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-setsize`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-setsize`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-sort`(value: none | ascending | descending | other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-sort`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuemax`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuemax`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuemin`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuemin`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuenow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuenow`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-valuetext`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-valuetext`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBordered(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBordered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateRender(value: (Moment, Moment) => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRender")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDateRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOpenValue(value: Moment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOpenValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultPickerValue(value: Moment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPickerValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPickerValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPickerValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: Moment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: ltr | rtl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledDate(value: /* date */ Moment => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDisabledDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledHours(value: () => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledHours")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutDisabledHours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledHours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledMinutes(value: /* hour */ Double => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledMinutes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDisabledMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledSeconds(value: (/* hour */ Double, /* minute */ Double) => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSeconds")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDisabledSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownAlign(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetPopupContainer(value: /* node */ HTMLElement => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetPopupContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDisabledOptions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabledOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDisabledOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDisabledOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHourStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputReadOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputReadOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: Lang): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinuteStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinuteStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: PanelMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthCellRender(value: (Moment, /* locale */ typingsSlinky.rcPicker.interfaceMod.Locale) => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthCellRender")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutMonthCellRender: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthCellRender")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* value */ Moment | Null, /* dateString */ String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContextMenu(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnContextMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseDown(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseUp(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOk(value: /* date */ Moment => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnOk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnOpenChange(value: /* open */ Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnOpenChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPanelChange(value: (Moment, /* mode */ PanelMode) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanelChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPanelChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanelChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: /* value */ Moment => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerRef(value: MutableRefObject[PickerRefConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderExtraFooter(value: /* mode */ PanelMode => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExtraFooter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderExtraFooter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderExtraFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecondStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secondStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHour(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHour: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHour")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMinute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMinute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSecond(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: SizeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffixIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuffixIcon(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffixIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse12Hours(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use12Hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse12Hours: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use12Hours")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Moment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,14 +8,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents text, HTML, or XHTML content. This interface encapsulates elements in RSS 2.0 or Atom 1.0 that can have either text, HTML, or XHTML content. In Atom 1.0 this interface maps to an atomTextConstruct in the schema, which can be element atom:title, atom:subtitle, atom:rights or atom:summary. */
-@js.native
 trait ISyndicationText extends ISyndicationNode {
   /** Gets or sets the content of a text content construct like atom:title. */
-  var text: String = js.native
+  var text: String
   /** Gets or sets the type of the content. */
-  var `type`: String = js.native
+  var `type`: String
   /** Gets or sets the XML content. */
-  var xml: XmlDocument = js.native
+  var xml: XmlDocument
 }
 
 object ISyndicationText {
@@ -37,31 +36,5 @@ object ISyndicationText {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISyndicationText]
   }
-  @scala.inline
-  implicit class ISyndicationTextOps[Self <: ISyndicationText] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXml(value: XmlDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xml")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

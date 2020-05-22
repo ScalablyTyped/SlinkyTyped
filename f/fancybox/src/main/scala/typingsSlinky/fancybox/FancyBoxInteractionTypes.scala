@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fancybox.fancyboxStrings.toggleControls
   - typingsSlinky.fancybox.fancyboxStrings.zoom
 */
-trait FancyBoxInteractionTypes extends FancyBoxInteractions
+trait FancyBoxInteractionTypes extends js.Object
 
 object FancyBoxInteractionTypes {
   @scala.inline

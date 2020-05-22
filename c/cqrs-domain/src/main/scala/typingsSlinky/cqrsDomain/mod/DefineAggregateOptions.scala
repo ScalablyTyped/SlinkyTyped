@@ -6,154 +6,66 @@ import scala.scalajs.js.annotation._
 
 // endregion
 // region defineAggregate
-@js.native
 trait DefineAggregateOptions extends js.Object {
   /**
     * optional, default false
     * only optionally needed when skipHistory is set to true, only the last event will be loaded and applyed
     */
-  var applyLastEvent: js.UndefOr[Boolean] = js.native
+  var applyLastEvent: js.UndefOr[Boolean] = js.undefined
   /**
     * optional, default ''
     */
-  var defaultCommandPayload: js.UndefOr[String] = js.native
+  var defaultCommandPayload: js.UndefOr[String] = js.undefined
   /**
     * optional, default ''
     */
-  var defaultEventPayload: js.UndefOr[String] = js.native
+  var defaultEventPayload: js.UndefOr[String] = js.undefined
   /**
     * optional, default ''
     */
-  var defaultPreConditionPayload: js.UndefOr[String] = js.native
+  var defaultPreConditionPayload: js.UndefOr[String] = js.undefined
   /**
     * optional, default false
     * will publish the events but will not commit them to the eventstore
     */
-  var disablePersistence: js.UndefOr[Boolean] = js.native
+  var disablePersistence: js.UndefOr[Boolean] = js.undefined
   /**
     * optional, default is last part of path name
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * optional, default false
     * by skipping the history, only the last event will be loaded and defaultly not applyed (just to ensure the revision number increment)
     */
-  var skipHistory: js.UndefOr[Boolean] = js.native
+  var skipHistory: js.UndefOr[Boolean] = js.undefined
   /**
     * optional, default 0
     */
-  var version: js.UndefOr[Double] = js.native
+  var version: js.UndefOr[Double] = js.undefined
 }
 
 object DefineAggregateOptions {
   @scala.inline
-  def apply(): DefineAggregateOptions = {
+  def apply(
+    applyLastEvent: js.UndefOr[Boolean] = js.undefined,
+    defaultCommandPayload: String = null,
+    defaultEventPayload: String = null,
+    defaultPreConditionPayload: String = null,
+    disablePersistence: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    skipHistory: js.UndefOr[Boolean] = js.undefined,
+    version: js.UndefOr[Double] = js.undefined
+  ): DefineAggregateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(applyLastEvent)) __obj.updateDynamic("applyLastEvent")(applyLastEvent.get.asInstanceOf[js.Any])
+    if (defaultCommandPayload != null) __obj.updateDynamic("defaultCommandPayload")(defaultCommandPayload.asInstanceOf[js.Any])
+    if (defaultEventPayload != null) __obj.updateDynamic("defaultEventPayload")(defaultEventPayload.asInstanceOf[js.Any])
+    if (defaultPreConditionPayload != null) __obj.updateDynamic("defaultPreConditionPayload")(defaultPreConditionPayload.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePersistence)) __obj.updateDynamic("disablePersistence")(disablePersistence.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipHistory)) __obj.updateDynamic("skipHistory")(skipHistory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefineAggregateOptions]
   }
-  @scala.inline
-  implicit class DefineAggregateOptionsOps[Self <: DefineAggregateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyLastEvent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyLastEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplyLastEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyLastEvent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultCommandPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCommandPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultCommandPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCommandPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultEventPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEventPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultEventPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEventPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultPreConditionPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPreConditionPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPreConditionPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPreConditionPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePersistence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePersistence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePersistence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePersistence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipHistory(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipHistory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipHistory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipHistory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

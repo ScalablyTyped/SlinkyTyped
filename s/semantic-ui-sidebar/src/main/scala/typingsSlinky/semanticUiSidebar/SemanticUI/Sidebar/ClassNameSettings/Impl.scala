@@ -4,52 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Impl extends js.Object {
   /**
     * @default 'active'
     */
-  var active: String = js.native
+  var active: String
   /**
     * @default 'animating'
     */
-  var animating: String = js.native
+  var animating: String
   /**
     * @default 'bottom'
     */
-  var bottom: String = js.native
+  var bottom: String
   /**
     * @default 'dimmed'
     */
-  var dimmed: String = js.native
+  var dimmed: String
   /**
     * @default 'ios'
     */
-  var ios: String = js.native
+  var ios: String
   /**
     * @default 'left'
     */
-  var left: String = js.native
+  var left: String
   /**
     * @default 'pushable'
     */
-  var pushable: String = js.native
+  var pushable: String
   /**
     * @default 'pushed'
     */
-  var pushed: String = js.native
+  var pushed: String
   /**
     * @default 'right'
     */
-  var right: String = js.native
+  var right: String
   /**
     * @default 'top'
     */
-  var top: String = js.native
+  var top: String
   /**
     * @default 'visible'
     */
-  var visible: String = js.native
+  var visible: String
 }
 
 object Impl {
@@ -70,79 +69,5 @@ object Impl {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], animating = animating.asInstanceOf[js.Any], bottom = bottom.asInstanceOf[js.Any], dimmed = dimmed.asInstanceOf[js.Any], ios = ios.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], pushable = pushable.asInstanceOf[js.Any], pushed = pushed.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[Impl]
   }
-  @scala.inline
-  implicit class ImplOps[Self <: Impl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimating(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBottom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDimmed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimmed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIos(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPushable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPushed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

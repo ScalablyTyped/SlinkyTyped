@@ -14,29 +14,10 @@ trait ResourceARNDetail extends js.Object {
 
 object ResourceARNDetail {
   @scala.inline
-  def apply(): ResourceARNDetail = {
+  def apply(ARN: String = null): ResourceARNDetail = {
     val __obj = js.Dynamic.literal()
+    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceARNDetail]
   }
-  @scala.inline
-  implicit class ResourceARNDetailOps[Self <: ResourceARNDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

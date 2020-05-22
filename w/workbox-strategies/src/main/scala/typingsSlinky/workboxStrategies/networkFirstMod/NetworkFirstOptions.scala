@@ -7,88 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NetworkFirstOptions extends js.Object {
-  var cacheName: js.UndefOr[String] = js.native
-  var fetchOptions: js.UndefOr[RequestInit] = js.native
-  var matchOptions: js.UndefOr[CacheQueryOptions] = js.native
-  var networkTimeoutSeconds: js.UndefOr[Double] = js.native
-  var plugins: js.UndefOr[js.Array[WorkboxPlugin]] = js.native
+  var cacheName: js.UndefOr[String] = js.undefined
+  var fetchOptions: js.UndefOr[RequestInit] = js.undefined
+  var matchOptions: js.UndefOr[CacheQueryOptions] = js.undefined
+  var networkTimeoutSeconds: js.UndefOr[Double] = js.undefined
+  var plugins: js.UndefOr[js.Array[WorkboxPlugin]] = js.undefined
 }
 
 object NetworkFirstOptions {
   @scala.inline
-  def apply(): NetworkFirstOptions = {
+  def apply(
+    cacheName: String = null,
+    fetchOptions: RequestInit = null,
+    matchOptions: CacheQueryOptions = null,
+    networkTimeoutSeconds: js.UndefOr[Double] = js.undefined,
+    plugins: js.Array[WorkboxPlugin] = null
+  ): NetworkFirstOptions = {
     val __obj = js.Dynamic.literal()
+    if (cacheName != null) __obj.updateDynamic("cacheName")(cacheName.asInstanceOf[js.Any])
+    if (fetchOptions != null) __obj.updateDynamic("fetchOptions")(fetchOptions.asInstanceOf[js.Any])
+    if (matchOptions != null) __obj.updateDynamic("matchOptions")(matchOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkTimeoutSeconds)) __obj.updateDynamic("networkTimeoutSeconds")(networkTimeoutSeconds.get.asInstanceOf[js.Any])
+    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkFirstOptions]
   }
-  @scala.inline
-  implicit class NetworkFirstOptionsOps[Self <: NetworkFirstOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetchOptions(value: RequestInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFetchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchOptions(value: CacheQueryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkTimeoutSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimeoutSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkTimeoutSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimeoutSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlugins(value: js.Array[WorkboxPlugin]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlugins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

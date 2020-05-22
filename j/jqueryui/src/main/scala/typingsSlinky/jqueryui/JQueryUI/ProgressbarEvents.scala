@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProgressbarEvents extends js.Object {
-  var change: js.UndefOr[ProgressbarEvent] = js.native
-  var complete: js.UndefOr[ProgressbarEvent] = js.native
-  var create: js.UndefOr[ProgressbarEvent] = js.native
+  var change: js.UndefOr[ProgressbarEvent] = js.undefined
+  var complete: js.UndefOr[ProgressbarEvent] = js.undefined
+  var create: js.UndefOr[ProgressbarEvent] = js.undefined
 }
 
 object ProgressbarEvents {
   @scala.inline
-  def apply(): ProgressbarEvents = {
+  def apply(
+    change: (/* event */ JQueryEventObject, /* ui */ ProgressbarUIParams) => Unit = null,
+    complete: (/* event */ JQueryEventObject, /* ui */ ProgressbarUIParams) => Unit = null,
+    create: (/* event */ JQueryEventObject, /* ui */ ProgressbarUIParams) => Unit = null
+  ): ProgressbarEvents = {
     val __obj = js.Dynamic.literal()
+    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction2(change))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction2(complete))
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
     __obj.asInstanceOf[ProgressbarEvents]
   }
-  @scala.inline
-  implicit class ProgressbarEventsOps[Self <: ProgressbarEvents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChange(value: (/* event */ JQueryEventObject, /* ui */ ProgressbarUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplete(value: (/* event */ JQueryEventObject, /* ui */ ProgressbarUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: (/* event */ JQueryEventObject, /* ui */ ProgressbarUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,141 +8,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Locale extends js.Object {
-  var locale: String = js.native
-  var long: js.UndefOr[Duration] = js.native
-  var `long-convenient`: js.UndefOr[Duration] = js.native
-  var `long-time`: js.UndefOr[Duration] = js.native
-  var narrow: js.UndefOr[Duration] = js.native
-  var short: js.UndefOr[Duration] = js.native
-  var `short-convenient`: js.UndefOr[Duration] = js.native
-  var `short-time`: js.UndefOr[Duration] = js.native
-  var tiny: js.UndefOr[Duration] = js.native
-  def quantify(n: Double): one | two | few | other = js.native
+  var locale: String
+  var long: js.UndefOr[Duration] = js.undefined
+  var `long-convenient`: js.UndefOr[Duration] = js.undefined
+  var `long-time`: js.UndefOr[Duration] = js.undefined
+  var narrow: js.UndefOr[Duration] = js.undefined
+  var short: js.UndefOr[Duration] = js.undefined
+  var `short-convenient`: js.UndefOr[Duration] = js.undefined
+  var `short-time`: js.UndefOr[Duration] = js.undefined
+  var tiny: js.UndefOr[Duration] = js.undefined
+  def quantify(n: Double): one | two | few | other
 }
 
 object Locale {
   @scala.inline
-  def apply(locale: String, quantify: Double => one | two | few | other): Locale = {
+  def apply(
+    locale: String,
+    quantify: Double => one | two | few | other,
+    long: Duration = null,
+    `long-convenient`: Duration = null,
+    `long-time`: Duration = null,
+    narrow: Duration = null,
+    short: Duration = null,
+    `short-convenient`: Duration = null,
+    `short-time`: Duration = null,
+    tiny: Duration = null
+  ): Locale = {
     val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], quantify = js.Any.fromFunction1(quantify))
+    if (long != null) __obj.updateDynamic("long")(long.asInstanceOf[js.Any])
+    if (`long-convenient` != null) __obj.updateDynamic("long-convenient")(`long-convenient`.asInstanceOf[js.Any])
+    if (`long-time` != null) __obj.updateDynamic("long-time")(`long-time`.asInstanceOf[js.Any])
+    if (narrow != null) __obj.updateDynamic("narrow")(narrow.asInstanceOf[js.Any])
+    if (short != null) __obj.updateDynamic("short")(short.asInstanceOf[js.Any])
+    if (`short-convenient` != null) __obj.updateDynamic("short-convenient")(`short-convenient`.asInstanceOf[js.Any])
+    if (`short-time` != null) __obj.updateDynamic("short-time")(`short-time`.asInstanceOf[js.Any])
+    if (tiny != null) __obj.updateDynamic("tiny")(tiny.asInstanceOf[js.Any])
     __obj.asInstanceOf[Locale]
   }
-  @scala.inline
-  implicit class LocaleOps[Self <: Locale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuantify(value: Double => one | two | few | other): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantify")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLong(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLong: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLong-convenient`(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long-convenient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLong-convenient`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long-convenient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withLong-time`(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long-time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutLong-time`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long-time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNarrow(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNarrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("narrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShort(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withShort-convenient`(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-convenient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutShort-convenient`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-convenient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withShort-time`(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutShort-time`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("short-time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiny(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiny")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiny: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tiny")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

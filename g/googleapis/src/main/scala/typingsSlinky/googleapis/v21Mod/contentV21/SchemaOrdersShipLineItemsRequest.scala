@@ -28,65 +28,18 @@ trait SchemaOrdersShipLineItemsRequest extends js.Object {
 
 object SchemaOrdersShipLineItemsRequest {
   @scala.inline
-  def apply(): SchemaOrdersShipLineItemsRequest = {
+  def apply(
+    lineItems: js.Array[SchemaOrderShipmentLineItemShipment] = null,
+    operationId: String = null,
+    shipmentGroupId: String = null,
+    shipmentInfos: js.Array[SchemaOrdersCustomBatchRequestEntryShipLineItemsShipmentInfo] = null
+  ): SchemaOrdersShipLineItemsRequest = {
     val __obj = js.Dynamic.literal()
+    if (lineItems != null) __obj.updateDynamic("lineItems")(lineItems.asInstanceOf[js.Any])
+    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
+    if (shipmentGroupId != null) __obj.updateDynamic("shipmentGroupId")(shipmentGroupId.asInstanceOf[js.Any])
+    if (shipmentInfos != null) __obj.updateDynamic("shipmentInfos")(shipmentInfos.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrdersShipLineItemsRequest]
   }
-  @scala.inline
-  implicit class SchemaOrdersShipLineItemsRequestOps[Self <: SchemaOrdersShipLineItemsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLineItems(value: js.Array[SchemaOrderShipmentLineItemShipment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipmentGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipmentGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipmentGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipmentGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShipmentInfos(value: js.Array[SchemaOrdersCustomBatchRequestEntryShipLineItemsShipmentInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipmentInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShipmentInfos: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shipmentInfos")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

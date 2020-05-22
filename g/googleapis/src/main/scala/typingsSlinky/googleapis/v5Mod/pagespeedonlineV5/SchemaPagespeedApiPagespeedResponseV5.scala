@@ -1,6 +1,6 @@
 package typingsSlinky.googleapis.v5Mod.pagespeedonlineV5
 
-import typingsSlinky.googleapis.AnonMajor
+import typingsSlinky.googleapis.anon.Major
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,118 +39,31 @@ trait SchemaPagespeedApiPagespeedResponseV5 extends js.Object {
   /**
     * The version of PageSpeed used to generate these results.
     */
-  var version: js.UndefOr[AnonMajor] = js.native
+  var version: js.UndefOr[Major] = js.native
 }
 
 object SchemaPagespeedApiPagespeedResponseV5 {
   @scala.inline
-  def apply(): SchemaPagespeedApiPagespeedResponseV5 = {
+  def apply(
+    analysisUTCTimestamp: String = null,
+    captchaResult: String = null,
+    id: String = null,
+    kind: String = null,
+    lighthouseResult: SchemaLighthouseResultV5 = null,
+    loadingExperience: SchemaPagespeedApiLoadingExperienceV5 = null,
+    originLoadingExperience: SchemaPagespeedApiLoadingExperienceV5 = null,
+    version: Major = null
+  ): SchemaPagespeedApiPagespeedResponseV5 = {
     val __obj = js.Dynamic.literal()
+    if (analysisUTCTimestamp != null) __obj.updateDynamic("analysisUTCTimestamp")(analysisUTCTimestamp.asInstanceOf[js.Any])
+    if (captchaResult != null) __obj.updateDynamic("captchaResult")(captchaResult.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lighthouseResult != null) __obj.updateDynamic("lighthouseResult")(lighthouseResult.asInstanceOf[js.Any])
+    if (loadingExperience != null) __obj.updateDynamic("loadingExperience")(loadingExperience.asInstanceOf[js.Any])
+    if (originLoadingExperience != null) __obj.updateDynamic("originLoadingExperience")(originLoadingExperience.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPagespeedApiPagespeedResponseV5]
   }
-  @scala.inline
-  implicit class SchemaPagespeedApiPagespeedResponseV5Ops[Self <: SchemaPagespeedApiPagespeedResponseV5] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalysisUTCTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analysisUTCTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalysisUTCTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analysisUTCTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptchaResult(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptchaResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLighthouseResult(value: SchemaLighthouseResultV5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lighthouseResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLighthouseResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lighthouseResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingExperience(value: SchemaPagespeedApiLoadingExperienceV5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingExperience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingExperience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingExperience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginLoadingExperience(value: SchemaPagespeedApiLoadingExperienceV5): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originLoadingExperience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginLoadingExperience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originLoadingExperience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: AnonMajor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -91,221 +91,44 @@ trait SchemaTrainingOptions extends js.Object {
 
 object SchemaTrainingOptions {
   @scala.inline
-  def apply(): SchemaTrainingOptions = {
+  def apply(
+    dataSplitColumn: String = null,
+    dataSplitEvalFraction: js.UndefOr[Double] = js.undefined,
+    dataSplitMethod: String = null,
+    distanceType: String = null,
+    earlyStop: js.UndefOr[Boolean] = js.undefined,
+    initialLearnRate: js.UndefOr[Double] = js.undefined,
+    inputLabelColumns: js.Array[String] = null,
+    l1Regularization: js.UndefOr[Double] = js.undefined,
+    l2Regularization: js.UndefOr[Double] = js.undefined,
+    labelClassWeights: StringDictionary[Double] = null,
+    learnRate: js.UndefOr[Double] = js.undefined,
+    learnRateStrategy: String = null,
+    lossType: String = null,
+    maxIterations: String = null,
+    minRelativeProgress: js.UndefOr[Double] = js.undefined,
+    numClusters: String = null,
+    warmStart: js.UndefOr[Boolean] = js.undefined
+  ): SchemaTrainingOptions = {
     val __obj = js.Dynamic.literal()
+    if (dataSplitColumn != null) __obj.updateDynamic("dataSplitColumn")(dataSplitColumn.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataSplitEvalFraction)) __obj.updateDynamic("dataSplitEvalFraction")(dataSplitEvalFraction.get.asInstanceOf[js.Any])
+    if (dataSplitMethod != null) __obj.updateDynamic("dataSplitMethod")(dataSplitMethod.asInstanceOf[js.Any])
+    if (distanceType != null) __obj.updateDynamic("distanceType")(distanceType.asInstanceOf[js.Any])
+    if (!js.isUndefined(earlyStop)) __obj.updateDynamic("earlyStop")(earlyStop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialLearnRate)) __obj.updateDynamic("initialLearnRate")(initialLearnRate.get.asInstanceOf[js.Any])
+    if (inputLabelColumns != null) __obj.updateDynamic("inputLabelColumns")(inputLabelColumns.asInstanceOf[js.Any])
+    if (!js.isUndefined(l1Regularization)) __obj.updateDynamic("l1Regularization")(l1Regularization.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(l2Regularization)) __obj.updateDynamic("l2Regularization")(l2Regularization.get.asInstanceOf[js.Any])
+    if (labelClassWeights != null) __obj.updateDynamic("labelClassWeights")(labelClassWeights.asInstanceOf[js.Any])
+    if (!js.isUndefined(learnRate)) __obj.updateDynamic("learnRate")(learnRate.get.asInstanceOf[js.Any])
+    if (learnRateStrategy != null) __obj.updateDynamic("learnRateStrategy")(learnRateStrategy.asInstanceOf[js.Any])
+    if (lossType != null) __obj.updateDynamic("lossType")(lossType.asInstanceOf[js.Any])
+    if (maxIterations != null) __obj.updateDynamic("maxIterations")(maxIterations.asInstanceOf[js.Any])
+    if (!js.isUndefined(minRelativeProgress)) __obj.updateDynamic("minRelativeProgress")(minRelativeProgress.get.asInstanceOf[js.Any])
+    if (numClusters != null) __obj.updateDynamic("numClusters")(numClusters.asInstanceOf[js.Any])
+    if (!js.isUndefined(warmStart)) __obj.updateDynamic("warmStart")(warmStart.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTrainingOptions]
   }
-  @scala.inline
-  implicit class SchemaTrainingOptionsOps[Self <: SchemaTrainingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSplitColumn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSplitColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSplitColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSplitColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSplitEvalFraction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSplitEvalFraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSplitEvalFraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSplitEvalFraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSplitMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSplitMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSplitMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSplitMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistanceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEarlyStop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earlyStop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEarlyStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("earlyStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialLearnRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLearnRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialLearnRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLearnRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputLabelColumns(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputLabelColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputLabelColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputLabelColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withL1Regularization(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l1Regularization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutL1Regularization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l1Regularization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withL2Regularization(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l2Regularization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutL2Regularization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("l2Regularization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelClassWeights(value: StringDictionary[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelClassWeights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelClassWeights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelClassWeights")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLearnRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLearnRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLearnRateStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRateStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLearnRateStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("learnRateStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLossType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lossType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLossType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lossType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxIterations(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinRelativeProgress(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRelativeProgress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinRelativeProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRelativeProgress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumClusters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numClusters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumClusters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numClusters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarmStart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warmStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarmStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warmStart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

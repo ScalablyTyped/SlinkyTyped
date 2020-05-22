@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientHtmlEditor.ActiveTabChanged event that concerns manipulations on tabs.
   */
-@js.native
 trait ASPxClientHtmlEditorTabEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name that uniquely identifies an editor tab.
     */
-  var name: String = js.native
+  var name: String
 }
 
 object ASPxClientHtmlEditorTabEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientHtmlEditorTabEventArgs {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientHtmlEditorTabEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientHtmlEditorTabEventArgsOps[Self <: ASPxClientHtmlEditorTabEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

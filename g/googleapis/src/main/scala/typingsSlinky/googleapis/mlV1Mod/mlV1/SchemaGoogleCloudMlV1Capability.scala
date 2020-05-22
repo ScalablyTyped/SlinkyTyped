@@ -15,41 +15,11 @@ trait SchemaGoogleCloudMlV1Capability extends js.Object {
 
 object SchemaGoogleCloudMlV1Capability {
   @scala.inline
-  def apply(): SchemaGoogleCloudMlV1Capability = {
+  def apply(availableAccelerators: js.Array[String] = null, `type`: String = null): SchemaGoogleCloudMlV1Capability = {
     val __obj = js.Dynamic.literal()
+    if (availableAccelerators != null) __obj.updateDynamic("availableAccelerators")(availableAccelerators.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1Capability]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudMlV1CapabilityOps[Self <: SchemaGoogleCloudMlV1Capability] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableAccelerators(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableAccelerators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableAccelerators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availableAccelerators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

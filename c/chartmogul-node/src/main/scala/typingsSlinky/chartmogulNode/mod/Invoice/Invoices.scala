@@ -5,43 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Invoices extends Cursor {
-  var customer_uuid: js.UndefOr[String] = js.native
-  var invoices: js.Array[typingsSlinky.chartmogulNode.mod.Invoice.Invoice] = js.native
+  var customer_uuid: js.UndefOr[String] = js.undefined
+  var invoices: js.Array[typingsSlinky.chartmogulNode.mod.Invoice.Invoice]
 }
 
 object Invoices {
   @scala.inline
-  def apply(invoices: js.Array[typingsSlinky.chartmogulNode.mod.Invoice.Invoice]): Invoices = {
+  def apply(
+    invoices: js.Array[typingsSlinky.chartmogulNode.mod.Invoice.Invoice],
+    current_page: js.UndefOr[Double] = js.undefined,
+    customer_uuid: String = null,
+    has_more: js.UndefOr[Boolean] = js.undefined,
+    page: js.UndefOr[Double] = js.undefined,
+    per_page: js.UndefOr[Double] = js.undefined,
+    total_pages: js.UndefOr[Double] = js.undefined
+  ): Invoices = {
     val __obj = js.Dynamic.literal(invoices = invoices.asInstanceOf[js.Any])
+    if (!js.isUndefined(current_page)) __obj.updateDynamic("current_page")(current_page.get.asInstanceOf[js.Any])
+    if (customer_uuid != null) __obj.updateDynamic("customer_uuid")(customer_uuid.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_more)) __obj.updateDynamic("has_more")(has_more.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(per_page)) __obj.updateDynamic("per_page")(per_page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_pages)) __obj.updateDynamic("total_pages")(total_pages.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invoices]
   }
-  @scala.inline
-  implicit class InvoicesOps[Self <: Invoices] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvoices(value: js.Array[typingsSlinky.chartmogulNode.mod.Invoice.Invoice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invoices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomer_uuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer_uuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

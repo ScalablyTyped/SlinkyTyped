@@ -34,6 +34,20 @@ object autoRotationBehaviorMod extends js.Object {
       */
     var _userIsZooming: js.Any = js.native
     var _zoomStopsAnimation: js.Any = js.native
+    /** gets or sets behavior's name */
+    /* CompleteClass */
+    override var name: String = js.native
+    /**
+      * Called when the behavior is attached to a target
+      * @param target defines the target where the behavior is attached to
+      */
+    /* CompleteClass */
+    override def attach(target: ArcRotateCamera): Unit = js.native
+    /**
+      * Called when the behavior is detached from its target
+      */
+    /* CompleteClass */
+    override def detach(): Unit = js.native
     /**
       * Gets the default speed at which the camera rotates around the model.
       */
@@ -58,6 +72,11 @@ object autoRotationBehaviorMod extends js.Object {
       * Sets the time (in milliseconds) to wait after user interaction before the camera starts rotating.
       */
     def idleRotationWaitTime(time: Double): js.Any = js.native
+    /**
+      * Function called when the behavior needs to be initialized (after attaching it to a target)
+      */
+    /* CompleteClass */
+    override def init(): Unit = js.native
     /**
       * Gets the name of the behavior.
       */

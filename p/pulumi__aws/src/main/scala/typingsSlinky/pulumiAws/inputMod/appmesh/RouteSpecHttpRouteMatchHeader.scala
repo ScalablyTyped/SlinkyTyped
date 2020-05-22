@@ -23,47 +23,15 @@ trait RouteSpecHttpRouteMatchHeader extends js.Object {
 
 object RouteSpecHttpRouteMatchHeader {
   @scala.inline
-  def apply(name: Input[String]): RouteSpecHttpRouteMatchHeader = {
+  def apply(
+    name: Input[String],
+    invert: Input[Boolean] = null,
+    `match`: Input[RouteSpecHttpRouteMatchHeaderMatch] = null
+  ): RouteSpecHttpRouteMatchHeader = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (invert != null) __obj.updateDynamic("invert")(invert.asInstanceOf[js.Any])
+    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteSpecHttpRouteMatchHeader]
   }
-  @scala.inline
-  implicit class RouteSpecHttpRouteMatchHeaderOps[Self <: RouteSpecHttpRouteMatchHeader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInvert(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatch(value: Input[RouteSpecHttpRouteMatchHeaderMatch]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

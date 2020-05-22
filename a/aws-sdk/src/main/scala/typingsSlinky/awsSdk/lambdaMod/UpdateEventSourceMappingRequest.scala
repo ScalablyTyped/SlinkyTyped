@@ -27,7 +27,7 @@ trait UpdateEventSourceMappingRequest extends js.Object {
     */
   var FunctionName: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.FunctionName] = js.native
   /**
-    * The maximum amount of time to gather records before invoking the function, in seconds.
+    * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
     */
   var MaximumBatchingWindowInSeconds: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.MaximumBatchingWindowInSeconds] = js.native
   /**
@@ -50,131 +50,29 @@ trait UpdateEventSourceMappingRequest extends js.Object {
 
 object UpdateEventSourceMappingRequest {
   @scala.inline
-  def apply(UUID: String): UpdateEventSourceMappingRequest = {
+  def apply(
+    UUID: String,
+    BatchSize: js.UndefOr[BatchSize] = js.undefined,
+    BisectBatchOnFunctionError: js.UndefOr[BisectBatchOnFunctionError] = js.undefined,
+    DestinationConfig: DestinationConfig = null,
+    Enabled: js.UndefOr[Enabled] = js.undefined,
+    FunctionName: FunctionName = null,
+    MaximumBatchingWindowInSeconds: js.UndefOr[MaximumBatchingWindowInSeconds] = js.undefined,
+    MaximumRecordAgeInSeconds: js.UndefOr[MaximumRecordAgeInSeconds] = js.undefined,
+    MaximumRetryAttempts: js.UndefOr[MaximumRetryAttemptsEventSourceMapping] = js.undefined,
+    ParallelizationFactor: js.UndefOr[ParallelizationFactor] = js.undefined
+  ): UpdateEventSourceMappingRequest = {
     val __obj = js.Dynamic.literal(UUID = UUID.asInstanceOf[js.Any])
+    if (!js.isUndefined(BatchSize)) __obj.updateDynamic("BatchSize")(BatchSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(BisectBatchOnFunctionError)) __obj.updateDynamic("BisectBatchOnFunctionError")(BisectBatchOnFunctionError.get.asInstanceOf[js.Any])
+    if (DestinationConfig != null) __obj.updateDynamic("DestinationConfig")(DestinationConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (FunctionName != null) __obj.updateDynamic("FunctionName")(FunctionName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumBatchingWindowInSeconds)) __obj.updateDynamic("MaximumBatchingWindowInSeconds")(MaximumBatchingWindowInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumRecordAgeInSeconds)) __obj.updateDynamic("MaximumRecordAgeInSeconds")(MaximumRecordAgeInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaximumRetryAttempts)) __obj.updateDynamic("MaximumRetryAttempts")(MaximumRetryAttempts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ParallelizationFactor)) __obj.updateDynamic("ParallelizationFactor")(ParallelizationFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEventSourceMappingRequest]
   }
-  @scala.inline
-  implicit class UpdateEventSourceMappingRequestOps[Self <: UpdateEventSourceMappingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUUID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UUID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBatchSize(value: BatchSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBisectBatchOnFunctionError(value: BisectBatchOnFunctionError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BisectBatchOnFunctionError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBisectBatchOnFunctionError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BisectBatchOnFunctionError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationConfig(value: DestinationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionName(value: FunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumBatchingWindowInSeconds(value: MaximumBatchingWindowInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumBatchingWindowInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumBatchingWindowInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumBatchingWindowInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumRecordAgeInSeconds(value: MaximumRecordAgeInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumRecordAgeInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumRecordAgeInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumRecordAgeInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumRetryAttempts(value: MaximumRetryAttemptsEventSourceMapping): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumRetryAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumRetryAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumRetryAttempts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelizationFactor(value: ParallelizationFactor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelizationFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelizationFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParallelizationFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

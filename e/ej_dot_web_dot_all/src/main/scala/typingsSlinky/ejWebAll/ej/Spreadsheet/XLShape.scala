@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XLShape extends js.Object {
   /** This method is used to set a picture in the Spreadsheet.
     * @param {string} Pass the range of the cell.
@@ -15,7 +14,7 @@ trait XLShape extends js.Object {
     * @param {number} Optional. Pass the left of the image that you want to set.
     * @returns {string}
     */
-  def setPicture(range: String, url: String, width: Double, height: Double, top: Double, left: Double): String = js.native
+  def setPicture(range: String, url: String, width: Double, height: Double, top: Double, left: Double): String
 }
 
 object XLShape {
@@ -24,19 +23,5 @@ object XLShape {
     val __obj = js.Dynamic.literal(setPicture = js.Any.fromFunction6(setPicture))
     __obj.asInstanceOf[XLShape]
   }
-  @scala.inline
-  implicit class XLShapeOps[Self <: XLShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetPicture(value: (String, String, Double, Double, Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPicture")(js.Any.fromFunction6(value))
-        ret
-    }
-  }
-  
 }
 

@@ -31,65 +31,18 @@ trait SchemaStreamLocation extends js.Object {
 
 object SchemaStreamLocation {
   @scala.inline
-  def apply(): SchemaStreamLocation = {
+  def apply(
+    customSourceLocation: SchemaCustomSourceLocation = null,
+    pubsubLocation: SchemaPubsubLocation = null,
+    sideInputLocation: SchemaStreamingSideInputLocation = null,
+    streamingStageLocation: SchemaStreamingStageLocation = null
+  ): SchemaStreamLocation = {
     val __obj = js.Dynamic.literal()
+    if (customSourceLocation != null) __obj.updateDynamic("customSourceLocation")(customSourceLocation.asInstanceOf[js.Any])
+    if (pubsubLocation != null) __obj.updateDynamic("pubsubLocation")(pubsubLocation.asInstanceOf[js.Any])
+    if (sideInputLocation != null) __obj.updateDynamic("sideInputLocation")(sideInputLocation.asInstanceOf[js.Any])
+    if (streamingStageLocation != null) __obj.updateDynamic("streamingStageLocation")(streamingStageLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStreamLocation]
   }
-  @scala.inline
-  implicit class SchemaStreamLocationOps[Self <: SchemaStreamLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomSourceLocation(value: SchemaCustomSourceLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSourceLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomSourceLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customSourceLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubsubLocation(value: SchemaPubsubLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubsubLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideInputLocation(value: SchemaStreamingSideInputLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideInputLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSideInputLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideInputLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamingStageLocation(value: SchemaStreamingStageLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingStageLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamingStageLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamingStageLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

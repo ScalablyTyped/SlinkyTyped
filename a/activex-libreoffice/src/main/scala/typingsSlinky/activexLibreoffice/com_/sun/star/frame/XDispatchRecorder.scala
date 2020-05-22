@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * @see XDispatchRecorderSupplier
   * @since OOo 1.1.2
   */
-@js.native
 trait XDispatchRecorder extends XInterface {
   /**
     * returns the recorded source code
@@ -27,27 +26,27 @@ trait XDispatchRecorder extends XInterface {
     * This method must be used before {@link endRecording()} is called! Otherwise the macro will be released.
     * @returns the recorded data as a string which can be interpreted as a script
     */
-  val RecordedMacro: String = js.native
+  val RecordedMacro: String
   /**
     * stops the recording process
     *
     * Must be called in pairs with {@link XDispatchRecorder.startRecording()} .
     * @see getRecordedMacro()
     */
-  def endRecording(): Unit = js.native
+  def endRecording(): Unit
   /**
     * returns the recorded source code
     *
     * This method must be used before {@link endRecording()} is called! Otherwise the macro will be released.
     * @returns the recorded data as a string which can be interpreted as a script
     */
-  def getRecordedMacro(): String = js.native
+  def getRecordedMacro(): String
   /**
     * records a single dispatch call identified by its command URL
     * @param URL the full parsed command URL
     * @param Arguments optional arguments for the command URL ;  (see {@link com.sun.star.document.MediaDescriptor} for further information)
     */
-  def recordDispatch(URL: URL, Arguments: SeqEquiv[PropertyValue]): Unit = js.native
+  def recordDispatch(URL: URL, Arguments: SeqEquiv[PropertyValue]): Unit
   /**
     * records a single dispatch call identified by its command URL, but comments it out
     *
@@ -55,12 +54,12 @@ trait XDispatchRecorder extends XInterface {
     * @param URL the full parsed command URL
     * @param Arguments optional arguments for the command URL ;  (see {@link com.sun.star.document.MediaDescriptor} for further information)
     */
-  def recordDispatchAsComment(URL: URL, Arguments: SeqEquiv[PropertyValue]): Unit = js.native
+  def recordDispatchAsComment(URL: URL, Arguments: SeqEquiv[PropertyValue]): Unit
   /**
     * initializes the recorder by passing the frame for which all macro statements shall be recorded
     * @param Frame it includes the document on which such requests shall be recorded
     */
-  def startRecording(Frame: XFrame): Unit = js.native
+  def startRecording(Frame: XFrame): Unit
 }
 
 object XDispatchRecorder {
@@ -79,49 +78,5 @@ object XDispatchRecorder {
     val __obj = js.Dynamic.literal(RecordedMacro = RecordedMacro.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), endRecording = js.Any.fromFunction0(endRecording), getRecordedMacro = js.Any.fromFunction0(getRecordedMacro), queryInterface = js.Any.fromFunction1(queryInterface), recordDispatch = js.Any.fromFunction2(recordDispatch), recordDispatchAsComment = js.Any.fromFunction2(recordDispatchAsComment), release = js.Any.fromFunction0(release), startRecording = js.Any.fromFunction1(startRecording))
     __obj.asInstanceOf[XDispatchRecorder]
   }
-  @scala.inline
-  implicit class XDispatchRecorderOps[Self <: XDispatchRecorder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRecordedMacro(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordedMacro")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndRecording(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endRecording")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRecordedMacro(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRecordedMacro")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRecordDispatch(value: (URL, SeqEquiv[PropertyValue]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordDispatch")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRecordDispatchAsComment(value: (URL, SeqEquiv[PropertyValue]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recordDispatchAsComment")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStartRecording(value: XFrame => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRecording")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

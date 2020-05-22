@@ -12,7 +12,9 @@ package object mod {
   type AnyIfEmpty[T /* <: js.Object */] = T
   type ConnectedComponent[C /* <: slinky.core.ReactComponentClass[_] */, P] = (slinky.core.ReactComponentClass[typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes[C, P]]) with (typingsSlinky.hoistNonReactStatics.mod.NonReactStatics[C, js.Object]) with typingsSlinky.reactRedux.anon.WrappedComponent[C]
   type ConnectedProps[TConnector] = js.Any
-  type GetProps[C] = js.Any
+  type GetProps[C] = typingsSlinky.react.mod.ClassAttributes[typingsSlinky.std.InstanceType[C]] with js.Any
+  type HandleThunkActionCreator[TActionCreator] = TActionCreator | typingsSlinky.reactRedux.mod.InferThunkActionCreatorType[TActionCreator]
+  type InferThunkActionCreatorType[TActionCreator /* <: js.Function1[/* repeated */ js.Any, _] */] = TActionCreator | (js.Function1[/* args */ js.Any, js.Any])
   type InferableComponentEnhancer[TInjectedProps] = typingsSlinky.reactRedux.mod.InferableComponentEnhancerWithProps[TInjectedProps, js.Object]
   type InferableComponentEnhancerWithProps[TInjectedProps, TNeedsProps] = js.Function1[
     /* component */ js.Any, 
@@ -24,6 +26,7 @@ package object mod {
       ]) with TNeedsProps
     ]
   ]
+  type MapDispatchToProps[TDispatchProps, TOwnProps] = (typingsSlinky.reactRedux.mod.MapDispatchToPropsFunction[TDispatchProps, TOwnProps]) | TDispatchProps
   type MapDispatchToPropsFactory[TDispatchProps, TOwnProps] = js.Function2[
     /* dispatch */ typingsSlinky.redux.mod.Dispatch[typingsSlinky.redux.mod.Action[js.Any]], 
     /* ownProps */ TOwnProps, 
@@ -34,11 +37,16 @@ package object mod {
     /* ownProps */ TOwnProps, 
     TDispatchProps
   ]
+  type MapDispatchToPropsNonObject[TDispatchProps, TOwnProps] = (typingsSlinky.reactRedux.mod.MapDispatchToPropsFactory[TDispatchProps, TOwnProps]) | (typingsSlinky.reactRedux.mod.MapDispatchToPropsFunction[TDispatchProps, TOwnProps])
+  type MapDispatchToPropsParam[TDispatchProps, TOwnProps] = (typingsSlinky.reactRedux.mod.MapDispatchToPropsFactory[TDispatchProps, TOwnProps]) | (typingsSlinky.reactRedux.mod.MapDispatchToProps[TDispatchProps, TOwnProps])
   type MapStateToProps[TStateProps, TOwnProps, State] = js.Function2[/* state */ State, /* ownProps */ TOwnProps, TStateProps]
   type MapStateToPropsFactory[TStateProps, TOwnProps, State] = js.Function2[
     /* initialState */ State, 
     /* ownProps */ TOwnProps, 
     typingsSlinky.reactRedux.mod.MapStateToProps[TStateProps, TOwnProps, State]
+  ]
+  type MapStateToPropsParam[TStateProps, TOwnProps, State] = js.UndefOr[
+    (typingsSlinky.reactRedux.mod.MapStateToPropsFactory[TStateProps, TOwnProps, State]) | (typingsSlinky.reactRedux.mod.MapStateToProps[TStateProps, TOwnProps, State]) | scala.Null
   ]
   type Matching[InjectedProps, DecorationTargetProps] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof DecorationTargetProps ]: P extends keyof InjectedProps? InjectedProps[P] extends DecorationTargetProps[P]? DecorationTargetProps[P] : InjectedProps[P] : DecorationTargetProps[P]}
@@ -50,7 +58,64 @@ package object mod {
     TMergedProps
   ]
   type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  type ResolveArrayThunks[TDispatchProps /* <: js.Array[_] */] = js.Array[typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]] | (js.Tuple2[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple3[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple4[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple5[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple6[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple7[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple8[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ]) | (js.Tuple9[
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any], 
+    typingsSlinky.reactRedux.mod.HandleThunkActionCreator[js.Any]
+  ])
+  type ResolveThunks[TDispatchProps] = TDispatchProps | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ C in keyof TDispatchProps ]: react-redux.react-redux.HandleThunkActionCreator<TDispatchProps[C]>}
+    */ typingsSlinky.reactRedux.reactReduxStrings.ResolveThunks with org.scalablytyped.runtime.TopLevel[TDispatchProps])
   type RootStateOrAny = typingsSlinky.reactRedux.mod.AnyIfEmpty[typingsSlinky.reactRedux.mod.DefaultRootState]
+  type Selector[S, TProps, TOwnProps] = (js.Function2[/* state */ S, /* ownProps */ TOwnProps, TProps]) | (js.Function1[/* state */ S, TProps])
   type SelectorFactory[S, TProps, TOwnProps, TFactoryOptions] = js.Function2[
     /* dispatch */ typingsSlinky.redux.mod.Dispatch[typingsSlinky.redux.mod.Action[js.Any]], 
     /* factoryOptions */ TFactoryOptions, 

@@ -24,53 +24,12 @@ trait RuleSourceSourceDetail extends js.Object {
 
 object RuleSourceSourceDetail {
   @scala.inline
-  def apply(): RuleSourceSourceDetail = {
+  def apply(eventSource: String = null, maximumExecutionFrequency: String = null, messageType: String = null): RuleSourceSourceDetail = {
     val __obj = js.Dynamic.literal()
+    if (eventSource != null) __obj.updateDynamic("eventSource")(eventSource.asInstanceOf[js.Any])
+    if (maximumExecutionFrequency != null) __obj.updateDynamic("maximumExecutionFrequency")(maximumExecutionFrequency.asInstanceOf[js.Any])
+    if (messageType != null) __obj.updateDynamic("messageType")(messageType.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleSourceSourceDetail]
   }
-  @scala.inline
-  implicit class RuleSourceSourceDetailOps[Self <: RuleSourceSourceDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumExecutionFrequency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumExecutionFrequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumExecutionFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumExecutionFrequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

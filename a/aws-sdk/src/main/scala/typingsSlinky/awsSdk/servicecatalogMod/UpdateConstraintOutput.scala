@@ -22,53 +22,16 @@ trait UpdateConstraintOutput extends js.Object {
 
 object UpdateConstraintOutput {
   @scala.inline
-  def apply(): UpdateConstraintOutput = {
+  def apply(
+    ConstraintDetail: ConstraintDetail = null,
+    ConstraintParameters: ConstraintParameters = null,
+    Status: Status = null
+  ): UpdateConstraintOutput = {
     val __obj = js.Dynamic.literal()
+    if (ConstraintDetail != null) __obj.updateDynamic("ConstraintDetail")(ConstraintDetail.asInstanceOf[js.Any])
+    if (ConstraintParameters != null) __obj.updateDynamic("ConstraintParameters")(ConstraintParameters.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateConstraintOutput]
   }
-  @scala.inline
-  implicit class UpdateConstraintOutputOps[Self <: UpdateConstraintOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConstraintDetail(value: ConstraintDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstraintDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraintDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstraintDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraintParameters(value: ConstraintParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstraintParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraintParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstraintParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

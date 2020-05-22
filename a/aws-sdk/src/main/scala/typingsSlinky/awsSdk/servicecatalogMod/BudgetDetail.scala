@@ -14,29 +14,10 @@ trait BudgetDetail extends js.Object {
 
 object BudgetDetail {
   @scala.inline
-  def apply(): BudgetDetail = {
+  def apply(BudgetName: BudgetName = null): BudgetDetail = {
     val __obj = js.Dynamic.literal()
+    if (BudgetName != null) __obj.updateDynamic("BudgetName")(BudgetName.asInstanceOf[js.Any])
     __obj.asInstanceOf[BudgetDetail]
   }
-  @scala.inline
-  implicit class BudgetDetailOps[Self <: BudgetDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBudgetName(value: BudgetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBudgetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BudgetName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,7 +11,7 @@ trait DiscoverInstancesRequest extends js.Object {
     */
   var HealthStatus: js.UndefOr[HealthStatusFilter] = js.native
   /**
-    * The maximum number of instances that you want Cloud Map to return in the response to a DiscoverInstances request. If you don't specify a value for MaxResults, Cloud Map returns up to 100 instances.
+    * The maximum number of instances that you want AWS Cloud Map to return in the response to a DiscoverInstances request. If you don't specify a value for MaxResults, AWS Cloud Map returns up to 100 instances.
     */
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.servicediscoveryMod.MaxResults] = js.native
   /**
@@ -30,65 +30,18 @@ trait DiscoverInstancesRequest extends js.Object {
 
 object DiscoverInstancesRequest {
   @scala.inline
-  def apply(NamespaceName: NamespaceName, ServiceName: ServiceName): DiscoverInstancesRequest = {
+  def apply(
+    NamespaceName: NamespaceName,
+    ServiceName: ServiceName,
+    HealthStatus: HealthStatusFilter = null,
+    MaxResults: js.UndefOr[MaxResults] = js.undefined,
+    QueryParameters: Attributes = null
+  ): DiscoverInstancesRequest = {
     val __obj = js.Dynamic.literal(NamespaceName = NamespaceName.asInstanceOf[js.Any], ServiceName = ServiceName.asInstanceOf[js.Any])
+    if (HealthStatus != null) __obj.updateDynamic("HealthStatus")(HealthStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (QueryParameters != null) __obj.updateDynamic("QueryParameters")(QueryParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoverInstancesRequest]
   }
-  @scala.inline
-  implicit class DiscoverInstancesRequestOps[Self <: DiscoverInstancesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamespaceName(value: NamespaceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NamespaceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: ServiceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthStatus(value: HealthStatusFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryParameters(value: Attributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryParameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

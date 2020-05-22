@@ -82,42 +82,42 @@ trait Quad extends Mesh {
   /**
     * Resets the position, alpha and color values used by this Quad.
     */
-  def reset(): Quad = js.native
+  def reset(): this.type = js.native
   /**
     * Resets the alpha values used by this Quad back to 1.
     */
-  def resetAlpha(): Quad = js.native
+  def resetAlpha(): this.type = js.native
   /**
     * Resets the color values used by this Quad back to 0xffffff.
     */
-  def resetColors(): Quad = js.native
+  def resetColors(): this.type = js.native
   /**
     * Resets the positions of the four corner vertices of this Quad.
     */
-  def resetPosition(): Quad = js.native
+  def resetPosition(): this.type = js.native
   /**
     * Sets the bottom-left vertex position of this Quad.
     * @param x The horizontal coordinate of the vertex.
     * @param y The vertical coordinate of the vertex.
     */
-  def setBottomLeft(x: Double, y: Double): Quad = js.native
+  def setBottomLeft(x: Double, y: Double): this.type = js.native
   /**
     * Sets the bottom-right vertex position of this Quad.
     * @param x The horizontal coordinate of the vertex.
     * @param y The vertical coordinate of the vertex.
     */
-  def setBottomRight(x: Double, y: Double): Quad = js.native
+  def setBottomRight(x: Double, y: Double): this.type = js.native
   /**
     * Sets the top-left vertex position of this Quad.
     * @param x The horizontal coordinate of the vertex.
     * @param y The vertical coordinate of the vertex.
     */
-  def setTopLeft(x: Double, y: Double): Quad = js.native
+  def setTopLeft(x: Double, y: Double): this.type = js.native
   /**
     * Sets the top-right vertex position of this Quad.
     * @param x The horizontal coordinate of the vertex.
     * @param y The vertical coordinate of the vertex.
     */
-  def setTopRight(x: Double, y: Double): Quad = js.native
+  def setTopRight(x: Double, y: Double): this.type = js.native
 }
 

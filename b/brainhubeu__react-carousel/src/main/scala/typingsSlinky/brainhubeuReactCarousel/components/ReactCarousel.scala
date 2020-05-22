@@ -25,7 +25,11 @@ object ReactCarousel {
     @scala.inline
     def arrowLeft(value: ReactElement): this.type = set("arrowLeft", value.asInstanceOf[js.Any])
     @scala.inline
+    def arrowLeftDisabled(value: ReactElement): this.type = set("arrowLeftDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
     def arrowRight(value: ReactElement): this.type = set("arrowRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowRightDisabled(value: ReactElement): this.type = set("arrowRightDisabled", value.asInstanceOf[js.Any])
     @scala.inline
     def arrows(value: Boolean): this.type = set("arrows", value.asInstanceOf[js.Any])
     @scala.inline

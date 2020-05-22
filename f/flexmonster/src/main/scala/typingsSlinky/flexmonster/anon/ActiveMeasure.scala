@@ -5,283 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActiveMeasure extends js.Object {
-  var activeMeasure: js.UndefOr[MeasureObject] = js.native
-  var activeTupleIndex: js.UndefOr[Double] = js.native
-  var autoRange: js.UndefOr[Boolean] = js.native
-  var axisShortNumberFormat: js.UndefOr[Boolean] = js.native
-  var labelsHierarchy: js.UndefOr[String] = js.native
-  var multipleMeasures: js.UndefOr[Boolean] = js.native
-  var oneLevel: js.UndefOr[Boolean] = js.native
-  var pieDataIndex: js.UndefOr[String] = js.native
-  var position: js.UndefOr[String] = js.native
-  var reversedAxes: js.UndefOr[Boolean] = js.native
-  var showAllLabels: js.UndefOr[Boolean] = js.native
-  var showDataLabels: js.UndefOr[Boolean] = js.native
-  var showFilter: js.UndefOr[Boolean] = js.native
-  var showLegend: js.UndefOr[Boolean] = js.native
-  var showLegendButton: js.UndefOr[Boolean] = js.native
-  var showMeasures: js.UndefOr[Boolean] = js.native
-  var showOneMeasureSelection: js.UndefOr[Boolean] = js.native
-  var showWarning: js.UndefOr[Boolean] = js.native
-  var title: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
+  var activeMeasure: js.UndefOr[MeasureObject] = js.undefined
+  var activeTupleIndex: js.UndefOr[Double] = js.undefined
+  var autoRange: js.UndefOr[Boolean] = js.undefined
+  var axisShortNumberFormat: js.UndefOr[Boolean] = js.undefined
+  var labelsHierarchy: js.UndefOr[String] = js.undefined
+  var multipleMeasures: js.UndefOr[Boolean] = js.undefined
+  var oneLevel: js.UndefOr[Boolean] = js.undefined
+  var pieDataIndex: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.undefined
+  var reversedAxes: js.UndefOr[Boolean] = js.undefined
+  var showAllLabels: js.UndefOr[Boolean] = js.undefined
+  var showDataLabels: js.UndefOr[Boolean] = js.undefined
+  var showFilter: js.UndefOr[Boolean] = js.undefined
+  var showLegend: js.UndefOr[Boolean] = js.undefined
+  var showLegendButton: js.UndefOr[Boolean] = js.undefined
+  var showMeasures: js.UndefOr[Boolean] = js.undefined
+  var showOneMeasureSelection: js.UndefOr[Boolean] = js.undefined
+  var showWarning: js.UndefOr[Boolean] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ActiveMeasure {
   @scala.inline
-  def apply(): ActiveMeasure = {
+  def apply(
+    activeMeasure: MeasureObject = null,
+    activeTupleIndex: js.UndefOr[Double] = js.undefined,
+    autoRange: js.UndefOr[Boolean] = js.undefined,
+    axisShortNumberFormat: js.UndefOr[Boolean] = js.undefined,
+    labelsHierarchy: String = null,
+    multipleMeasures: js.UndefOr[Boolean] = js.undefined,
+    oneLevel: js.UndefOr[Boolean] = js.undefined,
+    pieDataIndex: String = null,
+    position: String = null,
+    reversedAxes: js.UndefOr[Boolean] = js.undefined,
+    showAllLabels: js.UndefOr[Boolean] = js.undefined,
+    showDataLabels: js.UndefOr[Boolean] = js.undefined,
+    showFilter: js.UndefOr[Boolean] = js.undefined,
+    showLegend: js.UndefOr[Boolean] = js.undefined,
+    showLegendButton: js.UndefOr[Boolean] = js.undefined,
+    showMeasures: js.UndefOr[Boolean] = js.undefined,
+    showOneMeasureSelection: js.UndefOr[Boolean] = js.undefined,
+    showWarning: js.UndefOr[Boolean] = js.undefined,
+    title: String = null,
+    `type`: String = null
+  ): ActiveMeasure = {
     val __obj = js.Dynamic.literal()
+    if (activeMeasure != null) __obj.updateDynamic("activeMeasure")(activeMeasure.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeTupleIndex)) __obj.updateDynamic("activeTupleIndex")(activeTupleIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoRange)) __obj.updateDynamic("autoRange")(autoRange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisShortNumberFormat)) __obj.updateDynamic("axisShortNumberFormat")(axisShortNumberFormat.get.asInstanceOf[js.Any])
+    if (labelsHierarchy != null) __obj.updateDynamic("labelsHierarchy")(labelsHierarchy.asInstanceOf[js.Any])
+    if (!js.isUndefined(multipleMeasures)) __obj.updateDynamic("multipleMeasures")(multipleMeasures.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(oneLevel)) __obj.updateDynamic("oneLevel")(oneLevel.get.asInstanceOf[js.Any])
+    if (pieDataIndex != null) __obj.updateDynamic("pieDataIndex")(pieDataIndex.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(reversedAxes)) __obj.updateDynamic("reversedAxes")(reversedAxes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAllLabels)) __obj.updateDynamic("showAllLabels")(showAllLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDataLabels)) __obj.updateDynamic("showDataLabels")(showDataLabels.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showFilter)) __obj.updateDynamic("showFilter")(showFilter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLegend)) __obj.updateDynamic("showLegend")(showLegend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showLegendButton)) __obj.updateDynamic("showLegendButton")(showLegendButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMeasures)) __obj.updateDynamic("showMeasures")(showMeasures.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOneMeasureSelection)) __obj.updateDynamic("showOneMeasureSelection")(showOneMeasureSelection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showWarning)) __obj.updateDynamic("showWarning")(showWarning.get.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActiveMeasure]
   }
-  @scala.inline
-  implicit class ActiveMeasureOps[Self <: ActiveMeasure] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveMeasure(value: MeasureObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeMeasure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveMeasure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeMeasure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActiveTupleIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTupleIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveTupleIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTupleIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoRange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisShortNumberFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisShortNumberFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisShortNumberFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisShortNumberFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelsHierarchy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsHierarchy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelsHierarchy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsHierarchy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultipleMeasures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleMeasures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultipleMeasures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleMeasures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneLevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPieDataIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieDataIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPieDataIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pieDataIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReversedAxes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversedAxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversedAxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversedAxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAllLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAllLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAllLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAllLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDataLabels(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDataLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDataLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDataLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFilter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLegend(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLegend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLegendButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLegendButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMeasures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMeasures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMeasures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMeasures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowOneMeasureSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOneMeasureSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowOneMeasureSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showOneMeasureSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowWarning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

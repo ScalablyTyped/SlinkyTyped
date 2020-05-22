@@ -6,179 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AlternateData extends js.Object {
-  var active: js.UndefOr[Boolean] = js.native
-  var alternateData: js.UndefOr[Data] = js.native
-  var attributes: js.UndefOr[ResourceAttributes] = js.native
-  var data: js.UndefOr[Data] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var guid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var mime: js.UndefOr[String] = js.native
-  var noteguid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.native
-  var recognition: js.UndefOr[Data] = js.native
-  var updateSequenceNum: js.UndefOr[Double] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
+  var alternateData: js.UndefOr[Data] = js.undefined
+  var attributes: js.UndefOr[ResourceAttributes] = js.undefined
+  var data: js.UndefOr[Data] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var guid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var mime: js.UndefOr[String] = js.undefined
+  var noteguid: js.UndefOr[typingsSlinky.evernote.mod.Types.Guid] = js.undefined
+  var recognition: js.UndefOr[Data] = js.undefined
+  var updateSequenceNum: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object AlternateData {
   @scala.inline
-  def apply(): AlternateData = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    alternateData: Data = null,
+    attributes: ResourceAttributes = null,
+    data: Data = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    guid: typingsSlinky.evernote.mod.Types.Guid = null,
+    height: js.UndefOr[Double] = js.undefined,
+    mime: String = null,
+    noteguid: typingsSlinky.evernote.mod.Types.Guid = null,
+    recognition: Data = null,
+    updateSequenceNum: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): AlternateData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (alternateData != null) __obj.updateDynamic("alternateData")(alternateData.asInstanceOf[js.Any])
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (guid != null) __obj.updateDynamic("guid")(guid.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (mime != null) __obj.updateDynamic("mime")(mime.asInstanceOf[js.Any])
+    if (noteguid != null) __obj.updateDynamic("noteguid")(noteguid.asInstanceOf[js.Any])
+    if (recognition != null) __obj.updateDynamic("recognition")(recognition.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateSequenceNum)) __obj.updateDynamic("updateSequenceNum")(updateSequenceNum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlternateData]
   }
-  @scala.inline
-  implicit class AlternateDataOps[Self <: AlternateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlternateData(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternateData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributes(value: ResourceAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuid(value: typingsSlinky.evernote.mod.Types.Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteguid(value: typingsSlinky.evernote.mod.Types.Guid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteguid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteguid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteguid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecognition(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recognition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecognition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recognition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateSequenceNum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSequenceNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateSequenceNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSequenceNum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

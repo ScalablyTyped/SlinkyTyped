@@ -5,101 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<babylonjs.BABYLON.RenderTargetCreationOptions> */
-@js.native
 trait PartialRenderTargetCreati extends js.Object {
-  var format: js.UndefOr[Double] = js.native
-  var generateDepthBuffer: js.UndefOr[Boolean] = js.native
-  var generateMipMaps: js.UndefOr[Boolean] = js.native
-  var generateStencilBuffer: js.UndefOr[Boolean] = js.native
-  var samplingMode: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[Double] = js.native
+  var format: js.UndefOr[Double] = js.undefined
+  var generateDepthBuffer: js.UndefOr[Boolean] = js.undefined
+  var generateMipMaps: js.UndefOr[Boolean] = js.undefined
+  var generateStencilBuffer: js.UndefOr[Boolean] = js.undefined
+  var samplingMode: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[Double] = js.undefined
 }
 
 object PartialRenderTargetCreati {
   @scala.inline
-  def apply(): PartialRenderTargetCreati = {
+  def apply(
+    format: js.UndefOr[Double] = js.undefined,
+    generateDepthBuffer: js.UndefOr[Boolean] = js.undefined,
+    generateMipMaps: js.UndefOr[Boolean] = js.undefined,
+    generateStencilBuffer: js.UndefOr[Boolean] = js.undefined,
+    samplingMode: js.UndefOr[Double] = js.undefined,
+    `type`: js.UndefOr[Double] = js.undefined
+  ): PartialRenderTargetCreati = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(format)) __obj.updateDynamic("format")(format.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateDepthBuffer)) __obj.updateDynamic("generateDepthBuffer")(generateDepthBuffer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateMipMaps)) __obj.updateDynamic("generateMipMaps")(generateMipMaps.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(generateStencilBuffer)) __obj.updateDynamic("generateStencilBuffer")(generateStencilBuffer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(samplingMode)) __obj.updateDynamic("samplingMode")(samplingMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialRenderTargetCreati]
   }
-  @scala.inline
-  implicit class PartialRenderTargetCreatiOps[Self <: PartialRenderTargetCreati] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateDepthBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateDepthBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateDepthBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateDepthBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateMipMaps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateMipMaps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateMipMaps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateMipMaps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenerateStencilBuffer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStencilBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerateStencilBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateStencilBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

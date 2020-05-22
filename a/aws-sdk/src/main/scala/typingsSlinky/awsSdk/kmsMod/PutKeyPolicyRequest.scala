@@ -26,47 +26,15 @@ trait PutKeyPolicyRequest extends js.Object {
 
 object PutKeyPolicyRequest {
   @scala.inline
-  def apply(KeyId: KeyIdType, Policy: PolicyType, PolicyName: PolicyNameType): PutKeyPolicyRequest = {
+  def apply(
+    KeyId: KeyIdType,
+    Policy: PolicyType,
+    PolicyName: PolicyNameType,
+    BypassPolicyLockoutSafetyCheck: js.UndefOr[BooleanType] = js.undefined
+  ): PutKeyPolicyRequest = {
     val __obj = js.Dynamic.literal(KeyId = KeyId.asInstanceOf[js.Any], Policy = Policy.asInstanceOf[js.Any], PolicyName = PolicyName.asInstanceOf[js.Any])
+    if (!js.isUndefined(BypassPolicyLockoutSafetyCheck)) __obj.updateDynamic("BypassPolicyLockoutSafetyCheck")(BypassPolicyLockoutSafetyCheck.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutKeyPolicyRequest]
   }
-  @scala.inline
-  implicit class PutKeyPolicyRequestOps[Self <: PutKeyPolicyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyId(value: KeyIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: PolicyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: PolicyNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBypassPolicyLockoutSafetyCheck(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BypassPolicyLockoutSafetyCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBypassPolicyLockoutSafetyCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BypassPolicyLockoutSafetyCheck")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

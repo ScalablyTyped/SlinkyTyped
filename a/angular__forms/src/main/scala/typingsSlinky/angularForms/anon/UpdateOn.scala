@@ -5,36 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateOn extends js.Object {
-  var updateOn: js.UndefOr[FormHooks] = js.native
+  var updateOn: js.UndefOr[FormHooks] = js.undefined
 }
 
 object UpdateOn {
   @scala.inline
-  def apply(): UpdateOn = {
+  def apply(updateOn: FormHooks = null): UpdateOn = {
     val __obj = js.Dynamic.literal()
+    if (updateOn != null) __obj.updateDynamic("updateOn")(updateOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateOn]
   }
-  @scala.inline
-  implicit class UpdateOnOps[Self <: UpdateOn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUpdateOn(value: FormHooks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

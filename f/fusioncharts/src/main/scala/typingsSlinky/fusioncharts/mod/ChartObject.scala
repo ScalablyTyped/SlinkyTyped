@@ -4,647 +4,159 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartObject extends js.Object {
-  var baseChartMessageColor: js.UndefOr[String] = js.native
-  var baseChartMessageFont: js.UndefOr[String] = js.native
-  var baseChartMessageFontSize: js.UndefOr[String] = js.native
-  var baseChartMessageImageHAlign: js.UndefOr[ImageHAlign] = js.native
-  var containerBackgroundColor: js.UndefOr[String] = js.native
-  var containerBackgroundOpacity: js.UndefOr[Double] = js.native
-  var containerClassName: js.UndefOr[String] = js.native
-  var dataEmptyMessage: js.UndefOr[String] = js.native
-  var dataEmptyMessageImageAlpha: js.UndefOr[Double] = js.native
-  var dataEmptyMessageImageHAlign: js.UndefOr[ImageHAlign] = js.native
-  var dataEmptyMessageImageScale: js.UndefOr[Double] = js.native
-  var dataEmptyMessageImageVAlign: js.UndefOr[ImageVAlign] = js.native
-  var dataFormat: js.UndefOr[ChartDataFormats] = js.native
-  var dataInvalidMessage: js.UndefOr[String] = js.native
-  var dataInvalidMessageImageAlpha: js.UndefOr[Double] = js.native
-  var dataInvalidMessageImageHAlign: js.UndefOr[ImageHAlign] = js.native
-  var dataInvalidMessageImageScale: js.UndefOr[Double] = js.native
-  var dataInvalidMessageImageVAlign: js.UndefOr[ImageVAlign] = js.native
-  var dataLoadErrorMessage: js.UndefOr[String] = js.native
-  var dataLoadErrorMessageImageAlpha: js.UndefOr[Double] = js.native
-  var dataLoadErrorMessageImageScale: js.UndefOr[Double] = js.native
-  var dataLoadErrorMessageImageVAlign: js.UndefOr[ImageVAlign] = js.native
-  var dataLoadStartMessage: js.UndefOr[String] = js.native
-  var dataLoadStartMessageImageAlpha: js.UndefOr[Double] = js.native
-  var dataLoadStartMessageImageHAlign: js.UndefOr[ImageHAlign] = js.native
-  var dataLoadStartMessageImageScale: js.UndefOr[Double] = js.native
-  var dataLoadStartMessageImageVAlign: js.UndefOr[ImageVAlign] = js.native
-  var dataSource: js.UndefOr[String | js.Object] = js.native
-  var events: js.UndefOr[js.Object] = js.native
-  var height: js.UndefOr[Double | String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var link: js.UndefOr[js.Object] = js.native
-  var loadMessage: js.UndefOr[String] = js.native
-  var loadMessageImageAlpha: js.UndefOr[Double] = js.native
-  var loadMessageImageHAlign: js.UndefOr[ImageHAlign] = js.native
-  var loadMessageImageScale: js.UndefOr[Double] = js.native
-  var loadMessageImageVAlign: js.UndefOr[ImageVAlign] = js.native
-  var renderAt: js.UndefOr[String] = js.native
-  var renderErrorMessage: js.UndefOr[String] = js.native
-  var renderErrorMessageImageAlpha: js.UndefOr[Double] = js.native
-  var renderErrorMessageImageHAlign: js.UndefOr[ImageHAlign] = js.native
-  var renderErrorMessageImageScale: js.UndefOr[Double] = js.native
-  var renderErrorMessageImageVAlign: js.UndefOr[ImageVAlign] = js.native
-  var showChartLoadingMessage: js.UndefOr[Boolean] = js.native
-  var showDataLoadingMessage: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var typeNotSupportedMessage: js.UndefOr[String] = js.native
-  var width: js.UndefOr[Double | String] = js.native
+  var baseChartMessageColor: js.UndefOr[String] = js.undefined
+  var baseChartMessageFont: js.UndefOr[String] = js.undefined
+  var baseChartMessageFontSize: js.UndefOr[String] = js.undefined
+  var baseChartMessageImageHAlign: js.UndefOr[ImageHAlign] = js.undefined
+  var containerBackgroundColor: js.UndefOr[String] = js.undefined
+  var containerBackgroundOpacity: js.UndefOr[Double] = js.undefined
+  var containerClassName: js.UndefOr[String] = js.undefined
+  var dataEmptyMessage: js.UndefOr[String] = js.undefined
+  var dataEmptyMessageImageAlpha: js.UndefOr[Double] = js.undefined
+  var dataEmptyMessageImageHAlign: js.UndefOr[ImageHAlign] = js.undefined
+  var dataEmptyMessageImageScale: js.UndefOr[Double] = js.undefined
+  var dataEmptyMessageImageVAlign: js.UndefOr[ImageVAlign] = js.undefined
+  var dataFormat: js.UndefOr[ChartDataFormats] = js.undefined
+  var dataInvalidMessage: js.UndefOr[String] = js.undefined
+  var dataInvalidMessageImageAlpha: js.UndefOr[Double] = js.undefined
+  var dataInvalidMessageImageHAlign: js.UndefOr[ImageHAlign] = js.undefined
+  var dataInvalidMessageImageScale: js.UndefOr[Double] = js.undefined
+  var dataInvalidMessageImageVAlign: js.UndefOr[ImageVAlign] = js.undefined
+  var dataLoadErrorMessage: js.UndefOr[String] = js.undefined
+  var dataLoadErrorMessageImageAlpha: js.UndefOr[Double] = js.undefined
+  var dataLoadErrorMessageImageScale: js.UndefOr[Double] = js.undefined
+  var dataLoadErrorMessageImageVAlign: js.UndefOr[ImageVAlign] = js.undefined
+  var dataLoadStartMessage: js.UndefOr[String] = js.undefined
+  var dataLoadStartMessageImageAlpha: js.UndefOr[Double] = js.undefined
+  var dataLoadStartMessageImageHAlign: js.UndefOr[ImageHAlign] = js.undefined
+  var dataLoadStartMessageImageScale: js.UndefOr[Double] = js.undefined
+  var dataLoadStartMessageImageVAlign: js.UndefOr[ImageVAlign] = js.undefined
+  var dataSource: js.UndefOr[String | js.Object] = js.undefined
+  var events: js.UndefOr[js.Object] = js.undefined
+  var height: js.UndefOr[Double | String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var link: js.UndefOr[js.Object] = js.undefined
+  var loadMessage: js.UndefOr[String] = js.undefined
+  var loadMessageImageAlpha: js.UndefOr[Double] = js.undefined
+  var loadMessageImageHAlign: js.UndefOr[ImageHAlign] = js.undefined
+  var loadMessageImageScale: js.UndefOr[Double] = js.undefined
+  var loadMessageImageVAlign: js.UndefOr[ImageVAlign] = js.undefined
+  var renderAt: js.UndefOr[String] = js.undefined
+  var renderErrorMessage: js.UndefOr[String] = js.undefined
+  var renderErrorMessageImageAlpha: js.UndefOr[Double] = js.undefined
+  var renderErrorMessageImageHAlign: js.UndefOr[ImageHAlign] = js.undefined
+  var renderErrorMessageImageScale: js.UndefOr[Double] = js.undefined
+  var renderErrorMessageImageVAlign: js.UndefOr[ImageVAlign] = js.undefined
+  var showChartLoadingMessage: js.UndefOr[Boolean] = js.undefined
+  var showDataLoadingMessage: js.UndefOr[Boolean] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var typeNotSupportedMessage: js.UndefOr[String] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
 }
 
 object ChartObject {
   @scala.inline
-  def apply(): ChartObject = {
+  def apply(
+    baseChartMessageColor: String = null,
+    baseChartMessageFont: String = null,
+    baseChartMessageFontSize: String = null,
+    baseChartMessageImageHAlign: ImageHAlign = null,
+    containerBackgroundColor: String = null,
+    containerBackgroundOpacity: js.UndefOr[Double] = js.undefined,
+    containerClassName: String = null,
+    dataEmptyMessage: String = null,
+    dataEmptyMessageImageAlpha: js.UndefOr[Double] = js.undefined,
+    dataEmptyMessageImageHAlign: ImageHAlign = null,
+    dataEmptyMessageImageScale: js.UndefOr[Double] = js.undefined,
+    dataEmptyMessageImageVAlign: ImageVAlign = null,
+    dataFormat: ChartDataFormats = null,
+    dataInvalidMessage: String = null,
+    dataInvalidMessageImageAlpha: js.UndefOr[Double] = js.undefined,
+    dataInvalidMessageImageHAlign: ImageHAlign = null,
+    dataInvalidMessageImageScale: js.UndefOr[Double] = js.undefined,
+    dataInvalidMessageImageVAlign: ImageVAlign = null,
+    dataLoadErrorMessage: String = null,
+    dataLoadErrorMessageImageAlpha: js.UndefOr[Double] = js.undefined,
+    dataLoadErrorMessageImageScale: js.UndefOr[Double] = js.undefined,
+    dataLoadErrorMessageImageVAlign: ImageVAlign = null,
+    dataLoadStartMessage: String = null,
+    dataLoadStartMessageImageAlpha: js.UndefOr[Double] = js.undefined,
+    dataLoadStartMessageImageHAlign: ImageHAlign = null,
+    dataLoadStartMessageImageScale: js.UndefOr[Double] = js.undefined,
+    dataLoadStartMessageImageVAlign: ImageVAlign = null,
+    dataSource: String | js.Object = null,
+    events: js.Object = null,
+    height: Double | String = null,
+    id: String = null,
+    link: js.Object = null,
+    loadMessage: String = null,
+    loadMessageImageAlpha: js.UndefOr[Double] = js.undefined,
+    loadMessageImageHAlign: ImageHAlign = null,
+    loadMessageImageScale: js.UndefOr[Double] = js.undefined,
+    loadMessageImageVAlign: ImageVAlign = null,
+    renderAt: String = null,
+    renderErrorMessage: String = null,
+    renderErrorMessageImageAlpha: js.UndefOr[Double] = js.undefined,
+    renderErrorMessageImageHAlign: ImageHAlign = null,
+    renderErrorMessageImageScale: js.UndefOr[Double] = js.undefined,
+    renderErrorMessageImageVAlign: ImageVAlign = null,
+    showChartLoadingMessage: js.UndefOr[Boolean] = js.undefined,
+    showDataLoadingMessage: js.UndefOr[Boolean] = js.undefined,
+    `type`: String = null,
+    typeNotSupportedMessage: String = null,
+    width: Double | String = null
+  ): ChartObject = {
     val __obj = js.Dynamic.literal()
+    if (baseChartMessageColor != null) __obj.updateDynamic("baseChartMessageColor")(baseChartMessageColor.asInstanceOf[js.Any])
+    if (baseChartMessageFont != null) __obj.updateDynamic("baseChartMessageFont")(baseChartMessageFont.asInstanceOf[js.Any])
+    if (baseChartMessageFontSize != null) __obj.updateDynamic("baseChartMessageFontSize")(baseChartMessageFontSize.asInstanceOf[js.Any])
+    if (baseChartMessageImageHAlign != null) __obj.updateDynamic("baseChartMessageImageHAlign")(baseChartMessageImageHAlign.asInstanceOf[js.Any])
+    if (containerBackgroundColor != null) __obj.updateDynamic("containerBackgroundColor")(containerBackgroundColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerBackgroundOpacity)) __obj.updateDynamic("containerBackgroundOpacity")(containerBackgroundOpacity.get.asInstanceOf[js.Any])
+    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
+    if (dataEmptyMessage != null) __obj.updateDynamic("dataEmptyMessage")(dataEmptyMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataEmptyMessageImageAlpha)) __obj.updateDynamic("dataEmptyMessageImageAlpha")(dataEmptyMessageImageAlpha.get.asInstanceOf[js.Any])
+    if (dataEmptyMessageImageHAlign != null) __obj.updateDynamic("dataEmptyMessageImageHAlign")(dataEmptyMessageImageHAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataEmptyMessageImageScale)) __obj.updateDynamic("dataEmptyMessageImageScale")(dataEmptyMessageImageScale.get.asInstanceOf[js.Any])
+    if (dataEmptyMessageImageVAlign != null) __obj.updateDynamic("dataEmptyMessageImageVAlign")(dataEmptyMessageImageVAlign.asInstanceOf[js.Any])
+    if (dataFormat != null) __obj.updateDynamic("dataFormat")(dataFormat.asInstanceOf[js.Any])
+    if (dataInvalidMessage != null) __obj.updateDynamic("dataInvalidMessage")(dataInvalidMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataInvalidMessageImageAlpha)) __obj.updateDynamic("dataInvalidMessageImageAlpha")(dataInvalidMessageImageAlpha.get.asInstanceOf[js.Any])
+    if (dataInvalidMessageImageHAlign != null) __obj.updateDynamic("dataInvalidMessageImageHAlign")(dataInvalidMessageImageHAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataInvalidMessageImageScale)) __obj.updateDynamic("dataInvalidMessageImageScale")(dataInvalidMessageImageScale.get.asInstanceOf[js.Any])
+    if (dataInvalidMessageImageVAlign != null) __obj.updateDynamic("dataInvalidMessageImageVAlign")(dataInvalidMessageImageVAlign.asInstanceOf[js.Any])
+    if (dataLoadErrorMessage != null) __obj.updateDynamic("dataLoadErrorMessage")(dataLoadErrorMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataLoadErrorMessageImageAlpha)) __obj.updateDynamic("dataLoadErrorMessageImageAlpha")(dataLoadErrorMessageImageAlpha.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataLoadErrorMessageImageScale)) __obj.updateDynamic("dataLoadErrorMessageImageScale")(dataLoadErrorMessageImageScale.get.asInstanceOf[js.Any])
+    if (dataLoadErrorMessageImageVAlign != null) __obj.updateDynamic("dataLoadErrorMessageImageVAlign")(dataLoadErrorMessageImageVAlign.asInstanceOf[js.Any])
+    if (dataLoadStartMessage != null) __obj.updateDynamic("dataLoadStartMessage")(dataLoadStartMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataLoadStartMessageImageAlpha)) __obj.updateDynamic("dataLoadStartMessageImageAlpha")(dataLoadStartMessageImageAlpha.get.asInstanceOf[js.Any])
+    if (dataLoadStartMessageImageHAlign != null) __obj.updateDynamic("dataLoadStartMessageImageHAlign")(dataLoadStartMessageImageHAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataLoadStartMessageImageScale)) __obj.updateDynamic("dataLoadStartMessageImageScale")(dataLoadStartMessageImageScale.get.asInstanceOf[js.Any])
+    if (dataLoadStartMessageImageVAlign != null) __obj.updateDynamic("dataLoadStartMessageImageVAlign")(dataLoadStartMessageImageVAlign.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (loadMessage != null) __obj.updateDynamic("loadMessage")(loadMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(loadMessageImageAlpha)) __obj.updateDynamic("loadMessageImageAlpha")(loadMessageImageAlpha.get.asInstanceOf[js.Any])
+    if (loadMessageImageHAlign != null) __obj.updateDynamic("loadMessageImageHAlign")(loadMessageImageHAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(loadMessageImageScale)) __obj.updateDynamic("loadMessageImageScale")(loadMessageImageScale.get.asInstanceOf[js.Any])
+    if (loadMessageImageVAlign != null) __obj.updateDynamic("loadMessageImageVAlign")(loadMessageImageVAlign.asInstanceOf[js.Any])
+    if (renderAt != null) __obj.updateDynamic("renderAt")(renderAt.asInstanceOf[js.Any])
+    if (renderErrorMessage != null) __obj.updateDynamic("renderErrorMessage")(renderErrorMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderErrorMessageImageAlpha)) __obj.updateDynamic("renderErrorMessageImageAlpha")(renderErrorMessageImageAlpha.get.asInstanceOf[js.Any])
+    if (renderErrorMessageImageHAlign != null) __obj.updateDynamic("renderErrorMessageImageHAlign")(renderErrorMessageImageHAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderErrorMessageImageScale)) __obj.updateDynamic("renderErrorMessageImageScale")(renderErrorMessageImageScale.get.asInstanceOf[js.Any])
+    if (renderErrorMessageImageVAlign != null) __obj.updateDynamic("renderErrorMessageImageVAlign")(renderErrorMessageImageVAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(showChartLoadingMessage)) __obj.updateDynamic("showChartLoadingMessage")(showChartLoadingMessage.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showDataLoadingMessage)) __obj.updateDynamic("showDataLoadingMessage")(showDataLoadingMessage.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (typeNotSupportedMessage != null) __obj.updateDynamic("typeNotSupportedMessage")(typeNotSupportedMessage.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartObject]
   }
-  @scala.inline
-  implicit class ChartObjectOps[Self <: ChartObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseChartMessageColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseChartMessageColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseChartMessageFont(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseChartMessageFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageFont")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseChartMessageFontSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageFontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseChartMessageFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageFontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseChartMessageImageHAlign(value: ImageHAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageImageHAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseChartMessageImageHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseChartMessageImageHAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerBackgroundOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerBackgroundOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataEmptyMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataEmptyMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataEmptyMessageImageAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataEmptyMessageImageAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataEmptyMessageImageHAlign(value: ImageHAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageHAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataEmptyMessageImageHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageHAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataEmptyMessageImageScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataEmptyMessageImageScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataEmptyMessageImageVAlign(value: ImageVAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageVAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataEmptyMessageImageVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataEmptyMessageImageVAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataFormat(value: ChartDataFormats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataInvalidMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataInvalidMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataInvalidMessageImageAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataInvalidMessageImageAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataInvalidMessageImageHAlign(value: ImageHAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageHAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataInvalidMessageImageHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageHAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataInvalidMessageImageScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataInvalidMessageImageScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataInvalidMessageImageVAlign(value: ImageVAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageVAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataInvalidMessageImageVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataInvalidMessageImageVAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadErrorMessageImageAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessageImageAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadErrorMessageImageAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessageImageAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadErrorMessageImageScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessageImageScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadErrorMessageImageScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessageImageScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadErrorMessageImageVAlign(value: ImageVAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessageImageVAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadErrorMessageImageVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadErrorMessageImageVAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadStartMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadStartMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadStartMessageImageAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadStartMessageImageAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadStartMessageImageHAlign(value: ImageHAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageHAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadStartMessageImageHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageHAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadStartMessageImageScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadStartMessageImageScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataLoadStartMessageImageVAlign(value: ImageVAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageVAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLoadStartMessageImageVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLoadStartMessageImageVAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadMessageImageAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadMessageImageAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadMessageImageHAlign(value: ImageHAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageHAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadMessageImageHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageHAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadMessageImageScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadMessageImageScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadMessageImageVAlign(value: ImageVAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageVAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadMessageImageVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMessageImageVAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderAt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderErrorMessageImageAlpha(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageAlpha")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderErrorMessageImageAlpha: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageAlpha")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderErrorMessageImageHAlign(value: ImageHAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageHAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderErrorMessageImageHAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageHAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderErrorMessageImageScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderErrorMessageImageScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderErrorMessageImageVAlign(value: ImageVAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageVAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderErrorMessageImageVAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderErrorMessageImageVAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowChartLoadingMessage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showChartLoadingMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowChartLoadingMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showChartLoadingMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowDataLoadingMessage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDataLoadingMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowDataLoadingMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showDataLoadingMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNotSupportedMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeNotSupportedMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeNotSupportedMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeNotSupportedMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

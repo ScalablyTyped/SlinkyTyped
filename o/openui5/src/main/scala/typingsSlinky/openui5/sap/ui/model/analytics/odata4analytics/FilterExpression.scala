@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FilterExpression extends js.Object {
   /**
     * Add a condition to the filter expression.Multiple conditions on the same property are combined with
@@ -18,7 +17,7 @@ trait FilterExpression extends js.Object {
     * @param oValue2 (optional) as second value to be used for this condition
     * @returns This object for method chaining
     */
-  def addCondition(sPropertyName: String, sOperator: TypeofFilterOperator, oValue: js.Any, oValue2: js.Any): FilterExpression = js.native
+  def addCondition(sPropertyName: String, sOperator: TypeofFilterOperator, oValue: js.Any, oValue2: js.Any): FilterExpression
   /**
     * Add a set condition to the filter expression.A set condition tests if the value of a property is
     * included in a set of given values. It is a convenience method forthis particular use case
@@ -27,7 +26,7 @@ trait FilterExpression extends js.Object {
     * @param aValues values defining the set
     * @returns This object for method chaining
     */
-  def addSetCondition(sPropertyName: String, aValues: js.Array[_]): FilterExpression = js.native
+  def addSetCondition(sPropertyName: String, aValues: js.Array[_]): FilterExpression
   /**
     * Add an array of UI5 filter conditions to the filter expression.The UI5 filter condition is combined
     * with the other given conditions using a logical AND. This methodis particularly useful for passing
@@ -35,7 +34,7 @@ trait FilterExpression extends js.Object {
     * @param aUI5Filter Array of UI5 filter objects
     * @returns This object for method chaining
     */
-  def addUI5FilterConditions(aUI5Filter: js.Array[Filter]): FilterExpression = js.native
+  def addUI5FilterConditions(aUI5Filter: js.Array[Filter]): FilterExpression
   /**
     * Check if request is compliant with basic filter constraints expressed in metadata:(a) all properties
     * required in the filter expression have been referenced (b) the single-value filter restrictions have
@@ -43,33 +42,33 @@ trait FilterExpression extends js.Object {
     * @returns The value true. In case the expression violates some of the rules, an exception with some
     * explanatory         message is thrown
     */
-  def checkValidity(): Boolean = js.native
+  def checkValidity(): Boolean
   /**
     * Clear expression from any conditions that may have been set previously
     */
-  def clear(): Unit = js.native
+  def clear(): Unit
   /**
     * Get description for this entity type
     * @returns The object representing the entity type
     */
-  def getEntityType(): EntityType = js.native
+  def getEntityType(): EntityType
   /**
     * Get an array of SAPUI5 Filter objects corresponding to this expression.
     * @returns List of filter objects representing this expression
     */
-  def getExpressionAsUI5FilterArray(): js.Array[Filter] = js.native
+  def getExpressionAsUI5FilterArray(): js.Array[Filter]
   /**
     * Get the value for the OData system query option $filter corresponding to this expression.
     * @returns The $filter value for the filter expression
     */
-  def getURIFilterOptionValue(): String = js.native
+  def getURIFilterOptionValue(): String
   /**
     * Remove all conditions for some property from the filter expression.All previously set conditions for
     * some property are removed from the filter expression.
     * @param sPropertyName The name of the property bound in the condition
     * @returns This object for method chaining
     */
-  def removeConditions(sPropertyName: String): FilterExpression = js.native
+  def removeConditions(sPropertyName: String): FilterExpression
 }
 
 object FilterExpression {
@@ -88,67 +87,5 @@ object FilterExpression {
     val __obj = js.Dynamic.literal(addCondition = js.Any.fromFunction4(addCondition), addSetCondition = js.Any.fromFunction2(addSetCondition), addUI5FilterConditions = js.Any.fromFunction1(addUI5FilterConditions), checkValidity = js.Any.fromFunction0(checkValidity), clear = js.Any.fromFunction0(clear), getEntityType = js.Any.fromFunction0(getEntityType), getExpressionAsUI5FilterArray = js.Any.fromFunction0(getExpressionAsUI5FilterArray), getURIFilterOptionValue = js.Any.fromFunction0(getURIFilterOptionValue), removeConditions = js.Any.fromFunction1(removeConditions))
     __obj.asInstanceOf[FilterExpression]
   }
-  @scala.inline
-  implicit class FilterExpressionOps[Self <: FilterExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddCondition(value: (String, TypeofFilterOperator, js.Any, js.Any) => FilterExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCondition")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withAddSetCondition(value: (String, js.Array[_]) => FilterExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addSetCondition")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAddUI5FilterConditions(value: js.Array[Filter] => FilterExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addUI5FilterConditions")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCheckValidity(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkValidity")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetEntityType(value: () => EntityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntityType")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetExpressionAsUI5FilterArray(value: () => js.Array[Filter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExpressionAsUI5FilterArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetURIFilterOptionValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIFilterOptionValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveConditions(value: String => FilterExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeConditions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

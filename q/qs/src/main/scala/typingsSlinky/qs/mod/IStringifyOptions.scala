@@ -14,16 +14,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IStringifyOptions extends js.Object {
-  var addQueryPrefix: js.UndefOr[Boolean] = js.native
-  var allowDots: js.UndefOr[Boolean] = js.native
-  var arrayFormat: js.UndefOr[indices | brackets | repeat | comma] = js.native
-  var charset: js.UndefOr[`utf-8` | `iso-8859-1`] = js.native
-  var charsetSentinel: js.UndefOr[Boolean] = js.native
-  var delimiter: js.UndefOr[String] = js.native
-  var encode: js.UndefOr[Boolean] = js.native
-  var encodeValuesOnly: js.UndefOr[Boolean] = js.native
+  var addQueryPrefix: js.UndefOr[Boolean] = js.undefined
+  var allowDots: js.UndefOr[Boolean] = js.undefined
+  var arrayFormat: js.UndefOr[indices | brackets | repeat | comma] = js.undefined
+  var charset: js.UndefOr[`utf-8` | `iso-8859-1`] = js.undefined
+  var charsetSentinel: js.UndefOr[Boolean] = js.undefined
+  var delimiter: js.UndefOr[String] = js.undefined
+  var encode: js.UndefOr[Boolean] = js.undefined
+  var encodeValuesOnly: js.UndefOr[Boolean] = js.undefined
   var encoder: js.UndefOr[
     js.Function4[
       /* str */ js.Any, 
@@ -32,231 +31,56 @@ trait IStringifyOptions extends js.Object {
       /* type */ key | value, 
       String
     ]
-  ] = js.native
+  ] = js.undefined
   var filter: js.UndefOr[
     (js.Array[String | Double]) | (js.Function2[/* prefix */ String, /* value */ js.Any, _])
-  ] = js.native
-  var format: js.UndefOr[RFC1738 | RFC3986] = js.native
-  var indices: js.UndefOr[Boolean] = js.native
-  var serializeDate: js.UndefOr[js.Function1[/* d */ js.Date, String]] = js.native
-  var skipNulls: js.UndefOr[Boolean] = js.native
-  var sort: js.UndefOr[js.Function2[/* a */ js.Any, /* b */ js.Any, Double]] = js.native
-  var strictNullHandling: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var format: js.UndefOr[RFC1738 | RFC3986] = js.undefined
+  var indices: js.UndefOr[Boolean] = js.undefined
+  var serializeDate: js.UndefOr[js.Function1[/* d */ js.Date, String]] = js.undefined
+  var skipNulls: js.UndefOr[Boolean] = js.undefined
+  var sort: js.UndefOr[js.Function2[/* a */ js.Any, /* b */ js.Any, Double]] = js.undefined
+  var strictNullHandling: js.UndefOr[Boolean] = js.undefined
 }
 
 object IStringifyOptions {
   @scala.inline
-  def apply(): IStringifyOptions = {
+  def apply(
+    addQueryPrefix: js.UndefOr[Boolean] = js.undefined,
+    allowDots: js.UndefOr[Boolean] = js.undefined,
+    arrayFormat: indices | brackets | repeat | comma = null,
+    charset: `utf-8` | `iso-8859-1` = null,
+    charsetSentinel: js.UndefOr[Boolean] = js.undefined,
+    delimiter: String = null,
+    encode: js.UndefOr[Boolean] = js.undefined,
+    encodeValuesOnly: js.UndefOr[Boolean] = js.undefined,
+    encoder: (/* str */ js.Any, /* defaultEncoder */ defaultEncoder, /* charset */ String, /* type */ key | value) => String = null,
+    filter: (js.Array[String | Double]) | (js.Function2[/* prefix */ String, /* value */ js.Any, _]) = null,
+    format: RFC1738 | RFC3986 = null,
+    indices: js.UndefOr[Boolean] = js.undefined,
+    serializeDate: /* d */ js.Date => String = null,
+    skipNulls: js.UndefOr[Boolean] = js.undefined,
+    sort: (/* a */ js.Any, /* b */ js.Any) => Double = null,
+    strictNullHandling: js.UndefOr[Boolean] = js.undefined
+  ): IStringifyOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addQueryPrefix)) __obj.updateDynamic("addQueryPrefix")(addQueryPrefix.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDots)) __obj.updateDynamic("allowDots")(allowDots.get.asInstanceOf[js.Any])
+    if (arrayFormat != null) __obj.updateDynamic("arrayFormat")(arrayFormat.asInstanceOf[js.Any])
+    if (charset != null) __obj.updateDynamic("charset")(charset.asInstanceOf[js.Any])
+    if (!js.isUndefined(charsetSentinel)) __obj.updateDynamic("charsetSentinel")(charsetSentinel.get.asInstanceOf[js.Any])
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(encode)) __obj.updateDynamic("encode")(encode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(encodeValuesOnly)) __obj.updateDynamic("encodeValuesOnly")(encodeValuesOnly.get.asInstanceOf[js.Any])
+    if (encoder != null) __obj.updateDynamic("encoder")(js.Any.fromFunction4(encoder))
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(indices)) __obj.updateDynamic("indices")(indices.get.asInstanceOf[js.Any])
+    if (serializeDate != null) __obj.updateDynamic("serializeDate")(js.Any.fromFunction1(serializeDate))
+    if (!js.isUndefined(skipNulls)) __obj.updateDynamic("skipNulls")(skipNulls.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction2(sort))
+    if (!js.isUndefined(strictNullHandling)) __obj.updateDynamic("strictNullHandling")(strictNullHandling.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStringifyOptions]
   }
-  @scala.inline
-  implicit class IStringifyOptionsOps[Self <: IStringifyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddQueryPrefix(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addQueryPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddQueryPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addQueryPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowDots(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArrayFormat(value: indices | brackets | repeat | comma): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArrayFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCharset(value: `utf-8` | `iso-8859-1`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCharsetSentinel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charsetSentinel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCharsetSentinel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("charsetSentinel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodeValuesOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeValuesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodeValuesOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeValuesOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncoder(
-      value: (/* str */ js.Any, /* defaultEncoder */ defaultEncoder, /* charset */ String, /* type */ key | value) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoder")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEncoder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterFunction2(value: (/* prefix */ String, /* value */ js.Any) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFilter(value: (js.Array[String | Double]) | (js.Function2[/* prefix */ String, /* value */ js.Any, _])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: RFC1738 | RFC3986): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerializeDate(value: /* d */ js.Date => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeDate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSerializeDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipNulls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNulls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipNulls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipNulls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: (/* a */ js.Any, /* b */ js.Any) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrictNullHandling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictNullHandling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictNullHandling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictNullHandling")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

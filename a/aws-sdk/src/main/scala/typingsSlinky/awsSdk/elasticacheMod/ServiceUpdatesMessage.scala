@@ -18,41 +18,11 @@ trait ServiceUpdatesMessage extends js.Object {
 
 object ServiceUpdatesMessage {
   @scala.inline
-  def apply(): ServiceUpdatesMessage = {
+  def apply(Marker: String = null, ServiceUpdates: ServiceUpdateList = null): ServiceUpdatesMessage = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (ServiceUpdates != null) __obj.updateDynamic("ServiceUpdates")(ServiceUpdates.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceUpdatesMessage]
   }
-  @scala.inline
-  implicit class ServiceUpdatesMessageOps[Self <: ServiceUpdatesMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUpdates(value: ServiceUpdateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUpdates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceUpdates")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IsMACAddressOptions extends js.Object {
   /**
     * If `no_colons` is `true`, the validator will allow MAC addresses without the colons.
@@ -14,34 +13,15 @@ trait IsMACAddressOptions extends js.Object {
     *
     * @default false
     */
-  var no_colons: js.UndefOr[Boolean] = js.native
+  var no_colons: js.UndefOr[Boolean] = js.undefined
 }
 
 object IsMACAddressOptions {
   @scala.inline
-  def apply(): IsMACAddressOptions = {
+  def apply(no_colons: js.UndefOr[Boolean] = js.undefined): IsMACAddressOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(no_colons)) __obj.updateDynamic("no_colons")(no_colons.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IsMACAddressOptions]
   }
-  @scala.inline
-  implicit class IsMACAddressOptionsOps[Self <: IsMACAddressOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNo_colons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_colons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNo_colons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("no_colons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,5 +16,10 @@ class MVCxClientReportDesignerSaveCommandExecutedEventArgs protected ()
     * @param result A string value that represents the result of server-side processing.
     */
   def this(result: String) = this()
+  /**
+    * Returns the operation result.
+    */
+  /* CompleteClass */
+  override var Result: String = js.native
 }
 

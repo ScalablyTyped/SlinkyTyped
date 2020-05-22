@@ -79,22 +79,22 @@ trait DynamicBitmapText extends BitmapText {
     * usual values when rendering.
     * @param callback The display callback to set.
     */
-  def setDisplayCallback(callback: DisplayCallback): DynamicBitmapText = js.native
+  def setDisplayCallback(callback: DisplayCallback): this.type = js.native
   /**
     * Set the horizontal scroll position of this Bitmap Text.
     * @param value The horizontal scroll position to set.
     */
-  def setScrollX(value: Double): DynamicBitmapText = js.native
+  def setScrollX(value: Double): this.type = js.native
   /**
     * Set the vertical scroll position of this Bitmap Text.
     * @param value The vertical scroll position to set.
     */
-  def setScrollY(value: Double): DynamicBitmapText = js.native
+  def setScrollY(value: Double): this.type = js.native
   /**
     * Set the crop size of this Bitmap Text.
     * @param width The width of the crop.
     * @param height The height of the crop.
     */
-  def setSize(width: Double, height: Double): DynamicBitmapText = js.native
+  def setSize(width: Double, height: Double): this.type = js.native
 }
 

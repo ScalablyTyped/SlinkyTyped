@@ -21,22 +21,21 @@ import scala.scalajs.js.annotation._
   * It can be used, if there is a need to execute SQL statement more than once or if you want to format the query result fields different from the
   * underlying table definitions.
   */
-@js.native
 trait QueryDescriptor
   extends Descriptor
      with XDataDescriptorFactory
      with DataSettings
      with XColumnsSupplier {
   /** is the command of the query, this is typically a select statement. */
-  var Command: String = js.native
+  var Command: String
   /** should we use escape processing for the query. */
-  var EscapeProcessing: Boolean = js.native
+  var EscapeProcessing: Boolean
   /** is the name of the update table catalog. */
-  var UpdateCatalogName: String = js.native
+  var UpdateCatalogName: String
   /** is the name of the update table schema. */
-  var UpdateSchemaName: String = js.native
+  var UpdateSchemaName: String
   /** is the name of the table which should be updated. This is usually used for queries which relate on more than one table. */
-  var UpdateTableName: String = js.native
+  var UpdateTableName: String
 }
 
 object QueryDescriptor {
@@ -74,43 +73,5 @@ object QueryDescriptor {
     val __obj = js.Dynamic.literal(ApplyFilter = ApplyFilter.asInstanceOf[js.Any], Columns = Columns.asInstanceOf[js.Any], Command = Command.asInstanceOf[js.Any], EscapeProcessing = EscapeProcessing.asInstanceOf[js.Any], Filter = Filter.asInstanceOf[js.Any], FontDescriptor = FontDescriptor.asInstanceOf[js.Any], GroupBy = GroupBy.asInstanceOf[js.Any], HavingClause = HavingClause.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Order = Order.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RowHeight = RowHeight.asInstanceOf[js.Any], TextColor = TextColor.asInstanceOf[js.Any], UpdateCatalogName = UpdateCatalogName.asInstanceOf[js.Any], UpdateSchemaName = UpdateSchemaName.asInstanceOf[js.Any], UpdateTableName = UpdateTableName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), createDataDescriptor = js.Any.fromFunction0(createDataDescriptor), getColumns = js.Any.fromFunction0(getColumns), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[QueryDescriptor]
   }
-  @scala.inline
-  implicit class QueryDescriptorOps[Self <: QueryDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEscapeProcessing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EscapeProcessing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateCatalogName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateCatalogName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateSchemaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateSchemaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateTableName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateTableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

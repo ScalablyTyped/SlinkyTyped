@@ -14,29 +14,10 @@ trait TerminateAppRequest extends js.Object {
 
 object TerminateAppRequest {
   @scala.inline
-  def apply(): TerminateAppRequest = {
+  def apply(appId: AppId = null): TerminateAppRequest = {
     val __obj = js.Dynamic.literal()
+    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TerminateAppRequest]
   }
-  @scala.inline
-  implicit class TerminateAppRequestOps[Self <: TerminateAppRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppId(value: AppId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

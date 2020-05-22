@@ -1,17 +1,17 @@
 package typingsSlinky.d3Contour.mod
 
+import typingsSlinky.geojson.mod.BBox
 import typingsSlinky.geojson.mod.MultiPolygon
 import typingsSlinky.geojson.mod.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContourMultiPolygon extends MultiPolygon {
   /**
     * Threshold value of the contour.
     */
-  var value: Double = js.native
+  var value: Double
 }
 
 object ContourMultiPolygon {
@@ -19,25 +19,13 @@ object ContourMultiPolygon {
   def apply(
     coordinates: js.Array[js.Array[js.Array[Position]]],
     `type`: typingsSlinky.geojson.geojsonStrings.MultiPolygon,
-    value: Double
+    value: Double,
+    bbox: BBox = null
   ): ContourMultiPolygon = {
     val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (bbox != null) __obj.updateDynamic("bbox")(bbox.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContourMultiPolygon]
   }
-  @scala.inline
-  implicit class ContourMultiPolygonOps[Self <: ContourMultiPolygon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

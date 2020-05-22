@@ -18,41 +18,11 @@ trait ListPackagingConfigurationsResponse extends js.Object {
 
 object ListPackagingConfigurationsResponse {
   @scala.inline
-  def apply(): ListPackagingConfigurationsResponse = {
+  def apply(NextToken: string = null, PackagingConfigurations: listOfPackagingConfiguration = null): ListPackagingConfigurationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (PackagingConfigurations != null) __obj.updateDynamic("PackagingConfigurations")(PackagingConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPackagingConfigurationsResponse]
   }
-  @scala.inline
-  implicit class ListPackagingConfigurationsResponseOps[Self <: ListPackagingConfigurationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackagingConfigurations(value: listOfPackagingConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackagingConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackagingConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PackagingConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

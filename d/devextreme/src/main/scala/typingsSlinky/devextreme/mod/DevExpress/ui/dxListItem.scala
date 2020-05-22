@@ -1,82 +1,46 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxListItem extends CollectionWidgetItem {
-  /** Specifies the text of a badge displayed for the list item. */
-  var badge: js.UndefOr[String] = js.native
-  /** Specifies the list item's icon. */
-  var icon: js.UndefOr[String] = js.native
-  /** Specifies the name of the list items group in a grouped list. */
-  var key: js.UndefOr[String] = js.native
-  /** Specifies whether or not to display a chevron for the list item. */
-  var showChevron: js.UndefOr[Boolean] = js.native
+  /** @name dxListItem.badge */
+  var badge: js.UndefOr[String] = js.undefined
+  /** @name dxListItem.icon */
+  var icon: js.UndefOr[String] = js.undefined
+  /** @name dxListItem.key */
+  var key: js.UndefOr[String] = js.undefined
+  /** @name dxListItem.showChevron */
+  var showChevron: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxListItem {
   @scala.inline
-  def apply(): dxListItem = {
+  def apply(
+    badge: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    html: String = null,
+    icon: String = null,
+    key: String = null,
+    showChevron: js.UndefOr[Boolean] = js.undefined,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery]) = null,
+    text: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxListItem = {
     val __obj = js.Dynamic.literal()
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(showChevron)) __obj.updateDynamic("showChevron")(showChevron.get.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxListItem]
   }
-  @scala.inline
-  implicit class dxListItemOps[Self <: dxListItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBadge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowChevron(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showChevron")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowChevron: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showChevron")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

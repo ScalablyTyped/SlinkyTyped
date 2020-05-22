@@ -7,6 +7,7 @@ import typingsSlinky.luxon.mod.HourCycle
 import typingsSlinky.luxon.mod.NumberUnitLength
 import typingsSlinky.luxon.mod.NumberingSystem
 import typingsSlinky.luxon.mod.StringUnitLength
+import typingsSlinky.luxon.mod.ToISOFormat
 import typingsSlinky.luxon.mod.ToRelativeUnit
 import typingsSlinky.luxon.mod.UnitLength
 import typingsSlinky.luxon.mod.ZoneOffsetFormat
@@ -90,6 +91,9 @@ object luxonStrings {
   sealed trait bali extends NumberingSystem
   
   @js.native
+  sealed trait basic extends ToISOFormat
+  
+  @js.native
   sealed trait beng extends NumberingSystem
   
   @js.native
@@ -138,6 +142,9 @@ object luxonStrings {
   
   @js.native
   sealed trait ethiopic extends CalendarSystem
+  
+  @js.native
+  sealed trait extended extends ToISOFormat
   
   @js.native
   sealed trait fromFormat extends js.Object
@@ -596,6 +603,8 @@ object luxonStrings {
   @scala.inline
   def bali: bali = "bali".asInstanceOf[bali]
   @scala.inline
+  def basic: basic = "basic".asInstanceOf[basic]
+  @scala.inline
   def beng: beng = "beng".asInstanceOf[beng]
   @scala.inline
   def buddhist: buddhist = "buddhist".asInstanceOf[buddhist]
@@ -627,6 +636,8 @@ object luxonStrings {
   def ethioaa: ethioaa = "ethioaa".asInstanceOf[ethioaa]
   @scala.inline
   def ethiopic: ethiopic = "ethiopic".asInstanceOf[ethiopic]
+  @scala.inline
+  def extended: extended = "extended".asInstanceOf[extended]
   @scala.inline
   def fromFormat: fromFormat = "fromFormat".asInstanceOf[fromFormat]
   @scala.inline

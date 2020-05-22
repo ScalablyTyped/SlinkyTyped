@@ -1,8 +1,5 @@
 package typingsSlinky.ionicCore.overlaysInterfaceMod
 
-import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
-import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
-import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +10,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
 */
 trait OverlaySelect extends js.Object
-
-object OverlaySelect {
-  @scala.inline
-  implicit def apply(value: HTMLIonActionSheetElement): OverlaySelect = value.asInstanceOf[OverlaySelect]
-  @scala.inline
-  implicit def apply(value: HTMLIonAlertElement): OverlaySelect = value.asInstanceOf[OverlaySelect]
-  @scala.inline
-  implicit def apply(value: HTMLIonPopoverElement): OverlaySelect = value.asInstanceOf[OverlaySelect]
-}
 

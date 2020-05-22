@@ -30,77 +30,20 @@ trait GetLifecyclePoliciesRequest extends js.Object {
 
 object GetLifecyclePoliciesRequest {
   @scala.inline
-  def apply(): GetLifecyclePoliciesRequest = {
+  def apply(
+    PolicyIds: PolicyIdList = null,
+    ResourceTypes: ResourceTypeValuesList = null,
+    State: GettablePolicyStateValues = null,
+    TagsToAdd: TagsToAddFilterList = null,
+    TargetTags: TargetTagsFilterList = null
+  ): GetLifecyclePoliciesRequest = {
     val __obj = js.Dynamic.literal()
+    if (PolicyIds != null) __obj.updateDynamic("PolicyIds")(PolicyIds.asInstanceOf[js.Any])
+    if (ResourceTypes != null) __obj.updateDynamic("ResourceTypes")(ResourceTypes.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (TagsToAdd != null) __obj.updateDynamic("TagsToAdd")(TagsToAdd.asInstanceOf[js.Any])
+    if (TargetTags != null) __obj.updateDynamic("TargetTags")(TargetTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLifecyclePoliciesRequest]
   }
-  @scala.inline
-  implicit class GetLifecyclePoliciesRequestOps[Self <: GetLifecyclePoliciesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyIds(value: PolicyIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTypes(value: ResourceTypeValuesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: GettablePolicyStateValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagsToAdd(value: TagsToAddFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagsToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetTags(value: TargetTagsFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

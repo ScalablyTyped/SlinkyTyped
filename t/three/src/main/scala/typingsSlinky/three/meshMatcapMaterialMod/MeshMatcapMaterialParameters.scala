@@ -1,262 +1,161 @@
 package typingsSlinky.three.meshMatcapMaterialMod
 
 import typingsSlinky.three.colorMod.Color
+import typingsSlinky.three.constantsMod.Blending
+import typingsSlinky.three.constantsMod.BlendingDstFactor
+import typingsSlinky.three.constantsMod.BlendingEquation
+import typingsSlinky.three.constantsMod.BlendingSrcFactor
+import typingsSlinky.three.constantsMod.Colors
+import typingsSlinky.three.constantsMod.DepthModes
 import typingsSlinky.three.constantsMod.NormalMapTypes
+import typingsSlinky.three.constantsMod.Side
+import typingsSlinky.three.constantsMod.StencilFunc
+import typingsSlinky.three.constantsMod.StencilOp
 import typingsSlinky.three.materialMod.MaterialParameters
+import typingsSlinky.three.planeMod.Plane
 import typingsSlinky.three.textureMod.Texture
+import typingsSlinky.three.threeStrings.highp
+import typingsSlinky.three.threeStrings.lowp
+import typingsSlinky.three.threeStrings.mediump
 import typingsSlinky.three.vector2Mod.Vector2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MeshMatcapMaterialParameters extends MaterialParameters {
-  var alphaMap: js.UndefOr[Texture | Null] = js.native
-  var bumpMap: js.UndefOr[Texture | Null] = js.native
-  var bumpScale: js.UndefOr[Double] = js.native
-  var color: js.UndefOr[Color | String | Double] = js.native
-  var displacementBias: js.UndefOr[Double] = js.native
-  var displacementMap: js.UndefOr[Texture | Null] = js.native
-  var displacementScale: js.UndefOr[Double] = js.native
-  var map: js.UndefOr[Texture | Null] = js.native
-  var matcap: js.UndefOr[Texture | Null] = js.native
-  var morphNormals: js.UndefOr[Boolean] = js.native
-  var morphTargets: js.UndefOr[Boolean] = js.native
-  var normalMap: js.UndefOr[Texture | Null] = js.native
-  var normalMapType: js.UndefOr[NormalMapTypes] = js.native
-  var normalScale: js.UndefOr[Vector2] = js.native
-  var skinning: js.UndefOr[Boolean] = js.native
+  var alphaMap: js.UndefOr[Texture | Null] = js.undefined
+  var bumpMap: js.UndefOr[Texture | Null] = js.undefined
+  var bumpScale: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[Color | String | Double] = js.undefined
+  var displacementBias: js.UndefOr[Double] = js.undefined
+  var displacementMap: js.UndefOr[Texture | Null] = js.undefined
+  var displacementScale: js.UndefOr[Double] = js.undefined
+  var map: js.UndefOr[Texture | Null] = js.undefined
+  var matcap: js.UndefOr[Texture | Null] = js.undefined
+  var morphNormals: js.UndefOr[Boolean] = js.undefined
+  var morphTargets: js.UndefOr[Boolean] = js.undefined
+  var normalMap: js.UndefOr[Texture | Null] = js.undefined
+  var normalMapType: js.UndefOr[NormalMapTypes] = js.undefined
+  var normalScale: js.UndefOr[Vector2] = js.undefined
+  var skinning: js.UndefOr[Boolean] = js.undefined
 }
 
 object MeshMatcapMaterialParameters {
   @scala.inline
-  def apply(): MeshMatcapMaterialParameters = {
+  def apply(
+    alphaMap: js.UndefOr[Null | Texture] = js.undefined,
+    alphaTest: js.UndefOr[Double] = js.undefined,
+    blendDst: BlendingDstFactor = null,
+    blendDstAlpha: js.UndefOr[Double] = js.undefined,
+    blendEquation: BlendingEquation = null,
+    blendEquationAlpha: js.UndefOr[Double] = js.undefined,
+    blendSrc: BlendingSrcFactor | BlendingDstFactor = null,
+    blendSrcAlpha: js.UndefOr[Double] = js.undefined,
+    blending: Blending = null,
+    bumpMap: js.UndefOr[Null | Texture] = js.undefined,
+    bumpScale: js.UndefOr[Double] = js.undefined,
+    clipIntersection: js.UndefOr[Boolean] = js.undefined,
+    clipShadows: js.UndefOr[Boolean] = js.undefined,
+    clippingPlanes: js.Array[Plane] = null,
+    color: Color | String | Double = null,
+    colorWrite: js.UndefOr[Boolean] = js.undefined,
+    depthFunc: DepthModes = null,
+    depthTest: js.UndefOr[Boolean] = js.undefined,
+    depthWrite: js.UndefOr[Boolean] = js.undefined,
+    displacementBias: js.UndefOr[Double] = js.undefined,
+    displacementMap: js.UndefOr[Null | Texture] = js.undefined,
+    displacementScale: js.UndefOr[Double] = js.undefined,
+    dithering: js.UndefOr[Boolean] = js.undefined,
+    flatShading: js.UndefOr[Boolean] = js.undefined,
+    fog: js.UndefOr[Boolean] = js.undefined,
+    map: js.UndefOr[Null | Texture] = js.undefined,
+    matcap: js.UndefOr[Null | Texture] = js.undefined,
+    morphNormals: js.UndefOr[Boolean] = js.undefined,
+    morphTargets: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    normalMap: js.UndefOr[Null | Texture] = js.undefined,
+    normalMapType: NormalMapTypes = null,
+    normalScale: Vector2 = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    overdraw: js.UndefOr[Double] = js.undefined,
+    polygonOffset: js.UndefOr[Boolean] = js.undefined,
+    polygonOffsetFactor: js.UndefOr[Double] = js.undefined,
+    polygonOffsetUnits: js.UndefOr[Double] = js.undefined,
+    precision: js.UndefOr[Null | highp | mediump | lowp] = js.undefined,
+    premultipliedAlpha: js.UndefOr[Boolean] = js.undefined,
+    shadowSide: Side = null,
+    side: Side = null,
+    skinning: js.UndefOr[Boolean] = js.undefined,
+    stencilFail: StencilOp = null,
+    stencilFunc: StencilFunc = null,
+    stencilMask: js.UndefOr[Double] = js.undefined,
+    stencilRef: js.UndefOr[Double] = js.undefined,
+    stencilWrite: js.UndefOr[Boolean] = js.undefined,
+    stencilZFail: StencilOp = null,
+    stencilZPass: StencilOp = null,
+    toneMapped: js.UndefOr[Boolean] = js.undefined,
+    transparent: js.UndefOr[Boolean] = js.undefined,
+    vertexColors: Colors = null,
+    vertexTangents: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): MeshMatcapMaterialParameters = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alphaMap)) __obj.updateDynamic("alphaMap")(alphaMap.asInstanceOf[js.Any])
+    if (!js.isUndefined(alphaTest)) __obj.updateDynamic("alphaTest")(alphaTest.get.asInstanceOf[js.Any])
+    if (blendDst != null) __obj.updateDynamic("blendDst")(blendDst.asInstanceOf[js.Any])
+    if (!js.isUndefined(blendDstAlpha)) __obj.updateDynamic("blendDstAlpha")(blendDstAlpha.get.asInstanceOf[js.Any])
+    if (blendEquation != null) __obj.updateDynamic("blendEquation")(blendEquation.asInstanceOf[js.Any])
+    if (!js.isUndefined(blendEquationAlpha)) __obj.updateDynamic("blendEquationAlpha")(blendEquationAlpha.get.asInstanceOf[js.Any])
+    if (blendSrc != null) __obj.updateDynamic("blendSrc")(blendSrc.asInstanceOf[js.Any])
+    if (!js.isUndefined(blendSrcAlpha)) __obj.updateDynamic("blendSrcAlpha")(blendSrcAlpha.get.asInstanceOf[js.Any])
+    if (blending != null) __obj.updateDynamic("blending")(blending.asInstanceOf[js.Any])
+    if (!js.isUndefined(bumpMap)) __obj.updateDynamic("bumpMap")(bumpMap.asInstanceOf[js.Any])
+    if (!js.isUndefined(bumpScale)) __obj.updateDynamic("bumpScale")(bumpScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clipIntersection)) __obj.updateDynamic("clipIntersection")(clipIntersection.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clipShadows)) __obj.updateDynamic("clipShadows")(clipShadows.get.asInstanceOf[js.Any])
+    if (clippingPlanes != null) __obj.updateDynamic("clippingPlanes")(clippingPlanes.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorWrite)) __obj.updateDynamic("colorWrite")(colorWrite.get.asInstanceOf[js.Any])
+    if (depthFunc != null) __obj.updateDynamic("depthFunc")(depthFunc.asInstanceOf[js.Any])
+    if (!js.isUndefined(depthTest)) __obj.updateDynamic("depthTest")(depthTest.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(depthWrite)) __obj.updateDynamic("depthWrite")(depthWrite.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displacementBias)) __obj.updateDynamic("displacementBias")(displacementBias.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displacementMap)) __obj.updateDynamic("displacementMap")(displacementMap.asInstanceOf[js.Any])
+    if (!js.isUndefined(displacementScale)) __obj.updateDynamic("displacementScale")(displacementScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dithering)) __obj.updateDynamic("dithering")(dithering.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flatShading)) __obj.updateDynamic("flatShading")(flatShading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fog)) __obj.updateDynamic("fog")(fog.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(map)) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (!js.isUndefined(matcap)) __obj.updateDynamic("matcap")(matcap.asInstanceOf[js.Any])
+    if (!js.isUndefined(morphNormals)) __obj.updateDynamic("morphNormals")(morphNormals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(morphTargets)) __obj.updateDynamic("morphTargets")(morphTargets.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(normalMap)) __obj.updateDynamic("normalMap")(normalMap.asInstanceOf[js.Any])
+    if (normalMapType != null) __obj.updateDynamic("normalMapType")(normalMapType.asInstanceOf[js.Any])
+    if (normalScale != null) __obj.updateDynamic("normalScale")(normalScale.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overdraw)) __obj.updateDynamic("overdraw")(overdraw.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(polygonOffset)) __obj.updateDynamic("polygonOffset")(polygonOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(polygonOffsetFactor)) __obj.updateDynamic("polygonOffsetFactor")(polygonOffsetFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(polygonOffsetUnits)) __obj.updateDynamic("polygonOffsetUnits")(polygonOffsetUnits.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
+    if (!js.isUndefined(premultipliedAlpha)) __obj.updateDynamic("premultipliedAlpha")(premultipliedAlpha.get.asInstanceOf[js.Any])
+    if (shadowSide != null) __obj.updateDynamic("shadowSide")(shadowSide.asInstanceOf[js.Any])
+    if (side != null) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
+    if (!js.isUndefined(skinning)) __obj.updateDynamic("skinning")(skinning.get.asInstanceOf[js.Any])
+    if (stencilFail != null) __obj.updateDynamic("stencilFail")(stencilFail.asInstanceOf[js.Any])
+    if (stencilFunc != null) __obj.updateDynamic("stencilFunc")(stencilFunc.asInstanceOf[js.Any])
+    if (!js.isUndefined(stencilMask)) __obj.updateDynamic("stencilMask")(stencilMask.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stencilRef)) __obj.updateDynamic("stencilRef")(stencilRef.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stencilWrite)) __obj.updateDynamic("stencilWrite")(stencilWrite.get.asInstanceOf[js.Any])
+    if (stencilZFail != null) __obj.updateDynamic("stencilZFail")(stencilZFail.asInstanceOf[js.Any])
+    if (stencilZPass != null) __obj.updateDynamic("stencilZPass")(stencilZPass.asInstanceOf[js.Any])
+    if (!js.isUndefined(toneMapped)) __obj.updateDynamic("toneMapped")(toneMapped.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.get.asInstanceOf[js.Any])
+    if (vertexColors != null) __obj.updateDynamic("vertexColors")(vertexColors.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertexTangents)) __obj.updateDynamic("vertexTangents")(vertexTangents.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeshMatcapMaterialParameters]
   }
-  @scala.inline
-  implicit class MeshMatcapMaterialParametersOps[Self <: MeshMatcapMaterialParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlphaMap(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlphaMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlphaMapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMap")(null)
-        ret
-    }
-    @scala.inline
-    def withBumpMap(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bumpMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBumpMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bumpMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBumpMapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bumpMap")(null)
-        ret
-    }
-    @scala.inline
-    def withBumpScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bumpScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBumpScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bumpScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: Color | String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplacementBias(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementBias")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplacementBias: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementBias")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplacementMap(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplacementMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplacementMapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementMap")(null)
-        ret
-    }
-    @scala.inline
-    def withDisplacementScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplacementScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displacementScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(null)
-        ret
-    }
-    @scala.inline
-    def withMatcap(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatcap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatcapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcap")(null)
-        ret
-    }
-    @scala.inline
-    def withMorphNormals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("morphNormals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMorphNormals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("morphNormals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMorphTargets(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("morphTargets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMorphTargets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("morphTargets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalMap(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalMapNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMap")(null)
-        ret
-    }
-    @scala.inline
-    def withNormalMapType(value: NormalMapTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMapType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalMapType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalMapType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalScale(value: Vector2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkinning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skinning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkinning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skinning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

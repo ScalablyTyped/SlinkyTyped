@@ -35,65 +35,18 @@ trait SchemaInstanceGroupManagersApplyUpdatesRequest extends js.Object {
 
 object SchemaInstanceGroupManagersApplyUpdatesRequest {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagersApplyUpdatesRequest = {
+  def apply(
+    instances: js.Array[String] = null,
+    maximalAction: String = null,
+    minimalAction: String = null,
+    mostDisruptiveAllowedAction: String = null
+  ): SchemaInstanceGroupManagersApplyUpdatesRequest = {
     val __obj = js.Dynamic.literal()
+    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
+    if (maximalAction != null) __obj.updateDynamic("maximalAction")(maximalAction.asInstanceOf[js.Any])
+    if (minimalAction != null) __obj.updateDynamic("minimalAction")(minimalAction.asInstanceOf[js.Any])
+    if (mostDisruptiveAllowedAction != null) __obj.updateDynamic("mostDisruptiveAllowedAction")(mostDisruptiveAllowedAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagersApplyUpdatesRequest]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagersApplyUpdatesRequestOps[Self <: SchemaInstanceGroupManagersApplyUpdatesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstances(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximalAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximalAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximalAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximalAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimalAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimalAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimalAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimalAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMostDisruptiveAllowedAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mostDisruptiveAllowedAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMostDisruptiveAllowedAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mostDisruptiveAllowedAction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a template for a style (aka style sheet). */
-@js.native
 trait XStyle extends XNamed {
   /** @returns the name of the parent style, probably empty. */
-  var ParentStyle: String = js.native
+  var ParentStyle: String
   /** @returns the name of the parent style, probably empty. */
-  def getParentStyle(): String = js.native
+  def getParentStyle(): String
   /** @returns `TRUE` if this type is used in the document. */
-  def isInUse(): Boolean = js.native
+  def isInUse(): Boolean
   /** identifies a style as defined by the user. */
-  def isUserDefined(): Boolean = js.native
+  def isUserDefined(): Boolean
   /** sets the name of the parent style. */
-  def setParentStyle(aParentStyle: String): Unit = js.native
+  def setParentStyle(aParentStyle: String): Unit
 }
 
 object XStyle {
@@ -39,43 +38,5 @@ object XStyle {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], ParentStyle = ParentStyle.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getName = js.Any.fromFunction0(getName), getParentStyle = js.Any.fromFunction0(getParentStyle), isInUse = js.Any.fromFunction0(isInUse), isUserDefined = js.Any.fromFunction0(isUserDefined), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setName = js.Any.fromFunction1(setName), setParentStyle = js.Any.fromFunction1(setParentStyle))
     __obj.asInstanceOf[XStyle]
   }
-  @scala.inline
-  implicit class XStyleOps[Self <: XStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParentStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetParentStyle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getParentStyle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsInUse(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInUse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsUserDefined(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUserDefined")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetParentStyle(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setParentStyle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

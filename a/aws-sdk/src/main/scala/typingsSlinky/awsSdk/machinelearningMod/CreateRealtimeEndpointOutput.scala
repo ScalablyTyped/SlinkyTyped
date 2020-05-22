@@ -18,41 +18,11 @@ trait CreateRealtimeEndpointOutput extends js.Object {
 
 object CreateRealtimeEndpointOutput {
   @scala.inline
-  def apply(): CreateRealtimeEndpointOutput = {
+  def apply(MLModelId: EntityId = null, RealtimeEndpointInfo: RealtimeEndpointInfo = null): CreateRealtimeEndpointOutput = {
     val __obj = js.Dynamic.literal()
+    if (MLModelId != null) __obj.updateDynamic("MLModelId")(MLModelId.asInstanceOf[js.Any])
+    if (RealtimeEndpointInfo != null) __obj.updateDynamic("RealtimeEndpointInfo")(RealtimeEndpointInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRealtimeEndpointOutput]
   }
-  @scala.inline
-  implicit class CreateRealtimeEndpointOutputOps[Self <: CreateRealtimeEndpointOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMLModelId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMLModelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealtimeEndpointInfo(value: RealtimeEndpointInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RealtimeEndpointInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealtimeEndpointInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RealtimeEndpointInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

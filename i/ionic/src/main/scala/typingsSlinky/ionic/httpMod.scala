@@ -3,13 +3,16 @@ package typingsSlinky.ionic
 import typingsSlinky.ionic.anon.Req
 import typingsSlinky.ionic.definitionsMod.APIResponse
 import typingsSlinky.ionic.definitionsMod.APIResponseSuccess
+import typingsSlinky.ionic.definitionsMod.HttpMethod
 import typingsSlinky.ionic.definitionsMod.IClient
 import typingsSlinky.ionic.definitionsMod.IConfig
 import typingsSlinky.ionic.definitionsMod.IPaginator
 import typingsSlinky.ionic.definitionsMod.PagePaginatorState
+import typingsSlinky.ionic.definitionsMod.PaginateArgs
 import typingsSlinky.ionic.definitionsMod.PaginatorDeps
 import typingsSlinky.ionic.definitionsMod.PaginatorGuard
 import typingsSlinky.ionic.definitionsMod.PaginatorRequestGenerator
+import typingsSlinky.ionic.definitionsMod.PaginatorState
 import typingsSlinky.ionic.definitionsMod.ResourceClientRequestModifiers
 import typingsSlinky.ionic.definitionsMod.Response
 import typingsSlinky.ionic.definitionsMod.SuperAgentError
@@ -27,6 +30,14 @@ object httpMod extends js.Object {
   @js.native
   class Client protected () extends IClient {
     def this(config: IConfig) = this()
+    /* CompleteClass */
+    override var config: IConfig = js.native
+    /* CompleteClass */
+    override def `do`(req: typingsSlinky.ionic.definitionsMod.SuperAgentRequest): js.Promise[APIResponseSuccess] = js.native
+    /* CompleteClass */
+    override def make(method: HttpMethod, path: String): js.Promise[Req] = js.native
+    /* CompleteClass */
+    override def paginate[T /* <: Response[js.Array[js.Object]] */](args: PaginateArgs[T]): IPaginator[T, PaginatorState] = js.native
   }
   
   @js.native

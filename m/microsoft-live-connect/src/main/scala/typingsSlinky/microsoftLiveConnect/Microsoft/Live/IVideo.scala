@@ -12,106 +12,105 @@ import scala.scalajs.js.annotation._
   * users have shared with the user. Use the wl.skydrive_update scope to
   * create, update, or delete Video objects.
   */
-@js.native
 trait IVideo extends js.Object {
   /**
     * The bit rate, in bits per second, of the video.
     */
-  var bitrate: Double = js.native
+  var bitrate: Double
   /**
     * The number of comments that are associated with the video.
     */
-  var comments_count: Double = js.native
+  var comments_count: Double
   /**
     * A value that indicates whether comments are enabled for the video. If
     * comments can be made, this value is true; otherwise, it is false.
     */
-  var comments_enabled: Boolean = js.native
+  var comments_enabled: Boolean
   /**
     * The time, in ISO 8601 format, at which the video was created.
     */
-  var created_time: String = js.native
+  var created_time: String
   /**
     * A description of the video, or null if no description is specified.
     */
-  var description: String = js.native
+  var description: String
   /**
     * The duration, in milliseconds, of the video run time.
     */
-  var duration: Double = js.native
+  var duration: Double
   /**
     * Info about the user who uploaded the video.
     */
-  var from: IUserInfo = js.native
+  var from: IUserInfo
   /**
     * The height, in pixels, of the video.
     */
-  var height: Double = js.native
+  var height: Double
   /**
     * The Video object's ID.
     */
-  var id: String = js.native
+  var id: String
   /**
     * A value that indicates whether this video can be embedded. If this
     * video can be embedded, this value is true; otherwise, it is false.
     */
-  var is_embeddable: Boolean = js.native
+  var is_embeddable: Boolean
   /**
     * A URL of the video, hosted in SkyDrive.
     */
-  var link: String = js.native
+  var link: String
   /**
     * The file name of the video.
     */
-  var name: String = js.native
+  var name: String
   /**
     * The id of the folder where the item is stored.
     */
-  var parent_id: String = js.native
+  var parent_id: String
   /**
     * A URL of a picture that represents the video.
     */
-  var picture: String = js.native
+  var picture: String
   /**
     * The object that contains permission info.
     */
-  var shared_with: ISharedWith = js.native
+  var shared_with: ISharedWith
   /**
     * The size, in bytes, of the video.
     */
-  var size: Double = js.native
+  var size: Double
   /**
     * The download URL for the video.
     * Warning: This value is not persistent. Use it immediately after
     * making the request, and avoid caching.
     */
-  var source: String = js.native
+  var source: String
   /**
     * The number of tags on the video.
     */
-  var tags_count: Double = js.native
+  var tags_count: Double
   /**
     * A value that indicates whether tags are enabled for the video. If
     * tags can be set, this value is true; otherwise, it is false.
     */
-  var tags_enabled: Boolean = js.native
+  var tags_enabled: Boolean
   /**
     * The type of object; in this case, "video".
     */
-  var `type`: String = js.native
+  var `type`: String
   /**
     * The time, in ISO 8601 format, at which the video was last updated.
     */
-  var updated_time: String = js.native
+  var updated_time: String
   /**
     * The URL to upload video content, hosted in SkyDrive. This value is
     * returned only if the wl.skydrive scope is present.
     */
-  var upload_location: String = js.native
+  var upload_location: String
   /**
     * The width, in pixels, of the video.
     */
-  var width: Double = js.native
+  var width: Double
 }
 
 object IVideo {
@@ -145,151 +144,5 @@ object IVideo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVideo]
   }
-  @scala.inline
-  implicit class IVideoOps[Self <: IVideo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitrate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments_count(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments_enabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments_enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrom(value: IUserInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIs_embeddable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("is_embeddable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPicture(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShared_with(value: ISharedWith): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared_with")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags_count(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTags_enabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags_enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdated_time(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpload_location(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload_location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

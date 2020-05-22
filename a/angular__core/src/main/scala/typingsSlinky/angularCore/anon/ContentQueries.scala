@@ -9,16 +9,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContentQueries[T] extends js.Object {
   /**
     * Function to create instances of content queries associated with a given directive.
     */
-  var contentQueries: js.UndefOr[ContentQueriesFunction[T] | Null] = js.native
+  var contentQueries: js.UndefOr[ContentQueriesFunction[T] | Null] = js.undefined
   /**
     * Function executed by the parent template to allow children to apply host bindings.
     */
-  var hostBindings: js.UndefOr[HostBindingsFunction[T]] = js.native
+  var hostBindings: js.UndefOr[HostBindingsFunction[T]] = js.undefined
   /**
     * A map of input names.
     *
@@ -66,7 +65,7 @@ trait ContentQueries[T] extends js.Object {
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? string | [string, string]}
     */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any]
-  ] = js.native
+  ] = js.undefined
   /**
     * A map of output names.
     *
@@ -81,107 +80,34 @@ trait ContentQueries[T] extends js.Object {
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? string}
     */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any]
-  ] = js.native
+  ] = js.undefined
   /**
     * Additional set of instructions specific to view query processing. This could be seen as a
     * set of instructions to be inserted into the template function.
     */
-  var viewQuery: js.UndefOr[ViewQueriesFunction[T] | Null] = js.native
+  var viewQuery: js.UndefOr[ViewQueriesFunction[T] | Null] = js.undefined
 }
 
 object ContentQueries {
   @scala.inline
-  def apply[T](): ContentQueries[T] = {
+  def apply[T](
+    contentQueries: js.UndefOr[Null | ((/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit)] = js.undefined,
+    hostBindings: (/* rf */ ɵRenderFlags, T, /* elementIndex */ Double) => Unit = null,
+    inputs: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]:? string | [string, string]}
+    */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any] = null,
+    outputs: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]:? string}
+    */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any] = null,
+    viewQuery: js.UndefOr[Null | ((/* rf */ ɵRenderFlags, T) => Unit)] = js.undefined
+  ): ContentQueries[T] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(contentQueries)) __obj.updateDynamic("contentQueries")(if (contentQueries != null) js.Any.fromFunction3(contentQueries.asInstanceOf[(/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit]) else null)
+    if (hostBindings != null) __obj.updateDynamic("hostBindings")(js.Any.fromFunction3(hostBindings))
+    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(viewQuery)) __obj.updateDynamic("viewQuery")(if (viewQuery != null) js.Any.fromFunction2(viewQuery.asInstanceOf[(/* rf */ ɵRenderFlags, T) => Unit]) else null)
     __obj.asInstanceOf[ContentQueries[T]]
   }
-  @scala.inline
-  implicit class ContentQueriesOps[Self[t] <: ContentQueries[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withContentQueries(value: (/* rf */ ɵRenderFlags, T, /* directiveIndex */ Double) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentQueries")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutContentQueries: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentQueries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentQueriesNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentQueries")(null)
-        ret
-    }
-    @scala.inline
-    def withHostBindings(value: (/* rf */ ɵRenderFlags, T, /* elementIndex */ Double) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostBindings")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutHostBindings: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostBindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputs(
-      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-    {[ P in keyof T ]:? string | [string, string]}
-      */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any]
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputs: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputs(
-      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-    {[ P in keyof T ]:? string}
-      */ typingsSlinky.angularCore.angularCoreStrings.ContentQueries with TopLevel[js.Any]
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputs: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewQuery(value: (/* rf */ ɵRenderFlags, T) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewQuery")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutViewQuery: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewQueryNull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewQuery")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -19,35 +19,13 @@ trait GroupMixedInstancesPolicy extends js.Object {
 
 object GroupMixedInstancesPolicy {
   @scala.inline
-  def apply(launchTemplate: Input[GroupMixedInstancesPolicyLaunchTemplate]): GroupMixedInstancesPolicy = {
+  def apply(
+    launchTemplate: Input[GroupMixedInstancesPolicyLaunchTemplate],
+    instancesDistribution: Input[GroupMixedInstancesPolicyInstancesDistribution] = null
+  ): GroupMixedInstancesPolicy = {
     val __obj = js.Dynamic.literal(launchTemplate = launchTemplate.asInstanceOf[js.Any])
+    if (instancesDistribution != null) __obj.updateDynamic("instancesDistribution")(instancesDistribution.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupMixedInstancesPolicy]
   }
-  @scala.inline
-  implicit class GroupMixedInstancesPolicyOps[Self <: GroupMixedInstancesPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLaunchTemplate(value: Input[GroupMixedInstancesPolicyLaunchTemplate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("launchTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstancesDistribution(value: Input[GroupMixedInstancesPolicyInstancesDistribution]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancesDistribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancesDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancesDistribution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

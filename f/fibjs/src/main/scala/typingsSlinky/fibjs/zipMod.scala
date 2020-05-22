@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief zip 格式文件压缩解压模块
-	* @detail 使用方法：,```JavaScript,var zip = require('zip');,```
-	*/
+  * @brief zip 格式文件压缩解压模块
+  * @detail 使用方法：,```JavaScript,var zip = require('zip');,```
+  */
 @JSImport("zip", JSImport.Namespace)
 @js.native
 object zipMod extends js.Object {

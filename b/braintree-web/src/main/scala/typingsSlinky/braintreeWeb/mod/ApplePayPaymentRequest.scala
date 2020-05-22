@@ -30,19 +30,18 @@ import scala.scalajs.js.annotation._
 //  Required.The payment networks supported by the merchant.The value must be one or more of amex, discover, interac, masterCard, privateLabel, or visa.
 //    total
 //  Required.The total amount for the payment.The total must be greater than zero and have a label to pass validation.
-@js.native
 trait ApplePayPaymentRequest extends js.Object {
-  var billingContact: js.UndefOr[js.Any] = js.native
-  var countryCode: String = js.native
-  var currencyCode: String = js.native
-  var merchantCapabilities: js.Array[String] = js.native
-  var requiredBillingContactFields: js.UndefOr[js.Any] = js.native
-  var requiredShippingContactFields: js.UndefOr[js.Any] = js.native
-  var shippingContact: js.UndefOr[js.Any] = js.native
-  var shippingMethods: js.UndefOr[js.Any] = js.native
-  var shippingType: js.UndefOr[js.Any] = js.native
-  var supportedNetworks: js.Array[String] = js.native
-  var total: Label = js.native
+  var billingContact: js.UndefOr[js.Any] = js.undefined
+  var countryCode: String
+  var currencyCode: String
+  var merchantCapabilities: js.Array[String]
+  var requiredBillingContactFields: js.UndefOr[js.Any] = js.undefined
+  var requiredShippingContactFields: js.UndefOr[js.Any] = js.undefined
+  var shippingContact: js.UndefOr[js.Any] = js.undefined
+  var shippingMethods: js.UndefOr[js.Any] = js.undefined
+  var shippingType: js.UndefOr[js.Any] = js.undefined
+  var supportedNetworks: js.Array[String]
+  var total: Label
 }
 
 object ApplePayPaymentRequest {
@@ -52,120 +51,22 @@ object ApplePayPaymentRequest {
     currencyCode: String,
     merchantCapabilities: js.Array[String],
     supportedNetworks: js.Array[String],
-    total: Label
+    total: Label,
+    billingContact: js.Any = null,
+    requiredBillingContactFields: js.Any = null,
+    requiredShippingContactFields: js.Any = null,
+    shippingContact: js.Any = null,
+    shippingMethods: js.Any = null,
+    shippingType: js.Any = null
   ): ApplePayPaymentRequest = {
     val __obj = js.Dynamic.literal(countryCode = countryCode.asInstanceOf[js.Any], currencyCode = currencyCode.asInstanceOf[js.Any], merchantCapabilities = merchantCapabilities.asInstanceOf[js.Any], supportedNetworks = supportedNetworks.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    if (billingContact != null) __obj.updateDynamic("billingContact")(billingContact.asInstanceOf[js.Any])
+    if (requiredBillingContactFields != null) __obj.updateDynamic("requiredBillingContactFields")(requiredBillingContactFields.asInstanceOf[js.Any])
+    if (requiredShippingContactFields != null) __obj.updateDynamic("requiredShippingContactFields")(requiredShippingContactFields.asInstanceOf[js.Any])
+    if (shippingContact != null) __obj.updateDynamic("shippingContact")(shippingContact.asInstanceOf[js.Any])
+    if (shippingMethods != null) __obj.updateDynamic("shippingMethods")(shippingMethods.asInstanceOf[js.Any])
+    if (shippingType != null) __obj.updateDynamic("shippingType")(shippingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplePayPaymentRequest]
   }
-  @scala.inline
-  implicit class ApplePayPaymentRequestOps[Self <: ApplePayPaymentRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCountryCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrencyCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMerchantCapabilities(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantCapabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportedNetworks(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedNetworks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Label): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBillingContact(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingContact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredBillingContactFields(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredBillingContactFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredBillingContactFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredBillingContactFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredShippingContactFields(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredShippingContactFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredShippingContactFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredShippingContactFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingContact(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingContact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingContact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingMethods(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingMethods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShippingType(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShippingType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

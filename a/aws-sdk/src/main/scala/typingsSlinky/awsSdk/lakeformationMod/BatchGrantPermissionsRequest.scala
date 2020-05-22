@@ -18,35 +18,10 @@ trait BatchGrantPermissionsRequest extends js.Object {
 
 object BatchGrantPermissionsRequest {
   @scala.inline
-  def apply(Entries: BatchPermissionsRequestEntryList): BatchGrantPermissionsRequest = {
+  def apply(Entries: BatchPermissionsRequestEntryList, CatalogId: CatalogIdString = null): BatchGrantPermissionsRequest = {
     val __obj = js.Dynamic.literal(Entries = Entries.asInstanceOf[js.Any])
+    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchGrantPermissionsRequest]
   }
-  @scala.inline
-  implicit class BatchGrantPermissionsRequestOps[Self <: BatchGrantPermissionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: BatchPermissionsRequestEntryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogId(value: CatalogIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

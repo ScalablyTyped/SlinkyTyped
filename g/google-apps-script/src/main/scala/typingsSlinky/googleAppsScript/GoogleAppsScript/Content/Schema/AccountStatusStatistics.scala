@@ -4,75 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountStatusStatistics extends js.Object {
-  var active: js.UndefOr[String] = js.native
-  var disapproved: js.UndefOr[String] = js.native
-  var expiring: js.UndefOr[String] = js.native
-  var pending: js.UndefOr[String] = js.native
+  var active: js.UndefOr[String] = js.undefined
+  var disapproved: js.UndefOr[String] = js.undefined
+  var expiring: js.UndefOr[String] = js.undefined
+  var pending: js.UndefOr[String] = js.undefined
 }
 
 object AccountStatusStatistics {
   @scala.inline
-  def apply(): AccountStatusStatistics = {
+  def apply(active: String = null, disapproved: String = null, expiring: String = null, pending: String = null): AccountStatusStatistics = {
     val __obj = js.Dynamic.literal()
+    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    if (disapproved != null) __obj.updateDynamic("disapproved")(disapproved.asInstanceOf[js.Any])
+    if (expiring != null) __obj.updateDynamic("expiring")(expiring.asInstanceOf[js.Any])
+    if (pending != null) __obj.updateDynamic("pending")(pending.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountStatusStatistics]
   }
-  @scala.inline
-  implicit class AccountStatusStatisticsOps[Self <: AccountStatusStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisapproved(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disapproved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisapproved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disapproved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiring(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiring")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiring: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiring")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPending(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

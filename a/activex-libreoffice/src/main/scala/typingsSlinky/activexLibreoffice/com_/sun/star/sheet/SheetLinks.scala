@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.SheetLink
   * @see com.sun.star.sheet.SpreadsheetDocument
   */
-@js.native
 trait SheetLinks
   extends XIndexAccess
      with XNameAccess

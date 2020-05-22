@@ -5,28 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseBrowserFlow extends Flow {
   /**
     * @return {String} The URL to redirect to that will receive the
     * @return
     */
-  def asanaBaseUrl(): String = js.native
+  def asanaBaseUrl(): String
   /**
     * @return {Promise<Object>} Credentials returned from Oauth.
     * @param state
     */
-  def finishAuthorization(state: String): Unit = js.native
+  def finishAuthorization(state: String): Unit
   /**
     * @returns {String} Generate a new unique state parameter for a request.
     * @return
     */
-  def getStateParam(): String = js.native
+  def getStateParam(): String
   /**
     * @return {String} The URL to redirect to that will receive the
     * @return
     */
-  def receiverUrl(): String = js.native
+  def receiverUrl(): String
   /**
     * @param {String} authUrl The URL the user should be navigated to in order
     *     to authorize the app.
@@ -37,7 +36,7 @@ trait BaseBrowserFlow extends Flow {
     * @param state
     * @return
     */
-  def startAuthorization(authUrl: String, state: String): js.Any = js.native
+  def startAuthorization(authUrl: String, state: String): js.Any
 }
 
 @JSImport("asana", "auth.BaseBrowserFlow")

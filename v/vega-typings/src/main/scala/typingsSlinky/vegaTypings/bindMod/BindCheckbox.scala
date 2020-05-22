@@ -5,32 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BindCheckbox
   extends BaseBinding
      with Binding {
-  var input: checkbox = js.native
+  var input: checkbox
 }
 
 object BindCheckbox {
   @scala.inline
-  def apply(input: checkbox): BindCheckbox = {
+  def apply(
+    input: checkbox,
+    debounce: js.UndefOr[Double] = js.undefined,
+    element: Element = null,
+    name: String = null,
+    `type`: String = null
+  ): BindCheckbox = {
     val __obj = js.Dynamic.literal(input = input.asInstanceOf[js.Any])
+    if (!js.isUndefined(debounce)) __obj.updateDynamic("debounce")(debounce.get.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BindCheckbox]
   }
-  @scala.inline
-  implicit class BindCheckboxOps[Self <: BindCheckbox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInput(value: checkbox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,341 +1,125 @@
 package typingsSlinky.pacote.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pacote.anon.Directory
+import typingsSlinky.pacote.anon.Email
 import typingsSlinky.pacote.pacoteBooleans.`false`
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Manifest_
   extends CommonMetadata
      with // Non-standard properties may also appear when fullMetadata = true.
 /* key */ StringDictionary[js.Any] {
-  var _id: js.UndefOr[String] = js.native
-  var _nodeVersion: js.UndefOr[String] = js.native
-  var _npmUser: js.UndefOr[Person] = js.native
-  var _npmVersion: js.UndefOr[String] = js.native
-  var bin: js.UndefOr[Record[String, String]] = js.native
+  var _id: js.UndefOr[String] = js.undefined
+  var _nodeVersion: js.UndefOr[String] = js.undefined
+  var _npmUser: js.UndefOr[Person] = js.undefined
+  var _npmVersion: js.UndefOr[String] = js.undefined
+  var bin: js.UndefOr[Record[String, String]] = js.undefined
   // These properties usually only appear when fullMetadata = true.
-  var browser: js.UndefOr[String] = js.native
-  var bundledDependencies: js.UndefOr[`false` | js.Array[String]] = js.native
-  var config: js.UndefOr[Record[String, _]] = js.native
-  var cpu: js.UndefOr[js.Array[String]] = js.native
+  var browser: js.UndefOr[String] = js.undefined
+  var bundledDependencies: js.UndefOr[`false` | js.Array[String]] = js.undefined
+  var config: js.UndefOr[Record[String, _]] = js.undefined
+  var cpu: js.UndefOr[js.Array[String]] = js.undefined
   // These properties usually appear in all requests.
-  var dependencies: js.UndefOr[Record[String, String]] = js.native
-  var description: js.UndefOr[String] = js.native
-  var devDependencies: js.UndefOr[Record[String, String]] = js.native
-  var directories: js.UndefOr[Record[String, String]] = js.native
-  var dist: PackageDist = js.native
-  var engines: js.UndefOr[Record[String, String]] = js.native
-  var files: js.UndefOr[js.Array[String]] = js.native
-  var main: js.UndefOr[String] = js.native
-  var man: js.UndefOr[String | js.Array[String]] = js.native
-  var name: String = js.native
-  var optionalDependencies: js.UndefOr[Record[String, String]] = js.native
-  var os: js.UndefOr[js.Array[String]] = js.native
-  var peerDependencies: js.UndefOr[Record[String, String]] = js.native
-  var publishConfig: js.UndefOr[Record[String, _]] = js.native
-  var scripts: js.UndefOr[Record[String, String]] = js.native
-  var version: String = js.native
+  var dependencies: js.UndefOr[Record[String, String]] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var devDependencies: js.UndefOr[Record[String, String]] = js.undefined
+  var directories: js.UndefOr[Record[String, String]] = js.undefined
+  var dist: PackageDist
+  var engines: js.UndefOr[Record[String, String]] = js.undefined
+  var files: js.UndefOr[js.Array[String]] = js.undefined
+  var main: js.UndefOr[String] = js.undefined
+  var man: js.UndefOr[String | js.Array[String]] = js.undefined
+  var name: String
+  var optionalDependencies: js.UndefOr[Record[String, String]] = js.undefined
+  var os: js.UndefOr[js.Array[String]] = js.undefined
+  var peerDependencies: js.UndefOr[Record[String, String]] = js.undefined
+  var publishConfig: js.UndefOr[Record[String, _]] = js.undefined
+  var scripts: js.UndefOr[Record[String, String]] = js.undefined
+  var version: String
 }
 
 object Manifest_ {
   @scala.inline
-  def apply(dist: PackageDist, name: String, version: String): Manifest_ = {
+  def apply(
+    dist: PackageDist,
+    name: String,
+    version: String,
+    StringDictionary: // Non-standard properties may also appear when fullMetadata = true.
+  /* key */ StringDictionary[js.Any] = null,
+    _id: String = null,
+    _nodeVersion: String = null,
+    _npmUser: Person = null,
+    _npmVersion: String = null,
+    author: Person = null,
+    bin: Record[String, String] = null,
+    browser: String = null,
+    bugs: Email = null,
+    bundledDependencies: `false` | js.Array[String] = null,
+    config: Record[String, _] = null,
+    contributors: js.Array[Person] = null,
+    cpu: js.Array[String] = null,
+    dependencies: Record[String, String] = null,
+    description: String = null,
+    devDependencies: Record[String, String] = null,
+    directories: Record[String, String] = null,
+    engines: Record[String, String] = null,
+    files: js.Array[String] = null,
+    homepage: String = null,
+    keywords: js.Array[String] = null,
+    license: String = null,
+    main: String = null,
+    maintainers: js.Array[Person] = null,
+    man: String | js.Array[String] = null,
+    optionalDependencies: Record[String, String] = null,
+    os: js.Array[String] = null,
+    peerDependencies: Record[String, String] = null,
+    publishConfig: Record[String, _] = null,
+    readme: String = null,
+    readmeFilename: String = null,
+    repository: Directory = null,
+    scripts: Record[String, String] = null,
+    users: Record[String, Boolean] = null
+  ): Manifest_ = {
     val __obj = js.Dynamic.literal(dist = dist.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_nodeVersion != null) __obj.updateDynamic("_nodeVersion")(_nodeVersion.asInstanceOf[js.Any])
+    if (_npmUser != null) __obj.updateDynamic("_npmUser")(_npmUser.asInstanceOf[js.Any])
+    if (_npmVersion != null) __obj.updateDynamic("_npmVersion")(_npmVersion.asInstanceOf[js.Any])
+    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
+    if (bin != null) __obj.updateDynamic("bin")(bin.asInstanceOf[js.Any])
+    if (browser != null) __obj.updateDynamic("browser")(browser.asInstanceOf[js.Any])
+    if (bugs != null) __obj.updateDynamic("bugs")(bugs.asInstanceOf[js.Any])
+    if (bundledDependencies != null) __obj.updateDynamic("bundledDependencies")(bundledDependencies.asInstanceOf[js.Any])
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (contributors != null) __obj.updateDynamic("contributors")(contributors.asInstanceOf[js.Any])
+    if (cpu != null) __obj.updateDynamic("cpu")(cpu.asInstanceOf[js.Any])
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (devDependencies != null) __obj.updateDynamic("devDependencies")(devDependencies.asInstanceOf[js.Any])
+    if (directories != null) __obj.updateDynamic("directories")(directories.asInstanceOf[js.Any])
+    if (engines != null) __obj.updateDynamic("engines")(engines.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (homepage != null) __obj.updateDynamic("homepage")(homepage.asInstanceOf[js.Any])
+    if (keywords != null) __obj.updateDynamic("keywords")(keywords.asInstanceOf[js.Any])
+    if (license != null) __obj.updateDynamic("license")(license.asInstanceOf[js.Any])
+    if (main != null) __obj.updateDynamic("main")(main.asInstanceOf[js.Any])
+    if (maintainers != null) __obj.updateDynamic("maintainers")(maintainers.asInstanceOf[js.Any])
+    if (man != null) __obj.updateDynamic("man")(man.asInstanceOf[js.Any])
+    if (optionalDependencies != null) __obj.updateDynamic("optionalDependencies")(optionalDependencies.asInstanceOf[js.Any])
+    if (os != null) __obj.updateDynamic("os")(os.asInstanceOf[js.Any])
+    if (peerDependencies != null) __obj.updateDynamic("peerDependencies")(peerDependencies.asInstanceOf[js.Any])
+    if (publishConfig != null) __obj.updateDynamic("publishConfig")(publishConfig.asInstanceOf[js.Any])
+    if (readme != null) __obj.updateDynamic("readme")(readme.asInstanceOf[js.Any])
+    if (readmeFilename != null) __obj.updateDynamic("readmeFilename")(readmeFilename.asInstanceOf[js.Any])
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
+    if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])
+    if (users != null) __obj.updateDynamic("users")(users.asInstanceOf[js.Any])
     __obj.asInstanceOf[Manifest_]
   }
-  @scala.inline
-  implicit class Manifest_Ops[Self <: Manifest_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDist(value: PackageDist): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_nodeVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_nodeVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_nodeVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_nodeVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_npmUser(value: Person): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_npmUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_npmUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_npmUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_npmVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_npmVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_npmVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_npmVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBin(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrowser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundledDependencies(value: `false` | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundledDependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundledDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundledDependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfig(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpu(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevDependencies(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devDependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("devDependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectories(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngines(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMan(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("man")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("man")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptionalDependencies(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalDependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptionalDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalDependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeerDependencies(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerDependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeerDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("peerDependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublishConfig(value: Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScripts(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,131 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParamNamesOptions extends js.Object {
   /**
     * Name of the parameter passed with a chunked request that specifies the size in bytes of the associated chunk
     *
     * @default `'qqchunksize'`
     */
-  var chunkSize: js.UndefOr[String] = js.native
+  var chunkSize: js.UndefOr[String] = js.undefined
   /**
     * Name of the parameter passed with a chunked request that specifies the starting byte of the associated chunk
     *
     * @default `'qqpartbyteoffset'`
     */
-  var partByteOffset: js.UndefOr[String] = js.native
+  var partByteOffset: js.UndefOr[String] = js.undefined
   /**
     * Name of the parameter passed with a chunked request that specifies the index of the associated partition
     *
     * @default `'qqpartindex'`
     */
-  var partIndex: js.UndefOr[String] = js.native
+  var partIndex: js.UndefOr[String] = js.undefined
   /**
     * Sent with the first request of the resume with a value of `true`
     *
     * @default `'qqresume'`
     */
-  var resuming: js.UndefOr[String] = js.native
+  var resuming: js.UndefOr[String] = js.undefined
   /**
     * totalFileSize
     *
     * @default `'qqtotalfilesize'`
     */
-  var totalFileSize: js.UndefOr[String] = js.native
+  var totalFileSize: js.UndefOr[String] = js.undefined
   /**
     * Name of the parameter passed with a chunked request that specifies the total number of chunks associated with the `File` or `Blob`
     *
     * @default `'qqtotalparts'`
     */
-  var totalParts: js.UndefOr[String] = js.native
+  var totalParts: js.UndefOr[String] = js.undefined
 }
 
 object ParamNamesOptions {
   @scala.inline
-  def apply(): ParamNamesOptions = {
+  def apply(
+    chunkSize: String = null,
+    partByteOffset: String = null,
+    partIndex: String = null,
+    resuming: String = null,
+    totalFileSize: String = null,
+    totalParts: String = null
+  ): ParamNamesOptions = {
     val __obj = js.Dynamic.literal()
+    if (chunkSize != null) __obj.updateDynamic("chunkSize")(chunkSize.asInstanceOf[js.Any])
+    if (partByteOffset != null) __obj.updateDynamic("partByteOffset")(partByteOffset.asInstanceOf[js.Any])
+    if (partIndex != null) __obj.updateDynamic("partIndex")(partIndex.asInstanceOf[js.Any])
+    if (resuming != null) __obj.updateDynamic("resuming")(resuming.asInstanceOf[js.Any])
+    if (totalFileSize != null) __obj.updateDynamic("totalFileSize")(totalFileSize.asInstanceOf[js.Any])
+    if (totalParts != null) __obj.updateDynamic("totalParts")(totalParts.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamNamesOptions]
   }
-  @scala.inline
-  implicit class ParamNamesOptionsOps[Self <: ParamNamesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChunkSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartByteOffset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partByteOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartByteOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partByteOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResuming(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resuming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResuming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resuming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalFileSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalFileSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFileSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalParts(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalParts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

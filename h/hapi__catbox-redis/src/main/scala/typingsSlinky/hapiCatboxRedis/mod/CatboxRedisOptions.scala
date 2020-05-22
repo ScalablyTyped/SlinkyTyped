@@ -7,170 +7,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CatboxRedisOptions extends ClientOptions {
   /**
     * Raw client.
     */
-  var client: js.UndefOr[Redis] = js.native
+  var client: js.UndefOr[Redis] = js.undefined
   /**
     * the Redis database.
     */
-  var database: js.UndefOr[String] = js.native
+  var database: js.UndefOr[String] = js.undefined
   /**
     * the Redis server hostname.
     * Defaults to '127.0.0.1'.
     */
-  var host: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.undefined
   /**
     * the Redis authentication password when required.
     */
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.undefined
   /**
     * the Redis server port or unix domain socket path.
     * Defaults to 6379.
     */
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.undefined
   /**
     * the name of the sentinel master.
     * (Only needed when sentinels is specified)
     */
-  var sentinelName: js.UndefOr[String] = js.native
+  var sentinelName: js.UndefOr[String] = js.undefined
   /**
     * an array of redis sentinel addresses to connect to.
     */
-  var sentinels: js.UndefOr[js.Array[Host]] = js.native
+  var sentinels: js.UndefOr[js.Array[Host]] = js.undefined
   /**
     * the unix socket string to connect to (if socket is provided, host and port are ignored)
     */
-  var socket: js.UndefOr[String] = js.native
+  var socket: js.UndefOr[String] = js.undefined
   /**
     * the Redis server URL (if url is provided, host, port, and socket are ignored)
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object CatboxRedisOptions {
   @scala.inline
-  def apply(): CatboxRedisOptions = {
+  def apply(
+    client: Redis = null,
+    database: String = null,
+    host: String = null,
+    partition: String = null,
+    password: String = null,
+    port: js.UndefOr[Double] = js.undefined,
+    sentinelName: String = null,
+    sentinels: js.Array[Host] = null,
+    socket: String = null,
+    url: String = null
+  ): CatboxRedisOptions = {
     val __obj = js.Dynamic.literal()
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (partition != null) __obj.updateDynamic("partition")(partition.asInstanceOf[js.Any])
+    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
+    if (!js.isUndefined(port)) __obj.updateDynamic("port")(port.get.asInstanceOf[js.Any])
+    if (sentinelName != null) __obj.updateDynamic("sentinelName")(sentinelName.asInstanceOf[js.Any])
+    if (sentinels != null) __obj.updateDynamic("sentinels")(sentinels.asInstanceOf[js.Any])
+    if (socket != null) __obj.updateDynamic("socket")(socket.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatboxRedisOptions]
   }
-  @scala.inline
-  implicit class CatboxRedisOptionsOps[Self <: CatboxRedisOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClient(value: Redis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatabase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatabase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentinelName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentinelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentinelName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentinelName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentinels(value: js.Array[Host]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentinels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentinels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentinels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait GetPublicKeyResult extends js.Object {
 
 object GetPublicKeyResult {
   @scala.inline
-  def apply(): GetPublicKeyResult = {
+  def apply(ETag: String = null, PublicKey: PublicKey = null): GetPublicKeyResult = {
     val __obj = js.Dynamic.literal()
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (PublicKey != null) __obj.updateDynamic("PublicKey")(PublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPublicKeyResult]
   }
-  @scala.inline
-  implicit class GetPublicKeyResultOps[Self <: GetPublicKeyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withETag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: PublicKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

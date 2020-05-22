@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends FloatingLabel {
   def this(el: js.Any) = this()
   def this(el: js.Any, userOptions: js.Any) = this()
+  /* CompleteClass */
+  override def refresh(): Unit = js.native
 }
 

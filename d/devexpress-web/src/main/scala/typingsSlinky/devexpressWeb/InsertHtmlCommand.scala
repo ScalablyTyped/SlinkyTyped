@@ -7,13 +7,12 @@ import scala.scalajs.js.annotation._
 /**
   * A command to add an HTML formatted content in place of a selected range.
   */
-@js.native
 trait InsertHtmlCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the InsertHtmlCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param html A string that specifies the inserted HTML code.
     */
-  def execute(html: String): Boolean = js.native
+  def execute(html: String): Boolean
 }
 
 object InsertHtmlCommand {
@@ -22,19 +21,5 @@ object InsertHtmlCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[InsertHtmlCommand]
   }
-  @scala.inline
-  implicit class InsertHtmlCommandOps[Self <: InsertHtmlCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

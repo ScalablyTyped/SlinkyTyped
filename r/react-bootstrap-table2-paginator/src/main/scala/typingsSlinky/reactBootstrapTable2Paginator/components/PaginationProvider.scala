@@ -3,7 +3,7 @@ package typingsSlinky.reactBootstrapTable2Paginator.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable2Paginator.anon.Children
-import typingsSlinky.reactBootstrapTableNext.mod.PaginationOptions
+import typingsSlinky.reactBootstrapTable2Paginator.mod.PaginationCtxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object PaginationProvider {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
-    def pagination(value: PaginationOptions): this.type = set("pagination", value.asInstanceOf[js.Any])
+    def pagination(value: PaginationCtxOptions): this.type = set("pagination", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Children): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -14,29 +14,10 @@ trait CreateHITWithHITTypeResponse extends js.Object {
 
 object CreateHITWithHITTypeResponse {
   @scala.inline
-  def apply(): CreateHITWithHITTypeResponse = {
+  def apply(HIT: HIT = null): CreateHITWithHITTypeResponse = {
     val __obj = js.Dynamic.literal()
+    if (HIT != null) __obj.updateDynamic("HIT")(HIT.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHITWithHITTypeResponse]
   }
-  @scala.inline
-  implicit class CreateHITWithHITTypeResponseOps[Self <: CreateHITWithHITTypeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHIT(value: HIT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HIT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHIT: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HIT")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

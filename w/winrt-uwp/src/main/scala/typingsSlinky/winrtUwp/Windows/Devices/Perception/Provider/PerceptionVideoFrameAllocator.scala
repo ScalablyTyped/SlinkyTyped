@@ -6,21 +6,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An allocator that can create PerceptionFrames directly which can be written into or copied from Windows::Media::VideoFrame into a PerceptionFrame. */
-@js.native
 trait PerceptionVideoFrameAllocator extends js.Object {
   /**
     * Creates an empty PerceptionFrame with the properties specified when creating the PerceptionVideoFrameAllocator.
     * @return The empty frame with the properties specified when creating the PerceptionVideoFrameAllocator.
     */
-  def allocateFrame(): PerceptionFrame = js.native
+  def allocateFrame(): PerceptionFrame
   /** Releases system resources that are exposed by a Windows Runtime object. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Creates a deep copy of the video FrameProvider with the bytes already filled in with the resulting PerceptionFrame.
     * @param frame The input frame from which to copy the pixel data.
     * @return The resulting filled PerceptionFrame.
     */
-  def copyFromVideoFrame(frame: VideoFrame): PerceptionFrame = js.native
+  def copyFromVideoFrame(frame: VideoFrame): PerceptionFrame
 }
 
 object PerceptionVideoFrameAllocator {
@@ -33,31 +32,5 @@ object PerceptionVideoFrameAllocator {
     val __obj = js.Dynamic.literal(allocateFrame = js.Any.fromFunction0(allocateFrame), close = js.Any.fromFunction0(close), copyFromVideoFrame = js.Any.fromFunction1(copyFromVideoFrame))
     __obj.asInstanceOf[PerceptionVideoFrameAllocator]
   }
-  @scala.inline
-  implicit class PerceptionVideoFrameAllocatorOps[Self <: PerceptionVideoFrameAllocator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocateFrame(value: () => PerceptionFrame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateFrame")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCopyFromVideoFrame(value: VideoFrame => PerceptionFrame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFromVideoFrame")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,63 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AsObject extends js.Object {
-  var event: js.UndefOr[typingsSlinky.libraCore.eventsPbMod.Event.AsObject] = js.native
-  var eventIndex: String = js.native
-  var proof: js.UndefOr[typingsSlinky.libraCore.proofPbMod.EventProof.AsObject] = js.native
-  var transactionVersion: String = js.native
+  var event: js.UndefOr[typingsSlinky.libraCore.eventsPbMod.Event.AsObject] = js.undefined
+  var eventIndex: String
+  var proof: js.UndefOr[typingsSlinky.libraCore.proofPbMod.EventProof.AsObject] = js.undefined
+  var transactionVersion: String
 }
 
 object AsObject {
   @scala.inline
-  def apply(eventIndex: String, transactionVersion: String): AsObject = {
+  def apply(
+    eventIndex: String,
+    transactionVersion: String,
+    event: typingsSlinky.libraCore.eventsPbMod.Event.AsObject = null,
+    proof: typingsSlinky.libraCore.proofPbMod.EventProof.AsObject = null
+  ): AsObject = {
     val __obj = js.Dynamic.literal(eventIndex = eventIndex.asInstanceOf[js.Any], transactionVersion = transactionVersion.asInstanceOf[js.Any])
+    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
+    if (proof != null) __obj.updateDynamic("proof")(proof.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsObject]
   }
-  @scala.inline
-  implicit class AsObjectOps[Self <: AsObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventIndex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransactionVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvent(value: typingsSlinky.libraCore.eventsPbMod.Event.AsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProof(value: typingsSlinky.libraCore.proofPbMod.EventProof.AsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proof")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProof: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proof")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

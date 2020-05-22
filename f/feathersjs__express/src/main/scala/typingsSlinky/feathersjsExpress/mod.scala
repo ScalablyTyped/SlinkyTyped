@@ -23,6 +23,7 @@ import typingsSlinky.feathersjsExpress.anon.PartialServiceMethodsanyS
 import typingsSlinky.feathersjsExpress.anon.Typeofexpress
 import typingsSlinky.feathersjsExpress.anon.Typeofself
 import typingsSlinky.feathersjsExpress.feathersjsExpressStrings.use
+import typingsSlinky.qs.mod.ParsedQs
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
@@ -40,11 +41,11 @@ object mod extends js.Object {
     @JSName("use")
     var use_Original: FeathersApplicationRequestHandler[T] = js.native
     def use(
-      handlers: ((RequestHandler[ParamsDictionary, _, _, Query]) | (RequestHandlerParams[ParamsDictionary, _, _, Query]))*
+      handlers: ((RequestHandler[ParamsDictionary, _, _, ParsedQs]) | (RequestHandlerParams[ParamsDictionary, _, _, ParsedQs]))*
     ): T = js.native
     def use(
       path: PathParams,
-      handlers: ((RequestHandler[ParamsDictionary, _, _, Query]) | (RequestHandlerParams[ParamsDictionary, _, _, Query]) | PartialServiceMethodsanyS | Application[_])*
+      handlers: ((RequestHandler[ParamsDictionary, _, _, ParsedQs]) | (RequestHandlerParams[ParamsDictionary, _, _, ParsedQs]) | PartialServiceMethodsanyS | Application[_])*
     ): T = js.native
   }
   
@@ -98,10 +99,10 @@ object mod extends js.Object {
   
   // TypeScript methods cannot be overloaded with a different signature. Derive two application types without the use methods.
   type ExpressAndFeathersApplicationWithoutUse[T] = (Omit[Application_, use]) with (Omit[typingsSlinky.feathersjsFeathers.mod.Application[T], use])
-  type FeathersApplicationRequestHandler[T] = IRouterHandler[T] with FeathersRouterMatcher[T] with (js.Function1[/* repeated */ RequestHandlerParams[ParamsDictionary, _, _, Query], T])
+  type FeathersApplicationRequestHandler[T] = IRouterHandler[T] with FeathersRouterMatcher[T] with (js.Function1[/* repeated */ RequestHandlerParams[ParamsDictionary, _, _, ParsedQs], T])
   type FeathersRouterMatcher[T] = js.Function2[
     /* path */ PathParams, 
-    /* repeated */ (RequestHandler[ParamsDictionary, js.Any, js.Any, Query]) | (RequestHandlerParams[ParamsDictionary, js.Any, js.Any, Query]) | PartialServiceMethodsanyS | Application[js.Any], 
+    /* repeated */ (RequestHandler[ParamsDictionary, js.Any, js.Any, ParsedQs]) | (RequestHandlerParams[ParamsDictionary, js.Any, js.Any, ParsedQs]) | PartialServiceMethodsanyS | Application[js.Any], 
     T
   ]
   type FeathersServiceOptions = js.Any

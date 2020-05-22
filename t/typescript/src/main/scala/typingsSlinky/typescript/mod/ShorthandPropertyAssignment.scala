@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation._
 trait ShorthandPropertyAssignment
   extends ObjectLiteralElement
      with JSDocContainer
-     with BindingOrAssignmentElement
-     with HasJSDoc
      with ObjectLiteralElementLike
-     with VariableLikeDeclaration {
+     with VariableLikeDeclaration
+     with _BindingOrAssignmentElement
+     with _HasJSDoc {
   var equalsToken: js.UndefOr[Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsToken]] = js.native
   var exclamationToken: js.UndefOr[ExclamationToken] = js.native
   @JSName("kind")

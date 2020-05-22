@@ -49,6 +49,37 @@ object EventType extends js.Object {
   sealed trait chartDeleted extends EventType
   
   /**
+    * CommentAdded represents the type of event that is registered on commentCollection, and occurs when comments are added.
+    *
+    */
+  @js.native
+  sealed trait commentAdded extends EventType
+  
+  /**
+    * CommentChanged represents the type of event that is registered on commentCollection, and occurs when comments are changed.
+    *
+    */
+  @js.native
+  sealed trait commentChanged extends EventType
+  
+  /**
+    * CommentDeleted represents the type of event that is registered on commentCollection, and occurs when comments are deleted.
+    *
+    */
+  @js.native
+  sealed trait commentDeleted extends EventType
+  
+  /**
+    * RefreshRequestCompleted represents the type of event registered on LinkedDataType, and occurs when a request to refresh a data source is completed.
+    *
+    */
+  @js.native
+  sealed trait linkedDataTypeRefreshRequestCompleted extends EventType
+  
+  @js.native
+  sealed trait recordingStateChangedEvent extends EventType
+  
+  /**
     * RibbonCommandExecuted represents the type of event registered on ribbon, and occurs when user click on ribbon
     *
     */

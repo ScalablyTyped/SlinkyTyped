@@ -18,13 +18,12 @@ import scala.scalajs.js.annotation._
 /**
   * Shared options passed when initializing a new instance of CleanCSS that returns either a promise or output
   */
-@js.native
 trait OptionsBase extends js.Object {
   /**
     * Controls compatibility mode used; defaults to ie10+ using `'*'`.
     *  Compatibility hash exposes the following properties: `colors`, `properties`, `selectors`, and `units`
     */
-  var compatibility: js.UndefOr[Asterisk | ie9 | ie8 | ie7 | CompatibilityOptions] = js.native
+  var compatibility: js.UndefOr[Asterisk | ie9 | ie8 | ie7 | CompatibilityOptions] = js.undefined
   /**
     * Controls a function for handling remote requests; Defaults to the build in `loadRemoteResource` function
     */
@@ -36,12 +35,12 @@ trait OptionsBase extends js.Object {
       /* done */ js.Function2[/* message */ String | Double, /* body */ String, Unit], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Controls output CSS formatting; defaults to `false`.
     *  Format hash exposes the following properties: `breaks`, `breakWith`, `indentBy`, `indentWith`, `spaces`, and `wrapAt`.
     */
-  var format: js.UndefOr[beautify | `keep-breaks` | FormatOptions | `false`] = js.native
+  var format: js.UndefOr[beautify | `keep-breaks` | FormatOptions | `false`] = js.undefined
   /**
     * inline option whitelists which @import rules will be processed.  Defaults to `'local'`
     * Accepts the following values:
@@ -52,186 +51,67 @@ trait OptionsBase extends js.Object {
     *  '[uri]': enables remote inlining from the specified uri;
     *  '![url]': disables remote inlining from the specified uri;
     */
-  var `inline`: js.UndefOr[js.Array[String] | `false`] = js.native
+  var `inline`: js.UndefOr[js.Array[String] | `false`] = js.undefined
   /**
     * Controls extra options for inlining remote @import rules
     */
-  var inlineRequest: js.UndefOr[RequestOptions | typingsSlinky.node.httpsMod.RequestOptions] = js.native
+  var inlineRequest: js.UndefOr[RequestOptions | typingsSlinky.node.httpsMod.RequestOptions] = js.undefined
   /**
     * Controls number of milliseconds after which inlining a remote @import fails; defaults to `5000`;
     */
-  var inlineTimeout: js.UndefOr[Double] = js.native
+  var inlineTimeout: js.UndefOr[Double] = js.undefined
   /**
     * Controls optimization level used; defaults to `1`.
     * Level hash exposes `1`, and `2`.
     */
-  var level: js.UndefOr[`0` | `1` | `2` | OptimizationsOptions] = js.native
+  var level: js.UndefOr[`0` | `1` | `2` | OptimizationsOptions] = js.undefined
   /**
     * Controls URL rebasing; defaults to `true`;
     */
-  var rebase: js.UndefOr[Boolean] = js.native
+  var rebase: js.UndefOr[Boolean] = js.undefined
   /**
     * controls a directory to which all URLs are rebased, most likely the directory under which the output file
     * will live; defaults to the current directory;
     */
-  var rebaseTo: js.UndefOr[String] = js.native
+  var rebaseTo: js.UndefOr[String] = js.undefined
   /**
     *  Controls whether an output source map is built; defaults to `false`
     */
-  var sourceMap: js.UndefOr[Boolean] = js.native
+  var sourceMap: js.UndefOr[Boolean] = js.undefined
   /**
     *  Controls embedding sources inside a source map's `sourcesContent` field; defaults to `false`
     */
-  var sourceMapInlineSources: js.UndefOr[Boolean] = js.native
+  var sourceMapInlineSources: js.UndefOr[Boolean] = js.undefined
 }
 
 object OptionsBase {
   @scala.inline
-  def apply(): OptionsBase = {
+  def apply(
+    compatibility: Asterisk | ie9 | ie8 | ie7 | CompatibilityOptions = null,
+    fetch: (/* uri */ String, /* inlineRequest */ RequestOptions | typingsSlinky.node.httpsMod.RequestOptions, /* inlineTimeout */ Double, /* done */ js.Function2[/* message */ String | Double, /* body */ String, Unit]) => Unit = null,
+    format: beautify | `keep-breaks` | FormatOptions | `false` = null,
+    `inline`: js.Array[String] | `false` = null,
+    inlineRequest: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions = null,
+    inlineTimeout: js.UndefOr[Double] = js.undefined,
+    level: `0` | `1` | `2` | OptimizationsOptions = null,
+    rebase: js.UndefOr[Boolean] = js.undefined,
+    rebaseTo: String = null,
+    sourceMap: js.UndefOr[Boolean] = js.undefined,
+    sourceMapInlineSources: js.UndefOr[Boolean] = js.undefined
+  ): OptionsBase = {
     val __obj = js.Dynamic.literal()
+    if (compatibility != null) __obj.updateDynamic("compatibility")(compatibility.asInstanceOf[js.Any])
+    if (fetch != null) __obj.updateDynamic("fetch")(js.Any.fromFunction4(fetch))
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    if (inlineRequest != null) __obj.updateDynamic("inlineRequest")(inlineRequest.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineTimeout)) __obj.updateDynamic("inlineTimeout")(inlineTimeout.get.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(rebase)) __obj.updateDynamic("rebase")(rebase.get.asInstanceOf[js.Any])
+    if (rebaseTo != null) __obj.updateDynamic("rebaseTo")(rebaseTo.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceMap)) __obj.updateDynamic("sourceMap")(sourceMap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sourceMapInlineSources)) __obj.updateDynamic("sourceMapInlineSources")(sourceMapInlineSources.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsBase]
   }
-  @scala.inline
-  implicit class OptionsBaseOps[Self <: OptionsBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompatibility(value: Asterisk | ie9 | ie8 | ie7 | CompatibilityOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFetch(
-      value: (/* uri */ String, /* inlineRequest */ RequestOptions | typingsSlinky.node.httpsMod.RequestOptions, /* inlineTimeout */ Double, /* done */ js.Function2[/* message */ String | Double, /* body */ String, Unit]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutFetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: beautify | `keep-breaks` | FormatOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: js.Array[String] | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineRequest(value: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: `0` | `1` | `2` | OptimizationsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRebase(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRebase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRebaseTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebaseTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRebaseTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebaseTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceMapInlineSources(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapInlineSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceMapInlineSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapInlineSources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

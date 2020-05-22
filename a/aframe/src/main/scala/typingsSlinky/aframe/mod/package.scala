@@ -14,6 +14,7 @@ package object mod {
     */ typingsSlinky.aframe.aframeStrings.MultiPropertySchema with org.scalablytyped.runtime.TopLevel[js.Any]
   type NodeDefinition[T /* <: js.Object */] = T with typingsSlinky.aframe.anon.PartialANode
   type ObjectMap[T] = org.scalablytyped.runtime.StringDictionary[T]
+  type Schema_[T /* <: js.Object */] = typingsSlinky.aframe.mod.SinglePropertySchema[T] | typingsSlinky.aframe.mod.MultiPropertySchema[T]
   type ShaderDefinition[T /* <: js.Object */] = T with typingsSlinky.aframe.anon.PartialShader
   type SystemDefinition[T /* <: js.Object */] = T with typingsSlinky.aframe.anon.PartialSystemany
 }

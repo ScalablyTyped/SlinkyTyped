@@ -5,7 +5,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.EmptyState
-import typingsSlinky.baseui.anon.Item
+import typingsSlinky.baseui.anon.EventItem
 import typingsSlinky.baseui.baseuiStrings.click
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -45,7 +45,7 @@ object StatefulMenu {
     @scala.inline
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemSelect(value: /* args */ Item => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
+    def onItemSelect(value: /* args */ EventItem => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: EmptyState): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

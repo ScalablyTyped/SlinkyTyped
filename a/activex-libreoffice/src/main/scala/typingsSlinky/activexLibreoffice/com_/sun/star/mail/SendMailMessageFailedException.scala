@@ -13,14 +13,13 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.mail.XMailService
   * @since OOo 2.0
   */
-@js.native
 trait SendMailMessageFailedException extends Exception {
   /** The addresses which are invalid because they do not conform to [RFC   822]{@link url="http://www.ietf.org/rfc/rfc822.txt"} . */
-  var InvalidAddresses: SafeArray[String] = js.native
+  var InvalidAddresses: SafeArray[String]
   /** The addresses to which the mail message was sent successfully. */
-  var ValidSentAddresses: SafeArray[String] = js.native
+  var ValidSentAddresses: SafeArray[String]
   /** The addresses which are valid but to which the message was not sent. */
-  var ValidUnsentAddresses: SafeArray[String] = js.native
+  var ValidUnsentAddresses: SafeArray[String]
 }
 
 object SendMailMessageFailedException {
@@ -35,31 +34,5 @@ object SendMailMessageFailedException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], InvalidAddresses = InvalidAddresses.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], ValidSentAddresses = ValidSentAddresses.asInstanceOf[js.Any], ValidUnsentAddresses = ValidUnsentAddresses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMailMessageFailedException]
   }
-  @scala.inline
-  implicit class SendMailMessageFailedExceptionOps[Self <: SendMailMessageFailedException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidAddresses(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValidSentAddresses(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidSentAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValidUnsentAddresses(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidUnsentAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

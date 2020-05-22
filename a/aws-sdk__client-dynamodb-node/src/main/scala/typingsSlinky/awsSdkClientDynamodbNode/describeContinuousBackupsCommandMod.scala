@@ -26,9 +26,16 @@ object describeContinuousBackupsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribeContinuousBackupsInput) = this()
+    /* CompleteClass */
+    override val input: DescribeContinuousBackupsInput = js.native
     val middlewareStack: MiddlewareStack[DescribeContinuousBackupsInput, DescribeContinuousBackupsOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[DescribeContinuousBackupsInput, DescribeContinuousBackupsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DescribeContinuousBackupsInput, DescribeContinuousBackupsOutput] = js.native
   }

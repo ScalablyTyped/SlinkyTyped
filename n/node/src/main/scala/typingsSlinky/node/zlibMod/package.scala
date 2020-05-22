@@ -10,4 +10,5 @@ package object zlibMod {
     /* result */ typingsSlinky.node.Buffer, 
     scala.Unit
   ]
+  type InputType = java.lang.String | js.typedarray.ArrayBuffer | typingsSlinky.node.NodeJS.ArrayBufferView
 }

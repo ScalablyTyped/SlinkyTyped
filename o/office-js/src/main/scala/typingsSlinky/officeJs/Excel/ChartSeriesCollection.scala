@@ -23,7 +23,7 @@ trait ChartSeriesCollection extends ClientObject {
   var context_ChartSeriesCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of series in the collection. Read-only.
+    * Returns the number of series in the collection.
     *
     * [Api set: ExcelApi 1.1]
     */

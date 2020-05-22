@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Explains a change for a menu item */
-@js.native
 trait MenuSingleChange extends js.Object {
   /** value of change */
-  var Change: js.Any = js.native
+  var Change: js.Any
   /** ID identifying the type of change in the any type change */
-  var ChangeID: Double = js.native
+  var ChangeID: Double
   /** unique ID of this menu item */
-  var ID: Double = js.native
+  var ID: Double
 }
 
 object MenuSingleChange {
@@ -21,31 +20,5 @@ object MenuSingleChange {
     val __obj = js.Dynamic.literal(Change = Change.asInstanceOf[js.Any], ChangeID = ChangeID.asInstanceOf[js.Any], ID = ID.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuSingleChange]
   }
-  @scala.inline
-  implicit class MenuSingleChangeOps[Self <: MenuSingleChange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChange(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Change")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangeID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withID(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateTableCellPropertiesRequest extends js.Object {
-  var fields: js.UndefOr[String] = js.native
-  var objectId: js.UndefOr[String] = js.native
-  var tableCellProperties: js.UndefOr[TableCellProperties] = js.native
-  var tableRange: js.UndefOr[TableRange] = js.native
+  var fields: js.UndefOr[String] = js.undefined
+  var objectId: js.UndefOr[String] = js.undefined
+  var tableCellProperties: js.UndefOr[TableCellProperties] = js.undefined
+  var tableRange: js.UndefOr[TableRange] = js.undefined
 }
 
 object UpdateTableCellPropertiesRequest {
   @scala.inline
-  def apply(): UpdateTableCellPropertiesRequest = {
+  def apply(
+    fields: String = null,
+    objectId: String = null,
+    tableCellProperties: TableCellProperties = null,
+    tableRange: TableRange = null
+  ): UpdateTableCellPropertiesRequest = {
     val __obj = js.Dynamic.literal()
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (tableCellProperties != null) __obj.updateDynamic("tableCellProperties")(tableCellProperties.asInstanceOf[js.Any])
+    if (tableRange != null) __obj.updateDynamic("tableRange")(tableRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTableCellPropertiesRequest]
   }
-  @scala.inline
-  implicit class UpdateTableCellPropertiesRequestOps[Self <: UpdateTableCellPropertiesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCellProperties(value: TableCellProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCellProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableRange(value: TableRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

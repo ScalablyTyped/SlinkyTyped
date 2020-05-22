@@ -39,89 +39,22 @@ trait PlanRule extends js.Object {
 
 object PlanRule {
   @scala.inline
-  def apply(ruleName: String, targetVaultName: String): PlanRule = {
+  def apply(
+    ruleName: String,
+    targetVaultName: String,
+    completionWindow: js.UndefOr[Double] = js.undefined,
+    lifecycle: PlanRuleLifecycle = null,
+    recoveryPointTags: StringDictionary[js.Any] = null,
+    schedule: String = null,
+    startWindow: js.UndefOr[Double] = js.undefined
+  ): PlanRule = {
     val __obj = js.Dynamic.literal(ruleName = ruleName.asInstanceOf[js.Any], targetVaultName = targetVaultName.asInstanceOf[js.Any])
+    if (!js.isUndefined(completionWindow)) __obj.updateDynamic("completionWindow")(completionWindow.get.asInstanceOf[js.Any])
+    if (lifecycle != null) __obj.updateDynamic("lifecycle")(lifecycle.asInstanceOf[js.Any])
+    if (recoveryPointTags != null) __obj.updateDynamic("recoveryPointTags")(recoveryPointTags.asInstanceOf[js.Any])
+    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
+    if (!js.isUndefined(startWindow)) __obj.updateDynamic("startWindow")(startWindow.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlanRule]
   }
-  @scala.inline
-  implicit class PlanRuleOps[Self <: PlanRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRuleName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetVaultName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetVaultName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompletionWindow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionWindow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycle(value: PlanRuleLifecycle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecoveryPointTags(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recoveryPointTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecoveryPointTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recoveryPointTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartWindow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startWindow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

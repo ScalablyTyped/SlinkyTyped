@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `31`[T] extends js.Object {
-  def failure(error: js.Error): js.Any = js.native
-  def success(topic: KiiTopic, message: T): js.Any = js.native
+  def failure(error: js.Error): js.Any
+  def success(topic: KiiTopic, message: T): js.Any
 }
 
 object `31` {
@@ -17,25 +16,5 @@ object `31` {
     val __obj = js.Dynamic.literal(failure = js.Any.fromFunction1(failure), success = js.Any.fromFunction2(success))
     __obj.asInstanceOf[`31`[T]]
   }
-  @scala.inline
-  implicit class `31Ops`[Self[t] <: `31`[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withFailure(value: js.Error => js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failure")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: (KiiTopic, T) => js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PutImageRecipePolicyRequest extends js.Object {
   /**
-    *  The Amazon Resource Name (ARN) of the image recipe that this policy should be applied to. 
+    * The Amazon Resource Name (ARN) of the image recipe that this policy should be applied to. 
     */
   var imageRecipeArn: ImageRecipeArn = js.native
   /**
-    *  The policy to apply. 
+    * The policy to apply. 
     */
   var policy: ResourcePolicyDocument = js.native
 }
@@ -22,25 +22,5 @@ object PutImageRecipePolicyRequest {
     val __obj = js.Dynamic.literal(imageRecipeArn = imageRecipeArn.asInstanceOf[js.Any], policy = policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutImageRecipePolicyRequest]
   }
-  @scala.inline
-  implicit class PutImageRecipePolicyRequestOps[Self <: PutImageRecipePolicyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageRecipeArn(value: ImageRecipeArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRecipeArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: ResourcePolicyDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

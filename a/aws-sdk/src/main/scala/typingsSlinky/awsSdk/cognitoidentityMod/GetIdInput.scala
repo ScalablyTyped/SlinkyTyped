@@ -23,47 +23,11 @@ trait GetIdInput extends CognitoIdentityCredentialsInputs {
 
 object GetIdInput {
   @scala.inline
-  def apply(IdentityPoolId: IdentityPoolId): GetIdInput = {
+  def apply(IdentityPoolId: IdentityPoolId, AccountId: AccountId = null, Logins: LoginsMap = null): GetIdInput = {
     val __obj = js.Dynamic.literal(IdentityPoolId = IdentityPoolId.asInstanceOf[js.Any])
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (Logins != null) __obj.updateDynamic("Logins")(Logins.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIdInput]
   }
-  @scala.inline
-  implicit class GetIdInputOps[Self <: GetIdInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityPoolId(value: IdentityPoolId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountId(value: AccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogins(value: LoginsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Logins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Logins")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

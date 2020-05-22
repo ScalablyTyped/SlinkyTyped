@@ -1,6 +1,7 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.materializeCss.M.SliderOptions
 import typingsSlinky.materializeCss.MElements
 import typingsSlinky.materializeCss.anon.PartialSliderOptions
 import scala.scalajs.js
@@ -10,7 +11,48 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "Slider")
 @js.native
 class Slider ()
-  extends typingsSlinky.materializeCss.M.Slider
+  extends typingsSlinky.materializeCss.M.Slider {
+  /**
+    * Index of current slide
+    */
+  /* CompleteClass */
+  override var activeIndex: Double = js.native
+  /**
+    * The DOM element the plugin was initialized with
+    */
+  /* CompleteClass */
+  override var el: Element = js.native
+  /**
+    * The options the instance was initialized with
+    */
+  /* CompleteClass */
+  override var options: SliderOptions = js.native
+  /**
+    * Destroy plugin instance and teardown
+    */
+  /* CompleteClass */
+  override def destroy(): Unit = js.native
+  /**
+    * Move to next slider
+    */
+  /* CompleteClass */
+  override def next(): Unit = js.native
+  /**
+    * Pause slider autoslide
+    */
+  /* CompleteClass */
+  override def pause(): Unit = js.native
+  /**
+    * Move to prev slider
+    */
+  /* CompleteClass */
+  override def prev(): Unit = js.native
+  /**
+    * Start slider autoslide
+    */
+  /* CompleteClass */
+  override def start(): Unit = js.native
+}
 
 /* static members */
 @JSImport("materialize-css", "Slider")

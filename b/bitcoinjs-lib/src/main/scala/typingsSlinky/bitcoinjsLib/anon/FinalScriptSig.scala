@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FinalScriptSig extends js.Object {
-  var finalScriptSig: js.UndefOr[Buffer] = js.native
-  var finalScriptWitness: js.UndefOr[Buffer] = js.native
+  var finalScriptSig: js.UndefOr[Buffer] = js.undefined
+  var finalScriptWitness: js.UndefOr[Buffer] = js.undefined
 }
 
 object FinalScriptSig {
   @scala.inline
-  def apply(): FinalScriptSig = {
+  def apply(finalScriptSig: Buffer = null, finalScriptWitness: Buffer = null): FinalScriptSig = {
     val __obj = js.Dynamic.literal()
+    if (finalScriptSig != null) __obj.updateDynamic("finalScriptSig")(finalScriptSig.asInstanceOf[js.Any])
+    if (finalScriptWitness != null) __obj.updateDynamic("finalScriptWitness")(finalScriptWitness.asInstanceOf[js.Any])
     __obj.asInstanceOf[FinalScriptSig]
   }
-  @scala.inline
-  implicit class FinalScriptSigOps[Self <: FinalScriptSig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinalScriptSig(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptSig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalScriptSig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptSig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalScriptWitness(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptWitness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalScriptWitness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalScriptWitness")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,16 +6,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the filter used to determine which devices to show in a casting device picker UI. The filter parameters are OR-ed together to build the resulting filter. In other words, if SupportsAudio and SupportsVideo are both true, the picker will display Audio-only devices, video-only devices, and audio/video devices. */
-@js.native
 trait CastingDevicePickerFilter extends js.Object {
   /** Gets the casting sources supported. */
-  var supportedCastingSources: IVector[CastingSource] = js.native
+  var supportedCastingSources: IVector[CastingSource]
   /** Gets and sets whether the devices in the device picker should support audio playback. */
-  var supportsAudio: Boolean = js.native
+  var supportsAudio: Boolean
   /** Gets and sets whether the devices in the device picker should support rending still images. */
-  var supportsPictures: Boolean = js.native
+  var supportsPictures: Boolean
   /** Gets and sets whether the devices in the device picker should support video playback. */
-  var supportsVideo: Boolean = js.native
+  var supportsVideo: Boolean
 }
 
 object CastingDevicePickerFilter {
@@ -29,37 +28,5 @@ object CastingDevicePickerFilter {
     val __obj = js.Dynamic.literal(supportedCastingSources = supportedCastingSources.asInstanceOf[js.Any], supportsAudio = supportsAudio.asInstanceOf[js.Any], supportsPictures = supportsPictures.asInstanceOf[js.Any], supportsVideo = supportsVideo.asInstanceOf[js.Any])
     __obj.asInstanceOf[CastingDevicePickerFilter]
   }
-  @scala.inline
-  implicit class CastingDevicePickerFilterOps[Self <: CastingDevicePickerFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportedCastingSources(value: IVector[CastingSource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCastingSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsAudio(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsAudio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsPictures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsPictures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsVideo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsVideo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

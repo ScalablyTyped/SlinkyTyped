@@ -19,6 +19,10 @@ object utilMod extends js.Object {
   class SocksClientError protected () extends Error {
     def this(message: String, options: SocksClientChainOptions) = this()
     def this(message: String, options: SocksClientOptions) = this()
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var options: SocksClientOptions | SocksClientChainOptions = js.native
   }
   

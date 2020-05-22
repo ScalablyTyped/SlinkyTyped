@@ -216,6 +216,12 @@ trait IModelServerClient extends js.Object {
     callback: ICallback[ISendDeltasResult],
     errorCallback: IErrorCallback
   ): Unit = js.native
+  def setProjectMembers(
+    projectId: String,
+    memberOpenids: js.Array[String],
+    callback: IVoidCallback,
+    errorCallback: IErrorCallback
+  ): Unit = js.native
   /**
     * Start async deploy flow, creates new app job and returns it
     */

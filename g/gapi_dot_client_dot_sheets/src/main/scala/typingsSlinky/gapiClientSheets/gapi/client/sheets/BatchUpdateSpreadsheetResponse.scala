@@ -4,71 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BatchUpdateSpreadsheetResponse extends js.Object {
   /**
     * The reply of the updates.  This maps 1:1 with the updates, although
     * replies to some requests may be empty.
     */
-  var replies: js.UndefOr[js.Array[Response]] = js.native
+  var replies: js.UndefOr[js.Array[Response]] = js.undefined
   /** The spreadsheet the updates were applied to. */
-  var spreadsheetId: js.UndefOr[String] = js.native
+  var spreadsheetId: js.UndefOr[String] = js.undefined
   /**
     * The spreadsheet after updates were applied. This is only set if
     * [BatchUpdateSpreadsheetRequest.include_spreadsheet_in_response] is `true`.
     */
-  var updatedSpreadsheet: js.UndefOr[Spreadsheet] = js.native
+  var updatedSpreadsheet: js.UndefOr[Spreadsheet] = js.undefined
 }
 
 object BatchUpdateSpreadsheetResponse {
   @scala.inline
-  def apply(): BatchUpdateSpreadsheetResponse = {
+  def apply(
+    replies: js.Array[Response] = null,
+    spreadsheetId: String = null,
+    updatedSpreadsheet: Spreadsheet = null
+  ): BatchUpdateSpreadsheetResponse = {
     val __obj = js.Dynamic.literal()
+    if (replies != null) __obj.updateDynamic("replies")(replies.asInstanceOf[js.Any])
+    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
+    if (updatedSpreadsheet != null) __obj.updateDynamic("updatedSpreadsheet")(updatedSpreadsheet.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchUpdateSpreadsheetResponse]
   }
-  @scala.inline
-  implicit class BatchUpdateSpreadsheetResponseOps[Self <: BatchUpdateSpreadsheetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplies(value: js.Array[Response]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpreadsheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpreadsheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedSpreadsheet(value: Spreadsheet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedSpreadsheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedSpreadsheet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedSpreadsheet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

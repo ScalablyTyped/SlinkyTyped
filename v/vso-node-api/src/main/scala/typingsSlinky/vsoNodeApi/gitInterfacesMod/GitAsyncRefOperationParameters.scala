@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GitAsyncRefOperationParameters extends js.Object {
   /**
     * Proposed target branch name for the cherry pick or revert operation.
     */
-  var generatedRefName: String = js.native
+  var generatedRefName: String
   /**
     * The target branch for the cherry pick or revert operation.
     */
-  var ontoRefName: String = js.native
+  var ontoRefName: String
   /**
     * The git repository for the cherry pick or revert operation.
     */
-  var repository: GitRepository = js.native
+  var repository: GitRepository
   /**
     * Details about the source of the cherry pick or revert operation (e.g. A pull request or a specific commit).
     */
-  var source: GitAsyncRefOperationSource = js.native
+  var source: GitAsyncRefOperationSource
 }
 
 object GitAsyncRefOperationParameters {
@@ -35,37 +34,5 @@ object GitAsyncRefOperationParameters {
     val __obj = js.Dynamic.literal(generatedRefName = generatedRefName.asInstanceOf[js.Any], ontoRefName = ontoRefName.asInstanceOf[js.Any], repository = repository.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitAsyncRefOperationParameters]
   }
-  @scala.inline
-  implicit class GitAsyncRefOperationParametersOps[Self <: GitAsyncRefOperationParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeneratedRefName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedRefName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOntoRefName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontoRefName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepository(value: GitRepository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSource(value: GitAsyncRefOperationSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnvironmentProperties extends js.Object {
   /**
     * Specifies whether the atmosphere should be displayed. Typically this consists of haze and sky.
@@ -13,7 +12,7 @@ trait EnvironmentProperties extends js.Object {
     *
     * @default true
     */
-  var atmosphereEnabled: js.UndefOr[Boolean] = js.native
+  var atmosphereEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies how the background of the scene (which lies behind sky, stars and atmosphere) should be displayed. The default value of `null` displays a single, fully opaque, black color.
     *
@@ -21,13 +20,13 @@ trait EnvironmentProperties extends js.Object {
     *
     * @default null
     */
-  var background: js.UndefOr[BackgroundProperties] = js.native
+  var background: js.UndefOr[BackgroundProperties] = js.undefined
   /**
     * Settings for defining the lighting of the scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Environment.html#lighting)
     */
-  var lighting: js.UndefOr[LightingProperties] = js.native
+  var lighting: js.UndefOr[LightingProperties] = js.undefined
   /**
     * Specifies whether stars should be displayed in the sky.
     *
@@ -35,70 +34,23 @@ trait EnvironmentProperties extends js.Object {
     *
     * @default true
     */
-  var starsEnabled: js.UndefOr[Boolean] = js.native
+  var starsEnabled: js.UndefOr[Boolean] = js.undefined
 }
 
 object EnvironmentProperties {
   @scala.inline
-  def apply(): EnvironmentProperties = {
+  def apply(
+    atmosphereEnabled: js.UndefOr[Boolean] = js.undefined,
+    background: BackgroundProperties = null,
+    lighting: LightingProperties = null,
+    starsEnabled: js.UndefOr[Boolean] = js.undefined
+  ): EnvironmentProperties = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(atmosphereEnabled)) __obj.updateDynamic("atmosphereEnabled")(atmosphereEnabled.get.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (lighting != null) __obj.updateDynamic("lighting")(lighting.asInstanceOf[js.Any])
+    if (!js.isUndefined(starsEnabled)) __obj.updateDynamic("starsEnabled")(starsEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentProperties]
   }
-  @scala.inline
-  implicit class EnvironmentPropertiesOps[Self <: EnvironmentProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAtmosphereEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atmosphereEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtmosphereEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("atmosphereEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: BackgroundProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLighting(value: LightingProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lighting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLighting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lighting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStarsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStarsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starsEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,369 +8,172 @@ import scala.scalajs.js.annotation._
   * Potential outcomes for a subject with likelihood
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait RiskAssessment extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait RiskAssessment extends DomainResource {
   /**
     * Contains extended information for property 'comment'.
     */
-  var _comment: js.UndefOr[Element] = js.native
+  var _comment: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'mitigation'.
     */
-  var _mitigation: js.UndefOr[Element] = js.native
+  var _mitigation: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'occurrenceDateTime'.
     */
-  var _occurrenceDateTime: js.UndefOr[Element] = js.native
+  var _occurrenceDateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.native
+  var _status: js.UndefOr[Element] = js.undefined
   /**
     * Request fulfilled by this assessment
     */
-  var basedOn: js.UndefOr[Reference] = js.native
+  var basedOn: js.UndefOr[Reference] = js.undefined
   /**
     * Information used in assessment
     */
-  var basis: js.UndefOr[js.Array[Reference]] = js.native
+  var basis: js.UndefOr[js.Array[Reference]] = js.undefined
   /**
     * Type of assessment
     */
-  var code: js.UndefOr[CodeableConcept] = js.native
+  var code: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Comments on the risk assessment
     */
-  var comment: js.UndefOr[String] = js.native
+  var comment: js.UndefOr[String] = js.undefined
   /**
     * Condition assessed
     */
-  var condition: js.UndefOr[Reference] = js.native
+  var condition: js.UndefOr[Reference] = js.undefined
   /**
     * Where was assessment performed?
     */
-  var context: js.UndefOr[Reference] = js.native
+  var context: js.UndefOr[Reference] = js.undefined
   /**
     * Unique identifier for the assessment
     */
-  var identifier: js.UndefOr[Identifier] = js.native
+  var identifier: js.UndefOr[Identifier] = js.undefined
   /**
     * Evaluation mechanism
     */
-  var method: js.UndefOr[CodeableConcept] = js.native
+  var method: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * How to reduce risk
     */
-  var mitigation: js.UndefOr[String] = js.native
+  var mitigation: js.UndefOr[String] = js.undefined
   /**
     * When was assessment made?
     */
-  var occurrenceDateTime: js.UndefOr[dateTime] = js.native
+  var occurrenceDateTime: js.UndefOr[dateTime] = js.undefined
   /**
     * When was assessment made?
     */
-  var occurrencePeriod: js.UndefOr[Period] = js.native
+  var occurrencePeriod: js.UndefOr[Period] = js.undefined
   /**
     * Part of this occurrence
     */
-  var parent: js.UndefOr[Reference] = js.native
+  var parent: js.UndefOr[Reference] = js.undefined
   /**
     * Who did assessment?
     */
-  var performer: js.UndefOr[Reference] = js.native
+  var performer: js.UndefOr[Reference] = js.undefined
   /**
     * Outcome predicted
     */
-  var prediction: js.UndefOr[js.Array[RiskAssessmentPrediction]] = js.native
+  var prediction: js.UndefOr[js.Array[RiskAssessmentPrediction]] = js.undefined
   /**
     * Why the assessment was necessary?
     */
-  var reasonCodeableConcept: js.UndefOr[CodeableConcept] = js.native
+  var reasonCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Why the assessment was necessary?
     */
-  var reasonReference: js.UndefOr[Reference] = js.native
+  var reasonReference: js.UndefOr[Reference] = js.undefined
   /**
     * registered | preliminary | final | amended +
     */
-  var status: code = js.native
+  var status: code
   /**
     * Who/what does assessment apply to?
     */
-  var subject: js.UndefOr[Reference] = js.native
+  var subject: js.UndefOr[Reference] = js.undefined
 }
 
 object RiskAssessment {
   @scala.inline
-  def apply(status: code): RiskAssessment = {
+  def apply(
+    status: code,
+    _comment: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _language: Element = null,
+    _mitigation: Element = null,
+    _occurrenceDateTime: Element = null,
+    _resourceType: Element = null,
+    _status: Element = null,
+    basedOn: Reference = null,
+    basis: js.Array[Reference] = null,
+    code: CodeableConcept = null,
+    comment: String = null,
+    condition: Reference = null,
+    contained: js.Array[Resource] = null,
+    context: Reference = null,
+    extension: js.Array[Extension] = null,
+    id: id = null,
+    identifier: Identifier = null,
+    implicitRules: uri = null,
+    language: code = null,
+    meta: Meta = null,
+    method: CodeableConcept = null,
+    mitigation: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    occurrenceDateTime: dateTime = null,
+    occurrencePeriod: Period = null,
+    parent: Reference = null,
+    performer: Reference = null,
+    prediction: js.Array[RiskAssessmentPrediction] = null,
+    reasonCodeableConcept: CodeableConcept = null,
+    reasonReference: Reference = null,
+    resourceType: code = null,
+    subject: Reference = null,
+    text: Narrative = null
+  ): RiskAssessment = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
+    if (_comment != null) __obj.updateDynamic("_comment")(_comment.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_mitigation != null) __obj.updateDynamic("_mitigation")(_mitigation.asInstanceOf[js.Any])
+    if (_occurrenceDateTime != null) __obj.updateDynamic("_occurrenceDateTime")(_occurrenceDateTime.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
+    if (basedOn != null) __obj.updateDynamic("basedOn")(basedOn.asInstanceOf[js.Any])
+    if (basis != null) __obj.updateDynamic("basis")(basis.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (mitigation != null) __obj.updateDynamic("mitigation")(mitigation.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (occurrenceDateTime != null) __obj.updateDynamic("occurrenceDateTime")(occurrenceDateTime.asInstanceOf[js.Any])
+    if (occurrencePeriod != null) __obj.updateDynamic("occurrencePeriod")(occurrencePeriod.asInstanceOf[js.Any])
+    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
+    if (performer != null) __obj.updateDynamic("performer")(performer.asInstanceOf[js.Any])
+    if (prediction != null) __obj.updateDynamic("prediction")(prediction.asInstanceOf[js.Any])
+    if (reasonCodeableConcept != null) __obj.updateDynamic("reasonCodeableConcept")(reasonCodeableConcept.asInstanceOf[js.Any])
+    if (reasonReference != null) __obj.updateDynamic("reasonReference")(reasonReference.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[RiskAssessment]
   }
-  @scala.inline
-  implicit class RiskAssessmentOps[Self <: RiskAssessment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_comment(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_comment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_mitigation(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_mitigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_mitigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_mitigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_occurrenceDateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_occurrenceDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_occurrenceDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_occurrenceDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_status(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasedOn(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBasis(value: js.Array[Reference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("basis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCondition(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: Identifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMitigation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mitigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMitigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mitigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrenceDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrenceDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrenceDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrencePeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrencePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencePeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParent(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformer(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrediction(value: js.Array[RiskAssessmentPrediction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prediction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrediction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prediction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonCodeableConcept(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCodeableConcept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonCodeableConcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonCodeableConcept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReasonReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReasonReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

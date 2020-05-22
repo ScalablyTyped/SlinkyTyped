@@ -22,41 +22,11 @@ trait SchemaGooglePrivacyDlpV2BigQueryKey extends js.Object {
 
 object SchemaGooglePrivacyDlpV2BigQueryKey {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2BigQueryKey = {
+  def apply(rowNumber: String = null, tableReference: SchemaGooglePrivacyDlpV2BigQueryTable = null): SchemaGooglePrivacyDlpV2BigQueryKey = {
     val __obj = js.Dynamic.literal()
+    if (rowNumber != null) __obj.updateDynamic("rowNumber")(rowNumber.asInstanceOf[js.Any])
+    if (tableReference != null) __obj.updateDynamic("tableReference")(tableReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2BigQueryKey]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2BigQueryKeyOps[Self <: SchemaGooglePrivacyDlpV2BigQueryKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRowNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableReference(value: SchemaGooglePrivacyDlpV2BigQueryTable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableReference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

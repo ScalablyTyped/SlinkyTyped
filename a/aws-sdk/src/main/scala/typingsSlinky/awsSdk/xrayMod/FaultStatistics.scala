@@ -18,41 +18,14 @@ trait FaultStatistics extends js.Object {
 
 object FaultStatistics {
   @scala.inline
-  def apply(): FaultStatistics = {
+  def apply(
+    OtherCount: js.UndefOr[NullableLong] = js.undefined,
+    TotalCount: js.UndefOr[NullableLong] = js.undefined
+  ): FaultStatistics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(OtherCount)) __obj.updateDynamic("OtherCount")(OtherCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalCount)) __obj.updateDynamic("TotalCount")(TotalCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaultStatistics]
   }
-  @scala.inline
-  implicit class FaultStatisticsOps[Self <: FaultStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOtherCount(value: NullableLong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOtherCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalCount(value: NullableLong): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

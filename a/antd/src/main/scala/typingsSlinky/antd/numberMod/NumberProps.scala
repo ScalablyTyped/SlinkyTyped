@@ -1,35 +1,33 @@
 package typingsSlinky.antd.numberMod
 
 import typingsSlinky.antd.statisticUtilsMod.FormatConfig
+import typingsSlinky.antd.statisticUtilsMod.Formatter
 import typingsSlinky.antd.statisticUtilsMod.valueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumberProps extends FormatConfig {
-  var value: valueType = js.native
+  var value: valueType
 }
 
 object NumberProps {
   @scala.inline
-  def apply(value: valueType): NumberProps = {
+  def apply(
+    value: valueType,
+    decimalSeparator: String = null,
+    formatter: Formatter = null,
+    groupSeparator: String = null,
+    precision: js.UndefOr[Double] = js.undefined,
+    prefixCls: String = null
+  ): NumberProps = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
+    if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberProps]
   }
-  @scala.inline
-  implicit class NumberPropsOps[Self <: NumberProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: valueType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

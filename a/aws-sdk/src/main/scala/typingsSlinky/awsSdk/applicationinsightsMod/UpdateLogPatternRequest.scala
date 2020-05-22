@@ -33,60 +33,14 @@ object UpdateLogPatternRequest {
   def apply(
     PatternName: LogPatternName,
     PatternSetName: LogPatternSetName,
-    ResourceGroupName: ResourceGroupName
+    ResourceGroupName: ResourceGroupName,
+    Pattern: LogPatternRegex = null,
+    Rank: js.UndefOr[LogPatternRank] = js.undefined
   ): UpdateLogPatternRequest = {
     val __obj = js.Dynamic.literal(PatternName = PatternName.asInstanceOf[js.Any], PatternSetName = PatternSetName.asInstanceOf[js.Any], ResourceGroupName = ResourceGroupName.asInstanceOf[js.Any])
+    if (Pattern != null) __obj.updateDynamic("Pattern")(Pattern.asInstanceOf[js.Any])
+    if (!js.isUndefined(Rank)) __obj.updateDynamic("Rank")(Rank.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateLogPatternRequest]
   }
-  @scala.inline
-  implicit class UpdateLogPatternRequestOps[Self <: UpdateLogPatternRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPatternName(value: LogPatternName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatternName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatternSetName(value: LogPatternSetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PatternSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceGroupName(value: ResourceGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPattern(value: LogPatternRegex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRank(value: LogPatternRank): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rank")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

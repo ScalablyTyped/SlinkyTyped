@@ -18,35 +18,10 @@ trait UpdateApiKeyRequest extends js.Object {
 
 object UpdateApiKeyRequest {
   @scala.inline
-  def apply(apiKey: String): UpdateApiKeyRequest = {
+  def apply(apiKey: String, patchOperations: ListOfPatchOperation = null): UpdateApiKeyRequest = {
     val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
+    if (patchOperations != null) __obj.updateDynamic("patchOperations")(patchOperations.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApiKeyRequest]
   }
-  @scala.inline
-  implicit class UpdateApiKeyRequestOps[Self <: UpdateApiKeyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPatchOperations(value: ListOfPatchOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patchOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatchOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patchOperations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

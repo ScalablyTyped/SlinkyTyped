@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import typingsSlinky.xmlCore.mod.NamespaceManager
-import typingsSlinky.xmlCore.mod.XmlNodeType
+import typingsSlinky.xmlCore.xmlMod.XmlNodeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

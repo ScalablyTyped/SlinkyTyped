@@ -14,29 +14,10 @@ trait DestinationSettings extends js.Object {
 
 object DestinationSettings {
   @scala.inline
-  def apply(): DestinationSettings = {
+  def apply(S3Settings: S3DestinationSettings = null): DestinationSettings = {
     val __obj = js.Dynamic.literal()
+    if (S3Settings != null) __obj.updateDynamic("S3Settings")(S3Settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestinationSettings]
   }
-  @scala.inline
-  implicit class DestinationSettingsOps[Self <: DestinationSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withS3Settings(value: S3DestinationSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3Settings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Settings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

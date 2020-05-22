@@ -18,41 +18,11 @@ trait ClientPropertiesResult extends js.Object {
 
 object ClientPropertiesResult {
   @scala.inline
-  def apply(): ClientPropertiesResult = {
+  def apply(ClientProperties: ClientProperties = null, ResourceId: NonEmptyString = null): ClientPropertiesResult = {
     val __obj = js.Dynamic.literal()
+    if (ClientProperties != null) __obj.updateDynamic("ClientProperties")(ClientProperties.asInstanceOf[js.Any])
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientPropertiesResult]
   }
-  @scala.inline
-  implicit class ClientPropertiesResultOps[Self <: ClientPropertiesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientProperties(value: ClientProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

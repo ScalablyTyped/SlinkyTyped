@@ -18,41 +18,11 @@ trait HLSTimestampRange extends js.Object {
 
 object HLSTimestampRange {
   @scala.inline
-  def apply(): HLSTimestampRange = {
+  def apply(EndTimestamp: js.Date = null, StartTimestamp: js.Date = null): HLSTimestampRange = {
     val __obj = js.Dynamic.literal()
+    if (EndTimestamp != null) __obj.updateDynamic("EndTimestamp")(EndTimestamp.asInstanceOf[js.Any])
+    if (StartTimestamp != null) __obj.updateDynamic("StartTimestamp")(StartTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[HLSTimestampRange]
   }
-  @scala.inline
-  implicit class HLSTimestampRangeOps[Self <: HLSTimestampRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

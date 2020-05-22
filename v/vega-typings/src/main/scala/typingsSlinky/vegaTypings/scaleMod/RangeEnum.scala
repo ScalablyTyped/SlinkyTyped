@@ -15,8 +15,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.heatmap
 */
 trait RangeEnum
-  extends RangeBand
-     with RangeScheme
+  extends _RangeBand
+     with _RangeScheme
 
 object RangeEnum {
   @scala.inline

@@ -25,89 +25,22 @@ trait SchemaAccountTreeRequest extends js.Object {
 
 object SchemaAccountTreeRequest {
   @scala.inline
-  def apply(): SchemaAccountTreeRequest = {
+  def apply(
+    accountName: String = null,
+    kind: String = null,
+    profileName: String = null,
+    timezone: String = null,
+    webpropertyName: String = null,
+    websiteUrl: String = null
+  ): SchemaAccountTreeRequest = {
     val __obj = js.Dynamic.literal()
+    if (accountName != null) __obj.updateDynamic("accountName")(accountName.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (profileName != null) __obj.updateDynamic("profileName")(profileName.asInstanceOf[js.Any])
+    if (timezone != null) __obj.updateDynamic("timezone")(timezone.asInstanceOf[js.Any])
+    if (webpropertyName != null) __obj.updateDynamic("webpropertyName")(webpropertyName.asInstanceOf[js.Any])
+    if (websiteUrl != null) __obj.updateDynamic("websiteUrl")(websiteUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountTreeRequest]
   }
-  @scala.inline
-  implicit class SchemaAccountTreeRequestOps[Self <: SchemaAccountTreeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfileName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimezone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimezone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebpropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebpropertyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webpropertyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsiteUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsiteUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

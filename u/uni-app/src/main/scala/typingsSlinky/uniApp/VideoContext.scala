@@ -4,36 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoContext extends js.Object {
   /**
     * 退出全屏
     */
-  def exitFullScreen(): Unit = js.native
+  def exitFullScreen(): Unit
   /**
     * 暂停
     */
-  def pause(): Unit = js.native
+  def pause(): Unit
   /**
     * 播放
     */
-  def play(): Unit = js.native
+  def play(): Unit
   /**
     * 设置倍速播放，支持的倍率有 0.5/0.8/1.0/1.25/1.5
     */
-  def playbackRate(): Unit = js.native
+  def playbackRate(): Unit
   /**
     * 进入全屏，可传入{direction}参数（1.7.0起支持），详见video组件文档
     */
-  def requestFullScreen(): Unit = js.native
+  def requestFullScreen(): Unit
   /**
     * 跳转到指定位置，单位 s
     */
-  def seek(): Unit = js.native
+  def seek(): Unit
   /**
     * 发送弹幕，danmu 包含两个属性 text, color。
     */
-  def sendDanmu(): Unit = js.native
+  def sendDanmu(): Unit
 }
 
 object VideoContext {
@@ -50,55 +49,5 @@ object VideoContext {
     val __obj = js.Dynamic.literal(exitFullScreen = js.Any.fromFunction0(exitFullScreen), pause = js.Any.fromFunction0(pause), play = js.Any.fromFunction0(play), playbackRate = js.Any.fromFunction0(playbackRate), requestFullScreen = js.Any.fromFunction0(requestFullScreen), seek = js.Any.fromFunction0(seek), sendDanmu = js.Any.fromFunction0(sendDanmu))
     __obj.asInstanceOf[VideoContext]
   }
-  @scala.inline
-  implicit class VideoContextOps[Self <: VideoContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExitFullScreen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitFullScreen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPause(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPlay(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withPlaybackRate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playbackRate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRequestFullScreen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFullScreen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSeek(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSendDanmu(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sendDanmu")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

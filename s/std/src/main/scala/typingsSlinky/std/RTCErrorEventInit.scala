@@ -4,30 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RTCErrorEventInit extends EventInit {
-  var error: RTCError = js.native
+  var error: RTCError
 }
 
 object RTCErrorEventInit {
   @scala.inline
-  def apply(error: RTCError): RTCErrorEventInit = {
+  def apply(
+    error: RTCError,
+    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
+    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
+    composed: js.UndefOr[scala.Boolean] = js.undefined
+  ): RTCErrorEventInit = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCErrorEventInit]
   }
-  @scala.inline
-  implicit class RTCErrorEventInitOps[Self <: RTCErrorEventInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: RTCError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

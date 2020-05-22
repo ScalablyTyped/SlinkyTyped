@@ -12,48 +12,18 @@ trait MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters exten
     */
   var input: js.UndefOr[Input[String]] = js.native
   /**
-    * The parameter name.
+    * The name of the STEP_FUNCTION task.
     */
   var name: js.UndefOr[Input[String]] = js.native
 }
 
 object MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters {
   @scala.inline
-  def apply(): MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters = {
+  def apply(input: Input[String] = null, name: Input[String] = null): MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters = {
     val __obj = js.Dynamic.literal()
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters]
   }
-  @scala.inline
-  implicit class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersOps[Self <: MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInput(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

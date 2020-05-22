@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
-@js.native
 trait PlusWebviewWebviewAnimationStyles extends js.Object {
   /**
     * 画窗口的起始左侧位置
@@ -18,54 +17,24 @@ trait PlusWebviewWebviewAnimationStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var fromLeft: js.UndefOr[String] = js.native
+  var fromLeft: js.UndefOr[String] = js.undefined
   /**
     * 画窗口的目标左侧位置
     * 持百分比、像素值。
-    * 	注意：如果设置的位置与起始位置一直，则无动画效果。
+    *     注意：如果设置的位置与起始位置一直，则无动画效果。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var toLeft: js.UndefOr[String] = js.native
+  var toLeft: js.UndefOr[String] = js.undefined
 }
 
 object PlusWebviewWebviewAnimationStyles {
   @scala.inline
-  def apply(): PlusWebviewWebviewAnimationStyles = {
+  def apply(fromLeft: String = null, toLeft: String = null): PlusWebviewWebviewAnimationStyles = {
     val __obj = js.Dynamic.literal()
+    if (fromLeft != null) __obj.updateDynamic("fromLeft")(fromLeft.asInstanceOf[js.Any])
+    if (toLeft != null) __obj.updateDynamic("toLeft")(toLeft.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewAnimationStyles]
   }
-  @scala.inline
-  implicit class PlusWebviewWebviewAnimationStylesOps[Self <: PlusWebviewWebviewAnimationStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFromLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFromLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fromLeft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToLeft(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toLeft")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

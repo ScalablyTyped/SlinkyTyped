@@ -9,40 +9,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Access to locale specific calendar systems. */
-@js.native
 trait XCalendar extends XInterface {
   /**
     * Get the UTC date/time as an offset to the start of the calendar at 1-Jan-1970 00:00. The integer part represents the number of days passed since start
     * date. The fractional part represents fractions of a day, thus 0.5 means 12 hours.
     */
-  var DateTime: Double = js.native
+  var DateTime: Double
   /** returns a sequence of {@link CalendarItem} describing the day names. */
-  val Days: SafeArray[CalendarItem] = js.native
+  val Days: SafeArray[CalendarItem]
   /** returns the first day of a week, one of {@link Weekdays} values. */
-  var FirstDayOfWeek: Double = js.native
-  val LoadedCalendar: Calendar = js.native
+  var FirstDayOfWeek: Double
+  val LoadedCalendar: Calendar
   /** returns how many days of a week must reside in the first week of a year. */
-  var MinimumNumberOfDaysForFirstWeek: Double = js.native
+  var MinimumNumberOfDaysForFirstWeek: Double
   /** returns a sequence of {@link CalendarItem} describing the month names. */
-  val Months: SafeArray[CalendarItem] = js.native
-  val NumberOfDaysInWeek: Double = js.native
-  val NumberOfMonthsInYear: Double = js.native
+  val Months: SafeArray[CalendarItem]
+  val NumberOfDaysInWeek: Double
+  val NumberOfMonthsInYear: Double
   /** Returns the ID string of the loaded calendar, for example, **"Gregorian"** */
-  val UniqueID: String = js.native
+  val UniqueID: String
   /**
     * Add an amount to a field.
     * @param nCalendarFieldIndex One of {@link CalendarFieldIndex} values.
     * @param nAmount The amount to add.
     */
-  def addValue(nCalendarFieldIndex: Double, nAmount: Double): Unit = js.native
-  def getAllCalendars(rLocale: Locale): SafeArray[String] = js.native
+  def addValue(nCalendarFieldIndex: Double, nAmount: Double): Unit
+  def getAllCalendars(rLocale: Locale): SafeArray[String]
   /**
     * Get the UTC date/time as an offset to the start of the calendar at 1-Jan-1970 00:00. The integer part represents the number of days passed since start
     * date. The fractional part represents fractions of a day, thus 0.5 means 12 hours.
     */
-  def getDateTime(): Double = js.native
+  def getDateTime(): Double
   /** returns a sequence of {@link CalendarItem} describing the day names. */
-  def getDays(): SafeArray[CalendarItem] = js.native
+  def getDays(): SafeArray[CalendarItem]
   /**
     * Returns a string (name to display) matching the given parameters.
     * @param nCalendarDisplayIndex One of {@link CalendarDisplayIndex} values
@@ -50,45 +49,45 @@ trait XCalendar extends XInterface {
     * @param nNameType A value indicating whether to return the abbreviated or the full name, or the narrow name for some {@link CalendarDisplayIndex} values.
     * @since LibreOffice 3.5   This parameter is not used if the **nCalendarDisplayIndex** argument equals {@link CalendarDisplayIndex.AM_PM}
     */
-  def getDisplayName(nCalendarDisplayIndex: Double, nIdx: Double, nNameType: Double): String = js.native
+  def getDisplayName(nCalendarDisplayIndex: Double, nIdx: Double, nNameType: Double): String
   /** returns the first day of a week, one of {@link Weekdays} values. */
-  def getFirstDayOfWeek(): Double = js.native
-  def getLoadedCalendar(): Calendar = js.native
+  def getFirstDayOfWeek(): Double
+  def getLoadedCalendar(): Calendar
   /** returns how many days of a week must reside in the first week of a year. */
-  def getMinimumNumberOfDaysForFirstWeek(): Double = js.native
+  def getMinimumNumberOfDaysForFirstWeek(): Double
   /** returns a sequence of {@link CalendarItem} describing the month names. */
-  def getMonths(): SafeArray[CalendarItem] = js.native
-  def getNumberOfDaysInWeek(): Double = js.native
-  def getNumberOfMonthsInYear(): Double = js.native
+  def getMonths(): SafeArray[CalendarItem]
+  def getNumberOfDaysInWeek(): Double
+  def getNumberOfMonthsInYear(): Double
   /** Returns the ID string of the loaded calendar, for example, **"Gregorian"** */
-  def getUniqueID(): String = js.native
+  def getUniqueID(): String
   /**
     * Get the value of a field.
     * @param nCalendarFieldIndex One of {@link CalendarFieldIndex} values.
     */
-  def getValue(nCalendarFieldIndex: Double): Double = js.native
+  def getValue(nCalendarFieldIndex: Double): Double
   /**
     * Verify if the date fields set by a combination of {@link XCalendar.setValue()} calls is valid. It has a side-effect because it will internally
     * calculate the final value for the date fields
     */
-  def isValid(): Boolean = js.native
-  def loadCalendar(uniqueID: String, rLocale: Locale): Unit = js.native
-  def loadDefaultCalendar(rLocale: Locale): Unit = js.native
+  def isValid(): Boolean
+  def loadCalendar(uniqueID: String, rLocale: Locale): Unit
+  def loadDefaultCalendar(rLocale: Locale): Unit
   /**
     * Set the UTC date/time as an offset to the start of the calendar at 1-Jan-1970 00:00. The integer part represents the number of days passed since start
     * date. The fractional part represents fractions of a day, thus 0.5 means 12 hours.
     */
-  def setDateTime(nTimeInDays: Double): Unit = js.native
+  def setDateTime(nTimeInDays: Double): Unit
   /** Set the first day of a week, one of {@link Weekdays} values. */
-  def setFirstDayOfWeek(nDay: Double): Unit = js.native
+  def setFirstDayOfWeek(nDay: Double): Unit
   /** Set how many days of a week must reside in the first week of a year. */
-  def setMinimumNumberOfDaysForFirstWeek(nDays: Double): Unit = js.native
+  def setMinimumNumberOfDaysForFirstWeek(nDays: Double): Unit
   /**
     * Set the value of a field.
     * @param nCalendarFieldIndex One of {@link CalendarFieldIndex} values.
     * @param nValue A value of the allowed range for the field index.
     */
-  def setValue(nCalendarFieldIndex: Double, nValue: Double): Unit = js.native
+  def setValue(nCalendarFieldIndex: Double, nValue: Double): Unit
 }
 
 object XCalendar {
@@ -130,187 +129,5 @@ object XCalendar {
     val __obj = js.Dynamic.literal(DateTime = DateTime.asInstanceOf[js.Any], Days = Days.asInstanceOf[js.Any], FirstDayOfWeek = FirstDayOfWeek.asInstanceOf[js.Any], LoadedCalendar = LoadedCalendar.asInstanceOf[js.Any], MinimumNumberOfDaysForFirstWeek = MinimumNumberOfDaysForFirstWeek.asInstanceOf[js.Any], Months = Months.asInstanceOf[js.Any], NumberOfDaysInWeek = NumberOfDaysInWeek.asInstanceOf[js.Any], NumberOfMonthsInYear = NumberOfMonthsInYear.asInstanceOf[js.Any], UniqueID = UniqueID.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addValue = js.Any.fromFunction2(addValue), getAllCalendars = js.Any.fromFunction1(getAllCalendars), getDateTime = js.Any.fromFunction0(getDateTime), getDays = js.Any.fromFunction0(getDays), getDisplayName = js.Any.fromFunction3(getDisplayName), getFirstDayOfWeek = js.Any.fromFunction0(getFirstDayOfWeek), getLoadedCalendar = js.Any.fromFunction0(getLoadedCalendar), getMinimumNumberOfDaysForFirstWeek = js.Any.fromFunction0(getMinimumNumberOfDaysForFirstWeek), getMonths = js.Any.fromFunction0(getMonths), getNumberOfDaysInWeek = js.Any.fromFunction0(getNumberOfDaysInWeek), getNumberOfMonthsInYear = js.Any.fromFunction0(getNumberOfMonthsInYear), getUniqueID = js.Any.fromFunction0(getUniqueID), getValue = js.Any.fromFunction1(getValue), isValid = js.Any.fromFunction0(isValid), loadCalendar = js.Any.fromFunction2(loadCalendar), loadDefaultCalendar = js.Any.fromFunction1(loadDefaultCalendar), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDateTime = js.Any.fromFunction1(setDateTime), setFirstDayOfWeek = js.Any.fromFunction1(setFirstDayOfWeek), setMinimumNumberOfDaysForFirstWeek = js.Any.fromFunction1(setMinimumNumberOfDaysForFirstWeek), setValue = js.Any.fromFunction2(setValue))
     __obj.asInstanceOf[XCalendar]
   }
-  @scala.inline
-  implicit class XCalendarOps[Self <: XCalendar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDays(value: SafeArray[CalendarItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstDayOfWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstDayOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadedCalendar(value: Calendar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadedCalendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimumNumberOfDaysForFirstWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumNumberOfDaysForFirstWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonths(value: SafeArray[CalendarItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfDaysInWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfDaysInWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberOfMonthsInYear(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfMonthsInYear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniqueID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddValue(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addValue")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAllCalendars(value: Locale => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllCalendars")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDateTime(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDateTime")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDays(value: () => SafeArray[CalendarItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDays")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDisplayName(value: (Double, Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayName")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetFirstDayOfWeek(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFirstDayOfWeek")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLoadedCalendar(value: () => Calendar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLoadedCalendar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMinimumNumberOfDaysForFirstWeek(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinimumNumberOfDaysForFirstWeek")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMonths(value: () => SafeArray[CalendarItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMonths")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberOfDaysInWeek(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberOfDaysInWeek")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberOfMonthsInYear(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberOfMonthsInYear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUniqueID(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUniqueID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsValid(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLoadCalendar(value: (String, Locale) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadCalendar")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLoadDefaultCalendar(value: Locale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadDefaultCalendar")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDateTime(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDateTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFirstDayOfWeek(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFirstDayOfWeek")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetMinimumNumberOfDaysForFirstWeek(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinimumNumberOfDaysForFirstWeek")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetValue(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

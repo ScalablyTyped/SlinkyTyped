@@ -453,6 +453,11 @@ object ButtonToggle {
   }
   
   def withProps[T](p: ButtonToggleProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ButtonToggleProps]))
+  }
   implicit def make[T](companion: ButtonToggle.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

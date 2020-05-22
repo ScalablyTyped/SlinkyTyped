@@ -14,29 +14,10 @@ trait VerifyTrustResult extends js.Object {
 
 object VerifyTrustResult {
   @scala.inline
-  def apply(): VerifyTrustResult = {
+  def apply(TrustId: TrustId = null): VerifyTrustResult = {
     val __obj = js.Dynamic.literal()
+    if (TrustId != null) __obj.updateDynamic("TrustId")(TrustId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerifyTrustResult]
   }
-  @scala.inline
-  implicit class VerifyTrustResultOps[Self <: VerifyTrustResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrustId(value: TrustId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrustId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

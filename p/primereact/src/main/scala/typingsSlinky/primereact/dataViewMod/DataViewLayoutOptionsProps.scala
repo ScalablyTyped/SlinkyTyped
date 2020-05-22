@@ -5,82 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataViewLayoutOptionsProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var layout: js.UndefOr[String] = js.native
-  var style: js.UndefOr[String] = js.native
-  def onChange(e: ValueString): Unit = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var layout: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[String] = js.undefined
+  def onChange(e: ValueString): Unit
 }
 
 object DataViewLayoutOptionsProps {
   @scala.inline
-  def apply(onChange: ValueString => Unit): DataViewLayoutOptionsProps = {
+  def apply(
+    onChange: ValueString => Unit,
+    className: String = null,
+    id: String = null,
+    layout: String = null,
+    style: String = null
+  ): DataViewLayoutOptionsProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataViewLayoutOptionsProps]
   }
-  @scala.inline
-  implicit class DataViewLayoutOptionsPropsOps[Self <: DataViewLayoutOptionsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnChange(value: ValueString => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

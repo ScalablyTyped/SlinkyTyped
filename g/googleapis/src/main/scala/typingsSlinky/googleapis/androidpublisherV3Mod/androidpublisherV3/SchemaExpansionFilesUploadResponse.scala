@@ -11,29 +11,10 @@ trait SchemaExpansionFilesUploadResponse extends js.Object {
 
 object SchemaExpansionFilesUploadResponse {
   @scala.inline
-  def apply(): SchemaExpansionFilesUploadResponse = {
+  def apply(expansionFile: SchemaExpansionFile = null): SchemaExpansionFilesUploadResponse = {
     val __obj = js.Dynamic.literal()
+    if (expansionFile != null) __obj.updateDynamic("expansionFile")(expansionFile.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExpansionFilesUploadResponse]
   }
-  @scala.inline
-  implicit class SchemaExpansionFilesUploadResponseOps[Self <: SchemaExpansionFilesUploadResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpansionFile(value: SchemaExpansionFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expansionFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpansionFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expansionFile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

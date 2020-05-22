@@ -27,310 +27,84 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojpictochart.ojPictoChartSettableProperties<K, D>> */
-@js.native
 trait ojPictoChartSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var animationDuration: js.UndefOr[Double] = js.native
-  var animationOnDataChange: js.UndefOr[auto | none] = js.native
-  var animationOnDisplay: js.UndefOr[auto | popIn | alphaFade | zoom | none] = js.native
-  var as: js.UndefOr[String] = js.native
-  var columnCount: js.UndefOr[Double] = js.native
-  var columnWidth: js.UndefOr[Double] = js.native
-  var data: js.UndefOr[DataProvider[K, D]] = js.native
-  var drilling: js.UndefOr[on | off] = js.native
-  var hiddenCategories: js.UndefOr[js.Array[String]] = js.native
-  var highlightMatch: js.UndefOr[any | all] = js.native
-  var highlightedCategories: js.UndefOr[js.Array[String]] = js.native
-  var hoverBehavior: js.UndefOr[dim | none] = js.native
-  var hoverBehaviorDelay: js.UndefOr[Double] = js.native
-  var layout: js.UndefOr[vertical | horizontal] = js.native
-  var layoutOrigin: js.UndefOr[topEnd | bottomStart | bottomEnd | topStart] = js.native
-  var rowCount: js.UndefOr[Double] = js.native
-  var rowHeight: js.UndefOr[Double] = js.native
-  var selection: js.UndefOr[js.Array[K]] = js.native
-  var selectionMode: js.UndefOr[single | multiple | none] = js.native
-  var tooltip: js.UndefOr[`14`[K]] = js.native
-  var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[LabelAndValue] = js.native
+  var animationDuration: js.UndefOr[Double] = js.undefined
+  var animationOnDataChange: js.UndefOr[auto | none] = js.undefined
+  var animationOnDisplay: js.UndefOr[auto | popIn | alphaFade | zoom | none] = js.undefined
+  var as: js.UndefOr[String] = js.undefined
+  var columnCount: js.UndefOr[Double] = js.undefined
+  var columnWidth: js.UndefOr[Double] = js.undefined
+  var data: js.UndefOr[DataProvider[K, D]] = js.undefined
+  var drilling: js.UndefOr[on | off] = js.undefined
+  var hiddenCategories: js.UndefOr[js.Array[String]] = js.undefined
+  var highlightMatch: js.UndefOr[any | all] = js.undefined
+  var highlightedCategories: js.UndefOr[js.Array[String]] = js.undefined
+  var hoverBehavior: js.UndefOr[dim | none] = js.undefined
+  var hoverBehaviorDelay: js.UndefOr[Double] = js.undefined
+  var layout: js.UndefOr[vertical | horizontal] = js.undefined
+  var layoutOrigin: js.UndefOr[topEnd | bottomStart | bottomEnd | topStart] = js.undefined
+  var rowCount: js.UndefOr[Double] = js.undefined
+  var rowHeight: js.UndefOr[Double] = js.undefined
+  var selection: js.UndefOr[js.Array[K]] = js.undefined
+  var selectionMode: js.UndefOr[single | multiple | none] = js.undefined
+  var tooltip: js.UndefOr[`14`[K]] = js.undefined
+  var trackResize: js.UndefOr[on | off] = js.undefined
+  var translations: js.UndefOr[LabelAndValue] = js.undefined
 }
 
 object ojPictoChartSettablePropertiesLenient {
   @scala.inline
-  def apply[K, D](): ojPictoChartSettablePropertiesLenient[K, D] = {
+  def apply[K, D](
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    animationOnDataChange: auto | none = null,
+    animationOnDisplay: auto | popIn | alphaFade | zoom | none = null,
+    as: String = null,
+    columnCount: js.UndefOr[Double] = js.undefined,
+    columnWidth: js.UndefOr[Double] = js.undefined,
+    data: DataProvider[K, D] = null,
+    drilling: on | off = null,
+    hiddenCategories: js.Array[String] = null,
+    highlightMatch: any | all = null,
+    highlightedCategories: js.Array[String] = null,
+    hoverBehavior: dim | none = null,
+    hoverBehaviorDelay: js.UndefOr[Double] = js.undefined,
+    layout: vertical | horizontal = null,
+    layoutOrigin: topEnd | bottomStart | bottomEnd | topStart = null,
+    rowCount: js.UndefOr[Double] = js.undefined,
+    rowHeight: js.UndefOr[Double] = js.undefined,
+    selection: js.Array[K] = null,
+    selectionMode: single | multiple | none = null,
+    tooltip: `14`[K] = null,
+    trackResize: on | off = null,
+    translations: LabelAndValue = null
+  ): ojPictoChartSettablePropertiesLenient[K, D] = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (animationOnDataChange != null) __obj.updateDynamic("animationOnDataChange")(animationOnDataChange.asInstanceOf[js.Any])
+    if (animationOnDisplay != null) __obj.updateDynamic("animationOnDisplay")(animationOnDisplay.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnCount)) __obj.updateDynamic("columnCount")(columnCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnWidth)) __obj.updateDynamic("columnWidth")(columnWidth.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (drilling != null) __obj.updateDynamic("drilling")(drilling.asInstanceOf[js.Any])
+    if (hiddenCategories != null) __obj.updateDynamic("hiddenCategories")(hiddenCategories.asInstanceOf[js.Any])
+    if (highlightMatch != null) __obj.updateDynamic("highlightMatch")(highlightMatch.asInstanceOf[js.Any])
+    if (highlightedCategories != null) __obj.updateDynamic("highlightedCategories")(highlightedCategories.asInstanceOf[js.Any])
+    if (hoverBehavior != null) __obj.updateDynamic("hoverBehavior")(hoverBehavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverBehaviorDelay)) __obj.updateDynamic("hoverBehaviorDelay")(hoverBehaviorDelay.get.asInstanceOf[js.Any])
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (layoutOrigin != null) __obj.updateDynamic("layoutOrigin")(layoutOrigin.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowHeight)) __obj.updateDynamic("rowHeight")(rowHeight.get.asInstanceOf[js.Any])
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (trackResize != null) __obj.updateDynamic("trackResize")(trackResize.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojPictoChartSettablePropertiesLenient[K, D]]
   }
-  @scala.inline
-  implicit class ojPictoChartSettablePropertiesLenientOps[Self[k, d] <: ojPictoChartSettablePropertiesLenient[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
-    @scala.inline
-    def withAnimationDuration(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationOnDataChange(value: auto | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationOnDataChange: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationOnDisplay(value: auto | popIn | alphaFade | zoom | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationOnDisplay: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAs(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnCount(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnCount: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnWidth(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnWidth: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: DataProvider[K, D]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrilling(value: on | off): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drilling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrilling: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drilling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenCategories(value: js.Array[String]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenCategories: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightMatch(value: any | all): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightMatch: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightedCategories(value: js.Array[String]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightedCategories: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverBehavior(value: dim | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverBehavior: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverBehaviorDelay(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehaviorDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverBehaviorDelay: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehaviorDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayout(value: vertical | horizontal): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLayoutOrigin(value: topEnd | bottomStart | bottomEnd | topStart): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayoutOrigin: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeight: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelection(value: js.Array[K]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelection: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: single | multiple | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: `14`[K]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackResize(value: on | off): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackResize: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: LabelAndValue): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

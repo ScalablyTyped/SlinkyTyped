@@ -22,53 +22,16 @@ trait DetectionFilter extends js.Object {
 
 object DetectionFilter {
   @scala.inline
-  def apply(): DetectionFilter = {
+  def apply(
+    MinBoundingBoxHeight: js.UndefOr[BoundingBoxHeight] = js.undefined,
+    MinBoundingBoxWidth: js.UndefOr[BoundingBoxWidth] = js.undefined,
+    MinConfidence: js.UndefOr[Percent] = js.undefined
+  ): DetectionFilter = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MinBoundingBoxHeight)) __obj.updateDynamic("MinBoundingBoxHeight")(MinBoundingBoxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinBoundingBoxWidth)) __obj.updateDynamic("MinBoundingBoxWidth")(MinBoundingBoxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MinConfidence)) __obj.updateDynamic("MinConfidence")(MinConfidence.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectionFilter]
   }
-  @scala.inline
-  implicit class DetectionFilterOps[Self <: DetectionFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMinBoundingBoxHeight(value: BoundingBoxHeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinBoundingBoxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinBoundingBoxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinBoundingBoxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinBoundingBoxWidth(value: BoundingBoxWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinBoundingBoxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinBoundingBoxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinBoundingBoxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

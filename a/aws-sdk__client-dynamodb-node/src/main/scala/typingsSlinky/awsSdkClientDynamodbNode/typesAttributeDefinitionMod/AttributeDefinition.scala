@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AttributeDefinition extends js.Object {
   /**
     * <p>A name for the attribute.</p>
     */
-  var AttributeName: String = js.native
+  var AttributeName: String
   /**
     * <p>The data type for the attribute, where:</p> <ul> <li> <p> <code>S</code> - the attribute is of type String</p> </li> <li> <p> <code>N</code> - the attribute is of type Number</p> </li> <li> <p> <code>B</code> - the attribute is of type Binary</p> </li> </ul>
     */
-  var AttributeType: S | N | B | String = js.native
+  var AttributeType: S | N | B | String
 }
 
 object AttributeDefinition {
@@ -25,25 +24,5 @@ object AttributeDefinition {
     val __obj = js.Dynamic.literal(AttributeName = AttributeName.asInstanceOf[js.Any], AttributeType = AttributeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeDefinition]
   }
-  @scala.inline
-  implicit class AttributeDefinitionOps[Self <: AttributeDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeType(value: S | N | B | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

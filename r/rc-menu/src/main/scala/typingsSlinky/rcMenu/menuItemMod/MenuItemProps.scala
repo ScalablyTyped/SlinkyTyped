@@ -1,9 +1,6 @@
 package typingsSlinky.rcMenu.menuItemMod
 
-import org.scalajs.dom.raw.Element
-import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.rcMenu.anon.Hover
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.HoverEventHandler
@@ -25,405 +22,97 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MenuItemProps extends js.Object {
-  var active: js.UndefOr[Boolean] = js.native
+  var active: js.UndefOr[Boolean] = js.undefined
   /** @deprecated No place to use this. Should remove */
-  var attribute: js.UndefOr[Record[String, String]] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var className: js.UndefOr[String] = js.native
-  var direction: js.UndefOr[ltr | rtl] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var eventKey: js.UndefOr[Key] = js.native
-  var inlineIndent: js.UndefOr[Double] = js.native
-  var isSelected: js.UndefOr[Boolean] = js.native
-  var itemIcon: js.UndefOr[RenderIconType] = js.native
-  var level: js.UndefOr[Double] = js.native
-  var manualRef: js.UndefOr[LegacyFunctionRef] = js.native
-  var mode: js.UndefOr[MenuMode] = js.native
-  var multiple: js.UndefOr[Boolean] = js.native
-  var onClick: js.UndefOr[MenuClickEventHandler] = js.native
-  var onDeselect: js.UndefOr[SelectEventHandler] = js.native
-  var onDestroy: js.UndefOr[DestroyEventHandler] = js.native
-  var onItemHover: js.UndefOr[HoverEventHandler] = js.native
-  var onMouseEnter: js.UndefOr[MenuHoverEventHandler] = js.native
-  var onMouseLeave: js.UndefOr[MenuHoverEventHandler] = js.native
-  var onSelect: js.UndefOr[SelectEventHandler] = js.native
-  var parentMenu: js.UndefOr[ReactInstance] = js.native
-  var role: js.UndefOr[String] = js.native
-  var rootPrefixCls: js.UndefOr[String] = js.native
-  var selectedKeys: js.UndefOr[js.Array[String]] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
-  var title: js.UndefOr[String] = js.native
+  var attribute: js.UndefOr[Record[String, String]] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var direction: js.UndefOr[ltr | rtl] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var eventKey: js.UndefOr[Key] = js.undefined
+  var inlineIndent: js.UndefOr[Double] = js.undefined
+  var isSelected: js.UndefOr[Boolean] = js.undefined
+  var itemIcon: js.UndefOr[RenderIconType] = js.undefined
+  var level: js.UndefOr[Double] = js.undefined
+  var manualRef: js.UndefOr[LegacyFunctionRef] = js.undefined
+  var mode: js.UndefOr[MenuMode] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.undefined
+  var onClick: js.UndefOr[MenuClickEventHandler] = js.undefined
+  var onDeselect: js.UndefOr[SelectEventHandler] = js.undefined
+  var onDestroy: js.UndefOr[DestroyEventHandler] = js.undefined
+  var onItemHover: js.UndefOr[HoverEventHandler] = js.undefined
+  var onMouseEnter: js.UndefOr[MenuHoverEventHandler] = js.undefined
+  var onMouseLeave: js.UndefOr[MenuHoverEventHandler] = js.undefined
+  var onSelect: js.UndefOr[SelectEventHandler] = js.undefined
+  var parentMenu: js.UndefOr[ReactInstance] = js.undefined
+  var role: js.UndefOr[String] = js.undefined
+  var rootPrefixCls: js.UndefOr[String] = js.undefined
+  var selectedKeys: js.UndefOr[js.Array[String]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object MenuItemProps {
   @scala.inline
-  def apply(): MenuItemProps = {
+  def apply(
+    active: js.UndefOr[Boolean] = js.undefined,
+    attribute: Record[String, String] = null,
+    children: TagMod[Any] = null,
+    className: String = null,
+    direction: ltr | rtl = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    eventKey: Key = null,
+    inlineIndent: js.UndefOr[Double] = js.undefined,
+    isSelected: js.UndefOr[Boolean] = js.undefined,
+    itemIcon: RenderIconType = null,
+    level: js.UndefOr[Double] = js.undefined,
+    manualRef: /* node */ ReactInstance => Unit = null,
+    mode: MenuMode = null,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    onClick: /* info */ MenuInfo => Unit = null,
+    onDeselect: /* info */ SelectInfo => Unit = null,
+    onDestroy: /* key */ Key => Unit = null,
+    onItemHover: /* info */ Hover => Unit = null,
+    onMouseEnter: /* info */ typingsSlinky.rcMenu.anon.Key => Unit = null,
+    onMouseLeave: /* info */ typingsSlinky.rcMenu.anon.Key => Unit = null,
+    onSelect: /* info */ SelectInfo => Unit = null,
+    parentMenu: ReactInstance = null,
+    role: String = null,
+    rootPrefixCls: String = null,
+    selectedKeys: js.Array[String] = null,
+    style: CSSProperties = null,
+    title: String = null
+  ): MenuItemProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineIndent)) __obj.updateDynamic("inlineIndent")(inlineIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.get.asInstanceOf[js.Any])
+    if (itemIcon != null) __obj.updateDynamic("itemIcon")(itemIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (manualRef != null) __obj.updateDynamic("manualRef")(js.Any.fromFunction1(manualRef))
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction1(onDeselect))
+    if (onDestroy != null) __obj.updateDynamic("onDestroy")(js.Any.fromFunction1(onDestroy))
+    if (onItemHover != null) __obj.updateDynamic("onItemHover")(js.Any.fromFunction1(onItemHover))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (parentMenu != null) __obj.updateDynamic("parentMenu")(parentMenu.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (rootPrefixCls != null) __obj.updateDynamic("rootPrefixCls")(rootPrefixCls.asInstanceOf[js.Any])
+    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuItemProps]
   }
-  @scala.inline
-  implicit class MenuItemPropsOps[Self <: MenuItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttribute(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: ltr | rtl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventKey(value: Key): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemIconReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemIconFunction1(value: /* props */ js.Any => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withItemIcon(value: RenderIconType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManualRef(value: /* node */ ReactInstance => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutManualRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: MenuMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: /* info */ MenuInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDeselect(value: /* info */ SelectInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDeselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDestroy(value: /* key */ Key => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDestroy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemHover(value: /* info */ Hover => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHover")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(value: /* info */ SelectInfo => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentMenuElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentMenuComponent(value: ReactComponentClass[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentMenu(value: ReactInstance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentMenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootPrefixCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPrefixCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRootPrefixCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rootPrefixCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

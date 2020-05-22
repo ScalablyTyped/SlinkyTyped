@@ -8,77 +8,39 @@ import scala.scalajs.js.annotation._
 /**
   * The options for creating an intl datetime format function.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * The locales to pass to the `Intl.DateTimeFormat` constructor.
     *
     * The default is determined by the user agent.
     */
-  var locales: js.UndefOr[String | js.Array[String]] = js.native
+  var locales: js.UndefOr[String | js.Array[String]] = js.undefined
   /**
     * The text to use for a `null` or `undefined` data value.
     *
     * The default is `''`.
     */
-  var missing: js.UndefOr[String] = js.native
+  var missing: js.UndefOr[String] = js.undefined
   /**
     * The options to pass to the `Intl.DateTimeFormat` constructor.
     *
     * The default is determined by the user agent.
     */
-  var options: js.UndefOr[DateTimeFormatOptions] = js.native
+  var options: js.UndefOr[DateTimeFormatOptions] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(
+    locales: String | js.Array[String] = null,
+    missing: String = null,
+    options: DateTimeFormatOptions = null
+  ): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (locales != null) __obj.updateDynamic("locales")(locales.asInstanceOf[js.Any])
+    if (missing != null) __obj.updateDynamic("missing")(missing.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocales(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: DateTimeFormatOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

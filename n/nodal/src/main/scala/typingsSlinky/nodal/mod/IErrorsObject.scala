@@ -5,37 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IErrorsObject
   extends /* field */ StringDictionary[js.Array[String]] {
-  var _query: js.UndefOr[js.Any] = js.native
+  var _query: js.UndefOr[js.Any] = js.undefined
 }
 
 object IErrorsObject {
   @scala.inline
-  def apply(): IErrorsObject = {
+  def apply(StringDictionary: /* key */ StringDictionary[js.Array[String]] = null, _query: js.Any = null): IErrorsObject = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (_query != null) __obj.updateDynamic("_query")(_query.asInstanceOf[js.Any])
     __obj.asInstanceOf[IErrorsObject]
   }
-  @scala.inline
-  implicit class IErrorsObjectOps[Self <: IErrorsObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_query(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_query: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_query")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

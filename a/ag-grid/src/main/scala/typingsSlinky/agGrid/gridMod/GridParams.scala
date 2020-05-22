@@ -6,103 +6,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridParams extends js.Object {
   @JSName("$compile")
-  var $compile: js.UndefOr[js.Any] = js.native
+  var $compile: js.UndefOr[js.Any] = js.undefined
   @JSName("$scope")
-  var $scope: js.UndefOr[js.Any] = js.native
-  var frameworkFactory: js.UndefOr[IFrameworkFactory] = js.native
-  var globalEventListener: js.UndefOr[js.Function] = js.native
-  var quickFilterOnScope: js.UndefOr[js.Any] = js.native
-  var seedBeanInstances: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var $scope: js.UndefOr[js.Any] = js.undefined
+  var frameworkFactory: js.UndefOr[IFrameworkFactory] = js.undefined
+  var globalEventListener: js.UndefOr[js.Function] = js.undefined
+  var quickFilterOnScope: js.UndefOr[js.Any] = js.undefined
+  var seedBeanInstances: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object GridParams {
   @scala.inline
-  def apply(): GridParams = {
+  def apply(
+    $compile: js.Any = null,
+    $scope: js.Any = null,
+    frameworkFactory: IFrameworkFactory = null,
+    globalEventListener: js.Function = null,
+    quickFilterOnScope: js.Any = null,
+    seedBeanInstances: StringDictionary[js.Any] = null
+  ): GridParams = {
     val __obj = js.Dynamic.literal()
+    if ($compile != null) __obj.updateDynamic("$compile")($compile.asInstanceOf[js.Any])
+    if ($scope != null) __obj.updateDynamic("$scope")($scope.asInstanceOf[js.Any])
+    if (frameworkFactory != null) __obj.updateDynamic("frameworkFactory")(frameworkFactory.asInstanceOf[js.Any])
+    if (globalEventListener != null) __obj.updateDynamic("globalEventListener")(globalEventListener.asInstanceOf[js.Any])
+    if (quickFilterOnScope != null) __obj.updateDynamic("quickFilterOnScope")(quickFilterOnScope.asInstanceOf[js.Any])
+    if (seedBeanInstances != null) __obj.updateDynamic("seedBeanInstances")(seedBeanInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridParams]
   }
-  @scala.inline
-  implicit class GridParamsOps[Self <: GridParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$compile(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$compile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$compile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$compile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$scope(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$scope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameworkFactory(value: IFrameworkFactory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameworkFactory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameworkFactory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameworkFactory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalEventListener(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalEventListener")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalEventListener: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalEventListener")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuickFilterOnScope(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickFilterOnScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuickFilterOnScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quickFilterOnScope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeedBeanInstances(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seedBeanInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeedBeanInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seedBeanInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

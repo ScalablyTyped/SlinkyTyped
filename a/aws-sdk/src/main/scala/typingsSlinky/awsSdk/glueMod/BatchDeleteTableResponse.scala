@@ -14,29 +14,10 @@ trait BatchDeleteTableResponse extends js.Object {
 
 object BatchDeleteTableResponse {
   @scala.inline
-  def apply(): BatchDeleteTableResponse = {
+  def apply(Errors: TableErrors = null): BatchDeleteTableResponse = {
     val __obj = js.Dynamic.literal()
+    if (Errors != null) __obj.updateDynamic("Errors")(Errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteTableResponse]
   }
-  @scala.inline
-  implicit class BatchDeleteTableResponseOps[Self <: BatchDeleteTableResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrors(value: TableErrors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

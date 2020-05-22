@@ -5,31 +5,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Frame extends StackData {
   @JSName("file")
-  var file_Frame: String = js.native
+  var file_Frame: String
 }
 
 object Frame {
   @scala.inline
-  def apply(file: String): Frame = {
+  def apply(
+    file: String,
+    column: js.UndefOr[Double] = js.undefined,
+    constructor: js.UndefOr[Boolean] = js.undefined,
+    evalOrigin: String = null,
+    function: String = null,
+    line: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    native: js.UndefOr[Boolean] = js.undefined
+  ): Frame = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constructor)) __obj.updateDynamic("constructor")(constructor.get.asInstanceOf[js.Any])
+    if (evalOrigin != null) __obj.updateDynamic("evalOrigin")(evalOrigin.asInstanceOf[js.Any])
+    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
+    if (!js.isUndefined(line)) __obj.updateDynamic("line")(line.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(native)) __obj.updateDynamic("native")(native.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Frame]
   }
-  @scala.inline
-  implicit class FrameOps[Self <: Frame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

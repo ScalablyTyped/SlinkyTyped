@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LangAccessibilitySeriesTypeDescriptionsOptions extends js.Object {
-  var arearange: js.UndefOr[String] = js.native
-  var areasplinerange: js.UndefOr[String] = js.native
-  var boxplot: js.UndefOr[String] = js.native
-  var bubble: js.UndefOr[String] = js.native
-  var columnrange: js.UndefOr[String] = js.native
-  var errorbar: js.UndefOr[String] = js.native
-  var funnel: js.UndefOr[String] = js.native
-  var pyramid: js.UndefOr[String] = js.native
-  var waterfall: js.UndefOr[String] = js.native
+  var arearange: js.UndefOr[String] = js.undefined
+  var areasplinerange: js.UndefOr[String] = js.undefined
+  var boxplot: js.UndefOr[String] = js.undefined
+  var bubble: js.UndefOr[String] = js.undefined
+  var columnrange: js.UndefOr[String] = js.undefined
+  var errorbar: js.UndefOr[String] = js.undefined
+  var funnel: js.UndefOr[String] = js.undefined
+  var pyramid: js.UndefOr[String] = js.undefined
+  var waterfall: js.UndefOr[String] = js.undefined
 }
 
 object LangAccessibilitySeriesTypeDescriptionsOptions {
   @scala.inline
-  def apply(): LangAccessibilitySeriesTypeDescriptionsOptions = {
+  def apply(
+    arearange: String = null,
+    areasplinerange: String = null,
+    boxplot: String = null,
+    bubble: String = null,
+    columnrange: String = null,
+    errorbar: String = null,
+    funnel: String = null,
+    pyramid: String = null,
+    waterfall: String = null
+  ): LangAccessibilitySeriesTypeDescriptionsOptions = {
     val __obj = js.Dynamic.literal()
+    if (arearange != null) __obj.updateDynamic("arearange")(arearange.asInstanceOf[js.Any])
+    if (areasplinerange != null) __obj.updateDynamic("areasplinerange")(areasplinerange.asInstanceOf[js.Any])
+    if (boxplot != null) __obj.updateDynamic("boxplot")(boxplot.asInstanceOf[js.Any])
+    if (bubble != null) __obj.updateDynamic("bubble")(bubble.asInstanceOf[js.Any])
+    if (columnrange != null) __obj.updateDynamic("columnrange")(columnrange.asInstanceOf[js.Any])
+    if (errorbar != null) __obj.updateDynamic("errorbar")(errorbar.asInstanceOf[js.Any])
+    if (funnel != null) __obj.updateDynamic("funnel")(funnel.asInstanceOf[js.Any])
+    if (pyramid != null) __obj.updateDynamic("pyramid")(pyramid.asInstanceOf[js.Any])
+    if (waterfall != null) __obj.updateDynamic("waterfall")(waterfall.asInstanceOf[js.Any])
     __obj.asInstanceOf[LangAccessibilitySeriesTypeDescriptionsOptions]
   }
-  @scala.inline
-  implicit class LangAccessibilitySeriesTypeDescriptionsOptionsOps[Self <: LangAccessibilitySeriesTypeDescriptionsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArearange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arearange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArearange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arearange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAreasplinerange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areasplinerange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreasplinerange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areasplinerange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxplot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxplot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxplot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxplot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBubble(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bubble")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBubble: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bubble")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnrange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnrange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnrange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnrange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorbar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunnel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunnel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("funnel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPyramid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPyramid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaterfall(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waterfall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaterfall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waterfall")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

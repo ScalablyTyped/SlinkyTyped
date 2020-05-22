@@ -12,23 +12,22 @@ import scala.scalajs.js.annotation._
   * allows to let the user to select a cell range.
   * @see com.sun.star.sheet.SpreadsheetView
   */
-@js.native
 trait XRangeSelection extends XInterface {
   /** aborts the range selection. */
-  def abortRangeSelection(): Unit = js.native
+  def abortRangeSelection(): Unit
   /** adds a listener that is notified when the selected range is changed. */
-  def addRangeSelectionChangeListener(aListener: XRangeSelectionChangeListener): Unit = js.native
+  def addRangeSelectionChangeListener(aListener: XRangeSelectionChangeListener): Unit
   /** adds a listener that is notified when range selection is completed or aborted. */
-  def addRangeSelectionListener(aListener: XRangeSelectionListener): Unit = js.native
+  def addRangeSelectionListener(aListener: XRangeSelectionListener): Unit
   /** removes the specified listener. */
-  def removeRangeSelectionChangeListener(aListener: XRangeSelectionChangeListener): Unit = js.native
+  def removeRangeSelectionChangeListener(aListener: XRangeSelectionChangeListener): Unit
   /** removes the specified listener. */
-  def removeRangeSelectionListener(aListener: XRangeSelectionListener): Unit = js.native
+  def removeRangeSelectionListener(aListener: XRangeSelectionListener): Unit
   /**
     * starts the range selection.
     * @param aArguments the {@link RangeSelectionArguments} that specify how the range selection is done.
     */
-  def startRangeSelection(aArguments: SeqEquiv[PropertyValue]): Unit = js.native
+  def startRangeSelection(aArguments: SeqEquiv[PropertyValue]): Unit
 }
 
 object XRangeSelection {
@@ -47,49 +46,5 @@ object XRangeSelection {
     val __obj = js.Dynamic.literal(abortRangeSelection = js.Any.fromFunction0(abortRangeSelection), acquire = js.Any.fromFunction0(acquire), addRangeSelectionChangeListener = js.Any.fromFunction1(addRangeSelectionChangeListener), addRangeSelectionListener = js.Any.fromFunction1(addRangeSelectionListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeRangeSelectionChangeListener = js.Any.fromFunction1(removeRangeSelectionChangeListener), removeRangeSelectionListener = js.Any.fromFunction1(removeRangeSelectionListener), startRangeSelection = js.Any.fromFunction1(startRangeSelection))
     __obj.asInstanceOf[XRangeSelection]
   }
-  @scala.inline
-  implicit class XRangeSelectionOps[Self <: XRangeSelection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortRangeSelection(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abortRangeSelection")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAddRangeSelectionChangeListener(value: XRangeSelectionChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRangeSelectionChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddRangeSelectionListener(value: XRangeSelectionListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRangeSelectionListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveRangeSelectionChangeListener(value: XRangeSelectionChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRangeSelectionChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveRangeSelectionListener(value: XRangeSelectionListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRangeSelectionListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStartRangeSelection(value: SeqEquiv[PropertyValue] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startRangeSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

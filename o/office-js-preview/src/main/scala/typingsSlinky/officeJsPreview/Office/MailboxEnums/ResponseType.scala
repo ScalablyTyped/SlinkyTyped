@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @js.native
 sealed trait ResponseType extends js.Object
 
-/**  
+/**
   * Specifies the type of response to a meeting invitation.
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @JSGlobal("Office.MailboxEnums.ResponseType")

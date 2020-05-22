@@ -22,41 +22,10 @@ trait PutTargetsRequest extends js.Object {
 
 object PutTargetsRequest {
   @scala.inline
-  def apply(Rule: RuleName, Targets: TargetList): PutTargetsRequest = {
+  def apply(Rule: RuleName, Targets: TargetList, EventBusName: EventBusName = null): PutTargetsRequest = {
     val __obj = js.Dynamic.literal(Rule = Rule.asInstanceOf[js.Any], Targets = Targets.asInstanceOf[js.Any])
+    if (EventBusName != null) __obj.updateDynamic("EventBusName")(EventBusName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutTargetsRequest]
   }
-  @scala.inline
-  implicit class PutTargetsRequestOps[Self <: PutTargetsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRule(value: RuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargets(value: TargetList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Targets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventBusName(value: EventBusName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventBusName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventBusName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

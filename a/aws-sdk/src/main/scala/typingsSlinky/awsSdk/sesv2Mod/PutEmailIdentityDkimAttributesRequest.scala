@@ -18,35 +18,10 @@ trait PutEmailIdentityDkimAttributesRequest extends js.Object {
 
 object PutEmailIdentityDkimAttributesRequest {
   @scala.inline
-  def apply(EmailIdentity: Identity): PutEmailIdentityDkimAttributesRequest = {
+  def apply(EmailIdentity: Identity, SigningEnabled: js.UndefOr[Enabled] = js.undefined): PutEmailIdentityDkimAttributesRequest = {
     val __obj = js.Dynamic.literal(EmailIdentity = EmailIdentity.asInstanceOf[js.Any])
+    if (!js.isUndefined(SigningEnabled)) __obj.updateDynamic("SigningEnabled")(SigningEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEmailIdentityDkimAttributesRequest]
   }
-  @scala.inline
-  implicit class PutEmailIdentityDkimAttributesRequestOps[Self <: PutEmailIdentityDkimAttributesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailIdentity(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSigningEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

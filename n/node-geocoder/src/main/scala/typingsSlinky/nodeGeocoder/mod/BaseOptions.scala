@@ -7,82 +7,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseOptions extends js.Object {
-  var formatter: js.UndefOr[js.Any] = js.native
-  var formatterPattern: js.UndefOr[String] = js.native
-  var httpAdapter: js.UndefOr[https | http | request] = js.native
-  var provider: String = js.native
-  var timeout: js.UndefOr[Double] = js.native
+  var formatter: js.UndefOr[js.Any] = js.undefined
+  var formatterPattern: js.UndefOr[String] = js.undefined
+  var httpAdapter: js.UndefOr[https | http | request] = js.undefined
+  var provider: String
+  var timeout: js.UndefOr[Double] = js.undefined
 }
 
 object BaseOptions {
   @scala.inline
-  def apply(provider: String): BaseOptions = {
+  def apply(
+    provider: String,
+    formatter: js.Any = null,
+    formatterPattern: String = null,
+    httpAdapter: https | http | request = null,
+    timeout: js.UndefOr[Double] = js.undefined
+  ): BaseOptions = {
     val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
+    if (formatterPattern != null) __obj.updateDynamic("formatterPattern")(formatterPattern.asInstanceOf[js.Any])
+    if (httpAdapter != null) __obj.updateDynamic("httpAdapter")(httpAdapter.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseOptions]
   }
-  @scala.inline
-  implicit class BaseOptionsOps[Self <: BaseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvider(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatterPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatterPattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatterPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatterPattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpAdapter(value: https | http | request): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpAdapter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpAdapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

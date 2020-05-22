@@ -26,59 +26,17 @@ trait RegisterCertificateRequest extends js.Object {
 
 object RegisterCertificateRequest {
   @scala.inline
-  def apply(certificatePem: CertificatePem): RegisterCertificateRequest = {
+  def apply(
+    certificatePem: CertificatePem,
+    caCertificatePem: CertificatePem = null,
+    setAsActive: js.UndefOr[SetAsActiveFlag] = js.undefined,
+    status: CertificateStatus = null
+  ): RegisterCertificateRequest = {
     val __obj = js.Dynamic.literal(certificatePem = certificatePem.asInstanceOf[js.Any])
+    if (caCertificatePem != null) __obj.updateDynamic("caCertificatePem")(caCertificatePem.asInstanceOf[js.Any])
+    if (!js.isUndefined(setAsActive)) __obj.updateDynamic("setAsActive")(setAsActive.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterCertificateRequest]
   }
-  @scala.inline
-  implicit class RegisterCertificateRequestOps[Self <: RegisterCertificateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificatePem(value: CertificatePem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificatePem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaCertificatePem(value: CertificatePem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificatePem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaCertificatePem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificatePem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetAsActive(value: SetAsActiveFlag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetAsActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: CertificateStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

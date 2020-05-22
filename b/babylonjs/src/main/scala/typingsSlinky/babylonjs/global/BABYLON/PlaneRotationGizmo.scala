@@ -48,5 +48,10 @@ class PlaneRotationGizmo protected ()
     parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo],
     useEulerRotation: Boolean
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

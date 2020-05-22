@@ -9,5 +9,6 @@ package object mod {
   type IArrInterface = org.scalablytyped.runtime.StringDictionary[js.Array[java.lang.String]]
   type ICalculations = org.scalablytyped.runtime.StringDictionary[typingsSlinky.nodal.mod.ICalculation]
   type IModelData = org.scalablytyped.runtime.StringDictionary[js.Array[js.Any]]
+  type InterfaceType = typingsSlinky.nodal.mod.IArrInterface | java.lang.String
   type Query = js.Any
 }

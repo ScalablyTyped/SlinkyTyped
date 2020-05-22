@@ -4,108 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotMfiAccessibilityOptions extends js.Object {
   /**
     * (Highstock) Provide a description of the series, announced to screen
     * readers.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * (Highstock) Enable/disable accessibility functionality for a specific
     * series.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) Expose only the series element to screen readers, not its
     * points.
     */
-  var exposeAsGroupOnly: js.UndefOr[Boolean] = js.native
+  var exposeAsGroupOnly: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highstock) Keyboard navigation for a series
     */
-  var keyboardNavigation: js.UndefOr[js.Object | PlotMfiAccessibilityKeyboardNavigationOptions] = js.native
+  var keyboardNavigation: js.UndefOr[js.Object | PlotMfiAccessibilityKeyboardNavigationOptions] = js.undefined
   /**
     * (Highstock) Formatter function to use instead of the default for point
     * descriptions. Same as `accessibility.pointDescriptionFormatter`, but for
     * a single series.
     */
-  var pointDescriptionFormatter: js.UndefOr[js.Function] = js.native
+  var pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined
 }
 
 object PlotMfiAccessibilityOptions {
   @scala.inline
-  def apply(): PlotMfiAccessibilityOptions = {
+  def apply(
+    description: String = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    exposeAsGroupOnly: js.UndefOr[Boolean] = js.undefined,
+    keyboardNavigation: js.Object | PlotMfiAccessibilityKeyboardNavigationOptions = null,
+    pointDescriptionFormatter: js.Function = null
+  ): PlotMfiAccessibilityOptions = {
     val __obj = js.Dynamic.literal()
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(exposeAsGroupOnly)) __obj.updateDynamic("exposeAsGroupOnly")(exposeAsGroupOnly.get.asInstanceOf[js.Any])
+    if (keyboardNavigation != null) __obj.updateDynamic("keyboardNavigation")(keyboardNavigation.asInstanceOf[js.Any])
+    if (pointDescriptionFormatter != null) __obj.updateDynamic("pointDescriptionFormatter")(pointDescriptionFormatter.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotMfiAccessibilityOptions]
   }
-  @scala.inline
-  implicit class PlotMfiAccessibilityOptionsOps[Self <: PlotMfiAccessibilityOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExposeAsGroupOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeAsGroupOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExposeAsGroupOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exposeAsGroupOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardNavigation(value: js.Object | PlotMfiAccessibilityKeyboardNavigationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointDescriptionFormatter(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointDescriptionFormatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointDescriptionFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointDescriptionFormatter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

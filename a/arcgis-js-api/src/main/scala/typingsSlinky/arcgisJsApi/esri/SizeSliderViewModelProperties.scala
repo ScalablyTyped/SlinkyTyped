@@ -1,44 +1,51 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.average
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.max
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.min
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.tick
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SizeSliderViewModelProperties extends SmartMappingSliderViewModelProperties {
   /**
     * The size stops from the [SizeVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html) to link to the slider.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider-SizeSliderViewModel.html#stops)
     */
-  var stops: js.UndefOr[js.Array[SizeStopProperties]] = js.native
+  var stops: js.UndefOr[js.Array[SizeStopProperties]] = js.undefined
 }
 
 object SizeSliderViewModelProperties {
   @scala.inline
-  def apply(): SizeSliderViewModelProperties = {
+  def apply(
+    inputFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
+    inputParseFunction: (/* value */ String, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => Double = null,
+    labelFormatFunction: (/* value */ Double, /* type */ js.UndefOr[average | min | max | tick | value], /* index */ js.UndefOr[Double]) => String = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    precision: js.UndefOr[Double] = js.undefined,
+    stops: js.Array[SizeStopProperties] = null,
+    thumbsConstrained: js.UndefOr[Boolean] = js.undefined,
+    values: js.Array[Double] = null,
+    zoomOptions: SmartMappingSliderViewModelZoomOptions = null,
+    zoomingEnabled: js.UndefOr[Boolean] = js.undefined
+  ): SizeSliderViewModelProperties = {
     val __obj = js.Dynamic.literal()
+    if (inputFormatFunction != null) __obj.updateDynamic("inputFormatFunction")(js.Any.fromFunction3(inputFormatFunction))
+    if (inputParseFunction != null) __obj.updateDynamic("inputParseFunction")(js.Any.fromFunction3(inputParseFunction))
+    if (labelFormatFunction != null) __obj.updateDynamic("labelFormatFunction")(js.Any.fromFunction3(labelFormatFunction))
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (stops != null) __obj.updateDynamic("stops")(stops.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumbsConstrained)) __obj.updateDynamic("thumbsConstrained")(thumbsConstrained.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (zoomOptions != null) __obj.updateDynamic("zoomOptions")(zoomOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomingEnabled)) __obj.updateDynamic("zoomingEnabled")(zoomingEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizeSliderViewModelProperties]
   }
-  @scala.inline
-  implicit class SizeSliderViewModelPropertiesOps[Self <: SizeSliderViewModelProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStops(value: js.Array[SizeStopProperties]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stops")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

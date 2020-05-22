@@ -19,41 +19,11 @@ trait PolicyAttachmentState extends js.Object {
 
 object PolicyAttachmentState {
   @scala.inline
-  def apply(): PolicyAttachmentState = {
+  def apply(policyId: Input[String] = null, targetId: Input[String] = null): PolicyAttachmentState = {
     val __obj = js.Dynamic.literal()
+    if (policyId != null) __obj.updateDynamic("policyId")(policyId.asInstanceOf[js.Any])
+    if (targetId != null) __obj.updateDynamic("targetId")(targetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyAttachmentState]
   }
-  @scala.inline
-  implicit class PolicyAttachmentStateOps[Self <: PolicyAttachmentState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

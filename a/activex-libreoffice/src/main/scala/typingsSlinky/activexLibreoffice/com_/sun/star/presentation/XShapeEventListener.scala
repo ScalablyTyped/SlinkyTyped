@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * Listener interface to receive shape-specific events.
   * @since OOo 2.4
   */
-@js.native
 trait XShapeEventListener extends XEventListener {
   /**
     * Notify a clicked shape.
@@ -22,7 +21,7 @@ trait XShapeEventListener extends XEventListener {
     * @param xShape The shape that was clicked upon.
     * @param aOriginalEvent The original mouse click event that generated this notification.
     */
-  def click(xShape: XShape, aOriginalEvent: MouseEvent): Unit = js.native
+  def click(xShape: XShape, aOriginalEvent: MouseEvent): Unit
 }
 
 object XShapeEventListener {
@@ -37,19 +36,5 @@ object XShapeEventListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), click = js.Any.fromFunction2(click), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XShapeEventListener]
   }
-  @scala.inline
-  implicit class XShapeEventListenerOps[Self <: XShapeEventListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClick(value: (XShape, MouseEvent) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

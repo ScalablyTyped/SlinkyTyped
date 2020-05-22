@@ -33,60 +33,14 @@ object UpdateDetectorModelRequest {
   def apply(
     detectorModelDefinition: DetectorModelDefinition,
     detectorModelName: DetectorModelName,
-    roleArn: AmazonResourceName
+    roleArn: AmazonResourceName,
+    detectorModelDescription: DetectorModelDescription = null,
+    evaluationMethod: EvaluationMethod = null
   ): UpdateDetectorModelRequest = {
     val __obj = js.Dynamic.literal(detectorModelDefinition = detectorModelDefinition.asInstanceOf[js.Any], detectorModelName = detectorModelName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    if (detectorModelDescription != null) __obj.updateDynamic("detectorModelDescription")(detectorModelDescription.asInstanceOf[js.Any])
+    if (evaluationMethod != null) __obj.updateDynamic("evaluationMethod")(evaluationMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDetectorModelRequest]
   }
-  @scala.inline
-  implicit class UpdateDetectorModelRequestOps[Self <: UpdateDetectorModelRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetectorModelDefinition(value: DetectorModelDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetectorModelName(value: DetectorModelName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoleArn(value: AmazonResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDetectorModelDescription(value: DetectorModelDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetectorModelDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvaluationMethod(value: EvaluationMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluationMethod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

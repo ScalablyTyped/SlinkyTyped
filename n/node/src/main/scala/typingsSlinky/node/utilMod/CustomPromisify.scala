@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait CustomPromisify[TCustom /* <: js.Function */] extends js.Object
 
-object CustomPromisify {
-  @scala.inline
-  implicit def apply[TCustom](value: CustomPromisifyLegacy[TCustom]): CustomPromisify[TCustom] = value.asInstanceOf[CustomPromisify[TCustom]]
-  @scala.inline
-  implicit def apply[TCustom](value: CustomPromisifySymbol[TCustom]): CustomPromisify[TCustom] = value.asInstanceOf[CustomPromisify[TCustom]]
-}
-

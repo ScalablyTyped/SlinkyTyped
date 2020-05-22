@@ -4,93 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactWidgetsCommonProps extends js.Object {
   /**
     * Disable the widget, if an Array of values is passed in only those values will be disabled.
     * @default false
     */
-  var disabled: js.UndefOr[Boolean | js.Array[_]] = js.native
+  var disabled: js.UndefOr[Boolean | js.Array[_]] = js.undefined
   /**
     * Used to label and annotate aria- attributes
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Mark whether the SelectList should render right-to-left. This property can also be
     * implicitly passed to the widget through a childContext prop (isRtl) this allows higher
     * level application components to specify the direction.
     * @default false
     */
-  var isRtl: js.UndefOr[Boolean] = js.native
+  var isRtl: js.UndefOr[Boolean] = js.undefined
   /**
     * Place the widget in a read-only mode, If an Array of values is passed in only those
     * values will be read-only.
     * @default false
     */
-  var readOnly: js.UndefOr[Boolean | js.Array[_]] = js.native
+  var readOnly: js.UndefOr[Boolean | js.Array[_]] = js.undefined
 }
 
 object ReactWidgetsCommonProps {
   @scala.inline
-  def apply(): ReactWidgetsCommonProps = {
+  def apply(
+    disabled: Boolean | js.Array[_] = null,
+    id: String = null,
+    isRtl: js.UndefOr[Boolean] = js.undefined,
+    readOnly: Boolean | js.Array[_] = null
+  ): ReactWidgetsCommonProps = {
     val __obj = js.Dynamic.literal()
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.get.asInstanceOf[js.Any])
+    if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactWidgetsCommonProps]
   }
-  @scala.inline
-  implicit class ReactWidgetsCommonPropsOps[Self <: ReactWidgetsCommonProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisabled(value: Boolean | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRtl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

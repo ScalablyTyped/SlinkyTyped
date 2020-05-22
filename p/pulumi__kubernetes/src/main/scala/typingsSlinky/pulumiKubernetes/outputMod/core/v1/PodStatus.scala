@@ -8,39 +8,38 @@ import scala.scalajs.js.annotation._
   * PodStatus represents information about the status of a pod. Status may trail the actual state
   * of a system, especially if the node that hosts the pod cannot contact the control plane.
   */
-@js.native
 trait PodStatus extends js.Object {
   /**
     * Current service state of pod. More info:
     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
     */
-  val conditions: js.Array[PodCondition] = js.native
+  val conditions: js.Array[PodCondition]
   /**
     * The list has one entry per container in the manifest. Each entry is currently the output of
     * `docker inspect`. More info:
     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
     */
-  val containerStatuses: js.Array[ContainerStatus] = js.native
+  val containerStatuses: js.Array[ContainerStatus]
   /**
     * Status for any ephemeral containers that have run in this pod. This field is alpha-level
     * and is only populated by servers that enable the EphemeralContainers feature.
     */
-  val ephemeralContainerStatuses: js.Array[ContainerStatus] = js.native
+  val ephemeralContainerStatuses: js.Array[ContainerStatus]
   /**
     * IP address of the host to which the pod is assigned. Empty if not yet scheduled.
     */
-  val hostIP: String = js.native
+  val hostIP: String
   /**
     * The list has one entry per init container in the manifest. The most recent successful init
     * container will have ready = true, the most recently started container will have startTime
     * set. More info:
     * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
     */
-  val initContainerStatuses: js.Array[ContainerStatus] = js.native
+  val initContainerStatuses: js.Array[ContainerStatus]
   /**
     * A human readable message indicating details about why the pod is in this condition.
     */
-  val message: String = js.native
+  val message: String
   /**
     * nominatedNodeName is set only when this pod preempts other pods on the node, but it cannot
     * be scheduled right away as preemption victims receive their graceful termination periods.
@@ -50,7 +49,7 @@ trait PodStatus extends js.Object {
     * after preemption. As a result, this field may be different than PodSpec.nodeName when the
     * pod is scheduled.
     */
-  val nominatedNodeName: String = js.native
+  val nominatedNodeName: String
   /**
     * The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle.
     * The conditions array, the reason and message fields, and the individual container status
@@ -69,34 +68,34 @@ trait PodStatus extends js.Object {
     *
     * More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase
     */
-  val phase: String = js.native
+  val phase: String
   /**
     * IP address allocated to the pod. Routable at least within the cluster. Empty if not yet
     * allocated.
     */
-  val podIP: String = js.native
+  val podIP: String
   /**
     * podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th
     * entry must match the podIP field. Pods may be allocated at most 1 value for each of IPv4
     * and IPv6. This list is empty if no IPs have been allocated yet.
     */
-  val podIPs: js.Array[PodIP] = js.native
+  val podIPs: js.Array[PodIP]
   /**
     * The Quality of Service (QOS) classification assigned to the pod based on resource
     * requirements See PodQOSClass type for available QOS classes More info:
     * https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
     */
-  val qosClass: String = js.native
+  val qosClass: String
   /**
     * A brief CamelCase message indicating details about why the pod is in this state. e.g.
     * 'Evicted'
     */
-  val reason: String = js.native
+  val reason: String
   /**
     * RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before
     * the Kubelet pulled the container image(s) for the pod.
     */
-  val startTime: String = js.native
+  val startTime: String
 }
 
 object PodStatus {
@@ -119,91 +118,5 @@ object PodStatus {
     val __obj = js.Dynamic.literal(conditions = conditions.asInstanceOf[js.Any], containerStatuses = containerStatuses.asInstanceOf[js.Any], ephemeralContainerStatuses = ephemeralContainerStatuses.asInstanceOf[js.Any], hostIP = hostIP.asInstanceOf[js.Any], initContainerStatuses = initContainerStatuses.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], nominatedNodeName = nominatedNodeName.asInstanceOf[js.Any], phase = phase.asInstanceOf[js.Any], podIP = podIP.asInstanceOf[js.Any], podIPs = podIPs.asInstanceOf[js.Any], qosClass = qosClass.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[PodStatus]
   }
-  @scala.inline
-  implicit class PodStatusOps[Self <: PodStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditions(value: js.Array[PodCondition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainerStatuses(value: js.Array[ContainerStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEphemeralContainerStatuses(value: js.Array[ContainerStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ephemeralContainerStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitContainerStatuses(value: js.Array[ContainerStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initContainerStatuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNominatedNodeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nominatedNodeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhase(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPodIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPodIPs(value: js.Array[PodIP]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("podIPs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQosClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qosClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

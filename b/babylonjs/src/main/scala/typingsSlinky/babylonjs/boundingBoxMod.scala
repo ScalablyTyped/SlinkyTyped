@@ -99,6 +99,21 @@ object boundingBoxMod extends js.Object {
       */
     def intersectsSphere(sphere: DeepImmutable[BoundingSphere]): Boolean = js.native
     /**
+      * Checks if a cullable object (mesh...) is in the camera frustum
+      * Unlike isInFrustum this cheks the full bounding box
+      * @param frustumPlanes Camera near/planes
+      * @returns true if the object is in frustum otherwise false
+      */
+    /* CompleteClass */
+    override def isCompletelyInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
+    /**
+      * Checks if the object or part of the object is in the frustum
+      * @param frustumPlanes Camera near/planes
+      * @returns true if the object is in frustum otherwise false
+      */
+    /* CompleteClass */
+    override def isInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
+    /**
       * Recreates the entire bounding box from scratch as if we call the constructor in place
       * @param min defines the new minimum vector (in local space)
       * @param max defines the new maximum vector (in local space)

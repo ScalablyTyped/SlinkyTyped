@@ -26,6 +26,10 @@ object SubMenu {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
     def onTitleClick(value: /* e */ TitleEventEntity => Unit): this.type = set("onTitleClick", js.Any.fromFunction1(value))
     @scala.inline
     def onTitleMouseEnter(value: /* e */ TitleEventEntity => Unit): this.type = set("onTitleMouseEnter", js.Any.fromFunction1(value))

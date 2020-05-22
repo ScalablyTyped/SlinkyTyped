@@ -22,41 +22,14 @@ trait UpdateBillingGroupRequest extends js.Object {
 
 object UpdateBillingGroupRequest {
   @scala.inline
-  def apply(billingGroupName: BillingGroupName, billingGroupProperties: BillingGroupProperties): UpdateBillingGroupRequest = {
+  def apply(
+    billingGroupName: BillingGroupName,
+    billingGroupProperties: BillingGroupProperties,
+    expectedVersion: js.UndefOr[OptionalVersion] = js.undefined
+  ): UpdateBillingGroupRequest = {
     val __obj = js.Dynamic.literal(billingGroupName = billingGroupName.asInstanceOf[js.Any], billingGroupProperties = billingGroupProperties.asInstanceOf[js.Any])
+    if (!js.isUndefined(expectedVersion)) __obj.updateDynamic("expectedVersion")(expectedVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateBillingGroupRequest]
   }
-  @scala.inline
-  implicit class UpdateBillingGroupRequestOps[Self <: UpdateBillingGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillingGroupName(value: BillingGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBillingGroupProperties(value: BillingGroupProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingGroupProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpectedVersion(value: OptionalVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpectedVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

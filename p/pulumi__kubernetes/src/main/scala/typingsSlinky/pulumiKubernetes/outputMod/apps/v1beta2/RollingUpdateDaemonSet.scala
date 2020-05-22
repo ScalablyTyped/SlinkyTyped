@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Spec to control the desired behavior of daemon set rolling update.
   */
-@js.native
 trait RollingUpdateDaemonSet extends js.Object {
   /**
     * The maximum number of DaemonSet pods that can be unavailable during the update. Value can
@@ -21,7 +20,7 @@ trait RollingUpdateDaemonSet extends js.Object {
     * DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet pods are
     * available at all times during the update.
     */
-  val maxUnavailable: Double | String = js.native
+  val maxUnavailable: Double | String
 }
 
 object RollingUpdateDaemonSet {
@@ -30,19 +29,5 @@ object RollingUpdateDaemonSet {
     val __obj = js.Dynamic.literal(maxUnavailable = maxUnavailable.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollingUpdateDaemonSet]
   }
-  @scala.inline
-  implicit class RollingUpdateDaemonSetOps[Self <: RollingUpdateDaemonSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxUnavailable(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

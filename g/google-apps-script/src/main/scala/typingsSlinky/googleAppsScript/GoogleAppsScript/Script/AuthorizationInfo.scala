@@ -15,10 +15,9 @@ import scala.scalajs.js.annotation._
   * all cases, scripts should call ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL),
   * since no other authorization mode requires that users grant authorization.
   */
-@js.native
 trait AuthorizationInfo extends js.Object {
-  def getAuthorizationStatus(): AuthorizationStatus = js.native
-  def getAuthorizationUrl(): String = js.native
+  def getAuthorizationStatus(): AuthorizationStatus
+  def getAuthorizationUrl(): String
 }
 
 object AuthorizationInfo {
@@ -27,25 +26,5 @@ object AuthorizationInfo {
     val __obj = js.Dynamic.literal(getAuthorizationStatus = js.Any.fromFunction0(getAuthorizationStatus), getAuthorizationUrl = js.Any.fromFunction0(getAuthorizationUrl))
     __obj.asInstanceOf[AuthorizationInfo]
   }
-  @scala.inline
-  implicit class AuthorizationInfoOps[Self <: AuthorizationInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetAuthorizationStatus(value: () => AuthorizationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthorizationStatus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAuthorizationUrl(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthorizationUrl")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

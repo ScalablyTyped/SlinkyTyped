@@ -4,270 +4,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BodyOptions extends js.Object {
-  var allowSleep: js.UndefOr[Boolean] = js.native
-  var angle: js.UndefOr[Double] = js.native
-  var angularDamping: js.UndefOr[Double] = js.native
-  var angularForce: js.UndefOr[Double] = js.native
-  var angularVelocity: js.UndefOr[Double] = js.native
-  var ccdIterations: js.UndefOr[Double] = js.native
-  var ccdSpeedThreshold: js.UndefOr[Double] = js.native
-  var collisionResponse: js.UndefOr[Boolean] = js.native
-  var fixedRotation: js.UndefOr[Boolean] = js.native
-  var fixedX: js.UndefOr[Boolean] = js.native
-  var fixedY: js.UndefOr[Boolean] = js.native
-  var force: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var gravityScale: js.UndefOr[Double] = js.native
-  var id: js.UndefOr[Double] = js.native
-  var mass: js.UndefOr[Double] = js.native
-  var position: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var sleepSpeedLimit: js.UndefOr[Double] = js.native
-  var sleepTimeLimit: js.UndefOr[Double] = js.native
-  var velocity: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var allowSleep: js.UndefOr[Boolean] = js.undefined
+  var angle: js.UndefOr[Double] = js.undefined
+  var angularDamping: js.UndefOr[Double] = js.undefined
+  var angularForce: js.UndefOr[Double] = js.undefined
+  var angularVelocity: js.UndefOr[Double] = js.undefined
+  var ccdIterations: js.UndefOr[Double] = js.undefined
+  var ccdSpeedThreshold: js.UndefOr[Double] = js.undefined
+  var collisionResponse: js.UndefOr[Boolean] = js.undefined
+  var fixedRotation: js.UndefOr[Boolean] = js.undefined
+  var fixedX: js.UndefOr[Boolean] = js.undefined
+  var fixedY: js.UndefOr[Boolean] = js.undefined
+  var force: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var gravityScale: js.UndefOr[Double] = js.undefined
+  var id: js.UndefOr[Double] = js.undefined
+  var mass: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var sleepSpeedLimit: js.UndefOr[Double] = js.undefined
+  var sleepTimeLimit: js.UndefOr[Double] = js.undefined
+  var velocity: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
 }
 
 object BodyOptions {
   @scala.inline
-  def apply(): BodyOptions = {
+  def apply(
+    allowSleep: js.UndefOr[Boolean] = js.undefined,
+    angle: js.UndefOr[Double] = js.undefined,
+    angularDamping: js.UndefOr[Double] = js.undefined,
+    angularForce: js.UndefOr[Double] = js.undefined,
+    angularVelocity: js.UndefOr[Double] = js.undefined,
+    ccdIterations: js.UndefOr[Double] = js.undefined,
+    ccdSpeedThreshold: js.UndefOr[Double] = js.undefined,
+    collisionResponse: js.UndefOr[Boolean] = js.undefined,
+    fixedRotation: js.UndefOr[Boolean] = js.undefined,
+    fixedX: js.UndefOr[Boolean] = js.undefined,
+    fixedY: js.UndefOr[Boolean] = js.undefined,
+    force: js.Tuple2[Double, Double] = null,
+    gravityScale: js.UndefOr[Double] = js.undefined,
+    id: js.UndefOr[Double] = js.undefined,
+    mass: js.UndefOr[Double] = js.undefined,
+    position: js.Tuple2[Double, Double] = null,
+    sleepSpeedLimit: js.UndefOr[Double] = js.undefined,
+    sleepTimeLimit: js.UndefOr[Double] = js.undefined,
+    velocity: js.Tuple2[Double, Double] = null
+  ): BodyOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowSleep)) __obj.updateDynamic("allowSleep")(allowSleep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angularDamping)) __obj.updateDynamic("angularDamping")(angularDamping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angularForce)) __obj.updateDynamic("angularForce")(angularForce.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angularVelocity)) __obj.updateDynamic("angularVelocity")(angularVelocity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ccdIterations)) __obj.updateDynamic("ccdIterations")(ccdIterations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ccdSpeedThreshold)) __obj.updateDynamic("ccdSpeedThreshold")(ccdSpeedThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(collisionResponse)) __obj.updateDynamic("collisionResponse")(collisionResponse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedRotation)) __obj.updateDynamic("fixedRotation")(fixedRotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedX)) __obj.updateDynamic("fixedX")(fixedX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixedY)) __obj.updateDynamic("fixedY")(fixedY.get.asInstanceOf[js.Any])
+    if (force != null) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
+    if (!js.isUndefined(gravityScale)) __obj.updateDynamic("gravityScale")(gravityScale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mass)) __obj.updateDynamic("mass")(mass.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(sleepSpeedLimit)) __obj.updateDynamic("sleepSpeedLimit")(sleepSpeedLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sleepTimeLimit)) __obj.updateDynamic("sleepTimeLimit")(sleepTimeLimit.get.asInstanceOf[js.Any])
+    if (velocity != null) __obj.updateDynamic("velocity")(velocity.asInstanceOf[js.Any])
     __obj.asInstanceOf[BodyOptions]
   }
-  @scala.inline
-  implicit class BodyOptionsOps[Self <: BodyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowSleep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSleep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSleep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSleep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngularDamping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularDamping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngularDamping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularDamping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngularForce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularForce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngularForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularForce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngularVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngularVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcdIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccdIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcdIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccdIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcdSpeedThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccdSpeedThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcdSpeedThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccdSpeedThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollisionResponse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollisionResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collisionResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedRotation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixedY(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixedY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravityScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravityScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravityScale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMass(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSleepSpeedLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleepSpeedLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSleepSpeedLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleepSpeedLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSleepTimeLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleepTimeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSleepTimeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sleepTimeLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVelocity(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

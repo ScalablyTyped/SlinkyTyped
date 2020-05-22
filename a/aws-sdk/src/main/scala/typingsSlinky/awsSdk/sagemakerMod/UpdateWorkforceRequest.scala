@@ -18,35 +18,10 @@ trait UpdateWorkforceRequest extends js.Object {
 
 object UpdateWorkforceRequest {
   @scala.inline
-  def apply(WorkforceName: WorkforceName): UpdateWorkforceRequest = {
+  def apply(WorkforceName: WorkforceName, SourceIpConfig: SourceIpConfig = null): UpdateWorkforceRequest = {
     val __obj = js.Dynamic.literal(WorkforceName = WorkforceName.asInstanceOf[js.Any])
+    if (SourceIpConfig != null) __obj.updateDynamic("SourceIpConfig")(SourceIpConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWorkforceRequest]
   }
-  @scala.inline
-  implicit class UpdateWorkforceRequestOps[Self <: UpdateWorkforceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkforceName(value: WorkforceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkforceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceIpConfig(value: SourceIpConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceIpConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

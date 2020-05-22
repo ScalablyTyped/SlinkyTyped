@@ -9,14 +9,13 @@ import scala.scalajs.js.annotation._
 /**
   * SodaDocuments represents the document for SODA read and write operations.
   */
-@js.native
 trait SodaDocument extends js.Object {
   /** Creation time of the document as a string in the UTC time zone using an ISO8601 format. */
-  val createdOn: js.UndefOr[String] = js.native
+  val createdOn: js.UndefOr[String] = js.undefined
   /** Unique key value for this document. */
-  val key: js.UndefOr[String] = js.native
+  val key: js.UndefOr[String] = js.undefined
   /** Last modified time of the document as a string in the UTC time zone using an ISO8601 format. */
-  val lastModified: String = js.native
+  val lastModified: String
   /**
     * An arbitrary string value designating the content media type. The recommendation when creating documents is to use a MIME type for the media type.
     * By default, collections store only JSON document content and this property will be ‘application/json’. This property will be null if the media type
@@ -25,9 +24,9 @@ trait SodaDocument extends js.Object {
     * 
     * @default 'application/json'
     */
-  val mediaType: js.UndefOr[String] = js.native
+  val mediaType: js.UndefOr[String] = js.undefined
   /** Version of the document. */
-  val version: String = js.native
+  val version: String
   /**
     * A synchronous method that returns the document content as an object.
     *
@@ -35,7 +34,7 @@ trait SodaDocument extends js.Object {
     *
     * @since 3.0
     */
-  def getContent(): Record[String, _] = js.native
+  def getContent(): Record[String, _]
   /**
     * A synchronous method that returns the document content as a Buffer.
     *
@@ -46,7 +45,7 @@ trait SodaDocument extends js.Object {
     *
     * @since 3.0
     */
-  def getContentAsBuffer(): Buffer = js.native
+  def getContentAsBuffer(): Buffer
   /**
     * A synchronous method that returns JSON document content as a String.
     *
@@ -56,7 +55,7 @@ trait SodaDocument extends js.Object {
     *
     * @since 3.0
     */
-  def getContentAsString(): String = js.native
+  def getContentAsString(): String
 }
 
 object SodaDocument {
@@ -66,84 +65,16 @@ object SodaDocument {
     getContentAsBuffer: () => Buffer,
     getContentAsString: () => String,
     lastModified: String,
-    version: String
+    version: String,
+    createdOn: String = null,
+    key: String = null,
+    mediaType: String = null
   ): SodaDocument = {
     val __obj = js.Dynamic.literal(getContent = js.Any.fromFunction0(getContent), getContentAsBuffer = js.Any.fromFunction0(getContentAsBuffer), getContentAsString = js.Any.fromFunction0(getContentAsString), lastModified = lastModified.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    if (createdOn != null) __obj.updateDynamic("createdOn")(createdOn.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (mediaType != null) __obj.updateDynamic("mediaType")(mediaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SodaDocument]
   }
-  @scala.inline
-  implicit class SodaDocumentOps[Self <: SodaDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetContent(value: () => Record[String, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentAsBuffer(value: () => Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentAsBuffer")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetContentAsString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContentAsString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLastModified(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

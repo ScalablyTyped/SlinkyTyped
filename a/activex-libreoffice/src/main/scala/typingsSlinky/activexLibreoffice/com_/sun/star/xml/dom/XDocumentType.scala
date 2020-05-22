@@ -5,32 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XDocumentType extends XNode {
   /** A NamedNodeMap containing the general entities, both external and internal, declared in the DTD. */
-  val Entities: XNamedNodeMap = js.native
+  val Entities: XNamedNodeMap
   /** The internal subset as a string, or null if there is none. */
-  val InternalSubset: String = js.native
+  val InternalSubset: String
   /** The name of DTD; i.e., the name immediately following the DOCTYPE keyword. */
-  val Name: String = js.native
+  val Name: String
   /** A NamedNodeMap containing the notations declared in the DTD. */
-  val Notations: XNamedNodeMap = js.native
+  val Notations: XNamedNodeMap
   /** The public identifier of the external subset. */
-  val PublicId: String = js.native
+  val PublicId: String
   /** The system identifier of the external subset. */
-  val SystemId: String = js.native
+  val SystemId: String
   /** A NamedNodeMap containing the general entities, both external and internal, declared in the DTD. */
-  def getEntities(): XNamedNodeMap = js.native
+  def getEntities(): XNamedNodeMap
   /** The internal subset as a string, or null if there is none. */
-  def getInternalSubset(): String = js.native
+  def getInternalSubset(): String
   /** The name of DTD; i.e., the name immediately following the DOCTYPE keyword. */
-  def getName(): String = js.native
+  def getName(): String
   /** A NamedNodeMap containing the notations declared in the DTD. */
-  def getNotations(): XNamedNodeMap = js.native
+  def getNotations(): XNamedNodeMap
   /** The public identifier of the external subset. */
-  def getPublicId(): String = js.native
+  def getPublicId(): String
   /** The system identifier of the external subset. */
-  def getSystemId(): String = js.native
+  def getSystemId(): String
 }
 
 object XDocumentType {
@@ -94,85 +93,5 @@ object XDocumentType {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], ChildNodes = ChildNodes.asInstanceOf[js.Any], Entities = Entities.asInstanceOf[js.Any], FirstChild = FirstChild.asInstanceOf[js.Any], InternalSubset = InternalSubset.asInstanceOf[js.Any], LastChild = LastChild.asInstanceOf[js.Any], LocalName = LocalName.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], NamespaceURI = NamespaceURI.asInstanceOf[js.Any], NextSibling = NextSibling.asInstanceOf[js.Any], NodeName = NodeName.asInstanceOf[js.Any], NodeType = NodeType.asInstanceOf[js.Any], NodeValue = NodeValue.asInstanceOf[js.Any], Notations = Notations.asInstanceOf[js.Any], OwnerDocument = OwnerDocument.asInstanceOf[js.Any], ParentNode = ParentNode.asInstanceOf[js.Any], Prefix = Prefix.asInstanceOf[js.Any], PreviousSibling = PreviousSibling.asInstanceOf[js.Any], PublicId = PublicId.asInstanceOf[js.Any], SystemId = SystemId.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), appendChild = js.Any.fromFunction1(appendChild), cloneNode = js.Any.fromFunction1(cloneNode), getAttributes = js.Any.fromFunction0(getAttributes), getChildNodes = js.Any.fromFunction0(getChildNodes), getEntities = js.Any.fromFunction0(getEntities), getFirstChild = js.Any.fromFunction0(getFirstChild), getInternalSubset = js.Any.fromFunction0(getInternalSubset), getLastChild = js.Any.fromFunction0(getLastChild), getLocalName = js.Any.fromFunction0(getLocalName), getName = js.Any.fromFunction0(getName), getNamespaceURI = js.Any.fromFunction0(getNamespaceURI), getNextSibling = js.Any.fromFunction0(getNextSibling), getNodeName = js.Any.fromFunction0(getNodeName), getNodeType = js.Any.fromFunction0(getNodeType), getNodeValue = js.Any.fromFunction0(getNodeValue), getNotations = js.Any.fromFunction0(getNotations), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getPrefix = js.Any.fromFunction0(getPrefix), getPreviousSibling = js.Any.fromFunction0(getPreviousSibling), getPublicId = js.Any.fromFunction0(getPublicId), getSystemId = js.Any.fromFunction0(getSystemId), hasAttributes = js.Any.fromFunction0(hasAttributes), hasChildNodes = js.Any.fromFunction0(hasChildNodes), insertBefore = js.Any.fromFunction2(insertBefore), isSupported = js.Any.fromFunction2(isSupported), normalize = js.Any.fromFunction0(normalize), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeChild = js.Any.fromFunction1(removeChild), replaceChild = js.Any.fromFunction2(replaceChild), setNodeValue = js.Any.fromFunction1(setNodeValue), setPrefix = js.Any.fromFunction1(setPrefix))
     __obj.asInstanceOf[XDocumentType]
   }
-  @scala.inline
-  implicit class XDocumentTypeOps[Self <: XDocumentType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntities(value: XNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInternalSubset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InternalSubset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotations(value: XNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Notations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSystemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SystemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetEntities(value: () => XNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntities")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInternalSubset(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInternalSubset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNotations(value: () => XNamedNodeMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNotations")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPublicId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPublicId")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetSystemId(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSystemId")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ApiSubAPI extends js.Object {
-  var api: SubAPI = js.native
+  var api: SubAPI
 }
 
 object ApiSubAPI {
@@ -16,19 +15,5 @@ object ApiSubAPI {
     val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiSubAPI]
   }
-  @scala.inline
-  implicit class ApiSubAPIOps[Self <: ApiSubAPI] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApi(value: SubAPI): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

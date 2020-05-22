@@ -4,6 +4,5 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait Request extends PrecacheURL
+trait Request extends js.Object
 

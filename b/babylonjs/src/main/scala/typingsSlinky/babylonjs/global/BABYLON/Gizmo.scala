@@ -14,5 +14,10 @@ class Gizmo ()
   extends typingsSlinky.babylonjs.BABYLON.Gizmo {
   def this(/** The utility layer the gizmo will be added to */
   gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

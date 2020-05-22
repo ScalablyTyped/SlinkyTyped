@@ -27,53 +27,16 @@ trait SchemaGoogleCloudVisionV1p4beta1CropHint extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1CropHint {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p4beta1CropHint = {
+  def apply(
+    boundingPoly: SchemaGoogleCloudVisionV1p4beta1BoundingPoly = null,
+    confidence: js.UndefOr[Double] = js.undefined,
+    importanceFraction: js.UndefOr[Double] = js.undefined
+  ): SchemaGoogleCloudVisionV1p4beta1CropHint = {
     val __obj = js.Dynamic.literal()
+    if (boundingPoly != null) __obj.updateDynamic("boundingPoly")(boundingPoly.asInstanceOf[js.Any])
+    if (!js.isUndefined(confidence)) __obj.updateDynamic("confidence")(confidence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(importanceFraction)) __obj.updateDynamic("importanceFraction")(importanceFraction.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1CropHint]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p4beta1CropHintOps[Self <: SchemaGoogleCloudVisionV1p4beta1CropHint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingPoly(value: SchemaGoogleCloudVisionV1p4beta1BoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingPoly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportanceFraction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importanceFraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportanceFraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importanceFraction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

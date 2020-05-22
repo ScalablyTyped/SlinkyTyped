@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExceptionHandlingScope extends js.Object {
-  def get_errorMessage(): String = js.native
-  def get_hasException(): Boolean = js.native
-  def get_processed(): Boolean = js.native
-  def get_serverErrorCode(): Double = js.native
-  def get_serverErrorDetails(): js.Any = js.native
-  def get_serverErrorTypeName(): String = js.native
-  def get_serverErrorValue(): String = js.native
-  def get_serverStackTrace(): String = js.native
-  def startCatch(): js.Any = js.native
-  def startFinally(): js.Any = js.native
-  def startScope(): js.Any = js.native
-  def startTry(): js.Any = js.native
+  def get_errorMessage(): String
+  def get_hasException(): Boolean
+  def get_processed(): Boolean
+  def get_serverErrorCode(): Double
+  def get_serverErrorDetails(): js.Any
+  def get_serverErrorTypeName(): String
+  def get_serverErrorValue(): String
+  def get_serverStackTrace(): String
+  def startCatch(): js.Any
+  def startFinally(): js.Any
+  def startScope(): js.Any
+  def startTry(): js.Any
 }
 
 object ExceptionHandlingScope {
@@ -39,85 +38,5 @@ object ExceptionHandlingScope {
     val __obj = js.Dynamic.literal(get_errorMessage = js.Any.fromFunction0(get_errorMessage), get_hasException = js.Any.fromFunction0(get_hasException), get_processed = js.Any.fromFunction0(get_processed), get_serverErrorCode = js.Any.fromFunction0(get_serverErrorCode), get_serverErrorDetails = js.Any.fromFunction0(get_serverErrorDetails), get_serverErrorTypeName = js.Any.fromFunction0(get_serverErrorTypeName), get_serverErrorValue = js.Any.fromFunction0(get_serverErrorValue), get_serverStackTrace = js.Any.fromFunction0(get_serverStackTrace), startCatch = js.Any.fromFunction0(startCatch), startFinally = js.Any.fromFunction0(startFinally), startScope = js.Any.fromFunction0(startScope), startTry = js.Any.fromFunction0(startTry))
     __obj.asInstanceOf[ExceptionHandlingScope]
   }
-  @scala.inline
-  implicit class ExceptionHandlingScopeOps[Self <: ExceptionHandlingScope] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_errorMessage(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_errorMessage")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_hasException(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_hasException")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_processed(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_processed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_serverErrorCode(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_serverErrorCode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_serverErrorDetails(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_serverErrorDetails")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_serverErrorTypeName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_serverErrorTypeName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_serverErrorValue(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_serverErrorValue")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_serverStackTrace(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_serverStackTrace")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartCatch(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCatch")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartFinally(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startFinally")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartScope(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startScope")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartTry(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTry")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -22,16 +22,15 @@ import scala.scalajs.js.annotation._
   * that is opened in Excel on the web, and more than one user is editing the spreadsheet (coauthoring). 
   * Therefore, effectively the settingsChanged event is supported only in Excel on the web in coauthoring scenarios.
   */
-@js.native
 trait SettingsChangedEventArgs extends js.Object {
   /**
     * Gets an {@link Office.Settings} object that represents the settings that raised the settingsChanged event.
     */
-  var settings: Settings = js.native
+  var settings: Settings
   /**
     * Get an {@link Office.EventType} enumeration value that identifies the kind of event that was raised.
     */
-  var `type`: EventType = js.native
+  var `type`: EventType
 }
 
 object SettingsChangedEventArgs {
@@ -41,25 +40,5 @@ object SettingsChangedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettingsChangedEventArgs]
   }
-  @scala.inline
-  implicit class SettingsChangedEventArgsOps[Self <: SettingsChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSettings(value: Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: EventType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

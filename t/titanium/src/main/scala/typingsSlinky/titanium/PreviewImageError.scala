@@ -7,40 +7,28 @@ import scala.scalajs.js.annotation._
 /**
   * The parameter passed to the `error` callback of <PreviewImageOptions>.
   */
-@js.native
 trait PreviewImageError extends FailureResponse {
   /**
-  	 * Description of the error.
-  	 * @deprecated
-  	 */
-  var message: js.UndefOr[java.lang.String] = js.native
+    * Description of the error.
+    * @deprecated
+    */
+  var message: js.UndefOr[java.lang.String] = js.undefined
 }
 
 object PreviewImageError {
   @scala.inline
-  def apply(): PreviewImageError = {
+  def apply(
+    code: js.UndefOr[Double] = js.undefined,
+    error: java.lang.String = null,
+    message: java.lang.String = null,
+    success: js.UndefOr[Boolean] = js.undefined
+  ): PreviewImageError = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(code)) __obj.updateDynamic("code")(code.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(success)) __obj.updateDynamic("success")(success.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviewImageError]
   }
-  @scala.inline
-  implicit class PreviewImageErrorOps[Self <: PreviewImageError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

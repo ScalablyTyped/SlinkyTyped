@@ -4,128 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnDropEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the column data which is dragged
     */
-  var draggedColumn: js.UndefOr[js.Any] = js.native
+  var draggedColumn: js.UndefOr[js.Any] = js.undefined
   /** Returns the index of the column being dragged
     */
-  var draggedColumnIndex: js.UndefOr[Double] = js.native
+  var draggedColumnIndex: js.UndefOr[Double] = js.undefined
   /** Returns the control model values.
     */
-  var model: js.UndefOr[js.Any] = js.native
+  var model: js.UndefOr[js.Any] = js.undefined
   /** Returns the target column data
     */
-  var targetColumn: js.UndefOr[js.Any] = js.native
+  var targetColumn: js.UndefOr[js.Any] = js.undefined
   /** Returns the index of the target column
     */
-  var targetColumnIndex: js.UndefOr[Double] = js.native
+  var targetColumnIndex: js.UndefOr[Double] = js.undefined
   /** Returns the event Type.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object ColumnDropEventArgs {
   @scala.inline
-  def apply(): ColumnDropEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    draggedColumn: js.Any = null,
+    draggedColumnIndex: js.UndefOr[Double] = js.undefined,
+    model: js.Any = null,
+    targetColumn: js.Any = null,
+    targetColumnIndex: js.UndefOr[Double] = js.undefined,
+    `type`: String = null
+  ): ColumnDropEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (draggedColumn != null) __obj.updateDynamic("draggedColumn")(draggedColumn.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggedColumnIndex)) __obj.updateDynamic("draggedColumnIndex")(draggedColumnIndex.get.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (targetColumn != null) __obj.updateDynamic("targetColumn")(targetColumn.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetColumnIndex)) __obj.updateDynamic("targetColumnIndex")(targetColumnIndex.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnDropEventArgs]
   }
-  @scala.inline
-  implicit class ColumnDropEventArgsOps[Self <: ColumnDropEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggedColumn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggedColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggedColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggedColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedColumnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetColumn(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetColumnIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetColumnIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetColumnIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetColumnIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -35,12 +35,11 @@ import scala.scalajs.js.annotation._
   * lastTicketNumber
   * ScriptProperties
   */
-@js.native
 trait Lock extends js.Object {
-  def hasLock(): Boolean = js.native
-  def releaseLock(): Unit = js.native
-  def tryLock(timeoutInMillis: Integer): Boolean = js.native
-  def waitLock(timeoutInMillis: Integer): Unit = js.native
+  def hasLock(): Boolean
+  def releaseLock(): Unit
+  def tryLock(timeoutInMillis: Integer): Boolean
+  def waitLock(timeoutInMillis: Integer): Unit
 }
 
 object Lock {
@@ -54,37 +53,5 @@ object Lock {
     val __obj = js.Dynamic.literal(hasLock = js.Any.fromFunction0(hasLock), releaseLock = js.Any.fromFunction0(releaseLock), tryLock = js.Any.fromFunction1(tryLock), waitLock = js.Any.fromFunction1(waitLock))
     __obj.asInstanceOf[Lock]
   }
-  @scala.inline
-  implicit class LockOps[Self <: typingsSlinky.googleAppsScript.GoogleAppsScript.Lock.Lock] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasLock(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReleaseLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseLock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTryLock(value: Integer => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tryLock")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWaitLock(value: Integer => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitLock")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

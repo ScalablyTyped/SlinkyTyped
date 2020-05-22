@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollapsedEventUIParam extends js.Object {
   /**
-  	 * Used to get a reference the igSplitButton.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Used to get a reference the igSplitButton.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
 }
 
 object CollapsedEventUIParam {
   @scala.inline
-  def apply(): CollapsedEventUIParam = {
+  def apply(owner: js.Any = null): CollapsedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollapsedEventUIParam]
   }
-  @scala.inline
-  implicit class CollapsedEventUIParamOps[Self <: CollapsedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

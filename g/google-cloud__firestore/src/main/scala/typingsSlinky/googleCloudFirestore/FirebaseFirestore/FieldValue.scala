@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldValue extends js.Object {
   /**
     * Returns true if this `FieldValue` is equal to the provided one.
@@ -12,7 +11,7 @@ trait FieldValue extends js.Object {
     * @param other The `FieldValue` to compare against.
     * @return true if this `FieldValue` is equal to the provided one.
     */
-  def isEqual(other: FieldValue): Boolean = js.native
+  def isEqual(other: FieldValue): Boolean
 }
 
 object FieldValue {
@@ -21,19 +20,5 @@ object FieldValue {
     val __obj = js.Dynamic.literal(isEqual = js.Any.fromFunction1(isEqual))
     __obj.asInstanceOf[FieldValue]
   }
-  @scala.inline
-  implicit class FieldValueOps[Self <: FieldValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsEqual(value: FieldValue => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

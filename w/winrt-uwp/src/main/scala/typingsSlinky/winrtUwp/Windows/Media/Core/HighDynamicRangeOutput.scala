@@ -7,12 +7,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the results of a High Dynamic Range (HDR) analysis operation from the SceneAnalysisEffect . */
-@js.native
 trait HighDynamicRangeOutput extends js.Object {
   /** Gets a value indicating the certainty of the results of the HDR analysis. */
-  var certainty: Double = js.native
+  var certainty: Double
   /** Gets a set of FrameController objects representing the suggested frame controllers settings for capturing a variable photo sequence with the High Dynamic Range (HDR) technique. */
-  var frameControllers: IVectorView[FrameController] = js.native
+  var frameControllers: IVectorView[FrameController]
 }
 
 object HighDynamicRangeOutput {
@@ -21,25 +20,5 @@ object HighDynamicRangeOutput {
     val __obj = js.Dynamic.literal(certainty = certainty.asInstanceOf[js.Any], frameControllers = frameControllers.asInstanceOf[js.Any])
     __obj.asInstanceOf[HighDynamicRangeOutput]
   }
-  @scala.inline
-  implicit class HighDynamicRangeOutputOps[Self <: HighDynamicRangeOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertainty(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certainty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrameControllers(value: IVectorView[FrameController]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameControllers")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

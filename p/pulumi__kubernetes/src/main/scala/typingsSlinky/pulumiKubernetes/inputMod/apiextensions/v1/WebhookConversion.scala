@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
 /**
   * WebhookConversion describes how to call a conversion webhook
   */
-@js.native
 trait WebhookConversion extends js.Object {
   /**
     * clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
     */
-  var clientConfig: js.UndefOr[Input[WebhookClientConfig]] = js.native
+  var clientConfig: js.UndefOr[Input[WebhookClientConfig]] = js.undefined
   /**
     * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the
     * Webhook expects. The API server will use the first version in the list which it supports.
@@ -22,40 +21,18 @@ trait WebhookConversion extends js.Object {
     * versions and does not include any versions known to the API Server, calls to the webhook
     * will fail.
     */
-  var conversionReviewVersions: Input[js.Array[Input[String]]] = js.native
+  var conversionReviewVersions: Input[js.Array[Input[String]]]
 }
 
 object WebhookConversion {
   @scala.inline
-  def apply(conversionReviewVersions: Input[js.Array[Input[String]]]): WebhookConversion = {
+  def apply(
+    conversionReviewVersions: Input[js.Array[Input[String]]],
+    clientConfig: Input[WebhookClientConfig] = null
+  ): WebhookConversion = {
     val __obj = js.Dynamic.literal(conversionReviewVersions = conversionReviewVersions.asInstanceOf[js.Any])
+    if (clientConfig != null) __obj.updateDynamic("clientConfig")(clientConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookConversion]
   }
-  @scala.inline
-  implicit class WebhookConversionOps[Self <: WebhookConversion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversionReviewVersions(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionReviewVersions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientConfig(value: Input[WebhookClientConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

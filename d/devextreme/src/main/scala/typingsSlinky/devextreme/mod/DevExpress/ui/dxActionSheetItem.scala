@@ -1,80 +1,48 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.ElementEvent
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.danger
 import typingsSlinky.devextreme.devextremeStrings.default_
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.success
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxActionSheetItem extends CollectionWidgetItem {
-  /** Specifies the icon to be displayed on the action sheet button. */
-  var icon: js.UndefOr[String] = js.native
-  /** A handler for the click event raised for the button representing the given action sheet button. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ ElementEvent, _]) | String] = js.native
-  /** Specifies the type of the button that represents an action sheet item. */
-  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.native
+  /** @name dxActionSheetItem.icon */
+  var icon: js.UndefOr[String] = js.undefined
+  /** @name dxActionSheetItem.onClick */
+  var onClick: js.UndefOr[(js.Function1[/* e */ ElementEvent, _]) | String] = js.undefined
+  /** @name dxActionSheetItem.type */
+  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.undefined
 }
 
 object dxActionSheetItem {
   @scala.inline
-  def apply(): dxActionSheetItem = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    html: String = null,
+    icon: String = null,
+    onClick: (js.Function1[/* e */ ElementEvent, _]) | String = null,
+    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery]) = null,
+    text: String = null,
+    `type`: back | danger | default_ | normal | success = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): dxActionSheetItem = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxActionSheetItem]
   }
-  @scala.inline
-  implicit class dxActionSheetItemOps[Self <: dxActionSheetItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClickFunction1(value: /* e */ ElementEvent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ ElementEvent, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: back | danger | default_ | normal | success): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

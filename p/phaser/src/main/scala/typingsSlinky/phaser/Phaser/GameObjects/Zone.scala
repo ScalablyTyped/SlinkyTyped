@@ -62,34 +62,34 @@ trait Zone
     * The circle is centered on this Zones `x` and `y` coordinates.
     * @param radius The radius of the Circle that will form the Drop Zone.
     */
-  def setCircleDropZone(radius: Double): Zone = js.native
+  def setCircleDropZone(radius: Double): this.type = js.native
   /**
     * Sets the display size of this Game Object.
     * Calling this will adjust the scale.
     * @param width The width of this Game Object.
     * @param height The height of this Game Object.
     */
-  def setDisplaySize(width: Double, height: Double): Zone = js.native
+  def setDisplaySize(width: Double, height: Double): this.type = js.native
   /**
     * Allows you to define your own Geometry shape to be used as a Drop Zone.
     * @param shape A Geometry shape instance, such as Phaser.Geom.Ellipse, or your own custom shape.
     * @param callback A function that will return `true` if the given x/y coords it is sent are within the shape.
     */
-  def setDropZone(shape: js.Object, callback: HitAreaCallback): Zone = js.native
+  def setDropZone(shape: js.Object, callback: HitAreaCallback): this.type = js.native
   /**
     * Sets this Zone to be a Rectangle Drop Zone.
     * The rectangle is centered on this Zones `x` and `y` coordinates.
     * @param width The width of the rectangle drop zone.
     * @param height The height of the rectangle drop zone.
     */
-  def setRectangleDropZone(width: Double, height: Double): Zone = js.native
+  def setRectangleDropZone(width: Double, height: Double): this.type = js.native
   /**
     * Sets the size of this Game Object.
     * @param width The width of this Game Object.
     * @param height The height of this Game Object.
     * @param resizeInput If this Zone has a Rectangle for a hit area this argument will resize the hit area as well. Default true.
     */
-  def setSize(width: Double, height: Double): Zone = js.native
-  def setSize(width: Double, height: Double, resizeInput: Boolean): Zone = js.native
+  def setSize(width: Double, height: Double): this.type = js.native
+  def setSize(width: Double, height: Double, resizeInput: Boolean): this.type = js.native
 }
 

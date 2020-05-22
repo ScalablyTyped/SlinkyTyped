@@ -34,65 +34,18 @@ trait SchemaSheetsChart extends js.Object {
 
 object SchemaSheetsChart {
   @scala.inline
-  def apply(): SchemaSheetsChart = {
+  def apply(
+    chartId: js.UndefOr[Double] = js.undefined,
+    contentUrl: String = null,
+    sheetsChartProperties: SchemaSheetsChartProperties = null,
+    spreadsheetId: String = null
+  ): SchemaSheetsChart = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chartId)) __obj.updateDynamic("chartId")(chartId.get.asInstanceOf[js.Any])
+    if (contentUrl != null) __obj.updateDynamic("contentUrl")(contentUrl.asInstanceOf[js.Any])
+    if (sheetsChartProperties != null) __obj.updateDynamic("sheetsChartProperties")(sheetsChartProperties.asInstanceOf[js.Any])
+    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSheetsChart]
   }
-  @scala.inline
-  implicit class SchemaSheetsChartOps[Self <: SchemaSheetsChart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChartId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetsChartProperties(value: SchemaSheetsChartProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChartProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetsChartProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChartProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpreadsheetId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpreadsheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

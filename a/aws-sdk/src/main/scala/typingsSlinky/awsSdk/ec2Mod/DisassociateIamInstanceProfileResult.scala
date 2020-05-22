@@ -14,29 +14,10 @@ trait DisassociateIamInstanceProfileResult extends js.Object {
 
 object DisassociateIamInstanceProfileResult {
   @scala.inline
-  def apply(): DisassociateIamInstanceProfileResult = {
+  def apply(IamInstanceProfileAssociation: IamInstanceProfileAssociation = null): DisassociateIamInstanceProfileResult = {
     val __obj = js.Dynamic.literal()
+    if (IamInstanceProfileAssociation != null) __obj.updateDynamic("IamInstanceProfileAssociation")(IamInstanceProfileAssociation.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateIamInstanceProfileResult]
   }
-  @scala.inline
-  implicit class DisassociateIamInstanceProfileResultOps[Self <: DisassociateIamInstanceProfileResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIamInstanceProfileAssociation(value: IamInstanceProfileAssociation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamInstanceProfileAssociation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamInstanceProfileAssociation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IamInstanceProfileAssociation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

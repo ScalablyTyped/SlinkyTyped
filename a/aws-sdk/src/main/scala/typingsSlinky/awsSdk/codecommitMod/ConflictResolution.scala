@@ -22,53 +22,16 @@ trait ConflictResolution extends js.Object {
 
 object ConflictResolution {
   @scala.inline
-  def apply(): ConflictResolution = {
+  def apply(
+    deleteFiles: DeleteFileEntries = null,
+    replaceContents: ReplaceContentEntries = null,
+    setFileModes: SetFileModeEntries = null
+  ): ConflictResolution = {
     val __obj = js.Dynamic.literal()
+    if (deleteFiles != null) __obj.updateDynamic("deleteFiles")(deleteFiles.asInstanceOf[js.Any])
+    if (replaceContents != null) __obj.updateDynamic("replaceContents")(replaceContents.asInstanceOf[js.Any])
+    if (setFileModes != null) __obj.updateDynamic("setFileModes")(setFileModes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConflictResolution]
   }
-  @scala.inline
-  implicit class ConflictResolutionOps[Self <: ConflictResolution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteFiles(value: DeleteFileEntries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceContents(value: ReplaceContentEntries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceContents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceContents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceContents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetFileModes(value: SetFileModeEntries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFileModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetFileModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFileModes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

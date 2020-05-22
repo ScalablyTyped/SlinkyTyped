@@ -11,8 +11,10 @@ import scala.scalajs.js.annotation._
 @JSImport("vscode", "window")
 @js.native
 object window extends js.Object {
+  var activeColorTheme: ColorTheme = js.native
   val activeTerminal: js.UndefOr[Terminal] = js.native
   var activeTextEditor: js.UndefOr[TextEditor] = js.native
+  val onDidChangeActiveColorTheme: Event[ColorTheme] = js.native
   val onDidChangeActiveTerminal: Event[js.UndefOr[Terminal]] = js.native
   val onDidChangeActiveTextEditor: Event[js.UndefOr[TextEditor]] = js.native
   val onDidChangeTextEditorOptions: Event[TextEditorOptionsChangeEvent] = js.native

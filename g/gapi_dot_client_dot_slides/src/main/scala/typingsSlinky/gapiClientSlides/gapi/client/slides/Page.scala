@@ -4,26 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Page extends js.Object {
   /** Layout specific properties. Only set if page_type = LAYOUT. */
-  var layoutProperties: js.UndefOr[LayoutProperties] = js.native
+  var layoutProperties: js.UndefOr[LayoutProperties] = js.undefined
   /** Master specific properties. Only set if page_type = MASTER. */
-  var masterProperties: js.UndefOr[MasterProperties] = js.native
+  var masterProperties: js.UndefOr[MasterProperties] = js.undefined
   /** Notes specific properties. Only set if page_type = NOTES. */
-  var notesProperties: js.UndefOr[NotesProperties] = js.native
+  var notesProperties: js.UndefOr[NotesProperties] = js.undefined
   /**
     * The object ID for this page. Object IDs used by
     * Page and
     * PageElement share the same namespace.
     */
-  var objectId: js.UndefOr[String] = js.native
+  var objectId: js.UndefOr[String] = js.undefined
   /** The page elements rendered on the page. */
-  var pageElements: js.UndefOr[js.Array[PageElement]] = js.native
+  var pageElements: js.UndefOr[js.Array[PageElement]] = js.undefined
   /** The properties of the page. */
-  var pageProperties: js.UndefOr[PageProperties] = js.native
+  var pageProperties: js.UndefOr[PageProperties] = js.undefined
   /** The type of the page. */
-  var pageType: js.UndefOr[String] = js.native
+  var pageType: js.UndefOr[String] = js.undefined
   /**
     * The revision ID of the presentation containing this page. Can be used in
     * update requests to assert that the presentation revision hasn't changed
@@ -38,132 +37,35 @@ trait Page extends js.Object {
     * usually means the presentation has been updated; however, a changed ID can
     * also be due to internal factors such as ID format changes.
     */
-  var revisionId: js.UndefOr[String] = js.native
+  var revisionId: js.UndefOr[String] = js.undefined
   /** Slide specific properties. Only set if page_type = SLIDE. */
-  var slideProperties: js.UndefOr[SlideProperties] = js.native
+  var slideProperties: js.UndefOr[SlideProperties] = js.undefined
 }
 
 object Page {
   @scala.inline
-  def apply(): Page = {
+  def apply(
+    layoutProperties: LayoutProperties = null,
+    masterProperties: MasterProperties = null,
+    notesProperties: NotesProperties = null,
+    objectId: String = null,
+    pageElements: js.Array[PageElement] = null,
+    pageProperties: PageProperties = null,
+    pageType: String = null,
+    revisionId: String = null,
+    slideProperties: SlideProperties = null
+  ): Page = {
     val __obj = js.Dynamic.literal()
+    if (layoutProperties != null) __obj.updateDynamic("layoutProperties")(layoutProperties.asInstanceOf[js.Any])
+    if (masterProperties != null) __obj.updateDynamic("masterProperties")(masterProperties.asInstanceOf[js.Any])
+    if (notesProperties != null) __obj.updateDynamic("notesProperties")(notesProperties.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (pageElements != null) __obj.updateDynamic("pageElements")(pageElements.asInstanceOf[js.Any])
+    if (pageProperties != null) __obj.updateDynamic("pageProperties")(pageProperties.asInstanceOf[js.Any])
+    if (pageType != null) __obj.updateDynamic("pageType")(pageType.asInstanceOf[js.Any])
+    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
+    if (slideProperties != null) __obj.updateDynamic("slideProperties")(slideProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[Page]
   }
-  @scala.inline
-  implicit class PageOps[Self <: Page] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayoutProperties(value: LayoutProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMasterProperties(value: MasterProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMasterProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("masterProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotesProperties(value: NotesProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notesProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotesProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notesProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageElements(value: js.Array[PageElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageElements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageElements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageElements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageProperties(value: PageProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlideProperties(value: SlideProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlideProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,21 +6,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChartFormat extends js.Object {
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  val Creator: XlCreator = js.native
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  val Creator: XlCreator
   @JSName("Excel.ChartFormat_typekey")
-  var ExcelDotChartFormat_typekey: ChartFormat = js.native
-  val Fill: FillFormat = js.native
-  val Glow: GlowFormat = js.native
-  val Line: LineFormat = js.native
-  val Parent: js.Any = js.native
-  val PictureFormat: typingsSlinky.activexExcel.Excel.PictureFormat = js.native
-  val Shadow: ShadowFormat = js.native
-  val SoftEdge: SoftEdgeFormat = js.native
-  val TextFrame2: typingsSlinky.activexExcel.Excel.TextFrame2 = js.native
-  val ThreeD: ThreeDFormat = js.native
+  var ExcelDotChartFormat_typekey: ChartFormat
+  val Fill: FillFormat
+  val Glow: GlowFormat
+  val Line: LineFormat
+  val Parent: js.Any
+  val PictureFormat: typingsSlinky.activexExcel.Excel.PictureFormat
+  val Shadow: ShadowFormat
+  val SoftEdge: SoftEdgeFormat
+  val TextFrame2: typingsSlinky.activexExcel.Excel.TextFrame2
+  val ThreeD: ThreeDFormat
 }
 
 object ChartFormat {
@@ -43,85 +42,5 @@ object ChartFormat {
     __obj.updateDynamic("Excel.ChartFormat_typekey")(ExcelDotChartFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartFormat]
   }
-  @scala.inline
-  implicit class ChartFormatOps[Self <: ChartFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcelDotChartFormat_typekey(value: ChartFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.ChartFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFill(value: FillFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlow(value: GlowFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Glow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLine(value: LineFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPictureFormat(value: PictureFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PictureFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShadow(value: ShadowFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSoftEdge(value: SoftEdgeFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextFrame2(value: TextFrame2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextFrame2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThreeD(value: ThreeDFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreeD")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

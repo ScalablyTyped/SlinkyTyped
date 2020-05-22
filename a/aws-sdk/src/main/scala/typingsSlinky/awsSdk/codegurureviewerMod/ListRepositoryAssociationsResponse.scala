@@ -18,41 +18,11 @@ trait ListRepositoryAssociationsResponse extends js.Object {
 
 object ListRepositoryAssociationsResponse {
   @scala.inline
-  def apply(): ListRepositoryAssociationsResponse = {
+  def apply(NextToken: NextToken = null, RepositoryAssociationSummaries: RepositoryAssociationSummaries = null): ListRepositoryAssociationsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (RepositoryAssociationSummaries != null) __obj.updateDynamic("RepositoryAssociationSummaries")(RepositoryAssociationSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRepositoryAssociationsResponse]
   }
-  @scala.inline
-  implicit class ListRepositoryAssociationsResponseOps[Self <: ListRepositoryAssociationsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepositoryAssociationSummaries(value: RepositoryAssociationSummaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepositoryAssociationSummaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryAssociationSummaries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepositoryAssociationSummaries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

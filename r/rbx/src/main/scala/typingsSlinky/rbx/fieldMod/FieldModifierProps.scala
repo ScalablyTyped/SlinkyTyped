@@ -8,101 +8,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FieldModifierProps extends js.Object {
-  var align: js.UndefOr[centered | right] = js.native
-  var expanded: js.UndefOr[Boolean] = js.native
-  var horizontal: js.UndefOr[Boolean] = js.native
-  var kind: js.UndefOr[addons | group] = js.native
-  var multiline: js.UndefOr[Boolean] = js.native
-  var narrow: js.UndefOr[Boolean] = js.native
+  var align: js.UndefOr[centered | right] = js.undefined
+  var expanded: js.UndefOr[Boolean] = js.undefined
+  var horizontal: js.UndefOr[Boolean] = js.undefined
+  var kind: js.UndefOr[addons | group] = js.undefined
+  var multiline: js.UndefOr[Boolean] = js.undefined
+  var narrow: js.UndefOr[Boolean] = js.undefined
 }
 
 object FieldModifierProps {
   @scala.inline
-  def apply(): FieldModifierProps = {
+  def apply(
+    align: centered | right = null,
+    expanded: js.UndefOr[Boolean] = js.undefined,
+    horizontal: js.UndefOr[Boolean] = js.undefined,
+    kind: addons | group = null,
+    multiline: js.UndefOr[Boolean] = js.undefined,
+    narrow: js.UndefOr[Boolean] = js.undefined
+  ): FieldModifierProps = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(expanded)) __obj.updateDynamic("expanded")(expanded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiline)) __obj.updateDynamic("multiline")(multiline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(narrow)) __obj.updateDynamic("narrow")(narrow.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldModifierProps]
   }
-  @scala.inline
-  implicit class FieldModifierPropsOps[Self <: FieldModifierProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: centered | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: addons | group): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNarrow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNarrow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("narrow")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

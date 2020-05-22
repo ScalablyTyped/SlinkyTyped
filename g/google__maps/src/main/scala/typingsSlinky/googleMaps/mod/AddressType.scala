@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.googleMaps.googleMapsStrings.street_address
   - typingsSlinky.googleMaps.googleMapsStrings.route
   - typingsSlinky.googleMaps.googleMapsStrings.intersection
   - typingsSlinky.googleMaps.googleMapsStrings.political
@@ -67,8 +66,6 @@ object AddressType {
   def premise: typingsSlinky.googleMaps.googleMapsStrings.premise = "premise".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.premise]
   @scala.inline
   def route: typingsSlinky.googleMaps.googleMapsStrings.route = "route".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.route]
-  @scala.inline
-  def street_address: typingsSlinky.googleMaps.googleMapsStrings.street_address = "street_address".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.street_address]
   @scala.inline
   def sublocality: typingsSlinky.googleMaps.googleMapsStrings.sublocality = "sublocality".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.sublocality]
   @scala.inline

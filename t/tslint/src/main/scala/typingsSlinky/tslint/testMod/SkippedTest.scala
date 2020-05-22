@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SkippedTest extends js.Object {
-  var requirement: String = js.native
-  var skipped: `true` = js.native
+  var requirement: String
+  var skipped: `true`
 }
 
 object SkippedTest {
@@ -17,25 +16,5 @@ object SkippedTest {
     val __obj = js.Dynamic.literal(requirement = requirement.asInstanceOf[js.Any], skipped = skipped.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkippedTest]
   }
-  @scala.inline
-  implicit class SkippedTestOps[Self <: SkippedTest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequirement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requirement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSkipped(value: `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipped")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

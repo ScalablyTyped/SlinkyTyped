@@ -34,83 +34,21 @@ trait ApplicationConfiguration extends js.Object {
 
 object ApplicationConfiguration {
   @scala.inline
-  def apply(ApplicationCodeConfiguration: ApplicationCodeConfiguration): ApplicationConfiguration = {
+  def apply(
+    ApplicationCodeConfiguration: ApplicationCodeConfiguration,
+    ApplicationSnapshotConfiguration: ApplicationSnapshotConfiguration = null,
+    EnvironmentProperties: EnvironmentProperties = null,
+    FlinkApplicationConfiguration: FlinkApplicationConfiguration = null,
+    SqlApplicationConfiguration: SqlApplicationConfiguration = null,
+    VpcConfigurations: VpcConfigurations = null
+  ): ApplicationConfiguration = {
     val __obj = js.Dynamic.literal(ApplicationCodeConfiguration = ApplicationCodeConfiguration.asInstanceOf[js.Any])
+    if (ApplicationSnapshotConfiguration != null) __obj.updateDynamic("ApplicationSnapshotConfiguration")(ApplicationSnapshotConfiguration.asInstanceOf[js.Any])
+    if (EnvironmentProperties != null) __obj.updateDynamic("EnvironmentProperties")(EnvironmentProperties.asInstanceOf[js.Any])
+    if (FlinkApplicationConfiguration != null) __obj.updateDynamic("FlinkApplicationConfiguration")(FlinkApplicationConfiguration.asInstanceOf[js.Any])
+    if (SqlApplicationConfiguration != null) __obj.updateDynamic("SqlApplicationConfiguration")(SqlApplicationConfiguration.asInstanceOf[js.Any])
+    if (VpcConfigurations != null) __obj.updateDynamic("VpcConfigurations")(VpcConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationConfiguration]
   }
-  @scala.inline
-  implicit class ApplicationConfigurationOps[Self <: ApplicationConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationCodeConfiguration(value: ApplicationCodeConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationCodeConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplicationSnapshotConfiguration(value: ApplicationSnapshotConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSnapshotConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationSnapshotConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationSnapshotConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironmentProperties(value: EnvironmentProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironmentProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlinkApplicationConfiguration(value: FlinkApplicationConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkApplicationConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlinkApplicationConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkApplicationConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqlApplicationConfiguration(value: SqlApplicationConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlApplicationConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqlApplicationConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlApplicationConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcConfigurations(value: VpcConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

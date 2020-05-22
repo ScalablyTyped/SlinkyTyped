@@ -13,4 +13,5 @@ package object wrappersSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.TimeDistributed, 
     typingsSlinky.tensorflowTfjsLayers.wrappersSerializationMod.TimeDistributedLayerConfig
   ]
+  type WrapperLayerSerialization = typingsSlinky.tensorflowTfjsLayers.wrappersSerializationMod.TimeDistributedLayerSerialization | typingsSlinky.tensorflowTfjsLayers.wrappersSerializationMod.BidirectionalLayerSerialization
 }

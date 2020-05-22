@@ -4,89 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait And extends js.Object {
   @JSName("$and")
   var $and: js.UndefOr[
     js.Array[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
     ]
-  ] = js.native
+  ] = js.undefined
   @JSName("$nor")
   var $nor: js.UndefOr[
     js.Array[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
     ]
-  ] = js.native
+  ] = js.undefined
   @JSName("$or")
   var $or: js.UndefOr[
     js.Array[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object And {
   @scala.inline
-  def apply(): And = {
+  def apply(
+    $and: js.Array[
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
+    ] = null,
+    $nor: js.Array[
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
+    ] = null,
+    $or: js.Array[
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
+    ] = null
+  ): And = {
     val __obj = js.Dynamic.literal()
+    if ($and != null) __obj.updateDynamic("$and")($and.asInstanceOf[js.Any])
+    if ($nor != null) __obj.updateDynamic("$nor")($nor.asInstanceOf[js.Any])
+    if ($or != null) __obj.updateDynamic("$or")($or.asInstanceOf[js.Any])
     __obj.asInstanceOf[And]
   }
-  @scala.inline
-  implicit class AndOps[Self <: And] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$and(
-      value: js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$and: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$nor(
-      value: js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$nor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$nor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$or(
-      value: js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias meteor.Mongo.Query<T> */ js.Object
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$or: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

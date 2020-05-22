@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Vocabulary
   extends typingsSlinky.yadda.languageMod.Vocabulary {
-  var background: String = js.native
-  var examples: String = js.native
-  var feature: String = js.native
-  var given: String = js.native
-  var only: String = js.native
-  var pending: String = js.native
-  var scenario: String = js.native
-  var `then`: String = js.native
-  var when: String = js.native
+  var background: String
+  var examples: String
+  var feature: String
+  var given: String
+  var only: String
+  var pending: String
+  var scenario: String
+  var `then`: String
+  var when: String
 }
 
 object Vocabulary {
@@ -36,67 +35,5 @@ object Vocabulary {
     __obj.updateDynamic("then")(`then`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vocabulary]
   }
-  @scala.inline
-  implicit class VocabularyOps[Self <: Vocabulary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExamples(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("examples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGiven(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("given")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnly(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPending(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScenario(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scenario")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWhen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

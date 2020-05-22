@@ -26,47 +26,15 @@ trait PutLogEventsRequest extends js.Object {
 
 object PutLogEventsRequest {
   @scala.inline
-  def apply(logEvents: InputLogEvents, logGroupName: LogGroupName, logStreamName: LogStreamName): PutLogEventsRequest = {
+  def apply(
+    logEvents: InputLogEvents,
+    logGroupName: LogGroupName,
+    logStreamName: LogStreamName,
+    sequenceToken: SequenceToken = null
+  ): PutLogEventsRequest = {
     val __obj = js.Dynamic.literal(logEvents = logEvents.asInstanceOf[js.Any], logGroupName = logGroupName.asInstanceOf[js.Any], logStreamName = logStreamName.asInstanceOf[js.Any])
+    if (sequenceToken != null) __obj.updateDynamic("sequenceToken")(sequenceToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutLogEventsRequest]
   }
-  @scala.inline
-  implicit class PutLogEventsRequestOps[Self <: PutLogEventsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLogEvents(value: InputLogEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: LogGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogStreamName(value: LogStreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSequenceToken(value: SequenceToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequenceToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequenceToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequenceToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

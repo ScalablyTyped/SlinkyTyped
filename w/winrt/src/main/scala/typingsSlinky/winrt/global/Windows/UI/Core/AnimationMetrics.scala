@@ -1,7 +1,11 @@
 package typingsSlinky.winrt.global.Windows.UI.Core
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.AnimationEffect
 import typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.AnimationEffectTarget
+import typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.IPropertyAnimation
+import typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.PropertyAnimationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,23 +17,91 @@ object AnimationMetrics extends js.Object {
   class AnimationDescription protected ()
     extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.AnimationDescription {
     def this(effect: AnimationEffect, target: AnimationEffectTarget) = this()
+    /* CompleteClass */
+    override var animations: IVectorView[IPropertyAnimation] = js.native
+    /* CompleteClass */
+    override var delayLimit: Double = js.native
+    /* CompleteClass */
+    override var staggerDelay: Double = js.native
+    /* CompleteClass */
+    override var staggerDelayFactor: Double = js.native
+    /* CompleteClass */
+    override var zOrder: Double = js.native
   }
   
   @js.native
   class OpacityAnimation ()
-    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.OpacityAnimation
+    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.OpacityAnimation {
+    /* CompleteClass */
+    override var control1: Point = js.native
+    /* CompleteClass */
+    override var control2: Point = js.native
+    /* CompleteClass */
+    override var delay: Double = js.native
+    /* CompleteClass */
+    override var duration: Double = js.native
+    /* CompleteClass */
+    override var finalOpacity: Double = js.native
+    /* CompleteClass */
+    override var initialOpacity: Double = js.native
+    /* CompleteClass */
+    override var `type`: PropertyAnimationType = js.native
+  }
   
   @js.native
   class PropertyAnimation ()
-    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.PropertyAnimation
+    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.PropertyAnimation {
+    /* CompleteClass */
+    override var control1: Point = js.native
+    /* CompleteClass */
+    override var control2: Point = js.native
+    /* CompleteClass */
+    override var delay: Double = js.native
+    /* CompleteClass */
+    override var duration: Double = js.native
+    /* CompleteClass */
+    override var `type`: PropertyAnimationType = js.native
+  }
   
   @js.native
   class ScaleAnimation ()
-    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.ScaleAnimation
+    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.ScaleAnimation {
+    /* CompleteClass */
+    override var control1: Point = js.native
+    /* CompleteClass */
+    override var control2: Point = js.native
+    /* CompleteClass */
+    override var delay: Double = js.native
+    /* CompleteClass */
+    override var duration: Double = js.native
+    /* CompleteClass */
+    override var finalScaleX: Double = js.native
+    /* CompleteClass */
+    override var finalScaleY: Double = js.native
+    /* CompleteClass */
+    override var initialScaleX: Double = js.native
+    /* CompleteClass */
+    override var initialScaleY: Double = js.native
+    /* CompleteClass */
+    override var normalizedOrigin: Point = js.native
+    /* CompleteClass */
+    override var `type`: PropertyAnimationType = js.native
+  }
   
   @js.native
   class TranslationAnimation ()
-    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.TranslationAnimation
+    extends typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics.TranslationAnimation {
+    /* CompleteClass */
+    override var control1: Point = js.native
+    /* CompleteClass */
+    override var control2: Point = js.native
+    /* CompleteClass */
+    override var delay: Double = js.native
+    /* CompleteClass */
+    override var duration: Double = js.native
+    /* CompleteClass */
+    override var `type`: PropertyAnimationType = js.native
+  }
   
   @js.native
   object AnimationEffect extends js.Object {

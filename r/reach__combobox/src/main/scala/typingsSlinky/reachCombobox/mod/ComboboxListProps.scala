@@ -7,38 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComboboxListProps
   extends AllHTMLAttributes[HTMLElement]
      with ClassAttributes[HTMLElement] {
-  var persistSelection: js.UndefOr[Boolean] = js.native
+  var persistSelection: js.UndefOr[Boolean] = js.undefined
 }
 
 object ComboboxListProps {
   @scala.inline
-  def apply(): ComboboxListProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[HTMLElement] = null,
+    ClassAttributes: ClassAttributes[HTMLElement] = null,
+    persistSelection: js.UndefOr[Boolean] = js.undefined
+  ): ComboboxListProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (!js.isUndefined(persistSelection)) __obj.updateDynamic("persistSelection")(persistSelection.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComboboxListProps]
   }
-  @scala.inline
-  implicit class ComboboxListPropsOps[Self <: ComboboxListProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPersistSelection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistSelection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistSelection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistSelection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

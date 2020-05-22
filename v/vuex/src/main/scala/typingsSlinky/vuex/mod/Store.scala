@@ -26,6 +26,8 @@ class Store[S] protected () extends js.Object {
   def dispatch(`type`: String, payload: js.Any, options: DispatchOptions): js.Promise[_] = js.native
   def dispatch[P /* <: Payload */](payloadWithType: P): js.Promise[_] = js.native
   def dispatch[P /* <: Payload */](payloadWithType: P, options: DispatchOptions): js.Promise[_] = js.native
+  def hasModule(path: String): Boolean = js.native
+  def hasModule(path: js.Array[String]): Boolean = js.native
   def hotUpdate(options: Actions[S]): Unit = js.native
   def registerModule[T](path: String, module: Module[T, S]): Unit = js.native
   def registerModule[T](path: String, module: Module[T, S], options: ModuleOptions): Unit = js.native
@@ -33,7 +35,9 @@ class Store[S] protected () extends js.Object {
   def registerModule[T](path: js.Array[String], module: Module[T, S], options: ModuleOptions): Unit = js.native
   def replaceState(state: S): Unit = js.native
   def subscribe[P /* <: MutationPayload */](fn: js.Function2[/* mutation */ P, /* state */ S, _]): js.Function0[Unit] = js.native
+  def subscribe[P /* <: MutationPayload */](fn: js.Function2[/* mutation */ P, /* state */ S, _], options: SubscribeOptions): js.Function0[Unit] = js.native
   def subscribeAction[P /* <: ActionPayload */](fn: SubscribeActionOptions[P, S]): js.Function0[Unit] = js.native
+  def subscribeAction[P /* <: ActionPayload */](fn: SubscribeActionOptions[P, S], options: SubscribeOptions): js.Function0[Unit] = js.native
   def unregisterModule(path: String): Unit = js.native
   def unregisterModule(path: js.Array[String]): Unit = js.native
   def watch[T](

@@ -18,35 +18,10 @@ trait PutRecordOutput extends js.Object {
 
 object PutRecordOutput {
   @scala.inline
-  def apply(RecordId: PutResponseRecordId): PutRecordOutput = {
+  def apply(RecordId: PutResponseRecordId, Encrypted: js.UndefOr[BooleanObject] = js.undefined): PutRecordOutput = {
     val __obj = js.Dynamic.literal(RecordId = RecordId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRecordOutput]
   }
-  @scala.inline
-  implicit class PutRecordOutputOps[Self <: PutRecordOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRecordId(value: PutResponseRecordId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncrypted(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

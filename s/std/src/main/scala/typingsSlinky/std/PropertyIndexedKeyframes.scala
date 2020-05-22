@@ -5,65 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PropertyIndexedKeyframes
   extends /* property */ StringDictionary[
       js.UndefOr[java.lang.String | (js.Array[Double | Null | java.lang.String]) | Double | Null]
     ] {
-  var composite: js.UndefOr[CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto]] = js.native
-  var easing: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.native
-  var offset: js.UndefOr[Double | (js.Array[Double | Null])] = js.native
+  var composite: js.UndefOr[CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto]] = js.undefined
+  var easing: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.undefined
+  var offset: js.UndefOr[Double | (js.Array[Double | Null])] = js.undefined
 }
 
 object PropertyIndexedKeyframes {
   @scala.inline
-  def apply(): PropertyIndexedKeyframes = {
+  def apply(
+    StringDictionary: /* property */ StringDictionary[
+      js.UndefOr[java.lang.String | (js.Array[Double | Null | java.lang.String]) | Double | Null]
+    ] = null,
+    composite: CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto] = null,
+    easing: java.lang.String | js.Array[java.lang.String] = null,
+    offset: Double | (js.Array[Double | Null]) = null
+  ): PropertyIndexedKeyframes = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (composite != null) __obj.updateDynamic("composite")(composite.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropertyIndexedKeyframes]
   }
-  @scala.inline
-  implicit class PropertyIndexedKeyframesOps[Self <: PropertyIndexedKeyframes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComposite(value: CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: java.lang.String | js.Array[java.lang.String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double | (js.Array[Double | Null])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

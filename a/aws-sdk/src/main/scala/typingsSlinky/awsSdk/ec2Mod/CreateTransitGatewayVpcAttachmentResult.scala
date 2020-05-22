@@ -14,29 +14,10 @@ trait CreateTransitGatewayVpcAttachmentResult extends js.Object {
 
 object CreateTransitGatewayVpcAttachmentResult {
   @scala.inline
-  def apply(): CreateTransitGatewayVpcAttachmentResult = {
+  def apply(TransitGatewayVpcAttachment: TransitGatewayVpcAttachment = null): CreateTransitGatewayVpcAttachmentResult = {
     val __obj = js.Dynamic.literal()
+    if (TransitGatewayVpcAttachment != null) __obj.updateDynamic("TransitGatewayVpcAttachment")(TransitGatewayVpcAttachment.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTransitGatewayVpcAttachmentResult]
   }
-  @scala.inline
-  implicit class CreateTransitGatewayVpcAttachmentResultOps[Self <: CreateTransitGatewayVpcAttachmentResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransitGatewayVpcAttachment(value: TransitGatewayVpcAttachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayVpcAttachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitGatewayVpcAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayVpcAttachment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

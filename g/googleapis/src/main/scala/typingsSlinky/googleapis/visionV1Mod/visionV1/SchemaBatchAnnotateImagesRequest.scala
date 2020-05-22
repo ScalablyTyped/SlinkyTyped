@@ -17,29 +17,10 @@ trait SchemaBatchAnnotateImagesRequest extends js.Object {
 
 object SchemaBatchAnnotateImagesRequest {
   @scala.inline
-  def apply(): SchemaBatchAnnotateImagesRequest = {
+  def apply(requests: js.Array[SchemaAnnotateImageRequest] = null): SchemaBatchAnnotateImagesRequest = {
     val __obj = js.Dynamic.literal()
+    if (requests != null) __obj.updateDynamic("requests")(requests.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchAnnotateImagesRequest]
   }
-  @scala.inline
-  implicit class SchemaBatchAnnotateImagesRequestOps[Self <: SchemaBatchAnnotateImagesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequests(value: js.Array[SchemaAnnotateImageRequest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

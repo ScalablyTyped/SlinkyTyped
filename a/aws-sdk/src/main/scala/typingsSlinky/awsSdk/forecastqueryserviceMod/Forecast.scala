@@ -14,29 +14,10 @@ trait Forecast extends js.Object {
 
 object Forecast {
   @scala.inline
-  def apply(): Forecast = {
+  def apply(Predictions: Predictions = null): Forecast = {
     val __obj = js.Dynamic.literal()
+    if (Predictions != null) __obj.updateDynamic("Predictions")(Predictions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Forecast]
   }
-  @scala.inline
-  implicit class ForecastOps[Self <: Forecast] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPredictions(value: Predictions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Predictions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Predictions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

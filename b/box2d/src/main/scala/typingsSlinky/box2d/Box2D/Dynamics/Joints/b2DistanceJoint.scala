@@ -6,38 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2DistanceJoint extends b2Joint {
   /**
-  		* Gets the damping ratio.
-  		* @return Damping ratio.
-  		**/
-  def GetDampingRatio(): Double = js.native
+    * Gets the damping ratio.
+    * @return Damping ratio.
+    **/
+  def GetDampingRatio(): Double
   /**
-  		* Gets the frequency.
-  		* @return Frequency.
-  		**/
-  def GetFrequency(): Double = js.native
+    * Gets the frequency.
+    * @return Frequency.
+    **/
+  def GetFrequency(): Double
   /**
-  		* Gets the length of distance between the two bodies.
-  		* @return Length.
-  		**/
-  def GetLength(): Double = js.native
+    * Gets the length of distance between the two bodies.
+    * @return Length.
+    **/
+  def GetLength(): Double
   /**
-  		* Sets the damping ratio.
-  		* @param ratio New damping ratio.
-  		**/
-  def SetDampingRatio(ratio: Double): Unit = js.native
+    * Sets the damping ratio.
+    * @param ratio New damping ratio.
+    **/
+  def SetDampingRatio(ratio: Double): Unit
   /**
-  		* Sets the frequency.
-  		* @param hz New frequency (hertz).
-  		**/
-  def SetFrequency(hz: Double): Unit = js.native
+    * Sets the frequency.
+    * @param hz New frequency (hertz).
+    **/
+  def SetFrequency(hz: Double): Unit
   /**
-  		* Sets the length of distance between the two bodies.
-  		* @param length New length.
-  		**/
-  def SetLength(length: Double): Unit = js.native
+    * Sets the length of distance between the two bodies.
+    * @param length New length.
+    **/
+  def SetLength(length: Double): Unit
 }
 
 object b2DistanceJoint {
@@ -64,49 +63,5 @@ object b2DistanceJoint {
     val __obj = js.Dynamic.literal(GetAnchorA = js.Any.fromFunction0(GetAnchorA), GetAnchorB = js.Any.fromFunction0(GetAnchorB), GetBodyA = js.Any.fromFunction0(GetBodyA), GetBodyB = js.Any.fromFunction0(GetBodyB), GetDampingRatio = js.Any.fromFunction0(GetDampingRatio), GetFrequency = js.Any.fromFunction0(GetFrequency), GetLength = js.Any.fromFunction0(GetLength), GetNext = js.Any.fromFunction0(GetNext), GetReactionForce = js.Any.fromFunction1(GetReactionForce), GetReactionTorque = js.Any.fromFunction1(GetReactionTorque), GetType = js.Any.fromFunction0(GetType), GetUserData = js.Any.fromFunction0(GetUserData), IsActive = js.Any.fromFunction0(IsActive), SetDampingRatio = js.Any.fromFunction1(SetDampingRatio), SetFrequency = js.Any.fromFunction1(SetFrequency), SetLength = js.Any.fromFunction1(SetLength), SetUserData = js.Any.fromFunction1(SetUserData))
     __obj.asInstanceOf[b2DistanceJoint]
   }
-  @scala.inline
-  implicit class b2DistanceJointOps[Self <: b2DistanceJoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDampingRatio(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDampingRatio")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFrequency(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFrequency")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDampingRatio(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDampingRatio")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFrequency(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFrequency")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLength(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetLength")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

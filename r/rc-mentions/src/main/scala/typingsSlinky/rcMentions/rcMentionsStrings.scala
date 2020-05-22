@@ -1,5 +1,6 @@
 package typingsSlinky.rcMentions
 
+import typingsSlinky.rcMentions.mentionsMod.Direction
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -79,6 +80,9 @@ object rcMentionsStrings {
   sealed trait location extends js.Object
   
   @js.native
+  sealed trait ltr extends Direction
+  
+  @js.native
   sealed trait menu extends js.Object
   
   @js.native
@@ -116,6 +120,9 @@ object rcMentionsStrings {
   
   @js.native
   sealed trait removals extends js.Object
+  
+  @js.native
+  sealed trait rtl extends Direction
   
   @js.native
   sealed trait search extends js.Object
@@ -199,6 +206,8 @@ object rcMentionsStrings {
   @scala.inline
   def location: location = "location".asInstanceOf[location]
   @scala.inline
+  def ltr: ltr = "ltr".asInstanceOf[ltr]
+  @scala.inline
   def menu: menu = "menu".asInstanceOf[menu]
   @scala.inline
   def mixed: mixed = "mixed".asInstanceOf[mixed]
@@ -224,6 +233,8 @@ object rcMentionsStrings {
   def popup: popup = "popup".asInstanceOf[popup]
   @scala.inline
   def removals: removals = "removals".asInstanceOf[removals]
+  @scala.inline
+  def rtl: rtl = "rtl".asInstanceOf[rtl]
   @scala.inline
   def search: search = "search".asInstanceOf[search]
   @scala.inline

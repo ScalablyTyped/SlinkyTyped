@@ -1,13 +1,14 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.highchartsNumbers.`0`
+import typingsSlinky.highcharts.highchartsNumbers.`100`
 import typingsSlinky.highcharts.highchartsStrings.ohlc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.highcharts.mod.SeriesOptions because var conflicts: zIndex. Inlined id, index, legendIndex, mapData, name, stack, treemap, `type`, xAxis, yAxis */ @js.native
-trait SeriesOhlcOptions
+- typingsSlinky.highcharts.mod.SeriesOptions because var conflicts: zIndex. Inlined id, index, legendIndex, mapData, name, stack, treemap, `type`, xAxis, yAxis */ trait SeriesOhlcOptions
   extends PlotOhlcOptions
      with SeriesOptionsType {
   /**
@@ -32,217 +33,253 @@ trait SeriesOhlcOptions
     js.Array[
       (js.Tuple4[Double | String, Double, Double, Double]) | (js.Tuple5[Double | String, Double, Double, Double, Double]) | SeriesOhlcDataOptions
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Not available
     */
-  var dataParser: js.UndefOr[scala.Nothing] = js.native
+  var dataParser: js.UndefOr[scala.Nothing] = js.undefined
   /**
     * Not available
     */
-  var dataURL: js.UndefOr[scala.Nothing] = js.native
+  var dataURL: js.UndefOr[scala.Nothing] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An id for the series. This can
     * be used after render time to get a pointer to the series object through
     * `chart.get()`.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The index of the series in the
     * chart, affecting the internal index in the `chart.series` array, the
     * visible Z index as well as the order in the legend.
     */
-  var index: js.UndefOr[Double] = js.native
+  var index: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The sequential index of the
     * series in the legend.
     */
-  var legendIndex: js.UndefOr[Double] = js.native
+  var legendIndex: js.UndefOr[Double] = js.undefined
   /**
     * (Highmaps) A map data object containing a `path` definition and
     * optionally additional properties to join in the data as per the `joinBy`
     * option.
     */
-  var mapData: js.UndefOr[js.Array[SeriesMapDataOptions] | js.Any] = js.native
+  var mapData: js.UndefOr[js.Array[SeriesMapDataOptions] | js.Any] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The name of the series as shown
     * in the legend, tooltip etc.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock) This option allows grouping series in a stacked
     * chart. The stack option can be a string or anything else, as long as the
     * grouped series' stack options match each other after conversion into a
     * string.
     */
-  var stack: js.UndefOr[Double | String] = js.native
-  var treemap: js.UndefOr[SeriesTreemapOptions] = js.native
+  var stack: js.UndefOr[Double | String] = js.undefined
+  var treemap: js.UndefOr[SeriesTreemapOptions] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) This property is only in
     * TypeScript non-optional and might be `undefined` in series objects from
     * unknown sources.
     */
-  var `type`: String | ohlc = js.native
+  var `type`: String | ohlc
   /**
     * (Highcharts, Highstock) When using dual or multiple x axes, this number
     * defines which xAxis the particular series is connected to. It refers to
     * either the axis id or the index of the axis in the xAxis array, with 0
     * being the first.
     */
-  var xAxis: js.UndefOr[Double | String] = js.native
+  var xAxis: js.UndefOr[Double | String] = js.undefined
   /**
     * (Highcharts, Highstock) When using dual or multiple y axes, this number
     * defines which yAxis the particular series is connected to. It refers to
     * either the axis id or the index of the axis in the yAxis array, with 0
     * being the first.
     */
-  var yAxis: js.UndefOr[Double | String] = js.native
+  var yAxis: js.UndefOr[Double | String] = js.undefined
 }
 
 object SeriesOhlcOptions {
   @scala.inline
-  def apply(`type`: String | ohlc): SeriesOhlcOptions = {
+  def apply(
+    `type`: String | ohlc,
+    accessibility: js.Object | PlotOhlcAccessibilityOptions = null,
+    allAreas: js.UndefOr[Boolean] = js.undefined,
+    allowPointSelect: js.UndefOr[Boolean] = js.undefined,
+    animation: Boolean | AnimationOptionsObject | PlotOhlcAnimationOptions = null,
+    animationLimit: js.UndefOr[Double] = js.undefined,
+    boostBlending: OptionsBoostBlendingValue = null,
+    boostThreshold: js.UndefOr[Double] = js.undefined,
+    className: String = null,
+    clip: js.UndefOr[Boolean] = js.undefined,
+    color: ColorString | GradientColorObject | PatternObject = null,
+    colorAxis: Boolean | Double | String = null,
+    colorByPoint: js.UndefOr[Boolean] = js.undefined,
+    colorIndex: js.UndefOr[Double] = js.undefined,
+    colorKey: String = null,
+    colors: js.Array[ColorString | GradientColorObject | PatternObject] = null,
+    compare: String = null,
+    compareBase: `0` | `100` = null,
+    compareStart: js.UndefOr[Boolean] = js.undefined,
+    connectors: PlotOhlcConnectorsOptions = null,
+    cropThreshold: js.UndefOr[Double] = js.undefined,
+    cursor: String | CursorValue = null,
+    data: js.Array[
+      (js.Tuple4[Double | String, Double, Double, Double]) | (js.Tuple5[Double | String, Double, Double, Double, Double]) | SeriesOhlcDataOptions
+    ] = null,
+    dataGrouping: PlotOhlcDataGroupingOptions = null,
+    dataLabels: js.Any = null,
+    depth: js.UndefOr[Double] = js.undefined,
+    description: String = null,
+    dragDrop: PlotOhlcDragDropOptions = null,
+    edgeColor: ColorString = null,
+    edgeWidth: js.UndefOr[Double] = js.undefined,
+    enableMouseTracking: js.UndefOr[Boolean] = js.undefined,
+    events: PlotOhlcEventsOptions = null,
+    findNearestPointBy: OptionsFindNearestPointByValue = null,
+    getExtremesFromAll: js.UndefOr[Boolean] = js.undefined,
+    groupPadding: js.UndefOr[Double] = js.undefined,
+    groupZPadding: js.UndefOr[Double] = js.undefined,
+    grouping: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    includeInDataExport: js.UndefOr[Boolean] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    joinBy: String | js.Array[String] = null,
+    keys: js.Array[String] = null,
+    label: PlotOhlcLabelOptions = null,
+    lastPrice: PlotOhlcLastPriceOptions = null,
+    lastVisiblePrice: PlotOhlcLastVisiblePriceOptions = null,
+    legendIndex: js.UndefOr[Double] = js.undefined,
+    lineWidth: js.UndefOr[Double] = js.undefined,
+    linkedTo: String = null,
+    mapData: js.Array[SeriesMapDataOptions] | js.Any = null,
+    maxPointWidth: js.UndefOr[Double] = js.undefined,
+    minPointLength: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    navigatorOptions: PlotSeriesOptions = null,
+    negativeColor: ColorString | GradientColorObject | PatternObject = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    point: PlotOhlcPointOptions = null,
+    pointDescriptionFormatter: js.Function = null,
+    pointInterval: js.UndefOr[Double] = js.undefined,
+    pointIntervalUnit: OptionsPointIntervalUnitValue = null,
+    pointPadding: js.UndefOr[Double] = js.undefined,
+    pointPlacement: Double | String = null,
+    pointRange: js.UndefOr[Null | Double] = js.undefined,
+    pointStart: js.UndefOr[Double] = js.undefined,
+    pointValKey: OptionsPointValKeyValue = null,
+    pointWidth: js.UndefOr[Double] = js.undefined,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    shadow: Boolean | ShadowOptionsObject = null,
+    showCheckbox: js.UndefOr[Boolean] = js.undefined,
+    showInLegend: js.UndefOr[Boolean] = js.undefined,
+    showInNavigator: js.UndefOr[Boolean] = js.undefined,
+    skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined,
+    softThreshold: js.UndefOr[Boolean] = js.undefined,
+    stack: Double | String = null,
+    states: PlotOhlcStatesOptions = null,
+    stickyTracking: js.UndefOr[Boolean] = js.undefined,
+    threshold: js.Any = null,
+    tooltip: PlotOhlcTooltipOptions = null,
+    treemap: SeriesTreemapOptions = null,
+    turboThreshold: js.UndefOr[Double] = js.undefined,
+    upColor: ColorString | GradientColorObject | PatternObject = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    xAxis: Double | String = null,
+    yAxis: Double | String = null,
+    zIndex: js.UndefOr[Double] = js.undefined,
+    zoneAxis: String = null,
+    zones: js.Array[PlotOhlcZonesOptions] = null
+  ): SeriesOhlcOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
+    if (!js.isUndefined(allAreas)) __obj.updateDynamic("allAreas")(allAreas.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowPointSelect)) __obj.updateDynamic("allowPointSelect")(allowPointSelect.get.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationLimit)) __obj.updateDynamic("animationLimit")(animationLimit.get.asInstanceOf[js.Any])
+    if (boostBlending != null) __obj.updateDynamic("boostBlending")(boostBlending.asInstanceOf[js.Any])
+    if (!js.isUndefined(boostThreshold)) __obj.updateDynamic("boostThreshold")(boostThreshold.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(clip)) __obj.updateDynamic("clip")(clip.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (colorAxis != null) __obj.updateDynamic("colorAxis")(colorAxis.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorByPoint)) __obj.updateDynamic("colorByPoint")(colorByPoint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorIndex)) __obj.updateDynamic("colorIndex")(colorIndex.get.asInstanceOf[js.Any])
+    if (colorKey != null) __obj.updateDynamic("colorKey")(colorKey.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (compare != null) __obj.updateDynamic("compare")(compare.asInstanceOf[js.Any])
+    if (compareBase != null) __obj.updateDynamic("compareBase")(compareBase.asInstanceOf[js.Any])
+    if (!js.isUndefined(compareStart)) __obj.updateDynamic("compareStart")(compareStart.get.asInstanceOf[js.Any])
+    if (connectors != null) __obj.updateDynamic("connectors")(connectors.asInstanceOf[js.Any])
+    if (!js.isUndefined(cropThreshold)) __obj.updateDynamic("cropThreshold")(cropThreshold.get.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataGrouping != null) __obj.updateDynamic("dataGrouping")(dataGrouping.asInstanceOf[js.Any])
+    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (dragDrop != null) __obj.updateDynamic("dragDrop")(dragDrop.asInstanceOf[js.Any])
+    if (edgeColor != null) __obj.updateDynamic("edgeColor")(edgeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeWidth)) __obj.updateDynamic("edgeWidth")(edgeWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableMouseTracking)) __obj.updateDynamic("enableMouseTracking")(enableMouseTracking.get.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (findNearestPointBy != null) __obj.updateDynamic("findNearestPointBy")(findNearestPointBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(getExtremesFromAll)) __obj.updateDynamic("getExtremesFromAll")(getExtremesFromAll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupPadding)) __obj.updateDynamic("groupPadding")(groupPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(groupZPadding)) __obj.updateDynamic("groupZPadding")(groupZPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(grouping)) __obj.updateDynamic("grouping")(grouping.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeInDataExport)) __obj.updateDynamic("includeInDataExport")(includeInDataExport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (joinBy != null) __obj.updateDynamic("joinBy")(joinBy.asInstanceOf[js.Any])
+    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (lastPrice != null) __obj.updateDynamic("lastPrice")(lastPrice.asInstanceOf[js.Any])
+    if (lastVisiblePrice != null) __obj.updateDynamic("lastVisiblePrice")(lastVisiblePrice.asInstanceOf[js.Any])
+    if (!js.isUndefined(legendIndex)) __obj.updateDynamic("legendIndex")(legendIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineWidth)) __obj.updateDynamic("lineWidth")(lineWidth.get.asInstanceOf[js.Any])
+    if (linkedTo != null) __obj.updateDynamic("linkedTo")(linkedTo.asInstanceOf[js.Any])
+    if (mapData != null) __obj.updateDynamic("mapData")(mapData.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPointWidth)) __obj.updateDynamic("maxPointWidth")(maxPointWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minPointLength)) __obj.updateDynamic("minPointLength")(minPointLength.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (navigatorOptions != null) __obj.updateDynamic("navigatorOptions")(navigatorOptions.asInstanceOf[js.Any])
+    if (negativeColor != null) __obj.updateDynamic("negativeColor")(negativeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
+    if (pointDescriptionFormatter != null) __obj.updateDynamic("pointDescriptionFormatter")(pointDescriptionFormatter.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointInterval)) __obj.updateDynamic("pointInterval")(pointInterval.get.asInstanceOf[js.Any])
+    if (pointIntervalUnit != null) __obj.updateDynamic("pointIntervalUnit")(pointIntervalUnit.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointPadding)) __obj.updateDynamic("pointPadding")(pointPadding.get.asInstanceOf[js.Any])
+    if (pointPlacement != null) __obj.updateDynamic("pointPlacement")(pointPlacement.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointRange)) __obj.updateDynamic("pointRange")(pointRange.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointStart)) __obj.updateDynamic("pointStart")(pointStart.get.asInstanceOf[js.Any])
+    if (pointValKey != null) __obj.updateDynamic("pointValKey")(pointValKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointWidth)) __obj.updateDynamic("pointWidth")(pointWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (!js.isUndefined(showCheckbox)) __obj.updateDynamic("showCheckbox")(showCheckbox.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInNavigator)) __obj.updateDynamic("showInNavigator")(showInNavigator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipKeyboardNavigation)) __obj.updateDynamic("skipKeyboardNavigation")(skipKeyboardNavigation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(softThreshold)) __obj.updateDynamic("softThreshold")(softThreshold.get.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
+    if (!js.isUndefined(stickyTracking)) __obj.updateDynamic("stickyTracking")(stickyTracking.get.asInstanceOf[js.Any])
+    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (treemap != null) __obj.updateDynamic("treemap")(treemap.asInstanceOf[js.Any])
+    if (!js.isUndefined(turboThreshold)) __obj.updateDynamic("turboThreshold")(turboThreshold.get.asInstanceOf[js.Any])
+    if (upColor != null) __obj.updateDynamic("upColor")(upColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
+    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
+    if (zoneAxis != null) __obj.updateDynamic("zoneAxis")(zoneAxis.asInstanceOf[js.Any])
+    if (zones != null) __obj.updateDynamic("zones")(zones.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesOhlcOptions]
   }
-  @scala.inline
-  implicit class SeriesOhlcOptionsOps[Self <: SeriesOhlcOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String | ohlc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(
-      value: js.Array[
-          (js.Tuple4[Double | String, Double, Double, Double]) | (js.Tuple5[Double | String, Double, Double, Double, Double]) | SeriesOhlcDataOptions
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapData(value: js.Array[SeriesMapDataOptions] | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStack(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreemap(value: SeriesTreemapOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXAxis(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYAxis(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

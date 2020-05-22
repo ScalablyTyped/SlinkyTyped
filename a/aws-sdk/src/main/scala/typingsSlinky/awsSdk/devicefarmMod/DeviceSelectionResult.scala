@@ -22,53 +22,16 @@ trait DeviceSelectionResult extends js.Object {
 
 object DeviceSelectionResult {
   @scala.inline
-  def apply(): DeviceSelectionResult = {
+  def apply(
+    filters: DeviceFilters = null,
+    matchedDevicesCount: js.UndefOr[Integer] = js.undefined,
+    maxDevices: js.UndefOr[Integer] = js.undefined
+  ): DeviceSelectionResult = {
     val __obj = js.Dynamic.literal()
+    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
+    if (!js.isUndefined(matchedDevicesCount)) __obj.updateDynamic("matchedDevicesCount")(matchedDevicesCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDevices)) __obj.updateDynamic("maxDevices")(maxDevices.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceSelectionResult]
   }
-  @scala.inline
-  implicit class DeviceSelectionResultOps[Self <: DeviceSelectionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilters(value: DeviceFilters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchedDevicesCount(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchedDevicesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchedDevicesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchedDevicesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDevices(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDevices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

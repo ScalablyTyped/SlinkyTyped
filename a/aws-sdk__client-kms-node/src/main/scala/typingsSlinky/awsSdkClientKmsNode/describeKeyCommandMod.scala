@@ -26,9 +26,16 @@ object describeKeyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribeKeyInput) = this()
+    /* CompleteClass */
+    override val input: DescribeKeyInput = js.native
     val middlewareStack: MiddlewareStack[DescribeKeyInput, DescribeKeyOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: KMSResolvedConfiguration
+    ): Handler[DescribeKeyInput, DescribeKeyOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[DescribeKeyInput, DescribeKeyOutput] = js.native
   }

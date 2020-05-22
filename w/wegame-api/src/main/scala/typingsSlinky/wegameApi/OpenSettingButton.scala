@@ -6,10 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenSettingButton extends CreatedButton {
-  def offTap(callback: js.Function0[Unit]): Unit = js.native
-  def onTap(callback: js.Function0[Unit]): Unit = js.native
+  def offTap(callback: js.Function0[Unit]): Unit
+  def onTap(callback: js.Function0[Unit]): Unit
 }
 
 object OpenSettingButton {
@@ -29,25 +28,5 @@ object OpenSettingButton {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenSettingButton]
   }
-  @scala.inline
-  implicit class OpenSettingButtonOps[Self <: OpenSettingButton] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOffTap(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offTap")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnTap(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTap")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

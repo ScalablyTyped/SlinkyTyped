@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PsbtOutputUpdate extends js.Object {
-  var bip32Derivation: js.UndefOr[js.Array[Bip32Derivation]] = js.native
-  var redeemScript: js.UndefOr[RedeemScript] = js.native
-  var witnessScript: js.UndefOr[WitnessScript] = js.native
+  var bip32Derivation: js.UndefOr[js.Array[Bip32Derivation]] = js.undefined
+  var redeemScript: js.UndefOr[RedeemScript] = js.undefined
+  var witnessScript: js.UndefOr[WitnessScript] = js.undefined
 }
 
 object PsbtOutputUpdate {
   @scala.inline
-  def apply(): PsbtOutputUpdate = {
+  def apply(
+    bip32Derivation: js.Array[Bip32Derivation] = null,
+    redeemScript: RedeemScript = null,
+    witnessScript: WitnessScript = null
+  ): PsbtOutputUpdate = {
     val __obj = js.Dynamic.literal()
+    if (bip32Derivation != null) __obj.updateDynamic("bip32Derivation")(bip32Derivation.asInstanceOf[js.Any])
+    if (redeemScript != null) __obj.updateDynamic("redeemScript")(redeemScript.asInstanceOf[js.Any])
+    if (witnessScript != null) __obj.updateDynamic("witnessScript")(witnessScript.asInstanceOf[js.Any])
     __obj.asInstanceOf[PsbtOutputUpdate]
   }
-  @scala.inline
-  implicit class PsbtOutputUpdateOps[Self <: PsbtOutputUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBip32Derivation(value: js.Array[Bip32Derivation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bip32Derivation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBip32Derivation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bip32Derivation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedeemScript(value: RedeemScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeemScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedeemScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redeemScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWitnessScript(value: WitnessScript): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWitnessScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("witnessScript")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

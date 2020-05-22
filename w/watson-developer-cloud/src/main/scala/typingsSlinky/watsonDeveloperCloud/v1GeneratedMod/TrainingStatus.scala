@@ -5,149 +5,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** TrainingStatus. */
-@js.native
 trait TrainingStatus extends js.Object {
   /** When `true`, the collection has been successfully trained. */
-  var available: js.UndefOr[Boolean] = js.native
+  var available: js.UndefOr[Boolean] = js.undefined
   /** The timestamp of when the data was uploaded. */
-  var data_updated: js.UndefOr[String] = js.native
+  var data_updated: js.UndefOr[String] = js.undefined
   /** When `true`, the collection has a sufficent amount of examples added for training to occur. */
-  var minimum_examples_added: js.UndefOr[Boolean] = js.native
+  var minimum_examples_added: js.UndefOr[Boolean] = js.undefined
   /** When `true`, the collection has a sufficent amount of queries added for training to occur. */
-  var minimum_queries_added: js.UndefOr[Boolean] = js.native
+  var minimum_queries_added: js.UndefOr[Boolean] = js.undefined
   /** The number of notices associated with this data set. */
-  var notices: js.UndefOr[Double] = js.native
+  var notices: js.UndefOr[Double] = js.undefined
   /** When `true`, the collection is currently processing training. */
-  var processing: js.UndefOr[Boolean] = js.native
+  var processing: js.UndefOr[Boolean] = js.undefined
   /** The timestamp of when the collection was successfully trained. */
-  var successfully_trained: js.UndefOr[String] = js.native
+  var successfully_trained: js.UndefOr[String] = js.undefined
   /** When `true`, the collection has a sufficent amount of diversity in labeled results for training to occur. */
-  var sufficient_label_diversity: js.UndefOr[Boolean] = js.native
+  var sufficient_label_diversity: js.UndefOr[Boolean] = js.undefined
   /** The total number of training examples uploaded to this collection. */
-  var total_examples: js.UndefOr[Double] = js.native
+  var total_examples: js.UndefOr[Double] = js.undefined
 }
 
 object TrainingStatus {
   @scala.inline
-  def apply(): TrainingStatus = {
+  def apply(
+    available: js.UndefOr[Boolean] = js.undefined,
+    data_updated: String = null,
+    minimum_examples_added: js.UndefOr[Boolean] = js.undefined,
+    minimum_queries_added: js.UndefOr[Boolean] = js.undefined,
+    notices: js.UndefOr[Double] = js.undefined,
+    processing: js.UndefOr[Boolean] = js.undefined,
+    successfully_trained: String = null,
+    sufficient_label_diversity: js.UndefOr[Boolean] = js.undefined,
+    total_examples: js.UndefOr[Double] = js.undefined
+  ): TrainingStatus = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(available)) __obj.updateDynamic("available")(available.get.asInstanceOf[js.Any])
+    if (data_updated != null) __obj.updateDynamic("data_updated")(data_updated.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum_examples_added)) __obj.updateDynamic("minimum_examples_added")(minimum_examples_added.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum_queries_added)) __obj.updateDynamic("minimum_queries_added")(minimum_queries_added.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(notices)) __obj.updateDynamic("notices")(notices.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(processing)) __obj.updateDynamic("processing")(processing.get.asInstanceOf[js.Any])
+    if (successfully_trained != null) __obj.updateDynamic("successfully_trained")(successfully_trained.asInstanceOf[js.Any])
+    if (!js.isUndefined(sufficient_label_diversity)) __obj.updateDynamic("sufficient_label_diversity")(sufficient_label_diversity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_examples)) __obj.updateDynamic("total_examples")(total_examples.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrainingStatus]
   }
-  @scala.inline
-  implicit class TrainingStatusOps[Self <: TrainingStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("available")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("available")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData_updated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData_updated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data_updated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum_examples_added(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_examples_added")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum_examples_added: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_examples_added")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum_queries_added(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_queries_added")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum_queries_added: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_queries_added")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotices(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcessing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessfully_trained(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfully_trained")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessfully_trained: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successfully_trained")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSufficient_label_diversity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sufficient_label_diversity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSufficient_label_diversity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sufficient_label_diversity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotal_examples(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_examples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotal_examples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total_examples")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

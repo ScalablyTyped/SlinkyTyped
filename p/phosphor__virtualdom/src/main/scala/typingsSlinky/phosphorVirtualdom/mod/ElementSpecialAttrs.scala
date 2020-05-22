@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ElementSpecialAttrs extends js.Object {
   /**
     * The JS-safe name for the HTML `class` attribute.
     */
-  val className: js.UndefOr[String] = js.native
+  val className: js.UndefOr[String] = js.undefined
   /**
     * The dataset for the rendered DOM element.
     */
-  val dataset: js.UndefOr[ElementDataset] = js.native
+  val dataset: js.UndefOr[ElementDataset] = js.undefined
   /**
     * The JS-safe name for the HTML `for` attribute.
     */
-  val htmlFor: js.UndefOr[String] = js.native
+  val htmlFor: js.UndefOr[String] = js.undefined
   /**
     * The key id for the virtual element node.
     *
@@ -30,86 +29,29 @@ trait ElementSpecialAttrs extends js.Object {
     *
     * If a key is provided, it must be unique among sibling nodes.
     */
-  val key: js.UndefOr[String] = js.native
+  val key: js.UndefOr[String] = js.undefined
   /**
     * The inline style for the rendered DOM element.
     */
-  val style: js.UndefOr[ElementInlineStyle] = js.native
+  val style: js.UndefOr[ElementInlineStyle] = js.undefined
 }
 
 object ElementSpecialAttrs {
   @scala.inline
-  def apply(): ElementSpecialAttrs = {
+  def apply(
+    className: String = null,
+    dataset: ElementDataset = null,
+    htmlFor: String = null,
+    key: String = null,
+    style: ElementInlineStyle = null
+  ): ElementSpecialAttrs = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
+    if (htmlFor != null) __obj.updateDynamic("htmlFor")(htmlFor.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementSpecialAttrs]
   }
-  @scala.inline
-  implicit class ElementSpecialAttrsOps[Self <: ElementSpecialAttrs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataset(value: ElementDataset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlFor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: ElementInlineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

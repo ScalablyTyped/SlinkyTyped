@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITimeEntryStatic extends js.Object {
-  var regionalOptions: ITimeEntryLocales = js.native
-  def setDefaults(settings: ITimeEntryOptions): Unit = js.native
+  var regionalOptions: ITimeEntryLocales
+  def setDefaults(settings: ITimeEntryOptions): Unit
 }
 
 object ITimeEntryStatic {
@@ -16,25 +15,5 @@ object ITimeEntryStatic {
     val __obj = js.Dynamic.literal(regionalOptions = regionalOptions.asInstanceOf[js.Any], setDefaults = js.Any.fromFunction1(setDefaults))
     __obj.asInstanceOf[ITimeEntryStatic]
   }
-  @scala.inline
-  implicit class ITimeEntryStaticOps[Self <: ITimeEntryStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegionalOptions(value: ITimeEntryLocales): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regionalOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDefaults(value: ITimeEntryOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaults")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

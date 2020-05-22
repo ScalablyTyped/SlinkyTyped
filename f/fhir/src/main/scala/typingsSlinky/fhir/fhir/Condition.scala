@@ -8,545 +8,238 @@ import scala.scalajs.js.annotation._
   * Detailed information about conditions, problems or diagnoses
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
-trait Condition extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Condition extends DomainResource {
   /**
     * Contains extended information for property 'abatementBoolean'.
     */
-  var _abatementBoolean: js.UndefOr[Element] = js.native
+  var _abatementBoolean: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'abatementDateTime'.
     */
-  var _abatementDateTime: js.UndefOr[Element] = js.native
+  var _abatementDateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'abatementString'.
     */
-  var _abatementString: js.UndefOr[Element] = js.native
+  var _abatementString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'assertedDate'.
     */
-  var _assertedDate: js.UndefOr[Element] = js.native
+  var _assertedDate: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'clinicalStatus'.
     */
-  var _clinicalStatus: js.UndefOr[Element] = js.native
+  var _clinicalStatus: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'onsetDateTime'.
     */
-  var _onsetDateTime: js.UndefOr[Element] = js.native
+  var _onsetDateTime: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'onsetString'.
     */
-  var _onsetString: js.UndefOr[Element] = js.native
+  var _onsetString: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'verificationStatus'.
     */
-  var _verificationStatus: js.UndefOr[Element] = js.native
+  var _verificationStatus: js.UndefOr[Element] = js.undefined
   /**
     * If/when in resolution/remission
     */
-  var abatementAge: js.UndefOr[Age] = js.native
+  var abatementAge: js.UndefOr[Age] = js.undefined
   /**
     * If/when in resolution/remission
     */
-  var abatementBoolean: js.UndefOr[Boolean] = js.native
+  var abatementBoolean: js.UndefOr[Boolean] = js.undefined
   /**
     * If/when in resolution/remission
     */
-  var abatementDateTime: js.UndefOr[dateTime] = js.native
+  var abatementDateTime: js.UndefOr[dateTime] = js.undefined
   /**
     * If/when in resolution/remission
     */
-  var abatementPeriod: js.UndefOr[Period] = js.native
+  var abatementPeriod: js.UndefOr[Period] = js.undefined
   /**
     * If/when in resolution/remission
     */
-  var abatementRange: js.UndefOr[Range] = js.native
+  var abatementRange: js.UndefOr[Range] = js.undefined
   /**
     * If/when in resolution/remission
     */
-  var abatementString: js.UndefOr[String] = js.native
+  var abatementString: js.UndefOr[String] = js.undefined
   /**
     * Date record was believed accurate
     */
-  var assertedDate: js.UndefOr[dateTime] = js.native
+  var assertedDate: js.UndefOr[dateTime] = js.undefined
   /**
     * Person who asserts this condition
     */
-  var asserter: js.UndefOr[Reference] = js.native
+  var asserter: js.UndefOr[Reference] = js.undefined
   /**
     * Anatomical location, if relevant
     */
-  var bodySite: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var bodySite: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * problem-list-item | encounter-diagnosis
     */
-  var category: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var category: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * active | recurrence | inactive | remission | resolved
     */
-  var clinicalStatus: js.UndefOr[code] = js.native
+  var clinicalStatus: js.UndefOr[code] = js.undefined
   /**
     * Identification of the condition, problem or diagnosis
     */
-  var code: js.UndefOr[CodeableConcept] = js.native
+  var code: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Encounter or episode when condition first asserted
     */
-  var context: js.UndefOr[Reference] = js.native
+  var context: js.UndefOr[Reference] = js.undefined
   /**
     * Supporting evidence
     */
-  var evidence: js.UndefOr[js.Array[ConditionEvidence]] = js.native
+  var evidence: js.UndefOr[js.Array[ConditionEvidence]] = js.undefined
   /**
     * External Ids for this condition
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
   /**
     * Additional information about the Condition
     */
-  var note: js.UndefOr[js.Array[Annotation]] = js.native
+  var note: js.UndefOr[js.Array[Annotation]] = js.undefined
   /**
     * Estimated or actual date,  date-time, or age
     */
-  var onsetAge: js.UndefOr[Age] = js.native
+  var onsetAge: js.UndefOr[Age] = js.undefined
   /**
     * Estimated or actual date,  date-time, or age
     */
-  var onsetDateTime: js.UndefOr[dateTime] = js.native
+  var onsetDateTime: js.UndefOr[dateTime] = js.undefined
   /**
     * Estimated or actual date,  date-time, or age
     */
-  var onsetPeriod: js.UndefOr[Period] = js.native
+  var onsetPeriod: js.UndefOr[Period] = js.undefined
   /**
     * Estimated or actual date,  date-time, or age
     */
-  var onsetRange: js.UndefOr[Range] = js.native
+  var onsetRange: js.UndefOr[Range] = js.undefined
   /**
     * Estimated or actual date,  date-time, or age
     */
-  var onsetString: js.UndefOr[String] = js.native
+  var onsetString: js.UndefOr[String] = js.undefined
   /**
     * Subjective severity of condition
     */
-  var severity: js.UndefOr[CodeableConcept] = js.native
+  var severity: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Stage/grade, usually assessed formally
     */
-  var stage: js.UndefOr[ConditionStage] = js.native
+  var stage: js.UndefOr[ConditionStage] = js.undefined
   /**
     * Who has the condition?
     */
-  var subject: Reference = js.native
+  var subject: Reference
   /**
     * provisional | differential | confirmed | refuted | entered-in-error | unknown
     */
-  var verificationStatus: js.UndefOr[code] = js.native
+  var verificationStatus: js.UndefOr[code] = js.undefined
 }
 
 object Condition {
   @scala.inline
-  def apply(subject: Reference): Condition = {
+  def apply(
+    subject: Reference,
+    _abatementBoolean: Element = null,
+    _abatementDateTime: Element = null,
+    _abatementString: Element = null,
+    _assertedDate: Element = null,
+    _clinicalStatus: Element = null,
+    _id: Element = null,
+    _implicitRules: Element = null,
+    _language: Element = null,
+    _onsetDateTime: Element = null,
+    _onsetString: Element = null,
+    _resourceType: Element = null,
+    _verificationStatus: Element = null,
+    abatementAge: Age = null,
+    abatementBoolean: js.UndefOr[Boolean] = js.undefined,
+    abatementDateTime: dateTime = null,
+    abatementPeriod: Period = null,
+    abatementRange: Range = null,
+    abatementString: String = null,
+    assertedDate: dateTime = null,
+    asserter: Reference = null,
+    bodySite: js.Array[CodeableConcept] = null,
+    category: js.Array[CodeableConcept] = null,
+    clinicalStatus: code = null,
+    code: CodeableConcept = null,
+    contained: js.Array[Resource] = null,
+    context: Reference = null,
+    evidence: js.Array[ConditionEvidence] = null,
+    extension: js.Array[Extension] = null,
+    id: id = null,
+    identifier: js.Array[Identifier] = null,
+    implicitRules: uri = null,
+    language: code = null,
+    meta: Meta = null,
+    modifierExtension: js.Array[Extension] = null,
+    note: js.Array[Annotation] = null,
+    onsetAge: Age = null,
+    onsetDateTime: dateTime = null,
+    onsetPeriod: Period = null,
+    onsetRange: Range = null,
+    onsetString: String = null,
+    resourceType: code = null,
+    severity: CodeableConcept = null,
+    stage: ConditionStage = null,
+    text: Narrative = null,
+    verificationStatus: code = null
+  ): Condition = {
     val __obj = js.Dynamic.literal(subject = subject.asInstanceOf[js.Any])
+    if (_abatementBoolean != null) __obj.updateDynamic("_abatementBoolean")(_abatementBoolean.asInstanceOf[js.Any])
+    if (_abatementDateTime != null) __obj.updateDynamic("_abatementDateTime")(_abatementDateTime.asInstanceOf[js.Any])
+    if (_abatementString != null) __obj.updateDynamic("_abatementString")(_abatementString.asInstanceOf[js.Any])
+    if (_assertedDate != null) __obj.updateDynamic("_assertedDate")(_assertedDate.asInstanceOf[js.Any])
+    if (_clinicalStatus != null) __obj.updateDynamic("_clinicalStatus")(_clinicalStatus.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
+    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
+    if (_onsetDateTime != null) __obj.updateDynamic("_onsetDateTime")(_onsetDateTime.asInstanceOf[js.Any])
+    if (_onsetString != null) __obj.updateDynamic("_onsetString")(_onsetString.asInstanceOf[js.Any])
+    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
+    if (_verificationStatus != null) __obj.updateDynamic("_verificationStatus")(_verificationStatus.asInstanceOf[js.Any])
+    if (abatementAge != null) __obj.updateDynamic("abatementAge")(abatementAge.asInstanceOf[js.Any])
+    if (!js.isUndefined(abatementBoolean)) __obj.updateDynamic("abatementBoolean")(abatementBoolean.get.asInstanceOf[js.Any])
+    if (abatementDateTime != null) __obj.updateDynamic("abatementDateTime")(abatementDateTime.asInstanceOf[js.Any])
+    if (abatementPeriod != null) __obj.updateDynamic("abatementPeriod")(abatementPeriod.asInstanceOf[js.Any])
+    if (abatementRange != null) __obj.updateDynamic("abatementRange")(abatementRange.asInstanceOf[js.Any])
+    if (abatementString != null) __obj.updateDynamic("abatementString")(abatementString.asInstanceOf[js.Any])
+    if (assertedDate != null) __obj.updateDynamic("assertedDate")(assertedDate.asInstanceOf[js.Any])
+    if (asserter != null) __obj.updateDynamic("asserter")(asserter.asInstanceOf[js.Any])
+    if (bodySite != null) __obj.updateDynamic("bodySite")(bodySite.asInstanceOf[js.Any])
+    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
+    if (clinicalStatus != null) __obj.updateDynamic("clinicalStatus")(clinicalStatus.asInstanceOf[js.Any])
+    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
+    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (evidence != null) __obj.updateDynamic("evidence")(evidence.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
+    if (onsetAge != null) __obj.updateDynamic("onsetAge")(onsetAge.asInstanceOf[js.Any])
+    if (onsetDateTime != null) __obj.updateDynamic("onsetDateTime")(onsetDateTime.asInstanceOf[js.Any])
+    if (onsetPeriod != null) __obj.updateDynamic("onsetPeriod")(onsetPeriod.asInstanceOf[js.Any])
+    if (onsetRange != null) __obj.updateDynamic("onsetRange")(onsetRange.asInstanceOf[js.Any])
+    if (onsetString != null) __obj.updateDynamic("onsetString")(onsetString.asInstanceOf[js.Any])
+    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
+    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
+    if (stage != null) __obj.updateDynamic("stage")(stage.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (verificationStatus != null) __obj.updateDynamic("verificationStatus")(verificationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[Condition]
   }
-  @scala.inline
-  implicit class ConditionOps[Self <: Condition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubject(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_abatementBoolean(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_abatementBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_abatementBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_abatementBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_abatementDateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_abatementDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_abatementDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_abatementDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_abatementString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_abatementString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_abatementString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_abatementString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_assertedDate(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_assertedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_assertedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_assertedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_clinicalStatus(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_clinicalStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_clinicalStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_clinicalStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_onsetDateTime(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_onsetDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_onsetDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_onsetDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_onsetString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_onsetString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_onsetString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_onsetString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_verificationStatus(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_verificationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_verificationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_verificationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbatementAge(value: Age): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbatementAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbatementBoolean(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementBoolean")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbatementBoolean: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementBoolean")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbatementDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbatementDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbatementPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbatementPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbatementRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbatementRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAbatementString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbatementString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abatementString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssertedDate(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assertedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssertedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assertedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsserter(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asserter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsserter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asserter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodySite(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodySite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodySite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategory(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClinicalStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clinicalStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClinicalStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clinicalStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCode(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvidence(value: js.Array[ConditionEvidence]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: js.Array[Identifier]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: js.Array[Annotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsetAge(value: Age): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsetAge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetAge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsetDateTime(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsetDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsetPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsetPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetPeriod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsetRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsetRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsetString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsetString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsetString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStage(value: ConditionStage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationStatus(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verificationStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

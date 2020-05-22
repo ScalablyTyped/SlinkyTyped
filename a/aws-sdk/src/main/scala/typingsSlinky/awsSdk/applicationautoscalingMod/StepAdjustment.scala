@@ -15,54 +15,22 @@ trait StepAdjustment extends js.Object {
     */
   var MetricIntervalUpperBound: js.UndefOr[MetricScale] = js.native
   /**
-    * The amount by which to scale, based on the specified adjustment type. A positive value adds to the current scalable dimension while a negative number removes from the current scalable dimension.
+    * The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity. 
     */
   var ScalingAdjustment: typingsSlinky.awsSdk.applicationautoscalingMod.ScalingAdjustment = js.native
 }
 
 object StepAdjustment {
   @scala.inline
-  def apply(ScalingAdjustment: ScalingAdjustment): StepAdjustment = {
+  def apply(
+    ScalingAdjustment: ScalingAdjustment,
+    MetricIntervalLowerBound: js.UndefOr[MetricScale] = js.undefined,
+    MetricIntervalUpperBound: js.UndefOr[MetricScale] = js.undefined
+  ): StepAdjustment = {
     val __obj = js.Dynamic.literal(ScalingAdjustment = ScalingAdjustment.asInstanceOf[js.Any])
+    if (!js.isUndefined(MetricIntervalLowerBound)) __obj.updateDynamic("MetricIntervalLowerBound")(MetricIntervalLowerBound.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MetricIntervalUpperBound)) __obj.updateDynamic("MetricIntervalUpperBound")(MetricIntervalUpperBound.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepAdjustment]
   }
-  @scala.inline
-  implicit class StepAdjustmentOps[Self <: StepAdjustment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScalingAdjustment(value: ScalingAdjustment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricIntervalLowerBound(value: MetricScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricIntervalLowerBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricIntervalLowerBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricIntervalLowerBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricIntervalUpperBound(value: MetricScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricIntervalUpperBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricIntervalUpperBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricIntervalUpperBound")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

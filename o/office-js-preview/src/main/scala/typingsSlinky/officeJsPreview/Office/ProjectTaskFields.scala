@@ -11,11 +11,11 @@ sealed trait ProjectTaskFields extends js.Object
   * Specifies the task fields that are available as a parameter for the {@link Office.Document | Document}.getTaskFieldAsync method.
   *
   * @remarks
-  * 
+  *
   * A ProjectTaskFields constant can be used as a parameter of the {@link Office.Document | Document}.getTaskFieldAsync method.
   *
-  * For more information about working with fields in Project, see the 
-  * {@link https://support.office.com/article/Available-fields-reference-615a4563-1cc3-40f4-b66f-1b17e793a460 | Available fields} reference. 
+  * For more information about working with fields in Project, see the
+  * {@link https://support.office.com/article/Available-fields-reference-615a4563-1cc3-40f4-b66f-1b17e793a460 | Available fields} reference.
   * In Project Help, search for Available fields.
   */
 @JSGlobal("Office.ProjectTaskFields")
@@ -106,7 +106,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline10FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -161,7 +161,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline1FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -216,7 +216,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline2FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -271,7 +271,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline3FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -326,7 +326,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline4FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -381,7 +381,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline5FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -436,7 +436,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline6FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -491,7 +491,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline7FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -546,7 +546,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline8FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -601,7 +601,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait Baseline9FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -656,7 +656,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait BaselineFixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native
@@ -699,7 +699,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait ConstraintDate extends ProjectTaskFields
   
   /**
-    * A constraint type for the task: As Soon As Possible = 0, As Late As Possible = 1, Must Start On = 2, Must Finish On = 3, 
+    * A constraint type for the task: As Soon As Possible = 0, As Late As Possible = 1, Must Start On = 2, Must Finish On = 3,
     * Start No Earlier Than = 4, Start No Later Than = 5, Finish No Earlier Than = 6, Finish No Later Than = 7.
     */
   @js.native
@@ -994,7 +994,7 @@ object ProjectTaskFields extends js.Object {
   sealed trait FixedCost extends ProjectTaskFields
   
   /**
-    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1, 
+    * The accrual method that defines how the baseline task accrues fixed costs: Accrues when the task starts = 1,
     * accrues when the task ends = 2, accrues as the task progresses (prorated) = 3.
     */
   @js.native

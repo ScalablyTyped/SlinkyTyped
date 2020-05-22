@@ -1,7 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.anon.ColorOpacity
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
+import typingsSlinky.devextreme.devextremeStrings.betweenLabels
 import typingsSlinky.devextreme.devextremeStrings.continuous
+import typingsSlinky.devextreme.devextremeStrings.crossLabels
 import typingsSlinky.devextreme.devextremeStrings.datetime
 import typingsSlinky.devextreme.devextremeStrings.day
 import typingsSlinky.devextreme.devextremeStrings.discrete
@@ -21,300 +24,122 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxPolarChartArgumentAxis extends dxPolarChartCommonAxisSettings {
-  /** Specifies the desired type of axis values. */
-  var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
-  /** Specifies the minimum distance between two neighboring major ticks in pixels. Applies only to the axes of the "continuous" and "logarithmic" types. */
-  var axisDivisionFactor: js.UndefOr[Double] = js.native
-  /** Specifies the order in which arguments (categories) are arranged on the discrete argument axis. */
-  var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
-  /** Defines an array of the argument axis constant lines. */
-  var constantLines: js.UndefOr[js.Array[dxPolarChartArgumentAxisConstantLines]] = js.native
-  /** Specifies whether or not to display the first point at the angle specified by the startAngle option. */
-  var firstPointOnStartAngle: js.UndefOr[Boolean] = js.native
-  /** Specifies the elements that will be highlighted when the argument axis is hovered over. */
-  var hoverMode: js.UndefOr[allArgumentPoints | none] = js.native
-  /** Specifies options for argument axis labels. */
+  /** @name dxPolarChart.Options.argumentAxis.argumentType */
+  var argumentType: js.UndefOr[datetime | numeric | string_] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.axisDivisionFactor */
+  var axisDivisionFactor: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.categories */
+  var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.constantLines */
+  var constantLines: js.UndefOr[js.Array[dxPolarChartArgumentAxisConstantLines]] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.firstPointOnStartAngle */
+  var firstPointOnStartAngle: js.UndefOr[Boolean] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.hoverMode */
+  var hoverMode: js.UndefOr[allArgumentPoints | none] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.label */
   @JSName("label")
-  var label_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisLabel] = js.native
-  /** Specifies a value used to calculate the range on a logarithmic axis within which the axis should be linear. Applies only if the data source contains negative values or zeroes. */
-  var linearThreshold: js.UndefOr[Double] = js.native
-  /** Specifies the value to be raised to a power when generating ticks for a logarithmic axis. */
-  var logarithmBase: js.UndefOr[Double] = js.native
-  /** Specifies the number of minor ticks between two neighboring major ticks. */
-  var minorTickCount: js.UndefOr[Double] = js.native
-  /** Specifies the interval between minor ticks. */
+  var label_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisLabel] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.linearThreshold */
+  var linearThreshold: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.logarithmBase */
+  var logarithmBase: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.minorTickCount */
+  var minorTickCount: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.minorTickInterval */
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  /** Specifies the options of the minor ticks. */
+  ] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.minorTick */
   @JSName("minorTick")
-  var minorTick_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisMinorTick] = js.native
-  /** Specifies the value to be used as the origin for the argument axis. */
-  var originValue: js.UndefOr[Double] = js.native
-  /** Specifies the period of the argument values in the data source. */
-  var period: js.UndefOr[Double] = js.native
-  /** Specifies the angle in arc degrees to which the argument axis should be rotated. The positive values rotate the axis clockwise. */
-  var startAngle: js.UndefOr[Double] = js.native
-  /** Specifies options for argument axis strips. */
-  var strips: js.UndefOr[js.Array[dxPolarChartArgumentAxisStrips]] = js.native
-  /** Specifies an interval between axis ticks/grid lines. */
+  var minorTick_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisMinorTick] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.originValue */
+  var originValue: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.period */
+  var period: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.startAngle */
+  var startAngle: js.UndefOr[Double] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.strips */
+  var strips: js.UndefOr[js.Array[dxPolarChartArgumentAxisStrips]] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.tickInterval */
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-  ] = js.native
-  /** An object defining the configuration options for axis ticks. */
+  ] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.tick */
   @JSName("tick")
-  var tick_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisTick] = js.native
-  /** Specifies the required type of the argument axis. */
-  var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.native
+  var tick_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisTick] = js.undefined
+  /** @name dxPolarChart.Options.argumentAxis.type */
+  var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.undefined
 }
 
 object dxPolarChartArgumentAxis {
   @scala.inline
-  def apply(): dxPolarChartArgumentAxis = {
+  def apply(
+    allowDecimals: js.UndefOr[Boolean] = js.undefined,
+    argumentType: datetime | numeric | string_ = null,
+    axisDivisionFactor: js.UndefOr[Double] = js.undefined,
+    categories: js.Array[Double | String | js.Date] = null,
+    color: String = null,
+    constantLineStyle: dxPolarChartCommonAxisSettingsConstantLineStyle = null,
+    constantLines: js.Array[dxPolarChartArgumentAxisConstantLines] = null,
+    discreteAxisDivisionMode: betweenLabels | crossLabels = null,
+    endOnTick: js.UndefOr[Boolean] = js.undefined,
+    firstPointOnStartAngle: js.UndefOr[Boolean] = js.undefined,
+    grid: ColorOpacity = null,
+    hoverMode: allArgumentPoints | none = null,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    label: dxPolarChartArgumentAxisLabel = null,
+    linearThreshold: js.UndefOr[Double] = js.undefined,
+    logarithmBase: js.UndefOr[Double] = js.undefined,
+    minorGrid: ColorOpacity = null,
+    minorTick: dxPolarChartArgumentAxisMinorTick = null,
+    minorTickCount: js.UndefOr[Double] = js.undefined,
+    minorTickInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    originValue: js.UndefOr[Double] = js.undefined,
+    period: js.UndefOr[Double] = js.undefined,
+    startAngle: js.UndefOr[Double] = js.undefined,
+    stripStyle: dxPolarChartCommonAxisSettingsStripStyle = null,
+    strips: js.Array[dxPolarChartArgumentAxisStrips] = null,
+    tick: dxPolarChartArgumentAxisTick = null,
+    tickInterval: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year = null,
+    `type`: continuous | discrete | logarithmic = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): dxPolarChartArgumentAxis = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.get.asInstanceOf[js.Any])
+    if (argumentType != null) __obj.updateDynamic("argumentType")(argumentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(axisDivisionFactor)) __obj.updateDynamic("axisDivisionFactor")(axisDivisionFactor.get.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (constantLineStyle != null) __obj.updateDynamic("constantLineStyle")(constantLineStyle.asInstanceOf[js.Any])
+    if (constantLines != null) __obj.updateDynamic("constantLines")(constantLines.asInstanceOf[js.Any])
+    if (discreteAxisDivisionMode != null) __obj.updateDynamic("discreteAxisDivisionMode")(discreteAxisDivisionMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(endOnTick)) __obj.updateDynamic("endOnTick")(endOnTick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstPointOnStartAngle)) __obj.updateDynamic("firstPointOnStartAngle")(firstPointOnStartAngle.get.asInstanceOf[js.Any])
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(linearThreshold)) __obj.updateDynamic("linearThreshold")(linearThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(logarithmBase)) __obj.updateDynamic("logarithmBase")(logarithmBase.get.asInstanceOf[js.Any])
+    if (minorGrid != null) __obj.updateDynamic("minorGrid")(minorGrid.asInstanceOf[js.Any])
+    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
+    if (!js.isUndefined(minorTickCount)) __obj.updateDynamic("minorTickCount")(minorTickCount.get.asInstanceOf[js.Any])
+    if (minorTickInterval != null) __obj.updateDynamic("minorTickInterval")(minorTickInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(originValue)) __obj.updateDynamic("originValue")(originValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(period)) __obj.updateDynamic("period")(period.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startAngle)) __obj.updateDynamic("startAngle")(startAngle.get.asInstanceOf[js.Any])
+    if (stripStyle != null) __obj.updateDynamic("stripStyle")(stripStyle.asInstanceOf[js.Any])
+    if (strips != null) __obj.updateDynamic("strips")(strips.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
+    if (tickInterval != null) __obj.updateDynamic("tickInterval")(tickInterval.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartArgumentAxis]
   }
-  @scala.inline
-  implicit class dxPolarChartArgumentAxisOps[Self <: dxPolarChartArgumentAxis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgumentType(value: datetime | numeric | string_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisDivisionFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisDivisionFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisDivisionFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisDivisionFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Array[Double | String | js.Date]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstantLines(value: js.Array[dxPolarChartArgumentAxisConstantLines]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstantLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstPointOnStartAngle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPointOnStartAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstPointOnStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPointOnStartAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverMode(value: allArgumentPoints | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: dxPolarChartArgumentAxisLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinearThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinearThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linearThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogarithmBase(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogarithmBase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logarithmBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTick(value: dxPolarChartArgumentAxisMinorTick): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTickCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTickCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTickInterval(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTickInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrips(value: js.Array[dxPolarChartArgumentAxisStrips]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTick(value: dxPolarChartArgumentAxisTick): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickInterval(
-      value: Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: continuous | discrete | logarithmic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

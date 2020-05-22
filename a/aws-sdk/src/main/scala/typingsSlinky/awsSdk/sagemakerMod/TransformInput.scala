@@ -26,59 +26,17 @@ trait TransformInput extends js.Object {
 
 object TransformInput {
   @scala.inline
-  def apply(DataSource: TransformDataSource): TransformInput = {
+  def apply(
+    DataSource: TransformDataSource,
+    CompressionType: CompressionType = null,
+    ContentType: ContentType = null,
+    SplitType: SplitType = null
+  ): TransformInput = {
     val __obj = js.Dynamic.literal(DataSource = DataSource.asInstanceOf[js.Any])
+    if (CompressionType != null) __obj.updateDynamic("CompressionType")(CompressionType.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (SplitType != null) __obj.updateDynamic("SplitType")(SplitType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformInput]
   }
-  @scala.inline
-  implicit class TransformInputOps[Self <: TransformInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataSource(value: TransformDataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompressionType(value: CompressionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompressionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressionType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplitType(value: SplitType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplitType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

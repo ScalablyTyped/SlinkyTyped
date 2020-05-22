@@ -15,6 +15,10 @@ object apolloErrorMod extends js.Object {
     def this(hasGraphQLErrorsNetworkErrorErrorMessageExtraInfo: ErrorMessage) = this()
     var extraInfo: js.Any = js.native
     var graphQLErrors: js.Array[GraphQLError] = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     var networkError: js.Error | Null = js.native
   }
   

@@ -1,6 +1,6 @@
 package typingsSlinky.expectPuppeteer
 
-import typingsSlinky.expectPuppeteer.mod.ExpectPolling
+import typingsSlinky.expectPuppeteer.mod._ExpectPolling
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +13,10 @@ object expectPuppeteerStrings {
   sealed trait middle extends js.Object
   
   @js.native
-  sealed trait mutation extends ExpectPolling
+  sealed trait mutation extends _ExpectPolling
   
   @js.native
-  sealed trait raf extends ExpectPolling
+  sealed trait raf extends _ExpectPolling
   
   @js.native
   sealed trait right extends js.Object

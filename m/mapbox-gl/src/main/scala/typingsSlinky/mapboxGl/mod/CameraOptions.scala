@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CameraOptions extends js.Object {
   /** If zooming, the zoom center (defaults to map center) */
-  var around: js.UndefOr[LngLatLike] = js.native
+  var around: js.UndefOr[LngLatLike] = js.undefined
   /** Map rotation bearing in degrees counter-clockwise from north */
-  var bearing: js.UndefOr[Double] = js.native
+  var bearing: js.UndefOr[Double] = js.undefined
   /** Map center */
-  var center: js.UndefOr[LngLatLike] = js.native
+  var center: js.UndefOr[LngLatLike] = js.undefined
   /** Map angle in degrees at which the camera is looking at the ground */
-  var pitch: js.UndefOr[Double] = js.native
+  var pitch: js.UndefOr[Double] = js.undefined
   /** Map zoom level */
-  var zoom: js.UndefOr[Double] = js.native
+  var zoom: js.UndefOr[Double] = js.undefined
 }
 
 object CameraOptions {
   @scala.inline
-  def apply(): CameraOptions = {
+  def apply(
+    around: LngLatLike = null,
+    bearing: js.UndefOr[Double] = js.undefined,
+    center: LngLatLike = null,
+    pitch: js.UndefOr[Double] = js.undefined,
+    zoom: js.UndefOr[Double] = js.undefined
+  ): CameraOptions = {
     val __obj = js.Dynamic.literal()
+    if (around != null) __obj.updateDynamic("around")(around.asInstanceOf[js.Any])
+    if (!js.isUndefined(bearing)) __obj.updateDynamic("bearing")(bearing.get.asInstanceOf[js.Any])
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoom)) __obj.updateDynamic("zoom")(zoom.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CameraOptions]
   }
-  @scala.inline
-  implicit class CameraOptionsOps[Self <: CameraOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAround(value: LngLatLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("around")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAround: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("around")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBearing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bearing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBearing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bearing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: LngLatLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

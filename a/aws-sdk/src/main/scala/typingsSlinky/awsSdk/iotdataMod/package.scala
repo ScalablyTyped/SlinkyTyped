@@ -6,7 +6,15 @@ import scala.scalajs.js.annotation._
 
 package object iotdataMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.iotdataMod.ClientApiVersions
+  type JsonDocument = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotdataMod.Blob | java.lang.String
+  type Payload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotdataMod.Blob | java.lang.String
   type Qos = scala.Double
   type ThingName = java.lang.String
   type Topic = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2015-05-28`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.iotdataMod._apiVersion | java.lang.String
 }

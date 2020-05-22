@@ -8,127 +8,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OAuthOptions extends js.Object {
-  var body_hash: js.UndefOr[`true` | String] = js.native
-  var callback: js.UndefOr[String] = js.native
-  var consumer_key: js.UndefOr[String] = js.native
-  var consumer_secret: js.UndefOr[String] = js.native
-  var token: js.UndefOr[String] = js.native
-  var token_secret: js.UndefOr[String] = js.native
-  var transport_method: js.UndefOr[body | header | query] = js.native
-  var verifier: js.UndefOr[String] = js.native
+  var body_hash: js.UndefOr[`true` | String] = js.undefined
+  var callback: js.UndefOr[String] = js.undefined
+  var consumer_key: js.UndefOr[String] = js.undefined
+  var consumer_secret: js.UndefOr[String] = js.undefined
+  var token: js.UndefOr[String] = js.undefined
+  var token_secret: js.UndefOr[String] = js.undefined
+  var transport_method: js.UndefOr[body | header | query] = js.undefined
+  var verifier: js.UndefOr[String] = js.undefined
 }
 
 object OAuthOptions {
   @scala.inline
-  def apply(): OAuthOptions = {
+  def apply(
+    body_hash: `true` | String = null,
+    callback: String = null,
+    consumer_key: String = null,
+    consumer_secret: String = null,
+    token: String = null,
+    token_secret: String = null,
+    transport_method: body | header | query = null,
+    verifier: String = null
+  ): OAuthOptions = {
     val __obj = js.Dynamic.literal()
+    if (body_hash != null) __obj.updateDynamic("body_hash")(body_hash.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
+    if (consumer_key != null) __obj.updateDynamic("consumer_key")(consumer_key.asInstanceOf[js.Any])
+    if (consumer_secret != null) __obj.updateDynamic("consumer_secret")(consumer_secret.asInstanceOf[js.Any])
+    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
+    if (token_secret != null) __obj.updateDynamic("token_secret")(token_secret.asInstanceOf[js.Any])
+    if (transport_method != null) __obj.updateDynamic("transport_method")(transport_method.asInstanceOf[js.Any])
+    if (verifier != null) __obj.updateDynamic("verifier")(verifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuthOptions]
   }
-  @scala.inline
-  implicit class OAuthOptionsOps[Self <: OAuthOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody_hash(value: `true` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body_hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody_hash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body_hash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsumer_key(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumer_key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumer_key: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumer_key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsumer_secret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumer_secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumer_secret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumer_secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_secret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_secret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransport_method(value: body | header | query): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport_method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransport_method: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transport_method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

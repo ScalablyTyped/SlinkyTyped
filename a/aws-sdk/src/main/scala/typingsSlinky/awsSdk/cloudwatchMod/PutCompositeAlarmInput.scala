@@ -42,101 +42,24 @@ trait PutCompositeAlarmInput extends js.Object {
 
 object PutCompositeAlarmInput {
   @scala.inline
-  def apply(AlarmName: AlarmName, AlarmRule: AlarmRule): PutCompositeAlarmInput = {
+  def apply(
+    AlarmName: AlarmName,
+    AlarmRule: AlarmRule,
+    ActionsEnabled: js.UndefOr[ActionsEnabled] = js.undefined,
+    AlarmActions: ResourceList = null,
+    AlarmDescription: AlarmDescription = null,
+    InsufficientDataActions: ResourceList = null,
+    OKActions: ResourceList = null,
+    Tags: TagList = null
+  ): PutCompositeAlarmInput = {
     val __obj = js.Dynamic.literal(AlarmName = AlarmName.asInstanceOf[js.Any], AlarmRule = AlarmRule.asInstanceOf[js.Any])
+    if (!js.isUndefined(ActionsEnabled)) __obj.updateDynamic("ActionsEnabled")(ActionsEnabled.get.asInstanceOf[js.Any])
+    if (AlarmActions != null) __obj.updateDynamic("AlarmActions")(AlarmActions.asInstanceOf[js.Any])
+    if (AlarmDescription != null) __obj.updateDynamic("AlarmDescription")(AlarmDescription.asInstanceOf[js.Any])
+    if (InsufficientDataActions != null) __obj.updateDynamic("InsufficientDataActions")(InsufficientDataActions.asInstanceOf[js.Any])
+    if (OKActions != null) __obj.updateDynamic("OKActions")(OKActions.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutCompositeAlarmInput]
   }
-  @scala.inline
-  implicit class PutCompositeAlarmInputOps[Self <: PutCompositeAlarmInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarmName(value: AlarmName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlarmRule(value: AlarmRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActionsEnabled(value: ActionsEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmActions(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmDescription(value: AlarmDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsufficientDataActions(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsufficientDataActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOKActions(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OKActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOKActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OKActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

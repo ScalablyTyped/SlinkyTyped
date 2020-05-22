@@ -26,9 +26,16 @@ object getMergeConflictsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetMergeConflictsInput) = this()
+    /* CompleteClass */
+    override val input: GetMergeConflictsInput = js.native
     val middlewareStack: MiddlewareStack[GetMergeConflictsInput, GetMergeConflictsOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: CodeCommitResolvedConfiguration
+    ): Handler[GetMergeConflictsInput, GetMergeConflictsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetMergeConflictsInput, GetMergeConflictsOutput] = js.native
   }

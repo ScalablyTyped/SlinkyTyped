@@ -7,159 +7,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Check extends js.Object {
-  var border: js.UndefOr[ColorWidth] = js.native
-  var check: js.UndefOr[Thickness] = js.native
-  var color: js.UndefOr[ColorType] = js.native
-  var extend: js.UndefOr[ExtendType] = js.native
-  var gap: js.UndefOr[GapType] = js.native
-  var hover: js.UndefOr[Border0] = js.native
-  var icon: js.UndefOr[ExtendSize] = js.native
-  var icons: js.UndefOr[Checked] = js.native
-  var size: js.UndefOr[String] = js.native
-  var toggle: js.UndefOr[Knob] = js.native
+  var border: js.UndefOr[ColorWidth] = js.undefined
+  var check: js.UndefOr[Thickness] = js.undefined
+  var color: js.UndefOr[ColorType] = js.undefined
+  var extend: js.UndefOr[ExtendType] = js.undefined
+  var gap: js.UndefOr[GapType] = js.undefined
+  var hover: js.UndefOr[Border0] = js.undefined
+  var icon: js.UndefOr[ExtendSize] = js.undefined
+  var icons: js.UndefOr[Checked] = js.undefined
+  var size: js.UndefOr[String] = js.undefined
+  var toggle: js.UndefOr[Knob] = js.undefined
 }
 
 object Check {
   @scala.inline
-  def apply(): Check = {
+  def apply(
+    border: ColorWidth = null,
+    check: Thickness = null,
+    color: ColorType = null,
+    extend: ExtendType = null,
+    gap: GapType = null,
+    hover: Border0 = null,
+    icon: ExtendSize = null,
+    icons: Checked = null,
+    size: String = null,
+    toggle: Knob = null
+  ): Check = {
     val __obj = js.Dynamic.literal()
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (check != null) __obj.updateDynamic("check")(check.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
+    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (toggle != null) __obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Check]
   }
-  @scala.inline
-  implicit class CheckOps[Self <: Check] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorder(value: ColorWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheck(value: Thickness): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: ColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtendFunction1(value: /* args */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExtend(value: ExtendType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGap(value: GapType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHover(value: Border0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: ExtendSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: Checked): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggle(value: Knob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

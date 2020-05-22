@@ -18,41 +18,11 @@ trait ReshardingConfiguration extends js.Object {
 
 object ReshardingConfiguration {
   @scala.inline
-  def apply(): ReshardingConfiguration = {
+  def apply(NodeGroupId: AllowedNodeGroupId = null, PreferredAvailabilityZones: AvailabilityZonesList = null): ReshardingConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (NodeGroupId != null) __obj.updateDynamic("NodeGroupId")(NodeGroupId.asInstanceOf[js.Any])
+    if (PreferredAvailabilityZones != null) __obj.updateDynamic("PreferredAvailabilityZones")(PreferredAvailabilityZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReshardingConfiguration]
   }
-  @scala.inline
-  implicit class ReshardingConfigurationOps[Self <: ReshardingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeGroupId(value: AllowedNodeGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferredAvailabilityZones(value: AvailabilityZonesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredAvailabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferredAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredAvailabilityZones")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

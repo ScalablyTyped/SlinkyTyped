@@ -18,41 +18,11 @@ trait CmfcSettings extends js.Object {
 
 object CmfcSettings {
   @scala.inline
-  def apply(): CmfcSettings = {
+  def apply(Scte35Esam: CmfcScte35Esam = null, Scte35Source: CmfcScte35Source = null): CmfcSettings = {
     val __obj = js.Dynamic.literal()
+    if (Scte35Esam != null) __obj.updateDynamic("Scte35Esam")(Scte35Esam.asInstanceOf[js.Any])
+    if (Scte35Source != null) __obj.updateDynamic("Scte35Source")(Scte35Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[CmfcSettings]
   }
-  @scala.inline
-  implicit class CmfcSettingsOps[Self <: CmfcSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScte35Esam(value: CmfcScte35Esam): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Esam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte35Esam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Esam")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScte35Source(value: CmfcScte35Source): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScte35Source: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte35Source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

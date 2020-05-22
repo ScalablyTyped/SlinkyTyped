@@ -4,36 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShuffleOptions extends DeviceOptions {
-  var state: js.UndefOr[Boolean] = js.native
+  var state: js.UndefOr[Boolean] = js.undefined
 }
 
 object ShuffleOptions {
   @scala.inline
-  def apply(): ShuffleOptions = {
+  def apply(device_id: String = null, state: js.UndefOr[Boolean] = js.undefined): ShuffleOptions = {
     val __obj = js.Dynamic.literal()
+    if (device_id != null) __obj.updateDynamic("device_id")(device_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(state)) __obj.updateDynamic("state")(state.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShuffleOptions]
   }
-  @scala.inline
-  implicit class ShuffleOptionsOps[Self <: ShuffleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

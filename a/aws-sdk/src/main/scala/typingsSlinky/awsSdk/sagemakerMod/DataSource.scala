@@ -18,41 +18,11 @@ trait DataSource extends js.Object {
 
 object DataSource {
   @scala.inline
-  def apply(): DataSource = {
+  def apply(FileSystemDataSource: FileSystemDataSource = null, S3DataSource: S3DataSource = null): DataSource = {
     val __obj = js.Dynamic.literal()
+    if (FileSystemDataSource != null) __obj.updateDynamic("FileSystemDataSource")(FileSystemDataSource.asInstanceOf[js.Any])
+    if (S3DataSource != null) __obj.updateDynamic("S3DataSource")(S3DataSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSource]
   }
-  @scala.inline
-  implicit class DataSourceOps[Self <: DataSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileSystemDataSource(value: FileSystemDataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemDataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSystemDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemDataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3DataSource(value: S3DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3DataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("S3DataSource")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

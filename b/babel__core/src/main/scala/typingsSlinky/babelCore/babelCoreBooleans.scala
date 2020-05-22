@@ -1,13 +1,12 @@
 package typingsSlinky.babelCore
 
-import typingsSlinky.babelCore.mod.PluginOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object babelCoreBooleans {
   @js.native
-  sealed trait `false` extends PluginOptions
+  sealed trait `false` extends js.Object
   
   @js.native
   sealed trait `true` extends js.Object

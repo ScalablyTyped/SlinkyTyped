@@ -18,41 +18,14 @@ trait ApplicationResourceLifecycleDescriptionMessage extends js.Object {
 
 object ApplicationResourceLifecycleDescriptionMessage {
   @scala.inline
-  def apply(): ApplicationResourceLifecycleDescriptionMessage = {
+  def apply(
+    ApplicationName: ApplicationName = null,
+    ResourceLifecycleConfig: ApplicationResourceLifecycleConfig = null
+  ): ApplicationResourceLifecycleDescriptionMessage = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationName != null) __obj.updateDynamic("ApplicationName")(ApplicationName.asInstanceOf[js.Any])
+    if (ResourceLifecycleConfig != null) __obj.updateDynamic("ResourceLifecycleConfig")(ResourceLifecycleConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationResourceLifecycleDescriptionMessage]
   }
-  @scala.inline
-  implicit class ApplicationResourceLifecycleDescriptionMessageOps[Self <: ApplicationResourceLifecycleDescriptionMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceLifecycleConfig(value: ApplicationResourceLifecycleConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLifecycleConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceLifecycleConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLifecycleConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

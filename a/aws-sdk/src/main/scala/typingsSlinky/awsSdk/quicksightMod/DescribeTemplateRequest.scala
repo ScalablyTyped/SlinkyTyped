@@ -26,53 +26,16 @@ trait DescribeTemplateRequest extends js.Object {
 
 object DescribeTemplateRequest {
   @scala.inline
-  def apply(AwsAccountId: AwsAccountId, TemplateId: RestrictiveResourceId): DescribeTemplateRequest = {
+  def apply(
+    AwsAccountId: AwsAccountId,
+    TemplateId: RestrictiveResourceId,
+    AliasName: AliasName = null,
+    VersionNumber: js.UndefOr[VersionNumber] = js.undefined
+  ): DescribeTemplateRequest = {
     val __obj = js.Dynamic.literal(AwsAccountId = AwsAccountId.asInstanceOf[js.Any], TemplateId = TemplateId.asInstanceOf[js.Any])
+    if (AliasName != null) __obj.updateDynamic("AliasName")(AliasName.asInstanceOf[js.Any])
+    if (!js.isUndefined(VersionNumber)) __obj.updateDynamic("VersionNumber")(VersionNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTemplateRequest]
   }
-  @scala.inline
-  implicit class DescribeTemplateRequestOps[Self <: DescribeTemplateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountId(value: AwsAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateId(value: RestrictiveResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAliasName(value: AliasName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAliasName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AliasName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionNumber(value: VersionNumber): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

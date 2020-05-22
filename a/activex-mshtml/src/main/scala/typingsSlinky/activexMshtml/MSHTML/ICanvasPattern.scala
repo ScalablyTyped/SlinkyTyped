@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICanvasPattern extends js.Object {
   @JSName("MSHTML.ICanvasPattern_typekey")
-  var MSHTMLDotICanvasPattern_typekey: ICanvasPattern = js.native
+  var MSHTMLDotICanvasPattern_typekey: ICanvasPattern
 }
 
 object ICanvasPattern {
@@ -17,19 +16,5 @@ object ICanvasPattern {
     __obj.updateDynamic("MSHTML.ICanvasPattern_typekey")(MSHTMLDotICanvasPattern_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICanvasPattern]
   }
-  @scala.inline
-  implicit class ICanvasPatternOps[Self <: ICanvasPattern] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotICanvasPattern_typekey(value: ICanvasPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.ICanvasPattern_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

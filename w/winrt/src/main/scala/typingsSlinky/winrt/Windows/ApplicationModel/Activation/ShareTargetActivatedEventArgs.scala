@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareTargetActivatedEventArgs extends IShareTargetActivatedEventArgs
 
 object ShareTargetActivatedEventArgs {

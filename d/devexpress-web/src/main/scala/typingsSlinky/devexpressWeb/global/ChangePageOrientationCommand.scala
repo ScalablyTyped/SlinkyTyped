@@ -10,5 +10,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChangePageOrientationCommand")
 @js.native
 class ChangePageOrientationCommand ()
-  extends typingsSlinky.devexpressWeb.ChangePageOrientationCommand
+  extends typingsSlinky.devexpressWeb.ChangePageOrientationCommand {
+  /**
+    * Executes the ChangePageOrientationCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
+    * @param orientation The page orientation.
+    */
+  /* CompleteClass */
+  override def execute(orientation: typingsSlinky.devexpressWeb.Orientation): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[typingsSlinky.devexpressWeb.Orientation] = js.native
+}
 

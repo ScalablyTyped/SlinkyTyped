@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConvexPolyhedron extends Shape {
-  var faceNormals: js.Array[Vec3] = js.native
-  var faces: js.Array[js.Array[Double]] = js.native
-  var uniqueEdges: js.Array[Vec3] = js.native
-  var vertices: js.Array[Vec3] = js.native
-  var worldVertices: js.Array[Vec3] = js.native
-  var worldVerticesNeedsUpdate: Boolean = js.native
-  def calculateWorldAABB(pos: Vec3, quat: Quaternion, min: Vec3, max: Vec3): Unit = js.native
+  var faceNormals: js.Array[Vec3]
+  var faces: js.Array[js.Array[Double]]
+  var uniqueEdges: js.Array[Vec3]
+  var vertices: js.Array[Vec3]
+  var worldVertices: js.Array[Vec3]
+  var worldVerticesNeedsUpdate: Boolean
+  def calculateWorldAABB(pos: Vec3, quat: Quaternion, min: Vec3, max: Vec3): Unit
   def clipAgainstHull(
     posA: Vec3,
     quatA: Quaternion,
@@ -22,7 +21,7 @@ trait ConvexPolyhedron extends Shape {
     minDist: Double,
     maxDist: Double,
     result: js.Array[_]
-  ): Unit = js.native
+  ): Unit
   def clipFaceAgainstHull(
     separatingNormal: Vec3,
     posA: Vec3,
@@ -31,13 +30,13 @@ trait ConvexPolyhedron extends Shape {
     minDist: Double,
     maxDist: Double,
     result: js.Array[_]
-  ): Unit = js.native
-  def clipFaceAgainstPlane(inVertices: js.Array[Vec3], outVertices: js.Array[Vec3], planeNormal: Vec3, planeConstant: Double): Vec3 = js.native
-  def computeEdges(): Unit = js.native
-  def computeLocalAABB(aabbmin: Vec3, aabbmax: Vec3): Unit = js.native
-  def computeNormals(): Unit = js.native
-  def computeWorldFaceNormals(quat: Quaternion): Unit = js.native
-  def computeWorldVertices(position: Vec3, quat: Quaternion): Unit = js.native
+  ): Unit
+  def clipFaceAgainstPlane(inVertices: js.Array[Vec3], outVertices: js.Array[Vec3], planeNormal: Vec3, planeConstant: Double): Vec3
+  def computeEdges(): Unit
+  def computeLocalAABB(aabbmin: Vec3, aabbmax: Vec3): Unit
+  def computeNormals(): Unit
+  def computeWorldFaceNormals(quat: Quaternion): Unit
+  def computeWorldVertices(position: Vec3, quat: Quaternion): Unit
   def findSaparatingAxis(
     hullB: ConvexPolyhedron,
     posA: Vec3,
@@ -47,13 +46,13 @@ trait ConvexPolyhedron extends Shape {
     target: Vec3,
     faceListA: js.Array[_],
     faceListB: js.Array[_]
-  ): Boolean = js.native
-  def getAveragePointLocal(target: Vec3): Vec3 = js.native
-  def getFaceNormal(i: Double, target: Vec3): Vec3 = js.native
-  def getPlaneConstantOfFace(face_i: Double): Double = js.native
-  def pointIsInside(p: Vec3): Boolean = js.native
-  def testSepAxis(axis: Vec3, hullB: ConvexPolyhedron, posA: Vec3, quatA: Quaternion, posB: Vec3, quatB: Quaternion): Double = js.native
-  def transformAllPoints(offset: Vec3, quat: Quaternion): Unit = js.native
+  ): Boolean
+  def getAveragePointLocal(target: Vec3): Vec3
+  def getFaceNormal(i: Double, target: Vec3): Vec3
+  def getPlaneConstantOfFace(face_i: Double): Double
+  def pointIsInside(p: Vec3): Boolean
+  def testSepAxis(axis: Vec3, hullB: ConvexPolyhedron, posA: Vec3, quatA: Quaternion, posB: Vec3, quatB: Quaternion): Double
+  def transformAllPoints(offset: Vec3, quat: Quaternion): Unit
 }
 
 object ConvexPolyhedron {
@@ -92,147 +91,5 @@ object ConvexPolyhedron {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConvexPolyhedron]
   }
-  @scala.inline
-  implicit class ConvexPolyhedronOps[Self <: ConvexPolyhedron] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalculateWorldAABB(value: (Vec3, Quaternion, Vec3, Vec3) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateWorldAABB")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withClipAgainstHull(value: (Vec3, Quaternion, Vec3, Quaternion, Vec3, Double, Double, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipAgainstHull")(js.Any.fromFunction8(value))
-        ret
-    }
-    @scala.inline
-    def withClipFaceAgainstHull(value: (Vec3, Vec3, Quaternion, js.Array[Vec3], Double, Double, js.Array[_]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipFaceAgainstHull")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withClipFaceAgainstPlane(value: (js.Array[Vec3], js.Array[Vec3], Vec3, Double) => Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clipFaceAgainstPlane")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withComputeEdges(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEdges")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withComputeLocalAABB(value: (Vec3, Vec3) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeLocalAABB")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withComputeNormals(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeNormals")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withComputeWorldFaceNormals(value: Quaternion => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeWorldFaceNormals")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withComputeWorldVertices(value: (Vec3, Quaternion) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computeWorldVertices")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFaceNormals(value: js.Array[Vec3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faceNormals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFaces(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("faces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFindSaparatingAxis(
-      value: (ConvexPolyhedron, Vec3, Quaternion, Vec3, Quaternion, Vec3, js.Array[_], js.Array[_]) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findSaparatingAxis")(js.Any.fromFunction8(value))
-        ret
-    }
-    @scala.inline
-    def withGetAveragePointLocal(value: Vec3 => Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAveragePointLocal")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetFaceNormal(value: (Double, Vec3) => Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFaceNormal")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetPlaneConstantOfFace(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlaneConstantOfFace")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPointIsInside(value: Vec3 => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointIsInside")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTestSepAxis(value: (Vec3, ConvexPolyhedron, Vec3, Quaternion, Vec3, Quaternion) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSepAxis")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withTransformAllPoints(value: (Vec3, Quaternion) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformAllPoints")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withUniqueEdges(value: js.Array[Vec3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueEdges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVertices(value: js.Array[Vec3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorldVertices(value: js.Array[Vec3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldVertices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorldVerticesNeedsUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worldVerticesNeedsUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,23 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadBLECharacteristicValueOptions
   extends BaseOptions[js.Any, js.Any] {
   /**
-  		 * 蓝牙特征值的 uuid
-  		 */
-  var characteristicId: String = js.native
+    * 蓝牙特征值的 uuid
+    */
+  var characteristicId: String
   /**
-  		 * 蓝牙设备 id，参考 device 对象
-  		 */
-  var deviceId: String = js.native
+    * 蓝牙设备 id，参考 device 对象
+    */
+  var deviceId: String
   /**
-  		 * 蓝牙特征值对应服务的 uuid
-  		 */
-  var serviceId: String = js.native
+    * 蓝牙特征值对应服务的 uuid
+    */
+  var serviceId: String
   @JSName("success")
-  def success_MReadBLECharacteristicValueOptions(res: characteristiccharacteris): Unit = js.native
+  def success_MReadBLECharacteristicValueOptions(res: characteristiccharacteris): Unit
 }
 
 object ReadBLECharacteristicValueOptions {
@@ -30,42 +29,14 @@ object ReadBLECharacteristicValueOptions {
     characteristicId: String,
     deviceId: String,
     serviceId: String,
-    success: characteristiccharacteris => Unit
+    success: characteristiccharacteris => Unit,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null
   ): ReadBLECharacteristicValueOptions = {
     val __obj = js.Dynamic.literal(characteristicId = characteristicId.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], serviceId = serviceId.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
     __obj.asInstanceOf[ReadBLECharacteristicValueOptions]
   }
-  @scala.inline
-  implicit class ReadBLECharacteristicValueOptionsOps[Self <: ReadBLECharacteristicValueOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharacteristicId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characteristicId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: characteristiccharacteris => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

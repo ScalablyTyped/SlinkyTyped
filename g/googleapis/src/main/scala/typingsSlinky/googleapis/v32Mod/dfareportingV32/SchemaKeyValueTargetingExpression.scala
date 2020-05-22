@@ -17,29 +17,10 @@ trait SchemaKeyValueTargetingExpression extends js.Object {
 
 object SchemaKeyValueTargetingExpression {
   @scala.inline
-  def apply(): SchemaKeyValueTargetingExpression = {
+  def apply(expression: String = null): SchemaKeyValueTargetingExpression = {
     val __obj = js.Dynamic.literal()
+    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaKeyValueTargetingExpression]
   }
-  @scala.inline
-  implicit class SchemaKeyValueTargetingExpressionOps[Self <: SchemaKeyValueTargetingExpression] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

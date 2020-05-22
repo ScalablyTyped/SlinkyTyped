@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Interface for window options.
   */
-@js.native
 trait WindowOptions extends js.Object {
   /**
     * Direct the form to open in a new window.
     */
-  var openInNewWindow: Boolean = js.native
+  var openInNewWindow: Boolean
 }
 
 object WindowOptions {
@@ -21,19 +20,5 @@ object WindowOptions {
     val __obj = js.Dynamic.literal(openInNewWindow = openInNewWindow.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowOptions]
   }
-  @scala.inline
-  implicit class WindowOptionsOps[Self <: WindowOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOpenInNewWindow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openInNewWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -12,8 +12,14 @@ trait LookupOptions extends js.Object
 
 object LookupOptions {
   @scala.inline
-  implicit def apply(value: LookupOptionsCode): LookupOptions = value.asInstanceOf[LookupOptions]
+  def LookupOptionsCode(code: String): LookupOptions = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LookupOptions]
+  }
   @scala.inline
-  implicit def apply(value: LookupOptionsName): LookupOptions = value.asInstanceOf[LookupOptions]
+  def LookupOptionsName(name: String): LookupOptions = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LookupOptions]
+  }
 }
 

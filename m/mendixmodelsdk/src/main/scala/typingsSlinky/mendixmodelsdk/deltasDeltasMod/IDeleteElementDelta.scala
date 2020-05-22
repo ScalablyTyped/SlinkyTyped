@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDeleteElementDelta
   extends IElementDelta
      with Delta {
-  var deltaType: DELETE_ELEMENT = js.native
+  var deltaType: DELETE_ELEMENT
 }
 
 object IDeleteElementDelta {
@@ -18,19 +17,5 @@ object IDeleteElementDelta {
     val __obj = js.Dynamic.literal(deltaType = deltaType.asInstanceOf[js.Any], elementId = elementId.asInstanceOf[js.Any], unitId = unitId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDeleteElementDelta]
   }
-  @scala.inline
-  implicit class IDeleteElementDeltaOps[Self <: IDeleteElementDelta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeltaType(value: DELETE_ELEMENT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

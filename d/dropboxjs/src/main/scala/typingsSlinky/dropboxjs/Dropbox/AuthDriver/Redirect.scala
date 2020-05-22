@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Redirect extends js.Object {
-  def doAuthorize(authUrl: String, stateParam: String, client: Client): Unit = js.native
-  def resumeAuthorize(stateParam: String, client: Client, callback: QueryParamsCallback): Unit = js.native
-  def url(): String = js.native
+  def doAuthorize(authUrl: String, stateParam: String, client: Client): Unit
+  def resumeAuthorize(stateParam: String, client: Client, callback: QueryParamsCallback): Unit
+  def url(): String
 }
 
 object Redirect {
@@ -23,31 +22,5 @@ object Redirect {
     val __obj = js.Dynamic.literal(doAuthorize = js.Any.fromFunction3(doAuthorize), resumeAuthorize = js.Any.fromFunction3(resumeAuthorize), url = js.Any.fromFunction0(url))
     __obj.asInstanceOf[Redirect]
   }
-  @scala.inline
-  implicit class RedirectOps[Self <: Redirect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoAuthorize(value: (String, String, Client) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doAuthorize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withResumeAuthorize(value: (String, Client, QueryParamsCallback) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeAuthorize")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withUrl(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

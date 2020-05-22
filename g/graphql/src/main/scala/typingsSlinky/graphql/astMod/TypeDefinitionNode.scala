@@ -1,5 +1,11 @@
 package typingsSlinky.graphql.astMod
 
+import typingsSlinky.graphql.graphqlStrings.EnumTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.InputObjectTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.InterfaceTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.ObjectTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.ScalarTypeDefinition
+import typingsSlinky.graphql.graphqlStrings.UnionTypeDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +22,100 @@ trait TypeDefinitionNode extends TypeSystemDefinitionNode
 
 object TypeDefinitionNode {
   @scala.inline
-  implicit def apply(value: EnumTypeDefinitionNode): TypeDefinitionNode = value.asInstanceOf[TypeDefinitionNode]
+  def EnumTypeDefinitionNode(
+    kind: EnumTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    values: js.Array[EnumValueDefinitionNode] = null
+  ): TypeDefinitionNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinitionNode]
+  }
   @scala.inline
-  implicit def apply(value: InputObjectTypeDefinitionNode): TypeDefinitionNode = value.asInstanceOf[TypeDefinitionNode]
+  def InputObjectTypeDefinitionNode(
+    kind: InputObjectTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[InputValueDefinitionNode] = null,
+    loc: Location = null
+  ): TypeDefinitionNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinitionNode]
+  }
   @scala.inline
-  implicit def apply(value: InterfaceTypeDefinitionNode): TypeDefinitionNode = value.asInstanceOf[TypeDefinitionNode]
+  def ObjectTypeDefinitionNode(
+    kind: ObjectTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[FieldDefinitionNode] = null,
+    interfaces: js.Array[NamedTypeNode] = null,
+    loc: Location = null
+  ): TypeDefinitionNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (interfaces != null) __obj.updateDynamic("interfaces")(interfaces.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinitionNode]
+  }
   @scala.inline
-  implicit def apply(value: ObjectTypeDefinitionNode): TypeDefinitionNode = value.asInstanceOf[TypeDefinitionNode]
+  def InterfaceTypeDefinitionNode(
+    kind: InterfaceTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    fields: js.Array[FieldDefinitionNode] = null,
+    loc: Location = null
+  ): TypeDefinitionNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinitionNode]
+  }
   @scala.inline
-  implicit def apply(value: ScalarTypeDefinitionNode): TypeDefinitionNode = value.asInstanceOf[TypeDefinitionNode]
+  def UnionTypeDefinitionNode(
+    kind: UnionTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null,
+    types: js.Array[NamedTypeNode] = null
+  ): TypeDefinitionNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinitionNode]
+  }
   @scala.inline
-  implicit def apply(value: UnionTypeDefinitionNode): TypeDefinitionNode = value.asInstanceOf[TypeDefinitionNode]
+  def ScalarTypeDefinitionNode(
+    kind: ScalarTypeDefinition,
+    name: NameNode,
+    description: StringValueNode = null,
+    directives: js.Array[DirectiveNode] = null,
+    loc: Location = null
+  ): TypeDefinitionNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeDefinitionNode]
+  }
 }
 

@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Converts strings formatted as calendar events into clickable links.
-		 */
+  * Converts strings formatted as calendar events into clickable links.
+  */
 @JSGlobal("Titanium.UI.AUTOLINK_CALENDAR")
 @js.native
 object AUTOLINK_CALENDAR extends TopLevel[Double]

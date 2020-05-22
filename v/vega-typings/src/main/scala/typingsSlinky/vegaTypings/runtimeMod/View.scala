@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.vegaTypings.anon.Bottom
-import typingsSlinky.vegaTypings.anon.Context
 import typingsSlinky.vegaTypings.anon.Data
 import typingsSlinky.vegaTypings.anon.Signals
 import typingsSlinky.vegaTypings.dataflowMod.Changeset_
@@ -29,6 +28,8 @@ class View protected () extends js.Object {
   def container(): HTMLElement | Null = js.native
   def data(name: String): js.Array[_] = js.native
   def data(name: String, tuples: js.Any): this.type = js.native
+  def description(): String = js.native
+  def description(s: String): this.type = js.native
   def getState(): Signals = js.native
   def getState(options: Data): Signals = js.native
   def height(): Double = js.native
@@ -40,7 +41,10 @@ class View protected () extends js.Object {
   def initialize(dom: String): this.type = js.native
   def initialize(dom: Element): this.type = js.native
   def insert(name: String, tuples: js.Any): this.type = js.native
+  def loader(): Loader_ = js.native
   def loader(loader: Loader_): this.type = js.native
+  def locale(): Locale = js.native
+  def locale(locale: Locale): this.type = js.native
   def logLevel(level: Double): this.type = js.native
   def origin(): js.Tuple2[Double, Double] = js.native
   def padding(p: Double): this.type = js.native
@@ -63,7 +67,7 @@ class View protected () extends js.Object {
   def signal(name: String, value: SignalValue): this.type = js.native
   def toCanvas(): js.Promise[HTMLCanvasElement] = js.native
   def toCanvas(scaleFactor: Double): js.Promise[HTMLCanvasElement] = js.native
-  def toCanvas(scaleFactor: Double, options: Context): js.Promise[HTMLCanvasElement] = js.native
+  def toCanvas(scaleFactor: Double, options: ToCanvasOptions): js.Promise[HTMLCanvasElement] = js.native
   def toImageURL(`type`: String): js.Promise[String] = js.native
   def toImageURL(`type`: String, scaleFactor: Double): js.Promise[String] = js.native
   def toSVG(): js.Promise[String] = js.native

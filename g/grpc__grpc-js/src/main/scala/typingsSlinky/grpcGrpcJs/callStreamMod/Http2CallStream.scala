@@ -5,21 +5,17 @@ import typingsSlinky.grpcGrpcJs.channelMod.ChannelImplementation
 import typingsSlinky.grpcGrpcJs.constantsMod.Status
 import typingsSlinky.grpcGrpcJs.filterMod.Filter
 import typingsSlinky.grpcGrpcJs.filterStackMod.FilterStackFactory
-import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.metadata
-import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.status
 import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
-import typingsSlinky.grpcGrpcJs.objectStreamMod.WriteCallback
 import typingsSlinky.grpcGrpcJs.subchannelMod.Subchannel
+import typingsSlinky.node.Buffer
 import typingsSlinky.node.http2Mod.ClientHttp2Stream
-import typingsSlinky.node.streamMod.Duplex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.grpcGrpcJs.callStreamMod.Call because var conflicts: _writev, destroyed, readable. Inlined cancelWithStatus, getPeer, sendMetadata, getDeadline, getCredentials, setCredentials, getStatus, getMethod, getHost, addListener_metadata, emit_metadata, on_metadata, once_metadata, prependListener_metadata, prependOnceListener_metadata, removeListener_metadata, addListener_status, emit_status, on_status, once_status, prependListener_status, prependOnceListener_status, removeListener_status */ @JSImport("@grpc/grpc-js/build/src/call-stream", "Http2CallStream")
+@JSImport("@grpc/grpc-js/build/src/call-stream", "Http2CallStream")
 @js.native
-class Http2CallStream protected () extends Duplex {
+class Http2CallStream protected () extends Call {
   def this(
     methodName: String,
     channel: ChannelImplementation,
@@ -48,61 +44,55 @@ class Http2CallStream protected () extends Duplex {
   var handleFilterError: js.Any = js.native
   var handleFilteredRead: js.Any = js.native
   var handleTrailers: js.Any = js.native
-  var handlingHeaders: js.Any = js.native
-  var handlingTrailers: js.Any = js.native
   var http2Stream: js.Any = js.native
   var isReadFilterPending: js.Any = js.native
+  var isWriteFilterPending: js.Any = js.native
+  var listener: js.Any = js.native
   var mappedStatusCode: js.Any = js.native
+  var maybeCloseWrites: js.Any = js.native
+  var maybeOutputStatus: js.Any = js.native
   val methodName: js.Any = js.native
   val options: js.Any = js.native
-  var pendingFinalCallback: js.Any = js.native
+  var outputStatus: js.Any = js.native
   var pendingRead: js.Any = js.native
   var pendingWrite: js.Any = js.native
   var pendingWriteCallback: js.Any = js.native
+  var push: js.Any = js.native
+  /**
+    * Indicates that an 'end' event has come from the http2 stream, so there
+    * will be no more data events.
+    */
+  var readsClosed: js.Any = js.native
+  var statusOutput: js.Any = js.native
   var subchannel: js.Any = js.native
   var trace: js.Any = js.native
   var tryPush: js.Any = js.native
   var unfilteredReadMessages: js.Any = js.native
   var unpushedReadMessages: js.Any = js.native
-  def _final(cb: js.Function): Unit = js.native
-  def _write(chunk: WriteObject, encoding: String, cb: WriteCallback): Unit = js.native
-  @JSName("addListener")
-  def addListener_metadata(event: metadata, listener: js.Function1[/* arg1 */ Metadata, Unit]): this.type = js.native
-  @JSName("addListener")
-  def addListener_status(event: status, listener: js.Function1[/* arg1 */ StatusObject, Unit]): this.type = js.native
+  var writesClosed: js.Any = js.native
   def attachHttp2Stream(stream: ClientHttp2Stream, subchannel: Subchannel): Unit = js.native
-  def cancelWithStatus(status: Status, details: String): Unit = js.native
-  @JSName("emit")
-  def emit_metadata(event: metadata, arg1: Metadata): Boolean = js.native
-  @JSName("emit")
-  def emit_status(event: status, arg1: StatusObject): Boolean = js.native
-  def getCredentials(): CallCredentials = js.native
-  def getDeadline(): Deadline = js.native
-  def getHost(): String = js.native
-  def getMethod(): String = js.native
-  def getPeer(): String = js.native
+  /* CompleteClass */
+  override def cancelWithStatus(status: Status, details: String): Unit = js.native
+  /* CompleteClass */
+  override def getCredentials(): CallCredentials = js.native
+  /* CompleteClass */
+  override def getDeadline(): Deadline = js.native
+  /* CompleteClass */
+  override def getHost(): String = js.native
+  /* CompleteClass */
+  override def getMethod(): String = js.native
+  /* CompleteClass */
+  override def getPeer(): String = js.native
   def getStatus(): StatusObject | Null = js.native
-  @JSName("on")
-  def on_metadata(event: metadata, listener: js.Function1[/* arg1 */ Metadata, Unit]): this.type = js.native
-  @JSName("on")
-  def on_status(event: status, listener: js.Function1[/* arg1 */ StatusObject, Unit]): this.type = js.native
-  @JSName("once")
-  def once_metadata(event: metadata, listener: js.Function1[/* arg1 */ Metadata, Unit]): this.type = js.native
-  @JSName("once")
-  def once_status(event: status, listener: js.Function1[/* arg1 */ StatusObject, Unit]): this.type = js.native
-  @JSName("prependListener")
-  def prependListener_metadata(event: metadata, listener: js.Function1[/* arg1 */ Metadata, Unit]): this.type = js.native
-  @JSName("prependListener")
-  def prependListener_status(event: status, listener: js.Function1[/* arg1 */ StatusObject, Unit]): this.type = js.native
-  @JSName("prependOnceListener")
-  def prependOnceListener_metadata(event: metadata, listener: js.Function1[/* arg1 */ Metadata, Unit]): this.type = js.native
-  @JSName("prependOnceListener")
-  def prependOnceListener_status(event: status, listener: js.Function1[/* arg1 */ StatusObject, Unit]): this.type = js.native
-  @JSName("removeListener")
-  def removeListener_metadata(event: metadata, listener: js.Function1[/* arg1 */ Metadata, Unit]): this.type = js.native
-  @JSName("removeListener")
-  def removeListener_status(event: status, listener: js.Function1[/* arg1 */ StatusObject, Unit]): this.type = js.native
-  def sendMetadata(metadata: Metadata): Unit = js.native
-  def setCredentials(credentials: CallCredentials): Unit = js.native
+  /* CompleteClass */
+  override def halfClose(): Unit = js.native
+  /* CompleteClass */
+  override def sendMessageWithContext(context: MessageContext, message: Buffer): Unit = js.native
+  /* CompleteClass */
+  override def setCredentials(credentials: CallCredentials): Unit = js.native
+  /* CompleteClass */
+  override def start(metadata: Metadata, listener: InterceptingListener): Unit = js.native
+  /* CompleteClass */
+  override def startRead(): Unit = js.native
 }
 

@@ -26,9 +26,16 @@ object getQueueAttributesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetQueueAttributesInput) = this()
+    /* CompleteClass */
+    override val input: GetQueueAttributesInput = js.native
     val middlewareStack: MiddlewareStack[GetQueueAttributesInput, GetQueueAttributesOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: SQSResolvedConfiguration
+    ): Handler[GetQueueAttributesInput, GetQueueAttributesOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[GetQueueAttributesInput, GetQueueAttributesOutput] = js.native
   }

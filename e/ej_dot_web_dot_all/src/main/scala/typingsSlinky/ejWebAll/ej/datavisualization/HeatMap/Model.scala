@@ -4,290 +4,112 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Model extends js.Object {
   /** Triggered when the mouse over on the cell.
     */
-  var cellMouseEnter: js.UndefOr[js.Function1[/* e */ CellMouseEnterEventArgs, Unit]] = js.native
+  var cellMouseEnter: js.UndefOr[js.Function1[/* e */ CellMouseEnterEventArgs, Unit]] = js.undefined
   /** Triggered when the mouse over on the cell.
     */
-  var cellMouseLeave: js.UndefOr[js.Function1[/* e */ CellMouseLeaveEventArgs, Unit]] = js.native
+  var cellMouseLeave: js.UndefOr[js.Function1[/* e */ CellMouseLeaveEventArgs, Unit]] = js.undefined
   /** Triggered when the mouse over on the cell.
     */
-  var cellMouseOver: js.UndefOr[js.Function1[/* e */ CellMouseOverEventArgs, Unit]] = js.native
+  var cellMouseOver: js.UndefOr[js.Function1[/* e */ CellMouseOverEventArgs, Unit]] = js.undefined
   /** Triggered when the mouse over on the cell.
     */
-  var cellSelected: js.UndefOr[js.Function1[/* e */ CellSelectedEventArgs, Unit]] = js.native
+  var cellSelected: js.UndefOr[js.Function1[/* e */ CellSelectedEventArgs, Unit]] = js.undefined
   /** Specifies the color values of the heat map column data.
     * @Default {[]}
     */
-  var colorMappingCollection: js.UndefOr[js.Array[ColorMappingCollection]] = js.native
+  var colorMappingCollection: js.UndefOr[js.Array[ColorMappingCollection]] = js.undefined
   /** Specifies the default column properties for all the column style not specified in column properties.
     * @Default {[]}
     */
-  var defaultColumnStyle: js.UndefOr[DefaultColumnStyle] = js.native
+  var defaultColumnStyle: js.UndefOr[DefaultColumnStyle] = js.undefined
   /** Specifies whether the virtualization can be enable or not.
     * @Default {false}
     */
-  var enableVirtualization: js.UndefOr[Boolean] = js.native
+  var enableVirtualization: js.UndefOr[Boolean] = js.undefined
   /** Specifies the property of the heat map cell.
     * @Default {Null}
     */
-  var heatMapCell: js.UndefOr[HeatMapCell] = js.native
+  var heatMapCell: js.UndefOr[HeatMapCell] = js.undefined
   /** Specifies the width of the heat map.
     * @Default {null}
     */
-  var height: js.UndefOr[js.Any] = js.native
+  var height: js.UndefOr[js.Any] = js.undefined
   /** Specifies the name of the heat map.
     * @Default {null}
     */
-  var id: js.UndefOr[Double] = js.native
+  var id: js.UndefOr[Double] = js.undefined
   /** Specifies can enable responsive mode or not for heat map.
     * @Default {false}
     */
-  var isResponsive: js.UndefOr[Boolean] = js.native
+  var isResponsive: js.UndefOr[Boolean] = js.undefined
   /** Specifies the property and display value of the heat map column.
     * @Default {[]}
     */
-  var itemsMapping: js.UndefOr[ItemsMapping] = js.native
+  var itemsMapping: js.UndefOr[ItemsMapping] = js.undefined
   /** Specifies the source data of the heat map.
     * @Default {[]}
     */
-  var itemsSource: js.UndefOr[js.Any] = js.native
+  var itemsSource: js.UndefOr[js.Any] = js.undefined
   /** Specifies the no of legends can sync with heat map.
     * @Default {[]}
     */
-  var legendCollection: js.UndefOr[js.Array[_]] = js.native
+  var legendCollection: js.UndefOr[js.Array[_]] = js.undefined
   /** Enables or disables tooltip of heatmap
     * @Default {true}
     */
-  var showTooltip: js.UndefOr[Boolean] = js.native
+  var showTooltip: js.UndefOr[Boolean] = js.undefined
   /** Defines the tooltip that should be shown when the mouse hovers over rows/columns.
     */
-  var tooltipSettings: js.UndefOr[TooltipSettings] = js.native
+  var tooltipSettings: js.UndefOr[TooltipSettings] = js.undefined
   /** Specifies the width of the heat map.
     * @Default {null}
     */
-  var width: js.UndefOr[js.Any] = js.native
+  var width: js.UndefOr[js.Any] = js.undefined
 }
 
 object Model {
   @scala.inline
-  def apply(): Model = {
+  def apply(
+    cellMouseEnter: /* e */ CellMouseEnterEventArgs => Unit = null,
+    cellMouseLeave: /* e */ CellMouseLeaveEventArgs => Unit = null,
+    cellMouseOver: /* e */ CellMouseOverEventArgs => Unit = null,
+    cellSelected: /* e */ CellSelectedEventArgs => Unit = null,
+    colorMappingCollection: js.Array[ColorMappingCollection] = null,
+    defaultColumnStyle: DefaultColumnStyle = null,
+    enableVirtualization: js.UndefOr[Boolean] = js.undefined,
+    heatMapCell: HeatMapCell = null,
+    height: js.Any = null,
+    id: js.UndefOr[Double] = js.undefined,
+    isResponsive: js.UndefOr[Boolean] = js.undefined,
+    itemsMapping: ItemsMapping = null,
+    itemsSource: js.Any = null,
+    legendCollection: js.Array[_] = null,
+    showTooltip: js.UndefOr[Boolean] = js.undefined,
+    tooltipSettings: TooltipSettings = null,
+    width: js.Any = null
+  ): Model = {
     val __obj = js.Dynamic.literal()
+    if (cellMouseEnter != null) __obj.updateDynamic("cellMouseEnter")(js.Any.fromFunction1(cellMouseEnter))
+    if (cellMouseLeave != null) __obj.updateDynamic("cellMouseLeave")(js.Any.fromFunction1(cellMouseLeave))
+    if (cellMouseOver != null) __obj.updateDynamic("cellMouseOver")(js.Any.fromFunction1(cellMouseOver))
+    if (cellSelected != null) __obj.updateDynamic("cellSelected")(js.Any.fromFunction1(cellSelected))
+    if (colorMappingCollection != null) __obj.updateDynamic("colorMappingCollection")(colorMappingCollection.asInstanceOf[js.Any])
+    if (defaultColumnStyle != null) __obj.updateDynamic("defaultColumnStyle")(defaultColumnStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableVirtualization)) __obj.updateDynamic("enableVirtualization")(enableVirtualization.get.asInstanceOf[js.Any])
+    if (heatMapCell != null) __obj.updateDynamic("heatMapCell")(heatMapCell.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isResponsive)) __obj.updateDynamic("isResponsive")(isResponsive.get.asInstanceOf[js.Any])
+    if (itemsMapping != null) __obj.updateDynamic("itemsMapping")(itemsMapping.asInstanceOf[js.Any])
+    if (itemsSource != null) __obj.updateDynamic("itemsSource")(itemsSource.asInstanceOf[js.Any])
+    if (legendCollection != null) __obj.updateDynamic("legendCollection")(legendCollection.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTooltip)) __obj.updateDynamic("showTooltip")(showTooltip.get.asInstanceOf[js.Any])
+    if (tooltipSettings != null) __obj.updateDynamic("tooltipSettings")(tooltipSettings.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
-  @scala.inline
-  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCellMouseEnter(value: /* e */ CellMouseEnterEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellMouseEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellMouseLeave(value: /* e */ CellMouseLeaveEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseLeave")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellMouseLeave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseLeave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellMouseOver(value: /* e */ CellMouseOverEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseOver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellMouseOver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseOver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellSelected(value: /* e */ CellSelectedEventArgs => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelected")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCellSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorMappingCollection(value: js.Array[ColorMappingCollection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMappingCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorMappingCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMappingCollection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultColumnStyle(value: DefaultColumnStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultColumnStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultColumnStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableVirtualization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableVirtualization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableVirtualization: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableVirtualization")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeatMapCell(value: HeatMapCell): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heatMapCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeatMapCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heatMapCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsMapping(value: ItemsMapping): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemsSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegendCollection(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegendCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legendCollection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTooltip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipSettings(value: TooltipSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

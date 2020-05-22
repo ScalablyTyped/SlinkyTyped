@@ -73,7 +73,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
@@ -437,7 +437,7 @@ object MarqueeSelectionBase {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def styles(value: IMarqueeSelectionStyleProps => Partial[IMarqueeSelectionStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def styles(value: IMarqueeSelectionStyleProps => DeepPartial[IMarqueeSelectionStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
     @scala.inline

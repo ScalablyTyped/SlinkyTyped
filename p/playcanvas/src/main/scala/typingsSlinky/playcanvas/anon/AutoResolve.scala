@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoResolve extends js.Object {
-  var autoResolve: js.UndefOr[Boolean] = js.native
-  var colorBuffer: js.UndefOr[Texture] = js.native
-  var depth: js.UndefOr[Boolean] = js.native
-  var depthBuffer: js.UndefOr[Texture] = js.native
-  var face: js.UndefOr[Double] = js.native
-  var samples: js.UndefOr[Double] = js.native
-  var stencil: js.UndefOr[Boolean] = js.native
+  var autoResolve: js.UndefOr[Boolean] = js.undefined
+  var colorBuffer: js.UndefOr[Texture] = js.undefined
+  var depth: js.UndefOr[Boolean] = js.undefined
+  var depthBuffer: js.UndefOr[Texture] = js.undefined
+  var face: js.UndefOr[Double] = js.undefined
+  var samples: js.UndefOr[Double] = js.undefined
+  var stencil: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoResolve {
   @scala.inline
-  def apply(): AutoResolve = {
+  def apply(
+    autoResolve: js.UndefOr[Boolean] = js.undefined,
+    colorBuffer: Texture = null,
+    depth: js.UndefOr[Boolean] = js.undefined,
+    depthBuffer: Texture = null,
+    face: js.UndefOr[Double] = js.undefined,
+    samples: js.UndefOr[Double] = js.undefined,
+    stencil: js.UndefOr[Boolean] = js.undefined
+  ): AutoResolve = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoResolve)) __obj.updateDynamic("autoResolve")(autoResolve.get.asInstanceOf[js.Any])
+    if (colorBuffer != null) __obj.updateDynamic("colorBuffer")(colorBuffer.asInstanceOf[js.Any])
+    if (!js.isUndefined(depth)) __obj.updateDynamic("depth")(depth.get.asInstanceOf[js.Any])
+    if (depthBuffer != null) __obj.updateDynamic("depthBuffer")(depthBuffer.asInstanceOf[js.Any])
+    if (!js.isUndefined(face)) __obj.updateDynamic("face")(face.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(samples)) __obj.updateDynamic("samples")(samples.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stencil)) __obj.updateDynamic("stencil")(stencil.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoResolve]
   }
-  @scala.inline
-  implicit class AutoResolveOps[Self <: AutoResolve] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoResolve(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResolve")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoResolve: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResolve")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorBuffer(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepthBuffer(value: Texture): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depthBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepthBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depthBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamples(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samples")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStencil(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stencil")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStencil: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stencil")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

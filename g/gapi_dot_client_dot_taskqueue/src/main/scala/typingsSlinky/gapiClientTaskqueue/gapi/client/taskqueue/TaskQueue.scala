@@ -6,93 +6,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TaskQueue extends js.Object {
   /** ACLs that are applicable to this TaskQueue object. */
-  var acl: js.UndefOr[AdminEmails] = js.native
+  var acl: js.UndefOr[AdminEmails] = js.undefined
   /** Name of the taskqueue. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /** The kind of REST object returned, in this case taskqueue. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** The number of times we should lease out tasks before giving up on them. If unset we lease them out forever until a worker deletes the task. */
-  var maxLeases: js.UndefOr[Double] = js.native
+  var maxLeases: js.UndefOr[Double] = js.undefined
   /** Statistics for the TaskQueue object in question. */
-  var stats: js.UndefOr[LeasedLastHour] = js.native
+  var stats: js.UndefOr[LeasedLastHour] = js.undefined
 }
 
 object TaskQueue {
   @scala.inline
-  def apply(): TaskQueue = {
+  def apply(
+    acl: AdminEmails = null,
+    id: String = null,
+    kind: String = null,
+    maxLeases: js.UndefOr[Double] = js.undefined,
+    stats: LeasedLastHour = null
+  ): TaskQueue = {
     val __obj = js.Dynamic.literal()
+    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLeases)) __obj.updateDynamic("maxLeases")(maxLeases.get.asInstanceOf[js.Any])
+    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskQueue]
   }
-  @scala.inline
-  implicit class TaskQueueOps[Self <: TaskQueue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcl(value: AdminEmails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxLeases(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLeases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxLeases: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLeases")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStats(value: LeasedLastHour): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

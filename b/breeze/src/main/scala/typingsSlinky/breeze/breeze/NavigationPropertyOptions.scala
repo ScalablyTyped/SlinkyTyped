@@ -4,121 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationPropertyOptions extends js.Object {
-  var associationName: js.UndefOr[String] = js.native
-  var entityTypeName: String = js.native
-  var foreignKeyNames: js.UndefOr[js.Array[String]] = js.native
-  var foreignKeyNamesOnServer: js.UndefOr[js.Array[String]] = js.native
-  var isScalar: js.UndefOr[Boolean] = js.native
-  var name: js.UndefOr[String] = js.native
-  var nameOnServer: js.UndefOr[String] = js.native
-  var validators: js.UndefOr[js.Array[Validator]] = js.native
+  var associationName: js.UndefOr[String] = js.undefined
+  var entityTypeName: String
+  var foreignKeyNames: js.UndefOr[js.Array[String]] = js.undefined
+  var foreignKeyNamesOnServer: js.UndefOr[js.Array[String]] = js.undefined
+  var isScalar: js.UndefOr[Boolean] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var nameOnServer: js.UndefOr[String] = js.undefined
+  var validators: js.UndefOr[js.Array[Validator]] = js.undefined
 }
 
 object NavigationPropertyOptions {
   @scala.inline
-  def apply(entityTypeName: String): NavigationPropertyOptions = {
+  def apply(
+    entityTypeName: String,
+    associationName: String = null,
+    foreignKeyNames: js.Array[String] = null,
+    foreignKeyNamesOnServer: js.Array[String] = null,
+    isScalar: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    nameOnServer: String = null,
+    validators: js.Array[Validator] = null
+  ): NavigationPropertyOptions = {
     val __obj = js.Dynamic.literal(entityTypeName = entityTypeName.asInstanceOf[js.Any])
+    if (associationName != null) __obj.updateDynamic("associationName")(associationName.asInstanceOf[js.Any])
+    if (foreignKeyNames != null) __obj.updateDynamic("foreignKeyNames")(foreignKeyNames.asInstanceOf[js.Any])
+    if (foreignKeyNamesOnServer != null) __obj.updateDynamic("foreignKeyNamesOnServer")(foreignKeyNamesOnServer.asInstanceOf[js.Any])
+    if (!js.isUndefined(isScalar)) __obj.updateDynamic("isScalar")(isScalar.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (nameOnServer != null) __obj.updateDynamic("nameOnServer")(nameOnServer.asInstanceOf[js.Any])
+    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationPropertyOptions]
   }
-  @scala.inline
-  implicit class NavigationPropertyOptionsOps[Self <: NavigationPropertyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntityTypeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAssociationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssociationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("associationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForeignKeyNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForeignKeyNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForeignKeyNamesOnServer(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyNamesOnServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForeignKeyNamesOnServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeyNamesOnServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsScalar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScalar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsScalar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScalar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameOnServer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameOnServer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameOnServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameOnServer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidators(value: js.Array[Validator]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

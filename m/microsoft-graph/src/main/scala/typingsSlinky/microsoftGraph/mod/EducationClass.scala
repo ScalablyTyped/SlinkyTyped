@@ -4,205 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EducationClass extends Entity {
   // Class code used by the school to identify the class.
-  var classCode: js.UndefOr[String] = js.native
+  var classCode: js.UndefOr[String] = js.undefined
   // Entity who created the class
-  var createdBy: js.UndefOr[IdentitySet] = js.native
+  var createdBy: js.UndefOr[IdentitySet] = js.undefined
   // Description of the class.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   // Name of the class.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.undefined
   // ID of the class from the syncing system.
-  var externalId: js.UndefOr[String] = js.native
+  var externalId: js.UndefOr[String] = js.undefined
   // Name of the class in the syncing system.
-  var externalName: js.UndefOr[String] = js.native
+  var externalName: js.UndefOr[String] = js.undefined
   // How this class was created. The possible values are: sis, manual, unknownFutureValue.
-  var externalSource: js.UndefOr[EducationExternalSource] = js.native
+  var externalSource: js.UndefOr[EducationExternalSource] = js.undefined
   // The directory group corresponding to this class.
-  var group: js.UndefOr[Group] = js.native
+  var group: js.UndefOr[Group] = js.undefined
   // Mail name for sending email to all members, if this is enabled.
-  var mailNickname: js.UndefOr[String] = js.native
+  var mailNickname: js.UndefOr[String] = js.undefined
   // All users in the class. Nullable.
-  var members: js.UndefOr[js.Array[EducationUser]] = js.native
+  var members: js.UndefOr[js.Array[EducationUser]] = js.undefined
   // All schools that this class is associated with. Nullable.
-  var schools: js.UndefOr[js.Array[EducationSchool]] = js.native
+  var schools: js.UndefOr[js.Array[EducationSchool]] = js.undefined
   // All teachers in the class. Nullable.
-  var teachers: js.UndefOr[js.Array[EducationUser]] = js.native
+  var teachers: js.UndefOr[js.Array[EducationUser]] = js.undefined
   // Term for this class.
-  var term: js.UndefOr[EducationTerm] = js.native
+  var term: js.UndefOr[EducationTerm] = js.undefined
 }
 
 object EducationClass {
   @scala.inline
-  def apply(): EducationClass = {
+  def apply(
+    classCode: String = null,
+    createdBy: IdentitySet = null,
+    description: String = null,
+    displayName: String = null,
+    externalId: String = null,
+    externalName: String = null,
+    externalSource: EducationExternalSource = null,
+    group: Group = null,
+    id: String = null,
+    mailNickname: String = null,
+    members: js.Array[EducationUser] = null,
+    schools: js.Array[EducationSchool] = null,
+    teachers: js.Array[EducationUser] = null,
+    term: EducationTerm = null
+  ): EducationClass = {
     val __obj = js.Dynamic.literal()
+    if (classCode != null) __obj.updateDynamic("classCode")(classCode.asInstanceOf[js.Any])
+    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (externalId != null) __obj.updateDynamic("externalId")(externalId.asInstanceOf[js.Any])
+    if (externalName != null) __obj.updateDynamic("externalName")(externalName.asInstanceOf[js.Any])
+    if (externalSource != null) __obj.updateDynamic("externalSource")(externalSource.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (mailNickname != null) __obj.updateDynamic("mailNickname")(mailNickname.asInstanceOf[js.Any])
+    if (members != null) __obj.updateDynamic("members")(members.asInstanceOf[js.Any])
+    if (schools != null) __obj.updateDynamic("schools")(schools.asInstanceOf[js.Any])
+    if (teachers != null) __obj.updateDynamic("teachers")(teachers.asInstanceOf[js.Any])
+    if (term != null) __obj.updateDynamic("term")(term.asInstanceOf[js.Any])
     __obj.asInstanceOf[EducationClass]
   }
-  @scala.inline
-  implicit class EducationClassOps[Self <: EducationClass] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedBy(value: IdentitySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalSource(value: EducationExternalSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: Group): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMailNickname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mailNickname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMailNickname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mailNickname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMembers(value: js.Array[EducationUser]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMembers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchools(value: js.Array[EducationSchool]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schools")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeachers(value: js.Array[EducationUser]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teachers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeachers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("teachers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerm(value: EducationTerm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("term")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

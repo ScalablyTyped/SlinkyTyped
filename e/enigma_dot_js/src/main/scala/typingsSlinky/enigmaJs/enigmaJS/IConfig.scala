@@ -7,162 +7,74 @@ import scala.scalajs.js.annotation._
 /**
   * This section describes the configuration object that is sent into enigma.create(config).
   */
-@js.native
 trait IConfig extends js.Object {
   /**
     * ES6-compatible Promise library.
     */
-  var Promise: js.UndefOr[js.Any] = js.native
+  var Promise: js.UndefOr[js.Any] = js.undefined
   /**
     * A function to use when instantiating the WebSocket, mandatory for Node.js.
     */
-  var createSocket: js.UndefOr[js.Any] = js.native
+  var createSocket: js.UndefOr[js.Any] = js.undefined
   /**
     * Mixins to extend/augment the QIX Engine API.
     * See Mixins section for more information how each entry in this array should look like.
     * Mixins are applied in the array order.
     */
-  var mixins: js.UndefOr[js.Array[IMixin]] = js.native
+  var mixins: js.UndefOr[js.Array[IMixin]] = js.undefined
   /**
     * An object containing additional JSON-RPC request parameters.
     * protocol.delta :  Set to false to disable the use of the bandwidth-reducing delta protocol.
     */
-  var protocol: js.UndefOr[js.Any] = js.native
+  var protocol: js.UndefOr[js.Any] = js.undefined
   /**
     * Interceptors for augmenting requests before they are sent to QIX Engine.
     * See Interceptors section for more information how each entry in this array should look like.
     * Interceptors are applied in the array order.
     */
-  var requestInterceptors: js.UndefOr[js.Array[IRequestInterceptors]] = js.native
+  var requestInterceptors: js.UndefOr[js.Array[IRequestInterceptors]] = js.undefined
   /**
     * Interceptors for augmenting responses before they are sent to QIX Engine.
     * See Interceptors section for more information how each entry in this array should look like.
     * Interceptors are applied in the array order.
     */
-  var responseInterceptors: js.UndefOr[js.Array[IResponseInterceptors]] = js.native
+  var responseInterceptors: js.UndefOr[js.Array[IResponseInterceptors]] = js.undefined
   /**
     * Object containing the specification for the API to generate. Corresponds to a specific version of the QIX Engine API.
     */
-  var schema: js.Object = js.native
+  var schema: js.Object
   /**
     * Set to true if the session should be suspended instead of closed when the websocket is closed.
     */
-  var suspendOnClose: js.UndefOr[Boolean] = js.native
+  var suspendOnClose: js.UndefOr[Boolean] = js.undefined
   /**
     * String containing a proper websocket URL to QIX Engine.
     */
-  var url: String = js.native
+  var url: String
 }
 
 object IConfig {
   @scala.inline
-  def apply(schema: js.Object, url: String): IConfig = {
+  def apply(
+    schema: js.Object,
+    url: String,
+    Promise: js.Any = null,
+    createSocket: js.Any = null,
+    mixins: js.Array[IMixin] = null,
+    protocol: js.Any = null,
+    requestInterceptors: js.Array[IRequestInterceptors] = null,
+    responseInterceptors: js.Array[IResponseInterceptors] = null,
+    suspendOnClose: js.UndefOr[Boolean] = js.undefined
+  ): IConfig = {
     val __obj = js.Dynamic.literal(schema = schema.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (Promise != null) __obj.updateDynamic("Promise")(Promise.asInstanceOf[js.Any])
+    if (createSocket != null) __obj.updateDynamic("createSocket")(createSocket.asInstanceOf[js.Any])
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (requestInterceptors != null) __obj.updateDynamic("requestInterceptors")(requestInterceptors.asInstanceOf[js.Any])
+    if (responseInterceptors != null) __obj.updateDynamic("responseInterceptors")(responseInterceptors.asInstanceOf[js.Any])
+    if (!js.isUndefined(suspendOnClose)) __obj.updateDynamic("suspendOnClose")(suspendOnClose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConfig]
   }
-  @scala.inline
-  implicit class IConfigOps[Self <: IConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSchema(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPromise(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateSocket(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSocket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateSocket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createSocket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMixins(value: js.Array[IMixin]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMixins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestInterceptors(value: js.Array[IRequestInterceptors]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestInterceptors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestInterceptors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestInterceptors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseInterceptors(value: js.Array[IResponseInterceptors]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseInterceptors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseInterceptors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseInterceptors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuspendOnClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendOnClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuspendOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendOnClose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

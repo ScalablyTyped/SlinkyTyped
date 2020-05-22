@@ -11,7 +11,30 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Data")
 @js.native
 class Data ()
-  extends typingsSlinky.scriptableIos.Data
+  extends typingsSlinky.scriptableIos.Data {
+  /**
+    * _Gets bytes from data._
+    * @see https://docs.scriptable.app/data/#-getbytes
+    */
+  /* CompleteClass */
+  override def getBytes(): js.Array[Double] = js.native
+  /**
+    * _Creates a base 64 encoded string._
+    *
+    * Creates a base 64 encoded string from the data.
+    * @see https://docs.scriptable.app/data/#-tobase64string
+    */
+  /* CompleteClass */
+  override def toBase64String(): String = js.native
+  /**
+    * _Creates a string from the data._
+    *
+    * The data is assumed to represent a UTF8 encoded string. If the string is not UTF8 encoded string, the function will return null.
+    * @see https://docs.scriptable.app/data/#-torawstring
+    */
+  /* CompleteClass */
+  override def toRawString(): String = js.native
+}
 
 /* static members */
 @JSGlobal("Data")

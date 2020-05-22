@@ -9,117 +9,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PasswordProps
   extends AllHTMLAttributes[HTMLInputElement]
      with ClassAttributes[HTMLInputElement]
      with /* key */ StringDictionary[js.Any] {
-  var feedback: js.UndefOr[Boolean] = js.native
-  var mediumLabel: js.UndefOr[String] = js.native
-  var promptLabel: js.UndefOr[String] = js.native
-  var strongLabel: js.UndefOr[String] = js.native
-  var tooltip: js.UndefOr[js.Any] = js.native
-  var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
-  var weakLabel: js.UndefOr[String] = js.native
+  var feedback: js.UndefOr[Boolean] = js.undefined
+  var mediumLabel: js.UndefOr[String] = js.undefined
+  var promptLabel: js.UndefOr[String] = js.undefined
+  var strongLabel: js.UndefOr[String] = js.undefined
+  var tooltip: js.UndefOr[js.Any] = js.undefined
+  var tooltipOptions: js.UndefOr[TooltipOptions] = js.undefined
+  var weakLabel: js.UndefOr[String] = js.undefined
 }
 
 object PasswordProps {
   @scala.inline
-  def apply(): PasswordProps = {
+  def apply(
+    AllHTMLAttributes: AllHTMLAttributes[HTMLInputElement] = null,
+    ClassAttributes: ClassAttributes[HTMLInputElement] = null,
+    StringDictionary: /* key */ StringDictionary[js.Any] = null,
+    feedback: js.UndefOr[Boolean] = js.undefined,
+    mediumLabel: String = null,
+    promptLabel: String = null,
+    strongLabel: String = null,
+    tooltip: js.Any = null,
+    tooltipOptions: TooltipOptions = null,
+    weakLabel: String = null
+  ): PasswordProps = {
     val __obj = js.Dynamic.literal()
+    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
+    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(feedback)) __obj.updateDynamic("feedback")(feedback.get.asInstanceOf[js.Any])
+    if (mediumLabel != null) __obj.updateDynamic("mediumLabel")(mediumLabel.asInstanceOf[js.Any])
+    if (promptLabel != null) __obj.updateDynamic("promptLabel")(promptLabel.asInstanceOf[js.Any])
+    if (strongLabel != null) __obj.updateDynamic("strongLabel")(strongLabel.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
+    if (weakLabel != null) __obj.updateDynamic("weakLabel")(weakLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[PasswordProps]
   }
-  @scala.inline
-  implicit class PasswordPropsOps[Self <: PasswordProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeedback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeedback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediumLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediumLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediumLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediumLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromptLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promptLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromptLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promptLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrongLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strongLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrongLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strongLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltipOptions(value: TooltipOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltipOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeakLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weakLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeakLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weakLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * @see XDispatch
   * @since OOo 2.0
   */
-@js.native
 trait XSynchronousDispatch extends XInterface {
   /**
     * dispatches a URL synchronously and offers a return values
@@ -24,7 +23,7 @@ trait XSynchronousDispatch extends XInterface {
     * @param URL full parsed URL which describe the feature which should be dispatched (executed)
     * @param Arguments optional arguments for this request They depend on the real implementation of the dispatch object.
     */
-  def dispatchWithReturnValue(URL: URL, Arguments: SeqEquiv[PropertyValue]): js.Any = js.native
+  def dispatchWithReturnValue(URL: URL, Arguments: SeqEquiv[PropertyValue]): js.Any
 }
 
 object XSynchronousDispatch {
@@ -38,19 +37,5 @@ object XSynchronousDispatch {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), dispatchWithReturnValue = js.Any.fromFunction2(dispatchWithReturnValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XSynchronousDispatch]
   }
-  @scala.inline
-  implicit class XSynchronousDispatchOps[Self <: XSynchronousDispatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDispatchWithReturnValue(value: (URL, SeqEquiv[PropertyValue]) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchWithReturnValue")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

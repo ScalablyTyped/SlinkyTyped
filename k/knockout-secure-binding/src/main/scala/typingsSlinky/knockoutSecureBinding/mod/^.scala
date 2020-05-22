@@ -3,6 +3,8 @@ package typingsSlinky.knockoutSecureBinding.mod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Node
+import typingsSlinky.knockout.KnockoutBindingContext
 import typingsSlinky.knockout.KnockoutBindingProvider
 import typingsSlinky.knockoutSecureBinding.KnockoutSecureBindingOptions
 import scala.scalajs.js
@@ -13,6 +15,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ () extends KnockoutBindingProvider {
   def this(options: KnockoutSecureBindingOptions) = this()
+  /* CompleteClass */
+  override def getBindings(node: Node, bindingContext: KnockoutBindingContext): js.Object = js.native
+  /* CompleteClass */
+  override def nodeHasBindings(node: Node): Boolean = js.native
 }
 
 @JSImport("knockout-secure-binding", JSImport.Namespace)

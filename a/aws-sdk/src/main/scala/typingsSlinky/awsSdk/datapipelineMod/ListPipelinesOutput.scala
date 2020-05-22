@@ -22,47 +22,15 @@ trait ListPipelinesOutput extends js.Object {
 
 object ListPipelinesOutput {
   @scala.inline
-  def apply(pipelineIdList: pipelineList): ListPipelinesOutput = {
+  def apply(
+    pipelineIdList: pipelineList,
+    hasMoreResults: js.UndefOr[Boolean] = js.undefined,
+    marker: String = null
+  ): ListPipelinesOutput = {
     val __obj = js.Dynamic.literal(pipelineIdList = pipelineIdList.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasMoreResults)) __obj.updateDynamic("hasMoreResults")(hasMoreResults.get.asInstanceOf[js.Any])
+    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPipelinesOutput]
   }
-  @scala.inline
-  implicit class ListPipelinesOutputOps[Self <: ListPipelinesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPipelineIdList(value: pipelineList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineIdList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasMoreResults(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasMoreResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

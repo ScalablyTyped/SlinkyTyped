@@ -1,5 +1,6 @@
 package typingsSlinky.showdown.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +17,6 @@ import scala.scalajs.js.annotation._
   * };
   * ```
   */
-@js.native
 trait FilterExtension extends Extension_ {
   var filter: js.UndefOr[
     js.Function3[
@@ -25,37 +25,21 @@ trait FilterExtension extends Extension_ {
       /* options */ js.UndefOr[ConverterOptions], 
       String
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object FilterExtension {
   @scala.inline
-  def apply(`type`: String): FilterExtension = {
+  def apply(
+    `type`: String,
+    filter: (/* text */ String, /* converter */ Converter, /* options */ js.UndefOr[ConverterOptions]) => String = null,
+    listeners: StringDictionary[EventListener] = null
+  ): FilterExtension = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction3(filter))
+    if (listeners != null) __obj.updateDynamic("listeners")(listeners.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterExtension]
   }
-  @scala.inline
-  implicit class FilterExtensionOps[Self <: FilterExtension] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(
-      value: (/* text */ String, /* converter */ Converter, /* options */ js.UndefOr[ConverterOptions]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * Date of the Titanium build.
-	 */
+  * Date of the Titanium build.
+  */
 @JSGlobal("Titanium.buildDate")
 @js.native
 object buildDate extends TopLevel[String]

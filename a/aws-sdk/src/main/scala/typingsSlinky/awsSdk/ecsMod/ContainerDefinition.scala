@@ -47,6 +47,10 @@ trait ContainerDefinition extends js.Object {
     */
   var environment: js.UndefOr[EnvironmentVariables] = js.native
   /**
+    * A list of files containing the environment variables to pass to a container. This parameter maps to the --env-file option to docker run. You can specify up to ten environment files. The file must have a .env file extension. Each line in an environment file should contain an environment variable in VARIABLE=VALUE format. Lines beginning with # are treated as comments and are ignored. For more information on the environment variable file syntax, see Declare default environment variables in file. If there are environment variables specified using the environment parameter in a container definition, they take precedence over the variables contained within an environment file. If multiple environment files are specified that contain the same variable, they are processed from the top down. It is recommended to use unique variable names. For more information, see Specifying Environment Variables in the Amazon Elastic Container Service Developer Guide. This field is not valid for containers in tasks using the Fargate launch type.
+    */
+  var environmentFiles: js.UndefOr[EnvironmentFiles] = js.native
+  /**
     * If the essential parameter of a container is marked as true, and that container fails or stops for any reason, all other containers that are part of the task are stopped. If the essential parameter of a container is marked as false, then its failure does not affect the rest of the containers in a task. If this parameter is omitted, a container is assumed to be essential. All tasks must have at least one essential container. If you have an application that is composed of multiple containers, you should group containers that are used for a common purpose into components, and separate the different components into multiple task definitions. For more information, see Application Architecture in the Amazon Elastic Container Service Developer Guide.
     */
   var essential: js.UndefOr[BoxedBoolean] = js.native
@@ -59,7 +63,7 @@ trait ContainerDefinition extends js.Object {
     */
   var firelensConfiguration: js.UndefOr[FirelensConfiguration] = js.native
   /**
-    * The health check command and associated configuration parameters for the container. This parameter maps to HealthCheck in the Create a container section of the Docker Remote API and the HEALTHCHECK parameter of docker run.
+    * The container health check command and associated configuration parameters for the container. This parameter maps to HealthCheck in the Create a container section of the Docker Remote API and the HEALTHCHECK parameter of docker run.
     */
   var healthCheck: js.UndefOr[HealthCheck] = js.native
   /**
@@ -162,473 +166,88 @@ trait ContainerDefinition extends js.Object {
 
 object ContainerDefinition {
   @scala.inline
-  def apply(): ContainerDefinition = {
+  def apply(
+    command: StringList = null,
+    cpu: js.UndefOr[Integer] = js.undefined,
+    dependsOn: ContainerDependencies = null,
+    disableNetworking: js.UndefOr[BoxedBoolean] = js.undefined,
+    dnsSearchDomains: StringList = null,
+    dnsServers: StringList = null,
+    dockerLabels: DockerLabelsMap = null,
+    dockerSecurityOptions: StringList = null,
+    entryPoint: StringList = null,
+    environment: EnvironmentVariables = null,
+    environmentFiles: EnvironmentFiles = null,
+    essential: js.UndefOr[BoxedBoolean] = js.undefined,
+    extraHosts: HostEntryList = null,
+    firelensConfiguration: FirelensConfiguration = null,
+    healthCheck: HealthCheck = null,
+    hostname: String = null,
+    image: String = null,
+    interactive: js.UndefOr[BoxedBoolean] = js.undefined,
+    links: StringList = null,
+    linuxParameters: LinuxParameters = null,
+    logConfiguration: LogConfiguration = null,
+    memory: js.UndefOr[BoxedInteger] = js.undefined,
+    memoryReservation: js.UndefOr[BoxedInteger] = js.undefined,
+    mountPoints: MountPointList = null,
+    name: String = null,
+    portMappings: PortMappingList = null,
+    privileged: js.UndefOr[BoxedBoolean] = js.undefined,
+    pseudoTerminal: js.UndefOr[BoxedBoolean] = js.undefined,
+    readonlyRootFilesystem: js.UndefOr[BoxedBoolean] = js.undefined,
+    repositoryCredentials: RepositoryCredentials = null,
+    resourceRequirements: ResourceRequirements = null,
+    secrets: SecretList = null,
+    startTimeout: js.UndefOr[BoxedInteger] = js.undefined,
+    stopTimeout: js.UndefOr[BoxedInteger] = js.undefined,
+    systemControls: SystemControls = null,
+    ulimits: UlimitList = null,
+    user: String = null,
+    volumesFrom: VolumeFromList = null,
+    workingDirectory: String = null
+  ): ContainerDefinition = {
     val __obj = js.Dynamic.literal()
+    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
+    if (!js.isUndefined(cpu)) __obj.updateDynamic("cpu")(cpu.get.asInstanceOf[js.Any])
+    if (dependsOn != null) __obj.updateDynamic("dependsOn")(dependsOn.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableNetworking)) __obj.updateDynamic("disableNetworking")(disableNetworking.get.asInstanceOf[js.Any])
+    if (dnsSearchDomains != null) __obj.updateDynamic("dnsSearchDomains")(dnsSearchDomains.asInstanceOf[js.Any])
+    if (dnsServers != null) __obj.updateDynamic("dnsServers")(dnsServers.asInstanceOf[js.Any])
+    if (dockerLabels != null) __obj.updateDynamic("dockerLabels")(dockerLabels.asInstanceOf[js.Any])
+    if (dockerSecurityOptions != null) __obj.updateDynamic("dockerSecurityOptions")(dockerSecurityOptions.asInstanceOf[js.Any])
+    if (entryPoint != null) __obj.updateDynamic("entryPoint")(entryPoint.asInstanceOf[js.Any])
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
+    if (environmentFiles != null) __obj.updateDynamic("environmentFiles")(environmentFiles.asInstanceOf[js.Any])
+    if (!js.isUndefined(essential)) __obj.updateDynamic("essential")(essential.get.asInstanceOf[js.Any])
+    if (extraHosts != null) __obj.updateDynamic("extraHosts")(extraHosts.asInstanceOf[js.Any])
+    if (firelensConfiguration != null) __obj.updateDynamic("firelensConfiguration")(firelensConfiguration.asInstanceOf[js.Any])
+    if (healthCheck != null) __obj.updateDynamic("healthCheck")(healthCheck.asInstanceOf[js.Any])
+    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (!js.isUndefined(interactive)) __obj.updateDynamic("interactive")(interactive.get.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (linuxParameters != null) __obj.updateDynamic("linuxParameters")(linuxParameters.asInstanceOf[js.Any])
+    if (logConfiguration != null) __obj.updateDynamic("logConfiguration")(logConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(memory)) __obj.updateDynamic("memory")(memory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(memoryReservation)) __obj.updateDynamic("memoryReservation")(memoryReservation.get.asInstanceOf[js.Any])
+    if (mountPoints != null) __obj.updateDynamic("mountPoints")(mountPoints.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (portMappings != null) __obj.updateDynamic("portMappings")(portMappings.asInstanceOf[js.Any])
+    if (!js.isUndefined(privileged)) __obj.updateDynamic("privileged")(privileged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pseudoTerminal)) __obj.updateDynamic("pseudoTerminal")(pseudoTerminal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readonlyRootFilesystem)) __obj.updateDynamic("readonlyRootFilesystem")(readonlyRootFilesystem.get.asInstanceOf[js.Any])
+    if (repositoryCredentials != null) __obj.updateDynamic("repositoryCredentials")(repositoryCredentials.asInstanceOf[js.Any])
+    if (resourceRequirements != null) __obj.updateDynamic("resourceRequirements")(resourceRequirements.asInstanceOf[js.Any])
+    if (secrets != null) __obj.updateDynamic("secrets")(secrets.asInstanceOf[js.Any])
+    if (!js.isUndefined(startTimeout)) __obj.updateDynamic("startTimeout")(startTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stopTimeout)) __obj.updateDynamic("stopTimeout")(stopTimeout.get.asInstanceOf[js.Any])
+    if (systemControls != null) __obj.updateDynamic("systemControls")(systemControls.asInstanceOf[js.Any])
+    if (ulimits != null) __obj.updateDynamic("ulimits")(ulimits.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
+    if (volumesFrom != null) __obj.updateDynamic("volumesFrom")(volumesFrom.asInstanceOf[js.Any])
+    if (workingDirectory != null) __obj.updateDynamic("workingDirectory")(workingDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerDefinition]
   }
-  @scala.inline
-  implicit class ContainerDefinitionOps[Self <: ContainerDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommand(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpu(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependsOn(value: ContainerDependencies): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependsOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependsOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependsOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableNetworking(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNetworking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableNetworking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNetworking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsSearchDomains(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsSearchDomains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsSearchDomains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsSearchDomains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnsServers(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsServers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsServers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsServers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDockerLabels(value: DockerLabelsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerLabels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDockerLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerLabels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDockerSecurityOptions(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerSecurityOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDockerSecurityOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerSecurityOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntryPoint(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntryPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entryPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: EnvironmentVariables): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEssential(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("essential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEssential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("essential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtraHosts(value: HostEntryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraHosts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtraHosts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extraHosts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirelensConfiguration(value: FirelensConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firelensConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirelensConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firelensConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHealthCheck(value: HealthCheck): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHostname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInteractive(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInteractive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interactive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinuxParameters(value: LinuxParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linuxParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinuxParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linuxParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogConfiguration(value: LogConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemory(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoryReservation(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryReservation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoryReservation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryReservation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountPoints(value: MountPointList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortMappings(value: PortMappingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivileged(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privileged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivileged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privileged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPseudoTerminal(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudoTerminal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPseudoTerminal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudoTerminal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonlyRootFilesystem(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonlyRootFilesystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonlyRootFilesystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonlyRootFilesystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepositoryCredentials(value: RepositoryCredentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepositoryCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceRequirements(value: ResourceRequirements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRequirements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceRequirements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRequirements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecrets(value: SecretList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secrets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecrets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secrets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimeout(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStopTimeout(value: BoxedInteger): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStopTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemControls(value: SystemControls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemControls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUlimits(value: UlimitList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ulimits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUlimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ulimits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumesFrom(value: VolumeFromList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumesFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumesFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumesFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkingDirectory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkingDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

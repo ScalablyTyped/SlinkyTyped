@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `slicerItem.toJSON()`. */
-@js.native
 trait SlicerItemData extends js.Object {
   /**
     *
@@ -13,7 +12,7 @@ trait SlicerItemData extends js.Object {
     *
     * [Api set: ExcelApi 1.10]
     */
-  var hasData: js.UndefOr[Boolean] = js.native
+  var hasData: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * True if the slicer item is selected.
@@ -22,84 +21,37 @@ trait SlicerItemData extends js.Object {
     *
     * [Api set: ExcelApi 1.10]
     */
-  var isSelected: js.UndefOr[Boolean] = js.native
+  var isSelected: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Represents the unique value representing the slicer item.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     *
     * Represents the title displayed in the UI.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object SlicerItemData {
   @scala.inline
-  def apply(): SlicerItemData = {
+  def apply(
+    hasData: js.UndefOr[Boolean] = js.undefined,
+    isSelected: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    name: String = null
+  ): SlicerItemData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasData)) __obj.updateDynamic("hasData")(hasData.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SlicerItemData]
   }
-  @scala.inline
-  implicit class SlicerItemDataOps[Self <: SlicerItemData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

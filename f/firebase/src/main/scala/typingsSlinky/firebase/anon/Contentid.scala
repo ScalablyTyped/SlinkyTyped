@@ -7,76 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Contentid
   extends /* key */ StringDictionary[js.Any] {
-  var content_id: js.UndefOr[String] = js.native
-  var content_type: js.UndefOr[String] = js.native
-  var items: js.UndefOr[js.Array[Item]] = js.native
-  var promotions: js.UndefOr[js.Array[Promotion]] = js.native
+  var content_id: js.UndefOr[String] = js.undefined
+  var content_type: js.UndefOr[String] = js.undefined
+  var items: js.UndefOr[js.Array[Item]] = js.undefined
+  var promotions: js.UndefOr[js.Array[Promotion]] = js.undefined
 }
 
 object Contentid {
   @scala.inline
-  def apply(): Contentid = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    content_id: String = null,
+    content_type: String = null,
+    items: js.Array[Item] = null,
+    promotions: js.Array[Promotion] = null
+  ): Contentid = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (content_id != null) __obj.updateDynamic("content_id")(content_id.asInstanceOf[js.Any])
+    if (content_type != null) __obj.updateDynamic("content_type")(content_type.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (promotions != null) __obj.updateDynamic("promotions")(promotions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Contentid]
   }
-  @scala.inline
-  implicit class ContentidOps[Self <: Contentid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContent_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContent_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[Item]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromotions(value: js.Array[Promotion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromotions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

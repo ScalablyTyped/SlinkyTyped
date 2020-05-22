@@ -12,13 +12,12 @@ import scala.scalajs.js.annotation._
   * This service is still unpublished and unstable.
   * @since LibreOffice 4.0
   */
-@js.native
 trait ReadOnlyAccess extends XHierarchicalNameAccess {
   /**
     * Service constructor.
     * @param locale a string representation of the locale to use for localized properties; use `*` for all-locale access
     */
-  def create(locale: String): Unit = js.native
+  def create(locale: String): Unit
 }
 
 object ReadOnlyAccess {
@@ -34,19 +33,5 @@ object ReadOnlyAccess {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), create = js.Any.fromFunction1(create), getByHierarchicalName = js.Any.fromFunction1(getByHierarchicalName), hasByHierarchicalName = js.Any.fromFunction1(hasByHierarchicalName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[ReadOnlyAccess]
   }
-  @scala.inline
-  implicit class ReadOnlyAccessOps[Self <: ReadOnlyAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

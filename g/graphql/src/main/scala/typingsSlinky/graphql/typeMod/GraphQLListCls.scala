@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 class GraphQLListCls protected ()
   extends typingsSlinky.graphql.definitionMod.GraphQLList[GraphQLType] {
   def this(`type`: GraphQLType) = this()
+  /* CompleteClass */
+  override val ofType: GraphQLType = js.native
+  /* CompleteClass */
+  override def inspect(): String = js.native
+  /* CompleteClass */
+  override def toJSON(): String = js.native
 }
 

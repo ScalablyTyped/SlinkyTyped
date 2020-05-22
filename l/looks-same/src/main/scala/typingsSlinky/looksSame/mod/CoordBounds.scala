@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * coordinate bounds
   */
-@js.native
 trait CoordBounds extends js.Object {
   /**
     * Y-coordinate of bottom right corner
     */
-  var bottom: Double = js.native
+  var bottom: Double
   /**
     * X-coordinate of upper left corner
     */
-  var left: Double = js.native
+  var left: Double
   /**
     * X-coordinate of bottom right corner
     */
-  var right: Double = js.native
+  var right: Double
   /**
     * Y-coordinate of upper left corner
     */
-  var top: Double = js.native
+  var top: Double
 }
 
 object CoordBounds {
@@ -33,37 +32,5 @@ object CoordBounds {
     val __obj = js.Dynamic.literal(bottom = bottom.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoordBounds]
   }
-  @scala.inline
-  implicit class CoordBoundsOps[Self <: CoordBounds] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-histogram.html)
   */
-@js.native
 trait histogram extends js.Object {
   /**
     * Generates a histogram for data returned from a `field` in a given `layer`. The returned object can be used for displaying a histogram to the UI in visualization authoring applications and analytical apps that query and display statistics.
@@ -41,7 +40,7 @@ trait histogram extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def histogram(params: histogramHistogramParams): js.Promise[HistogramResult] = js.native
+  def histogram(params: histogramHistogramParams): js.Promise[HistogramResult]
 }
 
 object histogram {
@@ -50,19 +49,5 @@ object histogram {
     val __obj = js.Dynamic.literal(histogram = js.Any.fromFunction1(histogram))
     __obj.asInstanceOf[histogram]
   }
-  @scala.inline
-  implicit class histogramOps[Self <: histogram] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHistogram(value: histogramHistogramParams => js.Promise[HistogramResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

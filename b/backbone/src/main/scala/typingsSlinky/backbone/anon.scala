@@ -11,6 +11,7 @@ import org.scalajs.dom.raw.Window
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.History_
 import typingsSlinky.backbone.mod.Model
+import typingsSlinky.backbone.mod.ModelSetOptions
 import typingsSlinky.backbone.mod.Router
 import typingsSlinky.backbone.mod.RouterOptions
 import typingsSlinky.backbone.mod.View
@@ -32,19 +33,19 @@ import scala.scalajs.js.annotation._
 object anon extends js.Object {
   @js.native
   trait TypeofCollection
-    extends Instantiable0[Collection[Model]]
+    extends Instantiable0[Collection[Model[js.Any, ModelSetOptions]]]
        with Instantiable1[
           /* models */ js.Array[
             (/* import warning: RewrittenClass.unapply cls was tparam TModel */ js.Any) | js.Object
           ], 
-          Collection[Model]
+          Collection[Model[js.Any, ModelSetOptions]]
         ]
        with Instantiable2[
           /* models */ js.Array[
             (/* import warning: RewrittenClass.unapply cls was tparam TModel */ js.Any) | js.Object
           ], 
           /* options */ js.Any, 
-          Collection[Model]
+          Collection[Model[js.Any, ModelSetOptions]]
         ] {
     /**
       * Do not use, prefer TypeScript's extend functionality.
@@ -60,9 +61,16 @@ object anon extends js.Object {
   
   @js.native
   trait TypeofModel
-    extends Instantiable0[Model]
-       with Instantiable1[/* attributes */ js.Any, Model]
-       with Instantiable2[/* attributes */ js.Any, /* options */ js.Any, Model] {
+    extends Instantiable0[Model[js.Object, js.Object]]
+       with Instantiable1[
+          /* import warning: RewrittenClass.unapply cls was tparam T */ /* attributes */ js.Any, 
+          Model[js.Object, js.Object]
+        ]
+       with Instantiable2[
+          /* import warning: RewrittenClass.unapply cls was tparam T */ /* attributes */ js.Any, 
+          /* options */ js.Any, 
+          Model[js.Object, js.Object]
+        ] {
     /**
       * Do not use, prefer TypeScript's extend functionality.
       **/
@@ -83,10 +91,10 @@ object anon extends js.Object {
   
   @js.native
   trait TypeofView
-    extends Instantiable0[View[Model]]
+    extends Instantiable0[View[Model[js.Any, ModelSetOptions]]]
        with Instantiable1[
           /* options */ ViewOptions[/* import warning: RewrittenClass.unapply cls was tparam TModel */ js.Any], 
-          View[Model]
+          View[Model[js.Any, ModelSetOptions]]
         ] {
     /**
       * Do not use, prefer TypeScript's extend functionality.
@@ -291,11 +299,11 @@ object anon extends js.Object {
     def ajax(options: JQueryAjaxSettings): JQueryXHR = js.native
     // Utility
     def noConflict(): /* import warning: importer.ImportType#apply Failed type conversion: typeof Backbone */ js.Any = js.native
-    def sync(method: String, model: Collection[Model]): js.Any = js.native
-    def sync(method: String, model: Collection[Model], options: JQueryAjaxSettings): js.Any = js.native
+    def sync(method: String, model: Collection[Model[_, ModelSetOptions]]): js.Any = js.native
+    def sync(method: String, model: Collection[Model[_, ModelSetOptions]], options: JQueryAjaxSettings): js.Any = js.native
     // SYNC
-    def sync(method: String, model: Model): js.Any = js.native
-    def sync(method: String, model: Model, options: JQueryAjaxSettings): js.Any = js.native
+    def sync(method: String, model: Model[_, ModelSetOptions]): js.Any = js.native
+    def sync(method: String, model: Model[_, ModelSetOptions], options: JQueryAjaxSettings): js.Any = js.native
   }
   
 }

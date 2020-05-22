@@ -26,65 +26,18 @@ trait ImageScanFindings extends js.Object {
 
 object ImageScanFindings {
   @scala.inline
-  def apply(): ImageScanFindings = {
+  def apply(
+    findingSeverityCounts: FindingSeverityCounts = null,
+    findings: ImageScanFindingList = null,
+    imageScanCompletedAt: js.Date = null,
+    vulnerabilitySourceUpdatedAt: js.Date = null
+  ): ImageScanFindings = {
     val __obj = js.Dynamic.literal()
+    if (findingSeverityCounts != null) __obj.updateDynamic("findingSeverityCounts")(findingSeverityCounts.asInstanceOf[js.Any])
+    if (findings != null) __obj.updateDynamic("findings")(findings.asInstanceOf[js.Any])
+    if (imageScanCompletedAt != null) __obj.updateDynamic("imageScanCompletedAt")(imageScanCompletedAt.asInstanceOf[js.Any])
+    if (vulnerabilitySourceUpdatedAt != null) __obj.updateDynamic("vulnerabilitySourceUpdatedAt")(vulnerabilitySourceUpdatedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageScanFindings]
   }
-  @scala.inline
-  implicit class ImageScanFindingsOps[Self <: ImageScanFindings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFindingSeverityCounts(value: FindingSeverityCounts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingSeverityCounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingSeverityCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingSeverityCounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFindings(value: ImageScanFindingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageScanCompletedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanCompletedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageScanCompletedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageScanCompletedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVulnerabilitySourceUpdatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerabilitySourceUpdatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVulnerabilitySourceUpdatedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerabilitySourceUpdatedAt")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

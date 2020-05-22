@@ -10,5 +10,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChangeFloatingObjectFillColorCommand")
 @js.native
 class ChangeFloatingObjectFillColorCommand ()
-  extends typingsSlinky.devexpressWeb.ChangeFloatingObjectFillColorCommand
+  extends typingsSlinky.devexpressWeb.ChangeFloatingObjectFillColorCommand {
+  /**
+    * Executes the ChangeFloatingObjectFillColorCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
+    * @param color A string value specifying the color.
+    */
+  /* CompleteClass */
+  override def execute(color: String): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[String] = js.native
+}
 

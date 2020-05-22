@@ -15,20 +15,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.FlowType, 'type'> */
-@js.native
 trait FunctionTypeAnnotation
   extends ASTNode
      with FlowKind
      with FlowTypeKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var params: js.Array[FunctionTypeParamKind] = js.native
-  var rest: FunctionTypeParamKind | Null = js.native
-  var returnType: FlowTypeKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.FunctionTypeAnnotation = js.native
-  var typeParameters: TypeParameterDeclarationKind | Null = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var params: js.Array[FunctionTypeParamKind]
+  var rest: FunctionTypeParamKind | Null
+  var returnType: FlowTypeKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.FunctionTypeAnnotation
+  var typeParameters: TypeParameterDeclarationKind | Null
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.FunctionTypeAnnotation")

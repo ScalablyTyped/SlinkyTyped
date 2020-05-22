@@ -11,399 +11,161 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Props extends js.Object {
-  var children: js.UndefOr[js.Function1[/* data */ RenderProps, ReactElement]] = js.native
+  var children: js.UndefOr[js.Function1[/* data */ RenderProps, ReactElement]] = js.undefined
   /**
     * CSS class name of the span element.
     * Note: This won't be applied when using CountUp with render props.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * Specifies decimal character.
     * Default: .
     */
-  var decimal: js.UndefOr[String] = js.native
+  var decimal: js.UndefOr[String] = js.undefined
   /**
     * Amount of decimals to display.
     * Default: 0
     */
-  var decimals: js.UndefOr[Double] = js.native
+  var decimals: js.UndefOr[Double] = js.undefined
   /**
     * Delay in seconds before starting the transition.
     * Default: null
     * Note: delay={0} will automatically start the count up.
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * Duration in seconds.
     * Default: 2
     */
-  var duration: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.undefined
   /**
     * Easing function. http://robertpenner.com/easing for more details.
     * Default: easeInExpo
     */
   var easingFn: js.UndefOr[
     js.Function4[/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double, Unit]
-  ] = js.native
+  ] = js.undefined
   /**
     * Target value.
     */
-  var end: js.UndefOr[Double] = js.native
+  var end: js.UndefOr[Double] = js.undefined
   /**
     * Function to customize the formatting of the number
     */
-  var formattingFn: js.UndefOr[js.Function1[/* value */ Double, String]] = js.native
+  var formattingFn: js.UndefOr[js.Function1[/* value */ Double, String]] = js.undefined
   /**
     * Callback function on transition end.
     */
-  var onEnd: js.UndefOr[js.Function1[/* providedFn */ PauseResume, Unit]] = js.native
+  var onEnd: js.UndefOr[js.Function1[/* providedFn */ PauseResume, Unit]] = js.undefined
   /**
     * Callback function on pause or resume.
     */
-  var onPauseResume: js.UndefOr[js.Function0[js.Function1[/* providedFn */ Start, Unit]]] = js.native
+  var onPauseResume: js.UndefOr[js.Function0[js.Function1[/* providedFn */ Start, Unit]]] = js.undefined
   /**
     * Callback function on reset.
     */
-  var onReset: js.UndefOr[js.Function0[js.Function1[/* providedFn */ Update, Unit]]] = js.native
+  var onReset: js.UndefOr[js.Function0[js.Function1[/* providedFn */ Update, Unit]]] = js.undefined
   /**
     * Callback function on transition start.
     */
-  var onStart: js.UndefOr[js.Function1[/* providedFn */ Reset, Unit]] = js.native
+  var onStart: js.UndefOr[js.Function1[/* providedFn */ Reset, Unit]] = js.undefined
   /**
     * Callback function on update.
     */
-  var onUpdate: js.UndefOr[js.Function1[/* providedFn */ PauseResumeReset, Unit]] = js.native
+  var onUpdate: js.UndefOr[js.Function1[/* providedFn */ PauseResumeReset, Unit]] = js.undefined
   /**
     * Static text before the transitioning value.
     */
-  var prefix: js.UndefOr[String] = js.native
+  var prefix: js.UndefOr[String] = js.undefined
   /**
     * Save previously ended number to start every new animation from it.
     * Default: false
     */
-  var preserveValue: js.UndefOr[Boolean] = js.native
+  var preserveValue: js.UndefOr[Boolean] = js.undefined
   /**
     * Forces count up transition on every component update.
     * Default: false
     */
-  var redraw: js.UndefOr[Boolean] = js.native
+  var redraw: js.UndefOr[Boolean] = js.undefined
   /**
     * Specifies character of thousands separator.
     */
-  var separator: js.UndefOr[String] = js.native
+  var separator: js.UndefOr[String] = js.undefined
   /**
     * Initial value.
     * Default: 0
     */
-  var start: js.UndefOr[Double] = js.native
+  var start: js.UndefOr[Double] = js.undefined
   /**
     * Use for start counter on mount for hook usage.
     * Default: true
     */
-  var startOnMount: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var startOnMount: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
   /**
     * Static text after the transitioning value.
     */
-  var suffix: js.UndefOr[String] = js.native
+  var suffix: js.UndefOr[String] = js.undefined
   /**
     * Enables easing. Set to false for a linear transition.
     * Default: true
     */
-  var useEasing: js.UndefOr[Boolean] = js.native
+  var useEasing: js.UndefOr[Boolean] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply(): Props = {
+  def apply(
+    children: /* data */ RenderProps => ReactElement = null,
+    className: String = null,
+    decimal: String = null,
+    decimals: js.UndefOr[Double] = js.undefined,
+    delay: js.UndefOr[Double] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    easingFn: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Unit = null,
+    end: js.UndefOr[Double] = js.undefined,
+    formattingFn: /* value */ Double => String = null,
+    onEnd: /* providedFn */ PauseResume => Unit = null,
+    onPauseResume: () => js.Function1[/* providedFn */ Start, Unit] = null,
+    onReset: () => js.Function1[/* providedFn */ Update, Unit] = null,
+    onStart: /* providedFn */ Reset => Unit = null,
+    onUpdate: /* providedFn */ PauseResumeReset => Unit = null,
+    prefix: String = null,
+    preserveValue: js.UndefOr[Boolean] = js.undefined,
+    redraw: js.UndefOr[Boolean] = js.undefined,
+    separator: String = null,
+    start: js.UndefOr[Double] = js.undefined,
+    startOnMount: js.UndefOr[Boolean] = js.undefined,
+    style: CSSProperties = null,
+    suffix: String = null,
+    useEasing: js.UndefOr[Boolean] = js.undefined
+  ): Props = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction1(children))
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
+    if (!js.isUndefined(decimals)) __obj.updateDynamic("decimals")(decimals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easingFn != null) __obj.updateDynamic("easingFn")(js.Any.fromFunction4(easingFn))
+    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.get.asInstanceOf[js.Any])
+    if (formattingFn != null) __obj.updateDynamic("formattingFn")(js.Any.fromFunction1(formattingFn))
+    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
+    if (onPauseResume != null) __obj.updateDynamic("onPauseResume")(js.Any.fromFunction0(onPauseResume))
+    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction0(onReset))
+    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction1(onStart))
+    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveValue)) __obj.updateDynamic("preserveValue")(preserveValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(redraw)) __obj.updateDynamic("redraw")(redraw.get.asInstanceOf[js.Any])
+    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startOnMount)) __obj.updateDynamic("startOnMount")(startOnMount.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEasing)) __obj.updateDynamic("useEasing")(useEasing.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
-  @scala.inline
-  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: /* data */ RenderProps => ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimals(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasingFn(value: (/* t */ Double, /* b */ Double, /* c */ Double, /* d */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easingFn")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutEasingFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easingFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormattingFn(value: /* value */ Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattingFn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormattingFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattingFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: /* providedFn */ PauseResume => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPauseResume(value: () => js.Function1[/* providedFn */ Start, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPauseResume")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPauseResume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPauseResume")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReset(value: () => js.Function1[/* providedFn */ Update, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStart(value: /* providedFn */ Reset => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnUpdate(value: /* providedFn */ PauseResumeReset => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedraw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redraw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedraw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redraw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartOnMount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startOnMount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartOnMount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startOnMount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEasing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEasing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

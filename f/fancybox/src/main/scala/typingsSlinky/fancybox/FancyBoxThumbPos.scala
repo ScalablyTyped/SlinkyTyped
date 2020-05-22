@@ -4,49 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FancyBoxThumbPos extends FancyBoxGetFitPosResults {
-  var scaleX: js.UndefOr[Double] = js.native
-  var scaleY: js.UndefOr[Double] = js.native
+  var scaleX: js.UndefOr[Double] = js.undefined
+  var scaleY: js.UndefOr[Double] = js.undefined
 }
 
 object FancyBoxThumbPos {
   @scala.inline
-  def apply(): FancyBoxThumbPos = {
+  def apply(
+    height: js.UndefOr[Double] = js.undefined,
+    left: js.UndefOr[Double] = js.undefined,
+    scaleX: js.UndefOr[Double] = js.undefined,
+    scaleY: js.UndefOr[Double] = js.undefined,
+    top: js.UndefOr[Double] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): FancyBoxThumbPos = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleX)) __obj.updateDynamic("scaleX")(scaleX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleY)) __obj.updateDynamic("scaleY")(scaleY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FancyBoxThumbPos]
   }
-  @scala.inline
-  implicit class FancyBoxThumbPosOps[Self <: FancyBoxThumbPos] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScaleX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

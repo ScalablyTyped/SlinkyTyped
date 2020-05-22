@@ -5,79 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** QueryRelationsRelationship. */
-@js.native
 trait QueryRelationsRelationship extends js.Object {
   /** Information about the relationship. */
-  var arguments: js.UndefOr[js.Array[QueryRelationsArgument]] = js.native
+  var arguments: js.UndefOr[js.Array[QueryRelationsArgument]] = js.undefined
   /** List of different evidentiary items to support the result. */
-  var evidence: js.UndefOr[js.Array[QueryEvidence]] = js.native
+  var evidence: js.UndefOr[js.Array[QueryEvidence]] = js.undefined
   /** The number of times the relationship is mentioned. */
-  var frequency: js.UndefOr[Double] = js.native
+  var frequency: js.UndefOr[Double] = js.undefined
   /** The identified relationship type. */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object QueryRelationsRelationship {
   @scala.inline
-  def apply(): QueryRelationsRelationship = {
+  def apply(
+    arguments: js.Array[QueryRelationsArgument] = null,
+    evidence: js.Array[QueryEvidence] = null,
+    frequency: js.UndefOr[Double] = js.undefined,
+    `type`: String = null
+  ): QueryRelationsRelationship = {
     val __obj = js.Dynamic.literal()
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (evidence != null) __obj.updateDynamic("evidence")(evidence.asInstanceOf[js.Any])
+    if (!js.isUndefined(frequency)) __obj.updateDynamic("frequency")(frequency.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryRelationsRelationship]
   }
-  @scala.inline
-  implicit class QueryRelationsRelationshipOps[Self <: QueryRelationsRelationship] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArguments(value: js.Array[QueryRelationsArgument]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvidence(value: js.Array[QueryEvidence]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrequency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

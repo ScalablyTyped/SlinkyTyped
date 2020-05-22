@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait RuleEntry extends js.Object
 
-object RuleEntry {
-  @scala.inline
-  implicit def apply(value: RuleLevel): RuleEntry = value.asInstanceOf[RuleEntry]
-  @scala.inline
-  implicit def apply(value: RuleLevelAndOptions): RuleEntry = value.asInstanceOf[RuleEntry]
-}
-

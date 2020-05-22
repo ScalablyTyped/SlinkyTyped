@@ -43,6 +43,8 @@ object RadioGroup {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
     def isError(value: Boolean): this.type = set("isError", value.asInstanceOf[js.Any])
     @scala.inline
     def labelPlacement(value: top | right | bottom | left): this.type = set("labelPlacement", value.asInstanceOf[js.Any])

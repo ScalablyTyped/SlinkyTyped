@@ -5,32 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Impl extends js.Object {
   /**
     * @default false
     */
-  var active: `false` | String = js.native
+  var active: `false` | String
   /**
     * @default false
     */
-  var error: `false` | String = js.native
+  var error: `false` | String
   /**
     * @default '{percent}%'
     */
-  var percent: `false` | String = js.native
+  var percent: `false` | String
   /**
     * @default '{value} of {total}'
     */
-  var ratio: `false` | String = js.native
+  var ratio: `false` | String
   /**
     * @default false
     */
-  var success: `false` | String = js.native
+  var success: `false` | String
   /**
     * @default false
     */
-  var warning: `false` | String = js.native
+  var warning: `false` | String
 }
 
 object Impl {
@@ -46,49 +45,5 @@ object Impl {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], percent = percent.asInstanceOf[js.Any], ratio = ratio.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], warning = warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[Impl]
   }
-  @scala.inline
-  implicit class ImplOps[Self <: Impl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPercent(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRatio(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarning(value: `false` | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -26,53 +26,16 @@ trait IncreaseReplicaCountMessage extends js.Object {
 
 object IncreaseReplicaCountMessage {
   @scala.inline
-  def apply(ApplyImmediately: Boolean, ReplicationGroupId: String): IncreaseReplicaCountMessage = {
+  def apply(
+    ApplyImmediately: Boolean,
+    ReplicationGroupId: String,
+    NewReplicaCount: js.UndefOr[IntegerOptional] = js.undefined,
+    ReplicaConfiguration: ReplicaConfigurationList = null
+  ): IncreaseReplicaCountMessage = {
     val __obj = js.Dynamic.literal(ApplyImmediately = ApplyImmediately.asInstanceOf[js.Any], ReplicationGroupId = ReplicationGroupId.asInstanceOf[js.Any])
+    if (!js.isUndefined(NewReplicaCount)) __obj.updateDynamic("NewReplicaCount")(NewReplicaCount.get.asInstanceOf[js.Any])
+    if (ReplicaConfiguration != null) __obj.updateDynamic("ReplicaConfiguration")(ReplicaConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncreaseReplicaCountMessage]
   }
-  @scala.inline
-  implicit class IncreaseReplicaCountMessageOps[Self <: IncreaseReplicaCountMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplyImmediately(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReplicationGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewReplicaCount(value: IntegerOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewReplicaCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewReplicaCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewReplicaCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaConfiguration(value: ReplicaConfigurationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QualifiedTypeIdentifier_
   extends Node
      with Flow {
-  var id: Identifier_ = js.native
-  var qualification: Identifier_ | QualifiedTypeIdentifier_ = js.native
+  var id: Identifier_
+  var qualification: Identifier_ | QualifiedTypeIdentifier_
   @JSName("type")
-  var type_QualifiedTypeIdentifier_ : QualifiedTypeIdentifier = js.native
+  var type_QualifiedTypeIdentifier_ : QualifiedTypeIdentifier
 }
 
 object QualifiedTypeIdentifier_ {
@@ -23,37 +22,17 @@ object QualifiedTypeIdentifier_ {
     loc: SourceLocation,
     qualification: Identifier_ | QualifiedTypeIdentifier_,
     start: Double,
-    `type`: QualifiedTypeIdentifier
+    `type`: QualifiedTypeIdentifier,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
   ): QualifiedTypeIdentifier_ = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], qualification = qualification.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[QualifiedTypeIdentifier_]
   }
-  @scala.inline
-  implicit class QualifiedTypeIdentifier_Ops[Self <: QualifiedTypeIdentifier_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQualification(value: Identifier_ | QualifiedTypeIdentifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: QualifiedTypeIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

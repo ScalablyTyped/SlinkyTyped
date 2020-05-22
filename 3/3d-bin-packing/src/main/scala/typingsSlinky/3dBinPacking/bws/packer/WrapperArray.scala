@@ -5,30 +5,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.EntityArrayCollection<Wrapper> * / any */ @js.native
-trait WrapperArray extends js.Object {
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.EntityArrayCollection<Wrapper> * / any */ trait WrapperArray extends js.Object {
   /**
     * @inheritdoc
     */
-  def CHILD_TAG(): String = js.native
+  def CHILD_TAG(): String
   /**
     * @inheritdoc
     */
-  def TAG(): String = js.native
+  def TAG(): String
   /**
     * @inheritdoc
     */
   def createChild(
     xml: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any
-  ): Wrapper = js.native
+  ): Wrapper
   /**
     * Get (calculate) price.
     */
-  def getPrice(): Double = js.native
+  def getPrice(): Double
   /**
     * Get (calculate) utilization rate.
     */
-  def getUtilization(): Double = js.native
+  def getUtilization(): Double
 }
 
 object WrapperArray {
@@ -43,45 +42,5 @@ object WrapperArray {
     val __obj = js.Dynamic.literal(CHILD_TAG = js.Any.fromFunction0(CHILD_TAG), TAG = js.Any.fromFunction0(TAG), createChild = js.Any.fromFunction1(createChild), getPrice = js.Any.fromFunction0(getPrice), getUtilization = js.Any.fromFunction0(getUtilization))
     __obj.asInstanceOf[WrapperArray]
   }
-  @scala.inline
-  implicit class WrapperArrayOps[Self <: WrapperArray] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCHILD_TAG(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CHILD_TAG")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTAG(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TAG")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateChild(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any => Wrapper
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createChild")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPrice(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrice")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUtilization(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUtilization")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

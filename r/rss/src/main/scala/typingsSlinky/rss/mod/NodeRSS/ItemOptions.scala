@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemOptions extends js.Object {
   /**
     * If included it is the name of the item's creator. If not
     * provided the item author will be the same as the feed author.
     * This is typical except on multi-author blogs.
     */
-  var author: js.UndefOr[String] = js.native
+  var author: js.UndefOr[String] = js.undefined
   /**
     * If provided, each array item will be added as a category
     * element.
     */
-  var categories: js.UndefOr[js.Array[String]] = js.native
+  var categories: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Put additional elements in the item (node-xml syntax).
     */
-  var custom_elements: js.UndefOr[js.Array[_]] = js.native
+  var custom_elements: js.UndefOr[js.Array[_]] = js.undefined
   /**
     * The date and time of when the item was created. Feed
     * readers use this to determine the sort order. Some readers
@@ -29,16 +28,16 @@ trait ItemOptions extends js.Object {
     * Accepts Date object or string with any format
     * JS Date can parse.
     */
-  var date: js.Date | String = js.native
+  var date: js.Date | String
   /**
     * Content for the item. Can contain HTML but link and image
     * URLs must be absolute path including hostname.
     */
-  var description: String = js.native
+  var description: String
   /**
     * An enclosure object.
     */
-  var enclosure: js.UndefOr[EnclosureObject] = js.native
+  var enclosure: js.UndefOr[EnclosureObject] = js.undefined
   /**
     * A unique string feed readers use to know if an item is
     * new or has already been seen. If you use a guid never
@@ -46,152 +45,49 @@ trait ItemOptions extends js.Object {
     * urls must be unique.
     * Defaults to url.
     */
-  var guid: js.UndefOr[String] = js.native
+  var guid: js.UndefOr[String] = js.undefined
   /**
     * The latitude coordinate of the item for GeoRSS.
     */
-  var lat: js.UndefOr[Double] = js.native
+  var lat: js.UndefOr[Double] = js.undefined
   /**
     * The longitude coordinate of the item for GeoRSS.
     */
-  var long: js.UndefOr[Double] = js.native
+  var long: js.UndefOr[Double] = js.undefined
   /**
     * Title of this particular item.
     */
-  var title: String = js.native
+  var title: String
   /**
     * URL to the item. This could be a blog entry.
     */
-  var url: String = js.native
+  var url: String
 }
 
 object ItemOptions {
   @scala.inline
-  def apply(date: js.Date | String, description: String, title: String, url: String): ItemOptions = {
+  def apply(
+    date: js.Date | String,
+    description: String,
+    title: String,
+    url: String,
+    author: String = null,
+    categories: js.Array[String] = null,
+    custom_elements: js.Array[_] = null,
+    enclosure: EnclosureObject = null,
+    guid: String = null,
+    lat: js.UndefOr[Double] = js.undefined,
+    long: js.UndefOr[Double] = js.undefined
+  ): ItemOptions = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (custom_elements != null) __obj.updateDynamic("custom_elements")(custom_elements.asInstanceOf[js.Any])
+    if (enclosure != null) __obj.updateDynamic("enclosure")(enclosure.asInstanceOf[js.Any])
+    if (guid != null) __obj.updateDynamic("guid")(guid.asInstanceOf[js.Any])
+    if (!js.isUndefined(lat)) __obj.updateDynamic("lat")(lat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(long)) __obj.updateDynamic("long")(long.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemOptions]
   }
-  @scala.inline
-  implicit class ItemOptionsOps[Self <: ItemOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDate(value: js.Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom_elements(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_elements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom_elements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_elements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnclosure(value: EnclosureObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enclosure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnclosure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enclosure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLong(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLong: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -48,131 +48,29 @@ trait Ingestion extends js.Object {
 
 object Ingestion {
   @scala.inline
-  def apply(Arn: Arn, CreatedTime: js.Date, IngestionStatus: IngestionStatus): Ingestion = {
+  def apply(
+    Arn: Arn,
+    CreatedTime: js.Date,
+    IngestionStatus: IngestionStatus,
+    ErrorInfo: ErrorInfo = null,
+    IngestionId: IngestionId = null,
+    IngestionSizeInBytes: js.UndefOr[long] = js.undefined,
+    IngestionTimeInSeconds: js.UndefOr[long] = js.undefined,
+    QueueInfo: QueueInfo = null,
+    RequestSource: IngestionRequestSource = null,
+    RequestType: IngestionRequestType = null,
+    RowInfo: RowInfo = null
+  ): Ingestion = {
     val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any], CreatedTime = CreatedTime.asInstanceOf[js.Any], IngestionStatus = IngestionStatus.asInstanceOf[js.Any])
+    if (ErrorInfo != null) __obj.updateDynamic("ErrorInfo")(ErrorInfo.asInstanceOf[js.Any])
+    if (IngestionId != null) __obj.updateDynamic("IngestionId")(IngestionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(IngestionSizeInBytes)) __obj.updateDynamic("IngestionSizeInBytes")(IngestionSizeInBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IngestionTimeInSeconds)) __obj.updateDynamic("IngestionTimeInSeconds")(IngestionTimeInSeconds.get.asInstanceOf[js.Any])
+    if (QueueInfo != null) __obj.updateDynamic("QueueInfo")(QueueInfo.asInstanceOf[js.Any])
+    if (RequestSource != null) __obj.updateDynamic("RequestSource")(RequestSource.asInstanceOf[js.Any])
+    if (RequestType != null) __obj.updateDynamic("RequestType")(RequestType.asInstanceOf[js.Any])
+    if (RowInfo != null) __obj.updateDynamic("RowInfo")(RowInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ingestion]
   }
-  @scala.inline
-  implicit class IngestionOps[Self <: Ingestion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIngestionStatus(value: IngestionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withErrorInfo(value: ErrorInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIngestionId(value: IngestionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngestionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIngestionSizeInBytes(value: long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionSizeInBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngestionSizeInBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionSizeInBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIngestionTimeInSeconds(value: long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionTimeInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIngestionTimeInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionTimeInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueueInfo(value: QueueInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueueInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueueInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestSource(value: IngestionRequestSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestType(value: IngestionRequestType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowInfo(value: RowInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait UpdateServerEngineAttributesResponse extends js.Object {
 
 object UpdateServerEngineAttributesResponse {
   @scala.inline
-  def apply(): UpdateServerEngineAttributesResponse = {
+  def apply(Server: Server = null): UpdateServerEngineAttributesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Server != null) __obj.updateDynamic("Server")(Server.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateServerEngineAttributesResponse]
   }
-  @scala.inline
-  implicit class UpdateServerEngineAttributesResponseOps[Self <: UpdateServerEngineAttributesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServer(value: Server): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

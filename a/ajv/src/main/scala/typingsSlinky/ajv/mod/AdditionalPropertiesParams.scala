@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdditionalPropertiesParams extends ErrorParameters {
-  var additionalProperty: String = js.native
+  var additionalProperty: String
 }
 
 object AdditionalPropertiesParams {
@@ -15,19 +14,5 @@ object AdditionalPropertiesParams {
     val __obj = js.Dynamic.literal(additionalProperty = additionalProperty.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdditionalPropertiesParams]
   }
-  @scala.inline
-  implicit class AdditionalPropertiesParamsOps[Self <: AdditionalPropertiesParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalProperty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Axis extends js.Object {
-  var axis: js.UndefOr[String] = js.native
-  var backfaceVisibility: js.UndefOr[String] = js.native
-  var delay: js.UndefOr[String] = js.native
-  var duration: js.UndefOr[String] = js.native
-  var endAngle: js.UndefOr[String] = js.native
-  var flipTarget: js.UndefOr[String] = js.native
-  var persist: js.UndefOr[String] = js.native
-  var perspective: js.UndefOr[String] = js.native
-  var startAngle: js.UndefOr[String] = js.native
-  var timingFunction: js.UndefOr[String] = js.native
-  var transformOrigin: js.UndefOr[String] = js.native
+  var axis: js.UndefOr[String] = js.undefined
+  var backfaceVisibility: js.UndefOr[String] = js.undefined
+  var delay: js.UndefOr[String] = js.undefined
+  var duration: js.UndefOr[String] = js.undefined
+  var endAngle: js.UndefOr[String] = js.undefined
+  var flipTarget: js.UndefOr[String] = js.undefined
+  var persist: js.UndefOr[String] = js.undefined
+  var perspective: js.UndefOr[String] = js.undefined
+  var startAngle: js.UndefOr[String] = js.undefined
+  var timingFunction: js.UndefOr[String] = js.undefined
+  var transformOrigin: js.UndefOr[String] = js.undefined
 }
 
 object Axis {
   @scala.inline
-  def apply(): Axis = {
+  def apply(
+    axis: String = null,
+    backfaceVisibility: String = null,
+    delay: String = null,
+    duration: String = null,
+    endAngle: String = null,
+    flipTarget: String = null,
+    persist: String = null,
+    perspective: String = null,
+    startAngle: String = null,
+    timingFunction: String = null,
+    transformOrigin: String = null
+  ): Axis = {
     val __obj = js.Dynamic.literal()
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (backfaceVisibility != null) __obj.updateDynamic("backfaceVisibility")(backfaceVisibility.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
+    if (flipTarget != null) __obj.updateDynamic("flipTarget")(flipTarget.asInstanceOf[js.Any])
+    if (persist != null) __obj.updateDynamic("persist")(persist.asInstanceOf[js.Any])
+    if (perspective != null) __obj.updateDynamic("perspective")(perspective.asInstanceOf[js.Any])
+    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
+    if (timingFunction != null) __obj.updateDynamic("timingFunction")(timingFunction.asInstanceOf[js.Any])
+    if (transformOrigin != null) __obj.updateDynamic("transformOrigin")(transformOrigin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Axis]
   }
-  @scala.inline
-  implicit class AxisOps[Self <: Axis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxis(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackfaceVisibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backfaceVisibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackfaceVisibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backfaceVisibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndAngle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlipTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlipTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flipTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerspective(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perspective")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerspective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perspective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAngle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimingFunction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimingFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timingFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformOrigin")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

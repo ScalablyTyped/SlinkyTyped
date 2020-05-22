@@ -2,8 +2,7 @@ package typingsSlinky.yaml.mod
 
 import typingsSlinky.yaml.mod.Document.Anchors
 import typingsSlinky.yaml.mod.Document.TagPrefix
-import typingsSlinky.yaml.typesMod.AST.AstNode
-import typingsSlinky.yaml.typesMod.AST.Collection
+import typingsSlinky.yaml.typesMod.Collection
 import typingsSlinky.yaml.typesMod.Schema.Name
 import typingsSlinky.yaml.typesMod.Schema.Tag
 import typingsSlinky.yaml.typesMod.Schema.TagId
@@ -27,9 +26,10 @@ class Document_ () extends Collection {
     */
   var anchors: Anchors = js.native
   /** The document contents. */
-  var contents: AstNode | Null = js.native
+  var contents: js.Any = js.native
   @JSName("cstNode")
   var cstNode_Document_ : js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.Document] = js.native
+  var directivesEndMarker: js.UndefOr[Boolean] = js.native
   /** Errors encountered during parsing. */
   var errors: js.Array[YAMLError] = js.native
   /**

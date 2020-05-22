@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KatexOptions extends js.Object {
   /**
     * If `true`, `\color` will work like LaTeX's `\textcolor`
@@ -20,7 +19,7 @@ trait KatexOptions extends js.Object {
     *
     * @default false
     */
-  var colorIsTextColor: js.UndefOr[Boolean] = js.native
+  var colorIsTextColor: js.UndefOr[Boolean] = js.undefined
   /**
     * If `true`, math will be rendered in display mode
     * (math in display style and center math on page)
@@ -28,37 +27,37 @@ trait KatexOptions extends js.Object {
     * If `false`, math will be rendered in inline mode
     * @default false
     */
-  var displayMode: js.UndefOr[Boolean] = js.native
+  var displayMode: js.UndefOr[Boolean] = js.undefined
   /**
     * A Color string given in format `#XXX` or `#XXXXXX`
     */
-  var errorColor: js.UndefOr[String] = js.native
+  var errorColor: js.UndefOr[String] = js.undefined
   /**
     * If `true`, display math renders flush left with a 2em left margin,
     * like \documentclass[fleqn] in LaTeX with the amsmath package.
     *
     * @default false
     */
-  var fleqn: js.UndefOr[Boolean] = js.native
+  var fleqn: js.UndefOr[Boolean] = js.undefined
   /**
     * Place KaTeX code in the global group.
     *
     * @default false
     */
-  var globalGroup: js.UndefOr[Boolean] = js.native
+  var globalGroup: js.UndefOr[Boolean] = js.undefined
   /**
     * If `true`, display math has \tags rendered on the left
     * instead of the right, like \\usepackage[leqno]{amsmath} in LaTeX.
     *
     * @default false
     */
-  var leqno: js.UndefOr[Boolean] = js.native
+  var leqno: js.UndefOr[Boolean] = js.undefined
   /**
     * A collection of custom macros.
     *
     * See `src/macros.js` for its usage
     */
-  var macros: js.UndefOr[js.Any] = js.native
+  var macros: js.UndefOr[js.Any] = js.undefined
   /**
     * Limit the number of macro expansions to specified number
     *
@@ -67,7 +66,7 @@ trait KatexOptions extends js.Object {
     *
     * @default 1000
     */
-  var maxExpand: js.UndefOr[Double] = js.native
+  var maxExpand: js.UndefOr[Double] = js.undefined
   /**
     * All user-specified sizes will be caped to `maxSize` ems
     *
@@ -76,14 +75,14 @@ trait KatexOptions extends js.Object {
     *
     * @default Infinity
     */
-  var maxSize: js.UndefOr[Double] = js.native
+  var maxSize: js.UndefOr[Double] = js.undefined
   /**
     * Specifies a minimum thickness, in ems, for fraction lines,
     * \sqrt top lines, {array} vertical lines, \hline, \hdashline,
     * \\underline, \overline, and the borders of \fbox, \boxed, and
     * \fcolorbox.
     */
-  var minRuleThickness: js.UndefOr[Double] = js.native
+  var minRuleThickness: js.UndefOr[Double] = js.undefined
   /**
     * Determines the markup language of the output. The valid choices are:
     * - `html`: Outputs KaTeX in HTML only.
@@ -93,7 +92,7 @@ trait KatexOptions extends js.Object {
     *
     * @default 'htmlAndMathml'
     */
-  var output: js.UndefOr[html | mathml | htmlAndMathml] = js.native
+  var output: js.UndefOr[html | mathml | htmlAndMathml] = js.undefined
   /**
     * If `false` or `"ignore"`, allow features that make
     * writing in LaTex convenient but not supported by LaTex
@@ -104,7 +103,7 @@ trait KatexOptions extends js.Object {
     *
     * @default "warn"
     */
-  var strict: js.UndefOr[Boolean | String | js.Function] = js.native
+  var strict: js.UndefOr[Boolean | String | js.Function] = js.undefined
   /**
     * If `true`, KaTeX will throw a `ParseError` when
     * it encounters an unsupported command or invalid LaTex
@@ -114,7 +113,7 @@ trait KatexOptions extends js.Object {
     * hover text giving the error, in color given by errorColor
     * @default true
     */
-  var throwOnError: js.UndefOr[Boolean] = js.native
+  var throwOnError: js.UndefOr[Boolean] = js.undefined
   /**
     * If `false` (do not trust input), prevent any commands that could enable adverse behavior, rendering them instead in errorColor.
     *
@@ -122,196 +121,43 @@ trait KatexOptions extends js.Object {
     *
     * @default false
     */
-  var trust: js.UndefOr[Boolean | (js.Function1[/* context */ TrustContext, Boolean])] = js.native
+  var trust: js.UndefOr[Boolean | (js.Function1[/* context */ TrustContext, Boolean])] = js.undefined
 }
 
 object KatexOptions {
   @scala.inline
-  def apply(): KatexOptions = {
+  def apply(
+    colorIsTextColor: js.UndefOr[Boolean] = js.undefined,
+    displayMode: js.UndefOr[Boolean] = js.undefined,
+    errorColor: String = null,
+    fleqn: js.UndefOr[Boolean] = js.undefined,
+    globalGroup: js.UndefOr[Boolean] = js.undefined,
+    leqno: js.UndefOr[Boolean] = js.undefined,
+    macros: js.Any = null,
+    maxExpand: js.UndefOr[Double] = js.undefined,
+    maxSize: js.UndefOr[Double] = js.undefined,
+    minRuleThickness: js.UndefOr[Double] = js.undefined,
+    output: html | mathml | htmlAndMathml = null,
+    strict: Boolean | String | js.Function = null,
+    throwOnError: js.UndefOr[Boolean] = js.undefined,
+    trust: Boolean | (js.Function1[/* context */ TrustContext, Boolean]) = null
+  ): KatexOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(colorIsTextColor)) __obj.updateDynamic("colorIsTextColor")(colorIsTextColor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayMode)) __obj.updateDynamic("displayMode")(displayMode.get.asInstanceOf[js.Any])
+    if (errorColor != null) __obj.updateDynamic("errorColor")(errorColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(fleqn)) __obj.updateDynamic("fleqn")(fleqn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(globalGroup)) __obj.updateDynamic("globalGroup")(globalGroup.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(leqno)) __obj.updateDynamic("leqno")(leqno.get.asInstanceOf[js.Any])
+    if (macros != null) __obj.updateDynamic("macros")(macros.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxExpand)) __obj.updateDynamic("maxExpand")(maxExpand.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSize)) __obj.updateDynamic("maxSize")(maxSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minRuleThickness)) __obj.updateDynamic("minRuleThickness")(minRuleThickness.get.asInstanceOf[js.Any])
+    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
+    if (strict != null) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
+    if (!js.isUndefined(throwOnError)) __obj.updateDynamic("throwOnError")(throwOnError.get.asInstanceOf[js.Any])
+    if (trust != null) __obj.updateDynamic("trust")(trust.asInstanceOf[js.Any])
     __obj.asInstanceOf[KatexOptions]
   }
-  @scala.inline
-  implicit class KatexOptionsOps[Self <: KatexOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorIsTextColor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIsTextColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorIsTextColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIsTextColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFleqn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fleqn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleqn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fleqn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalGroup(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("globalGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeqno(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leqno")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeqno: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leqno")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMacros(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macros")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMacros: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macros")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxExpand(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxExpand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxExpand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinRuleThickness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRuleThickness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinRuleThickness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRuleThickness")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput(value: html | mathml | htmlAndMathml): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean | String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrowOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throwOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrowOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throwOnError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrustFunction1(value: /* context */ TrustContext => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trust")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTrust(value: Boolean | (js.Function1[/* context */ TrustContext, Boolean])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trust")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrust: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trust")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,161 +7,78 @@ import scala.scalajs.js.annotation._
 /**
   * What codes are expected
   */
-@js.native
 trait DataRequirementCodeFilter extends Element {
   /**
     * Contains extended information for property 'path'.
     */
-  var _path: js.UndefOr[Element] = js.native
+  var _path: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'valueCode'.
     */
-  var _valueCode: js.UndefOr[js.Array[Element]] = js.native
+  var _valueCode: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Contains extended information for property 'valueSetString'.
     */
-  var _valueSetString: js.UndefOr[Element] = js.native
+  var _valueSetString: js.UndefOr[Element] = js.undefined
   /**
     * The code-valued attribute of the filter
     */
-  var path: String = js.native
+  var path: String
   /**
     * What code is expected
     */
-  var valueCode: js.UndefOr[js.Array[code]] = js.native
+  var valueCode: js.UndefOr[js.Array[code]] = js.undefined
   /**
     * What CodeableConcept is expected
     */
-  var valueCodeableConcept: js.UndefOr[js.Array[CodeableConcept]] = js.native
+  var valueCodeableConcept: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
   /**
     * What Coding is expected
     */
-  var valueCoding: js.UndefOr[js.Array[Coding]] = js.native
+  var valueCoding: js.UndefOr[js.Array[Coding]] = js.undefined
   /**
     * Valueset for the filter
     */
-  var valueSetReference: js.UndefOr[Reference] = js.native
+  var valueSetReference: js.UndefOr[Reference] = js.undefined
   /**
     * Valueset for the filter
     */
-  var valueSetString: js.UndefOr[String] = js.native
+  var valueSetString: js.UndefOr[String] = js.undefined
 }
 
 object DataRequirementCodeFilter {
   @scala.inline
-  def apply(path: String): DataRequirementCodeFilter = {
+  def apply(
+    path: String,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _path: Element = null,
+    _valueCode: js.Array[Element] = null,
+    _valueSetString: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    valueCode: js.Array[code] = null,
+    valueCodeableConcept: js.Array[CodeableConcept] = null,
+    valueCoding: js.Array[Coding] = null,
+    valueSetReference: Reference = null,
+    valueSetString: String = null
+  ): DataRequirementCodeFilter = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_path != null) __obj.updateDynamic("_path")(_path.asInstanceOf[js.Any])
+    if (_valueCode != null) __obj.updateDynamic("_valueCode")(_valueCode.asInstanceOf[js.Any])
+    if (_valueSetString != null) __obj.updateDynamic("_valueSetString")(_valueSetString.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (valueCode != null) __obj.updateDynamic("valueCode")(valueCode.asInstanceOf[js.Any])
+    if (valueCodeableConcept != null) __obj.updateDynamic("valueCodeableConcept")(valueCodeableConcept.asInstanceOf[js.Any])
+    if (valueCoding != null) __obj.updateDynamic("valueCoding")(valueCoding.asInstanceOf[js.Any])
+    if (valueSetReference != null) __obj.updateDynamic("valueSetReference")(valueSetReference.asInstanceOf[js.Any])
+    if (valueSetString != null) __obj.updateDynamic("valueSetString")(valueSetString.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataRequirementCodeFilter]
   }
-  @scala.inline
-  implicit class DataRequirementCodeFilterOps[Self <: DataRequirementCodeFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_path(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_path: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_valueCode(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_valueCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_valueSetString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueSetString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_valueSetString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueSetString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueCode(value: js.Array[code]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueCodeableConcept(value: js.Array[CodeableConcept]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCodeableConcept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueCodeableConcept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCodeableConcept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueCoding(value: js.Array[Coding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueCoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSetReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSetReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSetString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSetString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSetString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

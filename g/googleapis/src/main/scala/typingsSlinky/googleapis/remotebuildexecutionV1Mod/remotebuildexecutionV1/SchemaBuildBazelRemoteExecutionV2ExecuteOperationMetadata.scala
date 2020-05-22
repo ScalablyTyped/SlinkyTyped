@@ -29,65 +29,18 @@ trait SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadata extends js.Objec
 
 object SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadata {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadata = {
+  def apply(
+    actionDigest: SchemaBuildBazelRemoteExecutionV2Digest = null,
+    stage: String = null,
+    stderrStreamName: String = null,
+    stdoutStreamName: String = null
+  ): SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (actionDigest != null) __obj.updateDynamic("actionDigest")(actionDigest.asInstanceOf[js.Any])
+    if (stage != null) __obj.updateDynamic("stage")(stage.asInstanceOf[js.Any])
+    if (stderrStreamName != null) __obj.updateDynamic("stderrStreamName")(stderrStreamName.asInstanceOf[js.Any])
+    if (stdoutStreamName != null) __obj.updateDynamic("stdoutStreamName")(stdoutStreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadata]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadataOps[Self <: SchemaBuildBazelRemoteExecutionV2ExecuteOperationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionDigest(value: SchemaBuildBazelRemoteExecutionV2Digest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionDigest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStderrStreamName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stderrStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStderrStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stderrStreamName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStdoutStreamName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdoutStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStdoutStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdoutStreamName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

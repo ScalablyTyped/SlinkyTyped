@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MetricUpdate extends js.Object {
   /**
     * True if this metric is reported as the total cumulative aggregate
@@ -12,14 +11,14 @@ trait MetricUpdate extends js.Object {
     * By default this is false, indicating that this metric is reported
     * as a delta that is not associated with any WorkItem.
     */
-  var cumulative: js.UndefOr[Boolean] = js.native
+  var cumulative: js.UndefOr[Boolean] = js.undefined
   /** A struct value describing properties of a distribution of numeric values. */
-  var distribution: js.UndefOr[js.Any] = js.native
+  var distribution: js.UndefOr[js.Any] = js.undefined
   /**
     * Worker-computed aggregate value for internal use by the Dataflow
     * service.
     */
-  var internal: js.UndefOr[js.Any] = js.native
+  var internal: js.UndefOr[js.Any] = js.undefined
   /**
     * Metric aggregation kind.  The possible metric aggregation kinds are
     * "Sum", "Max", "Min", "Mean", "Set", "And", "Or", and "Distribution".
@@ -28,176 +27,69 @@ trait MetricUpdate extends js.Object {
     * If omitted, this is not an aggregated value but instead
     * a single metric sample value.
     */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /**
     * Worker-computed aggregate value for the "Mean" aggregation kind.
     * This holds the count of the aggregated values and is used in combination
     * with mean_sum above to obtain the actual mean aggregate value.
     * The only possible value type is Long.
     */
-  var meanCount: js.UndefOr[js.Any] = js.native
+  var meanCount: js.UndefOr[js.Any] = js.undefined
   /**
     * Worker-computed aggregate value for the "Mean" aggregation kind.
     * This holds the sum of the aggregated values and is used in combination
     * with mean_count below to obtain the actual mean aggregate value.
     * The only possible value types are Long and Double.
     */
-  var meanSum: js.UndefOr[js.Any] = js.native
+  var meanSum: js.UndefOr[js.Any] = js.undefined
   /** Name of the metric. */
-  var name: js.UndefOr[MetricStructuredName] = js.native
+  var name: js.UndefOr[MetricStructuredName] = js.undefined
   /**
     * Worker-computed aggregate value for aggregation kinds "Sum", "Max", "Min",
     * "And", and "Or".  The possible value types are Long, Double, and Boolean.
     */
-  var scalar: js.UndefOr[js.Any] = js.native
+  var scalar: js.UndefOr[js.Any] = js.undefined
   /**
     * Worker-computed aggregate value for the "Set" aggregation kind.  The only
     * possible value type is a list of Values whose type can be Long, Double,
     * or String, according to the metric's type.  All Values in the list must
     * be of the same type.
     */
-  var set: js.UndefOr[js.Any] = js.native
+  var set: js.UndefOr[js.Any] = js.undefined
   /**
     * Timestamp associated with the metric value. Optional when workers are
     * reporting work progress; it will be filled in responses from the
     * metrics API.
     */
-  var updateTime: js.UndefOr[String] = js.native
+  var updateTime: js.UndefOr[String] = js.undefined
 }
 
 object MetricUpdate {
   @scala.inline
-  def apply(): MetricUpdate = {
+  def apply(
+    cumulative: js.UndefOr[Boolean] = js.undefined,
+    distribution: js.Any = null,
+    internal: js.Any = null,
+    kind: String = null,
+    meanCount: js.Any = null,
+    meanSum: js.Any = null,
+    name: MetricStructuredName = null,
+    scalar: js.Any = null,
+    set: js.Any = null,
+    updateTime: String = null
+  ): MetricUpdate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cumulative)) __obj.updateDynamic("cumulative")(cumulative.get.asInstanceOf[js.Any])
+    if (distribution != null) __obj.updateDynamic("distribution")(distribution.asInstanceOf[js.Any])
+    if (internal != null) __obj.updateDynamic("internal")(internal.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (meanCount != null) __obj.updateDynamic("meanCount")(meanCount.asInstanceOf[js.Any])
+    if (meanSum != null) __obj.updateDynamic("meanSum")(meanSum.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (scalar != null) __obj.updateDynamic("scalar")(scalar.asInstanceOf[js.Any])
+    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricUpdate]
   }
-  @scala.inline
-  implicit class MetricUpdateOps[Self <: MetricUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCumulative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCumulative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistribution(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distribution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistribution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distribution")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInternal(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeanCount(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meanCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeanCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meanCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeanSum(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meanSum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeanSum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meanSum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: MetricStructuredName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSet(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

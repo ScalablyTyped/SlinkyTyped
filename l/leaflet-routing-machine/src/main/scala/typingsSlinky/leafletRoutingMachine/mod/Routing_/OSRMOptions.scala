@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OSRMOptions extends js.Object {
-  var polylinePrecision: js.UndefOr[Double] = js.native
-  var profile: js.UndefOr[String] = js.native
-  var routingOptions: js.UndefOr[js.Any] = js.native
-  var serviceUrl: js.UndefOr[String] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var useHints: js.UndefOr[Boolean] = js.native
+  var polylinePrecision: js.UndefOr[Double] = js.undefined
+  var profile: js.UndefOr[String] = js.undefined
+  var routingOptions: js.UndefOr[js.Any] = js.undefined
+  var serviceUrl: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var useHints: js.UndefOr[Boolean] = js.undefined
 }
 
 object OSRMOptions {
   @scala.inline
-  def apply(): OSRMOptions = {
+  def apply(
+    polylinePrecision: js.UndefOr[Double] = js.undefined,
+    profile: String = null,
+    routingOptions: js.Any = null,
+    serviceUrl: String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    useHints: js.UndefOr[Boolean] = js.undefined
+  ): OSRMOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(polylinePrecision)) __obj.updateDynamic("polylinePrecision")(polylinePrecision.get.asInstanceOf[js.Any])
+    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
+    if (routingOptions != null) __obj.updateDynamic("routingOptions")(routingOptions.asInstanceOf[js.Any])
+    if (serviceUrl != null) __obj.updateDynamic("serviceUrl")(serviceUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useHints)) __obj.updateDynamic("useHints")(useHints.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OSRMOptions]
   }
-  @scala.inline
-  implicit class OSRMOptionsOps[Self <: OSRMOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolylinePrecision(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polylinePrecision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolylinePrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polylinePrecision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutingOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routingOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutingOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("routingOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseHints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHints")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

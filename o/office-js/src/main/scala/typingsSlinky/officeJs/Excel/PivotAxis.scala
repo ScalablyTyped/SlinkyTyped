@@ -9,7 +9,7 @@ sealed trait PivotAxis extends js.Object
 
 /**
   *
-  * The ShowAs Calculation function for the Data Pivot Field.
+  * Represents the axis from which to get the PivotItems.
   *
   * [Api set: ExcelApi 1.9]
   */

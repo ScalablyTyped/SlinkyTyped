@@ -12,107 +12,49 @@ import scala.scalajs.js.annotation._
 /**
   * The options used to initialize a rendermime instance.
   */
-@js.native
 trait IOptions extends js.Object {
   /**
     * Initial factories to add to the rendermime instance.
     */
-  var initialFactories: js.UndefOr[js.Array[IRendererFactory]] = js.native
+  var initialFactories: js.UndefOr[js.Array[IRendererFactory]] = js.undefined
   /**
     * An optional LaTeX typesetter.
     */
-  var latexTypesetter: js.UndefOr[ILatexTypesetter] = js.native
+  var latexTypesetter: js.UndefOr[ILatexTypesetter] = js.undefined
   /**
     * An optional path handler.
     */
-  var linkHandler: js.UndefOr[ILinkHandler] = js.native
+  var linkHandler: js.UndefOr[ILinkHandler] = js.undefined
   /**
     * The initial resolver object.
     *
     * The default is `null`.
     */
-  var resolver: js.UndefOr[IResolver] = js.native
+  var resolver: js.UndefOr[IResolver] = js.undefined
   /**
     * The sanitizer used to sanitize untrusted html inputs.
     *
     * If not given, a default sanitizer will be used.
     */
-  var sanitizer: js.UndefOr[ISanitizer] = js.native
+  var sanitizer: js.UndefOr[ISanitizer] = js.undefined
 }
 
 object IOptions {
   @scala.inline
-  def apply(): IOptions = {
+  def apply(
+    initialFactories: js.Array[IRendererFactory] = null,
+    latexTypesetter: ILatexTypesetter = null,
+    linkHandler: ILinkHandler = null,
+    resolver: IResolver = null,
+    sanitizer: ISanitizer = null
+  ): IOptions = {
     val __obj = js.Dynamic.literal()
+    if (initialFactories != null) __obj.updateDynamic("initialFactories")(initialFactories.asInstanceOf[js.Any])
+    if (latexTypesetter != null) __obj.updateDynamic("latexTypesetter")(latexTypesetter.asInstanceOf[js.Any])
+    if (linkHandler != null) __obj.updateDynamic("linkHandler")(linkHandler.asInstanceOf[js.Any])
+    if (resolver != null) __obj.updateDynamic("resolver")(resolver.asInstanceOf[js.Any])
+    if (sanitizer != null) __obj.updateDynamic("sanitizer")(sanitizer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
-  @scala.inline
-  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInitialFactories(value: js.Array[IRendererFactory]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFactories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialFactories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFactories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatexTypesetter(value: ILatexTypesetter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latexTypesetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatexTypesetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latexTypesetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkHandler(value: ILinkHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolver(value: IResolver): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolver: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolver")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSanitizer(value: ISanitizer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSanitizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitizer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

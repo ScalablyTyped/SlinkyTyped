@@ -8,70 +8,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options[Result, RemoteResult] extends js.Object {
-  var ajax: js.UndefOr[AjaxOptions[Result, RemoteResult]] = js.native
-  var allowClear: js.UndefOr[Boolean] = js.native
-  var amdBase: js.UndefOr[String] = js.native
-  var amdLanguageBase: js.UndefOr[String] = js.native
-  var closeOnSelect: js.UndefOr[Boolean] = js.native
-  var containerCss: js.UndefOr[js.Any] = js.native
-  var containerCssClass: js.UndefOr[String] = js.native
+  var ajax: js.UndefOr[AjaxOptions[Result, RemoteResult]] = js.undefined
+  var allowClear: js.UndefOr[Boolean] = js.undefined
+  var amdBase: js.UndefOr[String] = js.undefined
+  var amdLanguageBase: js.UndefOr[String] = js.undefined
+  var closeOnSelect: js.UndefOr[Boolean] = js.undefined
+  var containerCss: js.UndefOr[js.Any] = js.undefined
+  var containerCssClass: js.UndefOr[String] = js.undefined
   // Not in https://select2.org/configuration/options-api
-  var createTag: js.UndefOr[js.Function1[/* params */ SearchOptions, IdTextPair | Null]] = js.native
-  var data: js.UndefOr[js.Array[DataFormat | GroupedDataFormat]] = js.native
-  var dataAdapter: js.UndefOr[js.Any] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var dir: js.UndefOr[ltr | rtl] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var dropdownAdapter: js.UndefOr[js.Any] = js.native
-  var dropdownAutoWidth: js.UndefOr[Boolean] = js.native
-  var dropdownCss: js.UndefOr[js.Any] = js.native
-  var dropdownCssClass: js.UndefOr[String] = js.native
-  var dropdownParent: js.UndefOr[JQuery[HTMLElement]] = js.native
-  var escapeMarkup: js.UndefOr[js.Function1[/* markup */ String, String]] = js.native
+  var createTag: js.UndefOr[js.Function1[/* params */ SearchOptions, IdTextPair | Null]] = js.undefined
+  var data: js.UndefOr[js.Array[DataFormat | GroupedDataFormat]] = js.undefined
+  var dataAdapter: js.UndefOr[js.Any] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var dir: js.UndefOr[ltr | rtl] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var dropdownAdapter: js.UndefOr[js.Any] = js.undefined
+  var dropdownAutoWidth: js.UndefOr[Boolean] = js.undefined
+  var dropdownCss: js.UndefOr[js.Any] = js.undefined
+  var dropdownCssClass: js.UndefOr[String] = js.undefined
+  var dropdownParent: js.UndefOr[JQuery[HTMLElement]] = js.undefined
+  var escapeMarkup: js.UndefOr[js.Function1[/* markup */ String, String]] = js.undefined
   var initSelection: js.UndefOr[
     js.Function2[
       /* element */ JQuery[HTMLElement], 
       /* callback */ js.Function1[/* data */ js.Any, Unit], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   var insertTag: js.UndefOr[
     js.Function2[/* data */ js.Array[OptionData | IdTextPair], /* tag */ IdTextPair, Unit]
-  ] = js.native
-  var language: js.UndefOr[String | Translation] = js.native
+  ] = js.undefined
+  var language: js.UndefOr[String | Translation] = js.undefined
   var matcher: js.UndefOr[
     js.Function2[
       /* params */ SearchOptions, 
       /* data */ OptGroupData | OptionData, 
       OptGroupData | OptionData | Null
     ]
-  ] = js.native
-  var maximumInputLength: js.UndefOr[Double] = js.native
-  var maximumSelectionLength: js.UndefOr[Double] = js.native
-  var minimumInputLength: js.UndefOr[Double] = js.native
-  var minimumResultsForSearch: js.UndefOr[Double] = js.native
-  var multiple: js.UndefOr[Boolean] = js.native
-  var placeholder: js.UndefOr[String | IdTextPair] = js.native
-  var resultsAdapter: js.UndefOr[js.Any] = js.native
-  var selectOnClose: js.UndefOr[Boolean] = js.native
-  var selectionAdapter: js.UndefOr[js.Any] = js.native
+  ] = js.undefined
+  var maximumInputLength: js.UndefOr[Double] = js.undefined
+  var maximumSelectionLength: js.UndefOr[Double] = js.undefined
+  var minimumInputLength: js.UndefOr[Double] = js.undefined
+  var minimumResultsForSearch: js.UndefOr[Double] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.undefined
+  var placeholder: js.UndefOr[String | IdTextPair] = js.undefined
+  var resultsAdapter: js.UndefOr[js.Any] = js.undefined
+  var selectOnClose: js.UndefOr[Boolean] = js.undefined
+  var selectionAdapter: js.UndefOr[js.Any] = js.undefined
   var sorter: js.UndefOr[
     js.Function1[
       /* data */ js.Array[OptGroupData | OptionData | IdTextPair], 
       js.Array[OptGroupData | OptionData | IdTextPair]
     ]
-  ] = js.native
-  var tags: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var tags: js.UndefOr[Boolean] = js.undefined
   var templateResult: js.UndefOr[
     js.Function1[/* result */ LoadingData | Result, String | JQuery[HTMLElement] | Null]
-  ] = js.native
+  ] = js.undefined
   var templateSelection: js.UndefOr[
     js.Function1[/* selection */ IdTextPair | LoadingData | Result, String | JQuery[HTMLElement]]
-  ] = js.native
-  var theme: js.UndefOr[String] = js.native
-  var tokenSeparators: js.UndefOr[js.Array[String]] = js.native
+  ] = js.undefined
+  var theme: js.UndefOr[String] = js.undefined
+  var tokenSeparators: js.UndefOr[js.Array[String]] = js.undefined
   var tokenizer: js.UndefOr[
     js.Function4[
       /* input */ String, 
@@ -80,511 +79,96 @@ trait Options[Result, RemoteResult] extends js.Object {
       /* options */ Options[DataFormat | GroupedDataFormat, _], 
       String
     ]
-  ] = js.native
-  var width: js.UndefOr[String] = js.native
+  ] = js.undefined
+  var width: js.UndefOr[String] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply[Result, RemoteResult](): Options[Result, RemoteResult] = {
+  def apply[Result, RemoteResult](
+    ajax: AjaxOptions[Result, RemoteResult] = null,
+    allowClear: js.UndefOr[Boolean] = js.undefined,
+    amdBase: String = null,
+    amdLanguageBase: String = null,
+    closeOnSelect: js.UndefOr[Boolean] = js.undefined,
+    containerCss: js.Any = null,
+    containerCssClass: String = null,
+    createTag: /* params */ SearchOptions => IdTextPair | Null = null,
+    data: js.Array[DataFormat | GroupedDataFormat] = null,
+    dataAdapter: js.Any = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    dir: ltr | rtl = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dropdownAdapter: js.Any = null,
+    dropdownAutoWidth: js.UndefOr[Boolean] = js.undefined,
+    dropdownCss: js.Any = null,
+    dropdownCssClass: String = null,
+    dropdownParent: JQuery[HTMLElement] = null,
+    escapeMarkup: /* markup */ String => String = null,
+    initSelection: (/* element */ JQuery[HTMLElement], /* callback */ js.Function1[/* data */ js.Any, Unit]) => Unit = null,
+    insertTag: (/* data */ js.Array[OptionData | IdTextPair], /* tag */ IdTextPair) => Unit = null,
+    language: String | Translation = null,
+    matcher: (/* params */ SearchOptions, /* data */ OptGroupData | OptionData) => OptGroupData | OptionData | Null = null,
+    maximumInputLength: js.UndefOr[Double] = js.undefined,
+    maximumSelectionLength: js.UndefOr[Double] = js.undefined,
+    minimumInputLength: js.UndefOr[Double] = js.undefined,
+    minimumResultsForSearch: js.UndefOr[Double] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    placeholder: String | IdTextPair = null,
+    resultsAdapter: js.Any = null,
+    selectOnClose: js.UndefOr[Boolean] = js.undefined,
+    selectionAdapter: js.Any = null,
+    sorter: /* data */ js.Array[OptGroupData | OptionData | IdTextPair] => js.Array[OptGroupData | OptionData | IdTextPair] = null,
+    tags: js.UndefOr[Boolean] = js.undefined,
+    templateResult: /* result */ LoadingData | Result => String | JQuery[HTMLElement] | Null = null,
+    templateSelection: /* selection */ IdTextPair | LoadingData | Result => String | JQuery[HTMLElement] = null,
+    theme: String = null,
+    tokenSeparators: js.Array[String] = null,
+    tokenizer: (/* input */ String, /* selection */ js.Array[_], /* selectCallback */ js.Function0[Unit], /* options */ Options[DataFormat | GroupedDataFormat, _]) => String = null,
+    width: String = null
+  ): Options[Result, RemoteResult] = {
     val __obj = js.Dynamic.literal()
+    if (ajax != null) __obj.updateDynamic("ajax")(ajax.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.get.asInstanceOf[js.Any])
+    if (amdBase != null) __obj.updateDynamic("amdBase")(amdBase.asInstanceOf[js.Any])
+    if (amdLanguageBase != null) __obj.updateDynamic("amdLanguageBase")(amdLanguageBase.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnSelect)) __obj.updateDynamic("closeOnSelect")(closeOnSelect.get.asInstanceOf[js.Any])
+    if (containerCss != null) __obj.updateDynamic("containerCss")(containerCss.asInstanceOf[js.Any])
+    if (containerCssClass != null) __obj.updateDynamic("containerCssClass")(containerCssClass.asInstanceOf[js.Any])
+    if (createTag != null) __obj.updateDynamic("createTag")(js.Any.fromFunction1(createTag))
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataAdapter != null) __obj.updateDynamic("dataAdapter")(dataAdapter.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (dropdownAdapter != null) __obj.updateDynamic("dropdownAdapter")(dropdownAdapter.asInstanceOf[js.Any])
+    if (!js.isUndefined(dropdownAutoWidth)) __obj.updateDynamic("dropdownAutoWidth")(dropdownAutoWidth.get.asInstanceOf[js.Any])
+    if (dropdownCss != null) __obj.updateDynamic("dropdownCss")(dropdownCss.asInstanceOf[js.Any])
+    if (dropdownCssClass != null) __obj.updateDynamic("dropdownCssClass")(dropdownCssClass.asInstanceOf[js.Any])
+    if (dropdownParent != null) __obj.updateDynamic("dropdownParent")(dropdownParent.asInstanceOf[js.Any])
+    if (escapeMarkup != null) __obj.updateDynamic("escapeMarkup")(js.Any.fromFunction1(escapeMarkup))
+    if (initSelection != null) __obj.updateDynamic("initSelection")(js.Any.fromFunction2(initSelection))
+    if (insertTag != null) __obj.updateDynamic("insertTag")(js.Any.fromFunction2(insertTag))
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (matcher != null) __obj.updateDynamic("matcher")(js.Any.fromFunction2(matcher))
+    if (!js.isUndefined(maximumInputLength)) __obj.updateDynamic("maximumInputLength")(maximumInputLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumSelectionLength)) __obj.updateDynamic("maximumSelectionLength")(maximumSelectionLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumInputLength)) __obj.updateDynamic("minimumInputLength")(minimumInputLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumResultsForSearch)) __obj.updateDynamic("minimumResultsForSearch")(minimumResultsForSearch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (resultsAdapter != null) __obj.updateDynamic("resultsAdapter")(resultsAdapter.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectOnClose)) __obj.updateDynamic("selectOnClose")(selectOnClose.get.asInstanceOf[js.Any])
+    if (selectionAdapter != null) __obj.updateDynamic("selectionAdapter")(selectionAdapter.asInstanceOf[js.Any])
+    if (sorter != null) __obj.updateDynamic("sorter")(js.Any.fromFunction1(sorter))
+    if (!js.isUndefined(tags)) __obj.updateDynamic("tags")(tags.get.asInstanceOf[js.Any])
+    if (templateResult != null) __obj.updateDynamic("templateResult")(js.Any.fromFunction1(templateResult))
+    if (templateSelection != null) __obj.updateDynamic("templateSelection")(js.Any.fromFunction1(templateSelection))
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tokenSeparators != null) __obj.updateDynamic("tokenSeparators")(tokenSeparators.asInstanceOf[js.Any])
+    if (tokenizer != null) __obj.updateDynamic("tokenizer")(js.Any.fromFunction4(tokenizer))
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[Result, RemoteResult]]
   }
-  @scala.inline
-  implicit class OptionsOps[Self[result, remoteresult] <: Options[result, remoteresult], Result, RemoteResult] (val x: Self[Result, RemoteResult]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Result, RemoteResult] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Result, RemoteResult]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[Result, RemoteResult]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Result, RemoteResult]) with Other]
-    @scala.inline
-    def withAjax(value: AjaxOptions[Result, RemoteResult]): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjax: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowClear(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowClear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowClear: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowClear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmdBase(value: String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amdBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmdBase: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amdBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmdLanguageBase(value: String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amdLanguageBase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmdLanguageBase: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amdLanguageBase")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseOnSelect(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseOnSelect: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerCss(value: js.Any): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerCss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerCss: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerCss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerCssClass(value: String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerCssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerCssClass: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerCssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTag(value: /* params */ SearchOptions => IdTextPair | Null): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreateTag: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[DataFormat | GroupedDataFormat]): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataAdapter(value: js.Any): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataAdapter: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataAdapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: ltr | rtl): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownAdapter(value: js.Any): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownAdapter: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAdapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownAutoWidth(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAutoWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownAutoWidth: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownAutoWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownCss(value: js.Any): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownCss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownCss: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownCss")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownCssClass(value: String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownCssClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownCssClass: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownCssClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownParent(value: JQuery[HTMLElement]): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownParent: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscapeMarkup(value: /* markup */ String => String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeMarkup")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEscapeMarkup: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeMarkup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitSelection(
-      value: (/* element */ JQuery[HTMLElement], /* callback */ js.Function1[/* data */ js.Any, Unit]) => Unit
-    ): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initSelection")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInitSelection: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertTag(value: (/* data */ js.Array[OptionData | IdTextPair], /* tag */ IdTextPair) => Unit): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTag")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInsertTag: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String | Translation): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatcher(
-      value: (/* params */ SearchOptions, /* data */ OptGroupData | OptionData) => OptGroupData | OptionData | Null
-    ): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcher")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutMatcher: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcher")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumInputLength(value: Double): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumInputLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumInputLength: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumInputLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumSelectionLength(value: Double): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSelectionLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumSelectionLength: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSelectionLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumInputLength(value: Double): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumInputLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumInputLength: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumInputLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumResultsForSearch(value: Double): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumResultsForSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumResultsForSearch: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumResultsForSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String | IdTextPair): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResultsAdapter(value: js.Any): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResultsAdapter: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsAdapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectOnClose(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectOnClose: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectOnClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionAdapter(value: js.Any): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionAdapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionAdapter: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionAdapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSorter(
-      value: /* data */ js.Array[OptGroupData | OptionData | IdTextPair] => js.Array[OptGroupData | OptionData | IdTextPair]
-    ): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSorter: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Boolean): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateResult(value: /* result */ LoadingData | Result => String | JQuery[HTMLElement] | Null): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateResult")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTemplateResult: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateSelection(value: /* selection */ IdTextPair | LoadingData | Result => String | JQuery[HTMLElement]): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTemplateSelection: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templateSelection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenSeparators(value: js.Array[String]): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSeparators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenSeparators: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSeparators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenizer(
-      value: (/* input */ String, /* selection */ js.Array[_], /* selectCallback */ js.Function0[Unit], /* options */ Options[DataFormat | GroupedDataFormat, _]) => String
-    ): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizer")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutTokenizer: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String): Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self[Result, RemoteResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

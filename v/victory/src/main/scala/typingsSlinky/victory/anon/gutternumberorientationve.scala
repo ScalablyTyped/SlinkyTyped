@@ -8,109 +8,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  gutter ? :number,   orientation ? :'vertical' | 'horizontal',   titleOrientation ? :victory.victory.OrientationTypes,   style ? :{  data ? :react.react.CSSProperties & {  type ? :victory.victory.ScatterSymbolType},   labels ? :react.react.CSSProperties,   title ? :react.react.CSSProperties}} & victory.victory.ThemeBaseProps */
-@js.native
 trait gutternumberorientationve extends js.Object {
-  var colorScale: js.Array[String] = js.native
-  var gutter: js.UndefOr[Double] = js.native
-  var height: Double = js.native
-  var orientation: js.UndefOr[vertical | horizontal] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[Labels] = js.native
-  var titleOrientation: js.UndefOr[OrientationTypes] = js.native
-  var width: Double = js.native
+  var colorScale: js.Array[String]
+  var gutter: js.UndefOr[Double] = js.undefined
+  var height: Double
+  var orientation: js.UndefOr[vertical | horizontal] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[Labels] = js.undefined
+  var titleOrientation: js.UndefOr[OrientationTypes] = js.undefined
+  var width: Double
 }
 
 object gutternumberorientationve {
   @scala.inline
-  def apply(colorScale: js.Array[String], height: Double, width: Double): gutternumberorientationve = {
+  def apply(
+    colorScale: js.Array[String],
+    height: Double,
+    width: Double,
+    gutter: js.UndefOr[Double] = js.undefined,
+    orientation: vertical | horizontal = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    style: Labels = null,
+    titleOrientation: OrientationTypes = null
+  ): gutternumberorientationve = {
     val __obj = js.Dynamic.literal(colorScale = colorScale.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    if (!js.isUndefined(gutter)) __obj.updateDynamic("gutter")(gutter.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (titleOrientation != null) __obj.updateDynamic("titleOrientation")(titleOrientation.asInstanceOf[js.Any])
     __obj.asInstanceOf[gutternumberorientationve]
   }
-  @scala.inline
-  implicit class gutternumberorientationveOps[Self <: gutternumberorientationve] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorScale(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGutter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: vertical | horizontal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Labels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleOrientation(value: OrientationTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleOrientation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

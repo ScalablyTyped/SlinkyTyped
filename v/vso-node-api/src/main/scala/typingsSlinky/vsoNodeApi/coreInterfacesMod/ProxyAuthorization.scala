@@ -6,24 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProxyAuthorization extends js.Object {
   /**
     * Gets or sets the endpoint used to obtain access tokens from the configured token service.
     */
-  var authorizationUrl: String = js.native
+  var authorizationUrl: String
   /**
     * Gets or sets the client identifier for this proxy.
     */
-  var clientId: String = js.native
+  var clientId: String
   /**
     * Gets or sets the user identity to authorize for on-prem.
     */
-  var identity: IdentityDescriptor = js.native
+  var identity: IdentityDescriptor
   /**
     * Gets or sets the public key used to verify the identity of this proxy. Only specify on hosted.
     */
-  var publicKey: PublicKey = js.native
+  var publicKey: PublicKey
 }
 
 object ProxyAuthorization {
@@ -32,37 +31,5 @@ object ProxyAuthorization {
     val __obj = js.Dynamic.literal(authorizationUrl = authorizationUrl.asInstanceOf[js.Any], clientId = clientId.asInstanceOf[js.Any], identity = identity.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProxyAuthorization]
   }
-  @scala.inline
-  implicit class ProxyAuthorizationOps[Self <: ProxyAuthorization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorizationUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentity(value: IdentityDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublicKey(value: PublicKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

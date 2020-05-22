@@ -18,35 +18,10 @@ trait CreateIntentVersionRequest extends js.Object {
 
 object CreateIntentVersionRequest {
   @scala.inline
-  def apply(name: IntentName): CreateIntentVersionRequest = {
+  def apply(name: IntentName, checksum: String = null): CreateIntentVersionRequest = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIntentVersionRequest]
   }
-  @scala.inline
-  implicit class CreateIntentVersionRequestOps[Self <: CreateIntentVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: IntentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChecksum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecksum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

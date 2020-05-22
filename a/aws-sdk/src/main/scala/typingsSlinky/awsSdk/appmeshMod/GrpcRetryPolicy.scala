@@ -11,7 +11,7 @@ trait GrpcRetryPolicy extends js.Object {
     */
   var grpcRetryEvents: js.UndefOr[GrpcRetryPolicyEvents] = js.native
   /**
-    * Specify at least one of the following values.
+    * Specify at least one of the following values. 
     
     
     
@@ -51,65 +51,18 @@ trait GrpcRetryPolicy extends js.Object {
 
 object GrpcRetryPolicy {
   @scala.inline
-  def apply(maxRetries: MaxRetries, perRetryTimeout: Duration): GrpcRetryPolicy = {
+  def apply(
+    maxRetries: MaxRetries,
+    perRetryTimeout: Duration,
+    grpcRetryEvents: GrpcRetryPolicyEvents = null,
+    httpRetryEvents: HttpRetryPolicyEvents = null,
+    tcpRetryEvents: TcpRetryPolicyEvents = null
+  ): GrpcRetryPolicy = {
     val __obj = js.Dynamic.literal(maxRetries = maxRetries.asInstanceOf[js.Any], perRetryTimeout = perRetryTimeout.asInstanceOf[js.Any])
+    if (grpcRetryEvents != null) __obj.updateDynamic("grpcRetryEvents")(grpcRetryEvents.asInstanceOf[js.Any])
+    if (httpRetryEvents != null) __obj.updateDynamic("httpRetryEvents")(httpRetryEvents.asInstanceOf[js.Any])
+    if (tcpRetryEvents != null) __obj.updateDynamic("tcpRetryEvents")(tcpRetryEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrpcRetryPolicy]
   }
-  @scala.inline
-  implicit class GrpcRetryPolicyOps[Self <: GrpcRetryPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxRetries(value: MaxRetries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPerRetryTimeout(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perRetryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGrpcRetryEvents(value: GrpcRetryPolicyEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpcRetryEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrpcRetryEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grpcRetryEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpRetryEvents(value: HttpRetryPolicyEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRetryEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpRetryEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRetryEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTcpRetryEvents(value: TcpRetryPolicyEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpRetryEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTcpRetryEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpRetryEvents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

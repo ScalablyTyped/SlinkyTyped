@@ -23,41 +23,11 @@ trait SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContext extends js.Object {
 
 object SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContext {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContext = {
+  def apply(pageNumber: js.UndefOr[Double] = js.undefined, uri: String = null): SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContext = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(pageNumber)) __obj.updateDynamic("pageNumber")(pageNumber.get.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContext]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContextOps[Self <: SchemaGoogleCloudVisionV1p1beta1ImageAnnotationContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPageNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

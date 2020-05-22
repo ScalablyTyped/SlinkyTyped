@@ -25,53 +25,16 @@ trait SchemaAttributeValue extends js.Object {
 
 object SchemaAttributeValue {
   @scala.inline
-  def apply(): SchemaAttributeValue = {
+  def apply(
+    boolValue: js.UndefOr[Boolean] = js.undefined,
+    intValue: String = null,
+    stringValue: SchemaTruncatableString = null
+  ): SchemaAttributeValue = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(boolValue)) __obj.updateDynamic("boolValue")(boolValue.get.asInstanceOf[js.Any])
+    if (intValue != null) __obj.updateDynamic("intValue")(intValue.asInstanceOf[js.Any])
+    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttributeValue]
   }
-  @scala.inline
-  implicit class SchemaAttributeValueOps[Self <: SchemaAttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoolValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoolValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: SchemaTruncatableString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

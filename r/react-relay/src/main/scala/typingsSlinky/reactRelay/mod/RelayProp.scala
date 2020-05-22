@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RelayProp extends js.Object {
-  var environment: typingsSlinky.relayRuntime.mod.Environment = js.native
+  var environment: typingsSlinky.relayRuntime.mod.Environment
    // ensures no RelayRefetchProp is used with a fragment container
-  var hasMore: js.UndefOr[scala.Nothing] = js.native
-  var refetch: js.UndefOr[scala.Nothing] = js.native
+  var hasMore: js.UndefOr[scala.Nothing] = js.undefined
+  var refetch: js.UndefOr[scala.Nothing] = js.undefined
 }
 
 object RelayProp {
@@ -18,19 +17,5 @@ object RelayProp {
     val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelayProp]
   }
-  @scala.inline
-  implicit class RelayPropOps[Self <: RelayProp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnvironment(value: typingsSlinky.relayRuntime.mod.Environment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

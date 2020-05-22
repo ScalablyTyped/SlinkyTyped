@@ -22,47 +22,15 @@ trait DescribeNetworkInterfaceAttributeRequest extends js.Object {
 
 object DescribeNetworkInterfaceAttributeRequest {
   @scala.inline
-  def apply(NetworkInterfaceId: NetworkInterfaceId): DescribeNetworkInterfaceAttributeRequest = {
+  def apply(
+    NetworkInterfaceId: NetworkInterfaceId,
+    Attribute: NetworkInterfaceAttribute = null,
+    DryRun: js.UndefOr[Boolean] = js.undefined
+  ): DescribeNetworkInterfaceAttributeRequest = {
     val __obj = js.Dynamic.literal(NetworkInterfaceId = NetworkInterfaceId.asInstanceOf[js.Any])
+    if (Attribute != null) __obj.updateDynamic("Attribute")(Attribute.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeNetworkInterfaceAttributeRequest]
   }
-  @scala.inline
-  implicit class DescribeNetworkInterfaceAttributeRequestOps[Self <: DescribeNetworkInterfaceAttributeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNetworkInterfaceId(value: NetworkInterfaceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttribute(value: NetworkInterfaceAttribute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

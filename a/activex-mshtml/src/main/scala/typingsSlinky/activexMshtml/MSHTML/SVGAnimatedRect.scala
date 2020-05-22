@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SVGAnimatedRect extends js.Object {
   @JSName("MSHTML.SVGAnimatedRect_typekey")
-  var MSHTMLDotSVGAnimatedRect_typekey: SVGAnimatedRect = js.native
-  var animVal: SVGRect = js.native
-  var baseVal: SVGRect = js.native
+  var MSHTMLDotSVGAnimatedRect_typekey: SVGAnimatedRect
+  var animVal: SVGRect
+  var baseVal: SVGRect
 }
 
 object SVGAnimatedRect {
@@ -19,31 +18,5 @@ object SVGAnimatedRect {
     __obj.updateDynamic("MSHTML.SVGAnimatedRect_typekey")(MSHTMLDotSVGAnimatedRect_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGAnimatedRect]
   }
-  @scala.inline
-  implicit class SVGAnimatedRectOps[Self <: SVGAnimatedRect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotSVGAnimatedRect_typekey(value: SVGAnimatedRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGAnimatedRect_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnimVal(value: SVGRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBaseVal(value: SVGRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

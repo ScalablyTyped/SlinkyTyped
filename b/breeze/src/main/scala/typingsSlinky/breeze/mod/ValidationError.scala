@@ -1,5 +1,6 @@
 package typingsSlinky.breeze.mod
 
+import typingsSlinky.breeze.breeze.IProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +15,19 @@ class ValidationError protected ()
     errorMessage: String,
     key: String
   ) = this()
+  /* CompleteClass */
+  override var context: js.Any = js.native
+  /* CompleteClass */
+  override var errorMessage: String = js.native
+  /* CompleteClass */
+  override var key: String = js.native
+  /* CompleteClass */
+  override var property: IProperty = js.native
+  /* CompleteClass */
+  override var propertyName: String = js.native
+  /* CompleteClass */
+  override var validator: typingsSlinky.breeze.breeze.Validator = js.native
+  /* CompleteClass */
+  override def getKey(validator: typingsSlinky.breeze.breeze.Validator, property: String): String = js.native
 }
 

@@ -12,8 +12,14 @@ trait AddressOrGroup extends js.Object
 
 object AddressOrGroup {
   @scala.inline
-  implicit def apply(value: Address): AddressOrGroup = value.asInstanceOf[AddressOrGroup]
+  def Address(address: String, name: String): AddressOrGroup = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AddressOrGroup]
+  }
   @scala.inline
-  implicit def apply(value: Group): AddressOrGroup = value.asInstanceOf[AddressOrGroup]
+  def Group(group: js.Array[AddressOrGroup], name: String): AddressOrGroup = {
+    val __obj = js.Dynamic.literal(group = group.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AddressOrGroup]
+  }
 }
 

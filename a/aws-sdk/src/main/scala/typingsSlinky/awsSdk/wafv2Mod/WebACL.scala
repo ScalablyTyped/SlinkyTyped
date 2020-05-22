@@ -19,7 +19,7 @@ trait WebACL extends js.Object {
     */
   var DefaultAction: typingsSlinky.awsSdk.wafv2Mod.DefaultAction = js.native
   /**
-    * A friendly description of the Web ACL. You cannot change the description of a Web ACL after you create it.
+    * A description of the Web ACL that helps with identification. You cannot change the description of a Web ACL after you create it.
     */
   var Description: js.UndefOr[EntityDescription] = js.native
   /**
@@ -27,9 +27,21 @@ trait WebACL extends js.Object {
     */
   var Id: EntityId = js.native
   /**
-    * A friendly name of the Web ACL. You cannot change the name of a Web ACL after you create it.
+    * Indicates whether this web ACL is managed by AWS Firewall Manager. If true, then only AWS Firewall Manager can delete the web ACL or any Firewall Manager rule groups in the web ACL. 
+    */
+  var ManagedByFirewallManager: js.UndefOr[Boolean] = js.native
+  /**
+    * The name of the Web ACL. You cannot change the name of a Web ACL after you create it.
     */
   var Name: EntityName = js.native
+  /**
+    * The last set of rules for AWS WAF to process in the web ACL. This is defined in an AWS Firewall Manager WAF policy and contains only rule group references. You can't alter these. Any rules and rule groups that you define for the web ACL are prioritized before these.  In the Firewall Manager WAF policy, the Firewall Manager administrator can define a set of rule groups to run first in the web ACL and a set of rule groups to run last. Within each set, the administrator prioritizes the rule groups, to determine their relative processing order.
+    */
+  var PostProcessFirewallManagerRuleGroups: js.UndefOr[FirewallManagerRuleGroups] = js.native
+  /**
+    * The first set of rules for AWS WAF to process in the web ACL. This is defined in an AWS Firewall Manager WAF policy and contains only rule group references. You can't alter these. Any rules and rule groups that you define for the web ACL are prioritized after these.  In the Firewall Manager WAF policy, the Firewall Manager administrator can define a set of rule groups to run first in the web ACL and a set of rule groups to run last. Within each set, the administrator prioritizes the rule groups, to determine their relative processing order.
+    */
+  var PreProcessFirewallManagerRuleGroups: js.UndefOr[FirewallManagerRuleGroups] = js.native
   /**
     * The Rule statements used to identify the web requests that you want to allow, block, or count. Each rule includes one top-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them. 
     */
@@ -47,84 +59,22 @@ object WebACL {
     DefaultAction: DefaultAction,
     Id: EntityId,
     Name: EntityName,
-    VisibilityConfig: VisibilityConfig
+    VisibilityConfig: VisibilityConfig,
+    Capacity: js.UndefOr[ConsumedCapacity] = js.undefined,
+    Description: EntityDescription = null,
+    ManagedByFirewallManager: js.UndefOr[Boolean] = js.undefined,
+    PostProcessFirewallManagerRuleGroups: FirewallManagerRuleGroups = null,
+    PreProcessFirewallManagerRuleGroups: FirewallManagerRuleGroups = null,
+    Rules: Rules = null
   ): WebACL = {
     val __obj = js.Dynamic.literal(ARN = ARN.asInstanceOf[js.Any], DefaultAction = DefaultAction.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], VisibilityConfig = VisibilityConfig.asInstanceOf[js.Any])
+    if (!js.isUndefined(Capacity)) __obj.updateDynamic("Capacity")(Capacity.get.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(ManagedByFirewallManager)) __obj.updateDynamic("ManagedByFirewallManager")(ManagedByFirewallManager.get.asInstanceOf[js.Any])
+    if (PostProcessFirewallManagerRuleGroups != null) __obj.updateDynamic("PostProcessFirewallManagerRuleGroups")(PostProcessFirewallManagerRuleGroups.asInstanceOf[js.Any])
+    if (PreProcessFirewallManagerRuleGroups != null) __obj.updateDynamic("PreProcessFirewallManagerRuleGroups")(PreProcessFirewallManagerRuleGroups.asInstanceOf[js.Any])
+    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebACL]
   }
-  @scala.inline
-  implicit class WebACLOps[Self <: WebACL] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withARN(value: ResourceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultAction(value: DefaultAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisibilityConfig(value: VisibilityConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibilityConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCapacity(value: ConsumedCapacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: EntityDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRules(value: Rules): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

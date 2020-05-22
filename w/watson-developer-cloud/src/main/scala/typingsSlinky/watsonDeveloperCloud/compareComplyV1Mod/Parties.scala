@@ -5,93 +5,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A party and its corresponding role, including address and contact information if identified. */
-@js.native
 trait Parties extends js.Object {
   /** List of the party's address or addresses. */
-  var addresses: js.UndefOr[js.Array[Address]] = js.native
+  var addresses: js.UndefOr[js.Array[Address]] = js.undefined
   /** List of the names and roles of contacts identified in the input document. */
-  var contacts: js.UndefOr[js.Array[Contact]] = js.native
+  var contacts: js.UndefOr[js.Array[Contact]] = js.undefined
   /** A string that identifies the importance of the party. */
-  var importance: js.UndefOr[String] = js.native
+  var importance: js.UndefOr[String] = js.undefined
   /** A string identifying the party. */
-  var party: js.UndefOr[String] = js.native
+  var party: js.UndefOr[String] = js.undefined
   /** A string identifying the party's role. */
-  var role: js.UndefOr[String] = js.native
+  var role: js.UndefOr[String] = js.undefined
 }
 
 object Parties {
   @scala.inline
-  def apply(): Parties = {
+  def apply(
+    addresses: js.Array[Address] = null,
+    contacts: js.Array[Contact] = null,
+    importance: String = null,
+    party: String = null,
+    role: String = null
+  ): Parties = {
     val __obj = js.Dynamic.literal()
+    if (addresses != null) __obj.updateDynamic("addresses")(addresses.asInstanceOf[js.Any])
+    if (contacts != null) __obj.updateDynamic("contacts")(contacts.asInstanceOf[js.Any])
+    if (importance != null) __obj.updateDynamic("importance")(importance.asInstanceOf[js.Any])
+    if (party != null) __obj.updateDynamic("party")(party.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[Parties]
   }
-  @scala.inline
-  implicit class PartiesOps[Self <: Parties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddresses(value: js.Array[Address]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContacts(value: js.Array[Contact]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contacts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContacts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contacts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParty(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("party")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("party")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

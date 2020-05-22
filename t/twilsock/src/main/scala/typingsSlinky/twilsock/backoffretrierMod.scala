@@ -18,7 +18,6 @@ object backoffretrierMod extends js.Object {
     var cleanRetrier: js.Any = js.native
     var createRetrier: js.Any = js.native
     var getRetryPolicy: js.Any = js.native
-    val inProgress: Boolean = js.native
     var newBackoff: js.Any = js.native
     val options: js.Any = js.native
     var retrier: js.Any = js.native
@@ -28,6 +27,7 @@ object backoffretrierMod extends js.Object {
       */
     def attemptFailed(): Unit = js.native
     def cancel(): Unit = js.native
+    def inProgress: Boolean = js.native
     /**
       * Modifies backoff for next attempt.
       * Expected behavior:

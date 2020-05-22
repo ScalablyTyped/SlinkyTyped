@@ -14,7 +14,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INavLink
   extends /**
   * (Optional) Any additional properties to apply to the rendered links.
@@ -23,63 +22,63 @@ trait INavLink
   /**
     * Aria-current token for active nav links. Must be a valid token value, and defaults to 'page'.
     */
-  var ariaCurrent: js.UndefOr[page | step | location | date | time | `true`] = js.native
+  var ariaCurrent: js.UndefOr[page | step | location | date | time | `true`] = js.undefined
   /**
     * Aria label for nav link. Ignored if `collapseAriaLabel` or `expandAriaLabel` is provided.
     */
-  var ariaLabel: js.UndefOr[String] = js.native
+  var ariaLabel: js.UndefOr[String] = js.undefined
   /**
     * The name to use for functional automation tests
     */
-  var automationId: js.UndefOr[String] = js.native
+  var automationId: js.UndefOr[String] = js.undefined
   /**
     * ARIA label when group is collapsed and can be expanded.
     */
-  var collapseAriaLabel: js.UndefOr[String] = js.native
+  var collapseAriaLabel: js.UndefOr[String] = js.undefined
   /**
     * Whether or not the link is disabled.
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * ARIA label when group is collapsed and can be expanded.
     */
-  var expandAriaLabel: js.UndefOr[String] = js.native
+  var expandAriaLabel: js.UndefOr[String] = js.undefined
   /**
     * (Optional) By default, any link with onClick defined will render as a button.
     * Set this property to true to override that behavior. (Links without onClick defined
     * will render as anchors by default.)
     */
-  var forceAnchor: js.UndefOr[Boolean] = js.native
+  var forceAnchor: js.UndefOr[Boolean] = js.undefined
   /**
     * Name of an icon to render next to the link button.
     */
-  var icon: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[String] = js.undefined
   /**
     * Deprecated. Use `iconProps.className` instead.
     * @deprecated Use `iconProps.className` instead.
     */
-  var iconClassName: js.UndefOr[String] = js.native
+  var iconClassName: js.UndefOr[String] = js.undefined
   /**
     * Props for an icon to render next to the link button.
     */
-  var iconProps: js.UndefOr[IIconProps] = js.native
+  var iconProps: js.UndefOr[IIconProps] = js.undefined
   /**
     * Whether or not the link is in an expanded state
     */
-  var isExpanded: js.UndefOr[Boolean] = js.native
+  var isExpanded: js.UndefOr[Boolean] = js.undefined
   /**
     * Unique, stable key for the link, used when rendering the list of links and for tracking
     * the currently selected link.
     */
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * Child links to this link, if any
     */
-  var links: js.UndefOr[js.Array[INavLink]] = js.native
+  var links: js.UndefOr[js.Array[INavLink]] = js.undefined
   /**
     * Text to render for this link
     */
-  var name: String = js.native
+  var name: String
   /**
     * Callback invoked when this link is clicked. Providing this callback will cause the link
     * to render as a button (rather than an anchor) unless forceAnchor is set to true.
@@ -90,240 +89,63 @@ trait INavLink
       /* item */ js.UndefOr[INavLink], 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Link <a> target.
     */
-  var target: js.UndefOr[String] = js.native
+  var target: js.UndefOr[String] = js.undefined
   /**
     * Text for title tooltip and ARIA description.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /**
     * URL to navigate to for this link
     */
-  var url: String = js.native
+  var url: String
 }
 
 object INavLink {
   @scala.inline
-  def apply(name: String, url: String): INavLink = {
+  def apply(
+    name: String,
+    url: String,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    ariaCurrent: page | step | location | date | time | `true` = null,
+    ariaLabel: String = null,
+    automationId: String = null,
+    collapseAriaLabel: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    expandAriaLabel: String = null,
+    forceAnchor: js.UndefOr[Boolean] = js.undefined,
+    icon: String = null,
+    iconClassName: String = null,
+    iconProps: IIconProps = null,
+    isExpanded: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    links: js.Array[INavLink] = null,
+    onClick: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* item */ js.UndefOr[INavLink]) => Unit = null,
+    target: String = null,
+    title: String = null
+  ): INavLink = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (ariaCurrent != null) __obj.updateDynamic("ariaCurrent")(ariaCurrent.asInstanceOf[js.Any])
+    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
+    if (automationId != null) __obj.updateDynamic("automationId")(automationId.asInstanceOf[js.Any])
+    if (collapseAriaLabel != null) __obj.updateDynamic("collapseAriaLabel")(collapseAriaLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (expandAriaLabel != null) __obj.updateDynamic("expandAriaLabel")(expandAriaLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceAnchor)) __obj.updateDynamic("forceAnchor")(forceAnchor.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (iconClassName != null) __obj.updateDynamic("iconClassName")(iconClassName.asInstanceOf[js.Any])
+    if (iconProps != null) __obj.updateDynamic("iconProps")(iconProps.asInstanceOf[js.Any])
+    if (!js.isUndefined(isExpanded)) __obj.updateDynamic("isExpanded")(isExpanded.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[INavLink]
   }
-  @scala.inline
-  implicit class INavLinkOps[Self <: INavLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAriaCurrent(value: page | step | location | date | time | `true`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaCurrent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaCurrent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaCurrent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutomationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpandAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpandAriaLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAriaLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceAnchor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceAnchor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAnchor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClassName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconProps(value: IIconProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconProps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: js.Array[INavLink]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(
-      value: (/* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], /* item */ js.UndefOr[INavLink]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

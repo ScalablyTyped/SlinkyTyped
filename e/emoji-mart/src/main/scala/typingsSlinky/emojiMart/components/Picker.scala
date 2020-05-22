@@ -5,6 +5,9 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.emojiMart.emojiMartStrings.auto
+import typingsSlinky.emojiMart.emojiMartStrings.dark
+import typingsSlinky.emojiMart.emojiMartStrings.light
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.CustomEmoji
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiData
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiSkin
@@ -38,8 +41,6 @@ object Picker {
     @scala.inline
     def custom(value: js.Array[CustomEmoji]): this.type = set("custom", value.asInstanceOf[js.Any])
     @scala.inline
-    def darkMode(value: Boolean): this.type = set("darkMode", value.asInstanceOf[js.Any])
-    @scala.inline
     def defaultSkin(value: EmojiSkin): this.type = set("defaultSkin", value.asInstanceOf[js.Any])
     @scala.inline
     def emoji(value: String): this.type = set("emoji", value.asInstanceOf[js.Any])
@@ -49,6 +50,8 @@ object Picker {
     def emojiTooltip(value: Boolean): this.type = set("emojiTooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def emojisToShowFilter(value: /* emoji */ EmojiData => Boolean): this.type = set("emojisToShowFilter", js.Any.fromFunction1(value))
+    @scala.inline
+    def enableFrequentEmojiSort(value: Boolean): this.type = set("enableFrequentEmojiSort", value.asInstanceOf[js.Any])
     @scala.inline
     def exclude(value: js.Array[CategoryName]): this.type = set("exclude", value.asInstanceOf[js.Any])
     @scala.inline
@@ -88,7 +91,11 @@ object Picker {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
+    def theme(value: auto | light | dark): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useButton(value: Boolean): this.type = set("useButton", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

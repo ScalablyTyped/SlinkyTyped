@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSTypeParameterDeclaration extends Node {
-  var params: js.Array[TSTypeParameter] = js.native
+  var params: js.Array[TSTypeParameter]
   @JSName("type")
-  var type_TSTypeParameterDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSTypeParameterDeclaration = js.native
+  var type_TSTypeParameterDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSTypeParameterDeclaration
 }
 
 @JSImport("babel-types", "TSTypeParameterDeclaration")

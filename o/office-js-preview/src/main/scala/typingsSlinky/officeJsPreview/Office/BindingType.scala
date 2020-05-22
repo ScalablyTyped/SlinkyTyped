@@ -14,7 +14,7 @@ sealed trait BindingType extends js.Object
 @js.native
 object BindingType extends js.Object {
   /**
-    * Tabular data without a header row. Data is returned as an array of arrays, for example in this form: 
+    * Tabular data without a header row. Data is returned as an array of arrays, for example in this form:
     * [[row1column1, row1column2],[row2column1, row2column2]]
     */
   @js.native

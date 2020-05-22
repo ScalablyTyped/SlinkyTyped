@@ -26,59 +26,17 @@ trait CreateFunctionDefinitionVersionRequest extends js.Object {
 
 object CreateFunctionDefinitionVersionRequest {
   @scala.inline
-  def apply(FunctionDefinitionId: string): CreateFunctionDefinitionVersionRequest = {
+  def apply(
+    FunctionDefinitionId: string,
+    AmznClientToken: string = null,
+    DefaultConfig: FunctionDefaultConfig = null,
+    Functions: listOfFunction = null
+  ): CreateFunctionDefinitionVersionRequest = {
     val __obj = js.Dynamic.literal(FunctionDefinitionId = FunctionDefinitionId.asInstanceOf[js.Any])
+    if (AmznClientToken != null) __obj.updateDynamic("AmznClientToken")(AmznClientToken.asInstanceOf[js.Any])
+    if (DefaultConfig != null) __obj.updateDynamic("DefaultConfig")(DefaultConfig.asInstanceOf[js.Any])
+    if (Functions != null) __obj.updateDynamic("Functions")(Functions.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFunctionDefinitionVersionRequest]
   }
-  @scala.inline
-  implicit class CreateFunctionDefinitionVersionRequestOps[Self <: CreateFunctionDefinitionVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionDefinitionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmznClientToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmznClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultConfig(value: FunctionDefaultConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctions(value: listOfFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Functions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Functions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

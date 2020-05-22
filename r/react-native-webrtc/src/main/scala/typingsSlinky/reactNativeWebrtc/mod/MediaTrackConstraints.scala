@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaTrackConstraints extends js.Object {
-  var facingMode: user | environment = js.native
-  var mandatory: MandatoryMedia = js.native
-  var optional: js.Array[MediaSources] = js.native
+  var facingMode: user | environment
+  var mandatory: MandatoryMedia
+  var optional: js.Array[MediaSources]
 }
 
 object MediaTrackConstraints {
@@ -19,31 +18,5 @@ object MediaTrackConstraints {
     val __obj = js.Dynamic.literal(facingMode = facingMode.asInstanceOf[js.Any], mandatory = mandatory.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaTrackConstraints]
   }
-  @scala.inline
-  implicit class MediaTrackConstraintsOps[Self <: MediaTrackConstraints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFacingMode(value: user | environment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMandatory(value: MandatoryMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mandatory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptional(value: js.Array[MediaSources]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

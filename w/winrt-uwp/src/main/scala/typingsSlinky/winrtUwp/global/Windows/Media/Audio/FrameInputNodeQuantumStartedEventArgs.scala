@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs")
 @js.native
 abstract class FrameInputNodeQuantumStartedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs {
+  /** Gets the number of samples that the audio graph requires to fill the quantum with data. */
+  /* CompleteClass */
+  override var requiredSamples: Double = js.native
+}
 

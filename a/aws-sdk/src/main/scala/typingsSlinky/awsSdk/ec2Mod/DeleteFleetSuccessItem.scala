@@ -22,53 +22,16 @@ trait DeleteFleetSuccessItem extends js.Object {
 
 object DeleteFleetSuccessItem {
   @scala.inline
-  def apply(): DeleteFleetSuccessItem = {
+  def apply(
+    CurrentFleetState: FleetStateCode = null,
+    FleetId: FleetId = null,
+    PreviousFleetState: FleetStateCode = null
+  ): DeleteFleetSuccessItem = {
     val __obj = js.Dynamic.literal()
+    if (CurrentFleetState != null) __obj.updateDynamic("CurrentFleetState")(CurrentFleetState.asInstanceOf[js.Any])
+    if (FleetId != null) __obj.updateDynamic("FleetId")(FleetId.asInstanceOf[js.Any])
+    if (PreviousFleetState != null) __obj.updateDynamic("PreviousFleetState")(PreviousFleetState.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFleetSuccessItem]
   }
-  @scala.inline
-  implicit class DeleteFleetSuccessItemOps[Self <: DeleteFleetSuccessItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentFleetState(value: FleetStateCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentFleetState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentFleetState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentFleetState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFleetId(value: FleetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFleetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousFleetState(value: FleetStateCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousFleetState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousFleetState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousFleetState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

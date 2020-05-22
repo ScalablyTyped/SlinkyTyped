@@ -4,89 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Available extends js.Object {
-  var available: Double = js.native
-  var blocked: js.UndefOr[Double] = js.native
-  var debt: js.UndefOr[Double] = js.native
-  var deposition_pending: js.UndefOr[Double] = js.native
-  var hold: js.UndefOr[Double] = js.native
-  var total: Double = js.native
+  var available: Double
+  var blocked: js.UndefOr[Double] = js.undefined
+  var debt: js.UndefOr[Double] = js.undefined
+  var deposition_pending: js.UndefOr[Double] = js.undefined
+  var hold: js.UndefOr[Double] = js.undefined
+  var total: Double
 }
 
 object Available {
   @scala.inline
-  def apply(available: Double, total: Double): Available = {
+  def apply(
+    available: Double,
+    total: Double,
+    blocked: js.UndefOr[Double] = js.undefined,
+    debt: js.UndefOr[Double] = js.undefined,
+    deposition_pending: js.UndefOr[Double] = js.undefined,
+    hold: js.UndefOr[Double] = js.undefined
+  ): Available = {
     val __obj = js.Dynamic.literal(available = available.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    if (!js.isUndefined(blocked)) __obj.updateDynamic("blocked")(blocked.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debt)) __obj.updateDynamic("debt")(debt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deposition_pending)) __obj.updateDynamic("deposition_pending")(deposition_pending.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hold)) __obj.updateDynamic("hold")(hold.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Available]
   }
-  @scala.inline
-  implicit class AvailableOps[Self <: Available] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailable(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("available")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlocked(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlocked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeposition_pending(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deposition_pending")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeposition_pending: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deposition_pending")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

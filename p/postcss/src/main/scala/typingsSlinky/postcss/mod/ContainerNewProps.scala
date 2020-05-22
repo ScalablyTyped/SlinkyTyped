@@ -4,53 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ContainerNewProps extends NodeNewProps {
   /**
     * Contains the container's children.
     */
-  var nodes: js.UndefOr[js.Array[ChildNode]] = js.native
+  var nodes: js.UndefOr[js.Array[ChildNode]] = js.undefined
   @JSName("raws")
-  var raws_ContainerNewProps: js.UndefOr[ContainerRaws] = js.native
+  var raws_ContainerNewProps: js.UndefOr[ContainerRaws] = js.undefined
 }
 
 object ContainerNewProps {
   @scala.inline
-  def apply(): ContainerNewProps = {
+  def apply(nodes: js.Array[ChildNode] = null, raws: ContainerRaws = null, source: NodeSource = null): ContainerNewProps = {
     val __obj = js.Dynamic.literal()
+    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
+    if (raws != null) __obj.updateDynamic("raws")(raws.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerNewProps]
   }
-  @scala.inline
-  implicit class ContainerNewPropsOps[Self <: ContainerNewProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodes(value: js.Array[ChildNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaws(value: ContainerRaws): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaws: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

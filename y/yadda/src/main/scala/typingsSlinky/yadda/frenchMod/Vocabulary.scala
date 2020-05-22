@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Vocabulary
   extends typingsSlinky.yadda.englishMod.Vocabulary {
-  var alors: String = js.native
-  var etantdonnalors: String = js.native
-  var etantdonnalorss: String = js.native
-  var etantdonne: String = js.native
-  var lorsque: String = js.native
-  var quand: String = js.native
-  var soit: String = js.native
+  var alors: String
+  var etantdonnalors: String
+  var etantdonnalorss: String
+  var etantdonne: String
+  var lorsque: String
+  var quand: String
+  var soit: String
 }
 
 object Vocabulary {
@@ -41,55 +40,5 @@ object Vocabulary {
     __obj.updateDynamic("then")(`then`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vocabulary]
   }
-  @scala.inline
-  implicit class VocabularyOps[Self <: Vocabulary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlors(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEtantdonnalors(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etantdonnalors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEtantdonnalorss(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etantdonnalorss")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEtantdonne(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etantdonne")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLorsque(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lorsque")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSoit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soit")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -24,47 +24,15 @@ trait GetFunctionRequestwaiterW extends js.Object {
 
 object GetFunctionRequestwaiterW {
   @scala.inline
-  def apply(FunctionName: NamespacedFunctionName): GetFunctionRequestwaiterW = {
+  def apply(
+    FunctionName: NamespacedFunctionName,
+    $waiter: WaiterConfiguration = null,
+    Qualifier: Qualifier = null
+  ): GetFunctionRequestwaiterW = {
     val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any])
+    if ($waiter != null) __obj.updateDynamic("$waiter")($waiter.asInstanceOf[js.Any])
+    if (Qualifier != null) __obj.updateDynamic("Qualifier")(Qualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFunctionRequestwaiterW]
   }
-  @scala.inline
-  implicit class GetFunctionRequestwaiterWOps[Self <: GetFunctionRequestwaiterW] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFunctionName(value: NamespacedFunctionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$waiter(value: WaiterConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$waiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualifier(value: Qualifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation._
 @JSImport("typescript", "servicesVersion")
 @js.native
 object servicesVersion
-  extends TopLevel[/* "3.8" */ java.lang.String]
+  extends TopLevel[/* "3.9" */ java.lang.String]
 

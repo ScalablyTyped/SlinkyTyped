@@ -5,50 +5,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgTreeGridFilteringLocale
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Template that is used when filtering is applied and paging is enabled and user goes to another page. It takes precedence over the pagerRecordsLabelTemplate(option from igTreeGridPaging). If it is set to null then it is taken option from igTreeGridPaging.
-  	 * Supported options:
-  	 * ${currentPageMatches} (filtering)
-  	 * ${totalMatches} (filtering)
-  	 * ${startRecord} (paging)
-  	 * ${endRecord} (paging)
-  	 * ${recordCount} (paging)
-  	 *
-  	 */
-  var filterSummaryInPagerTemplate: js.UndefOr[String] = js.native
+    * Template that is used when filtering is applied and paging is enabled and user goes to another page. It takes precedence over the pagerRecordsLabelTemplate(option from igTreeGridPaging). If it is set to null then it is taken option from igTreeGridPaging.
+    * Supported options:
+    * ${currentPageMatches} (filtering)
+    * ${totalMatches} (filtering)
+    * ${startRecord} (paging)
+    * ${endRecord} (paging)
+    * ${recordCount} (paging)
+    *
+    */
+  var filterSummaryInPagerTemplate: js.UndefOr[String] = js.undefined
 }
 
 object IgTreeGridFilteringLocale {
   @scala.inline
-  def apply(): IgTreeGridFilteringLocale = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    filterSummaryInPagerTemplate: String = null
+  ): IgTreeGridFilteringLocale = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (filterSummaryInPagerTemplate != null) __obj.updateDynamic("filterSummaryInPagerTemplate")(filterSummaryInPagerTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgTreeGridFilteringLocale]
   }
-  @scala.inline
-  implicit class IgTreeGridFilteringLocaleOps[Self <: IgTreeGridFilteringLocale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilterSummaryInPagerTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSummaryInPagerTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterSummaryInPagerTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSummaryInPagerTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

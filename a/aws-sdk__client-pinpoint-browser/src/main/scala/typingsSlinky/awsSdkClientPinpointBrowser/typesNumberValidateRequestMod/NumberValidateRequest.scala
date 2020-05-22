@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NumberValidateRequest extends js.Object {
   /**
     * (Optional) The two-character ISO country code for the country or region where the phone number was originally registered.
     */
-  var IsoCountryCode: js.UndefOr[String] = js.native
+  var IsoCountryCode: js.UndefOr[String] = js.undefined
   /**
     * The phone number to get information about. The phone number that you provide should include a country code. If the number doesn't include a valid country code, the operation might result in an error.
     */
-  var PhoneNumber: js.UndefOr[String] = js.native
+  var PhoneNumber: js.UndefOr[String] = js.undefined
 }
 
 object NumberValidateRequest {
   @scala.inline
-  def apply(): NumberValidateRequest = {
+  def apply(IsoCountryCode: String = null, PhoneNumber: String = null): NumberValidateRequest = {
     val __obj = js.Dynamic.literal()
+    if (IsoCountryCode != null) __obj.updateDynamic("IsoCountryCode")(IsoCountryCode.asInstanceOf[js.Any])
+    if (PhoneNumber != null) __obj.updateDynamic("PhoneNumber")(PhoneNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberValidateRequest]
   }
-  @scala.inline
-  implicit class NumberValidateRequestOps[Self <: NumberValidateRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsoCountryCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsoCountryCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsoCountryCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsoCountryCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

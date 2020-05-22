@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UserInfoResponse extends js.Object {
   /** 包括敏感数据在内的完整用户信息的加密数据，详细见加密数据解密算法 */
-  var encryptData: String = js.native
+  var encryptData: String
   /** 不包括敏感信息的原始数据字符串，用于计算签名。 */
-  var rawData: String = js.native
+  var rawData: String
   /** 使用 sha1( rawData + sessionkey ) 得到字符串，用于校验用户信息。 */
-  var signature: String = js.native
+  var signature: String
   /** 用户信息对象，不包含 openid 等敏感信息 */
-  var userInfo: UserInfo = js.native
+  var userInfo: UserInfo
 }
 
 object UserInfoResponse {
@@ -22,37 +21,5 @@ object UserInfoResponse {
     val __obj = js.Dynamic.literal(encryptData = encryptData.asInstanceOf[js.Any], rawData = rawData.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any], userInfo = userInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserInfoResponse]
   }
-  @scala.inline
-  implicit class UserInfoResponseOps[Self <: UserInfoResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRawData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSignature(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserInfo(value: UserInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

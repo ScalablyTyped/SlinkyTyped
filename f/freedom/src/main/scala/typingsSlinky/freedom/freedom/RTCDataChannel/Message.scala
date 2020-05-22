@@ -5,63 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Message extends js.Object {
-  var binary: js.UndefOr[Blob] = js.native
-  var buffer: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
+  var binary: js.UndefOr[Blob] = js.undefined
+  var buffer: js.UndefOr[js.typedarray.ArrayBuffer] = js.undefined
   // Exactly one of the below must be specified.
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object Message {
   @scala.inline
-  def apply(): Message = {
+  def apply(binary: Blob = null, buffer: js.typedarray.ArrayBuffer = null, text: String = null): Message = {
     val __obj = js.Dynamic.literal()
+    if (binary != null) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
+    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Message]
   }
-  @scala.inline
-  implicit class MessageOps[Self <: Message] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinary(value: Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuffer(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

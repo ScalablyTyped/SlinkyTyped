@@ -11,29 +11,10 @@ trait FunctionDefaultConfig extends js.Object {
 
 object FunctionDefaultConfig {
   @scala.inline
-  def apply(): FunctionDefaultConfig = {
+  def apply(Execution: FunctionDefaultExecutionConfig = null): FunctionDefaultConfig = {
     val __obj = js.Dynamic.literal()
+    if (Execution != null) __obj.updateDynamic("Execution")(Execution.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionDefaultConfig]
   }
-  @scala.inline
-  implicit class FunctionDefaultConfigOps[Self <: FunctionDefaultConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecution(value: FunctionDefaultExecutionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Execution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Execution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

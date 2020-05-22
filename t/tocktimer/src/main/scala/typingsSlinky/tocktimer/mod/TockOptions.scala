@@ -4,75 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TockOptions extends js.Object {
   /**
     * Defaults to false. If true, the clock will count down from a given time, otherwise it will count up from 0:00.
     */
-  var countdown: js.UndefOr[Boolean] = js.native
+  var countdown: js.UndefOr[Boolean] = js.undefined
   /**
     * Defaults to 10 milliseconds. How often, in milliseconds, that the clock will tick.
     */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
   /**
     * Callback function executed on each tick
     */
-  def callback(): Unit = js.native
+  def callback(): Unit
   /**
     * Callback function executed when the timer is complete
     */
-  def complete(): Unit = js.native
+  def complete(): Unit
 }
 
 object TockOptions {
   @scala.inline
-  def apply(callback: () => Unit, complete: () => Unit): TockOptions = {
+  def apply(
+    callback: () => Unit,
+    complete: () => Unit,
+    countdown: js.UndefOr[Boolean] = js.undefined,
+    interval: js.UndefOr[Double] = js.undefined
+  ): TockOptions = {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction0(callback), complete = js.Any.fromFunction0(complete))
+    if (!js.isUndefined(countdown)) __obj.updateDynamic("countdown")(countdown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TockOptions]
   }
-  @scala.inline
-  implicit class TockOptionsOps[Self <: TockOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withComplete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCountdown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

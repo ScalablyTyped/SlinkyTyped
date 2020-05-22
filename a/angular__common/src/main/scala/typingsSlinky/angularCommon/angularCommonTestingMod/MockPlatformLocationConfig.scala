@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MockPlatformLocationConfig extends js.Object {
-  var appBaseHref: js.UndefOr[String] = js.native
-  var startUrl: js.UndefOr[String] = js.native
+  var appBaseHref: js.UndefOr[String] = js.undefined
+  var startUrl: js.UndefOr[String] = js.undefined
 }
 
 object MockPlatformLocationConfig {
   @scala.inline
-  def apply(): MockPlatformLocationConfig = {
+  def apply(appBaseHref: String = null, startUrl: String = null): MockPlatformLocationConfig = {
     val __obj = js.Dynamic.literal()
+    if (appBaseHref != null) __obj.updateDynamic("appBaseHref")(appBaseHref.asInstanceOf[js.Any])
+    if (startUrl != null) __obj.updateDynamic("startUrl")(startUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[MockPlatformLocationConfig]
   }
-  @scala.inline
-  implicit class MockPlatformLocationConfigOps[Self <: MockPlatformLocationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppBaseHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBaseHref")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppBaseHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appBaseHref")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

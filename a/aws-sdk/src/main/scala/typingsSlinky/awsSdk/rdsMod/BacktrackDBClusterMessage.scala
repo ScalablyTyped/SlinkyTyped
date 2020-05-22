@@ -26,53 +26,16 @@ trait BacktrackDBClusterMessage extends js.Object {
 
 object BacktrackDBClusterMessage {
   @scala.inline
-  def apply(BacktrackTo: js.Date, DBClusterIdentifier: String): BacktrackDBClusterMessage = {
+  def apply(
+    BacktrackTo: js.Date,
+    DBClusterIdentifier: String,
+    Force: js.UndefOr[BooleanOptional] = js.undefined,
+    UseEarliestTimeOnPointInTimeUnavailable: js.UndefOr[BooleanOptional] = js.undefined
+  ): BacktrackDBClusterMessage = {
     val __obj = js.Dynamic.literal(BacktrackTo = BacktrackTo.asInstanceOf[js.Any], DBClusterIdentifier = DBClusterIdentifier.asInstanceOf[js.Any])
+    if (!js.isUndefined(Force)) __obj.updateDynamic("Force")(Force.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UseEarliestTimeOnPointInTimeUnavailable)) __obj.updateDynamic("UseEarliestTimeOnPointInTimeUnavailable")(UseEarliestTimeOnPointInTimeUnavailable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BacktrackDBClusterMessage]
   }
-  @scala.inline
-  implicit class BacktrackDBClusterMessageOps[Self <: BacktrackDBClusterMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBacktrackTo(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDBClusterIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForce(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEarliestTimeOnPointInTimeUnavailable(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseEarliestTimeOnPointInTimeUnavailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEarliestTimeOnPointInTimeUnavailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseEarliestTimeOnPointInTimeUnavailable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

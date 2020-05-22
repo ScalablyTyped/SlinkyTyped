@@ -27,10 +27,17 @@ object deleteBucketCorsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteBucketCorsInput) = this()
+    /* CompleteClass */
+    override val input: DeleteBucketCorsInput = js.native
     val middlewareStack: MiddlewareStack[DeleteBucketCorsInput, DeleteBucketCorsOutput, Blob] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: S3ResolvedConfiguration
+    ): Handler[DeleteBucketCorsInput, DeleteBucketCorsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketCorsInput, DeleteBucketCorsOutput] = js.native
   }

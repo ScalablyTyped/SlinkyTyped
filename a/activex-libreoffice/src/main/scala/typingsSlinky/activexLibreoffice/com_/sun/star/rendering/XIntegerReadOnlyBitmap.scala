@@ -20,14 +20,13 @@ import scala.scalajs.js.annotation._
   * complicated. When reading data, one has to check for both {@link VolatileContentDestroyedException} and mismatching {@link IntegerBitmapLayout} return
   * values. If either of them occurs, the whole bitmap read operation should be repeated, if you need consistent information.
   */
-@js.native
 trait XIntegerReadOnlyBitmap extends XBitmap {
   /**
     * Query the memory layout for this bitmap.
     *
     * Please note that for volatile bitmaps, the memory layout might change between subsequent calls.
     */
-  val MemoryLayout: IntegerBitmapLayout = js.native
+  val MemoryLayout: IntegerBitmapLayout
   /**
     * Query the raw data of this bitmap.
     *
@@ -42,13 +41,13 @@ trait XIntegerReadOnlyBitmap extends XBitmap {
     * @throws VolatileContentDestroyedException if the bitmap is volatile, and the content has been destroyed by the system.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if parts of the given rectangle are outside the permissible bitmap area.
     */
-  def getData(bitmapLayout: js.Array[IntegerBitmapLayout], rect: IntegerRectangle2D): SafeArray[Double] = js.native
+  def getData(bitmapLayout: js.Array[IntegerBitmapLayout], rect: IntegerRectangle2D): SafeArray[Double]
   /**
     * Query the memory layout for this bitmap.
     *
     * Please note that for volatile bitmaps, the memory layout might change between subsequent calls.
     */
-  def getMemoryLayout(): IntegerBitmapLayout = js.native
+  def getMemoryLayout(): IntegerBitmapLayout
   /**
     * Get a single pixel of the bitmap, returning its color value.
     *
@@ -62,7 +61,7 @@ trait XIntegerReadOnlyBitmap extends XBitmap {
     * @throws VolatileContentDestroyedException if the bitmap is volatile, and the content has been destroyed by the system.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if the given position is outside the permissible bitmap area.
     */
-  def getPixel(bitmapLayout: js.Array[IntegerBitmapLayout], pos: IntegerPoint2D): SafeArray[Double] = js.native
+  def getPixel(bitmapLayout: js.Array[IntegerBitmapLayout], pos: IntegerPoint2D): SafeArray[Double]
 }
 
 object XIntegerReadOnlyBitmap {
@@ -83,37 +82,5 @@ object XIntegerReadOnlyBitmap {
     val __obj = js.Dynamic.literal(MemoryLayout = MemoryLayout.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getData = js.Any.fromFunction2(getData), getMemoryLayout = js.Any.fromFunction0(getMemoryLayout), getPixel = js.Any.fromFunction2(getPixel), getScaledBitmap = js.Any.fromFunction2(getScaledBitmap), getSize = js.Any.fromFunction0(getSize), hasAlpha = js.Any.fromFunction0(hasAlpha), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XIntegerReadOnlyBitmap]
   }
-  @scala.inline
-  implicit class XIntegerReadOnlyBitmapOps[Self <: XIntegerReadOnlyBitmap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMemoryLayout(value: IntegerBitmapLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MemoryLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetData(value: (js.Array[IntegerBitmapLayout], IntegerRectangle2D) => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetMemoryLayout(value: () => IntegerBitmapLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMemoryLayout")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPixel(value: (js.Array[IntegerBitmapLayout], IntegerPoint2D) => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPixel")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

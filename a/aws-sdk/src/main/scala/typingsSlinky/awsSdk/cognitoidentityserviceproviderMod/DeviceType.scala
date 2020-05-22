@@ -30,77 +30,20 @@ trait DeviceType extends js.Object {
 
 object DeviceType {
   @scala.inline
-  def apply(): DeviceType = {
+  def apply(
+    DeviceAttributes: AttributeListType = null,
+    DeviceCreateDate: js.Date = null,
+    DeviceKey: DeviceKeyType = null,
+    DeviceLastAuthenticatedDate: js.Date = null,
+    DeviceLastModifiedDate: js.Date = null
+  ): DeviceType = {
     val __obj = js.Dynamic.literal()
+    if (DeviceAttributes != null) __obj.updateDynamic("DeviceAttributes")(DeviceAttributes.asInstanceOf[js.Any])
+    if (DeviceCreateDate != null) __obj.updateDynamic("DeviceCreateDate")(DeviceCreateDate.asInstanceOf[js.Any])
+    if (DeviceKey != null) __obj.updateDynamic("DeviceKey")(DeviceKey.asInstanceOf[js.Any])
+    if (DeviceLastAuthenticatedDate != null) __obj.updateDynamic("DeviceLastAuthenticatedDate")(DeviceLastAuthenticatedDate.asInstanceOf[js.Any])
+    if (DeviceLastModifiedDate != null) __obj.updateDynamic("DeviceLastModifiedDate")(DeviceLastModifiedDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeviceType]
   }
-  @scala.inline
-  implicit class DeviceTypeOps[Self <: DeviceType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceAttributes(value: AttributeListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceCreateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCreateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCreateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCreateDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceKey(value: DeviceKeyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceLastAuthenticatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceLastAuthenticatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceLastAuthenticatedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceLastAuthenticatedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceLastModifiedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceLastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceLastModifiedDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

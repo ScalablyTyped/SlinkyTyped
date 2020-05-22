@@ -25,41 +25,14 @@ trait SchemaBuildBazelRemoteExecutionV2Tree extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2Tree {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2Tree = {
+  def apply(
+    children: js.Array[SchemaBuildBazelRemoteExecutionV2Directory] = null,
+    root: SchemaBuildBazelRemoteExecutionV2Directory = null
+  ): SchemaBuildBazelRemoteExecutionV2Tree = {
     val __obj = js.Dynamic.literal()
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2Tree]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2TreeOps[Self <: SchemaBuildBazelRemoteExecutionV2Tree] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[SchemaBuildBazelRemoteExecutionV2Directory]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: SchemaBuildBazelRemoteExecutionV2Directory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

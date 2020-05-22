@@ -10,11 +10,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MonitorInfoChangedEvent
   extends typingsSlinky.openfin.monitorMod.MonitorInfo {
-  var topic: system = js.native
-  var `type`: `monitor-info-changed` = js.native
+  var topic: system
+  var `type`: `monitor-info-changed`
 }
 
 object MonitorInfoChangedEvent {
@@ -34,25 +33,5 @@ object MonitorInfoChangedEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MonitorInfoChangedEvent]
   }
-  @scala.inline
-  implicit class MonitorInfoChangedEventOps[Self <: MonitorInfoChangedEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTopic(value: system): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: `monitor-info-changed`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

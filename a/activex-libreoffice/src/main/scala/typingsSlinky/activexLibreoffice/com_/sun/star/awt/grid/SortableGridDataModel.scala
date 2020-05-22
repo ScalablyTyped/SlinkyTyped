@@ -29,7 +29,6 @@ import scala.scalajs.js.annotation._
   * Note that changing the data might result in the sort order being destroyed. If you want to ensure that the data represented by the model is still
   * sorted after your modifications, you should call {@link XSortableGridData.sortByColumn()} , again.
   */
-@js.native
 trait SortableGridDataModel
   extends XMutableGridDataModel
      with XSortableGridData {
@@ -40,14 +39,14 @@ trait SortableGridDataModel
     * @param DelegatorModel the data model to which read requests are delegated.
     * @throws com::sun::star::lang::IllegalArgumentException if the given `DelegatorModel` is `NULL`
     */
-  def create(DelegatorModel: XMutableGridDataModel): Unit = js.native
+  def create(DelegatorModel: XMutableGridDataModel): Unit
   /**
     * creates a new instance of the ScortableDefaultGridDataModel, passing a collator to be used for string comparison.
     * @param DelegatorModel is the data model to which read requests are delegated
     * @param Collator is the collator to be used for string comparison
     * @throws com::sun::star::lang::IllegalArgumentException if the given `DelegatorModel` is `NULL`
     */
-  def createWithCollator(DelegatorModel: XMutableGridDataModel, Collator: XCollator): Unit = js.native
+  def createWithCollator(DelegatorModel: XMutableGridDataModel, Collator: XCollator): Unit
 }
 
 object SortableGridDataModel {
@@ -89,25 +88,5 @@ object SortableGridDataModel {
     val __obj = js.Dynamic.literal(ColumnCount = ColumnCount.asInstanceOf[js.Any], CurrentSortOrder = CurrentSortOrder.asInstanceOf[js.Any], RowCount = RowCount.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addGridDataListener = js.Any.fromFunction1(addGridDataListener), addRow = js.Any.fromFunction2(addRow), addRows = js.Any.fromFunction2(addRows), create = js.Any.fromFunction1(create), createClone = js.Any.fromFunction0(createClone), createWithCollator = js.Any.fromFunction2(createWithCollator), dispose = js.Any.fromFunction0(dispose), getCellData = js.Any.fromFunction2(getCellData), getCellToolTip = js.Any.fromFunction2(getCellToolTip), getCurrentSortOrder = js.Any.fromFunction0(getCurrentSortOrder), getRowData = js.Any.fromFunction1(getRowData), getRowHeading = js.Any.fromFunction1(getRowHeading), insertRow = js.Any.fromFunction3(insertRow), insertRows = js.Any.fromFunction3(insertRows), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeAllRows = js.Any.fromFunction0(removeAllRows), removeColumnSort = js.Any.fromFunction0(removeColumnSort), removeEventListener = js.Any.fromFunction1(removeEventListener), removeGridDataListener = js.Any.fromFunction1(removeGridDataListener), removeRow = js.Any.fromFunction1(removeRow), sortByColumn = js.Any.fromFunction2(sortByColumn), updateCellData = js.Any.fromFunction3(updateCellData), updateCellToolTip = js.Any.fromFunction3(updateCellToolTip), updateRowData = js.Any.fromFunction3(updateRowData), updateRowHeading = js.Any.fromFunction2(updateRowHeading), updateRowToolTip = js.Any.fromFunction2(updateRowToolTip))
     __obj.asInstanceOf[SortableGridDataModel]
   }
-  @scala.inline
-  implicit class SortableGridDataModelOps[Self <: SortableGridDataModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: XMutableGridDataModel => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateWithCollator(value: (XMutableGridDataModel, XCollator) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithCollator")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

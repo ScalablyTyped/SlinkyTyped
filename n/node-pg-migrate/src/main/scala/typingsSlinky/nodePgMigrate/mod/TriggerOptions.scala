@@ -9,134 +9,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TriggerOptions extends js.Object {
-  var condition: js.UndefOr[String] = js.native
-  var constraint: js.UndefOr[Boolean] = js.native
-  var deferrable: js.UndefOr[Boolean] = js.native
-  var deferred: js.UndefOr[Boolean] = js.native
-  var function: js.UndefOr[Name] = js.native
-  var functionParams: js.UndefOr[js.Array[Value]] = js.native
-  var level: js.UndefOr[STATEMENT | ROW] = js.native
-  var operation: String | js.Array[String] = js.native
-  var when: js.UndefOr[BEFORE | AFTER | (`INSTEAD OF`)] = js.native
+  var condition: js.UndefOr[String] = js.undefined
+  var constraint: js.UndefOr[Boolean] = js.undefined
+  var deferrable: js.UndefOr[Boolean] = js.undefined
+  var deferred: js.UndefOr[Boolean] = js.undefined
+  var function: js.UndefOr[Name] = js.undefined
+  var functionParams: js.UndefOr[js.Array[Value]] = js.undefined
+  var level: js.UndefOr[STATEMENT | ROW] = js.undefined
+  var operation: String | js.Array[String]
+  var when: js.UndefOr[BEFORE | AFTER | (`INSTEAD OF`)] = js.undefined
 }
 
 object TriggerOptions {
   @scala.inline
-  def apply(operation: String | js.Array[String]): TriggerOptions = {
+  def apply(
+    operation: String | js.Array[String],
+    condition: String = null,
+    constraint: js.UndefOr[Boolean] = js.undefined,
+    deferrable: js.UndefOr[Boolean] = js.undefined,
+    deferred: js.UndefOr[Boolean] = js.undefined,
+    function: Name = null,
+    functionParams: js.Array[Value] = null,
+    level: STATEMENT | ROW = null,
+    when: BEFORE | AFTER | (`INSTEAD OF`) = null
+  ): TriggerOptions = {
     val __obj = js.Dynamic.literal(operation = operation.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (!js.isUndefined(constraint)) __obj.updateDynamic("constraint")(constraint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deferrable)) __obj.updateDynamic("deferrable")(deferrable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deferred)) __obj.updateDynamic("deferred")(deferred.get.asInstanceOf[js.Any])
+    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
+    if (functionParams != null) __obj.updateDynamic("functionParams")(functionParams.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggerOptions]
   }
-  @scala.inline
-  implicit class TriggerOptionsOps[Self <: TriggerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOperation(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstraint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstraint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferrable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferrable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferrable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferrable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeferred(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferred")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeferred: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deferred")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunction(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionParams(value: js.Array[Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: STATEMENT | ROW): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhen(value: BEFORE | AFTER | (`INSTEAD OF`)): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("when")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

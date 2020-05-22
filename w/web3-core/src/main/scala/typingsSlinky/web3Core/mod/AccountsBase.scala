@@ -19,6 +19,7 @@ class AccountsBase () extends js.Object {
   def encrypt(privateKey: String, password: String): EncryptedKeystoreV3Json = js.native
   def hashMessage(message: String): String = js.native
   def privateKeyToAccount(privateKey: String): Account = js.native
+  def privateKeyToAccount(privateKey: String, ignoreLength: Boolean): Account = js.native
   def recover(message: String, signature: String): String = js.native
   def recover(message: String, signature: String, preFixed: Boolean): String = js.native
   def recover(message: String, v: String, r: String, s: String): String = js.native

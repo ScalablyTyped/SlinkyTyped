@@ -30,77 +30,20 @@ trait ComparedFace extends js.Object {
 
 object ComparedFace {
   @scala.inline
-  def apply(): ComparedFace = {
+  def apply(
+    BoundingBox: BoundingBox = null,
+    Confidence: js.UndefOr[Percent] = js.undefined,
+    Landmarks: Landmarks = null,
+    Pose: Pose = null,
+    Quality: ImageQuality = null
+  ): ComparedFace = {
     val __obj = js.Dynamic.literal()
+    if (BoundingBox != null) __obj.updateDynamic("BoundingBox")(BoundingBox.asInstanceOf[js.Any])
+    if (!js.isUndefined(Confidence)) __obj.updateDynamic("Confidence")(Confidence.get.asInstanceOf[js.Any])
+    if (Landmarks != null) __obj.updateDynamic("Landmarks")(Landmarks.asInstanceOf[js.Any])
+    if (Pose != null) __obj.updateDynamic("Pose")(Pose.asInstanceOf[js.Any])
+    if (Quality != null) __obj.updateDynamic("Quality")(Quality.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComparedFace]
   }
-  @scala.inline
-  implicit class ComparedFaceOps[Self <: ComparedFace] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingBox(value: BoundingBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfidence(value: Percent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLandmarks(value: Landmarks): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Landmarks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLandmarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Landmarks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPose(value: Pose): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: ImageQuality): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Quality")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

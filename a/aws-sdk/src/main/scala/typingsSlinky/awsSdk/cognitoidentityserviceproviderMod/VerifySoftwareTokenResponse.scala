@@ -18,41 +18,11 @@ trait VerifySoftwareTokenResponse extends js.Object {
 
 object VerifySoftwareTokenResponse {
   @scala.inline
-  def apply(): VerifySoftwareTokenResponse = {
+  def apply(Session: SessionType = null, Status: VerifySoftwareTokenResponseType = null): VerifySoftwareTokenResponse = {
     val __obj = js.Dynamic.literal()
+    if (Session != null) __obj.updateDynamic("Session")(Session.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerifySoftwareTokenResponse]
   }
-  @scala.inline
-  implicit class VerifySoftwareTokenResponseOps[Self <: VerifySoftwareTokenResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSession(value: SessionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSession: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: VerifySoftwareTokenResponseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

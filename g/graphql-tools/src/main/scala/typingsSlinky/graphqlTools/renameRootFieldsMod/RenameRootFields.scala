@@ -1,43 +1,31 @@
 package typingsSlinky.graphqlTools.renameRootFieldsMod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlTools.interfacesMod.Request
+import typingsSlinky.graphqlTools.interfacesMod.Result
 import typingsSlinky.graphqlTools.interfacesMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RenameRootFields extends Transform {
-  var transformer: js.Any = js.native
+  var transformer: js.Any
   @JSName("transformSchema")
-  def transformSchema_MRenameRootFields(originalSchema: GraphQLSchema): GraphQLSchema = js.native
+  def transformSchema_MRenameRootFields(originalSchema: GraphQLSchema): GraphQLSchema
 }
 
 object RenameRootFields {
   @scala.inline
-  def apply(transformSchema: GraphQLSchema => GraphQLSchema, transformer: js.Any): RenameRootFields = {
+  def apply(
+    transformSchema: GraphQLSchema => GraphQLSchema,
+    transformer: js.Any,
+    transformRequest: /* originalRequest */ Request => Request = null,
+    transformResult: /* result */ Result => Result = null
+  ): RenameRootFields = {
     val __obj = js.Dynamic.literal(transformSchema = js.Any.fromFunction1(transformSchema), transformer = transformer.asInstanceOf[js.Any])
+    if (transformRequest != null) __obj.updateDynamic("transformRequest")(js.Any.fromFunction1(transformRequest))
+    if (transformResult != null) __obj.updateDynamic("transformResult")(js.Any.fromFunction1(transformResult))
     __obj.asInstanceOf[RenameRootFields]
   }
-  @scala.inline
-  implicit class RenameRootFieldsOps[Self <: RenameRootFields] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransformSchema(value: GraphQLSchema => GraphQLSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformSchema")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTransformer(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

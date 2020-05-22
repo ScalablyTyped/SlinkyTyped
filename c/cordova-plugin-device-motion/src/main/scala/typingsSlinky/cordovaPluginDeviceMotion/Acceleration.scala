@@ -9,16 +9,15 @@ import scala.scalajs.js.annotation._
   * the effect of gravity (9.81 m/s^2), so that when a device lies flat and facing up, x, y, and z
   * values returned should be 0, 0, and 9.81.
   */
-@js.native
 trait Acceleration extends js.Object {
   /** Creation timestamp in milliseconds. */
-  var timestamp: Double = js.native
+  var timestamp: Double
   /** Amount of acceleration on the x-axis. (in m/s^2) */
-  var x: Double = js.native
+  var x: Double
   /** Amount of acceleration on the y-axis. (in m/s^2) */
-  var y: Double = js.native
+  var y: Double
   /** Amount of acceleration on the z-axis. (in m/s^2) */
-  var z: Double = js.native
+  var z: Double
 }
 
 object Acceleration {
@@ -27,37 +26,5 @@ object Acceleration {
     val __obj = js.Dynamic.literal(timestamp = timestamp.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], z = z.asInstanceOf[js.Any])
     __obj.asInstanceOf[Acceleration]
   }
-  @scala.inline
-  implicit class AccelerationOps[Self <: Acceleration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTimestamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withZ(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

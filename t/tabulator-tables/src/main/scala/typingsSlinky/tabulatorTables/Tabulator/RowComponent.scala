@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RowComponent extends RowLookup {
+trait RowComponent extends js.Object {
   /** The delete function deletes the row, removing its data from the table
     *
     * The delete method returns a promise, this can be used to run any other commands that have to be run after the row has been deleted. By running them in the promise you ensure they are only run after the row has been deleted.

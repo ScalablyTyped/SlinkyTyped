@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Frame extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  var Borders: typingsSlinky.activexWord.Word.Borders = js.native
-  val Creator: Double = js.native
-  var Height: Double = js.native
-  var HeightRule: WdFrameSizeRule = js.native
-  var HorizontalDistanceFromText: Double = js.native
-  var HorizontalPosition: Double = js.native
-  var LockAnchor: Boolean = js.native
-  val Parent: js.Any = js.native
-  val Range: typingsSlinky.activexWord.Word.Range = js.native
-  var RelativeHorizontalPosition: WdRelativeHorizontalPosition = js.native
-  var RelativeVerticalPosition: WdRelativeVerticalPosition = js.native
-  val Shading: typingsSlinky.activexWord.Word.Shading = js.native
-  var TextWrap: Boolean = js.native
-  var VerticalDistanceFromText: Double = js.native
-  var VerticalPosition: Double = js.native
-  var Width: Double = js.native
-  var WidthRule: WdFrameSizeRule = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  var Borders: typingsSlinky.activexWord.Word.Borders
+  val Creator: Double
+  var Height: Double
+  var HeightRule: WdFrameSizeRule
+  var HorizontalDistanceFromText: Double
+  var HorizontalPosition: Double
+  var LockAnchor: Boolean
+  val Parent: js.Any
+  val Range: typingsSlinky.activexWord.Word.Range
+  var RelativeHorizontalPosition: WdRelativeHorizontalPosition
+  var RelativeVerticalPosition: WdRelativeVerticalPosition
+  val Shading: typingsSlinky.activexWord.Word.Shading
+  var TextWrap: Boolean
+  var VerticalDistanceFromText: Double
+  var VerticalPosition: Double
+  var Width: Double
+  var WidthRule: WdFrameSizeRule
   @JSName("Word.Frame_typekey")
-  var WordDotFrame_typekey: Frame = js.native
-  def Copy(): Unit = js.native
-  def Cut(): Unit = js.native
-  def Delete(): Unit = js.native
-  def Select(): Unit = js.native
+  var WordDotFrame_typekey: Frame
+  def Copy(): Unit
+  def Cut(): Unit
+  def Delete(): Unit
+  def Select(): Unit
 }
 
 object Frame {
@@ -63,151 +62,5 @@ object Frame {
     __obj.updateDynamic("Word.Frame_typekey")(WordDotFrame_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Frame]
   }
-  @scala.inline
-  implicit class FrameOps[Self <: Frame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorders(value: Borders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Borders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Copy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCut(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Cut")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeightRule(value: WdFrameSizeRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeightRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalDistanceFromText(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalDistanceFromText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizontalPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HorizontalPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLockAnchor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockAnchor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelativeHorizontalPosition(value: WdRelativeHorizontalPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelativeHorizontalPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRelativeVerticalPosition(value: WdRelativeVerticalPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelativeVerticalPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withShading(value: Shading): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Shading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalDistanceFromText(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalDistanceFromText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerticalPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerticalPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidthRule(value: WdFrameSizeRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WidthRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotFrame_typekey(value: Frame): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Frame_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

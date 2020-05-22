@@ -19,4 +19,10 @@ package object ssoMod {
   type RoleNameType = java.lang.String
   type SecretAccessKeyType = java.lang.String
   type SessionTokenType = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2019-06-10`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.ssoMod._apiVersion | java.lang.String
 }

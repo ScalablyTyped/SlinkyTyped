@@ -22,53 +22,16 @@ trait ConditionalForwarder extends js.Object {
 
 object ConditionalForwarder {
   @scala.inline
-  def apply(): ConditionalForwarder = {
+  def apply(
+    DnsIpAddrs: DnsIpAddrs = null,
+    RemoteDomainName: RemoteDomainName = null,
+    ReplicationScope: ReplicationScope = null
+  ): ConditionalForwarder = {
     val __obj = js.Dynamic.literal()
+    if (DnsIpAddrs != null) __obj.updateDynamic("DnsIpAddrs")(DnsIpAddrs.asInstanceOf[js.Any])
+    if (RemoteDomainName != null) __obj.updateDynamic("RemoteDomainName")(RemoteDomainName.asInstanceOf[js.Any])
+    if (ReplicationScope != null) __obj.updateDynamic("ReplicationScope")(ReplicationScope.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalForwarder]
   }
-  @scala.inline
-  implicit class ConditionalForwarderOps[Self <: ConditionalForwarder] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDnsIpAddrs(value: DnsIpAddrs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnsIpAddrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteDomainName(value: RemoteDomainName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteDomainName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteDomainName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoteDomainName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicationScope(value: ReplicationScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationScope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationScope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

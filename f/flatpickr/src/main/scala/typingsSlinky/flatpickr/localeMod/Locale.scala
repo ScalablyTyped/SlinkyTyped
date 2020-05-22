@@ -6,22 +6,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Locale extends js.Object {
-  var amPM: js.Tuple2[String, String] = js.native
-  var daysInMonth: js.Tuple12[Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double] = js.native
-  var firstDayOfWeek: Double = js.native
-  var hourAriaLabel: String = js.native
-  var minuteAriaLabel: String = js.native
-  var months: Shorthand = js.native
-  var rangeSeparator: String = js.native
-  var scrollTitle: String = js.native
-  var time_24hr: Boolean = js.native
-  var toggleTitle: String = js.native
-  var weekAbbreviation: String = js.native
-  var weekdays: Longhand = js.native
-  var yearAriaLabel: String = js.native
-  def ordinal(nth: Double): String = js.native
+  var amPM: js.Tuple2[String, String]
+  var daysInMonth: js.Tuple12[Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double]
+  var firstDayOfWeek: Double
+  var hourAriaLabel: String
+  var minuteAriaLabel: String
+  var months: Shorthand
+  var rangeSeparator: String
+  var scrollTitle: String
+  var time_24hr: Boolean
+  var toggleTitle: String
+  var weekAbbreviation: String
+  var weekdays: Longhand
+  var yearAriaLabel: String
+  def ordinal(nth: Double): String
 }
 
 object Locale {
@@ -45,99 +44,5 @@ object Locale {
     val __obj = js.Dynamic.literal(amPM = amPM.asInstanceOf[js.Any], daysInMonth = daysInMonth.asInstanceOf[js.Any], firstDayOfWeek = firstDayOfWeek.asInstanceOf[js.Any], hourAriaLabel = hourAriaLabel.asInstanceOf[js.Any], minuteAriaLabel = minuteAriaLabel.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], ordinal = js.Any.fromFunction1(ordinal), rangeSeparator = rangeSeparator.asInstanceOf[js.Any], scrollTitle = scrollTitle.asInstanceOf[js.Any], time_24hr = time_24hr.asInstanceOf[js.Any], toggleTitle = toggleTitle.asInstanceOf[js.Any], weekAbbreviation = weekAbbreviation.asInstanceOf[js.Any], weekdays = weekdays.asInstanceOf[js.Any], yearAriaLabel = yearAriaLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Locale]
   }
-  @scala.inline
-  implicit class LocaleOps[Self <: Locale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmPM(value: js.Tuple2[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amPM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDaysInMonth(
-      value: js.Tuple12[Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daysInMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstDayOfWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHourAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinuteAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonths(value: Shorthand): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrdinal(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRangeSeparator(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSeparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScrollTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTime_24hr(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time_24hr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToggleTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeekAbbreviation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekAbbreviation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeekdays(value: Longhand): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekdays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYearAriaLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearAriaLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

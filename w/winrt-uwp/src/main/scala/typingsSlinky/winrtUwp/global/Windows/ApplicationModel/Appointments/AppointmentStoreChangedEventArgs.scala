@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs")
 @js.native
 abstract class AppointmentStoreChangedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs {
+  /**
+    * Gets the deferral object for the StoreChanged event.
+    * @return The deferral object for the StoreChanged event.
+    */
+  /* CompleteClass */
+  override def getDeferral(): typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral = js.native
+}
 

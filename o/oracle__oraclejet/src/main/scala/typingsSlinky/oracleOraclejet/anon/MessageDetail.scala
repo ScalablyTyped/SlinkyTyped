@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MessageDetail extends js.Object {
-  var hint: js.UndefOr[InRange] = js.native
-  var messageDetail: js.UndefOr[RangeOverflow] = js.native
-  var messageSummary: js.UndefOr[RangeOverflow] = js.native
+  var hint: js.UndefOr[InRange] = js.undefined
+  var messageDetail: js.UndefOr[RangeOverflow] = js.undefined
+  var messageSummary: js.UndefOr[RangeOverflow] = js.undefined
 }
 
 object MessageDetail {
   @scala.inline
-  def apply(): MessageDetail = {
+  def apply(hint: InRange = null, messageDetail: RangeOverflow = null, messageSummary: RangeOverflow = null): MessageDetail = {
     val __obj = js.Dynamic.literal()
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (messageDetail != null) __obj.updateDynamic("messageDetail")(messageDetail.asInstanceOf[js.Any])
+    if (messageSummary != null) __obj.updateDynamic("messageSummary")(messageSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageDetail]
   }
-  @scala.inline
-  implicit class MessageDetailOps[Self <: MessageDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHint(value: InRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageDetail(value: RangeOverflow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDetail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageDetail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDetail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageSummary(value: RangeOverflow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSummary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

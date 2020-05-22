@@ -18,65 +18,64 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined @phosphor/virtualdom.@phosphor/virtualdom.ElementBaseAttrs & @phosphor/virtualdom.@phosphor/virtualdom.ElementEventAttrs & @phosphor/virtualdom.@phosphor/virtualdom.ElementSpecialAttrs */
-@js.native
 trait ElementAttrs extends js.Object {
-  val abbr: js.UndefOr[String] = js.native
-  val accept: js.UndefOr[String] = js.native
-  val `accept-charset`: js.UndefOr[String] = js.native
-  val accesskey: js.UndefOr[String] = js.native
-  val action: js.UndefOr[String] = js.native
-  val allowfullscreen: js.UndefOr[String] = js.native
-  val alt: js.UndefOr[String] = js.native
-  val autocomplete: js.UndefOr[String] = js.native
-  val autofocus: js.UndefOr[String] = js.native
-  val autoplay: js.UndefOr[String] = js.native
-  val autosave: js.UndefOr[String] = js.native
-  val checked: js.UndefOr[String] = js.native
-  val cite: js.UndefOr[String] = js.native
+  val abbr: js.UndefOr[String] = js.undefined
+  val accept: js.UndefOr[String] = js.undefined
+  val `accept-charset`: js.UndefOr[String] = js.undefined
+  val accesskey: js.UndefOr[String] = js.undefined
+  val action: js.UndefOr[String] = js.undefined
+  val allowfullscreen: js.UndefOr[String] = js.undefined
+  val alt: js.UndefOr[String] = js.undefined
+  val autocomplete: js.UndefOr[String] = js.undefined
+  val autofocus: js.UndefOr[String] = js.undefined
+  val autoplay: js.UndefOr[String] = js.undefined
+  val autosave: js.UndefOr[String] = js.undefined
+  val checked: js.UndefOr[String] = js.undefined
+  val cite: js.UndefOr[String] = js.undefined
   /**
     * The JS-safe name for the HTML `class` attribute.
     */
-  val className: js.UndefOr[String] = js.native
-  val cols: js.UndefOr[String] = js.native
-  val colspan: js.UndefOr[String] = js.native
-  val contenteditable: js.UndefOr[String] = js.native
-  val controls: js.UndefOr[String] = js.native
-  val coords: js.UndefOr[String] = js.native
-  val crossorigin: js.UndefOr[String] = js.native
-  val data: js.UndefOr[String] = js.native
+  val className: js.UndefOr[String] = js.undefined
+  val cols: js.UndefOr[String] = js.undefined
+  val colspan: js.UndefOr[String] = js.undefined
+  val contenteditable: js.UndefOr[String] = js.undefined
+  val controls: js.UndefOr[String] = js.undefined
+  val coords: js.UndefOr[String] = js.undefined
+  val crossorigin: js.UndefOr[String] = js.undefined
+  val data: js.UndefOr[String] = js.undefined
   /**
     * The dataset for the rendered DOM element.
     */
-  val dataset: js.UndefOr[ElementDataset] = js.native
-  val datetime: js.UndefOr[String] = js.native
-  val default: js.UndefOr[String] = js.native
-  val dir: js.UndefOr[String] = js.native
-  val dirname: js.UndefOr[String] = js.native
-  val disabled: js.UndefOr[String] = js.native
-  val download: js.UndefOr[String] = js.native
-  val draggable: js.UndefOr[String] = js.native
-  val dropzone: js.UndefOr[String] = js.native
-  val enctype: js.UndefOr[String] = js.native
-  val form: js.UndefOr[String] = js.native
-  val formaction: js.UndefOr[String] = js.native
-  val formenctype: js.UndefOr[String] = js.native
-  val formmethod: js.UndefOr[String] = js.native
-  val formnovalidate: js.UndefOr[String] = js.native
-  val formtarget: js.UndefOr[String] = js.native
-  val headers: js.UndefOr[String] = js.native
-  val height: js.UndefOr[String] = js.native
-  val hidden: js.UndefOr[String] = js.native
-  val high: js.UndefOr[String] = js.native
-  val href: js.UndefOr[String] = js.native
-  val hreflang: js.UndefOr[String] = js.native
+  val dataset: js.UndefOr[ElementDataset] = js.undefined
+  val datetime: js.UndefOr[String] = js.undefined
+  val default: js.UndefOr[String] = js.undefined
+  val dir: js.UndefOr[String] = js.undefined
+  val dirname: js.UndefOr[String] = js.undefined
+  val disabled: js.UndefOr[String] = js.undefined
+  val download: js.UndefOr[String] = js.undefined
+  val draggable: js.UndefOr[String] = js.undefined
+  val dropzone: js.UndefOr[String] = js.undefined
+  val enctype: js.UndefOr[String] = js.undefined
+  val form: js.UndefOr[String] = js.undefined
+  val formaction: js.UndefOr[String] = js.undefined
+  val formenctype: js.UndefOr[String] = js.undefined
+  val formmethod: js.UndefOr[String] = js.undefined
+  val formnovalidate: js.UndefOr[String] = js.undefined
+  val formtarget: js.UndefOr[String] = js.undefined
+  val headers: js.UndefOr[String] = js.undefined
+  val height: js.UndefOr[String] = js.undefined
+  val hidden: js.UndefOr[String] = js.undefined
+  val high: js.UndefOr[String] = js.undefined
+  val href: js.UndefOr[String] = js.undefined
+  val hreflang: js.UndefOr[String] = js.undefined
   /**
     * The JS-safe name for the HTML `for` attribute.
     */
-  val htmlFor: js.UndefOr[String] = js.native
-  val id: js.UndefOr[String] = js.native
-  val inputmode: js.UndefOr[String] = js.native
-  val integrity: js.UndefOr[String] = js.native
-  val ismap: js.UndefOr[String] = js.native
+  val htmlFor: js.UndefOr[String] = js.undefined
+  val id: js.UndefOr[String] = js.undefined
+  val inputmode: js.UndefOr[String] = js.undefined
+  val integrity: js.UndefOr[String] = js.undefined
+  val ismap: js.UndefOr[String] = js.undefined
   /**
     * The key id for the virtual element node.
     *
@@ -89,2186 +88,479 @@ trait ElementAttrs extends js.Object {
     *
     * If a key is provided, it must be unique among sibling nodes.
     */
-  val key: js.UndefOr[String] = js.native
-  val kind: js.UndefOr[String] = js.native
-  val label: js.UndefOr[String] = js.native
-  val lang: js.UndefOr[String] = js.native
-  val list: js.UndefOr[String] = js.native
-  val loop: js.UndefOr[String] = js.native
-  val low: js.UndefOr[String] = js.native
-  val max: js.UndefOr[String] = js.native
-  val maxlength: js.UndefOr[String] = js.native
-  val media: js.UndefOr[String] = js.native
-  val mediagroup: js.UndefOr[String] = js.native
-  val method: js.UndefOr[String] = js.native
-  val min: js.UndefOr[String] = js.native
-  val minlength: js.UndefOr[String] = js.native
-  val multiple: js.UndefOr[String] = js.native
-  val muted: js.UndefOr[String] = js.native
-  val name: js.UndefOr[String] = js.native
-  val novalidate: js.UndefOr[String] = js.native
-  val onabort: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.native
-  val onauxclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onblur: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]] = js.native
-  val oncanplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val oncopy: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.native
-  val oncuechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val oncut: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.native
-  val ondblclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val ondrag: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondragend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondragenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondragexit: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondragleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondragover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondragstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondrop: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onemptied: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onended: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MediaStreamErrorEvent, _]] = js.native
-  val onerror: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ErrorEvent, _]] = js.native
-  val onfocus: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]] = js.native
-  val oninput: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val oninvalid: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onkeydown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.native
-  val onkeypress: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.native
-  val onkeyup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.native
-  val onload: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onloadend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onloadstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onmousedown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmousemove: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmouseout: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmouseover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmouseup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
-  val onmousewheel: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ WheelEvent, _]] = js.native
-  val onpaste: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.native
-  val onpause: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onplaying: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointermove: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointerout: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointerover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onpointerup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
-  val onprogress: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ProgressEvent, _]] = js.native
-  val onratechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onreset: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onscroll: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.native
-  val onseeked: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onseeking: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onselect: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.native
-  val onselectstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onstalled: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onsubmit: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onsuspend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val onwaiting: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
-  val optimum: js.UndefOr[String] = js.native
-  val pattern: js.UndefOr[String] = js.native
-  val placeholder: js.UndefOr[String] = js.native
-  val poster: js.UndefOr[String] = js.native
-  val preload: js.UndefOr[String] = js.native
-  val readonly: js.UndefOr[String] = js.native
-  val rel: js.UndefOr[String] = js.native
-  val required: js.UndefOr[String] = js.native
-  val reversed: js.UndefOr[String] = js.native
-  val rows: js.UndefOr[String] = js.native
-  val rowspan: js.UndefOr[String] = js.native
-  val sandbox: js.UndefOr[String] = js.native
-  val scope: js.UndefOr[String] = js.native
-  val selected: js.UndefOr[String] = js.native
-  val shape: js.UndefOr[String] = js.native
-  val size: js.UndefOr[String] = js.native
-  val sizes: js.UndefOr[String] = js.native
-  val span: js.UndefOr[String] = js.native
-  val spellcheck: js.UndefOr[String] = js.native
-  val src: js.UndefOr[String] = js.native
-  val srcdoc: js.UndefOr[String] = js.native
-  val srclang: js.UndefOr[String] = js.native
-  val srcset: js.UndefOr[String] = js.native
-  val start: js.UndefOr[String] = js.native
-  val step: js.UndefOr[String] = js.native
+  val key: js.UndefOr[String] = js.undefined
+  val kind: js.UndefOr[String] = js.undefined
+  val label: js.UndefOr[String] = js.undefined
+  val lang: js.UndefOr[String] = js.undefined
+  val list: js.UndefOr[String] = js.undefined
+  val loop: js.UndefOr[String] = js.undefined
+  val low: js.UndefOr[String] = js.undefined
+  val max: js.UndefOr[String] = js.undefined
+  val maxlength: js.UndefOr[String] = js.undefined
+  val media: js.UndefOr[String] = js.undefined
+  val mediagroup: js.UndefOr[String] = js.undefined
+  val method: js.UndefOr[String] = js.undefined
+  val min: js.UndefOr[String] = js.undefined
+  val minlength: js.UndefOr[String] = js.undefined
+  val multiple: js.UndefOr[String] = js.undefined
+  val muted: js.UndefOr[String] = js.undefined
+  val name: js.UndefOr[String] = js.undefined
+  val novalidate: js.UndefOr[String] = js.undefined
+  val onabort: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.undefined
+  val onauxclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onblur: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]] = js.undefined
+  val oncanplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val oncopy: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.undefined
+  val oncuechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val oncut: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.undefined
+  val ondblclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val ondrag: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondragend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondragenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondragexit: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondragleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondragover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondragstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondrop: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.undefined
+  val ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onemptied: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onended: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MediaStreamErrorEvent, _]] = js.undefined
+  val onerror: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ErrorEvent, _]] = js.undefined
+  val onfocus: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]] = js.undefined
+  val oninput: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val oninvalid: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onkeydown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.undefined
+  val onkeypress: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.undefined
+  val onkeyup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.undefined
+  val onload: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onloadend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onloadstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onmousedown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmousemove: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmouseout: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmouseover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmouseup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.undefined
+  val onmousewheel: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ WheelEvent, _]] = js.undefined
+  val onpaste: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.undefined
+  val onpause: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onplaying: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointermove: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointerout: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointerover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onpointerup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.undefined
+  val onprogress: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ProgressEvent, _]] = js.undefined
+  val onratechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onreset: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onscroll: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.undefined
+  val onseeked: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onseeking: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onselect: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.undefined
+  val onselectstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onstalled: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onsubmit: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onsuspend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val onwaiting: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.undefined
+  val optimum: js.UndefOr[String] = js.undefined
+  val pattern: js.UndefOr[String] = js.undefined
+  val placeholder: js.UndefOr[String] = js.undefined
+  val poster: js.UndefOr[String] = js.undefined
+  val preload: js.UndefOr[String] = js.undefined
+  val readonly: js.UndefOr[String] = js.undefined
+  val rel: js.UndefOr[String] = js.undefined
+  val required: js.UndefOr[String] = js.undefined
+  val reversed: js.UndefOr[String] = js.undefined
+  val rows: js.UndefOr[String] = js.undefined
+  val rowspan: js.UndefOr[String] = js.undefined
+  val sandbox: js.UndefOr[String] = js.undefined
+  val scope: js.UndefOr[String] = js.undefined
+  val selected: js.UndefOr[String] = js.undefined
+  val shape: js.UndefOr[String] = js.undefined
+  val size: js.UndefOr[String] = js.undefined
+  val sizes: js.UndefOr[String] = js.undefined
+  val span: js.UndefOr[String] = js.undefined
+  val spellcheck: js.UndefOr[String] = js.undefined
+  val src: js.UndefOr[String] = js.undefined
+  val srcdoc: js.UndefOr[String] = js.undefined
+  val srclang: js.UndefOr[String] = js.undefined
+  val srcset: js.UndefOr[String] = js.undefined
+  val start: js.UndefOr[String] = js.undefined
+  val step: js.UndefOr[String] = js.undefined
   /**
     * The inline style for the rendered DOM element.
     */
-  val style: js.UndefOr[ElementInlineStyle] = js.native
-  val tabindex: js.UndefOr[String] = js.native
-  val target: js.UndefOr[String] = js.native
-  val title: js.UndefOr[String] = js.native
-  val `type`: js.UndefOr[String] = js.native
-  val typemustmatch: js.UndefOr[String] = js.native
-  val usemap: js.UndefOr[String] = js.native
-  val value: js.UndefOr[String] = js.native
-  val width: js.UndefOr[String] = js.native
-  val wrap: js.UndefOr[String] = js.native
+  val style: js.UndefOr[ElementInlineStyle] = js.undefined
+  val tabindex: js.UndefOr[String] = js.undefined
+  val target: js.UndefOr[String] = js.undefined
+  val title: js.UndefOr[String] = js.undefined
+  val `type`: js.UndefOr[String] = js.undefined
+  val typemustmatch: js.UndefOr[String] = js.undefined
+  val usemap: js.UndefOr[String] = js.undefined
+  val value: js.UndefOr[String] = js.undefined
+  val width: js.UndefOr[String] = js.undefined
+  val wrap: js.UndefOr[String] = js.undefined
 }
 
 object ElementAttrs {
   @scala.inline
-  def apply(): ElementAttrs = {
+  def apply(
+    abbr: String = null,
+    accept: String = null,
+    `accept-charset`: String = null,
+    accesskey: String = null,
+    action: String = null,
+    allowfullscreen: String = null,
+    alt: String = null,
+    autocomplete: String = null,
+    autofocus: String = null,
+    autoplay: String = null,
+    autosave: String = null,
+    checked: String = null,
+    cite: String = null,
+    className: String = null,
+    cols: String = null,
+    colspan: String = null,
+    contenteditable: String = null,
+    controls: String = null,
+    coords: String = null,
+    crossorigin: String = null,
+    data: String = null,
+    dataset: ElementDataset = null,
+    datetime: String = null,
+    default: String = null,
+    dir: String = null,
+    dirname: String = null,
+    disabled: String = null,
+    download: String = null,
+    draggable: String = null,
+    dropzone: String = null,
+    enctype: String = null,
+    form: String = null,
+    formaction: String = null,
+    formenctype: String = null,
+    formmethod: String = null,
+    formnovalidate: String = null,
+    formtarget: String = null,
+    headers: String = null,
+    height: String = null,
+    hidden: String = null,
+    high: String = null,
+    href: String = null,
+    hreflang: String = null,
+    htmlFor: String = null,
+    id: String = null,
+    inputmode: String = null,
+    integrity: String = null,
+    ismap: String = null,
+    key: String = null,
+    kind: String = null,
+    label: String = null,
+    lang: String = null,
+    list: String = null,
+    loop: String = null,
+    low: String = null,
+    max: String = null,
+    maxlength: String = null,
+    media: String = null,
+    mediagroup: String = null,
+    method: String = null,
+    min: String = null,
+    minlength: String = null,
+    multiple: String = null,
+    muted: String = null,
+    name: String = null,
+    novalidate: String = null,
+    onabort: js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _] = null,
+    onauxclick: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onblur: js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _] = null,
+    oncanplay: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    oncanplaythrough: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onchange: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onclick: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    oncontextmenu: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    oncopy: js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _] = null,
+    oncuechange: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    oncut: js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _] = null,
+    ondblclick: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    ondrag: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondragend: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondragenter: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondragexit: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondragleave: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondragover: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondragstart: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondrop: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _] = null,
+    ondurationchange: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onemptied: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onended: js.ThisFunction1[/* this */ HTMLElement, /* event */ MediaStreamErrorEvent, _] = null,
+    onerror: js.ThisFunction1[/* this */ HTMLElement, /* event */ ErrorEvent, _] = null,
+    onfocus: js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _] = null,
+    oninput: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    oninvalid: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onkeydown: js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _] = null,
+    onkeypress: js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _] = null,
+    onkeyup: js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _] = null,
+    onload: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onloadeddata: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onloadedmetadata: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onloadend: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onloadstart: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onmousedown: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmouseenter: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmouseleave: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmousemove: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmouseout: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmouseover: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmouseup: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _] = null,
+    onmousewheel: js.ThisFunction1[/* this */ HTMLElement, /* event */ WheelEvent, _] = null,
+    onpaste: js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _] = null,
+    onpause: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onplay: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onplaying: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onpointercancel: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointerdown: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointerenter: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointerleave: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointermove: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointerout: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointerover: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onpointerup: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _] = null,
+    onprogress: js.ThisFunction1[/* this */ HTMLElement, /* event */ ProgressEvent, _] = null,
+    onratechange: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onreset: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onscroll: js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _] = null,
+    onseeked: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onseeking: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onselect: js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _] = null,
+    onselectstart: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onstalled: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onsubmit: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onsuspend: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    ontimeupdate: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onvolumechange: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    onwaiting: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _] = null,
+    optimum: String = null,
+    pattern: String = null,
+    placeholder: String = null,
+    poster: String = null,
+    preload: String = null,
+    readonly: String = null,
+    rel: String = null,
+    required: String = null,
+    reversed: String = null,
+    rows: String = null,
+    rowspan: String = null,
+    sandbox: String = null,
+    scope: String = null,
+    selected: String = null,
+    shape: String = null,
+    size: String = null,
+    sizes: String = null,
+    span: String = null,
+    spellcheck: String = null,
+    src: String = null,
+    srcdoc: String = null,
+    srclang: String = null,
+    srcset: String = null,
+    start: String = null,
+    step: String = null,
+    style: ElementInlineStyle = null,
+    tabindex: String = null,
+    target: String = null,
+    title: String = null,
+    `type`: String = null,
+    typemustmatch: String = null,
+    usemap: String = null,
+    value: String = null,
+    width: String = null,
+    wrap: String = null
+  ): ElementAttrs = {
     val __obj = js.Dynamic.literal()
+    if (abbr != null) __obj.updateDynamic("abbr")(abbr.asInstanceOf[js.Any])
+    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+    if (`accept-charset` != null) __obj.updateDynamic("accept-charset")(`accept-charset`.asInstanceOf[js.Any])
+    if (accesskey != null) __obj.updateDynamic("accesskey")(accesskey.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (allowfullscreen != null) __obj.updateDynamic("allowfullscreen")(allowfullscreen.asInstanceOf[js.Any])
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
+    if (autocomplete != null) __obj.updateDynamic("autocomplete")(autocomplete.asInstanceOf[js.Any])
+    if (autofocus != null) __obj.updateDynamic("autofocus")(autofocus.asInstanceOf[js.Any])
+    if (autoplay != null) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
+    if (autosave != null) __obj.updateDynamic("autosave")(autosave.asInstanceOf[js.Any])
+    if (checked != null) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
+    if (cite != null) __obj.updateDynamic("cite")(cite.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (cols != null) __obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
+    if (colspan != null) __obj.updateDynamic("colspan")(colspan.asInstanceOf[js.Any])
+    if (contenteditable != null) __obj.updateDynamic("contenteditable")(contenteditable.asInstanceOf[js.Any])
+    if (controls != null) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
+    if (coords != null) __obj.updateDynamic("coords")(coords.asInstanceOf[js.Any])
+    if (crossorigin != null) __obj.updateDynamic("crossorigin")(crossorigin.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
+    if (datetime != null) __obj.updateDynamic("datetime")(datetime.asInstanceOf[js.Any])
+    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (dirname != null) __obj.updateDynamic("dirname")(dirname.asInstanceOf[js.Any])
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (download != null) __obj.updateDynamic("download")(download.asInstanceOf[js.Any])
+    if (draggable != null) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
+    if (dropzone != null) __obj.updateDynamic("dropzone")(dropzone.asInstanceOf[js.Any])
+    if (enctype != null) __obj.updateDynamic("enctype")(enctype.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (formaction != null) __obj.updateDynamic("formaction")(formaction.asInstanceOf[js.Any])
+    if (formenctype != null) __obj.updateDynamic("formenctype")(formenctype.asInstanceOf[js.Any])
+    if (formmethod != null) __obj.updateDynamic("formmethod")(formmethod.asInstanceOf[js.Any])
+    if (formnovalidate != null) __obj.updateDynamic("formnovalidate")(formnovalidate.asInstanceOf[js.Any])
+    if (formtarget != null) __obj.updateDynamic("formtarget")(formtarget.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hidden != null) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
+    if (high != null) __obj.updateDynamic("high")(high.asInstanceOf[js.Any])
+    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+    if (hreflang != null) __obj.updateDynamic("hreflang")(hreflang.asInstanceOf[js.Any])
+    if (htmlFor != null) __obj.updateDynamic("htmlFor")(htmlFor.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inputmode != null) __obj.updateDynamic("inputmode")(inputmode.asInstanceOf[js.Any])
+    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
+    if (ismap != null) __obj.updateDynamic("ismap")(ismap.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
+    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
+    if (low != null) __obj.updateDynamic("low")(low.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
+    if (mediagroup != null) __obj.updateDynamic("mediagroup")(mediagroup.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (minlength != null) __obj.updateDynamic("minlength")(minlength.asInstanceOf[js.Any])
+    if (multiple != null) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
+    if (muted != null) __obj.updateDynamic("muted")(muted.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (novalidate != null) __obj.updateDynamic("novalidate")(novalidate.asInstanceOf[js.Any])
+    if (onabort != null) __obj.updateDynamic("onabort")(onabort.asInstanceOf[js.Any])
+    if (onauxclick != null) __obj.updateDynamic("onauxclick")(onauxclick.asInstanceOf[js.Any])
+    if (onblur != null) __obj.updateDynamic("onblur")(onblur.asInstanceOf[js.Any])
+    if (oncanplay != null) __obj.updateDynamic("oncanplay")(oncanplay.asInstanceOf[js.Any])
+    if (oncanplaythrough != null) __obj.updateDynamic("oncanplaythrough")(oncanplaythrough.asInstanceOf[js.Any])
+    if (onchange != null) __obj.updateDynamic("onchange")(onchange.asInstanceOf[js.Any])
+    if (onclick != null) __obj.updateDynamic("onclick")(onclick.asInstanceOf[js.Any])
+    if (oncontextmenu != null) __obj.updateDynamic("oncontextmenu")(oncontextmenu.asInstanceOf[js.Any])
+    if (oncopy != null) __obj.updateDynamic("oncopy")(oncopy.asInstanceOf[js.Any])
+    if (oncuechange != null) __obj.updateDynamic("oncuechange")(oncuechange.asInstanceOf[js.Any])
+    if (oncut != null) __obj.updateDynamic("oncut")(oncut.asInstanceOf[js.Any])
+    if (ondblclick != null) __obj.updateDynamic("ondblclick")(ondblclick.asInstanceOf[js.Any])
+    if (ondrag != null) __obj.updateDynamic("ondrag")(ondrag.asInstanceOf[js.Any])
+    if (ondragend != null) __obj.updateDynamic("ondragend")(ondragend.asInstanceOf[js.Any])
+    if (ondragenter != null) __obj.updateDynamic("ondragenter")(ondragenter.asInstanceOf[js.Any])
+    if (ondragexit != null) __obj.updateDynamic("ondragexit")(ondragexit.asInstanceOf[js.Any])
+    if (ondragleave != null) __obj.updateDynamic("ondragleave")(ondragleave.asInstanceOf[js.Any])
+    if (ondragover != null) __obj.updateDynamic("ondragover")(ondragover.asInstanceOf[js.Any])
+    if (ondragstart != null) __obj.updateDynamic("ondragstart")(ondragstart.asInstanceOf[js.Any])
+    if (ondrop != null) __obj.updateDynamic("ondrop")(ondrop.asInstanceOf[js.Any])
+    if (ondurationchange != null) __obj.updateDynamic("ondurationchange")(ondurationchange.asInstanceOf[js.Any])
+    if (onemptied != null) __obj.updateDynamic("onemptied")(onemptied.asInstanceOf[js.Any])
+    if (onended != null) __obj.updateDynamic("onended")(onended.asInstanceOf[js.Any])
+    if (onerror != null) __obj.updateDynamic("onerror")(onerror.asInstanceOf[js.Any])
+    if (onfocus != null) __obj.updateDynamic("onfocus")(onfocus.asInstanceOf[js.Any])
+    if (oninput != null) __obj.updateDynamic("oninput")(oninput.asInstanceOf[js.Any])
+    if (oninvalid != null) __obj.updateDynamic("oninvalid")(oninvalid.asInstanceOf[js.Any])
+    if (onkeydown != null) __obj.updateDynamic("onkeydown")(onkeydown.asInstanceOf[js.Any])
+    if (onkeypress != null) __obj.updateDynamic("onkeypress")(onkeypress.asInstanceOf[js.Any])
+    if (onkeyup != null) __obj.updateDynamic("onkeyup")(onkeyup.asInstanceOf[js.Any])
+    if (onload != null) __obj.updateDynamic("onload")(onload.asInstanceOf[js.Any])
+    if (onloadeddata != null) __obj.updateDynamic("onloadeddata")(onloadeddata.asInstanceOf[js.Any])
+    if (onloadedmetadata != null) __obj.updateDynamic("onloadedmetadata")(onloadedmetadata.asInstanceOf[js.Any])
+    if (onloadend != null) __obj.updateDynamic("onloadend")(onloadend.asInstanceOf[js.Any])
+    if (onloadstart != null) __obj.updateDynamic("onloadstart")(onloadstart.asInstanceOf[js.Any])
+    if (onmousedown != null) __obj.updateDynamic("onmousedown")(onmousedown.asInstanceOf[js.Any])
+    if (onmouseenter != null) __obj.updateDynamic("onmouseenter")(onmouseenter.asInstanceOf[js.Any])
+    if (onmouseleave != null) __obj.updateDynamic("onmouseleave")(onmouseleave.asInstanceOf[js.Any])
+    if (onmousemove != null) __obj.updateDynamic("onmousemove")(onmousemove.asInstanceOf[js.Any])
+    if (onmouseout != null) __obj.updateDynamic("onmouseout")(onmouseout.asInstanceOf[js.Any])
+    if (onmouseover != null) __obj.updateDynamic("onmouseover")(onmouseover.asInstanceOf[js.Any])
+    if (onmouseup != null) __obj.updateDynamic("onmouseup")(onmouseup.asInstanceOf[js.Any])
+    if (onmousewheel != null) __obj.updateDynamic("onmousewheel")(onmousewheel.asInstanceOf[js.Any])
+    if (onpaste != null) __obj.updateDynamic("onpaste")(onpaste.asInstanceOf[js.Any])
+    if (onpause != null) __obj.updateDynamic("onpause")(onpause.asInstanceOf[js.Any])
+    if (onplay != null) __obj.updateDynamic("onplay")(onplay.asInstanceOf[js.Any])
+    if (onplaying != null) __obj.updateDynamic("onplaying")(onplaying.asInstanceOf[js.Any])
+    if (onpointercancel != null) __obj.updateDynamic("onpointercancel")(onpointercancel.asInstanceOf[js.Any])
+    if (onpointerdown != null) __obj.updateDynamic("onpointerdown")(onpointerdown.asInstanceOf[js.Any])
+    if (onpointerenter != null) __obj.updateDynamic("onpointerenter")(onpointerenter.asInstanceOf[js.Any])
+    if (onpointerleave != null) __obj.updateDynamic("onpointerleave")(onpointerleave.asInstanceOf[js.Any])
+    if (onpointermove != null) __obj.updateDynamic("onpointermove")(onpointermove.asInstanceOf[js.Any])
+    if (onpointerout != null) __obj.updateDynamic("onpointerout")(onpointerout.asInstanceOf[js.Any])
+    if (onpointerover != null) __obj.updateDynamic("onpointerover")(onpointerover.asInstanceOf[js.Any])
+    if (onpointerup != null) __obj.updateDynamic("onpointerup")(onpointerup.asInstanceOf[js.Any])
+    if (onprogress != null) __obj.updateDynamic("onprogress")(onprogress.asInstanceOf[js.Any])
+    if (onratechange != null) __obj.updateDynamic("onratechange")(onratechange.asInstanceOf[js.Any])
+    if (onreset != null) __obj.updateDynamic("onreset")(onreset.asInstanceOf[js.Any])
+    if (onscroll != null) __obj.updateDynamic("onscroll")(onscroll.asInstanceOf[js.Any])
+    if (onseeked != null) __obj.updateDynamic("onseeked")(onseeked.asInstanceOf[js.Any])
+    if (onseeking != null) __obj.updateDynamic("onseeking")(onseeking.asInstanceOf[js.Any])
+    if (onselect != null) __obj.updateDynamic("onselect")(onselect.asInstanceOf[js.Any])
+    if (onselectstart != null) __obj.updateDynamic("onselectstart")(onselectstart.asInstanceOf[js.Any])
+    if (onstalled != null) __obj.updateDynamic("onstalled")(onstalled.asInstanceOf[js.Any])
+    if (onsubmit != null) __obj.updateDynamic("onsubmit")(onsubmit.asInstanceOf[js.Any])
+    if (onsuspend != null) __obj.updateDynamic("onsuspend")(onsuspend.asInstanceOf[js.Any])
+    if (ontimeupdate != null) __obj.updateDynamic("ontimeupdate")(ontimeupdate.asInstanceOf[js.Any])
+    if (onvolumechange != null) __obj.updateDynamic("onvolumechange")(onvolumechange.asInstanceOf[js.Any])
+    if (onwaiting != null) __obj.updateDynamic("onwaiting")(onwaiting.asInstanceOf[js.Any])
+    if (optimum != null) __obj.updateDynamic("optimum")(optimum.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (poster != null) __obj.updateDynamic("poster")(poster.asInstanceOf[js.Any])
+    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
+    if (readonly != null) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
+    if (rel != null) __obj.updateDynamic("rel")(rel.asInstanceOf[js.Any])
+    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+    if (reversed != null) __obj.updateDynamic("reversed")(reversed.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (rowspan != null) __obj.updateDynamic("rowspan")(rowspan.asInstanceOf[js.Any])
+    if (sandbox != null) __obj.updateDynamic("sandbox")(sandbox.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
+    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
+    if (spellcheck != null) __obj.updateDynamic("spellcheck")(spellcheck.asInstanceOf[js.Any])
+    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
+    if (srcdoc != null) __obj.updateDynamic("srcdoc")(srcdoc.asInstanceOf[js.Any])
+    if (srclang != null) __obj.updateDynamic("srclang")(srclang.asInstanceOf[js.Any])
+    if (srcset != null) __obj.updateDynamic("srcset")(srcset.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (tabindex != null) __obj.updateDynamic("tabindex")(tabindex.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (typemustmatch != null) __obj.updateDynamic("typemustmatch")(typemustmatch.asInstanceOf[js.Any])
+    if (usemap != null) __obj.updateDynamic("usemap")(usemap.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementAttrs]
   }
-  @scala.inline
-  implicit class ElementAttrsOps[Self <: ElementAttrs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbbr(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbbr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccept(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccept-charset`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccept-charset`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-charset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccesskey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accesskey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccesskey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accesskey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowfullscreen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowfullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowfullscreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowfullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutocomplete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutocomplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autocomplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutofocus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutofocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autofocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosave(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChecked(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChecked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCite(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCols(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCols: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColspan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColspan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colspan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContenteditable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contenteditable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContenteditable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contenteditable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoords(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossorigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossorigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossorigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossorigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataset(value: ElementDataset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatetime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datetime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatetime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datetime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropzone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropzone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropzone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropzone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnctype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnctype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enctype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormenctype(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formenctype")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormenctype: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formenctype")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormmethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formmethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormmethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formmethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormnovalidate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formnovalidate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormnovalidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formnovalidate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormtarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formtarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormtarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formtarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHigh(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHigh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHref: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHreflang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hreflang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHreflang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hreflang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlFor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputmode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputmode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputmode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegrity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsmap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ismap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsmap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ismap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withList(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxlength(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxlength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxlength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxlength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedia(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedia: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediagroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediagroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediagroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediagroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinlength(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinlength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minlength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMuted(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMuted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNovalidate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("novalidate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNovalidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("novalidate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnabort(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnabort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnauxclick(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onauxclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnauxclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onauxclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnblur(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onblur")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnblur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onblur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncanplay(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncanplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncanplaythrough(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncanplaythrough: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnchange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnclick(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncontextmenu(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncontextmenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncontextmenu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncontextmenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncopy(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncopy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncopy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncuechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncuechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOncut(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOncut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oncut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndblclick(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndblclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndrag(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragenter(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragexit(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragexit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragleave(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragleave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragover(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndragstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndragstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndrop(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOndurationchange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOndurationchange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnemptied(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnemptied: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnended(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MediaStreamErrorEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnended: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnerror(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ ErrorEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnerror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnfocus(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnfocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onfocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOninput(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOninput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOninvalid(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOninvalid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnkeydown(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeydown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnkeydown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeydown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnkeypress(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeypress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnkeypress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeypress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnkeyup(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeyup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnkeyup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeyup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnload(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadeddata(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadeddata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadedmetadata(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadedmetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnloadstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnloadstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmousedown(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousedown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmousedown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousedown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseenter(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseleave(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseleave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmousemove(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmousemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseout(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseover(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmouseup(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmouseup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnmousewheel(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ WheelEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousewheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnmousewheel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousewheel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpaste(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpaste")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpaste: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpaste")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpause(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpause: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnplay(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnplaying(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnplaying: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointercancel(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointercancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointercancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointercancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerdown(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerenter(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerenter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerleave(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerleave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerleave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerleave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointermove(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointermove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointermove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointermove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerout(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerover(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnpointerup(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnpointerup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnprogress(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ ProgressEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnprogress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnratechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnratechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnreset(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnreset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnscroll(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnscroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnseeked(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnseeked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnseeking(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnseeking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnselect(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnselectstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnselectstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnstalled(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnstalled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsubmit(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnsuspend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnsuspend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOntimeupdate(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOntimeupdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnvolumechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnvolumechange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnwaiting(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnwaiting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimum(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPattern(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPattern: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoster(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReversed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowspan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowspan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowspan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowspan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSandbox(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSandbox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpan(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpellcheck(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpellcheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcdoc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcdoc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcdoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcdoc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrclang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srclang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrclang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srclang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: ElementInlineStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabindex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabindex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabindex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabindex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypemustmatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typemustmatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypemustmatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typemustmatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsemap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usemap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsemap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -27,77 +27,20 @@ trait DescribeLocationNfsResponse extends js.Object {
 
 object DescribeLocationNfsResponse {
   @scala.inline
-  def apply(): DescribeLocationNfsResponse = {
+  def apply(
+    CreationTime: js.Date = null,
+    LocationArn: LocationArn = null,
+    LocationUri: LocationUri = null,
+    MountOptions: NfsMountOptions = null,
+    OnPremConfig: OnPremConfig = null
+  ): DescribeLocationNfsResponse = {
     val __obj = js.Dynamic.literal()
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (LocationArn != null) __obj.updateDynamic("LocationArn")(LocationArn.asInstanceOf[js.Any])
+    if (LocationUri != null) __obj.updateDynamic("LocationUri")(LocationUri.asInstanceOf[js.Any])
+    if (MountOptions != null) __obj.updateDynamic("MountOptions")(MountOptions.asInstanceOf[js.Any])
+    if (OnPremConfig != null) __obj.updateDynamic("OnPremConfig")(OnPremConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLocationNfsResponse]
   }
-  @scala.inline
-  implicit class DescribeLocationNfsResponseOps[Self <: DescribeLocationNfsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationArn(value: LocationArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationUri(value: LocationUri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountOptions(value: NfsMountOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MountOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPremConfig(value: OnPremConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPremConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPremConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPremConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

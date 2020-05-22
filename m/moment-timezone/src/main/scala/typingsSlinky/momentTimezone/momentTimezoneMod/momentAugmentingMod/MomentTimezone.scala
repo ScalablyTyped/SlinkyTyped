@@ -1,6 +1,6 @@
 package typingsSlinky.momentTimezone.momentTimezoneMod.momentAugmentingMod
 
-import typingsSlinky.moment.mod.MomentFormatSpecification
+import typingsSlinky.moment.momentMod.MomentFormatSpecification
 import typingsSlinky.momentTimezone.anon.Links
 import typingsSlinky.momentTimezone.momentTimezoneBooleans.`false`
 import typingsSlinky.momentTimezone.momentTimezoneBooleans.`true`
@@ -10,24 +10,24 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MomentTimezone extends js.Object {
-  def apply(): typingsSlinky.moment.mod.Moment = js.native
+  def apply(): typingsSlinky.moment.momentMod.Moment = js.native
   def apply(
     date: String,
     format: MomentFormatSpecification,
     language: String,
     strict: Boolean,
     timezone: String
-  ): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: String, format: MomentFormatSpecification, language: String, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: String, format: MomentFormatSpecification, strict: Boolean, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: String, format: MomentFormatSpecification, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: String, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: js.Any, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: js.Array[Double], timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: Double, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: typingsSlinky.moment.mod.Moment, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(date: js.Date, timezone: String): typingsSlinky.moment.mod.Moment = js.native
-  def apply(timezone: String): typingsSlinky.moment.mod.Moment = js.native
+  ): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: String, format: MomentFormatSpecification, language: String, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: String, format: MomentFormatSpecification, strict: Boolean, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: String, format: MomentFormatSpecification, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: String, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: js.Any, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: js.Array[Double], timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: Double, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: typingsSlinky.moment.momentMod.Moment, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(date: js.Date, timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
+  def apply(timezone: String): typingsSlinky.moment.momentMod.Moment = js.native
   def add(packedZoneString: String): Unit = js.native
   def add(packedZoneString: js.Array[String]): Unit = js.native
   def countries(): js.Array[String] = js.native

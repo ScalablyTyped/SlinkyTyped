@@ -44,7 +44,6 @@ trait Process extends EventEmitter {
   var features: Debug = js.native
   @JSName("hrtime")
   var hrtime_Original: HRTime = js.native
-  var mainModule: js.UndefOr[Module] = js.native
   var pid: Double = js.native
   var platform: Platform = js.native
   var ppid: Double = js.native
@@ -296,7 +295,6 @@ trait Process extends EventEmitter {
   /**
     * Can only be set if not in worker thread.
     */
-  def umask(): Double = js.native
   def umask(mask: Double): Double = js.native
   def uptime(): Double = js.native
 }

@@ -4,6 +4,7 @@ import typingsSlinky.ioredis.ioredisStrings.AFTER
 import typingsSlinky.ioredis.ioredisStrings.BEFORE
 import typingsSlinky.ioredis.ioredisStrings.COUNT
 import typingsSlinky.ioredis.ioredisStrings.GROUP
+import typingsSlinky.ioredis.ioredisStrings.LIMIT
 import typingsSlinky.ioredis.ioredisStrings.MATCH
 import typingsSlinky.ioredis.ioredisStrings.MAXLEN
 import typingsSlinky.ioredis.ioredisStrings.NOSAVE
@@ -391,6 +392,20 @@ trait Pipeline extends js.Object {
     withScores: WITHSCORES,
     callback: Callback[js.Array[String]]
   ): Pipeline = js.native
+  def zrangebylex(key: KeyType, min: String, max: String): Pipeline = js.native
+  def zrangebylex(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Pipeline = js.native
+  @JSName("zrangebylex")
+  def zrangebylex_LIMIT(key: KeyType, min: String, max: String, limit: LIMIT, offset: Double, count: Double): Pipeline = js.native
+  @JSName("zrangebylex")
+  def zrangebylex_LIMIT(
+    key: KeyType,
+    min: String,
+    max: String,
+    limit: LIMIT,
+    offset: Double,
+    count: Double,
+    callback: Callback[js.Array[String]]
+  ): Pipeline = js.native
   def zrangebyscore(key: KeyType, min: String, max: String, args: String*): Pipeline = js.native
   def zrangebyscore(key: KeyType, min: String, max: Double, args: String*): Pipeline = js.native
   def zrangebyscore(key: KeyType, min: Double, max: String, args: String*): Pipeline = js.native
@@ -398,6 +413,8 @@ trait Pipeline extends js.Object {
   def zrank(key: KeyType, member: String): Pipeline = js.native
   def zrank(key: KeyType, member: String, callback: Callback[Double]): Pipeline = js.native
   def zrem(key: KeyType, members: ValueType*): Pipeline = js.native
+  def zremrangebylex(key: KeyType, min: String, max: String): Pipeline = js.native
+  def zremrangebylex(key: KeyType, min: String, max: String, callback: Callback[Double]): Pipeline = js.native
   def zremrangebyrank(key: KeyType, start: Double, stop: Double): Pipeline = js.native
   def zremrangebyrank(key: KeyType, start: Double, stop: Double, callback: Callback[Double]): Pipeline = js.native
   def zremrangebyscore(key: KeyType, min: String, max: String): Pipeline = js.native
@@ -418,6 +435,20 @@ trait Pipeline extends js.Object {
     start: Double,
     stop: Double,
     withScores: WITHSCORES,
+    callback: Callback[js.Array[String]]
+  ): Pipeline = js.native
+  def zrevrangebylex(key: KeyType, min: String, max: String): Pipeline = js.native
+  def zrevrangebylex(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Pipeline = js.native
+  @JSName("zrevrangebylex")
+  def zrevrangebylex_LIMIT(key: KeyType, min: String, max: String, limit: LIMIT, offset: Double, count: Double): Pipeline = js.native
+  @JSName("zrevrangebylex")
+  def zrevrangebylex_LIMIT(
+    key: KeyType,
+    min: String,
+    max: String,
+    limit: LIMIT,
+    offset: Double,
+    count: Double,
     callback: Callback[js.Array[String]]
   ): Pipeline = js.native
   def zrevrangebyscore(key: KeyType, max: String, min: String, args: String*): Pipeline = js.native

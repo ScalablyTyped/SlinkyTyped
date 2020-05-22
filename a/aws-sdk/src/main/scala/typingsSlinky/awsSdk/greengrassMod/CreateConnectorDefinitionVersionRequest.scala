@@ -22,47 +22,11 @@ trait CreateConnectorDefinitionVersionRequest extends js.Object {
 
 object CreateConnectorDefinitionVersionRequest {
   @scala.inline
-  def apply(ConnectorDefinitionId: string): CreateConnectorDefinitionVersionRequest = {
+  def apply(ConnectorDefinitionId: string, AmznClientToken: string = null, Connectors: listOfConnector = null): CreateConnectorDefinitionVersionRequest = {
     val __obj = js.Dynamic.literal(ConnectorDefinitionId = ConnectorDefinitionId.asInstanceOf[js.Any])
+    if (AmznClientToken != null) __obj.updateDynamic("AmznClientToken")(AmznClientToken.asInstanceOf[js.Any])
+    if (Connectors != null) __obj.updateDynamic("Connectors")(Connectors.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateConnectorDefinitionVersionRequest]
   }
-  @scala.inline
-  implicit class CreateConnectorDefinitionVersionRequestOps[Self <: CreateConnectorDefinitionVersionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectorDefinitionId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectorDefinitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAmznClientToken(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmznClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectors(value: listOfConnector): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Connectors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Connectors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

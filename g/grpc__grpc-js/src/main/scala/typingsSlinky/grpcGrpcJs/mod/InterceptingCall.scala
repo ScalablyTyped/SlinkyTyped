@@ -1,12 +1,16 @@
 package typingsSlinky.grpcGrpcJs.mod
 
+import typingsSlinky.grpcGrpcJs.clientInterceptorsMod.InterceptingCallInterface
+import typingsSlinky.grpcGrpcJs.clientInterceptorsMod.Requester
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@grpc/grpc-js", "InterceptingCall")
 @js.native
-object InterceptingCall extends js.Object {
-  def apply(): scala.Nothing = js.native
+class InterceptingCall protected ()
+  extends typingsSlinky.grpcGrpcJs.clientInterceptorsMod.InterceptingCall {
+  def this(nextCall: InterceptingCallInterface) = this()
+  def this(nextCall: InterceptingCallInterface, requester: Requester) = this()
 }
 

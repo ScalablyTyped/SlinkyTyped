@@ -4,180 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Survey extends js.Object {
   /** Targeting-criteria message containing demographic information */
-  var audience: js.UndefOr[SurveyAudience] = js.native
+  var audience: js.UndefOr[SurveyAudience] = js.undefined
   /** Cost to run the survey and collect the necessary number of responses. */
-  var cost: js.UndefOr[SurveyCost] = js.native
+  var cost: js.UndefOr[SurveyCost] = js.undefined
   /**
     * Additional information to store on behalf of the API consumer and associate with this question. This binary blob is treated as opaque. This field is
     * limited to 64K bytes.
     */
-  var customerData: js.UndefOr[String] = js.native
+  var customerData: js.UndefOr[String] = js.undefined
   /** Text description of the survey. */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /** List of email addresses for survey owners. Must contain at least the address of the user making the API call. */
-  var owners: js.UndefOr[js.Array[String]] = js.native
+  var owners: js.UndefOr[js.Array[String]] = js.undefined
   /** List of questions defining the survey. */
-  var questions: js.UndefOr[js.Array[SurveyQuestion]] = js.native
+  var questions: js.UndefOr[js.Array[SurveyQuestion]] = js.undefined
   /** Reason for the survey being rejected. Only present if the survey state is rejected. */
-  var rejectionReason: js.UndefOr[SurveyRejection] = js.native
+  var rejectionReason: js.UndefOr[SurveyRejection] = js.undefined
   /** State that the survey is in. */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[String] = js.undefined
   /** Unique survey ID, that is viewable in the URL of the Survey Creator UI */
-  var surveyUrlId: js.UndefOr[String] = js.native
+  var surveyUrlId: js.UndefOr[String] = js.undefined
   /** Optional name that will be given to the survey. */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** Number of responses desired for the survey. */
-  var wantedResponseCount: js.UndefOr[Double] = js.native
+  var wantedResponseCount: js.UndefOr[Double] = js.undefined
 }
 
 object Survey {
   @scala.inline
-  def apply(): Survey = {
+  def apply(
+    audience: SurveyAudience = null,
+    cost: SurveyCost = null,
+    customerData: String = null,
+    description: String = null,
+    owners: js.Array[String] = null,
+    questions: js.Array[SurveyQuestion] = null,
+    rejectionReason: SurveyRejection = null,
+    state: String = null,
+    surveyUrlId: String = null,
+    title: String = null,
+    wantedResponseCount: js.UndefOr[Double] = js.undefined
+  ): Survey = {
     val __obj = js.Dynamic.literal()
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (cost != null) __obj.updateDynamic("cost")(cost.asInstanceOf[js.Any])
+    if (customerData != null) __obj.updateDynamic("customerData")(customerData.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (owners != null) __obj.updateDynamic("owners")(owners.asInstanceOf[js.Any])
+    if (questions != null) __obj.updateDynamic("questions")(questions.asInstanceOf[js.Any])
+    if (rejectionReason != null) __obj.updateDynamic("rejectionReason")(rejectionReason.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (surveyUrlId != null) __obj.updateDynamic("surveyUrlId")(surveyUrlId.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(wantedResponseCount)) __obj.updateDynamic("wantedResponseCount")(wantedResponseCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Survey]
   }
-  @scala.inline
-  implicit class SurveyOps[Self <: Survey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudience(value: SurveyAudience): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCost(value: SurveyCost): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cost")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwners(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwners: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuestions(value: js.Array[SurveyQuestion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("questions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuestions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("questions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectionReason(value: SurveyRejection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectionReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectionReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectionReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSurveyUrlId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surveyUrlId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSurveyUrlId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("surveyUrlId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWantedResponseCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wantedResponseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWantedResponseCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wantedResponseCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

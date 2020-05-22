@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.Enumeration.DevicePairingResult")
 @js.native
 abstract class DevicePairingResult ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingResult
+  extends typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingResult {
+  /** Gets the level of protection used to pair the device. */
+  /* CompleteClass */
+  override var protectionLevelUsed: typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingProtectionLevel = js.native
+  /** Gets the paired status of the device after the pairing action completed. */
+  /* CompleteClass */
+  override var status: typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingResultStatus = js.native
+}
 

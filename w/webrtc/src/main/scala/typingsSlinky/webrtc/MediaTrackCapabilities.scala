@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MediaTrackCapabilities extends js.Object {
   //width: number | W3C.LongRange;
   //height: number | W3C.LongRange;
@@ -16,34 +15,15 @@ trait MediaTrackCapabilities extends js.Object {
   //sampleRate: number | W3C.LongRange;
   //sampleSize: number | W3C.LongRange;
   //echoCancellation: boolean[];
-  var latency: js.UndefOr[DoubleRange] = js.native
+  var latency: js.UndefOr[DoubleRange] = js.undefined
 }
 
 object MediaTrackCapabilities {
   @scala.inline
-  def apply(): MediaTrackCapabilities = {
+  def apply(latency: DoubleRange = null): MediaTrackCapabilities = {
     val __obj = js.Dynamic.literal()
+    if (latency != null) __obj.updateDynamic("latency")(latency.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaTrackCapabilities]
   }
-  @scala.inline
-  implicit class MediaTrackCapabilitiesOps[Self <: MediaTrackCapabilities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLatency(value: DoubleRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latency")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

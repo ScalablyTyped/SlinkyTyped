@@ -10,6 +10,8 @@ package object mod {
     /* payload */ typingsSlinky.elasticApmNode.mod.Payload, 
     typingsSlinky.elasticApmNode.mod.Payload | scala.Boolean | scala.Unit
   ]
+  type KeyValueConfig = java.lang.String | typingsSlinky.elasticApmNode.mod.Labels | js.Array[js.Array[typingsSlinky.elasticApmNode.mod.LabelValue]]
+  type LabelValue = js.UndefOr[java.lang.String | scala.Double | scala.Boolean | scala.Null]
   type Labels = org.scalablytyped.runtime.StringDictionary[typingsSlinky.elasticApmNode.mod.LabelValue]
   type PatchHandler = js.Function3[
     /* exports */ js.Any, 

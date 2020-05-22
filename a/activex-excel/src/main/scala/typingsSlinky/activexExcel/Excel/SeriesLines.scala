@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SeriesLines extends js.Object {
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  val Border: typingsSlinky.activexExcel.Excel.Border = js.native
-  val Creator: XlCreator = js.native
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  val Border: typingsSlinky.activexExcel.Excel.Border
+  val Creator: XlCreator
   @JSName("Excel.SeriesLines_typekey")
-  var ExcelDotSeriesLines_typekey: SeriesLines = js.native
-  val Format: ChartFormat = js.native
-  val Name: String = js.native
-  val Parent: js.Any = js.native
-  def Delete(): js.Any = js.native
-  def Select(): js.Any = js.native
+  var ExcelDotSeriesLines_typekey: SeriesLines
+  val Format: ChartFormat
+  val Name: String
+  val Parent: js.Any
+  def Delete(): js.Any
+  def Select(): js.Any
 }
 
 object SeriesLines {
@@ -35,67 +34,5 @@ object SeriesLines {
     __obj.updateDynamic("Excel.SeriesLines_typekey")(ExcelDotSeriesLines_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesLines]
   }
-  @scala.inline
-  implicit class SeriesLinesOps[Self <: SeriesLines] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: Border): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExcelDotSeriesLines_typekey(value: SeriesLines): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.SeriesLines_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: ChartFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelect(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

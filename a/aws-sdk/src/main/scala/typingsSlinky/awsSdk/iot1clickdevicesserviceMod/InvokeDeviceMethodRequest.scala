@@ -22,47 +22,11 @@ trait InvokeDeviceMethodRequest extends js.Object {
 
 object InvokeDeviceMethodRequest {
   @scala.inline
-  def apply(DeviceId: string): InvokeDeviceMethodRequest = {
+  def apply(DeviceId: string, DeviceMethod: DeviceMethod = null, DeviceMethodParameters: string = null): InvokeDeviceMethodRequest = {
     val __obj = js.Dynamic.literal(DeviceId = DeviceId.asInstanceOf[js.Any])
+    if (DeviceMethod != null) __obj.updateDynamic("DeviceMethod")(DeviceMethod.asInstanceOf[js.Any])
+    if (DeviceMethodParameters != null) __obj.updateDynamic("DeviceMethodParameters")(DeviceMethodParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeDeviceMethodRequest]
   }
-  @scala.inline
-  implicit class InvokeDeviceMethodRequestOps[Self <: InvokeDeviceMethodRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeviceMethod(value: DeviceMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceMethodParameters(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceMethodParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceMethodParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceMethodParameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

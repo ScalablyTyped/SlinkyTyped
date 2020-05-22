@@ -1,5 +1,8 @@
 package typingsSlinky.proxyVerifier.mod
 
+import typingsSlinky.proxyVerifier.anon.Code
+import typingsSlinky.proxyVerifier.proxyVerifierBooleans.`false`
+import typingsSlinky.proxyVerifier.proxyVerifierBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +15,14 @@ trait Result extends js.Object
 
 object Result {
   @scala.inline
-  implicit def apply(value: NotWorkingResult): Result = value.asInstanceOf[Result]
+  def WorkingResult(ok: `true`): Result = {
+    val __obj = js.Dynamic.literal(ok = ok.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Result]
+  }
   @scala.inline
-  implicit def apply(value: WorkingResult): Result = value.asInstanceOf[Result]
+  def NotWorkingResult(error: Code, ok: `false`): Result = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], ok = ok.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Result]
+  }
 }
 

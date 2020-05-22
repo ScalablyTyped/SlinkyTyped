@@ -27,6 +27,14 @@ trait AnalyzerSummary extends js.Object {
     */
   var name: Name = js.native
   /**
+    * The status of the analyzer. An Active analyzer successfully monitors supported resources and generates new findings. The analyzer is Disabled when a user action, such as removing trusted access for IAM Access Analyzer from AWS Organizations, causes the analyzer to stop generating new findings. The status is Creating when the analyzer creation is in progress and Failed when the analyzer creation has failed. 
+    */
+  var status: AnalyzerStatus = js.native
+  /**
+    * The statusReason provides more details about the current status of the analyzer. For example, if the creation for the analyzer fails, a Failed status is displayed. For an analyzer with organization as the type, this failure can be due to an issue with creating the service-linked roles required in the member accounts of the AWS organization.
+    */
+  var statusReason: js.UndefOr[StatusReason] = js.native
+  /**
     * The tags added to the analyzer.
     */
   var tags: js.UndefOr[TagsMap] = js.native
@@ -38,78 +46,24 @@ trait AnalyzerSummary extends js.Object {
 
 object AnalyzerSummary {
   @scala.inline
-  def apply(arn: AnalyzerArn, createdAt: js.Date, name: Name, `type`: Type): AnalyzerSummary = {
-    val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(
+    arn: AnalyzerArn,
+    createdAt: js.Date,
+    name: Name,
+    status: AnalyzerStatus,
+    `type`: Type,
+    lastResourceAnalyzed: String = null,
+    lastResourceAnalyzedAt: js.Date = null,
+    statusReason: StatusReason = null,
+    tags: TagsMap = null
+  ): AnalyzerSummary = {
+    val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lastResourceAnalyzed != null) __obj.updateDynamic("lastResourceAnalyzed")(lastResourceAnalyzed.asInstanceOf[js.Any])
+    if (lastResourceAnalyzedAt != null) __obj.updateDynamic("lastResourceAnalyzedAt")(lastResourceAnalyzedAt.asInstanceOf[js.Any])
+    if (statusReason != null) __obj.updateDynamic("statusReason")(statusReason.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyzerSummary]
   }
-  @scala.inline
-  implicit class AnalyzerSummaryOps[Self <: AnalyzerSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: AnalyzerArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastResourceAnalyzed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastResourceAnalyzed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastResourceAnalyzedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastResourceAnalyzedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastResourceAnalyzedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagsMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

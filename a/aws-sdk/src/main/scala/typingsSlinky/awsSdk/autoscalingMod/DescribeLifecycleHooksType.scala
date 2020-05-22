@@ -18,35 +18,10 @@ trait DescribeLifecycleHooksType extends js.Object {
 
 object DescribeLifecycleHooksType {
   @scala.inline
-  def apply(AutoScalingGroupName: ResourceName): DescribeLifecycleHooksType = {
+  def apply(AutoScalingGroupName: ResourceName, LifecycleHookNames: LifecycleHookNames = null): DescribeLifecycleHooksType = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any])
+    if (LifecycleHookNames != null) __obj.updateDynamic("LifecycleHookNames")(LifecycleHookNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLifecycleHooksType]
   }
-  @scala.inline
-  implicit class DescribeLifecycleHooksTypeOps[Self <: DescribeLifecycleHooksType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingGroupName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLifecycleHookNames(value: LifecycleHookNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleHookNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

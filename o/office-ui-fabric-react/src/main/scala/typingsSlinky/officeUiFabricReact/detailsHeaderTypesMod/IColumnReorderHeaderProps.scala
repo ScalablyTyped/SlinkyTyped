@@ -2,45 +2,41 @@ package typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod
 
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.officeUiFabricReact.anon.DropLocation
+import typingsSlinky.officeUiFabricReact.detailsListTypesMod.ColumnDragEndLocation
+import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumnDragDropDetails
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumnReorderOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IColumnReorderHeaderProps extends IColumnReorderOptions {
   /** Callback to notify the column dragEnd event to List
     * Need this to check whether the dragEnd has happened on
     * corresponding list or outside of the list
     */
-  var onColumnDragEnd: js.UndefOr[js.Function2[/* props */ DropLocation, /* event */ MouseEvent, Unit]] = js.native
+  var onColumnDragEnd: js.UndefOr[js.Function2[/* props */ DropLocation, /* event */ MouseEvent, Unit]] = js.undefined
 }
 
 object IColumnReorderHeaderProps {
   @scala.inline
-  def apply(): IColumnReorderHeaderProps = {
+  def apply(
+    frozenColumnCountFromEnd: js.UndefOr[Double] = js.undefined,
+    frozenColumnCountFromStart: js.UndefOr[Double] = js.undefined,
+    handleColumnReorder: (/* draggedIndex */ Double, /* targetIndex */ Double) => Unit = null,
+    onColumnDragEnd: (/* props */ DropLocation, /* event */ MouseEvent) => Unit = null,
+    onColumnDragStart: /* dragStarted */ Boolean => Unit = null,
+    onColumnDrop: /* dragDropDetails */ IColumnDragDropDetails => Unit = null,
+    onDragEnd: /* columnDropLocationDetails */ ColumnDragEndLocation => Unit = null
+  ): IColumnReorderHeaderProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(frozenColumnCountFromEnd)) __obj.updateDynamic("frozenColumnCountFromEnd")(frozenColumnCountFromEnd.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frozenColumnCountFromStart)) __obj.updateDynamic("frozenColumnCountFromStart")(frozenColumnCountFromStart.get.asInstanceOf[js.Any])
+    if (handleColumnReorder != null) __obj.updateDynamic("handleColumnReorder")(js.Any.fromFunction2(handleColumnReorder))
+    if (onColumnDragEnd != null) __obj.updateDynamic("onColumnDragEnd")(js.Any.fromFunction2(onColumnDragEnd))
+    if (onColumnDragStart != null) __obj.updateDynamic("onColumnDragStart")(js.Any.fromFunction1(onColumnDragStart))
+    if (onColumnDrop != null) __obj.updateDynamic("onColumnDrop")(js.Any.fromFunction1(onColumnDrop))
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
     __obj.asInstanceOf[IColumnReorderHeaderProps]
   }
-  @scala.inline
-  implicit class IColumnReorderHeaderPropsOps[Self <: IColumnReorderHeaderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnColumnDragEnd(value: (/* props */ DropLocation, /* event */ MouseEvent) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnDragEnd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnColumnDragEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnDragEnd")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

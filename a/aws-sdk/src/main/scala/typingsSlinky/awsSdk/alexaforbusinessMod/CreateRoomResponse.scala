@@ -14,29 +14,10 @@ trait CreateRoomResponse extends js.Object {
 
 object CreateRoomResponse {
   @scala.inline
-  def apply(): CreateRoomResponse = {
+  def apply(RoomArn: Arn = null): CreateRoomResponse = {
     val __obj = js.Dynamic.literal()
+    if (RoomArn != null) __obj.updateDynamic("RoomArn")(RoomArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRoomResponse]
   }
-  @scala.inline
-  implicit class CreateRoomResponseOps[Self <: CreateRoomResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoomArn(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoomArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

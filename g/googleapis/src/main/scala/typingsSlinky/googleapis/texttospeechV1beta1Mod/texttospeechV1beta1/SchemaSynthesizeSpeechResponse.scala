@@ -20,29 +20,10 @@ trait SchemaSynthesizeSpeechResponse extends js.Object {
 
 object SchemaSynthesizeSpeechResponse {
   @scala.inline
-  def apply(): SchemaSynthesizeSpeechResponse = {
+  def apply(audioContent: String = null): SchemaSynthesizeSpeechResponse = {
     val __obj = js.Dynamic.literal()
+    if (audioContent != null) __obj.updateDynamic("audioContent")(audioContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSynthesizeSpeechResponse]
   }
-  @scala.inline
-  implicit class SchemaSynthesizeSpeechResponseOps[Self <: SchemaSynthesizeSpeechResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioContent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

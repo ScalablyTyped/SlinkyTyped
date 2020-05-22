@@ -7,75 +7,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BorderSize extends js.Object {
-  var borderSize: js.UndefOr[BreakpointBorderSize] = js.native
-  var edgeSize: js.UndefOr[BreakpointEdgeSize] = js.native
-  var size: js.UndefOr[BreakpointSize] = js.native
-  var value: js.UndefOr[Double] = js.native
+  var borderSize: js.UndefOr[BreakpointBorderSize] = js.undefined
+  var edgeSize: js.UndefOr[BreakpointEdgeSize] = js.undefined
+  var size: js.UndefOr[BreakpointSize] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object BorderSize {
   @scala.inline
-  def apply(): BorderSize = {
+  def apply(
+    borderSize: BreakpointBorderSize = null,
+    edgeSize: BreakpointEdgeSize = null,
+    size: BreakpointSize = null,
+    value: js.UndefOr[Double] = js.undefined
+  ): BorderSize = {
     val __obj = js.Dynamic.literal()
+    if (borderSize != null) __obj.updateDynamic("borderSize")(borderSize.asInstanceOf[js.Any])
+    if (edgeSize != null) __obj.updateDynamic("edgeSize")(edgeSize.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BorderSize]
   }
-  @scala.inline
-  implicit class BorderSizeOps[Self <: BorderSize] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderSize(value: BreakpointBorderSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeSize(value: BreakpointEdgeSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: BreakpointSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,18 +7,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the DownloadFailed event. */
-@js.native
 trait AdaptiveMediaSourceDownloadFailedEventArgs extends js.Object {
   /** Gets the http response message, if any, returned from the failed media download request. */
-  var httpResponseMessage: HttpResponseMessage = js.native
+  var httpResponseMessage: HttpResponseMessage
   /** Gets the byte range length of the failed media download request. */
-  var resourceByteRangeLength: Double = js.native
+  var resourceByteRangeLength: Double
   /** Gets the byte range offset of the failed media download request. */
-  var resourceByteRangeOffset: Double = js.native
+  var resourceByteRangeOffset: Double
   /** Gets the resource type of the failed media download request. */
-  var resourceType: AdaptiveMediaSourceResourceType = js.native
+  var resourceType: AdaptiveMediaSourceResourceType
   /** Gets the resource URI of the failed media download request. */
-  var resourceUri: Uri = js.native
+  var resourceUri: Uri
 }
 
 object AdaptiveMediaSourceDownloadFailedEventArgs {
@@ -33,43 +32,5 @@ object AdaptiveMediaSourceDownloadFailedEventArgs {
     val __obj = js.Dynamic.literal(httpResponseMessage = httpResponseMessage.asInstanceOf[js.Any], resourceByteRangeLength = resourceByteRangeLength.asInstanceOf[js.Any], resourceByteRangeOffset = resourceByteRangeOffset.asInstanceOf[js.Any], resourceType = resourceType.asInstanceOf[js.Any], resourceUri = resourceUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdaptiveMediaSourceDownloadFailedEventArgs]
   }
-  @scala.inline
-  implicit class AdaptiveMediaSourceDownloadFailedEventArgsOps[Self <: AdaptiveMediaSourceDownloadFailedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpResponseMessage(value: HttpResponseMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpResponseMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceByteRangeLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceByteRangeLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceByteRangeOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceByteRangeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: AdaptiveMediaSourceResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceUri(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

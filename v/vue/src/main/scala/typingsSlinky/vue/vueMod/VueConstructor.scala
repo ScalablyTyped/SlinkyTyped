@@ -5,7 +5,6 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.Record
 import typingsSlinky.vue.anon.StaticRenderFns
 import typingsSlinky.vue.optionsMod.AsyncComponent
-import typingsSlinky.vue.optionsMod.Component
 import typingsSlinky.vue.optionsMod.ComponentOptions
 import typingsSlinky.vue.optionsMod.DefaultComputed
 import typingsSlinky.vue.optionsMod.DefaultData
@@ -26,8 +25,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait VueConstructor[V /* <: Vue */]
-  extends Component[js.Any, js.Any, js.Any, js.Any]
-     with // ideally, the return type should just contain Props, not Record<keyof Props, any>. But TS requires to have Base constructors with the same return type.
+  extends // ideally, the return type should just contain Props, not Record<keyof Props, any>. But TS requires to have Base constructors with the same return type.
 Instantiable0[
       CombinedVueInstance[V, js.Object, js.Object, js.Object, Record[/* keyof object */ String, js.Any]]
     ]

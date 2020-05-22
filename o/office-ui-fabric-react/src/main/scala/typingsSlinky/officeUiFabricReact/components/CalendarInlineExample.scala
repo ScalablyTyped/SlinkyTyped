@@ -17,10 +17,7 @@ object CalendarInlineExample {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[
-          tag.type, 
-          typingsSlinky.officeUiFabricReact.calendarInlineExampleMod.CalendarInlineExample
-        ] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def firstDayOfWeek(value: DayOfWeek): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
     @scala.inline

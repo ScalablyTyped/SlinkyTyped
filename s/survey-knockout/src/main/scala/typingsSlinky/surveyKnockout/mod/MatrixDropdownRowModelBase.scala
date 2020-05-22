@@ -17,6 +17,7 @@ class MatrixDropdownRowModelBase protected ()
   val hasCondition: Boolean = js.native
   val id: String = js.native
   val isEmpty: Boolean = js.native
+  var isSettingValue: Boolean = js.native
   val locText: LocalizableString = js.native
   val rowIndex: Double = js.native
   val rowName: js.Any = js.native
@@ -24,14 +25,30 @@ class MatrixDropdownRowModelBase protected ()
   /* protected */ def buildCells(value: js.Any): Unit = js.native
   def clearIncorrectValues(`val`: js.Any): Unit = js.native
   /* protected */ def createCell(column: MatrixDropdownColumn): MatrixDropdownCell = js.native
+  /* CompleteClass */
+  override def geSurveyData(): ISurveyData = js.native
   def getDataValueCore(valuesHash: js.Any, key: String): js.Any = js.native
+  /* CompleteClass */
+  override def getLocale(): String = js.native
+  /* CompleteClass */
+  override def getMarkdownHtml(text: String): String = js.native
+  /* CompleteClass */
+  override def getProcessedText(text: String): String = js.native
   def getQuestionByColumn(column: MatrixDropdownColumn): Question = js.native
   def getQuestionByColumnName(columnName: String): Question = js.native
   /* protected */ def getSharedQuestionByName(columnName: String): Question = js.native
+  /* CompleteClass */
+  override def getSurvey(): ISurvey = js.native
+  /* CompleteClass */
+  override def getTextProcessor(): ITextProcessor = js.native
   def locStrsChanged(): Unit = js.native
   def onAnyValueChanged(name: String): Unit = js.native
   def onQuestionReadOnlyChanged(parentIsReadOnly: Boolean): Unit = js.native
+  /* CompleteClass */
+  override def processText(text: String, returnDisplayValue: Boolean): String = js.native
   def processTextEx(text: String, returnDisplayValue: Boolean): js.Any = js.native
+  /* CompleteClass */
+  override def processTextEx(text: String, returnDisplayValue: Boolean, doEncoding: Boolean): js.Any = js.native
   def runCondition(values: HashTable[_], properties: HashTable[_]): Unit = js.native
   def setValue(name: String, newColumnValue: js.Any): Unit = js.native
   /* protected */ def updateCellOnColumnChanged(cell: MatrixDropdownCell): Unit = js.native

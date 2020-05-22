@@ -70,173 +70,36 @@ trait PushNotificationTemplateResponse extends js.Object {
 
 object PushNotificationTemplateResponse {
   @scala.inline
-  def apply(CreationDate: string, LastModifiedDate: string, TemplateName: string, TemplateType: TemplateType): PushNotificationTemplateResponse = {
+  def apply(
+    CreationDate: string,
+    LastModifiedDate: string,
+    TemplateName: string,
+    TemplateType: TemplateType,
+    ADM: AndroidPushNotificationTemplate = null,
+    APNS: APNSPushNotificationTemplate = null,
+    Arn: string = null,
+    Baidu: AndroidPushNotificationTemplate = null,
+    Default: DefaultPushNotificationTemplate = null,
+    DefaultSubstitutions: string = null,
+    GCM: AndroidPushNotificationTemplate = null,
+    RecommenderId: string = null,
+    TemplateDescription: string = null,
+    Version: string = null,
+    tags: MapOfString = null
+  ): PushNotificationTemplateResponse = {
     val __obj = js.Dynamic.literal(CreationDate = CreationDate.asInstanceOf[js.Any], LastModifiedDate = LastModifiedDate.asInstanceOf[js.Any], TemplateName = TemplateName.asInstanceOf[js.Any], TemplateType = TemplateType.asInstanceOf[js.Any])
+    if (ADM != null) __obj.updateDynamic("ADM")(ADM.asInstanceOf[js.Any])
+    if (APNS != null) __obj.updateDynamic("APNS")(APNS.asInstanceOf[js.Any])
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (Baidu != null) __obj.updateDynamic("Baidu")(Baidu.asInstanceOf[js.Any])
+    if (Default != null) __obj.updateDynamic("Default")(Default.asInstanceOf[js.Any])
+    if (DefaultSubstitutions != null) __obj.updateDynamic("DefaultSubstitutions")(DefaultSubstitutions.asInstanceOf[js.Any])
+    if (GCM != null) __obj.updateDynamic("GCM")(GCM.asInstanceOf[js.Any])
+    if (RecommenderId != null) __obj.updateDynamic("RecommenderId")(RecommenderId.asInstanceOf[js.Any])
+    if (TemplateDescription != null) __obj.updateDynamic("TemplateDescription")(TemplateDescription.asInstanceOf[js.Any])
+    if (Version != null) __obj.updateDynamic("Version")(Version.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushNotificationTemplateResponse]
   }
-  @scala.inline
-  implicit class PushNotificationTemplateResponseOps[Self <: PushNotificationTemplateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDate(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemplateType(value: TemplateType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withADM(value: AndroidPushNotificationTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ADM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutADM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ADM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAPNS(value: APNSPushNotificationTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("APNS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAPNS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("APNS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaidu(value: AndroidPushNotificationTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Baidu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaidu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Baidu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault(value: DefaultPushNotificationTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Default")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Default")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultSubstitutions(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubstitutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultSubstitutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultSubstitutions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGCM(value: AndroidPushNotificationTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GCM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGCM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GCM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommenderId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommenderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommenderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommenderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateDescription(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: MapOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

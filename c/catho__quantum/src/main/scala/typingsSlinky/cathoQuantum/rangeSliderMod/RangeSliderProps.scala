@@ -16,207 +16,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeSliderProps extends js.Object {
-  var `aria-labelledby`: js.UndefOr[String] = js.native
-  var defaultValue: js.UndefOr[Double | From] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var marks: js.UndefOr[js.Array[LabelValue]] = js.native
-  var max: js.UndefOr[Double] = js.native
-  var min: js.UndefOr[Double] = js.native
-  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
-  var onChangeCommitted: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
-  var step: js.UndefOr[Double] = js.native
-  var theme: js.UndefOr[BaseFontSizeColors] = js.native
+  var `aria-labelledby`: js.UndefOr[String] = js.undefined
+  var defaultValue: js.UndefOr[Double | From] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var marks: js.UndefOr[js.Array[LabelValue]] = js.undefined
+  var max: js.UndefOr[Double] = js.undefined
+  var min: js.UndefOr[Double] = js.undefined
+  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.undefined
+  var onChangeCommitted: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.undefined
+  var step: js.UndefOr[Double] = js.undefined
+  var theme: js.UndefOr[BaseFontSizeColors] = js.undefined
   var tipFormatter: js.UndefOr[
     js.Function2[/* value */ js.UndefOr[Double], /* index */ js.UndefOr[Double], String]
-  ] = js.native
-  var track: js.UndefOr[normal | `false` | inverted] = js.native
-  var value: js.UndefOr[Double | From] = js.native
-  var valueLabelDisplay: js.UndefOr[auto | on | off] = js.native
+  ] = js.undefined
+  var track: js.UndefOr[normal | `false` | inverted] = js.undefined
+  var value: js.UndefOr[Double | From] = js.undefined
+  var valueLabelDisplay: js.UndefOr[auto | on | off] = js.undefined
 }
 
 object RangeSliderProps {
   @scala.inline
-  def apply(): RangeSliderProps = {
+  def apply(
+    `aria-labelledby`: String = null,
+    defaultValue: Double | From = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    marks: js.Array[LabelValue] = null,
+    max: js.UndefOr[Double] = js.undefined,
+    min: js.UndefOr[Double] = js.undefined,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
+    onChangeCommitted: ChangeEvent[HTMLInputElement] => Unit = null,
+    step: js.UndefOr[Double] = js.undefined,
+    theme: BaseFontSizeColors = null,
+    tipFormatter: (/* value */ js.UndefOr[Double], /* index */ js.UndefOr[Double]) => String = null,
+    track: normal | `false` | inverted = null,
+    value: Double | From = null,
+    valueLabelDisplay: auto | on | off = null
+  ): RangeSliderProps = {
     val __obj = js.Dynamic.literal()
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (marks != null) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onChangeCommitted != null) __obj.updateDynamic("onChangeCommitted")(js.Any.fromFunction1(onChangeCommitted))
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tipFormatter != null) __obj.updateDynamic("tipFormatter")(js.Any.fromFunction2(tipFormatter))
+    if (track != null) __obj.updateDynamic("track")(track.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (valueLabelDisplay != null) __obj.updateDynamic("valueLabelDisplay")(valueLabelDisplay.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeSliderProps]
   }
-  @scala.inline
-  implicit class RangeSliderPropsOps[Self <: RangeSliderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAria-labelledby`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-labelledby`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: Double | From): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarks(value: js.Array[LabelValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: ChangeEvent[HTMLInputElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChangeCommitted(value: ChangeEvent[HTMLInputElement] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeCommitted")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChangeCommitted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeCommitted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: BaseFontSizeColors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTipFormatter(value: (/* value */ js.UndefOr[Double], /* index */ js.UndefOr[Double]) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tipFormatter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutTipFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tipFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrack(value: normal | `false` | inverted): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double | From): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueLabelDisplay(value: auto | on | off): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLabelDisplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueLabelDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLabelDisplay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

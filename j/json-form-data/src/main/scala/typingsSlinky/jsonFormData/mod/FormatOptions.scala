@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   *       }
   *     }
   */
-@js.native
 trait FormatOptions extends js.Object {
   /**
     * Include null values in output (default: `false`).
@@ -42,12 +41,12 @@ trait FormatOptions extends js.Object {
     *     // }
     *
     */
-  var includeNullValues: js.UndefOr[Boolean] = js.native
+  var includeNullValues: js.UndefOr[Boolean] = js.undefined
   /**
     * Existing form data which values will be appended to  (default: `new FormData()`).
     * This can be used to support environments that do not have a global FormData object.
     */
-  var initialFormData: js.UndefOr[InitialFormData] = js.native
+  var initialFormData: js.UndefOr[InitialFormData] = js.undefined
   /**
     * Modify outmost leaf values before calling formData.append. Default behaviour
     * is to output boolean values as '1'/'0' (true/false) and all other values
@@ -69,7 +68,7 @@ trait FormatOptions extends js.Object {
     *     // }
     *
     */
-  var mapping: js.UndefOr[js.Function1[/* value */ ValidJSONValue, String | Blob]] = js.native
+  var mapping: js.UndefOr[js.Function1[/* value */ ValidJSONValue, String | Blob]] = js.undefined
   /**
     * Include index values in arrays (default: `true`).
     *
@@ -90,70 +89,23 @@ trait FormatOptions extends js.Object {
     *     // }
     *
     */
-  var showLeafArrayIndexes: js.UndefOr[Boolean] = js.native
+  var showLeafArrayIndexes: js.UndefOr[Boolean] = js.undefined
 }
 
 object FormatOptions {
   @scala.inline
-  def apply(): FormatOptions = {
+  def apply(
+    includeNullValues: js.UndefOr[Boolean] = js.undefined,
+    initialFormData: InitialFormData = null,
+    mapping: /* value */ ValidJSONValue => String | Blob = null,
+    showLeafArrayIndexes: js.UndefOr[Boolean] = js.undefined
+  ): FormatOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(includeNullValues)) __obj.updateDynamic("includeNullValues")(includeNullValues.get.asInstanceOf[js.Any])
+    if (initialFormData != null) __obj.updateDynamic("initialFormData")(initialFormData.asInstanceOf[js.Any])
+    if (mapping != null) __obj.updateDynamic("mapping")(js.Any.fromFunction1(mapping))
+    if (!js.isUndefined(showLeafArrayIndexes)) __obj.updateDynamic("showLeafArrayIndexes")(showLeafArrayIndexes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatOptions]
   }
-  @scala.inline
-  implicit class FormatOptionsOps[Self <: FormatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeNullValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeNullValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeNullValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeNullValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialFormData(value: InitialFormData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFormData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialFormData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialFormData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapping(value: /* value */ ValidJSONValue => String | Blob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowLeafArrayIndexes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLeafArrayIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowLeafArrayIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLeafArrayIndexes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

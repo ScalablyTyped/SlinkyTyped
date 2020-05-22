@@ -5,25 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IBitcoinTransaction extends IResourceObject {
   /**
     * The amount of currency that the transaction was converted to in real-time.
     */
-  var amount: Double = js.native
+  var amount: Double
   /**
     * The amount of bitcoin contained in the transaction.
     */
-  var bitcoin_amount: Double = js.native
-  var created: Double = js.native
+  var bitcoin_amount: Double
+  var created: Double
   /**
     * The currency to which this transaction was converted.
     */
-  var currency: String = js.native
+  var currency: String
   /**
     * The receiver to which this transaction was sent.
     */
-  var receiver: String = js.native
+  var receiver: String
 }
 
 object IBitcoinTransaction {
@@ -41,43 +40,5 @@ object IBitcoinTransaction {
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBitcoinTransaction]
   }
-  @scala.inline
-  implicit class IBitcoinTransactionOps[Self <: IBitcoinTransaction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBitcoin_amount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitcoin_amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReceiver(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SimpleSegment extends js.Object {
   /**
     * A list of segment filters groups which are combined with logical `AND`
     * operator.
     */
-  var orFiltersForSegment: js.UndefOr[js.Array[OrFiltersForSegment]] = js.native
+  var orFiltersForSegment: js.UndefOr[js.Array[OrFiltersForSegment]] = js.undefined
 }
 
 object SimpleSegment {
   @scala.inline
-  def apply(): SimpleSegment = {
+  def apply(orFiltersForSegment: js.Array[OrFiltersForSegment] = null): SimpleSegment = {
     val __obj = js.Dynamic.literal()
+    if (orFiltersForSegment != null) __obj.updateDynamic("orFiltersForSegment")(orFiltersForSegment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleSegment]
   }
-  @scala.inline
-  implicit class SimpleSegmentOps[Self <: SimpleSegment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrFiltersForSegment(value: js.Array[OrFiltersForSegment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orFiltersForSegment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrFiltersForSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orFiltersForSegment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,5 +7,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@fluent/bundle", "FluentError")
 @js.native
-class FluentError () extends Error
+class FluentError () extends Error {
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+}
 

@@ -14,29 +14,10 @@ trait DescribeConnectionLoaResponse extends js.Object {
 
 object DescribeConnectionLoaResponse {
   @scala.inline
-  def apply(): DescribeConnectionLoaResponse = {
+  def apply(loa: Loa = null): DescribeConnectionLoaResponse = {
     val __obj = js.Dynamic.literal()
+    if (loa != null) __obj.updateDynamic("loa")(loa.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConnectionLoaResponse]
   }
-  @scala.inline
-  implicit class DescribeConnectionLoaResponseOps[Self <: DescribeConnectionLoaResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoa(value: Loa): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loa")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoa: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loa")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

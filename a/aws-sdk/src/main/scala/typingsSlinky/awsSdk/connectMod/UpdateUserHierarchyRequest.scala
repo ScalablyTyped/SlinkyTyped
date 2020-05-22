@@ -22,41 +22,10 @@ trait UpdateUserHierarchyRequest extends js.Object {
 
 object UpdateUserHierarchyRequest {
   @scala.inline
-  def apply(InstanceId: InstanceId, UserId: UserId): UpdateUserHierarchyRequest = {
+  def apply(InstanceId: InstanceId, UserId: UserId, HierarchyGroupId: HierarchyGroupId = null): UpdateUserHierarchyRequest = {
     val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any], UserId = UserId.asInstanceOf[js.Any])
+    if (HierarchyGroupId != null) __obj.updateDynamic("HierarchyGroupId")(HierarchyGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateUserHierarchyRequest]
   }
-  @scala.inline
-  implicit class UpdateUserHierarchyRequestOps[Self <: UpdateUserHierarchyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: InstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserId(value: UserId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHierarchyGroupId(value: HierarchyGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HierarchyGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHierarchyGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HierarchyGroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

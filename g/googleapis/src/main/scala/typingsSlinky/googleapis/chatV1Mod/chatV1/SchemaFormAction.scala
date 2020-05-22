@@ -23,41 +23,11 @@ trait SchemaFormAction extends js.Object {
 
 object SchemaFormAction {
   @scala.inline
-  def apply(): SchemaFormAction = {
+  def apply(actionMethodName: String = null, parameters: js.Array[SchemaActionParameter] = null): SchemaFormAction = {
     val __obj = js.Dynamic.literal()
+    if (actionMethodName != null) __obj.updateDynamic("actionMethodName")(actionMethodName.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFormAction]
   }
-  @scala.inline
-  implicit class SchemaFormActionOps[Self <: SchemaFormAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionMethodName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionMethodName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionMethodName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionMethodName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Array[SchemaActionParameter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

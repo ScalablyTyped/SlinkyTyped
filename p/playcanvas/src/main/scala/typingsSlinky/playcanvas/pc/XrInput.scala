@@ -5,18 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * @class
-  * @name pc.XrInput
-  * @augments pc.EventHandler
-  * @classdesc Provides access to input sources for WebXR.
-  * @description Provides access to input sources for WebXR.
-  * @param {pc.XrManager} manager - WebXR Manager.
-  * @property {pc.XrInputSource[]} inputSources List of active {pc.XrInputSource}
+  * Provides access to input sources for WebXR.
+  * @property inputSources - List of active {@link pc.XrInputSource}.
+  * @param manager - WebXR Manager.
   */
 @js.native
 trait XrInput extends EventHandler {
   /**
-    * List of active {pc.XrInputSource}
+    * List of active {@link pc.XrInputSource}.
     */
   var inputSources: js.Array[XrInputSource] = js.native
 }

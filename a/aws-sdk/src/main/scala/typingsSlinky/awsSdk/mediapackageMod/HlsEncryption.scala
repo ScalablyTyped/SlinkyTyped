@@ -28,71 +28,19 @@ trait HlsEncryption extends js.Object {
 
 object HlsEncryption {
   @scala.inline
-  def apply(SpekeKeyProvider: SpekeKeyProvider): HlsEncryption = {
+  def apply(
+    SpekeKeyProvider: SpekeKeyProvider,
+    ConstantInitializationVector: string = null,
+    EncryptionMethod: EncryptionMethod = null,
+    KeyRotationIntervalSeconds: js.UndefOr[integer] = js.undefined,
+    RepeatExtXKey: js.UndefOr[boolean] = js.undefined
+  ): HlsEncryption = {
     val __obj = js.Dynamic.literal(SpekeKeyProvider = SpekeKeyProvider.asInstanceOf[js.Any])
+    if (ConstantInitializationVector != null) __obj.updateDynamic("ConstantInitializationVector")(ConstantInitializationVector.asInstanceOf[js.Any])
+    if (EncryptionMethod != null) __obj.updateDynamic("EncryptionMethod")(EncryptionMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(KeyRotationIntervalSeconds)) __obj.updateDynamic("KeyRotationIntervalSeconds")(KeyRotationIntervalSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RepeatExtXKey)) __obj.updateDynamic("RepeatExtXKey")(RepeatExtXKey.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsEncryption]
   }
-  @scala.inline
-  implicit class HlsEncryptionOps[Self <: HlsEncryption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpekeKeyProvider(value: SpekeKeyProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SpekeKeyProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConstantInitializationVector(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantInitializationVector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstantInitializationVector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConstantInitializationVector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionMethod(value: EncryptionMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyRotationIntervalSeconds(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyRotationIntervalSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyRotationIntervalSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyRotationIntervalSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepeatExtXKey(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatExtXKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepeatExtXKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatExtXKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

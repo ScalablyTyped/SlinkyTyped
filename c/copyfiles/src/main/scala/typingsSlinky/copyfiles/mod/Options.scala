@@ -1,124 +1,57 @@
 package typingsSlinky.copyfiles.mod
 
+import typingsSlinky.copyfiles.copyfilesBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  /** include files & directories begining with a dot (.) */
-  var all: js.UndefOr[Boolean] = js.native
+  /** include files & directories beginning with a dot (.) */
+  var all: js.UndefOr[Boolean] = js.undefined
   /** throw error if nothing is copied */
-  var error: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[Boolean] = js.undefined
   /** pattern or glob to exclude */
-  var exclude: js.UndefOr[String] = js.native
+  var exclude: js.UndefOr[String] = js.undefined
   /** flatten the output */
-  var flat: js.UndefOr[Boolean] = js.native
+  var flat: js.UndefOr[Boolean] = js.undefined
+  /**
+    * follow symbolink links
+    * @default false
+    */
+  var follow: js.UndefOr[Boolean] = js.undefined
   /** do not overwrite destination files if they exist */
-  var soft: js.UndefOr[Boolean] = js.native
-  /** slice a path off the bottom of the paths */
-  var up: js.UndefOr[Double | Boolean] = js.native
+  var soft: js.UndefOr[Boolean] = js.undefined
+  /**
+    * slice a path off the bottom of the paths
+    * @default 0
+    */
+  var up: js.UndefOr[Double | `true`] = js.undefined
   /** print more information to console */
-  var verbose: js.UndefOr[Boolean] = js.native
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    all: js.UndefOr[Boolean] = js.undefined,
+    error: js.UndefOr[Boolean] = js.undefined,
+    exclude: String = null,
+    flat: js.UndefOr[Boolean] = js.undefined,
+    follow: js.UndefOr[Boolean] = js.undefined,
+    soft: js.UndefOr[Boolean] = js.undefined,
+    up: Double | `true` = null,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.get.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (!js.isUndefined(flat)) __obj.updateDynamic("flat")(flat.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(follow)) __obj.updateDynamic("follow")(follow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(soft)) __obj.updateDynamic("soft")(soft.get.asInstanceOf[js.Any])
+    if (up != null) __obj.updateDynamic("up")(up.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("soft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUp(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

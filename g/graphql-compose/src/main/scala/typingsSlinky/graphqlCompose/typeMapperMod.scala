@@ -11,30 +11,18 @@ import typingsSlinky.graphql.definitionMod.GraphQLInputFieldConfigMap
 import typingsSlinky.graphql.definitionMod.GraphQLNamedType
 import typingsSlinky.graphql.definitionMod.GraphQLType
 import typingsSlinky.graphql.mod.GraphQLObjectType
-import typingsSlinky.graphqlCompose.enumTypeComposerMod.ComposeEnumType
-import typingsSlinky.graphqlCompose.enumTypeComposerMod.EnumTypeComposeDefinition
 import typingsSlinky.graphqlCompose.inputTypeComposerMod.ComposeInputFieldConfig
 import typingsSlinky.graphqlCompose.inputTypeComposerMod.ComposeInputFieldConfigMap
-import typingsSlinky.graphqlCompose.inputTypeComposerMod.ComposeInputType
-import typingsSlinky.graphqlCompose.inputTypeComposerMod.InputTypeComposeDefinition
-import typingsSlinky.graphqlCompose.interfaceTypeComposerMod.ComposeInterfaceType
-import typingsSlinky.graphqlCompose.interfaceTypeComposerMod.InterfaceTypeComposeDefinition
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ArgsMap
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeArgumentConfig
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeArgumentType
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfig
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfigArgumentMap
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeFieldConfigMap
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeObjectType
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeOutputType
-import typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposeDefinition
-import typingsSlinky.graphqlCompose.scalarTypeComposerMod.ScalarTypeComposeDefinition
 import typingsSlinky.graphqlCompose.schemaComposerMod.AnyComposeType
 import typingsSlinky.graphqlCompose.schemaComposerMod.AnyType
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
 import typingsSlinky.graphqlCompose.typeStorageMod.TypeStorage
-import typingsSlinky.graphqlCompose.unionTypeComposerMod.ComposeUnionType
-import typingsSlinky.graphqlCompose.unionTypeComposerMod.UnionTypeComposeDefinition
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,26 +31,6 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql-compose/lib/TypeMapper", JSImport.Namespace)
 @js.native
 object typeMapperMod extends js.Object {
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.graphqlCompose.typeMapperMod.TypeDefinitionString
-    - typingsSlinky.graphqlCompose.typeMapperMod.TypeWrappedString
-    - typingsSlinky.graphqlCompose.typeMapperMod.TypeNameString
-  */
-  trait TypeAsString
-    extends ComposeArgumentType
-       with ComposeEnumType
-       with ComposeInputType
-       with ComposeInterfaceType
-       with ComposeObjectType
-       with ComposeOutputType[js.Any, js.Any]
-       with ComposeUnionType
-       with EnumTypeComposeDefinition
-       with InputTypeComposeDefinition
-       with InterfaceTypeComposeDefinition[js.Any, js.Any]
-       with ObjectTypeComposeDefinition[js.Any, js.Any]
-       with ScalarTypeComposeDefinition
-       with UnionTypeComposeDefinition[js.Any, js.Any]
-  
   /**
     * Type storage and type generator from `Schema Definition Language` (`SDL`).
     * This is slightly rewritten [buildASTSchema](https://github.com/graphql/graphql-js/blob/master/src/utilities/buildASTSchema.js)
@@ -146,6 +114,7 @@ object typeMapperMod extends js.Object {
     def isTypeNameString(str: String): Boolean = js.native
   }
   
+  type TypeAsString = TypeDefinitionString | TypeWrappedString | TypeNameString
   type TypeDefinitionString = String
   type TypeNameString = String
   type TypeWrappedString = String

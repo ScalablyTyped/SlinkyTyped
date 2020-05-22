@@ -23,35 +23,10 @@ trait DistributionDefaultCacheBehaviorForwardedValuesCookies extends js.Object {
 
 object DistributionDefaultCacheBehaviorForwardedValuesCookies {
   @scala.inline
-  def apply(forward: String): DistributionDefaultCacheBehaviorForwardedValuesCookies = {
+  def apply(forward: String, whitelistedNames: js.Array[String] = null): DistributionDefaultCacheBehaviorForwardedValuesCookies = {
     val __obj = js.Dynamic.literal(forward = forward.asInstanceOf[js.Any])
+    if (whitelistedNames != null) __obj.updateDynamic("whitelistedNames")(whitelistedNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionDefaultCacheBehaviorForwardedValuesCookies]
   }
-  @scala.inline
-  implicit class DistributionDefaultCacheBehaviorForwardedValuesCookiesOps[Self <: DistributionDefaultCacheBehaviorForwardedValuesCookies] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForward(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWhitelistedNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelistedNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitelistedNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelistedNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

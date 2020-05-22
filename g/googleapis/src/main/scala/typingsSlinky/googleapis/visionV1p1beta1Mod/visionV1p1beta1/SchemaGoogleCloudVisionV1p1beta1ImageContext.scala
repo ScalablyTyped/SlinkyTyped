@@ -40,77 +40,20 @@ trait SchemaGoogleCloudVisionV1p1beta1ImageContext extends js.Object {
 
 object SchemaGoogleCloudVisionV1p1beta1ImageContext {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p1beta1ImageContext = {
+  def apply(
+    cropHintsParams: SchemaGoogleCloudVisionV1p1beta1CropHintsParams = null,
+    languageHints: js.Array[String] = null,
+    latLongRect: SchemaGoogleCloudVisionV1p1beta1LatLongRect = null,
+    productSearchParams: SchemaGoogleCloudVisionV1p1beta1ProductSearchParams = null,
+    webDetectionParams: SchemaGoogleCloudVisionV1p1beta1WebDetectionParams = null
+  ): SchemaGoogleCloudVisionV1p1beta1ImageContext = {
     val __obj = js.Dynamic.literal()
+    if (cropHintsParams != null) __obj.updateDynamic("cropHintsParams")(cropHintsParams.asInstanceOf[js.Any])
+    if (languageHints != null) __obj.updateDynamic("languageHints")(languageHints.asInstanceOf[js.Any])
+    if (latLongRect != null) __obj.updateDynamic("latLongRect")(latLongRect.asInstanceOf[js.Any])
+    if (productSearchParams != null) __obj.updateDynamic("productSearchParams")(productSearchParams.asInstanceOf[js.Any])
+    if (webDetectionParams != null) __obj.updateDynamic("webDetectionParams")(webDetectionParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p1beta1ImageContext]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p1beta1ImageContextOps[Self <: SchemaGoogleCloudVisionV1p1beta1ImageContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCropHintsParams(value: SchemaGoogleCloudVisionV1p1beta1CropHintsParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropHintsParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCropHintsParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropHintsParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguageHints(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageHints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguageHints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("languageHints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatLongRect(value: SchemaGoogleCloudVisionV1p1beta1LatLongRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLongRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatLongRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLongRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductSearchParams(value: SchemaGoogleCloudVisionV1p1beta1ProductSearchParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productSearchParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductSearchParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productSearchParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebDetectionParams(value: SchemaGoogleCloudVisionV1p1beta1WebDetectionParams): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webDetectionParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebDetectionParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webDetectionParams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

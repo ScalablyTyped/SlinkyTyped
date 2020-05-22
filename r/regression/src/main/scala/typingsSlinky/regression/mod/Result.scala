@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Result extends js.Object {
   /**
     * The generated coefficients describing the equation
@@ -18,7 +17,7 @@ trait Result extends js.Object {
     * ```y = a0 * x ^ N + a1 * x ^ (N - 1) + ... + aN```
     * where N is the order (default 2).
     */
-  var equation: js.Array[Double] = js.native
+  var equation: js.Array[Double]
   /**
     * For each point (x, y) in the input data, a point
     * corresponding to the regression prediction for that
@@ -26,7 +25,7 @@ trait Result extends js.Object {
     * One could use this to directly evaluate the quality
     * of the fit.
     */
-  var points: js.Array[DataPoint] = js.native
+  var points: js.Array[DataPoint]
   /**
     * The value of R squared, a statistical measure of the conformance of the
     * fitted curve to the input data where 1 is an exact fit and 0 is no fit
@@ -35,14 +34,14 @@ trait Result extends js.Object {
     * This value is rounded to the number of decimal places defined by
     * the precision option (default 2).
     */
-  var r2: Double = js.native
+  var r2: Double
   /**
     * A human-readable string representation of the derived
     * formula in the form y = f(x) where f depends on the
     * fitting method used and the coefficients that were
     * calculated.
     */
-  var string: String = js.native
+  var string: String
   /**
     * Function that takes an arbitrary value of x and
     * produces a coordinate representing the y-value of
@@ -51,7 +50,7 @@ trait Result extends js.Object {
     * a number of decimal places defined in the options
     * (default is 2).
     */
-  def predict(x: Double): DataPoint = js.native
+  def predict(x: Double): DataPoint
 }
 
 object Result {
@@ -66,43 +65,5 @@ object Result {
     val __obj = js.Dynamic.literal(equation = equation.asInstanceOf[js.Any], points = points.asInstanceOf[js.Any], predict = js.Any.fromFunction1(predict), r2 = r2.asInstanceOf[js.Any], string = string.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
-  @scala.inline
-  implicit class ResultOps[Self <: Result] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEquation(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPoints(value: js.Array[DataPoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPredict(value: Double => DataPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("predict")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withR2(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

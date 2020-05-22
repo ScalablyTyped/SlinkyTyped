@@ -22,53 +22,16 @@ trait SyncConfig extends js.Object {
 
 object SyncConfig {
   @scala.inline
-  def apply(): SyncConfig = {
+  def apply(
+    conflictDetection: ConflictDetectionType = null,
+    conflictHandler: ConflictHandlerType = null,
+    lambdaConflictHandlerConfig: LambdaConflictHandlerConfig = null
+  ): SyncConfig = {
     val __obj = js.Dynamic.literal()
+    if (conflictDetection != null) __obj.updateDynamic("conflictDetection")(conflictDetection.asInstanceOf[js.Any])
+    if (conflictHandler != null) __obj.updateDynamic("conflictHandler")(conflictHandler.asInstanceOf[js.Any])
+    if (lambdaConflictHandlerConfig != null) __obj.updateDynamic("lambdaConflictHandlerConfig")(lambdaConflictHandlerConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyncConfig]
   }
-  @scala.inline
-  implicit class SyncConfigOps[Self <: SyncConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConflictDetection(value: ConflictDetectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictDetection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConflictDetection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictDetection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConflictHandler(value: ConflictHandlerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictHandler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConflictHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictHandler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambdaConflictHandlerConfig(value: LambdaConflictHandlerConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaConflictHandlerConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambdaConflictHandlerConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaConflictHandlerConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

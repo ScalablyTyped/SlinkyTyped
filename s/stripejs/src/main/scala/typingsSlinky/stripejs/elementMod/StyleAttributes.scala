@@ -4,311 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StyleAttributes extends js.Object {
   @JSName(":-webkit-autofill")
-  var `Colon-webkit-autofill`: js.UndefOr[StyleAttributes] = js.native
+  var `Colon-webkit-autofill`: js.UndefOr[StyleAttributes] = js.undefined
   @JSName("::-ms-clear")
-  var `ColonColon-ms-clear`: js.UndefOr[MSClearAttributes] = js.native
+  var `ColonColon-ms-clear`: js.UndefOr[MSClearAttributes] = js.undefined
   @JSName("::placeholder")
-  var ColonColonplaceholder: js.UndefOr[StyleAttributes] = js.native
+  var ColonColonplaceholder: js.UndefOr[StyleAttributes] = js.undefined
   @JSName("::selection")
-  var ColonColonselection: js.UndefOr[StyleAttributes] = js.native
+  var ColonColonselection: js.UndefOr[StyleAttributes] = js.undefined
   @JSName(":disabled")
-  var Colondisabled: js.UndefOr[StyleAttributes] = js.native
+  var Colondisabled: js.UndefOr[StyleAttributes] = js.undefined
   @JSName(":focus")
-  var Colonfocus: js.UndefOr[StyleAttributes] = js.native
+  var Colonfocus: js.UndefOr[StyleAttributes] = js.undefined
   @JSName(":hover")
-  var Colonhover: js.UndefOr[StyleAttributes] = js.native
-  var color: js.UndefOr[String] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var fontSize: js.UndefOr[String] = js.native
-  var fontSmoothing: js.UndefOr[String] = js.native
-  var fontStyle: js.UndefOr[String] = js.native
-  var fontVariant: js.UndefOr[js.Any] = js.native
-  var iconColor: js.UndefOr[String] = js.native
-  var letterSpacing: js.UndefOr[String] = js.native
-  var lineHeight: js.UndefOr[String] = js.native
+  var Colonhover: js.UndefOr[StyleAttributes] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var fontSize: js.UndefOr[String] = js.undefined
+  var fontSmoothing: js.UndefOr[String] = js.undefined
+  var fontStyle: js.UndefOr[String] = js.undefined
+  var fontVariant: js.UndefOr[js.Any] = js.undefined
+  var iconColor: js.UndefOr[String] = js.undefined
+  var letterSpacing: js.UndefOr[String] = js.undefined
+  var lineHeight: js.UndefOr[String] = js.undefined
   /**
     * Add padding to the element
     * NOTE: Only available for the `idealBank` Element
     */
-  var padding: js.UndefOr[String] = js.native
+  var padding: js.UndefOr[String] = js.undefined
   /**
     * Align text inside the element
     * NOTE: Only available for the `cardNumber`, `cardExpiry`, and `cardCvc` Elements
     */
-  var textAlign: js.UndefOr[String] = js.native
-  var textDecoration: js.UndefOr[String] = js.native
-  var textShadow: js.UndefOr[String] = js.native
-  var textTransform: js.UndefOr[String] = js.native
+  var textAlign: js.UndefOr[String] = js.undefined
+  var textDecoration: js.UndefOr[String] = js.undefined
+  var textShadow: js.UndefOr[String] = js.undefined
+  var textTransform: js.UndefOr[String] = js.undefined
 }
 
 object StyleAttributes {
   @scala.inline
-  def apply(): StyleAttributes = {
+  def apply(
+    `Colon-webkit-autofill`: StyleAttributes = null,
+    `ColonColon-ms-clear`: MSClearAttributes = null,
+    ColonColonplaceholder: StyleAttributes = null,
+    ColonColonselection: StyleAttributes = null,
+    Colondisabled: StyleAttributes = null,
+    Colonfocus: StyleAttributes = null,
+    Colonhover: StyleAttributes = null,
+    color: String = null,
+    fontFamily: String = null,
+    fontSize: String = null,
+    fontSmoothing: String = null,
+    fontStyle: String = null,
+    fontVariant: js.Any = null,
+    iconColor: String = null,
+    letterSpacing: String = null,
+    lineHeight: String = null,
+    padding: String = null,
+    textAlign: String = null,
+    textDecoration: String = null,
+    textShadow: String = null,
+    textTransform: String = null
+  ): StyleAttributes = {
     val __obj = js.Dynamic.literal()
+    if (`Colon-webkit-autofill` != null) __obj.updateDynamic(":-webkit-autofill")(`Colon-webkit-autofill`.asInstanceOf[js.Any])
+    if (`ColonColon-ms-clear` != null) __obj.updateDynamic("::-ms-clear")(`ColonColon-ms-clear`.asInstanceOf[js.Any])
+    if (ColonColonplaceholder != null) __obj.updateDynamic("::placeholder")(ColonColonplaceholder.asInstanceOf[js.Any])
+    if (ColonColonselection != null) __obj.updateDynamic("::selection")(ColonColonselection.asInstanceOf[js.Any])
+    if (Colondisabled != null) __obj.updateDynamic(":disabled")(Colondisabled.asInstanceOf[js.Any])
+    if (Colonfocus != null) __obj.updateDynamic(":focus")(Colonfocus.asInstanceOf[js.Any])
+    if (Colonhover != null) __obj.updateDynamic(":hover")(Colonhover.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+    if (fontSmoothing != null) __obj.updateDynamic("fontSmoothing")(fontSmoothing.asInstanceOf[js.Any])
+    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+    if (fontVariant != null) __obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
+    if (iconColor != null) __obj.updateDynamic("iconColor")(iconColor.asInstanceOf[js.Any])
+    if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
+    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+    if (textShadow != null) __obj.updateDynamic("textShadow")(textShadow.asInstanceOf[js.Any])
+    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleAttributes]
   }
-  @scala.inline
-  implicit class StyleAttributesOps[Self <: StyleAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withColon-webkit-autofill`(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-autofill")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColon-webkit-autofill`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":-webkit-autofill")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withColonColon-ms-clear`(value: MSClearAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-clear")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutColonColon-ms-clear`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::-ms-clear")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonplaceholder(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonplaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonColonselection(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonColonselection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("::selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColondisabled(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColondisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonfocus(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonfocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColonhover(value: StyleAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":hover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColonhover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(":hover")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontSmoothing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSmoothing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontSmoothing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSmoothing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontVariant(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontVariant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLetterSpacing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLetterSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextDecoration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextDecoration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecoration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextShadow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextTransform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransform")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

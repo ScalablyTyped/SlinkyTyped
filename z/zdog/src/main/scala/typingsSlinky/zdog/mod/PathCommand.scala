@@ -15,14 +15,36 @@ trait PathCommand extends js.Object
 
 object PathCommand {
   @scala.inline
-  implicit def apply(value: PathArcCommand): PathCommand = value.asInstanceOf[PathCommand]
+  def PathLineCommand(line: VectorOptions): PathCommand = {
+    val __obj = js.Dynamic.literal(line = line.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PathCommand]
+  }
   @scala.inline
-  implicit def apply(value: PathBezierCommand): PathCommand = value.asInstanceOf[PathCommand]
+  def PathBezierCommand(bezier: js.Tuple3[VectorOptions, VectorOptions, VectorOptions]): PathCommand = {
+    val __obj = js.Dynamic.literal(bezier = bezier.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PathCommand]
+  }
   @scala.inline
-  implicit def apply(value: PathLineCommand): PathCommand = value.asInstanceOf[PathCommand]
+  def PathArcCommand(arc: js.Tuple2[VectorOptions, VectorOptions]): PathCommand = {
+    val __obj = js.Dynamic.literal(arc = arc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PathCommand]
+  }
   @scala.inline
-  implicit def apply(value: PathMoveCommand): PathCommand = value.asInstanceOf[PathCommand]
+  def VectorOptions(
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined,
+    z: js.UndefOr[Double] = js.undefined
+  ): PathCommand = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(z)) __obj.updateDynamic("z")(z.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PathCommand]
+  }
   @scala.inline
-  implicit def apply(value: VectorOptions): PathCommand = value.asInstanceOf[PathCommand]
+  def PathMoveCommand(move: VectorOptions): PathCommand = {
+    val __obj = js.Dynamic.literal(move = move.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PathCommand]
+  }
 }
 

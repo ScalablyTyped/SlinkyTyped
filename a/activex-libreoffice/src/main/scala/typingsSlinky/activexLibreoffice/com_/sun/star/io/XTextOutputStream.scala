@@ -12,13 +12,12 @@ import scala.scalajs.js.annotation._
   * This interfaces allows to write strings to a stream. The character encoding to be used can be set by {@link setEncoding()} . Default encoding is
   * "utf8".
   */
-@js.native
 trait XTextOutputStream extends XOutputStream {
   /**
     * sets character encoding.
     * @param Encoding sets the character encoding that should be used. The character encoding names refer to the document [http://www.iana.org/assignments/cha
     */
-  def setEncoding(Encoding: String): Unit = js.native
+  def setEncoding(Encoding: String): Unit
   /**
     * writes a string to the stream using the encoding defined by {@link setEncoding()} .
     *
@@ -28,7 +27,7 @@ trait XTextOutputStream extends XOutputStream {
     * @see XTextInputStream.readLine
     * @see XTextInputStream.readString
     */
-  def writeString(aString: String): Unit = js.native
+  def writeString(aString: String): Unit
 }
 
 object XTextOutputStream {
@@ -46,25 +45,5 @@ object XTextOutputStream {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), closeOutput = js.Any.fromFunction0(closeOutput), flush = js.Any.fromFunction0(flush), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setEncoding = js.Any.fromFunction1(setEncoding), writeBytes = js.Any.fromFunction1(writeBytes), writeString = js.Any.fromFunction1(writeString))
     __obj.asInstanceOf[XTextOutputStream]
   }
-  @scala.inline
-  implicit class XTextOutputStreamOps[Self <: XTextOutputStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetEncoding(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEncoding")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWriteString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

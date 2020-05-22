@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * The 3D Matrix is an object for holding values for a 3D affine transform.
-		 */
+  * The 3D Matrix is an object for holding values for a 3D affine transform.
+  */
 @JSGlobal("Titanium.UI.Matrix3D")
 @js.native
 class Matrix3D ()

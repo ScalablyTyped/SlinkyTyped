@@ -36,65 +36,18 @@ trait SchemaCreateClusterMetadata extends js.Object {
 
 object SchemaCreateClusterMetadata {
   @scala.inline
-  def apply(): SchemaCreateClusterMetadata = {
+  def apply(
+    finishTime: String = null,
+    originalRequest: SchemaCreateClusterRequest = null,
+    requestTime: String = null,
+    tables: StringDictionary[SchemaTableProgress] = null
+  ): SchemaCreateClusterMetadata = {
     val __obj = js.Dynamic.literal()
+    if (finishTime != null) __obj.updateDynamic("finishTime")(finishTime.asInstanceOf[js.Any])
+    if (originalRequest != null) __obj.updateDynamic("originalRequest")(originalRequest.asInstanceOf[js.Any])
+    if (requestTime != null) __obj.updateDynamic("requestTime")(requestTime.asInstanceOf[js.Any])
+    if (tables != null) __obj.updateDynamic("tables")(tables.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateClusterMetadata]
   }
-  @scala.inline
-  implicit class SchemaCreateClusterMetadataOps[Self <: SchemaCreateClusterMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinishTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finishTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinishTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finishTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalRequest(value: SchemaCreateClusterRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalRequest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalRequest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalRequest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTables(value: StringDictionary[SchemaTableProgress]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

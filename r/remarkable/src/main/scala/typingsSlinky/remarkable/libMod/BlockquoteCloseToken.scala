@@ -6,32 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
-trait BlockquoteCloseToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait BlockquoteCloseToken extends TagToken {
   @JSName("type")
-  var type_BlockquoteCloseToken: blockquote_close = js.native
+  var type_BlockquoteCloseToken: blockquote_close
 }
 
 object BlockquoteCloseToken {
   @scala.inline
-  def apply(level: Double, `type`: blockquote_close): BlockquoteCloseToken = {
+  def apply(level: Double, `type`: blockquote_close, lines: js.Tuple2[Double, Double] = null): BlockquoteCloseToken = {
     val __obj = js.Dynamic.literal(level = level.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockquoteCloseToken]
   }
-  @scala.inline
-  implicit class BlockquoteCloseTokenOps[Self <: BlockquoteCloseToken] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: blockquote_close): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

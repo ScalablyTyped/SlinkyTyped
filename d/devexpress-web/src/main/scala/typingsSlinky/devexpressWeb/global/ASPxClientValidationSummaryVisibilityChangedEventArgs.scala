@@ -16,5 +16,10 @@ class ASPxClientValidationSummaryVisibilityChangedEventArgs protected ()
     * @param visible true if the editor is visible; otherwise, false.
     */
   def this(visible: Boolean) = this()
+  /**
+    * Gets or sets whether the editor is visible on the client.
+    */
+  /* CompleteClass */
+  override var visible: Boolean = js.native
 }
 

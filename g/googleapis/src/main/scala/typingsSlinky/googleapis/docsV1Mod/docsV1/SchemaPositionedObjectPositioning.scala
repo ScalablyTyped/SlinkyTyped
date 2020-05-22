@@ -32,53 +32,12 @@ trait SchemaPositionedObjectPositioning extends js.Object {
 
 object SchemaPositionedObjectPositioning {
   @scala.inline
-  def apply(): SchemaPositionedObjectPositioning = {
+  def apply(layout: String = null, leftOffset: SchemaDimension = null, topOffset: SchemaDimension = null): SchemaPositionedObjectPositioning = {
     val __obj = js.Dynamic.literal()
+    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (leftOffset != null) __obj.updateDynamic("leftOffset")(leftOffset.asInstanceOf[js.Any])
+    if (topOffset != null) __obj.updateDynamic("topOffset")(topOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPositionedObjectPositioning]
   }
-  @scala.inline
-  implicit class SchemaPositionedObjectPositioningOps[Self <: SchemaPositionedObjectPositioning] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLayout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftOffset(value: SchemaDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopOffset(value: SchemaDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,232 +22,66 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojlistview.ojListViewSettableProperties<K, D>> */
-@js.native
 trait ojListViewSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var as: js.UndefOr[String] = js.native
-  var currentItem: js.UndefOr[K] = js.native
-  var data: js.UndefOr[DataProvider[K, D]] = js.native
-  var dnd: js.UndefOr[DragDrop] = js.native
-  var drillMode: js.UndefOr[collapsible | none] = js.native
-  var expanded: js.UndefOr[KeySet[K]] = js.native
-  var firstSelectedItem: js.UndefOr[Key[K, D]] = js.native
-  var groupHeaderPosition: js.UndefOr[static | sticky] = js.native
-  var item: js.UndefOr[Focusable[K, D]] = js.native
-  var scrollPolicy: js.UndefOr[auto | loadMoreOnScroll] = js.native
-  var scrollPolicyOptions: js.UndefOr[FetchSize] = js.native
-  var scrollPosition: js.UndefOr[OffsetX[K]] = js.native
-  var selection: js.UndefOr[js.Array[K]] = js.native
-  var selectionMode: js.UndefOr[none | single | multiple] = js.native
-  var selectionRequired: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[AccessibleNavigateSkipItems] = js.native
+  var as: js.UndefOr[String] = js.undefined
+  var currentItem: js.UndefOr[K] = js.undefined
+  var data: js.UndefOr[DataProvider[K, D]] = js.undefined
+  var dnd: js.UndefOr[DragDrop] = js.undefined
+  var drillMode: js.UndefOr[collapsible | none] = js.undefined
+  var expanded: js.UndefOr[KeySet[K]] = js.undefined
+  var firstSelectedItem: js.UndefOr[Key[K, D]] = js.undefined
+  var groupHeaderPosition: js.UndefOr[static | sticky] = js.undefined
+  var item: js.UndefOr[Focusable[K, D]] = js.undefined
+  var scrollPolicy: js.UndefOr[auto | loadMoreOnScroll] = js.undefined
+  var scrollPolicyOptions: js.UndefOr[FetchSize] = js.undefined
+  var scrollPosition: js.UndefOr[OffsetX[K]] = js.undefined
+  var selection: js.UndefOr[js.Array[K]] = js.undefined
+  var selectionMode: js.UndefOr[none | single | multiple] = js.undefined
+  var selectionRequired: js.UndefOr[Boolean] = js.undefined
+  var translations: js.UndefOr[AccessibleNavigateSkipItems] = js.undefined
 }
 
 object ojListViewSettablePropertiesLenient {
   @scala.inline
-  def apply[K, D](): ojListViewSettablePropertiesLenient[K, D] = {
+  def apply[K, D](
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    as: String = null,
+    currentItem: K = null,
+    data: DataProvider[K, D] = null,
+    dnd: DragDrop = null,
+    drillMode: collapsible | none = null,
+    expanded: KeySet[K] = null,
+    firstSelectedItem: Key[K, D] = null,
+    groupHeaderPosition: static | sticky = null,
+    item: Focusable[K, D] = null,
+    scrollPolicy: auto | loadMoreOnScroll = null,
+    scrollPolicyOptions: FetchSize = null,
+    scrollPosition: OffsetX[K] = null,
+    selection: js.Array[K] = null,
+    selectionMode: none | single | multiple = null,
+    selectionRequired: js.UndefOr[Boolean] = js.undefined,
+    translations: AccessibleNavigateSkipItems = null
+  ): ojListViewSettablePropertiesLenient[K, D] = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (currentItem != null) __obj.updateDynamic("currentItem")(currentItem.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dnd != null) __obj.updateDynamic("dnd")(dnd.asInstanceOf[js.Any])
+    if (drillMode != null) __obj.updateDynamic("drillMode")(drillMode.asInstanceOf[js.Any])
+    if (expanded != null) __obj.updateDynamic("expanded")(expanded.asInstanceOf[js.Any])
+    if (firstSelectedItem != null) __obj.updateDynamic("firstSelectedItem")(firstSelectedItem.asInstanceOf[js.Any])
+    if (groupHeaderPosition != null) __obj.updateDynamic("groupHeaderPosition")(groupHeaderPosition.asInstanceOf[js.Any])
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
+    if (scrollPolicy != null) __obj.updateDynamic("scrollPolicy")(scrollPolicy.asInstanceOf[js.Any])
+    if (scrollPolicyOptions != null) __obj.updateDynamic("scrollPolicyOptions")(scrollPolicyOptions.asInstanceOf[js.Any])
+    if (scrollPosition != null) __obj.updateDynamic("scrollPosition")(scrollPosition.asInstanceOf[js.Any])
+    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectionRequired)) __obj.updateDynamic("selectionRequired")(selectionRequired.get.asInstanceOf[js.Any])
+    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojListViewSettablePropertiesLenient[K, D]]
   }
-  @scala.inline
-  implicit class ojListViewSettablePropertiesLenientOps[Self[k, d] <: ojListViewSettablePropertiesLenient[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
-    @scala.inline
-    def withAs(value: String): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCurrentItem(value: K): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentItem: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: DataProvider[K, D]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDnd(value: DragDrop): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDnd: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrillMode(value: collapsible | none): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrillMode: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drillMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpanded(value: KeySet[K]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpanded: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstSelectedItem(value: Key[K, D]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSelectedItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstSelectedItem: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSelectedItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupHeaderPosition(value: static | sticky): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupHeaderPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupHeaderPosition: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupHeaderPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItem(value: Focusable[K, D]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollPolicy(value: auto | loadMoreOnScroll): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollPolicy: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollPolicyOptions(value: FetchSize): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollPolicyOptions: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollPosition(value: OffsetX[K]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollPosition: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelection(value: js.Array[K]): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelection: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: none | single | multiple): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionRequired(value: Boolean): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionRequired: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslations(value: AccessibleNavigateSkipItems): Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslations: Self[K, D] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

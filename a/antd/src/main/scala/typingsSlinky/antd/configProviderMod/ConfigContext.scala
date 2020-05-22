@@ -1,7 +1,7 @@
 package typingsSlinky.antd.configProviderMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`

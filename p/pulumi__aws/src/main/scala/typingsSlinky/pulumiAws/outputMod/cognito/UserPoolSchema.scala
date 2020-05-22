@@ -38,89 +38,22 @@ trait UserPoolSchema extends js.Object {
 
 object UserPoolSchema {
   @scala.inline
-  def apply(attributeDataType: String, name: String): UserPoolSchema = {
+  def apply(
+    attributeDataType: String,
+    name: String,
+    developerOnlyAttribute: js.UndefOr[Boolean] = js.undefined,
+    mutable: js.UndefOr[Boolean] = js.undefined,
+    numberAttributeConstraints: UserPoolSchemaNumberAttributeConstraints = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    stringAttributeConstraints: UserPoolSchemaStringAttributeConstraints = null
+  ): UserPoolSchema = {
     val __obj = js.Dynamic.literal(attributeDataType = attributeDataType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(developerOnlyAttribute)) __obj.updateDynamic("developerOnlyAttribute")(developerOnlyAttribute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mutable)) __obj.updateDynamic("mutable")(mutable.get.asInstanceOf[js.Any])
+    if (numberAttributeConstraints != null) __obj.updateDynamic("numberAttributeConstraints")(numberAttributeConstraints.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (stringAttributeConstraints != null) __obj.updateDynamic("stringAttributeConstraints")(stringAttributeConstraints.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolSchema]
   }
-  @scala.inline
-  implicit class UserPoolSchemaOps[Self <: UserPoolSchema] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeDataType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeDataType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeveloperOnlyAttribute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerOnlyAttribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloperOnlyAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerOnlyAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberAttributeConstraints(value: UserPoolSchemaNumberAttributeConstraints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberAttributeConstraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberAttributeConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberAttributeConstraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringAttributeConstraints(value: UserPoolSchemaStringAttributeConstraints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringAttributeConstraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringAttributeConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stringAttributeConstraints")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

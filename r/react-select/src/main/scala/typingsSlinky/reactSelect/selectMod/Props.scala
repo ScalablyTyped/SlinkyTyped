@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.reactSelect.anon.Count
@@ -23,7 +22,6 @@ import typingsSlinky.reactSelect.typesMod.MenuPlacement
 import typingsSlinky.reactSelect.typesMod.MenuPosition
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
-import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
@@ -31,24 +29,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ key in string ]: any} */ @js.native
-trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
+- Dropped {[ key in string ]: any} */ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
   /* Aria label (for assistive tech) */
-  var `aria-label`: js.UndefOr[String] = js.native
+  var `aria-label`: js.UndefOr[String] = js.undefined
   /* HTML ID of an element that should be used as the label (for assistive tech) */
-  var `aria-labelledby`: js.UndefOr[String] = js.native
+  var `aria-labelledby`: js.UndefOr[String] = js.undefined
   /* Focus the control when it is mounted */
-  var autoFocus: js.UndefOr[Boolean] = js.native
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
   /* Remove the currently focused option when the user presses backspace */
-  var backspaceRemovesValue: js.UndefOr[Boolean] = js.native
+  var backspaceRemovesValue: js.UndefOr[Boolean] = js.undefined
   /* Remove focus from the input when the user selects an option (handy for dismissing the keyboard on touch devices) */
-  var blurInputOnSelect: js.UndefOr[Boolean] = js.native
+  var blurInputOnSelect: js.UndefOr[Boolean] = js.undefined
   /* When the user reaches the top/bottom of the menu, prevent scroll on the scroll-parent  */
-  var captureMenuScroll: js.UndefOr[Boolean] = js.native
+  var captureMenuScroll: js.UndefOr[Boolean] = js.undefined
   /* className attribute applied to the outer component */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /* classNamePrefix attribute used as a base for inner component classNames */
-  var classNamePrefix: js.UndefOr[String | Null] = js.native
+  var classNamePrefix: js.UndefOr[String | Null] = js.undefined
   /*
     If `true`, close the select menu when the user scrolls the document/body.
     If a function, takes a standard javascript `ScrollEvent` you return a boolean:
@@ -57,9 +54,9 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
     This is useful when you have a scrollable modal and want to portal the menu out,
     but want to avoid graphical issues.
     */
-  var closeMenuOnScroll: js.UndefOr[Boolean | EventListener] = js.native
+  var closeMenuOnScroll: js.UndefOr[Boolean | EventListener] = js.undefined
   /* Close the select menu when the user selects an option */
-  var closeMenuOnSelect: js.UndefOr[Boolean] = js.native
+  var closeMenuOnSelect: js.UndefOr[Boolean] = js.undefined
   /*
     This complex object includes all the compositional components that are used
     in `react-select`. If you wish to overwrite a component, pass in an object
@@ -68,20 +65,20 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
     instead. For a list of the components that can be passed in, and the shape
     that will be passed to them, see [the components docs](/api#components)
     */
-  var components: js.UndefOr[SelectComponentsConfig[OptionType]] = js.native
+  var components: js.UndefOr[SelectComponentsConfig[OptionType]] = js.undefined
   /* Whether the value of the select, e.g. SingleValue, should be displayed in the control. */
-  var controlShouldRenderValue: js.UndefOr[Boolean] = js.native
-  var defaultInputValue: js.UndefOr[String] = js.native
-  var defaultMenuIsOpen: js.UndefOr[Boolean] = js.native
-  var defaultValue: js.UndefOr[ValueType[OptionType]] = js.native
+  var controlShouldRenderValue: js.UndefOr[Boolean] = js.undefined
+  var defaultInputValue: js.UndefOr[String] = js.undefined
+  var defaultMenuIsOpen: js.UndefOr[Boolean] = js.undefined
+  var defaultValue: js.UndefOr[ValueType[OptionType]] = js.undefined
   /* Delimiter used to join multiple values into a single HTML Input value */
-  var delimiter: js.UndefOr[String] = js.native
+  var delimiter: js.UndefOr[String] = js.undefined
   /* Clear all values when the user presses escape AND the menu is closed */
-  var escapeClearsValue: js.UndefOr[Boolean] = js.native
+  var escapeClearsValue: js.UndefOr[Boolean] = js.undefined
   /* Custom method to filter whether an option should be displayed in the menu */
-  var filterOption: js.UndefOr[(js.Function2[/* option */ Option, /* rawInput */ String, Boolean]) | Null] = js.native
+  var filterOption: js.UndefOr[(js.Function2[/* option */ Option, /* rawInput */ String, Boolean]) | Null] = js.undefined
   /* Formats group labels in the menu as React components */
-  var formatGroupLabel: js.UndefOr[typingsSlinky.reactSelect.builtinsMod.formatGroupLabel[OptionType]] = js.native
+  var formatGroupLabel: js.UndefOr[typingsSlinky.reactSelect.builtinsMod.formatGroupLabel[OptionType]] = js.undefined
   /* Formats option labels in the menu and control as React components */
   var formatOptionLabel: js.UndefOr[
     js.Function2[
@@ -89,967 +86,246 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
       /* labelMeta */ FormatOptionLabelMeta[OptionType], 
       TagMod[Any]
     ]
-  ] = js.native
+  ] = js.undefined
   /* Resolves option data to a string to be displayed as the label by components */
-  var getOptionLabel: js.UndefOr[typingsSlinky.reactSelect.builtinsMod.getOptionLabel[OptionType]] = js.native
+  var getOptionLabel: js.UndefOr[typingsSlinky.reactSelect.builtinsMod.getOptionLabel[OptionType]] = js.undefined
   /* Resolves option data to a string to compare options and specify value attributes */
-  var getOptionValue: js.UndefOr[typingsSlinky.reactSelect.builtinsMod.getOptionValue[OptionType]] = js.native
+  var getOptionValue: js.UndefOr[typingsSlinky.reactSelect.builtinsMod.getOptionValue[OptionType]] = js.undefined
   /* Hide the selected option from the menu */
-  var hideSelectedOptions: js.UndefOr[Boolean] = js.native
+  var hideSelectedOptions: js.UndefOr[Boolean] = js.undefined
   /* The id to set on the SelectContainer component. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /* The id of the search input */
-  var inputId: js.UndefOr[String] = js.native
+  var inputId: js.UndefOr[String] = js.undefined
   /* The value of the search input */
-  var inputValue: js.UndefOr[String] = js.native
+  var inputValue: js.UndefOr[String] = js.undefined
   /* Define an id prefix for the select components e.g. {your-id}-value */
-  var instanceId: js.UndefOr[Double | String] = js.native
+  var instanceId: js.UndefOr[Double | String] = js.undefined
   /* Is the select value clearable */
-  var isClearable: js.UndefOr[Boolean] = js.native
+  var isClearable: js.UndefOr[Boolean] = js.undefined
   /* Is the select disabled */
-  var isDisabled: js.UndefOr[Boolean] = js.native
+  var isDisabled: js.UndefOr[Boolean] = js.undefined
   /* Is the select in a state of loading (async) */
-  var isLoading: js.UndefOr[Boolean] = js.native
+  var isLoading: js.UndefOr[Boolean] = js.undefined
   /* Support multiple selected options */
-  var isMulti: js.UndefOr[Boolean] = js.native
+  var isMulti: js.UndefOr[Boolean] = js.undefined
   /* Override the built-in logic to detect whether an option is disabled */
   var isOptionDisabled: js.UndefOr[
     js.Function2[/* option */ OptionType, /* options */ OptionsType[OptionType], Boolean]
-  ] = js.native
+  ] = js.undefined
   /* Override the built-in logic to detect whether an option is selected */
   var isOptionSelected: js.UndefOr[
     js.Function2[/* option */ OptionType, /* options */ OptionsType[OptionType], Boolean]
-  ] = js.native
+  ] = js.undefined
   /* Is the select direction right-to-left */
-  var isRtl: js.UndefOr[Boolean] = js.native
+  var isRtl: js.UndefOr[Boolean] = js.undefined
   /* Whether to enable search functionality */
-  var isSearchable: js.UndefOr[Boolean] = js.native
+  var isSearchable: js.UndefOr[Boolean] = js.undefined
   /* Async: Text to display when loading options */
-  var loadingMessage: js.UndefOr[js.Function1[/* obj */ InputValue, String | Null]] = js.native
+  var loadingMessage: js.UndefOr[js.Function1[/* obj */ InputValue, String | Null]] = js.undefined
   /* Maximum height of the menu before scrolling */
-  var maxMenuHeight: js.UndefOr[Double] = js.native
+  var maxMenuHeight: js.UndefOr[Double] = js.undefined
   /* Whether the menu is open */
-  var menuIsOpen: js.UndefOr[Boolean] = js.native
+  var menuIsOpen: js.UndefOr[Boolean] = js.undefined
   /* Default placement of the menu in relation to the control. 'auto' will flip
     when there isn't enough space below the control. */
-  var menuPlacement: js.UndefOr[MenuPlacement] = js.native
+  var menuPlacement: js.UndefOr[MenuPlacement] = js.undefined
   /* Whether the menu should use a portal, and where it should attach */
-  var menuPortalTarget: js.UndefOr[HTMLElement | Null] = js.native
+  var menuPortalTarget: js.UndefOr[HTMLElement | Null] = js.undefined
   /* The CSS position value of the menu, when "fixed" extra layout management is required */
-  var menuPosition: js.UndefOr[MenuPosition] = js.native
+  var menuPosition: js.UndefOr[MenuPosition] = js.undefined
   /* Whether to block scroll events when the menu is open */
-  var menuShouldBlockScroll: js.UndefOr[Boolean] = js.native
+  var menuShouldBlockScroll: js.UndefOr[Boolean] = js.undefined
   /* Whether the menu should be scrolled into view when it opens */
-  var menuShouldScrollIntoView: js.UndefOr[Boolean] = js.native
+  var menuShouldScrollIntoView: js.UndefOr[Boolean] = js.undefined
   /* Minimum height of the menu before flipping */
-  var minMenuHeight: js.UndefOr[Double] = js.native
+  var minMenuHeight: js.UndefOr[Double] = js.undefined
   /* Name of the HTML Input (optional - without this, no input will be rendered) */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /* Text to display when there are no options */
-  var noOptionsMessage: js.UndefOr[js.Function1[/* obj */ InputValue, String | Null]] = js.native
+  var noOptionsMessage: js.UndefOr[js.Function1[/* obj */ InputValue, String | Null]] = js.undefined
   /* Handle blur events on the control */
-  var onBlur: js.UndefOr[FocusEventHandler] = js.native
+  var onBlur: js.UndefOr[FocusEventHandler] = js.undefined
   /* Handle change events on the select */
   var onChange: js.UndefOr[
     js.Function2[/* value */ ValueType[OptionType], /* action */ ActionMeta[OptionType], Unit]
-  ] = js.native
+  ] = js.undefined
   /* Handle focus events on the control */
-  var onFocus: js.UndefOr[FocusEventHandler] = js.native
+  var onFocus: js.UndefOr[FocusEventHandler] = js.undefined
   /* Handle change events on the input */
-  var onInputChange: js.UndefOr[js.Function2[/* newValue */ String, /* actionMeta */ InputActionMeta, Unit]] = js.native
+  var onInputChange: js.UndefOr[js.Function2[/* newValue */ String, /* actionMeta */ InputActionMeta, Unit]] = js.undefined
   /* Handle key down events on the select */
-  var onKeyDown: js.UndefOr[KeyboardEventHandler] = js.native
+  var onKeyDown: js.UndefOr[KeyboardEventHandler] = js.undefined
   /* Handle the menu closing */
-  var onMenuClose: js.UndefOr[js.Function0[Unit]] = js.native
+  var onMenuClose: js.UndefOr[js.Function0[Unit]] = js.undefined
   /* Handle the menu opening */
-  var onMenuOpen: js.UndefOr[js.Function0[Unit]] = js.native
+  var onMenuOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
   /* Fired when the user scrolls to the bottom of the menu */
-  var onMenuScrollToBottom: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
+  var onMenuScrollToBottom: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.undefined
   /* Fired when the user scrolls to the top of the menu */
-  var onMenuScrollToTop: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
+  var onMenuScrollToTop: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.undefined
   /* Allows control of whether the menu is opened when the Select is clicked */
-  var openMenuOnClick: js.UndefOr[Boolean] = js.native
+  var openMenuOnClick: js.UndefOr[Boolean] = js.undefined
   /* Allows control of whether the menu is opened when the Select is focused */
-  var openMenuOnFocus: js.UndefOr[Boolean] = js.native
+  var openMenuOnFocus: js.UndefOr[Boolean] = js.undefined
   /* Array of options that populate the select menu */
-  var options: js.UndefOr[GroupedOptionsType[OptionType] | OptionsType[OptionType]] = js.native
+  var options: js.UndefOr[GroupedOptionsType[OptionType] | OptionsType[OptionType]] = js.undefined
   /* Number of options to jump in menu when page{up|down} keys are used */
-  var pageSize: js.UndefOr[Double] = js.native
+  var pageSize: js.UndefOr[Double] = js.undefined
   /* Placeholder text for the select value */
-  var placeholder: js.UndefOr[TagMod[Any]] = js.native
+  var placeholder: js.UndefOr[TagMod[Any]] = js.undefined
   /* Status to relay to screen readers */
-  var screenReaderStatus: js.UndefOr[js.Function1[/* obj */ Count, String]] = js.native
+  var screenReaderStatus: js.UndefOr[js.Function1[/* obj */ Count, String]] = js.undefined
   /* Style modifier methods */
-  var styles: js.UndefOr[StylesConfig] = js.native
+  var styles: js.UndefOr[StylesConfig] = js.undefined
   /* Sets the tabIndex attribute on the input */
-  var tabIndex: js.UndefOr[String | Null] = js.native
+  var tabIndex: js.UndefOr[String | Null] = js.undefined
   /* Select the currently focused option when the user presses tab */
-  var tabSelectsValue: js.UndefOr[Boolean] = js.native
+  var tabSelectsValue: js.UndefOr[Boolean] = js.undefined
   /* Theme modifier method */
-  var theme: js.UndefOr[ThemeConfig] = js.native
+  var theme: js.UndefOr[ThemeConfig] = js.undefined
   /* The value of the select; reflected by the selected option */
-  var value: js.UndefOr[ValueType[OptionType]] = js.native
+  var value: js.UndefOr[ValueType[OptionType]] = js.undefined
 }
 
 object Props {
   @scala.inline
-  def apply[OptionType](): Props[OptionType] = {
+  def apply[OptionType](
+    `aria-label`: String = null,
+    `aria-labelledby`: String = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    backspaceRemovesValue: js.UndefOr[Boolean] = js.undefined,
+    blurInputOnSelect: js.UndefOr[Boolean] = js.undefined,
+    captureMenuScroll: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    classNamePrefix: js.UndefOr[Null | String] = js.undefined,
+    closeMenuOnScroll: Boolean | EventListener = null,
+    closeMenuOnSelect: js.UndefOr[Boolean] = js.undefined,
+    components: SelectComponentsConfig[OptionType] = null,
+    controlShouldRenderValue: js.UndefOr[Boolean] = js.undefined,
+    defaultInputValue: String = null,
+    defaultMenuIsOpen: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: js.UndefOr[Null | ValueType[OptionType]] = js.undefined,
+    delimiter: String = null,
+    escapeClearsValue: js.UndefOr[Boolean] = js.undefined,
+    filterOption: js.UndefOr[Null | ((/* option */ Option, /* rawInput */ String) => Boolean)] = js.undefined,
+    formatGroupLabel: /* group */ GroupType[OptionType] => TagMod[Any] = null,
+    formatOptionLabel: (/* option */ OptionType, /* labelMeta */ FormatOptionLabelMeta[OptionType]) => TagMod[Any] = null,
+    getOptionLabel: OptionType => String = null,
+    getOptionValue: OptionType => String = null,
+    hideSelectedOptions: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    inputId: String = null,
+    inputValue: String = null,
+    instanceId: Double | String = null,
+    isClearable: js.UndefOr[Boolean] = js.undefined,
+    isDisabled: js.UndefOr[Boolean] = js.undefined,
+    isLoading: js.UndefOr[Boolean] = js.undefined,
+    isMulti: js.UndefOr[Boolean] = js.undefined,
+    isOptionDisabled: (/* option */ OptionType, /* options */ OptionsType[OptionType]) => Boolean = null,
+    isOptionSelected: (/* option */ OptionType, /* options */ OptionsType[OptionType]) => Boolean = null,
+    isRtl: js.UndefOr[Boolean] = js.undefined,
+    isSearchable: js.UndefOr[Boolean] = js.undefined,
+    loadingMessage: /* obj */ InputValue => String | Null = null,
+    maxMenuHeight: js.UndefOr[Double] = js.undefined,
+    menuIsOpen: js.UndefOr[Boolean] = js.undefined,
+    menuPlacement: MenuPlacement = null,
+    menuPortalTarget: js.UndefOr[Null | HTMLElement] = js.undefined,
+    menuPosition: MenuPosition = null,
+    menuShouldBlockScroll: js.UndefOr[Boolean] = js.undefined,
+    menuShouldScrollIntoView: js.UndefOr[Boolean] = js.undefined,
+    minMenuHeight: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    noOptionsMessage: /* obj */ InputValue => String | Null = null,
+    onBlur: /* event */ SyntheticFocusEvent[HTMLElement] => Unit = null,
+    onChange: (/* value */ ValueType[OptionType], /* action */ ActionMeta[OptionType]) => Unit = null,
+    onFocus: /* event */ SyntheticFocusEvent[HTMLElement] => Unit = null,
+    onInputChange: (/* newValue */ String, /* actionMeta */ InputActionMeta) => Unit = null,
+    onKeyDown: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit = null,
+    onMenuClose: () => Unit = null,
+    onMenuOpen: () => Unit = null,
+    onMenuScrollToBottom: /* event */ SyntheticEvent[Event, HTMLElement] => Unit = null,
+    onMenuScrollToTop: /* event */ SyntheticEvent[Event, HTMLElement] => Unit = null,
+    openMenuOnClick: js.UndefOr[Boolean] = js.undefined,
+    openMenuOnFocus: js.UndefOr[Boolean] = js.undefined,
+    options: GroupedOptionsType[OptionType] | OptionsType[OptionType] = null,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    placeholder: TagMod[Any] = null,
+    screenReaderStatus: /* obj */ Count => String = null,
+    styles: StylesConfig = null,
+    tabIndex: js.UndefOr[Null | String] = js.undefined,
+    tabSelectsValue: js.UndefOr[Boolean] = js.undefined,
+    theme: ThemeConfig = null,
+    value: js.UndefOr[Null | ValueType[OptionType]] = js.undefined
+  ): Props[OptionType] = {
     val __obj = js.Dynamic.literal()
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(backspaceRemovesValue)) __obj.updateDynamic("backspaceRemovesValue")(backspaceRemovesValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blurInputOnSelect)) __obj.updateDynamic("blurInputOnSelect")(blurInputOnSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(captureMenuScroll)) __obj.updateDynamic("captureMenuScroll")(captureMenuScroll.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(classNamePrefix)) __obj.updateDynamic("classNamePrefix")(classNamePrefix.asInstanceOf[js.Any])
+    if (closeMenuOnScroll != null) __obj.updateDynamic("closeMenuOnScroll")(closeMenuOnScroll.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeMenuOnSelect)) __obj.updateDynamic("closeMenuOnSelect")(closeMenuOnSelect.get.asInstanceOf[js.Any])
+    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
+    if (!js.isUndefined(controlShouldRenderValue)) __obj.updateDynamic("controlShouldRenderValue")(controlShouldRenderValue.get.asInstanceOf[js.Any])
+    if (defaultInputValue != null) __obj.updateDynamic("defaultInputValue")(defaultInputValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultMenuIsOpen)) __obj.updateDynamic("defaultMenuIsOpen")(defaultMenuIsOpen.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultValue)) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(escapeClearsValue)) __obj.updateDynamic("escapeClearsValue")(escapeClearsValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(filterOption)) __obj.updateDynamic("filterOption")(if (filterOption != null) js.Any.fromFunction2(filterOption.asInstanceOf[(/* option */ Option, /* rawInput */ String) => Boolean]) else null)
+    if (formatGroupLabel != null) __obj.updateDynamic("formatGroupLabel")(js.Any.fromFunction1(formatGroupLabel))
+    if (formatOptionLabel != null) __obj.updateDynamic("formatOptionLabel")(js.Any.fromFunction2(formatOptionLabel))
+    if (getOptionLabel != null) __obj.updateDynamic("getOptionLabel")(js.Any.fromFunction1(getOptionLabel))
+    if (getOptionValue != null) __obj.updateDynamic("getOptionValue")(js.Any.fromFunction1(getOptionValue))
+    if (!js.isUndefined(hideSelectedOptions)) __obj.updateDynamic("hideSelectedOptions")(hideSelectedOptions.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
+    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
+    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(isClearable)) __obj.updateDynamic("isClearable")(isClearable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isLoading)) __obj.updateDynamic("isLoading")(isLoading.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isMulti)) __obj.updateDynamic("isMulti")(isMulti.get.asInstanceOf[js.Any])
+    if (isOptionDisabled != null) __obj.updateDynamic("isOptionDisabled")(js.Any.fromFunction2(isOptionDisabled))
+    if (isOptionSelected != null) __obj.updateDynamic("isOptionSelected")(js.Any.fromFunction2(isOptionSelected))
+    if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isSearchable)) __obj.updateDynamic("isSearchable")(isSearchable.get.asInstanceOf[js.Any])
+    if (loadingMessage != null) __obj.updateDynamic("loadingMessage")(js.Any.fromFunction1(loadingMessage))
+    if (!js.isUndefined(maxMenuHeight)) __obj.updateDynamic("maxMenuHeight")(maxMenuHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(menuIsOpen)) __obj.updateDynamic("menuIsOpen")(menuIsOpen.get.asInstanceOf[js.Any])
+    if (menuPlacement != null) __obj.updateDynamic("menuPlacement")(menuPlacement.asInstanceOf[js.Any])
+    if (!js.isUndefined(menuPortalTarget)) __obj.updateDynamic("menuPortalTarget")(menuPortalTarget.asInstanceOf[js.Any])
+    if (menuPosition != null) __obj.updateDynamic("menuPosition")(menuPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(menuShouldBlockScroll)) __obj.updateDynamic("menuShouldBlockScroll")(menuShouldBlockScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(menuShouldScrollIntoView)) __obj.updateDynamic("menuShouldScrollIntoView")(menuShouldScrollIntoView.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minMenuHeight)) __obj.updateDynamic("minMenuHeight")(minMenuHeight.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (noOptionsMessage != null) __obj.updateDynamic("noOptionsMessage")(js.Any.fromFunction1(noOptionsMessage))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onInputChange != null) __obj.updateDynamic("onInputChange")(js.Any.fromFunction2(onInputChange))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onMenuClose != null) __obj.updateDynamic("onMenuClose")(js.Any.fromFunction0(onMenuClose))
+    if (onMenuOpen != null) __obj.updateDynamic("onMenuOpen")(js.Any.fromFunction0(onMenuOpen))
+    if (onMenuScrollToBottom != null) __obj.updateDynamic("onMenuScrollToBottom")(js.Any.fromFunction1(onMenuScrollToBottom))
+    if (onMenuScrollToTop != null) __obj.updateDynamic("onMenuScrollToTop")(js.Any.fromFunction1(onMenuScrollToTop))
+    if (!js.isUndefined(openMenuOnClick)) __obj.updateDynamic("openMenuOnClick")(openMenuOnClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(openMenuOnFocus)) __obj.updateDynamic("openMenuOnFocus")(openMenuOnFocus.get.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (screenReaderStatus != null) __obj.updateDynamic("screenReaderStatus")(js.Any.fromFunction1(screenReaderStatus))
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabSelectsValue)) __obj.updateDynamic("tabSelectsValue")(tabSelectsValue.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props[OptionType]]
   }
-  @scala.inline
-  implicit class PropsOps[Self[optiontype] <: Props[optiontype], OptionType] (val x: Self[OptionType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[OptionType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[OptionType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[OptionType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[OptionType] with Other]
-    @scala.inline
-    def `withAria-label`(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-label`: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAria-labelledby`(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAria-labelledby`: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackspaceRemovesValue(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backspaceRemovesValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackspaceRemovesValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backspaceRemovesValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlurInputOnSelect(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurInputOnSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlurInputOnSelect: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blurInputOnSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptureMenuScroll(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureMenuScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureMenuScroll: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureMenuScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassNamePrefix(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNamePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassNamePrefix: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNamePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassNamePrefixNull: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classNamePrefix")(null)
-        ret
-    }
-    @scala.inline
-    def withCloseMenuOnScrollFunction1(value: /* evt */ Event => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeMenuOnScroll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCloseMenuOnScroll(value: Boolean | EventListener): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeMenuOnScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseMenuOnScroll: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeMenuOnScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseMenuOnSelect(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeMenuOnSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseMenuOnSelect: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeMenuOnSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComponents(value: SelectComponentsConfig[OptionType]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponents: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlShouldRenderValue(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlShouldRenderValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlShouldRenderValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlShouldRenderValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultInputValue(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultInputValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultInputValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultInputValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultMenuIsOpen(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMenuIsOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultMenuIsOpen: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMenuIsOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: ValueType[OptionType]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValueNull: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(null)
-        ret
-    }
-    @scala.inline
-    def withDelimiter(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimiter: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscapeClearsValue(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeClearsValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEscapeClearsValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeClearsValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterOption(value: (/* option */ Option, /* rawInput */ String) => Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOption")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFilterOption: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterOptionNull: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterOption")(null)
-        ret
-    }
-    @scala.inline
-    def withFormatGroupLabel(value: /* group */ GroupType[OptionType] => TagMod[Any]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatGroupLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatGroupLabel: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatGroupLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatOptionLabel(value: (/* option */ OptionType, /* labelMeta */ FormatOptionLabelMeta[OptionType]) => TagMod[Any]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOptionLabel")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFormatOptionLabel: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOptionLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetOptionLabel(value: OptionType => String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetOptionLabel: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetOptionValue(value: OptionType => String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetOptionValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideSelectedOptions(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideSelectedOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideSelectedOptions: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideSelectedOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputId(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputId: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputValue(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: Double | String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsClearable(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClearable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsClearable: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClearable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDisabled(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDisabled: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLoading(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLoading: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsMulti(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMulti")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsMulti: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMulti")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOptionDisabled(value: (/* option */ OptionType, /* options */ OptionsType[OptionType]) => Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOptionDisabled")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsOptionDisabled: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOptionDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOptionSelected(value: (/* option */ OptionType, /* options */ OptionsType[OptionType]) => Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOptionSelected")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsOptionSelected: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOptionSelected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsRtl(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsRtl: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsSearchable(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSearchable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsSearchable: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSearchable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingMessage(value: /* obj */ InputValue => String | Null): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadingMessage: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMenuHeight(value: Double): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMenuHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMenuHeight: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMenuHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuIsOpen(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIsOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuIsOpen: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuIsOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuPlacement(value: MenuPlacement): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuPlacement: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuPortalTarget(value: HTMLElement): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPortalTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuPortalTarget: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPortalTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuPortalTargetNull: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPortalTarget")(null)
-        ret
-    }
-    @scala.inline
-    def withMenuPosition(value: MenuPosition): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuPosition: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuShouldBlockScroll(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuShouldBlockScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuShouldBlockScroll: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuShouldBlockScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMenuShouldScrollIntoView(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuShouldScrollIntoView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMenuShouldScrollIntoView: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("menuShouldScrollIntoView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinMenuHeight(value: Double): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMenuHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinMenuHeight: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minMenuHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoOptionsMessage(value: /* obj */ InputValue => String | Null): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptionsMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNoOptionsMessage: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptionsMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnBlur(value: /* event */ SyntheticFocusEvent[HTMLElement] => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnBlur: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: (/* value */ ValueType[OptionType], /* action */ ActionMeta[OptionType]) => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocus(value: /* event */ SyntheticFocusEvent[HTMLElement] => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFocus: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInputChange(value: (/* newValue */ String, /* actionMeta */ InputActionMeta) => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInputChange: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnKeyDown(value: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnKeyDown: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMenuClose(value: () => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuClose")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMenuClose: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMenuOpen(value: () => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuOpen")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMenuOpen: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMenuScrollToBottom(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuScrollToBottom")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMenuScrollToBottom: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuScrollToBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMenuScrollToTop(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuScrollToTop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMenuScrollToTop: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuScrollToTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenMenuOnClick(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openMenuOnClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenMenuOnClick: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openMenuOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenMenuOnFocus(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openMenuOnFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenMenuOnFocus: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openMenuOnFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: GroupedOptionsType[OptionType] | OptionsType[OptionType]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderReactElement(value: ReactElement): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: TagMod[Any]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenReaderStatus(value: /* obj */ Count => String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderStatus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutScreenReaderStatus: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: StylesConfig): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndex(value: String): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabIndex: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabIndexNull: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(null)
-        ret
-    }
-    @scala.inline
-    def withTabSelectsValue(value: Boolean): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabSelectsValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabSelectsValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabSelectsValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeFunction1(value: /* theme */ Theme => Theme): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ThemeConfig): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: ValueType[OptionType]): Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self[OptionType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-  }
-  
 }
 

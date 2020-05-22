@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs")
 @js.native
 abstract class RemoteSystemWatcherErrorOccurredEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs
+  extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs {
+  /** The **RemoteSystemWatcherError** value representing the error that occurred during discovery, causing the containing **ErrorOccurred** event to be raised. */
+  /* CompleteClass */
+  override var error: typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemWatcherError = js.native
+}
 

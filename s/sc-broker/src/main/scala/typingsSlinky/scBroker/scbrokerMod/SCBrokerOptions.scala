@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SCBrokerOptions
   extends /* additionalOptions */ StringDictionary[js.Any] {
   // An ID to associate with this specific instance of SC
@@ -13,67 +12,32 @@ trait SCBrokerOptions
   // hosts - You can access the instanceId from the Broker object
   // (inside brokerController) - If you don't provide an instanceId,
   // SC will generate a random one (UUID v4)
-  var instanceId: js.UndefOr[String] = js.native
+  var instanceId: js.UndefOr[String] = js.undefined
   // In milliseconds, the timeout for calling res(err, data) when
   // your sendToWorker, sendToBroker or sendToMaster (IPC) call
   // expects an ACK response from the other process
   // (when callback is provided)
-  var ipcAckTimeout: js.UndefOr[Double] = js.native
+  var ipcAckTimeout: js.UndefOr[Double] = js.undefined
   // A key which various SC processes will use to interact with
   // scBroker broker processes securely, defaults to a 256 bits
   // cryptographically random hex string
-  var secretKey: js.UndefOr[String] = js.native
+  var secretKey: js.UndefOr[String] = js.undefined
 }
 
 object SCBrokerOptions {
   @scala.inline
-  def apply(): SCBrokerOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    instanceId: String = null,
+    ipcAckTimeout: js.UndefOr[Double] = js.undefined,
+    secretKey: String = null
+  ): SCBrokerOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(ipcAckTimeout)) __obj.updateDynamic("ipcAckTimeout")(ipcAckTimeout.get.asInstanceOf[js.Any])
+    if (secretKey != null) __obj.updateDynamic("secretKey")(secretKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SCBrokerOptions]
   }
-  @scala.inline
-  implicit class SCBrokerOptionsOps[Self <: SCBrokerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIpcAckTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipcAckTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIpcAckTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipcAckTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

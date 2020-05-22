@@ -15,14 +15,29 @@ trait EntityWithIndices extends js.Object
 
 object EntityWithIndices {
   @scala.inline
-  implicit def apply(value: CashtagWithIndices): EntityWithIndices = value.asInstanceOf[EntityWithIndices]
+  def UrlWithIndices(indices: js.Tuple2[Double, Double], url: String): EntityWithIndices = {
+    val __obj = js.Dynamic.literal(indices = indices.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EntityWithIndices]
+  }
   @scala.inline
-  implicit def apply(value: HashtagWithIndices): EntityWithIndices = value.asInstanceOf[EntityWithIndices]
+  def MentionWithIndices(indices: js.Tuple2[Double, Double], screenName: String): EntityWithIndices = {
+    val __obj = js.Dynamic.literal(indices = indices.asInstanceOf[js.Any], screenName = screenName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EntityWithIndices]
+  }
   @scala.inline
-  implicit def apply(value: MentionOrListWithIndices): EntityWithIndices = value.asInstanceOf[EntityWithIndices]
+  def HashtagWithIndices(hashtag: String, indices: js.Tuple2[Double, Double]): EntityWithIndices = {
+    val __obj = js.Dynamic.literal(hashtag = hashtag.asInstanceOf[js.Any], indices = indices.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EntityWithIndices]
+  }
   @scala.inline
-  implicit def apply(value: MentionWithIndices): EntityWithIndices = value.asInstanceOf[EntityWithIndices]
+  def CashtagWithIndices(cashtag: String, indices: js.Tuple2[Double, Double]): EntityWithIndices = {
+    val __obj = js.Dynamic.literal(cashtag = cashtag.asInstanceOf[js.Any], indices = indices.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EntityWithIndices]
+  }
   @scala.inline
-  implicit def apply(value: UrlWithIndices): EntityWithIndices = value.asInstanceOf[EntityWithIndices]
+  def MentionOrListWithIndices(indices: js.Tuple2[Double, Double], listSlug: String, screenName: String): EntityWithIndices = {
+    val __obj = js.Dynamic.literal(indices = indices.asInstanceOf[js.Any], listSlug = listSlug.asInstanceOf[js.Any], screenName = screenName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EntityWithIndices]
+  }
 }
 

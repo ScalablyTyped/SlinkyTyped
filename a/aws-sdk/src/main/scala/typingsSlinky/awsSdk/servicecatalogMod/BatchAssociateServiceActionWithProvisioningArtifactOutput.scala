@@ -14,29 +14,10 @@ trait BatchAssociateServiceActionWithProvisioningArtifactOutput extends js.Objec
 
 object BatchAssociateServiceActionWithProvisioningArtifactOutput {
   @scala.inline
-  def apply(): BatchAssociateServiceActionWithProvisioningArtifactOutput = {
+  def apply(FailedServiceActionAssociations: FailedServiceActionAssociations = null): BatchAssociateServiceActionWithProvisioningArtifactOutput = {
     val __obj = js.Dynamic.literal()
+    if (FailedServiceActionAssociations != null) __obj.updateDynamic("FailedServiceActionAssociations")(FailedServiceActionAssociations.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchAssociateServiceActionWithProvisioningArtifactOutput]
   }
-  @scala.inline
-  implicit class BatchAssociateServiceActionWithProvisioningArtifactOutputOps[Self <: BatchAssociateServiceActionWithProvisioningArtifactOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFailedServiceActionAssociations(value: FailedServiceActionAssociations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedServiceActionAssociations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedServiceActionAssociations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedServiceActionAssociations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

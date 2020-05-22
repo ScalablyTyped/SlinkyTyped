@@ -27,10 +27,17 @@ object deleteObjectTaggingCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteObjectTaggingInput) = this()
+    /* CompleteClass */
+    override val input: DeleteObjectTaggingInput = js.native
     val middlewareStack: MiddlewareStack[DeleteObjectTaggingInput, DeleteObjectTaggingOutput, Readable] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[DeleteObjectTaggingInput, DeleteObjectTaggingOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteObjectTaggingInput, DeleteObjectTaggingOutput] = js.native
   }

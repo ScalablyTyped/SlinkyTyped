@@ -7,40 +7,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** ImexGrid Control */
-@js.native
 trait ImexGrid extends js.Object {
   @JSName("AccWizObjects.ImexGrid_typekey")
-  var AccWizObjectsDotImexGrid_typekey: ImexGrid = js.native
-  var AllowColumnSizing: Boolean = js.native
-  var BackColor: OLE_COLOR = js.native
-  var Caption: String = js.native
-  var ColumnClickBehavior: Double = js.native
-  val ColumnCount: Double = js.native
-  var ColumnState: js.Any = js.native
-  var Delimiters: String = js.native
-  var DrawTextLogicalOrder: Boolean = js.native
-  var FirstRowNumber: Double = js.native
-  var Font: IFontDisp = js.native
-  var GridBackColor: OLE_COLOR = js.native
-  var GridFont: IFontDisp = js.native
-  var GridHeader: Double = js.native
-  var Painting: Boolean = js.native
-  val RowCount: Double = js.native
-  var ShowColLines: Boolean = js.native
-  var ShowRowHeaders: Boolean = js.native
-  var StringDelimiters: String = js.native
-  def AddColumn(ColumnCaption: String, ColumnWidth: Double, Index: Double): Unit = js.native
-  def AddRow(RowText: String, Index: Double): Unit = js.native
-  def CalcBestColumns(): Unit = js.native
-  def ClearColumns(): Unit = js.native
-  def ClearRows(): Unit = js.native
-  def Columns(ColumnNumber: Double): js.Any = js.native
-  def DeleteColumn(Index: Double): Unit = js.native
-  def DeleteRow(Index: Double): Unit = js.native
-  def Refresh(): Unit = js.native
-  def ResetHScrollPos(): Unit = js.native
-  def ResetVScrollPos(): Unit = js.native
-  def RowText(RowNumber: Double): String = js.native
+  var AccWizObjectsDotImexGrid_typekey: ImexGrid
+  var AllowColumnSizing: Boolean
+  var BackColor: OLE_COLOR
+  var Caption: String
+  var ColumnClickBehavior: Double
+  val ColumnCount: Double
+  var ColumnState: js.Any
+  var Delimiters: String
+  var DrawTextLogicalOrder: Boolean
+  var FirstRowNumber: Double
+  var Font: IFontDisp
+  var GridBackColor: OLE_COLOR
+  var GridFont: IFontDisp
+  var GridHeader: Double
+  var Painting: Boolean
+  val RowCount: Double
+  var ShowColLines: Boolean
+  var ShowRowHeaders: Boolean
+  var StringDelimiters: String
+  def AddColumn(ColumnCaption: String, ColumnWidth: Double, Index: Double): Unit
+  def AddRow(RowText: String, Index: Double): Unit
+  def CalcBestColumns(): Unit
+  def ClearColumns(): Unit
+  def ClearRows(): Unit
+  def Columns(ColumnNumber: Double): js.Any
+  def DeleteColumn(Index: Double): Unit
+  def DeleteRow(Index: Double): Unit
+  def Refresh(): Unit
+  def ResetHScrollPos(): Unit
+  def ResetVScrollPos(): Unit
+  def RowText(RowNumber: Double): String
 }
 
 object ImexGrid {
@@ -82,199 +81,5 @@ object ImexGrid {
     __obj.updateDynamic("AccWizObjects.ImexGrid_typekey")(AccWizObjectsDotImexGrid_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImexGrid]
   }
-  @scala.inline
-  implicit class ImexGridOps[Self <: ImexGrid] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccWizObjectsDotImexGrid_typekey(value: ImexGrid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccWizObjects.ImexGrid_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddColumn(value: (String, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddColumn")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withAddRow(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddRow")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAllowColumnSizing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowColumnSizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCalcBestColumns(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CalcBestColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClearColumns(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearColumns")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClearRows(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearRows")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withColumnClickBehavior(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnClickBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumnState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColumns(value: Double => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Columns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteColumn(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteColumn")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteRow(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDelimiters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDrawTextLogicalOrder(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawTextLogicalOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFirstRowNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstRowNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: IFontDisp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridBackColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GridBackColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridFont(value: IFontDisp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GridFont")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGridHeader(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GridHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPainting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Painting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefresh(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Refresh")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResetHScrollPos(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetHScrollPos")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResetVScrollPos(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResetVScrollPos")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRowText(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RowText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withShowColLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowColLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowRowHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowRowHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDelimiters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringDelimiters")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,57 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait ProjectTransform extends Transforms {
-  var as: js.UndefOr[(js.Array[String | SignalRef | Null]) | SignalRef] = js.native
-  var fields: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native
-  var `type`: project = js.native
+trait ProjectTransform extends _Transforms {
+  var as: js.UndefOr[(js.Array[String | SignalRef | Null]) | SignalRef] = js.undefined
+  var fields: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.undefined
+  var `type`: project
 }
 
 object ProjectTransform {
   @scala.inline
-  def apply(`type`: project): ProjectTransform = {
+  def apply(
+    `type`: project,
+    as: (js.Array[String | SignalRef | Null]) | SignalRef = null,
+    fields: js.Array[FieldRef] | SignalRef = null
+  ): ProjectTransform = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectTransform]
   }
-  @scala.inline
-  implicit class ProjectTransformOps[Self <: ProjectTransform] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: project): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAs(value: (js.Array[String | SignalRef | Null]) | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: js.Array[FieldRef] | SignalRef): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

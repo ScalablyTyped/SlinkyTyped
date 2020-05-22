@@ -20,7 +20,7 @@ import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItem
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITag
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -36,7 +36,7 @@ object TagPicker {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -112,7 +112,7 @@ object TagPicker {
     @scala.inline
     def selectedItems(value: js.Array[ITag]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IBasePickerStyleProps => Partial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IBasePickerStyleProps => DeepPartial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IBasePickerStyleProps, IBasePickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

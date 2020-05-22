@@ -6,7 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the ShapeView object, for use in "shapeView.set({ ... })". */
-@js.native
 trait ShapeViewUpdateData extends js.Object {
   /**
     *
@@ -14,34 +13,15 @@ trait ShapeViewUpdateData extends js.Object {
     *
     * [Api set:  1.1]
     */
-  var highlight: js.UndefOr[Highlight] = js.native
+  var highlight: js.UndefOr[Highlight] = js.undefined
 }
 
 object ShapeViewUpdateData {
   @scala.inline
-  def apply(): ShapeViewUpdateData = {
+  def apply(highlight: Highlight = null): ShapeViewUpdateData = {
     val __obj = js.Dynamic.literal()
+    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShapeViewUpdateData]
   }
-  @scala.inline
-  implicit class ShapeViewUpdateDataOps[Self <: ShapeViewUpdateData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHighlight(value: Highlight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

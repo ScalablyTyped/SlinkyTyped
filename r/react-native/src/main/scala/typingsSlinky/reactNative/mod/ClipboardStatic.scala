@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClipboardStatic extends js.Object {
-  def getString(): js.Promise[String] = js.native
-  def setString(content: String): Unit = js.native
+  def getString(): js.Promise[String]
+  def setString(content: String): Unit
 }
 
 object ClipboardStatic {
@@ -16,25 +15,5 @@ object ClipboardStatic {
     val __obj = js.Dynamic.literal(getString = js.Any.fromFunction0(getString), setString = js.Any.fromFunction1(setString))
     __obj.asInstanceOf[ClipboardStatic]
   }
-  @scala.inline
-  implicit class ClipboardStaticOps[Self <: ClipboardStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetString(value: () => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

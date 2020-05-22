@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LifecyclePolicyPolicyDetailsScheduleCreateRule extends js.Object {
   /**
-    * How often this lifecycle policy should be evaluated. `2`,`3`,`4`,`6`,`8`,`12` or `24` are valid values.
+    * How often this lifecycle policy should be evaluated. `1`, `2`,`3`,`4`,`6`,`8`,`12` or `24` are valid values.
     */
   var interval: Input[Double] = js.native
   /**
@@ -23,47 +23,11 @@ trait LifecyclePolicyPolicyDetailsScheduleCreateRule extends js.Object {
 
 object LifecyclePolicyPolicyDetailsScheduleCreateRule {
   @scala.inline
-  def apply(interval: Input[Double]): LifecyclePolicyPolicyDetailsScheduleCreateRule = {
+  def apply(interval: Input[Double], intervalUnit: Input[String] = null, times: Input[String] = null): LifecyclePolicyPolicyDetailsScheduleCreateRule = {
     val __obj = js.Dynamic.literal(interval = interval.asInstanceOf[js.Any])
+    if (intervalUnit != null) __obj.updateDynamic("intervalUnit")(intervalUnit.asInstanceOf[js.Any])
+    if (times != null) __obj.updateDynamic("times")(times.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecyclePolicyPolicyDetailsScheduleCreateRule]
   }
-  @scala.inline
-  implicit class LifecyclePolicyPolicyDetailsScheduleCreateRuleOps[Self <: LifecyclePolicyPolicyDetailsScheduleCreateRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInterval(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntervalUnit(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalUnit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimes(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("times")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("times")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

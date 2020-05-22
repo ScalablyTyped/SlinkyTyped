@@ -8,62 +8,24 @@ import scala.scalajs.js.annotation._
 /**
   * @todo describe
   */
-@js.native
 trait SplitArea extends js.Object {
-  var areaStyle: js.UndefOr[Color] = js.native
-  var interval: js.UndefOr[Double | js.Function] = js.native
-  var show: js.UndefOr[Boolean] = js.native
+  var areaStyle: js.UndefOr[Color] = js.undefined
+  var interval: js.UndefOr[Double | js.Function] = js.undefined
+  var show: js.UndefOr[Boolean] = js.undefined
 }
 
 object SplitArea {
   @scala.inline
-  def apply(): SplitArea = {
+  def apply(
+    areaStyle: Color = null,
+    interval: Double | js.Function = null,
+    show: js.UndefOr[Boolean] = js.undefined
+  ): SplitArea = {
     val __obj = js.Dynamic.literal()
+    if (areaStyle != null) __obj.updateDynamic("areaStyle")(areaStyle.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SplitArea]
   }
-  @scala.inline
-  implicit class SplitAreaOps[Self <: SplitArea] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAreaStyle(value: Color): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAreaStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("areaStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

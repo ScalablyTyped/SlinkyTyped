@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Numeric extends js.Object {
   /** Description of the output values in the data set. */
-  var numeric: js.UndefOr[Mean] = js.native
+  var numeric: js.UndefOr[Mean] = js.undefined
   /** Description of the output labels in the data set. */
-  var text: js.UndefOr[js.Array[Count]] = js.native
+  var text: js.UndefOr[js.Array[Count]] = js.undefined
 }
 
 object Numeric {
   @scala.inline
-  def apply(): Numeric = {
+  def apply(numeric: Mean = null, text: js.Array[Count] = null): Numeric = {
     val __obj = js.Dynamic.literal()
+    if (numeric != null) __obj.updateDynamic("numeric")(numeric.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Numeric]
   }
-  @scala.inline
-  implicit class NumericOps[Self <: Numeric] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumeric(value: Mean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: js.Array[Count]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

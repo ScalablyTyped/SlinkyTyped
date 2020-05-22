@@ -26,7 +26,6 @@ import scala.scalajs.js.annotation._
   * @deprecated Deprecated
   * @see com.sun.star.util.XLocalizedAliases
   */
-@js.native
 trait DatabaseAccessContext
   extends XEnumerationAccess
      with XNameAccess

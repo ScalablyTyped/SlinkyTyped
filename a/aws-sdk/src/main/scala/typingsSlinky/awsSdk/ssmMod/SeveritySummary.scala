@@ -34,89 +34,22 @@ trait SeveritySummary extends js.Object {
 
 object SeveritySummary {
   @scala.inline
-  def apply(): SeveritySummary = {
+  def apply(
+    CriticalCount: js.UndefOr[ComplianceSummaryCount] = js.undefined,
+    HighCount: js.UndefOr[ComplianceSummaryCount] = js.undefined,
+    InformationalCount: js.UndefOr[ComplianceSummaryCount] = js.undefined,
+    LowCount: js.UndefOr[ComplianceSummaryCount] = js.undefined,
+    MediumCount: js.UndefOr[ComplianceSummaryCount] = js.undefined,
+    UnspecifiedCount: js.UndefOr[ComplianceSummaryCount] = js.undefined
+  ): SeveritySummary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(CriticalCount)) __obj.updateDynamic("CriticalCount")(CriticalCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HighCount)) __obj.updateDynamic("HighCount")(HighCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InformationalCount)) __obj.updateDynamic("InformationalCount")(InformationalCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(LowCount)) __obj.updateDynamic("LowCount")(LowCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MediumCount)) __obj.updateDynamic("MediumCount")(MediumCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UnspecifiedCount)) __obj.updateDynamic("UnspecifiedCount")(UnspecifiedCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeveritySummary]
   }
-  @scala.inline
-  implicit class SeveritySummaryOps[Self <: SeveritySummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCriticalCount(value: ComplianceSummaryCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CriticalCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriticalCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CriticalCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighCount(value: ComplianceSummaryCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HighCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HighCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInformationalCount(value: ComplianceSummaryCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InformationalCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInformationalCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InformationalCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowCount(value: ComplianceSummaryCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediumCount(value: ComplianceSummaryCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediumCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnspecifiedCount(value: ComplianceSummaryCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnspecifiedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnspecifiedCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UnspecifiedCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

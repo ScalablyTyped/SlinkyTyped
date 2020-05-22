@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Font extends js.Object {
-  var font: js.UndefOr[js.Object] = js.native
-  var large: js.UndefOr[MaxWidth] = js.native
-  var medium: js.UndefOr[MaxWidth] = js.native
-  var small: js.UndefOr[MaxWidth] = js.native
-  var xlarge: js.UndefOr[MaxWidth] = js.native
+  var font: js.UndefOr[js.Object] = js.undefined
+  var large: js.UndefOr[MaxWidth] = js.undefined
+  var medium: js.UndefOr[MaxWidth] = js.undefined
+  var small: js.UndefOr[MaxWidth] = js.undefined
+  var xlarge: js.UndefOr[MaxWidth] = js.undefined
 }
 
 object Font {
   @scala.inline
-  def apply(): Font = {
+  def apply(
+    font: js.Object = null,
+    large: MaxWidth = null,
+    medium: MaxWidth = null,
+    small: MaxWidth = null,
+    xlarge: MaxWidth = null
+  ): Font = {
     val __obj = js.Dynamic.literal()
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (large != null) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
+    if (medium != null) __obj.updateDynamic("medium")(medium.asInstanceOf[js.Any])
+    if (small != null) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
+    if (xlarge != null) __obj.updateDynamic("xlarge")(xlarge.asInstanceOf[js.Any])
     __obj.asInstanceOf[Font]
   }
-  @scala.inline
-  implicit class FontOps[Self <: Font] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFont(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLarge(value: MaxWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMedium(value: MaxWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMedium: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("medium")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmall(value: MaxWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmall: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXlarge(value: MaxWidth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlarge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXlarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xlarge")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,179 +7,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditorProps extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var formats: js.UndefOr[js.Array[_]] = js.native
-  var headerTemplate: js.UndefOr[ReactElement] = js.native
-  var id: js.UndefOr[String] = js.native
-  var modules: js.UndefOr[js.Any] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ OldRange, Unit]] = js.native
-  var onTextChange: js.UndefOr[js.Function1[/* e */ HtmlValue, Unit]] = js.native
-  var placeholder: js.UndefOr[String] = js.native
-  var readonly: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var theme: js.UndefOr[String] = js.native
-  var value: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var formats: js.UndefOr[js.Array[_]] = js.undefined
+  var headerTemplate: js.UndefOr[ReactElement] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var modules: js.UndefOr[js.Any] = js.undefined
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ OldRange, Unit]] = js.undefined
+  var onTextChange: js.UndefOr[js.Function1[/* e */ HtmlValue, Unit]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var theme: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object EditorProps {
   @scala.inline
-  def apply(): EditorProps = {
+  def apply(
+    className: String = null,
+    formats: js.Array[_] = null,
+    headerTemplate: ReactElement = null,
+    id: String = null,
+    modules: js.Any = null,
+    onSelectionChange: /* e */ OldRange => Unit = null,
+    onTextChange: /* e */ HtmlValue => Unit = null,
+    placeholder: String = null,
+    readonly: js.UndefOr[Boolean] = js.undefined,
+    style: js.Object = null,
+    theme: String = null,
+    value: String = null
+  ): EditorProps = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (formats != null) __obj.updateDynamic("formats")(formats.asInstanceOf[js.Any])
+    if (headerTemplate != null) __obj.updateDynamic("headerTemplate")(headerTemplate.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
+    if (onSelectionChange != null) __obj.updateDynamic("onSelectionChange")(js.Any.fromFunction1(onSelectionChange))
+    if (onTextChange != null) __obj.updateDynamic("onTextChange")(js.Any.fromFunction1(onTextChange))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorProps]
   }
-  @scala.inline
-  implicit class EditorPropsOps[Self <: EditorProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormats(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderTemplate(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModules(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectionChange(value: /* e */ OldRange => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectionChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTextChange(value: /* e */ HtmlValue => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTextChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTextChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTextChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

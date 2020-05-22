@@ -4,87 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SuccessShowingEventUIParam extends js.Object {
   /**
-  	 * Populated with options for the specific field in the collection or null.
-  	 */
-  var fieldOptions: js.UndefOr[js.Any] = js.native
+    * Populated with options for the specific field in the collection or null.
+    */
+  var fieldOptions: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets the text of message.
-  	 */
-  var message: js.UndefOr[String] = js.native
+    * Gets the text of message.
+    */
+  var message: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets reference to the igValidator widget.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets reference to the igValidator widget.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets reference to the target of the message.
-  	 */
-  var target: js.UndefOr[String] = js.native
+    * Gets reference to the target of the message.
+    */
+  var target: js.UndefOr[String] = js.undefined
 }
 
 object SuccessShowingEventUIParam {
   @scala.inline
-  def apply(): SuccessShowingEventUIParam = {
+  def apply(fieldOptions: js.Any = null, message: String = null, owner: js.Any = null, target: String = null): SuccessShowingEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (fieldOptions != null) __obj.updateDynamic("fieldOptions")(fieldOptions.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuccessShowingEventUIParam]
   }
-  @scala.inline
-  implicit class SuccessShowingEventUIParamOps[Self <: SuccessShowingEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFieldOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

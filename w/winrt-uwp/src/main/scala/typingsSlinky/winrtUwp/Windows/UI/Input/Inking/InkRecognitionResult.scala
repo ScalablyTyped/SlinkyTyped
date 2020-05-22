@@ -7,20 +7,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides properties and methods to manage InkStroke handwriting recognition data. */
-@js.native
 trait InkRecognitionResult extends js.Object {
   /** Gets the bounding rectangle of the InkStroke data used for handwriting recognition. */
-  var boundingRect: Rect = js.native
+  var boundingRect: Rect
   /**
     * Retrieves all ink strokes used for handwriting recognition.
     * @return The ink strokes used for handwriting recognition as a collection of InkStroke objects.
     */
-  def getStrokes(): IVectorView[InkStroke] = js.native
+  def getStrokes(): IVectorView[InkStroke]
   /**
     * Retrieves the collection of strings identified as potential matches for each word returned by handwriting recognition.
     * @return The recognition matches as a collection of String objects. The most likely candidate is topmost in the collection.
     */
-  def getTextCandidates(): IVectorView[String] = js.native
+  def getTextCandidates(): IVectorView[String]
 }
 
 object InkRecognitionResult {
@@ -33,31 +32,5 @@ object InkRecognitionResult {
     val __obj = js.Dynamic.literal(boundingRect = boundingRect.asInstanceOf[js.Any], getStrokes = js.Any.fromFunction0(getStrokes), getTextCandidates = js.Any.fromFunction0(getTextCandidates))
     __obj.asInstanceOf[InkRecognitionResult]
   }
-  @scala.inline
-  implicit class InkRecognitionResultOps[Self <: InkRecognitionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingRect(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetStrokes(value: () => IVectorView[InkStroke]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStrokes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextCandidates(value: () => IVectorView[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextCandidates")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the AxisBase class.
   */
-@js.native
 trait ASPxClientAxisBase extends ASPxClientWebChartElementNamed {
   /**
     * Provides access to the XY-diagram which contains the current axis.
     */
-  var diagram: ASPxClientXYDiagramBase = js.native
+  var diagram: ASPxClientXYDiagramBase
   /**
     * Provides acess to the range of the axis coordinates.
     */
-  var range: ASPxClientAxisRange = js.native
+  var range: ASPxClientAxisRange
 }
 
 object ASPxClientAxisBase {
@@ -30,25 +29,5 @@ object ASPxClientAxisBase {
     val __obj = js.Dynamic.literal(chart = chart.asInstanceOf[js.Any], diagram = diagram.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientAxisBase]
   }
-  @scala.inline
-  implicit class ASPxClientAxisBaseOps[Self <: ASPxClientAxisBase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiagram(value: ASPxClientXYDiagramBase): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagram")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: ASPxClientAxisRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

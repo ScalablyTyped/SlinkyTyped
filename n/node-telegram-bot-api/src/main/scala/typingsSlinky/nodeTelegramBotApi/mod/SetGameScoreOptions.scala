@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetGameScoreOptions extends js.Object {
-  var chat_id: js.UndefOr[Double] = js.native
-  var disable_edit_message: js.UndefOr[Boolean] = js.native
-  var force: js.UndefOr[Boolean] = js.native
-  var inline_message_id: js.UndefOr[String] = js.native
-  var message_id: js.UndefOr[Double] = js.native
+  var chat_id: js.UndefOr[Double] = js.undefined
+  var disable_edit_message: js.UndefOr[Boolean] = js.undefined
+  var force: js.UndefOr[Boolean] = js.undefined
+  var inline_message_id: js.UndefOr[String] = js.undefined
+  var message_id: js.UndefOr[Double] = js.undefined
 }
 
 object SetGameScoreOptions {
   @scala.inline
-  def apply(): SetGameScoreOptions = {
+  def apply(
+    chat_id: js.UndefOr[Double] = js.undefined,
+    disable_edit_message: js.UndefOr[Boolean] = js.undefined,
+    force: js.UndefOr[Boolean] = js.undefined,
+    inline_message_id: String = null,
+    message_id: js.UndefOr[Double] = js.undefined
+  ): SetGameScoreOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chat_id)) __obj.updateDynamic("chat_id")(chat_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disable_edit_message)) __obj.updateDynamic("disable_edit_message")(disable_edit_message.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
+    if (inline_message_id != null) __obj.updateDynamic("inline_message_id")(inline_message_id.asInstanceOf[js.Any])
+    if (!js.isUndefined(message_id)) __obj.updateDynamic("message_id")(message_id.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetGameScoreOptions]
   }
-  @scala.inline
-  implicit class SetGameScoreOptionsOps[Self <: SetGameScoreOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChat_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chat_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChat_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chat_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisable_edit_message(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_edit_message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisable_edit_message: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_edit_message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline_message_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline_message_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline_message_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline_message_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

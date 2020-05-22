@@ -29,41 +29,11 @@ trait SchemaBuildDetails extends js.Object {
 
 object SchemaBuildDetails {
   @scala.inline
-  def apply(): SchemaBuildDetails = {
+  def apply(provenance: SchemaBuildProvenance = null, provenanceBytes: String = null): SchemaBuildDetails = {
     val __obj = js.Dynamic.literal()
+    if (provenance != null) __obj.updateDynamic("provenance")(provenance.asInstanceOf[js.Any])
+    if (provenanceBytes != null) __obj.updateDynamic("provenanceBytes")(provenanceBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildDetails]
   }
-  @scala.inline
-  implicit class SchemaBuildDetailsOps[Self <: SchemaBuildDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvenance(value: SchemaBuildProvenance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provenance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvenance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provenance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvenanceBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provenanceBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvenanceBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provenanceBytes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

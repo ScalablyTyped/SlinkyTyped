@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MUIDataTableHeadRow extends js.Object {
-  var classes: js.UndefOr[js.Object] = js.native
+  var classes: js.UndefOr[js.Object] = js.undefined
 }
 
 object MUIDataTableHeadRow {
   @scala.inline
-  def apply(): MUIDataTableHeadRow = {
+  def apply(classes: js.Object = null): MUIDataTableHeadRow = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableHeadRow]
   }
-  @scala.inline
-  implicit class MUIDataTableHeadRowOps[Self <: MUIDataTableHeadRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClasses(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

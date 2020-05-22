@@ -46,125 +46,28 @@ trait SubmitTaskStateChangeRequest extends js.Object {
 
 object SubmitTaskStateChangeRequest {
   @scala.inline
-  def apply(): SubmitTaskStateChangeRequest = {
+  def apply(
+    attachments: AttachmentStateChanges = null,
+    cluster: String = null,
+    containers: ContainerStateChanges = null,
+    executionStoppedAt: js.Date = null,
+    pullStartedAt: js.Date = null,
+    pullStoppedAt: js.Date = null,
+    reason: String = null,
+    status: String = null,
+    task: String = null
+  ): SubmitTaskStateChangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
+    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
+    if (containers != null) __obj.updateDynamic("containers")(containers.asInstanceOf[js.Any])
+    if (executionStoppedAt != null) __obj.updateDynamic("executionStoppedAt")(executionStoppedAt.asInstanceOf[js.Any])
+    if (pullStartedAt != null) __obj.updateDynamic("pullStartedAt")(pullStartedAt.asInstanceOf[js.Any])
+    if (pullStoppedAt != null) __obj.updateDynamic("pullStoppedAt")(pullStoppedAt.asInstanceOf[js.Any])
+    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (task != null) __obj.updateDynamic("task")(task.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubmitTaskStateChangeRequest]
   }
-  @scala.inline
-  implicit class SubmitTaskStateChangeRequestOps[Self <: SubmitTaskStateChangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachments(value: AttachmentStateChanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCluster(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCluster: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainers(value: ContainerStateChanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutionStoppedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStoppedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutionStoppedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStoppedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullStartedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullStartedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullStartedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullStartedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPullStoppedAt(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullStoppedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPullStoppedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pullStoppedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTask(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("task")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

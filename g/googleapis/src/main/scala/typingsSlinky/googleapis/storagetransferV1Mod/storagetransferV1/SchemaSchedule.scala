@@ -34,53 +34,16 @@ trait SchemaSchedule extends js.Object {
 
 object SchemaSchedule {
   @scala.inline
-  def apply(): SchemaSchedule = {
+  def apply(
+    scheduleEndDate: SchemaDate = null,
+    scheduleStartDate: SchemaDate = null,
+    startTimeOfDay: SchemaTimeOfDay = null
+  ): SchemaSchedule = {
     val __obj = js.Dynamic.literal()
+    if (scheduleEndDate != null) __obj.updateDynamic("scheduleEndDate")(scheduleEndDate.asInstanceOf[js.Any])
+    if (scheduleStartDate != null) __obj.updateDynamic("scheduleStartDate")(scheduleStartDate.asInstanceOf[js.Any])
+    if (startTimeOfDay != null) __obj.updateDynamic("startTimeOfDay")(startTimeOfDay.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSchedule]
   }
-  @scala.inline
-  implicit class SchemaScheduleOps[Self <: SchemaSchedule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScheduleEndDate(value: SchemaDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleEndDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleEndDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleEndDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleStartDate(value: SchemaDate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleStartDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleStartDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleStartDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimeOfDay(value: SchemaTimeOfDay): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeOfDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimeOfDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeOfDay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

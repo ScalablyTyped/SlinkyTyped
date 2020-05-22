@@ -5,40 +5,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dropdown extends Component[DropdownOptions] {
   /**
     * The DOM element of the dropdown
     */
-  var dropdownEl: Element = js.native
+  var dropdownEl: Element
   /**
     * The index of the item focused
     */
-  var focusedIndex: Double = js.native
+  var focusedIndex: Double
   /**
     * ID of the dropdown element
     */
-  var id: String = js.native
+  var id: String
   /**
     * If the dropdown is open
     */
-  var isOpen: Boolean = js.native
+  var isOpen: Boolean
   /**
     * If the dropdown content is scrollable
     */
-  var isScrollable: Boolean = js.native
+  var isScrollable: Boolean
   /**
     * Close dropdown
     */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Open dropdown
     */
-  def open(): Unit = js.native
+  def open(): Unit
   /**
     * While dropdown is open, you can recalculate its dimensions if its contents have changed
     */
-  def recalculateDimensions(): Unit = js.native
+  def recalculateDimensions(): Unit
 }
 
 object Dropdown {
@@ -59,61 +58,5 @@ object Dropdown {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), dropdownEl = dropdownEl.asInstanceOf[js.Any], el = el.asInstanceOf[js.Any], focusedIndex = focusedIndex.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any], isScrollable = isScrollable.asInstanceOf[js.Any], open = js.Any.fromFunction0(open), options = options.asInstanceOf[js.Any], recalculateDimensions = js.Any.fromFunction0(recalculateDimensions))
     __obj.asInstanceOf[Dropdown]
   }
-  @scala.inline
-  implicit class DropdownOps[Self <: Dropdown] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDropdownEl(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownEl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFocusedIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsScrollable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpen(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRecalculateDimensions(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recalculateDimensions")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

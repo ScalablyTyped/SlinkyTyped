@@ -5,26 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BoundingSphere extends js.Object {
-  var boundingSphere: typingsSlinky.cesium.mod.BoundingSphere = js.native
-  var childTileMask: js.UndefOr[Double] = js.native
-  var createdByUpsampling: js.UndefOr[Boolean] = js.native
-  var eastIndices: js.Array[Double] = js.native
-  var eastSkirtHeight: Double = js.native
-  var encodedNormals: js.UndefOr[js.typedarray.Uint8Array] = js.native
-  var horizonOcclusionPoint: Cartesian3 = js.native
-  var indices: js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
-  var maximumHeight: Double = js.native
-  var minimumHeight: Double = js.native
-  var northIndices: js.Array[Double] = js.native
-  var northSkirtHeight: Double = js.native
-  var quantizedVertices: js.typedarray.Uint16Array = js.native
-  var southIndices: js.Array[Double] = js.native
-  var southSkirtHeight: Double = js.native
-  var waterMask: js.UndefOr[js.typedarray.Uint8Array] = js.native
-  var westIndices: js.Array[Double] = js.native
-  var westSkirtHeight: Double = js.native
+  var boundingSphere: typingsSlinky.cesium.mod.BoundingSphere
+  var childTileMask: js.UndefOr[Double] = js.undefined
+  var createdByUpsampling: js.UndefOr[Boolean] = js.undefined
+  var eastIndices: js.Array[Double]
+  var eastSkirtHeight: Double
+  var encodedNormals: js.UndefOr[js.typedarray.Uint8Array] = js.undefined
+  var horizonOcclusionPoint: Cartesian3
+  var indices: js.typedarray.Uint16Array | js.typedarray.Uint32Array
+  var maximumHeight: Double
+  var minimumHeight: Double
+  var northIndices: js.Array[Double]
+  var northSkirtHeight: Double
+  var quantizedVertices: js.typedarray.Uint16Array
+  var southIndices: js.Array[Double]
+  var southSkirtHeight: Double
+  var waterMask: js.UndefOr[js.typedarray.Uint8Array] = js.undefined
+  var westIndices: js.Array[Double]
+  var westSkirtHeight: Double
 }
 
 object BoundingSphere {
@@ -43,162 +42,18 @@ object BoundingSphere {
     southIndices: js.Array[Double],
     southSkirtHeight: Double,
     westIndices: js.Array[Double],
-    westSkirtHeight: Double
+    westSkirtHeight: Double,
+    childTileMask: js.UndefOr[Double] = js.undefined,
+    createdByUpsampling: js.UndefOr[Boolean] = js.undefined,
+    encodedNormals: js.typedarray.Uint8Array = null,
+    waterMask: js.typedarray.Uint8Array = null
   ): BoundingSphere = {
     val __obj = js.Dynamic.literal(boundingSphere = boundingSphere.asInstanceOf[js.Any], eastIndices = eastIndices.asInstanceOf[js.Any], eastSkirtHeight = eastSkirtHeight.asInstanceOf[js.Any], horizonOcclusionPoint = horizonOcclusionPoint.asInstanceOf[js.Any], indices = indices.asInstanceOf[js.Any], maximumHeight = maximumHeight.asInstanceOf[js.Any], minimumHeight = minimumHeight.asInstanceOf[js.Any], northIndices = northIndices.asInstanceOf[js.Any], northSkirtHeight = northSkirtHeight.asInstanceOf[js.Any], quantizedVertices = quantizedVertices.asInstanceOf[js.Any], southIndices = southIndices.asInstanceOf[js.Any], southSkirtHeight = southSkirtHeight.asInstanceOf[js.Any], westIndices = westIndices.asInstanceOf[js.Any], westSkirtHeight = westSkirtHeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(childTileMask)) __obj.updateDynamic("childTileMask")(childTileMask.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(createdByUpsampling)) __obj.updateDynamic("createdByUpsampling")(createdByUpsampling.get.asInstanceOf[js.Any])
+    if (encodedNormals != null) __obj.updateDynamic("encodedNormals")(encodedNormals.asInstanceOf[js.Any])
+    if (waterMask != null) __obj.updateDynamic("waterMask")(waterMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[BoundingSphere]
   }
-  @scala.inline
-  implicit class BoundingSphereOps[Self <: BoundingSphere] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingSphere(value: typingsSlinky.cesium.mod.BoundingSphere): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingSphere")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEastIndices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eastIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEastSkirtHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eastSkirtHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHorizonOcclusionPoint(value: Cartesian3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizonOcclusionPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndicesUint32Array(value: js.typedarray.Uint32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndicesUint16Array(value: js.typedarray.Uint16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndices(value: js.typedarray.Uint16Array | js.typedarray.Uint32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaximumHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinimumHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNorthIndices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("northIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNorthSkirtHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("northSkirtHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuantizedVertices(value: js.typedarray.Uint16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantizedVertices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSouthIndices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("southIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSouthSkirtHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("southSkirtHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWestIndices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("westIndices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWestSkirtHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("westSkirtHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildTileMask(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childTileMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildTileMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childTileMask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedByUpsampling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdByUpsampling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedByUpsampling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdByUpsampling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodedNormals(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodedNormals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodedNormals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodedNormals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaterMask(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waterMask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaterMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waterMask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

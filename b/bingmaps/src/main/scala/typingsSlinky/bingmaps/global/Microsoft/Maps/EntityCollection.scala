@@ -11,5 +11,9 @@ import scala.scalajs.js.annotation._
   * @deprecated in V8
   */
 class EntityCollection ()
-  extends typingsSlinky.bingmaps.Microsoft.Maps.EntityCollection
+  extends typingsSlinky.bingmaps.Microsoft.Maps.EntityCollection {
+  /** Clears all data in the layer. */
+  /* CompleteClass */
+  override def clear(): Unit = js.native
+}
 

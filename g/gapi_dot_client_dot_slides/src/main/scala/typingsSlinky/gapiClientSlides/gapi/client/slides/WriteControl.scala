@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WriteControl extends js.Object {
   /**
     * The revision ID of the presentation required for the write request. If
@@ -12,34 +11,15 @@ trait WriteControl extends js.Object {
     * presentation's current `revision_id`, the request will not be processed and
     * will return a 400 bad request error.
     */
-  var requiredRevisionId: js.UndefOr[String] = js.native
+  var requiredRevisionId: js.UndefOr[String] = js.undefined
 }
 
 object WriteControl {
   @scala.inline
-  def apply(): WriteControl = {
+  def apply(requiredRevisionId: String = null): WriteControl = {
     val __obj = js.Dynamic.literal()
+    if (requiredRevisionId != null) __obj.updateDynamic("requiredRevisionId")(requiredRevisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteControl]
   }
-  @scala.inline
-  implicit class WriteControlOps[Self <: WriteControl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequiredRevisionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredRevisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredRevisionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,93 +12,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxChartCommonAxisSettingsTitle extends js.Object {
-  /** Aligns the axis title to the left, center, or right of the axis. */
-  var alignment: js.UndefOr[center | left | right] = js.native
-  /** Specifies font options for the axis title. */
-  var font: js.UndefOr[Font] = js.native
-  /** Adds a pixel-measured empty space between the axis title and axis labels. */
-  var margin: js.UndefOr[Double] = js.native
-  /** Specifies what to do with the axis title when it overflows the allocated space after applying wordWrap: hide, truncate them and display an ellipsis, or do nothing. */
-  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
-  /** Specifies how to wrap the axis title if it does not fit into a single line. */
-  var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
+  /** @name dxChart.Options.commonAxisSettings.title.alignment */
+  var alignment: js.UndefOr[center | left | right] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.title.font */
+  var font: js.UndefOr[Font] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.title.margin */
+  var margin: js.UndefOr[Double] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.title.textOverflow */
+  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.undefined
+  /** @name dxChart.Options.commonAxisSettings.title.wordWrap */
+  var wordWrap: js.UndefOr[normal | breakWord | none] = js.undefined
 }
 
 object dxChartCommonAxisSettingsTitle {
   @scala.inline
-  def apply(): dxChartCommonAxisSettingsTitle = {
+  def apply(
+    alignment: center | left | right = null,
+    font: Font = null,
+    margin: js.UndefOr[Double] = js.undefined,
+    textOverflow: ellipsis | hide | none = null,
+    wordWrap: normal | breakWord | none = null
+  ): dxChartCommonAxisSettingsTitle = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(margin)) __obj.updateDynamic("margin")(margin.get.asInstanceOf[js.Any])
+    if (textOverflow != null) __obj.updateDynamic("textOverflow")(textOverflow.asInstanceOf[js.Any])
+    if (wordWrap != null) __obj.updateDynamic("wordWrap")(wordWrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartCommonAxisSettingsTitle]
   }
-  @scala.inline
-  implicit class dxChartCommonAxisSettingsTitleOps[Self <: dxChartCommonAxisSettingsTitle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: center | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: Font): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextOverflow(value: ellipsis | hide | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWordWrap(value: normal | breakWord | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWordWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

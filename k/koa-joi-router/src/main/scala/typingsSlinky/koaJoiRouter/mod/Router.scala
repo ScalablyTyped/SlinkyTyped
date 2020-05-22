@@ -23,7 +23,7 @@ trait Router extends js.Object {
   @JSName("param")
   var param_Original: js.Function2[
     /* param */ String, 
-    /* middleware */ IParamMiddleware, 
+    /* middleware */ IParamMiddleware[_, js.Object], 
     typingsSlinky.koaRouter.mod.Router[_, js.Object]
   ] = js.native
   @JSName("patch")
@@ -54,7 +54,7 @@ trait Router extends js.Object {
   def options(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def options(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def options(path: js.RegExp, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
-  def param(param: String, middleware: IParamMiddleware): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
+  def param(param: String, middleware: IParamMiddleware[_, js.Object]): typingsSlinky.koaRouter.mod.Router[_, js.Object] = js.native
   def patch(path: String, handlerOrConfig: Config, handlers: Handler*): Router = js.native
   def patch(path: String, handlerOrConfig: Handler, handlers: Handler*): Router = js.native
   def patch(path: js.RegExp, handlerOrConfig: Config, handlers: Handler*): Router = js.native

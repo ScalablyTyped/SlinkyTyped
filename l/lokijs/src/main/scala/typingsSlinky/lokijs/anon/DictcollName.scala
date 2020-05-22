@@ -8,69 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DictcollName
   extends /* collName */ StringDictionary[js.Any | Inflate] {
-  var retainDirtyFlags: js.UndefOr[Boolean] = js.native
-  var serializationMethod: js.UndefOr[normal | pretty | destructured | Null] = js.native
-  var throttledSaves: js.UndefOr[Boolean] = js.native
+  var retainDirtyFlags: js.UndefOr[Boolean] = js.undefined
+  var serializationMethod: js.UndefOr[normal | pretty | destructured | Null] = js.undefined
+  var throttledSaves: js.UndefOr[Boolean] = js.undefined
 }
 
 object DictcollName {
   @scala.inline
-  def apply(): DictcollName = {
+  def apply(
+    StringDictionary: /* collName */ StringDictionary[js.Any | Inflate] = null,
+    retainDirtyFlags: js.UndefOr[Boolean] = js.undefined,
+    serializationMethod: js.UndefOr[Null | normal | pretty | destructured] = js.undefined,
+    throttledSaves: js.UndefOr[Boolean] = js.undefined
+  ): DictcollName = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(retainDirtyFlags)) __obj.updateDynamic("retainDirtyFlags")(retainDirtyFlags.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(serializationMethod)) __obj.updateDynamic("serializationMethod")(serializationMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttledSaves)) __obj.updateDynamic("throttledSaves")(throttledSaves.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictcollName]
   }
-  @scala.inline
-  implicit class DictcollNameOps[Self <: DictcollName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRetainDirtyFlags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainDirtyFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainDirtyFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainDirtyFlags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerializationMethod(value: normal | pretty | destructured): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerializationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerializationMethodNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(null)
-        ret
-    }
-    @scala.inline
-    def withThrottledSaves(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttledSaves")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottledSaves: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttledSaves")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

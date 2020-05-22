@@ -13,7 +13,7 @@ object getSupportedCodec extends js.Object {
     *
     * This method returns the codecs supported by both the Agora Web SDK and the web browser. The Agora Web SDK supports VP8 and H.264 for video, and OPUS for audio.
     *
-    * **Note:**
+    * **Note**
     *
     * - This method supports all web browsers. For web browsers that do not support WebRTC or are not recognized, the returned codec list is empty.
     * - The returned codec list is based on the [SDP](https://tools.ietf.org/html/rfc4566) used by the web browser and for reference only.

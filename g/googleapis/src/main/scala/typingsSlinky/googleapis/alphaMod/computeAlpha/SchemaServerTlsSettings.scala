@@ -31,53 +31,16 @@ trait SchemaServerTlsSettings extends js.Object {
 
 object SchemaServerTlsSettings {
   @scala.inline
-  def apply(): SchemaServerTlsSettings = {
+  def apply(
+    proxyTlsContext: SchemaTlsContext = null,
+    subjectAltNames: js.Array[String] = null,
+    tlsMode: String = null
+  ): SchemaServerTlsSettings = {
     val __obj = js.Dynamic.literal()
+    if (proxyTlsContext != null) __obj.updateDynamic("proxyTlsContext")(proxyTlsContext.asInstanceOf[js.Any])
+    if (subjectAltNames != null) __obj.updateDynamic("subjectAltNames")(subjectAltNames.asInstanceOf[js.Any])
+    if (tlsMode != null) __obj.updateDynamic("tlsMode")(tlsMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServerTlsSettings]
   }
-  @scala.inline
-  implicit class SchemaServerTlsSettingsOps[Self <: SchemaServerTlsSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProxyTlsContext(value: SchemaTlsContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyTlsContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProxyTlsContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyTlsContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubjectAltNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectAltNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubjectAltNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subjectAltNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTlsMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTlsMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

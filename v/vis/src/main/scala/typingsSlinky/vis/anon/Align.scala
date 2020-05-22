@@ -5,194 +5,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Align extends js.Object {
-  var align: js.UndefOr[String] = js.native
-  var background: js.UndefOr[String] = js.native
-  var bold: js.UndefOr[String | FontOptions] = js.native
-  var boldital: js.UndefOr[String | FontOptions] = js.native
-  var color: js.UndefOr[String] = js.native
+  var align: js.UndefOr[String] = js.undefined
+  var background: js.UndefOr[String] = js.undefined
+  var bold: js.UndefOr[String | FontOptions] = js.undefined
+  var boldital: js.UndefOr[String | FontOptions] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
    // px
-  var face: js.UndefOr[String] = js.native
-  var ital: js.UndefOr[String | FontOptions] = js.native
-  var mono: js.UndefOr[String | FontOptions] = js.native
-  var multi: js.UndefOr[String] = js.native
-  var size: js.UndefOr[Double] = js.native
+  var face: js.UndefOr[String] = js.undefined
+  var ital: js.UndefOr[String | FontOptions] = js.undefined
+  var mono: js.UndefOr[String | FontOptions] = js.undefined
+  var multi: js.UndefOr[String] = js.undefined
+  var size: js.UndefOr[Double] = js.undefined
    // px
-  var strokeColor: js.UndefOr[String] = js.native
-  var strokeWidth: js.UndefOr[Double] = js.native
-  var vadjust: js.UndefOr[String] = js.native
+  var strokeColor: js.UndefOr[String] = js.undefined
+  var strokeWidth: js.UndefOr[Double] = js.undefined
+  var vadjust: js.UndefOr[String] = js.undefined
 }
 
 object Align {
   @scala.inline
-  def apply(): Align = {
+  def apply(
+    align: String = null,
+    background: String = null,
+    bold: String | FontOptions = null,
+    boldital: String | FontOptions = null,
+    color: String = null,
+    face: String = null,
+    ital: String | FontOptions = null,
+    mono: String | FontOptions = null,
+    multi: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    strokeColor: String = null,
+    strokeWidth: js.UndefOr[Double] = js.undefined,
+    vadjust: String = null
+  ): Align = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (bold != null) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
+    if (boldital != null) __obj.updateDynamic("boldital")(boldital.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (face != null) __obj.updateDynamic("face")(face.asInstanceOf[js.Any])
+    if (ital != null) __obj.updateDynamic("ital")(ital.asInstanceOf[js.Any])
+    if (mono != null) __obj.updateDynamic("mono")(mono.asInstanceOf[js.Any])
+    if (multi != null) __obj.updateDynamic("multi")(multi.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(strokeWidth)) __obj.updateDynamic("strokeWidth")(strokeWidth.get.asInstanceOf[js.Any])
+    if (vadjust != null) __obj.updateDynamic("vadjust")(vadjust.asInstanceOf[js.Any])
     __obj.asInstanceOf[Align]
   }
-  @scala.inline
-  implicit class AlignOps[Self <: Align] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBold(value: String | FontOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoldital(value: String | FontOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boldital")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoldital: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boldital")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItal(value: String | FontOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ital")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ital")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMono(value: String | FontOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mono")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMono: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mono")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMulti(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMulti: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrokeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrokeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVadjust(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vadjust")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVadjust: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vadjust")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

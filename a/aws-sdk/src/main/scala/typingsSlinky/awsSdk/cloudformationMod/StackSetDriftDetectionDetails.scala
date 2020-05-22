@@ -42,113 +42,26 @@ trait StackSetDriftDetectionDetails extends js.Object {
 
 object StackSetDriftDetectionDetails {
   @scala.inline
-  def apply(): StackSetDriftDetectionDetails = {
+  def apply(
+    DriftDetectionStatus: StackSetDriftDetectionStatus = null,
+    DriftStatus: StackSetDriftStatus = null,
+    DriftedStackInstancesCount: js.UndefOr[DriftedStackInstancesCount] = js.undefined,
+    FailedStackInstancesCount: js.UndefOr[FailedStackInstancesCount] = js.undefined,
+    InProgressStackInstancesCount: js.UndefOr[InProgressStackInstancesCount] = js.undefined,
+    InSyncStackInstancesCount: js.UndefOr[InSyncStackInstancesCount] = js.undefined,
+    LastDriftCheckTimestamp: js.Date = null,
+    TotalStackInstancesCount: js.UndefOr[TotalStackInstancesCount] = js.undefined
+  ): StackSetDriftDetectionDetails = {
     val __obj = js.Dynamic.literal()
+    if (DriftDetectionStatus != null) __obj.updateDynamic("DriftDetectionStatus")(DriftDetectionStatus.asInstanceOf[js.Any])
+    if (DriftStatus != null) __obj.updateDynamic("DriftStatus")(DriftStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(DriftedStackInstancesCount)) __obj.updateDynamic("DriftedStackInstancesCount")(DriftedStackInstancesCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(FailedStackInstancesCount)) __obj.updateDynamic("FailedStackInstancesCount")(FailedStackInstancesCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InProgressStackInstancesCount)) __obj.updateDynamic("InProgressStackInstancesCount")(InProgressStackInstancesCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(InSyncStackInstancesCount)) __obj.updateDynamic("InSyncStackInstancesCount")(InSyncStackInstancesCount.get.asInstanceOf[js.Any])
+    if (LastDriftCheckTimestamp != null) __obj.updateDynamic("LastDriftCheckTimestamp")(LastDriftCheckTimestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalStackInstancesCount)) __obj.updateDynamic("TotalStackInstancesCount")(TotalStackInstancesCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSetDriftDetectionDetails]
   }
-  @scala.inline
-  implicit class StackSetDriftDetectionDetailsOps[Self <: StackSetDriftDetectionDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDriftDetectionStatus(value: StackSetDriftDetectionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftDetectionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriftDetectionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftDetectionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriftStatus(value: StackSetDriftStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriftStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDriftedStackInstancesCount(value: DriftedStackInstancesCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftedStackInstancesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriftedStackInstancesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DriftedStackInstancesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedStackInstancesCount(value: FailedStackInstancesCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedStackInstancesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedStackInstancesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedStackInstancesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInProgressStackInstancesCount(value: InProgressStackInstancesCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InProgressStackInstancesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInProgressStackInstancesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InProgressStackInstancesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInSyncStackInstancesCount(value: InSyncStackInstancesCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InSyncStackInstancesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInSyncStackInstancesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InSyncStackInstancesCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDriftCheckTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDriftCheckTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDriftCheckTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDriftCheckTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalStackInstancesCount(value: TotalStackInstancesCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalStackInstancesCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalStackInstancesCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalStackInstancesCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

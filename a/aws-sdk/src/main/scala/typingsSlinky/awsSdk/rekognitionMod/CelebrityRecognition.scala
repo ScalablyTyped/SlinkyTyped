@@ -18,41 +18,11 @@ trait CelebrityRecognition extends js.Object {
 
 object CelebrityRecognition {
   @scala.inline
-  def apply(): CelebrityRecognition = {
+  def apply(Celebrity: CelebrityDetail = null, Timestamp: js.UndefOr[Timestamp] = js.undefined): CelebrityRecognition = {
     val __obj = js.Dynamic.literal()
+    if (Celebrity != null) __obj.updateDynamic("Celebrity")(Celebrity.asInstanceOf[js.Any])
+    if (!js.isUndefined(Timestamp)) __obj.updateDynamic("Timestamp")(Timestamp.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CelebrityRecognition]
   }
-  @scala.inline
-  implicit class CelebrityRecognitionOps[Self <: CelebrityRecognition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCelebrity(value: CelebrityDetail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Celebrity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCelebrity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Celebrity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

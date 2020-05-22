@@ -32,10 +32,9 @@ import scala.scalajs.js.annotation._
   *   array: [{uri: 'http://aaa.com/'}, {uri: 'http://bbb.com/'}]
   * });
   */
-@js.native
 trait IssuerAltName extends Extension {
-  def getExtnValueHex(): String = js.native
-  def setNameArray(paramsArray: js.Array[UriParam]): Unit = js.native
+  def getExtnValueHex(): String
+  def setNameArray(paramsArray: js.Array[UriParam]): Unit
 }
 
 object IssuerAltName {
@@ -56,25 +55,5 @@ object IssuerAltName {
     val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getExtnValueHex = js.Any.fromFunction0(getExtnValueHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setNameArray = js.Any.fromFunction1(setNameArray))
     __obj.asInstanceOf[IssuerAltName]
   }
-  @scala.inline
-  implicit class IssuerAltNameOps[Self <: IssuerAltName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetExtnValueHex(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtnValueHex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetNameArray(value: js.Array[UriParam] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNameArray")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -19,4 +19,7 @@ package object mod {
   type MongodbBackend = typingsSlinky.acl.mod.Backend[typingsSlinky.acl.mod.Callback]
   // for redis backend
   type RedisBackend = typingsSlinky.acl.mod.Backend[typingsSlinky.redis.mod.RedisClient]
+  type Value = java.lang.String | scala.Double
+  type Values = typingsSlinky.acl.mod.Value | js.Array[typingsSlinky.acl.mod.Value]
+  type strings = java.lang.String | js.Array[java.lang.String]
 }

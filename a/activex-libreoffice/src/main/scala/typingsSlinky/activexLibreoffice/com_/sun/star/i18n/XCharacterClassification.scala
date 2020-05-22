@@ -8,18 +8,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Character classification (upper, lower, digit, letter, number, ...) and generic Unicode enabled parser. */
-@js.native
 trait XCharacterClassification extends XInterface {
   /** Get DirectionProperty of character at position **nPos** . */
-  def getCharacterDirection(aText: String, nPos: Double): Double = js.native
-  def getCharacterType(aText: String, nPos: Double, aLocale: Locale): Double = js.native
-  def getScript(aText: String, nPos: Double): Double = js.native
+  def getCharacterDirection(aText: String, nPos: Double): Double
+  def getCharacterType(aText: String, nPos: Double, aLocale: Locale): Double
+  def getScript(aText: String, nPos: Double): Double
   /**
     * Get accumulated KCharacterTypes of string starting at position **nPos** of length **nCount** code points.
     * @returns A number with appropriate flags set to indicate what type of characters the string contains, each flag value being one of {@link KCharacterType}
     */
-  def getStringType(aText: String, nPos: Double, nCount: Double, aLocale: Locale): Double = js.native
-  def getType(aText: String, nPos: Double): Double = js.native
+  def getStringType(aText: String, nPos: Double, nCount: Double, aLocale: Locale): Double
+  def getType(aText: String, nPos: Double): Double
   /**
     * Parse a string for a token starting at position **nPos** .
     *
@@ -42,7 +41,7 @@ trait XCharacterClassification extends XInterface {
     aUserDefinedCharactersStart: String,
     nContCharFlags: Double,
     aUserDefinedCharactersCont: String
-  ): ParseResult = js.native
+  ): ParseResult
   /**
     * Parse a string for a token of type **nTokenType** starting at position **nPos** .
     *
@@ -66,13 +65,13 @@ trait XCharacterClassification extends XInterface {
     aUserDefinedCharactersStart: String,
     nContCharFlags: Double,
     aUserDefinedCharactersCont: String
-  ): ParseResult = js.native
+  ): ParseResult
   /** Convert upper case alpha to lower case alpha, starting at position **nPos** for **nCount** code points. */
-  def toLower(aText: String, nPos: Double, nCount: Double, aLocale: Locale): String = js.native
+  def toLower(aText: String, nPos: Double, nCount: Double, aLocale: Locale): String
   /** Convert to title case, starting at position **nPos** for **nCount** code points. */
-  def toTitle(aText: String, nPos: Double, nCount: Double, aLocale: Locale): String = js.native
+  def toTitle(aText: String, nPos: Double, nCount: Double, aLocale: Locale): String
   /** Convert lower case alpha to upper case alpha, starting at position **nPos** for **nCount** code points. */
-  def toUpper(aText: String, nPos: Double, nCount: Double, aLocale: Locale): String = js.native
+  def toUpper(aText: String, nPos: Double, nCount: Double, aLocale: Locale): String
 }
 
 object XCharacterClassification {
@@ -95,73 +94,5 @@ object XCharacterClassification {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getCharacterDirection = js.Any.fromFunction2(getCharacterDirection), getCharacterType = js.Any.fromFunction3(getCharacterType), getScript = js.Any.fromFunction2(getScript), getStringType = js.Any.fromFunction4(getStringType), getType = js.Any.fromFunction2(getType), parseAnyToken = js.Any.fromFunction7(parseAnyToken), parsePredefinedToken = js.Any.fromFunction8(parsePredefinedToken), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), toLower = js.Any.fromFunction4(toLower), toTitle = js.Any.fromFunction4(toTitle), toUpper = js.Any.fromFunction4(toUpper))
     __obj.asInstanceOf[XCharacterClassification]
   }
-  @scala.inline
-  implicit class XCharacterClassificationOps[Self <: XCharacterClassification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCharacterDirection(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterDirection")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetCharacterType(value: (String, Double, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterType")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetScript(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScript")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetStringType(value: (String, Double, Double, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStringType")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withGetType(value: (String, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withParseAnyToken(value: (String, Double, Locale, Double, String, Double, String) => ParseResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parseAnyToken")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withParsePredefinedToken(value: (Double, String, Double, Locale, Double, String, Double, String) => ParseResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsePredefinedToken")(js.Any.fromFunction8(value))
-        ret
-    }
-    @scala.inline
-    def withToLower(value: (String, Double, Double, Locale) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toLower")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withToTitle(value: (String, Double, Double, Locale) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toTitle")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withToUpper(value: (String, Double, Double, Locale) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toUpper")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

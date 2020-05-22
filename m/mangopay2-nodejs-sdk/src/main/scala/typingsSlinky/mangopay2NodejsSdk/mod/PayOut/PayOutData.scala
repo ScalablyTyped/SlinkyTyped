@@ -11,36 +11,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent mangopay2-nodejs-sdk.mangopay2-nodejs-sdk/types.Omit<mangopay2-nodejs-sdk.mangopay2-nodejs-sdk.transfer.TransferData, 'Type'> */
-@js.native
 trait PayOutData extends js.Object {
-  var AuthorId: String = js.native
+  var AuthorId: String
   /**
     * An ID of a Bank Account
     */
-  var BankAccountId: String = js.native
+  var BankAccountId: String
   /**
     * A custom reference you wish to appear on the user’s bank statement (your Client Name is already shown). This reference can contain max 12 characters
     */
-  var BankWireRef: String = js.native
-  var CreationDate: Double = js.native
-  var CreditedFunds: MoneyData = js.native
-  var CreditedUserId: String = js.native
-  var CreditedWalletId: String = js.native
-  var DebitedFunds: MoneyData = js.native
-  var DebitedWalletId: String = js.native
-  var ExecutionDate: Timestamp = js.native
-  var Fees: MoneyData = js.native
-  var Id: String = js.native
-  var Nature: TransactionNature = js.native
-  var PaymentType: BANK_WIRE = js.native
-  var ResultCode: String = js.native
-  var ResultMessage: String = js.native
-  var Status: TransactionStatus = js.native
-  var Tag: String = js.native
+  var BankWireRef: String
+  var CreationDate: Double
+  var CreditedFunds: MoneyData
+  var CreditedUserId: String
+  var CreditedWalletId: String
+  var DebitedFunds: MoneyData
+  var DebitedWalletId: String
+  var ExecutionDate: Timestamp
+  var Fees: MoneyData
+  var Id: String
+  var Nature: TransactionNature
+  var PaymentType: BANK_WIRE
+  var ResultCode: String
+  var ResultMessage: String
+  var Status: TransactionStatus
+  var Tag: String
   /**
     * The type of the transaction
     */
-  var Type: PAYOUT = js.native
+  var Type: PAYOUT
 }
 
 object PayOutData {
@@ -69,127 +68,5 @@ object PayOutData {
     val __obj = js.Dynamic.literal(AuthorId = AuthorId.asInstanceOf[js.Any], BankAccountId = BankAccountId.asInstanceOf[js.Any], BankWireRef = BankWireRef.asInstanceOf[js.Any], CreationDate = CreationDate.asInstanceOf[js.Any], CreditedFunds = CreditedFunds.asInstanceOf[js.Any], CreditedUserId = CreditedUserId.asInstanceOf[js.Any], CreditedWalletId = CreditedWalletId.asInstanceOf[js.Any], DebitedFunds = DebitedFunds.asInstanceOf[js.Any], DebitedWalletId = DebitedWalletId.asInstanceOf[js.Any], ExecutionDate = ExecutionDate.asInstanceOf[js.Any], Fees = Fees.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Nature = Nature.asInstanceOf[js.Any], PaymentType = PaymentType.asInstanceOf[js.Any], ResultCode = ResultCode.asInstanceOf[js.Any], ResultMessage = ResultMessage.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[PayOutData]
   }
-  @scala.inline
-  implicit class PayOutDataOps[Self <: PayOutData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthorId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBankAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BankAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBankWireRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BankWireRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreditedFunds(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedFunds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreditedUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreditedWalletId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreditedWalletId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebitedFunds(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebitedFunds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebitedWalletId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DebitedWalletId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecutionDate(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFees(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Fees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNature(value: TransactionNature): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Nature")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaymentType(value: BANK_WIRE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResultCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResultMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: TransactionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: PAYOUT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

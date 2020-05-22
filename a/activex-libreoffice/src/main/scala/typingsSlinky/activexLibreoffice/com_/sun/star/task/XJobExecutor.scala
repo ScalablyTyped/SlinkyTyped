@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * let it run again if a new event will be detected later.
   * @see theJobExecutor
   */
-@js.native
 trait XJobExecutor extends XInterface {
   /**
     * trigger event to start registered jobs
@@ -24,7 +23,7 @@ trait XJobExecutor extends XInterface {
     * special events will be defined here.
     * @param Event describe the event for which jobs can be registered and should be started
     */
-  def trigger(Event: String): Unit = js.native
+  def trigger(Event: String): Unit
 }
 
 object XJobExecutor {
@@ -38,19 +37,5 @@ object XJobExecutor {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), trigger = js.Any.fromFunction1(trigger))
     __obj.asInstanceOf[XJobExecutor]
   }
-  @scala.inline
-  implicit class XJobExecutorOps[Self <: XJobExecutor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrigger(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

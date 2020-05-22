@@ -8,43 +8,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `3` extends js.Object {
-  var newValue: native | experimental | poll | atom = js.native
-  var oldValue: js.UndefOr[native | experimental | poll | atom] = js.native
+  var newValue: native | experimental | poll | atom
+  var oldValue: js.UndefOr[native | experimental | poll | atom] = js.undefined
 }
 
 object `3` {
   @scala.inline
-  def apply(newValue: native | experimental | poll | atom): `3` = {
+  def apply(
+    newValue: native | experimental | poll | atom,
+    oldValue: native | experimental | poll | atom = null
+  ): `3` = {
     val __obj = js.Dynamic.literal(newValue = newValue.asInstanceOf[js.Any])
+    if (oldValue != null) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[`3`]
   }
-  @scala.inline
-  implicit class `3Ops`[Self <: `3`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewValue(value: native | experimental | poll | atom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: native | experimental | poll | atom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

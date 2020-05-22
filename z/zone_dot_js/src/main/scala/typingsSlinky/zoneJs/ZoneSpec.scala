@@ -10,12 +10,11 @@ import scala.scalajs.js.annotation._
   *
   * Only the `name` property is required (all other are optional).
   */
-@js.native
 trait ZoneSpec extends js.Object {
   /**
     * The name of the zone. Useful when debugging Zones.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Allows interception of task cancellation.
     *
@@ -32,7 +31,7 @@ trait ZoneSpec extends js.Object {
       /* task */ Task, 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Allows the interception of zone forking.
     *
@@ -51,7 +50,7 @@ trait ZoneSpec extends js.Object {
       /* zoneSpec */ ZoneSpec, 
       Zone
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Allows interception of the error handling.
     *
@@ -68,7 +67,7 @@ trait ZoneSpec extends js.Object {
       /* error */ js.Any, 
       Boolean
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Notifies of changes to the task queue empty status.
     *
@@ -85,7 +84,7 @@ trait ZoneSpec extends js.Object {
       /* hasTaskState */ HasTaskState, 
       Unit
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Allows interception of the wrapping of the callback.
     *
@@ -104,7 +103,7 @@ trait ZoneSpec extends js.Object {
       /* source */ String, 
       js.Function
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Allows interception of the callback invocation.
     *
@@ -127,7 +126,7 @@ trait ZoneSpec extends js.Object {
       /* source */ js.UndefOr[String], 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   var onInvokeTask: js.UndefOr[
     js.Function6[
       /* parentZoneDelegate */ ZoneDelegate, 
@@ -138,7 +137,7 @@ trait ZoneSpec extends js.Object {
       /* applyArgs */ js.UndefOr[js.Array[_]], 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Allows interception of task scheduling.
     *
@@ -155,156 +154,38 @@ trait ZoneSpec extends js.Object {
       /* task */ Task, 
       Task
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * A set of properties to be associated with Zone. Use [Zone.get] to retrieve them.
     */
-  var properties: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var properties: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object ZoneSpec {
   @scala.inline
-  def apply(name: String): ZoneSpec = {
+  def apply(
+    name: String,
+    onCancelTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => _ = null,
+    onFork: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* zoneSpec */ ZoneSpec) => Zone = null,
+    onHandleError: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* error */ js.Any) => Boolean = null,
+    onHasTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* hasTaskState */ HasTaskState) => Unit = null,
+    onIntercept: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* source */ String) => js.Function = null,
+    onInvoke: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]], /* source */ js.UndefOr[String]) => _ = null,
+    onInvokeTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]]) => _ = null,
+    onScheduleTask: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => Task = null,
+    properties: StringDictionary[js.Any] = null
+  ): ZoneSpec = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    if (onCancelTask != null) __obj.updateDynamic("onCancelTask")(js.Any.fromFunction4(onCancelTask))
+    if (onFork != null) __obj.updateDynamic("onFork")(js.Any.fromFunction4(onFork))
+    if (onHandleError != null) __obj.updateDynamic("onHandleError")(js.Any.fromFunction4(onHandleError))
+    if (onHasTask != null) __obj.updateDynamic("onHasTask")(js.Any.fromFunction4(onHasTask))
+    if (onIntercept != null) __obj.updateDynamic("onIntercept")(js.Any.fromFunction5(onIntercept))
+    if (onInvoke != null) __obj.updateDynamic("onInvoke")(js.Any.fromFunction7(onInvoke))
+    if (onInvokeTask != null) __obj.updateDynamic("onInvokeTask")(js.Any.fromFunction6(onInvokeTask))
+    if (onScheduleTask != null) __obj.updateDynamic("onScheduleTask")(js.Any.fromFunction4(onScheduleTask))
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZoneSpec]
   }
-  @scala.inline
-  implicit class ZoneSpecOps[Self <: ZoneSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnCancelTask(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCancelTask")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCancelTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCancelTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFork(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* zoneSpec */ ZoneSpec) => Zone
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFork")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnFork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFork")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHandleError(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* error */ js.Any) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandleError")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHandleError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandleError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHasTask(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* hasTaskState */ HasTaskState) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHasTask")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHasTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHasTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIntercept(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* source */ String) => js.Function
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIntercept")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIntercept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIntercept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInvoke(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* delegate */ js.Function, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]], /* source */ js.UndefOr[String]) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvoke")(js.Any.fromFunction7(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInvoke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvoke")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInvokeTask(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task, /* applyThis */ js.Any, /* applyArgs */ js.UndefOr[js.Array[_]]) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvokeTask")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInvokeTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvokeTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnScheduleTask(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* task */ Task) => Task
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScheduleTask")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnScheduleTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onScheduleTask")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

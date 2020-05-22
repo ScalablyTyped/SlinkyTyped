@@ -30,137 +30,30 @@ trait SchemaNamedProperty extends js.Object {
 
 object SchemaNamedProperty {
   @scala.inline
-  def apply(): SchemaNamedProperty = {
+  def apply(
+    booleanValue: js.UndefOr[Boolean] = js.undefined,
+    dateValues: SchemaDateValues = null,
+    doubleValues: SchemaDoubleValues = null,
+    enumValues: SchemaEnumValues = null,
+    htmlValues: SchemaHtmlValues = null,
+    integerValues: SchemaIntegerValues = null,
+    name: String = null,
+    objectValues: SchemaObjectValues = null,
+    textValues: SchemaTextValues = null,
+    timestampValues: SchemaTimestampValues = null
+  ): SchemaNamedProperty = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(booleanValue)) __obj.updateDynamic("booleanValue")(booleanValue.get.asInstanceOf[js.Any])
+    if (dateValues != null) __obj.updateDynamic("dateValues")(dateValues.asInstanceOf[js.Any])
+    if (doubleValues != null) __obj.updateDynamic("doubleValues")(doubleValues.asInstanceOf[js.Any])
+    if (enumValues != null) __obj.updateDynamic("enumValues")(enumValues.asInstanceOf[js.Any])
+    if (htmlValues != null) __obj.updateDynamic("htmlValues")(htmlValues.asInstanceOf[js.Any])
+    if (integerValues != null) __obj.updateDynamic("integerValues")(integerValues.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (objectValues != null) __obj.updateDynamic("objectValues")(objectValues.asInstanceOf[js.Any])
+    if (textValues != null) __obj.updateDynamic("textValues")(textValues.asInstanceOf[js.Any])
+    if (timestampValues != null) __obj.updateDynamic("timestampValues")(timestampValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNamedProperty]
   }
-  @scala.inline
-  implicit class SchemaNamedPropertyOps[Self <: SchemaNamedProperty] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBooleanValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBooleanValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateValues(value: SchemaDateValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleValues(value: SchemaDoubleValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnumValues(value: SchemaEnumValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnumValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enumValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtmlValues(value: SchemaHtmlValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerValues(value: SchemaIntegerValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectValues(value: SchemaObjectValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextValues(value: SchemaTextValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampValues(value: SchemaTimestampValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

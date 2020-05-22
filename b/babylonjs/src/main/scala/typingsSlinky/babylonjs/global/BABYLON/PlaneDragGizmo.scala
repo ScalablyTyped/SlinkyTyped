@@ -31,6 +31,11 @@ class PlaneDragGizmo protected ()
     gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
     parent: Nullable[typingsSlinky.babylonjs.BABYLON.PositionGizmo]
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

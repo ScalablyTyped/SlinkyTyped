@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * Provides a unified interface for the {@link ModuleUIConfigurationManager} service.
   * @since LibreOffice 4.2
   */
-@js.native
 trait XModuleUIConfigurationManager2
   extends XUIConfigurationPersistence
      with XUIConfigurationManager

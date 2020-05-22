@@ -5,18 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SmartHomeJwt extends js.Object {
-  var auth_provider_x509_cert_url: String = js.native
-  var auth_uri: String = js.native
-  var client_email: String = js.native
-  var client_id: String = js.native
-  var client_x509_cert_url: String = js.native
-  var private_key: String = js.native
-  var private_key_id: String = js.native
-  var project_id: String = js.native
-  var token_uri: String = js.native
-  var `type`: service_account = js.native
+  var auth_provider_x509_cert_url: String
+  var auth_uri: String
+  var client_email: String
+  var client_id: String
+  var client_x509_cert_url: String
+  var private_key: String
+  var private_key_id: String
+  var project_id: String
+  var token_uri: String
+  var `type`: service_account
 }
 
 object SmartHomeJwt {
@@ -37,73 +36,5 @@ object SmartHomeJwt {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeJwt]
   }
-  @scala.inline
-  implicit class SmartHomeJwtOps[Self <: SmartHomeJwt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuth_provider_x509_cert_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth_provider_x509_cert_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuth_uri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auth_uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClient_email(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClient_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClient_x509_cert_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client_x509_cert_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivate_key(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private_key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrivate_key_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("private_key_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProject_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToken_uri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: service_account): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

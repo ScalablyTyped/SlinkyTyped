@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomLayerOptions extends js.Object {
-  var databoxId: js.UndefOr[String] = js.native
-  var filter: js.UndefOr[String] = js.native
-  var geotableId: js.UndefOr[String] = js.native
-  var pointDensityType: js.UndefOr[PointDensityType] = js.native
-  var q: js.UndefOr[String] = js.native
-  var tags: js.UndefOr[String] = js.native
+  var databoxId: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.undefined
+  var geotableId: js.UndefOr[String] = js.undefined
+  var pointDensityType: js.UndefOr[PointDensityType] = js.undefined
+  var q: js.UndefOr[String] = js.undefined
+  var tags: js.UndefOr[String] = js.undefined
 }
 
 object CustomLayerOptions {
   @scala.inline
-  def apply(): CustomLayerOptions = {
+  def apply(
+    databoxId: String = null,
+    filter: String = null,
+    geotableId: String = null,
+    pointDensityType: js.UndefOr[PointDensityType] = js.undefined,
+    q: String = null,
+    tags: String = null
+  ): CustomLayerOptions = {
     val __obj = js.Dynamic.literal()
+    if (databoxId != null) __obj.updateDynamic("databoxId")(databoxId.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (geotableId != null) __obj.updateDynamic("geotableId")(geotableId.asInstanceOf[js.Any])
+    if (!js.isUndefined(pointDensityType)) __obj.updateDynamic("pointDensityType")(pointDensityType.get.asInstanceOf[js.Any])
+    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomLayerOptions]
   }
-  @scala.inline
-  implicit class CustomLayerOptionsOps[Self <: CustomLayerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataboxId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databoxId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataboxId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("databoxId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeotableId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geotableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeotableId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geotableId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointDensityType(value: PointDensityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointDensityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointDensityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointDensityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

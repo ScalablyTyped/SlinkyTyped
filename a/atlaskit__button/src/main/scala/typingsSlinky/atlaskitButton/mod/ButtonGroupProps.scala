@@ -5,51 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ButtonGroupProps extends js.Object {
   /** The appearance to apply to all buttons. */
-  val appearance: js.UndefOr[ButtonAppearances] = js.native
+  val appearance: js.UndefOr[ButtonAppearances] = js.undefined
   /** The buttons to render. */
-  val children: TagMod[Any] = js.native
+  val children: TagMod[Any]
 }
 
 object ButtonGroupProps {
   @scala.inline
-  def apply(): ButtonGroupProps = {
+  def apply(appearance: ButtonAppearances = null, children: TagMod[Any] = null): ButtonGroupProps = {
     val __obj = js.Dynamic.literal()
+    if (appearance != null) __obj.updateDynamic("appearance")(appearance.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonGroupProps]
   }
-  @scala.inline
-  implicit class ButtonGroupPropsOps[Self <: ButtonGroupProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppearance(value: ButtonAppearances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppearance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

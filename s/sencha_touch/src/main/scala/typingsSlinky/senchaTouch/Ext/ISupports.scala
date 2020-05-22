@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISupports extends js.Object {
   /** [Property] (Object) */
-  var AudioTag: js.UndefOr[js.Any] = js.native
+  var AudioTag: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Object) */
-  var GeoLocation: js.UndefOr[js.Any] = js.native
+  var GeoLocation: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Object) */
-  var SVG: js.UndefOr[js.Any] = js.native
+  var SVG: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Object) */
-  var Transitions: js.UndefOr[js.Any] = js.native
+  var Transitions: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Object) */
-  var VML: js.UndefOr[js.Any] = js.native
+  var VML: js.UndefOr[js.Any] = js.undefined
 }
 
 object ISupports {
   @scala.inline
-  def apply(): ISupports = {
+  def apply(
+    AudioTag: js.Any = null,
+    GeoLocation: js.Any = null,
+    SVG: js.Any = null,
+    Transitions: js.Any = null,
+    VML: js.Any = null
+  ): ISupports = {
     val __obj = js.Dynamic.literal()
+    if (AudioTag != null) __obj.updateDynamic("AudioTag")(AudioTag.asInstanceOf[js.Any])
+    if (GeoLocation != null) __obj.updateDynamic("GeoLocation")(GeoLocation.asInstanceOf[js.Any])
+    if (SVG != null) __obj.updateDynamic("SVG")(SVG.asInstanceOf[js.Any])
+    if (Transitions != null) __obj.updateDynamic("Transitions")(Transitions.asInstanceOf[js.Any])
+    if (VML != null) __obj.updateDynamic("VML")(VML.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISupports]
   }
-  @scala.inline
-  implicit class ISupportsOps[Self <: ISupports] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioTag(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeoLocation(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSVG(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSVG: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Transitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Transitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVML(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VML")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

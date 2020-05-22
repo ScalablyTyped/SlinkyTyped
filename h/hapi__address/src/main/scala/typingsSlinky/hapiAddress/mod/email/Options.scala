@@ -1,10 +1,11 @@
 package typingsSlinky.hapiAddress.mod.email
 
+import typingsSlinky.hapiAddress.mod.domain.Tlds.Allow
+import typingsSlinky.hapiAddress.mod.domain.Tlds.Deny
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options
   extends typingsSlinky.hapiAddress.mod.domain.Options {
   /**
@@ -12,34 +13,23 @@ trait Options
     * 
     * @default false
     */
-  val ignoreLength: js.UndefOr[Boolean] = js.native
+  val ignoreLength: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    allowUnicode: js.UndefOr[Boolean] = js.undefined,
+    ignoreLength: js.UndefOr[Boolean] = js.undefined,
+    minDomainSegments: js.UndefOr[Double] = js.undefined,
+    tlds: Allow | Deny | Boolean = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUnicode)) __obj.updateDynamic("allowUnicode")(allowUnicode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreLength)) __obj.updateDynamic("ignoreLength")(ignoreLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minDomainSegments)) __obj.updateDynamic("minDomainSegments")(minDomainSegments.get.asInstanceOf[js.Any])
+    if (tlds != null) __obj.updateDynamic("tlds")(tlds.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreLength(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreLength")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

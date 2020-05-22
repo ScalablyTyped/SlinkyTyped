@@ -6,179 +6,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  contentStyle ? :any,   modifier ? :string,   renderModal ? :(): void,   renderToolbar ? :(): void,   renderBottomToolbar ? :(): void,   renderFixed ? :(): void,   onInit ? :(): void,   onShow ? :(): void,   onHide ? :(): void} */
-@js.native
 trait HTMLAttributesidclassNameContentStyle extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var contentStyle: js.UndefOr[js.Any] = js.native
-  var id: js.UndefOr[String] = js.native
-  var modifier: js.UndefOr[String] = js.native
-  var onHide: js.UndefOr[js.Function0[Unit]] = js.native
-  var onInit: js.UndefOr[js.Function0[Unit]] = js.native
-  var onShow: js.UndefOr[js.Function0[Unit]] = js.native
-  var renderBottomToolbar: js.UndefOr[js.Function0[Unit]] = js.native
-  var renderFixed: js.UndefOr[js.Function0[Unit]] = js.native
-  var renderModal: js.UndefOr[js.Function0[Unit]] = js.native
-  var renderToolbar: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var contentStyle: js.UndefOr[js.Any] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var modifier: js.UndefOr[String] = js.undefined
+  var onHide: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onInit: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onShow: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var renderBottomToolbar: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var renderFixed: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var renderModal: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var renderToolbar: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object HTMLAttributesidclassNameContentStyle {
   @scala.inline
-  def apply(): HTMLAttributesidclassNameContentStyle = {
+  def apply(
+    className: String = null,
+    contentStyle: js.Any = null,
+    id: String = null,
+    modifier: String = null,
+    onHide: () => Unit = null,
+    onInit: () => Unit = null,
+    onShow: () => Unit = null,
+    renderBottomToolbar: () => Unit = null,
+    renderFixed: () => Unit = null,
+    renderModal: () => Unit = null,
+    renderToolbar: () => Unit = null,
+    style: CSSProperties = null
+  ): HTMLAttributesidclassNameContentStyle = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
+    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction0(onHide))
+    if (onInit != null) __obj.updateDynamic("onInit")(js.Any.fromFunction0(onInit))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
+    if (renderBottomToolbar != null) __obj.updateDynamic("renderBottomToolbar")(js.Any.fromFunction0(renderBottomToolbar))
+    if (renderFixed != null) __obj.updateDynamic("renderFixed")(js.Any.fromFunction0(renderFixed))
+    if (renderModal != null) __obj.updateDynamic("renderModal")(js.Any.fromFunction0(renderModal))
+    if (renderToolbar != null) __obj.updateDynamic("renderToolbar")(js.Any.fromFunction0(renderToolbar))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLAttributesidclassNameContentStyle]
   }
-  @scala.inline
-  implicit class HTMLAttributesidclassNameContentStyleOps[Self <: HTMLAttributesidclassNameContentStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderBottomToolbar(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomToolbar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderBottomToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderBottomToolbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderFixed(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFixed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderFixed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFixed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderModal(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderModal")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderModal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderToolbar(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderToolbar")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderToolbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

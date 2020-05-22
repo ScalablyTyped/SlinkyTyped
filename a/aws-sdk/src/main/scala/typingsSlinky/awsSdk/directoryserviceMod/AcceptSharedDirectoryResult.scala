@@ -14,29 +14,10 @@ trait AcceptSharedDirectoryResult extends js.Object {
 
 object AcceptSharedDirectoryResult {
   @scala.inline
-  def apply(): AcceptSharedDirectoryResult = {
+  def apply(SharedDirectory: SharedDirectory = null): AcceptSharedDirectoryResult = {
     val __obj = js.Dynamic.literal()
+    if (SharedDirectory != null) __obj.updateDynamic("SharedDirectory")(SharedDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptSharedDirectoryResult]
   }
-  @scala.inline
-  implicit class AcceptSharedDirectoryResultOps[Self <: AcceptSharedDirectoryResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSharedDirectory(value: SharedDirectory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDirectory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSharedDirectory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDirectory")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

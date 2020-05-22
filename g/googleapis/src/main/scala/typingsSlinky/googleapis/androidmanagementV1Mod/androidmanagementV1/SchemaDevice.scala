@@ -164,377 +164,70 @@ trait SchemaDevice extends js.Object {
 
 object SchemaDevice {
   @scala.inline
-  def apply(): SchemaDevice = {
+  def apply(
+    apiLevel: js.UndefOr[Double] = js.undefined,
+    applicationReports: js.Array[SchemaApplicationReport] = null,
+    appliedPolicyName: String = null,
+    appliedPolicyVersion: String = null,
+    appliedState: String = null,
+    deviceSettings: SchemaDeviceSettings = null,
+    disabledReason: SchemaUserFacingMessage = null,
+    displays: js.Array[SchemaDisplay] = null,
+    enrollmentTime: String = null,
+    enrollmentTokenData: String = null,
+    enrollmentTokenName: String = null,
+    hardwareInfo: SchemaHardwareInfo = null,
+    hardwareStatusSamples: js.Array[SchemaHardwareStatus] = null,
+    lastPolicyComplianceReportTime: String = null,
+    lastPolicySyncTime: String = null,
+    lastStatusReportTime: String = null,
+    managementMode: String = null,
+    memoryEvents: js.Array[SchemaMemoryEvent] = null,
+    memoryInfo: SchemaMemoryInfo = null,
+    name: String = null,
+    networkInfo: SchemaNetworkInfo = null,
+    nonComplianceDetails: js.Array[SchemaNonComplianceDetail] = null,
+    policyCompliant: js.UndefOr[Boolean] = js.undefined,
+    policyName: String = null,
+    powerManagementEvents: js.Array[SchemaPowerManagementEvent] = null,
+    previousDeviceNames: js.Array[String] = null,
+    softwareInfo: SchemaSoftwareInfo = null,
+    state: String = null,
+    user: SchemaUser = null,
+    userName: String = null
+  ): SchemaDevice = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(apiLevel)) __obj.updateDynamic("apiLevel")(apiLevel.get.asInstanceOf[js.Any])
+    if (applicationReports != null) __obj.updateDynamic("applicationReports")(applicationReports.asInstanceOf[js.Any])
+    if (appliedPolicyName != null) __obj.updateDynamic("appliedPolicyName")(appliedPolicyName.asInstanceOf[js.Any])
+    if (appliedPolicyVersion != null) __obj.updateDynamic("appliedPolicyVersion")(appliedPolicyVersion.asInstanceOf[js.Any])
+    if (appliedState != null) __obj.updateDynamic("appliedState")(appliedState.asInstanceOf[js.Any])
+    if (deviceSettings != null) __obj.updateDynamic("deviceSettings")(deviceSettings.asInstanceOf[js.Any])
+    if (disabledReason != null) __obj.updateDynamic("disabledReason")(disabledReason.asInstanceOf[js.Any])
+    if (displays != null) __obj.updateDynamic("displays")(displays.asInstanceOf[js.Any])
+    if (enrollmentTime != null) __obj.updateDynamic("enrollmentTime")(enrollmentTime.asInstanceOf[js.Any])
+    if (enrollmentTokenData != null) __obj.updateDynamic("enrollmentTokenData")(enrollmentTokenData.asInstanceOf[js.Any])
+    if (enrollmentTokenName != null) __obj.updateDynamic("enrollmentTokenName")(enrollmentTokenName.asInstanceOf[js.Any])
+    if (hardwareInfo != null) __obj.updateDynamic("hardwareInfo")(hardwareInfo.asInstanceOf[js.Any])
+    if (hardwareStatusSamples != null) __obj.updateDynamic("hardwareStatusSamples")(hardwareStatusSamples.asInstanceOf[js.Any])
+    if (lastPolicyComplianceReportTime != null) __obj.updateDynamic("lastPolicyComplianceReportTime")(lastPolicyComplianceReportTime.asInstanceOf[js.Any])
+    if (lastPolicySyncTime != null) __obj.updateDynamic("lastPolicySyncTime")(lastPolicySyncTime.asInstanceOf[js.Any])
+    if (lastStatusReportTime != null) __obj.updateDynamic("lastStatusReportTime")(lastStatusReportTime.asInstanceOf[js.Any])
+    if (managementMode != null) __obj.updateDynamic("managementMode")(managementMode.asInstanceOf[js.Any])
+    if (memoryEvents != null) __obj.updateDynamic("memoryEvents")(memoryEvents.asInstanceOf[js.Any])
+    if (memoryInfo != null) __obj.updateDynamic("memoryInfo")(memoryInfo.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (networkInfo != null) __obj.updateDynamic("networkInfo")(networkInfo.asInstanceOf[js.Any])
+    if (nonComplianceDetails != null) __obj.updateDynamic("nonComplianceDetails")(nonComplianceDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(policyCompliant)) __obj.updateDynamic("policyCompliant")(policyCompliant.get.asInstanceOf[js.Any])
+    if (policyName != null) __obj.updateDynamic("policyName")(policyName.asInstanceOf[js.Any])
+    if (powerManagementEvents != null) __obj.updateDynamic("powerManagementEvents")(powerManagementEvents.asInstanceOf[js.Any])
+    if (previousDeviceNames != null) __obj.updateDynamic("previousDeviceNames")(previousDeviceNames.asInstanceOf[js.Any])
+    if (softwareInfo != null) __obj.updateDynamic("softwareInfo")(softwareInfo.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
+    if (userName != null) __obj.updateDynamic("userName")(userName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDevice]
   }
-  @scala.inline
-  implicit class SchemaDeviceOps[Self <: SchemaDevice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationReports(value: js.Array[SchemaApplicationReport]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationReports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationReports: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationReports")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppliedPolicyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedPolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppliedPolicyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedPolicyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppliedPolicyVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedPolicyVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppliedPolicyVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedPolicyVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppliedState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppliedState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceSettings(value: SchemaDeviceSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledReason(value: SchemaUserFacingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplays(value: js.Array[SchemaDisplay]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnrollmentTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnrollmentTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnrollmentTokenData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTokenData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnrollmentTokenData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTokenData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnrollmentTokenName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTokenName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnrollmentTokenName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentTokenName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHardwareInfo(value: SchemaHardwareInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHardwareInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHardwareStatusSamples(value: js.Array[SchemaHardwareStatus]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareStatusSamples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHardwareStatusSamples: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareStatusSamples")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastPolicyComplianceReportTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPolicyComplianceReportTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastPolicyComplianceReportTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPolicyComplianceReportTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastPolicySyncTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPolicySyncTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastPolicySyncTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPolicySyncTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastStatusReportTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusReportTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastStatusReportTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStatusReportTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagementMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managementMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagementMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managementMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoryEvents(value: js.Array[SchemaMemoryEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoryEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoryInfo(value: SchemaMemoryInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoryInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkInfo(value: SchemaNetworkInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonComplianceDetails(value: js.Array[SchemaNonComplianceDetail]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonComplianceDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonComplianceDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonComplianceDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyCompliant(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyCompliant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyCompliant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyCompliant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPowerManagementEvents(value: js.Array[SchemaPowerManagementEvent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("powerManagementEvents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPowerManagementEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("powerManagementEvents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousDeviceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousDeviceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousDeviceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousDeviceNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoftwareInfo(value: SchemaSoftwareInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoftwareInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: SchemaUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

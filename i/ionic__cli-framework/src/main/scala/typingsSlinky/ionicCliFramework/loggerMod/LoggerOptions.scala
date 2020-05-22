@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LoggerOptions extends js.Object {
-  val handlers: js.UndefOr[Set[LoggerHandler]] = js.native
-  val level: js.UndefOr[LoggerLevelWeight] = js.native
+  val handlers: js.UndefOr[Set[LoggerHandler]] = js.undefined
+  val level: js.UndefOr[LoggerLevelWeight] = js.undefined
 }
 
 object LoggerOptions {
   @scala.inline
-  def apply(): LoggerOptions = {
+  def apply(handlers: Set[LoggerHandler] = null, level: js.UndefOr[LoggerLevelWeight] = js.undefined): LoggerOptions = {
     val __obj = js.Dynamic.literal()
+    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggerOptions]
   }
-  @scala.inline
-  implicit class LoggerOptionsOps[Self <: LoggerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandlers(value: Set[LoggerHandler]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: LoggerLevelWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

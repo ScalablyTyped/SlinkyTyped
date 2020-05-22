@@ -47,7 +47,7 @@ trait Proposal extends js.Object {
     */
   var ProposedByMemberName: js.UndefOr[NetworkMemberNameString] = js.native
   /**
-    * The status of the proposal. Values are as follows:    IN_PROGRESS - The proposal is active and open for member voting.    APPROVED - The proposal was approved with sufficient YES votes among members according to the VotingPolicy specified for the Network. The specified proposal actions are carried out.    REJECTED - The proposal was rejected with insufficient YES votes among members according to the VotingPolicy specified for the Network. The specified ProposalActions are not carried out.    EXPIRED - Members did not cast the number of votes required to determine the proposal outcome before the proposal expired. The specified ProposalActions are not carried out.    ACTION_FAILED - One or more of the specified ProposalActions in a proposal that was approved could not be completed because of an error.  
+    * The status of the proposal. Values are as follows:    IN_PROGRESS - The proposal is active and open for member voting.    APPROVED - The proposal was approved with sufficient YES votes among members according to the VotingPolicy specified for the Network. The specified proposal actions are carried out.    REJECTED - The proposal was rejected with insufficient YES votes among members according to the VotingPolicy specified for the Network. The specified ProposalActions are not carried out.    EXPIRED - Members did not cast the number of votes required to determine the proposal outcome before the proposal expired. The specified ProposalActions are not carried out.    ACTION_FAILED - One or more of the specified ProposalActions in a proposal that was approved could not be completed because of an error. The ACTION_FAILED status occurs even if only one ProposalAction fails and other actions are successful.  
     */
   var Status: js.UndefOr[ProposalStatus] = js.native
   /**
@@ -58,161 +58,34 @@ trait Proposal extends js.Object {
 
 object Proposal {
   @scala.inline
-  def apply(): Proposal = {
+  def apply(
+    Actions: ProposalActions = null,
+    CreationDate: js.Date = null,
+    Description: DescriptionString = null,
+    ExpirationDate: js.Date = null,
+    NetworkId: ResourceIdString = null,
+    NoVoteCount: js.UndefOr[VoteCount] = js.undefined,
+    OutstandingVoteCount: js.UndefOr[VoteCount] = js.undefined,
+    ProposalId: ResourceIdString = null,
+    ProposedByMemberId: ResourceIdString = null,
+    ProposedByMemberName: NetworkMemberNameString = null,
+    Status: ProposalStatus = null,
+    YesVoteCount: js.UndefOr[VoteCount] = js.undefined
+  ): Proposal = {
     val __obj = js.Dynamic.literal()
+    if (Actions != null) __obj.updateDynamic("Actions")(Actions.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (ExpirationDate != null) __obj.updateDynamic("ExpirationDate")(ExpirationDate.asInstanceOf[js.Any])
+    if (NetworkId != null) __obj.updateDynamic("NetworkId")(NetworkId.asInstanceOf[js.Any])
+    if (!js.isUndefined(NoVoteCount)) __obj.updateDynamic("NoVoteCount")(NoVoteCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(OutstandingVoteCount)) __obj.updateDynamic("OutstandingVoteCount")(OutstandingVoteCount.get.asInstanceOf[js.Any])
+    if (ProposalId != null) __obj.updateDynamic("ProposalId")(ProposalId.asInstanceOf[js.Any])
+    if (ProposedByMemberId != null) __obj.updateDynamic("ProposedByMemberId")(ProposedByMemberId.asInstanceOf[js.Any])
+    if (ProposedByMemberName != null) __obj.updateDynamic("ProposedByMemberName")(ProposedByMemberName.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (!js.isUndefined(YesVoteCount)) __obj.updateDynamic("YesVoteCount")(YesVoteCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Proposal]
   }
-  @scala.inline
-  implicit class ProposalOps[Self <: Proposal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: ProposalActions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: DescriptionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkId(value: ResourceIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoVoteCount(value: VoteCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoVoteCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoVoteCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoVoteCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutstandingVoteCount(value: VoteCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutstandingVoteCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutstandingVoteCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutstandingVoteCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProposalId(value: ResourceIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProposalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProposedByMemberId(value: ResourceIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProposedByMemberId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProposedByMemberName(value: NetworkMemberNameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProposedByMemberName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: ProposalStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYesVoteCount(value: VoteCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YesVoteCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYesVoteCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("YesVoteCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

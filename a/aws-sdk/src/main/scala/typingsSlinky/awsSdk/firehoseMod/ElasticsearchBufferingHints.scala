@@ -18,41 +18,14 @@ trait ElasticsearchBufferingHints extends js.Object {
 
 object ElasticsearchBufferingHints {
   @scala.inline
-  def apply(): ElasticsearchBufferingHints = {
+  def apply(
+    IntervalInSeconds: js.UndefOr[ElasticsearchBufferingIntervalInSeconds] = js.undefined,
+    SizeInMBs: js.UndefOr[ElasticsearchBufferingSizeInMBs] = js.undefined
+  ): ElasticsearchBufferingHints = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(IntervalInSeconds)) __obj.updateDynamic("IntervalInSeconds")(IntervalInSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(SizeInMBs)) __obj.updateDynamic("SizeInMBs")(SizeInMBs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticsearchBufferingHints]
   }
-  @scala.inline
-  implicit class ElasticsearchBufferingHintsOps[Self <: ElasticsearchBufferingHints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIntervalInSeconds(value: ElasticsearchBufferingIntervalInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntervalInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntervalInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntervalInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeInMBs(value: ElasticsearchBufferingSizeInMBs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInMBs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeInMBs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeInMBs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Literal extends Node {
-  var prefixed: scala.Boolean = js.native
-  var string: java.lang.String = js.native
-  var `val`: java.lang.String = js.native
+  var prefixed: scala.Boolean
+  var string: java.lang.String
+  var `val`: java.lang.String
 }
 
 object Literal {
@@ -36,31 +35,5 @@ object Literal {
     __obj.updateDynamic("val")(`val`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Literal]
   }
-  @scala.inline
-  implicit class LiteralOps[Self <: Literal] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrefixed(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withString(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVal(value: java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

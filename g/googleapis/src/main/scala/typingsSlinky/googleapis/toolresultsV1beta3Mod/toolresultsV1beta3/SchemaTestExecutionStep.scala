@@ -44,65 +44,18 @@ trait SchemaTestExecutionStep extends js.Object {
 
 object SchemaTestExecutionStep {
   @scala.inline
-  def apply(): SchemaTestExecutionStep = {
+  def apply(
+    testIssues: js.Array[SchemaTestIssue] = null,
+    testSuiteOverviews: js.Array[SchemaTestSuiteOverview] = null,
+    testTiming: SchemaTestTiming = null,
+    toolExecution: SchemaToolExecution = null
+  ): SchemaTestExecutionStep = {
     val __obj = js.Dynamic.literal()
+    if (testIssues != null) __obj.updateDynamic("testIssues")(testIssues.asInstanceOf[js.Any])
+    if (testSuiteOverviews != null) __obj.updateDynamic("testSuiteOverviews")(testSuiteOverviews.asInstanceOf[js.Any])
+    if (testTiming != null) __obj.updateDynamic("testTiming")(testTiming.asInstanceOf[js.Any])
+    if (toolExecution != null) __obj.updateDynamic("toolExecution")(toolExecution.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestExecutionStep]
   }
-  @scala.inline
-  implicit class SchemaTestExecutionStepOps[Self <: SchemaTestExecutionStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTestIssues(value: js.Array[SchemaTestIssue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testIssues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestIssues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testIssues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestSuiteOverviews(value: js.Array[SchemaTestSuiteOverview]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSuiteOverviews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestSuiteOverviews: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSuiteOverviews")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestTiming(value: SchemaTestTiming): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTiming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestTiming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTiming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolExecution(value: SchemaToolExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolExecution")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolExecution: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolExecution")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.braintree.mod
 
+import typingsSlinky.braintree.anon.CustomerId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,18 +18,51 @@ trait WebhookNotification extends js.Object
 
 object WebhookNotification {
   @scala.inline
-  implicit def apply(value: AccountUpdaterNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def AccountUpdaterNotification(
+    accountUpdaterDailyReport: AccountUpdaterDailyReport,
+    kind: AccountUpdaterNotificationKind,
+    timestamp: js.Date
+  ): WebhookNotification = {
+    val __obj = js.Dynamic.literal(accountUpdaterDailyReport = accountUpdaterDailyReport.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
   @scala.inline
-  implicit def apply(value: DisputeNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def SubscriptionNotification(kind: SubscriptionNotificationKind, subscription: Subscription, timestamp: js.Date): WebhookNotification = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], subscription = subscription.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
   @scala.inline
-  implicit def apply(value: PaymentMethodNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def PaymentMethodNotification(kind: PaymentMethodNotificationKind, revokedPaymentMethodMetadata: CustomerId, timestamp: js.Date): WebhookNotification = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], revokedPaymentMethodMetadata = revokedPaymentMethodMetadata.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
   @scala.inline
-  implicit def apply(value: SubMerchantAccountApprovedNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def TransactionNotification(kind: TransactionNotificationKind, timestamp: js.Date, transaction: Transaction): WebhookNotification = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], transaction = transaction.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
   @scala.inline
-  implicit def apply(value: SubMerchantAccountDeclinedNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def DisputeNotification(dispute: Dispute, kind: DisputeNotificationKind, timestamp: js.Date): WebhookNotification = {
+    val __obj = js.Dynamic.literal(dispute = dispute.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
   @scala.inline
-  implicit def apply(value: SubscriptionNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def SubMerchantAccountDeclinedNotification(
+    kind: SubMerchantAccountDeclinedNotificationKind,
+    merchantAccount: MerchantAccount,
+    timestamp: js.Date
+  ): WebhookNotification = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], merchantAccount = merchantAccount.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
   @scala.inline
-  implicit def apply(value: TransactionNotification): WebhookNotification = value.asInstanceOf[WebhookNotification]
+  def SubMerchantAccountApprovedNotification(
+    kind: SubMerchantAccountApprovedNotificationKind,
+    merchantAccount: MerchantAccount,
+    timestamp: js.Date
+  ): WebhookNotification = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], merchantAccount = merchantAccount.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookNotification]
+  }
 }
 

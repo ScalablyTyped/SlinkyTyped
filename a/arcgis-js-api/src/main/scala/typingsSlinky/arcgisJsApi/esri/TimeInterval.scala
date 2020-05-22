@@ -14,7 +14,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeInterval extends JSONSupport {
   /**
     * Temporal units.
@@ -23,7 +22,7 @@ trait TimeInterval extends JSONSupport {
     *
     * @default milliseconds
     */
-  var unit: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries = js.native
+  var unit: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries
   /**
     * The numerical value of the time extent.
     *
@@ -31,7 +30,7 @@ trait TimeInterval extends JSONSupport {
     *
     * @default 0
     */
-  var value: Double = js.native
+  var value: Double
 }
 
 object TimeInterval {
@@ -44,27 +43,5 @@ object TimeInterval {
     val __obj = js.Dynamic.literal(toJSON = js.Any.fromFunction0(toJSON), unit = unit.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeInterval]
   }
-  @scala.inline
-  implicit class TimeIntervalOps[Self <: TimeInterval] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnit(
-      value: milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

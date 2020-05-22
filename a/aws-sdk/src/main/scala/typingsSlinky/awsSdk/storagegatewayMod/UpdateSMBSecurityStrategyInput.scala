@@ -19,25 +19,5 @@ object UpdateSMBSecurityStrategyInput {
     val __obj = js.Dynamic.literal(GatewayARN = GatewayARN.asInstanceOf[js.Any], SMBSecurityStrategy = SMBSecurityStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSMBSecurityStrategyInput]
   }
-  @scala.inline
-  implicit class UpdateSMBSecurityStrategyInputOps[Self <: UpdateSMBSecurityStrategyInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGatewayARN(value: GatewayARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSMBSecurityStrategy(value: SMBSecurityStrategy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SMBSecurityStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -14,5 +14,7 @@ class Image protected ()
     * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.Image
     */
   def this(url: String) = this()
+  /* CompleteClass */
+  override var url: String = js.native
 }
 

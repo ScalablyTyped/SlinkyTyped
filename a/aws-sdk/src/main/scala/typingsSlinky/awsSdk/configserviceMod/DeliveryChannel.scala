@@ -30,77 +30,20 @@ trait DeliveryChannel extends js.Object {
 
 object DeliveryChannel {
   @scala.inline
-  def apply(): DeliveryChannel = {
+  def apply(
+    configSnapshotDeliveryProperties: ConfigSnapshotDeliveryProperties = null,
+    name: ChannelName = null,
+    s3BucketName: String = null,
+    s3KeyPrefix: String = null,
+    snsTopicARN: String = null
+  ): DeliveryChannel = {
     val __obj = js.Dynamic.literal()
+    if (configSnapshotDeliveryProperties != null) __obj.updateDynamic("configSnapshotDeliveryProperties")(configSnapshotDeliveryProperties.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (s3BucketName != null) __obj.updateDynamic("s3BucketName")(s3BucketName.asInstanceOf[js.Any])
+    if (s3KeyPrefix != null) __obj.updateDynamic("s3KeyPrefix")(s3KeyPrefix.asInstanceOf[js.Any])
+    if (snsTopicARN != null) __obj.updateDynamic("snsTopicARN")(snsTopicARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeliveryChannel]
   }
-  @scala.inline
-  implicit class DeliveryChannelOps[Self <: DeliveryChannel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigSnapshotDeliveryProperties(value: ConfigSnapshotDeliveryProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configSnapshotDeliveryProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigSnapshotDeliveryProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configSnapshotDeliveryProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ChannelName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3BucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3BucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3KeyPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3KeyPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3KeyPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3KeyPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnsTopicARN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsTopicARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnsTopicARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snsTopicARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

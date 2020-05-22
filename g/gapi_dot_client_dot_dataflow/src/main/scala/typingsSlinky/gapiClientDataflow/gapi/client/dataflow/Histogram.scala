@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Histogram extends js.Object {
   /**
     * Counts of values in each bucket. For efficiency, prefix and trailing
@@ -12,52 +11,22 @@ trait Histogram extends js.Object {
     * values of an unsigned long, with ULLONG_MAX falling into the 59th bucket
     * with range [1e19, 2e19).
     */
-  var bucketCounts: js.UndefOr[js.Array[String]] = js.native
+  var bucketCounts: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Starting index of first stored bucket. The non-inclusive upper-bound of
     * the ith bucket is given by:
     * pow(10,(i-first_bucket_offset)/3) &#42; (1,2,5)[(i-first_bucket_offset)%3]
     */
-  var firstBucketOffset: js.UndefOr[Double] = js.native
+  var firstBucketOffset: js.UndefOr[Double] = js.undefined
 }
 
 object Histogram {
   @scala.inline
-  def apply(): Histogram = {
+  def apply(bucketCounts: js.Array[String] = null, firstBucketOffset: js.UndefOr[Double] = js.undefined): Histogram = {
     val __obj = js.Dynamic.literal()
+    if (bucketCounts != null) __obj.updateDynamic("bucketCounts")(bucketCounts.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstBucketOffset)) __obj.updateDynamic("firstBucketOffset")(firstBucketOffset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Histogram]
   }
-  @scala.inline
-  implicit class HistogramOps[Self <: Histogram] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketCounts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketCounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketCounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketCounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstBucketOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBucketOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstBucketOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBucketOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

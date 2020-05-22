@@ -11,5 +11,6 @@ package object mod {
     /* definition */ js.Object, 
     scala.Unit
   ]
+  type Helpers = java.lang.String | (org.scalablytyped.runtime.StringDictionary[js.Function1[/* repeated */ js.Any, js.Any]])
   type Recipe = typingsSlinky.jsreportCore.jsreportCoreStrings.html
 }

@@ -5,45 +5,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetConnectedBluetoothDevicesOptions
   extends BaseOptions[js.Any, js.Any] {
-  var services: js.UndefOr[js.Array[String]] = js.native
+  var services: js.UndefOr[js.Array[String]] = js.undefined
   @JSName("success")
-  def success_MGetConnectedBluetoothDevicesOptions(res: devicesArrayBluetoothDevi): Unit = js.native
+  def success_MGetConnectedBluetoothDevicesOptions(res: devicesArrayBluetoothDevi): Unit
 }
 
 object GetConnectedBluetoothDevicesOptions {
   @scala.inline
-  def apply(success: devicesArrayBluetoothDevi => Unit): GetConnectedBluetoothDevicesOptions = {
+  def apply(
+    success: devicesArrayBluetoothDevi => Unit,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    services: js.Array[String] = null
+  ): GetConnectedBluetoothDevicesOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (services != null) __obj.updateDynamic("services")(services.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConnectedBluetoothDevicesOptions]
   }
-  @scala.inline
-  implicit class GetConnectedBluetoothDevicesOptionsOps[Self <: GetConnectedBluetoothDevicesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: devicesArrayBluetoothDevi => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

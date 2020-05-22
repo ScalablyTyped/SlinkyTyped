@@ -1,6 +1,5 @@
 package typingsSlinky.lineColumn.mod
 
-import typingsSlinky.lineColumn.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +16,14 @@ trait LineColumnObject extends js.Object
 
 object LineColumnObject {
   @scala.inline
-  implicit def apply(value: Column): LineColumnObject = value.asInstanceOf[LineColumnObject]
+  def LineColumnInfo(col: Double, line: Double): LineColumnObject = {
+    val __obj = js.Dynamic.literal(col = col.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LineColumnObject]
+  }
   @scala.inline
-  implicit def apply(value: LineColumnInfo): LineColumnObject = value.asInstanceOf[LineColumnObject]
+  def Column(column: Double, line: Double): LineColumnObject = {
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LineColumnObject]
+  }
 }
 

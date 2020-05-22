@@ -18,35 +18,10 @@ trait PutBucketLifecycleConfigurationRequest extends js.Object {
 
 object PutBucketLifecycleConfigurationRequest {
   @scala.inline
-  def apply(Bucket: BucketName): PutBucketLifecycleConfigurationRequest = {
+  def apply(Bucket: BucketName, LifecycleConfiguration: BucketLifecycleConfiguration = null): PutBucketLifecycleConfigurationRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
+    if (LifecycleConfiguration != null) __obj.updateDynamic("LifecycleConfiguration")(LifecycleConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutBucketLifecycleConfigurationRequest]
   }
-  @scala.inline
-  implicit class PutBucketLifecycleConfigurationRequestOps[Self <: PutBucketLifecycleConfigurationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: BucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLifecycleConfiguration(value: BucketLifecycleConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycleConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

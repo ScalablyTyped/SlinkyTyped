@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PercentComplete[T /* <: SlickData */] extends Editor[T]
 
 object PercentComplete {

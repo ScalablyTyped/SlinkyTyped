@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait BreakOrContinueStatement extends js.Object
 
-object BreakOrContinueStatement {
-  @scala.inline
-  implicit def apply(value: BreakStatement): BreakOrContinueStatement = value.asInstanceOf[BreakOrContinueStatement]
-  @scala.inline
-  implicit def apply(value: ContinueStatement): BreakOrContinueStatement = value.asInstanceOf[BreakOrContinueStatement]
-}
-

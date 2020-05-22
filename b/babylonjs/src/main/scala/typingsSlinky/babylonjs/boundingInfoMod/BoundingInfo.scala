@@ -63,6 +63,21 @@ class BoundingInfo protected () extends ICullable {
     * @returns if the point intersects
     */
   def intersectsPoint(point: DeepImmutable[Vector3]): Boolean = js.native
+  /**
+    * Checks if a cullable object (mesh...) is in the camera frustum
+    * Unlike isInFrustum this cheks the full bounding box
+    * @param frustumPlanes Camera near/planes
+    * @returns true if the object is in frustum otherwise false
+    */
+  /* CompleteClass */
+  override def isCompletelyInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
+  /**
+    * Checks if the object or part of the object is in the frustum
+    * @param frustumPlanes Camera near/planes
+    * @returns true if the object is in frustum otherwise false
+    */
+  /* CompleteClass */
+  override def isInFrustum(frustumPlanes: js.Array[Plane]): Boolean = js.native
   def isInFrustum(frustumPlanes: js.Array[DeepImmutable[Plane]], strategy: Double): Boolean = js.native
   /**
     * If the info is locked and won't be updated to avoid perf overhead

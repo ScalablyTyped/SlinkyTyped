@@ -12,28 +12,27 @@ import scala.scalajs.js.annotation._
   * @see XTreeControl.addTreeExpansionListener
   * @see XTreeControl.removeTreeExpansionListener
   */
-@js.native
 trait XTreeExpansionListener extends XEventListener {
   /**
     * Invoked when a node with children on demand is about to be expanded.
     *
     * This event is invoked before the {@link treeExpanding()} event.
     */
-  def requestChildNodes(Event: TreeExpansionEvent): Unit = js.native
+  def requestChildNodes(Event: TreeExpansionEvent): Unit
   /** Called whenever a node in the tree has been successfully collapsed. */
-  def treeCollapsed(Event: TreeExpansionEvent): Unit = js.native
+  def treeCollapsed(Event: TreeExpansionEvent): Unit
   /**
     * Invoked whenever a node in the tree is about to be collapsed.
     * @throws ExpandVetoException to notify the calling {@link XTreeControl} that collapsing {@link TreeExpansionEvent.Node} should fail.
     */
-  def treeCollapsing(Event: TreeExpansionEvent): Unit = js.native
+  def treeCollapsing(Event: TreeExpansionEvent): Unit
   /** Called whenever a node in the tree has been successfully expanded. */
-  def treeExpanded(Event: TreeExpansionEvent): Unit = js.native
+  def treeExpanded(Event: TreeExpansionEvent): Unit
   /**
     * Invoked whenever a node in the tree is about to be expanded.
     * @throws ExpandVetoException to notify the calling {@link XTreeControl} that expanding {@link TreeExpansionEvent.Node} should fail.
     */
-  def treeExpanding(Event: TreeExpansionEvent): Unit = js.native
+  def treeExpanding(Event: TreeExpansionEvent): Unit
 }
 
 object XTreeExpansionListener {
@@ -52,43 +51,5 @@ object XTreeExpansionListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), requestChildNodes = js.Any.fromFunction1(requestChildNodes), treeCollapsed = js.Any.fromFunction1(treeCollapsed), treeCollapsing = js.Any.fromFunction1(treeCollapsing), treeExpanded = js.Any.fromFunction1(treeExpanded), treeExpanding = js.Any.fromFunction1(treeExpanding))
     __obj.asInstanceOf[XTreeExpansionListener]
   }
-  @scala.inline
-  implicit class XTreeExpansionListenerOps[Self <: XTreeExpansionListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestChildNodes(value: TreeExpansionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestChildNodes")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTreeCollapsed(value: TreeExpansionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCollapsed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTreeCollapsing(value: TreeExpansionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCollapsing")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTreeExpanded(value: TreeExpansionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeExpanded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTreeExpanding(value: TreeExpansionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeExpanding")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

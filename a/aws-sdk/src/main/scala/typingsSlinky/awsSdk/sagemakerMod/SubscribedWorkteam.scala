@@ -30,71 +30,19 @@ trait SubscribedWorkteam extends js.Object {
 
 object SubscribedWorkteam {
   @scala.inline
-  def apply(WorkteamArn: WorkteamArn): SubscribedWorkteam = {
+  def apply(
+    WorkteamArn: WorkteamArn,
+    ListingId: String = null,
+    MarketplaceDescription: String200 = null,
+    MarketplaceTitle: String200 = null,
+    SellerName: String = null
+  ): SubscribedWorkteam = {
     val __obj = js.Dynamic.literal(WorkteamArn = WorkteamArn.asInstanceOf[js.Any])
+    if (ListingId != null) __obj.updateDynamic("ListingId")(ListingId.asInstanceOf[js.Any])
+    if (MarketplaceDescription != null) __obj.updateDynamic("MarketplaceDescription")(MarketplaceDescription.asInstanceOf[js.Any])
+    if (MarketplaceTitle != null) __obj.updateDynamic("MarketplaceTitle")(MarketplaceTitle.asInstanceOf[js.Any])
+    if (SellerName != null) __obj.updateDynamic("SellerName")(SellerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscribedWorkteam]
   }
-  @scala.inline
-  implicit class SubscribedWorkteamOps[Self <: SubscribedWorkteam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWorkteamArn(value: WorkteamArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkteamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withListingId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ListingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarketplaceDescription(value: String200): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarketplaceDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarketplaceDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarketplaceDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarketplaceTitle(value: String200): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarketplaceTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarketplaceTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MarketplaceTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSellerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SellerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSellerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SellerName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

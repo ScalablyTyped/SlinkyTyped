@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPointer[T] extends js.Object {
   /**
     * Reference of the value.
     */
-  var value: T = js.native
+  var value: T
 }
 
 @JSImport("tstl/functional/IPointer", "IPointer")

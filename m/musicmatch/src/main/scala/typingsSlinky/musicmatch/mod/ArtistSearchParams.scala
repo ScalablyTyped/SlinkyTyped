@@ -4,62 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ArtistSearchParams extends Pageable {
-  var f_artist_id: js.UndefOr[Double] = js.native
-  var f_artist_mbid: js.UndefOr[Double] = js.native
-  var q_artist: js.UndefOr[String] = js.native
+  var f_artist_id: js.UndefOr[Double] = js.undefined
+  var f_artist_mbid: js.UndefOr[Double] = js.undefined
+  var q_artist: js.UndefOr[String] = js.undefined
 }
 
 object ArtistSearchParams {
   @scala.inline
-  def apply(): ArtistSearchParams = {
+  def apply(
+    f_artist_id: js.UndefOr[Double] = js.undefined,
+    f_artist_mbid: js.UndefOr[Double] = js.undefined,
+    page: js.UndefOr[Double] = js.undefined,
+    page_size: js.UndefOr[Double] = js.undefined,
+    q_artist: String = null
+  ): ArtistSearchParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(f_artist_id)) __obj.updateDynamic("f_artist_id")(f_artist_id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(f_artist_mbid)) __obj.updateDynamic("f_artist_mbid")(f_artist_mbid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page_size)) __obj.updateDynamic("page_size")(page_size.get.asInstanceOf[js.Any])
+    if (q_artist != null) __obj.updateDynamic("q_artist")(q_artist.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArtistSearchParams]
   }
-  @scala.inline
-  implicit class ArtistSearchParamsOps[Self <: ArtistSearchParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withF_artist_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f_artist_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutF_artist_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f_artist_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withF_artist_mbid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f_artist_mbid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutF_artist_mbid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("f_artist_mbid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQ_artist(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q_artist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQ_artist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("q_artist")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

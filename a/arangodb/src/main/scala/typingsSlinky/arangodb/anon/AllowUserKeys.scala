@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AllowUserKeys extends js.Object {
-  var allowUserKeys: js.UndefOr[Boolean] = js.native
-  var increment: js.UndefOr[Double] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[KeyGeneratorType] = js.native
+  var allowUserKeys: js.UndefOr[Boolean] = js.undefined
+  var increment: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[KeyGeneratorType] = js.undefined
 }
 
 object AllowUserKeys {
   @scala.inline
-  def apply(): AllowUserKeys = {
+  def apply(
+    allowUserKeys: js.UndefOr[Boolean] = js.undefined,
+    increment: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    `type`: KeyGeneratorType = null
+  ): AllowUserKeys = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowUserKeys)) __obj.updateDynamic("allowUserKeys")(allowUserKeys.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(increment)) __obj.updateDynamic("increment")(increment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllowUserKeys]
   }
-  @scala.inline
-  implicit class AllowUserKeysOps[Self <: AllowUserKeys] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowUserKeys(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUserKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowUserKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowUserKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncrement(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncrement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: KeyGeneratorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

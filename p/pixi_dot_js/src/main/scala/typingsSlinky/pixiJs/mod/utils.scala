@@ -1,5 +1,6 @@
 package typingsSlinky.pixiJs.mod
 
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.pixiJs.PIXI.utils.DecomposedDataUri
 import typingsSlinky.pixiJs.anon.Device
@@ -40,6 +41,48 @@ object utils extends js.Object {
     extends typingsSlinky.pixiJs.PIXI.utils.CanvasRenderTarget {
     def this(width: Double, height: Double) = this()
     def this(width: Double, height: Double, resolution: Double) = this()
+    /**
+      * The Canvas object that belongs to this CanvasRenderTarget.
+      *
+      * @member {HTMLCanvasElement} PIXI.utils.CanvasRenderTarget#canvas
+      */
+    /* CompleteClass */
+    override var canvas: HTMLCanvasElement = js.native
+    /**
+      * A CanvasRenderingContext2D object representing a two-dimensional rendering context.
+      *
+      * @member {CanvasRenderingContext2D} PIXI.utils.CanvasRenderTarget#context
+      */
+    /* CompleteClass */
+    override var context: CanvasRenderingContext2D = js.native
+    /**
+      * The height of the canvas buffer in pixels.
+      *
+      * @member {number}
+      */
+    /* CompleteClass */
+    override var height: Double = js.native
+    /**
+      * The width of the canvas buffer in pixels.
+      *
+      * @member {number}
+      */
+    /* CompleteClass */
+    override var width: Double = js.native
+    /**
+      * Destroys this canvas.
+      *
+      */
+    /* CompleteClass */
+    override def destroy(): Unit = js.native
+    /**
+      * Resizes the canvas to the specified width and height.
+      *
+      * @param {number} width - the new width of the canvas
+      * @param {number} height - the new height of the canvas
+      */
+    /* CompleteClass */
+    override def resize(width: Double, height: Double): Unit = js.native
   }
   
   /**

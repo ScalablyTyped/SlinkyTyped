@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait GraphQLLeafType extends js.Object
 
-object GraphQLLeafType {
-  @scala.inline
-  implicit def apply(value: GraphQLEnumType): GraphQLLeafType = value.asInstanceOf[GraphQLLeafType]
-  @scala.inline
-  implicit def apply(value: GraphQLScalarType): GraphQLLeafType = value.asInstanceOf[GraphQLLeafType]
-}
-

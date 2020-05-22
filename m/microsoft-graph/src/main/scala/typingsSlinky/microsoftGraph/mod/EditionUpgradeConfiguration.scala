@@ -4,84 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditionUpgradeConfiguration extends DeviceConfiguration {
   // Edition Upgrade License File Content.
-  var license: js.UndefOr[String] = js.native
+  var license: js.UndefOr[String] = js.undefined
   // Edition Upgrade License Type. Possible values are: productKey, licenseFile.
-  var licenseType: js.UndefOr[EditionUpgradeLicenseType] = js.native
+  var licenseType: js.UndefOr[EditionUpgradeLicenseType] = js.undefined
   // Edition Upgrade Product Key.
-  var productKey: js.UndefOr[String] = js.native
+  var productKey: js.UndefOr[String] = js.undefined
   /**
     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education,
     * windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional,
     * windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN,
     * windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
     */
-  var targetEdition: js.UndefOr[Windows10EditionType] = js.native
+  var targetEdition: js.UndefOr[Windows10EditionType] = js.undefined
 }
 
 object EditionUpgradeConfiguration {
   @scala.inline
-  def apply(): EditionUpgradeConfiguration = {
+  def apply(
+    assignments: js.Array[DeviceConfigurationAssignment] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
+    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
+    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
+    displayName: String = null,
+    id: String = null,
+    lastModifiedDateTime: String = null,
+    license: String = null,
+    licenseType: EditionUpgradeLicenseType = null,
+    productKey: String = null,
+    targetEdition: Windows10EditionType = null,
+    userStatusOverview: DeviceConfigurationUserOverview = null,
+    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): EditionUpgradeConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
+    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
+    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (license != null) __obj.updateDynamic("license")(license.asInstanceOf[js.Any])
+    if (licenseType != null) __obj.updateDynamic("licenseType")(licenseType.asInstanceOf[js.Any])
+    if (productKey != null) __obj.updateDynamic("productKey")(productKey.asInstanceOf[js.Any])
+    if (targetEdition != null) __obj.updateDynamic("targetEdition")(targetEdition.asInstanceOf[js.Any])
+    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
+    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditionUpgradeConfiguration]
   }
-  @scala.inline
-  implicit class EditionUpgradeConfigurationOps[Self <: EditionUpgradeConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLicense(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseType(value: EditionUpgradeLicenseType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetEdition(value: Windows10EditionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetEdition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetEdition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetEdition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

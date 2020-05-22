@@ -14,29 +14,10 @@ trait StopRunResult extends js.Object {
 
 object StopRunResult {
   @scala.inline
-  def apply(): StopRunResult = {
+  def apply(run: Run = null): StopRunResult = {
     val __obj = js.Dynamic.literal()
+    if (run != null) __obj.updateDynamic("run")(run.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopRunResult]
   }
-  @scala.inline
-  implicit class StopRunResultOps[Self <: StopRunResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRun(value: Run): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

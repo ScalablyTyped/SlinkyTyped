@@ -37,7 +37,7 @@ import scala.scalajs.js.annotation._
 trait ShapeLineFormat extends ClientObject {
   /**
     *
-    * Represents the line color in HTML color format, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
+    * Represents the line color in HTML color format, of the form #RRGGBB (e.g., "FFA500") or as a named HTML color (e.g., "orange").
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -68,7 +68,7 @@ trait ShapeLineFormat extends ClientObject {
   var transparency: Double = js.native
   /**
     *
-    * Represents whether or not the line formatting of a shape element is visible. Returns null when the shape has inconsistent visibilities.
+    * Specifies if the line formatting of a shape element is visible. Returns null when the shape has inconsistent visibilities.
     *
     * [Api set: ExcelApi 1.9]
     */

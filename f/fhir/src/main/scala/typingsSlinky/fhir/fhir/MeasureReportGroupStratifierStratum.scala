@@ -7,97 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * Stratum results, one for each unique value in the stratifier
   */
-@js.native
 trait MeasureReportGroupStratifierStratum extends BackboneElement {
   /**
     * Contains extended information for property 'measureScore'.
     */
-  var _measureScore: js.UndefOr[Element] = js.native
+  var _measureScore: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'value'.
     */
-  var _value: js.UndefOr[Element] = js.native
+  var _value: js.UndefOr[Element] = js.undefined
   /**
     * What score this stratum achieved
     */
-  var measureScore: js.UndefOr[decimal] = js.native
+  var measureScore: js.UndefOr[decimal] = js.undefined
   /**
     * Population results in this stratum
     */
-  var population: js.UndefOr[js.Array[MeasureReportGroupStratifierStratumPopulation]] = js.native
+  var population: js.UndefOr[js.Array[MeasureReportGroupStratifierStratumPopulation]] = js.undefined
   /**
     * The stratum value, e.g. male
     */
-  var value: String = js.native
+  var value: String
 }
 
 object MeasureReportGroupStratifierStratum {
   @scala.inline
-  def apply(value: String): MeasureReportGroupStratifierStratum = {
+  def apply(
+    value: String,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _measureScore: Element = null,
+    _value: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    measureScore: js.UndefOr[decimal] = js.undefined,
+    modifierExtension: js.Array[Extension] = null,
+    population: js.Array[MeasureReportGroupStratifierStratumPopulation] = null
+  ): MeasureReportGroupStratifierStratum = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_measureScore != null) __obj.updateDynamic("_measureScore")(_measureScore.asInstanceOf[js.Any])
+    if (_value != null) __obj.updateDynamic("_value")(_value.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(measureScore)) __obj.updateDynamic("measureScore")(measureScore.get.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (population != null) __obj.updateDynamic("population")(population.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeasureReportGroupStratifierStratum]
   }
-  @scala.inline
-  implicit class MeasureReportGroupStratifierStratumOps[Self <: MeasureReportGroupStratifierStratum] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_measureScore(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_measureScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_measureScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_measureScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_value(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_value: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeasureScore(value: decimal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureScore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeasureScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measureScore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopulation(value: js.Array[MeasureReportGroupStratifierStratumPopulation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("population")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopulation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("population")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

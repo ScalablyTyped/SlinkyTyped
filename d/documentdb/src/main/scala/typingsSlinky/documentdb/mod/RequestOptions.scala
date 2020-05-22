@@ -5,23 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestOptions extends js.Object {
   /** Conditions Associated with the request. */
-  var accessCondition: js.UndefOr[Condition] = js.native
+  var accessCondition: js.UndefOr[Condition] = js.undefined
   /** Consistency level required by the client. */
-  var consistencyLevel: js.UndefOr[String] = js.native
+  var consistencyLevel: js.UndefOr[String] = js.undefined
   /**
     * Allow execution across multiple partitions
     *
     * If the collection is partitioned, this must be set to True unless the query filters against a single partition key
     * or if the collection has only a single partition.
     */
-  var enableCrossPartitionQuery: js.UndefOr[Boolean] = js.native
+  var enableCrossPartitionQuery: js.UndefOr[Boolean] = js.undefined
   /** Specifies indexing directives (index, do not index ..etc). */
-  var indexingDirective: js.UndefOr[String] = js.native
+  var indexingDirective: js.UndefOr[String] = js.undefined
   /** If true, parallelize cross-partition queries */
-  var maxDegreeOfParallelism: js.UndefOr[Boolean] = js.native
+  var maxDegreeOfParallelism: js.UndefOr[Boolean] = js.undefined
   /**
     * The user-specified throughput when creating document collections.
     *
@@ -32,196 +31,59 @@ trait RequestOptions extends js.Object {
     *
     * One of x-ms-offer-throughput or x-ms-offer-type must be specified. Both headers cannot be specified together.
     */
-  var offerThroughput: js.UndefOr[Double] = js.native
+  var offerThroughput: js.UndefOr[Double] = js.undefined
   /** Offer type when creating document collections. */
-  var offerType: js.UndefOr[String] = js.native
+  var offerType: js.UndefOr[String] = js.undefined
   /**
     * The partition key value for the requested document or attachment operation.
     *
     * Required for operations against documents and attachments when the collection definition includes a partition key definition.
     */
-  var partitionKey: js.UndefOr[String | js.Array[String]] = js.native
+  var partitionKey: js.UndefOr[String | js.Array[String]] = js.undefined
   /** If true, populate quota in response */
-  var populateQuotaInfo: js.UndefOr[Boolean] = js.native
+  var populateQuotaInfo: js.UndefOr[Boolean] = js.undefined
   /** Indicates what is the post trigger to be invoked after the operation. */
-  var postTriggerInclude: js.UndefOr[String] = js.native
+  var postTriggerInclude: js.UndefOr[String] = js.undefined
   /** Indicates what is the pre trigger to be invoked before the operation. */
-  var preTriggerInclude: js.UndefOr[String] = js.native
+  var preTriggerInclude: js.UndefOr[String] = js.undefined
   /** Expiry time (in seconds) for resource token associated with permission (applicable only for requests on permissions). */
-  var resourceTokenExpirySeconds: js.UndefOr[Double] = js.native
+  var resourceTokenExpirySeconds: js.UndefOr[Double] = js.undefined
   /** Token for use with Session consistency. */
-  var sessionToken: js.UndefOr[String] = js.native
+  var sessionToken: js.UndefOr[String] = js.undefined
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(): RequestOptions = {
+  def apply(
+    accessCondition: Condition = null,
+    consistencyLevel: String = null,
+    enableCrossPartitionQuery: js.UndefOr[Boolean] = js.undefined,
+    indexingDirective: String = null,
+    maxDegreeOfParallelism: js.UndefOr[Boolean] = js.undefined,
+    offerThroughput: js.UndefOr[Double] = js.undefined,
+    offerType: String = null,
+    partitionKey: String | js.Array[String] = null,
+    populateQuotaInfo: js.UndefOr[Boolean] = js.undefined,
+    postTriggerInclude: String = null,
+    preTriggerInclude: String = null,
+    resourceTokenExpirySeconds: js.UndefOr[Double] = js.undefined,
+    sessionToken: String = null
+  ): RequestOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessCondition != null) __obj.updateDynamic("accessCondition")(accessCondition.asInstanceOf[js.Any])
+    if (consistencyLevel != null) __obj.updateDynamic("consistencyLevel")(consistencyLevel.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableCrossPartitionQuery)) __obj.updateDynamic("enableCrossPartitionQuery")(enableCrossPartitionQuery.get.asInstanceOf[js.Any])
+    if (indexingDirective != null) __obj.updateDynamic("indexingDirective")(indexingDirective.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDegreeOfParallelism)) __obj.updateDynamic("maxDegreeOfParallelism")(maxDegreeOfParallelism.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offerThroughput)) __obj.updateDynamic("offerThroughput")(offerThroughput.get.asInstanceOf[js.Any])
+    if (offerType != null) __obj.updateDynamic("offerType")(offerType.asInstanceOf[js.Any])
+    if (partitionKey != null) __obj.updateDynamic("partitionKey")(partitionKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(populateQuotaInfo)) __obj.updateDynamic("populateQuotaInfo")(populateQuotaInfo.get.asInstanceOf[js.Any])
+    if (postTriggerInclude != null) __obj.updateDynamic("postTriggerInclude")(postTriggerInclude.asInstanceOf[js.Any])
+    if (preTriggerInclude != null) __obj.updateDynamic("preTriggerInclude")(preTriggerInclude.asInstanceOf[js.Any])
+    if (!js.isUndefined(resourceTokenExpirySeconds)) __obj.updateDynamic("resourceTokenExpirySeconds")(resourceTokenExpirySeconds.get.asInstanceOf[js.Any])
+    if (sessionToken != null) __obj.updateDynamic("sessionToken")(sessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
-  @scala.inline
-  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessCondition(value: Condition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessCondition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessCondition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConsistencyLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistencyLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsistencyLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consistencyLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableCrossPartitionQuery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCrossPartitionQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableCrossPartitionQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCrossPartitionQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndexingDirective(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexingDirective")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexingDirective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexingDirective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDegreeOfParallelism(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDegreeOfParallelism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDegreeOfParallelism: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDegreeOfParallelism")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferThroughput(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerThroughput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferThroughput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerThroughput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offerType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionKey(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopulateQuotaInfo(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populateQuotaInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopulateQuotaInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("populateQuotaInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostTriggerInclude(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postTriggerInclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostTriggerInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postTriggerInclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreTriggerInclude(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preTriggerInclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreTriggerInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preTriggerInclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTokenExpirySeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTokenExpirySeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTokenExpirySeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTokenExpirySeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSessionToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

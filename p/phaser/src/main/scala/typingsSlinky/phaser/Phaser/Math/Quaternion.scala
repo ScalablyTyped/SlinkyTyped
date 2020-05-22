@@ -111,9 +111,9 @@ trait Quaternion extends js.Object {
     */
   def rotateZ(rad: Double): Quaternion = js.native
   /**
-    * [description]
-    * @param a [description]
-    * @param b [description]
+    * Rotates this Quaternion based on the two given vectors.
+    * @param a The transform rotation vector.
+    * @param b The target rotation vector.
     */
   def rotationTo(a: Vector3, b: Vector3): Quaternion = js.native
   /**

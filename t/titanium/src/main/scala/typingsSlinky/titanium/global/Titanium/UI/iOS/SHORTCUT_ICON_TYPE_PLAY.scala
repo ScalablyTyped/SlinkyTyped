@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Number that represents the icon used for the application shortcut
-			 */
+  * Number that represents the icon used for the application shortcut
+  */
 @JSGlobal("Titanium.UI.iOS.SHORTCUT_ICON_TYPE_PLAY")
 @js.native
 object SHORTCUT_ICON_TYPE_PLAY extends TopLevel[Double]

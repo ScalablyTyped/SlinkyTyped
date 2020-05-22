@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabMathjax2.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jupyterlabMathjax2.mod.MathJaxTypesetter.IOptions
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.ILatexTypesetter
 import scala.scalajs.js
@@ -25,5 +26,19 @@ class MathJaxTypesetter_ protected () extends ILatexTypesetter {
     */
   var _onLoad: js.Any = js.native
   var _url: js.Any = js.native
+  /**
+    * Typeset a DOM element.
+    *
+    * @param element - the DOM element to typeset. The typesetting may
+    *   happen synchronously or asynchronously.
+    *
+    * #### Notes
+    * The application-wide rendermime object has a settable
+    * `latexTypesetter` property which is used wherever LaTeX
+    * typesetting is required. Extensions wishing to provide their
+    * own typesetter may replace that on the global `lab.rendermime`.
+    */
+  /* CompleteClass */
+  override def typeset(element: HTMLElement): Unit = js.native
 }
 

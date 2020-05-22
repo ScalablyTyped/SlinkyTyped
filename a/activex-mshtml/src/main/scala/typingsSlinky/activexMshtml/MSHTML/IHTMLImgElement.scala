@@ -4,39 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IHTMLImgElement extends js.Object {
   @JSName("MSHTML.IHTMLImgElement_typekey")
-  var MSHTMLDotIHTMLImgElement_typekey: IHTMLImgElement = js.native
-  var align: String = js.native
-  var alt: String = js.native
-  var border: js.Any = js.native
-  val complete: Boolean = js.native
-  var dynsrc: String = js.native
-  val fileCreatedDate: String = js.native
-  val fileModifiedDate: String = js.native
-  val fileSize: String = js.native
-  val fileUpdatedDate: String = js.native
-  var height: Double = js.native
-  val href: String = js.native
-  var hspace: Double = js.native
-  var isMap: Boolean = js.native
-  var loop: js.Any = js.native
-  var lowsrc: String = js.native
-  val mimeType: String = js.native
-  var name: String = js.native
-  val nameProp: String = js.native
-  var onabort: js.Any = js.native
-  var onerror: js.Any = js.native
-  var onload: js.Any = js.native
-  val protocol: String = js.native
-  val readyState: String = js.native
-  var src: String = js.native
-  var start: String = js.native
-  var useMap: String = js.native
-  var vrml: String = js.native
-  var vspace: Double = js.native
-  var width: Double = js.native
+  var MSHTMLDotIHTMLImgElement_typekey: IHTMLImgElement
+  var align: String
+  var alt: String
+  var border: js.Any
+  val complete: Boolean
+  var dynsrc: String
+  val fileCreatedDate: String
+  val fileModifiedDate: String
+  val fileSize: String
+  val fileUpdatedDate: String
+  var height: Double
+  val href: String
+  var hspace: Double
+  var isMap: Boolean
+  var loop: js.Any
+  var lowsrc: String
+  val mimeType: String
+  var name: String
+  val nameProp: String
+  var onabort: js.Any
+  var onerror: js.Any
+  var onload: js.Any
+  val protocol: String
+  val readyState: String
+  var src: String
+  var start: String
+  var useMap: String
+  var vrml: String
+  var vspace: Double
+  var width: Double
 }
 
 object IHTMLImgElement {
@@ -77,193 +76,5 @@ object IHTMLImgElement {
     __obj.updateDynamic("MSHTML.IHTMLImgElement_typekey")(MSHTMLDotIHTMLImgElement_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHTMLImgElement]
   }
-  @scala.inline
-  implicit class IHTMLImgElementOps[Self <: IHTMLImgElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMSHTMLDotIHTMLImgElement_typekey(value: IHTMLImgElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.IHTMLImgElement_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorder(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDynsrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynsrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileCreatedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileCreatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileModifiedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFileUpdatedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUpdatedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHref(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHspace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoop(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLowsrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowsrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMimeType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNameProp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameProp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnabort(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnerror(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnload(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadyState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readyState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUseMap(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVrml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vrml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVspace(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

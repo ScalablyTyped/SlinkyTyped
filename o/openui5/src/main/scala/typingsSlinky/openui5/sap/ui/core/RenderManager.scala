@@ -33,7 +33,7 @@ trait RenderManager extends Object {
     * not apply anymore this child must be cleaned up correctly (e.g deregistering eventhandlers, ...).The
     * following example shows how renderControl and cleanupControlWithoutRendering shouldbe used:render =
     * function(rm, ctrl){  //...  var aAggregatedControls = //...  for(var i=0;
-    * i<aAgrregatedControls.length; i++){  	if(//... some filter expression){       
+    * i<aAgrregatedControls.length; i++){      if(//... some filter expression){       
     * rm.renderControl(aAggregatedControls[i]);     }else{       
     * rm.cleanupControlWithoutRendering(aAggregatedControls[i]);     }  }  //...}Note:The method does not
     * remove DOM of the given control. The callee of this method has to take over theresponsibility to

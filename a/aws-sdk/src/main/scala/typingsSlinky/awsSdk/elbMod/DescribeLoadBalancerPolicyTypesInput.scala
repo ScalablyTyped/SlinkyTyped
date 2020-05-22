@@ -14,29 +14,10 @@ trait DescribeLoadBalancerPolicyTypesInput extends js.Object {
 
 object DescribeLoadBalancerPolicyTypesInput {
   @scala.inline
-  def apply(): DescribeLoadBalancerPolicyTypesInput = {
+  def apply(PolicyTypeNames: PolicyTypeNames = null): DescribeLoadBalancerPolicyTypesInput = {
     val __obj = js.Dynamic.literal()
+    if (PolicyTypeNames != null) __obj.updateDynamic("PolicyTypeNames")(PolicyTypeNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLoadBalancerPolicyTypesInput]
   }
-  @scala.inline
-  implicit class DescribeLoadBalancerPolicyTypesInputOps[Self <: DescribeLoadBalancerPolicyTypesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyTypeNames(value: PolicyTypeNames): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyTypeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyTypeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyTypeNames")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,119 +7,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NotifyOptions
   extends NotifyDefault
      with NotifyMethods {
-  var `class`: js.UndefOr[String] = js.native
-  var error: js.UndefOr[Icon] = js.native
-  var info: js.UndefOr[Icon] = js.native
+  var `class`: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[Icon] = js.undefined
+  var info: js.UndefOr[Icon] = js.undefined
    //You can override options for large notifications from here
-  var large: js.UndefOr[Width] = js.native
+  var large: js.UndefOr[Width] = js.undefined
     //You can override options for small notifications from here
-  var mini: js.UndefOr[ClassString] = js.native
+  var mini: js.UndefOr[ClassString] = js.undefined
      //Default options of different style notifications
-  var success: js.UndefOr[Icon] = js.native
-  var warning: js.UndefOr[Icon] = js.native
+  var success: js.UndefOr[Icon] = js.undefined
+  var warning: js.UndefOr[Icon] = js.undefined
 }
 
 object NotifyOptions {
   @scala.inline
-  def apply(): NotifyOptions = {
+  def apply(
+    `class`: String = null,
+    closable: js.UndefOr[Boolean] = js.undefined,
+    closeOnClick: js.UndefOr[Boolean] = js.undefined,
+    continueDelayOnInactiveTab: js.UndefOr[Boolean] = js.undefined,
+    delay: js.UndefOr[Double] = js.undefined,
+    delayIndicator: js.UndefOr[Boolean] = js.undefined,
+    error: Icon = null,
+    hideClass: String = null,
+    icon: js.UndefOr[Boolean] = js.undefined,
+    img: String = null,
+    info: Icon = null,
+    large: Width = null,
+    mini: ClassString = null,
+    msg: String = null,
+    onClick: js.Function = null,
+    onClickUrl: String = null,
+    position: String = null,
+    remove: () => _ = null,
+    showAfterPrevious: js.UndefOr[Boolean] = js.undefined,
+    showClass: String = null,
+    size: String = null,
+    sound: js.UndefOr[Boolean] = js.undefined,
+    soundExt: String = null,
+    soundPath: String = null,
+    success: Icon = null,
+    title: String | Boolean = null,
+    warning: Icon = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): NotifyOptions = {
     val __obj = js.Dynamic.literal()
+    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(continueDelayOnInactiveTab)) __obj.updateDynamic("continueDelayOnInactiveTab")(continueDelayOnInactiveTab.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(delayIndicator)) __obj.updateDynamic("delayIndicator")(delayIndicator.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (hideClass != null) __obj.updateDynamic("hideClass")(hideClass.asInstanceOf[js.Any])
+    if (!js.isUndefined(icon)) __obj.updateDynamic("icon")(icon.get.asInstanceOf[js.Any])
+    if (img != null) __obj.updateDynamic("img")(img.asInstanceOf[js.Any])
+    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
+    if (large != null) __obj.updateDynamic("large")(large.asInstanceOf[js.Any])
+    if (mini != null) __obj.updateDynamic("mini")(mini.asInstanceOf[js.Any])
+    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+    if (onClickUrl != null) __obj.updateDynamic("onClickUrl")(onClickUrl.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (remove != null) __obj.updateDynamic("remove")(js.Any.fromFunction0(remove))
+    if (!js.isUndefined(showAfterPrevious)) __obj.updateDynamic("showAfterPrevious")(showAfterPrevious.get.asInstanceOf[js.Any])
+    if (showClass != null) __obj.updateDynamic("showClass")(showClass.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(sound)) __obj.updateDynamic("sound")(sound.get.asInstanceOf[js.Any])
+    if (soundExt != null) __obj.updateDynamic("soundExt")(soundExt.asInstanceOf[js.Any])
+    if (soundPath != null) __obj.updateDynamic("soundPath")(soundPath.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotifyOptions]
   }
-  @scala.inline
-  implicit class NotifyOptionsOps[Self <: NotifyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLarge(value: Width): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLarge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("large")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMini(value: ClassString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mini")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMini: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mini")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarning(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColCountResponsible extends js.Object {
-  /** The count of columns for a large screen size. */
-  var lg: js.UndefOr[Double] = js.native
-  /** The count of columns for a middle-sized screen. */
-  var md: js.UndefOr[Double] = js.native
-  /** The count of columns for a small-sized screen. */
-  var sm: js.UndefOr[Double] = js.native
-  /** The count of columns for an extra small-sized screen. */
-  var xs: js.UndefOr[Double] = js.native
+  /** @name ColCountResponsible.lg */
+  var lg: js.UndefOr[Double] = js.undefined
+  /** @name ColCountResponsible.md */
+  var md: js.UndefOr[Double] = js.undefined
+  /** @name ColCountResponsible.sm */
+  var sm: js.UndefOr[Double] = js.undefined
+  /** @name ColCountResponsible.xs */
+  var xs: js.UndefOr[Double] = js.undefined
 }
 
 object ColCountResponsible {
   @scala.inline
-  def apply(): ColCountResponsible = {
+  def apply(
+    lg: js.UndefOr[Double] = js.undefined,
+    md: js.UndefOr[Double] = js.undefined,
+    sm: js.UndefOr[Double] = js.undefined,
+    xs: js.UndefOr[Double] = js.undefined
+  ): ColCountResponsible = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(lg)) __obj.updateDynamic("lg")(lg.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(md)) __obj.updateDynamic("md")(md.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sm)) __obj.updateDynamic("sm")(sm.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xs)) __obj.updateDynamic("xs")(xs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColCountResponsible]
   }
-  @scala.inline
-  implicit class ColCountResponsibleOps[Self <: ColCountResponsible] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLg(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMd(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("md")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSm(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@js.native
 trait ChangedEventDetail extends js.Object {
   /**
     *
@@ -26,28 +25,28 @@ trait ChangedEventDetail extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var valueAfter: js.Any = js.native
+  var valueAfter: js.Any
   /**
     *
     * Represents the value before changed. The data returned could be of type string, number, or a boolean. Cells that contain an error will return the error string.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var valueBefore: js.Any = js.native
+  var valueBefore: js.Any
   /**
     *
     * Represents the type of value after changed
     *
     * [Api set: ExcelApi 1.9]
     */
-  var valueTypeAfter: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue = js.native
+  var valueTypeAfter: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue
   /**
     *
     * Represents the type of value before changed
     *
     * [Api set: ExcelApi 1.9]
     */
-  var valueTypeBefore: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue = js.native
+  var valueTypeBefore: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue
 }
 
 object ChangedEventDetail {
@@ -61,37 +60,5 @@ object ChangedEventDetail {
     val __obj = js.Dynamic.literal(valueAfter = valueAfter.asInstanceOf[js.Any], valueBefore = valueBefore.asInstanceOf[js.Any], valueTypeAfter = valueTypeAfter.asInstanceOf[js.Any], valueTypeBefore = valueTypeBefore.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangedEventDetail]
   }
-  @scala.inline
-  implicit class ChangedEventDetailOps[Self <: ChangedEventDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValueAfter(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueBefore(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueTypeAfter(value: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTypeAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueTypeBefore(value: RangeValueType | Unknown_ | Empty | String | Integer | Double | Boolean | Error | RichValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueTypeBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

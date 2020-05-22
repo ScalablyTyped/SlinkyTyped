@@ -10,8 +10,7 @@ import scala.scalajs.js.annotation._
   * @author Jeongho Nam <http://samchon.org>
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.IEntity * / any */ @js.native
-trait Instance extends js.Object {
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.IEntity * / any */ trait Instance extends js.Object {
   /**
     * <p> A type, identifier of derived class. </p>
     *
@@ -21,45 +20,45 @@ trait Instance extends js.Object {
     *	<li> {@link Wrapper wrapper} </li>
     * <ul>
     */
-  def TYPE(): String = js.native
+  def TYPE(): String
   /**
     * Get height, length on the Y-axis in 3D.
     */
-  def getHeight(): Double = js.native
+  def getHeight(): Double
   /**
     * Get length, length on the Z-axis in 3D.
     */
-  def getLength(): Double = js.native
+  def getLength(): Double
   /**
     * Get name.
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Get (calculate) volume.
     *
     * @return width x height x length
     */
-  def getVolume(): Double = js.native
+  def getVolume(): Double
   /**
     * Get width, length on the X-axis in 3D.
     */
-  def getWidth(): Double = js.native
+  def getWidth(): Double
   /**
     * Set height, length on the Y-axis in 3D.
     */
-  def setHeight(`val`: Double): Unit = js.native
+  def setHeight(`val`: Double): Unit
   /**
     * Set length, length on the Z-axis in 3D.
     */
-  def setLength(`val`: Double): Unit = js.native
+  def setLength(`val`: Double): Unit
   /**
     * Set name.
     */
-  def setName(`val`: String): Unit = js.native
+  def setName(`val`: String): Unit
   /**
     * Set width, length on the X-axis in 3D.
     */
-  def setWidth(`val`: Double): Unit = js.native
+  def setWidth(`val`: Double): Unit
 }
 
 object Instance {
@@ -79,73 +78,5 @@ object Instance {
     val __obj = js.Dynamic.literal(TYPE = js.Any.fromFunction0(TYPE), getHeight = js.Any.fromFunction0(getHeight), getLength = js.Any.fromFunction0(getLength), getName = js.Any.fromFunction0(getName), getVolume = js.Any.fromFunction0(getVolume), getWidth = js.Any.fromFunction0(getWidth), setHeight = js.Any.fromFunction1(setHeight), setLength = js.Any.fromFunction1(setLength), setName = js.Any.fromFunction1(setName), setWidth = js.Any.fromFunction1(setWidth))
     __obj.asInstanceOf[Instance]
   }
-  @scala.inline
-  implicit class InstanceOps[Self <: Instance] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTYPE(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TYPE")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeight")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetVolume(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVolume")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetHeight(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeight")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLength(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLength")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetWidth(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setWidth")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

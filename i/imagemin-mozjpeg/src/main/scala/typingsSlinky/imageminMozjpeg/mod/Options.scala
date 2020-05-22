@@ -11,13 +11,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * Use arithmetic coding.
     * @default false
     */
-  var arithmetic: js.UndefOr[Boolean] = js.native
+  var arithmetic: js.UndefOr[Boolean] = js.undefined
   /**
     * Set DC scan optimization mode.
     *  0 One scan for all components
@@ -25,7 +24,7 @@ trait Options extends js.Object {
     *  2 Optimize between one scan for all components and one scan for 1st component plus one scan for remaining components
     * @default 1
     */
-  var dcScanOpt: js.UndefOr[Double] = js.native
+  var dcScanOpt: js.UndefOr[Double] = js.undefined
   /**
     * Set DCT method:
     * int Use integer DCT
@@ -33,33 +32,33 @@ trait Options extends js.Object {
     * float Use floating-point DCT
     * @default 'int'
     */
-  var dct: js.UndefOr[int | fast | float] = js.native
+  var dct: js.UndefOr[int | fast | float] = js.undefined
   /**
     * Disable progressive scan optimization.
     * @default false
     */
-  var fastCrush: js.UndefOr[Boolean] = js.native
+  var fastCrush: js.UndefOr[Boolean] = js.undefined
   /**
     * Set the maximum memory to use in kilobytes.
     */
-  var maxMemory: js.UndefOr[Double] = js.native
+  var maxMemory: js.UndefOr[Double] = js.undefined
   /**
     * Black-on-white deringing via overshoot.
     * @default true
     */
-  var overshoot: js.UndefOr[Boolean] = js.native
+  var overshoot: js.UndefOr[Boolean] = js.undefined
   /**
     * false creates baseline JPEG file.
     * @default true
     */
-  var progressive: js.UndefOr[Boolean] = js.native
+  var progressive: js.UndefOr[Boolean] = js.undefined
   /** Compression quality, in range 0 (worst) to 100 (perfect). */
-  var quality: js.UndefOr[Double] = js.native
+  var quality: js.UndefOr[Double] = js.undefined
   /**
     * Use 8-bit quantization table entries for baseline JPEG compatibility.
     * @default false
     */
-  var quantBaseline: js.UndefOr[Boolean] = js.native
+  var quantBaseline: js.UndefOr[Boolean] = js.undefined
   /**
     * Use predefined quantization table.
     * 0 JPEG Annex K
@@ -69,260 +68,83 @@ trait Options extends js.Object {
     * 4 Custom, tuned for PSNR-HVS
     * 5 Table from paper by Klein, Silverstein and Carney
     */
-  var quantTable: js.UndefOr[Double] = js.native
+  var quantTable: js.UndefOr[Double] = js.undefined
   /**
     * Revert to standard defaults instead of mozjpeg defaults.
     * @default false
     */
-  var revert: js.UndefOr[Boolean] = js.native
+  var revert: js.UndefOr[Boolean] = js.undefined
   /**
     * Set component sampling factors. Each item should be in the format HxV, for example 2x1.
     */
-  var sample: js.UndefOr[js.Array[String]] = js.native
+  var sample: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Set the strength of smooth dithered input. (1...100)
     */
-  var smooth: js.UndefOr[Double] = js.native
+  var smooth: js.UndefOr[Double] = js.undefined
   /**
     * Input file is Targa format (usually not needed).
     * @default false
     */
-  var targa: js.UndefOr[Boolean] = js.native
+  var targa: js.UndefOr[Boolean] = js.undefined
   /**
     * Trellis optimization.
     * @default true
     *
     */
-  var trellis: js.UndefOr[Boolean] = js.native
+  var trellis: js.UndefOr[Boolean] = js.undefined
   /**
     * Trellis optimization of DC coefficients.
     * @default true
     */
-  var trellisDC: js.UndefOr[Boolean] = js.native
+  var trellisDC: js.UndefOr[Boolean] = js.undefined
   /**
     * Set Trellis optimization method. Available methods: psnr, hvs-psnr, ssim, ms-ssim
     * @default 'hvs-psnr'
     */
-  var tune: js.UndefOr[psnr | `hvs-psnr` | ssim | `ms-ssim`] = js.native
+  var tune: js.UndefOr[psnr | `hvs-psnr` | ssim | `ms-ssim`] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    arithmetic: js.UndefOr[Boolean] = js.undefined,
+    dcScanOpt: js.UndefOr[Double] = js.undefined,
+    dct: int | fast | float = null,
+    fastCrush: js.UndefOr[Boolean] = js.undefined,
+    maxMemory: js.UndefOr[Double] = js.undefined,
+    overshoot: js.UndefOr[Boolean] = js.undefined,
+    progressive: js.UndefOr[Boolean] = js.undefined,
+    quality: js.UndefOr[Double] = js.undefined,
+    quantBaseline: js.UndefOr[Boolean] = js.undefined,
+    quantTable: js.UndefOr[Double] = js.undefined,
+    revert: js.UndefOr[Boolean] = js.undefined,
+    sample: js.Array[String] = null,
+    smooth: js.UndefOr[Double] = js.undefined,
+    targa: js.UndefOr[Boolean] = js.undefined,
+    trellis: js.UndefOr[Boolean] = js.undefined,
+    trellisDC: js.UndefOr[Boolean] = js.undefined,
+    tune: psnr | `hvs-psnr` | ssim | `ms-ssim` = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(arithmetic)) __obj.updateDynamic("arithmetic")(arithmetic.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dcScanOpt)) __obj.updateDynamic("dcScanOpt")(dcScanOpt.get.asInstanceOf[js.Any])
+    if (dct != null) __obj.updateDynamic("dct")(dct.asInstanceOf[js.Any])
+    if (!js.isUndefined(fastCrush)) __obj.updateDynamic("fastCrush")(fastCrush.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMemory)) __obj.updateDynamic("maxMemory")(maxMemory.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overshoot)) __obj.updateDynamic("overshoot")(overshoot.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressive)) __obj.updateDynamic("progressive")(progressive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quality)) __obj.updateDynamic("quality")(quality.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantBaseline)) __obj.updateDynamic("quantBaseline")(quantBaseline.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantTable)) __obj.updateDynamic("quantTable")(quantTable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(revert)) __obj.updateDynamic("revert")(revert.get.asInstanceOf[js.Any])
+    if (sample != null) __obj.updateDynamic("sample")(sample.asInstanceOf[js.Any])
+    if (!js.isUndefined(smooth)) __obj.updateDynamic("smooth")(smooth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(targa)) __obj.updateDynamic("targa")(targa.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trellis)) __obj.updateDynamic("trellis")(trellis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trellisDC)) __obj.updateDynamic("trellisDC")(trellisDC.get.asInstanceOf[js.Any])
+    if (tune != null) __obj.updateDynamic("tune")(tune.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArithmetic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arithmetic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArithmetic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arithmetic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDcScanOpt(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dcScanOpt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDcScanOpt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dcScanOpt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDct(value: int | fast | float): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFastCrush(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fastCrush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFastCrush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fastCrush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMemory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMemory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMemory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOvershoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOvershoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overshoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuality(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantBaseline(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantBaseline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantBaseline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantBaseline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantTable(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevert(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSample(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sample")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSample: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sample")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmooth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmooth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarga(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targa")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarga: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targa")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrellis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trellis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrellis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trellis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrellisDC(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trellisDC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrellisDC: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trellisDC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTune(value: psnr | `hvs-psnr` | ssim | `ms-ssim`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tune")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTune: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tune")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

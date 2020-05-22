@@ -9,65 +9,27 @@ import scala.scalajs.js.annotation._
 /**
   * a tree with snapshots that has a similar structure to test suites
   */
-@js.native
 trait SnapshotSuite extends js.Object {
   /** references to children suites, */
-  var children: StringDictionary[SnapshotSuite] = js.native
-  var dirty: js.UndefOr[Boolean] = js.native
+  var children: StringDictionary[SnapshotSuite]
+  var dirty: js.UndefOr[Boolean] = js.undefined
   /** snapshot lists for tests in the current snapshot */
-  var snapshots: StringDictionary[js.Array[Snapshot]] = js.native
-  var visited: js.UndefOr[Boolean] = js.native
+  var snapshots: StringDictionary[js.Array[Snapshot]]
+  var visited: js.UndefOr[Boolean] = js.undefined
 }
 
 object SnapshotSuite {
   @scala.inline
-  def apply(children: StringDictionary[SnapshotSuite], snapshots: StringDictionary[js.Array[Snapshot]]): SnapshotSuite = {
+  def apply(
+    children: StringDictionary[SnapshotSuite],
+    snapshots: StringDictionary[js.Array[Snapshot]],
+    dirty: js.UndefOr[Boolean] = js.undefined,
+    visited: js.UndefOr[Boolean] = js.undefined
+  ): SnapshotSuite = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], snapshots = snapshots.asInstanceOf[js.Any])
+    if (!js.isUndefined(dirty)) __obj.updateDynamic("dirty")(dirty.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visited)) __obj.updateDynamic("visited")(visited.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotSuite]
   }
-  @scala.inline
-  implicit class SnapshotSuiteOps[Self <: SnapshotSuite] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: StringDictionary[SnapshotSuite]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnapshots(value: StringDictionary[js.Array[Snapshot]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dirty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisited(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visited")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisited: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visited")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WebResponseErrorDetails
   extends typingsSlinky.chrome.chrome.webRequest.WebResponseCacheDetails {
   /** The error description. This string is not guaranteed to remain backwards compatible between releases. You must not parse and act based upon its content. */
-  var error: String = js.native
+  var error: String
 }
 
 object WebResponseErrorDetails {
@@ -25,25 +24,17 @@ object WebResponseErrorDetails {
     tabId: Double,
     timeStamp: Double,
     `type`: typingsSlinky.chrome.chrome.webRequest.ResourceType,
-    url: String
+    url: String,
+    initiator: String = null,
+    ip: String = null,
+    responseHeaders: js.Array[typingsSlinky.chrome.chrome.webRequest.HttpHeader] = null
   ): WebResponseErrorDetails = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], frameId = frameId.asInstanceOf[js.Any], fromCache = fromCache.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], parentFrameId = parentFrameId.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any], statusLine = statusLine.asInstanceOf[js.Any], tabId = tabId.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (initiator != null) __obj.updateDynamic("initiator")(initiator.asInstanceOf[js.Any])
+    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
+    if (responseHeaders != null) __obj.updateDynamic("responseHeaders")(responseHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebResponseErrorDetails]
   }
-  @scala.inline
-  implicit class WebResponseErrorDetailsOps[Self <: WebResponseErrorDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

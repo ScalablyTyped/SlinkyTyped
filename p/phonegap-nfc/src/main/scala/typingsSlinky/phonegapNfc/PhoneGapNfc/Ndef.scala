@@ -7,32 +7,31 @@ import scala.scalajs.js.annotation._
 /**
   * The Ndef object.
   */
-@js.native
 trait Ndef extends js.Object {
    // "Sp"
-  var RTD_ALTERNATIVE_CARRIER: js.Array[Double] = js.native
+  var RTD_ALTERNATIVE_CARRIER: js.Array[Double]
    // "ac"
-  var RTD_HANDOVER_CARRIER: js.Array[Double] = js.native
+  var RTD_HANDOVER_CARRIER: js.Array[Double]
    // "Hc"
-  var RTD_HANDOVER_REQUEST: js.Array[Double] = js.native
+  var RTD_HANDOVER_REQUEST: js.Array[Double]
    // "Hr"
-  var RTD_HANDOVER_SELECT: js.Array[Double] = js.native
+  var RTD_HANDOVER_SELECT: js.Array[Double]
    // "U"
-  var RTD_SMART_POSTER: js.Array[Double] = js.native
-  var RTD_TEXT: js.Array[Double] = js.native
+  var RTD_SMART_POSTER: js.Array[Double]
+  var RTD_TEXT: js.Array[Double]
    // "T"
-  var RTD_URI: js.Array[Double] = js.native
-  var TNF_ABSOLUTE_URI: Double = js.native
-  var TNF_EMPTY: Double = js.native
-  var TNF_EXTERNAL_TYPE: Double = js.native
-  var TNF_MIME_MEDIA: Double = js.native
-  var TNF_RESERVED: Double = js.native
-  var TNF_UNCHANGED: Double = js.native
-  var TNF_UNKNOWN: Double = js.native
-  var TNF_WELL_KNOWN: Double = js.native
-  var textHelper: TextHelper = js.native
+  var RTD_URI: js.Array[Double]
+  var TNF_ABSOLUTE_URI: Double
+  var TNF_EMPTY: Double
+  var TNF_EXTERNAL_TYPE: Double
+  var TNF_MIME_MEDIA: Double
+  var TNF_RESERVED: Double
+  var TNF_UNCHANGED: Double
+  var TNF_UNKNOWN: Double
+  var TNF_WELL_KNOWN: Double
+  var textHelper: TextHelper
    // "Hs"
-  var uriHelper: UriHelper = js.native
+  var uriHelper: UriHelper
   /**
     * Helper that creates a NdefRecord containing an absolute URI.
     *
@@ -58,14 +57,14 @@ trait Ndef extends js.Object {
     *
     * @return NdefRecord
     */
-  def absoluteUriRecord(uri: String, payload: js.Array[Double], id: js.Array[Double]): NdefRecord = js.native
+  def absoluteUriRecord(uri: String, payload: js.Array[Double], id: js.Array[Double]): NdefRecord
   /**
     * Helper that creates an Android Application Record (AAR).
     * http://developer.android.com/guide/topics/connectivity/nfc/nfc.html#aar
     * @param packageName android package name
     *
     */
-  def androidApplicationRecord(packageName: String): NdefRecord = js.native
+  def androidApplicationRecord(packageName: String): NdefRecord
   /**
     * Decodes an array bytes into an NDEF Message
     *
@@ -75,7 +74,7 @@ trait Ndef extends js.Object {
     *
     * @see NFC Data Exchange Format (NDEF) http://www.nfc-forum.org/specs/spec_list/
     */
-  def decodeMessage(bytes: js.Array[Double]): js.Array[NdefRecord] = js.native
+  def decodeMessage(bytes: js.Array[Double]): js.Array[NdefRecord]
   /**
     * Decode the bit flags from a TNF Byte.
     *
@@ -83,12 +82,12 @@ trait Ndef extends js.Object {
     *
     *  See NFC Data Exchange Format (NDEF) Specification Section 3.2 RecordLayout
     */
-  def decodeTnf(tnf_byte: Double): js.Any = js.native
+  def decodeTnf(tnf_byte: Double): js.Any
   /**
     * Helper that creates an empty NdefRecord.
     *
     */
-  def emptyRecord(): NdefRecord = js.native
+  def emptyRecord(): NdefRecord
   /**
     * Encodes an NDEF Message into bytes that can be written to a NFC tag.
     *
@@ -98,7 +97,7 @@ trait Ndef extends js.Object {
     *
     * @see NFC Data Exchange Format (NDEF) http://www.nfc-forum.org/specs/spec_list/
     */
-  def encodeMessage(ndefRecords: js.Array[NdefRecord]): js.Array[Double] = js.native
+  def encodeMessage(ndefRecords: js.Array[NdefRecord]): js.Array[Double]
   /**
     * Encode NDEF bit flags into a TNF Byte.
     *
@@ -106,7 +105,7 @@ trait Ndef extends js.Object {
     *
     *  See NFC Data Exchange Format (NDEF) Specification Section 3.2 RecordLayout
     */
-  def encodeTnf(mb: Double, me: Double, cf: Double, sr: Double, il: Double, tnf: Double): Double = js.native
+  def encodeTnf(mb: Double, me: Double, cf: Double, sr: Double, il: Double, tnf: Double): Double
   /**
     * Helper that creates a NdefRecordcontaining an mimeMediaRecord.
     *
@@ -114,7 +113,7 @@ trait Ndef extends js.Object {
     * @param payload byte[]
     * @param id byte[] (optional)
     */
-  def mimeMediaRecord(mimeType: String, payload: js.Array[Double], id: js.Array[Double]): NdefRecord = js.native
+  def mimeMediaRecord(mimeType: String, payload: js.Array[Double], id: js.Array[Double]): NdefRecord
   /**
     * Creates a JSON representation of a NdefRecord.
     *
@@ -127,7 +126,7 @@ trait Ndef extends js.Object {
     *
     * @see Ndef.textRecord, Ndef.uriRecord and Ndef.mimeMediaRecord for examples
     */
-  def record(tnf: Double, `type`: js.Array[Double], id: js.Array[Double], payload: js.Array[Double]): NdefRecord = js.native
+  def record(tnf: Double, `type`: js.Array[Double], id: js.Array[Double], payload: js.Array[Double]): NdefRecord
   /**
     * Helper that creates an NDEF record containing an Smart Poster.
     *
@@ -136,7 +135,7 @@ trait Ndef extends js.Object {
     *
     * @return NdefRecord
     */
-  def smartPoster(ndefRecords: js.Array[NdefRecord], id: js.Array[Double]): NdefRecord = js.native
+  def smartPoster(ndefRecords: js.Array[NdefRecord], id: js.Array[Double]): NdefRecord
   /**
     * Helper that creates an NdefRecord containing plain text.
     *
@@ -146,13 +145,13 @@ trait Ndef extends js.Object {
     *
     * @return NdefRecord
     */
-  def textRecord(text: String, languageCode: String, id: js.Array[Double]): NdefRecord = js.native
+  def textRecord(text: String, languageCode: String, id: js.Array[Double]): NdefRecord
   /**
     * Convert TNF to String for user friendly display
     *
     *@param tnf tnf byte
     */
-  def tnfToString(tnf: Double): String = js.native
+  def tnfToString(tnf: Double): String
   /**
     * Helper that creates a NdefRecord containing a URI.
     *
@@ -161,7 +160,7 @@ trait Ndef extends js.Object {
     *
     * @return NdefRecord
     */
-  def uriRecord(uri: String, id: js.Array[Double]): NdefRecord = js.native
+  def uriRecord(uri: String, id: js.Array[Double]): NdefRecord
 }
 
 object Ndef {
@@ -201,193 +200,5 @@ object Ndef {
     val __obj = js.Dynamic.literal(RTD_ALTERNATIVE_CARRIER = RTD_ALTERNATIVE_CARRIER.asInstanceOf[js.Any], RTD_HANDOVER_CARRIER = RTD_HANDOVER_CARRIER.asInstanceOf[js.Any], RTD_HANDOVER_REQUEST = RTD_HANDOVER_REQUEST.asInstanceOf[js.Any], RTD_HANDOVER_SELECT = RTD_HANDOVER_SELECT.asInstanceOf[js.Any], RTD_SMART_POSTER = RTD_SMART_POSTER.asInstanceOf[js.Any], RTD_TEXT = RTD_TEXT.asInstanceOf[js.Any], RTD_URI = RTD_URI.asInstanceOf[js.Any], TNF_ABSOLUTE_URI = TNF_ABSOLUTE_URI.asInstanceOf[js.Any], TNF_EMPTY = TNF_EMPTY.asInstanceOf[js.Any], TNF_EXTERNAL_TYPE = TNF_EXTERNAL_TYPE.asInstanceOf[js.Any], TNF_MIME_MEDIA = TNF_MIME_MEDIA.asInstanceOf[js.Any], TNF_RESERVED = TNF_RESERVED.asInstanceOf[js.Any], TNF_UNCHANGED = TNF_UNCHANGED.asInstanceOf[js.Any], TNF_UNKNOWN = TNF_UNKNOWN.asInstanceOf[js.Any], TNF_WELL_KNOWN = TNF_WELL_KNOWN.asInstanceOf[js.Any], absoluteUriRecord = js.Any.fromFunction3(absoluteUriRecord), androidApplicationRecord = js.Any.fromFunction1(androidApplicationRecord), decodeMessage = js.Any.fromFunction1(decodeMessage), decodeTnf = js.Any.fromFunction1(decodeTnf), emptyRecord = js.Any.fromFunction0(emptyRecord), encodeMessage = js.Any.fromFunction1(encodeMessage), encodeTnf = js.Any.fromFunction6(encodeTnf), mimeMediaRecord = js.Any.fromFunction3(mimeMediaRecord), record = js.Any.fromFunction4(record), smartPoster = js.Any.fromFunction2(smartPoster), textHelper = textHelper.asInstanceOf[js.Any], textRecord = js.Any.fromFunction3(textRecord), tnfToString = js.Any.fromFunction1(tnfToString), uriHelper = uriHelper.asInstanceOf[js.Any], uriRecord = js.Any.fromFunction2(uriRecord))
     __obj.asInstanceOf[Ndef]
   }
-  @scala.inline
-  implicit class NdefOps[Self <: Ndef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRTD_ALTERNATIVE_CARRIER(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_ALTERNATIVE_CARRIER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRTD_HANDOVER_CARRIER(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_HANDOVER_CARRIER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRTD_HANDOVER_REQUEST(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_HANDOVER_REQUEST")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRTD_HANDOVER_SELECT(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_HANDOVER_SELECT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRTD_SMART_POSTER(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_SMART_POSTER")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRTD_TEXT(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_TEXT")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRTD_URI(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RTD_URI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_ABSOLUTE_URI(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_ABSOLUTE_URI")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_EMPTY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_EMPTY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_EXTERNAL_TYPE(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_EXTERNAL_TYPE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_MIME_MEDIA(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_MIME_MEDIA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_RESERVED(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_RESERVED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_UNCHANGED(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_UNCHANGED")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_UNKNOWN(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_UNKNOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTNF_WELL_KNOWN(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TNF_WELL_KNOWN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAbsoluteUriRecord(value: (String, js.Array[Double], js.Array[Double]) => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteUriRecord")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withAndroidApplicationRecord(value: String => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidApplicationRecord")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDecodeMessage(value: js.Array[Double] => js.Array[NdefRecord]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDecodeTnf(value: Double => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeTnf")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEmptyRecord(value: () => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyRecord")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEncodeMessage(value: js.Array[NdefRecord] => js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEncodeTnf(value: (Double, Double, Double, Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeTnf")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withMimeMediaRecord(value: (String, js.Array[Double], js.Array[Double]) => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeMediaRecord")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRecord(value: (Double, js.Array[Double], js.Array[Double], js.Array[Double]) => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("record")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withSmartPoster(value: (js.Array[NdefRecord], js.Array[Double]) => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smartPoster")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTextHelper(value: TextHelper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textHelper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextRecord(value: (String, String, js.Array[Double]) => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRecord")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withTnfToString(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tnfToString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUriHelper(value: UriHelper): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uriHelper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUriRecord(value: (String, js.Array[Double]) => NdefRecord): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uriRecord")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait SchemaInstanceGroupManagersListManagedInstancesResponse extends js.Object 
 
 object SchemaInstanceGroupManagersListManagedInstancesResponse {
   @scala.inline
-  def apply(): SchemaInstanceGroupManagersListManagedInstancesResponse = {
+  def apply(managedInstances: js.Array[SchemaManagedInstance] = null): SchemaInstanceGroupManagersListManagedInstancesResponse = {
     val __obj = js.Dynamic.literal()
+    if (managedInstances != null) __obj.updateDynamic("managedInstances")(managedInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagersListManagedInstancesResponse]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupManagersListManagedInstancesResponseOps[Self <: SchemaInstanceGroupManagersListManagedInstancesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedInstances(value: js.Array[SchemaManagedInstance]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

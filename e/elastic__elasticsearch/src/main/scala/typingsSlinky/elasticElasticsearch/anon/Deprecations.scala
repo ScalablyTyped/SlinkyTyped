@@ -1,26 +1,26 @@
 package typingsSlinky.elasticElasticsearch.anon
 
-import typingsSlinky.elasticElasticsearch.mod.ApiMethod
 import typingsSlinky.elasticElasticsearch.mod.callbackFn
 import typingsSlinky.elasticElasticsearch.requestParamsMod.MigrationDeprecations
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
+import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Deprecations extends js.Object {
-  @JSName("deprecations")
-  var deprecations_Original: ApiMethod[MigrationDeprecations, _] = js.native
-  // Promise API
-  def deprecations(): js.Promise[ApiResponse[_, _]] = js.native
-  // Callback API
-  def deprecations(callback: callbackFn[_]): TransportRequestCallback = js.native
-  def deprecations(params: MigrationDeprecations): js.Promise[ApiResponse[_, _]] = js.native
-  def deprecations(params: MigrationDeprecations, callback: callbackFn[_]): TransportRequestCallback = js.native
-  def deprecations(params: MigrationDeprecations, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
-  def deprecations(params: MigrationDeprecations, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
+  def deprecations[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deprecations[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def deprecations[TResponse, TContext](params: MigrationDeprecations): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deprecations[TResponse, TContext](params: MigrationDeprecations, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def deprecations[TResponse, TContext](params: MigrationDeprecations, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def deprecations[TResponse, TContext](
+    params: MigrationDeprecations,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
 }
 

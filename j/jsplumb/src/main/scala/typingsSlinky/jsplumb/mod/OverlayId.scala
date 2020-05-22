@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jsplumb.jsplumbStrings.PlainArrow
   - typingsSlinky.jsplumb.jsplumbStrings.Custom
 */
-trait OverlayId extends OverlaySpec
+trait OverlayId extends js.Object
 
 object OverlayId {
   @scala.inline

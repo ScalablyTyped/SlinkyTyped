@@ -5,71 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SimpleEmail extends js.Object {
   /**
     * The content of the message, in HTML format. Use this for email clients that can process HTML. You can include clickable links, formatted text, and much more in an HTML message.
     */
-  var HtmlPart: js.UndefOr[SimpleEmailPart] = js.native
+  var HtmlPart: js.UndefOr[SimpleEmailPart] = js.undefined
   /**
     * The subject of the message: A short summary of the content, which will appear in the recipient's inbox.
     */
-  var Subject: js.UndefOr[SimpleEmailPart] = js.native
+  var Subject: js.UndefOr[SimpleEmailPart] = js.undefined
   /**
     * The content of the message, in text format. Use this for text-based email clients, or clients on high-latency networks (such as mobile devices).
     */
-  var TextPart: js.UndefOr[SimpleEmailPart] = js.native
+  var TextPart: js.UndefOr[SimpleEmailPart] = js.undefined
 }
 
 object SimpleEmail {
   @scala.inline
-  def apply(): SimpleEmail = {
+  def apply(
+    HtmlPart: SimpleEmailPart = null,
+    Subject: SimpleEmailPart = null,
+    TextPart: SimpleEmailPart = null
+  ): SimpleEmail = {
     val __obj = js.Dynamic.literal()
+    if (HtmlPart != null) __obj.updateDynamic("HtmlPart")(HtmlPart.asInstanceOf[js.Any])
+    if (Subject != null) __obj.updateDynamic("Subject")(Subject.asInstanceOf[js.Any])
+    if (TextPart != null) __obj.updateDynamic("TextPart")(TextPart.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleEmail]
   }
-  @scala.inline
-  implicit class SimpleEmailOps[Self <: SimpleEmail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHtmlPart(value: SimpleEmailPart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlPart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlPart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlPart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: SimpleEmailPart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextPart(value: SimpleEmailPart): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextPart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPart")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.recharts.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.recharts.rechartsStrings.category
 import typingsSlinky.recharts.rechartsStrings.left
@@ -10,466 +9,148 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait YAxisProps extends EventAttributes {
-  var allowDataOverflow: js.UndefOr[Boolean] = js.native
-  var allowDecimals: js.UndefOr[Boolean] = js.native
+  var allowDataOverflow: js.UndefOr[Boolean] = js.undefined
+  var allowDecimals: js.UndefOr[Boolean] = js.undefined
   // Rotation of tick labels
-  var angle: js.UndefOr[Double] = js.native
-  var axisLine: js.UndefOr[Boolean | js.Object] = js.native
+  var angle: js.UndefOr[Double] = js.undefined
+  var axisLine: js.UndefOr[Boolean | js.Object] = js.undefined
   // The key of data displayed in the axis
-  var dataKey: js.UndefOr[DataKey] = js.native
-  var domain: js.UndefOr[js.Tuple2[AxisDomain, AxisDomain]] = js.native
+  var dataKey: js.UndefOr[DataKey] = js.undefined
+  var domain: js.UndefOr[js.Tuple2[AxisDomain, AxisDomain]] = js.undefined
   // X offset of tick label
-  var dx: js.UndefOr[Double] = js.native
+  var dx: js.UndefOr[Double] = js.undefined
   // Y offset of tick label
-  var dy: js.UndefOr[Double] = js.native
+  var dy: js.UndefOr[Double] = js.undefined
   // The height of axis which is usually calculated in Chart
-  var height: js.UndefOr[Double] = js.native
-  var hide: js.UndefOr[Boolean] = js.native
-  var interval: js.UndefOr[AxisInterval] = js.native
+  var height: js.UndefOr[Double] = js.undefined
+  var hide: js.UndefOr[Boolean] = js.undefined
+  var interval: js.UndefOr[AxisInterval] = js.undefined
   // see label section at http://recharts.org/#/en-US/api/YAxis
-  var label: js.UndefOr[String | Double | Label | LabelProps] = js.native
-  var minTickGap: js.UndefOr[Double] = js.native
-  var mirror: js.UndefOr[Boolean] = js.native
+  var label: js.UndefOr[String | Double | Label | LabelProps] = js.undefined
+  var minTickGap: js.UndefOr[Double] = js.undefined
+  var mirror: js.UndefOr[Boolean] = js.undefined
   // The name of data displayed in the axis
-  var name: js.UndefOr[String | Double] = js.native
+  var name: js.UndefOr[String | Double] = js.undefined
   // The orientation of axis
-  var orientation: js.UndefOr[left | right] = js.native
-  var padding: js.UndefOr[YPadding] = js.native
-  var reversed: js.UndefOr[Boolean] = js.native
-  var scale: js.UndefOr[ScaleType | RechartsFunction] = js.native
-  var stroke: js.UndefOr[String] = js.native
-  var tick: js.UndefOr[Boolean | ContentRenderer[_] | js.Object | ReactElement] = js.native
+  var orientation: js.UndefOr[left | right] = js.undefined
+  var padding: js.UndefOr[YPadding] = js.undefined
+  var reversed: js.UndefOr[Boolean] = js.undefined
+  var scale: js.UndefOr[ScaleType | RechartsFunction] = js.undefined
+  var stroke: js.UndefOr[String] = js.undefined
+  var tick: js.UndefOr[Boolean | ContentRenderer[_] | js.Object | ReactElement] = js.undefined
   // The count of ticks
-  var tickCount: js.UndefOr[Double] = js.native
+  var tickCount: js.UndefOr[Double] = js.undefined
   // The formatter function of tick
-  var tickFormatter: js.UndefOr[TickFormatterFunction] = js.native
-  var tickLine: js.UndefOr[Boolean | js.Object] = js.native
+  var tickFormatter: js.UndefOr[TickFormatterFunction] = js.undefined
+  var tickLine: js.UndefOr[Boolean | js.Object] = js.undefined
   // The margin between tick line and the label
-  var tickMargin: js.UndefOr[Double] = js.native
-  var tickSize: js.UndefOr[Double] = js.native
+  var tickMargin: js.UndefOr[Double] = js.undefined
+  var tickSize: js.UndefOr[Double] = js.undefined
   // Ticks can be any type when the axis is the type of category
   // Ticks must be numbers when the axis is the type of number
-  var ticks: js.UndefOr[js.Array[_]] = js.native
-  var `type`: js.UndefOr[number | category] = js.native
+  var ticks: js.UndefOr[js.Array[_]] = js.undefined
+  var `type`: js.UndefOr[number | category] = js.undefined
   // The unit of data displayed in the axis
-  var unit: js.UndefOr[String | Double] = js.native
+  var unit: js.UndefOr[String | Double] = js.undefined
   // The width of axis, which need to be set by user
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
   // The unique id of y-axis
-  var yAxisId: js.UndefOr[String | Double] = js.native
+  var yAxisId: js.UndefOr[String | Double] = js.undefined
 }
 
 object YAxisProps {
   @scala.inline
-  def apply(): YAxisProps = {
+  def apply(
+    allowDataOverflow: js.UndefOr[Boolean] = js.undefined,
+    allowDecimals: js.UndefOr[Boolean] = js.undefined,
+    angle: js.UndefOr[Double] = js.undefined,
+    axisLine: Boolean | js.Object = null,
+    dataKey: DataKey = null,
+    domain: js.Tuple2[AxisDomain, AxisDomain] = null,
+    dx: js.UndefOr[Double] = js.undefined,
+    dy: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    hide: js.UndefOr[Boolean] = js.undefined,
+    interval: AxisInterval = null,
+    label: String | Double | Label | LabelProps = null,
+    minTickGap: js.UndefOr[Double] = js.undefined,
+    mirror: js.UndefOr[Boolean] = js.undefined,
+    name: String | Double = null,
+    onClick: /* repeated */ js.Any => Unit = null,
+    onMouseDown: /* repeated */ js.Any => Unit = null,
+    onMouseEnter: /* repeated */ js.Any => Unit = null,
+    onMouseLeave: /* repeated */ js.Any => Unit = null,
+    onMouseMove: /* repeated */ js.Any => Unit = null,
+    onMouseOut: /* repeated */ js.Any => Unit = null,
+    onMouseOver: /* repeated */ js.Any => Unit = null,
+    onMouseUp: /* repeated */ js.Any => Unit = null,
+    onTouchCancel: /* repeated */ js.Any => Unit = null,
+    onTouchEnd: /* repeated */ js.Any => Unit = null,
+    onTouchMove: /* repeated */ js.Any => Unit = null,
+    onTouchStart: /* repeated */ js.Any => Unit = null,
+    orientation: left | right = null,
+    padding: YPadding = null,
+    reversed: js.UndefOr[Boolean] = js.undefined,
+    scale: ScaleType | RechartsFunction = null,
+    stroke: String = null,
+    tick: Boolean | ContentRenderer[_] | js.Object | ReactElement = null,
+    tickCount: js.UndefOr[Double] = js.undefined,
+    tickFormatter: /* value */ js.Any => js.Any = null,
+    tickLine: Boolean | js.Object = null,
+    tickMargin: js.UndefOr[Double] = js.undefined,
+    tickSize: js.UndefOr[Double] = js.undefined,
+    ticks: js.Array[_] = null,
+    `type`: number | category = null,
+    unit: String | Double = null,
+    width: js.UndefOr[Double] = js.undefined,
+    yAxisId: String | Double = null
+  ): YAxisProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowDataOverflow)) __obj.updateDynamic("allowDataOverflow")(allowDataOverflow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (axisLine != null) __obj.updateDynamic("axisLine")(axisLine.asInstanceOf[js.Any])
+    if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (!js.isUndefined(dx)) __obj.updateDynamic("dx")(dx.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dy)) __obj.updateDynamic("dy")(dy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hide)) __obj.updateDynamic("hide")(hide.get.asInstanceOf[js.Any])
+    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(minTickGap)) __obj.updateDynamic("minTickGap")(minTickGap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mirror)) __obj.updateDynamic("mirror")(mirror.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (!js.isUndefined(reversed)) __obj.updateDynamic("reversed")(reversed.get.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
+    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickCount)) __obj.updateDynamic("tickCount")(tickCount.get.asInstanceOf[js.Any])
+    if (tickFormatter != null) __obj.updateDynamic("tickFormatter")(js.Any.fromFunction1(tickFormatter))
+    if (tickLine != null) __obj.updateDynamic("tickLine")(tickLine.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickMargin)) __obj.updateDynamic("tickMargin")(tickMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickSize)) __obj.updateDynamic("tickSize")(tickSize.get.asInstanceOf[js.Any])
+    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (yAxisId != null) __obj.updateDynamic("yAxisId")(yAxisId.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAxisProps]
   }
-  @scala.inline
-  implicit class YAxisPropsOps[Self <: YAxisProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowDataOverflow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDataOverflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDataOverflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDataOverflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowDecimals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisLine(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDataKey(value: DataKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: js.Tuple2[AxisDomain, AxisDomain]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHide(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: AxisInterval): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String | Double | Label | LabelProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinTickGap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTickGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinTickGap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTickGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMirror(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMirror: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: YPadding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReversed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReversed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleFunction1(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withScale(value: ScaleType | RechartsFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStroke(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStroke: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTickFunction1(value: _ => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTick(value: Boolean | ContentRenderer[_] | js.Object | ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickFormatter(value: /* value */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickFormatter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutTickFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickLine(value: Boolean | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTicks(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTicks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: number | category): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnit(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYAxisId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYAxisId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

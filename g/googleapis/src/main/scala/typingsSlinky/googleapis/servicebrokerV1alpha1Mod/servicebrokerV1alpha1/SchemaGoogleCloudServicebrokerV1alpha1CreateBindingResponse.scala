@@ -43,89 +43,22 @@ trait SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponse extends js.Obj
 
 object SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponse = {
+  def apply(
+    credentials: StringDictionary[js.Any] = null,
+    description: String = null,
+    operation: String = null,
+    route_service_url: String = null,
+    syslog_drain_url: String = null,
+    volume_mounts: js.Array[StringDictionary[_]] = null
+  ): SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponse = {
     val __obj = js.Dynamic.literal()
+    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
+    if (route_service_url != null) __obj.updateDynamic("route_service_url")(route_service_url.asInstanceOf[js.Any])
+    if (syslog_drain_url != null) __obj.updateDynamic("syslog_drain_url")(syslog_drain_url.asInstanceOf[js.Any])
+    if (volume_mounts != null) __obj.updateDynamic("volume_mounts")(volume_mounts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponseOps[Self <: SchemaGoogleCloudServicebrokerV1alpha1CreateBindingResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoute_service_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route_service_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoute_service_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("route_service_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyslog_drain_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syslog_drain_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyslog_drain_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syslog_drain_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume_mounts(value: js.Array[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume_mounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume_mounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume_mounts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

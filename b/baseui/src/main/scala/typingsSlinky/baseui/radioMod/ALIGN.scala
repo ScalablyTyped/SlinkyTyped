@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ALIGN extends js.Object {
-  var horizontal: typingsSlinky.baseui.baseuiStrings.horizontal = js.native
-  var vertical: typingsSlinky.baseui.baseuiStrings.vertical = js.native
+  var horizontal: typingsSlinky.baseui.baseuiStrings.horizontal
+  var vertical: typingsSlinky.baseui.baseuiStrings.vertical
 }
 
 @JSImport("baseui/radio", "ALIGN")

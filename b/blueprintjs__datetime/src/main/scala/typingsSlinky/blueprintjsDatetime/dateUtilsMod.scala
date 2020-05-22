@@ -1,6 +1,7 @@
 package typingsSlinky.blueprintjsDatetime
 
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
+import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,6 +40,5 @@ object dateUtilsMod extends js.Object {
   def isTimeEqualOrSmallerThan(time: js.Date, timeToCompare: js.Date): Boolean = js.native
   def isTimeInRange(date: js.Date, minDate: js.Date, maxDate: js.Date): Boolean = js.native
   def isTimeSameOrAfter(date: js.Date, dateToCompare: js.Date): Boolean = js.native
-  type DateRange = js.Tuple2[js.UndefOr[js.Date], js.UndefOr[js.Date]]
 }
 

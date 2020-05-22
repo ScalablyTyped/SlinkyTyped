@@ -54,125 +54,28 @@ trait Step extends js.Object {
 
 object Step {
   @scala.inline
-  def apply(endTime: js.Date, startTime: js.Date, status: JobStatus, stepName: StepName): Step = {
+  def apply(
+    endTime: js.Date,
+    startTime: js.Date,
+    status: JobStatus,
+    stepName: StepName,
+    artifactsUrl: ArtifactsUrl = null,
+    context: Context = null,
+    logUrl: LogUrl = null,
+    screenshots: Screenshots = null,
+    statusReason: StatusReason = null,
+    testArtifactsUrl: TestArtifactsUrl = null,
+    testConfigUrl: TestConfigUrl = null
+  ): Step = {
     val __obj = js.Dynamic.literal(endTime = endTime.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], stepName = stepName.asInstanceOf[js.Any])
+    if (artifactsUrl != null) __obj.updateDynamic("artifactsUrl")(artifactsUrl.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (logUrl != null) __obj.updateDynamic("logUrl")(logUrl.asInstanceOf[js.Any])
+    if (screenshots != null) __obj.updateDynamic("screenshots")(screenshots.asInstanceOf[js.Any])
+    if (statusReason != null) __obj.updateDynamic("statusReason")(statusReason.asInstanceOf[js.Any])
+    if (testArtifactsUrl != null) __obj.updateDynamic("testArtifactsUrl")(testArtifactsUrl.asInstanceOf[js.Any])
+    if (testConfigUrl != null) __obj.updateDynamic("testConfigUrl")(testConfigUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Step]
   }
-  @scala.inline
-  implicit class StepOps[Self <: Step] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: JobStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStepName(value: StepName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArtifactsUrl(value: ArtifactsUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactsUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArtifactsUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactsUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogUrl(value: LogUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenshots(value: Screenshots): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusReason(value: StatusReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestArtifactsUrl(value: TestArtifactsUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testArtifactsUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestArtifactsUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testArtifactsUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestConfigUrl(value: TestConfigUrl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testConfigUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestConfigUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testConfigUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,16 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an audio track. */
-@js.native
 trait AudioTrack extends js.Object {
   /** Gets or sets the identifier for the audio track. */
-  var id: String = js.native
+  var id: String
   /** Gets or sets the label for the audio track. */
-  var label: String = js.native
+  var label: String
   /** Gets or sets a string indicating the language of the audio track. */
-  var language: String = js.native
+  var language: String
   /** Gets a value indicating the type of data the track contains. For AudioTrack objects, this value is always MediaTrackKind::Audio . */
-  var trackKind: MediaTrackKind = js.native
+  var trackKind: MediaTrackKind
 }
 
 object AudioTrack {
@@ -23,37 +22,5 @@ object AudioTrack {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], trackKind = trackKind.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioTrack]
   }
-  @scala.inline
-  implicit class AudioTrackOps[Self <: AudioTrack] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrackKind(value: MediaTrackKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

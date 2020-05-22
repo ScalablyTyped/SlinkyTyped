@@ -18,41 +18,11 @@ trait ListElasticsearchInstanceTypesResponse extends js.Object {
 
 object ListElasticsearchInstanceTypesResponse {
   @scala.inline
-  def apply(): ListElasticsearchInstanceTypesResponse = {
+  def apply(ElasticsearchInstanceTypes: ElasticsearchInstanceTypeList = null, NextToken: NextToken = null): ListElasticsearchInstanceTypesResponse = {
     val __obj = js.Dynamic.literal()
+    if (ElasticsearchInstanceTypes != null) __obj.updateDynamic("ElasticsearchInstanceTypes")(ElasticsearchInstanceTypes.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListElasticsearchInstanceTypesResponse]
   }
-  @scala.inline
-  implicit class ListElasticsearchInstanceTypesResponseOps[Self <: ListElasticsearchInstanceTypesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElasticsearchInstanceTypes(value: ElasticsearchInstanceTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchInstanceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearchInstanceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticsearchInstanceTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

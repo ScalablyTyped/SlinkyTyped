@@ -4,36 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISizeCalculationResult extends ISize {
-  var images: js.UndefOr[js.Array[ISize]] = js.native
+  var images: js.UndefOr[js.Array[ISize]] = js.undefined
 }
 
 object ISizeCalculationResult {
   @scala.inline
-  def apply(): ISizeCalculationResult = {
+  def apply(
+    height: js.UndefOr[Double] = js.undefined,
+    images: js.Array[ISize] = null,
+    orientation: js.UndefOr[Double] = js.undefined,
+    `type`: String = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): ISizeCalculationResult = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
+    if (!js.isUndefined(orientation)) __obj.updateDynamic("orientation")(orientation.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISizeCalculationResult]
   }
-  @scala.inline
-  implicit class ISizeCalculationResultOps[Self <: ISizeCalculationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImages(value: js.Array[ISize]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

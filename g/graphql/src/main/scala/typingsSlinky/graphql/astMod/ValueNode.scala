@@ -1,5 +1,14 @@
 package typingsSlinky.graphql.astMod
 
+import typingsSlinky.graphql.graphqlStrings.BooleanValue
+import typingsSlinky.graphql.graphqlStrings.EnumValue
+import typingsSlinky.graphql.graphqlStrings.FloatValue
+import typingsSlinky.graphql.graphqlStrings.IntValue
+import typingsSlinky.graphql.graphqlStrings.ListValue
+import typingsSlinky.graphql.graphqlStrings.NullValue
+import typingsSlinky.graphql.graphqlStrings.ObjectValue
+import typingsSlinky.graphql.graphqlStrings.StringValue
+import typingsSlinky.graphql.graphqlStrings.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,22 +28,59 @@ trait ValueNode extends js.Object
 
 object ValueNode {
   @scala.inline
-  implicit def apply(value: BooleanValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def StringValueNode(kind: StringValue, value: String, block: js.UndefOr[Boolean] = js.undefined, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.get.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: EnumValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def EnumValueNode(kind: EnumValue, value: String, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: FloatValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def ObjectValueNode(fields: js.Array[ObjectFieldNode], kind: ObjectValue, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: IntValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def BooleanValueNode(kind: BooleanValue, value: Boolean, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: ListValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def ListValueNode(kind: ListValue, values: js.Array[ValueNode], loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: NullValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def IntValueNode(kind: IntValue, value: String, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: ObjectValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def NullValueNode(kind: NullValue, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: StringValueNode): ValueNode = value.asInstanceOf[ValueNode]
+  def FloatValueNode(kind: FloatValue, value: String, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
   @scala.inline
-  implicit def apply(value: VariableNode): ValueNode = value.asInstanceOf[ValueNode]
+  def VariableNode(kind: Variable, name: NameNode, loc: Location = null): ValueNode = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueNode]
+  }
 }
 

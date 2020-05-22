@@ -18,29 +18,10 @@ trait SchemaBatchWriteSpansRequest extends js.Object {
 
 object SchemaBatchWriteSpansRequest {
   @scala.inline
-  def apply(): SchemaBatchWriteSpansRequest = {
+  def apply(spans: js.Array[SchemaSpan] = null): SchemaBatchWriteSpansRequest = {
     val __obj = js.Dynamic.literal()
+    if (spans != null) __obj.updateDynamic("spans")(spans.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchWriteSpansRequest]
   }
-  @scala.inline
-  implicit class SchemaBatchWriteSpansRequestOps[Self <: SchemaBatchWriteSpansRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpans(value: js.Array[SchemaSpan]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spans")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

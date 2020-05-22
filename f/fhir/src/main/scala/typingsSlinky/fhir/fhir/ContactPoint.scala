@@ -7,167 +7,79 @@ import scala.scalajs.js.annotation._
 /**
   * Details of a Technology mediated contact point (phone, fax, email, etc.)
   */
-@js.native
 trait ContactPoint extends Element {
   /**
     * Contains extended information for property 'rank'.
     */
-  var _rank: js.UndefOr[Element] = js.native
+  var _rank: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'system'.
     */
-  var _system: js.UndefOr[Element] = js.native
+  var _system: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'use'.
     */
-  var _use: js.UndefOr[Element] = js.native
+  var _use: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'value'.
     */
-  var _value: js.UndefOr[Element] = js.native
+  var _value: js.UndefOr[Element] = js.undefined
   /**
     * Time period when the contact point was/is in use
     */
-  var period: js.UndefOr[Period] = js.native
+  var period: js.UndefOr[Period] = js.undefined
   /**
     * Specify preferred order of use (1 = highest)
     */
-  var rank: js.UndefOr[positiveInt] = js.native
+  var rank: js.UndefOr[positiveInt] = js.undefined
   /**
     * phone | fax | email | pager | url | sms | other
     */
-  var system: js.UndefOr[code] = js.native
+  var system: js.UndefOr[code] = js.undefined
   /**
     * home | work | temp | old | mobile - purpose of this contact point
     */
-  var use: js.UndefOr[code] = js.native
+  var use: js.UndefOr[code] = js.undefined
   /**
     * The actual contact point details
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object ContactPoint {
   @scala.inline
-  def apply(): ContactPoint = {
+  def apply(
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _rank: Element = null,
+    _system: Element = null,
+    _use: Element = null,
+    _value: Element = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    period: Period = null,
+    rank: js.UndefOr[positiveInt] = js.undefined,
+    system: code = null,
+    use: code = null,
+    value: String = null
+  ): ContactPoint = {
     val __obj = js.Dynamic.literal()
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_rank != null) __obj.updateDynamic("_rank")(_rank.asInstanceOf[js.Any])
+    if (_system != null) __obj.updateDynamic("_system")(_system.asInstanceOf[js.Any])
+    if (_use != null) __obj.updateDynamic("_use")(_use.asInstanceOf[js.Any])
+    if (_value != null) __obj.updateDynamic("_value")(_value.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
+    if (!js.isUndefined(rank)) __obj.updateDynamic("rank")(rank.get.asInstanceOf[js.Any])
+    if (system != null) __obj.updateDynamic("system")(system.asInstanceOf[js.Any])
+    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactPoint]
   }
-  @scala.inline
-  implicit class ContactPointOps[Self <: ContactPoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_rank(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_rank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_rank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_system(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_system")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_system: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_system")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_use(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_use: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_use")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_value(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_value: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Period): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRank(value: positiveInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystem(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

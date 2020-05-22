@@ -1,5 +1,11 @@
 package typingsSlinky.json8Patch.mod
 
+import typingsSlinky.json8Patch.json8PatchStrings.add
+import typingsSlinky.json8Patch.json8PatchStrings.copy
+import typingsSlinky.json8Patch.json8PatchStrings.move
+import typingsSlinky.json8Patch.json8PatchStrings.remove
+import typingsSlinky.json8Patch.json8PatchStrings.replace
+import typingsSlinky.json8Patch.json8PatchStrings.test
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +22,34 @@ trait JsonPatchOperation extends js.Object
 
 object JsonPatchOperation {
   @scala.inline
-  implicit def apply(value: AddOperation): JsonPatchOperation = value.asInstanceOf[JsonPatchOperation]
+  def CopyOperation(from: js.Any, op: copy, path: String): JsonPatchOperation = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JsonPatchOperation]
+  }
   @scala.inline
-  implicit def apply(value: CopyOperation): JsonPatchOperation = value.asInstanceOf[JsonPatchOperation]
+  def ReplaceOperation(op: replace, path: String, value: js.Any): JsonPatchOperation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JsonPatchOperation]
+  }
   @scala.inline
-  implicit def apply(value: MoveOperation): JsonPatchOperation = value.asInstanceOf[JsonPatchOperation]
+  def MoveOperation(from: js.Any, op: move, path: String): JsonPatchOperation = {
+    val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JsonPatchOperation]
+  }
   @scala.inline
-  implicit def apply(value: RemoveOperation): JsonPatchOperation = value.asInstanceOf[JsonPatchOperation]
+  def TestOperation(op: test, path: String, value: js.Any): JsonPatchOperation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JsonPatchOperation]
+  }
   @scala.inline
-  implicit def apply(value: ReplaceOperation): JsonPatchOperation = value.asInstanceOf[JsonPatchOperation]
+  def RemoveOperation(op: remove, path: String): JsonPatchOperation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JsonPatchOperation]
+  }
   @scala.inline
-  implicit def apply(value: TestOperation): JsonPatchOperation = value.asInstanceOf[JsonPatchOperation]
+  def AddOperation(op: add, path: String, value: js.Any): JsonPatchOperation = {
+    val __obj = js.Dynamic.literal(op = op.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JsonPatchOperation]
+  }
 }
 

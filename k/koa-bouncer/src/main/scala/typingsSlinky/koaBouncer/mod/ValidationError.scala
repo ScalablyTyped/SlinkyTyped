@@ -11,5 +11,9 @@ import scala.scalajs.js.annotation._
 class ValidationError protected () extends Error {
   def this(key: String, message: String) = this()
   var bouncer: Key = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

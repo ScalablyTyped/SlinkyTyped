@@ -14,29 +14,10 @@ trait DescribeEffectivePolicyResponse extends js.Object {
 
 object DescribeEffectivePolicyResponse {
   @scala.inline
-  def apply(): DescribeEffectivePolicyResponse = {
+  def apply(EffectivePolicy: EffectivePolicy = null): DescribeEffectivePolicyResponse = {
     val __obj = js.Dynamic.literal()
+    if (EffectivePolicy != null) __obj.updateDynamic("EffectivePolicy")(EffectivePolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEffectivePolicyResponse]
   }
-  @scala.inline
-  implicit class DescribeEffectivePolicyResponseOps[Self <: DescribeEffectivePolicyResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffectivePolicy(value: EffectivePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectivePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectivePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EffectivePolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

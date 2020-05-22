@@ -11,21 +11,20 @@ import scala.scalajs.js.annotation._
   * that is returned when the `getEntities` or `getEntitiesByType` method is called on the active item.
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Read
   */
-@js.native
 trait TaskSuggestion extends js.Object {
   /**
     * Gets the users that should be assigned a suggested task.
     */
-  var assignees: js.Array[EmailUser] = js.native
+  var assignees: js.Array[EmailUser]
   /**
     * Gets the text of an item that was identified as a task suggestion.
     */
-  var taskString: String = js.native
+  var taskString: String
 }
 
 object TaskSuggestion {
@@ -34,25 +33,5 @@ object TaskSuggestion {
     val __obj = js.Dynamic.literal(assignees = assignees.asInstanceOf[js.Any], taskString = taskString.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskSuggestion]
   }
-  @scala.inline
-  implicit class TaskSuggestionOps[Self <: TaskSuggestion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignees(value: js.Array[EmailUser]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assignees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTaskString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskString")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

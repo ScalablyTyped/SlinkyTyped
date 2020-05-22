@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrgUnit extends js.Object {
-  var blockInheritance: js.UndefOr[Boolean] = js.native
-  var description: js.UndefOr[String] = js.native
-  var etag: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var orgUnitId: js.UndefOr[String] = js.native
-  var orgUnitPath: js.UndefOr[String] = js.native
-  var parentOrgUnitId: js.UndefOr[String] = js.native
-  var parentOrgUnitPath: js.UndefOr[String] = js.native
+  var blockInheritance: js.UndefOr[Boolean] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var etag: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var orgUnitId: js.UndefOr[String] = js.undefined
+  var orgUnitPath: js.UndefOr[String] = js.undefined
+  var parentOrgUnitId: js.UndefOr[String] = js.undefined
+  var parentOrgUnitPath: js.UndefOr[String] = js.undefined
 }
 
 object OrgUnit {
   @scala.inline
-  def apply(): OrgUnit = {
+  def apply(
+    blockInheritance: js.UndefOr[Boolean] = js.undefined,
+    description: String = null,
+    etag: String = null,
+    kind: String = null,
+    name: String = null,
+    orgUnitId: String = null,
+    orgUnitPath: String = null,
+    parentOrgUnitId: String = null,
+    parentOrgUnitPath: String = null
+  ): OrgUnit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockInheritance)) __obj.updateDynamic("blockInheritance")(blockInheritance.get.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (orgUnitId != null) __obj.updateDynamic("orgUnitId")(orgUnitId.asInstanceOf[js.Any])
+    if (orgUnitPath != null) __obj.updateDynamic("orgUnitPath")(orgUnitPath.asInstanceOf[js.Any])
+    if (parentOrgUnitId != null) __obj.updateDynamic("parentOrgUnitId")(parentOrgUnitId.asInstanceOf[js.Any])
+    if (parentOrgUnitPath != null) __obj.updateDynamic("parentOrgUnitPath")(parentOrgUnitPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgUnit]
   }
-  @scala.inline
-  implicit class OrgUnitOps[Self <: OrgUnit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockInheritance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockInheritance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockInheritance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockInheritance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrgUnitId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrgUnitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrgUnitPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrgUnitPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentOrgUnitId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentOrgUnitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentOrgUnitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentOrgUnitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentOrgUnitPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentOrgUnitPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentOrgUnitPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentOrgUnitPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

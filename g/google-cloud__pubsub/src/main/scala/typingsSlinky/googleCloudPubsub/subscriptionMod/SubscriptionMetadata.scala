@@ -10,179 +10,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  messageRetentionDuration ? :@google-cloud/pubsub.@google-cloud/pubsub/build/proto/pubsub.google.protobuf.IDuration | number,   pushEndpoint ? :string,   oidcToken ? :@google-cloud/pubsub.@google-cloud/pubsub/build/src/subscription.OidcToken} & @google-cloud/pubsub.@google-cloud/pubsub/build/src/pubsub.Omit<@google-cloud/pubsub.@google-cloud/pubsub/build/proto/pubsub.google.pubsub.v1.ISubscription, 'messageRetentionDuration'> */
-@js.native
 trait SubscriptionMetadata extends js.Object {
-  var ackDeadlineSeconds: js.UndefOr[Double] = js.native
-  var deadLetterPolicy: js.UndefOr[IDeadLetterPolicy] = js.native
-  var enableMessageOrdering: js.UndefOr[Boolean] = js.native
-  var expirationPolicy: js.UndefOr[IExpirationPolicy] = js.native
-  var labels: js.UndefOr[StringDictionary[String]] = js.native
-  var messageRetentionDuration: js.UndefOr[IDuration | Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var oidcToken: js.UndefOr[OidcToken] = js.native
-  var pushConfig: js.UndefOr[IPushConfig] = js.native
-  var pushEndpoint: js.UndefOr[String] = js.native
-  var retainAckedMessages: js.UndefOr[Boolean] = js.native
-  var topic: js.UndefOr[String] = js.native
+  var ackDeadlineSeconds: js.UndefOr[Double] = js.undefined
+  var deadLetterPolicy: js.UndefOr[IDeadLetterPolicy] = js.undefined
+  var enableMessageOrdering: js.UndefOr[Boolean] = js.undefined
+  var expirationPolicy: js.UndefOr[IExpirationPolicy] = js.undefined
+  var labels: js.UndefOr[StringDictionary[String]] = js.undefined
+  var messageRetentionDuration: js.UndefOr[IDuration | Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var oidcToken: js.UndefOr[OidcToken] = js.undefined
+  var pushConfig: js.UndefOr[IPushConfig] = js.undefined
+  var pushEndpoint: js.UndefOr[String] = js.undefined
+  var retainAckedMessages: js.UndefOr[Boolean] = js.undefined
+  var topic: js.UndefOr[String] = js.undefined
 }
 
 object SubscriptionMetadata {
   @scala.inline
-  def apply(): SubscriptionMetadata = {
+  def apply(
+    ackDeadlineSeconds: js.UndefOr[Double] = js.undefined,
+    deadLetterPolicy: IDeadLetterPolicy = null,
+    enableMessageOrdering: js.UndefOr[Boolean] = js.undefined,
+    expirationPolicy: IExpirationPolicy = null,
+    labels: StringDictionary[String] = null,
+    messageRetentionDuration: IDuration | Double = null,
+    name: String = null,
+    oidcToken: OidcToken = null,
+    pushConfig: IPushConfig = null,
+    pushEndpoint: String = null,
+    retainAckedMessages: js.UndefOr[Boolean] = js.undefined,
+    topic: String = null
+  ): SubscriptionMetadata = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ackDeadlineSeconds)) __obj.updateDynamic("ackDeadlineSeconds")(ackDeadlineSeconds.get.asInstanceOf[js.Any])
+    if (deadLetterPolicy != null) __obj.updateDynamic("deadLetterPolicy")(deadLetterPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableMessageOrdering)) __obj.updateDynamic("enableMessageOrdering")(enableMessageOrdering.get.asInstanceOf[js.Any])
+    if (expirationPolicy != null) __obj.updateDynamic("expirationPolicy")(expirationPolicy.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (messageRetentionDuration != null) __obj.updateDynamic("messageRetentionDuration")(messageRetentionDuration.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (oidcToken != null) __obj.updateDynamic("oidcToken")(oidcToken.asInstanceOf[js.Any])
+    if (pushConfig != null) __obj.updateDynamic("pushConfig")(pushConfig.asInstanceOf[js.Any])
+    if (pushEndpoint != null) __obj.updateDynamic("pushEndpoint")(pushEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined(retainAckedMessages)) __obj.updateDynamic("retainAckedMessages")(retainAckedMessages.get.asInstanceOf[js.Any])
+    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscriptionMetadata]
   }
-  @scala.inline
-  implicit class SubscriptionMetadataOps[Self <: SubscriptionMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAckDeadlineSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAckDeadlineSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ackDeadlineSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadLetterPolicy(value: IDeadLetterPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadLetterPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableMessageOrdering(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMessageOrdering")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableMessageOrdering: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMessageOrdering")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationPolicy(value: IExpirationPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageRetentionDuration(value: IDuration | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageRetentionDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRetentionDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOidcToken(value: OidcToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOidcToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPushConfig(value: IPushConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPushEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetainAckedMessages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainAckedMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainAckedMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retainAckedMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

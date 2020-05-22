@@ -7,21 +7,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a Windows Runtime output stream for an IStream base implementation. */
-@js.native
 trait OutputStreamOverStream extends js.Object {
   /** Closes the current stream and releases system resources. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Flushes data asynchronously in a sequential stream.
     * @return The stream flush operation.
     */
-  def flushAsync(): IPromiseWithIAsyncOperation[Boolean] = js.native
+  def flushAsync(): IPromiseWithIAsyncOperation[Boolean]
   /**
     * Writes data asynchronously in a sequential stream.
     * @param buffer The buffer into which the asynchronous writer operation writes.
     * @return The byte writer operation.
     */
-  def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double] = js.native
+  def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double]
 }
 
 object OutputStreamOverStream {
@@ -34,31 +33,5 @@ object OutputStreamOverStream {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), flushAsync = js.Any.fromFunction0(flushAsync), writeAsync = js.Any.fromFunction1(writeAsync))
     __obj.asInstanceOf[OutputStreamOverStream]
   }
-  @scala.inline
-  implicit class OutputStreamOverStreamOps[Self <: OutputStreamOverStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFlushAsync(value: () => IPromiseWithIAsyncOperation[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWriteAsync(value: IBuffer => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

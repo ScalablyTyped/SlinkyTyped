@@ -1,7 +1,6 @@
 package typingsSlinky.meteor.mod.Accounts
 
-import typingsSlinky.meteor.Meteor.Connection
-import typingsSlinky.meteor.Meteor.User
+import typingsSlinky.meteor.anon.Connection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object onLogout extends js.Object {
   def apply(func: js.Function): Unit = js.native
-  def apply(func: js.Function2[/* user */ User, /* connection */ Connection, Unit]): Unit = js.native
+  def apply(func: js.Function1[/* options */ Connection, Unit]): Unit = js.native
 }
 

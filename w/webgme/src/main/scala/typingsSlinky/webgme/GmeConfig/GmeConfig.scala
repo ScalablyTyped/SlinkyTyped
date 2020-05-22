@@ -19,31 +19,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GmeConfig extends js.Object {
   /**  Add-on related settings. */
-  var addOns: BasePaths = js.native
+  var addOns: BasePaths
   /**  Authentication related settings. */
-  var authentication: AllowGuests = js.native
+  var authentication: AllowGuests
   /** Bin script related settings. */
-  var bin: Log = js.native
+  var bin: Log
   /** Blob related settings. */
-  var blob: ObjectBlob = js.native
+  var blob: ObjectBlob
   /** Client related settings. */
-  var client: ClientOptions = js.native
+  var client: ClientOptions
   /** Client related settings. */
-  var core: EnableCustomConstraints = js.native
+  var core: EnableCustomConstraints
   /**
     * If true will add extra debug messages and also 
     * enable experimental Visualizers, (URL equivalent (only on client side) ?debug=true).
     */
-  var debug: Boolean = js.native
+  var debug: Boolean
   /** Executor related settings. */
-  var executor: ClearOldDataAtStartUp = js.native
+  var executor: ClearOldDataAtStartUp
   /** Mongo database related settings. */
-  var mongo: Uri = js.native
+  var mongo: Uri
   /** Plugin related settings. */
-  var plugin: AllowBrowserExecution = js.native
+  var plugin: AllowBrowserExecution
   /** Additional paths to for requirejs. 
     * Custom paths that will be added to the 
     * paths of requirejs configuration. 
@@ -51,26 +50,26 @@ trait GmeConfig extends js.Object {
     * i.e. {myPath: './aPath/aSubPath/'} 
     * will expose files via <host>/myPath/someFile.js.
     */
-  var requirejsPaths: Dictionary[String] = js.native
+  var requirejsPaths: Dictionary[String]
   /** REST related settings. */
-  var rest: Components = js.native
+  var rest: Components
   /** Seed related settings. */
-  var seedProjects: AllowDuplication = js.native
+  var seedProjects: AllowDuplication
   /** Server related settings. */
-  var server: BehindSecureProxy = js.native
+  var server: BehindSecureProxy
   /** Socket IO related settings. */
-  var socketIO: typingsSlinky.webgme.anon.ClientOptions = js.native
+  var socketIO: typingsSlinky.webgme.anon.ClientOptions
   /** Storage related settings. */
-  var storage: AutoMerge = js.native
+  var storage: AutoMerge
   /** Visualization related settings. */
-  var visualization: DecoratorPaths = js.native
-  var webhooks: Manager = js.native
+  var visualization: DecoratorPaths
+  var webhooks: Manager
   /**
     *  Serialize the configuration.
     * @returns {*} 
     * @memberOf GmeConfig
     */
-  def serialize(): js.Any = js.native
+  def serialize(): js.Any
 }
 
 object GmeConfig {
@@ -99,127 +98,5 @@ object GmeConfig {
     val __obj = js.Dynamic.literal(addOns = addOns.asInstanceOf[js.Any], authentication = authentication.asInstanceOf[js.Any], bin = bin.asInstanceOf[js.Any], blob = blob.asInstanceOf[js.Any], client = client.asInstanceOf[js.Any], core = core.asInstanceOf[js.Any], debug = debug.asInstanceOf[js.Any], executor = executor.asInstanceOf[js.Any], mongo = mongo.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any], requirejsPaths = requirejsPaths.asInstanceOf[js.Any], rest = rest.asInstanceOf[js.Any], seedProjects = seedProjects.asInstanceOf[js.Any], serialize = js.Any.fromFunction0(serialize), server = server.asInstanceOf[js.Any], socketIO = socketIO.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any], visualization = visualization.asInstanceOf[js.Any], webhooks = webhooks.asInstanceOf[js.Any])
     __obj.asInstanceOf[GmeConfig]
   }
-  @scala.inline
-  implicit class GmeConfigOps[Self <: typingsSlinky.webgme.GmeConfig.GmeConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddOns(value: BasePaths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthentication(value: AllowGuests): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBin(value: Log): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBlob(value: ObjectBlob): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClient(value: ClientOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCore(value: EnableCustomConstraints): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("core")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecutor(value: ClearOldDataAtStartUp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMongo(value: Uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mongo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlugin(value: AllowBrowserExecution): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequirejsPaths(value: Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requirejsPaths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRest(value: Components): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeedProjects(value: AllowDuplication): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seedProjects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSerialize(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withServer(value: BehindSecureProxy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSocketIO(value: typingsSlinky.webgme.anon.ClientOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("socketIO")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStorage(value: AutoMerge): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisualization(value: DecoratorPaths): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWebhooks(value: Manager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webhooks")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

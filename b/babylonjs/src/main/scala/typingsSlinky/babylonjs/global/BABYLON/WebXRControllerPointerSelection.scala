@@ -18,6 +18,11 @@ class WebXRControllerPointerSelection protected ()
     _xrSessionManager: typingsSlinky.babylonjs.BABYLON.WebXRSessionManager,
     _options: IWebXRControllerPointerSelectionOptions
   ) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

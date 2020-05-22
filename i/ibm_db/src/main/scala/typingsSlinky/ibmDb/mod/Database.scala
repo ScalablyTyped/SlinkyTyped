@@ -12,7 +12,8 @@ class Database () extends Options {
   var conn: js.UndefOr[ODBCConnection] = js.native
   @JSName("connectTimeout")
   var connectTimeout_Database: Double | Null = js.native
-  var connected: Boolean = js.native
+  @JSName("connected")
+  var connected_Database: Boolean = js.native
   @JSName("fetchMode")
   var fetchMode_Database: Double | Null = js.native
   @JSName("odbc")

@@ -9,9 +9,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("crypto", "KeyObject")
 @js.native
-class KeyObject protected ()
-  extends CipherKey
-     with KeyLike {
+class KeyObject protected () extends _KeyLike {
   /**
     * For asymmetric keys, this property represents the size of the embedded key in
     * bytes. This property is `undefined` for symmetric keys.

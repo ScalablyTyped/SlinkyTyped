@@ -1,5 +1,6 @@
 package typingsSlinky.inquirer.mod
 
+import typingsSlinky.inquirer.inquirerStrings.choice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,45 +11,31 @@ import scala.scalajs.js.annotation._
   * @template T
   * The type of the answers.
   */
-@js.native
 trait ListChoiceOptions[T /* <: Answers */] extends ChoiceOptions[T] {
   /**
     * A value indicating whether the choice is disabled.
     */
-  var disabled: js.UndefOr[DynamicQuestionProperty[Boolean | String, T]] = js.native
+  var disabled: js.UndefOr[DynamicQuestionProperty[Boolean | String, T]] = js.undefined
 }
 
 object ListChoiceOptions {
   @scala.inline
-  def apply[T](): ListChoiceOptions[T] = {
+  def apply[T](
+    disabled: DynamicQuestionProperty[Boolean | String, T] = null,
+    extra: js.Any = null,
+    name: String = null,
+    short: String = null,
+    `type`: choice = null,
+    value: js.Any = null
+  ): ListChoiceOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (short != null) __obj.updateDynamic("short")(short.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListChoiceOptions[T]]
   }
-  @scala.inline
-  implicit class ListChoiceOptionsOps[Self[t] <: ListChoiceOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withDisabledFunction1(value: T => Boolean | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: DynamicQuestionProperty[Boolean | String, T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

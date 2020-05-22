@@ -9,127 +9,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GrommetProps extends js.Object {
-  var background: js.UndefOr[BackgroundType] = js.native
-  var cssVars: js.UndefOr[Boolean] = js.native
-  var dir: js.UndefOr[rtl] = js.native
-  var full: js.UndefOr[Boolean] = js.native
-  var plain: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[ThemeType] = js.native
-  var themeMode: js.UndefOr[dark | light] = js.native
-  var userAgent: js.UndefOr[String] = js.native
+  var background: js.UndefOr[BackgroundType] = js.undefined
+  var cssVars: js.UndefOr[Boolean] = js.undefined
+  var dir: js.UndefOr[rtl] = js.undefined
+  var full: js.UndefOr[Boolean] = js.undefined
+  var plain: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[ThemeType] = js.undefined
+  var themeMode: js.UndefOr[dark | light] = js.undefined
+  var userAgent: js.UndefOr[String] = js.undefined
 }
 
 object GrommetProps {
   @scala.inline
-  def apply(): GrommetProps = {
+  def apply(
+    background: BackgroundType = null,
+    cssVars: js.UndefOr[Boolean] = js.undefined,
+    dir: rtl = null,
+    full: js.UndefOr[Boolean] = js.undefined,
+    plain: js.UndefOr[Boolean] = js.undefined,
+    theme: ThemeType = null,
+    themeMode: dark | light = null,
+    userAgent: String = null
+  ): GrommetProps = {
     val __obj = js.Dynamic.literal()
+    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
+    if (!js.isUndefined(cssVars)) __obj.updateDynamic("cssVars")(cssVars.get.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (!js.isUndefined(full)) __obj.updateDynamic("full")(full.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (themeMode != null) __obj.updateDynamic("themeMode")(themeMode.asInstanceOf[js.Any])
+    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[GrommetProps]
   }
-  @scala.inline
-  implicit class GrommetPropsOps[Self <: GrommetProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackground(value: BackgroundType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssVars(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssVars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssVars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssVars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: rtl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFull(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlain(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: ThemeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThemeMode(value: dark | light): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThemeMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("themeMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserAgent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserAgent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

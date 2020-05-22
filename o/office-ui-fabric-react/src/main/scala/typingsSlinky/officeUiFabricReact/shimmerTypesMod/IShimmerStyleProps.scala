@@ -5,101 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IShimmerStyleProps extends js.Object {
   /** Optional CSS class name for the component attached to the root stylable area. */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /** Boolean flag to trigger fadeIn/fadeOut transition animation when content is loaded. */
-  var isDataLoaded: js.UndefOr[Boolean] = js.native
+  var isDataLoaded: js.UndefOr[Boolean] = js.undefined
   /** Color to be used as the main background color of Shimmer when not animating. */
-  var shimmerColor: js.UndefOr[String] = js.native
+  var shimmerColor: js.UndefOr[String] = js.undefined
   /** Tip color of the shimmer wave which gradually gets from and to `shimmerColor`. */
-  var shimmerWaveColor: js.UndefOr[String] = js.native
+  var shimmerWaveColor: js.UndefOr[String] = js.undefined
   /** Theme provided by High-Order Component. */
-  var theme: ITheme = js.native
+  var theme: ITheme
   /** Interval in milliseconds for the adeIn/fadeOut transition animation. */
-  var transitionAnimationInterval: js.UndefOr[Double] = js.native
+  var transitionAnimationInterval: js.UndefOr[Double] = js.undefined
 }
 
 object IShimmerStyleProps {
   @scala.inline
-  def apply(theme: ITheme): IShimmerStyleProps = {
+  def apply(
+    theme: ITheme,
+    className: String = null,
+    isDataLoaded: js.UndefOr[Boolean] = js.undefined,
+    shimmerColor: String = null,
+    shimmerWaveColor: String = null,
+    transitionAnimationInterval: js.UndefOr[Double] = js.undefined
+  ): IShimmerStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDataLoaded)) __obj.updateDynamic("isDataLoaded")(isDataLoaded.get.asInstanceOf[js.Any])
+    if (shimmerColor != null) __obj.updateDynamic("shimmerColor")(shimmerColor.asInstanceOf[js.Any])
+    if (shimmerWaveColor != null) __obj.updateDynamic("shimmerWaveColor")(shimmerWaveColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(transitionAnimationInterval)) __obj.updateDynamic("transitionAnimationInterval")(transitionAnimationInterval.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShimmerStyleProps]
   }
-  @scala.inline
-  implicit class IShimmerStylePropsOps[Self <: IShimmerStyleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTheme(value: ITheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDataLoaded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataLoaded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDataLoaded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDataLoaded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShimmerColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShimmerColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShimmerWaveColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerWaveColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShimmerWaveColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shimmerWaveColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionAnimationInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionAnimationInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionAnimationInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionAnimationInterval")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

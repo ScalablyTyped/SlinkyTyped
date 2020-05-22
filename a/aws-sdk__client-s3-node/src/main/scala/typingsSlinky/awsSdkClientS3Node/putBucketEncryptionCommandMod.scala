@@ -27,10 +27,17 @@ object putBucketEncryptionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutBucketEncryptionInput) = this()
+    /* CompleteClass */
+    override val input: PutBucketEncryptionInput = js.native
     val middlewareStack: MiddlewareStack[PutBucketEncryptionInput, PutBucketEncryptionOutput, Readable] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: S3ResolvedConfiguration
+    ): Handler[PutBucketEncryptionInput, PutBucketEncryptionOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[PutBucketEncryptionInput, PutBucketEncryptionOutput] = js.native
   }

@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme
 
-import typingsSlinky.devextreme.mod.DevExpress.ui.format
-import typingsSlinky.devextreme.mod.DevExpress.viz.VizTimeInterval
+import typingsSlinky.devextreme.mod.DevExpress.ui._format
+import typingsSlinky.devextreme.mod.DevExpress.viz._VizTimeInterval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -269,7 +269,7 @@ object devextremeStrings {
   sealed trait betweenLabels extends js.Object
   
   @js.native
-  sealed trait billions extends format
+  sealed trait billions extends _format
   
   @js.native
   sealed trait bing extends js.Object
@@ -440,7 +440,7 @@ object devextremeStrings {
   sealed trait ctrl extends js.Object
   
   @js.native
-  sealed trait currency extends format
+  sealed trait currency extends _format
   
   @js.native
   sealed trait custom extends js.Object
@@ -489,11 +489,11 @@ object devextremeStrings {
   
   @js.native
   sealed trait day
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
-  sealed trait dayOfWeek extends format
+  sealed trait dayOfWeek extends _format
   
   @js.native
   sealed trait days extends js.Object
@@ -508,7 +508,7 @@ object devextremeStrings {
   sealed trait decade extends js.Object
   
   @js.native
-  sealed trait decimal_ extends format
+  sealed trait decimal_ extends _format
   
   @js.native
   sealed trait decision extends js.Object
@@ -715,7 +715,7 @@ object devextremeStrings {
   sealed trait expand extends js.Object
   
   @js.native
-  sealed trait exponential extends format
+  sealed trait exponential extends _format
   
   @js.native
   sealed trait export extends js.Object
@@ -769,7 +769,7 @@ object devextremeStrings {
   sealed trait fixed extends js.Object
   
   @js.native
-  sealed trait fixedPoint extends format
+  sealed trait fixedPoint extends _format
   
   @js.native
   sealed trait flip extends js.Object
@@ -911,8 +911,8 @@ object devextremeStrings {
   
   @js.native
   sealed trait hour
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
   sealed trait hours extends js.Object
@@ -1011,7 +1011,7 @@ object devextremeStrings {
   sealed trait landscape extends js.Object
   
   @js.native
-  sealed trait largeNumber extends format
+  sealed trait largeNumber extends _format
   
   @js.native
   sealed trait last extends js.Object
@@ -1098,13 +1098,13 @@ object devextremeStrings {
   sealed trait longDash extends js.Object
   
   @js.native
-  sealed trait longDate extends format
+  sealed trait longDate extends _format
   
   @js.native
-  sealed trait longDateLongTime extends format
+  sealed trait longDateLongTime extends _format
   
   @js.native
-  sealed trait longTime extends format
+  sealed trait longTime extends _format
   
   @js.native
   sealed trait low extends js.Object
@@ -1158,34 +1158,34 @@ object devextremeStrings {
   sealed trait miller extends js.Object
   
   @js.native
-  sealed trait millions extends format
+  sealed trait millions extends _format
   
   @js.native
   sealed trait millisecond
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
   sealed trait min extends js.Object
   
   @js.native
   sealed trait minute
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
   sealed trait minutes extends js.Object
   
   @js.native
   sealed trait month
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
-  sealed trait monthAndDay extends format
+  sealed trait monthAndDay extends _format
   
   @js.native
-  sealed trait monthAndYear extends format
+  sealed trait monthAndYear extends _format
   
   @js.native
   sealed trait months extends js.Object
@@ -1350,7 +1350,7 @@ object devextremeStrings {
   sealed trait pentagon extends js.Object
   
   @js.native
-  sealed trait percent extends format
+  sealed trait percent extends _format
   
   @js.native
   sealed trait percentOfColumnGrandTotal extends js.Object
@@ -1414,11 +1414,11 @@ object devextremeStrings {
   
   @js.native
   sealed trait quarter
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
-  sealed trait quarterAndYear extends format
+  sealed trait quarterAndYear extends _format
   
   @js.native
   sealed trait quarters extends js.Object
@@ -1533,8 +1533,8 @@ object devextremeStrings {
   
   @js.native
   sealed trait second
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
   sealed trait select extends js.Object
@@ -1570,13 +1570,13 @@ object devextremeStrings {
   sealed trait shift extends js.Object
   
   @js.native
-  sealed trait shortDate extends format
+  sealed trait shortDate extends _format
   
   @js.native
-  sealed trait shortDateShortTime extends format
+  sealed trait shortDateShortTime extends _format
   
   @js.native
-  sealed trait shortTime extends format
+  sealed trait shortTime extends _format
   
   @js.native
   sealed trait showGrid extends js.Object
@@ -1783,7 +1783,7 @@ object devextremeStrings {
   sealed trait texts extends js.Object
   
   @js.native
-  sealed trait thousands extends format
+  sealed trait thousands extends _format
   
   @js.native
   sealed trait thumbnails extends js.Object
@@ -1837,7 +1837,7 @@ object devextremeStrings {
   sealed trait triangleUp extends js.Object
   
   @js.native
-  sealed trait trillions extends format
+  sealed trait trillions extends _format
   
   @js.native
   sealed trait twoColorNeedle extends js.Object
@@ -1912,7 +1912,7 @@ object devextremeStrings {
   sealed trait waved extends js.Object
   
   @js.native
-  sealed trait week extends VizTimeInterval
+  sealed trait week extends _VizTimeInterval
   
   @js.native
   sealed trait weeks extends js.Object
@@ -1934,8 +1934,8 @@ object devextremeStrings {
   
   @js.native
   sealed trait year
-    extends VizTimeInterval
-       with format
+    extends _VizTimeInterval
+       with _format
   
   @js.native
   sealed trait years extends js.Object

@@ -6,55 +6,32 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait GenericTypeAnnotation_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait GenericTypeAnnotation_
   extends Flow
      with BaseNode
      with FlowType {
-  var id: Identifier_ | QualifiedTypeIdentifier_ = js.native
-  var typeParameters: TypeParameterInstantiation_ | Null = js.native
+  var id: Identifier_ | QualifiedTypeIdentifier_
+  var typeParameters: TypeParameterInstantiation_ | Null
   @JSName("type")
-  var type_GenericTypeAnnotation_ : GenericTypeAnnotation = js.native
+  var type_GenericTypeAnnotation_ : GenericTypeAnnotation
 }
 
 object GenericTypeAnnotation_ {
   @scala.inline
-  def apply(id: Identifier_ | QualifiedTypeIdentifier_, `type`: GenericTypeAnnotation): GenericTypeAnnotation_ = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+  def apply(
+    id: Identifier_ | QualifiedTypeIdentifier_,
+    `type`: GenericTypeAnnotation,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterInstantiation_ = null
+  ): GenericTypeAnnotation_ = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenericTypeAnnotation_]
   }
-  @scala.inline
-  implicit class GenericTypeAnnotation_Ops[Self <: GenericTypeAnnotation_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Identifier_ | QualifiedTypeIdentifier_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: GenericTypeAnnotation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TypeParameterInstantiation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

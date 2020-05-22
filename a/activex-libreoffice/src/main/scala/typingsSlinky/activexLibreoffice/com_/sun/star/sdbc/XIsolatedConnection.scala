@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdb.DataSource
   * @since OOo 1.1.2
   */
-@js.native
 trait XIsolatedConnection extends XInterface {
   /**
     * attempts to establish a database connection.
@@ -24,7 +23,7 @@ trait XIsolatedConnection extends XInterface {
     * @returns A connection which is not shared.
     * @throws com::sun::star::sdbc::SQLException when an error occurs.
     */
-  def getIsolatedConnection(user: String, password: String): XConnection = js.native
+  def getIsolatedConnection(user: String, password: String): XConnection
   /**
     * attempts to establish a database connection.
     *
@@ -33,7 +32,7 @@ trait XIsolatedConnection extends XInterface {
     * @returns A connection which is not shared.
     * @throws com::sun::star::sdbc::SQLException when an error occurs.
     */
-  def getIsolatedConnectionWithCompletion(handler: XInteractionHandler): XConnection = js.native
+  def getIsolatedConnectionWithCompletion(handler: XInteractionHandler): XConnection
 }
 
 object XIsolatedConnection {
@@ -48,25 +47,5 @@ object XIsolatedConnection {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getIsolatedConnection = js.Any.fromFunction2(getIsolatedConnection), getIsolatedConnectionWithCompletion = js.Any.fromFunction1(getIsolatedConnectionWithCompletion), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XIsolatedConnection]
   }
-  @scala.inline
-  implicit class XIsolatedConnectionOps[Self <: XIsolatedConnection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetIsolatedConnection(value: (String, String) => XConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsolatedConnection")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetIsolatedConnectionWithCompletion(value: XInteractionHandler => XConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsolatedConnectionWithCompletion")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

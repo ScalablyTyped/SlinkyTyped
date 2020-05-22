@@ -22,41 +22,14 @@ trait SqlInjectionMatchSet extends js.Object {
 
 object SqlInjectionMatchSet {
   @scala.inline
-  def apply(SqlInjectionMatchSetId: ResourceId, SqlInjectionMatchTuples: SqlInjectionMatchTuples): SqlInjectionMatchSet = {
+  def apply(
+    SqlInjectionMatchSetId: ResourceId,
+    SqlInjectionMatchTuples: SqlInjectionMatchTuples,
+    Name: ResourceName = null
+  ): SqlInjectionMatchSet = {
     val __obj = js.Dynamic.literal(SqlInjectionMatchSetId = SqlInjectionMatchSetId.asInstanceOf[js.Any], SqlInjectionMatchTuples = SqlInjectionMatchTuples.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SqlInjectionMatchSet]
   }
-  @scala.inline
-  implicit class SqlInjectionMatchSetOps[Self <: SqlInjectionMatchSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSqlInjectionMatchSetId(value: ResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlInjectionMatchSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSqlInjectionMatchTuples(value: SqlInjectionMatchTuples): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlInjectionMatchTuples")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: ResourceName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

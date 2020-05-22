@@ -10,7 +10,7 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.square
 import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorPickerProps
 import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorPickerStyleProps
 import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorPickerStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
@@ -49,7 +49,7 @@ object SwatchColorPicker {
     @scala.inline
     def focusOnHover(value: Boolean): this.type = set("focusOnHover", value.asInstanceOf[js.Any])
     @scala.inline
-    def getColorGridCellStylesFunction1(value: IColorPickerGridCellStyleProps => Partial[IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", js.Any.fromFunction1(value))
+    def getColorGridCellStylesFunction1(value: IColorPickerGridCellStyleProps => DeepPartial[IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", js.Any.fromFunction1(value))
     @scala.inline
     def getColorGridCellStyles(value: IStyleFunctionOrObject[IColorPickerGridCellStyleProps, IColorPickerGridCellStyles]): this.type = set("getColorGridCellStyles", value.asInstanceOf[js.Any])
     @scala.inline
@@ -73,7 +73,7 @@ object SwatchColorPicker {
     @scala.inline
     def shouldFocusCircularNavigate(value: Boolean): this.type = set("shouldFocusCircularNavigate", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: ISwatchColorPickerStyleProps => Partial[ISwatchColorPickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: ISwatchColorPickerStyleProps => DeepPartial[ISwatchColorPickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[ISwatchColorPickerStyleProps, ISwatchColorPickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

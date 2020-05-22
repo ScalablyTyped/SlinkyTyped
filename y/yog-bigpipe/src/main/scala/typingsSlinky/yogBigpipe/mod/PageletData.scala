@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PageletData extends js.Object {
-  var container: String = js.native
-  var css: js.Array[String] = js.native
-  var html: String = js.native
-  var id: String = js.native
+  var container: String
+  var css: js.Array[String]
+  var html: String
+  var id: String
   @JSName("js")
-  var js_ : js.Array[String] = js.native
-  var reqID: String = js.native
-  var scripts: js.Array[String] = js.native
-  var styles: js.Array[String] = js.native
+  var js_ : js.Array[String]
+  var reqID: String
+  var scripts: js.Array[String]
+  var styles: js.Array[String]
 }
 
 object PageletData {
@@ -33,61 +32,5 @@ object PageletData {
     __obj.updateDynamic("js")(js_.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageletData]
   }
-  @scala.inline
-  implicit class PageletDataOps[Self <: PageletData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCss(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtml(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJs_(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReqID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reqID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScripts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

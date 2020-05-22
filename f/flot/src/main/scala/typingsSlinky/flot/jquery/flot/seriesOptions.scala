@@ -4,167 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait seriesOptions extends js.Object {
-  var bars: js.UndefOr[barsOptions] = js.native
-  var clickable: js.UndefOr[Boolean] = js.native
-  var color: js.UndefOr[js.Any] = js.native
-  var highlightColor: js.UndefOr[js.Any] = js.native
-  var hoverable: js.UndefOr[Boolean] = js.native
+  var bars: js.UndefOr[barsOptions] = js.undefined
+  var clickable: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[js.Any] = js.undefined
+  var highlightColor: js.UndefOr[js.Any] = js.undefined
+  var hoverable: js.UndefOr[Boolean] = js.undefined
               // color or number
-  var label: js.UndefOr[String] = js.native
-  var lines: js.UndefOr[linesOptions] = js.native
-  var points: js.UndefOr[pointsOptions] = js.native
-  var shadowSize: js.UndefOr[Double] = js.native
-  var xaxis: js.UndefOr[Double] = js.native
-  var yaxis: js.UndefOr[Double] = js.native
+  var label: js.UndefOr[String] = js.undefined
+  var lines: js.UndefOr[linesOptions] = js.undefined
+  var points: js.UndefOr[pointsOptions] = js.undefined
+  var shadowSize: js.UndefOr[Double] = js.undefined
+  var xaxis: js.UndefOr[Double] = js.undefined
+  var yaxis: js.UndefOr[Double] = js.undefined
 }
 
 object seriesOptions {
   @scala.inline
-  def apply(): seriesOptions = {
+  def apply(
+    bars: barsOptions = null,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    color: js.Any = null,
+    highlightColor: js.Any = null,
+    hoverable: js.UndefOr[Boolean] = js.undefined,
+    label: String = null,
+    lines: linesOptions = null,
+    points: pointsOptions = null,
+    shadowSize: js.UndefOr[Double] = js.undefined,
+    xaxis: js.UndefOr[Double] = js.undefined,
+    yaxis: js.UndefOr[Double] = js.undefined
+  ): seriesOptions = {
     val __obj = js.Dynamic.literal()
+    if (bars != null) __obj.updateDynamic("bars")(bars.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (highlightColor != null) __obj.updateDynamic("highlightColor")(highlightColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverable)) __obj.updateDynamic("hoverable")(hoverable.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
+    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (!js.isUndefined(shadowSize)) __obj.updateDynamic("shadowSize")(shadowSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xaxis)) __obj.updateDynamic("xaxis")(xaxis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yaxis)) __obj.updateDynamic("yaxis")(yaxis.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[seriesOptions]
   }
-  @scala.inline
-  implicit class seriesOptionsOps[Self <: seriesOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBars(value: barsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlightColor(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlightColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLines(value: linesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoints(value: pointsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadowSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadowSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXaxis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xaxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXaxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xaxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYaxis(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yaxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYaxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yaxis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

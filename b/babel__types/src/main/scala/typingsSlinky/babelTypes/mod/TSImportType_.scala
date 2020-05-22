@@ -6,67 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TSImportType_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSImportType_
   extends TSType
      with BaseNode {
-  var argument: StringLiteral_ = js.native
-  var qualifier: TSEntityName | Null = js.native
-  var typeParameters: TSTypeParameterInstantiation_ | Null = js.native
+  var argument: StringLiteral_
+  var qualifier: TSEntityName | Null
+  var typeParameters: TSTypeParameterInstantiation_ | Null
   @JSName("type")
-  var type_TSImportType_ : TSImportType = js.native
+  var type_TSImportType_ : TSImportType
 }
 
 object TSImportType_ {
   @scala.inline
-  def apply(argument: StringLiteral_, `type`: TSImportType): TSImportType_ = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
+  def apply(
+    argument: StringLiteral_,
+    `type`: TSImportType,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    qualifier: TSEntityName = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TSTypeParameterInstantiation_ = null
+  ): TSImportType_ = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], qualifier = qualifier.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any], typeParameters = typeParameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSImportType_]
   }
-  @scala.inline
-  implicit class TSImportType_Ops[Self <: TSImportType_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgument(value: StringLiteral_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TSImportType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQualifier(value: TSEntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQualifierNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(null)
-        ret
-    }
-    @scala.inline
-    def withTypeParameters(value: TSTypeParameterInstantiation_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeParametersNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
-        ret
-    }
-  }
-  
 }
 

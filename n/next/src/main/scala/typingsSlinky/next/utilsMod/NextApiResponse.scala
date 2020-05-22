@@ -7,6 +7,7 @@ import typingsSlinky.next.nextStrings.error
 import typingsSlinky.next.nextStrings.finish
 import typingsSlinky.next.nextStrings.pipe
 import typingsSlinky.next.nextStrings.unpipe
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.anon.End
@@ -69,7 +70,7 @@ trait NextApiResponse[T] extends js.Object {
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _write(
     chunk: js.Any,
-    encoding: String,
+    encoding: BufferEncoding,
     callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -122,14 +123,14 @@ trait NextApiResponse[T] extends js.Object {
   def end(cb: js.Function0[Unit]): Unit = js.native
   def end(chunk: js.Any): Unit = js.native
   def end(chunk: js.Any, cb: js.Function0[Unit]): Unit = js.native
-  def end(chunk: js.Any, encoding: String): Unit = js.native
-  def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
+  def end(chunk: js.Any, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   def end(data: String): Unit = js.native
   def end(data: String, cb: js.Function0[Unit]): Unit = js.native
   def end(data: js.typedarray.Uint8Array): Unit = js.native
   def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: String, encoding: String): Unit = js.native
-  def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: String, encoding: BufferEncoding): Unit = js.native
+  def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   def eventNames(): js.Array[String | js.Symbol] = js.native
   def flushHeaders(): Unit = js.native
   def getHeader(name: String): js.UndefOr[Double | String | js.Array[String]] = js.native
@@ -221,7 +222,7 @@ trait NextApiResponse[T] extends js.Object {
   def removeListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
-  def setDefaultEncoding(encoding: String): this.type = js.native
+  def setDefaultEncoding(encoding: BufferEncoding): this.type = js.native
   def setHeader(name: String, value: String): Unit = js.native
   def setHeader(name: String, value: js.Array[String]): Unit = js.native
   def setHeader(name: String, value: Double): Unit = js.native
@@ -243,10 +244,18 @@ trait NextApiResponse[T] extends js.Object {
   def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any): Boolean = js.native
   def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
-  def write(str: String, encoding: String): Boolean = js.native
-  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    chunk: js.Any,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
+  def write(str: String, encoding: BufferEncoding): Boolean = js.native
+  def write(
+    str: String,
+    encoding: BufferEncoding,
+    cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
   // https://github.com/nodejs/node/blob/master/test/parallel/test-http-write-callbacks.js#L53
   // no args in writeContinue callback
   def writeContinue(): Unit = js.native

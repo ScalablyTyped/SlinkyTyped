@@ -6,9 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * Use with <Attribute.value> to write text right to left.
-			 * @deprecated Use the [Titanium.UI.ATTRIBUTE_WRITING_DIRECTION_RIGHT_TO_LEFT](Titanium.UI.ATTRIBUTE_WRITING_DIRECTION_RIGHT_TO_LEFT) constant instead (without the iOS namespace).
-			 */
+  * Use with <Attribute.value> to write text right to left.
+  * @deprecated Use the [Titanium.UI.ATTRIBUTE_WRITING_DIRECTION_RIGHT_TO_LEFT](Titanium.UI.ATTRIBUTE_WRITING_DIRECTION_RIGHT_TO_LEFT) constant instead (without the iOS namespace).
+  */
 @JSGlobal("Titanium.UI.iOS.ATTRIBUTE_WRITING_DIRECTION_RIGHT_TO_LEFT")
 @js.native
 object ATTRIBUTE_WRITING_DIRECTION_RIGHT_TO_LEFT

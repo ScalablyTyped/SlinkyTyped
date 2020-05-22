@@ -77,209 +77,42 @@ trait SchemaRequest extends js.Object {
 
 object SchemaRequest {
   @scala.inline
-  def apply(): SchemaRequest = {
+  def apply(
+    createNamedRange: SchemaCreateNamedRangeRequest = null,
+    createParagraphBullets: SchemaCreateParagraphBulletsRequest = null,
+    deleteContentRange: SchemaDeleteContentRangeRequest = null,
+    deleteNamedRange: SchemaDeleteNamedRangeRequest = null,
+    deleteParagraphBullets: SchemaDeleteParagraphBulletsRequest = null,
+    deletePositionedObject: SchemaDeletePositionedObjectRequest = null,
+    deleteTableColumn: SchemaDeleteTableColumnRequest = null,
+    deleteTableRow: SchemaDeleteTableRowRequest = null,
+    insertInlineImage: SchemaInsertInlineImageRequest = null,
+    insertPageBreak: SchemaInsertPageBreakRequest = null,
+    insertTable: SchemaInsertTableRequest = null,
+    insertTableRow: SchemaInsertTableRowRequest = null,
+    insertText: SchemaInsertTextRequest = null,
+    replaceAllText: SchemaReplaceAllTextRequest = null,
+    updateParagraphStyle: SchemaUpdateParagraphStyleRequest = null,
+    updateTextStyle: SchemaUpdateTextStyleRequest = null
+  ): SchemaRequest = {
     val __obj = js.Dynamic.literal()
+    if (createNamedRange != null) __obj.updateDynamic("createNamedRange")(createNamedRange.asInstanceOf[js.Any])
+    if (createParagraphBullets != null) __obj.updateDynamic("createParagraphBullets")(createParagraphBullets.asInstanceOf[js.Any])
+    if (deleteContentRange != null) __obj.updateDynamic("deleteContentRange")(deleteContentRange.asInstanceOf[js.Any])
+    if (deleteNamedRange != null) __obj.updateDynamic("deleteNamedRange")(deleteNamedRange.asInstanceOf[js.Any])
+    if (deleteParagraphBullets != null) __obj.updateDynamic("deleteParagraphBullets")(deleteParagraphBullets.asInstanceOf[js.Any])
+    if (deletePositionedObject != null) __obj.updateDynamic("deletePositionedObject")(deletePositionedObject.asInstanceOf[js.Any])
+    if (deleteTableColumn != null) __obj.updateDynamic("deleteTableColumn")(deleteTableColumn.asInstanceOf[js.Any])
+    if (deleteTableRow != null) __obj.updateDynamic("deleteTableRow")(deleteTableRow.asInstanceOf[js.Any])
+    if (insertInlineImage != null) __obj.updateDynamic("insertInlineImage")(insertInlineImage.asInstanceOf[js.Any])
+    if (insertPageBreak != null) __obj.updateDynamic("insertPageBreak")(insertPageBreak.asInstanceOf[js.Any])
+    if (insertTable != null) __obj.updateDynamic("insertTable")(insertTable.asInstanceOf[js.Any])
+    if (insertTableRow != null) __obj.updateDynamic("insertTableRow")(insertTableRow.asInstanceOf[js.Any])
+    if (insertText != null) __obj.updateDynamic("insertText")(insertText.asInstanceOf[js.Any])
+    if (replaceAllText != null) __obj.updateDynamic("replaceAllText")(replaceAllText.asInstanceOf[js.Any])
+    if (updateParagraphStyle != null) __obj.updateDynamic("updateParagraphStyle")(updateParagraphStyle.asInstanceOf[js.Any])
+    if (updateTextStyle != null) __obj.updateDynamic("updateTextStyle")(updateTextStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequest]
   }
-  @scala.inline
-  implicit class SchemaRequestOps[Self <: SchemaRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateNamedRange(value: SchemaCreateNamedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createNamedRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateNamedRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createNamedRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateParagraphBullets(value: SchemaCreateParagraphBulletsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createParagraphBullets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateParagraphBullets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createParagraphBullets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteContentRange(value: SchemaDeleteContentRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteContentRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteContentRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteContentRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteNamedRange(value: SchemaDeleteNamedRangeRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteNamedRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteNamedRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteNamedRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteParagraphBullets(value: SchemaDeleteParagraphBulletsRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteParagraphBullets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteParagraphBullets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteParagraphBullets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeletePositionedObject(value: SchemaDeletePositionedObjectRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletePositionedObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletePositionedObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletePositionedObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteTableColumn(value: SchemaDeleteTableColumnRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTableColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteTableColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTableColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteTableRow(value: SchemaDeleteTableRowRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTableRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteTableRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTableRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertInlineImage(value: SchemaInsertInlineImageRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertInlineImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertInlineImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertInlineImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertPageBreak(value: SchemaInsertPageBreakRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertPageBreak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertPageBreak: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertPageBreak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertTable(value: SchemaInsertTableRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertTableRow(value: SchemaInsertTableRowRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTableRow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertTableRow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTableRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsertText(value: SchemaInsertTextRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplaceAllText(value: SchemaReplaceAllTextRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplaceAllText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceAllText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateParagraphStyle(value: SchemaUpdateParagraphStyleRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateParagraphStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateParagraphStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateParagraphStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTextStyle(value: SchemaUpdateTextStyleRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTextStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTextStyle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,36 +10,15 @@ import scala.scalajs.js.annotation._
   *
   * See [Messaging in Jupyter](https://jupyter-client.readthedocs.io/en/latest/messaging.html#execution-results).
   */
-@js.native
 trait IExecuteCount extends js.Object {
-  var execution_count: ExecutionCount = js.native
+  var execution_count: ExecutionCount
 }
 
 object IExecuteCount {
   @scala.inline
-  def apply(): IExecuteCount = {
-    val __obj = js.Dynamic.literal()
+  def apply(execution_count: ExecutionCount = null.asInstanceOf[ExecutionCount]): IExecuteCount = {
+    val __obj = js.Dynamic.literal(execution_count = execution_count.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExecuteCount]
   }
-  @scala.inline
-  implicit class IExecuteCountOps[Self <: IExecuteCount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecution_count(value: ExecutionCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecution_countNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execution_count")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
   * Specifies how to coerce data returned or set by the invoked method.
   *
   * @remarks
-  * 
+  *
   * PowerPoint supports only `Office.CoercionType.Text`, `Office.CoercionType.Image`, `Office.CoercionType.SlideRange`, and `Office.CoercionType.XmlSvg`.
-  * 
+  *
   * Project supports only `Office.CoercionType.Text`.
   */
 @JSGlobal("Office.CoercionType")

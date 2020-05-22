@@ -6,144 +6,40 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a MessageOptions. */
-@js.native
 trait IMessageOptions extends js.Object {
   /** MessageOptions .google.api.resource */
   @JSName(".google.api.resource")
-  var DotgoogleDotapiDotresource: js.UndefOr[IResourceDescriptor | Null] = js.native
+  var DotgoogleDotapiDotresource: js.UndefOr[IResourceDescriptor | Null] = js.undefined
   /** MessageOptions deprecated */
-  var deprecated: js.UndefOr[Boolean | Null] = js.native
+  var deprecated: js.UndefOr[Boolean | Null] = js.undefined
   /** MessageOptions mapEntry */
-  var mapEntry: js.UndefOr[Boolean | Null] = js.native
+  var mapEntry: js.UndefOr[Boolean | Null] = js.undefined
   /** MessageOptions messageSetWireFormat */
-  var messageSetWireFormat: js.UndefOr[Boolean | Null] = js.native
+  var messageSetWireFormat: js.UndefOr[Boolean | Null] = js.undefined
   /** MessageOptions noStandardDescriptorAccessor */
-  var noStandardDescriptorAccessor: js.UndefOr[Boolean | Null] = js.native
+  var noStandardDescriptorAccessor: js.UndefOr[Boolean | Null] = js.undefined
   /** MessageOptions uninterpretedOption */
-  var uninterpretedOption: js.UndefOr[js.Array[IUninterpretedOption] | Null] = js.native
+  var uninterpretedOption: js.UndefOr[js.Array[IUninterpretedOption] | Null] = js.undefined
 }
 
 object IMessageOptions {
   @scala.inline
-  def apply(): IMessageOptions = {
+  def apply(
+    DotgoogleDotapiDotresource: js.UndefOr[Null | IResourceDescriptor] = js.undefined,
+    deprecated: js.UndefOr[Null | Boolean] = js.undefined,
+    mapEntry: js.UndefOr[Null | Boolean] = js.undefined,
+    messageSetWireFormat: js.UndefOr[Null | Boolean] = js.undefined,
+    noStandardDescriptorAccessor: js.UndefOr[Null | Boolean] = js.undefined,
+    uninterpretedOption: js.UndefOr[Null | js.Array[IUninterpretedOption]] = js.undefined
+  ): IMessageOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(DotgoogleDotapiDotresource)) __obj.updateDynamic(".google.api.resource")(DotgoogleDotapiDotresource.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
+    if (!js.isUndefined(mapEntry)) __obj.updateDynamic("mapEntry")(mapEntry.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageSetWireFormat)) __obj.updateDynamic("messageSetWireFormat")(messageSetWireFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(noStandardDescriptorAccessor)) __obj.updateDynamic("noStandardDescriptorAccessor")(noStandardDescriptorAccessor.asInstanceOf[js.Any])
+    if (!js.isUndefined(uninterpretedOption)) __obj.updateDynamic("uninterpretedOption")(uninterpretedOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMessageOptions]
   }
-  @scala.inline
-  implicit class IMessageOptionsOps[Self <: IMessageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDotgoogleDotapiDotresource(value: IResourceDescriptor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".google.api.resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotgoogleDotapiDotresource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".google.api.resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotgoogleDotapiDotresourceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic(".google.api.resource")(null)
-        ret
-    }
-    @scala.inline
-    def withDeprecated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecatedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(null)
-        ret
-    }
-    @scala.inline
-    def withMapEntry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapEntry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapEntry")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapEntryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapEntry")(null)
-        ret
-    }
-    @scala.inline
-    def withMessageSetWireFormat(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSetWireFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageSetWireFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSetWireFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageSetWireFormatNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSetWireFormat")(null)
-        ret
-    }
-    @scala.inline
-    def withNoStandardDescriptorAccessor(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noStandardDescriptorAccessor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoStandardDescriptorAccessor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noStandardDescriptorAccessor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoStandardDescriptorAccessorNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noStandardDescriptorAccessor")(null)
-        ret
-    }
-    @scala.inline
-    def withUninterpretedOption(value: js.Array[IUninterpretedOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninterpretedOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUninterpretedOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninterpretedOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUninterpretedOptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninterpretedOption")(null)
-        ret
-    }
-  }
-  
 }
 

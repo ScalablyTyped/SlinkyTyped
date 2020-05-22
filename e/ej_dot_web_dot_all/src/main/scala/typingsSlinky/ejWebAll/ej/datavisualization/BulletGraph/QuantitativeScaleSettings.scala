@@ -4,239 +4,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QuantitativeScaleSettings extends js.Object {
   /** Contains property to customize the comparative measure.
     */
-  var comparativeMeasureSettings: js.UndefOr[QuantitativeScaleSettingsComparativeMeasureSettings] = js.native
+  var comparativeMeasureSettings: js.UndefOr[QuantitativeScaleSettingsComparativeMeasureSettings] = js.undefined
   /** Contains property to customize the featured measure.
     */
-  var featureMeasures: js.UndefOr[js.Array[QuantitativeScaleSettingsFeatureMeasure]] = js.native
+  var featureMeasures: js.UndefOr[js.Array[QuantitativeScaleSettingsFeatureMeasure]] = js.undefined
   /** Contains property to customize the featured measure.
     */
-  var featuredMeasureSettings: js.UndefOr[QuantitativeScaleSettingsFeaturedMeasureSettings] = js.native
+  var featuredMeasureSettings: js.UndefOr[QuantitativeScaleSettingsFeaturedMeasureSettings] = js.undefined
   /** Contains property to customize the fields.
     */
-  var fields: js.UndefOr[QuantitativeScaleSettingsFields] = js.native
+  var fields: js.UndefOr[QuantitativeScaleSettingsFields] = js.undefined
   /** Specifies the interval for the Graph.
     * @Default {1}
     */
-  var interval: js.UndefOr[Double] = js.native
+  var interval: js.UndefOr[Double] = js.undefined
   /** Contains property to customize the labels.
     */
-  var labelSettings: js.UndefOr[QuantitativeScaleSettingsLabelSettings] = js.native
+  var labelSettings: js.UndefOr[QuantitativeScaleSettingsLabelSettings] = js.undefined
   /** Contains property to customize the position of the quantitative scale
     */
-  var location: js.UndefOr[QuantitativeScaleSettingsLocation] = js.native
+  var location: js.UndefOr[QuantitativeScaleSettingsLocation] = js.undefined
   /** Contains property to customize the major tick lines.
     */
-  var majorTickSettings: js.UndefOr[QuantitativeScaleSettingsMajorTickSettings] = js.native
+  var majorTickSettings: js.UndefOr[QuantitativeScaleSettingsMajorTickSettings] = js.undefined
   /** Specifies the maximum value of the Graph.
     * @Default {10}
     */
-  var maximum: js.UndefOr[Double] = js.native
+  var maximum: js.UndefOr[Double] = js.undefined
   /** Specifies the minimum value of the Graph.
     * @Default {0}
     */
-  var minimum: js.UndefOr[Double] = js.native
+  var minimum: js.UndefOr[Double] = js.undefined
   /** Contains property to customize the minor ticks.
     */
-  var minorTickSettings: js.UndefOr[QuantitativeScaleSettingsMinorTickSettings] = js.native
+  var minorTickSettings: js.UndefOr[QuantitativeScaleSettingsMinorTickSettings] = js.undefined
   /** The specified number of minor ticks will be rendered per interval.
     * @Default {4}
     */
-  var minorTicksPerInterval: js.UndefOr[Double] = js.native
+  var minorTicksPerInterval: js.UndefOr[Double] = js.undefined
   /** Specifies the placement of ticks to render either inside or outside the scale.
     * @Default {ej.datavisualization.BulletGraph.TickPlacement.Outside}
     */
-  var tickPlacement: js.UndefOr[TickPlacement | String] = js.native
+  var tickPlacement: js.UndefOr[TickPlacement | String] = js.undefined
   /** Specifies the position of the ticks to render either above,below or inside
     * @Default {ej.datavisualization.BulletGraph.TickPosition.Far}
     */
-  var tickPosition: js.UndefOr[TickPosition | String] = js.native
+  var tickPosition: js.UndefOr[TickPosition | String] = js.undefined
 }
 
 object QuantitativeScaleSettings {
   @scala.inline
-  def apply(): QuantitativeScaleSettings = {
+  def apply(
+    comparativeMeasureSettings: QuantitativeScaleSettingsComparativeMeasureSettings = null,
+    featureMeasures: js.Array[QuantitativeScaleSettingsFeatureMeasure] = null,
+    featuredMeasureSettings: QuantitativeScaleSettingsFeaturedMeasureSettings = null,
+    fields: QuantitativeScaleSettingsFields = null,
+    interval: js.UndefOr[Double] = js.undefined,
+    labelSettings: QuantitativeScaleSettingsLabelSettings = null,
+    location: QuantitativeScaleSettingsLocation = null,
+    majorTickSettings: QuantitativeScaleSettingsMajorTickSettings = null,
+    maximum: js.UndefOr[Double] = js.undefined,
+    minimum: js.UndefOr[Double] = js.undefined,
+    minorTickSettings: QuantitativeScaleSettingsMinorTickSettings = null,
+    minorTicksPerInterval: js.UndefOr[Double] = js.undefined,
+    tickPlacement: TickPlacement | String = null,
+    tickPosition: TickPosition | String = null
+  ): QuantitativeScaleSettings = {
     val __obj = js.Dynamic.literal()
+    if (comparativeMeasureSettings != null) __obj.updateDynamic("comparativeMeasureSettings")(comparativeMeasureSettings.asInstanceOf[js.Any])
+    if (featureMeasures != null) __obj.updateDynamic("featureMeasures")(featureMeasures.asInstanceOf[js.Any])
+    if (featuredMeasureSettings != null) __obj.updateDynamic("featuredMeasureSettings")(featuredMeasureSettings.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(interval)) __obj.updateDynamic("interval")(interval.get.asInstanceOf[js.Any])
+    if (labelSettings != null) __obj.updateDynamic("labelSettings")(labelSettings.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (majorTickSettings != null) __obj.updateDynamic("majorTickSettings")(majorTickSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximum)) __obj.updateDynamic("maximum")(maximum.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum)) __obj.updateDynamic("minimum")(minimum.get.asInstanceOf[js.Any])
+    if (minorTickSettings != null) __obj.updateDynamic("minorTickSettings")(minorTickSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(minorTicksPerInterval)) __obj.updateDynamic("minorTicksPerInterval")(minorTicksPerInterval.get.asInstanceOf[js.Any])
+    if (tickPlacement != null) __obj.updateDynamic("tickPlacement")(tickPlacement.asInstanceOf[js.Any])
+    if (tickPosition != null) __obj.updateDynamic("tickPosition")(tickPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuantitativeScaleSettings]
   }
-  @scala.inline
-  implicit class QuantitativeScaleSettingsOps[Self <: QuantitativeScaleSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparativeMeasureSettings(value: QuantitativeScaleSettingsComparativeMeasureSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparativeMeasureSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparativeMeasureSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparativeMeasureSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatureMeasures(value: js.Array[QuantitativeScaleSettingsFeatureMeasure]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureMeasures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatureMeasures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featureMeasures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeaturedMeasureSettings(value: QuantitativeScaleSettingsFeaturedMeasureSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuredMeasureSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeaturedMeasureSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("featuredMeasureSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: QuantitativeScaleSettingsFields): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelSettings(value: QuantitativeScaleSettingsLabelSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: QuantitativeScaleSettingsLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMajorTickSettings(value: QuantitativeScaleSettingsMajorTickSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTickSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMajorTickSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTickSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTickSettings(value: QuantitativeScaleSettingsMinorTickSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTickSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinorTicksPerInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicksPerInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinorTicksPerInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTicksPerInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickPlacement(value: TickPlacement | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickPosition(value: TickPosition | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickPosition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

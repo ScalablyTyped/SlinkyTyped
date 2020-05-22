@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseFirestore.mutationMod
 
 import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.ObjectValue
+import typingsSlinky.firebaseFirestore.objectValueMod.ObjectValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSParenthesizedType
   extends Node
      with TSType {
-  var typeAnnotation: TSType = js.native
+  var typeAnnotation: TSType
   @JSName("type")
-  var type_TSParenthesizedType: typingsSlinky.babelTypes.babelTypesStrings.TSParenthesizedType = js.native
+  var type_TSParenthesizedType: typingsSlinky.babelTypes.babelTypesStrings.TSParenthesizedType
 }
 
 @JSImport("babel-types", "TSParenthesizedType")

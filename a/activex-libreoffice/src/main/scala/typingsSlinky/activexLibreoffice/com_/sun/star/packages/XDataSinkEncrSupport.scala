@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Allows to get access to the stream of a {@link PackageStream} . */
-@js.native
 trait XDataSinkEncrSupport extends XInterface {
   /**
     * Allows to get access to the data of the {@link PackageStream} .
@@ -18,14 +17,14 @@ trait XDataSinkEncrSupport extends XInterface {
     * @throws com::sun::star::packages::WrongPasswordException no key or a wrong one is set
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  var DataStream: XInputStream = js.native
+  var DataStream: XInputStream
   /**
     * Allows to get access to the raw data of the stream as it is stored in the package.
     * @returns the plain raw stream as it is stored in the package
     * @throws com::sun::star::packages::NoEncryptionException the {@link PackageStream} object is not encrypted
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  val PlainRawStream: XInputStream = js.native
+  val PlainRawStream: XInputStream
   /**
     * Allows to get access to the data of the {@link PackageStream} as to raw stream. In case stream is not encrypted an exception will be thrown.
     *
@@ -35,7 +34,7 @@ trait XDataSinkEncrSupport extends XInterface {
     * @throws com::sun::star::packages::NoEncryptionException the {@link PackageStream} object is not encrypted
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  var RawStream: XInputStream = js.native
+  var RawStream: XInputStream
   /**
     * Allows to get access to the data of the {@link PackageStream} .
     *
@@ -44,14 +43,14 @@ trait XDataSinkEncrSupport extends XInterface {
     * @throws com::sun::star::packages::WrongPasswordException no key or a wrong one is set
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  def getDataStream(): XInputStream = js.native
+  def getDataStream(): XInputStream
   /**
     * Allows to get access to the raw data of the stream as it is stored in the package.
     * @returns the plain raw stream as it is stored in the package
     * @throws com::sun::star::packages::NoEncryptionException the {@link PackageStream} object is not encrypted
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  def getPlainRawStream(): XInputStream = js.native
+  def getPlainRawStream(): XInputStream
   /**
     * Allows to get access to the data of the {@link PackageStream} as to raw stream. In case stream is not encrypted an exception will be thrown.
     *
@@ -61,7 +60,7 @@ trait XDataSinkEncrSupport extends XInterface {
     * @throws com::sun::star::packages::NoEncryptionException the {@link PackageStream} object is not encrypted
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  def getRawStream(): XInputStream = js.native
+  def getRawStream(): XInputStream
   /**
     * Allows to set a data stream for the {@link PackageStream} .
     *
@@ -69,7 +68,7 @@ trait XDataSinkEncrSupport extends XInterface {
     * @param aStream new data stream
     * @throws com::sun::star::io::IOException in case of io problems
     */
-  def setDataStream(aStream: XInputStream): Unit = js.native
+  def setDataStream(aStream: XInputStream): Unit
   /**
     * Allows to set raw stream for the {@link PackageStream} . The {@link PackageStream} object can not be marked as encrypted one, an exception will be
     * thrown in such case.
@@ -78,7 +77,7 @@ trait XDataSinkEncrSupport extends XInterface {
     * @throws com::sun::star::packages::NoRawFormatException the stream is not a correct raw representation of encrypted package stream
     * @throws com::sun::star::io::IOException in case of io problems during retrieving
     */
-  def setRawStream(aStream: XInputStream): Unit = js.native
+  def setRawStream(aStream: XInputStream): Unit
 }
 
 object XDataSinkEncrSupport {
@@ -99,61 +98,5 @@ object XDataSinkEncrSupport {
     val __obj = js.Dynamic.literal(DataStream = DataStream.asInstanceOf[js.Any], PlainRawStream = PlainRawStream.asInstanceOf[js.Any], RawStream = RawStream.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDataStream = js.Any.fromFunction0(getDataStream), getPlainRawStream = js.Any.fromFunction0(getPlainRawStream), getRawStream = js.Any.fromFunction0(getRawStream), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDataStream = js.Any.fromFunction1(setDataStream), setRawStream = js.Any.fromFunction1(setRawStream))
     __obj.asInstanceOf[XDataSinkEncrSupport]
   }
-  @scala.inline
-  implicit class XDataSinkEncrSupportOps[Self <: XDataSinkEncrSupport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DataStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlainRawStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PlainRawStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRawStream(value: XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RawStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDataStream(value: () => XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetPlainRawStream(value: () => XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlainRawStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetRawStream(value: () => XInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRawStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetDataStream(value: XInputStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDataStream")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetRawStream(value: XInputStream => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setRawStream")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

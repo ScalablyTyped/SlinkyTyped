@@ -23,41 +23,11 @@ trait SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion extends js.Obj
 
 object SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion {
   @scala.inline
-  def apply(): SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion = {
+  def apply(destinationName: String = null, uri: String = null): SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion = {
     val __obj = js.Dynamic.literal()
+    if (destinationName != null) __obj.updateDynamic("destinationName")(destinationName.asInstanceOf[js.Any])
+    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestionOps[Self <: SchemaGoogleCloudDialogflowV2IntentMessageLinkOutSuggestion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

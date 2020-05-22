@@ -41,77 +41,20 @@ trait SchemaDeviceIdentifier extends js.Object {
 
 object SchemaDeviceIdentifier {
   @scala.inline
-  def apply(): SchemaDeviceIdentifier = {
+  def apply(
+    imei: String = null,
+    manufacturer: String = null,
+    meid: String = null,
+    model: String = null,
+    serialNumber: String = null
+  ): SchemaDeviceIdentifier = {
     val __obj = js.Dynamic.literal()
+    if (imei != null) __obj.updateDynamic("imei")(imei.asInstanceOf[js.Any])
+    if (manufacturer != null) __obj.updateDynamic("manufacturer")(manufacturer.asInstanceOf[js.Any])
+    if (meid != null) __obj.updateDynamic("meid")(meid.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (serialNumber != null) __obj.updateDynamic("serialNumber")(serialNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceIdentifier]
   }
-  @scala.inline
-  implicit class SchemaDeviceIdentifierOps[Self <: SchemaDeviceIdentifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImei(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imei")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImei: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imei")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManufacturer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManufacturer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerialNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.xstate
 
 import typingsSlinky.std.Partial
+import typingsSlinky.xstate.anon.ContextValue
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.typesMod.ActionObject
 import typingsSlinky.xstate.typesMod.ActivityDefinition
@@ -18,7 +19,6 @@ import typingsSlinky.xstate.typesMod.StateNodesConfig
 import typingsSlinky.xstate.typesMod.StateSchema
 import typingsSlinky.xstate.typesMod.StateValue
 import typingsSlinky.xstate.typesMod.StateValueMap
-import typingsSlinky.xstate.typesMod.TransitionConfigTargetShortcut
 import typingsSlinky.xstate.typesMod.TransitionDefinition
 import typingsSlinky.xstate.typesMod.TransitionDefinitionMap
 import typingsSlinky.xstate.typesMod.Typestate
@@ -39,7 +39,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object stateNodeMod extends js.Object {
   @js.native
-  class StateNode[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends TransitionConfigTargetShortcut[TContext, TEvent] {
+  class StateNode[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends js.Object {
     def this(/**
       * The raw config used to create the machine.
       */
@@ -97,7 +97,6 @@ object stateNodeMod extends js.Object {
       * this state node, it does not escape.
       */
     var escapes: js.Any = js.native
-    var evaluateGuard: js.Any = js.native
     var formatTransition: js.Any = js.native
     var formatTransitions: js.Any = js.native
     var getActions: js.Any = js.native
@@ -250,7 +249,7 @@ object stateNodeMod extends js.Object {
       */
     def getStateNodeByPath(statePath: String): StateNode[TContext, _, TEvent, _] = js.native
     def getStateNodeByPath(statePath: js.Array[String]): StateNode[TContext, _, TEvent, _] = js.native
-    def getStateNodes(state: State[TContext, TEvent, _, _]): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    def getStateNodes(state: State[TContext, TEvent, _, ContextValue[TContext]]): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
     /**
       * Returns the state nodes represented by the current state value.
       *
@@ -295,7 +294,7 @@ object stateNodeMod extends js.Object {
       *
       * @param state The state to resolve
       */
-    def resolveState(state: State[TContext, TEvent, _, _]): State[TContext, TEvent, _, _] = js.native
+    def resolveState(state: State[TContext, TEvent, _, ContextValue[TContext]]): State[TContext, TEvent, _, ContextValue[TContext]] = js.native
     /**
       * All the state node IDs of this state node and its descendant state nodes.
       */
@@ -313,18 +312,21 @@ object stateNodeMod extends js.Object {
       * @param event The event that was sent at the current state
       * @param context The current context (extended state) of the current state
       */
-    def transition(state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String], event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(
-      state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String],
+      state: js.UndefOr[(State[TContext, TEvent, _, ContextValue[TContext]]) | StateValueMap | String],
+      event: Event[TEvent]
+    ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+    def transition(
+      state: js.UndefOr[(State[TContext, TEvent, _, ContextValue[TContext]]) | StateValueMap | String],
       event: Event[TEvent],
       context: TContext
     ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(
-      state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String],
+      state: js.UndefOr[(State[TContext, TEvent, _, ContextValue[TContext]]) | StateValueMap | String],
       event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]
     ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(
-      state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String],
+      state: js.UndefOr[(State[TContext, TEvent, _, ContextValue[TContext]]) | StateValueMap | String],
       event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent],
       context: TContext
     ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
@@ -338,8 +340,8 @@ object stateNodeMod extends js.Object {
       * @param options Options (actions, guards, activities, services) to recursively merge with the existing options.
       * @param context Custom context (will override predefined context)
       */
-    def withConfig(options: Partial[MachineOptions[TContext, TEvent]]): StateNode[TContext, TStateSchema, TEvent, _] = js.native
-    def withConfig(options: Partial[MachineOptions[TContext, TEvent]], context: TContext): StateNode[TContext, TStateSchema, TEvent, _] = js.native
+    def withConfig(options: Partial[MachineOptions[TContext, TEvent]]): StateNode[TContext, TStateSchema, TEvent, TTypestate] = js.native
+    def withConfig(options: Partial[MachineOptions[TContext, TEvent]], context: TContext): StateNode[TContext, TStateSchema, TEvent, TTypestate] = js.native
     /**
       * Clones this state machine with custom context.
       *

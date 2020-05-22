@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ButtonsApiExportDataParameter extends js.Object {
-  var columns: js.UndefOr[js.Any] = js.native
-  var decodeEntities: js.UndefOr[Boolean] = js.native
-  var format: js.UndefOr[js.Any] = js.native
-  var modifier: js.UndefOr[js.Any] = js.native
-  var orthogonal: js.UndefOr[String] = js.native
-  var rows: js.UndefOr[js.Any] = js.native
-  var stripHtml: js.UndefOr[Boolean] = js.native
-  var stripNewlines: js.UndefOr[Boolean] = js.native
-  var trim: js.UndefOr[Boolean] = js.native
+  var columns: js.UndefOr[js.Any] = js.undefined
+  var decodeEntities: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[js.Any] = js.undefined
+  var modifier: js.UndefOr[js.Any] = js.undefined
+  var orthogonal: js.UndefOr[String] = js.undefined
+  var rows: js.UndefOr[js.Any] = js.undefined
+  var stripHtml: js.UndefOr[Boolean] = js.undefined
+  var stripNewlines: js.UndefOr[Boolean] = js.undefined
+  var trim: js.UndefOr[Boolean] = js.undefined
 }
 
 object ButtonsApiExportDataParameter {
   @scala.inline
-  def apply(): ButtonsApiExportDataParameter = {
+  def apply(
+    columns: js.Any = null,
+    decodeEntities: js.UndefOr[Boolean] = js.undefined,
+    format: js.Any = null,
+    modifier: js.Any = null,
+    orthogonal: String = null,
+    rows: js.Any = null,
+    stripHtml: js.UndefOr[Boolean] = js.undefined,
+    stripNewlines: js.UndefOr[Boolean] = js.undefined,
+    trim: js.UndefOr[Boolean] = js.undefined
+  ): ButtonsApiExportDataParameter = {
     val __obj = js.Dynamic.literal()
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (!js.isUndefined(decodeEntities)) __obj.updateDynamic("decodeEntities")(decodeEntities.get.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
+    if (orthogonal != null) __obj.updateDynamic("orthogonal")(orthogonal.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripHtml)) __obj.updateDynamic("stripHtml")(stripHtml.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripNewlines)) __obj.updateDynamic("stripNewlines")(stripNewlines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonsApiExportDataParameter]
   }
-  @scala.inline
-  implicit class ButtonsApiExportDataParameterOps[Self <: ButtonsApiExportDataParameter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecodeEntities(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecodeEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeEntities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifier(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrthogonal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orthogonal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrthogonal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orthogonal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRows(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripHtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripHtml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripHtml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripNewlines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripNewlines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripNewlines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripNewlines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrim(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrim: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

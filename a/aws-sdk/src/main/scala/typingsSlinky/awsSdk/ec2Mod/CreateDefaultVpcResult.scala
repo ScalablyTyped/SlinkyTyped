@@ -14,29 +14,10 @@ trait CreateDefaultVpcResult extends js.Object {
 
 object CreateDefaultVpcResult {
   @scala.inline
-  def apply(): CreateDefaultVpcResult = {
+  def apply(Vpc: Vpc = null): CreateDefaultVpcResult = {
     val __obj = js.Dynamic.literal()
+    if (Vpc != null) __obj.updateDynamic("Vpc")(Vpc.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDefaultVpcResult]
   }
-  @scala.inline
-  implicit class CreateDefaultVpcResultOps[Self <: CreateDefaultVpcResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVpc(value: Vpc): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vpc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Vpc")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

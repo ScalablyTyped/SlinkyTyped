@@ -45,10 +45,9 @@ import scala.scalajs.js.annotation._
   * gn = new KJUR.asn1.x509.GeneralName({certissuer: certPEM});
   * gn = new KJUR.asn1.x509.GeneralName({certsubj:   certPEM});
   */
-@js.native
 trait GeneralName extends js.Object {
-  def getEncodedHex(): String = js.native
-  def setByParam(params: js.Array[String]): Unit = js.native
+  def getEncodedHex(): String
+  def setByParam(params: js.Array[String]): Unit
 }
 
 object GeneralName {
@@ -57,25 +56,5 @@ object GeneralName {
     val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), setByParam = js.Any.fromFunction1(setByParam))
     __obj.asInstanceOf[GeneralName]
   }
-  @scala.inline
-  implicit class GeneralNameOps[Self <: GeneralName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetEncodedHex(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEncodedHex")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetByParam(value: js.Array[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setByParam")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

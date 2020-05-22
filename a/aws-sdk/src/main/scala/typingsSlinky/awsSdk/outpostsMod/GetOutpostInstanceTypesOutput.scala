@@ -14,65 +14,18 @@ trait GetOutpostInstanceTypesOutput extends js.Object {
 
 object GetOutpostInstanceTypesOutput {
   @scala.inline
-  def apply(): GetOutpostInstanceTypesOutput = {
+  def apply(
+    InstanceTypes: InstanceTypeListDefinition = null,
+    NextToken: Token = null,
+    OutpostArn: OutpostArn = null,
+    OutpostId: OutpostId = null
+  ): GetOutpostInstanceTypesOutput = {
     val __obj = js.Dynamic.literal()
+    if (InstanceTypes != null) __obj.updateDynamic("InstanceTypes")(InstanceTypes.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (OutpostArn != null) __obj.updateDynamic("OutpostArn")(OutpostArn.asInstanceOf[js.Any])
+    if (OutpostId != null) __obj.updateDynamic("OutpostId")(OutpostId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOutpostInstanceTypesOutput]
   }
-  @scala.inline
-  implicit class GetOutpostInstanceTypesOutputOps[Self <: GetOutpostInstanceTypesOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceTypes(value: InstanceTypeListDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: Token): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutpostArn(value: OutpostArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutpostArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutpostArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutpostArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutpostId(value: OutpostId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutpostId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutpostId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutpostId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,13 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISeparator extends IItem
 
 object ISeparator {
   @scala.inline
-  def apply(): ISeparator = {
+  def apply(IItem: IItem = null): ISeparator = {
     val __obj = js.Dynamic.literal()
+    if (IItem != null) js.Dynamic.global.Object.assign(__obj, IItem)
     __obj.asInstanceOf[ISeparator]
   }
 }

@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CsvUpload extends BulkUpload[CsvUpload] {
-  def append(row: js.Object): CsvUpload = js.native
+  def append(row: js.Object): CsvUpload
   @JSName("apply")
-  def apply(): Unit = js.native
+  def apply(): Unit
 }
 
 object CsvUpload {
@@ -24,25 +23,5 @@ object CsvUpload {
     val __obj = js.Dynamic.literal(append = js.Any.fromFunction1(append), apply = js.Any.fromFunction0(apply), forCampaignManagement = js.Any.fromFunction0(forCampaignManagement), forOfflineConversions = js.Any.fromFunction0(forOfflineConversions), preview = js.Any.fromFunction0(preview), setFileName = js.Any.fromFunction1(setFileName))
     __obj.asInstanceOf[CsvUpload]
   }
-  @scala.inline
-  implicit class CsvUploadOps[Self <: CsvUpload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppend(value: js.Object => CsvUpload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withApply(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

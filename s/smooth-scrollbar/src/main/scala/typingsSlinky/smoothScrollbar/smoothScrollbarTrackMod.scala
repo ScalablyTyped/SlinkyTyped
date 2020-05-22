@@ -1,6 +1,7 @@
 package typingsSlinky.smoothScrollbar
 
 import typingsSlinky.smoothScrollbar.scrollbarMod.Scrollbar
+import typingsSlinky.smoothScrollbar.trackMod.ScrollbarTrack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,14 @@ object smoothScrollbarTrackMod extends js.Object {
     extends typingsSlinky.smoothScrollbar.trackMod.TrackController {
     def this(_scrollbar: Scrollbar) = this()
     var _scrollbar: js.Any = js.native
+    /* CompleteClass */
+    override val xAxis: ScrollbarTrack = js.native
+    /* CompleteClass */
+    override val yAxis: ScrollbarTrack = js.native
+    /* CompleteClass */
+    override def autoHideOnIdle(): Unit = js.native
+    /* CompleteClass */
+    override def update(): Unit = js.native
   }
   
 }

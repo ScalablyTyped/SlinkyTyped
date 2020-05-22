@@ -27,53 +27,16 @@ trait SchemaConversionStatus extends js.Object {
 
 object SchemaConversionStatus {
   @scala.inline
-  def apply(): SchemaConversionStatus = {
+  def apply(
+    conversion: SchemaConversion = null,
+    errors: js.Array[SchemaConversionError] = null,
+    kind: String = null
+  ): SchemaConversionStatus = {
     val __obj = js.Dynamic.literal()
+    if (conversion != null) __obj.updateDynamic("conversion")(conversion.asInstanceOf[js.Any])
+    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConversionStatus]
   }
-  @scala.inline
-  implicit class SchemaConversionStatusOps[Self <: SchemaConversionStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConversion(value: SchemaConversion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrors(value: js.Array[SchemaConversionError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

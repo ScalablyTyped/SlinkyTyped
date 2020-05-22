@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.none
 */
 trait SingleAnimationFillMode
-  extends SingleAnimation
-     with AnimationFillModeProperty
+  extends _SingleAnimation
+     with _AnimationFillModeProperty
 
 object SingleAnimationFillMode {
   @scala.inline

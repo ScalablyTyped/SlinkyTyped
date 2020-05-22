@@ -12,14 +12,13 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sheet.TableValidation
   * @see com.sun.star.sheet.XSheetCondition
   */
-@js.native
 trait XSheetCondition2 extends XSheetCondition {
   /** returns the operator in the condition (new interface). */
-  var ConditionOperator: Double = js.native
+  var ConditionOperator: Double
   /** returns the operator in the condition (new interface). */
-  def getConditionOperator(): Double = js.native
+  def getConditionOperator(): Double
   /** sets the operator in the condition (new interface). */
-  def setConditionOperator(nOperator: Double): Unit = js.native
+  def setConditionOperator(nOperator: Double): Unit
 }
 
 object XSheetCondition2 {
@@ -47,31 +46,5 @@ object XSheetCondition2 {
     val __obj = js.Dynamic.literal(ConditionOperator = ConditionOperator.asInstanceOf[js.Any], Formula1 = Formula1.asInstanceOf[js.Any], Formula2 = Formula2.asInstanceOf[js.Any], Operator = Operator.asInstanceOf[js.Any], SourcePosition = SourcePosition.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getConditionOperator = js.Any.fromFunction0(getConditionOperator), getFormula1 = js.Any.fromFunction0(getFormula1), getFormula2 = js.Any.fromFunction0(getFormula2), getOperator = js.Any.fromFunction0(getOperator), getSourcePosition = js.Any.fromFunction0(getSourcePosition), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setConditionOperator = js.Any.fromFunction1(setConditionOperator), setFormula1 = js.Any.fromFunction1(setFormula1), setFormula2 = js.Any.fromFunction1(setFormula2), setOperator = js.Any.fromFunction1(setOperator), setSourcePosition = js.Any.fromFunction1(setSourcePosition))
     __obj.asInstanceOf[XSheetCondition2]
   }
-  @scala.inline
-  implicit class XSheetCondition2Ops[Self <: XSheetCondition2] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConditionOperator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetConditionOperator(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getConditionOperator")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetConditionOperator(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setConditionOperator")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

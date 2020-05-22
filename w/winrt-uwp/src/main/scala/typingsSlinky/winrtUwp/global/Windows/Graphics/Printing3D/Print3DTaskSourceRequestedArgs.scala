@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs")
 @js.native
 abstract class Print3DTaskSourceRequestedArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs {
+  /**
+    * Specifies the 3D Manufacturing Format (3MF) package to use in the print job.
+    * @param source The 3D Manufacturing Format (3MF) package to use in the print job.
+    */
+  /* CompleteClass */
+  override def setSource(source: typingsSlinky.winrtUwp.Windows.Graphics.Printing3D.Printing3D3MFPackage): Unit = js.native
+}
 

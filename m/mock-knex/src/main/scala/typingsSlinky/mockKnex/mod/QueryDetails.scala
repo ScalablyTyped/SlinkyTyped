@@ -1,6 +1,6 @@
 package typingsSlinky.mockKnex.mod
 
-import typingsSlinky.knex.mod.Sql
+import typingsSlinky.mockKnex.mod.Knex.Sql
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,98 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeforeRowDropEventArgs extends js.Object {
   /** Returns the cancel option value.
     */
-  var cancel: js.UndefOr[Boolean] = js.native
+  var cancel: js.UndefOr[Boolean] = js.undefined
   /** Returns the dragged record details
     */
-  var draggedRecords: js.UndefOr[js.Any] = js.native
+  var draggedRecords: js.UndefOr[js.Any] = js.undefined
   /** Returns the drop details
     */
-  var dropDetails: js.UndefOr[js.Any] = js.native
+  var dropDetails: js.UndefOr[js.Any] = js.undefined
   /** Returns the targeted row.
     */
-  var target: js.UndefOr[js.Any] = js.native
+  var target: js.UndefOr[js.Any] = js.undefined
   /** Returns the targeted row index.
     */
-  var targetIndex: js.UndefOr[js.Any] = js.native
+  var targetIndex: js.UndefOr[js.Any] = js.undefined
 }
 
 object BeforeRowDropEventArgs {
   @scala.inline
-  def apply(): BeforeRowDropEventArgs = {
+  def apply(
+    cancel: js.UndefOr[Boolean] = js.undefined,
+    draggedRecords: js.Any = null,
+    dropDetails: js.Any = null,
+    target: js.Any = null,
+    targetIndex: js.Any = null
+  ): BeforeRowDropEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cancel)) __obj.updateDynamic("cancel")(cancel.get.asInstanceOf[js.Any])
+    if (draggedRecords != null) __obj.updateDynamic("draggedRecords")(draggedRecords.asInstanceOf[js.Any])
+    if (dropDetails != null) __obj.updateDynamic("dropDetails")(dropDetails.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (targetIndex != null) __obj.updateDynamic("targetIndex")(targetIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeRowDropEventArgs]
   }
-  @scala.inline
-  implicit class BeforeRowDropEventArgsOps[Self <: BeforeRowDropEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggedRecords(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggedRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggedRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropDetails(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetIndex(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,183 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeDroppedEventUIParam extends js.Object {
   /**
-  	 * Gets a reference to the binding object for the level at which the target node is located.
-  	 */
-  var binding: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the binding object for the level at which the target node is located.
+    */
+  var binding: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the target node data.
-  	 */
-  var data: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the target node data.
+    */
+  var data: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the draggable element (the node).
-  	 */
-  var draggable: js.UndefOr[String] = js.native
+    * Gets a reference to the draggable element (the node).
+    */
+  var draggable: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the jQuery element of the node.
-  	 */
-  var element: js.UndefOr[String] = js.native
+    * Gets a reference to the jQuery element of the node.
+    */
+  var element: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the helper.
-  	 */
-  var helper: js.UndefOr[String] = js.native
+    * Gets a reference to the helper.
+    */
+  var helper: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the offset.
-  	 */
-  var offset: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the offset.
+    */
+  var offset: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the tree.
-  	 */
-  var owner: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the tree.
+    */
+  var owner: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets the target node data-path attribute.
-  	 */
-  var path: js.UndefOr[String] = js.native
+    * Gets the target node data-path attribute.
+    */
+  var path: js.UndefOr[String] = js.undefined
   /**
-  	 * Gets a reference to the current position of the draggable element.
-  	 */
-  var position: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the current position of the draggable element.
+    */
+  var position: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Gets a reference to the dropped source node object.
-  	 */
-  var sourceNode: js.UndefOr[js.Any] = js.native
+    * Gets a reference to the dropped source node object.
+    */
+  var sourceNode: js.UndefOr[js.Any] = js.undefined
 }
 
 object NodeDroppedEventUIParam {
   @scala.inline
-  def apply(): NodeDroppedEventUIParam = {
+  def apply(
+    binding: js.Any = null,
+    data: js.Any = null,
+    draggable: String = null,
+    element: String = null,
+    helper: String = null,
+    offset: js.Any = null,
+    owner: js.Any = null,
+    path: String = null,
+    position: js.Any = null,
+    sourceNode: js.Any = null
+  ): NodeDroppedEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (binding != null) __obj.updateDynamic("binding")(binding.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (draggable != null) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
+    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
+    if (helper != null) __obj.updateDynamic("helper")(helper.asInstanceOf[js.Any])
+    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (sourceNode != null) __obj.updateDynamic("sourceNode")(sourceNode.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeDroppedEventUIParam]
   }
-  @scala.inline
-  implicit class NodeDroppedEventUIParamOps[Self <: NodeDroppedEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBinding(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHelper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHelper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("helper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceNode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceNode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

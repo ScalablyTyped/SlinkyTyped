@@ -12,205 +12,57 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<lokijs.LokiConfigOptions> & std.Partial<lokijs.ThrottledSaveDrainOptions> */
-@js.native
 trait PartialLokiConfigOptionsP extends js.Object {
-  var adapter: js.UndefOr[LokiPersistenceAdapter] = js.native
-  var autoload: js.UndefOr[Boolean] = js.native
-  var autoloadCallback: js.UndefOr[js.Function1[/* err */ js.Any, Unit]] = js.native
-  var autosave: js.UndefOr[Boolean] = js.native
-  var autosaveCallback: js.UndefOr[js.Function1[/* err */ js.UndefOr[js.Any], Unit]] = js.native
-  var autosaveInterval: js.UndefOr[String | Double] = js.native
-  var destructureDelimiter: js.UndefOr[String] = js.native
-  var persistenceMethod: js.UndefOr[fs | localStorage | memory] = js.native
-  var recursiveWait: js.UndefOr[Boolean] = js.native
-  var recursiveWaitLimit: js.UndefOr[Boolean] = js.native
-  var recursiveWaitLimitDuration: js.UndefOr[Double] = js.native
-  var serializationMethod: js.UndefOr[normal | pretty | destructured] = js.native
-  var started: js.UndefOr[Double] = js.native
-  var throttledSaves: js.UndefOr[Boolean] = js.native
+  var adapter: js.UndefOr[LokiPersistenceAdapter] = js.undefined
+  var autoload: js.UndefOr[Boolean] = js.undefined
+  var autoloadCallback: js.UndefOr[js.Function1[/* err */ js.Any, Unit]] = js.undefined
+  var autosave: js.UndefOr[Boolean] = js.undefined
+  var autosaveCallback: js.UndefOr[js.Function1[/* err */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var autosaveInterval: js.UndefOr[String | Double] = js.undefined
+  var destructureDelimiter: js.UndefOr[String] = js.undefined
+  var persistenceMethod: js.UndefOr[fs | localStorage | memory] = js.undefined
+  var recursiveWait: js.UndefOr[Boolean] = js.undefined
+  var recursiveWaitLimit: js.UndefOr[Boolean] = js.undefined
+  var recursiveWaitLimitDuration: js.UndefOr[Double] = js.undefined
+  var serializationMethod: js.UndefOr[normal | pretty | destructured] = js.undefined
+  var started: js.UndefOr[Double] = js.undefined
+  var throttledSaves: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialLokiConfigOptionsP {
   @scala.inline
-  def apply(): PartialLokiConfigOptionsP = {
+  def apply(
+    adapter: LokiPersistenceAdapter = null,
+    autoload: js.UndefOr[Boolean] = js.undefined,
+    autoloadCallback: /* err */ js.Any => Unit = null,
+    autosave: js.UndefOr[Boolean] = js.undefined,
+    autosaveCallback: /* err */ js.UndefOr[js.Any] => Unit = null,
+    autosaveInterval: String | Double = null,
+    destructureDelimiter: String = null,
+    persistenceMethod: fs | localStorage | memory = null,
+    recursiveWait: js.UndefOr[Boolean] = js.undefined,
+    recursiveWaitLimit: js.UndefOr[Boolean] = js.undefined,
+    recursiveWaitLimitDuration: js.UndefOr[Double] = js.undefined,
+    serializationMethod: normal | pretty | destructured = null,
+    started: js.UndefOr[Double] = js.undefined,
+    throttledSaves: js.UndefOr[Boolean] = js.undefined
+  ): PartialLokiConfigOptionsP = {
     val __obj = js.Dynamic.literal()
+    if (adapter != null) __obj.updateDynamic("adapter")(adapter.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoload)) __obj.updateDynamic("autoload")(autoload.get.asInstanceOf[js.Any])
+    if (autoloadCallback != null) __obj.updateDynamic("autoloadCallback")(js.Any.fromFunction1(autoloadCallback))
+    if (!js.isUndefined(autosave)) __obj.updateDynamic("autosave")(autosave.get.asInstanceOf[js.Any])
+    if (autosaveCallback != null) __obj.updateDynamic("autosaveCallback")(js.Any.fromFunction1(autosaveCallback))
+    if (autosaveInterval != null) __obj.updateDynamic("autosaveInterval")(autosaveInterval.asInstanceOf[js.Any])
+    if (destructureDelimiter != null) __obj.updateDynamic("destructureDelimiter")(destructureDelimiter.asInstanceOf[js.Any])
+    if (persistenceMethod != null) __obj.updateDynamic("persistenceMethod")(persistenceMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursiveWait)) __obj.updateDynamic("recursiveWait")(recursiveWait.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursiveWaitLimit)) __obj.updateDynamic("recursiveWaitLimit")(recursiveWaitLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursiveWaitLimitDuration)) __obj.updateDynamic("recursiveWaitLimitDuration")(recursiveWaitLimitDuration.get.asInstanceOf[js.Any])
+    if (serializationMethod != null) __obj.updateDynamic("serializationMethod")(serializationMethod.asInstanceOf[js.Any])
+    if (!js.isUndefined(started)) __obj.updateDynamic("started")(started.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(throttledSaves)) __obj.updateDynamic("throttledSaves")(throttledSaves.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialLokiConfigOptionsP]
   }
-  @scala.inline
-  implicit class PartialLokiConfigOptionsPOps[Self <: PartialLokiConfigOptionsP] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdapter(value: LokiPersistenceAdapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdapter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoloadCallback(value: /* err */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoloadCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAutoloadCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoloadCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosaveCallback(value: /* err */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosaveCallback")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAutosaveCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosaveCallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutosaveInterval(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosaveInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutosaveInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autosaveInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestructureDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destructureDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestructureDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destructureDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistenceMethod(value: fs | localStorage | memory): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistenceMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistenceMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistenceMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursiveWait(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveWait")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursiveWait: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveWait")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursiveWaitLimit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveWaitLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursiveWaitLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveWaitLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursiveWaitLimitDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveWaitLimitDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursiveWaitLimitDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursiveWaitLimitDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerializationMethod(value: normal | pretty | destructured): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerializationMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serializationMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStarted(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThrottledSaves(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttledSaves")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThrottledSaves: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("throttledSaves")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

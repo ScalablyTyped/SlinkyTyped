@@ -5,6 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Core {
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - typingsSlinky.pouchdbCore.Blob
+    - typingsSlinky.pouchdbCore.Buffer
+  */
+  type AttachmentData = typingsSlinky.pouchdbCore.PouchDB.Core._AttachmentData | java.lang.String
   type AttachmentId = java.lang.String
   type Attachments = org.scalablytyped.runtime.StringDictionary[typingsSlinky.pouchdbCore.PouchDB.Core.Attachment]
   type Callback[R] = js.Function2[

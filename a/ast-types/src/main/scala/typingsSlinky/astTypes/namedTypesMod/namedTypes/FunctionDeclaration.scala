@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Function, 'type' | 'id'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
-@js.native
 trait FunctionDeclaration
   extends ASTNode
      with DeclarationKind
@@ -31,19 +30,19 @@ trait FunctionDeclaration
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var async: js.UndefOr[Boolean] = js.native
-  var body: BlockStatementKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.native
-  var expression: js.UndefOr[Boolean] = js.native
-  var generator: js.UndefOr[Boolean] = js.native
-  var id: IdentifierKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var params: js.Array[PatternKind] = js.native
-  var rest: js.UndefOr[IdentifierKind] = js.native
-  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.FunctionDeclaration = js.native
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.native
+  var async: js.UndefOr[Boolean] = js.undefined
+  var body: BlockStatementKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.undefined
+  var expression: js.UndefOr[Boolean] = js.undefined
+  var generator: js.UndefOr[Boolean] = js.undefined
+  var id: IdentifierKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var params: js.Array[PatternKind]
+  var rest: js.UndefOr[IdentifierKind] = js.undefined
+  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.FunctionDeclaration
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.FunctionDeclaration")

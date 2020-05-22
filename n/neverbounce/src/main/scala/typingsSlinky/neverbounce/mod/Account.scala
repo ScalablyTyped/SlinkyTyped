@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Account extends js.Object {
-  def info(): js.Promise[Response] = js.native
+  def info(): js.Promise[Response]
 }
 
 object Account {
@@ -15,19 +14,5 @@ object Account {
     val __obj = js.Dynamic.literal(info = js.Any.fromFunction0(info))
     __obj.asInstanceOf[Account]
   }
-  @scala.inline
-  implicit class AccountOps[Self <: Account] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfo(value: () => js.Promise[Response]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

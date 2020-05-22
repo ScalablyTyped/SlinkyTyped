@@ -38,101 +38,24 @@ trait JobBookmarkEntry extends js.Object {
 
 object JobBookmarkEntry {
   @scala.inline
-  def apply(): JobBookmarkEntry = {
+  def apply(
+    Attempt: js.UndefOr[IntegerValue] = js.undefined,
+    JobBookmark: JsonValue = null,
+    JobName: JobName = null,
+    PreviousRunId: RunId = null,
+    Run: js.UndefOr[IntegerValue] = js.undefined,
+    RunId: RunId = null,
+    Version: js.UndefOr[IntegerValue] = js.undefined
+  ): JobBookmarkEntry = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Attempt)) __obj.updateDynamic("Attempt")(Attempt.get.asInstanceOf[js.Any])
+    if (JobBookmark != null) __obj.updateDynamic("JobBookmark")(JobBookmark.asInstanceOf[js.Any])
+    if (JobName != null) __obj.updateDynamic("JobName")(JobName.asInstanceOf[js.Any])
+    if (PreviousRunId != null) __obj.updateDynamic("PreviousRunId")(PreviousRunId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Run)) __obj.updateDynamic("Run")(Run.get.asInstanceOf[js.Any])
+    if (RunId != null) __obj.updateDynamic("RunId")(RunId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Version)) __obj.updateDynamic("Version")(Version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobBookmarkEntry]
   }
-  @scala.inline
-  implicit class JobBookmarkEntryOps[Self <: JobBookmarkEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttempt(value: IntegerValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attempt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttempt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attempt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobBookmark(value: JsonValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobBookmark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobBookmark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobBookmark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobName(value: JobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousRunId(value: RunId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousRunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousRunId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRun(value: IntegerValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Run")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Run")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRunId(value: RunId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RunId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: IntegerValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

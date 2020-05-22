@@ -2,22 +2,27 @@ package typingsSlinky.firebaseFirestore.lruGarbageCollectorMod
 
 import typingsSlinky.firebaseFirestore.asyncQueueMod.AsyncQueue
 import typingsSlinky.firebaseFirestore.localStoreMod.LocalStore
+import typingsSlinky.firebaseFirestore.persistenceMod.GarbageCollectionScheduler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@firebase/firestore/dist/lib/src/local/lru_garbage_collector", "LruScheduler")
 @js.native
-class LruScheduler protected () extends js.Object {
-  def this(garbageCollector: LruGarbageCollector, asyncQueue: AsyncQueue, localStore: LocalStore) = this()
+class LruScheduler protected () extends GarbageCollectionScheduler {
+  def this(garbageCollector: LruGarbageCollector, asyncQueue: AsyncQueue) = this()
   val asyncQueue: js.Any = js.native
   val garbageCollector: js.Any = js.native
   var gcTask: js.Any = js.native
   var hasRun: js.Any = js.native
-  val localStore: js.Any = js.native
   var scheduleGC: js.Any = js.native
-  def start(): Unit = js.native
-  def started: Boolean = js.native
-  def stop(): Unit = js.native
+  /* CompleteClass */
+  override val started: Boolean = js.native
+  /* CompleteClass */
+  override def start(localStore: LocalStore): Unit = js.native
+  @JSName("started")
+  def started_MLruScheduler: Boolean = js.native
+  /* CompleteClass */
+  override def stop(): Unit = js.native
 }
 

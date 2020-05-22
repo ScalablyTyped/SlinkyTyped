@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentScanOptions extends js.Object {
   /** Optional. The number of scanned images allowed (defaults to 1).  */
-  var maxImages: js.UndefOr[Double] = js.native
+  var maxImages: js.UndefOr[Double] = js.undefined
   /** Optional. The MIME types that are accepted by the caller.  */
-  var mimeTypes: js.UndefOr[js.Array[String]] = js.native
+  var mimeTypes: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object DocumentScanOptions {
   @scala.inline
-  def apply(): DocumentScanOptions = {
+  def apply(maxImages: js.UndefOr[Double] = js.undefined, mimeTypes: js.Array[String] = null): DocumentScanOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxImages)) __obj.updateDynamic("maxImages")(maxImages.get.asInstanceOf[js.Any])
+    if (mimeTypes != null) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentScanOptions]
   }
-  @scala.inline
-  implicit class DocumentScanOptionsOps[Self <: DocumentScanOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxImages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMimeTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMimeTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

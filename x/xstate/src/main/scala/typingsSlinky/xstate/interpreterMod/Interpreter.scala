@@ -28,8 +28,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("xstate/lib/interpreter", "Interpreter")
 @js.native
-class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected ()
-  extends Actor[State[TContext, TEvent, js.Any, js.Any], TEvent] {
+class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends Actor[State[TContext, TEvent, TStateSchema, TTypestate], TEvent] {
   /**
     * Creates a new Interpreter instance (i.e., service) for the given machine with the provided options, if any.
     *
@@ -73,6 +72,7 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
   var machine: StateMachine[TContext, TStateSchema, TEvent, TTypestate] = js.native
   var options: ReadonlyInterpreterOption = js.native
   var parent: js.UndefOr[Interpreter[_, _, EventObject, _]] = js.native
+  var removeChild: js.Any = js.native
   var scheduler: js.Any = js.native
   var sendListeners: js.Any = js.native
   var sendTo: js.Any = js.native
@@ -95,16 +95,19 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     * @param state The state whose actions will be executed
     * @param actionsConfig The action implementations to use
     */
-  def execute(state: State[TContext, TEvent, _, _]): Unit = js.native
-  def execute(state: State[TContext, TEvent, _, _], actionsConfig: ActionFunctionMap[TContext, TEvent]): Unit = js.native
+  def execute(state: State[TContext, TEvent, TStateSchema, TTypestate]): Unit = js.native
+  def execute(
+    state: State[TContext, TEvent, TStateSchema, TTypestate],
+    actionsConfig: ActionFunctionMap[TContext, TEvent]
+  ): Unit = js.native
   /**
     * Alias for Interpreter.prototype.start
     */
-  def init(): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def init(initialState: String): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def init(initialState: State[TContext, TEvent, _, _]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def init(initialState: StateValueMap): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def initialState: State[TContext, TEvent, _, _] = js.native
+  def init(): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
+  def init(initialState: String): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
+  def init(initialState: State[TContext, TEvent, TStateSchema, TTypestate]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
+  def init(initialState: StateValueMap): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
+  def initialState: State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   /**
     * Returns the next state given the interpreter's current state and the event.
     *
@@ -112,8 +115,8 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     *
     * @param event The event to determine the next state
     */
-  def nextState(event: Event[TEvent]): State[TContext, TEvent, _, _] = js.native
-  def nextState(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, _, _] = js.native
+  def nextState(event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  def nextState(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   /**
     * Removes a listener.
     * @param listener The listener to remove
@@ -144,27 +147,27 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     * @param listener The listener
     */
   def onStop(listener: Listener): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def onTransition(listener: StateListener[TContext, TEvent, TTypestate]): this.type = js.native
-  def send(event: TEvent, payload: EventData): State[TContext, TEvent, _, _] = js.native
-  def send(event: js.Array[Event[TEvent]]): State[TContext, TEvent, _, _] = js.native
-  def send(event: js.Array[Event[TEvent]], payload: EventData): State[TContext, TEvent, _, _] = js.native
-  def send(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, _, _] = js.native
-  def send(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent], payload: EventData): State[TContext, TEvent, _, _] = js.native
+  def onTransition(listener: StateListener[TContext, TEvent, TStateSchema, TTypestate]): this.type = js.native
+  def send(event: TEvent, payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  def send(event: js.Array[Event[TEvent]]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  def send(event: js.Array[Event[TEvent]], payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  def send(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  def send(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent], payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   @JSName("send")
   def send_type(
     event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any
-  ): State[TContext, TEvent, _, _] = js.native
+  ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   @JSName("send")
   def send_type(
     event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any,
     payload: EventData
-  ): State[TContext, TEvent, _, _] = js.native
+  ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   /**
     * Returns a send function bound to this interpreter instance.
     *
     * @param event The event to be sent by the sender.
     */
-  def sender(event: Event[TEvent]): js.Function0[State[TContext, TEvent, _, _]] = js.native
+  def sender(event: Event[TEvent]): js.Function0[State[TContext, TEvent, TStateSchema, TTypestate]] = js.native
   def spawn(entity: Spawnable, name: String): Actor[_, AnyEventObject] = js.native
   def spawn(entity: Spawnable, name: String, options: SpawnOptions): Actor[_, AnyEventObject] = js.native
   def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, _]): Interpreter[TChildContext, TChildStateSchema, TChildEvent, _] = js.native
@@ -173,11 +176,11 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     * Starts the interpreter from the given state, or the initial state.
     * @param initialState The state to start the statechart from
     */
-  def start(): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def start(initialState: State[TContext, TEvent, _, _]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
-  def start(initialState: StateValue): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def start(): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
+  def start(initialState: State[TContext, TEvent, TStateSchema, TTypestate]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
+  def start(initialState: StateValue): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   @JSName("state")
-  def state_MInterpreter: State[TContext, TEvent, _, _] = js.native
+  def state_MInterpreter: State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   /**
     * Stops the interpreter and unsubscribe all listeners.
     *

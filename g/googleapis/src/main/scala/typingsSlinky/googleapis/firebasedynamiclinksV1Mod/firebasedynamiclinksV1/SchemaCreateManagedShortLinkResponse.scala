@@ -25,53 +25,16 @@ trait SchemaCreateManagedShortLinkResponse extends js.Object {
 
 object SchemaCreateManagedShortLinkResponse {
   @scala.inline
-  def apply(): SchemaCreateManagedShortLinkResponse = {
+  def apply(
+    managedShortLink: SchemaManagedShortLink = null,
+    previewLink: String = null,
+    warning: js.Array[SchemaDynamicLinkWarning] = null
+  ): SchemaCreateManagedShortLinkResponse = {
     val __obj = js.Dynamic.literal()
+    if (managedShortLink != null) __obj.updateDynamic("managedShortLink")(managedShortLink.asInstanceOf[js.Any])
+    if (previewLink != null) __obj.updateDynamic("previewLink")(previewLink.asInstanceOf[js.Any])
+    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateManagedShortLinkResponse]
   }
-  @scala.inline
-  implicit class SchemaCreateManagedShortLinkResponseOps[Self <: SchemaCreateManagedShortLinkResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withManagedShortLink(value: SchemaManagedShortLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedShortLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedShortLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedShortLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviewLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviewLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previewLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarning(value: js.Array[SchemaDynamicLinkWarning]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

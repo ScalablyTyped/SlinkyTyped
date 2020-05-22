@@ -41,65 +41,18 @@ trait SchemaTable extends js.Object {
 
 object SchemaTable {
   @scala.inline
-  def apply(): SchemaTable = {
+  def apply(
+    clusterStates: StringDictionary[SchemaClusterState] = null,
+    columnFamilies: StringDictionary[SchemaColumnFamily] = null,
+    granularity: String = null,
+    name: String = null
+  ): SchemaTable = {
     val __obj = js.Dynamic.literal()
+    if (clusterStates != null) __obj.updateDynamic("clusterStates")(clusterStates.asInstanceOf[js.Any])
+    if (columnFamilies != null) __obj.updateDynamic("columnFamilies")(columnFamilies.asInstanceOf[js.Any])
+    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTable]
   }
-  @scala.inline
-  implicit class SchemaTableOps[Self <: SchemaTable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterStates(value: StringDictionary[SchemaClusterState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterStates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterStates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterStates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnFamilies(value: StringDictionary[SchemaColumnFamily]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFamilies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnFamilies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFamilies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGranularity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGranularity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,5 +19,20 @@ class AssetsProgressEvent protected ()
     totalCount: Double,
     task: typingsSlinky.babylonjs.BABYLON.AbstractAssetTask
   ) = this()
+  /**
+    * Defines the number of remaining tasks to process
+    */
+  /* CompleteClass */
+  override var remainingCount: Double = js.native
+  /**
+    * Defines the task that was just processed
+    */
+  /* CompleteClass */
+  override var task: typingsSlinky.babylonjs.BABYLON.AbstractAssetTask = js.native
+  /**
+    * Defines the total number of tasks
+    */
+  /* CompleteClass */
+  override var totalCount: Double = js.native
 }
 

@@ -18,41 +18,11 @@ trait GetCredentialsForIdentityResponse extends js.Object {
 
 object GetCredentialsForIdentityResponse {
   @scala.inline
-  def apply(): GetCredentialsForIdentityResponse = {
+  def apply(Credentials: Credentials = null, IdentityId: IdentityId = null): GetCredentialsForIdentityResponse = {
     val __obj = js.Dynamic.literal()
+    if (Credentials != null) __obj.updateDynamic("Credentials")(Credentials.asInstanceOf[js.Any])
+    if (IdentityId != null) __obj.updateDynamic("IdentityId")(IdentityId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCredentialsForIdentityResponse]
   }
-  @scala.inline
-  implicit class GetCredentialsForIdentityResponseOps[Self <: GetCredentialsForIdentityResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCredentials(value: Credentials): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Credentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentityId(value: IdentityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

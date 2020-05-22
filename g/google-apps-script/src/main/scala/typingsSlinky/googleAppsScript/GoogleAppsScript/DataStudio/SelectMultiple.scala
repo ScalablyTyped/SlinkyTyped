@@ -26,14 +26,13 @@ import scala.scalajs.js.annotation._
   *       .addOption(option1)
   *       .addOption(option2);
   */
-@js.native
 trait SelectMultiple extends js.Object {
-  def addOption(optionBuilder: OptionBuilder): SelectMultiple = js.native
-  def setAllowOverride(allowOverride: Boolean): SelectMultiple = js.native
-  def setHelpText(helpText: String): SelectMultiple = js.native
-  def setId(id: String): SelectMultiple = js.native
-  def setIsDynamic(isDynamic: Boolean): SelectMultiple = js.native
-  def setName(name: String): SelectMultiple = js.native
+  def addOption(optionBuilder: OptionBuilder): SelectMultiple
+  def setAllowOverride(allowOverride: Boolean): SelectMultiple
+  def setHelpText(helpText: String): SelectMultiple
+  def setId(id: String): SelectMultiple
+  def setIsDynamic(isDynamic: Boolean): SelectMultiple
+  def setName(name: String): SelectMultiple
 }
 
 object SelectMultiple {
@@ -49,49 +48,5 @@ object SelectMultiple {
     val __obj = js.Dynamic.literal(addOption = js.Any.fromFunction1(addOption), setAllowOverride = js.Any.fromFunction1(setAllowOverride), setHelpText = js.Any.fromFunction1(setHelpText), setId = js.Any.fromFunction1(setId), setIsDynamic = js.Any.fromFunction1(setIsDynamic), setName = js.Any.fromFunction1(setName))
     __obj.asInstanceOf[SelectMultiple]
   }
-  @scala.inline
-  implicit class SelectMultipleOps[Self <: SelectMultiple] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddOption(value: OptionBuilder => SelectMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOption")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetAllowOverride(value: Boolean => SelectMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setAllowOverride")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetHelpText(value: String => SelectMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHelpText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetId(value: String => SelectMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setId")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIsDynamic(value: Boolean => SelectMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIsDynamic")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetName(value: String => SelectMultiple): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

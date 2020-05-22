@@ -30,71 +30,17 @@ trait ImportKeyMaterialRequest extends js.Object {
 
 object ImportKeyMaterialRequest {
   @scala.inline
-  def apply(EncryptedKeyMaterial: CiphertextType, ImportToken: CiphertextType, KeyId: KeyIdType): ImportKeyMaterialRequest = {
+  def apply(
+    EncryptedKeyMaterial: CiphertextType,
+    ImportToken: CiphertextType,
+    KeyId: KeyIdType,
+    ExpirationModel: ExpirationModelType = null,
+    ValidTo: js.Date = null
+  ): ImportKeyMaterialRequest = {
     val __obj = js.Dynamic.literal(EncryptedKeyMaterial = EncryptedKeyMaterial.asInstanceOf[js.Any], ImportToken = ImportToken.asInstanceOf[js.Any], KeyId = KeyId.asInstanceOf[js.Any])
+    if (ExpirationModel != null) __obj.updateDynamic("ExpirationModel")(ExpirationModel.asInstanceOf[js.Any])
+    if (ValidTo != null) __obj.updateDynamic("ValidTo")(ValidTo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportKeyMaterialRequest]
   }
-  @scala.inline
-  implicit class ImportKeyMaterialRequestOps[Self <: ImportKeyMaterialRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptedKeyMaterialUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptedKeyMaterial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEncryptedKeyMaterial(value: CiphertextType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptedKeyMaterial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImportTokenUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImportToken(value: CiphertextType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyId(value: KeyIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpirationModel(value: ExpirationModelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidTo(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidTo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

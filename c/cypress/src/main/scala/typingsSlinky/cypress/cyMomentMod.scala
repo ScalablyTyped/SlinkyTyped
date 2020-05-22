@@ -35,6 +35,7 @@ object cyMomentMod extends js.Object {
     def apply(inp: MomentInput, format: MomentFormatSpecification, language: String): Moment = js.native
     def apply(inp: MomentInput, format: MomentFormatSpecification, language: String, strict: Boolean): Moment = js.native
     def apply(inp: MomentInput, format: MomentFormatSpecification, strict: Boolean): Moment = js.native
+    def apply(inp: MomentInput, strict: Boolean): Moment = js.native
     def calendarFormat(m: Moment, now: Moment): String = js.native
     def defineLocale(language: String, localeSpec: Unit): Locale_ = js.native
     def defineLocale(language: String, localeSpec: LocaleSpecification): Locale_ = js.native

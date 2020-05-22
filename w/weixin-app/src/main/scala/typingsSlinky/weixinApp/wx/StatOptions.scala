@@ -5,60 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StatOptions
   extends BaseOptions[js.Any, js.Any] {
-  var path: String = js.native
+  var path: String
    // 文件/目录路径
-  var recursive: js.UndefOr[Boolean] = js.native
+  var recursive: js.UndefOr[Boolean] = js.undefined
    // 是否递归,默认false
   @JSName("success")
-  var success_StatOptions: js.UndefOr[js.Function1[/* res */ Stats, Unit]] = js.native
+  var success_StatOptions: js.UndefOr[js.Function1[/* res */ Stats, Unit]] = js.undefined
 }
 
 object StatOptions {
   @scala.inline
-  def apply(path: String): StatOptions = {
+  def apply(
+    path: String,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    recursive: js.UndefOr[Boolean] = js.undefined,
+    success: /* res */ Stats => Unit = null
+  ): StatOptions = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[StatOptions]
   }
-  @scala.inline
-  implicit class StatOptionsOps[Self <: StatOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ Stats => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

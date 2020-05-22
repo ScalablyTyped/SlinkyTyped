@@ -26,13 +26,17 @@ class TreeMap[K, V] ()
   var root: js.Any = js.native
   var rotateLeft: js.Any = js.native
   var rotateRight: js.Any = js.native
-  val size: Double = js.native
   def clear(): Unit = js.native
   def delete(key: K): Unit = js.native
+  /* CompleteClass */
+  override def get(key: K): V = js.native
   def getIterator(): IterableIterator[js.Tuple2[K, V]] = js.native
   def getIterator(key: K): IterableIterator[js.Tuple2[K, V]] = js.native
   def getReverseIterator(): IterableIterator[js.Tuple2[K, V]] = js.native
   def getReverseIterator(key: K): IterableIterator[js.Tuple2[K, V]] = js.native
   def insert(key: K, value: V): Unit = js.native
+  /* CompleteClass */
+  override def set(key: K, value: V): Unit = js.native
+  def size: Double = js.native
 }
 

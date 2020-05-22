@@ -22,53 +22,12 @@ trait SchemaNetworkConfiguration extends js.Object {
 
 object SchemaNetworkConfiguration {
   @scala.inline
-  def apply(): SchemaNetworkConfiguration = {
+  def apply(downRule: SchemaTrafficRule = null, id: String = null, upRule: SchemaTrafficRule = null): SchemaNetworkConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (downRule != null) __obj.updateDynamic("downRule")(downRule.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (upRule != null) __obj.updateDynamic("upRule")(upRule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkConfiguration]
   }
-  @scala.inline
-  implicit class SchemaNetworkConfigurationOps[Self <: SchemaNetworkConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDownRule(value: SchemaTrafficRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpRule(value: SchemaTrafficRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upRule")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

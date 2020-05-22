@@ -15,14 +15,13 @@ import scala.scalajs.js.annotation._
   *
   * INTERNAL INTERFACE, DO NOT USE IT ELSEWHERE!
   */
-@js.native
 trait XProtocolProperties extends XInterface {
   /**
     * called to get a list of bridge internal properties. Which properties can be retrieved, is protocol dependent.
     *
     * The properties MUST NOT change between a requestChange and a commit change call.
     */
-  val Properties: SafeArray[ProtocolProperty] = js.native
+  val Properties: SafeArray[ProtocolProperty]
   /**
     * called to commit a protocol change.
     *
@@ -33,13 +32,13 @@ trait XProtocolProperties extends XInterface {
     * unblocked after the reply has been received. This blocks the bridge.
     * @throws InvalidProtocolChangeException when the remote counterpart could not change at least one of the properties. No property has been changed. request
     */
-  def commitChange(newValues: SeqEquiv[ProtocolProperty]): Unit = js.native
+  def commitChange(newValues: SeqEquiv[ProtocolProperty]): Unit
   /**
     * called to get a list of bridge internal properties. Which properties can be retrieved, is protocol dependent.
     *
     * The properties MUST NOT change between a requestChange and a commit change call.
     */
-  def getProperties(): SafeArray[ProtocolProperty] = js.native
+  def getProperties(): SafeArray[ProtocolProperty]
   /**
     * called to initiate a protocol change.
     *
@@ -48,7 +47,7 @@ trait XProtocolProperties extends XInterface {
     * @param nRandomNumber In case both processes call requestChange at the same time, the caller with the higher nRandomNumber is allowed to call commitChange.
     * @returns 1, if the caller may ( and MUST !!!) call commitChange. 0, if the caller is not allowed to call commitChange. This can only happen, if the other
     */
-  def requestChange(nRandomNumber: Double): Double = js.native
+  def requestChange(nRandomNumber: Double): Double
 }
 
 object XProtocolProperties {
@@ -65,37 +64,5 @@ object XProtocolProperties {
     val __obj = js.Dynamic.literal(Properties = Properties.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), commitChange = js.Any.fromFunction1(commitChange), getProperties = js.Any.fromFunction0(getProperties), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), requestChange = js.Any.fromFunction1(requestChange))
     __obj.asInstanceOf[XProtocolProperties]
   }
-  @scala.inline
-  implicit class XProtocolPropertiesOps[Self <: XProtocolProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProperties(value: SafeArray[ProtocolProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommitChange(value: SeqEquiv[ProtocolProperty] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetProperties(value: () => SafeArray[ProtocolProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperties")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRequestChange(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestChange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var allowRoot: js.UndefOr[Boolean] = js.native
-  var args: js.UndefOr[String | js.Array[String]] = js.native
-  var ignoreScripts: js.UndefOr[Boolean] = js.native
-  var noOptional: js.UndefOr[Boolean] = js.native
-  var production: js.UndefOr[Boolean] = js.native
+  var allowRoot: js.UndefOr[Boolean] = js.undefined
+  var args: js.UndefOr[String | js.Array[String]] = js.undefined
+  var ignoreScripts: js.UndefOr[Boolean] = js.undefined
+  var noOptional: js.UndefOr[Boolean] = js.undefined
+  var production: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    allowRoot: js.UndefOr[Boolean] = js.undefined,
+    args: String | js.Array[String] = null,
+    ignoreScripts: js.UndefOr[Boolean] = js.undefined,
+    noOptional: js.UndefOr[Boolean] = js.undefined,
+    production: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowRoot)) __obj.updateDynamic("allowRoot")(allowRoot.get.asInstanceOf[js.Any])
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreScripts)) __obj.updateDynamic("ignoreScripts")(ignoreScripts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noOptional)) __obj.updateDynamic("noOptional")(noOptional.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(production)) __obj.updateDynamic("production")(production.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowRoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRoot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArgs(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreScripts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreScripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoOptional(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoOptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noOptional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("production")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("production")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

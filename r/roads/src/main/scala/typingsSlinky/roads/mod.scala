@@ -65,7 +65,7 @@ object mod extends js.Object {
     def this(road: typingsSlinky.roads.roadMod.default, container_element: HTMLElement, window: Window) = this()
   }
   
-  def build(input_file: String, output_file: String, options: RoadsBuildOptions): Unit = js.native
+  def build(input_file: String, output_file: String, options: RoadsBuildOptions): js.Promise[Unit] = js.native
   @js.native
   object Middleware extends js.Object {
     @js.native

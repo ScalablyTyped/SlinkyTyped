@@ -7,212 +7,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SCCBrokerClientOptions extends js.Object {
-  var authKey: js.UndefOr[Secret] = js.native
-  var brokerRetryDelay: js.UndefOr[Double] = js.native
-  var clientPoolSize: js.UndefOr[Double] = js.native
-  var instanceId: js.UndefOr[String] = js.native
-  var instanceIp: js.UndefOr[String] = js.native
-  var instanceIpFamily: js.UndefOr[String] = js.native
-  var instancePort: js.UndefOr[Double] = js.native
-  var mappingEngine: js.UndefOr[skeletonRendezvous | simple | MappingEngine] = js.native
-  var noErrorLogging: js.UndefOr[Boolean] = js.native
-  var pubSubBatchDuration: js.UndefOr[Double] = js.native
-  var stateServerAckTimeout: js.UndefOr[Double] = js.native
-  var stateServerConnectTimeout: js.UndefOr[Double] = js.native
-  var stateServerHost: String = js.native
-  var stateServerPort: js.UndefOr[Double] = js.native
-  var stateServerReconnectRandomness: js.UndefOr[Double] = js.native
+  var authKey: js.UndefOr[Secret] = js.undefined
+  var brokerRetryDelay: js.UndefOr[Double] = js.undefined
+  var clientPoolSize: js.UndefOr[Double] = js.undefined
+  var instanceId: js.UndefOr[String] = js.undefined
+  var instanceIp: js.UndefOr[String] = js.undefined
+  var instanceIpFamily: js.UndefOr[String] = js.undefined
+  var instancePort: js.UndefOr[Double] = js.undefined
+  var mappingEngine: js.UndefOr[skeletonRendezvous | simple | MappingEngine] = js.undefined
+  var noErrorLogging: js.UndefOr[Boolean] = js.undefined
+  var pubSubBatchDuration: js.UndefOr[Double] = js.undefined
+  var stateServerAckTimeout: js.UndefOr[Double] = js.undefined
+  var stateServerConnectTimeout: js.UndefOr[Double] = js.undefined
+  var stateServerHost: String
+  var stateServerPort: js.UndefOr[Double] = js.undefined
+  var stateServerReconnectRandomness: js.UndefOr[Double] = js.undefined
 }
 
 object SCCBrokerClientOptions {
   @scala.inline
-  def apply(stateServerHost: String): SCCBrokerClientOptions = {
+  def apply(
+    stateServerHost: String,
+    authKey: Secret = null,
+    brokerRetryDelay: js.UndefOr[Double] = js.undefined,
+    clientPoolSize: js.UndefOr[Double] = js.undefined,
+    instanceId: String = null,
+    instanceIp: String = null,
+    instanceIpFamily: String = null,
+    instancePort: js.UndefOr[Double] = js.undefined,
+    mappingEngine: skeletonRendezvous | simple | MappingEngine = null,
+    noErrorLogging: js.UndefOr[Boolean] = js.undefined,
+    pubSubBatchDuration: js.UndefOr[Double] = js.undefined,
+    stateServerAckTimeout: js.UndefOr[Double] = js.undefined,
+    stateServerConnectTimeout: js.UndefOr[Double] = js.undefined,
+    stateServerPort: js.UndefOr[Double] = js.undefined,
+    stateServerReconnectRandomness: js.UndefOr[Double] = js.undefined
+  ): SCCBrokerClientOptions = {
     val __obj = js.Dynamic.literal(stateServerHost = stateServerHost.asInstanceOf[js.Any])
+    if (authKey != null) __obj.updateDynamic("authKey")(authKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(brokerRetryDelay)) __obj.updateDynamic("brokerRetryDelay")(brokerRetryDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientPoolSize)) __obj.updateDynamic("clientPoolSize")(clientPoolSize.get.asInstanceOf[js.Any])
+    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
+    if (instanceIp != null) __obj.updateDynamic("instanceIp")(instanceIp.asInstanceOf[js.Any])
+    if (instanceIpFamily != null) __obj.updateDynamic("instanceIpFamily")(instanceIpFamily.asInstanceOf[js.Any])
+    if (!js.isUndefined(instancePort)) __obj.updateDynamic("instancePort")(instancePort.get.asInstanceOf[js.Any])
+    if (mappingEngine != null) __obj.updateDynamic("mappingEngine")(mappingEngine.asInstanceOf[js.Any])
+    if (!js.isUndefined(noErrorLogging)) __obj.updateDynamic("noErrorLogging")(noErrorLogging.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pubSubBatchDuration)) __obj.updateDynamic("pubSubBatchDuration")(pubSubBatchDuration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stateServerAckTimeout)) __obj.updateDynamic("stateServerAckTimeout")(stateServerAckTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stateServerConnectTimeout)) __obj.updateDynamic("stateServerConnectTimeout")(stateServerConnectTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stateServerPort)) __obj.updateDynamic("stateServerPort")(stateServerPort.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stateServerReconnectRandomness)) __obj.updateDynamic("stateServerReconnectRandomness")(stateServerReconnectRandomness.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SCCBrokerClientOptions]
   }
-  @scala.inline
-  implicit class SCCBrokerClientOptionsOps[Self <: SCCBrokerClientOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStateServerHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerHost")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuthKey(value: Secret): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrokerRetryDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brokerRetryDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrokerRetryDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brokerRetryDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientPoolSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientPoolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientPoolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientPoolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceIpFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIpFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceIpFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIpFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancePort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancePort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMappingEngine(value: skeletonRendezvous | simple | MappingEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingEngine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMappingEngine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingEngine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoErrorLogging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noErrorLogging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoErrorLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noErrorLogging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPubSubBatchDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubSubBatchDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPubSubBatchDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pubSubBatchDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateServerAckTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerAckTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateServerAckTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerAckTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateServerConnectTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerConnectTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateServerConnectTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerConnectTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateServerPort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateServerPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateServerReconnectRandomness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerReconnectRandomness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateServerReconnectRandomness: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateServerReconnectRandomness")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

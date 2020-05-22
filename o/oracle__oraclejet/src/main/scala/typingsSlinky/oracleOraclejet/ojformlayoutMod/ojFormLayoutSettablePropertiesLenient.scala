@@ -12,89 +12,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojformlayout.ojFormLayoutSettableProperties> */
-@js.native
 trait ojFormLayoutSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var direction: js.UndefOr[column | row] = js.native
-  var labelEdge: js.UndefOr[start | top] = js.native
-  var labelWidth: js.UndefOr[String] = js.native
-  var labelWrapping: js.UndefOr[truncate | wrap] = js.native
-  var maxColumns: js.UndefOr[Double] = js.native
+  var direction: js.UndefOr[column | row] = js.undefined
+  var labelEdge: js.UndefOr[start | top] = js.undefined
+  var labelWidth: js.UndefOr[String] = js.undefined
+  var labelWrapping: js.UndefOr[truncate | wrap] = js.undefined
+  var maxColumns: js.UndefOr[Double] = js.undefined
 }
 
 object ojFormLayoutSettablePropertiesLenient {
   @scala.inline
-  def apply(): ojFormLayoutSettablePropertiesLenient = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    direction: column | row = null,
+    labelEdge: start | top = null,
+    labelWidth: String = null,
+    labelWrapping: truncate | wrap = null,
+    maxColumns: js.UndefOr[Double] = js.undefined
+  ): ojFormLayoutSettablePropertiesLenient = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (labelEdge != null) __obj.updateDynamic("labelEdge")(labelEdge.asInstanceOf[js.Any])
+    if (labelWidth != null) __obj.updateDynamic("labelWidth")(labelWidth.asInstanceOf[js.Any])
+    if (labelWrapping != null) __obj.updateDynamic("labelWrapping")(labelWrapping.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxColumns)) __obj.updateDynamic("maxColumns")(maxColumns.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojFormLayoutSettablePropertiesLenient]
   }
-  @scala.inline
-  implicit class ojFormLayoutSettablePropertiesLenientOps[Self <: ojFormLayoutSettablePropertiesLenient] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: column | row): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelEdge(value: start | top): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelEdge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelEdge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelEdge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelWrapping(value: truncate | wrap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelWrapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelWrapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelWrapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColumns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

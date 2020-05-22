@@ -10,170 +10,82 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@js.native
 trait NotebookLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The url of the site that this notebook is located. Read only
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var baseUrl: js.UndefOr[Boolean] = js.native
+  var baseUrl: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The client url of the notebook. Read only
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var clientUrl: js.UndefOr[Boolean] = js.native
+  var clientUrl: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the ID of the notebook. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * True if the Notebook is not created by the user (i.e. 'Misplaced Sections'). Read only
     *
     * [Api set: OneNoteApi 1.2]
     */
-  var isVirtual: js.UndefOr[Boolean] = js.native
+  var isVirtual: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets the name of the notebook. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var name: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * The section groups in the notebook. Read only
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var sectionGroups: js.UndefOr[SectionGroupCollectionLoadOptions] = js.native
+  var sectionGroups: js.UndefOr[SectionGroupCollectionLoadOptions] = js.undefined
   /**
     *
     * The the sections of the notebook. Read only
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var sections: js.UndefOr[SectionCollectionLoadOptions] = js.native
+  var sections: js.UndefOr[SectionCollectionLoadOptions] = js.undefined
 }
 
 object NotebookLoadOptions {
   @scala.inline
-  def apply(): NotebookLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    baseUrl: js.UndefOr[Boolean] = js.undefined,
+    clientUrl: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    isVirtual: js.UndefOr[Boolean] = js.undefined,
+    name: js.UndefOr[Boolean] = js.undefined,
+    sectionGroups: SectionGroupCollectionLoadOptions = null,
+    sections: SectionCollectionLoadOptions = null
+  ): NotebookLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(baseUrl)) __obj.updateDynamic("baseUrl")(baseUrl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clientUrl)) __obj.updateDynamic("clientUrl")(clientUrl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isVirtual)) __obj.updateDynamic("isVirtual")(isVirtual.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.get.asInstanceOf[js.Any])
+    if (sectionGroups != null) __obj.updateDynamic("sectionGroups")(sectionGroups.asInstanceOf[js.Any])
+    if (sections != null) __obj.updateDynamic("sections")(sections.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotebookLoadOptions]
   }
-  @scala.inline
-  implicit class NotebookLoadOptionsOps[Self <: NotebookLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaseUrl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientUrl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVirtual(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVirtual")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsVirtual: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVirtual")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSectionGroups(value: SectionGroupCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSectionGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSections(value: SectionCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sections")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

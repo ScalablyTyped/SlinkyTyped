@@ -5,74 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PictureFillSymbol
   extends Symbol
      with PictureSourced {
-  var outline: js.UndefOr[SimpleLineSymbol] = js.native
+  var outline: js.UndefOr[SimpleLineSymbol] = js.undefined
   @JSName("type")
-  var type_PictureFillSymbol: esriPFS = js.native
+  var type_PictureFillSymbol: esriPFS
    // if outline has been specified
-  var xscale: js.UndefOr[Double] = js.native
-  var yscale: js.UndefOr[Double] = js.native
+  var xscale: js.UndefOr[Double] = js.undefined
+  var yscale: js.UndefOr[Double] = js.undefined
 }
 
 object PictureFillSymbol {
   @scala.inline
-  def apply(`type`: esriPFS): PictureFillSymbol = {
+  def apply(
+    `type`: esriPFS,
+    angle: js.UndefOr[Double] = js.undefined,
+    contentType: String = null,
+    height: js.UndefOr[Double] = js.undefined,
+    imageData: String = null,
+    outline: SimpleLineSymbol = null,
+    style: String = null,
+    url: String = null,
+    width: js.UndefOr[Double] = js.undefined,
+    xoffset: js.UndefOr[Double] = js.undefined,
+    xscale: js.UndefOr[Double] = js.undefined,
+    yoffset: js.UndefOr[Double] = js.undefined,
+    yscale: js.UndefOr[Double] = js.undefined
+  ): PictureFillSymbol = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(angle)) __obj.updateDynamic("angle")(angle.get.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (imageData != null) __obj.updateDynamic("imageData")(imageData.asInstanceOf[js.Any])
+    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xoffset)) __obj.updateDynamic("xoffset")(xoffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(xscale)) __obj.updateDynamic("xscale")(xscale.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yoffset)) __obj.updateDynamic("yoffset")(yoffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(yscale)) __obj.updateDynamic("yscale")(yscale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PictureFillSymbol]
   }
-  @scala.inline
-  implicit class PictureFillSymbolOps[Self <: PictureFillSymbol] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: esriPFS): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutline(value: SimpleLineSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXscale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xscale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYscale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yscale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYscale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yscale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

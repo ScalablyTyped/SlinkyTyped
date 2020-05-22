@@ -7,75 +7,37 @@ import scala.scalajs.js.annotation._
 /**
   * FieldValue...
   */
-@js.native
 trait IFieldValue extends js.Object {
   /**
     * Is set to true if the value is a numeric.
     * This parameter is optional. Default is false.
     */
-  var qIsNumeric: js.UndefOr[Boolean] = js.native
+  var qIsNumeric: js.UndefOr[Boolean] = js.undefined
   /**
     * Numeric value of the field.
     * This parameter is displayed if qIsNumeric is set to true.
     * This parameter is optional.
     */
-  var qNumber: js.UndefOr[Double] = js.native
+  var qNumber: js.UndefOr[Double] = js.undefined
   /**
     * Text related to the field value
     * This parameter is optional.
     */
-  var qText: js.UndefOr[String] = js.native
+  var qText: js.UndefOr[String] = js.undefined
 }
 
 object IFieldValue {
   @scala.inline
-  def apply(): IFieldValue = {
+  def apply(
+    qIsNumeric: js.UndefOr[Boolean] = js.undefined,
+    qNumber: js.UndefOr[Double] = js.undefined,
+    qText: String = null
+  ): IFieldValue = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(qIsNumeric)) __obj.updateDynamic("qIsNumeric")(qIsNumeric.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(qNumber)) __obj.updateDynamic("qNumber")(qNumber.get.asInstanceOf[js.Any])
+    if (qText != null) __obj.updateDynamic("qText")(qText.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFieldValue]
   }
-  @scala.inline
-  implicit class IFieldValueOps[Self <: IFieldValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQIsNumeric(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIsNumeric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQIsNumeric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qIsNumeric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qText")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -21,7 +21,7 @@ trait WorkbookProtection extends ClientObject {
   var context_WorkbookProtection: RequestContext = js.native
   /**
     *
-    * Indicates if the workbook is protected. Read-Only.
+    * Specifies if the workbook is protected.
     *
     * [Api set: ExcelApi 1.7]
     */

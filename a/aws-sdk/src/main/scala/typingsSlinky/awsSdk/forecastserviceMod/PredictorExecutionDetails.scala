@@ -14,29 +14,10 @@ trait PredictorExecutionDetails extends js.Object {
 
 object PredictorExecutionDetails {
   @scala.inline
-  def apply(): PredictorExecutionDetails = {
+  def apply(PredictorExecutions: PredictorExecutions = null): PredictorExecutionDetails = {
     val __obj = js.Dynamic.literal()
+    if (PredictorExecutions != null) __obj.updateDynamic("PredictorExecutions")(PredictorExecutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PredictorExecutionDetails]
   }
-  @scala.inline
-  implicit class PredictorExecutionDetailsOps[Self <: PredictorExecutionDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPredictorExecutions(value: PredictorExecutions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorExecutions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPredictorExecutions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorExecutions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

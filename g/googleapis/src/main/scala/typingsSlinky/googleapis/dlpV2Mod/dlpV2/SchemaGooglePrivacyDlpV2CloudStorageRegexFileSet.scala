@@ -57,53 +57,16 @@ trait SchemaGooglePrivacyDlpV2CloudStorageRegexFileSet extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CloudStorageRegexFileSet {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2CloudStorageRegexFileSet = {
+  def apply(
+    bucketName: String = null,
+    excludeRegex: js.Array[String] = null,
+    includeRegex: js.Array[String] = null
+  ): SchemaGooglePrivacyDlpV2CloudStorageRegexFileSet = {
     val __obj = js.Dynamic.literal()
+    if (bucketName != null) __obj.updateDynamic("bucketName")(bucketName.asInstanceOf[js.Any])
+    if (excludeRegex != null) __obj.updateDynamic("excludeRegex")(excludeRegex.asInstanceOf[js.Any])
+    if (includeRegex != null) __obj.updateDynamic("includeRegex")(includeRegex.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CloudStorageRegexFileSet]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2CloudStorageRegexFileSetOps[Self <: SchemaGooglePrivacyDlpV2CloudStorageRegexFileSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludeRegex(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludeRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeRegex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeRegex(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRegex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRegex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

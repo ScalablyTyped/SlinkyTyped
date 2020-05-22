@@ -22,41 +22,10 @@ trait PosixUser extends js.Object {
 
 object PosixUser {
   @scala.inline
-  def apply(Gid: Gid, Uid: Uid): PosixUser = {
+  def apply(Gid: Gid, Uid: Uid, SecondaryGids: SecondaryGids = null): PosixUser = {
     val __obj = js.Dynamic.literal(Gid = Gid.asInstanceOf[js.Any], Uid = Uid.asInstanceOf[js.Any])
+    if (SecondaryGids != null) __obj.updateDynamic("SecondaryGids")(SecondaryGids.asInstanceOf[js.Any])
     __obj.asInstanceOf[PosixUser]
   }
-  @scala.inline
-  implicit class PosixUserOps[Self <: PosixUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGid(value: Gid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Gid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUid(value: Uid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Uid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecondaryGids(value: SecondaryGids): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryGids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecondaryGids: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondaryGids")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

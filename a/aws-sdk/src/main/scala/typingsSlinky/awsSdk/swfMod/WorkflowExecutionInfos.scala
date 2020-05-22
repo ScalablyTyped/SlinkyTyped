@@ -18,35 +18,10 @@ trait WorkflowExecutionInfos extends js.Object {
 
 object WorkflowExecutionInfos {
   @scala.inline
-  def apply(executionInfos: WorkflowExecutionInfoList): WorkflowExecutionInfos = {
+  def apply(executionInfos: WorkflowExecutionInfoList, nextPageToken: PageToken = null): WorkflowExecutionInfos = {
     val __obj = js.Dynamic.literal(executionInfos = executionInfos.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowExecutionInfos]
   }
-  @scala.inline
-  implicit class WorkflowExecutionInfosOps[Self <: WorkflowExecutionInfos] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutionInfos(value: WorkflowExecutionInfoList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executionInfos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: PageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

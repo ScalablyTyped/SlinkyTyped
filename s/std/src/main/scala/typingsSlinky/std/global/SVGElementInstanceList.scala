@@ -8,7 +8,14 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SVGElementInstanceList")
 @js.native
 class SVGElementInstanceList ()
-  extends typingsSlinky.std.SVGElementInstanceList
+  extends typingsSlinky.std.SVGElementInstanceList {
+  /** @deprecated */
+  /* CompleteClass */
+  override val length: Double = js.native
+  /** @deprecated */
+  /* CompleteClass */
+  override def item(index: Double): org.scalajs.dom.raw.SVGElementInstance = js.native
+}
 
 @JSGlobal("SVGElementInstanceList")
 @js.native

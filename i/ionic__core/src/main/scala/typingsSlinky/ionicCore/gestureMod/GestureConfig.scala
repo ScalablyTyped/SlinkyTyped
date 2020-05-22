@@ -7,193 +7,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GestureConfig extends js.Object {
-  var canStart: js.UndefOr[GestureCallback] = js.native
-  var direction: js.UndefOr[x | y] = js.native
-  var disableScroll: js.UndefOr[Boolean] = js.native
-  var el: Node = js.native
-  var gestureName: String = js.native
-  var gesturePriority: js.UndefOr[Double] = js.native
-  var maxAngle: js.UndefOr[Double] = js.native
-  var notCaptured: js.UndefOr[GestureCallback] = js.native
-  var onEnd: js.UndefOr[GestureCallback] = js.native
-  var onMove: js.UndefOr[GestureCallback] = js.native
-  var onStart: js.UndefOr[GestureCallback] = js.native
-  var onWillStart: js.UndefOr[js.Function1[/* _ */ GestureDetail, js.Promise[Unit]]] = js.native
-  var passive: js.UndefOr[Boolean] = js.native
-  var threshold: js.UndefOr[Double] = js.native
+  var canStart: js.UndefOr[GestureCallback] = js.undefined
+  var direction: js.UndefOr[x | y] = js.undefined
+  var disableScroll: js.UndefOr[Boolean] = js.undefined
+  var el: Node
+  var gestureName: String
+  var gesturePriority: js.UndefOr[Double] = js.undefined
+  var maxAngle: js.UndefOr[Double] = js.undefined
+  var notCaptured: js.UndefOr[GestureCallback] = js.undefined
+  var onEnd: js.UndefOr[GestureCallback] = js.undefined
+  var onMove: js.UndefOr[GestureCallback] = js.undefined
+  var onStart: js.UndefOr[GestureCallback] = js.undefined
+  var onWillStart: js.UndefOr[js.Function1[/* _ */ GestureDetail, js.Promise[Unit]]] = js.undefined
+  var passive: js.UndefOr[Boolean] = js.undefined
+  var threshold: js.UndefOr[Double] = js.undefined
 }
 
 object GestureConfig {
   @scala.inline
-  def apply(el: Node, gestureName: String): GestureConfig = {
+  def apply(
+    el: Node,
+    gestureName: String,
+    canStart: /* detail */ GestureDetail => Boolean | Unit = null,
+    direction: x | y = null,
+    disableScroll: js.UndefOr[Boolean] = js.undefined,
+    gesturePriority: js.UndefOr[Double] = js.undefined,
+    maxAngle: js.UndefOr[Double] = js.undefined,
+    notCaptured: /* detail */ GestureDetail => Boolean | Unit = null,
+    onEnd: /* detail */ GestureDetail => Boolean | Unit = null,
+    onMove: /* detail */ GestureDetail => Boolean | Unit = null,
+    onStart: /* detail */ GestureDetail => Boolean | Unit = null,
+    onWillStart: /* _ */ GestureDetail => js.Promise[Unit] = null,
+    passive: js.UndefOr[Boolean] = js.undefined,
+    threshold: js.UndefOr[Double] = js.undefined
+  ): GestureConfig = {
     val __obj = js.Dynamic.literal(el = el.asInstanceOf[js.Any], gestureName = gestureName.asInstanceOf[js.Any])
+    if (canStart != null) __obj.updateDynamic("canStart")(js.Any.fromFunction1(canStart))
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableScroll)) __obj.updateDynamic("disableScroll")(disableScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gesturePriority)) __obj.updateDynamic("gesturePriority")(gesturePriority.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAngle)) __obj.updateDynamic("maxAngle")(maxAngle.get.asInstanceOf[js.Any])
+    if (notCaptured != null) __obj.updateDynamic("notCaptured")(js.Any.fromFunction1(notCaptured))
+    if (onEnd != null) __obj.updateDynamic("onEnd")(js.Any.fromFunction1(onEnd))
+    if (onMove != null) __obj.updateDynamic("onMove")(js.Any.fromFunction1(onMove))
+    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction1(onStart))
+    if (onWillStart != null) __obj.updateDynamic("onWillStart")(js.Any.fromFunction1(onWillStart))
+    if (!js.isUndefined(passive)) __obj.updateDynamic("passive")(passive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(threshold)) __obj.updateDynamic("threshold")(threshold.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GestureConfig]
   }
-  @scala.inline
-  implicit class GestureConfigOps[Self <: GestureConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEl(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("el")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGestureName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gestureName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanStart(value: /* detail */ GestureDetail => Boolean | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCanStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirection(value: typingsSlinky.ionicCore.ionicCoreStrings.x | y): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGesturePriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gesturePriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGesturePriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gesturePriority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAngle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotCaptured(value: /* detail */ GestureDetail => Boolean | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notCaptured")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNotCaptured: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notCaptured")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnEnd(value: /* detail */ GestureDetail => Boolean | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMove(value: /* detail */ GestureDetail => Boolean | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStart(value: /* detail */ GestureDetail => Boolean | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWillStart(value: /* _ */ GestureDetail => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWillStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnWillStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWillStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPassive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPassive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

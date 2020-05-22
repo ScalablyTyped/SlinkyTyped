@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
   * Note that though this object is "JSON-like," it is not strictly JSON,
   * as it directly and indirectly includes LatLng objects.
   */
-@js.native
 trait DirectionsRoute extends js.Object {
   /** The bounds for this route. */
-  var bounds: LatLngBounds = js.native
+  var bounds: LatLngBounds
   /** Copyrights text to be displayed for this route. */
-  var copyrights: String = js.native
+  var copyrights: String
   /**
     * The total fare for the whole transit trip. Only applicable to transit
     * requests.
     */
-  var fare: TransitFare = js.native
+  var fare: TransitFare
   /**
     * An array of DirectionsLegs, each of which contains information about the
     * steps of which it is composed. There will be one leg for each stopover
@@ -27,21 +26,21 @@ trait DirectionsRoute extends js.Object {
     * will contain one DirectionsLeg and a route with one stopover waypoint
     * will contain two.
     */
-  var legs: js.Array[DirectionsLeg] = js.native
+  var legs: js.Array[DirectionsLeg]
   /**
     * An array of LatLngs representing the entire course of this route. The
     * path is simplified in order to make it suitable in contexts where a small
     * number of vertices is required (such as Static Maps API URLs).
     */
-  var overview_path: js.Array[LatLng] = js.native
+  var overview_path: js.Array[LatLng]
   /**
     * An encoded polyline representation of the route in overview_path.
     * This polyline is an approximate (smoothed) path of the resulting
     * directions.
     */
-  var overview_polyline: String = js.native
+  var overview_polyline: String
   /** Warnings to be displayed when showing these directions. */
-  var warnings: js.Array[String] = js.native
+  var warnings: js.Array[String]
   /**
     * If optimizeWaypoints was set to true, this field will contain the
     * re-ordered permutation of the input waypoints. For example, if the input
@@ -53,7 +52,7 @@ trait DirectionsRoute extends js.Object {
     * has stopover set to false, this field will be empty, since route
     * optimization is not available for such queries.
     */
-  var waypoint_order: js.Array[Double] = js.native
+  var waypoint_order: js.Array[Double]
 }
 
 object DirectionsRoute {
@@ -71,61 +70,5 @@ object DirectionsRoute {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], copyrights = copyrights.asInstanceOf[js.Any], fare = fare.asInstanceOf[js.Any], legs = legs.asInstanceOf[js.Any], overview_path = overview_path.asInstanceOf[js.Any], overview_polyline = overview_polyline.asInstanceOf[js.Any], warnings = warnings.asInstanceOf[js.Any], waypoint_order = waypoint_order.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsRoute]
   }
-  @scala.inline
-  implicit class DirectionsRouteOps[Self <: DirectionsRoute] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBounds(value: LatLngBounds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCopyrights(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copyrights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFare(value: TransitFare): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fare")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLegs(value: js.Array[DirectionsLeg]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverview_path(value: js.Array[LatLng]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overview_path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOverview_polyline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overview_polyline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWaypoint_order(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waypoint_order")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

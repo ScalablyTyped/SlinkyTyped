@@ -4,62 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseBlockParams extends LocalBaseBlockParams {
-  var name: js.UndefOr[String] = js.native
-  var optional: js.UndefOr[scala.Boolean] = js.native
-  var primitiveSchema: js.UndefOr[js.Object] = js.native
+  var name: js.UndefOr[String] = js.undefined
+  var optional: js.UndefOr[scala.Boolean] = js.undefined
+  var primitiveSchema: js.UndefOr[js.Object] = js.undefined
 }
 
 object BaseBlockParams {
   @scala.inline
-  def apply(): BaseBlockParams = {
+  def apply(
+    blockLength: js.UndefOr[Double] = js.undefined,
+    error: String = null,
+    name: String = null,
+    optional: js.UndefOr[scala.Boolean] = js.undefined,
+    primitiveSchema: js.Object = null,
+    valueBeforeDecode: js.typedarray.ArrayBuffer = null,
+    warnings: js.Array[String] = null
+  ): BaseBlockParams = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockLength)) __obj.updateDynamic("blockLength")(blockLength.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.get.asInstanceOf[js.Any])
+    if (primitiveSchema != null) __obj.updateDynamic("primitiveSchema")(primitiveSchema.asInstanceOf[js.Any])
+    if (valueBeforeDecode != null) __obj.updateDynamic("valueBeforeDecode")(valueBeforeDecode.asInstanceOf[js.Any])
+    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseBlockParams]
   }
-  @scala.inline
-  implicit class BaseBlockParamsOps[Self <: BaseBlockParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptional(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptional: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimitiveSchema(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primitiveSchema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimitiveSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primitiveSchema")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

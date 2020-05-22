@@ -7,123 +7,63 @@ import scala.scalajs.js.annotation._
 /**
   * Options for Model.count method
   */
-@js.native
 trait CountOptions
   extends LoggingOptions
      with SearchPathOptions {
   /**
     * Used in conjustion with `group`
     */
-  var attributes: js.UndefOr[js.Array[String | (js.Tuple2[String, String])]] = js.native
+  var attributes: js.UndefOr[js.Array[String | (js.Tuple2[String, String])]] = js.undefined
   /**
     * Apply column on which COUNT() should be applied
     */
-  var col: js.UndefOr[String] = js.native
+  var col: js.UndefOr[String] = js.undefined
   /**
     * Apply COUNT(DISTINCT(col))
     */
-  var distinct: js.UndefOr[Boolean] = js.native
+  var distinct: js.UndefOr[Boolean] = js.undefined
   /**
     * For creating complex counts. Will return multiple rows as needed.
     *
     * TODO: Check?
     */
-  var group: js.UndefOr[js.Object] = js.native
+  var group: js.UndefOr[js.Object] = js.undefined
   /**
     * Include options. See `find` for details
     */
-  var include: js.UndefOr[js.Array[(Model[_, _, _]) | IncludeOptions]] = js.native
+  var include: js.UndefOr[js.Array[(Model[_, _, _]) | IncludeOptions]] = js.undefined
   /**
     * A hash of search attributes.
     */
-  var where: js.UndefOr[AnyWhereOptions | js.Array[String]] = js.native
+  var where: js.UndefOr[AnyWhereOptions | js.Array[String]] = js.undefined
 }
 
 object CountOptions {
   @scala.inline
-  def apply(): CountOptions = {
+  def apply(
+    attributes: js.Array[String | (js.Tuple2[String, String])] = null,
+    benchmark: js.UndefOr[Boolean] = js.undefined,
+    col: String = null,
+    distinct: js.UndefOr[Boolean] = js.undefined,
+    group: js.Object = null,
+    include: js.Array[(Model[_, _, _]) | IncludeOptions] = null,
+    logging: Boolean | js.Function = null,
+    searchPath: String = null,
+    transaction: Transaction = null,
+    where: AnyWhereOptions | js.Array[String] = null
+  ): CountOptions = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.get.asInstanceOf[js.Any])
+    if (col != null) __obj.updateDynamic("col")(col.asInstanceOf[js.Any])
+    if (!js.isUndefined(distinct)) __obj.updateDynamic("distinct")(distinct.get.asInstanceOf[js.Any])
+    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
+    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[CountOptions]
   }
-  @scala.inline
-  implicit class CountOptionsOps[Self <: CountOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: js.Array[String | (js.Tuple2[String, String])]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistinct(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistinct: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distinct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(value: js.Array[(Model[_, _, _]) | IncludeOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhere(value: AnyWhereOptions | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhere: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

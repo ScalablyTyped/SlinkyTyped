@@ -5,323 +5,85 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITagsManagerOptions extends js.Object {
-  var AjaxPush: js.UndefOr[String] = js.native
-  var CapitalizeFirstLetter: js.UndefOr[Boolean] = js.native
-  var backspace: js.UndefOr[js.Array[Double]] = js.native
-  var blinkBGColor_1: js.UndefOr[String] = js.native
-  var blinkBGColor_2: js.UndefOr[String] = js.native
-  var deleteTagsOnBackspace: js.UndefOr[Boolean] = js.native
+  var AjaxPush: js.UndefOr[String] = js.undefined
+  var CapitalizeFirstLetter: js.UndefOr[Boolean] = js.undefined
+  var backspace: js.UndefOr[js.Array[Double]] = js.undefined
+  var blinkBGColor_1: js.UndefOr[String] = js.undefined
+  var blinkBGColor_2: js.UndefOr[String] = js.undefined
+  var deleteTagsOnBackspace: js.UndefOr[Boolean] = js.undefined
    //url
-  var delimeters: js.UndefOr[js.Array[Double]] = js.native
-  var hiddenTagListId: js.UndefOr[String] = js.native
-  var hiddenTagListName: js.UndefOr[String] = js.native
-  var isClearInputOnEsc: js.UndefOr[Boolean] = js.native
-  var maxTags: js.UndefOr[Double] = js.native
-  var prefilled: js.UndefOr[js.Any] = js.native
-  var preventSubmitOnEnter: js.UndefOr[Boolean] = js.native
-  var tagClass: js.UndefOr[String] = js.native
-  var tagCloseIcon: js.UndefOr[String] = js.native
-  var tagsContainer: js.UndefOr[HTMLElement] = js.native
-  var typeahead: js.UndefOr[Boolean] = js.native
-  var typeaheadAjaxPolling: js.UndefOr[Boolean] = js.native
-  var typeaheadAjaxSource: js.UndefOr[String] = js.native
-  var typeaheadDelegate: js.UndefOr[js.Function] = js.native
-  var typeaheadOverrides: js.UndefOr[ITypeaheadOverrides] = js.native
-  var typeaheadSource: js.UndefOr[js.Any] = js.native
-  var validator: js.UndefOr[js.Function] = js.native
+  var delimeters: js.UndefOr[js.Array[Double]] = js.undefined
+  var hiddenTagListId: js.UndefOr[String] = js.undefined
+  var hiddenTagListName: js.UndefOr[String] = js.undefined
+  var isClearInputOnEsc: js.UndefOr[Boolean] = js.undefined
+  var maxTags: js.UndefOr[Double] = js.undefined
+  var prefilled: js.UndefOr[js.Any] = js.undefined
+  var preventSubmitOnEnter: js.UndefOr[Boolean] = js.undefined
+  var tagClass: js.UndefOr[String] = js.undefined
+  var tagCloseIcon: js.UndefOr[String] = js.undefined
+  var tagsContainer: js.UndefOr[HTMLElement] = js.undefined
+  var typeahead: js.UndefOr[Boolean] = js.undefined
+  var typeaheadAjaxPolling: js.UndefOr[Boolean] = js.undefined
+  var typeaheadAjaxSource: js.UndefOr[String] = js.undefined
+  var typeaheadDelegate: js.UndefOr[js.Function] = js.undefined
+  var typeaheadOverrides: js.UndefOr[ITypeaheadOverrides] = js.undefined
+  var typeaheadSource: js.UndefOr[js.Any] = js.undefined
+  var validator: js.UndefOr[js.Function] = js.undefined
 }
 
 object ITagsManagerOptions {
   @scala.inline
-  def apply(): ITagsManagerOptions = {
+  def apply(
+    AjaxPush: String = null,
+    CapitalizeFirstLetter: js.UndefOr[Boolean] = js.undefined,
+    backspace: js.Array[Double] = null,
+    blinkBGColor_1: String = null,
+    blinkBGColor_2: String = null,
+    deleteTagsOnBackspace: js.UndefOr[Boolean] = js.undefined,
+    delimeters: js.Array[Double] = null,
+    hiddenTagListId: String = null,
+    hiddenTagListName: String = null,
+    isClearInputOnEsc: js.UndefOr[Boolean] = js.undefined,
+    maxTags: js.UndefOr[Double] = js.undefined,
+    prefilled: js.Any = null,
+    preventSubmitOnEnter: js.UndefOr[Boolean] = js.undefined,
+    tagClass: String = null,
+    tagCloseIcon: String = null,
+    tagsContainer: HTMLElement = null,
+    typeahead: js.UndefOr[Boolean] = js.undefined,
+    typeaheadAjaxPolling: js.UndefOr[Boolean] = js.undefined,
+    typeaheadAjaxSource: String = null,
+    typeaheadDelegate: js.Function = null,
+    typeaheadOverrides: ITypeaheadOverrides = null,
+    typeaheadSource: js.Any = null,
+    validator: js.Function = null
+  ): ITagsManagerOptions = {
     val __obj = js.Dynamic.literal()
+    if (AjaxPush != null) __obj.updateDynamic("AjaxPush")(AjaxPush.asInstanceOf[js.Any])
+    if (!js.isUndefined(CapitalizeFirstLetter)) __obj.updateDynamic("CapitalizeFirstLetter")(CapitalizeFirstLetter.get.asInstanceOf[js.Any])
+    if (backspace != null) __obj.updateDynamic("backspace")(backspace.asInstanceOf[js.Any])
+    if (blinkBGColor_1 != null) __obj.updateDynamic("blinkBGColor_1")(blinkBGColor_1.asInstanceOf[js.Any])
+    if (blinkBGColor_2 != null) __obj.updateDynamic("blinkBGColor_2")(blinkBGColor_2.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteTagsOnBackspace)) __obj.updateDynamic("deleteTagsOnBackspace")(deleteTagsOnBackspace.get.asInstanceOf[js.Any])
+    if (delimeters != null) __obj.updateDynamic("delimeters")(delimeters.asInstanceOf[js.Any])
+    if (hiddenTagListId != null) __obj.updateDynamic("hiddenTagListId")(hiddenTagListId.asInstanceOf[js.Any])
+    if (hiddenTagListName != null) __obj.updateDynamic("hiddenTagListName")(hiddenTagListName.asInstanceOf[js.Any])
+    if (!js.isUndefined(isClearInputOnEsc)) __obj.updateDynamic("isClearInputOnEsc")(isClearInputOnEsc.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxTags)) __obj.updateDynamic("maxTags")(maxTags.get.asInstanceOf[js.Any])
+    if (prefilled != null) __obj.updateDynamic("prefilled")(prefilled.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventSubmitOnEnter)) __obj.updateDynamic("preventSubmitOnEnter")(preventSubmitOnEnter.get.asInstanceOf[js.Any])
+    if (tagClass != null) __obj.updateDynamic("tagClass")(tagClass.asInstanceOf[js.Any])
+    if (tagCloseIcon != null) __obj.updateDynamic("tagCloseIcon")(tagCloseIcon.asInstanceOf[js.Any])
+    if (tagsContainer != null) __obj.updateDynamic("tagsContainer")(tagsContainer.asInstanceOf[js.Any])
+    if (!js.isUndefined(typeahead)) __obj.updateDynamic("typeahead")(typeahead.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(typeaheadAjaxPolling)) __obj.updateDynamic("typeaheadAjaxPolling")(typeaheadAjaxPolling.get.asInstanceOf[js.Any])
+    if (typeaheadAjaxSource != null) __obj.updateDynamic("typeaheadAjaxSource")(typeaheadAjaxSource.asInstanceOf[js.Any])
+    if (typeaheadDelegate != null) __obj.updateDynamic("typeaheadDelegate")(typeaheadDelegate.asInstanceOf[js.Any])
+    if (typeaheadOverrides != null) __obj.updateDynamic("typeaheadOverrides")(typeaheadOverrides.asInstanceOf[js.Any])
+    if (typeaheadSource != null) __obj.updateDynamic("typeaheadSource")(typeaheadSource.asInstanceOf[js.Any])
+    if (validator != null) __obj.updateDynamic("validator")(validator.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITagsManagerOptions]
   }
-  @scala.inline
-  implicit class ITagsManagerOptionsOps[Self <: ITagsManagerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxPush(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AjaxPush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxPush: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AjaxPush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapitalizeFirstLetter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapitalizeFirstLetter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapitalizeFirstLetter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CapitalizeFirstLetter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackspace(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackspace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backspace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlinkBGColor_1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blinkBGColor_1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlinkBGColor_1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blinkBGColor_1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlinkBGColor_2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blinkBGColor_2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlinkBGColor_2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blinkBGColor_2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteTagsOnBackspace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTagsOnBackspace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteTagsOnBackspace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTagsOnBackspace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelimeters(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimeters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimeters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delimeters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenTagListId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenTagListId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenTagListId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenTagListId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenTagListName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenTagListName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenTagListName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenTagListName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsClearInputOnEsc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClearInputOnEsc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsClearInputOnEsc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isClearInputOnEsc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTags(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefilled(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefilled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefilled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefilled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventSubmitOnEnter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventSubmitOnEnter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventSubmitOnEnter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventSubmitOnEnter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagCloseIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagCloseIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagCloseIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagCloseIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagsContainer(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagsContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagsContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagsContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeahead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeahead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeahead: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeahead")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeaheadAjaxPolling(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadAjaxPolling")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeaheadAjaxPolling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadAjaxPolling")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeaheadAjaxSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadAjaxSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeaheadAjaxSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadAjaxSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeaheadDelegate(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadDelegate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeaheadDelegate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadDelegate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeaheadOverrides(value: ITypeaheadOverrides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadOverrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeaheadOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadOverrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeaheadSource(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeaheadSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeaheadSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidator(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

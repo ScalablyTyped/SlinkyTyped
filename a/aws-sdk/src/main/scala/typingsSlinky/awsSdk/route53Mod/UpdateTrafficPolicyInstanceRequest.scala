@@ -35,37 +35,5 @@ object UpdateTrafficPolicyInstanceRequest {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any], TTL = TTL.asInstanceOf[js.Any], TrafficPolicyId = TrafficPolicyId.asInstanceOf[js.Any], TrafficPolicyVersion = TrafficPolicyVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTrafficPolicyInstanceRequest]
   }
-  @scala.inline
-  implicit class UpdateTrafficPolicyInstanceRequestOps[Self <: UpdateTrafficPolicyInstanceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: TrafficPolicyInstanceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTTL(value: TTL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TTL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyId(value: TrafficPolicyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyVersion(value: TrafficPolicyVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutomaticRepliesMailTips extends js.Object {
   // The automatic reply message.
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String] = js.undefined
   // The language that the automatic reply message is in.
-  var messageLanguage: js.UndefOr[LocaleInfo] = js.native
+  var messageLanguage: js.UndefOr[LocaleInfo] = js.undefined
   // The date and time that automatic replies are set to end.
-  var scheduledEndTime: js.UndefOr[DateTimeTimeZone] = js.native
+  var scheduledEndTime: js.UndefOr[DateTimeTimeZone] = js.undefined
   // The date and time that automatic replies are set to begin.
-  var scheduledStartTime: js.UndefOr[DateTimeTimeZone] = js.native
+  var scheduledStartTime: js.UndefOr[DateTimeTimeZone] = js.undefined
 }
 
 object AutomaticRepliesMailTips {
   @scala.inline
-  def apply(): AutomaticRepliesMailTips = {
+  def apply(
+    message: String = null,
+    messageLanguage: LocaleInfo = null,
+    scheduledEndTime: DateTimeTimeZone = null,
+    scheduledStartTime: DateTimeTimeZone = null
+  ): AutomaticRepliesMailTips = {
     val __obj = js.Dynamic.literal()
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (messageLanguage != null) __obj.updateDynamic("messageLanguage")(messageLanguage.asInstanceOf[js.Any])
+    if (scheduledEndTime != null) __obj.updateDynamic("scheduledEndTime")(scheduledEndTime.asInstanceOf[js.Any])
+    if (scheduledStartTime != null) __obj.updateDynamic("scheduledStartTime")(scheduledStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutomaticRepliesMailTips]
   }
-  @scala.inline
-  implicit class AutomaticRepliesMailTipsOps[Self <: AutomaticRepliesMailTips] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageLanguage(value: LocaleInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageLanguage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledEndTime(value: DateTimeTimeZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEndTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledEndTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEndTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledStartTime(value: DateTimeTimeZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledStartTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledStartTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

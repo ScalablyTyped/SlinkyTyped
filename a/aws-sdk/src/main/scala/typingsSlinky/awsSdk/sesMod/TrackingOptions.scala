@@ -14,29 +14,10 @@ trait TrackingOptions extends js.Object {
 
 object TrackingOptions {
   @scala.inline
-  def apply(): TrackingOptions = {
+  def apply(CustomRedirectDomain: CustomRedirectDomain = null): TrackingOptions = {
     val __obj = js.Dynamic.literal()
+    if (CustomRedirectDomain != null) __obj.updateDynamic("CustomRedirectDomain")(CustomRedirectDomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrackingOptions]
   }
-  @scala.inline
-  implicit class TrackingOptionsOps[Self <: TrackingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomRedirectDomain(value: CustomRedirectDomain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomRedirectDomain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomRedirectDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomRedirectDomain")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

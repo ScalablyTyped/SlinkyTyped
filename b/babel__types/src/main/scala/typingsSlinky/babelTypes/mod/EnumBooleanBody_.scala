@@ -6,48 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait EnumBooleanBody_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait EnumBooleanBody_
   extends EnumBody
      with BaseNode {
-  var explicit: Boolean = js.native
-  var members: js.Array[EnumBooleanMember_] = js.native
+  var explicit: Boolean
+  var members: js.Array[EnumBooleanMember_]
   @JSName("type")
-  var type_EnumBooleanBody_ : EnumBooleanBody = js.native
+  var type_EnumBooleanBody_ : EnumBooleanBody
 }
 
 object EnumBooleanBody_ {
   @scala.inline
-  def apply(explicit: Boolean, members: js.Array[EnumBooleanMember_], `type`: EnumBooleanBody): EnumBooleanBody_ = {
-    val __obj = js.Dynamic.literal(explicit = explicit.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any])
+  def apply(
+    explicit: Boolean,
+    members: js.Array[EnumBooleanMember_],
+    `type`: EnumBooleanBody,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): EnumBooleanBody_ = {
+    val __obj = js.Dynamic.literal(explicit = explicit.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnumBooleanBody_]
   }
-  @scala.inline
-  implicit class EnumBooleanBody_Ops[Self <: EnumBooleanBody_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExplicit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMembers(value: js.Array[EnumBooleanMember_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: EnumBooleanBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

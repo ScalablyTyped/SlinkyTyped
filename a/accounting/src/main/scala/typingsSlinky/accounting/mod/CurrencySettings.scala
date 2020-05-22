@@ -4,92 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CurrencySettings[TFormat] extends js.Object {
       // controls output: %s = symbol, %v = value/number
-  var decimal: js.UndefOr[String] = js.native
+  var decimal: js.UndefOr[String] = js.undefined
        // default currency symbol is '$'
-  var format: js.UndefOr[TFormat] = js.native
+  var format: js.UndefOr[TFormat] = js.undefined
      // thousands separator
-  var precision: js.UndefOr[Double] = js.native
-  var symbol: js.UndefOr[String] = js.native
+  var precision: js.UndefOr[Double] = js.undefined
+  var symbol: js.UndefOr[String] = js.undefined
       // decimal point separator
-  var thousand: js.UndefOr[String] = js.native
+  var thousand: js.UndefOr[String] = js.undefined
 }
 
 object CurrencySettings {
   @scala.inline
-  def apply[TFormat](): CurrencySettings[TFormat] = {
+  def apply[TFormat](
+    decimal: String = null,
+    format: TFormat = null,
+    precision: js.UndefOr[Double] = js.undefined,
+    symbol: String = null,
+    thousand: String = null
+  ): CurrencySettings[TFormat] = {
     val __obj = js.Dynamic.literal()
+    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(precision)) __obj.updateDynamic("precision")(precision.get.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (thousand != null) __obj.updateDynamic("thousand")(thousand.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrencySettings[TFormat]]
   }
-  @scala.inline
-  implicit class CurrencySettingsOps[Self[tformat] <: CurrencySettings[tformat], TFormat] (val x: Self[TFormat]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TFormat] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TFormat]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TFormat] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TFormat] with Other]
-    @scala.inline
-    def withDecimal(value: String): Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimal: Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: TFormat): Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: Double): Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: String): Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThousand(value: String): Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thousand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThousand: Self[TFormat] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thousand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

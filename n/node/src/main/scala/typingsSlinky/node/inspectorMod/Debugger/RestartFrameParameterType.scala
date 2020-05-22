@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RestartFrameParameterType extends js.Object {
   /**
     * Call frame identifier to evaluate on.
     */
-  var callFrameId: CallFrameId = js.native
+  var callFrameId: CallFrameId
 }
 
 object RestartFrameParameterType {
@@ -18,19 +17,5 @@ object RestartFrameParameterType {
     val __obj = js.Dynamic.literal(callFrameId = callFrameId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestartFrameParameterType]
   }
-  @scala.inline
-  implicit class RestartFrameParameterTypeOps[Self <: RestartFrameParameterType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallFrameId(value: CallFrameId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callFrameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

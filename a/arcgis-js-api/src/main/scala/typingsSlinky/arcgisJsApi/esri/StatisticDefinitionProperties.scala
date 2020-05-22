@@ -13,20 +13,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StatisticDefinitionProperties extends js.Object {
   /**
     * Defines the field for which statistics will be calculated. This can be service field names or SQL expressions. See the snippets below for examples.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#onStatisticField)
     */
-  var onStatisticField: js.UndefOr[String] = js.native
+  var onStatisticField: js.UndefOr[String] = js.undefined
   /**
     * Specifies the output field name for the requested statistic. Output field names can only contain alpha-numeric characters and an underscore. If no output field name is specified, the server assigns a field name to the returned statistic field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#outStatisticFieldName)
     */
-  var outStatisticFieldName: js.UndefOr[String] = js.native
+  var outStatisticFieldName: js.UndefOr[String] = js.undefined
   /**
     * The parameters for [percentile statistics](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticType). This property must be set when the [statisticType](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticType) is set to either `percentile-continuous` or `percentile-discrete`.
     *
@@ -34,7 +33,7 @@ trait StatisticDefinitionProperties extends js.Object {
     *
     * @default null
     */
-  var statisticParameters: js.UndefOr[StatisticDefinitionStatisticParameters] = js.native
+  var statisticParameters: js.UndefOr[StatisticDefinitionStatisticParameters] = js.undefined
   /**
     * Defines the type of statistic.  **Possible Values:**
     *
@@ -60,72 +59,23 @@ trait StatisticDefinitionProperties extends js.Object {
     */
   var statisticType: js.UndefOr[
     count | sum | min | max | avg | stddev | `var` | `percentile-continuous` | `percentile-discrete`
-  ] = js.native
+  ] = js.undefined
 }
 
 object StatisticDefinitionProperties {
   @scala.inline
-  def apply(): StatisticDefinitionProperties = {
+  def apply(
+    onStatisticField: String = null,
+    outStatisticFieldName: String = null,
+    statisticParameters: StatisticDefinitionStatisticParameters = null,
+    statisticType: count | sum | min | max | avg | stddev | `var` | `percentile-continuous` | `percentile-discrete` = null
+  ): StatisticDefinitionProperties = {
     val __obj = js.Dynamic.literal()
+    if (onStatisticField != null) __obj.updateDynamic("onStatisticField")(onStatisticField.asInstanceOf[js.Any])
+    if (outStatisticFieldName != null) __obj.updateDynamic("outStatisticFieldName")(outStatisticFieldName.asInstanceOf[js.Any])
+    if (statisticParameters != null) __obj.updateDynamic("statisticParameters")(statisticParameters.asInstanceOf[js.Any])
+    if (statisticType != null) __obj.updateDynamic("statisticType")(statisticType.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatisticDefinitionProperties]
   }
-  @scala.inline
-  implicit class StatisticDefinitionPropertiesOps[Self <: StatisticDefinitionProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnStatisticField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStatisticField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnStatisticField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStatisticField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutStatisticFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outStatisticFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutStatisticFieldName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outStatisticFieldName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatisticParameters(value: StatisticDefinitionStatisticParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatisticParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatisticType(
-      value: count | sum | min | max | avg | stddev | `var` | `percentile-continuous` | `percentile-discrete`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatisticType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statisticType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

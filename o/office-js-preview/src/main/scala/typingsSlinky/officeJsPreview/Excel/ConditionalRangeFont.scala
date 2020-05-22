@@ -23,14 +23,14 @@ import scala.scalajs.js.annotation._
 trait ConditionalRangeFont extends ClientObject {
   /**
     *
-    * Represents the bold status of font.
+    * Specifies if the font is bold.
     *
     * [Api set: ExcelApi 1.6]
     */
   var bold: Boolean = js.native
   /**
     *
-    * HTML color code representation of the text color. E.g. #FF0000 represents Red.
+    * HTML color code representation of the text color (e.g., #FF0000 represents Red).
     *
     * [Api set: ExcelApi 1.6]
     */
@@ -40,21 +40,21 @@ trait ConditionalRangeFont extends ClientObject {
   var context_ConditionalRangeFont: RequestContext = js.native
   /**
     *
-    * Represents the italic status of the font.
+    * Specifies if the font is italic.
     *
     * [Api set: ExcelApi 1.6]
     */
   var italic: Boolean = js.native
   /**
     *
-    * Represents the strikethrough status of the font.
+    * Specifies the strikethrough status of the font.
     *
     * [Api set: ExcelApi 1.6]
     */
   var strikethrough: Boolean = js.native
   /**
     *
-    * Type of underline applied to the font. See Excel.ConditionalRangeFontUnderlineStyle for details.
+    * The type of underline applied to the font. See Excel.ConditionalRangeFontUnderlineStyle for details.
     *
     * [Api set: ExcelApi 1.6]
     */

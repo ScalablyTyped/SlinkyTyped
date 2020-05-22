@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KIND extends js.Object {
-  var minimal: typingsSlinky.baseui.baseuiStrings.minimal = js.native
-  var primary: typingsSlinky.baseui.baseuiStrings.primary = js.native
-  var secondary: typingsSlinky.baseui.baseuiStrings.secondary = js.native
-  var tertiary: typingsSlinky.baseui.baseuiStrings.tertiary = js.native
+  var minimal: typingsSlinky.baseui.baseuiStrings.minimal
+  var primary: typingsSlinky.baseui.baseuiStrings.primary
+  var secondary: typingsSlinky.baseui.baseuiStrings.secondary
+  var tertiary: typingsSlinky.baseui.baseuiStrings.tertiary
 }
 
 @JSImport("baseui/button", "KIND")

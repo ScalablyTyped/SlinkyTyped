@@ -18,41 +18,14 @@ trait ListEntitiesDetectionJobsResponse extends js.Object {
 
 object ListEntitiesDetectionJobsResponse {
   @scala.inline
-  def apply(): ListEntitiesDetectionJobsResponse = {
+  def apply(
+    EntitiesDetectionJobPropertiesList: EntitiesDetectionJobPropertiesList = null,
+    NextToken: String = null
+  ): ListEntitiesDetectionJobsResponse = {
     val __obj = js.Dynamic.literal()
+    if (EntitiesDetectionJobPropertiesList != null) __obj.updateDynamic("EntitiesDetectionJobPropertiesList")(EntitiesDetectionJobPropertiesList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListEntitiesDetectionJobsResponse]
   }
-  @scala.inline
-  implicit class ListEntitiesDetectionJobsResponseOps[Self <: ListEntitiesDetectionJobsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntitiesDetectionJobPropertiesList(value: EntitiesDetectionJobPropertiesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitiesDetectionJobPropertiesList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntitiesDetectionJobPropertiesList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitiesDetectionJobPropertiesList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

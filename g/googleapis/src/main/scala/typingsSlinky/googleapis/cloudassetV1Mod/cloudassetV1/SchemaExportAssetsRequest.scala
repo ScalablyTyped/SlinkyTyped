@@ -39,65 +39,18 @@ trait SchemaExportAssetsRequest extends js.Object {
 
 object SchemaExportAssetsRequest {
   @scala.inline
-  def apply(): SchemaExportAssetsRequest = {
+  def apply(
+    assetTypes: js.Array[String] = null,
+    contentType: String = null,
+    outputConfig: SchemaOutputConfig = null,
+    readTime: String = null
+  ): SchemaExportAssetsRequest = {
     val __obj = js.Dynamic.literal()
+    if (assetTypes != null) __obj.updateDynamic("assetTypes")(assetTypes.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (outputConfig != null) __obj.updateDynamic("outputConfig")(outputConfig.asInstanceOf[js.Any])
+    if (readTime != null) __obj.updateDynamic("readTime")(readTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExportAssetsRequest]
   }
-  @scala.inline
-  implicit class SchemaExportAssetsRequestOps[Self <: SchemaExportAssetsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssetTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssetTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetTypes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputConfig(value: SchemaOutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

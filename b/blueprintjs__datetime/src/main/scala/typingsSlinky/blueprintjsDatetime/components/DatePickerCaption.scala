@@ -5,7 +5,8 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsDatetime.datePickerCaptionMod.IDatePickerCaptionProps
-import typingsSlinky.reactDayPicker.commonMod.ClassNames
+import typingsSlinky.reactDayPicker.classNamesMod.ClassNames
+import typingsSlinky.reactDayPicker.localeUtilsMod.LocaleUtils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +40,7 @@ object DatePickerCaption {
     classNames: ClassNames,
     date: js.Date,
     locale: String,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any,
+    localeUtils: LocaleUtils,
     maxDate: js.Date,
     minDate: js.Date
   ): Builder = {

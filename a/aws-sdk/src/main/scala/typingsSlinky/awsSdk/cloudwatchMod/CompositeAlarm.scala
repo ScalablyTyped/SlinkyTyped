@@ -62,173 +62,36 @@ trait CompositeAlarm extends js.Object {
 
 object CompositeAlarm {
   @scala.inline
-  def apply(): CompositeAlarm = {
+  def apply(
+    ActionsEnabled: js.UndefOr[ActionsEnabled] = js.undefined,
+    AlarmActions: ResourceList = null,
+    AlarmArn: AlarmArn = null,
+    AlarmConfigurationUpdatedTimestamp: js.Date = null,
+    AlarmDescription: AlarmDescription = null,
+    AlarmName: AlarmName = null,
+    AlarmRule: AlarmRule = null,
+    InsufficientDataActions: ResourceList = null,
+    OKActions: ResourceList = null,
+    StateReason: StateReason = null,
+    StateReasonData: StateReasonData = null,
+    StateUpdatedTimestamp: js.Date = null,
+    StateValue: StateValue = null
+  ): CompositeAlarm = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ActionsEnabled)) __obj.updateDynamic("ActionsEnabled")(ActionsEnabled.get.asInstanceOf[js.Any])
+    if (AlarmActions != null) __obj.updateDynamic("AlarmActions")(AlarmActions.asInstanceOf[js.Any])
+    if (AlarmArn != null) __obj.updateDynamic("AlarmArn")(AlarmArn.asInstanceOf[js.Any])
+    if (AlarmConfigurationUpdatedTimestamp != null) __obj.updateDynamic("AlarmConfigurationUpdatedTimestamp")(AlarmConfigurationUpdatedTimestamp.asInstanceOf[js.Any])
+    if (AlarmDescription != null) __obj.updateDynamic("AlarmDescription")(AlarmDescription.asInstanceOf[js.Any])
+    if (AlarmName != null) __obj.updateDynamic("AlarmName")(AlarmName.asInstanceOf[js.Any])
+    if (AlarmRule != null) __obj.updateDynamic("AlarmRule")(AlarmRule.asInstanceOf[js.Any])
+    if (InsufficientDataActions != null) __obj.updateDynamic("InsufficientDataActions")(InsufficientDataActions.asInstanceOf[js.Any])
+    if (OKActions != null) __obj.updateDynamic("OKActions")(OKActions.asInstanceOf[js.Any])
+    if (StateReason != null) __obj.updateDynamic("StateReason")(StateReason.asInstanceOf[js.Any])
+    if (StateReasonData != null) __obj.updateDynamic("StateReasonData")(StateReasonData.asInstanceOf[js.Any])
+    if (StateUpdatedTimestamp != null) __obj.updateDynamic("StateUpdatedTimestamp")(StateUpdatedTimestamp.asInstanceOf[js.Any])
+    if (StateValue != null) __obj.updateDynamic("StateValue")(StateValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompositeAlarm]
   }
-  @scala.inline
-  implicit class CompositeAlarmOps[Self <: CompositeAlarm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionsEnabled(value: ActionsEnabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmActions(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmArn(value: AlarmArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmConfigurationUpdatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmConfigurationUpdatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmConfigurationUpdatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmConfigurationUpdatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmDescription(value: AlarmDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmName(value: AlarmName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlarmRule(value: AlarmRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmRule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmRule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmRule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInsufficientDataActions(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsufficientDataActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOKActions(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OKActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOKActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OKActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateReason(value: StateReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateReasonData(value: StateReasonData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReasonData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateReasonData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReasonData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateUpdatedTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateUpdatedTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateUpdatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateUpdatedTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateValue(value: StateValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

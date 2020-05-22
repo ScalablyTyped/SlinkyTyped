@@ -7,63 +7,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a BrowseCarouselCard. */
-@js.native
 trait IBrowseCarouselCard extends js.Object {
   /** BrowseCarouselCard imageDisplayOptions */
-  var imageDisplayOptions: js.UndefOr[ImageDisplayOptions | Null] = js.native
+  var imageDisplayOptions: js.UndefOr[ImageDisplayOptions | Null] = js.undefined
   /** BrowseCarouselCard items */
-  var items: js.UndefOr[js.Array[IBrowseCarouselCardItem] | Null] = js.native
+  var items: js.UndefOr[js.Array[IBrowseCarouselCardItem] | Null] = js.undefined
 }
 
 object IBrowseCarouselCard {
   @scala.inline
-  def apply(): IBrowseCarouselCard = {
+  def apply(
+    imageDisplayOptions: js.UndefOr[Null | ImageDisplayOptions] = js.undefined,
+    items: js.UndefOr[Null | js.Array[IBrowseCarouselCardItem]] = js.undefined
+  ): IBrowseCarouselCard = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(imageDisplayOptions)) __obj.updateDynamic("imageDisplayOptions")(imageDisplayOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(items)) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBrowseCarouselCard]
   }
-  @scala.inline
-  implicit class IBrowseCarouselCardOps[Self <: IBrowseCarouselCard] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageDisplayOptions(value: ImageDisplayOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDisplayOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageDisplayOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDisplayOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageDisplayOptionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDisplayOptions")(null)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[IBrowseCarouselCardItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(null)
-        ret
-    }
-  }
-  
 }
 

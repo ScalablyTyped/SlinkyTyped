@@ -4,7 +4,7 @@ import typingsSlinky.openfin.anon.DownloadedBytes
 import typingsSlinky.openfin.anon.Path
 import typingsSlinky.openfin.anon.Result
 import typingsSlinky.openfin.anon.Token
-import typingsSlinky.openfin.anon.Uuid
+import typingsSlinky.openfin.anon.UuidString
 import typingsSlinky.openfin.openfinStrings.debug
 import typingsSlinky.openfin.openfinStrings.error
 import typingsSlinky.openfin.openfinStrings.info
@@ -357,10 +357,10 @@ trait OpenFinSystem extends js.Object {
     * Runs an executable or batch file.
     */
   def launchExternalProcess(options: ExternalProcessRequestType): Unit = js.native
-  def launchExternalProcess(options: ExternalProcessRequestType, callback: js.Function1[/* payload */ Uuid, Unit]): Unit = js.native
+  def launchExternalProcess(options: ExternalProcessRequestType, callback: js.Function1[/* payload */ UuidString, Unit]): Unit = js.native
   def launchExternalProcess(
     options: ExternalProcessRequestType,
-    callback: js.Function1[/* payload */ Uuid, Unit],
+    callback: js.Function1[/* payload */ UuidString, Unit],
     errorCallback: js.Function1[/* reason */ String, Unit]
   ): Unit = js.native
   /**
@@ -414,10 +414,10 @@ trait OpenFinSystem extends js.Object {
     * Monitors a running process.
     */
   def monitorExternalProcess(options: ExternalProcessInfo): Unit = js.native
-  def monitorExternalProcess(options: ExternalProcessInfo, callback: js.Function1[/* payload */ Uuid, Unit]): Unit = js.native
+  def monitorExternalProcess(options: ExternalProcessInfo, callback: js.Function1[/* payload */ UuidString, Unit]): Unit = js.native
   def monitorExternalProcess(
     options: ExternalProcessInfo,
-    callback: js.Function1[/* payload */ Uuid, Unit],
+    callback: js.Function1[/* payload */ UuidString, Unit],
     errorCallback: js.Function1[/* reason */ String, Unit]
   ): Unit = js.native
   /**

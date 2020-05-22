@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StackIndex extends js.Object {
-  var stackIndex: typingsSlinky.styletronReact.mod.StackIndex = js.native
-  var stackInfo: StackInfo = js.native
+  var stackIndex: typingsSlinky.styletronReact.mod.StackIndex
+  var stackInfo: StackInfo
 }
 
 object StackIndex {
@@ -17,25 +16,5 @@ object StackIndex {
     val __obj = js.Dynamic.literal(stackIndex = stackIndex.asInstanceOf[js.Any], stackInfo = stackInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackIndex]
   }
-  @scala.inline
-  implicit class StackIndexOps[Self <: StackIndex] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStackIndex(value: typingsSlinky.styletronReact.mod.StackIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStackInfo(value: StackInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

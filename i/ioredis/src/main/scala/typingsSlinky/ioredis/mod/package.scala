@@ -11,6 +11,7 @@ package object mod {
     /* result */ js.UndefOr[T], 
     scala.Unit
   ]
+  type ClusterNode = java.lang.String | scala.Double | typingsSlinky.ioredis.mod.NodeConfiguration
   type Command = typingsSlinky.ioredis.mod._Command
   type DNSLookupFunction = js.Function2[
     /* hostname */ java.lang.String, 
@@ -22,6 +23,12 @@ package object mod {
     ], 
     scala.Unit
   ]
+  type KeyType = java.lang.String | typingsSlinky.node.Buffer
   type NatMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ioredis.anon.Host]
   type Ok = typingsSlinky.ioredis.ioredisStrings.OK
+  type PreferredSlaves = (js.Function1[
+    /* slaves */ js.Array[typingsSlinky.ioredis.mod.AddressFromResponse], 
+    typingsSlinky.ioredis.mod.AddressFromResponse | scala.Null
+  ]) | js.Array[typingsSlinky.ioredis.anon.Ip] | typingsSlinky.ioredis.anon.Ip
+  type ValueType = java.lang.String | typingsSlinky.node.Buffer | scala.Double | js.Array[js.Any]
 }

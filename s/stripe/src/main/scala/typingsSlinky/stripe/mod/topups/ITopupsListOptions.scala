@@ -1,5 +1,6 @@
 package typingsSlinky.stripe.mod.topups
 
+import typingsSlinky.stripe.mod.IDateFilter
 import typingsSlinky.stripe.mod.IListOptionsCreated
 import typingsSlinky.stripe.stripeStrings.canceled
 import typingsSlinky.stripe.stripeStrings.failed
@@ -9,56 +10,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITopupsListOptions extends IListOptionsCreated {
   /**
     * A filter on the list based on the object amount field. The value can be a string with
     * an integer amount, or it can be a dictionary.
     */
-  var amount: js.UndefOr[IAmountFilter] = js.native
+  var amount: js.UndefOr[IAmountFilter] = js.undefined
   /**
     * Only return top-ups that have the given status.
     */
-  var status: js.UndefOr[canceled | failed | pending | succeeded] = js.native
+  var status: js.UndefOr[canceled | failed | pending | succeeded] = js.undefined
 }
 
 object ITopupsListOptions {
   @scala.inline
-  def apply(): ITopupsListOptions = {
+  def apply(
+    amount: IAmountFilter = null,
+    created: String | IDateFilter = null,
+    ending_before: String = null,
+    expand: js.Array[String] = null,
+    include: js.Array[String] = null,
+    limit: js.UndefOr[Double] = js.undefined,
+    starting_after: String = null,
+    status: canceled | failed | pending | succeeded = null
+  ): ITopupsListOptions = {
     val __obj = js.Dynamic.literal()
+    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (ending_before != null) __obj.updateDynamic("ending_before")(ending_before.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
+    if (starting_after != null) __obj.updateDynamic("starting_after")(starting_after.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITopupsListOptions]
   }
-  @scala.inline
-  implicit class ITopupsListOptionsOps[Self <: ITopupsListOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmount(value: IAmountFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: canceled | failed | pending | succeeded): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

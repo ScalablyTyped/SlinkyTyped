@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Exon extends js.Object {
   /**
     * The end position of the exon on this annotation's reference sequence,
     * 0-based exclusive. Note that this is relative to the reference start, and
     * &#42;not&#42; the containing annotation start.
     */
-  var end: js.UndefOr[String] = js.native
+  var end: js.UndefOr[String] = js.undefined
   /**
     * The frame of this exon. Contains a value of 0, 1, or 2, which indicates
     * the offset of the first coding base of the exon within the reading frame
@@ -27,64 +26,23 @@ trait Exon extends js.Object {
     * of a transcript, the frame must be populated for all or none of the
     * coding exons.
     */
-  var frame: js.UndefOr[Double] = js.native
+  var frame: js.UndefOr[Double] = js.undefined
   /**
     * The start position of the exon on this annotation's reference sequence,
     * 0-based inclusive. Note that this is relative to the reference start, and
     * &#42;&#42;not&#42;&#42; the containing annotation start.
     */
-  var start: js.UndefOr[String] = js.native
+  var start: js.UndefOr[String] = js.undefined
 }
 
 object Exon {
   @scala.inline
-  def apply(): Exon = {
+  def apply(end: String = null, frame: js.UndefOr[Double] = js.undefined, start: String = null): Exon = {
     val __obj = js.Dynamic.literal()
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (!js.isUndefined(frame)) __obj.updateDynamic("frame")(frame.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[Exon]
   }
-  @scala.inline
-  implicit class ExonOps[Self <: Exon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrame(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

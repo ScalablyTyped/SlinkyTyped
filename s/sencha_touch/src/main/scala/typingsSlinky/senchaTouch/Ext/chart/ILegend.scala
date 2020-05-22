@@ -6,249 +6,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILegend extends IDataView {
   /** [Method] Returns the value of horizontalHeight
-  		* @returns Number
-  		*/
-  var getHorizontalHeight: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getHorizontalHeight: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Returns the value of inline
-  		* @returns Boolean
-  		*/
+    * @returns Boolean
+    */
   @JSName("getInline")
-  var getInline_ILegend: js.UndefOr[js.Function0[Boolean]] = js.native
+  var getInline_ILegend: js.UndefOr[js.Function0[Boolean]] = js.undefined
   /** [Method] Returns the value of itemTpl
-  		* @returns Array
-  		*/
+    * @returns Array
+    */
   @JSName("getItemTpl")
-  var getItemTpl_ILegend: js.UndefOr[js.Function0[Array]] = js.native
+  var getItemTpl_ILegend: js.UndefOr[js.Function0[Array]] = js.undefined
   /** [Method] Returns the value of padding
-  		* @returns Number
-  		*/
+    * @returns Number
+    */
   @JSName("getPadding")
-  var getPadding_ILegend: js.UndefOr[js.Function0[Double]] = js.native
+  var getPadding_ILegend: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Method] Returns the value of toggleable
-  		* @returns Boolean
-  		*/
-  var getToggleable: js.UndefOr[js.Function0[Boolean]] = js.native
+    * @returns Boolean
+    */
+  var getToggleable: js.UndefOr[js.Function0[Boolean]] = js.undefined
   /** [Method] Returns the value of verticalWidth
-  		* @returns Number
-  		*/
-  var getVerticalWidth: js.UndefOr[js.Function0[Double]] = js.native
+    * @returns Number
+    */
+  var getVerticalWidth: js.UndefOr[js.Function0[Double]] = js.undefined
   /** [Config Option] (String) */
-  var position: js.UndefOr[String] = js.native
+  var position: js.UndefOr[String] = js.undefined
   /** [Method] Sets the value of horizontalHeight
-  		* @param horizontalHeight Number The new value.
-  		*/
-  var setHorizontalHeight: js.UndefOr[js.Function1[/* horizontalHeight */ js.UndefOr[Double], Unit]] = js.native
+    * @param horizontalHeight Number The new value.
+    */
+  var setHorizontalHeight: js.UndefOr[js.Function1[/* horizontalHeight */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets the value of inline
-  		* @param inline Boolean The new value.
-  		*/
+    * @param inline Boolean The new value.
+    */
   @JSName("setInline")
-  var setInline_ILegend: js.UndefOr[js.Function1[/* inline */ js.UndefOr[Boolean], Unit]] = js.native
+  var setInline_ILegend: js.UndefOr[js.Function1[/* inline */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Method] Sets the value of itemTpl
-  		* @param itemTpl Array The new value.
-  		*/
+    * @param itemTpl Array The new value.
+    */
   @JSName("setItemTpl")
-  var setItemTpl_ILegend: js.UndefOr[js.Function1[/* itemTpl */ js.UndefOr[Array], Unit]] = js.native
+  var setItemTpl_ILegend: js.UndefOr[js.Function1[/* itemTpl */ js.UndefOr[Array], Unit]] = js.undefined
   /** [Method] Sets the value of padding
-  		* @param padding Number The new value.
-  		*/
+    * @param padding Number The new value.
+    */
   @JSName("setPadding")
-  var setPadding_ILegend: js.UndefOr[js.Function1[/* padding */ js.UndefOr[Double], Unit]] = js.native
+  var setPadding_ILegend: js.UndefOr[js.Function1[/* padding */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets the value of toggleable
-  		* @param toggleable Boolean The new value.
-  		*/
-  var setToggleable: js.UndefOr[js.Function1[/* toggleable */ js.UndefOr[Boolean], Unit]] = js.native
+    * @param toggleable Boolean The new value.
+    */
+  var setToggleable: js.UndefOr[js.Function1[/* toggleable */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Method] Sets the value of verticalWidth
-  		* @param verticalWidth Number The new value.
-  		*/
-  var setVerticalWidth: js.UndefOr[js.Function1[/* verticalWidth */ js.UndefOr[Double], Unit]] = js.native
+    * @param verticalWidth Number The new value.
+    */
+  var setVerticalWidth: js.UndefOr[js.Function1[/* verticalWidth */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var toggleable: js.UndefOr[Boolean] = js.native
+  var toggleable: js.UndefOr[Boolean] = js.undefined
 }
 
 object ILegend {
   @scala.inline
-  def apply(): ILegend = {
+  def apply(
+    IDataView: IDataView = null,
+    getHorizontalHeight: () => Double = null,
+    getInline: () => Boolean = null,
+    getItemTpl: () => Array = null,
+    getPadding: () => Double = null,
+    getToggleable: () => Boolean = null,
+    getVerticalWidth: () => Double = null,
+    position: String = null,
+    setHorizontalHeight: /* horizontalHeight */ js.UndefOr[Double] => Unit = null,
+    setInline: /* inline */ js.UndefOr[Boolean] => Unit = null,
+    setItemTpl: /* itemTpl */ js.UndefOr[Array] => Unit = null,
+    setPadding: /* padding */ js.UndefOr[Double] => Unit = null,
+    setToggleable: /* toggleable */ js.UndefOr[Boolean] => Unit = null,
+    setVerticalWidth: /* verticalWidth */ js.UndefOr[Double] => Unit = null,
+    toggleable: js.UndefOr[Boolean] = js.undefined
+  ): ILegend = {
     val __obj = js.Dynamic.literal()
+    if (IDataView != null) js.Dynamic.global.Object.assign(__obj, IDataView)
+    if (getHorizontalHeight != null) __obj.updateDynamic("getHorizontalHeight")(js.Any.fromFunction0(getHorizontalHeight))
+    if (getInline != null) __obj.updateDynamic("getInline")(js.Any.fromFunction0(getInline))
+    if (getItemTpl != null) __obj.updateDynamic("getItemTpl")(js.Any.fromFunction0(getItemTpl))
+    if (getPadding != null) __obj.updateDynamic("getPadding")(js.Any.fromFunction0(getPadding))
+    if (getToggleable != null) __obj.updateDynamic("getToggleable")(js.Any.fromFunction0(getToggleable))
+    if (getVerticalWidth != null) __obj.updateDynamic("getVerticalWidth")(js.Any.fromFunction0(getVerticalWidth))
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (setHorizontalHeight != null) __obj.updateDynamic("setHorizontalHeight")(js.Any.fromFunction1(setHorizontalHeight))
+    if (setInline != null) __obj.updateDynamic("setInline")(js.Any.fromFunction1(setInline))
+    if (setItemTpl != null) __obj.updateDynamic("setItemTpl")(js.Any.fromFunction1(setItemTpl))
+    if (setPadding != null) __obj.updateDynamic("setPadding")(js.Any.fromFunction1(setPadding))
+    if (setToggleable != null) __obj.updateDynamic("setToggleable")(js.Any.fromFunction1(setToggleable))
+    if (setVerticalWidth != null) __obj.updateDynamic("setVerticalWidth")(js.Any.fromFunction1(setVerticalWidth))
+    if (!js.isUndefined(toggleable)) __obj.updateDynamic("toggleable")(toggleable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILegend]
   }
-  @scala.inline
-  implicit class ILegendOps[Self <: ILegend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetHorizontalHeight(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHorizontalHeight")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetHorizontalHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHorizontalHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetInline(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInline")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetItemTpl(value: () => Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemTpl")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetItemTpl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getItemTpl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetPadding(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPadding")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetToggleable(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getToggleable")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetToggleable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getToggleable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetVerticalWidth(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVerticalWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetVerticalWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getVerticalWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetHorizontalHeight(value: /* horizontalHeight */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHorizontalHeight")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetHorizontalHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setHorizontalHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetInline(value: /* inline */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setInline")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setInline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetItemTpl(value: /* itemTpl */ js.UndefOr[Array] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItemTpl")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetItemTpl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItemTpl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetPadding(value: /* padding */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPadding")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetToggleable(value: /* toggleable */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setToggleable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetToggleable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setToggleable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetVerticalWidth(value: /* verticalWidth */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVerticalWidth")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetVerticalWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVerticalWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggleable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

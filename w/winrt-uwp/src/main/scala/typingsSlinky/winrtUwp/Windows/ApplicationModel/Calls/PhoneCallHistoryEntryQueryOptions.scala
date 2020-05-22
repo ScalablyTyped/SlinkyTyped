@@ -6,12 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Options for querying the phone call entries. */
-@js.native
 trait PhoneCallHistoryEntryQueryOptions extends js.Object {
   /** Gets or sets the query filter based on the type of media. */
-  var desiredMedia: PhoneCallHistoryEntryQueryDesiredMedia = js.native
+  var desiredMedia: PhoneCallHistoryEntryQueryDesiredMedia
   /** Get the query filter based on the source ID of the phone call entry. */
-  var sourceIds: IVector[String] = js.native
+  var sourceIds: IVector[String]
 }
 
 object PhoneCallHistoryEntryQueryOptions {
@@ -20,25 +19,5 @@ object PhoneCallHistoryEntryQueryOptions {
     val __obj = js.Dynamic.literal(desiredMedia = desiredMedia.asInstanceOf[js.Any], sourceIds = sourceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneCallHistoryEntryQueryOptions]
   }
-  @scala.inline
-  implicit class PhoneCallHistoryEntryQueryOptionsOps[Self <: PhoneCallHistoryEntryQueryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesiredMedia(value: PhoneCallHistoryEntryQueryDesiredMedia): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredMedia")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceIds(value: IVector[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

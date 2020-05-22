@@ -26,65 +26,18 @@ trait UpdateThingGroupsForThingRequest extends js.Object {
 
 object UpdateThingGroupsForThingRequest {
   @scala.inline
-  def apply(): UpdateThingGroupsForThingRequest = {
+  def apply(
+    overrideDynamicGroups: js.UndefOr[OverrideDynamicGroups] = js.undefined,
+    thingGroupsToAdd: ThingGroupList = null,
+    thingGroupsToRemove: ThingGroupList = null,
+    thingName: ThingName = null
+  ): UpdateThingGroupsForThingRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(overrideDynamicGroups)) __obj.updateDynamic("overrideDynamicGroups")(overrideDynamicGroups.get.asInstanceOf[js.Any])
+    if (thingGroupsToAdd != null) __obj.updateDynamic("thingGroupsToAdd")(thingGroupsToAdd.asInstanceOf[js.Any])
+    if (thingGroupsToRemove != null) __obj.updateDynamic("thingGroupsToRemove")(thingGroupsToRemove.asInstanceOf[js.Any])
+    if (thingName != null) __obj.updateDynamic("thingName")(thingName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateThingGroupsForThingRequest]
   }
-  @scala.inline
-  implicit class UpdateThingGroupsForThingRequestOps[Self <: UpdateThingGroupsForThingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOverrideDynamicGroups(value: OverrideDynamicGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideDynamicGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrideDynamicGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideDynamicGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingGroupsToAdd(value: ThingGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupsToAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingGroupsToAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupsToAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingGroupsToRemove(value: ThingGroupList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupsToRemove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingGroupsToRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupsToRemove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThingName(value: ThingName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThingName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

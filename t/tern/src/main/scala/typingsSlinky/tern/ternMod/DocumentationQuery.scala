@@ -1,61 +1,39 @@
 package typingsSlinky.tern.ternMod
 
 import typingsSlinky.tern.ternStrings.documentation
+import typingsSlinky.tern.ternStrings.full
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocumentationQuery
   extends BaseQueryWithFile
      with Query {
   /** Specify the location of the expression. */
-  var end: Double | Position = js.native
+  var end: Double | Position
   /** Specify the location of the expression. */
-  var start: js.UndefOr[Double | Position] = js.native
+  var start: js.UndefOr[Double | Position] = js.undefined
   /** Get the documentation string and URL for a given expression, if any. */
   @JSName("type")
-  var type_DocumentationQuery: documentation = js.native
+  var type_DocumentationQuery: documentation
 }
 
 object DocumentationQuery {
   @scala.inline
-  def apply(end: Double | Position, file: String, `type`: documentation): DocumentationQuery = {
+  def apply(
+    end: Double | Position,
+    file: String,
+    `type`: documentation,
+    docFormat: full = null,
+    lineCharPositions: js.UndefOr[Boolean] = js.undefined,
+    start: Double | Position = null
+  ): DocumentationQuery = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], file = file.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (docFormat != null) __obj.updateDynamic("docFormat")(docFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineCharPositions)) __obj.updateDynamic("lineCharPositions")(lineCharPositions.get.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentationQuery]
   }
-  @scala.inline
-  implicit class DocumentationQueryOps[Self <: DocumentationQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: Double | Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: documentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double | Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

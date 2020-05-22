@@ -4,54 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CoverageBucket extends js.Object {
   /**
     * The average number of reads which are aligned to each individual
     * reference base in this bucket.
     */
-  var meanCoverage: js.UndefOr[Double] = js.native
+  var meanCoverage: js.UndefOr[Double] = js.undefined
   /** The genomic coordinate range spanned by this bucket. */
-  var range: js.UndefOr[Range] = js.native
+  var range: js.UndefOr[Range] = js.undefined
 }
 
 object CoverageBucket {
   @scala.inline
-  def apply(): CoverageBucket = {
+  def apply(meanCoverage: js.UndefOr[Double] = js.undefined, range: Range = null): CoverageBucket = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(meanCoverage)) __obj.updateDynamic("meanCoverage")(meanCoverage.get.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoverageBucket]
   }
-  @scala.inline
-  implicit class CoverageBucketOps[Self <: CoverageBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMeanCoverage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meanCoverage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeanCoverage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meanCoverage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

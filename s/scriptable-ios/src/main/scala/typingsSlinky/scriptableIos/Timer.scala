@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * Constructs a timer that fires after a specified time interval.
   * @see https://docs.scriptable.app/timer/#-new-timer
   */
-@js.native
 trait Timer extends js.Object {
   /**
     * _Whether the timer should repeat._
@@ -18,21 +17,21 @@ trait Timer extends js.Object {
     * A repeating timer will keep firing until it is invalidated. In contrast to non-repeating timers, repeating timers are not automatically invalidated. Defaults to false.
     * @see https://docs.scriptable.app/timer/#repeats
     */
-  var repeats: Boolean = js.native
+  var repeats: Boolean
   /**
     * _The frequency at which the timer fires, in milliseconds._
     *
     * Be aware that the time interval is specified in setting. Defaults to 0, causing the timer to fire instantly.
     * @see https://docs.scriptable.app/timer/#timeinterval
     */
-  var timeInterval: Double = js.native
+  var timeInterval: Double
   /**
     * _Stops the timer from firing._
     *
     * Stops the timer from firing ever again. Non-repeating timers are automatically invalidated after they have fired once. Repeating timers must be manually invalidated.
     * @see https://docs.scriptable.app/timer/#-invalidate
     */
-  def invalidate(): Unit = js.native
+  def invalidate(): Unit
   /**
     * _Schedules the timer._
     *
@@ -40,7 +39,7 @@ trait Timer extends js.Object {
     * @param callback - The callback to called when the timer fires.
     * @see https://docs.scriptable.app/timer/#-schedule
     */
-  def schedule(callback: js.Function0[Unit]): Unit = js.native
+  def schedule(callback: js.Function0[Unit]): Unit
 }
 
 object Timer {
@@ -54,37 +53,5 @@ object Timer {
     val __obj = js.Dynamic.literal(invalidate = js.Any.fromFunction0(invalidate), repeats = repeats.asInstanceOf[js.Any], schedule = js.Any.fromFunction1(schedule), timeInterval = timeInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[Timer]
   }
-  @scala.inline
-  implicit class TimerOps[Self <: Timer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInvalidate(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRepeats(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repeats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: js.Function0[Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTimeInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

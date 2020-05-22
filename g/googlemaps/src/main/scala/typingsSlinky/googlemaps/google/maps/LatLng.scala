@@ -1,11 +1,10 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.google.maps.places.LocationBias
+import typingsSlinky.googlemaps.google.maps.places._LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* **** Base **** */
 /**
   * A LatLng is a point in geographical coordinates: latitude and longitude.
   *
@@ -26,7 +25,7 @@ import scala.scalajs.js.annotation._
   * to compute another point, you have to create a new one.
   */
 @js.native
-trait LatLng extends LocationBias {
+trait LatLng extends _LocationBias {
   /** Comparison function. */
   def equals(other: LatLng): Boolean = js.native
   /** Returns the latitude in degrees. */

@@ -34,7 +34,7 @@ object TWEEN extends js.Object {
     def onRepeat(callback: js.Function1[/* object */ js.UndefOr[js.Any], Unit]): Tween = js.native
     def onStart(callback: js.Function1[/* object */ js.UndefOr[js.Any], Unit]): Tween = js.native
     def onStop(callback: js.Function1[/* object */ js.UndefOr[js.Any], Unit]): Tween = js.native
-    def onUpdate(callback: js.Function1[/* object */ js.UndefOr[js.Any], Unit]): Tween = js.native
+    def onUpdate(callback: js.Function2[/* object */ js.UndefOr[js.Any], /* elapsed */ js.UndefOr[Double], Unit]): Tween = js.native
     def pause(): Tween = js.native
     def pause(time: Double): Tween = js.native
     def repeat(times: Double): Tween = js.native
@@ -42,6 +42,7 @@ object TWEEN extends js.Object {
     def resume(): Tween = js.native
     def resume(time: Double): Tween = js.native
     def start(): Tween = js.native
+    def start(time: String): Tween = js.native
     def start(time: Double): Tween = js.native
     def stop(): Tween = js.native
     def stopChainedTweens(): Tween = js.native

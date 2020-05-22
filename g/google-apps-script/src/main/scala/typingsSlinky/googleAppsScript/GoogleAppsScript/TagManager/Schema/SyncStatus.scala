@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SyncStatus extends js.Object {
-  var mergeConflict: js.UndefOr[Boolean] = js.native
-  var syncError: js.UndefOr[Boolean] = js.native
+  var mergeConflict: js.UndefOr[Boolean] = js.undefined
+  var syncError: js.UndefOr[Boolean] = js.undefined
 }
 
 object SyncStatus {
   @scala.inline
-  def apply(): SyncStatus = {
+  def apply(mergeConflict: js.UndefOr[Boolean] = js.undefined, syncError: js.UndefOr[Boolean] = js.undefined): SyncStatus = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(mergeConflict)) __obj.updateDynamic("mergeConflict")(mergeConflict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncError)) __obj.updateDynamic("syncError")(syncError.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyncStatus]
   }
-  @scala.inline
-  implicit class SyncStatusOps[Self <: SyncStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMergeConflict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

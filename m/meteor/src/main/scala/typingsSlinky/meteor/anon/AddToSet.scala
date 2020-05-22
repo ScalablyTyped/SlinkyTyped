@@ -7,7 +7,6 @@ import typingsSlinky.meteor.mongoMod.Mongo.ArraysOrEach
 import typingsSlinky.meteor.mongoMod.Mongo.CurrentDateModifier
 import typingsSlinky.meteor.mongoMod.Mongo.Dictionary
 import typingsSlinky.meteor.mongoMod.Mongo.ElementsOf
-import typingsSlinky.meteor.mongoMod.Mongo.Modifier
 import typingsSlinky.meteor.mongoMod.Mongo.PartialMapTo
 import typingsSlinky.meteor.mongoMod.Mongo.PushModifier
 import typingsSlinky.std.Partial
@@ -16,223 +15,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait AddToSet[T] extends Modifier[T] {
+trait AddToSet[T] extends js.Object {
   @JSName("$addToSet")
-  var $addToSet: js.UndefOr[ArraysOrEach[T] with Dictionary[_]] = js.native
+  var $addToSet: js.UndefOr[ArraysOrEach[T] with Dictionary[_]] = js.undefined
   @JSName("$currentDate")
   var $currentDate: js.UndefOr[
     (Partial[Record[/* keyof T */ String, CurrentDateModifier]]) with Dictionary[CurrentDateModifier]
-  ] = js.native
+  ] = js.undefined
   @JSName("$inc")
-  var $inc: js.UndefOr[(PartialMapTo[T, Double]) with Dictionary[Double]] = js.native
+  var $inc: js.UndefOr[(PartialMapTo[T, Double]) with Dictionary[Double]] = js.undefined
   @JSName("$max")
-  var $max: js.UndefOr[(PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double])] = js.native
+  var $max: js.UndefOr[(PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double])] = js.undefined
   @JSName("$min")
-  var $min: js.UndefOr[(PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double])] = js.native
+  var $min: js.UndefOr[(PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double])] = js.undefined
   @JSName("$mul")
-  var $mul: js.UndefOr[(PartialMapTo[T, Double]) with Dictionary[Double]] = js.native
+  var $mul: js.UndefOr[(PartialMapTo[T, Double]) with Dictionary[Double]] = js.undefined
   @JSName("$pop")
-  var $pop: js.UndefOr[(PartialMapTo[T, `1` | `-1`]) with (Dictionary[`1` | `-1`])] = js.native
+  var $pop: js.UndefOr[(PartialMapTo[T, `1` | `-1`]) with (Dictionary[`1` | `-1`])] = js.undefined
   @JSName("$pull")
-  var $pull: js.UndefOr[ElementsOf[T] with Dictionary[_]] = js.native
+  var $pull: js.UndefOr[ElementsOf[T] with Dictionary[_]] = js.undefined
   @JSName("$pullAll")
-  var $pullAll: js.UndefOr[Partial[T] with Dictionary[_]] = js.native
+  var $pullAll: js.UndefOr[Partial[T] with Dictionary[_]] = js.undefined
   @JSName("$push")
-  var $push: js.UndefOr[PushModifier[T] with Dictionary[_]] = js.native
+  var $push: js.UndefOr[PushModifier[T] with Dictionary[_]] = js.undefined
   @JSName("$rename")
-  var $rename: js.UndefOr[(PartialMapTo[T, String]) with Dictionary[String]] = js.native
+  var $rename: js.UndefOr[(PartialMapTo[T, String]) with Dictionary[String]] = js.undefined
   @JSName("$set")
-  var $set: js.UndefOr[Partial[T] with Dictionary[_]] = js.native
+  var $set: js.UndefOr[Partial[T] with Dictionary[_]] = js.undefined
   @JSName("$setOnInsert")
-  var $setOnInsert: js.UndefOr[Partial[T] with Dictionary[_]] = js.native
+  var $setOnInsert: js.UndefOr[Partial[T] with Dictionary[_]] = js.undefined
   @JSName("$unset")
-  var $unset: js.UndefOr[(PartialMapTo[T, String | Boolean | `1` | `0`]) with Dictionary[_]] = js.native
+  var $unset: js.UndefOr[(PartialMapTo[T, String | Boolean | `1` | `0`]) with Dictionary[_]] = js.undefined
 }
 
 object AddToSet {
   @scala.inline
-  def apply[T](): AddToSet[T] = {
+  def apply[T](
+    $addToSet: ArraysOrEach[T] with Dictionary[_] = null,
+    $currentDate: (Partial[Record[/* keyof T */ String, CurrentDateModifier]]) with Dictionary[CurrentDateModifier] = null,
+    $inc: (PartialMapTo[T, Double]) with Dictionary[Double] = null,
+    $max: (PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double]) = null,
+    $min: (PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double]) = null,
+    $mul: (PartialMapTo[T, Double]) with Dictionary[Double] = null,
+    $pop: (PartialMapTo[T, `1` | `-1`]) with (Dictionary[`1` | `-1`]) = null,
+    $pull: ElementsOf[T] with Dictionary[_] = null,
+    $pullAll: Partial[T] with Dictionary[_] = null,
+    $push: PushModifier[T] with Dictionary[_] = null,
+    $rename: (PartialMapTo[T, String]) with Dictionary[String] = null,
+    $set: Partial[T] with Dictionary[_] = null,
+    $setOnInsert: Partial[T] with Dictionary[_] = null,
+    $unset: (PartialMapTo[T, String | Boolean | `1` | `0`]) with Dictionary[_] = null
+  ): AddToSet[T] = {
     val __obj = js.Dynamic.literal()
+    if ($addToSet != null) __obj.updateDynamic("$addToSet")($addToSet.asInstanceOf[js.Any])
+    if ($currentDate != null) __obj.updateDynamic("$currentDate")($currentDate.asInstanceOf[js.Any])
+    if ($inc != null) __obj.updateDynamic("$inc")($inc.asInstanceOf[js.Any])
+    if ($max != null) __obj.updateDynamic("$max")($max.asInstanceOf[js.Any])
+    if ($min != null) __obj.updateDynamic("$min")($min.asInstanceOf[js.Any])
+    if ($mul != null) __obj.updateDynamic("$mul")($mul.asInstanceOf[js.Any])
+    if ($pop != null) __obj.updateDynamic("$pop")($pop.asInstanceOf[js.Any])
+    if ($pull != null) __obj.updateDynamic("$pull")($pull.asInstanceOf[js.Any])
+    if ($pullAll != null) __obj.updateDynamic("$pullAll")($pullAll.asInstanceOf[js.Any])
+    if ($push != null) __obj.updateDynamic("$push")($push.asInstanceOf[js.Any])
+    if ($rename != null) __obj.updateDynamic("$rename")($rename.asInstanceOf[js.Any])
+    if ($set != null) __obj.updateDynamic("$set")($set.asInstanceOf[js.Any])
+    if ($setOnInsert != null) __obj.updateDynamic("$setOnInsert")($setOnInsert.asInstanceOf[js.Any])
+    if ($unset != null) __obj.updateDynamic("$unset")($unset.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddToSet[T]]
   }
-  @scala.inline
-  implicit class AddToSetOps[Self[t] <: AddToSet[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def with$addToSet(value: ArraysOrEach[T] with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$addToSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$addToSet: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$addToSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$currentDate(
-      value: (Partial[Record[/* keyof T */ String, CurrentDateModifier]]) with Dictionary[CurrentDateModifier]
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$currentDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$currentDate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$currentDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$inc(value: (PartialMapTo[T, Double]) with Dictionary[Double]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$inc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$inc: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$inc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$max(value: (PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double])): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$max: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$min(value: (PartialMapTo[T, js.Date | Double]) with (Dictionary[js.Date | Double])): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$min: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$mul(value: (PartialMapTo[T, Double]) with Dictionary[Double]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$mul")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$mul: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$mul")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$pop(value: (PartialMapTo[T, `1` | `-1`]) with (Dictionary[`1` | `-1`])): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$pop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$pop: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$pop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$pull(value: ElementsOf[T] with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$pull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$pull: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$pull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$pullAll(value: Partial[T] with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$pullAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$pullAll: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$pullAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$push(value: PushModifier[T] with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$push")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$push: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$push")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$rename(value: (PartialMapTo[T, String]) with Dictionary[String]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$rename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$rename: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$rename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$set(value: Partial[T] with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$set")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$set: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$set")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$setOnInsert(value: Partial[T] with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$setOnInsert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$setOnInsert: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$setOnInsert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$unset(value: (PartialMapTo[T, String | Boolean | `1` | `0`]) with Dictionary[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$unset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$unset: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$unset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

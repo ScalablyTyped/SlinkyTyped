@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * {@link Presentation} shapes can be used in a presentation page layouts and their position and size is by default set by the presentation shapes on the
   * {@link com.sun.star.drawing.MasterPage} .
   */
-@js.native
 trait FooterShape
   extends TextShape
      with Shape

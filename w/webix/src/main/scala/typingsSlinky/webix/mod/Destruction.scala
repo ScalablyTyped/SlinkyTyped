@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Destruction extends js.Object {
-  def destructor(): Unit = js.native
+  def destructor(): Unit
 }
 
 @JSImport("webix", "Destruction")

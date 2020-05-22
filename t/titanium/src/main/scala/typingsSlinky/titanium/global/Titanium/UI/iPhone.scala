@@ -6,10 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * The iPhone/iPad-specific UI capabilities.  All properties, methods and events in this namespace
-		 * will only work on Apple iOS systems.
-		 * @deprecated Use the unified [Titanium.UI.iOS](Titanium.UI.iOS) namespace instead.
-		 */
+  * The iPhone/iPad-specific UI capabilities.  All properties, methods and events in this namespace
+  * will only work on Apple iOS systems.
+  * @deprecated Use the unified [Titanium.UI.iOS](Titanium.UI.iOS) namespace instead.
+  */
 @JSGlobal("Titanium.UI.iPhone")
 @js.native
 object iPhone

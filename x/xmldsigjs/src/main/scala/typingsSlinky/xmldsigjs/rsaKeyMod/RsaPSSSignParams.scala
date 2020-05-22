@@ -1,15 +1,13 @@
 package typingsSlinky.xmldsigjs.rsaKeyMod
 
-import org.scalajs.dom.crypto.Algorithm
 import typingsSlinky.std.AlgorithmIdentifier
 import typingsSlinky.std.RsaPssParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RsaPSSSignParams extends RsaPssParams {
-  var hash: AlgorithmIdentifier = js.native
+  var hash: AlgorithmIdentifier
 }
 
 object RsaPSSSignParams {
@@ -18,25 +16,5 @@ object RsaPSSSignParams {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], saltLength = saltLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[RsaPSSSignParams]
   }
-  @scala.inline
-  implicit class RsaPSSSignParamsOps[Self <: RsaPSSSignParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHashAlgorithm(value: Algorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHash(value: AlgorithmIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

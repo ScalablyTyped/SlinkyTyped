@@ -7,13 +7,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ParseRule extends js.Object {
   /**
     * Attributes for the node or mark created by this rule. When
     * `getAttrs` is provided, it takes precedence.
     */
-  var attrs: js.UndefOr[StringDictionary[js.Any] | Null] = js.native
+  var attrs: js.UndefOr[StringDictionary[js.Any] | Null] = js.undefined
   /**
     * For `tag` rules that produce non-leaf nodes or marks, by default
     * the content of the DOM element is parsed as content of the mark
@@ -24,7 +23,7 @@ trait ParseRule extends js.Object {
     */
   var contentElement: js.UndefOr[
     String | (js.Function1[/* p */ org.scalajs.dom.raw.Node, org.scalajs.dom.raw.Node]) | Null
-  ] = js.native
+  ] = js.undefined
   /**
     * When given, restricts this rule to only match when the current
     * context—the parent nodes into which the content is being
@@ -38,7 +37,7 @@ trait ParseRule extends js.Object {
     * different contexts, they can be separated by a pipe (`|`)
     * character, as in `"blockquote/|list_item/"`.
     */
-  var context: js.UndefOr[String | Null] = js.native
+  var context: js.UndefOr[String | Null] = js.undefined
   /**
     * A function used to compute the attributes for the node or mark
     * created by this rule. Can also be used to describe further
@@ -54,7 +53,7 @@ trait ParseRule extends js.Object {
       /* p */ org.scalajs.dom.raw.Node | String, 
       js.UndefOr[StringDictionary[_] | `false` | Null]
     ]) | Null
-  ] = js.native
+  ] = js.undefined
   /**
     * Can be used to override the content of a matched node. When
     * present, instead of parsing the node's child nodes, the result of
@@ -62,21 +61,21 @@ trait ParseRule extends js.Object {
     */
   var getContent: js.UndefOr[
     (js.Function2[/* p */ org.scalajs.dom.raw.Node, /* schema */ js.Any, Fragment[_]]) | Null
-  ] = js.native
+  ] = js.undefined
   /**
     * When true, ignore content that matches this rule.
     */
-  var ignore: js.UndefOr[Boolean | Null] = js.native
+  var ignore: js.UndefOr[Boolean | Null] = js.undefined
   /**
     * The name of the mark type to wrap the matched content in.
     */
-  var mark: js.UndefOr[String | Null] = js.native
+  var mark: js.UndefOr[String | Null] = js.undefined
   /**
     * The namespace to match. This should be used with `tag`.
     * Nodes are only matched when the namespace matches or this property
     * is null.
     */
-  var namespace: js.UndefOr[String | Null] = js.native
+  var namespace: js.UndefOr[String | Null] = js.undefined
   /**
     * The name of the node type to create when this rule matches. Only
     * valid for rules with a `tag` property, not for style rules. Each
@@ -85,7 +84,7 @@ trait ParseRule extends js.Object {
     * [mark spec](#model.MarkSpec.parseDOM), in which case the `node`
     * or `mark` property will be derived from its position).
     */
-  var node: js.UndefOr[String | Null] = js.native
+  var node: js.UndefOr[String | Null] = js.undefined
   /**
     * Controls whether whitespace should be preserved when parsing the
     * content inside the matched element. `false` means whitespace may
@@ -93,7 +92,7 @@ trait ParseRule extends js.Object {
     * but newlines normalized to spaces, and `"full"` means that
     * newlines should also be preserved.
     */
-  var preserveWhitespace: js.UndefOr[Boolean | full | Null] = js.native
+  var preserveWhitespace: js.UndefOr[Boolean | full | Null] = js.undefined
   /**
     * Can be used to change the order in which the parse rules in a
     * schema are tried. Those with higher priority come first. Rules
@@ -101,12 +100,12 @@ trait ParseRule extends js.Object {
     * property is only meaningful in a schema—when directly
     * constructing a parser, the order of the rule array is used.
     */
-  var priority: js.UndefOr[Double | Null] = js.native
+  var priority: js.UndefOr[Double | Null] = js.undefined
   /**
     * When true, ignore the node that matches this rule, but do parse
     * its content.
     */
-  var skip: js.UndefOr[Boolean | Null] = js.native
+  var skip: js.UndefOr[Boolean | Null] = js.undefined
   /**
     * A CSS property name to match. When given, this rule matches
     * inline styles that list that property. May also have the form
@@ -115,287 +114,52 @@ trait ParseRule extends js.Object {
     * complicated filters, use [`getAttrs`](#model.ParseRule.getAttrs)
     * and return undefined to indicate that the match failed.)
     */
-  var style: js.UndefOr[String | Null] = js.native
+  var style: js.UndefOr[String | Null] = js.undefined
   /**
     * A CSS selector describing the kind of DOM elements to match. A
     * single rule should have _either_ a `tag` or a `style` property.
     */
-  var tag: js.UndefOr[String | Null] = js.native
+  var tag: js.UndefOr[String | Null] = js.undefined
 }
 
 object ParseRule {
   @scala.inline
-  def apply(): ParseRule = {
+  def apply(
+    attrs: js.UndefOr[Null | StringDictionary[js.Any]] = js.undefined,
+    contentElement: js.UndefOr[
+      Null | String | (js.Function1[/* p */ org.scalajs.dom.raw.Node, org.scalajs.dom.raw.Node])
+    ] = js.undefined,
+    context: js.UndefOr[Null | String] = js.undefined,
+    getAttrs: js.UndefOr[
+      Null | (/* p */ org.scalajs.dom.raw.Node | String => js.UndefOr[StringDictionary[_] | `false` | Null])
+    ] = js.undefined,
+    getContent: js.UndefOr[Null | ((/* p */ org.scalajs.dom.raw.Node, /* schema */ js.Any) => Fragment[_])] = js.undefined,
+    ignore: js.UndefOr[Null | Boolean] = js.undefined,
+    mark: js.UndefOr[Null | String] = js.undefined,
+    namespace: js.UndefOr[Null | String] = js.undefined,
+    node: js.UndefOr[Null | String] = js.undefined,
+    preserveWhitespace: js.UndefOr[Null | Boolean | full] = js.undefined,
+    priority: js.UndefOr[Null | Double] = js.undefined,
+    skip: js.UndefOr[Null | Boolean] = js.undefined,
+    style: js.UndefOr[Null | String] = js.undefined,
+    tag: js.UndefOr[Null | String] = js.undefined
+  ): ParseRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(attrs)) __obj.updateDynamic("attrs")(attrs.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentElement)) __obj.updateDynamic("contentElement")(contentElement.asInstanceOf[js.Any])
+    if (!js.isUndefined(context)) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(getAttrs)) __obj.updateDynamic("getAttrs")(if (getAttrs != null) js.Any.fromFunction1(getAttrs.asInstanceOf[/* p */ org.scalajs.dom.raw.Node | String => js.UndefOr[StringDictionary[_] | `false` | Null]]) else null)
+    if (!js.isUndefined(getContent)) __obj.updateDynamic("getContent")(if (getContent != null) js.Any.fromFunction2(getContent.asInstanceOf[(/* p */ org.scalajs.dom.raw.Node, /* schema */ js.Any) => Fragment[_]]) else null)
+    if (!js.isUndefined(ignore)) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (!js.isUndefined(mark)) __obj.updateDynamic("mark")(mark.asInstanceOf[js.Any])
+    if (!js.isUndefined(namespace)) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(node)) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
+    if (!js.isUndefined(preserveWhitespace)) __obj.updateDynamic("preserveWhitespace")(preserveWhitespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(priority)) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip)) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(tag)) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseRule]
   }
-  @scala.inline
-  implicit class ParseRuleOps[Self <: ParseRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttrs(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttrsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(null)
-        ret
-    }
-    @scala.inline
-    def withContentElementFunction1(value: /* p */ org.scalajs.dom.raw.Node => org.scalajs.dom.raw.Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withContentElement(value: String | (js.Function1[/* p */ org.scalajs.dom.raw.Node, org.scalajs.dom.raw.Node])): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentElementNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(null)
-        ret
-    }
-    @scala.inline
-    def withContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(null)
-        ret
-    }
-    @scala.inline
-    def withGetAttrs(
-      value: /* p */ org.scalajs.dom.raw.Node | String => js.UndefOr[StringDictionary[_] | `false` | Null]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrs")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetAttrs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetAttrsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttrs")(null)
-        ret
-    }
-    @scala.inline
-    def withGetContent(value: (/* p */ org.scalajs.dom.raw.Node, /* schema */ js.Any) => Fragment[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetContentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(null)
-        ret
-    }
-    @scala.inline
-    def withIgnore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(null)
-        ret
-    }
-    @scala.inline
-    def withMark(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(null)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespaceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(null)
-        ret
-    }
-    @scala.inline
-    def withNode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(null)
-        ret
-    }
-    @scala.inline
-    def withPreserveWhitespace(value: Boolean | full): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveWhitespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveWhitespaceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(null)
-        ret
-    }
-    @scala.inline
-    def withPriority(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPriorityNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(null)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(null)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(null)
-        ret
-    }
-  }
-  
 }
 

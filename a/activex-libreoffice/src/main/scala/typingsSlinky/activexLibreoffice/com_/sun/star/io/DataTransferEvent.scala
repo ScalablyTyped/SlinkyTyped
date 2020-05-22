@@ -10,10 +10,9 @@ import scala.scalajs.js.annotation._
   * is broadcast by a filter.
   * @see XDataTransferEventListener
   */
-@js.native
 trait DataTransferEvent extends EventObject {
   /** specifies an occurred exception. */
-  var aException: js.Any = js.native
+  var aException: js.Any
 }
 
 object DataTransferEvent {
@@ -22,19 +21,5 @@ object DataTransferEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], aException = aException.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataTransferEvent]
   }
-  @scala.inline
-  implicit class DataTransferEventOps[Self <: DataTransferEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAException(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aException")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

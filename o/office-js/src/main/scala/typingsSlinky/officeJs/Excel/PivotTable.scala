@@ -38,7 +38,7 @@ trait PivotTable extends ClientObject {
   val dataHierarchies: DataPivotHierarchyCollection = js.native
   /**
     *
-    * Specifies whether the PivotTable allows values in the data body to be edited by the user.
+    * Specifies if the PivotTable allows values in the data body to be edited by the user.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -59,7 +59,7 @@ trait PivotTable extends ClientObject {
   val hierarchies: PivotHierarchyCollection = js.native
   /**
     *
-    * Id of the PivotTable. Read-only.
+    * Id of the PivotTable.
     *
     * [Api set: ExcelApi 1.5]
     */
@@ -87,7 +87,7 @@ trait PivotTable extends ClientObject {
   val rowHierarchies: RowColumnPivotHierarchyCollection = js.native
   /**
     *
-    * Specifies whether the PivotTable uses custom lists when sorting.
+    * Specifies if the PivotTable uses custom lists when sorting.
     *
     * [Api set: ExcelApi 1.9]
     */

@@ -5,62 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Item extends js.Object {
-  var itemId: js.UndefOr[String] = js.native
-  var subNav: js.UndefOr[js.Array[Item]] = js.native
-  var title: TagMod[Any] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var itemId: js.UndefOr[String] = js.undefined
+  var subNav: js.UndefOr[js.Array[Item]] = js.undefined
+  var title: TagMod[Any]
 }
 
 object Item {
   @scala.inline
-  def apply(): Item = {
+  def apply(
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    itemId: String = null,
+    subNav: js.Array[Item] = null,
+    title: TagMod[Any] = null
+  ): Item = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (itemId != null) __obj.updateDynamic("itemId")(itemId.asInstanceOf[js.Any])
+    if (subNav != null) __obj.updateDynamic("subNav")(subNav.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Item]
   }
-  @scala.inline
-  implicit class ItemOps[Self <: Item] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubNav(value: js.Array[Item]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subNav")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubNav: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subNav")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

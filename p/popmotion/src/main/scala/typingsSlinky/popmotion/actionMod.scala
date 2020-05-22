@@ -1,10 +1,10 @@
 package typingsSlinky.popmotion
 
+import typingsSlinky.popmotion.actionTypesMod.ActionInit
+import typingsSlinky.popmotion.actionTypesMod.ActionProps
+import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.chainableMod.default
 import typingsSlinky.popmotion.observerTypesMod.ObserverCandidate
-import typingsSlinky.popmotion.typesMod.ActionInit
-import typingsSlinky.popmotion.typesMod.ActionProps
-import typingsSlinky.popmotion.typesMod.ColdSubscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object actionMod extends js.Object {
   @js.native
-  class Action () extends default[Action] {
-    def create(props: ActionProps): Action = js.native
-    def start(): ColdSubscription = js.native
-    def start(observerCandidate: ObserverCandidate): ColdSubscription = js.native
+  class Action[Sub /* <: ColdSubscription */] () extends default[Action[ColdSubscription]] {
+    def create(props: ActionProps): Action[ColdSubscription] = js.native
+    def start(): Sub = js.native
+    def start(observerCandidate: ObserverCandidate): Sub = js.native
   }
   
-  def default(init: ActionInit): Action = js.native
+  def default[Sub /* <: ColdSubscription */](init: ActionInit): Action[Sub] = js.native
 }
 

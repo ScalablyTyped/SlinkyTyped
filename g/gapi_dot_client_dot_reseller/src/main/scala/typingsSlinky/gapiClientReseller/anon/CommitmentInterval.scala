@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CommitmentInterval extends js.Object {
   /** In this version of the API, annual commitment plan's interval is one year. */
-  var commitmentInterval: js.UndefOr[EndTime] = js.native
+  var commitmentInterval: js.UndefOr[EndTime] = js.undefined
   /**
     * The isCommitmentPlan property's boolean value identifies the plan as an annual commitment plan:
     * - true — The subscription's plan is an annual commitment plan.
     * - false — The plan is not an annual commitment plan.
     */
-  var isCommitmentPlan: js.UndefOr[Boolean] = js.native
+  var isCommitmentPlan: js.UndefOr[Boolean] = js.undefined
   /**
     * The planName property is required. This is the name of the subscription's plan. For more information about the Google payment plans, see the API
     * concepts.
@@ -26,58 +25,21 @@ trait CommitmentInterval extends js.Object {
     * changePlan will assign a payment plan to a trial but will not activate the plan. A trial will automatically begin its assigned payment plan after its
     * 30th free day or immediately after calling startPaidService.
     */
-  var planName: js.UndefOr[String] = js.native
+  var planName: js.UndefOr[String] = js.undefined
 }
 
 object CommitmentInterval {
   @scala.inline
-  def apply(): CommitmentInterval = {
+  def apply(
+    commitmentInterval: EndTime = null,
+    isCommitmentPlan: js.UndefOr[Boolean] = js.undefined,
+    planName: String = null
+  ): CommitmentInterval = {
     val __obj = js.Dynamic.literal()
+    if (commitmentInterval != null) __obj.updateDynamic("commitmentInterval")(commitmentInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(isCommitmentPlan)) __obj.updateDynamic("isCommitmentPlan")(isCommitmentPlan.get.asInstanceOf[js.Any])
+    if (planName != null) __obj.updateDynamic("planName")(planName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommitmentInterval]
   }
-  @scala.inline
-  implicit class CommitmentIntervalOps[Self <: CommitmentInterval] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitmentInterval(value: EndTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitmentInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitmentInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitmentInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCommitmentPlan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCommitmentPlan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCommitmentPlan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCommitmentPlan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlanName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlanName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("planName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

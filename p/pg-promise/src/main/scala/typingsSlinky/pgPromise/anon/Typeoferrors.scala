@@ -9,20 +9,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeoferrors extends js.Object {
   // ParameterizedQueryError interface;
   // API: http://vitaly-t.github.io/pg-promise/errors.ParameterizedQueryError.html
-  var ParameterizedQueryError: Instantiable0[typingsSlinky.pgPromise.mod.errors.ParameterizedQueryError] = js.native
+  var ParameterizedQueryError: Instantiable0[typingsSlinky.pgPromise.mod.errors.ParameterizedQueryError]
   // PreparedStatementError interface;
   // API: http://vitaly-t.github.io/pg-promise/errors.PreparedStatementError.html
-  var PreparedStatementError: Instantiable0[typingsSlinky.pgPromise.mod.errors.PreparedStatementError] = js.native
+  var PreparedStatementError: Instantiable0[typingsSlinky.pgPromise.mod.errors.PreparedStatementError]
   // QueryFileError interface;
   // API: http://vitaly-t.github.io/pg-promise/errors.QueryFileError.html
-  var QueryFileError: Instantiable0[typingsSlinky.pgPromise.mod.errors.QueryFileError] = js.native
+  var QueryFileError: Instantiable0[typingsSlinky.pgPromise.mod.errors.QueryFileError]
   // QueryResultError interface;
   // API: http://vitaly-t.github.io/pg-promise/errors.QueryResultError.html
-  var QueryResultError: Instantiable0[typingsSlinky.pgPromise.mod.errors.QueryResultError] = js.native
+  var QueryResultError: Instantiable0[typingsSlinky.pgPromise.mod.errors.QueryResultError]
 }
 
 object Typeoferrors {
@@ -36,37 +35,5 @@ object Typeoferrors {
     val __obj = js.Dynamic.literal(ParameterizedQueryError = ParameterizedQueryError.asInstanceOf[js.Any], PreparedStatementError = PreparedStatementError.asInstanceOf[js.Any], QueryFileError = QueryFileError.asInstanceOf[js.Any], QueryResultError = QueryResultError.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeoferrors]
   }
-  @scala.inline
-  implicit class TypeoferrorsOps[Self <: Typeoferrors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParameterizedQueryError(value: Instantiable0[ParameterizedQueryError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterizedQueryError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreparedStatementError(value: Instantiable0[PreparedStatementError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PreparedStatementError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryFileError(value: Instantiable0[QueryFileError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryFileError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueryResultError(value: Instantiable0[QueryResultError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryResultError")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

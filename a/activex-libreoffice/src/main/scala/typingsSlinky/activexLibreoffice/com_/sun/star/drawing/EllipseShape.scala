@@ -29,7 +29,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service is for an ellipse or circle shape. */
-@js.native
 trait EllipseShape
   extends Shape
      with LineProperties
@@ -39,11 +38,11 @@ trait EllipseShape
      with ShadowProperties
      with RotationDescriptor {
   /** If the kind specifies an open circle, this is the end angle. */
-  var CircleEndAngle: Double = js.native
+  var CircleEndAngle: Double
   /** This is the kind of circle. */
-  var CircleKind: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.CircleKind = js.native
+  var CircleKind: typingsSlinky.activexLibreoffice.com_.sun.star.drawing.CircleKind
   /** If the kind specifies an open circle, this is the start angle. */
-  var CircleStartAngle: Double = js.native
+  var CircleStartAngle: Double
 }
 
 object EllipseShape {
@@ -162,31 +161,5 @@ object EllipseShape {
     js.Dynamic.global.Object.assign(__obj, TextProperties)
     __obj.asInstanceOf[EllipseShape]
   }
-  @scala.inline
-  implicit class EllipseShapeOps[Self <: EllipseShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCircleEndAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CircleEndAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCircleKind(value: CircleKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CircleKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCircleStartAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CircleStartAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

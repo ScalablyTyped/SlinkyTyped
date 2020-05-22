@@ -1,7 +1,9 @@
 package typingsSlinky.jupyterlabServices
 
+import typingsSlinky.jupyterlabServices.anon.PartialIModelId
 import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.IAnyMessageArgs
 import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.IKernel
+import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.IKernelConnection
 import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.IModel
 import typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel.Status
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IIOPubMessage
@@ -9,8 +11,10 @@ import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IMessage
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.IOPubMessageType
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.MessageType
 import typingsSlinky.jupyterlabServices.serverconnectionMod.ServerConnection.ISettings
+import typingsSlinky.jupyterlabServices.sessionSessionMod.Session.IKernelChangedArgs
 import typingsSlinky.jupyterlabServices.sessionSessionMod.Session.IOptions
 import typingsSlinky.jupyterlabServices.sessionSessionMod.Session.ISession
+import typingsSlinky.phosphorSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,6 +51,127 @@ object sessionDefaultMod extends js.Object {
     var _unhandledMessage: js.Any = js.native
     var _updating: js.Any = js.native
     /**
+      * A signal emitted for any kernel message.
+      *
+      * Note: The behavior is undefined if the message is modified
+      * during message handling. As such, it should be treated as read-only.
+      */
+    /* CompleteClass */
+    override var anyMessage: ISignal[this.type, IAnyMessageArgs] = js.native
+    /**
+      * Unique id of the session.
+      */
+    /* CompleteClass */
+    override val id: String = js.native
+    /**
+      * A signal emitted for iopub kernel messages.
+      */
+    /* CompleteClass */
+    override var iopubMessage: ISignal[this.type, IIOPubMessage[IOPubMessageType]] = js.native
+    /**
+      * Test whether the object has been disposed.
+      *
+      * #### Notes
+      * This property is always safe to access.
+      */
+    /* CompleteClass */
+    override val isDisposed: Boolean = js.native
+    /**
+      * The kernel.
+      *
+      * #### Notes
+      * This is a read-only property, and can be altered by [changeKernel].
+      */
+    /* CompleteClass */
+    override val kernel: IKernelConnection = js.native
+    /**
+      * A signal emitted when the kernel changes.
+      */
+    /* CompleteClass */
+    override var kernelChanged: ISignal[this.type, IKernelChangedArgs] = js.native
+    /**
+      * The model associated with the session.
+      */
+    /* CompleteClass */
+    override val model: typingsSlinky.jupyterlabServices.sessionSessionMod.Session.IModel = js.native
+    /**
+      * The current name associated with the session.
+      */
+    /* CompleteClass */
+    override val name: String = js.native
+    /**
+      * The current path associated with the session.
+      */
+    /* CompleteClass */
+    override val path: String = js.native
+    /**
+      * A signal emitted when a session property changes.
+      */
+    /* CompleteClass */
+    override val propertyChanged: ISignal[
+        this.type, 
+        typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.path | typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.name | typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.`type`
+      ] = js.native
+    /**
+      * The server settings of the session.
+      */
+    /* CompleteClass */
+    override val serverSettings: ISettings = js.native
+    /**
+      * The current status of the session.
+      *
+      * #### Notes
+      * This is a delegate to the kernel status.
+      */
+    /* CompleteClass */
+    override val status: Status = js.native
+    /**
+      * A signal emitted when the session status changes.
+      */
+    /* CompleteClass */
+    override var statusChanged: ISignal[this.type, Status] = js.native
+    /**
+      * A signal emitted when the session is shut down.
+      */
+    /* CompleteClass */
+    override var terminated: ISignal[this.type, Unit] = js.native
+    /**
+      * The type of the session.
+      */
+    /* CompleteClass */
+    override val `type`: String = js.native
+    /**
+      * A signal emitted for unhandled kernel message.
+      */
+    /* CompleteClass */
+    override var unhandledMessage: ISignal[this.type, IMessage[MessageType]] = js.native
+    /**
+      * Change the kernel.
+      *
+      * @param options - The name or id of the new kernel.
+      *
+      * @returns A promise that resolves with the new kernel model.
+      *
+      * #### Notes
+      * This shuts down the existing kernel and creates a new kernel,
+      * keeping the existing session ID and path.
+      */
+    /* CompleteClass */
+    override def changeKernel(options: PartialIModelId): js.Promise[IKernelConnection] = js.native
+    /**
+      * Dispose of the resources held by the object.
+      *
+      * #### Notes
+      * If the object's `dispose` method is called more than once, all
+      * calls made after the first will be a no-op.
+      *
+      * #### Undefined Behavior
+      * It is undefined behavior to use any functionality of the object
+      * after it has been disposed unless otherwise explicitly noted.
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Handle any kernel messages.
       */
     /* protected */ def onAnyMessage(sender: IKernel, args: IAnyMessageArgs): Unit = js.native
@@ -63,12 +188,46 @@ object sessionDefaultMod extends js.Object {
       */
     /* protected */ def onUnhandledMessage(sender: IKernel, msg: IMessage[MessageType]): Unit = js.native
     /**
+      * Change the session name.
+      */
+    /* CompleteClass */
+    override def setName(name: String): js.Promise[Unit] = js.native
+    /**
+      * Change the session path.
+      *
+      * @param path - The new session path.
+      *
+      * @returns A promise that resolves when the session has renamed.
+      *
+      * #### Notes
+      * This uses the Jupyter REST API, and the response is validated.
+      * The promise is fulfilled on a valid response and rejected otherwise.
+      */
+    /* CompleteClass */
+    override def setPath(path: String): js.Promise[Unit] = js.native
+    /**
+      * Change the session type.
+      */
+    /* CompleteClass */
+    override def setType(`type`: String): js.Promise[Unit] = js.native
+    /**
       * Create a new kernel connection and hook up to its events.
       *
       * #### Notes
       * This method is not meant to be subclassed.
       */
     /* protected */ def setupKernel(model: IModel): Unit = js.native
+    /**
+      * Kill the kernel and shutdown the session.
+      *
+      * @returns A promise that resolves when the session is shut down.
+      *
+      * #### Notes
+      * This uses the Jupyter REST API, and the response is validated.
+      * The promise is fulfilled on a valid response and rejected otherwise.
+      */
+    /* CompleteClass */
+    override def shutdown(): js.Promise[Unit] = js.native
     /**
       * Update the session based on a session model from the server.
       */

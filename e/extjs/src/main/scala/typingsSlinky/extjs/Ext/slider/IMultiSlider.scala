@@ -6,363 +6,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMultiSlider extends IBase {
   /** [Method] Creates a new thumb and adds it to the slider
-  		* @param value Number The initial value to set on the thumb.
-  		* @returns any The thumb
-  		*/
-  var addThumb: js.UndefOr[js.Function1[/* value */ js.UndefOr[Double], _]] = js.native
+    * @param value Number The initial value to set on the thumb.
+    * @returns any The thumb
+    */
+  var addThumb: js.UndefOr[js.Function1[/* value */ js.UndefOr[Double], _]] = js.undefined
   /** [Config Option] (Boolean) */
   @JSName("animate")
-  var animate_IMultiSlider: js.UndefOr[Boolean] = js.native
+  var animate_IMultiSlider: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var clickToChange: js.UndefOr[Boolean] = js.native
+  var clickToChange: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var constrainThumbs: js.UndefOr[Boolean] = js.native
+  var constrainThumbs: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Number/Boolean) */
-  var decimalPrecision: js.UndefOr[js.Any] = js.native
+  var decimalPrecision: js.UndefOr[js.Any] = js.undefined
   /** [Property] (Boolean) */
-  var dragging: js.UndefOr[Boolean] = js.native
+  var dragging: js.UndefOr[Boolean] = js.undefined
   /** [Method] Returns the current value of the slider
-  		* @param index Number The index of the thumb to return a value for
-  		* @returns any The current value of the slider at the given index, or an array of all thumb values if no index is given.
-  		*/
+    * @param index Number The index of the thumb to return a value for
+    * @returns any The current value of the slider at the given index, or an array of all thumb values if no index is given.
+    */
   @JSName("getValue")
-  var getValue_IMultiSlider: js.UndefOr[js.Function1[/* index */ js.UndefOr[Double], _]] = js.native
+  var getValue_IMultiSlider: js.UndefOr[js.Function1[/* index */ js.UndefOr[Double], _]] = js.undefined
   /** [Method] Returns an array of values  one for the location of each thumb
-  		* @returns any The set of thumb values
-  		*/
-  var getValues: js.UndefOr[js.Function0[_]] = js.native
+    * @returns any The set of thumb values
+    */
+  var getValues: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Config Option] (Number) */
-  var increment: js.UndefOr[Double] = js.native
+  var increment: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number) */
-  var keyIncrement: js.UndefOr[Double] = js.native
+  var keyIncrement: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number) */
-  var maxValue: js.UndefOr[Double] = js.native
+  var maxValue: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number) */
-  var minValue: js.UndefOr[Double] = js.native
+  var minValue: js.UndefOr[Double] = js.undefined
   /** [Method] Sets the maximum value for the slider instance
-  		* @param val Number The new maximum value
-  		*/
-  var setMaxValue: js.UndefOr[js.Function1[/* val */ js.UndefOr[Double], Unit]] = js.native
+    * @param val Number The new maximum value
+    */
+  var setMaxValue: js.UndefOr[js.Function1[/* val */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets the minimum value for the slider instance
-  		* @param val Number The new minimum value
-  		*/
-  var setMinValue: js.UndefOr[js.Function1[/* val */ js.UndefOr[Double], Unit]] = js.native
+    * @param val Number The new minimum value
+    */
+  var setMinValue: js.UndefOr[js.Function1[/* val */ js.UndefOr[Double], Unit]] = js.undefined
   /** [Method] Sets the read only state of this field
-  		* @param readOnly Object
-  		*/
+    * @param readOnly Object
+    */
   @JSName("setReadOnly")
-  var setReadOnly_IMultiSlider: js.UndefOr[js.Function1[/* readOnly */ js.UndefOr[js.Any], Unit]] = js.native
+  var setReadOnly_IMultiSlider: js.UndefOr[js.Function1[/* readOnly */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Synchronizes thumbs position to the proper proportion of the total component width based on the current slider value  */
-  var syncThumbs: js.UndefOr[js.Function0[Unit]] = js.native
+  var syncThumbs: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Property] (Array) */
-  var thumbs: js.UndefOr[Array] = js.native
+  var thumbs: js.UndefOr[Array] = js.undefined
   /** [Config Option] (Function) */
-  var tipText: js.UndefOr[js.Any] = js.native
+  var tipText: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Object/Boolean) */
-  var useTips: js.UndefOr[js.Any] = js.native
+  var useTips: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Number) */
   @JSName("value")
-  var value_IMultiSlider: js.UndefOr[Double] = js.native
+  var value_IMultiSlider: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Number[]) */
-  var values: js.UndefOr[Array] = js.native
+  var values: js.UndefOr[Array] = js.undefined
   /** [Config Option] (Boolean) */
-  var vertical: js.UndefOr[Boolean] = js.native
+  var vertical: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var zeroBasedSnapping: js.UndefOr[Boolean] = js.native
+  var zeroBasedSnapping: js.UndefOr[Boolean] = js.undefined
 }
 
 object IMultiSlider {
   @scala.inline
-  def apply(): IMultiSlider = {
+  def apply(
+    IBase: IBase = null,
+    addThumb: /* value */ js.UndefOr[Double] => _ = null,
+    animate: js.UndefOr[Boolean] = js.undefined,
+    clickToChange: js.UndefOr[Boolean] = js.undefined,
+    constrainThumbs: js.UndefOr[Boolean] = js.undefined,
+    decimalPrecision: js.Any = null,
+    dragging: js.UndefOr[Boolean] = js.undefined,
+    getValue: /* index */ js.UndefOr[Double] => _ = null,
+    getValues: () => _ = null,
+    increment: js.UndefOr[Double] = js.undefined,
+    keyIncrement: js.UndefOr[Double] = js.undefined,
+    maxValue: js.UndefOr[Double] = js.undefined,
+    minValue: js.UndefOr[Double] = js.undefined,
+    setMaxValue: /* val */ js.UndefOr[Double] => Unit = null,
+    setMinValue: /* val */ js.UndefOr[Double] => Unit = null,
+    setReadOnly: /* readOnly */ js.UndefOr[js.Any] => Unit = null,
+    syncThumbs: () => Unit = null,
+    thumbs: Array = null,
+    tipText: js.Any = null,
+    useTips: js.Any = null,
+    value: js.UndefOr[Double] = js.undefined,
+    values: Array = null,
+    vertical: js.UndefOr[Boolean] = js.undefined,
+    zeroBasedSnapping: js.UndefOr[Boolean] = js.undefined
+  ): IMultiSlider = {
     val __obj = js.Dynamic.literal()
+    if (IBase != null) js.Dynamic.global.Object.assign(__obj, IBase)
+    if (addThumb != null) __obj.updateDynamic("addThumb")(js.Any.fromFunction1(addThumb))
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickToChange)) __obj.updateDynamic("clickToChange")(clickToChange.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constrainThumbs)) __obj.updateDynamic("constrainThumbs")(constrainThumbs.get.asInstanceOf[js.Any])
+    if (decimalPrecision != null) __obj.updateDynamic("decimalPrecision")(decimalPrecision.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragging)) __obj.updateDynamic("dragging")(dragging.get.asInstanceOf[js.Any])
+    if (getValue != null) __obj.updateDynamic("getValue")(js.Any.fromFunction1(getValue))
+    if (getValues != null) __obj.updateDynamic("getValues")(js.Any.fromFunction0(getValues))
+    if (!js.isUndefined(increment)) __obj.updateDynamic("increment")(increment.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyIncrement)) __obj.updateDynamic("keyIncrement")(keyIncrement.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxValue)) __obj.updateDynamic("maxValue")(maxValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minValue)) __obj.updateDynamic("minValue")(minValue.get.asInstanceOf[js.Any])
+    if (setMaxValue != null) __obj.updateDynamic("setMaxValue")(js.Any.fromFunction1(setMaxValue))
+    if (setMinValue != null) __obj.updateDynamic("setMinValue")(js.Any.fromFunction1(setMinValue))
+    if (setReadOnly != null) __obj.updateDynamic("setReadOnly")(js.Any.fromFunction1(setReadOnly))
+    if (syncThumbs != null) __obj.updateDynamic("syncThumbs")(js.Any.fromFunction0(syncThumbs))
+    if (thumbs != null) __obj.updateDynamic("thumbs")(thumbs.asInstanceOf[js.Any])
+    if (tipText != null) __obj.updateDynamic("tipText")(tipText.asInstanceOf[js.Any])
+    if (useTips != null) __obj.updateDynamic("useTips")(useTips.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
+    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zeroBasedSnapping)) __obj.updateDynamic("zeroBasedSnapping")(zeroBasedSnapping.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMultiSlider]
   }
-  @scala.inline
-  implicit class IMultiSliderOps[Self <: IMultiSlider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddThumb(value: /* value */ js.UndefOr[Double] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addThumb")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddThumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addThumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickToChange(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickToChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstrainThumbs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainThumbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstrainThumbs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainThumbs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDecimalPrecision(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPrecision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDecimalPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPrecision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragging(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetValue(value: /* index */ js.UndefOr[Double] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetValues(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValues")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncrement(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncrement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyIncrement(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIncrement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyIncrement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIncrement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMaxValue(value: /* val */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetMinValue(value: /* val */ js.UndefOr[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetReadOnly(value: /* readOnly */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setReadOnly")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setReadOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncThumbs(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncThumbs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSyncThumbs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncThumbs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbs(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTipText(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tipText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTipText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tipText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseTips(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTips")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseTips: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useTips")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValues(value: Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertical: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZeroBasedSnapping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroBasedSnapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZeroBasedSnapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroBasedSnapping")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

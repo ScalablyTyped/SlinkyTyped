@@ -4,86 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CompletionItem extends js.Object {
   /**
     * The client supports the following `CompletionItem` specific
     * capabilities.
     */
-  var completionItem: js.UndefOr[CommitCharactersSupport] = js.native
-  var completionItemKind: js.UndefOr[ValueSetArray] = js.native
+  var completionItem: js.UndefOr[CommitCharactersSupport] = js.undefined
+  var completionItemKind: js.UndefOr[ValueSetArray] = js.undefined
   /**
     * The client supports to send additional context information for a
     * `textDocument/completion` requestion.
     */
-  var contextSupport: js.UndefOr[Boolean] = js.native
+  var contextSupport: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether completion supports dynamic registration.
     */
-  var dynamicRegistration: js.UndefOr[Boolean] = js.native
+  var dynamicRegistration: js.UndefOr[Boolean] = js.undefined
 }
 
 object CompletionItem {
   @scala.inline
-  def apply(): CompletionItem = {
+  def apply(
+    completionItem: CommitCharactersSupport = null,
+    completionItemKind: ValueSetArray = null,
+    contextSupport: js.UndefOr[Boolean] = js.undefined,
+    dynamicRegistration: js.UndefOr[Boolean] = js.undefined
+  ): CompletionItem = {
     val __obj = js.Dynamic.literal()
+    if (completionItem != null) __obj.updateDynamic("completionItem")(completionItem.asInstanceOf[js.Any])
+    if (completionItemKind != null) __obj.updateDynamic("completionItemKind")(completionItemKind.asInstanceOf[js.Any])
+    if (!js.isUndefined(contextSupport)) __obj.updateDynamic("contextSupport")(contextSupport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dynamicRegistration)) __obj.updateDynamic("dynamicRegistration")(dynamicRegistration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompletionItem]
   }
-  @scala.inline
-  implicit class CompletionItemOps[Self <: CompletionItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletionItem(value: CommitCharactersSupport): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompletionItemKind(value: ValueSetArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionItemKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionItemKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionItemKind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContextSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContextSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contextSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicRegistration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRegistration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamicRegistration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicRegistration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

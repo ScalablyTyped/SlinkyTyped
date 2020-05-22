@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoCodecSettings extends js.Object {
-  var codec: VideoCodec = js.native
+  var codec: VideoCodec
 }
 
 object VideoCodecSettings {
@@ -15,19 +14,5 @@ object VideoCodecSettings {
     val __obj = js.Dynamic.literal(codec = codec.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoCodecSettings]
   }
-  @scala.inline
-  implicit class VideoCodecSettingsOps[Self <: VideoCodecSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodec(value: VideoCodec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

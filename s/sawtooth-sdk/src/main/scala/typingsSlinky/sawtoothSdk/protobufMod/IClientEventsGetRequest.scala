@@ -4,63 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClientEventsGetRequest extends js.Object {
   /** ClientEventsGetRequest blockIds */
-  var blockIds: js.UndefOr[js.Array[String] | Null] = js.native
+  var blockIds: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** ClientEventsGetRequest subscriptions */
-  var subscriptions: js.UndefOr[js.Array[IEventSubscription] | Null] = js.native
+  var subscriptions: js.UndefOr[js.Array[IEventSubscription] | Null] = js.undefined
 }
 
 object IClientEventsGetRequest {
   @scala.inline
-  def apply(): IClientEventsGetRequest = {
+  def apply(
+    blockIds: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    subscriptions: js.UndefOr[Null | js.Array[IEventSubscription]] = js.undefined
+  ): IClientEventsGetRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockIds)) __obj.updateDynamic("blockIds")(blockIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(subscriptions)) __obj.updateDynamic("subscriptions")(subscriptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClientEventsGetRequest]
   }
-  @scala.inline
-  implicit class IClientEventsGetRequestOps[Self <: IClientEventsGetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockIdsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockIds")(null)
-        ret
-    }
-    @scala.inline
-    def withSubscriptions(value: js.Array[IEventSubscription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(null)
-        ret
-    }
-  }
-  
 }
 

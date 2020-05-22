@@ -4,39 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClickEventUIParam extends js.Object {
   /**
-  	 * Used to get a reference the igSplitButton element.
-  	 */
-  var item: js.UndefOr[js.Any] = js.native
+    * Used to get a reference the igSplitButton element.
+    */
+  var item: js.UndefOr[js.Any] = js.undefined
 }
 
 object ClickEventUIParam {
   @scala.inline
-  def apply(): ClickEventUIParam = {
+  def apply(item: js.Any = null): ClickEventUIParam = {
     val __obj = js.Dynamic.literal()
+    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClickEventUIParam]
   }
-  @scala.inline
-  implicit class ClickEventUIParamOps[Self <: ClickEventUIParam] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -38,96 +38,24 @@ trait DialogAction extends js.Object {
 
 object DialogAction {
   @scala.inline
-  def apply(`type`: DialogActionType): DialogAction = {
+  def apply(
+    `type`: DialogActionType,
+    fulfillmentState: FulfillmentState = null,
+    intentName: IntentName = null,
+    message: Text = null,
+    messageFormat: MessageFormatType = null,
+    slotToElicit: String = null,
+    slots: StringMap = null
+  ): DialogAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (fulfillmentState != null) __obj.updateDynamic("fulfillmentState")(fulfillmentState.asInstanceOf[js.Any])
+    if (intentName != null) __obj.updateDynamic("intentName")(intentName.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (messageFormat != null) __obj.updateDynamic("messageFormat")(messageFormat.asInstanceOf[js.Any])
+    if (slotToElicit != null) __obj.updateDynamic("slotToElicit")(slotToElicit.asInstanceOf[js.Any])
+    if (slots != null) __obj.updateDynamic("slots")(slots.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogAction]
   }
-  @scala.inline
-  implicit class DialogActionOps[Self <: DialogAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: DialogActionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFulfillmentState(value: FulfillmentState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFulfillmentState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fulfillmentState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntentName(value: IntentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntentName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intentName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: Text): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageFormat(value: MessageFormatType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlotToElicit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotToElicit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlotToElicit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slotToElicit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlots(value: StringMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

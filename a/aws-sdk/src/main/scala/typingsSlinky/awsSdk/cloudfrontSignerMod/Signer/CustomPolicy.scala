@@ -20,31 +20,5 @@ object CustomPolicy {
     __obj.updateDynamic("CloudFront-Signature")(`CloudFront-Signature`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPolicy]
   }
-  @scala.inline
-  implicit class CustomPolicyOps[Self <: CustomPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withCloudFront-Key-Pair-Id`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFront-Key-Pair-Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCloudFront-Policy`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFront-Policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withCloudFront-Signature`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFront-Signature")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

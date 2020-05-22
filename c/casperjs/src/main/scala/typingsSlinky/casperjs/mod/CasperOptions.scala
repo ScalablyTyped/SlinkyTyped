@@ -5,361 +5,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CasperOptions extends js.Object {
-  var clientScripts: js.UndefOr[js.Array[_]] = js.native
-  var exitOnError: js.UndefOr[Boolean] = js.native
-  var httpStatusHandlers: js.UndefOr[js.Any] = js.native
-  var logLevel: js.UndefOr[String] = js.native
-  var onAlert: js.UndefOr[js.Function] = js.native
-  var onDie: js.UndefOr[js.Function] = js.native
-  var onError: js.UndefOr[js.Function] = js.native
-  var onLoadError: js.UndefOr[js.Function] = js.native
-  var onPageInitialized: js.UndefOr[js.Function] = js.native
-  var onResourceReceived: js.UndefOr[js.Function] = js.native
-  var onResourceRequested: js.UndefOr[js.Function] = js.native
-  var onStepComplete: js.UndefOr[js.Function] = js.native
-  var onStepTimeout: js.UndefOr[js.Function] = js.native
-  var onTimeout: js.UndefOr[js.Function] = js.native
-  var onWaitTimeout: js.UndefOr[js.Function] = js.native
-  var page: js.UndefOr[WebPage] = js.native
-  var pageSettings: js.UndefOr[js.Any] = js.native
-  var remoteScripts: js.UndefOr[js.Array[_]] = js.native
-  var retryTimeout: js.UndefOr[Double] = js.native
-  var safeLogs: js.UndefOr[Boolean] = js.native
-  var silentErrors: js.UndefOr[Boolean] = js.native
-  var stepTimeout: js.UndefOr[Double] = js.native
-  var timeout: js.UndefOr[Double] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
-  var viewportSize: js.UndefOr[js.Any] = js.native
-  var waitTimeout: js.UndefOr[Double] = js.native
+  var clientScripts: js.UndefOr[js.Array[_]] = js.undefined
+  var exitOnError: js.UndefOr[Boolean] = js.undefined
+  var httpStatusHandlers: js.UndefOr[js.Any] = js.undefined
+  var logLevel: js.UndefOr[String] = js.undefined
+  var onAlert: js.UndefOr[js.Function] = js.undefined
+  var onDie: js.UndefOr[js.Function] = js.undefined
+  var onError: js.UndefOr[js.Function] = js.undefined
+  var onLoadError: js.UndefOr[js.Function] = js.undefined
+  var onPageInitialized: js.UndefOr[js.Function] = js.undefined
+  var onResourceReceived: js.UndefOr[js.Function] = js.undefined
+  var onResourceRequested: js.UndefOr[js.Function] = js.undefined
+  var onStepComplete: js.UndefOr[js.Function] = js.undefined
+  var onStepTimeout: js.UndefOr[js.Function] = js.undefined
+  var onTimeout: js.UndefOr[js.Function] = js.undefined
+  var onWaitTimeout: js.UndefOr[js.Function] = js.undefined
+  var page: js.UndefOr[WebPage] = js.undefined
+  var pageSettings: js.UndefOr[js.Any] = js.undefined
+  var remoteScripts: js.UndefOr[js.Array[_]] = js.undefined
+  var retryTimeout: js.UndefOr[Double] = js.undefined
+  var safeLogs: js.UndefOr[Boolean] = js.undefined
+  var silentErrors: js.UndefOr[Boolean] = js.undefined
+  var stepTimeout: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
+  var viewportSize: js.UndefOr[js.Any] = js.undefined
+  var waitTimeout: js.UndefOr[Double] = js.undefined
 }
 
 object CasperOptions {
   @scala.inline
-  def apply(): CasperOptions = {
+  def apply(
+    clientScripts: js.Array[_] = null,
+    exitOnError: js.UndefOr[Boolean] = js.undefined,
+    httpStatusHandlers: js.Any = null,
+    logLevel: String = null,
+    onAlert: js.Function = null,
+    onDie: js.Function = null,
+    onError: js.Function = null,
+    onLoadError: js.Function = null,
+    onPageInitialized: js.Function = null,
+    onResourceReceived: js.Function = null,
+    onResourceRequested: js.Function = null,
+    onStepComplete: js.Function = null,
+    onStepTimeout: js.Function = null,
+    onTimeout: js.Function = null,
+    onWaitTimeout: js.Function = null,
+    page: WebPage = null,
+    pageSettings: js.Any = null,
+    remoteScripts: js.Array[_] = null,
+    retryTimeout: js.UndefOr[Double] = js.undefined,
+    safeLogs: js.UndefOr[Boolean] = js.undefined,
+    silentErrors: js.UndefOr[Boolean] = js.undefined,
+    stepTimeout: js.UndefOr[Double] = js.undefined,
+    timeout: js.UndefOr[Double] = js.undefined,
+    verbose: js.UndefOr[Boolean] = js.undefined,
+    viewportSize: js.Any = null,
+    waitTimeout: js.UndefOr[Double] = js.undefined
+  ): CasperOptions = {
     val __obj = js.Dynamic.literal()
+    if (clientScripts != null) __obj.updateDynamic("clientScripts")(clientScripts.asInstanceOf[js.Any])
+    if (!js.isUndefined(exitOnError)) __obj.updateDynamic("exitOnError")(exitOnError.get.asInstanceOf[js.Any])
+    if (httpStatusHandlers != null) __obj.updateDynamic("httpStatusHandlers")(httpStatusHandlers.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (onAlert != null) __obj.updateDynamic("onAlert")(onAlert.asInstanceOf[js.Any])
+    if (onDie != null) __obj.updateDynamic("onDie")(onDie.asInstanceOf[js.Any])
+    if (onError != null) __obj.updateDynamic("onError")(onError.asInstanceOf[js.Any])
+    if (onLoadError != null) __obj.updateDynamic("onLoadError")(onLoadError.asInstanceOf[js.Any])
+    if (onPageInitialized != null) __obj.updateDynamic("onPageInitialized")(onPageInitialized.asInstanceOf[js.Any])
+    if (onResourceReceived != null) __obj.updateDynamic("onResourceReceived")(onResourceReceived.asInstanceOf[js.Any])
+    if (onResourceRequested != null) __obj.updateDynamic("onResourceRequested")(onResourceRequested.asInstanceOf[js.Any])
+    if (onStepComplete != null) __obj.updateDynamic("onStepComplete")(onStepComplete.asInstanceOf[js.Any])
+    if (onStepTimeout != null) __obj.updateDynamic("onStepTimeout")(onStepTimeout.asInstanceOf[js.Any])
+    if (onTimeout != null) __obj.updateDynamic("onTimeout")(onTimeout.asInstanceOf[js.Any])
+    if (onWaitTimeout != null) __obj.updateDynamic("onWaitTimeout")(onWaitTimeout.asInstanceOf[js.Any])
+    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
+    if (pageSettings != null) __obj.updateDynamic("pageSettings")(pageSettings.asInstanceOf[js.Any])
+    if (remoteScripts != null) __obj.updateDynamic("remoteScripts")(remoteScripts.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryTimeout)) __obj.updateDynamic("retryTimeout")(retryTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(safeLogs)) __obj.updateDynamic("safeLogs")(safeLogs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silentErrors)) __obj.updateDynamic("silentErrors")(silentErrors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepTimeout)) __obj.updateDynamic("stepTimeout")(stepTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
+    if (viewportSize != null) __obj.updateDynamic("viewportSize")(viewportSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitTimeout)) __obj.updateDynamic("waitTimeout")(waitTimeout.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CasperOptions]
   }
-  @scala.inline
-  implicit class CasperOptionsOps[Self <: CasperOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientScripts(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientScripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExitOnError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitOnError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExitOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exitOnError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHttpStatusHandlers(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpStatusHandlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpStatusHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpStatusHandlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAlert(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlert")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnAlert: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAlert")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDie(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDie")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDie: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDie")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnError(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnLoadError(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnLoadError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPageInitialized(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageInitialized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPageInitialized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPageInitialized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResourceReceived(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResourceReceived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnResourceReceived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResourceReceived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResourceRequested(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResourceRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnResourceRequested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResourceRequested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStepComplete(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStepComplete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnStepComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStepComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnStepTimeout(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStepTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnStepTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onStepTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTimeout(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnWaitTimeout(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaitTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnWaitTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaitTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage(value: WebPage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSettings(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoteScripts(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteScripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoteScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteScripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeLogs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeLogs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeLogs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeLogs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilentErrors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silentErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilentErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silentErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewportSize(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewportSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

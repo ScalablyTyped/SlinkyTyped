@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PreviousNetworkTransactionId extends js.Object {
-  var previousNetworkTransactionId: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
+  var previousNetworkTransactionId: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
 }
 
 object PreviousNetworkTransactionId {
   @scala.inline
-  def apply(): PreviousNetworkTransactionId = {
+  def apply(previousNetworkTransactionId: String = null, status: String = null): PreviousNetworkTransactionId = {
     val __obj = js.Dynamic.literal()
+    if (previousNetworkTransactionId != null) __obj.updateDynamic("previousNetworkTransactionId")(previousNetworkTransactionId.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviousNetworkTransactionId]
   }
-  @scala.inline
-  implicit class PreviousNetworkTransactionIdOps[Self <: PreviousNetworkTransactionId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreviousNetworkTransactionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNetworkTransactionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousNetworkTransactionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousNetworkTransactionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeInventoryDeletionsResult extends js.Object {
 
 object DescribeInventoryDeletionsResult {
   @scala.inline
-  def apply(): DescribeInventoryDeletionsResult = {
+  def apply(InventoryDeletions: InventoryDeletionsList = null, NextToken: NextToken = null): DescribeInventoryDeletionsResult = {
     val __obj = js.Dynamic.literal()
+    if (InventoryDeletions != null) __obj.updateDynamic("InventoryDeletions")(InventoryDeletions.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeInventoryDeletionsResult]
   }
-  @scala.inline
-  implicit class DescribeInventoryDeletionsResultOps[Self <: DescribeInventoryDeletionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInventoryDeletions(value: InventoryDeletionsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InventoryDeletions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInventoryDeletions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InventoryDeletions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

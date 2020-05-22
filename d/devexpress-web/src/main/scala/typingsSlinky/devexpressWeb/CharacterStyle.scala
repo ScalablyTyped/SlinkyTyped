@@ -7,16 +7,15 @@ import scala.scalajs.js.annotation._
 /**
   * Contains characteristics of a character style in a document.
   */
-@js.native
 trait CharacterStyle extends StyleBase {
   /**
     * Gets or sets the linked style for the current style.
     */
-  val linkedStyle: ParagraphStyle = js.native
+  val linkedStyle: ParagraphStyle
   /**
     * Gets the style form which the current style inherits.
     */
-  val parent: CharacterStyle = js.native
+  val parent: CharacterStyle
 }
 
 object CharacterStyle {
@@ -25,25 +24,5 @@ object CharacterStyle {
     val __obj = js.Dynamic.literal(isDeleted = isDeleted.asInstanceOf[js.Any], linkedStyle = linkedStyle.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[CharacterStyle]
   }
-  @scala.inline
-  implicit class CharacterStyleOps[Self <: CharacterStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLinkedStyle(value: ParagraphStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: CharacterStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

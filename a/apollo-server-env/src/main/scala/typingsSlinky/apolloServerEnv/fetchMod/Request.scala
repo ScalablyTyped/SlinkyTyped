@@ -6,9 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("apollo-server-env/dist/fetch", "Request")
 @js.native
-class Request protected ()
-  extends Body
-     with RequestInfo {
+class Request protected () extends Body {
   def this(input: String) = this()
   def this(input: Request) = this()
   def this(input: String, init: RequestInit) = this()

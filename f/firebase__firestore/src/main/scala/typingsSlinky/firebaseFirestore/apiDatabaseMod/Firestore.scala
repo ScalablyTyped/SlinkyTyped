@@ -5,7 +5,8 @@ import typingsSlinky.firebaseComponent.mod.Provider
 import typingsSlinky.firebaseFirestore.anon.Delete
 import typingsSlinky.firebaseFirestore.apiObserverMod.PartialObserver
 import typingsSlinky.firebaseFirestore.apiObserverMod.Unsubscribe
-import typingsSlinky.firebaseFirestore.apiUserDataConverterMod.UserDataConverter
+import typingsSlinky.firebaseFirestore.apiUserDataReaderMod.UserDataReader
+import typingsSlinky.firebaseFirestore.coreComponentProviderMod.ComponentProvider
 import typingsSlinky.firebaseFirestore.coreDatabaseInfoMod.DatabaseId
 import typingsSlinky.firebaseFirestore.coreFirestoreClientMod.FirestoreClient
 import typingsSlinky.firebaseFirestore.mod.FirebaseApp
@@ -22,10 +23,21 @@ import scala.scalajs.js.annotation._
 class Firestore protected () extends FirebaseFirestore {
   def this(databaseIdOrApp: FirestoreDatabase, authProvider: Provider[FirebaseAuthInternalName]) = this()
   def this(databaseIdOrApp: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName]) = this()
+  def this(
+    databaseIdOrApp: FirestoreDatabase,
+    authProvider: Provider[FirebaseAuthInternalName],
+    componentProvider: ComponentProvider
+  ) = this()
+  def this(
+    databaseIdOrApp: FirebaseApp,
+    authProvider: Provider[FirebaseAuthInternalName],
+    componentProvider: ComponentProvider
+  ) = this()
   @JSName("INTERNAL")
   var INTERNAL_Firestore: Delete = js.native
+  val _componentProvider: js.Any = js.native
   var _credentials: js.Any = js.native
-  val _dataConverter: UserDataConverter = js.native
+  val _dataReader: UserDataReader = js.native
   val _databaseId: DatabaseId = js.native
   val _firebaseApp: js.Any = js.native
   var _firestoreClient: js.Any = js.native
@@ -33,7 +45,6 @@ class Firestore protected () extends FirebaseFirestore {
   val _queue: AsyncQueue = js.native
   var _settings: js.Any = js.native
   var configureClient: js.Any = js.native
-  var createDataConverter: js.Any = js.native
   var makeDatabaseInfo: js.Any = js.native
   var onSnapshotsInSyncInternal: js.Any = js.native
   def _areTimestampsInSnapshotsEnabled(): Boolean = js.native

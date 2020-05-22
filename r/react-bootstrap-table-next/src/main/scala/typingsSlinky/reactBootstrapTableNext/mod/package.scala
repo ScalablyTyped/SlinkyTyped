@@ -6,6 +6,15 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type BootstrapTable[T /* <: js.Object */] = slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTableNext.mod.BootstrapTableProps[T]]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.left
+    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.center
+    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.right
+    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.start
+    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.end
+    - java.lang.String
+  */
+  type CellAlignment = typingsSlinky.reactBootstrapTableNext.mod._CellAlignment | java.lang.String
   type ColumnFormatter[R, E, C] = js.Function4[
     /* cell */ C, 
     /* row */ R, 

@@ -43,126 +43,34 @@ trait StartTranscriptionJobRequest extends js.Object {
     */
   var Settings: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.Settings] = js.native
   /**
-    * The name of the job. Note that you can't use the strings "." or ".." by themselves as the job name. The name must also be unique within an AWS account.
+    * The name of the job. Note that you can't use the strings "." or ".." by themselves as the job name. The name must also be unique within an AWS account. If you try to create a transcription job with the same name as a previous transcription job you will receive a ConflictException error.
     */
   var TranscriptionJobName: typingsSlinky.awsSdk.transcribeserviceMod.TranscriptionJobName = js.native
 }
 
 object StartTranscriptionJobRequest {
   @scala.inline
-  def apply(LanguageCode: LanguageCode, Media: Media, TranscriptionJobName: TranscriptionJobName): StartTranscriptionJobRequest = {
+  def apply(
+    LanguageCode: LanguageCode,
+    Media: Media,
+    TranscriptionJobName: TranscriptionJobName,
+    ContentRedaction: ContentRedaction = null,
+    JobExecutionSettings: JobExecutionSettings = null,
+    MediaFormat: MediaFormat = null,
+    MediaSampleRateHertz: js.UndefOr[MediaSampleRateHertz] = js.undefined,
+    OutputBucketName: OutputBucketName = null,
+    OutputEncryptionKMSKeyId: KMSKeyId = null,
+    Settings: Settings = null
+  ): StartTranscriptionJobRequest = {
     val __obj = js.Dynamic.literal(LanguageCode = LanguageCode.asInstanceOf[js.Any], Media = Media.asInstanceOf[js.Any], TranscriptionJobName = TranscriptionJobName.asInstanceOf[js.Any])
+    if (ContentRedaction != null) __obj.updateDynamic("ContentRedaction")(ContentRedaction.asInstanceOf[js.Any])
+    if (JobExecutionSettings != null) __obj.updateDynamic("JobExecutionSettings")(JobExecutionSettings.asInstanceOf[js.Any])
+    if (MediaFormat != null) __obj.updateDynamic("MediaFormat")(MediaFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(MediaSampleRateHertz)) __obj.updateDynamic("MediaSampleRateHertz")(MediaSampleRateHertz.get.asInstanceOf[js.Any])
+    if (OutputBucketName != null) __obj.updateDynamic("OutputBucketName")(OutputBucketName.asInstanceOf[js.Any])
+    if (OutputEncryptionKMSKeyId != null) __obj.updateDynamic("OutputEncryptionKMSKeyId")(OutputEncryptionKMSKeyId.asInstanceOf[js.Any])
+    if (Settings != null) __obj.updateDynamic("Settings")(Settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTranscriptionJobRequest]
   }
-  @scala.inline
-  implicit class StartTranscriptionJobRequestOps[Self <: StartTranscriptionJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguageCode(value: LanguageCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMedia(value: Media): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranscriptionJobName(value: TranscriptionJobName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TranscriptionJobName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentRedaction(value: ContentRedaction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRedaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentRedaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRedaction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJobExecutionSettings(value: JobExecutionSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobExecutionSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobExecutionSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("JobExecutionSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaFormat(value: MediaFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaSampleRateHertz(value: MediaSampleRateHertz): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaSampleRateHertz")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaSampleRateHertz: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaSampleRateHertz")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputBucketName(value: OutputBucketName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputBucketName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucketName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputEncryptionKMSKeyId(value: KMSKeyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputEncryptionKMSKeyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputEncryptionKMSKeyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputEncryptionKMSKeyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettings(value: Settings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

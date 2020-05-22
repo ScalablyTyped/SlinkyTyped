@@ -34,83 +34,21 @@ trait RedirectActionConfig extends js.Object {
 
 object RedirectActionConfig {
   @scala.inline
-  def apply(StatusCode: RedirectActionStatusCodeEnum): RedirectActionConfig = {
+  def apply(
+    StatusCode: RedirectActionStatusCodeEnum,
+    Host: RedirectActionHost = null,
+    Path: RedirectActionPath = null,
+    Port: RedirectActionPort = null,
+    Protocol: RedirectActionProtocol = null,
+    Query: RedirectActionQuery = null
+  ): RedirectActionConfig = {
     val __obj = js.Dynamic.literal(StatusCode = StatusCode.asInstanceOf[js.Any])
+    if (Host != null) __obj.updateDynamic("Host")(Host.asInstanceOf[js.Any])
+    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
+    if (Port != null) __obj.updateDynamic("Port")(Port.asInstanceOf[js.Any])
+    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
+    if (Query != null) __obj.updateDynamic("Query")(Query.asInstanceOf[js.Any])
     __obj.asInstanceOf[RedirectActionConfig]
   }
-  @scala.inline
-  implicit class RedirectActionConfigOps[Self <: RedirectActionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatusCode(value: RedirectActionStatusCodeEnum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHost(value: RedirectActionHost): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: RedirectActionPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: RedirectActionPort): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtocol(value: RedirectActionProtocol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtocol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: RedirectActionQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

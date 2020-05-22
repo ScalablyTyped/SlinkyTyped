@@ -2,9 +2,12 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.AddedItems
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.Event
 import typingsSlinky.devextreme.anon.ItemData
 import typingsSlinky.devextreme.anon.ItemElement
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
@@ -13,15 +16,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollectionWidgetOptions[T] extends WidgetOptions[T] {
-  /** Binds the widget to data. */
+  /** @name CollectionWidget.Options.dataSource */
   var dataSource: js.UndefOr[
     String | (js.Array[String | CollectionWidgetItem]) | DataSource | DataSourceOptions
-  ] = js.native
-  /** The time period in milliseconds before the onItemHold event is raised. */
-  var itemHoldTimeout: js.UndefOr[Double] = js.native
-  /** Specifies a custom template for items. */
+  ] = js.undefined
+  /** @name CollectionWidget.Options.itemHoldTimeout */
+  var itemHoldTimeout: js.UndefOr[Double] = js.undefined
+  /** @name CollectionWidget.Options.itemTemplate */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -29,253 +31,108 @@ trait CollectionWidgetOptions[T] extends WidgetOptions[T] {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.native
-  /** An array of items displayed by the widget. */
-  var items: js.UndefOr[js.Array[String | CollectionWidgetItem | _]] = js.native
-  /** Specifies which data field provides keys for widget items. */
-  var keyExpr: js.UndefOr[String | js.Function] = js.native
-  /** The text or HTML markup displayed by the widget if the item collection is empty. */
-  var noDataText: js.UndefOr[String] = js.native
-  /** A function that is executed when a collection item is clicked or tapped. */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ Event[T], _]) | String] = js.native
-  /** A function that is executed when a collection item is right-clicked or pressed. */
-  var onItemContextMenu: js.UndefOr[js.Function1[/* e */ Event[T], _]] = js.native
-  /** A function that is executed when a collection item has been held for a specified period. */
-  var onItemHold: js.UndefOr[js.Function1[/* e */ ItemData[T], _]] = js.native
-  /** A function that is executed after a collection item is rendered. */
-  var onItemRendered: js.UndefOr[js.Function1[/* e */ ItemElement[T], _]] = js.native
-  /** A function that is executed when a collection item is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AddedItems[T], _]] = js.native
-  /** The index of the currently selected widget item. */
-  var selectedIndex: js.UndefOr[Double] = js.native
-  /** The selected item object. */
-  var selectedItem: js.UndefOr[js.Any] = js.native
-  /** Specifies an array of currently selected item keys. */
-  var selectedItemKeys: js.UndefOr[js.Array[_]] = js.native
-  /** An array of currently selected item objects. */
-  var selectedItems: js.UndefOr[js.Array[_]] = js.native
+  ] = js.undefined
+  /** @name CollectionWidget.Options.items */
+  var items: js.UndefOr[js.Array[String | CollectionWidgetItem | _]] = js.undefined
+  /** @name CollectionWidget.Options.keyExpr */
+  var keyExpr: js.UndefOr[String | js.Function] = js.undefined
+  /** @name CollectionWidget.Options.noDataText */
+  var noDataText: js.UndefOr[String] = js.undefined
+  /** @name CollectionWidget.Options.onItemClick */
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ Event[T], _]) | String] = js.undefined
+  /** @name CollectionWidget.Options.onItemContextMenu */
+  var onItemContextMenu: js.UndefOr[js.Function1[/* e */ Event[T], _]] = js.undefined
+  /** @name CollectionWidget.Options.onItemHold */
+  var onItemHold: js.UndefOr[js.Function1[/* e */ ItemData[T], _]] = js.undefined
+  /** @name CollectionWidget.Options.onItemRendered */
+  var onItemRendered: js.UndefOr[js.Function1[/* e */ ItemElement[T], _]] = js.undefined
+  /** @name CollectionWidget.Options.onSelectionChanged */
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AddedItems[T], _]] = js.undefined
+  /** @name CollectionWidget.Options.selectedIndex */
+  var selectedIndex: js.UndefOr[Double] = js.undefined
+  /** @name CollectionWidget.Options.selectedItem */
+  var selectedItem: js.UndefOr[js.Any] = js.undefined
+  /** @name CollectionWidget.Options.selectedItemKeys */
+  var selectedItemKeys: js.UndefOr[js.Array[_]] = js.undefined
+  /** @name CollectionWidget.Options.selectedItems */
+  var selectedItems: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object CollectionWidgetOptions {
   @scala.inline
-  def apply[T](): CollectionWidgetOptions[T] = {
+  def apply[T](
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    dataSource: String | (js.Array[String | CollectionWidgetItem]) | DataSource | DataSourceOptions = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    itemHoldTimeout: js.UndefOr[Double] = js.undefined,
+    itemTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+      /* itemData */ js.Any, 
+      /* itemIndex */ Double, 
+      /* itemElement */ dxElement, 
+      String | Element | JQuery
+    ]) = null,
+    items: js.Array[String | CollectionWidgetItem | _] = null,
+    keyExpr: String | js.Function = null,
+    noDataText: String = null,
+    onContentReady: /* e */ ComponentElement[T] => _ = null,
+    onDisposing: /* e */ Model[T] => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[T] => _ = null,
+    onItemClick: (js.Function1[/* e */ Event[T], _]) | String = null,
+    onItemContextMenu: /* e */ Event[T] => _ = null,
+    onItemHold: /* e */ ItemData[T] => _ = null,
+    onItemRendered: /* e */ ItemElement[T] => _ = null,
+    onOptionChanged: /* e */ Name[T] => _ = null,
+    onSelectionChanged: /* e */ AddedItems[T] => _ = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    selectedIndex: js.UndefOr[Double] = js.undefined,
+    selectedItem: js.Any = null,
+    selectedItemKeys: js.Array[_] = null,
+    selectedItems: js.Array[_] = null,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): CollectionWidgetOptions[T] = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemHoldTimeout)) __obj.updateDynamic("itemHoldTimeout")(itemHoldTimeout.get.asInstanceOf[js.Any])
+    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(itemTemplate.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (keyExpr != null) __obj.updateDynamic("keyExpr")(keyExpr.asInstanceOf[js.Any])
+    if (noDataText != null) __obj.updateDynamic("noDataText")(noDataText.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onItemClick != null) __obj.updateDynamic("onItemClick")(onItemClick.asInstanceOf[js.Any])
+    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction1(onItemContextMenu))
+    if (onItemHold != null) __obj.updateDynamic("onItemHold")(js.Any.fromFunction1(onItemHold))
+    if (onItemRendered != null) __obj.updateDynamic("onItemRendered")(js.Any.fromFunction1(onItemRendered))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectedIndex)) __obj.updateDynamic("selectedIndex")(selectedIndex.get.asInstanceOf[js.Any])
+    if (selectedItem != null) __obj.updateDynamic("selectedItem")(selectedItem.asInstanceOf[js.Any])
+    if (selectedItemKeys != null) __obj.updateDynamic("selectedItemKeys")(selectedItemKeys.asInstanceOf[js.Any])
+    if (selectedItems != null) __obj.updateDynamic("selectedItems")(selectedItems.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionWidgetOptions[T]]
   }
-  @scala.inline
-  implicit class CollectionWidgetOptionsOps[Self[t] <: CollectionWidgetOptions[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withDataSource(value: String | (js.Array[String | CollectionWidgetItem]) | DataSource | DataSourceOptions): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemHoldTimeout(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHoldTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemHoldTimeout: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHoldTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemTemplateElement(value: Element): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemTemplateFunction3(
-      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withItemTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-          /* itemData */ js.Any, 
-          /* itemIndex */ Double, 
-          /* itemElement */ dxElement, 
-          String | Element | JQuery
-        ])
-    ): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemTemplate: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[String | CollectionWidgetItem | _]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyExpr(value: String | js.Function): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyExpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyExpr: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyExpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoDataText(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoDataText: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemClickFunction1(value: /* e */ Event[T] => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ Event[T], _]) | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnItemClick: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemContextMenu(value: /* e */ Event[T] => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemContextMenu: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemHold(value: /* e */ ItemData[T] => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemHold: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemRendered(value: /* e */ ItemElement[T] => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemRendered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnItemRendered: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemRendered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelectionChanged(value: /* e */ AddedItems[T] => _): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSelectionChanged: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedIndex(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedIndex: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItem(value: js.Any): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItem: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItemKeys(value: js.Array[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItemKeys: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedItems(value: js.Array[_]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedItems: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItems")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

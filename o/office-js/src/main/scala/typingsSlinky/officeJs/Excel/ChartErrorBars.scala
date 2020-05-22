@@ -31,7 +31,7 @@ trait ChartErrorBars extends ClientObject {
   var context_ChartErrorBars: RequestContext = js.native
   /**
     *
-    * Specifies whether or not the error bars have an end style cap.
+    * Specifies if error bars have an end style cap.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -59,7 +59,7 @@ trait ChartErrorBars extends ClientObject {
   var `type`: ChartErrorBarsType | FixedValue | Percent | StDev | StError | Custom = js.native
   /**
     *
-    * Specifies whether or not the error bars are displayed.
+    * Specifies whether the error bars are displayed.
     *
     * [Api set: ExcelApi 1.9]
     */

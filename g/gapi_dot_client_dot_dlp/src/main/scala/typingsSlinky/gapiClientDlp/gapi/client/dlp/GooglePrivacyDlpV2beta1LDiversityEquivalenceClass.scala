@@ -4,82 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GooglePrivacyDlpV2beta1LDiversityEquivalenceClass extends js.Object {
   /** Size of the k-anonymity equivalence class. */
-  var equivalenceClassSize: js.UndefOr[String] = js.native
+  var equivalenceClassSize: js.UndefOr[String] = js.undefined
   /** Number of distinct sensitive values in this equivalence class. */
-  var numDistinctSensitiveValues: js.UndefOr[String] = js.native
+  var numDistinctSensitiveValues: js.UndefOr[String] = js.undefined
   /**
     * Quasi-identifier values defining the k-anonymity equivalence
     * class. The order is always the same as the original request.
     */
-  var quasiIdsValues: js.UndefOr[js.Array[GooglePrivacyDlpV2beta1Value]] = js.native
+  var quasiIdsValues: js.UndefOr[js.Array[GooglePrivacyDlpV2beta1Value]] = js.undefined
   /** Estimated frequencies of top sensitive values. */
-  var topSensitiveValues: js.UndefOr[js.Array[GooglePrivacyDlpV2beta1ValueFrequency]] = js.native
+  var topSensitiveValues: js.UndefOr[js.Array[GooglePrivacyDlpV2beta1ValueFrequency]] = js.undefined
 }
 
 object GooglePrivacyDlpV2beta1LDiversityEquivalenceClass {
   @scala.inline
-  def apply(): GooglePrivacyDlpV2beta1LDiversityEquivalenceClass = {
+  def apply(
+    equivalenceClassSize: String = null,
+    numDistinctSensitiveValues: String = null,
+    quasiIdsValues: js.Array[GooglePrivacyDlpV2beta1Value] = null,
+    topSensitiveValues: js.Array[GooglePrivacyDlpV2beta1ValueFrequency] = null
+  ): GooglePrivacyDlpV2beta1LDiversityEquivalenceClass = {
     val __obj = js.Dynamic.literal()
+    if (equivalenceClassSize != null) __obj.updateDynamic("equivalenceClassSize")(equivalenceClassSize.asInstanceOf[js.Any])
+    if (numDistinctSensitiveValues != null) __obj.updateDynamic("numDistinctSensitiveValues")(numDistinctSensitiveValues.asInstanceOf[js.Any])
+    if (quasiIdsValues != null) __obj.updateDynamic("quasiIdsValues")(quasiIdsValues.asInstanceOf[js.Any])
+    if (topSensitiveValues != null) __obj.updateDynamic("topSensitiveValues")(topSensitiveValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[GooglePrivacyDlpV2beta1LDiversityEquivalenceClass]
   }
-  @scala.inline
-  implicit class GooglePrivacyDlpV2beta1LDiversityEquivalenceClassOps[Self <: GooglePrivacyDlpV2beta1LDiversityEquivalenceClass] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEquivalenceClassSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalenceClassSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEquivalenceClassSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equivalenceClassSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumDistinctSensitiveValues(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDistinctSensitiveValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumDistinctSensitiveValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numDistinctSensitiveValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuasiIdsValues(value: js.Array[GooglePrivacyDlpV2beta1Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIdsValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuasiIdsValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIdsValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopSensitiveValues(value: js.Array[GooglePrivacyDlpV2beta1ValueFrequency]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topSensitiveValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopSensitiveValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topSensitiveValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

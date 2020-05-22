@@ -47,89 +47,22 @@ trait SchemaWorkerSettings extends js.Object {
 
 object SchemaWorkerSettings {
   @scala.inline
-  def apply(): SchemaWorkerSettings = {
+  def apply(
+    baseUrl: String = null,
+    reportingEnabled: js.UndefOr[Boolean] = js.undefined,
+    servicePath: String = null,
+    shuffleServicePath: String = null,
+    tempStoragePrefix: String = null,
+    workerId: String = null
+  ): SchemaWorkerSettings = {
     val __obj = js.Dynamic.literal()
+    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(reportingEnabled)) __obj.updateDynamic("reportingEnabled")(reportingEnabled.get.asInstanceOf[js.Any])
+    if (servicePath != null) __obj.updateDynamic("servicePath")(servicePath.asInstanceOf[js.Any])
+    if (shuffleServicePath != null) __obj.updateDynamic("shuffleServicePath")(shuffleServicePath.asInstanceOf[js.Any])
+    if (tempStoragePrefix != null) __obj.updateDynamic("tempStoragePrefix")(tempStoragePrefix.asInstanceOf[js.Any])
+    if (workerId != null) __obj.updateDynamic("workerId")(workerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkerSettings]
   }
-  @scala.inline
-  implicit class SchemaWorkerSettingsOps[Self <: SchemaWorkerSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportingEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServicePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServicePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShuffleServicePath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleServicePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShuffleServicePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffleServicePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTempStoragePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempStoragePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTempStoragePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tempStoragePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

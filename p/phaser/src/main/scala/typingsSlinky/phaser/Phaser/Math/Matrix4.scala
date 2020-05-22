@@ -80,8 +80,8 @@ trait Matrix4 extends js.Object {
     */
   def multiply(src: Matrix4): Matrix4 = js.native
   /**
-    * [description]
-    * @param src [description]
+    * Multiply the values of this Matrix4 by those given in the `src` argument.
+    * @param src The source Matrix4 that this Matrix4 is multiplied by.
     */
   def multiplyLocal(src: Matrix4): Matrix4 = js.native
   /**
@@ -201,9 +201,9 @@ trait Matrix4 extends js.Object {
   def xyz(x: Double, y: Double, z: Double): Matrix4 = js.native
   /**
     * Set the values of this matrix from the given `yaw`, `pitch` and `roll` values.
-    * @param yaw [description]
-    * @param pitch [description]
-    * @param roll [description]
+    * @param yaw The yaw value.
+    * @param pitch The pitch value.
+    * @param roll The roll value.
     */
   def yawPitchRoll(yaw: Double, pitch: Double, roll: Double): Matrix4 = js.native
   /**

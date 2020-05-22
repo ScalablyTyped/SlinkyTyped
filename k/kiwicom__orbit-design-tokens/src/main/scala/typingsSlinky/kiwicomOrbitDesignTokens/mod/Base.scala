@@ -4,45 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Base extends js.Object {
-  var borderRadius: String = js.native
-  var boxShadowActionable: String = js.native
-  var boxShadowColorActionable: String = js.native
-  var boxShadowColorElevated: String = js.native
-  var boxShadowColorModal: String = js.native
-  var boxShadowColorStatic: String = js.native
-  var boxShadowElevated: String = js.native
-  var boxShadowModal: String = js.native
-  var boxShadowStatic: String = js.native
-  var durationFast: String = js.native
-  var durationNormal: String = js.native
-  var durationSlow: String = js.native
-  var fontFamily: String = js.native
-  var fontSizeLg: String = js.native
-  var fontSizeMd: String = js.native
-  var fontSizeSm: String = js.native
-  var fontWeightBold: String = js.native
-  var fontWeightMedium: String = js.native
-  var fontWeightNormal: String = js.native
-  var lineHeight: String = js.native
-  var opacityLarge: String = js.native
-  var opacityMedium: String = js.native
-  var opacitySmall: String = js.native
-  var size2xl: String = js.native
-  var sizeLg: String = js.native
-  var sizeMd: String = js.native
-  var sizeSm: String = js.native
-  var sizeXl: String = js.native
-  var space2xl: String = js.native
-  var space2xs: String = js.native
-  var space3xl: String = js.native
-  var spaceLg: String = js.native
-  var spaceMd: String = js.native
-  var spaceSm: String = js.native
-  var spaceXl: String = js.native
-  var spaceXs: String = js.native
-  var transitionDefault: String = js.native
+  var borderRadius: String
+  var boxShadowActionable: String
+  var boxShadowColorActionable: String
+  var boxShadowColorElevated: String
+  var boxShadowColorModal: String
+  var boxShadowColorStatic: String
+  var boxShadowElevated: String
+  var boxShadowModal: String
+  var boxShadowStatic: String
+  var durationFast: String
+  var durationNormal: String
+  var durationSlow: String
+  var fontFamily: String
+  var fontSizeLg: String
+  var fontSizeMd: String
+  var fontSizeSm: String
+  var fontWeightBold: String
+  var fontWeightMedium: String
+  var fontWeightNormal: String
+  var lineHeight: String
+  var opacityLarge: String
+  var opacityMedium: String
+  var opacitySmall: String
+  var size2xl: String
+  var sizeLg: String
+  var sizeMd: String
+  var sizeSm: String
+  var sizeXl: String
+  var space2xl: String
+  var space2xs: String
+  var space3xl: String
+  var spaceLg: String
+  var spaceMd: String
+  var spaceSm: String
+  var spaceXl: String
+  var spaceXs: String
+  var transitionDefault: String
 }
 
 object Base {
@@ -89,235 +88,5 @@ object Base {
     val __obj = js.Dynamic.literal(borderRadius = borderRadius.asInstanceOf[js.Any], boxShadowActionable = boxShadowActionable.asInstanceOf[js.Any], boxShadowColorActionable = boxShadowColorActionable.asInstanceOf[js.Any], boxShadowColorElevated = boxShadowColorElevated.asInstanceOf[js.Any], boxShadowColorModal = boxShadowColorModal.asInstanceOf[js.Any], boxShadowColorStatic = boxShadowColorStatic.asInstanceOf[js.Any], boxShadowElevated = boxShadowElevated.asInstanceOf[js.Any], boxShadowModal = boxShadowModal.asInstanceOf[js.Any], boxShadowStatic = boxShadowStatic.asInstanceOf[js.Any], durationFast = durationFast.asInstanceOf[js.Any], durationNormal = durationNormal.asInstanceOf[js.Any], durationSlow = durationSlow.asInstanceOf[js.Any], fontFamily = fontFamily.asInstanceOf[js.Any], fontSizeLg = fontSizeLg.asInstanceOf[js.Any], fontSizeMd = fontSizeMd.asInstanceOf[js.Any], fontSizeSm = fontSizeSm.asInstanceOf[js.Any], fontWeightBold = fontWeightBold.asInstanceOf[js.Any], fontWeightMedium = fontWeightMedium.asInstanceOf[js.Any], fontWeightNormal = fontWeightNormal.asInstanceOf[js.Any], lineHeight = lineHeight.asInstanceOf[js.Any], opacityLarge = opacityLarge.asInstanceOf[js.Any], opacityMedium = opacityMedium.asInstanceOf[js.Any], opacitySmall = opacitySmall.asInstanceOf[js.Any], size2xl = size2xl.asInstanceOf[js.Any], sizeLg = sizeLg.asInstanceOf[js.Any], sizeMd = sizeMd.asInstanceOf[js.Any], sizeSm = sizeSm.asInstanceOf[js.Any], sizeXl = sizeXl.asInstanceOf[js.Any], space2xl = space2xl.asInstanceOf[js.Any], space2xs = space2xs.asInstanceOf[js.Any], space3xl = space3xl.asInstanceOf[js.Any], spaceLg = spaceLg.asInstanceOf[js.Any], spaceMd = spaceMd.asInstanceOf[js.Any], spaceSm = spaceSm.asInstanceOf[js.Any], spaceXl = spaceXl.asInstanceOf[js.Any], spaceXs = spaceXs.asInstanceOf[js.Any], transitionDefault = transitionDefault.asInstanceOf[js.Any])
     __obj.asInstanceOf[Base]
   }
-  @scala.inline
-  implicit class BaseOps[Self <: Base] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBorderRadius(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowActionable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowActionable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowColorActionable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowColorActionable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowColorElevated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowColorElevated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowColorModal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowColorModal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowColorStatic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowColorStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowElevated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowElevated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowModal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowModal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBoxShadowStatic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadowStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDurationFast(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationFast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDurationNormal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationNormal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDurationSlow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("durationSlow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontSizeLg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeLg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontSizeMd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeMd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontSizeSm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeSm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontWeightBold(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightBold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontWeightMedium(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightMedium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFontWeightNormal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeightNormal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLineHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpacityLarge(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacityLarge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpacityMedium(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacityMedium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpacitySmall(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacitySmall")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize2xl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size2xl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeLg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeLg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeMd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeMd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeSm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeSm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSizeXl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeXl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpace2xl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space2xl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpace2xs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space2xs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpace3xl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("space3xl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpaceLg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceLg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpaceMd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceMd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpaceSm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceSm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpaceXl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceXl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpaceXs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceXs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransitionDefault(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

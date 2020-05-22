@@ -5,43 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Subscriptions extends Cursor {
-  var customer_uuid: js.UndefOr[String] = js.native
-  var subscriptions: js.Array[typingsSlinky.chartmogulNode.mod.Subscription.Subscription] = js.native
+  var customer_uuid: js.UndefOr[String] = js.undefined
+  var subscriptions: js.Array[typingsSlinky.chartmogulNode.mod.Subscription.Subscription]
 }
 
 object Subscriptions {
   @scala.inline
-  def apply(subscriptions: js.Array[typingsSlinky.chartmogulNode.mod.Subscription.Subscription]): Subscriptions = {
+  def apply(
+    subscriptions: js.Array[typingsSlinky.chartmogulNode.mod.Subscription.Subscription],
+    current_page: js.UndefOr[Double] = js.undefined,
+    customer_uuid: String = null,
+    has_more: js.UndefOr[Boolean] = js.undefined,
+    page: js.UndefOr[Double] = js.undefined,
+    per_page: js.UndefOr[Double] = js.undefined,
+    total_pages: js.UndefOr[Double] = js.undefined
+  ): Subscriptions = {
     val __obj = js.Dynamic.literal(subscriptions = subscriptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(current_page)) __obj.updateDynamic("current_page")(current_page.get.asInstanceOf[js.Any])
+    if (customer_uuid != null) __obj.updateDynamic("customer_uuid")(customer_uuid.asInstanceOf[js.Any])
+    if (!js.isUndefined(has_more)) __obj.updateDynamic("has_more")(has_more.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page)) __obj.updateDynamic("page")(page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(per_page)) __obj.updateDynamic("per_page")(per_page.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(total_pages)) __obj.updateDynamic("total_pages")(total_pages.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subscriptions]
   }
-  @scala.inline
-  implicit class SubscriptionsOps[Self <: Subscriptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubscriptions(value: js.Array[typingsSlinky.chartmogulNode.mod.Subscription.Subscription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomer_uuid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomer_uuid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customer_uuid")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

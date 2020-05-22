@@ -22,53 +22,16 @@ trait RightsizingRecommendationMetadata extends js.Object {
 
 object RightsizingRecommendationMetadata {
   @scala.inline
-  def apply(): RightsizingRecommendationMetadata = {
+  def apply(
+    GenerationTimestamp: GenericString = null,
+    LookbackPeriodInDays: LookbackPeriodInDays = null,
+    RecommendationId: GenericString = null
+  ): RightsizingRecommendationMetadata = {
     val __obj = js.Dynamic.literal()
+    if (GenerationTimestamp != null) __obj.updateDynamic("GenerationTimestamp")(GenerationTimestamp.asInstanceOf[js.Any])
+    if (LookbackPeriodInDays != null) __obj.updateDynamic("LookbackPeriodInDays")(LookbackPeriodInDays.asInstanceOf[js.Any])
+    if (RecommendationId != null) __obj.updateDynamic("RecommendationId")(RecommendationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RightsizingRecommendationMetadata]
   }
-  @scala.inline
-  implicit class RightsizingRecommendationMetadataOps[Self <: RightsizingRecommendationMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGenerationTimestamp(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerationTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenerationTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerationTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookbackPeriodInDays(value: LookbackPeriodInDays): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookbackPeriodInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LookbackPeriodInDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendationId(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecommendationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

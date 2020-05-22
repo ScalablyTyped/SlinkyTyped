@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Box extends js.Object {
   /**
     * Padding strategy (similar to CSS `box-sizing`)
     */
-  var box: js.UndefOr[String] = js.native
+  var box: js.UndefOr[String] = js.undefined
   /**
     * Padding around all shapes
     */
-  var padding: js.UndefOr[Double | js.Array[Double]] = js.native
+  var padding: js.UndefOr[Double | js.Array[Double]] = js.undefined
 }
 
 object Box {
   @scala.inline
-  def apply(): Box = {
+  def apply(box: String = null, padding: Double | js.Array[Double] = null): Box = {
     val __obj = js.Dynamic.literal()
+    if (box != null) __obj.updateDynamic("box")(box.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     __obj.asInstanceOf[Box]
   }
-  @scala.inline
-  implicit class BoxOps[Self <: Box] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBox(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("box")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("box")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double | js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

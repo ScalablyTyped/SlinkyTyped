@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait NamedImportBindings extends js.Object
 
-object NamedImportBindings {
-  @scala.inline
-  implicit def apply(value: NamedImports): NamedImportBindings = value.asInstanceOf[NamedImportBindings]
-  @scala.inline
-  implicit def apply(value: NamespaceImport): NamedImportBindings = value.asInstanceOf[NamedImportBindings]
-}
-

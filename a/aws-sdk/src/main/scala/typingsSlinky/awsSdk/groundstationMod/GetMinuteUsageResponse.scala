@@ -30,77 +30,20 @@ trait GetMinuteUsageResponse extends js.Object {
 
 object GetMinuteUsageResponse {
   @scala.inline
-  def apply(): GetMinuteUsageResponse = {
+  def apply(
+    estimatedMinutesRemaining: js.UndefOr[Integer] = js.undefined,
+    isReservedMinutesCustomer: js.UndefOr[Boolean] = js.undefined,
+    totalReservedMinuteAllocation: js.UndefOr[Integer] = js.undefined,
+    totalScheduledMinutes: js.UndefOr[Integer] = js.undefined,
+    upcomingMinutesScheduled: js.UndefOr[Integer] = js.undefined
+  ): GetMinuteUsageResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(estimatedMinutesRemaining)) __obj.updateDynamic("estimatedMinutesRemaining")(estimatedMinutesRemaining.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isReservedMinutesCustomer)) __obj.updateDynamic("isReservedMinutesCustomer")(isReservedMinutesCustomer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalReservedMinuteAllocation)) __obj.updateDynamic("totalReservedMinuteAllocation")(totalReservedMinuteAllocation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalScheduledMinutes)) __obj.updateDynamic("totalScheduledMinutes")(totalScheduledMinutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upcomingMinutesScheduled)) __obj.updateDynamic("upcomingMinutesScheduled")(upcomingMinutesScheduled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMinuteUsageResponse]
   }
-  @scala.inline
-  implicit class GetMinuteUsageResponseOps[Self <: GetMinuteUsageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEstimatedMinutesRemaining(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedMinutesRemaining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedMinutesRemaining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedMinutesRemaining")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsReservedMinutesCustomer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReservedMinutesCustomer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsReservedMinutesCustomer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReservedMinutesCustomer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalReservedMinuteAllocation(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalReservedMinuteAllocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalReservedMinuteAllocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalReservedMinuteAllocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalScheduledMinutes(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalScheduledMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalScheduledMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalScheduledMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpcomingMinutesScheduled(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upcomingMinutesScheduled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpcomingMinutesScheduled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upcomingMinutesScheduled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

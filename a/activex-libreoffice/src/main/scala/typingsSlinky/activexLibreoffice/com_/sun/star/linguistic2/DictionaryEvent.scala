@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.linguistic2.XDictionaryEventListener
   * @see com.sun.star.lang.EventObject
   */
-@js.native
 trait DictionaryEvent extends EventObject {
   /**
     * is the type of event.
@@ -23,14 +22,14 @@ trait DictionaryEvent extends EventObject {
     * This must be the value of a single flag. No combinations are allowed.
     * @see com.sun.star.linguistic2.DictionaryEventFlags
     */
-  var nEvent: Double = js.native
+  var nEvent: Double
   /**
     * is the affected dictionary entry (if any).
     *
     * It must be set if an entry was added or deleted, otherwise it should be empty.
     * @see com.sun.star.linguistic2.XDictionaryEntry
     */
-  var xDictionaryEntry: XDictionaryEntry = js.native
+  var xDictionaryEntry: XDictionaryEntry
 }
 
 object DictionaryEvent {
@@ -39,25 +38,5 @@ object DictionaryEvent {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any], nEvent = nEvent.asInstanceOf[js.Any], xDictionaryEntry = xDictionaryEntry.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictionaryEvent]
   }
-  @scala.inline
-  implicit class DictionaryEventOps[Self <: DictionaryEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNEvent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXDictionaryEntry(value: XDictionaryEntry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xDictionaryEntry")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

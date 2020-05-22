@@ -4,95 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnDeviceUIProps extends js.Object {
-  var isUIHidden: js.UndefOr[Boolean] = js.native
-  var keyboardAvoidingViewVerticalOffset: js.UndefOr[Double] = js.native
-  var shouldDisableKeyboardAvoidingView: js.UndefOr[Boolean] = js.native
-  var stories: js.Any = js.native
-  var tabOpen: js.UndefOr[Double] = js.native
-  var url: js.UndefOr[String] = js.native
+  var isUIHidden: js.UndefOr[Boolean] = js.undefined
+  var keyboardAvoidingViewVerticalOffset: js.UndefOr[Double] = js.undefined
+  var shouldDisableKeyboardAvoidingView: js.UndefOr[Boolean] = js.undefined
+  var stories: js.Any
+  var tabOpen: js.UndefOr[Double] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object OnDeviceUIProps {
   @scala.inline
-  def apply(stories: js.Any): OnDeviceUIProps = {
+  def apply(
+    stories: js.Any,
+    isUIHidden: js.UndefOr[Boolean] = js.undefined,
+    keyboardAvoidingViewVerticalOffset: js.UndefOr[Double] = js.undefined,
+    shouldDisableKeyboardAvoidingView: js.UndefOr[Boolean] = js.undefined,
+    tabOpen: js.UndefOr[Double] = js.undefined,
+    url: String = null
+  ): OnDeviceUIProps = {
     val __obj = js.Dynamic.literal(stories = stories.asInstanceOf[js.Any])
+    if (!js.isUndefined(isUIHidden)) __obj.updateDynamic("isUIHidden")(isUIHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboardAvoidingViewVerticalOffset)) __obj.updateDynamic("keyboardAvoidingViewVerticalOffset")(keyboardAvoidingViewVerticalOffset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shouldDisableKeyboardAvoidingView)) __obj.updateDynamic("shouldDisableKeyboardAvoidingView")(shouldDisableKeyboardAvoidingView.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabOpen)) __obj.updateDynamic("tabOpen")(tabOpen.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnDeviceUIProps]
   }
-  @scala.inline
-  implicit class OnDeviceUIPropsOps[Self <: OnDeviceUIProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStories(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsUIHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUIHidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsUIHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isUIHidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardAvoidingViewVerticalOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardAvoidingViewVerticalOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardAvoidingViewVerticalOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardAvoidingViewVerticalOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShouldDisableKeyboardAvoidingView(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldDisableKeyboardAvoidingView")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldDisableKeyboardAvoidingView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldDisableKeyboardAvoidingView")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTabOpen(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTabOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

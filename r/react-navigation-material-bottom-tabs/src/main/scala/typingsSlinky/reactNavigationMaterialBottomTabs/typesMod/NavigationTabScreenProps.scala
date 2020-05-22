@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationTabScreenProps[Params, ScreenProps] extends js.Object {
-  var navigation: NavigationTabProp[NavigationRoute[NavigationParams], Params] = js.native
-  var screenProps: ScreenProps = js.native
-  var theme: SupportedThemes = js.native
+  var navigation: NavigationTabProp[NavigationRoute[NavigationParams], Params]
+  var screenProps: ScreenProps
+  var theme: SupportedThemes
 }
 
 object NavigationTabScreenProps {
@@ -24,31 +23,5 @@ object NavigationTabScreenProps {
     val __obj = js.Dynamic.literal(navigation = navigation.asInstanceOf[js.Any], screenProps = screenProps.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationTabScreenProps[Params, ScreenProps]]
   }
-  @scala.inline
-  implicit class NavigationTabScreenPropsOps[Self[params, screenprops] <: NavigationTabScreenProps[params, screenprops], Params, ScreenProps] (val x: Self[Params, ScreenProps]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[Params, ScreenProps] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Params, ScreenProps]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[Params, ScreenProps]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Params, ScreenProps]) with Other]
-    @scala.inline
-    def withNavigation(value: NavigationTabProp[NavigationRoute[NavigationParams], Params]): Self[Params, ScreenProps] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScreenProps(value: ScreenProps): Self[Params, ScreenProps] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTheme(value: SupportedThemes): Self[Params, ScreenProps] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

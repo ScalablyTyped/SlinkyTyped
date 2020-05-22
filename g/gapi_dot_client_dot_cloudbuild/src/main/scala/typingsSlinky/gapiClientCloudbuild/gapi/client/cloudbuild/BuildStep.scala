@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BuildStep extends js.Object {
   /**
     * A list of arguments that will be presented to the step when it is started.
@@ -14,29 +13,29 @@ trait BuildStep extends js.Object {
     * an entrypoint, the first element in args will be used as the entrypoint,
     * and the remainder will be used as arguments.
     */
-  var args: js.UndefOr[js.Array[String]] = js.native
+  var args: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Working directory (relative to project source root) to use when running
     * this operation's container.
     */
-  var dir: js.UndefOr[String] = js.native
+  var dir: js.UndefOr[String] = js.undefined
   /**
     * Optional entrypoint to be used instead of the build step image's default
     * If unset, the image's default will be used.
     */
-  var entrypoint: js.UndefOr[String] = js.native
+  var entrypoint: js.UndefOr[String] = js.undefined
   /**
     * A list of environment variable definitions to be used when running a step.
     *
     * The elements are of the form "KEY=VALUE" for the environment variable "KEY"
     * being given the value "VALUE".
     */
-  var env: js.UndefOr[js.Array[String]] = js.native
+  var env: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Optional unique identifier for this build step, used in wait_for to
     * reference this build step as a dependency.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * The name of the container image that will run this particular build step.
     *
@@ -55,12 +54,12 @@ trait BuildStep extends js.Object {
     * host's Docker daemon's cache and is available to use as the name for a
     * later build step.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * A list of environment variables which are encrypted using a Cloud KMS
     * crypto key. These values must be specified in the build's secrets.
     */
-  var secretEnv: js.UndefOr[js.Array[String]] = js.native
+  var secretEnv: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * List of volumes to mount into the build step.
     *
@@ -71,7 +70,7 @@ trait BuildStep extends js.Object {
     * Using a named volume in only one step is not valid as it is indicative
     * of a mis-configured build request.
     */
-  var volumes: js.UndefOr[js.Array[Volume]] = js.native
+  var volumes: js.UndefOr[js.Array[Volume]] = js.undefined
   /**
     * The ID(s) of the step(s) that this build step depends on.
     * This build step will not start until all the build steps in wait_for
@@ -79,130 +78,33 @@ trait BuildStep extends js.Object {
     * start when all previous build steps in the Build.Steps list have completed
     * successfully.
     */
-  var waitFor: js.UndefOr[js.Array[String]] = js.native
+  var waitFor: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object BuildStep {
   @scala.inline
-  def apply(): BuildStep = {
+  def apply(
+    args: js.Array[String] = null,
+    dir: String = null,
+    entrypoint: String = null,
+    env: js.Array[String] = null,
+    id: String = null,
+    name: String = null,
+    secretEnv: js.Array[String] = null,
+    volumes: js.Array[Volume] = null,
+    waitFor: js.Array[String] = null
+  ): BuildStep = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
+    if (entrypoint != null) __obj.updateDynamic("entrypoint")(entrypoint.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (secretEnv != null) __obj.updateDynamic("secretEnv")(secretEnv.asInstanceOf[js.Any])
+    if (volumes != null) __obj.updateDynamic("volumes")(volumes.asInstanceOf[js.Any])
+    if (waitFor != null) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildStep]
   }
-  @scala.inline
-  implicit class BuildStepOps[Self <: BuildStep] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDir(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntrypoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntrypoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entrypoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretEnv(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretEnv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretEnv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumes(value: js.Array[Volume]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitFor(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitFor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

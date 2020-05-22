@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JSMath2jaxPreprocessor extends js.Object {
   /*This controls whether jsMath2jax inserts MathJax_Preview spans to make a preview available, and what preview
     * to use, when it locates in-line or display mathematics in the page. The default is "TeX", which means use the
@@ -12,7 +11,7 @@ trait JSMath2jaxPreprocessor extends js.Object {
     * previews from being inserted (the math will simply disappear until it is typeset). Set to an array containing
     * the description of an HTML snippet in order to use the same preview for all equations on the page.
     */
-  var preview: js.Any = js.native
+  var preview: js.Any
 }
 
 object JSMath2jaxPreprocessor {
@@ -21,19 +20,5 @@ object JSMath2jaxPreprocessor {
     val __obj = js.Dynamic.literal(preview = preview.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSMath2jaxPreprocessor]
   }
-  @scala.inline
-  implicit class JSMath2jaxPreprocessorOps[Self <: JSMath2jaxPreprocessor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPreview(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlExtrudableGeometry extends KmlAltitudeGeometry {
   /**
     * Specifies whether to connect the geometry to the ground.
     */
-  def getExtrude(): Boolean = js.native
+  def getExtrude(): Boolean
   /**
     * Specifies whether to allow the geometry to follow the terrain elevation.
     */
-  def getTessellate(): Boolean = js.native
+  def getTessellate(): Boolean
   /**
     * Specifies whether to connect the geometry to the ground.
     */
-  def setExtrude(extrude: Boolean): Unit = js.native
+  def setExtrude(extrude: Boolean): Unit
   /**
     * Specifies whether to allow the geometry to follow the terrain elevation.
     */
-  def setTessellate(tessellate: Boolean): Unit = js.native
+  def setTessellate(tessellate: Boolean): Unit
 }
 
 object KmlExtrudableGeometry {
@@ -51,37 +50,5 @@ object KmlExtrudableGeometry {
     val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getAltitudeMode = js.Any.fromFunction0(getAltitudeMode), getExtrude = js.Any.fromFunction0(getExtrude), getId = js.Any.fromFunction0(getId), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getTessellate = js.Any.fromFunction0(getTessellate), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setAltitudeMode = js.Any.fromFunction1(setAltitudeMode), setExtrude = js.Any.fromFunction1(setExtrude), setTessellate = js.Any.fromFunction1(setTessellate))
     __obj.asInstanceOf[KmlExtrudableGeometry]
   }
-  @scala.inline
-  implicit class KmlExtrudableGeometryOps[Self <: KmlExtrudableGeometry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetExtrude(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtrude")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTessellate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTessellate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetExtrude(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExtrude")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTessellate(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTessellate")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

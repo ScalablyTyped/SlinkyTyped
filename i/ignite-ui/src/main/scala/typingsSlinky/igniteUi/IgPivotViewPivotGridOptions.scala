@@ -5,435 +5,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgPivotViewPivotGridOptions
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * Enables sorting of the header cells in columns.
-  	 */
-  var allowHeaderColumnsSorting: js.UndefOr[Boolean] = js.native
+    * Enables sorting of the header cells in columns.
+    */
+  var allowHeaderColumnsSorting: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Enables sorting of the header cells in rows.
-  	 */
-  var allowHeaderRowsSorting: js.UndefOr[Boolean] = js.native
+    * Enables sorting of the header cells in rows.
+    */
+  var allowHeaderRowsSorting: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Enables sorting of the value cells in columns.
-  	 */
-  var allowSorting: js.UndefOr[Boolean] = js.native
+    * Enables sorting of the value cells in columns.
+    */
+  var allowSorting: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * The indentation for every level column when the compactColumnHeaders is set to true.
-  	 */
-  var compactColumnHeaderIndentation: js.UndefOr[Double] = js.native
+    * The indentation for every level column when the compactColumnHeaders is set to true.
+    */
+  var compactColumnHeaderIndentation: js.UndefOr[Double] = js.undefined
   /**
-  	 * A boolean value indicating wheter the column headers should be arranged for compact header layout – each hieararchy is in a single row.
-  	 */
-  var compactColumnHeaders: js.UndefOr[Boolean] = js.native
+    * A boolean value indicating wheter the column headers should be arranged for compact header layout – each hieararchy is in a single row.
+    */
+  var compactColumnHeaders: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * The indentation for every level row when the rowHeadersLayout is set to 'compact'.
-  	 */
-  var compactRowHeaderIndentation: js.UndefOr[Double] = js.native
+    * The indentation for every level row when the rowHeadersLayout is set to 'compact'.
+    */
+  var compactRowHeaderIndentation: js.UndefOr[Double] = js.undefined
   /**
-  	 * A function that will be called to determine if an item can be moved in or dropped on an area of the pivot grid.
-  	 * paramType="string" The location where the item will be moved - igPivotGrid, igPivotDataSelector, filters, rows, columns or measures.
-  	 * paramType="string" The type of the item - Hierarchy, Measure or MeasureList.
-  	 * paramType="string" The unique name of the item.
-  	 * returnType="bool"  The function must return true if the item should be accepted.
-  	 */
-  var customMoveValidation: js.UndefOr[js.Function] = js.native
+    * A function that will be called to determine if an item can be moved in or dropped on an area of the pivot grid.
+    * paramType="string" The location where the item will be moved - igPivotGrid, igPivotDataSelector, filters, rows, columns or measures.
+    * paramType="string" The type of the item - Hierarchy, Measure or MeasureList.
+    * paramType="string" The unique name of the item.
+    * returnType="bool"  The function must return true if the item should be accepted.
+    */
+  var customMoveValidation: js.UndefOr[js.Function] = js.undefined
   /**
-  	 * Typle="number" Specifies the width of the row headers.
-  	 */
-  var defaultRowHeaderWidth: js.UndefOr[Double] = js.native
+    * Typle="number" Specifies the width of the row headers.
+    */
+  var defaultRowHeaderWidth: js.UndefOr[Double] = js.undefined
   /**
-  	 * Disable the drag and drop for the columns drop area and the ability to use filtering and remove items from it.
-  	 */
-  var disableColumnsDropArea: js.UndefOr[Boolean] = js.native
+    * Disable the drag and drop for the columns drop area and the ability to use filtering and remove items from it.
+    */
+  var disableColumnsDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Disable the drag and drop for the filters drop area and the ability to use filtering and remove items from it.
-  	 */
-  var disableFiltersDropArea: js.UndefOr[Boolean] = js.native
+    * Disable the drag and drop for the filters drop area and the ability to use filtering and remove items from it.
+    */
+  var disableFiltersDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Disable the drag and drop for the measures drop area and the ability to use filtering and remove items from it.
-  	 */
-  var disableMeasuresDropArea: js.UndefOr[Boolean] = js.native
+    * Disable the drag and drop for the measures drop area and the ability to use filtering and remove items from it.
+    */
+  var disableMeasuresDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Disable the drag and drop for the rows drop area and the ability to use filtering and remove items from it.
-  	 */
-  var disableRowsDropArea: js.UndefOr[Boolean] = js.native
+    * Disable the drag and drop for the rows drop area and the ability to use filtering and remove items from it.
+    */
+  var disableRowsDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Settings for the drag and drop functionality of the igPivotDataSelector.
-  	 */
-  var dragAndDropSettings: js.UndefOr[IgPivotViewPivotGridOptionsDragAndDropSettings] = js.native
+    * Settings for the drag and drop functionality of the igPivotDataSelector.
+    */
+  var dragAndDropSettings: js.UndefOr[IgPivotViewPivotGridOptionsDragAndDropSettings] = js.undefined
   /**
-  	 * Specifies the parent for the drop downs.
-  	 */
-  var dropDownParent: js.UndefOr[js.Any] = js.native
+    * Specifies the parent for the drop downs.
+    */
+  var dropDownParent: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Spefies the default sort direction for the levels if no sort direction is specified in an item from the levelSortDirections option.
-  	 */
-  var firstLevelSortDirection: js.UndefOr[js.Any] = js.native
+    * Spefies the default sort direction for the levels if no sort direction is specified in an item from the levelSortDirections option.
+    */
+  var firstLevelSortDirection: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Spefies the default sort direction for the rows.
-  	 */
-  var firstSortDirection: js.UndefOr[js.Any] = js.native
+    * Spefies the default sort direction for the rows.
+    */
+  var firstSortDirection: js.UndefOr[js.Any] = js.undefined
   /**
-  	 * Options specific to the igGrid that will render the pivot grid view.
-  	 */
-  var gridOptions: js.UndefOr[IgPivotViewPivotGridOptionsGridOptions] = js.native
+    * Options specific to the igGrid that will render the pivot grid view.
+    */
+  var gridOptions: js.UndefOr[IgPivotViewPivotGridOptionsGridOptions] = js.undefined
   /**
-  	 * Hide the columns drop area.
-  	 */
-  var hideColumnsDropArea: js.UndefOr[Boolean] = js.native
+    * Hide the columns drop area.
+    */
+  var hideColumnsDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Hide the filters drop area.
-  	 */
-  var hideFiltersDropArea: js.UndefOr[Boolean] = js.native
+    * Hide the filters drop area.
+    */
+  var hideFiltersDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Hide the measures drop area.
-  	 */
-  var hideMeasuresDropArea: js.UndefOr[Boolean] = js.native
+    * Hide the measures drop area.
+    */
+  var hideMeasuresDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * Hide the rows drop area.
-  	 */
-  var hideRowsDropArea: js.UndefOr[Boolean] = js.native
+    * Hide the rows drop area.
+    */
+  var hideRowsDropArea: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * A boolean value indicating whether a parent in the columns is in front of its children.
-  	 * If set to true, the query set sorts members in a level in their natural order - child members immediately follow their parent members.
-  	 * If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
-  	 */
-  var isParentInFrontForColumns: js.UndefOr[Boolean] = js.native
+    * A boolean value indicating whether a parent in the columns is in front of its children.
+    * If set to true, the query set sorts members in a level in their natural order - child members immediately follow their parent members.
+    * If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
+    */
+  var isParentInFrontForColumns: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * A boolean value indicating whether a parent in the rows is in front of its children.
-  	 * If set to true, the query set sorts members in a level in their natural order - child members immediately follow their parent members.
-  	 * If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
-  	 */
-  var isParentInFrontForRows: js.UndefOr[Boolean] = js.native
+    * A boolean value indicating whether a parent in the rows is in front of its children.
+    * If set to true, the query set sorts members in a level in their natural order - child members immediately follow their parent members.
+    * If set to false the query set sorts the members in a level using a post-natural order. In other words, child members precede their parents.
+    */
+  var isParentInFrontForRows: js.UndefOr[Boolean] = js.undefined
   /**
-  	 * An array of level sort direction items, which predefine the sorted header cells.
-  	 */
-  var levelSortDirections: js.UndefOr[js.Array[IgPivotViewPivotGridOptionsLevelSortDirection]] = js.native
+    * An array of level sort direction items, which predefine the sorted header cells.
+    */
+  var levelSortDirections: js.UndefOr[js.Array[IgPivotViewPivotGridOptionsLevelSortDirection]] = js.undefined
   /**
-  	 * A value indicating wheter the layout that row headers should be arranged. For compact header layout – each hieararchy is in a single column.
-  	 */
-  var rowHeadersLayout: js.UndefOr[js.Any] = js.native
+    * A value indicating wheter the layout that row headers should be arranged. For compact header layout – each hieararchy is in a single column.
+    */
+  var rowHeadersLayout: js.UndefOr[js.Any] = js.undefined
 }
 
 object IgPivotViewPivotGridOptions {
   @scala.inline
-  def apply(): IgPivotViewPivotGridOptions = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    allowHeaderColumnsSorting: js.UndefOr[Boolean] = js.undefined,
+    allowHeaderRowsSorting: js.UndefOr[Boolean] = js.undefined,
+    allowSorting: js.UndefOr[Boolean] = js.undefined,
+    compactColumnHeaderIndentation: js.UndefOr[Double] = js.undefined,
+    compactColumnHeaders: js.UndefOr[Boolean] = js.undefined,
+    compactRowHeaderIndentation: js.UndefOr[Double] = js.undefined,
+    customMoveValidation: js.Function = null,
+    defaultRowHeaderWidth: js.UndefOr[Double] = js.undefined,
+    disableColumnsDropArea: js.UndefOr[Boolean] = js.undefined,
+    disableFiltersDropArea: js.UndefOr[Boolean] = js.undefined,
+    disableMeasuresDropArea: js.UndefOr[Boolean] = js.undefined,
+    disableRowsDropArea: js.UndefOr[Boolean] = js.undefined,
+    dragAndDropSettings: IgPivotViewPivotGridOptionsDragAndDropSettings = null,
+    dropDownParent: js.Any = null,
+    firstLevelSortDirection: js.Any = null,
+    firstSortDirection: js.Any = null,
+    gridOptions: IgPivotViewPivotGridOptionsGridOptions = null,
+    hideColumnsDropArea: js.UndefOr[Boolean] = js.undefined,
+    hideFiltersDropArea: js.UndefOr[Boolean] = js.undefined,
+    hideMeasuresDropArea: js.UndefOr[Boolean] = js.undefined,
+    hideRowsDropArea: js.UndefOr[Boolean] = js.undefined,
+    isParentInFrontForColumns: js.UndefOr[Boolean] = js.undefined,
+    isParentInFrontForRows: js.UndefOr[Boolean] = js.undefined,
+    levelSortDirections: js.Array[IgPivotViewPivotGridOptionsLevelSortDirection] = null,
+    rowHeadersLayout: js.Any = null
+  ): IgPivotViewPivotGridOptions = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(allowHeaderColumnsSorting)) __obj.updateDynamic("allowHeaderColumnsSorting")(allowHeaderColumnsSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowHeaderRowsSorting)) __obj.updateDynamic("allowHeaderRowsSorting")(allowHeaderRowsSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSorting)) __obj.updateDynamic("allowSorting")(allowSorting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compactColumnHeaderIndentation)) __obj.updateDynamic("compactColumnHeaderIndentation")(compactColumnHeaderIndentation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compactColumnHeaders)) __obj.updateDynamic("compactColumnHeaders")(compactColumnHeaders.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compactRowHeaderIndentation)) __obj.updateDynamic("compactRowHeaderIndentation")(compactRowHeaderIndentation.get.asInstanceOf[js.Any])
+    if (customMoveValidation != null) __obj.updateDynamic("customMoveValidation")(customMoveValidation.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultRowHeaderWidth)) __obj.updateDynamic("defaultRowHeaderWidth")(defaultRowHeaderWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableColumnsDropArea)) __obj.updateDynamic("disableColumnsDropArea")(disableColumnsDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableFiltersDropArea)) __obj.updateDynamic("disableFiltersDropArea")(disableFiltersDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableMeasuresDropArea)) __obj.updateDynamic("disableMeasuresDropArea")(disableMeasuresDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableRowsDropArea)) __obj.updateDynamic("disableRowsDropArea")(disableRowsDropArea.get.asInstanceOf[js.Any])
+    if (dragAndDropSettings != null) __obj.updateDynamic("dragAndDropSettings")(dragAndDropSettings.asInstanceOf[js.Any])
+    if (dropDownParent != null) __obj.updateDynamic("dropDownParent")(dropDownParent.asInstanceOf[js.Any])
+    if (firstLevelSortDirection != null) __obj.updateDynamic("firstLevelSortDirection")(firstLevelSortDirection.asInstanceOf[js.Any])
+    if (firstSortDirection != null) __obj.updateDynamic("firstSortDirection")(firstSortDirection.asInstanceOf[js.Any])
+    if (gridOptions != null) __obj.updateDynamic("gridOptions")(gridOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideColumnsDropArea)) __obj.updateDynamic("hideColumnsDropArea")(hideColumnsDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideFiltersDropArea)) __obj.updateDynamic("hideFiltersDropArea")(hideFiltersDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideMeasuresDropArea)) __obj.updateDynamic("hideMeasuresDropArea")(hideMeasuresDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideRowsDropArea)) __obj.updateDynamic("hideRowsDropArea")(hideRowsDropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isParentInFrontForColumns)) __obj.updateDynamic("isParentInFrontForColumns")(isParentInFrontForColumns.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isParentInFrontForRows)) __obj.updateDynamic("isParentInFrontForRows")(isParentInFrontForRows.get.asInstanceOf[js.Any])
+    if (levelSortDirections != null) __obj.updateDynamic("levelSortDirections")(levelSortDirections.asInstanceOf[js.Any])
+    if (rowHeadersLayout != null) __obj.updateDynamic("rowHeadersLayout")(rowHeadersLayout.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgPivotViewPivotGridOptions]
   }
-  @scala.inline
-  implicit class IgPivotViewPivotGridOptionsOps[Self <: IgPivotViewPivotGridOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowHeaderColumnsSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaderColumnsSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowHeaderColumnsSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaderColumnsSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowHeaderRowsSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaderRowsSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowHeaderRowsSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHeaderRowsSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompactColumnHeaderIndentation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactColumnHeaderIndentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompactColumnHeaderIndentation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactColumnHeaderIndentation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompactColumnHeaders(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactColumnHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompactColumnHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactColumnHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompactRowHeaderIndentation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactRowHeaderIndentation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompactRowHeaderIndentation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compactRowHeaderIndentation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomMoveValidation(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMoveValidation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomMoveValidation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customMoveValidation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultRowHeaderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRowHeaderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultRowHeaderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRowHeaderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableColumnsDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableColumnsDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableColumnsDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableColumnsDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableFiltersDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFiltersDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableFiltersDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFiltersDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableMeasuresDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMeasuresDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableMeasuresDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMeasuresDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableRowsDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRowsDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableRowsDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRowsDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragAndDropSettings(value: IgPivotViewPivotGridOptionsDragAndDropSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDropSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragAndDropSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDropSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropDownParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownParent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropDownParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownParent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstLevelSortDirection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLevelSortDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstLevelSortDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLevelSortDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstSortDirection(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSortDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstSortDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSortDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridOptions(value: IgPivotViewPivotGridOptionsGridOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideColumnsDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideColumnsDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideColumnsDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideColumnsDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideFiltersDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideFiltersDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideFiltersDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideFiltersDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideMeasuresDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMeasuresDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideMeasuresDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMeasuresDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideRowsDropArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRowsDropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideRowsDropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideRowsDropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsParentInFrontForColumns(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsParentInFrontForColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsParentInFrontForRows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsParentInFrontForRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isParentInFrontForRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevelSortDirections(value: js.Array[IgPivotViewPivotGridOptionsLevelSortDirection]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelSortDirections")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevelSortDirections: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("levelSortDirections")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowHeadersLayout(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeadersLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowHeadersLayout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeadersLayout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

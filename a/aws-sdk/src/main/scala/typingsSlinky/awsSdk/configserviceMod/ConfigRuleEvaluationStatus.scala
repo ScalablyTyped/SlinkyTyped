@@ -55,161 +55,34 @@ trait ConfigRuleEvaluationStatus extends js.Object {
 
 object ConfigRuleEvaluationStatus {
   @scala.inline
-  def apply(): ConfigRuleEvaluationStatus = {
+  def apply(
+    ConfigRuleArn: String = null,
+    ConfigRuleId: String = null,
+    ConfigRuleName: ConfigRuleName = null,
+    FirstActivatedTime: js.Date = null,
+    FirstEvaluationStarted: js.UndefOr[Boolean] = js.undefined,
+    LastDeactivatedTime: js.Date = null,
+    LastErrorCode: String = null,
+    LastErrorMessage: String = null,
+    LastFailedEvaluationTime: js.Date = null,
+    LastFailedInvocationTime: js.Date = null,
+    LastSuccessfulEvaluationTime: js.Date = null,
+    LastSuccessfulInvocationTime: js.Date = null
+  ): ConfigRuleEvaluationStatus = {
     val __obj = js.Dynamic.literal()
+    if (ConfigRuleArn != null) __obj.updateDynamic("ConfigRuleArn")(ConfigRuleArn.asInstanceOf[js.Any])
+    if (ConfigRuleId != null) __obj.updateDynamic("ConfigRuleId")(ConfigRuleId.asInstanceOf[js.Any])
+    if (ConfigRuleName != null) __obj.updateDynamic("ConfigRuleName")(ConfigRuleName.asInstanceOf[js.Any])
+    if (FirstActivatedTime != null) __obj.updateDynamic("FirstActivatedTime")(FirstActivatedTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(FirstEvaluationStarted)) __obj.updateDynamic("FirstEvaluationStarted")(FirstEvaluationStarted.get.asInstanceOf[js.Any])
+    if (LastDeactivatedTime != null) __obj.updateDynamic("LastDeactivatedTime")(LastDeactivatedTime.asInstanceOf[js.Any])
+    if (LastErrorCode != null) __obj.updateDynamic("LastErrorCode")(LastErrorCode.asInstanceOf[js.Any])
+    if (LastErrorMessage != null) __obj.updateDynamic("LastErrorMessage")(LastErrorMessage.asInstanceOf[js.Any])
+    if (LastFailedEvaluationTime != null) __obj.updateDynamic("LastFailedEvaluationTime")(LastFailedEvaluationTime.asInstanceOf[js.Any])
+    if (LastFailedInvocationTime != null) __obj.updateDynamic("LastFailedInvocationTime")(LastFailedInvocationTime.asInstanceOf[js.Any])
+    if (LastSuccessfulEvaluationTime != null) __obj.updateDynamic("LastSuccessfulEvaluationTime")(LastSuccessfulEvaluationTime.asInstanceOf[js.Any])
+    if (LastSuccessfulInvocationTime != null) __obj.updateDynamic("LastSuccessfulInvocationTime")(LastSuccessfulInvocationTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigRuleEvaluationStatus]
   }
-  @scala.inline
-  implicit class ConfigRuleEvaluationStatusOps[Self <: ConfigRuleEvaluationStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigRuleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigRuleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigRuleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigRuleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigRuleName(value: ConfigRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigRuleName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstActivatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstActivatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstActivatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstActivatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstEvaluationStarted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstEvaluationStarted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstEvaluationStarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstEvaluationStarted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastDeactivatedTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDeactivatedTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastDeactivatedTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastDeactivatedTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastErrorCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastErrorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastFailedEvaluationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailedEvaluationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastFailedEvaluationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailedEvaluationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastFailedInvocationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailedInvocationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastFailedInvocationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastFailedInvocationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSuccessfulEvaluationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulEvaluationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSuccessfulEvaluationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulEvaluationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastSuccessfulInvocationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulInvocationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastSuccessfulInvocationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSuccessfulInvocationTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

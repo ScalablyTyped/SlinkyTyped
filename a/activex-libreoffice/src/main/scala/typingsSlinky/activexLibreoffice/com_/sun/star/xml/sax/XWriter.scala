@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * Provides a unified interface for the new-style {@link Writer} service to implement.
   * @since LibreOffice 4.0
   */
-@js.native
 trait XWriter
   extends XExtendedDocumentHandler
      with XActiveDataSource

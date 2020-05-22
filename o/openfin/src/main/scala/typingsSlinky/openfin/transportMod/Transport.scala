@@ -6,11 +6,8 @@ import typingsSlinky.openfin.entityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.environmentMod.Environment
 import typingsSlinky.openfin.eventAggregatorMod.EventAggregator
 import typingsSlinky.openfin.identityMod.Identity
-import typingsSlinky.openfin.mainMod.Frame
-import typingsSlinky.openfin.mainMod.Window
 import typingsSlinky.openfin.openfinBooleans.`true`
 import typingsSlinky.openfin.openfinStrings.`request-external-authorization`
-import typingsSlinky.openfin.viewViewMod.View
 import typingsSlinky.openfin.wireMod.ConnectConfig
 import typingsSlinky.openfin.wireMod.ExistingConnectConfig
 import typingsSlinky.openfin.wireMod.InternalConnectConfig
@@ -24,7 +21,7 @@ trait Transport extends EventEmitter {
   var READY_STATE: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof READY_STATE */ js.Any = js.native
   var environment: Environment = js.native
   var eventAggregator: EventAggregator = js.native
-  var me: (View | Window | Frame | js.Object) with Identity with EntityTypeHelpers = js.native
+  var me: Identity with EntityTypeHelpers = js.native
   var messageHandlers: js.Array[MessageHandler] = js.native
   @JSName("sendRaw")
   var sendRaw_Original: js.Function1[/* data */ js.Any, js.Promise[_]] = js.native

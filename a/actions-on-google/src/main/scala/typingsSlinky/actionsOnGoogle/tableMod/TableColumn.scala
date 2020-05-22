@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TableColumn extends GoogleActionsV2UiElementsTableCardColumnProperties {
   /**
     * Alias for `horizontalAlignment`
@@ -15,34 +14,21 @@ trait TableColumn extends GoogleActionsV2UiElementsTableCardColumnProperties {
     * will be aligned to the leading edge.
     * @public
     */
-  var align: js.UndefOr[GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment] = js.native
+  var align: js.UndefOr[GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment] = js.undefined
 }
 
 object TableColumn {
   @scala.inline
-  def apply(): TableColumn = {
+  def apply(
+    align: GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment = null,
+    header: String = null,
+    horizontalAlignment: GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment = null
+  ): TableColumn = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableColumn]
   }
-  @scala.inline
-  implicit class TableColumnOps[Self <: TableColumn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

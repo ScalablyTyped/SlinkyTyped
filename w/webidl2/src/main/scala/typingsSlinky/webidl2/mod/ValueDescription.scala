@@ -12,57 +12,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait ValueDescription extends js.Object {
-  var negative: Boolean | Null = js.native
-  var `type`: string | number | boolean | `null` | Infinity | NaN | sequence | dictionary = js.native
-  var value: String | js.Array[_] | Null = js.native
-}
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.webidl2.mod.ValueDescriptionString
+  - typingsSlinky.webidl2.mod.ValueDescriptionNumber
+  - typingsSlinky.webidl2.mod.ValueDescriptionBoolean
+  - typingsSlinky.webidl2.mod.ValueDescriptionNull
+  - typingsSlinky.webidl2.mod.ValueDescriptionInfinity
+  - typingsSlinky.webidl2.mod.ValueDescriptionNaN
+  - typingsSlinky.webidl2.mod.ValueDescriptionSequence
+  - typingsSlinky.webidl2.mod.ValueDescriptionDictionary
+*/
+trait ValueDescription extends js.Object
 
 object ValueDescription {
   @scala.inline
-  def apply(`type`: string | number | boolean | `null` | Infinity | NaN | sequence | dictionary): ValueDescription = {
+  def ValueDescriptionNaN(`type`: NaN): ValueDescription = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueDescription]
   }
   @scala.inline
-  implicit class ValueDescriptionOps[Self <: ValueDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: string | number | boolean | `null` | Infinity | NaN | sequence | dictionary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegativeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(null)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
+  def ValueDescriptionSequence(`type`: sequence, value: js.Array[js.Any]): ValueDescription = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
   }
-  
+  @scala.inline
+  def ValueDescriptionInfinity(negative: Boolean, `type`: Infinity): ValueDescription = {
+    val __obj = js.Dynamic.literal(negative = negative.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
+  }
+  @scala.inline
+  def ValueDescriptionString(`type`: string, value: String): ValueDescription = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
+  }
+  @scala.inline
+  def ValueDescriptionDictionary(`type`: dictionary): ValueDescription = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
+  }
+  @scala.inline
+  def ValueDescriptionNumber(`type`: number, value: String): ValueDescription = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
+  }
+  @scala.inline
+  def ValueDescriptionNull(`type`: `null`): ValueDescription = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
+  }
+  @scala.inline
+  def ValueDescriptionBoolean(`type`: boolean, value: Boolean): ValueDescription = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueDescription]
+  }
 }
 

@@ -535,12 +535,13 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
     */
   def every[T](): LoDashExplicitWrapper[Boolean] = js.native
   def every[T](predicate: ListIterateeCustom[T, Boolean]): LoDashExplicitWrapper[Boolean] = js.native
-  def every[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[Boolean] = js.native
   /**
     * @see _.every
     */
   @JSName("every")
   def every_T_Object[T /* <: js.Object */](): LoDashExplicitWrapper[Boolean] = js.native
+  @JSName("every")
+  def every_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[Boolean] = js.native
   /**
     * @see _.extend
     */
@@ -612,11 +613,6 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
   def filter(): LoDashExplicitWrapper[js.Array[String]] = js.native
   def filter(predicate: StringIterator[Boolean]): LoDashExplicitWrapper[js.Array[String]] = js.native
   def filter[T](predicate: ListIterateeCustom[T, Boolean]): LoDashExplicitWrapper[js.Array[T]] = js.native
-  def filter[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
-    js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
   /**
     * @see _.filter
     */
@@ -636,6 +632,12 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
     ]
   ] = js.native
+  @JSName("filter")
+  def filter_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
+    js.Array[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
   /**
     * @see _.filter
     */
@@ -647,16 +649,6 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
   def find[T](): LoDashExplicitWrapper[js.UndefOr[T]] = js.native
   def find[T](predicate: ListIterateeCustom[T, Boolean]): LoDashExplicitWrapper[js.UndefOr[T]] = js.native
   def find[T](predicate: ListIterateeCustom[T, Boolean], fromIndex: Double): LoDashExplicitWrapper[js.UndefOr[T]] = js.native
-  def find[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
-  def find[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean], fromIndex: Double): LoDashExplicitWrapper[
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
   /**
     * @see _.find
     */
@@ -679,16 +671,6 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
   def findLast[T](): LoDashExplicitWrapper[js.UndefOr[T]] = js.native
   def findLast[T](predicate: ListIterateeCustom[T, Boolean]): LoDashExplicitWrapper[js.UndefOr[T]] = js.native
   def findLast[T](predicate: ListIterateeCustom[T, Boolean], fromIndex: Double): LoDashExplicitWrapper[js.UndefOr[T]] = js.native
-  def findLast[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
-  def findLast[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean], fromIndex: Double): LoDashExplicitWrapper[
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
   /**
     * @see _.findLast
     */
@@ -721,6 +703,18 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
     ]
   ] = js.native
+  @JSName("findLast")
+  def findLast_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
+    js.UndefOr[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
+  @JSName("findLast")
+  def findLast_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean], fromIndex: Double): LoDashExplicitWrapper[
+    js.UndefOr[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
   /**
     * @see _.find
     */
@@ -733,6 +727,18 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
     */
   @JSName("find")
   def find_T_Object[T /* <: js.Object */](): LoDashExplicitWrapper[
+    js.UndefOr[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
+  @JSName("find")
+  def find_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
+    js.UndefOr[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
+  @JSName("find")
+  def find_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean], fromIndex: Double): LoDashExplicitWrapper[
     js.UndefOr[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
     ]
@@ -1774,16 +1780,17 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
     */
   def mapKeys[T](): LoDashExplicitWrapper[Dictionary[T]] = js.native
   def mapKeys[T](iteratee: ListIteratee[T]): LoDashExplicitWrapper[Dictionary[T]] = js.native
-  def mapKeys[T /* <: js.Object */](iteratee: ObjectIteratee[T]): LoDashExplicitWrapper[
-    Dictionary[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
   /**
     * @see _.mapKeys
     */
   @JSName("mapKeys")
   def mapKeys_T_Object[T /* <: js.Object */](): LoDashExplicitWrapper[
+    Dictionary[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
+  @JSName("mapKeys")
+  def mapKeys_T_Object[T /* <: js.Object */](iteratee: ObjectIteratee[T]): LoDashExplicitWrapper[
     Dictionary[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
     ]
@@ -2572,11 +2579,6 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
   def reject(): LoDashExplicitWrapper[js.Array[String]] = js.native
   def reject(predicate: StringIterator[Boolean]): LoDashExplicitWrapper[js.Array[String]] = js.native
   def reject[T](predicate: ListIterateeCustom[T, Boolean]): LoDashExplicitWrapper[js.Array[T]] = js.native
-  def reject[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
-    js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ] = js.native
   /**
     * @see _.reject
     */
@@ -2587,6 +2589,12 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
     */
   @JSName("reject")
   def reject_T_Object[T /* <: js.Object */](): LoDashExplicitWrapper[
+    js.Array[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ] = js.native
+  @JSName("reject")
+  def reject_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[
     js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
     ]
@@ -2716,12 +2724,13 @@ trait LoDashExplicitWrapper[TValue] extends LoDashWrapper[TValue] {
     */
   def some[T](): LoDashExplicitWrapper[Boolean] = js.native
   def some[T](predicate: ListIterateeCustom[T, Boolean]): LoDashExplicitWrapper[Boolean] = js.native
-  def some[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[Boolean] = js.native
   /**
     * @see _.some
     */
   @JSName("some")
   def some_T_Object[T /* <: js.Object */](): LoDashExplicitWrapper[Boolean] = js.native
+  @JSName("some")
+  def some_T_Object[T /* <: js.Object */](predicate: ObjectIterateeCustom[T, Boolean]): LoDashExplicitWrapper[Boolean] = js.native
   def sort[T](): this.type = js.native
   def sort[T](compareFn: js.Function2[/* a */ T, /* b */ T, Double]): this.type = js.native
   /**

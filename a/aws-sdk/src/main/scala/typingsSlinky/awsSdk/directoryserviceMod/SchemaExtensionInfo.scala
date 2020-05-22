@@ -38,101 +38,24 @@ trait SchemaExtensionInfo extends js.Object {
 
 object SchemaExtensionInfo {
   @scala.inline
-  def apply(): SchemaExtensionInfo = {
+  def apply(
+    Description: Description = null,
+    DirectoryId: DirectoryId = null,
+    EndDateTime: js.Date = null,
+    SchemaExtensionId: SchemaExtensionId = null,
+    SchemaExtensionStatus: SchemaExtensionStatus = null,
+    SchemaExtensionStatusReason: SchemaExtensionStatusReason = null,
+    StartDateTime: js.Date = null
+  ): SchemaExtensionInfo = {
     val __obj = js.Dynamic.literal()
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
+    if (EndDateTime != null) __obj.updateDynamic("EndDateTime")(EndDateTime.asInstanceOf[js.Any])
+    if (SchemaExtensionId != null) __obj.updateDynamic("SchemaExtensionId")(SchemaExtensionId.asInstanceOf[js.Any])
+    if (SchemaExtensionStatus != null) __obj.updateDynamic("SchemaExtensionStatus")(SchemaExtensionStatus.asInstanceOf[js.Any])
+    if (SchemaExtensionStatusReason != null) __obj.updateDynamic("SchemaExtensionStatusReason")(SchemaExtensionStatusReason.asInstanceOf[js.Any])
+    if (StartDateTime != null) __obj.updateDynamic("StartDateTime")(StartDateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExtensionInfo]
   }
-  @scala.inline
-  implicit class SchemaExtensionInfoOps[Self <: SchemaExtensionInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaExtensionId(value: SchemaExtensionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaExtensionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaExtensionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaExtensionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaExtensionStatus(value: SchemaExtensionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaExtensionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaExtensionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaExtensionStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchemaExtensionStatusReason(value: SchemaExtensionStatusReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaExtensionStatusReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchemaExtensionStatusReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaExtensionStatusReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

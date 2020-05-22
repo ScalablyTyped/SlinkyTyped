@@ -7,134 +7,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IndicesStatsParams extends GenericParams {
-  var completionFields: js.UndefOr[NameList] = js.native
-  var fielddataFields: js.UndefOr[NameList] = js.native
-  var fields: js.UndefOr[NameList] = js.native
-  var groups: js.UndefOr[NameList] = js.native
-  var human: js.UndefOr[Boolean] = js.native
-  var index: NameList = js.native
-  var level: js.UndefOr[cluster | indices | shards] = js.native
-  var metric: js.UndefOr[NameList] = js.native
-  var types: js.UndefOr[NameList] = js.native
+  var completionFields: js.UndefOr[NameList] = js.undefined
+  var fielddataFields: js.UndefOr[NameList] = js.undefined
+  var fields: js.UndefOr[NameList] = js.undefined
+  var groups: js.UndefOr[NameList] = js.undefined
+  var human: js.UndefOr[Boolean] = js.undefined
+  var index: NameList
+  var level: js.UndefOr[cluster | indices | shards] = js.undefined
+  var metric: js.UndefOr[NameList] = js.undefined
+  var types: js.UndefOr[NameList] = js.undefined
 }
 
 object IndicesStatsParams {
   @scala.inline
-  def apply(index: NameList): IndicesStatsParams = {
+  def apply(
+    index: NameList,
+    body: js.Any = null,
+    completionFields: NameList = null,
+    fielddataFields: NameList = null,
+    fields: NameList = null,
+    filterPath: String | js.Array[String] = null,
+    groups: NameList = null,
+    human: js.UndefOr[Boolean] = js.undefined,
+    ignore: Double | js.Array[Double] = null,
+    level: cluster | indices | shards = null,
+    maxRetries: js.UndefOr[Double] = js.undefined,
+    method: String = null,
+    metric: NameList = null,
+    requestTimeout: js.UndefOr[Double] = js.undefined,
+    types: NameList = null
+  ): IndicesStatsParams = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (completionFields != null) __obj.updateDynamic("completionFields")(completionFields.asInstanceOf[js.Any])
+    if (fielddataFields != null) __obj.updateDynamic("fielddataFields")(fielddataFields.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
+    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
+    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.get.asInstanceOf[js.Any])
+    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRetries)) __obj.updateDynamic("maxRetries")(maxRetries.get.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestTimeout)) __obj.updateDynamic("requestTimeout")(requestTimeout.get.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesStatsParams]
   }
-  @scala.inline
-  implicit class IndicesStatsParamsOps[Self <: IndicesStatsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompletionFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletionFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completionFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFielddataFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fielddataFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFielddataFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fielddataFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroups(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHuman(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHuman: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("human")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: cluster | indices | shards): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetric(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: NameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IDeviceOrientationWatchOptions extends js.Object {
-  var filter: js.UndefOr[Double] = js.native
-  var frequency: js.UndefOr[Double] = js.native
+  var filter: js.UndefOr[Double] = js.undefined
+  var frequency: js.UndefOr[Double] = js.undefined
 }
 
 object IDeviceOrientationWatchOptions {
   @scala.inline
-  def apply(): IDeviceOrientationWatchOptions = {
+  def apply(filter: js.UndefOr[Double] = js.undefined, frequency: js.UndefOr[Double] = js.undefined): IDeviceOrientationWatchOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frequency)) __obj.updateDynamic("frequency")(frequency.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDeviceOrientationWatchOptions]
   }
-  @scala.inline
-  implicit class IDeviceOrientationWatchOptionsOps[Self <: IDeviceOrientationWatchOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrequency(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrequency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

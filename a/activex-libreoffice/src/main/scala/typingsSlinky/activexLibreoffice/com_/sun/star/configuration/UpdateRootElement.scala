@@ -38,7 +38,6 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.configuration.GroupUpdate
   * @see com.sun.star.configuration.SetUpdate
   */
-@js.native
 trait UpdateRootElement
   extends XHierarchicalName
      with XNamed

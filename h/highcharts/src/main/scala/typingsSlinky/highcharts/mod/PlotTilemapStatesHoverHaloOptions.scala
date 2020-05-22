@@ -4,90 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotTilemapStatesHoverHaloOptions extends js.Object {
   /**
     * (Highcharts, Highstock) A collection of SVG attributes to override the
     * appearance of the halo, for example `fill`, `stroke` and `stroke-width`.
     */
-  var attributes: js.UndefOr[PlotTilemapStatesHoverHaloAttributesOptions] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
+  var attributes: js.UndefOr[PlotTilemapStatesHoverHaloAttributesOptions] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock) Opacity for the halo unless a specific fill is
     * overridden using the `attributes` setting. Note that Highcharts is only
     * able to apply opacity to colors of hex or rgb(a) formats.
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock) The pixel size of the halo. For point markers
     * this is the radius of the halo. For pie slices it is the width of the
     * halo outside the slice. For bubbles it defaults to 5 and is the width of
     * the halo outside the bubble.
     */
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.undefined
 }
 
 object PlotTilemapStatesHoverHaloOptions {
   @scala.inline
-  def apply(): PlotTilemapStatesHoverHaloOptions = {
+  def apply(
+    attributes: PlotTilemapStatesHoverHaloAttributesOptions = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    size: js.UndefOr[Double] = js.undefined
+  ): PlotTilemapStatesHoverHaloOptions = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotTilemapStatesHoverHaloOptions]
   }
-  @scala.inline
-  implicit class PlotTilemapStatesHoverHaloOptionsOps[Self <: PlotTilemapStatesHoverHaloOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: PlotTilemapStatesHoverHaloAttributesOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

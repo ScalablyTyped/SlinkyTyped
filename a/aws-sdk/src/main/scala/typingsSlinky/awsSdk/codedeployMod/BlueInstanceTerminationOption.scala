@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BlueInstanceTerminationOption extends js.Object {
   /**
-    * The action to take on instances in the original environment after a successful blue/green deployment.   TERMINATE: Instances are terminated after a specified wait time.   KEEP_ALIVE: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.  
+    * The action to take on instances in the original environment after a successful blue/green deployment.    TERMINATE: Instances are terminated after a specified wait time.    KEEP_ALIVE: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.  
     */
   var action: js.UndefOr[InstanceAction] = js.native
   /**
@@ -18,41 +18,11 @@ trait BlueInstanceTerminationOption extends js.Object {
 
 object BlueInstanceTerminationOption {
   @scala.inline
-  def apply(): BlueInstanceTerminationOption = {
+  def apply(action: InstanceAction = null, terminationWaitTimeInMinutes: js.UndefOr[Duration] = js.undefined): BlueInstanceTerminationOption = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (!js.isUndefined(terminationWaitTimeInMinutes)) __obj.updateDynamic("terminationWaitTimeInMinutes")(terminationWaitTimeInMinutes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlueInstanceTerminationOption]
   }
-  @scala.inline
-  implicit class BlueInstanceTerminationOptionOps[Self <: BlueInstanceTerminationOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: InstanceAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTerminationWaitTimeInMinutes(value: Duration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationWaitTimeInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTerminationWaitTimeInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationWaitTimeInMinutes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

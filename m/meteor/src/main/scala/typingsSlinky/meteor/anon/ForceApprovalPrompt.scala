@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ForceApprovalPrompt extends js.Object {
-  var forceApprovalPrompt: js.UndefOr[js.Object] = js.native
-  var passwordSignupFields: js.UndefOr[String] = js.native
-  var requestOfflineToken: js.UndefOr[js.Object] = js.native
-  var requestPermissions: js.UndefOr[js.Object] = js.native
+  var forceApprovalPrompt: js.UndefOr[js.Object] = js.undefined
+  var passwordSignupFields: js.UndefOr[String] = js.undefined
+  var requestOfflineToken: js.UndefOr[js.Object] = js.undefined
+  var requestPermissions: js.UndefOr[js.Object] = js.undefined
 }
 
 object ForceApprovalPrompt {
   @scala.inline
-  def apply(): ForceApprovalPrompt = {
+  def apply(
+    forceApprovalPrompt: js.Object = null,
+    passwordSignupFields: String = null,
+    requestOfflineToken: js.Object = null,
+    requestPermissions: js.Object = null
+  ): ForceApprovalPrompt = {
     val __obj = js.Dynamic.literal()
+    if (forceApprovalPrompt != null) __obj.updateDynamic("forceApprovalPrompt")(forceApprovalPrompt.asInstanceOf[js.Any])
+    if (passwordSignupFields != null) __obj.updateDynamic("passwordSignupFields")(passwordSignupFields.asInstanceOf[js.Any])
+    if (requestOfflineToken != null) __obj.updateDynamic("requestOfflineToken")(requestOfflineToken.asInstanceOf[js.Any])
+    if (requestPermissions != null) __obj.updateDynamic("requestPermissions")(requestPermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForceApprovalPrompt]
   }
-  @scala.inline
-  implicit class ForceApprovalPromptOps[Self <: ForceApprovalPrompt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForceApprovalPrompt(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceApprovalPrompt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceApprovalPrompt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceApprovalPrompt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordSignupFields(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignupFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordSignupFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordSignupFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestOfflineToken(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOfflineToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestOfflineToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestOfflineToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPermissions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPermissions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestPermissions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPermissions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait CreateSizeConstraintSetResponse extends js.Object {
 
 object CreateSizeConstraintSetResponse {
   @scala.inline
-  def apply(): CreateSizeConstraintSetResponse = {
+  def apply(ChangeToken: ChangeToken = null, SizeConstraintSet: SizeConstraintSet = null): CreateSizeConstraintSetResponse = {
     val __obj = js.Dynamic.literal()
+    if (ChangeToken != null) __obj.updateDynamic("ChangeToken")(ChangeToken.asInstanceOf[js.Any])
+    if (SizeConstraintSet != null) __obj.updateDynamic("SizeConstraintSet")(SizeConstraintSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSizeConstraintSetResponse]
   }
-  @scala.inline
-  implicit class CreateSizeConstraintSetResponseOps[Self <: CreateSizeConstraintSetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangeToken(value: ChangeToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeConstraintSet(value: SizeConstraintSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeConstraintSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintSet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

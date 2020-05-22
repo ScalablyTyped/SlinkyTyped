@@ -8,7 +8,42 @@ import scala.scalajs.js.annotation._
 @JSGlobal("CSSImportRule")
 @js.native
 class CSSImportRule ()
-  extends typingsSlinky.std.CSSImportRule
+  extends typingsSlinky.std.CSSImportRule {
+  /* CompleteClass */
+  override val CHARSET_RULE: Double = js.native
+  /* CompleteClass */
+  override val FONT_FACE_RULE: Double = js.native
+  /* CompleteClass */
+  override val IMPORT_RULE: Double = js.native
+  /* CompleteClass */
+  override val KEYFRAMES_RULE: Double = js.native
+  /* CompleteClass */
+  override val KEYFRAME_RULE: Double = js.native
+  /* CompleteClass */
+  override val MEDIA_RULE: Double = js.native
+  /* CompleteClass */
+  override val NAMESPACE_RULE: Double = js.native
+  /* CompleteClass */
+  override val PAGE_RULE: Double = js.native
+  /* CompleteClass */
+  override val STYLE_RULE: Double = js.native
+  /* CompleteClass */
+  override val SUPPORTS_RULE: Double = js.native
+  /* CompleteClass */
+  override var cssText: java.lang.String = js.native
+  /* CompleteClass */
+  override val href: java.lang.String = js.native
+  /* CompleteClass */
+  override val media: org.scalajs.dom.raw.MediaList = js.native
+  /* CompleteClass */
+  override val parentRule: org.scalajs.dom.raw.CSSRule | Null = js.native
+  /* CompleteClass */
+  override val parentStyleSheet: org.scalajs.dom.raw.CSSStyleSheet | Null = js.native
+  /* CompleteClass */
+  override val styleSheet: org.scalajs.dom.raw.CSSStyleSheet = js.native
+  /* CompleteClass */
+  override val `type`: Double = js.native
+}
 
 @JSGlobal("CSSImportRule")
 @js.native

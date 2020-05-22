@@ -13,19 +13,18 @@ import scala.scalajs.js.annotation._
   * A form controller is activated if a form control gains the focus and none of its controls currently owned the focus before.
   * @see XFormController
   */
-@js.native
 trait XFormControllerListener extends XEventListener {
   /**
     * is invoked when a control of the controller gained the focus and the controller was not previously activated.
     * @param rEvent the event happened.
     */
-  def formActivated(rEvent: EventObject): Unit = js.native
+  def formActivated(rEvent: EventObject): Unit
   /**
     * is invoked when a control of the "XFormController" lost the focus and no control of the controller received the focus. In other words, no control of
     * the controller owns the focus.
     * @param rEvent the event happened.
     */
-  def formDeactivated(rEvent: EventObject): Unit = js.native
+  def formDeactivated(rEvent: EventObject): Unit
 }
 
 object XFormControllerListener {
@@ -41,25 +40,5 @@ object XFormControllerListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), formActivated = js.Any.fromFunction1(formActivated), formDeactivated = js.Any.fromFunction1(formDeactivated), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XFormControllerListener]
   }
-  @scala.inline
-  implicit class XFormControllerListenerOps[Self <: XFormControllerListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormActivated(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formActivated")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormDeactivated(value: EventObject => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formDeactivated")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

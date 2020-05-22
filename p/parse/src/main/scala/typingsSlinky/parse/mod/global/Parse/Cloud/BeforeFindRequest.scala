@@ -3,16 +3,16 @@ package typingsSlinky.parse.mod.global.Parse.Cloud
 import typingsSlinky.parse.mod.global.Parse.Attributes
 import typingsSlinky.parse.mod.global.Parse.Object
 import typingsSlinky.parse.mod.global.Parse.Query
+import typingsSlinky.parse.mod.global.Parse.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeforeFindRequest extends TriggerRequest {
-  var count: Boolean = js.native
-  var isGet: Boolean = js.native
-  var query: Query[Object[Attributes]] = js.native
-  var readPreference: js.UndefOr[ReadPreferenceOption] = js.native
+  var count: Boolean
+  var isGet: Boolean
+  var query: Query[Object[Attributes]]
+  var readPreference: js.UndefOr[ReadPreferenceOption] = js.undefined
 }
 
 object BeforeFindRequest {
@@ -25,49 +25,21 @@ object BeforeFindRequest {
     log: js.Any,
     `object`: Object[Attributes],
     query: Query[Object[Attributes]],
-    triggerName: String
+    triggerName: String,
+    installationId: String = null,
+    master: js.UndefOr[Boolean] = js.undefined,
+    original: Object[Attributes] = null,
+    readPreference: ReadPreferenceOption = null,
+    user: User[Attributes] = null
   ): BeforeFindRequest = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], ip = ip.asInstanceOf[js.Any], isGet = isGet.asInstanceOf[js.Any], log = log.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    if (installationId != null) __obj.updateDynamic("installationId")(installationId.asInstanceOf[js.Any])
+    if (!js.isUndefined(master)) __obj.updateDynamic("master")(master.get.asInstanceOf[js.Any])
+    if (original != null) __obj.updateDynamic("original")(original.asInstanceOf[js.Any])
+    if (readPreference != null) __obj.updateDynamic("readPreference")(readPreference.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeFindRequest]
   }
-  @scala.inline
-  implicit class BeforeFindRequestOps[Self <: BeforeFindRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsGet(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isGet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery(value: Query[Object[Attributes]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadPreference(value: ReadPreferenceOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

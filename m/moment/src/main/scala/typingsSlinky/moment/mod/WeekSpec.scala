@@ -4,37 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WeekSpec extends js.Object {
-  var dow: Double = js.native
-  var doy: Double = js.native
+  var dow: Double
+  var doy: js.UndefOr[Double] = js.undefined
 }
 
 object WeekSpec {
   @scala.inline
-  def apply(dow: Double, doy: Double): WeekSpec = {
-    val __obj = js.Dynamic.literal(dow = dow.asInstanceOf[js.Any], doy = doy.asInstanceOf[js.Any])
+  def apply(dow: Double, doy: js.UndefOr[Double] = js.undefined): WeekSpec = {
+    val __obj = js.Dynamic.literal(dow = dow.asInstanceOf[js.Any])
+    if (!js.isUndefined(doy)) __obj.updateDynamic("doy")(doy.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeekSpec]
   }
-  @scala.inline
-  implicit class WeekSpecOps[Self <: WeekSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDoy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doy")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

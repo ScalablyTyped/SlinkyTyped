@@ -4,107 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IosLobApp extends MobileLobApp {
   // The iOS architecture for which this app can run on.
-  var applicableDeviceType: js.UndefOr[IosDeviceType] = js.native
+  var applicableDeviceType: js.UndefOr[IosDeviceType] = js.undefined
   // The build number of iOS Line of Business (LoB) app.
-  var buildNumber: js.UndefOr[String] = js.native
+  var buildNumber: js.UndefOr[String] = js.undefined
   // The Identity Name.
-  var bundleId: js.UndefOr[String] = js.native
+  var bundleId: js.UndefOr[String] = js.undefined
   // The expiration time.
-  var expirationDateTime: js.UndefOr[String] = js.native
+  var expirationDateTime: js.UndefOr[String] = js.undefined
   // The value for the minimum applicable operating system.
-  var minimumSupportedOperatingSystem: js.UndefOr[IosMinimumOperatingSystem] = js.native
+  var minimumSupportedOperatingSystem: js.UndefOr[IosMinimumOperatingSystem] = js.undefined
   // The version number of iOS Line of Business (LoB) app.
-  var versionNumber: js.UndefOr[String] = js.native
+  var versionNumber: js.UndefOr[String] = js.undefined
 }
 
 object IosLobApp {
   @scala.inline
-  def apply(): IosLobApp = {
+  def apply(
+    applicableDeviceType: IosDeviceType = null,
+    assignments: js.Array[MobileAppAssignment] = null,
+    buildNumber: String = null,
+    bundleId: String = null,
+    categories: js.Array[MobileAppCategory] = null,
+    committedContentVersion: String = null,
+    contentVersions: js.Array[MobileAppContent] = null,
+    createdDateTime: String = null,
+    description: String = null,
+    developer: String = null,
+    displayName: String = null,
+    expirationDateTime: String = null,
+    fileName: String = null,
+    id: String = null,
+    informationUrl: String = null,
+    isFeatured: js.UndefOr[Boolean] = js.undefined,
+    largeIcon: MimeContent = null,
+    lastModifiedDateTime: String = null,
+    minimumSupportedOperatingSystem: IosMinimumOperatingSystem = null,
+    notes: String = null,
+    owner: String = null,
+    privacyInformationUrl: String = null,
+    publisher: String = null,
+    publishingState: MobileAppPublishingState = null,
+    size: js.UndefOr[Double] = js.undefined,
+    versionNumber: String = null
+  ): IosLobApp = {
     val __obj = js.Dynamic.literal()
+    if (applicableDeviceType != null) __obj.updateDynamic("applicableDeviceType")(applicableDeviceType.asInstanceOf[js.Any])
+    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
+    if (buildNumber != null) __obj.updateDynamic("buildNumber")(buildNumber.asInstanceOf[js.Any])
+    if (bundleId != null) __obj.updateDynamic("bundleId")(bundleId.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (committedContentVersion != null) __obj.updateDynamic("committedContentVersion")(committedContentVersion.asInstanceOf[js.Any])
+    if (contentVersions != null) __obj.updateDynamic("contentVersions")(contentVersions.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (developer != null) __obj.updateDynamic("developer")(developer.asInstanceOf[js.Any])
+    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (expirationDateTime != null) __obj.updateDynamic("expirationDateTime")(expirationDateTime.asInstanceOf[js.Any])
+    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (informationUrl != null) __obj.updateDynamic("informationUrl")(informationUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFeatured)) __obj.updateDynamic("isFeatured")(isFeatured.get.asInstanceOf[js.Any])
+    if (largeIcon != null) __obj.updateDynamic("largeIcon")(largeIcon.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (minimumSupportedOperatingSystem != null) __obj.updateDynamic("minimumSupportedOperatingSystem")(minimumSupportedOperatingSystem.asInstanceOf[js.Any])
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (privacyInformationUrl != null) __obj.updateDynamic("privacyInformationUrl")(privacyInformationUrl.asInstanceOf[js.Any])
+    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
+    if (publishingState != null) __obj.updateDynamic("publishingState")(publishingState.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (versionNumber != null) __obj.updateDynamic("versionNumber")(versionNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[IosLobApp]
   }
-  @scala.inline
-  implicit class IosLobAppOps[Self <: IosLobApp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicableDeviceType(value: IosDeviceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicableDeviceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicableDeviceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicableDeviceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBuildNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBuildNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buildNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBundleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBundleId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpirationDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpirationDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumSupportedOperatingSystem(value: IosMinimumOperatingSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSupportedOperatingSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumSupportedOperatingSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSupportedOperatingSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versionNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

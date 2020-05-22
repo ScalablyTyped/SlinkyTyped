@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReverseGeocodingRequest extends js.Object {
   /**
     * The language in which to return results.
@@ -17,9 +16,9 @@ trait ReverseGeocodingRequest extends js.Object {
     *    Address components are all returned in the same language, which is chosen from the first component.
     *  - If a name is not available in the preferred language, the geocoder uses the closest match.
     */
-  var language: js.UndefOr[Language] = js.native
+  var language: js.UndefOr[Language] = js.undefined
   /** The latitude and longitude values specifying the location for which you wish to obtain the closest, human-readable address. */
-  var latlng: js.UndefOr[LatLng] = js.native
+  var latlng: js.UndefOr[LatLng] = js.undefined
   /**
     * A filter of one or more location types, separated by a pipe (`|`).
     * If the parameter contains multiple location types, the API returns all addresses that match any of the types.
@@ -28,14 +27,14 @@ trait ReverseGeocodingRequest extends js.Object {
     * then discards those results that do not match the specified location type(s).
     * Note: This parameter is available only for requests that include an API key or a client ID.
     */
-  var location_type: js.UndefOr[ReverseGeocodingLocationType] = js.native
+  var location_type: js.UndefOr[ReverseGeocodingLocationType] = js.undefined
   /**
     * The place ID of the place for which you wish to obtain the human-readable address.
     * The place ID is a unique identifier that can be used with other Google APIs.
     * For example, you can use the `placeID` returned by the Roads API to get the address for a snapped point.
     * The place ID may only be specified if the request includes an API key or a Google Maps APIs Premium Plan client ID.
     */
-  var place_id: js.UndefOr[String] = js.native
+  var place_id: js.UndefOr[String] = js.undefined
   /**
     * A filter of one or more address types, separated by a pipe (`|`).
     * If the parameter contains multiple address types, the API returns all addresses that match any of the types.
@@ -44,82 +43,25 @@ trait ReverseGeocodingRequest extends js.Object {
     * then discards those results that do not match the specified address type(s).
     * Note: This parameter is available only for requests that include an API key or a client ID.
     */
-  var result_type: js.UndefOr[AddressType] = js.native
+  var result_type: js.UndefOr[AddressType] = js.undefined
 }
 
 object ReverseGeocodingRequest {
   @scala.inline
-  def apply(): ReverseGeocodingRequest = {
+  def apply(
+    language: Language = null,
+    latlng: LatLng = null,
+    location_type: ReverseGeocodingLocationType = null,
+    place_id: String = null,
+    result_type: AddressType = null
+  ): ReverseGeocodingRequest = {
     val __obj = js.Dynamic.literal()
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (latlng != null) __obj.updateDynamic("latlng")(latlng.asInstanceOf[js.Any])
+    if (location_type != null) __obj.updateDynamic("location_type")(location_type.asInstanceOf[js.Any])
+    if (place_id != null) __obj.updateDynamic("place_id")(place_id.asInstanceOf[js.Any])
+    if (result_type != null) __obj.updateDynamic("result_type")(result_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReverseGeocodingRequest]
   }
-  @scala.inline
-  implicit class ReverseGeocodingRequestOps[Self <: ReverseGeocodingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguage(value: Language): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatlng(value: LatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latlng")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatlng: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latlng")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation_type(value: ReverseGeocodingLocationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlace_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlace_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResult_type(value: AddressType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResult_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("result_type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

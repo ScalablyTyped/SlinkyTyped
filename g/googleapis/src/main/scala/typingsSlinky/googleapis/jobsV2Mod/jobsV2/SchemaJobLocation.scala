@@ -40,65 +40,18 @@ trait SchemaJobLocation extends js.Object {
 
 object SchemaJobLocation {
   @scala.inline
-  def apply(): SchemaJobLocation = {
+  def apply(
+    latLng: SchemaLatLng = null,
+    locationType: String = null,
+    postalAddress: SchemaPostalAddress = null,
+    radiusMeters: js.UndefOr[Double] = js.undefined
+  ): SchemaJobLocation = {
     val __obj = js.Dynamic.literal()
+    if (latLng != null) __obj.updateDynamic("latLng")(latLng.asInstanceOf[js.Any])
+    if (locationType != null) __obj.updateDynamic("locationType")(locationType.asInstanceOf[js.Any])
+    if (postalAddress != null) __obj.updateDynamic("postalAddress")(postalAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(radiusMeters)) __obj.updateDynamic("radiusMeters")(radiusMeters.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobLocation]
   }
-  @scala.inline
-  implicit class SchemaJobLocationOps[Self <: SchemaJobLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLatLng(value: SchemaLatLng): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatLng: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostalAddress(value: SchemaPostalAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostalAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusMeters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusMeters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusMeters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusMeters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

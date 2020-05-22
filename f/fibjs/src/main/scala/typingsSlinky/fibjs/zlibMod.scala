@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief zlib 压缩解压模块
-	* @detail 使用方法：,```JavaScript,var zlib = require('zlib');,```
-	*/
+  * @brief zlib 压缩解压模块
+  * @detail 使用方法：,```JavaScript,var zlib = require('zlib');,```
+  */
 @JSImport("zlib", JSImport.Namespace)
 @js.native
 object zlibMod extends js.Object {

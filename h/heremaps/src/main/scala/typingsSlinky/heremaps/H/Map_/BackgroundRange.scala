@@ -10,10 +10,9 @@ import scala.scalajs.js.annotation._
   * @property lower {number} - The number of lower zoom levels to take into account, default is 0
   * @property higher {number} - The number of higher zoom levels to take into account, default is 0
   */
-@js.native
 trait BackgroundRange extends js.Object {
-  var higher: Double = js.native
-  var lower: Double = js.native
+  var higher: Double
+  var lower: Double
 }
 
 object BackgroundRange {
@@ -22,25 +21,5 @@ object BackgroundRange {
     val __obj = js.Dynamic.literal(higher = higher.asInstanceOf[js.Any], lower = lower.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackgroundRange]
   }
-  @scala.inline
-  implicit class BackgroundRangeOps[Self <: BackgroundRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHigher(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("higher")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLower(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lower")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

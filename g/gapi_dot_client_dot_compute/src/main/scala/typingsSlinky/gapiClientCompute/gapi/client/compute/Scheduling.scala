@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scheduling extends js.Object {
   /**
     * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the
@@ -12,68 +11,31 @@ trait Scheduling extends js.Object {
     *
     * By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
     */
-  var automaticRestart: js.UndefOr[Boolean] = js.native
+  var automaticRestart: js.UndefOr[Boolean] = js.undefined
   /**
     * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and
     * only possible behavior is TERMINATE. For more information, see Setting Instance Scheduling Options.
     */
-  var onHostMaintenance: js.UndefOr[String] = js.native
+  var onHostMaintenance: js.UndefOr[String] = js.undefined
   /**
     * Defines whether the instance is preemptible. This can only be set during instance creation, it cannot be set or changed after the instance has been
     * created.
     */
-  var preemptible: js.UndefOr[Boolean] = js.native
+  var preemptible: js.UndefOr[Boolean] = js.undefined
 }
 
 object Scheduling {
   @scala.inline
-  def apply(): Scheduling = {
+  def apply(
+    automaticRestart: js.UndefOr[Boolean] = js.undefined,
+    onHostMaintenance: String = null,
+    preemptible: js.UndefOr[Boolean] = js.undefined
+  ): Scheduling = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(automaticRestart)) __obj.updateDynamic("automaticRestart")(automaticRestart.get.asInstanceOf[js.Any])
+    if (onHostMaintenance != null) __obj.updateDynamic("onHostMaintenance")(onHostMaintenance.asInstanceOf[js.Any])
+    if (!js.isUndefined(preemptible)) __obj.updateDynamic("preemptible")(preemptible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scheduling]
   }
-  @scala.inline
-  implicit class SchedulingOps[Self <: Scheduling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutomaticRestart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticRestart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutomaticRestart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("automaticRestart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHostMaintenance(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnHostMaintenance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHostMaintenance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreemptible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreemptible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

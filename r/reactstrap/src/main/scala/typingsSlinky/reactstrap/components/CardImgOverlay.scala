@@ -437,6 +437,11 @@ object CardImgOverlay {
   }
   
   def withProps[T](p: CardImgOverlayProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[CardImgOverlayProps]))
+  }
   implicit def make[T](companion: CardImgOverlay.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

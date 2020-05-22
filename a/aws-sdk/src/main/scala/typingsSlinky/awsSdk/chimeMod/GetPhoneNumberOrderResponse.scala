@@ -14,29 +14,10 @@ trait GetPhoneNumberOrderResponse extends js.Object {
 
 object GetPhoneNumberOrderResponse {
   @scala.inline
-  def apply(): GetPhoneNumberOrderResponse = {
+  def apply(PhoneNumberOrder: PhoneNumberOrder = null): GetPhoneNumberOrderResponse = {
     val __obj = js.Dynamic.literal()
+    if (PhoneNumberOrder != null) __obj.updateDynamic("PhoneNumberOrder")(PhoneNumberOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPhoneNumberOrderResponse]
   }
-  @scala.inline
-  implicit class GetPhoneNumberOrderResponseOps[Self <: GetPhoneNumberOrderResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPhoneNumberOrder(value: PhoneNumberOrder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumberOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumberOrder")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

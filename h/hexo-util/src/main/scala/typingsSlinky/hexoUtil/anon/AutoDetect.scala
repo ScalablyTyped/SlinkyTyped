@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoDetect extends js.Object {
-  var autoDetect: js.UndefOr[Boolean] = js.native
-  var caption: js.UndefOr[String] = js.native
-  var firstLine: js.UndefOr[Double] = js.native
-  var gutter: js.UndefOr[Boolean] = js.native
-  var hljs: js.UndefOr[Boolean] = js.native
-  var lang: js.UndefOr[String] = js.native
-  var mark: js.UndefOr[js.Array[Double]] = js.native
-  var tab: js.UndefOr[String] = js.native
-  var wrap: js.UndefOr[Boolean] = js.native
+  var autoDetect: js.UndefOr[Boolean] = js.undefined
+  var caption: js.UndefOr[String] = js.undefined
+  var firstLine: js.UndefOr[Double] = js.undefined
+  var gutter: js.UndefOr[Boolean] = js.undefined
+  var hljs: js.UndefOr[Boolean] = js.undefined
+  var lang: js.UndefOr[String] = js.undefined
+  var mark: js.UndefOr[js.Array[Double]] = js.undefined
+  var tab: js.UndefOr[String] = js.undefined
+  var wrap: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoDetect {
   @scala.inline
-  def apply(): AutoDetect = {
+  def apply(
+    autoDetect: js.UndefOr[Boolean] = js.undefined,
+    caption: String = null,
+    firstLine: js.UndefOr[Double] = js.undefined,
+    gutter: js.UndefOr[Boolean] = js.undefined,
+    hljs: js.UndefOr[Boolean] = js.undefined,
+    lang: String = null,
+    mark: js.Array[Double] = null,
+    tab: String = null,
+    wrap: js.UndefOr[Boolean] = js.undefined
+  ): AutoDetect = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoDetect)) __obj.updateDynamic("autoDetect")(autoDetect.get.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstLine)) __obj.updateDynamic("firstLine")(firstLine.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gutter)) __obj.updateDynamic("gutter")(gutter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hljs)) __obj.updateDynamic("hljs")(hljs.get.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (mark != null) __obj.updateDynamic("mark")(mark.asInstanceOf[js.Any])
+    if (tab != null) __obj.updateDynamic("tab")(tab.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoDetect]
   }
-  @scala.inline
-  implicit class AutoDetectOps[Self <: AutoDetect] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoDetect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDetect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDetect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDetect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstLine(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGutter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGutter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHljs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hljs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHljs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hljs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMark(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMark: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTab(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tab")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

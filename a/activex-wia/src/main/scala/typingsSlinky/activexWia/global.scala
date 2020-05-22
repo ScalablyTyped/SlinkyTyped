@@ -1,5 +1,6 @@
 package typingsSlinky.activexWia
 
+import typingsSlinky.activexWia.WIA.WiaEventFlag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +26,41 @@ object global extends js.Object {
     /** The DeviceCommand object describes a CommandID that can be used when calling ExecuteCommand on a Device or Item object. */
     @js.native
     class DeviceCommand protected ()
-      extends typingsSlinky.activexWia.WIA.DeviceCommand
+      extends typingsSlinky.activexWia.WIA.DeviceCommand {
+      /** Returns the commandID for this Command */
+      /* CompleteClass */
+      override val CommandID: String = js.native
+      /** Returns the command Description */
+      /* CompleteClass */
+      override val Description: String = js.native
+      /** Returns the command Name */
+      /* CompleteClass */
+      override val Name: String = js.native
+      /* CompleteClass */
+      @JSName("WIA.DeviceCommand_typekey")
+      override var WIADotDeviceCommand_typekey: typingsSlinky.activexWia.WIA.DeviceCommand = js.native
+    }
     
     /** The DeviceEvent object describes an EventID that can be used when calling RegisterEvent or RegisterPersistentEvent on a DeviceManager object. */
     @js.native
     class DeviceEvent protected ()
-      extends typingsSlinky.activexWia.WIA.DeviceEvent
+      extends typingsSlinky.activexWia.WIA.DeviceEvent {
+      /** Returns the event Description */
+      /* CompleteClass */
+      override val Description: String = js.native
+      /** Returns the EventID for this Event */
+      /* CompleteClass */
+      override val EventID: String = js.native
+      /** Returns the event Name */
+      /* CompleteClass */
+      override val Name: String = js.native
+      /** Returns the Type of this Event */
+      /* CompleteClass */
+      override val Type: WiaEventFlag = js.native
+      /* CompleteClass */
+      @JSName("WIA.DeviceEvent_typekey")
+      override var WIADotDeviceEvent_typekey: typingsSlinky.activexWia.WIA.DeviceEvent = js.native
+    }
     
     /**
       * The DeviceInfo object is a container that describes the unchanging (static) properties of an imaging device that is currently connected to the
@@ -62,7 +92,20 @@ object global extends js.Object {
       */
     @js.native
     class FilterInfo protected ()
-      extends typingsSlinky.activexWia.WIA.FilterInfo
+      extends typingsSlinky.activexWia.WIA.FilterInfo {
+      /** Returns a technical Description of what the filter does and how to use it in a filter chain */
+      /* CompleteClass */
+      override val Description: String = js.native
+      /** Returns the FilterID for this filter */
+      /* CompleteClass */
+      override val FilterID: String = js.native
+      /** Returns the FilterInfo Name */
+      /* CompleteClass */
+      override val Name: String = js.native
+      /* CompleteClass */
+      @JSName("WIA.FilterInfo_typekey")
+      override var WIADotFilterInfo_typekey: typingsSlinky.activexWia.WIA.FilterInfo = js.native
+    }
     
     /**
       * The ImageFile object is a container for images transferred to your computer when you call Transfer or ShowTransfer. It also supports image files
@@ -99,7 +142,20 @@ object global extends js.Object {
       */
     @js.native
     class Rational protected ()
-      extends typingsSlinky.activexWia.WIA.Rational
+      extends typingsSlinky.activexWia.WIA.Rational {
+      /** Returns/Sets the Rational Value Denominator */
+      /* CompleteClass */
+      override var Denominator: Double = js.native
+      /** Returns/Sets the Rational Value Numerator */
+      /* CompleteClass */
+      override var Numerator: Double = js.native
+      /** Returns the Rational Value as a Double */
+      /* CompleteClass */
+      override val Value: Double = js.native
+      /* CompleteClass */
+      @JSName("WIA.Rational_typekey")
+      override var WIADotRational_typekey: typingsSlinky.activexWia.WIA.Rational = js.native
+    }
     
   }
   

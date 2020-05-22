@@ -20,41 +20,11 @@ trait SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDi
 
 object SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk {
   @scala.inline
-  def apply(): SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk = {
+  def apply(diskSizeGb: String = null, interface: String = null): SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk = {
     val __obj = js.Dynamic.literal()
+    if (diskSizeGb != null) __obj.updateDynamic("diskSizeGb")(diskSizeGb.asInstanceOf[js.Any])
+    if (interface != null) __obj.updateDynamic("interface")(interface.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk]
   }
-  @scala.inline
-  implicit class SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskOps[Self <: SchemaAllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDiskSizeGb(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskSizeGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterface(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interface")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterface: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interface")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

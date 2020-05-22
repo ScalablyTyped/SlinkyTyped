@@ -1,6 +1,7 @@
 package typingsSlinky.phaser.Phaser.Physics.Matter
 
 import typingsSlinky.phaser.MatterJS.BodyType
+import typingsSlinky.phaser.Phaser.Events.EventEmitter
 import typingsSlinky.phaser.Phaser.Physics.Matter.Components.Bounce
 import typingsSlinky.phaser.Phaser.Physics.Matter.Components.Collision
 import typingsSlinky.phaser.Phaser.Physics.Matter.Components.Friction
@@ -30,7 +31,8 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait TileBody
-  extends Bounce
+  extends EventEmitter
+     with Bounce
      with Collision
      with Friction
      with Gravity
@@ -47,10 +49,6 @@ trait TileBody
     * The Matter world the body exists within.
     */
   var world: World = js.native
-  /**
-    * Removes the current body from the tile and the world.
-    */
-  def destroy(): TileBody = js.native
   /**
     * Removes the current body from the TileBody and from the Matter world
     */

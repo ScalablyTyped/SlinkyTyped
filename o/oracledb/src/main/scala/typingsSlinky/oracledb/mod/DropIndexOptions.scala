@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Options which may be passed to SODA collection.dropIndex().
   */
-@js.native
 trait DropIndexOptions extends js.Object {
   /**
     * Setting force to true forces dropping of a JSON Search index or Spatial index if the
@@ -15,34 +14,15 @@ trait DropIndexOptions extends js.Object {
     *
     * @see https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F60F75DF-2866-4F93-BB7F-8FCE64BF67B6
     */
-  var force: js.UndefOr[Boolean] = js.native
+  var force: js.UndefOr[Boolean] = js.undefined
 }
 
 object DropIndexOptions {
   @scala.inline
-  def apply(): DropIndexOptions = {
+  def apply(force: js.UndefOr[Boolean] = js.undefined): DropIndexOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropIndexOptions]
   }
-  @scala.inline
-  implicit class DropIndexOptionsOps[Self <: DropIndexOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForce(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

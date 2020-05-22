@@ -7,97 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * A concept defined in the system
   */
-@js.native
 trait ValueSetComposeIncludeConcept extends BackboneElement {
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.native
+  var _code: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'display'.
     */
-  var _display: js.UndefOr[Element] = js.native
+  var _display: js.UndefOr[Element] = js.undefined
   /**
     * Code or expression from system
     */
-  var code: typingsSlinky.fhir.fhir.code = js.native
+  var code: typingsSlinky.fhir.fhir.code
   /**
     * Additional representations for this concept
     */
-  var designation: js.UndefOr[js.Array[ValueSetComposeIncludeConceptDesignation]] = js.native
+  var designation: js.UndefOr[js.Array[ValueSetComposeIncludeConceptDesignation]] = js.undefined
   /**
     * Text to display for this code for this value set in this valueset
     */
-  var display: js.UndefOr[String] = js.native
+  var display: js.UndefOr[String] = js.undefined
 }
 
 object ValueSetComposeIncludeConcept {
   @scala.inline
-  def apply(code: code): ValueSetComposeIncludeConcept = {
+  def apply(
+    code: code,
+    _code: Element = null,
+    _display: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    designation: js.Array[ValueSetComposeIncludeConceptDesignation] = null,
+    display: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): ValueSetComposeIncludeConcept = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
+    if (_display != null) __obj.updateDynamic("_display")(_display.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (designation != null) __obj.updateDynamic("designation")(designation.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueSetComposeIncludeConcept]
   }
-  @scala.inline
-  implicit class ValueSetComposeIncludeConceptOps[Self <: ValueSetComposeIncludeConcept] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_code(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_display(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_display: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesignation(value: js.Array[ValueSetComposeIncludeConceptDesignation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesignation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

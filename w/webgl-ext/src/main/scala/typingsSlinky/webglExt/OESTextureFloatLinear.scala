@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OESTextureFloatLinear extends js.Object {
-  val __OES_texture_float_linear: Unit = js.native
+  val __OES_texture_float_linear: Unit
 }
 
 object OESTextureFloatLinear {
@@ -15,19 +14,5 @@ object OESTextureFloatLinear {
     val __obj = js.Dynamic.literal(__OES_texture_float_linear = __OES_texture_float_linear.asInstanceOf[js.Any])
     __obj.asInstanceOf[OESTextureFloatLinear]
   }
-  @scala.inline
-  implicit class OESTextureFloatLinearOps[Self <: OESTextureFloatLinear] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with__OES_texture_float_linear(value: Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("__OES_texture_float_linear")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

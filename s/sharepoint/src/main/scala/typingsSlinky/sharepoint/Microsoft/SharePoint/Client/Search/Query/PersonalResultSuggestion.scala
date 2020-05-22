@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PersonalResultSuggestion extends ClientValueObject {
-  def get_highlightedTitle(): String = js.native
-  def get_isBestBet(): Boolean = js.native
-  def get_title(): String = js.native
-  def get_url(): String = js.native
-  def set_highlightedTitle(value: String): Unit = js.native
-  def set_isBestBet(value: Boolean): Unit = js.native
-  def set_title(value: String): Unit = js.native
-  def set_url(value: String): Unit = js.native
+  def get_highlightedTitle(): String
+  def get_isBestBet(): Boolean
+  def get_title(): String
+  def get_url(): String
+  def set_highlightedTitle(value: String): Unit
+  def set_isBestBet(value: Boolean): Unit
+  def set_title(value: String): Unit
+  def set_url(value: String): Unit
 }
 
 object PersonalResultSuggestion {
@@ -39,61 +38,5 @@ object PersonalResultSuggestion {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_highlightedTitle = js.Any.fromFunction0(get_highlightedTitle), get_isBestBet = js.Any.fromFunction0(get_isBestBet), get_title = js.Any.fromFunction0(get_title), get_typeId = js.Any.fromFunction0(get_typeId), get_url = js.Any.fromFunction0(get_url), set_highlightedTitle = js.Any.fromFunction1(set_highlightedTitle), set_isBestBet = js.Any.fromFunction1(set_isBestBet), set_title = js.Any.fromFunction1(set_title), set_url = js.Any.fromFunction1(set_url), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[PersonalResultSuggestion]
   }
-  @scala.inline
-  implicit class PersonalResultSuggestionOps[Self <: PersonalResultSuggestion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_highlightedTitle(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_highlightedTitle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_isBestBet(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_isBestBet")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_title(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_title")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_url(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_url")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_highlightedTitle(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_highlightedTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_isBestBet(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_isBestBet")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_title(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_title")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_url(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_url")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -14,20 +14,19 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.sdbc.XDriverManager
   * @see com.sun.star.sdbc.FILEConnectionProperties
   */
-@js.native
 trait FLATConnectionProperties extends FILEConnectionProperties {
   /** A one character delimiter to separate the decimal. */
-  var DecimalDelimiter: String = js.native
+  var DecimalDelimiter: String
   /** the extension of the files to be used. */
-  var Extension: String = js.native
+  var Extension: String
   /** A one character delimiter to separate the fields. */
-  var FieldDelimiter: String = js.native
+  var FieldDelimiter: String
   /** `TRUE` when the file contains a header line otherwise `FALSE` */
-  var HeaderLine: Boolean = js.native
+  var HeaderLine: Boolean
   /** A one character delimiter to separate the strings. */
-  var StringDelimiter: String = js.native
+  var StringDelimiter: String
   /** A one character delimiter to separate the thousands. */
-  var ThousandDelimiter: String = js.native
+  var ThousandDelimiter: String
 }
 
 object FLATConnectionProperties {
@@ -46,49 +45,5 @@ object FLATConnectionProperties {
     val __obj = js.Dynamic.literal(CharSet = CharSet.asInstanceOf[js.Any], DecimalDelimiter = DecimalDelimiter.asInstanceOf[js.Any], Extension = Extension.asInstanceOf[js.Any], FieldDelimiter = FieldDelimiter.asInstanceOf[js.Any], HeaderLine = HeaderLine.asInstanceOf[js.Any], StringDelimiter = StringDelimiter.asInstanceOf[js.Any], ThousandDelimiter = ThousandDelimiter.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[FLATConnectionProperties]
   }
-  @scala.inline
-  implicit class FLATConnectionPropertiesOps[Self <: FLATConnectionProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDecimalDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaderLine(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HeaderLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStringDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThousandDelimiter(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThousandDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

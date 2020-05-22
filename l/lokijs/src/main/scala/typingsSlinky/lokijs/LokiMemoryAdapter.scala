@@ -16,10 +16,9 @@ import scala.scalajs.js.annotation._
   * @param [options.asyncTimeout=50] - timeout in ms to queue callbacks
   * @constructor LokiMemoryAdapter
   */
-@js.native
 trait LokiMemoryAdapter extends LokiPersistenceAdapter {
-  var hashStore: StringDictionary[Lastsave] = js.native
-  var options: AsyncResponses = js.native
+  var hashStore: StringDictionary[Lastsave]
+  var options: AsyncResponses
   /**
     * Deletes a database from its in-memory store.
     *
@@ -27,7 +26,7 @@ trait LokiMemoryAdapter extends LokiPersistenceAdapter {
     * @param callback - function to call when done
     */
   @JSName("deleteDatabase")
-  def deleteDatabase_MLokiMemoryAdapter(dbname: String, callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def deleteDatabase_MLokiMemoryAdapter(dbname: String, callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Unit
   /**
     * Saves a serialized database to its in-memory store.
     * (Loki persistence adapter interface function)
@@ -40,7 +39,7 @@ trait LokiMemoryAdapter extends LokiPersistenceAdapter {
     dbname: String,
     dbstring: js.Any,
     callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
-  ): Unit = js.native
+  ): Unit
 }
 
 object LokiMemoryAdapter {
@@ -50,42 +49,14 @@ object LokiMemoryAdapter {
     hashStore: StringDictionary[Lastsave],
     loadDatabase: (String, js.Function1[/* value */ js.Any, Unit]) => Unit,
     options: AsyncResponses,
-    saveDatabase: (String, js.Any, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit
+    saveDatabase: (String, js.Any, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit,
+    exportDatabase: (/* dbname */ String, /* dbref */ Loki, /* callback */ js.Function1[/* err */ js.Error | Null, Unit]) => Unit = null,
+    mode: String = null
   ): LokiMemoryAdapter = {
     val __obj = js.Dynamic.literal(deleteDatabase = js.Any.fromFunction2(deleteDatabase), hashStore = hashStore.asInstanceOf[js.Any], loadDatabase = js.Any.fromFunction2(loadDatabase), options = options.asInstanceOf[js.Any], saveDatabase = js.Any.fromFunction3(saveDatabase))
+    if (exportDatabase != null) __obj.updateDynamic("exportDatabase")(js.Any.fromFunction3(exportDatabase))
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     __obj.asInstanceOf[LokiMemoryAdapter]
   }
-  @scala.inline
-  implicit class LokiMemoryAdapterOps[Self <: LokiMemoryAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteDatabase(value: (String, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDatabase")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHashStore(value: StringDictionary[Lastsave]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashStore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptions(value: AsyncResponses): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSaveDatabase(value: (String, js.Any, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("saveDatabase")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

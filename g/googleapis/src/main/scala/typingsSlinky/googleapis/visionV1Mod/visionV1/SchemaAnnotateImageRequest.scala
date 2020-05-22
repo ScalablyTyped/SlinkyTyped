@@ -26,53 +26,16 @@ trait SchemaAnnotateImageRequest extends js.Object {
 
 object SchemaAnnotateImageRequest {
   @scala.inline
-  def apply(): SchemaAnnotateImageRequest = {
+  def apply(
+    features: js.Array[SchemaFeature] = null,
+    image: SchemaImage = null,
+    imageContext: SchemaImageContext = null
+  ): SchemaAnnotateImageRequest = {
     val __obj = js.Dynamic.literal()
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (imageContext != null) __obj.updateDynamic("imageContext")(imageContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnnotateImageRequest]
   }
-  @scala.inline
-  implicit class SchemaAnnotateImageRequestOps[Self <: SchemaAnnotateImageRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeatures(value: js.Array[SchemaFeature]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: SchemaImage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageContext(value: SchemaImageContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageContext")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

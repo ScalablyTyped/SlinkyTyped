@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Relocateifnecessary extends js.Object {
-  var relocate_if_necessary: js.UndefOr[Boolean] = js.native
+  var relocate_if_necessary: js.UndefOr[Boolean] = js.undefined
 }
 
 object Relocateifnecessary {
   @scala.inline
-  def apply(): Relocateifnecessary = {
+  def apply(relocate_if_necessary: js.UndefOr[Boolean] = js.undefined): Relocateifnecessary = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(relocate_if_necessary)) __obj.updateDynamic("relocate_if_necessary")(relocate_if_necessary.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Relocateifnecessary]
   }
-  @scala.inline
-  implicit class RelocateifnecessaryOps[Self <: Relocateifnecessary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRelocate_if_necessary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relocate_if_necessary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelocate_if_necessary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relocate_if_necessary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

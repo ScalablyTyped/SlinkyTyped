@@ -22,25 +22,5 @@ object ReplaceTopicRuleRequest {
     val __obj = js.Dynamic.literal(ruleName = ruleName.asInstanceOf[js.Any], topicRulePayload = topicRulePayload.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplaceTopicRuleRequest]
   }
-  @scala.inline
-  implicit class ReplaceTopicRuleRequestOps[Self <: ReplaceTopicRuleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRuleName(value: RuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopicRulePayload(value: TopicRulePayload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topicRulePayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -11,12 +11,11 @@ import scala.scalajs.js.annotation._
   * @author Stephan Bergmann
   * @version 1.0
   */
-@js.native
 trait RemoteContentProviderChangeEvent extends EventObject {
   /** An indicator whether a remote content provider has been added or removed. */
-  var Action: RemoteContentProviderChangeAction = js.native
+  var Action: RemoteContentProviderChangeAction
   /** The identifier with which the remote content provider is registered at the {@link com.sun.star.ucb.XRemoteContentProviderSupplier} . */
-  var Identifier: String = js.native
+  var Identifier: String
 }
 
 object RemoteContentProviderChangeEvent {
@@ -25,25 +24,5 @@ object RemoteContentProviderChangeEvent {
     val __obj = js.Dynamic.literal(Action = Action.asInstanceOf[js.Any], Identifier = Identifier.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemoteContentProviderChangeEvent]
   }
-  @scala.inline
-  implicit class RemoteContentProviderChangeEventOps[Self <: RemoteContentProviderChangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: RemoteContentProviderChangeAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -4,73 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * The extensions to hook. Should start with '.' (ex. ['.js']).
     *
     * @default ['.js']
     */
-  var exts: js.UndefOr[js.Array[String]] = js.native
+  var exts: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Auto-ignore node_modules. Independent of any matcher.
     *
     * @default true
     */
-  var ignoreNodeModules: js.UndefOr[Boolean] = js.native
+  var ignoreNodeModules: js.UndefOr[Boolean] = js.undefined
   /** A matcher function, will be called with path to a file. Should return truthy if the file should be hooked, falsy otherwise. */
-  var matcher: js.UndefOr[Matcher] = js.native
+  var matcher: js.UndefOr[Matcher] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    exts: js.Array[String] = null,
+    ignoreNodeModules: js.UndefOr[Boolean] = js.undefined,
+    matcher: /* code */ String => Boolean = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (exts != null) __obj.updateDynamic("exts")(exts.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreNodeModules)) __obj.updateDynamic("ignoreNodeModules")(ignoreNodeModules.get.asInstanceOf[js.Any])
+    if (matcher != null) __obj.updateDynamic("matcher")(js.Any.fromFunction1(matcher))
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreNodeModules(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNodeModules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreNodeModules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNodeModules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatcher(value: /* code */ String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcher")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMatcher: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matcher")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

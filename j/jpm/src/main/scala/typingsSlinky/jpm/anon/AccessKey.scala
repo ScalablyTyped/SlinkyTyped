@@ -5,121 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccessKey extends js.Object {
-  var accessKey: js.UndefOr[String] = js.native
-  var contentScript: js.UndefOr[String] = js.native
-  var contentScriptFile: js.UndefOr[String] = js.native
-  var context: js.UndefOr[Context | js.Array[Context]] = js.native
-  var data: js.UndefOr[js.Any] = js.native
-  var image: js.UndefOr[String] = js.native
-  var label: String = js.native
-  var onMessage: js.UndefOr[js.Function1[/* message */ js.UndefOr[js.Any], _]] = js.native
+  var accessKey: js.UndefOr[String] = js.undefined
+  var contentScript: js.UndefOr[String] = js.undefined
+  var contentScriptFile: js.UndefOr[String] = js.undefined
+  var context: js.UndefOr[Context | js.Array[Context]] = js.undefined
+  var data: js.UndefOr[js.Any] = js.undefined
+  var image: js.UndefOr[String] = js.undefined
+  var label: String
+  var onMessage: js.UndefOr[js.Function1[/* message */ js.UndefOr[js.Any], _]] = js.undefined
 }
 
 object AccessKey {
   @scala.inline
-  def apply(label: String): AccessKey = {
+  def apply(
+    label: String,
+    accessKey: String = null,
+    contentScript: String = null,
+    contentScriptFile: String = null,
+    context: Context | js.Array[Context] = null,
+    data: js.Any = null,
+    image: String = null,
+    onMessage: /* message */ js.UndefOr[js.Any] => _ = null
+  ): AccessKey = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (contentScript != null) __obj.updateDynamic("contentScript")(contentScript.asInstanceOf[js.Any])
+    if (contentScriptFile != null) __obj.updateDynamic("contentScriptFile")(contentScriptFile.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (onMessage != null) __obj.updateDynamic("onMessage")(js.Any.fromFunction1(onMessage))
     __obj.asInstanceOf[AccessKey]
   }
-  @scala.inline
-  implicit class AccessKeyOps[Self <: AccessKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentScript(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScript")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentScript: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScript")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentScriptFile(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScriptFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentScriptFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentScriptFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: Context | js.Array[Context]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMessage(value: /* message */ js.UndefOr[js.Any] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultType extends js.Object {
-  var defaultType: js.UndefOr[Double] = js.native
-  var showRoad: js.UndefOr[Boolean] = js.native
-  var showTraffic: js.UndefOr[Boolean] = js.native
+  var defaultType: js.UndefOr[Double] = js.undefined
+  var showRoad: js.UndefOr[Boolean] = js.undefined
+  var showTraffic: js.UndefOr[Boolean] = js.undefined
 }
 
 object DefaultType {
   @scala.inline
-  def apply(): DefaultType = {
+  def apply(
+    defaultType: js.UndefOr[Double] = js.undefined,
+    showRoad: js.UndefOr[Boolean] = js.undefined,
+    showTraffic: js.UndefOr[Boolean] = js.undefined
+  ): DefaultType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(defaultType)) __obj.updateDynamic("defaultType")(defaultType.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showRoad)) __obj.updateDynamic("showRoad")(showRoad.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTraffic)) __obj.updateDynamic("showTraffic")(showTraffic.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultType]
   }
-  @scala.inline
-  implicit class DefaultTypeOps[Self <: DefaultType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowRoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowRoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showRoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTraffic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTraffic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTraffic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTraffic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

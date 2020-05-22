@@ -62,101 +62,24 @@ trait SchemaServiceAccountKey extends js.Object {
 
 object SchemaServiceAccountKey {
   @scala.inline
-  def apply(): SchemaServiceAccountKey = {
+  def apply(
+    keyAlgorithm: String = null,
+    name: String = null,
+    privateKeyData: String = null,
+    privateKeyType: String = null,
+    publicKeyData: String = null,
+    validAfterTime: String = null,
+    validBeforeTime: String = null
+  ): SchemaServiceAccountKey = {
     val __obj = js.Dynamic.literal()
+    if (keyAlgorithm != null) __obj.updateDynamic("keyAlgorithm")(keyAlgorithm.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (privateKeyData != null) __obj.updateDynamic("privateKeyData")(privateKeyData.asInstanceOf[js.Any])
+    if (privateKeyType != null) __obj.updateDynamic("privateKeyType")(privateKeyType.asInstanceOf[js.Any])
+    if (publicKeyData != null) __obj.updateDynamic("publicKeyData")(publicKeyData.asInstanceOf[js.Any])
+    if (validAfterTime != null) __obj.updateDynamic("validAfterTime")(validAfterTime.asInstanceOf[js.Any])
+    if (validBeforeTime != null) __obj.updateDynamic("validBeforeTime")(validBeforeTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServiceAccountKey]
   }
-  @scala.inline
-  implicit class SchemaServiceAccountKeyOps[Self <: SchemaServiceAccountKey] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyAlgorithm(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKeyData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeyData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKeyType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeyType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublicKeyData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublicKeyData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidAfterTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validAfterTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidAfterTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validAfterTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidBeforeTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validBeforeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidBeforeTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validBeforeTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

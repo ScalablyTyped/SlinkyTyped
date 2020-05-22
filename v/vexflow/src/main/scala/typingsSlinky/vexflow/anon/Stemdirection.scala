@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Stemdirection extends js.Object {
-  var stem_direction: js.UndefOr[Double] = js.native
-  var stem_extension: js.UndefOr[Double] = js.native
-  var x_begin: js.UndefOr[Double] = js.native
-  var x_end: js.UndefOr[Double] = js.native
-  var y_bottom: js.UndefOr[Double] = js.native
-  var y_extend: js.UndefOr[Double] = js.native
-  var y_top: js.UndefOr[Double] = js.native
+  var stem_direction: js.UndefOr[Double] = js.undefined
+  var stem_extension: js.UndefOr[Double] = js.undefined
+  var x_begin: js.UndefOr[Double] = js.undefined
+  var x_end: js.UndefOr[Double] = js.undefined
+  var y_bottom: js.UndefOr[Double] = js.undefined
+  var y_extend: js.UndefOr[Double] = js.undefined
+  var y_top: js.UndefOr[Double] = js.undefined
 }
 
 object Stemdirection {
   @scala.inline
-  def apply(): Stemdirection = {
+  def apply(
+    stem_direction: js.UndefOr[Double] = js.undefined,
+    stem_extension: js.UndefOr[Double] = js.undefined,
+    x_begin: js.UndefOr[Double] = js.undefined,
+    x_end: js.UndefOr[Double] = js.undefined,
+    y_bottom: js.UndefOr[Double] = js.undefined,
+    y_extend: js.UndefOr[Double] = js.undefined,
+    y_top: js.UndefOr[Double] = js.undefined
+  ): Stemdirection = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(stem_direction)) __obj.updateDynamic("stem_direction")(stem_direction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stem_extension)) __obj.updateDynamic("stem_extension")(stem_extension.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x_begin)) __obj.updateDynamic("x_begin")(x_begin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x_end)) __obj.updateDynamic("x_end")(x_end.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y_bottom)) __obj.updateDynamic("y_bottom")(y_bottom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y_extend)) __obj.updateDynamic("y_extend")(y_extend.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y_top)) __obj.updateDynamic("y_top")(y_top.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stemdirection]
   }
-  @scala.inline
-  implicit class StemdirectionOps[Self <: Stemdirection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStem_direction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stem_direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStem_direction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stem_direction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStem_extension(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stem_extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStem_extension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stem_extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX_begin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_begin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX_begin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_begin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX_end(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX_end: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x_end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY_bottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY_bottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY_extend(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_extend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY_extend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_extend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY_top(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY_top: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y_top")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

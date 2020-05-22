@@ -30,77 +30,20 @@ trait TaskStatisticsForAuditCheck extends js.Object {
 
 object TaskStatisticsForAuditCheck {
   @scala.inline
-  def apply(): TaskStatisticsForAuditCheck = {
+  def apply(
+    canceledFindingsCount: js.UndefOr[CanceledFindingsCount] = js.undefined,
+    failedFindingsCount: js.UndefOr[FailedFindingsCount] = js.undefined,
+    skippedFindingsCount: js.UndefOr[SkippedFindingsCount] = js.undefined,
+    succeededFindingsCount: js.UndefOr[SucceededFindingsCount] = js.undefined,
+    totalFindingsCount: js.UndefOr[TotalFindingsCount] = js.undefined
+  ): TaskStatisticsForAuditCheck = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(canceledFindingsCount)) __obj.updateDynamic("canceledFindingsCount")(canceledFindingsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failedFindingsCount)) __obj.updateDynamic("failedFindingsCount")(failedFindingsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skippedFindingsCount)) __obj.updateDynamic("skippedFindingsCount")(skippedFindingsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(succeededFindingsCount)) __obj.updateDynamic("succeededFindingsCount")(succeededFindingsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalFindingsCount)) __obj.updateDynamic("totalFindingsCount")(totalFindingsCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskStatisticsForAuditCheck]
   }
-  @scala.inline
-  implicit class TaskStatisticsForAuditCheckOps[Self <: TaskStatisticsForAuditCheck] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanceledFindingsCount(value: CanceledFindingsCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledFindingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanceledFindingsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledFindingsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedFindingsCount(value: FailedFindingsCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedFindingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedFindingsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedFindingsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippedFindingsCount(value: SkippedFindingsCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedFindingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippedFindingsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedFindingsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSucceededFindingsCount(value: SucceededFindingsCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("succeededFindingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSucceededFindingsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("succeededFindingsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalFindingsCount(value: TotalFindingsCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFindingsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalFindingsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFindingsCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

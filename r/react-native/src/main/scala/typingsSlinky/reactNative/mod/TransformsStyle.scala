@@ -4,122 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransformsStyle extends js.Object {
-  var rotation: js.UndefOr[Double] = js.native
-  var scaleX: js.UndefOr[Double] = js.native
-  var scaleY: js.UndefOr[Double] = js.native
+  var rotation: js.UndefOr[Double] = js.undefined
+  var scaleX: js.UndefOr[Double] = js.undefined
+  var scaleY: js.UndefOr[Double] = js.undefined
   var transform: js.UndefOr[
     js.Array[
       PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
     ]
-  ] = js.native
-  var transformMatrix: js.UndefOr[js.Array[Double]] = js.native
-  var translateX: js.UndefOr[Double] = js.native
-  var translateY: js.UndefOr[Double] = js.native
+  ] = js.undefined
+  var transformMatrix: js.UndefOr[js.Array[Double]] = js.undefined
+  var translateX: js.UndefOr[Double] = js.undefined
+  var translateY: js.UndefOr[Double] = js.undefined
 }
 
 object TransformsStyle {
   @scala.inline
-  def apply(): TransformsStyle = {
+  def apply(
+    rotation: js.UndefOr[Double] = js.undefined,
+    scaleX: js.UndefOr[Double] = js.undefined,
+    scaleY: js.UndefOr[Double] = js.undefined,
+    transform: js.Array[
+      PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
+    ] = null,
+    transformMatrix: js.Array[Double] = null,
+    translateX: js.UndefOr[Double] = js.undefined,
+    translateY: js.UndefOr[Double] = js.undefined
+  ): TransformsStyle = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(rotation)) __obj.updateDynamic("rotation")(rotation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleX)) __obj.updateDynamic("scaleX")(scaleX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleY)) __obj.updateDynamic("scaleY")(scaleY.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
+    if (transformMatrix != null) __obj.updateDynamic("transformMatrix")(transformMatrix.asInstanceOf[js.Any])
+    if (!js.isUndefined(translateX)) __obj.updateDynamic("translateX")(translateX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(translateY)) __obj.updateDynamic("translateY")(translateY.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformsStyle]
   }
-  @scala.inline
-  implicit class TransformsStyleOps[Self <: TransformsStyle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransform(
-      value: js.Array[
-          PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformMatrix(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformMatrix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformMatrix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformMatrix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslateX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslateX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTranslateY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTranslateY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

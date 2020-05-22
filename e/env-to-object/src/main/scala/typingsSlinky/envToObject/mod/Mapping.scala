@@ -1,5 +1,8 @@
 package typingsSlinky.envToObject.mod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.envToObject.envToObjectStrings.boolean
+import typingsSlinky.envToObject.envToObjectStrings.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +16,27 @@ trait Mapping extends js.Object
 
 object Mapping {
   @scala.inline
-  implicit def apply(value: BooleanMapping): Mapping = value.asInstanceOf[Mapping]
+  def IntegerMapping(keypath: String, radix: Double, `type`: integer): Mapping = {
+    val __obj = js.Dynamic.literal(keypath = keypath.asInstanceOf[js.Any], radix = radix.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Mapping]
+  }
   @scala.inline
-  implicit def apply(value: GenericMapping): Mapping = value.asInstanceOf[Mapping]
+  def BooleanMapping(strict: Boolean, `type`: boolean): Mapping = {
+    val __obj = js.Dynamic.literal(strict = strict.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Mapping]
+  }
   @scala.inline
-  implicit def apply(value: IntegerMapping): Mapping = value.asInstanceOf[Mapping]
+  def GenericMapping(
+    keypath: String,
+    StringDictionary: /* opt */ StringDictionary[js.Any] = null,
+    `type`: String = null
+  ): Mapping = {
+    val __obj = js.Dynamic.literal(keypath = keypath.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Mapping]
+  }
 }
 

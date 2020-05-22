@@ -7,5 +7,19 @@ import scala.scalajs.js.annotation._
 @JSGlobal("InfoPath.SubmitToHostAdapterObject")
 @js.native
 class SubmitToHostAdapterObject protected ()
-  extends typingsSlinky.activexInfopath.InfoPath.SubmitToHostAdapterObject
+  extends typingsSlinky.activexInfopath.InfoPath.SubmitToHostAdapterObject {
+  /* CompleteClass */
+  @JSName("InfoPath.SubmitToHostAdapterObject_typekey")
+  override var InfoPathDotSubmitToHostAdapterObject_typekey: typingsSlinky.activexInfopath.InfoPath.SubmitToHostAdapterObject = js.native
+  /* CompleteClass */
+  override val Name: String = js.native
+  /* CompleteClass */
+  override val QueryAllowed: Boolean = js.native
+  /* CompleteClass */
+  override val SubmitAllowed: Boolean = js.native
+  /* CompleteClass */
+  override def Query(): Unit = js.native
+  /* CompleteClass */
+  override def Submit(): Unit = js.native
+}
 

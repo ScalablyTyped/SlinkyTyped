@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrderCustomer extends js.Object {
-  var email: js.UndefOr[String] = js.native
-  var explicitMarketingPreference: js.UndefOr[Boolean] = js.native
-  var fullName: js.UndefOr[String] = js.native
-  var marketingRightsInfo: js.UndefOr[OrderCustomerMarketingRightsInfo] = js.native
+  var email: js.UndefOr[String] = js.undefined
+  var explicitMarketingPreference: js.UndefOr[Boolean] = js.undefined
+  var fullName: js.UndefOr[String] = js.undefined
+  var marketingRightsInfo: js.UndefOr[OrderCustomerMarketingRightsInfo] = js.undefined
 }
 
 object OrderCustomer {
   @scala.inline
-  def apply(): OrderCustomer = {
+  def apply(
+    email: String = null,
+    explicitMarketingPreference: js.UndefOr[Boolean] = js.undefined,
+    fullName: String = null,
+    marketingRightsInfo: OrderCustomerMarketingRightsInfo = null
+  ): OrderCustomer = {
     val __obj = js.Dynamic.literal()
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (!js.isUndefined(explicitMarketingPreference)) __obj.updateDynamic("explicitMarketingPreference")(explicitMarketingPreference.get.asInstanceOf[js.Any])
+    if (fullName != null) __obj.updateDynamic("fullName")(fullName.asInstanceOf[js.Any])
+    if (marketingRightsInfo != null) __obj.updateDynamic("marketingRightsInfo")(marketingRightsInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderCustomer]
   }
-  @scala.inline
-  implicit class OrderCustomerOps[Self <: OrderCustomer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExplicitMarketingPreference(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitMarketingPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExplicitMarketingPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitMarketingPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarketingRightsInfo(value: OrderCustomerMarketingRightsInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketingRightsInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarketingRightsInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("marketingRightsInfo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -30,41 +30,14 @@ trait SchemaGetReportsRequest extends js.Object {
 
 object SchemaGetReportsRequest {
   @scala.inline
-  def apply(): SchemaGetReportsRequest = {
+  def apply(
+    reportRequests: js.Array[SchemaReportRequest] = null,
+    useResourceQuotas: js.UndefOr[Boolean] = js.undefined
+  ): SchemaGetReportsRequest = {
     val __obj = js.Dynamic.literal()
+    if (reportRequests != null) __obj.updateDynamic("reportRequests")(reportRequests.asInstanceOf[js.Any])
+    if (!js.isUndefined(useResourceQuotas)) __obj.updateDynamic("useResourceQuotas")(useResourceQuotas.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetReportsRequest]
   }
-  @scala.inline
-  implicit class SchemaGetReportsRequestOps[Self <: SchemaGetReportsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReportRequests(value: js.Array[SchemaReportRequest]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportRequests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportRequests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportRequests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseResourceQuotas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useResourceQuotas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseResourceQuotas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useResourceQuotas")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

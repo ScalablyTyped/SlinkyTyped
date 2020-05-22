@@ -71,216 +71,49 @@ trait UpdateDeploymentGroupInput extends js.Object {
     */
   var serviceRoleArn: js.UndefOr[Role] = js.native
   /**
-    * Information about triggers to change when the deployment group is updated. For examples, see Modify Triggers in an AWS CodeDeploy Deployment Group in the AWS CodeDeploy User Guide.
+    * Information about triggers to change when the deployment group is updated. For examples, see Edit a Trigger in a CodeDeploy Deployment Group in the AWS CodeDeploy User Guide.
     */
   var triggerConfigurations: js.UndefOr[TriggerConfigList] = js.native
 }
 
 object UpdateDeploymentGroupInput {
   @scala.inline
-  def apply(applicationName: ApplicationName, currentDeploymentGroupName: DeploymentGroupName): UpdateDeploymentGroupInput = {
+  def apply(
+    applicationName: ApplicationName,
+    currentDeploymentGroupName: DeploymentGroupName,
+    alarmConfiguration: AlarmConfiguration = null,
+    autoRollbackConfiguration: AutoRollbackConfiguration = null,
+    autoScalingGroups: AutoScalingGroupNameList = null,
+    blueGreenDeploymentConfiguration: BlueGreenDeploymentConfiguration = null,
+    deploymentConfigName: DeploymentConfigName = null,
+    deploymentStyle: DeploymentStyle = null,
+    ec2TagFilters: EC2TagFilterList = null,
+    ec2TagSet: EC2TagSet = null,
+    ecsServices: ECSServiceList = null,
+    loadBalancerInfo: LoadBalancerInfo = null,
+    newDeploymentGroupName: DeploymentGroupName = null,
+    onPremisesInstanceTagFilters: TagFilterList = null,
+    onPremisesTagSet: OnPremisesTagSet = null,
+    serviceRoleArn: Role = null,
+    triggerConfigurations: TriggerConfigList = null
+  ): UpdateDeploymentGroupInput = {
     val __obj = js.Dynamic.literal(applicationName = applicationName.asInstanceOf[js.Any], currentDeploymentGroupName = currentDeploymentGroupName.asInstanceOf[js.Any])
+    if (alarmConfiguration != null) __obj.updateDynamic("alarmConfiguration")(alarmConfiguration.asInstanceOf[js.Any])
+    if (autoRollbackConfiguration != null) __obj.updateDynamic("autoRollbackConfiguration")(autoRollbackConfiguration.asInstanceOf[js.Any])
+    if (autoScalingGroups != null) __obj.updateDynamic("autoScalingGroups")(autoScalingGroups.asInstanceOf[js.Any])
+    if (blueGreenDeploymentConfiguration != null) __obj.updateDynamic("blueGreenDeploymentConfiguration")(blueGreenDeploymentConfiguration.asInstanceOf[js.Any])
+    if (deploymentConfigName != null) __obj.updateDynamic("deploymentConfigName")(deploymentConfigName.asInstanceOf[js.Any])
+    if (deploymentStyle != null) __obj.updateDynamic("deploymentStyle")(deploymentStyle.asInstanceOf[js.Any])
+    if (ec2TagFilters != null) __obj.updateDynamic("ec2TagFilters")(ec2TagFilters.asInstanceOf[js.Any])
+    if (ec2TagSet != null) __obj.updateDynamic("ec2TagSet")(ec2TagSet.asInstanceOf[js.Any])
+    if (ecsServices != null) __obj.updateDynamic("ecsServices")(ecsServices.asInstanceOf[js.Any])
+    if (loadBalancerInfo != null) __obj.updateDynamic("loadBalancerInfo")(loadBalancerInfo.asInstanceOf[js.Any])
+    if (newDeploymentGroupName != null) __obj.updateDynamic("newDeploymentGroupName")(newDeploymentGroupName.asInstanceOf[js.Any])
+    if (onPremisesInstanceTagFilters != null) __obj.updateDynamic("onPremisesInstanceTagFilters")(onPremisesInstanceTagFilters.asInstanceOf[js.Any])
+    if (onPremisesTagSet != null) __obj.updateDynamic("onPremisesTagSet")(onPremisesTagSet.asInstanceOf[js.Any])
+    if (serviceRoleArn != null) __obj.updateDynamic("serviceRoleArn")(serviceRoleArn.asInstanceOf[js.Any])
+    if (triggerConfigurations != null) __obj.updateDynamic("triggerConfigurations")(triggerConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDeploymentGroupInput]
   }
-  @scala.inline
-  implicit class UpdateDeploymentGroupInputOps[Self <: UpdateDeploymentGroupInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurrentDeploymentGroupName(value: DeploymentGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDeploymentGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAlarmConfiguration(value: AlarmConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarmConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarmConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoRollbackConfiguration(value: AutoRollbackConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRollbackConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRollbackConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRollbackConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScalingGroups(value: AutoScalingGroupNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlueGreenDeploymentConfiguration(value: BlueGreenDeploymentConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueGreenDeploymentConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlueGreenDeploymentConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueGreenDeploymentConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentConfigName(value: DeploymentConfigName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentConfigName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentStyle(value: DeploymentStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEc2TagFilters(value: EC2TagFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2TagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEc2TagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2TagFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEc2TagSet(value: EC2TagSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2TagSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEc2TagSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2TagSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEcsServices(value: ECSServiceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecsServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEcsServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ecsServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerInfo(value: LoadBalancerInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancerInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewDeploymentGroupName(value: DeploymentGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeploymentGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewDeploymentGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeploymentGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPremisesInstanceTagFilters(value: TagFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesInstanceTagFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPremisesInstanceTagFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesInstanceTagFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPremisesTagSet(value: OnPremisesTagSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesTagSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnPremisesTagSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesTagSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceRoleArn(value: Role): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTriggerConfigurations(value: TriggerConfigList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

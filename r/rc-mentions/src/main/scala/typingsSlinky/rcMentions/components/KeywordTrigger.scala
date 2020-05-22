@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMentions.keywordTriggerMod.KeywordTriggerProps
 import typingsSlinky.rcMentions.keywordTriggerMod.default
+import typingsSlinky.rcMentions.mentionsMod.Direction
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import typingsSlinky.rcMentions.optionMod.OptionProps
 import scala.scalajs.js
@@ -20,6 +21,8 @@ object KeywordTrigger {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def direction(value: Direction): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
     def getPopupContainer(value: () => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction0(value))
     @scala.inline

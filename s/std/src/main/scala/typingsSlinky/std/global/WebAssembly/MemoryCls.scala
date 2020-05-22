@@ -10,5 +10,9 @@ import scala.scalajs.js.annotation._
 class MemoryCls protected ()
   extends typingsSlinky.std.WebAssembly.Memory {
   def this(descriptor: MemoryDescriptor) = this()
+  /* CompleteClass */
+  override val buffer: js.typedarray.ArrayBuffer = js.native
+  /* CompleteClass */
+  override def grow(delta: Double): Double = js.native
 }
 

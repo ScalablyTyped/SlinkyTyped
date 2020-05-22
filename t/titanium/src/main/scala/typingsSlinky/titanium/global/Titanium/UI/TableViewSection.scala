@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * A table view section is a container within a table used to organize table view rows.
-		 */
+  * A table view section is a container within a table used to organize table view rows.
+  */
 @JSGlobal("Titanium.UI.TableViewSection")
 @js.native
 class TableViewSection ()

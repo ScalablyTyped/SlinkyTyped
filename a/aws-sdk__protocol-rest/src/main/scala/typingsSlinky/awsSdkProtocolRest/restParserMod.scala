@@ -1,5 +1,8 @@
 package typingsSlinky.awsSdkProtocolRest
 
+import typingsSlinky.awsSdkTypes.httpMod.HttpResponse
+import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
+import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.unmarshallerMod.BodyParser
 import typingsSlinky.awsSdkTypes.unmarshallerMod.ResponseParser
 import typingsSlinky.awsSdkTypes.unmarshallerMod.ServiceExceptionParser
@@ -35,6 +38,15 @@ object restParserMod extends js.Object {
     var resolveBodyString: js.Any = js.native
     var responseIsSuccessful: js.Any = js.native
     val utf8Encoder: js.Any = js.native
+    /**
+      * Converts the output of an operation into JavaScript types.
+      *
+      * @param operation The operation model describing the structure of the HTTP
+      *                  response received
+      * @param input     The HTTP response received from the service
+      */
+    /* CompleteClass */
+    override def parse[OutputType /* <: MetadataBearer */](operation: OperationModel, input: HttpResponse[StreamType]): js.Promise[OutputType] = js.native
   }
   
 }

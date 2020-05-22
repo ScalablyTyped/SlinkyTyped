@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * @see https://developer.knuddels.de/docs/classes/UserPersistenceObjects.html
-	 */
+  * @see https://developer.knuddels.de/docs/classes/UserPersistenceObjects.html
+  */
 @JSGlobal("UserPersistenceObjects")
 @js.native
 class UserPersistenceObjects () extends js.Object
@@ -16,14 +16,14 @@ class UserPersistenceObjects () extends js.Object
 @js.native
 object UserPersistenceObjects extends js.Object {
   /**
-  		 * @see https://developer.knuddels.de/docs/classes/UserPersistenceObjects.html#method_deleteAll
-  		 * @since AppServer 82478
-  		 */
+    * @see https://developer.knuddels.de/docs/classes/UserPersistenceObjects.html#method_deleteAll
+    * @since AppServer 82478
+    */
   def deleteAll(key: java.lang.String): Double = js.native
   /**
-  		 * @see https://developer.knuddels.de/docs/classes/UserPersistenceObjects.html#method_getAllKeys
-  		 * @since AppServer 82483
-  		 */
+    * @see https://developer.knuddels.de/docs/classes/UserPersistenceObjects.html#method_getAllKeys
+    * @since AppServer 82483
+    */
   def getAllKeys(): js.Array[java.lang.String] = js.native
   def getAllKeys(filterKey: java.lang.String): js.Array[java.lang.String] = js.native
 }

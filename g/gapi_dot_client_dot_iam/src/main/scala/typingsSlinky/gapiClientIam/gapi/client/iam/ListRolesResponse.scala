@@ -4,54 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListRolesResponse extends js.Object {
   /**
     * To retrieve the next page of results, set
     * `ListRolesRequest.page_token` to this value.
     */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** The Roles defined on this resource. */
-  var roles: js.UndefOr[js.Array[Role]] = js.native
+  var roles: js.UndefOr[js.Array[Role]] = js.undefined
 }
 
 object ListRolesResponse {
   @scala.inline
-  def apply(): ListRolesResponse = {
+  def apply(nextPageToken: String = null, roles: js.Array[Role] = null): ListRolesResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (roles != null) __obj.updateDynamic("roles")(roles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRolesResponse]
   }
-  @scala.inline
-  implicit class ListRolesResponseOps[Self <: ListRolesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoles(value: js.Array[Role]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

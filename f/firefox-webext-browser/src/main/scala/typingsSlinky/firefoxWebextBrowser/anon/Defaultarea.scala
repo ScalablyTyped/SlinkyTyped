@@ -7,103 +7,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Defaultarea extends js.Object {
-  var browser_style: js.UndefOr[Boolean] = js.native
+  var browser_style: js.UndefOr[Boolean] = js.undefined
   /** Defines the location the browserAction will appear by default. The default location is navbar. */
-  var default_area: js.UndefOr[WebExtensionManifestBrowserActionDefaultArea] = js.native
-  var default_icon: js.UndefOr[IconPath] = js.native
-  var default_popup: js.UndefOr[String] = js.native
-  var default_title: js.UndefOr[String] = js.native
+  var default_area: js.UndefOr[WebExtensionManifestBrowserActionDefaultArea] = js.undefined
+  var default_icon: js.UndefOr[IconPath] = js.undefined
+  var default_popup: js.UndefOr[String] = js.undefined
+  var default_title: js.UndefOr[String] = js.undefined
   /** Specifies icons to use for dark and light themes */
-  var theme_icons: js.UndefOr[js.Array[ThemeIcons]] = js.native
+  var theme_icons: js.UndefOr[js.Array[ThemeIcons]] = js.undefined
 }
 
 object Defaultarea {
   @scala.inline
-  def apply(): Defaultarea = {
+  def apply(
+    browser_style: js.UndefOr[Boolean] = js.undefined,
+    default_area: WebExtensionManifestBrowserActionDefaultArea = null,
+    default_icon: IconPath = null,
+    default_popup: String = null,
+    default_title: String = null,
+    theme_icons: js.Array[ThemeIcons] = null
+  ): Defaultarea = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(browser_style)) __obj.updateDynamic("browser_style")(browser_style.get.asInstanceOf[js.Any])
+    if (default_area != null) __obj.updateDynamic("default_area")(default_area.asInstanceOf[js.Any])
+    if (default_icon != null) __obj.updateDynamic("default_icon")(default_icon.asInstanceOf[js.Any])
+    if (default_popup != null) __obj.updateDynamic("default_popup")(default_popup.asInstanceOf[js.Any])
+    if (default_title != null) __obj.updateDynamic("default_title")(default_title.asInstanceOf[js.Any])
+    if (theme_icons != null) __obj.updateDynamic("theme_icons")(theme_icons.asInstanceOf[js.Any])
     __obj.asInstanceOf[Defaultarea]
   }
-  @scala.inline
-  implicit class DefaultareaOps[Self <: Defaultarea] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBrowser_style(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrowser_style: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_area(value: WebExtensionManifestBrowserActionDefaultArea): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_area")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_area: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_area")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_icon(value: IconPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_icon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_popup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_popup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_popup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_popup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_title(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_title: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme_icons(value: js.Array[ThemeIcons]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme_icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme_icons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme_icons")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

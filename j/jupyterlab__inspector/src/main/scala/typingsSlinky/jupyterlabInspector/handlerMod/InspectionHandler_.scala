@@ -48,6 +48,14 @@ class InspectionHandler_ protected () extends IDisposable {
     */
   val inspected: ISignal[_ | InspectionHandler, IInspectorUpdate] = js.native
   /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
+  /**
     * Indicates whether the handler makes API inspection requests or stands by.
     *
     * #### Notes
@@ -55,6 +63,19 @@ class InspectionHandler_ protected () extends IDisposable {
     * inspector is visible.
     */
   var standby: Boolean = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Handle a text changed signal from an editor.
     *

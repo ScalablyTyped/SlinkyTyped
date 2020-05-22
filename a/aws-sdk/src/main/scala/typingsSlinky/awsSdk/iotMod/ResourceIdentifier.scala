@@ -42,113 +42,26 @@ trait ResourceIdentifier extends js.Object {
 
 object ResourceIdentifier {
   @scala.inline
-  def apply(): ResourceIdentifier = {
+  def apply(
+    account: AwsAccountId = null,
+    caCertificateId: CertificateId = null,
+    clientId: ClientId = null,
+    cognitoIdentityPoolId: CognitoIdentityPoolId = null,
+    deviceCertificateId: CertificateId = null,
+    iamRoleArn: RoleArn = null,
+    policyVersionIdentifier: PolicyVersionIdentifier = null,
+    roleAliasArn: RoleAliasArn = null
+  ): ResourceIdentifier = {
     val __obj = js.Dynamic.literal()
+    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
+    if (caCertificateId != null) __obj.updateDynamic("caCertificateId")(caCertificateId.asInstanceOf[js.Any])
+    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
+    if (cognitoIdentityPoolId != null) __obj.updateDynamic("cognitoIdentityPoolId")(cognitoIdentityPoolId.asInstanceOf[js.Any])
+    if (deviceCertificateId != null) __obj.updateDynamic("deviceCertificateId")(deviceCertificateId.asInstanceOf[js.Any])
+    if (iamRoleArn != null) __obj.updateDynamic("iamRoleArn")(iamRoleArn.asInstanceOf[js.Any])
+    if (policyVersionIdentifier != null) __obj.updateDynamic("policyVersionIdentifier")(policyVersionIdentifier.asInstanceOf[js.Any])
+    if (roleAliasArn != null) __obj.updateDynamic("roleAliasArn")(roleAliasArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceIdentifier]
   }
-  @scala.inline
-  implicit class ResourceIdentifierOps[Self <: ResourceIdentifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount(value: AwsAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaCertificateId(value: CertificateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaCertificateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientId(value: ClientId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCognitoIdentityPoolId(value: CognitoIdentityPoolId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoIdentityPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCognitoIdentityPoolId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoIdentityPoolId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceCertificateId(value: CertificateId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCertificateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceCertificateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCertificateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamRoleArn(value: RoleArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyVersionIdentifier(value: PolicyVersionIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyVersionIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyVersionIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyVersionIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleAliasArn(value: RoleAliasArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleAliasArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleAliasArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleAliasArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

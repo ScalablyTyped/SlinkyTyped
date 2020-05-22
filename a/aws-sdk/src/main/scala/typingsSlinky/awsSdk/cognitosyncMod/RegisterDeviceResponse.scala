@@ -14,29 +14,10 @@ trait RegisterDeviceResponse extends js.Object {
 
 object RegisterDeviceResponse {
   @scala.inline
-  def apply(): RegisterDeviceResponse = {
+  def apply(DeviceId: DeviceId = null): RegisterDeviceResponse = {
     val __obj = js.Dynamic.literal()
+    if (DeviceId != null) __obj.updateDynamic("DeviceId")(DeviceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterDeviceResponse]
   }
-  @scala.inline
-  implicit class RegisterDeviceResponseOps[Self <: RegisterDeviceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: DeviceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

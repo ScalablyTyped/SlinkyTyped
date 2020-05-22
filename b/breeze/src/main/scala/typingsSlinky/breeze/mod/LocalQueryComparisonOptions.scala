@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation._
 class LocalQueryComparisonOptions protected ()
   extends typingsSlinky.breeze.breeze.LocalQueryComparisonOptions {
   def this(config: IsCaseSensitive) = this()
+  /* CompleteClass */
+  override def setAsDefault(): Unit = js.native
 }
 
 /* static members */

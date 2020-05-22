@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A structure for content events. */
-@js.native
 trait ContentEvent extends EventObject {
   /**
     * The action.
     *
     * The value can be one of the {@link ContentAction} constants.
     */
-  var Action: Double = js.native
+  var Action: Double
   /**
     * The content to that the action is related (e.g., the content that was just physically destroyed, the content that was just inserted into a folder
     * content).
@@ -23,7 +22,7 @@ trait ContentEvent extends EventObject {
     *
     * {{table here, see documentation}}
     */
-  var Content: XContent = js.native
+  var Content: XContent
   /**
     * A content identifier, which must be filled according to the action notified (e.g., the id of the folder content into which another content was
     * inserted).
@@ -32,7 +31,7 @@ trait ContentEvent extends EventObject {
     *
     * {{table here, see documentation}}
     */
-  var Id: XContentIdentifier = js.native
+  var Id: XContentIdentifier
 }
 
 object ContentEvent {
@@ -41,31 +40,5 @@ object ContentEvent {
     val __obj = js.Dynamic.literal(Action = Action.asInstanceOf[js.Any], Content = Content.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentEvent]
   }
-  @scala.inline
-  implicit class ContentEventOps[Self <: ContentEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContent(value: XContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: XContentIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

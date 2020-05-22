@@ -4,36 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SProps extends BaseProps {
-  var `type`: js.UndefOr[sType | js.Array[sType]] = js.native
+  var `type`: js.UndefOr[sType | js.Array[sType]] = js.undefined
 }
 
 object SProps {
   @scala.inline
-  def apply(): SProps = {
+  def apply(
+    bgColor: String = null,
+    bgDarken: js.UndefOr[Double] = js.undefined,
+    bgImage: String = null,
+    bold: js.UndefOr[Boolean] = js.undefined,
+    caps: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    italic: js.UndefOr[Boolean] = js.undefined,
+    margin: Double | String = null,
+    padding: Double | String = null,
+    style: CSSProperties = null,
+    textAlign: String = null,
+    textColor: String = null,
+    textFont: String = null,
+    textSize: String = null,
+    `type`: sType | js.Array[sType] = null
+  ): SProps = {
     val __obj = js.Dynamic.literal()
+    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(bgDarken)) __obj.updateDynamic("bgDarken")(bgDarken.get.asInstanceOf[js.Any])
+    if (bgImage != null) __obj.updateDynamic("bgImage")(bgImage.asInstanceOf[js.Any])
+    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(caps)) __obj.updateDynamic("caps")(caps.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(italic)) __obj.updateDynamic("italic")(italic.get.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
+    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
+    if (textFont != null) __obj.updateDynamic("textFont")(textFont.asInstanceOf[js.Any])
+    if (textSize != null) __obj.updateDynamic("textSize")(textSize.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SProps]
   }
-  @scala.inline
-  implicit class SPropsOps[Self <: SProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: sType | js.Array[sType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

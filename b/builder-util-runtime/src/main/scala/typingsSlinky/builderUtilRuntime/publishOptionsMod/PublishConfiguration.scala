@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PublishConfiguration extends js.Object {
   /**
     * The provider.
     */
-  val provider: PublishProvider = js.native
+  val provider: PublishProvider
   /**
     * Whether to publish auto update info files.
     *
@@ -18,86 +17,32 @@ trait PublishConfiguration extends js.Object {
     *
     * @default true
     */
-  val publishAutoUpdate: js.UndefOr[Boolean] = js.native
+  val publishAutoUpdate: js.UndefOr[Boolean] = js.undefined
   /**
     * @private
     * win-only
     */
-  var publisherName: js.UndefOr[js.Array[String] | Null] = js.native
+  var publisherName: js.UndefOr[js.Array[String] | Null] = js.undefined
   /**
     * @private
     * win-only
     */
-  val updaterCacheDirName: js.UndefOr[String | Null] = js.native
+  val updaterCacheDirName: js.UndefOr[String | Null] = js.undefined
 }
 
 object PublishConfiguration {
   @scala.inline
-  def apply(provider: PublishProvider): PublishConfiguration = {
+  def apply(
+    provider: PublishProvider,
+    publishAutoUpdate: js.UndefOr[Boolean] = js.undefined,
+    publisherName: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    updaterCacheDirName: js.UndefOr[Null | String] = js.undefined
+  ): PublishConfiguration = {
     val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
+    if (!js.isUndefined(publishAutoUpdate)) __obj.updateDynamic("publishAutoUpdate")(publishAutoUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(publisherName)) __obj.updateDynamic("publisherName")(publisherName.asInstanceOf[js.Any])
+    if (!js.isUndefined(updaterCacheDirName)) __obj.updateDynamic("updaterCacheDirName")(updaterCacheDirName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PublishConfiguration]
   }
-  @scala.inline
-  implicit class PublishConfigurationOps[Self <: PublishConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvider(value: PublishProvider): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublishAutoUpdate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishAutoUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublishAutoUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishAutoUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublisherName(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublisherName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublisherNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherName")(null)
-        ret
-    }
-    @scala.inline
-    def withUpdaterCacheDirName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updaterCacheDirName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdaterCacheDirName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updaterCacheDirName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdaterCacheDirNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updaterCacheDirName")(null)
-        ret
-    }
-  }
-  
 }
 

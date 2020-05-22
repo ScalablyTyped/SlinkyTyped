@@ -4,18 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationNodeCreationInformation extends ClientValueObject {
-  def get_asLastNode(): Boolean = js.native
-  def get_isExternal(): Boolean = js.native
-  def get_previousNode(): NavigationNode = js.native
-  def get_title(): String = js.native
-  def get_url(): String = js.native
-  def set_asLastNode(value: Boolean): Unit = js.native
-  def set_isExternal(value: Boolean): Unit = js.native
-  def set_previousNode(value: NavigationNode): Unit = js.native
-  def set_title(value: String): Unit = js.native
-  def set_url(value: String): Unit = js.native
+  def get_asLastNode(): Boolean
+  def get_isExternal(): Boolean
+  def get_previousNode(): NavigationNode
+  def get_title(): String
+  def get_url(): String
+  def set_asLastNode(value: Boolean): Unit
+  def set_isExternal(value: Boolean): Unit
+  def set_previousNode(value: NavigationNode): Unit
+  def set_title(value: String): Unit
+  def set_url(value: String): Unit
 }
 
 object NavigationNodeCreationInformation {
@@ -40,73 +39,5 @@ object NavigationNodeCreationInformation {
     val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_asLastNode = js.Any.fromFunction0(get_asLastNode), get_isExternal = js.Any.fromFunction0(get_isExternal), get_previousNode = js.Any.fromFunction0(get_previousNode), get_title = js.Any.fromFunction0(get_title), get_typeId = js.Any.fromFunction0(get_typeId), get_url = js.Any.fromFunction0(get_url), set_asLastNode = js.Any.fromFunction1(set_asLastNode), set_isExternal = js.Any.fromFunction1(set_isExternal), set_previousNode = js.Any.fromFunction1(set_previousNode), set_title = js.Any.fromFunction1(set_title), set_url = js.Any.fromFunction1(set_url), writeToXml = js.Any.fromFunction2(writeToXml))
     __obj.asInstanceOf[NavigationNodeCreationInformation]
   }
-  @scala.inline
-  implicit class NavigationNodeCreationInformationOps[Self <: NavigationNodeCreationInformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_asLastNode(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_asLastNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_isExternal(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_isExternal")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_previousNode(value: () => NavigationNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_previousNode")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_title(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_title")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_url(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_url")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSet_asLastNode(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_asLastNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_isExternal(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_isExternal")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_previousNode(value: NavigationNode => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_previousNode")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_title(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_title")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet_url(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set_url")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

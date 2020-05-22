@@ -24,7 +24,7 @@ trait BindingCollection extends ClientObject {
   var context_BindingCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of bindings in the collection. Read-only.
+    * Returns the number of bindings in the collection.
     *
     * [Api set: ExcelApi 1.1]
     */

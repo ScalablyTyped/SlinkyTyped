@@ -8,12 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** makes it possible to receive keyboard events. */
-@js.native
 trait XKeyListener extends XEventListener {
   /** is invoked when a key has been pressed. */
-  def keyPressed(e: KeyEvent): Unit = js.native
+  def keyPressed(e: KeyEvent): Unit
   /** is invoked when a key has been released. */
-  def keyReleased(e: KeyEvent): Unit = js.native
+  def keyReleased(e: KeyEvent): Unit
 }
 
 object XKeyListener {
@@ -29,25 +28,5 @@ object XKeyListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), keyPressed = js.Any.fromFunction1(keyPressed), keyReleased = js.Any.fromFunction1(keyReleased), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XKeyListener]
   }
-  @scala.inline
-  implicit class XKeyListenerOps[Self <: XKeyListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyPressed(value: KeyEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressed")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withKeyReleased(value: KeyEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyReleased")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

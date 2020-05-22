@@ -24,41 +24,11 @@ trait SchemaBatchGetAmpUrlsResponse extends js.Object {
 
 object SchemaBatchGetAmpUrlsResponse {
   @scala.inline
-  def apply(): SchemaBatchGetAmpUrlsResponse = {
+  def apply(ampUrls: js.Array[SchemaAmpUrl] = null, urlErrors: js.Array[SchemaAmpUrlError] = null): SchemaBatchGetAmpUrlsResponse = {
     val __obj = js.Dynamic.literal()
+    if (ampUrls != null) __obj.updateDynamic("ampUrls")(ampUrls.asInstanceOf[js.Any])
+    if (urlErrors != null) __obj.updateDynamic("urlErrors")(urlErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchGetAmpUrlsResponse]
   }
-  @scala.inline
-  implicit class SchemaBatchGetAmpUrlsResponseOps[Self <: SchemaBatchGetAmpUrlsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmpUrls(value: js.Array[SchemaAmpUrl]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ampUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmpUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ampUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrlErrors(value: js.Array[SchemaAmpUrlError]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrlErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urlErrors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

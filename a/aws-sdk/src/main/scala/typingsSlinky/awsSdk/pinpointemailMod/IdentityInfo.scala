@@ -22,53 +22,16 @@ trait IdentityInfo extends js.Object {
 
 object IdentityInfo {
   @scala.inline
-  def apply(): IdentityInfo = {
+  def apply(
+    IdentityName: Identity = null,
+    IdentityType: IdentityType = null,
+    SendingEnabled: js.UndefOr[Enabled] = js.undefined
+  ): IdentityInfo = {
     val __obj = js.Dynamic.literal()
+    if (IdentityName != null) __obj.updateDynamic("IdentityName")(IdentityName.asInstanceOf[js.Any])
+    if (IdentityType != null) __obj.updateDynamic("IdentityType")(IdentityType.asInstanceOf[js.Any])
+    if (!js.isUndefined(SendingEnabled)) __obj.updateDynamic("SendingEnabled")(SendingEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityInfo]
   }
-  @scala.inline
-  implicit class IdentityInfoOps[Self <: IdentityInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityName(value: Identity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentityType(value: IdentityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSendingEnabled(value: Enabled): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSendingEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SendingEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait DeleteStackInput extends js.Object {
 
 object DeleteStackInput {
   @scala.inline
-  def apply(StackName: StackName): DeleteStackInput = {
+  def apply(
+    StackName: StackName,
+    ClientRequestToken: ClientRequestToken = null,
+    RetainResources: RetainResources = null,
+    RoleARN: RoleARN_ = null
+  ): DeleteStackInput = {
     val __obj = js.Dynamic.literal(StackName = StackName.asInstanceOf[js.Any])
+    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
+    if (RetainResources != null) __obj.updateDynamic("RetainResources")(RetainResources.asInstanceOf[js.Any])
+    if (RoleARN != null) __obj.updateDynamic("RoleARN")(RoleARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteStackInput]
   }
-  @scala.inline
-  implicit class DeleteStackInputOps[Self <: DeleteStackInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStackName(value: StackName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetainResources(value: RetainResources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainResources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetainResources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RetainResources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleARN(value: RoleARN_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

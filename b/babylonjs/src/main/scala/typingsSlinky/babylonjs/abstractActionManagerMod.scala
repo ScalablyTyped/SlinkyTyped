@@ -23,6 +23,11 @@ object abstractActionManagerMod extends js.Object {
       */
     var isRecursive: Boolean = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Does this action manager has pick triggers
       */
     def hasPickTriggers: Boolean = js.native

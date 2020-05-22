@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A collection of one or more TableCell instances.
   */
-@js.native
 trait TableCellRange extends js.Object {
-  def getTableCells(): js.Array[TableCell] = js.native
+  def getTableCells(): js.Array[TableCell]
 }
 
 object TableCellRange {
@@ -18,19 +17,5 @@ object TableCellRange {
     val __obj = js.Dynamic.literal(getTableCells = js.Any.fromFunction0(getTableCells))
     __obj.asInstanceOf[TableCellRange]
   }
-  @scala.inline
-  implicit class TableCellRangeOps[Self <: TableCellRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetTableCells(value: () => js.Array[TableCell]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTableCells")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

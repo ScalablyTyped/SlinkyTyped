@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait KiiACLSubject extends js.Object
 
-object KiiACLSubject {
-  @scala.inline
-  implicit def apply(value: KiiAnonymousUser): KiiACLSubject = value.asInstanceOf[KiiACLSubject]
-  @scala.inline
-  implicit def apply(value: KiiAnyAuthenticatedUser): KiiACLSubject = value.asInstanceOf[KiiACLSubject]
-  @scala.inline
-  implicit def apply(value: KiiGroup): KiiACLSubject = value.asInstanceOf[KiiACLSubject]
-  @scala.inline
-  implicit def apply(value: KiiThing): KiiACLSubject = value.asInstanceOf[KiiACLSubject]
-  @scala.inline
-  implicit def apply(value: KiiUser): KiiACLSubject = value.asInstanceOf[KiiACLSubject]
-}
-

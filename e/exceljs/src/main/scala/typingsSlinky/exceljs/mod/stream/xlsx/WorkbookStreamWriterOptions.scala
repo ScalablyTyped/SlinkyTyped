@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkbookStreamWriterOptions extends WorkbookWriterOptions {
   /**
     * Specifies whether to add style information to the workbook.
     * Styles can add some performance overhead. Default is false
     */
-  var zip: PartialArchiverZipOptions = js.native
+  var zip: PartialArchiverZipOptions
 }
 
 object WorkbookStreamWriterOptions {
@@ -27,19 +26,5 @@ object WorkbookStreamWriterOptions {
     val __obj = js.Dynamic.literal(filename = filename.asInstanceOf[js.Any], stream = stream.asInstanceOf[js.Any], useSharedStrings = useSharedStrings.asInstanceOf[js.Any], useStyles = useStyles.asInstanceOf[js.Any], zip = zip.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookStreamWriterOptions]
   }
-  @scala.inline
-  implicit class WorkbookStreamWriterOptionsOps[Self <: WorkbookStreamWriterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withZip(value: PartialArchiverZipOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zip")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

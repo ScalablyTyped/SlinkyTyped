@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StackFrame extends js.Object {
   /**
     * The location to which this stack frame refers.
     */
-  var location: js.UndefOr[Location] = js.native
+  var location: js.UndefOr[Location] = js.undefined
   /**
     * The name of the module that contains the code of this stack frame.
     */
-  var module: js.UndefOr[String] = js.native
+  var module: js.UndefOr[String] = js.undefined
   /**
     * The parameters of the call that is executing.
     */
-  var parameters: js.UndefOr[js.Array[String]] = js.native
+  var parameters: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Key/value pairs that provide additional information about the stack frame.
     */
-  var properties: js.UndefOr[PropertyBag] = js.native
+  var properties: js.UndefOr[PropertyBag] = js.undefined
   /**
     * The thread identifier of the stack frame.
     */
-  var threadId: js.UndefOr[Double] = js.native
+  var threadId: js.UndefOr[Double] = js.undefined
 }
 
 object StackFrame {
   @scala.inline
-  def apply(): StackFrame = {
+  def apply(
+    location: Location = null,
+    module: String = null,
+    parameters: js.Array[String] = null,
+    properties: PropertyBag = null,
+    threadId: js.UndefOr[Double] = js.undefined
+  ): StackFrame = {
     val __obj = js.Dynamic.literal()
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (module != null) __obj.updateDynamic("module")(module.asInstanceOf[js.Any])
+    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (!js.isUndefined(threadId)) __obj.updateDynamic("threadId")(threadId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackFrame]
   }
-  @scala.inline
-  implicit class StackFrameOps[Self <: StackFrame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocation(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModule(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("module")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: PropertyBag): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreadId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

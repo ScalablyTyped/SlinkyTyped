@@ -22,47 +22,11 @@ trait UpdateGroupRequest extends js.Object {
 
 object UpdateGroupRequest {
   @scala.inline
-  def apply(GroupName: groupNameType): UpdateGroupRequest = {
+  def apply(GroupName: groupNameType, NewGroupName: groupNameType = null, NewPath: pathType = null): UpdateGroupRequest = {
     val __obj = js.Dynamic.literal(GroupName = GroupName.asInstanceOf[js.Any])
+    if (NewGroupName != null) __obj.updateDynamic("NewGroupName")(NewGroupName.asInstanceOf[js.Any])
+    if (NewPath != null) __obj.updateDynamic("NewPath")(NewPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateGroupRequest]
   }
-  @scala.inline
-  implicit class UpdateGroupRequestOps[Self <: UpdateGroupRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupName(value: groupNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewGroupName(value: groupNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewPath(value: pathType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

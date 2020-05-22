@@ -18,41 +18,11 @@ trait SchemaLiveStreamStatus extends js.Object {
 
 object SchemaLiveStreamStatus {
   @scala.inline
-  def apply(): SchemaLiveStreamStatus = {
+  def apply(healthStatus: SchemaLiveStreamHealthStatus = null, streamStatus: String = null): SchemaLiveStreamStatus = {
     val __obj = js.Dynamic.literal()
+    if (healthStatus != null) __obj.updateDynamic("healthStatus")(healthStatus.asInstanceOf[js.Any])
+    if (streamStatus != null) __obj.updateDynamic("streamStatus")(streamStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveStreamStatus]
   }
-  @scala.inline
-  implicit class SchemaLiveStreamStatusOps[Self <: SchemaLiveStreamStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHealthStatus(value: SchemaLiveStreamHealthStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,103 +7,45 @@ import scala.scalajs.js.annotation._
 /**
   * Used by ListView's currentItem API
   **/
-@js.native
 trait IListViewItem extends js.Object {
   /**
     * Gets or sets whether the ListView item is focused.
     **/
-  var hasFocus: js.UndefOr[Boolean] = js.native
+  var hasFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Gets or sets index of the ListView item.
     **/
-  var index: js.UndefOr[Double] = js.native
+  var index: js.UndefOr[Double] = js.undefined
   /**
     * Gets or sets key of the ListView item.
     **/
-  var key: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.undefined
   /**
     * Gets or sets whether the ListView item is focused and is showing its focus visual.
     **/
-  var showFocus: js.UndefOr[Boolean] = js.native
+  var showFocus: js.UndefOr[Boolean] = js.undefined
   /**
     * Gets the type, if any.
     **/
-  var `type`: js.UndefOr[ObjectType] = js.native
+  var `type`: js.UndefOr[ObjectType] = js.undefined
 }
 
 object IListViewItem {
   @scala.inline
-  def apply(): IListViewItem = {
+  def apply(
+    hasFocus: js.UndefOr[Boolean] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    key: String = null,
+    showFocus: js.UndefOr[Boolean] = js.undefined,
+    `type`: ObjectType = null
+  ): IListViewItem = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(hasFocus)) __obj.updateDynamic("hasFocus")(hasFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(showFocus)) __obj.updateDynamic("showFocus")(showFocus.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IListViewItem]
   }
-  @scala.inline
-  implicit class IListViewItemOps[Self <: IListViewItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: ObjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

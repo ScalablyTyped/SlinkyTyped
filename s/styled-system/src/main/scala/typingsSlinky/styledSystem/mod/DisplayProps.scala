@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisplayProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Object {
   /**
     * The display CSS property defines the display type of an element, which consists of the two basic qualities
@@ -14,40 +13,15 @@ trait DisplayProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Obj
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
     */
-  var display: js.UndefOr[ResponsiveValue[DisplayProperty, ThemeType]] = js.native
+  var display: js.UndefOr[ResponsiveValue[DisplayProperty, ThemeType]] = js.undefined
 }
 
 object DisplayProps {
   @scala.inline
-  def apply[ThemeType](): DisplayProps[ThemeType] = {
+  def apply[ThemeType](display: js.UndefOr[Null | (ResponsiveValue[DisplayProperty, ThemeType])] = js.undefined): DisplayProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(display)) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayProps[ThemeType]]
   }
-  @scala.inline
-  implicit class DisplayPropsOps[Self[themetype] <: DisplayProps[themetype], ThemeType] (val x: Self[ThemeType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ThemeType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ThemeType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ThemeType] with Other]
-    @scala.inline
-    def withDisplay(value: ResponsiveValue[DisplayProperty, ThemeType]): Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayNull: Self[ThemeType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(null)
-        ret
-    }
-  }
-  
 }
 

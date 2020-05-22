@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
-  var selectedSegmentIndex: Double = js.native
-  var value: String = js.native
+  var selectedSegmentIndex: Double
+  var value: String
 }
 
 object NativeSegmentedControlIOSChangeEvent {
@@ -16,25 +15,5 @@ object NativeSegmentedControlIOSChangeEvent {
     val __obj = js.Dynamic.literal(selectedSegmentIndex = selectedSegmentIndex.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[NativeSegmentedControlIOSChangeEvent]
   }
-  @scala.inline
-  implicit class NativeSegmentedControlIOSChangeEventOps[Self <: NativeSegmentedControlIOSChangeEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectedSegmentIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedSegmentIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -17,29 +17,10 @@ trait SchemaCustomSourceLocation extends js.Object {
 
 object SchemaCustomSourceLocation {
   @scala.inline
-  def apply(): SchemaCustomSourceLocation = {
+  def apply(stateful: js.UndefOr[Boolean] = js.undefined): SchemaCustomSourceLocation = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(stateful)) __obj.updateDynamic("stateful")(stateful.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomSourceLocation]
   }
-  @scala.inline
-  implicit class SchemaCustomSourceLocationOps[Self <: SchemaCustomSourceLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStateful(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateful")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateful: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateful")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

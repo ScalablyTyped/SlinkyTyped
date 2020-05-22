@@ -25,99 +25,33 @@ trait CreateFlowRequest extends js.Object {
   var Source: js.UndefOr[SetSourceRequest] = js.native
   var SourceFailoverConfig: js.UndefOr[FailoverConfig] = js.native
   var Sources: js.UndefOr[listOfSetSourceRequest] = js.native
+  /**
+    * The VPC interfaces you want on the flow.
+    */
+  var VpcInterfaces: js.UndefOr[listOfVpcInterfaceRequest] = js.native
 }
 
 object CreateFlowRequest {
   @scala.inline
-  def apply(Name: string): CreateFlowRequest = {
+  def apply(
+    Name: string,
+    AvailabilityZone: string = null,
+    Entitlements: listOfGrantEntitlementRequest = null,
+    Outputs: listOfAddOutputRequest = null,
+    Source: SetSourceRequest = null,
+    SourceFailoverConfig: FailoverConfig = null,
+    Sources: listOfSetSourceRequest = null,
+    VpcInterfaces: listOfVpcInterfaceRequest = null
+  ): CreateFlowRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (Entitlements != null) __obj.updateDynamic("Entitlements")(Entitlements.asInstanceOf[js.Any])
+    if (Outputs != null) __obj.updateDynamic("Outputs")(Outputs.asInstanceOf[js.Any])
+    if (Source != null) __obj.updateDynamic("Source")(Source.asInstanceOf[js.Any])
+    if (SourceFailoverConfig != null) __obj.updateDynamic("SourceFailoverConfig")(SourceFailoverConfig.asInstanceOf[js.Any])
+    if (Sources != null) __obj.updateDynamic("Sources")(Sources.asInstanceOf[js.Any])
+    if (VpcInterfaces != null) __obj.updateDynamic("VpcInterfaces")(VpcInterfaces.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFlowRequest]
   }
-  @scala.inline
-  implicit class CreateFlowRequestOps[Self <: CreateFlowRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvailabilityZone(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntitlements(value: listOfGrantEntitlementRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entitlements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntitlements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Entitlements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputs(value: listOfAddOutputRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outputs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: SetSourceRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFailoverConfig(value: FailoverConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFailoverConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFailoverConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFailoverConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSources(value: listOfSetSourceRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

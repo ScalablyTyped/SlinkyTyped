@@ -29,7 +29,6 @@ import scala.scalajs.js.annotation._
   * //     signatureAlgorithm   AlgorithmIdentifier,
   * //     signatureValue       BIT STRING  }
   */
-@js.native
 trait CRL extends ASN1Object {
   /**
     * get PEM formatted CRL string after signed
@@ -39,14 +38,14 @@ trait CRL extends ASN1Object {
     * cert.sign();
     * var sPEM =  cert.getPEMString();
     */
-  def getPEMString(): String = js.native
+  def getPEMString(): String
   /**
     * sign TBSCertList and set signature value internally
     * @example
     * var cert = new KJUR.asn1.x509.CRL({'tbsobj': tbs, 'prvkeyobj': prvKey});
     * cert.sign();
     */
-  def sign(): Unit = js.native
+  def sign(): Unit
 }
 
 object CRL {
@@ -67,25 +66,5 @@ object CRL {
     val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getPEMString = js.Any.fromFunction0(getPEMString), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], sign = js.Any.fromFunction0(sign))
     __obj.asInstanceOf[CRL]
   }
-  @scala.inline
-  implicit class CRLOps[Self <: CRL] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetPEMString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPEMString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSign(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sign")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

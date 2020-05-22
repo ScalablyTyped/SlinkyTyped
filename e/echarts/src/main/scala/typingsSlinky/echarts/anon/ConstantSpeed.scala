@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConstantSpeed extends js.Object {
   /**
     * The color of special effect symbol, which defaults to be
@@ -15,7 +14,7 @@ trait ConstantSpeed extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.color
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.undefined
   /**
     * If symbol movement of special effect has a constant speed,
     * which unit is pixel per second.
@@ -25,7 +24,7 @@ trait ConstantSpeed extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.constantSpeed
     */
-  var constantSpeed: js.UndefOr[Double] = js.native
+  var constantSpeed: js.UndefOr[Double] = js.undefined
   /**
     * Effect animation delay.
     * Can be number or callback function.
@@ -33,7 +32,7 @@ trait ConstantSpeed extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.delay
     */
-  var delay: js.UndefOr[js.Function | Double] = js.native
+  var delay: js.UndefOr[js.Function | Double] = js.undefined
   /**
     * Whether to loop the special effect animation.
     *
@@ -42,7 +41,7 @@ trait ConstantSpeed extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.loop
     */
-  var loop: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.undefined
   /**
     * The duration of special effect, which unit is second.
     *
@@ -51,14 +50,14 @@ trait ConstantSpeed extends js.Object {
     * 4
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.period
     */
-  var period: js.UndefOr[Double] = js.native
+  var period: js.UndefOr[Double] = js.undefined
   /**
     * Whether to show special effect.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.show
     */
-  var show: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.undefined
   /**
     * The symbol of special effect.
     *
@@ -109,7 +108,7 @@ trait ConstantSpeed extends js.Object {
     * "circle"
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.symbol
     */
-  var symbol: js.UndefOr[String] = js.native
+  var symbol: js.UndefOr[String] = js.undefined
   /**
     * The symbol size of special effect, which could be set as
     * single number such as `10`.
@@ -123,7 +122,7 @@ trait ConstantSpeed extends js.Object {
     * 3
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
+  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.undefined
   /**
     * The length of trail of special effect.
     * The values from 0 to 1 could be set.
@@ -134,130 +133,33 @@ trait ConstantSpeed extends js.Object {
     * 0.2
     * @see https://echarts.apache.org/en/option.html#series-lines.effect.trailLength
     */
-  var trailLength: js.UndefOr[Double] = js.native
+  var trailLength: js.UndefOr[Double] = js.undefined
 }
 
 object ConstantSpeed {
   @scala.inline
-  def apply(): ConstantSpeed = {
+  def apply(
+    color: String = null,
+    constantSpeed: js.UndefOr[Double] = js.undefined,
+    delay: js.Function | Double = null,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    period: js.UndefOr[Double] = js.undefined,
+    show: js.UndefOr[Boolean] = js.undefined,
+    symbol: String = null,
+    symbolSize: js.Array[_] | Double = null,
+    trailLength: js.UndefOr[Double] = js.undefined
+  ): ConstantSpeed = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(constantSpeed)) __obj.updateDynamic("constantSpeed")(constantSpeed.get.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(period)) __obj.updateDynamic("period")(period.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
+    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
+    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(trailLength)) __obj.updateDynamic("trailLength")(trailLength.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConstantSpeed]
   }
-  @scala.inline
-  implicit class ConstantSpeedOps[Self <: ConstantSpeed] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstantSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constantSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstantSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constantSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelay(value: js.Function | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPeriod(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymbolSize(value: js.Array[_] | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymbolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrailLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrailLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trailLength")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

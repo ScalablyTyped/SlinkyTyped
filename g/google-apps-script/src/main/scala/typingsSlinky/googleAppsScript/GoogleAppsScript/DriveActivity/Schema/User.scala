@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait User extends js.Object {
-  var deletedUser: js.UndefOr[js.Any] = js.native
-  var knownUser: js.UndefOr[KnownUser] = js.native
-  var unknownUser: js.UndefOr[js.Any] = js.native
+  var deletedUser: js.UndefOr[js.Any] = js.undefined
+  var knownUser: js.UndefOr[KnownUser] = js.undefined
+  var unknownUser: js.UndefOr[js.Any] = js.undefined
 }
 
 object User {
   @scala.inline
-  def apply(): User = {
+  def apply(deletedUser: js.Any = null, knownUser: KnownUser = null, unknownUser: js.Any = null): User = {
     val __obj = js.Dynamic.literal()
+    if (deletedUser != null) __obj.updateDynamic("deletedUser")(deletedUser.asInstanceOf[js.Any])
+    if (knownUser != null) __obj.updateDynamic("knownUser")(knownUser.asInstanceOf[js.Any])
+    if (unknownUser != null) __obj.updateDynamic("unknownUser")(unknownUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
   }
-  @scala.inline
-  implicit class UserOps[Self <: User] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletedUser(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletedUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKnownUser(value: KnownUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("knownUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKnownUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("knownUser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknownUser(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownUser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknownUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownUser")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

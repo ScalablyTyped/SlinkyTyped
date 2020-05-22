@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServerStreamResponseOptions extends js.Object {
-  var endStream: js.UndefOr[Boolean] = js.native
-  var waitForTrailers: js.UndefOr[Boolean] = js.native
+  var endStream: js.UndefOr[Boolean] = js.undefined
+  var waitForTrailers: js.UndefOr[Boolean] = js.undefined
 }
 
 object ServerStreamResponseOptions {
   @scala.inline
-  def apply(): ServerStreamResponseOptions = {
+  def apply(endStream: js.UndefOr[Boolean] = js.undefined, waitForTrailers: js.UndefOr[Boolean] = js.undefined): ServerStreamResponseOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(endStream)) __obj.updateDynamic("endStream")(endStream.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitForTrailers)) __obj.updateDynamic("waitForTrailers")(waitForTrailers.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerStreamResponseOptions]
   }
-  @scala.inline
-  implicit class ServerStreamResponseOptionsOps[Self <: ServerStreamResponseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndStream(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitForTrailers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTrailers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitForTrailers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTrailers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

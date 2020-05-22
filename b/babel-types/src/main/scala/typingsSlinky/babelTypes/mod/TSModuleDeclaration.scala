@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TSModuleDeclaration
   extends Node
      with Declaration
      with Statement {
-  var body: TSModuleBlock | TSModuleDeclaration = js.native
-  var declare: Boolean | Null = js.native
-  var global: Boolean | Null = js.native
-  var id: Identifier_ | StringLiteral_ = js.native
+  var body: TSModuleBlock | TSModuleDeclaration
+  var declare: Boolean | Null
+  var global: Boolean | Null
+  var id: Identifier_ | StringLiteral_
   @JSName("type")
-  var type_TSModuleDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSModuleDeclaration = js.native
+  var type_TSModuleDeclaration: typingsSlinky.babelTypes.babelTypesStrings.TSModuleDeclaration
 }
 
 @JSImport("babel-types", "TSModuleDeclaration")

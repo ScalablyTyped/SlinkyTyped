@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SettingsOptions extends js.Object {
   /** Sets custom name for `dataLayer` array used by gtag. */
-  var dataLayerName: js.UndefOr[String] = js.native
+  var dataLayerName: js.UndefOr[String] = js.undefined
   /** Sets custom name for `gtag` function. */
-  var gtagName: js.UndefOr[String] = js.native
+  var gtagName: js.UndefOr[String] = js.undefined
 }
 
 object SettingsOptions {
   @scala.inline
-  def apply(): SettingsOptions = {
+  def apply(dataLayerName: String = null, gtagName: String = null): SettingsOptions = {
     val __obj = js.Dynamic.literal()
+    if (dataLayerName != null) __obj.updateDynamic("dataLayerName")(dataLayerName.asInstanceOf[js.Any])
+    if (gtagName != null) __obj.updateDynamic("gtagName")(gtagName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettingsOptions]
   }
-  @scala.inline
-  implicit class SettingsOptionsOps[Self <: SettingsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataLayerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLayerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataLayerName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLayerName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGtagName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtagName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGtagName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gtagName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

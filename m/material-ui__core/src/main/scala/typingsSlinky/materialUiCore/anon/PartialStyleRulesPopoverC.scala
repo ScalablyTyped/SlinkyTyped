@@ -13,29 +13,10 @@ trait PartialStyleRulesPopoverC extends js.Object {
 
 object PartialStyleRulesPopoverC {
   @scala.inline
-  def apply(): PartialStyleRulesPopoverC = {
+  def apply(paper: CSSProperties = null): PartialStyleRulesPopoverC = {
     val __obj = js.Dynamic.literal()
+    if (paper != null) __obj.updateDynamic("paper")(paper.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesPopoverC]
   }
-  @scala.inline
-  implicit class PartialStyleRulesPopoverCOps[Self <: PartialStyleRulesPopoverC] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPaper(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

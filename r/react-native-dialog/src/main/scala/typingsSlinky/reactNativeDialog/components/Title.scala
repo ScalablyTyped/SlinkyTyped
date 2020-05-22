@@ -12,7 +12,7 @@ object Title {
   @js.native
   object component extends js.Object
   
-  def withProps(p: TitleProps with ViewProps with TextProps): `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title] = new `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Title.type): `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title] = new `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: TitleProps with ViewProps with TextProps): SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.default.Title] = new SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.default.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Title.type): SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.default.Title] = new SharedBuilder_TitlePropsViewPropsTextProps_1344350995[typingsSlinky.reactNativeDialog.mod.default.Title](js.Array(this.component, js.Dictionary.empty))()
 }
 

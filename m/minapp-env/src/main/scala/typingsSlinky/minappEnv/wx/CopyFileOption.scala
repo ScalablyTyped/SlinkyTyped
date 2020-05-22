@@ -4,81 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CopyFileOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
-  var complete: js.UndefOr[CopyFileCompleteCallback] = js.native
+  var complete: js.UndefOr[CopyFileCompleteCallback] = js.undefined
   /** 目标文件路径 */
-  var destPath: String = js.native
+  var destPath: String
   /** 接口调用失败的回调函数 */
-  var fail: js.UndefOr[CopyFileFailCallback] = js.native
+  var fail: js.UndefOr[CopyFileFailCallback] = js.undefined
   /** 源文件路径，只可以是普通文件 */
-  var srcPath: String = js.native
+  var srcPath: String
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[CopyFileSuccessCallback] = js.native
+  var success: js.UndefOr[CopyFileSuccessCallback] = js.undefined
 }
 
 object CopyFileOption {
   @scala.inline
-  def apply(destPath: String, srcPath: String): CopyFileOption = {
+  def apply(
+    destPath: String,
+    srcPath: String,
+    complete: /* res */ GeneralCallbackResult => Unit = null,
+    fail: /* result */ CopyFileFailCallbackResult => Unit = null,
+    success: /* res */ GeneralCallbackResult => Unit = null
+  ): CopyFileOption = {
     val __obj = js.Dynamic.literal(destPath = destPath.asInstanceOf[js.Any], srcPath = srcPath.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[CopyFileOption]
   }
-  @scala.inline
-  implicit class CopyFileOptionOps[Self <: CopyFileOption] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrcPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComplete(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFail(value: /* result */ CopyFileFailCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutFail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

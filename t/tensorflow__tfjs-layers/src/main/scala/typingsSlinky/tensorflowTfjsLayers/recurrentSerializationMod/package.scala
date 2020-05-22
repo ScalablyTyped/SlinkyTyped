@@ -21,6 +21,8 @@ package object recurrentSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.LSTM, 
     typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.LSTMLayerConfig
   ]
+  type RNNCellSerialization = typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.SimpleRNNCellSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.GRUCellSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.LSTMCellSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.StackedRNNCellsSerialization
+  type RecurrentLayerSerialization = typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.SimpleRNNLayerSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.LSTMLayerSerialization | typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.GRULayerSerialization
   type SimpleRNNCellSerialization = typingsSlinky.tensorflowTfjsLayers.typesMod.BaseSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.SimpleRNNCell, 
     typingsSlinky.tensorflowTfjsLayers.recurrentSerializationMod.SimpleRNNCellConfig

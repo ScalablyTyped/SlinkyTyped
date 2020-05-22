@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-			 * The destructive style for <RowActionType>.
-			 */
+  * The destructive style for <RowActionType>.
+  */
 @JSGlobal("Titanium.UI.iOS.ROW_ACTION_STYLE_DESTRUCTIVE")
 @js.native
 object ROW_ACTION_STYLE_DESTRUCTIVE extends TopLevel[Double]

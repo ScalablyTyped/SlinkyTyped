@@ -14,16 +14,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<react-navigation-stack.react-navigation-stack/lib/typescript/views/StackView/StackViewCard.Props, 'style' | 'children' | 'scene' | 'navigation' | 'realPosition' | 'animatedStyle' | 'position' | 'transparent'> */
-@js.native
 trait PickPropsstylechildrensce extends js.Object {
-  var animatedStyle: js.Any = js.native
-  var children: TagMod[Any] = js.native
-  var navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams] = js.native
-  var position: AnimatedInterpolation = js.native
-  var realPosition: Value = js.native
-  var scene: Scene = js.native
-  var style: StyleProp[ViewStyle] = js.native
-  var transparent: js.UndefOr[Boolean] = js.native
+  var animatedStyle: js.Any
+  var children: TagMod[Any]
+  var navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]
+  var position: AnimatedInterpolation
+  var realPosition: Value
+  var scene: Scene
+  var style: StyleProp[ViewStyle]
+  var transparent: js.UndefOr[Boolean] = js.undefined
 }
 
 object PickPropsstylechildrensce {
@@ -33,90 +32,16 @@ object PickPropsstylechildrensce {
     navigation: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams],
     position: AnimatedInterpolation,
     realPosition: Value,
-    scene: Scene
+    scene: Scene,
+    children: TagMod[Any] = null,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    transparent: js.UndefOr[Boolean] = js.undefined
   ): PickPropsstylechildrensce = {
     val __obj = js.Dynamic.literal(animatedStyle = animatedStyle.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], realPosition = realPosition.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickPropsstylechildrensce]
   }
-  @scala.inline
-  implicit class PickPropsstylechildrensceOps[Self <: PickPropsstylechildrensce] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimatedStyle(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animatedStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavigation(value: NavigationStackProp[NavigationRoute[NavigationParams], NavigationParams]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: AnimatedInterpolation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRealPosition(value: Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScene(value: Scene): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withTransparent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransparent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transparent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

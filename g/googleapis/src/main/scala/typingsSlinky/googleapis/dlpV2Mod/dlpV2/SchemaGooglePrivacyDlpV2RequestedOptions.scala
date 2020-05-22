@@ -16,41 +16,14 @@ trait SchemaGooglePrivacyDlpV2RequestedOptions extends js.Object {
 
 object SchemaGooglePrivacyDlpV2RequestedOptions {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2RequestedOptions = {
+  def apply(
+    jobConfig: SchemaGooglePrivacyDlpV2InspectJobConfig = null,
+    snapshotInspectTemplate: SchemaGooglePrivacyDlpV2InspectTemplate = null
+  ): SchemaGooglePrivacyDlpV2RequestedOptions = {
     val __obj = js.Dynamic.literal()
+    if (jobConfig != null) __obj.updateDynamic("jobConfig")(jobConfig.asInstanceOf[js.Any])
+    if (snapshotInspectTemplate != null) __obj.updateDynamic("snapshotInspectTemplate")(snapshotInspectTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2RequestedOptions]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2RequestedOptionsOps[Self <: SchemaGooglePrivacyDlpV2RequestedOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobConfig(value: SchemaGooglePrivacyDlpV2InspectJobConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotInspectTemplate(value: SchemaGooglePrivacyDlpV2InspectTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotInspectTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotInspectTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotInspectTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

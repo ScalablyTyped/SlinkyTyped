@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SendMediaGroupOptions extends js.Object {
-  var disable_notification: js.UndefOr[Boolean] = js.native
-  var reply_to_message_id: js.UndefOr[Double] = js.native
+  var disable_notification: js.UndefOr[Boolean] = js.undefined
+  var reply_to_message_id: js.UndefOr[Double] = js.undefined
 }
 
 object SendMediaGroupOptions {
   @scala.inline
-  def apply(): SendMediaGroupOptions = {
+  def apply(
+    disable_notification: js.UndefOr[Boolean] = js.undefined,
+    reply_to_message_id: js.UndefOr[Double] = js.undefined
+  ): SendMediaGroupOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(disable_notification)) __obj.updateDynamic("disable_notification")(disable_notification.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(reply_to_message_id)) __obj.updateDynamic("reply_to_message_id")(reply_to_message_id.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendMediaGroupOptions]
   }
-  @scala.inline
-  implicit class SendMediaGroupOptionsOps[Self <: SendMediaGroupOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisable_notification(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_notification")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisable_notification: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disable_notification")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReply_to_message_id(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reply_to_message_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReply_to_message_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reply_to_message_id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

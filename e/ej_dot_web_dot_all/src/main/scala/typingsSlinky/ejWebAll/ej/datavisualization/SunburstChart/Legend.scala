@@ -8,242 +8,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Legend extends js.Object {
   /** Horizontal alignment of the legend.
     * @Default {Center. See Alignment}
     */
-  var alignment: js.UndefOr[SunburstAlignment | String] = js.native
+  var alignment: js.UndefOr[SunburstAlignment | String] = js.undefined
   /** Options for customizing the legend border.
     */
-  var border: js.UndefOr[LegendBorder] = js.native
+  var border: js.UndefOr[LegendBorder] = js.undefined
   /** Interactive action of legend items.
     * @Default {toggleSegmentVisibility. See Alignment}
     */
-  var clickAction: js.UndefOr[SunburstClickAction | String] = js.native
+  var clickAction: js.UndefOr[SunburstClickAction | String] = js.undefined
   /** Number of columns to arrange the legend items.
     * @Default {null}
     */
-  var columnCount: js.UndefOr[Double] = js.native
+  var columnCount: js.UndefOr[Double] = js.undefined
   /** Options to customize the font used for legend item text.
     */
-  var font: js.UndefOr[LegendFont] = js.native
+  var font: js.UndefOr[LegendFont] = js.undefined
   /** Gap or padding between the legend items.
     * @Default {10}
     */
-  var itemPadding: js.UndefOr[Double] = js.native
+  var itemPadding: js.UndefOr[Double] = js.undefined
   /** Options to customize the style of legend items.
     */
-  var itemStyle: js.UndefOr[LegendItemStyle] = js.native
+  var itemStyle: js.UndefOr[LegendItemStyle] = js.undefined
   /** Options to customize the location of sunburst legend. Legend is placed in provided location only when value of position property is custom
     */
-  var location: js.UndefOr[LegendLocation] = js.native
+  var location: js.UndefOr[LegendLocation] = js.undefined
   /** Places the legend at specified position. Legend can be placed at **left**, **right**, **top** or **bottom** of the chart area. To manually specify the location of legend, set
     * **custom** as value to this property.
     * @Default {Bottom. See Position}
     */
-  var position: js.UndefOr[SunburstLegendPosition | String] = js.native
+  var position: js.UndefOr[SunburstLegendPosition | String] = js.undefined
   /** Number of rows to arrange the legend items.
     * @Default {null}
     */
-  var rowCount: js.UndefOr[Double] = js.native
+  var rowCount: js.UndefOr[Double] = js.undefined
   /** Shape of the legend items.
     * @Default {None. See Shape}
     */
-  var shape: js.UndefOr[SunburstLegendShape | String] = js.native
+  var shape: js.UndefOr[SunburstLegendShape | String] = js.undefined
   /** Options to customize the size of the legend.
     */
-  var size: js.UndefOr[LegendSize] = js.native
+  var size: js.UndefOr[LegendSize] = js.undefined
   /** Options to customize the legend title.
     */
-  var title: js.UndefOr[LegendTitle] = js.native
+  var title: js.UndefOr[LegendTitle] = js.undefined
   /** Visibility of the legend.
     * @Default {false}
     */
-  var visible: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.undefined
 }
 
 object Legend {
   @scala.inline
-  def apply(): Legend = {
+  def apply(
+    alignment: SunburstAlignment | String = null,
+    border: LegendBorder = null,
+    clickAction: SunburstClickAction | String = null,
+    columnCount: js.UndefOr[Double] = js.undefined,
+    font: LegendFont = null,
+    itemPadding: js.UndefOr[Double] = js.undefined,
+    itemStyle: LegendItemStyle = null,
+    location: LegendLocation = null,
+    position: SunburstLegendPosition | String = null,
+    rowCount: js.UndefOr[Double] = js.undefined,
+    shape: SunburstLegendShape | String = null,
+    size: LegendSize = null,
+    title: LegendTitle = null,
+    visible: js.UndefOr[Boolean] = js.undefined
+  ): Legend = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (clickAction != null) __obj.updateDynamic("clickAction")(clickAction.asInstanceOf[js.Any])
+    if (!js.isUndefined(columnCount)) __obj.updateDynamic("columnCount")(columnCount.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemPadding)) __obj.updateDynamic("itemPadding")(itemPadding.get.asInstanceOf[js.Any])
+    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowCount)) __obj.updateDynamic("rowCount")(rowCount.get.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Legend]
   }
-  @scala.inline
-  implicit class LegendOps[Self <: Legend] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: SunburstAlignment | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorder(value: LegendBorder): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickAction(value: SunburstClickAction | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumnCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: LegendFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemStyle(value: LegendItemStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: LegendLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: SunburstLegendPosition | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: SunburstLegendShape | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: LegendSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: LegendTitle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

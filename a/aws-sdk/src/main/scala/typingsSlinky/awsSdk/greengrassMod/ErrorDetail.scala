@@ -18,41 +18,11 @@ trait ErrorDetail extends js.Object {
 
 object ErrorDetail {
   @scala.inline
-  def apply(): ErrorDetail = {
+  def apply(DetailedErrorCode: string = null, DetailedErrorMessage: string = null): ErrorDetail = {
     val __obj = js.Dynamic.literal()
+    if (DetailedErrorCode != null) __obj.updateDynamic("DetailedErrorCode")(DetailedErrorCode.asInstanceOf[js.Any])
+    if (DetailedErrorMessage != null) __obj.updateDynamic("DetailedErrorMessage")(DetailedErrorMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorDetail]
   }
-  @scala.inline
-  implicit class ErrorDetailOps[Self <: ErrorDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDetailedErrorCode(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetailedErrorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailedErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetailedErrorCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetailedErrorMessage(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetailedErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetailedErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DetailedErrorMessage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
-  var hash: org.scalajs.dom.crypto.KeyAlgorithm = js.native
+  var hash: org.scalajs.dom.crypto.KeyAlgorithm
 }
 
 object RsaHashedKeyAlgorithm {
@@ -20,19 +19,5 @@ object RsaHashedKeyAlgorithm {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], modulusLength = modulusLength.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], publicExponent = publicExponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[RsaHashedKeyAlgorithm]
   }
-  @scala.inline
-  implicit class RsaHashedKeyAlgorithmOps[Self <: org.scalajs.dom.crypto.RsaHashedKeyAlgorithm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHash(value: org.scalajs.dom.crypto.KeyAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

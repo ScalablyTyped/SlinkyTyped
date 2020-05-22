@@ -5,6 +5,7 @@ import typingsSlinky.phosphorAlgorithm.iterMod.IIterator
 import typingsSlinky.phosphorDisposable.mod.IObservableDisposable
 import typingsSlinky.phosphorMessaging.mod.IMessageHandler
 import typingsSlinky.phosphorMessaging.mod.Message
+import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.layoutMod.Layout
 import typingsSlinky.phosphorWidgets.titleMod.Title
 import typingsSlinky.phosphorWidgets.widgetMod.Widget.ChildMessage
@@ -36,6 +37,11 @@ class Widget_ ()
     */
   val dataset: DOMStringMap = js.native
   /**
+    * A signal emitted when the object is disposed.
+    */
+  /* CompleteClass */
+  override val disposed: ISignal[this.type, Unit] = js.native
+  /**
     * Get the id of the widget's DOM node.
     */
   /**
@@ -46,6 +52,14 @@ class Widget_ ()
     * Test whether the widget's node is attached to the DOM.
     */
   val isAttached: Boolean = js.native
+  /**
+    * Test whether the object has been disposed.
+    *
+    * #### Notes
+    * This property is always safe to access.
+    */
+  /* CompleteClass */
+  override val isDisposed: Boolean = js.native
   /**
     * Test whether the widget is explicitly hidden.
     */
@@ -153,6 +167,19 @@ class Widget_ ()
     * @returns `true` if the widget is a descendant, `false` otherwise.
     */
   def contains(widget: Widget): Boolean = js.native
+  /**
+    * Dispose of the resources held by the object.
+    *
+    * #### Notes
+    * If the object's `dispose` method is called more than once, all
+    * calls made after the first will be a no-op.
+    *
+    * #### Undefined Behavior
+    * It is undefined behavior to use any functionality of the object
+    * after it has been disposed unless otherwise explicitly noted.
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
   /**
     * Post a `'fit-request'` message to the widget.
     *
@@ -293,6 +320,13 @@ class Widget_ ()
     * The default implementation of this handler is a no-op.
     */
   /* protected */ def onUpdateRequest(msg: Message): Unit = js.native
+  /**
+    * Process a message sent to the handler.
+    *
+    * @param msg - The message to be processed.
+    */
+  /* CompleteClass */
+  override def processMessage(msg: Message): Unit = js.native
   /**
     * Remove a class name from the widget's DOM node.
     *

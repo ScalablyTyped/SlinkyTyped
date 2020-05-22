@@ -11,7 +11,7 @@ trait DeploymentGroupAlarmConfiguration extends js.Object {
     */
   var alarms: js.UndefOr[js.Array[String]] = js.native
   /**
-    * Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
+    * Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
     */
   var enabled: js.UndefOr[Boolean] = js.native
   /**
@@ -24,53 +24,16 @@ trait DeploymentGroupAlarmConfiguration extends js.Object {
 
 object DeploymentGroupAlarmConfiguration {
   @scala.inline
-  def apply(): DeploymentGroupAlarmConfiguration = {
+  def apply(
+    alarms: js.Array[String] = null,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    ignorePollAlarmFailure: js.UndefOr[Boolean] = js.undefined
+  ): DeploymentGroupAlarmConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (alarms != null) __obj.updateDynamic("alarms")(alarms.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignorePollAlarmFailure)) __obj.updateDynamic("ignorePollAlarmFailure")(ignorePollAlarmFailure.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentGroupAlarmConfiguration]
   }
-  @scala.inline
-  implicit class DeploymentGroupAlarmConfigurationOps[Self <: DeploymentGroupAlarmConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlarms(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlarms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnorePollAlarmFailure(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePollAlarmFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnorePollAlarmFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePollAlarmFailure")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

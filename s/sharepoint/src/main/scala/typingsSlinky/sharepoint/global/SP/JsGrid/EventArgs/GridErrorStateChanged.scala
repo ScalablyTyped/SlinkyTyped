@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 class GridErrorStateChanged protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.GridErrorStateChanged {
   def this(bAnyErrors: Boolean) = this()
+  /* CompleteClass */
+  override var bAnyErrors: Boolean = js.native
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.node.childProcessMod
 
-import typingsSlinky.node.netMod.Server
-import typingsSlinky.node.netMod.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +9,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.node.netMod.Server
 */
 trait SendHandle extends js.Object
-
-object SendHandle {
-  @scala.inline
-  implicit def apply(value: Server): SendHandle = value.asInstanceOf[SendHandle]
-  @scala.inline
-  implicit def apply(value: Socket): SendHandle = value.asInstanceOf[SendHandle]
-}
 

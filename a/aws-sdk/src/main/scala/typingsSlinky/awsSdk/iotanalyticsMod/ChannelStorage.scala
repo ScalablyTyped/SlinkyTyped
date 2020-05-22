@@ -18,41 +18,14 @@ trait ChannelStorage extends js.Object {
 
 object ChannelStorage {
   @scala.inline
-  def apply(): ChannelStorage = {
+  def apply(
+    customerManagedS3: CustomerManagedChannelS3Storage = null,
+    serviceManagedS3: ServiceManagedChannelS3Storage = null
+  ): ChannelStorage = {
     val __obj = js.Dynamic.literal()
+    if (customerManagedS3 != null) __obj.updateDynamic("customerManagedS3")(customerManagedS3.asInstanceOf[js.Any])
+    if (serviceManagedS3 != null) __obj.updateDynamic("serviceManagedS3")(serviceManagedS3.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelStorage]
   }
-  @scala.inline
-  implicit class ChannelStorageOps[Self <: ChannelStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomerManagedS3(value: CustomerManagedChannelS3Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerManagedS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerManagedS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerManagedS3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceManagedS3(value: ServiceManagedChannelS3Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceManagedS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceManagedS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceManagedS3")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

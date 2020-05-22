@@ -2,7 +2,6 @@ package typingsSlinky.baseui.modalMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.anon.CloseSource
 import typingsSlinky.baseui.baseuiStrings.alertdialog
 import typingsSlinky.baseui.baseuiStrings.auto
@@ -13,173 +12,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModalProps extends js.Object {
-  var animate: js.UndefOr[Boolean] = js.native
-  var autoFocus: js.UndefOr[Boolean] = js.native
-  var autofocus: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var closeable: js.UndefOr[Boolean] = js.native
-  var isOpen: js.UndefOr[Boolean] = js.native
-  var mountNode: js.UndefOr[HTMLElement] = js.native
-  var onClose: js.UndefOr[js.Function1[/* args */ CloseSource, _]] = js.native
-  var overrides: js.UndefOr[ModalOverrides] = js.native
-  var role: js.UndefOr[dialog | alertdialog] = js.native
-  var size: js.UndefOr[default_ | full | auto] = js.native
-  var unstable_ModalBackdropScroll: js.UndefOr[Boolean] = js.native
+  var animate: js.UndefOr[Boolean] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var autofocus: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var closeable: js.UndefOr[Boolean] = js.undefined
+  var isOpen: js.UndefOr[Boolean] = js.undefined
+  var mountNode: js.UndefOr[HTMLElement] = js.undefined
+  var onClose: js.UndefOr[js.Function1[/* args */ CloseSource, _]] = js.undefined
+  var overrides: js.UndefOr[ModalOverrides] = js.undefined
+  var role: js.UndefOr[dialog | alertdialog] = js.undefined
+  var size: js.UndefOr[default_ | full | auto] = js.undefined
+  var unstable_ModalBackdropScroll: js.UndefOr[Boolean] = js.undefined
 }
 
 object ModalProps {
   @scala.inline
-  def apply(): ModalProps = {
+  def apply(
+    animate: js.UndefOr[Boolean] = js.undefined,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
+    autofocus: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    closeable: js.UndefOr[Boolean] = js.undefined,
+    isOpen: js.UndefOr[Boolean] = js.undefined,
+    mountNode: HTMLElement = null,
+    onClose: /* args */ CloseSource => _ = null,
+    overrides: ModalOverrides = null,
+    role: dialog | alertdialog = null,
+    size: default_ | full | auto = null,
+    unstable_ModalBackdropScroll: js.UndefOr[Boolean] = js.undefined
+  ): ModalProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autofocus)) __obj.updateDynamic("autofocus")(autofocus.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeable)) __obj.updateDynamic("closeable")(closeable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.get.asInstanceOf[js.Any])
+    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
+    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(unstable_ModalBackdropScroll)) __obj.updateDynamic("unstable_ModalBackdropScroll")(unstable_ModalBackdropScroll.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalProps]
   }
-  @scala.inline
-  implicit class ModalPropsOps[Self <: ModalProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountNode(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClose(value: /* args */ CloseSource => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverrides(value: ModalOverrides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: dialog | alertdialog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: default_ | full | auto): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnstable_ModalBackdropScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unstable_ModalBackdropScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnstable_ModalBackdropScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unstable_ModalBackdropScroll")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

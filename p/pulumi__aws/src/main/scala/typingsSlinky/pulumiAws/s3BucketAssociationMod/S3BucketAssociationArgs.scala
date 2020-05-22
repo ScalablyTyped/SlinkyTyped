@@ -28,59 +28,17 @@ trait S3BucketAssociationArgs extends js.Object {
 
 object S3BucketAssociationArgs {
   @scala.inline
-  def apply(bucketName: Input[String]): S3BucketAssociationArgs = {
+  def apply(
+    bucketName: Input[String],
+    classificationType: Input[S3BucketAssociationClassificationType] = null,
+    memberAccountId: Input[String] = null,
+    prefix: Input[String] = null
+  ): S3BucketAssociationArgs = {
     val __obj = js.Dynamic.literal(bucketName = bucketName.asInstanceOf[js.Any])
+    if (classificationType != null) __obj.updateDynamic("classificationType")(classificationType.asInstanceOf[js.Any])
+    if (memberAccountId != null) __obj.updateDynamic("memberAccountId")(memberAccountId.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3BucketAssociationArgs]
   }
-  @scala.inline
-  implicit class S3BucketAssociationArgsOps[Self <: S3BucketAssociationArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassificationType(value: Input[S3BucketAssociationClassificationType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassificationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemberAccountId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemberAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memberAccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

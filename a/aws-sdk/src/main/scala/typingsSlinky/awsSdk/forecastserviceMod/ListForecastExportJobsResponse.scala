@@ -18,41 +18,11 @@ trait ListForecastExportJobsResponse extends js.Object {
 
 object ListForecastExportJobsResponse {
   @scala.inline
-  def apply(): ListForecastExportJobsResponse = {
+  def apply(ForecastExportJobs: ForecastExportJobs = null, NextToken: NextToken = null): ListForecastExportJobsResponse = {
     val __obj = js.Dynamic.literal()
+    if (ForecastExportJobs != null) __obj.updateDynamic("ForecastExportJobs")(ForecastExportJobs.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListForecastExportJobsResponse]
   }
-  @scala.inline
-  implicit class ListForecastExportJobsResponseOps[Self <: ListForecastExportJobsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withForecastExportJobs(value: ForecastExportJobs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastExportJobs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForecastExportJobs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastExportJobs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

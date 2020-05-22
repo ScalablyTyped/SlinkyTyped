@@ -13,7 +13,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service provides a simple functionality to allow read/write the storages in OLE storage format. */
-@js.native
 trait OLESimpleStorage
   extends XNameContainer
      with XComponent
@@ -24,13 +23,13 @@ trait OLESimpleStorage
     * @param xInputStream [in] the InputStream that contains data in OLE storage format.
     * @param bNoTempCopy [in] specifies whether a temporary copy should be created during substreams opening. If the copy is not created the storage must stay
     */
-  def createFromInputStream(xInputStream: XInputStream, bNoTempCopy: Boolean): Unit = js.native
+  def createFromInputStream(xInputStream: XInputStream, bNoTempCopy: Boolean): Unit
   /**
     * is used to initialize the object on it's creation.
     * @param xStream [in] the Stream that contains data in OLE storage format.
     * @param bNoTempCopy [in] specifies whether a temporary copy should be created during substreams opening. If the copy is not created the storage must stay
     */
-  def createFromStream(xStream: XStream, bNoTempCopy: Boolean): Unit = js.native
+  def createFromStream(xStream: XStream, bNoTempCopy: Boolean): Unit
 }
 
 object OLESimpleStorage {
@@ -65,25 +64,5 @@ object OLESimpleStorage {
     val __obj = js.Dynamic.literal(ClassID = ClassID.asInstanceOf[js.Any], ClassName = ClassName.asInstanceOf[js.Any], ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), commit = js.Any.fromFunction0(commit), createFromInputStream = js.Any.fromFunction2(createFromInputStream), createFromStream = js.Any.fromFunction2(createFromStream), dispose = js.Any.fromFunction0(dispose), getByName = js.Any.fromFunction1(getByName), getClassID = js.Any.fromFunction0(getClassID), getClassName = js.Any.fromFunction0(getClassName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), insertByName = js.Any.fromFunction2(insertByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeByName = js.Any.fromFunction1(removeByName), removeEventListener = js.Any.fromFunction1(removeEventListener), replaceByName = js.Any.fromFunction2(replaceByName), revert = js.Any.fromFunction0(revert), setClassInfo = js.Any.fromFunction2(setClassInfo))
     __obj.asInstanceOf[OLESimpleStorage]
   }
-  @scala.inline
-  implicit class OLESimpleStorageOps[Self <: OLESimpleStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateFromInputStream(value: (XInputStream, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFromInputStream")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateFromStream(value: (XStream, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFromStream")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

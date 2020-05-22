@@ -35,53 +35,12 @@ trait SchemaSigninDetail extends js.Object {
 
 object SchemaSigninDetail {
   @scala.inline
-  def apply(): SchemaSigninDetail = {
+  def apply(qrCode: String = null, signinEnrollmentToken: String = null, signinUrl: String = null): SchemaSigninDetail = {
     val __obj = js.Dynamic.literal()
+    if (qrCode != null) __obj.updateDynamic("qrCode")(qrCode.asInstanceOf[js.Any])
+    if (signinEnrollmentToken != null) __obj.updateDynamic("signinEnrollmentToken")(signinEnrollmentToken.asInstanceOf[js.Any])
+    if (signinUrl != null) __obj.updateDynamic("signinUrl")(signinUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSigninDetail]
   }
-  @scala.inline
-  implicit class SchemaSigninDetailOps[Self <: SchemaSigninDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQrCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qrCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQrCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qrCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigninEnrollmentToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signinEnrollmentToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigninEnrollmentToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signinEnrollmentToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigninUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signinUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigninUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signinUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

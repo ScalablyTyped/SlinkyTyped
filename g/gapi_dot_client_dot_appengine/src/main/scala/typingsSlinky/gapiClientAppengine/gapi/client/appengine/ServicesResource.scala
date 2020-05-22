@@ -8,17 +8,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ServicesResource extends js.Object {
-  var versions: VersionsResource = js.native
+  var versions: VersionsResource
   /** Deletes the specified service and all enclosed versions. */
-  def delete(request: Pp): Request[Operation] = js.native
+  def delete(request: Pp): Request[Operation]
   /** Gets the current configuration of the specified service. */
-  def get(request: Pp): Request[Service] = js.native
+  def get(request: Pp): Request[Service]
   /** Lists all the services in the application. */
-  def list(request: Callback): Request[ListServicesResponse] = js.native
+  def list(request: Callback): Request[ListServicesResponse]
   /** Updates the configuration of the specified service. */
-  def patch(request: MigrateTraffic): Request[Operation] = js.native
+  def patch(request: MigrateTraffic): Request[Operation]
 }
 
 object ServicesResource {
@@ -33,43 +32,5 @@ object ServicesResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), versions = versions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServicesResource]
   }
-  @scala.inline
-  implicit class ServicesResourceOps[Self <: ServicesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Pp => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Pp => Request[Service]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Callback => Request[ListServicesResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPatch(value: MigrateTraffic => Request[Operation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVersions(value: VersionsResource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

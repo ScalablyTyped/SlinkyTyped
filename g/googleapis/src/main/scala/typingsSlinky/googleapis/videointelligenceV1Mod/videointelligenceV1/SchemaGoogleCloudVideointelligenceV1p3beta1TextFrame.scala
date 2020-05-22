@@ -23,41 +23,14 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame extends js.Object {
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame = {
+  def apply(
+    rotatedBoundingBox: SchemaGoogleCloudVideointelligenceV1p3beta1NormalizedBoundingPoly = null,
+    timeOffset: String = null
+  ): SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame = {
     val __obj = js.Dynamic.literal()
+    if (rotatedBoundingBox != null) __obj.updateDynamic("rotatedBoundingBox")(rotatedBoundingBox.asInstanceOf[js.Any])
+    if (timeOffset != null) __obj.updateDynamic("timeOffset")(timeOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1TextFrameOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRotatedBoundingBox(value: SchemaGoogleCloudVideointelligenceV1p3beta1NormalizedBoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotatedBoundingBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotatedBoundingBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotatedBoundingBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeOffset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

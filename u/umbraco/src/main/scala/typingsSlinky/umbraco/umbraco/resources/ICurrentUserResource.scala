@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   *
   *
   **/
-@js.native
 trait ICurrentUserResource extends js.Object {
   /**
     * @ngdoc method
@@ -25,7 +24,7 @@ trait ICurrentUserResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the user array.
     *
     */
-  def changePassword(changePasswordArgs: js.Any): IPromise[IResourcePromise] = js.native
+  def changePassword(changePasswordArgs: js.Any): IPromise[IResourcePromise]
   /**
     * @ngdoc method
     * @name umbraco.resources.currentUserResource#getMembershipProviderConfig
@@ -34,7 +33,7 @@ trait ICurrentUserResource extends js.Object {
     * @description
     * Gets the configuration of the user membership provider which is used to configure the change password form
     */
-  def getMembershipProviderConfig(): js.Any = js.native
+  def getMembershipProviderConfig(): js.Any
 }
 
 object ICurrentUserResource {
@@ -43,25 +42,5 @@ object ICurrentUserResource {
     val __obj = js.Dynamic.literal(changePassword = js.Any.fromFunction1(changePassword), getMembershipProviderConfig = js.Any.fromFunction0(getMembershipProviderConfig))
     __obj.asInstanceOf[ICurrentUserResource]
   }
-  @scala.inline
-  implicit class ICurrentUserResourceOps[Self <: ICurrentUserResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangePassword(value: js.Any => IPromise[IResourcePromise]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changePassword")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetMembershipProviderConfig(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMembershipProviderConfig")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

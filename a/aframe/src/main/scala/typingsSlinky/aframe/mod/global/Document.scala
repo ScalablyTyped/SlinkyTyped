@@ -14,8 +14,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * Custom elements augment document methods to return custom HTML
-	 */
+  * Custom elements augment document methods to return custom HTML
+  */
 @js.native
 trait Document extends js.Object {
   def createElement(tagName: String): Entity[ObjectMap[Component[_, System[_]]]] = js.native

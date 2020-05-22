@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Auth0DecodedHash extends js.Object {
-  var accessToken: js.UndefOr[String] = js.native
-  var appState: js.UndefOr[js.Any] = js.native
-  var expiresIn: js.UndefOr[Double] = js.native
-  var idToken: js.UndefOr[String] = js.native
-  var idTokenPayload: js.UndefOr[js.Any] = js.native
-  var refreshToken: js.UndefOr[String] = js.native
-  var scope: js.UndefOr[String] = js.native
-  var state: js.UndefOr[String] = js.native
-  var tokenType: js.UndefOr[String] = js.native
+  var accessToken: js.UndefOr[String] = js.undefined
+  var appState: js.UndefOr[js.Any] = js.undefined
+  var expiresIn: js.UndefOr[Double] = js.undefined
+  var idToken: js.UndefOr[String] = js.undefined
+  var idTokenPayload: js.UndefOr[js.Any] = js.undefined
+  var refreshToken: js.UndefOr[String] = js.undefined
+  var scope: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.undefined
+  var tokenType: js.UndefOr[String] = js.undefined
 }
 
 object Auth0DecodedHash {
   @scala.inline
-  def apply(): Auth0DecodedHash = {
+  def apply(
+    accessToken: String = null,
+    appState: js.Any = null,
+    expiresIn: js.UndefOr[Double] = js.undefined,
+    idToken: String = null,
+    idTokenPayload: js.Any = null,
+    refreshToken: String = null,
+    scope: String = null,
+    state: String = null,
+    tokenType: String = null
+  ): Auth0DecodedHash = {
     val __obj = js.Dynamic.literal()
+    if (accessToken != null) __obj.updateDynamic("accessToken")(accessToken.asInstanceOf[js.Any])
+    if (appState != null) __obj.updateDynamic("appState")(appState.asInstanceOf[js.Any])
+    if (!js.isUndefined(expiresIn)) __obj.updateDynamic("expiresIn")(expiresIn.get.asInstanceOf[js.Any])
+    if (idToken != null) __obj.updateDynamic("idToken")(idToken.asInstanceOf[js.Any])
+    if (idTokenPayload != null) __obj.updateDynamic("idTokenPayload")(idTokenPayload.asInstanceOf[js.Any])
+    if (refreshToken != null) __obj.updateDynamic("refreshToken")(refreshToken.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (tokenType != null) __obj.updateDynamic("tokenType")(tokenType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Auth0DecodedHash]
   }
-  @scala.inline
-  implicit class Auth0DecodedHashOps[Self <: Auth0DecodedHash] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpiresIn(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiresIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdTokenPayload(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idTokenPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdTokenPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idTokenPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokenType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokenType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

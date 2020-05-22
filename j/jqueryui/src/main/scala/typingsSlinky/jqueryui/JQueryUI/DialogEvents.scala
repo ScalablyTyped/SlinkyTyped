@@ -5,166 +5,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DialogEvents extends js.Object {
-  var beforeClose: js.UndefOr[DialogEvent] = js.native
-  var close: js.UndefOr[DialogEvent] = js.native
-  var create: js.UndefOr[DialogEvent] = js.native
-  var drag: js.UndefOr[DialogEvent] = js.native
-  var dragStart: js.UndefOr[DialogEvent] = js.native
-  var dragStop: js.UndefOr[DialogEvent] = js.native
-  var focus: js.UndefOr[DialogEvent] = js.native
-  var open: js.UndefOr[DialogEvent] = js.native
-  var resize: js.UndefOr[DialogEvent] = js.native
-  var resizeStart: js.UndefOr[DialogEvent] = js.native
-  var resizeStop: js.UndefOr[DialogEvent] = js.native
+  var beforeClose: js.UndefOr[DialogEvent] = js.undefined
+  var close: js.UndefOr[DialogEvent] = js.undefined
+  var create: js.UndefOr[DialogEvent] = js.undefined
+  var drag: js.UndefOr[DialogEvent] = js.undefined
+  var dragStart: js.UndefOr[DialogEvent] = js.undefined
+  var dragStop: js.UndefOr[DialogEvent] = js.undefined
+  var focus: js.UndefOr[DialogEvent] = js.undefined
+  var open: js.UndefOr[DialogEvent] = js.undefined
+  var resize: js.UndefOr[DialogEvent] = js.undefined
+  var resizeStart: js.UndefOr[DialogEvent] = js.undefined
+  var resizeStop: js.UndefOr[DialogEvent] = js.undefined
 }
 
 object DialogEvents {
   @scala.inline
-  def apply(): DialogEvents = {
+  def apply(
+    beforeClose: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    close: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    create: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    drag: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    dragStart: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    dragStop: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    focus: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    open: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    resize: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    resizeStart: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
+    resizeStop: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null
+  ): DialogEvents = {
     val __obj = js.Dynamic.literal()
+    if (beforeClose != null) __obj.updateDynamic("beforeClose")(js.Any.fromFunction2(beforeClose))
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction2(close))
+    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
+    if (drag != null) __obj.updateDynamic("drag")(js.Any.fromFunction2(drag))
+    if (dragStart != null) __obj.updateDynamic("dragStart")(js.Any.fromFunction2(dragStart))
+    if (dragStop != null) __obj.updateDynamic("dragStop")(js.Any.fromFunction2(dragStop))
+    if (focus != null) __obj.updateDynamic("focus")(js.Any.fromFunction2(focus))
+    if (open != null) __obj.updateDynamic("open")(js.Any.fromFunction2(open))
+    if (resize != null) __obj.updateDynamic("resize")(js.Any.fromFunction2(resize))
+    if (resizeStart != null) __obj.updateDynamic("resizeStart")(js.Any.fromFunction2(resizeStart))
+    if (resizeStop != null) __obj.updateDynamic("resizeStop")(js.Any.fromFunction2(resizeStop))
     __obj.asInstanceOf[DialogEvents]
   }
-  @scala.inline
-  implicit class DialogEventsOps[Self <: DialogEvents] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBeforeClose(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClose(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrag(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragStart(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragStop(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragStop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocus(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResize(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeStart(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeStart")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutResizeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResizeStop(value: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeStop")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutResizeStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeStop")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

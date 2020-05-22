@@ -26,53 +26,16 @@ trait EntityRecognizerInputDataConfig extends js.Object {
 
 object EntityRecognizerInputDataConfig {
   @scala.inline
-  def apply(Documents: EntityRecognizerDocuments, EntityTypes: EntityTypesList): EntityRecognizerInputDataConfig = {
+  def apply(
+    Documents: EntityRecognizerDocuments,
+    EntityTypes: EntityTypesList,
+    Annotations: EntityRecognizerAnnotations = null,
+    EntityList: EntityRecognizerEntityList = null
+  ): EntityRecognizerInputDataConfig = {
     val __obj = js.Dynamic.literal(Documents = Documents.asInstanceOf[js.Any], EntityTypes = EntityTypes.asInstanceOf[js.Any])
+    if (Annotations != null) __obj.updateDynamic("Annotations")(Annotations.asInstanceOf[js.Any])
+    if (EntityList != null) __obj.updateDynamic("EntityList")(EntityList.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityRecognizerInputDataConfig]
   }
-  @scala.inline
-  implicit class EntityRecognizerInputDataConfigOps[Self <: EntityRecognizerInputDataConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocuments(value: EntityRecognizerDocuments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Documents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntityTypes(value: EntityTypesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnnotations(value: EntityRecognizerAnnotations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Annotations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityList(value: EntityRecognizerEntityList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

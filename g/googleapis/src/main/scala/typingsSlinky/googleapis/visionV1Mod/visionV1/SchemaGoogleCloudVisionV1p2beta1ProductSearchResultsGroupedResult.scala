@@ -22,41 +22,14 @@ trait SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult extends 
 
 object SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult = {
+  def apply(
+    boundingPoly: SchemaGoogleCloudVisionV1p2beta1BoundingPoly = null,
+    results: js.Array[SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsResult] = null
+  ): SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult = {
     val __obj = js.Dynamic.literal()
+    if (boundingPoly != null) __obj.updateDynamic("boundingPoly")(boundingPoly.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResultOps[Self <: SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBoundingPoly(value: SchemaGoogleCloudVisionV1p2beta1BoundingPoly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoundingPoly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingPoly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[SchemaGoogleCloudVisionV1p2beta1ProductSearchResultsResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

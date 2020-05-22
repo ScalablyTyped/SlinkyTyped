@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Injectable extends js.Object {
   /**
     * Determines which injectors will provide the injectable,
@@ -14,7 +13,7 @@ trait Injectable extends js.Object {
     * or by specifying that this injectable should be provided in the
     * 'root' injector, which will be the application-level injector in most apps.
     */
-  var providedIn: js.UndefOr[Type[_] | root | Null] = js.native
+  var providedIn: js.UndefOr[Type[_] | root | Null] = js.undefined
 }
 
 @JSImport("@angular/core", "Injectable")

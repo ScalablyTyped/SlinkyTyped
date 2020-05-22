@@ -13,16 +13,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Statement, 'type'> */
-@js.native
 trait ContinueStatement
   extends ASTNode
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var label: js.UndefOr[IdentifierKind | Null] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ContinueStatement = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var label: js.UndefOr[IdentifierKind | Null] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ContinueStatement
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ContinueStatement")

@@ -24,41 +24,11 @@ trait SchemaEntitlementsListResponse extends js.Object {
 
 object SchemaEntitlementsListResponse {
   @scala.inline
-  def apply(): SchemaEntitlementsListResponse = {
+  def apply(entitlement: js.Array[SchemaEntitlement] = null, kind: String = null): SchemaEntitlementsListResponse = {
     val __obj = js.Dynamic.literal()
+    if (entitlement != null) __obj.updateDynamic("entitlement")(entitlement.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEntitlementsListResponse]
   }
-  @scala.inline
-  implicit class SchemaEntitlementsListResponseOps[Self <: SchemaEntitlementsListResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntitlement(value: js.Array[SchemaEntitlement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entitlement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntitlement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entitlement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,443 +6,99 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a FileOptions. */
-@js.native
 trait IFileOptions extends js.Object {
   /** FileOptions ccEnableArenas */
-  var ccEnableArenas: js.UndefOr[Boolean | Null] = js.native
+  var ccEnableArenas: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions ccGenericServices */
-  var ccGenericServices: js.UndefOr[Boolean | Null] = js.native
+  var ccGenericServices: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions csharpNamespace */
-  var csharpNamespace: js.UndefOr[String | Null] = js.native
+  var csharpNamespace: js.UndefOr[String | Null] = js.undefined
   /** FileOptions deprecated */
-  var deprecated: js.UndefOr[Boolean | Null] = js.native
+  var deprecated: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions goPackage */
-  var goPackage: js.UndefOr[String | Null] = js.native
+  var goPackage: js.UndefOr[String | Null] = js.undefined
   /** FileOptions javaGenerateEqualsAndHash */
-  var javaGenerateEqualsAndHash: js.UndefOr[Boolean | Null] = js.native
+  var javaGenerateEqualsAndHash: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions javaGenericServices */
-  var javaGenericServices: js.UndefOr[Boolean | Null] = js.native
+  var javaGenericServices: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions javaMultipleFiles */
-  var javaMultipleFiles: js.UndefOr[Boolean | Null] = js.native
+  var javaMultipleFiles: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions javaOuterClassname */
-  var javaOuterClassname: js.UndefOr[String | Null] = js.native
+  var javaOuterClassname: js.UndefOr[String | Null] = js.undefined
   /** FileOptions javaPackage */
-  var javaPackage: js.UndefOr[String | Null] = js.native
+  var javaPackage: js.UndefOr[String | Null] = js.undefined
   /** FileOptions javaStringCheckUtf8 */
-  var javaStringCheckUtf8: js.UndefOr[Boolean | Null] = js.native
+  var javaStringCheckUtf8: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions objcClassPrefix */
-  var objcClassPrefix: js.UndefOr[String | Null] = js.native
+  var objcClassPrefix: js.UndefOr[String | Null] = js.undefined
   /** FileOptions optimizeFor */
-  var optimizeFor: js.UndefOr[OptimizeMode | Null] = js.native
+  var optimizeFor: js.UndefOr[OptimizeMode | Null] = js.undefined
   /** FileOptions phpClassPrefix */
-  var phpClassPrefix: js.UndefOr[String | Null] = js.native
+  var phpClassPrefix: js.UndefOr[String | Null] = js.undefined
   /** FileOptions phpGenericServices */
-  var phpGenericServices: js.UndefOr[Boolean | Null] = js.native
+  var phpGenericServices: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions phpMetadataNamespace */
-  var phpMetadataNamespace: js.UndefOr[String | Null] = js.native
+  var phpMetadataNamespace: js.UndefOr[String | Null] = js.undefined
   /** FileOptions phpNamespace */
-  var phpNamespace: js.UndefOr[String | Null] = js.native
+  var phpNamespace: js.UndefOr[String | Null] = js.undefined
   /** FileOptions pyGenericServices */
-  var pyGenericServices: js.UndefOr[Boolean | Null] = js.native
+  var pyGenericServices: js.UndefOr[Boolean | Null] = js.undefined
   /** FileOptions rubyPackage */
-  var rubyPackage: js.UndefOr[String | Null] = js.native
+  var rubyPackage: js.UndefOr[String | Null] = js.undefined
   /** FileOptions swiftPrefix */
-  var swiftPrefix: js.UndefOr[String | Null] = js.native
+  var swiftPrefix: js.UndefOr[String | Null] = js.undefined
   /** FileOptions uninterpretedOption */
-  var uninterpretedOption: js.UndefOr[js.Array[IUninterpretedOption] | Null] = js.native
+  var uninterpretedOption: js.UndefOr[js.Array[IUninterpretedOption] | Null] = js.undefined
 }
 
 object IFileOptions {
   @scala.inline
-  def apply(): IFileOptions = {
+  def apply(
+    ccEnableArenas: js.UndefOr[Null | Boolean] = js.undefined,
+    ccGenericServices: js.UndefOr[Null | Boolean] = js.undefined,
+    csharpNamespace: js.UndefOr[Null | String] = js.undefined,
+    deprecated: js.UndefOr[Null | Boolean] = js.undefined,
+    goPackage: js.UndefOr[Null | String] = js.undefined,
+    javaGenerateEqualsAndHash: js.UndefOr[Null | Boolean] = js.undefined,
+    javaGenericServices: js.UndefOr[Null | Boolean] = js.undefined,
+    javaMultipleFiles: js.UndefOr[Null | Boolean] = js.undefined,
+    javaOuterClassname: js.UndefOr[Null | String] = js.undefined,
+    javaPackage: js.UndefOr[Null | String] = js.undefined,
+    javaStringCheckUtf8: js.UndefOr[Null | Boolean] = js.undefined,
+    objcClassPrefix: js.UndefOr[Null | String] = js.undefined,
+    optimizeFor: js.UndefOr[Null | OptimizeMode] = js.undefined,
+    phpClassPrefix: js.UndefOr[Null | String] = js.undefined,
+    phpGenericServices: js.UndefOr[Null | Boolean] = js.undefined,
+    phpMetadataNamespace: js.UndefOr[Null | String] = js.undefined,
+    phpNamespace: js.UndefOr[Null | String] = js.undefined,
+    pyGenericServices: js.UndefOr[Null | Boolean] = js.undefined,
+    rubyPackage: js.UndefOr[Null | String] = js.undefined,
+    swiftPrefix: js.UndefOr[Null | String] = js.undefined,
+    uninterpretedOption: js.UndefOr[Null | js.Array[IUninterpretedOption]] = js.undefined
+  ): IFileOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ccEnableArenas)) __obj.updateDynamic("ccEnableArenas")(ccEnableArenas.asInstanceOf[js.Any])
+    if (!js.isUndefined(ccGenericServices)) __obj.updateDynamic("ccGenericServices")(ccGenericServices.asInstanceOf[js.Any])
+    if (!js.isUndefined(csharpNamespace)) __obj.updateDynamic("csharpNamespace")(csharpNamespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
+    if (!js.isUndefined(goPackage)) __obj.updateDynamic("goPackage")(goPackage.asInstanceOf[js.Any])
+    if (!js.isUndefined(javaGenerateEqualsAndHash)) __obj.updateDynamic("javaGenerateEqualsAndHash")(javaGenerateEqualsAndHash.asInstanceOf[js.Any])
+    if (!js.isUndefined(javaGenericServices)) __obj.updateDynamic("javaGenericServices")(javaGenericServices.asInstanceOf[js.Any])
+    if (!js.isUndefined(javaMultipleFiles)) __obj.updateDynamic("javaMultipleFiles")(javaMultipleFiles.asInstanceOf[js.Any])
+    if (!js.isUndefined(javaOuterClassname)) __obj.updateDynamic("javaOuterClassname")(javaOuterClassname.asInstanceOf[js.Any])
+    if (!js.isUndefined(javaPackage)) __obj.updateDynamic("javaPackage")(javaPackage.asInstanceOf[js.Any])
+    if (!js.isUndefined(javaStringCheckUtf8)) __obj.updateDynamic("javaStringCheckUtf8")(javaStringCheckUtf8.asInstanceOf[js.Any])
+    if (!js.isUndefined(objcClassPrefix)) __obj.updateDynamic("objcClassPrefix")(objcClassPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(optimizeFor)) __obj.updateDynamic("optimizeFor")(optimizeFor.asInstanceOf[js.Any])
+    if (!js.isUndefined(phpClassPrefix)) __obj.updateDynamic("phpClassPrefix")(phpClassPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(phpGenericServices)) __obj.updateDynamic("phpGenericServices")(phpGenericServices.asInstanceOf[js.Any])
+    if (!js.isUndefined(phpMetadataNamespace)) __obj.updateDynamic("phpMetadataNamespace")(phpMetadataNamespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(phpNamespace)) __obj.updateDynamic("phpNamespace")(phpNamespace.asInstanceOf[js.Any])
+    if (!js.isUndefined(pyGenericServices)) __obj.updateDynamic("pyGenericServices")(pyGenericServices.asInstanceOf[js.Any])
+    if (!js.isUndefined(rubyPackage)) __obj.updateDynamic("rubyPackage")(rubyPackage.asInstanceOf[js.Any])
+    if (!js.isUndefined(swiftPrefix)) __obj.updateDynamic("swiftPrefix")(swiftPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(uninterpretedOption)) __obj.updateDynamic("uninterpretedOption")(uninterpretedOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileOptions]
   }
-  @scala.inline
-  implicit class IFileOptionsOps[Self <: IFileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCcEnableArenas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEnableArenas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcEnableArenas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEnableArenas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcEnableArenasNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEnableArenas")(null)
-        ret
-    }
-    @scala.inline
-    def withCcGenericServices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccGenericServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcGenericServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccGenericServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcGenericServicesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccGenericServices")(null)
-        ret
-    }
-    @scala.inline
-    def withCsharpNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csharpNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsharpNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csharpNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsharpNamespaceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csharpNamespace")(null)
-        ret
-    }
-    @scala.inline
-    def withDeprecated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeprecated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeprecatedNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(null)
-        ret
-    }
-    @scala.inline
-    def withGoPackage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoPackageNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("goPackage")(null)
-        ret
-    }
-    @scala.inline
-    def withJavaGenerateEqualsAndHash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaGenerateEqualsAndHash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJavaGenerateEqualsAndHash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaGenerateEqualsAndHash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJavaGenerateEqualsAndHashNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaGenerateEqualsAndHash")(null)
-        ret
-    }
-    @scala.inline
-    def withJavaGenericServices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaGenericServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJavaGenericServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaGenericServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJavaGenericServicesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaGenericServices")(null)
-        ret
-    }
-    @scala.inline
-    def withJavaMultipleFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaMultipleFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJavaMultipleFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaMultipleFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJavaMultipleFilesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaMultipleFiles")(null)
-        ret
-    }
-    @scala.inline
-    def withJavaOuterClassname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaOuterClassname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJavaOuterClassname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaOuterClassname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJavaOuterClassnameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaOuterClassname")(null)
-        ret
-    }
-    @scala.inline
-    def withJavaPackage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJavaPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJavaPackageNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaPackage")(null)
-        ret
-    }
-    @scala.inline
-    def withJavaStringCheckUtf8(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaStringCheckUtf8")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJavaStringCheckUtf8: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaStringCheckUtf8")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJavaStringCheckUtf8Null: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("javaStringCheckUtf8")(null)
-        ret
-    }
-    @scala.inline
-    def withObjcClassPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objcClassPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjcClassPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objcClassPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjcClassPrefixNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objcClassPrefix")(null)
-        ret
-    }
-    @scala.inline
-    def withOptimizeFor(value: OptimizeMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizeFor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimizeFor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizeFor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimizeForNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizeFor")(null)
-        ret
-    }
-    @scala.inline
-    def withPhpClassPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpClassPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhpClassPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpClassPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhpClassPrefixNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpClassPrefix")(null)
-        ret
-    }
-    @scala.inline
-    def withPhpGenericServices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpGenericServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhpGenericServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpGenericServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhpGenericServicesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpGenericServices")(null)
-        ret
-    }
-    @scala.inline
-    def withPhpMetadataNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpMetadataNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhpMetadataNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpMetadataNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhpMetadataNamespaceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpMetadataNamespace")(null)
-        ret
-    }
-    @scala.inline
-    def withPhpNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpNamespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhpNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpNamespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhpNamespaceNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phpNamespace")(null)
-        ret
-    }
-    @scala.inline
-    def withPyGenericServices(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pyGenericServices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPyGenericServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pyGenericServices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPyGenericServicesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pyGenericServices")(null)
-        ret
-    }
-    @scala.inline
-    def withRubyPackage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRubyPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRubyPackageNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyPackage")(null)
-        ret
-    }
-    @scala.inline
-    def withSwiftPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swiftPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwiftPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swiftPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwiftPrefixNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swiftPrefix")(null)
-        ret
-    }
-    @scala.inline
-    def withUninterpretedOption(value: js.Array[IUninterpretedOption]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninterpretedOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUninterpretedOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninterpretedOption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUninterpretedOptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninterpretedOption")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -34,83 +34,21 @@ trait UpdateDeploymentStrategyRequest extends js.Object {
 
 object UpdateDeploymentStrategyRequest {
   @scala.inline
-  def apply(DeploymentStrategyId: DeploymentStrategyId): UpdateDeploymentStrategyRequest = {
+  def apply(
+    DeploymentStrategyId: DeploymentStrategyId,
+    DeploymentDurationInMinutes: js.UndefOr[MinutesBetween0And24Hours] = js.undefined,
+    Description: Description = null,
+    FinalBakeTimeInMinutes: js.UndefOr[MinutesBetween0And24Hours] = js.undefined,
+    GrowthFactor: js.UndefOr[GrowthFactor] = js.undefined,
+    GrowthType: GrowthType = null
+  ): UpdateDeploymentStrategyRequest = {
     val __obj = js.Dynamic.literal(DeploymentStrategyId = DeploymentStrategyId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeploymentDurationInMinutes)) __obj.updateDynamic("DeploymentDurationInMinutes")(DeploymentDurationInMinutes.get.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(FinalBakeTimeInMinutes)) __obj.updateDynamic("FinalBakeTimeInMinutes")(FinalBakeTimeInMinutes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(GrowthFactor)) __obj.updateDynamic("GrowthFactor")(GrowthFactor.get.asInstanceOf[js.Any])
+    if (GrowthType != null) __obj.updateDynamic("GrowthType")(GrowthType.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDeploymentStrategyRequest]
   }
-  @scala.inline
-  implicit class UpdateDeploymentStrategyRequestOps[Self <: UpdateDeploymentStrategyRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentStrategyId(value: DeploymentStrategyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentStrategyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeploymentDurationInMinutes(value: MinutesBetween0And24Hours): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentDurationInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentDurationInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentDurationInMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalBakeTimeInMinutes(value: MinutesBetween0And24Hours): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBakeTimeInMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalBakeTimeInMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBakeTimeInMinutes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrowthFactor(value: GrowthFactor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrowthFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrowthFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrowthFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrowthType(value: GrowthType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrowthType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrowthType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GrowthType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

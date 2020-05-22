@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Command extends Chat {
-  var args: js.Array[String] = js.native
-  var command: String = js.native
-  def havePermission(args: js.Any*): Boolean = js.native
-  def isFrom(args: js.Any*): Boolean = js.native
-  def respond(args: js.Any*): js.Any = js.native
-  def respondTimeout(args: js.Any*): js.Any = js.native
+  var args: js.Array[String]
+  var command: String
+  def havePermission(args: js.Any*): Boolean
+  def isFrom(args: js.Any*): Boolean
+  def respond(args: js.Any*): js.Any
+  def respondTimeout(args: js.Any*): js.Any
 }
 
 object Command {
@@ -37,49 +36,5 @@ object Command {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Command]
   }
-  @scala.inline
-  implicit class CommandOps[Self <: Command] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHavePermission(value: /* repeated */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("havePermission")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsFrom(value: /* repeated */ js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFrom")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRespond(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("respond")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRespondTimeout(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("respondTimeout")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

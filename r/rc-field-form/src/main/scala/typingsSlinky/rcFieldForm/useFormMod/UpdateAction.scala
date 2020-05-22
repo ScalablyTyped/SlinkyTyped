@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateAction extends ReducerAction {
-  var namePath: InternalNamePath = js.native
-  var `type`: updateValue = js.native
-  var value: StoreValue = js.native
+  var namePath: InternalNamePath
+  var `type`: updateValue
+  var value: StoreValue
 }
 
 object UpdateAction {
@@ -21,31 +20,5 @@ object UpdateAction {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAction]
   }
-  @scala.inline
-  implicit class UpdateActionOps[Self <: UpdateAction] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNamePath(value: InternalNamePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: updateValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: StoreValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

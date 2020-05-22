@@ -46,6 +46,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class OAuthProvider protected () extends AuthProvider {
   def this(providerId: String) = this()
+  /* CompleteClass */
+  override var providerId: String = js.native
   /**
     * @param scope Provider OAuth scope to add.
     */

@@ -14,6 +14,16 @@ class SmartArray[T] protected () extends ISmartArrayLike[T] {
   def this(capacity: Double) = this()
   var _id: Double = js.native
   /**
+    * The data of the array.
+    */
+  /* CompleteClass */
+  override var data: js.Array[T] = js.native
+  /**
+    * The active length of the array.
+    */
+  /* CompleteClass */
+  override var length: Double = js.native
+  /**
     * Concats the active data with a given array.
     * @param array defines the data to concatenate with.
     */

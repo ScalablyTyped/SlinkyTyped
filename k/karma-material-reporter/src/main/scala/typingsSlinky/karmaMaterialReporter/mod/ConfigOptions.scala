@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConfigOptions extends js.Object {
   /**
     * Visualize karma test results in real time with material designed reporter
     * See {@link https://github.com/ameerthehacker/karma-material-reporter#availble-configurations}
     */
-  var materialReporter: js.UndefOr[MaterialReporterOptions] = js.native
+  var materialReporter: js.UndefOr[MaterialReporterOptions] = js.undefined
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(): ConfigOptions = {
+  def apply(materialReporter: MaterialReporterOptions = null): ConfigOptions = {
     val __obj = js.Dynamic.literal()
+    if (materialReporter != null) __obj.updateDynamic("materialReporter")(materialReporter.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
-  @scala.inline
-  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaterialReporter(value: MaterialReporterOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("materialReporter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaterialReporter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("materialReporter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

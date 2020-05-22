@@ -5,276 +5,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SmartWizardOptions extends js.Object {
-  var ajaxSettings: js.UndefOr[JQueryAjaxSettings] = js.native
-  var anchorSettings: js.UndefOr[AnchorSettings] = js.native
-  var autoAdjustHeight: js.UndefOr[Boolean] = js.native
-  var backButtonSupport: js.UndefOr[Boolean] = js.native
-  var contentCache: js.UndefOr[Boolean] = js.native
-  var contentURL: js.UndefOr[Null | String] = js.native
-  var cycleSteps: js.UndefOr[Boolean] = js.native
-  var disabledSteps: js.UndefOr[js.Array[Double]] = js.native
-  var errorSteps: js.UndefOr[js.Array[Double]] = js.native
-  var hiddenSteps: js.UndefOr[js.Array[Double]] = js.native
-  var keyNavigation: js.UndefOr[Boolean] = js.native
-  var lang: js.UndefOr[Lang] = js.native
-  var selected: js.UndefOr[Double] = js.native
-  var showStepURLhash: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[String] = js.native
-  var toolbarSettings: js.UndefOr[ToolbarSettings] = js.native
-  var transitionEffect: js.UndefOr[TransitionEffect] = js.native
-  var transitionSpeed: js.UndefOr[String | Double] = js.native
-  var useURLhash: js.UndefOr[Boolean] = js.native
+  var ajaxSettings: js.UndefOr[JQueryAjaxSettings] = js.undefined
+  var anchorSettings: js.UndefOr[AnchorSettings] = js.undefined
+  var autoAdjustHeight: js.UndefOr[Boolean] = js.undefined
+  var backButtonSupport: js.UndefOr[Boolean] = js.undefined
+  var contentCache: js.UndefOr[Boolean] = js.undefined
+  var contentURL: js.UndefOr[Null | String] = js.undefined
+  var cycleSteps: js.UndefOr[Boolean] = js.undefined
+  var disabledSteps: js.UndefOr[js.Array[Double]] = js.undefined
+  var errorSteps: js.UndefOr[js.Array[Double]] = js.undefined
+  var hiddenSteps: js.UndefOr[js.Array[Double]] = js.undefined
+  var keyNavigation: js.UndefOr[Boolean] = js.undefined
+  var lang: js.UndefOr[Lang] = js.undefined
+  var selected: js.UndefOr[Double] = js.undefined
+  var showStepURLhash: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[String] = js.undefined
+  var toolbarSettings: js.UndefOr[ToolbarSettings] = js.undefined
+  var transitionEffect: js.UndefOr[TransitionEffect] = js.undefined
+  var transitionSpeed: js.UndefOr[String | Double] = js.undefined
+  var useURLhash: js.UndefOr[Boolean] = js.undefined
 }
 
 object SmartWizardOptions {
   @scala.inline
-  def apply(): SmartWizardOptions = {
+  def apply(
+    ajaxSettings: JQueryAjaxSettings = null,
+    anchorSettings: AnchorSettings = null,
+    autoAdjustHeight: js.UndefOr[Boolean] = js.undefined,
+    backButtonSupport: js.UndefOr[Boolean] = js.undefined,
+    contentCache: js.UndefOr[Boolean] = js.undefined,
+    contentURL: js.UndefOr[Null | String] = js.undefined,
+    cycleSteps: js.UndefOr[Boolean] = js.undefined,
+    disabledSteps: js.Array[Double] = null,
+    errorSteps: js.Array[Double] = null,
+    hiddenSteps: js.Array[Double] = null,
+    keyNavigation: js.UndefOr[Boolean] = js.undefined,
+    lang: Lang = null,
+    selected: js.UndefOr[Double] = js.undefined,
+    showStepURLhash: js.UndefOr[Boolean] = js.undefined,
+    theme: String = null,
+    toolbarSettings: ToolbarSettings = null,
+    transitionEffect: TransitionEffect = null,
+    transitionSpeed: String | Double = null,
+    useURLhash: js.UndefOr[Boolean] = js.undefined
+  ): SmartWizardOptions = {
     val __obj = js.Dynamic.literal()
+    if (ajaxSettings != null) __obj.updateDynamic("ajaxSettings")(ajaxSettings.asInstanceOf[js.Any])
+    if (anchorSettings != null) __obj.updateDynamic("anchorSettings")(anchorSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoAdjustHeight)) __obj.updateDynamic("autoAdjustHeight")(autoAdjustHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(backButtonSupport)) __obj.updateDynamic("backButtonSupport")(backButtonSupport.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentCache)) __obj.updateDynamic("contentCache")(contentCache.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentURL)) __obj.updateDynamic("contentURL")(contentURL.asInstanceOf[js.Any])
+    if (!js.isUndefined(cycleSteps)) __obj.updateDynamic("cycleSteps")(cycleSteps.get.asInstanceOf[js.Any])
+    if (disabledSteps != null) __obj.updateDynamic("disabledSteps")(disabledSteps.asInstanceOf[js.Any])
+    if (errorSteps != null) __obj.updateDynamic("errorSteps")(errorSteps.asInstanceOf[js.Any])
+    if (hiddenSteps != null) __obj.updateDynamic("hiddenSteps")(hiddenSteps.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyNavigation)) __obj.updateDynamic("keyNavigation")(keyNavigation.get.asInstanceOf[js.Any])
+    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showStepURLhash)) __obj.updateDynamic("showStepURLhash")(showStepURLhash.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (toolbarSettings != null) __obj.updateDynamic("toolbarSettings")(toolbarSettings.asInstanceOf[js.Any])
+    if (transitionEffect != null) __obj.updateDynamic("transitionEffect")(transitionEffect.asInstanceOf[js.Any])
+    if (transitionSpeed != null) __obj.updateDynamic("transitionSpeed")(transitionSpeed.asInstanceOf[js.Any])
+    if (!js.isUndefined(useURLhash)) __obj.updateDynamic("useURLhash")(useURLhash.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartWizardOptions]
   }
-  @scala.inline
-  implicit class SmartWizardOptionsOps[Self <: SmartWizardOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxSettings(value: JQueryAjaxSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnchorSettings(value: AnchorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchorSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoAdjustHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAdjustHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoAdjustHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoAdjustHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackButtonSupport(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backButtonSupport")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackButtonSupport: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backButtonSupport")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentURLNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentURL")(null)
-        ret
-    }
-    @scala.inline
-    def withCycleSteps(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cycleSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCycleSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cycleSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabledSteps(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabledSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorSteps(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHiddenSteps(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHiddenSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyNavigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyNavigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLang(value: Lang): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLang: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowStepURLhash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showStepURLhash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowStepURLhash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showStepURLhash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbarSettings(value: ToolbarSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbarSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionEffect(value: TransitionEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEffect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionEffect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEffect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransitionSpeed(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransitionSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseURLhash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useURLhash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseURLhash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useURLhash")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

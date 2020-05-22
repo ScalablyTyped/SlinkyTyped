@@ -6,179 +6,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AdjustPitch extends js.Object {
-  var adjustPitch: js.UndefOr[Double] = js.native
-  var adjustRoll: js.UndefOr[Double] = js.native
-  var adjustYaw: js.UndefOr[Double] = js.native
-  var maxPitch: js.UndefOr[Double] = js.native
-  var maxYaw: js.UndefOr[Double] = js.native
-  var minPitch: js.UndefOr[Double] = js.native
-  var minYaw: js.UndefOr[Double] = js.native
-  var pitchAxis: js.UndefOr[Vector3] = js.native
-  var slerpAmount: js.UndefOr[Double] = js.native
-  var upAxis: js.UndefOr[Vector3] = js.native
-  var upAxisSpace: js.UndefOr[Space] = js.native
-  var yawAxis: js.UndefOr[Vector3] = js.native
+  var adjustPitch: js.UndefOr[Double] = js.undefined
+  var adjustRoll: js.UndefOr[Double] = js.undefined
+  var adjustYaw: js.UndefOr[Double] = js.undefined
+  var maxPitch: js.UndefOr[Double] = js.undefined
+  var maxYaw: js.UndefOr[Double] = js.undefined
+  var minPitch: js.UndefOr[Double] = js.undefined
+  var minYaw: js.UndefOr[Double] = js.undefined
+  var pitchAxis: js.UndefOr[Vector3] = js.undefined
+  var slerpAmount: js.UndefOr[Double] = js.undefined
+  var upAxis: js.UndefOr[Vector3] = js.undefined
+  var upAxisSpace: js.UndefOr[Space] = js.undefined
+  var yawAxis: js.UndefOr[Vector3] = js.undefined
 }
 
 object AdjustPitch {
   @scala.inline
-  def apply(): AdjustPitch = {
+  def apply(
+    adjustPitch: js.UndefOr[Double] = js.undefined,
+    adjustRoll: js.UndefOr[Double] = js.undefined,
+    adjustYaw: js.UndefOr[Double] = js.undefined,
+    maxPitch: js.UndefOr[Double] = js.undefined,
+    maxYaw: js.UndefOr[Double] = js.undefined,
+    minPitch: js.UndefOr[Double] = js.undefined,
+    minYaw: js.UndefOr[Double] = js.undefined,
+    pitchAxis: Vector3 = null,
+    slerpAmount: js.UndefOr[Double] = js.undefined,
+    upAxis: Vector3 = null,
+    upAxisSpace: Space = null,
+    yawAxis: Vector3 = null
+  ): AdjustPitch = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(adjustPitch)) __obj.updateDynamic("adjustPitch")(adjustPitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(adjustRoll)) __obj.updateDynamic("adjustRoll")(adjustRoll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(adjustYaw)) __obj.updateDynamic("adjustYaw")(adjustYaw.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxPitch)) __obj.updateDynamic("maxPitch")(maxPitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxYaw)) __obj.updateDynamic("maxYaw")(maxYaw.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minPitch)) __obj.updateDynamic("minPitch")(minPitch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minYaw)) __obj.updateDynamic("minYaw")(minYaw.get.asInstanceOf[js.Any])
+    if (pitchAxis != null) __obj.updateDynamic("pitchAxis")(pitchAxis.asInstanceOf[js.Any])
+    if (!js.isUndefined(slerpAmount)) __obj.updateDynamic("slerpAmount")(slerpAmount.get.asInstanceOf[js.Any])
+    if (upAxis != null) __obj.updateDynamic("upAxis")(upAxis.asInstanceOf[js.Any])
+    if (upAxisSpace != null) __obj.updateDynamic("upAxisSpace")(upAxisSpace.asInstanceOf[js.Any])
+    if (yawAxis != null) __obj.updateDynamic("yawAxis")(yawAxis.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdjustPitch]
   }
-  @scala.inline
-  implicit class AdjustPitchOps[Self <: AdjustPitch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdjustPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustPitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustPitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdjustRoll(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustRoll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustRoll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustRoll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdjustYaw(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustYaw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustYaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustYaw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxYaw(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxYaw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxYaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxYaw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinYaw(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minYaw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinYaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minYaw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitchAxis(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitchAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitchAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitchAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlerpAmount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slerpAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlerpAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slerpAmount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpAxis(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpAxisSpace(value: Space): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upAxisSpace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpAxisSpace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upAxisSpace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYawAxis(value: Vector3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yawAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYawAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yawAxis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

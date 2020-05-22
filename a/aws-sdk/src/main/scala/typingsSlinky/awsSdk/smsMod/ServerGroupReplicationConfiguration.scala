@@ -18,41 +18,14 @@ trait ServerGroupReplicationConfiguration extends js.Object {
 
 object ServerGroupReplicationConfiguration {
   @scala.inline
-  def apply(): ServerGroupReplicationConfiguration = {
+  def apply(
+    serverGroupId: ServerGroupId = null,
+    serverReplicationConfigurations: ServerReplicationConfigurations = null
+  ): ServerGroupReplicationConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (serverGroupId != null) __obj.updateDynamic("serverGroupId")(serverGroupId.asInstanceOf[js.Any])
+    if (serverReplicationConfigurations != null) __obj.updateDynamic("serverReplicationConfigurations")(serverReplicationConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerGroupReplicationConfiguration]
   }
-  @scala.inline
-  implicit class ServerGroupReplicationConfigurationOps[Self <: ServerGroupReplicationConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServerGroupId(value: ServerGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServerReplicationConfigurations(value: ServerReplicationConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverReplicationConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServerReplicationConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverReplicationConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

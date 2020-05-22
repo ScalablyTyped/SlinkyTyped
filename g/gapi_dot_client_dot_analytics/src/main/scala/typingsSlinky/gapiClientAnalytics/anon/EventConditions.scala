@@ -4,51 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventConditions extends js.Object {
   /** List of event conditions. */
-  var eventConditions: js.UndefOr[js.Array[ComparisonType]] = js.native
+  var eventConditions: js.UndefOr[js.Array[ComparisonType]] = js.undefined
   /** Determines if the event value should be used as the value for this goal. */
-  var useEventValue: js.UndefOr[Boolean] = js.native
+  var useEventValue: js.UndefOr[Boolean] = js.undefined
 }
 
 object EventConditions {
   @scala.inline
-  def apply(): EventConditions = {
+  def apply(
+    eventConditions: js.Array[ComparisonType] = null,
+    useEventValue: js.UndefOr[Boolean] = js.undefined
+  ): EventConditions = {
     val __obj = js.Dynamic.literal()
+    if (eventConditions != null) __obj.updateDynamic("eventConditions")(eventConditions.asInstanceOf[js.Any])
+    if (!js.isUndefined(useEventValue)) __obj.updateDynamic("useEventValue")(useEventValue.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventConditions]
   }
-  @scala.inline
-  implicit class EventConditionsOps[Self <: EventConditions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventConditions(value: js.Array[ComparisonType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventConditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseEventValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEventValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseEventValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useEventValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

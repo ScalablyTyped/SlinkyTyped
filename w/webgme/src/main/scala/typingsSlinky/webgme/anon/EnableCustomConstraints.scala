@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnableCustomConstraints extends js.Object {
   // GmeClasses.Core;
   /**
@@ -12,7 +11,7 @@ trait EnableCustomConstraints extends js.Object {
     * of custom constraints defined in the meta nodes.
     *   config.core.enableCustomConstraints = false;
     */
-  var enableCustomConstraints: Boolean = js.native
+  var enableCustomConstraints: Boolean
 }
 
 object EnableCustomConstraints {
@@ -21,19 +20,5 @@ object EnableCustomConstraints {
     val __obj = js.Dynamic.literal(enableCustomConstraints = enableCustomConstraints.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnableCustomConstraints]
   }
-  @scala.inline
-  implicit class EnableCustomConstraintsOps[Self <: EnableCustomConstraints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableCustomConstraints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCustomConstraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

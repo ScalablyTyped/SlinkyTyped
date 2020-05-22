@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ViewInfoObject extends js.Object {
   @JSName("InfoPath.ViewInfoObject_typekey")
-  var InfoPathDotViewInfoObject_typekey: ViewInfoObject = js.native
-  var IsDefault: Boolean = js.native
-  val Name: String = js.native
+  var InfoPathDotViewInfoObject_typekey: ViewInfoObject
+  var IsDefault: Boolean
+  val Name: String
 }
 
 object ViewInfoObject {
@@ -19,31 +18,5 @@ object ViewInfoObject {
     __obj.updateDynamic("InfoPath.ViewInfoObject_typekey")(InfoPathDotViewInfoObject_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewInfoObject]
   }
-  @scala.inline
-  implicit class ViewInfoObjectOps[Self <: ViewInfoObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInfoPathDotViewInfoObject_typekey(value: ViewInfoObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.ViewInfoObject_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

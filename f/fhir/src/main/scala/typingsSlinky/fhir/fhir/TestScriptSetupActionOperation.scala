@@ -7,503 +7,207 @@ import scala.scalajs.js.annotation._
 /**
   * The setup operation to perform
   */
-@js.native
 trait TestScriptSetupActionOperation extends BackboneElement {
   /**
     * Contains extended information for property 'accept'.
     */
-  var _accept: js.UndefOr[Element] = js.native
+  var _accept: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'contentType'.
     */
-  var _contentType: js.UndefOr[Element] = js.native
+  var _contentType: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'destination'.
     */
-  var _destination: js.UndefOr[Element] = js.native
+  var _destination: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'encodeRequestUrl'.
     */
-  var _encodeRequestUrl: js.UndefOr[Element] = js.native
+  var _encodeRequestUrl: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'label'.
     */
-  var _label: js.UndefOr[Element] = js.native
+  var _label: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'origin'.
     */
-  var _origin: js.UndefOr[Element] = js.native
+  var _origin: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'params'.
     */
-  var _params: js.UndefOr[Element] = js.native
+  var _params: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'requestId'.
     */
-  var _requestId: js.UndefOr[Element] = js.native
+  var _requestId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'resource'.
     */
-  var _resource: js.UndefOr[Element] = js.native
+  var _resource: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'responseId'.
     */
-  var _responseId: js.UndefOr[Element] = js.native
+  var _responseId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'sourceId'.
     */
-  var _sourceId: js.UndefOr[Element] = js.native
+  var _sourceId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'targetId'.
     */
-  var _targetId: js.UndefOr[Element] = js.native
+  var _targetId: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.native
+  var _url: js.UndefOr[Element] = js.undefined
   /**
     * xml | json | ttl | none
     */
-  var accept: js.UndefOr[code] = js.native
+  var accept: js.UndefOr[code] = js.undefined
   /**
     * xml | json | ttl | none
     */
-  var contentType: js.UndefOr[code] = js.native
+  var contentType: js.UndefOr[code] = js.undefined
   /**
     * Tracking/reporting operation description
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Server responding to the request
     */
-  var destination: js.UndefOr[integer] = js.native
+  var destination: js.UndefOr[integer] = js.undefined
   /**
     * Whether or not to send the request url in encoded format
     */
-  var encodeRequestUrl: js.UndefOr[Boolean] = js.native
+  var encodeRequestUrl: js.UndefOr[Boolean] = js.undefined
   /**
     * Tracking/logging operation label
     */
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.undefined
   /**
     * Server initiating the request
     */
-  var origin: js.UndefOr[integer] = js.native
+  var origin: js.UndefOr[integer] = js.undefined
   /**
     * Explicitly defined path parameters
     */
-  var params: js.UndefOr[String] = js.native
+  var params: js.UndefOr[String] = js.undefined
   /**
     * Each operation can have one or more header elements
     */
-  var requestHeader: js.UndefOr[js.Array[TestScriptSetupActionOperationRequestHeader]] = js.native
+  var requestHeader: js.UndefOr[js.Array[TestScriptSetupActionOperationRequestHeader]] = js.undefined
   /**
     * Fixture Id of mapped request
     */
-  var requestId: js.UndefOr[id] = js.native
+  var requestId: js.UndefOr[id] = js.undefined
   /**
     * Resource type
     */
-  var resource: js.UndefOr[code] = js.native
+  var resource: js.UndefOr[code] = js.undefined
   /**
     * Fixture Id of mapped response
     */
-  var responseId: js.UndefOr[id] = js.native
+  var responseId: js.UndefOr[id] = js.undefined
   /**
     * Fixture Id of body for PUT and POST requests
     */
-  var sourceId: js.UndefOr[id] = js.native
+  var sourceId: js.UndefOr[id] = js.undefined
   /**
     * Id of fixture used for extracting the [id],  [type], and [vid] for GET requests
     */
-  var targetId: js.UndefOr[id] = js.native
+  var targetId: js.UndefOr[id] = js.undefined
   /**
     * The operation code type that will be executed
     */
-  var `type`: js.UndefOr[Coding] = js.native
+  var `type`: js.UndefOr[Coding] = js.undefined
   /**
     * Request URL
     */
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object TestScriptSetupActionOperation {
   @scala.inline
-  def apply(): TestScriptSetupActionOperation = {
+  def apply(
+    _accept: Element = null,
+    _contentType: Element = null,
+    _description: Element = null,
+    _destination: Element = null,
+    _encodeRequestUrl: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _label: Element = null,
+    _origin: Element = null,
+    _params: Element = null,
+    _requestId: Element = null,
+    _resource: Element = null,
+    _responseId: Element = null,
+    _sourceId: Element = null,
+    _targetId: Element = null,
+    _url: Element = null,
+    accept: code = null,
+    contentType: code = null,
+    description: String = null,
+    destination: js.UndefOr[integer] = js.undefined,
+    encodeRequestUrl: js.UndefOr[Boolean] = js.undefined,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    label: String = null,
+    modifierExtension: js.Array[Extension] = null,
+    origin: js.UndefOr[integer] = js.undefined,
+    params: String = null,
+    requestHeader: js.Array[TestScriptSetupActionOperationRequestHeader] = null,
+    requestId: id = null,
+    resource: code = null,
+    responseId: id = null,
+    sourceId: id = null,
+    targetId: id = null,
+    `type`: Coding = null,
+    url: String = null
+  ): TestScriptSetupActionOperation = {
     val __obj = js.Dynamic.literal()
+    if (_accept != null) __obj.updateDynamic("_accept")(_accept.asInstanceOf[js.Any])
+    if (_contentType != null) __obj.updateDynamic("_contentType")(_contentType.asInstanceOf[js.Any])
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_destination != null) __obj.updateDynamic("_destination")(_destination.asInstanceOf[js.Any])
+    if (_encodeRequestUrl != null) __obj.updateDynamic("_encodeRequestUrl")(_encodeRequestUrl.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_label != null) __obj.updateDynamic("_label")(_label.asInstanceOf[js.Any])
+    if (_origin != null) __obj.updateDynamic("_origin")(_origin.asInstanceOf[js.Any])
+    if (_params != null) __obj.updateDynamic("_params")(_params.asInstanceOf[js.Any])
+    if (_requestId != null) __obj.updateDynamic("_requestId")(_requestId.asInstanceOf[js.Any])
+    if (_resource != null) __obj.updateDynamic("_resource")(_resource.asInstanceOf[js.Any])
+    if (_responseId != null) __obj.updateDynamic("_responseId")(_responseId.asInstanceOf[js.Any])
+    if (_sourceId != null) __obj.updateDynamic("_sourceId")(_sourceId.asInstanceOf[js.Any])
+    if (_targetId != null) __obj.updateDynamic("_targetId")(_targetId.asInstanceOf[js.Any])
+    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
+    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(destination)) __obj.updateDynamic("destination")(destination.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(encodeRequestUrl)) __obj.updateDynamic("encodeRequestUrl")(encodeRequestUrl.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (!js.isUndefined(origin)) __obj.updateDynamic("origin")(origin.get.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (requestHeader != null) __obj.updateDynamic("requestHeader")(requestHeader.asInstanceOf[js.Any])
+    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (responseId != null) __obj.updateDynamic("responseId")(responseId.asInstanceOf[js.Any])
+    if (sourceId != null) __obj.updateDynamic("sourceId")(sourceId.asInstanceOf[js.Any])
+    if (targetId != null) __obj.updateDynamic("targetId")(targetId.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestScriptSetupActionOperation]
   }
-  @scala.inline
-  implicit class TestScriptSetupActionOperationOps[Self <: TestScriptSetupActionOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_accept(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_accept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_contentType(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_contentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_destination(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_destination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_encodeRequestUrl(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_encodeRequestUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_encodeRequestUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_encodeRequestUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_label(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_label: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_origin(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_origin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_params(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_params: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_requestId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_requestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_requestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_resource(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_resource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_responseId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_responseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_responseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_responseId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_sourceId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_sourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_targetId(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_targetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_url(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccept(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodeRequestUrl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeRequestUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodeRequestUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeRequestUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestHeader(value: js.Array[TestScriptSetupActionOperationRequestHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResource(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetId(value: id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Coding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

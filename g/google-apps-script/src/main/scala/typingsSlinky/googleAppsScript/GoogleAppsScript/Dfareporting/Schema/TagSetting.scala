@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TagSetting extends js.Object {
-  var additionalKeyValues: js.UndefOr[String] = js.native
-  var includeClickThroughUrls: js.UndefOr[Boolean] = js.native
-  var includeClickTracking: js.UndefOr[Boolean] = js.native
-  var keywordOption: js.UndefOr[String] = js.native
+  var additionalKeyValues: js.UndefOr[String] = js.undefined
+  var includeClickThroughUrls: js.UndefOr[Boolean] = js.undefined
+  var includeClickTracking: js.UndefOr[Boolean] = js.undefined
+  var keywordOption: js.UndefOr[String] = js.undefined
 }
 
 object TagSetting {
   @scala.inline
-  def apply(): TagSetting = {
+  def apply(
+    additionalKeyValues: String = null,
+    includeClickThroughUrls: js.UndefOr[Boolean] = js.undefined,
+    includeClickTracking: js.UndefOr[Boolean] = js.undefined,
+    keywordOption: String = null
+  ): TagSetting = {
     val __obj = js.Dynamic.literal()
+    if (additionalKeyValues != null) __obj.updateDynamic("additionalKeyValues")(additionalKeyValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeClickThroughUrls)) __obj.updateDynamic("includeClickThroughUrls")(includeClickThroughUrls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeClickTracking)) __obj.updateDynamic("includeClickTracking")(includeClickTracking.get.asInstanceOf[js.Any])
+    if (keywordOption != null) __obj.updateDynamic("keywordOption")(keywordOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagSetting]
   }
-  @scala.inline
-  implicit class TagSettingOps[Self <: TagSetting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalKeyValues(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalKeyValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalKeyValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalKeyValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeClickThroughUrls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeClickThroughUrls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeClickThroughUrls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeClickThroughUrls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeClickTracking(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeClickTracking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeClickTracking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeClickTracking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywordOption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordOption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywordOption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordOption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

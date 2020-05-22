@@ -30,71 +30,19 @@ trait GetFederationTokenRequest extends js.Object {
 
 object GetFederationTokenRequest {
   @scala.inline
-  def apply(Name: userNameType): GetFederationTokenRequest = {
+  def apply(
+    Name: userNameType,
+    DurationSeconds: js.UndefOr[durationSecondsType] = js.undefined,
+    Policy: sessionPolicyDocumentType = null,
+    PolicyArns: policyDescriptorListType = null,
+    Tags: tagListType = null
+  ): GetFederationTokenRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(DurationSeconds)) __obj.updateDynamic("DurationSeconds")(DurationSeconds.get.asInstanceOf[js.Any])
+    if (Policy != null) __obj.updateDynamic("Policy")(Policy.asInstanceOf[js.Any])
+    if (PolicyArns != null) __obj.updateDynamic("PolicyArns")(PolicyArns.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFederationTokenRequest]
   }
-  @scala.inline
-  implicit class GetFederationTokenRequestOps[Self <: GetFederationTokenRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: userNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDurationSeconds(value: durationSecondsType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDurationSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: sessionPolicyDocumentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyArns(value: policyDescriptorListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: tagListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

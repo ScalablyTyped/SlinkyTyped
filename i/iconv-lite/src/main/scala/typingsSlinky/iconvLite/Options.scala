@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var addBOM: js.UndefOr[Boolean] = js.native
-  var defaultEncoding: js.UndefOr[String] = js.native
-  var stripBOM: js.UndefOr[Boolean] = js.native
+  var addBOM: js.UndefOr[Boolean] = js.undefined
+  var defaultEncoding: js.UndefOr[String] = js.undefined
+  var stripBOM: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    addBOM: js.UndefOr[Boolean] = js.undefined,
+    defaultEncoding: String = null,
+    stripBOM: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addBOM)) __obj.updateDynamic("addBOM")(addBOM.get.asInstanceOf[js.Any])
+    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripBOM)) __obj.updateDynamic("stripBOM")(stripBOM.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddBOM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addBOM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddBOM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addBOM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEncoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEncoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripBOM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripBOM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripBOM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripBOM")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

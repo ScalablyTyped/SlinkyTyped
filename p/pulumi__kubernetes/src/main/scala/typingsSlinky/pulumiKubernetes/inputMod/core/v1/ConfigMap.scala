@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
 /**
   * ConfigMap holds configuration data for pods to consume.
   */
-@js.native
 trait ConfigMap extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -18,108 +17,60 @@ trait ConfigMap extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]] = js.native
+  var apiVersion: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]] = js.undefined
   /**
     * BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-',
     * '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys
     * stored in BinaryData must not overlap with the ones in the Data field, this is enforced
     * during validation process. Using this field will require 1.10+ apiserver and kubelet.
     */
-  var binaryData: js.UndefOr[Input[js.Object]] = js.native
+  var binaryData: js.UndefOr[Input[js.Object]] = js.undefined
   /**
     * Data contains the configuration data. Each key must consist of alphanumeric characters,
     * '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The
     * keys stored in Data must not overlap with the keys in the BinaryData field, this is
     * enforced during validation process.
     */
-  var data: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  var data: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.undefined
+  /**
+    * Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated
+    * (only object metadata can be modified). If not set to true, the field can be modified at
+    * any time. Defaulted to nil. This is an alpha field enabled by ImmutableEphemeralVolumes
+    * feature gate.
+    */
+  var immutable: js.UndefOr[Input[Boolean]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ConfigMap]] = js.native
+  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ConfigMap]] = js.undefined
   /**
     * Standard object's metadata. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  var metadata: js.UndefOr[Input[ObjectMeta]] = js.native
+  var metadata: js.UndefOr[Input[ObjectMeta]] = js.undefined
 }
 
 object ConfigMap {
   @scala.inline
-  def apply(): ConfigMap = {
+  def apply(
+    apiVersion: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1] = null,
+    binaryData: Input[js.Object] = null,
+    data: Input[StringDictionary[Input[String]]] = null,
+    immutable: Input[Boolean] = null,
+    kind: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ConfigMap] = null,
+    metadata: Input[ObjectMeta] = null
+  ): ConfigMap = {
     val __obj = js.Dynamic.literal()
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (binaryData != null) __obj.updateDynamic("binaryData")(binaryData.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (immutable != null) __obj.updateDynamic("immutable")(immutable.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigMap]
   }
-  @scala.inline
-  implicit class ConfigMapOps[Self <: ConfigMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBinaryData(value: Input[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBinaryData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: Input[StringDictionary[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ConfigMap]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Input[ObjectMeta]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

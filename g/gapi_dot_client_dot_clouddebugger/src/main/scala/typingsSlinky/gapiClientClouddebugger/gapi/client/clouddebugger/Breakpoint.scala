@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Breakpoint extends js.Object {
   /**
     * Action that the agent should perform when the code at the
     * breakpoint location is hit.
     */
-  var action: js.UndefOr[String] = js.native
+  var action: js.UndefOr[String] = js.undefined
   /**
     * Condition that triggers the breakpoint.
     * The condition is a compound boolean expression composed using expressions
     * in a programming language at the source location.
     */
-  var condition: js.UndefOr[String] = js.native
+  var condition: js.UndefOr[String] = js.undefined
   /** Time this breakpoint was created by the server in seconds resolution. */
-  var createTime: js.UndefOr[String] = js.native
+  var createTime: js.UndefOr[String] = js.undefined
   /**
     * Values of evaluated expressions at breakpoint time.
     * The evaluated expressions appear in exactly the same order they
@@ -29,35 +28,35 @@ trait Breakpoint extends js.Object {
     * If the expression cannot be evaluated, the `status` inside the `Variable`
     * will indicate an error and contain the error text.
     */
-  var evaluatedExpressions: js.UndefOr[js.Array[Variable]] = js.native
+  var evaluatedExpressions: js.UndefOr[js.Array[Variable]] = js.undefined
   /**
     * List of read-only expressions to evaluate at the breakpoint location.
     * The expressions are composed using expressions in the programming language
     * at the source location. If the breakpoint action is `LOG`, the evaluated
     * expressions are included in log statements.
     */
-  var expressions: js.UndefOr[js.Array[String]] = js.native
+  var expressions: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Time this breakpoint was finalized as seen by the server in seconds
     * resolution.
     */
-  var finalTime: js.UndefOr[String] = js.native
+  var finalTime: js.UndefOr[String] = js.undefined
   /** Breakpoint identifier, unique in the scope of the debuggee. */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * When true, indicates that this is a final result and the
     * breakpoint state will not change from here on.
     */
-  var isFinalState: js.UndefOr[Boolean] = js.native
+  var isFinalState: js.UndefOr[Boolean] = js.undefined
   /**
     * A set of custom breakpoint properties, populated by the agent, to be
     * displayed to the user.
     */
-  var labels: js.UndefOr[Record[String, String]] = js.native
+  var labels: js.UndefOr[Record[String, String]] = js.undefined
   /** Breakpoint source location. */
-  var location: js.UndefOr[SourceLocation] = js.native
+  var location: js.UndefOr[SourceLocation] = js.undefined
   /** Indicates the severity of the log. Only relevant when action is `LOG`. */
-  var logLevel: js.UndefOr[String] = js.native
+  var logLevel: js.UndefOr[String] = js.undefined
   /**
     * Only relevant when action is `LOG`. Defines the message to log when
     * the breakpoint hits. The message may include parameter placeholders `$0`,
@@ -68,9 +67,9 @@ trait Breakpoint extends js.Object {
     * Example: `Message received, id = $0, count = $1` with
     * `expressions` = `[ message.id, message.count ]`.
     */
-  var logMessageFormat: js.UndefOr[String] = js.native
+  var logMessageFormat: js.UndefOr[String] = js.undefined
   /** The stack at breakpoint time. */
-  var stackFrames: js.UndefOr[js.Array[StackFrame]] = js.native
+  var stackFrames: js.UndefOr[js.Array[StackFrame]] = js.undefined
   /**
     * Breakpoint status.
     *
@@ -88,9 +87,9 @@ trait Breakpoint extends js.Object {
     * &#42;   `Invalid line number` referring to location
     * &#42;   `Field f not found in class C` referring to condition
     */
-  var status: js.UndefOr[StatusMessage] = js.native
+  var status: js.UndefOr[StatusMessage] = js.undefined
   /** E-mail address of the user that created this breakpoint */
-  var userEmail: js.UndefOr[String] = js.native
+  var userEmail: js.UndefOr[String] = js.undefined
   /**
     * The `variable_table` exists to aid with computation, memory and network
     * traffic optimization.  It enables storing a variable once and reference
@@ -105,214 +104,47 @@ trait Breakpoint extends js.Object {
     * variable. The effective variable is a merge of the referencing variable
     * and the referenced variable.
     */
-  var variableTable: js.UndefOr[js.Array[Variable]] = js.native
+  var variableTable: js.UndefOr[js.Array[Variable]] = js.undefined
 }
 
 object Breakpoint {
   @scala.inline
-  def apply(): Breakpoint = {
+  def apply(
+    action: String = null,
+    condition: String = null,
+    createTime: String = null,
+    evaluatedExpressions: js.Array[Variable] = null,
+    expressions: js.Array[String] = null,
+    finalTime: String = null,
+    id: String = null,
+    isFinalState: js.UndefOr[Boolean] = js.undefined,
+    labels: Record[String, String] = null,
+    location: SourceLocation = null,
+    logLevel: String = null,
+    logMessageFormat: String = null,
+    stackFrames: js.Array[StackFrame] = null,
+    status: StatusMessage = null,
+    userEmail: String = null,
+    variableTable: js.Array[Variable] = null
+  ): Breakpoint = {
     val __obj = js.Dynamic.literal()
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (evaluatedExpressions != null) __obj.updateDynamic("evaluatedExpressions")(evaluatedExpressions.asInstanceOf[js.Any])
+    if (expressions != null) __obj.updateDynamic("expressions")(expressions.asInstanceOf[js.Any])
+    if (finalTime != null) __obj.updateDynamic("finalTime")(finalTime.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isFinalState)) __obj.updateDynamic("isFinalState")(isFinalState.get.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (logLevel != null) __obj.updateDynamic("logLevel")(logLevel.asInstanceOf[js.Any])
+    if (logMessageFormat != null) __obj.updateDynamic("logMessageFormat")(logMessageFormat.asInstanceOf[js.Any])
+    if (stackFrames != null) __obj.updateDynamic("stackFrames")(stackFrames.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (userEmail != null) __obj.updateDynamic("userEmail")(userEmail.asInstanceOf[js.Any])
+    if (variableTable != null) __obj.updateDynamic("variableTable")(variableTable.asInstanceOf[js.Any])
     __obj.asInstanceOf[Breakpoint]
   }
-  @scala.inline
-  implicit class BreakpointOps[Self <: Breakpoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCondition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCondition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvaluatedExpressions(value: js.Array[Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluatedExpressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluatedExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluatedExpressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpressions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expressions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpressions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expressions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsFinalState(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFinalState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsFinalState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFinalState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: Record[String, String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: SourceLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogMessageFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logMessageFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogMessageFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logMessageFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStackFrames(value: js.Array[StackFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackFrames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStackFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stackFrames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: StatusMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserEmail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariableTable(value: js.Array[Variable]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariableTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variableTable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

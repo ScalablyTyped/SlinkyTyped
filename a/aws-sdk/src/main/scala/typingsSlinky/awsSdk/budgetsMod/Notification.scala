@@ -33,60 +33,14 @@ object Notification {
   def apply(
     ComparisonOperator: ComparisonOperator,
     NotificationType: NotificationType,
-    Threshold: NotificationThreshold
+    Threshold: NotificationThreshold,
+    NotificationState: NotificationState = null,
+    ThresholdType: ThresholdType = null
   ): Notification = {
     val __obj = js.Dynamic.literal(ComparisonOperator = ComparisonOperator.asInstanceOf[js.Any], NotificationType = NotificationType.asInstanceOf[js.Any], Threshold = Threshold.asInstanceOf[js.Any])
+    if (NotificationState != null) __obj.updateDynamic("NotificationState")(NotificationState.asInstanceOf[js.Any])
+    if (ThresholdType != null) __obj.updateDynamic("ThresholdType")(ThresholdType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Notification]
   }
-  @scala.inline
-  implicit class NotificationOps[Self <: Notification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparisonOperator(value: ComparisonOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotificationType(value: NotificationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThreshold(value: NotificationThreshold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Threshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotificationState(value: NotificationState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThresholdType(value: ThresholdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThresholdType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

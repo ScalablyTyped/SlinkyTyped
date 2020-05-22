@@ -6,41 +6,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
-trait TupleExpression_
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TupleExpression_
   extends Expression
      with BaseNode {
-  var elements: js.Array[Null | Expression | SpreadElement_] = js.native
+  var elements: js.Array[Null | Expression | SpreadElement_]
   @JSName("type")
-  var type_TupleExpression_ : TupleExpression = js.native
+  var type_TupleExpression_ : TupleExpression
 }
 
 object TupleExpression_ {
   @scala.inline
-  def apply(elements: js.Array[Null | Expression | SpreadElement_], `type`: TupleExpression): TupleExpression_ = {
-    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
+  def apply(
+    elements: js.Array[Null | Expression | SpreadElement_],
+    `type`: TupleExpression,
+    end: Double = null.asInstanceOf[Double],
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    loc: SourceLocation = null,
+    start: Double = null.asInstanceOf[Double],
+    trailingComments: js.Array[Comment] = null
+  ): TupleExpression_ = {
+    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], innerComments = innerComments.asInstanceOf[js.Any], leadingComments = leadingComments.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trailingComments = trailingComments.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TupleExpression_]
   }
-  @scala.inline
-  implicit class TupleExpression_Ops[Self <: TupleExpression_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElements(value: js.Array[Null | Expression | SpreadElement_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: TupleExpression): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

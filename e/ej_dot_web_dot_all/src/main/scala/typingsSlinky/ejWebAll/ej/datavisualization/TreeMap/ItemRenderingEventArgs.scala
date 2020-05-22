@@ -4,38 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemRenderingEventArgs extends js.Object {
   /** Returns treemap leaf item
     */
-  var originalEvent: js.UndefOr[js.Any] = js.native
+  var originalEvent: js.UndefOr[js.Any] = js.undefined
 }
 
 object ItemRenderingEventArgs {
   @scala.inline
-  def apply(): ItemRenderingEventArgs = {
+  def apply(originalEvent: js.Any = null): ItemRenderingEventArgs = {
     val __obj = js.Dynamic.literal()
+    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemRenderingEventArgs]
   }
-  @scala.inline
-  implicit class ItemRenderingEventArgsOps[Self <: ItemRenderingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOriginalEvent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalEvent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

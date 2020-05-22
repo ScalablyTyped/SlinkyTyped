@@ -13,25 +13,24 @@ import scala.scalajs.js.annotation._
   *
   * A temporary interface to get access to documents substorages.
   */
-@js.native
 trait XDocumentSubStorageSupplier extends XInterface {
   /**
     * provides the list of substorages
     * @returns sequence of substorages names
     */
-  val DocumentSubStoragesNames: SafeArray[String] = js.native
+  val DocumentSubStoragesNames: SafeArray[String]
   /**
     * provides the access to a substorage with specified name
     * @param StorageName the name of requested substorage
     * @param nMode a mode the storage should be opened in can take value from {@link com.sun.star.embed.ElementModes}
     * @returns XStorage implementation that refers to specified substorage
     */
-  def getDocumentSubStorage(StorageName: String, nMode: Double): XStorage = js.native
+  def getDocumentSubStorage(StorageName: String, nMode: Double): XStorage
   /**
     * provides the list of substorages
     * @returns sequence of substorages names
     */
-  def getDocumentSubStoragesNames(): SafeArray[String] = js.native
+  def getDocumentSubStoragesNames(): SafeArray[String]
 }
 
 object XDocumentSubStorageSupplier {
@@ -47,31 +46,5 @@ object XDocumentSubStorageSupplier {
     val __obj = js.Dynamic.literal(DocumentSubStoragesNames = DocumentSubStoragesNames.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDocumentSubStorage = js.Any.fromFunction2(getDocumentSubStorage), getDocumentSubStoragesNames = js.Any.fromFunction0(getDocumentSubStoragesNames), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDocumentSubStorageSupplier]
   }
-  @scala.inline
-  implicit class XDocumentSubStorageSupplierOps[Self <: XDocumentSubStorageSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentSubStoragesNames(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentSubStoragesNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDocumentSubStorage(value: (String, Double) => XStorage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentSubStorage")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetDocumentSubStoragesNames(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocumentSubStoragesNames")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

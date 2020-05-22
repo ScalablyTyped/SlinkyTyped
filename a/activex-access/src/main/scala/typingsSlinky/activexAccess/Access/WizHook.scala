@@ -8,21 +8,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WizHook extends js.Object {
   @JSName("Access.WizHook_typekey")
-  var AccessDotWizHook_typekey: WizHook = js.native
-  val DbcVbProject: VBProject = js.native
-  val Key: Double = js.native
-  def AccessUserDataDir(): String = js.native
-  def AccessWizFilePath(bstrWhich: String): String = js.native
-  def AdpUIDPwd(pbstrUID: String, pbstrPwd: String): Boolean = js.native
-  def AnalyzeQuery(Workspace: Workspace, Database: Database, Query: String, Results: String): Double = js.native
-  def AnalyzeTable(Workspace: Workspace, Database: Database, Table: String, ReturnDebugInfo: Boolean, Results: String): Double = js.native
-  def ArgsOfActid(Actid: Double): Double = js.native
-  def BracketString(String: String, flags: Double): Boolean = js.native
-  def CacheStatus(bstrStatus: String): Unit = js.native
-  def CloseCurrentDatabase(): Boolean = js.native
+  var AccessDotWizHook_typekey: WizHook
+  val DbcVbProject: VBProject
+  val Key: Double
+  def AccessUserDataDir(): String
+  def AccessWizFilePath(bstrWhich: String): String
+  def AdpUIDPwd(pbstrUID: String, pbstrPwd: String): Boolean
+  def AnalyzeQuery(Workspace: Workspace, Database: Database, Query: String, Results: String): Double
+  def AnalyzeTable(Workspace: Workspace, Database: Database, Table: String, ReturnDebugInfo: Boolean, Results: String): Double
+  def ArgsOfActid(Actid: Double): Double
+  def BracketString(String: String, flags: Double): Boolean
+  def CacheStatus(bstrStatus: String): Unit
+  def CloseCurrentDatabase(): Boolean
   def CreateDataPageControl(
     DpName: String,
     CtlName: String,
@@ -34,26 +33,26 @@ trait WizHook extends js.Object {
     Y: Double,
     dx: Double,
     dy: Double
-  ): Unit = js.native
-  def CurrentLangID(): Double = js.native
-  def EmbedFileOnDataPage(DpName: String, FileToInsert: String): String = js.native
-  def EnglishPictToLocal(In: String, Out: String): Boolean = js.native
-  def ExecuteTempImexSpec(bstrSpecXML: String): Unit = js.native
-  def FCacheStatus(): Boolean = js.native
-  def FCreateNameMap(objtyp: Double, bstrObjName: String): Boolean = js.native
-  def FGetMSDE(fBlockKeys: Boolean): Boolean = js.native
-  def FIsFEWch(wch: Double): Boolean = js.native
-  def FIsPublishedXasTable(bstrObjectName: String): Boolean = js.native
-  def FIsValidXasObjectName(bstrObjectName: String, iobjtyp: AcObjectType): Boolean = js.native
-  def FIsXasDb(): Boolean = js.native
-  def FileExists(File: String): Boolean = js.native
-  def FirstDbcDataObject(Name: String, ObjType: AcObjectType, Attribs: Double): Boolean = js.native
-  def FullPath(RelativePath: String, FullPath: String): Double = js.native
-  def GetAccWizRCPath(): String = js.native
-  def GetAdeRegistryPath(): String = js.native
-  def GetColumns(bstrBase: String): String = js.native
-  def GetCurrentView(bstrTableName: String): Double = js.native
-  def GetDisabledExtensions(): String = js.native
+  ): Unit
+  def CurrentLangID(): Double
+  def EmbedFileOnDataPage(DpName: String, FileToInsert: String): String
+  def EnglishPictToLocal(In: String, Out: String): Boolean
+  def ExecuteTempImexSpec(bstrSpecXML: String): Unit
+  def FCacheStatus(): Boolean
+  def FCreateNameMap(objtyp: Double, bstrObjName: String): Boolean
+  def FGetMSDE(fBlockKeys: Boolean): Boolean
+  def FIsFEWch(wch: Double): Boolean
+  def FIsPublishedXasTable(bstrObjectName: String): Boolean
+  def FIsValidXasObjectName(bstrObjectName: String, iobjtyp: AcObjectType): Boolean
+  def FIsXasDb(): Boolean
+  def FileExists(File: String): Boolean
+  def FirstDbcDataObject(Name: String, ObjType: AcObjectType, Attribs: Double): Boolean
+  def FullPath(RelativePath: String, FullPath: String): Double
+  def GetAccWizRCPath(): String
+  def GetAdeRegistryPath(): String
+  def GetColumns(bstrBase: String): String
+  def GetCurrentView(bstrTableName: String): Double
+  def GetDisabledExtensions(): String
   def GetFileName(
     hwndOwner: Double,
     AppName: String,
@@ -66,7 +65,7 @@ trait WizHook extends js.Object {
     View: Double,
     flags: Double,
     fOpen: Boolean
-  ): Double = js.native
+  ): Double
   def GetFileName2(
     hwndOwner: Double,
     AppName: String,
@@ -80,40 +79,40 @@ trait WizHook extends js.Object {
     flags: Double,
     fOpen: Boolean,
     fFileSystem: js.Any
-  ): Double = js.native
-  def GetFileOdso(bstrExt: String, bstrFilename: String): Double = js.native
-  def GetImexTblName(): String = js.native
-  def GetInfoForColumns(bstrBase: String): String = js.native
-  def GetLinkedListProperty(bstrTableName: String, bstrPropertyName: String, fServer: Boolean): String = js.native
-  def GetObjPubOption(bstrObjectName: String, iobjtyp: AcObjectType, fTablesAsClient: Boolean): Double = js.native
-  def GetScriptString(HScr: Double, ScriptColumn: Double, Value: String): Boolean = js.native
-  def GetWizGlob(lWhich: Double): js.Any = js.native
-  def GlobalProcExists(Name: String): Boolean = js.native
-  def HideDates(): Boolean = js.native
-  def IsMatchToDbcConnectString(bstrConnectionString: String): Boolean = js.native
-  def IsMemberSafe(dispid: Double): Boolean = js.native
-  def IsValidIdent(Identifier: String): Boolean = js.native
-  def KeyboardLangID(): Double = js.native
-  def KnownWizLeaks(fStart: Boolean): Unit = js.native
-  def LoadImexSpecSolution(bstrFilename: String): Unit = js.native
-  def LocalFont(): String = js.native
-  def NameFromActid(Actid: Double): String = js.native
-  def ObjTypOfRecordSource(RecordSource: String): Double = js.native
-  def OfficeAddInDir(): String = js.native
-  def OpenEmScript(pProperty: AccessProperty, OpenMode: Double, Extra: Double, Version: Double): Double = js.native
-  def OpenPictureFile(File: String, Cancelled: Boolean): Boolean = js.native
-  def OpenScript(Script: String, Label: String, OpenMode: Double, Extra: Double, Version: Double): Double = js.native
-  def ReportLeaksToFile(fRptToFile: Boolean, bstrFileOut: String): Unit = js.native
-  def SaveObject(bstrName: String, objtyp: Double): Unit = js.native
-  def SaveScriptString(HScr: Double, ScriptColumn: Double, Value: String): Boolean = js.native
-  def SetDefaultSpecName(bstrSpecName: String): Unit = js.native
-  def SetDpBlockKeyInput(fBlockKeys: Boolean): Unit = js.native
-  def SetVbaPassword(bstrDbName: String, bstrConnect: String, bstrPasswd: String): Boolean = js.native
-  def SetWizGlob(lWhich: Double, vValue: js.Any): Unit = js.native
-  def SortStringArray(Array: SafeArray[String]): Unit = js.native
-  def SplitPath(Path: String, Drive: String, Dir: String, File: String, Ext: String): Unit = js.native
-  def TableFieldHasUniqueIndex(Table: String, Columns: String): Boolean = js.native
-  def TranslateExpression(In: String, Out: String, ParseFlags: Double, TranslateFlags: Double): Boolean = js.native
+  ): Double
+  def GetFileOdso(bstrExt: String, bstrFilename: String): Double
+  def GetImexTblName(): String
+  def GetInfoForColumns(bstrBase: String): String
+  def GetLinkedListProperty(bstrTableName: String, bstrPropertyName: String, fServer: Boolean): String
+  def GetObjPubOption(bstrObjectName: String, iobjtyp: AcObjectType, fTablesAsClient: Boolean): Double
+  def GetScriptString(HScr: Double, ScriptColumn: Double, Value: String): Boolean
+  def GetWizGlob(lWhich: Double): js.Any
+  def GlobalProcExists(Name: String): Boolean
+  def HideDates(): Boolean
+  def IsMatchToDbcConnectString(bstrConnectionString: String): Boolean
+  def IsMemberSafe(dispid: Double): Boolean
+  def IsValidIdent(Identifier: String): Boolean
+  def KeyboardLangID(): Double
+  def KnownWizLeaks(fStart: Boolean): Unit
+  def LoadImexSpecSolution(bstrFilename: String): Unit
+  def LocalFont(): String
+  def NameFromActid(Actid: Double): String
+  def ObjTypOfRecordSource(RecordSource: String): Double
+  def OfficeAddInDir(): String
+  def OpenEmScript(pProperty: AccessProperty, OpenMode: Double, Extra: Double, Version: Double): Double
+  def OpenPictureFile(File: String, Cancelled: Boolean): Boolean
+  def OpenScript(Script: String, Label: String, OpenMode: Double, Extra: Double, Version: Double): Double
+  def ReportLeaksToFile(fRptToFile: Boolean, bstrFileOut: String): Unit
+  def SaveObject(bstrName: String, objtyp: Double): Unit
+  def SaveScriptString(HScr: Double, ScriptColumn: Double, Value: String): Boolean
+  def SetDefaultSpecName(bstrSpecName: String): Unit
+  def SetDpBlockKeyInput(fBlockKeys: Boolean): Unit
+  def SetVbaPassword(bstrDbName: String, bstrConnect: String, bstrPasswd: String): Boolean
+  def SetWizGlob(lWhich: Double, vValue: js.Any): Unit
+  def SortStringArray(Array: SafeArray[String]): Unit
+  def SplitPath(Path: String, Drive: String, Dir: String, File: String, Ext: String): Unit
+  def TableFieldHasUniqueIndex(Table: String, Columns: String): Boolean
+  def TranslateExpression(In: String, Out: String, ParseFlags: Double, TranslateFlags: Double): Boolean
   def TwipsFromFont(
     FontName: String,
     Size: Double,
@@ -125,10 +124,10 @@ trait WizHook extends js.Object {
     MaxWidthCch: Double,
     dx: Double,
     dy: Double
-  ): Boolean = js.native
-  def WizCopyCmdbars(bstrADPName: String): Unit = js.native
-  def WizHelp(HelpFile: String, wCmd: Double, ContextID: Double): Boolean = js.native
-  def WizMsgBox(bstrText: String, bstrCaption: String, wStyle: Double, idHelpID: Double, bstrHelpFileName: String): Double = js.native
+  ): Boolean
+  def WizCopyCmdbars(bstrADPName: String): Unit
+  def WizHelp(HelpFile: String, wCmd: Double, ContextID: Double): Boolean
+  def WizMsgBox(bstrText: String, bstrCaption: String, wStyle: Double, idHelpID: Double, bstrHelpFileName: String): Double
 }
 
 object WizHook {
@@ -210,445 +209,5 @@ object WizHook {
     __obj.updateDynamic("Access.WizHook_typekey")(AccessDotWizHook_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[WizHook]
   }
-  @scala.inline
-  implicit class WizHookOps[Self <: WizHook] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessDotWizHook_typekey(value: WizHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Access.WizHook_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccessUserDataDir(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessUserDataDir")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAccessWizFilePath(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessWizFilePath")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAdpUIDPwd(value: (String, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdpUIDPwd")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAnalyzeQuery(value: (Workspace, Database, String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyzeQuery")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withAnalyzeTable(value: (Workspace, Database, String, Boolean, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalyzeTable")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withArgsOfActid(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ArgsOfActid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withBracketString(value: (String, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BracketString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCacheStatus(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheStatus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCloseCurrentDatabase(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloseCurrentDatabase")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDataPageControl(value: (String, String, Double, String, Double, String, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDataPageControl")(js.Any.fromFunction10(value))
-        ret
-    }
-    @scala.inline
-    def withCurrentLangID(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentLangID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDbcVbProject(value: VBProject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DbcVbProject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmbedFileOnDataPage(value: (String, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbedFileOnDataPage")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withEnglishPictToLocal(value: (String, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnglishPictToLocal")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withExecuteTempImexSpec(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecuteTempImexSpec")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFCacheStatus(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FCacheStatus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFCreateNameMap(value: (Double, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FCreateNameMap")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFGetMSDE(value: Boolean => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FGetMSDE")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFIsFEWch(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FIsFEWch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFIsPublishedXasTable(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FIsPublishedXasTable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFIsValidXasObjectName(value: (String, AcObjectType) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FIsValidXasObjectName")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFIsXasDb(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FIsXasDb")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFileExists(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileExists")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFirstDbcDataObject(value: (String, AcObjectType, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstDbcDataObject")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFullPath(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FullPath")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetAccWizRCPath(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAccWizRCPath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetAdeRegistryPath(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAdeRegistryPath")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetColumns(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCurrentView(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCurrentView")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDisabledExtensions(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDisabledExtensions")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetFileName(
-      value: (Double, String, String, String, String, String, String, Double, Double, Double, Boolean) => Double
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFileName")(js.Any.fromFunction11(value))
-        ret
-    }
-    @scala.inline
-    def withGetFileName2(
-      value: (Double, String, String, String, String, String, String, Double, Double, Double, Boolean, js.Any) => Double
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFileName2")(js.Any.fromFunction12(value))
-        ret
-    }
-    @scala.inline
-    def withGetFileOdso(value: (String, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFileOdso")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetImexTblName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetImexTblName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInfoForColumns(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInfoForColumns")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetLinkedListProperty(value: (String, String, Boolean) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLinkedListProperty")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetObjPubOption(value: (String, AcObjectType, Boolean) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetObjPubOption")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetScriptString(value: (Double, Double, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetScriptString")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetWizGlob(value: Double => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWizGlob")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGlobalProcExists(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalProcExists")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHideDates(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideDates")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsMatchToDbcConnectString(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMatchToDbcConnectString")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsMemberSafe(value: Double => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMemberSafe")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsValidIdent(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsValidIdent")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withKey(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyboardLangID(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyboardLangID")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withKnownWizLeaks(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KnownWizLeaks")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLoadImexSpecSolution(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadImexSpecSolution")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLocalFont(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalFont")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNameFromActid(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NameFromActid")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withObjTypOfRecordSource(value: String => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjTypOfRecordSource")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOfficeAddInDir(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OfficeAddInDir")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOpenEmScript(value: (AccessProperty, Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenEmScript")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withOpenPictureFile(value: (String, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenPictureFile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOpenScript(value: (String, String, Double, Double, Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OpenScript")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withReportLeaksToFile(value: (Boolean, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportLeaksToFile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSaveObject(value: (String, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SaveObject")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSaveScriptString(value: (Double, Double, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SaveScriptString")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetDefaultSpecName(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDefaultSpecName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetDpBlockKeyInput(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDpBlockKeyInput")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetVbaPassword(value: (String, String, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetVbaPassword")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSetWizGlob(value: (Double, js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetWizGlob")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSortStringArray(value: SafeArray[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SortStringArray")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSplitPath(value: (String, String, String, String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitPath")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withTableFieldHasUniqueIndex(value: (String, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TableFieldHasUniqueIndex")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTranslateExpression(value: (String, String, Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TranslateExpression")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withTwipsFromFont(
-      value: (String, Double, Double, Boolean, Boolean, Double, String, Double, Double, Double) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TwipsFromFont")(js.Any.fromFunction10(value))
-        ret
-    }
-    @scala.inline
-    def withWizCopyCmdbars(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WizCopyCmdbars")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWizHelp(value: (String, Double, Double) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WizHelp")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withWizMsgBox(value: (String, String, Double, Double, String) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WizMsgBox")(js.Any.fromFunction5(value))
-        ret
-    }
-  }
-  
 }
 

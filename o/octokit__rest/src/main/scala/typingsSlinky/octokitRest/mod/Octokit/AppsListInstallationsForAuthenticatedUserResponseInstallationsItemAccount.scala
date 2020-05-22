@@ -4,31 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccount extends js.Object {
-  var avatar_url: String = js.native
-  var description: js.UndefOr[String] = js.native
-  var events_url: String = js.native
-  var followers_url: js.UndefOr[String] = js.native
-  var following_url: js.UndefOr[String] = js.native
-  var gists_url: js.UndefOr[String] = js.native
-  var gravatar_id: js.UndefOr[String] = js.native
-  var hooks_url: js.UndefOr[String] = js.native
-  var html_url: js.UndefOr[String] = js.native
-  var id: Double = js.native
-  var issues_url: js.UndefOr[String] = js.native
-  var login: String = js.native
-  var members_url: js.UndefOr[String] = js.native
-  var node_id: String = js.native
-  var organizations_url: js.UndefOr[String] = js.native
-  var public_members_url: js.UndefOr[String] = js.native
-  var received_events_url: js.UndefOr[String] = js.native
-  var repos_url: String = js.native
-  var site_admin: js.UndefOr[Boolean] = js.native
-  var starred_url: js.UndefOr[String] = js.native
-  var subscriptions_url: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var url: String = js.native
+  var avatar_url: String
+  var description: js.UndefOr[String] = js.undefined
+  var events_url: String
+  var followers_url: js.UndefOr[String] = js.undefined
+  var following_url: js.UndefOr[String] = js.undefined
+  var gists_url: js.UndefOr[String] = js.undefined
+  var gravatar_id: js.UndefOr[String] = js.undefined
+  var hooks_url: js.UndefOr[String] = js.undefined
+  var html_url: js.UndefOr[String] = js.undefined
+  var id: Double
+  var issues_url: js.UndefOr[String] = js.undefined
+  var login: String
+  var members_url: js.UndefOr[String] = js.undefined
+  var node_id: String
+  var organizations_url: js.UndefOr[String] = js.undefined
+  var public_members_url: js.UndefOr[String] = js.undefined
+  var received_events_url: js.UndefOr[String] = js.undefined
+  var repos_url: String
+  var site_admin: js.UndefOr[Boolean] = js.undefined
+  var starred_url: js.UndefOr[String] = js.undefined
+  var subscriptions_url: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var url: String
 }
 
 object AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccount {
@@ -40,252 +39,42 @@ object AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccount
     login: String,
     node_id: String,
     repos_url: String,
-    url: String
+    url: String,
+    description: String = null,
+    followers_url: String = null,
+    following_url: String = null,
+    gists_url: String = null,
+    gravatar_id: String = null,
+    hooks_url: String = null,
+    html_url: String = null,
+    issues_url: String = null,
+    members_url: String = null,
+    organizations_url: String = null,
+    public_members_url: String = null,
+    received_events_url: String = null,
+    site_admin: js.UndefOr[Boolean] = js.undefined,
+    starred_url: String = null,
+    subscriptions_url: String = null,
+    `type`: String = null
   ): AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccount = {
     val __obj = js.Dynamic.literal(avatar_url = avatar_url.asInstanceOf[js.Any], events_url = events_url.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], login = login.asInstanceOf[js.Any], node_id = node_id.asInstanceOf[js.Any], repos_url = repos_url.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (followers_url != null) __obj.updateDynamic("followers_url")(followers_url.asInstanceOf[js.Any])
+    if (following_url != null) __obj.updateDynamic("following_url")(following_url.asInstanceOf[js.Any])
+    if (gists_url != null) __obj.updateDynamic("gists_url")(gists_url.asInstanceOf[js.Any])
+    if (gravatar_id != null) __obj.updateDynamic("gravatar_id")(gravatar_id.asInstanceOf[js.Any])
+    if (hooks_url != null) __obj.updateDynamic("hooks_url")(hooks_url.asInstanceOf[js.Any])
+    if (html_url != null) __obj.updateDynamic("html_url")(html_url.asInstanceOf[js.Any])
+    if (issues_url != null) __obj.updateDynamic("issues_url")(issues_url.asInstanceOf[js.Any])
+    if (members_url != null) __obj.updateDynamic("members_url")(members_url.asInstanceOf[js.Any])
+    if (organizations_url != null) __obj.updateDynamic("organizations_url")(organizations_url.asInstanceOf[js.Any])
+    if (public_members_url != null) __obj.updateDynamic("public_members_url")(public_members_url.asInstanceOf[js.Any])
+    if (received_events_url != null) __obj.updateDynamic("received_events_url")(received_events_url.asInstanceOf[js.Any])
+    if (!js.isUndefined(site_admin)) __obj.updateDynamic("site_admin")(site_admin.get.asInstanceOf[js.Any])
+    if (starred_url != null) __obj.updateDynamic("starred_url")(starred_url.asInstanceOf[js.Any])
+    if (subscriptions_url != null) __obj.updateDynamic("subscriptions_url")(subscriptions_url.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccount]
   }
-  @scala.inline
-  implicit class AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccountOps[Self <: AppsListInstallationsForAuthenticatedUserResponseInstallationsItemAccount] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatar_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvents_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLogin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("login")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepos_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repos_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowers_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followers_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowers_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followers_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowing_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("following_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowing_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("following_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGists_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gists_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGists_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gists_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravatar_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravatar_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravatar_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravatar_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHooks_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHooks_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHtml_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtml_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIssues_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issues_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssues_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issues_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMembers_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMembers_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizations_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizations_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublic_members_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public_members_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic_members_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public_members_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReceived_events_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("received_events_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReceived_events_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("received_events_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSite_admin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site_admin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSite_admin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("site_admin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStarred_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starred_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStarred_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("starred_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptions_url(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions_url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscriptions_url: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions_url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,6 +8,7 @@ import typingsSlinky.sccBrokerClient.clientPoolMod.PublishData
 import typingsSlinky.sccBrokerClient.clientPoolMod.PublishFailData
 import typingsSlinky.sccBrokerClient.clientPoolMod.SubscribeData
 import typingsSlinky.sccBrokerClient.clientPoolMod.SubscribeFailData
+import typingsSlinky.sccBrokerClient.mod.Broker
 import typingsSlinky.sccBrokerClient.mod.MappingEngine
 import typingsSlinky.sccBrokerClient.sccBrokerClientStrings.error
 import typingsSlinky.sccBrokerClient.sccBrokerClientStrings.message
@@ -27,7 +28,7 @@ import scala.scalajs.js.annotation._
 trait ClusterBrokerClient
   extends AsyncStreamEmitter[js.Any] {
   var authKey: js.UndefOr[Secret] = js.native
-  var broker: typingsSlinky.scBroker.scbrokerMod.^ = js.native
+  var broker: Broker = js.native
   var clientPoolSize: Double = js.native
   var errors: NoMatchingPublishTargetError = js.native
   var isReady: Boolean = js.native

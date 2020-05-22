@@ -21,41 +21,11 @@ trait RolePolicyAttachmentState extends js.Object {
 
 object RolePolicyAttachmentState {
   @scala.inline
-  def apply(): RolePolicyAttachmentState = {
+  def apply(policyArn: Input[ARN] = null, role: Input[String | Role] = null): RolePolicyAttachmentState = {
     val __obj = js.Dynamic.literal()
+    if (policyArn != null) __obj.updateDynamic("policyArn")(policyArn.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     __obj.asInstanceOf[RolePolicyAttachmentState]
   }
-  @scala.inline
-  implicit class RolePolicyAttachmentStateOps[Self <: RolePolicyAttachmentState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicyArn(value: Input[ARN]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policyArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRole(value: Input[String | Role]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRole: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -36,6 +36,23 @@ object global extends js.Object {
       categories: js.UndefOr[typingsSlinky.cordovaPluginContacts.ContactField],
       urls: js.UndefOr[js.Array[typingsSlinky.cordovaPluginContacts.ContactField]]
     ) = this()
+    /**
+      * Removes the contact from the device contacts database, otherwise executes an error callback with a ContactError object.
+      * @param onSuccess Success callback function invoked on success operation.
+      * @param onError Error callback function, invoked when an error occurs.
+      */
+    /* CompleteClass */
+    override def remove(onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
+    /**
+      * Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same id already exists.
+      * @param onSuccess Success callback function invoked on success operation with che Contact object.
+      * @param onError Error callback function, invoked when an error occurs.
+      */
+    /* CompleteClass */
+    override def save(
+      onSuccess: js.Function1[/* contact */ this.type, Unit],
+      onError: js.Function1[/* error */ js.Error, Unit]
+    ): Unit = js.native
   }
   
   @js.native
@@ -58,6 +75,12 @@ object global extends js.Object {
   class ContactError protected ()
     extends typingsSlinky.cordovaPluginContacts.ContactError {
     def this(code: Double) = this()
+    /** Error code */
+    /* CompleteClass */
+    override var code: Double = js.native
+    /** Error message */
+    /* CompleteClass */
+    override var message: String = js.native
   }
   
   @js.native
@@ -67,6 +90,15 @@ object global extends js.Object {
     def this(`type`: String) = this()
     def this(`type`: String, value: String) = this()
     def this(`type`: String, value: String, pref: Boolean) = this()
+    /** Set to true if this ContactField contains the user's preferred value. */
+    /* CompleteClass */
+    override var pref: Boolean = js.native
+    /** A string that indicates what type of field this is, home for example. */
+    /* CompleteClass */
+    override var `type`: String = js.native
+    /** The value of the field, such as a phone number or email address. */
+    /* CompleteClass */
+    override var value: String = js.native
   }
   
   @js.native

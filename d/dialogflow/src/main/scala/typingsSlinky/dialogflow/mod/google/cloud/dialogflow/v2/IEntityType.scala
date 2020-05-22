@@ -8,143 +8,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an EntityType. */
-@js.native
 trait IEntityType extends js.Object {
   /** EntityType autoExpansionMode */
-  var autoExpansionMode: js.UndefOr[AutoExpansionMode | Null] = js.native
+  var autoExpansionMode: js.UndefOr[AutoExpansionMode | Null] = js.undefined
   /** EntityType displayName */
-  var displayName: js.UndefOr[String | Null] = js.native
+  var displayName: js.UndefOr[String | Null] = js.undefined
   /** EntityType enableFuzzyExtraction */
-  var enableFuzzyExtraction: js.UndefOr[Boolean | Null] = js.native
+  var enableFuzzyExtraction: js.UndefOr[Boolean | Null] = js.undefined
   /** EntityType entities */
-  var entities: js.UndefOr[js.Array[IEntity] | Null] = js.native
+  var entities: js.UndefOr[js.Array[IEntity] | Null] = js.undefined
   /** EntityType kind */
-  var kind: js.UndefOr[Kind | Null] = js.native
+  var kind: js.UndefOr[Kind | Null] = js.undefined
   /** EntityType name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
 }
 
 object IEntityType {
   @scala.inline
-  def apply(): IEntityType = {
+  def apply(
+    autoExpansionMode: js.UndefOr[Null | AutoExpansionMode] = js.undefined,
+    displayName: js.UndefOr[Null | String] = js.undefined,
+    enableFuzzyExtraction: js.UndefOr[Null | Boolean] = js.undefined,
+    entities: js.UndefOr[Null | js.Array[IEntity]] = js.undefined,
+    kind: js.UndefOr[Null | Kind] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined
+  ): IEntityType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoExpansionMode)) __obj.updateDynamic("autoExpansionMode")(autoExpansionMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(displayName)) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableFuzzyExtraction)) __obj.updateDynamic("enableFuzzyExtraction")(enableFuzzyExtraction.asInstanceOf[js.Any])
+    if (!js.isUndefined(entities)) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
+    if (!js.isUndefined(kind)) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEntityType]
   }
-  @scala.inline
-  implicit class IEntityTypeOps[Self <: IEntityType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoExpansionMode(value: AutoExpansionMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpansionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoExpansionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpansionMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoExpansionModeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpansionMode")(null)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(null)
-        ret
-    }
-    @scala.inline
-    def withEnableFuzzyExtraction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFuzzyExtraction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableFuzzyExtraction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFuzzyExtraction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableFuzzyExtractionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableFuzzyExtraction")(null)
-        ret
-    }
-    @scala.inline
-    def withEntities(value: js.Array[IEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntitiesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(null)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Kind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKindNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-  }
-  
 }
 

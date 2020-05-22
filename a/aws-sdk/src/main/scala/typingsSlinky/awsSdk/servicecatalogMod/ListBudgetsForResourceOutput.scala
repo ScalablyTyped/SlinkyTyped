@@ -18,41 +18,11 @@ trait ListBudgetsForResourceOutput extends js.Object {
 
 object ListBudgetsForResourceOutput {
   @scala.inline
-  def apply(): ListBudgetsForResourceOutput = {
+  def apply(Budgets: Budgets = null, NextPageToken: PageToken = null): ListBudgetsForResourceOutput = {
     val __obj = js.Dynamic.literal()
+    if (Budgets != null) __obj.updateDynamic("Budgets")(Budgets.asInstanceOf[js.Any])
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBudgetsForResourceOutput]
   }
-  @scala.inline
-  implicit class ListBudgetsForResourceOutputOps[Self <: ListBudgetsForResourceOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBudgets(value: Budgets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Budgets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBudgets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Budgets")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: PageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

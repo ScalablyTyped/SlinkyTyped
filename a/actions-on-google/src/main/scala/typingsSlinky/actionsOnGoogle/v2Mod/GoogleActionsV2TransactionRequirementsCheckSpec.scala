@@ -4,56 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleActionsV2TransactionRequirementsCheckSpec extends js.Object {
   /**
     * Options associated with the order.
     */
-  var orderOptions: js.UndefOr[GoogleActionsV2OrdersOrderOptions] = js.native
+  var orderOptions: js.UndefOr[GoogleActionsV2OrdersOrderOptions] = js.undefined
   /**
     * Payment options for this Order, or empty if no payment
     * is associated with the Order.
     */
-  var paymentOptions: js.UndefOr[GoogleActionsV2OrdersPaymentOptions] = js.native
+  var paymentOptions: js.UndefOr[GoogleActionsV2OrdersPaymentOptions] = js.undefined
 }
 
 object GoogleActionsV2TransactionRequirementsCheckSpec {
   @scala.inline
-  def apply(): GoogleActionsV2TransactionRequirementsCheckSpec = {
+  def apply(
+    orderOptions: GoogleActionsV2OrdersOrderOptions = null,
+    paymentOptions: GoogleActionsV2OrdersPaymentOptions = null
+  ): GoogleActionsV2TransactionRequirementsCheckSpec = {
     val __obj = js.Dynamic.literal()
+    if (orderOptions != null) __obj.updateDynamic("orderOptions")(orderOptions.asInstanceOf[js.Any])
+    if (paymentOptions != null) __obj.updateDynamic("paymentOptions")(paymentOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2TransactionRequirementsCheckSpec]
   }
-  @scala.inline
-  implicit class GoogleActionsV2TransactionRequirementsCheckSpecOps[Self <: GoogleActionsV2TransactionRequirementsCheckSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrderOptions(value: GoogleActionsV2OrdersOrderOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentOptions(value: GoogleActionsV2OrdersPaymentOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait BatchAssociateServiceActionWithProvisioningArtifactInput extends js.Object
 
 object BatchAssociateServiceActionWithProvisioningArtifactInput {
   @scala.inline
-  def apply(ServiceActionAssociations: ServiceActionAssociations): BatchAssociateServiceActionWithProvisioningArtifactInput = {
+  def apply(ServiceActionAssociations: ServiceActionAssociations, AcceptLanguage: AcceptLanguage = null): BatchAssociateServiceActionWithProvisioningArtifactInput = {
     val __obj = js.Dynamic.literal(ServiceActionAssociations = ServiceActionAssociations.asInstanceOf[js.Any])
+    if (AcceptLanguage != null) __obj.updateDynamic("AcceptLanguage")(AcceptLanguage.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchAssociateServiceActionWithProvisioningArtifactInput]
   }
-  @scala.inline
-  implicit class BatchAssociateServiceActionWithProvisioningArtifactInputOps[Self <: BatchAssociateServiceActionWithProvisioningArtifactInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceActionAssociations(value: ServiceActionAssociations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionAssociations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAcceptLanguage(value: AcceptLanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptLanguage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

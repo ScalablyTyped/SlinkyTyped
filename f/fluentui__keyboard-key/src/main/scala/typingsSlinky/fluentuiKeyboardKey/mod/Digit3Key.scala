@@ -1,0 +1,12 @@
+package typingsSlinky.fluentuiKeyboardKey.mod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.fluentuiKeyboardKey.fluentuiKeyboardKeyNumbers.`51`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@fluentui/keyboard-key", "Digit3Key")
+@js.native
+object Digit3Key extends TopLevel[`51`]
+

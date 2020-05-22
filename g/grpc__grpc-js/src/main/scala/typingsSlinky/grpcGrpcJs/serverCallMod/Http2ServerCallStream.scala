@@ -1,6 +1,7 @@
 package typingsSlinky.grpcGrpcJs.serverCallMod
 
 import typingsSlinky.grpcGrpcJs.callStreamMod.StatusObject
+import typingsSlinky.grpcGrpcJs.channelOptionsMod.ChannelOptions
 import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.Timer
@@ -14,22 +15,26 @@ import scala.scalajs.js.annotation._
 @JSImport("@grpc/grpc-js/build/src/server-call", "Http2ServerCallStream")
 @js.native
 class Http2ServerCallStream[RequestType, ResponseType] protected () extends EventEmitter {
-  def this(stream: ServerHttp2Stream, handler: Handler[RequestType, ResponseType]) = this()
+  def this(stream: ServerHttp2Stream, handler: Handler[RequestType, ResponseType], options: ChannelOptions) = this()
   var bufferedMessages: js.Any = js.native
   var canPush: js.Any = js.native
   var cancelled: Boolean = js.native
+  var checkCancelled: js.Any = js.native
   var deadline: Timer = js.native
   var handler: js.Any = js.native
   var isPushPending: js.Any = js.native
+  var maxReceiveMessageSize: js.Any = js.native
+  var maxSendMessageSize: js.Any = js.native
   var messagesToPush: js.Any = js.native
   var metadataSent: js.Any = js.native
+  var options: js.Any = js.native
   var pushMessage: js.Any = js.native
   var pushOrBufferMessage: js.Any = js.native
   var stream: js.Any = js.native
   var wantTrailers: js.Any = js.native
   def consumeUnpushedMessages(readable: ServerDuplexStream[RequestType, ResponseType]): Boolean = js.native
   def consumeUnpushedMessages(readable: ServerReadableStream[RequestType, ResponseType]): Boolean = js.native
-  def deserializeMessage(bytes: Buffer): js.Promise[RequestType] = js.native
+  def deserializeMessage(bytes: Buffer): RequestType = js.native
   def receiveMetadata(headers: IncomingHttpHeaders): js.UndefOr[Metadata] = js.native
   def receiveUnaryMessage(): js.Promise[RequestType] = js.native
   def resume(): Unit = js.native

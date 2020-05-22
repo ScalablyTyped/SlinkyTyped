@@ -5,63 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a DeadLetterPolicy. */
-@js.native
 trait IDeadLetterPolicy extends js.Object {
   /** DeadLetterPolicy deadLetterTopic */
-  var deadLetterTopic: js.UndefOr[String | Null] = js.native
+  var deadLetterTopic: js.UndefOr[String | Null] = js.undefined
   /** DeadLetterPolicy maxDeliveryAttempts */
-  var maxDeliveryAttempts: js.UndefOr[Double | Null] = js.native
+  var maxDeliveryAttempts: js.UndefOr[Double | Null] = js.undefined
 }
 
 object IDeadLetterPolicy {
   @scala.inline
-  def apply(): IDeadLetterPolicy = {
+  def apply(
+    deadLetterTopic: js.UndefOr[Null | String] = js.undefined,
+    maxDeliveryAttempts: js.UndefOr[Null | Double] = js.undefined
+  ): IDeadLetterPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deadLetterTopic)) __obj.updateDynamic("deadLetterTopic")(deadLetterTopic.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDeliveryAttempts)) __obj.updateDynamic("maxDeliveryAttempts")(maxDeliveryAttempts.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDeadLetterPolicy]
   }
-  @scala.inline
-  implicit class IDeadLetterPolicyOps[Self <: IDeadLetterPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeadLetterTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterTopic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadLetterTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterTopic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadLetterTopicNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadLetterTopic")(null)
-        ret
-    }
-    @scala.inline
-    def withMaxDeliveryAttempts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeliveryAttempts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDeliveryAttempts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeliveryAttempts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDeliveryAttemptsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDeliveryAttempts")(null)
-        ret
-    }
-  }
-  
 }
 

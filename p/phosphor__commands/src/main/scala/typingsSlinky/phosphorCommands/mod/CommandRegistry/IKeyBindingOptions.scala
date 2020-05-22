@@ -8,18 +8,17 @@ import scala.scalajs.js.annotation._
 /**
   * An options object for creating a key binding.
   */
-@js.native
 trait IKeyBindingOptions extends js.Object {
   /**
     * The arguments for the command, if necessary.
     *
     * The default value is an empty object.
     */
-  var args: js.UndefOr[ReadonlyJSONObject] = js.native
+  var args: js.UndefOr[ReadonlyJSONObject] = js.undefined
   /**
     * The id of the command to execute when the binding is matched.
     */
-  var command: String = js.native
+  var command: String
   /**
     * The default key sequence for the key binding.
     *
@@ -42,19 +41,19 @@ trait IKeyBindingOptions extends js.Object {
     *
     * **Examples:** `['Accel C']`, `['Shift F11']`, `['D', 'D']`
     */
-  var keys: js.Array[String] = js.native
+  var keys: js.Array[String]
   /**
     * The key sequence to use when running on Linux.
     *
     * If provided, this will override `keys` on Linux platforms.
     */
-  var linuxKeys: js.UndefOr[js.Array[String]] = js.native
+  var linuxKeys: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The key sequence to use when running on Mac.
     *
     * If provided, this will override `keys` on Mac platforms.
     */
-  var macKeys: js.UndefOr[js.Array[String]] = js.native
+  var macKeys: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The CSS selector for the key binding.
     *
@@ -64,94 +63,32 @@ trait IKeyBindingOptions extends js.Object {
     *
     * The selector must not contain commas.
     */
-  var selector: String = js.native
+  var selector: String
   /**
     * The key sequence to use when running on Windows.
     *
     * If provided, this will override `keys` on Windows platforms.
     */
-  var winKeys: js.UndefOr[js.Array[String]] = js.native
+  var winKeys: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object IKeyBindingOptions {
   @scala.inline
-  def apply(command: String, keys: js.Array[String], selector: String): IKeyBindingOptions = {
+  def apply(
+    command: String,
+    keys: js.Array[String],
+    selector: String,
+    args: ReadonlyJSONObject = null,
+    linuxKeys: js.Array[String] = null,
+    macKeys: js.Array[String] = null,
+    winKeys: js.Array[String] = null
+  ): IKeyBindingOptions = {
     val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any])
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (linuxKeys != null) __obj.updateDynamic("linuxKeys")(linuxKeys.asInstanceOf[js.Any])
+    if (macKeys != null) __obj.updateDynamic("macKeys")(macKeys.asInstanceOf[js.Any])
+    if (winKeys != null) __obj.updateDynamic("winKeys")(winKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[IKeyBindingOptions]
   }
-  @scala.inline
-  implicit class IKeyBindingOptionsOps[Self <: IKeyBindingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgs(value: ReadonlyJSONObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinuxKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linuxKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinuxKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linuxKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMacKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMacKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("macKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWinKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("winKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWinKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("winKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

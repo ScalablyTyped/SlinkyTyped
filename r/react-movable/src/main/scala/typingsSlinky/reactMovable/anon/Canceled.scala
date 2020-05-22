@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Canceled extends js.Object {
-  def canceled(position: Double): String = js.native
-  def dropped(from: Double, to: Double): String = js.native
-  def item(position: Double): String = js.native
-  def lifted(position: Double): String = js.native
-  def moved(position: Double, up: Boolean): String = js.native
+  def canceled(position: Double): String
+  def dropped(from: Double, to: Double): String
+  def item(position: Double): String
+  def lifted(position: Double): String
+  def moved(position: Double, up: Boolean): String
 }
 
 object Canceled {
@@ -25,43 +24,5 @@ object Canceled {
     val __obj = js.Dynamic.literal(canceled = js.Any.fromFunction1(canceled), dropped = js.Any.fromFunction2(dropped), item = js.Any.fromFunction1(item), lifted = js.Any.fromFunction1(lifted), moved = js.Any.fromFunction2(moved))
     __obj.asInstanceOf[Canceled]
   }
-  @scala.inline
-  implicit class CanceledOps[Self <: Canceled] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanceled(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canceled")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDropped(value: (Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropped")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLifted(value: Double => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifted")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMoved(value: (Double, Boolean) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moved")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

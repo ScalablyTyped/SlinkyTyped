@@ -28,9 +28,13 @@ object VerticalTimelineElement {
     @scala.inline
     def date(value: String): this.type = set("date", value.asInstanceOf[js.Any])
     @scala.inline
+    def dateClassName(value: String): this.type = set("dateClassName", value.asInstanceOf[js.Any])
+    @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconClassName(value: String): this.type = set("iconClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def iconOnClick(value: () => Unit): this.type = set("iconOnClick", js.Any.fromFunction0(value))
     @scala.inline
@@ -38,9 +42,13 @@ object VerticalTimelineElement {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def onTimelineElementClick(value: () => Unit): this.type = set("onTimelineElementClick", js.Any.fromFunction0(value))
+    @scala.inline
     def position(value: String): this.type = set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textClassName(value: String): this.type = set("textClassName", value.asInstanceOf[js.Any])
     @scala.inline
     def visibilitySensorProps(value: js.Any): this.type = set("visibilitySensorProps", value.asInstanceOf[js.Any])
   }

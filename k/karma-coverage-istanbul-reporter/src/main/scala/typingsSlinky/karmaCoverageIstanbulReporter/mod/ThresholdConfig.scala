@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThresholdConfig extends js.Object {
   /** Thresholds per file. */
-  val each: js.UndefOr[ThresholdsEach] = js.native
+  val each: js.UndefOr[ThresholdsEach] = js.undefined
   /**
     * Set to `true` to not fail the test command when thresholds are not met.
     * @default false
     */
-  val emitWarning: js.UndefOr[Boolean] = js.native
+  val emitWarning: js.UndefOr[Boolean] = js.undefined
   /** Thresholds for all files. */
-  val global: js.UndefOr[Threshold] = js.native
+  val global: js.UndefOr[Threshold] = js.undefined
 }
 
 object ThresholdConfig {
   @scala.inline
-  def apply(): ThresholdConfig = {
+  def apply(
+    each: ThresholdsEach = null,
+    emitWarning: js.UndefOr[Boolean] = js.undefined,
+    global: Threshold = null
+  ): ThresholdConfig = {
     val __obj = js.Dynamic.literal()
+    if (each != null) __obj.updateDynamic("each")(each.asInstanceOf[js.Any])
+    if (!js.isUndefined(emitWarning)) __obj.updateDynamic("emitWarning")(emitWarning.get.asInstanceOf[js.Any])
+    if (global != null) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThresholdConfig]
   }
-  @scala.inline
-  implicit class ThresholdConfigOps[Self <: ThresholdConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEach(value: ThresholdsEach): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEach: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmitWarning(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitWarning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmitWarning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emitWarning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobal(value: Threshold): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

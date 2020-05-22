@@ -22,53 +22,16 @@ trait DocumentDefaultVersionDescription extends js.Object {
 
 object DocumentDefaultVersionDescription {
   @scala.inline
-  def apply(): DocumentDefaultVersionDescription = {
+  def apply(
+    DefaultVersion: DocumentVersion = null,
+    DefaultVersionName: DocumentVersionName = null,
+    Name: DocumentName = null
+  ): DocumentDefaultVersionDescription = {
     val __obj = js.Dynamic.literal()
+    if (DefaultVersion != null) __obj.updateDynamic("DefaultVersion")(DefaultVersion.asInstanceOf[js.Any])
+    if (DefaultVersionName != null) __obj.updateDynamic("DefaultVersionName")(DefaultVersionName.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentDefaultVersionDescription]
   }
-  @scala.inline
-  implicit class DocumentDefaultVersionDescriptionOps[Self <: DocumentDefaultVersionDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultVersion(value: DocumentVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultVersionName(value: DocumentVersionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVersionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: DocumentName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

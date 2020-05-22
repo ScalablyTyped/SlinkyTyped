@@ -7,22 +7,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** gives access to the value and formatting of a pattern field. */
-@js.native
 trait XPatternField extends XInterface {
   /** returns the currently set string value of the pattern field. */
-  var String: java.lang.String = js.native
+  var String: java.lang.String
   /** returns the currently set pattern mask. */
-  def getMasks(EditMask: js.Array[String], LiteralMask: js.Array[String]): Unit = js.native
+  def getMasks(EditMask: js.Array[String], LiteralMask: js.Array[String]): Unit
   /** returns the currently set string value of the pattern field. */
-  def getString(): String = js.native
+  def getString(): String
   /** returns whether the format is currently checked during user input. */
-  def isStrictFormat(): Boolean = js.native
+  def isStrictFormat(): Boolean
   /** sets the pattern mask. */
-  def setMasks(EditMask: String, LiteralMask: String): Unit = js.native
+  def setMasks(EditMask: String, LiteralMask: String): Unit
   /** determines if the format is checked during user input. */
-  def setStrictFormat(bStrict: Boolean): Unit = js.native
+  def setStrictFormat(bStrict: Boolean): Unit
   /** sets the string value of the pattern field. */
-  def setString(Str: String): Unit = js.native
+  def setString(Str: String): Unit
 }
 
 object XPatternField {
@@ -42,55 +41,5 @@ object XPatternField {
     val __obj = js.Dynamic.literal(String = String.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getMasks = js.Any.fromFunction2(getMasks), getString = js.Any.fromFunction0(getString), isStrictFormat = js.Any.fromFunction0(isStrictFormat), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setMasks = js.Any.fromFunction2(setMasks), setStrictFormat = js.Any.fromFunction1(setStrictFormat), setString = js.Any.fromFunction1(setString))
     __obj.asInstanceOf[XPatternField]
   }
-  @scala.inline
-  implicit class XPatternFieldOps[Self <: XPatternField] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("String")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetMasks(value: (js.Array[String], js.Array[String]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMasks")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsStrictFormat(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isStrictFormat")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetMasks(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setMasks")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetStrictFormat(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setStrictFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

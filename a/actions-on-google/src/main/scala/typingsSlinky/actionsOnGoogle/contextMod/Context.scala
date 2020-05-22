@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Context[TParameters /* <: Parameters */] extends OutputContext[TParameters] {
   /**
     * Full name of the context.
     * @public
     */
-  var name: String = js.native
+  var name: String
   /**
     * The context parameters from the current intent.
     * Context parameters include parameters collected in previous intents
@@ -39,7 +38,7 @@ trait Context[TParameters /* <: Parameters */] extends OutputContext[TParameters
     * @public
     */
   @JSName("parameters")
-  var parameters_Context: TParameters = js.native
+  var parameters_Context: TParameters
 }
 
 object Context {
@@ -48,25 +47,5 @@ object Context {
     val __obj = js.Dynamic.literal(lifespan = lifespan.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context[TParameters]]
   }
-  @scala.inline
-  implicit class ContextOps[Self[tparameters] <: Context[tparameters], TParameters] (val x: Self[TParameters]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TParameters] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TParameters]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TParameters] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TParameters] with Other]
-    @scala.inline
-    def withName(value: String): Self[TParameters] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParameters(value: TParameters): Self[TParameters] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait NoncurrentVersionTransition extends js.Object {
 
 object NoncurrentVersionTransition {
   @scala.inline
-  def apply(): NoncurrentVersionTransition = {
+  def apply(NoncurrentDays: js.UndefOr[Days] = js.undefined, StorageClass: TransitionStorageClass = null): NoncurrentVersionTransition = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(NoncurrentDays)) __obj.updateDynamic("NoncurrentDays")(NoncurrentDays.get.asInstanceOf[js.Any])
+    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoncurrentVersionTransition]
   }
-  @scala.inline
-  implicit class NoncurrentVersionTransitionOps[Self <: NoncurrentVersionTransition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNoncurrentDays(value: Days): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoncurrentDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoncurrentDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoncurrentDays")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: TransitionStorageClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

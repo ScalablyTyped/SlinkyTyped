@@ -10,23 +10,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IObservableList_[T] extends IDisposable {
   /**
     * A signal emitted when the list has changed.
     */
-  val changed: ISignal[this.type, IChangedArgs[T]] = js.native
+  val changed: ISignal[this.type, IChangedArgs[T]]
   /**
     * The length of the list.
     *
     * #### Notes
     * This is a read-only property.
     */
-  var length: Double = js.native
+  var length: Double
   /**
     * The type of this object.
     */
-  val `type`: List = js.native
+  val `type`: List
   /**
     * Remove all values from the list.
     *
@@ -36,7 +35,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Iterator Validity
     * All current iterators are invalidated.
     */
-  def clear(): Unit = js.native
+  def clear(): Unit
   /**
     * Get the value at the specified index.
     *
@@ -47,7 +46,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior
     * An `index` which is non-integral or out of range.
     */
-  def get(index: Double): js.UndefOr[T] = js.native
+  def get(index: Double): js.UndefOr[T]
   /**
     * Insert a value into the list at a specific index.
     *
@@ -67,7 +66,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior
     * An `index` which is non-integral.
     */
-  def insert(index: Double, value: T): Unit = js.native
+  def insert(index: Double, value: T): Unit
   /**
     * Insert a set of items into the list at the specified index.
     *
@@ -87,7 +86,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior.
     * An `index` which is non-integral.
     */
-  def insertAll(index: Double, values: IterableOrArrayLike[T]): Unit = js.native
+  def insertAll(index: Double, values: IterableOrArrayLike[T]): Unit
   /**
     * Create an iterator over the values in the list.
     *
@@ -99,7 +98,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Iterator Validity
     * No changes.
     */
-  def iter(): IIterator[T] = js.native
+  def iter(): IIterator[T]
   /**
     * Move a value from one index to another.
     *
@@ -117,7 +116,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior
     * A `fromIndex` or a `toIndex` which is non-integral.
     */
-  def move(fromIndex: Double, toIndex: Double): Unit = js.native
+  def move(fromIndex: Double, toIndex: Double): Unit
   /**
     * Add a value to the back of the list.
     *
@@ -131,7 +130,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Iterator Validity
     * No changes.
     */
-  def push(value: T): Double = js.native
+  def push(value: T): Double
   /**
     * Push a set of values to the back of the list.
     *
@@ -145,7 +144,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Iterator Validity
     * No changes.
     */
-  def pushAll(values: IterableOrArrayLike[T]): Double = js.native
+  def pushAll(values: IterableOrArrayLike[T]): Double
   /**
     * Remove and return the value at a specific index.
     *
@@ -163,7 +162,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior
     * An `index` which is non-integral.
     */
-  def remove(index: Double): js.UndefOr[T] = js.native
+  def remove(index: Double): js.UndefOr[T]
   /**
     * Remove a range of items from the list.
     *
@@ -182,7 +181,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior
     * A `startIndex` or `endIndex` which is non-integral.
     */
-  def removeRange(startIndex: Double, endIndex: Double): Double = js.native
+  def removeRange(startIndex: Double, endIndex: Double): Double
   /**
     * Remove the first occurrence of a value from the list.
     *
@@ -197,7 +196,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Iterator Validity
     * Iterators pointing at the removed value and beyond are invalidated.
     */
-  def removeValue(value: T): Double = js.native
+  def removeValue(value: T): Double
   /**
     * Set the value at the specified index.
     *
@@ -214,7 +213,7 @@ trait IObservableList_[T] extends IDisposable {
     * #### Undefined Behavior
     * An `index` which is non-integral or out of range.
     */
-  def set(index: Double, value: T): Unit = js.native
+  def set(index: Double, value: T): Unit
 }
 
 object IObservableList_ {
@@ -242,103 +241,5 @@ object IObservableList_ {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IObservableList_[T]]
   }
-  @scala.inline
-  implicit class IObservableList_Ops[Self[t] <: IObservableList_[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withChanged(value: ISignal[IObservableList_[T], IChangedArgs[T]]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: Double => js.UndefOr[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: (Double, T) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withInsertAll(value: (Double, IterableOrArrayLike[T]) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertAll")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withIter(value: () => IIterator[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMove(value: (Double, Double) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPush(value: T => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPushAll(value: IterableOrArrayLike[T] => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushAll")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Double => js.UndefOr[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveRange(value: (Double, Double) => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveValue(value: T => Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSet(value: (Double, T) => Unit): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withType(value: List): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

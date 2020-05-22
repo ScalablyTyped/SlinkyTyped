@@ -14,20 +14,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.MemberExpression, 'type'> */
-@js.native
 trait OptionalMemberExpression
   extends ASTNode
      with ExpressionKind
      with MemberExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var computed: js.UndefOr[Boolean] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var `object`: ExpressionKind = js.native
-  var optional: js.UndefOr[Boolean] = js.native
-  var property: IdentifierKind | ExpressionKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.OptionalMemberExpression = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var computed: js.UndefOr[Boolean] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var `object`: ExpressionKind
+  var optional: js.UndefOr[Boolean] = js.undefined
+  var property: IdentifierKind | ExpressionKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.OptionalMemberExpression
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.OptionalMemberExpression")

@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling "inkStroke.toJSON()". */
-@js.native
 trait InkStrokeData extends js.Object {
   /**
     *
@@ -13,53 +12,23 @@ trait InkStrokeData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var floatingInk: js.UndefOr[FloatingInkData] = js.native
+  var floatingInk: js.UndefOr[FloatingInkData] = js.undefined
   /**
     *
     * Gets the ID of the InkStroke object. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
 }
 
 object InkStrokeData {
   @scala.inline
-  def apply(): InkStrokeData = {
+  def apply(floatingInk: FloatingInkData = null, id: String = null): InkStrokeData = {
     val __obj = js.Dynamic.literal()
+    if (floatingInk != null) __obj.updateDynamic("floatingInk")(floatingInk.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
     __obj.asInstanceOf[InkStrokeData]
   }
-  @scala.inline
-  implicit class InkStrokeDataOps[Self <: InkStrokeData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFloatingInk(value: FloatingInkData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingInk")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatingInk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatingInk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

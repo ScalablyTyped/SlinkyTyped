@@ -7,120 +7,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UmzugOptions extends js.Object {
   /**
     * The name of the negative method in migrations.
     */
-  var downName: js.UndefOr[String] = js.native
+  var downName: js.UndefOr[String] = js.undefined
   /**
     * The logging function.
     * A function that gets executed everytime migrations start and have ended.
     */
-  var logging: js.UndefOr[Boolean | js.Function] = js.native
+  var logging: js.UndefOr[Boolean | js.Function] = js.undefined
   /**
     * Options for defined migration
     */
-  var migrations: js.UndefOr[MigrationOptions | js.Array[Migration]] = js.native
+  var migrations: js.UndefOr[MigrationOptions | js.Array[Migration]] = js.undefined
   /**
     * The storage.
     */
-  var storage: js.UndefOr[json | sequelize | mongodb | Storage] = js.native
+  var storage: js.UndefOr[json | sequelize | mongodb | Storage] = js.undefined
   /**
     * The options for the storage.
     */
-  var storageOptions: js.UndefOr[JSONStorageOptions | SequelizeStorageOptions | MongoDBStorageOptions | js.Object] = js.native
+  var storageOptions: js.UndefOr[JSONStorageOptions | SequelizeStorageOptions | MongoDBStorageOptions | js.Object] = js.undefined
   /**
     * The name of the positive method in migrations.
     */
-  var upName: js.UndefOr[String] = js.native
+  var upName: js.UndefOr[String] = js.undefined
 }
 
 object UmzugOptions {
   @scala.inline
-  def apply(): UmzugOptions = {
+  def apply(
+    downName: String = null,
+    logging: Boolean | js.Function = null,
+    migrations: MigrationOptions | js.Array[Migration] = null,
+    storage: json | sequelize | mongodb | Storage = null,
+    storageOptions: JSONStorageOptions | SequelizeStorageOptions | MongoDBStorageOptions | js.Object = null,
+    upName: String = null
+  ): UmzugOptions = {
     val __obj = js.Dynamic.literal()
+    if (downName != null) __obj.updateDynamic("downName")(downName.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (migrations != null) __obj.updateDynamic("migrations")(migrations.asInstanceOf[js.Any])
+    if (storage != null) __obj.updateDynamic("storage")(storage.asInstanceOf[js.Any])
+    if (storageOptions != null) __obj.updateDynamic("storageOptions")(storageOptions.asInstanceOf[js.Any])
+    if (upName != null) __obj.updateDynamic("upName")(upName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UmzugOptions]
   }
-  @scala.inline
-  implicit class UmzugOptionsOps[Self <: UmzugOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDownName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: Boolean | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMigrations(value: MigrationOptions | js.Array[Migration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMigrations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorage(value: json | sequelize | mongodb | Storage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageOptions(value: JSONStorageOptions | SequelizeStorageOptions | MongoDBStorageOptions | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

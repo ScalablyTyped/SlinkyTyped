@@ -10,10 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class QueryBuilder[QM /* <: Model */, RM, RV] ()
   extends QueryBuilderBase[QM, RM, RV]
-     with Executable[RV]
-     with ColumnRef
-     with QBOrCallback[QM]
-     with TableName {
+     with Executable[RV] {
   def castTo[T /* <: TypeofModel */](model: T): QueryBuilder[
     QM, 
     js.Array[InstanceType[T]], 

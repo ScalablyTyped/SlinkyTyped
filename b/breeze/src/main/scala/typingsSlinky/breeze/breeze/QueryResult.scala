@@ -4,89 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryResult extends js.Object {
   /** EntityManager that executed the query */
-  var entityManager: js.UndefOr[EntityManager] = js.native
+  var entityManager: js.UndefOr[EntityManager] = js.undefined
   /** Raw response from the server */
-  var httpResponse: HttpResponse = js.native
+  var httpResponse: HttpResponse
   /** Total number of results available on the server */
-  var inlineCount: js.UndefOr[Double] = js.native
+  var inlineCount: js.UndefOr[Double] = js.undefined
   /** Query that was executed */
-  var query: EntityQuery = js.native
+  var query: EntityQuery
   /** Top level entities returned */
-  var results: js.Array[Entity] = js.native
+  var results: js.Array[Entity]
   /** All entities returned by the query.  Differs from results when an expand is used. */
-  var retrievedEntities: js.UndefOr[js.Array[Entity]] = js.native
+  var retrievedEntities: js.UndefOr[js.Array[Entity]] = js.undefined
 }
 
 object QueryResult {
   @scala.inline
-  def apply(httpResponse: HttpResponse, query: EntityQuery, results: js.Array[Entity]): QueryResult = {
+  def apply(
+    httpResponse: HttpResponse,
+    query: EntityQuery,
+    results: js.Array[Entity],
+    entityManager: EntityManager = null,
+    inlineCount: js.UndefOr[Double] = js.undefined,
+    retrievedEntities: js.Array[Entity] = null
+  ): QueryResult = {
     val __obj = js.Dynamic.literal(httpResponse = httpResponse.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], results = results.asInstanceOf[js.Any])
+    if (entityManager != null) __obj.updateDynamic("entityManager")(entityManager.asInstanceOf[js.Any])
+    if (!js.isUndefined(inlineCount)) __obj.updateDynamic("inlineCount")(inlineCount.get.asInstanceOf[js.Any])
+    if (retrievedEntities != null) __obj.updateDynamic("retrievedEntities")(retrievedEntities.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryResult]
   }
-  @scala.inline
-  implicit class QueryResultOps[Self <: QueryResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpResponse(value: HttpResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuery(value: EntityQuery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResults(value: js.Array[Entity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntityManager(value: EntityManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityManager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetrievedEntities(value: js.Array[Entity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retrievedEntities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetrievedEntities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retrievedEntities")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

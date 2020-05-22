@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetReleaseExecutableResponse extends js.Object {
   /** Executable view of the `Ruleset` referenced by the `Release`. */
-  var executable: js.UndefOr[String] = js.native
+  var executable: js.UndefOr[String] = js.undefined
   /** The Rules runtime version of the executable. */
-  var executableVersion: js.UndefOr[String] = js.native
+  var executableVersion: js.UndefOr[String] = js.undefined
   /** `Language` used to generate the executable bytes. */
-  var language: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.undefined
   /** `Ruleset` name associated with the `Release` executable. */
-  var rulesetName: js.UndefOr[String] = js.native
+  var rulesetName: js.UndefOr[String] = js.undefined
   /** Timestamp for the most recent `Release.update_time`. */
-  var updateTime: js.UndefOr[String] = js.native
+  var updateTime: js.UndefOr[String] = js.undefined
 }
 
 object GetReleaseExecutableResponse {
   @scala.inline
-  def apply(): GetReleaseExecutableResponse = {
+  def apply(
+    executable: String = null,
+    executableVersion: String = null,
+    language: String = null,
+    rulesetName: String = null,
+    updateTime: String = null
+  ): GetReleaseExecutableResponse = {
     val __obj = js.Dynamic.literal()
+    if (executable != null) __obj.updateDynamic("executable")(executable.asInstanceOf[js.Any])
+    if (executableVersion != null) __obj.updateDynamic("executableVersion")(executableVersion.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (rulesetName != null) __obj.updateDynamic("rulesetName")(rulesetName.asInstanceOf[js.Any])
+    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReleaseExecutableResponse]
   }
-  @scala.inline
-  implicit class GetReleaseExecutableResponseOps[Self <: GetReleaseExecutableResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecutable(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExecutableVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executableVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExecutableVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("executableVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRulesetName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRulesetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

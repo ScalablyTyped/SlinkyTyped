@@ -4,40 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AndroidDeviceList extends js.Object {
   /**
     * A list of Android devices
     * Required
     */
-  var androidDevices: js.UndefOr[js.Array[AndroidDevice]] = js.native
+  var androidDevices: js.UndefOr[js.Array[AndroidDevice]] = js.undefined
 }
 
 object AndroidDeviceList {
   @scala.inline
-  def apply(): AndroidDeviceList = {
+  def apply(androidDevices: js.Array[AndroidDevice] = null): AndroidDeviceList = {
     val __obj = js.Dynamic.literal()
+    if (androidDevices != null) __obj.updateDynamic("androidDevices")(androidDevices.asInstanceOf[js.Any])
     __obj.asInstanceOf[AndroidDeviceList]
   }
-  @scala.inline
-  implicit class AndroidDeviceListOps[Self <: AndroidDeviceList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidDevices(value: js.Array[AndroidDevice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidDevices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevices")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

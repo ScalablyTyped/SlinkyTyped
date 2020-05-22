@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle
 
-import typingsSlinky.actionsOnGoogle.richMod.RichResponseItem
+import typingsSlinky.actionsOnGoogle.richMod._RichResponseItem
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsOrdersV3OrderUpdate
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2OrdersOrderUpdate
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 object orderMod extends js.Object {
   @js.native
   class OrderUpdate protected ()
-    extends RichResponseItem
+    extends _RichResponseItem
        with GoogleActionsV2OrdersOrderUpdate {
     def this(options: GoogleActionsOrdersV3OrderUpdate) = this()
     /**

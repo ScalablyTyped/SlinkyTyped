@@ -4,49 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChipData extends js.Object {
   /**
     * Chip image
     */
-  var img: js.UndefOr[String] = js.native
+  var img: js.UndefOr[String] = js.undefined
   /**
     * Chip tag
     */
-  var tag: String = js.native
+  var tag: String
 }
 
 object ChipData {
   @scala.inline
-  def apply(tag: String): ChipData = {
+  def apply(tag: String, img: String = null): ChipData = {
     val __obj = js.Dynamic.literal(tag = tag.asInstanceOf[js.Any])
+    if (img != null) __obj.updateDynamic("img")(img.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChipData]
   }
-  @scala.inline
-  implicit class ChipDataOps[Self <: ChipData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImg(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

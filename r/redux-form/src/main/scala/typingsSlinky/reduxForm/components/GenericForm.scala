@@ -21,6 +21,21 @@ object GenericForm {
     P, 
     ErrorType
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[FormData, P, ErrorType](): SharedBuilder_FormProps302896858[
+    typingsSlinky.reduxForm.mod.GenericForm[js.Any, js.Any, js.Any], 
+    FormData, 
+    P, 
+    ErrorType
+  ] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_FormProps302896858[
+      typingsSlinky.reduxForm.mod.GenericForm[js.Any, js.Any, js.Any], 
+      FormData, 
+      P, 
+      ErrorType
+    ](js.Array(this.component, __props.asInstanceOf[FormProps[FormData, P, ErrorType]]))
+  }
   implicit def make[FormData, P, ErrorType](companion: GenericForm.type): SharedBuilder_FormProps302896858[
     typingsSlinky.reduxForm.mod.GenericForm[js.Any, js.Any, js.Any], 
     FormData, 

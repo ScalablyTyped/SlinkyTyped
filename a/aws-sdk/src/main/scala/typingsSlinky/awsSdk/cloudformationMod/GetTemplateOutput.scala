@@ -18,41 +18,11 @@ trait GetTemplateOutput extends js.Object {
 
 object GetTemplateOutput {
   @scala.inline
-  def apply(): GetTemplateOutput = {
+  def apply(StagesAvailable: StageList = null, TemplateBody: TemplateBody = null): GetTemplateOutput = {
     val __obj = js.Dynamic.literal()
+    if (StagesAvailable != null) __obj.updateDynamic("StagesAvailable")(StagesAvailable.asInstanceOf[js.Any])
+    if (TemplateBody != null) __obj.updateDynamic("TemplateBody")(TemplateBody.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTemplateOutput]
   }
-  @scala.inline
-  implicit class GetTemplateOutputOps[Self <: GetTemplateOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStagesAvailable(value: StageList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StagesAvailable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStagesAvailable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StagesAvailable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplateBody(value: TemplateBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplateBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateBody")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

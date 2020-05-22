@@ -13,22 +13,21 @@ import scala.scalajs.js.annotation._
   *
   * See `CompositeDraftDecorator` for the most common use case.
   */
-@js.native
 trait DraftDecoratorType extends js.Object {
   /**
     * Given a decorator key, return the component to use when rendering
     * this decorated range.
     */
-  def getComponentForKey(key: String): js.Function = js.native
+  def getComponentForKey(key: String): js.Function
   /**
     * Given a `ContentBlock`, return an immutable List of decorator keys.
     */
-  def getDecorations(block: ContentBlock, contentState: ContentState): List[String] = js.native
+  def getDecorations(block: ContentBlock, contentState: ContentState): List[String]
   /**
     * Given a decorator key, optionally return the props to use when rendering
     * this decorated range.
     */
-  def getPropsForKey(key: String): js.Any = js.native
+  def getPropsForKey(key: String): js.Any
 }
 
 object DraftDecoratorType {
@@ -41,31 +40,5 @@ object DraftDecoratorType {
     val __obj = js.Dynamic.literal(getComponentForKey = js.Any.fromFunction1(getComponentForKey), getDecorations = js.Any.fromFunction2(getDecorations), getPropsForKey = js.Any.fromFunction1(getPropsForKey))
     __obj.asInstanceOf[DraftDecoratorType]
   }
-  @scala.inline
-  implicit class DraftDecoratorTypeOps[Self <: DraftDecoratorType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetComponentForKey(value: String => js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getComponentForKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetDecorations(value: (ContentBlock, ContentState) => List[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDecorations")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetPropsForKey(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropsForKey")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

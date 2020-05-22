@@ -19,41 +19,11 @@ trait LogDestinationPolicyState extends js.Object {
 
 object LogDestinationPolicyState {
   @scala.inline
-  def apply(): LogDestinationPolicyState = {
+  def apply(accessPolicy: Input[String] = null, destinationName: Input[String] = null): LogDestinationPolicyState = {
     val __obj = js.Dynamic.literal()
+    if (accessPolicy != null) __obj.updateDynamic("accessPolicy")(accessPolicy.asInstanceOf[js.Any])
+    if (destinationName != null) __obj.updateDynamic("destinationName")(destinationName.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogDestinationPolicyState]
   }
-  @scala.inline
-  implicit class LogDestinationPolicyStateOps[Self <: LogDestinationPolicyState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessPolicy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

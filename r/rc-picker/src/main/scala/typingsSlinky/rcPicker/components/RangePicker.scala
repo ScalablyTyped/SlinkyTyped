@@ -20,6 +20,8 @@ import typingsSlinky.rcPicker.interfaceMod.RangeValue
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcPicker.rangePickerMod.RangeShowTimeObject
 import typingsSlinky.rcPicker.rangePickerMod.default
+import typingsSlinky.rcPicker.rcPickerNumbers.`0`
+import typingsSlinky.rcPicker.rcPickerNumbers.`1`
 import typingsSlinky.rcPicker.rcPickerStrings.`additions text`
 import typingsSlinky.rcPicker.rcPickerStrings.`inline`
 import typingsSlinky.rcPicker.rcPickerStrings.additions
@@ -77,6 +79,8 @@ object RangePicker {
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
          with StBuildingComponent[tag.type, default[js.Any]] {
+      @scala.inline
+      def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline
       def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
       @scala.inline
@@ -178,6 +182,8 @@ object RangePicker {
       @scala.inline
       def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
       @scala.inline
+      def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+      @scala.inline
       def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -215,6 +221,8 @@ object RangePicker {
       def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+      @scala.inline
+      def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
       @scala.inline
       def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
       @scala.inline
@@ -324,6 +332,8 @@ object RangePicker {
       extends AnyVal
          with StBuildingComponent[tag.type, default[js.Any]] {
       @scala.inline
+      def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
+      @scala.inline
       def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
       @scala.inline
       def allowEmpty(value: js.Tuple2[Boolean, Boolean]): this.type = set("allowEmpty", value.asInstanceOf[js.Any])
@@ -424,6 +434,8 @@ object RangePicker {
       @scala.inline
       def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
       @scala.inline
+      def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+      @scala.inline
       def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -461,6 +473,8 @@ object RangePicker {
       def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+      @scala.inline
+      def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
       @scala.inline
       def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
       @scala.inline
@@ -574,6 +588,8 @@ object RangePicker {
       extends AnyVal
          with StBuildingComponent[tag.type, default[js.Any]] {
       @scala.inline
+      def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
+      @scala.inline
       def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
       @scala.inline
       def allowEmpty(value: js.Tuple2[Boolean, Boolean]): this.type = set("allowEmpty", value.asInstanceOf[js.Any])
@@ -674,6 +690,8 @@ object RangePicker {
       @scala.inline
       def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
       @scala.inline
+      def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+      @scala.inline
       def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -724,6 +742,8 @@ object RangePicker {
       @scala.inline
       def hourStep(value: Double): this.type = set("hourStep", value.asInstanceOf[js.Any])
       @scala.inline
+      def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+      @scala.inline
       def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
       @scala.inline
       def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
@@ -765,6 +785,8 @@ object RangePicker {
       def onPanelChange(value: (/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode]) => Unit): this.type = set("onPanelChange", js.Any.fromFunction2(value))
       @scala.inline
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+      @scala.inline
+      def order(value: Boolean): this.type = set("order", value.asInstanceOf[js.Any])
       @scala.inline
       def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
       @scala.inline

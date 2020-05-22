@@ -13,301 +13,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-native-elements.react-native-elements.SliderProps> */
-@js.native
 trait PartialSliderProps extends js.Object {
-  var animateTransitions: js.UndefOr[Boolean] = js.native
-  var animationConfig: js.UndefOr[TimingAnimationConfig | SpringAnimationConfig] = js.native
-  var animationType: js.UndefOr[spring | timing] = js.native
-  var debugTouchArea: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var maximumTrackTintColor: js.UndefOr[String] = js.native
-  var maximumValue: js.UndefOr[Double] = js.native
-  var minimumTrackTintColor: js.UndefOr[String] = js.native
-  var minimumValue: js.UndefOr[Double] = js.native
-  var onSlidingComplete: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
-  var onSlidingStart: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
-  var onValueChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
-  var orientation: js.UndefOr[horizontal | vertical] = js.native
-  var step: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var thumbStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var thumbTintColor: js.UndefOr[String] = js.native
-  var thumbTouchSize: js.UndefOr[Height] = js.native
-  var trackStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var value: js.UndefOr[Double] = js.native
+  var animateTransitions: js.UndefOr[Boolean] = js.undefined
+  var animationConfig: js.UndefOr[TimingAnimationConfig | SpringAnimationConfig] = js.undefined
+  var animationType: js.UndefOr[spring | timing] = js.undefined
+  var debugTouchArea: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var maximumTrackTintColor: js.UndefOr[String] = js.undefined
+  var maximumValue: js.UndefOr[Double] = js.undefined
+  var minimumTrackTintColor: js.UndefOr[String] = js.undefined
+  var minimumValue: js.UndefOr[Double] = js.undefined
+  var onSlidingComplete: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
+  var onSlidingStart: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
+  var onValueChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
+  var orientation: js.UndefOr[horizontal | vertical] = js.undefined
+  var step: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var thumbStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var thumbTintColor: js.UndefOr[String] = js.undefined
+  var thumbTouchSize: js.UndefOr[Height] = js.undefined
+  var trackStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object PartialSliderProps {
   @scala.inline
-  def apply(): PartialSliderProps = {
+  def apply(
+    animateTransitions: js.UndefOr[Boolean] = js.undefined,
+    animationConfig: TimingAnimationConfig | SpringAnimationConfig = null,
+    animationType: spring | timing = null,
+    debugTouchArea: js.UndefOr[Boolean] = js.undefined,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    maximumTrackTintColor: String = null,
+    maximumValue: js.UndefOr[Double] = js.undefined,
+    minimumTrackTintColor: String = null,
+    minimumValue: js.UndefOr[Double] = js.undefined,
+    onSlidingComplete: /* value */ Double => Unit = null,
+    onSlidingStart: /* value */ Double => Unit = null,
+    onValueChange: /* value */ Double => Unit = null,
+    orientation: horizontal | vertical = null,
+    step: js.UndefOr[Double] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    thumbStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    thumbTintColor: String = null,
+    thumbTouchSize: Height = null,
+    trackStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    value: js.UndefOr[Double] = js.undefined
+  ): PartialSliderProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animateTransitions)) __obj.updateDynamic("animateTransitions")(animateTransitions.get.asInstanceOf[js.Any])
+    if (animationConfig != null) __obj.updateDynamic("animationConfig")(animationConfig.asInstanceOf[js.Any])
+    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugTouchArea)) __obj.updateDynamic("debugTouchArea")(debugTouchArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (maximumTrackTintColor != null) __obj.updateDynamic("maximumTrackTintColor")(maximumTrackTintColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumValue)) __obj.updateDynamic("maximumValue")(maximumValue.get.asInstanceOf[js.Any])
+    if (minimumTrackTintColor != null) __obj.updateDynamic("minimumTrackTintColor")(minimumTrackTintColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimumValue)) __obj.updateDynamic("minimumValue")(minimumValue.get.asInstanceOf[js.Any])
+    if (onSlidingComplete != null) __obj.updateDynamic("onSlidingComplete")(js.Any.fromFunction1(onSlidingComplete))
+    if (onSlidingStart != null) __obj.updateDynamic("onSlidingStart")(js.Any.fromFunction1(onSlidingStart))
+    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction1(onValueChange))
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumbStyle)) __obj.updateDynamic("thumbStyle")(thumbStyle.asInstanceOf[js.Any])
+    if (thumbTintColor != null) __obj.updateDynamic("thumbTintColor")(thumbTintColor.asInstanceOf[js.Any])
+    if (thumbTouchSize != null) __obj.updateDynamic("thumbTouchSize")(thumbTouchSize.asInstanceOf[js.Any])
+    if (!js.isUndefined(trackStyle)) __obj.updateDynamic("trackStyle")(trackStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialSliderProps]
   }
-  @scala.inline
-  implicit class PartialSliderPropsOps[Self <: PartialSliderProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimateTransitions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateTransitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateTransitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateTransitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationConfig(value: TimingAnimationConfig | SpringAnimationConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationType(value: spring | timing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebugTouchArea(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugTouchArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugTouchArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugTouchArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumTrackTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTrackTintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumTrackTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTrackTintColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumTrackTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumTrackTintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumTrackTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumTrackTintColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimumValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSlidingComplete(value: /* value */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSlidingComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSlidingComplete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSlidingComplete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSlidingStart(value: /* value */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSlidingStart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSlidingStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSlidingStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnValueChange(value: /* value */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnValueChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-    @scala.inline
-    def withThumbStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withThumbTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbTintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbTintColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbTouchSize(value: Height): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbTouchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbTouchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbTouchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

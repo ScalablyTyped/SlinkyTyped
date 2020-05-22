@@ -7,28 +7,27 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientWebDocumentViewer.CustomizeExportOptions and ASPxClientReportDesigner.PreviewCustomizeExportOptions events.
   */
-@js.native
 trait ASPxClientCustomizeExportOptionsEventArgs extends ASPxClientEventArgs {
   /**
     * Returns the export options model for the specified export format. An export options model.
     * @param format An object that specifies the export format whose model should be returned.
     */
-  def GetExportOptionsModel(format: js.Any): js.Any = js.native
+  def GetExportOptionsModel(format: js.Any): js.Any
   /**
     * Hides the entire <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-web/articles/document-viewer/exporting/export-a-document.html">Export Options</a> panel from the Web Document Viewer.
     */
-  def HideExportOptionsPanel(): Unit = js.native
+  def HideExportOptionsPanel(): Unit
   /**
     * Hides the specified export format from the Export To drop-down list and the corresponding category from the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-web/articles/document-viewer/exporting/export-a-document.html">Export Options</a> panel.
     * @param format An object that specifies the export format to hide.
     */
-  def HideFormat(format: js.Any): Unit = js.native
+  def HideFormat(format: js.Any): Unit
   /**
     * Hides the specified options for the specified export format from the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-web/articles/document-viewer/exporting/export-a-document.html">Export Options</a> panel.
     * @param format An object that specifies the export format whose options should be hidden.
     * @param properties An array of properties to hide.
     */
-  def HideProperties(format: js.Any, properties: js.Any*): Unit = js.native
+  def HideProperties(format: js.Any, properties: js.Any*): Unit
 }
 
 object ASPxClientCustomizeExportOptionsEventArgs {
@@ -42,37 +41,5 @@ object ASPxClientCustomizeExportOptionsEventArgs {
     val __obj = js.Dynamic.literal(GetExportOptionsModel = js.Any.fromFunction1(GetExportOptionsModel), HideExportOptionsPanel = js.Any.fromFunction0(HideExportOptionsPanel), HideFormat = js.Any.fromFunction1(HideFormat), HideProperties = js.Any.fromFunction2(HideProperties))
     __obj.asInstanceOf[ASPxClientCustomizeExportOptionsEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientCustomizeExportOptionsEventArgsOps[Self <: ASPxClientCustomizeExportOptionsEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetExportOptionsModel(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetExportOptionsModel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHideExportOptionsPanel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideExportOptionsPanel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHideFormat(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideFormat")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHideProperties(value: (js.Any, /* repeated */ js.Any) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideProperties")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

@@ -13,28 +13,27 @@ import scala.scalajs.js.annotation._
   * must be returned by the {@link com.sun.star.sheet.XMultiFormulaTokens.getCount()} method. When the client code tries to access formula tokens at index
   * that is outside the allowed index range, the implementation shall return an {@link com.sun.star.lang.IndexOutOfBoundsException} .
   */
-@js.native
 trait XMultiFormulaTokens extends js.Object {
   /**
     * returns the number of formulas allowed in this formula token set.
     * @returns the number of formulas the implementation supports.
     */
-  val Count: Double = js.native
+  val Count: Double
   /**
     * returns the number of formulas allowed in this formula token set.
     * @returns the number of formulas the implementation supports.
     */
-  def getCount(): Double = js.native
+  def getCount(): Double
   /**
     * returns the formula at specified index as sequence of tokens.
     * @throws IndexOutOfBoundsException If the given index lies not in the valid range then an {@link com.sun.star.lang.IndexOutOfBoundsException} exception is
     */
-  def getTokens(nIndex: Double): SafeArray[FormulaToken] = js.native
+  def getTokens(nIndex: Double): SafeArray[FormulaToken]
   /**
     * sets the formula at specified index as sequence of tokens.
     * @throws IndexOutOfBoundsException If the given index lies not in the valid range then an {@link com.sun.star.lang.IndexOutOfBoundsException} exception is
     */
-  def setTokens(nIndex: Double, aTokens: SeqEquiv[FormulaToken]): Unit = js.native
+  def setTokens(nIndex: Double, aTokens: SeqEquiv[FormulaToken]): Unit
 }
 
 object XMultiFormulaTokens {
@@ -48,37 +47,5 @@ object XMultiFormulaTokens {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], getCount = js.Any.fromFunction0(getCount), getTokens = js.Any.fromFunction1(getTokens), setTokens = js.Any.fromFunction2(setTokens))
     __obj.asInstanceOf[XMultiFormulaTokens]
   }
-  @scala.inline
-  implicit class XMultiFormulaTokensOps[Self <: XMultiFormulaTokens] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTokens(value: Double => SafeArray[FormulaToken]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTokens")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTokens(value: (Double, SeqEquiv[FormulaToken]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTokens")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

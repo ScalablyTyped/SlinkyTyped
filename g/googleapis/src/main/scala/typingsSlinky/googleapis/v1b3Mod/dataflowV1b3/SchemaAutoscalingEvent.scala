@@ -42,89 +42,22 @@ trait SchemaAutoscalingEvent extends js.Object {
 
 object SchemaAutoscalingEvent {
   @scala.inline
-  def apply(): SchemaAutoscalingEvent = {
+  def apply(
+    currentNumWorkers: String = null,
+    description: SchemaStructuredMessage = null,
+    eventType: String = null,
+    targetNumWorkers: String = null,
+    time: String = null,
+    workerPool: String = null
+  ): SchemaAutoscalingEvent = {
     val __obj = js.Dynamic.literal()
+    if (currentNumWorkers != null) __obj.updateDynamic("currentNumWorkers")(currentNumWorkers.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (eventType != null) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
+    if (targetNumWorkers != null) __obj.updateDynamic("targetNumWorkers")(targetNumWorkers.asInstanceOf[js.Any])
+    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
+    if (workerPool != null) __obj.updateDynamic("workerPool")(workerPool.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoscalingEvent]
   }
-  @scala.inline
-  implicit class SchemaAutoscalingEventOps[Self <: SchemaAutoscalingEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrentNumWorkers(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNumWorkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurrentNumWorkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNumWorkers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: SchemaStructuredMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetNumWorkers(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetNumWorkers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetNumWorkers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetNumWorkers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerPool(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerPool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerPool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workerPool")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

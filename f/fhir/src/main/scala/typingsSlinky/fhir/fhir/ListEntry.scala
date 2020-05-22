@@ -7,113 +7,62 @@ import scala.scalajs.js.annotation._
 /**
   * Entries in the list
   */
-@js.native
 trait ListEntry extends BackboneElement {
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.native
+  var _date: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'deleted'.
     */
-  var _deleted: js.UndefOr[Element] = js.native
+  var _deleted: js.UndefOr[Element] = js.undefined
   /**
     * When item added to list
     */
-  var date: js.UndefOr[dateTime] = js.native
+  var date: js.UndefOr[dateTime] = js.undefined
   /**
     * If this item is actually marked as deleted
     */
-  var deleted: js.UndefOr[Boolean] = js.native
+  var deleted: js.UndefOr[Boolean] = js.undefined
   /**
     * Status/Workflow information about this item
     */
-  var flag: js.UndefOr[CodeableConcept] = js.native
+  var flag: js.UndefOr[CodeableConcept] = js.undefined
   /**
     * Actual entry
     */
-  var item: Reference = js.native
+  var item: Reference
 }
 
 object ListEntry {
   @scala.inline
-  def apply(item: Reference): ListEntry = {
+  def apply(
+    item: Reference,
+    _date: Element = null,
+    _deleted: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    date: dateTime = null,
+    deleted: js.UndefOr[Boolean] = js.undefined,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    flag: CodeableConcept = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): ListEntry = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
+    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
+    if (_deleted != null) __obj.updateDynamic("_deleted")(_deleted.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleted)) __obj.updateDynamic("deleted")(deleted.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (flag != null) __obj.updateDynamic("flag")(flag.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListEntry]
   }
-  @scala.inline
-  implicit class ListEntryOps[Self <: ListEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItem(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_date(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_date: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_deleted(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_deleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_deleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: dateTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlag(value: CodeableConcept): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

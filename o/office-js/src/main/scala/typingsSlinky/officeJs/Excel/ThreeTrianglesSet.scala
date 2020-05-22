@@ -5,44 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ThreeTrianglesSet extends /* index */ NumberDictionary[Icon] {
-  var greenUpTriangle: Icon = js.native
-  var redDownTriangle: Icon = js.native
-  var yellowDash: Icon = js.native
+  var greenUpTriangle: Icon
+  var redDownTriangle: Icon
+  var yellowDash: Icon
 }
 
 object ThreeTrianglesSet {
   @scala.inline
-  def apply(greenUpTriangle: Icon, redDownTriangle: Icon, yellowDash: Icon): ThreeTrianglesSet = {
+  def apply(
+    greenUpTriangle: Icon,
+    redDownTriangle: Icon,
+    yellowDash: Icon,
+    NumberDictionary: /* index */ NumberDictionary[Icon] = null
+  ): ThreeTrianglesSet = {
     val __obj = js.Dynamic.literal(greenUpTriangle = greenUpTriangle.asInstanceOf[js.Any], redDownTriangle = redDownTriangle.asInstanceOf[js.Any], yellowDash = yellowDash.asInstanceOf[js.Any])
+    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
     __obj.asInstanceOf[ThreeTrianglesSet]
   }
-  @scala.inline
-  implicit class ThreeTrianglesSetOps[Self <: ThreeTrianglesSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGreenUpTriangle(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("greenUpTriangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRedDownTriangle(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redDownTriangle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYellowDash(value: Icon): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yellowDash")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

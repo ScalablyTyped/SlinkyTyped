@@ -4,185 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFilterXSSOptions extends js.Object {
-  var allowCommentTag: js.UndefOr[Boolean] = js.native
-  var css: js.UndefOr[js.Object | Boolean] = js.native
-  var escapeHtml: js.UndefOr[EscapeHandler] = js.native
-  var onIgnoreTag: js.UndefOr[OnTagHandler] = js.native
-  var onIgnoreTagAttr: js.UndefOr[OnTagAttrHandler] = js.native
-  var onTag: js.UndefOr[OnTagHandler] = js.native
-  var onTagAttr: js.UndefOr[OnTagAttrHandler] = js.native
-  var safeAttrValue: js.UndefOr[SafeAttrValueHandler] = js.native
-  var stripBlankChar: js.UndefOr[Boolean] = js.native
-  var stripIgnoreTag: js.UndefOr[Boolean] = js.native
-  var stripIgnoreTagBody: js.UndefOr[Boolean | js.Array[String]] = js.native
-  var whiteList: js.UndefOr[IWhiteList] = js.native
+  var allowCommentTag: js.UndefOr[Boolean] = js.undefined
+  var css: js.UndefOr[js.Object | Boolean] = js.undefined
+  var escapeHtml: js.UndefOr[EscapeHandler] = js.undefined
+  var onIgnoreTag: js.UndefOr[OnTagHandler] = js.undefined
+  var onIgnoreTagAttr: js.UndefOr[OnTagAttrHandler] = js.undefined
+  var onTag: js.UndefOr[OnTagHandler] = js.undefined
+  var onTagAttr: js.UndefOr[OnTagAttrHandler] = js.undefined
+  var safeAttrValue: js.UndefOr[SafeAttrValueHandler] = js.undefined
+  var stripBlankChar: js.UndefOr[Boolean] = js.undefined
+  var stripIgnoreTag: js.UndefOr[Boolean] = js.undefined
+  var stripIgnoreTagBody: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var whiteList: js.UndefOr[IWhiteList] = js.undefined
 }
 
 object IFilterXSSOptions {
   @scala.inline
-  def apply(): IFilterXSSOptions = {
+  def apply(
+    allowCommentTag: js.UndefOr[Boolean] = js.undefined,
+    css: js.Object | Boolean = null,
+    escapeHtml: /* str */ String => String = null,
+    onIgnoreTag: (/* tag */ String, /* html */ String, /* options */ js.Object) => String | Unit = null,
+    onIgnoreTagAttr: (/* tag */ String, /* name */ String, /* value */ String, /* isWhiteAttr */ Boolean) => String | Unit = null,
+    onTag: (/* tag */ String, /* html */ String, /* options */ js.Object) => String | Unit = null,
+    onTagAttr: (/* tag */ String, /* name */ String, /* value */ String, /* isWhiteAttr */ Boolean) => String | Unit = null,
+    safeAttrValue: (/* tag */ String, /* name */ String, /* value */ String, /* cssFilter */ ICSSFilter) => String = null,
+    stripBlankChar: js.UndefOr[Boolean] = js.undefined,
+    stripIgnoreTag: js.UndefOr[Boolean] = js.undefined,
+    stripIgnoreTagBody: Boolean | js.Array[String] = null,
+    whiteList: IWhiteList = null
+  ): IFilterXSSOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowCommentTag)) __obj.updateDynamic("allowCommentTag")(allowCommentTag.get.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (escapeHtml != null) __obj.updateDynamic("escapeHtml")(js.Any.fromFunction1(escapeHtml))
+    if (onIgnoreTag != null) __obj.updateDynamic("onIgnoreTag")(js.Any.fromFunction3(onIgnoreTag))
+    if (onIgnoreTagAttr != null) __obj.updateDynamic("onIgnoreTagAttr")(js.Any.fromFunction4(onIgnoreTagAttr))
+    if (onTag != null) __obj.updateDynamic("onTag")(js.Any.fromFunction3(onTag))
+    if (onTagAttr != null) __obj.updateDynamic("onTagAttr")(js.Any.fromFunction4(onTagAttr))
+    if (safeAttrValue != null) __obj.updateDynamic("safeAttrValue")(js.Any.fromFunction4(safeAttrValue))
+    if (!js.isUndefined(stripBlankChar)) __obj.updateDynamic("stripBlankChar")(stripBlankChar.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripIgnoreTag)) __obj.updateDynamic("stripIgnoreTag")(stripIgnoreTag.get.asInstanceOf[js.Any])
+    if (stripIgnoreTagBody != null) __obj.updateDynamic("stripIgnoreTagBody")(stripIgnoreTagBody.asInstanceOf[js.Any])
+    if (whiteList != null) __obj.updateDynamic("whiteList")(whiteList.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFilterXSSOptions]
   }
-  @scala.inline
-  implicit class IFilterXSSOptionsOps[Self <: IFilterXSSOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowCommentTag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCommentTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCommentTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCommentTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: js.Object | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEscapeHtml(value: /* str */ String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeHtml")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEscapeHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeHtml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIgnoreTag(value: (/* tag */ String, /* html */ String, /* options */ js.Object) => String | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIgnoreTag")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIgnoreTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIgnoreTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIgnoreTagAttr(
-      value: (/* tag */ String, /* name */ String, /* value */ String, /* isWhiteAttr */ Boolean) => String | Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIgnoreTagAttr")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIgnoreTagAttr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIgnoreTagAttr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTag(value: (/* tag */ String, /* html */ String, /* options */ js.Object) => String | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTag")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTagAttr(
-      value: (/* tag */ String, /* name */ String, /* value */ String, /* isWhiteAttr */ Boolean) => String | Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTagAttr")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTagAttr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTagAttr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeAttrValue(
-      value: (/* tag */ String, /* name */ String, /* value */ String, /* cssFilter */ ICSSFilter) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeAttrValue")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withoutSafeAttrValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeAttrValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripBlankChar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripBlankChar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripBlankChar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripBlankChar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripIgnoreTag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripIgnoreTag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripIgnoreTag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripIgnoreTag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripIgnoreTagBody(value: Boolean | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripIgnoreTagBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripIgnoreTagBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripIgnoreTagBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWhiteList(value: IWhiteList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whiteList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhiteList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whiteList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

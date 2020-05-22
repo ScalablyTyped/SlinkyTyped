@@ -19,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `false` */] extends Saveable[DataType] {
+trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `false` */] extends js.Object {
   /**
     * bye lets you change data after that browser peer disconnects.
     * This is useful for games and status messages,

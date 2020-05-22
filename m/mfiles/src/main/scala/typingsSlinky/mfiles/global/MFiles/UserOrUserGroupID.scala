@@ -2,13 +2,21 @@ package typingsSlinky.mfiles.global.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.mfiles.IUserOrUserGroupID
+import typingsSlinky.mfiles.MFiles.MFUserOrUserGroupType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.UserOrUserGroupID")
 @js.native
-class UserOrUserGroupID () extends IUserOrUserGroupID
+class UserOrUserGroupID () extends IUserOrUserGroupID {
+  /* CompleteClass */
+  override var UserOrGroupID: Double = js.native
+  /* CompleteClass */
+  override var UserOrGroupType: MFUserOrUserGroupType = js.native
+  /* CompleteClass */
+  override def Clone(): IUserOrUserGroupID = js.native
+}
 
 @JSGlobal("MFiles.UserOrUserGroupID")
 @js.native

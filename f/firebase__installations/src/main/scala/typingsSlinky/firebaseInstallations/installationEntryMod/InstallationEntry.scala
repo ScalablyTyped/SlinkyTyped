@@ -1,5 +1,8 @@
 package typingsSlinky.firebaseInstallations.installationEntryMod
 
+import typingsSlinky.firebaseInstallations.firebaseInstallationsNumbers.`0`
+import typingsSlinky.firebaseInstallations.firebaseInstallationsNumbers.`1`
+import typingsSlinky.firebaseInstallations.firebaseInstallationsNumbers.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +16,19 @@ trait InstallationEntry extends js.Object
 
 object InstallationEntry {
   @scala.inline
-  implicit def apply(value: InProgressInstallationEntry): InstallationEntry = value.asInstanceOf[InstallationEntry]
+  def UnregisteredInstallationEntry(fid: String, registrationStatus: `0`): InstallationEntry = {
+    val __obj = js.Dynamic.literal(fid = fid.asInstanceOf[js.Any], registrationStatus = registrationStatus.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InstallationEntry]
+  }
   @scala.inline
-  implicit def apply(value: RegisteredInstallationEntry): InstallationEntry = value.asInstanceOf[InstallationEntry]
+  def InProgressInstallationEntry(fid: String, registrationStatus: `1`, registrationTime: Double): InstallationEntry = {
+    val __obj = js.Dynamic.literal(fid = fid.asInstanceOf[js.Any], registrationStatus = registrationStatus.asInstanceOf[js.Any], registrationTime = registrationTime.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InstallationEntry]
+  }
   @scala.inline
-  implicit def apply(value: UnregisteredInstallationEntry): InstallationEntry = value.asInstanceOf[InstallationEntry]
+  def RegisteredInstallationEntry(authToken: AuthToken, fid: String, refreshToken: String, registrationStatus: `2`): InstallationEntry = {
+    val __obj = js.Dynamic.literal(authToken = authToken.asInstanceOf[js.Any], fid = fid.asInstanceOf[js.Any], refreshToken = refreshToken.asInstanceOf[js.Any], registrationStatus = registrationStatus.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InstallationEntry]
+  }
 }
 

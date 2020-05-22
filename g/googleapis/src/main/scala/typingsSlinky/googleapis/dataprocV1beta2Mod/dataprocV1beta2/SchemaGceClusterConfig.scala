@@ -91,125 +91,28 @@ trait SchemaGceClusterConfig extends js.Object {
 
 object SchemaGceClusterConfig {
   @scala.inline
-  def apply(): SchemaGceClusterConfig = {
+  def apply(
+    internalIpOnly: js.UndefOr[Boolean] = js.undefined,
+    metadata: StringDictionary[String] = null,
+    networkUri: String = null,
+    reservationAffinity: SchemaReservationAffinity = null,
+    serviceAccount: String = null,
+    serviceAccountScopes: js.Array[String] = null,
+    subnetworkUri: String = null,
+    tags: js.Array[String] = null,
+    zoneUri: String = null
+  ): SchemaGceClusterConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(internalIpOnly)) __obj.updateDynamic("internalIpOnly")(internalIpOnly.get.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (networkUri != null) __obj.updateDynamic("networkUri")(networkUri.asInstanceOf[js.Any])
+    if (reservationAffinity != null) __obj.updateDynamic("reservationAffinity")(reservationAffinity.asInstanceOf[js.Any])
+    if (serviceAccount != null) __obj.updateDynamic("serviceAccount")(serviceAccount.asInstanceOf[js.Any])
+    if (serviceAccountScopes != null) __obj.updateDynamic("serviceAccountScopes")(serviceAccountScopes.asInstanceOf[js.Any])
+    if (subnetworkUri != null) __obj.updateDynamic("subnetworkUri")(subnetworkUri.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (zoneUri != null) __obj.updateDynamic("zoneUri")(zoneUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGceClusterConfig]
   }
-  @scala.inline
-  implicit class SchemaGceClusterConfigOps[Self <: SchemaGceClusterConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInternalIpOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internalIpOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInternalIpOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("internalIpOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReservationAffinity(value: SchemaReservationAffinity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservationAffinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservationAffinity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reservationAffinity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccountScopes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountScopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccountScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountScopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetworkUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworkUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetworkUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworkUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoneUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoneUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

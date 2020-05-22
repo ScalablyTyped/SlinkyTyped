@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountUser extends js.Object {
-  var admin: js.UndefOr[Boolean] = js.native
-  var emailAddress: js.UndefOr[String] = js.native
-  var orderManager: js.UndefOr[Boolean] = js.native
-  var paymentsAnalyst: js.UndefOr[Boolean] = js.native
-  var paymentsManager: js.UndefOr[Boolean] = js.native
+  var admin: js.UndefOr[Boolean] = js.undefined
+  var emailAddress: js.UndefOr[String] = js.undefined
+  var orderManager: js.UndefOr[Boolean] = js.undefined
+  var paymentsAnalyst: js.UndefOr[Boolean] = js.undefined
+  var paymentsManager: js.UndefOr[Boolean] = js.undefined
 }
 
 object AccountUser {
   @scala.inline
-  def apply(): AccountUser = {
+  def apply(
+    admin: js.UndefOr[Boolean] = js.undefined,
+    emailAddress: String = null,
+    orderManager: js.UndefOr[Boolean] = js.undefined,
+    paymentsAnalyst: js.UndefOr[Boolean] = js.undefined,
+    paymentsManager: js.UndefOr[Boolean] = js.undefined
+  ): AccountUser = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(admin)) __obj.updateDynamic("admin")(admin.get.asInstanceOf[js.Any])
+    if (emailAddress != null) __obj.updateDynamic("emailAddress")(emailAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(orderManager)) __obj.updateDynamic("orderManager")(orderManager.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paymentsAnalyst)) __obj.updateDynamic("paymentsAnalyst")(paymentsAnalyst.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(paymentsManager)) __obj.updateDynamic("paymentsManager")(paymentsManager.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountUser]
   }
-  @scala.inline
-  implicit class AccountUserOps[Self <: AccountUser] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdmin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("admin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdmin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("admin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEmailAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderManager(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderManager")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentsAnalyst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentsAnalyst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentsAnalyst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentsAnalyst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentsManager(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentsManager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentsManager: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentsManager")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

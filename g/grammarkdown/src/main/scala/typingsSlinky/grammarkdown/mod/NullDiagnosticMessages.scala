@@ -14,6 +14,6 @@ class NullDiagnosticMessages ()
 @js.native
 object NullDiagnosticMessages extends js.Object {
   var _instance: js.Any = js.native
-  val instance: typingsSlinky.grammarkdown.diagnosticsMod.NullDiagnosticMessages = js.native
+  def instance: typingsSlinky.grammarkdown.diagnosticsMod.NullDiagnosticMessages = js.native
 }
 

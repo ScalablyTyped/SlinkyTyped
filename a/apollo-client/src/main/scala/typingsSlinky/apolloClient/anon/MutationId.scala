@@ -8,14 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MutationId extends js.Object {
-  var document: DocumentNode = js.native
-  var mutationId: String = js.native
-  var optimisticResponse: js.UndefOr[js.Object | js.Function] = js.native
-  var update: js.UndefOr[js.Function2[/* proxy */ DataProxy, /* mutationResult */ js.Object, Unit]] = js.native
-  var updateQueries: StringDictionary[QueryWithUpdater] = js.native
-  var variables: js.Any = js.native
+  var document: DocumentNode
+  var mutationId: String
+  var optimisticResponse: js.UndefOr[js.Object | js.Function] = js.undefined
+  var update: js.UndefOr[js.Function2[/* proxy */ DataProxy, /* mutationResult */ js.Object, Unit]] = js.undefined
+  var updateQueries: StringDictionary[QueryWithUpdater]
+  var variables: js.Any
 }
 
 object MutationId {
@@ -24,66 +23,14 @@ object MutationId {
     document: DocumentNode,
     mutationId: String,
     updateQueries: StringDictionary[QueryWithUpdater],
-    variables: js.Any
+    variables: js.Any,
+    optimisticResponse: js.Object | js.Function = null,
+    update: (/* proxy */ DataProxy, /* mutationResult */ js.Object) => Unit = null
   ): MutationId = {
     val __obj = js.Dynamic.literal(document = document.asInstanceOf[js.Any], mutationId = mutationId.asInstanceOf[js.Any], updateQueries = updateQueries.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
+    if (optimisticResponse != null) __obj.updateDynamic("optimisticResponse")(optimisticResponse.asInstanceOf[js.Any])
+    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction2(update))
     __obj.asInstanceOf[MutationId]
   }
-  @scala.inline
-  implicit class MutationIdOps[Self <: MutationId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocument(value: DocumentNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMutationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateQueries(value: StringDictionary[QueryWithUpdater]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVariables(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptimisticResponse(value: js.Object | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimisticResponse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimisticResponse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimisticResponse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: (/* proxy */ DataProxy, /* mutationResult */ js.Object) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

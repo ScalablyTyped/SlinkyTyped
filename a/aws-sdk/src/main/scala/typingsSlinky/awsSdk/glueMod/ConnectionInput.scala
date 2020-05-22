@@ -11,7 +11,7 @@ trait ConnectionInput extends js.Object {
     */
   var ConnectionProperties: typingsSlinky.awsSdk.glueMod.ConnectionProperties = js.native
   /**
-    * The type of the connection. Currently, only JDBC is supported; SFTP is not supported.
+    * The type of the connection. Currently, these types are supported:    JDBC - Designates a connection to a database through Java Database Connectivity (JDBC).    KAFKA - Designates a connection to an Apache Kafka streaming platform.    MONGODB - Designates a connection to a MongoDB document database.   SFTP is not supported.
     */
   var ConnectionType: typingsSlinky.awsSdk.glueMod.ConnectionType = js.native
   /**
@@ -34,71 +34,19 @@ trait ConnectionInput extends js.Object {
 
 object ConnectionInput {
   @scala.inline
-  def apply(ConnectionProperties: ConnectionProperties, ConnectionType: ConnectionType, Name: NameString): ConnectionInput = {
+  def apply(
+    ConnectionProperties: ConnectionProperties,
+    ConnectionType: ConnectionType,
+    Name: NameString,
+    Description: DescriptionString = null,
+    MatchCriteria: MatchCriteria = null,
+    PhysicalConnectionRequirements: PhysicalConnectionRequirements = null
+  ): ConnectionInput = {
     val __obj = js.Dynamic.literal(ConnectionProperties = ConnectionProperties.asInstanceOf[js.Any], ConnectionType = ConnectionType.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (MatchCriteria != null) __obj.updateDynamic("MatchCriteria")(MatchCriteria.asInstanceOf[js.Any])
+    if (PhysicalConnectionRequirements != null) __obj.updateDynamic("PhysicalConnectionRequirements")(PhysicalConnectionRequirements.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionInput]
   }
-  @scala.inline
-  implicit class ConnectionInputOps[Self <: ConnectionInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionProperties(value: ConnectionProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConnectionType(value: ConnectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: DescriptionString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMatchCriteria(value: MatchCriteria): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchCriteria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMatchCriteria: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchCriteria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhysicalConnectionRequirements(value: PhysicalConnectionRequirements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalConnectionRequirements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhysicalConnectionRequirements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PhysicalConnectionRequirements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

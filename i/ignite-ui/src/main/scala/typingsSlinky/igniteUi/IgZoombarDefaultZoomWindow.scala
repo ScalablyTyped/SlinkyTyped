@@ -5,61 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgZoombarDefaultZoomWindow
   extends /**
-	 * Option for JSONPDataSourceSettings
-	 */
+  * Option for JSONPDataSourceSettings
+  */
 /* optionName */ StringDictionary[js.Any] {
   /**
-  	 * The left component of the zoom window in percentages.
-  	 *
-  	 */
-  var left: js.UndefOr[Double] = js.native
+    * The left component of the zoom window in percentages.
+    *
+    */
+  var left: js.UndefOr[Double] = js.undefined
   /**
-  	 * The width of the zoom window in percentages.
-  	 *
-  	 */
-  var width: js.UndefOr[String] = js.native
+    * The width of the zoom window in percentages.
+    *
+    */
+  var width: js.UndefOr[String] = js.undefined
 }
 
 object IgZoombarDefaultZoomWindow {
   @scala.inline
-  def apply(): IgZoombarDefaultZoomWindow = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    left: js.UndefOr[Double] = js.undefined,
+    width: String = null
+  ): IgZoombarDefaultZoomWindow = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(left)) __obj.updateDynamic("left")(left.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgZoombarDefaultZoomWindow]
   }
-  @scala.inline
-  implicit class IgZoombarDefaultZoomWindowOps[Self <: IgZoombarDefaultZoomWindow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeft: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,69 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnalyzeSyntaxResponse extends js.Object {
   /**
     * The language of the text, which will be the same as the language specified
     * in the request or, if not specified, the automatically-detected language.
     * See Document.language field for more details.
     */
-  var language: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.undefined
   /** Sentences in the input document. */
-  var sentences: js.UndefOr[js.Array[Sentence]] = js.native
+  var sentences: js.UndefOr[js.Array[Sentence]] = js.undefined
   /** Tokens, along with their syntactic information, in the input document. */
-  var tokens: js.UndefOr[js.Array[Token]] = js.native
+  var tokens: js.UndefOr[js.Array[Token]] = js.undefined
 }
 
 object AnalyzeSyntaxResponse {
   @scala.inline
-  def apply(): AnalyzeSyntaxResponse = {
+  def apply(language: String = null, sentences: js.Array[Sentence] = null, tokens: js.Array[Token] = null): AnalyzeSyntaxResponse = {
     val __obj = js.Dynamic.literal()
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (sentences != null) __obj.updateDynamic("sentences")(sentences.asInstanceOf[js.Any])
+    if (tokens != null) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyzeSyntaxResponse]
   }
-  @scala.inline
-  implicit class AnalyzeSyntaxResponseOps[Self <: AnalyzeSyntaxResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSentences(value: js.Array[Sentence]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSentences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTokens(value: js.Array[Token]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTokens: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type IterateeMatcherShorthand[T] = typingsSlinky.underscore.mod.Dictionary[T]
+  type IterateePropertyShorthand = java.lang.String | scala.Double
   type ListIterator[T, TResult] = js.Function3[
     /* value */ T, 
     /* index */ scala.Double, 

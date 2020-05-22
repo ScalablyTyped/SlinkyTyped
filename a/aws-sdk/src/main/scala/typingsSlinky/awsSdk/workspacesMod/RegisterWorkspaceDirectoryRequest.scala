@@ -34,77 +34,20 @@ trait RegisterWorkspaceDirectoryRequest extends js.Object {
 
 object RegisterWorkspaceDirectoryRequest {
   @scala.inline
-  def apply(DirectoryId: DirectoryId, EnableWorkDocs: BooleanObject): RegisterWorkspaceDirectoryRequest = {
+  def apply(
+    DirectoryId: DirectoryId,
+    EnableWorkDocs: BooleanObject,
+    EnableSelfService: js.UndefOr[BooleanObject] = js.undefined,
+    SubnetIds: SubnetIds = null,
+    Tags: TagList = null,
+    Tenancy: Tenancy = null
+  ): RegisterWorkspaceDirectoryRequest = {
     val __obj = js.Dynamic.literal(DirectoryId = DirectoryId.asInstanceOf[js.Any], EnableWorkDocs = EnableWorkDocs.asInstanceOf[js.Any])
+    if (!js.isUndefined(EnableSelfService)) __obj.updateDynamic("EnableSelfService")(EnableSelfService.get.asInstanceOf[js.Any])
+    if (SubnetIds != null) __obj.updateDynamic("SubnetIds")(SubnetIds.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (Tenancy != null) __obj.updateDynamic("Tenancy")(Tenancy.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterWorkspaceDirectoryRequest]
   }
-  @scala.inline
-  implicit class RegisterWorkspaceDirectoryRequestOps[Self <: RegisterWorkspaceDirectoryRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectoryId(value: DirectoryId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableWorkDocs(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableWorkDocs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnableSelfService(value: BooleanObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableSelfService")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSelfService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableSelfService")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubnetIds(value: SubnetIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnetIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenancy(value: Tenancy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenancy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tenancy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

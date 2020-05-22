@@ -1,53 +1,22 @@
 package typingsSlinky.openfin.anon
 
-import typingsSlinky.openfin.shapesMod.RGB
+import typingsSlinky.openfin.windowOptionMod.CornerRounding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `6` extends js.Object {
-  var newVal: js.UndefOr[RGB] = js.native
-  var oldVal: js.UndefOr[RGB] = js.native
+  var newVal: js.UndefOr[CornerRounding] = js.undefined
+  var oldVal: js.UndefOr[CornerRounding] = js.undefined
 }
 
 object `6` {
   @scala.inline
-  def apply(): `6` = {
+  def apply(newVal: CornerRounding = null, oldVal: CornerRounding = null): `6` = {
     val __obj = js.Dynamic.literal()
+    if (newVal != null) __obj.updateDynamic("newVal")(newVal.asInstanceOf[js.Any])
+    if (oldVal != null) __obj.updateDynamic("oldVal")(oldVal.asInstanceOf[js.Any])
     __obj.asInstanceOf[`6`]
   }
-  @scala.inline
-  implicit class `6Ops`[Self <: `6`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewVal(value: RGB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewVal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newVal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOldVal(value: RGB): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOldVal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oldVal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

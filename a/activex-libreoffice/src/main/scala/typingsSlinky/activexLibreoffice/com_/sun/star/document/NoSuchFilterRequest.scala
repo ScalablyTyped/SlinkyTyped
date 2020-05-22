@@ -19,10 +19,9 @@ import scala.scalajs.js.annotation._
   * @see XInteractionFilterSelect
   * @see com.sun.star.task.XInteractionAbort
   */
-@js.native
 trait NoSuchFilterRequest extends Exception {
   /** transport URL which couldn't be detected */
-  var URL: String = js.native
+  var URL: String
 }
 
 object NoSuchFilterRequest {
@@ -31,19 +30,5 @@ object NoSuchFilterRequest {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoSuchFilterRequest]
   }
-  @scala.inline
-  implicit class NoSuchFilterRequestOps[Self <: NoSuchFilterRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

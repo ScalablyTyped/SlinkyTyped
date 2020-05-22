@@ -18,41 +18,11 @@ trait DatasetActionSummary extends js.Object {
 
 object DatasetActionSummary {
   @scala.inline
-  def apply(): DatasetActionSummary = {
+  def apply(actionName: DatasetActionName = null, actionType: DatasetActionType = null): DatasetActionSummary = {
     val __obj = js.Dynamic.literal()
+    if (actionName != null) __obj.updateDynamic("actionName")(actionName.asInstanceOf[js.Any])
+    if (actionType != null) __obj.updateDynamic("actionType")(actionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatasetActionSummary]
   }
-  @scala.inline
-  implicit class DatasetActionSummaryOps[Self <: DatasetActionSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionName(value: DatasetActionName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActionType(value: DatasetActionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

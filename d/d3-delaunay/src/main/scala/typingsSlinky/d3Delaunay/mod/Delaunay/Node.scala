@@ -7,36 +7,35 @@ import scala.scalajs.js.annotation._
 /**
   * A point node on a convex hull (represented as a circular linked list).
   */
-@js.native
 trait Node extends js.Object {
   /**
     * The index of the associated point.
     */
-  var i: Double = js.native
+  var i: Double
   /**
     * The next node on the hull.
     */
-  var next: Node = js.native
+  var next: Node
   /**
     * The previous node on the hull.
     */
-  var prev: Node = js.native
+  var prev: Node
   /**
     * Whether the node has been removed from the linked list.
     */
-  var removed: Boolean = js.native
+  var removed: Boolean
   /**
     * The index of the (incoming or outgoing?) associated halfedge.
     */
-  var t: Double = js.native
+  var t: Double
   /**
     * The x-coordinate of the associated point.
     */
-  var x: Double = js.native
+  var x: Double
   /**
     * The y-coordinate of the associated point.
     */
-  var y: Double = js.native
+  var y: Double
 }
 
 object Node {
@@ -45,55 +44,5 @@ object Node {
     val __obj = js.Dynamic.literal(i = i.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], prev = prev.asInstanceOf[js.Any], removed = removed.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
-  @scala.inline
-  implicit class NodeOps[Self <: Node] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withI(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNext(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrev(value: Node): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemoved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withT(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("t")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

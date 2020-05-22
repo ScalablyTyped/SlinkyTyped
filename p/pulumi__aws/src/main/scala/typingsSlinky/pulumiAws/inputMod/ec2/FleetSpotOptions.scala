@@ -23,53 +23,16 @@ trait FleetSpotOptions extends js.Object {
 
 object FleetSpotOptions {
   @scala.inline
-  def apply(): FleetSpotOptions = {
+  def apply(
+    allocationStrategy: Input[String] = null,
+    instanceInterruptionBehavior: Input[String] = null,
+    instancePoolsToUseCount: Input[Double] = null
+  ): FleetSpotOptions = {
     val __obj = js.Dynamic.literal()
+    if (allocationStrategy != null) __obj.updateDynamic("allocationStrategy")(allocationStrategy.asInstanceOf[js.Any])
+    if (instanceInterruptionBehavior != null) __obj.updateDynamic("instanceInterruptionBehavior")(instanceInterruptionBehavior.asInstanceOf[js.Any])
+    if (instancePoolsToUseCount != null) __obj.updateDynamic("instancePoolsToUseCount")(instancePoolsToUseCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[FleetSpotOptions]
   }
-  @scala.inline
-  implicit class FleetSpotOptionsOps[Self <: FleetSpotOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocationStrategy(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocationStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllocationStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allocationStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceInterruptionBehavior(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceInterruptionBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceInterruptionBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceInterruptionBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstancePoolsToUseCount(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePoolsToUseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstancePoolsToUseCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instancePoolsToUseCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

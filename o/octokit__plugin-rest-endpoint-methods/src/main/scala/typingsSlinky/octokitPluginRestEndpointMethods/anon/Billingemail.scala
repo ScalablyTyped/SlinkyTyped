@@ -4,24 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Billingemail extends js.Object {
-  var billing_email: Type = js.native
-  var company: Type = js.native
-  var default_repository_permission: Enum = js.native
-  var description: Type = js.native
-  var email: Type = js.native
-  var has_organization_projects: Type = js.native
-  var has_repository_projects: Type = js.native
-  var location: Type = js.native
-  var members_allowed_repository_creation_type: Enum = js.native
-  var members_can_create_internal_repositories: Type = js.native
-  var members_can_create_private_repositories: Type = js.native
-  var members_can_create_public_repositories: Type = js.native
-  var members_can_create_repositories: Type = js.native
-  var name: Type = js.native
+  var billing_email: Type
+  var company: Type
+  var default_repository_permission: Enum
+  var description: Type
+  var email: Type
+  var has_organization_projects: Type
+  var has_repository_projects: Type
+  var location: Type
+  var members_allowed_repository_creation_type: Enum
+  var members_can_create_internal_repositories: Type
+  var members_can_create_private_repositories: Type
+  var members_can_create_public_repositories: Type
+  var members_can_create_repositories: Type
+  var name: Type
   @JSName("org")
-  var org_ : Required = js.native
+  var org_ : Required
 }
 
 object Billingemail {
@@ -47,103 +46,5 @@ object Billingemail {
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[Billingemail]
   }
-  @scala.inline
-  implicit class BillingemailOps[Self <: Billingemail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBilling_email(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompany(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefault_repository_permission(value: Enum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_repository_permission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEmail(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHas_organization_projects(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_organization_projects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHas_repository_projects(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("has_repository_projects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMembers_allowed_repository_creation_type(value: Enum): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_allowed_repository_creation_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMembers_can_create_internal_repositories(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_can_create_internal_repositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMembers_can_create_private_repositories(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_can_create_private_repositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMembers_can_create_public_repositories(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_can_create_public_repositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMembers_can_create_repositories(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("members_can_create_repositories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrg_(value: Required): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

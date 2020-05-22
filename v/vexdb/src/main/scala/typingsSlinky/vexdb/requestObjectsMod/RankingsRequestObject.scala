@@ -1,400 +1,75 @@
 package typingsSlinky.vexdb.requestObjectsMod
 
-import typingsSlinky.vexdb.responseObjectsMod.ResponseObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RankingsRequestObject extends RequestObject {
-  var ap: js.UndefOr[NumberRequest] = js.native
-  var ccwm: js.UndefOr[NumberRequest] = js.native
-  var division: js.UndefOr[StringRequest] = js.native
-  var dpr: js.UndefOr[NumberRequest] = js.native
-  var limit_number: js.UndefOr[Double] = js.native
-  var limit_start: js.UndefOr[Double] = js.native
-  var losses: js.UndefOr[NumberRequest] = js.native
-  var max_score: js.UndefOr[NumberRequest] = js.native
-  var opr: js.UndefOr[NumberRequest] = js.native
-  var rank: js.UndefOr[StringRequest] = js.native
-  var season: js.UndefOr[StringRequest] = js.native
-  var single: js.UndefOr[Boolean] = js.native
-  var sku: js.UndefOr[StringRequest] = js.native
-  var sp: js.UndefOr[NumberRequest] = js.native
-  var team: js.UndefOr[StringRequest] = js.native
-  var ties: js.UndefOr[NumberRequest] = js.native
-  var trsp: js.UndefOr[NumberRequest] = js.native
-  var wins: js.UndefOr[NumberRequest] = js.native
-  var wp: js.UndefOr[NumberRequest] = js.native
+  var ap: js.UndefOr[NumberRequest] = js.undefined
+  var ccwm: js.UndefOr[NumberRequest] = js.undefined
+  var division: js.UndefOr[StringRequest] = js.undefined
+  var dpr: js.UndefOr[NumberRequest] = js.undefined
+  var limit_number: js.UndefOr[Double] = js.undefined
+  var limit_start: js.UndefOr[Double] = js.undefined
+  var losses: js.UndefOr[NumberRequest] = js.undefined
+  var max_score: js.UndefOr[NumberRequest] = js.undefined
+  var opr: js.UndefOr[NumberRequest] = js.undefined
+  var rank: js.UndefOr[StringRequest] = js.undefined
+  var season: js.UndefOr[StringRequest] = js.undefined
+  var single: js.UndefOr[Boolean] = js.undefined
+  var sku: js.UndefOr[StringRequest] = js.undefined
+  var sp: js.UndefOr[NumberRequest] = js.undefined
+  var team: js.UndefOr[StringRequest] = js.undefined
+  var ties: js.UndefOr[NumberRequest] = js.undefined
+  var trsp: js.UndefOr[NumberRequest] = js.undefined
+  var wins: js.UndefOr[NumberRequest] = js.undefined
+  var wp: js.UndefOr[NumberRequest] = js.undefined
 }
 
 object RankingsRequestObject {
   @scala.inline
-  def apply(): RankingsRequestObject = {
+  def apply(
+    ap: NumberRequest = null,
+    ccwm: NumberRequest = null,
+    division: StringRequest = null,
+    dpr: NumberRequest = null,
+    limit_number: js.UndefOr[Double] = js.undefined,
+    limit_start: js.UndefOr[Double] = js.undefined,
+    losses: NumberRequest = null,
+    max_score: NumberRequest = null,
+    opr: NumberRequest = null,
+    rank: StringRequest = null,
+    season: StringRequest = null,
+    single: js.UndefOr[Boolean] = js.undefined,
+    sku: StringRequest = null,
+    sp: NumberRequest = null,
+    team: StringRequest = null,
+    ties: NumberRequest = null,
+    trsp: NumberRequest = null,
+    wins: NumberRequest = null,
+    wp: NumberRequest = null
+  ): RankingsRequestObject = {
     val __obj = js.Dynamic.literal()
+    if (ap != null) __obj.updateDynamic("ap")(ap.asInstanceOf[js.Any])
+    if (ccwm != null) __obj.updateDynamic("ccwm")(ccwm.asInstanceOf[js.Any])
+    if (division != null) __obj.updateDynamic("division")(division.asInstanceOf[js.Any])
+    if (dpr != null) __obj.updateDynamic("dpr")(dpr.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit_number)) __obj.updateDynamic("limit_number")(limit_number.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(limit_start)) __obj.updateDynamic("limit_start")(limit_start.get.asInstanceOf[js.Any])
+    if (losses != null) __obj.updateDynamic("losses")(losses.asInstanceOf[js.Any])
+    if (max_score != null) __obj.updateDynamic("max_score")(max_score.asInstanceOf[js.Any])
+    if (opr != null) __obj.updateDynamic("opr")(opr.asInstanceOf[js.Any])
+    if (rank != null) __obj.updateDynamic("rank")(rank.asInstanceOf[js.Any])
+    if (season != null) __obj.updateDynamic("season")(season.asInstanceOf[js.Any])
+    if (!js.isUndefined(single)) __obj.updateDynamic("single")(single.get.asInstanceOf[js.Any])
+    if (sku != null) __obj.updateDynamic("sku")(sku.asInstanceOf[js.Any])
+    if (sp != null) __obj.updateDynamic("sp")(sp.asInstanceOf[js.Any])
+    if (team != null) __obj.updateDynamic("team")(team.asInstanceOf[js.Any])
+    if (ties != null) __obj.updateDynamic("ties")(ties.asInstanceOf[js.Any])
+    if (trsp != null) __obj.updateDynamic("trsp")(trsp.asInstanceOf[js.Any])
+    if (wins != null) __obj.updateDynamic("wins")(wins.asInstanceOf[js.Any])
+    if (wp != null) __obj.updateDynamic("wp")(wp.asInstanceOf[js.Any])
     __obj.asInstanceOf[RankingsRequestObject]
   }
-  @scala.inline
-  implicit class RankingsRequestObjectOps[Self <: RankingsRequestObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ap")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAp(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCcwmFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccwm")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCcwm(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccwm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCcwm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ccwm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDivisionFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("division")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDivisionRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("division")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDivision(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("division")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDivision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("division")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDprFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dpr")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDpr(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dpr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dpr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit_number(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit_number: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit_start(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit_start: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit_start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLossesFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("losses")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withLosses(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("losses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLosses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("losses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax_scoreFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_score")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withMax_score(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax_score: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max_score")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOprFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opr")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOpr(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRankFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRankRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRank(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeasonFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSeasonRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeason(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("season")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("single")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkuFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSkuRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSku(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSku: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sku")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSp(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTeamFunction2(value: (/* itemValue */ String, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTeamRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTeam(value: StringRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTeam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("team")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiesFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ties")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTies(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrspFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trsp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withTrsp(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trsp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrsp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trsp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWinsFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wins")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWins(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wins")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWpFunction2(value: (/* itemValue */ Double, /* item */ ResponseObject) => js.Promise[Boolean] | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wp")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withWp(value: NumberRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wp")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

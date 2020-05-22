@@ -15,14 +15,13 @@ import scala.scalajs.js.annotation._
   * This interface is a slight adaption of the Java interface `org.xml.sax.ErrorHandler` . In IDL, no exception can be passed as an argument, so an `any`
   * serves as the container. The type of the exception is {@link SAXParseException} or an instance of a derived class.
   */
-@js.native
 trait XErrorHandler extends XInterface {
   /** receives notification of a recoverable error. */
-  def error(aSAXParseException: js.Any): Unit = js.native
+  def error(aSAXParseException: js.Any): Unit
   /** receives notification of a non-recoverable error. */
-  def fatalError(aSAXParseException: js.Any): Unit = js.native
+  def fatalError(aSAXParseException: js.Any): Unit
   /** receives notification of a warning. */
-  def warning(aSAXParseException: js.Any): Unit = js.native
+  def warning(aSAXParseException: js.Any): Unit
 }
 
 object XErrorHandler {
@@ -38,31 +37,5 @@ object XErrorHandler {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), error = js.Any.fromFunction1(error), fatalError = js.Any.fromFunction1(fatalError), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), warning = js.Any.fromFunction1(warning))
     __obj.asInstanceOf[XErrorHandler]
   }
-  @scala.inline
-  implicit class XErrorHandlerOps[Self <: XErrorHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFatalError(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fatalError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWarning(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

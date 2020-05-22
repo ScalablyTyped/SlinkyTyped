@@ -13,10 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait Minifier extends js.Object
 
-object Minifier {
-  @scala.inline
-  implicit def apply(value: MinifierOutput): Minifier = value.asInstanceOf[Minifier]
-  @scala.inline
-  implicit def apply(value: MinifierPromise): Minifier = value.asInstanceOf[Minifier]
-}
-

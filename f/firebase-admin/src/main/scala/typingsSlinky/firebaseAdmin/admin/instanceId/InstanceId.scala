@@ -1,12 +1,11 @@
 package typingsSlinky.firebaseAdmin.admin.instanceId
 
-import typingsSlinky.firebaseAdmin.admin.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-  * Gets the {@link admin.instanceId.InstanceId `InstanceId`} service for the
+  * Gets the {@link InstanceId `InstanceId`} service for the
   * current app.
   *
   * @example
@@ -19,9 +18,8 @@ import scala.scalajs.js.annotation._
   * @return The `InstanceId` service for the
   *   current app.
   */
-@js.native
 trait InstanceId extends js.Object {
-  var app: App = js.native
+  var app: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _admin.app.App */ js.Any
   /**
     * Deletes the specified instance ID and the associated data from Firebase.
     *
@@ -35,34 +33,17 @@ trait InstanceId extends js.Object {
     *
     * @return A promise fulfilled when the instance ID is deleted.
     */
-  def deleteInstanceId(instanceId: String): js.Promise[Unit] = js.native
+  def deleteInstanceId(instanceId: String): js.Promise[Unit]
 }
 
 object InstanceId {
   @scala.inline
-  def apply(app: App, deleteInstanceId: String => js.Promise[Unit]): InstanceId = {
+  def apply(
+    app: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _admin.app.App */ js.Any,
+    deleteInstanceId: String => js.Promise[Unit]
+  ): InstanceId = {
     val __obj = js.Dynamic.literal(app = app.asInstanceOf[js.Any], deleteInstanceId = js.Any.fromFunction1(deleteInstanceId))
     __obj.asInstanceOf[InstanceId]
   }
-  @scala.inline
-  implicit class InstanceIdOps[Self <: InstanceId] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApp(value: App): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteInstanceId(value: String => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteInstanceId")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

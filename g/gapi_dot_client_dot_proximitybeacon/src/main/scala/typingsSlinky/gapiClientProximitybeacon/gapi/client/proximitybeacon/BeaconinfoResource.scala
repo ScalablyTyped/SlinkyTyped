@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BeaconinfoResource extends js.Object {
   /**
     * Given one or more beacon observations, returns any beacon information
@@ -14,7 +13,7 @@ trait BeaconinfoResource extends js.Object {
     * [API key](https://developers.google.com/beacons/proximity/get-started#request_a_browser_api_key)
     * for the application.
     */
-  def getforobserved(request: Accesstoken): Request[GetInfoForObservedBeaconsResponse] = js.native
+  def getforobserved(request: Accesstoken): Request[GetInfoForObservedBeaconsResponse]
 }
 
 object BeaconinfoResource {
@@ -23,19 +22,5 @@ object BeaconinfoResource {
     val __obj = js.Dynamic.literal(getforobserved = js.Any.fromFunction1(getforobserved))
     __obj.asInstanceOf[BeaconinfoResource]
   }
-  @scala.inline
-  implicit class BeaconinfoResourceOps[Self <: BeaconinfoResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetforobserved(value: Accesstoken => Request[GetInfoForObservedBeaconsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getforobserved")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

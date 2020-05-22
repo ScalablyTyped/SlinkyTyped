@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GpioPinProviderValueChangedEventArgs extends js.Object {
-  var edge: js.Any = js.native
+  var edge: js.Any
 }
 
 object GpioPinProviderValueChangedEventArgs {
@@ -15,19 +14,5 @@ object GpioPinProviderValueChangedEventArgs {
     val __obj = js.Dynamic.literal(edge = edge.asInstanceOf[js.Any])
     __obj.asInstanceOf[GpioPinProviderValueChangedEventArgs]
   }
-  @scala.inline
-  implicit class GpioPinProviderValueChangedEventArgsOps[Self <: GpioPinProviderValueChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEdge(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

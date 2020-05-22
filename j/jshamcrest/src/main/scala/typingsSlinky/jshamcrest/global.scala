@@ -7,6 +7,7 @@ import typingsSlinky.jshamcrest.JsHamcrest.Description
 import typingsSlinky.jshamcrest.JsHamcrest.Matcher
 import typingsSlinky.jshamcrest.JsHamcrest.MatcherConfig
 import typingsSlinky.jshamcrest.JsHamcrest.Operators.AssertOptions
+import typingsSlinky.jshamcrest.JsHamcrest.SelfDescribing
 import typingsSlinky.jshamcrest.JsHamcrest.SimpleMatcher
 import typingsSlinky.jshamcrest.anon.AttachAssertions
 import typingsSlinky.jshamcrest.anon.Scope
@@ -368,7 +369,10 @@ object global extends js.Object {
   object JsHamcrest extends js.Object {
     @js.native
     class BetweenBuilder ()
-      extends typingsSlinky.jshamcrest.JsHamcrest.BetweenBuilder
+      extends typingsSlinky.jshamcrest.JsHamcrest.BetweenBuilder {
+      /* CompleteClass */
+      override def and(end: js.Any): typingsSlinky.jshamcrest.JsHamcrest.SimpleMatcher = js.native
+    }
     
     @js.native
     class CombinableMatcher ()
@@ -376,7 +380,61 @@ object global extends js.Object {
     
     @js.native
     class Description ()
-      extends typingsSlinky.jshamcrest.JsHamcrest.Description
+      extends typingsSlinky.jshamcrest.JsHamcrest.Description {
+      /**
+        * Appends text to this description.
+        *
+        * @param text Text to append to this description
+        * @return {Description} Itself for method chaining
+        */
+      /* CompleteClass */
+      override def append(text: js.Any): typingsSlinky.jshamcrest.JsHamcrest.Description = js.native
+      /**
+        * Appends the description of a self describing object to this description.
+        *
+        * @param selfDescribingObject Any object that has a describeTo() function that accepts a JsHamcrest.Description object as argument
+        * @return {Description} Itself for method chaining
+        */
+      /* CompleteClass */
+      override def appendDescriptionOf(selfDescribingObject: SelfDescribing): typingsSlinky.jshamcrest.JsHamcrest.Description = js.native
+      /**
+        * Appends the description of several self describing objects to this description.
+        *
+        * @param start Start string
+        * @param separator Separator string
+        * @param end End string
+        * @param list Array of self describing objects. These objects must have a describeTo() function that accepts a JsHamcrest.Description object as argument
+        * @return {Description} Itself for method chaining
+        */
+      /* CompleteClass */
+      override def appendList(start: String, separator: String, end: String, list: js.Array[_]): typingsSlinky.jshamcrest.JsHamcrest.Description = js.native
+      /**
+        * Appends a JavaScript language’s literal to this description.
+        *
+        * @param literal Literal to append to this description
+        * @return {Description} Itself for method chaining
+        */
+      /* CompleteClass */
+      override def appendLiteral(literal: js.Any): typingsSlinky.jshamcrest.JsHamcrest.Description = js.native
+      /**
+        * Appends an array of values to this description.
+        *
+        * @param start Start string
+        * @param separator Separator string
+        * @param end End string
+        * @param list Array of values to be described to this description
+        * @return {Description} Itself for method chaining
+        */
+      /* CompleteClass */
+      override def appendValueList(start: String, separator: String, end: String, list: js.Array[SelfDescribing]): typingsSlinky.jshamcrest.JsHamcrest.Description = js.native
+      /**
+        * Gets the current content of this description.
+        *
+        * @return {string} Current content of this description
+        */
+      /* CompleteClass */
+      override def get(): String = js.native
+    }
     
     @js.native
     class SimpleMatcher protected ()

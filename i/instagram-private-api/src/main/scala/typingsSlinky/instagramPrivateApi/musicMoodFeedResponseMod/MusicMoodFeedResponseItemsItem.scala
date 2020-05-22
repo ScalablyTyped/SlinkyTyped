@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MusicMoodFeedResponseItemsItem extends js.Object {
-  var track: MusicMoodFeedResponseTrack = js.native
+  var track: MusicMoodFeedResponseTrack
 }
 
 object MusicMoodFeedResponseItemsItem {
@@ -15,19 +14,5 @@ object MusicMoodFeedResponseItemsItem {
     val __obj = js.Dynamic.literal(track = track.asInstanceOf[js.Any])
     __obj.asInstanceOf[MusicMoodFeedResponseItemsItem]
   }
-  @scala.inline
-  implicit class MusicMoodFeedResponseItemsItemOps[Self <: MusicMoodFeedResponseItemsItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTrack(value: MusicMoodFeedResponseTrack): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

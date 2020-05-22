@@ -13,72 +13,71 @@ import scala.scalajs.js.annotation._
   * #### Notes
   * Item objects are created automatically by a menu.
   */
-@js.native
 trait IItem extends js.Object {
   /**
     * The arguments for the command.
     */
-  val args: ReadonlyJSONObject = js.native
+  val args: ReadonlyJSONObject
   /**
     * The display caption for the menu item.
     */
-  val caption: String = js.native
+  val caption: String
   /**
     * The extra class name for the menu item.
     */
-  val className: String = js.native
+  val className: String
   /**
     * The command to execute when the item is triggered.
     */
-  val command: String = js.native
+  val command: String
   /**
     * The dataset for the menu item.
     */
-  val dataset: Dataset = js.native
+  val dataset: Dataset
   /**
     * @deprecated Use `iconClass` instead.
     */
-  val icon: String = js.native
+  val icon: String
   /**
     * The icon class for the menu item.
     */
-  val iconClass: String = js.native
+  val iconClass: String
   /**
     * The icon label for the menu item.
     */
-  val iconLabel: String = js.native
+  val iconLabel: String
   /**
     * Whether the menu item is enabled.
     */
-  val isEnabled: Boolean = js.native
+  val isEnabled: Boolean
   /**
     * Whether the menu item is toggled.
     */
-  val isToggled: Boolean = js.native
+  val isToggled: Boolean
   /**
     * Whether the menu item is visible.
     */
-  val isVisible: Boolean = js.native
+  val isVisible: Boolean
   /**
     * The key binding for the menu item.
     */
-  val keyBinding: IKeyBinding | Null = js.native
+  val keyBinding: IKeyBinding | Null
   /**
     * The display label for the menu item.
     */
-  val label: String = js.native
+  val label: String
   /**
     * The mnemonic index for the menu item.
     */
-  val mnemonic: Double = js.native
+  val mnemonic: Double
   /**
     * The submenu for a `'submenu'` type item.
     */
-  val submenu: typingsSlinky.phosphorWidgets.menuMod.Menu | Null = js.native
+  val submenu: typingsSlinky.phosphorWidgets.menuMod.Menu | Null
   /**
     * The type of the menu item.
     */
-  val `type`: ItemType = js.native
+  val `type`: ItemType
 }
 
 object IItem {
@@ -97,127 +96,13 @@ object IItem {
     isVisible: Boolean,
     label: String,
     mnemonic: Double,
-    `type`: ItemType
+    `type`: ItemType,
+    keyBinding: IKeyBinding = null,
+    submenu: typingsSlinky.phosphorWidgets.menuMod.Menu = null
   ): IItem = {
-    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], caption = caption.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any], dataset = dataset.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], iconClass = iconClass.asInstanceOf[js.Any], iconLabel = iconLabel.asInstanceOf[js.Any], isEnabled = isEnabled.asInstanceOf[js.Any], isToggled = isToggled.asInstanceOf[js.Any], isVisible = isVisible.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], mnemonic = mnemonic.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], caption = caption.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any], dataset = dataset.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], iconClass = iconClass.asInstanceOf[js.Any], iconLabel = iconLabel.asInstanceOf[js.Any], isEnabled = isEnabled.asInstanceOf[js.Any], isToggled = isToggled.asInstanceOf[js.Any], isVisible = isVisible.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], mnemonic = mnemonic.asInstanceOf[js.Any], keyBinding = keyBinding.asInstanceOf[js.Any], submenu = submenu.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItem]
   }
-  @scala.inline
-  implicit class IItemOps[Self <: IItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: ReadonlyJSONObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDataset(value: Dataset): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIconClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIconLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsToggled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isToggled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMnemonic(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mnemonic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: ItemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyBinding(value: IKeyBinding): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeyBindingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyBinding")(null)
-        ret
-    }
-    @scala.inline
-    def withSubmenu(value: typingsSlinky.phosphorWidgets.menuMod.Menu): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submenu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubmenuNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submenu")(null)
-        ret
-    }
-  }
-  
 }
 

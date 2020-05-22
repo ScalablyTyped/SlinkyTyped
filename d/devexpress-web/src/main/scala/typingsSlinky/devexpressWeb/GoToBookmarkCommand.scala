@@ -7,13 +7,12 @@ import scala.scalajs.js.annotation._
 /**
   * Gets a command to navigate to the specified bookmark in the document.
   */
-@js.native
 trait GoToBookmarkCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the GoToBookmarkCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param name A string value specifying the bookmark's name
     */
-  def execute(name: String): Boolean = js.native
+  def execute(name: String): Boolean
 }
 
 object GoToBookmarkCommand {
@@ -22,19 +21,5 @@ object GoToBookmarkCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[GoToBookmarkCommand]
   }
-  @scala.inline
-  implicit class GoToBookmarkCommandOps[Self <: GoToBookmarkCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

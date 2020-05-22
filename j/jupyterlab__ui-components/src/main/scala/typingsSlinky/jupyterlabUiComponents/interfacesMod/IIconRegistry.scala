@@ -11,25 +11,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IIconRegistry extends js.Object {
   /**
     * Add the raw text representation of an svg icon to this registry
     */
-  def addIcon(icons: IModel*): Unit = js.native
+  def addIcon(icons: IModel*): Unit
   /**
     * Check if any icon of name `name` has been registered.
     * Exact matches only
     */
-  def contains(name: String): Boolean = js.native
+  def contains(name: String): Boolean
   /**
     * Get the icon as an HTMLElement of tag <svg><svg/>
     */
-  def icon(props: INodeOptionscontainerHTMLAlignContent): HTMLElement | Null = js.native
+  def icon(props: INodeOptionscontainerHTMLAlignContent): HTMLElement | Null
   /**
     * Get the icon as a ReactElement of tag <tag><svg><svg/><tag/>
     */
-  def iconReact(props: INodeOptionstagdivspan): ReactElement = js.native
+  def iconReact(props: INodeOptionstagdivspan): ReactElement
 }
 
 @JSImport("@jupyterlab/ui-components/lib/icon/interfaces", "IIconRegistry")

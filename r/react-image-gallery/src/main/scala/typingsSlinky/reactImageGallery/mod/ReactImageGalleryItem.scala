@@ -6,244 +6,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactImageGalleryItem extends js.Object {
-  var bulletClass: js.UndefOr[String] = js.native
-  var bulletOnClick: js.UndefOr[js.Function1[/* hasItemItemIndexCurrentIndex */ CurrentIndex, Unit]] = js.native
-  var description: js.UndefOr[String] = js.native
-  var fullscreen: js.UndefOr[String] = js.native
-  var original: js.UndefOr[String] = js.native
-  var originalAlt: js.UndefOr[String] = js.native
-  var originalClass: js.UndefOr[String] = js.native
-  var originalTitle: js.UndefOr[String] = js.native
-  var renderItem: js.UndefOr[js.Function1[/* item */ js.UndefOr[this.type], TagMod[Any]]] = js.native
-  var renderThumbInner: js.UndefOr[js.Function1[/* item */ js.UndefOr[this.type], TagMod[Any]]] = js.native
-  var sizes: js.UndefOr[String] = js.native
-  var srcSet: js.UndefOr[String] = js.native
-  var thumbnail: js.UndefOr[String] = js.native
-  var thumbnailAlt: js.UndefOr[String] = js.native
-  var thumbnailClass: js.UndefOr[String] = js.native
-  var thumbnailLabel: js.UndefOr[String] = js.native
-  var thumbnailTitle: js.UndefOr[String] = js.native
+  var bulletClass: js.UndefOr[String] = js.undefined
+  var bulletOnClick: js.UndefOr[js.Function1[/* hasItemItemIndexCurrentIndex */ CurrentIndex, Unit]] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var fullscreen: js.UndefOr[String] = js.undefined
+  var original: js.UndefOr[String] = js.undefined
+  var originalAlt: js.UndefOr[String] = js.undefined
+  var originalClass: js.UndefOr[String] = js.undefined
+  var originalTitle: js.UndefOr[String] = js.undefined
+  var renderItem: js.UndefOr[js.Function1[/* item */ js.UndefOr[this.type], TagMod[Any]]] = js.undefined
+  var renderThumbInner: js.UndefOr[js.Function1[/* item */ js.UndefOr[this.type], TagMod[Any]]] = js.undefined
+  var sizes: js.UndefOr[String] = js.undefined
+  var srcSet: js.UndefOr[String] = js.undefined
+  var thumbnail: js.UndefOr[String] = js.undefined
+  var thumbnailAlt: js.UndefOr[String] = js.undefined
+  var thumbnailClass: js.UndefOr[String] = js.undefined
+  var thumbnailLabel: js.UndefOr[String] = js.undefined
+  var thumbnailTitle: js.UndefOr[String] = js.undefined
 }
 
 object ReactImageGalleryItem {
   @scala.inline
-  def apply(): ReactImageGalleryItem = {
+  def apply(
+    bulletClass: String = null,
+    bulletOnClick: /* hasItemItemIndexCurrentIndex */ CurrentIndex => Unit = null,
+    description: String = null,
+    fullscreen: String = null,
+    original: String = null,
+    originalAlt: String = null,
+    originalClass: String = null,
+    originalTitle: String = null,
+    renderItem: /* item */ js.UndefOr[ReactImageGalleryItem] => TagMod[Any] = null,
+    renderThumbInner: /* item */ js.UndefOr[ReactImageGalleryItem] => TagMod[Any] = null,
+    sizes: String = null,
+    srcSet: String = null,
+    thumbnail: String = null,
+    thumbnailAlt: String = null,
+    thumbnailClass: String = null,
+    thumbnailLabel: String = null,
+    thumbnailTitle: String = null
+  ): ReactImageGalleryItem = {
     val __obj = js.Dynamic.literal()
+    if (bulletClass != null) __obj.updateDynamic("bulletClass")(bulletClass.asInstanceOf[js.Any])
+    if (bulletOnClick != null) __obj.updateDynamic("bulletOnClick")(js.Any.fromFunction1(bulletOnClick))
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (fullscreen != null) __obj.updateDynamic("fullscreen")(fullscreen.asInstanceOf[js.Any])
+    if (original != null) __obj.updateDynamic("original")(original.asInstanceOf[js.Any])
+    if (originalAlt != null) __obj.updateDynamic("originalAlt")(originalAlt.asInstanceOf[js.Any])
+    if (originalClass != null) __obj.updateDynamic("originalClass")(originalClass.asInstanceOf[js.Any])
+    if (originalTitle != null) __obj.updateDynamic("originalTitle")(originalTitle.asInstanceOf[js.Any])
+    if (renderItem != null) __obj.updateDynamic("renderItem")(js.Any.fromFunction1(renderItem))
+    if (renderThumbInner != null) __obj.updateDynamic("renderThumbInner")(js.Any.fromFunction1(renderThumbInner))
+    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
+    if (srcSet != null) __obj.updateDynamic("srcSet")(srcSet.asInstanceOf[js.Any])
+    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
+    if (thumbnailAlt != null) __obj.updateDynamic("thumbnailAlt")(thumbnailAlt.asInstanceOf[js.Any])
+    if (thumbnailClass != null) __obj.updateDynamic("thumbnailClass")(thumbnailClass.asInstanceOf[js.Any])
+    if (thumbnailLabel != null) __obj.updateDynamic("thumbnailLabel")(thumbnailLabel.asInstanceOf[js.Any])
+    if (thumbnailTitle != null) __obj.updateDynamic("thumbnailTitle")(thumbnailTitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactImageGalleryItem]
   }
-  @scala.inline
-  implicit class ReactImageGalleryItemOps[Self <: ReactImageGalleryItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBulletClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBulletClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBulletOnClick(value: /* hasItemItemIndexCurrentIndex */ CurrentIndex => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletOnClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBulletOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletOnClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullscreen(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullscreen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalAlt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalAlt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderItem(value: /* item */ js.UndefOr[ReactImageGalleryItem] => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderThumbInner(value: /* item */ js.UndefOr[ReactImageGalleryItem] => TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderThumbInner")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderThumbInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderThumbInner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcSet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcSet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcSet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcSet")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailAlt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailAlt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnailTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnailTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailTitle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

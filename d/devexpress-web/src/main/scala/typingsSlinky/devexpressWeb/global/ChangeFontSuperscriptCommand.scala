@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChangeFontSuperscriptCommand")
 @js.native
 class ChangeFontSuperscriptCommand ()
-  extends typingsSlinky.devexpressWeb.ChangeFontSuperscriptCommand
+  extends typingsSlinky.devexpressWeb.ChangeFontSuperscriptCommand {
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[Boolean] = js.native
+}
 

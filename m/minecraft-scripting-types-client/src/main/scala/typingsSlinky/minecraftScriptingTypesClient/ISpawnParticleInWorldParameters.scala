@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
 /**
   * This event is used to create a static particle effect in the world. This particle effect is only visible to the specific player that is running the client script where you fired the event. Any effect defined in a JSON file (both in your resource pack and in Minecraft) can be used here. Once the effect is spawned you won't be able to control it further. Unlike the server version of the event, the client version will spawn the particle in the dimension the player is currently in.
   */
-@js.native
 trait ISpawnParticleInWorldParameters extends js.Object {
   /**
     * The identifier of the particle effect you want to attach to spawn. This is the same name you gave the effect in its JSON file
     */
-  var effect: ParticleEffect = js.native
+  var effect: ParticleEffect
   /**
     * The position in the world where you want to spawn the effect
     * @default [0, 0, 0]
     */
-  var position: VectorArray = js.native
+  var position: VectorArray
 }
 
 object ISpawnParticleInWorldParameters {
@@ -28,25 +27,5 @@ object ISpawnParticleInWorldParameters {
     val __obj = js.Dynamic.literal(effect = effect.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISpawnParticleInWorldParameters]
   }
-  @scala.inline
-  implicit class ISpawnParticleInWorldParametersOps[Self <: ISpawnParticleInWorldParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEffect(value: ParticleEffect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: VectorArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

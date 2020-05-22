@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrderLegacyPromotion extends js.Object {
-  var benefits: js.UndefOr[js.Array[OrderLegacyPromotionBenefit]] = js.native
-  var effectiveDates: js.UndefOr[String] = js.native
-  var genericRedemptionCode: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var longTitle: js.UndefOr[String] = js.native
-  var productApplicability: js.UndefOr[String] = js.native
-  var redemptionChannel: js.UndefOr[String] = js.native
+  var benefits: js.UndefOr[js.Array[OrderLegacyPromotionBenefit]] = js.undefined
+  var effectiveDates: js.UndefOr[String] = js.undefined
+  var genericRedemptionCode: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var longTitle: js.UndefOr[String] = js.undefined
+  var productApplicability: js.UndefOr[String] = js.undefined
+  var redemptionChannel: js.UndefOr[String] = js.undefined
 }
 
 object OrderLegacyPromotion {
   @scala.inline
-  def apply(): OrderLegacyPromotion = {
+  def apply(
+    benefits: js.Array[OrderLegacyPromotionBenefit] = null,
+    effectiveDates: String = null,
+    genericRedemptionCode: String = null,
+    id: String = null,
+    longTitle: String = null,
+    productApplicability: String = null,
+    redemptionChannel: String = null
+  ): OrderLegacyPromotion = {
     val __obj = js.Dynamic.literal()
+    if (benefits != null) __obj.updateDynamic("benefits")(benefits.asInstanceOf[js.Any])
+    if (effectiveDates != null) __obj.updateDynamic("effectiveDates")(effectiveDates.asInstanceOf[js.Any])
+    if (genericRedemptionCode != null) __obj.updateDynamic("genericRedemptionCode")(genericRedemptionCode.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (longTitle != null) __obj.updateDynamic("longTitle")(longTitle.asInstanceOf[js.Any])
+    if (productApplicability != null) __obj.updateDynamic("productApplicability")(productApplicability.asInstanceOf[js.Any])
+    if (redemptionChannel != null) __obj.updateDynamic("redemptionChannel")(redemptionChannel.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderLegacyPromotion]
   }
-  @scala.inline
-  implicit class OrderLegacyPromotionOps[Self <: OrderLegacyPromotion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBenefits(value: js.Array[OrderLegacyPromotionBenefit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("benefits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBenefits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("benefits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEffectiveDates(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveDates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEffectiveDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGenericRedemptionCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genericRedemptionCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGenericRedemptionCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("genericRedemptionCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductApplicability(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productApplicability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductApplicability: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productApplicability")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedemptionChannel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redemptionChannel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedemptionChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redemptionChannel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

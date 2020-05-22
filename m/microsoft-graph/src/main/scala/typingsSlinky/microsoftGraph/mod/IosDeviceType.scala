@@ -4,51 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IosDeviceType extends js.Object {
   // Whether the app should run on iPads.
-  var iPad: js.UndefOr[Boolean] = js.native
+  var iPad: js.UndefOr[Boolean] = js.undefined
   // Whether the app should run on iPhones and iPods.
-  var iPhoneAndIPod: js.UndefOr[Boolean] = js.native
+  var iPhoneAndIPod: js.UndefOr[Boolean] = js.undefined
 }
 
 object IosDeviceType {
   @scala.inline
-  def apply(): IosDeviceType = {
+  def apply(iPad: js.UndefOr[Boolean] = js.undefined, iPhoneAndIPod: js.UndefOr[Boolean] = js.undefined): IosDeviceType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(iPad)) __obj.updateDynamic("iPad")(iPad.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iPhoneAndIPod)) __obj.updateDynamic("iPhoneAndIPod")(iPhoneAndIPod.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IosDeviceType]
   }
-  @scala.inline
-  implicit class IosDeviceTypeOps[Self <: IosDeviceType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIPad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iPad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIPad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iPad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIPhoneAndIPod(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iPhoneAndIPod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIPhoneAndIPod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iPhoneAndIPod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

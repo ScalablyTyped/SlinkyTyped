@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.clusterMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.outputMod.cloudhsmv2.ClusterClusterCertificates
+import typingsSlinky.pulumiAws.outputMod.cloudhsmv2.ClusterClusterCertificate
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -31,7 +31,7 @@ class Cluster protected () extends CustomResource {
     * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
     * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
     */
-  val clusterCertificates: Output_[ClusterClusterCertificates] = js.native
+  val clusterCertificates: Output_[js.Array[ClusterClusterCertificate]] = js.native
   /**
     * The id of the CloudHSM cluster.
     */

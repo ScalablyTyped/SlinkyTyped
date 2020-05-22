@@ -18,41 +18,11 @@ trait ResourceTag extends js.Object {
 
 object ResourceTag {
   @scala.inline
-  def apply(): ResourceTag = {
+  def apply(ResourceId: String = null, TagsList: TagsList = null): ResourceTag = {
     val __obj = js.Dynamic.literal()
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
+    if (TagsList != null) __obj.updateDynamic("TagsList")(TagsList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceTag]
   }
-  @scala.inline
-  implicit class ResourceTagOps[Self <: ResourceTag] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagsList(value: TagsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagsList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

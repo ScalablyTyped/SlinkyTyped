@@ -7,24 +7,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // there is no way to use the Globals class from within Javascript
-@js.native
 trait Graphic extends js.Object {
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  var Brightness: Double = js.native
-  var ColorType: MsoPictureColorType = js.native
-  var Contrast: Double = js.native
-  val Creator: XlCreator = js.native
-  var CropBottom: Double = js.native
-  var CropLeft: Double = js.native
-  var CropRight: Double = js.native
-  var CropTop: Double = js.native
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  var Brightness: Double
+  var ColorType: MsoPictureColorType
+  var Contrast: Double
+  val Creator: XlCreator
+  var CropBottom: Double
+  var CropLeft: Double
+  var CropRight: Double
+  var CropTop: Double
   @JSName("Excel.Graphic_typekey")
-  var ExcelDotGraphic_typekey: Graphic = js.native
-  var Filename: String = js.native
-  var Height: Double = js.native
-  var LockAspectRatio: MsoTriState = js.native
-  val Parent: js.Any = js.native
-  var Width: Double = js.native
+  var ExcelDotGraphic_typekey: Graphic
+  var Filename: String
+  var Height: Double
+  var LockAspectRatio: MsoTriState
+  val Parent: js.Any
+  var Width: Double
 }
 
 object Graphic {
@@ -50,103 +49,5 @@ object Graphic {
     __obj.updateDynamic("Excel.Graphic_typekey")(ExcelDotGraphic_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Graphic]
   }
-  @scala.inline
-  implicit class GraphicOps[Self <: Graphic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrightness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorType(value: MsoPictureColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcelDotGraphic_typekey(value: Graphic): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.Graphic_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilename(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLockAspectRatio(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LockAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

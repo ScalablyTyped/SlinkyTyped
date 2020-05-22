@@ -1,8 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.EventJQueryEvent
 import typingsSlinky.devextreme.anon.ItemIndexModel
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
@@ -11,15 +14,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxDropDownMenuOptions extends WidgetOptions[dxDropDownMenu] {
-  /** The name of the icon to be displayed by the DropDownMenu button. */
-  var buttonIcon: js.UndefOr[String] = js.native
-  /** The text displayed in the DropDownMenu button. */
-  var buttonText: js.UndefOr[String] = js.native
-  /** Overriden */
-  var dataSource: js.UndefOr[String | js.Array[_] | DataSource | DataSourceOptions] = js.native
-  /** Specifies a custom template for items. */
+  /** @name dxDropDownMenu.Options.buttonIcon */
+  var buttonIcon: js.UndefOr[String] = js.undefined
+  /** @name dxDropDownMenu.Options.buttonText */
+  var buttonText: js.UndefOr[String] = js.undefined
+  /** @name dxDropDownMenu.Options.dataSource */
+  var dataSource: js.UndefOr[String | js.Array[_] | DataSource | DataSourceOptions] = js.undefined
+  /** @name dxDropDownMenu.Options.itemTemplate */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -27,201 +29,90 @@ trait dxDropDownMenuOptions extends WidgetOptions[dxDropDownMenu] {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.native
-  /** An array of items displayed by the widget. */
-  var items: js.UndefOr[js.Array[_]] = js.native
-  /** A function that is executed when the button that opens the drop-down menu is clicked or tapped. */
-  var onButtonClick: js.UndefOr[(js.Function1[/* e */ EventJQueryEvent, _]) | String] = js.native
-  /** A function that is executed when a menu item is clicked or tapped. */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ ItemIndexModel, _]) | String] = js.native
-  /** Specifies whether or not the drop-down menu is displayed. */
-  var opened: js.UndefOr[Boolean] = js.native
-  /** Specifies the popup element's height in pixels. */
-  var popupHeight: js.UndefOr[Double | String | js.Function] = js.native
-  /** Specifies the popup element's width in pixels. */
-  var popupWidth: js.UndefOr[Double | String | js.Function] = js.native
-  /** Specifies whether or not to show the drop down menu within a Popover widget. */
-  var usePopover: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  /** @name dxDropDownMenu.Options.items */
+  var items: js.UndefOr[js.Array[_]] = js.undefined
+  /** @name dxDropDownMenu.Options.onButtonClick */
+  var onButtonClick: js.UndefOr[(js.Function1[/* e */ EventJQueryEvent, _]) | String] = js.undefined
+  /** @name dxDropDownMenu.Options.onItemClick */
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ ItemIndexModel, _]) | String] = js.undefined
+  /** @name dxDropDownMenu.Options.opened */
+  var opened: js.UndefOr[Boolean] = js.undefined
+  /** @name dxDropDownMenu.Options.popupHeight */
+  var popupHeight: js.UndefOr[Double | String | js.Function] = js.undefined
+  /** @name dxDropDownMenu.Options.popupWidth */
+  var popupWidth: js.UndefOr[Double | String | js.Function] = js.undefined
+  /** @name dxDropDownMenu.Options.usePopover */
+  var usePopover: js.UndefOr[Boolean] = js.undefined
 }
 
 object dxDropDownMenuOptions {
   @scala.inline
-  def apply(): dxDropDownMenuOptions = {
+  def apply(
+    accessKey: String = null,
+    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    bindingOptions: js.Any = null,
+    buttonIcon: String = null,
+    buttonText: String = null,
+    dataSource: String | js.Array[_] | DataSource | DataSourceOptions = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    hint: String = null,
+    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
+    itemTemplate: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
+      /* itemData */ js.Any, 
+      /* itemIndex */ Double, 
+      /* itemElement */ dxElement, 
+      String | Element | JQuery
+    ]) = null,
+    items: js.Array[_] = null,
+    onButtonClick: (js.Function1[/* e */ EventJQueryEvent, _]) | String = null,
+    onContentReady: /* e */ ComponentElement[dxDropDownMenu] => _ = null,
+    onDisposing: /* e */ Model[dxDropDownMenu] => _ = null,
+    onInitialized: /* e */ typingsSlinky.devextreme.anon.Element[dxDropDownMenu] => _ = null,
+    onItemClick: (js.Function1[/* e */ ItemIndexModel, _]) | String = null,
+    onOptionChanged: /* e */ Name[dxDropDownMenu] => _ = null,
+    opened: js.UndefOr[Boolean] = js.undefined,
+    popupHeight: Double | String | js.Function = null,
+    popupWidth: Double | String | js.Function = null,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    tabIndex: js.UndefOr[Double] = js.undefined,
+    usePopover: js.UndefOr[Boolean] = js.undefined,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxDropDownMenuOptions = {
     val __obj = js.Dynamic.literal()
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.get.asInstanceOf[js.Any])
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (buttonIcon != null) __obj.updateDynamic("buttonIcon")(buttonIcon.asInstanceOf[js.Any])
+    if (buttonText != null) __obj.updateDynamic("buttonText")(buttonText.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.get.asInstanceOf[js.Any])
+    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(itemTemplate.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (onButtonClick != null) __obj.updateDynamic("onButtonClick")(onButtonClick.asInstanceOf[js.Any])
+    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onItemClick != null) __obj.updateDynamic("onItemClick")(onItemClick.asInstanceOf[js.Any])
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (!js.isUndefined(opened)) __obj.updateDynamic("opened")(opened.get.asInstanceOf[js.Any])
+    if (popupHeight != null) __obj.updateDynamic("popupHeight")(popupHeight.asInstanceOf[js.Any])
+    if (popupWidth != null) __obj.updateDynamic("popupWidth")(popupWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePopover)) __obj.updateDynamic("usePopover")(usePopover.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxDropDownMenuOptions]
   }
-  @scala.inline
-  implicit class dxDropDownMenuOptionsOps[Self <: dxDropDownMenuOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withButtonIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: String | js.Array[_] | DataSource | DataSourceOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItemTemplateElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemTemplateFunction3(
-      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withItemTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-          /* itemData */ js.Any, 
-          /* itemIndex */ Double, 
-          /* itemElement */ dxElement, 
-          String | Element | JQuery
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItemTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnButtonClickFunction1(value: /* e */ EventJQueryEvent => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnButtonClick(value: (js.Function1[/* e */ EventJQueryEvent, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnButtonClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnItemClickFunction1(value: /* e */ ItemIndexModel => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ ItemIndexModel, _]) | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnItemClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpened(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opened")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpened: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opened")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupHeight(value: Double | String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPopupWidth(value: Double | String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPopupWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("popupWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePopover(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePopover")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePopover: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePopover")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

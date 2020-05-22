@@ -27,7 +27,7 @@ trait ChartCollection extends ClientObject {
   var context_ChartCollection: RequestContext = js.native
   /**
     *
-    * Returns the number of charts in the worksheet. Read-only.
+    * Returns the number of charts in the worksheet.
     *
     * [Api set: ExcelApi 1.1]
     */

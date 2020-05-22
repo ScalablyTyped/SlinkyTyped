@@ -21,41 +21,11 @@ trait SchemaRegionInstanceGroupsListInstancesRequest extends js.Object {
 
 object SchemaRegionInstanceGroupsListInstancesRequest {
   @scala.inline
-  def apply(): SchemaRegionInstanceGroupsListInstancesRequest = {
+  def apply(instanceState: String = null, portName: String = null): SchemaRegionInstanceGroupsListInstancesRequest = {
     val __obj = js.Dynamic.literal()
+    if (instanceState != null) __obj.updateDynamic("instanceState")(instanceState.asInstanceOf[js.Any])
+    if (portName != null) __obj.updateDynamic("portName")(portName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionInstanceGroupsListInstancesRequest]
   }
-  @scala.inline
-  implicit class SchemaRegionInstanceGroupsListInstancesRequestOps[Self <: SchemaRegionInstanceGroupsListInstancesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstanceState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPortName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPortName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("portName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

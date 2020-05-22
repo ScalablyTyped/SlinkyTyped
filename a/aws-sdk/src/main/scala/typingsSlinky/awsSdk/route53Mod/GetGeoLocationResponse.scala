@@ -18,19 +18,5 @@ object GetGeoLocationResponse {
     val __obj = js.Dynamic.literal(GeoLocationDetails = GeoLocationDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGeoLocationResponse]
   }
-  @scala.inline
-  implicit class GetGeoLocationResponseOps[Self <: GetGeoLocationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoLocationDetails(value: GeoLocationDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoLocationDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

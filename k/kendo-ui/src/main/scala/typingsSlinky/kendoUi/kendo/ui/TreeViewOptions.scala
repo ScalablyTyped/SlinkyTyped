@@ -5,348 +5,90 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TreeViewOptions extends js.Object {
-  var animation: js.UndefOr[Boolean | TreeViewAnimation] = js.native
-  var autoBind: js.UndefOr[Boolean] = js.native
-  var autoScroll: js.UndefOr[Boolean] = js.native
-  var change: js.UndefOr[js.Function1[/* e */ TreeViewEvent, Unit]] = js.native
-  var check: js.UndefOr[js.Function1[/* e */ TreeViewCheckEvent, Unit]] = js.native
-  var checkboxes: js.UndefOr[Boolean | TreeViewCheckboxes] = js.native
-  var collapse: js.UndefOr[js.Function1[/* e */ TreeViewCollapseEvent, Unit]] = js.native
-  var dataBound: js.UndefOr[js.Function1[/* e */ TreeViewDataBoundEvent, Unit]] = js.native
-  var dataImageUrlField: js.UndefOr[String] = js.native
-  var dataSource: js.UndefOr[js.Any | HierarchicalDataSource] = js.native
-  var dataSpriteCssClassField: js.UndefOr[String] = js.native
-  var dataTextField: js.UndefOr[String | js.Any] = js.native
-  var dataUrlField: js.UndefOr[String] = js.native
-  var drag: js.UndefOr[js.Function1[/* e */ TreeViewDragEvent, Unit]] = js.native
-  var dragAndDrop: js.UndefOr[Boolean] = js.native
-  var dragend: js.UndefOr[js.Function1[/* e */ TreeViewDragendEvent, Unit]] = js.native
-  var dragstart: js.UndefOr[js.Function1[/* e */ TreeViewDragstartEvent, Unit]] = js.native
-  var drop: js.UndefOr[js.Function1[/* e */ TreeViewDropEvent, Unit]] = js.native
-  var expand: js.UndefOr[js.Function1[/* e */ TreeViewExpandEvent, Unit]] = js.native
-  var loadOnDemand: js.UndefOr[Boolean] = js.native
-  var messages: js.UndefOr[TreeViewMessages] = js.native
-  var name: js.UndefOr[String] = js.native
-  var navigate: js.UndefOr[js.Function1[/* e */ TreeViewNavigateEvent, Unit]] = js.native
-  var select: js.UndefOr[js.Function1[/* e */ TreeViewSelectEvent, Unit]] = js.native
-  var template: js.UndefOr[String | js.Function] = js.native
+  var animation: js.UndefOr[Boolean | TreeViewAnimation] = js.undefined
+  var autoBind: js.UndefOr[Boolean] = js.undefined
+  var autoScroll: js.UndefOr[Boolean] = js.undefined
+  var change: js.UndefOr[js.Function1[/* e */ TreeViewEvent, Unit]] = js.undefined
+  var check: js.UndefOr[js.Function1[/* e */ TreeViewCheckEvent, Unit]] = js.undefined
+  var checkboxes: js.UndefOr[Boolean | TreeViewCheckboxes] = js.undefined
+  var collapse: js.UndefOr[js.Function1[/* e */ TreeViewCollapseEvent, Unit]] = js.undefined
+  var dataBound: js.UndefOr[js.Function1[/* e */ TreeViewDataBoundEvent, Unit]] = js.undefined
+  var dataImageUrlField: js.UndefOr[String] = js.undefined
+  var dataSource: js.UndefOr[js.Any | HierarchicalDataSource] = js.undefined
+  var dataSpriteCssClassField: js.UndefOr[String] = js.undefined
+  var dataTextField: js.UndefOr[String | js.Any] = js.undefined
+  var dataUrlField: js.UndefOr[String] = js.undefined
+  var drag: js.UndefOr[js.Function1[/* e */ TreeViewDragEvent, Unit]] = js.undefined
+  var dragAndDrop: js.UndefOr[Boolean] = js.undefined
+  var dragend: js.UndefOr[js.Function1[/* e */ TreeViewDragendEvent, Unit]] = js.undefined
+  var dragstart: js.UndefOr[js.Function1[/* e */ TreeViewDragstartEvent, Unit]] = js.undefined
+  var drop: js.UndefOr[js.Function1[/* e */ TreeViewDropEvent, Unit]] = js.undefined
+  var expand: js.UndefOr[js.Function1[/* e */ TreeViewExpandEvent, Unit]] = js.undefined
+  var loadOnDemand: js.UndefOr[Boolean] = js.undefined
+  var messages: js.UndefOr[TreeViewMessages] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var navigate: js.UndefOr[js.Function1[/* e */ TreeViewNavigateEvent, Unit]] = js.undefined
+  var select: js.UndefOr[js.Function1[/* e */ TreeViewSelectEvent, Unit]] = js.undefined
+  var template: js.UndefOr[String | js.Function] = js.undefined
 }
 
 object TreeViewOptions {
   @scala.inline
-  def apply(): TreeViewOptions = {
+  def apply(
+    animation: Boolean | TreeViewAnimation = null,
+    autoBind: js.UndefOr[Boolean] = js.undefined,
+    autoScroll: js.UndefOr[Boolean] = js.undefined,
+    change: /* e */ TreeViewEvent => Unit = null,
+    check: /* e */ TreeViewCheckEvent => Unit = null,
+    checkboxes: Boolean | TreeViewCheckboxes = null,
+    collapse: /* e */ TreeViewCollapseEvent => Unit = null,
+    dataBound: /* e */ TreeViewDataBoundEvent => Unit = null,
+    dataImageUrlField: String = null,
+    dataSource: js.Any | HierarchicalDataSource = null,
+    dataSpriteCssClassField: String = null,
+    dataTextField: String | js.Any = null,
+    dataUrlField: String = null,
+    drag: /* e */ TreeViewDragEvent => Unit = null,
+    dragAndDrop: js.UndefOr[Boolean] = js.undefined,
+    dragend: /* e */ TreeViewDragendEvent => Unit = null,
+    dragstart: /* e */ TreeViewDragstartEvent => Unit = null,
+    drop: /* e */ TreeViewDropEvent => Unit = null,
+    expand: /* e */ TreeViewExpandEvent => Unit = null,
+    loadOnDemand: js.UndefOr[Boolean] = js.undefined,
+    messages: TreeViewMessages = null,
+    name: String = null,
+    navigate: /* e */ TreeViewNavigateEvent => Unit = null,
+    select: /* e */ TreeViewSelectEvent => Unit = null,
+    template: String | js.Function = null
+  ): TreeViewOptions = {
     val __obj = js.Dynamic.literal()
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoBind)) __obj.updateDynamic("autoBind")(autoBind.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoScroll)) __obj.updateDynamic("autoScroll")(autoScroll.get.asInstanceOf[js.Any])
+    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction1(change))
+    if (check != null) __obj.updateDynamic("check")(js.Any.fromFunction1(check))
+    if (checkboxes != null) __obj.updateDynamic("checkboxes")(checkboxes.asInstanceOf[js.Any])
+    if (collapse != null) __obj.updateDynamic("collapse")(js.Any.fromFunction1(collapse))
+    if (dataBound != null) __obj.updateDynamic("dataBound")(js.Any.fromFunction1(dataBound))
+    if (dataImageUrlField != null) __obj.updateDynamic("dataImageUrlField")(dataImageUrlField.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (dataSpriteCssClassField != null) __obj.updateDynamic("dataSpriteCssClassField")(dataSpriteCssClassField.asInstanceOf[js.Any])
+    if (dataTextField != null) __obj.updateDynamic("dataTextField")(dataTextField.asInstanceOf[js.Any])
+    if (dataUrlField != null) __obj.updateDynamic("dataUrlField")(dataUrlField.asInstanceOf[js.Any])
+    if (drag != null) __obj.updateDynamic("drag")(js.Any.fromFunction1(drag))
+    if (!js.isUndefined(dragAndDrop)) __obj.updateDynamic("dragAndDrop")(dragAndDrop.get.asInstanceOf[js.Any])
+    if (dragend != null) __obj.updateDynamic("dragend")(js.Any.fromFunction1(dragend))
+    if (dragstart != null) __obj.updateDynamic("dragstart")(js.Any.fromFunction1(dragstart))
+    if (drop != null) __obj.updateDynamic("drop")(js.Any.fromFunction1(drop))
+    if (expand != null) __obj.updateDynamic("expand")(js.Any.fromFunction1(expand))
+    if (!js.isUndefined(loadOnDemand)) __obj.updateDynamic("loadOnDemand")(loadOnDemand.get.asInstanceOf[js.Any])
+    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (navigate != null) __obj.updateDynamic("navigate")(js.Any.fromFunction1(navigate))
+    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction1(select))
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeViewOptions]
   }
-  @scala.inline
-  implicit class TreeViewOptionsOps[Self <: TreeViewOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean | TreeViewAnimation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoBind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoBind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChange(value: /* e */ TreeViewEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheck(value: /* e */ TreeViewCheckEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCheck: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("check")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckboxes(value: Boolean | TreeViewCheckboxes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckboxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkboxes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapse(value: /* e */ TreeViewCollapseEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataBound(value: /* e */ TreeViewDataBoundEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDataBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataImageUrlField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataImageUrlField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataImageUrlField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataImageUrlField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any | HierarchicalDataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSpriteCssClassField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSpriteCssClassField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSpriteCssClassField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSpriteCssClassField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataTextField(value: String | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTextField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataTextField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTextField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataUrlField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataUrlField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataUrlField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataUrlField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrag(value: /* e */ TreeViewDragEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragAndDrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragAndDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragend(value: /* e */ TreeViewDragendEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragstart(value: /* e */ TreeViewDragstartEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragstart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDragstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrop(value: /* e */ TreeViewDropEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand(value: /* e */ TreeViewExpandEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadOnDemand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnDemand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadOnDemand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnDemand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessages(value: TreeViewMessages): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigate(value: /* e */ TreeViewNavigateEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutNavigate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: /* e */ TreeViewSelectEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

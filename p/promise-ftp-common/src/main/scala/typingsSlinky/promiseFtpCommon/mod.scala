@@ -10,7 +10,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class FtpConnectionError () extends Error
+  class FtpConnectionError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
+  }
   
   @js.native
   class FtpReconnectError () extends Error {
@@ -26,6 +31,10 @@ object mod extends js.Object {
     def this(disconnectError: js.Error, connectError: js.Error, onCwd: Boolean) = this()
     var connectError: String | js.Error = js.native
     var disconnectError: String | js.Error = js.native
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
   }
   
   @js.native

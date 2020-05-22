@@ -1,86 +1,25 @@
 package typingsSlinky.antdMobileRn.cardPropsTypeMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardHeaderPropsType extends js.Object {
-  var extra: js.UndefOr[TagMod[Any]] = js.native
+  var extra: js.UndefOr[TagMod[Any]] = js.undefined
   /** need url of img, if this is string. */
-  var thumb: js.UndefOr[TagMod[Any]] = js.native
-  var title: js.UndefOr[TagMod[Any]] = js.native
+  var thumb: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[TagMod[Any]] = js.undefined
 }
 
 object CardHeaderPropsType {
   @scala.inline
-  def apply(): CardHeaderPropsType = {
+  def apply(extra: TagMod[Any] = null, thumb: TagMod[Any] = null, title: TagMod[Any] = null): CardHeaderPropsType = {
     val __obj = js.Dynamic.literal()
+    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
+    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardHeaderPropsType]
   }
-  @scala.inline
-  implicit class CardHeaderPropsTypeOps[Self <: CardHeaderPropsType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtraReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtra(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtra: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThumb(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OptimizationService extends js.Object {
-  def getContours(config: OptimizationRequest): MapiRequest = js.native
+  def getContours(config: OptimizationRequest): MapiRequest
 }
 
 object OptimizationService {
@@ -16,19 +15,5 @@ object OptimizationService {
     val __obj = js.Dynamic.literal(getContours = js.Any.fromFunction1(getContours))
     __obj.asInstanceOf[OptimizationService]
   }
-  @scala.inline
-  implicit class OptimizationServiceOps[Self <: OptimizationService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetContours(value: OptimizationRequest => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContours")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

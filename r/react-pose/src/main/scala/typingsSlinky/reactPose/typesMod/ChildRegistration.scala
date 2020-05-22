@@ -7,11 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChildRegistration extends js.Object {
-  var element: Element = js.native
-  var poseConfig: DomPopmotionConfig = js.native
-  def onRegistered(poser: DomPopmotionPoser): Unit = js.native
+  var element: Element
+  var poseConfig: DomPopmotionConfig
+  def onRegistered(poser: DomPopmotionPoser): Unit
 }
 
 object ChildRegistration {
@@ -20,31 +19,5 @@ object ChildRegistration {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], onRegistered = js.Any.fromFunction1(onRegistered), poseConfig = poseConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildRegistration]
   }
-  @scala.inline
-  implicit class ChildRegistrationOps[Self <: ChildRegistration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRegistered(value: DomPopmotionPoser => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRegistered")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPoseConfig(value: DomPopmotionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("poseConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

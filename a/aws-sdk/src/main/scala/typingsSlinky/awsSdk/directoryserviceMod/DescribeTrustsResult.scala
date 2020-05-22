@@ -18,41 +18,11 @@ trait DescribeTrustsResult extends js.Object {
 
 object DescribeTrustsResult {
   @scala.inline
-  def apply(): DescribeTrustsResult = {
+  def apply(NextToken: NextToken = null, Trusts: Trusts = null): DescribeTrustsResult = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (Trusts != null) __obj.updateDynamic("Trusts")(Trusts.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTrustsResult]
   }
-  @scala.inline
-  implicit class DescribeTrustsResultOps[Self <: DescribeTrustsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrusts(value: Trusts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Trusts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrusts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Trusts")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,76 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Headers
   extends /* header */ StringDictionary[js.Any] {
-  val accept: js.UndefOr[String] = js.native
-  val `accept-charset`: js.UndefOr[String] = js.native
-  val `accept-encoding`: js.UndefOr[String] = js.native
-  val `accept-language`: js.UndefOr[String] = js.native
+  val accept: js.UndefOr[String] = js.undefined
+  val `accept-charset`: js.UndefOr[String] = js.undefined
+  val `accept-encoding`: js.UndefOr[String] = js.undefined
+  val `accept-language`: js.UndefOr[String] = js.undefined
 }
 
 object Headers {
   @scala.inline
-  def apply(): Headers = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    accept: String = null,
+    `accept-charset`: String = null,
+    `accept-encoding`: String = null,
+    `accept-language`: String = null
+  ): Headers = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
+    if (`accept-charset` != null) __obj.updateDynamic("accept-charset")(`accept-charset`.asInstanceOf[js.Any])
+    if (`accept-encoding` != null) __obj.updateDynamic("accept-encoding")(`accept-encoding`.asInstanceOf[js.Any])
+    if (`accept-language` != null) __obj.updateDynamic("accept-language")(`accept-language`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Headers]
   }
-  @scala.inline
-  implicit class HeadersOps[Self <: Headers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccept(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccept: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccept-charset`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-charset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccept-charset`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-charset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccept-encoding`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccept-encoding`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccept-language`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccept-language`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accept-language")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
-import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
+import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.reorderableMod.IDragReorderable
 import scala.scalajs.js

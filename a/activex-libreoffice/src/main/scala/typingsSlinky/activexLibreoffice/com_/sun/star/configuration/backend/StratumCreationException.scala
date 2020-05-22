@@ -9,12 +9,11 @@ import scala.scalajs.js.annotation._
   * is passed to an {@link InteractionHandler} when creating a stratum backend fails.
   * @since OOo 2.0
   */
-@js.native
 trait StratumCreationException extends BackendSetupException {
   /** Initialization data passed to the stratum instance. */
-  var StratumData: String = js.native
+  var StratumData: String
   /** Identifier of the stratum service that could not be created. */
-  var StratumService: String = js.native
+  var StratumService: String
 }
 
 object StratumCreationException {
@@ -29,25 +28,5 @@ object StratumCreationException {
     val __obj = js.Dynamic.literal(BackendException = BackendException.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], StratumData = StratumData.asInstanceOf[js.Any], StratumService = StratumService.asInstanceOf[js.Any])
     __obj.asInstanceOf[StratumCreationException]
   }
-  @scala.inline
-  implicit class StratumCreationExceptionOps[Self <: StratumCreationException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStratumData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StratumData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStratumService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StratumService")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

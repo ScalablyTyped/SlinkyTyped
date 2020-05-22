@@ -17,29 +17,10 @@ trait SchemaGoogleCloudMlV1PredictRequest extends js.Object {
 
 object SchemaGoogleCloudMlV1PredictRequest {
   @scala.inline
-  def apply(): SchemaGoogleCloudMlV1PredictRequest = {
+  def apply(httpBody: SchemaGoogleApiHttpBody = null): SchemaGoogleCloudMlV1PredictRequest = {
     val __obj = js.Dynamic.literal()
+    if (httpBody != null) __obj.updateDynamic("httpBody")(httpBody.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1PredictRequest]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudMlV1PredictRequestOps[Self <: SchemaGoogleCloudMlV1PredictRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHttpBody(value: SchemaGoogleApiHttpBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHttpBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("httpBody")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

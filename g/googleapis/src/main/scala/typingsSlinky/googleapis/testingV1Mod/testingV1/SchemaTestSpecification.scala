@@ -51,125 +51,28 @@ trait SchemaTestSpecification extends js.Object {
 
 object SchemaTestSpecification {
   @scala.inline
-  def apply(): SchemaTestSpecification = {
+  def apply(
+    androidInstrumentationTest: SchemaAndroidInstrumentationTest = null,
+    androidRoboTest: SchemaAndroidRoboTest = null,
+    androidTestLoop: SchemaAndroidTestLoop = null,
+    disablePerformanceMetrics: js.UndefOr[Boolean] = js.undefined,
+    disableVideoRecording: js.UndefOr[Boolean] = js.undefined,
+    iosTestSetup: SchemaIosTestSetup = null,
+    iosXcTest: SchemaIosXcTest = null,
+    testSetup: SchemaTestSetup = null,
+    testTimeout: String = null
+  ): SchemaTestSpecification = {
     val __obj = js.Dynamic.literal()
+    if (androidInstrumentationTest != null) __obj.updateDynamic("androidInstrumentationTest")(androidInstrumentationTest.asInstanceOf[js.Any])
+    if (androidRoboTest != null) __obj.updateDynamic("androidRoboTest")(androidRoboTest.asInstanceOf[js.Any])
+    if (androidTestLoop != null) __obj.updateDynamic("androidTestLoop")(androidTestLoop.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePerformanceMetrics)) __obj.updateDynamic("disablePerformanceMetrics")(disablePerformanceMetrics.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableVideoRecording)) __obj.updateDynamic("disableVideoRecording")(disableVideoRecording.get.asInstanceOf[js.Any])
+    if (iosTestSetup != null) __obj.updateDynamic("iosTestSetup")(iosTestSetup.asInstanceOf[js.Any])
+    if (iosXcTest != null) __obj.updateDynamic("iosXcTest")(iosXcTest.asInstanceOf[js.Any])
+    if (testSetup != null) __obj.updateDynamic("testSetup")(testSetup.asInstanceOf[js.Any])
+    if (testTimeout != null) __obj.updateDynamic("testTimeout")(testTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestSpecification]
   }
-  @scala.inline
-  implicit class SchemaTestSpecificationOps[Self <: SchemaTestSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidInstrumentationTest(value: SchemaAndroidInstrumentationTest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInstrumentationTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidInstrumentationTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidInstrumentationTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidRoboTest(value: SchemaAndroidRoboTest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidRoboTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidRoboTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidRoboTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidTestLoop(value: SchemaAndroidTestLoop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidTestLoop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidTestLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidTestLoop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisablePerformanceMetrics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePerformanceMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisablePerformanceMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disablePerformanceMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableVideoRecording(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableVideoRecording")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableVideoRecording: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableVideoRecording")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosTestSetup(value: SchemaIosTestSetup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosTestSetup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosTestSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosTestSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosXcTest(value: SchemaIosXcTest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosXcTest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosXcTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosXcTest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestSetup(value: SchemaTestSetup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSetup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestSetup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testSetup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTimeout")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DocLoader extends js.Object {
   var documentLoader: js.UndefOr[
     js.Function2[
@@ -14,36 +13,17 @@ trait DocLoader extends js.Object {
       /* callback */ js.Function2[/* err */ js.Error, /* remoteDoc */ RemoteDocument, Unit], 
       js.Promise[RemoteDocument]
     ]
-  ] = js.native
+  ] = js.undefined
 }
 
 object DocLoader {
   @scala.inline
-  def apply(): DocLoader = {
+  def apply(
+    documentLoader: (/* url */ Url, /* callback */ js.Function2[/* err */ js.Error, /* remoteDoc */ RemoteDocument, Unit]) => js.Promise[RemoteDocument] = null
+  ): DocLoader = {
     val __obj = js.Dynamic.literal()
+    if (documentLoader != null) __obj.updateDynamic("documentLoader")(js.Any.fromFunction2(documentLoader))
     __obj.asInstanceOf[DocLoader]
   }
-  @scala.inline
-  implicit class DocLoaderOps[Self <: DocLoader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDocumentLoader(
-      value: (/* url */ Url, /* callback */ js.Function2[/* err */ js.Error, /* remoteDoc */ RemoteDocument, Unit]) => js.Promise[RemoteDocument]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLoader")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDocumentLoader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("documentLoader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Importer extends js.Object {
   /**
     * Import an .sql file to the database.
     */
-  def `import`(filename: String): js.Promise[Unit] = js.native
+  def `import`(filename: String): js.Promise[Unit]
 }
 
 object Importer {
@@ -19,19 +18,5 @@ object Importer {
     __obj.updateDynamic("import")(js.Any.fromFunction1(`import`))
     __obj.asInstanceOf[Importer]
   }
-  @scala.inline
-  implicit class ImporterOps[Self <: Importer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImport(value: String => js.Promise[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

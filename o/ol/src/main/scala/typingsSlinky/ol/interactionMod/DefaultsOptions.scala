@@ -4,166 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultsOptions extends js.Object {
-  var altShiftDragRotate: js.UndefOr[Boolean] = js.native
-  var doubleClickZoom: js.UndefOr[Boolean] = js.native
-  var dragPan: js.UndefOr[Boolean] = js.native
-  var keyboard: js.UndefOr[Boolean] = js.native
-  var mouseWheelZoom: js.UndefOr[Boolean] = js.native
-  var onFocusOnly: js.UndefOr[Boolean] = js.native
-  var pinchRotate: js.UndefOr[Boolean] = js.native
-  var pinchZoom: js.UndefOr[Boolean] = js.native
-  var shiftDragZoom: js.UndefOr[Boolean] = js.native
-  var zoomDelta: js.UndefOr[Double] = js.native
-  var zoomDuration: js.UndefOr[Double] = js.native
+  var altShiftDragRotate: js.UndefOr[Boolean] = js.undefined
+  var doubleClickZoom: js.UndefOr[Boolean] = js.undefined
+  var dragPan: js.UndefOr[Boolean] = js.undefined
+  var keyboard: js.UndefOr[Boolean] = js.undefined
+  var mouseWheelZoom: js.UndefOr[Boolean] = js.undefined
+  var onFocusOnly: js.UndefOr[Boolean] = js.undefined
+  var pinchRotate: js.UndefOr[Boolean] = js.undefined
+  var pinchZoom: js.UndefOr[Boolean] = js.undefined
+  var shiftDragZoom: js.UndefOr[Boolean] = js.undefined
+  var zoomDelta: js.UndefOr[Double] = js.undefined
+  var zoomDuration: js.UndefOr[Double] = js.undefined
 }
 
 object DefaultsOptions {
   @scala.inline
-  def apply(): DefaultsOptions = {
+  def apply(
+    altShiftDragRotate: js.UndefOr[Boolean] = js.undefined,
+    doubleClickZoom: js.UndefOr[Boolean] = js.undefined,
+    dragPan: js.UndefOr[Boolean] = js.undefined,
+    keyboard: js.UndefOr[Boolean] = js.undefined,
+    mouseWheelZoom: js.UndefOr[Boolean] = js.undefined,
+    onFocusOnly: js.UndefOr[Boolean] = js.undefined,
+    pinchRotate: js.UndefOr[Boolean] = js.undefined,
+    pinchZoom: js.UndefOr[Boolean] = js.undefined,
+    shiftDragZoom: js.UndefOr[Boolean] = js.undefined,
+    zoomDelta: js.UndefOr[Double] = js.undefined,
+    zoomDuration: js.UndefOr[Double] = js.undefined
+  ): DefaultsOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(altShiftDragRotate)) __obj.updateDynamic("altShiftDragRotate")(altShiftDragRotate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(doubleClickZoom)) __obj.updateDynamic("doubleClickZoom")(doubleClickZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragPan)) __obj.updateDynamic("dragPan")(dragPan.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseWheelZoom)) __obj.updateDynamic("mouseWheelZoom")(mouseWheelZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onFocusOnly)) __obj.updateDynamic("onFocusOnly")(onFocusOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pinchRotate)) __obj.updateDynamic("pinchRotate")(pinchRotate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pinchZoom)) __obj.updateDynamic("pinchZoom")(pinchZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shiftDragZoom)) __obj.updateDynamic("shiftDragZoom")(shiftDragZoom.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomDelta)) __obj.updateDynamic("zoomDelta")(zoomDelta.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomDuration)) __obj.updateDynamic("zoomDuration")(zoomDuration.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultsOptions]
   }
-  @scala.inline
-  implicit class DefaultsOptionsOps[Self <: DefaultsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltShiftDragRotate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altShiftDragRotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltShiftDragRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altShiftDragRotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoubleClickZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClickZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoubleClickZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClickZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragPan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPan")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragPan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPan")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseWheelZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheelZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseWheelZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheelZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnFocusOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnFocusOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinchRotate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinchRotate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinchRotate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinchRotate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPinchZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinchZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPinchZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pinchZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShiftDragZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftDragZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShiftDragZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftDragZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDuration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.PlaybackPositionChangeRequestedEventArgs")
 @js.native
 abstract class PlaybackPositionChangeRequestedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Media.PlaybackPositionChangeRequestedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Media.PlaybackPositionChangeRequestedEventArgs {
+  /** Gets a value indicating the requested offset into the media item. */
+  /* CompleteClass */
+  override var requestedPlaybackPosition: Double = js.native
+}
 

@@ -4,16 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Acceptedannotations extends js.Object {
-  var accepted_annotations: Double = js.native
-  var contributors: Double = js.native
-  var hot: Boolean = js.native
-  var iq_earners: Double = js.native
-  var pageviews: Double = js.native
-  var transcribers: Double = js.native
-  var unreviewed_annotations: Double = js.native
-  var verified_annotations: Double = js.native
+  var accepted_annotations: Double
+  var contributors: Double
+  var hot: Boolean
+  var iq_earners: Double
+  var pageviews: Double
+  var transcribers: Double
+  var unreviewed_annotations: Double
+  var verified_annotations: Double
 }
 
 object Acceptedannotations {
@@ -31,61 +30,5 @@ object Acceptedannotations {
     val __obj = js.Dynamic.literal(accepted_annotations = accepted_annotations.asInstanceOf[js.Any], contributors = contributors.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], iq_earners = iq_earners.asInstanceOf[js.Any], pageviews = pageviews.asInstanceOf[js.Any], transcribers = transcribers.asInstanceOf[js.Any], unreviewed_annotations = unreviewed_annotations.asInstanceOf[js.Any], verified_annotations = verified_annotations.asInstanceOf[js.Any])
     __obj.asInstanceOf[Acceptedannotations]
   }
-  @scala.inline
-  implicit class AcceptedannotationsOps[Self <: Acceptedannotations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccepted_annotations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accepted_annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContributors(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contributors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIq_earners(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iq_earners")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageviews(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageviews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTranscribers(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcribers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnreviewed_annotations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unreviewed_annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVerified_annotations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verified_annotations")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -23,47 +23,15 @@ trait ConfigurationAggregatorOrganizationAggregationSource extends js.Object {
 
 object ConfigurationAggregatorOrganizationAggregationSource {
   @scala.inline
-  def apply(roleArn: Input[String]): ConfigurationAggregatorOrganizationAggregationSource = {
+  def apply(
+    roleArn: Input[String],
+    allRegions: Input[Boolean] = null,
+    regions: Input[js.Array[Input[String]]] = null
+  ): ConfigurationAggregatorOrganizationAggregationSource = {
     val __obj = js.Dynamic.literal(roleArn = roleArn.asInstanceOf[js.Any])
+    if (allRegions != null) __obj.updateDynamic("allRegions")(allRegions.asInstanceOf[js.Any])
+    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationAggregatorOrganizationAggregationSource]
   }
-  @scala.inline
-  implicit class ConfigurationAggregatorOrganizationAggregationSourceOps[Self <: ConfigurationAggregatorOrganizationAggregationSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllRegions(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allRegions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegions(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

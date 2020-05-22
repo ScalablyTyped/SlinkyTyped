@@ -14,29 +14,10 @@ trait TrainingData extends js.Object {
 
 object TrainingData {
   @scala.inline
-  def apply(): TrainingData = {
+  def apply(Assets: Assets = null): TrainingData = {
     val __obj = js.Dynamic.literal()
+    if (Assets != null) __obj.updateDynamic("Assets")(Assets.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrainingData]
   }
-  @scala.inline
-  implicit class TrainingDataOps[Self <: TrainingData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssets(value: Assets): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Assets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Assets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

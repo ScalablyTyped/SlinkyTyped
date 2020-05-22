@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.global.spine
 
+import typingsSlinky.phaser.spine.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,26 @@ import scala.scalajs.js.annotation._
 @JSGlobal("spine.Triangulator")
 @js.native
 class Triangulator ()
-  extends typingsSlinky.phaser.spine.Triangulator
+  extends typingsSlinky.phaser.spine.Triangulator {
+  /* CompleteClass */
+  override var convexPolygons: js.Any = js.native
+  /* CompleteClass */
+  override var convexPolygonsIndices: js.Any = js.native
+  /* CompleteClass */
+  override var indicesArray: js.Any = js.native
+  /* CompleteClass */
+  override var isConcaveArray: js.Any = js.native
+  /* CompleteClass */
+  override var polygonIndicesPool: js.Any = js.native
+  /* CompleteClass */
+  override var polygonPool: js.Any = js.native
+  /* CompleteClass */
+  override var triangles: js.Any = js.native
+  /* CompleteClass */
+  override def decompose(verticesArray: js.Array[Double], triangles: js.Array[Double]): js.Array[js.Array[Double]] = js.native
+  /* CompleteClass */
+  override def triangulate(verticesArray: ArrayLike[Double]): js.Array[Double] = js.native
+}
 
 /* static members */
 @JSGlobal("spine.Triangulator")

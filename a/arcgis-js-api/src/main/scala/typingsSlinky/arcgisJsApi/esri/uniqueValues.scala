@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-uniqueValues.html)
   */
-@js.native
 trait uniqueValues extends js.Object {
   /**
     * Returns an object containing an array of unique values queried from a given field (or values returned from an expression) in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) along with the total count of features that belong to the given category.
@@ -28,7 +27,7 @@ trait uniqueValues extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def uniqueValues(params: uniqueValuesUniqueValuesParams): js.Promise[UniqueValuesResult] = js.native
+  def uniqueValues(params: uniqueValuesUniqueValuesParams): js.Promise[UniqueValuesResult]
 }
 
 object uniqueValues {
@@ -37,19 +36,5 @@ object uniqueValues {
     val __obj = js.Dynamic.literal(uniqueValues = js.Any.fromFunction1(uniqueValues))
     __obj.asInstanceOf[uniqueValues]
   }
-  @scala.inline
-  implicit class uniqueValuesOps[Self <: uniqueValues] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUniqueValues(value: uniqueValuesUniqueValuesParams => js.Promise[UniqueValuesResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueValues")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

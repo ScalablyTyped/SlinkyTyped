@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KIND extends js.Object {
-  var info: typingsSlinky.baseui.baseuiStrings.info = js.native
-  var negative: typingsSlinky.baseui.baseuiStrings.negative = js.native
-  var positive: typingsSlinky.baseui.baseuiStrings.positive = js.native
-  var warning: typingsSlinky.baseui.baseuiStrings.warning = js.native
+  var info: typingsSlinky.baseui.baseuiStrings.info
+  var negative: typingsSlinky.baseui.baseuiStrings.negative
+  var positive: typingsSlinky.baseui.baseuiStrings.positive
+  var warning: typingsSlinky.baseui.baseuiStrings.warning
 }
 
 @JSImport("baseui/toast", "KIND")

@@ -8,166 +8,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabBarItemProps extends js.Object {
-  var badge: js.UndefOr[String | Double] = js.native
-  var icon: js.UndefOr[ImageURISource | js.Array[ImageURISource] | ImageRequireSource] = js.native
-  var iconStyle: js.UndefOr[StyleProp[ImageStyle]] = js.native
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var renderAsOriginal: js.UndefOr[Boolean] = js.native
-  var selected: js.UndefOr[Boolean] = js.native
-  var selectedIcon: js.UndefOr[ImageURISource | js.Array[ImageURISource] | ImageRequireSource] = js.native
-  var styles: js.UndefOr[js.Any] = js.native
-  var tintColor: js.UndefOr[String] = js.native
-  var title: String = js.native
-  var unselectedTintColor: js.UndefOr[String] = js.native
+  var badge: js.UndefOr[String | Double] = js.undefined
+  var icon: js.UndefOr[ImageURISource | js.Array[ImageURISource] | ImageRequireSource] = js.undefined
+  var iconStyle: js.UndefOr[StyleProp[ImageStyle]] = js.undefined
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var renderAsOriginal: js.UndefOr[Boolean] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.undefined
+  var selectedIcon: js.UndefOr[ImageURISource | js.Array[ImageURISource] | ImageRequireSource] = js.undefined
+  var styles: js.UndefOr[js.Any] = js.undefined
+  var tintColor: js.UndefOr[String] = js.undefined
+  var title: String
+  var unselectedTintColor: js.UndefOr[String] = js.undefined
 }
 
 object TabBarItemProps {
   @scala.inline
-  def apply(title: String): TabBarItemProps = {
+  def apply(
+    title: String,
+    badge: String | Double = null,
+    icon: ImageURISource | js.Array[ImageURISource] | ImageRequireSource = null,
+    iconStyle: js.UndefOr[Null | StyleProp[ImageStyle]] = js.undefined,
+    onPress: () => Unit = null,
+    renderAsOriginal: js.UndefOr[Boolean] = js.undefined,
+    selected: js.UndefOr[Boolean] = js.undefined,
+    selectedIcon: ImageURISource | js.Array[ImageURISource] | ImageRequireSource = null,
+    styles: js.Any = null,
+    tintColor: String = null,
+    unselectedTintColor: String = null
+  ): TabBarItemProps = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
+    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconStyle)) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
+    if (!js.isUndefined(renderAsOriginal)) __obj.updateDynamic("renderAsOriginal")(renderAsOriginal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.get.asInstanceOf[js.Any])
+    if (selectedIcon != null) __obj.updateDynamic("selectedIcon")(selectedIcon.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
+    if (unselectedTintColor != null) __obj.updateDynamic("unselectedTintColor")(unselectedTintColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabBarItemProps]
   }
-  @scala.inline
-  implicit class TabBarItemPropsOps[Self <: TabBarItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBadge(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadge: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconStyle(value: StyleProp[ImageStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withOnPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderAsOriginal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAsOriginal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRenderAsOriginal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAsOriginal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedIcon(value: ImageURISource | js.Array[ImageURISource] | ImageRequireSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tintColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnselectedTintColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedTintColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnselectedTintColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedTintColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

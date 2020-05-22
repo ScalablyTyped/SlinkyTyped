@@ -4,79 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IBulkOptions extends js.Object {
   /** Honors constraints during bulk load, using T-SQL CHECK_CONSTRAINTS. (default: false) */
-  var checkConstraints: js.UndefOr[Boolean] = js.native
+  var checkConstraints: js.UndefOr[Boolean] = js.undefined
   /** Honors insert triggers during bulk load, using the T-SQL FIRE_TRIGGERS. (default: false) */
-  var fireTriggers: js.UndefOr[Boolean] = js.native
+  var fireTriggers: js.UndefOr[Boolean] = js.undefined
   /** Honors null value passed, ignores the default values set on table, using T-SQL KEEP_NULLS. (default: false) */
-  var keepNulls: js.UndefOr[Boolean] = js.native
+  var keepNulls: js.UndefOr[Boolean] = js.undefined
   /** Places a bulk update(BU) lock on table while performing bulk load, using T-SQL TABLOCK. (default: false) */
-  var tableLock: js.UndefOr[Boolean] = js.native
+  var tableLock: js.UndefOr[Boolean] = js.undefined
 }
 
 object IBulkOptions {
   @scala.inline
-  def apply(): IBulkOptions = {
+  def apply(
+    checkConstraints: js.UndefOr[Boolean] = js.undefined,
+    fireTriggers: js.UndefOr[Boolean] = js.undefined,
+    keepNulls: js.UndefOr[Boolean] = js.undefined,
+    tableLock: js.UndefOr[Boolean] = js.undefined
+  ): IBulkOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(checkConstraints)) __obj.updateDynamic("checkConstraints")(checkConstraints.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fireTriggers)) __obj.updateDynamic("fireTriggers")(fireTriggers.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepNulls)) __obj.updateDynamic("keepNulls")(keepNulls.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tableLock)) __obj.updateDynamic("tableLock")(tableLock.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBulkOptions]
   }
-  @scala.inline
-  implicit class IBulkOptionsOps[Self <: IBulkOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckConstraints(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkConstraints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckConstraints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkConstraints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFireTriggers(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireTriggers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFireTriggers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fireTriggers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepNulls(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNulls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepNulls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNulls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableLock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableLock")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

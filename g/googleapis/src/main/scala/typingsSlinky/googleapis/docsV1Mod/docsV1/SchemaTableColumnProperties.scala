@@ -22,41 +22,11 @@ trait SchemaTableColumnProperties extends js.Object {
 
 object SchemaTableColumnProperties {
   @scala.inline
-  def apply(): SchemaTableColumnProperties = {
+  def apply(width: SchemaDimension = null, widthType: String = null): SchemaTableColumnProperties = {
     val __obj = js.Dynamic.literal()
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (widthType != null) __obj.updateDynamic("widthType")(widthType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableColumnProperties]
   }
-  @scala.inline
-  implicit class SchemaTableColumnPropertiesOps[Self <: SchemaTableColumnProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWidth(value: SchemaDimension): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidthType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidthType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

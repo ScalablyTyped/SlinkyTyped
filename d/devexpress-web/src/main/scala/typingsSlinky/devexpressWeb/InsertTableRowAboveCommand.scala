@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * A command to insert a row in a table above the selected row.
   */
-@js.native
 trait InsertTableRowAboveCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the InsertTableRowAboveCommand command.
     */
-  def execute(): Boolean = js.native
+  def execute(): Boolean
 }
 
 object InsertTableRowAboveCommand {
@@ -21,19 +20,5 @@ object InsertTableRowAboveCommand {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
     __obj.asInstanceOf[InsertTableRowAboveCommand]
   }
-  @scala.inline
-  implicit class InsertTableRowAboveCommandOps[Self <: InsertTableRowAboveCommand] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExecute(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

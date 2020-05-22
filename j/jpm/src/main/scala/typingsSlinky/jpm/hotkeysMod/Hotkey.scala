@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Hotkey extends js.Object {
-  def destroy(): Unit = js.native
+  def destroy(): Unit
 }
 
 @JSImport("sdk/hotkeys", "Hotkey")

@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Copy extends js.Object {
-  var copy: js.UndefOr[Boolean] = js.native
-  var create: js.UndefOr[Boolean] = js.native
-  var download: js.UndefOr[Boolean] = js.native
-  var move: js.UndefOr[Boolean] = js.native
-  var remove: js.UndefOr[Boolean] = js.native
-  var rename: js.UndefOr[Boolean] = js.native
-  var upload: js.UndefOr[Boolean] = js.native
+  var copy: js.UndefOr[Boolean] = js.undefined
+  var create: js.UndefOr[Boolean] = js.undefined
+  var download: js.UndefOr[Boolean] = js.undefined
+  var move: js.UndefOr[Boolean] = js.undefined
+  var remove: js.UndefOr[Boolean] = js.undefined
+  var rename: js.UndefOr[Boolean] = js.undefined
+  var upload: js.UndefOr[Boolean] = js.undefined
 }
 
 object Copy {
   @scala.inline
-  def apply(): Copy = {
+  def apply(
+    copy: js.UndefOr[Boolean] = js.undefined,
+    create: js.UndefOr[Boolean] = js.undefined,
+    download: js.UndefOr[Boolean] = js.undefined,
+    move: js.UndefOr[Boolean] = js.undefined,
+    remove: js.UndefOr[Boolean] = js.undefined,
+    rename: js.UndefOr[Boolean] = js.undefined,
+    upload: js.UndefOr[Boolean] = js.undefined
+  ): Copy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(copy)) __obj.updateDynamic("copy")(copy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(create)) __obj.updateDynamic("create")(create.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(download)) __obj.updateDynamic("download")(download.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(move)) __obj.updateDynamic("move")(move.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(remove)) __obj.updateDynamic("remove")(remove.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rename)) __obj.updateDynamic("rename")(rename.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upload)) __obj.updateDynamic("upload")(upload.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Copy]
   }
-  @scala.inline
-  implicit class CopyOps[Self <: Copy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCopy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDownload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRename(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

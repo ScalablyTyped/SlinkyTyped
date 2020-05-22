@@ -18,41 +18,11 @@ trait UpdateApplicationInput extends js.Object {
 
 object UpdateApplicationInput {
   @scala.inline
-  def apply(): UpdateApplicationInput = {
+  def apply(applicationName: ApplicationName = null, newApplicationName: ApplicationName = null): UpdateApplicationInput = {
     val __obj = js.Dynamic.literal()
+    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
+    if (newApplicationName != null) __obj.updateDynamic("newApplicationName")(newApplicationName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApplicationInput]
   }
-  @scala.inline
-  implicit class UpdateApplicationInputOps[Self <: UpdateApplicationInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNewApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newApplicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newApplicationName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

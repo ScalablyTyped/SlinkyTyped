@@ -104,11 +104,10 @@ import typingsSlinky.graphql.typeInfoMod.getFieldDef
 import typingsSlinky.graphql.validationContextMod.ValidationRule
 import typingsSlinky.graphql.visitorMod.VisitFn
 import typingsSlinky.graphql.visitorMod.Visitor
-import typingsSlinky.graphqlCompose.enumTypeComposerMod.ComposeEnumType
-import typingsSlinky.graphqlCompose.enumTypeComposerMod.EnumTypeComposeDefinition
+import typingsSlinky.graphqlCompose.enumTypeComposerMod._EnumTypeComposeDefinition
 import typingsSlinky.graphqlCompose.graphqlComposeStrings.`No longer supported`
-import typingsSlinky.graphqlCompose.inputTypeComposerMod.InputTypeComposeDefinition
-import typingsSlinky.graphqlCompose.scalarTypeComposerMod.ScalarTypeComposeDefinition
+import typingsSlinky.graphqlCompose.inputTypeComposerMod._InputTypeComposeDefinition
+import typingsSlinky.graphqlCompose.scalarTypeComposerMod._ScalarTypeComposeDefinition
 import typingsSlinky.std.AsyncIterable
 import typingsSlinky.std.AsyncIterableIterator
 import typingsSlinky.std.Record
@@ -128,8 +127,7 @@ object graphqlMod extends js.Object {
   @js.native
   class GraphQLEnumType protected ()
     extends typingsSlinky.graphql.mod.GraphQLEnumType
-       with ComposeEnumType
-       with EnumTypeComposeDefinition {
+       with _EnumTypeComposeDefinition {
     def this(config: GraphQLEnumTypeConfig) = this()
   }
   
@@ -150,7 +148,7 @@ object graphqlMod extends js.Object {
   @js.native
   class GraphQLInputObjectType protected ()
     extends typingsSlinky.graphql.mod.GraphQLInputObjectType
-       with InputTypeComposeDefinition {
+       with _InputTypeComposeDefinition {
     def this(config: GraphQLInputObjectTypeConfig) = this()
   }
   
@@ -181,7 +179,7 @@ object graphqlMod extends js.Object {
   @js.native
   class GraphQLScalarType protected ()
     extends typingsSlinky.graphql.mod.GraphQLScalarType
-       with ScalarTypeComposeDefinition {
+       with _ScalarTypeComposeDefinition {
     def this(config: GraphQLScalarTypeConfig[_, _]) = this()
   }
   

@@ -22,53 +22,16 @@ trait GetCalendarStateResponse extends js.Object {
 
 object GetCalendarStateResponse {
   @scala.inline
-  def apply(): GetCalendarStateResponse = {
+  def apply(
+    AtTime: ISO8601String = null,
+    NextTransitionTime: ISO8601String = null,
+    State: CalendarState = null
+  ): GetCalendarStateResponse = {
     val __obj = js.Dynamic.literal()
+    if (AtTime != null) __obj.updateDynamic("AtTime")(AtTime.asInstanceOf[js.Any])
+    if (NextTransitionTime != null) __obj.updateDynamic("NextTransitionTime")(NextTransitionTime.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCalendarStateResponse]
   }
-  @scala.inline
-  implicit class GetCalendarStateResponseOps[Self <: GetCalendarStateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAtTime(value: ISO8601String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AtTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAtTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AtTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextTransitionTime(value: ISO8601String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextTransitionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextTransitionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextTransitionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: CalendarState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

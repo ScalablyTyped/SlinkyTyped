@@ -4,329 +4,131 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Booleans extends js.Object {
   /**
     * optimize boolean expressions
     */
-  var booleans: js.UndefOr[Boolean] = js.native
+  var booleans: js.UndefOr[Boolean] = js.undefined
   /**
     * try to cascade `right` into `left` in sequences
     */
-  var cascade: js.UndefOr[Boolean] = js.native
+  var cascade: js.UndefOr[Boolean] = js.undefined
   /**
     * optimize comparisons
     */
-  var comparisons: js.UndefOr[Boolean] = js.native
+  var comparisons: js.UndefOr[Boolean] = js.undefined
    //
   /**
     * optimize if-s and conditional expressions
     */
-  var conditionals: js.UndefOr[Boolean] = js.native
+  var conditionals: js.UndefOr[Boolean] = js.undefined
   /**
     * discard unreachable code
     */
-  var dead_code: js.UndefOr[Boolean] = js.native
+  var dead_code: js.UndefOr[Boolean] = js.undefined
   /**
     * discard “debugger” statements
     */
-  var drop_debugger: js.UndefOr[Boolean] = js.native
+  var drop_debugger: js.UndefOr[Boolean] = js.undefined
   /**
     * optimize boolean expressions
     */
-  var evaluate: js.UndefOr[Boolean] = js.native
+  var evaluate: js.UndefOr[Boolean] = js.undefined
   /**
     * global definitions
     */
-  var global_defs: js.UndefOr[js.Object] = js.native
+  var global_defs: js.UndefOr[js.Object] = js.undefined
   /**
     * hoist function declarations
     */
-  var hoist_funs: js.UndefOr[Boolean] = js.native
+  var hoist_funs: js.UndefOr[Boolean] = js.undefined
   /**
     * hoist variable declarations
     */
-  var hoist_vars: js.UndefOr[Boolean] = js.native
+  var hoist_vars: js.UndefOr[Boolean] = js.undefined
    // hoist variable declarations
   /**
     * optimize if-s followed by return/continue
     */
-  var if_return: js.UndefOr[Boolean] = js.native
+  var if_return: js.UndefOr[Boolean] = js.undefined
   /**
     * join var declarations
     */
-  var join_vars: js.UndefOr[Boolean] = js.native
+  var join_vars: js.UndefOr[Boolean] = js.undefined
   /**
     * optimize loops
     */
-  var loops: js.UndefOr[Boolean] = js.native
+  var loops: js.UndefOr[Boolean] = js.undefined
   /**
     * optimize property access?: a["foo"] → a.foo
     */
-  var properties: js.UndefOr[Boolean] = js.native
+  var properties: js.UndefOr[Boolean] = js.undefined
   /**
     * join consecutive statemets with the “comma operator”
     */
-  var sequences: js.UndefOr[Boolean] = js.native
+  var sequences: js.UndefOr[Boolean] = js.undefined
   /**
     * drop side-effect-free statements
     */
-  var side_effects: js.UndefOr[Boolean] = js.native
+  var side_effects: js.UndefOr[Boolean] = js.undefined
   /**
     * some unsafe optimizations (see below)
     */
-  var unsafe: js.UndefOr[Boolean] = js.native
+  var unsafe: js.UndefOr[Boolean] = js.undefined
   /**
     * drop unused variables/functions
     */
-  var unused: js.UndefOr[Boolean] = js.native
+  var unused: js.UndefOr[Boolean] = js.undefined
   /**
     * warn about potentially dangerous optimizations/code
     */
-  var warnings: js.UndefOr[Boolean] = js.native
+  var warnings: js.UndefOr[Boolean] = js.undefined
 }
 
 object Booleans {
   @scala.inline
-  def apply(): Booleans = {
+  def apply(
+    booleans: js.UndefOr[Boolean] = js.undefined,
+    cascade: js.UndefOr[Boolean] = js.undefined,
+    comparisons: js.UndefOr[Boolean] = js.undefined,
+    conditionals: js.UndefOr[Boolean] = js.undefined,
+    dead_code: js.UndefOr[Boolean] = js.undefined,
+    drop_debugger: js.UndefOr[Boolean] = js.undefined,
+    evaluate: js.UndefOr[Boolean] = js.undefined,
+    global_defs: js.Object = null,
+    hoist_funs: js.UndefOr[Boolean] = js.undefined,
+    hoist_vars: js.UndefOr[Boolean] = js.undefined,
+    if_return: js.UndefOr[Boolean] = js.undefined,
+    join_vars: js.UndefOr[Boolean] = js.undefined,
+    loops: js.UndefOr[Boolean] = js.undefined,
+    properties: js.UndefOr[Boolean] = js.undefined,
+    sequences: js.UndefOr[Boolean] = js.undefined,
+    side_effects: js.UndefOr[Boolean] = js.undefined,
+    unsafe: js.UndefOr[Boolean] = js.undefined,
+    unused: js.UndefOr[Boolean] = js.undefined,
+    warnings: js.UndefOr[Boolean] = js.undefined
+  ): Booleans = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(booleans)) __obj.updateDynamic("booleans")(booleans.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cascade)) __obj.updateDynamic("cascade")(cascade.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(comparisons)) __obj.updateDynamic("comparisons")(comparisons.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(conditionals)) __obj.updateDynamic("conditionals")(conditionals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dead_code)) __obj.updateDynamic("dead_code")(dead_code.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(drop_debugger)) __obj.updateDynamic("drop_debugger")(drop_debugger.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(evaluate)) __obj.updateDynamic("evaluate")(evaluate.get.asInstanceOf[js.Any])
+    if (global_defs != null) __obj.updateDynamic("global_defs")(global_defs.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoist_funs)) __obj.updateDynamic("hoist_funs")(hoist_funs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoist_vars)) __obj.updateDynamic("hoist_vars")(hoist_vars.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(if_return)) __obj.updateDynamic("if_return")(if_return.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(join_vars)) __obj.updateDynamic("join_vars")(join_vars.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loops)) __obj.updateDynamic("loops")(loops.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(properties)) __obj.updateDynamic("properties")(properties.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sequences)) __obj.updateDynamic("sequences")(sequences.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(side_effects)) __obj.updateDynamic("side_effects")(side_effects.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unsafe)) __obj.updateDynamic("unsafe")(unsafe.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unused)) __obj.updateDynamic("unused")(unused.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(warnings)) __obj.updateDynamic("warnings")(warnings.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Booleans]
   }
-  @scala.inline
-  implicit class BooleansOps[Self <: Booleans] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBooleans(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleans")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBooleans: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("booleans")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCascade(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCascade: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparisons(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comparisons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditionals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditionals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDead_code(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dead_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDead_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dead_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrop_debugger(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop_debugger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrop_debugger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop_debugger")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvaluate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvaluate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobal_defs(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global_defs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobal_defs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("global_defs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoist_funs(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoist_funs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoist_funs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoist_funs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoist_vars(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoist_vars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoist_vars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoist_vars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIf_return(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if_return")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIf_return: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if_return")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJoin_vars(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("join_vars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJoin_vars: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("join_vars")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoops(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loops")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoops: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loops")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSequences(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSequences: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sequences")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSide_effects(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side_effects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSide_effects: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side_effects")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnsafe(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsafe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnsafe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsafe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnused(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unused")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnused: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unused")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarnings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWarnings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

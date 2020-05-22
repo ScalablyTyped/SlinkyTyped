@@ -5,14 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetJobsResponse extends js.Object {
-  var id: Double = js.native
-  var `job-attributes-tag`: js.UndefOr[JobTemplateAttributes | js.Array[JobTemplateAttributes]] = js.native
-  var `operation-attributes-tag`: Attributesnaturallanguage = js.native
-  var statusCode: StatusCode = js.native
-  var `unsupported-attributes`: js.UndefOr[js.Array[String]] = js.native
-  var version: IPPVersion = js.native
+  var id: Double
+  var `job-attributes-tag`: js.UndefOr[JobTemplateAttributes | js.Array[JobTemplateAttributes]] = js.undefined
+  var `operation-attributes-tag`: Attributesnaturallanguage
+  var statusCode: StatusCode
+  var `unsupported-attributes`: js.UndefOr[js.Array[String]] = js.undefined
+  var version: IPPVersion
 }
 
 object GetJobsResponse {
@@ -21,67 +20,15 @@ object GetJobsResponse {
     id: Double,
     `operation-attributes-tag`: Attributesnaturallanguage,
     statusCode: StatusCode,
-    version: IPPVersion
+    version: IPPVersion,
+    `job-attributes-tag`: JobTemplateAttributes | js.Array[JobTemplateAttributes] = null,
+    `unsupported-attributes`: js.Array[String] = null
   ): GetJobsResponse = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
+    if (`job-attributes-tag` != null) __obj.updateDynamic("job-attributes-tag")(`job-attributes-tag`.asInstanceOf[js.Any])
+    if (`unsupported-attributes` != null) __obj.updateDynamic("unsupported-attributes")(`unsupported-attributes`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetJobsResponse]
   }
-  @scala.inline
-  implicit class GetJobsResponseOps[Self <: GetJobsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withOperation-attributes-tag`(value: Attributesnaturallanguage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: StatusCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: IPPVersion): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withJob-attributes-tag`(value: JobTemplateAttributes | js.Array[JobTemplateAttributes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-attributes-tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJob-attributes-tag`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("job-attributes-tag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withUnsupported-attributes`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsupported-attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutUnsupported-attributes`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsupported-attributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

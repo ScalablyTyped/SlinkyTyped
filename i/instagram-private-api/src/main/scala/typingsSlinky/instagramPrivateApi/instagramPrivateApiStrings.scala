@@ -1,8 +1,8 @@
 package typingsSlinky.instagramPrivateApi
 
-import typingsSlinky.instagramPrivateApi.commonTypesMod.IgAppModule
-import typingsSlinky.instagramPrivateApi.graphqlRequestOptionsMod.InsightsFriendlyName
-import typingsSlinky.instagramPrivateApi.graphqlRequestOptionsMod.InsightsSurface
+import typingsSlinky.instagramPrivateApi.commonTypesMod._IgAppModule
+import typingsSlinky.instagramPrivateApi.graphqlRequestOptionsMod._InsightsFriendlyName
+import typingsSlinky.instagramPrivateApi.graphqlRequestOptionsMod._InsightsSurface
 import typingsSlinky.instagramPrivateApi.timelineFeedTypesMod.TimelineFeedReason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,19 +61,19 @@ object instagramPrivateApiStrings {
   sealed trait IMPRESSION_COUNT extends js.Object
   
   @js.native
-  sealed trait IgInsightsAccountInsightsSurfaceQuery extends InsightsFriendlyName
+  sealed trait IgInsightsAccountInsightsSurfaceQuery extends _InsightsFriendlyName
   
   @js.native
-  sealed trait IgInsightsAccountInsightsWithTabsQuery extends InsightsFriendlyName
+  sealed trait IgInsightsAccountInsightsWithTabsQuery extends _InsightsFriendlyName
   
   @js.native
-  sealed trait IgInsightsPostGridSurfaceQuery extends InsightsFriendlyName
+  sealed trait IgInsightsPostGridSurfaceQuery extends _InsightsFriendlyName
   
   @js.native
-  sealed trait IgInsightsPostInsightsQuery extends InsightsFriendlyName
+  sealed trait IgInsightsPostInsightsQuery extends _InsightsFriendlyName
   
   @js.native
-  sealed trait IgInsightsStoryInsightsAppQuery extends InsightsFriendlyName
+  sealed trait IgInsightsStoryInsightsAppQuery extends _InsightsFriendlyName
   
   @js.native
   sealed trait LIKE_COUNT extends js.Object
@@ -130,7 +130,7 @@ object instagramPrivateApiStrings {
   sealed trait VIDEO extends js.Object
   
   @js.native
-  sealed trait account extends InsightsSurface
+  sealed trait account extends _InsightsSurface
   
   @js.native
   sealed trait besties extends js.Object
@@ -151,10 +151,10 @@ object instagramPrivateApiStrings {
   sealed trait cold_start_fetch extends TimelineFeedReason
   
   @js.native
-  sealed trait comment_likers extends IgAppModule
+  sealed trait comment_likers extends _IgAppModule
   
   @js.native
-  sealed trait comment_owner extends IgAppModule
+  sealed trait comment_owner extends _IgAppModule
   
   @js.native
   sealed trait countdown_sticker_time extends js.Object
@@ -163,61 +163,61 @@ object instagramPrivateApiStrings {
   sealed trait default extends js.Object
   
   @js.native
-  sealed trait explore_people extends IgAppModule
+  sealed trait explore_people extends _IgAppModule
   
   @js.native
   sealed trait fail extends js.Object
   
   @js.native
-  sealed trait feed_contextual_hashtag extends IgAppModule
+  sealed trait feed_contextual_hashtag extends _IgAppModule
   
   @js.native
-  sealed trait feed_contextual_location extends IgAppModule
+  sealed trait feed_contextual_location extends _IgAppModule
   
   @js.native
-  sealed trait feed_contextual_newsfeed_multi_media_liked extends IgAppModule
+  sealed trait feed_contextual_newsfeed_multi_media_liked extends _IgAppModule
   
   @js.native
-  sealed trait feed_contextual_post extends IgAppModule
+  sealed trait feed_contextual_post extends _IgAppModule
   
   @js.native
-  sealed trait feed_timeline extends IgAppModule
+  sealed trait feed_timeline extends _IgAppModule
   
   @js.native
   sealed trait feedback_required extends js.Object
   
   @js.native
-  sealed trait find_friends_contacts extends IgAppModule
+  sealed trait find_friends_contacts extends _IgAppModule
   
   @js.native
-  sealed trait followers extends IgAppModule
+  sealed trait followers extends _IgAppModule
   
   @js.native
-  sealed trait following extends IgAppModule
+  sealed trait following extends _IgAppModule
   
   @js.native
   sealed trait hashtags extends js.Object
   
   @js.native
-  sealed trait igtv_feed_timeline extends IgAppModule
+  sealed trait igtv_feed_timeline extends _IgAppModule
   
   @js.native
   sealed trait like extends js.Object
   
   @js.native
-  sealed trait likers_likers_media_view_profile extends IgAppModule
+  sealed trait likers_likers_media_view_profile extends _IgAppModule
   
   @js.native
-  sealed trait likers_likers_photo_view_profile extends IgAppModule
+  sealed trait likers_likers_photo_view_profile extends _IgAppModule
   
   @js.native
-  sealed trait likers_likers_video_view_profile extends IgAppModule
+  sealed trait likers_likers_video_view_profile extends _IgAppModule
   
   @js.native
   sealed trait login_required extends js.Object
   
   @js.native
-  sealed trait media_view_profile extends IgAppModule
+  sealed trait media_view_profile extends _IgAppModule
   
   @js.native
   sealed trait mention_reshare extends js.Object
@@ -229,7 +229,7 @@ object instagramPrivateApiStrings {
   sealed trait music extends js.Object
   
   @js.native
-  sealed trait newsfeed extends IgAppModule
+  sealed trait newsfeed extends _IgAppModule
   
   @js.native
   sealed trait once extends js.Object
@@ -241,7 +241,7 @@ object instagramPrivateApiStrings {
   sealed trait photo_ extends js.Object
   
   @js.native
-  sealed trait photo_view_profile extends IgAppModule
+  sealed trait photo_view_profile extends _IgAppModule
   
   @js.native
   sealed trait places extends js.Object
@@ -250,10 +250,10 @@ object instagramPrivateApiStrings {
   sealed trait polling_sticker extends js.Object
   
   @js.native
-  sealed trait post extends InsightsSurface
+  sealed trait post extends _InsightsSurface
   
   @js.native
-  sealed trait profile extends IgAppModule
+  sealed trait profile extends _IgAppModule
   
   @js.native
   sealed trait pull_to_refresh extends TimelineFeedReason
@@ -277,34 +277,34 @@ object instagramPrivateApiStrings {
   sealed trait reshare extends js.Object
   
   @js.native
-  sealed trait self_followers extends IgAppModule
+  sealed trait self_followers extends _IgAppModule
   
   @js.native
-  sealed trait self_following extends IgAppModule
+  sealed trait self_following extends _IgAppModule
   
   @js.native
-  sealed trait self_likers_self_likers_media_view_profile extends IgAppModule
+  sealed trait self_likers_self_likers_media_view_profile extends _IgAppModule
   
   @js.native
-  sealed trait self_likers_self_likers_photo_view_profile extends IgAppModule
+  sealed trait self_likers_self_likers_photo_view_profile extends _IgAppModule
   
   @js.native
-  sealed trait self_likers_self_likers_video_view_profile extends IgAppModule
+  sealed trait self_likers_self_likers_video_view_profile extends _IgAppModule
   
   @js.native
-  sealed trait story extends InsightsSurface
+  sealed trait story extends _InsightsSurface
   
   @js.native
-  sealed trait story_camera_music_overlay_post_capture extends IgAppModule
+  sealed trait story_camera_music_overlay_post_capture extends _IgAppModule
   
   @js.native
-  sealed trait story_camera_music_overlay_pre_capture extends IgAppModule
+  sealed trait story_camera_music_overlay_pre_capture extends _IgAppModule
   
   @js.native
-  sealed trait story_viewer_default extends IgAppModule
+  sealed trait story_viewer_default extends _IgAppModule
   
   @js.native
-  sealed trait story_viewer_profile extends IgAppModule
+  sealed trait story_viewer_profile extends _IgAppModule
   
   @js.native
   sealed trait text_ extends js.Object
@@ -322,7 +322,7 @@ object instagramPrivateApiStrings {
   sealed trait video_ extends js.Object
   
   @js.native
-  sealed trait video_view_profile extends IgAppModule
+  sealed trait video_view_profile extends _IgAppModule
   
   @js.native
   sealed trait warm_start_fetch extends TimelineFeedReason

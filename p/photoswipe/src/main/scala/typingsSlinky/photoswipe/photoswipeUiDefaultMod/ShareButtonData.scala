@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ShareButtonData extends js.Object {
   /**
     * Whether this link is a direct download button or not.
     *
     * Default false.
     */
-  var download: js.UndefOr[Boolean] = js.native
+  var download: js.UndefOr[Boolean] = js.undefined
   /**
     * An id for this share button entry. The share element associated with this entry will be classed with
     * 'pswp__share--' + id
     */
-  var id: String = js.native
+  var id: String
   /**
     * The user-visible text to display for this entry.
     */
-  var label: String = js.native
+  var label: String
   /**
     * The full sharing endpoint URL for this social media site (e.g. Facebook's is facebook.com/sharer/sharer.php), with URL parameters.
     * PhotoSwipUI_Default treats the URL specially. In the url string, any of the following text is treated specially:
@@ -31,52 +30,15 @@ trait ShareButtonData extends js.Object {
     * {{raw_image_url}} becomes the raw url of the selected image (as returned by getImageURLForShare).
     * {{text}} becomes the (URIEncoded) share text of the selected image (as returned by getTextForShare).
     */
-  var url: String = js.native
+  var url: String
 }
 
 object ShareButtonData {
   @scala.inline
-  def apply(id: String, label: String, url: String): ShareButtonData = {
+  def apply(id: String, label: String, url: String, download: js.UndefOr[Boolean] = js.undefined): ShareButtonData = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    if (!js.isUndefined(download)) __obj.updateDynamic("download")(download.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShareButtonData]
   }
-  @scala.inline
-  implicit class ShareButtonDataOps[Self <: ShareButtonData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDownload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

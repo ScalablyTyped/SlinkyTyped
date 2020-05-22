@@ -5,29 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents when and how often an appointment occurs. */
-@js.native
 trait AppointmentRecurrence extends js.Object {
-  var calendarIdentifier: js.Any = js.native
+  var calendarIdentifier: js.Any
    /* unmapped type */ /** Gets or sets the day on which an appointment occurs. Day is of type UInt32 , has a default value of 1, and can be a value from 1 to 31. */
-  var day: Double = js.native
+  var day: Double
   /** Gets or sets a combination of AppointmentDaysOfWeek -typed values for all the days of the week on which an appointment occurs. */
-  var daysOfWeek: AppointmentDaysOfWeek = js.native
+  var daysOfWeek: AppointmentDaysOfWeek
   /** Gets or sets the interval between occurrences of an appointment. Interval is of type UInt32 and has a default value of 1. For daily, the interval is the number of days in between, for weekly, the number of weeks, and so on. */
-  var interval: Double = js.native
+  var interval: Double
   /** Gets or sets the month on which an appointment occurs. Month is of type UInt32 , has a default value of 1, and can be a value from 1 to 12. */
-  var month: Double = js.native
+  var month: Double
   /** Gets or sets the number of times an appointment recurs. Occurrences is of type IReference(UInt32) and is NULL by default. Occurrences is mutually exclusive with Until . */
-  var occurrences: Double = js.native
+  var occurrences: Double
   /** Gets a value indicating what type of recurrence applies to the associated appointment. */
-  var recurrenceType: RecurrenceType = js.native
+  var recurrenceType: RecurrenceType
   /** Gets or sets the time zone for the recurrence. */
-  var timeZone: String = js.native
+  var timeZone: String
   /** Gets or sets a AppointmentRecurrenceUnit -typed value that indicates the frequency for which the appointment occurs. */
-  var unit: AppointmentRecurrenceUnit = js.native
+  var unit: AppointmentRecurrenceUnit
   /** Gets or sets the date and time until which an appointment is valid. Until is of type IReference(DateTime) and is NULL by default. Until is mutually exclusive with Occurrences . */
-  var until: js.Date = js.native
+  var until: js.Date
   /** Gets or sets a AppointmentWeekOfMonth -typed value that indicates the week of the month for which the appointment occurs. The first week is the default. */
-  var weekOfMonth: AppointmentWeekOfMonth = js.native
+  var weekOfMonth: AppointmentWeekOfMonth
 }
 
 object AppointmentRecurrence {
@@ -48,79 +47,5 @@ object AppointmentRecurrence {
     val __obj = js.Dynamic.literal(calendarIdentifier = calendarIdentifier.asInstanceOf[js.Any], day = day.asInstanceOf[js.Any], daysOfWeek = daysOfWeek.asInstanceOf[js.Any], interval = interval.asInstanceOf[js.Any], month = month.asInstanceOf[js.Any], occurrences = occurrences.asInstanceOf[js.Any], recurrenceType = recurrenceType.asInstanceOf[js.Any], timeZone = timeZone.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any], until = until.asInstanceOf[js.Any], weekOfMonth = weekOfMonth.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentRecurrence]
   }
-  @scala.inline
-  implicit class AppointmentRecurrenceOps[Self <: AppointmentRecurrence] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCalendarIdentifier(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDaysOfWeek(value: AppointmentDaysOfWeek): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOfWeek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInterval(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOccurrences(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrences")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecurrenceType(value: RecurrenceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnit(value: AppointmentRecurrenceUnit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUntil(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeekOfMonth(value: AppointmentWeekOfMonth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekOfMonth")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccountMergeOperationResponse
   extends BaseOperationResponse[
       accountMerge, 
       typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.accountMerge
     ] {
-  var into: String = js.native
+  var into: String
 }
 
 object AccountMergeOperationResponse {
@@ -34,19 +33,5 @@ object AccountMergeOperationResponse {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountMergeOperationResponse]
   }
-  @scala.inline
-  implicit class AccountMergeOperationResponseOps[Self <: AccountMergeOperationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInto(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("into")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

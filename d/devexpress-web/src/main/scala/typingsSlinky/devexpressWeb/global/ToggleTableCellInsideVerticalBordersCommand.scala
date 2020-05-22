@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ToggleTableCellInsideVerticalBordersCommand")
 @js.native
 class ToggleTableCellInsideVerticalBordersCommand ()
-  extends typingsSlinky.devexpressWeb.ToggleTableCellInsideVerticalBordersCommand
+  extends typingsSlinky.devexpressWeb.ToggleTableCellInsideVerticalBordersCommand {
+  /**
+    * Executes the ToggleTableCellInsideVerticalBordersCommand command.
+    */
+  /* CompleteClass */
+  override def execute(): Boolean = js.native
+  /**
+    * Gets information about the command's state.
+    */
+  /* CompleteClass */
+  override def getState(): typingsSlinky.devexpressWeb.CommandState[Boolean] = js.native
+}
 

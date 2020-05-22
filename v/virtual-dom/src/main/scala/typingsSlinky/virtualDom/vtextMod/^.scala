@@ -11,6 +11,12 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ protected () extends VText {
   def this(text: String) = this()
+  /* CompleteClass */
+  override var text: String = js.native
+  /* CompleteClass */
+  override var `type`: String = js.native
+  /* CompleteClass */
+  override var version: String = js.native
 }
 
 @JSImport("virtual-dom/vnode/vtext", JSImport.Namespace)

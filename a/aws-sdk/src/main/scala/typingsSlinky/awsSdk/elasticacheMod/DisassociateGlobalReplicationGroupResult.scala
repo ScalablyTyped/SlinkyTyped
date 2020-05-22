@@ -11,29 +11,10 @@ trait DisassociateGlobalReplicationGroupResult extends js.Object {
 
 object DisassociateGlobalReplicationGroupResult {
   @scala.inline
-  def apply(): DisassociateGlobalReplicationGroupResult = {
+  def apply(GlobalReplicationGroup: GlobalReplicationGroup = null): DisassociateGlobalReplicationGroupResult = {
     val __obj = js.Dynamic.literal()
+    if (GlobalReplicationGroup != null) __obj.updateDynamic("GlobalReplicationGroup")(GlobalReplicationGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateGlobalReplicationGroupResult]
   }
-  @scala.inline
-  implicit class DisassociateGlobalReplicationGroupResultOps[Self <: DisassociateGlobalReplicationGroupResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalReplicationGroup(value: GlobalReplicationGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalReplicationGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalReplicationGroup")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

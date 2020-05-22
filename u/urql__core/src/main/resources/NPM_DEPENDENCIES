@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@urql/core" : "1.11.8"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@urql/core" : "1.11.8"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

@@ -16,19 +16,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
-@js.native
 trait TSImportEqualsDeclaration
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var id: IdentifierKind = js.native
-  var isExport: js.UndefOr[Boolean] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var moduleReference: IdentifierKind | TSQualifiedNameKind | TSExternalModuleReferenceKind = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSImportEqualsDeclaration = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var id: IdentifierKind
+  var isExport: js.UndefOr[Boolean] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var moduleReference: IdentifierKind | TSQualifiedNameKind | TSExternalModuleReferenceKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSImportEqualsDeclaration
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSImportEqualsDeclaration")

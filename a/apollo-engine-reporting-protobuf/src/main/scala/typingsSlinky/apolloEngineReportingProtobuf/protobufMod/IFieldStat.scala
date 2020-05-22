@@ -4,143 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFieldStat extends js.Object {
   /** FieldStat count */
-  var count: js.UndefOr[Double | Null] = js.native
+  var count: js.UndefOr[Double | Null] = js.undefined
   /** FieldStat errorsCount */
-  var errorsCount: js.UndefOr[Double | Null] = js.native
+  var errorsCount: js.UndefOr[Double | Null] = js.undefined
   /** FieldStat latencyCount */
-  var latencyCount: js.UndefOr[js.Array[Double] | Null] = js.native
-  /** FieldStat name */
-  var name: js.UndefOr[String | Null] = js.native
+  var latencyCount: js.UndefOr[js.Array[Double] | Null] = js.undefined
   /** FieldStat requestsWithErrorsCount */
-  var requestsWithErrorsCount: js.UndefOr[Double | Null] = js.native
+  var requestsWithErrorsCount: js.UndefOr[Double | Null] = js.undefined
   /** FieldStat returnType */
-  var returnType: js.UndefOr[String | Null] = js.native
+  var returnType: js.UndefOr[String | Null] = js.undefined
 }
 
 object IFieldStat {
   @scala.inline
-  def apply(): IFieldStat = {
+  def apply(
+    count: js.UndefOr[Null | Double] = js.undefined,
+    errorsCount: js.UndefOr[Null | Double] = js.undefined,
+    latencyCount: js.UndefOr[Null | js.Array[Double]] = js.undefined,
+    requestsWithErrorsCount: js.UndefOr[Null | Double] = js.undefined,
+    returnType: js.UndefOr[Null | String] = js.undefined
+  ): IFieldStat = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(count)) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorsCount)) __obj.updateDynamic("errorsCount")(errorsCount.asInstanceOf[js.Any])
+    if (!js.isUndefined(latencyCount)) __obj.updateDynamic("latencyCount")(latencyCount.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestsWithErrorsCount)) __obj.updateDynamic("requestsWithErrorsCount")(requestsWithErrorsCount.asInstanceOf[js.Any])
+    if (!js.isUndefined(returnType)) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFieldStat]
   }
-  @scala.inline
-  implicit class IFieldStatOps[Self <: IFieldStat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(null)
-        ret
-    }
-    @scala.inline
-    def withErrorsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorsCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorsCount")(null)
-        ret
-    }
-    @scala.inline
-    def withLatencyCount(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatencyCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatencyCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latencyCount")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withRequestsWithErrorsCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestsWithErrorsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestsWithErrorsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestsWithErrorsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestsWithErrorsCountNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestsWithErrorsCount")(null)
-        ret
-    }
-    @scala.inline
-    def withReturnType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturnType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturnTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("returnType")(null)
-        ret
-    }
-  }
-  
 }
 

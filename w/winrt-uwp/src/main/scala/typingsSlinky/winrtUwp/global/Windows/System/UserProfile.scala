@@ -1,5 +1,7 @@
 package typingsSlinky.winrtUwp.global.Windows.System
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
@@ -7,11 +9,13 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Globalization.DayOfWeek
 import typingsSlinky.winrtUwp.Windows.Storage.IStorageFile
+import typingsSlinky.winrtUwp.Windows.Storage.StorageFile
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStream
 import typingsSlinky.winrtUwp.Windows.System.UserProfile.AccountPictureKind
 import typingsSlinky.winrtUwp.Windows.System.UserProfile.SetAccountPictureResult
 import typingsSlinky.winrtUwp.Windows.System.UserProfile.SetImageFeedResult
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
+import typingsSlinky.winrtUwp.anon.Second
 import typingsSlinky.winrtUwp.winrtUwpStrings.accountpicturechanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +33,36 @@ object UserProfile extends js.Object {
   /** Represents a collection of settings that a user can opt-in to during the first run experience. */
   @js.native
   abstract class FirstSignInSettings ()
-    extends typingsSlinky.winrtUwp.Windows.System.UserProfile.FirstSignInSettings
+    extends typingsSlinky.winrtUwp.Windows.System.UserProfile.FirstSignInSettings {
+    /** Returns the number of elements in the map. */
+    /* CompleteClass */
+    override var size: Double = js.native
+    /**
+      * Returns an iterator for the items in the collection.
+      * @return The iterator.
+      */
+    /* CompleteClass */
+    override def first(): IIterator[IKeyValuePair[_, _]] = js.native
+    /**
+      * Determines whether the map view contains the specified key.
+      * @param key The key to locate in the map view.
+      * @return true if the key is found; otherwise, false.
+      */
+    /* CompleteClass */
+    override def hasKey(key: String): Boolean = js.native
+    /**
+      * Returns the item in the map view with the specified key.
+      * @param key The key to locate in the map view.
+      * @return The item associated with the specified key.
+      */
+    /* CompleteClass */
+    override def lookup(key: String): js.Any = js.native
+    /**
+      * Splits the map view into two views.
+      */
+    /* CompleteClass */
+    override def split(): Second = js.native
+  }
   
   /** A static class for holding various user globalization preferences. */
   @js.native
@@ -49,7 +82,22 @@ object UserProfile extends js.Object {
   /** Provides properties and methods to manage the user's desktop wallpaper and lock screen background image. */
   @js.native
   abstract class UserProfilePersonalizationSettings ()
-    extends typingsSlinky.winrtUwp.Windows.System.UserProfile.UserProfilePersonalizationSettings
+    extends typingsSlinky.winrtUwp.Windows.System.UserProfile.UserProfilePersonalizationSettings {
+    /**
+      * Attempts to set the specified image file as the lock screen background image.
+      * @param imageFile The image to set as the lock screen background.
+      * @return The result of the async operation. true if the background image was set successfully; otherwise, false.
+      */
+    /* CompleteClass */
+    override def trySetLockScreenImageAsync(imageFile: StorageFile): IPromiseWithIAsyncOperation[Boolean] = js.native
+    /**
+      * Attempts to set the specified image file as the desktop wallpaper image.
+      * @param imageFile The image to set as the desktop background.
+      * @return The result of the async operation. true if the background image was set successfully; otherwise, false.
+      */
+    /* CompleteClass */
+    override def trySetWallpaperImageAsync(imageFile: StorageFile): IPromiseWithIAsyncOperation[Boolean] = js.native
+  }
   
   /** Allows you to request a specific image type when using GetAccountPicture . */
   @js.native

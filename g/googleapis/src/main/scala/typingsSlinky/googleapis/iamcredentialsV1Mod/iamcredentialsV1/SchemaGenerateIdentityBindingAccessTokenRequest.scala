@@ -50,41 +50,11 @@ trait SchemaGenerateIdentityBindingAccessTokenRequest extends js.Object {
 
 object SchemaGenerateIdentityBindingAccessTokenRequest {
   @scala.inline
-  def apply(): SchemaGenerateIdentityBindingAccessTokenRequest = {
+  def apply(jwt: String = null, scope: js.Array[String] = null): SchemaGenerateIdentityBindingAccessTokenRequest = {
     val __obj = js.Dynamic.literal()
+    if (jwt != null) __obj.updateDynamic("jwt")(jwt.asInstanceOf[js.Any])
+    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGenerateIdentityBindingAccessTokenRequest]
   }
-  @scala.inline
-  implicit class SchemaGenerateIdentityBindingAccessTokenRequestOps[Self <: SchemaGenerateIdentityBindingAccessTokenRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJwt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJwt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScope(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScope: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

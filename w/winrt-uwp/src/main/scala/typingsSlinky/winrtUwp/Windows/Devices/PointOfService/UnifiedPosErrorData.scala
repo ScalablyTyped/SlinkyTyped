@@ -5,16 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides error information. */
-@js.native
 trait UnifiedPosErrorData extends js.Object {
   /** Gets the vendor specific error information. */
-  var extendedReason: Double = js.native
+  var extendedReason: Double
   /** Gets the error message. */
-  var message: String = js.native
+  var message: String
   /** Gets the cause of the error. */
-  var reason: UnifiedPosErrorReason = js.native
+  var reason: UnifiedPosErrorReason
   /** Gets the error severity. */
-  var severity: UnifiedPosErrorSeverity = js.native
+  var severity: UnifiedPosErrorSeverity
 }
 
 object UnifiedPosErrorData {
@@ -28,37 +27,5 @@ object UnifiedPosErrorData {
     val __obj = js.Dynamic.literal(extendedReason = extendedReason.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], severity = severity.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnifiedPosErrorData]
   }
-  @scala.inline
-  implicit class UnifiedPosErrorDataOps[Self <: UnifiedPosErrorData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtendedReason(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: UnifiedPosErrorReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: UnifiedPosErrorSeverity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

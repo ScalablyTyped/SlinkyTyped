@@ -1,10 +1,10 @@
 package typingsSlinky.openfin
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.openfin.entityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.identityMod.Identity
-import typingsSlinky.openfin.mainMod.Frame
-import typingsSlinky.openfin.mainMod.Window
+import typingsSlinky.openfin.v2MainMod.Frame
 import typingsSlinky.openfin.viewViewMod.View
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ object finMod extends js.Object {
     var GlobalHotkey: typingsSlinky.openfin.apiGlobalHotkeyMod.default = js.native
     var InterApplicationBus: typingsSlinky.openfin.interappbusMod.default = js.native
     var Notification: typingsSlinky.openfin.notificationMod.default = js.native
-    var Platform: typingsSlinky.openfin.platformMod.default = js.native
+    var Platform: typingsSlinky.openfin.platformPlatformMod.default = js.native
     var System: typingsSlinky.openfin.systemSystemMod.default = js.native
     var View: typingsSlinky.openfin.viewViewMod.default = js.native
     var Window: typingsSlinky.openfin.windowWindowMod.default = js.native

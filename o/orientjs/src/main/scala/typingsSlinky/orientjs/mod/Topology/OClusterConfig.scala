@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OClusterConfig extends js.Object {
-  def selectionStrategy(cluster: OCluster): OServerNode = js.native
+  def selectionStrategy(cluster: OCluster): OServerNode
 }
 
 object OClusterConfig {
@@ -15,19 +14,5 @@ object OClusterConfig {
     val __obj = js.Dynamic.literal(selectionStrategy = js.Any.fromFunction1(selectionStrategy))
     __obj.asInstanceOf[OClusterConfig]
   }
-  @scala.inline
-  implicit class OClusterConfigOps[Self <: OClusterConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectionStrategy(value: OCluster => OServerNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStrategy")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

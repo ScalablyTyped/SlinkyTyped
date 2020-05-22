@@ -1,18 +1,61 @@
 package typingsSlinky.reactD3Graph.components
 
+import org.scalajs.dom.raw.Element
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactD3Graph.mod.GraphConfiguration
+import typingsSlinky.reactD3Graph.mod.GraphData
+import typingsSlinky.reactD3Graph.mod.GraphLink
+import typingsSlinky.reactD3Graph.mod.GraphNode
+import typingsSlinky.reactD3Graph.mod.GraphProps
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree. */
 object Graph {
   @JSImport("react-d3-graph", "Graph")
   @js.native
   object component extends js.Object
   
-  def apply(p: js.Any): Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph] = new Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Graph.type): Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph] = new Default[tag.type, typingsSlinky.reactD3Graph.mod.Graph](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  class Builder[N <: GraphNode, L <: GraphLink] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactD3Graph.mod.Graph[js.Any, js.Any]] {
+    @scala.inline
+    def config(value: Partial[GraphConfiguration[N, L]]): this.type = set("config", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: GraphData[N, L]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClickLink(value: (/* source */ String, /* target */ String) => Unit): this.type = set("onClickLink", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClickNode(value: /* nodeId */ String => Unit): this.type = set("onClickNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDoubleClickNode(value: /* nodeId */ String => Unit): this.type = set("onDoubleClickNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOutLink(value: (/* source */ String, /* target */ String) => Unit): this.type = set("onMouseOutLink", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseOutNode(value: /* nodeId */ String => Unit): this.type = set("onMouseOutNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOverLink(value: (/* source */ String, /* target */ String) => Unit): this.type = set("onMouseOverLink", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseOverNode(value: /* nodeId */ String => Unit): this.type = set("onMouseOverNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def onNodePositionChange(value: (/* nodeId */ String, /* x */ Double, /* y */ Double) => Unit): this.type = set("onNodePositionChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onRightClickLink(
+      value: (/* event */ SyntheticMouseEvent[Element], /* source */ String, /* target */ String) => Unit
+    ): this.type = set("onRightClickLink", js.Any.fromFunction3(value))
+    @scala.inline
+    def onRightClickNode(value: (/* event */ SyntheticMouseEvent[Element], /* nodeId */ String) => Unit): this.type = set("onRightClickNode", js.Any.fromFunction2(value))
+  }
+  
+  def withProps[N <: GraphNode, L <: GraphLink](p: GraphProps[N, L]): Builder[N, L] = new Builder[N, L](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[N <: GraphNode, L <: GraphLink](id: String): Builder[N, L] = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder[N, L](js.Array(this.component, __props.asInstanceOf[GraphProps[N, L]]))
+  }
 }
 

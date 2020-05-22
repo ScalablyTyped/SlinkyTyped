@@ -1,27 +1,24 @@
 package typingsSlinky.hapiHapi.mod
 
 import typingsSlinky.hapiHapi.mod.Lifecycle.FailAction
-import typingsSlinky.hapiHapi.mod.Lifecycle.ReturnValue
 import typingsSlinky.hapiJoi.mod.ValidationOptions
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RouteOptionsValidate extends js.Object {
   /**
     * @default none.
     * An optional object with error fields copied into every validation error response.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidateerrorfields)
     */
-  var errorFields: js.UndefOr[js.Object] = js.native
+  var errorFields: js.UndefOr[js.Object] = js.undefined
   /**
     * @default 'error' (return a Bad Request (400) error response).
     * A failAction value which determines how to handle failed validations. When set to a function, the err argument includes the type of validation error under err.output.payload.validation.source.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidatefailaction)
     */
-  var failAction: js.UndefOr[FailAction] = js.native
+  var failAction: js.UndefOr[FailAction] = js.undefined
   /**
     * Validation rules for incoming request headers:
     * * If a value is returned, the value is used as the new request.headers value and the original value is stored in request.orig.headers. Otherwise, the headers are left unchanged. If an error
@@ -29,7 +26,7 @@ trait RouteOptionsValidate extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidateheaders)
     * @default true
     */
-  var headers: js.UndefOr[RouteOptionsResponseSchema] = js.native
+  var headers: js.UndefOr[RouteOptionsResponseSchema] = js.undefined
   /**
     * An options object passed to the joi rules or the custom validation methods. Used for setting global options such as stripUnknown or abortEarly (the complete list is available here).
     * If a custom validation function (see headers, params, query, or payload above) is defined then options can an arbitrary object that will be passed to this function as the second parameter.
@@ -41,7 +38,7 @@ trait RouteOptionsValidate extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidateparams)
     * @default true
     */
-  var options: js.UndefOr[ValidationOptions | js.Object] = js.native
+  var options: js.UndefOr[ValidationOptions | js.Object] = js.undefined
   /**
     * Validation rules for incoming request path parameters, after matching the path against the route, extracting any parameters, and storing them in request.params, where:
     * * true - any path parameter value allowed (no validation performed).
@@ -54,7 +51,7 @@ trait RouteOptionsValidate extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidateparams)
     * @default true
     */
-  var params: js.UndefOr[RouteOptionsResponseSchema] = js.native
+  var params: js.UndefOr[RouteOptionsResponseSchema] = js.undefined
   /**
     * Validation rules for incoming request payload (request body), where:
     * * If a value is returned, the value is used as the new request.payload value and the original value is stored in request.orig.payload. Otherwise, the payload is left unchanged. If an error is
@@ -63,7 +60,7 @@ trait RouteOptionsValidate extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidatepayload)
     * @default true
     */
-  var payload: js.UndefOr[RouteOptionsResponseSchema] = js.native
+  var payload: js.UndefOr[RouteOptionsResponseSchema] = js.undefined
   /**
     * Validation rules for incoming request URI query component (the key-value part of the URI between '?' and '#'). The query is parsed into its individual key-value pairs, decoded, and stored in
     * request.query prior to validation. Where:
@@ -73,172 +70,37 @@ trait RouteOptionsValidate extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsvalidatequery)
     * @default true
     */
-  var query: js.UndefOr[RouteOptionsResponseSchema] = js.native
+  var query: js.UndefOr[RouteOptionsResponseSchema] = js.undefined
   /**
     * Validation rules for incoming cookies.
     * The cookie header is parsed and decoded into the request.state prior to validation.
     * @default true
     */
-  var state: js.UndefOr[RouteOptionsResponseSchema] = js.native
+  var state: js.UndefOr[RouteOptionsResponseSchema] = js.undefined
 }
 
 object RouteOptionsValidate {
   @scala.inline
-  def apply(): RouteOptionsValidate = {
+  def apply(
+    errorFields: js.Object = null,
+    failAction: FailAction = null,
+    headers: RouteOptionsResponseSchema = null,
+    options: ValidationOptions | js.Object = null,
+    params: RouteOptionsResponseSchema = null,
+    payload: RouteOptionsResponseSchema = null,
+    query: RouteOptionsResponseSchema = null,
+    state: RouteOptionsResponseSchema = null
+  ): RouteOptionsValidate = {
     val __obj = js.Dynamic.literal()
+    if (errorFields != null) __obj.updateDynamic("errorFields")(errorFields.asInstanceOf[js.Any])
+    if (failAction != null) __obj.updateDynamic("failAction")(failAction.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteOptionsValidate]
   }
-  @scala.inline
-  implicit class RouteOptionsValidateOps[Self <: RouteOptionsValidate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorFields(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailActionFunction3(
-      value: (/* request */ Request, /* h */ ResponseToolkit, /* err */ js.UndefOr[js.Error]) => ReturnValue
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withFailAction(value: FailAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadersFunction2(
-      value: (/* value */ js.Object | Buffer | String, /* options */ ValidationOptions) => js.Promise[js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: RouteOptionsResponseSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: ValidationOptions | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParamsFunction2(
-      value: (/* value */ js.Object | Buffer | String, /* options */ ValidationOptions) => js.Promise[js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withParams(value: RouteOptionsResponseSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadFunction2(
-      value: (/* value */ js.Object | Buffer | String, /* options */ ValidationOptions) => js.Promise[js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withPayload(value: RouteOptionsResponseSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryFunction2(
-      value: (/* value */ js.Object | Buffer | String, /* options */ ValidationOptions) => js.Promise[js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withQuery(value: RouteOptionsResponseSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateFunction2(
-      value: (/* value */ js.Object | Buffer | String, /* options */ ValidationOptions) => js.Promise[js.Any]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withState(value: RouteOptionsResponseSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

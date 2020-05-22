@@ -4,41 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RuleConditions extends js.Object {
-  val Account: AccountRuleCondition = js.native
-  val AnyCategory: RuleCondition = js.native
-  val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
-  val Body: TextRuleCondition = js.native
-  val BodyOrSubject: TextRuleCondition = js.native
-  val CC: RuleCondition = js.native
-  val Category: CategoryRuleCondition = js.native
-  val Class: OlObjectClass = js.native
-  val Count: Double = js.native
-  val FormName: FormNameRuleCondition = js.native
-  val From: ToOrFromRuleCondition = js.native
-  val FromAnyRSSFeed: RuleCondition = js.native
-  val FromRssFeed: FromRssFeedRuleCondition = js.native
-  val HasAttachment: RuleCondition = js.native
-  val Importance: ImportanceRuleCondition = js.native
-  val MeetingInviteOrUpdate: RuleCondition = js.native
-  val MessageHeader: TextRuleCondition = js.native
-  val NotTo: RuleCondition = js.native
-  val OnLocalMachine: RuleCondition = js.native
-  val OnOtherMachine: RuleCondition = js.native
-  val OnlyToMe: RuleCondition = js.native
+  val Account: AccountRuleCondition
+  val AnyCategory: RuleCondition
+  val Application: typingsSlinky.activexOutlook.Outlook.Application
+  val Body: TextRuleCondition
+  val BodyOrSubject: TextRuleCondition
+  val CC: RuleCondition
+  val Category: CategoryRuleCondition
+  val Class: OlObjectClass
+  val Count: Double
+  val FormName: FormNameRuleCondition
+  val From: ToOrFromRuleCondition
+  val FromAnyRSSFeed: RuleCondition
+  val FromRssFeed: FromRssFeedRuleCondition
+  val HasAttachment: RuleCondition
+  val Importance: ImportanceRuleCondition
+  val MeetingInviteOrUpdate: RuleCondition
+  val MessageHeader: TextRuleCondition
+  val NotTo: RuleCondition
+  val OnLocalMachine: RuleCondition
+  val OnOtherMachine: RuleCondition
+  val OnlyToMe: RuleCondition
   @JSName("Outlook.RuleConditions_typekey")
-  var OutlookDotRuleConditions_typekey: RuleConditions = js.native
-  val Parent: js.Any = js.native
-  val RecipientAddress: AddressRuleCondition = js.native
-  val SenderAddress: AddressRuleCondition = js.native
-  val SenderInAddressList: SenderInAddressListRuleCondition = js.native
-  val SentTo: ToOrFromRuleCondition = js.native
-  val Session: NameSpace = js.native
-  val Subject: TextRuleCondition = js.native
-  val ToMe: RuleCondition = js.native
-  val ToOrCc: RuleCondition = js.native
-  def Item(Index: Double): RuleCondition = js.native
+  var OutlookDotRuleConditions_typekey: RuleConditions
+  val Parent: js.Any
+  val RecipientAddress: AddressRuleCondition
+  val SenderAddress: AddressRuleCondition
+  val SenderInAddressList: SenderInAddressListRuleCondition
+  val SentTo: ToOrFromRuleCondition
+  val Session: NameSpace
+  val Subject: TextRuleCondition
+  val ToMe: RuleCondition
+  val ToOrCc: RuleCondition
+  def Item(Index: Double): RuleCondition
 }
 
 object RuleConditions {
@@ -81,205 +80,5 @@ object RuleConditions {
     __obj.updateDynamic("Outlook.RuleConditions_typekey")(OutlookDotRuleConditions_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleConditions]
   }
-  @scala.inline
-  implicit class RuleConditionsOps[Self <: RuleConditions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount(value: AccountRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnyCategory(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnyCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBody(value: TextRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBodyOrSubject(value: TextRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BodyOrSubject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCC(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategory(value: CategoryRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClass(value: OlObjectClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormName(value: FormNameRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FormName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrom(value: ToOrFromRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("From")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromAnyRSSFeed(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromAnyRSSFeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFromRssFeed(value: FromRssFeedRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FromRssFeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasAttachment(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasAttachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImportance(value: ImportanceRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Importance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItem(value: Double => RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMeetingInviteOrUpdate(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingInviteOrUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessageHeader(value: TextRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotTo(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnLocalMachine(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnLocalMachine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnOtherMachine(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnOtherMachine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnlyToMe(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OnlyToMe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotRuleConditions_typekey(value: RuleConditions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.RuleConditions_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRecipientAddress(value: AddressRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipientAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSenderAddress(value: AddressRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSenderInAddressList(value: SenderInAddressListRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderInAddressList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSentTo(value: ToOrFromRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SentTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: NameSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubject(value: TextRuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToMe(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToMe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToOrCc(value: RuleCondition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ToOrCc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

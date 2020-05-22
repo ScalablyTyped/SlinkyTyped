@@ -1,5 +1,7 @@
 package typingsSlinky.wordpressCompose
 
+import slinky.core.ReactComponentClass
+import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +12,11 @@ object createHigherOrderComponentMod extends js.Object {
   // tslint:disable:no-unnecessary-generics
   // prettier-ignore
   def default[EP](
-    mapComponentToEnhancedComponent: js.Function1[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<any> */ /* component */ js.Any, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<any> */ _
-    ],
+    mapComponentToEnhancedComponent: js.Function1[/* component */ ReactComponentClass[_], ReactComponentClass[_]],
     modifierName: String
   ): js.Function1[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ComponentType<any> */ /* component */ js.Any, 
-    _
+    /* component */ ReactComponentClass[_], 
+    ReactComponentClass[Omit[_, /* keyof EP */ String]]
   ] = js.native
 }
 

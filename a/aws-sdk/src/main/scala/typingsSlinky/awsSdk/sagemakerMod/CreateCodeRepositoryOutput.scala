@@ -18,19 +18,5 @@ object CreateCodeRepositoryOutput {
     val __obj = js.Dynamic.literal(CodeRepositoryArn = CodeRepositoryArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCodeRepositoryOutput]
   }
-  @scala.inline
-  implicit class CreateCodeRepositoryOutputOps[Self <: CreateCodeRepositoryOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCodeRepositoryArn(value: CodeRepositoryArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeRepositoryArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

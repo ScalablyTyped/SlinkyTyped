@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * @see XContentCreator
   * @see XCommandProcessor
   */
-@js.native
 trait ContentInfo extends js.Object {
   /**
     * Additional attributes.
@@ -23,7 +22,7 @@ trait ContentInfo extends js.Object {
     *
     * The value can be one of the {@link ContentInfoAttribute} constants.
     */
-  var Attributes: Double = js.native
+  var Attributes: Double
   /**
     * This field contains a list with the properties which must be set at a content that was just created using {@link XContentCreator.createNewContent()}
     * before it can be committed (by executing the command "insert" at the new content).
@@ -38,14 +37,14 @@ trait ContentInfo extends js.Object {
     *
     * booleancharbytestringshortlonghyperfloatdouble
     */
-  var Properties: SafeArray[Property] = js.native
+  var Properties: SafeArray[Property]
   /**
     * A type identifier string for a content.
     *
     * This is an implementation specific string characterizing the kind of a content (e.g. "application/vnd.sun.star.hierarchy-link"). The value of this
     * member should match the value returned by {@link XContent.getContentType()} of an appropriate content.
     */
-  var Type: String = js.native
+  var Type: String
 }
 
 object ContentInfo {
@@ -54,31 +53,5 @@ object ContentInfo {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], Properties = Properties.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentInfo]
   }
-  @scala.inline
-  implicit class ContentInfoOps[Self <: ContentInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: SafeArray[Property]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

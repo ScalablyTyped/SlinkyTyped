@@ -26,65 +26,18 @@ trait DeleteLaunchTemplateVersionsResponseErrorItem extends js.Object {
 
 object DeleteLaunchTemplateVersionsResponseErrorItem {
   @scala.inline
-  def apply(): DeleteLaunchTemplateVersionsResponseErrorItem = {
+  def apply(
+    LaunchTemplateId: String = null,
+    LaunchTemplateName: String = null,
+    ResponseError: ResponseError = null,
+    VersionNumber: js.UndefOr[Long] = js.undefined
+  ): DeleteLaunchTemplateVersionsResponseErrorItem = {
     val __obj = js.Dynamic.literal()
+    if (LaunchTemplateId != null) __obj.updateDynamic("LaunchTemplateId")(LaunchTemplateId.asInstanceOf[js.Any])
+    if (LaunchTemplateName != null) __obj.updateDynamic("LaunchTemplateName")(LaunchTemplateName.asInstanceOf[js.Any])
+    if (ResponseError != null) __obj.updateDynamic("ResponseError")(ResponseError.asInstanceOf[js.Any])
+    if (!js.isUndefined(VersionNumber)) __obj.updateDynamic("VersionNumber")(VersionNumber.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteLaunchTemplateVersionsResponseErrorItem]
   }
-  @scala.inline
-  implicit class DeleteLaunchTemplateVersionsResponseErrorItemOps[Self <: DeleteLaunchTemplateVersionsResponseErrorItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLaunchTemplateId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchTemplateId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLaunchTemplateName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLaunchTemplateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseError(value: ResponseError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseError")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionNumber(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

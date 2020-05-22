@@ -16,10 +16,16 @@ object resizeBilinearPackedGpuMod extends js.Object {
       newWidth: Double,
       alignCorners: Boolean
     ) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
     @JSName("packedInputs")
     var packedInputs_ResizeBilinearPackedProgram: Boolean = js.native
     @JSName("packedOutput")
     var packedOutput_ResizeBilinearPackedProgram: Boolean = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
 }

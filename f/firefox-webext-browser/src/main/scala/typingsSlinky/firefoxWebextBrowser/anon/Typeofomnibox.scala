@@ -8,10 +8,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Typeofomnibox extends js.Object {
   /** User has ended the keyword input session without accepting the input. */
-  val onInputCancelled: WebExtEvent[js.Function0[Unit]] = js.native
+  val onInputCancelled: WebExtEvent[js.Function0[Unit]]
   /**
     * User has changed what is typed into the omnibox.
     * @param suggest A callback passed to the onInputChanged event used for sending suggestions back to the browser.
@@ -22,24 +21,24 @@ trait Typeofomnibox extends js.Object {
       /* suggest */ js.Function1[/* suggestResults */ js.Array[SuggestResult], Unit], 
       Unit
     ]
-  ] = js.native
+  ]
   /** User has accepted what is typed into the omnibox. */
   val onInputEntered: WebExtEvent[
     js.Function2[/* text */ String, /* disposition */ OnInputEnteredDisposition, Unit]
-  ] = js.native
+  ]
   /* omnibox events */
   /**
     * User has started a keyword input session by typing the extension's keyword. This is guaranteed to be sent
     * exactly once per input session, and before any onInputChanged events.
     */
-  val onInputStarted: WebExtEvent[js.Function0[Unit]] = js.native
+  val onInputStarted: WebExtEvent[js.Function0[Unit]]
   /* omnibox functions */
   /**
     * Sets the description and styling for the default suggestion. The default suggestion is the text that is
     * displayed in the first suggestion row underneath the URL bar.
     * @param suggestion A partial SuggestResult object, without the 'content' parameter.
     */
-  def setDefaultSuggestion(suggestion: DefaultSuggestResult): Unit = js.native
+  def setDefaultSuggestion(suggestion: DefaultSuggestResult): Unit
 }
 
 object Typeofomnibox {
@@ -62,55 +61,5 @@ object Typeofomnibox {
     val __obj = js.Dynamic.literal(onInputCancelled = onInputCancelled.asInstanceOf[js.Any], onInputChanged = onInputChanged.asInstanceOf[js.Any], onInputEntered = onInputEntered.asInstanceOf[js.Any], onInputStarted = onInputStarted.asInstanceOf[js.Any], setDefaultSuggestion = js.Any.fromFunction1(setDefaultSuggestion))
     __obj.asInstanceOf[Typeofomnibox]
   }
-  @scala.inline
-  implicit class TypeofomniboxOps[Self <: Typeofomnibox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnInputCancelled(value: WebExtEvent[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputCancelled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnInputChanged(
-      value: WebExtEvent[
-          js.Function2[
-            /* text */ String, 
-            /* suggest */ js.Function1[/* suggestResults */ js.Array[SuggestResult], Unit], 
-            Unit
-          ]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnInputEntered(
-      value: WebExtEvent[
-          js.Function2[/* text */ String, /* disposition */ OnInputEnteredDisposition, Unit]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputEntered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnInputStarted(value: WebExtEvent[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInputStarted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSetDefaultSuggestion(value: DefaultSuggestResult => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultSuggestion")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

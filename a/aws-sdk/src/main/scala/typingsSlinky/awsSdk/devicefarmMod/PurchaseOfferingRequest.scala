@@ -22,53 +22,16 @@ trait PurchaseOfferingRequest extends js.Object {
 
 object PurchaseOfferingRequest {
   @scala.inline
-  def apply(): PurchaseOfferingRequest = {
+  def apply(
+    offeringId: OfferingIdentifier = null,
+    offeringPromotionId: OfferingPromotionIdentifier = null,
+    quantity: js.UndefOr[Integer] = js.undefined
+  ): PurchaseOfferingRequest = {
     val __obj = js.Dynamic.literal()
+    if (offeringId != null) __obj.updateDynamic("offeringId")(offeringId.asInstanceOf[js.Any])
+    if (offeringPromotionId != null) __obj.updateDynamic("offeringPromotionId")(offeringPromotionId.asInstanceOf[js.Any])
+    if (!js.isUndefined(quantity)) __obj.updateDynamic("quantity")(quantity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseOfferingRequest]
   }
-  @scala.inline
-  implicit class PurchaseOfferingRequestOps[Self <: PurchaseOfferingRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOfferingId(value: OfferingIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offeringId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offeringId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOfferingPromotionId(value: OfferingPromotionIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offeringPromotionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOfferingPromotionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offeringPromotionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuantity(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuantity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quantity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

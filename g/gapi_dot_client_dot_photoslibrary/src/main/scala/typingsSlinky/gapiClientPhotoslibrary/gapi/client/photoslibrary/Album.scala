@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Album extends js.Object {
   /**
     * [Output only] A URL to the cover photo's bytes. This shouldn't be used as
@@ -15,154 +14,67 @@ trait Album extends js.Object {
     * `'=w2048-h1024'` sets the dimensions of the cover photo to have a width of
     * 2048 px and height of 1024 px.
     */
-  var coverPhotoBaseUrl: js.UndefOr[String] = js.native
+  var coverPhotoBaseUrl: js.UndefOr[String] = js.undefined
   /**
     * [Output only] Identifier for the media item associated with the cover
     * photo.
     */
-  var coverPhotoMediaItemId: js.UndefOr[String] = js.native
+  var coverPhotoMediaItemId: js.UndefOr[String] = js.undefined
   /**
     * [Ouput only] Identifier for the album. This is a persistent identifier that
     * can be used between sessions to identify this album.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * [Output only] True if you can create media items in this album.
     * This field is based on the scopes granted and permissions of the album. If
     * the scopes are changed or permissions of the album are changed, this field
     * is updated.
     */
-  var isWriteable: js.UndefOr[Boolean] = js.native
+  var isWriteable: js.UndefOr[Boolean] = js.undefined
   /** [Output only] The number of media items in the album. */
-  var mediaItemsCount: js.UndefOr[String] = js.native
+  var mediaItemsCount: js.UndefOr[String] = js.undefined
   /**
     * [Output only] Google Photos URL for the album. The user needs to be signed
     * in to their Google Photos account to access this link.
     */
-  var productUrl: js.UndefOr[String] = js.native
+  var productUrl: js.UndefOr[String] = js.undefined
   /**
     * [Output only] Information related to shared albums.
     * This field is only populated if the album is a shared album, the
     * developer created the album and the user has granted the
     * `photoslibrary.sharing` scope.
     */
-  var shareInfo: js.UndefOr[ShareInfo] = js.native
+  var shareInfo: js.UndefOr[ShareInfo] = js.undefined
   /**
     * Name of the album displayed to the user in their Google Photos account.
     * This string shouldn't be more than 500 characters.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
 }
 
 object Album {
   @scala.inline
-  def apply(): Album = {
+  def apply(
+    coverPhotoBaseUrl: String = null,
+    coverPhotoMediaItemId: String = null,
+    id: String = null,
+    isWriteable: js.UndefOr[Boolean] = js.undefined,
+    mediaItemsCount: String = null,
+    productUrl: String = null,
+    shareInfo: ShareInfo = null,
+    title: String = null
+  ): Album = {
     val __obj = js.Dynamic.literal()
+    if (coverPhotoBaseUrl != null) __obj.updateDynamic("coverPhotoBaseUrl")(coverPhotoBaseUrl.asInstanceOf[js.Any])
+    if (coverPhotoMediaItemId != null) __obj.updateDynamic("coverPhotoMediaItemId")(coverPhotoMediaItemId.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(isWriteable)) __obj.updateDynamic("isWriteable")(isWriteable.get.asInstanceOf[js.Any])
+    if (mediaItemsCount != null) __obj.updateDynamic("mediaItemsCount")(mediaItemsCount.asInstanceOf[js.Any])
+    if (productUrl != null) __obj.updateDynamic("productUrl")(productUrl.asInstanceOf[js.Any])
+    if (shareInfo != null) __obj.updateDynamic("shareInfo")(shareInfo.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Album]
   }
-  @scala.inline
-  implicit class AlbumOps[Self <: Album] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoverPhotoBaseUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverPhotoBaseUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoverPhotoBaseUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverPhotoBaseUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCoverPhotoMediaItemId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverPhotoMediaItemId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoverPhotoMediaItemId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverPhotoMediaItemId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsWriteable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWriteable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsWriteable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWriteable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaItemsCount(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaItemsCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaItemsCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaItemsCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareInfo(value: ShareInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

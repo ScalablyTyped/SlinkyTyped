@@ -14,18 +14,17 @@ import scala.scalajs.js.annotation._
   * end point) which satisfy the given set of constrains. Thus, there are two flags indicating which one of those ellipses should be taken.
   * @since OOo 2.0
   */
-@js.native
 trait EllipticalArc extends js.Object {
-  var EndPosition: RealPoint2D = js.native
+  var EndPosition: RealPoint2D
   /** If `TRUE` , and there's a choice, take the arc that goes clock-wise from start to end point. */
-  var IsClockwiseSweep: Boolean = js.native
+  var IsClockwiseSweep: Boolean
   /** If `TRUE` , and there's a choice, take the longer one of two arcs connecting start and end point. */
-  var IsLargeArc: Boolean = js.native
-  var RadiusX: Double = js.native
-  var RadiusY: Double = js.native
-  var StartPosition: RealPoint2D = js.native
+  var IsLargeArc: Boolean
+  var RadiusX: Double
+  var RadiusY: Double
+  var StartPosition: RealPoint2D
   /** Rotation angle of the x axis of the ellipse relative to the x axis of the reference coordinate system. */
-  var XAxisRotation: Double = js.native
+  var XAxisRotation: Double
 }
 
 object EllipticalArc {
@@ -42,55 +41,5 @@ object EllipticalArc {
     val __obj = js.Dynamic.literal(EndPosition = EndPosition.asInstanceOf[js.Any], IsClockwiseSweep = IsClockwiseSweep.asInstanceOf[js.Any], IsLargeArc = IsLargeArc.asInstanceOf[js.Any], RadiusX = RadiusX.asInstanceOf[js.Any], RadiusY = RadiusY.asInstanceOf[js.Any], StartPosition = StartPosition.asInstanceOf[js.Any], XAxisRotation = XAxisRotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[EllipticalArc]
   }
-  @scala.inline
-  implicit class EllipticalArcOps[Self <: EllipticalArc] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndPosition(value: RealPoint2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsClockwiseSweep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsClockwiseSweep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLargeArc(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLargeArc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadiusX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRadiusY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartPosition(value: RealPoint2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withXAxisRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("XAxisRotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

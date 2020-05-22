@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** is a checked exception that represents an error encountered by the Scripting Framework whilst executing a script */
-@js.native
 trait ScriptFrameworkErrorException extends Exception {
   /** error type {@link com.sun.star.script.provider.ScriptFrameworkErrorType} */
-  var errorType: Double = js.native
+  var errorType: Double
   /** Scripting language of script that generated exception */
-  var language: String = js.native
+  var language: String
   /** Name of script where error occurred */
-  var scriptName: String = js.native
+  var scriptName: String
 }
 
 object ScriptFrameworkErrorException {
@@ -23,31 +22,5 @@ object ScriptFrameworkErrorException {
     val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], errorType = errorType.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], scriptName = scriptName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScriptFrameworkErrorException]
   }
-  @scala.inline
-  implicit class ScriptFrameworkErrorExceptionOps[Self <: ScriptFrameworkErrorException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScriptName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

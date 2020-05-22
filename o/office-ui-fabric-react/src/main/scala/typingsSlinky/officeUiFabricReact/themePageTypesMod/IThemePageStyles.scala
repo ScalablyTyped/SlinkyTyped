@@ -5,80 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IThemePageStyles extends js.Object {
-  var colorSwatch: IStyle = js.native
-  var colorValue: IStyle = js.native
-  var swatch: IStyle = js.native
+  var colorSwatch: IStyle
+  var colorValue: IStyle
+  var swatch: IStyle
 }
 
 object IThemePageStyles {
   @scala.inline
-  def apply(): IThemePageStyles = {
+  def apply(
+    colorSwatch: js.UndefOr[Null | IStyle] = js.undefined,
+    colorValue: js.UndefOr[Null | IStyle] = js.undefined,
+    swatch: js.UndefOr[Null | IStyle] = js.undefined
+  ): IThemePageStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(colorSwatch)) __obj.updateDynamic("colorSwatch")(colorSwatch.asInstanceOf[js.Any])
+    if (!js.isUndefined(colorValue)) __obj.updateDynamic("colorValue")(colorValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(swatch)) __obj.updateDynamic("swatch")(swatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[IThemePageStyles]
   }
-  @scala.inline
-  implicit class IThemePageStylesOps[Self <: IThemePageStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorSwatch(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSwatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorSwatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSwatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorSwatchNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSwatch")(null)
-        ret
-    }
-    @scala.inline
-    def withColorValue(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorValue")(null)
-        ret
-    }
-    @scala.inline
-    def withSwatch(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swatch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwatchNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swatch")(null)
-        ret
-    }
-  }
-  
 }
 

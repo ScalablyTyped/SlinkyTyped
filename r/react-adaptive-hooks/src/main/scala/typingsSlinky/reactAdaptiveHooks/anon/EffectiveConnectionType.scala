@@ -4,43 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EffectiveConnectionType extends js.Object {
-  var effectiveConnectionType: typingsSlinky.reactAdaptiveHooks.networkMod.EffectiveConnectionType | Null = js.native
-  var unsupported: Boolean = js.native
+  var effectiveConnectionType: typingsSlinky.reactAdaptiveHooks.networkMod.EffectiveConnectionType | Null
+  var unsupported: Boolean
 }
 
 object EffectiveConnectionType {
   @scala.inline
-  def apply(unsupported: Boolean): EffectiveConnectionType = {
-    val __obj = js.Dynamic.literal(unsupported = unsupported.asInstanceOf[js.Any])
+  def apply(
+    unsupported: Boolean,
+    effectiveConnectionType: typingsSlinky.reactAdaptiveHooks.networkMod.EffectiveConnectionType = null
+  ): EffectiveConnectionType = {
+    val __obj = js.Dynamic.literal(unsupported = unsupported.asInstanceOf[js.Any], effectiveConnectionType = effectiveConnectionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[EffectiveConnectionType]
   }
-  @scala.inline
-  implicit class EffectiveConnectionTypeOps[Self <: EffectiveConnectionType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUnsupported(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unsupported")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEffectiveConnectionType(value: typingsSlinky.reactAdaptiveHooks.networkMod.EffectiveConnectionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveConnectionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEffectiveConnectionTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveConnectionType")(null)
-        ret
-    }
-  }
-  
 }
 

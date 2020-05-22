@@ -4,124 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClassName extends js.Object {
-  var className: js.UndefOr[String] = js.native
-  var clearCanvas: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var clearCanvas: js.UndefOr[Boolean] = js.undefined
   /**
     * The canvas context
     */
-  var context: js.UndefOr[js.Any] = js.native
+  var context: js.UndefOr[js.Any] = js.undefined
   /**
     * Hides elements when opacity reaches 0. Only with SVG renderer.
     * @default true
     */
-  var hideOnTransparent: js.UndefOr[Boolean] = js.native
-  var preserveAspectRatio: js.UndefOr[String] = js.native
+  var hideOnTransparent: js.UndefOr[Boolean] = js.undefined
+  var preserveAspectRatio: js.UndefOr[String] = js.undefined
   /**
     * Loads DOM elements when needed. Might speed up initialization for large number of elements. Only with SVG renderer.
     */
-  var progressiveLoad: js.UndefOr[Boolean] = js.native
-  var scaleMode: js.UndefOr[js.Any] = js.native
+  var progressiveLoad: js.UndefOr[Boolean] = js.undefined
+  var scaleMode: js.UndefOr[js.Any] = js.undefined
 }
 
 object ClassName {
   @scala.inline
-  def apply(): ClassName = {
+  def apply(
+    className: String = null,
+    clearCanvas: js.UndefOr[Boolean] = js.undefined,
+    context: js.Any = null,
+    hideOnTransparent: js.UndefOr[Boolean] = js.undefined,
+    preserveAspectRatio: String = null,
+    progressiveLoad: js.UndefOr[Boolean] = js.undefined,
+    scaleMode: js.Any = null
+  ): ClassName = {
     val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearCanvas)) __obj.updateDynamic("clearCanvas")(clearCanvas.get.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideOnTransparent)) __obj.updateDynamic("hideOnTransparent")(hideOnTransparent.get.asInstanceOf[js.Any])
+    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressiveLoad)) __obj.updateDynamic("progressiveLoad")(progressiveLoad.get.asInstanceOf[js.Any])
+    if (scaleMode != null) __obj.updateDynamic("scaleMode")(scaleMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassName]
   }
-  @scala.inline
-  implicit class ClassNameOps[Self <: ClassName] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClearCanvas(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearCanvas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClearCanvas: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clearCanvas")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideOnTransparent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnTransparent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideOnTransparent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOnTransparent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreserveAspectRatio(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreserveAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressiveLoad(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveLoad")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressiveLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleMode(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

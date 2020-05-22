@@ -17,29 +17,10 @@ trait SchemaDuplicateFilterViewResponse extends js.Object {
 
 object SchemaDuplicateFilterViewResponse {
   @scala.inline
-  def apply(): SchemaDuplicateFilterViewResponse = {
+  def apply(filter: SchemaFilterView = null): SchemaDuplicateFilterViewResponse = {
     val __obj = js.Dynamic.literal()
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDuplicateFilterViewResponse]
   }
-  @scala.inline
-  implicit class SchemaDuplicateFilterViewResponseOps[Self <: SchemaDuplicateFilterViewResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFilter(value: SchemaFilterView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

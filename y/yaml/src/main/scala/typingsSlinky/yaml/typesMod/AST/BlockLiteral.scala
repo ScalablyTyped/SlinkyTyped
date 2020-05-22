@@ -7,14 +7,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BlockLiteral
-  extends Scalar
-     with ScalarNode {
+trait BlockLiteral extends Scalar {
   @JSName("cstNode")
   var cstNode_BlockLiteral: js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.BlockLiteral] = js.native
   @JSName("type")
   var type_BlockLiteral: BLOCK_LITERAL = js.native
-  /* InferMemberOverrides */
-  override def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
 }
 

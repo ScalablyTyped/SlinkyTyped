@@ -45,89 +45,22 @@ trait SchemaGamesNumberAffixConfiguration extends js.Object {
 
 object SchemaGamesNumberAffixConfiguration {
   @scala.inline
-  def apply(): SchemaGamesNumberAffixConfiguration = {
+  def apply(
+    few: SchemaLocalizedStringBundle = null,
+    many: SchemaLocalizedStringBundle = null,
+    one: SchemaLocalizedStringBundle = null,
+    other: SchemaLocalizedStringBundle = null,
+    two: SchemaLocalizedStringBundle = null,
+    zero: SchemaLocalizedStringBundle = null
+  ): SchemaGamesNumberAffixConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (few != null) __obj.updateDynamic("few")(few.asInstanceOf[js.Any])
+    if (many != null) __obj.updateDynamic("many")(many.asInstanceOf[js.Any])
+    if (one != null) __obj.updateDynamic("one")(one.asInstanceOf[js.Any])
+    if (other != null) __obj.updateDynamic("other")(other.asInstanceOf[js.Any])
+    if (two != null) __obj.updateDynamic("two")(two.asInstanceOf[js.Any])
+    if (zero != null) __obj.updateDynamic("zero")(zero.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGamesNumberAffixConfiguration]
   }
-  @scala.inline
-  implicit class SchemaGamesNumberAffixConfigurationOps[Self <: SchemaGamesNumberAffixConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFew(value: SchemaLocalizedStringBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("few")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFew: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("few")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMany(value: SchemaLocalizedStringBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("many")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMany: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("many")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOne(value: SchemaLocalizedStringBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("one")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOne: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("one")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOther(value: SchemaLocalizedStringBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOther: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTwo(value: SchemaLocalizedStringBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("two")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTwo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("two")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZero(value: SchemaLocalizedStringBundle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zero")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZero: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zero")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

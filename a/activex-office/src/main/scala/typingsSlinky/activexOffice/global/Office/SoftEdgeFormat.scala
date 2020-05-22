@@ -1,5 +1,6 @@
 package typingsSlinky.activexOffice.global.Office
 
+import typingsSlinky.activexOffice.Office.MsoSoftEdgeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,5 +8,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Office.SoftEdgeFormat")
 @js.native
 class SoftEdgeFormat protected ()
-  extends typingsSlinky.activexOffice.Office.SoftEdgeFormat
+  extends typingsSlinky.activexOffice.Office.SoftEdgeFormat {
+  /* CompleteClass */
+  override val Application: js.Any = js.native
+  /* CompleteClass */
+  override val Creator: Double = js.native
+  /* CompleteClass */
+  @JSName("Office.SoftEdgeFormat_typekey")
+  override var OfficeDotSoftEdgeFormat_typekey: typingsSlinky.activexOffice.Office.SoftEdgeFormat = js.native
+  /* CompleteClass */
+  override var Radius: Double = js.native
+  /* CompleteClass */
+  override var Type: MsoSoftEdgeType = js.native
+}
 

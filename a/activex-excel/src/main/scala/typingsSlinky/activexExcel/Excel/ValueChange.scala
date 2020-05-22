@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValueChange extends js.Object {
-  val AllocationMethod: XlAllocationMethod = js.native
-  val AllocationValue: XlAllocationValue = js.native
-  val AllocationWeightExpression: String = js.native
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  val Creator: XlCreator = js.native
+  val AllocationMethod: XlAllocationMethod
+  val AllocationValue: XlAllocationValue
+  val AllocationWeightExpression: String
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  val Creator: XlCreator
   @JSName("Excel.ValueChange_typekey")
-  var ExcelDotValueChange_typekey: ValueChange = js.native
-  val Order: Double = js.native
-  val Parent: js.Any = js.native
-  val PivotCell: typingsSlinky.activexExcel.Excel.PivotCell = js.native
-  val Tuple: String = js.native
-  val Value: Double = js.native
-  val VisibleInPivotTable: Boolean = js.native
-  def Delete(): Unit = js.native
+  var ExcelDotValueChange_typekey: ValueChange
+  val Order: Double
+  val Parent: js.Any
+  val PivotCell: typingsSlinky.activexExcel.Excel.PivotCell
+  val Tuple: String
+  val Value: Double
+  val VisibleInPivotTable: Boolean
+  def Delete(): Unit
 }
 
 object ValueChange {
@@ -43,91 +42,5 @@ object ValueChange {
     __obj.updateDynamic("Excel.ValueChange_typekey")(ExcelDotValueChange_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueChange]
   }
-  @scala.inline
-  implicit class ValueChangeOps[Self <: ValueChange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllocationMethod(value: XlAllocationMethod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllocationValue(value: XlAllocationValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllocationWeightExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationWeightExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExcelDotValueChange_typekey(value: ValueChange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.ValueChange_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrder(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPivotCell(value: PivotCell): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PivotCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTuple(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tuple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisibleInPivotTable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibleInPivotTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

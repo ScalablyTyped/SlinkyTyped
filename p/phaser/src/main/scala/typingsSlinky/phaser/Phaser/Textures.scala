@@ -13,6 +13,7 @@ import typingsSlinky.phaser.Phaser.GameObjects.GameObject
 import typingsSlinky.phaser.Phaser.GameObjects.RenderTexture
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
+import typingsSlinky.phaser.Phaser.Types.Create.GenerateTextureConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.PixelConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.SpriteSheetConfig
 import typingsSlinky.phaser.Phaser.Types.Textures.SpriteSheetFromAtlasConfig
@@ -171,11 +172,11 @@ object Textures extends js.Object {
       * @param width The width of the region to get. Must be an integer. Defaults to the canvas width if not given.
       * @param height The height of the region to get. Must be an integer. If not given will be set to the `width`.
       */
-    def getPixels(): js.Array[PixelConfig] = js.native
-    def getPixels(x: integer): js.Array[PixelConfig] = js.native
-    def getPixels(x: integer, y: integer): js.Array[PixelConfig] = js.native
-    def getPixels(x: integer, y: integer, width: integer): js.Array[PixelConfig] = js.native
-    def getPixels(x: integer, y: integer, width: integer, height: integer): js.Array[PixelConfig] = js.native
+    def getPixels(): js.Array[js.Array[PixelConfig]] = js.native
+    def getPixels(x: integer): js.Array[js.Array[PixelConfig]] = js.native
+    def getPixels(x: integer, y: integer): js.Array[js.Array[PixelConfig]] = js.native
+    def getPixels(x: integer, y: integer, width: integer): js.Array[js.Array[PixelConfig]] = js.native
+    def getPixels(x: integer, y: integer, width: integer, height: integer): js.Array[js.Array[PixelConfig]] = js.native
     /**
       * Puts the ImageData into the context of this CanvasTexture at the given coordinates.
       * @param imageData The ImageData to put at the given location.
@@ -883,12 +884,42 @@ object Textures extends js.Object {
     def exists(key: String): Boolean = js.native
     /**
       * Creates a new Texture using the given config values.
+      * 
       * Generated textures consist of a Canvas element to which the texture data is drawn.
-      * See the Phaser.Create function for the more direct way to create textures.
+      * 
+      * Generates a texture based on the given Create configuration object.
+      * 
+      * The texture is drawn using a fixed-size indexed palette of 16 colors, where the hex value in the
+      * data cells map to a single color. For example, if the texture config looked like this:
+      * 
+      * ```javascript
+      * var star = [
+      *   '.....828.....',
+      *   '....72227....',
+      *   '....82228....',
+      *   '...7222227...',
+      *   '2222222222222',
+      *   '8222222222228',
+      *   '.72222222227.',
+      *   '..787777787..',
+      *   '..877777778..',
+      *   '.78778887787.',
+      *   '.27887.78872.',
+      *   '.787.....787.'
+      * ];
+      * 
+      * this.textures.generate('star', { data: star, pixelWidth: 4 });
+      * ```
+      * 
+      * Then it would generate a texture that is 52 x 48 pixels in size, because each cell of the data array
+      * represents 1 pixel multiplied by the `pixelWidth` value. The cell values, such as `8`, maps to color
+      * number 8 in the palette. If a cell contains a period character `.` then it is transparent.
+      * 
+      * The default palette is Arne16, but you can specify your own using the `palette` property.
       * @param key The unique string-based key of the Texture.
       * @param config The configuration object needed to generate the texture.
       */
-    def generate(key: String, config: js.Object): Texture = js.native
+    def generate(key: String, config: GenerateTextureConfig): Texture = js.native
     /**
       * Returns a Texture from the Texture Manager that matches the given key.
       * 
@@ -911,8 +942,8 @@ object Textures extends js.Object {
       * see the WebGL Snapshot function instead.
       * @param key The unique string-based key of the Texture.
       * @param frame The string-based name, or integer based index, of the Frame to get from the Texture.
-      * @param type [description] Default 'image/png'.
-      * @param encoderOptions [description] Default 0.92.
+      * @param type A DOMString indicating the image format. The default format type is image/png. Default 'image/png'.
+      * @param encoderOptions A Number between 0 and 1 indicating the image quality to use for image formats that use lossy compression such as image/jpeg and image/webp. If this argument is anything else, the default value for image quality is used. The default value is 0.92. Other arguments are ignored. Default 0.92.
       */
     def getBase64(key: String): String = js.native
     def getBase64(key: String, frame: String): String = js.native

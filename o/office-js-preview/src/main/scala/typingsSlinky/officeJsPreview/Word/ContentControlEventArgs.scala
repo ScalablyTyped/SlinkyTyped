@@ -18,7 +18,6 @@ import scala.scalajs.js.annotation._
   * [Api set: WordApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@js.native
 trait ContentControlEventArgs extends js.Object {
   /**
     *
@@ -27,7 +26,7 @@ trait ContentControlEventArgs extends js.Object {
     * [Api set: WordApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var contentControl: ContentControl = js.native
+  var contentControl: ContentControl
   /**
     *
     * The event type. See Word.EventType for details.
@@ -35,7 +34,7 @@ trait ContentControlEventArgs extends js.Object {
     * [Api set: WordApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var eventType: EventType | ContentControlDeleted | ContentControlSelectionChanged | ContentControlDataChanged | ContentControlAdded | AnnotationAdded | AnnotationChanged | AnnotationDeleted = js.native
+  var eventType: EventType | ContentControlDeleted | ContentControlSelectionChanged | ContentControlDataChanged | ContentControlAdded | AnnotationAdded | AnnotationChanged | AnnotationDeleted
 }
 
 object ContentControlEventArgs {
@@ -47,27 +46,5 @@ object ContentControlEventArgs {
     val __obj = js.Dynamic.literal(contentControl = contentControl.asInstanceOf[js.Any], eventType = eventType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentControlEventArgs]
   }
-  @scala.inline
-  implicit class ContentControlEventArgsOps[Self <: ContentControlEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentControl(value: ContentControl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventType(
-      value: EventType | ContentControlDeleted | ContentControlSelectionChanged | ContentControlDataChanged | ContentControlAdded | AnnotationAdded | AnnotationChanged | AnnotationDeleted
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

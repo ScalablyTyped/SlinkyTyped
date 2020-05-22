@@ -65,5 +65,10 @@ class WebXRInput protected () extends IDisposable {
     * the xr session manager for this session
     */
   var xrSessionManager: WebXRSessionManager = js.native
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 

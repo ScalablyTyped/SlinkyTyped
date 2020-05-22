@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtensionQuery extends js.Object {
   /**
     * When retrieving extensions with a query; frequently the caller only needs a small subset of the assets. The caller may specify a list of asset types that should be returned if the extension contains it. All other assets will not be returned.
     */
-  var assetTypes: js.Array[String] = js.native
+  var assetTypes: js.Array[String]
   /**
     * Each filter is a unique query and will have matching set of extensions returned from the request. Each result will have the same index in the resulting array that the filter had in the incoming query.
     */
-  var filters: js.Array[QueryFilter] = js.native
+  var filters: js.Array[QueryFilter]
   /**
     * The Flags are used to deterine which set of information the caller would like returned for the matched extensions.
     */
-  var flags: ExtensionQueryFlags = js.native
+  var flags: ExtensionQueryFlags
 }
 
 object ExtensionQuery {
@@ -26,31 +25,5 @@ object ExtensionQuery {
     val __obj = js.Dynamic.literal(assetTypes = assetTypes.asInstanceOf[js.Any], filters = filters.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtensionQuery]
   }
-  @scala.inline
-  implicit class ExtensionQueryOps[Self <: ExtensionQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssetTypes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFilters(value: js.Array[QueryFilter]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlags(value: ExtensionQueryFlags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

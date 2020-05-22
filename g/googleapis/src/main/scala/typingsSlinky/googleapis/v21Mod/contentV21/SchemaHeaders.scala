@@ -58,77 +58,20 @@ trait SchemaHeaders extends js.Object {
 
 object SchemaHeaders {
   @scala.inline
-  def apply(): SchemaHeaders = {
+  def apply(
+    locations: js.Array[SchemaLocationIdSet] = null,
+    numberOfItems: js.Array[String] = null,
+    postalCodeGroupNames: js.Array[String] = null,
+    prices: js.Array[SchemaPrice] = null,
+    weights: js.Array[SchemaWeight] = null
+  ): SchemaHeaders = {
     val __obj = js.Dynamic.literal()
+    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
+    if (numberOfItems != null) __obj.updateDynamic("numberOfItems")(numberOfItems.asInstanceOf[js.Any])
+    if (postalCodeGroupNames != null) __obj.updateDynamic("postalCodeGroupNames")(postalCodeGroupNames.asInstanceOf[js.Any])
+    if (prices != null) __obj.updateDynamic("prices")(prices.asInstanceOf[js.Any])
+    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHeaders]
   }
-  @scala.inline
-  implicit class SchemaHeadersOps[Self <: SchemaHeaders] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocations(value: js.Array[SchemaLocationIdSet]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfItems(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostalCodeGroupNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeGroupNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostalCodeGroupNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeGroupNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrices(value: js.Array[SchemaPrice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeights(value: js.Array[SchemaWeight]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weights")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weights")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

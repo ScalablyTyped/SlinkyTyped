@@ -25,41 +25,11 @@ trait SchemaInsertTableRowRequest extends js.Object {
 
 object SchemaInsertTableRowRequest {
   @scala.inline
-  def apply(): SchemaInsertTableRowRequest = {
+  def apply(insertBelow: js.UndefOr[Boolean] = js.undefined, tableCellLocation: SchemaTableCellLocation = null): SchemaInsertTableRowRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(insertBelow)) __obj.updateDynamic("insertBelow")(insertBelow.get.asInstanceOf[js.Any])
+    if (tableCellLocation != null) __obj.updateDynamic("tableCellLocation")(tableCellLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInsertTableRowRequest]
   }
-  @scala.inline
-  implicit class SchemaInsertTableRowRequestOps[Self <: SchemaInsertTableRowRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertBelow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBelow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertBelow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBelow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableCellLocation(value: SchemaTableCellLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableCellLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellLocation")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

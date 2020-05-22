@@ -4,38 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RibbonSettings extends js.Object {
   /** Gets or sets an object that indicates application tab settings in Spreadsheet.
     */
-  var applicationTab: js.UndefOr[RibbonSettingsApplicationTab] = js.native
+  var applicationTab: js.UndefOr[RibbonSettingsApplicationTab] = js.undefined
 }
 
 object RibbonSettings {
   @scala.inline
-  def apply(): RibbonSettings = {
+  def apply(applicationTab: RibbonSettingsApplicationTab = null): RibbonSettings = {
     val __obj = js.Dynamic.literal()
+    if (applicationTab != null) __obj.updateDynamic("applicationTab")(applicationTab.asInstanceOf[js.Any])
     __obj.asInstanceOf[RibbonSettings]
   }
-  @scala.inline
-  implicit class RibbonSettingsOps[Self <: RibbonSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationTab(value: RibbonSettingsApplicationTab): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationTab")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationTab: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationTab")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

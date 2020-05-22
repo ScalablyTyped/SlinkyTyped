@@ -4,71 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeclarationNewProps extends js.Object {
   /**
     * The declaration's property name.
     */
-  var prop: js.UndefOr[String] = js.native
-  var raws: js.UndefOr[DeclarationRaws] = js.native
+  var prop: js.UndefOr[String] = js.undefined
+  var raws: js.UndefOr[DeclarationRaws] = js.undefined
   /**
     * The declaration's value. This value will be cleaned of comments. If the
     * source value contained comments, those comments will be available in the
     * _value.raws property. If you have not changed the value, the result of
     * decl.toString() will include the original raws value (comments and all).
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object DeclarationNewProps {
   @scala.inline
-  def apply(): DeclarationNewProps = {
+  def apply(prop: String = null, raws: DeclarationRaws = null, value: String = null): DeclarationNewProps = {
     val __obj = js.Dynamic.literal()
+    if (prop != null) __obj.updateDynamic("prop")(prop.asInstanceOf[js.Any])
+    if (raws != null) __obj.updateDynamic("raws")(raws.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclarationNewProps]
   }
-  @scala.inline
-  implicit class DeclarationNewPropsOps[Self <: DeclarationNewProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaws(value: DeclarationRaws): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaws: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raws")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

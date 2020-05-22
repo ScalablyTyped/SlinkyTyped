@@ -15,5 +15,16 @@ class ^ protected () extends UnsafeCachePlugin {
     cache: Dictionary[_],
     target: String
   ) = this()
+  /* CompleteClass */
+  override var cache: Dictionary[_] = js.native
+  /* CompleteClass */
+  override var source: String = js.native
+  /* CompleteClass */
+  override var target: String = js.native
+  /* CompleteClass */
+  @JSName("apply")
+  override def apply(resolver: typingsSlinky.enhancedResolve.resolverMod.^): Unit = js.native
+  /* CompleteClass */
+  override def filterPredicate(request: ResolverRequest): Boolean = js.native
 }
 

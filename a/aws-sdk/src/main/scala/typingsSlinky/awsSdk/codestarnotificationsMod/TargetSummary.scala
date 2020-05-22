@@ -22,53 +22,16 @@ trait TargetSummary extends js.Object {
 
 object TargetSummary {
   @scala.inline
-  def apply(): TargetSummary = {
+  def apply(
+    TargetAddress: TargetAddress = null,
+    TargetStatus: TargetStatus = null,
+    TargetType: TargetType = null
+  ): TargetSummary = {
     val __obj = js.Dynamic.literal()
+    if (TargetAddress != null) __obj.updateDynamic("TargetAddress")(TargetAddress.asInstanceOf[js.Any])
+    if (TargetStatus != null) __obj.updateDynamic("TargetStatus")(TargetStatus.asInstanceOf[js.Any])
+    if (TargetType != null) __obj.updateDynamic("TargetType")(TargetType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetSummary]
   }
-  @scala.inline
-  implicit class TargetSummaryOps[Self <: TargetSummary] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTargetAddress(value: TargetAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetStatus(value: TargetStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetType(value: TargetType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,10 +11,9 @@ import scala.scalajs.js.annotation._
   * allows notification when the selected range is changed.
   * @see com.sun.star.sheet.XRangeSelection
   */
-@js.native
 trait XRangeSelectionChangeListener extends XEventListener {
   /** is called when the selected range is changed while range selection is active. */
-  def descriptorChanged(aEvent: RangeSelectionEvent): Unit = js.native
+  def descriptorChanged(aEvent: RangeSelectionEvent): Unit
 }
 
 object XRangeSelectionChangeListener {
@@ -29,19 +28,5 @@ object XRangeSelectionChangeListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), descriptorChanged = js.Any.fromFunction1(descriptorChanged), disposing = js.Any.fromFunction1(disposing), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XRangeSelectionChangeListener]
   }
-  @scala.inline
-  implicit class XRangeSelectionChangeListenerOps[Self <: XRangeSelectionChangeListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDescriptorChanged(value: RangeSelectionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptorChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

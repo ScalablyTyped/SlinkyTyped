@@ -437,6 +437,11 @@ object InputGroupText {
   }
   
   def withProps[T](p: InputGroupTextProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[InputGroupTextProps]))
+  }
   implicit def make[T](companion: InputGroupText.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

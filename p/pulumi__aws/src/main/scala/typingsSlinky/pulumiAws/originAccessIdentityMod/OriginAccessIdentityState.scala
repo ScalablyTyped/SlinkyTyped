@@ -42,89 +42,22 @@ trait OriginAccessIdentityState extends js.Object {
 
 object OriginAccessIdentityState {
   @scala.inline
-  def apply(): OriginAccessIdentityState = {
+  def apply(
+    callerReference: Input[String] = null,
+    cloudfrontAccessIdentityPath: Input[String] = null,
+    comment: Input[String] = null,
+    etag: Input[String] = null,
+    iamArn: Input[String] = null,
+    s3CanonicalUserId: Input[String] = null
+  ): OriginAccessIdentityState = {
     val __obj = js.Dynamic.literal()
+    if (callerReference != null) __obj.updateDynamic("callerReference")(callerReference.asInstanceOf[js.Any])
+    if (cloudfrontAccessIdentityPath != null) __obj.updateDynamic("cloudfrontAccessIdentityPath")(cloudfrontAccessIdentityPath.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (iamArn != null) __obj.updateDynamic("iamArn")(iamArn.asInstanceOf[js.Any])
+    if (s3CanonicalUserId != null) __obj.updateDynamic("s3CanonicalUserId")(s3CanonicalUserId.asInstanceOf[js.Any])
     __obj.asInstanceOf[OriginAccessIdentityState]
   }
-  @scala.inline
-  implicit class OriginAccessIdentityStateOps[Self <: OriginAccessIdentityState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallerReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callerReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudfrontAccessIdentityPath(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudfrontAccessIdentityPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudfrontAccessIdentityPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudfrontAccessIdentityPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamArn(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3CanonicalUserId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3CanonicalUserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3CanonicalUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3CanonicalUserId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

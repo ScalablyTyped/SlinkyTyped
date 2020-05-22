@@ -16,28 +16,27 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.frame.XDispatchProvider
   * @since OOo 2.0
   */
-@js.native
 trait XToolbarController extends XInterface {
   /** notifies a component that a single click has been made on the toolbar item. */
-  def click(): Unit = js.native
+  def click(): Unit
   /**
     * requests to create an item window which can be added to the toolbar.
     * @param Parent a {@link com.sun.star.awt.XWindow} which must be used as a parent for the requested item window.
     * @returns a {@link com.sun.star.awt.XWindow} which can be added to a toolbar. The reference must be empty if a component does not want to provide an item w
     */
-  def createItemWindow(Parent: XWindow): XWindow = js.native
+  def createItemWindow(Parent: XWindow): XWindow
   /**
     * requests to create a pop-up window for additional functions.
     * @returns a {@link com.sun.star.awt.XWindow} which provides additional functions to the user. The reference must be empty if component does not want to pro
     */
-  def createPopupWindow(): XWindow = js.native
+  def createPopupWindow(): XWindow
   /** notifies a component that a double click has been made on the toolbar item. */
-  def doubleClick(): Unit = js.native
+  def doubleClick(): Unit
   /**
     * provides a function to execute the command which is bound to the toolbar controller.
     * @param KeyModifier a combination of {@link com.sun.star.awt.KeyModifier} value that represent the current state of the modifier keys.  This function is
     */
-  def execute(KeyModifier: Double): Unit = js.native
+  def execute(KeyModifier: Double): Unit
 }
 
 object XToolbarController {
@@ -55,43 +54,5 @@ object XToolbarController {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), click = js.Any.fromFunction0(click), createItemWindow = js.Any.fromFunction1(createItemWindow), createPopupWindow = js.Any.fromFunction0(createPopupWindow), doubleClick = js.Any.fromFunction0(doubleClick), execute = js.Any.fromFunction1(execute), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XToolbarController]
   }
-  @scala.inline
-  implicit class XToolbarControllerOps[Self <: XToolbarController] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClick(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateItemWindow(value: XWindow => XWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createItemWindow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreatePopupWindow(value: () => XWindow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createPopupWindow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDoubleClick(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExecute(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

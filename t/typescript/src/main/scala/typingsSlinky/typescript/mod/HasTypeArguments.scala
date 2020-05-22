@@ -13,16 +13,3 @@ import scala.scalajs.js.annotation._
 */
 trait HasTypeArguments extends js.Object
 
-object HasTypeArguments {
-  @scala.inline
-  implicit def apply(value: CallExpression): HasTypeArguments = value.asInstanceOf[HasTypeArguments]
-  @scala.inline
-  implicit def apply(value: JsxOpeningElement): HasTypeArguments = value.asInstanceOf[HasTypeArguments]
-  @scala.inline
-  implicit def apply(value: JsxSelfClosingElement): HasTypeArguments = value.asInstanceOf[HasTypeArguments]
-  @scala.inline
-  implicit def apply(value: NewExpression): HasTypeArguments = value.asInstanceOf[HasTypeArguments]
-  @scala.inline
-  implicit def apply(value: TaggedTemplateExpression): HasTypeArguments = value.asInstanceOf[HasTypeArguments]
-}
-

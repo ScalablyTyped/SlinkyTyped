@@ -1,0 +1,68 @@
+package typingsSlinky.wordpressComponents.components
+
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.Control
+import typingsSlinky.wordpressComponents.mod.DropdownMenu.^
+import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object DropdownMenu {
+  object PropsWithChildren {
+    @JSImport("@wordpress/components", "DropdownMenu")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, ^] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def icon(value: typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon): this.type = set("icon", value.asInstanceOf[js.Any])
+      @scala.inline
+      def menuLabel(value: String): this.type = set("menuLabel", value.asInstanceOf[js.Any])
+      @scala.inline
+      def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.PropsWithChildren): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(label: String): Builder = {
+        val __props = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.PropsWithChildren]))
+    }
+  }
+  
+  object PropsWithControls {
+    @JSImport("@wordpress/components", "DropdownMenu")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, ^] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def icon(value: typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon): this.type = set("icon", value.asInstanceOf[js.Any])
+      @scala.inline
+      def menuLabel(value: String): this.type = set("menuLabel", value.asInstanceOf[js.Any])
+      @scala.inline
+      def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.PropsWithControls): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(controls: js.Array[Control], label: String): Builder = {
+        val __props = js.Dynamic.literal(controls = controls.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.wordpressComponents.dropdownMenuMod.DropdownMenu.PropsWithControls]))
+    }
+  }
+  
+}
+

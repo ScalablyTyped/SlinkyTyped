@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   * This service is still unpublished and unstable.
   * @since LibreOffice 4.0
   */
-@js.native
 trait ReadWriteAccess
   extends XHierarchicalNameReplace
      with XChangesBatch
@@ -25,7 +24,7 @@ trait ReadWriteAccess
     * Service constructor.
     * @param locale a string representation of the locale to use for localized properties; use `*` for all-locale access
     */
-  def create(locale: String): Unit = js.native
+  def create(locale: String): Unit
 }
 
 object ReadWriteAccess {
@@ -48,19 +47,5 @@ object ReadWriteAccess {
     val __obj = js.Dynamic.literal(PendingChanges = PendingChanges.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), commitChanges = js.Any.fromFunction0(commitChanges), create = js.Any.fromFunction1(create), getByHierarchicalName = js.Any.fromFunction1(getByHierarchicalName), getPendingChanges = js.Any.fromFunction0(getPendingChanges), getPropertyByHierarchicalName = js.Any.fromFunction1(getPropertyByHierarchicalName), hasByHierarchicalName = js.Any.fromFunction1(hasByHierarchicalName), hasPendingChanges = js.Any.fromFunction0(hasPendingChanges), hasPropertyByHierarchicalName = js.Any.fromFunction1(hasPropertyByHierarchicalName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), replaceByHierarchicalName = js.Any.fromFunction2(replaceByHierarchicalName))
     __obj.asInstanceOf[ReadWriteAccess]
   }
-  @scala.inline
-  implicit class ReadWriteAccessOps[Self <: ReadWriteAccess] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreate(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

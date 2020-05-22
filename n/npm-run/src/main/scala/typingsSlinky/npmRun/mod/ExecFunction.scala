@@ -6,12 +6,11 @@ import typingsSlinky.node.anon.StderrStdout
 import typingsSlinky.node.anon.Stdout
 import typingsSlinky.node.anon.encodingBufferEncodingExe
 import typingsSlinky.node.anon.encodingbuffernullExecOpt
-import typingsSlinky.node.anon.encodingstringExecOptions
-import typingsSlinky.node.anon.encodingstringnullExecOpt
 import typingsSlinky.node.childProcessMod.ChildProcess
 import typingsSlinky.node.childProcessMod.ExecException
 import typingsSlinky.node.childProcessMod.ExecOptions
 import typingsSlinky.node.childProcessMod.PromiseWithChild
+import typingsSlinky.node.fsMod.BaseEncodingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +22,17 @@ trait ExecFunction extends js.Object {
   def apply(
     command: String,
     callback: js.Function3[/* error */ ExecException | Null, /* stdout */ String, /* stderr */ String, Unit]
+  ): ChildProcess = js.native
+  def apply(command: String, options: BaseEncodingOptions with ExecOptions): ChildProcess = js.native
+  def apply(
+    command: String,
+    options: BaseEncodingOptions with ExecOptions,
+    callback: js.Function3[
+      /* error */ ExecException | Null, 
+      /* stdout */ String | Buffer, 
+      /* stderr */ String | Buffer, 
+      Unit
+    ]
   ): ChildProcess = js.native
   def apply(
     command: String,
@@ -39,7 +49,12 @@ trait ExecFunction extends js.Object {
   def apply(
     command: String,
     options: encodingBufferEncodingExe,
-    callback: js.Function3[/* error */ ExecException | Null, /* stdout */ String, /* stderr */ String, Unit]
+    callback: js.Function3[
+      ExecException | Null, 
+      Buffer | (/* stdout */ String), 
+      Buffer | (/* stderr */ String), 
+      Unit
+    ]
   ): ChildProcess = js.native
   // `options` with `"buffer"` or `null` for `encoding` means stdout/stderr are definitely `Buffer`.
   def apply(command: String, options: encodingbuffernullExecOpt): ChildProcess = js.native
@@ -47,30 +62,6 @@ trait ExecFunction extends js.Object {
     command: String,
     options: encodingbuffernullExecOpt,
     callback: js.Function3[/* error */ ExecException | Null, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
-  ): ChildProcess = js.native
-  // `options` with an `encoding` whose type is `string` means stdout/stderr could either be `Buffer` or `string`.
-  // There is no guarantee the `encoding` is unknown as `string` is a superset of `BufferEncoding`.
-  def apply(command: String, options: encodingstringExecOptions): ChildProcess = js.native
-  def apply(
-    command: String,
-    options: encodingstringExecOptions,
-    callback: js.Function3[
-      /* error */ ExecException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
-      Unit
-    ]
-  ): ChildProcess = js.native
-  def apply(command: String, options: encodingstringnullExecOpt): ChildProcess = js.native
-  def apply(
-    command: String,
-    options: encodingstringnullExecOpt,
-    callback: js.Function3[
-      /* error */ ExecException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
-      Unit
-    ]
   ): ChildProcess = js.native
   // `options` without an `encoding` means stdout/stderr are definitely `string`.
   def apply(command: String, options: ExecOptions): ChildProcess = js.native
@@ -80,9 +71,9 @@ trait ExecFunction extends js.Object {
     callback: js.Function3[/* error */ ExecException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): ChildProcess = js.native
   def __promisify__(command: String): PromiseWithChild[Stderr] = js.native
+  def __promisify__(command: String, options: BaseEncodingOptions with ExecOptions): PromiseWithChild[StderrStdout] = js.native
   def __promisify__(command: String, options: encodingBufferEncodingExe): PromiseWithChild[Stderr] = js.native
   def __promisify__(command: String, options: encodingbuffernullExecOpt): PromiseWithChild[Stdout] = js.native
-  def __promisify__(command: String, options: encodingstringnullExecOpt): PromiseWithChild[StderrStdout] = js.native
   def __promisify__(command: String, options: ExecOptions): PromiseWithChild[Stderr] = js.native
 }
 

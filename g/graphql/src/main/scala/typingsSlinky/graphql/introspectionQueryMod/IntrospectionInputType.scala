@@ -1,5 +1,9 @@
 package typingsSlinky.graphql.introspectionQueryMod
 
+import typingsSlinky.graphql.graphqlStrings.ENUM
+import typingsSlinky.graphql.graphqlStrings.INPUT_OBJECT
+import typingsSlinky.graphql.graphqlStrings.SCALAR
+import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +17,32 @@ trait IntrospectionInputType extends js.Object
 
 object IntrospectionInputType {
   @scala.inline
-  implicit def apply(value: IntrospectionEnumType): IntrospectionInputType = value.asInstanceOf[IntrospectionInputType]
+  def IntrospectionScalarType(kind: SCALAR, name: String, description: js.UndefOr[Null | Maybe[String]] = js.undefined): IntrospectionInputType = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionInputType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionInputObjectType): IntrospectionInputType = value.asInstanceOf[IntrospectionInputType]
+  def IntrospectionEnumType(
+    enumValues: js.Array[IntrospectionEnumValue],
+    kind: ENUM,
+    name: String,
+    description: js.UndefOr[Null | Maybe[String]] = js.undefined
+  ): IntrospectionInputType = {
+    val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionInputType]
+  }
   @scala.inline
-  implicit def apply(value: IntrospectionScalarType): IntrospectionInputType = value.asInstanceOf[IntrospectionInputType]
+  def IntrospectionInputObjectType(
+    inputFields: js.Array[IntrospectionInputValue],
+    kind: INPUT_OBJECT,
+    name: String,
+    description: js.UndefOr[Null | Maybe[String]] = js.undefined
+  ): IntrospectionInputType = {
+    val __obj = js.Dynamic.literal(inputFields = inputFields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntrospectionInputType]
+  }
 }
 

@@ -5,11 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SimpleSyncStore extends js.Object {
-  def del(key: String): Unit = js.native
-  def get(key: String): js.UndefOr[Buffer] = js.native
-  def put(key: String, data: Buffer, overwrite: Boolean): Boolean = js.native
+  def del(key: String): Unit
+  def get(key: String): js.UndefOr[Buffer]
+  def put(key: String, data: Buffer, overwrite: Boolean): Boolean
 }
 
 object SimpleSyncStore {
@@ -18,31 +17,5 @@ object SimpleSyncStore {
     val __obj = js.Dynamic.literal(del = js.Any.fromFunction1(del), get = js.Any.fromFunction1(get), put = js.Any.fromFunction3(put))
     __obj.asInstanceOf[SimpleSyncStore]
   }
-  @scala.inline
-  implicit class SimpleSyncStoreOps[Self <: SimpleSyncStore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDel(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: String => js.UndefOr[Buffer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPut(value: (String, Buffer, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,8 +4,9 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactDayPicker.commonMod.DayModifiers
-import typingsSlinky.reactDayPicker.commonMod.InputClassNames
+import typingsSlinky.reactDayPicker.classNamesMod.InputClassNames
+import typingsSlinky.reactDayPicker.dayPickerInputMod.default
+import typingsSlinky.reactDayPicker.modifiersMod.DayModifiers
 import typingsSlinky.reactDayPicker.propsMod.DayPickerInputProps
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
@@ -13,14 +14,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DayPickerInput {
-  @JSImport("react-day-picker/types/DayPickerInput", "DayPickerInput")
+  @JSImport("react-day-picker/types/DayPickerInput", JSImport.Default)
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput] {
+       with StBuildingComponent[tag.type, default] {
     @scala.inline
     def classNames(value: InputClassNames): this.type = set("classNames", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,9 +47,7 @@ object DayPickerInput {
     @scala.inline
     def onClick(value: /* e */ SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onDayChange(
-      value: (/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ typingsSlinky.reactDayPicker.dayPickerInputMod.DayPickerInput) => Unit
-    ): this.type = set("onDayChange", js.Any.fromFunction3(value))
+    def onDayChange(value: (/* day */ js.Date, /* DayModifiers */ DayModifiers, /* dayPickerInput */ default) => Unit): this.type = set("onDayChange", js.Any.fromFunction3(value))
     @scala.inline
     def onDayPickerHide(value: () => Unit): this.type = set("onDayPickerHide", js.Any.fromFunction0(value))
     @scala.inline
@@ -65,6 +64,8 @@ object DayPickerInput {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def showOverlay(value: Boolean): this.type = set("showOverlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def valueDate(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

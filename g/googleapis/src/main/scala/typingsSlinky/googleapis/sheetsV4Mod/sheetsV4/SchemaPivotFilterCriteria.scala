@@ -17,29 +17,10 @@ trait SchemaPivotFilterCriteria extends js.Object {
 
 object SchemaPivotFilterCriteria {
   @scala.inline
-  def apply(): SchemaPivotFilterCriteria = {
+  def apply(visibleValues: js.Array[String] = null): SchemaPivotFilterCriteria = {
     val __obj = js.Dynamic.literal()
+    if (visibleValues != null) __obj.updateDynamic("visibleValues")(visibleValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivotFilterCriteria]
   }
-  @scala.inline
-  implicit class SchemaPivotFilterCriteriaOps[Self <: SchemaPivotFilterCriteria] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVisibleValues(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisibleValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

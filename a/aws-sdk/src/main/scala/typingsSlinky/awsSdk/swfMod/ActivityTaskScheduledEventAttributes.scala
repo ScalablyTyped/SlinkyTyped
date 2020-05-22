@@ -58,126 +58,24 @@ object ActivityTaskScheduledEventAttributes {
     activityId: ActivityId,
     activityType: ActivityType,
     decisionTaskCompletedEventId: EventId,
-    taskList: TaskList
+    taskList: TaskList,
+    control: Data = null,
+    heartbeatTimeout: DurationInSecondsOptional = null,
+    input: Data = null,
+    scheduleToCloseTimeout: DurationInSecondsOptional = null,
+    scheduleToStartTimeout: DurationInSecondsOptional = null,
+    startToCloseTimeout: DurationInSecondsOptional = null,
+    taskPriority: TaskPriority = null
   ): ActivityTaskScheduledEventAttributes = {
     val __obj = js.Dynamic.literal(activityId = activityId.asInstanceOf[js.Any], activityType = activityType.asInstanceOf[js.Any], decisionTaskCompletedEventId = decisionTaskCompletedEventId.asInstanceOf[js.Any], taskList = taskList.asInstanceOf[js.Any])
+    if (control != null) __obj.updateDynamic("control")(control.asInstanceOf[js.Any])
+    if (heartbeatTimeout != null) __obj.updateDynamic("heartbeatTimeout")(heartbeatTimeout.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (scheduleToCloseTimeout != null) __obj.updateDynamic("scheduleToCloseTimeout")(scheduleToCloseTimeout.asInstanceOf[js.Any])
+    if (scheduleToStartTimeout != null) __obj.updateDynamic("scheduleToStartTimeout")(scheduleToStartTimeout.asInstanceOf[js.Any])
+    if (startToCloseTimeout != null) __obj.updateDynamic("startToCloseTimeout")(startToCloseTimeout.asInstanceOf[js.Any])
+    if (taskPriority != null) __obj.updateDynamic("taskPriority")(taskPriority.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityTaskScheduledEventAttributes]
   }
-  @scala.inline
-  implicit class ActivityTaskScheduledEventAttributesOps[Self <: ActivityTaskScheduledEventAttributes] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityId(value: ActivityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActivityType(value: ActivityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDecisionTaskCompletedEventId(value: EventId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTaskList(value: TaskList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControl(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("control")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeartbeatTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeatTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeartbeatTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeatTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleToCloseTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleToCloseTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleToCloseTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleToCloseTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduleToStartTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleToStartTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduleToStartTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleToStartTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startToCloseTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartToCloseTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startToCloseTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTaskPriority(value: TaskPriority): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskPriority")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskPriority: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskPriority")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

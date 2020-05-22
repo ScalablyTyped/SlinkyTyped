@@ -14,29 +14,10 @@ trait CreateRegexPatternSetResponse extends js.Object {
 
 object CreateRegexPatternSetResponse {
   @scala.inline
-  def apply(): CreateRegexPatternSetResponse = {
+  def apply(Summary: RegexPatternSetSummary = null): CreateRegexPatternSetResponse = {
     val __obj = js.Dynamic.literal()
+    if (Summary != null) __obj.updateDynamic("Summary")(Summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRegexPatternSetResponse]
   }
-  @scala.inline
-  implicit class CreateRegexPatternSetResponseOps[Self <: CreateRegexPatternSetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSummary(value: RegexPatternSetSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

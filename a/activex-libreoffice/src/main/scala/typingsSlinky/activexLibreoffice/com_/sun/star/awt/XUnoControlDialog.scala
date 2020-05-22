@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * our code needs.
   * @since LibreOffice 4.2
   */
-@js.native
 trait XUnoControlDialog
   extends XControl
      with XControlContainer

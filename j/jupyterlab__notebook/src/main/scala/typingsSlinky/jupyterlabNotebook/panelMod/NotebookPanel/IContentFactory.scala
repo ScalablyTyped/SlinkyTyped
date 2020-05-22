@@ -11,13 +11,12 @@ import scala.scalajs.js.annotation._
 /**
   * A content factory interface for NotebookPanel.
   */
-@js.native
 trait IContentFactory
   extends typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook.IContentFactory {
   /**
     * Create a new content area for the panel.
     */
-  def createNotebook(options: IOptions): Notebook = js.native
+  def createNotebook(options: IOptions): Notebook
 }
 
 /**

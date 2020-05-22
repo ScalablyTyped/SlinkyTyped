@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GrpcObject
   extends /* name */ StringDictionary[
       GrpcObject | (Instantiable3[
@@ -20,8 +19,18 @@ trait GrpcObject
 
 object GrpcObject {
   @scala.inline
-  def apply(): GrpcObject = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[
+      GrpcObject | (Instantiable3[
+        /* address */ String, 
+        /* credentials */ ChannelCredentials, 
+        js.UndefOr[/* options */ js.Object], 
+        Client
+      ]) | Message[js.Object]
+    ] = null
+  ): GrpcObject = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[GrpcObject]
   }
 }

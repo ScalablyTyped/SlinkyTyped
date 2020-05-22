@@ -22,53 +22,16 @@ trait CreateDatasetResponse extends js.Object {
 
 object CreateDatasetResponse {
   @scala.inline
-  def apply(): CreateDatasetResponse = {
+  def apply(
+    datasetArn: DatasetArn = null,
+    datasetName: DatasetName = null,
+    retentionPeriod: RetentionPeriod = null
+  ): CreateDatasetResponse = {
     val __obj = js.Dynamic.literal()
+    if (datasetArn != null) __obj.updateDynamic("datasetArn")(datasetArn.asInstanceOf[js.Any])
+    if (datasetName != null) __obj.updateDynamic("datasetName")(datasetName.asInstanceOf[js.Any])
+    if (retentionPeriod != null) __obj.updateDynamic("retentionPeriod")(retentionPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDatasetResponse]
   }
-  @scala.inline
-  implicit class CreateDatasetResponseOps[Self <: CreateDatasetResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatasetArn(value: DatasetArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatasetName(value: DatasetName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatasetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetentionPeriod(value: RetentionPeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetentionPeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

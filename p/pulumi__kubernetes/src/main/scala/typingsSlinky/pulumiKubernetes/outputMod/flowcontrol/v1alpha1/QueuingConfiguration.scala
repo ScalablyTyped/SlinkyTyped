@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * QueuingConfiguration holds the configuration parameters for queuing
   */
-@js.native
 trait QueuingConfiguration extends js.Object {
   /**
     * `handSize` is a small positive number that configures the shuffle sharding of requests into
@@ -19,20 +18,20 @@ trait QueuingConfiguration extends js.Object {
     * documentation for more extensive guidance on setting this field.  This field has a default
     * value of 8.
     */
-  val handSize: Double = js.native
+  val handSize: Double
   /**
     * `queueLengthLimit` is the maximum number of requests allowed to be waiting in a given queue
     * of this priority level at a time; excess requests are rejected.  This value must be
     * positive.  If not specified, it will be defaulted to 50.
     */
-  val queueLengthLimit: Double = js.native
+  val queueLengthLimit: Double
   /**
     * `queues` is the number of queues for this priority level. The queues exist independently at
     * each apiserver. The value must be positive.  Setting it to 1 effectively precludes
     * shufflesharding and thus makes the distinguisher method of associated flow schemas
     * irrelevant.  This field has a default value of 64.
     */
-  val queues: Double = js.native
+  val queues: Double
 }
 
 object QueuingConfiguration {
@@ -41,31 +40,5 @@ object QueuingConfiguration {
     val __obj = js.Dynamic.literal(handSize = handSize.asInstanceOf[js.Any], queueLengthLimit = queueLengthLimit.asInstanceOf[js.Any], queues = queues.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueuingConfiguration]
   }
-  @scala.inline
-  implicit class QueuingConfigurationOps[Self <: QueuingConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueueLengthLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queueLengthLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQueues(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

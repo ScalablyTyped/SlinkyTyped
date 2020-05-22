@@ -2,7 +2,6 @@ package typingsSlinky.reactNativeElements.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -14,165 +13,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BadgeProps extends js.Object {
   /**
     * Custom component to replace the badge component
     *
     * @default View (if onPress then TouchableOpacity)
     */
-  var Component: js.UndefOr[ReactComponentClass[js.Object]] = js.native
+  var Component: js.UndefOr[ReactComponentClass[js.Object]] = js.undefined
   /**
     * Additional styling for badge (background) view component
     */
-  var badgeStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var badgeStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /**
     * Style for the container
     */
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /**
     * Function called when pressed on the badge
     */
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Determines color of the indicator
     *
     * @default primary
     */
-  var status: js.UndefOr[primary | success | warning | error] = js.native
+  var status: js.UndefOr[primary | success | warning | error] = js.undefined
   /**
     * Style for the text in the badge
     */
-  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
   /**
     * Text value to be displayed by badge
     *
     * @default null
     */
-  var value: js.UndefOr[TagMod[Any]] = js.native
+  var value: js.UndefOr[TagMod[Any]] = js.undefined
 }
 
 object BadgeProps {
   @scala.inline
-  def apply(): BadgeProps = {
+  def apply(
+    Component: ReactComponentClass[js.Object] = null,
+    badgeStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    containerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    onPress: () => Unit = null,
+    status: primary | success | warning | error = null,
+    textStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    value: TagMod[Any] = null
+  ): BadgeProps = {
     val __obj = js.Dynamic.literal()
+    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
+    if (!js.isUndefined(badgeStyle)) __obj.updateDynamic("badgeStyle")(badgeStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(containerStyle)) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
+    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (!js.isUndefined(textStyle)) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadgeProps]
   }
-  @scala.inline
-  implicit class BadgePropsOps[Self <: BadgeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponent(value: ReactComponentClass[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBadgeStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBadgeStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withOnPress(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: primary | success | warning | error): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withValueReactElement(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: TagMod[Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,6 +5,10 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMic.mod.ReactMicProps
 import typingsSlinky.reactMic.mod.ReactMicStopEvent
+import typingsSlinky.reactMic.reactMicNumbers.`1`
+import typingsSlinky.reactMic.reactMicNumbers.`2`
+import typingsSlinky.reactMic.reactMicStrings.audioSlashwav
+import typingsSlinky.reactMic.reactMicStrings.audioSlashwebm
 import typingsSlinky.reactMic.reactMicStrings.frequencyBars
 import typingsSlinky.reactMic.reactMicStrings.sinewave
 import scala.scalajs.js
@@ -21,9 +25,19 @@ object ReactMic {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMic.mod.ReactMic] {
     @scala.inline
+    def autoGainControl(value: Boolean): this.type = set("autoGainControl", value.asInstanceOf[js.Any])
+    @scala.inline
     def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
+    def channelCount(value: `1` | `2`): this.type = set("channelCount", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def echoCancellation(value: Boolean): this.type = set("echoCancellation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mimeType(value: audioSlashwebm | audioSlashwav): this.type = set("mimeType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noiseSuppression(value: Boolean): this.type = set("noiseSuppression", value.asInstanceOf[js.Any])
     @scala.inline
     def onData(value: /* recordedData */ Blob => Unit): this.type = set("onData", js.Any.fromFunction1(value))
     @scala.inline

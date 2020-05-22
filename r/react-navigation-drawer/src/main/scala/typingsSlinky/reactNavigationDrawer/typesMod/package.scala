@@ -18,4 +18,5 @@ package object typesMod {
       ]
     ]
   ]
+  type ThemedColor = java.lang.String | typingsSlinky.reactNavigationDrawer.anon.Dark
 }

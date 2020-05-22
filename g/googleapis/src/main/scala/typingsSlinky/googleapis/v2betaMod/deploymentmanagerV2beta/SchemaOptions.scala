@@ -35,65 +35,18 @@ trait SchemaOptions extends js.Object {
 
 object SchemaOptions {
   @scala.inline
-  def apply(): SchemaOptions = {
+  def apply(
+    asyncOptions: js.Array[SchemaAsyncOptions] = null,
+    inputMappings: js.Array[SchemaInputMapping] = null,
+    validationOptions: SchemaValidationOptions = null,
+    virtualProperties: String = null
+  ): SchemaOptions = {
     val __obj = js.Dynamic.literal()
+    if (asyncOptions != null) __obj.updateDynamic("asyncOptions")(asyncOptions.asInstanceOf[js.Any])
+    if (inputMappings != null) __obj.updateDynamic("inputMappings")(inputMappings.asInstanceOf[js.Any])
+    if (validationOptions != null) __obj.updateDynamic("validationOptions")(validationOptions.asInstanceOf[js.Any])
+    if (virtualProperties != null) __obj.updateDynamic("virtualProperties")(virtualProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOptions]
   }
-  @scala.inline
-  implicit class SchemaOptionsOps[Self <: SchemaOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAsyncOptions(value: js.Array[SchemaAsyncOptions]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsyncOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputMappings(value: js.Array[SchemaInputMapping]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationOptions(value: SchemaValidationOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVirtualProperties(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVirtualProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

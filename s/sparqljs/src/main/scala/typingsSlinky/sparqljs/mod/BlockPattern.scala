@@ -10,10 +10,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BlockPattern extends Pattern {
-  var patterns: js.Array[Pattern] = js.native
-  var `type`: optional | union | group | minus | graph | service = js.native
+  var patterns: js.Array[Pattern]
+  var `type`: optional | union | group | minus | graph | service
 }
 
 object BlockPattern {
@@ -23,25 +22,5 @@ object BlockPattern {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockPattern]
   }
-  @scala.inline
-  implicit class BlockPatternOps[Self <: BlockPattern] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPatterns(value: js.Array[Pattern]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patterns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: optional | union | group | minus | graph | service): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

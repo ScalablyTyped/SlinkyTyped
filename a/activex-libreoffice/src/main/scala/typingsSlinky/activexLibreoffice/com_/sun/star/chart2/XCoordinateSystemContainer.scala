@@ -8,21 +8,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XCoordinateSystemContainer extends XInterface {
   /** retrieve all coordinate systems */
-  var CoordinateSystems: SafeArray[XCoordinateSystem] = js.native
+  var CoordinateSystems: SafeArray[XCoordinateSystem]
   /**
     * add an coordinate system to the coordinate system container
     * @throws IllegalArgumentException If the given coordinate system is already contained in the container.
     */
-  def addCoordinateSystem(aCoordSys: XCoordinateSystem): Unit = js.native
+  def addCoordinateSystem(aCoordSys: XCoordinateSystem): Unit
   /** retrieve all coordinate systems */
-  def getCoordinateSystems(): SafeArray[XCoordinateSystem] = js.native
+  def getCoordinateSystems(): SafeArray[XCoordinateSystem]
   /** removes one coordinate system from the coordinate system container. */
-  def removeCoordinateSystem(aCoordSys: XCoordinateSystem): Unit = js.native
+  def removeCoordinateSystem(aCoordSys: XCoordinateSystem): Unit
   /** set all coordinate systems */
-  def setCoordinateSystems(aCoordinateSystems: SeqEquiv[XCoordinateSystem]): Unit = js.native
+  def setCoordinateSystems(aCoordinateSystems: SeqEquiv[XCoordinateSystem]): Unit
 }
 
 object XCoordinateSystemContainer {
@@ -40,43 +39,5 @@ object XCoordinateSystemContainer {
     val __obj = js.Dynamic.literal(CoordinateSystems = CoordinateSystems.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addCoordinateSystem = js.Any.fromFunction1(addCoordinateSystem), getCoordinateSystems = js.Any.fromFunction0(getCoordinateSystems), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeCoordinateSystem = js.Any.fromFunction1(removeCoordinateSystem), setCoordinateSystems = js.Any.fromFunction1(setCoordinateSystems))
     __obj.asInstanceOf[XCoordinateSystemContainer]
   }
-  @scala.inline
-  implicit class XCoordinateSystemContainerOps[Self <: XCoordinateSystemContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoordinateSystems(value: SafeArray[XCoordinateSystem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CoordinateSystems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddCoordinateSystem(value: XCoordinateSystem => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addCoordinateSystem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCoordinateSystems(value: () => SafeArray[XCoordinateSystem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoordinateSystems")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveCoordinateSystem(value: XCoordinateSystem => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCoordinateSystem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetCoordinateSystems(value: SeqEquiv[XCoordinateSystem] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoordinateSystems")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -8,91 +8,43 @@ import scala.scalajs.js.annotation._
 /**
   * EnvVarSource represents a source for the value of an EnvVar.
   */
-@js.native
 trait EnvVarSource extends js.Object {
   /**
     * Selects a key of a ConfigMap.
     */
-  var configMapKeyRef: js.UndefOr[Input[ConfigMapKeySelector]] = js.native
+  var configMapKeyRef: js.UndefOr[Input[ConfigMapKeySelector]] = js.undefined
   /**
     * Selects a field of the pod: supports metadata.name, metadata.namespace, metadata.labels,
     * metadata.annotations, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP,
     * status.podIPs.
     */
-  var fieldRef: js.UndefOr[Input[ObjectFieldSelector]] = js.native
+  var fieldRef: js.UndefOr[Input[ObjectFieldSelector]] = js.undefined
   /**
     * Selects a resource of the container: only resources limits and requests (limits.cpu,
     * limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and
     * requests.ephemeral-storage) are currently supported.
     */
-  var resourceFieldRef: js.UndefOr[Input[ResourceFieldSelector]] = js.native
+  var resourceFieldRef: js.UndefOr[Input[ResourceFieldSelector]] = js.undefined
   /**
     * Selects a key of a secret in the pod's namespace
     */
-  var secretKeyRef: js.UndefOr[Input[SecretKeySelector]] = js.native
+  var secretKeyRef: js.UndefOr[Input[SecretKeySelector]] = js.undefined
 }
 
 object EnvVarSource {
   @scala.inline
-  def apply(): EnvVarSource = {
+  def apply(
+    configMapKeyRef: Input[ConfigMapKeySelector] = null,
+    fieldRef: Input[ObjectFieldSelector] = null,
+    resourceFieldRef: Input[ResourceFieldSelector] = null,
+    secretKeyRef: Input[SecretKeySelector] = null
+  ): EnvVarSource = {
     val __obj = js.Dynamic.literal()
+    if (configMapKeyRef != null) __obj.updateDynamic("configMapKeyRef")(configMapKeyRef.asInstanceOf[js.Any])
+    if (fieldRef != null) __obj.updateDynamic("fieldRef")(fieldRef.asInstanceOf[js.Any])
+    if (resourceFieldRef != null) __obj.updateDynamic("resourceFieldRef")(resourceFieldRef.asInstanceOf[js.Any])
+    if (secretKeyRef != null) __obj.updateDynamic("secretKeyRef")(secretKeyRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvVarSource]
   }
-  @scala.inline
-  implicit class EnvVarSourceOps[Self <: EnvVarSource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigMapKeyRef(value: Input[ConfigMapKeySelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configMapKeyRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigMapKeyRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configMapKeyRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldRef(value: Input[ObjectFieldSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceFieldRef(value: Input[ResourceFieldSelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceFieldRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceFieldRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceFieldRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecretKeyRef(value: Input[SecretKeySelector]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKeyRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecretKeyRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKeyRef")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

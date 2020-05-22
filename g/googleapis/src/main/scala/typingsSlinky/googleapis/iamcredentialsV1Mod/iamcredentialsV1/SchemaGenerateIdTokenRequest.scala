@@ -32,53 +32,16 @@ trait SchemaGenerateIdTokenRequest extends js.Object {
 
 object SchemaGenerateIdTokenRequest {
   @scala.inline
-  def apply(): SchemaGenerateIdTokenRequest = {
+  def apply(
+    audience: String = null,
+    delegates: js.Array[String] = null,
+    includeEmail: js.UndefOr[Boolean] = js.undefined
+  ): SchemaGenerateIdTokenRequest = {
     val __obj = js.Dynamic.literal()
+    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
+    if (delegates != null) __obj.updateDynamic("delegates")(delegates.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeEmail)) __obj.updateDynamic("includeEmail")(includeEmail.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGenerateIdTokenRequest]
   }
-  @scala.inline
-  implicit class SchemaGenerateIdTokenRequestOps[Self <: SchemaGenerateIdTokenRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudience(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelegates(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelegates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delegates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeEmail(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeEmail")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

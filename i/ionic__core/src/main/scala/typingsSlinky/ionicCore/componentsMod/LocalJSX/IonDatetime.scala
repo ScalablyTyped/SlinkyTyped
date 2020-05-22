@@ -8,451 +8,171 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IonDatetime extends js.Object {
   /**
     * The text to display on the picker's cancel button.
     */
-  var cancelText: js.UndefOr[String] = js.native
+  var cancelText: js.UndefOr[String] = js.undefined
   /**
     * Full day of the week names. This can be used to provide locale names for each day in the week. Defaults to English.
     */
-  var dayNames: js.UndefOr[js.Array[String] | String] = js.native
+  var dayNames: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * Short abbreviated day of the week names. This can be used to provide locale names for each day in the week. Defaults to English.
     */
-  var dayShortNames: js.UndefOr[js.Array[String] | String] = js.native
+  var dayShortNames: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * Values used to create the list of selectable days. By default every day is shown for the given month. However, to control exactly which days of the month to display, the `dayValues` input can take a number, an array of numbers, or a string of comma separated numbers. Note that even if the array days have an invalid number for the selected month, like `31` in February, it will correctly not show days which are not valid for the selected month.
     */
-  var dayValues: js.UndefOr[js.Array[Double] | Double | String] = js.native
+  var dayValues: js.UndefOr[js.Array[Double] | Double | String] = js.undefined
   /**
     * If `true`, the user cannot interact with the datetime.
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * The display format of the date and time as text that shows within the item. When the `pickerFormat` input is not used, then the `displayFormat` is used for both display the formatted text, and determining the datetime picker's columns. See the `pickerFormat` input description for more info. Defaults to `MMM D, YYYY`.
     */
-  var displayFormat: js.UndefOr[String] = js.native
+  var displayFormat: js.UndefOr[String] = js.undefined
   /**
     * The text to display on the picker's "Done" button.
     */
-  var doneText: js.UndefOr[String] = js.native
+  var doneText: js.UndefOr[String] = js.undefined
   /**
     * Values used to create the list of selectable hours. By default the hour values range from `0` to `23` for 24-hour, or `1` to `12` for 12-hour. However, to control exactly which hours to display, the `hourValues` input can take a number, an array of numbers, or a string of comma separated numbers.
     */
-  var hourValues: js.UndefOr[js.Array[Double] | Double | String] = js.native
+  var hourValues: js.UndefOr[js.Array[Double] | Double | String] = js.undefined
   /**
     * The maximum datetime allowed. Value must be a date string following the [ISO 8601 datetime format standard](https://www.w3.org/TR/NOTE-datetime), `1996-12-19`. The format does not have to be specific to an exact datetime. For example, the maximum could just be the year, such as `1994`. Defaults to the end of this year.
     */
-  var max: js.UndefOr[String] = js.native
+  var max: js.UndefOr[String] = js.undefined
   /**
     * The minimum datetime allowed. Value must be a date string following the [ISO 8601 datetime format standard](https://www.w3.org/TR/NOTE-datetime), such as `1996-12-19`. The format does not have to be specific to an exact datetime. For example, the minimum could just be the year, such as `1994`. Defaults to the beginning of the year, 100 years ago from today.
     */
-  var min: js.UndefOr[String] = js.native
+  var min: js.UndefOr[String] = js.undefined
   /**
     * Values used to create the list of selectable minutes. By default the minutes range from `0` to `59`. However, to control exactly which minutes to display, the `minuteValues` input can take a number, an array of numbers, or a string of comma separated numbers. For example, if the minute selections should only be every 15 minutes, then this input value would be `minuteValues="0,15,30,45"`.
     */
-  var minuteValues: js.UndefOr[js.Array[Double] | Double | String] = js.native
+  var minuteValues: js.UndefOr[js.Array[Double] | Double | String] = js.undefined
   /**
     * The mode determines which platform styles to use.
     */
-  var mode: js.UndefOr[ios | md] = js.native
+  var mode: js.UndefOr[ios | md] = js.undefined
   /**
     * Full names for each month name. This can be used to provide locale month names. Defaults to English.
     */
-  var monthNames: js.UndefOr[js.Array[String] | String] = js.native
+  var monthNames: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * Short abbreviated names for each month name. This can be used to provide locale month names. Defaults to English.
     */
-  var monthShortNames: js.UndefOr[js.Array[String] | String] = js.native
+  var monthShortNames: js.UndefOr[js.Array[String] | String] = js.undefined
   /**
     * Values used to create the list of selectable months. By default the month values range from `1` to `12`. However, to control exactly which months to display, the `monthValues` input can take a number, an array of numbers, or a string of comma separated numbers. For example, if only summer months should be shown, then this input value would be `monthValues="6,7,8"`. Note that month numbers do *not* have a zero-based index, meaning January's value is `1`, and December's is `12`.
     */
-  var monthValues: js.UndefOr[js.Array[Double] | Double | String] = js.native
+  var monthValues: js.UndefOr[js.Array[Double] | Double | String] = js.undefined
   /**
     * The name of the control, which is submitted with the form data.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Emitted when the datetime loses focus.
     */
-  var onIonBlur: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonBlur: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the datetime selection was cancelled.
     */
-  var onIonCancel: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonCancel: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the value (selected date) has changed.
     */
-  var onIonChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * Emitted when the datetime has focus.
     */
-  var onIonFocus: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var onIonFocus: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
   /**
     * The format of the date and time picker columns the user selects. A datetime input can have one or many datetime parts, each getting their own column which allow individual selection of that particular datetime part. For example, year and month columns are two individually selectable columns which help choose an exact date from the datetime picker. Each column follows the string parse format. Defaults to use `displayFormat`.
     */
-  var pickerFormat: js.UndefOr[String] = js.native
+  var pickerFormat: js.UndefOr[String] = js.undefined
   /**
     * Any additional options that the picker interface can accept. See the [Picker API docs](../picker) for the picker options.
     */
-  var pickerOptions: js.UndefOr[DatetimeOptions] = js.native
+  var pickerOptions: js.UndefOr[DatetimeOptions] = js.undefined
   /**
     * The text to display when there's no date selected yet. Using lowercase to match the input attribute
     */
-  var placeholder: js.UndefOr[String | Null] = js.native
+  var placeholder: js.UndefOr[String | Null] = js.undefined
   /**
     * If `true`, the datetime appears normal but is not interactive.
     */
-  var readonly: js.UndefOr[Boolean] = js.native
+  var readonly: js.UndefOr[Boolean] = js.undefined
   /**
     * The value of the datetime as a valid ISO 8601 datetime string.
     */
-  var value: js.UndefOr[String | Null] = js.native
+  var value: js.UndefOr[String | Null] = js.undefined
   /**
     * Values used to create the list of selectable years. By default the year values range between the `min` and `max` datetime inputs. However, to control exactly which years to display, the `yearValues` input can take a number, an array of numbers, or string of comma separated numbers. For example, to show upcoming and recent leap years, then this input's value would be `yearValues="2024,2020,2016,2012,2008"`.
     */
-  var yearValues: js.UndefOr[js.Array[Double] | Double | String] = js.native
+  var yearValues: js.UndefOr[js.Array[Double] | Double | String] = js.undefined
 }
 
 object IonDatetime {
   @scala.inline
-  def apply(): IonDatetime = {
+  def apply(
+    cancelText: String = null,
+    dayNames: js.Array[String] | String = null,
+    dayShortNames: js.Array[String] | String = null,
+    dayValues: js.Array[Double] | Double | String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    displayFormat: String = null,
+    doneText: String = null,
+    hourValues: js.Array[Double] | Double | String = null,
+    max: String = null,
+    min: String = null,
+    minuteValues: js.Array[Double] | Double | String = null,
+    mode: ios | md = null,
+    monthNames: js.Array[String] | String = null,
+    monthShortNames: js.Array[String] | String = null,
+    monthValues: js.Array[Double] | Double | String = null,
+    name: String = null,
+    onIonBlur: /* event */ CustomEvent => Unit = null,
+    onIonCancel: /* event */ CustomEvent => Unit = null,
+    onIonChange: /* event */ CustomEvent => Unit = null,
+    onIonFocus: /* event */ CustomEvent => Unit = null,
+    pickerFormat: String = null,
+    pickerOptions: DatetimeOptions = null,
+    placeholder: js.UndefOr[Null | String] = js.undefined,
+    readonly: js.UndefOr[Boolean] = js.undefined,
+    value: js.UndefOr[Null | String] = js.undefined,
+    yearValues: js.Array[Double] | Double | String = null
+  ): IonDatetime = {
     val __obj = js.Dynamic.literal()
+    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
+    if (dayNames != null) __obj.updateDynamic("dayNames")(dayNames.asInstanceOf[js.Any])
+    if (dayShortNames != null) __obj.updateDynamic("dayShortNames")(dayShortNames.asInstanceOf[js.Any])
+    if (dayValues != null) __obj.updateDynamic("dayValues")(dayValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (displayFormat != null) __obj.updateDynamic("displayFormat")(displayFormat.asInstanceOf[js.Any])
+    if (doneText != null) __obj.updateDynamic("doneText")(doneText.asInstanceOf[js.Any])
+    if (hourValues != null) __obj.updateDynamic("hourValues")(hourValues.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (minuteValues != null) __obj.updateDynamic("minuteValues")(minuteValues.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (monthNames != null) __obj.updateDynamic("monthNames")(monthNames.asInstanceOf[js.Any])
+    if (monthShortNames != null) __obj.updateDynamic("monthShortNames")(monthShortNames.asInstanceOf[js.Any])
+    if (monthValues != null) __obj.updateDynamic("monthValues")(monthValues.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onIonBlur != null) __obj.updateDynamic("onIonBlur")(js.Any.fromFunction1(onIonBlur))
+    if (onIonCancel != null) __obj.updateDynamic("onIonCancel")(js.Any.fromFunction1(onIonCancel))
+    if (onIonChange != null) __obj.updateDynamic("onIonChange")(js.Any.fromFunction1(onIonChange))
+    if (onIonFocus != null) __obj.updateDynamic("onIonFocus")(js.Any.fromFunction1(onIonFocus))
+    if (pickerFormat != null) __obj.updateDynamic("pickerFormat")(pickerFormat.asInstanceOf[js.Any])
+    if (pickerOptions != null) __obj.updateDynamic("pickerOptions")(pickerOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined(placeholder)) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (yearValues != null) __obj.updateDynamic("yearValues")(yearValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonDatetime]
   }
-  @scala.inline
-  implicit class IonDatetimeOps[Self <: IonDatetime] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancelText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCancelText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayNames(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayShortNames(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayShortNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayShortNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayShortNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayValues(value: js.Array[Double] | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDayValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDoneText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doneText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDoneText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doneText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHourValues(value: js.Array[Double] | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHourValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hourValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinuteValues(value: js.Array[Double] | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinuteValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ios | md): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthNames(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthShortNames(value: js.Array[String] | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthShortNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthShortNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthShortNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthValues(value: js.Array[Double] | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonBlur(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonBlur")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonBlur: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonBlur")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonCancel(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonCancel")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonCancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonChange(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnIonFocus(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonFocus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnIonFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonFocus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickerOptions(value: DatetimeOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickerOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(null)
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadonly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
-        ret
-    }
-    @scala.inline
-    def withYearValues(value: js.Array[Double] | Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYearValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yearValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

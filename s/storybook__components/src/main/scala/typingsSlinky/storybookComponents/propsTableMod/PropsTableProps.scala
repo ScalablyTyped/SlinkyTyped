@@ -1,5 +1,7 @@
 package typingsSlinky.storybookComponents.propsTableMod
 
+import typingsSlinky.std.Record
+import typingsSlinky.storybookComponents.propDefMod.PropDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +15,20 @@ trait PropsTableProps extends js.Object
 
 object PropsTableProps {
   @scala.inline
-  implicit def apply(value: PropsTableErrorProps): PropsTableProps = value.asInstanceOf[PropsTableProps]
+  def PropsTableRowsProps(rows: js.Array[PropDef]): PropsTableProps = {
+    val __obj = js.Dynamic.literal(rows = rows.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PropsTableProps]
+  }
   @scala.inline
-  implicit def apply(value: PropsTableRowsProps): PropsTableProps = value.asInstanceOf[PropsTableProps]
+  def PropsTableSectionsProps(sections: Record[String, js.Array[PropDef]] = null): PropsTableProps = {
+    val __obj = js.Dynamic.literal()
+    if (sections != null) __obj.updateDynamic("sections")(sections.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PropsTableProps]
+  }
   @scala.inline
-  implicit def apply(value: PropsTableSectionsProps): PropsTableProps = value.asInstanceOf[PropsTableProps]
+  def PropsTableErrorProps(error: PropsTableError): PropsTableProps = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PropsTableProps]
+  }
 }
 

@@ -5,163 +5,55 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The batch-request status. */
-@js.native
 trait BatchStatus extends js.Object {
   /** The method to be run against the documents. Possible values are `html_conversion`, `element_classification`, and `tables`. */
-  var _function: js.UndefOr[String] = js.native
+  var _function: js.UndefOr[String] = js.undefined
   /** The unique identifier for the batch request. */
-  var batch_id: js.UndefOr[String] = js.native
+  var batch_id: js.UndefOr[String] = js.undefined
   /** The creation time of the batch request. */
-  var created: js.UndefOr[String] = js.native
+  var created: js.UndefOr[String] = js.undefined
   /** Document counts. */
-  var document_counts: js.UndefOr[DocCounts] = js.native
+  var document_counts: js.UndefOr[DocCounts] = js.undefined
   /** The geographical location of the Cloud Object Storage input bucket as listed on the **Endpoint** tab of your COS instance; for example, `us-geo`, `eu-geo`, or `ap-geo`. */
-  var input_bucket_location: js.UndefOr[String] = js.native
+  var input_bucket_location: js.UndefOr[String] = js.undefined
   /** The name of the Cloud Object Storage input bucket. */
-  var input_bucket_name: js.UndefOr[String] = js.native
+  var input_bucket_name: js.UndefOr[String] = js.undefined
   /** The geographical location of the Cloud Object Storage output bucket as listed on the **Endpoint** tab of your COS instance; for example, `us-geo`, `eu-geo`, or `ap-geo`. */
-  var output_bucket_location: js.UndefOr[String] = js.native
+  var output_bucket_location: js.UndefOr[String] = js.undefined
   /** The name of the Cloud Object Storage output bucket. */
-  var output_bucket_name: js.UndefOr[String] = js.native
+  var output_bucket_name: js.UndefOr[String] = js.undefined
   /** The status of the batch request. */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[String] = js.undefined
   /** The time of the most recent update to the batch request. */
-  var updated: js.UndefOr[String] = js.native
+  var updated: js.UndefOr[String] = js.undefined
 }
 
 object BatchStatus {
   @scala.inline
-  def apply(): BatchStatus = {
+  def apply(
+    _function: String = null,
+    batch_id: String = null,
+    created: String = null,
+    document_counts: DocCounts = null,
+    input_bucket_location: String = null,
+    input_bucket_name: String = null,
+    output_bucket_location: String = null,
+    output_bucket_name: String = null,
+    status: String = null,
+    updated: String = null
+  ): BatchStatus = {
     val __obj = js.Dynamic.literal()
+    if (_function != null) __obj.updateDynamic("_function")(_function.asInstanceOf[js.Any])
+    if (batch_id != null) __obj.updateDynamic("batch_id")(batch_id.asInstanceOf[js.Any])
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (document_counts != null) __obj.updateDynamic("document_counts")(document_counts.asInstanceOf[js.Any])
+    if (input_bucket_location != null) __obj.updateDynamic("input_bucket_location")(input_bucket_location.asInstanceOf[js.Any])
+    if (input_bucket_name != null) __obj.updateDynamic("input_bucket_name")(input_bucket_name.asInstanceOf[js.Any])
+    if (output_bucket_location != null) __obj.updateDynamic("output_bucket_location")(output_bucket_location.asInstanceOf[js.Any])
+    if (output_bucket_name != null) __obj.updateDynamic("output_bucket_name")(output_bucket_name.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchStatus]
   }
-  @scala.inline
-  implicit class BatchStatusOps[Self <: BatchStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_function(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_function")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_function: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_function")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatch_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatch_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocument_counts(value: DocCounts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_counts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDocument_counts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("document_counts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput_bucket_location(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input_bucket_location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput_bucket_location: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input_bucket_location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput_bucket_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input_bucket_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput_bucket_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input_bucket_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput_bucket_location(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output_bucket_location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput_bucket_location: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output_bucket_location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutput_bucket_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output_bucket_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutput_bucket_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output_bucket_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

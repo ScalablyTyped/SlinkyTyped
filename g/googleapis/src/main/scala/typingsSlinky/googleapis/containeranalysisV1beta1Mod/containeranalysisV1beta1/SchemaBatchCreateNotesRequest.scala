@@ -18,29 +18,10 @@ trait SchemaBatchCreateNotesRequest extends js.Object {
 
 object SchemaBatchCreateNotesRequest {
   @scala.inline
-  def apply(): SchemaBatchCreateNotesRequest = {
+  def apply(notes: StringDictionary[SchemaNote] = null): SchemaBatchCreateNotesRequest = {
     val __obj = js.Dynamic.literal()
+    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchCreateNotesRequest]
   }
-  @scala.inline
-  implicit class SchemaBatchCreateNotesRequestOps[Self <: SchemaBatchCreateNotesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNotes(value: StringDictionary[SchemaNote]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

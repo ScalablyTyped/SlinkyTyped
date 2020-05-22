@@ -4,321 +4,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InitOpts extends js.Object {
   /**
     * Output in csv format
     */
-  var csv: js.UndefOr[Boolean] = js.native
+  var csv: js.UndefOr[Boolean] = js.undefined
   /**
     * Prefix column for component in csv format.
     */
-  var csvComponentPrefix: js.UndefOr[String] = js.native
+  var csvComponentPrefix: js.UndefOr[String] = js.undefined
   /**
     * To add a custom Format file in JSON
     */
-  var customPath: js.UndefOr[String | ModuleInfo] = js.native
+  var customPath: js.UndefOr[String | ModuleInfo] = js.undefined
   /**
     * Only show development dependencies
     */
-  var development: js.UndefOr[Boolean] = js.native
+  var development: js.UndefOr[Boolean] = js.undefined
   /**
     * Look for direct dependencies only
     */
-  var direct: js.UndefOr[Boolean] = js.native
+  var direct: js.UndefOr[Boolean] = js.undefined
   /**
     * Exclude modules which licenses are in the comma-separated list from the output
     */
-  var exclude: js.UndefOr[js.Array[String]] = js.native
+  var exclude: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Restrict output to the packages (package@version) not in the semicolon-separated list
     */
-  var excludePackages: js.UndefOr[String] = js.native
+  var excludePackages: js.UndefOr[String] = js.undefined
   /**
     * Restrict output to not include any package marked as private
     */
-  var excludePrivatePackages: js.UndefOr[Boolean] = js.native
+  var excludePrivatePackages: js.UndefOr[Boolean] = js.undefined
   /**
     * Fail (exit with code 1) on the first occurrence of the licenses of the semicolon-separated list
     */
-  var failOn: js.UndefOr[String] = js.native
+  var failOn: js.UndefOr[String] = js.undefined
   /**
     * Output in json format
     */
-  var json: js.UndefOr[Boolean] = js.native
+  var json: js.UndefOr[Boolean] = js.undefined
   /**
     * Fail (exit with code 1) on the first occurrence of the licenses not in the semicolon-separated list
     */
-  var onlyAllow: js.UndefOr[String] = js.native
+  var onlyAllow: js.UndefOr[String] = js.undefined
   /**
     * Only list packages with unknown or guessed licenses
     */
-  var onlyunknown: js.UndefOr[Boolean] = js.native
+  var onlyunknown: js.UndefOr[Boolean] = js.undefined
   /**
     * Write the data to a specific file.
     */
-  var out: js.UndefOr[String] = js.native
+  var out: js.UndefOr[String] = js.undefined
   /**
     * Restrict output to the packages (package@version) in the semicolon-separated list
     */
-  var packages: js.UndefOr[String] = js.native
+  var packages: js.UndefOr[String] = js.undefined
   /**
     * Only show production dependencies
     */
-  var production: js.UndefOr[Boolean] = js.native
+  var production: js.UndefOr[Boolean] = js.undefined
   /**
     * Output the location of the license files as relative paths
     */
-  var relativeLicensePath: js.UndefOr[Boolean] = js.native
+  var relativeLicensePath: js.UndefOr[Boolean] = js.undefined
   /**
     * Path to start checking dependencies from
     */
-  var start: String = js.native
+  var start: String
   /**
     * Output a summary of the license usage
     */
-  var summary: js.UndefOr[Boolean] = js.native
+  var summary: js.UndefOr[Boolean] = js.undefined
   /**
     * Report guessed licenses as unknown licenses
     */
-  var unknown: js.UndefOr[Boolean] = js.native
+  var unknown: js.UndefOr[Boolean] = js.undefined
 }
 
 object InitOpts {
   @scala.inline
-  def apply(start: String): InitOpts = {
+  def apply(
+    start: String,
+    csv: js.UndefOr[Boolean] = js.undefined,
+    csvComponentPrefix: String = null,
+    customPath: String | ModuleInfo = null,
+    development: js.UndefOr[Boolean] = js.undefined,
+    direct: js.UndefOr[Boolean] = js.undefined,
+    exclude: js.Array[String] = null,
+    excludePackages: String = null,
+    excludePrivatePackages: js.UndefOr[Boolean] = js.undefined,
+    failOn: String = null,
+    json: js.UndefOr[Boolean] = js.undefined,
+    onlyAllow: String = null,
+    onlyunknown: js.UndefOr[Boolean] = js.undefined,
+    out: String = null,
+    packages: String = null,
+    production: js.UndefOr[Boolean] = js.undefined,
+    relativeLicensePath: js.UndefOr[Boolean] = js.undefined,
+    summary: js.UndefOr[Boolean] = js.undefined,
+    unknown: js.UndefOr[Boolean] = js.undefined
+  ): InitOpts = {
     val __obj = js.Dynamic.literal(start = start.asInstanceOf[js.Any])
+    if (!js.isUndefined(csv)) __obj.updateDynamic("csv")(csv.get.asInstanceOf[js.Any])
+    if (csvComponentPrefix != null) __obj.updateDynamic("csvComponentPrefix")(csvComponentPrefix.asInstanceOf[js.Any])
+    if (customPath != null) __obj.updateDynamic("customPath")(customPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(development)) __obj.updateDynamic("development")(development.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(direct)) __obj.updateDynamic("direct")(direct.get.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (excludePackages != null) __obj.updateDynamic("excludePackages")(excludePackages.asInstanceOf[js.Any])
+    if (!js.isUndefined(excludePrivatePackages)) __obj.updateDynamic("excludePrivatePackages")(excludePrivatePackages.get.asInstanceOf[js.Any])
+    if (failOn != null) __obj.updateDynamic("failOn")(failOn.asInstanceOf[js.Any])
+    if (!js.isUndefined(json)) __obj.updateDynamic("json")(json.get.asInstanceOf[js.Any])
+    if (onlyAllow != null) __obj.updateDynamic("onlyAllow")(onlyAllow.asInstanceOf[js.Any])
+    if (!js.isUndefined(onlyunknown)) __obj.updateDynamic("onlyunknown")(onlyunknown.get.asInstanceOf[js.Any])
+    if (out != null) __obj.updateDynamic("out")(out.asInstanceOf[js.Any])
+    if (packages != null) __obj.updateDynamic("packages")(packages.asInstanceOf[js.Any])
+    if (!js.isUndefined(production)) __obj.updateDynamic("production")(production.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(relativeLicensePath)) __obj.updateDynamic("relativeLicensePath")(relativeLicensePath.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(summary)) __obj.updateDynamic("summary")(summary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unknown)) __obj.updateDynamic("unknown")(unknown.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitOpts]
   }
-  @scala.inline
-  implicit class InitOptsOps[Self <: InitOpts] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCsv(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvComponentPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvComponentPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvComponentPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvComponentPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomPath(value: String | ModuleInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDevelopment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("development")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDevelopment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("development")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direct")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludePackages(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePackages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludePackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePackages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExcludePrivatePackages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePrivatePackages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludePrivatePackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePrivatePackages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailOn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJson(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyAllow(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyAllow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyAllow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyAllow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlyunknown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyunknown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlyunknown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyunknown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPackages(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPackages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("packages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProduction(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("production")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProduction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("production")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativeLicensePath(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeLicensePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativeLicensePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeLicensePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnknown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnknown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,14 +12,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransitionOptions extends js.Object {
   /** @internalapi */
-  var current: js.UndefOr[js.Function0[Transition]] = js.native
+  var current: js.UndefOr[js.Function0[Transition]] = js.undefined
   /**
     * You can define your own Transition Options inside this property and use them, e.g., from a Transition Hook
     */
-  var custom: js.UndefOr[js.Any] = js.native
+  var custom: js.UndefOr[js.Any] = js.undefined
   /**
     * This option sets whether or not the transition's parameter values should be inherited from
     * the current parameter values.
@@ -29,7 +28,7 @@ trait TransitionOptions extends js.Object {
     *
     * @default `false`
     */
-  var inherit: js.UndefOr[Boolean] = js.native
+  var inherit: js.UndefOr[Boolean] = js.undefined
   /**
     * This option changes how the Transition interacts with the browser's location bar (URL).
     *
@@ -39,21 +38,21 @@ trait TransitionOptions extends js.Object {
     *
     * @default `true`
     */
-  var location: js.UndefOr[Boolean | String] = js.native
+  var location: js.UndefOr[Boolean | String] = js.undefined
   /**
     * @deprecated
     */
   @JSName("notify")
-  var notify_FTransitionOptions: js.UndefOr[Boolean] = js.native
+  var notify_FTransitionOptions: js.UndefOr[Boolean] = js.undefined
   /** @internalapi
     * If this transition is a redirect, this property should be the original Transition (which was redirected to this one)
     */
-  var redirectedFrom: js.UndefOr[Transition] = js.native
+  var redirectedFrom: js.UndefOr[Transition] = js.undefined
   /**
     * When transitioning to relative path (e.g '`^`'), this option defines which state to be relative from.
     * @default `$state.current`
     */
-  var relative: js.UndefOr[String | StateDeclaration | StateObject] = js.native
+  var relative: js.UndefOr[String | StateDeclaration | StateObject] = js.undefined
   /**
     * This option may be used to force states which are currently active to reload.
     *
@@ -74,11 +73,11 @@ trait TransitionOptions extends js.Object {
     *
     * @default `false`
     */
-  var reload: js.UndefOr[Boolean | String | StateDeclaration | StateObject] = js.native
+  var reload: js.UndefOr[Boolean | String | StateDeclaration | StateObject] = js.undefined
   /** @internalapi */
-  var reloadState: js.UndefOr[StateObject] = js.native
+  var reloadState: js.UndefOr[StateObject] = js.undefined
   /** @internalapi */
-  var source: js.UndefOr[sref | url | redirect | otherwise | unknown] = js.native
+  var source: js.UndefOr[sref | url | redirect | otherwise | unknown] = js.undefined
   /**
     * This option may be used to cancel the active transition (if one is active) in favour of the this one.
     * This is the default behaviour or ui-router.
@@ -90,154 +89,37 @@ trait TransitionOptions extends js.Object {
     *
     * @default `true`
     */
-  var supercede: js.UndefOr[Boolean] = js.native
+  var supercede: js.UndefOr[Boolean] = js.undefined
 }
 
 object TransitionOptions {
   @scala.inline
-  def apply(): TransitionOptions = {
+  def apply(
+    current: () => Transition = null,
+    custom: js.Any = null,
+    inherit: js.UndefOr[Boolean] = js.undefined,
+    location: Boolean | String = null,
+    notify: js.UndefOr[Boolean] = js.undefined,
+    redirectedFrom: Transition = null,
+    relative: String | StateDeclaration | StateObject = null,
+    reload: Boolean | String | StateDeclaration | StateObject = null,
+    reloadState: StateObject = null,
+    source: sref | url | redirect | otherwise | unknown = null,
+    supercede: js.UndefOr[Boolean] = js.undefined
+  ): TransitionOptions = {
     val __obj = js.Dynamic.literal()
+    if (current != null) __obj.updateDynamic("current")(js.Any.fromFunction0(current))
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (!js.isUndefined(inherit)) __obj.updateDynamic("inherit")(inherit.get.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (!js.isUndefined(notify)) __obj.updateDynamic("notify")(notify.get.asInstanceOf[js.Any])
+    if (redirectedFrom != null) __obj.updateDynamic("redirectedFrom")(redirectedFrom.asInstanceOf[js.Any])
+    if (relative != null) __obj.updateDynamic("relative")(relative.asInstanceOf[js.Any])
+    if (reload != null) __obj.updateDynamic("reload")(reload.asInstanceOf[js.Any])
+    if (reloadState != null) __obj.updateDynamic("reloadState")(reloadState.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (!js.isUndefined(supercede)) __obj.updateDynamic("supercede")(supercede.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitionOptions]
   }
-  @scala.inline
-  implicit class TransitionOptionsOps[Self <: TransitionOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCurrent(value: () => Transition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCurrent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("current")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInherit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInherit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRedirectedFrom(value: Transition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectedFrom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRedirectedFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectedFrom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelative(value: String | StateDeclaration | StateObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelative: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReload(value: Boolean | String | StateDeclaration | StateObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReloadState(value: StateObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReloadState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: sref | url | redirect | otherwise | unknown): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupercede(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supercede")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupercede: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supercede")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

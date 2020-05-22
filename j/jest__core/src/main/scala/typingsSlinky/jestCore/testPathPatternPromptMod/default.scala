@@ -1,6 +1,8 @@
 package typingsSlinky.jestCore.testPathPatternPromptMod
 
+import typingsSlinky.jestRunner.mod.Test
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.std.ScrollOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,5 +14,13 @@ class default protected () extends TestPathPatternPrompt {
     pipe: WritableStream,
     prompt: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Prompt */ js.Any
   ) = this()
+  /* CompleteClass */
+  override def _getMatchedTests(pattern: String): js.Array[Test] = js.native
+  /* CompleteClass */
+  override def _onChange(pattern: String, options: ScrollOptions): Unit = js.native
+  /* CompleteClass */
+  override def _printPrompt(pattern: String): Unit = js.native
+  /* CompleteClass */
+  override def updateSearchSources(searchSources: SearchSources): Unit = js.native
 }
 

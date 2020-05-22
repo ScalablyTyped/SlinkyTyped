@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * ClusterRoleBindingList is a collection of ClusterRoleBindings. Deprecated in v1.17 in favor
   * of rbac.authorization.k8s.io/v1 ClusterRoleBindings, and will no longer be served in v1.20.
   */
-@js.native
 trait ClusterRoleBindingList extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -18,22 +17,22 @@ trait ClusterRoleBindingList extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: rbacDotauthorizationDotk8sDotioSlashv1alpha1 = js.native
+  val apiVersion: rbacDotauthorizationDotk8sDotioSlashv1alpha1
   /**
     * Items is a list of ClusterRoleBindings
     */
-  val items: js.Array[ClusterRoleBinding] = js.native
+  val items: js.Array[ClusterRoleBinding]
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRoleBindingList = js.native
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRoleBindingList
   /**
     * Standard object's metadata.
     */
-  val metadata: ListMeta = js.native
+  val metadata: ListMeta
 }
 
 object ClusterRoleBindingList {
@@ -47,37 +46,5 @@ object ClusterRoleBindingList {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterRoleBindingList]
   }
-  @scala.inline
-  implicit class ClusterRoleBindingListOps[Self <: ClusterRoleBindingList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: rbacDotauthorizationDotk8sDotioSlashv1alpha1): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[ClusterRoleBinding]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.ClusterRoleBindingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: ListMeta): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

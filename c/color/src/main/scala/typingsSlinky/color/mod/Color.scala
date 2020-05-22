@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Color[T /* <: ColorParam */] extends ColorParam {
+trait Color[T /* <: ColorParam */] extends js.Object {
   def a(): Double = js.native
   def a(`val`: Double): Color[ColorParam] = js.native
   def alpha(): Double = js.native

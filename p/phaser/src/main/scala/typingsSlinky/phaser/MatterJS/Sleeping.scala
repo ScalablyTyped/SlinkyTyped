@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation._
   *
   * @class Sleeping
   */
-@js.native
 trait Sleeping extends js.Object
 

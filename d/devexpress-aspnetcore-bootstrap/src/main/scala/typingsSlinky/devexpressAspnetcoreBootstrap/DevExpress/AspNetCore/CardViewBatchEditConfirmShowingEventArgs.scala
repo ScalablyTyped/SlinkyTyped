@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CardViewBatchEditConfirmShowingEventArgs extends CancelEventArgs {
-  val requestTriggerID: String = js.native
+  val requestTriggerID: String
 }
 
 object CardViewBatchEditConfirmShowingEventArgs {
@@ -15,19 +14,5 @@ object CardViewBatchEditConfirmShowingEventArgs {
     val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], requestTriggerID = requestTriggerID.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardViewBatchEditConfirmShowingEventArgs]
   }
-  @scala.inline
-  implicit class CardViewBatchEditConfirmShowingEventArgsOps[Self <: CardViewBatchEditConfirmShowingEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRequestTriggerID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTriggerID")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

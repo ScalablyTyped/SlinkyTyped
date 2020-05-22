@@ -6,55 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Kernel extends js.Object {
   /**
     * Information about any kernel companions.
     */
-  var kernel: js.UndefOr[js.Array[IKernelInstallInfo]] = js.native
+  var kernel: js.UndefOr[js.Array[IKernelInstallInfo]] = js.undefined
   /**
     * Information about any server extension companions.
     */
-  var server: js.UndefOr[IInstallInfo] = js.native
+  var server: js.UndefOr[IInstallInfo] = js.undefined
 }
 
 object Kernel {
   @scala.inline
-  def apply(): Kernel = {
+  def apply(kernel: js.Array[IKernelInstallInfo] = null, server: IInstallInfo = null): Kernel = {
     val __obj = js.Dynamic.literal()
+    if (kernel != null) __obj.updateDynamic("kernel")(kernel.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
     __obj.asInstanceOf[Kernel]
   }
-  @scala.inline
-  implicit class KernelOps[Self <: Kernel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKernel(value: js.Array[IKernelInstallInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKernel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kernel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: IInstallInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

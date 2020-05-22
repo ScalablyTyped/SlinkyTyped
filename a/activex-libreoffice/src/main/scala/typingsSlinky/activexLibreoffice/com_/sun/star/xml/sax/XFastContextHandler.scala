@@ -10,46 +10,45 @@ import scala.scalajs.js.annotation._
   * receives notification of sax document events from a {@link XFastParser} .
   * @see XFastDocumentHandler
   */
-@js.native
 trait XFastContextHandler extends XInterface {
   /** receives notification of character data. */
-  def characters(aChars: String): Unit = js.native
+  def characters(aChars: String): Unit
   /**
     * receives notification of the beginning of a known child element.
     * @param Element contains the integer token from the {@link XFastTokenHandler} registered at the {@link XFastParser} .;  If the element has a namespace th
     * @param Attribs Contains a {@link XFastAttributeList} to access the attributes from the element.
     */
-  def createFastChildContext(Element: Double, Attribs: XFastAttributeList): XFastContextHandler = js.native
+  def createFastChildContext(Element: Double, Attribs: XFastAttributeList): XFastContextHandler
   /**
     * receives notification of the beginning of a unknown child element .
     * @param Namespace contains the namespace url (not the prefix!) of this element.
     * @param Name contains the elements local name.
     * @param Attribs Contains a {@link XFastAttributeList} to access the attributes the element.
     */
-  def createUnknownChildContext(Namespace: String, Name: String, Attribs: XFastAttributeList): XFastContextHandler = js.native
+  def createUnknownChildContext(Namespace: String, Name: String, Attribs: XFastAttributeList): XFastContextHandler
   /**
     * receives notification of the end of an known element.
     * @see startFastElement
     */
-  def endFastElement(Element: Double): Unit = js.native
+  def endFastElement(Element: Double): Unit
   /**
     * receives notification of the end of an known element.
     * @see startUnknownElement
     */
-  def endUnknownElement(Namespace: String, Name: String): Unit = js.native
+  def endUnknownElement(Namespace: String, Name: String): Unit
   /**
     * receives notification of the beginning of an element .
     * @param Element contains the integer token from the {@link XFastTokenHandler} registered at the {@link XFastParser} . ;  If the element has a namespace t
     * @param Attribs Contains a {@link XFastAttributeList} to access the attributes from the element.
     */
-  def startFastElement(Element: Double, Attribs: XFastAttributeList): Unit = js.native
+  def startFastElement(Element: Double, Attribs: XFastAttributeList): Unit
   /**
     * receives notification of the beginning of an unknown element .
     * @param Namespace contains the namespace url (not the prefix!) of this element.
     * @param Name contains the elements local name.
     * @param Attribs Contains a {@link XFastAttributeList} to access the attributes from the element.
     */
-  def startUnknownElement(Namespace: String, Name: String, Attribs: XFastAttributeList): Unit = js.native
+  def startUnknownElement(Namespace: String, Name: String, Attribs: XFastAttributeList): Unit
 }
 
 object XFastContextHandler {
@@ -69,55 +68,5 @@ object XFastContextHandler {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), characters = js.Any.fromFunction1(characters), createFastChildContext = js.Any.fromFunction2(createFastChildContext), createUnknownChildContext = js.Any.fromFunction3(createUnknownChildContext), endFastElement = js.Any.fromFunction1(endFastElement), endUnknownElement = js.Any.fromFunction2(endUnknownElement), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), startFastElement = js.Any.fromFunction2(startFastElement), startUnknownElement = js.Any.fromFunction3(startUnknownElement))
     __obj.asInstanceOf[XFastContextHandler]
   }
-  @scala.inline
-  implicit class XFastContextHandlerOps[Self <: XFastContextHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCharacters(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("characters")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateFastChildContext(value: (Double, XFastAttributeList) => XFastContextHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createFastChildContext")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreateUnknownChildContext(value: (String, String, XFastAttributeList) => XFastContextHandler): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createUnknownChildContext")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withEndFastElement(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endFastElement")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEndUnknownElement(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endUnknownElement")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStartFastElement(value: (Double, XFastAttributeList) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startFastElement")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withStartUnknownElement(value: (String, String, XFastAttributeList) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startUnknownElement")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -5,57 +5,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledDeleteMarkerEntry extends DeleteMarkerEntry {
   /**
     * <p>Date and time the object was last modified.</p>
     */
   @JSName("LastModified")
-  var LastModified_UnmarshalledDeleteMarkerEntry: js.UndefOr[js.Date] = js.native
+  var LastModified_UnmarshalledDeleteMarkerEntry: js.UndefOr[js.Date] = js.undefined
   /**
     * _Owner shape
     */
   @JSName("Owner")
-  var Owner_UnmarshalledDeleteMarkerEntry: js.UndefOr[UnmarshalledOwner] = js.native
+  var Owner_UnmarshalledDeleteMarkerEntry: js.UndefOr[UnmarshalledOwner] = js.undefined
 }
 
 object UnmarshalledDeleteMarkerEntry {
   @scala.inline
-  def apply(): UnmarshalledDeleteMarkerEntry = {
+  def apply(
+    IsLatest: js.UndefOr[Boolean] = js.undefined,
+    Key: String = null,
+    LastModified: js.Date = null,
+    Owner: UnmarshalledOwner = null,
+    VersionId: String = null
+  ): UnmarshalledDeleteMarkerEntry = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(IsLatest)) __obj.updateDynamic("IsLatest")(IsLatest.get.asInstanceOf[js.Any])
+    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
+    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
+    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledDeleteMarkerEntry]
   }
-  @scala.inline
-  implicit class UnmarshalledDeleteMarkerEntryOps[Self <: UnmarshalledDeleteMarkerEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLastModified(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModified: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: UnmarshalledOwner): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

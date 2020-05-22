@@ -11,42 +11,17 @@ trait AddAttachmentsToSetRequest extends js.Object {
     */
   var attachmentSetId: js.UndefOr[AttachmentSetId] = js.native
   /**
-    * One or more attachments to add to the set. The limit is 3 attachments per set, and the size limit is 5 MB per attachment.
+    * One or more attachments to add to the set. You can add up to three attachments per set. The size limit is 5 MB per attachment. In the Attachment object, use the data parameter to specify the contents of the attachment file. In the previous request syntax, the value for data appear as blob, which is represented as a base64-encoded string. The value for fileName is the name of the attachment, such as troubleshoot-screenshot.png.
     */
   var attachments: Attachments = js.native
 }
 
 object AddAttachmentsToSetRequest {
   @scala.inline
-  def apply(attachments: Attachments): AddAttachmentsToSetRequest = {
+  def apply(attachments: Attachments, attachmentSetId: AttachmentSetId = null): AddAttachmentsToSetRequest = {
     val __obj = js.Dynamic.literal(attachments = attachments.asInstanceOf[js.Any])
+    if (attachmentSetId != null) __obj.updateDynamic("attachmentSetId")(attachmentSetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddAttachmentsToSetRequest]
   }
-  @scala.inline
-  implicit class AddAttachmentsToSetRequestOps[Self <: AddAttachmentsToSetRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachments(value: Attachments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttachmentSetId(value: AttachmentSetId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachmentSetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

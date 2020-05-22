@@ -7,225 +7,104 @@ import scala.scalajs.js.annotation._
 /**
   * Capabilities  that are assumed to function correctly on the FHIR server being tested
   */
-@js.native
 trait TestScriptMetadataCapability extends BackboneElement {
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.native
+  var _description: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'destination'.
     */
-  var _destination: js.UndefOr[Element] = js.native
+  var _destination: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'link'.
     */
-  var _link: js.UndefOr[js.Array[Element]] = js.native
+  var _link: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Contains extended information for property 'origin'.
     */
-  var _origin: js.UndefOr[js.Array[Element]] = js.native
+  var _origin: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Contains extended information for property 'required'.
     */
-  var _required: js.UndefOr[Element] = js.native
+  var _required: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'validated'.
     */
-  var _validated: js.UndefOr[Element] = js.native
+  var _validated: js.UndefOr[Element] = js.undefined
   /**
     * Required Capability Statement
     */
-  var capabilities: Reference = js.native
+  var capabilities: Reference
   /**
     * The expected capabilities of the server
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.undefined
   /**
     * Which server these requirements apply to
     */
-  var destination: js.UndefOr[integer] = js.native
+  var destination: js.UndefOr[integer] = js.undefined
   /**
     * Links to the FHIR specification
     */
-  var link: js.UndefOr[js.Array[uri]] = js.native
+  var link: js.UndefOr[js.Array[uri]] = js.undefined
   /**
     * Which origin server these requirements apply to
     */
-  var origin: js.UndefOr[js.Array[integer]] = js.native
+  var origin: js.UndefOr[js.Array[integer]] = js.undefined
   /**
     * Are the capabilities required?
     */
-  var required: js.UndefOr[Boolean] = js.native
+  var required: js.UndefOr[Boolean] = js.undefined
   /**
     * Are the capabilities validated?
     */
-  var validated: js.UndefOr[Boolean] = js.native
+  var validated: js.UndefOr[Boolean] = js.undefined
 }
 
 object TestScriptMetadataCapability {
   @scala.inline
-  def apply(capabilities: Reference): TestScriptMetadataCapability = {
+  def apply(
+    capabilities: Reference,
+    _description: Element = null,
+    _destination: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _link: js.Array[Element] = null,
+    _origin: js.Array[Element] = null,
+    _required: Element = null,
+    _validated: Element = null,
+    description: String = null,
+    destination: js.UndefOr[integer] = js.undefined,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    link: js.Array[uri] = null,
+    modifierExtension: js.Array[Extension] = null,
+    origin: js.Array[integer] = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    validated: js.UndefOr[Boolean] = js.undefined
+  ): TestScriptMetadataCapability = {
     val __obj = js.Dynamic.literal(capabilities = capabilities.asInstanceOf[js.Any])
+    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
+    if (_destination != null) __obj.updateDynamic("_destination")(_destination.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_link != null) __obj.updateDynamic("_link")(_link.asInstanceOf[js.Any])
+    if (_origin != null) __obj.updateDynamic("_origin")(_origin.asInstanceOf[js.Any])
+    if (_required != null) __obj.updateDynamic("_required")(_required.asInstanceOf[js.Any])
+    if (_validated != null) __obj.updateDynamic("_validated")(_validated.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(destination)) __obj.updateDynamic("destination")(destination.get.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
+    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(validated)) __obj.updateDynamic("validated")(validated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestScriptMetadataCapability]
   }
-  @scala.inline
-  implicit class TestScriptMetadataCapabilityOps[Self <: TestScriptMetadataCapability] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapabilities(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_description(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_description: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_destination(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_destination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_link(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_link: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_origin(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_origin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_required(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_required: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_validated(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_validated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_validated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_validated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: js.Array[uri]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: js.Array[integer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

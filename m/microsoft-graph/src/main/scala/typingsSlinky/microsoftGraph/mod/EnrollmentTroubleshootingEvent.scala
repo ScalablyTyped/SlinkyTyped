@@ -4,143 +4,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent {
   // Azure AD device identifier.
-  var deviceId: js.UndefOr[String] = js.native
+  var deviceId: js.UndefOr[String] = js.undefined
   /**
     * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser,
     * appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin,
     * windowsCoManagement.
     */
-  var enrollmentType: js.UndefOr[DeviceEnrollmentType] = js.native
+  var enrollmentType: js.UndefOr[DeviceEnrollmentType] = js.undefined
   /**
     * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation,
     * userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced,
     * clientDisconnected, userAbandonment.
     */
-  var failureCategory: js.UndefOr[DeviceEnrollmentFailureReason] = js.native
+  var failureCategory: js.UndefOr[DeviceEnrollmentFailureReason] = js.undefined
   // Detailed failure reason.
-  var failureReason: js.UndefOr[String] = js.native
+  var failureReason: js.UndefOr[String] = js.undefined
   // Device identifier created or collected by Intune.
-  var managedDeviceIdentifier: js.UndefOr[String] = js.native
+  var managedDeviceIdentifier: js.UndefOr[String] = js.undefined
   // Operating System.
-  var operatingSystem: js.UndefOr[String] = js.native
+  var operatingSystem: js.UndefOr[String] = js.undefined
   // OS Version.
-  var osVersion: js.UndefOr[String] = js.native
+  var osVersion: js.UndefOr[String] = js.undefined
   // Identifier for the user that tried to enroll the device.
-  var userId: js.UndefOr[String] = js.native
+  var userId: js.UndefOr[String] = js.undefined
 }
 
 object EnrollmentTroubleshootingEvent {
   @scala.inline
-  def apply(): EnrollmentTroubleshootingEvent = {
+  def apply(
+    correlationId: String = null,
+    deviceId: String = null,
+    enrollmentType: DeviceEnrollmentType = null,
+    eventDateTime: String = null,
+    failureCategory: DeviceEnrollmentFailureReason = null,
+    failureReason: String = null,
+    id: String = null,
+    managedDeviceIdentifier: String = null,
+    operatingSystem: String = null,
+    osVersion: String = null,
+    userId: String = null
+  ): EnrollmentTroubleshootingEvent = {
     val __obj = js.Dynamic.literal()
+    if (correlationId != null) __obj.updateDynamic("correlationId")(correlationId.asInstanceOf[js.Any])
+    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
+    if (enrollmentType != null) __obj.updateDynamic("enrollmentType")(enrollmentType.asInstanceOf[js.Any])
+    if (eventDateTime != null) __obj.updateDynamic("eventDateTime")(eventDateTime.asInstanceOf[js.Any])
+    if (failureCategory != null) __obj.updateDynamic("failureCategory")(failureCategory.asInstanceOf[js.Any])
+    if (failureReason != null) __obj.updateDynamic("failureReason")(failureReason.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (managedDeviceIdentifier != null) __obj.updateDynamic("managedDeviceIdentifier")(managedDeviceIdentifier.asInstanceOf[js.Any])
+    if (operatingSystem != null) __obj.updateDynamic("operatingSystem")(operatingSystem.asInstanceOf[js.Any])
+    if (osVersion != null) __obj.updateDynamic("osVersion")(osVersion.asInstanceOf[js.Any])
+    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnrollmentTroubleshootingEvent]
   }
-  @scala.inline
-  implicit class EnrollmentTroubleshootingEventOps[Self <: EnrollmentTroubleshootingEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnrollmentType(value: DeviceEnrollmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnrollmentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enrollmentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureCategory(value: DeviceEnrollmentFailureReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCategory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCategory")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureReason(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureReason: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedDeviceIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedDeviceIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedDeviceIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedDeviceIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperatingSystem(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperatingSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOsVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOsVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("osVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

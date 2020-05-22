@@ -5,71 +5,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CollStats extends js.Object {
   /**
     * Average object size in bytes.
     */
-  var avgObjSize: scala.Double = js.native
+  var avgObjSize: scala.Double
   /**
     * `true` if the collection is capped.
     */
-  var capped: Boolean = js.native
+  var capped: Boolean
   /**
     * Number of documents.
     */
-  var count: scala.Double = js.native
-  var indexDetails: js.UndefOr[js.Any] = js.native
+  var count: scala.Double
+  var indexDetails: js.UndefOr[js.Any] = js.undefined
   /**
     * Size of specific indexes in bytes.
     */
-  var indexSizes: Dictindex = js.native
+  var indexSizes: Dictindex
   /**
     * Size of the most recently created extent in bytes.
     */
-  var lastExtentSize: scala.Double = js.native
+  var lastExtentSize: scala.Double
   /**
     * The maximum number of documents that may be present in a capped collection.
     */
-  var max: scala.Double = js.native
+  var max: scala.Double
   /**
     * The maximum size of a capped collection.
     */
-  var maxSize: scala.Double = js.native
+  var maxSize: scala.Double
   /**
     * Number of indexes.
     */
-  var nindexes: scala.Double = js.native
+  var nindexes: scala.Double
   /**
     * Namespace.
     */
-  var ns: String = js.native
+  var ns: String
   /**
     * Number of extents (contiguously allocated chunks of datafile space).
     */
-  var numExtents: scala.Double = js.native
-  var ok: scala.Double = js.native
+  var numExtents: scala.Double
+  var ok: scala.Double
   /**
     * Padding can speed up updates if documents grow.
     */
-  var paddingFactor: scala.Double = js.native
+  var paddingFactor: scala.Double
   /**
     * Collection size in bytes.
     */
-  var size: scala.Double = js.native
+  var size: scala.Double
   /**
     * (Pre)allocated space for the collection in bytes.
     */
-  var storageSize: scala.Double = js.native
+  var storageSize: scala.Double
   /**
     * Total index size in bytes.
     */
-  var totalIndexSize: scala.Double = js.native
+  var totalIndexSize: scala.Double
   /**
     * A number that indicates the user-set flags on the collection. userFlags only appears when using the mmapv1 storage engine.
     */
-  var userFlags: js.UndefOr[scala.Double] = js.native
-  var wiredTiger: js.UndefOr[WiredTigerData] = js.native
+  var userFlags: js.UndefOr[scala.Double] = js.undefined
+  var wiredTiger: js.UndefOr[WiredTigerData] = js.undefined
 }
 
 object CollStats {
@@ -89,144 +88,16 @@ object CollStats {
     paddingFactor: scala.Double,
     size: scala.Double,
     storageSize: scala.Double,
-    totalIndexSize: scala.Double
+    totalIndexSize: scala.Double,
+    indexDetails: js.Any = null,
+    userFlags: js.UndefOr[scala.Double] = js.undefined,
+    wiredTiger: WiredTigerData = null
   ): CollStats = {
     val __obj = js.Dynamic.literal(avgObjSize = avgObjSize.asInstanceOf[js.Any], capped = capped.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], indexSizes = indexSizes.asInstanceOf[js.Any], lastExtentSize = lastExtentSize.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], maxSize = maxSize.asInstanceOf[js.Any], nindexes = nindexes.asInstanceOf[js.Any], ns = ns.asInstanceOf[js.Any], numExtents = numExtents.asInstanceOf[js.Any], ok = ok.asInstanceOf[js.Any], paddingFactor = paddingFactor.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], storageSize = storageSize.asInstanceOf[js.Any], totalIndexSize = totalIndexSize.asInstanceOf[js.Any])
+    if (indexDetails != null) __obj.updateDynamic("indexDetails")(indexDetails.asInstanceOf[js.Any])
+    if (!js.isUndefined(userFlags)) __obj.updateDynamic("userFlags")(userFlags.get.asInstanceOf[js.Any])
+    if (wiredTiger != null) __obj.updateDynamic("wiredTiger")(wiredTiger.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollStats]
   }
-  @scala.inline
-  implicit class CollStatsOps[Self <: CollStats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvgObjSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avgObjSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCapped(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capped")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCount(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndexSizes(value: Dictindex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastExtentSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastExtentSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNindexes(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nindexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNs(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumExtents(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numExtents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOk(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ok")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaddingFactor(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStorageSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalIndexSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalIndexSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIndexDetails(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndexDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserFlags(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userFlags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserFlags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userFlags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWiredTiger(value: WiredTigerData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiredTiger")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWiredTiger: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wiredTiger")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

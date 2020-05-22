@@ -38,101 +38,24 @@ trait CSVInput extends js.Object {
 
 object CSVInput {
   @scala.inline
-  def apply(): CSVInput = {
+  def apply(
+    AllowQuotedRecordDelimiter: js.UndefOr[AllowQuotedRecordDelimiter] = js.undefined,
+    Comments: Comments = null,
+    FieldDelimiter: FieldDelimiter = null,
+    FileHeaderInfo: FileHeaderInfo = null,
+    QuoteCharacter: QuoteCharacter = null,
+    QuoteEscapeCharacter: QuoteEscapeCharacter = null,
+    RecordDelimiter: RecordDelimiter = null
+  ): CSVInput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AllowQuotedRecordDelimiter)) __obj.updateDynamic("AllowQuotedRecordDelimiter")(AllowQuotedRecordDelimiter.get.asInstanceOf[js.Any])
+    if (Comments != null) __obj.updateDynamic("Comments")(Comments.asInstanceOf[js.Any])
+    if (FieldDelimiter != null) __obj.updateDynamic("FieldDelimiter")(FieldDelimiter.asInstanceOf[js.Any])
+    if (FileHeaderInfo != null) __obj.updateDynamic("FileHeaderInfo")(FileHeaderInfo.asInstanceOf[js.Any])
+    if (QuoteCharacter != null) __obj.updateDynamic("QuoteCharacter")(QuoteCharacter.asInstanceOf[js.Any])
+    if (QuoteEscapeCharacter != null) __obj.updateDynamic("QuoteEscapeCharacter")(QuoteEscapeCharacter.asInstanceOf[js.Any])
+    if (RecordDelimiter != null) __obj.updateDynamic("RecordDelimiter")(RecordDelimiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSVInput]
   }
-  @scala.inline
-  implicit class CSVInputOps[Self <: CSVInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowQuotedRecordDelimiter(value: AllowQuotedRecordDelimiter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowQuotedRecordDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowQuotedRecordDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowQuotedRecordDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: Comments): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldDelimiter(value: FieldDelimiter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldDelimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileHeaderInfo(value: FileHeaderInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileHeaderInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileHeaderInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileHeaderInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuoteCharacter(value: QuoteCharacter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuoteCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuoteCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuoteCharacter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuoteEscapeCharacter(value: QuoteEscapeCharacter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuoteEscapeCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuoteEscapeCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuoteEscapeCharacter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordDelimiter(value: RecordDelimiter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordDelimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordDelimiter")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.IMaterialBRDFDefines
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,84 @@ class PBRBRDFConfiguration protected ()
     * @param markAllSubMeshesAsMiscDirty Callback to flag the material to dirty
     */
   def this(markAllSubMeshesAsMiscDirty: js.Function0[Unit]) = this()
+  /** @hidden */
+  /* CompleteClass */
+  override var _internalMarkAllSubMeshesAsMiscDirty: js.Any = js.native
+  /* CompleteClass */
+  override var _useEnergyConservation: js.Any = js.native
+  /* CompleteClass */
+  override var _useSmithVisibilityHeightCorrelated: js.Any = js.native
+  /* CompleteClass */
+  override var _useSpecularGlossinessInputEnergyConservation: js.Any = js.native
+  /* CompleteClass */
+  override var _useSphericalHarmonics: js.Any = js.native
+  /**
+    * Defines if the material uses energy conservation.
+    */
+  /* CompleteClass */
+  override var useEnergyConservation: Boolean = js.native
+  /**
+    * LEGACY Mode set to false
+    * Defines if the material uses height smith correlated visibility term.
+    * If you intent to not use our default BRDF, you need to load a separate BRDF Texture for the PBR
+    * You can either load https://assets.babylonjs.com/environments/uncorrelatedBRDF.png
+    * or https://assets.babylonjs.com/environments/uncorrelatedBRDF.dds to have more precision
+    * Not relying on height correlated will also disable energy conservation.
+    */
+  /* CompleteClass */
+  override var useSmithVisibilityHeightCorrelated: Boolean = js.native
+  /**
+    * Defines if the material uses energy conservation, when the specular workflow is active.
+    * If activated, the albedo color is multiplied with (1. - maxChannel(specular color)).
+    * If deactivated, a material is only physically plausible, when (albedo color + specular color) < 1.
+    * In the deactivated case, the material author has to ensure energy conservation, for a physically plausible rendering.
+    */
+  /* CompleteClass */
+  override var useSpecularGlossinessInputEnergyConservation: Boolean = js.native
+  /**
+    * LEGACY Mode set to false
+    * Defines if the material uses spherical harmonics vs spherical polynomials for the
+    * diffuse part of the IBL.
+    * The harmonics despite a tiny bigger cost has been proven to provide closer results
+    * to the ground truth.
+    */
+  /* CompleteClass */
+  override var useSphericalHarmonics: Boolean = js.native
+  /** @hidden */
+  /* CompleteClass */
+  override def _markAllSubMeshesAsMiscDirty(): Unit = js.native
+  /**
+    * Makes a duplicate of the current configuration into another one.
+    * @param brdfConfiguration define the config where to copy the info
+    */
+  /* CompleteClass */
+  override def copyTo(brdfConfiguration: typingsSlinky.babylonjs.BABYLON.PBRBRDFConfiguration): Unit = js.native
+  /**
+    * Get the current class name of the texture useful for serialization or dynamic coding.
+    * @returns "PBRClearCoatConfiguration"
+    */
+  /* CompleteClass */
+  override def getClassName(): String = js.native
+  /**
+    * Parses a anisotropy Configuration from a serialized object.
+    * @param source - Serialized object.
+    * @param scene Defines the scene we are parsing for
+    * @param rootUrl Defines the rootUrl to load from
+    */
+  /* CompleteClass */
+  override def parse(source: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): Unit = js.native
+  /**
+    * Checks to see if a texture is used in the material.
+    * @param defines the list of "defines" to update.
+    */
+  /* CompleteClass */
+  override def prepareDefines(defines: IMaterialBRDFDefines): Unit = js.native
+  /**
+    * Serializes this BRDF configuration.
+    * @returns - An object with the serialized config.
+    */
+  /* CompleteClass */
+  override def serialize(): js.Any = js.native
 }
 
 /* static members */

@@ -18,41 +18,14 @@ trait UpdateRequireCheckIn extends js.Object {
 
 object UpdateRequireCheckIn {
   @scala.inline
-  def apply(): UpdateRequireCheckIn = {
+  def apply(
+    Enabled: js.UndefOr[Boolean] = js.undefined,
+    ReleaseAfterMinutes: js.UndefOr[Minutes] = js.undefined
+  ): UpdateRequireCheckIn = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ReleaseAfterMinutes)) __obj.updateDynamic("ReleaseAfterMinutes")(ReleaseAfterMinutes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateRequireCheckIn]
   }
-  @scala.inline
-  implicit class UpdateRequireCheckInOps[Self <: UpdateRequireCheckIn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReleaseAfterMinutes(value: Minutes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseAfterMinutes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReleaseAfterMinutes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReleaseAfterMinutes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

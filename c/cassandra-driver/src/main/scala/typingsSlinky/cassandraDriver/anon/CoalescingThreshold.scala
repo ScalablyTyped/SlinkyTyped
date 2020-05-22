@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CoalescingThreshold extends js.Object {
-  var coalescingThreshold: js.UndefOr[Double] = js.native
-  var connectTimeout: js.UndefOr[Double] = js.native
-  var defunctReadTimeoutThreshold: js.UndefOr[Double] = js.native
-  var keepAlive: js.UndefOr[Boolean] = js.native
-  var keepAliveDelay: js.UndefOr[Double] = js.native
-  var readTimeout: js.UndefOr[Double] = js.native
-  var tcpNoDelay: js.UndefOr[Boolean] = js.native
+  var coalescingThreshold: js.UndefOr[Double] = js.undefined
+  var connectTimeout: js.UndefOr[Double] = js.undefined
+  var defunctReadTimeoutThreshold: js.UndefOr[Double] = js.undefined
+  var keepAlive: js.UndefOr[Boolean] = js.undefined
+  var keepAliveDelay: js.UndefOr[Double] = js.undefined
+  var readTimeout: js.UndefOr[Double] = js.undefined
+  var tcpNoDelay: js.UndefOr[Boolean] = js.undefined
 }
 
 object CoalescingThreshold {
   @scala.inline
-  def apply(): CoalescingThreshold = {
+  def apply(
+    coalescingThreshold: js.UndefOr[Double] = js.undefined,
+    connectTimeout: js.UndefOr[Double] = js.undefined,
+    defunctReadTimeoutThreshold: js.UndefOr[Double] = js.undefined,
+    keepAlive: js.UndefOr[Boolean] = js.undefined,
+    keepAliveDelay: js.UndefOr[Double] = js.undefined,
+    readTimeout: js.UndefOr[Double] = js.undefined,
+    tcpNoDelay: js.UndefOr[Boolean] = js.undefined
+  ): CoalescingThreshold = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(coalescingThreshold)) __obj.updateDynamic("coalescingThreshold")(coalescingThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectTimeout)) __obj.updateDynamic("connectTimeout")(connectTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(defunctReadTimeoutThreshold)) __obj.updateDynamic("defunctReadTimeoutThreshold")(defunctReadTimeoutThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepAliveDelay)) __obj.updateDynamic("keepAliveDelay")(keepAliveDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readTimeout)) __obj.updateDynamic("readTimeout")(readTimeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tcpNoDelay)) __obj.updateDynamic("tcpNoDelay")(tcpNoDelay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoalescingThreshold]
   }
-  @scala.inline
-  implicit class CoalescingThresholdOps[Self <: CoalescingThreshold] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoalescingThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coalescingThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCoalescingThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coalescingThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefunctReadTimeoutThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defunctReadTimeoutThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefunctReadTimeoutThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defunctReadTimeoutThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepAlive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepAlive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepAliveDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepAliveDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTcpNoDelay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpNoDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTcpNoDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpNoDelay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

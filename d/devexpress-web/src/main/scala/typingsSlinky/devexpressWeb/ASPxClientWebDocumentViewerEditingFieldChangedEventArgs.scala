@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientWebDocumentViewer.EditingFieldChanged and ASPxClientReportDesigner.PreviewEditingFieldChanged events.
   */
-@js.native
 trait ASPxClientWebDocumentViewerEditingFieldChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets an editing field whose value has been changed.
     */
-  var Field: ASPxClientWebDocumentViewerEditingField = js.native
+  var Field: ASPxClientWebDocumentViewerEditingField
   /**
     * Provides access to a new value of an editing field.
     */
-  var NewValue: js.Any = js.native
+  var NewValue: js.Any
   /**
     * Provides access to a previous value of an editing field.
     */
-  var OldValue: js.Any = js.native
+  var OldValue: js.Any
 }
 
 object ASPxClientWebDocumentViewerEditingFieldChangedEventArgs {
@@ -29,31 +28,5 @@ object ASPxClientWebDocumentViewerEditingFieldChangedEventArgs {
     val __obj = js.Dynamic.literal(Field = Field.asInstanceOf[js.Any], NewValue = NewValue.asInstanceOf[js.Any], OldValue = OldValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientWebDocumentViewerEditingFieldChangedEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientWebDocumentViewerEditingFieldChangedEventArgsOps[Self <: ASPxClientWebDocumentViewerEditingFieldChangedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withField(value: ASPxClientWebDocumentViewerEditingField): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NewValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOldValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OldValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WriteApplicationSettingsRequest extends js.Object {
   /**
-    * The settings for the AWS Lambda function to use by default as a code hook for campaigns in the application. To override these settings for a specific campaign, use the Campaign resource to define custom Lambda function settings for the campaign.
+    * The settings for the AWS Lambda function to invoke by default as a code hook for campaigns in the application. You can use this hook to customize segments that are used by campaigns in the application. To override these settings and define custom settings for a specific campaign, use the CampaignHook object of the Campaign resource.
     */
   var CampaignHook: js.UndefOr[typingsSlinky.awsSdk.pinpointMod.CampaignHook] = js.native
   /**
@@ -15,7 +15,7 @@ trait WriteApplicationSettingsRequest extends js.Object {
     */
   var CloudWatchMetricsEnabled: js.UndefOr[boolean] = js.native
   /**
-    * The default sending limits for campaigns in the application. To override these limits for a specific campaign, use the Campaign resource to define custom limits for the campaign.
+    * The default sending limits for campaigns and journeys in the application. To override these limits and define custom limits for a specific campaign or journey, use the Campaign resource or the Journey resource, respectively.
     */
   var Limits: js.UndefOr[CampaignLimits] = js.native
   /**
@@ -26,65 +26,18 @@ trait WriteApplicationSettingsRequest extends js.Object {
 
 object WriteApplicationSettingsRequest {
   @scala.inline
-  def apply(): WriteApplicationSettingsRequest = {
+  def apply(
+    CampaignHook: CampaignHook = null,
+    CloudWatchMetricsEnabled: js.UndefOr[boolean] = js.undefined,
+    Limits: CampaignLimits = null,
+    QuietTime: QuietTime = null
+  ): WriteApplicationSettingsRequest = {
     val __obj = js.Dynamic.literal()
+    if (CampaignHook != null) __obj.updateDynamic("CampaignHook")(CampaignHook.asInstanceOf[js.Any])
+    if (!js.isUndefined(CloudWatchMetricsEnabled)) __obj.updateDynamic("CloudWatchMetricsEnabled")(CloudWatchMetricsEnabled.get.asInstanceOf[js.Any])
+    if (Limits != null) __obj.updateDynamic("Limits")(Limits.asInstanceOf[js.Any])
+    if (QuietTime != null) __obj.updateDynamic("QuietTime")(QuietTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteApplicationSettingsRequest]
   }
-  @scala.inline
-  implicit class WriteApplicationSettingsRequestOps[Self <: WriteApplicationSettingsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCampaignHook(value: CampaignHook): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignHook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignHook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudWatchMetricsEnabled(value: boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchMetricsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudWatchMetricsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchMetricsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimits(value: CampaignLimits): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Limits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuietTime(value: QuietTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuietTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuietTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,6 +10,5 @@ import scala.scalajs.js.annotation._
   * abstraction layer for keyboard navigation, and defines a map of keyCodes
   * to handler functions.
   */
-@js.native
 trait KeyboardNavigationHandler extends js.Object
 

@@ -1,5 +1,24 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.babelTypes.babelTypesStrings.ArrowFunctionExpression
+import typingsSlinky.babelTypes.babelTypesStrings.BlockStatement
+import typingsSlinky.babelTypes.babelTypesStrings.ClassMethod
+import typingsSlinky.babelTypes.babelTypesStrings.DoWhileStatement
+import typingsSlinky.babelTypes.babelTypesStrings.ForInStatement
+import typingsSlinky.babelTypes.babelTypesStrings.ForOfStatement
+import typingsSlinky.babelTypes.babelTypesStrings.ForStatement
+import typingsSlinky.babelTypes.babelTypesStrings.FunctionDeclaration
+import typingsSlinky.babelTypes.babelTypesStrings.FunctionExpression
+import typingsSlinky.babelTypes.babelTypesStrings.ObjectMethod
+import typingsSlinky.babelTypes.babelTypesStrings.Program
+import typingsSlinky.babelTypes.babelTypesStrings.SwitchStatement
+import typingsSlinky.babelTypes.babelTypesStrings.WhileStatement
+import typingsSlinky.babelTypes.babelTypesStrings.constructor
+import typingsSlinky.babelTypes.babelTypesStrings.get
+import typingsSlinky.babelTypes.babelTypesStrings.method
+import typingsSlinky.babelTypes.babelTypesStrings.module
+import typingsSlinky.babelTypes.babelTypesStrings.script
+import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,30 +42,310 @@ trait BlockParent extends js.Object
 
 object BlockParent {
   @scala.inline
-  implicit def apply(value: ArrowFunctionExpression_): BlockParent = value.asInstanceOf[BlockParent]
+  def ForInStatement_(
+    body: Statement,
+    end: Double,
+    left: VariableDeclaration_ | LVal,
+    loc: SourceLocation,
+    right: Expression,
+    start: Double,
+    `type`: ForInStatement,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: BlockStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def Program_(
+    body: js.Array[Statement | ModuleDeclaration],
+    end: Double,
+    loc: SourceLocation,
+    sourceType: script | module,
+    start: Double,
+    `type`: Program,
+    directives: js.Array[Directive_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: ClassMethod_): BlockParent = value.asInstanceOf[BlockParent]
+  def ObjectMethod_(
+    async: Boolean,
+    body: BlockStatement_,
+    computed: Boolean,
+    end: Double,
+    generator: Boolean,
+    id: Identifier_,
+    key: Expression,
+    kind: get | set | method,
+    loc: SourceLocation,
+    params: js.Array[LVal],
+    shorthand: Boolean,
+    start: Double,
+    `type`: ObjectMethod,
+    value: Expression,
+    decorators: js.Array[Decorator_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    returnType: TypeAnnotation_ = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], shorthand = shorthand.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (decorators != null) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (returnType != null) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: DoWhileStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def ClassMethod_(
+    async: Boolean,
+    body: BlockStatement_,
+    computed: Boolean,
+    end: Double,
+    expression: Boolean,
+    generator: Boolean,
+    id: Identifier_,
+    key: Expression,
+    kind: constructor | method | get | set,
+    loc: SourceLocation,
+    params: js.Array[LVal],
+    start: Double,
+    static: Boolean,
+    `type`: ClassMethod,
+    decorators: js.Array[Decorator_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    returnType: TypeAnnotation_ = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ = null,
+    value: FunctionExpression_ = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (decorators != null) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (returnType != null) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: ForInStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def SwitchStatement_(
+    cases: js.Array[SwitchCase_],
+    discriminant: Expression,
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: SwitchStatement,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(cases = cases.asInstanceOf[js.Any], discriminant = discriminant.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: ForOfStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def FunctionExpression_(
+    async: Boolean,
+    body: BlockStatement_,
+    end: Double,
+    generator: Boolean,
+    id: Identifier_,
+    loc: SourceLocation,
+    params: js.Array[LVal],
+    start: Double,
+    `type`: FunctionExpression,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    returnType: TypeAnnotation_ = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (returnType != null) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: ForStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def BlockStatement_(
+    body: js.Array[Statement],
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    `type`: BlockStatement,
+    directives: js.Array[Directive_] = null,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: FunctionDeclaration_): BlockParent = value.asInstanceOf[BlockParent]
+  def WhileStatement_(
+    body: Statement,
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    test: Expression,
+    `type`: WhileStatement,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: FunctionExpression_): BlockParent = value.asInstanceOf[BlockParent]
+  def ForOfStatement_(
+    body: Statement,
+    end: Double,
+    left: VariableDeclaration_ | LVal,
+    loc: SourceLocation,
+    right: Expression,
+    start: Double,
+    `type`: ForOfStatement,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: ObjectMethod_): BlockParent = value.asInstanceOf[BlockParent]
+  def ArrowFunctionExpression_(
+    async: Boolean,
+    body: BlockStatement_ | Expression,
+    end: Double,
+    expression: Boolean,
+    generator: Boolean,
+    id: Identifier_,
+    loc: SourceLocation,
+    params: js.Array[LVal],
+    start: Double,
+    `type`: ArrowFunctionExpression,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    returnType: TypeAnnotation_ = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (returnType != null) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: Program_): BlockParent = value.asInstanceOf[BlockParent]
+  def FunctionDeclaration_(
+    async: Boolean,
+    body: BlockStatement_,
+    end: Double,
+    generator: Boolean,
+    id: Identifier_,
+    loc: SourceLocation,
+    params: js.Array[LVal],
+    start: Double,
+    `type`: FunctionDeclaration,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    returnType: TypeAnnotation_ = null,
+    trailingComments: js.Array[Comment] = null,
+    typeParameters: TypeParameterDeclaration_ = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (returnType != null) __obj.updateDynamic("returnType")(returnType.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: SwitchStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def DoWhileStatement_(
+    body: Statement,
+    end: Double,
+    loc: SourceLocation,
+    start: Double,
+    test: Expression,
+    `type`: DoWhileStatement,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
   @scala.inline
-  implicit def apply(value: WhileStatement_): BlockParent = value.asInstanceOf[BlockParent]
+  def ForStatement_(
+    body: Statement,
+    end: Double,
+    init: VariableDeclaration_ | Expression,
+    loc: SourceLocation,
+    start: Double,
+    test: Expression,
+    `type`: ForStatement,
+    update: Expression,
+    innerComments: js.Array[Comment] = null,
+    leadingComments: js.Array[Comment] = null,
+    trailingComments: js.Array[Comment] = null
+  ): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], init = init.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any], update = update.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
 }
 

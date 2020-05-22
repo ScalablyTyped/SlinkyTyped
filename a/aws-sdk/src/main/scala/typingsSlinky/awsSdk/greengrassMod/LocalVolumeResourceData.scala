@@ -22,53 +22,16 @@ trait LocalVolumeResourceData extends js.Object {
 
 object LocalVolumeResourceData {
   @scala.inline
-  def apply(): LocalVolumeResourceData = {
+  def apply(
+    DestinationPath: string = null,
+    GroupOwnerSetting: GroupOwnerSetting = null,
+    SourcePath: string = null
+  ): LocalVolumeResourceData = {
     val __obj = js.Dynamic.literal()
+    if (DestinationPath != null) __obj.updateDynamic("DestinationPath")(DestinationPath.asInstanceOf[js.Any])
+    if (GroupOwnerSetting != null) __obj.updateDynamic("GroupOwnerSetting")(GroupOwnerSetting.asInstanceOf[js.Any])
+    if (SourcePath != null) __obj.updateDynamic("SourcePath")(SourcePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalVolumeResourceData]
   }
-  @scala.inline
-  implicit class LocalVolumeResourceDataOps[Self <: LocalVolumeResourceData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestinationPath(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupOwnerSetting(value: GroupOwnerSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupOwnerSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupOwnerSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupOwnerSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourcePath(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourcePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

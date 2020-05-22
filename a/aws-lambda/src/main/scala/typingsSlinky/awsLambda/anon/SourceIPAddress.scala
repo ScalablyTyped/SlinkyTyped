@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceIPAddress extends js.Object {
-  var sourceIPAddress: String = js.native
+  var sourceIPAddress: String
 }
 
 object SourceIPAddress {
@@ -15,19 +14,5 @@ object SourceIPAddress {
     val __obj = js.Dynamic.literal(sourceIPAddress = sourceIPAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceIPAddress]
   }
-  @scala.inline
-  implicit class SourceIPAddressOps[Self <: SourceIPAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSourceIPAddress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIPAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

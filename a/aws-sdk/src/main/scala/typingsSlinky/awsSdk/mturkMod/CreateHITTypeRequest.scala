@@ -38,77 +38,20 @@ trait CreateHITTypeRequest extends js.Object {
 
 object CreateHITTypeRequest {
   @scala.inline
-  def apply(AssignmentDurationInSeconds: Long, Description: String, Reward: CurrencyAmount, Title: String): CreateHITTypeRequest = {
+  def apply(
+    AssignmentDurationInSeconds: Long,
+    Description: String,
+    Reward: CurrencyAmount,
+    Title: String,
+    AutoApprovalDelayInSeconds: js.UndefOr[Long] = js.undefined,
+    Keywords: String = null,
+    QualificationRequirements: QualificationRequirementList = null
+  ): CreateHITTypeRequest = {
     val __obj = js.Dynamic.literal(AssignmentDurationInSeconds = AssignmentDurationInSeconds.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], Reward = Reward.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any])
+    if (!js.isUndefined(AutoApprovalDelayInSeconds)) __obj.updateDynamic("AutoApprovalDelayInSeconds")(AutoApprovalDelayInSeconds.get.asInstanceOf[js.Any])
+    if (Keywords != null) __obj.updateDynamic("Keywords")(Keywords.asInstanceOf[js.Any])
+    if (QualificationRequirements != null) __obj.updateDynamic("QualificationRequirements")(QualificationRequirements.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHITTypeRequest]
   }
-  @scala.inline
-  implicit class CreateHITTypeRequestOps[Self <: CreateHITTypeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssignmentDurationInSeconds(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentDurationInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReward(value: CurrencyAmount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Reward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoApprovalDelayInSeconds(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoApprovalDelayInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoApprovalDelayInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoApprovalDelayInSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Keywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQualificationRequirements(value: QualificationRequirementList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequirements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQualificationRequirements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequirements")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

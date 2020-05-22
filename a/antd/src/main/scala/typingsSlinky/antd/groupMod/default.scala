@@ -1,6 +1,5 @@
 package typingsSlinky.antd.groupMod
 
-import typingsSlinky.antd.anon.DefaultValue
 import typingsSlinky.antd.anon.Options
 import typingsSlinky.antd.anon.Value
 import scala.scalajs.js
@@ -18,7 +17,6 @@ class default protected () extends CheckboxGroup {
 @js.native
 object default extends js.Object {
   var defaultProps: Options = js.native
-  var propTypes: DefaultValue = js.native
   def getDerivedStateFromProps(nextProps: CheckboxGroupProps): Value | Null = js.native
 }
 

@@ -25,41 +25,11 @@ trait SchemaBasicScaling extends js.Object {
 
 object SchemaBasicScaling {
   @scala.inline
-  def apply(): SchemaBasicScaling = {
+  def apply(idleTimeout: String = null, maxInstances: js.UndefOr[Double] = js.undefined): SchemaBasicScaling = {
     val __obj = js.Dynamic.literal()
+    if (idleTimeout != null) __obj.updateDynamic("idleTimeout")(idleTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxInstances)) __obj.updateDynamic("maxInstances")(maxInstances.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBasicScaling]
   }
-  @scala.inline
-  implicit class SchemaBasicScalingOps[Self <: SchemaBasicScaling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdleTimeout(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxInstances(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

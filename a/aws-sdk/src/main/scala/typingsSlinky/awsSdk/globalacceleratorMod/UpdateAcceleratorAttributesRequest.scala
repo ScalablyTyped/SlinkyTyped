@@ -26,59 +26,17 @@ trait UpdateAcceleratorAttributesRequest extends js.Object {
 
 object UpdateAcceleratorAttributesRequest {
   @scala.inline
-  def apply(AcceleratorArn: GenericString): UpdateAcceleratorAttributesRequest = {
+  def apply(
+    AcceleratorArn: GenericString,
+    FlowLogsEnabled: js.UndefOr[GenericBoolean] = js.undefined,
+    FlowLogsS3Bucket: GenericString = null,
+    FlowLogsS3Prefix: GenericString = null
+  ): UpdateAcceleratorAttributesRequest = {
     val __obj = js.Dynamic.literal(AcceleratorArn = AcceleratorArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(FlowLogsEnabled)) __obj.updateDynamic("FlowLogsEnabled")(FlowLogsEnabled.get.asInstanceOf[js.Any])
+    if (FlowLogsS3Bucket != null) __obj.updateDynamic("FlowLogsS3Bucket")(FlowLogsS3Bucket.asInstanceOf[js.Any])
+    if (FlowLogsS3Prefix != null) __obj.updateDynamic("FlowLogsS3Prefix")(FlowLogsS3Prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAcceleratorAttributesRequest]
   }
-  @scala.inline
-  implicit class UpdateAcceleratorAttributesRequestOps[Self <: UpdateAcceleratorAttributesRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceleratorArn(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFlowLogsEnabled(value: GenericBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowLogsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlowLogsS3Bucket(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogsS3Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowLogsS3Bucket: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogsS3Bucket")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlowLogsS3Prefix(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogsS3Prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowLogsS3Prefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogsS3Prefix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

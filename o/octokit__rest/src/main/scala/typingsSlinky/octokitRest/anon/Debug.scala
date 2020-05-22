@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Debug extends js.Object {
-  var debug: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.native
-  var error: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.native
-  var info: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.native
-  var warn: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.native
+  var debug: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.undefined
+  var error: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.undefined
+  var info: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.undefined
+  var warn: js.UndefOr[js.Function2[/* message */ String, /* info */ js.UndefOr[js.Object], Unit]] = js.undefined
 }
 
 object Debug {
   @scala.inline
-  def apply(): Debug = {
+  def apply(
+    debug: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit = null,
+    error: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit = null,
+    info: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit = null,
+    warn: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit = null
+  ): Debug = {
     val __obj = js.Dynamic.literal()
+    if (debug != null) __obj.updateDynamic("debug")(js.Any.fromFunction2(debug))
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction2(error))
+    if (info != null) __obj.updateDynamic("info")(js.Any.fromFunction2(info))
+    if (warn != null) __obj.updateDynamic("warn")(js.Any.fromFunction2(warn))
     __obj.asInstanceOf[Debug]
   }
-  @scala.inline
-  implicit class DebugOps[Self <: Debug] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDebug(value: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInfo(value: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWarn(value: (/* message */ String, /* info */ js.UndefOr[js.Object]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutWarn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,13 +7,12 @@ import scala.scalajs.js.annotation._
 
 /* devtools.inspectedWindow types */
 /** A resource within the inspected page, such as a document, a script, or an image. */
-@js.native
 trait Resource extends js.Object {
   /**
     * Gets the content of the resource.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var getContent: js.UndefOr[js.Function0[js.Promise[js.Object]]] = js.native
+  var getContent: js.UndefOr[js.Function0[js.Promise[js.Object]]] = js.undefined
   /**
     * Sets the content of the resource.
     * @param content New content of the resource. Only resources with the text type are currently supported.
@@ -23,54 +22,22 @@ trait Resource extends js.Object {
     */
   var setContent: js.UndefOr[
     js.Function2[/* content */ String, /* commit */ Boolean, js.Promise[StringDictionary[_]]]
-  ] = js.native
+  ] = js.undefined
   /** The URL of the resource. */
-  var url: String = js.native
+  var url: String
 }
 
 object Resource {
   @scala.inline
-  def apply(url: String): Resource = {
+  def apply(
+    url: String,
+    getContent: () => js.Promise[js.Object] = null,
+    setContent: (/* content */ String, /* commit */ Boolean) => js.Promise[StringDictionary[_]] = null
+  ): Resource = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    if (getContent != null) __obj.updateDynamic("getContent")(js.Any.fromFunction0(getContent))
+    if (setContent != null) __obj.updateDynamic("setContent")(js.Any.fromFunction2(setContent))
     __obj.asInstanceOf[Resource]
   }
-  @scala.inline
-  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetContent(value: () => js.Promise[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetContent(value: (/* content */ String, /* commit */ Boolean) => js.Promise[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContent")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetContent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setContent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

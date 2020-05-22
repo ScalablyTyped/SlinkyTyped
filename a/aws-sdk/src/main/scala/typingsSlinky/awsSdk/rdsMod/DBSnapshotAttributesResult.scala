@@ -18,41 +18,11 @@ trait DBSnapshotAttributesResult extends js.Object {
 
 object DBSnapshotAttributesResult {
   @scala.inline
-  def apply(): DBSnapshotAttributesResult = {
+  def apply(DBSnapshotAttributes: DBSnapshotAttributeList = null, DBSnapshotIdentifier: String = null): DBSnapshotAttributesResult = {
     val __obj = js.Dynamic.literal()
+    if (DBSnapshotAttributes != null) __obj.updateDynamic("DBSnapshotAttributes")(DBSnapshotAttributes.asInstanceOf[js.Any])
+    if (DBSnapshotIdentifier != null) __obj.updateDynamic("DBSnapshotIdentifier")(DBSnapshotIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBSnapshotAttributesResult]
   }
-  @scala.inline
-  implicit class DBSnapshotAttributesResultOps[Self <: DBSnapshotAttributesResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBSnapshotAttributes(value: DBSnapshotAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSnapshotAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBSnapshotAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSnapshotAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDBSnapshotIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSnapshotIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDBSnapshotIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSnapshotIdentifier")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

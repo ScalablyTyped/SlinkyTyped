@@ -38,101 +38,24 @@ trait GetComplianceSummaryInput extends js.Object {
 
 object GetComplianceSummaryInput {
   @scala.inline
-  def apply(): GetComplianceSummaryInput = {
+  def apply(
+    GroupBy: GroupBy = null,
+    MaxResults: js.UndefOr[MaxResultsGetComplianceSummary] = js.undefined,
+    PaginationToken: PaginationToken = null,
+    RegionFilters: RegionFilterList = null,
+    ResourceTypeFilters: ResourceTypeFilterList = null,
+    TagKeyFilters: TagKeyFilterList = null,
+    TargetIdFilters: TargetIdFilterList = null
+  ): GetComplianceSummaryInput = {
     val __obj = js.Dynamic.literal()
+    if (GroupBy != null) __obj.updateDynamic("GroupBy")(GroupBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxResults)) __obj.updateDynamic("MaxResults")(MaxResults.get.asInstanceOf[js.Any])
+    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
+    if (RegionFilters != null) __obj.updateDynamic("RegionFilters")(RegionFilters.asInstanceOf[js.Any])
+    if (ResourceTypeFilters != null) __obj.updateDynamic("ResourceTypeFilters")(ResourceTypeFilters.asInstanceOf[js.Any])
+    if (TagKeyFilters != null) __obj.updateDynamic("TagKeyFilters")(TagKeyFilters.asInstanceOf[js.Any])
+    if (TargetIdFilters != null) __obj.updateDynamic("TargetIdFilters")(TargetIdFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetComplianceSummaryInput]
   }
-  @scala.inline
-  implicit class GetComplianceSummaryInputOps[Self <: GetComplianceSummaryInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupBy(value: GroupBy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: MaxResultsGetComplianceSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaginationToken(value: PaginationToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaginationToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegionFilters(value: RegionFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegionFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceTypeFilters(value: ResourceTypeFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypeFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceTypeFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceTypeFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagKeyFilters(value: TagKeyFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKeyFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagKeyFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TagKeyFilters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetIdFilters(value: TargetIdFilterList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIdFilters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetIdFilters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIdFilters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

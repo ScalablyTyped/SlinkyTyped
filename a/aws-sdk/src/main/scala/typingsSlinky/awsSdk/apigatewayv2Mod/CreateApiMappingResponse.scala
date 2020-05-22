@@ -26,65 +26,18 @@ trait CreateApiMappingResponse extends js.Object {
 
 object CreateApiMappingResponse {
   @scala.inline
-  def apply(): CreateApiMappingResponse = {
+  def apply(
+    ApiId: Id = null,
+    ApiMappingId: Id = null,
+    ApiMappingKey: SelectionKey = null,
+    Stage: StringWithLengthBetween1And128 = null
+  ): CreateApiMappingResponse = {
     val __obj = js.Dynamic.literal()
+    if (ApiId != null) __obj.updateDynamic("ApiId")(ApiId.asInstanceOf[js.Any])
+    if (ApiMappingId != null) __obj.updateDynamic("ApiMappingId")(ApiMappingId.asInstanceOf[js.Any])
+    if (ApiMappingKey != null) __obj.updateDynamic("ApiMappingKey")(ApiMappingKey.asInstanceOf[js.Any])
+    if (Stage != null) __obj.updateDynamic("Stage")(Stage.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateApiMappingResponse]
   }
-  @scala.inline
-  implicit class CreateApiMappingResponseOps[Self <: CreateApiMappingResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiMappingId(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiMappingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiMappingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiMappingId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApiMappingKey(value: SelectionKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiMappingKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiMappingKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiMappingKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStage(value: StringWithLengthBetween1And128): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Stage")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,83 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnnotationContextMenu extends js.Object {
   /** Enables/disables the delete menu in the annotation context menu.
     */
-  var isDeleteEnable: js.UndefOr[Boolean] = js.native
+  var isDeleteEnable: js.UndefOr[Boolean] = js.undefined
   /** Enables/disables the annotation context menu.
     */
-  var isEnable: js.UndefOr[Boolean] = js.native
+  var isEnable: js.UndefOr[Boolean] = js.undefined
   /** Enables/disables the popup menu in the annotation context menu.
     */
-  var isPopupEnable: js.UndefOr[Boolean] = js.native
+  var isPopupEnable: js.UndefOr[Boolean] = js.undefined
   /** Enables/disables the properties menu in the annotation context menu.
     */
-  var isPropertiesEnable: js.UndefOr[Boolean] = js.native
+  var isPropertiesEnable: js.UndefOr[Boolean] = js.undefined
 }
 
 object AnnotationContextMenu {
   @scala.inline
-  def apply(): AnnotationContextMenu = {
+  def apply(
+    isDeleteEnable: js.UndefOr[Boolean] = js.undefined,
+    isEnable: js.UndefOr[Boolean] = js.undefined,
+    isPopupEnable: js.UndefOr[Boolean] = js.undefined,
+    isPropertiesEnable: js.UndefOr[Boolean] = js.undefined
+  ): AnnotationContextMenu = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(isDeleteEnable)) __obj.updateDynamic("isDeleteEnable")(isDeleteEnable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isEnable)) __obj.updateDynamic("isEnable")(isEnable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPopupEnable)) __obj.updateDynamic("isPopupEnable")(isPopupEnable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPropertiesEnable)) __obj.updateDynamic("isPropertiesEnable")(isPropertiesEnable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationContextMenu]
   }
-  @scala.inline
-  implicit class AnnotationContextMenuOps[Self <: AnnotationContextMenu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsDeleteEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleteEnable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDeleteEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleteEnable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPopupEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPopupEnable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPopupEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPopupEnable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPropertiesEnable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPropertiesEnable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPropertiesEnable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPropertiesEnable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

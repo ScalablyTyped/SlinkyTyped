@@ -18,41 +18,11 @@ trait DescribeActivationsResult extends js.Object {
 
 object DescribeActivationsResult {
   @scala.inline
-  def apply(): DescribeActivationsResult = {
+  def apply(ActivationList: ActivationList = null, NextToken: NextToken = null): DescribeActivationsResult = {
     val __obj = js.Dynamic.literal()
+    if (ActivationList != null) __obj.updateDynamic("ActivationList")(ActivationList.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeActivationsResult]
   }
-  @scala.inline
-  implicit class DescribeActivationsResultOps[Self <: DescribeActivationsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationList(value: ActivationList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActivationList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

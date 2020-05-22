@@ -13,6 +13,5 @@ import scala.scalajs.js.annotation._
   * information from the evt object   },   onAfterHide: function(evt) {      // ...   }});</pre>
   * @resource sap/m/NavContainer.js
   */
-@js.native
 trait NavContainerChild extends js.Object
 

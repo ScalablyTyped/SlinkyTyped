@@ -8,6 +8,12 @@ package object cloudsearchdomainMod {
   type Adds = scala.Double
   type BucketList = js.Array[typingsSlinky.awsSdk.cloudsearchdomainMod.Bucket]
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.cloudsearchdomainMod.ClientApiVersions
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.applicationSlashjson
+    - typingsSlinky.awsSdk.awsSdkStrings.applicationSlashxml
+    - java.lang.String
+  */
+  type ContentType = typingsSlinky.awsSdk.cloudsearchdomainMod._ContentType | java.lang.String
   type Cursor = java.lang.String
   type Deletes = scala.Double
   type DocumentServiceWarnings = js.Array[typingsSlinky.awsSdk.cloudsearchdomainMod.DocumentServiceWarning]
@@ -26,6 +32,14 @@ package object cloudsearchdomainMod {
   type Partial = scala.Boolean
   type Query = java.lang.String
   type QueryOptions = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.simple_
+    - typingsSlinky.awsSdk.awsSdkStrings.structured
+    - typingsSlinky.awsSdk.awsSdkStrings.lucene
+    - typingsSlinky.awsSdk.awsSdkStrings.dismax
+    - java.lang.String
+  */
+  type QueryParser = typingsSlinky.awsSdk.cloudsearchdomainMod._QueryParser | java.lang.String
   type Return = java.lang.String
   type Size = scala.Double
   type Sort = java.lang.String
@@ -36,4 +50,11 @@ package object cloudsearchdomainMod {
   type Suggester = java.lang.String
   type Suggestions = js.Array[typingsSlinky.awsSdk.cloudsearchdomainMod.SuggestionMatch]
   type SuggestionsSize = scala.Double
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudsearchdomainMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2013-01-01`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.cloudsearchdomainMod._apiVersion | java.lang.String
 }

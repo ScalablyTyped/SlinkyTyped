@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern manipulations on groups.
   */
-@js.native
 trait ASPxClientNavBarGroupEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the group object related to the event.
     */
-  var group: ASPxClientNavBarGroup = js.native
+  var group: ASPxClientNavBarGroup
 }
 
 object ASPxClientNavBarGroupEventArgs {
@@ -21,19 +20,5 @@ object ASPxClientNavBarGroupEventArgs {
     val __obj = js.Dynamic.literal(group = group.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientNavBarGroupEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientNavBarGroupEventArgsOps[Self <: ASPxClientNavBarGroupEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroup(value: ASPxClientNavBarGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

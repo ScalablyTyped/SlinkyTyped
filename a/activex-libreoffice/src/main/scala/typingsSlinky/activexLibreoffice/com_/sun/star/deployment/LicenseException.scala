@@ -10,18 +10,17 @@ import scala.scalajs.js.annotation._
   * A {@link LicenseException} reflects the necessity of someone agreeing to a license.
   * @since OOo 2.0.4
   */
-@js.native
 trait LicenseException extends Exception {
   /** contains the value of the attribute `/description/registration/simple-license/@accept-by` from the description.xml */
-  var AcceptBy: String = js.native
+  var AcceptBy: String
   /**
     * name of the extension.
     *
     * The display name of the extension. See {@link XPackage.getDisplayName()}
     */
-  var ExtensionName: String = js.native
+  var ExtensionName: String
   /** contains the text of the license. */
-  var Text: String = js.native
+  var Text: String
 }
 
 object LicenseException {
@@ -30,31 +29,5 @@ object LicenseException {
     val __obj = js.Dynamic.literal(AcceptBy = AcceptBy.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], ExtensionName = ExtensionName.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any])
     __obj.asInstanceOf[LicenseException]
   }
-  @scala.inline
-  implicit class LicenseExceptionOps[Self <: LicenseException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtensionName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtensionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait UnsuccessfulItem extends js.Object {
 
 object UnsuccessfulItem {
   @scala.inline
-  def apply(): UnsuccessfulItem = {
+  def apply(Error: UnsuccessfulItemError = null, ResourceId: String = null): UnsuccessfulItem = {
     val __obj = js.Dynamic.literal()
+    if (Error != null) __obj.updateDynamic("Error")(Error.asInstanceOf[js.Any])
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsuccessfulItem]
   }
-  @scala.inline
-  implicit class UnsuccessfulItemOps[Self <: UnsuccessfulItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: UnsuccessfulItemError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

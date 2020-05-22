@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TypeError extends Error {
   @JSName("name")
-  var name_TypeError: typingsSlinky.vimeoPlayer.vimeoPlayerStrings.TypeError = js.native
+  var name_TypeError: typingsSlinky.vimeoPlayer.vimeoPlayerStrings.TypeError
 }
 
 object TypeError {
@@ -16,19 +15,5 @@ object TypeError {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeError]
   }
-  @scala.inline
-  implicit class TypeErrorOps[Self <: TypeError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: typingsSlinky.vimeoPlayer.vimeoPlayerStrings.TypeError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

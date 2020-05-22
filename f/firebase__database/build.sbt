@@ -1,20 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "firebase__database"
-version := "0.5.24-88533b"
+version := "0.6.2-b8a05f"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "firebase__app-types" % "0.6.0-4b25d1",
-  "org.scalablytyped.slinky" %%% "firebase__auth-interop-types" % "0.1.4-b7ab89",
-  "org.scalablytyped.slinky" %%% "firebase__component" % "0.1.8-2d69ff",
-  "org.scalablytyped.slinky" %%% "firebase__database-types" % "0.4.14-c70c7c",
-  "org.scalablytyped.slinky" %%% "firebase__logger" % "0.2.0-ea8d5a",
-  "org.scalablytyped.slinky" %%% "firebase__util" % "0.2.43-be1185",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "org.scalablytyped.slinky" %%% "firebase__app-types" % "0.6.0-d23c04",
+  "org.scalablytyped.slinky" %%% "firebase__auth-interop-types" % "0.1.4-53d55d",
+  "org.scalablytyped.slinky" %%% "firebase__component" % "0.1.11-f4538d",
+  "org.scalablytyped.slinky" %%% "firebase__database-types" % "0.5.0-38f31c",
+  "org.scalablytyped.slinky" %%% "firebase__logger" % "0.2.3-3efe92",
+  "org.scalablytyped.slinky" %%% "firebase__util" % "0.2.46-4579be",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

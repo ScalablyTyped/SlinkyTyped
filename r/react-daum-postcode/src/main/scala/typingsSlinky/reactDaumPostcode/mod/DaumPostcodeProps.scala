@@ -5,316 +5,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DaumPostcodeProps extends js.Object {
-  var alwaysShowEngAddr: js.UndefOr[Boolean] = js.native
-  var animation: js.UndefOr[Boolean] = js.native
-  var autoClose: js.UndefOr[Boolean] = js.native
-  var autoMapping: js.UndefOr[Boolean] = js.native
-  var autoResize: js.UndefOr[Boolean] = js.native
-  var defaultQuery: js.UndefOr[String] = js.native
-  var errorMessage: js.UndefOr[ReactElement] = js.native
-  var height: js.UndefOr[Double | String] = js.native
-  var hideEngBtn: js.UndefOr[Boolean] = js.native
-  var hideMapBtn: js.UndefOr[Boolean] = js.native
-  var maxSuggestItems: js.UndefOr[Double] = js.native
-  var pleaseReadGuide: js.UndefOr[Double] = js.native
-  var pleaseReadGuideTimer: js.UndefOr[Double] = js.native
-  var scriptUrl: js.UndefOr[String] = js.native
-  var shorthand: js.UndefOr[Boolean] = js.native
-  var showMoreHName: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[js.Object] = js.native
-  var submitMode: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[js.Object] = js.native
-  var useSuggest: js.UndefOr[Boolean] = js.native
-  var width: js.UndefOr[Double | String] = js.native
-  var zonecodeOnly: js.UndefOr[Boolean] = js.native
-  def onComplete(data: AddressData): Unit = js.native
+  var alwaysShowEngAddr: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.undefined
+  var autoClose: js.UndefOr[Boolean] = js.undefined
+  var autoMapping: js.UndefOr[Boolean] = js.undefined
+  var autoResize: js.UndefOr[Boolean] = js.undefined
+  var defaultQuery: js.UndefOr[String] = js.undefined
+  var errorMessage: js.UndefOr[ReactElement] = js.undefined
+  var focusContent: js.UndefOr[Boolean] = js.undefined
+  var focusInput: js.UndefOr[Boolean] = js.undefined
+  var height: js.UndefOr[Double | String] = js.undefined
+  var hideEngBtn: js.UndefOr[Boolean] = js.undefined
+  var hideMapBtn: js.UndefOr[Boolean] = js.undefined
+  var maxSuggestItems: js.UndefOr[Double] = js.undefined
+  var pleaseReadGuide: js.UndefOr[Double] = js.undefined
+  var pleaseReadGuideTimer: js.UndefOr[Double] = js.undefined
+  var scriptUrl: js.UndefOr[String] = js.undefined
+  var shorthand: js.UndefOr[Boolean] = js.undefined
+  var showMoreHName: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[js.Object] = js.undefined
+  var submitMode: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[js.Object] = js.undefined
+  var useSuggest: js.UndefOr[Boolean] = js.undefined
+  var width: js.UndefOr[Double | String] = js.undefined
+  var zonecodeOnly: js.UndefOr[Boolean] = js.undefined
+  def onComplete(data: AddressData): Unit
 }
 
 object DaumPostcodeProps {
   @scala.inline
-  def apply(onComplete: AddressData => Unit): DaumPostcodeProps = {
+  def apply(
+    onComplete: AddressData => Unit,
+    alwaysShowEngAddr: js.UndefOr[Boolean] = js.undefined,
+    animation: js.UndefOr[Boolean] = js.undefined,
+    autoClose: js.UndefOr[Boolean] = js.undefined,
+    autoMapping: js.UndefOr[Boolean] = js.undefined,
+    autoResize: js.UndefOr[Boolean] = js.undefined,
+    defaultQuery: String = null,
+    errorMessage: ReactElement = null,
+    focusContent: js.UndefOr[Boolean] = js.undefined,
+    focusInput: js.UndefOr[Boolean] = js.undefined,
+    height: Double | String = null,
+    hideEngBtn: js.UndefOr[Boolean] = js.undefined,
+    hideMapBtn: js.UndefOr[Boolean] = js.undefined,
+    maxSuggestItems: js.UndefOr[Double] = js.undefined,
+    pleaseReadGuide: js.UndefOr[Double] = js.undefined,
+    pleaseReadGuideTimer: js.UndefOr[Double] = js.undefined,
+    scriptUrl: String = null,
+    shorthand: js.UndefOr[Boolean] = js.undefined,
+    showMoreHName: js.UndefOr[Boolean] = js.undefined,
+    style: js.Object = null,
+    submitMode: js.UndefOr[Boolean] = js.undefined,
+    theme: js.Object = null,
+    useSuggest: js.UndefOr[Boolean] = js.undefined,
+    width: Double | String = null,
+    zonecodeOnly: js.UndefOr[Boolean] = js.undefined
+  ): DaumPostcodeProps = {
     val __obj = js.Dynamic.literal(onComplete = js.Any.fromFunction1(onComplete))
+    if (!js.isUndefined(alwaysShowEngAddr)) __obj.updateDynamic("alwaysShowEngAddr")(alwaysShowEngAddr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoMapping)) __obj.updateDynamic("autoMapping")(autoMapping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoResize)) __obj.updateDynamic("autoResize")(autoResize.get.asInstanceOf[js.Any])
+    if (defaultQuery != null) __obj.updateDynamic("defaultQuery")(defaultQuery.asInstanceOf[js.Any])
+    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusContent)) __obj.updateDynamic("focusContent")(focusContent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(focusInput)) __obj.updateDynamic("focusInput")(focusInput.get.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideEngBtn)) __obj.updateDynamic("hideEngBtn")(hideEngBtn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideMapBtn)) __obj.updateDynamic("hideMapBtn")(hideMapBtn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSuggestItems)) __obj.updateDynamic("maxSuggestItems")(maxSuggestItems.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pleaseReadGuide)) __obj.updateDynamic("pleaseReadGuide")(pleaseReadGuide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pleaseReadGuideTimer)) __obj.updateDynamic("pleaseReadGuideTimer")(pleaseReadGuideTimer.get.asInstanceOf[js.Any])
+    if (scriptUrl != null) __obj.updateDynamic("scriptUrl")(scriptUrl.asInstanceOf[js.Any])
+    if (!js.isUndefined(shorthand)) __obj.updateDynamic("shorthand")(shorthand.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showMoreHName)) __obj.updateDynamic("showMoreHName")(showMoreHName.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(submitMode)) __obj.updateDynamic("submitMode")(submitMode.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (!js.isUndefined(useSuggest)) __obj.updateDynamic("useSuggest")(useSuggest.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (!js.isUndefined(zonecodeOnly)) __obj.updateDynamic("zonecodeOnly")(zonecodeOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DaumPostcodeProps]
   }
-  @scala.inline
-  implicit class DaumPostcodePropsOps[Self <: DaumPostcodeProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnComplete(value: AddressData => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAlwaysShowEngAddr(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowEngAddr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysShowEngAddr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowEngAddr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoClose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoMapping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMapping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoMapping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMapping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultQuery(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorMessage(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideEngBtn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideEngBtn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideEngBtn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideEngBtn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideMapBtn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMapBtn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideMapBtn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideMapBtn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSuggestItems(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSuggestItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSuggestItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSuggestItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPleaseReadGuide(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pleaseReadGuide")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPleaseReadGuide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pleaseReadGuide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPleaseReadGuideTimer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pleaseReadGuideTimer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPleaseReadGuideTimer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pleaseReadGuideTimer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShorthand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shorthand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShorthand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shorthand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowMoreHName(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMoreHName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowMoreHName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showMoreHName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmitMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseSuggest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSuggest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseSuggest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useSuggest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZonecodeOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zonecodeOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZonecodeOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zonecodeOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

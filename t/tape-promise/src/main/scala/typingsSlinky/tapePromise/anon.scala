@@ -17,18 +17,18 @@ object anon extends js.Object {
   trait AsyncTapeFunctionNoneopts extends js.Object {
     def apply(cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     /**
-    	 * Create a new test with an optional name string and optional opts object.
-    	 * cb(t) fires with the new test object t once all preceding tests have finished.
-    	 * Tests execute serially.
-    	 */
+      * Create a new test with an optional name string and optional opts object.
+      * cb(t) fires with the new test object t once all preceding tests have finished.
+      * Tests execute serially.
+      */
     def apply(name: String, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def apply(name: String, opts: TestOptions, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def apply(opts: TestOptions, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def createHarness(): js.Any = js.native
     /**
-    	 * Create a new test harness instance, which is a function like test(),
-    	 * but with a new pending stack and test state.
-    	 */
+      * Create a new test harness instance, which is a function like test(),
+      * but with a new pending stack and test state.
+      */
     @JSName("createHarness")
     def createHarness_Intersection(): AsyncTapeFunction with Call = js.native
     def createStream(): ReadableStream = js.native
@@ -37,17 +37,17 @@ object anon extends js.Object {
     def onFinish(cb: js.Function0[Unit]): Unit = js.native
     def only(cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     /**
-    	 * Like test(name?, opts?, cb) except if you use .only this
-    	 * is the only test case that will run for the entire process,
-    	 * all other test cases using tape will be ignored.
-    	 */
+      * Like test(name?, opts?, cb) except if you use .only this
+      * is the only test case that will run for the entire process,
+      * all other test cases using tape will be ignored.
+      */
     def only(name: String, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def only(name: String, opts: TestOptions, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def only(opts: TestOptions, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def skip(cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     /**
-    	 * Generate a new test that will be skipped over.
-    	 */
+      * Generate a new test that will be skipped over.
+      */
     def skip(name: String, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def skip(name: String, opts: TestOptions, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native
     def skip(opts: TestOptions, cb: TestCase | typingsSlinky.tapePromise.mod.TestCase): Unit = js.native

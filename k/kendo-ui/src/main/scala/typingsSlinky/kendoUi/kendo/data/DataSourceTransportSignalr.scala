@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DataSourceTransportSignalr extends js.Object {
-  var client: js.UndefOr[DataSourceTransportSignalrClient] = js.native
-  var hub: js.UndefOr[js.Any] = js.native
-  var promise: js.UndefOr[js.Any] = js.native
-  var server: js.UndefOr[DataSourceTransportSignalrServer] = js.native
+  var client: js.UndefOr[DataSourceTransportSignalrClient] = js.undefined
+  var hub: js.UndefOr[js.Any] = js.undefined
+  var promise: js.UndefOr[js.Any] = js.undefined
+  var server: js.UndefOr[DataSourceTransportSignalrServer] = js.undefined
 }
 
 object DataSourceTransportSignalr {
   @scala.inline
-  def apply(): DataSourceTransportSignalr = {
+  def apply(
+    client: DataSourceTransportSignalrClient = null,
+    hub: js.Any = null,
+    promise: js.Any = null,
+    server: DataSourceTransportSignalrServer = null
+  ): DataSourceTransportSignalr = {
     val __obj = js.Dynamic.literal()
+    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
+    if (hub != null) __obj.updateDynamic("hub")(hub.asInstanceOf[js.Any])
+    if (promise != null) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
+    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSourceTransportSignalr]
   }
-  @scala.inline
-  implicit class DataSourceTransportSignalrOps[Self <: DataSourceTransportSignalr] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClient(value: DataSourceTransportSignalrClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClient: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHub(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hub")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHub: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hub")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromise(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromise: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServer(value: DataSourceTransportSignalrServer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

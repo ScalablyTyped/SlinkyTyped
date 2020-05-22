@@ -1,5 +1,7 @@
 package typingsSlinky.loginWithAmazonSdkBrowser
 
+import typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserBooleans.`false`
+import typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +14,14 @@ trait RetrieveProfileResponse extends js.Object
 
 object RetrieveProfileResponse {
   @scala.inline
-  implicit def apply(value: RetrieveProfileResponseError): RetrieveProfileResponse = value.asInstanceOf[RetrieveProfileResponse]
+  def RetrieveProfileResponseError(error: String, success: `false`): RetrieveProfileResponse = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RetrieveProfileResponse]
+  }
   @scala.inline
-  implicit def apply(value: RetrieveProfileResponseSuccess): RetrieveProfileResponse = value.asInstanceOf[RetrieveProfileResponse]
+  def RetrieveProfileResponseSuccess(profile: UserProfile, success: `true`): RetrieveProfileResponse = {
+    val __obj = js.Dynamic.literal(profile = profile.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RetrieveProfileResponse]
+  }
 }
 

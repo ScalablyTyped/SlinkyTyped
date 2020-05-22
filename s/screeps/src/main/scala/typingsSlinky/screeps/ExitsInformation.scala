@@ -9,75 +9,22 @@ import scala.scalajs.js.annotation._
 //   energy: number;
 // }
 /* Inlined std.Partial<std.Record<screeps.ExitKey, string>> */
-@js.native
 trait ExitsInformation extends js.Object {
-  var `1`: js.UndefOr[String] = js.native
-  var `3`: js.UndefOr[String] = js.native
-  var `5`: js.UndefOr[String] = js.native
-  var `7`: js.UndefOr[String] = js.native
+  var `1`: js.UndefOr[String] = js.undefined
+  var `3`: js.UndefOr[String] = js.undefined
+  var `5`: js.UndefOr[String] = js.undefined
+  var `7`: js.UndefOr[String] = js.undefined
 }
 
 object ExitsInformation {
   @scala.inline
-  def apply(): ExitsInformation = {
+  def apply(`1`: String = null, `3`: String = null, `5`: String = null, `7`: String = null): ExitsInformation = {
     val __obj = js.Dynamic.literal()
+    if (`1` != null) __obj.updateDynamic("1")(`1`.asInstanceOf[js.Any])
+    if (`3` != null) __obj.updateDynamic("3")(`3`.asInstanceOf[js.Any])
+    if (`5` != null) __obj.updateDynamic("5")(`5`.asInstanceOf[js.Any])
+    if (`7` != null) __obj.updateDynamic("7")(`7`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExitsInformation]
   }
-  @scala.inline
-  implicit class ExitsInformationOps[Self <: ExitsInformation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with3(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with5(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without5: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("5")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with7(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("7")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without7: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("7")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

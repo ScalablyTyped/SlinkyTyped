@@ -18,41 +18,11 @@ trait GitHubLocation extends js.Object {
 
 object GitHubLocation {
   @scala.inline
-  def apply(): GitHubLocation = {
+  def apply(commitId: CommitId = null, repository: Repository = null): GitHubLocation = {
     val __obj = js.Dynamic.literal()
+    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitHubLocation]
   }
-  @scala.inline
-  implicit class GitHubLocationOps[Self <: GitHubLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitId(value: CommitId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepository(value: Repository): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

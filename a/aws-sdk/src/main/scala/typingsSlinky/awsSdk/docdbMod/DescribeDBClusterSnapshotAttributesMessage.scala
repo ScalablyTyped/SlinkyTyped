@@ -18,19 +18,5 @@ object DescribeDBClusterSnapshotAttributesMessage {
     val __obj = js.Dynamic.literal(DBClusterSnapshotIdentifier = DBClusterSnapshotIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDBClusterSnapshotAttributesMessage]
   }
-  @scala.inline
-  implicit class DescribeDBClusterSnapshotAttributesMessageOps[Self <: DescribeDBClusterSnapshotAttributesMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDBClusterSnapshotIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterSnapshotIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

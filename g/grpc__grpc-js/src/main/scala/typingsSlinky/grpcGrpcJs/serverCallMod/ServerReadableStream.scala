@@ -24,6 +24,7 @@ import scala.scalajs.js.annotation._
 trait ServerReadableStream[RequestType, ResponseType] extends js.Object {
   var cancelled: Boolean = js.native
   var destroyed: Boolean = js.native
+  val metadata: Metadata = js.native
   var readable: Boolean = js.native
   val readableHighWaterMark: Double = js.native
   val readableLength: Double = js.native
@@ -157,7 +158,7 @@ trait ServerReadableStream[RequestType, ResponseType] extends js.Object {
   @JSName("prependOnceListener")
   def prependOnceListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def push(chunk: js.Any): Boolean = js.native
-  def push(chunk: js.Any, encoding: String): Boolean = js.native
+  def push(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
   def rawListeners(event: String): js.Array[js.Function] = js.native
   def rawListeners(event: js.Symbol): js.Array[js.Function] = js.native
   def read(): js.Any = js.native
@@ -195,7 +196,7 @@ trait ServerReadableStream[RequestType, ResponseType] extends js.Object {
   def removeListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def resume(): this.type = js.native
   def sendMetadata(responseMetadata: Metadata): Unit = js.native
-  def setEncoding(encoding: String): this.type = js.native
+  def setEncoding(encoding: BufferEncoding): this.type = js.native
   def setMaxListeners(n: Double): this.type = js.native
   def unpipe(): this.type = js.native
   def unpipe(destination: WritableStream): this.type = js.native

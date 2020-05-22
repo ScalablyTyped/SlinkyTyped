@@ -7,12 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPanelStackState extends js.Object {
   /** Whether the stack is currently animating the push or pop of a panel. */
-  var direction: push | pop = js.native
+  var direction: push | pop
   /** The current stack of panels. The first panel in the stack will be displayed. */
-  var stack: js.Array[IPanel[js.Object]] = js.native
+  var stack: js.Array[IPanel[js.Object]]
 }
 
 object IPanelStackState {
@@ -21,25 +20,5 @@ object IPanelStackState {
     val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], stack = stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPanelStackState]
   }
-  @scala.inline
-  implicit class IPanelStackStateOps[Self <: IPanelStackState] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirection(value: push | pop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStack(value: js.Array[IPanel[js.Object]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

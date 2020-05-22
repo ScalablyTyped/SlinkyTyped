@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Colors extends js.Object {
-  var colors: js.UndefOr[js.Array[Double]] = js.native
-  var indices: js.UndefOr[js.Array[Double]] = js.native
-  var normals: js.UndefOr[js.Array[Double]] = js.native
-  var tangents: js.UndefOr[js.Array[Double]] = js.native
-  var uvs: js.UndefOr[js.Array[Double]] = js.native
-  var uvs1: js.UndefOr[js.Array[Double]] = js.native
+  var colors: js.UndefOr[js.Array[Double]] = js.undefined
+  var indices: js.UndefOr[js.Array[Double]] = js.undefined
+  var normals: js.UndefOr[js.Array[Double]] = js.undefined
+  var tangents: js.UndefOr[js.Array[Double]] = js.undefined
+  var uvs: js.UndefOr[js.Array[Double]] = js.undefined
+  var uvs1: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object Colors {
   @scala.inline
-  def apply(): Colors = {
+  def apply(
+    colors: js.Array[Double] = null,
+    indices: js.Array[Double] = null,
+    normals: js.Array[Double] = null,
+    tangents: js.Array[Double] = null,
+    uvs: js.Array[Double] = null,
+    uvs1: js.Array[Double] = null
+  ): Colors = {
     val __obj = js.Dynamic.literal()
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (indices != null) __obj.updateDynamic("indices")(indices.asInstanceOf[js.Any])
+    if (normals != null) __obj.updateDynamic("normals")(normals.asInstanceOf[js.Any])
+    if (tangents != null) __obj.updateDynamic("tangents")(tangents.asInstanceOf[js.Any])
+    if (uvs != null) __obj.updateDynamic("uvs")(uvs.asInstanceOf[js.Any])
+    if (uvs1 != null) __obj.updateDynamic("uvs1")(uvs1.asInstanceOf[js.Any])
     __obj.asInstanceOf[Colors]
   }
-  @scala.inline
-  implicit class ColorsOps[Self <: Colors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColors(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndices(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormals(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTangents(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tangents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTangents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tangents")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUvs(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uvs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUvs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uvs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUvs1(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uvs1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUvs1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uvs1")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

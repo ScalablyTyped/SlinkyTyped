@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-search.SemanticUI.Search.ClassNameSettings._Impl, 'pressed'> */
-@js.native
 trait PickImplpressed extends js.Object {
-  var pressed: String = js.native
+  var pressed: String
 }
 
 object PickImplpressed {
@@ -16,19 +15,5 @@ object PickImplpressed {
     val __obj = js.Dynamic.literal(pressed = pressed.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickImplpressed]
   }
-  @scala.inline
-  implicit class PickImplpressedOps[Self <: PickImplpressed] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPressed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pressed")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

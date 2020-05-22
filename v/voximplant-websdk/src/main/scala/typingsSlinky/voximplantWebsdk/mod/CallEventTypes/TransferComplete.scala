@@ -7,14 +7,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		*	Event dispatched when call has been transferred successfully
-		*/
-@js.native
+  *    Event dispatched when call has been transferred successfully
+  */
 trait TransferComplete extends VoxImplantCallEvent {
   /**
-  			*	Call that dispatched the event
-  			*/
-  var call: Call = js.native
+    *    Call that dispatched the event
+    */
+  var call: Call
 }
 
 object TransferComplete {
@@ -23,19 +22,5 @@ object TransferComplete {
     val __obj = js.Dynamic.literal(call = call.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferComplete]
   }
-  @scala.inline
-  implicit class TransferCompleteOps[Self <: TransferComplete] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCall(value: Call): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("call")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

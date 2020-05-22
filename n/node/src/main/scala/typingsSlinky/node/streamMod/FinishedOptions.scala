@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FinishedOptions extends js.Object {
-  var error: js.UndefOr[Boolean] = js.native
-  var readable: js.UndefOr[Boolean] = js.native
-  var writable: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[Boolean] = js.undefined
+  var readable: js.UndefOr[Boolean] = js.undefined
+  var writable: js.UndefOr[Boolean] = js.undefined
 }
 
 object FinishedOptions {
   @scala.inline
-  def apply(): FinishedOptions = {
+  def apply(
+    error: js.UndefOr[Boolean] = js.undefined,
+    readable: js.UndefOr[Boolean] = js.undefined,
+    writable: js.UndefOr[Boolean] = js.undefined
+  ): FinishedOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(readable)) __obj.updateDynamic("readable")(readable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(writable)) __obj.updateDynamic("writable")(writable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[FinishedOptions]
   }
-  @scala.inline
-  implicit class FinishedOptionsOps[Self <: FinishedOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWritable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWritable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -3,7 +3,7 @@ package typingsSlinky.antd.mentionsMod
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Focused
-import typingsSlinky.antd.contextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.FocusEventHandler
@@ -24,7 +24,7 @@ trait Mentions
   def getFilterOption(): js.Any = js.native
   def getNotFoundContent(renderEmpty: RenderEmptyHandler): js.UndefOr[js.Object | Null] = js.native
   def getOptions(): js.UndefOr[js.Object | Null] = js.native
-  def renderMentions(hasGetPrefixClsRenderEmpty: ConfigConsumerProps): ReactElement = js.native
+  def renderMentions(hasGetPrefixClsRenderEmptyDirection: ConfigConsumerProps): ReactElement = js.native
   def saveMentions(node: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof RcMentions */ js.Any): Unit = js.native
 }
 

@@ -26,65 +26,18 @@ trait EventInfoMap extends js.Object {
 
 object EventInfoMap {
   @scala.inline
-  def apply(): EventInfoMap = {
+  def apply(
+    EventCategories: EventCategoriesList = null,
+    EventDescription: String = null,
+    EventId: String = null,
+    Severity: String = null
+  ): EventInfoMap = {
     val __obj = js.Dynamic.literal()
+    if (EventCategories != null) __obj.updateDynamic("EventCategories")(EventCategories.asInstanceOf[js.Any])
+    if (EventDescription != null) __obj.updateDynamic("EventDescription")(EventDescription.asInstanceOf[js.Any])
+    if (EventId != null) __obj.updateDynamic("EventId")(EventId.asInstanceOf[js.Any])
+    if (Severity != null) __obj.updateDynamic("Severity")(Severity.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventInfoMap]
   }
-  @scala.inline
-  implicit class EventInfoMapOps[Self <: EventInfoMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventCategories(value: EventCategoriesList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeverity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Severity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

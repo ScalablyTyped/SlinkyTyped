@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenClusterOptions extends js.Object {
   /**
     * A function that can be used to manually position the nodes after the cluster is opened.
@@ -19,7 +18,7 @@ trait OpenClusterOptions extends js.Object {
     * we will position them at the location of the cluster.
     * This is also the default behaviour when no releaseFunction is defined.
     */
-  def releaseFunction(clusterPosition: Position, containedNodesPositions: StringDictionary[Position]): StringDictionary[Position] = js.native
+  def releaseFunction(clusterPosition: Position, containedNodesPositions: StringDictionary[Position]): StringDictionary[Position]
 }
 
 object OpenClusterOptions {
@@ -28,19 +27,5 @@ object OpenClusterOptions {
     val __obj = js.Dynamic.literal(releaseFunction = js.Any.fromFunction2(releaseFunction))
     __obj.asInstanceOf[OpenClusterOptions]
   }
-  @scala.inline
-  implicit class OpenClusterOptionsOps[Self <: OpenClusterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReleaseFunction(value: (Position, StringDictionary[Position]) => StringDictionary[Position]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseFunction")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

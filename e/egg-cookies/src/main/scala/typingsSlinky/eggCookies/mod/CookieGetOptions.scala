@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CookieGetOptions extends js.Object {
   /**
     * Encrypt the cookie's value or not (The default value is false).
     */
-  var encrypt: js.UndefOr[Boolean] = js.native
+  var encrypt: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether to sign or not (The default value is true).
     */
-  var signed: js.UndefOr[Boolean] = js.native
+  var signed: js.UndefOr[Boolean] = js.undefined
 }
 
 object CookieGetOptions {
   @scala.inline
-  def apply(): CookieGetOptions = {
+  def apply(encrypt: js.UndefOr[Boolean] = js.undefined, signed: js.UndefOr[Boolean] = js.undefined): CookieGetOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(encrypt)) __obj.updateDynamic("encrypt")(encrypt.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(signed)) __obj.updateDynamic("signed")(signed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CookieGetOptions]
   }
-  @scala.inline
-  implicit class CookieGetOptionsOps[Self <: CookieGetOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncrypt(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncrypt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encrypt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigned(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -19,6 +19,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.csstype.mod.AlignContentProperty
 import typingsSlinky.csstype.mod.AlignItemsProperty
 import typingsSlinky.csstype.mod.AlignSelfProperty
 import typingsSlinky.csstype.mod.DisplayProperty
@@ -28,6 +29,8 @@ import typingsSlinky.csstype.mod.FlexWrapProperty
 import typingsSlinky.csstype.mod.GlobalsNumber
 import typingsSlinky.csstype.mod.HeightProperty
 import typingsSlinky.csstype.mod.JustifyContentProperty
+import typingsSlinky.csstype.mod.JustifyItemsProperty
+import typingsSlinky.csstype.mod.JustifySelfProperty
 import typingsSlinky.csstype.mod.MaxHeightProperty
 import typingsSlinky.csstype.mod.MaxWidthProperty
 import typingsSlinky.csstype.mod.MinHeightProperty
@@ -110,7 +113,7 @@ object Flex {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any]] {
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -121,6 +124,10 @@ object Flex {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     @scala.inline
     def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignContent(value: ResponsiveValue[AlignContentProperty, RequiredTheme]): this.type = set("alignContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignContentNull: this.type = set("alignContent", null)
     @scala.inline
     def alignItems(value: ResponsiveValue[AlignItemsProperty, RequiredTheme]): this.type = set("alignItems", value.asInstanceOf[js.Any])
     @scala.inline
@@ -338,6 +345,14 @@ object Flex {
     @scala.inline
     def flexDirectionNull: this.type = set("flexDirection", null)
     @scala.inline
+    def flexGrow(value: ResponsiveValue[GlobalsNumber, RequiredTheme]): this.type = set("flexGrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexGrowNull: this.type = set("flexGrow", null)
+    @scala.inline
+    def flexShrink(value: ResponsiveValue[GlobalsNumber, RequiredTheme]): this.type = set("flexShrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexShrinkNull: this.type = set("flexShrink", null)
+    @scala.inline
     def flexWrap(value: ResponsiveValue[FlexWrapProperty, RequiredTheme]): this.type = set("flexWrap", value.asInstanceOf[js.Any])
     @scala.inline
     def flexWrapNull: this.type = set("flexWrap", null)
@@ -401,6 +416,14 @@ object Flex {
     def justifyContent(value: ResponsiveValue[JustifyContentProperty, RequiredTheme]): this.type = set("justifyContent", value.asInstanceOf[js.Any])
     @scala.inline
     def justifyContentNull: this.type = set("justifyContent", null)
+    @scala.inline
+    def justifyItems(value: ResponsiveValue[JustifyItemsProperty, RequiredTheme]): this.type = set("justifyItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def justifyItemsNull: this.type = set("justifyItems", null)
+    @scala.inline
+    def justifySelf(value: ResponsiveValue[JustifySelfProperty, RequiredTheme]): this.type = set("justifySelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def justifySelfNull: this.type = set("justifySelf", null)
     @scala.inline
     def keyParams(value: String): this.type = set("keyParams", value.asInstanceOf[js.Any])
     @scala.inline

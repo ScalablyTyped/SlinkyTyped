@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TwelveColorScheme extends ElevenColorScheme {
-  var `12`: js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String] = js.native
+  var `12`: js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String]
 }
 
 object TwelveColorScheme {
@@ -36,21 +35,5 @@ object TwelveColorScheme {
     __obj.updateDynamic("9")(`9`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TwelveColorScheme]
   }
-  @scala.inline
-  implicit class TwelveColorSchemeOps[Self <: TwelveColorScheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with12(
-      value: js.Tuple12[String, String, String, String, String, String, String, String, String, String, String, String]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("12")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

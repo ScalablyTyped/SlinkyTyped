@@ -8,9 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValueGetterParams extends BaseColDefParams {
-  def getValue(field: String): js.Any = js.native
+  def getValue(field: String): js.Any
 }
 
 object ValueGetterParams {
@@ -28,19 +27,5 @@ object ValueGetterParams {
     val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any], colDef = colDef.asInstanceOf[js.Any], column = column.asInstanceOf[js.Any], columnApi = columnApi.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], getValue = js.Any.fromFunction1(getValue), node = node.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueGetterParams]
   }
-  @scala.inline
-  implicit class ValueGetterParamsOps[Self <: ValueGetterParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetValue(value: String => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -83,31 +83,33 @@ trait Animation extends EventEmitter {
   var yoyo: Boolean = js.native
   /**
     * Add frames to the end of the animation.
-    * @param config [description]
+    * @param config Either a string, in which case it will use all frames from a texture with the matching key, or an array of Animation Frame configuration objects.
     */
-  def addFrame(config: String): Animation = js.native
-  def addFrame(config: js.Array[typingsSlinky.phaser.Phaser.Types.Animations.AnimationFrame]): Animation = js.native
+  def addFrame(config: String): this.type = js.native
+  def addFrame(config: js.Array[typingsSlinky.phaser.Phaser.Types.Animations.AnimationFrame]): this.type = js.native
   /**
     * Add frame/s into the animation.
     * @param index The index to insert the frame at within the animation.
-    * @param config [description]
+    * @param config Either a string, in which case it will use all frames from a texture with the matching key, or an array of Animation Frame configuration objects.
     */
-  def addFrameAt(index: integer, config: String): Animation = js.native
-  def addFrameAt(index: integer, config: js.Array[typingsSlinky.phaser.Phaser.Types.Animations.AnimationFrame]): Animation = js.native
+  def addFrameAt(index: integer, config: String): this.type = js.native
+  def addFrameAt(index: integer, config: js.Array[typingsSlinky.phaser.Phaser.Types.Animations.AnimationFrame]): this.type = js.native
   /**
     * Check if the given frame index is valid.
     * @param index The index to be checked.
     */
   def checkFrame(index: integer): Boolean = js.native
   /**
-    * [description]
-    * @param component [description]
+    * Called internally when this Animation completes playback.
+    * Optionally, hides the parent Game Object, then stops playback.
+    * @param component The Animation Component belonging to the Game Object invoking this call.
     */
   /* protected */ def completeAnimation(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /**
-    * [description]
-    * @param component [description]
-    * @param includeDelay [description] Default true.
+    * Called internally when this Animation first starts to play.
+    * Sets the accumulator and nextTick properties.
+    * @param component The Animation Component belonging to the Game Object invoking this call.
+    * @param includeDelay If `true` the Animation Components delay value will be added to the `nextTick` total. Default true.
     */
   /* protected */ def getFirstTick(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /* protected */ def getFirstTick(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation, includeDelay: Boolean): Unit = js.native
@@ -122,10 +124,10 @@ trait Animation extends EventEmitter {
     */
   def getFrameByProgress(value: Double): AnimationFrame = js.native
   /**
-    * [description]
-    * @param textureManager [description]
-    * @param frames [description]
-    * @param defaultTextureKey [description]
+    * Creates AnimationFrame instances based on the given frame data.
+    * @param textureManager A reference to the global Texture Manager.
+    * @param frames Either a string, in which case it will use all frames from a texture with the matching key, or an array of Animation Frame configuration objects.
+    * @param defaultTextureKey The key to use if no key is set in the frame configuration object.
     */
   def getFrames(textureManager: TextureManager, frames: String): js.Array[AnimationFrame] = js.native
   def getFrames(textureManager: TextureManager, frames: String, defaultTextureKey: String): js.Array[AnimationFrame] = js.native
@@ -143,8 +145,8 @@ trait Animation extends EventEmitter {
     */
   def getLastFrame(): AnimationFrame = js.native
   /**
-    * [description]
-    * @param component [description]
+    * Called internally. Sets the accumulator and nextTick values of the current Animation.
+    * @param component The Animation Component belonging to the Game Object invoking this call.
     */
   def getNextTick(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /**
@@ -153,37 +155,40 @@ trait Animation extends EventEmitter {
     */
   def nextFrame(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /**
-    * [description]
+    * Pauses playback of this Animation. The paused state is set immediately.
     */
-  def pause(): Animation = js.native
+  def pause(): this.type = js.native
   /**
-    * [description]
-    * @param component [description]
+    * Called internally when the Animation is playing backwards.
+    * Sets the previous frame, causing a yoyo, repeat, complete or update, accordingly.
+    * @param component The Animation Component belonging to the Game Object invoking this call.
     */
   def previousFrame(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /**
-    * [description]
-    * @param frame [description]
+    * Removes the given AnimationFrame from this Animation instance.
+    * This is a global action. Any Game Object using this Animation will be impacted by this change.
+    * @param frame The AnimationFrame to be removed.
     */
-  def removeFrame(frame: AnimationFrame): Animation = js.native
+  def removeFrame(frame: AnimationFrame): this.type = js.native
   /**
     * Removes a frame from the AnimationFrame array at the provided index
     * and updates the animation accordingly.
     * @param index The index in the AnimationFrame array
     */
-  def removeFrameAt(index: integer): Animation = js.native
+  def removeFrameAt(index: integer): this.type = js.native
   /**
-    * [description]
-    * @param component [description]
+    * Called internally during playback. Forces the animation to repeat, providing there are enough counts left
+    * in the repeat counter.
+    * @param component The Animation Component belonging to the Game Object invoking this call.
     */
   def repeatAnimation(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /**
-    * [description]
+    * Resumes playback of this Animation. The paused state is reset immediately.
     */
-  def resume(): Animation = js.native
+  def resume(): this.type = js.native
   /**
     * Sets the texture frame the animation uses for rendering.
-    * @param component [description]
+    * @param component The Animation Component belonging to the Game Object invoking this call.
     */
   def setFrame(component: typingsSlinky.phaser.Phaser.GameObjects.Components.Animation): Unit = js.native
   /**
@@ -191,8 +196,8 @@ trait Animation extends EventEmitter {
     */
   def toJSON(): JSONAnimation = js.native
   /**
-    * [description]
+    * Called internally whenever frames are added to, or removed from, this Animation.
     */
-  def updateFrameSequence(): Animation = js.native
+  def updateFrameSequence(): this.type = js.native
 }
 

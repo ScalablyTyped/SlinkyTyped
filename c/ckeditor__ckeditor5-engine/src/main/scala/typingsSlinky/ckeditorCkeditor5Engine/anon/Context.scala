@@ -5,62 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Context extends js.Object {
-  var context: js.UndefOr[SchemaContextDefinition] = js.native
-  var lastRangeBackward: js.UndefOr[Boolean] = js.native
-  var selectionAttributes: js.UndefOr[js.Array[js.Object]] = js.native
+  var context: js.UndefOr[SchemaContextDefinition] = js.undefined
+  var lastRangeBackward: js.UndefOr[Boolean] = js.undefined
+  var selectionAttributes: js.UndefOr[js.Array[js.Object]] = js.undefined
 }
 
 object Context {
   @scala.inline
-  def apply(): Context = {
+  def apply(
+    context: SchemaContextDefinition = null,
+    lastRangeBackward: js.UndefOr[Boolean] = js.undefined,
+    selectionAttributes: js.Array[js.Object] = null
+  ): Context = {
     val __obj = js.Dynamic.literal()
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(lastRangeBackward)) __obj.updateDynamic("lastRangeBackward")(lastRangeBackward.get.asInstanceOf[js.Any])
+    if (selectionAttributes != null) __obj.updateDynamic("selectionAttributes")(selectionAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
   }
-  @scala.inline
-  implicit class ContextOps[Self <: Context] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: SchemaContextDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastRangeBackward(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRangeBackward")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastRangeBackward: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastRangeBackward")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionAttributes(value: js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

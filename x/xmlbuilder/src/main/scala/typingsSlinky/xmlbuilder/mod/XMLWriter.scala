@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a writer which outputs an XML document.
   */
-@js.native
 trait XMLWriter extends js.Object {
   /** 
     * Writes an attribute. 
@@ -18,7 +17,7 @@ trait XMLWriter extends js.Object {
     */
   var attribute: js.UndefOr[
     js.Function3[/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes a CDATA node.
     * 
@@ -28,7 +27,7 @@ trait XMLWriter extends js.Object {
     */
   var cdata: js.UndefOr[
     js.Function3[/* node */ XMLCData, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Called right before completing writing an attribute. This function 
     * does not produce any output, but can be used to alter the state of 
@@ -40,7 +39,7 @@ trait XMLWriter extends js.Object {
     */
   var closeAttribute: js.UndefOr[
     js.Function3[/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double, Unit]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Called right before completing writing a node. This function does not 
     * produce any output, but can be used to alter the state of the writer.
@@ -51,7 +50,7 @@ trait XMLWriter extends js.Object {
     */
   var closeNode: js.UndefOr[
     js.Function3[/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double, Unit]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes a comment node. 
     * 
@@ -61,7 +60,7 @@ trait XMLWriter extends js.Object {
     */
   var comment: js.UndefOr[
     js.Function3[/* node */ XMLComment, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes the XML declaration (e.g. `<?xml version="1.0"?>`). 
     * 
@@ -71,7 +70,7 @@ trait XMLWriter extends js.Object {
     */
   var declaration: js.UndefOr[
     js.Function3[/* node */ XMLDeclaration, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes the DocType node and its children. 
     * 
@@ -84,7 +83,7 @@ trait XMLWriter extends js.Object {
     */
   var docType: js.UndefOr[
     js.Function3[/* node */ XMLDocType, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes an attribute node (`!ATTLIST`) inside the DTD. 
     * 
@@ -94,7 +93,7 @@ trait XMLWriter extends js.Object {
     */
   var dtdAttList: js.UndefOr[
     js.Function3[/* node */ XMLDTDAttList, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes an element node (`!ELEMENT`) inside the DTD. 
     * 
@@ -104,7 +103,7 @@ trait XMLWriter extends js.Object {
     */
   var dtdElement: js.UndefOr[
     js.Function3[/* node */ XMLDTDElement, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes an entity node (`!ENTITY`) inside the DTD. 
     * 
@@ -114,7 +113,7 @@ trait XMLWriter extends js.Object {
     */
   var dtdEntity: js.UndefOr[
     js.Function3[/* node */ XMLDTDEntity, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes a notation node (`!NOTATION`) inside the DTD. 
     * 
@@ -124,7 +123,7 @@ trait XMLWriter extends js.Object {
     */
   var dtdNotation: js.UndefOr[
     js.Function3[/* node */ XMLDTDNotation, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes an element node. 
     * 
@@ -139,7 +138,7 @@ trait XMLWriter extends js.Object {
     */
   var element: js.UndefOr[
     js.Function3[/* node */ XMLElement, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes the newline string. 
     * 
@@ -149,7 +148,7 @@ trait XMLWriter extends js.Object {
     */
   var endline: js.UndefOr[
     js.Function3[/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes the indentation string for the given level. 
     * 
@@ -159,7 +158,7 @@ trait XMLWriter extends js.Object {
     */
   var indent: js.UndefOr[
     js.Function3[/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Called right after starting writing an attribute. This function does 
     * not produce any output, but can be used to alter the state of the 
@@ -171,7 +170,7 @@ trait XMLWriter extends js.Object {
     */
   var openAttribute: js.UndefOr[
     js.Function3[/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double, Unit]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Called right after starting writing a node. This function does not 
     * produce any output, but can be used to alter the state of the writer. 
@@ -182,7 +181,7 @@ trait XMLWriter extends js.Object {
     */
   var openNode: js.UndefOr[
     js.Function3[/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double, Unit]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes a processing instruction node. 
     * 
@@ -197,7 +196,7 @@ trait XMLWriter extends js.Object {
       /* level */ Double, 
       _
     ]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes a raw text node. 
     * 
@@ -207,7 +206,7 @@ trait XMLWriter extends js.Object {
     */
   var raw: js.UndefOr[
     js.Function3[/* node */ XMLRaw, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
   /** 
     * Writes a text node. 
     * 
@@ -217,250 +216,53 @@ trait XMLWriter extends js.Object {
     */
   var text: js.UndefOr[
     js.Function3[/* node */ XMLText, /* options */ WriterOptions, /* level */ Double, _]
-  ] = js.native
+  ] = js.undefined
 }
 
 object XMLWriter {
   @scala.inline
-  def apply(): XMLWriter = {
+  def apply(
+    attribute: (/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    cdata: (/* node */ XMLCData, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    closeAttribute: (/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double) => Unit = null,
+    closeNode: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => Unit = null,
+    comment: (/* node */ XMLComment, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    declaration: (/* node */ XMLDeclaration, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    docType: (/* node */ XMLDocType, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    dtdAttList: (/* node */ XMLDTDAttList, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    dtdElement: (/* node */ XMLDTDElement, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    dtdEntity: (/* node */ XMLDTDEntity, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    dtdNotation: (/* node */ XMLDTDNotation, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    element: (/* node */ XMLElement, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    endline: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    indent: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    openAttribute: (/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double) => Unit = null,
+    openNode: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => Unit = null,
+    processingInstruction: (/* node */ XMLProcessingInstruction, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    raw: (/* node */ XMLRaw, /* options */ WriterOptions, /* level */ Double) => _ = null,
+    text: (/* node */ XMLText, /* options */ WriterOptions, /* level */ Double) => _ = null
+  ): XMLWriter = {
     val __obj = js.Dynamic.literal()
+    if (attribute != null) __obj.updateDynamic("attribute")(js.Any.fromFunction3(attribute))
+    if (cdata != null) __obj.updateDynamic("cdata")(js.Any.fromFunction3(cdata))
+    if (closeAttribute != null) __obj.updateDynamic("closeAttribute")(js.Any.fromFunction3(closeAttribute))
+    if (closeNode != null) __obj.updateDynamic("closeNode")(js.Any.fromFunction3(closeNode))
+    if (comment != null) __obj.updateDynamic("comment")(js.Any.fromFunction3(comment))
+    if (declaration != null) __obj.updateDynamic("declaration")(js.Any.fromFunction3(declaration))
+    if (docType != null) __obj.updateDynamic("docType")(js.Any.fromFunction3(docType))
+    if (dtdAttList != null) __obj.updateDynamic("dtdAttList")(js.Any.fromFunction3(dtdAttList))
+    if (dtdElement != null) __obj.updateDynamic("dtdElement")(js.Any.fromFunction3(dtdElement))
+    if (dtdEntity != null) __obj.updateDynamic("dtdEntity")(js.Any.fromFunction3(dtdEntity))
+    if (dtdNotation != null) __obj.updateDynamic("dtdNotation")(js.Any.fromFunction3(dtdNotation))
+    if (element != null) __obj.updateDynamic("element")(js.Any.fromFunction3(element))
+    if (endline != null) __obj.updateDynamic("endline")(js.Any.fromFunction3(endline))
+    if (indent != null) __obj.updateDynamic("indent")(js.Any.fromFunction3(indent))
+    if (openAttribute != null) __obj.updateDynamic("openAttribute")(js.Any.fromFunction3(openAttribute))
+    if (openNode != null) __obj.updateDynamic("openNode")(js.Any.fromFunction3(openNode))
+    if (processingInstruction != null) __obj.updateDynamic("processingInstruction")(js.Any.fromFunction3(processingInstruction))
+    if (raw != null) __obj.updateDynamic("raw")(js.Any.fromFunction3(raw))
+    if (text != null) __obj.updateDynamic("text")(js.Any.fromFunction3(text))
     __obj.asInstanceOf[XMLWriter]
   }
-  @scala.inline
-  implicit class XMLWriterOps[Self <: XMLWriter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttribute(value: (/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCdata(value: (/* node */ XMLCData, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCdata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseAttribute(value: (/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeAttribute")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCloseAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseNode(value: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeNode")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutCloseNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: (/* node */ XMLComment, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeclaration(value: (/* node */ XMLDeclaration, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDeclaration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDocType(value: (/* node */ XMLDocType, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docType")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDocType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("docType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDtdAttList(value: (/* node */ XMLDTDAttList, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdAttList")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDtdAttList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdAttList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDtdElement(value: (/* node */ XMLDTDElement, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdElement")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDtdElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdElement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDtdEntity(value: (/* node */ XMLDTDEntity, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdEntity")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDtdEntity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdEntity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDtdNotation(value: (/* node */ XMLDTDNotation, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdNotation")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDtdNotation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdNotation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElement(value: (/* node */ XMLElement, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndline(value: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endline")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutEndline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndent(value: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenAttribute(value: (/* att */ XMLAttribute, /* options */ WriterOptions, /* level */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openAttribute")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOpenAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenNode(value: (/* node */ XMLNode, /* options */ WriterOptions, /* level */ Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNode")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOpenNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcessingInstruction(value: (/* node */ XMLProcessingInstruction, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingInstruction")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutProcessingInstruction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processingInstruction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: (/* node */ XMLRaw, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: (/* node */ XMLText, /* options */ WriterOptions, /* level */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

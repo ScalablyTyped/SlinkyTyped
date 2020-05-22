@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait UInt64
-  extends Arm64CallArgument
-     with ArmCallArgument
-     with MipsCallArgument
-     with NativeArgumentValue
-     with NativeReturnValue
-     with X86CallArgument {
+  extends _Arm64CallArgument
+     with _ArmCallArgument
+     with _MipsCallArgument
+     with _NativeArgumentValue
+     with _NativeReturnValue
+     with _X86CallArgument {
   def add(v: String): UInt64 = js.native
   def add(v: Double): UInt64 = js.native
   /**

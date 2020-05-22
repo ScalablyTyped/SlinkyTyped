@@ -1,5 +1,6 @@
 package typingsSlinky.request.mod
 
+import typingsSlinky.node.urlMod.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +9,18 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.request.mod.UriOptions
   - typingsSlinky.request.mod.UrlOptions
 */
-trait RequiredUriUrl extends OptionalUriUrl
+trait RequiredUriUrl extends js.Object
 
 object RequiredUriUrl {
   @scala.inline
-  implicit def apply(value: UriOptions): RequiredUriUrl = value.asInstanceOf[RequiredUriUrl]
+  def UriOptions(uri: String | Url): RequiredUriUrl = {
+    val __obj = js.Dynamic.literal(uri = uri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RequiredUriUrl]
+  }
   @scala.inline
-  implicit def apply(value: UrlOptions): RequiredUriUrl = value.asInstanceOf[RequiredUriUrl]
+  def UrlOptions(url: String | Url): RequiredUriUrl = {
+    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RequiredUriUrl]
+  }
 }
 

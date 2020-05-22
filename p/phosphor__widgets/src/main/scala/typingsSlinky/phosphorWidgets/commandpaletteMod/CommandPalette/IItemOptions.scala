@@ -8,22 +8,21 @@ import scala.scalajs.js.annotation._
 /**
   * An options object for creating a command item.
   */
-@js.native
 trait IItemOptions extends js.Object {
   /**
     * The arguments for the command.
     *
     * The default value is an empty object.
     */
-  var args: js.UndefOr[ReadonlyJSONObject] = js.native
+  var args: js.UndefOr[ReadonlyJSONObject] = js.undefined
   /**
     * The category for the item.
     */
-  var category: String = js.native
+  var category: String
   /**
     * The command to execute when the item is triggered.
     */
-  var command: String = js.native
+  var command: String
   /**
     * The rank for the command item.
     *
@@ -36,58 +35,21 @@ trait IItemOptions extends js.Object {
     *
     * The default rank is `Infinity`.
     */
-  var rank: js.UndefOr[Double] = js.native
+  var rank: js.UndefOr[Double] = js.undefined
 }
 
 object IItemOptions {
   @scala.inline
-  def apply(category: String, command: String): IItemOptions = {
+  def apply(
+    category: String,
+    command: String,
+    args: ReadonlyJSONObject = null,
+    rank: js.UndefOr[Double] = js.undefined
+  ): IItemOptions = {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any])
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(rank)) __obj.updateDynamic("rank")(rank.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemOptions]
   }
-  @scala.inline
-  implicit class IItemOptionsOps[Self <: IItemOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withArgs(value: ReadonlyJSONObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRank(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRank: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

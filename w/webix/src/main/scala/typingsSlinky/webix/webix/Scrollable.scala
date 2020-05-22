@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Scrollable extends js.Object {
-  def getScrollState(): js.Any = js.native
-  def scrollTo(x: Double, y: Double): Unit = js.native
+  def getScrollState(): js.Any
+  def scrollTo(x: Double, y: Double): Unit
 }
 
 object Scrollable {
@@ -16,25 +15,5 @@ object Scrollable {
     val __obj = js.Dynamic.literal(getScrollState = js.Any.fromFunction0(getScrollState), scrollTo = js.Any.fromFunction2(scrollTo))
     __obj.asInstanceOf[Scrollable]
   }
-  @scala.inline
-  implicit class ScrollableOps[Self <: Scrollable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetScrollState(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollState")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withScrollTo(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

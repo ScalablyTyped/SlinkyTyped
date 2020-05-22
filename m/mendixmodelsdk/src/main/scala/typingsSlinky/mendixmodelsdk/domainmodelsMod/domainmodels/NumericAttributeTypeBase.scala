@@ -5,6 +5,7 @@ import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttributeType because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.INumericAttributeTypeBase because var conflicts: containerAsAttribute, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.NumericAttributeTypeBase")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.INumericAttributeTypeBase because var conflicts: containerAsAttribute, containerAsEntityKeyPart, containerAsODataKeyPart, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.NumericAttributeTypeBase")
 @js.native
 abstract class NumericAttributeTypeBase protected () extends AttributeType {
   def this(
@@ -30,6 +31,10 @@ abstract class NumericAttributeTypeBase protected () extends AttributeType {
   var model_FNumericAttributeTypeBase: IModel = js.native
   @JSName("containerAsAttribute")
   def containerAsAttribute_MNumericAttributeTypeBase: Attribute = js.native
+  @JSName("containerAsEntityKeyPart")
+  def containerAsEntityKeyPart_MNumericAttributeTypeBase: EntityKeyPart = js.native
+  @JSName("containerAsODataKeyPart")
+  def containerAsODataKeyPart_MNumericAttributeTypeBase: ODataKeyPart = js.native
 }
 
 /* static members */

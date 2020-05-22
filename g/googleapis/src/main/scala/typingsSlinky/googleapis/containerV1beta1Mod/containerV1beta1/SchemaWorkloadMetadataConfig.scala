@@ -19,29 +19,10 @@ trait SchemaWorkloadMetadataConfig extends js.Object {
 
 object SchemaWorkloadMetadataConfig {
   @scala.inline
-  def apply(): SchemaWorkloadMetadataConfig = {
+  def apply(nodeMetadata: String = null): SchemaWorkloadMetadataConfig = {
     val __obj = js.Dynamic.literal()
+    if (nodeMetadata != null) __obj.updateDynamic("nodeMetadata")(nodeMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkloadMetadataConfig]
   }
-  @scala.inline
-  implicit class SchemaWorkloadMetadataConfigOps[Self <: SchemaWorkloadMetadataConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeMetadata(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

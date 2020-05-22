@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Multipart extends js.Object {
-  var chunked: js.UndefOr[Boolean] = js.native
-  var data: js.UndefOr[js.Array[Body]] = js.native
+  var chunked: js.UndefOr[Boolean] = js.undefined
+  var data: js.UndefOr[js.Array[Body]] = js.undefined
 }
 
 object Multipart {
   @scala.inline
-  def apply(): Multipart = {
+  def apply(chunked: js.UndefOr[Boolean] = js.undefined, data: js.Array[Body] = null): Multipart = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chunked)) __obj.updateDynamic("chunked")(chunked.get.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     __obj.asInstanceOf[Multipart]
   }
-  @scala.inline
-  implicit class MultipartOps[Self <: Multipart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChunked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunked: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunked")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[Body]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

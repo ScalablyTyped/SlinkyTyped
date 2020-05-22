@@ -23,41 +23,11 @@ trait SchemaInsertRangeRequest extends js.Object {
 
 object SchemaInsertRangeRequest {
   @scala.inline
-  def apply(): SchemaInsertRangeRequest = {
+  def apply(range: SchemaGridRange = null, shiftDimension: String = null): SchemaInsertRangeRequest = {
     val __obj = js.Dynamic.literal()
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (shiftDimension != null) __obj.updateDynamic("shiftDimension")(shiftDimension.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInsertRangeRequest]
   }
-  @scala.inline
-  implicit class SchemaInsertRangeRequestOps[Self <: SchemaInsertRangeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: SchemaGridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShiftDimension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftDimension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShiftDimension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftDimension")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

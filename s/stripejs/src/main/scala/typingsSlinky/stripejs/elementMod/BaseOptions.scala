@@ -6,90 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseOptions extends js.Object {
   /**
     * Set custom class names on the container DOM element when the Stripe Element is in a
     * particular state.
     */
-  var classes: js.UndefOr[Empty] = js.native
+  var classes: js.UndefOr[Empty] = js.undefined
   /**
     * Whether or not the input is disabled
     * @default false
     */
-  var disabled: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether or not the icon should be hidden
     * @default false
     */
-  var hideIcon: js.UndefOr[Boolean] = js.native
+  var hideIcon: js.UndefOr[Boolean] = js.undefined
   /**
     * Customize appearance using CSS properties
     */
-  var style: js.UndefOr[Invalid] = js.native
+  var style: js.UndefOr[Invalid] = js.undefined
 }
 
 object BaseOptions {
   @scala.inline
-  def apply(): BaseOptions = {
+  def apply(
+    classes: Empty = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    hideIcon: js.UndefOr[Boolean] = js.undefined,
+    style: Invalid = null
+  ): BaseOptions = {
     val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideIcon)) __obj.updateDynamic("hideIcon")(hideIcon.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseOptions]
   }
-  @scala.inline
-  implicit class BaseOptionsOps[Self <: BaseOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClasses(value: Empty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClasses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideIcon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: Invalid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

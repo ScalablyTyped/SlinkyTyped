@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 /**
   * Compose type.
-  * 
+  *
   * [Api set: Mailbox Preview]
-  * 
+  *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose
-  * 
+  *
   * @beta
   */
 @JSGlobal("Office.MailboxEnums.ComposeType")

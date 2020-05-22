@@ -50,137 +50,30 @@ trait PipelineActivity extends js.Object {
 
 object PipelineActivity {
   @scala.inline
-  def apply(): PipelineActivity = {
+  def apply(
+    addAttributes: AddAttributesActivity = null,
+    channel: ChannelActivity = null,
+    datastore: DatastoreActivity = null,
+    deviceRegistryEnrich: DeviceRegistryEnrichActivity = null,
+    deviceShadowEnrich: DeviceShadowEnrichActivity = null,
+    filter: FilterActivity = null,
+    lambda: LambdaActivity = null,
+    math: MathActivity = null,
+    removeAttributes: RemoveAttributesActivity = null,
+    selectAttributes: SelectAttributesActivity = null
+  ): PipelineActivity = {
     val __obj = js.Dynamic.literal()
+    if (addAttributes != null) __obj.updateDynamic("addAttributes")(addAttributes.asInstanceOf[js.Any])
+    if (channel != null) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
+    if (datastore != null) __obj.updateDynamic("datastore")(datastore.asInstanceOf[js.Any])
+    if (deviceRegistryEnrich != null) __obj.updateDynamic("deviceRegistryEnrich")(deviceRegistryEnrich.asInstanceOf[js.Any])
+    if (deviceShadowEnrich != null) __obj.updateDynamic("deviceShadowEnrich")(deviceShadowEnrich.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
+    if (math != null) __obj.updateDynamic("math")(math.asInstanceOf[js.Any])
+    if (removeAttributes != null) __obj.updateDynamic("removeAttributes")(removeAttributes.asInstanceOf[js.Any])
+    if (selectAttributes != null) __obj.updateDynamic("selectAttributes")(selectAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineActivity]
   }
-  @scala.inline
-  implicit class PipelineActivityOps[Self <: PipelineActivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddAttributes(value: AddAttributesActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChannel(value: ChannelActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChannel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDatastore(value: DatastoreActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datastore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDatastore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("datastore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceRegistryEnrich(value: DeviceRegistryEnrichActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceRegistryEnrich")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceRegistryEnrich: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceRegistryEnrich")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceShadowEnrich(value: DeviceShadowEnrichActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceShadowEnrich")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceShadowEnrich: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceShadowEnrich")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilter(value: FilterActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambda(value: LambdaActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambda: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMath(value: MathActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("math")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("math")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveAttributes(value: RemoveAttributesActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectAttributes(value: SelectAttributesActivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

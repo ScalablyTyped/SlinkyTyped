@@ -1,5 +1,6 @@
 package typingsSlinky.tcomb.mod
 
+import typingsSlinky.tcomb.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,24 +15,48 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tcomb.mod.UnshiftCommand
   - typingsSlinky.tcomb.mod.MergeCommand
 */
-trait Command extends UpdatePatch
+trait Command extends js.Object
 
 object Command {
   @scala.inline
-  implicit def apply(value: ApplyCommand): Command = value.asInstanceOf[Command]
+  def UnshiftCommand($unshift: js.Array[_]): Command = {
+    val __obj = js.Dynamic.literal($unshift = $unshift.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: MergeCommand): Command = value.asInstanceOf[Command]
+  def MergeCommand($merge: js.Object): Command = {
+    val __obj = js.Dynamic.literal($merge = $merge.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: PushCommand): Command = value.asInstanceOf[Command]
+  def SetCommand($set: js.Any): Command = {
+    val __obj = js.Dynamic.literal($set = $set.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: RemoveCommand): Command = value.asInstanceOf[Command]
+  def PushCommand($push: js.Array[_]): Command = {
+    val __obj = js.Dynamic.literal($push = $push.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: SetCommand): Command = value.asInstanceOf[Command]
+  def RemoveCommand($remove: js.Array[java.lang.String]): Command = {
+    val __obj = js.Dynamic.literal($remove = $remove.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: SpliceCommand): Command = value.asInstanceOf[Command]
+  def ApplyCommand($apply: js.Function): Command = {
+    val __obj = js.Dynamic.literal($apply = $apply.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: SwapCommand): Command = value.asInstanceOf[Command]
+  def SpliceCommand($splice: js.Array[js.Array[_]]): Command = {
+    val __obj = js.Dynamic.literal($splice = $splice.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
   @scala.inline
-  implicit def apply(value: UnshiftCommand): Command = value.asInstanceOf[Command]
+  def SwapCommand($swap: From): Command = {
+    val __obj = js.Dynamic.literal($swap = $swap.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Command]
+  }
 }
 

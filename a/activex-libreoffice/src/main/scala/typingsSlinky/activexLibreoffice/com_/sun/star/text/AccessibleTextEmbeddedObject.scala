@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * deactivated.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleTextEmbeddedObject
   extends XAccessibleContext
      with XAccessibleComponent

@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs")
 @js.native
 abstract class MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs ()
-  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
+  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs {
+  /** Gets data for the recently swiped vendor card. */
+  /* CompleteClass */
+  override var report: typingsSlinky.winrtUwp.Windows.Devices.PointOfService.MagneticStripeReaderReport = js.native
+}
 

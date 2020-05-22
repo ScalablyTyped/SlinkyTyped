@@ -8,16 +8,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LiveStreamsResource extends js.Object {
   /** Deletes a video stream. */
-  def delete(request: AltFields): Request[Unit] = js.native
+  def delete(request: AltFields): Request[Unit]
   /** Creates a video stream. The stream enables you to send your video to YouTube, which can then broadcast the video to your audience. */
-  def insert(request: OnBehalfOfContentOwnerChannel): Request[LiveStream] = js.native
+  def insert(request: OnBehalfOfContentOwnerChannel): Request[LiveStream]
   /** Returns a list of video streams that match the API request parameters. */
-  def list(request: Mine): Request[LiveStreamListResponse] = js.native
+  def list(request: Mine): Request[LiveStreamListResponse]
   /** Updates a video stream. If the properties that you want to change cannot be updated, then you need to create a new stream with the proper settings. */
-  def update(request: OnBehalfOfContentOwnerChannel): Request[LiveStream] = js.native
+  def update(request: OnBehalfOfContentOwnerChannel): Request[LiveStream]
 }
 
 object LiveStreamsResource {
@@ -31,37 +30,5 @@ object LiveStreamsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[LiveStreamsResource]
   }
-  @scala.inline
-  implicit class LiveStreamsResourceOps[Self <: LiveStreamsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: AltFields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInsert(value: OnBehalfOfContentOwnerChannel => Request[LiveStream]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Mine => Request[LiveStreamListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: OnBehalfOfContentOwnerChannel => Request[LiveStream]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

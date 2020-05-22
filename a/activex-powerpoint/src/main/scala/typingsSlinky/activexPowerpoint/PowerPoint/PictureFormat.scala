@@ -8,25 +8,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PictureFormat extends js.Object {
-  val Application: js.Any = js.native
-  var Brightness: Double = js.native
-  var ColorType: MsoPictureColorType = js.native
-  var Contrast: Double = js.native
-  val Creator: Double = js.native
-  val Crop: typingsSlinky.activexOffice.Office.Crop = js.native
-  var CropBottom: Double = js.native
-  var CropLeft: Double = js.native
-  var CropRight: Double = js.native
-  var CropTop: Double = js.native
-  val Parent: js.Any = js.native
+  val Application: js.Any
+  var Brightness: Double
+  var ColorType: MsoPictureColorType
+  var Contrast: Double
+  val Creator: Double
+  val Crop: typingsSlinky.activexOffice.Office.Crop
+  var CropBottom: Double
+  var CropLeft: Double
+  var CropRight: Double
+  var CropTop: Double
+  val Parent: js.Any
   @JSName("PowerPoint.PictureFormat_typekey")
-  var PowerPointDotPictureFormat_typekey: PictureFormat = js.native
-  var TransparencyColor: MsoRGBType = js.native
-  var TransparentBackground: MsoTriState = js.native
-  def IncrementBrightness(Increment: Double): Unit = js.native
-  def IncrementContrast(Increment: Double): Unit = js.native
+  var PowerPointDotPictureFormat_typekey: PictureFormat
+  var TransparencyColor: MsoRGBType
+  var TransparentBackground: MsoTriState
+  def IncrementBrightness(Increment: Double): Unit
+  def IncrementContrast(Increment: Double): Unit
 }
 
 object PictureFormat {
@@ -53,109 +52,5 @@ object PictureFormat {
     __obj.updateDynamic("PowerPoint.PictureFormat_typekey")(PowerPointDotPictureFormat_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[PictureFormat]
   }
-  @scala.inline
-  implicit class PictureFormatOps[Self <: PictureFormat] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBrightness(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Brightness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColorType(value: MsoPictureColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContrast(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Contrast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCrop(value: Crop): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Crop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropBottom(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropLeft(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropRight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCropTop(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CropTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIncrementBrightness(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncrementBrightness")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIncrementContrast(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncrementContrast")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPowerPointDotPictureFormat_typekey(value: PictureFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.PictureFormat_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransparencyColor(value: MsoRGBType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransparencyColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransparentBackground(value: MsoTriState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransparentBackground")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

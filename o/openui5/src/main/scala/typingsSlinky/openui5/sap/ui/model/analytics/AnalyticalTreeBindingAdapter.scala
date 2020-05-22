@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnalyticalTreeBindingAdapter extends js.Object {
   /**
     * Retrieves the currently set number of expanded levels from the Binding (commonly an
     * AnalyticalBinding).
     * @returns the number of expanded levels
     */
-  def getNumberOfExpandedLevels(): Double = js.native
+  def getNumberOfExpandedLevels(): Double
   /**
     * Checks if the AnalyticalBinding has totaled measures available.Used for rendering sum rows.
     * @returns wether the binding has totaled measures or not
     */
-  def hasTotaledMeasures(): Boolean = js.native
+  def hasTotaledMeasures(): Boolean
   /**
     * Sets the number of expanded levels on the TreeBinding (commonly an AnalyticalBinding).This is NOT
     * the same as AnalyticalTreeBindingAdapter#collapse or AnalyticalTreeBindingAdapter#expand.Setting the
@@ -24,7 +23,7 @@ trait AnalyticalTreeBindingAdapter extends js.Object {
     * for the ungroup/ungroup-all feature.
     * @param iLevels the number of levels which should be expanded, minimum is 0
     */
-  def setNumberOfExpandedLevels(iLevels: Double): Unit = js.native
+  def setNumberOfExpandedLevels(iLevels: Double): Unit
 }
 
 object AnalyticalTreeBindingAdapter {
@@ -37,31 +36,5 @@ object AnalyticalTreeBindingAdapter {
     val __obj = js.Dynamic.literal(getNumberOfExpandedLevels = js.Any.fromFunction0(getNumberOfExpandedLevels), hasTotaledMeasures = js.Any.fromFunction0(hasTotaledMeasures), setNumberOfExpandedLevels = js.Any.fromFunction1(setNumberOfExpandedLevels))
     __obj.asInstanceOf[AnalyticalTreeBindingAdapter]
   }
-  @scala.inline
-  implicit class AnalyticalTreeBindingAdapterOps[Self <: AnalyticalTreeBindingAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetNumberOfExpandedLevels(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberOfExpandedLevels")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasTotaledMeasures(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasTotaledMeasures")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetNumberOfExpandedLevels(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setNumberOfExpandedLevels")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -82,6 +82,12 @@ object dom extends js.Object {
   class nodeList protected ()
     extends typingsSlinky.ckeditor.CKEDITOR.dom.nodeList {
     def this(nativeList: NodeList) = this()
+    /* CompleteClass */
+    override def count(): Double = js.native
+    /* CompleteClass */
+    override def getItem(index: Double): typingsSlinky.ckeditor.CKEDITOR.dom.node = js.native
+    /* CompleteClass */
+    override def toArray(): js.Array[typingsSlinky.ckeditor.CKEDITOR.dom.node] = js.native
   }
   
   @js.native

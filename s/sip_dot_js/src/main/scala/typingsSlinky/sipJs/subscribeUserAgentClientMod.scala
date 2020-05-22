@@ -45,7 +45,7 @@ object subscribeUserAgentClientMod extends js.Object {
       */
     var timer_N: js.Any = js.native
     /**
-      * Handle out of dialog NOTIFY assoicated with SUBSCRIBE request.
+      * Handle out of dialog NOTIFY associated with SUBSCRIBE request.
       * This is the first NOTIFY received after the SUBSCRIBE request.
       * @param uas - User agent server handling the subscription creating NOTIFY.
       */

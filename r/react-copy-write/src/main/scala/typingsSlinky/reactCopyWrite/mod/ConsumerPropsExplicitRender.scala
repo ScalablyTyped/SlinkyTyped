@@ -6,38 +6,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConsumerPropsExplicitRender[T]
   extends ConsumerPropsBase[T]
      with ConsumerProps[T] {
-  var render: js.UndefOr[RenderFn[T]] = js.native
+  var render: js.UndefOr[RenderFn[T]] = js.undefined
 }
 
 object ConsumerPropsExplicitRender {
   @scala.inline
-  def apply[T](): ConsumerPropsExplicitRender[T] = {
+  def apply[T](
+    render: /* repeated */ ReturnType[SelectorFn[T]] => ReactElement | js.Array[ReactElement] | Null = null,
+    select: js.Array[SelectorFn[T]] = null
+  ): ConsumerPropsExplicitRender[T] = {
     val __obj = js.Dynamic.literal()
+    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
+    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsumerPropsExplicitRender[T]]
   }
-  @scala.inline
-  implicit class ConsumerPropsExplicitRenderOps[Self[t] <: ConsumerPropsExplicitRender[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withRender(value: /* repeated */ ReturnType[SelectorFn[T]] => ReactElement | js.Array[ReactElement] | Null): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRender: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

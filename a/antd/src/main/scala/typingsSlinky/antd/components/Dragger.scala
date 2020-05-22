@@ -67,6 +67,8 @@ object Dragger {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def isImageUrl(value: /* file */ UploadFile[_] => Boolean): this.type = set("isImageUrl", js.Any.fromFunction1(value))
+    @scala.inline
     def listType(value: UploadListType): this.type = set("listType", value.asInstanceOf[js.Any])
     @scala.inline
     def locale(value: UploadLocale): this.type = set("locale", value.asInstanceOf[js.Any])

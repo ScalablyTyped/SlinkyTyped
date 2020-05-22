@@ -8,81 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GroovyCompatibility extends js.Object {
-  var groovyCompatibility: js.UndefOr[Boolean] = js.native
-  var transportLibrary: js.UndefOr[websocket | socketDotio | RTCPeerConnection] = js.native
-  var transportOptions: js.UndefOr[RTCDataChannelInit] = js.native
-  var url: js.UndefOr[String] = js.native
+  var groovyCompatibility: js.UndefOr[Boolean] = js.undefined
+  var transportLibrary: js.UndefOr[websocket | socketDotio | RTCPeerConnection] = js.undefined
+  var transportOptions: js.UndefOr[RTCDataChannelInit] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object GroovyCompatibility {
   @scala.inline
-  def apply(): GroovyCompatibility = {
+  def apply(
+    groovyCompatibility: js.UndefOr[Boolean] = js.undefined,
+    transportLibrary: websocket | socketDotio | RTCPeerConnection = null,
+    transportOptions: RTCDataChannelInit = null,
+    url: String = null
+  ): GroovyCompatibility = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(groovyCompatibility)) __obj.updateDynamic("groovyCompatibility")(groovyCompatibility.get.asInstanceOf[js.Any])
+    if (transportLibrary != null) __obj.updateDynamic("transportLibrary")(transportLibrary.asInstanceOf[js.Any])
+    if (transportOptions != null) __obj.updateDynamic("transportOptions")(transportOptions.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroovyCompatibility]
   }
-  @scala.inline
-  implicit class GroovyCompatibilityOps[Self <: GroovyCompatibility] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroovyCompatibility(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groovyCompatibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroovyCompatibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groovyCompatibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportLibraryRTCPeerConnection(value: RTCPeerConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportLibrary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTransportLibrary(value: websocket | socketDotio | RTCPeerConnection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportLibrary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportLibrary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportLibrary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransportOptions(value: RTCDataChannelInit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransportOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transportOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

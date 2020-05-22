@@ -5,79 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined baseui.baseui/accordion.SharedProps & {  $expanded ? :never} */
-@js.native
 trait SharedPropsexpandednever extends js.Object {
   @JSName("$color")
-  var $color: js.UndefOr[String] = js.native
+  var $color: js.UndefOr[String] = js.undefined
   @JSName("$disabled")
-  var $disabled: js.UndefOr[Boolean] = js.native
+  var $disabled: js.UndefOr[Boolean] = js.undefined
   @JSName("$expanded")
-  var $expanded: js.UndefOr[Boolean] = js.native
+  var $expanded: js.UndefOr[Boolean] = js.undefined
   @JSName("$size")
-  var $size: js.UndefOr[String | Double] = js.native
+  var $size: js.UndefOr[String | Double] = js.undefined
 }
 
 object SharedPropsexpandednever {
   @scala.inline
-  def apply(): SharedPropsexpandednever = {
+  def apply(
+    $color: String = null,
+    $disabled: js.UndefOr[Boolean] = js.undefined,
+    $expanded: js.UndefOr[Boolean] = js.undefined,
+    $size: String | Double = null
+  ): SharedPropsexpandednever = {
     val __obj = js.Dynamic.literal()
+    if ($color != null) __obj.updateDynamic("$color")($color.asInstanceOf[js.Any])
+    if (!js.isUndefined($disabled)) __obj.updateDynamic("$disabled")($disabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($expanded)) __obj.updateDynamic("$expanded")($expanded.get.asInstanceOf[js.Any])
+    if ($size != null) __obj.updateDynamic("$size")($size.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedPropsexpandednever]
   }
-  @scala.inline
-  implicit class SharedPropsexpandedneverOps[Self <: SharedPropsexpandednever] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$color(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$color: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$disabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$disabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$expanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$expanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$expanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$expanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$size(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$size: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

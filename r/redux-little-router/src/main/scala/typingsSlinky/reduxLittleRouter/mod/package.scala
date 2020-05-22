@@ -10,6 +10,7 @@ package object mod {
     /* action */ js.UndefOr[typingsSlinky.reduxLittleRouter.mod.HistoryAction], 
     java.lang.String
   ]
+  type Href = java.lang.String | typingsSlinky.reduxLittleRouter.mod.Location
   type ListenCallback = js.Function2[
     /* location */ typingsSlinky.reduxLittleRouter.mod.Location, 
     /* action */ js.UndefOr[typingsSlinky.reduxLittleRouter.mod.HistoryAction], 

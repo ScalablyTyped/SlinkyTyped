@@ -11,14 +11,14 @@ sealed trait ImageErrorCode extends js.Object
 @js.native
 object ImageErrorCode extends js.Object {
   /**
-  		* Image download was aborted.
-  		**/
+    * Image download was aborted.
+    **/
   @js.native
   sealed trait aborted extends ImageErrorCode
   
   /**
-  		* An unknown image error occurred.
-  		**/
+    * An unknown image error occurred.
+    **/
   @js.native
   sealed trait unknown extends ImageErrorCode
   

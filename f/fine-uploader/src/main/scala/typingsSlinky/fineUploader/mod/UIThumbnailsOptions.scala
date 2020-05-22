@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UIThumbnailsOptions extends js.Object {
   /**
     * Ignored if the current browser does not support image previews.
@@ -19,7 +18,7 @@ trait UIThumbnailsOptions extends js.Object {
     *
     * @default `undefined`
     */
-  var customResizer: js.UndefOr[CustomResizerCallBack] = js.native
+  var customResizer: js.UndefOr[CustomResizerCallBack] = js.undefined
   /**
     * Maximum number of previews to render per Fine Uploader instance.
     *
@@ -27,11 +26,11 @@ trait UIThumbnailsOptions extends js.Object {
     *
     * @default `0`
     */
-  var maxCount: js.UndefOr[Double] = js.native
+  var maxCount: js.UndefOr[Double] = js.undefined
   /**
     *
     */
-  var placeholders: js.UndefOr[UIThumbnailsPlaceholderOptions] = js.native
+  var placeholders: js.UndefOr[UIThumbnailsPlaceholderOptions] = js.undefined
   /**
     * The amount of time, in milliseconds, to pause between each preview generation process.
     *
@@ -39,70 +38,23 @@ trait UIThumbnailsOptions extends js.Object {
     *
     * @default `750`
     */
-  var timeBetweenThumbs: js.UndefOr[Double] = js.native
+  var timeBetweenThumbs: js.UndefOr[Double] = js.undefined
 }
 
 object UIThumbnailsOptions {
   @scala.inline
-  def apply(): UIThumbnailsOptions = {
+  def apply(
+    customResizer: /* resizeInfo */ ResizeInfo => PromiseOptions = null,
+    maxCount: js.UndefOr[Double] = js.undefined,
+    placeholders: UIThumbnailsPlaceholderOptions = null,
+    timeBetweenThumbs: js.UndefOr[Double] = js.undefined
+  ): UIThumbnailsOptions = {
     val __obj = js.Dynamic.literal()
+    if (customResizer != null) __obj.updateDynamic("customResizer")(js.Any.fromFunction1(customResizer))
+    if (!js.isUndefined(maxCount)) __obj.updateDynamic("maxCount")(maxCount.get.asInstanceOf[js.Any])
+    if (placeholders != null) __obj.updateDynamic("placeholders")(placeholders.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeBetweenThumbs)) __obj.updateDynamic("timeBetweenThumbs")(timeBetweenThumbs.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIThumbnailsOptions]
   }
-  @scala.inline
-  implicit class UIThumbnailsOptionsOps[Self <: UIThumbnailsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomResizer(value: /* resizeInfo */ ResizeInfo => PromiseOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customResizer")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCustomResizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customResizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholders(value: UIThumbnailsPlaceholderOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeBetweenThumbs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeBetweenThumbs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeBetweenThumbs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeBetweenThumbs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

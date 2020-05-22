@@ -12,27 +12,26 @@ import scala.scalajs.js.annotation._
   * provides access to the settings of a scenario sheet.
   * @see com.sun.star.sheet.Spreadsheet
   */
-@js.native
 trait XScenario extends XInterface {
   /** returns `TRUE` if the current object is a scenario. */
-  val IsScenario: Boolean = js.native
+  val IsScenario: Boolean
   /** returns the comment for the scenario. */
-  var ScenarioComment: String = js.native
+  var ScenarioComment: String
   /** adds more ranges to the scenario. */
-  def addRanges(aRanges: SeqEquiv[CellRangeAddress]): Unit = js.native
+  def addRanges(aRanges: SeqEquiv[CellRangeAddress]): Unit
   /**
     * applies the scenario.
     *
     * The contents of the scenario ranges are copied into the first non-scenario sheet which is in front of the sheet containing the scenario by itself.
     */
   @JSName("apply")
-  def apply(): Unit = js.native
+  def apply(): Unit
   /** returns `TRUE` if the current object is a scenario. */
-  def getIsScenario(): Boolean = js.native
+  def getIsScenario(): Boolean
   /** returns the comment for the scenario. */
-  def getScenarioComment(): String = js.native
+  def getScenarioComment(): String
   /** sets a new comment for the scenario. */
-  def setScenarioComment(aScenarioComment: String): Unit = js.native
+  def setScenarioComment(aScenarioComment: String): Unit
 }
 
 object XScenario {
@@ -52,55 +51,5 @@ object XScenario {
     val __obj = js.Dynamic.literal(IsScenario = IsScenario.asInstanceOf[js.Any], ScenarioComment = ScenarioComment.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addRanges = js.Any.fromFunction1(addRanges), apply = js.Any.fromFunction0(apply), getIsScenario = js.Any.fromFunction0(getIsScenario), getScenarioComment = js.Any.fromFunction0(getScenarioComment), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setScenarioComment = js.Any.fromFunction1(setScenarioComment))
     __obj.asInstanceOf[XScenario]
   }
-  @scala.inline
-  implicit class XScenarioOps[Self <: XScenario] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsScenario(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsScenario")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScenarioComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScenarioComment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddRanges(value: SeqEquiv[CellRangeAddress] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRanges")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withApply(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIsScenario(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsScenario")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetScenarioComment(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScenarioComment")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetScenarioComment(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScenarioComment")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

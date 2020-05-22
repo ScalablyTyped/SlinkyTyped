@@ -4,56 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SetTabBarStyleOptions
   extends BaseOptions[js.Any, js.Any] {
   /** tab 的背景色 */
-  var backgroundColor: String = js.native
+  var backgroundColor: String
   /** tabbar上边框的颜色， 仅支持 black/white */
-  var borderStyle: String = js.native
+  var borderStyle: String
   /** tab 上的文字默认颜色 */
-  var color: String = js.native
+  var color: String
   /** tab 上的文字选中时的颜色 */
-  var selectedColor: String = js.native
+  var selectedColor: String
 }
 
 object SetTabBarStyleOptions {
   @scala.inline
-  def apply(backgroundColor: String, borderStyle: String, color: String, selectedColor: String): SetTabBarStyleOptions = {
+  def apply(
+    backgroundColor: String,
+    borderStyle: String,
+    color: String,
+    selectedColor: String,
+    complete: /* res */ js.Any => Unit = null,
+    fail: js.Any => Unit = null,
+    success: js.Any => Unit = null
+  ): SetTabBarStyleOptions = {
     val __obj = js.Dynamic.literal(backgroundColor = backgroundColor.asInstanceOf[js.Any], borderStyle = borderStyle.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], selectedColor = selectedColor.asInstanceOf[js.Any])
+    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
+    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[SetTabBarStyleOptions]
   }
-  @scala.inline
-  implicit class SetTabBarStyleOptionsOps[Self <: SetTabBarStyleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBorderStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelectedColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

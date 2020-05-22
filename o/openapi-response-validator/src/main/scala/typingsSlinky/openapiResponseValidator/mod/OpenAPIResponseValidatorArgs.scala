@@ -11,21 +11,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenAPIResponseValidatorArgs extends js.Object {
-  var components: js.UndefOr[ComponentsObject] = js.native
-  var customFormats: StringDictionary[FormatValidator | FormatDefinition] = js.native
-  var definitions: StringDictionary[IJsonSchema] = js.native
+  var components: js.UndefOr[ComponentsObject] = js.undefined
+  var customFormats: StringDictionary[FormatValidator | FormatDefinition]
+  var definitions: StringDictionary[IJsonSchema]
   var errorTransformer: js.UndefOr[
     js.Function2[
       /* openAPIResponseValidatorValidationError */ OpenAPIResponseValidatorError, 
       /* ajvError */ ErrorObject, 
       _
     ]
-  ] = js.native
-  var externalSchemas: StringDictionary[IJsonSchema] = js.native
-  var loggingKey: String = js.native
-  var responses: StringDictionary[Schema] = js.native
+  ] = js.undefined
+  var externalSchemas: StringDictionary[IJsonSchema]
+  var loggingKey: String
+  var responses: StringDictionary[Schema]
 }
 
 object OpenAPIResponseValidatorArgs {
@@ -35,74 +34,14 @@ object OpenAPIResponseValidatorArgs {
     definitions: StringDictionary[IJsonSchema],
     externalSchemas: StringDictionary[IJsonSchema],
     loggingKey: String,
-    responses: StringDictionary[Schema]
+    responses: StringDictionary[Schema],
+    components: ComponentsObject = null,
+    errorTransformer: (/* openAPIResponseValidatorValidationError */ OpenAPIResponseValidatorError, /* ajvError */ ErrorObject) => _ = null
   ): OpenAPIResponseValidatorArgs = {
     val __obj = js.Dynamic.literal(customFormats = customFormats.asInstanceOf[js.Any], definitions = definitions.asInstanceOf[js.Any], externalSchemas = externalSchemas.asInstanceOf[js.Any], loggingKey = loggingKey.asInstanceOf[js.Any], responses = responses.asInstanceOf[js.Any])
+    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
+    if (errorTransformer != null) __obj.updateDynamic("errorTransformer")(js.Any.fromFunction2(errorTransformer))
     __obj.asInstanceOf[OpenAPIResponseValidatorArgs]
   }
-  @scala.inline
-  implicit class OpenAPIResponseValidatorArgsOps[Self <: OpenAPIResponseValidatorArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomFormats(value: StringDictionary[FormatValidator | FormatDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefinitions(value: StringDictionary[IJsonSchema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalSchemas(value: StringDictionary[IJsonSchema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalSchemas")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoggingKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResponses(value: StringDictionary[Schema]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComponents(value: ComponentsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorTransformer(
-      value: (/* openAPIResponseValidatorValidationError */ OpenAPIResponseValidatorError, /* ajvError */ ErrorObject) => _
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTransformer")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutErrorTransformer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTransformer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

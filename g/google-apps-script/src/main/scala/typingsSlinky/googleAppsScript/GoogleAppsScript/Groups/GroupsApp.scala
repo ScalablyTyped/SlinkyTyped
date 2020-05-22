@@ -13,11 +13,10 @@ import scala.scalajs.js.annotation._
   *     var groups = GroupsApp.getGroups();
   *     Logger.log('You belong to ' + groups.length + ' groups.');
   */
-@js.native
 trait GroupsApp extends js.Object {
-  var Role: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Role */ js.Any = js.native
-  def getGroupByEmail(email: String): Group = js.native
-  def getGroups(): js.Array[Group] = js.native
+  var Role: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Role */ js.Any
+  def getGroupByEmail(email: String): Group
+  def getGroups(): js.Array[Group]
 }
 
 object GroupsApp {
@@ -30,31 +29,5 @@ object GroupsApp {
     val __obj = js.Dynamic.literal(Role = Role.asInstanceOf[js.Any], getGroupByEmail = js.Any.fromFunction1(getGroupByEmail), getGroups = js.Any.fromFunction0(getGroups))
     __obj.asInstanceOf[GroupsApp]
   }
-  @scala.inline
-  implicit class GroupsAppOps[Self <: GroupsApp] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRole(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Role */ js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Role")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetGroupByEmail(value: String => Group): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroupByEmail")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetGroups(value: () => js.Array[Group]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroups")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

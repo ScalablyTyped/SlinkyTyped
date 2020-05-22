@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The ConnectionSession class is used to represent a connection to an access point established with AcquireConnectionAsync . */
-@js.native
 trait ConnectionSession extends js.Object {
   /** Retrieves the ConnectionProfile associated with the connection session. */
-  var connectionProfile: ConnectionProfile = js.native
+  var connectionProfile: ConnectionProfile
   /** Closes the connection to the access point. */
-  def close(): Unit = js.native
+  def close(): Unit
 }
 
 object ConnectionSession {
@@ -19,25 +18,5 @@ object ConnectionSession {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), connectionProfile = connectionProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionSession]
   }
-  @scala.inline
-  implicit class ConnectionSessionOps[Self <: ConnectionSession] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withConnectionProfile(value: ConnectionProfile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

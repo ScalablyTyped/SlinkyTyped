@@ -4,34 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImportNamespaceSpecifier
   extends BaseModuleSpecifier
      with ModuleSpecifier {
   @JSName("type")
-  var type_ImportNamespaceSpecifier: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier = js.native
+  var type_ImportNamespaceSpecifier: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier
 }
 
 object ImportNamespaceSpecifier {
   @scala.inline
-  def apply(local: Identifier, `type`: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier): ImportNamespaceSpecifier = {
+  def apply(
+    local: Identifier,
+    `type`: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): ImportNamespaceSpecifier = {
     val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportNamespaceSpecifier]
   }
-  @scala.inline
-  implicit class ImportNamespaceSpecifierOps[Self <: ImportNamespaceSpecifier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

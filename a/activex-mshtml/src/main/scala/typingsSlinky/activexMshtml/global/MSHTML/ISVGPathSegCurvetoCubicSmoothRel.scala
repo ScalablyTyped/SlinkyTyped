@@ -7,5 +7,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("MSHTML.ISVGPathSegCurvetoCubicSmoothRel")
 @js.native
 class ISVGPathSegCurvetoCubicSmoothRel protected ()
-  extends typingsSlinky.activexMshtml.MSHTML.ISVGPathSegCurvetoCubicSmoothRel
+  extends typingsSlinky.activexMshtml.MSHTML.ISVGPathSegCurvetoCubicSmoothRel {
+  /* CompleteClass */
+  @JSName("MSHTML.ISVGPathSegCurvetoCubicSmoothRel_typekey")
+  override var MSHTMLDotISVGPathSegCurvetoCubicSmoothRel_typekey: typingsSlinky.activexMshtml.MSHTML.ISVGPathSegCurvetoCubicSmoothRel = js.native
+  /* CompleteClass */
+  override var x: Double = js.native
+  /* CompleteClass */
+  override var x2: Double = js.native
+  /* CompleteClass */
+  override var y: Double = js.native
+  /* CompleteClass */
+  override var y2: Double = js.native
+}
 

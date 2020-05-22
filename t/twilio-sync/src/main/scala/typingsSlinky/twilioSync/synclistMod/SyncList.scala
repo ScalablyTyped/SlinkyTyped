@@ -26,16 +26,9 @@ import scala.scalajs.js.annotation._
 class SyncList protected ()
   extends typingsSlinky.twilioSync.closeableMod.default {
   def this(syncListImpl: SyncListImpl) = this()
-  val dateExpires: String = js.native
-  val dateUpdated: js.Date = js.native
-  val lastEventId: Double = js.native
-  val links: js.Any = js.native
-  val revision: String = js.native
-  val sid: String = js.native
   val syncListImpl: js.Any = js.native
-  val `type`: String = js.native
-  val uniqueName: String = js.native
-  val uri: String = js.native
+  def dateExpires: String = js.native
+  def dateUpdated: js.Date = js.native
   /**
     * Retrieve an item by List index.
     * @param {Number} index Item index in a List.
@@ -82,6 +75,8 @@ class SyncList protected ()
     *   });
     */
   def getItems(args: js.Any): js.Promise[Paginator[ListItem]] = js.native
+  def lastEventId: Double = js.native
+  def links: js.Any = js.native
   /**
     * Modify an existing item by applying a mutation function to it.
     * @param {Number} index Index of an item to be changed.
@@ -153,6 +148,7 @@ class SyncList protected ()
     *   });
     */
   def removeList(): js.Promise[Unit] = js.native
+  def revision: String = js.native
   /**
     * Assign new value to an existing item, given its index.
     * @param {Number} index Index of the item to be updated.
@@ -203,6 +199,9 @@ class SyncList protected ()
     *   });
     */
   def setTtl(ttl: Double): js.Promise[Unit] = js.native
+  def sid: String = js.native
+  def `type`: String = js.native
+  def uniqueName: String = js.native
   /**
     * Modify an existing item by appending new fields (or overwriting existing ones) with the values from Object.
     * This is equivalent to
@@ -230,12 +229,13 @@ class SyncList protected ()
     */
   def update(index: Double, obj: js.Object): js.Promise[ListItem] = js.native
   def update(index: Double, obj: js.Object, itemMetadataUpdates: ItemMetadata): js.Promise[ListItem] = js.native
+  def uri: String = js.native
 }
 
 /* static members */
 @JSImport("twilio-sync/lib/synclist", "SyncList")
 @js.native
 object SyncList extends js.Object {
-  val `type`: String = js.native
+  def `type`: String = js.native
 }
 

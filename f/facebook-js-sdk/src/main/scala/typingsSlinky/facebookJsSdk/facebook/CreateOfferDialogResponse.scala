@@ -4,37 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateOfferDialogResponse extends DialogResponse {
-  var id: String = js.native
-  var success: Boolean = js.native
+  var id: String
+  var success: Boolean
 }
 
 object CreateOfferDialogResponse {
   @scala.inline
-  def apply(id: String, success: Boolean): CreateOfferDialogResponse = {
+  def apply(
+    id: String,
+    success: Boolean,
+    error_code: js.UndefOr[Double] = js.undefined,
+    error_message: String = null
+  ): CreateOfferDialogResponse = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_code)) __obj.updateDynamic("error_code")(error_code.get.asInstanceOf[js.Any])
+    if (error_message != null) __obj.updateDynamic("error_message")(error_message.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOfferDialogResponse]
   }
-  @scala.inline
-  implicit class CreateOfferDialogResponseOps[Self <: CreateOfferDialogResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

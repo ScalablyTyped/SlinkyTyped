@@ -2,7 +2,7 @@ package typingsSlinky.angularRouter
 
 import typingsSlinky.angularRouter.mod.InitialNavigation
 import typingsSlinky.angularRouter.mod.QueryParamsHandling
-import typingsSlinky.angularRouter.mod.RunGuardsAndResolvers
+import typingsSlinky.angularRouter.mod._RunGuardsAndResolvers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ object angularRouterStrings {
   sealed trait _empty extends QueryParamsHandling
   
   @js.native
-  sealed trait always extends RunGuardsAndResolvers
+  sealed trait always extends _RunGuardsAndResolvers
   
   @js.native
   sealed trait corrected extends js.Object
@@ -57,19 +57,19 @@ object angularRouterStrings {
   sealed trait merge extends QueryParamsHandling
   
   @js.native
-  sealed trait paramsChange extends RunGuardsAndResolvers
+  sealed trait paramsChange extends _RunGuardsAndResolvers
   
   @js.native
-  sealed trait paramsOrQueryParamsChange extends RunGuardsAndResolvers
+  sealed trait paramsOrQueryParamsChange extends _RunGuardsAndResolvers
   
   @js.native
   sealed trait path extends js.Object
   
   @js.native
-  sealed trait pathParamsChange extends RunGuardsAndResolvers
+  sealed trait pathParamsChange extends _RunGuardsAndResolvers
   
   @js.native
-  sealed trait pathParamsOrQueryParamsChange extends RunGuardsAndResolvers
+  sealed trait pathParamsOrQueryParamsChange extends _RunGuardsAndResolvers
   
   @js.native
   sealed trait popstate extends js.Object

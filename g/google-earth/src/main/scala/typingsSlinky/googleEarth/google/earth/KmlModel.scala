@@ -4,44 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KmlModel extends KmlAltitudeGeometry {
   /**
     * Returns the link of the collada model.
     */
-  def getLink(): KmlLink = js.native
+  def getLink(): KmlLink
   /**
     * Specifies the exact coordinates of the Model's origin in latitude, longitude, and altitude.
     * Latitude and longitude measurements are standard lat-lon projection with WGS84 datum.
     * Altitude is distance above the earth's surface, in meters, and is interpreted according to altitudeMode.
     */
-  def getLocation(): KmlLocation = js.native
+  def getLocation(): KmlLocation
   /**
     * Describes rotation of a 3D model's coordinate system to position the object in Google Earth.
     */
-  def getOrientation(): KmlOrientation = js.native
+  def getOrientation(): KmlOrientation
   /**
     * Scales a model along the x, y, and z axes in the model's coordinate space
     */
-  def getScale(): KmlScale = js.native
+  def getScale(): KmlScale
   /**
     * Sets the link of the collada model.
     */
-  def setLink(link: KmlLink): Unit = js.native
+  def setLink(link: KmlLink): Unit
   /**
     * Specifies the exact coordinates of the Model's origin in latitude, longitude, and altitude.
     * Latitude and longitude measurements are standard lat-lon projection with WGS84 datum.
     * Altitude is distance above the earth's surface, in meters, and is interpreted according to altitudeMode.
     */
-  def setLocation(location: KmlLocation): Unit = js.native
+  def setLocation(location: KmlLocation): Unit
   /**
     * Describes rotation of a 3D model's coordinate system to position the object in Google Earth.
     */
-  def setOrientation(orientation: KmlOrientation): Unit = js.native
+  def setOrientation(orientation: KmlOrientation): Unit
   /**
     * Scales a model along the x, y, and z axes in the model's coordinate space
     */
-  def setScale(scale: KmlScale): Unit = js.native
+  def setScale(scale: KmlScale): Unit
 }
 
 object KmlModel {
@@ -75,61 +74,5 @@ object KmlModel {
     val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getAltitudeMode = js.Any.fromFunction0(getAltitudeMode), getId = js.Any.fromFunction0(getId), getLink = js.Any.fromFunction0(getLink), getLocation = js.Any.fromFunction0(getLocation), getOrientation = js.Any.fromFunction0(getOrientation), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getScale = js.Any.fromFunction0(getScale), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setAltitudeMode = js.Any.fromFunction1(setAltitudeMode), setLink = js.Any.fromFunction1(setLink), setLocation = js.Any.fromFunction1(setLocation), setOrientation = js.Any.fromFunction1(setOrientation), setScale = js.Any.fromFunction1(setScale))
     __obj.asInstanceOf[KmlModel]
   }
-  @scala.inline
-  implicit class KmlModelOps[Self <: KmlModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetLink(value: () => KmlLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLink")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLocation(value: () => KmlLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetOrientation(value: () => KmlOrientation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrientation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetScale(value: () => KmlScale): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getScale")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetLink(value: KmlLink => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLink")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetLocation(value: KmlLocation => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetOrientation(value: KmlOrientation => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOrientation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetScale(value: KmlScale => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setScale")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -8,18 +8,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Extensions[TContext] extends js.Object {
-  var context: TContext = js.native
-  var extensions: js.UndefOr[Record[String, _]] = js.native
-  var operationName: js.UndefOr[String] = js.native
-  var parsedQuery: js.UndefOr[DocumentNode] = js.native
-  var persistedQueryHit: js.UndefOr[Boolean] = js.native
-  var persistedQueryRegister: js.UndefOr[Boolean] = js.native
-  var queryString: js.UndefOr[String] = js.native
-  var request: PickRequesturlmethodheade = js.native
-  var requestContext: GraphQLRequestContext[TContext] = js.native
-  var variables: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var context: TContext
+  var extensions: js.UndefOr[Record[String, _]] = js.undefined
+  var operationName: js.UndefOr[String] = js.undefined
+  var parsedQuery: js.UndefOr[DocumentNode] = js.undefined
+  var persistedQueryHit: js.UndefOr[Boolean] = js.undefined
+  var persistedQueryRegister: js.UndefOr[Boolean] = js.undefined
+  var queryString: js.UndefOr[String] = js.undefined
+  var request: PickRequesturlmethodheade
+  var requestContext: GraphQLRequestContext[TContext]
+  var variables: js.UndefOr[StringDictionary[js.Any]] = js.undefined
 }
 
 object Extensions {
@@ -27,120 +26,24 @@ object Extensions {
   def apply[TContext](
     context: TContext,
     request: PickRequesturlmethodheade,
-    requestContext: GraphQLRequestContext[TContext]
+    requestContext: GraphQLRequestContext[TContext],
+    extensions: Record[String, _] = null,
+    operationName: String = null,
+    parsedQuery: DocumentNode = null,
+    persistedQueryHit: js.UndefOr[Boolean] = js.undefined,
+    persistedQueryRegister: js.UndefOr[Boolean] = js.undefined,
+    queryString: String = null,
+    variables: StringDictionary[js.Any] = null
   ): Extensions[TContext] = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], requestContext = requestContext.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (operationName != null) __obj.updateDynamic("operationName")(operationName.asInstanceOf[js.Any])
+    if (parsedQuery != null) __obj.updateDynamic("parsedQuery")(parsedQuery.asInstanceOf[js.Any])
+    if (!js.isUndefined(persistedQueryHit)) __obj.updateDynamic("persistedQueryHit")(persistedQueryHit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(persistedQueryRegister)) __obj.updateDynamic("persistedQueryRegister")(persistedQueryRegister.get.asInstanceOf[js.Any])
+    if (queryString != null) __obj.updateDynamic("queryString")(queryString.asInstanceOf[js.Any])
+    if (variables != null) __obj.updateDynamic("variables")(variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[Extensions[TContext]]
   }
-  @scala.inline
-  implicit class ExtensionsOps[Self[tcontext] <: Extensions[tcontext], TContext] (val x: Self[TContext]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TContext] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TContext]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TContext] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TContext] with Other]
-    @scala.inline
-    def withContext(value: TContext): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequest(value: PickRequesturlmethodheade): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequestContext(value: GraphQLRequestContext[TContext]): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: Record[String, _]): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOperationName(value: String): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOperationName: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParsedQuery(value: DocumentNode): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsedQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParsedQuery: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parsedQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistedQueryHit(value: Boolean): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueryHit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistedQueryHit: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueryHit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistedQueryRegister(value: Boolean): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueryRegister")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistedQueryRegister: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueryRegister")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryString(value: String): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryString: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVariables(value: StringDictionary[js.Any]): Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVariables: Self[TContext] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

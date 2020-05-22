@@ -4,49 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SelectionParams extends js.Object {
   /**
     * Optional.
     * List of file extensions that the selected file can have. The list is also used to specify what files to be shown in the select file dialog. Files with the listed extensions are only shown in the dialog. Extensions should not include the leading '.'. Example: ['jpg', 'png']
     * Since Chrome 23.
     */
-  var allowedFileExtensions: js.UndefOr[js.Array[String]] = js.native
+  var allowedFileExtensions: js.UndefOr[js.Array[String]] = js.undefined
   /** Suggested name for the file. */
-  var suggestedName: String = js.native
+  var suggestedName: String
 }
 
 object SelectionParams {
   @scala.inline
-  def apply(suggestedName: String): SelectionParams = {
+  def apply(suggestedName: String, allowedFileExtensions: js.Array[String] = null): SelectionParams = {
     val __obj = js.Dynamic.literal(suggestedName = suggestedName.asInstanceOf[js.Any])
+    if (allowedFileExtensions != null) __obj.updateDynamic("allowedFileExtensions")(allowedFileExtensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectionParams]
   }
-  @scala.inline
-  implicit class SelectionParamsOps[Self <: SelectionParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuggestedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowedFileExtensions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedFileExtensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedFileExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedFileExtensions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

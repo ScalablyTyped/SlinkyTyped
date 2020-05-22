@@ -17,4 +17,13 @@ package object interfacesMod {
     /* trigger */ js.UndefOr[org.scalajs.dom.raw.Event], 
     scala.Unit
   ]
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - typingsSlinky.maquette.interfacesMod.VNode
+    - typingsSlinky.maquette.interfacesMod.VNodeChildren
+    - typingsSlinky.maquette.maquetteBooleans.`false`
+    - scala.Null
+    - js.UndefOr[scala.Nothing]
+  */
+  type VNodeChild = js.UndefOr[typingsSlinky.maquette.interfacesMod._VNodeChild | java.lang.String | scala.Null]
 }

@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoFillRequest extends js.Object {
-  var range: js.UndefOr[GridRange] = js.native
-  var sourceAndDestination: js.UndefOr[SourceAndDestination] = js.native
-  var useAlternateSeries: js.UndefOr[Boolean] = js.native
+  var range: js.UndefOr[GridRange] = js.undefined
+  var sourceAndDestination: js.UndefOr[SourceAndDestination] = js.undefined
+  var useAlternateSeries: js.UndefOr[Boolean] = js.undefined
 }
 
 object AutoFillRequest {
   @scala.inline
-  def apply(): AutoFillRequest = {
+  def apply(
+    range: GridRange = null,
+    sourceAndDestination: SourceAndDestination = null,
+    useAlternateSeries: js.UndefOr[Boolean] = js.undefined
+  ): AutoFillRequest = {
     val __obj = js.Dynamic.literal()
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (sourceAndDestination != null) __obj.updateDynamic("sourceAndDestination")(sourceAndDestination.asInstanceOf[js.Any])
+    if (!js.isUndefined(useAlternateSeries)) __obj.updateDynamic("useAlternateSeries")(useAlternateSeries.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoFillRequest]
   }
-  @scala.inline
-  implicit class AutoFillRequestOps[Self <: AutoFillRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRange(value: GridRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceAndDestination(value: SourceAndDestination): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAndDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceAndDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAndDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseAlternateSeries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAlternateSeries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseAlternateSeries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useAlternateSeries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

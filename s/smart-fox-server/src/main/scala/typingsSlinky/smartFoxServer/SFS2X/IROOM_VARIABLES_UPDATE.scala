@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IROOM_VARIABLES_UPDATE extends js.Object {
-  var changedVars: js.Array[String] = js.native
-  var room: SFSRoom = js.native
+  var changedVars: js.Array[String]
+  var room: SFSRoom
 }
 
 object IROOM_VARIABLES_UPDATE {
@@ -17,25 +16,5 @@ object IROOM_VARIABLES_UPDATE {
     val __obj = js.Dynamic.literal(changedVars = changedVars.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any])
     __obj.asInstanceOf[IROOM_VARIABLES_UPDATE]
   }
-  @scala.inline
-  implicit class IROOM_VARIABLES_UPDATEOps[Self <: IROOM_VARIABLES_UPDATE] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChangedVars(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedVars")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoom(value: SFSRoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

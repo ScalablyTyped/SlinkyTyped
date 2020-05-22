@@ -8,89 +8,41 @@ import scala.scalajs.js.annotation._
 /**
   * PersistentVolumeClaimStatus is the current status of a persistent volume claim.
   */
-@js.native
 trait PersistentVolumeClaimStatus extends js.Object {
   /**
     * AccessModes contains the actual access modes the volume backing the PVC has. More info:
     * https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
     */
-  var accessModes: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  var accessModes: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
   /**
     * Represents the actual resources of the underlying volume.
     */
-  var capacity: js.UndefOr[Input[js.Object]] = js.native
+  var capacity: js.UndefOr[Input[js.Object]] = js.undefined
   /**
     * Current Condition of persistent volume claim. If underlying persistent volume is being
     * resized then the Condition will be set to 'ResizeStarted'.
     */
-  var conditions: js.UndefOr[Input[js.Array[Input[PersistentVolumeClaimCondition]]]] = js.native
+  var conditions: js.UndefOr[Input[js.Array[Input[PersistentVolumeClaimCondition]]]] = js.undefined
   /**
     * Phase represents the current phase of PersistentVolumeClaim.
     */
-  var phase: js.UndefOr[Input[String]] = js.native
+  var phase: js.UndefOr[Input[String]] = js.undefined
 }
 
 object PersistentVolumeClaimStatus {
   @scala.inline
-  def apply(): PersistentVolumeClaimStatus = {
+  def apply(
+    accessModes: Input[js.Array[Input[String]]] = null,
+    capacity: Input[js.Object] = null,
+    conditions: Input[js.Array[Input[PersistentVolumeClaimCondition]]] = null,
+    phase: Input[String] = null
+  ): PersistentVolumeClaimStatus = {
     val __obj = js.Dynamic.literal()
+    if (accessModes != null) __obj.updateDynamic("accessModes")(accessModes.asInstanceOf[js.Any])
+    if (capacity != null) __obj.updateDynamic("capacity")(capacity.asInstanceOf[js.Any])
+    if (conditions != null) __obj.updateDynamic("conditions")(conditions.asInstanceOf[js.Any])
+    if (phase != null) __obj.updateDynamic("phase")(phase.asInstanceOf[js.Any])
     __obj.asInstanceOf[PersistentVolumeClaimStatus]
   }
-  @scala.inline
-  implicit class PersistentVolumeClaimStatusOps[Self <: PersistentVolumeClaimStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccessModes(value: Input[js.Array[Input[String]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccessModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accessModes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCapacity(value: Input[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConditions(value: Input[js.Array[Input[PersistentVolumeClaimCondition]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conditions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhase(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phase")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phase")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

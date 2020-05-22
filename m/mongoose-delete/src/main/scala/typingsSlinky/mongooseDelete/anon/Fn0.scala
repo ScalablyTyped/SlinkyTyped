@@ -1,6 +1,8 @@
 package typingsSlinky.mongooseDelete.anon
 
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindBase
 import typingsSlinky.mongoose.mod.FilterQuery
+import typingsSlinky.mongoose.mod.QueryFindBaseOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,11 +21,18 @@ trait Fn0 extends js.Object {
     projection: js.Any,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
   ): DocumentQueryanynullanyAll = js.native
-  def apply(conditions: FilterQuery[_], projection: js.Any, options: js.Any): DocumentQueryanynullanyAll = js.native
+  def apply(conditions: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindBase): QueryDocumentDefinitionanAll = js.native
   def apply(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: js.Any,
+    options: leantrueOmitQueryFindBase,
+    callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
+  ): QueryDocumentDefinitionanAll = js.native
+  def apply(conditions: FilterQuery[_], projection: js.Any, options: QueryFindBaseOptions): DocumentQueryanynullanyAll = js.native
+  def apply(
+    conditions: FilterQuery[_],
+    projection: js.Any,
+    options: QueryFindBaseOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
   ): DocumentQueryanynullanyAll = js.native
 }

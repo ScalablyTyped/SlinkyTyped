@@ -8,14 +8,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-	 * [bdd, tdd, qunit]
-	 *
-	 * Describe a specification or test-case with the given `title` and callback `fn` acting as a thunk.
-	 *
-	 * The name of the function is used as the name of the test if `title` is not supplied.
-	 *
-	 * Indicates this test should not be executed.
-	 */
+  * [bdd, tdd, qunit]
+  *
+  * Describe a specification or test-case with the given `title` and callback `fn` acting as a thunk.
+  *
+  * The name of the function is used as the name of the test if `title` is not supplied.
+  *
+  * Indicates this test should not be executed.
+  */
 @js.native
 trait PendingTestFunction extends js.Object {
   def apply(fn: TestCase): Test_ = js.native

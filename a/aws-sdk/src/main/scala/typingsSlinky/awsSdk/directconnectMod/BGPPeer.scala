@@ -46,125 +46,28 @@ trait BGPPeer extends js.Object {
 
 object BGPPeer {
   @scala.inline
-  def apply(): BGPPeer = {
+  def apply(
+    addressFamily: AddressFamily = null,
+    amazonAddress: AmazonAddress = null,
+    asn: js.UndefOr[ASN] = js.undefined,
+    authKey: BGPAuthKey = null,
+    awsDeviceV2: AwsDeviceV2 = null,
+    bgpPeerId: BGPPeerId = null,
+    bgpPeerState: BGPPeerState = null,
+    bgpStatus: BGPStatus = null,
+    customerAddress: CustomerAddress = null
+  ): BGPPeer = {
     val __obj = js.Dynamic.literal()
+    if (addressFamily != null) __obj.updateDynamic("addressFamily")(addressFamily.asInstanceOf[js.Any])
+    if (amazonAddress != null) __obj.updateDynamic("amazonAddress")(amazonAddress.asInstanceOf[js.Any])
+    if (!js.isUndefined(asn)) __obj.updateDynamic("asn")(asn.get.asInstanceOf[js.Any])
+    if (authKey != null) __obj.updateDynamic("authKey")(authKey.asInstanceOf[js.Any])
+    if (awsDeviceV2 != null) __obj.updateDynamic("awsDeviceV2")(awsDeviceV2.asInstanceOf[js.Any])
+    if (bgpPeerId != null) __obj.updateDynamic("bgpPeerId")(bgpPeerId.asInstanceOf[js.Any])
+    if (bgpPeerState != null) __obj.updateDynamic("bgpPeerState")(bgpPeerState.asInstanceOf[js.Any])
+    if (bgpStatus != null) __obj.updateDynamic("bgpStatus")(bgpStatus.asInstanceOf[js.Any])
+    if (customerAddress != null) __obj.updateDynamic("customerAddress")(customerAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[BGPPeer]
   }
-  @scala.inline
-  implicit class BGPPeerOps[Self <: BGPPeer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddressFamily(value: AddressFamily): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddressFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAmazonAddress(value: AmazonAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAsn(value: ASN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAuthKey(value: BGPAuthKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAwsDeviceV2(value: AwsDeviceV2): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsDeviceV2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgpPeerId(value: BGPPeerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpPeerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgpPeerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpPeerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgpPeerState(value: BGPPeerState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpPeerState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgpPeerState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpPeerState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBgpStatus(value: BGPStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBgpStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bgpStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomerAddress(value: CustomerAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomerAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

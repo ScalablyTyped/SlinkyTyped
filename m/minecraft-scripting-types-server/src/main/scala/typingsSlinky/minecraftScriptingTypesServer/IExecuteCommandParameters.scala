@@ -7,12 +7,11 @@ import scala.scalajs.js.annotation._
 /**
   * This event is used to execute a slash command on the server with the World Owner permission level. The event data contains the slash command as a string. The slash command will be processed and will run after the event is sent.
   */
-@js.native
 trait IExecuteCommandParameters extends js.Object {
   /**
     * The command that will be run
     */
-  var command: String = js.native
+  var command: String
 }
 
 object IExecuteCommandParameters {
@@ -21,19 +20,5 @@ object IExecuteCommandParameters {
     val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExecuteCommandParameters]
   }
-  @scala.inline
-  implicit class IExecuteCommandParametersOps[Self <: IExecuteCommandParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

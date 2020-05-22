@@ -1,19 +1,33 @@
 package typingsSlinky.onfleetNodeOnfleet.webhooksMod
 
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerId
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerIdTriggerName
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerName
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameSmsRecipientResponseMissed
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskAssigned
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskCloned
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskCompleted
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskCreated
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskDelayed
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskDeleted
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskFailed
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskUnassigned
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameTaskUpdated
-import typingsSlinky.onfleetNodeOnfleet.anon.TriggerNameWorkerDuty
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`0`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`10`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`12`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`13`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`14`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`1`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`2`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`3`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`4`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`5`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`6`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`7`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`8`
+import typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetNumbers.`9`
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.SmsRecipientResponseMissed
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskArrival
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskAssigned
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskCloned
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskCompleted
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskCreated
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskDelayed
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskDeleted
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskEta
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskFailed
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskStarted
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskUnassigned
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.TaskUpdated
+import typingsSlinky.onfleetNodeOnfleet.webhooksMod.WebhookTriggerName.WorkerDuty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,32 +52,74 @@ trait WebhookTriggerType extends js.Object
 
 object WebhookTriggerType {
   @scala.inline
-  implicit def apply(value: TriggerId): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskAssigned(triggerId: `9`, triggerName: TaskAssigned): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerIdTriggerName): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskFailed(triggerId: `4`, triggerName: TaskFailed): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerName): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskCompleted(triggerId: `3`, triggerName: TaskCompleted): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameSmsRecipientResponseMissed): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskDelayed(triggerId: `12`, triggerName: TaskDelayed): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskAssigned): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskCloned(triggerId: `13`, triggerName: TaskCloned): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskCloned): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerId(triggerId: `0`, triggerName: TaskStarted): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskCompleted): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameWorkerDuty(triggerId: `5`, triggerName: WorkerDuty): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskCreated): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameSmsRecipientResponseMissed(triggerId: `14`, triggerName: SmsRecipientResponseMissed): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskDelayed): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerIdTriggerName(triggerId: `2`, triggerName: TaskArrival): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskDeleted): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskUnassigned(triggerId: `10`, triggerName: TaskUnassigned): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskFailed): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskCreated(triggerId: `6`, triggerName: TaskCreated): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskUnassigned): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskDeleted(triggerId: `8`, triggerName: TaskDeleted): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameTaskUpdated): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerNameTaskUpdated(triggerId: `7`, triggerName: TaskUpdated): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
   @scala.inline
-  implicit def apply(value: TriggerNameWorkerDuty): WebhookTriggerType = value.asInstanceOf[WebhookTriggerType]
+  def TriggerName(triggerId: `1`, triggerName: TaskEta): WebhookTriggerType = {
+    val __obj = js.Dynamic.literal(triggerId = triggerId.asInstanceOf[js.Any], triggerName = triggerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebhookTriggerType]
+  }
 }
 

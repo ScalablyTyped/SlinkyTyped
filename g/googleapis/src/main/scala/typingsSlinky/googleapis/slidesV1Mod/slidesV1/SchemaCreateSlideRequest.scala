@@ -45,65 +45,18 @@ trait SchemaCreateSlideRequest extends js.Object {
 
 object SchemaCreateSlideRequest {
   @scala.inline
-  def apply(): SchemaCreateSlideRequest = {
+  def apply(
+    insertionIndex: js.UndefOr[Double] = js.undefined,
+    objectId: String = null,
+    placeholderIdMappings: js.Array[SchemaLayoutPlaceholderIdMapping] = null,
+    slideLayoutReference: SchemaLayoutReference = null
+  ): SchemaCreateSlideRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(insertionIndex)) __obj.updateDynamic("insertionIndex")(insertionIndex.get.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (placeholderIdMappings != null) __obj.updateDynamic("placeholderIdMappings")(placeholderIdMappings.asInstanceOf[js.Any])
+    if (slideLayoutReference != null) __obj.updateDynamic("slideLayoutReference")(slideLayoutReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateSlideRequest]
   }
-  @scala.inline
-  implicit class SchemaCreateSlideRequestOps[Self <: SchemaCreateSlideRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInsertionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInsertionIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertionIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderIdMappings(value: js.Array[SchemaLayoutPlaceholderIdMapping]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderIdMappings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderIdMappings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderIdMappings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlideLayoutReference(value: SchemaLayoutReference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideLayoutReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlideLayoutReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideLayoutReference")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

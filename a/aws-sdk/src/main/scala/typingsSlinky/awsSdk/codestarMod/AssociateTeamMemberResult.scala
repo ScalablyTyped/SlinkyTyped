@@ -14,29 +14,10 @@ trait AssociateTeamMemberResult extends js.Object {
 
 object AssociateTeamMemberResult {
   @scala.inline
-  def apply(): AssociateTeamMemberResult = {
+  def apply(clientRequestToken: ClientRequestToken = null): AssociateTeamMemberResult = {
     val __obj = js.Dynamic.literal()
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateTeamMemberResult]
   }
-  @scala.inline
-  implicit class AssociateTeamMemberResultOps[Self <: AssociateTeamMemberResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

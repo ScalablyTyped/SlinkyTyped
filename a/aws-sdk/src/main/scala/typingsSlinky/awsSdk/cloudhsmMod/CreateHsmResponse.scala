@@ -14,29 +14,10 @@ trait CreateHsmResponse extends js.Object {
 
 object CreateHsmResponse {
   @scala.inline
-  def apply(): CreateHsmResponse = {
+  def apply(HsmArn: HsmArn = null): CreateHsmResponse = {
     val __obj = js.Dynamic.literal()
+    if (HsmArn != null) __obj.updateDynamic("HsmArn")(HsmArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHsmResponse]
   }
-  @scala.inline
-  implicit class CreateHsmResponseOps[Self <: CreateHsmResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHsmArn(value: HsmArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHsmArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

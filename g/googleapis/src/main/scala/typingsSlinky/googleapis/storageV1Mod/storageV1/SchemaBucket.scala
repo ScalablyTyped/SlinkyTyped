@@ -1,16 +1,16 @@
 package typingsSlinky.googleapis.storageV1Mod.storageV1
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleapis.AnonBucketPolicyOnly
-import typingsSlinky.googleapis.AnonDefaultKmsKeyName
-import typingsSlinky.googleapis.AnonEffectiveTime
-import typingsSlinky.googleapis.AnonEnabledBoolean
-import typingsSlinky.googleapis.AnonEntity
-import typingsSlinky.googleapis.AnonLogBucket
-import typingsSlinky.googleapis.AnonMainPageSuffix
-import typingsSlinky.googleapis.AnonMaxAgeSeconds
-import typingsSlinky.googleapis.AnonRequesterPays
-import typingsSlinky.googleapis.AnonRule
+import typingsSlinky.googleapis.anon.BucketPolicyOnly
+import typingsSlinky.googleapis.anon.DefaultKmsKeyName
+import typingsSlinky.googleapis.anon.EffectiveTime
+import typingsSlinky.googleapis.anon.EnabledBoolean
+import typingsSlinky.googleapis.anon.Entity
+import typingsSlinky.googleapis.anon.LogBucket
+import typingsSlinky.googleapis.anon.MainPageSuffix
+import typingsSlinky.googleapis.anon.MaxAgeSeconds
+import typingsSlinky.googleapis.anon.RequesterPays
+import typingsSlinky.googleapis.anon.Rule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +27,11 @@ trait SchemaBucket extends js.Object {
   /**
     * The bucket&#39;s billing configuration.
     */
-  var billing: js.UndefOr[AnonRequesterPays] = js.native
+  var billing: js.UndefOr[RequesterPays] = js.native
   /**
     * The bucket&#39;s Cross-Origin Resource Sharing (CORS) configuration.
     */
-  var cors: js.UndefOr[js.Array[AnonMaxAgeSeconds]] = js.native
+  var cors: js.UndefOr[js.Array[MaxAgeSeconds]] = js.native
   /**
     * The default value for event-based hold on newly created objects in this
     * bucket. Event-based hold is a way to retain objects indefinitely until an
@@ -55,7 +55,7 @@ trait SchemaBucket extends js.Object {
   /**
     * Encryption configuration for a bucket.
     */
-  var encryption: js.UndefOr[AnonDefaultKmsKeyName] = js.native
+  var encryption: js.UndefOr[DefaultKmsKeyName] = js.native
   /**
     * HTTP 1.1 Entity tag for the bucket.
     */
@@ -63,7 +63,7 @@ trait SchemaBucket extends js.Object {
   /**
     * The bucket&#39;s IAM configuration.
     */
-  var iamConfiguration: js.UndefOr[AnonBucketPolicyOnly] = js.native
+  var iamConfiguration: js.UndefOr[BucketPolicyOnly] = js.native
   /**
     * The ID of the bucket. For buckets, the id and name properties are the
     * same.
@@ -81,7 +81,7 @@ trait SchemaBucket extends js.Object {
     * The bucket&#39;s lifecycle configuration. See lifecycle management for
     * more information.
     */
-  var lifecycle: js.UndefOr[AnonRule] = js.native
+  var lifecycle: js.UndefOr[Rule] = js.native
   /**
     * The location of the bucket. Object data for objects in the bucket resides
     * in physical storage within this region. Defaults to US. See the
@@ -92,7 +92,7 @@ trait SchemaBucket extends js.Object {
     * The bucket&#39;s logging configuration, which defines the destination
     * bucket and optional name prefix for the current bucket&#39;s logs.
     */
-  var logging: js.UndefOr[AnonLogBucket] = js.native
+  var logging: js.UndefOr[LogBucket] = js.native
   /**
     * The metadata generation of this bucket.
     */
@@ -105,7 +105,7 @@ trait SchemaBucket extends js.Object {
     * The owner of the bucket. This is always the project team&#39;s owner
     * group.
     */
-  var owner: js.UndefOr[AnonEntity] = js.native
+  var owner: js.UndefOr[Entity] = js.native
   /**
     * The project number of the project the bucket belongs to.
     */
@@ -121,7 +121,7 @@ trait SchemaBucket extends js.Object {
     * Attempting to remove or decrease period of a locked retention policy will
     * result in a PERMISSION_DENIED error.
     */
-  var retentionPolicy: js.UndefOr[AnonEffectiveTime] = js.native
+  var retentionPolicy: js.UndefOr[EffectiveTime] = js.native
   /**
     * The URI of this bucket.
     */
@@ -147,328 +147,71 @@ trait SchemaBucket extends js.Object {
   /**
     * The bucket&#39;s versioning configuration.
     */
-  var versioning: js.UndefOr[AnonEnabledBoolean] = js.native
+  var versioning: js.UndefOr[EnabledBoolean] = js.native
   /**
     * The bucket&#39;s website configuration, controlling how the service
     * behaves when accessing bucket contents as a web site. See the Static
     * Website Examples for more information.
     */
-  var website: js.UndefOr[AnonMainPageSuffix] = js.native
+  var website: js.UndefOr[MainPageSuffix] = js.native
 }
 
 object SchemaBucket {
   @scala.inline
-  def apply(): SchemaBucket = {
+  def apply(
+    acl: js.Array[SchemaBucketAccessControl] = null,
+    billing: RequesterPays = null,
+    cors: js.Array[MaxAgeSeconds] = null,
+    defaultEventBasedHold: js.UndefOr[Boolean] = js.undefined,
+    defaultObjectAcl: js.Array[SchemaObjectAccessControl] = null,
+    encryption: DefaultKmsKeyName = null,
+    etag: String = null,
+    iamConfiguration: BucketPolicyOnly = null,
+    id: String = null,
+    kind: String = null,
+    labels: StringDictionary[String] = null,
+    lifecycle: Rule = null,
+    location: String = null,
+    logging: LogBucket = null,
+    metageneration: String = null,
+    name: String = null,
+    owner: Entity = null,
+    projectNumber: String = null,
+    retentionPolicy: EffectiveTime = null,
+    selfLink: String = null,
+    storageClass: String = null,
+    timeCreated: String = null,
+    updated: String = null,
+    versioning: EnabledBoolean = null,
+    website: MainPageSuffix = null
+  ): SchemaBucket = {
     val __obj = js.Dynamic.literal()
+    if (acl != null) __obj.updateDynamic("acl")(acl.asInstanceOf[js.Any])
+    if (billing != null) __obj.updateDynamic("billing")(billing.asInstanceOf[js.Any])
+    if (cors != null) __obj.updateDynamic("cors")(cors.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultEventBasedHold)) __obj.updateDynamic("defaultEventBasedHold")(defaultEventBasedHold.get.asInstanceOf[js.Any])
+    if (defaultObjectAcl != null) __obj.updateDynamic("defaultObjectAcl")(defaultObjectAcl.asInstanceOf[js.Any])
+    if (encryption != null) __obj.updateDynamic("encryption")(encryption.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (iamConfiguration != null) __obj.updateDynamic("iamConfiguration")(iamConfiguration.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (lifecycle != null) __obj.updateDynamic("lifecycle")(lifecycle.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
+    if (metageneration != null) __obj.updateDynamic("metageneration")(metageneration.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
+    if (projectNumber != null) __obj.updateDynamic("projectNumber")(projectNumber.asInstanceOf[js.Any])
+    if (retentionPolicy != null) __obj.updateDynamic("retentionPolicy")(retentionPolicy.asInstanceOf[js.Any])
+    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
+    if (storageClass != null) __obj.updateDynamic("storageClass")(storageClass.asInstanceOf[js.Any])
+    if (timeCreated != null) __obj.updateDynamic("timeCreated")(timeCreated.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
+    if (versioning != null) __obj.updateDynamic("versioning")(versioning.asInstanceOf[js.Any])
+    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBucket]
   }
-  @scala.inline
-  implicit class SchemaBucketOps[Self <: SchemaBucket] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcl(value: js.Array[SchemaBucketAccessControl]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBilling(value: AnonRequesterPays): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBilling: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCors(value: js.Array[AnonMaxAgeSeconds]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultEventBasedHold(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEventBasedHold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultEventBasedHold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultEventBasedHold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultObjectAcl(value: js.Array[SchemaObjectAccessControl]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultObjectAcl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultObjectAcl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultObjectAcl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryption(value: AnonDefaultKmsKeyName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIamConfiguration(value: AnonBucketPolicyOnly): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIamConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLifecycle(value: AnonRule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLifecycle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogging(value: AnonLogBucket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetageneration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metageneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetageneration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metageneration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwner(value: AnonEntity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetentionPolicy(value: AnonEffectiveTime): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetentionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelfLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelfLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStorageClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStorageClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storageClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeCreated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCreated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersioning(value: AnonEnabledBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersioning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebsite(value: AnonMainPageSuffix): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebsite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

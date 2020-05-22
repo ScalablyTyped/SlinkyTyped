@@ -5,103 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GenerateFrameNumbers extends js.Object {
   /**
     * The ending frame of the animation.
     */
-  var end: js.UndefOr[integer] = js.native
+  var end: js.UndefOr[integer] = js.undefined
   /**
     * A frame to put at the beginning of the animation, before `start` or `outputArray` or `frames`.
     */
-  var first: js.UndefOr[Boolean | integer] = js.native
+  var first: js.UndefOr[Boolean | integer] = js.undefined
   /**
     * A custom sequence of frames.
     */
-  var frames: js.UndefOr[Boolean | js.Array[integer]] = js.native
+  var frames: js.UndefOr[Boolean | js.Array[integer]] = js.undefined
   /**
     * An array to concatenate the output onto.
     */
-  var outputArray: js.UndefOr[js.Array[AnimationFrame]] = js.native
+  var outputArray: js.UndefOr[js.Array[AnimationFrame]] = js.undefined
   /**
     * The starting frame of the animation.
     */
-  var start: js.UndefOr[integer] = js.native
+  var start: js.UndefOr[integer] = js.undefined
 }
 
 object GenerateFrameNumbers {
   @scala.inline
-  def apply(): GenerateFrameNumbers = {
+  def apply(
+    end: js.UndefOr[integer] = js.undefined,
+    first: Boolean | integer = null,
+    frames: Boolean | js.Array[integer] = null,
+    outputArray: js.Array[AnimationFrame] = null,
+    start: js.UndefOr[integer] = js.undefined
+  ): GenerateFrameNumbers = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(end)) __obj.updateDynamic("end")(end.get.asInstanceOf[js.Any])
+    if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
+    if (frames != null) __obj.updateDynamic("frames")(frames.asInstanceOf[js.Any])
+    if (outputArray != null) __obj.updateDynamic("outputArray")(outputArray.asInstanceOf[js.Any])
+    if (!js.isUndefined(start)) __obj.updateDynamic("start")(start.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateFrameNumbers]
   }
-  @scala.inline
-  implicit class GenerateFrameNumbersOps[Self <: GenerateFrameNumbers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnd(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirst(value: Boolean | integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrames(value: Boolean | js.Array[integer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputArray(value: js.Array[AnimationFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

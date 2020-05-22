@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Security.Credentials.KeyCredentialRetrievalResult")
 @js.native
 abstract class KeyCredentialRetrievalResult ()
-  extends typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialRetrievalResult
+  extends typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialRetrievalResult {
+  /** Gets the key credential. */
+  /* CompleteClass */
+  override var credential: typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredential = js.native
+  /** Gets the status of the key credential. */
+  /* CompleteClass */
+  override var status: typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialStatus = js.native
+}
 

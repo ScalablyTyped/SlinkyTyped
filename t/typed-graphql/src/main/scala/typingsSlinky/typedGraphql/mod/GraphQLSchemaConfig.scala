@@ -4,82 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GraphQLSchemaConfig extends js.Object {
-  var directives: js.UndefOr[js.Array[GraphQLDirective]] = js.native
-  var mutation: js.UndefOr[GraphQLObjectType] = js.native
-  var query: GraphQLObjectType = js.native
-  var subscription: js.UndefOr[GraphQLObjectType] = js.native
-  var types: js.UndefOr[js.Array[GraphQLNamedType]] = js.native
+  var directives: js.UndefOr[js.Array[GraphQLDirective]] = js.undefined
+  var mutation: js.UndefOr[GraphQLObjectType] = js.undefined
+  var query: GraphQLObjectType
+  var subscription: js.UndefOr[GraphQLObjectType] = js.undefined
+  var types: js.UndefOr[js.Array[GraphQLNamedType]] = js.undefined
 }
 
 object GraphQLSchemaConfig {
   @scala.inline
-  def apply(query: GraphQLObjectType): GraphQLSchemaConfig = {
+  def apply(
+    query: GraphQLObjectType,
+    directives: js.Array[GraphQLDirective] = null,
+    mutation: GraphQLObjectType = null,
+    subscription: GraphQLObjectType = null,
+    types: js.Array[GraphQLNamedType] = null
+  ): GraphQLSchemaConfig = {
     val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (mutation != null) __obj.updateDynamic("mutation")(mutation.asInstanceOf[js.Any])
+    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
+    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLSchemaConfig]
   }
-  @scala.inline
-  implicit class GraphQLSchemaConfigOps[Self <: GraphQLSchemaConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQuery(value: GraphQLObjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDirectives(value: js.Array[GraphQLDirective]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutation(value: GraphQLObjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: GraphQLObjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[GraphQLNamedType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

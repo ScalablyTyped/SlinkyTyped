@@ -30,77 +30,20 @@ trait ProvisionedBandwidth extends js.Object {
 
 object ProvisionedBandwidth {
   @scala.inline
-  def apply(): ProvisionedBandwidth = {
+  def apply(
+    ProvisionTime: js.Date = null,
+    Provisioned: String = null,
+    RequestTime: js.Date = null,
+    Requested: String = null,
+    Status: String = null
+  ): ProvisionedBandwidth = {
     val __obj = js.Dynamic.literal()
+    if (ProvisionTime != null) __obj.updateDynamic("ProvisionTime")(ProvisionTime.asInstanceOf[js.Any])
+    if (Provisioned != null) __obj.updateDynamic("Provisioned")(Provisioned.asInstanceOf[js.Any])
+    if (RequestTime != null) __obj.updateDynamic("RequestTime")(RequestTime.asInstanceOf[js.Any])
+    if (Requested != null) __obj.updateDynamic("Requested")(Requested.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionedBandwidth]
   }
-  @scala.inline
-  implicit class ProvisionedBandwidthOps[Self <: ProvisionedBandwidth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProvisionTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioned(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Provisioned")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioned: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Provisioned")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequested(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Requested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Requested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

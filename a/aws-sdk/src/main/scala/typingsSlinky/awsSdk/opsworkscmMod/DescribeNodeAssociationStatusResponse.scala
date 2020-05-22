@@ -18,41 +18,11 @@ trait DescribeNodeAssociationStatusResponse extends js.Object {
 
 object DescribeNodeAssociationStatusResponse {
   @scala.inline
-  def apply(): DescribeNodeAssociationStatusResponse = {
+  def apply(EngineAttributes: EngineAttributes = null, NodeAssociationStatus: NodeAssociationStatus = null): DescribeNodeAssociationStatusResponse = {
     val __obj = js.Dynamic.literal()
+    if (EngineAttributes != null) __obj.updateDynamic("EngineAttributes")(EngineAttributes.asInstanceOf[js.Any])
+    if (NodeAssociationStatus != null) __obj.updateDynamic("NodeAssociationStatus")(NodeAssociationStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeNodeAssociationStatusResponse]
   }
-  @scala.inline
-  implicit class DescribeNodeAssociationStatusResponseOps[Self <: DescribeNodeAssociationStatusResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngineAttributes(value: EngineAttributes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngineAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineAttributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeAssociationStatus(value: NodeAssociationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeAssociationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeAssociationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeAssociationStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

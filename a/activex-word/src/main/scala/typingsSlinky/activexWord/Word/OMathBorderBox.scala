@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OMathBorderBox extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val E: OMath = js.native
-  var HideBot: Boolean = js.native
-  var HideLeft: Boolean = js.native
-  var HideRight: Boolean = js.native
-  var HideTop: Boolean = js.native
-  val Parent: js.Any = js.native
-  var StrikeBLTR: Boolean = js.native
-  var StrikeH: Boolean = js.native
-  var StrikeTLBR: Boolean = js.native
-  var StrikeV: Boolean = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val E: OMath
+  var HideBot: Boolean
+  var HideLeft: Boolean
+  var HideRight: Boolean
+  var HideTop: Boolean
+  val Parent: js.Any
+  var StrikeBLTR: Boolean
+  var StrikeH: Boolean
+  var StrikeTLBR: Boolean
+  var StrikeV: Boolean
   @JSName("Word.OMathBorderBox_typekey")
-  var WordDotOMathBorderBox_typekey: OMathBorderBox = js.native
+  var WordDotOMathBorderBox_typekey: OMathBorderBox
 }
 
 object OMathBorderBox {
@@ -43,91 +42,5 @@ object OMathBorderBox {
     __obj.updateDynamic("Word.OMathBorderBox_typekey")(WordDotOMathBorderBox_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[OMathBorderBox]
   }
-  @scala.inline
-  implicit class OMathBorderBoxOps[Self <: OMathBorderBox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withE(value: OMath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideBot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideBot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideLeft(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideLeft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideRight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideRight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHideTop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HideTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrikeBLTR(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrikeBLTR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrikeH(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrikeH")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrikeTLBR(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrikeTLBR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStrikeV(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StrikeV")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWordDotOMathBorderBox_typekey(value: OMathBorderBox): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.OMathBorderBox_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

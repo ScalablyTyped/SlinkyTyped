@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DropzoneResizeInfo extends js.Object {
-  var srcHeight: js.UndefOr[Double] = js.native
-  var srcWidth: js.UndefOr[Double] = js.native
-  var srcX: js.UndefOr[Double] = js.native
-  var srcY: js.UndefOr[Double] = js.native
-  var trgHeight: js.UndefOr[Double] = js.native
-  var trgWidth: js.UndefOr[Double] = js.native
-  var trgX: js.UndefOr[Double] = js.native
-  var trgY: js.UndefOr[Double] = js.native
+  var srcHeight: js.UndefOr[Double] = js.undefined
+  var srcWidth: js.UndefOr[Double] = js.undefined
+  var srcX: js.UndefOr[Double] = js.undefined
+  var srcY: js.UndefOr[Double] = js.undefined
+  var trgHeight: js.UndefOr[Double] = js.undefined
+  var trgWidth: js.UndefOr[Double] = js.undefined
+  var trgX: js.UndefOr[Double] = js.undefined
+  var trgY: js.UndefOr[Double] = js.undefined
 }
 
 object DropzoneResizeInfo {
   @scala.inline
-  def apply(): DropzoneResizeInfo = {
+  def apply(
+    srcHeight: js.UndefOr[Double] = js.undefined,
+    srcWidth: js.UndefOr[Double] = js.undefined,
+    srcX: js.UndefOr[Double] = js.undefined,
+    srcY: js.UndefOr[Double] = js.undefined,
+    trgHeight: js.UndefOr[Double] = js.undefined,
+    trgWidth: js.UndefOr[Double] = js.undefined,
+    trgX: js.UndefOr[Double] = js.undefined,
+    trgY: js.UndefOr[Double] = js.undefined
+  ): DropzoneResizeInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(srcHeight)) __obj.updateDynamic("srcHeight")(srcHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(srcWidth)) __obj.updateDynamic("srcWidth")(srcWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(srcX)) __obj.updateDynamic("srcX")(srcX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(srcY)) __obj.updateDynamic("srcY")(srcY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trgHeight)) __obj.updateDynamic("trgHeight")(trgHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trgWidth)) __obj.updateDynamic("trgWidth")(trgWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trgX)) __obj.updateDynamic("trgX")(trgX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trgY)) __obj.updateDynamic("trgY")(trgY.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropzoneResizeInfo]
   }
-  @scala.inline
-  implicit class DropzoneResizeInfoOps[Self <: DropzoneResizeInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSrcHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSrcY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSrcY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrgHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrgHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrgWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrgWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrgX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrgX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrgY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrgY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trgY")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

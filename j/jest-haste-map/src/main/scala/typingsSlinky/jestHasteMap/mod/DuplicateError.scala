@@ -5,37 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DuplicateError extends Error {
-  var mockPath1: String = js.native
-  var mockPath2: String = js.native
+  var mockPath1: String
+  var mockPath2: String
 }
 
 object DuplicateError {
   @scala.inline
-  def apply(message: String, mockPath1: String, mockPath2: String, name: String): DuplicateError = {
+  def apply(message: String, mockPath1: String, mockPath2: String, name: String, stack: String = null): DuplicateError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], mockPath1 = mockPath1.asInstanceOf[js.Any], mockPath2 = mockPath2.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[DuplicateError]
   }
-  @scala.inline
-  implicit class DuplicateErrorOps[Self <: DuplicateError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMockPath1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mockPath1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMockPath2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mockPath2")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

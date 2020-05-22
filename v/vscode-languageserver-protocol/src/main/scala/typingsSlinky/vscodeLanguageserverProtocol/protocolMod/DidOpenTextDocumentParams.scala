@@ -5,12 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DidOpenTextDocumentParams extends js.Object {
   /**
     * The document that was opened.
     */
-  var textDocument: TextDocumentItem = js.native
+  var textDocument: TextDocumentItem
 }
 
 object DidOpenTextDocumentParams {
@@ -19,19 +18,5 @@ object DidOpenTextDocumentParams {
     val __obj = js.Dynamic.literal(textDocument = textDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[DidOpenTextDocumentParams]
   }
-  @scala.inline
-  implicit class DidOpenTextDocumentParamsOps[Self <: DidOpenTextDocumentParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTextDocument(value: TextDocumentItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

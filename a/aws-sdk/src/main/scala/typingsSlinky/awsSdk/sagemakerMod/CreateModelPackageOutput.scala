@@ -18,19 +18,5 @@ object CreateModelPackageOutput {
     val __obj = js.Dynamic.literal(ModelPackageArn = ModelPackageArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateModelPackageOutput]
   }
-  @scala.inline
-  implicit class CreateModelPackageOutputOps[Self <: CreateModelPackageOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModelPackageArn(value: ModelPackageArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

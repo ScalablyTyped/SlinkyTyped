@@ -8,9 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PresentationsCollection extends js.Object {
-  var Pages: js.UndefOr[PagesCollection] = js.native
+  var Pages: js.UndefOr[PagesCollection] = js.undefined
   // Applies one or more updates to the presentation.
   // Each request is validated before
   // being applied. If any request is not valid, then the entire request will
@@ -28,15 +27,15 @@ trait PresentationsCollection extends js.Object {
   // collaborators, the presentation should reflect your changes. In any case,
   // the updates in your request are guaranteed to be applied together
   // atomically.
-  def batchUpdate(resource: BatchUpdatePresentationRequest, presentationId: String): BatchUpdatePresentationResponse = js.native
+  def batchUpdate(resource: BatchUpdatePresentationRequest, presentationId: String): BatchUpdatePresentationResponse
   // Creates a blank presentation using the title given in the request. If a
   // `presentationId` is provided, it is used as the ID of the new presentation.
   // Otherwise, a new ID is generated. Other fields in the request, including
   // any provided content, are ignored.
   // Returns the created presentation.
-  def create(resource: Presentation): Presentation = js.native
+  def create(resource: Presentation): Presentation
   // Gets the latest version of the specified presentation.
-  def get(presentationId: String): Presentation = js.native
+  def get(presentationId: String): Presentation
 }
 
 object PresentationsCollection {
@@ -44,48 +43,12 @@ object PresentationsCollection {
   def apply(
     batchUpdate: (BatchUpdatePresentationRequest, String) => BatchUpdatePresentationResponse,
     create: Presentation => Presentation,
-    get: String => Presentation
+    get: String => Presentation,
+    Pages: PagesCollection = null
   ): PresentationsCollection = {
     val __obj = js.Dynamic.literal(batchUpdate = js.Any.fromFunction2(batchUpdate), create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get))
+    if (Pages != null) __obj.updateDynamic("Pages")(Pages.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresentationsCollection]
   }
-  @scala.inline
-  implicit class PresentationsCollectionOps[Self <: PresentationsCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchUpdate(value: (BatchUpdatePresentationRequest, String) => BatchUpdatePresentationResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchUpdate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withCreate(value: Presentation => Presentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: String => Presentation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPages(value: PagesCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Pages")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

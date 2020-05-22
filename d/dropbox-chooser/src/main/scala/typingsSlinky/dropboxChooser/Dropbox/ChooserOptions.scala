@@ -6,115 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChooserOptions extends js.Object {
   // called when the user closes the dialog without selecting a file
-  var cancel: js.UndefOr[js.Function0[Unit]] = js.native
+  var cancel: js.UndefOr[js.Function0[Unit]] = js.undefined
   // eg. '.png'
-  var extensions: js.UndefOr[js.Array[String]] = js.native
+  var extensions: js.UndefOr[js.Array[String]] = js.undefined
   // default: false
-  var folderselect: js.UndefOr[Boolean] = js.native
+  var folderselect: js.UndefOr[Boolean] = js.undefined
   // default: 'preview'
-  var linkType: js.UndefOr[preview | direct] = js.native
+  var linkType: js.UndefOr[preview | direct] = js.undefined
   // default: false
-  var multiselect: js.UndefOr[Boolean] = js.native
+  var multiselect: js.UndefOr[Boolean] = js.undefined
   // any positive number
-  var sizeLimit: js.UndefOr[Double] = js.native
+  var sizeLimit: js.UndefOr[Double] = js.undefined
   // called when a user selects an item in the Chooser
-  def success(files: js.Array[ChooserFile]): Unit = js.native
+  def success(files: js.Array[ChooserFile]): Unit
 }
 
 object ChooserOptions {
   @scala.inline
-  def apply(success: js.Array[ChooserFile] => Unit): ChooserOptions = {
+  def apply(
+    success: js.Array[ChooserFile] => Unit,
+    cancel: () => Unit = null,
+    extensions: js.Array[String] = null,
+    folderselect: js.UndefOr[Boolean] = js.undefined,
+    linkType: preview | direct = null,
+    multiselect: js.UndefOr[Boolean] = js.undefined,
+    sizeLimit: js.UndefOr[Double] = js.undefined
+  ): ChooserOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
+    if (cancel != null) __obj.updateDynamic("cancel")(js.Any.fromFunction0(cancel))
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(folderselect)) __obj.updateDynamic("folderselect")(folderselect.get.asInstanceOf[js.Any])
+    if (linkType != null) __obj.updateDynamic("linkType")(linkType.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiselect)) __obj.updateDynamic("multiselect")(multiselect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sizeLimit)) __obj.updateDynamic("sizeLimit")(sizeLimit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChooserOptions]
   }
-  @scala.inline
-  implicit class ChooserOptionsOps[Self <: ChooserOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSuccess(value: js.Array[ChooserFile] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCancel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolderselect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolderselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folderselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkType(value: preview | direct): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiselect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSizeLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSizeLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeLimit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

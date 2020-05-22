@@ -1,5 +1,8 @@
 package typingsSlinky.hyphen
 
+import typingsSlinky.hyphen.commonMod.HyphenationFunctionAsync
+import typingsSlinky.hyphen.commonMod.HyphenationFunctionSync
+import typingsSlinky.hyphen.commonMod.PatternsDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,10 +10,10 @@ import scala.scalajs.js.annotation._
 @JSImport("hyphen/sh-latn", JSImport.Namespace)
 @js.native
 object hyphenShLatnMod extends js.Object {
-  val hyphenate: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HyphenationFunctionAsync */ js.Any = js.native
-  val hyphenateHTML: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HyphenationFunctionAsync */ js.Any = js.native
-  val hyphenateHTMLSync: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HyphenationFunctionSync */ js.Any = js.native
-  val hyphenateSync: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HyphenationFunctionSync */ js.Any = js.native
-  val patterns: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PatternDefinitions */ js.Any = js.native
+  val hyphenate: HyphenationFunctionAsync = js.native
+  val hyphenateHTML: HyphenationFunctionAsync = js.native
+  val hyphenateHTMLSync: HyphenationFunctionSync = js.native
+  val hyphenateSync: HyphenationFunctionSync = js.native
+  val patterns: PatternsDefinition = js.native
 }
 

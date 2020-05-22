@@ -14,29 +14,10 @@ trait CreateReplicationJobResponse extends js.Object {
 
 object CreateReplicationJobResponse {
   @scala.inline
-  def apply(): CreateReplicationJobResponse = {
+  def apply(replicationJobId: ReplicationJobId = null): CreateReplicationJobResponse = {
     val __obj = js.Dynamic.literal()
+    if (replicationJobId != null) __obj.updateDynamic("replicationJobId")(replicationJobId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateReplicationJobResponse]
   }
-  @scala.inline
-  implicit class CreateReplicationJobResponseOps[Self <: CreateReplicationJobResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReplicationJobId(value: ReplicationJobId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicationJobId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

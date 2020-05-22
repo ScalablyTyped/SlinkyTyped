@@ -1,21 +1,20 @@
 package typingsSlinky.awsSdkClientS3Browser.typesDeleteObjectTaggingInputMod
 
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait DeleteObjectTaggingInput extends InputTypesUnion {
+trait DeleteObjectTaggingInput extends _InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal
     */
   @JSName("$abortSignal")
-  var $abortSignal: js.UndefOr[AbortSignal] = js.native
+  var $abortSignal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * Whether to use the bucket name as the endpoint for this request. The bucket
     * name must be a domain name with a CNAME record alias to an appropriate virtual
@@ -29,167 +28,70 @@ trait DeleteObjectTaggingInput extends InputTypesUnion {
     * @see https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs
     */
   @JSName("$bucketEndpoint")
-  var $bucketEndpoint: js.UndefOr[String] = js.native
+  var $bucketEndpoint: js.UndefOr[String] = js.undefined
   /**
     * Whether to force path style URLs for S3 objects (e.g., https://s3.amazonaws.com/<bucketName>/<key> instead of https://<bucketName>.s3.amazonaws.com/<key>
     */
   @JSName("$forcePathStyle")
-  var $forcePathStyle: js.UndefOr[Boolean] = js.native
+  var $forcePathStyle: js.UndefOr[Boolean] = js.undefined
   /**
     * Per-request HTTP configuration options. If set, any options specified will override the corresponding HTTP option set on the client for this command.
     */
   @JSName("$httpOptions")
-  var $httpOptions: js.UndefOr[BrowserHttpOptions] = js.native
+  var $httpOptions: js.UndefOr[BrowserHttpOptions] = js.undefined
   /**
     * The maximum number of times this operation should be retried. If set, this value will override the `maxRetries` configuration set on the client for this command.
     */
   @JSName("$maxRetries")
-  var $maxRetries: js.UndefOr[Double] = js.native
+  var $maxRetries: js.UndefOr[Double] = js.undefined
   /**
     * Whether to use the S3 Transfer Acceleration endpoint by default
     */
   @JSName("$useAccelerateEndpoint")
-  var $useAccelerateEndpoint: js.UndefOr[Boolean] = js.native
+  var $useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables IPv6/IPv4 dualstack endpoint. When a DNS lookup is performed on an endpoint of this type, it returns an “A” record with an IPv4 address and an “AAAA” record with an IPv6 address. In most cases the network stack in the client environment will automatically prefer the AAAA record and make a connection using the IPv6 address. Note, however, that currently on Windows, the IPv4 address will be preferred.
     */
   @JSName("$useDualstackEndpoint")
-  var $useDualstackEndpoint: js.UndefOr[Boolean] = js.native
+  var $useDualstackEndpoint: js.UndefOr[Boolean] = js.undefined
   /**
     * _BucketName shape
     */
-  var Bucket: String = js.native
+  var Bucket: String
   /**
     * _ObjectKey shape
     */
-  var Key: String = js.native
+  var Key: String
   /**
     * <p>The versionId of the object that the tag-set will be removed from.</p>
     */
-  var VersionId: js.UndefOr[String] = js.native
+  var VersionId: js.UndefOr[String] = js.undefined
 }
 
 object DeleteObjectTaggingInput {
   @scala.inline
-  def apply(Bucket: String, Key: String): DeleteObjectTaggingInput = {
+  def apply(
+    Bucket: String,
+    Key: String,
+    $abortSignal: AbortSignal = null,
+    $bucketEndpoint: String = null,
+    $forcePathStyle: js.UndefOr[Boolean] = js.undefined,
+    $httpOptions: BrowserHttpOptions = null,
+    $maxRetries: js.UndefOr[Double] = js.undefined,
+    $useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined,
+    $useDualstackEndpoint: js.UndefOr[Boolean] = js.undefined,
+    VersionId: String = null
+  ): DeleteObjectTaggingInput = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any])
+    if ($abortSignal != null) __obj.updateDynamic("$abortSignal")($abortSignal.asInstanceOf[js.Any])
+    if ($bucketEndpoint != null) __obj.updateDynamic("$bucketEndpoint")($bucketEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined($forcePathStyle)) __obj.updateDynamic("$forcePathStyle")($forcePathStyle.get.asInstanceOf[js.Any])
+    if ($httpOptions != null) __obj.updateDynamic("$httpOptions")($httpOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined($maxRetries)) __obj.updateDynamic("$maxRetries")($maxRetries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($useAccelerateEndpoint)) __obj.updateDynamic("$useAccelerateEndpoint")($useAccelerateEndpoint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($useDualstackEndpoint)) __obj.updateDynamic("$useDualstackEndpoint")($useDualstackEndpoint.get.asInstanceOf[js.Any])
+    if (VersionId != null) __obj.updateDynamic("VersionId")(VersionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteObjectTaggingInput]
   }
-  @scala.inline
-  implicit class DeleteObjectTaggingInputOps[Self <: DeleteObjectTaggingInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$abortSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$abortSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$bucketEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$bucketEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$bucketEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$bucketEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$forcePathStyle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$forcePathStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$forcePathStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$forcePathStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$httpOptions(value: BrowserHttpOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$httpOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$maxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$maxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$useAccelerateEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useAccelerateEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$useAccelerateEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useAccelerateEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$useDualstackEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useDualstackEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$useDualstackEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useDualstackEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersionId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

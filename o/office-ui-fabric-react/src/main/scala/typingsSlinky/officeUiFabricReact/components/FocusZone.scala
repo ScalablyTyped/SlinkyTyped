@@ -235,6 +235,10 @@ object FocusZone {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultTabbableElementFunction1(value: /* root */ HTMLElement => HTMLElement): this.type = set("defaultTabbableElement", js.Any.fromFunction1(value))
+    @scala.inline
+    def defaultTabbableElement(value: String | (js.Function1[/* root */ HTMLElement, HTMLElement])): this.type = set("defaultTabbableElement", value.asInstanceOf[js.Any])
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -438,7 +442,7 @@ object FocusZone {
     ): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(
-      value: SyntheticFocusEvent[HTMLElement | typingsSlinky.fluentuiReactFocus.focusZoneFocusZoneMod.FocusZone] => Unit
+      value: /* event */ SyntheticFocusEvent[HTMLElement | typingsSlinky.fluentuiReactFocus.focusZoneFocusZoneMod.FocusZone] => Unit
     ): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onFocusNotification(value: () => Unit): this.type = set("onFocusNotification", js.Any.fromFunction0(value))
@@ -694,9 +698,15 @@ object FocusZone {
       value: SyntheticWheelEvent[HTMLElement | typingsSlinky.fluentuiReactFocus.focusZoneFocusZoneMod.FocusZone] => Unit
     ): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
+    def pagingSupportDisabled(value: Boolean): this.type = set("pagingSupportDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventDefaultWhenHandled(value: Boolean): this.type = set("preventDefaultWhenHandled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preventFocusRestoration(value: Boolean): this.type = set("preventFocusRestoration", value.asInstanceOf[js.Any])
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline
@@ -712,11 +722,23 @@ object FocusZone {
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
     @scala.inline
+    def shouldEnterInnerZone(value: /* ev */ SyntheticKeyboardEvent[HTMLElement] => Boolean): this.type = set("shouldEnterInnerZone", js.Any.fromFunction1(value))
+    @scala.inline
+    def shouldFocusInnerElementWhenReceivedFocus(value: Boolean): this.type = set("shouldFocusInnerElementWhenReceivedFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldFocusOnMount(value: Boolean): this.type = set("shouldFocusOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
     def shouldInputLoseFocusOnArrowKey(value: /* inputElement */ HTMLInputElement => Boolean): this.type = set("shouldInputLoseFocusOnArrowKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def shouldReceiveFocus(value: /* childElement */ js.UndefOr[HTMLElement] => Boolean): this.type = set("shouldReceiveFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def shouldResetActiveElementWhenTabFromZone(value: Boolean): this.type = set("shouldResetActiveElementWhenTabFromZone", value.asInstanceOf[js.Any])
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
     @scala.inline
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stopFocusPropagation(value: Boolean): this.type = set("stopFocusPropagation", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

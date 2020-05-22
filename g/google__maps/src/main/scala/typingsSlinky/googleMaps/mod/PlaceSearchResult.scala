@@ -4,34 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlaceSearchResult extends js.Object {
   /**
     * An array of zero, one or more alternative place IDs for the place, with a scope related to each alternative ID.
     * Note: This array may be empty or not present.
     */
-  var alt_ids: js.Array[AlternativePlaceId] = js.native
+  var alt_ids: js.Array[AlternativePlaceId]
   /**
     * is a string containing the human-readable address of this place. Often this address is equivalent to the "postal address".
     * The `formatted_address` property is only returned for a Text Search.
     */
-  var formatted_address: String = js.native
+  var formatted_address: String
   /**
     * contains geometry information about the result, generally including the `location` (geocode)
     * of the place and (optionally) the viewport identifying its general area of coverage
     */
-  var geometry: AddressGeometry = js.native
+  var geometry: AddressGeometry
   /** contains the URL of a recommended icon which may be displayed to the user when indicating this result. */
-  var icon: String = js.native
+  var icon: String
   /** contains the human-readable name for the returned result. For `establishment` results, this is usually the business name. */
-  var name: String = js.native
+  var name: String
   /** information on the opening hours. */
-  var opening_hours: OpeningHours = js.native
+  var opening_hours: OpeningHours
   /**
     * is a boolean flag indicating whether the place has permanently shut down (value `true`).
     * If the place is not permanently closed, the flag is absent from the response.
     */
-  var permanently_closed: Boolean = js.native
+  var permanently_closed: Boolean
   /**
     * an array of `photo` objects, each containing a reference to an image.
     * A Place Search will return at most one `photo` object.
@@ -39,12 +38,12 @@ trait PlaceSearchResult extends js.Object {
     * More information about Place Photos and how you can use the images in your application can be found in the
     * [Place Photos](https://developers.google.com/places/web-service/photos) documentation.
     */
-  var photos: js.Array[PlacePhoto] = js.native
+  var photos: js.Array[PlacePhoto]
   /**
     * a textual identifier that uniquely identifies a place.
     * To retrieve information about the place, pass this identifier in the `placeId` field of a Places API request
     */
-  var place_id: String = js.native
+  var place_id: String
   /**
     * is an encoded location reference, derived from latitude and longitude coordinates, that represents an area:
     * 1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller.
@@ -61,7 +60,7 @@ trait PlaceSearchResult extends js.Object {
     * @see [Open Location Code](https://en.wikipedia.org/wiki/Open_Location_Code)
     * @see [plus codes](https://plus.codes/)
     */
-  var plus_code: PlusCode = js.native
+  var plus_code: PlusCode
   /**
     * The price level of the place, on a scale of 0 to 4.
     * The exact amount indicated by a specific value will vary from region to region.
@@ -73,9 +72,9 @@ trait PlaceSearchResult extends js.Object {
     *  - `3`: Expensive
     *  - `4`: Very Expensive
     */
-  var price_level: Double = js.native
+  var price_level: Double
   /** contains the place's rating, from 1.0 to 5.0, based on aggregated user reviews. */
-  var rating: Double = js.native
+  var rating: Double
   /**
     * Indicates the scope of the `place_id`.
     *
@@ -83,17 +82,17 @@ trait PlaceSearchResult extends js.Object {
     * You can only retrieve app-scoped places via the Nearby Search and the Place Details requests.
     * If the `scope` field is not present in a response, it is safe to assume the scope is `GOOGLE`.
     */
-  var scope: PlaceIdScope = js.native
+  var scope: PlaceIdScope
   /**
     * contains an array of feature types describing the given result.
     * XML responses include multiple `<type>` elements if more than one type is assigned to the result.
     */
-  var types: js.Array[PlaceType1 | PlaceType2] = js.native
+  var types: js.Array[PlaceType1 | PlaceType2]
   /**
     * contains a feature name of a nearby location. Often this feature refers to a street or neighborhood within the given results.
     * The `vicinity` property is only returned for a Nearby Search.
     */
-  var vicinity: js.UndefOr[String] = js.native
+  var vicinity: js.UndefOr[String] = js.undefined
 }
 
 object PlaceSearchResult {
@@ -112,114 +111,12 @@ object PlaceSearchResult {
     price_level: Double,
     rating: Double,
     scope: PlaceIdScope,
-    types: js.Array[PlaceType1 | PlaceType2]
+    types: js.Array[PlaceType1 | PlaceType2],
+    vicinity: String = null
   ): PlaceSearchResult = {
     val __obj = js.Dynamic.literal(alt_ids = alt_ids.asInstanceOf[js.Any], formatted_address = formatted_address.asInstanceOf[js.Any], geometry = geometry.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], opening_hours = opening_hours.asInstanceOf[js.Any], permanently_closed = permanently_closed.asInstanceOf[js.Any], photos = photos.asInstanceOf[js.Any], place_id = place_id.asInstanceOf[js.Any], plus_code = plus_code.asInstanceOf[js.Any], price_level = price_level.asInstanceOf[js.Any], rating = rating.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
+    if (vicinity != null) __obj.updateDynamic("vicinity")(vicinity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaceSearchResult]
   }
-  @scala.inline
-  implicit class PlaceSearchResultOps[Self <: PlaceSearchResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlt_ids(value: js.Array[AlternativePlaceId]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alt_ids")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormatted_address(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted_address")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeometry(value: AddressGeometry): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpening_hours(value: OpeningHours): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opening_hours")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermanently_closed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permanently_closed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhotos(value: js.Array[PlacePhoto]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlace_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlus_code(value: PlusCode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("plus_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPrice_level(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("price_level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRating(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScope(value: PlaceIdScope): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[PlaceType1 | PlaceType2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVicinity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vicinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVicinity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vicinity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

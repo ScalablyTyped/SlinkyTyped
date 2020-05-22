@@ -26,31 +26,5 @@ object Permission {
     val __obj = js.Dynamic.literal(GranteeId = GranteeId.asInstanceOf[js.Any], GranteeType = GranteeType.asInstanceOf[js.Any], PermissionValues = PermissionValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[Permission]
   }
-  @scala.inline
-  implicit class PermissionOps[Self <: Permission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGranteeId(value: WorkMailIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GranteeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGranteeType(value: MemberType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GranteeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPermissionValues(value: PermissionValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,7 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** allows to create and initialize a new link of specified type. */
-@js.native
 trait XLinkFactory extends XInterface {
   /**
     * creates a new link and transport parameters for persistent initialization.
@@ -32,7 +31,7 @@ trait XLinkFactory extends XInterface {
     sEntryName: String,
     aArgs: SeqEquiv[PropertyValue],
     aObjectArgs: SeqEquiv[PropertyValue]
-  ): XInterface = js.native
+  ): XInterface
 }
 
 object XLinkFactory {
@@ -46,21 +45,5 @@ object XLinkFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), createInstanceLinkUserInit = js.Any.fromFunction6(createInstanceLinkUserInit), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XLinkFactory]
   }
-  @scala.inline
-  implicit class XLinkFactoryOps[Self <: XLinkFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateInstanceLinkUserInit(
-      value: (SeqEquiv[Double], String, XStorage, String, SeqEquiv[PropertyValue], SeqEquiv[PropertyValue]) => XInterface
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstanceLinkUserInit")(js.Any.fromFunction6(value))
-        ret
-    }
-  }
-  
 }
 

@@ -9,391 +9,206 @@ import typingsSlinky.tinySliderReact.tinySliderReactStrings.gallery
 import typingsSlinky.tinySliderReact.tinySliderReactStrings.horizontal
 import typingsSlinky.tinySliderReact.tinySliderReactStrings.inner
 import typingsSlinky.tinySliderReact.tinySliderReactStrings.outer
+import typingsSlinky.tinySliderReact.tinySliderReactStrings.page
 import typingsSlinky.tinySliderReact.tinySliderReactStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TinySliderSettings extends CommonOptions {
   /**
     * Time between each gallery animation (in "ms").
     * @defaultValue false
     */
-  var animateDelay: js.UndefOr[Double | `false`] = js.native
+  var animateDelay: js.UndefOr[Double | `false`] = js.undefined
   /**
     * Name of intro animation class.
     * @defaultValue "tns-fadeIn"
     */
-  var animateIn: js.UndefOr[String] = js.native
+  var animateIn: js.UndefOr[String] = js.undefined
   /**
     * Name of default animation class.
     * @defaultValue "tns-normal"
     */
-  var animateNormal: js.UndefOr[String] = js.native
+  var animateNormal: js.UndefOr[String] = js.undefined
   /**
     * Name of outro animation class.
     * @defaultValue "tns-fadeOut"
     */
-  var animateOut: js.UndefOr[String] = js.native
+  var animateOut: js.UndefOr[String] = js.undefined
   /**
     * The customized autoplay start/stop button or selector.
     * @defaultValue false
     */
-  var autoplayButton: js.UndefOr[HTMLElement | String | `false`] = js.native
+  var autoplayButton: js.UndefOr[HTMLElement | String | `false`] = js.undefined
   /**
     * Output autoplayButton markup when autoplay is true but a customized autoplayButton is not provided.
     * @defaultValue true
     */
-  var autoplayButtonOutput: js.UndefOr[Boolean] = js.native
+  var autoplayButtonOutput: js.UndefOr[Boolean] = js.undefined
   /**
     * Direction of slide movement (ascending/descending the slide index).
     * @defaultValue "forward"
     */
-  var autoplayDirection: js.UndefOr[forward | backward] = js.native
+  var autoplayDirection: js.UndefOr[forward | backward] = js.undefined
   /**
     * The axis of the slider.
     * @defaultValue "horizontal"
     */
-  var axis: js.UndefOr[horizontal | vertical] = js.native
+  var axis: js.UndefOr[horizontal | vertical] = js.undefined
   /**
     * The container element/selector around the prev/next buttons.
     * controlsContainer must have at least 2 child elements.
     * @defaultValue false
     */
-  var controlsContainer: js.UndefOr[HTMLElement | String | `false`] = js.native
+  var controlsContainer: js.UndefOr[HTMLElement | String | `false`] = js.undefined
   /**
     * Indicate whether the slider will be frozen (controls, nav, autoplay and other functions will stop work) when all slides can be displayed in one page.
     * @defaultValue true
     */
-  var freezable: js.UndefOr[Boolean] = js.native
+  var freezable: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables lazyloading images that are currently not viewed, thus saving bandwidth
     * @defaultValue false
     */
-  var lazyload: js.UndefOr[Boolean] = js.native
+  var lazyload: js.UndefOr[Boolean] = js.undefined
   /**
     * Moves throughout all the slides seamlessly.
     * @defaultValue true
     */
-  var loop: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.undefined
   /**
     * Controls animation behaviour.
     * With carousel everything slides to the side, while gallery uses fade animations and changes all slides at once.
     * @defaultValue "carousel"
     */
-  var mode: js.UndefOr[carousel | gallery] = js.native
+  var mode: js.UndefOr[carousel | gallery] = js.undefined
   /**
     * Indecate if the dots are thurbnails. If true, they will always be visible even when more than 1 slides displayed in the viewport.
     * @defaultValue false
     */
-  var navAsThumbnails: js.UndefOr[Boolean] = js.native
+  var navAsThumbnails: js.UndefOr[Boolean] = js.undefined
   /**
     * The container element/selector around the dots.
     * navContainer must have at least same number of children as the slides.
     * @defaultValue false
     */
-  var navContainer: js.UndefOr[HTMLElement | String | `false`] = js.native
+  var navContainer: js.UndefOr[HTMLElement | String | `false`] = js.undefined
   /**
     * Difine the relationship between nested sliders.
     * Make sure you run the inner slider first, otherwise the height of the inner slider container will be wrong.
     * @defaultValue false
     */
-  var nested: js.UndefOr[inner | outer | `false`] = js.native
+  var nested: js.UndefOr[inner | outer | `false`] = js.undefined
   /**
     * Callback to be run on initialization.
     * @defaultValue false
     */
-  var onInit: js.UndefOr[js.Function0[Unit | `false`]] = js.native
+  var onInit: js.UndefOr[js.Function0[Unit | `false`]] = js.undefined
   /**
     * Breakpoint: Integer.
     * Defines options for different viewport widths
     * @defaultValue false
     */
-  var responsive: js.UndefOr[ResponsiveOptions | `false`] = js.native
+  var responsive: js.UndefOr[ResponsiveOptions | `false`] = js.undefined
   /**
     * Moves to the opposite edge when reaching the first or last slide.
     * @defaultValue false
     */
-  var rewind: js.UndefOr[Boolean] = js.native
+  var rewind: js.UndefOr[Boolean] = js.undefined
   /**
     * Swipe or drag will not be triggered if the angle is not inside the range when set.
     * @defaultValue 15
     */
-  var swipeAngle: js.UndefOr[Double | Boolean] = js.native
+  var swipeAngle: js.UndefOr[Double | Boolean] = js.undefined
 }
 
 object TinySliderSettings {
   @scala.inline
-  def apply(): TinySliderSettings = {
+  def apply(
+    animateDelay: Double | `false` = null,
+    animateIn: String = null,
+    animateNormal: String = null,
+    animateOut: String = null,
+    arrowKeys: js.UndefOr[Boolean] = js.undefined,
+    autoHeight: js.UndefOr[Boolean] = js.undefined,
+    autoplay: js.UndefOr[Boolean] = js.undefined,
+    autoplayButton: HTMLElement | String | `false` = null,
+    autoplayButtonOutput: js.UndefOr[Boolean] = js.undefined,
+    autoplayDirection: forward | backward = null,
+    autoplayHoverPause: js.UndefOr[Boolean] = js.undefined,
+    autoplayResetOnVisibility: js.UndefOr[Boolean] = js.undefined,
+    autoplayText: js.Array[String] = null,
+    autoplayTimeout: js.UndefOr[Double] = js.undefined,
+    axis: horizontal | vertical = null,
+    controls: js.UndefOr[Boolean] = js.undefined,
+    controlsContainer: HTMLElement | String | `false` = null,
+    controlsText: js.Array[String] = null,
+    disable: js.UndefOr[Boolean] = js.undefined,
+    edgePadding: js.UndefOr[Double] = js.undefined,
+    fixedWidth: Double | `false` = null,
+    freezable: js.UndefOr[Boolean] = js.undefined,
+    gutter: js.UndefOr[Double] = js.undefined,
+    items: js.UndefOr[Double] = js.undefined,
+    lazyload: js.UndefOr[Boolean] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    mode: carousel | gallery = null,
+    mouseDrag: js.UndefOr[Boolean] = js.undefined,
+    nav: js.UndefOr[Boolean] = js.undefined,
+    navAsThumbnails: js.UndefOr[Boolean] = js.undefined,
+    navContainer: HTMLElement | String | `false` = null,
+    nested: inner | outer | `false` = null,
+    onInit: () => Unit | `false` = null,
+    responsive: ResponsiveOptions | `false` = null,
+    rewind: js.UndefOr[Boolean] = js.undefined,
+    slideBy: Double | page = null,
+    speed: js.UndefOr[Double] = js.undefined,
+    startIndex: js.UndefOr[Double] = js.undefined,
+    swipeAngle: Double | Boolean = null,
+    touch: js.UndefOr[Boolean] = js.undefined
+  ): TinySliderSettings = {
     val __obj = js.Dynamic.literal()
+    if (animateDelay != null) __obj.updateDynamic("animateDelay")(animateDelay.asInstanceOf[js.Any])
+    if (animateIn != null) __obj.updateDynamic("animateIn")(animateIn.asInstanceOf[js.Any])
+    if (animateNormal != null) __obj.updateDynamic("animateNormal")(animateNormal.asInstanceOf[js.Any])
+    if (animateOut != null) __obj.updateDynamic("animateOut")(animateOut.asInstanceOf[js.Any])
+    if (!js.isUndefined(arrowKeys)) __obj.updateDynamic("arrowKeys")(arrowKeys.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.get.asInstanceOf[js.Any])
+    if (autoplayButton != null) __obj.updateDynamic("autoplayButton")(autoplayButton.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplayButtonOutput)) __obj.updateDynamic("autoplayButtonOutput")(autoplayButtonOutput.get.asInstanceOf[js.Any])
+    if (autoplayDirection != null) __obj.updateDynamic("autoplayDirection")(autoplayDirection.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplayHoverPause)) __obj.updateDynamic("autoplayHoverPause")(autoplayHoverPause.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplayResetOnVisibility)) __obj.updateDynamic("autoplayResetOnVisibility")(autoplayResetOnVisibility.get.asInstanceOf[js.Any])
+    if (autoplayText != null) __obj.updateDynamic("autoplayText")(autoplayText.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplayTimeout)) __obj.updateDynamic("autoplayTimeout")(autoplayTimeout.get.asInstanceOf[js.Any])
+    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
+    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.get.asInstanceOf[js.Any])
+    if (controlsContainer != null) __obj.updateDynamic("controlsContainer")(controlsContainer.asInstanceOf[js.Any])
+    if (controlsText != null) __obj.updateDynamic("controlsText")(controlsText.asInstanceOf[js.Any])
+    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgePadding)) __obj.updateDynamic("edgePadding")(edgePadding.get.asInstanceOf[js.Any])
+    if (fixedWidth != null) __obj.updateDynamic("fixedWidth")(fixedWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(freezable)) __obj.updateDynamic("freezable")(freezable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gutter)) __obj.updateDynamic("gutter")(gutter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(items)) __obj.updateDynamic("items")(items.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lazyload)) __obj.updateDynamic("lazyload")(lazyload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseDrag)) __obj.updateDynamic("mouseDrag")(mouseDrag.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nav)) __obj.updateDynamic("nav")(nav.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(navAsThumbnails)) __obj.updateDynamic("navAsThumbnails")(navAsThumbnails.get.asInstanceOf[js.Any])
+    if (navContainer != null) __obj.updateDynamic("navContainer")(navContainer.asInstanceOf[js.Any])
+    if (nested != null) __obj.updateDynamic("nested")(nested.asInstanceOf[js.Any])
+    if (onInit != null) __obj.updateDynamic("onInit")(js.Any.fromFunction0(onInit))
+    if (responsive != null) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
+    if (!js.isUndefined(rewind)) __obj.updateDynamic("rewind")(rewind.get.asInstanceOf[js.Any])
+    if (slideBy != null) __obj.updateDynamic("slideBy")(slideBy.asInstanceOf[js.Any])
+    if (!js.isUndefined(speed)) __obj.updateDynamic("speed")(speed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startIndex)) __obj.updateDynamic("startIndex")(startIndex.get.asInstanceOf[js.Any])
+    if (swipeAngle != null) __obj.updateDynamic("swipeAngle")(swipeAngle.asInstanceOf[js.Any])
+    if (!js.isUndefined(touch)) __obj.updateDynamic("touch")(touch.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TinySliderSettings]
   }
-  @scala.inline
-  implicit class TinySliderSettingsOps[Self <: TinySliderSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimateDelay(value: Double | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimateIn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimateNormal(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateNormal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateNormal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateNormal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimateOut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimateOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplayButtonHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAutoplayButton(value: HTMLElement | String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplayButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayButton")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplayButtonOutput(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayButtonOutput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplayButtonOutput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayButtonOutput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplayDirection(value: forward | backward): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplayDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxis(value: horizontal | vertical): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withControlsContainerHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withControlsContainer(value: HTMLElement | String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutControlsContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFreezable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freezable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFreezable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freezable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLazyload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLazyload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: carousel | gallery): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavAsThumbnails(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navAsThumbnails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavAsThumbnails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navAsThumbnails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavContainerHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNavContainer(value: HTMLElement | String | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNested(value: inner | outer | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnInit(value: () => Unit | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: ResponsiveOptions | `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRewind(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRewind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rewind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwipeAngle(value: Double | Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeAngle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwipeAngle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeAngle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

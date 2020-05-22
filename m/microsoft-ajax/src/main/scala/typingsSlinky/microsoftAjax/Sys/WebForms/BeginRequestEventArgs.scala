@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
   * Used by the beginRequest event of the PageRequestManager class to pass argument information to event handlers.
   * @see {@link http://msdn.microsoft.com/en-us/library/bb384003(v=vs.100).aspx}
   */
-@js.native
 trait BeginRequestEventArgs extends EventArgs {
   //#endregion
   //#region Properties
@@ -20,18 +19,18 @@ trait BeginRequestEventArgs extends EventArgs {
     * @readonly
     * @return An HTML DOM element.
     */
-  def get_postBackElement(): HTMLElement = js.native
+  def get_postBackElement(): HTMLElement
   /**
     * Gets the request object that represents the current postback.
     * @return An instance of the Sys.Net.WebRequest class.
     */
-  def get_request(): WebRequest = js.native
+  def get_request(): WebRequest
   /**
     * Gets a list of UniqueID values for UpdatePanel controls that should re-render their content, as requested by the client.
     * Server-side processing might update additional UpdatePanel controls.
     * @return An array of UniqueID values for UpdatePanel controls.
     */
-  def get_updatePanelsToUpdate(): js.Array[String] = js.native
+  def get_updatePanelsToUpdate(): js.Array[String]
 }
 
 object BeginRequestEventArgs {
@@ -45,31 +44,5 @@ object BeginRequestEventArgs {
     val __obj = js.Dynamic.literal(Empty = Empty.asInstanceOf[js.Any], get_postBackElement = js.Any.fromFunction0(get_postBackElement), get_request = js.Any.fromFunction0(get_request), get_updatePanelsToUpdate = js.Any.fromFunction0(get_updatePanelsToUpdate))
     __obj.asInstanceOf[BeginRequestEventArgs]
   }
-  @scala.inline
-  implicit class BeginRequestEventArgsOps[Self <: BeginRequestEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet_postBackElement(value: () => HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_postBackElement")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_request(value: () => WebRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_request")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGet_updatePanelsToUpdate(value: () => js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get_updatePanelsToUpdate")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

@@ -28,65 +28,18 @@ trait SecurityGroupIngress extends js.Object {
 
 object SecurityGroupIngress {
   @scala.inline
-  def apply(): SecurityGroupIngress = {
+  def apply(
+    cidr: Input[String] = null,
+    securityGroupId: Input[String] = null,
+    securityGroupName: Input[String] = null,
+    securityGroupOwnerId: Input[String] = null
+  ): SecurityGroupIngress = {
     val __obj = js.Dynamic.literal()
+    if (cidr != null) __obj.updateDynamic("cidr")(cidr.asInstanceOf[js.Any])
+    if (securityGroupId != null) __obj.updateDynamic("securityGroupId")(securityGroupId.asInstanceOf[js.Any])
+    if (securityGroupName != null) __obj.updateDynamic("securityGroupName")(securityGroupName.asInstanceOf[js.Any])
+    if (securityGroupOwnerId != null) __obj.updateDynamic("securityGroupOwnerId")(securityGroupOwnerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityGroupIngress]
   }
-  @scala.inline
-  implicit class SecurityGroupIngressOps[Self <: SecurityGroupIngress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCidr(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidr")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCidr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cidr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecurityGroupOwnerId(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupOwnerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecurityGroupOwnerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupOwnerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

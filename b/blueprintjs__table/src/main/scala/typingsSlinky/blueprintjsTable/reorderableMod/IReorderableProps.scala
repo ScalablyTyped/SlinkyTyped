@@ -6,18 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IReorderableProps extends js.Object {
   /**
     * An array containing the table's selection Regions.
     * @default []
     */
-  var selectedRegions: js.UndefOr[js.Array[IRegion]] = js.native
+  var selectedRegions: js.UndefOr[js.Array[IRegion]] = js.undefined
   /**
     * When the user reorders something, this callback is called with the new
     * focus cell for the newly selected set of regions.
     */
-  def onFocusedCell(focusedCell: IFocusedCellCoordinates): Unit = js.native
+  def onFocusedCell(focusedCell: IFocusedCellCoordinates): Unit
   /**
     * A callback that is called when the user is done dragging to reorder.
     *
@@ -25,7 +24,7 @@ trait IReorderableProps extends js.Object {
     * @param newIndex the new index of the element or set of elements
     * @param length the number of contiguous elements that were moved
     */
-  def onReordered(oldIndex: Double, newIndex: Double, length: Double): Unit = js.native
+  def onReordered(oldIndex: Double, newIndex: Double, length: Double): Unit
   /**
     * A callback that is called while the user is dragging to reorder.
     *
@@ -33,13 +32,13 @@ trait IReorderableProps extends js.Object {
     * @param newIndex the new index of the element or set of elements
     * @param length the number of contiguous elements that were moved
     */
-  def onReordering(oldIndex: Double, newIndex: Double, length: Double): Unit = js.native
+  def onReordering(oldIndex: Double, newIndex: Double, length: Double): Unit
   /**
     * When the user reorders something, this callback is called with a new
     * array of `Region`s. This array should be considered the new selection
     * state for the entire table.
     */
-  def onSelection(regions: js.Array[IRegion]): Unit = js.native
+  def onSelection(regions: js.Array[IRegion]): Unit
 }
 
 object IReorderableProps {
@@ -48,54 +47,12 @@ object IReorderableProps {
     onFocusedCell: IFocusedCellCoordinates => Unit,
     onReordered: (Double, Double, Double) => Unit,
     onReordering: (Double, Double, Double) => Unit,
-    onSelection: js.Array[IRegion] => Unit
+    onSelection: js.Array[IRegion] => Unit,
+    selectedRegions: js.Array[IRegion] = null
   ): IReorderableProps = {
     val __obj = js.Dynamic.literal(onFocusedCell = js.Any.fromFunction1(onFocusedCell), onReordered = js.Any.fromFunction3(onReordered), onReordering = js.Any.fromFunction3(onReordering), onSelection = js.Any.fromFunction1(onSelection))
+    if (selectedRegions != null) __obj.updateDynamic("selectedRegions")(selectedRegions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReorderableProps]
   }
-  @scala.inline
-  implicit class IReorderablePropsOps[Self <: IReorderableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnFocusedCell(value: IFocusedCellCoordinates => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCell")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnReordered(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReordered")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withOnReordering(value: (Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReordering")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withOnSelection(value: js.Array[IRegion] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSelectedRegions(value: js.Array[IRegion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRegions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRegions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

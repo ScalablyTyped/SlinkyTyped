@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MappingDetails extends js.Object {
   /**
     * The local path.
     */
-  var localPath: String = js.native
+  var localPath: String
   /**
     * The mapping type.
     */
-  var mappingType: String = js.native
+  var mappingType: String
   /**
     * The server path.
     */
-  var serverPath: String = js.native
+  var serverPath: String
 }
 
 object MappingDetails {
@@ -26,31 +25,5 @@ object MappingDetails {
     val __obj = js.Dynamic.literal(localPath = localPath.asInstanceOf[js.Any], mappingType = mappingType.asInstanceOf[js.Any], serverPath = serverPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[MappingDetails]
   }
-  @scala.inline
-  implicit class MappingDetailsOps[Self <: MappingDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocalPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMappingType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mappingType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -39,6 +39,14 @@ class UserRole protected ()
   var model_FUserRole: IModel = js.native
   @JSName("name")
   val name_FUserRole: String = js.native
+  /**
+    * Returns the qualified name of this element, or
+    * null if this element is not a part of the model,
+    * or if it or one of its namespace containers does not have a
+    * valid name.
+    */
+  /* CompleteClass */
+  override val qualifiedName: String | Null = js.native
   def checkSecurity: Boolean = js.native
   def checkSecurity(newValue: Boolean): js.Any = js.native
   def containerAsProjectSecurity: ProjectSecurity = js.native

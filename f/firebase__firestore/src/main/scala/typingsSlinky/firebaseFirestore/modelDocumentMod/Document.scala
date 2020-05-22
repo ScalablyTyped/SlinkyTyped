@@ -1,12 +1,11 @@
 package typingsSlinky.firebaseFirestore.modelDocumentMod
 
+import typingsSlinky.firebaseFirestore.anon.MapValueMapValue
 import typingsSlinky.firebaseFirestore.coreSnapshotVersionMod.SnapshotVersion
-import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Value
+import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.Value
 import typingsSlinky.firebaseFirestore.modelDocumentKeyMod.DocumentKey
+import typingsSlinky.firebaseFirestore.modelObjectValueMod.ObjectValue
 import typingsSlinky.firebaseFirestore.modelPathMod.FieldPath
-import typingsSlinky.firebaseFirestore.srcModelFieldValueMod.FieldValue
-import typingsSlinky.firebaseFirestore.srcModelFieldValueMod.JsonObject
-import typingsSlinky.firebaseFirestore.srcModelFieldValueMod.ObjectValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,49 +13,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/firestore/dist/src/model/document", "Document")
 @js.native
 class Document protected () extends MaybeDocument {
-  def this(key: DocumentKey, version: SnapshotVersion, options: DocumentOptions) = this()
-  def this(key: DocumentKey, version: SnapshotVersion, options: DocumentOptions, objectValue: ObjectValue) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: ObjectValue,
-    proto: typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Document
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: ObjectValue,
-    proto: typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Document,
-    converter: js.Function1[/* value */ Value, FieldValue]
-  ) = this()
-  val converter: js.UndefOr[js.Any] = js.native
-  /**
-    * A cache of canonicalized FieldPaths to FieldValues that have already been
-    * deserialized in `getField()`.
-    */
-  var fieldValueCache: js.UndefOr[js.Any] = js.native
-  /**
-    * Returns the nested Protobuf value for 'path`. Can only be called if
-    * `proto` was provided at construction time.
-    */
-  var getProtoField: js.Any = js.native
+  def this(key: DocumentKey, version: SnapshotVersion, objectValue: ObjectValue, options: DocumentOptions) = this()
   val hasCommittedMutations: Boolean = js.native
   val hasLocalMutations: Boolean = js.native
-  var objectValue: js.UndefOr[js.Any] = js.native
-  val proto: js.UndefOr[
-    typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Document
-  ] = js.native
+  val objectValue: js.Any = js.native
   def data(): ObjectValue = js.native
-  def field(path: FieldPath): FieldValue | Null = js.native
-  def value(): JsonObject[_] = js.native
-}
-
-/* static members */
-@JSImport("@firebase/firestore/dist/src/model/document", "Document")
-@js.native
-object Document extends js.Object {
-  def compareByField(field: FieldPath, d1: Document, d2: Document): Double = js.native
+  def field(path: FieldPath): Value | Null = js.native
+  def toProto(): MapValueMapValue = js.native
 }
 

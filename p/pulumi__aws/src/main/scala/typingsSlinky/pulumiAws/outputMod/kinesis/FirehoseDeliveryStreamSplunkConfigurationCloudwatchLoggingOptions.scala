@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions extends js.Object {
   /**
-    * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+    * Enables or disables the logging. Defaults to `false`.
     */
   var enabled: js.UndefOr[Boolean] = js.native
   /**
@@ -22,53 +22,16 @@ trait FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions extends 
 
 object FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions {
   @scala.inline
-  def apply(): FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions = {
+  def apply(
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    logGroupName: String = null,
+    logStreamName: String = null
+  ): FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (logGroupName != null) __obj.updateDynamic("logGroupName")(logGroupName.asInstanceOf[js.Any])
+    if (logStreamName != null) __obj.updateDynamic("logStreamName")(logStreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions]
   }
-  @scala.inline
-  implicit class FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsOps[Self <: FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogStreamName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogStreamName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,41 +26,14 @@ trait SchemaDevicesLongRunningOperationResponse extends js.Object {
 
 object SchemaDevicesLongRunningOperationResponse {
   @scala.inline
-  def apply(): SchemaDevicesLongRunningOperationResponse = {
+  def apply(
+    perDeviceStatus: js.Array[SchemaOperationPerDevice] = null,
+    successCount: js.UndefOr[Double] = js.undefined
+  ): SchemaDevicesLongRunningOperationResponse = {
     val __obj = js.Dynamic.literal()
+    if (perDeviceStatus != null) __obj.updateDynamic("perDeviceStatus")(perDeviceStatus.asInstanceOf[js.Any])
+    if (!js.isUndefined(successCount)) __obj.updateDynamic("successCount")(successCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDevicesLongRunningOperationResponse]
   }
-  @scala.inline
-  implicit class SchemaDevicesLongRunningOperationResponseOps[Self <: SchemaDevicesLongRunningOperationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPerDeviceStatus(value: js.Array[SchemaOperationPerDevice]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perDeviceStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerDeviceStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perDeviceStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccessCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuccessCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

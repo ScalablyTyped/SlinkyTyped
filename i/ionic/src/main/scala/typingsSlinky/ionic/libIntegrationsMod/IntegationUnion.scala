@@ -1,6 +1,5 @@
 package typingsSlinky.ionic.libIntegrationsMod
 
-import typingsSlinky.ionic.integrationsCordovaMod.Integration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +10,4 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ionic.integrationsEnterpriseMod.Integration
 */
 trait IntegationUnion extends js.Object
-
-object IntegationUnion {
-  @scala.inline
-  implicit def apply(value: Integration): IntegationUnion = value.asInstanceOf[IntegationUnion]
-  @scala.inline
-  implicit def apply(value: typingsSlinky.ionic.integrationsEnterpriseMod.Integration): IntegationUnion = value.asInstanceOf[IntegationUnion]
-  @scala.inline
-  implicit def apply(value: typingsSlinky.ionic.integrationsCapacitorMod.Integration): IntegationUnion = value.asInstanceOf[IntegationUnion]
-}
 

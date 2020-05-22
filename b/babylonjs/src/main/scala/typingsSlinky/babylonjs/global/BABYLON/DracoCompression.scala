@@ -14,6 +14,11 @@ import scala.scalajs.js.annotation._
 class DracoCompression ()
   extends typingsSlinky.babylonjs.BABYLON.DracoCompression {
   def this(numWorkers: Double) = this()
+  /**
+    * Releases all held resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
 }
 
 /* static members */

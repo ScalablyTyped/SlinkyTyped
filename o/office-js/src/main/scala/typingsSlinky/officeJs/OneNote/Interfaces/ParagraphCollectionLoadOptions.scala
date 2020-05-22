@@ -10,265 +10,127 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@js.native
 trait ParagraphCollectionLoadOptions extends js.Object {
   @JSName("$all")
-  var $all: js.UndefOr[Boolean] = js.native
+  var $all: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the ID of the Paragraph object. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var id: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the Image object in the Paragraph. Throws an exception if ParagraphType is not Image.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var image: js.UndefOr[ImageLoadOptions] = js.native
+  var image: js.UndefOr[ImageLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the Ink collection in the Paragraph. Throws an exception if ParagraphType is not Ink.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var inkWords: js.UndefOr[InkWordCollectionLoadOptions] = js.native
+  var inkWords: js.UndefOr[InkWordCollectionLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the Outline object that contains the Paragraph.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var outline: js.UndefOr[OutlineLoadOptions] = js.native
+  var outline: js.UndefOr[OutlineLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: The collection of paragraphs under this paragraph. Read only
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var paragraphs: js.UndefOr[ParagraphCollectionLoadOptions] = js.native
+  var paragraphs: js.UndefOr[ParagraphCollectionLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the parent paragraph object. Throws if a parent paragraph does not exist.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var parentParagraph: js.UndefOr[ParagraphLoadOptions] = js.native
+  var parentParagraph: js.UndefOr[ParagraphLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the parent paragraph object. Returns null if a parent paragraph does not exist.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var parentParagraphOrNull: js.UndefOr[ParagraphLoadOptions] = js.native
+  var parentParagraphOrNull: js.UndefOr[ParagraphLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the TableCell object that contains the Paragraph if one exists. If parent is not a TableCell, throws ItemNotFound.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var parentTableCell: js.UndefOr[TableCellLoadOptions] = js.native
+  var parentTableCell: js.UndefOr[TableCellLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the TableCell object that contains the Paragraph if one exists. If parent is not a TableCell, returns null.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var parentTableCellOrNull: js.UndefOr[TableCellLoadOptions] = js.native
+  var parentTableCellOrNull: js.UndefOr[TableCellLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the RichText object in the Paragraph. Throws an exception if ParagraphType is not RichText.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var richText: js.UndefOr[RichTextLoadOptions] = js.native
+  var richText: js.UndefOr[RichTextLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the Table object in the Paragraph. Throws an exception if ParagraphType is not Table.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var table: js.UndefOr[TableLoadOptions] = js.native
+  var table: js.UndefOr[TableLoadOptions] = js.undefined
   /**
     *
     * For EACH ITEM in the collection: Gets the type of the Paragraph object. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var `type`: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[Boolean] = js.undefined
 }
 
 object ParagraphCollectionLoadOptions {
   @scala.inline
-  def apply(): ParagraphCollectionLoadOptions = {
+  def apply(
+    $all: js.UndefOr[Boolean] = js.undefined,
+    id: js.UndefOr[Boolean] = js.undefined,
+    image: ImageLoadOptions = null,
+    inkWords: InkWordCollectionLoadOptions = null,
+    outline: OutlineLoadOptions = null,
+    paragraphs: ParagraphCollectionLoadOptions = null,
+    parentParagraph: ParagraphLoadOptions = null,
+    parentParagraphOrNull: ParagraphLoadOptions = null,
+    parentTableCell: TableCellLoadOptions = null,
+    parentTableCellOrNull: TableCellLoadOptions = null,
+    richText: RichTextLoadOptions = null,
+    table: TableLoadOptions = null,
+    `type`: js.UndefOr[Boolean] = js.undefined
+  ): ParagraphCollectionLoadOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined($all)) __obj.updateDynamic("$all")($all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(id)) __obj.updateDynamic("id")(id.get.asInstanceOf[js.Any])
+    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
+    if (inkWords != null) __obj.updateDynamic("inkWords")(inkWords.asInstanceOf[js.Any])
+    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
+    if (paragraphs != null) __obj.updateDynamic("paragraphs")(paragraphs.asInstanceOf[js.Any])
+    if (parentParagraph != null) __obj.updateDynamic("parentParagraph")(parentParagraph.asInstanceOf[js.Any])
+    if (parentParagraphOrNull != null) __obj.updateDynamic("parentParagraphOrNull")(parentParagraphOrNull.asInstanceOf[js.Any])
+    if (parentTableCell != null) __obj.updateDynamic("parentTableCell")(parentTableCell.asInstanceOf[js.Any])
+    if (parentTableCellOrNull != null) __obj.updateDynamic("parentTableCellOrNull")(parentTableCellOrNull.asInstanceOf[js.Any])
+    if (richText != null) __obj.updateDynamic("richText")(richText.asInstanceOf[js.Any])
+    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParagraphCollectionLoadOptions]
   }
-  @scala.inline
-  implicit class ParagraphCollectionLoadOptionsOps[Self <: ParagraphCollectionLoadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$all(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$all: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: ImageLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInkWords(value: InkWordCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inkWords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInkWords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inkWords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutline(value: OutlineLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParagraphs(value: ParagraphCollectionLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParagraphs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentParagraph(value: ParagraphLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentParagraph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentParagraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentParagraph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentParagraphOrNull(value: ParagraphLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentParagraphOrNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentParagraphOrNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentParagraphOrNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentTableCell(value: TableCellLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentTableCell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParentTableCellOrNull(value: TableCellLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCellOrNull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParentTableCellOrNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentTableCellOrNull")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRichText(value: RichTextLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("richText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRichText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("richText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTable(value: TableLoadOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

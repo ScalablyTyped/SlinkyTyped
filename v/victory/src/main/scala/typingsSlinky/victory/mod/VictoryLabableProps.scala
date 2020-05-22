@@ -6,7 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Common labable interface
-@js.native
 trait VictoryLabableProps extends js.Object {
   /**
     * The labelComponent prop takes in an entire label component which will be used
@@ -20,34 +19,15 @@ trait VictoryLabableProps extends js.Object {
     * data point, they should be created by composing VictoryArea with VictoryScatter
     * @default <VictoryLabel/>
     */
-  var labelComponent: js.UndefOr[ReactElement] = js.native
+  var labelComponent: js.UndefOr[ReactElement] = js.undefined
 }
 
 object VictoryLabableProps {
   @scala.inline
-  def apply(): VictoryLabableProps = {
+  def apply(labelComponent: ReactElement = null): VictoryLabableProps = {
     val __obj = js.Dynamic.literal()
+    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryLabableProps]
   }
-  @scala.inline
-  implicit class VictoryLabablePropsOps[Self <: VictoryLabableProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLabelComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelComponent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

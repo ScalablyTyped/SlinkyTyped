@@ -8,5 +8,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Services.Store.StoreLicense")
 @js.native
 abstract class StoreLicense ()
-  extends typingsSlinky.winrtUwp.Windows.Services.Store.StoreLicense
+  extends typingsSlinky.winrtUwp.Windows.Services.Store.StoreLicense {
+  /** Gets the expiration date and time for the add-on license. */
+  /* CompleteClass */
+  override var expirationDate: js.Date = js.native
+  /** Gets complete license data in JSON format. */
+  /* CompleteClass */
+  override var extendedJsonData: String = js.native
+  /** Gets in the product ID for the add-on. */
+  /* CompleteClass */
+  override var inAppOfferToken: String = js.native
+  /** Gets a value that indicates whether the add-on license is active. */
+  /* CompleteClass */
+  override var isActive: Boolean = js.native
+  /** Gets the Store ID of the licensed add-on SKU from the Windows Store catalog. */
+  /* CompleteClass */
+  override var skuStoreId: String = js.native
+}
 

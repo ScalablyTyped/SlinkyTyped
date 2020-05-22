@@ -21,7 +21,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of the Header/Footer in a spreadsheet page preview
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessiblePageHeaderFooterAreasView
   extends XAccessibleContext
      with XAccessibleComponent

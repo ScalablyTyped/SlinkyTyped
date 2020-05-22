@@ -5,9 +5,10 @@ import typingsSlinky.apolloClient.anon.Cache
 import typingsSlinky.apolloClient.anon.Context
 import typingsSlinky.apolloClient.typesMod.OperationVariables
 import typingsSlinky.apolloClient.typesMod.Resolvers
+import typingsSlinky.apolloLink.typesMod.FetchResult
 import typingsSlinky.graphql.astMod.ASTNode
 import typingsSlinky.graphql.astMod.DocumentNode
-import typingsSlinky.graphql.executeMod.ExecutionResult
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +36,7 @@ class LocalState[TCacheShape] protected () extends js.Object {
   def getResolvers(): Resolvers = js.native
   def prepareContext(): Cache[TCacheShape] = js.native
   def prepareContext(context: js.Object): Cache[TCacheShape] = js.native
-  def runResolvers[TData](hasDocumentRemoteResultContextVariablesOnlyRunForcedResolvers: Context[TData]): js.Promise[ExecutionResult[TData]] = js.native
+  def runResolvers[TData](hasDocumentRemoteResultContextVariablesOnlyRunForcedResolvers: Context[TData]): js.Promise[FetchResult[TData, Record[String, _], Record[String, _]]] = js.native
   def serverQuery(document: DocumentNode): DocumentNode | Null = js.native
   def setFragmentMatcher(fragmentMatcher: FragmentMatcher): Unit = js.native
   def setResolvers(resolvers: js.Array[Resolvers]): Unit = js.native

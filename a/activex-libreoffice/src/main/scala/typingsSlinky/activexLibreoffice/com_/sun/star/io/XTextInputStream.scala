@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * This interfaces allows to read strings separated by delimiters and to read lines. The character encoding to be used can be set by {@link
   * setEncoding()} . Default encoding is "utf8".
   */
-@js.native
 trait XTextInputStream extends XInputStream {
   /**
     * Returns the EOF status.
@@ -23,7 +22,7 @@ trait XTextInputStream extends XInputStream {
     * empty) and {@link readString()} (if a delimiter is directly followed by the next one).
     * @returns `TRUE` , if the end of file is reached, so that no next string can be read. `FALSE` otherwise
     */
-  def isEOF(): Boolean = js.native
+  def isEOF(): Boolean
   /**
     * reads text until a line break (CR, LF, or CR/LF) or EOF is found and returns it as string (without CR, LF).
     *
@@ -32,7 +31,7 @@ trait XTextInputStream extends XInputStream {
     * @see setEncoding
     * @see isEOF
     */
-  def readLine(): String = js.native
+  def readLine(): String
   /**
     * reads text until one of the given delimiter characters or EOF is found and returns it as string (without delimiter).
     *
@@ -42,12 +41,12 @@ trait XTextInputStream extends XInputStream {
     * @see setEncoding
     * @see isEOF
     */
-  def readString(Delimiters: SeqEquiv[String], bRemoveDelimiter: Boolean): String = js.native
+  def readString(Delimiters: SeqEquiv[String], bRemoveDelimiter: Boolean): String
   /**
     * sets character encoding.
     * @param Encoding sets the character encoding that should be used. The character encoding names refer to the document [http://www.iana.org/assignments/cha
     */
-  def setEncoding(Encoding: String): Unit = js.native
+  def setEncoding(Encoding: String): Unit
 }
 
 object XTextInputStream {
@@ -69,37 +68,5 @@ object XTextInputStream {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), available = js.Any.fromFunction0(available), closeInput = js.Any.fromFunction0(closeInput), isEOF = js.Any.fromFunction0(isEOF), queryInterface = js.Any.fromFunction1(queryInterface), readBytes = js.Any.fromFunction2(readBytes), readLine = js.Any.fromFunction0(readLine), readSomeBytes = js.Any.fromFunction2(readSomeBytes), readString = js.Any.fromFunction2(readString), release = js.Any.fromFunction0(release), setEncoding = js.Any.fromFunction1(setEncoding), skipBytes = js.Any.fromFunction1(skipBytes))
     __obj.asInstanceOf[XTextInputStream]
   }
-  @scala.inline
-  implicit class XTextInputStreamOps[Self <: XTextInputStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsEOF(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEOF")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReadLine(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readLine")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReadString(value: (SeqEquiv[String], Boolean) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readString")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetEncoding(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEncoding")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

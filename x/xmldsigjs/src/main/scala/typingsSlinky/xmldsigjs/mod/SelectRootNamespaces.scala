@@ -1,7 +1,7 @@
 package typingsSlinky.xmldsigjs.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.xmlCore.mod.AssocArray
+import typingsSlinky.xmlCore.typesMod.AssocArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

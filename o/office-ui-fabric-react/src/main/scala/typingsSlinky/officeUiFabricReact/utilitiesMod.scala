@@ -116,6 +116,7 @@ import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.react.mod.PropsWithoutRef
+import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Partial
 import typingsSlinky.std.TypedPropertyDescriptor
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
@@ -140,12 +141,12 @@ import typingsSlinky.uifabricUtilities.delayedRenderMod.IDelayedRenderProps
 import typingsSlinky.uifabricUtilities.fabricPerformanceMod.IPerfSummary
 import typingsSlinky.uifabricUtilities.globalSettingsMod.IChangeEventCallback
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
-import typingsSlinky.uifabricUtilities.ipointMod.IPoint
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.isizeMod.ISize
 import typingsSlinky.uifabricUtilities.ivirtualelementMod.IVirtualElement
 import typingsSlinky.uifabricUtilities.mathMod.IFitContentToBoundsOptions
+import typingsSlinky.uifabricUtilities.pointMod.Point
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptionsWithRequiredGetKey
 import typingsSlinky.uifabricUtilities.styledMod.ICustomizableProps
@@ -272,7 +273,7 @@ object utilitiesMod extends js.Object {
   def allowScrollOnElement(element: HTMLElement, events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup): Unit = js.native
   def appendFunction(parent: js.Any, functions: js.Any*): js.Function0[Unit] = js.native
   def arraysEqual[T](array1: js.Array[T], array2: js.Array[T]): Boolean = js.native
-  def asAsync[TProps](options: IAsAsyncOptions[TProps]): ForwardRefExoticComponent[PropsWithoutRef[TProps with AsyncPlaceholder]] = js.native
+  def asAsync[TProps](options: IAsAsyncOptions[TProps]): ForwardRefExoticComponent[(PropsWithoutRef[TProps with AsyncPlaceholder]) with RefAttributes[ReactElement]] = js.native
   def assertNever(x: scala.Nothing): scala.Nothing = js.native
   def assign(target: js.Any, args: js.Any*): js.Any = js.native
   def calculatePrecision(value: String): Double = js.native
@@ -328,7 +329,7 @@ object utilitiesMod extends js.Object {
   def format(s: String, values: js.Any*): String = js.native
   def getChildren(parent: HTMLElement): js.Array[HTMLElement] = js.native
   def getChildren(parent: HTMLElement, allowVirtualChildren: Boolean): js.Array[HTMLElement] = js.native
-  def getDistanceBetweenPoints(point1: IPoint, point2: IPoint): Double = js.native
+  def getDistanceBetweenPoints(point1: Point, point2: Point): Double = js.native
   def getDocument(): js.UndefOr[Document] = js.native
   def getDocument(rootElement: HTMLElement): js.UndefOr[Document] = js.native
   def getElementIndexPath(fromElement: HTMLElement, toElement: HTMLElement): js.Array[Double] = js.native
@@ -402,6 +403,7 @@ object utilitiesMod extends js.Object {
     allowFocusRoot: js.UndefOr[Boolean],
     tabbable: js.UndefOr[Boolean]
   ): HTMLElement | Null = js.native
+  def getPropsWithDefaults[TProps /* <: js.Object */](defaultProps: Partial[TProps], propsWithoutDefaults: TProps): TProps = js.native
   def getRTL(): Boolean = js.native
   def getRTL(theme: Rtl): Boolean = js.native
   def getRTLSafeKeyCode(key: Double): Double = js.native

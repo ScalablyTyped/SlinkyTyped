@@ -22,53 +22,16 @@ trait GetGroupCertificateConfigurationResponse extends js.Object {
 
 object GetGroupCertificateConfigurationResponse {
   @scala.inline
-  def apply(): GetGroupCertificateConfigurationResponse = {
+  def apply(
+    CertificateAuthorityExpiryInMilliseconds: string = null,
+    CertificateExpiryInMilliseconds: string = null,
+    GroupId: string = null
+  ): GetGroupCertificateConfigurationResponse = {
     val __obj = js.Dynamic.literal()
+    if (CertificateAuthorityExpiryInMilliseconds != null) __obj.updateDynamic("CertificateAuthorityExpiryInMilliseconds")(CertificateAuthorityExpiryInMilliseconds.asInstanceOf[js.Any])
+    if (CertificateExpiryInMilliseconds != null) __obj.updateDynamic("CertificateExpiryInMilliseconds")(CertificateExpiryInMilliseconds.asInstanceOf[js.Any])
+    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGroupCertificateConfigurationResponse]
   }
-  @scala.inline
-  implicit class GetGroupCertificateConfigurationResponseOps[Self <: GetGroupCertificateConfigurationResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateAuthorityExpiryInMilliseconds(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityExpiryInMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateAuthorityExpiryInMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateAuthorityExpiryInMilliseconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateExpiryInMilliseconds(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateExpiryInMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateExpiryInMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateExpiryInMilliseconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

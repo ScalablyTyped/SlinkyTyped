@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * traffic that is allowed out of pods matched by a NetworkPolicySpec's podSelector. The traffic
   * must match both ports and to. This type is beta-level in 1.8
   */
-@js.native
 trait NetworkPolicyEgressRule extends js.Object {
   /**
     * List of destination ports for outgoing traffic. Each item in this list is combined using a
@@ -18,7 +17,7 @@ trait NetworkPolicyEgressRule extends js.Object {
     * restricted by port). If this field is present and contains at least one item, then this
     * rule allows traffic only if the traffic matches at least one port in the list.
     */
-  val ports: js.Array[NetworkPolicyPort] = js.native
+  val ports: js.Array[NetworkPolicyPort]
   /**
     * List of destinations for outgoing traffic of pods selected for this rule. Items in this
     * list are combined using a logical OR operation. If this field is empty or missing, this
@@ -26,7 +25,7 @@ trait NetworkPolicyEgressRule extends js.Object {
     * present and contains at least one item, this rule allows traffic only if the traffic
     * matches at least one item in the to list.
     */
-  val to: js.Array[NetworkPolicyPeer] = js.native
+  val to: js.Array[NetworkPolicyPeer]
 }
 
 object NetworkPolicyEgressRule {
@@ -35,25 +34,5 @@ object NetworkPolicyEgressRule {
     val __obj = js.Dynamic.literal(ports = ports.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkPolicyEgressRule]
   }
-  @scala.inline
-  implicit class NetworkPolicyEgressRuleOps[Self <: NetworkPolicyEgressRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPorts(value: js.Array[NetworkPolicyPort]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTo(value: js.Array[NetworkPolicyPeer]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

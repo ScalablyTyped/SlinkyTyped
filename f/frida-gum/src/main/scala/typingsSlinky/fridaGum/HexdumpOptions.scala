@@ -4,87 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HexdumpOptions extends js.Object {
   /**
     * Whether ANSI colors should be used. Defaults to false.
     */
-  var ansi: js.UndefOr[Boolean] = js.native
+  var ansi: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether a header should be included. Defaults to true.
     */
-  var header: js.UndefOr[Boolean] = js.native
+  var header: js.UndefOr[Boolean] = js.undefined
   /**
     * Limits how many bytes to dump.
     */
-  var length: js.UndefOr[Double] = js.native
+  var length: js.UndefOr[Double] = js.undefined
   /**
     * Specifies byte offset of where to start dumping. Defaults to 0.
     */
-  var offset: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.undefined
 }
 
 object HexdumpOptions {
   @scala.inline
-  def apply(): HexdumpOptions = {
+  def apply(
+    ansi: js.UndefOr[Boolean] = js.undefined,
+    header: js.UndefOr[Boolean] = js.undefined,
+    length: js.UndefOr[Double] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined
+  ): HexdumpOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ansi)) __obj.updateDynamic("ansi")(ansi.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(header)) __obj.updateDynamic("header")(header.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(length)) __obj.updateDynamic("length")(length.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[HexdumpOptions]
   }
-  @scala.inline
-  implicit class HexdumpOptionsOps[Self <: HexdumpOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnsi(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ansi")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnsi: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ansi")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

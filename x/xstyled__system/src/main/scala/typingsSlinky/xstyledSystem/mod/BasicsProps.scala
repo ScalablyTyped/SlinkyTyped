@@ -1,10 +1,11 @@
 package typingsSlinky.xstyledSystem.mod
 
+import typingsSlinky.csstype.mod.GlobalsNumber
+import typingsSlinky.csstype.mod.OverflowProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BasicsProps
   extends OpacityProps
      with OverflowProps
@@ -12,8 +13,15 @@ trait BasicsProps
 
 object BasicsProps {
   @scala.inline
-  def apply(): BasicsProps = {
+  def apply(
+    opacity: ResponsiveValue[GlobalsNumber] = null,
+    overflow: ResponsiveValue[OverflowProperty] = null,
+    transition: ResponsiveValue[String] = null
+  ): BasicsProps = {
     val __obj = js.Dynamic.literal()
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicsProps]
   }
 }

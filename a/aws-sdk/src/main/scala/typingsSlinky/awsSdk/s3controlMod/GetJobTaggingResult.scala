@@ -7,36 +7,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetJobTaggingResult extends js.Object {
   /**
-    * The set of tags associated with the job.
+    * The set of tags associated with the Amazon S3 Batch Operations job.
     */
   var Tags: js.UndefOr[S3TagSet] = js.native
 }
 
 object GetJobTaggingResult {
   @scala.inline
-  def apply(): GetJobTaggingResult = {
+  def apply(Tags: S3TagSet = null): GetJobTaggingResult = {
     val __obj = js.Dynamic.literal()
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetJobTaggingResult]
   }
-  @scala.inline
-  implicit class GetJobTaggingResultOps[Self <: GetJobTaggingResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTags(value: S3TagSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.jaegerClient.mod
 
+import typingsSlinky.opentracing.mod.SpanContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +11,9 @@ class TextMapCodec protected ()
   extends Injector
      with Extractor {
   def this(options: TextMapCodecOptions) = this()
+  /* CompleteClass */
+  override def extract(carrier: js.Any): SpanContext | Null = js.native
+  /* CompleteClass */
+  override def inject(spanContext: SpanContext, carrier: js.Any): Unit = js.native
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.relayRuntime.readerNodeMod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.relayRuntime.anon.FragmentName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,16 +18,72 @@ trait ReaderSelection extends js.Object
 
 object ReaderSelection {
   @scala.inline
-  implicit def apply(value: ReaderClientExtension): ReaderSelection = value.asInstanceOf[ReaderSelection]
+  def ReaderClientExtension(kind: String, selections: js.Array[ReaderSelection]): ReaderSelection = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
   @scala.inline
-  implicit def apply(value: ReaderCondition): ReaderSelection = value.asInstanceOf[ReaderSelection]
+  def ReaderInlineFragment(kind: String, selections: js.Array[ReaderSelection], `type`: String): ReaderSelection = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
   @scala.inline
-  implicit def apply(value: ReaderField): ReaderSelection = value.asInstanceOf[ReaderSelection]
+  def ReaderLinkedField(
+    args: js.Array[ReaderArgument],
+    kind: String,
+    name: String,
+    plural: Boolean,
+    selections: js.Array[ReaderSelection],
+    alias: js.UndefOr[Null | String] = js.undefined,
+    concreteType: js.UndefOr[Null | String] = js.undefined,
+    storageKey: js.UndefOr[Null | String] = js.undefined
+  ): ReaderSelection = {
+    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], plural = plural.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    if (!js.isUndefined(alias)) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (!js.isUndefined(concreteType)) __obj.updateDynamic("concreteType")(concreteType.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageKey)) __obj.updateDynamic("storageKey")(storageKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
   @scala.inline
-  implicit def apply(value: ReaderFragmentSpread): ReaderSelection = value.asInstanceOf[ReaderSelection]
+  def ReaderFragmentSpread(kind: String, name: String, args: js.UndefOr[Null | js.Array[ReaderArgument]] = js.undefined): ReaderSelection = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(args)) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
   @scala.inline
-  implicit def apply(value: ReaderInlineFragment): ReaderSelection = value.asInstanceOf[ReaderSelection]
+  def ReaderCondition(condition: String, kind: String, passingValue: Boolean, selections: js.Array[ReaderSelection]): ReaderSelection = {
+    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], passingValue = passingValue.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
   @scala.inline
-  implicit def apply(value: ReaderMatchField): ReaderSelection = value.asInstanceOf[ReaderSelection]
+  def ReaderScalarField(
+    kind: String,
+    name: String,
+    alias: js.UndefOr[Null | String] = js.undefined,
+    args: js.UndefOr[Null | js.Array[ReaderArgument]] = js.undefined,
+    storageKey: js.UndefOr[Null | String] = js.undefined
+  ): ReaderSelection = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(alias)) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (!js.isUndefined(args)) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageKey)) __obj.updateDynamic("storageKey")(storageKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
+  @scala.inline
+  def ReaderMatchField(
+    kind: String,
+    matchesByType: StringDictionary[FragmentName],
+    name: String,
+    alias: js.UndefOr[Null | String] = js.undefined,
+    args: js.UndefOr[Null | js.Array[ReaderArgument]] = js.undefined,
+    storageKey: js.UndefOr[Null | String] = js.undefined
+  ): ReaderSelection = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], matchesByType = matchesByType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (!js.isUndefined(alias)) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (!js.isUndefined(args)) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (!js.isUndefined(storageKey)) __obj.updateDynamic("storageKey")(storageKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReaderSelection]
+  }
 }
 

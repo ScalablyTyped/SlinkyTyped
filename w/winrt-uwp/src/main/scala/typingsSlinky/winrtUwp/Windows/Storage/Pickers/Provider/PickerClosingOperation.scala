@@ -5,15 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Lets an app that provides files get the deadline for responding to a closing event and get a deferral so the app can respond to the event asynchronously. */
-@js.native
 trait PickerClosingOperation extends js.Object {
   /** Gets a dateTime object that indicates when the system will shut down the app that is providing files through the file picker without further notice. */
-  var deadline: js.Date = js.native
+  var deadline: js.Date
   /**
     * Gets a pickerClosingDeferral that the app providing files through the file picker can use to respond asynchronously to a closing event.
     * @return The pickerClosingDeferral that the app providing files through the file picker can use to respond asynchronously to a closing event.
     */
-  def getDeferral(): PickerClosingDeferral = js.native
+  def getDeferral(): PickerClosingDeferral
 }
 
 object PickerClosingOperation {
@@ -22,25 +21,5 @@ object PickerClosingOperation {
     val __obj = js.Dynamic.literal(deadline = deadline.asInstanceOf[js.Any], getDeferral = js.Any.fromFunction0(getDeferral))
     __obj.asInstanceOf[PickerClosingOperation]
   }
-  @scala.inline
-  implicit class PickerClosingOperationOps[Self <: PickerClosingOperation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeadline(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetDeferral(value: () => PickerClosingDeferral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

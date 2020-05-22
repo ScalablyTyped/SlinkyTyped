@@ -1,47 +1,47 @@
 package typingsSlinky.pem
 
-import typingsSlinky.pem.mod.HashFunction
-import typingsSlinky.pem.mod.PrivateKeyCipher
+import typingsSlinky.pem.mod._HashFunction
+import typingsSlinky.pem.mod._PrivateKeyCipher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object pemStrings {
   @js.native
-  sealed trait aes128 extends PrivateKeyCipher
+  sealed trait aes128 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait aes192 extends PrivateKeyCipher
+  sealed trait aes192 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait aes256 extends PrivateKeyCipher
+  sealed trait aes256 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait camellia128 extends PrivateKeyCipher
+  sealed trait camellia128 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait camellia192 extends PrivateKeyCipher
+  sealed trait camellia192 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait camellia256 extends PrivateKeyCipher
+  sealed trait camellia256 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait des extends PrivateKeyCipher
+  sealed trait des extends _PrivateKeyCipher
   
   @js.native
-  sealed trait des3 extends PrivateKeyCipher
+  sealed trait des3 extends _PrivateKeyCipher
   
   @js.native
-  sealed trait idea extends PrivateKeyCipher
+  sealed trait idea extends _PrivateKeyCipher
   
   @js.native
-  sealed trait md5 extends HashFunction
+  sealed trait md5 extends _HashFunction
   
   @js.native
-  sealed trait sha1 extends HashFunction
+  sealed trait sha1 extends _HashFunction
   
   @js.native
-  sealed trait sha256 extends HashFunction
+  sealed trait sha256 extends _HashFunction
   
   @scala.inline
   def aes128: aes128 = "aes128".asInstanceOf[aes128]

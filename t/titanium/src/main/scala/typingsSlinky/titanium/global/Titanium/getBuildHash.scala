@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object getBuildHash extends js.Object {
   /**
-  	 * Gets the value of the <Titanium.buildHash> property.
-  	 * @deprecated Access <Titanium.buildHash> instead.
-  	 */
+    * Gets the value of the <Titanium.buildHash> property.
+    * @deprecated Access <Titanium.buildHash> instead.
+    */
   def apply(): String = js.native
 }
 

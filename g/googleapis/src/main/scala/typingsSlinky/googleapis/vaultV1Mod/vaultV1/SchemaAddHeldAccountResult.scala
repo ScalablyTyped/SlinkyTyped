@@ -22,41 +22,11 @@ trait SchemaAddHeldAccountResult extends js.Object {
 
 object SchemaAddHeldAccountResult {
   @scala.inline
-  def apply(): SchemaAddHeldAccountResult = {
+  def apply(account: SchemaHeldAccount = null, status: SchemaStatus = null): SchemaAddHeldAccountResult = {
     val __obj = js.Dynamic.literal()
+    if (account != null) __obj.updateDynamic("account")(account.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddHeldAccountResult]
   }
-  @scala.inline
-  implicit class SchemaAddHeldAccountResultOps[Self <: SchemaAddHeldAccountResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccount(value: SchemaHeldAccount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("account")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: SchemaStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

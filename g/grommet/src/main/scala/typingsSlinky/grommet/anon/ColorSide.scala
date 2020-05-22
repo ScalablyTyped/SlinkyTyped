@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColorSide extends js.Object {
-  var color: js.UndefOr[ColorType] = js.native
-  var side: js.UndefOr[String] = js.native
+  var color: js.UndefOr[ColorType] = js.undefined
+  var side: js.UndefOr[String] = js.undefined
 }
 
 object ColorSide {
   @scala.inline
-  def apply(): ColorSide = {
+  def apply(color: ColorType = null, side: String = null): ColorSide = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (side != null) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorSide]
   }
-  @scala.inline
-  implicit class ColorSideOps[Self <: ColorSide] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: ColorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSide(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReportRequest extends js.Object {
   /**
     * Cohort group associated with this request. If there is a cohort group
@@ -12,7 +11,7 @@ trait ReportRequest extends js.Object {
     * Every [ReportRequest](#ReportRequest) within a `batchGet` method must
     * contain the same `cohortGroup` definition.
     */
-  var cohortGroup: js.UndefOr[CohortGroup] = js.native
+  var cohortGroup: js.UndefOr[CohortGroup] = js.undefined
   /**
     * Date ranges in the request. The request can have a maximum of 2 date
     * ranges. The response will contain a set of metric values for each
@@ -26,19 +25,19 @@ trait ReportRequest extends js.Object {
     * [ReportRequest](#ReportRequest) within a `batchGet` method must
     * contain the same `dateRanges` definition.
     */
-  var dateRanges: js.UndefOr[js.Array[DateRange]] = js.native
+  var dateRanges: js.UndefOr[js.Array[DateRange]] = js.undefined
   /**
     * The dimension filter clauses for filtering Dimension Values. They are
     * logically combined with the `AND` operator. Note that filtering occurs
     * before any dimensions are aggregated, so that the returned metrics
     * represent the total for only the relevant dimensions.
     */
-  var dimensionFilterClauses: js.UndefOr[js.Array[DimensionFilterClause]] = js.native
+  var dimensionFilterClauses: js.UndefOr[js.Array[DimensionFilterClause]] = js.undefined
   /**
     * The dimensions requested.
     * Requests can have a total of 7 dimensions.
     */
-  var dimensions: js.UndefOr[js.Array[Dimension]] = js.native
+  var dimensions: js.UndefOr[js.Array[Dimension]] = js.undefined
   /**
     * Dimension or metric filters that restrict the data returned for your
     * request. To use the `filtersExpression`, supply a dimension or metric on
@@ -48,42 +47,42 @@ trait ReportRequest extends js.Object {
     * and metric filters, see
     * [Filters reference](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#filters).
     */
-  var filtersExpression: js.UndefOr[String] = js.native
+  var filtersExpression: js.UndefOr[String] = js.undefined
   /**
     * If set to true, hides the total of all metrics for all the matching rows,
     * for every date range. The default false and will return the totals.
     */
-  var hideTotals: js.UndefOr[Boolean] = js.native
+  var hideTotals: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to true, hides the minimum and maximum across all matching rows.
     * The default is false and the value ranges are returned.
     */
-  var hideValueRanges: js.UndefOr[Boolean] = js.native
+  var hideValueRanges: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to false, the response does not include rows if all the retrieved
     * metrics are equal to zero. The default is false which will exclude these
     * rows.
     */
-  var includeEmptyRows: js.UndefOr[Boolean] = js.native
+  var includeEmptyRows: js.UndefOr[Boolean] = js.undefined
   /**
     * The metric filter clauses. They are logically combined with the `AND`
     * operator.  Metric filters look at only the first date range and not the
     * comparing date range. Note that filtering on metrics occurs after the
     * metrics are aggregated.
     */
-  var metricFilterClauses: js.UndefOr[js.Array[MetricFilterClause]] = js.native
+  var metricFilterClauses: js.UndefOr[js.Array[MetricFilterClause]] = js.undefined
   /**
     * The metrics requested.
     * Requests must specify at least one metric. Requests can have a
     * total of 10 metrics.
     */
-  var metrics: js.UndefOr[js.Array[Metric]] = js.native
+  var metrics: js.UndefOr[js.Array[Metric]] = js.undefined
   /**
     * Sort order on output rows. To compare two rows, the elements of the
     * following are applied in order until a difference is found.  All date
     * ranges in the output get the same row order.
     */
-  var orderBys: js.UndefOr[js.Array[OrderBy]] = js.native
+  var orderBys: js.UndefOr[js.Array[OrderBy]] = js.undefined
   /**
     * Page size is for paging and specifies the maximum number of returned rows.
     * Page size should be >= 0. A query returns the default of 1,000 rows.
@@ -94,16 +93,16 @@ trait ReportRequest extends js.Object {
     * so when segmenting only by country, you can't get more than 300 rows,
     * even if you set `pageSize` to a higher value.
     */
-  var pageSize: js.UndefOr[Double] = js.native
+  var pageSize: js.UndefOr[Double] = js.undefined
   /**
     * A continuation token to get the next page of the results. Adding this to
     * the request will return the rows after the pageToken. The pageToken should
     * be the value returned in the nextPageToken parameter in the response to
     * the GetReports request.
     */
-  var pageToken: js.UndefOr[String] = js.native
+  var pageToken: js.UndefOr[String] = js.undefined
   /** The pivot definitions. Requests can have a maximum of 2 pivots. */
-  var pivots: js.UndefOr[js.Array[Pivot]] = js.native
+  var pivots: js.UndefOr[js.Array[Pivot]] = js.undefined
   /**
     * The desired report
     * [sample](https://support.google.com/analytics/answer/2637192) size.
@@ -113,7 +112,7 @@ trait ReportRequest extends js.Object {
     * [developer guide](/analytics/devguides/reporting/core/v4/basics#sampling)
     * for details.
     */
-  var samplingLevel: js.UndefOr[String] = js.native
+  var samplingLevel: js.UndefOr[String] = js.undefined
   /**
     * Segment the data returned for the request. A segment definition helps look
     * at a subset of the segment request. A request can contain up to four
@@ -121,233 +120,56 @@ trait ReportRequest extends js.Object {
     * `batchGet` method must contain the same `segments` definition. Requests
     * with segments must have the `ga:segment` dimension.
     */
-  var segments: js.UndefOr[js.Array[Segment]] = js.native
+  var segments: js.UndefOr[js.Array[Segment]] = js.undefined
   /**
     * The Analytics
     * [view ID](https://support.google.com/analytics/answer/1009618)
     * from which to retrieve data. Every [ReportRequest](#ReportRequest)
     * within a `batchGet` method must contain the same `viewId`.
     */
-  var viewId: js.UndefOr[String] = js.native
+  var viewId: js.UndefOr[String] = js.undefined
 }
 
 object ReportRequest {
   @scala.inline
-  def apply(): ReportRequest = {
+  def apply(
+    cohortGroup: CohortGroup = null,
+    dateRanges: js.Array[DateRange] = null,
+    dimensionFilterClauses: js.Array[DimensionFilterClause] = null,
+    dimensions: js.Array[Dimension] = null,
+    filtersExpression: String = null,
+    hideTotals: js.UndefOr[Boolean] = js.undefined,
+    hideValueRanges: js.UndefOr[Boolean] = js.undefined,
+    includeEmptyRows: js.UndefOr[Boolean] = js.undefined,
+    metricFilterClauses: js.Array[MetricFilterClause] = null,
+    metrics: js.Array[Metric] = null,
+    orderBys: js.Array[OrderBy] = null,
+    pageSize: js.UndefOr[Double] = js.undefined,
+    pageToken: String = null,
+    pivots: js.Array[Pivot] = null,
+    samplingLevel: String = null,
+    segments: js.Array[Segment] = null,
+    viewId: String = null
+  ): ReportRequest = {
     val __obj = js.Dynamic.literal()
+    if (cohortGroup != null) __obj.updateDynamic("cohortGroup")(cohortGroup.asInstanceOf[js.Any])
+    if (dateRanges != null) __obj.updateDynamic("dateRanges")(dateRanges.asInstanceOf[js.Any])
+    if (dimensionFilterClauses != null) __obj.updateDynamic("dimensionFilterClauses")(dimensionFilterClauses.asInstanceOf[js.Any])
+    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
+    if (filtersExpression != null) __obj.updateDynamic("filtersExpression")(filtersExpression.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideTotals)) __obj.updateDynamic("hideTotals")(hideTotals.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideValueRanges)) __obj.updateDynamic("hideValueRanges")(hideValueRanges.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(includeEmptyRows)) __obj.updateDynamic("includeEmptyRows")(includeEmptyRows.get.asInstanceOf[js.Any])
+    if (metricFilterClauses != null) __obj.updateDynamic("metricFilterClauses")(metricFilterClauses.asInstanceOf[js.Any])
+    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
+    if (orderBys != null) __obj.updateDynamic("orderBys")(orderBys.asInstanceOf[js.Any])
+    if (!js.isUndefined(pageSize)) __obj.updateDynamic("pageSize")(pageSize.get.asInstanceOf[js.Any])
+    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
+    if (pivots != null) __obj.updateDynamic("pivots")(pivots.asInstanceOf[js.Any])
+    if (samplingLevel != null) __obj.updateDynamic("samplingLevel")(samplingLevel.asInstanceOf[js.Any])
+    if (segments != null) __obj.updateDynamic("segments")(segments.asInstanceOf[js.Any])
+    if (viewId != null) __obj.updateDynamic("viewId")(viewId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportRequest]
   }
-  @scala.inline
-  implicit class ReportRequestOps[Self <: ReportRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCohortGroup(value: CohortGroup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cohortGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCohortGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cohortGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateRanges(value: js.Array[DateRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensionFilterClauses(value: js.Array[DimensionFilterClause]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilterClauses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensionFilterClauses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilterClauses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: js.Array[Dimension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDimensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiltersExpression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filtersExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiltersExpression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filtersExpression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideTotals(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTotals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideTotals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTotals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideValueRanges(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideValueRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideValueRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideValueRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeEmptyRows(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeEmptyRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeEmptyRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("includeEmptyRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetricFilterClauses(value: js.Array[MetricFilterClause]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricFilterClauses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricFilterClauses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metricFilterClauses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetrics(value: js.Array[Metric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderBys(value: js.Array[OrderBy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderBys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivots(value: js.Array[Pivot]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplingLevel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplingLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegments(value: js.Array[Segment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -12,7 +12,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling "paragraph.toJSON()". */
-@js.native
 trait ParagraphData extends js.Object {
   /**
     *
@@ -20,119 +19,119 @@ trait ParagraphData extends js.Object {
     *
     * [Api set: WordApi 1.1]
     */
-  var alignment: js.UndefOr[Alignment | Mixed | Unknown_ | Left | Centered | Right | Justified] = js.native
+  var alignment: js.UndefOr[Alignment | Mixed | Unknown_ | Left | Centered | Right | Justified] = js.undefined
   /**
     *
     * Gets or sets the value, in points, for a first line or hanging indent. Use a positive value to set a first-line indent, and use a negative value to set a hanging indent.
     *
     * [Api set: WordApi 1.1]
     */
-  var firstLineIndent: js.UndefOr[Double] = js.native
+  var firstLineIndent: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets the text format of the paragraph. Use this to get and set font name, size, color, and other properties. Read-only.
     *
     * [Api set: WordApi 1.1]
     */
-  var font: js.UndefOr[FontData] = js.native
+  var font: js.UndefOr[FontData] = js.undefined
   /**
     *
     * Gets the collection of InlinePicture objects in the paragraph. The collection does not include floating images. Read-only.
     *
     * [Api set: WordApi 1.1]
     */
-  var inlinePictures: js.UndefOr[js.Array[InlinePictureData]] = js.native
+  var inlinePictures: js.UndefOr[js.Array[InlinePictureData]] = js.undefined
   /**
     *
     * Indicates the paragraph is the last one inside its parent body. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var isLastParagraph: js.UndefOr[Boolean] = js.native
+  var isLastParagraph: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Checks whether the paragraph is a list item. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var isListItem: js.UndefOr[Boolean] = js.native
+  var isListItem: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * Gets or sets the left indent value, in points, for the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var leftIndent: js.UndefOr[Double] = js.native
+  var leftIndent: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the line spacing, in points, for the specified paragraph. In the Word UI, this value is divided by 12.
     *
     * [Api set: WordApi 1.1]
     */
-  var lineSpacing: js.UndefOr[Double] = js.native
+  var lineSpacing: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the amount of spacing, in grid lines, after the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var lineUnitAfter: js.UndefOr[Double] = js.native
+  var lineUnitAfter: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the amount of spacing, in grid lines, before the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var lineUnitBefore: js.UndefOr[Double] = js.native
+  var lineUnitBefore: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets the ListItem for the paragraph. Throws an error if the paragraph is not part of a list. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var listItem: js.UndefOr[ListItemData] = js.native
+  var listItem: js.UndefOr[ListItemData] = js.undefined
   /**
     *
     * Gets the ListItem for the paragraph. Returns a null object if the paragraph is not part of a list. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var listItemOrNullObject: js.UndefOr[ListItemData] = js.native
+  var listItemOrNullObject: js.UndefOr[ListItemData] = js.undefined
   /**
     *
     * Gets or sets the outline level for the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var outlineLevel: js.UndefOr[Double] = js.native
+  var outlineLevel: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the right indent value, in points, for the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var rightIndent: js.UndefOr[Double] = js.native
+  var rightIndent: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the spacing, in points, after the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var spaceAfter: js.UndefOr[Double] = js.native
+  var spaceAfter: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the spacing, in points, before the paragraph.
     *
     * [Api set: WordApi 1.1]
     */
-  var spaceBefore: js.UndefOr[Double] = js.native
+  var spaceBefore: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets or sets the style name for the paragraph. Use this property for custom styles and localized style names. To use the built-in styles that are portable between locales, see the "styleBuiltIn" property.
     *
     * [Api set: WordApi 1.1]
     */
-  var style: js.UndefOr[String] = js.native
+  var style: js.UndefOr[String] = js.undefined
   /**
     *
     * Gets or sets the built-in style name for the paragraph. Use this property for built-in styles that are portable between locales. To use custom styles or localized style names, see the "style" property.
@@ -141,276 +140,69 @@ trait ParagraphData extends js.Object {
     */
   var styleBuiltIn: js.UndefOr[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 150 */ js.Any
-  ] = js.native
+  ] = js.undefined
   /**
     *
     * Gets the level of the paragraph's table. It returns 0 if the paragraph is not in a table. Read-only.
     *
     * [Api set: WordApi 1.3]
     */
-  var tableNestingLevel: js.UndefOr[Double] = js.native
+  var tableNestingLevel: js.UndefOr[Double] = js.undefined
   /**
     *
     * Gets the text of the paragraph. Read-only.
     *
     * [Api set: WordApi 1.1]
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
 }
 
 object ParagraphData {
   @scala.inline
-  def apply(): ParagraphData = {
+  def apply(
+    alignment: Alignment | Mixed | Unknown_ | Left | Centered | Right | Justified = null,
+    firstLineIndent: js.UndefOr[Double] = js.undefined,
+    font: FontData = null,
+    inlinePictures: js.Array[InlinePictureData] = null,
+    isLastParagraph: js.UndefOr[Boolean] = js.undefined,
+    isListItem: js.UndefOr[Boolean] = js.undefined,
+    leftIndent: js.UndefOr[Double] = js.undefined,
+    lineSpacing: js.UndefOr[Double] = js.undefined,
+    lineUnitAfter: js.UndefOr[Double] = js.undefined,
+    lineUnitBefore: js.UndefOr[Double] = js.undefined,
+    listItem: ListItemData = null,
+    listItemOrNullObject: ListItemData = null,
+    outlineLevel: js.UndefOr[Double] = js.undefined,
+    rightIndent: js.UndefOr[Double] = js.undefined,
+    spaceAfter: js.UndefOr[Double] = js.undefined,
+    spaceBefore: js.UndefOr[Double] = js.undefined,
+    style: String = null,
+    styleBuiltIn: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 150 */ js.Any = null,
+    tableNestingLevel: js.UndefOr[Double] = js.undefined,
+    text: String = null
+  ): ParagraphData = {
     val __obj = js.Dynamic.literal()
+    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
+    if (!js.isUndefined(firstLineIndent)) __obj.updateDynamic("firstLineIndent")(firstLineIndent.get.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (inlinePictures != null) __obj.updateDynamic("inlinePictures")(inlinePictures.asInstanceOf[js.Any])
+    if (!js.isUndefined(isLastParagraph)) __obj.updateDynamic("isLastParagraph")(isLastParagraph.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isListItem)) __obj.updateDynamic("isListItem")(isListItem.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(leftIndent)) __obj.updateDynamic("leftIndent")(leftIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineSpacing)) __obj.updateDynamic("lineSpacing")(lineSpacing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineUnitAfter)) __obj.updateDynamic("lineUnitAfter")(lineUnitAfter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineUnitBefore)) __obj.updateDynamic("lineUnitBefore")(lineUnitBefore.get.asInstanceOf[js.Any])
+    if (listItem != null) __obj.updateDynamic("listItem")(listItem.asInstanceOf[js.Any])
+    if (listItemOrNullObject != null) __obj.updateDynamic("listItemOrNullObject")(listItemOrNullObject.asInstanceOf[js.Any])
+    if (!js.isUndefined(outlineLevel)) __obj.updateDynamic("outlineLevel")(outlineLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rightIndent)) __obj.updateDynamic("rightIndent")(rightIndent.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spaceAfter)) __obj.updateDynamic("spaceAfter")(spaceAfter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(spaceBefore)) __obj.updateDynamic("spaceBefore")(spaceBefore.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styleBuiltIn != null) __obj.updateDynamic("styleBuiltIn")(styleBuiltIn.asInstanceOf[js.Any])
+    if (!js.isUndefined(tableNestingLevel)) __obj.updateDynamic("tableNestingLevel")(tableNestingLevel.get.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParagraphData]
   }
-  @scala.inline
-  implicit class ParagraphDataOps[Self <: ParagraphData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlignment(value: Alignment | Mixed | Unknown_ | Left | Centered | Right | Justified): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlignment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstLineIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLineIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstLineIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLineIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFont(value: FontData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFont: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlinePictures(value: js.Array[InlinePictureData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlinePictures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlinePictures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlinePictures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsLastParagraph(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLastParagraph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsLastParagraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isLastParagraph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsListItem(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isListItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsListItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isListItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLeftIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLeftIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leftIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineSpacing(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineSpacing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineUnitAfter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineUnitAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineUnitAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineUnitAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineUnitBefore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineUnitBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineUnitBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineUnitBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItem(value: ListItemData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withListItemOrNullObject(value: ListItemData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemOrNullObject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutListItemOrNullObject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("listItemOrNullObject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutlineLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutlineLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRightIndent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIndent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRightIndent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rightIndent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpaceAfter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpaceAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpaceBefore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBefore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpaceBefore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBefore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleBuiltIn(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 150 */ js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBuiltIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyleBuiltIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styleBuiltIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableNestingLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableNestingLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableNestingLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableNestingLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

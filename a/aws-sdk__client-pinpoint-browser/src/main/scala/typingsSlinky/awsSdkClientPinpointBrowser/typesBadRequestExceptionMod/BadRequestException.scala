@@ -77,7 +77,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BadRequestException
   extends ServiceException[BadRequestExceptionDetails]
      with CreateAppExceptionsUnion
@@ -152,7 +151,7 @@ trait BadRequestException
      with UpdateSegmentExceptionsUnion
      with UpdateSmsChannelExceptionsUnion {
   @JSName("name")
-  var name_BadRequestException: typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BadRequestException = js.native
+  var name_BadRequestException: typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BadRequestException
 }
 
 object BadRequestException {
@@ -161,26 +160,12 @@ object BadRequestException {
     $metadata: ResponseMetadata,
     details: BadRequestExceptionDetails,
     message: String,
-    name: typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BadRequestException
+    name: typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BadRequestException,
+    stack: String = null
   ): BadRequestException = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadRequestException]
   }
-  @scala.inline
-  implicit class BadRequestExceptionOps[Self <: BadRequestException] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(
-      value: typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.BadRequestException
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

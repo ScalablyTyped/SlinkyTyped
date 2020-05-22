@@ -9,679 +9,165 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait calendarConfig extends js.Object {
-  var animate: js.UndefOr[js.Any] = js.native
-  var blockDates: js.UndefOr[WebixCallback] = js.native
-  var blockTime: js.UndefOr[WebixCallback] = js.native
-  var borderless: js.UndefOr[Boolean] = js.native
-  var calendarHeader: js.UndefOr[String] = js.native
-  var calendarTime: js.UndefOr[String] = js.native
-  var calendarWeekHeader: js.UndefOr[String] = js.native
-  var cellHeight: js.UndefOr[Double | String] = js.native
-  var container: js.UndefOr[String | HTMLElement] = js.native
-  var css: js.UndefOr[js.Any] = js.native
-  var date: js.UndefOr[Date | String] = js.native
-  var dayTemplate: js.UndefOr[WebixCallback] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var events: js.UndefOr[WebixCallback] = js.native
-  var gravity: js.UndefOr[Double] = js.native
-  var headerHeight: js.UndefOr[Double] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var hidden: js.UndefOr[Boolean] = js.native
-  var icons: js.UndefOr[js.Any] = js.native
-  var id: js.UndefOr[String | Double] = js.native
-  var keyPressTimeout: js.UndefOr[Double] = js.native
-  var maxDate: js.UndefOr[Date | String] = js.native
-  var maxHeight: js.UndefOr[Double] = js.native
-  var maxTime: js.UndefOr[String] = js.native
-  var maxWidth: js.UndefOr[Double] = js.native
-  var minDate: js.UndefOr[Date | String] = js.native
-  var minHeight: js.UndefOr[Double] = js.native
-  var minTime: js.UndefOr[String] = js.native
-  var minWidth: js.UndefOr[Double] = js.native
-  var minuteStep: js.UndefOr[Double] = js.native
-  var monthHeader: js.UndefOr[Boolean] = js.native
-  var monthSelect: js.UndefOr[Boolean] = js.native
-  var mouseEventDelay: js.UndefOr[Double] = js.native
-  var multiselect: js.UndefOr[Boolean | String] = js.native
-  var navigation: js.UndefOr[Boolean] = js.native
-  var on: js.UndefOr[EventHash] = js.native
-  var onClick: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var onContext: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var onDblClick: js.UndefOr[WebixCallback] = js.native
-  var onMouseMove: js.UndefOr[WebixCallback] = js.native
-  var select: js.UndefOr[Boolean] = js.native
-  var skipEmptyWeeks: js.UndefOr[Boolean] = js.native
-  var timeIcon: js.UndefOr[String] = js.native
-  var timepicker: js.UndefOr[Boolean] = js.native
-  var timepickerHeight: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var view: js.UndefOr[String] = js.native
-  var weekHeader: js.UndefOr[Boolean] = js.native
-  var weekNumber: js.UndefOr[Boolean] = js.native
-  var width: js.UndefOr[Double] = js.native
+  var animate: js.UndefOr[js.Any] = js.undefined
+  var blockDates: js.UndefOr[WebixCallback] = js.undefined
+  var blockTime: js.UndefOr[WebixCallback] = js.undefined
+  var borderless: js.UndefOr[Boolean] = js.undefined
+  var calendarHeader: js.UndefOr[String] = js.undefined
+  var calendarTime: js.UndefOr[String] = js.undefined
+  var calendarWeekHeader: js.UndefOr[String] = js.undefined
+  var cellHeight: js.UndefOr[Double | String] = js.undefined
+  var container: js.UndefOr[String | HTMLElement] = js.undefined
+  var css: js.UndefOr[js.Any] = js.undefined
+  var date: js.UndefOr[Date | String] = js.undefined
+  var dayTemplate: js.UndefOr[WebixCallback] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var events: js.UndefOr[WebixCallback] = js.undefined
+  var gravity: js.UndefOr[Double] = js.undefined
+  var headerHeight: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
+  var icons: js.UndefOr[js.Any] = js.undefined
+  var id: js.UndefOr[String | Double] = js.undefined
+  var keyPressTimeout: js.UndefOr[Double] = js.undefined
+  var maxDate: js.UndefOr[Date | String] = js.undefined
+  var maxHeight: js.UndefOr[Double] = js.undefined
+  var maxTime: js.UndefOr[String] = js.undefined
+  var maxWidth: js.UndefOr[Double] = js.undefined
+  var minDate: js.UndefOr[Date | String] = js.undefined
+  var minHeight: js.UndefOr[Double] = js.undefined
+  var minTime: js.UndefOr[String] = js.undefined
+  var minWidth: js.UndefOr[Double] = js.undefined
+  var minuteStep: js.UndefOr[Double] = js.undefined
+  var monthHeader: js.UndefOr[Boolean] = js.undefined
+  var monthSelect: js.UndefOr[Boolean] = js.undefined
+  var mouseEventDelay: js.UndefOr[Double] = js.undefined
+  var multiselect: js.UndefOr[Boolean | String] = js.undefined
+  var navigation: js.UndefOr[Boolean] = js.undefined
+  var on: js.UndefOr[EventHash] = js.undefined
+  var onClick: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var onContext: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var onDblClick: js.UndefOr[WebixCallback] = js.undefined
+  var onMouseMove: js.UndefOr[WebixCallback] = js.undefined
+  var select: js.UndefOr[Boolean] = js.undefined
+  var skipEmptyWeeks: js.UndefOr[Boolean] = js.undefined
+  var timeIcon: js.UndefOr[String] = js.undefined
+  var timepicker: js.UndefOr[Boolean] = js.undefined
+  var timepickerHeight: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var view: js.UndefOr[String] = js.undefined
+  var weekHeader: js.UndefOr[Boolean] = js.undefined
+  var weekNumber: js.UndefOr[Boolean] = js.undefined
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object calendarConfig {
   @scala.inline
-  def apply(): calendarConfig = {
+  def apply(
+    animate: js.Any = null,
+    blockDates: /* repeated */ js.Any => js.Any = null,
+    blockTime: /* repeated */ js.Any => js.Any = null,
+    borderless: js.UndefOr[Boolean] = js.undefined,
+    calendarHeader: String = null,
+    calendarTime: String = null,
+    calendarWeekHeader: String = null,
+    cellHeight: Double | String = null,
+    container: String | HTMLElement = null,
+    css: js.Any = null,
+    date: Date | String = null,
+    dayTemplate: /* repeated */ js.Any => js.Any = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    events: /* repeated */ js.Any => js.Any = null,
+    gravity: js.UndefOr[Double] = js.undefined,
+    headerHeight: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    hidden: js.UndefOr[Boolean] = js.undefined,
+    icons: js.Any = null,
+    id: String | Double = null,
+    keyPressTimeout: js.UndefOr[Double] = js.undefined,
+    maxDate: Date | String = null,
+    maxHeight: js.UndefOr[Double] = js.undefined,
+    maxTime: String = null,
+    maxWidth: js.UndefOr[Double] = js.undefined,
+    minDate: Date | String = null,
+    minHeight: js.UndefOr[Double] = js.undefined,
+    minTime: String = null,
+    minWidth: js.UndefOr[Double] = js.undefined,
+    minuteStep: js.UndefOr[Double] = js.undefined,
+    monthHeader: js.UndefOr[Boolean] = js.undefined,
+    monthSelect: js.UndefOr[Boolean] = js.undefined,
+    mouseEventDelay: js.UndefOr[Double] = js.undefined,
+    multiselect: Boolean | String = null,
+    navigation: js.UndefOr[Boolean] = js.undefined,
+    on: EventHash = null,
+    onClick: StringDictionary[js.Any] = null,
+    onContext: StringDictionary[js.Any] = null,
+    onDblClick: /* repeated */ js.Any => js.Any = null,
+    onMouseMove: /* repeated */ js.Any => js.Any = null,
+    select: js.UndefOr[Boolean] = js.undefined,
+    skipEmptyWeeks: js.UndefOr[Boolean] = js.undefined,
+    timeIcon: String = null,
+    timepicker: js.UndefOr[Boolean] = js.undefined,
+    timepickerHeight: js.UndefOr[Double] = js.undefined,
+    `type`: String = null,
+    view: String = null,
+    weekHeader: js.UndefOr[Boolean] = js.undefined,
+    weekNumber: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): calendarConfig = {
     val __obj = js.Dynamic.literal()
+    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
+    if (blockDates != null) __obj.updateDynamic("blockDates")(js.Any.fromFunction1(blockDates))
+    if (blockTime != null) __obj.updateDynamic("blockTime")(js.Any.fromFunction1(blockTime))
+    if (!js.isUndefined(borderless)) __obj.updateDynamic("borderless")(borderless.get.asInstanceOf[js.Any])
+    if (calendarHeader != null) __obj.updateDynamic("calendarHeader")(calendarHeader.asInstanceOf[js.Any])
+    if (calendarTime != null) __obj.updateDynamic("calendarTime")(calendarTime.asInstanceOf[js.Any])
+    if (calendarWeekHeader != null) __obj.updateDynamic("calendarWeekHeader")(calendarWeekHeader.asInstanceOf[js.Any])
+    if (cellHeight != null) __obj.updateDynamic("cellHeight")(cellHeight.asInstanceOf[js.Any])
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
+    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
+    if (dayTemplate != null) __obj.updateDynamic("dayTemplate")(js.Any.fromFunction1(dayTemplate))
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(js.Any.fromFunction1(events))
+    if (!js.isUndefined(gravity)) __obj.updateDynamic("gravity")(gravity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(headerHeight)) __obj.updateDynamic("headerHeight")(headerHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyPressTimeout)) __obj.updateDynamic("keyPressTimeout")(keyPressTimeout.get.asInstanceOf[js.Any])
+    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxHeight)) __obj.updateDynamic("maxHeight")(maxHeight.get.asInstanceOf[js.Any])
+    if (maxTime != null) __obj.updateDynamic("maxTime")(maxTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxWidth)) __obj.updateDynamic("maxWidth")(maxWidth.get.asInstanceOf[js.Any])
+    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(minHeight)) __obj.updateDynamic("minHeight")(minHeight.get.asInstanceOf[js.Any])
+    if (minTime != null) __obj.updateDynamic("minTime")(minTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWidth)) __obj.updateDynamic("minWidth")(minWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minuteStep)) __obj.updateDynamic("minuteStep")(minuteStep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(monthHeader)) __obj.updateDynamic("monthHeader")(monthHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(monthSelect)) __obj.updateDynamic("monthSelect")(monthSelect.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mouseEventDelay)) __obj.updateDynamic("mouseEventDelay")(mouseEventDelay.get.asInstanceOf[js.Any])
+    if (multiselect != null) __obj.updateDynamic("multiselect")(multiselect.asInstanceOf[js.Any])
+    if (!js.isUndefined(navigation)) __obj.updateDynamic("navigation")(navigation.get.asInstanceOf[js.Any])
+    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
+    if (onContext != null) __obj.updateDynamic("onContext")(onContext.asInstanceOf[js.Any])
+    if (onDblClick != null) __obj.updateDynamic("onDblClick")(js.Any.fromFunction1(onDblClick))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (!js.isUndefined(select)) __obj.updateDynamic("select")(select.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipEmptyWeeks)) __obj.updateDynamic("skipEmptyWeeks")(skipEmptyWeeks.get.asInstanceOf[js.Any])
+    if (timeIcon != null) __obj.updateDynamic("timeIcon")(timeIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(timepicker)) __obj.updateDynamic("timepicker")(timepicker.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timepickerHeight)) __obj.updateDynamic("timepickerHeight")(timepickerHeight.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
+    if (!js.isUndefined(weekHeader)) __obj.updateDynamic("weekHeader")(weekHeader.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(weekNumber)) __obj.updateDynamic("weekNumber")(weekNumber.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[calendarConfig]
   }
-  @scala.inline
-  implicit class calendarConfigOps[Self <: calendarConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimate(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockDates(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockDates")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBlockDates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockDates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockTime(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockTime")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBlockTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderless(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderless: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendarHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendarHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendarTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendarTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendarWeekHeader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarWeekHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendarWeekHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarWeekHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellHeight(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerHTMLElement(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: String | HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDate(value: Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDayTemplate(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayTemplate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDayTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dayTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcons(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyPressTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPressTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPressTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: Date | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinuteStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinuteStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMonthSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMonthSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("monthSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouseEventDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEventDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouseEventDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEventDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiselect(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiselect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiselect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNavigation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNavigation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOn(value: EventHash): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnClick(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnContext(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDblClick(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDblClick")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnDblClick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDblClick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnMouseMove(value: /* repeated */ js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnMouseMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipEmptyWeeks(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipEmptyWeeks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipEmptyWeeks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipEmptyWeeks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimepicker(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timepicker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimepicker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timepicker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimepickerHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timepickerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimepickerHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timepickerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeekNumber(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeekNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weekNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

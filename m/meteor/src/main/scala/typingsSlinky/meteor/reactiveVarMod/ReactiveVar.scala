@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReactiveVar[T] extends js.Object {
-  def get(): T = js.native
-  def set(newValue: T): Unit = js.native
+  def get(): T
+  def set(newValue: T): Unit
 }
 
 @JSImport("meteor/reactive-var", "ReactiveVar")

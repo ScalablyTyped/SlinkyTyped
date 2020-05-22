@@ -14,13 +14,12 @@ import scala.scalajs.js.annotation._
   * @see XFrame.addFrameActionListener()
   * @see XFrame.removeFrameActionListener()
   */
-@js.native
 trait XFrameActionListener extends XEventListener {
   /**
     * is called whenever any action occurs to a component within a frame.
     * @param Action describes the detected frame action for which the listener can react
     */
-  def frameAction(Action: FrameActionEvent): Unit = js.native
+  def frameAction(Action: FrameActionEvent): Unit
 }
 
 object XFrameActionListener {
@@ -35,19 +34,5 @@ object XFrameActionListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), frameAction = js.Any.fromFunction1(frameAction), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XFrameActionListener]
   }
-  @scala.inline
-  implicit class XFrameActionListenerOps[Self <: XFrameActionListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameAction(value: FrameActionEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameAction")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

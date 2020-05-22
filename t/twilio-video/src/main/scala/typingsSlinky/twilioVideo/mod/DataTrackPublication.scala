@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait DataTrackPublication extends js.Object
 
-object DataTrackPublication {
-  @scala.inline
-  implicit def apply(value: LocalDataTrackPublication): DataTrackPublication = value.asInstanceOf[DataTrackPublication]
-  @scala.inline
-  implicit def apply(value: RemoteDataTrackPublication): DataTrackPublication = value.asInstanceOf[DataTrackPublication]
-}
-

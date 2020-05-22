@@ -5,167 +5,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ClientConfigurationType extends js.Object {
   /** Dictates whether to capture stack trace before executing query. Middlewares access stack trace through query execution context. (Default: true) */
-  var captureStackTrace: js.UndefOr[Boolean] = js.native
+  var captureStackTrace: js.UndefOr[Boolean] = js.undefined
   /** Number of times to retry establishing a new connection. (Default: 3) */
-  var connectionRetryLimit: js.UndefOr[Double] = js.native
+  var connectionRetryLimit: js.UndefOr[Double] = js.undefined
   /** connectionTimeout Timeout (in milliseconds) after which an error is raised if connection cannot cannot be established. (Default: 5000) */
-  var connectionTimeout: js.UndefOr[Double | DISABLE_TIMEOUT] = js.native
+  var connectionTimeout: js.UndefOr[Double | DISABLE_TIMEOUT] = js.undefined
   /** idleInTransactionSessionTimeout Timeout (in milliseconds) after which idle clients are closed. Use 'DISABLE_TIMEOUT' constant to disable the timeout. (Default: 60000) */
-  var idleInTransactionSessionTimeout: js.UndefOr[Double | DISABLE_TIMEOUT] = js.native
+  var idleInTransactionSessionTimeout: js.UndefOr[Double | DISABLE_TIMEOUT] = js.undefined
   /** Timeout (in milliseconds) after which idle clients are closed. (Default: 5000) */
-  var idleTimeout: js.UndefOr[Double] = js.native
+  var idleTimeout: js.UndefOr[Double] = js.undefined
   /**
     * An array of [Slonik interceptors](https://github.com/gajus/slonik#slonik-interceptors)
     */
-  var interceptors: js.UndefOr[js.Array[InterceptorType]] = js.native
+  var interceptors: js.UndefOr[js.Array[InterceptorType]] = js.undefined
   /** Do not allow more than this many connections. (Default: 10) */
-  var maximumPoolSize: js.UndefOr[Double] = js.native
+  var maximumPoolSize: js.UndefOr[Double] = js.undefined
   /** Uses libpq bindings when `pg-native` module is installed. (Default: true) */
-  var preferNativeBindings: js.UndefOr[Boolean] = js.native
+  var preferNativeBindings: js.UndefOr[Boolean] = js.undefined
   /** Timeout (in milliseconds) after which database is instructed to abort the query. Use 'DISABLE_TIMEOUT' constant to disable the timeout. (Default: 60000) */
-  var statementTimeout: js.UndefOr[Double | DISABLE_TIMEOUT] = js.native
+  var statementTimeout: js.UndefOr[Double | DISABLE_TIMEOUT] = js.undefined
   /**
     * An array of [Slonik type parsers](https://github.com/gajus/slonik#slonik-type-parsers)
     */
-  var typeParsers: js.UndefOr[js.Array[TypeParserType[_]]] = js.native
+  var typeParsers: js.UndefOr[js.Array[TypeParserType[_]]] = js.undefined
 }
 
 object ClientConfigurationType {
   @scala.inline
-  def apply(): ClientConfigurationType = {
+  def apply(
+    captureStackTrace: js.UndefOr[Boolean] = js.undefined,
+    connectionRetryLimit: js.UndefOr[Double] = js.undefined,
+    connectionTimeout: Double | DISABLE_TIMEOUT = null,
+    idleInTransactionSessionTimeout: Double | DISABLE_TIMEOUT = null,
+    idleTimeout: js.UndefOr[Double] = js.undefined,
+    interceptors: js.Array[InterceptorType] = null,
+    maximumPoolSize: js.UndefOr[Double] = js.undefined,
+    preferNativeBindings: js.UndefOr[Boolean] = js.undefined,
+    statementTimeout: Double | DISABLE_TIMEOUT = null,
+    typeParsers: js.Array[TypeParserType[_]] = null
+  ): ClientConfigurationType = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(captureStackTrace)) __obj.updateDynamic("captureStackTrace")(captureStackTrace.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(connectionRetryLimit)) __obj.updateDynamic("connectionRetryLimit")(connectionRetryLimit.get.asInstanceOf[js.Any])
+    if (connectionTimeout != null) __obj.updateDynamic("connectionTimeout")(connectionTimeout.asInstanceOf[js.Any])
+    if (idleInTransactionSessionTimeout != null) __obj.updateDynamic("idleInTransactionSessionTimeout")(idleInTransactionSessionTimeout.asInstanceOf[js.Any])
+    if (!js.isUndefined(idleTimeout)) __obj.updateDynamic("idleTimeout")(idleTimeout.get.asInstanceOf[js.Any])
+    if (interceptors != null) __obj.updateDynamic("interceptors")(interceptors.asInstanceOf[js.Any])
+    if (!js.isUndefined(maximumPoolSize)) __obj.updateDynamic("maximumPoolSize")(maximumPoolSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preferNativeBindings)) __obj.updateDynamic("preferNativeBindings")(preferNativeBindings.get.asInstanceOf[js.Any])
+    if (statementTimeout != null) __obj.updateDynamic("statementTimeout")(statementTimeout.asInstanceOf[js.Any])
+    if (typeParsers != null) __obj.updateDynamic("typeParsers")(typeParsers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientConfigurationType]
   }
-  @scala.inline
-  implicit class ClientConfigurationTypeOps[Self <: ClientConfigurationType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptureStackTrace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureStackTrace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptureStackTrace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captureStackTrace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionRetryLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionRetryLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionRetryLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionRetryLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnectionTimeout(value: Double | DISABLE_TIMEOUT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnectionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleInTransactionSessionTimeout(value: Double | DISABLE_TIMEOUT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleInTransactionSessionTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleInTransactionSessionTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleInTransactionSessionTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleTimeout(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInterceptors(value: js.Array[InterceptorType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInterceptors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("interceptors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumPoolSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPoolSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumPoolSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPoolSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreferNativeBindings(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferNativeBindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreferNativeBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preferNativeBindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatementTimeout(value: Double | DISABLE_TIMEOUT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statementTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatementTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statementTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeParsers(value: js.Array[TypeParserType[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParsers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeParsers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParsers")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,93 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait WorkspaceProposalHistory extends js.Object {
   /** A user or reviewer comment. */
-  var comment: js.UndefOr[WorkspaceProposalHistoryComment] = js.native
+  var comment: js.UndefOr[WorkspaceProposalHistoryComment] = js.undefined
   /** The party responsible for the change in history. */
-  var createdBy: js.UndefOr[WorkspaceProposalUser] = js.native
+  var createdBy: js.UndefOr[WorkspaceProposalUser] = js.undefined
   /** When this history event was added to the workspace proposal. */
-  var createdTimestamp: js.UndefOr[Timestamp] = js.native
+  var createdTimestamp: js.UndefOr[Timestamp] = js.undefined
   /** A change in the proposal's status. */
-  var statusChange: js.UndefOr[WorkspaceProposalHistoryStatusChange] = js.native
+  var statusChange: js.UndefOr[WorkspaceProposalHistoryStatusChange] = js.undefined
   /** The history type distinguishing between comments and status changes. */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object WorkspaceProposalHistory {
   @scala.inline
-  def apply(): WorkspaceProposalHistory = {
+  def apply(
+    comment: WorkspaceProposalHistoryComment = null,
+    createdBy: WorkspaceProposalUser = null,
+    createdTimestamp: Timestamp = null,
+    statusChange: WorkspaceProposalHistoryStatusChange = null,
+    `type`: String = null
+  ): WorkspaceProposalHistory = {
     val __obj = js.Dynamic.literal()
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (createdBy != null) __obj.updateDynamic("createdBy")(createdBy.asInstanceOf[js.Any])
+    if (createdTimestamp != null) __obj.updateDynamic("createdTimestamp")(createdTimestamp.asInstanceOf[js.Any])
+    if (statusChange != null) __obj.updateDynamic("statusChange")(statusChange.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspaceProposalHistory]
   }
-  @scala.inline
-  implicit class WorkspaceProposalHistoryOps[Self <: WorkspaceProposalHistory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComment(value: WorkspaceProposalHistoryComment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedBy(value: WorkspaceProposalUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreatedTimestamp(value: Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTimestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreatedTimestamp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTimestamp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusChange(value: WorkspaceProposalHistoryStatusChange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,6 +11,12 @@ object binaryopGpuMod extends js.Object {
   @js.native
   class BinaryOpProgram protected () extends GPGPUProgram {
     def this(op: String, aShape: js.Array[Double], bShape: js.Array[Double]) = this()
+    /* CompleteClass */
+    override var outputShape: js.Array[Double] = js.native
+    /* CompleteClass */
+    override var userCode: String = js.native
+    /* CompleteClass */
+    override var variableNames: js.Array[String] = js.native
   }
   
   val ADD: /* "return a + b;" */ String = js.native

@@ -5,86 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InlineQueryResultCachedVideo
   extends InlineQueryResultBase
      with InlineQueryResult {
-  var caption: js.UndefOr[String] = js.native
-  var description: js.UndefOr[String] = js.native
-  var input_message_content: js.UndefOr[InputMessageContent] = js.native
-  var title: String = js.native
-  var `type`: video = js.native
-  var video_file_id: String = js.native
+  var caption: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.undefined
+  var input_message_content: js.UndefOr[InputMessageContent] = js.undefined
+  var title: String
+  var `type`: video
+  var video_file_id: String
 }
 
 object InlineQueryResultCachedVideo {
   @scala.inline
-  def apply(id: String, title: String, `type`: video, video_file_id: String): InlineQueryResultCachedVideo = {
+  def apply(
+    id: String,
+    title: String,
+    `type`: video,
+    video_file_id: String,
+    caption: String = null,
+    description: String = null,
+    input_message_content: InputMessageContent = null,
+    reply_markup: InlineKeyboardMarkup = null
+  ): InlineQueryResultCachedVideo = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], video_file_id = video_file_id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (input_message_content != null) __obj.updateDynamic("input_message_content")(input_message_content.asInstanceOf[js.Any])
+    if (reply_markup != null) __obj.updateDynamic("reply_markup")(reply_markup.asInstanceOf[js.Any])
     __obj.asInstanceOf[InlineQueryResultCachedVideo]
   }
-  @scala.inline
-  implicit class InlineQueryResultCachedVideoOps[Self <: InlineQueryResultCachedVideo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: video): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo_file_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_file_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCaption(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInput_message_content(value: InputMessageContent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input_message_content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput_message_content: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input_message_content")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

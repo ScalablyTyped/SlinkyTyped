@@ -30,53 +30,16 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse 
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse = {
+  def apply(
+    annotationResults: SchemaGoogleCloudVideointelligenceV1p3beta1StreamingVideoAnnotationResults = null,
+    annotationResultsUri: String = null,
+    error: SchemaGoogleRpcStatus = null
+  ): SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse = {
     val __obj = js.Dynamic.literal()
+    if (annotationResults != null) __obj.updateDynamic("annotationResults")(annotationResults.asInstanceOf[js.Any])
+    if (annotationResultsUri != null) __obj.updateDynamic("annotationResultsUri")(annotationResultsUri.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponseOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnnotationResults(value: SchemaGoogleCloudVideointelligenceV1p3beta1StreamingVideoAnnotationResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotationResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnnotationResultsUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResultsUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnnotationResultsUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResultsUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: SchemaGoogleRpcStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

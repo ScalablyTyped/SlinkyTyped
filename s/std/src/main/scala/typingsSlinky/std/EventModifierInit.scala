@@ -4,205 +4,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EventModifierInit extends UIEventInit {
-  var altKey: js.UndefOr[scala.Boolean] = js.native
-  var ctrlKey: js.UndefOr[scala.Boolean] = js.native
-  var metaKey: js.UndefOr[scala.Boolean] = js.native
-  var modifierAltGraph: js.UndefOr[scala.Boolean] = js.native
-  var modifierCapsLock: js.UndefOr[scala.Boolean] = js.native
-  var modifierFn: js.UndefOr[scala.Boolean] = js.native
-  var modifierFnLock: js.UndefOr[scala.Boolean] = js.native
-  var modifierHyper: js.UndefOr[scala.Boolean] = js.native
-  var modifierNumLock: js.UndefOr[scala.Boolean] = js.native
-  var modifierScrollLock: js.UndefOr[scala.Boolean] = js.native
-  var modifierSuper: js.UndefOr[scala.Boolean] = js.native
-  var modifierSymbol: js.UndefOr[scala.Boolean] = js.native
-  var modifierSymbolLock: js.UndefOr[scala.Boolean] = js.native
-  var shiftKey: js.UndefOr[scala.Boolean] = js.native
+  var altKey: js.UndefOr[scala.Boolean] = js.undefined
+  var ctrlKey: js.UndefOr[scala.Boolean] = js.undefined
+  var metaKey: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierAltGraph: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierCapsLock: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierFn: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierFnLock: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierHyper: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierNumLock: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierScrollLock: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierSuper: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierSymbol: js.UndefOr[scala.Boolean] = js.undefined
+  var modifierSymbolLock: js.UndefOr[scala.Boolean] = js.undefined
+  var shiftKey: js.UndefOr[scala.Boolean] = js.undefined
 }
 
 object EventModifierInit {
   @scala.inline
-  def apply(): EventModifierInit = {
+  def apply(
+    altKey: js.UndefOr[scala.Boolean] = js.undefined,
+    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
+    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
+    composed: js.UndefOr[scala.Boolean] = js.undefined,
+    ctrlKey: js.UndefOr[scala.Boolean] = js.undefined,
+    detail: js.UndefOr[Double] = js.undefined,
+    metaKey: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierAltGraph: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierCapsLock: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierFn: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierFnLock: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierHyper: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierNumLock: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierScrollLock: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierSuper: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierSymbol: js.UndefOr[scala.Boolean] = js.undefined,
+    modifierSymbolLock: js.UndefOr[scala.Boolean] = js.undefined,
+    shiftKey: js.UndefOr[scala.Boolean] = js.undefined,
+    view: js.UndefOr[Null | org.scalajs.dom.raw.Window] = js.undefined
+  ): EventModifierInit = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(altKey)) __obj.updateDynamic("altKey")(altKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ctrlKey)) __obj.updateDynamic("ctrlKey")(ctrlKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(detail)) __obj.updateDynamic("detail")(detail.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(metaKey)) __obj.updateDynamic("metaKey")(metaKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierAltGraph)) __obj.updateDynamic("modifierAltGraph")(modifierAltGraph.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierCapsLock)) __obj.updateDynamic("modifierCapsLock")(modifierCapsLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierFn)) __obj.updateDynamic("modifierFn")(modifierFn.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierFnLock)) __obj.updateDynamic("modifierFnLock")(modifierFnLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierHyper)) __obj.updateDynamic("modifierHyper")(modifierHyper.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierNumLock)) __obj.updateDynamic("modifierNumLock")(modifierNumLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierScrollLock)) __obj.updateDynamic("modifierScrollLock")(modifierScrollLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierSuper)) __obj.updateDynamic("modifierSuper")(modifierSuper.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierSymbol)) __obj.updateDynamic("modifierSymbol")(modifierSymbol.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifierSymbolLock)) __obj.updateDynamic("modifierSymbolLock")(modifierSymbolLock.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(shiftKey)) __obj.updateDynamic("shiftKey")(shiftKey.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(view)) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventModifierInit]
   }
-  @scala.inline
-  implicit class EventModifierInitOps[Self <: EventModifierInit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltKey(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAltKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCtrlKey(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCtrlKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetaKey(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetaKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierAltGraph(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierAltGraph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierAltGraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierAltGraph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierCapsLock(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierCapsLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierCapsLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierCapsLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierFn(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierFn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierFn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierFnLock(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierFnLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierFnLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierFnLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierHyper(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierHyper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierHyper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierHyper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierNumLock(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierNumLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierNumLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierNumLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierScrollLock(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierScrollLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierScrollLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierScrollLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierSuper(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierSuper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierSuper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierSuper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierSymbol(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierSymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierSymbol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifierSymbolLock(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierSymbolLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifierSymbolLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifierSymbolLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShiftKey(value: scala.Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShiftKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

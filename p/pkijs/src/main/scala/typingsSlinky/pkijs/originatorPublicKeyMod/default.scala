@@ -1,5 +1,6 @@
 package typingsSlinky.pkijs.originatorPublicKeyMod
 
+import typingsSlinky.asn1js.mod.BitString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends OriginatorPublicKey {
   def this(params: js.Any) = this()
+  /* CompleteClass */
+  override var algorithm: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
+  /* CompleteClass */
+  override var publicKey: BitString = js.native
+  /* CompleteClass */
+  override def fromSchema(schema: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def toJSON(): js.Any = js.native
+  /* CompleteClass */
+  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

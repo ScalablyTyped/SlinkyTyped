@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * A utility class used to streamline how forms are developed, to ensure that validation is check and displayed consistently and to ensure that the correct events
   * fire when they need to.
   */
-@js.native
 trait IFormHelper extends js.Object {
   /**
     * @ngdoc function
@@ -27,7 +26,7 @@ trait IFormHelper extends js.Object {
     *
     * @param {object} err The error object returned from the http promise
     */
-  def handleError(err: js.Object): Unit = js.native
+  def handleError(err: js.Object): Unit
   /**
     * @ngdoc function
     * @name umbraco.services.formHelper#handleServerValidation
@@ -39,7 +38,7 @@ trait IFormHelper extends js.Object {
     *
     * @param {object} err The error object returned from the http promise
     */
-  def handleServerValidation(modelState: IModelState): Unit = js.native
+  def handleServerValidation(modelState: IModelState): Unit
   /**
     * @ngdoc function
     * @name umbraco.services.formHelper#submitForm
@@ -52,7 +51,7 @@ trait IFormHelper extends js.Object {
     *
     * @param {object} args An object containing arguments for form submission
     */
-  def resetForm(args: js.Any*): Unit = js.native
+  def resetForm(args: js.Any*): Unit
   /**
     * @ngdoc function
     * @name umbraco.services.formHelper#submitForm
@@ -66,7 +65,7 @@ trait IFormHelper extends js.Object {
     *
     * @param {object} args An object containing arguments for form submission
     */
-  def submitForm(args: js.Any*): Unit = js.native
+  def submitForm(args: js.Any*): Unit
 }
 
 object IFormHelper {
@@ -80,37 +79,5 @@ object IFormHelper {
     val __obj = js.Dynamic.literal(handleError = js.Any.fromFunction1(handleError), handleServerValidation = js.Any.fromFunction1(handleServerValidation), resetForm = js.Any.fromFunction1(resetForm), submitForm = js.Any.fromFunction1(submitForm))
     __obj.asInstanceOf[IFormHelper]
   }
-  @scala.inline
-  implicit class IFormHelperOps[Self <: IFormHelper] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHandleError(value: js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleError")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHandleServerValidation(value: IModelState => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handleServerValidation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withResetForm(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resetForm")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSubmitForm(value: /* repeated */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submitForm")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

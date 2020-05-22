@@ -26,65 +26,18 @@ trait DocumentAttributeValue extends js.Object {
 
 object DocumentAttributeValue {
   @scala.inline
-  def apply(): DocumentAttributeValue = {
+  def apply(
+    DateValue: js.Date = null,
+    LongValue: js.UndefOr[Long] = js.undefined,
+    StringListValue: DocumentAttributeStringListValue = null,
+    StringValue: DocumentAttributeStringValue = null
+  ): DocumentAttributeValue = {
     val __obj = js.Dynamic.literal()
+    if (DateValue != null) __obj.updateDynamic("DateValue")(DateValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(LongValue)) __obj.updateDynamic("LongValue")(LongValue.get.asInstanceOf[js.Any])
+    if (StringListValue != null) __obj.updateDynamic("StringListValue")(StringListValue.asInstanceOf[js.Any])
+    if (StringValue != null) __obj.updateDynamic("StringValue")(StringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentAttributeValue]
   }
-  @scala.inline
-  implicit class DocumentAttributeValueOps[Self <: DocumentAttributeValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDateValue(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DateValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongValue(value: Long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LongValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LongValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringListValue(value: DocumentAttributeStringListValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringListValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringListValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStringValue(value: DocumentAttributeStringValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStringValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StringValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

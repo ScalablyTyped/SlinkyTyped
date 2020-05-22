@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * Provides a unified interface for the {@link LinguServiceManager} service to implement.
   * @since LibreOffice 4.0
   */
-@js.native
 trait XLinguServiceManager2
   extends XLinguServiceManager
      with XAvailableLocales

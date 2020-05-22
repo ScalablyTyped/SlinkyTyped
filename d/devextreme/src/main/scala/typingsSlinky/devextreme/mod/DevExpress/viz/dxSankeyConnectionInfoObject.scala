@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxSankeyConnectionInfoObject extends js.Object {
-  /** The title of the link's source node. */
-  var source: js.UndefOr[String] = js.native
-  /** The title of the link's target node. */
-  var target: js.UndefOr[String] = js.native
-  /** The link's weight. */
-  var weight: js.UndefOr[Double] = js.native
+  /** @name dxSankeyConnectionInfoObject.source */
+  var source: js.UndefOr[String] = js.undefined
+  /** @name dxSankeyConnectionInfoObject.target */
+  var target: js.UndefOr[String] = js.undefined
+  /** @name dxSankeyConnectionInfoObject.weight */
+  var weight: js.UndefOr[Double] = js.undefined
 }
 
 object dxSankeyConnectionInfoObject {
   @scala.inline
-  def apply(): dxSankeyConnectionInfoObject = {
+  def apply(source: String = null, target: String = null, weight: js.UndefOr[Double] = js.undefined): dxSankeyConnectionInfoObject = {
     val __obj = js.Dynamic.literal()
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
+    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxSankeyConnectionInfoObject]
   }
-  @scala.inline
-  implicit class dxSankeyConnectionInfoObjectOps[Self <: dxSankeyConnectionInfoObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

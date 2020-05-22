@@ -5,114 +5,36 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<ml-levenberg-marquardt.ml-levenberg-marquardt.Options> */
-@js.native
 trait PartialOptions extends js.Object {
-  var damping: js.UndefOr[Double] = js.native
-  var errorTolerance: js.UndefOr[Double] = js.native
-  var gradientDifference: js.UndefOr[Double] = js.native
-  var initialValues: js.UndefOr[js.Array[Double]] = js.native
-  var maxIterations: js.UndefOr[Double] = js.native
-  var maxValue: js.UndefOr[js.Array[Double]] = js.native
-  var minValue: js.UndefOr[js.Array[Double]] = js.native
+  var damping: js.UndefOr[Double] = js.undefined
+  var errorTolerance: js.UndefOr[Double] = js.undefined
+  var gradientDifference: js.UndefOr[Double] = js.undefined
+  var initialValues: js.UndefOr[js.Array[Double]] = js.undefined
+  var maxIterations: js.UndefOr[Double] = js.undefined
+  var maxValue: js.UndefOr[js.Array[Double]] = js.undefined
+  var minValue: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object PartialOptions {
   @scala.inline
-  def apply(): PartialOptions = {
+  def apply(
+    damping: js.UndefOr[Double] = js.undefined,
+    errorTolerance: js.UndefOr[Double] = js.undefined,
+    gradientDifference: js.UndefOr[Double] = js.undefined,
+    initialValues: js.Array[Double] = null,
+    maxIterations: js.UndefOr[Double] = js.undefined,
+    maxValue: js.Array[Double] = null,
+    minValue: js.Array[Double] = null
+  ): PartialOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(damping)) __obj.updateDynamic("damping")(damping.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(errorTolerance)) __obj.updateDynamic("errorTolerance")(errorTolerance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gradientDifference)) __obj.updateDynamic("gradientDifference")(gradientDifference.get.asInstanceOf[js.Any])
+    if (initialValues != null) __obj.updateDynamic("initialValues")(initialValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxIterations)) __obj.updateDynamic("maxIterations")(maxIterations.get.asInstanceOf[js.Any])
+    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
+    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOptions]
   }
-  @scala.inline
-  implicit class PartialOptionsOps[Self <: PartialOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDamping(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDamping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorTolerance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTolerance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorTolerance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorTolerance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradientDifference(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientDifference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradientDifference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientDifference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialValues(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxValue(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinValue(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

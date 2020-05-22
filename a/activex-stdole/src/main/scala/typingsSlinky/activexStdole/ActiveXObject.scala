@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ActiveXObject extends js.Object {
   def on(
     obj: StdFont,
@@ -18,7 +17,7 @@ trait ActiveXObject extends js.Object {
       /* parameter */ typingsSlinky.activexStdole.anon.PropertyName, 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit
 }
 
 object ActiveXObject {
@@ -33,25 +32,5 @@ object ActiveXObject {
     val __obj = js.Dynamic.literal(on = js.Any.fromFunction4(on))
     __obj.asInstanceOf[ActiveXObject]
   }
-  @scala.inline
-  implicit class ActiveXObjectOps[Self <: ActiveXObject] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOn(
-      value: (StdFont, FontChanged, js.Array[PropertyName], js.ThisFunction1[
-          /* this */ StdFont, 
-          /* parameter */ typingsSlinky.activexStdole.anon.PropertyName, 
-          Unit
-        ]) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction4(value))
-        ret
-    }
-  }
-  
 }
 

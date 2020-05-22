@@ -64,125 +64,28 @@ trait SchemaInstanceGroupConfig extends js.Object {
 
 object SchemaInstanceGroupConfig {
   @scala.inline
-  def apply(): SchemaInstanceGroupConfig = {
+  def apply(
+    accelerators: js.Array[SchemaAcceleratorConfig] = null,
+    diskConfig: SchemaDiskConfig = null,
+    imageUri: String = null,
+    instanceNames: js.Array[String] = null,
+    isPreemptible: js.UndefOr[Boolean] = js.undefined,
+    machineTypeUri: String = null,
+    managedGroupConfig: SchemaManagedGroupConfig = null,
+    minCpuPlatform: String = null,
+    numInstances: js.UndefOr[Double] = js.undefined
+  ): SchemaInstanceGroupConfig = {
     val __obj = js.Dynamic.literal()
+    if (accelerators != null) __obj.updateDynamic("accelerators")(accelerators.asInstanceOf[js.Any])
+    if (diskConfig != null) __obj.updateDynamic("diskConfig")(diskConfig.asInstanceOf[js.Any])
+    if (imageUri != null) __obj.updateDynamic("imageUri")(imageUri.asInstanceOf[js.Any])
+    if (instanceNames != null) __obj.updateDynamic("instanceNames")(instanceNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(isPreemptible)) __obj.updateDynamic("isPreemptible")(isPreemptible.get.asInstanceOf[js.Any])
+    if (machineTypeUri != null) __obj.updateDynamic("machineTypeUri")(machineTypeUri.asInstanceOf[js.Any])
+    if (managedGroupConfig != null) __obj.updateDynamic("managedGroupConfig")(managedGroupConfig.asInstanceOf[js.Any])
+    if (minCpuPlatform != null) __obj.updateDynamic("minCpuPlatform")(minCpuPlatform.asInstanceOf[js.Any])
+    if (!js.isUndefined(numInstances)) __obj.updateDynamic("numInstances")(numInstances.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupConfig]
   }
-  @scala.inline
-  implicit class SchemaInstanceGroupConfigOps[Self <: SchemaInstanceGroupConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccelerators(value: js.Array[SchemaAcceleratorConfig]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccelerators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskConfig(value: SchemaDiskConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsPreemptible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPreemptible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsPreemptible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isPreemptible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMachineTypeUri(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineTypeUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMachineTypeUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("machineTypeUri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManagedGroupConfig(value: SchemaManagedGroupConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedGroupConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManagedGroupConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("managedGroupConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCpuPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCpuPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumInstances(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numInstances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,22 +1,21 @@
 package typingsSlinky.awsSdkClientS3Node.typesListPartsInputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait ListPartsInput extends InputTypesUnion {
+trait ListPartsInput extends _InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal
     */
   @JSName("$abortSignal")
-  var $abortSignal: js.UndefOr[AbortSignal] = js.native
+  var $abortSignal: js.UndefOr[AbortSignal] = js.undefined
   /**
     * Whether to use the bucket name as the endpoint for this request. The bucket
     * name must be a domain name with a CNAME record alias to an appropriate virtual
@@ -30,209 +29,87 @@ trait ListPartsInput extends InputTypesUnion {
     * @see https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs
     */
   @JSName("$bucketEndpoint")
-  var $bucketEndpoint: js.UndefOr[String] = js.native
+  var $bucketEndpoint: js.UndefOr[String] = js.undefined
   /**
     * Whether to force path style URLs for S3 objects (e.g., https://s3.amazonaws.com/<bucketName>/<key> instead of https://<bucketName>.s3.amazonaws.com/<key>
     */
   @JSName("$forcePathStyle")
-  var $forcePathStyle: js.UndefOr[Boolean] = js.native
+  var $forcePathStyle: js.UndefOr[Boolean] = js.undefined
   /**
     * Per-request HTTP configuration options. If set, any options specified will override the corresponding HTTP option set on the client for this command.
     */
   @JSName("$httpOptions")
-  var $httpOptions: js.UndefOr[NodeHttpOptions] = js.native
+  var $httpOptions: js.UndefOr[NodeHttpOptions] = js.undefined
   /**
     * The maximum number of times this operation should be retried. If set, this value will override the `maxRetries` configuration set on the client for this command.
     */
   @JSName("$maxRetries")
-  var $maxRetries: js.UndefOr[Double] = js.native
+  var $maxRetries: js.UndefOr[Double] = js.undefined
   /**
     * Whether to use the S3 Transfer Acceleration endpoint by default
     */
   @JSName("$useAccelerateEndpoint")
-  var $useAccelerateEndpoint: js.UndefOr[Boolean] = js.native
+  var $useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables IPv6/IPv4 dualstack endpoint. When a DNS lookup is performed on an endpoint of this type, it returns an “A” record with an IPv4 address and an “AAAA” record with an IPv6 address. In most cases the network stack in the client environment will automatically prefer the AAAA record and make a connection using the IPv6 address. Note, however, that currently on Windows, the IPv4 address will be preferred.
     */
   @JSName("$useDualstackEndpoint")
-  var $useDualstackEndpoint: js.UndefOr[Boolean] = js.native
+  var $useDualstackEndpoint: js.UndefOr[Boolean] = js.undefined
   /**
     * _BucketName shape
     */
-  var Bucket: String = js.native
+  var Bucket: String
   /**
     * _ObjectKey shape
     */
-  var Key: String = js.native
+  var Key: String
   /**
     * <p>Sets the maximum number of parts to return.</p>
     */
-  var MaxParts: js.UndefOr[Double] = js.native
+  var MaxParts: js.UndefOr[Double] = js.undefined
   /**
     * <p>Specifies the part after which listing should begin. Only parts with higher part numbers will be listed.</p>
     */
-  var PartNumberMarker: js.UndefOr[Double] = js.native
+  var PartNumberMarker: js.UndefOr[Double] = js.undefined
   /**
     * <p>Confirms that the requester knows that she or he will be charged for the request. Bucket owners need not specify this parameter in their requests. Documentation on downloading objects from requester pays buckets can be found at http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html</p>
     */
-  var RequestPayer: js.UndefOr[requester_ | String] = js.native
+  var RequestPayer: js.UndefOr[requester_ | String] = js.undefined
   /**
     * <p>Upload ID identifying the multipart upload whose parts are being listed.</p>
     */
-  var UploadId: String = js.native
+  var UploadId: String
 }
 
 object ListPartsInput {
   @scala.inline
-  def apply(Bucket: String, Key: String, UploadId: String): ListPartsInput = {
+  def apply(
+    Bucket: String,
+    Key: String,
+    UploadId: String,
+    $abortSignal: AbortSignal = null,
+    $bucketEndpoint: String = null,
+    $forcePathStyle: js.UndefOr[Boolean] = js.undefined,
+    $httpOptions: NodeHttpOptions = null,
+    $maxRetries: js.UndefOr[Double] = js.undefined,
+    $useAccelerateEndpoint: js.UndefOr[Boolean] = js.undefined,
+    $useDualstackEndpoint: js.UndefOr[Boolean] = js.undefined,
+    MaxParts: js.UndefOr[Double] = js.undefined,
+    PartNumberMarker: js.UndefOr[Double] = js.undefined,
+    RequestPayer: requester_ | String = null
+  ): ListPartsInput = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any], UploadId = UploadId.asInstanceOf[js.Any])
+    if ($abortSignal != null) __obj.updateDynamic("$abortSignal")($abortSignal.asInstanceOf[js.Any])
+    if ($bucketEndpoint != null) __obj.updateDynamic("$bucketEndpoint")($bucketEndpoint.asInstanceOf[js.Any])
+    if (!js.isUndefined($forcePathStyle)) __obj.updateDynamic("$forcePathStyle")($forcePathStyle.get.asInstanceOf[js.Any])
+    if ($httpOptions != null) __obj.updateDynamic("$httpOptions")($httpOptions.asInstanceOf[js.Any])
+    if (!js.isUndefined($maxRetries)) __obj.updateDynamic("$maxRetries")($maxRetries.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($useAccelerateEndpoint)) __obj.updateDynamic("$useAccelerateEndpoint")($useAccelerateEndpoint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($useDualstackEndpoint)) __obj.updateDynamic("$useDualstackEndpoint")($useDualstackEndpoint.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxParts)) __obj.updateDynamic("MaxParts")(MaxParts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartNumberMarker)) __obj.updateDynamic("PartNumberMarker")(PartNumberMarker.get.asInstanceOf[js.Any])
+    if (RequestPayer != null) __obj.updateDynamic("RequestPayer")(RequestPayer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPartsInput]
   }
-  @scala.inline
-  implicit class ListPartsInputOps[Self <: ListPartsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucket(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUploadId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$abortSignal(value: AbortSignal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$abortSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$abortSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$bucketEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$bucketEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$bucketEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$bucketEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$forcePathStyle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$forcePathStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$forcePathStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$forcePathStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$httpOptions(value: NodeHttpOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$httpOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$httpOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$maxRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$maxRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$maxRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$useAccelerateEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useAccelerateEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$useAccelerateEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useAccelerateEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$useDualstackEndpoint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useDualstackEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$useDualstackEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$useDualstackEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxParts(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxParts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartNumberMarker(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumberMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartNumberMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumberMarker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestPayer(value: requester_ | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestPayer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

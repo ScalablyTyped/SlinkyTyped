@@ -14,53 +14,16 @@ trait WithStylesOptions[ClassKey /* <: String */] extends js.Object {
 
 object WithStylesOptions {
   @scala.inline
-  def apply[ClassKey](): WithStylesOptions[ClassKey] = {
+  def apply[ClassKey](
+    flip: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    withTheme: js.UndefOr[Boolean] = js.undefined
+  ): WithStylesOptions[ClassKey] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(withTheme)) __obj.updateDynamic("withTheme")(withTheme.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[WithStylesOptions[ClassKey]]
   }
-  @scala.inline
-  implicit class WithStylesOptionsOps[Self[classkey] <: WithStylesOptions[classkey], ClassKey] (val x: Self[ClassKey]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ClassKey] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ClassKey]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ClassKey] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ClassKey] with Other]
-    @scala.inline
-    def withFlip(value: Boolean): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlip: Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithTheme(value: Boolean): Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithTheme: Self[ClassKey] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

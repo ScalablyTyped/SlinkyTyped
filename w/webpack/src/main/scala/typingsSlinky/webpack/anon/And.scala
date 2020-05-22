@@ -1,12 +1,11 @@
 package typingsSlinky.webpack.anon
 
-import typingsSlinky.webpack.mod.RuleSetCondition
+import typingsSlinky.webpack.mod._RuleSetCondition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait And extends RuleSetCondition {
+trait And extends _RuleSetCondition {
   /**
     * Logical AND
     */
@@ -14,19 +13,19 @@ trait And extends RuleSetCondition {
     js.Array[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Exclude all modules matching any of these conditions
     */
   var exclude: js.UndefOr[
     /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-  ] = js.native
+  ] = js.undefined
   /**
     * Exclude all modules matching not any of these conditions
     */
   var include: js.UndefOr[
     /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-  ] = js.native
+  ] = js.undefined
   /**
     * Logical NOT
     */
@@ -34,7 +33,7 @@ trait And extends RuleSetCondition {
     js.Array[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Logical OR
     */
@@ -42,118 +41,39 @@ trait And extends RuleSetCondition {
     js.Array[
       /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Exclude all modules matching any of these conditions
     */
   var test: js.UndefOr[
     /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-  ] = js.native
+  ] = js.undefined
 }
 
 object And {
   @scala.inline
-  def apply(): And = {
+  def apply(
+    and: js.Array[
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
+    ] = null,
+    exclude: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object = null,
+    include: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object = null,
+    not: js.Array[
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
+    ] = null,
+    or: js.Array[
+      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
+    ] = null,
+    test: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object = null
+  ): And = {
     val __obj = js.Dynamic.literal()
+    if (and != null) __obj.updateDynamic("and")(and.asInstanceOf[js.Any])
+    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
+    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
+    if (not != null) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
+    if (or != null) __obj.updateDynamic("or")(or.asInstanceOf[js.Any])
+    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
     __obj.asInstanceOf[And]
   }
-  @scala.inline
-  implicit class AndOps[Self <: And] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnd(
-      value: js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("and")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExclude(
-      value: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude(
-      value: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNot(
-      value: js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOr(
-      value: js.Array[
-          /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("or")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTest(
-      value: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias webpack.webpack.RuleSetCondition */ js.Object
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

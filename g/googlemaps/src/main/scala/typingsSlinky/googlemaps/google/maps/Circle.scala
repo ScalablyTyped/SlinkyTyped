@@ -1,7 +1,7 @@
 package typingsSlinky.googlemaps.google.maps
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.googlemaps.google.maps.places.LocationBias
+import typingsSlinky.googlemaps.google.maps.places._LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Circle
   extends MVCObject
-     with LocationBias {
+     with _LocationBias {
   /** Gets the LatLngBounds of this Circle. */
   def getBounds(): LatLngBounds = js.native
   /** Returns the center of this circle. */

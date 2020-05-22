@@ -41,89 +41,22 @@ trait SchemaSourceOperationRequest extends js.Object {
 
 object SchemaSourceOperationRequest {
   @scala.inline
-  def apply(): SchemaSourceOperationRequest = {
+  def apply(
+    getMetadata: SchemaSourceGetMetadataRequest = null,
+    name: String = null,
+    originalName: String = null,
+    split: SchemaSourceSplitRequest = null,
+    stageName: String = null,
+    systemName: String = null
+  ): SchemaSourceOperationRequest = {
     val __obj = js.Dynamic.literal()
+    if (getMetadata != null) __obj.updateDynamic("getMetadata")(getMetadata.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (originalName != null) __obj.updateDynamic("originalName")(originalName.asInstanceOf[js.Any])
+    if (split != null) __obj.updateDynamic("split")(split.asInstanceOf[js.Any])
+    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
+    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceOperationRequest]
   }
-  @scala.inline
-  implicit class SchemaSourceOperationRequestOps[Self <: SchemaSourceOperationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetMetadata(value: SchemaSourceGetMetadataRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGetMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplit(value: SchemaSourceSplitRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

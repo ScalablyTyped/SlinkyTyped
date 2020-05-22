@@ -3,374 +3,163 @@ package typingsSlinky.reactNativeSortableList.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.always
+import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.handled
+import typingsSlinky.reactNativeSortableList.reactNativeSortableListStrings.never
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SortableListProps[T, K] extends js.Object {
   /**
     * determines the height for vertical list and the width for horizontal list of the area at the begining and
     * the end of the list that will trigger autoscrolling. Defaults to 60.
     */
-  var autoscrollAreaSize: js.UndefOr[Double] = js.native
+  var autoscrollAreaSize: js.UndefOr[Double] = js.undefined
   /**
     * these styles will be applied to the inner scroll view content container
     */
-  var contentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var contentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /**
     * data source
     */
-  var data: DataByNumber[T] | DataByString[T] = js.native
+  var data: DataByNumber[T] | DataByString[T]
   /**
     * when true, the SortableList's children are arranged horizontally in a row instead of vertically in a column.
     * The default value is false.
     */
-  var horizontal: js.UndefOr[Boolean] = js.native
+  var horizontal: js.UndefOr[Boolean] = js.undefined
   /**
     * these styles will be applied to the inner scroll view content container, excluding the header and footer
     */
-  var innerContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var innerContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  /**
+    * Determines when the keyboard should stay visible after a tap.
+    *  - 'never' (the default), tapping outside of the focused text input when the keyboard is up dismisses
+    *    the keyboard. When this happens, children won't receive the tap.
+    *  - 'always', the keyboard will not dismiss automatically, and the scroll view will not catch taps, but
+    *    children of the scroll view can catch taps.
+    *  - 'handled', the keyboard will not dismiss automatically when the tap was handled by a children,
+    *    (or captured by an ancestor).
+    */
+  var keyboardShouldPersistTaps: js.UndefOr[never | always | handled] = js.undefined
   /**
     * whether you intend to use the toggleRowActive method to activate a row or use the out of box solution.
     */
-  var manuallyActivateRows: js.UndefOr[Boolean] = js.native
+  var manuallyActivateRows: js.UndefOr[Boolean] = js.undefined
   /**
     * Called when a row was activated (user long tapped).
     */
-  var onActivateRow: js.UndefOr[js.Function1[/* key */ K, Unit]] = js.native
+  var onActivateRow: js.UndefOr[js.Function1[/* key */ K, Unit]] = js.undefined
   /**
     * Called when rows were reordered, takes an array of rows keys of the next rows order.
     */
-  var onChangeOrder: js.UndefOr[js.Function1[/* nextOrder */ js.Array[K], Unit]] = js.native
+  var onChangeOrder: js.UndefOr[js.Function1[/* nextOrder */ js.Array[K], Unit]] = js.undefined
   /**
     * Called when a row was pressed.
     */
-  var onPressRow: js.UndefOr[js.Function1[/* key */ K, Unit]] = js.native
+  var onPressRow: js.UndefOr[js.Function1[/* key */ K, Unit]] = js.undefined
   /**
     * Called when the active row was released.
     */
-  var onReleaseRow: js.UndefOr[js.Function2[/* key */ K, /* currentOrder */ js.Array[K], Unit]] = js.native
+  var onReleaseRow: js.UndefOr[js.Function2[/* key */ K, /* currentOrder */ js.Array[K], Unit]] = js.undefined
   /**
     * an array of keys from data, the order of keys from the array will be used to initial rows order
     */
-  var order: js.UndefOr[js.Array[K]] = js.native
+  var order: js.UndefOr[js.Array[K]] = js.undefined
   /**
     * A RefreshControl that works the same way as a ScrollView's refreshControl.
     */
-  var refreshControl: js.UndefOr[ReactElement] = js.native
+  var refreshControl: js.UndefOr[ReactElement] = js.undefined
   /**
     * Renders returned component at the bottom of the list.
     */
-  var renderFooter: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var renderFooter: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /**
     * Renders returned component at the top of the list.
     */
-  var renderHeader: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var renderHeader: js.UndefOr[js.Function0[ReactElement]] = js.undefined
   /**
     * determines time delay in ms before pressed row becomes active. Defaults to 200 ms.
     */
-  var rowActivationTime: js.UndefOr[Double] = js.native
+  var rowActivationTime: js.UndefOr[Double] = js.undefined
   /**
     * when false, the content does not scrollable. The default value is true.
     */
-  var scrollEnabled: js.UndefOr[Boolean] = js.native
+  var scrollEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * when false, the horizontal scroll indicator will not be visible. The default value is true.
     */
-  var showsHorizontalScrollIndicator: js.UndefOr[Boolean] = js.native
+  var showsHorizontalScrollIndicator: js.UndefOr[Boolean] = js.undefined
   /**
     * when false, the vertical scroll indicator will not be visible. The default value is true.
     */
-  var showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.native
+  var showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined
   /**
     * when false, rows are not sortable. The default value is true.
     */
-  var sortingEnabled: js.UndefOr[Boolean] = js.native
+  var sortingEnabled: js.UndefOr[Boolean] = js.undefined
   /**
     * style of HOC
     */
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   /**
     * Takes a row key, row index, data entry from the data source and its statuses disabled, active and should
     * return a renderable component to be rendered as the row. The child component will receive a method called
     * toggleRowActive (only if manuallyActivateRows={true}) to manually activate the row. Useful if you have
     * multiple touch responders in your view.
     */
-  def renderRow(props: RowProps[T, K]): ReactElement | Null = js.native
+  def renderRow(props: RowProps[T, K]): ReactElement | Null
 }
 
 object SortableListProps {
   @scala.inline
-  def apply[T, K](data: DataByNumber[T] | DataByString[T], renderRow: RowProps[T, K] => ReactElement | Null): SortableListProps[T, K] = {
+  def apply[T, K](
+    data: DataByNumber[T] | DataByString[T],
+    renderRow: RowProps[T, K] => ReactElement | Null,
+    autoscrollAreaSize: js.UndefOr[Double] = js.undefined,
+    contentContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    horizontal: js.UndefOr[Boolean] = js.undefined,
+    innerContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    keyboardShouldPersistTaps: never | always | handled = null,
+    manuallyActivateRows: js.UndefOr[Boolean] = js.undefined,
+    onActivateRow: /* key */ K => Unit = null,
+    onChangeOrder: /* nextOrder */ js.Array[K] => Unit = null,
+    onPressRow: /* key */ K => Unit = null,
+    onReleaseRow: (/* key */ K, /* currentOrder */ js.Array[K]) => Unit = null,
+    order: js.Array[K] = null,
+    refreshControl: ReactElement = null,
+    renderFooter: () => ReactElement = null,
+    renderHeader: () => ReactElement = null,
+    rowActivationTime: js.UndefOr[Double] = js.undefined,
+    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
+    showsHorizontalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
+    showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
+    sortingEnabled: js.UndefOr[Boolean] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined
+  ): SortableListProps[T, K] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderRow = js.Any.fromFunction1(renderRow))
+    if (!js.isUndefined(autoscrollAreaSize)) __obj.updateDynamic("autoscrollAreaSize")(autoscrollAreaSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(contentContainerStyle)) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerContainerStyle)) __obj.updateDynamic("innerContainerStyle")(innerContainerStyle.asInstanceOf[js.Any])
+    if (keyboardShouldPersistTaps != null) __obj.updateDynamic("keyboardShouldPersistTaps")(keyboardShouldPersistTaps.asInstanceOf[js.Any])
+    if (!js.isUndefined(manuallyActivateRows)) __obj.updateDynamic("manuallyActivateRows")(manuallyActivateRows.get.asInstanceOf[js.Any])
+    if (onActivateRow != null) __obj.updateDynamic("onActivateRow")(js.Any.fromFunction1(onActivateRow))
+    if (onChangeOrder != null) __obj.updateDynamic("onChangeOrder")(js.Any.fromFunction1(onChangeOrder))
+    if (onPressRow != null) __obj.updateDynamic("onPressRow")(js.Any.fromFunction1(onPressRow))
+    if (onReleaseRow != null) __obj.updateDynamic("onReleaseRow")(js.Any.fromFunction2(onReleaseRow))
+    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
+    if (refreshControl != null) __obj.updateDynamic("refreshControl")(refreshControl.asInstanceOf[js.Any])
+    if (renderFooter != null) __obj.updateDynamic("renderFooter")(js.Any.fromFunction0(renderFooter))
+    if (renderHeader != null) __obj.updateDynamic("renderHeader")(js.Any.fromFunction0(renderHeader))
+    if (!js.isUndefined(rowActivationTime)) __obj.updateDynamic("rowActivationTime")(rowActivationTime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showsHorizontalScrollIndicator)) __obj.updateDynamic("showsHorizontalScrollIndicator")(showsHorizontalScrollIndicator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showsVerticalScrollIndicator)) __obj.updateDynamic("showsVerticalScrollIndicator")(showsVerticalScrollIndicator.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sortingEnabled)) __obj.updateDynamic("sortingEnabled")(sortingEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[SortableListProps[T, K]]
   }
-  @scala.inline
-  implicit class SortableListPropsOps[Self[t, k] <: SortableListProps[t, k], T, K] (val x: Self[T, K]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T, K] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, K]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, K]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, K]) with Other]
-    @scala.inline
-    def withData(value: DataByNumber[T] | DataByString[T]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderRow(value: RowProps[T, K] => ReactElement | Null): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAutoscrollAreaSize(value: Double): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscrollAreaSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoscrollAreaSize: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscrollAreaSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentContainerStyle(value: StyleProp[ViewStyle]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentContainerStyle: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentContainerStyleNull: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withHorizontal(value: Boolean): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontal: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerContainerStyle(value: StyleProp[ViewStyle]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerContainerStyle: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerContainerStyleNull: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withManuallyActivateRows(value: Boolean): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manuallyActivateRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManuallyActivateRows: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manuallyActivateRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnActivateRow(value: /* key */ K => Unit): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivateRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnActivateRow: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivateRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChangeOrder(value: /* nextOrder */ js.Array[K] => Unit): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeOrder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChangeOrder: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPressRow(value: /* key */ K => Unit): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressRow")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPressRow: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnReleaseRow(value: (/* key */ K, /* currentOrder */ js.Array[K]) => Unit): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReleaseRow")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnReleaseRow: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReleaseRow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrder(value: js.Array[K]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrder: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefreshControl(value: ReactElement): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefreshControl: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshControl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderFooter(value: () => ReactElement): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFooter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderFooter: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFooter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRenderHeader(value: () => ReactElement): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderHeader")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutRenderHeader: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("renderHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowActivationTime(value: Double): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowActivationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowActivationTime: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowActivationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollEnabled(value: Boolean): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollEnabled: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowsHorizontalScrollIndicator(value: Boolean): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showsHorizontalScrollIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowsHorizontalScrollIndicator: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showsHorizontalScrollIndicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowsVerticalScrollIndicator(value: Boolean): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showsVerticalScrollIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowsVerticalScrollIndicator: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showsVerticalScrollIndicator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortingEnabled(value: Boolean): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSortingEnabled: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: StyleProp[ViewStyle]): Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyleNull: Self[T, K] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
-        ret
-    }
-  }
-  
 }
 

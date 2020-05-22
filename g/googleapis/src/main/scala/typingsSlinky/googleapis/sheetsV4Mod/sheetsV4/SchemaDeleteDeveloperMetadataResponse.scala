@@ -17,29 +17,10 @@ trait SchemaDeleteDeveloperMetadataResponse extends js.Object {
 
 object SchemaDeleteDeveloperMetadataResponse {
   @scala.inline
-  def apply(): SchemaDeleteDeveloperMetadataResponse = {
+  def apply(deletedDeveloperMetadata: js.Array[SchemaDeveloperMetadata] = null): SchemaDeleteDeveloperMetadataResponse = {
     val __obj = js.Dynamic.literal()
+    if (deletedDeveloperMetadata != null) __obj.updateDynamic("deletedDeveloperMetadata")(deletedDeveloperMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteDeveloperMetadataResponse]
   }
-  @scala.inline
-  implicit class SchemaDeleteDeveloperMetadataResponseOps[Self <: SchemaDeleteDeveloperMetadataResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeletedDeveloperMetadata(value: js.Array[SchemaDeveloperMetadata]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedDeveloperMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeletedDeveloperMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedDeveloperMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

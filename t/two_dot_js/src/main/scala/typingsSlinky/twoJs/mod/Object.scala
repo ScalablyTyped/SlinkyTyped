@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait Object extends js.Object
 
-object Object {
-  @scala.inline
-  implicit def apply(value: Group): Object = value.asInstanceOf[Object]
-  @scala.inline
-  implicit def apply(value: Path): Object = value.asInstanceOf[Object]
-  @scala.inline
-  implicit def apply(value: Text): Object = value.asInstanceOf[Object]
-}
-

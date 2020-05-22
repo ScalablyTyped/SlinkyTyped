@@ -30,77 +30,20 @@ trait MigrationTask extends js.Object {
 
 object MigrationTask {
   @scala.inline
-  def apply(): MigrationTask = {
+  def apply(
+    MigrationTaskName: MigrationTaskName = null,
+    ProgressUpdateStream: ProgressUpdateStream = null,
+    ResourceAttributeList: LatestResourceAttributeList = null,
+    Task: Task = null,
+    UpdateDateTime: js.Date = null
+  ): MigrationTask = {
     val __obj = js.Dynamic.literal()
+    if (MigrationTaskName != null) __obj.updateDynamic("MigrationTaskName")(MigrationTaskName.asInstanceOf[js.Any])
+    if (ProgressUpdateStream != null) __obj.updateDynamic("ProgressUpdateStream")(ProgressUpdateStream.asInstanceOf[js.Any])
+    if (ResourceAttributeList != null) __obj.updateDynamic("ResourceAttributeList")(ResourceAttributeList.asInstanceOf[js.Any])
+    if (Task != null) __obj.updateDynamic("Task")(Task.asInstanceOf[js.Any])
+    if (UpdateDateTime != null) __obj.updateDynamic("UpdateDateTime")(UpdateDateTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[MigrationTask]
   }
-  @scala.inline
-  implicit class MigrationTaskOps[Self <: MigrationTask] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMigrationTaskName(value: MigrationTaskName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMigrationTaskName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MigrationTaskName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressUpdateStream(value: ProgressUpdateStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressUpdateStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressUpdateStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceAttributeList(value: LatestResourceAttributeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAttributeList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceAttributeList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceAttributeList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTask(value: Task): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Task")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Task")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateDateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDateTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

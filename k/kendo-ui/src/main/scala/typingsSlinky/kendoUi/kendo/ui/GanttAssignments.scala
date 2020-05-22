@@ -5,75 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GanttAssignments extends js.Object {
-  var dataResourceIdField: js.UndefOr[String] = js.native
-  var dataSource: js.UndefOr[js.Any | DataSource] = js.native
-  var dataTaskIdField: js.UndefOr[String] = js.native
-  var dataValueField: js.UndefOr[String] = js.native
+  var dataResourceIdField: js.UndefOr[String] = js.undefined
+  var dataSource: js.UndefOr[js.Any | DataSource] = js.undefined
+  var dataTaskIdField: js.UndefOr[String] = js.undefined
+  var dataValueField: js.UndefOr[String] = js.undefined
 }
 
 object GanttAssignments {
   @scala.inline
-  def apply(): GanttAssignments = {
+  def apply(
+    dataResourceIdField: String = null,
+    dataSource: js.Any | DataSource = null,
+    dataTaskIdField: String = null,
+    dataValueField: String = null
+  ): GanttAssignments = {
     val __obj = js.Dynamic.literal()
+    if (dataResourceIdField != null) __obj.updateDynamic("dataResourceIdField")(dataResourceIdField.asInstanceOf[js.Any])
+    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
+    if (dataTaskIdField != null) __obj.updateDynamic("dataTaskIdField")(dataTaskIdField.asInstanceOf[js.Any])
+    if (dataValueField != null) __obj.updateDynamic("dataValueField")(dataValueField.asInstanceOf[js.Any])
     __obj.asInstanceOf[GanttAssignments]
   }
-  @scala.inline
-  implicit class GanttAssignmentsOps[Self <: GanttAssignments] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataResourceIdField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataResourceIdField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataResourceIdField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataResourceIdField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSource(value: js.Any | DataSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataTaskIdField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTaskIdField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataTaskIdField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTaskIdField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataValueField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValueField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataValueField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataValueField")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,22 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The response sent by the workspace, including the output text, detected intents and entities, and context. */
-@js.native
 trait MessageResponse extends js.Object {
   /** An array of objects describing any actions requested by the dialog node. */
-  var actions: js.UndefOr[js.Array[DialogNodeAction]] = js.native
+  var actions: js.UndefOr[js.Array[DialogNodeAction]] = js.undefined
   /** Whether to return more than one intent. A value of `true` indicates that all matching intents are returned. */
-  var alternate_intents: js.UndefOr[Boolean] = js.native
+  var alternate_intents: js.UndefOr[Boolean] = js.undefined
   /** State information for the conversation. To maintain state, include the context from the previous response. */
-  var context: Context = js.native
+  var context: Context
   /** An array of entities identified in the user input. */
-  var entities: js.Array[RuntimeEntity] = js.native
+  var entities: js.Array[RuntimeEntity]
   /** An input object that includes the input text. */
-  var input: MessageInput = js.native
+  var input: MessageInput
   /** An array of intents recognized in the user input, sorted in descending order of confidence. */
-  var intents: js.Array[RuntimeIntent] = js.native
+  var intents: js.Array[RuntimeIntent]
   /** An output object that includes the response to the user, the dialog nodes that were triggered, and messages from the log. */
-  var output: OutputData = js.native
+  var output: OutputData
 }
 
 object MessageResponse {
@@ -30,72 +29,14 @@ object MessageResponse {
     entities: js.Array[RuntimeEntity],
     input: MessageInput,
     intents: js.Array[RuntimeIntent],
-    output: OutputData
+    output: OutputData,
+    actions: js.Array[DialogNodeAction] = null,
+    alternate_intents: js.UndefOr[Boolean] = js.undefined
   ): MessageResponse = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], entities = entities.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], intents = intents.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any])
+    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
+    if (!js.isUndefined(alternate_intents)) __obj.updateDynamic("alternate_intents")(alternate_intents.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageResponse]
   }
-  @scala.inline
-  implicit class MessageResponseOps[Self <: MessageResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: Context): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEntities(value: js.Array[RuntimeEntity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: MessageInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntents(value: js.Array[RuntimeIntent]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutput(value: OutputData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActions(value: js.Array[DialogNodeAction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlternate_intents(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternate_intents")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlternate_intents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alternate_intents")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

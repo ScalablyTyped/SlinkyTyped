@@ -22,53 +22,16 @@ trait VpnConnectionOptionsSpecification extends js.Object {
 
 object VpnConnectionOptionsSpecification {
   @scala.inline
-  def apply(): VpnConnectionOptionsSpecification = {
+  def apply(
+    EnableAcceleration: js.UndefOr[Boolean] = js.undefined,
+    StaticRoutesOnly: js.UndefOr[Boolean] = js.undefined,
+    TunnelOptions: VpnTunnelOptionsSpecificationsList = null
+  ): VpnConnectionOptionsSpecification = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(EnableAcceleration)) __obj.updateDynamic("EnableAcceleration")(EnableAcceleration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(StaticRoutesOnly)) __obj.updateDynamic("StaticRoutesOnly")(StaticRoutesOnly.get.asInstanceOf[js.Any])
+    if (TunnelOptions != null) __obj.updateDynamic("TunnelOptions")(TunnelOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpnConnectionOptionsSpecification]
   }
-  @scala.inline
-  implicit class VpnConnectionOptionsSpecificationOps[Self <: VpnConnectionOptionsSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnableAcceleration(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableAcceleration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableAcceleration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableAcceleration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStaticRoutesOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticRoutesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStaticRoutesOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticRoutesOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTunnelOptions(value: VpnTunnelOptionsSpecificationsList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TunnelOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTunnelOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TunnelOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

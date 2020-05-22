@@ -4,23 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QueryResultBatch extends js.Object {
   /** A cursor that points to the position after the last result in the batch. */
-  var endCursor: js.UndefOr[String] = js.native
+  var endCursor: js.UndefOr[String] = js.undefined
   /** The result type for every entity in `entity_results`. */
-  var entityResultType: js.UndefOr[String] = js.native
+  var entityResultType: js.UndefOr[String] = js.undefined
   /** The results for this batch. */
-  var entityResults: js.UndefOr[js.Array[EntityResult]] = js.native
+  var entityResults: js.UndefOr[js.Array[EntityResult]] = js.undefined
   /** The state of the query after the current batch. */
-  var moreResults: js.UndefOr[String] = js.native
+  var moreResults: js.UndefOr[String] = js.undefined
   /**
     * A cursor that points to the position after the last skipped result.
     * Will be set when `skipped_results` != 0.
     */
-  var skippedCursor: js.UndefOr[String] = js.native
+  var skippedCursor: js.UndefOr[String] = js.undefined
   /** The number of results skipped, typically because of an offset. */
-  var skippedResults: js.UndefOr[Double] = js.native
+  var skippedResults: js.UndefOr[Double] = js.undefined
   /**
     * The version number of the snapshot this batch was returned from.
     * This applies to the range of results from the query's `start_cursor` (or
@@ -32,106 +31,29 @@ trait QueryResultBatch extends js.Object {
     * is valid for all preceding batches.
     * The value will be zero for eventually consistent queries.
     */
-  var snapshotVersion: js.UndefOr[String] = js.native
+  var snapshotVersion: js.UndefOr[String] = js.undefined
 }
 
 object QueryResultBatch {
   @scala.inline
-  def apply(): QueryResultBatch = {
+  def apply(
+    endCursor: String = null,
+    entityResultType: String = null,
+    entityResults: js.Array[EntityResult] = null,
+    moreResults: String = null,
+    skippedCursor: String = null,
+    skippedResults: js.UndefOr[Double] = js.undefined,
+    snapshotVersion: String = null
+  ): QueryResultBatch = {
     val __obj = js.Dynamic.literal()
+    if (endCursor != null) __obj.updateDynamic("endCursor")(endCursor.asInstanceOf[js.Any])
+    if (entityResultType != null) __obj.updateDynamic("entityResultType")(entityResultType.asInstanceOf[js.Any])
+    if (entityResults != null) __obj.updateDynamic("entityResults")(entityResults.asInstanceOf[js.Any])
+    if (moreResults != null) __obj.updateDynamic("moreResults")(moreResults.asInstanceOf[js.Any])
+    if (skippedCursor != null) __obj.updateDynamic("skippedCursor")(skippedCursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(skippedResults)) __obj.updateDynamic("skippedResults")(skippedResults.get.asInstanceOf[js.Any])
+    if (snapshotVersion != null) __obj.updateDynamic("snapshotVersion")(snapshotVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryResultBatch]
   }
-  @scala.inline
-  implicit class QueryResultBatchOps[Self <: QueryResultBatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityResultType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityResultType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityResultType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityResultType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityResults(value: js.Array[EntityResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMoreResults(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moreResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMoreResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("moreResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippedCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedCursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippedCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedCursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkippedResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkippedResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshotVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshotVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

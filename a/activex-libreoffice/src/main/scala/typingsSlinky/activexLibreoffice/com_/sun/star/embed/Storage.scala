@@ -17,7 +17,6 @@ import scala.scalajs.js.annotation._
   * A root storage should be retrieved by using {@link StorageFactory} service. Substorages are created through {@link XStorage} interface of a parent
   * storage.
   */
-@js.native
 trait Storage
   extends BaseStorage
      with XTransactedObject
@@ -29,18 +28,18 @@ trait Storage
     * In case it is set to `TRUE` the storage itself and/or a tree of substorages contain encrypted streams. Usually in case this property is supported the
     * implementation supports {@link XEncryptionProtectedSource} interface.
     */
-  var HasEncryptedEntries: Boolean = js.native
+  var HasEncryptedEntries: Boolean
   /**
     * allows to detect if the storage contains non-encrypted entries.
     *
     * In case it is set to `TRUE` the storage itself and/or a tree of substorages contains non-encrypted streams. Usually in case this property is supported
     * the implementation supports {@link XEncryptionProtectedSource} interface.
     */
-  var HasNonEncryptedEntries: Boolean = js.native
+  var HasNonEncryptedEntries: Boolean
   /** allows to detect whether the storage is a root one. */
-  var IsRoot: Boolean = js.native
+  var IsRoot: Boolean
   /** allows to get and set the media type of the storage. */
-  var MediaType: String = js.native
+  var MediaType: String
   /**
     * allows to detect whether mediatype is detected by using fallback approach.
     *
@@ -50,11 +49,11 @@ trait Storage
     * case is in application hands. It is up to user of the storage to decide whether they accept the fallback approach for an implementation of this
     * service, outputs a warning or an error.
     */
-  var MediaTypeFallbackIsUsed: Boolean = js.native
+  var MediaTypeFallbackIsUsed: Boolean
   /** allows to detect whether storage is open in "repair package" mode or not. */
-  var RepairPackage: Boolean = js.native
+  var RepairPackage: Boolean
   /** allows to get and set the version of the format related to the MediaType. */
-  var Version: String = js.native
+  var Version: String
 }
 
 object Storage {
@@ -114,55 +113,5 @@ object Storage {
     val __obj = js.Dynamic.literal(ElementNames = ElementNames.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], HasEncryptedEntries = HasEncryptedEntries.asInstanceOf[js.Any], HasNonEncryptedEntries = HasNonEncryptedEntries.asInstanceOf[js.Any], IsRoot = IsRoot.asInstanceOf[js.Any], MediaType = MediaType.asInstanceOf[js.Any], MediaTypeFallbackIsUsed = MediaTypeFallbackIsUsed.asInstanceOf[js.Any], OpenMode = OpenMode.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], RepairPackage = RepairPackage.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any], Version = Version.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addTransactionListener = js.Any.fromFunction1(addTransactionListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), cloneEncryptedStreamElement = js.Any.fromFunction2(cloneEncryptedStreamElement), cloneStreamElement = js.Any.fromFunction1(cloneStreamElement), commit = js.Any.fromFunction0(commit), copyElementTo = js.Any.fromFunction3(copyElementTo), copyLastCommitTo = js.Any.fromFunction1(copyLastCommitTo), copyStorageElementLastCommitTo = js.Any.fromFunction2(copyStorageElementLastCommitTo), copyToStorage = js.Any.fromFunction1(copyToStorage), dispose = js.Any.fromFunction0(dispose), getByName = js.Any.fromFunction1(getByName), getElementNames = js.Any.fromFunction0(getElementNames), getElementType = js.Any.fromFunction0(getElementType), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), hasByName = js.Any.fromFunction1(hasByName), hasElements = js.Any.fromFunction0(hasElements), isStorageElement = js.Any.fromFunction1(isStorageElement), isStreamElement = js.Any.fromFunction1(isStreamElement), moveElementTo = js.Any.fromFunction3(moveElementTo), openEncryptedStreamElement = js.Any.fromFunction3(openEncryptedStreamElement), openStorageElement = js.Any.fromFunction2(openStorageElement), openStreamElement = js.Any.fromFunction2(openStreamElement), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeElement = js.Any.fromFunction1(removeElement), removeEncryption = js.Any.fromFunction0(removeEncryption), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeTransactionListener = js.Any.fromFunction1(removeTransactionListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), renameElement = js.Any.fromFunction2(renameElement), revert = js.Any.fromFunction0(revert), setEncryptionPassword = js.Any.fromFunction1(setEncryptionPassword), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
     __obj.asInstanceOf[Storage]
   }
-  @scala.inline
-  implicit class StorageOps[Self <: Storage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasEncryptedEntries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasEncryptedEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasNonEncryptedEntries(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasNonEncryptedEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsRoot(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRoot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMediaType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMediaTypeFallbackIsUsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaTypeFallbackIsUsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRepairPackage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RepairPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

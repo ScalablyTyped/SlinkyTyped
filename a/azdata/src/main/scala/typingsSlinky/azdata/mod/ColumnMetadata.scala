@@ -4,43 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ColumnMetadata extends js.Object {
-  var defaultValue: String = js.native
+  var defaultValue: String
   /// <summary>
   /// Escaped identifier for the name of the column
   /// </summary>
-  var escapedName: String = js.native
-  var hasExtendedProperties: Boolean = js.native
+  var escapedName: String
+  var hasExtendedProperties: Boolean
   /// <summary>
   /// Whether or not the column is calculated on the server side. This could be a computed
   /// column or a identity column.
   /// </summary>
-  var isCalculated: Boolean = js.native
+  var isCalculated: Boolean
   /// <summary>
   /// Whether or not the column is computed
   /// </summary>
-  var isComputed: Boolean = js.native
+  var isComputed: Boolean
   /// <summary>
   /// Whether or not the column is deterministically computed
   /// </summary>
-  var isDeterministic: Boolean = js.native
+  var isDeterministic: Boolean
   /// <summary>
   /// Whether or not the column is an identity column
   /// </summary>
-  var isIdentity: Boolean = js.native
+  var isIdentity: Boolean
   /// <summary>
   /// Whether or not the column is used in a key to uniquely identify a row
   /// </summary>
-  var isKey: Boolean = js.native
+  var isKey: Boolean
   /// <summary>
   /// Whether or not the column can be trusted for uniqueness
   /// </summary>
-  var isTrustworthyForUniqueness: Boolean = js.native
+  var isTrustworthyForUniqueness: Boolean
   /// <summary>
   /// The ordinal ID of the column
   /// </summary>
-  var ordinal: Double = js.native
+  var ordinal: Double
 }
 
 object ColumnMetadata {
@@ -60,73 +59,5 @@ object ColumnMetadata {
     val __obj = js.Dynamic.literal(defaultValue = defaultValue.asInstanceOf[js.Any], escapedName = escapedName.asInstanceOf[js.Any], hasExtendedProperties = hasExtendedProperties.asInstanceOf[js.Any], isCalculated = isCalculated.asInstanceOf[js.Any], isComputed = isComputed.asInstanceOf[js.Any], isDeterministic = isDeterministic.asInstanceOf[js.Any], isIdentity = isIdentity.asInstanceOf[js.Any], isKey = isKey.asInstanceOf[js.Any], isTrustworthyForUniqueness = isTrustworthyForUniqueness.asInstanceOf[js.Any], ordinal = ordinal.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnMetadata]
   }
-  @scala.inline
-  implicit class ColumnMetadataOps[Self <: ColumnMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEscapedName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("escapedName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasExtendedProperties(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasExtendedProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsCalculated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCalculated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsComputed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isComputed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsDeterministic(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeterministic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsIdentity(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isIdentity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsKey(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsTrustworthyForUniqueness(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrustworthyForUniqueness")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrdinal(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

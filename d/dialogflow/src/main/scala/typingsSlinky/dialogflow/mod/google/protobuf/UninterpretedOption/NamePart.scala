@@ -17,6 +17,12 @@ import scala.scalajs.js.annotation._
   */
 class NamePart () extends INamePart {
   def this(properties: INamePart) = this()
+  /** NamePart isExtension */
+  /* CompleteClass */
+  override var isExtension: Boolean = js.native
+  /** NamePart namePart */
+  /* CompleteClass */
+  override var namePart: String = js.native
   /**
     * Converts this NamePart to JSON.
     * @returns JSON object

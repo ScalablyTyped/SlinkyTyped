@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief 网络访问模块
-	* @detail 基础模块。可用于创建和操作网络资源，引用方式：,```JavaScript,var net = require('net');,```
-	*/
+  * @brief 网络访问模块
+  * @detail 基础模块。可用于创建和操作网络资源，引用方式：,```JavaScript,var net = require('net');,```
+  */
 @JSImport("net", JSImport.Namespace)
 @js.native
 object netMod extends js.Object {

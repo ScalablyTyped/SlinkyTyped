@@ -23,21 +23,21 @@ trait TableSort extends ClientObject {
   var context_TableSort: RequestContext = js.native
   /**
     *
-    * Represents the current conditions used to last sort the table. Read-only.
+    * Specifies the current conditions used to last sort the table.
     *
     * [Api set: ExcelApi 1.2]
     */
   val fields: js.Array[SortField] = js.native
   /**
     *
-    * Represents whether the casing impacted the last sort of the table. Read-only.
+    * Specifies if the casing impacts the last sort of the table.
     *
     * [Api set: ExcelApi 1.2]
     */
   val matchCase: Boolean = js.native
   /**
     *
-    * Represents Chinese character ordering method last used to sort the table. Read-only.
+    * Represents Chinese character ordering method last used to sort the table.
     *
     * [Api set: ExcelApi 1.2]
     */

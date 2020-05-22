@@ -91,149 +91,32 @@ trait SchemaExternalDataConfiguration extends js.Object {
 
 object SchemaExternalDataConfiguration {
   @scala.inline
-  def apply(): SchemaExternalDataConfiguration = {
+  def apply(
+    autodetect: js.UndefOr[Boolean] = js.undefined,
+    bigtableOptions: SchemaBigtableOptions = null,
+    compression: String = null,
+    csvOptions: SchemaCsvOptions = null,
+    googleSheetsOptions: SchemaGoogleSheetsOptions = null,
+    hivePartitioningMode: String = null,
+    ignoreUnknownValues: js.UndefOr[Boolean] = js.undefined,
+    maxBadRecords: js.UndefOr[Double] = js.undefined,
+    schema: SchemaTableSchema = null,
+    sourceFormat: String = null,
+    sourceUris: js.Array[String] = null
+  ): SchemaExternalDataConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autodetect)) __obj.updateDynamic("autodetect")(autodetect.get.asInstanceOf[js.Any])
+    if (bigtableOptions != null) __obj.updateDynamic("bigtableOptions")(bigtableOptions.asInstanceOf[js.Any])
+    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
+    if (csvOptions != null) __obj.updateDynamic("csvOptions")(csvOptions.asInstanceOf[js.Any])
+    if (googleSheetsOptions != null) __obj.updateDynamic("googleSheetsOptions")(googleSheetsOptions.asInstanceOf[js.Any])
+    if (hivePartitioningMode != null) __obj.updateDynamic("hivePartitioningMode")(hivePartitioningMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreUnknownValues)) __obj.updateDynamic("ignoreUnknownValues")(ignoreUnknownValues.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBadRecords)) __obj.updateDynamic("maxBadRecords")(maxBadRecords.get.asInstanceOf[js.Any])
+    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
+    if (sourceFormat != null) __obj.updateDynamic("sourceFormat")(sourceFormat.asInstanceOf[js.Any])
+    if (sourceUris != null) __obj.updateDynamic("sourceUris")(sourceUris.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExternalDataConfiguration]
   }
-  @scala.inline
-  implicit class SchemaExternalDataConfigurationOps[Self <: SchemaExternalDataConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutodetect(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autodetect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutodetect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autodetect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBigtableOptions(value: SchemaBigtableOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigtableOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBigtableOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bigtableOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompression(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompression: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCsvOptions(value: SchemaCsvOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCsvOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("csvOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleSheetsOptions(value: SchemaGoogleSheetsOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleSheetsOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleSheetsOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleSheetsOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHivePartitioningMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hivePartitioningMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHivePartitioningMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hivePartitioningMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreUnknownValues(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnknownValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreUnknownValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnknownValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBadRecords(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBadRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBadRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBadRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchema(value: SchemaTableSchema): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchema: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUris(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUris")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUris: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUris")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

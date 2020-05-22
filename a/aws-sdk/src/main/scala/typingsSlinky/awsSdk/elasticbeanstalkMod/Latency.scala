@@ -42,113 +42,26 @@ trait Latency extends js.Object {
 
 object Latency {
   @scala.inline
-  def apply(): Latency = {
+  def apply(
+    P10: js.UndefOr[NullableDouble] = js.undefined,
+    P50: js.UndefOr[NullableDouble] = js.undefined,
+    P75: js.UndefOr[NullableDouble] = js.undefined,
+    P85: js.UndefOr[NullableDouble] = js.undefined,
+    P90: js.UndefOr[NullableDouble] = js.undefined,
+    P95: js.UndefOr[NullableDouble] = js.undefined,
+    P99: js.UndefOr[NullableDouble] = js.undefined,
+    P999: js.UndefOr[NullableDouble] = js.undefined
+  ): Latency = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(P10)) __obj.updateDynamic("P10")(P10.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P50)) __obj.updateDynamic("P50")(P50.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P75)) __obj.updateDynamic("P75")(P75.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P85)) __obj.updateDynamic("P85")(P85.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P90)) __obj.updateDynamic("P90")(P90.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P95)) __obj.updateDynamic("P95")(P95.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P99)) __obj.updateDynamic("P99")(P99.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(P999)) __obj.updateDynamic("P999")(P999.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Latency]
   }
-  @scala.inline
-  implicit class LatencyOps[Self <: Latency] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withP10(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P10")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP10: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P10")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP50(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P50")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP50: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P50")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP75(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P75")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP75: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P75")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP85(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P85")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP85: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P85")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP90(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P90")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP90: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P90")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP95(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P95")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP95: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P95")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP99(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P99")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP99: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P99")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withP999(value: NullableDouble): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P999")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutP999: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("P999")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

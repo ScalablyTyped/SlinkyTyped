@@ -5,24 +5,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Identifies the Human Interface Device (HID) usage details for the input device. */
-@js.native
 trait PointerDeviceUsage extends js.Object {
   /** The maximum logical value for Usage. */
-  var maxLogical: Double = js.native
+  var maxLogical: Double
   /** The maximum physical value for Usage. */
-  var maxPhysical: Double = js.native
+  var maxPhysical: Double
   /** The minimum logical value for Usage. */
-  var minLogical: Double = js.native
+  var minLogical: Double
   /** The minimum physical value for Usage. */
-  var minPhysical: Double = js.native
+  var minPhysical: Double
   /** The multiplier used to convert the usage value reported by the device to a physical value in units of Unit. (Valid only for usages that indicate a static or dynamic value associated with a control, such as pressure or width and height of the touch contact.) */
-  var physicalMultiplier: Double = js.native
+  var physicalMultiplier: Double
   /** The HID unit of measure. */
-  var unit: Double = js.native
+  var unit: Double
   /** The HID pointer device usage ID that specifies a device or property in the UsagePage. For example, 0x04 indicates a touch screen device and 0x47 indicates touch confidence. */
-  var usage: Double = js.native
+  var usage: Double
   /** The HID usage page of the pointer device. */
-  var usagePage: Double = js.native
+  var usagePage: Double
 }
 
 object PointerDeviceUsage {
@@ -40,61 +39,5 @@ object PointerDeviceUsage {
     val __obj = js.Dynamic.literal(maxLogical = maxLogical.asInstanceOf[js.Any], maxPhysical = maxPhysical.asInstanceOf[js.Any], minLogical = minLogical.asInstanceOf[js.Any], minPhysical = minPhysical.asInstanceOf[js.Any], physicalMultiplier = physicalMultiplier.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any], usage = usage.asInstanceOf[js.Any], usagePage = usagePage.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointerDeviceUsage]
   }
-  @scala.inline
-  implicit class PointerDeviceUsageOps[Self <: PointerDeviceUsage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxLogical(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLogical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxPhysical(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPhysical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinLogical(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minLogical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinPhysical(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPhysical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPhysicalMultiplier(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("physicalMultiplier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUsagePage(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usagePage")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

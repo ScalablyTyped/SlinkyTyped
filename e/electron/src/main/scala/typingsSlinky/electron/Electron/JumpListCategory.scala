@@ -8,72 +8,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JumpListCategory extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/jump-list-category
   /**
     * Array of objects if type is tasks or custom, otherwise it should be omitted.
     */
-  var items: js.UndefOr[js.Array[JumpListItem]] = js.native
+  var items: js.UndefOr[js.Array[JumpListItem]] = js.undefined
   /**
     * Must be set if type is custom, otherwise it should be omitted.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * One of the following:
     */
-  var `type`: js.UndefOr[tasks | frequent | recent | custom] = js.native
+  var `type`: js.UndefOr[tasks | frequent | recent | custom] = js.undefined
 }
 
 object JumpListCategory {
   @scala.inline
-  def apply(): JumpListCategory = {
+  def apply(
+    items: js.Array[JumpListItem] = null,
+    name: String = null,
+    `type`: tasks | frequent | recent | custom = null
+  ): JumpListCategory = {
     val __obj = js.Dynamic.literal()
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JumpListCategory]
   }
-  @scala.inline
-  implicit class JumpListCategoryOps[Self <: JumpListCategory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[JumpListItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: tasks | frequent | recent | custom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait ReservedInstancesModificationResult extends js.Object {
 
 object ReservedInstancesModificationResult {
   @scala.inline
-  def apply(): ReservedInstancesModificationResult = {
+  def apply(ReservedInstancesId: String = null, TargetConfiguration: ReservedInstancesConfiguration = null): ReservedInstancesModificationResult = {
     val __obj = js.Dynamic.literal()
+    if (ReservedInstancesId != null) __obj.updateDynamic("ReservedInstancesId")(ReservedInstancesId.asInstanceOf[js.Any])
+    if (TargetConfiguration != null) __obj.updateDynamic("TargetConfiguration")(TargetConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservedInstancesModificationResult]
   }
-  @scala.inline
-  implicit class ReservedInstancesModificationResultOps[Self <: ReservedInstancesModificationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReservedInstancesId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReservedInstancesId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedInstancesId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetConfiguration(value: ReservedInstancesConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetConfiguration")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

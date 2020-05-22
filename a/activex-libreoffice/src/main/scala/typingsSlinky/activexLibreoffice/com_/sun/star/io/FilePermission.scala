@@ -16,12 +16,11 @@ import scala.scalajs.js.annotation._
   * delete permission;  The actions string is processed case-insensitive.
   * @since OOo 1.1.2
   */
-@js.native
 trait FilePermission extends js.Object {
   /** comma separated actions list */
-  var Actions: String = js.native
+  var Actions: String
   /** target file url */
-  var URL: String = js.native
+  var URL: String
 }
 
 object FilePermission {
@@ -30,25 +29,5 @@ object FilePermission {
     val __obj = js.Dynamic.literal(Actions = Actions.asInstanceOf[js.Any], URL = URL.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilePermission]
   }
-  @scala.inline
-  implicit class FilePermissionOps[Self <: FilePermission] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActions(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("URL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

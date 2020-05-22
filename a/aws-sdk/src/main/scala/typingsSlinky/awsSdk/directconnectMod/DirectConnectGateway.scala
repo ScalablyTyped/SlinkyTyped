@@ -34,89 +34,22 @@ trait DirectConnectGateway extends js.Object {
 
 object DirectConnectGateway {
   @scala.inline
-  def apply(): DirectConnectGateway = {
+  def apply(
+    amazonSideAsn: js.UndefOr[LongAsn] = js.undefined,
+    directConnectGatewayId: DirectConnectGatewayId = null,
+    directConnectGatewayName: DirectConnectGatewayName = null,
+    directConnectGatewayState: DirectConnectGatewayState = null,
+    ownerAccount: OwnerAccount = null,
+    stateChangeError: StateChangeError = null
+  ): DirectConnectGateway = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(amazonSideAsn)) __obj.updateDynamic("amazonSideAsn")(amazonSideAsn.get.asInstanceOf[js.Any])
+    if (directConnectGatewayId != null) __obj.updateDynamic("directConnectGatewayId")(directConnectGatewayId.asInstanceOf[js.Any])
+    if (directConnectGatewayName != null) __obj.updateDynamic("directConnectGatewayName")(directConnectGatewayName.asInstanceOf[js.Any])
+    if (directConnectGatewayState != null) __obj.updateDynamic("directConnectGatewayState")(directConnectGatewayState.asInstanceOf[js.Any])
+    if (ownerAccount != null) __obj.updateDynamic("ownerAccount")(ownerAccount.asInstanceOf[js.Any])
+    if (stateChangeError != null) __obj.updateDynamic("stateChangeError")(stateChangeError.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectConnectGateway]
   }
-  @scala.inline
-  implicit class DirectConnectGatewayOps[Self <: DirectConnectGateway] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmazonSideAsn(value: LongAsn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonSideAsn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonSideAsn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonSideAsn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectConnectGatewayId(value: DirectConnectGatewayId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectConnectGatewayId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectConnectGatewayName(value: DirectConnectGatewayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectConnectGatewayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectConnectGatewayState(value: DirectConnectGatewayState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectConnectGatewayState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directConnectGatewayState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOwnerAccount(value: OwnerAccount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOwnerAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStateChangeError(value: StateChangeError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChangeError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStateChangeError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChangeError")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

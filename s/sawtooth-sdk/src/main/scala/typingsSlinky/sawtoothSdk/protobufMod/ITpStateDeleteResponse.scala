@@ -5,63 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITpStateDeleteResponse extends js.Object {
   /** TpStateDeleteResponse addresses */
-  var addresses: js.UndefOr[js.Array[String] | Null] = js.native
+  var addresses: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** TpStateDeleteResponse status */
-  var status: js.UndefOr[Status | Null] = js.native
+  var status: js.UndefOr[Status | Null] = js.undefined
 }
 
 object ITpStateDeleteResponse {
   @scala.inline
-  def apply(): ITpStateDeleteResponse = {
+  def apply(
+    addresses: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    status: js.UndefOr[Null | Status] = js.undefined
+  ): ITpStateDeleteResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(addresses)) __obj.updateDynamic("addresses")(addresses.asInstanceOf[js.Any])
+    if (!js.isUndefined(status)) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITpStateDeleteResponse]
   }
-  @scala.inline
-  implicit class ITpStateDeleteResponseOps[Self <: ITpStateDeleteResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddresses(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddresses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddressesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(null)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(null)
-        ret
-    }
-  }
-  
 }
 

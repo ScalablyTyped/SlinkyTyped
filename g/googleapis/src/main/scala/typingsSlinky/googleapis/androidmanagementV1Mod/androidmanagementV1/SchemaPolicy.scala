@@ -376,917 +376,160 @@ trait SchemaPolicy extends js.Object {
 
 object SchemaPolicy {
   @scala.inline
-  def apply(): SchemaPolicy = {
+  def apply(
+    accountTypesWithManagementDisabled: js.Array[String] = null,
+    addUserDisabled: js.UndefOr[Boolean] = js.undefined,
+    adjustVolumeDisabled: js.UndefOr[Boolean] = js.undefined,
+    alwaysOnVpnPackage: SchemaAlwaysOnVpnPackage = null,
+    androidDevicePolicyTracks: js.Array[String] = null,
+    appAutoUpdatePolicy: String = null,
+    applications: js.Array[SchemaApplicationPolicy] = null,
+    autoTimeRequired: js.UndefOr[Boolean] = js.undefined,
+    blockApplicationsEnabled: js.UndefOr[Boolean] = js.undefined,
+    bluetoothConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    bluetoothContactSharingDisabled: js.UndefOr[Boolean] = js.undefined,
+    bluetoothDisabled: js.UndefOr[Boolean] = js.undefined,
+    cameraDisabled: js.UndefOr[Boolean] = js.undefined,
+    cellBroadcastsConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    choosePrivateKeyRules: js.Array[SchemaChoosePrivateKeyRule] = null,
+    complianceRules: js.Array[SchemaComplianceRule] = null,
+    createWindowsDisabled: js.UndefOr[Boolean] = js.undefined,
+    credentialsConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    dataRoamingDisabled: js.UndefOr[Boolean] = js.undefined,
+    debuggingFeaturesAllowed: js.UndefOr[Boolean] = js.undefined,
+    defaultPermissionPolicy: String = null,
+    deviceOwnerLockScreenInfo: SchemaUserFacingMessage = null,
+    encryptionPolicy: String = null,
+    ensureVerifyAppsEnabled: js.UndefOr[Boolean] = js.undefined,
+    factoryResetDisabled: js.UndefOr[Boolean] = js.undefined,
+    frpAdminEmails: js.Array[String] = null,
+    funDisabled: js.UndefOr[Boolean] = js.undefined,
+    installAppsDisabled: js.UndefOr[Boolean] = js.undefined,
+    installUnknownSourcesAllowed: js.UndefOr[Boolean] = js.undefined,
+    keyguardDisabled: js.UndefOr[Boolean] = js.undefined,
+    keyguardDisabledFeatures: js.Array[String] = null,
+    kioskCustomLauncherEnabled: js.UndefOr[Boolean] = js.undefined,
+    locationMode: String = null,
+    longSupportMessage: SchemaUserFacingMessage = null,
+    maximumTimeToLock: String = null,
+    mobileNetworksConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    modifyAccountsDisabled: js.UndefOr[Boolean] = js.undefined,
+    mountPhysicalMediaDisabled: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    networkEscapeHatchEnabled: js.UndefOr[Boolean] = js.undefined,
+    networkResetDisabled: js.UndefOr[Boolean] = js.undefined,
+    openNetworkConfiguration: StringDictionary[js.Any] = null,
+    outgoingBeamDisabled: js.UndefOr[Boolean] = js.undefined,
+    outgoingCallsDisabled: js.UndefOr[Boolean] = js.undefined,
+    passwordPolicies: js.Array[SchemaPasswordRequirements] = null,
+    passwordRequirements: SchemaPasswordRequirements = null,
+    permissionGrants: js.Array[SchemaPermissionGrant] = null,
+    permittedInputMethods: SchemaPackageNameList = null,
+    persistentPreferredActivities: js.Array[SchemaPersistentPreferredActivity] = null,
+    playStoreMode: String = null,
+    privateKeySelectionEnabled: js.UndefOr[Boolean] = js.undefined,
+    recommendedGlobalProxy: SchemaProxyInfo = null,
+    removeUserDisabled: js.UndefOr[Boolean] = js.undefined,
+    safeBootDisabled: js.UndefOr[Boolean] = js.undefined,
+    screenCaptureDisabled: js.UndefOr[Boolean] = js.undefined,
+    setUserIconDisabled: js.UndefOr[Boolean] = js.undefined,
+    setWallpaperDisabled: js.UndefOr[Boolean] = js.undefined,
+    setupActions: js.Array[SchemaSetupAction] = null,
+    shareLocationDisabled: js.UndefOr[Boolean] = js.undefined,
+    shortSupportMessage: SchemaUserFacingMessage = null,
+    skipFirstUseHintsEnabled: js.UndefOr[Boolean] = js.undefined,
+    smsDisabled: js.UndefOr[Boolean] = js.undefined,
+    statusBarDisabled: js.UndefOr[Boolean] = js.undefined,
+    statusReportingSettings: SchemaStatusReportingSettings = null,
+    stayOnPluggedModes: js.Array[String] = null,
+    systemUpdate: SchemaSystemUpdate = null,
+    tetheringConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    uninstallAppsDisabled: js.UndefOr[Boolean] = js.undefined,
+    unmuteMicrophoneDisabled: js.UndefOr[Boolean] = js.undefined,
+    usbFileTransferDisabled: js.UndefOr[Boolean] = js.undefined,
+    usbMassStorageEnabled: js.UndefOr[Boolean] = js.undefined,
+    version: String = null,
+    vpnConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    wifiConfigDisabled: js.UndefOr[Boolean] = js.undefined,
+    wifiConfigsLockdownEnabled: js.UndefOr[Boolean] = js.undefined
+  ): SchemaPolicy = {
     val __obj = js.Dynamic.literal()
+    if (accountTypesWithManagementDisabled != null) __obj.updateDynamic("accountTypesWithManagementDisabled")(accountTypesWithManagementDisabled.asInstanceOf[js.Any])
+    if (!js.isUndefined(addUserDisabled)) __obj.updateDynamic("addUserDisabled")(addUserDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(adjustVolumeDisabled)) __obj.updateDynamic("adjustVolumeDisabled")(adjustVolumeDisabled.get.asInstanceOf[js.Any])
+    if (alwaysOnVpnPackage != null) __obj.updateDynamic("alwaysOnVpnPackage")(alwaysOnVpnPackage.asInstanceOf[js.Any])
+    if (androidDevicePolicyTracks != null) __obj.updateDynamic("androidDevicePolicyTracks")(androidDevicePolicyTracks.asInstanceOf[js.Any])
+    if (appAutoUpdatePolicy != null) __obj.updateDynamic("appAutoUpdatePolicy")(appAutoUpdatePolicy.asInstanceOf[js.Any])
+    if (applications != null) __obj.updateDynamic("applications")(applications.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoTimeRequired)) __obj.updateDynamic("autoTimeRequired")(autoTimeRequired.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(blockApplicationsEnabled)) __obj.updateDynamic("blockApplicationsEnabled")(blockApplicationsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothConfigDisabled)) __obj.updateDynamic("bluetoothConfigDisabled")(bluetoothConfigDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothContactSharingDisabled)) __obj.updateDynamic("bluetoothContactSharingDisabled")(bluetoothContactSharingDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bluetoothDisabled)) __obj.updateDynamic("bluetoothDisabled")(bluetoothDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cameraDisabled)) __obj.updateDynamic("cameraDisabled")(cameraDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cellBroadcastsConfigDisabled)) __obj.updateDynamic("cellBroadcastsConfigDisabled")(cellBroadcastsConfigDisabled.get.asInstanceOf[js.Any])
+    if (choosePrivateKeyRules != null) __obj.updateDynamic("choosePrivateKeyRules")(choosePrivateKeyRules.asInstanceOf[js.Any])
+    if (complianceRules != null) __obj.updateDynamic("complianceRules")(complianceRules.asInstanceOf[js.Any])
+    if (!js.isUndefined(createWindowsDisabled)) __obj.updateDynamic("createWindowsDisabled")(createWindowsDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(credentialsConfigDisabled)) __obj.updateDynamic("credentialsConfigDisabled")(credentialsConfigDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dataRoamingDisabled)) __obj.updateDynamic("dataRoamingDisabled")(dataRoamingDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debuggingFeaturesAllowed)) __obj.updateDynamic("debuggingFeaturesAllowed")(debuggingFeaturesAllowed.get.asInstanceOf[js.Any])
+    if (defaultPermissionPolicy != null) __obj.updateDynamic("defaultPermissionPolicy")(defaultPermissionPolicy.asInstanceOf[js.Any])
+    if (deviceOwnerLockScreenInfo != null) __obj.updateDynamic("deviceOwnerLockScreenInfo")(deviceOwnerLockScreenInfo.asInstanceOf[js.Any])
+    if (encryptionPolicy != null) __obj.updateDynamic("encryptionPolicy")(encryptionPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(ensureVerifyAppsEnabled)) __obj.updateDynamic("ensureVerifyAppsEnabled")(ensureVerifyAppsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(factoryResetDisabled)) __obj.updateDynamic("factoryResetDisabled")(factoryResetDisabled.get.asInstanceOf[js.Any])
+    if (frpAdminEmails != null) __obj.updateDynamic("frpAdminEmails")(frpAdminEmails.asInstanceOf[js.Any])
+    if (!js.isUndefined(funDisabled)) __obj.updateDynamic("funDisabled")(funDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(installAppsDisabled)) __obj.updateDynamic("installAppsDisabled")(installAppsDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(installUnknownSourcesAllowed)) __obj.updateDynamic("installUnknownSourcesAllowed")(installUnknownSourcesAllowed.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyguardDisabled)) __obj.updateDynamic("keyguardDisabled")(keyguardDisabled.get.asInstanceOf[js.Any])
+    if (keyguardDisabledFeatures != null) __obj.updateDynamic("keyguardDisabledFeatures")(keyguardDisabledFeatures.asInstanceOf[js.Any])
+    if (!js.isUndefined(kioskCustomLauncherEnabled)) __obj.updateDynamic("kioskCustomLauncherEnabled")(kioskCustomLauncherEnabled.get.asInstanceOf[js.Any])
+    if (locationMode != null) __obj.updateDynamic("locationMode")(locationMode.asInstanceOf[js.Any])
+    if (longSupportMessage != null) __obj.updateDynamic("longSupportMessage")(longSupportMessage.asInstanceOf[js.Any])
+    if (maximumTimeToLock != null) __obj.updateDynamic("maximumTimeToLock")(maximumTimeToLock.asInstanceOf[js.Any])
+    if (!js.isUndefined(mobileNetworksConfigDisabled)) __obj.updateDynamic("mobileNetworksConfigDisabled")(mobileNetworksConfigDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modifyAccountsDisabled)) __obj.updateDynamic("modifyAccountsDisabled")(modifyAccountsDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mountPhysicalMediaDisabled)) __obj.updateDynamic("mountPhysicalMediaDisabled")(mountPhysicalMediaDisabled.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkEscapeHatchEnabled)) __obj.updateDynamic("networkEscapeHatchEnabled")(networkEscapeHatchEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkResetDisabled)) __obj.updateDynamic("networkResetDisabled")(networkResetDisabled.get.asInstanceOf[js.Any])
+    if (openNetworkConfiguration != null) __obj.updateDynamic("openNetworkConfiguration")(openNetworkConfiguration.asInstanceOf[js.Any])
+    if (!js.isUndefined(outgoingBeamDisabled)) __obj.updateDynamic("outgoingBeamDisabled")(outgoingBeamDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(outgoingCallsDisabled)) __obj.updateDynamic("outgoingCallsDisabled")(outgoingCallsDisabled.get.asInstanceOf[js.Any])
+    if (passwordPolicies != null) __obj.updateDynamic("passwordPolicies")(passwordPolicies.asInstanceOf[js.Any])
+    if (passwordRequirements != null) __obj.updateDynamic("passwordRequirements")(passwordRequirements.asInstanceOf[js.Any])
+    if (permissionGrants != null) __obj.updateDynamic("permissionGrants")(permissionGrants.asInstanceOf[js.Any])
+    if (permittedInputMethods != null) __obj.updateDynamic("permittedInputMethods")(permittedInputMethods.asInstanceOf[js.Any])
+    if (persistentPreferredActivities != null) __obj.updateDynamic("persistentPreferredActivities")(persistentPreferredActivities.asInstanceOf[js.Any])
+    if (playStoreMode != null) __obj.updateDynamic("playStoreMode")(playStoreMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(privateKeySelectionEnabled)) __obj.updateDynamic("privateKeySelectionEnabled")(privateKeySelectionEnabled.get.asInstanceOf[js.Any])
+    if (recommendedGlobalProxy != null) __obj.updateDynamic("recommendedGlobalProxy")(recommendedGlobalProxy.asInstanceOf[js.Any])
+    if (!js.isUndefined(removeUserDisabled)) __obj.updateDynamic("removeUserDisabled")(removeUserDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(safeBootDisabled)) __obj.updateDynamic("safeBootDisabled")(safeBootDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenCaptureDisabled)) __obj.updateDynamic("screenCaptureDisabled")(screenCaptureDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setUserIconDisabled)) __obj.updateDynamic("setUserIconDisabled")(setUserIconDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(setWallpaperDisabled)) __obj.updateDynamic("setWallpaperDisabled")(setWallpaperDisabled.get.asInstanceOf[js.Any])
+    if (setupActions != null) __obj.updateDynamic("setupActions")(setupActions.asInstanceOf[js.Any])
+    if (!js.isUndefined(shareLocationDisabled)) __obj.updateDynamic("shareLocationDisabled")(shareLocationDisabled.get.asInstanceOf[js.Any])
+    if (shortSupportMessage != null) __obj.updateDynamic("shortSupportMessage")(shortSupportMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipFirstUseHintsEnabled)) __obj.updateDynamic("skipFirstUseHintsEnabled")(skipFirstUseHintsEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(smsDisabled)) __obj.updateDynamic("smsDisabled")(smsDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(statusBarDisabled)) __obj.updateDynamic("statusBarDisabled")(statusBarDisabled.get.asInstanceOf[js.Any])
+    if (statusReportingSettings != null) __obj.updateDynamic("statusReportingSettings")(statusReportingSettings.asInstanceOf[js.Any])
+    if (stayOnPluggedModes != null) __obj.updateDynamic("stayOnPluggedModes")(stayOnPluggedModes.asInstanceOf[js.Any])
+    if (systemUpdate != null) __obj.updateDynamic("systemUpdate")(systemUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(tetheringConfigDisabled)) __obj.updateDynamic("tetheringConfigDisabled")(tetheringConfigDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(uninstallAppsDisabled)) __obj.updateDynamic("uninstallAppsDisabled")(uninstallAppsDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(unmuteMicrophoneDisabled)) __obj.updateDynamic("unmuteMicrophoneDisabled")(unmuteMicrophoneDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usbFileTransferDisabled)) __obj.updateDynamic("usbFileTransferDisabled")(usbFileTransferDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usbMassStorageEnabled)) __obj.updateDynamic("usbMassStorageEnabled")(usbMassStorageEnabled.get.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
+    if (!js.isUndefined(vpnConfigDisabled)) __obj.updateDynamic("vpnConfigDisabled")(vpnConfigDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wifiConfigDisabled)) __obj.updateDynamic("wifiConfigDisabled")(wifiConfigDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wifiConfigsLockdownEnabled)) __obj.updateDynamic("wifiConfigsLockdownEnabled")(wifiConfigsLockdownEnabled.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPolicy]
   }
-  @scala.inline
-  implicit class SchemaPolicyOps[Self <: SchemaPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountTypesWithManagementDisabled(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountTypesWithManagementDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountTypesWithManagementDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountTypesWithManagementDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddUserDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addUserDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddUserDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addUserDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdjustVolumeDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustVolumeDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdjustVolumeDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustVolumeDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlwaysOnVpnPackage(value: SchemaAlwaysOnVpnPackage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysOnVpnPackage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlwaysOnVpnPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysOnVpnPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidDevicePolicyTracks(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevicePolicyTracks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidDevicePolicyTracks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDevicePolicyTracks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppAutoUpdatePolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appAutoUpdatePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppAutoUpdatePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appAutoUpdatePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplications(value: js.Array[SchemaApplicationPolicy]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoTimeRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTimeRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoTimeRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoTimeRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockApplicationsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockApplicationsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockApplicationsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockApplicationsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothContactSharingDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothContactSharingDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothContactSharingDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothContactSharingDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBluetoothDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBluetoothDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetoothDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCameraDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCameraDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cameraDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCellBroadcastsConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBroadcastsConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellBroadcastsConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBroadcastsConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChoosePrivateKeyRules(value: js.Array[SchemaChoosePrivateKeyRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choosePrivateKeyRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChoosePrivateKeyRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("choosePrivateKeyRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComplianceRules(value: js.Array[SchemaComplianceRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComplianceRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("complianceRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateWindowsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWindowsDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateWindowsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createWindowsDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCredentialsConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialsConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCredentialsConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialsConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataRoamingDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRoamingDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataRoamingDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRoamingDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebuggingFeaturesAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggingFeaturesAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebuggingFeaturesAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggingFeaturesAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultPermissionPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPermissionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultPermissionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPermissionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceOwnerLockScreenInfo(value: SchemaUserFacingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOwnerLockScreenInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceOwnerLockScreenInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOwnerLockScreenInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncryptionPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnsureVerifyAppsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ensureVerifyAppsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnsureVerifyAppsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ensureVerifyAppsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFactoryResetDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factoryResetDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFactoryResetDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("factoryResetDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrpAdminEmails(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frpAdminEmails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrpAdminEmails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frpAdminEmails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("funDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("funDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallAppsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installAppsDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallAppsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installAppsDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstallUnknownSourcesAllowed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installUnknownSourcesAllowed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstallUnknownSourcesAllowed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installUnknownSourcesAllowed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyguardDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyguardDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyguardDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyguardDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyguardDisabledFeatures(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyguardDisabledFeatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyguardDisabledFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyguardDisabledFeatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKioskCustomLauncherEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kioskCustomLauncherEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKioskCustomLauncherEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kioskCustomLauncherEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocationMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocationMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locationMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLongSupportMessage(value: SchemaUserFacingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longSupportMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLongSupportMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("longSupportMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaximumTimeToLock(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTimeToLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaximumTimeToLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTimeToLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMobileNetworksConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileNetworksConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMobileNetworksConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mobileNetworksConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModifyAccountsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyAccountsDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModifyAccountsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyAccountsDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMountPhysicalMediaDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPhysicalMediaDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMountPhysicalMediaDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPhysicalMediaDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkEscapeHatchEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkEscapeHatchEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkEscapeHatchEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkEscapeHatchEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkResetDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkResetDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkResetDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkResetDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpenNetworkConfiguration(value: StringDictionary[js.Any]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNetworkConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpenNetworkConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("openNetworkConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutgoingBeamDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingBeamDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutgoingBeamDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingBeamDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutgoingCallsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingCallsDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutgoingCallsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingCallsDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordPolicies(value: js.Array[SchemaPasswordRequirements]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPolicies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordPolicies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordPolicies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPasswordRequirements(value: SchemaPasswordRequirements): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequirements")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPasswordRequirements: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordRequirements")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionGrants(value: js.Array[SchemaPermissionGrant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionGrants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionGrants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionGrants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermittedInputMethods(value: SchemaPackageNameList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permittedInputMethods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermittedInputMethods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permittedInputMethods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistentPreferredActivities(value: js.Array[SchemaPersistentPreferredActivity]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentPreferredActivities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistentPreferredActivities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistentPreferredActivities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlayStoreMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playStoreMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlayStoreMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("playStoreMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKeySelectionEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeySelectionEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKeySelectionEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeySelectionEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecommendedGlobalProxy(value: SchemaProxyInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendedGlobalProxy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecommendedGlobalProxy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendedGlobalProxy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveUserDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeUserDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveUserDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeUserDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeBootDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeBootDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeBootDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeBootDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenCaptureDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenCaptureDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenCaptureDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetUserIconDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUserIconDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetUserIconDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUserIconDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetWallpaperDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setWallpaperDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetWallpaperDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setWallpaperDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetupActions(value: js.Array[SchemaSetupAction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSetupActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setupActions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShareLocationDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareLocationDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShareLocationDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shareLocationDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortSupportMessage(value: SchemaUserFacingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortSupportMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortSupportMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shortSupportMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipFirstUseHintsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipFirstUseHintsEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipFirstUseHintsEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipFirstUseHintsEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSmsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smsDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smsDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusBarDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusBarDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusBarDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusBarDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatusReportingSettings(value: SchemaStatusReportingSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReportingSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusReportingSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusReportingSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStayOnPluggedModes(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stayOnPluggedModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStayOnPluggedModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stayOnPluggedModes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemUpdate(value: SchemaSystemUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTetheringConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetheringConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTetheringConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tetheringConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUninstallAppsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninstallAppsDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUninstallAppsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uninstallAppsDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnmuteMicrophoneDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmuteMicrophoneDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnmuteMicrophoneDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unmuteMicrophoneDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsbFileTransferDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usbFileTransferDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsbFileTransferDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usbFileTransferDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsbMassStorageEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usbMassStorageEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsbMassStorageEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usbMassStorageEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpnConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpnConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpnConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWifiConfigDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiConfigDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWifiConfigDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiConfigDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWifiConfigsLockdownEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiConfigsLockdownEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWifiConfigsLockdownEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiConfigsLockdownEnabled")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

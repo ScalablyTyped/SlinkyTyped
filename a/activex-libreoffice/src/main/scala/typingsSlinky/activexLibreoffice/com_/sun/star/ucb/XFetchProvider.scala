@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** provides the possibility to get the contents of the columns of several rows of a {@link ContentResultSet} with a single function call. */
-@js.native
 trait XFetchProvider extends XInterface {
   /**
     * returns the contents of the columns of the indicated rows
@@ -16,7 +15,7 @@ trait XFetchProvider extends XInterface {
     * @param bDirection `TRUE` , if you want the rows to be read in the same order, as they are contained in the result set ( `TRUE` <-> forward step; `FALSE`
     * @returns {@link FetchResult.Rows} contains a sequence of anys. Each of these anys contains a sequence of anys.
     */
-  def fetch(nRowStartPosition: Double, nRowCount: Double, bDirection: Boolean): FetchResult = js.native
+  def fetch(nRowStartPosition: Double, nRowCount: Double, bDirection: Boolean): FetchResult
 }
 
 object XFetchProvider {
@@ -30,19 +29,5 @@ object XFetchProvider {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), fetch = js.Any.fromFunction3(fetch), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XFetchProvider]
   }
-  @scala.inline
-  implicit class XFetchProviderOps[Self <: XFetchProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFetch(value: (Double, Double, Boolean) => FetchResult): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

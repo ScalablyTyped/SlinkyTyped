@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RadialGradientProps extends js.Object {
-  var cx: js.UndefOr[NumberProp] = js.native
-  var cy: js.UndefOr[NumberProp] = js.native
-  var fx: js.UndefOr[NumberProp] = js.native
-  var fy: js.UndefOr[NumberProp] = js.native
-  var gradientTransform: js.UndefOr[ColumnMajorTransformMatrix | String] = js.native
-  var gradientUnits: js.UndefOr[Units] = js.native
-  var id: js.UndefOr[String] = js.native
-  var r: js.UndefOr[NumberProp] = js.native
-  var rx: js.UndefOr[NumberProp] = js.native
-  var ry: js.UndefOr[NumberProp] = js.native
+  var cx: js.UndefOr[NumberProp] = js.undefined
+  var cy: js.UndefOr[NumberProp] = js.undefined
+  var fx: js.UndefOr[NumberProp] = js.undefined
+  var fy: js.UndefOr[NumberProp] = js.undefined
+  var gradientTransform: js.UndefOr[ColumnMajorTransformMatrix | String] = js.undefined
+  var gradientUnits: js.UndefOr[Units] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var r: js.UndefOr[NumberProp] = js.undefined
+  var rx: js.UndefOr[NumberProp] = js.undefined
+  var ry: js.UndefOr[NumberProp] = js.undefined
 }
 
 object RadialGradientProps {
   @scala.inline
-  def apply(): RadialGradientProps = {
+  def apply(
+    cx: NumberProp = null,
+    cy: NumberProp = null,
+    fx: NumberProp = null,
+    fy: NumberProp = null,
+    gradientTransform: ColumnMajorTransformMatrix | String = null,
+    gradientUnits: Units = null,
+    id: String = null,
+    r: NumberProp = null,
+    rx: NumberProp = null,
+    ry: NumberProp = null
+  ): RadialGradientProps = {
     val __obj = js.Dynamic.literal()
+    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
+    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
+    if (fx != null) __obj.updateDynamic("fx")(fx.asInstanceOf[js.Any])
+    if (fy != null) __obj.updateDynamic("fy")(fy.asInstanceOf[js.Any])
+    if (gradientTransform != null) __obj.updateDynamic("gradientTransform")(gradientTransform.asInstanceOf[js.Any])
+    if (gradientUnits != null) __obj.updateDynamic("gradientUnits")(gradientUnits.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
+    if (rx != null) __obj.updateDynamic("rx")(rx.asInstanceOf[js.Any])
+    if (ry != null) __obj.updateDynamic("ry")(ry.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadialGradientProps]
   }
-  @scala.inline
-  implicit class RadialGradientPropsOps[Self <: RadialGradientProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCx(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCy(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFx(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFy(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradientTransform(value: ColumnMajorTransformMatrix | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradientTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGradientUnits(value: Units): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGradientUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gradientUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withR(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutR: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRx(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRy(value: NumberProp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ry")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

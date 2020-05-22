@@ -79,6 +79,11 @@ object ReactNativePhoneInput {
   }
   
   def withProps[TextComponentType <: ReactComponentClass[js.Object]](p: ReactNativePhoneInputProps[TextComponentType]): Builder[TextComponentType] = new Builder[TextComponentType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[TextComponentType <: ReactComponentClass[js.Object]](): Builder[TextComponentType] = {
+    val __props = js.Dynamic.literal()
+    new Builder[TextComponentType](js.Array(this.component, __props.asInstanceOf[ReactNativePhoneInputProps[TextComponentType]]))
+  }
   implicit def make[TextComponentType <: ReactComponentClass[js.Object]](companion: ReactNativePhoneInput.type): Builder[TextComponentType] = new Builder[TextComponentType](js.Array(this.component, js.Dictionary.empty))()
 }
 

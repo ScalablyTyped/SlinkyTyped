@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOBJECT_MESSAGE extends js.Object {
-  var message: String = js.native
-  var sender: SFSUser = js.native
+  var message: String
+  var sender: SFSUser
 }
 
 object IOBJECT_MESSAGE {
@@ -17,25 +16,5 @@ object IOBJECT_MESSAGE {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOBJECT_MESSAGE]
   }
-  @scala.inline
-  implicit class IOBJECT_MESSAGEOps[Self <: IOBJECT_MESSAGE] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSender(value: SFSUser): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

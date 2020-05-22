@@ -4,7 +4,6 @@ import typingsSlinky.tstl.arrayIteratorBaseMod.ArrayIteratorBase
 import typingsSlinky.tstl.arrayReverseIteratorBaseMod.ArrayReverseIteratorBase
 import typingsSlinky.tstl.containerContainerMod.Container
 import typingsSlinky.tstl.icontainerMod.IContainer
-import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ipushbackMod.IPushBack
 import scala.scalajs.js
@@ -56,24 +55,10 @@ object arrayContainerMod extends js.Object {
       */
     def back(`val`: T): Unit = js.native
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): Iterator[T, SourceT, IteratorT, ReverseT, ElemT] = js.native
-    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): Iterator[T, SourceT, IteratorT, ReverseT, ElemT] = js.native
     /**
       * Erase elements in range.
       *
@@ -147,22 +132,8 @@ object arrayContainerMod extends js.Object {
       *
       * @param val Value to insert.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     override def push_back(`val`: T): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseT = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseT = js.native
     /**
       * @inheritDoc
       */

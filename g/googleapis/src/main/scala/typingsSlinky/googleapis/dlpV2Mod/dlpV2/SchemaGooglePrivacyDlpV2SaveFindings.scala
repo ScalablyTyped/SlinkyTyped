@@ -16,29 +16,10 @@ trait SchemaGooglePrivacyDlpV2SaveFindings extends js.Object {
 
 object SchemaGooglePrivacyDlpV2SaveFindings {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2SaveFindings = {
+  def apply(outputConfig: SchemaGooglePrivacyDlpV2OutputStorageConfig = null): SchemaGooglePrivacyDlpV2SaveFindings = {
     val __obj = js.Dynamic.literal()
+    if (outputConfig != null) __obj.updateDynamic("outputConfig")(outputConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2SaveFindings]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2SaveFindingsOps[Self <: SchemaGooglePrivacyDlpV2SaveFindings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputConfig(value: SchemaGooglePrivacyDlpV2OutputStorageConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AceDiff extends js.Object {
-  def destroy(): Unit = js.native
-  def diff(): Unit = js.native
-  def getEditors(): Left = js.native
-  def getNumDiffs(): Double = js.native
-  def setOptions(options: AceDiffOpts): Unit = js.native
+  def destroy(): Unit
+  def diff(): Unit
+  def getEditors(): Left
+  def getNumDiffs(): Double
+  def setOptions(options: AceDiffOpts): Unit
 }
 
 object AceDiff {
@@ -26,43 +25,5 @@ object AceDiff {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), diff = js.Any.fromFunction0(diff), getEditors = js.Any.fromFunction0(getEditors), getNumDiffs = js.Any.fromFunction0(getNumDiffs), setOptions = js.Any.fromFunction1(setOptions))
     __obj.asInstanceOf[AceDiff]
   }
-  @scala.inline
-  implicit class AceDiffOps[Self <: AceDiff] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDiff(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diff")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetEditors(value: () => Left): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getEditors")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumDiffs(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumDiffs")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetOptions(value: AceDiffOpts => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

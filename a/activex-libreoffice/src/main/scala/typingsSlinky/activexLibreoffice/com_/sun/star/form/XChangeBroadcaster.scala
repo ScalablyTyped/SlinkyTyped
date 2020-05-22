@@ -13,20 +13,19 @@ import scala.scalajs.js.annotation._
   * providing service.
   * @see XChangeListener
   */
-@js.native
 trait XChangeBroadcaster extends XInterface {
   /**
     * adds the specified listener to receive the "changed" event.
     * @param aListener the listener to add.
     * @see com.sun.star.form.XChangeListener
     */
-  def addChangeListener(aListener: XChangeListener): Unit = js.native
+  def addChangeListener(aListener: XChangeListener): Unit
   /**
     * removes the specified listener.
     * @param aListener the listener to remove.
     * @see com.sun.star.form.XChangeListener
     */
-  def removeChangeListener(aListener: XChangeListener): Unit = js.native
+  def removeChangeListener(aListener: XChangeListener): Unit
 }
 
 object XChangeBroadcaster {
@@ -41,25 +40,5 @@ object XChangeBroadcaster {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addChangeListener = js.Any.fromFunction1(addChangeListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeChangeListener = js.Any.fromFunction1(removeChangeListener))
     __obj.asInstanceOf[XChangeBroadcaster]
   }
-  @scala.inline
-  implicit class XChangeBroadcasterOps[Self <: XChangeBroadcaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddChangeListener(value: XChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveChangeListener(value: XChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

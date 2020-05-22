@@ -22,41 +22,10 @@ trait UpdateStreamingDistributionRequest extends js.Object {
 
 object UpdateStreamingDistributionRequest {
   @scala.inline
-  def apply(Id: String, StreamingDistributionConfig: StreamingDistributionConfig): UpdateStreamingDistributionRequest = {
+  def apply(Id: String, StreamingDistributionConfig: StreamingDistributionConfig, IfMatch: String = null): UpdateStreamingDistributionRequest = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any], StreamingDistributionConfig = StreamingDistributionConfig.asInstanceOf[js.Any])
+    if (IfMatch != null) __obj.updateDynamic("IfMatch")(IfMatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateStreamingDistributionRequest]
   }
-  @scala.inline
-  implicit class UpdateStreamingDistributionRequestOps[Self <: UpdateStreamingDistributionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStreamingDistributionConfig(value: StreamingDistributionConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamingDistributionConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIfMatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfMatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a way for the app to get an Advanced Query Syntax (AQS) string by specifying the class code, subclass code, and the protocol code defined by the device. The properties in this class are passed in the call to GetDeviceClassSelector . */
-@js.native
 trait UsbDeviceClass extends js.Object {
   /** Gets or sets the class code of the device. */
-  var classCode: Double = js.native
+  var classCode: Double
   /** Gets or sets the protocol code of the device. */
-  var protocolCode: Double = js.native
+  var protocolCode: Double
   /** Gets or sets the subclass code of the device. */
-  var subclassCode: Double = js.native
+  var subclassCode: Double
 }
 
 object UsbDeviceClass {
@@ -21,31 +20,5 @@ object UsbDeviceClass {
     val __obj = js.Dynamic.literal(classCode = classCode.asInstanceOf[js.Any], protocolCode = protocolCode.asInstanceOf[js.Any], subclassCode = subclassCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[UsbDeviceClass]
   }
-  @scala.inline
-  implicit class UsbDeviceClassOps[Self <: UsbDeviceClass] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProtocolCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubclassCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subclassCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

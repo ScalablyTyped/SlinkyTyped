@@ -18,19 +18,18 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameterInstantiation */
-@js.native
 trait TSImportType
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSHasOptionalTypeParameterInstantiationKind
      with TSTypeKind {
-  var argument: StringLiteralKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var qualifier: js.UndefOr[IdentifierKind | TSQualifiedNameKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSImportType = js.native
-  var typeParameters: js.UndefOr[TSTypeParameterInstantiationKind | Null] = js.native
+  var argument: StringLiteralKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var qualifier: js.UndefOr[IdentifierKind | TSQualifiedNameKind] = js.undefined
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSImportType
+  var typeParameters: js.UndefOr[TSTypeParameterInstantiationKind | Null] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSImportType")

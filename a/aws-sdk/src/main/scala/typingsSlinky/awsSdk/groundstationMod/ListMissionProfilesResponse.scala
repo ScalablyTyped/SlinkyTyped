@@ -18,41 +18,11 @@ trait ListMissionProfilesResponse extends js.Object {
 
 object ListMissionProfilesResponse {
   @scala.inline
-  def apply(): ListMissionProfilesResponse = {
+  def apply(missionProfileList: MissionProfileList = null, nextToken: String = null): ListMissionProfilesResponse = {
     val __obj = js.Dynamic.literal()
+    if (missionProfileList != null) __obj.updateDynamic("missionProfileList")(missionProfileList.asInstanceOf[js.Any])
+    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListMissionProfilesResponse]
   }
-  @scala.inline
-  implicit class ListMissionProfilesResponseOps[Self <: ListMissionProfilesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMissionProfileList(value: MissionProfileList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missionProfileList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissionProfileList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missionProfileList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -107,12 +107,12 @@ trait Key extends EventEmitter {
   /**
     * Resets this Key object back to its default un-pressed state.
     */
-  def reset(): Key = js.native
+  def reset(): this.type = js.native
   /**
     * Controls if this Key will continuously emit a `down` event while being held down (true),
     * or emit the event just once, on first press, and then skip future events (false).
     * @param value Emit `down` events on repeated key down actions, or just once?
     */
-  def setEmitOnRepeat(value: Boolean): Key = js.native
+  def setEmitOnRepeat(value: Boolean): this.type = js.native
 }
 

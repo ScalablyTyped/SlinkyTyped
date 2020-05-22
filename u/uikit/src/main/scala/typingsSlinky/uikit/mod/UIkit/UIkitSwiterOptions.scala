@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UIkitSwiterOptions extends js.Object {
-  var active: js.UndefOr[Double] = js.native
-  var animation: js.UndefOr[String] = js.native
-  var connect: js.UndefOr[String] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var swiping: js.UndefOr[Boolean] = js.native
-  var toggle: js.UndefOr[String] = js.native
+  var active: js.UndefOr[Double] = js.undefined
+  var animation: js.UndefOr[String] = js.undefined
+  var connect: js.UndefOr[String] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var swiping: js.UndefOr[Boolean] = js.undefined
+  var toggle: js.UndefOr[String] = js.undefined
 }
 
 object UIkitSwiterOptions {
   @scala.inline
-  def apply(): UIkitSwiterOptions = {
+  def apply(
+    active: js.UndefOr[Double] = js.undefined,
+    animation: String = null,
+    connect: String = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    swiping: js.UndefOr[Boolean] = js.undefined,
+    toggle: String = null
+  ): UIkitSwiterOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.get.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (connect != null) __obj.updateDynamic("connect")(connect.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(swiping)) __obj.updateDynamic("swiping")(swiping.get.asInstanceOf[js.Any])
+    if (toggle != null) __obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIkitSwiterOptions]
   }
-  @scala.inline
-  implicit class UIkitSwiterOptionsOps[Self <: UIkitSwiterOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActive(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConnect(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConnect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwiping(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwiping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swiping")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteGroupParameters extends js.Object {
-  var channelGroup: String = js.native
+  var channelGroup: String
 }
 
 object DeleteGroupParameters {
@@ -15,19 +14,5 @@ object DeleteGroupParameters {
     val __obj = js.Dynamic.literal(channelGroup = channelGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteGroupParameters]
   }
-  @scala.inline
-  implicit class DeleteGroupParametersOps[Self <: DeleteGroupParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChannelGroup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("channelGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -9,10 +9,9 @@ import scala.scalajs.js.annotation._
   * Represents a network request for a document resource (script, image and so on). See HAR Specification for
   * reference.
   */
-@js.native
 trait Request extends js.Object {
   /** Returns content of the response body. */
-  def getContent(): js.Promise[js.Object] = js.native
+  def getContent(): js.Promise[js.Object]
 }
 
 object Request {
@@ -21,19 +20,5 @@ object Request {
     val __obj = js.Dynamic.literal(getContent = js.Any.fromFunction0(getContent))
     __obj.asInstanceOf[Request]
   }
-  @scala.inline
-  implicit class RequestOps[Self <: Request] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetContent(value: () => js.Promise[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getContent")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

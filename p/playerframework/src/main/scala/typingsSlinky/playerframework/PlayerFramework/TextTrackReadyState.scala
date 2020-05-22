@@ -11,26 +11,26 @@ sealed trait TextTrackReadyState extends js.Object
 @js.native
 object TextTrackReadyState extends js.Object {
   /**
-  		* The track failed to load.
-  		*/
+    * The track failed to load.
+    */
   @js.native
   sealed trait error extends TextTrackReadyState
   
   /**
-  		* The track is loaded.
-  		*/
+    * The track is loaded.
+    */
   @js.native
   sealed trait loaded extends TextTrackReadyState
   
   /**
-  		* The track is currently loading.
-  		*/
+    * The track is currently loading.
+    */
   @js.native
   sealed trait loading extends TextTrackReadyState
   
   /**
-  		* The track is unloaded.
-  		*/
+    * The track is unloaded.
+    */
   @js.native
   sealed trait none extends TextTrackReadyState
   

@@ -22,41 +22,11 @@ trait SchemaJobDerivedInfo extends js.Object {
 
 object SchemaJobDerivedInfo {
   @scala.inline
-  def apply(): SchemaJobDerivedInfo = {
+  def apply(jobCategories: js.Array[String] = null, locations: js.Array[SchemaLocation] = null): SchemaJobDerivedInfo = {
     val __obj = js.Dynamic.literal()
+    if (jobCategories != null) __obj.updateDynamic("jobCategories")(jobCategories.asInstanceOf[js.Any])
+    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobDerivedInfo]
   }
-  @scala.inline
-  implicit class SchemaJobDerivedInfoOps[Self <: SchemaJobDerivedInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withJobCategories(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJobCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jobCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocations(value: js.Array[SchemaLocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

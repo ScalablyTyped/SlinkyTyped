@@ -4,69 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IError extends js.Object {
   /** [Property] (Boolean) */
-  var ignore: js.UndefOr[Boolean] = js.native
+  var ignore: js.UndefOr[Boolean] = js.undefined
   /** [Property] (Boolean) */
   @JSName("notify")
-  var notify_FIError: js.UndefOr[Boolean] = js.native
+  var notify_FIError: js.UndefOr[Boolean] = js.undefined
   /** [Method] Provides a custom string representation of the error object
-  		* @returns String The error message. If raised from within the Ext 4 class system, the error message will also include the raising class and method names, if available.
-  		*/
+    * @returns String The error message. If raised from within the Ext 4 class system, the error message will also include the raising class and method names, if available.
+    */
   @JSName("toString")
-  var toString_FIError: js.UndefOr[js.Function0[java.lang.String]] = js.native
+  var toString_FIError: js.UndefOr[js.Function0[java.lang.String]] = js.undefined
 }
 
 object IError {
   @scala.inline
-  def apply(): IError = {
+  def apply(
+    ignore: js.UndefOr[Boolean] = js.undefined,
+    notify: js.UndefOr[Boolean] = js.undefined,
+    toString: () => java.lang.String = null
+  ): IError = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignore)) __obj.updateDynamic("ignore")(ignore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(notify)) __obj.updateDynamic("notify")(notify.get.asInstanceOf[js.Any])
+    if (toString != null) __obj.updateDynamic("toString")(js.Any.fromFunction0(toString))
     __obj.asInstanceOf[IError]
   }
-  @scala.inline
-  implicit class IErrorOps[Self <: IError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotify(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotify: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notify")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToString(value: () => java.lang.String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

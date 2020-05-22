@@ -22,41 +22,14 @@ trait SetSubscriptionAttributesInput extends js.Object {
 
 object SetSubscriptionAttributesInput {
   @scala.inline
-  def apply(AttributeName: attributeName, SubscriptionArn: subscriptionARN): SetSubscriptionAttributesInput = {
+  def apply(
+    AttributeName: attributeName,
+    SubscriptionArn: subscriptionARN,
+    AttributeValue: attributeValue = null
+  ): SetSubscriptionAttributesInput = {
     val __obj = js.Dynamic.literal(AttributeName = AttributeName.asInstanceOf[js.Any], SubscriptionArn = SubscriptionArn.asInstanceOf[js.Any])
+    if (AttributeValue != null) __obj.updateDynamic("AttributeValue")(AttributeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetSubscriptionAttributesInput]
   }
-  @scala.inline
-  implicit class SetSubscriptionAttributesInputOps[Self <: SetSubscriptionAttributesInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeName(value: attributeName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubscriptionArn(value: subscriptionARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeValue(value: attributeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

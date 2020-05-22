@@ -4,231 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnlayerOptions extends js.Object {
-  val appearance: js.UndefOr[AppearanceConfig] = js.native
-  val blocks: js.UndefOr[js.Array[js.Object]] = js.native
-  val customCSS: js.UndefOr[js.Array[String]] = js.native
-  val customJS: js.UndefOr[js.Array[String]] = js.native
-  val designTags: js.UndefOr[StringList] = js.native
-  val designTagsConfig: js.UndefOr[DesignTagConfig] = js.native
-  val displayMode: js.UndefOr[DisplayMode] = js.native
-  val editor: js.UndefOr[EditorConfig] = js.native
-  val features: js.UndefOr[Features] = js.native
-  val id: js.UndefOr[String] = js.native
-  val locale: js.UndefOr[String] = js.native
-  val mergeTags: js.UndefOr[js.Array[MergeTag]] = js.native
-  val projectId: js.UndefOr[Double] = js.native
-  val safeHtml: js.UndefOr[Boolean] = js.native
-  val tools: js.UndefOr[ToolsConfig] = js.native
-  val user: js.UndefOr[User] = js.native
+  val appearance: js.UndefOr[AppearanceConfig] = js.undefined
+  val blocks: js.UndefOr[js.Array[js.Object]] = js.undefined
+  val customCSS: js.UndefOr[js.Array[String]] = js.undefined
+  val customJS: js.UndefOr[js.Array[String]] = js.undefined
+  val designTags: js.UndefOr[StringList] = js.undefined
+  val designTagsConfig: js.UndefOr[DesignTagConfig] = js.undefined
+  val displayMode: js.UndefOr[DisplayMode] = js.undefined
+  val editor: js.UndefOr[EditorConfig] = js.undefined
+  val features: js.UndefOr[Features] = js.undefined
+  val id: js.UndefOr[String] = js.undefined
+  val locale: js.UndefOr[String] = js.undefined
+  val mergeTags: js.UndefOr[js.Array[MergeTag]] = js.undefined
+  val projectId: js.UndefOr[Double] = js.undefined
+  val safeHtml: js.UndefOr[Boolean] = js.undefined
+  val tools: js.UndefOr[ToolsConfig] = js.undefined
+  val user: js.UndefOr[User] = js.undefined
 }
 
 object UnlayerOptions {
   @scala.inline
-  def apply(): UnlayerOptions = {
+  def apply(
+    appearance: AppearanceConfig = null,
+    blocks: js.Array[js.Object] = null,
+    customCSS: js.Array[String] = null,
+    customJS: js.Array[String] = null,
+    designTags: StringList = null,
+    designTagsConfig: DesignTagConfig = null,
+    displayMode: DisplayMode = null,
+    editor: EditorConfig = null,
+    features: Features = null,
+    id: String = null,
+    locale: String = null,
+    mergeTags: js.Array[MergeTag] = null,
+    projectId: js.UndefOr[Double] = js.undefined,
+    safeHtml: js.UndefOr[Boolean] = js.undefined,
+    tools: ToolsConfig = null,
+    user: User = null
+  ): UnlayerOptions = {
     val __obj = js.Dynamic.literal()
+    if (appearance != null) __obj.updateDynamic("appearance")(appearance.asInstanceOf[js.Any])
+    if (blocks != null) __obj.updateDynamic("blocks")(blocks.asInstanceOf[js.Any])
+    if (customCSS != null) __obj.updateDynamic("customCSS")(customCSS.asInstanceOf[js.Any])
+    if (customJS != null) __obj.updateDynamic("customJS")(customJS.asInstanceOf[js.Any])
+    if (designTags != null) __obj.updateDynamic("designTags")(designTags.asInstanceOf[js.Any])
+    if (designTagsConfig != null) __obj.updateDynamic("designTagsConfig")(designTagsConfig.asInstanceOf[js.Any])
+    if (displayMode != null) __obj.updateDynamic("displayMode")(displayMode.asInstanceOf[js.Any])
+    if (editor != null) __obj.updateDynamic("editor")(editor.asInstanceOf[js.Any])
+    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (mergeTags != null) __obj.updateDynamic("mergeTags")(mergeTags.asInstanceOf[js.Any])
+    if (!js.isUndefined(projectId)) __obj.updateDynamic("projectId")(projectId.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(safeHtml)) __obj.updateDynamic("safeHtml")(safeHtml.get.asInstanceOf[js.Any])
+    if (tools != null) __obj.updateDynamic("tools")(tools.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnlayerOptions]
   }
-  @scala.inline
-  implicit class UnlayerOptionsOps[Self <: UnlayerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppearance(value: AppearanceConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppearance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlocks(value: js.Array[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlocks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blocks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomCSS(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customCSS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomCSS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customCSS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomJS(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customJS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomJS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customJS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesignTags(value: StringList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesignTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDesignTagsConfig(value: DesignTagConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designTagsConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesignTagsConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("designTagsConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayMode(value: DisplayMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEditor(value: EditorConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFeatures(value: Features): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocale(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeTags(value: js.Array[MergeTag]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjectId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSafeHtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeHtml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSafeHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("safeHtml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTools(value: ToolsConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser(value: User): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

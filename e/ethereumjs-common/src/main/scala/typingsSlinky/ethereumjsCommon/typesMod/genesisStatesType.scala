@@ -5,31 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait genesisStatesType
   extends /* key */ StringDictionary[js.Object] {
-  var names: StringDictionary[String] = js.native
+  var names: StringDictionary[String]
 }
 
 object genesisStatesType {
   @scala.inline
-  def apply(names: StringDictionary[String]): genesisStatesType = {
+  def apply(names: StringDictionary[String], StringDictionary: /* key */ StringDictionary[js.Object] = null): genesisStatesType = {
     val __obj = js.Dynamic.literal(names = names.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[genesisStatesType]
   }
-  @scala.inline
-  implicit class genesisStatesTypeOps[Self <: genesisStatesType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNames(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

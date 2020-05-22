@@ -4,20 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomTaskPane extends js.Object {
-  val Application: js.Any = js.native
-  val ContentControl: js.Any = js.native
-  var DockPosition: MsoCTPDockPosition = js.native
-  var DockPositionRestrict: MsoCTPDockPositionRestrict = js.native
-  var Height: Double = js.native
+  val Application: js.Any
+  val ContentControl: js.Any
+  var DockPosition: MsoCTPDockPosition
+  var DockPositionRestrict: MsoCTPDockPositionRestrict
+  var Height: Double
   @JSName("Office.CustomTaskPane_typekey")
-  var OfficeDotCustomTaskPane_typekey: CustomTaskPane = js.native
-  val Title: String = js.native
-  var Visible: Boolean = js.native
-  var Width: Double = js.native
-  val Window: js.Any = js.native
-  def Delete(): Unit = js.native
+  var OfficeDotCustomTaskPane_typekey: CustomTaskPane
+  val Title: String
+  var Visible: Boolean
+  var Width: Double
+  val Window: js.Any
+  def Delete(): Unit
 }
 
 object CustomTaskPane {
@@ -39,79 +38,5 @@ object CustomTaskPane {
     __obj.updateDynamic("Office.CustomTaskPane_typekey")(OfficeDotCustomTaskPane_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomTaskPane]
   }
-  @scala.inline
-  implicit class CustomTaskPaneOps[Self <: CustomTaskPane] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentControl(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentControl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDockPosition(value: MsoCTPDockPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DockPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDockPositionRestrict(value: MsoCTPDockPositionRestrict): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DockPositionRestrict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOfficeDotCustomTaskPane_typekey(value: CustomTaskPane): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Office.CustomTaskPane_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Window")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

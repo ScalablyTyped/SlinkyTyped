@@ -6,13 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait INotifyConfigProvider extends IServiceProvider {
-  var defaultNotifyConfig: String = js.native
-  var defaultTargetContainerName: String = js.native
-  var notifyConfigs: js.Any = js.native
-  def addOrUpdateNotifyConfig(name: String, opts: INotifyConfig): Unit = js.native
-  def optionsTransformer(options: INotifyOptions, $sce: ISCEService): Unit = js.native
+  var defaultNotifyConfig: String
+  var defaultTargetContainerName: String
+  var notifyConfigs: js.Any
+  def addOrUpdateNotifyConfig(name: String, opts: INotifyConfig): Unit
+  def optionsTransformer(options: INotifyOptions, $sce: ISCEService): Unit
 }
 
 object INotifyConfigProvider {
@@ -28,43 +27,5 @@ object INotifyConfigProvider {
     val __obj = js.Dynamic.literal($get = $get.asInstanceOf[js.Any], addOrUpdateNotifyConfig = js.Any.fromFunction2(addOrUpdateNotifyConfig), defaultNotifyConfig = defaultNotifyConfig.asInstanceOf[js.Any], defaultTargetContainerName = defaultTargetContainerName.asInstanceOf[js.Any], notifyConfigs = notifyConfigs.asInstanceOf[js.Any], optionsTransformer = js.Any.fromFunction2(optionsTransformer))
     __obj.asInstanceOf[INotifyConfigProvider]
   }
-  @scala.inline
-  implicit class INotifyConfigProviderOps[Self <: INotifyConfigProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddOrUpdateNotifyConfig(value: (String, INotifyConfig) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOrUpdateNotifyConfig")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withDefaultNotifyConfig(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultNotifyConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDefaultTargetContainerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTargetContainerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNotifyConfigs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyConfigs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionsTransformer(value: (INotifyOptions, ISCEService) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsTransformer")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

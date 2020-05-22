@@ -8,36 +8,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleApiYouTubePlaylistResource extends js.Object {
   /**
     * The contentDetails object contains information about the playlist content, including the number of videos in the playlist.
     */
-  var contentDetails: ItemCount = js.native
+  var contentDetails: ItemCount
   /**
     * The ETag for the playlist resource.
     */
-  var etag: String = js.native
+  var etag: String
   /**
     * The ID that YouTube uses to uniquely identify the playlist.
     */
-  var id: String = js.native
+  var id: String
   /**
     * The type of the API resource. For video resources, the value will be youtube#playlist.
     */
-  var kind: String = js.native
+  var kind: String
   /**
     * The player object contains information that you would use to play the playlist in an embedded player.
     */
-  var player: EmbedHtml = js.native
+  var player: EmbedHtml
   /**
     * The snippet object contains basic details about the playlist, such as its title and description.
     */
-  var snippet: PublishedAt = js.native
+  var snippet: PublishedAt
   /**
     * The status object contains status information for the playlist.
     */
-  var status: PrivacyStatus = js.native
+  var status: PrivacyStatus
 }
 
 object GoogleApiYouTubePlaylistResource {
@@ -54,55 +53,5 @@ object GoogleApiYouTubePlaylistResource {
     val __obj = js.Dynamic.literal(contentDetails = contentDetails.asInstanceOf[js.Any], etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], player = player.asInstanceOf[js.Any], snippet = snippet.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubePlaylistResource]
   }
-  @scala.inline
-  implicit class GoogleApiYouTubePlaylistResourceOps[Self <: GoogleApiYouTubePlaylistResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentDetails(value: ItemCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlayer(value: EmbedHtml): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnippet(value: PublishedAt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStatus(value: PrivacyStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

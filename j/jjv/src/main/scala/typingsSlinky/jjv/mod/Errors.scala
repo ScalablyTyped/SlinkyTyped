@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Errors extends js.Object {
-  var validation: StringDictionary[Required] = js.native
+  var validation: StringDictionary[Required]
 }
 
 object Errors {
@@ -17,19 +16,5 @@ object Errors {
     val __obj = js.Dynamic.literal(validation = validation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Errors]
   }
-  @scala.inline
-  implicit class ErrorsOps[Self <: Errors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withValidation(value: StringDictionary[Required]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

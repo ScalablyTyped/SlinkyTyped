@@ -37,65 +37,18 @@ trait SchemaWorkerHealthReport extends js.Object {
 
 object SchemaWorkerHealthReport {
   @scala.inline
-  def apply(): SchemaWorkerHealthReport = {
+  def apply(
+    pods: js.Array[StringDictionary[_]] = null,
+    reportInterval: String = null,
+    vmIsHealthy: js.UndefOr[Boolean] = js.undefined,
+    vmStartupTime: String = null
+  ): SchemaWorkerHealthReport = {
     val __obj = js.Dynamic.literal()
+    if (pods != null) __obj.updateDynamic("pods")(pods.asInstanceOf[js.Any])
+    if (reportInterval != null) __obj.updateDynamic("reportInterval")(reportInterval.asInstanceOf[js.Any])
+    if (!js.isUndefined(vmIsHealthy)) __obj.updateDynamic("vmIsHealthy")(vmIsHealthy.get.asInstanceOf[js.Any])
+    if (vmStartupTime != null) __obj.updateDynamic("vmStartupTime")(vmStartupTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkerHealthReport]
   }
-  @scala.inline
-  implicit class SchemaWorkerHealthReportOps[Self <: SchemaWorkerHealthReport] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPods(value: js.Array[StringDictionary[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pods")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPods: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pods")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReportInterval(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReportInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmIsHealthy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmIsHealthy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmIsHealthy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmIsHealthy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVmStartupTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmStartupTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVmStartupTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vmStartupTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

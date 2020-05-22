@@ -14,29 +14,10 @@ trait NodegroupHealth extends js.Object {
 
 object NodegroupHealth {
   @scala.inline
-  def apply(): NodegroupHealth = {
+  def apply(issues: IssueList = null): NodegroupHealth = {
     val __obj = js.Dynamic.literal()
+    if (issues != null) __obj.updateDynamic("issues")(issues.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodegroupHealth]
   }
-  @scala.inline
-  implicit class NodegroupHealthOps[Self <: NodegroupHealth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIssues(value: IssueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIssues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

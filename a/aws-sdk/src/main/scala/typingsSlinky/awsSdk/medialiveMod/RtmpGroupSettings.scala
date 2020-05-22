@@ -36,89 +36,22 @@ trait RtmpGroupSettings extends js.Object {
 
 object RtmpGroupSettings {
   @scala.inline
-  def apply(): RtmpGroupSettings = {
+  def apply(
+    AuthenticationScheme: AuthenticationScheme = null,
+    CacheFullBehavior: RtmpCacheFullBehavior = null,
+    CacheLength: js.UndefOr[integerMin30] = js.undefined,
+    CaptionData: RtmpCaptionData = null,
+    InputLossAction: InputLossActionForRtmpOut = null,
+    RestartDelay: js.UndefOr[integerMin0] = js.undefined
+  ): RtmpGroupSettings = {
     val __obj = js.Dynamic.literal()
+    if (AuthenticationScheme != null) __obj.updateDynamic("AuthenticationScheme")(AuthenticationScheme.asInstanceOf[js.Any])
+    if (CacheFullBehavior != null) __obj.updateDynamic("CacheFullBehavior")(CacheFullBehavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(CacheLength)) __obj.updateDynamic("CacheLength")(CacheLength.get.asInstanceOf[js.Any])
+    if (CaptionData != null) __obj.updateDynamic("CaptionData")(CaptionData.asInstanceOf[js.Any])
+    if (InputLossAction != null) __obj.updateDynamic("InputLossAction")(InputLossAction.asInstanceOf[js.Any])
+    if (!js.isUndefined(RestartDelay)) __obj.updateDynamic("RestartDelay")(RestartDelay.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RtmpGroupSettings]
   }
-  @scala.inline
-  implicit class RtmpGroupSettingsOps[Self <: RtmpGroupSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthenticationScheme(value: AuthenticationScheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationScheme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuthenticationScheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationScheme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheFullBehavior(value: RtmpCacheFullBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheFullBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheFullBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheFullBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCacheLength(value: integerMin30): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptionData(value: RtmpCaptionData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputLossAction(value: InputLossActionForRtmpOut): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputLossAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestartDelay(value: integerMin0): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestartDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestartDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RestartDelay")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

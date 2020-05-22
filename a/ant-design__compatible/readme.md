@@ -1,7 +1,7 @@
 
 # Scala.js typings for ant-design__compatible
 
-Typings are for version 1.0.1
+Typings are for version 1.0.2
 
 ## Library description:
 Ant Design v3 to v4 compatible package

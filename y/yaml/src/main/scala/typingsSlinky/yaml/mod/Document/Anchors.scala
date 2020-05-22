@@ -1,8 +1,8 @@
 package typingsSlinky.yaml.mod.Document
 
-import typingsSlinky.yaml.typesMod.AST.Alias
-import typingsSlinky.yaml.typesMod.AST.Merge
-import typingsSlinky.yaml.typesMod.AST.Node
+import typingsSlinky.yaml.typesMod.Alias
+import typingsSlinky.yaml.typesMod.Merge
+import typingsSlinky.yaml.typesMod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +22,8 @@ trait Anchors extends js.Object {
   def createMergePair(nodes: Node*): Merge = js.native
   /** The anchor name associated with `node`, if set. */
   def getName(node: Node): js.UndefOr[String] = js.native
+  /** List of all defined anchor names. */
+  def getNames(): js.Array[String] = js.native
   /** The node associated with the anchor `name`, if set. */
   def getNode(name: String): js.UndefOr[Node] = js.native
   /**

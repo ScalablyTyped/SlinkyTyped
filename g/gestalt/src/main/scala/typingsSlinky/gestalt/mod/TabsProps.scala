@@ -8,70 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabsProps extends js.Object {
-  var activeTabIndex: Double = js.native
-  var size: js.UndefOr[md | lg] = js.native
-  var tabs: js.Array[Href] = js.native
-  var wrap: js.UndefOr[Boolean] = js.native
-  def onChange(args: ActiveTabIndex): Unit = js.native
+  var activeTabIndex: Double
+  var size: js.UndefOr[md | lg] = js.undefined
+  var tabs: js.Array[Href]
+  var wrap: js.UndefOr[Boolean] = js.undefined
+  def onChange(args: ActiveTabIndex): Unit
 }
 
 object TabsProps {
   @scala.inline
-  def apply(activeTabIndex: Double, onChange: ActiveTabIndex => Unit, tabs: js.Array[Href]): TabsProps = {
+  def apply(
+    activeTabIndex: Double,
+    onChange: ActiveTabIndex => Unit,
+    tabs: js.Array[Href],
+    size: md | lg = null,
+    wrap: js.UndefOr[Boolean] = js.undefined
+  ): TabsProps = {
     val __obj = js.Dynamic.literal(activeTabIndex = activeTabIndex.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), tabs = tabs.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabsProps]
   }
-  @scala.inline
-  implicit class TabsPropsOps[Self <: TabsProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveTabIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTabIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnChange(value: ActiveTabIndex => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTabs(value: js.Array[Href]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSize(value: md | lg): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,23 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Static data for an LProjectionNode  */
-@js.native
 trait TProjectionNode extends TNode {
   /** Index in the data[] array */
   @JSName("child")
-  var child_TProjectionNode: Null = js.native
+  var child_TProjectionNode: Null
   /**
     * Projection nodes will have parents unless they are the first node of a component
     * or embedded view (which means their parent is in a different view and must be
     * retrieved using LView.node).
     */
   @JSName("parent")
-  var parent_TProjectionNode: ɵangularPackagesCoreCoreBf | TElementContainerNode | Null = js.native
+  var parent_TProjectionNode: ɵangularPackagesCoreCoreBf | TElementContainerNode | Null
   /** Index of the projection node. (See TNode.projection for more info.) */
   @JSName("projection")
-  var projection_TProjectionNode: Double = js.native
+  var projection_TProjectionNode: Double
   @JSName("tViews")
-  var tViews_TProjectionNode: Null = js.native
+  var tViews_TProjectionNode: Null
 }
 
 object TProjectionNode {
@@ -38,49 +37,25 @@ object TProjectionNode {
     propertyMetadataStartIndex: Double,
     providerIndexes: TNodeProviderIndexes,
     tViews: Null,
-    `type`: TNodeType
+    `type`: TNodeType,
+    attrs: TAttributes = null,
+    classes: StylingMapArray | TStylingContext = null,
+    initialInputs: js.UndefOr[Null | InitialInputData] = js.undefined,
+    inputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
+    localNames: js.Array[String | Double] = null,
+    next: TNode = null,
+    outputs: js.UndefOr[Null | PropertyAliases] = js.undefined,
+    parent: ɵangularPackagesCoreCoreBf | TElementContainerNode = null,
+    projectionNext: TNode = null,
+    styles: StylingMapArray | TStylingContext = null,
+    tagName: String = null
   ): TProjectionNode = {
-    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], propertyMetadataEndIndex = propertyMetadataEndIndex.asInstanceOf[js.Any], propertyMetadataStartIndex = propertyMetadataStartIndex.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], attrs = attrs.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], localNames = localNames.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], projectionNext = projectionNext.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialInputs)) __obj.updateDynamic("initialInputs")(initialInputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(inputs)) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
+    if (!js.isUndefined(outputs)) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TProjectionNode]
   }
-  @scala.inline
-  implicit class TProjectionNodeOps[Self <: TProjectionNode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChild(value: Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProjection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTViews(value: Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tViews")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: ɵangularPackagesCoreCoreBf | TElementContainerNode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotZigzagParamsOptions extends js.Object {
   /**
     * (Highstock) The threshold for the value change.
@@ -12,7 +11,7 @@ trait PlotZigzagParamsOptions extends js.Object {
     * For example deviation=1 means the indicator will ignore all price
     * movements less than 1%.
     */
-  var deviation: js.UndefOr[Double] = js.native
+  var deviation: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock) The point index which indicator calculations will base - high
     * value.
@@ -20,7 +19,7 @@ trait PlotZigzagParamsOptions extends js.Object {
     * For example using OHLC data, index=1 means the indicator will be
     * calculated using High values.
     */
-  var highIndex: js.UndefOr[Double] = js.native
+  var highIndex: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock) The point index which indicator calculations will base - low
     * value.
@@ -28,58 +27,21 @@ trait PlotZigzagParamsOptions extends js.Object {
     * For example using OHLC data, index=2 means the indicator will be
     * calculated using Low values.
     */
-  var lowIndex: js.UndefOr[Double] = js.native
+  var lowIndex: js.UndefOr[Double] = js.undefined
 }
 
 object PlotZigzagParamsOptions {
   @scala.inline
-  def apply(): PlotZigzagParamsOptions = {
+  def apply(
+    deviation: js.UndefOr[Double] = js.undefined,
+    highIndex: js.UndefOr[Double] = js.undefined,
+    lowIndex: js.UndefOr[Double] = js.undefined
+  ): PlotZigzagParamsOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deviation)) __obj.updateDynamic("deviation")(deviation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highIndex)) __obj.updateDynamic("highIndex")(highIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowIndex)) __obj.updateDynamic("lowIndex")(lowIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotZigzagParamsOptions]
   }
-  @scala.inline
-  implicit class PlotZigzagParamsOptionsOps[Self <: PlotZigzagParamsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

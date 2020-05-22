@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InvideoBranding extends js.Object {
-  var imageBytes: js.UndefOr[String] = js.native
-  var imageUrl: js.UndefOr[String] = js.native
-  var position: js.UndefOr[InvideoPosition] = js.native
-  var targetChannelId: js.UndefOr[String] = js.native
-  var timing: js.UndefOr[InvideoTiming] = js.native
+  var imageBytes: js.UndefOr[String] = js.undefined
+  var imageUrl: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[InvideoPosition] = js.undefined
+  var targetChannelId: js.UndefOr[String] = js.undefined
+  var timing: js.UndefOr[InvideoTiming] = js.undefined
 }
 
 object InvideoBranding {
   @scala.inline
-  def apply(): InvideoBranding = {
+  def apply(
+    imageBytes: String = null,
+    imageUrl: String = null,
+    position: InvideoPosition = null,
+    targetChannelId: String = null,
+    timing: InvideoTiming = null
+  ): InvideoBranding = {
     val __obj = js.Dynamic.literal()
+    if (imageBytes != null) __obj.updateDynamic("imageBytes")(imageBytes.asInstanceOf[js.Any])
+    if (imageUrl != null) __obj.updateDynamic("imageUrl")(imageUrl.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (targetChannelId != null) __obj.updateDynamic("targetChannelId")(targetChannelId.asInstanceOf[js.Any])
+    if (timing != null) __obj.updateDynamic("timing")(timing.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvideoBranding]
   }
-  @scala.inline
-  implicit class InvideoBrandingOps[Self <: InvideoBranding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImageUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImageUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: InvideoPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetChannelId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetChannelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetChannelId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetChannelId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTiming(value: InvideoTiming): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTiming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

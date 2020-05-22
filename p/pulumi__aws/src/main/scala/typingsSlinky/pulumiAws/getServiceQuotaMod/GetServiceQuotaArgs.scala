@@ -22,47 +22,11 @@ trait GetServiceQuotaArgs extends js.Object {
 
 object GetServiceQuotaArgs {
   @scala.inline
-  def apply(serviceCode: String): GetServiceQuotaArgs = {
+  def apply(serviceCode: String, quotaCode: String = null, quotaName: String = null): GetServiceQuotaArgs = {
     val __obj = js.Dynamic.literal(serviceCode = serviceCode.asInstanceOf[js.Any])
+    if (quotaCode != null) __obj.updateDynamic("quotaCode")(quotaCode.asInstanceOf[js.Any])
+    if (quotaName != null) __obj.updateDynamic("quotaName")(quotaName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetServiceQuotaArgs]
   }
-  @scala.inline
-  implicit class GetServiceQuotaArgsOps[Self <: GetServiceQuotaArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withServiceCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQuotaCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuotaName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuotaName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

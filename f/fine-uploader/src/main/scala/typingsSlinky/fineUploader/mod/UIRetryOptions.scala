@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UIRetryOptions extends RetryOptions {
   /**
     * The text of the note that will optionally appear next to the item during automatic retry attempts.
@@ -14,13 +13,13 @@ trait UIRetryOptions extends RetryOptions {
     *
     * @default `'Retrying {retryNum}/{maxAuto} ...'`
     */
-  var autoRetryNote: js.UndefOr[String] = js.native
+  var autoRetryNote: js.UndefOr[String] = js.undefined
   /**
     * Enable or disable a status message appearing next to the item during auto retry attempts
     *
     * @default `true`
     */
-  var showAutoRetryNote: js.UndefOr[Boolean] = js.native
+  var showAutoRetryNote: js.UndefOr[Boolean] = js.undefined
   /**
     * Enable or disable the showing of a button/link next to the failed item after all retry attempts have been exhausted.
     *
@@ -28,58 +27,29 @@ trait UIRetryOptions extends RetryOptions {
     *
     * @default `false`
     */
-  var showButton: js.UndefOr[Boolean] = js.native
+  var showButton: js.UndefOr[Boolean] = js.undefined
 }
 
 object UIRetryOptions {
   @scala.inline
-  def apply(): UIRetryOptions = {
+  def apply(
+    autoAttemptDelay: js.UndefOr[Double] = js.undefined,
+    autoRetryNote: String = null,
+    enableAuto: js.UndefOr[Boolean] = js.undefined,
+    maxAutoAttempts: js.UndefOr[Double] = js.undefined,
+    preventRetryResponseProperty: String = null,
+    showAutoRetryNote: js.UndefOr[Boolean] = js.undefined,
+    showButton: js.UndefOr[Boolean] = js.undefined
+  ): UIRetryOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoAttemptDelay)) __obj.updateDynamic("autoAttemptDelay")(autoAttemptDelay.get.asInstanceOf[js.Any])
+    if (autoRetryNote != null) __obj.updateDynamic("autoRetryNote")(autoRetryNote.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableAuto)) __obj.updateDynamic("enableAuto")(enableAuto.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAutoAttempts)) __obj.updateDynamic("maxAutoAttempts")(maxAutoAttempts.get.asInstanceOf[js.Any])
+    if (preventRetryResponseProperty != null) __obj.updateDynamic("preventRetryResponseProperty")(preventRetryResponseProperty.asInstanceOf[js.Any])
+    if (!js.isUndefined(showAutoRetryNote)) __obj.updateDynamic("showAutoRetryNote")(showAutoRetryNote.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showButton)) __obj.updateDynamic("showButton")(showButton.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIRetryOptions]
   }
-  @scala.inline
-  implicit class UIRetryOptionsOps[Self <: UIRetryOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoRetryNote(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRetryNote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRetryNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRetryNote")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAutoRetryNote(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAutoRetryNote")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAutoRetryNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAutoRetryNote")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowButton(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButton")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowButton: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showButton")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

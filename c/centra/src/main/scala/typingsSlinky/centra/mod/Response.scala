@@ -7,14 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Response extends js.Object {
-  var body: Buffer = js.native
-  var coreRes: IncomingMessage = js.native
-  var headers: IncomingHttpHeaders = js.native
-  var statusCode: js.UndefOr[Double] = js.native
-  def json(): js.Promise[_] = js.native
-  def text(): js.Promise[String] = js.native
+  var body: Buffer
+  var coreRes: IncomingMessage
+  var headers: IncomingHttpHeaders
+  var statusCode: js.UndefOr[Double] = js.undefined
+  def json(): js.Promise[_]
+  def text(): js.Promise[String]
 }
 
 object Response {
@@ -24,60 +23,12 @@ object Response {
     coreRes: IncomingMessage,
     headers: IncomingHttpHeaders,
     json: () => js.Promise[_],
-    text: () => js.Promise[String]
+    text: () => js.Promise[String],
+    statusCode: js.UndefOr[Double] = js.undefined
   ): Response = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], coreRes = coreRes.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), text = js.Any.fromFunction0(text))
+    if (!js.isUndefined(statusCode)) __obj.updateDynamic("statusCode")(statusCode.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Response]
   }
-  @scala.inline
-  implicit class ResponseOps[Self <: Response] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Buffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCoreRes(value: IncomingMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coreRes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: IncomingHttpHeaders): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withJson(value: () => js.Promise[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withText(value: () => js.Promise[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStatusCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

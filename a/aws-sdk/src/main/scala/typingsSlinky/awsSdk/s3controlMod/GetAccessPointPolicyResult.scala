@@ -14,29 +14,10 @@ trait GetAccessPointPolicyResult extends js.Object {
 
 object GetAccessPointPolicyResult {
   @scala.inline
-  def apply(): GetAccessPointPolicyResult = {
+  def apply(Policy: Policy = null): GetAccessPointPolicyResult = {
     val __obj = js.Dynamic.literal()
+    if (Policy != null) __obj.updateDynamic("Policy")(Policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAccessPointPolicyResult]
   }
-  @scala.inline
-  implicit class GetAccessPointPolicyResultOps[Self <: GetAccessPointPolicyResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPolicy(value: Policy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

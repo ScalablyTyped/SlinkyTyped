@@ -18,41 +18,11 @@ trait DisableFastSnapshotRestoreStateErrorItem extends js.Object {
 
 object DisableFastSnapshotRestoreStateErrorItem {
   @scala.inline
-  def apply(): DisableFastSnapshotRestoreStateErrorItem = {
+  def apply(AvailabilityZone: String = null, Error: DisableFastSnapshotRestoreStateError = null): DisableFastSnapshotRestoreStateErrorItem = {
     val __obj = js.Dynamic.literal()
+    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
+    if (Error != null) __obj.updateDynamic("Error")(Error.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisableFastSnapshotRestoreStateErrorItem]
   }
-  @scala.inline
-  implicit class DisableFastSnapshotRestoreStateErrorItemOps[Self <: DisableFastSnapshotRestoreStateErrorItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: DisableFastSnapshotRestoreStateError): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

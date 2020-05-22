@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.components
 
-import org.scalajs.dom.raw.Node
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.treeViewMod.TreeLabelOverrides
@@ -27,7 +27,11 @@ object TreeLabel {
   
   def withProps(p: TreeLabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(hasChildren: Boolean, label: (js.Function1[/* node */ TreeNode, Node]) | String, node: TreeNode): Builder = {
+  def apply(
+    hasChildren: Boolean,
+    label: (js.Function1[/* node */ TreeNode[_], TagMod[Any]]) | String,
+    node: TreeNode[_]
+  ): Builder = {
     val __props = js.Dynamic.literal(hasChildren = hasChildren.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[TreeLabelProps]))
   }

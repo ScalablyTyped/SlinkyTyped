@@ -14,29 +14,10 @@ trait RetrieveTapeArchiveOutput extends js.Object {
 
 object RetrieveTapeArchiveOutput {
   @scala.inline
-  def apply(): RetrieveTapeArchiveOutput = {
+  def apply(TapeARN: TapeARN = null): RetrieveTapeArchiveOutput = {
     val __obj = js.Dynamic.literal()
+    if (TapeARN != null) __obj.updateDynamic("TapeARN")(TapeARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[RetrieveTapeArchiveOutput]
   }
-  @scala.inline
-  implicit class RetrieveTapeArchiveOutputOps[Self <: RetrieveTapeArchiveOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTapeARN(value: TapeARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTapeARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

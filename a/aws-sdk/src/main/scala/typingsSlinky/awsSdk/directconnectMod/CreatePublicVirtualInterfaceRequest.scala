@@ -22,25 +22,5 @@ object CreatePublicVirtualInterfaceRequest {
     val __obj = js.Dynamic.literal(connectionId = connectionId.asInstanceOf[js.Any], newPublicVirtualInterface = newPublicVirtualInterface.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePublicVirtualInterfaceRequest]
   }
-  @scala.inline
-  implicit class CreatePublicVirtualInterfaceRequestOps[Self <: CreatePublicVirtualInterfaceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectionId(value: ConnectionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNewPublicVirtualInterface(value: NewPublicVirtualInterface): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newPublicVirtualInterface")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

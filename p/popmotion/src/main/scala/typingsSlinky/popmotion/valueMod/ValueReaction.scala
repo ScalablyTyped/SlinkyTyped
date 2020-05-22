@@ -1,8 +1,8 @@
 package typingsSlinky.popmotion.valueMod
 
 import typingsSlinky.framesync.typesMod.FrameData
-import typingsSlinky.framesync.typesMod.Process
 import typingsSlinky.popmotion.reactionsMod.BaseMulticast
+import typingsSlinky.popmotion.typesMod.Process
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -12,41 +12,11 @@ trait NotifyWhenUploadedOutput extends js.Object {
 
 object NotifyWhenUploadedOutput {
   @scala.inline
-  def apply(): NotifyWhenUploadedOutput = {
+  def apply(FileShareARN: FileShareARN = null, NotificationId: NotificationId = null): NotifyWhenUploadedOutput = {
     val __obj = js.Dynamic.literal()
+    if (FileShareARN != null) __obj.updateDynamic("FileShareARN")(FileShareARN.asInstanceOf[js.Any])
+    if (NotificationId != null) __obj.updateDynamic("NotificationId")(NotificationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotifyWhenUploadedOutput]
   }
-  @scala.inline
-  implicit class NotifyWhenUploadedOutputOps[Self <: NotifyWhenUploadedOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileShareARN(value: FileShareARN): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileShareARN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareARN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotificationId(value: NotificationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotificationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

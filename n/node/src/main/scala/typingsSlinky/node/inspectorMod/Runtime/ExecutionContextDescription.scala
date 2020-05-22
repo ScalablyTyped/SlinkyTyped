@@ -7,69 +7,31 @@ import scala.scalajs.js.annotation._
 /**
   * Description of an isolated world.
   */
-@js.native
 trait ExecutionContextDescription extends js.Object {
   /**
     * Embedder-specific auxiliary data.
     */
-  var auxData: js.UndefOr[js.Object] = js.native
+  var auxData: js.UndefOr[js.Object] = js.undefined
   /**
     * Unique id of the execution context. It can be used to specify in which execution context script evaluation should be performed.
     */
-  var id: ExecutionContextId = js.native
+  var id: ExecutionContextId
   /**
     * Human readable name describing given context.
     */
-  var name: String = js.native
+  var name: String
   /**
     * Execution context origin.
     */
-  var origin: String = js.native
+  var origin: String
 }
 
 object ExecutionContextDescription {
   @scala.inline
-  def apply(id: ExecutionContextId, name: String, origin: String): ExecutionContextDescription = {
+  def apply(id: ExecutionContextId, name: String, origin: String, auxData: js.Object = null): ExecutionContextDescription = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any])
+    if (auxData != null) __obj.updateDynamic("auxData")(auxData.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionContextDescription]
   }
-  @scala.inline
-  implicit class ExecutionContextDescriptionOps[Self <: ExecutionContextDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: ExecutionContextId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOrigin(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAuxData(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auxData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuxData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auxData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

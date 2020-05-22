@@ -1,15 +1,15 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChoreographyActivity extends FlowNode {
-  var correlationKeys: js.Array[CorrelationKey] = js.native
-  var initiatingParticipantRef: Participant = js.native
-  var loopType: ChoreographyLoopType = js.native
-  var participantRef: js.Array[Participant] = js.native
+  var correlationKeys: js.Array[CorrelationKey]
+  var initiatingParticipantRef: Participant
+  var loopType: ChoreographyLoopType
+  var participantRef: js.Array[Participant]
 }
 
 object ChoreographyActivity {
@@ -27,42 +27,20 @@ object ChoreographyActivity {
     loopType: ChoreographyLoopType,
     monitoring: Monitoring,
     outgoing: js.Array[SequenceFlow],
-    participantRef: js.Array[Participant]
+    participantRef: js.Array[Participant],
+    $attrs: StringDictionary[js.Any] = null,
+    documentation: js.Array[Documentation] = null,
+    extensionDefinitions: js.Array[ExtensionDefinition] = null,
+    extensionElements: ExtensionElements = null,
+    name: String = null
   ): ChoreographyActivity = {
     val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], auditing = auditing.asInstanceOf[js.Any], categoryValueRef = categoryValueRef.asInstanceOf[js.Any], correlationKeys = correlationKeys.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], incoming = incoming.asInstanceOf[js.Any], initiatingParticipantRef = initiatingParticipantRef.asInstanceOf[js.Any], lanes = lanes.asInstanceOf[js.Any], loopType = loopType.asInstanceOf[js.Any], monitoring = monitoring.asInstanceOf[js.Any], outgoing = outgoing.asInstanceOf[js.Any], participantRef = participantRef.asInstanceOf[js.Any])
+    if ($attrs != null) __obj.updateDynamic("$attrs")($attrs.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (extensionDefinitions != null) __obj.updateDynamic("extensionDefinitions")(extensionDefinitions.asInstanceOf[js.Any])
+    if (extensionElements != null) __obj.updateDynamic("extensionElements")(extensionElements.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChoreographyActivity]
   }
-  @scala.inline
-  implicit class ChoreographyActivityOps[Self <: ChoreographyActivity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCorrelationKeys(value: js.Array[CorrelationKey]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("correlationKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitiatingParticipantRef(value: Participant): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiatingParticipantRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoopType(value: ChoreographyLoopType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loopType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParticipantRef(value: js.Array[Participant]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("participantRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

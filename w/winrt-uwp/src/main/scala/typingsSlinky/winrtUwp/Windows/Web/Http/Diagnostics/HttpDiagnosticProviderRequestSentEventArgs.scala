@@ -7,22 +7,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the RequestSent event. */
-@js.native
 trait HttpDiagnosticProviderRequestSentEventArgs extends js.Object {
   /** Gets a locally unique ID for this activity, for correlating with other events. */
-  var activityId: String = js.native
+  var activityId: String
   /** Gets the type of operation initiating this request. */
-  var initiator: HttpDiagnosticRequestInitiator = js.native
+  var initiator: HttpDiagnosticRequestInitiator
   /** Gets the HttpRequestMessage including headers. */
-  var message: HttpRequestMessage = js.native
+  var message: HttpRequestMessage
   /** Gets the process ID. */
-  var processId: Double = js.native
+  var processId: Double
   /** Gets the source location call stack. */
-  var sourceLocations: IVectorView[HttpDiagnosticSourceLocation] = js.native
+  var sourceLocations: IVectorView[HttpDiagnosticSourceLocation]
   /** Gets the thread ID. */
-  var threadId: Double = js.native
+  var threadId: Double
   /** Gets the timestamp of when the HttpRequestMessage was sent. */
-  var timestamp: js.Date = js.native
+  var timestamp: js.Date
 }
 
 object HttpDiagnosticProviderRequestSentEventArgs {
@@ -39,55 +38,5 @@ object HttpDiagnosticProviderRequestSentEventArgs {
     val __obj = js.Dynamic.literal(activityId = activityId.asInstanceOf[js.Any], initiator = initiator.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], processId = processId.asInstanceOf[js.Any], sourceLocations = sourceLocations.asInstanceOf[js.Any], threadId = threadId.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpDiagnosticProviderRequestSentEventArgs]
   }
-  @scala.inline
-  implicit class HttpDiagnosticProviderRequestSentEventArgsOps[Self <: HttpDiagnosticProviderRequestSentEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitiator(value: HttpDiagnosticRequestInitiator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initiator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: HttpRequestMessage): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProcessId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("processId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSourceLocations(value: IVectorView[HttpDiagnosticSourceLocation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withThreadId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("threadId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

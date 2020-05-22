@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * This is the HTML or CSS content to be inlined, you should provide HTML to the html() method and CSS to the css() method or you will get errors or garbage output.
     */
-  var fileContent: String = js.native
+  var fileContent: String
   /**
     * When true, inline images unless they have an exclusion attribute (see inlineAttribute option).
     *
@@ -23,7 +22,7 @@ trait Options extends js.Object {
     *
     * @default 8
     */
-  var images: js.UndefOr[Boolean | Double] = js.native
+  var images: js.UndefOr[Boolean | Double] = js.undefined
   /**
     * Sets the attribute that is used to include/exclude specific resources based on the default behavior for the resource type.
     *
@@ -35,13 +34,13 @@ trait Options extends js.Object {
     *
     * @default "data-inline"
     */
-  var inlineAttribute: js.UndefOr[String] = js.native
+  var inlineAttribute: js.UndefOr[String] = js.undefined
   /**
     * Allows to make changes to links before they are inlined, such as CSS pre-and-post-processors.
     *
     * Callback is standard node error first, second argument is transformed value.
     */
-  var linkTransform: js.UndefOr[js.Function2[/* content */ String, /* done */ Callback, _]] = js.native
+  var linkTransform: js.UndefOr[js.Function2[/* content */ String, /* done */ Callback, _]] = js.undefined
   /**
     * When true, inline stylesheet links unless they have an exclusion attribute (see inlineAttribute option).
     *
@@ -51,7 +50,7 @@ trait Options extends js.Object {
     *
     * @default true
     */
-  var links: js.UndefOr[Boolean | Double] = js.native
+  var links: js.UndefOr[Boolean | Double] = js.undefined
   /**
     * Describes the path relationship between CSS content and the context it will be loaded in.
     *
@@ -61,7 +60,7 @@ trait Options extends js.Object {
     *
     * @default ""
     */
-  var rebaseRelativeTo: js.UndefOr[String] = js.native
+  var rebaseRelativeTo: js.UndefOr[String] = js.undefined
   /**
     * Describes the path relationship between where web-resource-inliner is running and what the relative paths in fileContent or href/src urls refer to.
     *
@@ -71,7 +70,7 @@ trait Options extends js.Object {
     *
     * @default ""
     */
-  var relativeTo: js.UndefOr[String] = js.native
+  var relativeTo: js.UndefOr[String] = js.undefined
   /**
     * Allows to adjust issued requests.
     *
@@ -88,13 +87,13 @@ trait Options extends js.Object {
       /* requestOptions */ RequiredUriUrl with CoreOptions, 
       RequiredUriUrl with CoreOptions
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * Allows to make changes to scripts before they are inlined, such as minifying.
     *
     * Callback is standard node error first, second argument is transformed value.
     */
-  var scriptTransform: js.UndefOr[js.Function2[/* content */ String, /* done */ Callback, _]] = js.native
+  var scriptTransform: js.UndefOr[js.Function2[/* content */ String, /* done */ Callback, _]] = js.undefined
   /**
     * When true, inline scripts unless they have an exclusion attribute (see inlineAttribute option).
     *
@@ -104,7 +103,7 @@ trait Options extends js.Object {
     *
     * @default true
     */
-  var scripts: js.UndefOr[Boolean | Double] = js.native
+  var scripts: js.UndefOr[Boolean | Double] = js.undefined
   /**
     * When strict is true, a missing resource will cause the inliner to halt and return an error in the callback.
     *
@@ -112,7 +111,7 @@ trait Options extends js.Object {
     *
     * @default false
     */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /**
     * When true, inline SVG <use> unless they have an exclusion attribute (see inlineAttribute option).
     *
@@ -124,160 +123,38 @@ trait Options extends js.Object {
     *
     * @default 8
     */
-  var svgs: js.UndefOr[Boolean | Double] = js.native
+  var svgs: js.UndefOr[Boolean | Double] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(fileContent: String): Options = {
+  def apply(
+    fileContent: String,
+    images: Boolean | Double = null,
+    inlineAttribute: String = null,
+    linkTransform: (/* content */ String, /* done */ Callback) => _ = null,
+    links: Boolean | Double = null,
+    rebaseRelativeTo: String = null,
+    relativeTo: String = null,
+    requestTransform: /* requestOptions */ RequiredUriUrl with CoreOptions => RequiredUriUrl with CoreOptions = null,
+    scriptTransform: (/* content */ String, /* done */ Callback) => _ = null,
+    scripts: Boolean | Double = null,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    svgs: Boolean | Double = null
+  ): Options = {
     val __obj = js.Dynamic.literal(fileContent = fileContent.asInstanceOf[js.Any])
+    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
+    if (inlineAttribute != null) __obj.updateDynamic("inlineAttribute")(inlineAttribute.asInstanceOf[js.Any])
+    if (linkTransform != null) __obj.updateDynamic("linkTransform")(js.Any.fromFunction2(linkTransform))
+    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
+    if (rebaseRelativeTo != null) __obj.updateDynamic("rebaseRelativeTo")(rebaseRelativeTo.asInstanceOf[js.Any])
+    if (relativeTo != null) __obj.updateDynamic("relativeTo")(relativeTo.asInstanceOf[js.Any])
+    if (requestTransform != null) __obj.updateDynamic("requestTransform")(js.Any.fromFunction1(requestTransform))
+    if (scriptTransform != null) __obj.updateDynamic("scriptTransform")(js.Any.fromFunction2(scriptTransform))
+    if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (svgs != null) __obj.updateDynamic("svgs")(svgs.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFileContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileContent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withImages(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineAttribute(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineAttribute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineAttribute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineAttribute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkTransform(value: (/* content */ String, /* done */ Callback) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTransform")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutLinkTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinks(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRebaseRelativeTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebaseRelativeTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRebaseRelativeTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rebaseRelativeTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativeTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeTo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativeTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeTo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestTransform(value: /* requestOptions */ RequiredUriUrl with CoreOptions => RequiredUriUrl with CoreOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTransform")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptTransform(value: (/* content */ String, /* done */ Callback) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptTransform")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutScriptTransform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScripts(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSvgs(value: Boolean | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSvgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("svgs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JsonResultsAdapter extends js.Object {
-  var name: String = js.native
-  def extractKeyMappings(data: js.Object): js.Array[KeyMapping] = js.native
-  def extractResults(data: js.Object): js.Object = js.native
-  def extractSaveResults(data: js.Object): js.Array[_] = js.native
-  def visitNode(node: js.Object, queryContext: QueryContext, nodeContext: NodeContext): typingsSlinky.breeze.anon.EntityType = js.native
+  var name: String
+  def extractKeyMappings(data: js.Object): js.Array[KeyMapping]
+  def extractResults(data: js.Object): js.Object
+  def extractSaveResults(data: js.Object): js.Array[_]
+  def visitNode(node: js.Object, queryContext: QueryContext, nodeContext: NodeContext): typingsSlinky.breeze.anon.EntityType
 }
 
 object JsonResultsAdapter {
@@ -25,43 +24,5 @@ object JsonResultsAdapter {
     val __obj = js.Dynamic.literal(extractKeyMappings = js.Any.fromFunction1(extractKeyMappings), extractResults = js.Any.fromFunction1(extractResults), extractSaveResults = js.Any.fromFunction1(extractSaveResults), name = name.asInstanceOf[js.Any], visitNode = js.Any.fromFunction3(visitNode))
     __obj.asInstanceOf[JsonResultsAdapter]
   }
-  @scala.inline
-  implicit class JsonResultsAdapterOps[Self <: JsonResultsAdapter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtractKeyMappings(value: js.Object => js.Array[KeyMapping]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractKeyMappings")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExtractResults(value: js.Object => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractResults")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withExtractSaveResults(value: js.Object => js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extractSaveResults")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisitNode(value: (js.Object, QueryContext, NodeContext) => typingsSlinky.breeze.anon.EntityType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visitNode")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomViewEvent extends TableauEvent {
   /** Gets the CustomView object associated with the event. */
-  def getCustomViewAsync(): js.Promise[CustomView] = js.native
+  def getCustomViewAsync(): js.Promise[CustomView]
 }
 
 object CustomViewEvent {
@@ -20,19 +19,5 @@ object CustomViewEvent {
     val __obj = js.Dynamic.literal(getCustomViewAsync = js.Any.fromFunction0(getCustomViewAsync), getEventName = js.Any.fromFunction0(getEventName), getViz = js.Any.fromFunction0(getViz))
     __obj.asInstanceOf[CustomViewEvent]
   }
-  @scala.inline
-  implicit class CustomViewEventOps[Self <: CustomViewEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetCustomViewAsync(value: () => js.Promise[CustomView]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomViewAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

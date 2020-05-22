@@ -7,60 +7,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeclarationMemberType extends IDLInterfaceMemberType {
+  /** An array of arguments for the iterable declaration. */
+  var arguments: js.Array[Argument]
+  /** Whether the iterable is declared as async. */
+  var async: Boolean
   /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+  var extAttrs: js.Array[ExtendedAttribute]
   /** An array with one or more IDL Types representing the declared type arguments. */
-  var idlType: js.Array[IDLTypeDescription] = js.native
+  var idlType: js.Array[IDLTypeDescription]
   /** Whether the maplike or setlike is declared as read only. */
-  var readonly: Boolean = js.native
-  var `type`: iterable | setlike | maplike = js.native
+  var readonly: Boolean
+  var `type`: iterable | maplike | setlike
 }
 
 object DeclarationMemberType {
   @scala.inline
   def apply(
+    arguments: js.Array[Argument],
+    async: Boolean,
     extAttrs: js.Array[ExtendedAttribute],
     idlType: js.Array[IDLTypeDescription],
     readonly: Boolean,
-    `type`: iterable | setlike | maplike
+    `type`: iterable | maplike | setlike
   ): DeclarationMemberType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], async = async.asInstanceOf[js.Any], extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclarationMemberType]
   }
-  @scala.inline
-  implicit class DeclarationMemberTypeOps[Self <: DeclarationMemberType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtAttrs(value: js.Array[ExtendedAttribute]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extAttrs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIdlType(value: js.Array[IDLTypeDescription]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idlType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadonly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: iterable | setlike | maplike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

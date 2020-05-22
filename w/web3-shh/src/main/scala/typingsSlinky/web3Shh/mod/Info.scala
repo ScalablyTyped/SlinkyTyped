@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Info extends js.Object {
-  var maxMessageSize: Double = js.native
-  var memory: Double = js.native
-  var messages: Double = js.native
-  var minPow: Double = js.native
+  var maxMessageSize: Double
+  var memory: Double
+  var messages: Double
+  var minPow: Double
 }
 
 object Info {
@@ -18,37 +17,5 @@ object Info {
     val __obj = js.Dynamic.literal(maxMessageSize = maxMessageSize.asInstanceOf[js.Any], memory = memory.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any], minPow = minPow.asInstanceOf[js.Any])
     __obj.asInstanceOf[Info]
   }
-  @scala.inline
-  implicit class InfoOps[Self <: Info] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxMessageSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessageSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMemory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinPow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPow")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

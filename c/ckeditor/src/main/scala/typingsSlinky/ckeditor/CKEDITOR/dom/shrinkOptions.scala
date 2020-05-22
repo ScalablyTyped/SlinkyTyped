@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait shrinkOptions extends js.Object {
-  var shrinkOnBlockBoundary: js.UndefOr[Boolean] = js.native
-  var skipBogus: js.UndefOr[Boolean] = js.native
+  var shrinkOnBlockBoundary: js.UndefOr[Boolean] = js.undefined
+  var skipBogus: js.UndefOr[Boolean] = js.undefined
 }
 
 object shrinkOptions {
   @scala.inline
-  def apply(): shrinkOptions = {
+  def apply(
+    shrinkOnBlockBoundary: js.UndefOr[Boolean] = js.undefined,
+    skipBogus: js.UndefOr[Boolean] = js.undefined
+  ): shrinkOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(shrinkOnBlockBoundary)) __obj.updateDynamic("shrinkOnBlockBoundary")(shrinkOnBlockBoundary.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(skipBogus)) __obj.updateDynamic("skipBogus")(skipBogus.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[shrinkOptions]
   }
-  @scala.inline
-  implicit class shrinkOptionsOps[Self <: shrinkOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withShrinkOnBlockBoundary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkOnBlockBoundary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShrinkOnBlockBoundary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkOnBlockBoundary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkipBogus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipBogus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkipBogus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skipBogus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

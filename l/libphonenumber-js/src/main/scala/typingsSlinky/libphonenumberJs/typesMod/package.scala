@@ -17,4 +17,19 @@ package object typesMod {
     java.lang.String
   ]
   type NationalNumber = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - js.UndefOr[scala.Nothing]
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.PREMIUM_RATE
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.TOLL_FREE
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.SHARED_COST
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.VOIP
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.PERSONAL_NUMBER
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.PAGER
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.UAN
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.VOICEMAIL
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.FIXED_LINE_OR_MOBILE
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.FIXED_LINE
+    - typingsSlinky.libphonenumberJs.libphonenumberJsStrings.MOBILE
+  */
+  type NumberType = js.UndefOr[typingsSlinky.libphonenumberJs.typesMod._NumberType]
 }

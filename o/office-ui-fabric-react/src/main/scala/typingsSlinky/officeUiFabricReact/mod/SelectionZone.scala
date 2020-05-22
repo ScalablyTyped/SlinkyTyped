@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.react.mod.DeprecatedLifecycle because Already inherited
 - typingsSlinky.react.mod.NewLifecycle because Already inherited
-- typingsSlinky.react.mod.ReactInstance because Already inherited
 - typingsSlinky.react.mod.ComponentLifecycle because Already inherited
 - typingsSlinky.react.mod.Component because Already inherited
 - typingsSlinky.officeUiFabricReact.selectionZoneMod.SelectionZone because Already inherited

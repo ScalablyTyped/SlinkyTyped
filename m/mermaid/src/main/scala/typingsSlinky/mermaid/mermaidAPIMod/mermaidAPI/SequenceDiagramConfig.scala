@@ -4,229 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SequenceDiagramConfig extends js.Object {
   /**
     * **actorMargin** - Margin between actors
     * default: 10
     */
-  var actorMargin: js.UndefOr[Double] = js.native
+  var actorMargin: js.UndefOr[Double] = js.undefined
   /**
     * **bottomMarginAdj** - Depending on css styling this might need adjustment.
     * Prolongs the edge of the diagram downwards
     * default: 1
     */
-  var bottomMarginAdj: js.UndefOr[Double] = js.native
+  var bottomMarginAdj: js.UndefOr[Double] = js.undefined
   /**
     * **boxMargin** - Margin around loop boxes
     * default: 10
     */
-  var boxMargin: js.UndefOr[Double] = js.native
+  var boxMargin: js.UndefOr[Double] = js.undefined
   /**
     * **boxTextMargin** - margin around the text in loop/alt/opt boxes
     * default: 5
     */
-  var boxTextMargin: js.UndefOr[Double] = js.native
+  var boxTextMargin: js.UndefOr[Double] = js.undefined
   /**
     * **diagramMarginX** - margin to the right and left of the sequence diagram
     * default: 50
     */
-  var diagramMarginX: js.UndefOr[Double] = js.native
+  var diagramMarginX: js.UndefOr[Double] = js.undefined
   /**
     * **diagramMarginY** - margin to the over and under the sequence diagram
     * default: 10
     */
-  var diagramMarginY: js.UndefOr[Double] = js.native
+  var diagramMarginY: js.UndefOr[Double] = js.undefined
   /**
     * **height** - Height of actor boxes
     * default: 65
     */
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.undefined
   /**
     * **messageMargin** - Space between messages
     * default: 35
     */
-  var messageMargin: js.UndefOr[Double] = js.native
+  var messageMargin: js.UndefOr[Double] = js.undefined
   /**
     * **mirrorActors** - mirror actors under diagram
     * default: true
     */
-  var mirrorActors: js.UndefOr[Boolean] = js.native
+  var mirrorActors: js.UndefOr[Boolean] = js.undefined
   /**
     * **noteMargin** - margin around notes
     * default: 10
     */
-  var noteMargin: js.UndefOr[Double] = js.native
+  var noteMargin: js.UndefOr[Double] = js.undefined
   /**
     * **useMaxWidth** - when this flag is set the height and width is set to 100% and is then scaling with the
     * available space if not the absolute space required is used
     * default: true
     */
-  var useMaxWidth: js.UndefOr[Boolean] = js.native
+  var useMaxWidth: js.UndefOr[Boolean] = js.undefined
   /**
     * **width** - Width of actor boxes
     * default: 150
     */
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.undefined
 }
 
 object SequenceDiagramConfig {
   @scala.inline
-  def apply(): SequenceDiagramConfig = {
+  def apply(
+    actorMargin: js.UndefOr[Double] = js.undefined,
+    bottomMarginAdj: js.UndefOr[Double] = js.undefined,
+    boxMargin: js.UndefOr[Double] = js.undefined,
+    boxTextMargin: js.UndefOr[Double] = js.undefined,
+    diagramMarginX: js.UndefOr[Double] = js.undefined,
+    diagramMarginY: js.UndefOr[Double] = js.undefined,
+    height: js.UndefOr[Double] = js.undefined,
+    messageMargin: js.UndefOr[Double] = js.undefined,
+    mirrorActors: js.UndefOr[Boolean] = js.undefined,
+    noteMargin: js.UndefOr[Double] = js.undefined,
+    useMaxWidth: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): SequenceDiagramConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(actorMargin)) __obj.updateDynamic("actorMargin")(actorMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(bottomMarginAdj)) __obj.updateDynamic("bottomMarginAdj")(bottomMarginAdj.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxMargin)) __obj.updateDynamic("boxMargin")(boxMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxTextMargin)) __obj.updateDynamic("boxTextMargin")(boxTextMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(diagramMarginX)) __obj.updateDynamic("diagramMarginX")(diagramMarginX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(diagramMarginY)) __obj.updateDynamic("diagramMarginY")(diagramMarginY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(messageMargin)) __obj.updateDynamic("messageMargin")(messageMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mirrorActors)) __obj.updateDynamic("mirrorActors")(mirrorActors.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noteMargin)) __obj.updateDynamic("noteMargin")(noteMargin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(useMaxWidth)) __obj.updateDynamic("useMaxWidth")(useMaxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequenceDiagramConfig]
   }
-  @scala.inline
-  implicit class SequenceDiagramConfigOps[Self <: SequenceDiagramConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActorMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actorMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActorMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actorMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBottomMarginAdj(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomMarginAdj")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBottomMarginAdj: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bottomMarginAdj")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxTextMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxTextMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxTextMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxTextMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiagramMarginX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagramMarginX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagramMarginX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagramMarginX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiagramMarginY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagramMarginY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiagramMarginY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diagramMarginY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("messageMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMirrorActors(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirrorActors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMirrorActors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mirrorActors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoteMargin(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteMargin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoteMargin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noteMargin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseMaxWidth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMaxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseMaxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useMaxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

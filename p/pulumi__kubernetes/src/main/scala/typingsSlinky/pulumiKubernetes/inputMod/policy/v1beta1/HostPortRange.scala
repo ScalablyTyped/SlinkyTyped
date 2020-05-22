@@ -9,16 +9,15 @@ import scala.scalajs.js.annotation._
   * HostPortRange defines a range of host ports that will be enabled by a policy for pods to use.
   * It requires both the start and end to be defined.
   */
-@js.native
 trait HostPortRange extends js.Object {
   /**
     * max is the end of the range, inclusive.
     */
-  var max: Input[Double] = js.native
+  var max: Input[Double]
   /**
     * min is the start of the range, inclusive.
     */
-  var min: Input[Double] = js.native
+  var min: Input[Double]
 }
 
 object HostPortRange {
@@ -27,25 +26,5 @@ object HostPortRange {
     val __obj = js.Dynamic.literal(max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostPortRange]
   }
-  @scala.inline
-  implicit class HostPortRangeOps[Self <: HostPortRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMax(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: Input[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,13 +1,14 @@
 package typingsSlinky.reactPrimitives.mod
 
+import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.FunctionComponent
+import typingsSlinky.react.mod.ComponentPropsWithRef
+import typingsSlinky.reactNative.anon.TypeofImage
+import typingsSlinky.reactNative.anon.TypeofView
 import typingsSlinky.reactNative.anon.Y
-import typingsSlinky.reactNative.mod.Animated.AnimatedComponent
+import typingsSlinky.reactNative.mod.Animated.AnimatedProps
 import typingsSlinky.reactNative.mod.Animated.AnimatedValue
 import typingsSlinky.reactNative.mod.Animated.AnimatedValueXY
-import typingsSlinky.reactNative.mod.Animated.ComponentProps
 import typingsSlinky.reactNative.mod.Animated.CompositeAnimation
 import typingsSlinky.reactNative.mod.Animated.DecayAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.EventConfig
@@ -16,7 +17,6 @@ import typingsSlinky.reactNative.mod.Animated.Mapping
 import typingsSlinky.reactNative.mod.Animated.ParallelConfig
 import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
-import typingsSlinky.std.InstanceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,23 +72,29 @@ object Animated extends js.Object {
     def this(valueIn: Y) = this()
   }
   
-  val FlatList: AnimatedComponent[typingsSlinky.reactNative.mod.FlatList[js.Any]] = js.native
-  val Image: AnimatedComponent[typingsSlinky.reactNative.mod.Image] = js.native
-  val ScrollView: AnimatedComponent[typingsSlinky.reactNative.mod.ScrollView] = js.native
-  val SectionList: AnimatedComponent[typingsSlinky.reactNative.mod.SectionList[js.Any]] = js.native
-  val Text: AnimatedComponent[typingsSlinky.reactNative.mod.Text] = js.native
-  val View: AnimatedComponent[typingsSlinky.reactNative.mod.View] = js.native
+  val FlatList: ReactComponentClass[
+    AnimatedProps[
+      ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.FlatList[js.Object]]]
+    ]
+  ] = js.native
+  val Image: ReactComponentClass[AnimatedProps[ComponentPropsWithRef[TypeofImage]]] = js.native
+  val ScrollView: ReactComponentClass[
+    AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]]]
+  ] = js.native
+  val SectionList: ReactComponentClass[
+    AnimatedProps[
+      ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.SectionList[js.Object]]]
+    ]
+  ] = js.native
+  val Text: ReactComponentClass[
+    AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.Text]]]
+  ] = js.native
+  val View: ReactComponentClass[AnimatedProps[ComponentPropsWithRef[TypeofView]]] = js.native
   def add(
     a: typingsSlinky.reactNative.mod.Animated.Animated,
     b: typingsSlinky.reactNative.mod.Animated.Animated
   ): typingsSlinky.reactNative.mod.Animated.AnimatedAddition = js.native
-  def createAnimatedComponent(component: ComponentClass[ComponentProps[_], js.Object]): AnimatedComponent[
-    ReactComponentClass[ComponentProps[_]] | InstanceType[ReactComponentClass[ComponentProps[_]]]
-  ] = js.native
-  def createAnimatedComponent(component: FunctionComponent[ComponentProps[_]]): AnimatedComponent[
-    ReactComponentClass[ComponentProps[_]] | InstanceType[ReactComponentClass[ComponentProps[_]]]
-  ] = js.native
-  def createAnimatedComponent[T /* <: ReactComponentClass[ComponentProps[T]] */](component: T): AnimatedComponent[T | InstanceType[T]] = js.native
+  def createAnimatedComponent[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[AnimatedProps[ComponentPropsWithRef[T]]] = js.native
   def decay(value: AnimatedValueXY, config: DecayAnimationConfig): CompositeAnimation = js.native
   def decay(value: AnimatedValue, config: DecayAnimationConfig): CompositeAnimation = js.native
   def delay(time: Double): CompositeAnimation = js.native

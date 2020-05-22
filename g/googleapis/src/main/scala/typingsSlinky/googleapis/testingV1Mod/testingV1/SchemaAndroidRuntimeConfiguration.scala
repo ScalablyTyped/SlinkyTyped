@@ -21,41 +21,11 @@ trait SchemaAndroidRuntimeConfiguration extends js.Object {
 
 object SchemaAndroidRuntimeConfiguration {
   @scala.inline
-  def apply(): SchemaAndroidRuntimeConfiguration = {
+  def apply(locales: js.Array[SchemaLocale] = null, orientations: js.Array[SchemaOrientation] = null): SchemaAndroidRuntimeConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (locales != null) __obj.updateDynamic("locales")(locales.asInstanceOf[js.Any])
+    if (orientations != null) __obj.updateDynamic("orientations")(orientations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidRuntimeConfiguration]
   }
-  @scala.inline
-  implicit class SchemaAndroidRuntimeConfigurationOps[Self <: SchemaAndroidRuntimeConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocales(value: js.Array[SchemaLocale]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocales: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientations(value: js.Array[SchemaOrientation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

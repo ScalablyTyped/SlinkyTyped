@@ -5,14 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Interface to define a geographic shape. */
-@js.native
 trait IGeoshape extends js.Object {
   /** The altitude reference system of the geographic shape. */
-  var altitudeReferenceSystem: AltitudeReferenceSystem = js.native
+  var altitudeReferenceSystem: AltitudeReferenceSystem
   /** The type of geographic shape. */
-  var geoshapeType: GeoshapeType = js.native
+  var geoshapeType: GeoshapeType
   /** The spatial reference identifier for the geographic shape, corresponding to a spatial reference system based on the specific ellipsoid used for either flat-earth mapping or round-earth mapping. */
-  var spatialReferenceId: Double = js.native
+  var spatialReferenceId: Double
 }
 
 object IGeoshape {
@@ -25,31 +24,5 @@ object IGeoshape {
     val __obj = js.Dynamic.literal(altitudeReferenceSystem = altitudeReferenceSystem.asInstanceOf[js.Any], geoshapeType = geoshapeType.asInstanceOf[js.Any], spatialReferenceId = spatialReferenceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGeoshape]
   }
-  @scala.inline
-  implicit class IGeoshapeOps[Self <: IGeoshape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAltitudeReferenceSystem(value: AltitudeReferenceSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("altitudeReferenceSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeoshapeType(value: GeoshapeType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoshapeType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSpatialReferenceId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReferenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

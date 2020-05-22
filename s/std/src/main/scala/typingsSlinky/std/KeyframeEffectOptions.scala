@@ -4,49 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KeyframeEffectOptions extends EffectTiming {
-  var composite: js.UndefOr[CompositeOperation] = js.native
-  var iterationComposite: js.UndefOr[IterationCompositeOperation] = js.native
+  var composite: js.UndefOr[CompositeOperation] = js.undefined
+  var iterationComposite: js.UndefOr[IterationCompositeOperation] = js.undefined
 }
 
 object KeyframeEffectOptions {
   @scala.inline
-  def apply(): KeyframeEffectOptions = {
+  def apply(
+    composite: CompositeOperation = null,
+    delay: js.UndefOr[Double] = js.undefined,
+    direction: PlaybackDirection = null,
+    duration: Double | java.lang.String = null,
+    easing: java.lang.String = null,
+    endDelay: js.UndefOr[Double] = js.undefined,
+    fill: FillMode = null,
+    iterationComposite: IterationCompositeOperation = null,
+    iterationStart: js.UndefOr[Double] = js.undefined,
+    iterations: js.UndefOr[Double] = js.undefined
+  ): KeyframeEffectOptions = {
     val __obj = js.Dynamic.literal()
+    if (composite != null) __obj.updateDynamic("composite")(composite.asInstanceOf[js.Any])
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (!js.isUndefined(endDelay)) __obj.updateDynamic("endDelay")(endDelay.get.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (iterationComposite != null) __obj.updateDynamic("iterationComposite")(iterationComposite.asInstanceOf[js.Any])
+    if (!js.isUndefined(iterationStart)) __obj.updateDynamic("iterationStart")(iterationStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(iterations)) __obj.updateDynamic("iterations")(iterations.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[KeyframeEffectOptions]
   }
-  @scala.inline
-  implicit class KeyframeEffectOptionsOps[Self <: KeyframeEffectOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComposite(value: CompositeOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComposite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIterationComposite(value: IterationCompositeOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationComposite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIterationComposite: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationComposite")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

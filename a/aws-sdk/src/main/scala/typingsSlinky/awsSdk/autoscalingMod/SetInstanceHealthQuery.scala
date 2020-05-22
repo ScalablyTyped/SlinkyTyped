@@ -22,41 +22,14 @@ trait SetInstanceHealthQuery extends js.Object {
 
 object SetInstanceHealthQuery {
   @scala.inline
-  def apply(HealthStatus: XmlStringMaxLen32, InstanceId: XmlStringMaxLen19): SetInstanceHealthQuery = {
+  def apply(
+    HealthStatus: XmlStringMaxLen32,
+    InstanceId: XmlStringMaxLen19,
+    ShouldRespectGracePeriod: js.UndefOr[ShouldRespectGracePeriod] = js.undefined
+  ): SetInstanceHealthQuery = {
     val __obj = js.Dynamic.literal(HealthStatus = HealthStatus.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any])
+    if (!js.isUndefined(ShouldRespectGracePeriod)) __obj.updateDynamic("ShouldRespectGracePeriod")(ShouldRespectGracePeriod.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetInstanceHealthQuery]
   }
-  @scala.inline
-  implicit class SetInstanceHealthQueryOps[Self <: SetInstanceHealthQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHealthStatus(value: XmlStringMaxLen32): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstanceId(value: XmlStringMaxLen19): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShouldRespectGracePeriod(value: ShouldRespectGracePeriod): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShouldRespectGracePeriod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShouldRespectGracePeriod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShouldRespectGracePeriod")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

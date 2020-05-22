@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
-@js.native
 trait PlusWebviewAnimationTypeShow extends js.Object {
   /**
     * 自动选择动画效果
@@ -17,215 +16,108 @@ trait PlusWebviewAnimationTypeShow extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var auto: js.UndefOr[String] = js.native
+  var auto: js.UndefOr[String] = js.undefined
   /**
     * 从透明到不透明逐渐显示效果
     * 页面从完全透明到不透明逐渐显示。
-    * 	对应关闭动画"fade-out"。
+    *     对应关闭动画"fade-out"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `fade-in`: js.UndefOr[String] = js.native
+  var `fade-in`: js.UndefOr[String] = js.undefined
   /**
     * 无动画效果
     * 立即显示页面，无任何动画效果，页面显示默认的动画效果。
-    * 	此效果忽略动画时间参数，立即显示。
-    * 	对应关闭动画"none"。
+    *     此效果忽略动画时间参数，立即显示。
+    *     对应关闭动画"none"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var none: js.UndefOr[String] = js.native
+  var none: js.UndefOr[String] = js.undefined
   /**
     * 从右侧平移入栈动画效果
     * 页面从屏幕右侧滑入显示，同时上一个页面带阴影效果从屏幕左侧滑出隐藏。
-    * 	对应关闭动画"pop-out"。
+    *     对应关闭动画"pop-out"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `pop-in`: js.UndefOr[String] = js.native
+  var `pop-in`: js.UndefOr[String] = js.undefined
   /**
     * 从下侧竖向滑动效果
     * 页面从屏幕下侧向上竖向滑动显示。
-    * 	对应关闭动画"slide-out-bottom"。
+    *     对应关闭动画"slide-out-bottom"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `slide-in-bottom`: js.UndefOr[String] = js.native
+  var `slide-in-bottom`: js.UndefOr[String] = js.undefined
   /**
     * 从左侧横向滑动效果
     * 页面从屏幕左侧向右横向滑动显示。
-    * 	对应关闭动画"slide-out-left"。
+    *     对应关闭动画"slide-out-left"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `slide-in-left`: js.UndefOr[String] = js.native
+  var `slide-in-left`: js.UndefOr[String] = js.undefined
   /**
     * 从右侧横向滑动效果
     * 页面从屏幕右侧外向内横向滑动显示。
-    * 	对应关闭动画"slide-out-right"。
+    *     对应关闭动画"slide-out-right"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `slide-in-right`: js.UndefOr[String] = js.native
+  var `slide-in-right`: js.UndefOr[String] = js.undefined
   /**
     * 从上侧竖向滑动效果
     * 页面从屏幕上侧向下竖向滑动显示。
-    * 	对应关闭动画"slide-out-top"。
+    *     对应关闭动画"slide-out-top"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `slide-in-top`: js.UndefOr[String] = js.native
+  var `slide-in-top`: js.UndefOr[String] = js.undefined
   /**
     * 从小到大逐渐放大并且从透明到不透明逐渐显示效果
     * 页面在屏幕中间从小到大逐渐放大并且从透明到不透明逐渐显示。
-    * 	对应关闭动画"zoom-fade-in"。
+    *     对应关闭动画"zoom-fade-in"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `zoom-fade-out`: js.UndefOr[String] = js.native
+  var `zoom-fade-out`: js.UndefOr[String] = js.undefined
   /**
     * 从小到大逐渐放大显示效果
     * 页面在屏幕中间从小到大逐渐放大显示。
-    * 	对应关闭动画"zoom-in"。
+    *     对应关闭动画"zoom-in"。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var `zoom-out`: js.UndefOr[String] = js.native
+  var `zoom-out`: js.UndefOr[String] = js.undefined
 }
 
 object PlusWebviewAnimationTypeShow {
   @scala.inline
-  def apply(): PlusWebviewAnimationTypeShow = {
+  def apply(
+    auto: String = null,
+    `fade-in`: String = null,
+    none: String = null,
+    `pop-in`: String = null,
+    `slide-in-bottom`: String = null,
+    `slide-in-left`: String = null,
+    `slide-in-right`: String = null,
+    `slide-in-top`: String = null,
+    `zoom-fade-out`: String = null,
+    `zoom-out`: String = null
+  ): PlusWebviewAnimationTypeShow = {
     val __obj = js.Dynamic.literal()
+    if (auto != null) __obj.updateDynamic("auto")(auto.asInstanceOf[js.Any])
+    if (`fade-in` != null) __obj.updateDynamic("fade-in")(`fade-in`.asInstanceOf[js.Any])
+    if (none != null) __obj.updateDynamic("none")(none.asInstanceOf[js.Any])
+    if (`pop-in` != null) __obj.updateDynamic("pop-in")(`pop-in`.asInstanceOf[js.Any])
+    if (`slide-in-bottom` != null) __obj.updateDynamic("slide-in-bottom")(`slide-in-bottom`.asInstanceOf[js.Any])
+    if (`slide-in-left` != null) __obj.updateDynamic("slide-in-left")(`slide-in-left`.asInstanceOf[js.Any])
+    if (`slide-in-right` != null) __obj.updateDynamic("slide-in-right")(`slide-in-right`.asInstanceOf[js.Any])
+    if (`slide-in-top` != null) __obj.updateDynamic("slide-in-top")(`slide-in-top`.asInstanceOf[js.Any])
+    if (`zoom-fade-out` != null) __obj.updateDynamic("zoom-fade-out")(`zoom-fade-out`.asInstanceOf[js.Any])
+    if (`zoom-out` != null) __obj.updateDynamic("zoom-out")(`zoom-out`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewAnimationTypeShow]
   }
-  @scala.inline
-  implicit class PlusWebviewAnimationTypeShowOps[Self <: PlusWebviewAnimationTypeShow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuto(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAuto: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withFade-in`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fade-in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutFade-in`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fade-in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("none")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("none")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withPop-in`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pop-in")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutPop-in`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pop-in")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSlide-in-bottom`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-bottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSlide-in-bottom`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-bottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSlide-in-left`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-left")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSlide-in-left`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-left")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSlide-in-right`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-right")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSlide-in-right`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-right")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withSlide-in-top`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-top")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutSlide-in-top`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slide-in-top")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withZoom-fade-out`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom-fade-out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutZoom-fade-out`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom-fade-out")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withZoom-out`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom-out")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutZoom-out`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom-out")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

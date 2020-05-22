@@ -26,9 +26,16 @@ object createGlobalTableCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateGlobalTableInput) = this()
+    /* CompleteClass */
+    override val input: CreateGlobalTableInput = js.native
     val middlewareStack: MiddlewareStack[CreateGlobalTableInput, CreateGlobalTableOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[CreateGlobalTableInput, CreateGlobalTableOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[CreateGlobalTableInput, CreateGlobalTableOutput] = js.native
   }

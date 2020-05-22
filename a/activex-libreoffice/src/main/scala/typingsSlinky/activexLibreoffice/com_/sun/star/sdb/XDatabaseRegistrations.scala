@@ -12,32 +12,31 @@ import scala.scalajs.js.annotation._
   * clients. You should, if possible at all, use this interface, instead of modifying or querying the configuration data directly.
   * @since OOo 3.3
   */
-@js.native
 trait XDatabaseRegistrations extends js.Object {
   /** returns the names of all registered databases */
-  val RegistrationNames: SafeArray[String] = js.native
+  val RegistrationNames: SafeArray[String]
   /** registers a listener which is notified of changes in the registered databases */
-  def addDatabaseRegistrationsListener(Listener: XDatabaseRegistrationsListener): Unit = js.native
+  def addDatabaseRegistrationsListener(Listener: XDatabaseRegistrationsListener): Unit
   /**
     * changes the location of a given database registration
     * @throws com::sun::star::lang::IllegalArgumentException if the given name is empty, or the given location is invalid.
     * @throws com::sun::star::container::NoSuchElementException if there is no database registered under this name
     * @throws com::sun::star::lang::IllegalAccessException if the registration data for this database is read-only
     */
-  def changeDatabaseLocation(Name: String, NewLocation: String): Unit = js.native
+  def changeDatabaseLocation(Name: String, NewLocation: String): Unit
   /**
     * returns the location of the database registered under the given name
     * @throws com::sun::star::lang::IllegalArgumentException if the given name is empty
     * @throws com::sun::star::container::NoSuchElementException if there is no database registered under this name
     */
-  def getDatabaseLocation(Name: String): String = js.native
+  def getDatabaseLocation(Name: String): String
   /** returns the names of all registered databases */
-  def getRegistrationNames(): SafeArray[String] = js.native
+  def getRegistrationNames(): SafeArray[String]
   /**
     * determines whether a database is registered under the given name.
     * @throws com::sun::star::lang::IllegalArgumentException if the given name is empty
     */
-  def hasRegisteredDatabase(Name: String): Boolean = js.native
+  def hasRegisteredDatabase(Name: String): Boolean
   /**
     * determines whether the registration data for a database given by name is read-only.
     *
@@ -45,22 +44,22 @@ trait XDatabaseRegistrations extends js.Object {
     * @throws com::sun::star::lang::IllegalArgumentException if the given name is empty
     * @throws com::sun::star::container::NoSuchElementException if there is no database registered under this name
     */
-  def isDatabaseRegistrationReadOnly(Name: String): Boolean = js.native
+  def isDatabaseRegistrationReadOnly(Name: String): Boolean
   /**
     * registers a database, given by location, under a given name
     * @throws com::sun::star::lang::IllegalArgumentException if the given name is empty, or the given location is invalid.
     * @throws com::sun::star::container::ElementExistException if there already is a databases registered under the given name.
     */
-  def registerDatabaseLocation(Name: String, Location: String): Unit = js.native
+  def registerDatabaseLocation(Name: String, Location: String): Unit
   /** revokes a previously registered listener */
-  def removeDatabaseRegistrationsListener(Listener: XDatabaseRegistrationsListener): Unit = js.native
+  def removeDatabaseRegistrationsListener(Listener: XDatabaseRegistrationsListener): Unit
   /**
     * revokes the registration of a database, given by name
     * @throws com::sun::star::lang::IllegalArgumentException if the given name is empty
     * @throws com::sun::star::container::NoSuchElementException if there is no database registered under this name
     * @throws com::sun::star::lang::IllegalAccessException if the registration data for this database is read-only
     */
-  def revokeDatabaseLocation(Name: String): Unit = js.native
+  def revokeDatabaseLocation(Name: String): Unit
 }
 
 object XDatabaseRegistrations {
@@ -80,73 +79,5 @@ object XDatabaseRegistrations {
     val __obj = js.Dynamic.literal(RegistrationNames = RegistrationNames.asInstanceOf[js.Any], addDatabaseRegistrationsListener = js.Any.fromFunction1(addDatabaseRegistrationsListener), changeDatabaseLocation = js.Any.fromFunction2(changeDatabaseLocation), getDatabaseLocation = js.Any.fromFunction1(getDatabaseLocation), getRegistrationNames = js.Any.fromFunction0(getRegistrationNames), hasRegisteredDatabase = js.Any.fromFunction1(hasRegisteredDatabase), isDatabaseRegistrationReadOnly = js.Any.fromFunction1(isDatabaseRegistrationReadOnly), registerDatabaseLocation = js.Any.fromFunction2(registerDatabaseLocation), removeDatabaseRegistrationsListener = js.Any.fromFunction1(removeDatabaseRegistrationsListener), revokeDatabaseLocation = js.Any.fromFunction1(revokeDatabaseLocation))
     __obj.asInstanceOf[XDatabaseRegistrations]
   }
-  @scala.inline
-  implicit class XDatabaseRegistrationsOps[Self <: XDatabaseRegistrations] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRegistrationNames(value: SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistrationNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddDatabaseRegistrationsListener(value: XDatabaseRegistrationsListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addDatabaseRegistrationsListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withChangeDatabaseLocation(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDatabaseLocation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetDatabaseLocation(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDatabaseLocation")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetRegistrationNames(value: () => SafeArray[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getRegistrationNames")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasRegisteredDatabase(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasRegisteredDatabase")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDatabaseRegistrationReadOnly(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDatabaseRegistrationReadOnly")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRegisterDatabaseLocation(value: (String, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("registerDatabaseLocation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveDatabaseRegistrationsListener(value: XDatabaseRegistrationsListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDatabaseRegistrationsListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRevokeDatabaseLocation(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revokeDatabaseLocation")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

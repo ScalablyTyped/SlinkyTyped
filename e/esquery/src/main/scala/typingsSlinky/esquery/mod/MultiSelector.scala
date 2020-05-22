@@ -1,5 +1,8 @@
 package typingsSlinky.esquery.mod
 
+import typingsSlinky.esquery.esqueryStrings.compound
+import typingsSlinky.esquery.esqueryStrings.has
+import typingsSlinky.esquery.esqueryStrings.not
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +17,40 @@ trait MultiSelector extends SubjectSelector
 
 object MultiSelector {
   @scala.inline
-  implicit def apply(value: Has): MultiSelector = value.asInstanceOf[MultiSelector]
+  def Sequence(
+    selectors: js.Array[SubjectSelector],
+    `type`: compound,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): MultiSelector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MultiSelector]
+  }
   @scala.inline
-  implicit def apply(value: Matches_): MultiSelector = value.asInstanceOf[MultiSelector]
+  def Negation(selectors: js.Array[SubjectSelector], `type`: not, subject: js.UndefOr[Boolean] = js.undefined): MultiSelector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MultiSelector]
+  }
   @scala.inline
-  implicit def apply(value: Negation): MultiSelector = value.asInstanceOf[MultiSelector]
+  def Matches_(
+    selectors: js.Array[SubjectSelector],
+    `type`: typingsSlinky.esquery.esqueryStrings.matches,
+    subject: js.UndefOr[Boolean] = js.undefined
+  ): MultiSelector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MultiSelector]
+  }
   @scala.inline
-  implicit def apply(value: Sequence): MultiSelector = value.asInstanceOf[MultiSelector]
+  def Has(selectors: js.Array[SubjectSelector], `type`: has, subject: js.UndefOr[Boolean] = js.undefined): MultiSelector = {
+    val __obj = js.Dynamic.literal(selectors = selectors.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(subject)) __obj.updateDynamic("subject")(subject.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MultiSelector]
+  }
 }
 

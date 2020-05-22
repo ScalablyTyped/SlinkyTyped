@@ -1,65 +1,43 @@
 package typingsSlinky.paypalRestSdk.mod.invoice
 
+import typingsSlinky.paypalRestSdk.mod.Address
+import typingsSlinky.paypalRestSdk.mod.Phone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BillingInfo extends Person {
-  var additional_info: js.UndefOr[String] = js.native
-  var language: js.UndefOr[String] = js.native
-  var notification_channel: js.UndefOr[String] = js.native
+  var additional_info: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.undefined
+  var notification_channel: js.UndefOr[String] = js.undefined
 }
 
 object BillingInfo {
   @scala.inline
-  def apply(): BillingInfo = {
+  def apply(
+    additional_info: String = null,
+    address: Address = null,
+    business_name: String = null,
+    email: String = null,
+    first_name: String = null,
+    language: String = null,
+    last_name: String = null,
+    notification_channel: String = null,
+    phone: Phone = null,
+    website: String = null
+  ): BillingInfo = {
     val __obj = js.Dynamic.literal()
+    if (additional_info != null) __obj.updateDynamic("additional_info")(additional_info.asInstanceOf[js.Any])
+    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
+    if (business_name != null) __obj.updateDynamic("business_name")(business_name.asInstanceOf[js.Any])
+    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
+    if (first_name != null) __obj.updateDynamic("first_name")(first_name.asInstanceOf[js.Any])
+    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
+    if (last_name != null) __obj.updateDynamic("last_name")(last_name.asInstanceOf[js.Any])
+    if (notification_channel != null) __obj.updateDynamic("notification_channel")(notification_channel.asInstanceOf[js.Any])
+    if (phone != null) __obj.updateDynamic("phone")(phone.asInstanceOf[js.Any])
+    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[BillingInfo]
   }
-  @scala.inline
-  implicit class BillingInfoOps[Self <: BillingInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditional_info(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additional_info")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditional_info: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additional_info")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLanguage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLanguage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNotification_channel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification_channel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNotification_channel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notification_channel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

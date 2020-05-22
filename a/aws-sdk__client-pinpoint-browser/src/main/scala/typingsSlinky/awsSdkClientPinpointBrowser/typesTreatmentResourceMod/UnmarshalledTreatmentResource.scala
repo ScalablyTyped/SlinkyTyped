@@ -7,74 +7,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnmarshalledTreatmentResource extends TreatmentResource {
   /**
     * The message configuration settings.
     */
   @JSName("MessageConfiguration")
-  var MessageConfiguration_UnmarshalledTreatmentResource: js.UndefOr[UnmarshalledMessageConfiguration] = js.native
+  var MessageConfiguration_UnmarshalledTreatmentResource: js.UndefOr[UnmarshalledMessageConfiguration] = js.undefined
   /**
     * The campaign schedule.
     */
   @JSName("Schedule")
-  var Schedule_UnmarshalledTreatmentResource: js.UndefOr[UnmarshalledSchedule] = js.native
+  var Schedule_UnmarshalledTreatmentResource: js.UndefOr[UnmarshalledSchedule] = js.undefined
   /**
     * The treatment status.
     */
   @JSName("State")
-  var State_UnmarshalledTreatmentResource: js.UndefOr[UnmarshalledCampaignState] = js.native
+  var State_UnmarshalledTreatmentResource: js.UndefOr[UnmarshalledCampaignState] = js.undefined
 }
 
 object UnmarshalledTreatmentResource {
   @scala.inline
-  def apply(): UnmarshalledTreatmentResource = {
+  def apply(
+    Id: String = null,
+    MessageConfiguration: UnmarshalledMessageConfiguration = null,
+    Schedule: UnmarshalledSchedule = null,
+    SizePercent: js.UndefOr[Double] = js.undefined,
+    State: UnmarshalledCampaignState = null,
+    TreatmentDescription: String = null,
+    TreatmentName: String = null
+  ): UnmarshalledTreatmentResource = {
     val __obj = js.Dynamic.literal()
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (MessageConfiguration != null) __obj.updateDynamic("MessageConfiguration")(MessageConfiguration.asInstanceOf[js.Any])
+    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
+    if (!js.isUndefined(SizePercent)) __obj.updateDynamic("SizePercent")(SizePercent.get.asInstanceOf[js.Any])
+    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
+    if (TreatmentDescription != null) __obj.updateDynamic("TreatmentDescription")(TreatmentDescription.asInstanceOf[js.Any])
+    if (TreatmentName != null) __obj.updateDynamic("TreatmentName")(TreatmentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledTreatmentResource]
   }
-  @scala.inline
-  implicit class UnmarshalledTreatmentResourceOps[Self <: UnmarshalledTreatmentResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMessageConfiguration(value: UnmarshalledMessageConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSchedule(value: UnmarshalledSchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: UnmarshalledCampaignState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

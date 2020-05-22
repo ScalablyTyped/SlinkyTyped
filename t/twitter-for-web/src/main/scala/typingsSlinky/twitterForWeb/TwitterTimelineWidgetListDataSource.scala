@@ -1,7 +1,6 @@
 package typingsSlinky.twitterForWeb
 
-import typingsSlinky.twitterForWeb.anon.Id
-import typingsSlinky.twitterForWeb.anon.OwnerScreenName
+import typingsSlinky.twitterForWeb.twitterForWebStrings.list
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +9,18 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.twitterForWeb.anon.OwnerScreenName
   - typingsSlinky.twitterForWeb.anon.Id
 */
-trait TwitterTimelineWidgetListDataSource extends TwitterTimelineWidgetDataSource
+trait TwitterTimelineWidgetListDataSource extends _TwitterTimelineWidgetDataSource
 
 object TwitterTimelineWidgetListDataSource {
   @scala.inline
-  implicit def apply(value: Id): TwitterTimelineWidgetListDataSource = value.asInstanceOf[TwitterTimelineWidgetListDataSource]
+  def OwnerScreenName(ownerScreenName: String, slug: String, sourceType: list): TwitterTimelineWidgetListDataSource = {
+    val __obj = js.Dynamic.literal(ownerScreenName = ownerScreenName.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TwitterTimelineWidgetListDataSource]
+  }
   @scala.inline
-  implicit def apply(value: OwnerScreenName): TwitterTimelineWidgetListDataSource = value.asInstanceOf[TwitterTimelineWidgetListDataSource]
+  def Id(id: String, sourceType: list): TwitterTimelineWidgetListDataSource = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TwitterTimelineWidgetListDataSource]
+  }
 }
 

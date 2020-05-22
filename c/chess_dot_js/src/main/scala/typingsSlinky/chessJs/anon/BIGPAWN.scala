@@ -11,22 +11,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BIGPAWN extends js.Object {
   /** a pawn push of two squares */
-  var BIG_PAWN: b = js.native
+  var BIG_PAWN: b
   /** a standard capture */
-  var CAPTURE: c = js.native
+  var CAPTURE: c
   /** an en passant capture */
-  var EP_CAPTURE: e = js.native
+  var EP_CAPTURE: e
   /** kingside castling */
-  var KSIDE_CASTLE: k = js.native
+  var KSIDE_CASTLE: k
   /** a non-capture */
-  var NORMAL: n = js.native
+  var NORMAL: n
   /** a promotion */
-  var PROMOTION: p = js.native
+  var PROMOTION: p
   /** queenside castling */
-  var QSIDE_CASTLE: q = js.native
+  var QSIDE_CASTLE: q
 }
 
 object BIGPAWN {
@@ -35,55 +34,5 @@ object BIGPAWN {
     val __obj = js.Dynamic.literal(BIG_PAWN = BIG_PAWN.asInstanceOf[js.Any], CAPTURE = CAPTURE.asInstanceOf[js.Any], EP_CAPTURE = EP_CAPTURE.asInstanceOf[js.Any], KSIDE_CASTLE = KSIDE_CASTLE.asInstanceOf[js.Any], NORMAL = NORMAL.asInstanceOf[js.Any], PROMOTION = PROMOTION.asInstanceOf[js.Any], QSIDE_CASTLE = QSIDE_CASTLE.asInstanceOf[js.Any])
     __obj.asInstanceOf[BIGPAWN]
   }
-  @scala.inline
-  implicit class BIGPAWNOps[Self <: BIGPAWN] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBIG_PAWN(value: b): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BIG_PAWN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCAPTURE(value: c): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CAPTURE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEP_CAPTURE(value: e): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EP_CAPTURE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKSIDE_CASTLE(value: k): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KSIDE_CASTLE")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNORMAL(value: n): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NORMAL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPROMOTION(value: p): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PROMOTION")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQSIDE_CASTLE(value: q): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QSIDE_CASTLE")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

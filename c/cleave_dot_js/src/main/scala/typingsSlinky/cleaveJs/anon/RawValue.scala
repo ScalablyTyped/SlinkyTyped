@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RawValue extends js.Object {
-  var rawValue: String = js.native
+  var rawValue: String
 }
 
 object RawValue {
@@ -15,19 +14,5 @@ object RawValue {
     val __obj = js.Dynamic.literal(rawValue = rawValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawValue]
   }
-  @scala.inline
-  implicit class RawValueOps[Self <: RawValue] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRawValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -13,12 +13,11 @@ import scala.scalajs.js.annotation._
   *
   * See [Display data](https://jupyter-client.readthedocs.io/en/latest/messaging.html#display-data).
   */
-@js.native
 trait IDisplayDataMsg
   extends IIOPubMessage[display_data]
-     with Message {
+     with _Message {
   @JSName("content")
-  var content_IDisplayDataMsg: Metadata = js.native
+  var content_IDisplayDataMsg: Metadata
 }
 
 object IDisplayDataMsg {
@@ -28,24 +27,12 @@ object IDisplayDataMsg {
     content: Metadata,
     header: IHeader[display_data],
     metadata: JSONObject,
-    parent_header: IHeader[MessageType] | js.Object
+    parent_header: IHeader[MessageType] | js.Object,
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView] = null
   ): IDisplayDataMsg = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], parent_header = parent_header.asInstanceOf[js.Any])
+    if (buffers != null) __obj.updateDynamic("buffers")(buffers.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDisplayDataMsg]
   }
-  @scala.inline
-  implicit class IDisplayDataMsgOps[Self <: IDisplayDataMsg] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: Metadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

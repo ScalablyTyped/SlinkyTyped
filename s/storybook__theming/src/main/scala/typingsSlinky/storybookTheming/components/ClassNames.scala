@@ -18,6 +18,11 @@ object ClassNames {
        with StBuildingComponent[tag.type, js.Object]
   
   def withProps[Theme](p: ClassNamesProps[Theme]): Builder[Theme] = new Builder[Theme](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Theme](): Builder[Theme] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Theme](js.Array(this.component, __props.asInstanceOf[ClassNamesProps[Theme]]))
+  }
   implicit def make[Theme](companion: ClassNames.type): Builder[Theme] = new Builder[Theme](js.Array(this.component, js.Dictionary.empty))()
 }
 

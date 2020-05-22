@@ -22,53 +22,16 @@ trait InstanceCapacity extends js.Object {
 
 object InstanceCapacity {
   @scala.inline
-  def apply(): InstanceCapacity = {
+  def apply(
+    AvailableCapacity: js.UndefOr[Integer] = js.undefined,
+    InstanceType: String = null,
+    TotalCapacity: js.UndefOr[Integer] = js.undefined
+  ): InstanceCapacity = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AvailableCapacity)) __obj.updateDynamic("AvailableCapacity")(AvailableCapacity.get.asInstanceOf[js.Any])
+    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
+    if (!js.isUndefined(TotalCapacity)) __obj.updateDynamic("TotalCapacity")(TotalCapacity.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceCapacity]
   }
-  @scala.inline
-  implicit class InstanceCapacityOps[Self <: InstanceCapacity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailableCapacity(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailableCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailableCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalCapacity(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCapacity")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

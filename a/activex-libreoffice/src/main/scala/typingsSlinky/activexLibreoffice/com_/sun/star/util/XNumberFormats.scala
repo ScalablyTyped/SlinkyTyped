@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   *
   * The number formats are managed by their unique key in the document.
   */
-@js.native
 trait XNumberFormats extends XInterface {
   /**
     * adds a new number format to the list, using a format string.
@@ -23,7 +22,7 @@ trait XNumberFormats extends XInterface {
     * @returns the key for new number format
     * @throws com::sun::star::util::MalformedNumberFormatException if incorrect number format is specified
     */
-  def addNew(aFormat: String, nLocale: Locale): Double = js.native
+  def addNew(aFormat: String, nLocale: Locale): Double
   /**
     * adds a new number format to the list, using a format string in a different locale than the desired locale of the resulting number format.
     * @param aFormat the key for the number format
@@ -32,7 +31,7 @@ trait XNumberFormats extends XInterface {
     * @returns the key for added number format
     * @throws com::sun::star::util::MalformedNumberFormatException if incorrect number format is specified
     */
-  def addNewConverted(aFormat: String, nLocale: Locale, nNewLocale: Locale): Double = js.native
+  def addNewConverted(aFormat: String, nLocale: Locale, nNewLocale: Locale): Double
   /**
     * generates a format string from several parameters without creating an actual number format.
     * @param nBaseKey the key for the number format to be used as base format
@@ -50,12 +49,12 @@ trait XNumberFormats extends XInterface {
     bRed: Boolean,
     nDecimals: Double,
     nLeading: Double
-  ): String = js.native
+  ): String
   /**
     * @param nKey the key for the format
     * @returns a readonly {@link NumberFormatProperties} .
     */
-  def getByKey(nKey: Double): XPropertySet = js.native
+  def getByKey(nKey: Double): XPropertySet
   /**
     * finds a number format by its format string and returns its key.
     * @param aFormat the string representation of the number format
@@ -63,19 +62,19 @@ trait XNumberFormats extends XInterface {
     * @param bScan reserved for future use and should be set to false
     * @returns the key for the format if found, otherwise -1.
     */
-  def queryKey(aFormat: String, nLocale: Locale, bScan: Boolean): Double = js.native
+  def queryKey(aFormat: String, nLocale: Locale, bScan: Boolean): Double
   /**
     * @param nType the type of number formats to return. Must be one of the {@link NumberFormat} constants.
     * @param nLocale the locale of number formats to return.
     * @param bCreate `TRUE` : create new entries if no formats for the selected language exist ; `FALSE` : return an empty list if no formats for the selected
     * @returns a sequence of the keys of all number formats with the specified type and language.
     */
-  def queryKeys(nType: Double, nLocale: Locale, bCreate: Boolean): SafeArray[Double] = js.native
+  def queryKeys(nType: Double, nLocale: Locale, bCreate: Boolean): SafeArray[Double]
   /**
     * removes a number format from the list.
     * @param nKey the key for the numberformat
     */
-  def removeByKey(nKey: Double): Unit = js.native
+  def removeByKey(nKey: Double): Unit
 }
 
 object XNumberFormats {
@@ -95,55 +94,5 @@ object XNumberFormats {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addNew = js.Any.fromFunction2(addNew), addNewConverted = js.Any.fromFunction3(addNewConverted), generateFormat = js.Any.fromFunction6(generateFormat), getByKey = js.Any.fromFunction1(getByKey), queryInterface = js.Any.fromFunction1(queryInterface), queryKey = js.Any.fromFunction3(queryKey), queryKeys = js.Any.fromFunction3(queryKeys), release = js.Any.fromFunction0(release), removeByKey = js.Any.fromFunction1(removeByKey))
     __obj.asInstanceOf[XNumberFormats]
   }
-  @scala.inline
-  implicit class XNumberFormatsOps[Self <: XNumberFormats] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddNew(value: (String, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNew")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAddNewConverted(value: (String, Locale, Locale) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addNewConverted")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGenerateFormat(value: (Double, Locale, Boolean, Boolean, Double, Double) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("generateFormat")(js.Any.fromFunction6(value))
-        ret
-    }
-    @scala.inline
-    def withGetByKey(value: Double => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getByKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQueryKey(value: (String, Locale, Boolean) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryKey")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withQueryKeys(value: (Double, Locale, Boolean) => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryKeys")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveByKey(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeByKey")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -12,57 +12,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TimeScale extends Scale {
-  var format: js.UndefOr[String] = js.native
-  var precision: js.UndefOr[millisecond | second | minute | hour | month | year | day] = js.native
-  var `type`: time = js.native
+  var format: js.UndefOr[String] = js.undefined
+  var precision: js.UndefOr[millisecond | second | minute | hour | month | year | day] = js.undefined
+  var `type`: time
 }
 
 object TimeScale {
   @scala.inline
-  def apply(`type`: time): TimeScale = {
+  def apply(
+    `type`: time,
+    format: String = null,
+    precision: millisecond | second | minute | hour | month | year | day = null
+  ): TimeScale = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeScale]
   }
-  @scala.inline
-  implicit class TimeScaleOps[Self <: TimeScale] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: time): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrecision(value: millisecond | second | minute | hour | month | year | day): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrecision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("precision")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

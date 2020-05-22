@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DrawGridLine extends js.Object {
-  var drawGridLine: js.UndefOr[Boolean] = js.native
-  var gridSize: js.UndefOr[Double] = js.native
-  var heightBezier: js.UndefOr[js.Array[Double]] = js.native
-  var heightScale: js.UndefOr[Double] = js.native
+  var drawGridLine: js.UndefOr[Boolean] = js.undefined
+  var gridSize: js.UndefOr[Double] = js.undefined
+  var heightBezier: js.UndefOr[js.Array[Double]] = js.undefined
+  var heightScale: js.UndefOr[Double] = js.undefined
 }
 
 object DrawGridLine {
   @scala.inline
-  def apply(): DrawGridLine = {
+  def apply(
+    drawGridLine: js.UndefOr[Boolean] = js.undefined,
+    gridSize: js.UndefOr[Double] = js.undefined,
+    heightBezier: js.Array[Double] = null,
+    heightScale: js.UndefOr[Double] = js.undefined
+  ): DrawGridLine = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(drawGridLine)) __obj.updateDynamic("drawGridLine")(drawGridLine.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gridSize)) __obj.updateDynamic("gridSize")(gridSize.get.asInstanceOf[js.Any])
+    if (heightBezier != null) __obj.updateDynamic("heightBezier")(heightBezier.asInstanceOf[js.Any])
+    if (!js.isUndefined(heightScale)) __obj.updateDynamic("heightScale")(heightScale.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawGridLine]
   }
-  @scala.inline
-  implicit class DrawGridLineOps[Self <: DrawGridLine] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDrawGridLine(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawGridLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawGridLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawGridLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightBezier(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightBezier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightBezier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightBezier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeightScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeightScale: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightScale")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,24 +7,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides basic properties for the input pointer associated with a single mouse, pen/stylus, or touch contact. */
-@js.native
 trait PointerPoint extends js.Object {
   /** Gets the ID of an input frame. */
-  var frameId: Double = js.native
+  var frameId: Double
   /** Gets a value that indicates whether the physical entity (touch, pen/stylus, or mouse button) is pressed down. */
-  var isInContact: Boolean = js.native
+  var isInContact: Boolean
   /** Gets information about the device associated with the input pointer. */
-  var pointerDevice: PointerDevice = js.native
+  var pointerDevice: PointerDevice
   /** Gets a unique identifier for the input pointer. */
-  var pointerId: Double = js.native
+  var pointerId: Double
   /** Gets the location of the pointer input in client coordinates. */
-  var position: Point = js.native
+  var position: Point
   /** Gets extended information about the input pointer. */
-  var properties: PointerPointProperties = js.native
+  var properties: PointerPointProperties
   /** Gets the raw location of the pointer input in client coordinates. */
-  var rawPosition: Point = js.native
+  var rawPosition: Point
   /** Gets the time when the input occurred. */
-  var timestamp: Double = js.native
+  var timestamp: Double
 }
 
 object PointerPoint {
@@ -42,61 +41,5 @@ object PointerPoint {
     val __obj = js.Dynamic.literal(frameId = frameId.asInstanceOf[js.Any], isInContact = isInContact.asInstanceOf[js.Any], pointerDevice = pointerDevice.asInstanceOf[js.Any], pointerId = pointerId.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], rawPosition = rawPosition.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointerPoint]
   }
-  @scala.inline
-  implicit class PointerPointOps[Self <: PointerPoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFrameId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsInContact(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isInContact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointerDevice(value: PointerDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointerId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: PointerPointProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRawPosition(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

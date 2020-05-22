@@ -26,59 +26,17 @@ trait PutOrganizationConfigRuleRequest extends js.Object {
 
 object PutOrganizationConfigRuleRequest {
   @scala.inline
-  def apply(OrganizationConfigRuleName: OrganizationConfigRuleName): PutOrganizationConfigRuleRequest = {
+  def apply(
+    OrganizationConfigRuleName: OrganizationConfigRuleName,
+    ExcludedAccounts: ExcludedAccounts = null,
+    OrganizationCustomRuleMetadata: OrganizationCustomRuleMetadata = null,
+    OrganizationManagedRuleMetadata: OrganizationManagedRuleMetadata = null
+  ): PutOrganizationConfigRuleRequest = {
     val __obj = js.Dynamic.literal(OrganizationConfigRuleName = OrganizationConfigRuleName.asInstanceOf[js.Any])
+    if (ExcludedAccounts != null) __obj.updateDynamic("ExcludedAccounts")(ExcludedAccounts.asInstanceOf[js.Any])
+    if (OrganizationCustomRuleMetadata != null) __obj.updateDynamic("OrganizationCustomRuleMetadata")(OrganizationCustomRuleMetadata.asInstanceOf[js.Any])
+    if (OrganizationManagedRuleMetadata != null) __obj.updateDynamic("OrganizationManagedRuleMetadata")(OrganizationManagedRuleMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutOrganizationConfigRuleRequest]
   }
-  @scala.inline
-  implicit class PutOrganizationConfigRuleRequestOps[Self <: PutOrganizationConfigRuleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOrganizationConfigRuleName(value: OrganizationConfigRuleName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludedAccounts(value: ExcludedAccounts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedAccounts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExcludedAccounts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcludedAccounts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationCustomRuleMetadata(value: OrganizationCustomRuleMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationCustomRuleMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationCustomRuleMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationCustomRuleMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizationManagedRuleMetadata(value: OrganizationManagedRuleMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationManagedRuleMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizationManagedRuleMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationManagedRuleMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

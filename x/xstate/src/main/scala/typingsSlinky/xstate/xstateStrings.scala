@@ -1,6 +1,6 @@
 package typingsSlinky.xstate
 
-import typingsSlinky.xstate.typesMod.StateTypes
+import typingsSlinky.xstate.typesMod._StateTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +28,13 @@ object xstateStrings {
   sealed trait TransitionDefinitionMap extends js.Object
   
   @js.native
-  sealed trait TransitionsConfigMap extends js.Object
+  sealed trait _empty extends js.Object
   
   @js.native
-  sealed trait atomic extends StateTypes
+  sealed trait atomic extends _StateTypes
   
   @js.native
-  sealed trait compound extends StateTypes
+  sealed trait compound extends _StateTypes
   
   @js.native
   sealed trait configuration extends js.Object
@@ -46,16 +46,16 @@ object xstateStrings {
   sealed trait external extends js.Object
   
   @js.native
-  sealed trait `final` extends StateTypes
+  sealed trait `final` extends _StateTypes
   
   @js.native
-  sealed trait history extends StateTypes
+  sealed trait history extends _StateTypes
   
   @js.native
   sealed trait internal extends js.Object
   
   @js.native
-  sealed trait parallel extends StateTypes
+  sealed trait parallel extends _StateTypes
   
   @js.native
   sealed trait platform extends js.Object
@@ -87,7 +87,7 @@ object xstateStrings {
   @scala.inline
   def TransitionDefinitionMap: TransitionDefinitionMap = "TransitionDefinitionMap".asInstanceOf[TransitionDefinitionMap]
   @scala.inline
-  def TransitionsConfigMap: TransitionsConfigMap = "TransitionsConfigMap".asInstanceOf[TransitionsConfigMap]
+  def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
   def atomic: atomic = "atomic".asInstanceOf[atomic]
   @scala.inline

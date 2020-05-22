@@ -11,7 +11,14 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Image")
 @js.native
 class Image ()
-  extends typingsSlinky.scriptableIos.Image
+  extends typingsSlinky.scriptableIos.Image {
+  /**
+    * _Size of the image in pixels._
+    * @see https://docs.scriptable.app/image/#size
+    */
+  /* CompleteClass */
+  override var size: typingsSlinky.scriptableIos.Size = js.native
+}
 
 /* static members */
 @JSGlobal("Image")

@@ -4,103 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IClientBlockListRequest extends js.Object {
   /** ClientBlockListRequest blockIds */
-  var blockIds: js.UndefOr[js.Array[String] | Null] = js.native
+  var blockIds: js.UndefOr[js.Array[String] | Null] = js.undefined
   /** ClientBlockListRequest headId */
-  var headId: js.UndefOr[String | Null] = js.native
+  var headId: js.UndefOr[String | Null] = js.undefined
   /** ClientBlockListRequest paging */
-  var paging: js.UndefOr[IClientPagingControls | Null] = js.native
+  var paging: js.UndefOr[IClientPagingControls | Null] = js.undefined
   /** ClientBlockListRequest sorting */
-  var sorting: js.UndefOr[js.Array[IClientSortControls] | Null] = js.native
+  var sorting: js.UndefOr[js.Array[IClientSortControls] | Null] = js.undefined
 }
 
 object IClientBlockListRequest {
   @scala.inline
-  def apply(): IClientBlockListRequest = {
+  def apply(
+    blockIds: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    headId: js.UndefOr[Null | String] = js.undefined,
+    paging: js.UndefOr[Null | IClientPagingControls] = js.undefined,
+    sorting: js.UndefOr[Null | js.Array[IClientSortControls]] = js.undefined
+  ): IClientBlockListRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockIds)) __obj.updateDynamic("blockIds")(blockIds.asInstanceOf[js.Any])
+    if (!js.isUndefined(headId)) __obj.updateDynamic("headId")(headId.asInstanceOf[js.Any])
+    if (!js.isUndefined(paging)) __obj.updateDynamic("paging")(paging.asInstanceOf[js.Any])
+    if (!js.isUndefined(sorting)) __obj.updateDynamic("sorting")(sorting.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClientBlockListRequest]
   }
-  @scala.inline
-  implicit class IClientBlockListRequestOps[Self <: IClientBlockListRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockIds(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockIdsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockIds")(null)
-        ret
-    }
-    @scala.inline
-    def withHeadId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeadId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeadIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headId")(null)
-        ret
-    }
-    @scala.inline
-    def withPaging(value: IClientPagingControls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaging: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPagingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(null)
-        ret
-    }
-    @scala.inline
-    def withSorting(value: js.Array[IClientSortControls]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSortingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,14 @@ trait CreateUserDefinedFunctionRequest extends js.Object {
 
 object CreateUserDefinedFunctionRequest {
   @scala.inline
-  def apply(DatabaseName: NameString, FunctionInput: UserDefinedFunctionInput): CreateUserDefinedFunctionRequest = {
+  def apply(
+    DatabaseName: NameString,
+    FunctionInput: UserDefinedFunctionInput,
+    CatalogId: CatalogIdString = null
+  ): CreateUserDefinedFunctionRequest = {
     val __obj = js.Dynamic.literal(DatabaseName = DatabaseName.asInstanceOf[js.Any], FunctionInput = FunctionInput.asInstanceOf[js.Any])
+    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateUserDefinedFunctionRequest]
   }
-  @scala.inline
-  implicit class CreateUserDefinedFunctionRequestOps[Self <: CreateUserDefinedFunctionRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDatabaseName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFunctionInput(value: UserDefinedFunctionInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCatalogId(value: CatalogIdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCatalogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

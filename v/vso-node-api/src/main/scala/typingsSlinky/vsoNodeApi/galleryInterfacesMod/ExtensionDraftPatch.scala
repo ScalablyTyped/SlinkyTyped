@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExtensionDraftPatch extends js.Object {
-  var extensionData: UnpackagedExtensionData = js.native
-  var operation: DraftPatchOperation = js.native
+  var extensionData: UnpackagedExtensionData
+  var operation: DraftPatchOperation
 }
 
 object ExtensionDraftPatch {
@@ -16,25 +15,5 @@ object ExtensionDraftPatch {
     val __obj = js.Dynamic.literal(extensionData = extensionData.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtensionDraftPatch]
   }
-  @scala.inline
-  implicit class ExtensionDraftPatchOps[Self <: ExtensionDraftPatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExtensionData(value: UnpackagedExtensionData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperation(value: DraftPatchOperation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

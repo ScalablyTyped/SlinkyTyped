@@ -4,114 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MeterHTMLAttributes[T] extends HTMLAttributes[T] {
-  var form: js.UndefOr[String] = js.native
-  var high: js.UndefOr[Double] = js.native
-  var low: js.UndefOr[Double] = js.native
-  var max: js.UndefOr[Double | String] = js.native
-  var min: js.UndefOr[Double | String] = js.native
-  var optimum: js.UndefOr[Double] = js.native
-  var value: js.UndefOr[String | js.Array[String] | Double] = js.native
+  var form: js.UndefOr[String] = js.undefined
+  var high: js.UndefOr[Double] = js.undefined
+  var low: js.UndefOr[Double] = js.undefined
+  var max: js.UndefOr[Double | String] = js.undefined
+  var min: js.UndefOr[Double | String] = js.undefined
+  var optimum: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[String | js.Array[String] | Double] = js.undefined
 }
 
 object MeterHTMLAttributes {
   @scala.inline
-  def apply[T](): MeterHTMLAttributes[T] = {
+  def apply[T](
+    HTMLAttributes: HTMLAttributes[T] = null,
+    form: String = null,
+    high: js.UndefOr[Double] = js.undefined,
+    low: js.UndefOr[Double] = js.undefined,
+    max: Double | String = null,
+    min: Double | String = null,
+    optimum: js.UndefOr[Double] = js.undefined,
+    value: String | js.Array[String] | Double = null
+  ): MeterHTMLAttributes[T] = {
     val __obj = js.Dynamic.literal()
+    if (HTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, HTMLAttributes)
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (!js.isUndefined(high)) __obj.updateDynamic("high")(high.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(low)) __obj.updateDynamic("low")(low.get.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (!js.isUndefined(optimum)) __obj.updateDynamic("optimum")(optimum.get.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeterHTMLAttributes[T]]
   }
-  @scala.inline
-  implicit class MeterHTMLAttributesOps[Self[t] <: MeterHTMLAttributes[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withForm(value: String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHigh(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHigh: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLow(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLow: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMax(value: Double | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMin(value: Double | String): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimum(value: Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimum: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: String | js.Array[String] | Double): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

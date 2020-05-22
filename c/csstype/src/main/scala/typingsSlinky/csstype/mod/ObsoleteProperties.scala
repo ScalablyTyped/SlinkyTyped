@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ObsoleteProperties[TLength] extends js.Object {
   /**
     * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
@@ -13,7 +12,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxAlign: js.UndefOr[BoxAlignProperty] = js.native
+  var KhtmlBoxAlign: js.UndefOr[BoxAlignProperty] = js.undefined
   /**
     * The **`box-direction`** CSS property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
     *
@@ -21,7 +20,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxDirection: js.UndefOr[BoxDirectionProperty] = js.native
+  var KhtmlBoxDirection: js.UndefOr[BoxDirectionProperty] = js.undefined
   /**
     * The **`-moz-box-flex`** and **`-webkit-box-flex`** CSS properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
     *
@@ -29,7 +28,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxFlex: js.UndefOr[GlobalsNumber] = js.native
+  var KhtmlBoxFlex: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-flex-group`** CSS property assigns the flexbox's child elements to a flex group.
     *
@@ -37,7 +36,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxFlexGroup: js.UndefOr[GlobalsNumber] = js.native
+  var KhtmlBoxFlexGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-lines`** CSS property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
     *
@@ -45,7 +44,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxLines: js.UndefOr[BoxLinesProperty] = js.native
+  var KhtmlBoxLines: js.UndefOr[BoxLinesProperty] = js.undefined
   /**
     * The **`box-ordinal-group`** CSS property assigns the flexbox's child elements to an ordinal group.
     *
@@ -53,7 +52,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.native
+  var KhtmlBoxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-orient`** CSS property specifies whether an element lays out its contents horizontally or vertically.
     *
@@ -61,7 +60,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxOrient: js.UndefOr[BoxOrientProperty] = js.native
+  var KhtmlBoxOrient: js.UndefOr[BoxOrientProperty] = js.undefined
   /**
     * The **`-moz-box-pack`** and **`-webkit-box-pack`** CSS properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
     *
@@ -69,7 +68,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlBoxPack: js.UndefOr[BoxPackProperty] = js.native
+  var KhtmlBoxPack: js.UndefOr[BoxPackProperty] = js.undefined
   /**
     * The **`line-break`** CSS property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
     *
@@ -77,7 +76,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlLineBreak: js.UndefOr[LineBreakProperty] = js.native
+  var KhtmlLineBreak: js.UndefOr[LineBreakProperty] = js.undefined
   /**
     * The **`opacity`** CSS property sets the transparency of an element or the degree to which content behind an element is visible.
     *
@@ -85,7 +84,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlOpacity: js.UndefOr[GlobalsNumber] = js.native
+  var KhtmlOpacity: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The `**user-select**` CSS property controls whether the user can select text. This doesn't have any effect on content loaded as chrome, except in textboxes.
     *
@@ -93,7 +92,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var KhtmlUserSelect: js.UndefOr[UserSelectProperty] = js.native
+  var KhtmlUserSelect: js.UndefOr[UserSelectProperty] = js.undefined
   /**
     * The **`background-clip`** CSS property sets whether an element's background `<color>` or `<image>` extends underneath its border.
     *
@@ -101,7 +100,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBackgroundClip: js.UndefOr[BackgroundClipProperty] = js.native
+  var MozBackgroundClip: js.UndefOr[BackgroundClipProperty] = js.undefined
   /**
     * The **`box-decoration-break`** CSS property specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages.
     *
@@ -109,7 +108,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBackgroundInlinePolicy: js.UndefOr[BoxDecorationBreakProperty] = js.native
+  var MozBackgroundInlinePolicy: js.UndefOr[BoxDecorationBreakProperty] = js.undefined
   /**
     * The **`background-origin`** CSS property sets the _background positioning area_. In other words, it sets the origin position of an image set with the `background-image` property.
     *
@@ -117,7 +116,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBackgroundOrigin: js.UndefOr[BackgroundOriginProperty] = js.native
+  var MozBackgroundOrigin: js.UndefOr[BackgroundOriginProperty] = js.undefined
   /**
     * The **`background-size`** CSS property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space.
     *
@@ -125,7 +124,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBackgroundSize: js.UndefOr[BackgroundSizeProperty[TLength]] = js.native
+  var MozBackgroundSize: js.UndefOr[BackgroundSizeProperty[TLength]] = js.undefined
   /**
     * The **`-moz-binding`** CSS property is used by Mozilla-based applications to attach an XBL binding to a DOM element.
     *
@@ -133,13 +132,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBinding: js.UndefOr[MozBindingProperty] = js.native
+  var MozBinding: js.UndefOr[MozBindingProperty] = js.undefined
   /**
     * The **`border-radius`** CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
     *
     * @deprecated
     */
-  var MozBorderRadius: js.UndefOr[BorderRadiusProperty[TLength]] = js.native
+  var MozBorderRadius: js.UndefOr[BorderRadiusProperty[TLength]] = js.undefined
   /**
     * The **`border-bottom-left-radius`** CSS property rounds the bottom-left corner of an element.
     *
@@ -147,7 +146,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBorderRadiusBottomleft: js.UndefOr[BorderBottomLeftRadiusProperty[TLength]] = js.native
+  var MozBorderRadiusBottomleft: js.UndefOr[BorderBottomLeftRadiusProperty[TLength]] = js.undefined
   /**
     * The **`border-bottom-right-radius`** CSS property rounds the bottom-right corner of an element.
     *
@@ -155,7 +154,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBorderRadiusBottomright: js.UndefOr[BorderBottomRightRadiusProperty[TLength]] = js.native
+  var MozBorderRadiusBottomright: js.UndefOr[BorderBottomRightRadiusProperty[TLength]] = js.undefined
   /**
     * The **`border-top-left-radius`** CSS property rounds the top-left corner of an element.
     *
@@ -163,7 +162,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBorderRadiusTopleft: js.UndefOr[BorderTopLeftRadiusProperty[TLength]] = js.native
+  var MozBorderRadiusTopleft: js.UndefOr[BorderTopLeftRadiusProperty[TLength]] = js.undefined
   /**
     * The **`border-top-right-radius`** CSS property rounds the top-right corner of an element.
     *
@@ -171,7 +170,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBorderRadiusTopright: js.UndefOr[BorderTopRightRadiusProperty[TLength]] = js.native
+  var MozBorderRadiusTopright: js.UndefOr[BorderTopRightRadiusProperty[TLength]] = js.undefined
   /**
     * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
     *
@@ -179,7 +178,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxAlign: js.UndefOr[BoxAlignProperty] = js.native
+  var MozBoxAlign: js.UndefOr[BoxAlignProperty] = js.undefined
   /**
     * The **`box-direction`** CSS property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
     *
@@ -187,7 +186,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxDirection: js.UndefOr[BoxDirectionProperty] = js.native
+  var MozBoxDirection: js.UndefOr[BoxDirectionProperty] = js.undefined
   /**
     * The **`-moz-box-flex`** and **`-webkit-box-flex`** CSS properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
     *
@@ -195,7 +194,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxFlex: js.UndefOr[GlobalsNumber] = js.native
+  var MozBoxFlex: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-ordinal-group`** CSS property assigns the flexbox's child elements to an ordinal group.
     *
@@ -203,7 +202,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.native
+  var MozBoxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-orient`** CSS property specifies whether an element lays out its contents horizontally or vertically.
     *
@@ -211,7 +210,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxOrient: js.UndefOr[BoxOrientProperty] = js.native
+  var MozBoxOrient: js.UndefOr[BoxOrientProperty] = js.undefined
   /**
     * The **`-moz-box-pack`** and **`-webkit-box-pack`** CSS properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
     *
@@ -219,7 +218,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxPack: js.UndefOr[BoxPackProperty] = js.native
+  var MozBoxPack: js.UndefOr[BoxPackProperty] = js.undefined
   /**
     * The **`box-shadow`** CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radii, and color.
     *
@@ -227,7 +226,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozBoxShadow: js.UndefOr[BoxShadowProperty] = js.native
+  var MozBoxShadow: js.UndefOr[BoxShadowProperty] = js.undefined
   /**
     * The **`opacity`** CSS property sets the transparency of an element or the degree to which content behind an element is visible.
     *
@@ -235,13 +234,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozOpacity: js.UndefOr[GlobalsNumber] = js.native
+  var MozOpacity: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`outline`** CSS property is a shorthand to set various outline properties in a single declaration: `outline-style`, `outline-width`, and `outline-color`.
     *
     * @deprecated
     */
-  var MozOutline: js.UndefOr[OutlineProperty[TLength]] = js.native
+  var MozOutline: js.UndefOr[OutlineProperty[TLength]] = js.undefined
   /**
     * The **`outline-color`** CSS property sets the color of an element's outline.
     *
@@ -249,13 +248,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozOutlineColor: js.UndefOr[OutlineColorProperty] = js.native
+  var MozOutlineColor: js.UndefOr[OutlineColorProperty] = js.undefined
   /**
     * In Mozilla applications like Firefox, the **`-moz-outline-radius`** CSS property can be used to give an element's `outline` rounded corners.
     *
     * @deprecated
     */
-  var MozOutlineRadius: js.UndefOr[MozOutlineRadiusProperty[TLength]] = js.native
+  var MozOutlineRadius: js.UndefOr[MozOutlineRadiusProperty[TLength]] = js.undefined
   /**
     * The **`outline-style`** CSS property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the `border`.
     *
@@ -263,7 +262,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozOutlineStyle: js.UndefOr[OutlineStyleProperty] = js.native
+  var MozOutlineStyle: js.UndefOr[OutlineStyleProperty] = js.undefined
   /**
     * The **`outline-width`** CSS property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the `border`.
     *
@@ -271,7 +270,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozOutlineWidth: js.UndefOr[OutlineWidthProperty[TLength]] = js.native
+  var MozOutlineWidth: js.UndefOr[OutlineWidthProperty[TLength]] = js.undefined
   /**
     * The **`text-align-last`** CSS property sets how the last line of a block or a line, right before a forced line break, is aligned.
     *
@@ -279,7 +278,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozTextAlignLast: js.UndefOr[TextAlignLastProperty] = js.native
+  var MozTextAlignLast: js.UndefOr[TextAlignLastProperty] = js.undefined
   /**
     * The **`-moz-text-blink`** non-standard Mozilla CSS extension specifies the blink mode.
     *
@@ -287,7 +286,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozTextBlink: js.UndefOr[MozTextBlinkProperty] = js.native
+  var MozTextBlink: js.UndefOr[MozTextBlinkProperty] = js.undefined
   /**
     * The **`text-decoration-color`** CSS property sets the color of decorations added to text by `text-decoration-line`.
     *
@@ -295,7 +294,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozTextDecorationColor: js.UndefOr[TextDecorationColorProperty] = js.native
+  var MozTextDecorationColor: js.UndefOr[TextDecorationColorProperty] = js.undefined
   /**
     * The **`text-decoration-line`** CSS property sets the kind of decoration that is used on text in an element, such as an underline or overline.
     *
@@ -303,7 +302,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozTextDecorationLine: js.UndefOr[TextDecorationLineProperty] = js.native
+  var MozTextDecorationLine: js.UndefOr[TextDecorationLineProperty] = js.undefined
   /**
     * The **`text-decoration-style`** CSS property sets the style of the lines specified by `text-decoration-line`. The style applies to all lines that are set with `text-decoration-line`.
     *
@@ -311,7 +310,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozTextDecorationStyle: js.UndefOr[TextDecorationStyleProperty] = js.native
+  var MozTextDecorationStyle: js.UndefOr[TextDecorationStyleProperty] = js.undefined
   /**
     * In Mozilla applications, **`-moz-user-input`** determines if an element will accept user input.
     *
@@ -319,7 +318,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozUserInput: js.UndefOr[MozUserInputProperty] = js.native
+  var MozUserInput: js.UndefOr[MozUserInputProperty] = js.undefined
   /**
     * The **`-moz-window-shadow`** CSS property specifies whether a window will have a shadow. It only works on Mac OS X.
     *
@@ -327,13 +326,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var MozWindowShadow: js.UndefOr[MozWindowShadowProperty] = js.native
+  var MozWindowShadow: js.UndefOr[MozWindowShadowProperty] = js.undefined
   /**
     * The **`animation`** shorthand CSS property sets an animated transition between styles. It is a shorthand for `animation-name`, `animation-duration`, `animation-timing-function`, `animation-delay`, `animation-iteration-count`, `animation-direction`, `animation-fill-mode`, and `animation-play-state`.
     *
     * @deprecated
     */
-  var OAnimation: js.UndefOr[AnimationProperty] = js.native
+  var OAnimation: js.UndefOr[AnimationProperty] = js.undefined
   /**
     * The **`animation-delay`** CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
     *
@@ -341,7 +340,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationDelay: js.UndefOr[GlobalsString] = js.native
+  var OAnimationDelay: js.UndefOr[GlobalsString] = js.undefined
   /**
     * The **`animation-direction`** CSS property sets whether an animation should play forwards, backwards, or alternating back and forth.
     *
@@ -349,7 +348,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationDirection: js.UndefOr[AnimationDirectionProperty] = js.native
+  var OAnimationDirection: js.UndefOr[AnimationDirectionProperty] = js.undefined
   /**
     * The **`animation-duration`** CSS property sets the length of time that an animation takes to complete one cycle.
     *
@@ -357,7 +356,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationDuration: js.UndefOr[GlobalsString] = js.native
+  var OAnimationDuration: js.UndefOr[GlobalsString] = js.undefined
   /**
     * The **`animation-fill-mode`** CSS property sets how a CSS animation applies styles to its target before and after its execution.
     *
@@ -365,7 +364,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationFillMode: js.UndefOr[AnimationFillModeProperty] = js.native
+  var OAnimationFillMode: js.UndefOr[AnimationFillModeProperty] = js.undefined
   /**
     * The **`animation-iteration-count`** CSS property sets the number of times an animation cycle should be played before stopping.
     *
@@ -373,7 +372,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationIterationCount: js.UndefOr[AnimationIterationCountProperty] = js.native
+  var OAnimationIterationCount: js.UndefOr[AnimationIterationCountProperty] = js.undefined
   /**
     * The **`animation-name`** CSS property sets one or more animations to apply to an element. Each name is an `@keyframes` at-rule that sets the property values for the animation sequence.
     *
@@ -381,7 +380,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationName: js.UndefOr[AnimationNameProperty] = js.native
+  var OAnimationName: js.UndefOr[AnimationNameProperty] = js.undefined
   /**
     * The **`animation-play-state`** CSS property sets whether an animation is running or paused.
     *
@@ -389,7 +388,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationPlayState: js.UndefOr[AnimationPlayStateProperty] = js.native
+  var OAnimationPlayState: js.UndefOr[AnimationPlayStateProperty] = js.undefined
   /**
     * The `**animation-timing-function**` CSS property sets how an animation progresses through the duration of each cycle.
     *
@@ -397,7 +396,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OAnimationTimingFunction: js.UndefOr[AnimationTimingFunctionProperty] = js.native
+  var OAnimationTimingFunction: js.UndefOr[AnimationTimingFunctionProperty] = js.undefined
   /**
     * The **`background-size`** CSS property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space.
     *
@@ -405,13 +404,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OBackgroundSize: js.UndefOr[BackgroundSizeProperty[TLength]] = js.native
+  var OBackgroundSize: js.UndefOr[BackgroundSizeProperty[TLength]] = js.undefined
   /**
     * The **`border-image`** CSS property draws an image in place of an element's `border-style`.
     *
     * @deprecated
     */
-  var OBorderImage: js.UndefOr[BorderImageProperty] = js.native
+  var OBorderImage: js.UndefOr[BorderImageProperty] = js.undefined
   /**
     * The **`transform`** CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.
     *
@@ -419,13 +418,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OTransform: js.UndefOr[TransformProperty] = js.native
+  var OTransform: js.UndefOr[TransformProperty] = js.undefined
   /**
     * The **`transition`** CSS property is a shorthand property for `transition-property`, `transition-duration`, `transition-timing-function`, and `transition-delay`.
     *
     * @deprecated
     */
-  var OTransition: js.UndefOr[TransitionProperty] = js.native
+  var OTransition: js.UndefOr[TransitionProperty] = js.undefined
   /**
     * The **`transition-delay`** CSS property specifies the duration to wait before starting a property's transition effect when its value changes.
     *
@@ -433,7 +432,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OTransitionDelay: js.UndefOr[GlobalsString] = js.native
+  var OTransitionDelay: js.UndefOr[GlobalsString] = js.undefined
   /**
     * The **`transition-duration`** CSS property sets the length of time a transition animation should take to complete. By default, the value is `0s`, meaning that no animation will occur.
     *
@@ -441,7 +440,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OTransitionDuration: js.UndefOr[GlobalsString] = js.native
+  var OTransitionDuration: js.UndefOr[GlobalsString] = js.undefined
   /**
     * The **`transition-property`** CSS property sets the CSS properties to which a transition effect should be applied.
     *
@@ -449,7 +448,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OTransitionProperty: js.UndefOr[TransitionPropertyProperty] = js.native
+  var OTransitionProperty: js.UndefOr[TransitionPropertyProperty] = js.undefined
   /**
     * The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a transition effect.
     *
@@ -457,7 +456,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var OTransitionTimingFunction: js.UndefOr[TransitionTimingFunctionProperty] = js.native
+  var OTransitionTimingFunction: js.UndefOr[TransitionTimingFunctionProperty] = js.undefined
   /**
     * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
     *
@@ -465,7 +464,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxAlign: js.UndefOr[BoxAlignProperty] = js.native
+  var WebkitBoxAlign: js.UndefOr[BoxAlignProperty] = js.undefined
   /**
     * The **`box-direction`** CSS property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
     *
@@ -473,7 +472,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxDirection: js.UndefOr[BoxDirectionProperty] = js.native
+  var WebkitBoxDirection: js.UndefOr[BoxDirectionProperty] = js.undefined
   /**
     * The **`-moz-box-flex`** and **`-webkit-box-flex`** CSS properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
     *
@@ -481,7 +480,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxFlex: js.UndefOr[GlobalsNumber] = js.native
+  var WebkitBoxFlex: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-flex-group`** CSS property assigns the flexbox's child elements to a flex group.
     *
@@ -489,7 +488,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxFlexGroup: js.UndefOr[GlobalsNumber] = js.native
+  var WebkitBoxFlexGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-lines`** CSS property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
     *
@@ -497,7 +496,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxLines: js.UndefOr[BoxLinesProperty] = js.native
+  var WebkitBoxLines: js.UndefOr[BoxLinesProperty] = js.undefined
   /**
     * The **`box-ordinal-group`** CSS property assigns the flexbox's child elements to an ordinal group.
     *
@@ -505,7 +504,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.native
+  var WebkitBoxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-orient`** CSS property specifies whether an element lays out its contents horizontally or vertically.
     *
@@ -513,7 +512,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxOrient: js.UndefOr[BoxOrientProperty] = js.native
+  var WebkitBoxOrient: js.UndefOr[BoxOrientProperty] = js.undefined
   /**
     * The **`-moz-box-pack`** and **`-webkit-box-pack`** CSS properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
     *
@@ -521,7 +520,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitBoxPack: js.UndefOr[BoxPackProperty] = js.native
+  var WebkitBoxPack: js.UndefOr[BoxPackProperty] = js.undefined
   /**
     * The **`scroll-snap-points-x`** CSS property defines the horizontal positioning of snap points within the content of the scroll container they are applied to.
     *
@@ -529,7 +528,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitScrollSnapPointsX: js.UndefOr[ScrollSnapPointsXProperty] = js.native
+  var WebkitScrollSnapPointsX: js.UndefOr[ScrollSnapPointsXProperty] = js.undefined
   /**
     * The **`scroll-snap-points-y`** CSS property defines the vertical positioning of snap points within the content of the scroll container they are applied to.
     *
@@ -537,7 +536,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var WebkitScrollSnapPointsY: js.UndefOr[ScrollSnapPointsYProperty] = js.native
+  var WebkitScrollSnapPointsY: js.UndefOr[ScrollSnapPointsYProperty] = js.undefined
   /**
     * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
     *
@@ -545,7 +544,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxAlign: js.UndefOr[BoxAlignProperty] = js.native
+  var boxAlign: js.UndefOr[BoxAlignProperty] = js.undefined
   /**
     * The **`box-direction`** CSS property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
     *
@@ -553,7 +552,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxDirection: js.UndefOr[BoxDirectionProperty] = js.native
+  var boxDirection: js.UndefOr[BoxDirectionProperty] = js.undefined
   /**
     * The **`-moz-box-flex`** and **`-webkit-box-flex`** CSS properties specify how a `-moz-box` or `-webkit-box` grows to fill the box that contains it, in the direction of the containing box's layout.
     *
@@ -561,7 +560,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxFlex: js.UndefOr[GlobalsNumber] = js.native
+  var boxFlex: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-flex-group`** CSS property assigns the flexbox's child elements to a flex group.
     *
@@ -569,7 +568,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxFlexGroup: js.UndefOr[GlobalsNumber] = js.native
+  var boxFlexGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-lines`** CSS property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
     *
@@ -577,7 +576,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxLines: js.UndefOr[BoxLinesProperty] = js.native
+  var boxLines: js.UndefOr[BoxLinesProperty] = js.undefined
   /**
     * The **`box-ordinal-group`** CSS property assigns the flexbox's child elements to an ordinal group.
     *
@@ -585,7 +584,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.native
+  var boxOrdinalGroup: js.UndefOr[GlobalsNumber] = js.undefined
   /**
     * The **`box-orient`** CSS property specifies whether an element lays out its contents horizontally or vertically.
     *
@@ -593,7 +592,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxOrient: js.UndefOr[BoxOrientProperty] = js.native
+  var boxOrient: js.UndefOr[BoxOrientProperty] = js.undefined
   /**
     * The **`-moz-box-pack`** and **`-webkit-box-pack`** CSS properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
     *
@@ -601,7 +600,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var boxPack: js.UndefOr[BoxPackProperty] = js.native
+  var boxPack: js.UndefOr[BoxPackProperty] = js.undefined
   /**
     * The **`clip`** CSS property defines what portion of an element is visible. The `clip` property applies only to absolutely positioned elements, that is elements with `position:absolute` or `position:fixed`.
     *
@@ -609,7 +608,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var clip: js.UndefOr[ClipProperty] = js.native
+  var clip: js.UndefOr[ClipProperty] = js.undefined
   /**
     * The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in `@font-feature-values`.
     *
@@ -617,7 +616,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var fontVariantAlternates: js.UndefOr[FontVariantAlternatesProperty] = js.native
+  var fontVariantAlternates: js.UndefOr[FontVariantAlternatesProperty] = js.undefined
   /**
     * The **`column-gap`** CSS property sets the size of the gap (gutter) between an element's columns.
     *
@@ -625,13 +624,13 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var gridColumnGap: js.UndefOr[GridColumnGapProperty[TLength]] = js.native
+  var gridColumnGap: js.UndefOr[GridColumnGapProperty[TLength]] = js.undefined
   /**
     * The **`gap`** CSS property sets the gaps (gutters) between rows and columns. It is a shorthand for `row-gap` and `column-gap`.
     *
     * @deprecated
     */
-  var gridGap: js.UndefOr[GridGapProperty[TLength]] = js.native
+  var gridGap: js.UndefOr[GridGapProperty[TLength]] = js.undefined
   /**
     * The **`row-gap`** CSS property sets the size of the gap (gutter) between an element's grid rows.
     *
@@ -639,7 +638,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var gridRowGap: js.UndefOr[GridRowGapProperty[TLength]] = js.native
+  var gridRowGap: js.UndefOr[GridRowGapProperty[TLength]] = js.undefined
   /**
     * The **`ime-mode`** CSS property controls the state of the input method editor (IME) for text fields. This property is obsolete.
     *
@@ -647,7 +646,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var imeMode: js.UndefOr[ImeModeProperty] = js.native
+  var imeMode: js.UndefOr[ImeModeProperty] = js.undefined
   /**
     * The **`ime-mode`** CSS property controls the state of the input method editor (IME) for text fields. This property is obsolete.
     *
@@ -655,7 +654,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var msImeMode: js.UndefOr[ImeModeProperty] = js.native
+  var msImeMode: js.UndefOr[ImeModeProperty] = js.undefined
   /**
     * The **`inset-block`** CSS property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top` and `bottom`, or `right` and `left` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -663,7 +662,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var offsetBlock: js.UndefOr[InsetBlockProperty[TLength]] = js.native
+  var offsetBlock: js.UndefOr[InsetBlockProperty[TLength]] = js.undefined
   /**
     * The **`inset-block-end`** CSS property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -671,7 +670,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var offsetBlockEnd: js.UndefOr[InsetBlockEndProperty[TLength]] = js.native
+  var offsetBlockEnd: js.UndefOr[InsetBlockEndProperty[TLength]] = js.undefined
   /**
     * The **`inset-block-start`** CSS property defines the logical block start offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -679,7 +678,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var offsetBlockStart: js.UndefOr[InsetBlockStartProperty[TLength]] = js.native
+  var offsetBlockStart: js.UndefOr[InsetBlockStartProperty[TLength]] = js.undefined
   /**
     * The **`inset-inline`** CSS property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top` and `bottom`, or `right` and `left` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -687,7 +686,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var offsetInline: js.UndefOr[InsetInlineProperty[TLength]] = js.native
+  var offsetInline: js.UndefOr[InsetInlineProperty[TLength]] = js.undefined
   /**
     * The **`inset-inline-end`** CSS property defines the logical inline end inset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -695,7 +694,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var offsetInlineEnd: js.UndefOr[InsetInlineEndProperty[TLength]] = js.native
+  var offsetInlineEnd: js.UndefOr[InsetInlineEndProperty[TLength]] = js.undefined
   /**
     * The **`inset-inline-start`** CSS property defines the logical inline start inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -703,7 +702,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var offsetInlineStart: js.UndefOr[InsetInlineStartProperty[TLength]] = js.native
+  var offsetInlineStart: js.UndefOr[InsetInlineStartProperty[TLength]] = js.undefined
   /**
     * The **`scroll-snap-coordinate`** CSS property defines the x and y coordinate positions within an element that will align with its nearest ancestor scroll container's `scroll-snap-destination` for each respective axis.
     *
@@ -711,7 +710,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var scrollSnapCoordinate: js.UndefOr[ScrollSnapCoordinateProperty[TLength]] = js.native
+  var scrollSnapCoordinate: js.UndefOr[ScrollSnapCoordinateProperty[TLength]] = js.undefined
   /**
     * The **`scroll-snap-destination`** CSS property defines the position in x and y coordinates within the scroll container's visual viewport which element snap points align with.
     *
@@ -719,7 +718,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var scrollSnapDestination: js.UndefOr[ScrollSnapDestinationProperty[TLength]] = js.native
+  var scrollSnapDestination: js.UndefOr[ScrollSnapDestinationProperty[TLength]] = js.undefined
   /**
     * The **`scroll-snap-points-x`** CSS property defines the horizontal positioning of snap points within the content of the scroll container they are applied to.
     *
@@ -727,7 +726,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var scrollSnapPointsX: js.UndefOr[ScrollSnapPointsXProperty] = js.native
+  var scrollSnapPointsX: js.UndefOr[ScrollSnapPointsXProperty] = js.undefined
   /**
     * The **`scroll-snap-points-y`** CSS property defines the vertical positioning of snap points within the content of the scroll container they are applied to.
     *
@@ -735,7 +734,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var scrollSnapPointsY: js.UndefOr[ScrollSnapPointsYProperty] = js.native
+  var scrollSnapPointsY: js.UndefOr[ScrollSnapPointsYProperty] = js.undefined
   /**
     * The **`scroll-snap-type-x`** CSS property defines how strictly snap points are enforced on the horizontal axis of the scroll container in case there is one.
     *
@@ -743,7 +742,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var scrollSnapTypeX: js.UndefOr[ScrollSnapTypeXProperty] = js.native
+  var scrollSnapTypeX: js.UndefOr[ScrollSnapTypeXProperty] = js.undefined
   /**
     * The **`scroll-snap-type-y`** CSS property defines how strictly snap points are enforced on the vertical axis of the scroll container in case there is one.
     *
@@ -751,7 +750,7 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var scrollSnapTypeY: js.UndefOr[ScrollSnapTypeYProperty] = js.native
+  var scrollSnapTypeY: js.UndefOr[ScrollSnapTypeYProperty] = js.undefined
   /**
     * The **`text-combine-upright`** CSS property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
     *
@@ -759,1174 +758,207 @@ trait ObsoleteProperties[TLength] extends js.Object {
     *
     * @deprecated
     */
-  var textCombineHorizontal: js.UndefOr[TextCombineUprightProperty] = js.native
+  var textCombineHorizontal: js.UndefOr[TextCombineUprightProperty] = js.undefined
 }
 
 object ObsoleteProperties {
   @scala.inline
-  def apply[TLength](): ObsoleteProperties[TLength] = {
+  def apply[TLength](
+    KhtmlBoxAlign: BoxAlignProperty = null,
+    KhtmlBoxDirection: BoxDirectionProperty = null,
+    KhtmlBoxFlex: GlobalsNumber = null,
+    KhtmlBoxFlexGroup: GlobalsNumber = null,
+    KhtmlBoxLines: BoxLinesProperty = null,
+    KhtmlBoxOrdinalGroup: GlobalsNumber = null,
+    KhtmlBoxOrient: BoxOrientProperty = null,
+    KhtmlBoxPack: BoxPackProperty = null,
+    KhtmlLineBreak: LineBreakProperty = null,
+    KhtmlOpacity: GlobalsNumber = null,
+    KhtmlUserSelect: UserSelectProperty = null,
+    MozBackgroundClip: BackgroundClipProperty = null,
+    MozBackgroundInlinePolicy: BoxDecorationBreakProperty = null,
+    MozBackgroundOrigin: BackgroundOriginProperty = null,
+    MozBackgroundSize: BackgroundSizeProperty[TLength] = null,
+    MozBinding: MozBindingProperty = null,
+    MozBorderRadius: BorderRadiusProperty[TLength] = null,
+    MozBorderRadiusBottomleft: BorderBottomLeftRadiusProperty[TLength] = null,
+    MozBorderRadiusBottomright: BorderBottomRightRadiusProperty[TLength] = null,
+    MozBorderRadiusTopleft: BorderTopLeftRadiusProperty[TLength] = null,
+    MozBorderRadiusTopright: BorderTopRightRadiusProperty[TLength] = null,
+    MozBoxAlign: BoxAlignProperty = null,
+    MozBoxDirection: BoxDirectionProperty = null,
+    MozBoxFlex: GlobalsNumber = null,
+    MozBoxOrdinalGroup: GlobalsNumber = null,
+    MozBoxOrient: BoxOrientProperty = null,
+    MozBoxPack: BoxPackProperty = null,
+    MozBoxShadow: BoxShadowProperty = null,
+    MozOpacity: GlobalsNumber = null,
+    MozOutline: OutlineProperty[TLength] = null,
+    MozOutlineColor: OutlineColorProperty = null,
+    MozOutlineRadius: MozOutlineRadiusProperty[TLength] = null,
+    MozOutlineStyle: OutlineStyleProperty = null,
+    MozOutlineWidth: OutlineWidthProperty[TLength] = null,
+    MozTextAlignLast: TextAlignLastProperty = null,
+    MozTextBlink: MozTextBlinkProperty = null,
+    MozTextDecorationColor: TextDecorationColorProperty = null,
+    MozTextDecorationLine: TextDecorationLineProperty = null,
+    MozTextDecorationStyle: TextDecorationStyleProperty = null,
+    MozUserInput: MozUserInputProperty = null,
+    MozWindowShadow: MozWindowShadowProperty = null,
+    OAnimation: AnimationProperty = null,
+    OAnimationDelay: GlobalsString = null,
+    OAnimationDirection: AnimationDirectionProperty = null,
+    OAnimationDuration: GlobalsString = null,
+    OAnimationFillMode: AnimationFillModeProperty = null,
+    OAnimationIterationCount: AnimationIterationCountProperty = null,
+    OAnimationName: AnimationNameProperty = null,
+    OAnimationPlayState: AnimationPlayStateProperty = null,
+    OAnimationTimingFunction: AnimationTimingFunctionProperty = null,
+    OBackgroundSize: BackgroundSizeProperty[TLength] = null,
+    OBorderImage: BorderImageProperty = null,
+    OTransform: TransformProperty = null,
+    OTransition: TransitionProperty = null,
+    OTransitionDelay: GlobalsString = null,
+    OTransitionDuration: GlobalsString = null,
+    OTransitionProperty: TransitionPropertyProperty = null,
+    OTransitionTimingFunction: TransitionTimingFunctionProperty = null,
+    WebkitBoxAlign: BoxAlignProperty = null,
+    WebkitBoxDirection: BoxDirectionProperty = null,
+    WebkitBoxFlex: GlobalsNumber = null,
+    WebkitBoxFlexGroup: GlobalsNumber = null,
+    WebkitBoxLines: BoxLinesProperty = null,
+    WebkitBoxOrdinalGroup: GlobalsNumber = null,
+    WebkitBoxOrient: BoxOrientProperty = null,
+    WebkitBoxPack: BoxPackProperty = null,
+    WebkitScrollSnapPointsX: ScrollSnapPointsXProperty = null,
+    WebkitScrollSnapPointsY: ScrollSnapPointsYProperty = null,
+    boxAlign: BoxAlignProperty = null,
+    boxDirection: BoxDirectionProperty = null,
+    boxFlex: GlobalsNumber = null,
+    boxFlexGroup: GlobalsNumber = null,
+    boxLines: BoxLinesProperty = null,
+    boxOrdinalGroup: GlobalsNumber = null,
+    boxOrient: BoxOrientProperty = null,
+    boxPack: BoxPackProperty = null,
+    clip: ClipProperty = null,
+    fontVariantAlternates: FontVariantAlternatesProperty = null,
+    gridColumnGap: GridColumnGapProperty[TLength] = null,
+    gridGap: GridGapProperty[TLength] = null,
+    gridRowGap: GridRowGapProperty[TLength] = null,
+    imeMode: ImeModeProperty = null,
+    msImeMode: ImeModeProperty = null,
+    offsetBlock: InsetBlockProperty[TLength] = null,
+    offsetBlockEnd: InsetBlockEndProperty[TLength] = null,
+    offsetBlockStart: InsetBlockStartProperty[TLength] = null,
+    offsetInline: InsetInlineProperty[TLength] = null,
+    offsetInlineEnd: InsetInlineEndProperty[TLength] = null,
+    offsetInlineStart: InsetInlineStartProperty[TLength] = null,
+    scrollSnapCoordinate: ScrollSnapCoordinateProperty[TLength] = null,
+    scrollSnapDestination: ScrollSnapDestinationProperty[TLength] = null,
+    scrollSnapPointsX: ScrollSnapPointsXProperty = null,
+    scrollSnapPointsY: ScrollSnapPointsYProperty = null,
+    scrollSnapTypeX: ScrollSnapTypeXProperty = null,
+    scrollSnapTypeY: ScrollSnapTypeYProperty = null,
+    textCombineHorizontal: TextCombineUprightProperty = null
+  ): ObsoleteProperties[TLength] = {
     val __obj = js.Dynamic.literal()
+    if (KhtmlBoxAlign != null) __obj.updateDynamic("KhtmlBoxAlign")(KhtmlBoxAlign.asInstanceOf[js.Any])
+    if (KhtmlBoxDirection != null) __obj.updateDynamic("KhtmlBoxDirection")(KhtmlBoxDirection.asInstanceOf[js.Any])
+    if (KhtmlBoxFlex != null) __obj.updateDynamic("KhtmlBoxFlex")(KhtmlBoxFlex.asInstanceOf[js.Any])
+    if (KhtmlBoxFlexGroup != null) __obj.updateDynamic("KhtmlBoxFlexGroup")(KhtmlBoxFlexGroup.asInstanceOf[js.Any])
+    if (KhtmlBoxLines != null) __obj.updateDynamic("KhtmlBoxLines")(KhtmlBoxLines.asInstanceOf[js.Any])
+    if (KhtmlBoxOrdinalGroup != null) __obj.updateDynamic("KhtmlBoxOrdinalGroup")(KhtmlBoxOrdinalGroup.asInstanceOf[js.Any])
+    if (KhtmlBoxOrient != null) __obj.updateDynamic("KhtmlBoxOrient")(KhtmlBoxOrient.asInstanceOf[js.Any])
+    if (KhtmlBoxPack != null) __obj.updateDynamic("KhtmlBoxPack")(KhtmlBoxPack.asInstanceOf[js.Any])
+    if (KhtmlLineBreak != null) __obj.updateDynamic("KhtmlLineBreak")(KhtmlLineBreak.asInstanceOf[js.Any])
+    if (KhtmlOpacity != null) __obj.updateDynamic("KhtmlOpacity")(KhtmlOpacity.asInstanceOf[js.Any])
+    if (KhtmlUserSelect != null) __obj.updateDynamic("KhtmlUserSelect")(KhtmlUserSelect.asInstanceOf[js.Any])
+    if (MozBackgroundClip != null) __obj.updateDynamic("MozBackgroundClip")(MozBackgroundClip.asInstanceOf[js.Any])
+    if (MozBackgroundInlinePolicy != null) __obj.updateDynamic("MozBackgroundInlinePolicy")(MozBackgroundInlinePolicy.asInstanceOf[js.Any])
+    if (MozBackgroundOrigin != null) __obj.updateDynamic("MozBackgroundOrigin")(MozBackgroundOrigin.asInstanceOf[js.Any])
+    if (MozBackgroundSize != null) __obj.updateDynamic("MozBackgroundSize")(MozBackgroundSize.asInstanceOf[js.Any])
+    if (MozBinding != null) __obj.updateDynamic("MozBinding")(MozBinding.asInstanceOf[js.Any])
+    if (MozBorderRadius != null) __obj.updateDynamic("MozBorderRadius")(MozBorderRadius.asInstanceOf[js.Any])
+    if (MozBorderRadiusBottomleft != null) __obj.updateDynamic("MozBorderRadiusBottomleft")(MozBorderRadiusBottomleft.asInstanceOf[js.Any])
+    if (MozBorderRadiusBottomright != null) __obj.updateDynamic("MozBorderRadiusBottomright")(MozBorderRadiusBottomright.asInstanceOf[js.Any])
+    if (MozBorderRadiusTopleft != null) __obj.updateDynamic("MozBorderRadiusTopleft")(MozBorderRadiusTopleft.asInstanceOf[js.Any])
+    if (MozBorderRadiusTopright != null) __obj.updateDynamic("MozBorderRadiusTopright")(MozBorderRadiusTopright.asInstanceOf[js.Any])
+    if (MozBoxAlign != null) __obj.updateDynamic("MozBoxAlign")(MozBoxAlign.asInstanceOf[js.Any])
+    if (MozBoxDirection != null) __obj.updateDynamic("MozBoxDirection")(MozBoxDirection.asInstanceOf[js.Any])
+    if (MozBoxFlex != null) __obj.updateDynamic("MozBoxFlex")(MozBoxFlex.asInstanceOf[js.Any])
+    if (MozBoxOrdinalGroup != null) __obj.updateDynamic("MozBoxOrdinalGroup")(MozBoxOrdinalGroup.asInstanceOf[js.Any])
+    if (MozBoxOrient != null) __obj.updateDynamic("MozBoxOrient")(MozBoxOrient.asInstanceOf[js.Any])
+    if (MozBoxPack != null) __obj.updateDynamic("MozBoxPack")(MozBoxPack.asInstanceOf[js.Any])
+    if (MozBoxShadow != null) __obj.updateDynamic("MozBoxShadow")(MozBoxShadow.asInstanceOf[js.Any])
+    if (MozOpacity != null) __obj.updateDynamic("MozOpacity")(MozOpacity.asInstanceOf[js.Any])
+    if (MozOutline != null) __obj.updateDynamic("MozOutline")(MozOutline.asInstanceOf[js.Any])
+    if (MozOutlineColor != null) __obj.updateDynamic("MozOutlineColor")(MozOutlineColor.asInstanceOf[js.Any])
+    if (MozOutlineRadius != null) __obj.updateDynamic("MozOutlineRadius")(MozOutlineRadius.asInstanceOf[js.Any])
+    if (MozOutlineStyle != null) __obj.updateDynamic("MozOutlineStyle")(MozOutlineStyle.asInstanceOf[js.Any])
+    if (MozOutlineWidth != null) __obj.updateDynamic("MozOutlineWidth")(MozOutlineWidth.asInstanceOf[js.Any])
+    if (MozTextAlignLast != null) __obj.updateDynamic("MozTextAlignLast")(MozTextAlignLast.asInstanceOf[js.Any])
+    if (MozTextBlink != null) __obj.updateDynamic("MozTextBlink")(MozTextBlink.asInstanceOf[js.Any])
+    if (MozTextDecorationColor != null) __obj.updateDynamic("MozTextDecorationColor")(MozTextDecorationColor.asInstanceOf[js.Any])
+    if (MozTextDecorationLine != null) __obj.updateDynamic("MozTextDecorationLine")(MozTextDecorationLine.asInstanceOf[js.Any])
+    if (MozTextDecorationStyle != null) __obj.updateDynamic("MozTextDecorationStyle")(MozTextDecorationStyle.asInstanceOf[js.Any])
+    if (MozUserInput != null) __obj.updateDynamic("MozUserInput")(MozUserInput.asInstanceOf[js.Any])
+    if (MozWindowShadow != null) __obj.updateDynamic("MozWindowShadow")(MozWindowShadow.asInstanceOf[js.Any])
+    if (OAnimation != null) __obj.updateDynamic("OAnimation")(OAnimation.asInstanceOf[js.Any])
+    if (OAnimationDelay != null) __obj.updateDynamic("OAnimationDelay")(OAnimationDelay.asInstanceOf[js.Any])
+    if (OAnimationDirection != null) __obj.updateDynamic("OAnimationDirection")(OAnimationDirection.asInstanceOf[js.Any])
+    if (OAnimationDuration != null) __obj.updateDynamic("OAnimationDuration")(OAnimationDuration.asInstanceOf[js.Any])
+    if (OAnimationFillMode != null) __obj.updateDynamic("OAnimationFillMode")(OAnimationFillMode.asInstanceOf[js.Any])
+    if (OAnimationIterationCount != null) __obj.updateDynamic("OAnimationIterationCount")(OAnimationIterationCount.asInstanceOf[js.Any])
+    if (OAnimationName != null) __obj.updateDynamic("OAnimationName")(OAnimationName.asInstanceOf[js.Any])
+    if (OAnimationPlayState != null) __obj.updateDynamic("OAnimationPlayState")(OAnimationPlayState.asInstanceOf[js.Any])
+    if (OAnimationTimingFunction != null) __obj.updateDynamic("OAnimationTimingFunction")(OAnimationTimingFunction.asInstanceOf[js.Any])
+    if (OBackgroundSize != null) __obj.updateDynamic("OBackgroundSize")(OBackgroundSize.asInstanceOf[js.Any])
+    if (OBorderImage != null) __obj.updateDynamic("OBorderImage")(OBorderImage.asInstanceOf[js.Any])
+    if (OTransform != null) __obj.updateDynamic("OTransform")(OTransform.asInstanceOf[js.Any])
+    if (OTransition != null) __obj.updateDynamic("OTransition")(OTransition.asInstanceOf[js.Any])
+    if (OTransitionDelay != null) __obj.updateDynamic("OTransitionDelay")(OTransitionDelay.asInstanceOf[js.Any])
+    if (OTransitionDuration != null) __obj.updateDynamic("OTransitionDuration")(OTransitionDuration.asInstanceOf[js.Any])
+    if (OTransitionProperty != null) __obj.updateDynamic("OTransitionProperty")(OTransitionProperty.asInstanceOf[js.Any])
+    if (OTransitionTimingFunction != null) __obj.updateDynamic("OTransitionTimingFunction")(OTransitionTimingFunction.asInstanceOf[js.Any])
+    if (WebkitBoxAlign != null) __obj.updateDynamic("WebkitBoxAlign")(WebkitBoxAlign.asInstanceOf[js.Any])
+    if (WebkitBoxDirection != null) __obj.updateDynamic("WebkitBoxDirection")(WebkitBoxDirection.asInstanceOf[js.Any])
+    if (WebkitBoxFlex != null) __obj.updateDynamic("WebkitBoxFlex")(WebkitBoxFlex.asInstanceOf[js.Any])
+    if (WebkitBoxFlexGroup != null) __obj.updateDynamic("WebkitBoxFlexGroup")(WebkitBoxFlexGroup.asInstanceOf[js.Any])
+    if (WebkitBoxLines != null) __obj.updateDynamic("WebkitBoxLines")(WebkitBoxLines.asInstanceOf[js.Any])
+    if (WebkitBoxOrdinalGroup != null) __obj.updateDynamic("WebkitBoxOrdinalGroup")(WebkitBoxOrdinalGroup.asInstanceOf[js.Any])
+    if (WebkitBoxOrient != null) __obj.updateDynamic("WebkitBoxOrient")(WebkitBoxOrient.asInstanceOf[js.Any])
+    if (WebkitBoxPack != null) __obj.updateDynamic("WebkitBoxPack")(WebkitBoxPack.asInstanceOf[js.Any])
+    if (WebkitScrollSnapPointsX != null) __obj.updateDynamic("WebkitScrollSnapPointsX")(WebkitScrollSnapPointsX.asInstanceOf[js.Any])
+    if (WebkitScrollSnapPointsY != null) __obj.updateDynamic("WebkitScrollSnapPointsY")(WebkitScrollSnapPointsY.asInstanceOf[js.Any])
+    if (boxAlign != null) __obj.updateDynamic("boxAlign")(boxAlign.asInstanceOf[js.Any])
+    if (boxDirection != null) __obj.updateDynamic("boxDirection")(boxDirection.asInstanceOf[js.Any])
+    if (boxFlex != null) __obj.updateDynamic("boxFlex")(boxFlex.asInstanceOf[js.Any])
+    if (boxFlexGroup != null) __obj.updateDynamic("boxFlexGroup")(boxFlexGroup.asInstanceOf[js.Any])
+    if (boxLines != null) __obj.updateDynamic("boxLines")(boxLines.asInstanceOf[js.Any])
+    if (boxOrdinalGroup != null) __obj.updateDynamic("boxOrdinalGroup")(boxOrdinalGroup.asInstanceOf[js.Any])
+    if (boxOrient != null) __obj.updateDynamic("boxOrient")(boxOrient.asInstanceOf[js.Any])
+    if (boxPack != null) __obj.updateDynamic("boxPack")(boxPack.asInstanceOf[js.Any])
+    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+    if (fontVariantAlternates != null) __obj.updateDynamic("fontVariantAlternates")(fontVariantAlternates.asInstanceOf[js.Any])
+    if (gridColumnGap != null) __obj.updateDynamic("gridColumnGap")(gridColumnGap.asInstanceOf[js.Any])
+    if (gridGap != null) __obj.updateDynamic("gridGap")(gridGap.asInstanceOf[js.Any])
+    if (gridRowGap != null) __obj.updateDynamic("gridRowGap")(gridRowGap.asInstanceOf[js.Any])
+    if (imeMode != null) __obj.updateDynamic("imeMode")(imeMode.asInstanceOf[js.Any])
+    if (msImeMode != null) __obj.updateDynamic("msImeMode")(msImeMode.asInstanceOf[js.Any])
+    if (offsetBlock != null) __obj.updateDynamic("offsetBlock")(offsetBlock.asInstanceOf[js.Any])
+    if (offsetBlockEnd != null) __obj.updateDynamic("offsetBlockEnd")(offsetBlockEnd.asInstanceOf[js.Any])
+    if (offsetBlockStart != null) __obj.updateDynamic("offsetBlockStart")(offsetBlockStart.asInstanceOf[js.Any])
+    if (offsetInline != null) __obj.updateDynamic("offsetInline")(offsetInline.asInstanceOf[js.Any])
+    if (offsetInlineEnd != null) __obj.updateDynamic("offsetInlineEnd")(offsetInlineEnd.asInstanceOf[js.Any])
+    if (offsetInlineStart != null) __obj.updateDynamic("offsetInlineStart")(offsetInlineStart.asInstanceOf[js.Any])
+    if (scrollSnapCoordinate != null) __obj.updateDynamic("scrollSnapCoordinate")(scrollSnapCoordinate.asInstanceOf[js.Any])
+    if (scrollSnapDestination != null) __obj.updateDynamic("scrollSnapDestination")(scrollSnapDestination.asInstanceOf[js.Any])
+    if (scrollSnapPointsX != null) __obj.updateDynamic("scrollSnapPointsX")(scrollSnapPointsX.asInstanceOf[js.Any])
+    if (scrollSnapPointsY != null) __obj.updateDynamic("scrollSnapPointsY")(scrollSnapPointsY.asInstanceOf[js.Any])
+    if (scrollSnapTypeX != null) __obj.updateDynamic("scrollSnapTypeX")(scrollSnapTypeX.asInstanceOf[js.Any])
+    if (scrollSnapTypeY != null) __obj.updateDynamic("scrollSnapTypeY")(scrollSnapTypeY.asInstanceOf[js.Any])
+    if (textCombineHorizontal != null) __obj.updateDynamic("textCombineHorizontal")(textCombineHorizontal.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObsoleteProperties[TLength]]
   }
-  @scala.inline
-  implicit class ObsoletePropertiesOps[Self[tlength] <: ObsoleteProperties[tlength], TLength] (val x: Self[TLength]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TLength] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TLength]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TLength] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TLength] with Other]
-    @scala.inline
-    def withKhtmlBoxAlign(value: BoxAlignProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxAlign: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxDirection(value: BoxDirectionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxDirection: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxFlex(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxFlex: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxFlexGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlexGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxFlexGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxFlexGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxLines(value: BoxLinesProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxLines: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxOrdinalGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrdinalGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxOrdinalGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrdinalGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxOrient(value: BoxOrientProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxOrient: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxOrient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlBoxPack(value: BoxPackProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxPack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlBoxPack: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlBoxPack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlLineBreak(value: LineBreakProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlLineBreak")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlLineBreak: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlLineBreak")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlOpacity(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlOpacity: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKhtmlUserSelect(value: UserSelectProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlUserSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKhtmlUserSelect: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KhtmlUserSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBackgroundClip(value: BackgroundClipProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundClip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBackgroundClip: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundClip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBackgroundInlinePolicy(value: BoxDecorationBreakProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundInlinePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBackgroundInlinePolicy: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundInlinePolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBackgroundOrigin(value: BackgroundOriginProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBackgroundOrigin: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBackgroundSize(value: BackgroundSizeProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBackgroundSize: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBackgroundSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBinding(value: MozBindingProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBinding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBinding: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBinding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBorderRadius(value: BorderRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBorderRadius: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBorderRadiusBottomleft(value: BorderBottomLeftRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomleft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBorderRadiusBottomleft: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomleft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBorderRadiusBottomright(value: BorderBottomRightRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBorderRadiusBottomright: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusBottomright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBorderRadiusTopleft(value: BorderTopLeftRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopleft")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBorderRadiusTopleft: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopleft")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBorderRadiusTopright(value: BorderTopRightRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopright")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBorderRadiusTopright: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBorderRadiusTopright")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxAlign(value: BoxAlignProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxAlign: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxDirection(value: BoxDirectionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxDirection: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxFlex(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxFlex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxFlex: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxFlex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxOrdinalGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrdinalGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxOrdinalGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrdinalGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxOrient(value: BoxOrientProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxOrient: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxOrient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxPack(value: BoxPackProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxPack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxPack: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxPack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozBoxShadow(value: BoxShadowProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozBoxShadow: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozBoxShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozOpacity(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozOpacity: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOpacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozOutline(value: OutlineProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozOutline: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozOutlineColor(value: OutlineColorProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozOutlineColor: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozOutlineRadius(value: MozOutlineRadiusProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozOutlineRadius: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozOutlineStyle(value: OutlineStyleProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozOutlineStyle: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozOutlineWidth(value: OutlineWidthProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozOutlineWidth: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozOutlineWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozTextAlignLast(value: TextAlignLastProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextAlignLast")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozTextAlignLast: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextAlignLast")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozTextBlink(value: MozTextBlinkProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextBlink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozTextBlink: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextBlink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozTextDecorationColor(value: TextDecorationColorProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozTextDecorationColor: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozTextDecorationLine(value: TextDecorationLineProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozTextDecorationLine: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozTextDecorationStyle(value: TextDecorationStyleProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozTextDecorationStyle: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozTextDecorationStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozUserInput(value: MozUserInputProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozUserInput: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozUserInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMozWindowShadow(value: MozWindowShadowProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowShadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMozWindowShadow: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MozWindowShadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimation(value: AnimationProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimation: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationDelay(value: GlobalsString): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationDelay: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationDirection(value: AnimationDirectionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationDirection: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationDuration(value: GlobalsString): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationDuration: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationFillMode(value: AnimationFillModeProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationFillMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationFillMode: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationFillMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationIterationCount(value: AnimationIterationCountProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationIterationCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationIterationCount: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationIterationCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationName(value: AnimationNameProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationName: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationPlayState(value: AnimationPlayStateProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationPlayState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationPlayState: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationPlayState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOAnimationTimingFunction(value: AnimationTimingFunctionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationTimingFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOAnimationTimingFunction: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OAnimationTimingFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOBackgroundSize(value: BackgroundSizeProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OBackgroundSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOBackgroundSize: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OBackgroundSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOBorderImage(value: BorderImageProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OBorderImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOBorderImage: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OBorderImage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOTransform(value: TransformProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOTransform: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOTransition(value: TransitionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOTransition: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOTransitionDelay(value: GlobalsString): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOTransitionDelay: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOTransitionDuration(value: GlobalsString): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOTransitionDuration: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOTransitionProperty(value: TransitionPropertyProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionProperty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOTransitionProperty: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionProperty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOTransitionTimingFunction(value: TransitionTimingFunctionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionTimingFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOTransitionTimingFunction: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OTransitionTimingFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxAlign(value: BoxAlignProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxAlign: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxDirection(value: BoxDirectionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxDirection: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxFlex(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxFlex: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxFlexGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlexGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxFlexGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxFlexGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxLines(value: BoxLinesProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxLines: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxOrdinalGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrdinalGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxOrdinalGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrdinalGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxOrient(value: BoxOrientProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxOrient: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxOrient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitBoxPack(value: BoxPackProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxPack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitBoxPack: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitBoxPack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitScrollSnapPointsX(value: ScrollSnapPointsXProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitScrollSnapPointsX: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebkitScrollSnapPointsY(value: ScrollSnapPointsYProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebkitScrollSnapPointsY: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebkitScrollSnapPointsY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxAlign(value: BoxAlignProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxAlign: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxDirection(value: BoxDirectionProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxDirection: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxFlex(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxFlex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxFlex: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxFlex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxFlexGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxFlexGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxFlexGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxFlexGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxLines(value: BoxLinesProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxLines: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxOrdinalGroup(value: GlobalsNumber): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxOrdinalGroup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxOrdinalGroup: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxOrdinalGroup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxOrient(value: BoxOrientProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxOrient")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxOrient: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxOrient")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxPack(value: BoxPackProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxPack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxPack: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxPack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClip(value: ClipProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClip: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontVariantAlternates(value: FontVariantAlternatesProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantAlternates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontVariantAlternates: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantAlternates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridColumnGap(value: GridColumnGapProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumnGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridColumnGap: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumnGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridGap(value: GridGapProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridGap: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridRowGap(value: GridRowGapProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRowGap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridRowGap: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRowGap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImeMode(value: ImeModeProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImeMode: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imeMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsImeMode(value: ImeModeProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msImeMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsImeMode: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msImeMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetBlock(value: InsetBlockProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBlock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetBlock: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBlock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetBlockEnd(value: InsetBlockEndProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBlockEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetBlockEnd: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBlockEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetBlockStart(value: InsetBlockStartProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBlockStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetBlockStart: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBlockStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetInline(value: InsetInlineProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetInline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetInline: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetInline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetInlineEnd(value: InsetInlineEndProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetInlineEnd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetInlineEnd: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetInlineEnd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetInlineStart(value: InsetInlineStartProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetInlineStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetInlineStart: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetInlineStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSnapCoordinate(value: ScrollSnapCoordinateProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapCoordinate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSnapCoordinate: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapCoordinate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSnapDestination(value: ScrollSnapDestinationProperty[TLength]): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSnapDestination: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSnapPointsX(value: ScrollSnapPointsXProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapPointsX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSnapPointsX: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapPointsX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSnapPointsY(value: ScrollSnapPointsYProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapPointsY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSnapPointsY: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapPointsY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSnapTypeX(value: ScrollSnapTypeXProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapTypeX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSnapTypeX: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapTypeX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollSnapTypeY(value: ScrollSnapTypeYProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapTypeY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollSnapTypeY: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollSnapTypeY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextCombineHorizontal(value: TextCombineUprightProperty): Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textCombineHorizontal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextCombineHorizontal: Self[TLength] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textCombineHorizontal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,7 @@
 package typingsSlinky.rcFieldForm.interfaceMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +10,70 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.rcFieldForm.interfaceMod.BaseRule
   - typingsSlinky.rcFieldForm.interfaceMod.ArrayRule
 */
-trait RuleObject extends Rule
+trait RuleObject extends js.Object
 
 object RuleObject {
   @scala.inline
-  implicit def apply(value: ArrayRule): RuleObject = value.asInstanceOf[RuleObject]
+  def BaseRule(
+    enum: js.Array[StoreValue] = null,
+    len: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    message: String | ReactElement = null,
+    min: js.UndefOr[Double] = js.undefined,
+    pattern: js.RegExp = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    transform: /* value */ StoreValue => StoreValue = null,
+    `type`: RuleType = null,
+    validateTrigger: String | js.Array[String] = null,
+    validator: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => js.Promise[Unit] | Unit = null,
+    whitespace: js.UndefOr[Boolean] = js.undefined
+  ): RuleObject = {
+    val __obj = js.Dynamic.literal()
+    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
+    if (!js.isUndefined(len)) __obj.updateDynamic("len")(len.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validateTrigger != null) __obj.updateDynamic("validateTrigger")(validateTrigger.asInstanceOf[js.Any])
+    if (validator != null) __obj.updateDynamic("validator")(js.Any.fromFunction3(validator))
+    if (!js.isUndefined(whitespace)) __obj.updateDynamic("whitespace")(whitespace.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RuleObject]
+  }
   @scala.inline
-  implicit def apply(value: BaseRule): RuleObject = value.asInstanceOf[RuleObject]
+  def ArrayRule(
+    `type`: array,
+    defaultField: RuleObject = null,
+    enum: js.Array[StoreValue] = null,
+    len: js.UndefOr[Double] = js.undefined,
+    max: js.UndefOr[Double] = js.undefined,
+    message: String | ReactElement = null,
+    min: js.UndefOr[Double] = js.undefined,
+    pattern: js.RegExp = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    transform: /* value */ StoreValue => StoreValue = null,
+    validateTrigger: String | js.Array[String] = null,
+    validator: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => js.Promise[Unit] | Unit = null,
+    whitespace: js.UndefOr[Boolean] = js.undefined
+  ): RuleObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (defaultField != null) __obj.updateDynamic("defaultField")(defaultField.asInstanceOf[js.Any])
+    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
+    if (!js.isUndefined(len)) __obj.updateDynamic("len")(len.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(max)) __obj.updateDynamic("max")(max.get.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (!js.isUndefined(min)) __obj.updateDynamic("min")(min.get.asInstanceOf[js.Any])
+    if (pattern != null) __obj.updateDynamic("pattern")(pattern.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction1(transform))
+    if (validateTrigger != null) __obj.updateDynamic("validateTrigger")(validateTrigger.asInstanceOf[js.Any])
+    if (validator != null) __obj.updateDynamic("validator")(js.Any.fromFunction3(validator))
+    if (!js.isUndefined(whitespace)) __obj.updateDynamic("whitespace")(whitespace.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RuleObject]
+  }
 }
 

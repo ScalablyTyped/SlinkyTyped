@@ -29,5 +29,9 @@ class ^ protected () extends Error {
   def this(pluginName: String, options: PluginErrorOpts2) = this()
   def this(pluginName: String, message: String, options: PluginErrorOpts) = this()
   def this(pluginName: String, message: js.Error, options: PluginErrorOpts) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

@@ -4,30 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestOptions extends js.Object {
   /**
     * Additional headers sent along with each upload request
     */
-  var customHeaders: js.UndefOr[js.Any] = js.native
+  var customHeaders: js.UndefOr[js.Any] = js.undefined
   /**
     * The endpoint to send upload requests to
     *
     * @default `'/server/upload'`
     */
-  var endpoint: js.UndefOr[String] = js.native
+  var endpoint: js.UndefOr[String] = js.undefined
   /**
     * The name of the parameter passed if the original filename has been edited or a `Blob` is being sent
     *
     * @default `'qqfilename'`
     */
-  var filenameParam: js.UndefOr[String] = js.native
+  var filenameParam: js.UndefOr[String] = js.undefined
   /**
     * Force all uploads to use multipart encoding
     *
     * @default `true`
     */
-  var forceMultipart: js.UndefOr[Boolean] = js.native
+  var forceMultipart: js.UndefOr[Boolean] = js.undefined
   /**
     * The attribute of the input element which will contain the file name.
     *
@@ -35,23 +34,23 @@ trait RequestOptions extends js.Object {
     *
     * @default `'qqfile'`
     */
-  var inputName: js.UndefOr[String] = js.native
+  var inputName: js.UndefOr[String] = js.undefined
   /**
     * Specify a method to use when sending files to a traditional endpoint. This option is ignored in older browsers (such as IE 9 and older)
     *
     * @default `'POST'`
     */
-  var method: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.undefined
   /**
     * If set to true, any Fine Uploader created parameters (qq*) will not be sent with the upload request
     * 
     * @default `false`
     */
-  var omitDefaultParams: js.UndefOr[Boolean] = js.native
+  var omitDefaultParams: js.UndefOr[Boolean] = js.undefined
   /**
     * The parameters that shall be sent with each upload request
     */
-  var params: js.UndefOr[js.Any] = js.native
+  var params: js.UndefOr[js.Any] = js.undefined
   /**
     * Enable or disable sending parameters in the request body.
     *
@@ -60,7 +59,7 @@ trait RequestOptions extends js.Object {
     *
     * @default `true`
     */
-  var paramsInBody: js.UndefOr[Boolean] = js.native
+  var paramsInBody: js.UndefOr[Boolean] = js.undefined
   /**
     * If set to true, each upload response MUST contain a JSON message-body with `{success: true}` in order to be considered a success.
     * 
@@ -68,178 +67,51 @@ trait RequestOptions extends js.Object {
     * 
     * @default `true`
     */
-  var requireSuccessJson: js.UndefOr[Boolean] = js.native
+  var requireSuccessJson: js.UndefOr[Boolean] = js.undefined
   /**
     * The name of the parameter passed that specifies the total file size in bytes
     *
     * @default `'qqtotalfilesize'`
     */
-  var totalFileSizeName: js.UndefOr[String] = js.native
+  var totalFileSizeName: js.UndefOr[String] = js.undefined
   /**
     * The name of the parameter the uniquely identifies each associated item. The value is a Level 4 UUID
     *
     * @default `'qquuid'`
     */
-  var uuidName: js.UndefOr[String] = js.native
+  var uuidName: js.UndefOr[String] = js.undefined
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(): RequestOptions = {
+  def apply(
+    customHeaders: js.Any = null,
+    endpoint: String = null,
+    filenameParam: String = null,
+    forceMultipart: js.UndefOr[Boolean] = js.undefined,
+    inputName: String = null,
+    method: String = null,
+    omitDefaultParams: js.UndefOr[Boolean] = js.undefined,
+    params: js.Any = null,
+    paramsInBody: js.UndefOr[Boolean] = js.undefined,
+    requireSuccessJson: js.UndefOr[Boolean] = js.undefined,
+    totalFileSizeName: String = null,
+    uuidName: String = null
+  ): RequestOptions = {
     val __obj = js.Dynamic.literal()
+    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
+    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
+    if (filenameParam != null) __obj.updateDynamic("filenameParam")(filenameParam.asInstanceOf[js.Any])
+    if (!js.isUndefined(forceMultipart)) __obj.updateDynamic("forceMultipart")(forceMultipart.get.asInstanceOf[js.Any])
+    if (inputName != null) __obj.updateDynamic("inputName")(inputName.asInstanceOf[js.Any])
+    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (!js.isUndefined(omitDefaultParams)) __obj.updateDynamic("omitDefaultParams")(omitDefaultParams.get.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    if (!js.isUndefined(paramsInBody)) __obj.updateDynamic("paramsInBody")(paramsInBody.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requireSuccessJson)) __obj.updateDynamic("requireSuccessJson")(requireSuccessJson.get.asInstanceOf[js.Any])
+    if (totalFileSizeName != null) __obj.updateDynamic("totalFileSizeName")(totalFileSizeName.asInstanceOf[js.Any])
+    if (uuidName != null) __obj.updateDynamic("uuidName")(uuidName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
-  @scala.inline
-  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomHeaders(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilenameParam(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filenameParam")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilenameParam: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filenameParam")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForceMultipart(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceMultipart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceMultipart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("forceMultipart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOmitDefaultParams(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitDefaultParams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOmitDefaultParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("omitDefaultParams")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParams(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParamsInBody(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramsInBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParamsInBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paramsInBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequireSuccessJson(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSuccessJson")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequireSuccessJson: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requireSuccessJson")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalFileSizeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFileSizeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalFileSizeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFileSizeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUuidName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuidName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUuidName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uuidName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

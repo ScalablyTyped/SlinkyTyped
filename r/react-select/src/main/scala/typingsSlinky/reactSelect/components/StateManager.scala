@@ -15,20 +15,33 @@ object StateManager {
   
   def withProps[OptionType <: OptionTypeBase, T <: default[OptionType]](
     p: StateProps[Props[OptionType]] with typingsSlinky.reactSelect.stateManagerMod.Props[OptionType] with Props[OptionType]
-  ): `SharedBuilder_<intersection>_1462585424`[
+  ): SharedBuilder_StatePropsPropsProps_1462585424[
     typingsSlinky.reactSelect.stateManagerMod.StateManager[js.Any, js.Any], 
     OptionType, 
     T
-  ] = new `SharedBuilder_<intersection>_1462585424`[
+  ] = new SharedBuilder_StatePropsPropsProps_1462585424[
     typingsSlinky.reactSelect.stateManagerMod.StateManager[js.Any, js.Any], 
     OptionType, 
     T
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[OptionType <: OptionTypeBase, T <: default[OptionType]](companion: StateManager.type): `SharedBuilder_<intersection>_1462585424`[
+  @scala.inline
+  def apply[OptionType <: OptionTypeBase, T <: default[OptionType]](): SharedBuilder_StatePropsPropsProps_1462585424[
     typingsSlinky.reactSelect.stateManagerMod.StateManager[js.Any, js.Any], 
     OptionType, 
     T
-  ] = new `SharedBuilder_<intersection>_1462585424`[
+  ] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_StatePropsPropsProps_1462585424[
+      typingsSlinky.reactSelect.stateManagerMod.StateManager[js.Any, js.Any], 
+      OptionType, 
+      T
+    ](js.Array(this.component, __props.asInstanceOf[StateProps[Props[OptionType]] with typingsSlinky.reactSelect.stateManagerMod.Props[OptionType] with Props[OptionType]]))
+  }
+  implicit def make[OptionType <: OptionTypeBase, T <: default[OptionType]](companion: StateManager.type): SharedBuilder_StatePropsPropsProps_1462585424[
+    typingsSlinky.reactSelect.stateManagerMod.StateManager[js.Any, js.Any], 
+    OptionType, 
+    T
+  ] = new SharedBuilder_StatePropsPropsProps_1462585424[
     typingsSlinky.reactSelect.stateManagerMod.StateManager[js.Any, js.Any], 
     OptionType, 
     T

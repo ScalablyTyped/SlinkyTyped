@@ -18,35 +18,10 @@ trait DescribeMatchmakingRuleSetsOutput extends js.Object {
 
 object DescribeMatchmakingRuleSetsOutput {
   @scala.inline
-  def apply(RuleSets: MatchmakingRuleSetList): DescribeMatchmakingRuleSetsOutput = {
+  def apply(RuleSets: MatchmakingRuleSetList, NextToken: NonZeroAndMaxString = null): DescribeMatchmakingRuleSetsOutput = {
     val __obj = js.Dynamic.literal(RuleSets = RuleSets.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeMatchmakingRuleSetsOutput]
   }
-  @scala.inline
-  implicit class DescribeMatchmakingRuleSetsOutputOps[Self <: DescribeMatchmakingRuleSetsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRuleSets(value: MatchmakingRuleSetList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NonZeroAndMaxString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

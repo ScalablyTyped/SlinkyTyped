@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.spotFleetRequestMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.ec2.SpotFleetRequestLaunchSpecification
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -83,6 +84,10 @@ class SpotFleetRequest protected () extends CustomResource {
     * The state of the Spot fleet request.
     */
   val spotRequestState: Output_[String] = js.native
+  /**
+    * A mapping of tags to assign to the resource.
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[_]]] = js.native
   /**
     * The number of units to request. You can choose to set the
     * target capacity in terms of instances or a performance characteristic that is

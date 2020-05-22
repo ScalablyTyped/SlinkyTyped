@@ -7,48 +7,47 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the BatchEditSummaryDisplayText event.
   */
-@js.native
 trait ASPxClientGridBatchEditSummaryDisplayTextEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets the summary item's display text.
     */
-  var displayText: String = js.native
+  var displayText: String
   /**
     * Specifies the group row's visible index.
     */
-  var groupRowVisibleIndex: Double = js.native
+  var groupRowVisibleIndex: Double
   /**
     * Specifies whether the processed summary is a group summary.
     */
-  var isGroupSummary: Boolean = js.native
+  var isGroupSummary: Boolean
   /**
     * Specifies whether the processed summary is a total summary.
     */
-  var isTotalSummary: Boolean = js.native
+  var isTotalSummary: Boolean
   /**
     * Gets the summary item's server value.
     */
-  var serverValue: Double = js.native
+  var serverValue: Double
   /**
     * Gets the element that contains the summary item.
     */
-  var summaryElement: js.Any = js.native
+  var summaryElement: js.Any
   /**
     * Gets the summary item's field name.
     */
-  var summaryFieldName: String = js.native
+  var summaryFieldName: String
   /**
     * Gets the summary item index.
     */
-  var summaryItemIndex: Double = js.native
+  var summaryItemIndex: Double
   /**
     * Gets the summary type.
     */
-  var summaryType: ASPxClientSummaryItemType = js.native
+  var summaryType: ASPxClientSummaryItemType
   /**
     * Specifies the summary item's value.
     */
-  var value: Double = js.native
+  var value: Double
 }
 
 object ASPxClientGridBatchEditSummaryDisplayTextEventArgs {
@@ -68,73 +67,5 @@ object ASPxClientGridBatchEditSummaryDisplayTextEventArgs {
     val __obj = js.Dynamic.literal(displayText = displayText.asInstanceOf[js.Any], groupRowVisibleIndex = groupRowVisibleIndex.asInstanceOf[js.Any], isGroupSummary = isGroupSummary.asInstanceOf[js.Any], isTotalSummary = isTotalSummary.asInstanceOf[js.Any], serverValue = serverValue.asInstanceOf[js.Any], summaryElement = summaryElement.asInstanceOf[js.Any], summaryFieldName = summaryFieldName.asInstanceOf[js.Any], summaryItemIndex = summaryItemIndex.asInstanceOf[js.Any], summaryType = summaryType.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientGridBatchEditSummaryDisplayTextEventArgs]
   }
-  @scala.inline
-  implicit class ASPxClientGridBatchEditSummaryDisplayTextEventArgsOps[Self <: ASPxClientGridBatchEditSummaryDisplayTextEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisplayText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("displayText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGroupRowVisibleIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupRowVisibleIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsGroupSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isGroupSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsTotalSummary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotalSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withServerValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serverValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummaryElement(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryElement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummaryFieldName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryFieldName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummaryItemIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryItemIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSummaryType(value: ASPxClientSummaryItemType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

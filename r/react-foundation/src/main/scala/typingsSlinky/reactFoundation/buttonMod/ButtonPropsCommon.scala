@@ -1,106 +1,104 @@
 package typingsSlinky.reactFoundation.buttonMod
 
+import typingsSlinky.reactFoundation.enumsMod.Breakpoints
 import typingsSlinky.reactFoundation.enumsMod.ButtonSizes
+import typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints
+import typingsSlinky.reactFoundation.enumsMod.FloatTypes
+import typingsSlinky.reactFoundation.enumsMod.HorizontalAlignments
+import typingsSlinky.reactFoundation.enumsMod.SpaceControls
+import typingsSlinky.reactFoundation.enumsMod.VerticalAlignments
+import typingsSlinky.reactFoundation.reactFoundationStrings.large
+import typingsSlinky.reactFoundation.reactFoundationStrings.medium
 import typingsSlinky.reactFoundation.utilsMod.FlexboxPropTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ButtonPropsCommon extends FlexboxPropTypes {
-  var isArrowOnly: js.UndefOr[Boolean] = js.native
-  var isDisabled: js.UndefOr[Boolean] = js.native
-  var isDropdown: js.UndefOr[Boolean] = js.native
-  var isExpanded: js.UndefOr[Boolean] = js.native
-  var isHollow: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[ButtonSizes] = js.native
+  var isArrowOnly: js.UndefOr[Boolean] = js.undefined
+  var isDisabled: js.UndefOr[Boolean] = js.undefined
+  var isDropdown: js.UndefOr[Boolean] = js.undefined
+  var isExpanded: js.UndefOr[Boolean] = js.undefined
+  var isHollow: js.UndefOr[Boolean] = js.undefined
+  var size: js.UndefOr[ButtonSizes] = js.undefined
 }
 
 object ButtonPropsCommon {
   @scala.inline
-  def apply(): ButtonPropsCommon = {
+  def apply(
+    alignX: HorizontalAlignments = null,
+    alignY: VerticalAlignments = null,
+    centerAlign: js.UndefOr[Boolean] = js.undefined,
+    className: String = null,
+    flexChild: SpaceControls = null,
+    flexContainer: js.UndefOr[Boolean] = js.undefined,
+    flexDirCol: ExtendedBreakpoints = null,
+    flexDirColRev: ExtendedBreakpoints = null,
+    flexDirRow: ExtendedBreakpoints = null,
+    flexDirRowRev: ExtendedBreakpoints = null,
+    flexOrder: js.UndefOr[Double] = js.undefined,
+    flexOrderLarge: js.UndefOr[Double] = js.undefined,
+    flexOrderMedium: js.UndefOr[Double] = js.undefined,
+    flexOrderSmall: js.UndefOr[Double] = js.undefined,
+    float: FloatTypes = null,
+    hideFor: medium | large = null,
+    hideOnlyFor: Breakpoints = null,
+    isArrowOnly: js.UndefOr[Boolean] = js.undefined,
+    isClearfix: js.UndefOr[Boolean] = js.undefined,
+    isDisabled: js.UndefOr[Boolean] = js.undefined,
+    isDropdown: js.UndefOr[Boolean] = js.undefined,
+    isExpanded: js.UndefOr[Boolean] = js.undefined,
+    isHidden: js.UndefOr[Boolean] = js.undefined,
+    isHollow: js.UndefOr[Boolean] = js.undefined,
+    isInvisible: js.UndefOr[Boolean] = js.undefined,
+    noDefaultClassName: String = null,
+    selfAlignX: HorizontalAlignments = null,
+    selfAlignY: VerticalAlignments = null,
+    showFor: Breakpoints = null,
+    showForLandscape: js.UndefOr[Boolean] = js.undefined,
+    showForPortrait: js.UndefOr[Boolean] = js.undefined,
+    showForSr: js.UndefOr[Boolean] = js.undefined,
+    showOnFocus: js.UndefOr[Boolean] = js.undefined,
+    showOnlyFor: Breakpoints = null,
+    size: ButtonSizes = null
+  ): ButtonPropsCommon = {
     val __obj = js.Dynamic.literal()
+    if (alignX != null) __obj.updateDynamic("alignX")(alignX.asInstanceOf[js.Any])
+    if (alignY != null) __obj.updateDynamic("alignY")(alignY.asInstanceOf[js.Any])
+    if (!js.isUndefined(centerAlign)) __obj.updateDynamic("centerAlign")(centerAlign.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (flexChild != null) __obj.updateDynamic("flexChild")(flexChild.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexContainer)) __obj.updateDynamic("flexContainer")(flexContainer.get.asInstanceOf[js.Any])
+    if (flexDirCol != null) __obj.updateDynamic("flexDirCol")(flexDirCol.asInstanceOf[js.Any])
+    if (flexDirColRev != null) __obj.updateDynamic("flexDirColRev")(flexDirColRev.asInstanceOf[js.Any])
+    if (flexDirRow != null) __obj.updateDynamic("flexDirRow")(flexDirRow.asInstanceOf[js.Any])
+    if (flexDirRowRev != null) __obj.updateDynamic("flexDirRowRev")(flexDirRowRev.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexOrder)) __obj.updateDynamic("flexOrder")(flexOrder.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexOrderLarge)) __obj.updateDynamic("flexOrderLarge")(flexOrderLarge.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexOrderMedium)) __obj.updateDynamic("flexOrderMedium")(flexOrderMedium.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(flexOrderSmall)) __obj.updateDynamic("flexOrderSmall")(flexOrderSmall.get.asInstanceOf[js.Any])
+    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
+    if (hideFor != null) __obj.updateDynamic("hideFor")(hideFor.asInstanceOf[js.Any])
+    if (hideOnlyFor != null) __obj.updateDynamic("hideOnlyFor")(hideOnlyFor.asInstanceOf[js.Any])
+    if (!js.isUndefined(isArrowOnly)) __obj.updateDynamic("isArrowOnly")(isArrowOnly.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isClearfix)) __obj.updateDynamic("isClearfix")(isClearfix.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDropdown)) __obj.updateDynamic("isDropdown")(isDropdown.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isExpanded)) __obj.updateDynamic("isExpanded")(isExpanded.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHidden)) __obj.updateDynamic("isHidden")(isHidden.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isHollow)) __obj.updateDynamic("isHollow")(isHollow.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isInvisible)) __obj.updateDynamic("isInvisible")(isInvisible.get.asInstanceOf[js.Any])
+    if (noDefaultClassName != null) __obj.updateDynamic("noDefaultClassName")(noDefaultClassName.asInstanceOf[js.Any])
+    if (selfAlignX != null) __obj.updateDynamic("selfAlignX")(selfAlignX.asInstanceOf[js.Any])
+    if (selfAlignY != null) __obj.updateDynamic("selfAlignY")(selfAlignY.asInstanceOf[js.Any])
+    if (showFor != null) __obj.updateDynamic("showFor")(showFor.asInstanceOf[js.Any])
+    if (!js.isUndefined(showForLandscape)) __obj.updateDynamic("showForLandscape")(showForLandscape.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showForPortrait)) __obj.updateDynamic("showForPortrait")(showForPortrait.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showForSr)) __obj.updateDynamic("showForSr")(showForSr.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showOnFocus)) __obj.updateDynamic("showOnFocus")(showOnFocus.get.asInstanceOf[js.Any])
+    if (showOnlyFor != null) __obj.updateDynamic("showOnlyFor")(showOnlyFor.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonPropsCommon]
   }
-  @scala.inline
-  implicit class ButtonPropsCommonOps[Self <: ButtonPropsCommon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsArrowOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isArrowOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsArrowOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isArrowOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDisabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDisabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDropdown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDropdown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDropdown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDropdown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsExpanded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsExpanded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsHollow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHollow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsHollow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHollow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: ButtonSizes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

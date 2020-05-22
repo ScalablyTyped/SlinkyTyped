@@ -17,20 +17,19 @@ import scala.scalajs.js.annotation._
   * layer is the same as the document ui configuration manager uses.
   * @since OOo 2.0
   */
-@js.native
 trait XModuleUIConfigurationManager extends XInterface {
   /**
     * retrieves the settings from the default layer of the user interface configuration manager if it has a default layer.
     * @param ResourceURL a resource URL which identifies the user interface element. A resource URL must meet the following syntax: "private:resource/$type/$n
     * @returns `TRUE` if default settings have been found in the default layer, otherwise `FALSE` .
     */
-  def getDefaultSettings(ResourceURL: String): XIndexAccess = js.native
+  def getDefaultSettings(ResourceURL: String): XIndexAccess
   /**
     * determine if the settings of a user interface element is part of the default layer of the user interface configuration manager.
     * @param ResourceURL a resource URL which identifies the user interface element. A resource URL must meet the following syntax: "private:resource/$type/$n
     * @returns `TRUE` if settings have been found in the default layer, otherwise `FALSE` .
     */
-  def isDefaultSettings(ResourceURL: String): Boolean = js.native
+  def isDefaultSettings(ResourceURL: String): Boolean
 }
 
 object XModuleUIConfigurationManager {
@@ -45,25 +44,5 @@ object XModuleUIConfigurationManager {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getDefaultSettings = js.Any.fromFunction1(getDefaultSettings), isDefaultSettings = js.Any.fromFunction1(isDefaultSettings), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XModuleUIConfigurationManager]
   }
-  @scala.inline
-  implicit class XModuleUIConfigurationManagerOps[Self <: XModuleUIConfigurationManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetDefaultSettings(value: String => XIndexAccess): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultSettings")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsDefaultSettings(value: String => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultSettings")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

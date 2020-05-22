@@ -34,83 +34,21 @@ trait GroupMixedInstancesPolicyInstancesDistribution extends js.Object {
 
 object GroupMixedInstancesPolicyInstancesDistribution {
   @scala.inline
-  def apply(spotInstancePools: Double): GroupMixedInstancesPolicyInstancesDistribution = {
+  def apply(
+    spotInstancePools: Double,
+    onDemandAllocationStrategy: String = null,
+    onDemandBaseCapacity: js.UndefOr[Double] = js.undefined,
+    onDemandPercentageAboveBaseCapacity: js.UndefOr[Double] = js.undefined,
+    spotAllocationStrategy: String = null,
+    spotMaxPrice: String = null
+  ): GroupMixedInstancesPolicyInstancesDistribution = {
     val __obj = js.Dynamic.literal(spotInstancePools = spotInstancePools.asInstanceOf[js.Any])
+    if (onDemandAllocationStrategy != null) __obj.updateDynamic("onDemandAllocationStrategy")(onDemandAllocationStrategy.asInstanceOf[js.Any])
+    if (!js.isUndefined(onDemandBaseCapacity)) __obj.updateDynamic("onDemandBaseCapacity")(onDemandBaseCapacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(onDemandPercentageAboveBaseCapacity)) __obj.updateDynamic("onDemandPercentageAboveBaseCapacity")(onDemandPercentageAboveBaseCapacity.get.asInstanceOf[js.Any])
+    if (spotAllocationStrategy != null) __obj.updateDynamic("spotAllocationStrategy")(spotAllocationStrategy.asInstanceOf[js.Any])
+    if (spotMaxPrice != null) __obj.updateDynamic("spotMaxPrice")(spotMaxPrice.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupMixedInstancesPolicyInstancesDistribution]
   }
-  @scala.inline
-  implicit class GroupMixedInstancesPolicyInstancesDistributionOps[Self <: GroupMixedInstancesPolicyInstancesDistribution] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSpotInstancePools(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotInstancePools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnDemandAllocationStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandAllocationStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDemandAllocationStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandAllocationStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDemandBaseCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandBaseCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDemandBaseCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandBaseCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDemandPercentageAboveBaseCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandPercentageAboveBaseCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDemandPercentageAboveBaseCapacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDemandPercentageAboveBaseCapacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotAllocationStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotAllocationStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotAllocationStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotAllocationStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpotMaxPrice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotMaxPrice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpotMaxPrice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spotMaxPrice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

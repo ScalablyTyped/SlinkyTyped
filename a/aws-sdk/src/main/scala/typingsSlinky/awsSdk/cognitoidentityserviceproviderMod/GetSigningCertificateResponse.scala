@@ -14,29 +14,10 @@ trait GetSigningCertificateResponse extends js.Object {
 
 object GetSigningCertificateResponse {
   @scala.inline
-  def apply(): GetSigningCertificateResponse = {
+  def apply(Certificate: StringType = null): GetSigningCertificateResponse = {
     val __obj = js.Dynamic.literal()
+    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSigningCertificateResponse]
   }
-  @scala.inline
-  implicit class GetSigningCertificateResponseOps[Self <: GetSigningCertificateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

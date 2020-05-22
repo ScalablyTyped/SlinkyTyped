@@ -8,14 +8,13 @@ import scala.scalajs.js.annotation._
   * Interface for the $onDestroy lifecycle hook
   * https://docs.angularjs.org/api/ng/service/$compile#life-cycle-hooks
   */
-@js.native
 trait IOnDestroy extends js.Object {
   /**
     * Called on a controller when its containing scope is destroyed. Use this hook for releasing external resources,
     * watches and event handlers.
     */
   @JSName("$onDestroy")
-  def $onDestroy(): Unit = js.native
+  def $onDestroy(): Unit
 }
 
 object IOnDestroy {
@@ -24,19 +23,5 @@ object IOnDestroy {
     val __obj = js.Dynamic.literal($onDestroy = js.Any.fromFunction0($onDestroy))
     __obj.asInstanceOf[IOnDestroy]
   }
-  @scala.inline
-  implicit class IOnDestroyOps[Self <: IOnDestroy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$onDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$onDestroy")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

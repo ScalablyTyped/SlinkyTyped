@@ -29,65 +29,18 @@ trait SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequest extends js.Ob
 
 object SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequest {
   @scala.inline
-  def apply(): SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequest = {
+  def apply(
+    iosReceipt: String = null,
+    iosSecret: String = null,
+    phoneNumber: String = null,
+    recaptchaToken: String = null
+  ): SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequest = {
     val __obj = js.Dynamic.literal()
+    if (iosReceipt != null) __obj.updateDynamic("iosReceipt")(iosReceipt.asInstanceOf[js.Any])
+    if (iosSecret != null) __obj.updateDynamic("iosSecret")(iosSecret.asInstanceOf[js.Any])
+    if (phoneNumber != null) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
+    if (recaptchaToken != null) __obj.updateDynamic("recaptchaToken")(recaptchaToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequest]
   }
-  @scala.inline
-  implicit class SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequestOps[Self <: SchemaIdentitytoolkitRelyingpartySendVerificationCodeRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIosReceipt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosReceipt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosReceipt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosReceipt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPhoneNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPhoneNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecaptchaToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recaptchaToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecaptchaToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recaptchaToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -62,167 +62,35 @@ trait User extends js.Object {
 
 object User {
   @scala.inline
-  def apply(UserId: String): User = {
+  def apply(
+    UserId: String,
+    AccountId: String = null,
+    AlexaForBusinessMetadata: AlexaForBusinessMetadata = null,
+    DisplayName: SensitiveString = null,
+    InvitedOn: js.Date = null,
+    LicenseType: License = null,
+    PersonalPIN: String = null,
+    PrimaryEmail: EmailAddress = null,
+    PrimaryProvisionedNumber: SensitiveString = null,
+    RegisteredOn: js.Date = null,
+    UserInvitationStatus: InviteStatus = null,
+    UserRegistrationStatus: RegistrationStatus = null,
+    UserType: UserType = null
+  ): User = {
     val __obj = js.Dynamic.literal(UserId = UserId.asInstanceOf[js.Any])
+    if (AccountId != null) __obj.updateDynamic("AccountId")(AccountId.asInstanceOf[js.Any])
+    if (AlexaForBusinessMetadata != null) __obj.updateDynamic("AlexaForBusinessMetadata")(AlexaForBusinessMetadata.asInstanceOf[js.Any])
+    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
+    if (InvitedOn != null) __obj.updateDynamic("InvitedOn")(InvitedOn.asInstanceOf[js.Any])
+    if (LicenseType != null) __obj.updateDynamic("LicenseType")(LicenseType.asInstanceOf[js.Any])
+    if (PersonalPIN != null) __obj.updateDynamic("PersonalPIN")(PersonalPIN.asInstanceOf[js.Any])
+    if (PrimaryEmail != null) __obj.updateDynamic("PrimaryEmail")(PrimaryEmail.asInstanceOf[js.Any])
+    if (PrimaryProvisionedNumber != null) __obj.updateDynamic("PrimaryProvisionedNumber")(PrimaryProvisionedNumber.asInstanceOf[js.Any])
+    if (RegisteredOn != null) __obj.updateDynamic("RegisteredOn")(RegisteredOn.asInstanceOf[js.Any])
+    if (UserInvitationStatus != null) __obj.updateDynamic("UserInvitationStatus")(UserInvitationStatus.asInstanceOf[js.Any])
+    if (UserRegistrationStatus != null) __obj.updateDynamic("UserRegistrationStatus")(UserRegistrationStatus.asInstanceOf[js.Any])
+    if (UserType != null) __obj.updateDynamic("UserType")(UserType.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
   }
-  @scala.inline
-  implicit class UserOps[Self <: User] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAlexaForBusinessMetadata(value: AlexaForBusinessMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlexaForBusinessMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlexaForBusinessMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlexaForBusinessMetadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplayName(value: SensitiveString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplayName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvitedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvitedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InvitedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicenseType(value: License): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicenseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersonalPIN(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PersonalPIN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersonalPIN: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PersonalPIN")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryEmail(value: EmailAddress): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryEmail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryEmail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryEmail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryProvisionedNumber(value: SensitiveString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryProvisionedNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryProvisionedNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrimaryProvisionedNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegisteredOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegisteredOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserInvitationStatus(value: InviteStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserInvitationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserInvitationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserInvitationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserRegistrationStatus(value: RegistrationStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRegistrationStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserRegistrationStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRegistrationStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserType(value: UserType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

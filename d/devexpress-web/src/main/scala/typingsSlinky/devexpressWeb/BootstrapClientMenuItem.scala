@@ -7,40 +7,39 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the menu's BootstrapMenuItem object.
   */
-@js.native
 trait BootstrapClientMenuItem extends ASPxClientMenuItem {
   /**
     * Gets the immediate parent item to which the current item belongs.
     */
   @JSName("parent")
-  var parent_BootstrapClientMenuItem: BootstrapClientMenuItem = js.native
+  var parent_BootstrapClientMenuItem: BootstrapClientMenuItem
   /**
     * Gets the CSS class of the icon displayed within the menu item badge.
     */
-  def GetBadgeIconCssClass(): String = js.native
+  def GetBadgeIconCssClass(): String
   /**
     * Gets the text displayed within the menu item badge.
     */
-  def GetBadgeText(): String = js.native
+  def GetBadgeText(): String
   /**
     * Gets the CSS class of the icon displayed by the menu item.
     */
-  def GetIconCssClass(): String = js.native
+  def GetIconCssClass(): String
   /**
     * Sets the CSS class of the icon displayed within the menu item badge.
     * @param cssClass A string containing the name of a CSS class.
     */
-  def SetBadgeIconCssClass(cssClass: String): Unit = js.native
+  def SetBadgeIconCssClass(cssClass: String): Unit
   /**
     * Sets the text displayed within the menu item badge.
     * @param text A String specifying the badge text.
     */
-  def SetBadgeText(text: String): Unit = js.native
+  def SetBadgeText(text: String): Unit
   /**
     * Sets the CSS class of the icon displayed by the menu item.
     * @param cssClass A string containing the name of a CSS class.
     */
-  def SetIconCssClass(cssClass: String): Unit = js.native
+  def SetIconCssClass(cssClass: String): Unit
 }
 
 object BootstrapClientMenuItem {
@@ -76,55 +75,5 @@ object BootstrapClientMenuItem {
     val __obj = js.Dynamic.literal(GetBadgeIconCssClass = js.Any.fromFunction0(GetBadgeIconCssClass), GetBadgeText = js.Any.fromFunction0(GetBadgeText), GetChecked = js.Any.fromFunction0(GetChecked), GetEnabled = js.Any.fromFunction0(GetEnabled), GetIconCssClass = js.Any.fromFunction0(GetIconCssClass), GetImageUrl = js.Any.fromFunction0(GetImageUrl), GetItem = js.Any.fromFunction1(GetItem), GetItemByName = js.Any.fromFunction1(GetItemByName), GetItemCount = js.Any.fromFunction0(GetItemCount), GetNavigateUrl = js.Any.fromFunction0(GetNavigateUrl), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), SetBadgeIconCssClass = js.Any.fromFunction1(SetBadgeIconCssClass), SetBadgeText = js.Any.fromFunction1(SetBadgeText), SetChecked = js.Any.fromFunction1(SetChecked), SetEnabled = js.Any.fromFunction1(SetEnabled), SetIconCssClass = js.Any.fromFunction1(SetIconCssClass), SetImageUrl = js.Any.fromFunction1(SetImageUrl), SetNavigateUrl = js.Any.fromFunction1(SetNavigateUrl), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), index = index.asInstanceOf[js.Any], indexPath = indexPath.asInstanceOf[js.Any], menu = menu.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapClientMenuItem]
   }
-  @scala.inline
-  implicit class BootstrapClientMenuItemOps[Self <: BootstrapClientMenuItem] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetBadgeIconCssClass(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBadgeIconCssClass")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetBadgeText(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBadgeText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetIconCssClass(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIconCssClass")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetBadgeIconCssClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetBadgeIconCssClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetBadgeText(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetBadgeText")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetIconCssClass(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIconCssClass")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: BootstrapClientMenuItem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -8,16 +8,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XRangeHighlighter extends XInterface {
   /** Returns a list of ranges that are used by objects that are currently selected. */
-  val SelectedRanges: SafeArray[HighlightedRange] = js.native
+  val SelectedRanges: SafeArray[HighlightedRange]
   /** registers an event listener, which is called when the selection is changed and affects different source ranges */
-  def addSelectionChangeListener(xListener: XSelectionChangeListener): Unit = js.native
+  def addSelectionChangeListener(xListener: XSelectionChangeListener): Unit
   /** Returns a list of ranges that are used by objects that are currently selected. */
-  def getSelectedRanges(): SafeArray[HighlightedRange] = js.native
+  def getSelectedRanges(): SafeArray[HighlightedRange]
   /** unregisters an event listener which was registered with {@link XRangeHighlighter.addSelectionChangeListener()} before. */
-  def removeSelectionChangeListener(xListener: XSelectionChangeListener): Unit = js.native
+  def removeSelectionChangeListener(xListener: XSelectionChangeListener): Unit
 }
 
 object XRangeHighlighter {
@@ -34,37 +33,5 @@ object XRangeHighlighter {
     val __obj = js.Dynamic.literal(SelectedRanges = SelectedRanges.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addSelectionChangeListener = js.Any.fromFunction1(addSelectionChangeListener), getSelectedRanges = js.Any.fromFunction0(getSelectedRanges), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeSelectionChangeListener = js.Any.fromFunction1(removeSelectionChangeListener))
     __obj.asInstanceOf[XRangeHighlighter]
   }
-  @scala.inline
-  implicit class XRangeHighlighterOps[Self <: XRangeHighlighter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSelectedRanges(value: SafeArray[HighlightedRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectedRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddSelectionChangeListener(value: XSelectionChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addSelectionChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetSelectedRanges(value: () => SafeArray[HighlightedRange]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelectedRanges")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveSelectionChangeListener(value: XSelectionChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSelectionChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

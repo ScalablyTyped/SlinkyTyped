@@ -7,10 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LineSegment extends js.Object {
-  var p0: Coordinate = js.native
-  var p1: Coordinate = js.native
+  var p0: Coordinate
+  var p1: Coordinate
   /**
     * Computes the angle that the vector defined by this segment
     * makes with the X-axis.
@@ -18,7 +17,7 @@ trait LineSegment extends js.Object {
     *
     * @return {number} the angle this segment makes with the X-axis (in radians)
     */
-  def angle(): Double = js.native
+  def angle(): Double
   /**
     * Computes the closest point on this line segment to another point.
     *
@@ -27,7 +26,7 @@ trait LineSegment extends js.Object {
     * @return {Coordinate} a Coordinate which is the closest point on the line
     *         segment to the point p.
     */
-  def closestPoint(p: Coordinate): Coordinate = js.native
+  def closestPoint(p: Coordinate): Coordinate
   /**
     * Computes the closest points on two line segments.
     *
@@ -36,7 +35,7 @@ trait LineSegment extends js.Object {
     * @return {[]} a pair of Coordinates which are the closest points on the line
     *         segments.
     */
-  def closestPoints(line: LineSegment): js.Tuple2[Coordinate, Coordinate] = js.native
+  def closestPoints(line: LineSegment): js.Tuple2[Coordinate, Coordinate]
   /**
     *  Compares this object with the specified object for order.
     *  Uses the standard lexicographic ordering for the points in the LineSegment.
@@ -46,14 +45,14 @@ trait LineSegment extends js.Object {
     *@return {number} a negative integer, zero, or a positive integer as this <code>LineSegment</code>
     *      is less than, equal to, or greater than the specified <code>LineSegment</code>
     */
-  def compareTo(o: LineSegment): Double = js.native
+  def compareTo(o: LineSegment): Double
   /**
     * Computes the distance between this line segment and another segment.
     *
     * @param {jsts.geom.LineSegment} ls
     * @return {number} the distance to the other segment
     */
-  def distance1(ls: LineSegment): Double = js.native
+  def distance1(ls: LineSegment): Double
   /**
     * Computes the distance between this line segment and a given point.
     *
@@ -62,7 +61,7 @@ trait LineSegment extends js.Object {
     * @return {number}
     *          the distance from this segment to the given point.
     */
-  def distance2(p: Coordinate): Double = js.native
+  def distance2(p: Coordinate): Double
   /**
     * Computes the perpendicular distance between the (infinite) line defined
     * by this line segment and a point.
@@ -70,7 +69,7 @@ trait LineSegment extends js.Object {
     * @param {jsts.geom.Coordinate} p the coordinate
     * @return {number} the perpendicular distance between the defined line and the given point
     */
-  def distancePerpendicular(p: Coordinate): Double = js.native
+  def distancePerpendicular(p: Coordinate): Double
   /**
     *  Returns <code>true</code> if <code>other</code> has the same values for
     *  its points.
@@ -79,7 +78,7 @@ trait LineSegment extends js.Object {
     * @return {boolean} <code>true</code> if <code>other</code> is a <code>LineSegment</code>
     *      with the same values for the x and y ordinates.
     */
-  def equals(o: LineSegment): Boolean = js.native
+  def equals(o: LineSegment): Boolean
   /**
     *  Returns <code>true</code> if <code>other</code> is
     *  topologically equal to this LineSegment (e.g. irrespective
@@ -89,18 +88,18 @@ trait LineSegment extends js.Object {
     * @return {boolean} <code>true</code> if <code>other</code> is a <code>LineSegment</code>
     *      with the same values for the x and y ordinates.
     */
-  def equalsTopo(other: LineSegment): Boolean = js.native
+  def equalsTopo(other: LineSegment): Boolean
   /**
     * @param {number} i
     * @return {jsts.geom.Coordinate}
     */
-  def getCoordinate(): Double = js.native
+  def getCoordinate(): Double
   /**
     * Computes the length of the line segment.
     *
     * @return {number} the length of the line segment.
     */
-  def getLength(): Double = js.native
+  def getLength(): Double
   /**
     * Computes an intersection point between two line segments, if there is one.
     * There may be 0, 1 or many intersection points between two segments. If there
@@ -116,19 +115,19 @@ trait LineSegment extends js.Object {
     *
     * @see RobustLineIntersector
     */
-  def intersection(line: LineSegment): Coordinate | Null = js.native
+  def intersection(line: LineSegment): Coordinate | Null
   /**
     * Tests whether the segment is horizontal.
     *
     * @return {boolean} <code>true</code> if the segment is horizontal.
     */
-  def isHorizontal(): Boolean = js.native
+  def isHorizontal(): Boolean
   /**
     * Tests whether the segment is vertical.
     *
     * @return {boolean} <code>true</code> if the segment is vertical.
     */
-  def isVertical(): Boolean = js.native
+  def isVertical(): Boolean
   /**
     * Computes the intersection point of the lines of infinite extent defined
     * by two line segments (if there is one).
@@ -146,13 +145,13 @@ trait LineSegment extends js.Object {
     *
     * @see RobustLineIntersector
     */
-  def lineIntersection(line: LineSegment): Coordinate | Null = js.native
+  def lineIntersection(line: LineSegment): Coordinate | Null
   /**
     * Computes the midpoint of the segment
     *
     * @return {jsts.geom.Coordinate} the midpoint of the segment
     */
-  def midPoint(): Coordinate = js.native
+  def midPoint(): Coordinate
   /**
     * Puts the line segment into a normalized form.
     * This is useful for using line segments in maps and indexes when
@@ -160,7 +159,7 @@ trait LineSegment extends js.Object {
     * A segment in normalized form has the first point smaller
     * than the second (according to the standard ordering on {@link Coordinate}).
     */
-  def normalize(): Unit = js.native
+  def normalize(): Unit
   /**
     * Determines the orientation of a LineSegment relative to this segment.
     * The concept of orientation is specified as follows:
@@ -180,7 +179,7 @@ trait LineSegment extends js.Object {
     * -1 if <code>seg</code> is to the right of this segment<br />
     * 0 if <code>seg</code> has indeterminate orientation relative to this segment
     */
-  def orientationIndex1(seg: LineSegment): `1` | `-1` | `0` = js.native
+  def orientationIndex1(seg: LineSegment): `1` | `-1` | `0`
   /**
     * Determines the orientation index of a {@link Coordinate} relative to this segment.
     * The orientation index is as defined in {@link CGAlgorithms#computeOrientation}.
@@ -193,7 +192,7 @@ trait LineSegment extends js.Object {
     *
     * @see CGAlgorithms#computeOrientation(Coordinate, Coordinate, Coordinate)
     */
-  def orientationIndex2(p: Coordinate): `1` | `-1` | `0` = js.native
+  def orientationIndex2(p: Coordinate): `1` | `-1` | `0`
   /**
     * Computes the {@link Coordinate} that lies a given
     * fraction along the line defined by this segment.
@@ -205,7 +204,7 @@ trait LineSegment extends js.Object {
     * @param {number} segmentLengthFraction the fraction of the segment length along the line
     * @return {jsts.geom.Coordinate} the point at that distance
     */
-  def pointAlong(segmentLengthFraction: Double): Coordinate = js.native
+  def pointAlong(segmentLengthFraction: Double): Coordinate
   /**
     * Computes the {@link Coordinate} that lies a given
     * fraction along the line defined by this segment and offset from
@@ -220,7 +219,7 @@ trait LineSegment extends js.Object {
     *    (positive is to the left, negative is to the right)
     * @return {jsts.geom.Coordinate} the point at that distance and offset
     */
-  def pointAlongOffset(segmentLengthFraction: Double, offsetDistance: Double): Coordinate = js.native
+  def pointAlongOffset(segmentLengthFraction: Double, offsetDistance: Double): Coordinate
   /**
     * Compute the projection of a point onto the line determined
     * by this line segment.
@@ -231,7 +230,7 @@ trait LineSegment extends js.Object {
     * @param {jsts.geom.Coordinate} p
     * @return {jsts.geom.Coordinate}
     */
-  def project1(p: Coordinate): Coordinate = js.native
+  def project1(p: Coordinate): Coordinate
   /**
     * Project a line segment onto this line segment and return the resulting
     * line segment.  The returned line segment will be a subset of
@@ -244,7 +243,7 @@ trait LineSegment extends js.Object {
     * @param {jsts.geom.LineSegment} seg the line segment to project
     * @return {jsts.geom.LineSegment} the projected line segment, or <code>null</code> if there is no overlap
     */
-  def project2(seg: LineSegment): LineSegment = js.native
+  def project2(seg: LineSegment): LineSegment
   /**
     * Computes the Projection Factor for the projection of the point p onto this
     * LineSegment. The Projection Factor is the constant r by which the vector for
@@ -257,11 +256,11 @@ trait LineSegment extends js.Object {
     * @param {Coordinate} p the point to compute the factor for.
     * @return {double} the projection factor for the point.
     */
-  def projectionFactor(p: Coordinate): Double = js.native
+  def projectionFactor(p: Coordinate): Double
   /**
     * Reverses the direction of the line segment.
     */
-  def reverse(): Unit = js.native
+  def reverse(): Unit
   /**
     * Computes the fraction of distance (in <tt>[0.0, 1.0]</tt>)
     * that the projection of a point occurs along this line segment.
@@ -275,16 +274,16 @@ trait LineSegment extends js.Object {
     * @param {jsts.geom.Coordinate} inputPt the point
     * @return {number} the fraction along the line segment the projection of the point occurs
     */
-  def segmentFraction(inputPt: Coordinate): Double = js.native
-  def setCoordinates(ls: LineSegment): Unit = js.native
-  def setCoordinates2(p0: Coordinate, p1: Coordinate): Unit = js.native
+  def segmentFraction(inputPt: Coordinate): Double
+  def setCoordinates(ls: LineSegment): Unit
+  def setCoordinates2(p0: Coordinate, p1: Coordinate): Unit
   /**
     * Creates a LineString with the same coordinates as this segment
     *
     * @param {jsts.geom.GeometryFactory} geomFactory the geometery factory to use
     * @return {jsts.geom.LineString} a LineString with the same geometry as this segment
     */
-  def toGeometry(geomFactory: GeometryFactory): LineString = js.native
+  def toGeometry(geomFactory: GeometryFactory): LineString
 }
 
 object LineSegment {
@@ -325,199 +324,5 @@ object LineSegment {
     val __obj = js.Dynamic.literal(angle = js.Any.fromFunction0(angle), closestPoint = js.Any.fromFunction1(closestPoint), closestPoints = js.Any.fromFunction1(closestPoints), compareTo = js.Any.fromFunction1(compareTo), distance1 = js.Any.fromFunction1(distance1), distance2 = js.Any.fromFunction1(distance2), distancePerpendicular = js.Any.fromFunction1(distancePerpendicular), equals = js.Any.fromFunction1(equals), equalsTopo = js.Any.fromFunction1(equalsTopo), getCoordinate = js.Any.fromFunction0(getCoordinate), getLength = js.Any.fromFunction0(getLength), intersection = js.Any.fromFunction1(intersection), isHorizontal = js.Any.fromFunction0(isHorizontal), isVertical = js.Any.fromFunction0(isVertical), lineIntersection = js.Any.fromFunction1(lineIntersection), midPoint = js.Any.fromFunction0(midPoint), normalize = js.Any.fromFunction0(normalize), orientationIndex1 = js.Any.fromFunction1(orientationIndex1), orientationIndex2 = js.Any.fromFunction1(orientationIndex2), p0 = p0.asInstanceOf[js.Any], p1 = p1.asInstanceOf[js.Any], pointAlong = js.Any.fromFunction1(pointAlong), pointAlongOffset = js.Any.fromFunction2(pointAlongOffset), project1 = js.Any.fromFunction1(project1), project2 = js.Any.fromFunction1(project2), projectionFactor = js.Any.fromFunction1(projectionFactor), reverse = js.Any.fromFunction0(reverse), segmentFraction = js.Any.fromFunction1(segmentFraction), setCoordinates = js.Any.fromFunction1(setCoordinates), setCoordinates2 = js.Any.fromFunction2(setCoordinates2), toGeometry = js.Any.fromFunction1(toGeometry))
     __obj.asInstanceOf[LineSegment]
   }
-  @scala.inline
-  implicit class LineSegmentOps[Self <: LineSegment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClosestPoint(value: Coordinate => Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closestPoint")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withClosestPoints(value: LineSegment => js.Tuple2[Coordinate, Coordinate]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closestPoints")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCompareTo(value: LineSegment => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDistance1(value: LineSegment => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance1")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDistance2(value: Coordinate => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance2")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDistancePerpendicular(value: Coordinate => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distancePerpendicular")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEquals(value: LineSegment => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEqualsTopo(value: LineSegment => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equalsTopo")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetCoordinate(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoordinate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetLength(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIntersection(value: LineSegment => Coordinate | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsHorizontal(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isHorizontal")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsVertical(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVertical")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLineIntersection(value: LineSegment => Coordinate | Null): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineIntersection")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withMidPoint(value: () => Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("midPoint")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withNormalize(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withOrientationIndex1(value: LineSegment => `1` | `-1` | `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationIndex1")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOrientationIndex2(value: Coordinate => `1` | `-1` | `0`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationIndex2")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withP0(value: Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p0")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withP1(value: Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("p1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointAlong(value: Double => Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointAlong")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPointAlongOffset(value: (Double, Double) => Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointAlongOffset")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withProject1(value: Coordinate => Coordinate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project1")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withProject2(value: LineSegment => LineSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("project2")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withProjectionFactor(value: Coordinate => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionFactor")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReverse(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSegmentFraction(value: Coordinate => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentFraction")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetCoordinates(value: LineSegment => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoordinates")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetCoordinates2(value: (Coordinate, Coordinate) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoordinates2")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withToGeometry(value: GeometryFactory => LineString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toGeometry")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

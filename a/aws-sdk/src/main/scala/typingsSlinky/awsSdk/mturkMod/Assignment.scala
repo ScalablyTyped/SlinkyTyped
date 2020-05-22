@@ -58,161 +58,34 @@ trait Assignment extends js.Object {
 
 object Assignment {
   @scala.inline
-  def apply(): Assignment = {
+  def apply(
+    AcceptTime: js.Date = null,
+    Answer: String = null,
+    ApprovalTime: js.Date = null,
+    AssignmentId: EntityId = null,
+    AssignmentStatus: AssignmentStatus = null,
+    AutoApprovalTime: js.Date = null,
+    Deadline: js.Date = null,
+    HITId: EntityId = null,
+    RejectionTime: js.Date = null,
+    RequesterFeedback: String = null,
+    SubmitTime: js.Date = null,
+    WorkerId: CustomerId = null
+  ): Assignment = {
     val __obj = js.Dynamic.literal()
+    if (AcceptTime != null) __obj.updateDynamic("AcceptTime")(AcceptTime.asInstanceOf[js.Any])
+    if (Answer != null) __obj.updateDynamic("Answer")(Answer.asInstanceOf[js.Any])
+    if (ApprovalTime != null) __obj.updateDynamic("ApprovalTime")(ApprovalTime.asInstanceOf[js.Any])
+    if (AssignmentId != null) __obj.updateDynamic("AssignmentId")(AssignmentId.asInstanceOf[js.Any])
+    if (AssignmentStatus != null) __obj.updateDynamic("AssignmentStatus")(AssignmentStatus.asInstanceOf[js.Any])
+    if (AutoApprovalTime != null) __obj.updateDynamic("AutoApprovalTime")(AutoApprovalTime.asInstanceOf[js.Any])
+    if (Deadline != null) __obj.updateDynamic("Deadline")(Deadline.asInstanceOf[js.Any])
+    if (HITId != null) __obj.updateDynamic("HITId")(HITId.asInstanceOf[js.Any])
+    if (RejectionTime != null) __obj.updateDynamic("RejectionTime")(RejectionTime.asInstanceOf[js.Any])
+    if (RequesterFeedback != null) __obj.updateDynamic("RequesterFeedback")(RequesterFeedback.asInstanceOf[js.Any])
+    if (SubmitTime != null) __obj.updateDynamic("SubmitTime")(SubmitTime.asInstanceOf[js.Any])
+    if (WorkerId != null) __obj.updateDynamic("WorkerId")(WorkerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Assignment]
   }
-  @scala.inline
-  implicit class AssignmentOps[Self <: Assignment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAcceptTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAcceptTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceptTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnswer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Answer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnswer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Answer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApprovalTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovalTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApprovalTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovalTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignmentId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAssignmentStatus(value: AssignmentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssignmentStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoApprovalTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoApprovalTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoApprovalTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoApprovalTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeadline(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deadline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeadline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Deadline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHITId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHITId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRejectionTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RejectionTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRejectionTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RejectionTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequesterFeedback(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterFeedback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequesterFeedback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterFeedback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubmitTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubmitTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkerId(value: CustomerId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

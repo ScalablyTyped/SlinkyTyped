@@ -15,20 +15,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EChartOption_[TSeries] extends js.Object {
   /**
     * The angle axis in Polar Coordinate.
     *
     * @see https://echarts.apache.org/en/option.html#angleAxis
     */
-  var angleAxis: js.UndefOr[js.Object] = js.native
+  var angleAxis: js.UndefOr[js.Object] = js.undefined
   /**
     * Whether to enable animation.
     *
     * @see https://echarts.apache.org/en/option.html#animation
     */
-  var animation: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean] = js.undefined
   /**
     * Delay before updating the first animation, which supports
     * callback function for different data
@@ -41,7 +40,7 @@ trait EChartOption_[TSeries] extends js.Object {
     * }
     * @see https://echarts.apache.org/en/option.html#animationDelay
     */
-  var animationDelay: js.UndefOr[Double | js.Function] = js.native
+  var animationDelay: js.UndefOr[Double | js.Function] = js.undefined
   /**
     * Delay before updating animation, which supports callback function
     * for different data to have different animation effect.
@@ -53,7 +52,7 @@ trait EChartOption_[TSeries] extends js.Object {
     * }
     * @see https://echarts.apache.org/en/option.html#animationDelayUpdate
     */
-  var animationDelayUpdate: js.UndefOr[Double | js.Function] = js.native
+  var animationDelayUpdate: js.UndefOr[Double | js.Function] = js.undefined
   /**
     * Duration of the first animation, which supports callback function
     * for different data to have different animation effect
@@ -65,7 +64,7 @@ trait EChartOption_[TSeries] extends js.Object {
     * }
     * @see https://echarts.apache.org/en/option.html#animationDuration
     */
-  var animationDuration: js.UndefOr[Double] = js.native
+  var animationDuration: js.UndefOr[Double] = js.undefined
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect
@@ -77,27 +76,27 @@ trait EChartOption_[TSeries] extends js.Object {
     * }
     * @see https://echarts.apache.org/en/option.html#animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[Double | js.Function] = js.native
+  var animationDurationUpdate: js.UndefOr[Double | js.Function] = js.undefined
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at `easing effect example`.
     *
     * @see https://echarts.apache.org/en/option.html#animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.native
+  var animationEasing: js.UndefOr[String] = js.undefined
   /**
     * Easing method used for animation.
     *
     * @see https://echarts.apache.org/en/option.html#animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.native
+  var animationEasingUpdate: js.UndefOr[String] = js.undefined
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than threshold.
     *
     * @see https://echarts.apache.org/en/option.html#animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.native
+  var animationThreshold: js.UndefOr[Double] = js.undefined
   /**
     * `dataset` component is published since ECharts 4.
     * `dataset` brings convenience in data management separated with styles
@@ -107,27 +106,27 @@ trait EChartOption_[TSeries] extends js.Object {
     * More details about `dataset` can be checked in the tutorial.
     * @see https://echarts.apache.org/en/option.html#aria
     */
-  var aria: js.UndefOr[js.Object] = js.native
+  var aria: js.UndefOr[js.Object] = js.undefined
   /**
     * `axisPointer` is a tool for displaying reference line and axis value
     * under mouse pointer.
     *
     * @see https://echarts.apache.org/en/option.html#axisPointer
     */
-  var axisPointer: js.UndefOr[AxisPointer] = js.native
+  var axisPointer: js.UndefOr[AxisPointer] = js.undefined
   /**
     * Background color. Defaults to have no background.
     *
     * @see https://echarts.apache.org/en/option.html#backgroundColor
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.undefined
   /**
     * Equal to CanvasRenderingContext2D.globalCompositeOperation
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
     *
     */
-  var blendMode: js.UndefOr[String] = js.native
+  var blendMode: js.UndefOr[String] = js.undefined
   /**
     * `brush` is an area-selecting component, with which user can select
     * part of data from a chart to display in detail, or doing calculations
@@ -135,7 +134,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#brush
     */
-  var brush: js.UndefOr[js.Object] = js.native
+  var brush: js.UndefOr[js.Object] = js.undefined
   /**
     * Calendar coordinates.
     * In ECharts, we are very creative to achieve the calendar chart,
@@ -145,7 +144,7 @@ trait EChartOption_[TSeries] extends js.Object {
     * in `heatmap`, `scatter`, `effectScatter`, and `graph`.
     * @see https://echarts.apache.org/en/option.html#calendar
     */
-  var calendar: js.UndefOr[Calendar | js.Array[Calendar]] = js.native
+  var calendar: js.UndefOr[Calendar | js.Array[Calendar]] = js.undefined
   /**
     * The color list of palette.
     * If no color is set in series, the colors would be adopted sequentially
@@ -160,7 +159,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#color
     */
-  var color: js.UndefOr[js.Array[String]] = js.native
+  var color: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * `dataZoom` component is used for zooming a specific area,
     * which enables user to investigate data in detail,
@@ -181,11 +180,11 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#dataZoom
     */
-  var dataZoom: js.UndefOr[js.Array[DataZoom]] = js.native
+  var dataZoom: js.UndefOr[js.Array[DataZoom]] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#dataset
     */
-  var dataset: js.UndefOr[Dataset | js.Array[Dataset]] = js.native
+  var dataset: js.UndefOr[Dataset | js.Array[Dataset]] = js.undefined
   /**
     * Geographic coorinate system component.
     * Geographic coorinate system component is used to draw maps,
@@ -193,7 +192,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#geo
     */
-  var geo: js.UndefOr[js.Object] = js.native
+  var geo: js.UndefOr[js.Object] = js.undefined
   /**
     * `graphic` component enable creating graphic elements in echarts.
     * Those graphic type are supported.
@@ -202,7 +201,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#graphic
     */
-  var graphic: js.UndefOr[js.Object | js.Array[js.Object]] = js.native
+  var graphic: js.UndefOr[js.Object | js.Array[js.Object]] = js.undefined
   /**
     * Drawing grid in rectangular coordinate.
     * In a single grid, at most two X and Y axes each is allowed.
@@ -214,7 +213,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#grid
     */
-  var grid: js.UndefOr[Grid | js.Array[Grid]] = js.native
+  var grid: js.UndefOr[Grid | js.Array[Grid]] = js.undefined
   /**
     * Threshold of if use single hover layer to optimize.
     * It is recommended that `hoverLayerThreshold` is equivalent to or less than
@@ -224,7 +223,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @default 3000
     */
-  var hoverLayerThreshold: js.UndefOr[Double] = js.native
+  var hoverLayerThreshold: js.UndefOr[Double] = js.undefined
   /**
     * Legend component.
     * Legend component shows symbol, color and name of different series.
@@ -238,7 +237,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#legend
     */
-  var legend: js.UndefOr[Legend] = js.native
+  var legend: js.UndefOr[Legend] = js.undefined
   /**
     * `Parallel Coordinates` is a common way of visualizing high-dimensional
     * geometry and analyzing multivariate data.
@@ -260,32 +259,32 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#parallel
     */
-  var parallel: js.UndefOr[js.Object] = js.native
+  var parallel: js.UndefOr[js.Object] = js.undefined
   /**
     * This component is the coordinate axis for parallel coordinate.
     *
     * @see https://echarts.apache.org/en/option.html#parallelAxis
     */
-  var parallelAxis: js.UndefOr[js.Object] = js.native
+  var parallelAxis: js.UndefOr[js.Object] = js.undefined
   /**
     * Polar coordinate can be used in scatter and line chart.
     * Every polar coordinate has an `angleAxis` and a `radiusAxis`.
     *
     * @see https://echarts.apache.org/en/option.html#polar
     */
-  var polar: js.UndefOr[js.Object] = js.native
+  var polar: js.UndefOr[js.Object] = js.undefined
   /**
     * Configuration for progressive/incremental rendering
     *
     * @default 400
     */
-  var progressive: js.UndefOr[Double] = js.native
+  var progressive: js.UndefOr[Double] = js.undefined
   /**
     * Configuration for progressive/incremental rendering
     *
     * @default 3000
     */
-  var progressiveThreshold: js.UndefOr[Double] = js.native
+  var progressiveThreshold: js.UndefOr[Double] = js.undefined
   /**
     * Coordinate for `radar charts`.
     * This component is equal to the polar component in ECharts 2.
@@ -302,37 +301,37 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#radar
     */
-  var radar: js.UndefOr[js.Object] = js.native
+  var radar: js.UndefOr[js.Object] = js.undefined
   /**
     * Radial axis of polar coordinate.
     *
     * @see https://echarts.apache.org/en/option.html#radiusAxis
     */
-  var radiusAxis: js.UndefOr[js.Object] = js.native
+  var radiusAxis: js.UndefOr[js.Object] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series
     */
-  var series: js.UndefOr[js.Array[TSeries]] = js.native
+  var series: js.UndefOr[js.Array[TSeries]] = js.undefined
   /**
     * An axis with a single dimension. It can be used to display data
     * in one dimension.
     *
     * @see https://echarts.apache.org/en/option.html#singleAxis
     */
-  var singleAxis: js.UndefOr[SingleAxis | js.Array[SingleAxis]] = js.native
+  var singleAxis: js.UndefOr[SingleAxis | js.Array[SingleAxis]] = js.undefined
   /**
     * Global font style.
     *
     * @see https://echarts.apache.org/en/option.html#textStyle
     */
-  var textStyle: js.UndefOr[BaseTextStyle] = js.native
+  var textStyle: js.UndefOr[BaseTextStyle] = js.undefined
   /**
     * `timeline` component, which provides functions like switching and playing
     * between multiple ECharts `options`.
     *
     * @see https://echarts.apache.org/en/option.html#timeline
     */
-  var timeline: js.UndefOr[js.Object] = js.native
+  var timeline: js.UndefOr[js.Object] = js.undefined
   /**
     * Title component, including main title and subtitle.
     * In ECharts 2.x, a single instance of ECharts could contains
@@ -343,14 +342,14 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#title
     */
-  var title: js.UndefOr[EChartTitleOption | js.Array[EChartTitleOption]] = js.native
+  var title: js.UndefOr[EChartTitleOption | js.Array[EChartTitleOption]] = js.undefined
   /**
     * A group of utility tools, which includes `export`, `data view`,
     * `dynamic type switching`, `data area zooming`, and `reset`.
     *
     * @see https://echarts.apache.org/en/option.html#toolbox
     */
-  var toolbox: js.UndefOr[js.Object] = js.native
+  var toolbox: js.UndefOr[js.Object] = js.undefined
   /**
     * Tooltip component.
     * It can be configured on different places:
@@ -362,7 +361,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#tooltip
     */
-  var tooltip: js.UndefOr[Tooltip] = js.native
+  var tooltip: js.UndefOr[Tooltip] = js.undefined
   /**
     * Whether to use UTC in display.
     * - `true`: When `axis.type` is `'time'`, ticks is determined
@@ -384,7 +383,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#useUTC
     */
-  var useUTC: js.UndefOr[Boolean] = js.native
+  var useUTC: js.UndefOr[Boolean] = js.undefined
   /**
     * `visualMap` is a type of component for visual encoding,
     * which maps the data to visual channels, including:
@@ -420,7 +419,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#visualMap
     */
-  var visualMap: js.UndefOr[js.Array[typingsSlinky.echarts.echarts.EChartOption.VisualMap]] = js.native
+  var visualMap: js.UndefOr[js.Array[typingsSlinky.echarts.echarts.EChartOption.VisualMap]] = js.undefined
   /**
     * The x axis in cartesian(rectangular) coordinate.
     * Usually a single grid component can place at most 2 x axis,
@@ -430,7 +429,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#xAxis
     */
-  var xAxis: js.UndefOr[XAxis | js.Array[XAxis]] = js.native
+  var xAxis: js.UndefOr[XAxis | js.Array[XAxis]] = js.undefined
   /**
     * The y axis in cartesian(rectangular) coordinate.
     * Usually a single grid component can place at most 2 y axis,
@@ -439,514 +438,97 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#yAxis
     */
-  var yAxis: js.UndefOr[YAxis | js.Array[YAxis]] = js.native
+  var yAxis: js.UndefOr[YAxis | js.Array[YAxis]] = js.undefined
 }
 
 object EChartOption_ {
   @scala.inline
-  def apply[TSeries](): EChartOption_[TSeries] = {
+  def apply[TSeries](
+    angleAxis: js.Object = null,
+    animation: js.UndefOr[Boolean] = js.undefined,
+    animationDelay: Double | js.Function = null,
+    animationDelayUpdate: Double | js.Function = null,
+    animationDuration: js.UndefOr[Double] = js.undefined,
+    animationDurationUpdate: Double | js.Function = null,
+    animationEasing: String = null,
+    animationEasingUpdate: String = null,
+    animationThreshold: js.UndefOr[Double] = js.undefined,
+    aria: js.Object = null,
+    axisPointer: AxisPointer = null,
+    backgroundColor: String = null,
+    blendMode: String = null,
+    brush: js.Object = null,
+    calendar: Calendar | js.Array[Calendar] = null,
+    color: js.Array[String] = null,
+    dataZoom: js.Array[DataZoom] = null,
+    dataset: Dataset | js.Array[Dataset] = null,
+    geo: js.Object = null,
+    graphic: js.Object | js.Array[js.Object] = null,
+    grid: Grid | js.Array[Grid] = null,
+    hoverLayerThreshold: js.UndefOr[Double] = js.undefined,
+    legend: Legend = null,
+    parallel: js.Object = null,
+    parallelAxis: js.Object = null,
+    polar: js.Object = null,
+    progressive: js.UndefOr[Double] = js.undefined,
+    progressiveThreshold: js.UndefOr[Double] = js.undefined,
+    radar: js.Object = null,
+    radiusAxis: js.Object = null,
+    series: js.Array[TSeries] = null,
+    singleAxis: SingleAxis | js.Array[SingleAxis] = null,
+    textStyle: BaseTextStyle = null,
+    timeline: js.Object = null,
+    title: EChartTitleOption | js.Array[EChartTitleOption] = null,
+    toolbox: js.Object = null,
+    tooltip: Tooltip = null,
+    useUTC: js.UndefOr[Boolean] = js.undefined,
+    visualMap: js.Array[typingsSlinky.echarts.echarts.EChartOption.VisualMap] = null,
+    xAxis: XAxis | js.Array[XAxis] = null,
+    yAxis: YAxis | js.Array[YAxis] = null
+  ): EChartOption_[TSeries] = {
     val __obj = js.Dynamic.literal()
+    if (angleAxis != null) __obj.updateDynamic("angleAxis")(angleAxis.asInstanceOf[js.Any])
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
+    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationDuration)) __obj.updateDynamic("animationDuration")(animationDuration.get.asInstanceOf[js.Any])
+    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
+    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
+    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(animationThreshold)) __obj.updateDynamic("animationThreshold")(animationThreshold.get.asInstanceOf[js.Any])
+    if (aria != null) __obj.updateDynamic("aria")(aria.asInstanceOf[js.Any])
+    if (axisPointer != null) __obj.updateDynamic("axisPointer")(axisPointer.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (blendMode != null) __obj.updateDynamic("blendMode")(blendMode.asInstanceOf[js.Any])
+    if (brush != null) __obj.updateDynamic("brush")(brush.asInstanceOf[js.Any])
+    if (calendar != null) __obj.updateDynamic("calendar")(calendar.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (dataZoom != null) __obj.updateDynamic("dataZoom")(dataZoom.asInstanceOf[js.Any])
+    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
+    if (geo != null) __obj.updateDynamic("geo")(geo.asInstanceOf[js.Any])
+    if (graphic != null) __obj.updateDynamic("graphic")(graphic.asInstanceOf[js.Any])
+    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
+    if (!js.isUndefined(hoverLayerThreshold)) __obj.updateDynamic("hoverLayerThreshold")(hoverLayerThreshold.get.asInstanceOf[js.Any])
+    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
+    if (parallel != null) __obj.updateDynamic("parallel")(parallel.asInstanceOf[js.Any])
+    if (parallelAxis != null) __obj.updateDynamic("parallelAxis")(parallelAxis.asInstanceOf[js.Any])
+    if (polar != null) __obj.updateDynamic("polar")(polar.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressive)) __obj.updateDynamic("progressive")(progressive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(progressiveThreshold)) __obj.updateDynamic("progressiveThreshold")(progressiveThreshold.get.asInstanceOf[js.Any])
+    if (radar != null) __obj.updateDynamic("radar")(radar.asInstanceOf[js.Any])
+    if (radiusAxis != null) __obj.updateDynamic("radiusAxis")(radiusAxis.asInstanceOf[js.Any])
+    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
+    if (singleAxis != null) __obj.updateDynamic("singleAxis")(singleAxis.asInstanceOf[js.Any])
+    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
+    if (timeline != null) __obj.updateDynamic("timeline")(timeline.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (toolbox != null) __obj.updateDynamic("toolbox")(toolbox.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (!js.isUndefined(useUTC)) __obj.updateDynamic("useUTC")(useUTC.get.asInstanceOf[js.Any])
+    if (visualMap != null) __obj.updateDynamic("visualMap")(visualMap.asInstanceOf[js.Any])
+    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
+    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
     __obj.asInstanceOf[EChartOption_[TSeries]]
   }
-  @scala.inline
-  implicit class EChartOption_Ops[Self[tseries] <: EChartOption_[tseries], TSeries] (val x: Self[TSeries]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[TSeries] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TSeries]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[TSeries] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TSeries] with Other]
-    @scala.inline
-    def withAngleAxis(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angleAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAngleAxis: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angleAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Boolean): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelay(value: Double | js.Function): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelay: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDelayUpdate(value: Double | js.Function): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDelayUpdate: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDuration(value: Double): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDuration: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationDurationUpdate(value: Double | js.Function): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationDurationUpdate: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasing(value: String): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasing: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationEasingUpdate(value: String): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationEasingUpdate: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimationThreshold(value: Double): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimationThreshold: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAria(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAria: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aria")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisPointer(value: AxisPointer): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisPointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisPointer: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisPointer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: String): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlendMode(value: String): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlendMode: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrush(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brush")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrush: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brush")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendar(value: Calendar | js.Array[Calendar]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendar: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: js.Array[String]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataZoom(value: js.Array[DataZoom]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataZoom: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataset(value: Dataset | js.Array[Dataset]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataset: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGeo(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeo: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGraphic(value: js.Object | js.Array[js.Object]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGraphic: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrid(value: Grid | js.Array[Grid]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrid: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHoverLayerThreshold(value: Double): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverLayerThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverLayerThreshold: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverLayerThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLegend(value: Legend): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLegend: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallel(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallel: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParallelAxis(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParallelAxis: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parallelAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolar(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolar: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("polar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressive(value: Double): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressive: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgressiveThreshold(value: Double): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgressiveThreshold: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadar(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadar: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRadiusAxis(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRadiusAxis: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeries(value: js.Array[TSeries]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeries: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleAxis(value: SingleAxis | js.Array[SingleAxis]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleAxis: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyle(value: BaseTextStyle): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyle: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeline(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeline: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: EChartTitleOption | js.Array[EChartTitleOption]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbox(value: js.Object): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbox: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooltip(value: Tooltip): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooltip: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseUTC(value: Boolean): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useUTC")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseUTC: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useUTC")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisualMap(value: js.Array[typingsSlinky.echarts.echarts.EChartOption.VisualMap]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisualMap: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visualMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXAxis(value: XAxis | js.Array[XAxis]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXAxis: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYAxis(value: YAxis | js.Array[YAxis]): Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYAxis: Self[TSeries] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

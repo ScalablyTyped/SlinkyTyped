@@ -1,13 +1,13 @@
 package typingsSlinky.rollup
 
-import typingsSlinky.rollup.mod.ResolveIdResult
+import typingsSlinky.rollup.mod._ResolveIdResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object rollupBooleans {
   @js.native
-  sealed trait `false` extends ResolveIdResult
+  sealed trait `false` extends _ResolveIdResult
   
   @js.native
   sealed trait `true` extends js.Object

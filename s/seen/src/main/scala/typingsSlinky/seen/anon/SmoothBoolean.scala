@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SmoothBoolean extends js.Object {
-  var smooth: js.UndefOr[Boolean] = js.native
+  var smooth: js.UndefOr[Boolean] = js.undefined
 }
 
 object SmoothBoolean {
   @scala.inline
-  def apply(): SmoothBoolean = {
+  def apply(smooth: js.UndefOr[Boolean] = js.undefined): SmoothBoolean = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(smooth)) __obj.updateDynamic("smooth")(smooth.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmoothBoolean]
   }
-  @scala.inline
-  implicit class SmoothBooleanOps[Self <: SmoothBoolean] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSmooth(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSmooth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

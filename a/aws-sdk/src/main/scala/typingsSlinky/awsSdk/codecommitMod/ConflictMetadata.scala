@@ -50,137 +50,30 @@ trait ConflictMetadata extends js.Object {
 
 object ConflictMetadata {
   @scala.inline
-  def apply(): ConflictMetadata = {
+  def apply(
+    contentConflict: js.UndefOr[IsContentConflict] = js.undefined,
+    fileModeConflict: js.UndefOr[IsFileModeConflict] = js.undefined,
+    fileModes: FileModes = null,
+    filePath: Path = null,
+    fileSizes: FileSizes = null,
+    isBinaryFile: IsBinaryFile = null,
+    mergeOperations: MergeOperations = null,
+    numberOfConflicts: js.UndefOr[NumberOfConflicts] = js.undefined,
+    objectTypeConflict: js.UndefOr[IsObjectTypeConflict] = js.undefined,
+    objectTypes: ObjectTypes = null
+  ): ConflictMetadata = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(contentConflict)) __obj.updateDynamic("contentConflict")(contentConflict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(fileModeConflict)) __obj.updateDynamic("fileModeConflict")(fileModeConflict.get.asInstanceOf[js.Any])
+    if (fileModes != null) __obj.updateDynamic("fileModes")(fileModes.asInstanceOf[js.Any])
+    if (filePath != null) __obj.updateDynamic("filePath")(filePath.asInstanceOf[js.Any])
+    if (fileSizes != null) __obj.updateDynamic("fileSizes")(fileSizes.asInstanceOf[js.Any])
+    if (isBinaryFile != null) __obj.updateDynamic("isBinaryFile")(isBinaryFile.asInstanceOf[js.Any])
+    if (mergeOperations != null) __obj.updateDynamic("mergeOperations")(mergeOperations.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfConflicts)) __obj.updateDynamic("numberOfConflicts")(numberOfConflicts.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(objectTypeConflict)) __obj.updateDynamic("objectTypeConflict")(objectTypeConflict.get.asInstanceOf[js.Any])
+    if (objectTypes != null) __obj.updateDynamic("objectTypes")(objectTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConflictMetadata]
   }
-  @scala.inline
-  implicit class ConflictMetadataOps[Self <: ConflictMetadata] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentConflict(value: IsContentConflict): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileModeConflict(value: IsFileModeConflict): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileModeConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileModeConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileModeConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileModes(value: FileModes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileModes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileModes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileModes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilePath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileSizes(value: FileSizes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsBinaryFile(value: IsBinaryFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBinaryFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsBinaryFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isBinaryFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergeOperations(value: MergeOperations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergeOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeOperations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfConflicts(value: NumberOfConflicts): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfConflicts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfConflicts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfConflicts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectTypeConflict(value: IsObjectTypeConflict): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectTypeConflict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectTypeConflict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectTypeConflict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectTypes(value: ObjectTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

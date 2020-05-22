@@ -11,6 +11,10 @@ trait CreateSimulationJobRequest extends js.Object {
     */
   var clientRequestToken: js.UndefOr[ClientRequestToken] = js.native
   /**
+    * Compute information for the simulation job.
+    */
+  var compute: js.UndefOr[Compute] = js.native
+  /**
     * Specify data sources to mount read-only files from S3 into your simulation. These files are available under /opt/robomaker/datasources/data_source_name.   There is a limit of 100 files and a combined size of 25GB for all DataSourceConfig objects.  
     */
   var dataSources: js.UndefOr[DataSourceConfigs] = js.native
@@ -54,137 +58,32 @@ trait CreateSimulationJobRequest extends js.Object {
 
 object CreateSimulationJobRequest {
   @scala.inline
-  def apply(iamRole: IamRole, maxJobDurationInSeconds: JobDuration): CreateSimulationJobRequest = {
+  def apply(
+    iamRole: IamRole,
+    maxJobDurationInSeconds: JobDuration,
+    clientRequestToken: ClientRequestToken = null,
+    compute: Compute = null,
+    dataSources: DataSourceConfigs = null,
+    failureBehavior: FailureBehavior = null,
+    loggingConfig: LoggingConfig = null,
+    outputLocation: OutputLocation = null,
+    robotApplications: RobotApplicationConfigs = null,
+    simulationApplications: SimulationApplicationConfigs = null,
+    tags: TagMap = null,
+    vpcConfig: VPCConfig = null
+  ): CreateSimulationJobRequest = {
     val __obj = js.Dynamic.literal(iamRole = iamRole.asInstanceOf[js.Any], maxJobDurationInSeconds = maxJobDurationInSeconds.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
+    if (compute != null) __obj.updateDynamic("compute")(compute.asInstanceOf[js.Any])
+    if (dataSources != null) __obj.updateDynamic("dataSources")(dataSources.asInstanceOf[js.Any])
+    if (failureBehavior != null) __obj.updateDynamic("failureBehavior")(failureBehavior.asInstanceOf[js.Any])
+    if (loggingConfig != null) __obj.updateDynamic("loggingConfig")(loggingConfig.asInstanceOf[js.Any])
+    if (outputLocation != null) __obj.updateDynamic("outputLocation")(outputLocation.asInstanceOf[js.Any])
+    if (robotApplications != null) __obj.updateDynamic("robotApplications")(robotApplications.asInstanceOf[js.Any])
+    if (simulationApplications != null) __obj.updateDynamic("simulationApplications")(simulationApplications.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (vpcConfig != null) __obj.updateDynamic("vpcConfig")(vpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSimulationJobRequest]
   }
-  @scala.inline
-  implicit class CreateSimulationJobRequestOps[Self <: CreateSimulationJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIamRole(value: IamRole): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxJobDurationInSeconds(value: JobDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxJobDurationInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataSources(value: DataSourceConfigs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailureBehavior(value: FailureBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailureBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failureBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoggingConfig(value: LoggingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoggingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutputLocation(value: OutputLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRobotApplications(value: RobotApplicationConfigs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("robotApplications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRobotApplications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("robotApplications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimulationApplications(value: SimulationApplicationConfigs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplications")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimulationApplications: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplications")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpcConfig(value: VPCConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpcConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

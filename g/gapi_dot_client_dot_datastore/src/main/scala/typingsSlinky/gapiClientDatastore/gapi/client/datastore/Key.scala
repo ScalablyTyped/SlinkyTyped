@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Key extends js.Object {
   /**
     * Entities are partitioned into subsets, currently identified by a project
     * ID and namespace ID.
     * Queries are scoped to a single partition.
     */
-  var partitionId: js.UndefOr[PartitionId] = js.native
+  var partitionId: js.UndefOr[PartitionId] = js.undefined
   /**
     * The entity path.
     * An entity path consists of one or more elements composed of a kind and a
@@ -30,46 +29,16 @@ trait Key extends js.Object {
     *
     * A path can never be empty, and a path can have at most 100 elements.
     */
-  var path: js.UndefOr[js.Array[PathElement]] = js.native
+  var path: js.UndefOr[js.Array[PathElement]] = js.undefined
 }
 
 object Key {
   @scala.inline
-  def apply(): Key = {
+  def apply(partitionId: PartitionId = null, path: js.Array[PathElement] = null): Key = {
     val __obj = js.Dynamic.literal()
+    if (partitionId != null) __obj.updateDynamic("partitionId")(partitionId.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[Key]
   }
-  @scala.inline
-  implicit class KeyOps[Self <: Key] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPartitionId(value: PartitionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: js.Array[PathElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

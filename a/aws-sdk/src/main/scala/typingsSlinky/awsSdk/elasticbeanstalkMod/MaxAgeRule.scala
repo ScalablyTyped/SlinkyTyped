@@ -22,47 +22,15 @@ trait MaxAgeRule extends js.Object {
 
 object MaxAgeRule {
   @scala.inline
-  def apply(Enabled: BoxedBoolean): MaxAgeRule = {
+  def apply(
+    Enabled: BoxedBoolean,
+    DeleteSourceFromS3: js.UndefOr[BoxedBoolean] = js.undefined,
+    MaxAgeInDays: js.UndefOr[BoxedInt] = js.undefined
+  ): MaxAgeRule = {
     val __obj = js.Dynamic.literal(Enabled = Enabled.asInstanceOf[js.Any])
+    if (!js.isUndefined(DeleteSourceFromS3)) __obj.updateDynamic("DeleteSourceFromS3")(DeleteSourceFromS3.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxAgeInDays)) __obj.updateDynamic("MaxAgeInDays")(MaxAgeInDays.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxAgeRule]
   }
-  @scala.inline
-  implicit class MaxAgeRuleOps[Self <: MaxAgeRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeleteSourceFromS3(value: BoxedBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteSourceFromS3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteSourceFromS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteSourceFromS3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAgeInDays(value: BoxedInt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAgeInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAgeInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAgeInDays")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

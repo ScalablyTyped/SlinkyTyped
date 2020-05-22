@@ -1,12 +1,14 @@
 package typingsSlinky.reactNative.mod.Animated
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.react.mod.ComponentPropsWithRef
+import typingsSlinky.reactNative.anon.TypeofImage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-native", "Animated.Image")
 @js.native
-object Image
-  extends TopLevel[AnimatedComponent[typingsSlinky.reactNative.mod.Image]]
+object Image extends TopLevel[ReactComponentClass[AnimatedProps[ComponentPropsWithRef[TypeofImage]]]]
 

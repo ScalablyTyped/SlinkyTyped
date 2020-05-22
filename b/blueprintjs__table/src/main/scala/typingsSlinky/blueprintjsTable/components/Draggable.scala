@@ -3,7 +3,7 @@ package typingsSlinky.blueprintjsTable.components
 import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
+import typingsSlinky.blueprintjsTable.dragTypesMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.draggableMod.IDraggableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

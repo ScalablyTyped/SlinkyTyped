@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoscalingPolicyCustomMetricUtilization extends js.Object {
   /**
     * The identifier (type) of the Stackdriver Monitoring metric. The metric cannot have negative values and should be a utilization metric, which means that
@@ -12,70 +11,33 @@ trait AutoscalingPolicyCustomMetricUtilization extends js.Object {
     *
     * The metric must have a value type of INT64 or DOUBLE.
     */
-  var metric: js.UndefOr[String] = js.native
+  var metric: js.UndefOr[String] = js.undefined
   /**
     * The target value of the metric that autoscaler should maintain. This must be a positive value.
     *
     * For example, a good metric to use as a utilization_target is compute.googleapis.com/instance/network/received_bytes_count. The autoscaler will work to
     * keep this value constant for each of the instances.
     */
-  var utilizationTarget: js.UndefOr[Double] = js.native
+  var utilizationTarget: js.UndefOr[Double] = js.undefined
   /**
     * Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE. If not
     * specified, the default is GAUGE.
     */
-  var utilizationTargetType: js.UndefOr[String] = js.native
+  var utilizationTargetType: js.UndefOr[String] = js.undefined
 }
 
 object AutoscalingPolicyCustomMetricUtilization {
   @scala.inline
-  def apply(): AutoscalingPolicyCustomMetricUtilization = {
+  def apply(
+    metric: String = null,
+    utilizationTarget: js.UndefOr[Double] = js.undefined,
+    utilizationTargetType: String = null
+  ): AutoscalingPolicyCustomMetricUtilization = {
     val __obj = js.Dynamic.literal()
+    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
+    if (!js.isUndefined(utilizationTarget)) __obj.updateDynamic("utilizationTarget")(utilizationTarget.get.asInstanceOf[js.Any])
+    if (utilizationTargetType != null) __obj.updateDynamic("utilizationTargetType")(utilizationTargetType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoscalingPolicyCustomMetricUtilization]
   }
-  @scala.inline
-  implicit class AutoscalingPolicyCustomMetricUtilizationOps[Self <: AutoscalingPolicyCustomMetricUtilization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetric(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtilizationTarget(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtilizationTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUtilizationTargetType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTargetType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUtilizationTargetType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTargetType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

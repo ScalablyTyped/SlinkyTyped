@@ -4,30 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Parent extends js.Object {
-  var parent: String = js.native
+  var parent: String | Null
 }
 
 object Parent {
   @scala.inline
-  def apply(parent: String): Parent = {
+  def apply(parent: String = null): Parent = {
     val __obj = js.Dynamic.literal(parent = parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Parent]
   }
-  @scala.inline
-  implicit class ParentOps[Self <: Parent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withParent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

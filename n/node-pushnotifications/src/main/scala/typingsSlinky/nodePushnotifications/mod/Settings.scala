@@ -10,121 +10,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Settings extends js.Object {
   /** Amazon Device Messaging */
-  var adm: js.UndefOr[Clientid] = js.native
+  var adm: js.UndefOr[Clientid] = js.undefined
   /** Apple Push Notifications */
-  var apn: js.UndefOr[Address] = js.native
+  var apn: js.UndefOr[Address] = js.undefined
   /** Google Cloud Messaging  */
-  var gcm: js.UndefOr[Id] = js.native
+  var gcm: js.UndefOr[Id] = js.undefined
   /** Always use FCM? */
-  var isAlwaysUseFCM: js.UndefOr[Boolean] = js.native
+  var isAlwaysUseFCM: js.UndefOr[Boolean] = js.undefined
   /** Microsoft Push Notification Service */
-  var mpns: js.UndefOr[Options] = js.native
+  var mpns: js.UndefOr[Options] = js.undefined
   /** Web */
-  var web: js.UndefOr[RequestOptions] = js.native
+  var web: js.UndefOr[RequestOptions] = js.undefined
   /** Windows Push Notifications */
-  var wns: js.UndefOr[AccessToken] = js.native
+  var wns: js.UndefOr[AccessToken] = js.undefined
 }
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    adm: Clientid = null,
+    apn: Address = null,
+    gcm: Id = null,
+    isAlwaysUseFCM: js.UndefOr[Boolean] = js.undefined,
+    mpns: Options = null,
+    web: RequestOptions = null,
+    wns: AccessToken = null
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (adm != null) __obj.updateDynamic("adm")(adm.asInstanceOf[js.Any])
+    if (apn != null) __obj.updateDynamic("apn")(apn.asInstanceOf[js.Any])
+    if (gcm != null) __obj.updateDynamic("gcm")(gcm.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAlwaysUseFCM)) __obj.updateDynamic("isAlwaysUseFCM")(isAlwaysUseFCM.get.asInstanceOf[js.Any])
+    if (mpns != null) __obj.updateDynamic("mpns")(mpns.asInstanceOf[js.Any])
+    if (web != null) __obj.updateDynamic("web")(web.asInstanceOf[js.Any])
+    if (wns != null) __obj.updateDynamic("wns")(wns.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdm(value: Clientid): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApn(value: Address): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGcm(value: Id): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGcm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAlwaysUseFCM(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlwaysUseFCM")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAlwaysUseFCM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlwaysUseFCM")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMpns(value: Options): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMpns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mpns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeb(value: RequestOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("web")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("web")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWns(value: AccessToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

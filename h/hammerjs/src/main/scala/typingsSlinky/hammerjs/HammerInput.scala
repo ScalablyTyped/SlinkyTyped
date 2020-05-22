@@ -8,57 +8,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HammerInput extends js.Object {
   /** Angle moved. */
-  var angle: Double = js.native
+  var angle: Double
   /** Center position for multi-touch, or just the single pointer. */
-  var center: HammerPoint = js.native
+  var center: HammerPoint
   /** Array with all new/moved/lost pointers. */
-  var changedPointers: js.Array[_] = js.native
+  var changedPointers: js.Array[_]
   /** Total time in ms since the first input. */
-  var deltaTime: Double = js.native
+  var deltaTime: Double
   /** Movement of the X axis. */
-  var deltaX: Double = js.native
+  var deltaX: Double
   /** Movement of the Y axis. */
-  var deltaY: Double = js.native
+  var deltaY: Double
   /** Direction moved. Matches the DIRECTION constants. */
-  var direction: Double = js.native
+  var direction: Double
   /** Distance moved. */
-  var distance: Double = js.native
+  var distance: Double
   /** Event type, matches the INPUT constants. */
-  var eventType: Double = js.native
+  var eventType: Double
   /** true when the final (last) input. */
-  var isFinal: Boolean = js.native
+  var isFinal: Boolean
   /** true when the first input. */
-  var isFirst: Boolean = js.native
+  var isFirst: Boolean
   /** Direction moved from it's starting point. Matches the DIRECTION constants. */
-  var offsetDirection: Double = js.native
+  var offsetDirection: Double
   /** Primary pointer type, could be touch, mouse, pen or kinect. */
-  var pointerType: String = js.native
+  var pointerType: String
   /** Array with all pointers, including the ended pointers (touchend, mouseup). */
-  var pointers: js.Array[_] = js.native
+  var pointers: js.Array[_]
   /** Reference to the srcEvent.preventDefault() method. Only for experts! */
-  var preventDefault: js.Function = js.native
+  var preventDefault: js.Function
   /** Rotation that has been done when multi-touch. 0 on a single touch. */
-  var rotation: Double = js.native
+  var rotation: Double
   /** Scaling that has been done when multi-touch. 1 on a single touch. */
-  var scale: Double = js.native
+  var scale: Double
   /** Source event object, type TouchEvent, MouseEvent or PointerEvent. */
-  var srcEvent: TouchEvent | MouseEvent | PointerEvent = js.native
+  var srcEvent: TouchEvent | MouseEvent | PointerEvent
   /** Target that received the event. */
-  var target: HTMLElement = js.native
+  var target: HTMLElement
   /** Name of the event. Like panstart. */
-  var `type`: String = js.native
+  var `type`: String
   /** Highest velocityX/Y value. */
-  var velocity: Double = js.native
+  var velocity: Double
   /** Velocity on the X axis, in px/ms. */
-  var velocityX: Double = js.native
+  var velocityX: Double
   /** Velocity on the Y axis, in px/ms */
-  var velocityY: Double = js.native
-  def destroy(): Unit = js.native
-  def handler(): Unit = js.native
-  def init(): Unit = js.native
+  var velocityY: Double
+  def destroy(): Unit
+  def handler(): Unit
+  def init(): Unit
 }
 
 object HammerInput {
@@ -95,187 +94,5 @@ object HammerInput {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HammerInput]
   }
-  @scala.inline
-  implicit class HammerInputOps[Self <: HammerInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCenter(value: HammerPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangedPointers(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedPointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeltaTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeltaX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeltaY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDirection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEventType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHandler(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInit(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withIsFinal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFinal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsFirst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOffsetDirection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointerType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointers(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreventDefault(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRotation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrcEventPointerEvent(value: PointerEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrcEventMouseEvent(value: MouseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrcEventTouchEvent(value: TouchEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSrcEvent(value: TouchEvent | MouseEvent | PointerEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("srcEvent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTarget(value: HTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVelocity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVelocityX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocityX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVelocityY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocityY")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

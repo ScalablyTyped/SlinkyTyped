@@ -6,33 +6,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CADetails extends CreationDetails {
   /**
     * The account number of the bank account. Must be numbers only. Canadian account numbers must be a maximum of 20 digits.
     */
-  var AccountNumber: String = js.native
+  var AccountNumber: String
   /**
     * The name of the bank where the account is held. Must be letters or numbers only and maximum 50 characters long.
     */
-  var BankName: String = js.native
+  var BankName: String
   /**
     * The branch code of the bank where the bank account. Must be numbers only, and 5 digits long
     */
-  var BranchCode: String = js.native
+  var BranchCode: String
   /**
     * The institution number of the bank account. Must be numbers only, and 3 or 4 digits long
     */
-  var InstitutionNumber: String = js.native
+  var InstitutionNumber: String
   /**
     * The address of the owner of the bank account
     */
-  var OwnerAddress: AddressType = js.native
+  var OwnerAddress: AddressType
   /**
     * The name of the owner of the bank account
     */
-  var OwnerName: String = js.native
-  var Type: CA = js.native
+  var OwnerName: String
+  var Type: CA
 }
 
 object CADetails {
@@ -49,55 +48,5 @@ object CADetails {
     val __obj = js.Dynamic.literal(AccountNumber = AccountNumber.asInstanceOf[js.Any], BankName = BankName.asInstanceOf[js.Any], BranchCode = BranchCode.asInstanceOf[js.Any], InstitutionNumber = InstitutionNumber.asInstanceOf[js.Any], OwnerAddress = OwnerAddress.asInstanceOf[js.Any], OwnerName = OwnerName.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[CADetails]
   }
-  @scala.inline
-  implicit class CADetailsOps[Self <: CADetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBankName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BankName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBranchCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BranchCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstitutionNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstitutionNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerAddress(value: AddressType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOwnerName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: CA): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

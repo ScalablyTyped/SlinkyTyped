@@ -32,5 +32,9 @@ class default protected () extends ValidationError {
     schema: typingsSlinky.jsonSchema.mod.JSONSchema7,
     configuration: typingsSlinky.schemaUtils.validateMod.ValidationErrorConfiguration
   ) = this()
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

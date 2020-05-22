@@ -42,113 +42,26 @@ trait WorkflowRun extends js.Object {
 
 object WorkflowRun {
   @scala.inline
-  def apply(): WorkflowRun = {
+  def apply(
+    CompletedOn: js.Date = null,
+    Graph: WorkflowGraph = null,
+    Name: NameString = null,
+    StartedOn: js.Date = null,
+    Statistics: WorkflowRunStatistics = null,
+    Status: WorkflowRunStatus = null,
+    WorkflowRunId: IdString = null,
+    WorkflowRunProperties: WorkflowRunProperties = null
+  ): WorkflowRun = {
     val __obj = js.Dynamic.literal()
+    if (CompletedOn != null) __obj.updateDynamic("CompletedOn")(CompletedOn.asInstanceOf[js.Any])
+    if (Graph != null) __obj.updateDynamic("Graph")(Graph.asInstanceOf[js.Any])
+    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
+    if (StartedOn != null) __obj.updateDynamic("StartedOn")(StartedOn.asInstanceOf[js.Any])
+    if (Statistics != null) __obj.updateDynamic("Statistics")(Statistics.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
+    if (WorkflowRunId != null) __obj.updateDynamic("WorkflowRunId")(WorkflowRunId.asInstanceOf[js.Any])
+    if (WorkflowRunProperties != null) __obj.updateDynamic("WorkflowRunProperties")(WorkflowRunProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkflowRun]
   }
-  @scala.inline
-  implicit class WorkflowRunOps[Self <: WorkflowRun] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompletedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompletedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGraph(value: WorkflowGraph): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Graph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGraph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Graph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartedOn(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartedOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StartedOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatistics(value: WorkflowRunStatistics): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatistics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: WorkflowRunStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkflowRunId(value: IdString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowRunId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkflowRunId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowRunId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkflowRunProperties(value: WorkflowRunProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowRunProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkflowRunProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowRunProperties")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

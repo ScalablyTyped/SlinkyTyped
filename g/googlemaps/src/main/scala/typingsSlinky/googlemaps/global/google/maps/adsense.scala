@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/***** AdSense Library *****/
+// TODO find source documentation
 @JSGlobal("google.maps.adsense")
 @js.native
 object adsense extends js.Object {

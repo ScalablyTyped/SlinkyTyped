@@ -22,6 +22,11 @@ object ThemeProvider {
   }
   
   def withProps[T](p: ThemeProviderProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): Builder[T] = {
+    val __props = js.Dynamic.literal()
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ThemeProviderProps[T]]))
+  }
   implicit def make[T](companion: ThemeProvider.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

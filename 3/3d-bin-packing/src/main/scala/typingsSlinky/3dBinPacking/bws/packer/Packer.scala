@@ -24,34 +24,33 @@ import scala.scalajs.js.annotation._
   * @author Jeongho Nam <http://samchon.org>
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.Entity * / any */ @js.native
-trait Packer extends js.Object {
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.Entity * / any */ trait Packer extends js.Object {
   /**
     * Instances trying to pack into the wrapper.
     */
-  var instanceArray: InstanceArray = js.native
+  var instanceArray: InstanceArray
   /**
     * Candidate wrappers who can contain instances.
     */
-  var wrapperArray: WrapperArray = js.native
+  var wrapperArray: WrapperArray
   /**
     * @inheritdoc
     */
-  def TAG(): String = js.native
+  def TAG(): String
   /**
     * @inheritdoc
     */
   def construct(
     xml: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any
-  ): Unit = js.native
+  ): Unit
   /**
     * Get instanceArray.
     */
-  def getInstanceArray(): InstanceArray = js.native
+  def getInstanceArray(): InstanceArray
   /**
     * Get wrapperArray.
     */
-  def getWrapperArray(): WrapperArray = js.native
+  def getWrapperArray(): WrapperArray
   /**
     * @brief Initialize sequence list (gene_array).
     *
@@ -77,23 +76,23 @@ trait Packer extends js.Object {
     *
     * @return Initial sequence list.
     */
-  /* protected */ def initGenes(): GAWrapperArray = js.native
+  /* protected */ def initGenes(): GAWrapperArray
   /**
     * <p> Deduct
     *
     */
-  def optimize(): WrapperArray = js.native
+  def optimize(): WrapperArray
   /**
     * Try to repack each wrappers to another type.
     *
     * @param $wrappers Wrappers to repack.
     * @return Re-packed wrappers.
     */
-  /* protected */ def repack($wrappers: WrapperArray): WrapperArray = js.native
+  /* protected */ def repack($wrappers: WrapperArray): WrapperArray
   /**
     * @inheritdoc
     */
-  def toXML(): js.Any = js.native
+  def toXML(): js.Any
 }
 
 object Packer {
@@ -113,75 +112,5 @@ object Packer {
     val __obj = js.Dynamic.literal(TAG = js.Any.fromFunction0(TAG), construct = js.Any.fromFunction1(construct), getInstanceArray = js.Any.fromFunction0(getInstanceArray), getWrapperArray = js.Any.fromFunction0(getWrapperArray), initGenes = js.Any.fromFunction0(initGenes), instanceArray = instanceArray.asInstanceOf[js.Any], optimize = js.Any.fromFunction0(optimize), repack = js.Any.fromFunction1(repack), toXML = js.Any.fromFunction0(toXML), wrapperArray = wrapperArray.asInstanceOf[js.Any])
     __obj.asInstanceOf[Packer]
   }
-  @scala.inline
-  implicit class PackerOps[Self <: Packer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTAG(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TAG")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withConstruct(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("construct")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetInstanceArray(value: () => InstanceArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInstanceArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetWrapperArray(value: () => WrapperArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getWrapperArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInitGenes(value: () => GAWrapperArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initGenes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInstanceArray(value: InstanceArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptimize(value: () => WrapperArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRepack(value: WrapperArray => WrapperArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repack")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withToXML(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toXML")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withWrapperArray(value: WrapperArray): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

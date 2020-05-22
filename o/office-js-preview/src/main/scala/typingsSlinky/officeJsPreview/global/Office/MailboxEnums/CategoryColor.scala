@@ -6,14 +6,14 @@ import scala.scalajs.js.annotation._
 
 /**
   * Specifies the category color.
-  * 
+  *
   * **Note**: The actual color depends on how the Outlook client renders it.
   * In this case, the colors noted on each preset are for the Outlook desktop client.
-  * 
+  *
   * [Api set: Mailbox 1.8]
-  * 
+  *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
 @JSGlobal("Office.MailboxEnums.CategoryColor")

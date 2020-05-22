@@ -14,29 +14,10 @@ trait ResourcePath extends js.Object {
 
 object ResourcePath {
   @scala.inline
-  def apply(): ResourcePath = {
+  def apply(Components: ResourcePathComponentList = null): ResourcePath = {
     val __obj = js.Dynamic.literal()
+    if (Components != null) __obj.updateDynamic("Components")(Components.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourcePath]
   }
-  @scala.inline
-  implicit class ResourcePathOps[Self <: ResourcePath] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComponents(value: ResourcePathComponentList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Components")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Components")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

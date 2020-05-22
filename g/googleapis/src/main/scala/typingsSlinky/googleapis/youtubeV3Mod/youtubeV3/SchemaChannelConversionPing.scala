@@ -30,41 +30,11 @@ trait SchemaChannelConversionPing extends js.Object {
 
 object SchemaChannelConversionPing {
   @scala.inline
-  def apply(): SchemaChannelConversionPing = {
+  def apply(context: String = null, conversionUrl: String = null): SchemaChannelConversionPing = {
     val __obj = js.Dynamic.literal()
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (conversionUrl != null) __obj.updateDynamic("conversionUrl")(conversionUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelConversionPing]
   }
-  @scala.inline
-  implicit class SchemaChannelConversionPingOps[Self <: SchemaChannelConversionPing] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConversionUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConversionUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

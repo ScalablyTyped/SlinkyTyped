@@ -22,47 +22,15 @@ trait LambdaFunctionScheduledEventDetails extends js.Object {
 
 object LambdaFunctionScheduledEventDetails {
   @scala.inline
-  def apply(resource: Arn): LambdaFunctionScheduledEventDetails = {
+  def apply(
+    resource: Arn,
+    input: SensitiveData = null,
+    timeoutInSeconds: js.UndefOr[TimeoutInSeconds] = js.undefined
+  ): LambdaFunctionScheduledEventDetails = {
     val __obj = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any])
+    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutInSeconds)) __obj.updateDynamic("timeoutInSeconds")(timeoutInSeconds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaFunctionScheduledEventDetails]
   }
-  @scala.inline
-  implicit class LambdaFunctionScheduledEventDetailsOps[Self <: LambdaFunctionScheduledEventDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResource(value: Arn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: SensitiveData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutInSeconds(value: TimeoutInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

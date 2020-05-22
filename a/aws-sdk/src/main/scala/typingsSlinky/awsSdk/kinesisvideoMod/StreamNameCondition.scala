@@ -18,41 +18,11 @@ trait StreamNameCondition extends js.Object {
 
 object StreamNameCondition {
   @scala.inline
-  def apply(): StreamNameCondition = {
+  def apply(ComparisonOperator: ComparisonOperator = null, ComparisonValue: StreamName = null): StreamNameCondition = {
     val __obj = js.Dynamic.literal()
+    if (ComparisonOperator != null) __obj.updateDynamic("ComparisonOperator")(ComparisonOperator.asInstanceOf[js.Any])
+    if (ComparisonValue != null) __obj.updateDynamic("ComparisonValue")(ComparisonValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamNameCondition]
   }
-  @scala.inline
-  implicit class StreamNameConditionOps[Self <: StreamNameCondition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparisonOperator(value: ComparisonOperator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisonOperator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComparisonValue(value: StreamName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComparisonValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonValue")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

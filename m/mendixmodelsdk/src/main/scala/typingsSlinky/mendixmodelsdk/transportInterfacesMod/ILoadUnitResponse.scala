@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILoadUnitResponse extends js.Object {
-  var eventId: Double = js.native
-  var unit: IAbstractUnitJson = js.native
+  var eventId: Double
+  var unit: IAbstractUnitJson
 }
 
 object ILoadUnitResponse {
@@ -16,25 +15,5 @@ object ILoadUnitResponse {
     val __obj = js.Dynamic.literal(eventId = eventId.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILoadUnitResponse]
   }
-  @scala.inline
-  implicit class ILoadUnitResponseOps[Self <: ILoadUnitResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEventId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUnit(value: IAbstractUnitJson): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

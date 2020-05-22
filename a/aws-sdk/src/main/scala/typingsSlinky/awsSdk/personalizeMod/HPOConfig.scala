@@ -22,53 +22,16 @@ trait HPOConfig extends js.Object {
 
 object HPOConfig {
   @scala.inline
-  def apply(): HPOConfig = {
+  def apply(
+    algorithmHyperParameterRanges: HyperParameterRanges = null,
+    hpoObjective: HPOObjective = null,
+    hpoResourceConfig: HPOResourceConfig = null
+  ): HPOConfig = {
     val __obj = js.Dynamic.literal()
+    if (algorithmHyperParameterRanges != null) __obj.updateDynamic("algorithmHyperParameterRanges")(algorithmHyperParameterRanges.asInstanceOf[js.Any])
+    if (hpoObjective != null) __obj.updateDynamic("hpoObjective")(hpoObjective.asInstanceOf[js.Any])
+    if (hpoResourceConfig != null) __obj.updateDynamic("hpoResourceConfig")(hpoResourceConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[HPOConfig]
   }
-  @scala.inline
-  implicit class HPOConfigOps[Self <: HPOConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithmHyperParameterRanges(value: HyperParameterRanges): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmHyperParameterRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlgorithmHyperParameterRanges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmHyperParameterRanges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHpoObjective(value: HPOObjective): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hpoObjective")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHpoObjective: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hpoObjective")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHpoResourceConfig(value: HPOResourceConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hpoResourceConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHpoResourceConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hpoResourceConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

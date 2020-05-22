@@ -52,6 +52,11 @@ object engineInstrumentationMod extends js.Object {
       */
     def captureShaderCompilationTime(value: Boolean): js.Any = js.native
     /**
+      * Releases all held resources
+      */
+    /* CompleteClass */
+    override def dispose(): Unit = js.native
+    /**
       * Gets the perf counter used for GPU frame time
       */
     def gpuFrameTimeCounter: PerfCounter = js.native

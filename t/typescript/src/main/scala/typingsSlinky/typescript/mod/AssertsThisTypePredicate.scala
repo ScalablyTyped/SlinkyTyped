@@ -5,35 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AssertsThisTypePredicate
   extends TypePredicateBase
      with TypePredicate {
   @JSName("kind")
-  var kind_AssertsThisTypePredicate: AssertsThis = js.native
-  var parameterIndex: js.UndefOr[scala.Nothing] = js.native
-  var parameterName: js.UndefOr[scala.Nothing] = js.native
+  var kind_AssertsThisTypePredicate: AssertsThis
+  var parameterIndex: js.UndefOr[scala.Nothing] = js.undefined
+  var parameterName: js.UndefOr[scala.Nothing] = js.undefined
 }
 
 object AssertsThisTypePredicate {
   @scala.inline
-  def apply(kind: AssertsThis): AssertsThisTypePredicate = {
+  def apply(kind: AssertsThis, `type`: Type = null): AssertsThisTypePredicate = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssertsThisTypePredicate]
   }
-  @scala.inline
-  implicit class AssertsThisTypePredicateOps[Self <: AssertsThisTypePredicate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKind(value: AssertsThis): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

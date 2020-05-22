@@ -27,6 +27,10 @@ class Boom[Data] () extends Error {
     * Convenience boolean indicating status code >= 500
     */
   var isServer: Boolean = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
   /**
     * The formatted response
     */

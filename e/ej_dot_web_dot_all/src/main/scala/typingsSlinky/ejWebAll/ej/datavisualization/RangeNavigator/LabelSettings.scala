@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LabelSettings extends js.Object {
   /** Options for customizing the higher level labels in range navigator.
     */
-  var higherLevel: js.UndefOr[LabelSettingsHigherLevel] = js.native
+  var higherLevel: js.UndefOr[LabelSettingsHigherLevel] = js.undefined
   /** Options for customizing the labels in lower level.
     */
-  var lowerLevel: js.UndefOr[LabelSettingsLowerLevel] = js.native
+  var lowerLevel: js.UndefOr[LabelSettingsLowerLevel] = js.undefined
   /** Options for customizing the style of labels in range navigator.
     */
-  var style: js.UndefOr[LabelSettingsStyle] = js.native
+  var style: js.UndefOr[LabelSettingsStyle] = js.undefined
 }
 
 object LabelSettings {
   @scala.inline
-  def apply(): LabelSettings = {
+  def apply(
+    higherLevel: LabelSettingsHigherLevel = null,
+    lowerLevel: LabelSettingsLowerLevel = null,
+    style: LabelSettingsStyle = null
+  ): LabelSettings = {
     val __obj = js.Dynamic.literal()
+    if (higherLevel != null) __obj.updateDynamic("higherLevel")(higherLevel.asInstanceOf[js.Any])
+    if (lowerLevel != null) __obj.updateDynamic("lowerLevel")(lowerLevel.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelSettings]
   }
-  @scala.inline
-  implicit class LabelSettingsOps[Self <: LabelSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHigherLevel(value: LabelSettingsHigherLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("higherLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHigherLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("higherLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowerLevel(value: LabelSettingsLowerLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowerLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: LabelSettingsStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

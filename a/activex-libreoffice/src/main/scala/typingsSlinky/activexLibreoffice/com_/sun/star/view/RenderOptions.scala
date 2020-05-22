@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   * describes the options for Render jobs.
   * @since OOo 1.1.2
   */
-@js.native
 trait RenderOptions extends js.Object {
   /**
     * indicates that the current page is the first page to be exported.
@@ -19,7 +18,7 @@ trait RenderOptions extends js.Object {
     * exported.
     * @see XRenderable
     */
-  var IsFirstPage: Boolean = js.native
+  var IsFirstPage: Boolean
   /**
     * indicates that the current page is the last page to be exported.
     *
@@ -27,7 +26,7 @@ trait RenderOptions extends js.Object {
     * introduced. It is evaluated in the render function and indicates that the current page is the last page to be exported.
     * @see XRenderable
     */
-  var IsLastPage: Boolean = js.native
+  var IsLastPage: Boolean
   /**
     * specifies if empty pages should be skipped.
     *
@@ -35,7 +34,7 @@ trait RenderOptions extends js.Object {
     * the export of hyperlinks, notes, and outlines.
     * @see XRenderable
     */
-  var IsSkipEmptyPages: Boolean = js.native
+  var IsSkipEmptyPages: Boolean
   /**
     * specifies the page ranges to be rendered.
     *
@@ -43,9 +42,9 @@ trait RenderOptions extends js.Object {
     * the export of hyperlinks, notes, and outlines.
     * @see XRenderable
     */
-  var PageRange: String = js.native
+  var PageRange: String
   /** specifies the device the page should be rendered to */
-  var RenderDevice: XDevice = js.native
+  var RenderDevice: XDevice
 }
 
 object RenderOptions {
@@ -60,43 +59,5 @@ object RenderOptions {
     val __obj = js.Dynamic.literal(IsFirstPage = IsFirstPage.asInstanceOf[js.Any], IsLastPage = IsLastPage.asInstanceOf[js.Any], IsSkipEmptyPages = IsSkipEmptyPages.asInstanceOf[js.Any], PageRange = PageRange.asInstanceOf[js.Any], RenderDevice = RenderDevice.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderOptions]
   }
-  @scala.inline
-  implicit class RenderOptionsOps[Self <: RenderOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsFirstPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsFirstPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsLastPage(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLastPage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsSkipEmptyPages(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsSkipEmptyPages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPageRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PageRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRenderDevice(value: XDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RenderDevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

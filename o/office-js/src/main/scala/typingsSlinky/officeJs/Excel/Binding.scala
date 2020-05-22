@@ -24,7 +24,7 @@ trait Binding extends ClientObject {
   var context_Binding: RequestContext = js.native
   /**
     *
-    * Represents binding identifier. Read-only.
+    * Represents binding identifier.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -39,9 +39,9 @@ trait Binding extends ClientObject {
     */
   val onDataChanged: EventHandlers[BindingDataChangedEventArgs] = js.native
   /**
-    * 
+    *
     * Occurs when the selected content in the binding is changed.
-    * 
+    *
     * **Note**: If multiple, discontiguous cells are selected, 
     * `Binding.onSelectionChanged` only reports row and column information for one selection. 
     * Use `Worksheet.onSelectionChanged` for multiple selected ranges.
@@ -53,7 +53,7 @@ trait Binding extends ClientObject {
   val onSelectionChanged: EventHandlers[BindingSelectionChangedEventArgs] = js.native
   /**
     *
-    * Returns the type of the binding. See Excel.BindingType for details. Read-only.
+    * Returns the type of the binding. See Excel.BindingType for details.
     *
     * [Api set: ExcelApi 1.1]
     */

@@ -4,76 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait JvmArgs extends js.Object {
   /**
     * Additional command line options to pass to selenium. For example,
     * if you need to change the browser timeout, use
     * seleniumArgs: ['-browserTimeout=60']
     */
-  var args: js.UndefOr[js.Any] = js.native
+  var args: js.UndefOr[js.Any] = js.undefined
   /**
     * Additional command line jvm options to pass to selenium. For example,
     * if you need to change the browser driver, use
     * jvmArgs: ['-Dwebdriver.ie.driver=IEDriverServer_Win32_2.53.1.exe']
     */
-  var jvmArgs: js.UndefOr[js.Array[String]] = js.native
+  var jvmArgs: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * The port to start the Selenium Server on, or null if the server should
     * find its own unused port.
     */
-  var port: js.UndefOr[js.Any] = js.native
+  var port: js.UndefOr[js.Any] = js.undefined
 }
 
 object JvmArgs {
   @scala.inline
-  def apply(): JvmArgs = {
+  def apply(args: js.Any = null, jvmArgs: js.Array[String] = null, port: js.Any = null): JvmArgs = {
     val __obj = js.Dynamic.literal()
+    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
+    if (jvmArgs != null) __obj.updateDynamic("jvmArgs")(jvmArgs.asInstanceOf[js.Any])
+    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     __obj.asInstanceOf[JvmArgs]
   }
-  @scala.inline
-  implicit class JvmArgsOps[Self <: JvmArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArgs(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJvmArgs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jvmArgs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJvmArgs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jvmArgs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPort(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

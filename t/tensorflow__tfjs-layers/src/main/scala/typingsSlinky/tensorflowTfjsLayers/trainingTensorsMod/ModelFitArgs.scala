@@ -12,13 +12,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ModelFitArgs extends js.Object {
   /**
     * Number of samples per gradient update. If unspecified, it
     * will default to 32.
     */
-  var batchSize: js.UndefOr[Double] = js.native
+  var batchSize: js.UndefOr[Double] = js.undefined
   /**
     * List of callbacks to be called during training.
     * Can have one or more of the following callbacks:
@@ -33,7 +32,7 @@ trait ModelFitArgs extends js.Object {
     *      as in `onBatchEnd()`. Note that `onYield` can skip batches or
     *      epochs. See also docs for `yieldEvery` below.
     */
-  var callbacks: js.UndefOr[(js.Array[BaseCallback | CustomCallbackArgs]) | CustomCallbackArgs] = js.native
+  var callbacks: js.UndefOr[(js.Array[BaseCallback | CustomCallbackArgs]) | CustomCallbackArgs] = js.undefined
   /**
     * Optional object mapping class indices (integers) to
     * a weight (float) to apply to the model's loss for the samples from this
@@ -45,19 +44,19 @@ trait ModelFitArgs extends js.Object {
     * or a object that maps model output names (e.g., `model.outputNames[0]`)
     * to weight objects.
     */
-  var classWeight: js.UndefOr[ClassWeight | js.Array[ClassWeight] | ClassWeightMap] = js.native
+  var classWeight: js.UndefOr[ClassWeight | js.Array[ClassWeight] | ClassWeightMap] = js.undefined
   /**
     * The number of times to iterate over the training data arrays.
     * Note that when used with `initialEpoch`, epochs is the index of the
     * "final epoch". The model is not trained for a number of iterations
     * given by epochs, but merely until the epoch of index epochs is reached.
     */
-  var epochs: js.UndefOr[Double] = js.native
+  var epochs: js.UndefOr[Double] = js.undefined
   /**
     * Epoch at which to start training (useful for resuming a previous training
     * run).
     */
-  var initialEpoch: js.UndefOr[Double] = js.native
+  var initialEpoch: js.UndefOr[Double] = js.undefined
   /**
     * Optional array of the same length as x, containing
     * weights to apply to the model's loss for each sample. In the case of
@@ -66,12 +65,12 @@ trait ModelFitArgs extends js.Object {
     * sample. In this case you should make sure to specify
     * sampleWeightMode="temporal" in compile().
     */
-  var sampleWeight: js.UndefOr[Tensor[Rank]] = js.native
+  var sampleWeight: js.UndefOr[Tensor[Rank]] = js.undefined
   /**
     * Whether to shuffle the training data before each epoch. Has
     * no effect when `stepsPerEpoch` is not `null`.
     */
-  var shuffle: js.UndefOr[Boolean] = js.native
+  var shuffle: js.UndefOr[Boolean] = js.undefined
   /**
     * Total number of steps (batches of samples) before
     * declaring one epoch finished and starting the next epoch. When training
@@ -79,7 +78,7 @@ trait ModelFitArgs extends js.Object {
     * equal to the number of unique samples in your dataset divided by the
     * batch size, or 1 if that cannot be determined.
     */
-  var stepsPerEpoch: js.UndefOr[Double] = js.native
+  var stepsPerEpoch: js.UndefOr[Double] = js.undefined
   /**
     * Data on which to evaluate the loss and any model
     * metrics at the end of each epoch. The model will not be trained on this
@@ -93,7 +92,7 @@ trait ModelFitArgs extends js.Object {
       Tensor[Rank] | js.Array[Tensor[Rank]], 
       Tensor[Rank] | js.Array[Tensor[Rank]]
     ])
-  ] = js.native
+  ] = js.undefined
   /**
     * Float between 0 and 1: fraction of the training data
     * to be used as validation data. The model will set apart this fraction of
@@ -102,12 +101,12 @@ trait ModelFitArgs extends js.Object {
     * The validation data is selected from the last samples in the `x` and `y`
     * data provided, before shuffling.
     */
-  var validationSplit: js.UndefOr[Double] = js.native
+  var validationSplit: js.UndefOr[Double] = js.undefined
   /**
     * Only relevant if `stepsPerEpoch` is specified. Total number of steps
     * (batches of samples) to validate before stopping.
     */
-  var validationSteps: js.UndefOr[Double] = js.native
+  var validationSteps: js.UndefOr[Double] = js.undefined
   /**
     * Verbosity level.
     *
@@ -119,7 +118,7 @@ trait ModelFitArgs extends js.Object {
     *     In the browser: no action. This is the default.
     * 2 - Not implemented yet.
     */
-  var verbose: js.UndefOr[ModelLoggingVerbosity] = js.native
+  var verbose: js.UndefOr[ModelLoggingVerbosity] = js.undefined
   /**
     * Configures the frequency of yielding the main thread to other tasks.
     *
@@ -137,184 +136,45 @@ trait ModelFitArgs extends js.Object {
     *   - `'never'`: never yield. (yielding can still happen through `await
     *      nextFrame()` calls in custom callbacks.)
     */
-  var yieldEvery: js.UndefOr[YieldEveryOptions] = js.native
+  var yieldEvery: js.UndefOr[YieldEveryOptions] = js.undefined
 }
 
 object ModelFitArgs {
   @scala.inline
-  def apply(): ModelFitArgs = {
+  def apply(
+    batchSize: js.UndefOr[Double] = js.undefined,
+    callbacks: (js.Array[BaseCallback | CustomCallbackArgs]) | CustomCallbackArgs = null,
+    classWeight: ClassWeight | js.Array[ClassWeight] | ClassWeightMap = null,
+    epochs: js.UndefOr[Double] = js.undefined,
+    initialEpoch: js.UndefOr[Double] = js.undefined,
+    sampleWeight: Tensor[Rank] = null,
+    shuffle: js.UndefOr[Boolean] = js.undefined,
+    stepsPerEpoch: js.UndefOr[Double] = js.undefined,
+    validationData: (js.Tuple2[Tensor[Rank] | js.Array[Tensor[Rank]], Tensor[Rank] | js.Array[Tensor[Rank]]]) | (js.Tuple3[
+      Tensor[Rank] | js.Array[Tensor[Rank]], 
+      Tensor[Rank] | js.Array[Tensor[Rank]], 
+      Tensor[Rank] | js.Array[Tensor[Rank]]
+    ]) = null,
+    validationSplit: js.UndefOr[Double] = js.undefined,
+    validationSteps: js.UndefOr[Double] = js.undefined,
+    verbose: ModelLoggingVerbosity = null,
+    yieldEvery: YieldEveryOptions = null
+  ): ModelFitArgs = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
+    if (callbacks != null) __obj.updateDynamic("callbacks")(callbacks.asInstanceOf[js.Any])
+    if (classWeight != null) __obj.updateDynamic("classWeight")(classWeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(epochs)) __obj.updateDynamic("epochs")(epochs.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialEpoch)) __obj.updateDynamic("initialEpoch")(initialEpoch.get.asInstanceOf[js.Any])
+    if (sampleWeight != null) __obj.updateDynamic("sampleWeight")(sampleWeight.asInstanceOf[js.Any])
+    if (!js.isUndefined(shuffle)) __obj.updateDynamic("shuffle")(shuffle.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stepsPerEpoch)) __obj.updateDynamic("stepsPerEpoch")(stepsPerEpoch.get.asInstanceOf[js.Any])
+    if (validationData != null) __obj.updateDynamic("validationData")(validationData.asInstanceOf[js.Any])
+    if (!js.isUndefined(validationSplit)) __obj.updateDynamic("validationSplit")(validationSplit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(validationSteps)) __obj.updateDynamic("validationSteps")(validationSteps.get.asInstanceOf[js.Any])
+    if (verbose != null) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
+    if (yieldEvery != null) __obj.updateDynamic("yieldEvery")(yieldEvery.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelFitArgs]
   }
-  @scala.inline
-  implicit class ModelFitArgsOps[Self <: ModelFitArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbacks(value: (js.Array[BaseCallback | CustomCallbackArgs]) | CustomCallbackArgs): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbacks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassWeight(value: ClassWeight | js.Array[ClassWeight] | ClassWeightMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("classWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEpochs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epochs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEpochs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epochs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialEpoch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialEpoch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialEpoch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialEpoch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSampleWeight(value: Tensor[Rank]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSampleWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShuffle(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShuffle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shuffle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStepsPerEpoch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepsPerEpoch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStepsPerEpoch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stepsPerEpoch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationData(
-      value: (js.Tuple2[Tensor[Rank] | js.Array[Tensor[Rank]], Tensor[Rank] | js.Array[Tensor[Rank]]]) | (js.Tuple3[
-          Tensor[Rank] | js.Array[Tensor[Rank]], 
-          Tensor[Rank] | js.Array[Tensor[Rank]], 
-          Tensor[Rank] | js.Array[Tensor[Rank]]
-        ])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationSplit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationSplit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationSplit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidationSteps(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationSteps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValidationSteps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationSteps")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: ModelLoggingVerbosity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYieldEvery(value: YieldEveryOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yieldEvery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYieldEvery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("yieldEvery")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -11,9 +11,23 @@ package object athenaMod {
   type BytesScannedCutoffValue = scala.Double
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.athenaMod.ClientApiVersions
   type ColumnInfoList = js.Array[typingsSlinky.awsSdk.athenaMod.ColumnInfo]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_NULL
+    - typingsSlinky.awsSdk.awsSdkStrings.NULLABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
+    - java.lang.String
+  */
+  type ColumnNullable = typingsSlinky.awsSdk.athenaMod._ColumnNullable | java.lang.String
   type DatabaseString = java.lang.String
   type Date = js.Date
   type DescriptionString = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SSE_S3
+    - typingsSlinky.awsSdk.awsSdkStrings.SSE_KMS
+    - typingsSlinky.awsSdk.awsSdkStrings.CSE_KMS
+    - java.lang.String
+  */
+  type EncryptionOption = typingsSlinky.awsSdk.athenaMod._EncryptionOption | java.lang.String
   type ErrorCode = java.lang.String
   type ErrorMessage = java.lang.String
   type IdempotencyToken = java.lang.String
@@ -31,8 +45,24 @@ package object athenaMod {
   type QueryExecutionId = java.lang.String
   type QueryExecutionIdList = js.Array[typingsSlinky.awsSdk.athenaMod.QueryExecutionId]
   type QueryExecutionList = js.Array[typingsSlinky.awsSdk.athenaMod.QueryExecution]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.QUEUED
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+    - java.lang.String
+  */
+  type QueryExecutionState = typingsSlinky.awsSdk.athenaMod._QueryExecutionState | java.lang.String
   type QueryString = java.lang.String
   type RowList = js.Array[typingsSlinky.awsSdk.athenaMod.Row]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DDL
+    - typingsSlinky.awsSdk.awsSdkStrings.DML
+    - typingsSlinky.awsSdk.awsSdkStrings.UTILITY
+    - java.lang.String
+  */
+  type StatementType = typingsSlinky.awsSdk.athenaMod._StatementType | java.lang.String
   type String = java.lang.String
   type TagKey = java.lang.String
   type TagKeyList = js.Array[typingsSlinky.awsSdk.athenaMod.TagKey]
@@ -43,7 +73,19 @@ package object athenaMod {
   type UnprocessedQueryExecutionIdList = js.Array[typingsSlinky.awsSdk.athenaMod.UnprocessedQueryExecutionId]
   type WorkGroupDescriptionString = java.lang.String
   type WorkGroupName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - java.lang.String
+  */
+  type WorkGroupState = typingsSlinky.awsSdk.athenaMod._WorkGroupState | java.lang.String
   type WorkGroupsList = js.Array[typingsSlinky.awsSdk.athenaMod.WorkGroupSummary]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2017-05-18`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.athenaMod._apiVersion | java.lang.String
   type datumList = js.Array[typingsSlinky.awsSdk.athenaMod.Datum]
   type datumString = java.lang.String
 }

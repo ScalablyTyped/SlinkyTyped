@@ -6,14 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MembersCollection extends js.Object {
   // Modify the members of a contact group owned by the authenticated user.
   // <br>
   // The only system contact groups that can have members added are
   // `contactGroups/myContacts` and `contactGroups/starred`. Other system
   // contact groups are deprecated and can only have contacts removed.
-  def modify(resource: ModifyContactGroupMembersRequest, resourceName: String): ModifyContactGroupMembersResponse = js.native
+  def modify(resource: ModifyContactGroupMembersRequest, resourceName: String): ModifyContactGroupMembersResponse
 }
 
 object MembersCollection {
@@ -22,19 +21,5 @@ object MembersCollection {
     val __obj = js.Dynamic.literal(modify = js.Any.fromFunction2(modify))
     __obj.asInstanceOf[MembersCollection]
   }
-  @scala.inline
-  implicit class MembersCollectionOps[Self <: MembersCollection] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModify(value: (ModifyContactGroupMembersRequest, String) => ModifyContactGroupMembersResponse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modify")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

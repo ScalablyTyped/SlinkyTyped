@@ -4,65 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ProvisionedPlan extends js.Object {
   // For example, 'Enabled'.
-  var capabilityStatus: js.UndefOr[String] = js.native
+  var capabilityStatus: js.UndefOr[String] = js.undefined
   // For example, 'Success'.
-  var provisioningStatus: js.UndefOr[String] = js.native
+  var provisioningStatus: js.UndefOr[String] = js.undefined
   // The name of the service; for example, 'AccessControlS2S'
-  var service: js.UndefOr[String] = js.native
+  var service: js.UndefOr[String] = js.undefined
 }
 
 object ProvisionedPlan {
   @scala.inline
-  def apply(): ProvisionedPlan = {
+  def apply(capabilityStatus: String = null, provisioningStatus: String = null, service: String = null): ProvisionedPlan = {
     val __obj = js.Dynamic.literal()
+    if (capabilityStatus != null) __obj.updateDynamic("capabilityStatus")(capabilityStatus.asInstanceOf[js.Any])
+    if (provisioningStatus != null) __obj.updateDynamic("provisioningStatus")(provisioningStatus.asInstanceOf[js.Any])
+    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionedPlan]
   }
-  @scala.inline
-  implicit class ProvisionedPlanOps[Self <: ProvisionedPlan] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapabilityStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilityStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapabilityStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilityStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provisioningStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withService(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutService: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

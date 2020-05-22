@@ -21,41 +21,11 @@ trait SchemaCreativeGroupAssignment extends js.Object {
 
 object SchemaCreativeGroupAssignment {
   @scala.inline
-  def apply(): SchemaCreativeGroupAssignment = {
+  def apply(creativeGroupId: String = null, creativeGroupNumber: String = null): SchemaCreativeGroupAssignment = {
     val __obj = js.Dynamic.literal()
+    if (creativeGroupId != null) __obj.updateDynamic("creativeGroupId")(creativeGroupId.asInstanceOf[js.Any])
+    if (creativeGroupNumber != null) __obj.updateDynamic("creativeGroupNumber")(creativeGroupNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreativeGroupAssignment]
   }
-  @scala.inline
-  implicit class SchemaCreativeGroupAssignmentOps[Self <: SchemaCreativeGroupAssignment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreativeGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreativeGroupNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreativeGroupNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupNumber")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

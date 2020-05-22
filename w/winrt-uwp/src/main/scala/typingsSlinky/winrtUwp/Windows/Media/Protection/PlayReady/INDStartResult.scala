@@ -6,10 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the StartAsync result that contains the created PlayReady-ND MediaStreamSource instance. */
-@js.native
 trait INDStartResult extends js.Object {
   /** Gets the MediaStreamSource object for the data that the transmitter streams. */
-  var mediaStreamSource: MediaStreamSource = js.native
+  var mediaStreamSource: MediaStreamSource
 }
 
 object INDStartResult {
@@ -18,19 +17,5 @@ object INDStartResult {
     val __obj = js.Dynamic.literal(mediaStreamSource = mediaStreamSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[INDStartResult]
   }
-  @scala.inline
-  implicit class INDStartResultOps[Self <: INDStartResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMediaStreamSource(value: MediaStreamSource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaStreamSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

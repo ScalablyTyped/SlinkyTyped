@@ -7,24 +7,23 @@ import scala.scalajs.js.annotation._
 /**
   * A link in a chain, with direction of flow.
   */
-@js.native
 trait IChainLink extends js.Object {
   /**
     * The endpoints of the path, in absolute coords.
     */
-  var endPoints: js.Array[IPoint] = js.native
+  var endPoints: js.Array[IPoint]
   /**
     * Length of the path.
     */
-  var pathLength: Double = js.native
+  var pathLength: Double
   /**
     * Path flows forwards or reverse.
     */
-  var reversed: Boolean = js.native
+  var reversed: Boolean
   /**
     * Reference to the path.
     */
-  var walkedPath: IWalkPath = js.native
+  var walkedPath: IWalkPath
 }
 
 object IChainLink {
@@ -33,37 +32,5 @@ object IChainLink {
     val __obj = js.Dynamic.literal(endPoints = endPoints.asInstanceOf[js.Any], pathLength = pathLength.asInstanceOf[js.Any], reversed = reversed.asInstanceOf[js.Any], walkedPath = walkedPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChainLink]
   }
-  @scala.inline
-  implicit class IChainLinkOps[Self <: IChainLink] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEndPoints(value: js.Array[IPoint]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endPoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPathLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReversed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWalkedPath(value: IWalkPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("walkedPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

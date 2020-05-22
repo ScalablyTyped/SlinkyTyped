@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Events extends js.Object {
   @JSName("VBIDE.Events_typekey")
-  var VBIDEDotEvents_typekey: Events = js.native
-  def CommandBarEvents(CommandBarControl: js.Any): typingsSlinky.activexVbide.VBIDE.CommandBarEvents = js.native
-  def ReferencesEvents(VBProject: VBProject): typingsSlinky.activexVbide.VBIDE.ReferencesEvents = js.native
+  var VBIDEDotEvents_typekey: Events
+  def CommandBarEvents(CommandBarControl: js.Any): typingsSlinky.activexVbide.VBIDE.CommandBarEvents
+  def ReferencesEvents(VBProject: VBProject): typingsSlinky.activexVbide.VBIDE.ReferencesEvents
 }
 
 object Events {
@@ -23,31 +22,5 @@ object Events {
     __obj.updateDynamic("VBIDE.Events_typekey")(VBIDEDotEvents_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Events]
   }
-  @scala.inline
-  implicit class EventsOps[Self <: Events] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommandBarEvents(value: js.Any => CommandBarEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandBarEvents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReferencesEvents(value: VBProject => ReferencesEvents): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferencesEvents")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withVBIDEDotEvents_typekey(value: Events): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VBIDE.Events_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

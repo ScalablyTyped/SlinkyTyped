@@ -22,41 +22,14 @@ trait ReplaceRouteTableAssociationRequest extends js.Object {
 
 object ReplaceRouteTableAssociationRequest {
   @scala.inline
-  def apply(AssociationId: RouteTableAssociationId, RouteTableId: RouteTableId): ReplaceRouteTableAssociationRequest = {
+  def apply(
+    AssociationId: RouteTableAssociationId,
+    RouteTableId: RouteTableId,
+    DryRun: js.UndefOr[Boolean] = js.undefined
+  ): ReplaceRouteTableAssociationRequest = {
     val __obj = js.Dynamic.literal(AssociationId = AssociationId.asInstanceOf[js.Any], RouteTableId = RouteTableId.asInstanceOf[js.Any])
+    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplaceRouteTableAssociationRequest]
   }
-  @scala.inline
-  implicit class ReplaceRouteTableAssociationRequestOps[Self <: ReplaceRouteTableAssociationRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssociationId(value: RouteTableAssociationId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRouteTableId(value: RouteTableId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RouteTableId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDryRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDryRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,47 +22,15 @@ trait ListTrafficPolicyVersionsRequest extends js.Object {
 
 object ListTrafficPolicyVersionsRequest {
   @scala.inline
-  def apply(Id: TrafficPolicyId): ListTrafficPolicyVersionsRequest = {
+  def apply(
+    Id: TrafficPolicyId,
+    MaxItems: PageMaxItems = null,
+    TrafficPolicyVersionMarker: TrafficPolicyVersionMarker = null
+  ): ListTrafficPolicyVersionsRequest = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
+    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
+    if (TrafficPolicyVersionMarker != null) __obj.updateDynamic("TrafficPolicyVersionMarker")(TrafficPolicyVersionMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTrafficPolicyVersionsRequest]
   }
-  @scala.inline
-  implicit class ListTrafficPolicyVersionsRequestOps[Self <: ListTrafficPolicyVersionsRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withId(value: TrafficPolicyId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxItems(value: PageMaxItems): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxItems: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficPolicyVersionMarker(value: TrafficPolicyVersionMarker): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyVersionMarker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficPolicyVersionMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyVersionMarker")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

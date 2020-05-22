@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * depends on the specific user interface element type. Every user interface must be initialized before it can be used.
   * @since OOo 2.0
   */
-@js.native
 trait UIElement
   extends XUIElement
      with XInitialization

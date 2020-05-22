@@ -6,6 +6,7 @@ import typingsSlinky.rxjs.subscriberMod.Subscriber
 import typingsSlinky.rxjs.typesMod.MonoTypeOperatorFunction
 import typingsSlinky.rxjs.typesMod.PartialObserver
 import typingsSlinky.rxjs.typesMod.SchedulerLike
+import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,6 +27,8 @@ object observeOnMod extends js.Object {
     def this(scheduler: SchedulerLike, delay: Double) = this()
     var delay: js.Any = js.native
     var scheduler: js.Any = js.native
+    /* CompleteClass */
+    override def call(subscriber: Subscriber[T], source: js.Any): TeardownLogic = js.native
   }
   
   @js.native

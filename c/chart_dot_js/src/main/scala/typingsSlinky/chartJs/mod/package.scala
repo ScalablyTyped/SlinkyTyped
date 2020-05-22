@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type BorderWidth = scala.Double | typingsSlinky.chartJs.anon.keyinPositionTypenumber
+  type ChartColor = java.lang.String | org.scalajs.dom.raw.CanvasGradient | org.scalajs.dom.raw.CanvasPattern | js.Array[java.lang.String]
   // NOTE: declare plugin options as interface instead of inline '{ [plugin: string]: any }'
   // to allow module augmentation in case some plugins want to strictly type their options.
   type ChartPluginsOptions = org.scalablytyped.runtime.StringDictionary[js.Any]

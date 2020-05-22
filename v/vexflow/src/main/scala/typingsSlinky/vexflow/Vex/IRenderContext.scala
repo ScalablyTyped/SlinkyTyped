@@ -1,5 +1,6 @@
 package typingsSlinky.vexflow.Vex
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.vexflow.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +16,7 @@ trait IRenderContext extends js.Object {
   def bezierCurveTo(x1: Double, y1: Double, x2: Double, y2: Double, x: Double, y: Double): IRenderContext = js.native
   def clear(): Unit = js.native
   def clearRect(x: Double, y: Double, width: Double, height: Double): IRenderContext = js.native
+  def closeGroup(): Unit = js.native
   def closePath(): IRenderContext = js.native
   def fill(): IRenderContext = js.native
   def fillRect(x: Double, y: Double, width: Double, height: Double): IRenderContext = js.native
@@ -26,6 +28,7 @@ trait IRenderContext extends js.Object {
     */
   def measureText(text: String): Width = js.native
   def moveTo(x: Double, y: Double): IRenderContext = js.native
+  def openGroup(): js.UndefOr[Node] = js.native
   def quadraticCurveTo(x1: Double, y1: Double, x2: Double, y2: Double): IRenderContext = js.native
   def resize(width: Double, height: Double): IRenderContext = js.native
   def restore(): IRenderContext = js.native

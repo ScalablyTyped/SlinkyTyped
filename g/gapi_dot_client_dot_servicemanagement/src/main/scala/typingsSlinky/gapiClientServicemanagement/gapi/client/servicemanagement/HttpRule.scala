@@ -4,51 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HttpRule extends js.Object {
   /**
     * Additional HTTP bindings for the selector. Nested bindings must
     * not contain an `additional_bindings` field themselves (that is,
     * the nesting may only be one level deep).
     */
-  var additionalBindings: js.UndefOr[js.Array[HttpRule]] = js.native
+  var additionalBindings: js.UndefOr[js.Array[HttpRule]] = js.undefined
   /**
     * The name of the request field whose value is mapped to the HTTP body, or
     * `&#42;` for mapping all fields not captured by the path pattern to the HTTP
     * body. NOTE: the referred field must not be a repeated field and must be
     * present at the top-level of request message type.
     */
-  var body: js.UndefOr[String] = js.native
+  var body: js.UndefOr[String] = js.undefined
   /**
     * The custom pattern is used for specifying an HTTP method that is not
     * included in the `pattern` field, such as HEAD, or "&#42;" to leave the
     * HTTP method unspecified for this rule. The wild-card rule is useful
     * for services that provide content to Web (HTML) clients.
     */
-  var custom: js.UndefOr[CustomHttpPattern] = js.native
+  var custom: js.UndefOr[CustomHttpPattern] = js.undefined
   /** Used for deleting a resource. */
-  var delete: js.UndefOr[String] = js.native
+  var delete: js.UndefOr[String] = js.undefined
   /** Used for listing and getting information about resources. */
-  var get: js.UndefOr[String] = js.native
+  var get: js.UndefOr[String] = js.undefined
   /**
     * Use this only for Scotty Requests. Do not use this for bytestream methods.
     * For media support, add instead [][google.bytestream.RestByteStream] as an
     * API to your configuration.
     */
-  var mediaDownload: js.UndefOr[MediaDownload] = js.native
+  var mediaDownload: js.UndefOr[MediaDownload] = js.undefined
   /**
     * Use this only for Scotty Requests. Do not use this for media support using
     * Bytestream, add instead
     * [][google.bytestream.RestByteStream] as an API to your
     * configuration for Bytestream methods.
     */
-  var mediaUpload: js.UndefOr[MediaUpload] = js.native
+  var mediaUpload: js.UndefOr[MediaUpload] = js.undefined
   /** Used for updating a resource. */
-  var patch: js.UndefOr[String] = js.native
+  var patch: js.UndefOr[String] = js.undefined
   /** Used for creating a resource. */
-  var post: js.UndefOr[String] = js.native
+  var post: js.UndefOr[String] = js.undefined
   /** Used for updating a resource. */
-  var put: js.UndefOr[String] = js.native
+  var put: js.UndefOr[String] = js.undefined
   /**
     * The name of the response field whose value is mapped to the HTTP body of
     * response. Other response fields are ignored. This field is optional. When
@@ -56,172 +55,45 @@ trait HttpRule extends js.Object {
     * NOTE: the referred field must be not a repeated field and must be present
     * at the top-level of response message type.
     */
-  var responseBody: js.UndefOr[String] = js.native
+  var responseBody: js.UndefOr[String] = js.undefined
   /**
     * Selects methods to which this rule applies.
     *
     * Refer to selector for syntax details.
     */
-  var selector: js.UndefOr[String] = js.native
+  var selector: js.UndefOr[String] = js.undefined
 }
 
 object HttpRule {
   @scala.inline
-  def apply(): HttpRule = {
+  def apply(
+    additionalBindings: js.Array[HttpRule] = null,
+    body: String = null,
+    custom: CustomHttpPattern = null,
+    delete: String = null,
+    get: String = null,
+    mediaDownload: MediaDownload = null,
+    mediaUpload: MediaUpload = null,
+    patch: String = null,
+    post: String = null,
+    put: String = null,
+    responseBody: String = null,
+    selector: String = null
+  ): HttpRule = {
     val __obj = js.Dynamic.literal()
+    if (additionalBindings != null) __obj.updateDynamic("additionalBindings")(additionalBindings.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
+    if (get != null) __obj.updateDynamic("get")(get.asInstanceOf[js.Any])
+    if (mediaDownload != null) __obj.updateDynamic("mediaDownload")(mediaDownload.asInstanceOf[js.Any])
+    if (mediaUpload != null) __obj.updateDynamic("mediaUpload")(mediaUpload.asInstanceOf[js.Any])
+    if (patch != null) __obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
+    if (post != null) __obj.updateDynamic("post")(post.asInstanceOf[js.Any])
+    if (put != null) __obj.updateDynamic("put")(put.asInstanceOf[js.Any])
+    if (responseBody != null) __obj.updateDynamic("responseBody")(responseBody.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpRule]
   }
-  @scala.inline
-  implicit class HttpRuleOps[Self <: HttpRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalBindings(value: js.Array[HttpRule]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalBindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalBindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom(value: CustomHttpPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelete(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGet(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaDownload(value: MediaDownload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaDownload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaDownload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaDownload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaUpload(value: MediaUpload): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaUpload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaUpload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaUpload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPatch(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPatch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPut(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseBody(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

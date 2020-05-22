@@ -35,7 +35,7 @@ trait AwsSecurityFinding extends js.Object {
     */
   var FirstObservedAt: js.UndefOr[NonEmptyString] = js.native
   /**
-    * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In various security-findings providers' solutions, this generator can be called a rule, a check, a detector, a plug-in, etc. 
+    * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In various security-findings providers' solutions, this generator can be called a rule, a check, a detector, a plugin, etc. 
     */
   var GeneratorId: NonEmptyString = js.native
   /**
@@ -146,318 +146,48 @@ object AwsSecurityFinding {
     Severity: Severity,
     Title: NonEmptyString,
     Types: TypeList,
-    UpdatedAt: NonEmptyString
+    UpdatedAt: NonEmptyString,
+    Compliance: Compliance = null,
+    Confidence: js.UndefOr[Integer] = js.undefined,
+    Criticality: js.UndefOr[Integer] = js.undefined,
+    FirstObservedAt: NonEmptyString = null,
+    LastObservedAt: NonEmptyString = null,
+    Malware: MalwareList = null,
+    Network: Network = null,
+    Note: Note = null,
+    Process: ProcessDetails = null,
+    ProductFields: FieldMap = null,
+    RecordState: RecordState = null,
+    RelatedFindings: RelatedFindingList = null,
+    Remediation: Remediation = null,
+    SourceUrl: NonEmptyString = null,
+    ThreatIntelIndicators: ThreatIntelIndicatorList = null,
+    UserDefinedFields: FieldMap = null,
+    VerificationState: VerificationState = null,
+    Workflow: Workflow = null,
+    WorkflowState: WorkflowState = null
   ): AwsSecurityFinding = {
     val __obj = js.Dynamic.literal(AwsAccountId = AwsAccountId.asInstanceOf[js.Any], CreatedAt = CreatedAt.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], GeneratorId = GeneratorId.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], ProductArn = ProductArn.asInstanceOf[js.Any], Resources = Resources.asInstanceOf[js.Any], SchemaVersion = SchemaVersion.asInstanceOf[js.Any], Severity = Severity.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], Types = Types.asInstanceOf[js.Any], UpdatedAt = UpdatedAt.asInstanceOf[js.Any])
+    if (Compliance != null) __obj.updateDynamic("Compliance")(Compliance.asInstanceOf[js.Any])
+    if (!js.isUndefined(Confidence)) __obj.updateDynamic("Confidence")(Confidence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Criticality)) __obj.updateDynamic("Criticality")(Criticality.get.asInstanceOf[js.Any])
+    if (FirstObservedAt != null) __obj.updateDynamic("FirstObservedAt")(FirstObservedAt.asInstanceOf[js.Any])
+    if (LastObservedAt != null) __obj.updateDynamic("LastObservedAt")(LastObservedAt.asInstanceOf[js.Any])
+    if (Malware != null) __obj.updateDynamic("Malware")(Malware.asInstanceOf[js.Any])
+    if (Network != null) __obj.updateDynamic("Network")(Network.asInstanceOf[js.Any])
+    if (Note != null) __obj.updateDynamic("Note")(Note.asInstanceOf[js.Any])
+    if (Process != null) __obj.updateDynamic("Process")(Process.asInstanceOf[js.Any])
+    if (ProductFields != null) __obj.updateDynamic("ProductFields")(ProductFields.asInstanceOf[js.Any])
+    if (RecordState != null) __obj.updateDynamic("RecordState")(RecordState.asInstanceOf[js.Any])
+    if (RelatedFindings != null) __obj.updateDynamic("RelatedFindings")(RelatedFindings.asInstanceOf[js.Any])
+    if (Remediation != null) __obj.updateDynamic("Remediation")(Remediation.asInstanceOf[js.Any])
+    if (SourceUrl != null) __obj.updateDynamic("SourceUrl")(SourceUrl.asInstanceOf[js.Any])
+    if (ThreatIntelIndicators != null) __obj.updateDynamic("ThreatIntelIndicators")(ThreatIntelIndicators.asInstanceOf[js.Any])
+    if (UserDefinedFields != null) __obj.updateDynamic("UserDefinedFields")(UserDefinedFields.asInstanceOf[js.Any])
+    if (VerificationState != null) __obj.updateDynamic("VerificationState")(VerificationState.asInstanceOf[js.Any])
+    if (Workflow != null) __obj.updateDynamic("Workflow")(Workflow.asInstanceOf[js.Any])
+    if (WorkflowState != null) __obj.updateDynamic("WorkflowState")(WorkflowState.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsSecurityFinding]
   }
-  @scala.inline
-  implicit class AwsSecurityFindingOps[Self <: AwsSecurityFinding] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreatedAt(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGeneratorId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratorId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProductArn(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResources(value: ResourceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSchemaVersion(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSeverity(value: Severity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Severity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitle(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: TypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdatedAt(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompliance(value: Compliance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Compliance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompliance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Compliance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfidence(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCriticality(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Criticality")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCriticality: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Criticality")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirstObservedAt(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstObservedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirstObservedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstObservedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastObservedAt(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastObservedAt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastObservedAt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastObservedAt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMalware(value: MalwareList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Malware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMalware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Malware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetwork(value: Network): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Network")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetwork: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Network")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNote(value: Note): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Note")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNote: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Note")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProcess(value: ProcessDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProcess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductFields(value: FieldMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecordState(value: RecordState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecordState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelatedFindings(value: RelatedFindingList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelatedFindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelatedFindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RelatedFindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemediation(value: Remediation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remediation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemediation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Remediation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceUrl(value: NonEmptyString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThreatIntelIndicators(value: ThreatIntelIndicatorList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicators")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThreatIntelIndicators: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreatIntelIndicators")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserDefinedFields(value: FieldMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserDefinedFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDefinedFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerificationState(value: VerificationState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerificationState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerificationState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VerificationState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkflow(value: Workflow): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Workflow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkflow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Workflow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorkflowState(value: WorkflowState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorkflowState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkflowState")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

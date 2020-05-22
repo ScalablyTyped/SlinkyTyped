@@ -6,101 +6,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BindingConfig extends js.Object {
-  var bindingKey: js.UndefOr[String] = js.native
-  var bindingKeys: js.UndefOr[js.Array[String]] = js.native
-  var destination: js.UndefOr[String] = js.native
-  var destinationType: js.UndefOr[queue | exchange] = js.native
-  var options: js.UndefOr[js.Any] = js.native
-  var source: js.UndefOr[String] = js.native
+  var bindingKey: js.UndefOr[String] = js.undefined
+  var bindingKeys: js.UndefOr[js.Array[String]] = js.undefined
+  var destination: js.UndefOr[String] = js.undefined
+  var destinationType: js.UndefOr[queue | exchange] = js.undefined
+  var options: js.UndefOr[js.Any] = js.undefined
+  var source: js.UndefOr[String] = js.undefined
 }
 
 object BindingConfig {
   @scala.inline
-  def apply(): BindingConfig = {
+  def apply(
+    bindingKey: String = null,
+    bindingKeys: js.Array[String] = null,
+    destination: String = null,
+    destinationType: queue | exchange = null,
+    options: js.Any = null,
+    source: String = null
+  ): BindingConfig = {
     val __obj = js.Dynamic.literal()
+    if (bindingKey != null) __obj.updateDynamic("bindingKey")(bindingKey.asInstanceOf[js.Any])
+    if (bindingKeys != null) __obj.updateDynamic("bindingKeys")(bindingKeys.asInstanceOf[js.Any])
+    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
+    if (destinationType != null) __obj.updateDynamic("destinationType")(destinationType.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[BindingConfig]
   }
-  @scala.inline
-  implicit class BindingConfigOps[Self <: BindingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBindingKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindingKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBindingKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindingKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestinationType(value: queue | exchange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDestinationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

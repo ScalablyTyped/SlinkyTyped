@@ -16,4 +16,5 @@ package object mod {
     /* options */ js.UndefOr[typingsSlinky.humps.mod.HumpsOptions], 
     java.lang.String
   ]
+  type OptionOrProcessor = typingsSlinky.humps.mod.HumpsOptions | typingsSlinky.humps.mod.HumpsProcessor
 }

@@ -40,77 +40,20 @@ trait ZookeeperNodeInfo extends js.Object {
 
 object ZookeeperNodeInfo {
   @scala.inline
-  def apply(): ZookeeperNodeInfo = {
+  def apply(
+    AttachedENIId: string = null,
+    ClientVpcIpAddress: string = null,
+    Endpoints: listOfString = null,
+    ZookeeperId: js.UndefOr[double] = js.undefined,
+    ZookeeperVersion: string = null
+  ): ZookeeperNodeInfo = {
     val __obj = js.Dynamic.literal()
+    if (AttachedENIId != null) __obj.updateDynamic("AttachedENIId")(AttachedENIId.asInstanceOf[js.Any])
+    if (ClientVpcIpAddress != null) __obj.updateDynamic("ClientVpcIpAddress")(ClientVpcIpAddress.asInstanceOf[js.Any])
+    if (Endpoints != null) __obj.updateDynamic("Endpoints")(Endpoints.asInstanceOf[js.Any])
+    if (!js.isUndefined(ZookeeperId)) __obj.updateDynamic("ZookeeperId")(ZookeeperId.get.asInstanceOf[js.Any])
+    if (ZookeeperVersion != null) __obj.updateDynamic("ZookeeperVersion")(ZookeeperVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZookeeperNodeInfo]
   }
-  @scala.inline
-  implicit class ZookeeperNodeInfoOps[Self <: ZookeeperNodeInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachedENIId(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedENIId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachedENIId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachedENIId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClientVpcIpAddress(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpcIpAddress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientVpcIpAddress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpcIpAddress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpoints(value: listOfString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoints")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpoints: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoints")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZookeeperId(value: double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZookeeperId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZookeeperId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZookeeperId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZookeeperVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZookeeperVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZookeeperVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ZookeeperVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

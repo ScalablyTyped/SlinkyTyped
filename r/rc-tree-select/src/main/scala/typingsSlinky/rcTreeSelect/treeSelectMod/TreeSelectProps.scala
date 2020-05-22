@@ -1,7 +1,6 @@
 package typingsSlinky.rcTreeSelect.treeSelectMod
 
 import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import typingsSlinky.rcTreeSelect.interfaceMod.ChangeEventExtra
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
@@ -14,24 +13,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SelectProps<Array<DataNode>, ValueType> * / any, 'onChange' | 'mode' | 'menuItemSelectedIcon' | 'dropdownRender' | 'dropdownAlign' | 'backfill' | 'getInputElement' | 'optionLabelProp' | 'tokenSeparators' | 'filterOption'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SelectProps<Array<DataNode>, ValueType> * / any[P]} */ @js.native
-trait TreeSelectProps[ValueType] extends js.Object {
-  var autoClearSearchValue: js.UndefOr[Boolean] = js.native
-  var children: js.UndefOr[TagMod[Any]] = js.native
-  var defaultOpen: js.UndefOr[Boolean] = js.native
-  var defaultValue: js.UndefOr[ValueType] = js.native
-  var disabled: js.UndefOr[Boolean] = js.native
-  var dropdownPopupAlign: js.UndefOr[js.Any] = js.native
+- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SelectProps<Array<DataNode>, ValueType> * / any, 'onChange' | 'mode' | 'menuItemSelectedIcon' | 'dropdownRender' | 'dropdownAlign' | 'backfill' | 'getInputElement' | 'optionLabelProp' | 'tokenSeparators' | 'filterOption'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SelectProps<Array<DataNode>, ValueType> * / any[P]} */ trait TreeSelectProps[ValueType] extends js.Object {
+  var autoClearSearchValue: js.UndefOr[Boolean] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var defaultOpen: js.UndefOr[Boolean] = js.undefined
+  var defaultValue: js.UndefOr[ValueType] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.undefined
+  var dropdownPopupAlign: js.UndefOr[js.Any] = js.undefined
   var filterTreeNode: js.UndefOr[
     Boolean | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FilterFunc<LegacyDataNode> */ js.Any)
-  ] = js.native
+  ] = js.undefined
   /** @deprecated Use `searchValue` instead */
-  var inputValue: js.UndefOr[String] = js.native
-  var loadData: js.UndefOr[js.Function1[/* dataNode */ LegacyDataNode, js.Promise[_]]] = js.native
-  var maxTagCount: js.UndefOr[Double] = js.native
-  var maxTagPlaceholder: js.UndefOr[js.Function1[/* omittedValues */ js.Array[LabelValueType], TagMod[Any]]] = js.native
-  var maxTagTextLength: js.UndefOr[Double] = js.native
-  var multiple: js.UndefOr[Boolean] = js.native
+  var inputValue: js.UndefOr[String] = js.undefined
+  var loadData: js.UndefOr[js.Function1[/* dataNode */ LegacyDataNode, js.Promise[_]]] = js.undefined
+  var maxTagCount: js.UndefOr[Double] = js.undefined
+  var maxTagPlaceholder: js.UndefOr[js.Function1[/* omittedValues */ js.Array[LabelValueType], TagMod[Any]]] = js.undefined
+  var maxTagTextLength: js.UndefOr[Double] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.undefined
   var onChange: js.UndefOr[
     js.Function3[
       /* value */ ValueType, 
@@ -39,565 +37,126 @@ trait TreeSelectProps[ValueType] extends js.Object {
       /* extra */ ChangeEventExtra, 
       Unit
     ]
-  ] = js.native
-  var onSearch: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
-  var onTreeExpand: js.UndefOr[js.Function1[/* expandedKeys */ js.Array[Key], Unit]] = js.native
-  var onTreeLoad: js.UndefOr[js.Function1[/* loadedKeys */ js.Array[Key], Unit]] = js.native
-  var open: js.UndefOr[Boolean] = js.native
-  var placeholder: js.UndefOr[TagMod[Any]] = js.native
+  ] = js.undefined
+  var onSearch: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.undefined
+  var onTreeExpand: js.UndefOr[js.Function1[/* expandedKeys */ js.Array[Key], Unit]] = js.undefined
+  var onTreeLoad: js.UndefOr[js.Function1[/* loadedKeys */ js.Array[Key], Unit]] = js.undefined
+  var open: js.UndefOr[Boolean] = js.undefined
+  var placeholder: js.UndefOr[TagMod[Any]] = js.undefined
   /** `searchPlaceholder` has been removed since search box has been merged into input box */
-  var searchPlaceholder: js.UndefOr[TagMod[Any]] = js.native
-  var searchValue: js.UndefOr[String] = js.native
-  var showArrow: js.UndefOr[Boolean] = js.native
-  var showCheckedStrategy: js.UndefOr[CheckedStrategy] = js.native
-  var showSearch: js.UndefOr[Boolean] = js.native
-  var showTreeIcon: js.UndefOr[Boolean] = js.native
+  var searchPlaceholder: js.UndefOr[TagMod[Any]] = js.undefined
+  var searchValue: js.UndefOr[String] = js.undefined
+  var showArrow: js.UndefOr[Boolean] = js.undefined
+  var showCheckedStrategy: js.UndefOr[CheckedStrategy] = js.undefined
+  var showSearch: js.UndefOr[Boolean] = js.undefined
+  var showTreeIcon: js.UndefOr[Boolean] = js.undefined
   var switcherIcon: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
-  ] = js.native
-  var treeCheckStrictly: js.UndefOr[Boolean] = js.native
-  var treeCheckable: js.UndefOr[Boolean | TagMod[Any]] = js.native
-  var treeData: js.UndefOr[js.Array[DataNode]] = js.native
-  var treeDataSimpleMode: js.UndefOr[Boolean | SimpleModeConfig] = js.native
-  var treeDefaultExpandAll: js.UndefOr[Boolean] = js.native
-  var treeDefaultExpandedKeys: js.UndefOr[js.Array[Key]] = js.native
-  var treeExpandedKeys: js.UndefOr[js.Array[Key]] = js.native
+  ] = js.undefined
+  var treeCheckStrictly: js.UndefOr[Boolean] = js.undefined
+  var treeCheckable: js.UndefOr[Boolean | TagMod[Any]] = js.undefined
+  var treeData: js.UndefOr[js.Array[DataNode]] = js.undefined
+  var treeDataSimpleMode: js.UndefOr[Boolean | SimpleModeConfig] = js.undefined
+  var treeDefaultExpandAll: js.UndefOr[Boolean] = js.undefined
+  var treeDefaultExpandedKeys: js.UndefOr[js.Array[Key]] = js.undefined
+  var treeExpandedKeys: js.UndefOr[js.Array[Key]] = js.undefined
   var treeIcon: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
-  ] = js.native
-  var treeLine: js.UndefOr[Boolean] = js.native
-  var treeLoadedKeys: js.UndefOr[js.Array[Key]] = js.native
-  var treeMotion: js.UndefOr[js.Any] = js.native
-  var treeNodeFilterProp: js.UndefOr[String] = js.native
-  var treeNodeLabelProp: js.UndefOr[String] = js.native
-  var value: js.UndefOr[ValueType] = js.native
+  ] = js.undefined
+  var treeLine: js.UndefOr[Boolean] = js.undefined
+  var treeLoadedKeys: js.UndefOr[js.Array[Key]] = js.undefined
+  var treeMotion: js.UndefOr[js.Any] = js.undefined
+  var treeNodeFilterProp: js.UndefOr[String] = js.undefined
+  var treeNodeLabelProp: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[ValueType] = js.undefined
 }
 
 object TreeSelectProps {
   @scala.inline
-  def apply[ValueType](): TreeSelectProps[ValueType] = {
+  def apply[ValueType](
+    autoClearSearchValue: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    defaultOpen: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: ValueType = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    dropdownPopupAlign: js.Any = null,
+    filterTreeNode: Boolean | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FilterFunc<LegacyDataNode> */ js.Any) = null,
+    inputValue: String = null,
+    loadData: /* dataNode */ LegacyDataNode => js.Promise[_] = null,
+    maxTagCount: js.UndefOr[Double] = js.undefined,
+    maxTagPlaceholder: /* omittedValues */ js.Array[LabelValueType] => TagMod[Any] = null,
+    maxTagTextLength: js.UndefOr[Double] = js.undefined,
+    multiple: js.UndefOr[Boolean] = js.undefined,
+    onChange: (/* value */ ValueType, /* labelList */ js.Array[TagMod[Any]], /* extra */ ChangeEventExtra) => Unit = null,
+    onSearch: /* value */ String => Unit = null,
+    onTreeExpand: /* expandedKeys */ js.Array[Key] => Unit = null,
+    onTreeLoad: /* loadedKeys */ js.Array[Key] => Unit = null,
+    open: js.UndefOr[Boolean] = js.undefined,
+    placeholder: TagMod[Any] = null,
+    searchPlaceholder: TagMod[Any] = null,
+    searchValue: String = null,
+    showArrow: js.UndefOr[Boolean] = js.undefined,
+    showCheckedStrategy: CheckedStrategy = null,
+    showSearch: js.UndefOr[Boolean] = js.undefined,
+    showTreeIcon: js.UndefOr[Boolean] = js.undefined,
+    switcherIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any = null,
+    treeCheckStrictly: js.UndefOr[Boolean] = js.undefined,
+    treeCheckable: Boolean | TagMod[Any] = null,
+    treeData: js.Array[DataNode] = null,
+    treeDataSimpleMode: Boolean | SimpleModeConfig = null,
+    treeDefaultExpandAll: js.UndefOr[Boolean] = js.undefined,
+    treeDefaultExpandedKeys: js.Array[Key] = null,
+    treeExpandedKeys: js.Array[Key] = null,
+    treeIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any = null,
+    treeLine: js.UndefOr[Boolean] = js.undefined,
+    treeLoadedKeys: js.Array[Key] = null,
+    treeMotion: js.Any = null,
+    treeNodeFilterProp: String = null,
+    treeNodeLabelProp: String = null,
+    value: ValueType = null
+  ): TreeSelectProps[ValueType] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoClearSearchValue)) __obj.updateDynamic("autoClearSearchValue")(autoClearSearchValue.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultOpen)) __obj.updateDynamic("defaultOpen")(defaultOpen.get.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (dropdownPopupAlign != null) __obj.updateDynamic("dropdownPopupAlign")(dropdownPopupAlign.asInstanceOf[js.Any])
+    if (filterTreeNode != null) __obj.updateDynamic("filterTreeNode")(filterTreeNode.asInstanceOf[js.Any])
+    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
+    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
+    if (!js.isUndefined(maxTagCount)) __obj.updateDynamic("maxTagCount")(maxTagCount.get.asInstanceOf[js.Any])
+    if (maxTagPlaceholder != null) __obj.updateDynamic("maxTagPlaceholder")(js.Any.fromFunction1(maxTagPlaceholder))
+    if (!js.isUndefined(maxTagTextLength)) __obj.updateDynamic("maxTagTextLength")(maxTagTextLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.get.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
+    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction1(onSearch))
+    if (onTreeExpand != null) __obj.updateDynamic("onTreeExpand")(js.Any.fromFunction1(onTreeExpand))
+    if (onTreeLoad != null) __obj.updateDynamic("onTreeLoad")(js.Any.fromFunction1(onTreeLoad))
+    if (!js.isUndefined(open)) __obj.updateDynamic("open")(open.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
+    if (searchValue != null) __obj.updateDynamic("searchValue")(searchValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.get.asInstanceOf[js.Any])
+    if (showCheckedStrategy != null) __obj.updateDynamic("showCheckedStrategy")(showCheckedStrategy.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSearch)) __obj.updateDynamic("showSearch")(showSearch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTreeIcon)) __obj.updateDynamic("showTreeIcon")(showTreeIcon.get.asInstanceOf[js.Any])
+    if (switcherIcon != null) __obj.updateDynamic("switcherIcon")(switcherIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeCheckStrictly)) __obj.updateDynamic("treeCheckStrictly")(treeCheckStrictly.get.asInstanceOf[js.Any])
+    if (treeCheckable != null) __obj.updateDynamic("treeCheckable")(treeCheckable.asInstanceOf[js.Any])
+    if (treeData != null) __obj.updateDynamic("treeData")(treeData.asInstanceOf[js.Any])
+    if (treeDataSimpleMode != null) __obj.updateDynamic("treeDataSimpleMode")(treeDataSimpleMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeDefaultExpandAll)) __obj.updateDynamic("treeDefaultExpandAll")(treeDefaultExpandAll.get.asInstanceOf[js.Any])
+    if (treeDefaultExpandedKeys != null) __obj.updateDynamic("treeDefaultExpandedKeys")(treeDefaultExpandedKeys.asInstanceOf[js.Any])
+    if (treeExpandedKeys != null) __obj.updateDynamic("treeExpandedKeys")(treeExpandedKeys.asInstanceOf[js.Any])
+    if (treeIcon != null) __obj.updateDynamic("treeIcon")(treeIcon.asInstanceOf[js.Any])
+    if (!js.isUndefined(treeLine)) __obj.updateDynamic("treeLine")(treeLine.get.asInstanceOf[js.Any])
+    if (treeLoadedKeys != null) __obj.updateDynamic("treeLoadedKeys")(treeLoadedKeys.asInstanceOf[js.Any])
+    if (treeMotion != null) __obj.updateDynamic("treeMotion")(treeMotion.asInstanceOf[js.Any])
+    if (treeNodeFilterProp != null) __obj.updateDynamic("treeNodeFilterProp")(treeNodeFilterProp.asInstanceOf[js.Any])
+    if (treeNodeLabelProp != null) __obj.updateDynamic("treeNodeLabelProp")(treeNodeLabelProp.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeSelectProps[ValueType]]
   }
-  @scala.inline
-  implicit class TreeSelectPropsOps[Self[valuetype] <: TreeSelectProps[valuetype], ValueType] (val x: Self[ValueType]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[ValueType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ValueType]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[ValueType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ValueType] with Other]
-    @scala.inline
-    def withAutoClearSearchValue(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClearSearchValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoClearSearchValue: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClearSearchValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChildrenReactElement(value: ReactElement): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: TagMod[Any]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultOpen(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultOpen: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: ValueType): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisabled(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisabled: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDropdownPopupAlign(value: js.Any): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownPopupAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropdownPopupAlign: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownPopupAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilterTreeNode(
-      value: Boolean | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FilterFunc<LegacyDataNode> */ js.Any)
-    ): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterTreeNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilterTreeNode: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filterTreeNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInputValue(value: String): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInputValue: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inputValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadData(value: /* dataNode */ LegacyDataNode => js.Promise[_]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadData")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutLoadData: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTagCount(value: Double): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTagCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTagCount: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTagCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTagPlaceholder(value: /* omittedValues */ js.Array[LabelValueType] => TagMod[Any]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTagPlaceholder")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutMaxTagPlaceholder: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTagPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxTagTextLength(value: Double): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTagTextLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxTagTextLength: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTagTextLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiple(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiple: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnChange(
-      value: (/* value */ ValueType, /* labelList */ js.Array[TagMod[Any]], /* extra */ ChangeEventExtra) => Unit
-    ): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnChange: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSearch(value: /* value */ String => Unit): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearch")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnSearch: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTreeExpand(value: /* expandedKeys */ js.Array[Key] => Unit): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTreeExpand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTreeExpand: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTreeExpand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnTreeLoad(value: /* loadedKeys */ js.Array[Key] => Unit): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTreeLoad")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnTreeLoad: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onTreeLoad")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpen(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpen: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderReactElement(value: ReactElement): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: TagMod[Any]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchPlaceholderReactElement(value: ReactElement): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSearchPlaceholder(value: TagMod[Any]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPlaceholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchPlaceholder: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPlaceholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchValue(value: String): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchValue: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowArrow(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showArrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowArrow: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showArrow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowCheckedStrategy(value: CheckedStrategy): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckedStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowCheckedStrategy: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckedStrategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowSearch(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowSearch: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showSearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTreeIcon(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTreeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTreeIcon: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTreeIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwitcherIcon(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
-    ): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switcherIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwitcherIcon: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("switcherIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeCheckStrictly(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCheckStrictly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeCheckStrictly: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCheckStrictly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeCheckableReactElement(value: ReactElement): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCheckable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTreeCheckable(value: Boolean | TagMod[Any]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCheckable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeCheckable: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeCheckable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeData(value: js.Array[DataNode]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeData: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeDataSimpleMode(value: Boolean | SimpleModeConfig): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDataSimpleMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeDataSimpleMode: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDataSimpleMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeDefaultExpandAll(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDefaultExpandAll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeDefaultExpandAll: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDefaultExpandAll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeDefaultExpandedKeys(value: js.Array[Key]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDefaultExpandedKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeDefaultExpandedKeys: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDefaultExpandedKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeExpandedKeys(value: js.Array[Key]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeExpandedKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeExpandedKeys: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeExpandedKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeIcon(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
-    ): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeIcon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeIcon: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeLine(value: Boolean): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeLine: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeLine")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeLoadedKeys(value: js.Array[Key]): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeLoadedKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeLoadedKeys: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeLoadedKeys")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeMotion(value: js.Any): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeMotion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeMotion: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeMotion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeNodeFilterProp(value: String): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeNodeFilterProp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeNodeFilterProp: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeNodeFilterProp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTreeNodeLabelProp(value: String): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeNodeLabelProp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTreeNodeLabelProp: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("treeNodeLabelProp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: ValueType): Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self[ValueType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

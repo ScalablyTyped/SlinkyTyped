@@ -26,53 +26,16 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1TextSegment extends js.Object {
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1TextSegment {
   @scala.inline
-  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1TextSegment = {
+  def apply(
+    confidence: js.UndefOr[Double] = js.undefined,
+    frames: js.Array[SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame] = null,
+    segment: SchemaGoogleCloudVideointelligenceV1p3beta1VideoSegment = null
+  ): SchemaGoogleCloudVideointelligenceV1p3beta1TextSegment = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(confidence)) __obj.updateDynamic("confidence")(confidence.get.asInstanceOf[js.Any])
+    if (frames != null) __obj.updateDynamic("frames")(frames.asInstanceOf[js.Any])
+    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1TextSegment]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1TextSegmentOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1TextSegment] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfidence(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfidence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrames(value: js.Array[SchemaGoogleCloudVideointelligenceV1p3beta1TextFrame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSegment(value: SchemaGoogleCloudVideointelligenceV1p3beta1VideoSegment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

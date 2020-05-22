@@ -23,7 +23,6 @@ object FilePatternTypes {
   def dom: typingsSlinky.karma.karmaStrings.dom = "dom".asInstanceOf[typingsSlinky.karma.karmaStrings.dom]
   @scala.inline
   def html: typingsSlinky.karma.karmaStrings.html = "html".asInstanceOf[typingsSlinky.karma.karmaStrings.html]
-  @JSName("js")
   @scala.inline
   def js_ : typingsSlinky.karma.karmaStrings.js_ = "js".asInstanceOf[typingsSlinky.karma.karmaStrings.js_]
   @scala.inline

@@ -1,7 +1,7 @@
 package typingsSlinky.bagpipes
 
 import typingsSlinky.bagpipes.mod.Affinity
-import typingsSlinky.bagpipes.mod.FittingType
+import typingsSlinky.bagpipes.mod._FittingType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +14,10 @@ object bagpipesStrings {
   sealed trait sink extends Affinity
   
   @js.native
-  sealed trait system extends FittingType
+  sealed trait system extends _FittingType
   
   @js.native
-  sealed trait user extends FittingType
+  sealed trait user extends _FittingType
   
   @scala.inline
   def hoist: hoist = "hoist".asInstanceOf[hoist]

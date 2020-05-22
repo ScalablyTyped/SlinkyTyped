@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TIcu extends js.Object {
   /**
     * A list of case values which the current ICU will try to match.
     *
     * The last value is `other`
     */
-  var cases: js.Array[_] = js.native
+  var cases: js.Array[_]
   /**
     * An optional array of child/sub ICUs.
     *
@@ -41,23 +40,23 @@ trait TIcu extends js.Object {
     * The reason why it is Array of Arrays is because first array represents the case, and second
     * represents the child ICUs to clean up. There may be more than one child ICUs per case.
     */
-  var childIcus: js.Array[js.Array[Double]] = js.native
+  var childIcus: js.Array[js.Array[Double]]
   /**
     * A set of OpCodes to apply in order to build up the DOM render tree for the ICU
     */
-  var create: js.Array[I18nMutateOpCodes] = js.native
+  var create: js.Array[I18nMutateOpCodes]
   /**
     * A set of OpCodes to apply in order to destroy the DOM render tree for the ICU.
     */
-  var remove: js.Array[I18nMutateOpCodes] = js.native
+  var remove: js.Array[I18nMutateOpCodes]
   /**
     * Defines the ICU type of `select` or `plural`
     */
-  var `type`: IcuType = js.native
+  var `type`: IcuType
   /**
     * A set of OpCodes to apply in order to update the DOM render tree for the ICU bindings.
     */
-  var update: js.Array[I18nUpdateOpCodes] = js.native
+  var update: js.Array[I18nUpdateOpCodes]
   /**
     * Number of slots to allocate in expando for each case.
     *
@@ -65,7 +64,7 @@ trait TIcu extends js.Object {
     * the DOM elements are being created they are stored in the EXPANDO, so that update OpCodes can
     * write into them.
     */
-  var vars: js.Array[Double] = js.native
+  var vars: js.Array[Double]
 }
 
 object TIcu {
@@ -83,55 +82,5 @@ object TIcu {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TIcu]
   }
-  @scala.inline
-  implicit class TIcuOps[Self <: TIcu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCases(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cases")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildIcus(value: js.Array[js.Array[Double]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childIcus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreate(value: js.Array[I18nMutateOpCodes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemove(value: js.Array[I18nMutateOpCodes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: IcuType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdate(value: js.Array[I18nUpdateOpCodes]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVars(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vars")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

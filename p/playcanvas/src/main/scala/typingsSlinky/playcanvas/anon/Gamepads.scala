@@ -7,62 +7,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Gamepads extends js.Object {
-  var gamepads: js.UndefOr[GamePads] = js.native
-  var keyboard: js.UndefOr[Keyboard] = js.native
-  var mouse: js.UndefOr[Mouse] = js.native
+  var gamepads: js.UndefOr[GamePads] = js.undefined
+  var keyboard: js.UndefOr[Keyboard] = js.undefined
+  var mouse: js.UndefOr[Mouse] = js.undefined
 }
 
 object Gamepads {
   @scala.inline
-  def apply(): Gamepads = {
+  def apply(gamepads: GamePads = null, keyboard: Keyboard = null, mouse: Mouse = null): Gamepads = {
     val __obj = js.Dynamic.literal()
+    if (gamepads != null) __obj.updateDynamic("gamepads")(gamepads.asInstanceOf[js.Any])
+    if (keyboard != null) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
+    if (mouse != null) __obj.updateDynamic("mouse")(mouse.asInstanceOf[js.Any])
     __obj.asInstanceOf[Gamepads]
   }
-  @scala.inline
-  implicit class GamepadsOps[Self <: Gamepads] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGamepads(value: GamePads): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gamepads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGamepads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gamepads")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: Keyboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouse(value: Mouse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouse")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

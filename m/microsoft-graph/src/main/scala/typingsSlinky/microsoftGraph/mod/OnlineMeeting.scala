@@ -4,140 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OnlineMeeting extends Entity {
-  var audioConferencing: js.UndefOr[AudioConferencing] = js.native
-  var chatInfo: js.UndefOr[ChatInfo] = js.native
-  var creationDateTime: js.UndefOr[String] = js.native
-  var endDateTime: js.UndefOr[String] = js.native
-  var joinUrl: js.UndefOr[String] = js.native
-  var participants: js.UndefOr[MeetingParticipants] = js.native
-  var startDateTime: js.UndefOr[String] = js.native
-  var subject: js.UndefOr[String] = js.native
-  var videoTeleconferenceId: js.UndefOr[String] = js.native
+  var audioConferencing: js.UndefOr[AudioConferencing] = js.undefined
+  var chatInfo: js.UndefOr[ChatInfo] = js.undefined
+  var creationDateTime: js.UndefOr[String] = js.undefined
+  var endDateTime: js.UndefOr[String] = js.undefined
+  var joinUrl: js.UndefOr[String] = js.undefined
+  var participants: js.UndefOr[MeetingParticipants] = js.undefined
+  var startDateTime: js.UndefOr[String] = js.undefined
+  var subject: js.UndefOr[String] = js.undefined
+  var videoTeleconferenceId: js.UndefOr[String] = js.undefined
 }
 
 object OnlineMeeting {
   @scala.inline
-  def apply(): OnlineMeeting = {
+  def apply(
+    audioConferencing: AudioConferencing = null,
+    chatInfo: ChatInfo = null,
+    creationDateTime: String = null,
+    endDateTime: String = null,
+    id: String = null,
+    joinUrl: String = null,
+    participants: MeetingParticipants = null,
+    startDateTime: String = null,
+    subject: String = null,
+    videoTeleconferenceId: String = null
+  ): OnlineMeeting = {
     val __obj = js.Dynamic.literal()
+    if (audioConferencing != null) __obj.updateDynamic("audioConferencing")(audioConferencing.asInstanceOf[js.Any])
+    if (chatInfo != null) __obj.updateDynamic("chatInfo")(chatInfo.asInstanceOf[js.Any])
+    if (creationDateTime != null) __obj.updateDynamic("creationDateTime")(creationDateTime.asInstanceOf[js.Any])
+    if (endDateTime != null) __obj.updateDynamic("endDateTime")(endDateTime.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (joinUrl != null) __obj.updateDynamic("joinUrl")(joinUrl.asInstanceOf[js.Any])
+    if (participants != null) __obj.updateDynamic("participants")(participants.asInstanceOf[js.Any])
+    if (startDateTime != null) __obj.updateDynamic("startDateTime")(startDateTime.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (videoTeleconferenceId != null) __obj.updateDynamic("videoTeleconferenceId")(videoTeleconferenceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnlineMeeting]
   }
-  @scala.inline
-  implicit class OnlineMeetingOps[Self <: OnlineMeeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioConferencing(value: AudioConferencing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioConferencing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioConferencing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audioConferencing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChatInfo(value: ChatInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chatInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChatInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chatInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJoinUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joinUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJoinUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("joinUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParticipants(value: MeetingParticipants): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("participants")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParticipants: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("participants")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartDateTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartDateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startDateTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoTeleconferenceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoTeleconferenceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoTeleconferenceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoTeleconferenceId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

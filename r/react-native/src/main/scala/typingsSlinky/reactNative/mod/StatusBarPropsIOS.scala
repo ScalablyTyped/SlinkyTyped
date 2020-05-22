@@ -6,72 +6,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StatusBarPropsIOS extends js.Object {
   /**
     * Sets the color of the status bar text.
     */
-  var barStyle: js.UndefOr[StatusBarStyle] = js.native
+  var barStyle: js.UndefOr[StatusBarStyle] = js.undefined
   /**
     * If the network activity indicator should be visible.
     */
-  var networkActivityIndicatorVisible: js.UndefOr[Boolean] = js.native
+  var networkActivityIndicatorVisible: js.UndefOr[Boolean] = js.undefined
   /**
     * The transition effect when showing and hiding the status bar using
     * the hidden prop. Defaults to 'fade'.
     */
-  var showHideTransition: js.UndefOr[fade | slide] = js.native
+  var showHideTransition: js.UndefOr[fade | slide] = js.undefined
 }
 
 object StatusBarPropsIOS {
   @scala.inline
-  def apply(): StatusBarPropsIOS = {
+  def apply(
+    barStyle: StatusBarStyle = null,
+    networkActivityIndicatorVisible: js.UndefOr[Boolean] = js.undefined,
+    showHideTransition: fade | slide = null
+  ): StatusBarPropsIOS = {
     val __obj = js.Dynamic.literal()
+    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(networkActivityIndicatorVisible)) __obj.updateDynamic("networkActivityIndicatorVisible")(networkActivityIndicatorVisible.get.asInstanceOf[js.Any])
+    if (showHideTransition != null) __obj.updateDynamic("showHideTransition")(showHideTransition.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatusBarPropsIOS]
   }
-  @scala.inline
-  implicit class StatusBarPropsIOSOps[Self <: StatusBarPropsIOS] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBarStyle(value: StatusBarStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBarStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("barStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkActivityIndicatorVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkActivityIndicatorVisible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkActivityIndicatorVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkActivityIndicatorVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowHideTransition(value: fade | slide): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHideTransition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowHideTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showHideTransition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

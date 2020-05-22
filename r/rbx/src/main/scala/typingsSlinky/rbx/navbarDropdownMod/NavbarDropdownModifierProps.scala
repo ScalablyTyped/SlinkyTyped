@@ -5,49 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavbarDropdownModifierProps extends js.Object {
-  var align: js.UndefOr[right] = js.native
-  var boxed: js.UndefOr[Boolean] = js.native
+  var align: js.UndefOr[right] = js.undefined
+  var boxed: js.UndefOr[Boolean] = js.undefined
 }
 
 object NavbarDropdownModifierProps {
   @scala.inline
-  def apply(): NavbarDropdownModifierProps = {
+  def apply(align: right = null, boxed: js.UndefOr[Boolean] = js.undefined): NavbarDropdownModifierProps = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (!js.isUndefined(boxed)) __obj.updateDynamic("boxed")(boxed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavbarDropdownModifierProps]
   }
-  @scala.inline
-  implicit class NavbarDropdownModifierPropsOps[Self <: NavbarDropdownModifierProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlign(value: right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBoxed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBoxed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("boxed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

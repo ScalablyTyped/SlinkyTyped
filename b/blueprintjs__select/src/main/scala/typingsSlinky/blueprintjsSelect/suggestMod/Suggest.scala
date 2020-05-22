@@ -13,6 +13,7 @@ class Suggest[T] ()
   extends Component[ISuggestProps[T], ISuggestState[T], js.Any] {
   var TypedQueryList: js.Any = js.native
   var getInitialSelectedItem: js.Any = js.native
+  var getInputRefHandler: js.Any = js.native
   var getTargetKeyDownHandler: js.Any = js.native
   var getTargetKeyUpHandler: js.Any = js.native
   var handleInputFocus: js.Any = js.native

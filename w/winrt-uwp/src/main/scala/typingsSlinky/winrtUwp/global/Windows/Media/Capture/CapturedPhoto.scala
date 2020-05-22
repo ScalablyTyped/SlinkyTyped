@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Media.Capture.CapturedPhoto")
 @js.native
 abstract class CapturedPhoto ()
-  extends typingsSlinky.winrtUwp.Windows.Media.Capture.CapturedPhoto
+  extends typingsSlinky.winrtUwp.Windows.Media.Capture.CapturedPhoto {
+  /** Gets the photo data, represented as CapturedFrame object, associated with the CapturedPhoto object. */
+  /* CompleteClass */
+  override var frame: typingsSlinky.winrtUwp.Windows.Media.Capture.CapturedFrame = js.native
+  /** Represents a thumbnail image of the capture photo. */
+  /* CompleteClass */
+  override var thumbnail: typingsSlinky.winrtUwp.Windows.Media.Capture.CapturedFrame = js.native
+}
 

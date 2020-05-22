@@ -1,93 +1,44 @@
 package typingsSlinky.materialUi.touchRippleMod
 
+import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TouchRippleProps extends Props[TouchRipple] {
-  var abortOnScroll: js.UndefOr[Boolean] = js.native
-  var centerRipple: js.UndefOr[Boolean] = js.native
-  var color: js.UndefOr[String] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[CSSProperties] = js.native
+  var abortOnScroll: js.UndefOr[Boolean] = js.undefined
+  var centerRipple: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
 }
 
 object TouchRippleProps {
   @scala.inline
-  def apply(): TouchRippleProps = {
+  def apply(
+    abortOnScroll: js.UndefOr[Boolean] = js.undefined,
+    centerRipple: js.UndefOr[Boolean] = js.undefined,
+    children: TagMod[Any] = null,
+    color: String = null,
+    key: Key = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    ref: js.UndefOr[Null | LegacyRef[TouchRipple]] = js.undefined,
+    style: CSSProperties = null
+  ): TouchRippleProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(abortOnScroll)) __obj.updateDynamic("abortOnScroll")(abortOnScroll.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(centerRipple)) __obj.updateDynamic("centerRipple")(centerRipple.get.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ref)) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchRippleProps]
   }
-  @scala.inline
-  implicit class TouchRipplePropsOps[Self <: TouchRippleProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortOnScroll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abortOnScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortOnScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abortOnScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenterRipple(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerRipple")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenterRipple: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("centerRipple")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

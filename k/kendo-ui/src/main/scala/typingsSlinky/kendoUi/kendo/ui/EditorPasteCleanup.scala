@@ -4,140 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditorPasteCleanup extends js.Object {
-  var all: js.UndefOr[Boolean] = js.native
-  var css: js.UndefOr[Boolean] = js.native
-  var custom: js.UndefOr[js.Function] = js.native
-  var keepNewLines: js.UndefOr[Boolean] = js.native
-  var msAllFormatting: js.UndefOr[Boolean] = js.native
-  var msConvertLists: js.UndefOr[Boolean] = js.native
-  var msTags: js.UndefOr[Boolean] = js.native
-  var none: js.UndefOr[Boolean] = js.native
-  var span: js.UndefOr[Boolean] = js.native
+  var all: js.UndefOr[Boolean] = js.undefined
+  var css: js.UndefOr[Boolean] = js.undefined
+  var custom: js.UndefOr[js.Function] = js.undefined
+  var keepNewLines: js.UndefOr[Boolean] = js.undefined
+  var msAllFormatting: js.UndefOr[Boolean] = js.undefined
+  var msConvertLists: js.UndefOr[Boolean] = js.undefined
+  var msTags: js.UndefOr[Boolean] = js.undefined
+  var none: js.UndefOr[Boolean] = js.undefined
+  var span: js.UndefOr[Boolean] = js.undefined
 }
 
 object EditorPasteCleanup {
   @scala.inline
-  def apply(): EditorPasteCleanup = {
+  def apply(
+    all: js.UndefOr[Boolean] = js.undefined,
+    css: js.UndefOr[Boolean] = js.undefined,
+    custom: js.Function = null,
+    keepNewLines: js.UndefOr[Boolean] = js.undefined,
+    msAllFormatting: js.UndefOr[Boolean] = js.undefined,
+    msConvertLists: js.UndefOr[Boolean] = js.undefined,
+    msTags: js.UndefOr[Boolean] = js.undefined,
+    none: js.UndefOr[Boolean] = js.undefined,
+    span: js.UndefOr[Boolean] = js.undefined
+  ): EditorPasteCleanup = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(css)) __obj.updateDynamic("css")(css.get.asInstanceOf[js.Any])
+    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepNewLines)) __obj.updateDynamic("keepNewLines")(keepNewLines.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(msAllFormatting)) __obj.updateDynamic("msAllFormatting")(msAllFormatting.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(msConvertLists)) __obj.updateDynamic("msConvertLists")(msConvertLists.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(msTags)) __obj.updateDynamic("msTags")(msTags.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(none)) __obj.updateDynamic("none")(none.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(span)) __obj.updateDynamic("span")(span.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorPasteCleanup]
   }
-  @scala.inline
-  implicit class EditorPasteCleanupOps[Self <: EditorPasteCleanup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAll(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCss(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCss: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeepNewLines(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNewLines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepNewLines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepNewLines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsAllFormatting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msAllFormatting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsAllFormatting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msAllFormatting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsConvertLists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msConvertLists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsConvertLists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msConvertLists")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsTags(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNone(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("none")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("none")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpan(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpan: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

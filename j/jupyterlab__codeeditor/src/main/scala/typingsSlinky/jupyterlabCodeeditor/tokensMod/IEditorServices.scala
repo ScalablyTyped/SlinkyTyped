@@ -8,16 +8,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IEditorServices extends js.Object {
   /**
     * The code editor factory.
     */
-  val factoryService: IEditorFactoryService = js.native
+  val factoryService: IEditorFactoryService
   /**
     * The editor mime type service.
     */
-  val mimeTypeService: IEditorMimeTypeService = js.native
+  val mimeTypeService: IEditorMimeTypeService
 }
 
 @JSImport("@jupyterlab/codeeditor/lib/tokens", "IEditorServices")

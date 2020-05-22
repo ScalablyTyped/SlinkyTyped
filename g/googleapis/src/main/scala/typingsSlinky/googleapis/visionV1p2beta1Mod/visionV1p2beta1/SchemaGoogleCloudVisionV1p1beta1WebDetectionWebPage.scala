@@ -36,77 +36,20 @@ trait SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPage extends js.Object {
 
 object SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPage {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPage = {
+  def apply(
+    fullMatchingImages: js.Array[SchemaGoogleCloudVisionV1p1beta1WebDetectionWebImage] = null,
+    pageTitle: String = null,
+    partialMatchingImages: js.Array[SchemaGoogleCloudVisionV1p1beta1WebDetectionWebImage] = null,
+    score: js.UndefOr[Double] = js.undefined,
+    url: String = null
+  ): SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPage = {
     val __obj = js.Dynamic.literal()
+    if (fullMatchingImages != null) __obj.updateDynamic("fullMatchingImages")(fullMatchingImages.asInstanceOf[js.Any])
+    if (pageTitle != null) __obj.updateDynamic("pageTitle")(pageTitle.asInstanceOf[js.Any])
+    if (partialMatchingImages != null) __obj.updateDynamic("partialMatchingImages")(partialMatchingImages.asInstanceOf[js.Any])
+    if (!js.isUndefined(score)) __obj.updateDynamic("score")(score.get.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPage]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPageOps[Self <: SchemaGoogleCloudVisionV1p1beta1WebDetectionWebPage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFullMatchingImages(value: js.Array[SchemaGoogleCloudVisionV1p1beta1WebDetectionWebImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMatchingImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullMatchingImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMatchingImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageTitle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartialMatchingImages(value: js.Array[SchemaGoogleCloudVisionV1p1beta1WebDetectionWebImage]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialMatchingImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartialMatchingImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("partialMatchingImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScore(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

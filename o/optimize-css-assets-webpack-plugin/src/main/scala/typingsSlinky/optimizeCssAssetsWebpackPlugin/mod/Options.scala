@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
   /**
     * A regular expression that indicates the names of the assets that should
@@ -15,13 +14,13 @@ trait Options extends js.Object {
     *
     * @default /\.css$/g
     */
-  var assetNameRegExp: js.UndefOr[js.RegExp] = js.native
+  var assetNameRegExp: js.UndefOr[js.RegExp] = js.undefined
   /**
     * A boolean indicating if the plugin can print messages to the console.
     *
     * @default true
     */
-  var canPrint: js.UndefOr[Boolean] = js.native
+  var canPrint: js.UndefOr[Boolean] = js.undefined
   /**
     * The CSS processor used to optimize \ minimize the CSS. This should be a
     * function that follows `cssnano.process` interface (receives a CSS and
@@ -29,94 +28,37 @@ trait Options extends js.Object {
     *
     * @default cssnano
     */
-  var cssProcessor: js.UndefOr[Process] = js.native
+  var cssProcessor: js.UndefOr[Process] = js.undefined
   /**
     * The options passed to the `cssProcessor`.
     *
     * @default {}
     */
-  var cssProcessorOptions: js.UndefOr[js.Object] = js.native
+  var cssProcessorOptions: js.UndefOr[js.Object] = js.undefined
   /**
     * The plugin options passed to the `cssProcessor`.
     *
     * @default {}
     */
-  var cssProcessorPluginOptions: js.UndefOr[js.Object] = js.native
+  var cssProcessorPluginOptions: js.UndefOr[js.Object] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    assetNameRegExp: js.RegExp = null,
+    canPrint: js.UndefOr[Boolean] = js.undefined,
+    cssProcessor: Process = null,
+    cssProcessorOptions: js.Object = null,
+    cssProcessorPluginOptions: js.Object = null
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (assetNameRegExp != null) __obj.updateDynamic("assetNameRegExp")(assetNameRegExp.asInstanceOf[js.Any])
+    if (!js.isUndefined(canPrint)) __obj.updateDynamic("canPrint")(canPrint.get.asInstanceOf[js.Any])
+    if (cssProcessor != null) __obj.updateDynamic("cssProcessor")(cssProcessor.asInstanceOf[js.Any])
+    if (cssProcessorOptions != null) __obj.updateDynamic("cssProcessorOptions")(cssProcessorOptions.asInstanceOf[js.Any])
+    if (cssProcessorPluginOptions != null) __obj.updateDynamic("cssProcessorPluginOptions")(cssProcessorPluginOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssetNameRegExp(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetNameRegExp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssetNameRegExp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetNameRegExp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCanPrint(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canPrint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanPrint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canPrint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssProcessor(value: Process): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssProcessor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssProcessorOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessorOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssProcessorOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessorOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssProcessorPluginOptions(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessorPluginOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssProcessorPluginOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessorPluginOptions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

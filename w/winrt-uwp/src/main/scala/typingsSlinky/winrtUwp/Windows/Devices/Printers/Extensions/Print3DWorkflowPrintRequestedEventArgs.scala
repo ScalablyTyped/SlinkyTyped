@@ -5,25 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data about the print request to the app that initiated the request. */
-@js.native
 trait Print3DWorkflowPrintRequestedEventArgs extends js.Object {
   /** Gets the status of the print request. */
-  var status: Print3DWorkflowStatus = js.native
+  var status: Print3DWorkflowStatus
   /**
     * Sets the extended status of the print request.
     * @param value The extended status of the print request.
     */
-  def setExtendedStatus(value: Print3DWorkflowDetail): Unit = js.native
+  def setExtendedStatus(value: Print3DWorkflowDetail): Unit
   /**
     * Sets the latest model data, including any updates made by the Print3DWorkflow .
     * @param source The latest model data, including any updates made by the Print3DWorkflow .
     */
-  def setSource(source: js.Any): Unit = js.native
+  def setSource(source: js.Any): Unit
   /**
     * Indicates if the data model has been updated by the Print3DWorkflow .
     * @param value Returns true if the data model has been updated; otherwise, false.
     */
-  def setSourceChanged(value: Boolean): Unit = js.native
+  def setSourceChanged(value: Boolean): Unit
 }
 
 object Print3DWorkflowPrintRequestedEventArgs {
@@ -37,37 +36,5 @@ object Print3DWorkflowPrintRequestedEventArgs {
     val __obj = js.Dynamic.literal(setExtendedStatus = js.Any.fromFunction1(setExtendedStatus), setSource = js.Any.fromFunction1(setSource), setSourceChanged = js.Any.fromFunction1(setSourceChanged), status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Print3DWorkflowPrintRequestedEventArgs]
   }
-  @scala.inline
-  implicit class Print3DWorkflowPrintRequestedEventArgsOps[Self <: Print3DWorkflowPrintRequestedEventArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetExtendedStatus(value: Print3DWorkflowDetail => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setExtendedStatus")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSource(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSource")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetSourceChanged(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSourceChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Print3DWorkflowStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

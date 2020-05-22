@@ -10,7 +10,7 @@ sealed trait AppPlatform extends js.Object
 /**
   * Platforms with which a Firebase App can be associated.
   */
-@JSGlobal("admin.projectManagement.AppPlatform")
+@JSImport("firebase-admin/lib/project-management", "admin.projectManagement.AppPlatform")
 @js.native
 object AppPlatform extends js.Object {
   /**

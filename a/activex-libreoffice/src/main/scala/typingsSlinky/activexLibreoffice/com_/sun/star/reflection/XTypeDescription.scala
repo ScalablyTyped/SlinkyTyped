@@ -23,28 +23,27 @@ import scala.scalajs.js.annotation._
   * @see XPropertyTypeDescription2
   * @see XSingletonTypeDescription2
   */
-@js.native
 trait XTypeDescription extends XInterface {
   /**
     * Returns the fully qualified name of the UNOIDL entity.
     * @returns fully qualified name of the entity
     */
-  val Name: String = js.native
+  val Name: String
   /**
     * Returns the type class of the reflected UNOIDL entity.
     * @returns type class of the entity
     */
-  val TypeClass: typingsSlinky.activexLibreoffice.com_.sun.star.uno.TypeClass = js.native
+  val TypeClass: typingsSlinky.activexLibreoffice.com_.sun.star.uno.TypeClass
   /**
     * Returns the fully qualified name of the UNOIDL entity.
     * @returns fully qualified name of the entity
     */
-  def getName(): String = js.native
+  def getName(): String
   /**
     * Returns the type class of the reflected UNOIDL entity.
     * @returns type class of the entity
     */
-  def getTypeClass(): typingsSlinky.activexLibreoffice.com_.sun.star.uno.TypeClass = js.native
+  def getTypeClass(): typingsSlinky.activexLibreoffice.com_.sun.star.uno.TypeClass
 }
 
 object XTypeDescription {
@@ -61,37 +60,5 @@ object XTypeDescription {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], TypeClass = TypeClass.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getName = js.Any.fromFunction0(getName), getTypeClass = js.Any.fromFunction0(getTypeClass), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTypeDescription]
   }
-  @scala.inline
-  implicit class XTypeDescriptionOps[Self <: XTypeDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypeClass(value: TypeClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetName(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTypeClass(value: () => TypeClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeClass")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

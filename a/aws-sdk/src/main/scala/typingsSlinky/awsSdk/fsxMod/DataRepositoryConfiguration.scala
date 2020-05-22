@@ -22,53 +22,16 @@ trait DataRepositoryConfiguration extends js.Object {
 
 object DataRepositoryConfiguration {
   @scala.inline
-  def apply(): DataRepositoryConfiguration = {
+  def apply(
+    ExportPath: ArchivePath = null,
+    ImportPath: ArchivePath = null,
+    ImportedFileChunkSize: js.UndefOr[Megabytes] = js.undefined
+  ): DataRepositoryConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ExportPath != null) __obj.updateDynamic("ExportPath")(ExportPath.asInstanceOf[js.Any])
+    if (ImportPath != null) __obj.updateDynamic("ImportPath")(ImportPath.asInstanceOf[js.Any])
+    if (!js.isUndefined(ImportedFileChunkSize)) __obj.updateDynamic("ImportedFileChunkSize")(ImportedFileChunkSize.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataRepositoryConfiguration]
   }
-  @scala.inline
-  implicit class DataRepositoryConfigurationOps[Self <: DataRepositoryConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExportPath(value: ArchivePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExportPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportPath(value: ArchivePath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportedFileChunkSize(value: Megabytes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedFileChunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportedFileChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedFileChunkSize")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

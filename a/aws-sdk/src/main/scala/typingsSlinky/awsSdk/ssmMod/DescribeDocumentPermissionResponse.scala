@@ -11,48 +11,18 @@ trait DescribeDocumentPermissionResponse extends js.Object {
     */
   var AccountIds: js.UndefOr[AccountIdList] = js.native
   /**
-    * A list of of AWS accounts where the current document is shared and the version shared with each account.
+    * A list of AWS accounts where the current document is shared and the version shared with each account.
     */
   var AccountSharingInfoList: js.UndefOr[typingsSlinky.awsSdk.ssmMod.AccountSharingInfoList] = js.native
 }
 
 object DescribeDocumentPermissionResponse {
   @scala.inline
-  def apply(): DescribeDocumentPermissionResponse = {
+  def apply(AccountIds: AccountIdList = null, AccountSharingInfoList: AccountSharingInfoList = null): DescribeDocumentPermissionResponse = {
     val __obj = js.Dynamic.literal()
+    if (AccountIds != null) __obj.updateDynamic("AccountIds")(AccountIds.asInstanceOf[js.Any])
+    if (AccountSharingInfoList != null) __obj.updateDynamic("AccountSharingInfoList")(AccountSharingInfoList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDocumentPermissionResponse]
   }
-  @scala.inline
-  implicit class DescribeDocumentPermissionResponseOps[Self <: DescribeDocumentPermissionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountIds(value: AccountIdList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAccountSharingInfoList(value: AccountSharingInfoList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountSharingInfoList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountSharingInfoList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountSharingInfoList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

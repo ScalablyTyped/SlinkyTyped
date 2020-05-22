@@ -26,9 +26,16 @@ object getEncryptionConfigCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetEncryptionConfigInput) = this()
+    /* CompleteClass */
+    override val input: GetEncryptionConfigInput = js.native
     val middlewareStack: MiddlewareStack[GetEncryptionConfigInput, GetEncryptionConfigOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: XRayResolvedConfiguration
+    ): Handler[GetEncryptionConfigInput, GetEncryptionConfigOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[GetEncryptionConfigInput, GetEncryptionConfigOutput] = js.native
   }

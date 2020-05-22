@@ -6,42 +6,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AvatarIcon extends IconObject {
-  var iconStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var iconStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
 }
 
 object AvatarIcon {
   @scala.inline
-  def apply(): AvatarIcon = {
+  def apply(
+    color: String = null,
+    iconStyle: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    name: String = null,
+    size: js.UndefOr[Double] = js.undefined,
+    style: js.UndefOr[Null | StyleProp[TextStyle]] = js.undefined,
+    `type`: IconType = null
+  ): AvatarIcon = {
     val __obj = js.Dynamic.literal()
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(iconStyle)) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvatarIcon]
   }
-  @scala.inline
-  implicit class AvatarIconOps[Self <: AvatarIcon] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIconStyle(value: StyleProp[TextStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(null)
-        ret
-    }
-  }
-  
 }
 

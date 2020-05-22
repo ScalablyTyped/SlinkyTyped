@@ -6,163 +6,43 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an AttrDef. */
-@js.native
 trait IAttrDef extends js.Object {
   /** AttrDef allowedValues */
-  var allowedValues: js.UndefOr[IAttrValue | Null] = js.native
+  var allowedValues: js.UndefOr[IAttrValue | Null] = js.undefined
   /** AttrDef defaultValue */
-  var defaultValue: js.UndefOr[IAttrValue | Null] = js.native
+  var defaultValue: js.UndefOr[IAttrValue | Null] = js.undefined
   /** AttrDef description */
-  var description: js.UndefOr[String | Null] = js.native
+  var description: js.UndefOr[String | Null] = js.undefined
   /** AttrDef hasMinimum */
-  var hasMinimum: js.UndefOr[Boolean | Null] = js.native
+  var hasMinimum: js.UndefOr[Boolean | Null] = js.undefined
   /** AttrDef minimum */
-  var minimum: js.UndefOr[Double | String | Null] = js.native
+  var minimum: js.UndefOr[Double | String | Null] = js.undefined
   /** AttrDef name */
-  var name: js.UndefOr[String | Null] = js.native
+  var name: js.UndefOr[String | Null] = js.undefined
   /** AttrDef type */
-  var `type`: js.UndefOr[String | Null] = js.native
+  var `type`: js.UndefOr[String | Null] = js.undefined
 }
 
 object IAttrDef {
   @scala.inline
-  def apply(): IAttrDef = {
+  def apply(
+    allowedValues: js.UndefOr[Null | IAttrValue] = js.undefined,
+    defaultValue: js.UndefOr[Null | IAttrValue] = js.undefined,
+    description: js.UndefOr[Null | String] = js.undefined,
+    hasMinimum: js.UndefOr[Null | Boolean] = js.undefined,
+    minimum: js.UndefOr[Null | Double | String] = js.undefined,
+    name: js.UndefOr[Null | String] = js.undefined,
+    `type`: js.UndefOr[Null | String] = js.undefined
+  ): IAttrDef = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowedValues)) __obj.updateDynamic("allowedValues")(allowedValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultValue)) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(description)) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasMinimum)) __obj.updateDynamic("hasMinimum")(hasMinimum.asInstanceOf[js.Any])
+    if (!js.isUndefined(minimum)) __obj.updateDynamic("minimum")(minimum.asInstanceOf[js.Any])
+    if (!js.isUndefined(name)) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAttrDef]
   }
-  @scala.inline
-  implicit class IAttrDefOps[Self <: IAttrDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowedValues(value: IAttrValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowedValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowedValuesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedValues")(null)
-        ret
-    }
-    @scala.inline
-    def withDefaultValue(value: IAttrValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultValueNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(null)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
-        ret
-    }
-    @scala.inline
-    def withHasMinimum(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMinimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMinimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasMinimumNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMinimum")(null)
-        ret
-    }
-    @scala.inline
-    def withMinimum(value: Double | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinimum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinimumNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(null)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(null)
-        ret
-    }
-  }
-  
 }
 

@@ -5,28 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait b2JointDef extends js.Object {
   /**
-  		* The first attached body.
-  		**/
-  var bodyA: b2Body = js.native
+    * The first attached body.
+    **/
+  var bodyA: b2Body
   /**
-  		* The second attached body.
-  		**/
-  var bodyB: b2Body = js.native
+    * The second attached body.
+    **/
+  var bodyB: b2Body
   /**
-  		* Set this flag to true if the attached bodies should collide.
-  		**/
-  var collideConnected: Boolean = js.native
+    * Set this flag to true if the attached bodies should collide.
+    **/
+  var collideConnected: Boolean
   /**
-  		* The joint type is set automatically for concrete joint types.
-  		**/
-  var `type`: Double = js.native
+    * The joint type is set automatically for concrete joint types.
+    **/
+  var `type`: Double
   /**
-  		* Use this to attach application specific data to your joints.
-  		**/
-  var userData: js.Any = js.native
+    * Use this to attach application specific data to your joints.
+    **/
+  var userData: js.Any
 }
 
 object b2JointDef {
@@ -36,43 +35,5 @@ object b2JointDef {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[b2JointDef]
   }
-  @scala.inline
-  implicit class b2JointDefOps[Self <: b2JointDef] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyA(value: b2Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBodyB(value: b2Body): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCollideConnected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collideConnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUserData(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

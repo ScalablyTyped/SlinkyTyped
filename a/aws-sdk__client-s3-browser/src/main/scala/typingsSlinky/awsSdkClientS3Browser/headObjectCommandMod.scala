@@ -27,10 +27,17 @@ object headObjectCommandMod extends js.Object {
           Blob
         ] {
     def this(input: HeadObjectInput) = this()
+    /* CompleteClass */
+    override val input: HeadObjectInput = js.native
     val middlewareStack: MiddlewareStack[HeadObjectInput, HeadObjectOutput, Blob] = js.native
     val model: OperationModel = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: S3ResolvedConfiguration
+    ): Handler[HeadObjectInput, HeadObjectOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[HeadObjectInput, HeadObjectOutput] = js.native
   }

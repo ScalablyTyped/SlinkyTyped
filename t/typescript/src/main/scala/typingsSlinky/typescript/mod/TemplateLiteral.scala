@@ -10,10 +10,3 @@ import scala.scalajs.js.annotation._
 */
 trait TemplateLiteral extends js.Object
 
-object TemplateLiteral {
-  @scala.inline
-  implicit def apply(value: NoSubstitutionTemplateLiteral): TemplateLiteral = value.asInstanceOf[TemplateLiteral]
-  @scala.inline
-  implicit def apply(value: TemplateExpression): TemplateLiteral = value.asInstanceOf[TemplateLiteral]
-}
-

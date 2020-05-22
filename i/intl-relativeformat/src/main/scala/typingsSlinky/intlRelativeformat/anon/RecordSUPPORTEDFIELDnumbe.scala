@@ -5,29 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Record<intl-relativeformat.intl-relativeformat/lib/types.SUPPORTED_FIELD, number> */
-@js.native
 trait RecordSUPPORTEDFIELDnumbe extends js.Object {
-  var day: Double = js.native
-  var `day-narrow`: Double = js.native
-  var `day-short`: Double = js.native
-  var hour: Double = js.native
-  var `hour-narrow`: Double = js.native
-  var `hour-short`: Double = js.native
-  var minute: Double = js.native
-  var `minute-narrow`: Double = js.native
-  var `minute-short`: Double = js.native
-  var month: Double = js.native
-  var `month-narrow`: Double = js.native
-  var `month-short`: Double = js.native
-  var second: Double = js.native
-  var `second-narrow`: Double = js.native
-  var `second-short`: Double = js.native
-  var week: Double = js.native
-  var `week-narrow`: Double = js.native
-  var `week-short`: Double = js.native
-  var year: Double = js.native
-  var `year-narrow`: Double = js.native
-  var `year-short`: Double = js.native
+  var day: Double
+  var `day-narrow`: Double
+  var `day-short`: Double
+  var hour: Double
+  var `hour-narrow`: Double
+  var `hour-short`: Double
+  var minute: Double
+  var `minute-narrow`: Double
+  var `minute-short`: Double
+  var month: Double
+  var `month-narrow`: Double
+  var `month-short`: Double
+  var second: Double
+  var `second-narrow`: Double
+  var `second-short`: Double
+  var week: Double
+  var `week-narrow`: Double
+  var `week-short`: Double
+  var year: Double
+  var `year-narrow`: Double
+  var `year-short`: Double
 }
 
 object RecordSUPPORTEDFIELDnumbe {
@@ -72,139 +71,5 @@ object RecordSUPPORTEDFIELDnumbe {
     __obj.updateDynamic("year-short")(`year-short`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordSUPPORTEDFIELDnumbe]
   }
-  @scala.inline
-  implicit class RecordSUPPORTEDFIELDnumbeOps[Self <: RecordSUPPORTEDFIELDnumbe] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDay-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withDay-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("day-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHour(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withHour-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withHour-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hour-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMinute(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMinute-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMinute-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minute-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMonth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMonth-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withMonth-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("month-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSecond-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withSecond-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("second-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWeek-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withWeek-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("week-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withYear(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withYear-narrow`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year-narrow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withYear-short`(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("year-short")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

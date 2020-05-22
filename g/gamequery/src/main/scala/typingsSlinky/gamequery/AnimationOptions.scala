@@ -4,121 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AnimationOptions extends js.Object {
-  var delta: js.UndefOr[Double] = js.native
-  var distance: js.UndefOr[Double] = js.native
-  var imageURL: String = js.native
-  var numberOfFrame: js.UndefOr[Double] = js.native
-  var offsetx: js.UndefOr[Double] = js.native
-  var offsety: js.UndefOr[Double] = js.native
-  var rate: js.UndefOr[Double] = js.native
-  var `type`: js.UndefOr[Double] = js.native
+  var delta: js.UndefOr[Double] = js.undefined
+  var distance: js.UndefOr[Double] = js.undefined
+  var imageURL: String
+  var numberOfFrame: js.UndefOr[Double] = js.undefined
+  var offsetx: js.UndefOr[Double] = js.undefined
+  var offsety: js.UndefOr[Double] = js.undefined
+  var rate: js.UndefOr[Double] = js.undefined
+  var `type`: js.UndefOr[Double] = js.undefined
 }
 
 object AnimationOptions {
   @scala.inline
-  def apply(imageURL: String): AnimationOptions = {
+  def apply(
+    imageURL: String,
+    delta: js.UndefOr[Double] = js.undefined,
+    distance: js.UndefOr[Double] = js.undefined,
+    numberOfFrame: js.UndefOr[Double] = js.undefined,
+    offsetx: js.UndefOr[Double] = js.undefined,
+    offsety: js.UndefOr[Double] = js.undefined,
+    rate: js.UndefOr[Double] = js.undefined,
+    `type`: js.UndefOr[Double] = js.undefined
+  ): AnimationOptions = {
     val __obj = js.Dynamic.literal(imageURL = imageURL.asInstanceOf[js.Any])
+    if (!js.isUndefined(delta)) __obj.updateDynamic("delta")(delta.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(distance)) __obj.updateDynamic("distance")(distance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(numberOfFrame)) __obj.updateDynamic("numberOfFrame")(numberOfFrame.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetx)) __obj.updateDynamic("offsetx")(offsetx.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsety)) __obj.updateDynamic("offsety")(offsety.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rate)) __obj.updateDynamic("rate")(rate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationOptions]
   }
-  @scala.inline
-  implicit class AnimationOptionsOps[Self <: AnimationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImageURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("imageURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfFrame(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfFrame")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfFrame: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfFrame")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetx(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetx")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetx: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetx")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsety(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsety")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsety: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsety")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

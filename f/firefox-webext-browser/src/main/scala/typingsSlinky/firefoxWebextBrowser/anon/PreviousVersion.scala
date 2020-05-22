@@ -5,74 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PreviousVersion extends js.Object {
   /**
     * Indicates the ID of the imported shared module extension which updated. This is present only if 'reason' is
     * 'shared_module_update'.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * Indicates the previous version of the extension, which has just been updated. This is present only if
     * 'reason' is 'update'.
     */
-  var previousVersion: js.UndefOr[String] = js.native
+  var previousVersion: js.UndefOr[String] = js.undefined
   /** The reason that this event is being dispatched. */
-  var reason: OnInstalledReason = js.native
+  var reason: OnInstalledReason
   /** Indicates whether the addon is installed as a temporary extension. */
-  var temporary: Boolean = js.native
+  var temporary: Boolean
 }
 
 object PreviousVersion {
   @scala.inline
-  def apply(reason: OnInstalledReason, temporary: Boolean): PreviousVersion = {
+  def apply(reason: OnInstalledReason, temporary: Boolean, id: String = null, previousVersion: String = null): PreviousVersion = {
     val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any], temporary = temporary.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (previousVersion != null) __obj.updateDynamic("previousVersion")(previousVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviousVersion]
   }
-  @scala.inline
-  implicit class PreviousVersionOps[Self <: PreviousVersion] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReason(value: OnInstalledReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTemporary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("temporary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

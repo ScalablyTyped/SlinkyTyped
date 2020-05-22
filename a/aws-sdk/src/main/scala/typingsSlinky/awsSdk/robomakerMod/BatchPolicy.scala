@@ -18,41 +18,14 @@ trait BatchPolicy extends js.Object {
 
 object BatchPolicy {
   @scala.inline
-  def apply(): BatchPolicy = {
+  def apply(
+    maxConcurrency: js.UndefOr[MaxConcurrency] = js.undefined,
+    timeoutInSeconds: js.UndefOr[BatchTimeoutInSeconds] = js.undefined
+  ): BatchPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxConcurrency)) __obj.updateDynamic("maxConcurrency")(maxConcurrency.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeoutInSeconds)) __obj.updateDynamic("timeoutInSeconds")(timeoutInSeconds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchPolicy]
   }
-  @scala.inline
-  implicit class BatchPolicyOps[Self <: BatchPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxConcurrency(value: MaxConcurrency): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxConcurrency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeoutInSeconds(value: BatchTimeoutInSeconds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeoutInSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInSeconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

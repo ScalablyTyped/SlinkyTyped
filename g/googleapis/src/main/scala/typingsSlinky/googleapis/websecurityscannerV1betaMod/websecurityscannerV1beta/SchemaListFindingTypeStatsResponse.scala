@@ -17,29 +17,10 @@ trait SchemaListFindingTypeStatsResponse extends js.Object {
 
 object SchemaListFindingTypeStatsResponse {
   @scala.inline
-  def apply(): SchemaListFindingTypeStatsResponse = {
+  def apply(findingTypeStats: js.Array[SchemaFindingTypeStats] = null): SchemaListFindingTypeStatsResponse = {
     val __obj = js.Dynamic.literal()
+    if (findingTypeStats != null) __obj.updateDynamic("findingTypeStats")(findingTypeStats.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListFindingTypeStatsResponse]
   }
-  @scala.inline
-  implicit class SchemaListFindingTypeStatsResponseOps[Self <: SchemaListFindingTypeStatsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFindingTypeStats(value: js.Array[SchemaFindingTypeStats]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingTypeStats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFindingTypeStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findingTypeStats")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

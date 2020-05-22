@@ -1,15 +1,21 @@
 package typingsSlinky.mongooseDelete.mod
 
 import typingsSlinky.mongodb.mod.FindAndModifyWriteOpResultObject
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindBase
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindOneA
+import typingsSlinky.mongoose.anon.leantrueOmitQueryFindOpti
 import typingsSlinky.mongoose.anon.rawResulttrueQueryFindOneArrayFilters
 import typingsSlinky.mongoose.anon.rawResulttrueupserttruene
 import typingsSlinky.mongoose.anon.upserttruenewtrueQueryFin
 import typingsSlinky.mongoose.mod.Document
+import typingsSlinky.mongoose.mod.DocumentDefinition
 import typingsSlinky.mongoose.mod.FilterQuery
 import typingsSlinky.mongoose.mod.ModelUpdateOptions
 import typingsSlinky.mongoose.mod.Model_
 import typingsSlinky.mongoose.mod.Query
+import typingsSlinky.mongoose.mod.QueryFindBaseOptions
 import typingsSlinky.mongoose.mod.QueryFindOneAndUpdateOptions
+import typingsSlinky.mongoose.mod.QueryFindOptions
 import typingsSlinky.mongoose.mod.Types.ObjectId
 import typingsSlinky.mongoose.mod.UpdateQuery
 import typingsSlinky.mongooseDelete.anon.DocumentQueryArrayanyanyAll
@@ -20,6 +26,8 @@ import typingsSlinky.mongooseDelete.anon.FnCall
 import typingsSlinky.mongooseDelete.anon.FnCallConditionsDocOptionsCallback
 import typingsSlinky.mongooseDelete.anon.FnCallConditionsProjectionOptionsCallback
 import typingsSlinky.mongooseDelete.anon.FnCallConditionsUpdateOptionsCallback
+import typingsSlinky.mongooseDelete.anon.QueryArrayDocumentDefinit
+import typingsSlinky.mongooseDelete.anon.QueryDocumentDefinitionanAll
 import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpAnd
 import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpBatchSize
 import typingsSlinky.mongooseDelete.anon.Queryany
@@ -111,11 +119,11 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
   /** Find only deleted documents */
   def findDeleted(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
-  def findDeleted(conditions: FilterQuery[_]): DocumentQueryArrayanyanyAll = js.native
+  def findDeleted(conditions: FilterQuery[_]): QueryArrayDocumentDefinit = js.native
   /** Find only deleted documents */
   def findDeleted(conditions: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
-  def findDeleted(conditions: FilterQuery[_], projection: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def findDeleted(conditions: FilterQuery[_], projection: js.Any): QueryArrayDocumentDefinit = js.native
   /** Find only deleted documents */
   def findDeleted(
     conditions: FilterQuery[_],
@@ -123,19 +131,21 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
-  def findDeleted(conditions: FilterQuery[_], projection: js.Any, options: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def findDeleted(conditions: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindOpti): QueryArrayDocumentDefinit = js.native
   /** Find only deleted documents */
   def findDeleted(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: js.Any,
+    options: leantrueOmitQueryFindOpti,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): DocumentQueryArrayanyanyAll = js.native
+  ): QueryArrayDocumentDefinit = js.native
+  /** Find only deleted documents */
+  def findDeleted(conditions: FilterQuery[_], projection: js.Any, options: QueryFindOptions): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
   def findDeleted(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: Null,
+    options: QueryFindOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
@@ -145,21 +155,29 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
-  def findDeleted(conditions: FilterQuery[_], projection: Null, options: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def findDeleted(conditions: FilterQuery[_], projection: Null, options: leantrueOmitQueryFindOpti): QueryArrayDocumentDefinit = js.native
   /** Find only deleted documents */
   def findDeleted(
     conditions: FilterQuery[_],
     projection: Null,
-    options: js.Any,
+    options: leantrueOmitQueryFindOpti,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): DocumentQueryArrayanyanyAll = js.native
+  ): QueryArrayDocumentDefinit = js.native
+  /** Find only deleted documents */
+  def findDeleted(conditions: FilterQuery[_], projection: Null, options: QueryFindOptions): DocumentQueryArrayanyanyAll = js.native
   /** Find only deleted documents */
   def findDeleted(
     conditions: FilterQuery[_],
     projection: Null,
-    options: Null,
+    options: QueryFindOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
+  /** Find only deleted documents */
+  @JSName("findDeleted")
+  def findDeleted_DocumentQueryArrayanyanyAll(conditions: FilterQuery[_]): DocumentQueryArrayanyanyAll = js.native
+  /** Find only deleted documents */
+  @JSName("findDeleted")
+  def findDeleted_DocumentQueryArrayanyanyAll(conditions: FilterQuery[_], projection: js.Any): DocumentQueryArrayanyanyAll = js.native
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(): DocumentQueryanynullanyAll = js.native
   /** Find One And Update only deleted documents */
@@ -170,6 +188,15 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     update: UpdateQuery[_],
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
+  /** Find One And Update only deleted documents */
+  def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: leantrueOmitQueryFindOneA): QueryDocumentDefinitionanAll = js.native
+  /** Find One And Update only deleted documents */
+  def findOneAndUpdateDeleted(
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: leantrueOmitQueryFindOneA,
+    callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[_], /* res */ js.Any, Unit]
+  ): QueryDocumentDefinitionanAll = js.native
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
   /** Find One And Update only deleted documents */
@@ -226,6 +253,15 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     update: UpdateQuery[_],
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
+  /** Find One And Update all documents including deleted */
+  def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: leantrueOmitQueryFindOneA): QueryDocumentDefinitionanAll = js.native
+  /** Find One And Update all documents including deleted */
+  def findOneAndUpdateWithDeleted(
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: leantrueOmitQueryFindOneA,
+    callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[_], /* res */ js.Any, Unit]
+  ): QueryDocumentDefinitionanAll = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
   /** Find One And Update all documents including deleted */
@@ -290,12 +326,21 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
   ): DocumentQueryanynullanyAll = js.native
   /** Find One only deleted documents */
-  def findOneDeleted(conditions: FilterQuery[_], projection: js.Any, options: js.Any): DocumentQueryanynullanyAll = js.native
+  def findOneDeleted(conditions: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindBase): QueryDocumentDefinitionanAll = js.native
   /** Find One only deleted documents */
   def findOneDeleted(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: js.Any,
+    options: leantrueOmitQueryFindBase,
+    callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
+  ): QueryDocumentDefinitionanAll = js.native
+  /** Find One only deleted documents */
+  def findOneDeleted(conditions: FilterQuery[_], projection: js.Any, options: QueryFindBaseOptions): DocumentQueryanynullanyAll = js.native
+  /** Find One only deleted documents */
+  def findOneDeleted(
+    conditions: FilterQuery[_],
+    projection: js.Any,
+    options: QueryFindBaseOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
   ): DocumentQueryanynullanyAll = js.native
   /** Find One all documents including deleted */
@@ -316,12 +361,21 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
   ): DocumentQueryanynullanyAll = js.native
   /** Find One all documents including deleted */
-  def findOneWithDeleted(conditions: FilterQuery[_], projection: js.Any, options: js.Any): DocumentQueryanynullanyAll = js.native
+  def findOneWithDeleted(conditions: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindBase): QueryDocumentDefinitionanAll = js.native
   /** Find One all documents including deleted */
   def findOneWithDeleted(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: js.Any,
+    options: leantrueOmitQueryFindBase,
+    callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
+  ): QueryDocumentDefinitionanAll = js.native
+  /** Find One all documents including deleted */
+  def findOneWithDeleted(conditions: FilterQuery[_], projection: js.Any, options: QueryFindBaseOptions): DocumentQueryanynullanyAll = js.native
+  /** Find One all documents including deleted */
+  def findOneWithDeleted(
+    conditions: FilterQuery[_],
+    projection: js.Any,
+    options: QueryFindBaseOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]
   ): DocumentQueryanynullanyAll = js.native
   /** Find all documents including deleted */
@@ -329,11 +383,11 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
   /** Find all documents including deleted */
   def findWithDeleted(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
-  def findWithDeleted(conditions: FilterQuery[_]): DocumentQueryArrayanyanyAll = js.native
+  def findWithDeleted(conditions: FilterQuery[_]): QueryArrayDocumentDefinit = js.native
   /** Find all documents including deleted */
   def findWithDeleted(conditions: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
-  def findWithDeleted(conditions: FilterQuery[_], projection: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def findWithDeleted(conditions: FilterQuery[_], projection: js.Any): QueryArrayDocumentDefinit = js.native
   /** Find all documents including deleted */
   def findWithDeleted(
     conditions: FilterQuery[_],
@@ -341,19 +395,21 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
-  def findWithDeleted(conditions: FilterQuery[_], projection: js.Any, options: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def findWithDeleted(conditions: FilterQuery[_], projection: js.Any, options: leantrueOmitQueryFindOpti): QueryArrayDocumentDefinit = js.native
   /** Find all documents including deleted */
   def findWithDeleted(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: js.Any,
+    options: leantrueOmitQueryFindOpti,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): DocumentQueryArrayanyanyAll = js.native
+  ): QueryArrayDocumentDefinit = js.native
+  /** Find all documents including deleted */
+  def findWithDeleted(conditions: FilterQuery[_], projection: js.Any, options: QueryFindOptions): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
   def findWithDeleted(
     conditions: FilterQuery[_],
     projection: js.Any,
-    options: Null,
+    options: QueryFindOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
@@ -363,21 +419,29 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
-  def findWithDeleted(conditions: FilterQuery[_], projection: Null, options: js.Any): DocumentQueryArrayanyanyAll = js.native
+  def findWithDeleted(conditions: FilterQuery[_], projection: Null, options: leantrueOmitQueryFindOpti): QueryArrayDocumentDefinit = js.native
   /** Find all documents including deleted */
   def findWithDeleted(
     conditions: FilterQuery[_],
     projection: Null,
-    options: js.Any,
+    options: leantrueOmitQueryFindOpti,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): DocumentQueryArrayanyanyAll = js.native
+  ): QueryArrayDocumentDefinit = js.native
+  /** Find all documents including deleted */
+  def findWithDeleted(conditions: FilterQuery[_], projection: Null, options: QueryFindOptions): DocumentQueryArrayanyanyAll = js.native
   /** Find all documents including deleted */
   def findWithDeleted(
     conditions: FilterQuery[_],
     projection: Null,
-    options: Null,
+    options: QueryFindOptions,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
   ): DocumentQueryArrayanyanyAll = js.native
+  /** Find all documents including deleted */
+  @JSName("findWithDeleted")
+  def findWithDeleted_DocumentQueryArrayanyanyAll(conditions: FilterQuery[_]): DocumentQueryArrayanyanyAll = js.native
+  /** Find all documents including deleted */
+  @JSName("findWithDeleted")
+  def findWithDeleted_DocumentQueryArrayanyanyAll(conditions: FilterQuery[_], projection: js.Any): DocumentQueryArrayanyanyAll = js.native
   /**
     * Restore documents by conditions
     */

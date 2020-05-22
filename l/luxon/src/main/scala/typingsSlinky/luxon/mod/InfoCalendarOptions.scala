@@ -4,36 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InfoCalendarOptions extends InfoUnitOptions {
-  var outputCalendar: js.UndefOr[CalendarSystem] = js.native
+  var outputCalendar: js.UndefOr[CalendarSystem] = js.undefined
 }
 
 object InfoCalendarOptions {
   @scala.inline
-  def apply(): InfoCalendarOptions = {
+  def apply(
+    locale: String = null,
+    numberingSystem: NumberingSystem = null,
+    outputCalendar: CalendarSystem = null
+  ): InfoCalendarOptions = {
     val __obj = js.Dynamic.literal()
+    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
+    if (numberingSystem != null) __obj.updateDynamic("numberingSystem")(numberingSystem.asInstanceOf[js.Any])
+    if (outputCalendar != null) __obj.updateDynamic("outputCalendar")(outputCalendar.asInstanceOf[js.Any])
     __obj.asInstanceOf[InfoCalendarOptions]
   }
-  @scala.inline
-  implicit class InfoCalendarOptionsOps[Self <: InfoCalendarOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputCalendar(value: CalendarSystem): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputCalendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputCalendar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputCalendar")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

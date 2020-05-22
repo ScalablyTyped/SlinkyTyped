@@ -12,7 +12,7 @@ object Favorite {
   @js.native
   object component extends js.Object
   
-  def withProps(p: IconProps with SVGProps[SVGSVGElement]): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Favorite] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Favorite](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Favorite.type): `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Favorite] = new `SharedBuilder_<intersection>_1575655765`[typingsSlinky.grommetIcons.mod.Favorite](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: IconProps with SVGProps[SVGSVGElement]): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Favorite] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Favorite](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Favorite.type): SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Favorite] = new SharedBuilder_IconPropsSVGProps_1575655765[typingsSlinky.grommetIcons.mod.Favorite](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -22,59 +22,16 @@ trait SynthesizeSpeechOutput extends js.Object {
 
 object SynthesizeSpeechOutput {
   @scala.inline
-  def apply(): SynthesizeSpeechOutput = {
+  def apply(
+    AudioStream: AudioStream = null,
+    ContentType: ContentType = null,
+    RequestCharacters: js.UndefOr[RequestCharacters] = js.undefined
+  ): SynthesizeSpeechOutput = {
     val __obj = js.Dynamic.literal()
+    if (AudioStream != null) __obj.updateDynamic("AudioStream")(AudioStream.asInstanceOf[js.Any])
+    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequestCharacters)) __obj.updateDynamic("RequestCharacters")(RequestCharacters.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SynthesizeSpeechOutput]
   }
-  @scala.inline
-  implicit class SynthesizeSpeechOutputOps[Self <: SynthesizeSpeechOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudioStreamUint8Array(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAudioStream(value: AudioStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioStream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAudioStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioStream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentType(value: ContentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestCharacters(value: RequestCharacters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestCharacters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharacters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

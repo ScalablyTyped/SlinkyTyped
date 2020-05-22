@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Settings extends js.Object {
-  var cacheSizeBytes: js.UndefOr[Double] = js.native
-  var host: js.UndefOr[String] = js.native
-  var persistence: js.UndefOr[Boolean] = js.native
-  var ssl: js.UndefOr[Boolean] = js.native
-  var timestampsInSnapshots: js.UndefOr[Boolean] = js.native
+  var cacheSizeBytes: js.UndefOr[Double] = js.undefined
+  var host: js.UndefOr[String] = js.undefined
+  var persistence: js.UndefOr[Boolean] = js.undefined
+  var ssl: js.UndefOr[Boolean] = js.undefined
+  var timestampsInSnapshots: js.UndefOr[Boolean] = js.undefined
 }
 
 object Settings {
   @scala.inline
-  def apply(): Settings = {
+  def apply(
+    cacheSizeBytes: js.UndefOr[Double] = js.undefined,
+    host: String = null,
+    persistence: js.UndefOr[Boolean] = js.undefined,
+    ssl: js.UndefOr[Boolean] = js.undefined,
+    timestampsInSnapshots: js.UndefOr[Boolean] = js.undefined
+  ): Settings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cacheSizeBytes)) __obj.updateDynamic("cacheSizeBytes")(cacheSizeBytes.get.asInstanceOf[js.Any])
+    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
+    if (!js.isUndefined(persistence)) __obj.updateDynamic("persistence")(persistence.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ssl)) __obj.updateDynamic("ssl")(ssl.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(timestampsInSnapshots)) __obj.updateDynamic("timestampsInSnapshots")(timestampsInSnapshots.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
-  @scala.inline
-  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCacheSizeBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCacheSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHost(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHost: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPersistence(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPersistence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("persistence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSsl(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampsInSnapshots(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampsInSnapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampsInSnapshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampsInSnapshots")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

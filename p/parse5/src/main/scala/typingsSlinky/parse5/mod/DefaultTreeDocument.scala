@@ -5,19 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait DefaultTreeDocument
-  extends DefaultTreeParentNode
-     with Document {
+trait DefaultTreeDocument extends DefaultTreeParentNode {
   /**
     * [Document mode](https://dom.spec.whatwg.org/#concept-document-limited-quirks).
     */
-  var mode: DocumentMode = js.native
+  var mode: DocumentMode
   /**
     * The name of the node.
     */
   @JSName("nodeName")
-  var nodeName_DefaultTreeDocument: Numbersigndocument = js.native
+  var nodeName_DefaultTreeDocument: Numbersigndocument
 }
 
 object DefaultTreeDocument {
@@ -26,25 +23,5 @@ object DefaultTreeDocument {
     val __obj = js.Dynamic.literal(childNodes = childNodes.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultTreeDocument]
   }
-  @scala.inline
-  implicit class DefaultTreeDocumentOps[Self <: DefaultTreeDocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMode(value: DocumentMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNodeName(value: Numbersigndocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

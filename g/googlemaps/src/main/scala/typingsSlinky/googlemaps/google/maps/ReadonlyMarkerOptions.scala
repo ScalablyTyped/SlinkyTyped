@@ -6,261 +6,83 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** @see {@link MarkerOptions} */
-@js.native
 trait ReadonlyMarkerOptions extends js.Object {
   /** @see {@link MarkerOptions#anchorPoint} */
-  val anchorPoint: js.UndefOr[Point] = js.native
+  val anchorPoint: js.UndefOr[Point] = js.undefined
   /** @see {@link MarkerOptions#animation} */
-  val animation: js.UndefOr[Animation] = js.native
+  val animation: js.UndefOr[Animation] = js.undefined
   /** @see {@link MarkerOptions#clickable} */
-  val clickable: js.UndefOr[Boolean] = js.native
+  val clickable: js.UndefOr[Boolean] = js.undefined
   /** @see {@link MarkerOptions#crossOnDrag} */
-  val crossOnDrag: js.UndefOr[Boolean] = js.native
+  val crossOnDrag: js.UndefOr[Boolean] = js.undefined
   /** @see {@link MarkerOptions#cursor} */
-  val cursor: js.UndefOr[String] = js.native
+  val cursor: js.UndefOr[String] = js.undefined
   /** @see {@link MarkerOptions#draggable} */
-  val draggable: js.UndefOr[Boolean] = js.native
+  val draggable: js.UndefOr[Boolean] = js.undefined
   /** @see {@link MarkerOptions#icon} */
-  val icon: js.UndefOr[String | ReadonlyIcon | ReadonlySymbol] = js.native
+  val icon: js.UndefOr[String | ReadonlyIcon | ReadonlySymbol] = js.undefined
   /** @see {@link MarkerOptions#label} */
-  val label: js.UndefOr[String | ReadonlyMarkerLabel] = js.native
+  val label: js.UndefOr[String | ReadonlyMarkerLabel] = js.undefined
   /** @see {@link MarkerOptions#map} */
-  val map: js.UndefOr[Map[Element] | StreetViewPanorama] = js.native
+  val map: js.UndefOr[Map[Element] | StreetViewPanorama] = js.undefined
   /** @see {@link MarkerOptions#opacity} */
-  val opacity: js.UndefOr[Double] = js.native
+  val opacity: js.UndefOr[Double] = js.undefined
   /** @see {@link MarkerOptions#optimized} */
-  val optimized: js.UndefOr[Boolean] = js.native
+  val optimized: js.UndefOr[Boolean] = js.undefined
   /** @see {@link MarkerOptions#place} */
-  val place: js.UndefOr[Place] = js.native
+  val place: js.UndefOr[Place] = js.undefined
   /** @see {@link MarkerOptions#position} */
-  val position: js.UndefOr[LatLng | ReadonlyLatLngLiteral] = js.native
+  val position: js.UndefOr[LatLng | ReadonlyLatLngLiteral] = js.undefined
   /** @see {@link MarkerOptions#shape} */
-  val shape: js.UndefOr[MarkerShape] = js.native
+  val shape: js.UndefOr[MarkerShape] = js.undefined
   /** @see {@link MarkerOptions#title} */
-  val title: js.UndefOr[String] = js.native
+  val title: js.UndefOr[String] = js.undefined
   /** @see {@link MarkerOptions#visible} */
-  val visible: js.UndefOr[Boolean] = js.native
+  val visible: js.UndefOr[Boolean] = js.undefined
   /** @see {@link MarkerOptions#zIndex} */
-  val zIndex: js.UndefOr[Double] = js.native
+  val zIndex: js.UndefOr[Double] = js.undefined
 }
 
 object ReadonlyMarkerOptions {
   @scala.inline
-  def apply(): ReadonlyMarkerOptions = {
+  def apply(
+    anchorPoint: Point = null,
+    animation: Animation = null,
+    clickable: js.UndefOr[Boolean] = js.undefined,
+    crossOnDrag: js.UndefOr[Boolean] = js.undefined,
+    cursor: String = null,
+    draggable: js.UndefOr[Boolean] = js.undefined,
+    icon: String | ReadonlyIcon | ReadonlySymbol = null,
+    label: String | ReadonlyMarkerLabel = null,
+    map: Map[Element] | StreetViewPanorama = null,
+    opacity: js.UndefOr[Double] = js.undefined,
+    optimized: js.UndefOr[Boolean] = js.undefined,
+    place: Place = null,
+    position: LatLng | ReadonlyLatLngLiteral = null,
+    shape: MarkerShape = null,
+    title: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    zIndex: js.UndefOr[Double] = js.undefined
+  ): ReadonlyMarkerOptions = {
     val __obj = js.Dynamic.literal()
+    if (anchorPoint != null) __obj.updateDynamic("anchorPoint")(anchorPoint.asInstanceOf[js.Any])
+    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
+    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(crossOnDrag)) __obj.updateDynamic("crossOnDrag")(crossOnDrag.get.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(optimized)) __obj.updateDynamic("optimized")(optimized.get.asInstanceOf[js.Any])
+    if (place != null) __obj.updateDynamic("place")(place.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zIndex)) __obj.updateDynamic("zIndex")(zIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlyMarkerOptions]
   }
-  @scala.inline
-  implicit class ReadonlyMarkerOptionsOps[Self <: ReadonlyMarkerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchorPoint(value: Point): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchorPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation(value: Animation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClickable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClickable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOnDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOnDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOnDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOnDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDraggable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDraggable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String | ReadonlyIcon | ReadonlySymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String | ReadonlyMarkerLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMap(value: Map[Element] | StreetViewPanorama): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptimized(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimized")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptimized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optimized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlace(value: Place): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("place")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: LatLng | ReadonlyLatLngLiteral): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: MarkerShape): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

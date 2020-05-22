@@ -4,28 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Avatar extends js.Object {
-  var avatar: String = js.native
-  var avatarfull: String = js.native
-  var avatarmedium: String = js.native
-  var commentpermission: js.UndefOr[Double] = js.native
-  var communityvisibilitystate: Double = js.native
-  var gameextrainfo: js.UndefOr[String] = js.native
-  var gameid: js.UndefOr[String] = js.native
-  var gameserverip: js.UndefOr[String] = js.native
-  var lastlogoff: Double = js.native
-  var loccityid: js.UndefOr[Double] = js.native
-  var loccountrycode: js.UndefOr[String] = js.native
-  var locstatecode: js.UndefOr[String] = js.native
-  var personaname: String = js.native
-  var personastate: Double = js.native
-  var primaryclanid: js.UndefOr[String] = js.native
-  var profilestate: js.UndefOr[Double] = js.native
-  var profileurl: String = js.native
-  var realname: js.UndefOr[String] = js.native
-  var steamid: String = js.native
-  var timecreated: js.UndefOr[Double] = js.native
+  var avatar: String
+  var avatarfull: String
+  var avatarmedium: String
+  var commentpermission: js.UndefOr[Double] = js.undefined
+  var communityvisibilitystate: Double
+  var gameextrainfo: js.UndefOr[String] = js.undefined
+  var gameid: js.UndefOr[String] = js.undefined
+  var gameserverip: js.UndefOr[String] = js.undefined
+  var lastlogoff: Double
+  var loccityid: js.UndefOr[Double] = js.undefined
+  var loccountrycode: js.UndefOr[String] = js.undefined
+  var locstatecode: js.UndefOr[String] = js.undefined
+  var personaname: String
+  var personastate: Double
+  var primaryclanid: js.UndefOr[String] = js.undefined
+  var profilestate: js.UndefOr[Double] = js.undefined
+  var profileurl: String
+  var realname: js.UndefOr[String] = js.undefined
+  var steamid: String
+  var timecreated: js.UndefOr[Double] = js.undefined
 }
 
 object Avatar {
@@ -39,204 +38,32 @@ object Avatar {
     personaname: String,
     personastate: Double,
     profileurl: String,
-    steamid: String
+    steamid: String,
+    commentpermission: js.UndefOr[Double] = js.undefined,
+    gameextrainfo: String = null,
+    gameid: String = null,
+    gameserverip: String = null,
+    loccityid: js.UndefOr[Double] = js.undefined,
+    loccountrycode: String = null,
+    locstatecode: String = null,
+    primaryclanid: String = null,
+    profilestate: js.UndefOr[Double] = js.undefined,
+    realname: String = null,
+    timecreated: js.UndefOr[Double] = js.undefined
   ): Avatar = {
     val __obj = js.Dynamic.literal(avatar = avatar.asInstanceOf[js.Any], avatarfull = avatarfull.asInstanceOf[js.Any], avatarmedium = avatarmedium.asInstanceOf[js.Any], communityvisibilitystate = communityvisibilitystate.asInstanceOf[js.Any], lastlogoff = lastlogoff.asInstanceOf[js.Any], personaname = personaname.asInstanceOf[js.Any], personastate = personastate.asInstanceOf[js.Any], profileurl = profileurl.asInstanceOf[js.Any], steamid = steamid.asInstanceOf[js.Any])
+    if (!js.isUndefined(commentpermission)) __obj.updateDynamic("commentpermission")(commentpermission.get.asInstanceOf[js.Any])
+    if (gameextrainfo != null) __obj.updateDynamic("gameextrainfo")(gameextrainfo.asInstanceOf[js.Any])
+    if (gameid != null) __obj.updateDynamic("gameid")(gameid.asInstanceOf[js.Any])
+    if (gameserverip != null) __obj.updateDynamic("gameserverip")(gameserverip.asInstanceOf[js.Any])
+    if (!js.isUndefined(loccityid)) __obj.updateDynamic("loccityid")(loccityid.get.asInstanceOf[js.Any])
+    if (loccountrycode != null) __obj.updateDynamic("loccountrycode")(loccountrycode.asInstanceOf[js.Any])
+    if (locstatecode != null) __obj.updateDynamic("locstatecode")(locstatecode.asInstanceOf[js.Any])
+    if (primaryclanid != null) __obj.updateDynamic("primaryclanid")(primaryclanid.asInstanceOf[js.Any])
+    if (!js.isUndefined(profilestate)) __obj.updateDynamic("profilestate")(profilestate.get.asInstanceOf[js.Any])
+    if (realname != null) __obj.updateDynamic("realname")(realname.asInstanceOf[js.Any])
+    if (!js.isUndefined(timecreated)) __obj.updateDynamic("timecreated")(timecreated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Avatar]
   }
-  @scala.inline
-  implicit class AvatarOps[Self <: Avatar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvatar(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvatarfull(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarfull")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAvatarmedium(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarmedium")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommunityvisibilitystate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("communityvisibilitystate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLastlogoff(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastlogoff")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPersonaname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personaname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPersonastate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("personastate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProfileurl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profileurl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSteamid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steamid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCommentpermission(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commentpermission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommentpermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commentpermission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameextrainfo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameextrainfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameextrainfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameextrainfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGameserverip(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameserverip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGameserverip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gameserverip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoccityid(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loccityid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoccityid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loccityid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoccountrycode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loccountrycode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoccountrycode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loccountrycode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocstatecode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locstatecode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocstatecode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locstatecode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimaryclanid(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryclanid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimaryclanid: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryclanid")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfilestate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profilestate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfilestate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profilestate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRealname(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRealname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("realname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimecreated(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timecreated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimecreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timecreated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,59 +26,17 @@ trait FieldLevelEncryptionConfig extends js.Object {
 
 object FieldLevelEncryptionConfig {
   @scala.inline
-  def apply(CallerReference: String): FieldLevelEncryptionConfig = {
+  def apply(
+    CallerReference: String,
+    Comment: String = null,
+    ContentTypeProfileConfig: ContentTypeProfileConfig = null,
+    QueryArgProfileConfig: QueryArgProfileConfig = null
+  ): FieldLevelEncryptionConfig = {
     val __obj = js.Dynamic.literal(CallerReference = CallerReference.asInstanceOf[js.Any])
+    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
+    if (ContentTypeProfileConfig != null) __obj.updateDynamic("ContentTypeProfileConfig")(ContentTypeProfileConfig.asInstanceOf[js.Any])
+    if (QueryArgProfileConfig != null) __obj.updateDynamic("QueryArgProfileConfig")(QueryArgProfileConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[FieldLevelEncryptionConfig]
   }
-  @scala.inline
-  implicit class FieldLevelEncryptionConfigOps[Self <: FieldLevelEncryptionConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallerReference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentTypeProfileConfig(value: ContentTypeProfileConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentTypeProfileConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentTypeProfileConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentTypeProfileConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryArgProfileConfig(value: QueryArgProfileConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryArgProfileConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryArgProfileConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryArgProfileConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

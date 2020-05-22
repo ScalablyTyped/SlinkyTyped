@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Primitive = scala.Double | java.lang.String | scala.Boolean | js.Date
   type ThresholdCountGenerator[Value /* <: js.UndefOr[scala.Double] */] = js.Function3[
     /* values */ typingsSlinky.std.ArrayLike[Value], 
     /* min */ scala.Double, 

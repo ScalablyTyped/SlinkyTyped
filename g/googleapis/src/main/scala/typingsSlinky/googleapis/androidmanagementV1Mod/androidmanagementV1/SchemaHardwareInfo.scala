@@ -77,185 +77,38 @@ trait SchemaHardwareInfo extends js.Object {
 
 object SchemaHardwareInfo {
   @scala.inline
-  def apply(): SchemaHardwareInfo = {
+  def apply(
+    batteryShutdownTemperatures: js.Array[Double] = null,
+    batteryThrottlingTemperatures: js.Array[Double] = null,
+    brand: String = null,
+    cpuShutdownTemperatures: js.Array[Double] = null,
+    cpuThrottlingTemperatures: js.Array[Double] = null,
+    deviceBasebandVersion: String = null,
+    gpuShutdownTemperatures: js.Array[Double] = null,
+    gpuThrottlingTemperatures: js.Array[Double] = null,
+    hardware: String = null,
+    manufacturer: String = null,
+    model: String = null,
+    serialNumber: String = null,
+    skinShutdownTemperatures: js.Array[Double] = null,
+    skinThrottlingTemperatures: js.Array[Double] = null
+  ): SchemaHardwareInfo = {
     val __obj = js.Dynamic.literal()
+    if (batteryShutdownTemperatures != null) __obj.updateDynamic("batteryShutdownTemperatures")(batteryShutdownTemperatures.asInstanceOf[js.Any])
+    if (batteryThrottlingTemperatures != null) __obj.updateDynamic("batteryThrottlingTemperatures")(batteryThrottlingTemperatures.asInstanceOf[js.Any])
+    if (brand != null) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
+    if (cpuShutdownTemperatures != null) __obj.updateDynamic("cpuShutdownTemperatures")(cpuShutdownTemperatures.asInstanceOf[js.Any])
+    if (cpuThrottlingTemperatures != null) __obj.updateDynamic("cpuThrottlingTemperatures")(cpuThrottlingTemperatures.asInstanceOf[js.Any])
+    if (deviceBasebandVersion != null) __obj.updateDynamic("deviceBasebandVersion")(deviceBasebandVersion.asInstanceOf[js.Any])
+    if (gpuShutdownTemperatures != null) __obj.updateDynamic("gpuShutdownTemperatures")(gpuShutdownTemperatures.asInstanceOf[js.Any])
+    if (gpuThrottlingTemperatures != null) __obj.updateDynamic("gpuThrottlingTemperatures")(gpuThrottlingTemperatures.asInstanceOf[js.Any])
+    if (hardware != null) __obj.updateDynamic("hardware")(hardware.asInstanceOf[js.Any])
+    if (manufacturer != null) __obj.updateDynamic("manufacturer")(manufacturer.asInstanceOf[js.Any])
+    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
+    if (serialNumber != null) __obj.updateDynamic("serialNumber")(serialNumber.asInstanceOf[js.Any])
+    if (skinShutdownTemperatures != null) __obj.updateDynamic("skinShutdownTemperatures")(skinShutdownTemperatures.asInstanceOf[js.Any])
+    if (skinThrottlingTemperatures != null) __obj.updateDynamic("skinThrottlingTemperatures")(skinThrottlingTemperatures.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHardwareInfo]
   }
-  @scala.inline
-  implicit class SchemaHardwareInfoOps[Self <: SchemaHardwareInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatteryShutdownTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batteryShutdownTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatteryShutdownTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batteryShutdownTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBatteryThrottlingTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batteryThrottlingTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatteryThrottlingTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batteryThrottlingTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBrand(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpuShutdownTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuShutdownTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuShutdownTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuShutdownTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCpuThrottlingTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuThrottlingTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpuThrottlingTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuThrottlingTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeviceBasebandVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceBasebandVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeviceBasebandVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceBasebandVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGpuShutdownTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gpuShutdownTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGpuShutdownTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gpuShutdownTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGpuThrottlingTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gpuThrottlingTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGpuThrottlingTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gpuThrottlingTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHardware(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardware")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHardware: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hardware")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManufacturer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManufacturer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSerialNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSerialNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkinShutdownTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skinShutdownTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkinShutdownTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skinShutdownTemperatures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkinThrottlingTemperatures(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skinThrottlingTemperatures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkinThrottlingTemperatures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skinThrottlingTemperatures")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

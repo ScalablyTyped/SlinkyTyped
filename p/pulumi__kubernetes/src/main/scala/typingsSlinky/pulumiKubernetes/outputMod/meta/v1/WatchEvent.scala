@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Event represents a single event to a watched resource.
   */
-@js.native
 trait WatchEvent extends js.Object {
   /**
     * Object is:
@@ -16,8 +15,8 @@ trait WatchEvent extends js.Object {
     *  * If Type is Error: *Status is recommended; other types may make sense
     *    depending on context.
     */
-  val `object`: js.Object = js.native
-  val `type`: String = js.native
+  val `object`: js.Object
+  val `type`: String
 }
 
 object WatchEvent {
@@ -28,25 +27,5 @@ object WatchEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WatchEvent]
   }
-  @scala.inline
-  implicit class WatchEventOps[Self <: WatchEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withObject(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

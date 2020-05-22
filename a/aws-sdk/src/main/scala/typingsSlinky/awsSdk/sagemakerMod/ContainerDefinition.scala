@@ -34,89 +34,22 @@ trait ContainerDefinition extends js.Object {
 
 object ContainerDefinition {
   @scala.inline
-  def apply(): ContainerDefinition = {
+  def apply(
+    ContainerHostname: ContainerHostname = null,
+    Environment: EnvironmentMap = null,
+    Image: Image = null,
+    Mode: ContainerMode = null,
+    ModelDataUrl: Url = null,
+    ModelPackageName: ArnOrName = null
+  ): ContainerDefinition = {
     val __obj = js.Dynamic.literal()
+    if (ContainerHostname != null) __obj.updateDynamic("ContainerHostname")(ContainerHostname.asInstanceOf[js.Any])
+    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
+    if (Image != null) __obj.updateDynamic("Image")(Image.asInstanceOf[js.Any])
+    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
+    if (ModelDataUrl != null) __obj.updateDynamic("ModelDataUrl")(ModelDataUrl.asInstanceOf[js.Any])
+    if (ModelPackageName != null) __obj.updateDynamic("ModelPackageName")(ModelPackageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerDefinition]
   }
-  @scala.inline
-  implicit class ContainerDefinitionOps[Self <: ContainerDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainerHostname(value: ContainerHostname): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerHostname")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainerHostname: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerHostname")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: EnvironmentMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Image")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMode(value: ContainerMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelDataUrl(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelDataUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelDataUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelDataUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModelPackageName(value: ArnOrName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

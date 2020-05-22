@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The original labeling from the input document, without the submitted feedback. */
-@js.native
 trait OriginalLabelsIn extends js.Object {
   /** List of functional categories into which the element falls; in other words, the subject matter of the element. */
-  var categories: js.Array[Category] = js.native
+  var categories: js.Array[Category]
   /** Description of the action specified by the element and whom it affects. */
-  var types: js.Array[TypeLabel] = js.native
+  var types: js.Array[TypeLabel]
 }
 
 object OriginalLabelsIn {
@@ -19,25 +18,5 @@ object OriginalLabelsIn {
     val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[OriginalLabelsIn]
   }
-  @scala.inline
-  implicit class OriginalLabelsInOps[Self <: OriginalLabelsIn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategories(value: js.Array[Category]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTypes(value: js.Array[TypeLabel]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

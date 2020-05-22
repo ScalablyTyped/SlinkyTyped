@@ -18,41 +18,11 @@ trait IdentityPoolShortDescription extends js.Object {
 
 object IdentityPoolShortDescription {
   @scala.inline
-  def apply(): IdentityPoolShortDescription = {
+  def apply(IdentityPoolId: IdentityPoolId = null, IdentityPoolName: IdentityPoolName = null): IdentityPoolShortDescription = {
     val __obj = js.Dynamic.literal()
+    if (IdentityPoolId != null) __obj.updateDynamic("IdentityPoolId")(IdentityPoolId.asInstanceOf[js.Any])
+    if (IdentityPoolName != null) __obj.updateDynamic("IdentityPoolName")(IdentityPoolName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityPoolShortDescription]
   }
-  @scala.inline
-  implicit class IdentityPoolShortDescriptionOps[Self <: IdentityPoolShortDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIdentityPoolId(value: IdentityPoolId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityPoolId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentityPoolName(value: IdentityPoolName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentityPoolName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

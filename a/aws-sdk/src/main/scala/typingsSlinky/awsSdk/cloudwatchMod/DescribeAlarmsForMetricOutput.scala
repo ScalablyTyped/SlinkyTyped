@@ -14,29 +14,10 @@ trait DescribeAlarmsForMetricOutput extends js.Object {
 
 object DescribeAlarmsForMetricOutput {
   @scala.inline
-  def apply(): DescribeAlarmsForMetricOutput = {
+  def apply(MetricAlarms: MetricAlarms = null): DescribeAlarmsForMetricOutput = {
     val __obj = js.Dynamic.literal()
+    if (MetricAlarms != null) __obj.updateDynamic("MetricAlarms")(MetricAlarms.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAlarmsForMetricOutput]
   }
-  @scala.inline
-  implicit class DescribeAlarmsForMetricOutputOps[Self <: DescribeAlarmsForMetricOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMetricAlarms(value: MetricAlarms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricAlarms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricAlarms: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricAlarms")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

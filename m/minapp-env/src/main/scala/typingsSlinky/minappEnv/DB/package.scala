@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object DB {
+  type DocumentId = java.lang.String | scala.Double
   type ICountDocumentOptions = typingsSlinky.minappEnv.DB.IDBAPIParam
   type IDBAPIParam = typingsSlinky.minappEnv.IAPIParam[js.Any]
   type IGetDocumentOptions = typingsSlinky.minappEnv.DB.IDBAPIParam

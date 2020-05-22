@@ -24,42 +24,12 @@ object DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
   @scala.inline
   def apply(
     prodTrafficRoute: DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute,
-    targetGroups: js.Array[DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup]
+    targetGroups: js.Array[DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup],
+    testTrafficRoute: DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute = null
   ): DeploymentGroupLoadBalancerInfoTargetGroupPairInfo = {
     val __obj = js.Dynamic.literal(prodTrafficRoute = prodTrafficRoute.asInstanceOf[js.Any], targetGroups = targetGroups.asInstanceOf[js.Any])
+    if (testTrafficRoute != null) __obj.updateDynamic("testTrafficRoute")(testTrafficRoute.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentGroupLoadBalancerInfoTargetGroupPairInfo]
   }
-  @scala.inline
-  implicit class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoOps[Self <: DeploymentGroupLoadBalancerInfoTargetGroupPairInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProdTrafficRoute(value: DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prodTrafficRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTargetGroups(value: js.Array[DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTestTrafficRoute(value: DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTrafficRoute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestTrafficRoute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testTrafficRoute")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

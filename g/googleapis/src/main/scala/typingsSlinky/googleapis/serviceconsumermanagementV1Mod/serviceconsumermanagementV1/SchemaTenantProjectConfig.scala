@@ -49,89 +49,22 @@ trait SchemaTenantProjectConfig extends js.Object {
 
 object SchemaTenantProjectConfig {
   @scala.inline
-  def apply(): SchemaTenantProjectConfig = {
+  def apply(
+    billingConfig: SchemaBillingConfig = null,
+    folder: String = null,
+    labels: StringDictionary[String] = null,
+    serviceAccountConfig: SchemaServiceAccountConfig = null,
+    services: js.Array[String] = null,
+    tenantProjectPolicy: SchemaTenantProjectPolicy = null
+  ): SchemaTenantProjectConfig = {
     val __obj = js.Dynamic.literal()
+    if (billingConfig != null) __obj.updateDynamic("billingConfig")(billingConfig.asInstanceOf[js.Any])
+    if (folder != null) __obj.updateDynamic("folder")(folder.asInstanceOf[js.Any])
+    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
+    if (serviceAccountConfig != null) __obj.updateDynamic("serviceAccountConfig")(serviceAccountConfig.asInstanceOf[js.Any])
+    if (services != null) __obj.updateDynamic("services")(services.asInstanceOf[js.Any])
+    if (tenantProjectPolicy != null) __obj.updateDynamic("tenantProjectPolicy")(tenantProjectPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTenantProjectConfig]
   }
-  @scala.inline
-  implicit class SchemaTenantProjectConfigOps[Self <: SchemaTenantProjectConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBillingConfig(value: SchemaBillingConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBillingConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("billingConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFolder(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFolder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabels(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccountConfig(value: SchemaServiceAccountConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccountConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServices(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenantProjectPolicy(value: SchemaTenantProjectPolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenantProjectPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantProjectPolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

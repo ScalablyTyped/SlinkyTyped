@@ -1,139 +1,85 @@
 package typingsSlinky.extjs.Ext.grid
 
+import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
+import typingsSlinky.extjs.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ILockable extends IBase {
   /** [Config Option] (Object) */
-  var lockedGridConfig: js.UndefOr[js.Any] = js.native
+  var lockedGridConfig: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Object) */
-  var lockedViewConfig: js.UndefOr[js.Any] = js.native
+  var lockedViewConfig: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Object) */
-  var normalGridConfig: js.UndefOr[js.Any] = js.native
+  var normalGridConfig: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Object) */
-  var normalViewConfig: js.UndefOr[js.Any] = js.native
+  var normalViewConfig: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Number) */
-  var scrollDelta: js.UndefOr[Double] = js.native
+  var scrollDelta: js.UndefOr[Double] = js.undefined
   /** [Config Option] (String) */
-  var subGridXType: js.UndefOr[String] = js.native
+  var subGridXType: js.UndefOr[String] = js.undefined
   /** [Config Option] (Boolean) */
-  var syncRowHeight: js.UndefOr[Boolean] = js.native
+  var syncRowHeight: js.UndefOr[Boolean] = js.undefined
   /** [Method] Synchronizes the row heights between the locked and non locked portion of the grid for each row  */
-  var syncRowHeights: js.UndefOr[js.Function0[Unit]] = js.native
+  var syncRowHeights: js.UndefOr[js.Function0[Unit]] = js.undefined
 }
 
 object ILockable {
   @scala.inline
-  def apply(): ILockable = {
+  def apply(
+    alias: Array = null,
+    alternateClassName: js.Any = null,
+    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
+    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
+    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
+    config: js.Any = null,
+    extend: String = null,
+    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
+    inheritableStatics: js.Any = null,
+    initConfig: /* config */ js.UndefOr[js.Any] => ILockable = null,
+    lockedGridConfig: js.Any = null,
+    lockedViewConfig: js.Any = null,
+    mixins: js.Any = null,
+    normalGridConfig: js.Any = null,
+    normalViewConfig: js.Any = null,
+    requires: Array = null,
+    scrollDelta: js.UndefOr[Double] = js.undefined,
+    self: IClass = null,
+    singleton: js.UndefOr[Boolean] = js.undefined,
+    statics: js.Any = null,
+    subGridXType: String = null,
+    syncRowHeight: js.UndefOr[Boolean] = js.undefined,
+    syncRowHeights: () => Unit = null,
+    uses: Array = null
+  ): ILockable = {
     val __obj = js.Dynamic.literal()
+    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
+    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
+    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
+    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
+    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
+    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
+    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
+    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
+    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
+    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
+    if (lockedGridConfig != null) __obj.updateDynamic("lockedGridConfig")(lockedGridConfig.asInstanceOf[js.Any])
+    if (lockedViewConfig != null) __obj.updateDynamic("lockedViewConfig")(lockedViewConfig.asInstanceOf[js.Any])
+    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
+    if (normalGridConfig != null) __obj.updateDynamic("normalGridConfig")(normalGridConfig.asInstanceOf[js.Any])
+    if (normalViewConfig != null) __obj.updateDynamic("normalViewConfig")(normalViewConfig.asInstanceOf[js.Any])
+    if (requires != null) __obj.updateDynamic("requires")(requires.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollDelta)) __obj.updateDynamic("scrollDelta")(scrollDelta.get.asInstanceOf[js.Any])
+    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
+    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.get.asInstanceOf[js.Any])
+    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
+    if (subGridXType != null) __obj.updateDynamic("subGridXType")(subGridXType.asInstanceOf[js.Any])
+    if (!js.isUndefined(syncRowHeight)) __obj.updateDynamic("syncRowHeight")(syncRowHeight.get.asInstanceOf[js.Any])
+    if (syncRowHeights != null) __obj.updateDynamic("syncRowHeights")(js.Any.fromFunction0(syncRowHeights))
+    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILockable]
   }
-  @scala.inline
-  implicit class ILockableOps[Self <: ILockable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLockedGridConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedGridConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockedGridConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedGridConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLockedViewConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedViewConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockedViewConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockedViewConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalGridConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalGridConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalGridConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalGridConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNormalViewConfig(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalViewConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNormalViewConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("normalViewConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScrollDelta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDelta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScrollDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDelta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubGridXType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subGridXType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubGridXType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subGridXType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncRowHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncRowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSyncRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncRowHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSyncRowHeights(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncRowHeights")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutSyncRowHeights: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syncRowHeights")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

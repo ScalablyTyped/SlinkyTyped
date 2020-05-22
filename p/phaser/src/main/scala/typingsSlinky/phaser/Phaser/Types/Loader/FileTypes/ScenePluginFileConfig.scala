@@ -5,113 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScenePluginFileConfig extends js.Object {
   /**
     * The default file extension to use if no url is provided.
     */
-  var extension: js.UndefOr[String] = js.native
+  var extension: js.UndefOr[String] = js.undefined
   /**
     * The key of the file. Must be unique within the Loader.
     */
-  var key: String = js.native
+  var key: String
   /**
     * If this plugin is to be added to the Scene, this is the property key for it.
     */
-  var sceneKey: js.UndefOr[String] = js.native
+  var sceneKey: js.UndefOr[String] = js.undefined
   /**
     * If this plugin is to be added to Scene.Systems, this is the property key for it.
     */
-  var systemKey: js.UndefOr[String] = js.native
+  var systemKey: js.UndefOr[String] = js.undefined
   /**
     * The absolute or relative URL to load the file from. Or, a Scene Plugin.
     */
-  var url: js.UndefOr[String | js.Function] = js.native
+  var url: js.UndefOr[String | js.Function] = js.undefined
   /**
     * Extra XHR Settings specifically for this file.
     */
-  var xhrSettings: js.UndefOr[XHRSettingsObject] = js.native
+  var xhrSettings: js.UndefOr[XHRSettingsObject] = js.undefined
 }
 
 object ScenePluginFileConfig {
   @scala.inline
-  def apply(key: String): ScenePluginFileConfig = {
+  def apply(
+    key: String,
+    extension: String = null,
+    sceneKey: String = null,
+    systemKey: String = null,
+    url: String | js.Function = null,
+    xhrSettings: XHRSettingsObject = null
+  ): ScenePluginFileConfig = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (sceneKey != null) __obj.updateDynamic("sceneKey")(sceneKey.asInstanceOf[js.Any])
+    if (systemKey != null) __obj.updateDynamic("systemKey")(systemKey.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
+    if (xhrSettings != null) __obj.updateDynamic("xhrSettings")(xhrSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScenePluginFileConfig]
   }
-  @scala.inline
-  implicit class ScenePluginFileConfigOps[Self <: ScenePluginFileConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExtension(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtension: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSceneKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sceneKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSceneKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sceneKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSystemKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSystemKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("systemKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXhrSettings(value: XHRSettingsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXhrSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSettings")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait _Signer extends js.Object {
 
 object _Signer {
   @scala.inline
-  def apply(): _Signer = {
+  def apply(AwsAccountNumber: String = null, KeyPairIds: KeyPairIds = null): _Signer = {
     val __obj = js.Dynamic.literal()
+    if (AwsAccountNumber != null) __obj.updateDynamic("AwsAccountNumber")(AwsAccountNumber.asInstanceOf[js.Any])
+    if (KeyPairIds != null) __obj.updateDynamic("KeyPairIds")(KeyPairIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Signer]
   }
-  @scala.inline
-  implicit class _SignerOps[Self <: _Signer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAwsAccountNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAwsAccountNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyPairIds(value: KeyPairIds): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyPairIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPairIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

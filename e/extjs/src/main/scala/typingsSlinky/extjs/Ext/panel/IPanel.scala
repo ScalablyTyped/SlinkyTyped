@@ -4,882 +4,296 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IPanel extends IAbstractPanel {
   /** [Method] Add tools to this panel
-  		* @param tools Object[]/Ext.panel.Tool[] The tools to add
-  		*/
-  var addTool: js.UndefOr[js.Function1[/* tools */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param tools Object[]/Ext.panel.Tool[] The tools to add
+    */
+  var addTool: js.UndefOr[js.Function1[/* tools */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Invoked after the Panel is Collapsed
-  		* @param animated Boolean
-  		*/
-  var afterCollapse: js.UndefOr[js.Function1[/* animated */ js.UndefOr[Boolean], Unit]] = js.native
+    * @param animated Boolean
+    */
+  var afterCollapse: js.UndefOr[js.Function1[/* animated */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Method] Invoked after the Panel is Expanded
-  		* @param animated Boolean
-  		*/
-  var afterExpand: js.UndefOr[js.Function1[/* animated */ js.UndefOr[Boolean], Unit]] = js.native
+    * @param animated Boolean
+    */
+  var afterExpand: js.UndefOr[js.Function1[/* animated */ js.UndefOr[Boolean], Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var animCollapse: js.UndefOr[Boolean] = js.native
+  var animCollapse: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Object/Object[]) */
-  var bbar: js.UndefOr[js.Any] = js.native
+  var bbar: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var buttonAlign: js.UndefOr[String] = js.native
+  var buttonAlign: js.UndefOr[String] = js.undefined
   /** [Config Option] (Object/Object[]) */
-  var buttons: js.UndefOr[js.Any] = js.native
+  var buttons: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var closable: js.UndefOr[Boolean] = js.native
+  var closable: js.UndefOr[Boolean] = js.undefined
   /** [Method] Closes the Panel  */
-  var close: js.UndefOr[js.Function0[Unit]] = js.native
+  var close: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (String) */
-  var closeAction: js.UndefOr[String] = js.native
+  var closeAction: js.UndefOr[String] = js.undefined
   /** [Method] Collapses the panel body so that the body becomes hidden
-  		* @param direction String The direction to collapse towards. Must be one of  Ext.Component.DIRECTION_TOP Ext.Component.DIRECTION_RIGHT Ext.Component.DIRECTION_BOTTOM Ext.Component.DIRECTION_LEFT Defaults to collapseDirection.
-  		* @param animate Boolean True to animate the transition, else false (defaults to the value of the animCollapse panel config). May also be specified as the animation duration in milliseconds.
-  		* @returns Ext.panel.Panel this
-  		*/
+    * @param direction String The direction to collapse towards. Must be one of  Ext.Component.DIRECTION_TOP Ext.Component.DIRECTION_RIGHT Ext.Component.DIRECTION_BOTTOM Ext.Component.DIRECTION_LEFT Defaults to collapseDirection.
+    * @param animate Boolean True to animate the transition, else false (defaults to the value of the animCollapse panel config). May also be specified as the animation duration in milliseconds.
+    * @returns Ext.panel.Panel this
+    */
   var collapse: js.UndefOr[
     js.Function2[/* direction */ js.UndefOr[String], /* animate */ js.UndefOr[Boolean], this.type]
-  ] = js.native
+  ] = js.undefined
   /** [Config Option] (String) */
-  var collapseDirection: js.UndefOr[String] = js.native
+  var collapseDirection: js.UndefOr[String] = js.undefined
   /** [Config Option] (Boolean) */
-  var collapseFirst: js.UndefOr[Boolean] = js.native
+  var collapseFirst: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */
-  var collapseMode: js.UndefOr[String] = js.native
+  var collapseMode: js.UndefOr[String] = js.undefined
   /** [Config Option] (Boolean) */
-  var collapsed: js.UndefOr[Boolean] = js.native
+  var collapsed: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */
-  var collapsedCls: js.UndefOr[String] = js.native
+  var collapsedCls: js.UndefOr[String] = js.undefined
   /** [Config Option] (Boolean) */
-  var collapsible: js.UndefOr[Boolean] = js.native
+  var collapsible: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var constrainHeader: js.UndefOr[Boolean] = js.native
+  var constrainHeader: js.UndefOr[Boolean] = js.undefined
   /** [Method] converts a collapsdDir into an anchor argument for Element slideIn overridden in rtl mode to switch l and r
-  		* @param collapseDir Object
-  		*/
-  var convertCollapseDir: js.UndefOr[js.Function1[/* collapseDir */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param collapseDir Object
+    */
+  var convertCollapseDir: js.UndefOr[js.Function1[/* collapseDir */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Property] (Ext.dd.DragSource/Ext.util.ComponentDragger) */
-  var dd: js.UndefOr[js.Any] = js.native
+  var dd: js.UndefOr[js.Any] = js.undefined
   /** [Method] Expands the panel body so that it becomes visible
-  		* @param animate Boolean True to animate the transition, else false (defaults to the value of the animCollapse panel config). May also be specified as the animation duration in milliseconds.
-  		* @returns Ext.panel.Panel this
-  		*/
-  var expand: js.UndefOr[js.Function1[/* animate */ js.UndefOr[Boolean], this.type]] = js.native
+    * @param animate Boolean True to animate the transition, else false (defaults to the value of the animCollapse panel config). May also be specified as the animation duration in milliseconds.
+    * @returns Ext.panel.Panel this
+    */
+  var expand: js.UndefOr[js.Function1[/* animate */ js.UndefOr[Boolean], this.type]] = js.undefined
   /** [Config Option] (Object/Object[]) */
-  var fbar: js.UndefOr[js.Any] = js.native
+  var fbar: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var floatable: js.UndefOr[Boolean] = js.native
+  var floatable: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Boolean) */
-  var frameHeader: js.UndefOr[Boolean] = js.native
+  var frameHeader: js.UndefOr[Boolean] = js.undefined
   /** [Method] Returns the current collapsed state of the panel
-  		* @returns Boolean/String False when not collapsed, otherwise the value of collapseDirection.
-  		*/
-  var getCollapsed: js.UndefOr[js.Function0[_]] = js.native
+    * @returns Boolean/String False when not collapsed, otherwise the value of collapseDirection.
+    */
+  var getCollapsed: js.UndefOr[js.Function0[_]] = js.undefined
   /** [Method] Gets the Header for this panel  */
-  var getHeader: js.UndefOr[js.Function0[Unit]] = js.native
+  var getHeader: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (Number/String) */
-  var glyph: js.UndefOr[js.Any] = js.native
+  var glyph: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean/Object) */
-  var header: js.UndefOr[js.Any] = js.native
+  var header: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var headerOverCls: js.UndefOr[String] = js.native
+  var headerOverCls: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var headerPosition: js.UndefOr[String] = js.native
+  var headerPosition: js.UndefOr[String] = js.undefined
   /** [Config Option] (Boolean) */
-  var hideCollapseTool: js.UndefOr[Boolean] = js.native
+  var hideCollapseTool: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */
-  var icon: js.UndefOr[String] = js.native
+  var icon: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var iconCls: js.UndefOr[String] = js.native
+  var iconCls: js.UndefOr[String] = js.undefined
   /** [Method] Returns true if this component is visible
-  		* @param deep Object
-  		* @returns Boolean true if this component is visible, false otherwise.
-  		*/
+    * @param deep Object
+    * @returns Boolean true if this component is visible, false otherwise.
+    */
   @JSName("isVisible")
-  var isVisible_IPanel: js.UndefOr[js.Function1[/* deep */ js.UndefOr[js.Any], Boolean]] = js.native
+  var isVisible_IPanel: js.UndefOr[js.Function1[/* deep */ js.UndefOr[js.Any], Boolean]] = js.undefined
   /** [Config Option] (Object/Object[]) */
-  var lbar: js.UndefOr[js.Any] = js.native
+  var lbar: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Boolean) */
-  var manageHeight: js.UndefOr[Boolean] = js.native
+  var manageHeight: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Number) */
-  var minButtonWidth: js.UndefOr[Double] = js.native
+  var minButtonWidth: js.UndefOr[Double] = js.undefined
   /** [Method] Possibly animates down to a target element  */
   @JSName("onHide")
-  var onHide_IPanel: js.UndefOr[js.Function0[Unit]] = js.native
+  var onHide_IPanel: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Method] Method to manage awareness of when components are removed from their respective Container firing a removed event
-  		* @param destroying Object
-  		*/
+    * @param destroying Object
+    */
   @JSName("onRemoved")
-  var onRemoved_IPanel: js.UndefOr[js.Function1[/* destroying */ js.UndefOr[js.Any], Unit]] = js.native
+  var onRemoved_IPanel: js.UndefOr[js.Function1[/* destroying */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Allows addition of behavior to the show operation  */
   @JSName("onShow")
-  var onShow_IPanel: js.UndefOr[js.Function0[Unit]] = js.native
+  var onShow_IPanel: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var overlapHeader: js.UndefOr[Boolean] = js.native
+  var overlapHeader: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Ext.Component/Object) */
-  var placeholder: js.UndefOr[js.Any] = js.native
+  var placeholder: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (Number) */
-  var placeholderCollapseHideMode: js.UndefOr[Double] = js.native
+  var placeholderCollapseHideMode: js.UndefOr[Double] = js.undefined
   /** [Config Option] (Boolean) */
-  var preventHeader: js.UndefOr[Boolean] = js.native
+  var preventHeader: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Object/Object[]) */
-  var rbar: js.UndefOr[js.Any] = js.native
+  var rbar: js.UndefOr[js.Any] = js.undefined
   /** [Method]
-  		* @param border Object
-  		* @param targetEl Object
-  		*/
+    * @param border Object
+    * @param targetEl Object
+    */
   @JSName("setBorder")
   var setBorder_IPanel: js.UndefOr[
     js.Function2[/* border */ js.UndefOr[js.Any], /* targetEl */ js.UndefOr[js.Any], Unit]
-  ] = js.native
+  ] = js.undefined
   /** [Method] Set the glyph for the panel s header
-  		* @param newGlyph Number/String The new glyph This parameter expects a format consistent with that of glyph
-  		*/
-  var setGlyph: js.UndefOr[js.Function1[/* newGlyph */ js.UndefOr[js.Any], Unit]] = js.native
+    * @param newGlyph Number/String The new glyph This parameter expects a format consistent with that of glyph
+    */
+  var setGlyph: js.UndefOr[js.Function1[/* newGlyph */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Method] Set the icon for the panel s header
-  		* @param newIcon String The new icon path
-  		*/
-  var setIcon: js.UndefOr[js.Function1[/* newIcon */ js.UndefOr[String], Unit]] = js.native
+    * @param newIcon String The new icon path
+    */
+  var setIcon: js.UndefOr[js.Function1[/* newIcon */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Set the iconCls for the panel s header
-  		* @param newIconCls String The new CSS class name
-  		*/
-  var setIconCls: js.UndefOr[js.Function1[/* newIconCls */ js.UndefOr[String], Unit]] = js.native
+    * @param newIconCls String The new CSS class name
+    */
+  var setIconCls: js.UndefOr[js.Function1[/* newIconCls */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Set a title for the panel s header
-  		* @param newTitle String
-  		*/
-  var setTitle: js.UndefOr[js.Function1[/* newTitle */ js.UndefOr[String], Unit]] = js.native
+    * @param newTitle String
+    */
+  var setTitle: js.UndefOr[js.Function1[/* newTitle */ js.UndefOr[String], Unit]] = js.undefined
   /** [Method] Sets the UI for the component
-  		* @param ui Object
-  		*/
+    * @param ui Object
+    */
   @JSName("setUI")
-  var setUI_IPanel: js.UndefOr[js.Function1[/* ui */ js.UndefOr[js.Any], Unit]] = js.native
+  var setUI_IPanel: js.UndefOr[js.Function1[/* ui */ js.UndefOr[js.Any], Unit]] = js.undefined
   /** [Config Option] (Boolean) */
-  var simpleDrag: js.UndefOr[Boolean] = js.native
+  var simpleDrag: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (Object/Object[]) */
-  var tbar: js.UndefOr[js.Any] = js.native
+  var tbar: js.UndefOr[js.Any] = js.undefined
   /** [Config Option] (String) */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.undefined
   /** [Config Option] (String) */
-  var titleAlign: js.UndefOr[String] = js.native
+  var titleAlign: js.UndefOr[String] = js.undefined
   /** [Config Option] (Boolean) */
-  var titleCollapse: js.UndefOr[Boolean] = js.native
+  var titleCollapse: js.UndefOr[Boolean] = js.undefined
   /** [Method] Shortcut for performing an expand or collapse based on the current state of the panel
-  		* @returns Ext.panel.Panel this
-  		*/
-  var toggleCollapse: js.UndefOr[js.Function0[this.type]] = js.native
+    * @returns Ext.panel.Panel this
+    */
+  var toggleCollapse: js.UndefOr[js.Function0[this.type]] = js.undefined
   /** [Config Option] (Object[]/Ext.panel.Tool[]) */
-  var tools: js.UndefOr[js.Any] = js.native
+  var tools: js.UndefOr[js.Any] = js.undefined
 }
 
 object IPanel {
   @scala.inline
-  def apply(): IPanel = {
+  def apply(
+    IAbstractPanel: IAbstractPanel = null,
+    addTool: /* tools */ js.UndefOr[js.Any] => Unit = null,
+    afterCollapse: /* animated */ js.UndefOr[Boolean] => Unit = null,
+    afterExpand: /* animated */ js.UndefOr[Boolean] => Unit = null,
+    animCollapse: js.UndefOr[Boolean] = js.undefined,
+    bbar: js.Any = null,
+    buttonAlign: String = null,
+    buttons: js.Any = null,
+    closable: js.UndefOr[Boolean] = js.undefined,
+    close: () => Unit = null,
+    closeAction: String = null,
+    collapse: (/* direction */ js.UndefOr[String], /* animate */ js.UndefOr[Boolean]) => IPanel = null,
+    collapseDirection: String = null,
+    collapseFirst: js.UndefOr[Boolean] = js.undefined,
+    collapseMode: String = null,
+    collapsed: js.UndefOr[Boolean] = js.undefined,
+    collapsedCls: String = null,
+    collapsible: js.UndefOr[Boolean] = js.undefined,
+    constrainHeader: js.UndefOr[Boolean] = js.undefined,
+    convertCollapseDir: /* collapseDir */ js.UndefOr[js.Any] => Unit = null,
+    dd: js.Any = null,
+    expand: /* animate */ js.UndefOr[Boolean] => IPanel = null,
+    fbar: js.Any = null,
+    floatable: js.UndefOr[Boolean] = js.undefined,
+    frameHeader: js.UndefOr[Boolean] = js.undefined,
+    getCollapsed: () => _ = null,
+    getHeader: () => Unit = null,
+    glyph: js.Any = null,
+    header: js.Any = null,
+    headerOverCls: String = null,
+    headerPosition: String = null,
+    hideCollapseTool: js.UndefOr[Boolean] = js.undefined,
+    icon: String = null,
+    iconCls: String = null,
+    isVisible: /* deep */ js.UndefOr[js.Any] => Boolean = null,
+    lbar: js.Any = null,
+    manageHeight: js.UndefOr[Boolean] = js.undefined,
+    minButtonWidth: js.UndefOr[Double] = js.undefined,
+    onHide: () => Unit = null,
+    onRemoved: /* destroying */ js.UndefOr[js.Any] => Unit = null,
+    onShow: () => Unit = null,
+    overlapHeader: js.UndefOr[Boolean] = js.undefined,
+    placeholder: js.Any = null,
+    placeholderCollapseHideMode: js.UndefOr[Double] = js.undefined,
+    preventHeader: js.UndefOr[Boolean] = js.undefined,
+    rbar: js.Any = null,
+    setBorder: (/* border */ js.UndefOr[js.Any], /* targetEl */ js.UndefOr[js.Any]) => Unit = null,
+    setGlyph: /* newGlyph */ js.UndefOr[js.Any] => Unit = null,
+    setIcon: /* newIcon */ js.UndefOr[String] => Unit = null,
+    setIconCls: /* newIconCls */ js.UndefOr[String] => Unit = null,
+    setTitle: /* newTitle */ js.UndefOr[String] => Unit = null,
+    setUI: /* ui */ js.UndefOr[js.Any] => Unit = null,
+    simpleDrag: js.UndefOr[Boolean] = js.undefined,
+    tbar: js.Any = null,
+    title: String = null,
+    titleAlign: String = null,
+    titleCollapse: js.UndefOr[Boolean] = js.undefined,
+    toggleCollapse: () => IPanel = null,
+    tools: js.Any = null
+  ): IPanel = {
     val __obj = js.Dynamic.literal()
+    if (IAbstractPanel != null) js.Dynamic.global.Object.assign(__obj, IAbstractPanel)
+    if (addTool != null) __obj.updateDynamic("addTool")(js.Any.fromFunction1(addTool))
+    if (afterCollapse != null) __obj.updateDynamic("afterCollapse")(js.Any.fromFunction1(afterCollapse))
+    if (afterExpand != null) __obj.updateDynamic("afterExpand")(js.Any.fromFunction1(afterExpand))
+    if (!js.isUndefined(animCollapse)) __obj.updateDynamic("animCollapse")(animCollapse.get.asInstanceOf[js.Any])
+    if (bbar != null) __obj.updateDynamic("bbar")(bbar.asInstanceOf[js.Any])
+    if (buttonAlign != null) __obj.updateDynamic("buttonAlign")(buttonAlign.asInstanceOf[js.Any])
+    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
+    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.get.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction0(close))
+    if (closeAction != null) __obj.updateDynamic("closeAction")(closeAction.asInstanceOf[js.Any])
+    if (collapse != null) __obj.updateDynamic("collapse")(js.Any.fromFunction2(collapse))
+    if (collapseDirection != null) __obj.updateDynamic("collapseDirection")(collapseDirection.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapseFirst)) __obj.updateDynamic("collapseFirst")(collapseFirst.get.asInstanceOf[js.Any])
+    if (collapseMode != null) __obj.updateDynamic("collapseMode")(collapseMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.get.asInstanceOf[js.Any])
+    if (collapsedCls != null) __obj.updateDynamic("collapsedCls")(collapsedCls.asInstanceOf[js.Any])
+    if (!js.isUndefined(collapsible)) __obj.updateDynamic("collapsible")(collapsible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(constrainHeader)) __obj.updateDynamic("constrainHeader")(constrainHeader.get.asInstanceOf[js.Any])
+    if (convertCollapseDir != null) __obj.updateDynamic("convertCollapseDir")(js.Any.fromFunction1(convertCollapseDir))
+    if (dd != null) __obj.updateDynamic("dd")(dd.asInstanceOf[js.Any])
+    if (expand != null) __obj.updateDynamic("expand")(js.Any.fromFunction1(expand))
+    if (fbar != null) __obj.updateDynamic("fbar")(fbar.asInstanceOf[js.Any])
+    if (!js.isUndefined(floatable)) __obj.updateDynamic("floatable")(floatable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(frameHeader)) __obj.updateDynamic("frameHeader")(frameHeader.get.asInstanceOf[js.Any])
+    if (getCollapsed != null) __obj.updateDynamic("getCollapsed")(js.Any.fromFunction0(getCollapsed))
+    if (getHeader != null) __obj.updateDynamic("getHeader")(js.Any.fromFunction0(getHeader))
+    if (glyph != null) __obj.updateDynamic("glyph")(glyph.asInstanceOf[js.Any])
+    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
+    if (headerOverCls != null) __obj.updateDynamic("headerOverCls")(headerOverCls.asInstanceOf[js.Any])
+    if (headerPosition != null) __obj.updateDynamic("headerPosition")(headerPosition.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideCollapseTool)) __obj.updateDynamic("hideCollapseTool")(hideCollapseTool.get.asInstanceOf[js.Any])
+    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
+    if (iconCls != null) __obj.updateDynamic("iconCls")(iconCls.asInstanceOf[js.Any])
+    if (isVisible != null) __obj.updateDynamic("isVisible")(js.Any.fromFunction1(isVisible))
+    if (lbar != null) __obj.updateDynamic("lbar")(lbar.asInstanceOf[js.Any])
+    if (!js.isUndefined(manageHeight)) __obj.updateDynamic("manageHeight")(manageHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minButtonWidth)) __obj.updateDynamic("minButtonWidth")(minButtonWidth.get.asInstanceOf[js.Any])
+    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction0(onHide))
+    if (onRemoved != null) __obj.updateDynamic("onRemoved")(js.Any.fromFunction1(onRemoved))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
+    if (!js.isUndefined(overlapHeader)) __obj.updateDynamic("overlapHeader")(overlapHeader.get.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(placeholderCollapseHideMode)) __obj.updateDynamic("placeholderCollapseHideMode")(placeholderCollapseHideMode.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(preventHeader)) __obj.updateDynamic("preventHeader")(preventHeader.get.asInstanceOf[js.Any])
+    if (rbar != null) __obj.updateDynamic("rbar")(rbar.asInstanceOf[js.Any])
+    if (setBorder != null) __obj.updateDynamic("setBorder")(js.Any.fromFunction2(setBorder))
+    if (setGlyph != null) __obj.updateDynamic("setGlyph")(js.Any.fromFunction1(setGlyph))
+    if (setIcon != null) __obj.updateDynamic("setIcon")(js.Any.fromFunction1(setIcon))
+    if (setIconCls != null) __obj.updateDynamic("setIconCls")(js.Any.fromFunction1(setIconCls))
+    if (setTitle != null) __obj.updateDynamic("setTitle")(js.Any.fromFunction1(setTitle))
+    if (setUI != null) __obj.updateDynamic("setUI")(js.Any.fromFunction1(setUI))
+    if (!js.isUndefined(simpleDrag)) __obj.updateDynamic("simpleDrag")(simpleDrag.get.asInstanceOf[js.Any])
+    if (tbar != null) __obj.updateDynamic("tbar")(tbar.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (titleAlign != null) __obj.updateDynamic("titleAlign")(titleAlign.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleCollapse)) __obj.updateDynamic("titleCollapse")(titleCollapse.get.asInstanceOf[js.Any])
+    if (toggleCollapse != null) __obj.updateDynamic("toggleCollapse")(js.Any.fromFunction0(toggleCollapse))
+    if (tools != null) __obj.updateDynamic("tools")(tools.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPanel]
   }
-  @scala.inline
-  implicit class IPanelOps[Self <: IPanel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddTool(value: /* tools */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTool")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddTool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addTool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterCollapse(value: /* animated */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterCollapse")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAfterExpand(value: /* animated */ js.UndefOr[Boolean] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterExpand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterExpand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimCollapse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animCollapse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBbar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtonAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtonAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withButtons(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutButtons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseAction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapse(value: (/* direction */ js.UndefOr[String], /* animate */ js.UndefOr[Boolean]) => IPanel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseDirection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseDirection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseFirst(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseFirst")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseFirst: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseFirst")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapseMode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapseMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsedCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsedCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsedCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollapsible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollapsible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConstrainHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstrainHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constrainHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConvertCollapseDir(value: /* collapseDir */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertCollapseDir")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutConvertCollapseDir: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertCollapseDir")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDd(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExpand(value: /* animate */ js.UndefOr[Boolean] => IPanel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExpand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFbar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFloatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFloatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("floatable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrameHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrameHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frameHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetCollapsed(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCollapsed")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetCollapsed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCollapsed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetHeader(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeader")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlyph(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyph")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlyph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("glyph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderOverCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerOverCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderOverCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerOverCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideCollapseTool(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideCollapseTool")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideCollapseTool: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideCollapseTool")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIcon(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconCls(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconCls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVisible(value: /* deep */ js.UndefOr[js.Any] => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutIsVisible: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLbar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withManageHeight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manageHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutManageHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manageHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinButtonWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minButtonWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinButtonWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minButtonWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnHide(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnHide: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRemoved(value: /* destroying */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemoved")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRemoved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRemoved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnShow(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlapHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlapHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlapHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlapHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholder(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderCollapseHideMode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderCollapseHideMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderCollapseHideMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderCollapseHideMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreventHeader(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreventHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preventHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRbar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetBorder(value: (/* border */ js.UndefOr[js.Any], /* targetEl */ js.UndefOr[js.Any]) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBorder")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetBorder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setBorder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetGlyph(value: /* newGlyph */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGlyph")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetGlyph: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setGlyph")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetIcon(value: /* newIcon */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIcon")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetIcon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIcon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetIconCls(value: /* newIconCls */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIconCls")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetIconCls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setIconCls")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetTitle(value: /* newTitle */ js.UndefOr[String] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSetUI(value: /* ui */ js.UndefOr[js.Any] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUI")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSetUI: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setUI")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSimpleDrag(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleDrag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSimpleDrag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleDrag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTbar(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tbar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleCollapse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleCollapse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleCollapse(value: () => IPanel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleCollapse")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutToggleCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTools(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tools")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

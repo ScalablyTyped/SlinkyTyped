@@ -5,277 +5,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Config_ extends js.Object {
   /* Configurations for Amazon Store */
-  var amazonAPIVersion: js.UndefOr[Double] = js.native
+  var amazonAPIVersion: js.UndefOr[Double] = js.undefined
   /* Configurations for Apple */
   // if you want to exclude old transaction, set this to true. Default is false
-  var appleExcludeOldTransactions: js.UndefOr[Boolean] = js.native
+  var appleExcludeOldTransactions: js.UndefOr[Boolean] = js.undefined
   // this comes from iTunes Connect (You need this to valiate subscriptions)
-  var applePassword: js.UndefOr[String] = js.native
+  var applePassword: js.UndefOr[String] = js.undefined
   /* Configurations for Facebook (Payments Lite) */
-  var facebookAppId: js.UndefOr[String] = js.native
-  var facebookAppSecret: js.UndefOr[String] = js.native
+  var facebookAppId: js.UndefOr[String] = js.undefined
+  var facebookAppSecret: js.UndefOr[String] = js.undefined
   // optional, for Google Play subscriptions
-  var googleAccToken: js.UndefOr[String] = js.native
+  var googleAccToken: js.UndefOr[String] = js.undefined
   // optional, for Google Play subscriptions
-  var googleClientID: js.UndefOr[String] = js.native
+  var googleClientID: js.UndefOr[String] = js.undefined
   // optional, for Google Play subscriptions
-  var googleClientSecret: js.UndefOr[String] = js.native
+  var googleClientSecret: js.UndefOr[String] = js.undefined
   /* Configurations for Google Play */
   // this is the path to the directory containing iap-sanbox/iap-live files
-  var googlePublicKeyPath: js.UndefOr[String] = js.native
+  var googlePublicKeyPath: js.UndefOr[String] = js.undefined
   // this is the google iap-live public key string
-  var googlePublicKeyStrLive: js.UndefOr[String] = js.native
+  var googlePublicKeyStrLive: js.UndefOr[String] = js.undefined
   // this is the google iap-sandbox public key string
-  var googlePublicKeyStrSandBox: js.UndefOr[String] = js.native
+  var googlePublicKeyStrSandBox: js.UndefOr[String] = js.undefined
   // optional, for Google Play subscritions
-  var googleRefToken: js.UndefOr[String] = js.native
+  var googleRefToken: js.UndefOr[String] = js.undefined
   // optional, for Google Play subscriptions
-  var googleRefreshToken: js.UndefOr[String] = js.native
+  var googleRefreshToken: js.UndefOr[String] = js.undefined
   // Configurations for Google Service Account validation: You can validate with just packageName, productId, and purchaseToken
-  var googleServiceAccount: js.UndefOr[ClientEmail] = js.native
+  var googleServiceAccount: js.UndefOr[ClientEmail] = js.undefined
   /* Configurations for Roku */
   // this comes from Roku Developer Dashboard
-  var rokuApiKey: js.UndefOr[String] = js.native
-  var secret: js.UndefOr[String] = js.native
+  var rokuApiKey: js.UndefOr[String] = js.undefined
+  var secret: js.UndefOr[String] = js.undefined
   /* Configurations all platforms */
   // For Apple and Googl Play to force Sandbox validation only
-  var test: js.UndefOr[Boolean] = js.native
+  var test: js.UndefOr[Boolean] = js.undefined
   // Output debug logs to stdout stream
-  var verbose: js.UndefOr[Boolean] = js.native
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object Config_ {
   @scala.inline
-  def apply(): Config_ = {
+  def apply(
+    amazonAPIVersion: js.UndefOr[Double] = js.undefined,
+    appleExcludeOldTransactions: js.UndefOr[Boolean] = js.undefined,
+    applePassword: String = null,
+    facebookAppId: String = null,
+    facebookAppSecret: String = null,
+    googleAccToken: String = null,
+    googleClientID: String = null,
+    googleClientSecret: String = null,
+    googlePublicKeyPath: String = null,
+    googlePublicKeyStrLive: String = null,
+    googlePublicKeyStrSandBox: String = null,
+    googleRefToken: String = null,
+    googleRefreshToken: String = null,
+    googleServiceAccount: ClientEmail = null,
+    rokuApiKey: String = null,
+    secret: String = null,
+    test: js.UndefOr[Boolean] = js.undefined,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): Config_ = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(amazonAPIVersion)) __obj.updateDynamic("amazonAPIVersion")(amazonAPIVersion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(appleExcludeOldTransactions)) __obj.updateDynamic("appleExcludeOldTransactions")(appleExcludeOldTransactions.get.asInstanceOf[js.Any])
+    if (applePassword != null) __obj.updateDynamic("applePassword")(applePassword.asInstanceOf[js.Any])
+    if (facebookAppId != null) __obj.updateDynamic("facebookAppId")(facebookAppId.asInstanceOf[js.Any])
+    if (facebookAppSecret != null) __obj.updateDynamic("facebookAppSecret")(facebookAppSecret.asInstanceOf[js.Any])
+    if (googleAccToken != null) __obj.updateDynamic("googleAccToken")(googleAccToken.asInstanceOf[js.Any])
+    if (googleClientID != null) __obj.updateDynamic("googleClientID")(googleClientID.asInstanceOf[js.Any])
+    if (googleClientSecret != null) __obj.updateDynamic("googleClientSecret")(googleClientSecret.asInstanceOf[js.Any])
+    if (googlePublicKeyPath != null) __obj.updateDynamic("googlePublicKeyPath")(googlePublicKeyPath.asInstanceOf[js.Any])
+    if (googlePublicKeyStrLive != null) __obj.updateDynamic("googlePublicKeyStrLive")(googlePublicKeyStrLive.asInstanceOf[js.Any])
+    if (googlePublicKeyStrSandBox != null) __obj.updateDynamic("googlePublicKeyStrSandBox")(googlePublicKeyStrSandBox.asInstanceOf[js.Any])
+    if (googleRefToken != null) __obj.updateDynamic("googleRefToken")(googleRefToken.asInstanceOf[js.Any])
+    if (googleRefreshToken != null) __obj.updateDynamic("googleRefreshToken")(googleRefreshToken.asInstanceOf[js.Any])
+    if (googleServiceAccount != null) __obj.updateDynamic("googleServiceAccount")(googleServiceAccount.asInstanceOf[js.Any])
+    if (rokuApiKey != null) __obj.updateDynamic("rokuApiKey")(rokuApiKey.asInstanceOf[js.Any])
+    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
+    if (!js.isUndefined(test)) __obj.updateDynamic("test")(test.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config_]
   }
-  @scala.inline
-  implicit class Config_Ops[Self <: Config_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAmazonAPIVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAPIVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAmazonAPIVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAPIVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAppleExcludeOldTransactions(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appleExcludeOldTransactions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppleExcludeOldTransactions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appleExcludeOldTransactions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplePassword(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applePassword")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplePassword: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applePassword")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacebookAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebookAppId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacebookAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebookAppId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFacebookAppSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebookAppSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFacebookAppSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("facebookAppSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleAccToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleAccToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleAccToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleAccToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleClientID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleClientID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleClientID: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleClientID")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleClientSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleClientSecret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleClientSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleClientSecret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGooglePublicKeyPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePublicKeyPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGooglePublicKeyPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePublicKeyPath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGooglePublicKeyStrLive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePublicKeyStrLive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGooglePublicKeyStrLive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePublicKeyStrLive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGooglePublicKeyStrSandBox(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePublicKeyStrSandBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGooglePublicKeyStrSandBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googlePublicKeyStrSandBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleRefToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleRefToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleRefToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleRefToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleRefreshToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleRefreshToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleRefreshToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleRefreshToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGoogleServiceAccount(value: ClientEmail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleServiceAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGoogleServiceAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("googleServiceAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRokuApiKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rokuApiKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRokuApiKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rokuApiKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSecret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTest(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,556 +4,138 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Placement extends js.Object {
-  var accountId: js.UndefOr[String] = js.native
-  var adBlockingOptOut: js.UndefOr[Boolean] = js.native
-  var additionalSizes: js.UndefOr[js.Array[Size]] = js.native
-  var advertiserId: js.UndefOr[String] = js.native
-  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var archived: js.UndefOr[Boolean] = js.native
-  var campaignId: js.UndefOr[String] = js.native
-  var campaignIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var comment: js.UndefOr[String] = js.native
-  var compatibility: js.UndefOr[String] = js.native
-  var contentCategoryId: js.UndefOr[String] = js.native
-  var createInfo: js.UndefOr[LastModifiedInfo] = js.native
-  var directorySiteId: js.UndefOr[String] = js.native
-  var directorySiteIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var externalId: js.UndefOr[String] = js.native
-  var id: js.UndefOr[String] = js.native
-  var idDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var keyName: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var lastModifiedInfo: js.UndefOr[LastModifiedInfo] = js.native
-  var lookbackConfiguration: js.UndefOr[LookbackConfiguration] = js.native
-  var name: js.UndefOr[String] = js.native
-  var paymentApproved: js.UndefOr[Boolean] = js.native
-  var paymentSource: js.UndefOr[String] = js.native
-  var placementGroupId: js.UndefOr[String] = js.native
-  var placementGroupIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var placementStrategyId: js.UndefOr[String] = js.native
-  var pricingSchedule: js.UndefOr[PricingSchedule] = js.native
-  var primary: js.UndefOr[Boolean] = js.native
-  var publisherUpdateInfo: js.UndefOr[LastModifiedInfo] = js.native
-  var siteId: js.UndefOr[String] = js.native
-  var siteIdDimensionValue: js.UndefOr[DimensionValue] = js.native
-  var size: js.UndefOr[Size] = js.native
-  var sslRequired: js.UndefOr[Boolean] = js.native
-  var status: js.UndefOr[String] = js.native
-  var subaccountId: js.UndefOr[String] = js.native
-  var tagFormats: js.UndefOr[js.Array[String]] = js.native
-  var tagSetting: js.UndefOr[TagSetting] = js.native
-  var videoActiveViewOptOut: js.UndefOr[Boolean] = js.native
-  var videoSettings: js.UndefOr[VideoSettings] = js.native
-  var vpaidAdapterChoice: js.UndefOr[String] = js.native
+  var accountId: js.UndefOr[String] = js.undefined
+  var adBlockingOptOut: js.UndefOr[Boolean] = js.undefined
+  var additionalSizes: js.UndefOr[js.Array[Size]] = js.undefined
+  var advertiserId: js.UndefOr[String] = js.undefined
+  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var archived: js.UndefOr[Boolean] = js.undefined
+  var campaignId: js.UndefOr[String] = js.undefined
+  var campaignIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var comment: js.UndefOr[String] = js.undefined
+  var compatibility: js.UndefOr[String] = js.undefined
+  var contentCategoryId: js.UndefOr[String] = js.undefined
+  var createInfo: js.UndefOr[LastModifiedInfo] = js.undefined
+  var directorySiteId: js.UndefOr[String] = js.undefined
+  var directorySiteIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var externalId: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var idDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var keyName: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var lastModifiedInfo: js.UndefOr[LastModifiedInfo] = js.undefined
+  var lookbackConfiguration: js.UndefOr[LookbackConfiguration] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var paymentApproved: js.UndefOr[Boolean] = js.undefined
+  var paymentSource: js.UndefOr[String] = js.undefined
+  var placementGroupId: js.UndefOr[String] = js.undefined
+  var placementGroupIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var placementStrategyId: js.UndefOr[String] = js.undefined
+  var pricingSchedule: js.UndefOr[PricingSchedule] = js.undefined
+  var primary: js.UndefOr[Boolean] = js.undefined
+  var publisherUpdateInfo: js.UndefOr[LastModifiedInfo] = js.undefined
+  var siteId: js.UndefOr[String] = js.undefined
+  var siteIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var size: js.UndefOr[Size] = js.undefined
+  var sslRequired: js.UndefOr[Boolean] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
+  var subaccountId: js.UndefOr[String] = js.undefined
+  var tagFormats: js.UndefOr[js.Array[String]] = js.undefined
+  var tagSetting: js.UndefOr[TagSetting] = js.undefined
+  var videoActiveViewOptOut: js.UndefOr[Boolean] = js.undefined
+  var videoSettings: js.UndefOr[VideoSettings] = js.undefined
+  var vpaidAdapterChoice: js.UndefOr[String] = js.undefined
 }
 
 object Placement {
   @scala.inline
-  def apply(): Placement = {
+  def apply(
+    accountId: String = null,
+    adBlockingOptOut: js.UndefOr[Boolean] = js.undefined,
+    additionalSizes: js.Array[Size] = null,
+    advertiserId: String = null,
+    advertiserIdDimensionValue: DimensionValue = null,
+    archived: js.UndefOr[Boolean] = js.undefined,
+    campaignId: String = null,
+    campaignIdDimensionValue: DimensionValue = null,
+    comment: String = null,
+    compatibility: String = null,
+    contentCategoryId: String = null,
+    createInfo: LastModifiedInfo = null,
+    directorySiteId: String = null,
+    directorySiteIdDimensionValue: DimensionValue = null,
+    externalId: String = null,
+    id: String = null,
+    idDimensionValue: DimensionValue = null,
+    keyName: String = null,
+    kind: String = null,
+    lastModifiedInfo: LastModifiedInfo = null,
+    lookbackConfiguration: LookbackConfiguration = null,
+    name: String = null,
+    paymentApproved: js.UndefOr[Boolean] = js.undefined,
+    paymentSource: String = null,
+    placementGroupId: String = null,
+    placementGroupIdDimensionValue: DimensionValue = null,
+    placementStrategyId: String = null,
+    pricingSchedule: PricingSchedule = null,
+    primary: js.UndefOr[Boolean] = js.undefined,
+    publisherUpdateInfo: LastModifiedInfo = null,
+    siteId: String = null,
+    siteIdDimensionValue: DimensionValue = null,
+    size: Size = null,
+    sslRequired: js.UndefOr[Boolean] = js.undefined,
+    status: String = null,
+    subaccountId: String = null,
+    tagFormats: js.Array[String] = null,
+    tagSetting: TagSetting = null,
+    videoActiveViewOptOut: js.UndefOr[Boolean] = js.undefined,
+    videoSettings: VideoSettings = null,
+    vpaidAdapterChoice: String = null
+  ): Placement = {
     val __obj = js.Dynamic.literal()
+    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
+    if (!js.isUndefined(adBlockingOptOut)) __obj.updateDynamic("adBlockingOptOut")(adBlockingOptOut.get.asInstanceOf[js.Any])
+    if (additionalSizes != null) __obj.updateDynamic("additionalSizes")(additionalSizes.asInstanceOf[js.Any])
+    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
+    if (advertiserIdDimensionValue != null) __obj.updateDynamic("advertiserIdDimensionValue")(advertiserIdDimensionValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(archived)) __obj.updateDynamic("archived")(archived.get.asInstanceOf[js.Any])
+    if (campaignId != null) __obj.updateDynamic("campaignId")(campaignId.asInstanceOf[js.Any])
+    if (campaignIdDimensionValue != null) __obj.updateDynamic("campaignIdDimensionValue")(campaignIdDimensionValue.asInstanceOf[js.Any])
+    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
+    if (compatibility != null) __obj.updateDynamic("compatibility")(compatibility.asInstanceOf[js.Any])
+    if (contentCategoryId != null) __obj.updateDynamic("contentCategoryId")(contentCategoryId.asInstanceOf[js.Any])
+    if (createInfo != null) __obj.updateDynamic("createInfo")(createInfo.asInstanceOf[js.Any])
+    if (directorySiteId != null) __obj.updateDynamic("directorySiteId")(directorySiteId.asInstanceOf[js.Any])
+    if (directorySiteIdDimensionValue != null) __obj.updateDynamic("directorySiteIdDimensionValue")(directorySiteIdDimensionValue.asInstanceOf[js.Any])
+    if (externalId != null) __obj.updateDynamic("externalId")(externalId.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (idDimensionValue != null) __obj.updateDynamic("idDimensionValue")(idDimensionValue.asInstanceOf[js.Any])
+    if (keyName != null) __obj.updateDynamic("keyName")(keyName.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (lastModifiedInfo != null) __obj.updateDynamic("lastModifiedInfo")(lastModifiedInfo.asInstanceOf[js.Any])
+    if (lookbackConfiguration != null) __obj.updateDynamic("lookbackConfiguration")(lookbackConfiguration.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(paymentApproved)) __obj.updateDynamic("paymentApproved")(paymentApproved.get.asInstanceOf[js.Any])
+    if (paymentSource != null) __obj.updateDynamic("paymentSource")(paymentSource.asInstanceOf[js.Any])
+    if (placementGroupId != null) __obj.updateDynamic("placementGroupId")(placementGroupId.asInstanceOf[js.Any])
+    if (placementGroupIdDimensionValue != null) __obj.updateDynamic("placementGroupIdDimensionValue")(placementGroupIdDimensionValue.asInstanceOf[js.Any])
+    if (placementStrategyId != null) __obj.updateDynamic("placementStrategyId")(placementStrategyId.asInstanceOf[js.Any])
+    if (pricingSchedule != null) __obj.updateDynamic("pricingSchedule")(pricingSchedule.asInstanceOf[js.Any])
+    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.get.asInstanceOf[js.Any])
+    if (publisherUpdateInfo != null) __obj.updateDynamic("publisherUpdateInfo")(publisherUpdateInfo.asInstanceOf[js.Any])
+    if (siteId != null) __obj.updateDynamic("siteId")(siteId.asInstanceOf[js.Any])
+    if (siteIdDimensionValue != null) __obj.updateDynamic("siteIdDimensionValue")(siteIdDimensionValue.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(sslRequired)) __obj.updateDynamic("sslRequired")(sslRequired.get.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
+    if (tagFormats != null) __obj.updateDynamic("tagFormats")(tagFormats.asInstanceOf[js.Any])
+    if (tagSetting != null) __obj.updateDynamic("tagSetting")(tagSetting.asInstanceOf[js.Any])
+    if (!js.isUndefined(videoActiveViewOptOut)) __obj.updateDynamic("videoActiveViewOptOut")(videoActiveViewOptOut.get.asInstanceOf[js.Any])
+    if (videoSettings != null) __obj.updateDynamic("videoSettings")(videoSettings.asInstanceOf[js.Any])
+    if (vpaidAdapterChoice != null) __obj.updateDynamic("vpaidAdapterChoice")(vpaidAdapterChoice.asInstanceOf[js.Any])
     __obj.asInstanceOf[Placement]
   }
-  @scala.inline
-  implicit class PlacementOps[Self <: Placement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdBlockingOptOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adBlockingOptOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdBlockingOptOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adBlockingOptOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdditionalSizes(value: js.Array[Size]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalSizes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalSizes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalSizes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdvertiserIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertiserIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArchived(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArchived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCampaignId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCampaignIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCampaignIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("campaignIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComment(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompatibility(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibility")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompatibility: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibility")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentCategoryId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCategoryId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentCategoryId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentCategoryId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateInfo(value: LastModifiedInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectorySiteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectorySiteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectorySiteIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectorySiteIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directorySiteIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedInfo(value: LastModifiedInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLookbackConfiguration(value: LookbackConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookbackConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLookbackConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lookbackConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentApproved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentApproved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentApproved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentApproved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPaymentSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPaymentSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paymentSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacementGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacementGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacementGroupIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroupIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacementGroupIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementGroupIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlacementStrategyId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementStrategyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlacementStrategyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placementStrategyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPricingSchedule(value: PricingSchedule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingSchedule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPricingSchedule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingSchedule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrimary(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPublisherUpdateInfo(value: LastModifiedInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherUpdateInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublisherUpdateInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherUpdateInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSiteIdDimensionValue(value: DimensionValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteIdDimensionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSiteIdDimensionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("siteIdDimensionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: Size): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSslRequired(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslRequired")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSslRequired: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sslRequired")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubaccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubaccountId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagFormats(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTagSetting(value: TagSetting): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagSetting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTagSetting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tagSetting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoActiveViewOptOut(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoActiveViewOptOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoActiveViewOptOut: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoActiveViewOptOut")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideoSettings(value: VideoSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideoSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("videoSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVpaidAdapterChoice(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpaidAdapterChoice")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVpaidAdapterChoice: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vpaidAdapterChoice")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteConditionalFormatRuleRequest extends js.Object {
-  var index: js.UndefOr[Double] = js.native
-  var sheetId: js.UndefOr[Double] = js.native
+  var index: js.UndefOr[Double] = js.undefined
+  var sheetId: js.UndefOr[Double] = js.undefined
 }
 
 object DeleteConditionalFormatRuleRequest {
   @scala.inline
-  def apply(): DeleteConditionalFormatRuleRequest = {
+  def apply(index: js.UndefOr[Double] = js.undefined, sheetId: js.UndefOr[Double] = js.undefined): DeleteConditionalFormatRuleRequest = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetId)) __obj.updateDynamic("sheetId")(sheetId.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteConditionalFormatRuleRequest]
   }
-  @scala.inline
-  implicit class DeleteConditionalFormatRuleRequestOps[Self <: DeleteConditionalFormatRuleRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

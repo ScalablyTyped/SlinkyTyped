@@ -18,41 +18,11 @@ trait SigningConfigurationOverrides extends js.Object {
 
 object SigningConfigurationOverrides {
   @scala.inline
-  def apply(): SigningConfigurationOverrides = {
+  def apply(encryptionAlgorithm: EncryptionAlgorithm = null, hashAlgorithm: HashAlgorithm = null): SigningConfigurationOverrides = {
     val __obj = js.Dynamic.literal()
+    if (encryptionAlgorithm != null) __obj.updateDynamic("encryptionAlgorithm")(encryptionAlgorithm.asInstanceOf[js.Any])
+    if (hashAlgorithm != null) __obj.updateDynamic("hashAlgorithm")(hashAlgorithm.asInstanceOf[js.Any])
     __obj.asInstanceOf[SigningConfigurationOverrides]
   }
-  @scala.inline
-  implicit class SigningConfigurationOverridesOps[Self <: SigningConfigurationOverrides] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncryptionAlgorithm(value: EncryptionAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncryptionAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionAlgorithm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHashAlgorithm(value: HashAlgorithm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashAlgorithm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHashAlgorithm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hashAlgorithm")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

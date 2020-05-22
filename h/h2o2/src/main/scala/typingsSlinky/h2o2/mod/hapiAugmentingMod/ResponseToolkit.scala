@@ -6,12 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResponseToolkit extends js.Object {
   /**
     * Proxies the request to an upstream endpoint. `async`, so you'll need to `await` the `ResponseObject` to work on it before returning it.
     */
-  def proxy(options: ProxyHandlerOptions): js.Promise[ResponseObject] = js.native
+  def proxy(options: ProxyHandlerOptions): js.Promise[ResponseObject]
 }
 
 object ResponseToolkit {
@@ -20,19 +19,5 @@ object ResponseToolkit {
     val __obj = js.Dynamic.literal(proxy = js.Any.fromFunction1(proxy))
     __obj.asInstanceOf[ResponseToolkit]
   }
-  @scala.inline
-  implicit class ResponseToolkitOps[Self <: ResponseToolkit] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withProxy(value: ProxyHandlerOptions => js.Promise[ResponseObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

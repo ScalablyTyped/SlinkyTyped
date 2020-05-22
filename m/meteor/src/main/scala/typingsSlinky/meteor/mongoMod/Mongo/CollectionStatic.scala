@@ -3,7 +3,7 @@ package typingsSlinky.meteor.mongoMod.Mongo
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.meteor.anon.Connection
+import typingsSlinky.meteor.anon.IdGeneration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait CollectionStatic
      with Instantiable1[/* name */ String, Collection[js.Object]]
      with Instantiable2[
       (/* name */ Null) | (/* name */ String), 
-      /* options */ Connection, 
+      /* options */ IdGeneration, 
       Collection[js.Object]
     ]
 

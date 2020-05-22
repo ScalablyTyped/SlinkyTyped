@@ -13,121 +13,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RangeRule extends js.Object {
-  /** If set to true, empty values are valid. */
-  var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
-  /** Specifies the maximum value allowed for the validated value. */
-  var max: js.UndefOr[js.Date | Double] = js.native
-  /** Specifies the message that is shown if the rule is broken. */
-  var message: js.UndefOr[String] = js.native
-  /** Specifies the minimum value allowed for the validated value. */
-  var min: js.UndefOr[js.Date | Double] = js.native
-  /** Indicates whether the rule should be always checked for the target value or only when the target value changes. */
-  var reevaluate: js.UndefOr[Boolean] = js.native
-  /** Specifies the rule type. Set it to "range" to use the RangeRule. */
+  /** @name RangeRule.ignoreEmptyValue */
+  var ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined
+  /** @name RangeRule.max */
+  var max: js.UndefOr[js.Date | Double] = js.undefined
+  /** @name RangeRule.message */
+  var message: js.UndefOr[String] = js.undefined
+  /** @name RangeRule.min */
+  var min: js.UndefOr[js.Date | Double] = js.undefined
+  /** @name RangeRule.reevaluate */
+  var reevaluate: js.UndefOr[Boolean] = js.undefined
+  /** @name RangeRule.type */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
-  ] = js.native
+  ] = js.undefined
 }
 
 object RangeRule {
   @scala.inline
-  def apply(): RangeRule = {
+  def apply(
+    ignoreEmptyValue: js.UndefOr[Boolean] = js.undefined,
+    max: js.Date | Double = null,
+    message: String = null,
+    min: js.Date | Double = null,
+    reevaluate: js.UndefOr[Boolean] = js.undefined,
+    `type`: required | numeric | range | stringLength | custom | compare | pattern | email | async = null
+  ): RangeRule = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ignoreEmptyValue)) __obj.updateDynamic("ignoreEmptyValue")(ignoreEmptyValue.get.asInstanceOf[js.Any])
+    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
+    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
+    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (!js.isUndefined(reevaluate)) __obj.updateDynamic("reevaluate")(reevaluate.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeRule]
   }
-  @scala.inline
-  implicit class RangeRuleOps[Self <: RangeRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIgnoreEmptyValue(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreEmptyValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMax(value: js.Date | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMin(value: js.Date | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReevaluate(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reevaluate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReevaluate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reevaluate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: required | numeric | range | stringLength | custom | compare | pattern | email | async): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

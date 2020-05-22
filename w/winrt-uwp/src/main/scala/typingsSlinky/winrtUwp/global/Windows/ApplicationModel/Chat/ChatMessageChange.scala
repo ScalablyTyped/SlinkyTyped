@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Chat.ChatMessageChange")
 @js.native
 abstract class ChatMessageChange ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.ChatMessageChange
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.ChatMessageChange {
+  /** Gets the type of change made to a chat message, such as created, modified, etc. */
+  /* CompleteClass */
+  override var changeType: typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.ChatMessageChangeType = js.native
+  /** Gets the updated message text. */
+  /* CompleteClass */
+  override var message: typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.ChatMessage = js.native
+}
 

@@ -7,11 +7,10 @@ import scala.scalajs.js.annotation._
 /**
   * @mixin
   */
-@js.native
 trait IBrowserExtJSCore extends js.Object {
-  var coverageUnit: String = js.native
-  var excludeCoverageUnits: js.RegExp = js.native
-  var installLoaderInstrumentationHook: Boolean = js.native
+  var coverageUnit: String
+  var excludeCoverageUnits: js.RegExp
+  var installLoaderInstrumentationHook: Boolean
 }
 
 object IBrowserExtJSCore {
@@ -20,31 +19,5 @@ object IBrowserExtJSCore {
     val __obj = js.Dynamic.literal(coverageUnit = coverageUnit.asInstanceOf[js.Any], excludeCoverageUnits = excludeCoverageUnits.asInstanceOf[js.Any], installLoaderInstrumentationHook = installLoaderInstrumentationHook.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBrowserExtJSCore]
   }
-  @scala.inline
-  implicit class IBrowserExtJSCoreOps[Self <: IBrowserExtJSCore] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCoverageUnit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageUnit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcludeCoverageUnits(value: js.RegExp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeCoverageUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstallLoaderInstrumentationHook(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("installLoaderInstrumentationHook")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

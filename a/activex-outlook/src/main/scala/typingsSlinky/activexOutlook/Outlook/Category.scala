@@ -5,21 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Category extends js.Object {
-  val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
-  val CategoryBorderColor: OLE_COLOR = js.native
-  val CategoryGradientBottomColor: OLE_COLOR = js.native
-  val CategoryGradientTopColor: OLE_COLOR = js.native
-  val CategoryID: String = js.native
-  val Class: OlObjectClass = js.native
-  var Color: OlCategoryColor = js.native
-  var Name: String = js.native
+  val Application: typingsSlinky.activexOutlook.Outlook.Application
+  val CategoryBorderColor: OLE_COLOR
+  val CategoryGradientBottomColor: OLE_COLOR
+  val CategoryGradientTopColor: OLE_COLOR
+  val CategoryID: String
+  val Class: OlObjectClass
+  var Color: OlCategoryColor
+  var Name: String
   @JSName("Outlook.Category_typekey")
-  var OutlookDotCategory_typekey: Category = js.native
-  val Parent: js.Any = js.native
-  val Session: NameSpace = js.native
-  var ShortcutKey: OlCategoryShortcutKey = js.native
+  var OutlookDotCategory_typekey: Category
+  val Parent: js.Any
+  val Session: NameSpace
+  var ShortcutKey: OlCategoryShortcutKey
 }
 
 object Category {
@@ -42,85 +41,5 @@ object Category {
     __obj.updateDynamic("Outlook.Category_typekey")(OutlookDotCategory_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Category]
   }
-  @scala.inline
-  implicit class CategoryOps[Self <: Category] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoryBorderColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryBorderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoryGradientBottomColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryGradientBottomColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoryGradientTopColor(value: OLE_COLOR): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryGradientTopColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCategoryID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoryID")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClass(value: OlObjectClass): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Class")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColor(value: OlCategoryColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOutlookDotCategory_typekey(value: Category): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.Category_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSession(value: NameSpace): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShortcutKey(value: OlCategoryShortcutKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortcutKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -19,24 +19,23 @@ import scala.scalajs.js.annotation._
   * Default fragment and vertex source is used if not provided in the constructor, setting-up a basic shader,
   * suitable for debug rendering.
   */
-@js.native
 trait BaseShader extends js.Object {
   /**
     * The source code, as a string, of the fragment shader being used.
     */
-  var fragmentSrc: String = js.native
+  var fragmentSrc: String
   /**
     * The key of this shader, unique within the shader cache of this Phaser game instance.
     */
-  var key: String = js.native
+  var key: String
   /**
     * The default uniforms for this shader.
     */
-  var uniforms: js.Any = js.native
+  var uniforms: js.Any
   /**
     * The source code, as a string, of the vertex shader being used.
     */
-  var vertexSrc: String = js.native
+  var vertexSrc: String
 }
 
 object BaseShader {
@@ -45,37 +44,5 @@ object BaseShader {
     val __obj = js.Dynamic.literal(fragmentSrc = fragmentSrc.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], uniforms = uniforms.asInstanceOf[js.Any], vertexSrc = vertexSrc.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseShader]
   }
-  @scala.inline
-  implicit class BaseShaderOps[Self <: BaseShader] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFragmentSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragmentSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUniforms(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVertexSrc(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexSrc")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

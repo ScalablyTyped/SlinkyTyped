@@ -59,77 +59,20 @@ trait SchemaRetryConfig extends js.Object {
 
 object SchemaRetryConfig {
   @scala.inline
-  def apply(): SchemaRetryConfig = {
+  def apply(
+    maxBackoffDuration: String = null,
+    maxDoublings: js.UndefOr[Double] = js.undefined,
+    maxRetryDuration: String = null,
+    minBackoffDuration: String = null,
+    retryCount: js.UndefOr[Double] = js.undefined
+  ): SchemaRetryConfig = {
     val __obj = js.Dynamic.literal()
+    if (maxBackoffDuration != null) __obj.updateDynamic("maxBackoffDuration")(maxBackoffDuration.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDoublings)) __obj.updateDynamic("maxDoublings")(maxDoublings.get.asInstanceOf[js.Any])
+    if (maxRetryDuration != null) __obj.updateDynamic("maxRetryDuration")(maxRetryDuration.asInstanceOf[js.Any])
+    if (minBackoffDuration != null) __obj.updateDynamic("minBackoffDuration")(minBackoffDuration.asInstanceOf[js.Any])
+    if (!js.isUndefined(retryCount)) __obj.updateDynamic("retryCount")(retryCount.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRetryConfig]
   }
-  @scala.inline
-  implicit class SchemaRetryConfigOps[Self <: SchemaRetryConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxBackoffDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBackoffDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBackoffDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBackoffDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDoublings(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDoublings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDoublings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDoublings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRetryDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetryDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRetryDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetryDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinBackoffDuration(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minBackoffDuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinBackoffDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minBackoffDuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryCount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

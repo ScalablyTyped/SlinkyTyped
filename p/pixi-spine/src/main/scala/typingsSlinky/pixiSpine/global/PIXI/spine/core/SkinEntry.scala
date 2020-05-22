@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation._
 class SkinEntry protected ()
   extends typingsSlinky.pixiSpine.PIXI.spine.core.SkinEntry {
   def this(slotIndex: Double, name: String, attachment: typingsSlinky.pixiSpine.PIXI.spine.core.Attachment) = this()
+  /* CompleteClass */
+  override var attachment: typingsSlinky.pixiSpine.PIXI.spine.core.Attachment = js.native
+  /* CompleteClass */
+  override var name: String = js.native
+  /* CompleteClass */
+  override var slotIndex: Double = js.native
 }
 

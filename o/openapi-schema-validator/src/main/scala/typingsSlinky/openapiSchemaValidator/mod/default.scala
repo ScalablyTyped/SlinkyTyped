@@ -1,5 +1,6 @@
 package typingsSlinky.openapiSchemaValidator.mod
 
+import typingsSlinky.openapiTypes.mod.OpenAPI.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,13 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends OpenAPISchemaValidator {
   def this(args: OpenAPISchemaValidatorArgs) = this()
+  /* CompleteClass */
+  override var validator: js.Any = js.native
+  /**
+    * Validate the provided OpenAPI doc against this validator's schema version and
+    * return the results.
+    */
+  /* CompleteClass */
+  override def validate(doc: Document): OpenAPISchemaValidatorResult = js.native
 }
 

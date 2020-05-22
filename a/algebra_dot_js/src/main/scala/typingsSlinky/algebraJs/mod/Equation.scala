@@ -17,5 +17,11 @@ class Equation protected ()
     lhs: typingsSlinky.algebraJs.mod.algebra.js_.Expression,
     rhs: typingsSlinky.algebraJs.mod.algebra.js_.Fraction
   ) = this()
+  /* CompleteClass */
+  override var lhs: typingsSlinky.algebraJs.mod.algebra.js_.Expression = js.native
+  /* CompleteClass */
+  override var rhs: typingsSlinky.algebraJs.mod.algebra.js_.Expression = js.native
+  /* CompleteClass */
+  override def solveFor(variable: String): typingsSlinky.algebraJs.mod.algebra.js_.Fraction | (js.Array[Double | typingsSlinky.algebraJs.mod.algebra.js_.Fraction]) = js.native
 }
 

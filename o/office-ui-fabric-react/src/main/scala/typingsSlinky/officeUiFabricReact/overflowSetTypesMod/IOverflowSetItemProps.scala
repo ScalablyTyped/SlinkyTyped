@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOverflowSetItemProps
   extends /**
   * (Optional) Any additional properties to apply to the rendered links.
@@ -15,44 +14,24 @@ trait IOverflowSetItemProps
   /**
     * Unique id to identify the item.
     */
-  var key: String = js.native
+  var key: String
   /**
     * Optional keytip for the overflowSetItem.
     */
-  var keytipProps: js.UndefOr[IKeytipProps] = js.native
+  var keytipProps: js.UndefOr[IKeytipProps] = js.undefined
 }
 
 object IOverflowSetItemProps {
   @scala.inline
-  def apply(key: String): IOverflowSetItemProps = {
+  def apply(
+    key: String,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    keytipProps: IKeytipProps = null
+  ): IOverflowSetItemProps = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (keytipProps != null) __obj.updateDynamic("keytipProps")(keytipProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOverflowSetItemProps]
   }
-  @scala.inline
-  implicit class IOverflowSetItemPropsOps[Self <: IOverflowSetItemProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKey(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeytipProps(value: IKeytipProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keytipProps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeytipProps: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keytipProps")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

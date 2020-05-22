@@ -5,16 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CustomPublishOptions
-  extends AllPublishOptions
-     with PublishConfiguration
+  extends PublishConfiguration
      with /* index */ StringDictionary[js.Any]
+     with _AllPublishOptions
 
 object CustomPublishOptions {
   @scala.inline
-  def apply(provider: PublishProvider): CustomPublishOptions = {
+  def apply(
+    provider: PublishProvider,
+    StringDictionary: /* index */ StringDictionary[js.Any] = null,
+    publishAutoUpdate: js.UndefOr[Boolean] = js.undefined,
+    publisherName: js.UndefOr[Null | js.Array[String]] = js.undefined,
+    updaterCacheDirName: js.UndefOr[Null | String] = js.undefined
+  ): CustomPublishOptions = {
     val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (!js.isUndefined(publishAutoUpdate)) __obj.updateDynamic("publishAutoUpdate")(publishAutoUpdate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(publisherName)) __obj.updateDynamic("publisherName")(publisherName.asInstanceOf[js.Any])
+    if (!js.isUndefined(updaterCacheDirName)) __obj.updateDynamic("updaterCacheDirName")(updaterCacheDirName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomPublishOptions]
   }
 }

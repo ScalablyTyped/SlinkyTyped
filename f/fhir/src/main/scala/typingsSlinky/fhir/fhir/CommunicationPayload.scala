@@ -7,87 +7,51 @@ import scala.scalajs.js.annotation._
 /**
   * Message payload
   */
-@js.native
 trait CommunicationPayload extends BackboneElement {
   /**
     * Contains extended information for property 'contentString'.
     */
-  var _contentString: js.UndefOr[Element] = js.native
+  var _contentString: js.UndefOr[Element] = js.undefined
   /**
     * Message part content
     */
-  var contentAttachment: js.UndefOr[Attachment] = js.native
+  var contentAttachment: js.UndefOr[Attachment] = js.undefined
   /**
     * Message part content
     */
-  var contentReference: js.UndefOr[Reference] = js.native
+  var contentReference: js.UndefOr[Reference] = js.undefined
   /**
     * Message part content
     */
-  var contentString: js.UndefOr[String] = js.native
+  var contentString: js.UndefOr[String] = js.undefined
 }
 
 object CommunicationPayload {
   @scala.inline
-  def apply(): CommunicationPayload = {
+  def apply(
+    _contentString: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    contentAttachment: Attachment = null,
+    contentReference: Reference = null,
+    contentString: String = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    modifierExtension: js.Array[Extension] = null
+  ): CommunicationPayload = {
     val __obj = js.Dynamic.literal()
+    if (_contentString != null) __obj.updateDynamic("_contentString")(_contentString.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (contentAttachment != null) __obj.updateDynamic("contentAttachment")(contentAttachment.asInstanceOf[js.Any])
+    if (contentReference != null) __obj.updateDynamic("contentReference")(contentReference.asInstanceOf[js.Any])
+    if (contentString != null) __obj.updateDynamic("contentString")(contentString.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommunicationPayload]
   }
-  @scala.inline
-  implicit class CommunicationPayloadOps[Self <: CommunicationPayload] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_contentString(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_contentString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_contentString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_contentString")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentAttachment(value: Attachment): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAttachment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentAttachment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAttachment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentReference(value: Reference): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentReference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentReference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContentString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentString: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentString")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

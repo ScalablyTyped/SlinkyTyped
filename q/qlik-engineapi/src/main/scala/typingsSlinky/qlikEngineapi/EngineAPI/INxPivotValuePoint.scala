@@ -7,25 +7,24 @@ import scala.scalajs.js.annotation._
 /**
   * NxPivotValuePoint...
   */
-@js.native
 trait INxPivotValuePoint extends js.Object {
   /**
     * NxAttribute expressions values.
     */
-  var qAttrExps: INxAttributeExpressionValues = js.native
+  var qAttrExps: INxAttributeExpressionValues
   /**
     * Label of the cell.
     * >> This parameter is optional.
     */
-  var qLabel: js.UndefOr[String] = js.native
+  var qLabel: js.UndefOr[String] = js.undefined
   /**
     * Value of the cell.
     */
-  var qNum: Double = js.native
+  var qNum: Double
   /**
     * Some text related to the cell.
     */
-  var qText: String = js.native
+  var qText: String
   /**
     * Type of the cell.
     *
@@ -39,58 +38,21 @@ trait INxPivotValuePoint extends js.Object {
     *    R for NX_DIM_CELL_ROOT. Applies to root node.
     *    U for NX_DIM_CELL_NULL. Applies to Null values in the data matrix.
     */
-  var qType: NxCellType = js.native
+  var qType: NxCellType
 }
 
 object INxPivotValuePoint {
   @scala.inline
-  def apply(qAttrExps: INxAttributeExpressionValues, qNum: Double, qText: String, qType: NxCellType): INxPivotValuePoint = {
+  def apply(
+    qAttrExps: INxAttributeExpressionValues,
+    qNum: Double,
+    qText: String,
+    qType: NxCellType,
+    qLabel: String = null
+  ): INxPivotValuePoint = {
     val __obj = js.Dynamic.literal(qAttrExps = qAttrExps.asInstanceOf[js.Any], qNum = qNum.asInstanceOf[js.Any], qText = qText.asInstanceOf[js.Any], qType = qType.asInstanceOf[js.Any])
+    if (qLabel != null) __obj.updateDynamic("qLabel")(qLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[INxPivotValuePoint]
   }
-  @scala.inline
-  implicit class INxPivotValuePointOps[Self <: INxPivotValuePoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withQAttrExps(value: INxAttributeExpressionValues): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttrExps")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQNum(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQType(value: NxCellType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("qLabel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

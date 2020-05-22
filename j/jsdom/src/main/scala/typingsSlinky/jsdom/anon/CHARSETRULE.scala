@@ -18,7 +18,5 @@ trait CHARSETRULE extends Instantiable0[CSSRule] {
   val PAGE_RULE: Double = js.native
   val STYLE_RULE: Double = js.native
   val SUPPORTS_RULE: Double = js.native
-  val UNKNOWN_RULE: Double = js.native
-  val VIEWPORT_RULE: Double = js.native
 }
 

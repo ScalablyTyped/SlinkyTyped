@@ -18,41 +18,11 @@ trait InputCaptions extends js.Object {
 
 object InputCaptions {
   @scala.inline
-  def apply(): InputCaptions = {
+  def apply(CaptionSources: CaptionSources = null, MergePolicy: CaptionMergePolicy = null): InputCaptions = {
     val __obj = js.Dynamic.literal()
+    if (CaptionSources != null) __obj.updateDynamic("CaptionSources")(CaptionSources.asInstanceOf[js.Any])
+    if (MergePolicy != null) __obj.updateDynamic("MergePolicy")(MergePolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputCaptions]
   }
-  @scala.inline
-  implicit class InputCaptionsOps[Self <: InputCaptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptionSources(value: CaptionSources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptionSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSources")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMergePolicy(value: CaptionMergePolicy): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MergePolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMergePolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MergePolicy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

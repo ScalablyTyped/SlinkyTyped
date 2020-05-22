@@ -2,6 +2,9 @@ package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.victory.anon.AxisLabel
+import typingsSlinky.victory.anon.XBoolean
+import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import typingsSlinky.victory.victoryStrings.axis
 import typingsSlinky.victory.victoryStrings.axisLabel
 import typingsSlinky.victory.victoryStrings.bottom
@@ -16,7 +19,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VictoryAxisProps extends VictoryCommonProps {
   /**
     * The axisComponent prop takes in an entire component which will be used
@@ -27,7 +29,7 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * is not supplied, VictoryAxis will render its default AxisLine component.
     * @default <AxisLine/>
     */
-  var axisComponent: js.UndefOr[ReactElement] = js.native
+  var axisComponent: js.UndefOr[ReactElement] = js.undefined
   /**
     * The axisLabelComponent prop takes in an entire component which will be used
     * to create the axis label. The new element created from the passed axisLabelComponent
@@ -38,30 +40,30 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * VictoryLabel will be created with props described above
     * @default <VictoryLabel/>
     */
-  var axisLabelComponent: js.UndefOr[ReactElement] = js.native
+  var axisLabelComponent: js.UndefOr[ReactElement] = js.undefined
   /**
     * The axisValue prop may be used instead of axisAngle to position the
     * dependent axis. Ths prop is useful when dependent axes should line up
     * with values on the independent axis.
     */
-  var axisValue: js.UndefOr[Double | String | js.Object] = js.native
+  var axisValue: js.UndefOr[Double | String | js.Object] = js.undefined
   /**
     * This prop specifies whether a given axis is intended to cross another axis.
     */
-  var crossAxis: js.UndefOr[Boolean] = js.native
+  var crossAxis: js.UndefOr[Boolean] = js.undefined
   /**
     * The dependentAxis prop specifies whether the axis corresponds to the
     * dependent variable (usually y). This prop is useful when composing axis
     * with other components to form a chart.
     */
-  var dependentAxis: js.UndefOr[Boolean] = js.native
+  var dependentAxis: js.UndefOr[Boolean] = js.undefined
   /**
     * The domain prop describes the range of values your axis will include. This prop should be
     * given as a array of the minimum and maximum expected values for your axis.
     * If this value is not given it will be calculated based on the scale or tickValues.
     * @examples [-1, 1]
     */
-  var domain: js.UndefOr[DomainPropType] = js.native
+  var domain: js.UndefOr[DomainPropType] = js.undefined
   /**
     * The event prop take an array of event objects. Event objects are composed of
     * a target, an eventKey, and eventHandlers. Targets may be any valid style namespace
@@ -105,14 +107,14 @@ trait VictoryAxisProps extends VictoryCommonProps {
     js.Array[
       EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
     ]
-  ] = js.native
+  ] = js.undefined
   /**
     * When true, this prop reduces the number of tick labels to fit the length of the axis.
     * Labels are removed at approximately even intervals from the original array of labels.
     * This feature only works well for labels that are approximately evenly spaced.
     * @default false
     */
-  var fixLabelOverlap: js.UndefOr[Boolean] = js.native
+  var fixLabelOverlap: js.UndefOr[Boolean] = js.undefined
   /**
     * The gridComponent prop takes in an entire component which will be used
     * to create grid lines. The new element created from the passed gridComponent
@@ -122,11 +124,11 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * is not supplied, VictoryAxis will render its default GridLine component.
     * @default <GridLine/>
     */
-  var gridComponent: js.UndefOr[ReactElement] = js.native
+  var gridComponent: js.UndefOr[ReactElement] = js.undefined
   /**
     * If true, this value will flip the domain of a given axis.
     */
-  var invertAxis: js.UndefOr[Boolean] = js.native
+  var invertAxis: js.UndefOr[Boolean] = js.undefined
   /**
     * The label prop defines the label that will appear along the axis. This
     * prop should be given as a value or an entire, HTML-complete label
@@ -137,23 +139,23 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * If a value is given, a new VictoryLabel will be created with props and
     * styles from the axis.
     */
-  var label: js.UndefOr[js.Any] = js.native
+  var label: js.UndefOr[js.Any] = js.undefined
   /**
     * This value describes how far from the "edge" of its permitted area each axis
     * will be set back in the x-direction.  If this prop is not given,
     * the offset is calculated based on font size, axis orientation, and label padding.
     */
-  var offsetX: js.UndefOr[Double] = js.native
+  var offsetX: js.UndefOr[Double] = js.undefined
   /**
     * This value describes how far from the "edge" of its permitted area each axis
     * will be set back in the y-direction.  If this prop is not given,
     * the offset is calculated based on font size, axis orientation, and label padding.
     */
-  var offsetY: js.UndefOr[Double] = js.native
+  var offsetY: js.UndefOr[Double] = js.undefined
   /**
     * The orientation prop specifies the position and orientation of your axis.
     */
-  var orientation: js.UndefOr[top | bottom | left | right] = js.native
+  var orientation: js.UndefOr[top | bottom | left | right] = js.undefined
   /**
     * The style prop defines the style of the component. The style prop should be given as an object
     * with styles defined for parent, axis, axisLabel, grid, ticks, and tickLabels. Any valid svg
@@ -167,7 +169,7 @@ trait VictoryAxisProps extends VictoryCommonProps {
     *
     * note: custom angle and verticalAnchor properties may be included in labels styles.
     */
-  var style: js.UndefOr[AxisLabel] = js.native
+  var style: js.UndefOr[AxisLabel] = js.undefined
   /**
     * The tickComponent prop takes in an entire component which will be used
     * to create tick lines. The new element created from the passed tickComponent
@@ -177,7 +179,7 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * is not supplied, VictoryAxis will render its default Tick component.
     * @default <Tick/>
     */
-  var tickComponent: js.UndefOr[ReactElement] = js.native
+  var tickComponent: js.UndefOr[ReactElement] = js.undefined
   /**
     * The tickCount prop specifies approximately how many ticks should be drawn on the axis if
     * tickValues are not explicitly provided. This value is calculated by d3 scale and
@@ -186,7 +188,7 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * This prop must have a value greater than zero.
     * @default 5
     */
-  var tickCount: js.UndefOr[Double] = js.native
+  var tickCount: js.UndefOr[Double] = js.undefined
   /**
     * The tickFormat prop specifies how tick values should be expressed visually.
     * tickFormat can be given as a function to be applied to every tickValue, or as
@@ -195,7 +197,7 @@ trait VictoryAxisProps extends VictoryCommonProps {
     */
   var tickFormat: js.UndefOr[
     js.Array[_] | (js.Function3[/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_], String | Double])
-  ] = js.native
+  ] = js.undefined
   /**
     * The tickLabelComponent prop takes in an entire component which will be used
     * to create the tick labels. The new element created from the passed tickLabelComponent
@@ -206,279 +208,90 @@ trait VictoryAxisProps extends VictoryCommonProps {
     * VictoryLabel will be created with props described above
     * @default <VictoryLabel/>
     */
-  var tickLabelComponent: js.UndefOr[ReactElement] = js.native
+  var tickLabelComponent: js.UndefOr[ReactElement] = js.undefined
   /**
     * The tickValues prop explicitly specifies which tick values to draw on the axis.
     * @example ["apples", "bananas", "oranges"], [2, 4, 6, 8]
     */
-  var tickValues: js.UndefOr[js.Array[_]] = js.native
+  var tickValues: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object VictoryAxisProps {
   @scala.inline
-  def apply(): VictoryAxisProps = {
+  def apply(
+    animate: Boolean | AnimatePropTypeInterface = null,
+    axisComponent: ReactElement = null,
+    axisLabelComponent: ReactElement = null,
+    axisValue: Double | String | js.Object = null,
+    containerComponent: ReactElement = null,
+    crossAxis: js.UndefOr[Boolean] = js.undefined,
+    dependentAxis: js.UndefOr[Boolean] = js.undefined,
+    domain: DomainPropType = null,
+    events: js.Array[
+      EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
+    ] = null,
+    fixLabelOverlap: js.UndefOr[Boolean] = js.undefined,
+    gridComponent: ReactElement = null,
+    groupComponent: ReactElement = null,
+    height: js.UndefOr[Double] = js.undefined,
+    horizontal: js.UndefOr[Boolean] = js.undefined,
+    invertAxis: js.UndefOr[Boolean] = js.undefined,
+    label: js.Any = null,
+    maxDomain: Double | Y = null,
+    minDomain: Double | Y = null,
+    name: String = null,
+    offsetX: js.UndefOr[Double] = js.undefined,
+    offsetY: js.UndefOr[Double] = js.undefined,
+    orientation: top | bottom | left | right = null,
+    padding: PaddingProps = null,
+    scale: ScalePropType | D3Scale | `1` = null,
+    singleQuadrantDomainPadding: Boolean | XBoolean = null,
+    standalone: js.UndefOr[Boolean] = js.undefined,
+    style: AxisLabel = null,
+    theme: VictoryThemeDefinition = null,
+    tickComponent: ReactElement = null,
+    tickCount: js.UndefOr[Double] = js.undefined,
+    tickFormat: js.Array[_] | (js.Function3[/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_], String | Double]) = null,
+    tickLabelComponent: ReactElement = null,
+    tickValues: js.Array[_] = null,
+    width: js.UndefOr[Double] = js.undefined
+  ): VictoryAxisProps = {
     val __obj = js.Dynamic.literal()
+    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
+    if (axisComponent != null) __obj.updateDynamic("axisComponent")(axisComponent.asInstanceOf[js.Any])
+    if (axisLabelComponent != null) __obj.updateDynamic("axisLabelComponent")(axisLabelComponent.asInstanceOf[js.Any])
+    if (axisValue != null) __obj.updateDynamic("axisValue")(axisValue.asInstanceOf[js.Any])
+    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(crossAxis)) __obj.updateDynamic("crossAxis")(crossAxis.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(dependentAxis)) __obj.updateDynamic("dependentAxis")(dependentAxis.get.asInstanceOf[js.Any])
+    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
+    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
+    if (!js.isUndefined(fixLabelOverlap)) __obj.updateDynamic("fixLabelOverlap")(fixLabelOverlap.get.asInstanceOf[js.Any])
+    if (gridComponent != null) __obj.updateDynamic("gridComponent")(gridComponent.asInstanceOf[js.Any])
+    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(invertAxis)) __obj.updateDynamic("invertAxis")(invertAxis.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
+    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetX)) __obj.updateDynamic("offsetX")(offsetX.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offsetY)) __obj.updateDynamic("offsetY")(offsetY.get.asInstanceOf[js.Any])
+    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
+    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
+    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
+    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (tickComponent != null) __obj.updateDynamic("tickComponent")(tickComponent.asInstanceOf[js.Any])
+    if (!js.isUndefined(tickCount)) __obj.updateDynamic("tickCount")(tickCount.get.asInstanceOf[js.Any])
+    if (tickFormat != null) __obj.updateDynamic("tickFormat")(tickFormat.asInstanceOf[js.Any])
+    if (tickLabelComponent != null) __obj.updateDynamic("tickLabelComponent")(tickLabelComponent.asInstanceOf[js.Any])
+    if (tickValues != null) __obj.updateDynamic("tickValues")(tickValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryAxisProps]
   }
-  @scala.inline
-  implicit class VictoryAxisPropsOps[Self <: VictoryAxisProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAxisComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisLabelComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabelComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisLabelComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabelComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAxisValue(value: Double | String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAxisValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("axisValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependentAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependentAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependentAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDomain(value: DomainPropType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDomain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEvents(
-      value: js.Array[
-          EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEvents: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFixLabelOverlap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixLabelOverlap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFixLabelOverlap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fixLabelOverlap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGridComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGridComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gridComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvertAxis(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invertAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvertAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invertAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffsetY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffsetY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrientation(value: top | bottom | left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: AxisLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickFormatFunction3(value: (/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_]) => String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickFormat")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withTickFormat(
-      value: js.Array[_] | (js.Function3[/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_], String | Double])
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickLabelComponent(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLabelComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickLabelComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickLabelComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTickValues(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTickValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tickValues")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

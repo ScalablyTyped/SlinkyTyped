@@ -3,64 +3,37 @@ package typingsSlinky.awsSdkClientS3Node.typesGetBucketVersioningOutputMod
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Disabled
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Enabled
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Suspended
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetBucketVersioningOutput
   extends MetadataBearer
-     with OutputTypesUnion {
+     with _OutputTypesUnion {
   /**
     * <p>Specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned.</p>
     */
-  var MFADelete: js.UndefOr[Enabled | Disabled | String] = js.native
+  var MFADelete: js.UndefOr[Enabled | Disabled | String] = js.undefined
   /**
     * <p>The versioning state of the bucket.</p>
     */
-  var Status: js.UndefOr[Enabled | Suspended | String] = js.native
+  var Status: js.UndefOr[Enabled | Suspended | String] = js.undefined
 }
 
 object GetBucketVersioningOutput {
   @scala.inline
-  def apply($metadata: ResponseMetadata): GetBucketVersioningOutput = {
+  def apply(
+    $metadata: ResponseMetadata,
+    MFADelete: Enabled | Disabled | String = null,
+    Status: Enabled | Suspended | String = null
+  ): GetBucketVersioningOutput = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any])
+    if (MFADelete != null) __obj.updateDynamic("MFADelete")(MFADelete.asInstanceOf[js.Any])
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketVersioningOutput]
   }
-  @scala.inline
-  implicit class GetBucketVersioningOutputOps[Self <: GetBucketVersioningOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMFADelete(value: Enabled | Disabled | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MFADelete")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMFADelete: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MFADelete")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: Enabled | Suspended | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

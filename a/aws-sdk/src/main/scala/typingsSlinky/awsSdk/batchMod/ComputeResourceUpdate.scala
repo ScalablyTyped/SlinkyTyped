@@ -22,53 +22,16 @@ trait ComputeResourceUpdate extends js.Object {
 
 object ComputeResourceUpdate {
   @scala.inline
-  def apply(): ComputeResourceUpdate = {
+  def apply(
+    desiredvCpus: js.UndefOr[Integer] = js.undefined,
+    maxvCpus: js.UndefOr[Integer] = js.undefined,
+    minvCpus: js.UndefOr[Integer] = js.undefined
+  ): ComputeResourceUpdate = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(desiredvCpus)) __obj.updateDynamic("desiredvCpus")(desiredvCpus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxvCpus)) __obj.updateDynamic("maxvCpus")(maxvCpus.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minvCpus)) __obj.updateDynamic("minvCpus")(minvCpus.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComputeResourceUpdate]
   }
-  @scala.inline
-  implicit class ComputeResourceUpdateOps[Self <: ComputeResourceUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDesiredvCpus(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredvCpus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDesiredvCpus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredvCpus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxvCpus(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxvCpus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxvCpus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxvCpus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinvCpus(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minvCpus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinvCpus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minvCpus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

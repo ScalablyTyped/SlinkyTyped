@@ -19,29 +19,10 @@ trait SchemaEndOfSegmentLocation extends js.Object {
 
 object SchemaEndOfSegmentLocation {
   @scala.inline
-  def apply(): SchemaEndOfSegmentLocation = {
+  def apply(segmentId: String = null): SchemaEndOfSegmentLocation = {
     val __obj = js.Dynamic.literal()
+    if (segmentId != null) __obj.updateDynamic("segmentId")(segmentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEndOfSegmentLocation]
   }
-  @scala.inline
-  implicit class SchemaEndOfSegmentLocationOps[Self <: SchemaEndOfSegmentLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSegmentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSegmentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

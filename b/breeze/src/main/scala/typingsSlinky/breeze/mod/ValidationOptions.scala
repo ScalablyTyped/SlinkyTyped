@@ -10,6 +10,18 @@ import scala.scalajs.js.annotation._
 class ValidationOptions ()
   extends typingsSlinky.breeze.breeze.ValidationOptions {
   def this(config: ValidationOptionsConfiguration) = this()
+  /* CompleteClass */
+  override var validateOnAttach: Boolean = js.native
+  /* CompleteClass */
+  override var validateOnPropertyChange: Boolean = js.native
+  /* CompleteClass */
+  override var validateOnQuery: Boolean = js.native
+  /* CompleteClass */
+  override var validateOnSave: Boolean = js.native
+  /* CompleteClass */
+  override def setAsDefault(): typingsSlinky.breeze.breeze.ValidationOptions = js.native
+  /* CompleteClass */
+  override def using(config: ValidationOptionsConfiguration): typingsSlinky.breeze.breeze.ValidationOptions = js.native
 }
 
 /* static members */

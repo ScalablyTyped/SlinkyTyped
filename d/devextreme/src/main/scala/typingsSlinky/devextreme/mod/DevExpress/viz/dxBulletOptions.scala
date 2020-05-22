@@ -1,152 +1,126 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.anon.CancelComponentData
+import typingsSlinky.devextreme.anon.ComponentTElementDxElementModelAny
+import typingsSlinky.devextreme.anon.Element
+import typingsSlinky.devextreme.anon.ElementDxElementModelAny
+import typingsSlinky.devextreme.anon.FormatModel
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
+import typingsSlinky.devextreme.anon.TargetAny
+import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
+import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
+import typingsSlinky.devextreme.devextremeStrings.genericDotdark
+import typingsSlinky.devextreme.devextremeStrings.genericDotdarkmoon
+import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
+import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
+import typingsSlinky.devextreme.devextremeStrings.genericDotlight
+import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
+import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
+import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDotpurpleDotlight
+import typingsSlinky.devextreme.devextremeStrings.materialDottealDotlight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxBulletOptions extends BaseSparklineOptions[dxBullet] {
-  /** Specifies a color for the bullet bar. */
-  var color: js.UndefOr[String] = js.native
-  /** Specifies an end value for the invisible scale. */
-  var endScaleValue: js.UndefOr[Double] = js.native
-  /** Specifies whether or not to show the target line. */
-  var showTarget: js.UndefOr[Boolean] = js.native
-  /** Specifies whether or not to show the line indicating zero on the invisible scale. */
-  var showZeroLevel: js.UndefOr[Boolean] = js.native
-  /** Specifies a start value for the invisible scale. */
-  var startScaleValue: js.UndefOr[Double] = js.native
-  /** Specifies the value indicated by the target line. */
-  var target: js.UndefOr[Double] = js.native
-  /** Specifies a color for both the target and zero level lines. */
-  var targetColor: js.UndefOr[String] = js.native
-  /** Specifies the width of the target line. */
-  var targetWidth: js.UndefOr[Double] = js.native
-  /** Specifies the primary value indicated by the bullet bar. */
-  var value: js.UndefOr[Double] = js.native
+  /** @name dxBullet.Options.color */
+  var color: js.UndefOr[String] = js.undefined
+  /** @name dxBullet.Options.endScaleValue */
+  var endScaleValue: js.UndefOr[Double] = js.undefined
+  /** @name dxBullet.Options.showTarget */
+  var showTarget: js.UndefOr[Boolean] = js.undefined
+  /** @name dxBullet.Options.showZeroLevel */
+  var showZeroLevel: js.UndefOr[Boolean] = js.undefined
+  /** @name dxBullet.Options.startScaleValue */
+  var startScaleValue: js.UndefOr[Double] = js.undefined
+  /** @name dxBullet.Options.target */
+  var target: js.UndefOr[Double] = js.undefined
+  /** @name dxBullet.Options.targetColor */
+  var targetColor: js.UndefOr[String] = js.undefined
+  /** @name dxBullet.Options.targetWidth */
+  var targetWidth: js.UndefOr[Double] = js.undefined
+  /** @name dxBullet.Options.value */
+  var value: js.UndefOr[Double] = js.undefined
 }
 
 object dxBulletOptions {
   @scala.inline
-  def apply(): dxBulletOptions = {
+  def apply(
+    bindingOptions: js.Any = null,
+    color: String = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
+    elementAttr: js.Any = null,
+    endScaleValue: js.UndefOr[Double] = js.undefined,
+    export: BaseWidgetExport = null,
+    height: Double | String | (js.Function0[Double | String]) = null,
+    loadingIndicator: BaseWidgetLoadingIndicator = null,
+    margin: BaseWidgetMargin = null,
+    onDisposing: /* e */ Model[dxBullet] => _ = null,
+    onDrawn: /* e */ ComponentTElementDxElementModelAny[dxBullet] => _ = null,
+    onExported: /* e */ ComponentTElementDxElementModelAny[dxBullet] => _ = null,
+    onExporting: /* e */ FormatModel[dxBullet] => _ = null,
+    onFileSaving: /* e */ CancelComponentData[dxBullet] => _ = null,
+    onIncidentOccurred: /* e */ TargetAny[dxBullet] => _ = null,
+    onInitialized: /* e */ Element[dxBullet] => _ = null,
+    onOptionChanged: /* e */ Name[dxBullet] => _ = null,
+    onTooltipHidden: /* e */ ElementDxElementModelAny[dxBullet] => _ = null,
+    onTooltipShown: /* e */ ElementDxElementModelAny[dxBullet] => _ = null,
+    pathModified: js.UndefOr[Boolean] = js.undefined,
+    redrawOnResize: js.UndefOr[Boolean] = js.undefined,
+    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
+    showTarget: js.UndefOr[Boolean] = js.undefined,
+    showZeroLevel: js.UndefOr[Boolean] = js.undefined,
+    size: BaseWidgetSize = null,
+    startScaleValue: js.UndefOr[Double] = js.undefined,
+    target: js.UndefOr[Double] = js.undefined,
+    targetColor: String = null,
+    targetWidth: js.UndefOr[Double] = js.undefined,
+    theme: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight = null,
+    title: BaseWidgetTitle | String = null,
+    tooltip: BaseSparklineTooltip = null,
+    value: js.UndefOr[Double] = js.undefined,
+    width: Double | String | (js.Function0[Double | String]) = null
+  ): dxBulletOptions = {
     val __obj = js.Dynamic.literal()
+    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.get.asInstanceOf[js.Any])
+    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
+    if (!js.isUndefined(endScaleValue)) __obj.updateDynamic("endScaleValue")(endScaleValue.get.asInstanceOf[js.Any])
+    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (loadingIndicator != null) __obj.updateDynamic("loadingIndicator")(loadingIndicator.asInstanceOf[js.Any])
+    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
+    if (onDrawn != null) __obj.updateDynamic("onDrawn")(js.Any.fromFunction1(onDrawn))
+    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
+    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
+    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
+    if (onIncidentOccurred != null) __obj.updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(onIncidentOccurred))
+    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
+    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
+    if (onTooltipHidden != null) __obj.updateDynamic("onTooltipHidden")(js.Any.fromFunction1(onTooltipHidden))
+    if (onTooltipShown != null) __obj.updateDynamic("onTooltipShown")(js.Any.fromFunction1(onTooltipShown))
+    if (!js.isUndefined(pathModified)) __obj.updateDynamic("pathModified")(pathModified.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(redrawOnResize)) __obj.updateDynamic("redrawOnResize")(redrawOnResize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showTarget)) __obj.updateDynamic("showTarget")(showTarget.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(showZeroLevel)) __obj.updateDynamic("showZeroLevel")(showZeroLevel.get.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (!js.isUndefined(startScaleValue)) __obj.updateDynamic("startScaleValue")(startScaleValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(target)) __obj.updateDynamic("target")(target.get.asInstanceOf[js.Any])
+    if (targetColor != null) __obj.updateDynamic("targetColor")(targetColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(targetWidth)) __obj.updateDynamic("targetWidth")(targetWidth.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    if (!js.isUndefined(value)) __obj.updateDynamic("value")(value.get.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxBulletOptions]
   }
-  @scala.inline
-  implicit class dxBulletOptionsOps[Self <: dxBulletOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndScaleValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endScaleValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndScaleValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endScaleValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowTarget(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTarget")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showTarget")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowZeroLevel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showZeroLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowZeroLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showZeroLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartScaleValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startScaleValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartScaleValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startScaleValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,20 +7,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** enables a {@link SpreadsheetView} to freeze columns and rows of the view. */
-@js.native
 trait XViewFreezable extends XInterface {
   /**
     * freezes panes with the specified number of columns and rows.
     *
     * To freeze only horizontally, specify nRows as 0. To freeze only vertically, specify nColumns as 0.
     */
-  def freezeAtPosition(nColumns: Double, nRows: Double): Unit = js.native
+  def freezeAtPosition(nColumns: Double, nRows: Double): Unit
   /**
     * returns `TRUE` if the view has frozen panes.
     *
     * Only one of {@link XViewSplitable.getIsWindowSplit()} and {@link XViewFreezable.hasFrozenPanes()} can be `TRUE` .
     */
-  def hasFrozenPanes(): Boolean = js.native
+  def hasFrozenPanes(): Boolean
 }
 
 object XViewFreezable {
@@ -35,25 +34,5 @@ object XViewFreezable {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), freezeAtPosition = js.Any.fromFunction2(freezeAtPosition), hasFrozenPanes = js.Any.fromFunction0(hasFrozenPanes), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XViewFreezable]
   }
-  @scala.inline
-  implicit class XViewFreezableOps[Self <: XViewFreezable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFreezeAtPosition(value: (Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freezeAtPosition")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withHasFrozenPanes(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasFrozenPanes")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

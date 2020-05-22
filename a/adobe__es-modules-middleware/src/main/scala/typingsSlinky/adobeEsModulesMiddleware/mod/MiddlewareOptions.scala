@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MiddlewareOptions extends js.Object {
   /** a map of url base path to file system path from which to serve files */
-  var paths: StringDictionary[String] = js.native
+  var paths: StringDictionary[String]
 }
 
 object MiddlewareOptions {
@@ -17,19 +16,5 @@ object MiddlewareOptions {
     val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
     __obj.asInstanceOf[MiddlewareOptions]
   }
-  @scala.inline
-  implicit class MiddlewareOptionsOps[Self <: MiddlewareOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPaths(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

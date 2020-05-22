@@ -4,121 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ReadingPosition extends js.Object {
   /** Position in an EPUB as a CFI. */
-  var epubCfiPosition: js.UndefOr[String] = js.native
+  var epubCfiPosition: js.UndefOr[String] = js.undefined
   /** Position in a volume for image-based content. */
-  var gbImagePosition: js.UndefOr[String] = js.native
+  var gbImagePosition: js.UndefOr[String] = js.undefined
   /** Position in a volume for text-based content. */
-  var gbTextPosition: js.UndefOr[String] = js.native
+  var gbTextPosition: js.UndefOr[String] = js.undefined
   /** Resource type for a reading position. */
-  var kind: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.undefined
   /** Position in a PDF file. */
-  var pdfPosition: js.UndefOr[String] = js.native
+  var pdfPosition: js.UndefOr[String] = js.undefined
   /** Timestamp when this reading position was last updated (formatted UTC timestamp with millisecond resolution). */
-  var updated: js.UndefOr[String] = js.native
+  var updated: js.UndefOr[String] = js.undefined
   /** Volume id associated with this reading position. */
-  var volumeId: js.UndefOr[String] = js.native
+  var volumeId: js.UndefOr[String] = js.undefined
 }
 
 object ReadingPosition {
   @scala.inline
-  def apply(): ReadingPosition = {
+  def apply(
+    epubCfiPosition: String = null,
+    gbImagePosition: String = null,
+    gbTextPosition: String = null,
+    kind: String = null,
+    pdfPosition: String = null,
+    updated: String = null,
+    volumeId: String = null
+  ): ReadingPosition = {
     val __obj = js.Dynamic.literal()
+    if (epubCfiPosition != null) __obj.updateDynamic("epubCfiPosition")(epubCfiPosition.asInstanceOf[js.Any])
+    if (gbImagePosition != null) __obj.updateDynamic("gbImagePosition")(gbImagePosition.asInstanceOf[js.Any])
+    if (gbTextPosition != null) __obj.updateDynamic("gbTextPosition")(gbTextPosition.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (pdfPosition != null) __obj.updateDynamic("pdfPosition")(pdfPosition.asInstanceOf[js.Any])
+    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
+    if (volumeId != null) __obj.updateDynamic("volumeId")(volumeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadingPosition]
   }
-  @scala.inline
-  implicit class ReadingPositionOps[Self <: ReadingPosition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEpubCfiPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epubCfiPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEpubCfiPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epubCfiPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGbImagePosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gbImagePosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGbImagePosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gbImagePosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGbTextPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gbTextPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGbTextPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gbTextPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPdfPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pdfPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPdfPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pdfPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdated(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumeId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

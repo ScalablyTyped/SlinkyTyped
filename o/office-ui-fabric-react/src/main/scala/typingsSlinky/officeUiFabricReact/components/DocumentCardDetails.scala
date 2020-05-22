@@ -8,7 +8,7 @@ import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCa
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetailsStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetailsStyles
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -24,7 +24,7 @@ object DocumentCardDetails {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -34,7 +34,7 @@ object DocumentCardDetails {
     @scala.inline
     def componentRef(value: IRefObject[IDocumentCardDetails]): this.type = set("componentRef", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IDocumentCardDetailsStyleProps => Partial[IDocumentCardDetailsStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IDocumentCardDetailsStyleProps => DeepPartial[IDocumentCardDetailsStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardDetailsStyleProps, IDocumentCardDetailsStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

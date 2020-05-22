@@ -69,28 +69,28 @@ import scala.scalajs.js.annotation._
 trait Range extends ClientObject {
   /**
     *
-    * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. "Sheet1!A1:B4"). Read-only.
+    * Specifies the range reference in A1-style. Address value will contain the Sheet reference (e.g., "Sheet1!A1:B4").
     *
     * [Api set: ExcelApi 1.1]
     */
   val address: String = js.native
   /**
     *
-    * Represents range reference for the specified range in the language of the user. Read-only.
+    * Specifies the range reference for the specified range in the language of the user.
     *
     * [Api set: ExcelApi 1.1]
     */
   val addressLocal: String = js.native
   /**
     *
-    * Number of cells in the range. This API will return -1 if the cell count exceeds 2^31-1 (2,147,483,647). Read-only.
+    * Specifies the number of cells in the range. This API will return -1 if the cell count exceeds 2^31-1 (2,147,483,647).
     *
     * [Api set: ExcelApi 1.1]
     */
   val cellCount: Double = js.native
   /**
     *
-    * Represents the total number of columns in the range. Read-only.
+    * Specifies the total number of columns in the range.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -104,14 +104,14 @@ trait Range extends ClientObject {
   var columnHidden: Boolean = js.native
   /**
     *
-    * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
+    * Specifies the column number of the first cell in the range. Zero-indexed.
     *
     * [Api set: ExcelApi 1.1]
     */
   val columnIndex: Double = js.native
   /**
     *
-    * Collection of ConditionalFormats that intersect the range. Read-only.
+    * The collection of ConditionalFormats that intersect the range.
     *
     * [Api set: ExcelApi 1.6]
     */
@@ -128,7 +128,7 @@ trait Range extends ClientObject {
   val dataValidation: DataValidation = js.native
   /**
     *
-    * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
+    * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -156,14 +156,14 @@ trait Range extends ClientObject {
   var formulasR1C1: js.Array[js.Array[_]] = js.native
   /**
     *
-    * Returns the distance in points, for 100% zoom, from top edge of the range to bottom edge of the range. Read-only.
+    * Returns the distance in points, for 100% zoom, from top edge of the range to bottom edge of the range.
     *
     * [Api set: ExcelApi 1.10]
     */
   val height: Double = js.native
   /**
     *
-    * Represents if all cells of the current range are hidden. Read-only.
+    * Represents if all cells of the current range are hidden.
     *
     * [Api set: ExcelApi 1.2]
     */
@@ -177,28 +177,28 @@ trait Range extends ClientObject {
   var hyperlink: RangeHyperlink = js.native
   /**
     *
-    * Represents if the current range is an entire column. Read-only.
+    * Represents if the current range is an entire column.
     *
     * [Api set: ExcelApi 1.7]
     */
   val isEntireColumn: Boolean = js.native
   /**
     *
-    * Represents if the current range is an entire row. Read-only.
+    * Represents if the current range is an entire row.
     *
     * [Api set: ExcelApi 1.7]
     */
   val isEntireRow: Boolean = js.native
   /**
     *
-    * Returns the distance in points, for 100% zoom, from left edge of the worksheet to left edge of the range. Read-only.
+    * Returns the distance in points, for 100% zoom, from left edge of the worksheet to left edge of the range.
     *
     * [Api set: ExcelApi 1.10]
     */
   val left: Double = js.native
   /**
     *
-    * Represents the data type state of each cell. Read-only.
+    * Represents the data type state of each cell.
     *
     * [Api set: ExcelApi 1.9]
     */
@@ -221,7 +221,7 @@ trait Range extends ClientObject {
   var numberFormatLocal: js.Array[js.Array[_]] = js.native
   /**
     *
-    * Returns the total number of rows in the range. Read-only.
+    * Returns the total number of rows in the range.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -235,14 +235,14 @@ trait Range extends ClientObject {
   var rowHidden: Boolean = js.native
   /**
     *
-    * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
+    * Returns the row number of the first cell in the range. Zero-indexed.
     *
     * [Api set: ExcelApi 1.1]
     */
   val rowIndex: Double = js.native
   /**
     *
-    * Represents the range sort of the current range. Read-only.
+    * Represents the range sort of the current range.
     *
     * [Api set: ExcelApi 1.2]
     */
@@ -258,21 +258,21 @@ trait Range extends ClientObject {
   var style: String = js.native
   /**
     *
-    * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+    * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API.
     *
     * [Api set: ExcelApi 1.1]
     */
   val text: js.Array[js.Array[String]] = js.native
   /**
     *
-    * Returns the distance in points, for 100% zoom, from top edge of the worksheet to top edge of the range. Read-only.
+    * Returns the distance in points, for 100% zoom, from top edge of the worksheet to top edge of the range.
     *
     * [Api set: ExcelApi 1.10]
     */
   val top: Double = js.native
   /**
     *
-    * Represents the type of data of each cell. Read-only.
+    * Specifies the type of data in each cell.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -286,14 +286,14 @@ trait Range extends ClientObject {
   var values: js.Array[js.Array[_]] = js.native
   /**
     *
-    * Returns the distance in points, for 100% zoom, from left edge of the range to right edge of the range. Read-only.
+    * Returns the distance in points, for 100% zoom, from left edge of the range to right edge of the range.
     *
     * [Api set: ExcelApi 1.10]
     */
   val width: Double = js.native
   /**
     *
-    * The worksheet containing the current range. Read-only.
+    * The worksheet containing the current range.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -643,6 +643,16 @@ trait Range extends ClientObject {
     */
   def getOffsetRange(rowOffset: Double, columnOffset: Double): Range = js.native
   /**
+    * Gets a scoped collection of PivotTables that overlap with the range.
+    *
+    * [Api set: ExcelApiOnline 1.1]
+    *
+    * @param fullyContained If true, returns only PivotTables that are fully contained within the range bounds. The default value is false.
+    * @returns
+    */
+  def getPivotTables(): PivotTableScopedCollection = js.native
+  def getPivotTables(fullyContained: Boolean): PivotTableScopedCollection = js.native
+  /**
     * Gets a Range object similar to the current Range object, but with its bottom-right corner expanded (or contracted) by some number of rows and columns.
     *
     * [Api set: ExcelApi 1.2]
@@ -948,7 +958,7 @@ trait Range extends ClientObject {
     * Moves cell values, formatting, and formulas from current range to the destination range, replacing the old information in those cells.
     The destination range will be expanded automatically if it is smaller than the current range. Any cells in the destination range that are outside of the original range's area are not changed.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.11]
     *
     * @param destinationRange destinationRange Specifies the range to where the information in this range will be moved.
     */

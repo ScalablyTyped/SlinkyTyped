@@ -4,21 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait KanbanSwimlane extends js.Object {
   /** Collapse all the swimlane rows in Kanban.
     * @returns {void}
     */
-  def collapseAll(): Unit = js.native
+  def collapseAll(): Unit
   /** Expand all the swimlane rows in Kanban.
     * @returns {void}
     */
-  def expandAll(): Unit = js.native
+  def expandAll(): Unit
   /** Expand or collapse the swimlane row based on the state of target &quot;div&quot;
     * @param {any} Pass the div object to toggleSwimlane row based on its row state
     * @returns {void}
     */
-  def toggle($div: js.Any): Unit = js.native
+  def toggle($div: js.Any): Unit
 }
 
 object KanbanSwimlane {
@@ -27,31 +26,5 @@ object KanbanSwimlane {
     val __obj = js.Dynamic.literal(collapseAll = js.Any.fromFunction0(collapseAll), expandAll = js.Any.fromFunction0(expandAll), toggle = js.Any.fromFunction1(toggle))
     __obj.asInstanceOf[KanbanSwimlane]
   }
-  @scala.inline
-  implicit class KanbanSwimlaneOps[Self <: KanbanSwimlane] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollapseAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseAll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExpandAll(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAll")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withToggle(value: js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -1,54 +1,23 @@
 package typingsSlinky.overlayscrollbars.anon
 
-import typingsSlinky.overlayscrollbars.mod.Coordinates
 import typingsSlinky.overlayscrollbars.mod.Position
+import typingsSlinky.overlayscrollbars.mod._Coordinates
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
-trait X extends Coordinates {
-  var x: js.UndefOr[Position] = js.native
-  var y: js.UndefOr[Position] = js.native
+trait X extends _Coordinates {
+  var x: js.UndefOr[Position] = js.undefined
+  var y: js.UndefOr[Position] = js.undefined
 }
 
 object X {
   @scala.inline
-  def apply(): X = {
+  def apply(x: Position = null, y: Position = null): X = {
     val __obj = js.Dynamic.literal()
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[X]
   }
-  @scala.inline
-  implicit class XOps[Self <: X] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withX(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Position): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

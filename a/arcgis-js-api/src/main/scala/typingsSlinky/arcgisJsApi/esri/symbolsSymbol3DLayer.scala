@@ -16,22 +16,3 @@ import scala.scalajs.js.annotation._
 */
 trait symbolsSymbol3DLayer extends js.Object
 
-object symbolsSymbol3DLayer {
-  @scala.inline
-  implicit def apply(value: ExtrudeSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: FillSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: IconSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: LineSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: ObjectSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: PathSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: TextSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-  @scala.inline
-  implicit def apply(value: WaterSymbol3DLayer): symbolsSymbol3DLayer = value.asInstanceOf[symbolsSymbol3DLayer]
-}
-

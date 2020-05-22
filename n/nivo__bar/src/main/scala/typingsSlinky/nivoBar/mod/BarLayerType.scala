@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-sealed trait BarLayerType extends Layer
+sealed trait BarLayerType extends js.Object
 
 @JSImport("@nivo/bar", "BarLayerType")
 @js.native

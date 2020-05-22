@@ -13,22 +13,21 @@ import scala.scalajs.js.annotation._
   * @see XModeChangeApproveListener
   * @since OOo 1.1.2
   */
-@js.native
 trait XModeChangeBroadcaster extends XInterface {
   /**
     * adds the given listener to the list of components to be notified when the mode is about to change.
     * @throws com::sun::star::lang::NoSupportException if the component does not allow vetoing mode changes
     */
-  def addModeChangeApproveListener(rxListener: XModeChangeApproveListener): Unit = js.native
+  def addModeChangeApproveListener(rxListener: XModeChangeApproveListener): Unit
   /** adds the given listener to the list of components to be notified when the mode changes. */
-  def addModeChangeListener(rxListener: XModeChangeListener): Unit = js.native
+  def addModeChangeListener(rxListener: XModeChangeListener): Unit
   /**
     * remove the given listener from the list of components to be notified when the mode is about to change.
     * @throws com::sun::star::lang::NoSupportException if the component does not allow vetoing mode changes
     */
-  def removeModeChangeApproveListener(rxListener: XModeChangeApproveListener): Unit = js.native
+  def removeModeChangeApproveListener(rxListener: XModeChangeApproveListener): Unit
   /** removes the given listener from the list of components to be notified when the mode changes. */
-  def removeModeChangeListener(rxListener: XModeChangeListener): Unit = js.native
+  def removeModeChangeListener(rxListener: XModeChangeListener): Unit
 }
 
 object XModeChangeBroadcaster {
@@ -45,37 +44,5 @@ object XModeChangeBroadcaster {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addModeChangeApproveListener = js.Any.fromFunction1(addModeChangeApproveListener), addModeChangeListener = js.Any.fromFunction1(addModeChangeListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeModeChangeApproveListener = js.Any.fromFunction1(removeModeChangeApproveListener), removeModeChangeListener = js.Any.fromFunction1(removeModeChangeListener))
     __obj.asInstanceOf[XModeChangeBroadcaster]
   }
-  @scala.inline
-  implicit class XModeChangeBroadcasterOps[Self <: XModeChangeBroadcaster] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddModeChangeApproveListener(value: XModeChangeApproveListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addModeChangeApproveListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddModeChangeListener(value: XModeChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addModeChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveModeChangeApproveListener(value: XModeChangeApproveListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeModeChangeApproveListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveModeChangeListener(value: XModeChangeListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeModeChangeListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -4,49 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Dest extends js.Object {
-  var dest: js.UndefOr[js.Function3[/* index */ Double, /* data */ js.Any, /* delay */ Double, _]] = js.native
-  var limit: js.UndefOr[Double] = js.native
+  var dest: js.UndefOr[js.Function3[/* index */ Double, /* data */ js.Any, /* delay */ Double, _]] = js.undefined
+  var limit: js.UndefOr[Double] = js.undefined
 }
 
 object Dest {
   @scala.inline
-  def apply(): Dest = {
+  def apply(
+    dest: (/* index */ Double, /* data */ js.Any, /* delay */ Double) => _ = null,
+    limit: js.UndefOr[Double] = js.undefined
+  ): Dest = {
     val __obj = js.Dynamic.literal()
+    if (dest != null) __obj.updateDynamic("dest")(js.Any.fromFunction3(dest))
+    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dest]
   }
-  @scala.inline
-  implicit class DestOps[Self <: Dest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDest(value: (/* index */ Double, /* data */ js.Any, /* delay */ Double) => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

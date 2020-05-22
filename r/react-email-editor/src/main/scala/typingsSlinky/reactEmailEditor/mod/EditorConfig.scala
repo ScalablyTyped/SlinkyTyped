@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditorConfig extends js.Object {
-  val maxRows: js.UndefOr[Double] = js.native
-  val minRows: js.UndefOr[Double] = js.native
+  val maxRows: js.UndefOr[Double] = js.undefined
+  val minRows: js.UndefOr[Double] = js.undefined
 }
 
 object EditorConfig {
   @scala.inline
-  def apply(): EditorConfig = {
+  def apply(maxRows: js.UndefOr[Double] = js.undefined, minRows: js.UndefOr[Double] = js.undefined): EditorConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxRows)) __obj.updateDynamic("maxRows")(maxRows.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minRows)) __obj.updateDynamic("minRows")(minRows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorConfig]
   }
-  @scala.inline
-  implicit class EditorConfigOps[Self <: EditorConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRows")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

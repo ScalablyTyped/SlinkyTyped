@@ -34,77 +34,20 @@ trait QualificationRequirement extends js.Object {
 
 object QualificationRequirement {
   @scala.inline
-  def apply(Comparator: Comparator, QualificationTypeId: String): QualificationRequirement = {
+  def apply(
+    Comparator: Comparator,
+    QualificationTypeId: String,
+    ActionsGuarded: HITAccessActions = null,
+    IntegerValues: IntegerList = null,
+    LocaleValues: LocaleList = null,
+    RequiredToPreview: js.UndefOr[Boolean] = js.undefined
+  ): QualificationRequirement = {
     val __obj = js.Dynamic.literal(Comparator = Comparator.asInstanceOf[js.Any], QualificationTypeId = QualificationTypeId.asInstanceOf[js.Any])
+    if (ActionsGuarded != null) __obj.updateDynamic("ActionsGuarded")(ActionsGuarded.asInstanceOf[js.Any])
+    if (IntegerValues != null) __obj.updateDynamic("IntegerValues")(IntegerValues.asInstanceOf[js.Any])
+    if (LocaleValues != null) __obj.updateDynamic("LocaleValues")(LocaleValues.asInstanceOf[js.Any])
+    if (!js.isUndefined(RequiredToPreview)) __obj.updateDynamic("RequiredToPreview")(RequiredToPreview.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[QualificationRequirement]
   }
-  @scala.inline
-  implicit class QualificationRequirementOps[Self <: QualificationRequirement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withComparator(value: Comparator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Comparator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withQualificationTypeId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withActionsGuarded(value: HITAccessActions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsGuarded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionsGuarded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsGuarded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegerValues(value: IntegerList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegerValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocaleValues(value: LocaleList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocaleValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocaleValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocaleValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequiredToPreview(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiredToPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequiredToPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiredToPreview")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

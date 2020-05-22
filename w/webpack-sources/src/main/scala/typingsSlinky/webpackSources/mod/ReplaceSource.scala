@@ -1,6 +1,9 @@
 package typingsSlinky.webpackSources.mod
 
+import typingsSlinky.sourceMap.mod.RawSourceMap
 import typingsSlinky.sourceMap.mod.SourceNode
+import typingsSlinky.webpackSources.anon.Columns
+import typingsSlinky.webpackSources.anon.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +25,10 @@ class ReplaceSource protected ()
   def _splitSourceNode(node: SourceNode, position: js.Array[SourceNode]): js.Array[SourceNode] = js.native
   def _splitString(str: String, position: Double): js.Array[String] = js.native
   def insert(pos: Double, newValue: String): Unit = js.native
+  /* CompleteClass */
+  override def map(options: Columns): RawSourceMap = js.native
   def replace(start: Double, end: Double, newValue: String): Unit = js.native
+  /* CompleteClass */
+  override def sourceAndMap(options: Columns): Map = js.native
 }
 

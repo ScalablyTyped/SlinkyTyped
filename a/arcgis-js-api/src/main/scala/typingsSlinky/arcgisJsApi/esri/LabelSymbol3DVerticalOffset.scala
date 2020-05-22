@@ -1,30 +1,30 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.HashMap
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LabelSymbol3DVerticalOffset extends AnonymousAccessor {
   /**
     * The maximum vertical symbol offset in world units. It acts as an upper bound to avoid vertical offset becoming too big.  In the following animation the green symbols have `maxWorldLength = 50` and orange symbols don't have `maxWorldLength` set:  ![maxWorldLength](https://developers.arcgis.com/javascript/assets/img/apiref/symbols/symbols3D-line-callout-maxWorldLength.gif)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LabelSymbol3D.html#verticalOffset)
     */
-  var maxWorldLength: js.UndefOr[Double] = js.native
+  var maxWorldLength: js.UndefOr[Double] = js.undefined
   /**
     * The minimum vertical symbol offset in world units. It acts as a lower bound to avoid the vertical offset becoming too small.  In the following animation the green symbol on the left has `minWorldLength = 20` and for the orange symbol on the right `minWorldLength` has not been set:  ![minWorldLength-on](https://developers.arcgis.com/javascript/assets/img/apiref/symbols/symbols3D-line-callout-minWorldLength.gif)
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LabelSymbol3D.html#verticalOffset)
     */
-  var minWorldLength: js.UndefOr[Double] = js.native
+  var minWorldLength: js.UndefOr[Double] = js.undefined
   /**
     * The vertical symbol offset in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LabelSymbol3D.html#verticalOffset)
     */
-  var screenLength: Double = js.native
+  var screenLength: Double
 }
 
 object LabelSymbol3DVerticalOffset {
@@ -33,48 +33,20 @@ object LabelSymbol3DVerticalOffset {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
     propertyIsEnumerable: PropertyKey => Boolean,
-    screenLength: Double
+    screenLength: Double,
+    get: /* propertyName */ String => _ = null,
+    maxWorldLength: js.UndefOr[Double] = js.undefined,
+    minWorldLength: js.UndefOr[Double] = js.undefined,
+    set: (js.Function2[/* propertyName */ String, /* value */ js.Any, LabelSymbol3DVerticalOffset]) with (js.Function1[/* props */ HashMap[_], LabelSymbol3DVerticalOffset]) = null,
+    watch: (/* path */ String | js.Array[String], /* callback */ WatchCallback, /* sync */ js.UndefOr[Boolean]) => WatchHandle = null
   ): LabelSymbol3DVerticalOffset = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), screenLength = screenLength.asInstanceOf[js.Any])
+    if (get != null) __obj.updateDynamic("get")(js.Any.fromFunction1(get))
+    if (!js.isUndefined(maxWorldLength)) __obj.updateDynamic("maxWorldLength")(maxWorldLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minWorldLength)) __obj.updateDynamic("minWorldLength")(minWorldLength.get.asInstanceOf[js.Any])
+    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
+    if (watch != null) __obj.updateDynamic("watch")(js.Any.fromFunction3(watch))
     __obj.asInstanceOf[LabelSymbol3DVerticalOffset]
   }
-  @scala.inline
-  implicit class LabelSymbol3DVerticalOffsetOps[Self <: LabelSymbol3DVerticalOffset] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withScreenLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMaxWorldLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWorldLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxWorldLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWorldLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinWorldLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWorldLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinWorldLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minWorldLength")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

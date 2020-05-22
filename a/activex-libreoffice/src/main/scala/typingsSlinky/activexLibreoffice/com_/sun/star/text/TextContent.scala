@@ -20,17 +20,16 @@ import scala.scalajs.js.annotation._
   * @see TextGraphicObject
   * @see TextEmbeddedObject
   */
-@js.native
 trait TextContent extends XTextContent {
   /** specifies how the text content is attached to its surrounding {@link Text} . */
-  var AnchorType: TextContentAnchorType = js.native
+  var AnchorType: TextContentAnchorType
   /**
     * contains the anchor type of the text content.
     * @see com.sun.star.text.TextContentAnchorType
     */
-  var AnchorTypes: SafeArray[TextContentAnchorType] = js.native
+  var AnchorTypes: SafeArray[TextContentAnchorType]
   /** specifies if the text content is a shape and how the text is wrapped around the shape. */
-  var TextWrap: WrapTextMode = js.native
+  var TextWrap: WrapTextMode
 }
 
 object TextContent {
@@ -52,31 +51,5 @@ object TextContent {
     val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], AnchorType = AnchorType.asInstanceOf[js.Any], AnchorTypes = AnchorTypes.asInstanceOf[js.Any], TextWrap = TextWrap.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
     __obj.asInstanceOf[TextContent]
   }
-  @scala.inline
-  implicit class TextContentOps[Self <: TextContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnchorType(value: TextContentAnchorType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnchorType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchorTypes(value: SafeArray[TextContentAnchorType]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AnchorTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextWrap(value: WrapTextMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextWrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

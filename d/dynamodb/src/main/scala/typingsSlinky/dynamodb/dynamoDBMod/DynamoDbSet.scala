@@ -1,5 +1,8 @@
 package typingsSlinky.dynamodb.dynamoDBMod
 
+import typingsSlinky.dynamodb.dynamodbStrings.Binary
+import typingsSlinky.dynamodb.dynamodbStrings.Number
+import typingsSlinky.dynamodb.dynamodbStrings.String
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +16,22 @@ trait DynamoDbSet extends js.Object
 
 object DynamoDbSet {
   @scala.inline
-  implicit def apply(value: BinarySet): DynamoDbSet = value.asInstanceOf[DynamoDbSet]
+  def StringSet(`type`: String, values: js.Array[java.lang.String]): DynamoDbSet = {
+    val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DynamoDbSet]
+  }
   @scala.inline
-  implicit def apply(value: NumberSet): DynamoDbSet = value.asInstanceOf[DynamoDbSet]
+  def NumberSet(`type`: Number, values: js.Array[Double]): DynamoDbSet = {
+    val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DynamoDbSet]
+  }
   @scala.inline
-  implicit def apply(value: StringSet): DynamoDbSet = value.asInstanceOf[DynamoDbSet]
+  def BinarySet(`type`: Binary, values: js.Array[binaryType]): DynamoDbSet = {
+    val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DynamoDbSet]
+  }
 }
 

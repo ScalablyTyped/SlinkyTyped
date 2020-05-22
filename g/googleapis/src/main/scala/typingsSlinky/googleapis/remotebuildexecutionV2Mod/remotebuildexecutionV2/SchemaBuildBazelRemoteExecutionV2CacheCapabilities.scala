@@ -37,77 +37,20 @@ trait SchemaBuildBazelRemoteExecutionV2CacheCapabilities extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2CacheCapabilities {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2CacheCapabilities = {
+  def apply(
+    actionCacheUpdateCapabilities: SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities = null,
+    cachePriorityCapabilities: SchemaBuildBazelRemoteExecutionV2PriorityCapabilities = null,
+    digestFunction: js.Array[String] = null,
+    maxBatchTotalSizeBytes: String = null,
+    symlinkAbsolutePathStrategy: String = null
+  ): SchemaBuildBazelRemoteExecutionV2CacheCapabilities = {
     val __obj = js.Dynamic.literal()
+    if (actionCacheUpdateCapabilities != null) __obj.updateDynamic("actionCacheUpdateCapabilities")(actionCacheUpdateCapabilities.asInstanceOf[js.Any])
+    if (cachePriorityCapabilities != null) __obj.updateDynamic("cachePriorityCapabilities")(cachePriorityCapabilities.asInstanceOf[js.Any])
+    if (digestFunction != null) __obj.updateDynamic("digestFunction")(digestFunction.asInstanceOf[js.Any])
+    if (maxBatchTotalSizeBytes != null) __obj.updateDynamic("maxBatchTotalSizeBytes")(maxBatchTotalSizeBytes.asInstanceOf[js.Any])
+    if (symlinkAbsolutePathStrategy != null) __obj.updateDynamic("symlinkAbsolutePathStrategy")(symlinkAbsolutePathStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2CacheCapabilities]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2CacheCapabilitiesOps[Self <: SchemaBuildBazelRemoteExecutionV2CacheCapabilities] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActionCacheUpdateCapabilities(value: SchemaBuildBazelRemoteExecutionV2ActionCacheUpdateCapabilities): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionCacheUpdateCapabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActionCacheUpdateCapabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("actionCacheUpdateCapabilities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCachePriorityCapabilities(value: SchemaBuildBazelRemoteExecutionV2PriorityCapabilities): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePriorityCapabilities")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCachePriorityCapabilities: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePriorityCapabilities")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigestFunction(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digestFunction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigestFunction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digestFunction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBatchTotalSizeBytes(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBatchTotalSizeBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBatchTotalSizeBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBatchTotalSizeBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSymlinkAbsolutePathStrategy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinkAbsolutePathStrategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSymlinkAbsolutePathStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinkAbsolutePathStrategy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

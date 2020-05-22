@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Definition of an error in PaymentData.
   */
-@js.native
 trait PaymentDataError extends js.Object {
   /**
     * Intent of where the error occurs. Only data that specified in the
@@ -17,19 +16,19 @@ trait PaymentDataError extends js.Object {
     *
     * This field is required.
     */
-  var intent: CallbackIntent = js.native
+  var intent: CallbackIntent
   /**
     * Custom user visible error that will be displayed in a dialog.
     *
     * This field is required.
     */
-  var message: String = js.native
+  var message: String
   /**
     * Predifined error reason
     *
     * This field is required.
     */
-  var reason: ErrorReason = js.native
+  var reason: ErrorReason
 }
 
 object PaymentDataError {
@@ -38,31 +37,5 @@ object PaymentDataError {
     val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentDataError]
   }
-  @scala.inline
-  implicit class PaymentDataErrorOps[Self <: PaymentDataError] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIntent(value: CallbackIntent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReason(value: ErrorReason): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

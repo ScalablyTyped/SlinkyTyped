@@ -3,8 +3,8 @@ package typingsSlinky.firebaseFirestore
 import typingsSlinky.firebaseFirestore.datastoreMod.Datastore
 import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.documentMod.MaybeDocument
-import typingsSlinky.firebaseFirestore.userDataConverterMod.ParsedSetData
-import typingsSlinky.firebaseFirestore.userDataConverterMod.ParsedUpdateData
+import typingsSlinky.firebaseFirestore.userDataReaderMod.ParsedSetData
+import typingsSlinky.firebaseFirestore.userDataReaderMod.ParsedUpdateData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

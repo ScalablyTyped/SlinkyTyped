@@ -2,6 +2,7 @@ package typingsSlinky.kendoUi.kendo.ui
 
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
+import typingsSlinky.kendoUi.kendo.data.FileManagerDataSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +19,7 @@ trait FileManager extends Widget {
   def navigate(): Unit = js.native
   def path(): Unit = js.native
   def refresh(): Unit = js.native
+  def setDataSource(dataSource: FileManagerDataSource): Unit = js.native
   def view(): Unit = js.native
 }
 

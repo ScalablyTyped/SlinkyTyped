@@ -15,65 +15,18 @@ trait PartialClassNameMapCollap extends js.Object {
 
 object PartialClassNameMapCollap {
   @scala.inline
-  def apply(): PartialClassNameMapCollap = {
+  def apply(
+    container: String = null,
+    entered: String = null,
+    wrapper: String = null,
+    wrapperInner: String = null
+  ): PartialClassNameMapCollap = {
     val __obj = js.Dynamic.literal()
+    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (entered != null) __obj.updateDynamic("entered")(entered.asInstanceOf[js.Any])
+    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
+    if (wrapperInner != null) __obj.updateDynamic("wrapperInner")(wrapperInner.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapCollap]
   }
-  @scala.inline
-  implicit class PartialClassNameMapCollapOps[Self <: PartialClassNameMapCollap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContainer(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntered(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entered")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntered: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entered")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapper(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapper: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapperInner(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperInner")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapperInner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperInner")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

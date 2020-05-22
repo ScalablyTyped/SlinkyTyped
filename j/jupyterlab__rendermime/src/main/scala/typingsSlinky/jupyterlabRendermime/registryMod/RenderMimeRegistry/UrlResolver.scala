@@ -18,6 +18,14 @@ class UrlResolver protected () extends IResolver {
   var _contents: js.Any = js.native
   var _session: js.Any = js.native
   /**
+    * Get the download url for a given absolute url path.
+    *
+    * #### Notes
+    * This URL may include a query parameter.
+    */
+  /* CompleteClass */
+  override def getDownloadUrl(url: String): js.Promise[String] = js.native
+  /**
     * Whether the URL should be handled by the resolver
     * or not.
     *
@@ -29,5 +37,10 @@ class UrlResolver protected () extends IResolver {
     */
   @JSName("isLocal")
   def isLocal_MUrlResolver(url: String): Boolean = js.native
+  /**
+    * Resolve a relative url to an absolute url path.
+    */
+  /* CompleteClass */
+  override def resolveUrl(url: String): js.Promise[String] = js.native
 }
 

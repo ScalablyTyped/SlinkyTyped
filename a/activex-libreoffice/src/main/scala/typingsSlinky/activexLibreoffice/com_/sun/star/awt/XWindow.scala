@@ -13,43 +13,42 @@ import scala.scalajs.js.annotation._
   * A window is a rectangular region on an output device with its own position, size, and internal coordinate system. A window is used for displaying
   * data. In addition, the window receives events from the user.
   */
-@js.native
 trait XWindow extends XComponent {
   /** returns the outer bounds of the window. */
-  val PosSize: Rectangle = js.native
+  val PosSize: Rectangle
   /** adds a focus listener to the object. */
-  def addFocusListener(xListener: XFocusListener): Unit = js.native
+  def addFocusListener(xListener: XFocusListener): Unit
   /** adds a key listener to the object. */
-  def addKeyListener(xListener: XKeyListener): Unit = js.native
+  def addKeyListener(xListener: XKeyListener): Unit
   /** adds a mouse listener to the object. */
-  def addMouseListener(xListener: XMouseListener): Unit = js.native
+  def addMouseListener(xListener: XMouseListener): Unit
   /** adds a mouse motion listener to the object. */
-  def addMouseMotionListener(xListener: XMouseMotionListener): Unit = js.native
+  def addMouseMotionListener(xListener: XMouseMotionListener): Unit
   /** adds a paint listener to the object. */
-  def addPaintListener(xListener: XPaintListener): Unit = js.native
+  def addPaintListener(xListener: XPaintListener): Unit
   /**
     * adds a window listener to the object.
     * @param xListener the listener to add. If this listener also supports the {@link XWindowListener2} interface, it will receive the additional events decla
     */
-  def addWindowListener(xListener: XWindowListener): Unit = js.native
+  def addWindowListener(xListener: XWindowListener): Unit
   /** returns the outer bounds of the window. */
-  def getPosSize(): Rectangle = js.native
+  def getPosSize(): Rectangle
   /** removes the specified focus listener from the listener list. */
-  def removeFocusListener(xListener: XFocusListener): Unit = js.native
+  def removeFocusListener(xListener: XFocusListener): Unit
   /** removes the specified key listener from the listener list. */
-  def removeKeyListener(xListener: XKeyListener): Unit = js.native
+  def removeKeyListener(xListener: XKeyListener): Unit
   /** removes the specified mouse listener from the listener list. */
-  def removeMouseListener(xListener: XMouseListener): Unit = js.native
+  def removeMouseListener(xListener: XMouseListener): Unit
   /** removes the specified mouse motion listener from the listener list. */
-  def removeMouseMotionListener(xListener: XMouseMotionListener): Unit = js.native
+  def removeMouseMotionListener(xListener: XMouseMotionListener): Unit
   /** removes the specified paint listener from the listener list. */
-  def removePaintListener(xListener: XPaintListener): Unit = js.native
+  def removePaintListener(xListener: XPaintListener): Unit
   /** removes the specified window listener from the listener list. */
-  def removeWindowListener(xListener: XWindowListener): Unit = js.native
+  def removeWindowListener(xListener: XWindowListener): Unit
   /** enables or disables the window depending on the parameter. */
-  def setEnable(Enable: Boolean): Unit = js.native
+  def setEnable(Enable: Boolean): Unit
   /** sets the focus to the window. */
-  def setFocus(): Unit = js.native
+  def setFocus(): Unit
   /**
     * sets the outer bounds of the window.
     * @param X the x-coordinate of the window.
@@ -58,9 +57,9 @@ trait XWindow extends XComponent {
     * @param Height the height of the window.
     * @param Flags Flags are of type {@link PosSize} and specify, which parameters are taken into account when setting the outer bounds of the window.
     */
-  def setPosSize(X: Double, Y: Double, Width: Double, Height: Double, Flags: Double): Unit = js.native
+  def setPosSize(X: Double, Y: Double, Width: Double, Height: Double, Flags: Double): Unit
   /** shows or hides the window depending on the parameter. */
-  def setVisible(Visible: Boolean): Unit = js.native
+  def setVisible(Visible: Boolean): Unit
 }
 
 object XWindow {
@@ -94,121 +93,5 @@ object XWindow {
     val __obj = js.Dynamic.literal(PosSize = PosSize.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addFocusListener = js.Any.fromFunction1(addFocusListener), addKeyListener = js.Any.fromFunction1(addKeyListener), addMouseListener = js.Any.fromFunction1(addMouseListener), addMouseMotionListener = js.Any.fromFunction1(addMouseMotionListener), addPaintListener = js.Any.fromFunction1(addPaintListener), addWindowListener = js.Any.fromFunction1(addWindowListener), dispose = js.Any.fromFunction0(dispose), getPosSize = js.Any.fromFunction0(getPosSize), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeFocusListener = js.Any.fromFunction1(removeFocusListener), removeKeyListener = js.Any.fromFunction1(removeKeyListener), removeMouseListener = js.Any.fromFunction1(removeMouseListener), removeMouseMotionListener = js.Any.fromFunction1(removeMouseMotionListener), removePaintListener = js.Any.fromFunction1(removePaintListener), removeWindowListener = js.Any.fromFunction1(removeWindowListener), setEnable = js.Any.fromFunction1(setEnable), setFocus = js.Any.fromFunction0(setFocus), setPosSize = js.Any.fromFunction5(setPosSize), setVisible = js.Any.fromFunction1(setVisible))
     __obj.asInstanceOf[XWindow]
   }
-  @scala.inline
-  implicit class XWindowOps[Self <: XWindow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPosSize(value: Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PosSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddFocusListener(value: XFocusListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addFocusListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddKeyListener(value: XKeyListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addKeyListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddMouseListener(value: XMouseListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addMouseListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddMouseMotionListener(value: XMouseMotionListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addMouseMotionListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddPaintListener(value: XPaintListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addPaintListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddWindowListener(value: XWindowListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addWindowListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetPosSize(value: () => Rectangle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosSize")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveFocusListener(value: XFocusListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFocusListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveKeyListener(value: XKeyListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeKeyListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveMouseListener(value: XMouseListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMouseListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveMouseMotionListener(value: XMouseMotionListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMouseMotionListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemovePaintListener(value: XPaintListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removePaintListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveWindowListener(value: XWindowListener => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWindowListener")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetEnable(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnable")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetFocus(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocus")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetPosSize(value: (Double, Double, Double, Double, Double) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setPosSize")(js.Any.fromFunction5(value))
-        ret
-    }
-    @scala.inline
-    def withSetVisible(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

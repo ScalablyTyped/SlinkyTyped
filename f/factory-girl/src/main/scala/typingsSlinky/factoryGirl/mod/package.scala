@@ -10,6 +10,7 @@ package object mod {
   {[ P in keyof T ]: factory-girl.factory-girl.Definition<T[P]>}
     */ typingsSlinky.factoryGirl.factoryGirlStrings.Attributes with org.scalablytyped.runtime.TopLevel[T]
   ]
+  type Definition[T] = T | typingsSlinky.factoryGirl.mod.Generator[T]
   type Generator[T] = js.Function0[T]
   type Hook[T] = js.Function3[/* model */ js.Any, /* attrs */ js.Array[T], /* options */ js.Any, scala.Unit]
 }

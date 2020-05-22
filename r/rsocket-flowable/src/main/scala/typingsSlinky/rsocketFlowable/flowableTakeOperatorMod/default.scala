@@ -11,5 +11,15 @@ class default[T] protected () extends FlowableTakeOperator[T] {
     subscriber: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ js.Any,
     toTake: Double
   ) = this()
+  /* CompleteClass */
+  override def onComplete(): Unit = js.native
+  /* CompleteClass */
+  override def onError(error: js.Error): Unit = js.native
+  /* CompleteClass */
+  override def onNext(t: T): Unit = js.native
+  /* CompleteClass */
+  override def onSubscribe(
+    subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any
+  ): Unit = js.native
 }
 

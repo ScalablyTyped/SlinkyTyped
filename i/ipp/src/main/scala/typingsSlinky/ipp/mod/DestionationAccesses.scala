@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DestionationAccesses extends js.Object {
-  var `access-oauth-token`: js.UndefOr[js.Array[String]] = js.native
-  var `access-oauth-uri`: js.UndefOr[String] = js.native
-  var `access-password`: js.UndefOr[String] = js.native
-  var `access-pin`: js.UndefOr[String] = js.native
-  var `access-user-name`: js.UndefOr[String] = js.native
+  var `access-oauth-token`: js.UndefOr[js.Array[String]] = js.undefined
+  var `access-oauth-uri`: js.UndefOr[String] = js.undefined
+  var `access-password`: js.UndefOr[String] = js.undefined
+  var `access-pin`: js.UndefOr[String] = js.undefined
+  var `access-user-name`: js.UndefOr[String] = js.undefined
 }
 
 object DestionationAccesses {
   @scala.inline
-  def apply(): DestionationAccesses = {
+  def apply(
+    `access-oauth-token`: js.Array[String] = null,
+    `access-oauth-uri`: String = null,
+    `access-password`: String = null,
+    `access-pin`: String = null,
+    `access-user-name`: String = null
+  ): DestionationAccesses = {
     val __obj = js.Dynamic.literal()
+    if (`access-oauth-token` != null) __obj.updateDynamic("access-oauth-token")(`access-oauth-token`.asInstanceOf[js.Any])
+    if (`access-oauth-uri` != null) __obj.updateDynamic("access-oauth-uri")(`access-oauth-uri`.asInstanceOf[js.Any])
+    if (`access-password` != null) __obj.updateDynamic("access-password")(`access-password`.asInstanceOf[js.Any])
+    if (`access-pin` != null) __obj.updateDynamic("access-pin")(`access-pin`.asInstanceOf[js.Any])
+    if (`access-user-name` != null) __obj.updateDynamic("access-user-name")(`access-user-name`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestionationAccesses]
   }
-  @scala.inline
-  implicit class DestionationAccessesOps[Self <: DestionationAccesses] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withAccess-oauth-token`(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-oauth-token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccess-oauth-token`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-oauth-token")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccess-oauth-uri`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-oauth-uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccess-oauth-uri`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-oauth-uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccess-password`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccess-password`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-password")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccess-pin`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-pin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccess-pin`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-pin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withAccess-user-name`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-user-name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutAccess-user-name`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("access-user-name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

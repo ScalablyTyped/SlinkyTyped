@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * output might be off by up to one device pixel from the transformed metrics.
   * @since OOo 2.0
   */
-@js.native
 trait XTextLayout extends XInterface {
   /**
     * This method yields the baseline offset.
@@ -34,24 +33,24 @@ trait XTextLayout extends XInterface {
     * method can be used to e.g. output relative to the left, top edge.
     * @returns the distance of the main baseline from the top or the left edge of this object, depending on the writing direction.
     */
-  val BaselineOffset: Double = js.native
+  val BaselineOffset: Double
   /**
     * Request the associated font for this layout.
     * @returns the associated font for this layout.
     */
-  val Font: XCanvasFont = js.native
+  val Font: XCanvasFont
   /**
     * This method returns the main writing direction.
     *
     * This method returns the main writing direction of this layout, i.e. either LEFT_TO_RIGHT or RIGHT_TO_LEFT.
     * @returns the main text direction of this layout.
     */
-  val MainTextDirection: Double = js.native
+  val MainTextDirection: Double
   /**
     * Request the text this layout contains.
     * @returns the text this layout contains.
     */
-  val Text: StringContext = js.native
+  val Text: StringContext
   /**
     * Apply explicit advancements for every character in the layout string.
     *
@@ -62,7 +61,7 @@ trait XTextLayout extends XInterface {
     * @see XTextLayout.queryLogicalAdvancements()
     * @throws com::sun::star::lang::IllegalArgumentException if the size of aAdvancements does not match the number of characters in the text.
     */
-  def applyLogicalAdvancements(aAdvancements: SeqEquiv[Double]): Unit = js.native
+  def applyLogicalAdvancements(aAdvancements: SeqEquiv[Double]): Unit
   /**
     * Justify a number of text layouts to the given size.
     *
@@ -75,7 +74,7 @@ trait XTextLayout extends XInterface {
     * @returns the actual size of the text after the justification, in font coordinate space. Depending on the font and the script type, this might be somewhat
     * @throws com::sun::star::lang::IllegalArgumentException if one of the parameters are not in the valid range.
     */
-  def combinedJustify(aNextLayouts: SeqEquiv[XTextLayout], nSize: Double): Double = js.native
+  def combinedJustify(aNextLayouts: SeqEquiv[XTextLayout], nSize: Double): Double
   /**
     * This method yields the baseline offset.
     *
@@ -84,7 +83,7 @@ trait XTextLayout extends XInterface {
     * method can be used to e.g. output relative to the left, top edge.
     * @returns the distance of the main baseline from the top or the left edge of this object, depending on the writing direction.
     */
-  def getBaselineOffset(): Double = js.native
+  def getBaselineOffset(): Double
   /**
     * This method converts an insertion index to a caret.
     *
@@ -94,19 +93,19 @@ trait XTextLayout extends XInterface {
     * @returns the generated {@link Caret} structure.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if nInsertionIndex is outside the permissible range.
     */
-  def getCaret(nInsertionIndex: Double, bExcludeLigatures: Boolean): Caret = js.native
+  def getCaret(nInsertionIndex: Double, bExcludeLigatures: Boolean): Caret
   /**
     * Request the associated font for this layout.
     * @returns the associated font for this layout.
     */
-  def getFont(): XCanvasFont = js.native
+  def getFont(): XCanvasFont
   /**
     * This method returns the main writing direction.
     *
     * This method returns the main writing direction of this layout, i.e. either LEFT_TO_RIGHT or RIGHT_TO_LEFT.
     * @returns the main text direction of this layout.
     */
-  def getMainTextDirection(): Double = js.native
+  def getMainTextDirection(): Double
   /**
     * This method calculates a new insertion index.
     *
@@ -117,19 +116,19 @@ trait XTextLayout extends XInterface {
     * @returns the new insertion index.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if nStartIndex or nCaretAdvancement is outside the permissible range.
     */
-  def getNextInsertionIndex(nStartIndex: Double, nCaretAdvancement: Double, bExcludeLigatures: Boolean): Double = js.native
+  def getNextInsertionIndex(nStartIndex: Double, nCaretAdvancement: Double, bExcludeLigatures: Boolean): Double
   /**
     * Request the text this layout contains.
     * @returns the text this layout contains.
     */
-  def getText(): StringContext = js.native
+  def getText(): StringContext
   /**
     * This method determines the hit position in the text.
     *
     * This method determines the index of the character hit at the specified position (in font coordinate space).
     * @param aHitPoint The position in font coordinate space to determine the underlying character index for.
     */
-  def getTextHit(aHitPoint: RealPoint2D): TextHit = js.native
+  def getTextHit(aHitPoint: RealPoint2D): TextHit
   /**
     * Justify the text to the given size.
     *
@@ -138,7 +137,7 @@ trait XTextLayout extends XInterface {
     * @returns the actual size of the text after the justification in the font coordinate space. Depending on the font and the script type, this might be somewh
     * @throws com::sun::star::lang::IllegalArgumentException if nSize is 0 or negative.
     */
-  def justify(nSize: Double): Double = js.native
+  def justify(nSize: Double): Double
   /**
     * Query the ink bounding boxes for every glyph in the layouted text.
     *
@@ -147,7 +146,7 @@ trait XTextLayout extends XInterface {
     * @returns a sequence of rectangles in font coordinate space, specifying the bounds, one for every glyph.
     * @see XTextLayout.queryMeasures()
     */
-  def queryInkMeasures(): SafeArray[RealRectangle2D] = js.native
+  def queryInkMeasures(): SafeArray[RealRectangle2D]
   /**
     * Query the advancements for every character in the input string.
     *
@@ -158,7 +157,7 @@ trait XTextLayout extends XInterface {
     * @returns a sequence of double specifying the advancements per character in font coordinate space.
     * @see XTextLayout.applyLogicalAdvancements()
     */
-  def queryLogicalAdvancements(): SafeArray[Double] = js.native
+  def queryLogicalAdvancements(): SafeArray[Double]
   /**
     * This method generates a highlight polygon.
     *
@@ -169,7 +168,7 @@ trait XTextLayout extends XInterface {
     * @returns the highlight polygon in the font coordinate space.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if nStartIndex or nEndIndex are outside the permissible range.
     */
-  def queryLogicalHighlighting(nStartIndex: Double, nEndIndex: Double): XPolyPolygon2D = js.native
+  def queryLogicalHighlighting(nStartIndex: Double, nEndIndex: Double): XPolyPolygon2D
   /**
     * Query the logical bounding boxes of every character in the given text string.
     *
@@ -178,21 +177,21 @@ trait XTextLayout extends XInterface {
     * @returns a sequence of rectangles specifying the bounds in font coordinate space, one for every glyph.
     * @see XTextLayout.queryInkMeasures()
     */
-  def queryMeasures(): SafeArray[RealRectangle2D] = js.native
+  def queryMeasures(): SafeArray[RealRectangle2D]
   /**
     * Query the overall bounding box of the text.
     *
     * This method is similar to XTextLayout::queryTextMeasures(), only that the overall bounds are returned by this method.
     * @returns the overall bounding box for the given layout, in font coordinate space.
     */
-  def queryTextBounds(): RealRectangle2D = js.native
+  def queryTextBounds(): RealRectangle2D
   /**
     * Extract the polygonal shapes of the layouted text.
     *
     * Each glyph is represented by a separate {@link XPolyPolygon2D} in the returned sequence.
     * @returns a sequence of {@link XPolyPolygon2D} in font coordinate space, one for every glyph.
     */
-  def queryTextShapes(): SafeArray[XPolyPolygon2D] = js.native
+  def queryTextShapes(): SafeArray[XPolyPolygon2D]
   /**
     * This method generates a highlight polygon.
     *
@@ -203,7 +202,7 @@ trait XTextLayout extends XInterface {
     * @returns the highlight polygon in the font coordinate space.
     * @throws com::sun::star::lang::IndexOutOfBoundsException if nStartIndex or nEndIndex are outside the permissible range.
     */
-  def queryVisualHighlighting(nStartIndex: Double, nEndIndex: Double): XPolyPolygon2D = js.native
+  def queryVisualHighlighting(nStartIndex: Double, nEndIndex: Double): XPolyPolygon2D
 }
 
 object XTextLayout {
@@ -237,139 +236,5 @@ object XTextLayout {
     val __obj = js.Dynamic.literal(BaselineOffset = BaselineOffset.asInstanceOf[js.Any], Font = Font.asInstanceOf[js.Any], MainTextDirection = MainTextDirection.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), applyLogicalAdvancements = js.Any.fromFunction1(applyLogicalAdvancements), combinedJustify = js.Any.fromFunction2(combinedJustify), getBaselineOffset = js.Any.fromFunction0(getBaselineOffset), getCaret = js.Any.fromFunction2(getCaret), getFont = js.Any.fromFunction0(getFont), getMainTextDirection = js.Any.fromFunction0(getMainTextDirection), getNextInsertionIndex = js.Any.fromFunction3(getNextInsertionIndex), getText = js.Any.fromFunction0(getText), getTextHit = js.Any.fromFunction1(getTextHit), justify = js.Any.fromFunction1(justify), queryInkMeasures = js.Any.fromFunction0(queryInkMeasures), queryInterface = js.Any.fromFunction1(queryInterface), queryLogicalAdvancements = js.Any.fromFunction0(queryLogicalAdvancements), queryLogicalHighlighting = js.Any.fromFunction2(queryLogicalHighlighting), queryMeasures = js.Any.fromFunction0(queryMeasures), queryTextBounds = js.Any.fromFunction0(queryTextBounds), queryTextShapes = js.Any.fromFunction0(queryTextShapes), queryVisualHighlighting = js.Any.fromFunction2(queryVisualHighlighting), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XTextLayout]
   }
-  @scala.inline
-  implicit class XTextLayoutOps[Self <: XTextLayout] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaselineOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BaselineOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFont(value: XCanvasFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMainTextDirection(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MainTextDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withText(value: StringContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplyLogicalAdvancements(value: SeqEquiv[Double] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applyLogicalAdvancements")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCombinedJustify(value: (SeqEquiv[XTextLayout], Double) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedJustify")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetBaselineOffset(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getBaselineOffset")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCaret(value: (Double, Boolean) => Caret): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCaret")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetFont(value: () => XCanvasFont): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getFont")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetMainTextDirection(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getMainTextDirection")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNextInsertionIndex(value: (Double, Double, Boolean) => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNextInsertionIndex")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withGetText(value: () => StringContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getText")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetTextHit(value: RealPoint2D => TextHit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextHit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withJustify(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("justify")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withQueryInkMeasures(value: () => SafeArray[RealRectangle2D]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryInkMeasures")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryLogicalAdvancements(value: () => SafeArray[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryLogicalAdvancements")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryLogicalHighlighting(value: (Double, Double) => XPolyPolygon2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryLogicalHighlighting")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withQueryMeasures(value: () => SafeArray[RealRectangle2D]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryMeasures")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryTextBounds(value: () => RealRectangle2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTextBounds")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryTextShapes(value: () => SafeArray[XPolyPolygon2D]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryTextShapes")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withQueryVisualHighlighting(value: (Double, Double) => XPolyPolygon2D): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("queryVisualHighlighting")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

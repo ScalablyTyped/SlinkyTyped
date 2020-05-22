@@ -4,127 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HeaderFilter extends js.Object {
-  var nameContains: js.UndefOr[js.Any] = js.native
-  var nameEquals: js.UndefOr[String] = js.native
-  var namePrefix: js.UndefOr[String] = js.native
-  var nameSuffix: js.UndefOr[String] = js.native
-  var valueContains: js.UndefOr[js.Any] = js.native
-  var valueEquals: js.UndefOr[String] = js.native
-  var valuePrefix: js.UndefOr[String] = js.native
-  var valueSuffix: js.UndefOr[String] = js.native
+  var nameContains: js.UndefOr[js.Any] = js.undefined
+  var nameEquals: js.UndefOr[String] = js.undefined
+  var namePrefix: js.UndefOr[String] = js.undefined
+  var nameSuffix: js.UndefOr[String] = js.undefined
+  var valueContains: js.UndefOr[js.Any] = js.undefined
+  var valueEquals: js.UndefOr[String] = js.undefined
+  var valuePrefix: js.UndefOr[String] = js.undefined
+  var valueSuffix: js.UndefOr[String] = js.undefined
 }
 
 object HeaderFilter {
   @scala.inline
-  def apply(): HeaderFilter = {
+  def apply(
+    nameContains: js.Any = null,
+    nameEquals: String = null,
+    namePrefix: String = null,
+    nameSuffix: String = null,
+    valueContains: js.Any = null,
+    valueEquals: String = null,
+    valuePrefix: String = null,
+    valueSuffix: String = null
+  ): HeaderFilter = {
     val __obj = js.Dynamic.literal()
+    if (nameContains != null) __obj.updateDynamic("nameContains")(nameContains.asInstanceOf[js.Any])
+    if (nameEquals != null) __obj.updateDynamic("nameEquals")(nameEquals.asInstanceOf[js.Any])
+    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
+    if (nameSuffix != null) __obj.updateDynamic("nameSuffix")(nameSuffix.asInstanceOf[js.Any])
+    if (valueContains != null) __obj.updateDynamic("valueContains")(valueContains.asInstanceOf[js.Any])
+    if (valueEquals != null) __obj.updateDynamic("valueEquals")(valueEquals.asInstanceOf[js.Any])
+    if (valuePrefix != null) __obj.updateDynamic("valuePrefix")(valuePrefix.asInstanceOf[js.Any])
+    if (valueSuffix != null) __obj.updateDynamic("valueSuffix")(valueSuffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderFilter]
   }
-  @scala.inline
-  implicit class HeaderFilterOps[Self <: HeaderFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNameContains(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameContains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameContains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameEquals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNameSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNameSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nameSuffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueContains(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueContains")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueContains: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueContains")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueEquals(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueEquals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueEquals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueEquals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValuePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValuePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

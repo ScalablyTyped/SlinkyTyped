@@ -36,77 +36,20 @@ trait SchemaFindReplaceResponse extends js.Object {
 
 object SchemaFindReplaceResponse {
   @scala.inline
-  def apply(): SchemaFindReplaceResponse = {
+  def apply(
+    formulasChanged: js.UndefOr[Double] = js.undefined,
+    occurrencesChanged: js.UndefOr[Double] = js.undefined,
+    rowsChanged: js.UndefOr[Double] = js.undefined,
+    sheetsChanged: js.UndefOr[Double] = js.undefined,
+    valuesChanged: js.UndefOr[Double] = js.undefined
+  ): SchemaFindReplaceResponse = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(formulasChanged)) __obj.updateDynamic("formulasChanged")(formulasChanged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(occurrencesChanged)) __obj.updateDynamic("occurrencesChanged")(occurrencesChanged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rowsChanged)) __obj.updateDynamic("rowsChanged")(rowsChanged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sheetsChanged)) __obj.updateDynamic("sheetsChanged")(sheetsChanged.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valuesChanged)) __obj.updateDynamic("valuesChanged")(valuesChanged.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFindReplaceResponse]
   }
-  @scala.inline
-  implicit class SchemaFindReplaceResponseOps[Self <: SchemaFindReplaceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormulasChanged(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulasChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormulasChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formulasChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOccurrencesChanged(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencesChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOccurrencesChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("occurrencesChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowsChanged(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowsChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowsChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSheetsChanged(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSheetsChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetsChanged")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValuesChanged(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuesChanged")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValuesChanged: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuesChanged")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

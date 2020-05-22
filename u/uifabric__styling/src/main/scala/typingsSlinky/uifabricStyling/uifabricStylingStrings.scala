@@ -34,6 +34,9 @@ object uifabricStylingStrings {
   sealed trait blockingBackground extends js.Object
   
   @js.native
+  sealed trait blockingIcon extends js.Object
+  
+  @js.native
   sealed trait blue extends js.Object
   
   @js.native
@@ -154,6 +157,9 @@ object uifabricStylingStrings {
   sealed trait errorBackground extends js.Object
   
   @js.native
+  sealed trait errorIcon extends js.Object
+  
+  @js.native
   sealed trait errorText extends js.Object
   
   @js.native
@@ -170,6 +176,12 @@ object uifabricStylingStrings {
   
   @js.native
   sealed trait horizontal extends js.Object
+  
+  @js.native
+  sealed trait infoBackground extends js.Object
+  
+  @js.native
+  sealed trait infoIcon extends js.Object
   
   @js.native
   sealed trait inputBackground extends js.Object
@@ -280,6 +292,15 @@ object uifabricStylingStrings {
   sealed trait menuItemTextHovered extends js.Object
   
   @js.native
+  sealed trait messageLink extends js.Object
+  
+  @js.native
+  sealed trait messageLinkHovered extends js.Object
+  
+  @js.native
+  sealed trait messageText extends js.Object
+  
+  @js.native
   sealed trait neutral extends ISchemeNames
   
   @js.native
@@ -373,6 +394,12 @@ object uifabricStylingStrings {
   sealed trait relative extends js.Object
   
   @js.native
+  sealed trait severeWarningBackground extends js.Object
+  
+  @js.native
+  sealed trait severeWarningIcon extends js.Object
+  
+  @js.native
   sealed trait smallInputBorder extends js.Object
   
   @js.native
@@ -383,6 +410,9 @@ object uifabricStylingStrings {
   
   @js.native
   sealed trait successBackground extends js.Object
+  
+  @js.native
+  sealed trait successIcon extends js.Object
   
   @js.native
   sealed trait successText extends js.Object
@@ -439,6 +469,9 @@ object uifabricStylingStrings {
   sealed trait warningHighlight extends js.Object
   
   @js.native
+  sealed trait warningIcon extends js.Object
+  
+  @js.native
   sealed trait warningText extends js.Object
   
   @js.native
@@ -474,6 +507,8 @@ object uifabricStylingStrings {
   def blackTranslucent40: blackTranslucent40 = "blackTranslucent40".asInstanceOf[blackTranslucent40]
   @scala.inline
   def blockingBackground: blockingBackground = "blockingBackground".asInstanceOf[blockingBackground]
+  @scala.inline
+  def blockingIcon: blockingIcon = "blockingIcon".asInstanceOf[blockingIcon]
   @scala.inline
   def blue: blue = "blue".asInstanceOf[blue]
   @scala.inline
@@ -555,6 +590,8 @@ object uifabricStylingStrings {
   @scala.inline
   def errorBackground: errorBackground = "errorBackground".asInstanceOf[errorBackground]
   @scala.inline
+  def errorIcon: errorIcon = "errorIcon".asInstanceOf[errorIcon]
+  @scala.inline
   def errorText: errorText = "errorText".asInstanceOf[errorText]
   @scala.inline
   def focusBorder: focusBorder = "focusBorder".asInstanceOf[focusBorder]
@@ -566,6 +603,10 @@ object uifabricStylingStrings {
   def greenLight: greenLight = "greenLight".asInstanceOf[greenLight]
   @scala.inline
   def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
+  @scala.inline
+  def infoBackground: infoBackground = "infoBackground".asInstanceOf[infoBackground]
+  @scala.inline
+  def infoIcon: infoIcon = "infoIcon".asInstanceOf[infoIcon]
   @scala.inline
   def inputBackground: inputBackground = "inputBackground".asInstanceOf[inputBackground]
   @scala.inline
@@ -639,6 +680,12 @@ object uifabricStylingStrings {
   @scala.inline
   def menuItemTextHovered: menuItemTextHovered = "menuItemTextHovered".asInstanceOf[menuItemTextHovered]
   @scala.inline
+  def messageLink: messageLink = "messageLink".asInstanceOf[messageLink]
+  @scala.inline
+  def messageLinkHovered: messageLinkHovered = "messageLinkHovered".asInstanceOf[messageLinkHovered]
+  @scala.inline
+  def messageText: messageText = "messageText".asInstanceOf[messageText]
+  @scala.inline
   def neutral: neutral = "neutral".asInstanceOf[neutral]
   @scala.inline
   def neutralDark: neutralDark = "neutralDark".asInstanceOf[neutralDark]
@@ -701,6 +748,10 @@ object uifabricStylingStrings {
   @scala.inline
   def relative: relative = "relative".asInstanceOf[relative]
   @scala.inline
+  def severeWarningBackground: severeWarningBackground = "severeWarningBackground".asInstanceOf[severeWarningBackground]
+  @scala.inline
+  def severeWarningIcon: severeWarningIcon = "severeWarningIcon".asInstanceOf[severeWarningIcon]
+  @scala.inline
   def smallInputBorder: smallInputBorder = "smallInputBorder".asInstanceOf[smallInputBorder]
   @scala.inline
   def soft: soft = "soft".asInstanceOf[soft]
@@ -708,6 +759,8 @@ object uifabricStylingStrings {
   def strong: strong = "strong".asInstanceOf[strong]
   @scala.inline
   def successBackground: successBackground = "successBackground".asInstanceOf[successBackground]
+  @scala.inline
+  def successIcon: successIcon = "successIcon".asInstanceOf[successIcon]
   @scala.inline
   def successText: successText = "successText".asInstanceOf[successText]
   @scala.inline
@@ -744,6 +797,8 @@ object uifabricStylingStrings {
   def warningBackground: warningBackground = "warningBackground".asInstanceOf[warningBackground]
   @scala.inline
   def warningHighlight: warningHighlight = "warningHighlight".asInstanceOf[warningHighlight]
+  @scala.inline
+  def warningIcon: warningIcon = "warningIcon".asInstanceOf[warningIcon]
   @scala.inline
   def warningText: warningText = "warningText".asInstanceOf[warningText]
   @scala.inline

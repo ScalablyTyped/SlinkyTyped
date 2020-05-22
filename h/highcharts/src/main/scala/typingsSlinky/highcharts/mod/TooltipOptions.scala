@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TooltipOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable or disable animation of
     * the tooltip.
     */
-  var animation: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The background color or gradient
     * for the tooltip.
@@ -18,18 +17,18 @@ trait TooltipOptions extends js.Object {
     * In styled mode, the stroke width is set in the `.highcharts-tooltip-box`
     * class.
     */
-  var backgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var backgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The color of the tooltip border.
     * When `undefined`, the border takes the color of the corresponding series
     * or point.
     */
-  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The radius of the rounded border
     * corners.
     */
-  var borderRadius: js.UndefOr[Double] = js.native
+  var borderRadius: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The pixel width of the tooltip
     * border.
@@ -37,18 +36,18 @@ trait TooltipOptions extends js.Object {
     * In styled mode, the stroke width is set in the `.highcharts-tooltip-box`
     * class.
     */
-  var borderWidth: js.UndefOr[Double] = js.native
+  var borderWidth: js.UndefOr[Double] = js.undefined
   /**
     * (Highstock) How many decimals to show for the `point.change` value when
     * the `series.compare` option is set. This is overridable in each series'
     * tooltip options object. The default is to preserve all decimals.
     */
-  var changeDecimals: js.UndefOr[Double] = js.native
+  var changeDecimals: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A CSS class name to apply to the
     * tooltip's container div, allowing unique CSS styling for each chart.
     */
-  var className: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) For series on a datetime axes, the date
     * format in the tooltip's header will by default be guessed based on the
@@ -56,16 +55,16 @@ trait TooltipOptions extends js.Object {
     * used for each unit. For an overview of the replacement codes, see
     * dateFormat.
     */
-  var dateTimeLabelFormats: js.UndefOr[TooltipDateTimeLabelFormatsOptions | Dictionary[String]] = js.native
+  var dateTimeLabelFormats: js.UndefOr[TooltipDateTimeLabelFormatsOptions | Dictionary[String]] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Distance from point to tooltip
     * in pixels.
     */
-  var distance: js.UndefOr[Double] = js.native
+  var distance: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Enable or disable the tooltip.
     */
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether the tooltip should
     * follow the mouse as it moves across columns, pie slices and other point
@@ -76,7 +75,7 @@ trait TooltipOptions extends js.Object {
     * For touch moves to behave the same way, followTouchMove must be `true`
     * also.
     */
-  var followPointer: js.UndefOr[Boolean] = js.native
+  var followPointer: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether the tooltip should
     * update as the finger moves on a touch device. If this is `true` and
@@ -89,12 +88,12 @@ trait TooltipOptions extends js.Object {
     * is true, the tooltip will jump from column to column as the user swipes
     * across the plot area.
     */
-  var followTouchMove: js.UndefOr[Boolean] = js.native
+  var followTouchMove: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A string to append to the
     * tooltip format.
     */
-  var footerFormat: js.UndefOr[String] = js.native
+  var footerFormat: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Callback function to format the
     * text of the tooltip from scratch. In case of single or shared tooltips, a
@@ -118,7 +117,7 @@ trait TooltipOptions extends js.Object {
     *
     *  (see online documentation for example)
     */
-  var formatter: js.UndefOr[TooltipFormatterCallbackFunction] = js.native
+  var formatter: js.UndefOr[TooltipFormatterCallbackFunction] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The HTML of the tooltip header
     * line. Variables are enclosed by curly brackets. Available variables are
@@ -128,7 +127,7 @@ trait TooltipOptions extends js.Object {
     * For datetime axes, the `point.key` date format can be set using
     * `tooltip.xDateFormat`.
     */
-  var headerFormat: js.UndefOr[String] = js.native
+  var headerFormat: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The name of a symbol to use for
     * the border around the tooltip header. Applies only when tooltip.split is
@@ -138,23 +137,23 @@ trait TooltipOptions extends js.Object {
     * `Highcharts.SVGRenderer.prototype.symbols` the same way as for
     * series.marker.symbol.
     */
-  var headerShape: js.UndefOr[OptionsHeaderShapeValue] = js.native
+  var headerShape: js.UndefOr[OptionsHeaderShapeValue] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The number of milliseconds to
     * wait until the tooltip is hidden when mouse out from a point or chart.
     */
-  var hideDelay: js.UndefOr[Double] = js.native
+  var hideDelay: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The HTML of the null point's
     * line in the tooltip. Works analogously to pointFormat.
     */
-  var nullFormat: js.UndefOr[String] = js.native
+  var nullFormat: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Callback function to format the
     * text of the tooltip for visible null points. Works analogously to
     * formatter.
     */
-  var nullFormatter: js.UndefOr[TooltipFormatterCallbackFunction] = js.native
+  var nullFormatter: js.UndefOr[TooltipFormatterCallbackFunction] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to allow the tooltip to
     * render outside the chart's SVG element box. By default (`false`), the
@@ -167,12 +166,12 @@ trait TooltipOptions extends js.Object {
     * Defaults to `true` if `chart.scrollablePlotArea` is activated, otherwise
     * `false`.
     */
-  var outside: js.UndefOr[Boolean] = js.native
+  var outside: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Padding inside the tooltip, in
     * pixels.
     */
-  var padding: js.UndefOr[Double] = js.native
+  var padding: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The HTML of the point's line in
     * the tooltip. Variables are enclosed by curly brackets. Available
@@ -185,13 +184,13 @@ trait TooltipOptions extends js.Object {
     * In styled mode, the dot is colored by a class name rather than the point
     * color.
     */
-  var pointFormat: js.UndefOr[String] = js.native
+  var pointFormat: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A callback function for
     * formatting the HTML output for a single point in the tooltip. Like the
     * `pointFormat` string, but with more flexibility.
     */
-  var pointFormatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.native
+  var pointFormatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A callback function to place the
     * tooltip in a default position. The callback receives three parameters:
@@ -208,12 +207,12 @@ trait TooltipOptions extends js.Object {
     * The return should be an object containing x and y values, for example `{
     * x: 100, y: 100 }`.
     */
-  var positioner: js.UndefOr[TooltipPositionerCallbackFunction] = js.native
+  var positioner: js.UndefOr[TooltipPositionerCallbackFunction] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Whether to apply a drop shadow
     * to the tooltip.
     */
-  var shadow: js.UndefOr[Boolean | ShadowOptionsObject] = js.native
+  var shadow: js.UndefOr[Boolean | ShadowOptionsObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The name of a symbol to use for
     * the border around the tooltip. Can be one of: `"callout"`, `"circle"`, or
@@ -224,7 +223,7 @@ trait TooltipOptions extends js.Object {
     * `Highcharts.SVGRenderer.prototype.symbols` the same way as for
     * series.marker.symbol.
     */
-  var shape: js.UndefOr[TooltipShapeValue] = js.native
+  var shape: js.UndefOr[TooltipShapeValue] = js.undefined
   /**
     * (Highcharts, Highstock) When the tooltip is shared, the entire plot area
     * will capture mouse movement or touch events. Tooltip texts for series
@@ -236,7 +235,7 @@ trait TooltipOptions extends js.Object {
     * series, especially line-type series. The `tooltip.split` option takes
     * precedence over `tooltip.shared`.
     */
-  var shared: js.UndefOr[Boolean] = js.native
+  var shared: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock) Proximity snap for graphs or single points. It
     * defaults to 10 for mouse-powered devices and 25 for touch devices.
@@ -246,14 +245,14 @@ trait TooltipOptions extends js.Object {
     * stickyTracking is `true` (default) and when the tooltip is shared or
     * split.
     */
-  var snap: js.UndefOr[Double] = js.native
+  var snap: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock) Split the tooltip into one label per series, with
     * the header close to the axis. This is recommended over shared tooltips
     * for charts with multiple line series, generally making them easier to
     * read. This option takes precedence over `tooltip.shared`.
     */
-  var split: js.UndefOr[Boolean] = js.native
+  var split: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) CSS styles for the tooltip. The
     * tooltip can also be styled through the CSS class `.highcharts-tooltip`.
@@ -262,473 +261,114 @@ trait TooltipOptions extends js.Object {
     * mouse events, so in order to use clickable tooltips, this value must be
     * set to `auto`.
     */
-  var style: js.UndefOr[CSSObject] = js.native
+  var style: js.UndefOr[CSSObject] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Use HTML to render the contents
     * of the tooltip instead of SVG. Using HTML allows advanced formatting like
     * tables and images in the tooltip. It is also recommended for rtl
     * languages as it works around rtl bugs in early Firefox.
     */
-  var useHTML: js.UndefOr[Boolean] = js.native
+  var useHTML: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) How many decimals to show in
     * each series' y value. This is overridable in each series' tooltip options
     * object. The default is to preserve all decimals.
     */
-  var valueDecimals: js.UndefOr[Double] = js.native
+  var valueDecimals: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A string to prepend to each
     * series' y value. Overridable in each series' tooltip options object.
     */
-  var valuePrefix: js.UndefOr[String] = js.native
+  var valuePrefix: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) A string to append to each
     * series' y value. Overridable in each series' tooltip options object.
     */
-  var valueSuffix: js.UndefOr[String] = js.native
+  var valueSuffix: js.UndefOr[String] = js.undefined
   /**
     * (Highcharts, Highstock, Gantt) The format for the date in the tooltip
     * header if the X axis is a datetime axis. The default is a best guess
     * based on the smallest distance between points in the chart.
     */
-  var xDateFormat: js.UndefOr[String] = js.native
+  var xDateFormat: js.UndefOr[String] = js.undefined
 }
 
 object TooltipOptions {
   @scala.inline
-  def apply(): TooltipOptions = {
+  def apply(
+    animation: js.UndefOr[Boolean] = js.undefined,
+    backgroundColor: ColorString | GradientColorObject | PatternObject = null,
+    borderColor: ColorString | GradientColorObject | PatternObject = null,
+    borderRadius: js.UndefOr[Double] = js.undefined,
+    borderWidth: js.UndefOr[Double] = js.undefined,
+    changeDecimals: js.UndefOr[Double] = js.undefined,
+    className: String = null,
+    dateTimeLabelFormats: TooltipDateTimeLabelFormatsOptions | Dictionary[String] = null,
+    distance: js.UndefOr[Double] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    followPointer: js.UndefOr[Boolean] = js.undefined,
+    followTouchMove: js.UndefOr[Boolean] = js.undefined,
+    footerFormat: String = null,
+    formatter: TooltipFormatterCallbackFunction = null,
+    headerFormat: String = null,
+    headerShape: OptionsHeaderShapeValue = null,
+    hideDelay: js.UndefOr[Double] = js.undefined,
+    nullFormat: String = null,
+    nullFormatter: TooltipFormatterCallbackFunction = null,
+    outside: js.UndefOr[Boolean] = js.undefined,
+    padding: js.UndefOr[Double] = js.undefined,
+    pointFormat: String = null,
+    pointFormatter: FormatterCallbackFunction[Point] = null,
+    positioner: (/* labelWidth */ Double, /* labelHeight */ Double, /* point */ TooltipPositionerPointObject) => PositionObject = null,
+    shadow: Boolean | ShadowOptionsObject = null,
+    shape: TooltipShapeValue = null,
+    shared: js.UndefOr[Boolean] = js.undefined,
+    snap: js.UndefOr[Double] = js.undefined,
+    split: js.UndefOr[Boolean] = js.undefined,
+    style: CSSObject = null,
+    useHTML: js.UndefOr[Boolean] = js.undefined,
+    valueDecimals: js.UndefOr[Double] = js.undefined,
+    valuePrefix: String = null,
+    valueSuffix: String = null,
+    xDateFormat: String = null
+  ): TooltipOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.get.asInstanceOf[js.Any])
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderRadius)) __obj.updateDynamic("borderRadius")(borderRadius.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(borderWidth)) __obj.updateDynamic("borderWidth")(borderWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(changeDecimals)) __obj.updateDynamic("changeDecimals")(changeDecimals.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (dateTimeLabelFormats != null) __obj.updateDynamic("dateTimeLabelFormats")(dateTimeLabelFormats.asInstanceOf[js.Any])
+    if (!js.isUndefined(distance)) __obj.updateDynamic("distance")(distance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(followPointer)) __obj.updateDynamic("followPointer")(followPointer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(followTouchMove)) __obj.updateDynamic("followTouchMove")(followTouchMove.get.asInstanceOf[js.Any])
+    if (footerFormat != null) __obj.updateDynamic("footerFormat")(footerFormat.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
+    if (headerFormat != null) __obj.updateDynamic("headerFormat")(headerFormat.asInstanceOf[js.Any])
+    if (headerShape != null) __obj.updateDynamic("headerShape")(headerShape.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDelay)) __obj.updateDynamic("hideDelay")(hideDelay.get.asInstanceOf[js.Any])
+    if (nullFormat != null) __obj.updateDynamic("nullFormat")(nullFormat.asInstanceOf[js.Any])
+    if (nullFormatter != null) __obj.updateDynamic("nullFormatter")(nullFormatter.asInstanceOf[js.Any])
+    if (!js.isUndefined(outside)) __obj.updateDynamic("outside")(outside.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (pointFormat != null) __obj.updateDynamic("pointFormat")(pointFormat.asInstanceOf[js.Any])
+    if (pointFormatter != null) __obj.updateDynamic("pointFormatter")(pointFormatter.asInstanceOf[js.Any])
+    if (positioner != null) __obj.updateDynamic("positioner")(js.Any.fromFunction3(positioner))
+    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
+    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (!js.isUndefined(shared)) __obj.updateDynamic("shared")(shared.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(snap)) __obj.updateDynamic("snap")(snap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(split)) __obj.updateDynamic("split")(split.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(useHTML)) __obj.updateDynamic("useHTML")(useHTML.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueDecimals)) __obj.updateDynamic("valueDecimals")(valueDecimals.get.asInstanceOf[js.Any])
+    if (valuePrefix != null) __obj.updateDynamic("valuePrefix")(valuePrefix.asInstanceOf[js.Any])
+    if (valueSuffix != null) __obj.updateDynamic("valueSuffix")(valueSuffix.asInstanceOf[js.Any])
+    if (xDateFormat != null) __obj.updateDynamic("xDateFormat")(xDateFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipOptions]
   }
-  @scala.inline
-  implicit class TooltipOptionsOps[Self <: TooltipOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnimation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBorderWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangeDecimals(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDecimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangeDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changeDecimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDateTimeLabelFormats(value: TooltipDateTimeLabelFormatsOptions | Dictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDateTimeLabelFormats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeLabelFormats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowPointer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followPointer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowPointer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followPointer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFollowTouchMove(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followTouchMove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFollowTouchMove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("followTouchMove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFooterFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFooterFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("footerFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: TooltipFormatterCallbackFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderShape(value: OptionsHeaderShapeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerShape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerShape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNullFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNullFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNullFormatter(value: TooltipFormatterCallbackFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNullFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nullFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOutside(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outside")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutside: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outside")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointFormatter(value: FormatterCallbackFunction[Point]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointFormatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositioner(
-      value: (/* labelWidth */ Double, /* labelHeight */ Double, /* point */ TooltipPositionerPointObject) => PositionObject
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioner")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutPositioner: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positioner")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShadow(value: Boolean | ShadowOptionsObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShadow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShape(value: TooltipShapeValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShape: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShared(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShared: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnap(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSplit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSplit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: CSSObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseHTML(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTML")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseHTML: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTML")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueDecimals(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDecimals")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueDecimals: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDecimals")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValuePrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValuePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valuePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueSuffix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withXDateFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xDateFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutXDateFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("xDateFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

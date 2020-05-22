@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * {@link com.sun.star.xml.sax.XDocumentHandler} calls.
   * @since OOo 1.1.2
   */
-@js.native
 trait ExportFilter
   extends XDocumentHandler
      with XExportFilter

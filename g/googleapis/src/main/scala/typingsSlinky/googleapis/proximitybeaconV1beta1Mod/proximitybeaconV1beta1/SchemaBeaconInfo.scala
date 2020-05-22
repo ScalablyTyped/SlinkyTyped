@@ -27,53 +27,16 @@ trait SchemaBeaconInfo extends js.Object {
 
 object SchemaBeaconInfo {
   @scala.inline
-  def apply(): SchemaBeaconInfo = {
+  def apply(
+    advertisedId: SchemaAdvertisedId = null,
+    attachments: js.Array[SchemaAttachmentInfo] = null,
+    beaconName: String = null
+  ): SchemaBeaconInfo = {
     val __obj = js.Dynamic.literal()
+    if (advertisedId != null) __obj.updateDynamic("advertisedId")(advertisedId.asInstanceOf[js.Any])
+    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
+    if (beaconName != null) __obj.updateDynamic("beaconName")(beaconName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBeaconInfo]
   }
-  @scala.inline
-  implicit class SchemaBeaconInfoOps[Self <: SchemaBeaconInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdvertisedId(value: SchemaAdvertisedId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdvertisedId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("advertisedId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachments(value: js.Array[SchemaAttachmentInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeaconName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBeaconName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

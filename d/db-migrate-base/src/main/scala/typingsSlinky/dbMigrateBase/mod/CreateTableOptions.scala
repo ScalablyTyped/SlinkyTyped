@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CreateTableOptions extends js.Object {
-  var columns: js.UndefOr[js.Array[ColumnSpec]] = js.native
-  var ifNotExists: js.UndefOr[Boolean] = js.native
+  var columns: js.UndefOr[js.Array[ColumnSpec]] = js.undefined
+  var ifNotExists: js.UndefOr[Boolean] = js.undefined
 }
 
 object CreateTableOptions {
   @scala.inline
-  def apply(): CreateTableOptions = {
+  def apply(columns: js.Array[ColumnSpec] = null, ifNotExists: js.UndefOr[Boolean] = js.undefined): CreateTableOptions = {
     val __obj = js.Dynamic.literal()
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
+    if (!js.isUndefined(ifNotExists)) __obj.updateDynamic("ifNotExists")(ifNotExists.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTableOptions]
   }
-  @scala.inline
-  implicit class CreateTableOptionsOps[Self <: CreateTableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumns(value: js.Array[ColumnSpec]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIfNotExists(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifNotExists")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIfNotExists: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ifNotExists")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

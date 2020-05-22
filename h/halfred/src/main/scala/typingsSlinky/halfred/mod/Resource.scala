@@ -4,85 +4,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Resource extends js.Object {
   /** Alias for allEmbeddedResourceArrays() */
-  def allEmbeddedArrays(): ResourceCollection = js.native
+  def allEmbeddedArrays(): ResourceCollection
   /**
     * Returns an object which has an array for each embedded resource that was present in the
     * source object.
     * See below why each embedded resource is represented as an array. Each element of any of
     * this arrays is in turn a Resource object.
     */
-  def allEmbeddedResourceArrays(): ResourceCollection = js.native
+  def allEmbeddedResourceArrays(): ResourceCollection
   /** Alias for allEmbeddedResourceArrays() */
-  def allEmbeddedResources(): ResourceCollection = js.native
+  def allEmbeddedResources(): ResourceCollection
   /**
     * Returns an object which has an array for each link that was present in the source object.
     * See below why each link is represented as an array.
     */
-  def allLinkArrays(): LinkCollection = js.native
+  def allLinkArrays(): LinkCollection
   /** Alias for allLinkArrays() */
-  def allLinks(): LinkCollection = js.native
+  def allLinks(): LinkCollection
   /**
     * Returns the curie with the given name, if any. The returned object is a link object, which
     * means it can be templated etc. See below for link object API.
     */
-  def curie(name: String): Link = js.native
+  def curie(name: String): Link
   /**
     * Returns the array of CURIEs. Each object in the array is a link object, which means it
     * can be templated etc. See below for the link object API.
     */
-  def curieArray(): js.Array[Link] = js.native
+  def curieArray(): js.Array[Link]
   /** Alias for embeddedResource(key) */
-  def embedded(key: String): Resource = js.native
+  def embedded(key: String): Resource
   /** Alias for embeddedResourceArray() */
-  def embeddedArray(key: String): js.Array[Resource] = js.native
+  def embeddedArray(key: String): js.Array[Resource]
   /**
     * Returns the first element of the array of embedded resources for the given key or null if
     * there are no embedded resources for this key. The returend object is a Resource object.
     */
-  def embeddedResource(key: String): Resource = js.native
+  def embeddedResource(key: String): Resource
   /**
     * Returns the array of embedded resources for the given key, or null if there are no embedded
     * resources for this key. Each element of this arrays is in turn a Resource object.
     */
-  def embeddedResourceArray(key: String): js.Array[Resource] = js.native
+  def embeddedResourceArray(key: String): js.Array[Resource]
   /**
     * Returns true if the resource has any CURIEs (Compact URIs).
     *
     * @see http://www.w3.org/TR/2010/NOTE-curie-20101216/
     */
-  def hasCuries(): Boolean = js.native
+  def hasCuries(): Boolean
   /**
     * Returns the first element of the array of links for the given key or null if there are no
     * links for this key.
     */
-  def link(key: String): Link = js.native
+  def link(key: String): Link
   /**
     * Returns the array of links for the given key, or null if there are no links for this key.
     */
-  def linkArray(key: String): js.Array[Link] = js.native
+  def linkArray(key: String): js.Array[Link]
   /**
     * Returns the unmodified, original object that was parsed to this resource. This is rather
     * uninteresting for the source object you give to the parse method (because you probably
     * still have a reference to the source object) but it is a convenient way to get the part of
     * the source object that corresponds to an embedded resource.
     */
-  def original(): js.Any = js.native
+  def original(): js.Any
   /**
     * Returns the compact URI for the given full URL, if any
     */
-  def reverseResolveCurie(fullUrl: String): String = js.native
+  def reverseResolveCurie(fullUrl: String): String
   /**
     * Alias for validationIssues()
     */
-  def validation(): js.Any = js.native
+  def validation(): js.Any
   /**
     * Returns all validation issues. Validation issues are only gathered if validation has been
     * turned on by calling ``halfred.enableValidation()`` before calling ``halfred.parse``.
     */
-  def validationIssues(): js.Any = js.native
+  def validationIssues(): js.Any
 }
 
 object Resource {
@@ -110,121 +109,5 @@ object Resource {
     val __obj = js.Dynamic.literal(allEmbeddedArrays = js.Any.fromFunction0(allEmbeddedArrays), allEmbeddedResourceArrays = js.Any.fromFunction0(allEmbeddedResourceArrays), allEmbeddedResources = js.Any.fromFunction0(allEmbeddedResources), allLinkArrays = js.Any.fromFunction0(allLinkArrays), allLinks = js.Any.fromFunction0(allLinks), curie = js.Any.fromFunction1(curie), curieArray = js.Any.fromFunction0(curieArray), embedded = js.Any.fromFunction1(embedded), embeddedArray = js.Any.fromFunction1(embeddedArray), embeddedResource = js.Any.fromFunction1(embeddedResource), embeddedResourceArray = js.Any.fromFunction1(embeddedResourceArray), hasCuries = js.Any.fromFunction0(hasCuries), link = js.Any.fromFunction1(link), linkArray = js.Any.fromFunction1(linkArray), original = js.Any.fromFunction0(original), reverseResolveCurie = js.Any.fromFunction1(reverseResolveCurie), validation = js.Any.fromFunction0(validation), validationIssues = js.Any.fromFunction0(validationIssues))
     __obj.asInstanceOf[Resource]
   }
-  @scala.inline
-  implicit class ResourceOps[Self <: Resource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllEmbeddedArrays(value: () => ResourceCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allEmbeddedArrays")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAllEmbeddedResourceArrays(value: () => ResourceCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allEmbeddedResourceArrays")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAllEmbeddedResources(value: () => ResourceCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allEmbeddedResources")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAllLinkArrays(value: () => LinkCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allLinkArrays")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withAllLinks(value: () => LinkCollection): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allLinks")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCurie(value: String => Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curie")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCurieArray(value: () => js.Array[Link]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curieArray")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEmbedded(value: String => Resource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embedded")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEmbeddedArray(value: String => js.Array[Resource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedArray")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEmbeddedResource(value: String => Resource): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedResource")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEmbeddedResourceArray(value: String => js.Array[Resource]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedResourceArray")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHasCuries(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCuries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLink(value: String => Link): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLinkArray(value: String => js.Array[Link]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkArray")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOriginal(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("original")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withReverseResolveCurie(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseResolveCurie")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withValidation(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validation")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withValidationIssues(value: () => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validationIssues")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

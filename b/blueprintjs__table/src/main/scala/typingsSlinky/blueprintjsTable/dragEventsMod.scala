@@ -2,7 +2,7 @@ package typingsSlinky.blueprintjsTable
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.blueprintjsTable.draggableMod.IDragHandler
+import typingsSlinky.blueprintjsTable.dragTypesMod.IDragHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

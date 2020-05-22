@@ -10,14 +10,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a string search operation. */
-@js.native
 trait XSearchDescriptor extends XPropertySet {
   /** @returns the string of characters to search for. */
-  var SearchString: String = js.native
+  var SearchString: String
   /** @returns the string of characters to search for. */
-  def getSearchString(): String = js.native
+  def getSearchString(): String
   /** sets the string of characters to look for. */
-  def setSearchString(aString: String): Unit = js.native
+  def setSearchString(aString: String): Unit
 }
 
 object XSearchDescriptor {
@@ -41,31 +40,5 @@ object XSearchDescriptor {
     val __obj = js.Dynamic.literal(PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], SearchString = SearchString.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), getSearchString = js.Any.fromFunction0(getSearchString), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue), setSearchString = js.Any.fromFunction1(setSearchString))
     __obj.asInstanceOf[XSearchDescriptor]
   }
-  @scala.inline
-  implicit class XSearchDescriptorOps[Self <: XSearchDescriptor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSearchString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetSearchString(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSearchString")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withSetSearchString(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setSearchString")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

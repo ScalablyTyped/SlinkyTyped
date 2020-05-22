@@ -1,79 +1,46 @@
 package typingsSlinky.winston.transportsMod
 
+import typingsSlinky.logform.mod.Format_
 import typingsSlinky.winstonTransport.mod.TransportStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ConsoleTransportOptions extends TransportStreamOptions {
-  var consoleWarnLevels: js.UndefOr[js.Array[String]] = js.native
-  var debugStdout: js.UndefOr[Boolean] = js.native
-  var eol: js.UndefOr[String] = js.native
-  var stderrLevels: js.UndefOr[js.Array[String]] = js.native
+  var consoleWarnLevels: js.UndefOr[js.Array[String]] = js.undefined
+  var debugStdout: js.UndefOr[Boolean] = js.undefined
+  var eol: js.UndefOr[String] = js.undefined
+  var stderrLevels: js.UndefOr[js.Array[String]] = js.undefined
 }
 
 object ConsoleTransportOptions {
   @scala.inline
-  def apply(): ConsoleTransportOptions = {
+  def apply(
+    close: () => Unit = null,
+    consoleWarnLevels: js.Array[String] = null,
+    debugStdout: js.UndefOr[Boolean] = js.undefined,
+    eol: String = null,
+    format: Format_ = null,
+    handleExceptions: js.UndefOr[Boolean] = js.undefined,
+    level: String = null,
+    log: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    logv: (/* info */ js.Any, /* next */ js.Function0[Unit]) => _ = null,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    stderrLevels: js.Array[String] = null
+  ): ConsoleTransportOptions = {
     val __obj = js.Dynamic.literal()
+    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction0(close))
+    if (consoleWarnLevels != null) __obj.updateDynamic("consoleWarnLevels")(consoleWarnLevels.asInstanceOf[js.Any])
+    if (!js.isUndefined(debugStdout)) __obj.updateDynamic("debugStdout")(debugStdout.get.asInstanceOf[js.Any])
+    if (eol != null) __obj.updateDynamic("eol")(eol.asInstanceOf[js.Any])
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (!js.isUndefined(handleExceptions)) __obj.updateDynamic("handleExceptions")(handleExceptions.get.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (log != null) __obj.updateDynamic("log")(js.Any.fromFunction2(log))
+    if (logv != null) __obj.updateDynamic("logv")(js.Any.fromFunction2(logv))
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (stderrLevels != null) __obj.updateDynamic("stderrLevels")(stderrLevels.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsoleTransportOptions]
   }
-  @scala.inline
-  implicit class ConsoleTransportOptionsOps[Self <: ConsoleTransportOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsoleWarnLevels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consoleWarnLevels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsoleWarnLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consoleWarnLevels")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebugStdout(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugStdout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebugStdout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debugStdout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEol(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStderrLevels(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stderrLevels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStderrLevels: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stderrLevels")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

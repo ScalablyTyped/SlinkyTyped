@@ -18,41 +18,11 @@ trait ListRoutingProfilesResponse extends js.Object {
 
 object ListRoutingProfilesResponse {
   @scala.inline
-  def apply(): ListRoutingProfilesResponse = {
+  def apply(NextToken: NextToken = null, RoutingProfileSummaryList: RoutingProfileSummaryList = null): ListRoutingProfilesResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (RoutingProfileSummaryList != null) __obj.updateDynamic("RoutingProfileSummaryList")(RoutingProfileSummaryList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRoutingProfilesResponse]
   }
-  @scala.inline
-  implicit class ListRoutingProfilesResponseOps[Self <: ListRoutingProfilesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoutingProfileSummaryList(value: RoutingProfileSummaryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingProfileSummaryList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoutingProfileSummaryList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoutingProfileSummaryList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

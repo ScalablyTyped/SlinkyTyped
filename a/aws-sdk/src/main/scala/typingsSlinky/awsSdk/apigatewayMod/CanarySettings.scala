@@ -26,65 +26,18 @@ trait CanarySettings extends js.Object {
 
 object CanarySettings {
   @scala.inline
-  def apply(): CanarySettings = {
+  def apply(
+    deploymentId: String = null,
+    percentTraffic: js.UndefOr[Double] = js.undefined,
+    stageVariableOverrides: MapOfStringToString = null,
+    useStageCache: js.UndefOr[Boolean] = js.undefined
+  ): CanarySettings = {
     val __obj = js.Dynamic.literal()
+    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
+    if (!js.isUndefined(percentTraffic)) __obj.updateDynamic("percentTraffic")(percentTraffic.get.asInstanceOf[js.Any])
+    if (stageVariableOverrides != null) __obj.updateDynamic("stageVariableOverrides")(stageVariableOverrides.asInstanceOf[js.Any])
+    if (!js.isUndefined(useStageCache)) __obj.updateDynamic("useStageCache")(useStageCache.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanarySettings]
   }
-  @scala.inline
-  implicit class CanarySettingsOps[Self <: CanarySettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeploymentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPercentTraffic(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentTraffic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPercentTraffic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("percentTraffic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStageVariableOverrides(value: MapOfStringToString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageVariableOverrides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStageVariableOverrides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stageVariableOverrides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseStageCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useStageCache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseStageCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useStageCache")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

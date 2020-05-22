@@ -17,29 +17,10 @@ trait SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponse extends j
 
 object SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponse {
   @scala.inline
-  def apply(): SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponse = {
+  def apply(outputConfig: SchemaGoogleCloudVisionV1p4beta1OutputConfig = null): SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponse = {
     val __obj = js.Dynamic.literal()
+    if (outputConfig != null) __obj.updateDynamic("outputConfig")(outputConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponse]
   }
-  @scala.inline
-  implicit class SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponseOps[Self <: SchemaGoogleCloudVisionV1p4beta1AsyncBatchAnnotateImagesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOutputConfig(value: SchemaGoogleCloudVisionV1p4beta1OutputConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOutputConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("outputConfig")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

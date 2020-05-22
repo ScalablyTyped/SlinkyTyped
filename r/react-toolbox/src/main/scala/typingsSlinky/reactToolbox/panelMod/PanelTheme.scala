@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PanelTheme extends js.Object {
   /**
     * Used in the root class in case the panel has bodyScroll.
     */
-  var bodyScroll: js.UndefOr[String] = js.native
+  var bodyScroll: js.UndefOr[String] = js.undefined
   /**
     * Used as the root class of the panel component.
     */
-  var panel: js.UndefOr[String] = js.native
+  var panel: js.UndefOr[String] = js.undefined
 }
 
 object PanelTheme {
   @scala.inline
-  def apply(): PanelTheme = {
+  def apply(bodyScroll: String = null, panel: String = null): PanelTheme = {
     val __obj = js.Dynamic.literal()
+    if (bodyScroll != null) __obj.updateDynamic("bodyScroll")(bodyScroll.asInstanceOf[js.Any])
+    if (panel != null) __obj.updateDynamic("panel")(panel.asInstanceOf[js.Any])
     __obj.asInstanceOf[PanelTheme]
   }
-  @scala.inline
-  implicit class PanelThemeOps[Self <: PanelTheme] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBodyScroll(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyScroll")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyScroll: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyScroll")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

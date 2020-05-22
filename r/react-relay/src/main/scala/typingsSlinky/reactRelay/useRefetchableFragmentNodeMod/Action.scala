@@ -1,7 +1,8 @@
 package typingsSlinky.reactRelay.useRefetchableFragmentNodeMod
 
-import typingsSlinky.reactRelay.anon.Environment
-import typingsSlinky.reactRelay.anon.FetchPolicy
+import typingsSlinky.reactRelay.queryResourceMod.RenderPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
+import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,30 @@ trait Action extends js.Object
 
 object Action {
   @scala.inline
-  implicit def apply(value: Environment): Action = value.asInstanceOf[Action]
+  def Environment(
+    environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,
+    fragmentIdentifier: String,
+    `type`: String
+  ): Action = {
+    val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], fragmentIdentifier = fragmentIdentifier.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Action]
+  }
   @scala.inline
-  implicit def apply(value: FetchPolicy): Action = value.asInstanceOf[Action]
+  def FetchPolicy(
+    environment: Environment,
+    refetchVariables: Variables,
+    `type`: String,
+    fetchPolicy: typingsSlinky.reactRelay.queryResourceMod.FetchPolicy = null,
+    onComplete: /* args */ js.Error | Null => Unit = null,
+    renderPolicy: RenderPolicy = null
+  ): Action = {
+    val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], refetchVariables = refetchVariables.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (fetchPolicy != null) __obj.updateDynamic("fetchPolicy")(fetchPolicy.asInstanceOf[js.Any])
+    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
+    if (renderPolicy != null) __obj.updateDynamic("renderPolicy")(renderPolicy.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Action]
+  }
 }
 

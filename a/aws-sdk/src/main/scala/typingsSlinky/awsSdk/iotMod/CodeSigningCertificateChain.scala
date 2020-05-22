@@ -18,41 +18,11 @@ trait CodeSigningCertificateChain extends js.Object {
 
 object CodeSigningCertificateChain {
   @scala.inline
-  def apply(): CodeSigningCertificateChain = {
+  def apply(certificateName: CertificateName = null, inlineDocument: InlineDocument = null): CodeSigningCertificateChain = {
     val __obj = js.Dynamic.literal()
+    if (certificateName != null) __obj.updateDynamic("certificateName")(certificateName.asInstanceOf[js.Any])
+    if (inlineDocument != null) __obj.updateDynamic("inlineDocument")(inlineDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeSigningCertificateChain]
   }
-  @scala.inline
-  implicit class CodeSigningCertificateChainOps[Self <: CodeSigningCertificateChain] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificateName(value: CertificateName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInlineDocument(value: InlineDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInlineDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineDocument")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

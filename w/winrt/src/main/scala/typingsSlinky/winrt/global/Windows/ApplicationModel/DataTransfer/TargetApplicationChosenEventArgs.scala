@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs")
 @js.native
 class TargetApplicationChosenEventArgs ()
-  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs
+  extends typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs {
+  /* CompleteClass */
+  override var applicationName: String = js.native
+}
 

@@ -19,113 +19,26 @@ trait PartialClassNameMapMobile extends js.Object {
 
 object PartialClassNameMapMobile {
   @scala.inline
-  def apply(): PartialClassNameMapMobile = {
+  def apply(
+    dot: String = null,
+    dotActive: String = null,
+    dots: String = null,
+    positionBottom: String = null,
+    positionStatic: String = null,
+    positionTop: String = null,
+    progress: String = null,
+    root: String = null
+  ): PartialClassNameMapMobile = {
     val __obj = js.Dynamic.literal()
+    if (dot != null) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
+    if (dotActive != null) __obj.updateDynamic("dotActive")(dotActive.asInstanceOf[js.Any])
+    if (dots != null) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
+    if (positionBottom != null) __obj.updateDynamic("positionBottom")(positionBottom.asInstanceOf[js.Any])
+    if (positionStatic != null) __obj.updateDynamic("positionStatic")(positionStatic.asInstanceOf[js.Any])
+    if (positionTop != null) __obj.updateDynamic("positionTop")(positionTop.asInstanceOf[js.Any])
+    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapMobile]
   }
-  @scala.inline
-  implicit class PartialClassNameMapMobileOps[Self <: PartialClassNameMapMobile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDotActive(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotActive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDotActive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dotActive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDots(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionBottom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionBottom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionBottom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionBottom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionStatic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionStatic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionStatic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionStatic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPositionTop(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionTop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPositionTop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("positionTop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProgress(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProgress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

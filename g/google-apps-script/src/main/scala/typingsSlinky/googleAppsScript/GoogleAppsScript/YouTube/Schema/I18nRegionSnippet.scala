@@ -4,49 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait I18nRegionSnippet extends js.Object {
-  var gl: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
+  var gl: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object I18nRegionSnippet {
   @scala.inline
-  def apply(): I18nRegionSnippet = {
+  def apply(gl: String = null, name: String = null): I18nRegionSnippet = {
     val __obj = js.Dynamic.literal()
+    if (gl != null) __obj.updateDynamic("gl")(gl.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[I18nRegionSnippet]
   }
-  @scala.inline
-  implicit class I18nRegionSnippetOps[Self <: I18nRegionSnippet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

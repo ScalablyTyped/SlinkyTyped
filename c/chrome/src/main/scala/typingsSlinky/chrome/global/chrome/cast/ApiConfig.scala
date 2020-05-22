@@ -45,5 +45,13 @@ class ApiConfig protected ()
     autoJoinPolicy: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy,
     defaultActionPolicy: typingsSlinky.chrome.chrome.cast.DefaultActionPolicy
   ) = this()
+  /* CompleteClass */
+  override var defaultActionPolicy: typingsSlinky.chrome.chrome.cast.DefaultActionPolicy = js.native
+  /* CompleteClass */
+  override var sessionRequest: typingsSlinky.chrome.chrome.cast.SessionRequest = js.native
+  /* CompleteClass */
+  override def receiverListener(receiverAvailability: typingsSlinky.chrome.chrome.cast.ReceiverAvailability): Unit = js.native
+  /* CompleteClass */
+  override def sessionListener(session: typingsSlinky.chrome.chrome.cast.Session): Unit = js.native
 }
 

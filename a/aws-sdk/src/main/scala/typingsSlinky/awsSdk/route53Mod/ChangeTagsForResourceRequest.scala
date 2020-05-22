@@ -26,53 +26,16 @@ trait ChangeTagsForResourceRequest extends js.Object {
 
 object ChangeTagsForResourceRequest {
   @scala.inline
-  def apply(ResourceId: TagResourceId, ResourceType: TagResourceType): ChangeTagsForResourceRequest = {
+  def apply(
+    ResourceId: TagResourceId,
+    ResourceType: TagResourceType,
+    AddTags: TagList = null,
+    RemoveTagKeys: TagKeyList = null
+  ): ChangeTagsForResourceRequest = {
     val __obj = js.Dynamic.literal(ResourceId = ResourceId.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any])
+    if (AddTags != null) __obj.updateDynamic("AddTags")(AddTags.asInstanceOf[js.Any])
+    if (RemoveTagKeys != null) __obj.updateDynamic("RemoveTagKeys")(RemoveTagKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeTagsForResourceRequest]
   }
-  @scala.inline
-  implicit class ChangeTagsForResourceRequestOps[Self <: ChangeTagsForResourceRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withResourceId(value: TagResourceId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResourceType(value: TagResourceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAddTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AddTags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRemoveTagKeys(value: TagKeyList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveTagKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRemoveTagKeys: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveTagKeys")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

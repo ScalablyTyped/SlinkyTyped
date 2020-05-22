@@ -14,29 +14,10 @@ trait PurchaseProvisionedCapacityOutput extends js.Object {
 
 object PurchaseProvisionedCapacityOutput {
   @scala.inline
-  def apply(): PurchaseProvisionedCapacityOutput = {
+  def apply(capacityId: String = null): PurchaseProvisionedCapacityOutput = {
     val __obj = js.Dynamic.literal()
+    if (capacityId != null) __obj.updateDynamic("capacityId")(capacityId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseProvisionedCapacityOutput]
   }
-  @scala.inline
-  implicit class PurchaseProvisionedCapacityOutputOps[Self <: PurchaseProvisionedCapacityOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapacityId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCapacityId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

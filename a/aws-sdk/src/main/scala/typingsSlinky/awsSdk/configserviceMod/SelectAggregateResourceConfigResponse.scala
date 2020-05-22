@@ -19,53 +19,12 @@ trait SelectAggregateResourceConfigResponse extends js.Object {
 
 object SelectAggregateResourceConfigResponse {
   @scala.inline
-  def apply(): SelectAggregateResourceConfigResponse = {
+  def apply(NextToken: NextToken = null, QueryInfo: QueryInfo = null, Results: Results = null): SelectAggregateResourceConfigResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (QueryInfo != null) __obj.updateDynamic("QueryInfo")(QueryInfo.asInstanceOf[js.Any])
+    if (Results != null) __obj.updateDynamic("Results")(Results.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectAggregateResourceConfigResponse]
   }
-  @scala.inline
-  implicit class SelectAggregateResourceConfigResponseOps[Self <: SelectAggregateResourceConfigResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryInfo(value: QueryInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQueryInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResults(value: Results): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Results")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Results")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DeleteTextRequest extends js.Object {
   /**
     * The optional table cell location if the text is to be deleted from a table
     * cell. If present, the object_id must refer to a table.
     */
-  var cellLocation: js.UndefOr[TableCellLocation] = js.native
+  var cellLocation: js.UndefOr[TableCellLocation] = js.undefined
   /** The object ID of the shape or table from which the text will be deleted. */
-  var objectId: js.UndefOr[String] = js.native
+  var objectId: js.UndefOr[String] = js.undefined
   /**
     * The range of text to delete, based on TextElement indexes.
     *
@@ -29,58 +28,17 @@ trait DeleteTextRequest extends js.Object {
     * Ranges that include only one code unit of a surrogate pair are expanded to
     * include both code units.
     */
-  var textRange: js.UndefOr[Range] = js.native
+  var textRange: js.UndefOr[Range] = js.undefined
 }
 
 object DeleteTextRequest {
   @scala.inline
-  def apply(): DeleteTextRequest = {
+  def apply(cellLocation: TableCellLocation = null, objectId: String = null, textRange: Range = null): DeleteTextRequest = {
     val __obj = js.Dynamic.literal()
+    if (cellLocation != null) __obj.updateDynamic("cellLocation")(cellLocation.asInstanceOf[js.Any])
+    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
+    if (textRange != null) __obj.updateDynamic("textRange")(textRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTextRequest]
   }
-  @scala.inline
-  implicit class DeleteTextRequestOps[Self <: DeleteTextRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCellLocation(value: TableCellLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellLocation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCellLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cellLocation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withObjectId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutObjectId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRange")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

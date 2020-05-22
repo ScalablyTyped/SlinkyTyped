@@ -8,48 +8,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a list of ContactAnnotation objects. */
-@js.native
 trait ContactAnnotationList extends js.Object {
   /** Gets the ID for this ContactAnnotationList . */
-  var id: String = js.native
+  var id: String
   /** Gets the unique identifier for the app package that created the ContactAnnotationList . */
-  var providerPackageFamilyName: String = js.native
+  var providerPackageFamilyName: String
   /** Gets the ID for the UserDataAccount used by the app. */
-  var userDataAccountId: String = js.native
+  var userDataAccountId: String
   /**
     * Asynchronously deletes the specified ContactAnnotation from the list.
     * @param annotation The annotation to delete from the list.
     * @return An async action indicating that the operation has completed.
     */
-  def deleteAnnotationAsync(annotation: ContactAnnotation): IPromiseWithIAsyncAction = js.native
+  def deleteAnnotationAsync(annotation: ContactAnnotation): IPromiseWithIAsyncAction
   /**
     * Asynchronously deletes this ContactAnnotationList from the ContactAnnotationStore .
     * @return An async action indicating that the operation has completed.
     */
-  def deleteAsync(): IPromiseWithIAsyncAction = js.native
+  def deleteAsync(): IPromiseWithIAsyncAction
   /**
     * Asynchronously gets the list of ContactAnnotation objects.
     * @return The list of ContactAnnotation objects.
     */
-  def findAnnotationsAsync(): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
+  def findAnnotationsAsync(): IPromiseWithIAsyncOperation[IVectorView[_]]
   /**
     * Gets the list of ContactAnnotation objects containing the specified remote ID property.
     * @param remoteId The remote ID used to find the ContactAnnotation objects.
     * @return The list of ContactAnnotation objects containing the specified remote ID property.
     */
-  def findAnnotationsByRemoteIdAsync(remoteId: String): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
+  def findAnnotationsByRemoteIdAsync(remoteId: String): IPromiseWithIAsyncOperation[IVectorView[_]]
   /**
     * Gets the ContactAnnotation with the specified Id .
     * @param annotationId The ContactAnnotation.Id used to identify the ContactAnnotation .
     * @return The ContactAnnotation with the specified ID.
     */
-  def getAnnotationAsync(annotationId: String): IPromiseWithIAsyncOperation[ContactAnnotation] = js.native
+  def getAnnotationAsync(annotationId: String): IPromiseWithIAsyncOperation[ContactAnnotation]
   /**
     * Asynchronously attempts to save the ContactAnnotation to the ContactAnnotationList .
     * @param annotation The annotation to save to the list.
     * @return True if the save was successful, otherwise false.
     */
-  def trySaveAnnotationAsync(annotation: ContactAnnotation): IPromiseWithIAsyncOperation[Boolean] = js.native
+  def trySaveAnnotationAsync(annotation: ContactAnnotation): IPromiseWithIAsyncOperation[Boolean]
 }
 
 object ContactAnnotationList {
@@ -68,67 +67,5 @@ object ContactAnnotationList {
     val __obj = js.Dynamic.literal(deleteAnnotationAsync = js.Any.fromFunction1(deleteAnnotationAsync), deleteAsync = js.Any.fromFunction0(deleteAsync), findAnnotationsAsync = js.Any.fromFunction0(findAnnotationsAsync), findAnnotationsByRemoteIdAsync = js.Any.fromFunction1(findAnnotationsByRemoteIdAsync), getAnnotationAsync = js.Any.fromFunction1(getAnnotationAsync), id = id.asInstanceOf[js.Any], providerPackageFamilyName = providerPackageFamilyName.asInstanceOf[js.Any], trySaveAnnotationAsync = js.Any.fromFunction1(trySaveAnnotationAsync), userDataAccountId = userDataAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactAnnotationList]
   }
-  @scala.inline
-  implicit class ContactAnnotationListOps[Self <: ContactAnnotationList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteAnnotationAsync(value: ContactAnnotation => IPromiseWithIAsyncAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAnnotationAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteAsync(value: () => IPromiseWithIAsyncAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFindAnnotationsAsync(value: () => IPromiseWithIAsyncOperation[IVectorView[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findAnnotationsAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFindAnnotationsByRemoteIdAsync(value: String => IPromiseWithIAsyncOperation[IVectorView[_]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findAnnotationsByRemoteIdAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetAnnotationAsync(value: String => IPromiseWithIAsyncOperation[ContactAnnotation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnnotationAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProviderPackageFamilyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("providerPackageFamilyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrySaveAnnotationAsync(value: ContactAnnotation => IPromiseWithIAsyncOperation[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trySaveAnnotationAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUserDataAccountId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("userDataAccountId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

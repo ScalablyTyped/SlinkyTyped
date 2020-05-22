@@ -10,44 +10,43 @@ import scala.scalajs.js.annotation._
   * @template T
   * The type of the answers.
   */
-@js.native
 trait QuestionMap[T /* <: Answers */] extends js.Object {
   /**
     * The `CheckboxQuestion` type.
     */
-  var checkbox: CheckboxQuestion[T] = js.native
+  var checkbox: CheckboxQuestion[T]
   /**
     * The `ConfirmQuestion` type.
     */
-  var confirm: ConfirmQuestion[T] = js.native
+  var confirm: ConfirmQuestion[T]
   /**
     * The `EditorQuestion` type.
     */
-  var editor: EditorQuestion[T] = js.native
+  var editor: EditorQuestion[T]
   /**
     * The `ExpandQuestion` type.
     */
-  var expand: ExpandQuestion[T] = js.native
+  var expand: ExpandQuestion[T]
   /**
     * The `InputQuestion` type.
     */
-  var input: InputQuestion[T] = js.native
+  var input: InputQuestion[T]
   /**
     * The `ListQuestion` type.
     */
-  var list: ListQuestion[T] = js.native
+  var list: ListQuestion[T]
   /**
     * The `NumberQuestion` type.
     */
-  var number: NumberQuestion[T] = js.native
+  var number: NumberQuestion[T]
   /**
     * The `PasswordQuestion` type.
     */
-  var password: PasswordQuestion[T] = js.native
+  var password: PasswordQuestion[T]
   /**
     * The `RawListQuestion` type.
     */
-  var rawList: RawListQuestion[T] = js.native
+  var rawList: RawListQuestion[T]
 }
 
 object QuestionMap {
@@ -66,67 +65,5 @@ object QuestionMap {
     val __obj = js.Dynamic.literal(checkbox = checkbox.asInstanceOf[js.Any], confirm = confirm.asInstanceOf[js.Any], editor = editor.asInstanceOf[js.Any], expand = expand.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], list = list.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], rawList = rawList.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuestionMap[T]]
   }
-  @scala.inline
-  implicit class QuestionMapOps[Self[t] <: QuestionMap[t], T] (val x: Self[T]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
-    @scala.inline
-    def withCheckbox(value: CheckboxQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkbox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfirm(value: ConfirmQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("confirm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEditor(value: EditorQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpand(value: ExpandQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInput(value: InputQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withList(value: ListQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumber(value: NumberQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPassword(value: PasswordQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRawList(value: RawListQuestion[T]): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rawList")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

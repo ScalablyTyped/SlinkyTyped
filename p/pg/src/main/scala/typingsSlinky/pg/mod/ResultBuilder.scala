@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResultBuilder[R /* <: QueryResultRow */] extends QueryResult[R] {
-  def addRow(row: R): Unit = js.native
+  def addRow(row: R): Unit
 }
 
 object ResultBuilder {
@@ -22,19 +21,5 @@ object ResultBuilder {
     val __obj = js.Dynamic.literal(addRow = js.Any.fromFunction1(addRow), command = command.asInstanceOf[js.Any], fields = fields.asInstanceOf[js.Any], oid = oid.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultBuilder[R]]
   }
-  @scala.inline
-  implicit class ResultBuilderOps[Self[r] <: ResultBuilder[r], R] (val x: Self[R]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[R] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[R]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self[R] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[R] with Other]
-    @scala.inline
-    def withAddRow(value: R => Unit): Self[R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRow")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

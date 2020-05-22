@@ -14,12 +14,74 @@ trait ModuleSpecifier extends Node
 
 object ModuleSpecifier {
   @scala.inline
-  implicit def apply(value: ExportSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
+  def ImportSpecifier(
+    imported: Identifier,
+    local: Identifier,
+    `type`: typingsSlinky.estree.estreeStrings.ImportSpecifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): ModuleSpecifier = {
+    val __obj = js.Dynamic.literal(imported = imported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ModuleSpecifier]
+  }
   @scala.inline
-  implicit def apply(value: ImportDefaultSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
+  def ImportDefaultSpecifier(
+    local: Identifier,
+    `type`: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): ModuleSpecifier = {
+    val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ModuleSpecifier]
+  }
   @scala.inline
-  implicit def apply(value: ImportNamespaceSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
+  def ImportNamespaceSpecifier(
+    local: Identifier,
+    `type`: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): ModuleSpecifier = {
+    val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ModuleSpecifier]
+  }
   @scala.inline
-  implicit def apply(value: ImportSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
+  def ExportSpecifier(
+    exported: Identifier,
+    local: Identifier,
+    `type`: typingsSlinky.estree.estreeStrings.ExportSpecifier,
+    leadingComments: js.Array[Comment] = null,
+    loc: js.UndefOr[Null | SourceLocation] = js.undefined,
+    range: js.Tuple2[Double, Double] = null,
+    trailingComments: js.Array[Comment] = null
+  ): ModuleSpecifier = {
+    val __obj = js.Dynamic.literal(exported = exported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ModuleSpecifier]
+  }
 }
 

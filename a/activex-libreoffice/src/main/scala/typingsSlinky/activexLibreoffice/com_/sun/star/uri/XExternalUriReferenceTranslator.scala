@@ -18,20 +18,19 @@ import scala.scalajs.js.annotation._
   * process.
   * @since OOo 2.0
   */
-@js.native
 trait XExternalUriReferenceTranslator extends js.Object {
   /**
     * returns the external counterpart of an internal URI reference.
     * @param internalUriReference an internal URI reference.
     * @returns the external counterpart of the given internal URI reference. An empty string is returned if the given internal URI reference either is an empty
     */
-  def translateToExternal(internalUriReference: String): String = js.native
+  def translateToExternal(internalUriReference: String): String
   /**
     * returns the internal counterpart of an external URI reference.
     * @param externalUriReference an external URI reference.
     * @returns the internal counterpart of the given external URI reference. An empty string is returned if the given external URI reference either is an empty
     */
-  def translateToInternal(externalUriReference: String): String = js.native
+  def translateToInternal(externalUriReference: String): String
 }
 
 object XExternalUriReferenceTranslator {
@@ -40,25 +39,5 @@ object XExternalUriReferenceTranslator {
     val __obj = js.Dynamic.literal(translateToExternal = js.Any.fromFunction1(translateToExternal), translateToInternal = js.Any.fromFunction1(translateToInternal))
     __obj.asInstanceOf[XExternalUriReferenceTranslator]
   }
-  @scala.inline
-  implicit class XExternalUriReferenceTranslatorOps[Self <: XExternalUriReferenceTranslator] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTranslateToExternal(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateToExternal")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withTranslateToInternal(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("translateToInternal")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

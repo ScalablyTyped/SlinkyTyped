@@ -29,6 +29,77 @@ object global extends js.Object {
     def this(name: String) = this()
     def this(name: String, join: String) = this()
     def this(name: String, join: String, summary: String) = this()
+    /**
+      * return the error code for this system or user-defined error.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjError
+      *
+      * @since 2008.2
+      * @return
+      */
+    /* CompleteClass */
+    override def getCode(): String = js.native
+    /**
+      * return the error description for this error.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjError
+      *
+      * @since 2008.2
+      * @return
+      */
+    /* CompleteClass */
+    override def getDetails(): String = js.native
+    /**
+      * return the error db ID for this error (if it was an unhandled unexpected error).
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjError
+      *
+      * @since 2008.2
+      * @return
+      */
+    /* CompleteClass */
+    override def getId(): String = js.native
+    /**
+      * return the internalid of the record if this error was thrown in an aftersubmit script.
+      * @return {int}
+      *
+      * @method
+      * @memberOf nlobjError
+      *
+      * @since 2008.2
+      * @return
+      */
+    /* CompleteClass */
+    override def getInternalId(): js.Any = js.native
+    /**
+      * return a stacktrace containing the location of the error.
+      * @return {string[]}
+      *
+      * @method
+      * @memberOf nlobjError
+      *
+      * @since 2008.2
+      */
+    /* CompleteClass */
+    override def getStackTrace(): Unit = js.native
+    /**
+      * return the userevent script name where this error was thrown.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjError
+      *
+      * @since 2008.2
+      * @return
+      */
+    /* CompleteClass */
+    override def getUserEvent(): String = js.native
   }
   
   /**
@@ -64,6 +135,79 @@ object global extends js.Object {
     def this(name: String) = this()
     def this(name: String, join: String) = this()
     def this(name: String, join: String, summary: String) = this()
+    /**
+      * return formula for this search column.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjSearchColumn
+      *
+      * @since 2009.2
+      * @return
+      */
+    /* CompleteClass */
+    override def getFormula(): String = js.native
+    /**
+      * return the join id for this search column.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjSearchColumn
+      * @since 2008.1
+      * @return
+      */
+    /* CompleteClass */
+    override def getJoin(): String = js.native
+    /**
+      * return the label of this search column.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjSearchColumn
+      *
+      * @since 2009.1
+      * @return
+      */
+    /* CompleteClass */
+    override def getLabel(): String = js.native
+    /**
+      * return the name of this search column.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjSearchColumn
+      * @since 2008.1
+      * @return
+      */
+    /* CompleteClass */
+    override def getName(): String = js.native
+    /**
+      * return the summary type (avg,group,sum,count) of this search column.
+      * @return {string}
+      *
+      * @method
+      * @memberOf nlobjSearchColumn
+      * @since 2008.1
+      * @return
+      */
+    /* CompleteClass */
+    override def getSummary(): String = js.native
+    /* CompleteClass */
+    override def setLabel(label: String): typingsSlinky.suitescript.nlobjSearchColumn = js.native
+    /**
+      * return nlobjSearchColumn sorted in either ascending or descending order.
+      * @return {nlobjSearchColumn}
+      * @param {boolean} sort if not set, defaults to false, which returns column data in ascending order.
+      *
+      * @method
+      * @memberOf nlobjSearchColumn
+      *
+      * @since 2010.1
+      * @param order
+      * @return
+      */
+    /* CompleteClass */
+    override def setSort(order: js.Any): js.Function3[/* name */ String, /* join */ String, /* summary */ String, Unit] = js.native
   }
   
   /**

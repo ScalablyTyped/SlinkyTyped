@@ -38,101 +38,24 @@ trait TaskStatistics extends js.Object {
 
 object TaskStatistics {
   @scala.inline
-  def apply(): TaskStatistics = {
+  def apply(
+    canceledChecks: js.UndefOr[CanceledChecksCount] = js.undefined,
+    compliantChecks: js.UndefOr[CompliantChecksCount] = js.undefined,
+    failedChecks: js.UndefOr[FailedChecksCount] = js.undefined,
+    inProgressChecks: js.UndefOr[InProgressChecksCount] = js.undefined,
+    nonCompliantChecks: js.UndefOr[NonCompliantChecksCount] = js.undefined,
+    totalChecks: js.UndefOr[TotalChecksCount] = js.undefined,
+    waitingForDataCollectionChecks: js.UndefOr[WaitingForDataCollectionChecksCount] = js.undefined
+  ): TaskStatistics = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(canceledChecks)) __obj.updateDynamic("canceledChecks")(canceledChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(compliantChecks)) __obj.updateDynamic("compliantChecks")(compliantChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(failedChecks)) __obj.updateDynamic("failedChecks")(failedChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(inProgressChecks)) __obj.updateDynamic("inProgressChecks")(inProgressChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(nonCompliantChecks)) __obj.updateDynamic("nonCompliantChecks")(nonCompliantChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(totalChecks)) __obj.updateDynamic("totalChecks")(totalChecks.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(waitingForDataCollectionChecks)) __obj.updateDynamic("waitingForDataCollectionChecks")(waitingForDataCollectionChecks.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskStatistics]
   }
-  @scala.inline
-  implicit class TaskStatisticsOps[Self <: TaskStatistics] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanceledChecks(value: CanceledChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanceledChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canceledChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompliantChecks(value: CompliantChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompliantChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compliantChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFailedChecks(value: FailedChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFailedChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("failedChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInProgressChecks(value: InProgressChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inProgressChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInProgressChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inProgressChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNonCompliantChecks(value: NonCompliantChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNonCompliantChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTotalChecks(value: TotalChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTotalChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalChecks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWaitingForDataCollectionChecks(value: WaitingForDataCollectionChecksCount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitingForDataCollectionChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWaitingForDataCollectionChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waitingForDataCollectionChecks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

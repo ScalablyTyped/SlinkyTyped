@@ -6,252 +6,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Manifest extends js.Object {
-  var author: String = js.native
-  var configuration: js.UndefOr[StringDictionary[ConfigurationDefinition]] = js.native
-  var contributors: js.UndefOr[js.Array[_]] = js.native
-  var defaultDocument: js.UndefOr[String] = js.native
-  var dependencies: js.UndefOr[StringDictionary[DependencyDefinition]] = js.native
-  var description: String = js.native
-  var engines: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.native
-  var files: js.UndefOr[StringDictionary[AssetDefinition]] = js.native
-  var keywords: js.UndefOr[String] = js.native
-  var lib: String = js.native
-  var license: js.UndefOr[String] = js.native
-  var main: js.UndefOr[String] = js.native
-  var name: js.UndefOr[String] = js.native
-  var provides: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.native
-  var repository: js.UndefOr[Type] = js.native
-  var scripts: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.native
-  var tests: js.UndefOr[js.Array[String]] = js.native
-  var thumbnail: js.UndefOr[String] = js.native
-  var version: js.UndefOr[String] = js.native
+  var author: String
+  var configuration: js.UndefOr[StringDictionary[ConfigurationDefinition]] = js.undefined
+  var contributors: js.UndefOr[js.Array[_]] = js.undefined
+  var defaultDocument: js.UndefOr[String] = js.undefined
+  var dependencies: js.UndefOr[StringDictionary[DependencyDefinition]] = js.undefined
+  var description: String
+  var engines: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.undefined
+  var files: js.UndefOr[StringDictionary[AssetDefinition]] = js.undefined
+  var keywords: js.UndefOr[String] = js.undefined
+  var lib: String
+  var license: js.UndefOr[String] = js.undefined
+  var main: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var provides: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.undefined
+  var repository: js.UndefOr[Type] = js.undefined
+  var scripts: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.undefined
+  var tests: js.UndefOr[js.Array[String]] = js.undefined
+  var thumbnail: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.undefined
 }
 
 object Manifest {
   @scala.inline
-  def apply(author: String, description: String, lib: String): Manifest = {
+  def apply(
+    author: String,
+    description: String,
+    lib: String,
+    configuration: StringDictionary[ConfigurationDefinition] = null,
+    contributors: js.Array[_] = null,
+    defaultDocument: String = null,
+    dependencies: StringDictionary[DependencyDefinition] = null,
+    engines: StringDictionary[js.UndefOr[String]] = null,
+    files: StringDictionary[AssetDefinition] = null,
+    keywords: String = null,
+    license: String = null,
+    main: String = null,
+    name: String = null,
+    provides: StringDictionary[js.UndefOr[String]] = null,
+    repository: Type = null,
+    scripts: StringDictionary[js.UndefOr[String]] = null,
+    tests: js.Array[String] = null,
+    thumbnail: String = null,
+    version: String = null
+  ): Manifest = {
     val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], lib = lib.asInstanceOf[js.Any])
+    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
+    if (contributors != null) __obj.updateDynamic("contributors")(contributors.asInstanceOf[js.Any])
+    if (defaultDocument != null) __obj.updateDynamic("defaultDocument")(defaultDocument.asInstanceOf[js.Any])
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (engines != null) __obj.updateDynamic("engines")(engines.asInstanceOf[js.Any])
+    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
+    if (keywords != null) __obj.updateDynamic("keywords")(keywords.asInstanceOf[js.Any])
+    if (license != null) __obj.updateDynamic("license")(license.asInstanceOf[js.Any])
+    if (main != null) __obj.updateDynamic("main")(main.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (provides != null) __obj.updateDynamic("provides")(provides.asInstanceOf[js.Any])
+    if (repository != null) __obj.updateDynamic("repository")(repository.asInstanceOf[js.Any])
+    if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])
+    if (tests != null) __obj.updateDynamic("tests")(tests.asInstanceOf[js.Any])
+    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Manifest]
   }
-  @scala.inline
-  implicit class ManifestOps[Self <: Manifest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAuthor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDescription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLib(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lib")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withConfiguration(value: StringDictionary[ConfigurationDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContributors(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contributors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContributors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contributors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultDocument(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: StringDictionary[DependencyDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEngines(value: StringDictionary[js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engines")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEngines: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engines")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFiles(value: StringDictionary[AssetDefinition]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeywords(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeywords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLicense(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLicense: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("license")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMain(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvides(value: StringDictionary[js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("provides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepository(value: Type): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepository: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScripts(value: StringDictionary[js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScripts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTests(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tests")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTests: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tests")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbnail(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumbnail: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,19 +18,5 @@ object CreateVirtualMFADeviceResponse {
     val __obj = js.Dynamic.literal(VirtualMFADevice = VirtualMFADevice.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVirtualMFADeviceResponse]
   }
-  @scala.inline
-  implicit class CreateVirtualMFADeviceResponseOps[Self <: CreateVirtualMFADeviceResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVirtualMFADevice(value: VirtualMFADevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualMFADevice")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

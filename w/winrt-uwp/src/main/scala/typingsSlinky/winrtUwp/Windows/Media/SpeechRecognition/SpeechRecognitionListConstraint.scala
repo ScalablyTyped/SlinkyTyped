@@ -6,18 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A constraint for a SpeechRecognizer object based on a list of words or phrases. When initialized, this object is added to the Constraints collection. */
-@js.native
 trait SpeechRecognitionListConstraint extends js.Object {
   /** Gets the array of words or phrases that make up the constraint. */
-  var commands: IVector[String] = js.native
+  var commands: IVector[String]
   /** Gets or sets whether the constraint can be used by the speech recognizer to perform recognition. */
-  var isEnabled: Boolean = js.native
+  var isEnabled: Boolean
   /** Gets or sets the weighted value of the constraint. */
-  var probability: SpeechRecognitionConstraintProbability = js.native
+  var probability: SpeechRecognitionConstraintProbability
   /** Gets or sets a tag that can be useful for identifying the constraint. */
-  var tag: String = js.native
+  var tag: String
   /** Gets the type of the constraint. */
-  var `type`: SpeechRecognitionConstraintType = js.native
+  var `type`: SpeechRecognitionConstraintType
 }
 
 object SpeechRecognitionListConstraint {
@@ -33,43 +32,5 @@ object SpeechRecognitionListConstraint {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechRecognitionListConstraint]
   }
-  @scala.inline
-  implicit class SpeechRecognitionListConstraintOps[Self <: SpeechRecognitionListConstraint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommands(value: IVector[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProbability(value: SpeechRecognitionConstraintProbability): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("probability")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: SpeechRecognitionConstraintType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

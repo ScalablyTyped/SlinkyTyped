@@ -18,41 +18,11 @@ trait ListUserPoolsResponse extends js.Object {
 
 object ListUserPoolsResponse {
   @scala.inline
-  def apply(): ListUserPoolsResponse = {
+  def apply(NextToken: PaginationKeyType = null, UserPools: UserPoolListType = null): ListUserPoolsResponse = {
     val __obj = js.Dynamic.literal()
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
+    if (UserPools != null) __obj.updateDynamic("UserPools")(UserPools.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListUserPoolsResponse]
   }
-  @scala.inline
-  implicit class ListUserPoolsResponseOps[Self <: ListUserPoolsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextToken(value: PaginationKeyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUserPools(value: UserPoolListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUserPools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPools")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

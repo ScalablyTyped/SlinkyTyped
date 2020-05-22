@@ -42,7 +42,7 @@ trait Slicer extends ClientObject {
   var height: Double = js.native
   /**
     *
-    * Represents the unique id of slicer. Read-only.
+    * Represents the unique id of slicer.
     *
     * [Api set: ExcelApi 1.10]
     */
@@ -71,7 +71,7 @@ trait Slicer extends ClientObject {
   var name: String = js.native
   /**
     *
-    * Represents the collection of SlicerItems that are part of the slicer. Read-only.
+    * Represents the collection of SlicerItems that are part of the slicer.
     *
     * [Api set: ExcelApi 1.10]
     */
@@ -108,7 +108,7 @@ trait Slicer extends ClientObject {
   var width: Double = js.native
   /**
     *
-    * Represents the worksheet containing the slicer. Read-only.
+    * Represents the worksheet containing the slicer.
     *
     * [Api set: ExcelApi 1.10]
     */
@@ -126,7 +126,7 @@ trait Slicer extends ClientObject {
     */
   def delete(): Unit = js.native
   /**
-    * Returns an array of selected items' keys. Read-only.
+    * Returns an array of selected items' keys.
     *
     * [Api set: ExcelApi 1.10]
     */

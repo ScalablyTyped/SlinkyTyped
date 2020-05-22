@@ -22,53 +22,12 @@ trait SubModule extends js.Object {
 
 object SubModule {
   @scala.inline
-  def apply(): SubModule = {
+  def apply(absolutePath: Path = null, commitId: ObjectId = null, relativePath: Path = null): SubModule = {
     val __obj = js.Dynamic.literal()
+    if (absolutePath != null) __obj.updateDynamic("absolutePath")(absolutePath.asInstanceOf[js.Any])
+    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
+    if (relativePath != null) __obj.updateDynamic("relativePath")(relativePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubModule]
   }
-  @scala.inline
-  implicit class SubModuleOps[Self <: SubModule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbsolutePath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbsolutePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommitId(value: ObjectId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommitId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRelativePath(value: Path): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRelativePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("relativePath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

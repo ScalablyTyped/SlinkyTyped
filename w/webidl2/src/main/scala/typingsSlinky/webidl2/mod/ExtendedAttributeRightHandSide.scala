@@ -1,5 +1,13 @@
 package typingsSlinky.webidl2.mod
 
+import typingsSlinky.webidl2.webidl2Strings.`decimal-list`
+import typingsSlinky.webidl2.webidl2Strings.`identifier-list`
+import typingsSlinky.webidl2.webidl2Strings.`integer-list`
+import typingsSlinky.webidl2.webidl2Strings.`string-list`
+import typingsSlinky.webidl2.webidl2Strings.decimal
+import typingsSlinky.webidl2.webidl2Strings.identifier
+import typingsSlinky.webidl2.webidl2Strings.integer
+import typingsSlinky.webidl2.webidl2Strings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,20 +26,52 @@ trait ExtendedAttributeRightHandSide extends js.Object
 
 object ExtendedAttributeRightHandSide {
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideDecimal): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideInteger(`type`: integer, value: String): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideDecimalList): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideIdentifierList(`type`: `identifier-list`, value: js.Array[ExtendedAttributeRightHandSideIdentifier]): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideIdentifier): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideDecimal(`type`: decimal, value: String): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideIdentifierList): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideDecimalList(`type`: `decimal-list`, value: js.Array[ExtendedAttributeRightHandSideDecimal]): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideInteger): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideIntegerList(`type`: `integer-list`, value: js.Array[ExtendedAttributeRightHandSideInteger]): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideIntegerList): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideStringList(`type`: `string-list`, value: js.Array[ExtendedAttributeRightHandSideString]): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideString): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideIdentifier(`type`: identifier, value: String): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
   @scala.inline
-  implicit def apply(value: ExtendedAttributeRightHandSideStringList): ExtendedAttributeRightHandSide = value.asInstanceOf[ExtendedAttributeRightHandSide]
+  def ExtendedAttributeRightHandSideString(`type`: string, value: String): ExtendedAttributeRightHandSide = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExtendedAttributeRightHandSide]
+  }
 }
 

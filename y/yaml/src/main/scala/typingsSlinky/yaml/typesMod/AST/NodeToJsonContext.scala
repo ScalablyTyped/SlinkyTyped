@@ -2,100 +2,40 @@ package typingsSlinky.yaml.typesMod.AST
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.yaml.mod.Document
+import typingsSlinky.yaml.typesMod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NodeToJsonContext
   extends /* key */ StringDictionary[js.Any] {
-  var anchors: js.UndefOr[js.Array[_]] = js.native
-  var doc: Document = js.native
-  var keep: js.UndefOr[Boolean] = js.native
-  var mapAsMap: js.UndefOr[Boolean] = js.native
-  var maxAliasCount: js.UndefOr[Double] = js.native
-  var onCreate: js.UndefOr[js.Function1[/* node */ Node, Unit]] = js.native
+  var anchors: js.UndefOr[js.Array[_]] = js.undefined
+  var doc: Document
+  var keep: js.UndefOr[Boolean] = js.undefined
+  var mapAsMap: js.UndefOr[Boolean] = js.undefined
+  var maxAliasCount: js.UndefOr[Double] = js.undefined
+  var onCreate: js.UndefOr[js.Function1[/* node */ Node, Unit]] = js.undefined
 }
 
 object NodeToJsonContext {
   @scala.inline
-  def apply(doc: Document): NodeToJsonContext = {
+  def apply(
+    doc: Document,
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    anchors: js.Array[_] = null,
+    keep: js.UndefOr[Boolean] = js.undefined,
+    mapAsMap: js.UndefOr[Boolean] = js.undefined,
+    maxAliasCount: js.UndefOr[Double] = js.undefined,
+    onCreate: /* node */ Node => Unit = null
+  ): NodeToJsonContext = {
     val __obj = js.Dynamic.literal(doc = doc.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (anchors != null) __obj.updateDynamic("anchors")(anchors.asInstanceOf[js.Any])
+    if (!js.isUndefined(keep)) __obj.updateDynamic("keep")(keep.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mapAsMap)) __obj.updateDynamic("mapAsMap")(mapAsMap.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAliasCount)) __obj.updateDynamic("maxAliasCount")(maxAliasCount.get.asInstanceOf[js.Any])
+    if (onCreate != null) __obj.updateDynamic("onCreate")(js.Any.fromFunction1(onCreate))
     __obj.asInstanceOf[NodeToJsonContext]
   }
-  @scala.inline
-  implicit class NodeToJsonContextOps[Self <: NodeToJsonContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoc(value: Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAnchors(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnchors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("anchors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeep(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keep")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMapAsMap(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapAsMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMapAsMap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mapAsMap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAliasCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAliasCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAliasCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAliasCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCreate(value: /* node */ Node => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreate")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCreate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,35 +18,10 @@ trait ListDomainDeliverabilityCampaignsResponse extends js.Object {
 
 object ListDomainDeliverabilityCampaignsResponse {
   @scala.inline
-  def apply(DomainDeliverabilityCampaigns: DomainDeliverabilityCampaignList): ListDomainDeliverabilityCampaignsResponse = {
+  def apply(DomainDeliverabilityCampaigns: DomainDeliverabilityCampaignList, NextToken: NextToken = null): ListDomainDeliverabilityCampaignsResponse = {
     val __obj = js.Dynamic.literal(DomainDeliverabilityCampaigns = DomainDeliverabilityCampaigns.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDomainDeliverabilityCampaignsResponse]
   }
-  @scala.inline
-  implicit class ListDomainDeliverabilityCampaignsResponseOps[Self <: ListDomainDeliverabilityCampaignsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDomainDeliverabilityCampaigns(value: DomainDeliverabilityCampaignList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainDeliverabilityCampaigns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

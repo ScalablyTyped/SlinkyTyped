@@ -22,53 +22,16 @@ trait ExportCertificateResponse extends js.Object {
 
 object ExportCertificateResponse {
   @scala.inline
-  def apply(): ExportCertificateResponse = {
+  def apply(
+    Certificate: CertificateBody = null,
+    CertificateChain: CertificateChain = null,
+    PrivateKey: PrivateKey = null
+  ): ExportCertificateResponse = {
     val __obj = js.Dynamic.literal()
+    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
+    if (CertificateChain != null) __obj.updateDynamic("CertificateChain")(CertificateChain.asInstanceOf[js.Any])
+    if (PrivateKey != null) __obj.updateDynamic("PrivateKey")(PrivateKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportCertificateResponse]
   }
-  @scala.inline
-  implicit class ExportCertificateResponseOps[Self <: ExportCertificateResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCertificate(value: CertificateBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCertificateChain(value: CertificateChain): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCertificateChain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivateKey(value: PrivateKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivateKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

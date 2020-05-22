@@ -17,29 +17,10 @@ trait SchemaSslCertsCreateEphemeralRequest extends js.Object {
 
 object SchemaSslCertsCreateEphemeralRequest {
   @scala.inline
-  def apply(): SchemaSslCertsCreateEphemeralRequest = {
+  def apply(public_key: String = null): SchemaSslCertsCreateEphemeralRequest = {
     val __obj = js.Dynamic.literal()
+    if (public_key != null) __obj.updateDynamic("public_key")(public_key.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSslCertsCreateEphemeralRequest]
   }
-  @scala.inline
-  implicit class SchemaSslCertsCreateEphemeralRequestOps[Self <: SchemaSslCertsCreateEphemeralRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPublic_key(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public_key")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPublic_key: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("public_key")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

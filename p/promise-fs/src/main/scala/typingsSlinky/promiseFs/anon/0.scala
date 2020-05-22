@@ -5,55 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `0` extends js.Object {
-  var encoding: js.UndefOr[String | Null] = js.native
-  var withFileTypes: js.UndefOr[`false`] = js.native
+  var encoding: js.UndefOr[String | Null] = js.undefined
+  var withFileTypes: js.UndefOr[`false`] = js.undefined
 }
 
 object `0` {
   @scala.inline
-  def apply(): `0` = {
+  def apply(encoding: js.UndefOr[Null | String] = js.undefined, withFileTypes: `false` = null): `0` = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(encoding)) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (withFileTypes != null) __obj.updateDynamic("withFileTypes")(withFileTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[`0`]
   }
-  @scala.inline
-  implicit class `0Ops`[Self <: `0`] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncoding(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncoding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEncodingNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
-        ret
-    }
-    @scala.inline
-    def withWithFileTypes(value: `false`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withFileTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithFileTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withFileTypes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

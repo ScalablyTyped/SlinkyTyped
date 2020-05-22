@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExecutableOptions extends js.Object {
-  var cwd: js.UndefOr[String] = js.native
-  var detached: js.UndefOr[Boolean] = js.native
-  var env: js.UndefOr[js.Any] = js.native
-  var shell: js.UndefOr[Boolean] = js.native
-  var stdio: js.UndefOr[String | js.Array[String]] = js.native
+  var cwd: js.UndefOr[String] = js.undefined
+  var detached: js.UndefOr[Boolean] = js.undefined
+  var env: js.UndefOr[js.Any] = js.undefined
+  var shell: js.UndefOr[Boolean] = js.undefined
+  var stdio: js.UndefOr[String | js.Array[String]] = js.undefined
 }
 
 object ExecutableOptions {
   @scala.inline
-  def apply(): ExecutableOptions = {
+  def apply(
+    cwd: String = null,
+    detached: js.UndefOr[Boolean] = js.undefined,
+    env: js.Any = null,
+    shell: js.UndefOr[Boolean] = js.undefined,
+    stdio: String | js.Array[String] = null
+  ): ExecutableOptions = {
     val __obj = js.Dynamic.literal()
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (!js.isUndefined(detached)) __obj.updateDynamic("detached")(detached.get.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (!js.isUndefined(shell)) __obj.updateDynamic("shell")(shell.get.asInstanceOf[js.Any])
+    if (stdio != null) __obj.updateDynamic("stdio")(stdio.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutableOptions]
   }
-  @scala.inline
-  implicit class ExecutableOptionsOps[Self <: ExecutableOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCwd(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCwd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetached(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetached: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnv(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnv: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShell(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStdio(value: String | js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStdio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stdio")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

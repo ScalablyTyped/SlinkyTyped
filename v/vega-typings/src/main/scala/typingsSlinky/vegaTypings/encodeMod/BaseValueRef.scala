@@ -1,7 +1,5 @@
 package typingsSlinky.vegaTypings.encodeMod
 
-import typingsSlinky.vegaTypings.anon.Value
-import typingsSlinky.vegaTypings.signalMod.SignalRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +13,19 @@ trait BaseValueRef[T] extends ScaledValueRef[T]
 
 object BaseValueRef {
   @scala.inline
-  implicit def apply[T](value: typingsSlinky.vegaTypings.anon.Field): BaseValueRef[T] = value.asInstanceOf[BaseValueRef[T]]
+  def SignalRef[T](signal: String): BaseValueRef[T] = {
+    val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BaseValueRef[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: SignalRef): BaseValueRef[T] = value.asInstanceOf[BaseValueRef[T]]
+  def Value[T](value: T = null): BaseValueRef[T] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BaseValueRef[T]]
+  }
   @scala.inline
-  implicit def apply[T](value: Value[T]): BaseValueRef[T] = value.asInstanceOf[BaseValueRef[T]]
+  def Field[T](field: typingsSlinky.vegaTypings.encodeMod.Field): BaseValueRef[T] = {
+    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BaseValueRef[T]]
+  }
 }
 

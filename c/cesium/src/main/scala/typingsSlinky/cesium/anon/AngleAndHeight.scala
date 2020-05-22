@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AngleAndHeight extends js.Object {
-  var angleAndHeight: EndPosition = js.native
-  var distance: EndPosition = js.native
+  var angleAndHeight: EndPosition
+  var distance: EndPosition
 }
 
 object AngleAndHeight {
@@ -16,25 +15,5 @@ object AngleAndHeight {
     val __obj = js.Dynamic.literal(angleAndHeight = angleAndHeight.asInstanceOf[js.Any], distance = distance.asInstanceOf[js.Any])
     __obj.asInstanceOf[AngleAndHeight]
   }
-  @scala.inline
-  implicit class AngleAndHeightOps[Self <: AngleAndHeight] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAngleAndHeight(value: EndPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("angleAndHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDistance(value: EndPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

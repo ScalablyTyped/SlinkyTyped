@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GetAndLockOptions extends js.Object {
-  var lockTime: js.UndefOr[Double] = js.native
+  var lockTime: js.UndefOr[Double] = js.undefined
 }
 
 object GetAndLockOptions {
   @scala.inline
-  def apply(): GetAndLockOptions = {
+  def apply(lockTime: js.UndefOr[Double] = js.undefined): GetAndLockOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(lockTime)) __obj.updateDynamic("lockTime")(lockTime.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAndLockOptions]
   }
-  @scala.inline
-  implicit class GetAndLockOptionsOps[Self <: GetAndLockOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLockTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLockTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lockTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

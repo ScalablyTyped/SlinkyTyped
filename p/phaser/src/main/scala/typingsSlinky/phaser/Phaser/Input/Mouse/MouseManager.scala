@@ -12,88 +12,87 @@ import scala.scalajs.js.annotation._
   * 
   * You do not need to create this class directly, the Input Manager will create an instance of it automatically.
   */
-@js.native
 trait MouseManager extends js.Object {
   /**
     * If true the DOM mouse events will have event.preventDefault applied to them, if false they will propagate fully.
     */
-  var capture: Boolean = js.native
+  var capture: Boolean
   /**
     * A boolean that controls if the Mouse Manager is enabled or not.
     * Can be toggled on the fly.
     */
-  var enabled: Boolean = js.native
+  var enabled: Boolean
   /**
     * If the mouse has been pointer locked successfully this will be set to true.
     */
-  var locked: Boolean = js.native
+  var locked: Boolean
   /**
     * A reference to the Input Manager.
     */
-  var manager: InputManager = js.native
+  var manager: InputManager
   /**
     * The Mouse Down Event handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseDown: js.Function = js.native
+  var onMouseDown: js.Function
   /**
     * The Mouse Down Event handler specifically for events on the Window.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseDownWindow: js.Function = js.native
+  var onMouseDownWindow: js.Function
   /**
     * The Mouse Move Event handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseMove: js.Function = js.native
+  var onMouseMove: js.Function
   /**
     * The Mouse Out Event handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseOut: js.Function = js.native
+  var onMouseOut: js.Function
   /**
     * The Mouse Over Event handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseOver: js.Function = js.native
+  var onMouseOver: js.Function
   /**
     * The Mouse Up Event handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseUp: js.Function = js.native
+  var onMouseUp: js.Function
   /**
     * The Mouse Up Event handler specifically for events on the Window.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseUpWindow: js.Function = js.native
+  var onMouseUpWindow: js.Function
   /**
     * The Mouse Wheel Event handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var onMouseWheel: js.Function = js.native
+  var onMouseWheel: js.Function
   /**
     * Internal pointerLockChange handler.
     * This function is sent the native DOM MouseEvent.
     * Initially empty and bound in the `startListeners` method.
     */
-  var pointerLockChange: js.Function = js.native
+  var pointerLockChange: js.Function
   /**
     * The Mouse target, as defined in the Game Config.
     * Typically the canvas to which the game is rendering, but can be any interactive DOM element.
     */
-  var target: js.Any = js.native
+  var target: js.Any
   /**
     * Destroys this Mouse Manager instance.
     */
-  def destroy(): Unit = js.native
+  def destroy(): Unit
   /**
     * Attempts to disable the context menu from appearing if you right-click on the browser.
     * 
@@ -102,13 +101,13 @@ trait MouseManager extends js.Object {
     * Use this if you need to enable right-button mouse support in your game, and the browser
     * menu keeps getting in the way.
     */
-  def disableContextMenu(): MouseManager = js.native
+  def disableContextMenu(): this.type
   /**
     * If the browser supports pointer lock, this will request that the pointer lock is released. If
     * the browser successfully enters a locked state, a 'POINTER_LOCK_CHANGE_EVENT' will be
     * dispatched - from the game's input manager - with an `isPointerLocked` property.
     */
-  def releasePointerLock(): Unit = js.native
+  def releasePointerLock(): Unit
   /**
     * If the browser supports it, you can request that the pointer be locked to the browser window.
     * 
@@ -121,17 +120,17 @@ trait MouseManager extends js.Object {
     * It is important to note that pointer lock can only be enabled after an 'engagement gesture',
     * see: https://w3c.github.io/pointerlock/#dfn-engagement-gesture.
     */
-  def requestPointerLock(): Unit = js.native
+  def requestPointerLock(): Unit
   /**
     * Starts the Mouse Event listeners running.
     * This is called automatically and does not need to be manually invoked.
     */
-  def startListeners(): Unit = js.native
+  def startListeners(): Unit
   /**
     * Stops the Mouse Event listeners.
     * This is called automatically and does not need to be manually invoked.
     */
-  def stopListeners(): Unit = js.native
+  def stopListeners(): Unit
 }
 
 object MouseManager {
@@ -161,133 +160,5 @@ object MouseManager {
     val __obj = js.Dynamic.literal(capture = capture.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), disableContextMenu = js.Any.fromFunction0(disableContextMenu), enabled = enabled.asInstanceOf[js.Any], locked = locked.asInstanceOf[js.Any], manager = manager.asInstanceOf[js.Any], onMouseDown = onMouseDown.asInstanceOf[js.Any], onMouseDownWindow = onMouseDownWindow.asInstanceOf[js.Any], onMouseMove = onMouseMove.asInstanceOf[js.Any], onMouseOut = onMouseOut.asInstanceOf[js.Any], onMouseOver = onMouseOver.asInstanceOf[js.Any], onMouseUp = onMouseUp.asInstanceOf[js.Any], onMouseUpWindow = onMouseUpWindow.asInstanceOf[js.Any], onMouseWheel = onMouseWheel.asInstanceOf[js.Any], pointerLockChange = pointerLockChange.asInstanceOf[js.Any], releasePointerLock = js.Any.fromFunction0(releasePointerLock), requestPointerLock = js.Any.fromFunction0(requestPointerLock), startListeners = js.Any.fromFunction0(startListeners), stopListeners = js.Any.fromFunction0(stopListeners), target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[MouseManager]
   }
-  @scala.inline
-  implicit class MouseManagerOps[Self <: MouseManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCapture(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDisableContextMenu(value: () => MouseManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableContextMenu")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManager(value: InputManager): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseDown(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseDownWindow(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDownWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseMove(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseOut(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseOver(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseUp(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseUpWindow(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUpWindow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnMouseWheel(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseWheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPointerLockChange(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerLockChange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReleasePointerLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releasePointerLock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRequestPointerLock(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPointerLock")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartListeners(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startListeners")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStopListeners(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stopListeners")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTarget(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

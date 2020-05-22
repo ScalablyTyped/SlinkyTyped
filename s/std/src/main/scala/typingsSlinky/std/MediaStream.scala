@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation._
 
 /** A stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack. */
 @js.native
-trait MediaStream extends EventTarget {
+trait MediaStream
+  extends EventTarget
+     with MediaProvider {
   val active: scala.Boolean = js.native
   val id: java.lang.String = js.native
   var onaddtrack: (js.ThisFunction1[

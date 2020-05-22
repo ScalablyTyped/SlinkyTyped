@@ -112,6 +112,14 @@ object enumerationsMod extends js.Object {
       var model_FEnumerationValue: IModel = js.native
       @JSName("name")
       val name_FEnumerationValue: String = js.native
+      /**
+        * Returns the qualified name of this element, or
+        * null if this element is not a part of the model,
+        * or if it or one of its namespace containers does not have a
+        * valid name.
+        */
+      /* CompleteClass */
+      override val qualifiedName: String | Null = js.native
       def caption: Text = js.native
       def caption(newValue: Text): js.Any = js.native
       def containerAsEnumeration: Enumeration = js.native

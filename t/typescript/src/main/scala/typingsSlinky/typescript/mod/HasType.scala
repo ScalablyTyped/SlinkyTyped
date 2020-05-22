@@ -24,38 +24,3 @@ import scala.scalajs.js.annotation._
 */
 trait HasType extends js.Object
 
-object HasType {
-  @scala.inline
-  implicit def apply(value: AssertionExpression): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: JSDocNonNullableType): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: JSDocNullableType): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: JSDocOptionalType): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: JSDocTypeExpression): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: JSDocVariadicType): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: MappedTypeNode): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: ParameterDeclaration): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: ParenthesizedTypeNode): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: PropertyDeclaration): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: PropertySignature): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: SignatureDeclaration): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: TypeAliasDeclaration): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: TypeOperatorNode): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: TypePredicateNode): HasType = value.asInstanceOf[HasType]
-  @scala.inline
-  implicit def apply(value: VariableDeclaration): HasType = value.asInstanceOf[HasType]
-}
-

@@ -23,41 +23,11 @@ trait SchemaInventoryPickup extends js.Object {
 
 object SchemaInventoryPickup {
   @scala.inline
-  def apply(): SchemaInventoryPickup = {
+  def apply(pickupMethod: String = null, pickupSla: String = null): SchemaInventoryPickup = {
     val __obj = js.Dynamic.literal()
+    if (pickupMethod != null) __obj.updateDynamic("pickupMethod")(pickupMethod.asInstanceOf[js.Any])
+    if (pickupSla != null) __obj.updateDynamic("pickupSla")(pickupSla.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInventoryPickup]
   }
-  @scala.inline
-  implicit class SchemaInventoryPickupOps[Self <: SchemaInventoryPickup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPickupMethod(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickupMethod")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickupMethod: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickupMethod")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPickupSla(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickupSla")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPickupSla: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pickupSla")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

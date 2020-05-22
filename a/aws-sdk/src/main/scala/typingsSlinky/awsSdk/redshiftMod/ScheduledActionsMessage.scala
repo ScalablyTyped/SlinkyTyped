@@ -18,41 +18,11 @@ trait ScheduledActionsMessage extends js.Object {
 
 object ScheduledActionsMessage {
   @scala.inline
-  def apply(): ScheduledActionsMessage = {
+  def apply(Marker: String = null, ScheduledActions: ScheduledActionList = null): ScheduledActionsMessage = {
     val __obj = js.Dynamic.literal()
+    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
+    if (ScheduledActions != null) __obj.updateDynamic("ScheduledActions")(ScheduledActions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScheduledActionsMessage]
   }
-  @scala.inline
-  implicit class ScheduledActionsMessageOps[Self <: ScheduledActionsMessage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMarker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScheduledActions(value: ScheduledActionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScheduledActions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   * cells in the edit view of a spreadsheet.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleCellView
   extends XAccessibleContext
      with XAccessibleComponent

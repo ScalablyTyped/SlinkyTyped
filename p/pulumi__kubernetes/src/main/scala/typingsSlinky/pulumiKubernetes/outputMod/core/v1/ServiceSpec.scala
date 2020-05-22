@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
 /**
   * ServiceSpec describes the attributes that a user creates on a service.
   */
-@js.native
 trait ServiceSpec extends js.Object {
   /**
     * clusterIP is the IP address of the service and is usually assigned randomly by the master.
@@ -19,20 +18,20 @@ trait ServiceSpec extends js.Object {
     * ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info:
     * https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
     */
-  val clusterIP: String = js.native
+  val clusterIP: String
   /**
     * externalIPs is a list of IP addresses for which nodes in the cluster will also accept
     * traffic for this service.  These IPs are not managed by Kubernetes.  The user is
     * responsible for ensuring that traffic arrives at a node with this IP.  A common example is
     * external load-balancers that are not part of the Kubernetes system.
     */
-  val externalIPs: js.Array[String] = js.native
+  val externalIPs: js.Array[String]
   /**
     * externalName is the external reference that kubedns or equivalent will return as a CNAME
     * record for this service. No proxying will be involved. Must be a valid RFC-1123 hostname
     * (https://tools.ietf.org/html/rfc1123) and requires Type to be ExternalName.
     */
-  val externalName: String = js.native
+  val externalName: String
   /**
     * externalTrafficPolicy denotes if this Service desires to route external traffic to
     * node-local or cluster-wide endpoints. "Local" preserves the client source IP and avoids a
@@ -40,14 +39,14 @@ trait ServiceSpec extends js.Object {
     * traffic spreading. "Cluster" obscures the client source IP and may cause a second hop to
     * another node, but should have good overall load-spreading.
     */
-  val externalTrafficPolicy: String = js.native
+  val externalTrafficPolicy: String
   /**
     * healthCheckNodePort specifies the healthcheck nodePort for the service. If not specified,
     * HealthCheckNodePort is created by the service api backend with the allocated nodePort. Will
     * use user-specified nodePort value if specified by the client. Only effects when Type is set
     * to LoadBalancer and ExternalTrafficPolicy is set to Local.
     */
-  val healthCheckNodePort: Double = js.native
+  val healthCheckNodePort: Double
   /**
     * ipFamily specifies whether this Service has a preference for a particular IP family (e.g.
     * IPv4 vs. IPv6).  If a specific IP family is requested, the clusterIP field will be
@@ -59,26 +58,26 @@ trait ServiceSpec extends js.Object {
     * in the cluster (e.g. IPv6 in IPv4 only cluster) is an error condition and will fail during
     * clusterIP assignment.
     */
-  val ipFamily: String = js.native
+  val ipFamily: String
   /**
     * Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP
     * specified in this field. This feature depends on whether the underlying cloud-provider
     * supports specifying the loadBalancerIP when a load balancer is created. This field will be
     * ignored if the cloud-provider does not support the feature.
     */
-  val loadBalancerIP: String = js.native
+  val loadBalancerIP: String
   /**
     * If specified and supported by the platform, this will restrict traffic through the
     * cloud-provider load-balancer will be restricted to the specified client IPs. This field
     * will be ignored if the cloud-provider does not support the feature." More info:
     * https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/
     */
-  val loadBalancerSourceRanges: js.Array[String] = js.native
+  val loadBalancerSourceRanges: js.Array[String]
   /**
     * The list of ports that are exposed by this service. More info:
     * https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
     */
-  val ports: js.Array[ServicePort] = js.native
+  val ports: js.Array[ServicePort]
   /**
     * publishNotReadyAddresses, when set to true, indicates that DNS implementations must publish
     * the notReadyAddresses of subsets for the Endpoints associated with the Service. The default
@@ -86,7 +85,7 @@ trait ServiceSpec extends js.Object {
     * Headless Service to propagate SRV records for its Pods without respect to their readiness
     * for purpose of peer discovery.
     */
-  val publishNotReadyAddresses: Boolean = js.native
+  val publishNotReadyAddresses: Boolean
   /**
     * Route service traffic to pods with label keys and values matching this selector. If empty
     * or not present, the service is assumed to have an external process managing its endpoints,
@@ -94,17 +93,17 @@ trait ServiceSpec extends js.Object {
     * LoadBalancer. Ignored if type is ExternalName. More info:
     * https://kubernetes.io/docs/concepts/services-networking/service/
     */
-  val selector: StringDictionary[String] = js.native
+  val selector: StringDictionary[String]
   /**
     * Supports "ClientIP" and "None". Used to maintain session affinity. Enable client IP based
     * session affinity. Must be ClientIP or None. Defaults to None. More info:
     * https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
     */
-  val sessionAffinity: String = js.native
+  val sessionAffinity: String
   /**
     * sessionAffinityConfig contains the configurations of session affinity.
     */
-  val sessionAffinityConfig: SessionAffinityConfig = js.native
+  val sessionAffinityConfig: SessionAffinityConfig
   /**
     * topologyKeys is a preference-order list of topology keys which implementations of services
     * should use to preferentially sort endpoints when accessing this Service, it can not be used
@@ -116,7 +115,7 @@ trait ServiceSpec extends js.Object {
     * value, if used, only makes sense as the last value in the list. If this is not specified or
     * empty, no topology constraints will be applied.
     */
-  val topologyKeys: js.Array[String] = js.native
+  val topologyKeys: js.Array[String]
   /**
     * type determines how the Service is exposed. Defaults to ClusterIP. Valid options are
     * ExternalName, ClusterIP, NodePort, and LoadBalancer. "ExternalName" maps to the specified
@@ -129,7 +128,7 @@ trait ServiceSpec extends js.Object {
     * the current cloud) which routes to the clusterIP. More info:
     * https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
     */
-  val `type`: String = js.native
+  val `type`: String
 }
 
 object ServiceSpec {
@@ -155,103 +154,5 @@ object ServiceSpec {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceSpec]
   }
-  @scala.inline
-  implicit class ServiceSpecOps[Self <: ServiceSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClusterIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalIPs(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalIPs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExternalTrafficPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("externalTrafficPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHealthCheckNodePort(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheckNodePort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIpFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ipFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerIP(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerIP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerSourceRanges(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerSourceRanges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPorts(value: js.Array[ServicePort]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPublishNotReadyAddresses(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("publishNotReadyAddresses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSelector(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessionAffinity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAffinity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSessionAffinityConfig(value: SessionAffinityConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionAffinityConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTopologyKeys(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topologyKeys")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

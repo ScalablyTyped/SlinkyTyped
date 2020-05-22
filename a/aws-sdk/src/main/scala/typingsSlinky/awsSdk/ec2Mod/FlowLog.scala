@@ -66,185 +66,38 @@ trait FlowLog extends js.Object {
 
 object FlowLog {
   @scala.inline
-  def apply(): FlowLog = {
+  def apply(
+    CreationTime: js.Date = null,
+    DeliverLogsErrorMessage: String = null,
+    DeliverLogsPermissionArn: String = null,
+    DeliverLogsStatus: String = null,
+    FlowLogId: String = null,
+    FlowLogStatus: String = null,
+    LogDestination: String = null,
+    LogDestinationType: LogDestinationType = null,
+    LogFormat: String = null,
+    LogGroupName: String = null,
+    MaxAggregationInterval: js.UndefOr[Integer] = js.undefined,
+    ResourceId: String = null,
+    Tags: TagList = null,
+    TrafficType: TrafficType = null
+  ): FlowLog = {
     val __obj = js.Dynamic.literal()
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (DeliverLogsErrorMessage != null) __obj.updateDynamic("DeliverLogsErrorMessage")(DeliverLogsErrorMessage.asInstanceOf[js.Any])
+    if (DeliverLogsPermissionArn != null) __obj.updateDynamic("DeliverLogsPermissionArn")(DeliverLogsPermissionArn.asInstanceOf[js.Any])
+    if (DeliverLogsStatus != null) __obj.updateDynamic("DeliverLogsStatus")(DeliverLogsStatus.asInstanceOf[js.Any])
+    if (FlowLogId != null) __obj.updateDynamic("FlowLogId")(FlowLogId.asInstanceOf[js.Any])
+    if (FlowLogStatus != null) __obj.updateDynamic("FlowLogStatus")(FlowLogStatus.asInstanceOf[js.Any])
+    if (LogDestination != null) __obj.updateDynamic("LogDestination")(LogDestination.asInstanceOf[js.Any])
+    if (LogDestinationType != null) __obj.updateDynamic("LogDestinationType")(LogDestinationType.asInstanceOf[js.Any])
+    if (LogFormat != null) __obj.updateDynamic("LogFormat")(LogFormat.asInstanceOf[js.Any])
+    if (LogGroupName != null) __obj.updateDynamic("LogGroupName")(LogGroupName.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxAggregationInterval)) __obj.updateDynamic("MaxAggregationInterval")(MaxAggregationInterval.get.asInstanceOf[js.Any])
+    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (TrafficType != null) __obj.updateDynamic("TrafficType")(TrafficType.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowLog]
   }
-  @scala.inline
-  implicit class FlowLogOps[Self <: FlowLog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeliverLogsErrorMessage(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsErrorMessage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeliverLogsErrorMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsErrorMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeliverLogsPermissionArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsPermissionArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeliverLogsPermissionArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsPermissionArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeliverLogsStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeliverLogsStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlowLogId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowLogId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlowLogStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlowLogStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowLogStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogDestination(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogDestination: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestination")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogDestinationType(value: LogDestinationType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestinationType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogDestinationType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestinationType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogFormat(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAggregationInterval(value: Integer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAggregationInterval")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAggregationInterval: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAggregationInterval")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResourceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResourceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrafficType(value: TrafficType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrafficType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

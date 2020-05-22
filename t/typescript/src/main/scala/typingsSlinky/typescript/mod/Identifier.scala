@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
 trait Identifier
   extends PrimaryExpression
      with BindingName
-     with BindingOrAssignmentElement
      with BindingOrAssignmentElementTarget
      with DeclarationName
      with EntityName
@@ -19,7 +18,8 @@ trait Identifier
      with JSDocNamespaceBody
      with JsxTagNameExpression
      with ModuleName
-     with PropertyName {
+     with PropertyName
+     with _BindingOrAssignmentElement {
   var _declarationBrand: js.Any = js.native
   /**
     * Prefer to use `id.unescapedText`. (Note: This is available only in services, not internally to the TypeScript compiler.)

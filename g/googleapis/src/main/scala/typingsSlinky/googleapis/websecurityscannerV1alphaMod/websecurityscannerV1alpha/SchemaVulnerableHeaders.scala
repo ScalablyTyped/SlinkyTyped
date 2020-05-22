@@ -21,41 +21,11 @@ trait SchemaVulnerableHeaders extends js.Object {
 
 object SchemaVulnerableHeaders {
   @scala.inline
-  def apply(): SchemaVulnerableHeaders = {
+  def apply(headers: js.Array[SchemaHeader] = null, missingHeaders: js.Array[SchemaHeader] = null): SchemaVulnerableHeaders = {
     val __obj = js.Dynamic.literal()
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (missingHeaders != null) __obj.updateDynamic("missingHeaders")(missingHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVulnerableHeaders]
   }
-  @scala.inline
-  implicit class SchemaVulnerableHeadersOps[Self <: SchemaVulnerableHeaders] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHeaders(value: js.Array[SchemaHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMissingHeaders(value: js.Array[SchemaHeader]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMissingHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("missingHeaders")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

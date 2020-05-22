@@ -18,41 +18,11 @@ trait SigningPlatformOverrides extends js.Object {
 
 object SigningPlatformOverrides {
   @scala.inline
-  def apply(): SigningPlatformOverrides = {
+  def apply(signingConfiguration: SigningConfigurationOverrides = null, signingImageFormat: ImageFormat = null): SigningPlatformOverrides = {
     val __obj = js.Dynamic.literal()
+    if (signingConfiguration != null) __obj.updateDynamic("signingConfiguration")(signingConfiguration.asInstanceOf[js.Any])
+    if (signingImageFormat != null) __obj.updateDynamic("signingImageFormat")(signingImageFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[SigningPlatformOverrides]
   }
-  @scala.inline
-  implicit class SigningPlatformOverridesOps[Self <: SigningPlatformOverrides] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSigningConfiguration(value: SigningConfigurationOverrides): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigningImageFormat(value: ImageFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingImageFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigningImageFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signingImageFormat")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

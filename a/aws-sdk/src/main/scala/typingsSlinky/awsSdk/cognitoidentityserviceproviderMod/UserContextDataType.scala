@@ -14,29 +14,10 @@ trait UserContextDataType extends js.Object {
 
 object UserContextDataType {
   @scala.inline
-  def apply(): UserContextDataType = {
+  def apply(EncodedData: StringType = null): UserContextDataType = {
     val __obj = js.Dynamic.literal()
+    if (EncodedData != null) __obj.updateDynamic("EncodedData")(EncodedData.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserContextDataType]
   }
-  @scala.inline
-  implicit class UserContextDataTypeOps[Self <: UserContextDataType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEncodedData(value: StringType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEncodedData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodedData")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

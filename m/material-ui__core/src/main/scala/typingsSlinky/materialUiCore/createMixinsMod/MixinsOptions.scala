@@ -14,41 +14,14 @@ trait MixinsOptions extends js.Object {
 
 object MixinsOptions {
   @scala.inline
-  def apply(): MixinsOptions = {
+  def apply(
+    gutters: /* styles */ js.UndefOr[CSSProperties] => CSSProperties = null,
+    toolbar: CSSProperties = null
+  ): MixinsOptions = {
     val __obj = js.Dynamic.literal()
+    if (gutters != null) __obj.updateDynamic("gutters")(js.Any.fromFunction1(gutters))
+    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
     __obj.asInstanceOf[MixinsOptions]
   }
-  @scala.inline
-  implicit class MixinsOptionsOps[Self <: MixinsOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGutters(value: /* styles */ js.UndefOr[CSSProperties] => CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutters")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutGutters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToolbar(value: CSSProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToolbar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

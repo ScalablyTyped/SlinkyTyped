@@ -15,255 +15,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait NavigationDrawerConfig extends js.Object {
-  var contentComponent: js.UndefOr[ReactComponentClass[DrawerContentComponentProps]] = js.native
-  var drawerBackgroundColor: js.UndefOr[ThemedColor] = js.native
-  var drawerLockMode: js.UndefOr[DrawerLockMode] = js.native
-  var drawerPosition: js.UndefOr[left | right] = js.native
-  var drawerType: js.UndefOr[front | back | slide] = js.native
-  var drawerWidth: js.UndefOr[Double | js.Function0[Double]] = js.native
-  var edgeWidth: js.UndefOr[Double] = js.native
-  var hideStatusBar: js.UndefOr[Boolean] = js.native
-  var keyboardDismissMode: js.UndefOr[none | `on-drag`] = js.native
-  var minSwipeDistance: js.UndefOr[Double] = js.native
-  var overlayColor: js.UndefOr[ThemedColor] = js.native
-  var screenContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var statusBarAnimation: js.UndefOr[slide | none | fade] = js.native
-  var swipeDistanceThreshold: js.UndefOr[Double] = js.native
-  var swipeEdgeWidth: js.UndefOr[Double] = js.native
-  var swipeVelocityThreshold: js.UndefOr[Double] = js.native
+  var contentComponent: js.UndefOr[ReactComponentClass[DrawerContentComponentProps]] = js.undefined
+  var drawerBackgroundColor: js.UndefOr[ThemedColor] = js.undefined
+  var drawerLockMode: js.UndefOr[DrawerLockMode] = js.undefined
+  var drawerPosition: js.UndefOr[left | right] = js.undefined
+  var drawerType: js.UndefOr[front | back | slide] = js.undefined
+  var drawerWidth: js.UndefOr[Double | js.Function0[Double]] = js.undefined
+  var edgeWidth: js.UndefOr[Double] = js.undefined
+  var hideStatusBar: js.UndefOr[Boolean] = js.undefined
+  var keyboardDismissMode: js.UndefOr[none | `on-drag`] = js.undefined
+  var minSwipeDistance: js.UndefOr[Double] = js.undefined
+  var overlayColor: js.UndefOr[ThemedColor] = js.undefined
+  var screenContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var statusBarAnimation: js.UndefOr[slide | none | fade] = js.undefined
+  var swipeDistanceThreshold: js.UndefOr[Double] = js.undefined
+  var swipeEdgeWidth: js.UndefOr[Double] = js.undefined
+  var swipeVelocityThreshold: js.UndefOr[Double] = js.undefined
 }
 
 object NavigationDrawerConfig {
   @scala.inline
-  def apply(): NavigationDrawerConfig = {
+  def apply(
+    contentComponent: ReactComponentClass[DrawerContentComponentProps] = null,
+    drawerBackgroundColor: ThemedColor = null,
+    drawerLockMode: DrawerLockMode = null,
+    drawerPosition: left | right = null,
+    drawerType: front | back | slide = null,
+    drawerWidth: Double | js.Function0[Double] = null,
+    edgeWidth: js.UndefOr[Double] = js.undefined,
+    hideStatusBar: js.UndefOr[Boolean] = js.undefined,
+    keyboardDismissMode: none | `on-drag` = null,
+    minSwipeDistance: js.UndefOr[Double] = js.undefined,
+    overlayColor: ThemedColor = null,
+    screenContainerStyle: js.UndefOr[Null | StyleProp[ViewStyle]] = js.undefined,
+    statusBarAnimation: slide | none | fade = null,
+    swipeDistanceThreshold: js.UndefOr[Double] = js.undefined,
+    swipeEdgeWidth: js.UndefOr[Double] = js.undefined,
+    swipeVelocityThreshold: js.UndefOr[Double] = js.undefined
+  ): NavigationDrawerConfig = {
     val __obj = js.Dynamic.literal()
+    if (contentComponent != null) __obj.updateDynamic("contentComponent")(contentComponent.asInstanceOf[js.Any])
+    if (drawerBackgroundColor != null) __obj.updateDynamic("drawerBackgroundColor")(drawerBackgroundColor.asInstanceOf[js.Any])
+    if (drawerLockMode != null) __obj.updateDynamic("drawerLockMode")(drawerLockMode.asInstanceOf[js.Any])
+    if (drawerPosition != null) __obj.updateDynamic("drawerPosition")(drawerPosition.asInstanceOf[js.Any])
+    if (drawerType != null) __obj.updateDynamic("drawerType")(drawerType.asInstanceOf[js.Any])
+    if (drawerWidth != null) __obj.updateDynamic("drawerWidth")(drawerWidth.asInstanceOf[js.Any])
+    if (!js.isUndefined(edgeWidth)) __obj.updateDynamic("edgeWidth")(edgeWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideStatusBar)) __obj.updateDynamic("hideStatusBar")(hideStatusBar.get.asInstanceOf[js.Any])
+    if (keyboardDismissMode != null) __obj.updateDynamic("keyboardDismissMode")(keyboardDismissMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(minSwipeDistance)) __obj.updateDynamic("minSwipeDistance")(minSwipeDistance.get.asInstanceOf[js.Any])
+    if (overlayColor != null) __obj.updateDynamic("overlayColor")(overlayColor.asInstanceOf[js.Any])
+    if (!js.isUndefined(screenContainerStyle)) __obj.updateDynamic("screenContainerStyle")(screenContainerStyle.asInstanceOf[js.Any])
+    if (statusBarAnimation != null) __obj.updateDynamic("statusBarAnimation")(statusBarAnimation.asInstanceOf[js.Any])
+    if (!js.isUndefined(swipeDistanceThreshold)) __obj.updateDynamic("swipeDistanceThreshold")(swipeDistanceThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(swipeEdgeWidth)) __obj.updateDynamic("swipeEdgeWidth")(swipeEdgeWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(swipeVelocityThreshold)) __obj.updateDynamic("swipeVelocityThreshold")(swipeVelocityThreshold.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationDrawerConfig]
   }
-  @scala.inline
-  implicit class NavigationDrawerConfigOps[Self <: NavigationDrawerConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContentComponentFunctionComponent(value: ReactComponentClass[DrawerContentComponentProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentComponentComponentClass(value: ReactComponentClass[DrawerContentComponentProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContentComponent(value: ReactComponentClass[DrawerContentComponentProps]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContentComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("contentComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawerBackgroundColor(value: ThemedColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerBackgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawerBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerBackgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawerLockMode(value: DrawerLockMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerLockMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawerLockMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerLockMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawerPosition(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawerPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawerType(value: front | back | slide): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawerType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDrawerWidthFunction0(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerWidth")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDrawerWidth(value: Double | js.Function0[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDrawerWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drawerWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideStatusBar(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideStatusBar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideStatusBar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideStatusBar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboardDismissMode(value: none | `on-drag`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardDismissMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboardDismissMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardDismissMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinSwipeDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSwipeDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinSwipeDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minSwipeDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlayColor(value: ThemedColor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlayColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenContainerStyle(value: StyleProp[ViewStyle]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenContainerStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenContainerStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenContainerStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenContainerStyleNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenContainerStyle")(null)
-        ret
-    }
-    @scala.inline
-    def withStatusBarAnimation(value: slide | none | fade): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusBarAnimation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatusBarAnimation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("statusBarAnimation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwipeDistanceThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeDistanceThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwipeDistanceThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeDistanceThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwipeEdgeWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEdgeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwipeEdgeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEdgeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSwipeVelocityThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeVelocityThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSwipeVelocityThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeVelocityThreshold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

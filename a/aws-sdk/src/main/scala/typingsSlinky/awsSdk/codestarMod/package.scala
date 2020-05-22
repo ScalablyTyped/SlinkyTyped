@@ -49,4 +49,10 @@ package object codestarMod {
   type UserArn = java.lang.String
   type UserProfileDisplayName = java.lang.String
   type UserProfilesList = js.Array[typingsSlinky.awsSdk.codestarMod.UserProfileSummary]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2017-04-19`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.codestarMod._apiVersion | java.lang.String
 }

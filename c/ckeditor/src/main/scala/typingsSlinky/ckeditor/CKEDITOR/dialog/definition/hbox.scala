@@ -1,91 +1,62 @@
 package typingsSlinky.ckeditor.CKEDITOR.dialog.definition
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.ckeditor.CKEDITOR.plugins.widget
+import typingsSlinky.ckeditor.CKEDITOR.style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait hbox extends uiElement {
-  var children: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement]] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var padding: js.UndefOr[Double] = js.native
-  var validate: js.UndefOr[js.Function0[Boolean]] = js.native
-  var widths: js.UndefOr[js.Array[Double]] = js.native
+  var children: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement]] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var padding: js.UndefOr[Double] = js.undefined
+  var validate: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var widths: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object hbox {
   @scala.inline
-  def apply(): hbox = {
+  def apply(
+    align: String = null,
+    children: js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement] = null,
+    className: String = null,
+    commit: /* widget */ widget => Unit = null,
+    height: js.UndefOr[Double] = js.undefined,
+    id: String = null,
+    label: String = null,
+    onHide: /* elem */ typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement => Unit = null,
+    onLoad: /* elem */ typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement => Unit = null,
+    onShow: /* elem */ typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement => Unit = null,
+    padding: js.UndefOr[Double] = js.undefined,
+    requiredContent: String | StringDictionary[js.Any] | style = null,
+    setup: /* widget */ widget => Unit = null,
+    style: String = null,
+    title: String = null,
+    `type`: String = null,
+    validate: () => Boolean = null,
+    widths: js.Array[Double] = null
+  ): hbox = {
     val __obj = js.Dynamic.literal()
+    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
+    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (commit != null) __obj.updateDynamic("commit")(js.Any.fromFunction1(commit))
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
+    if (!js.isUndefined(padding)) __obj.updateDynamic("padding")(padding.get.asInstanceOf[js.Any])
+    if (requiredContent != null) __obj.updateDynamic("requiredContent")(requiredContent.asInstanceOf[js.Any])
+    if (setup != null) __obj.updateDynamic("setup")(js.Any.fromFunction1(setup))
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction0(validate))
+    if (widths != null) __obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
     __obj.asInstanceOf[hbox]
   }
-  @scala.inline
-  implicit class hboxOps[Self <: hbox] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPadding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValidate(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutValidate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidths(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widths")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidths: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widths")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

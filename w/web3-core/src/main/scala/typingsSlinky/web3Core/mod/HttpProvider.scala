@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class HttpProvider protected ()
   extends HttpProviderBase
-     with provider {
+     with _provider {
   def this(host: String) = this()
   def this(host: String, options: HttpProviderOptions) = this()
 }

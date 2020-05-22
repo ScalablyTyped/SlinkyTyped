@@ -8,5 +8,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FAXCOMEXLib.FaxRecipient")
 @js.native
 class FaxRecipient protected ()
-  extends typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxRecipient
+  extends typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxRecipient {
+  /* CompleteClass */
+  @JSName("FAXCOMEXLib.FaxRecipient_typekey")
+  override var FAXCOMEXLibDotFaxRecipient_typekey: typingsSlinky.activexFaxcomexlib.FAXCOMEXLib.FaxRecipient = js.native
+  /** Recipient's fax number */
+  /* CompleteClass */
+  override var FaxNumber: String = js.native
+  /** Recipient's name */
+  /* CompleteClass */
+  override var Name: String = js.native
+}
 

@@ -5,50 +5,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TileMediaProps
   extends /* x */ StringDictionary[js.Any] {
-  var className: js.UndefOr[String] = js.native
-  var productTile: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.undefined
+  var productTile: js.UndefOr[Boolean] = js.undefined
 }
 
 object TileMediaProps {
   @scala.inline
-  def apply(): TileMediaProps = {
+  def apply(
+    StringDictionary: /* name */ StringDictionary[js.Any] = null,
+    className: String = null,
+    productTile: js.UndefOr[Boolean] = js.undefined
+  ): TileMediaProps = {
     val __obj = js.Dynamic.literal()
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(productTile)) __obj.updateDynamic("productTile")(productTile.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TileMediaProps]
   }
-  @scala.inline
-  implicit class TileMediaPropsOps[Self <: TileMediaProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClassName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProductTile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productTile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProductTile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("productTile")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

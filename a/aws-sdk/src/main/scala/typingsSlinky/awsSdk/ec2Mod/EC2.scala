@@ -809,12 +809,12 @@ trait EC2 extends Service {
   def createKeyPair(params: CreateKeyPairRequest): Request[KeyPair, AWSError] = js.native
   def createKeyPair(params: CreateKeyPairRequest, callback: js.Function2[/* err */ AWSError, /* data */ KeyPair, Unit]): Request[KeyPair, AWSError] = js.native
   /**
-    * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify a launch template instead of providing the launch parameters in the request.
+    * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify a launch template instead of providing the launch parameters in the request. For more information, see Launching an instance from a launch templatein the Amazon Elastic Compute Cloud User Guide.
     */
   def createLaunchTemplate(): Request[CreateLaunchTemplateResult, AWSError] = js.native
   def createLaunchTemplate(callback: js.Function2[/* err */ AWSError, /* data */ CreateLaunchTemplateResult, Unit]): Request[CreateLaunchTemplateResult, AWSError] = js.native
   /**
-    * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify a launch template instead of providing the launch parameters in the request.
+    * Creates a launch template. A launch template contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify a launch template instead of providing the launch parameters in the request. For more information, see Launching an instance from a launch templatein the Amazon Elastic Compute Cloud User Guide.
     */
   def createLaunchTemplate(params: CreateLaunchTemplateRequest): Request[CreateLaunchTemplateResult, AWSError] = js.native
   def createLaunchTemplate(
@@ -822,12 +822,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ CreateLaunchTemplateResult, Unit]
   ): Request[CreateLaunchTemplateResult, AWSError] = js.native
   /**
-    * Creates a new version for a launch template. You can specify an existing version of launch template from which to base the new version. Launch template versions are numbered in the order in which they are created. You cannot specify, change, or replace the numbering of launch template versions.
+    * Creates a new version for a launch template. You can specify an existing version of launch template from which to base the new version. Launch template versions are numbered in the order in which they are created. You cannot specify, change, or replace the numbering of launch template versions. For more information, see Managing launch template versionsin the Amazon Elastic Compute Cloud User Guide.
     */
   def createLaunchTemplateVersion(): Request[CreateLaunchTemplateVersionResult, AWSError] = js.native
   def createLaunchTemplateVersion(callback: js.Function2[/* err */ AWSError, /* data */ CreateLaunchTemplateVersionResult, Unit]): Request[CreateLaunchTemplateVersionResult, AWSError] = js.native
   /**
-    * Creates a new version for a launch template. You can specify an existing version of launch template from which to base the new version. Launch template versions are numbered in the order in which they are created. You cannot specify, change, or replace the numbering of launch template versions.
+    * Creates a new version for a launch template. You can specify an existing version of launch template from which to base the new version. Launch template versions are numbered in the order in which they are created. You cannot specify, change, or replace the numbering of launch template versions. For more information, see Managing launch template versionsin the Amazon Elastic Compute Cloud User Guide.
     */
   def createLaunchTemplateVersion(params: CreateLaunchTemplateVersionRequest): Request[CreateLaunchTemplateVersionResult, AWSError] = js.native
   def createLaunchTemplateVersion(
@@ -940,16 +940,16 @@ trait EC2 extends Service {
   /**
     * Creates a placement group in which to launch instances. The strategy of the placement group determines how the instances are organized within the group.  A cluster placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput. A spread placement group places instances on distinct hardware. A partition placement group places groups of instances in different partitions, where instances in one partition do not share the same hardware with instances in another partition. For more information, see Placement Groups in the Amazon Elastic Compute Cloud User Guide.
     */
-  def createPlacementGroup(): Request[js.Object, AWSError] = js.native
-  def createPlacementGroup(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  def createPlacementGroup(): Request[CreatePlacementGroupResult, AWSError] = js.native
+  def createPlacementGroup(callback: js.Function2[/* err */ AWSError, /* data */ CreatePlacementGroupResult, Unit]): Request[CreatePlacementGroupResult, AWSError] = js.native
   /**
     * Creates a placement group in which to launch instances. The strategy of the placement group determines how the instances are organized within the group.  A cluster placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput. A spread placement group places instances on distinct hardware. A partition placement group places groups of instances in different partitions, where instances in one partition do not share the same hardware with instances in another partition. For more information, see Placement Groups in the Amazon Elastic Compute Cloud User Guide.
     */
-  def createPlacementGroup(params: CreatePlacementGroupRequest): Request[js.Object, AWSError] = js.native
+  def createPlacementGroup(params: CreatePlacementGroupRequest): Request[CreatePlacementGroupResult, AWSError] = js.native
   def createPlacementGroup(
     params: CreatePlacementGroupRequest,
-    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
-  ): Request[js.Object, AWSError] = js.native
+    callback: js.Function2[/* err */ AWSError, /* data */ CreatePlacementGroupResult, Unit]
+  ): Request[CreatePlacementGroupResult, AWSError] = js.native
   /**
     * Creates a listing for Amazon EC2 Standard Reserved Instances to be sold in the Reserved Instance Marketplace. You can submit one Standard Reserved Instance listing at a time. To get a list of your Standard Reserved Instances, you can use the DescribeReservedInstances operation.  Only Standard Reserved Instances can be sold in the Reserved Instance Marketplace. Convertible Reserved Instances cannot be sold.  The Reserved Instance Marketplace matches sellers who want to resell Standard Reserved Instance capacity that they no longer need with buyers who want to purchase additional capacity. Reserved Instances bought and sold through the Reserved Instance Marketplace work like any other Reserved Instances. To sell your Standard Reserved Instances, you must first register as a seller in the Reserved Instance Marketplace. After completing the registration process, you can create a Reserved Instance Marketplace listing of some or all of your Standard Reserved Instances, and specify the upfront price to receive for them. Your Standard Reserved Instance listings then become available for purchase. To view the details of your Standard Reserved Instance listing, you can use the DescribeReservedInstancesListings operation. For more information, see Reserved Instance Marketplace in the Amazon Elastic Compute Cloud User Guide.
     */
@@ -1904,12 +1904,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteVpcPeeringConnectionResult, Unit]
   ): Request[DeleteVpcPeeringConnectionResult, AWSError] = js.native
   /**
-    * Deletes the specified VPN connection. If you're deleting the VPC and its associated components, we recommend that you detach the virtual private gateway from the VPC and delete the VPC before deleting the VPN connection. If you believe that the tunnel credentials for your VPN connection have been compromised, you can delete the VPN connection and create a new one that has new keys, without needing to delete the VPC or virtual private gateway. If you create a new VPN connection, you must reconfigure the customer gateway using the new configuration information returned with the new VPN connection ID.
+    * Deletes the specified VPN connection. If you're deleting the VPC and its associated components, we recommend that you detach the virtual private gateway from the VPC and delete the VPC before deleting the VPN connection. If you believe that the tunnel credentials for your VPN connection have been compromised, you can delete the VPN connection and create a new one that has new keys, without needing to delete the VPC or virtual private gateway. If you create a new VPN connection, you must reconfigure the customer gateway device using the new configuration information returned with the new VPN connection ID. For certificate-based authentication, delete all AWS Certificate Manager (ACM) private certificates used for the AWS-side tunnel endpoints for the VPN connection before deleting the VPN connection.
     */
   def deleteVpnConnection(): Request[js.Object, AWSError] = js.native
   def deleteVpnConnection(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the specified VPN connection. If you're deleting the VPC and its associated components, we recommend that you detach the virtual private gateway from the VPC and delete the VPC before deleting the VPN connection. If you believe that the tunnel credentials for your VPN connection have been compromised, you can delete the VPN connection and create a new one that has new keys, without needing to delete the VPC or virtual private gateway. If you create a new VPN connection, you must reconfigure the customer gateway using the new configuration information returned with the new VPN connection ID.
+    * Deletes the specified VPN connection. If you're deleting the VPC and its associated components, we recommend that you detach the virtual private gateway from the VPC and delete the VPC before deleting the VPN connection. If you believe that the tunnel credentials for your VPN connection have been compromised, you can delete the VPN connection and create a new one that has new keys, without needing to delete the VPC or virtual private gateway. If you create a new VPN connection, you must reconfigure the customer gateway device using the new configuration information returned with the new VPN connection ID. For certificate-based authentication, delete all AWS Certificate Manager (ACM) private certificates used for the AWS-side tunnel endpoints for the VPN connection before deleting the VPN connection.
     */
   def deleteVpnConnection(params: DeleteVpnConnectionRequest): Request[js.Object, AWSError] = js.native
   def deleteVpnConnection(
@@ -1968,6 +1968,29 @@ trait EC2 extends Service {
     params: DeregisterImageRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  /**
+    * Deregisters tag keys to prevent tags that have the specified tag keys from being included in scheduled event notifications for resources in the Region.
+    */
+  def deregisterInstanceEventNotificationAttributes(): Request[DeregisterInstanceEventNotificationAttributesResult, AWSError] = js.native
+  def deregisterInstanceEventNotificationAttributes(
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ DeregisterInstanceEventNotificationAttributesResult, 
+      Unit
+    ]
+  ): Request[DeregisterInstanceEventNotificationAttributesResult, AWSError] = js.native
+  /**
+    * Deregisters tag keys to prevent tags that have the specified tag keys from being included in scheduled event notifications for resources in the Region.
+    */
+  def deregisterInstanceEventNotificationAttributes(params: DeregisterInstanceEventNotificationAttributesRequest): Request[DeregisterInstanceEventNotificationAttributesResult, AWSError] = js.native
+  def deregisterInstanceEventNotificationAttributes(
+    params: DeregisterInstanceEventNotificationAttributesRequest,
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ DeregisterInstanceEventNotificationAttributesResult, 
+      Unit
+    ]
+  ): Request[DeregisterInstanceEventNotificationAttributesResult, AWSError] = js.native
   /**
     * Deregisters the specified members (network interfaces) from the transit gateway multicast group.
     */
@@ -2544,6 +2567,29 @@ trait EC2 extends Service {
     params: DescribeInstanceCreditSpecificationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeInstanceCreditSpecificationsResult, Unit]
   ): Request[DescribeInstanceCreditSpecificationsResult, AWSError] = js.native
+  /**
+    * Describes the tag keys that are registered to appear in scheduled event notifications for resources in the current Region.
+    */
+  def describeInstanceEventNotificationAttributes(): Request[DescribeInstanceEventNotificationAttributesResult, AWSError] = js.native
+  def describeInstanceEventNotificationAttributes(
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ DescribeInstanceEventNotificationAttributesResult, 
+      Unit
+    ]
+  ): Request[DescribeInstanceEventNotificationAttributesResult, AWSError] = js.native
+  /**
+    * Describes the tag keys that are registered to appear in scheduled event notifications for resources in the current Region.
+    */
+  def describeInstanceEventNotificationAttributes(params: DescribeInstanceEventNotificationAttributesRequest): Request[DescribeInstanceEventNotificationAttributesResult, AWSError] = js.native
+  def describeInstanceEventNotificationAttributes(
+    params: DescribeInstanceEventNotificationAttributesRequest,
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ DescribeInstanceEventNotificationAttributesResult, 
+      Unit
+    ]
+  ): Request[DescribeInstanceEventNotificationAttributesResult, AWSError] = js.native
   /**
     * Describes the status of the specified instances or all of your instances. By default, only running instances are described, unless you specifically indicate to return the status of all instances. Instance status includes the following components:    Status checks - Amazon EC2 performs status checks on running EC2 instances to identify hardware and software issues. For more information, see Status Checks for Your Instances and Troubleshooting Instances with Failed Status Checks in the Amazon Elastic Compute Cloud User Guide.    Scheduled events - Amazon EC2 can schedule events (such as reboot, stop, or terminate) for your instances related to hardware issues, software updates, or system maintenance. For more information, see Scheduled Events for Your Instances in the Amazon Elastic Compute Cloud User Guide.    Instance state - You can manage your instances from the moment you launch them through their termination. For more information, see Instance Lifecycle in the Amazon Elastic Compute Cloud User Guide.  
     */
@@ -3695,12 +3741,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DisableVpcClassicLinkResult, Unit]
   ): Request[DisableVpcClassicLinkResult, AWSError] = js.native
   /**
-    * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide.
+    * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide. You must specify a VPC ID in the request.
     */
   def disableVpcClassicLinkDnsSupport(): Request[DisableVpcClassicLinkDnsSupportResult, AWSError] = js.native
   def disableVpcClassicLinkDnsSupport(callback: js.Function2[/* err */ AWSError, /* data */ DisableVpcClassicLinkDnsSupportResult, Unit]): Request[DisableVpcClassicLinkDnsSupportResult, AWSError] = js.native
   /**
-    * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide.
+    * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide. You must specify a VPC ID in the request.
     */
   def disableVpcClassicLinkDnsSupport(params: DisableVpcClassicLinkDnsSupportRequest): Request[DisableVpcClassicLinkDnsSupportResult, AWSError] = js.native
   def disableVpcClassicLinkDnsSupport(
@@ -3749,12 +3795,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DisassociateIamInstanceProfileResult, Unit]
   ): Request[DisassociateIamInstanceProfileResult, AWSError] = js.native
   /**
-    * Disassociates a subnet from a route table. After you perform this action, the subnet no longer uses the routes in the route table. Instead, it uses the routes in the VPC's main route table. For more information about route tables, see Route Tables in the Amazon Virtual Private Cloud User Guide.
+    * Disassociates a subnet or gateway from a route table. After you perform this action, the subnet no longer uses the routes in the route table. Instead, it uses the routes in the VPC's main route table. For more information about route tables, see Route Tables in the Amazon Virtual Private Cloud User Guide.
     */
   def disassociateRouteTable(): Request[js.Object, AWSError] = js.native
   def disassociateRouteTable(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Disassociates a subnet from a route table. After you perform this action, the subnet no longer uses the routes in the route table. Instead, it uses the routes in the VPC's main route table. For more information about route tables, see Route Tables in the Amazon Virtual Private Cloud User Guide.
+    * Disassociates a subnet or gateway from a route table. After you perform this action, the subnet no longer uses the routes in the route table. Instead, it uses the routes in the VPC's main route table. For more information about route tables, see Route Tables in the Amazon Virtual Private Cloud User Guide.
     */
   def disassociateRouteTable(params: DisassociateRouteTableRequest): Request[js.Object, AWSError] = js.native
   def disassociateRouteTable(
@@ -3898,12 +3944,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ EnableVpcClassicLinkResult, Unit]
   ): Request[EnableVpcClassicLinkResult, AWSError] = js.native
   /**
-    * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly, the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic instance. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide.
+    * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly, the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic instance. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide. You must specify a VPC ID in the request.
     */
   def enableVpcClassicLinkDnsSupport(): Request[EnableVpcClassicLinkDnsSupportResult, AWSError] = js.native
   def enableVpcClassicLinkDnsSupport(callback: js.Function2[/* err */ AWSError, /* data */ EnableVpcClassicLinkDnsSupportResult, Unit]): Request[EnableVpcClassicLinkDnsSupportResult, AWSError] = js.native
   /**
-    * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly, the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic instance. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide.
+    * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly, the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic instance. For more information, see ClassicLink in the Amazon Elastic Compute Cloud User Guide. You must specify a VPC ID in the request.
     */
   def enableVpcClassicLinkDnsSupport(params: EnableVpcClassicLinkDnsSupportRequest): Request[EnableVpcClassicLinkDnsSupportResult, AWSError] = js.native
   def enableVpcClassicLinkDnsSupport(
@@ -4785,12 +4831,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpcTenancyResult, Unit]
   ): Request[ModifyVpcTenancyResult, AWSError] = js.native
   /**
-    * Modifies the target gateway of an AWS Site-to-Site VPN connection. The following migration options are available:   An existing virtual private gateway to a new virtual private gateway   An existing virtual private gateway to a transit gateway   An existing transit gateway to a new transit gateway   An existing transit gateway to a virtual private gateway   Before you perform the migration to the new gateway, you must configure the new gateway. Use CreateVpnGateway to create a virtual private gateway, or CreateTransitGateway to create a transit gateway. This step is required when you migrate from a virtual private gateway with static routes to a transit gateway.  You must delete the static routes before you migrate to the new gateway. Keep a copy of the static route before you delete it. You will need to add back these routes to the transit gateway after the VPN connection migration is complete. After you migrate to the new gateway, you might need to modify your VPC route table. Use CreateRoute and DeleteRoute to make the changes described in VPN Gateway Target Modification Required VPC Route Table Updates in the AWS Site-to-Site VPN User Guide.  When the new gateway is a transit gateway, modify the transit gateway route table to allow traffic between the VPC and the AWS Site-to-Site VPN connection. Use CreateTransitGatewayRoute to add the routes.  If you deleted VPN static routes, you must add the static routes to the transit gateway route table. After you perform this operation, the AWS VPN endpoint's IP addresses on the AWS side and the tunnel options remain intact. Your AWS Site-to-Site VPN connection will be temporarily unavailable for a brief period while we provision the new endpoints.
+    * Modifies the customer gateway or the target gateway of an AWS Site-to-Site VPN connection. To modify the target gateway, the following migration options are available:   An existing virtual private gateway to a new virtual private gateway   An existing virtual private gateway to a transit gateway   An existing transit gateway to a new transit gateway   An existing transit gateway to a virtual private gateway   Before you perform the migration to the new gateway, you must configure the new gateway. Use CreateVpnGateway to create a virtual private gateway, or CreateTransitGateway to create a transit gateway. This step is required when you migrate from a virtual private gateway with static routes to a transit gateway.  You must delete the static routes before you migrate to the new gateway. Keep a copy of the static route before you delete it. You will need to add back these routes to the transit gateway after the VPN connection migration is complete. After you migrate to the new gateway, you might need to modify your VPC route table. Use CreateRoute and DeleteRoute to make the changes described in VPN Gateway Target Modification Required VPC Route Table Updates in the AWS Site-to-Site VPN User Guide.  When the new gateway is a transit gateway, modify the transit gateway route table to allow traffic between the VPC and the AWS Site-to-Site VPN connection. Use CreateTransitGatewayRoute to add the routes.  If you deleted VPN static routes, you must add the static routes to the transit gateway route table. After you perform this operation, the AWS VPN endpoint's IP addresses on the AWS side and the tunnel options remain intact. Your AWS Site-to-Site VPN connection will be temporarily unavailable for a brief period while we provision the new endpoints.
     */
   def modifyVpnConnection(): Request[ModifyVpnConnectionResult, AWSError] = js.native
   def modifyVpnConnection(callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpnConnectionResult, Unit]): Request[ModifyVpnConnectionResult, AWSError] = js.native
   /**
-    * Modifies the target gateway of an AWS Site-to-Site VPN connection. The following migration options are available:   An existing virtual private gateway to a new virtual private gateway   An existing virtual private gateway to a transit gateway   An existing transit gateway to a new transit gateway   An existing transit gateway to a virtual private gateway   Before you perform the migration to the new gateway, you must configure the new gateway. Use CreateVpnGateway to create a virtual private gateway, or CreateTransitGateway to create a transit gateway. This step is required when you migrate from a virtual private gateway with static routes to a transit gateway.  You must delete the static routes before you migrate to the new gateway. Keep a copy of the static route before you delete it. You will need to add back these routes to the transit gateway after the VPN connection migration is complete. After you migrate to the new gateway, you might need to modify your VPC route table. Use CreateRoute and DeleteRoute to make the changes described in VPN Gateway Target Modification Required VPC Route Table Updates in the AWS Site-to-Site VPN User Guide.  When the new gateway is a transit gateway, modify the transit gateway route table to allow traffic between the VPC and the AWS Site-to-Site VPN connection. Use CreateTransitGatewayRoute to add the routes.  If you deleted VPN static routes, you must add the static routes to the transit gateway route table. After you perform this operation, the AWS VPN endpoint's IP addresses on the AWS side and the tunnel options remain intact. Your AWS Site-to-Site VPN connection will be temporarily unavailable for a brief period while we provision the new endpoints.
+    * Modifies the customer gateway or the target gateway of an AWS Site-to-Site VPN connection. To modify the target gateway, the following migration options are available:   An existing virtual private gateway to a new virtual private gateway   An existing virtual private gateway to a transit gateway   An existing transit gateway to a new transit gateway   An existing transit gateway to a virtual private gateway   Before you perform the migration to the new gateway, you must configure the new gateway. Use CreateVpnGateway to create a virtual private gateway, or CreateTransitGateway to create a transit gateway. This step is required when you migrate from a virtual private gateway with static routes to a transit gateway.  You must delete the static routes before you migrate to the new gateway. Keep a copy of the static route before you delete it. You will need to add back these routes to the transit gateway after the VPN connection migration is complete. After you migrate to the new gateway, you might need to modify your VPC route table. Use CreateRoute and DeleteRoute to make the changes described in VPN Gateway Target Modification Required VPC Route Table Updates in the AWS Site-to-Site VPN User Guide.  When the new gateway is a transit gateway, modify the transit gateway route table to allow traffic between the VPC and the AWS Site-to-Site VPN connection. Use CreateTransitGatewayRoute to add the routes.  If you deleted VPN static routes, you must add the static routes to the transit gateway route table. After you perform this operation, the AWS VPN endpoint's IP addresses on the AWS side and the tunnel options remain intact. Your AWS Site-to-Site VPN connection will be temporarily unavailable for a brief period while we provision the new endpoints.
     */
   def modifyVpnConnection(params: ModifyVpnConnectionRequest): Request[ModifyVpnConnectionResult, AWSError] = js.native
   def modifyVpnConnection(
@@ -4929,6 +4975,29 @@ trait EC2 extends Service {
     params: RegisterImageRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ RegisterImageResult, Unit]
   ): Request[RegisterImageResult, AWSError] = js.native
+  /**
+    * Registers a set of tag keys to include in scheduled event notifications for your resources.  To remove tags, use .
+    */
+  def registerInstanceEventNotificationAttributes(): Request[RegisterInstanceEventNotificationAttributesResult, AWSError] = js.native
+  def registerInstanceEventNotificationAttributes(
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ RegisterInstanceEventNotificationAttributesResult, 
+      Unit
+    ]
+  ): Request[RegisterInstanceEventNotificationAttributesResult, AWSError] = js.native
+  /**
+    * Registers a set of tag keys to include in scheduled event notifications for your resources.  To remove tags, use .
+    */
+  def registerInstanceEventNotificationAttributes(params: RegisterInstanceEventNotificationAttributesRequest): Request[RegisterInstanceEventNotificationAttributesResult, AWSError] = js.native
+  def registerInstanceEventNotificationAttributes(
+    params: RegisterInstanceEventNotificationAttributesRequest,
+    callback: js.Function2[
+      /* err */ AWSError, 
+      /* data */ RegisterInstanceEventNotificationAttributesResult, 
+      Unit
+    ]
+  ): Request[RegisterInstanceEventNotificationAttributesResult, AWSError] = js.native
   /**
     * Registers members (network interfaces) with the transit gateway multicast group. A member is a network interface associated with a supported EC2 instance that receives multicast traffic. For information about supported instances, see Multicast Consideration in Amazon VPC Transit Gateways. After you add the members, use SearchTransitGatewayMulticastGroups to verify that the members were added to the transit gateway multicast group.
     */
@@ -5307,12 +5376,12 @@ trait EC2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   /**
-    * Launches the specified number of instances using an AMI for which you have permissions.  You can specify a number of options, or leave the default options. The following rules apply:   [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a default VPC, you must specify a subnet ID in the request.   [EC2-Classic] If don't specify an Availability Zone, we choose one for you.   Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a subnet ID, the request fails. For more information, see Instance Types Available Only in a VPC.   [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we choose one from the IPv4 range of your subnet.   Not all instance types support IPv6 addresses. For more information, see Instance Types.   If you don't specify a security group ID, we use the default security group. For more information, see Security Groups.   If any of the AMIs have a product code attached for which the user has not subscribed, the request fails.   You can create a launch template, which is a resource that contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify the launch template instead of specifying the launch parameters. To ensure faster instance launches, break up large requests into smaller batches. For example, create five separate launch requests for 100 instances each instead of one launch request for 500 instances. An instance is ready for you to use when it's in the running state. You can check the state of your instance using DescribeInstances. You can tag instances and EBS volumes during launch, after launch, or both. For more information, see CreateTags and Tagging Your Amazon EC2 Resources. Linux instances have access to the public key of the key pair at boot. You can use this key to provide secure access to the instance. Amazon EC2 public images use this feature to provide secure access without passwords. For more information, see Key Pairs in the Amazon Elastic Compute Cloud User Guide. For troubleshooting, see What To Do If An Instance Immediately Terminates, and Troubleshooting Connecting to Your Instance in the Amazon Elastic Compute Cloud User Guide.
+    * Launches the specified number of instances using an AMI for which you have permissions. You can specify a number of options, or leave the default options. The following rules apply:   [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a default VPC, you must specify a subnet ID in the request.   [EC2-Classic] If don't specify an Availability Zone, we choose one for you.   Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a subnet ID, the request fails. For more information, see Instance Types Available Only in a VPC.   [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we choose one from the IPv4 range of your subnet.   Not all instance types support IPv6 addresses. For more information, see Instance Types.   If you don't specify a security group ID, we use the default security group. For more information, see Security Groups.   If any of the AMIs have a product code attached for which the user has not subscribed, the request fails.   You can create a launch template, which is a resource that contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify the launch template instead of specifying the launch parameters. To ensure faster instance launches, break up large requests into smaller batches. For example, create five separate launch requests for 100 instances each instead of one launch request for 500 instances. An instance is ready for you to use when it's in the running state. You can check the state of your instance using DescribeInstances. You can tag instances and EBS volumes during launch, after launch, or both. For more information, see CreateTags and Tagging Your Amazon EC2 Resources. Linux instances have access to the public key of the key pair at boot. You can use this key to provide secure access to the instance. Amazon EC2 public images use this feature to provide secure access without passwords. For more information, see Key Pairs in the Amazon Elastic Compute Cloud User Guide. For troubleshooting, see What To Do If An Instance Immediately Terminates, and Troubleshooting Connecting to Your Instance in the Amazon Elastic Compute Cloud User Guide.
     */
   def runInstances(): Request[Reservation, AWSError] = js.native
   def runInstances(callback: js.Function2[/* err */ AWSError, /* data */ Reservation, Unit]): Request[Reservation, AWSError] = js.native
   /**
-    * Launches the specified number of instances using an AMI for which you have permissions.  You can specify a number of options, or leave the default options. The following rules apply:   [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a default VPC, you must specify a subnet ID in the request.   [EC2-Classic] If don't specify an Availability Zone, we choose one for you.   Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a subnet ID, the request fails. For more information, see Instance Types Available Only in a VPC.   [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we choose one from the IPv4 range of your subnet.   Not all instance types support IPv6 addresses. For more information, see Instance Types.   If you don't specify a security group ID, we use the default security group. For more information, see Security Groups.   If any of the AMIs have a product code attached for which the user has not subscribed, the request fails.   You can create a launch template, which is a resource that contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify the launch template instead of specifying the launch parameters. To ensure faster instance launches, break up large requests into smaller batches. For example, create five separate launch requests for 100 instances each instead of one launch request for 500 instances. An instance is ready for you to use when it's in the running state. You can check the state of your instance using DescribeInstances. You can tag instances and EBS volumes during launch, after launch, or both. For more information, see CreateTags and Tagging Your Amazon EC2 Resources. Linux instances have access to the public key of the key pair at boot. You can use this key to provide secure access to the instance. Amazon EC2 public images use this feature to provide secure access without passwords. For more information, see Key Pairs in the Amazon Elastic Compute Cloud User Guide. For troubleshooting, see What To Do If An Instance Immediately Terminates, and Troubleshooting Connecting to Your Instance in the Amazon Elastic Compute Cloud User Guide.
+    * Launches the specified number of instances using an AMI for which you have permissions. You can specify a number of options, or leave the default options. The following rules apply:   [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a default VPC, you must specify a subnet ID in the request.   [EC2-Classic] If don't specify an Availability Zone, we choose one for you.   Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a subnet ID, the request fails. For more information, see Instance Types Available Only in a VPC.   [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we choose one from the IPv4 range of your subnet.   Not all instance types support IPv6 addresses. For more information, see Instance Types.   If you don't specify a security group ID, we use the default security group. For more information, see Security Groups.   If any of the AMIs have a product code attached for which the user has not subscribed, the request fails.   You can create a launch template, which is a resource that contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify the launch template instead of specifying the launch parameters. To ensure faster instance launches, break up large requests into smaller batches. For example, create five separate launch requests for 100 instances each instead of one launch request for 500 instances. An instance is ready for you to use when it's in the running state. You can check the state of your instance using DescribeInstances. You can tag instances and EBS volumes during launch, after launch, or both. For more information, see CreateTags and Tagging Your Amazon EC2 Resources. Linux instances have access to the public key of the key pair at boot. You can use this key to provide secure access to the instance. Amazon EC2 public images use this feature to provide secure access without passwords. For more information, see Key Pairs in the Amazon Elastic Compute Cloud User Guide. For troubleshooting, see What To Do If An Instance Immediately Terminates, and Troubleshooting Connecting to Your Instance in the Amazon Elastic Compute Cloud User Guide.
     */
   def runInstances(params: RunInstancesRequest): Request[Reservation, AWSError] = js.native
   def runInstances(

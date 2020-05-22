@@ -1,41 +1,38 @@
 package typingsSlinky.osmtogeojson.mod.OsmJSON
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Node extends Element {
-  var lat: Double = js.native
-  var lon: Double = js.native
+  var lat: Double
+  var lon: Double
 }
 
 object Node {
   @scala.inline
-  def apply(id: Double, lat: Double, lon: Double, `type`: String): Node = {
+  def apply(
+    id: Double,
+    lat: Double,
+    lon: Double,
+    `type`: String,
+    changeset: js.UndefOr[Double] = js.undefined,
+    tags: StringDictionary[String] = null,
+    timestamp: String = null,
+    uid: js.UndefOr[Double] = js.undefined,
+    user: String = null,
+    version: js.UndefOr[Double] = js.undefined
+  ): Node = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], lat = lat.asInstanceOf[js.Any], lon = lon.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(changeset)) __obj.updateDynamic("changeset")(changeset.get.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(uid)) __obj.updateDynamic("uid")(uid.get.asInstanceOf[js.Any])
+    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
+    if (!js.isUndefined(version)) __obj.updateDynamic("version")(version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
-  @scala.inline
-  implicit class NodeOps[Self <: Node] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLat(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLon(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lon")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

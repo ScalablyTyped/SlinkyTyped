@@ -62,173 +62,36 @@ trait EventFilter extends js.Object {
 
 object EventFilter {
   @scala.inline
-  def apply(): EventFilter = {
+  def apply(
+    availabilityZones: availabilityZones = null,
+    endTimes: dateTimeRangeList = null,
+    entityArns: entityArnList = null,
+    entityValues: entityValueList = null,
+    eventArns: eventArnList = null,
+    eventStatusCodes: eventStatusCodeList = null,
+    eventTypeCategories: eventTypeCategoryList = null,
+    eventTypeCodes: eventTypeList = null,
+    lastUpdatedTimes: dateTimeRangeList = null,
+    regions: regionList = null,
+    services: serviceList = null,
+    startTimes: dateTimeRangeList = null,
+    tags: tagFilter = null
+  ): EventFilter = {
     val __obj = js.Dynamic.literal()
+    if (availabilityZones != null) __obj.updateDynamic("availabilityZones")(availabilityZones.asInstanceOf[js.Any])
+    if (endTimes != null) __obj.updateDynamic("endTimes")(endTimes.asInstanceOf[js.Any])
+    if (entityArns != null) __obj.updateDynamic("entityArns")(entityArns.asInstanceOf[js.Any])
+    if (entityValues != null) __obj.updateDynamic("entityValues")(entityValues.asInstanceOf[js.Any])
+    if (eventArns != null) __obj.updateDynamic("eventArns")(eventArns.asInstanceOf[js.Any])
+    if (eventStatusCodes != null) __obj.updateDynamic("eventStatusCodes")(eventStatusCodes.asInstanceOf[js.Any])
+    if (eventTypeCategories != null) __obj.updateDynamic("eventTypeCategories")(eventTypeCategories.asInstanceOf[js.Any])
+    if (eventTypeCodes != null) __obj.updateDynamic("eventTypeCodes")(eventTypeCodes.asInstanceOf[js.Any])
+    if (lastUpdatedTimes != null) __obj.updateDynamic("lastUpdatedTimes")(lastUpdatedTimes.asInstanceOf[js.Any])
+    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
+    if (services != null) __obj.updateDynamic("services")(services.asInstanceOf[js.Any])
+    if (startTimes != null) __obj.updateDynamic("startTimes")(startTimes.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventFilter]
   }
-  @scala.inline
-  implicit class EventFilterOps[Self <: EventFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAvailabilityZones(value: availabilityZones): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAvailabilityZones: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndTimes(value: dateTimeRangeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndTimes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityArns(value: entityArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEntityValues(value: entityValueList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityValues")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntityValues: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entityValues")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventArns(value: eventArnList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventArns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventArns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventStatusCodes(value: eventStatusCodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventStatusCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventStatusCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventStatusCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTypeCategories(value: eventTypeCategoryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypeCategories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTypeCategories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypeCategories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEventTypeCodes(value: eventTypeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypeCodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEventTypeCodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypeCodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastUpdatedTimes(value: dateTimeRangeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastUpdatedTimes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegions(value: regionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServices(value: serviceList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServices: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("services")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTimes(value: dateTimeRangeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTimes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: tagFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

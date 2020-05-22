@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type TraverseCallback = typingsSlinky.jsonSchemaTraverse.mod.TraverseCallbackDef | typingsSlinky.jsonSchemaTraverse.anon.Post
   type TraverseCallbackDef = js.Function7[
     /* schema */ js.Object, 
     /* jsonPtr */ java.lang.String, 

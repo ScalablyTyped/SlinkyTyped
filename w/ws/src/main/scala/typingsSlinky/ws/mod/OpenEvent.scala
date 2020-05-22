@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OpenEvent extends js.Object {
-  var target: WebSocket = js.native
+  var target: WebSocket
 }
 
 object OpenEvent {
@@ -15,19 +14,5 @@ object OpenEvent {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenEvent]
   }
-  @scala.inline
-  implicit class OpenEventOps[Self <: OpenEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTarget(value: WebSocket): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

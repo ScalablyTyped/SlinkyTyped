@@ -12,10 +12,9 @@ import scala.scalajs.js.annotation._
   *
   * https://github.com/Project-OSRM/node-osrm/blob/master/docs/api.md#match
   */
-@js.native
 trait MatchWaypoint extends Waypoint {
-  var matchings_index: js.Array[Double] = js.native
-  var waypoint_index: js.Array[Double] = js.native
+  var matchings_index: js.Array[Double]
+  var waypoint_index: js.Array[Double]
 }
 
 object MatchWaypoint {
@@ -31,25 +30,5 @@ object MatchWaypoint {
     val __obj = js.Dynamic.literal(distance = distance.asInstanceOf[js.Any], hint = hint.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], matchings_index = matchings_index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], waypoint_index = waypoint_index.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchWaypoint]
   }
-  @scala.inline
-  implicit class MatchWaypointOps[Self <: MatchWaypoint] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMatchings_index(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("matchings_index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWaypoint_index(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("waypoint_index")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

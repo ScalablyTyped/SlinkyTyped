@@ -9,212 +9,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ResourceServer extends js.Object {
   /**
     * Allows issuance of refresh tokens for this entity.
     */
-  var allow_offline_access: js.UndefOr[Boolean] = js.native
+  var allow_offline_access: js.UndefOr[Boolean] = js.undefined
   /**
     * Enables the enforcement of the authorization policies.
     */
-  var enforce_policies: js.UndefOr[Boolean] = js.native
+  var enforce_policies: js.UndefOr[Boolean] = js.undefined
   /**
     * The ID of the resource server.
     */
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.undefined
   /**
     * The identifier of the resource server.
     */
-  var identifier: js.UndefOr[String] = js.native
+  var identifier: js.UndefOr[String] = js.undefined
   /**
     * A friendly name for the resource server.
     */
-  var name: js.UndefOr[String] = js.native
-  var scopes: js.UndefOr[js.Array[Description]] = js.native
+  var name: js.UndefOr[String] = js.undefined
+  var scopes: js.UndefOr[js.Array[Description]] = js.undefined
   /**
     * The algorithm used to sign tokens.
     */
-  var signing_alg: js.UndefOr[HS256 | RS256] = js.native
+  var signing_alg: js.UndefOr[HS256 | RS256] = js.undefined
   /**
     * The secret used to sign tokens when using symmetric algorithms.
     */
-  var signing_secret: js.UndefOr[String] = js.native
+  var signing_secret: js.UndefOr[String] = js.undefined
   /**
     * Flag this entity as capable of skipping consent.
     */
-  var skip_consent_for_verifiable_first_party_clients: js.UndefOr[Boolean] = js.native
+  var skip_consent_for_verifiable_first_party_clients: js.UndefOr[Boolean] = js.undefined
   /**
     * The dialect for the access token.
     */
-  var token_dialect: js.UndefOr[access_token | access_token_authz] = js.native
+  var token_dialect: js.UndefOr[access_token | access_token_authz] = js.undefined
   /**
     * The amount of time (in seconds) that the token will be valid after being issued.
     */
-  var token_lifetime: js.UndefOr[Double] = js.native
+  var token_lifetime: js.UndefOr[Double] = js.undefined
   /**
     * The amount of time (in seconds) that the token will be valid after being issued from browser based flows. Value cannot be larger than token_lifetime..
     */
-  var token_lifetime_for_web: js.UndefOr[Double] = js.native
+  var token_lifetime_for_web: js.UndefOr[Double] = js.undefined
 }
 
 object ResourceServer {
   @scala.inline
-  def apply(): ResourceServer = {
+  def apply(
+    allow_offline_access: js.UndefOr[Boolean] = js.undefined,
+    enforce_policies: js.UndefOr[Boolean] = js.undefined,
+    id: String = null,
+    identifier: String = null,
+    name: String = null,
+    scopes: js.Array[Description] = null,
+    signing_alg: HS256 | RS256 = null,
+    signing_secret: String = null,
+    skip_consent_for_verifiable_first_party_clients: js.UndefOr[Boolean] = js.undefined,
+    token_dialect: access_token | access_token_authz = null,
+    token_lifetime: js.UndefOr[Double] = js.undefined,
+    token_lifetime_for_web: js.UndefOr[Double] = js.undefined
+  ): ResourceServer = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allow_offline_access)) __obj.updateDynamic("allow_offline_access")(allow_offline_access.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enforce_policies)) __obj.updateDynamic("enforce_policies")(enforce_policies.get.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
+    if (signing_alg != null) __obj.updateDynamic("signing_alg")(signing_alg.asInstanceOf[js.Any])
+    if (signing_secret != null) __obj.updateDynamic("signing_secret")(signing_secret.asInstanceOf[js.Any])
+    if (!js.isUndefined(skip_consent_for_verifiable_first_party_clients)) __obj.updateDynamic("skip_consent_for_verifiable_first_party_clients")(skip_consent_for_verifiable_first_party_clients.get.asInstanceOf[js.Any])
+    if (token_dialect != null) __obj.updateDynamic("token_dialect")(token_dialect.asInstanceOf[js.Any])
+    if (!js.isUndefined(token_lifetime)) __obj.updateDynamic("token_lifetime")(token_lifetime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(token_lifetime_for_web)) __obj.updateDynamic("token_lifetime_for_web")(token_lifetime_for_web.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceServer]
   }
-  @scala.inline
-  implicit class ResourceServerOps[Self <: ResourceServer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllow_offline_access(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_offline_access")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_offline_access: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_offline_access")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnforce_policies(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforce_policies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnforce_policies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enforce_policies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdentifier(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScopes(value: js.Array[Description]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScopes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigning_alg(value: HS256 | RS256): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signing_alg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigning_alg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signing_alg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSigning_secret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signing_secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSigning_secret: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signing_secret")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip_consent_for_verifiable_first_party_clients(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_consent_for_verifiable_first_party_clients")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip_consent_for_verifiable_first_party_clients: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip_consent_for_verifiable_first_party_clients")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_dialect(value: access_token | access_token_authz): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_dialect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_dialect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_dialect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_lifetime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_lifetime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_lifetime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_lifetime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToken_lifetime_for_web(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_lifetime_for_web")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToken_lifetime_for_web: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token_lifetime_for_web")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

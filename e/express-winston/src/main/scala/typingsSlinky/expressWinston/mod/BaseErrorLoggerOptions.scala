@@ -9,238 +9,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BaseErrorLoggerOptions extends js.Object {
-  var baseMeta: js.UndefOr[js.Object] = js.native
-  var blacklistedMetaFields: js.UndefOr[js.Array[String]] = js.native
-  var dynamicMeta: js.UndefOr[DynamicMetaFunction] = js.native
-  var exceptionToMeta: js.UndefOr[ExceptionToMetaFunction] = js.native
-  var format: js.UndefOr[Format_] = js.native
-  var headerBlacklist: js.UndefOr[js.Array[String]] = js.native
-  var level: js.UndefOr[String | DynamicLevelFunction] = js.native
-  var meta: js.UndefOr[Boolean] = js.native
-  var metaField: js.UndefOr[String] = js.native
-  var msg: js.UndefOr[MessageTemplate] = js.native
-  var requestField: js.UndefOr[String] = js.native
-  var requestFilter: js.UndefOr[RequestFilter] = js.native
-  var requestWhitelist: js.UndefOr[js.Array[String]] = js.native
-  var responseField: js.UndefOr[String] = js.native
-  var skip: js.UndefOr[ErrorRouteFilter] = js.native
+  var baseMeta: js.UndefOr[js.Object] = js.undefined
+  var blacklistedMetaFields: js.UndefOr[js.Array[String]] = js.undefined
+  var dynamicMeta: js.UndefOr[DynamicMetaFunction] = js.undefined
+  var exceptionToMeta: js.UndefOr[ExceptionToMetaFunction] = js.undefined
+  var format: js.UndefOr[Format_] = js.undefined
+  var headerBlacklist: js.UndefOr[js.Array[String]] = js.undefined
+  var level: js.UndefOr[String | DynamicLevelFunction] = js.undefined
+  var meta: js.UndefOr[Boolean] = js.undefined
+  var metaField: js.UndefOr[String] = js.undefined
+  var msg: js.UndefOr[MessageTemplate] = js.undefined
+  var requestField: js.UndefOr[String] = js.undefined
+  var requestFilter: js.UndefOr[RequestFilter] = js.undefined
+  var requestWhitelist: js.UndefOr[js.Array[String]] = js.undefined
+  var responseField: js.UndefOr[String] = js.undefined
+  var skip: js.UndefOr[ErrorRouteFilter] = js.undefined
 }
 
 object BaseErrorLoggerOptions {
   @scala.inline
-  def apply(): BaseErrorLoggerOptions = {
+  def apply(
+    baseMeta: js.Object = null,
+    blacklistedMetaFields: js.Array[String] = null,
+    dynamicMeta: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* err */ js.Error) => js.Object = null,
+    exceptionToMeta: /* err */ js.Error => js.Object = null,
+    format: Format_ = null,
+    headerBlacklist: js.Array[String] = null,
+    level: String | DynamicLevelFunction = null,
+    meta: js.UndefOr[Boolean] = js.undefined,
+    metaField: String = null,
+    msg: MessageTemplate = null,
+    requestField: String = null,
+    requestFilter: (/* req */ FilterRequest, /* propName */ String) => js.Any = null,
+    requestWhitelist: js.Array[String] = null,
+    responseField: String = null,
+    skip: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* err */ js.Error) => Boolean = null
+  ): BaseErrorLoggerOptions = {
     val __obj = js.Dynamic.literal()
+    if (baseMeta != null) __obj.updateDynamic("baseMeta")(baseMeta.asInstanceOf[js.Any])
+    if (blacklistedMetaFields != null) __obj.updateDynamic("blacklistedMetaFields")(blacklistedMetaFields.asInstanceOf[js.Any])
+    if (dynamicMeta != null) __obj.updateDynamic("dynamicMeta")(js.Any.fromFunction3(dynamicMeta))
+    if (exceptionToMeta != null) __obj.updateDynamic("exceptionToMeta")(js.Any.fromFunction1(exceptionToMeta))
+    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
+    if (headerBlacklist != null) __obj.updateDynamic("headerBlacklist")(headerBlacklist.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(meta)) __obj.updateDynamic("meta")(meta.get.asInstanceOf[js.Any])
+    if (metaField != null) __obj.updateDynamic("metaField")(metaField.asInstanceOf[js.Any])
+    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
+    if (requestField != null) __obj.updateDynamic("requestField")(requestField.asInstanceOf[js.Any])
+    if (requestFilter != null) __obj.updateDynamic("requestFilter")(js.Any.fromFunction2(requestFilter))
+    if (requestWhitelist != null) __obj.updateDynamic("requestWhitelist")(requestWhitelist.asInstanceOf[js.Any])
+    if (responseField != null) __obj.updateDynamic("responseField")(responseField.asInstanceOf[js.Any])
+    if (skip != null) __obj.updateDynamic("skip")(js.Any.fromFunction3(skip))
     __obj.asInstanceOf[BaseErrorLoggerOptions]
   }
-  @scala.inline
-  implicit class BaseErrorLoggerOptionsOps[Self <: BaseErrorLoggerOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBaseMeta(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseMeta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaseMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baseMeta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlacklistedMetaFields(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedMetaFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlacklistedMetaFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklistedMetaFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamicMeta(
-      value: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* err */ js.Error) => js.Object
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicMeta")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutDynamicMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicMeta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExceptionToMeta(value: /* err */ js.Error => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptionToMeta")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutExceptionToMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptionToMeta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormat(value: Format_): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaderBlacklist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerBlacklist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaderBlacklist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headerBlacklist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevelFunction3(
-      value: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* err */ js.Error) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withLevel(value: String | DynamicLevelFunction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeta(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetaField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metaField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetaField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metaField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsgFunction2(
-      value: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any]) => String
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withMsg(value: MessageTemplate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsg: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestFilter(value: (/* req */ FilterRequest, /* propName */ String) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFilter")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutRequestFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestWhitelist(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestWhitelist")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestWhitelist: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestWhitelist")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseField(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseField")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseField: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseField")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(
-      value: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* err */ js.Error) => Boolean
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

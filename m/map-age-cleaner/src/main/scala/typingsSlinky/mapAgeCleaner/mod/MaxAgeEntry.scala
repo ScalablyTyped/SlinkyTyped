@@ -1,33 +1,20 @@
 package typingsSlinky.mapAgeCleaner.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaxAgeEntry extends Entry {
-  var maxAge: Double = js.native
+  var maxAge: Double
 }
 
 object MaxAgeEntry {
   @scala.inline
-  def apply(maxAge: Double): MaxAgeEntry = {
+  def apply(maxAge: Double, StringDictionary: StringDictionary[js.Any] = null): MaxAgeEntry = {
     val __obj = js.Dynamic.literal(maxAge = maxAge.asInstanceOf[js.Any])
+    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[MaxAgeEntry]
   }
-  @scala.inline
-  implicit class MaxAgeEntryOps[Self <: MaxAgeEntry] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxAge(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

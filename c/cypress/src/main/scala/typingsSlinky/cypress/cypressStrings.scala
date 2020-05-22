@@ -3,8 +3,8 @@ package typingsSlinky.cypress
 import typingsSlinky.cypress.JQuery.Ajax.ErrorTextStatus
 import typingsSlinky.cypress.JQuery.Ajax.SuccessTextStatus
 import typingsSlinky.cypress.JQuery.Ajax.TextStatus
-import typingsSlinky.cypress.JQuery.Duration
-import typingsSlinky.cypress.JQuery.Falsy
+import typingsSlinky.cypress.JQuery._Duration
+import typingsSlinky.cypress.JQuery._Falsy
 import typingsSlinky.cypress.Mocha.Interface
 import typingsSlinky.cypress.Mocha.Reporter
 import typingsSlinky.cypress.cypressMod.Cypress.Encodings
@@ -136,7 +136,7 @@ object cypressStrings {
   sealed trait XUnit extends Reporter
   
   @js.native
-  sealed trait _empty extends Falsy
+  sealed trait _empty extends _Falsy
   
   @js.native
   sealed trait a extends js.Object
@@ -632,7 +632,7 @@ object cypressStrings {
   sealed trait failed extends js.Object
   
   @js.native
-  sealed trait fast extends Duration
+  sealed trait fast extends _Duration
   
   @js.native
   sealed trait fieldset extends js.Object
@@ -1598,7 +1598,7 @@ object cypressStrings {
   sealed trait slot extends js.Object
   
   @js.native
-  sealed trait slow extends Duration
+  sealed trait slow extends _Duration
   
   @js.native
   sealed trait small extends js.Object

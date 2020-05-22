@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISavedScrollFocus extends js.Object {
-  var colName: js.UndefOr[String] = js.native
-  var focus: js.UndefOr[Boolean] = js.native
-  var rowVal: js.UndefOr[IRowVal] = js.native
+  var colName: js.UndefOr[String] = js.undefined
+  var focus: js.UndefOr[Boolean] = js.undefined
+  var rowVal: js.UndefOr[IRowVal] = js.undefined
 }
 
 object ISavedScrollFocus {
   @scala.inline
-  def apply(): ISavedScrollFocus = {
+  def apply(colName: String = null, focus: js.UndefOr[Boolean] = js.undefined, rowVal: IRowVal = null): ISavedScrollFocus = {
     val __obj = js.Dynamic.literal()
+    if (colName != null) __obj.updateDynamic("colName")(colName.asInstanceOf[js.Any])
+    if (!js.isUndefined(focus)) __obj.updateDynamic("focus")(focus.get.asInstanceOf[js.Any])
+    if (rowVal != null) __obj.updateDynamic("rowVal")(rowVal.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISavedScrollFocus]
   }
-  @scala.inline
-  implicit class ISavedScrollFocusOps[Self <: ISavedScrollFocus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRowVal(value: IRowVal): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowVal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRowVal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowVal")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

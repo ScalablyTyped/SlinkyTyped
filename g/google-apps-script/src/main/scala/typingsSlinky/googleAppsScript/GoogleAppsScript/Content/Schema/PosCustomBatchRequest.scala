@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PosCustomBatchRequest extends js.Object {
-  var entries: js.UndefOr[js.Array[PosCustomBatchRequestEntry]] = js.native
+  var entries: js.UndefOr[js.Array[PosCustomBatchRequestEntry]] = js.undefined
 }
 
 object PosCustomBatchRequest {
   @scala.inline
-  def apply(): PosCustomBatchRequest = {
+  def apply(entries: js.Array[PosCustomBatchRequestEntry] = null): PosCustomBatchRequest = {
     val __obj = js.Dynamic.literal()
+    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[PosCustomBatchRequest]
   }
-  @scala.inline
-  implicit class PosCustomBatchRequestOps[Self <: PosCustomBatchRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntries(value: js.Array[PosCustomBatchRequestEntry]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

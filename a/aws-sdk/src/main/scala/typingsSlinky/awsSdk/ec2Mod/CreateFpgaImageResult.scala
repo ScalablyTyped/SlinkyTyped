@@ -18,41 +18,11 @@ trait CreateFpgaImageResult extends js.Object {
 
 object CreateFpgaImageResult {
   @scala.inline
-  def apply(): CreateFpgaImageResult = {
+  def apply(FpgaImageGlobalId: String = null, FpgaImageId: String = null): CreateFpgaImageResult = {
     val __obj = js.Dynamic.literal()
+    if (FpgaImageGlobalId != null) __obj.updateDynamic("FpgaImageGlobalId")(FpgaImageGlobalId.asInstanceOf[js.Any])
+    if (FpgaImageId != null) __obj.updateDynamic("FpgaImageId")(FpgaImageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFpgaImageResult]
   }
-  @scala.inline
-  implicit class CreateFpgaImageResultOps[Self <: CreateFpgaImageResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFpgaImageGlobalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageGlobalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFpgaImageGlobalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageGlobalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFpgaImageId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFpgaImageId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

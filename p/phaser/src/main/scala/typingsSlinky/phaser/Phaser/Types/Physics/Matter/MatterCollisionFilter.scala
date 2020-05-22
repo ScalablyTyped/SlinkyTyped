@@ -26,71 +26,33 @@ import scala.scalajs.js.annotation._
   * category in its mask, i.e. `(categoryA & maskB) !== 0` and `(categoryB & maskA) !== 0`
   * are both true.
   */
-@js.native
 trait MatterCollisionFilter extends js.Object {
   /**
     * A bit field that specifies the collision category this body belongs to. The category value should have only one bit set, for example `0x0001`. This means there are up to 32 unique collision categories available.
     */
-  var category: js.UndefOr[Double] = js.native
+  var category: js.UndefOr[Double] = js.undefined
   /**
     * An Integer `Number`, that specifies the collision group this body belongs to.
     */
-  var group: js.UndefOr[Double] = js.native
+  var group: js.UndefOr[Double] = js.undefined
   /**
     * A bit mask that specifies the collision categories this body may collide with.
     */
-  var mask: js.UndefOr[Double] = js.native
+  var mask: js.UndefOr[Double] = js.undefined
 }
 
 object MatterCollisionFilter {
   @scala.inline
-  def apply(): MatterCollisionFilter = {
+  def apply(
+    category: js.UndefOr[Double] = js.undefined,
+    group: js.UndefOr[Double] = js.undefined,
+    mask: js.UndefOr[Double] = js.undefined
+  ): MatterCollisionFilter = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(category)) __obj.updateDynamic("category")(category.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(group)) __obj.updateDynamic("group")(group.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatterCollisionFilter]
   }
-  @scala.inline
-  implicit class MatterCollisionFilterOps[Self <: MatterCollisionFilter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCategory: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroup(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMask(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMask: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

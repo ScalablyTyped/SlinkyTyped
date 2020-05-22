@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VideoAdvertisingOptionGetEnabledAdsResponse extends js.Object {
-  var adBreaks: js.UndefOr[js.Array[AdBreak]] = js.native
-  var adsOnEmbeds: js.UndefOr[Boolean] = js.native
-  var countriesRestriction: js.UndefOr[js.Array[CountriesRestriction]] = js.native
-  var id: js.UndefOr[String] = js.native
-  var kind: js.UndefOr[String] = js.native
+  var adBreaks: js.UndefOr[js.Array[AdBreak]] = js.undefined
+  var adsOnEmbeds: js.UndefOr[Boolean] = js.undefined
+  var countriesRestriction: js.UndefOr[js.Array[CountriesRestriction]] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
 }
 
 object VideoAdvertisingOptionGetEnabledAdsResponse {
   @scala.inline
-  def apply(): VideoAdvertisingOptionGetEnabledAdsResponse = {
+  def apply(
+    adBreaks: js.Array[AdBreak] = null,
+    adsOnEmbeds: js.UndefOr[Boolean] = js.undefined,
+    countriesRestriction: js.Array[CountriesRestriction] = null,
+    id: String = null,
+    kind: String = null
+  ): VideoAdvertisingOptionGetEnabledAdsResponse = {
     val __obj = js.Dynamic.literal()
+    if (adBreaks != null) __obj.updateDynamic("adBreaks")(adBreaks.asInstanceOf[js.Any])
+    if (!js.isUndefined(adsOnEmbeds)) __obj.updateDynamic("adsOnEmbeds")(adsOnEmbeds.get.asInstanceOf[js.Any])
+    if (countriesRestriction != null) __obj.updateDynamic("countriesRestriction")(countriesRestriction.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoAdvertisingOptionGetEnabledAdsResponse]
   }
-  @scala.inline
-  implicit class VideoAdvertisingOptionGetEnabledAdsResponseOps[Self <: VideoAdvertisingOptionGetEnabledAdsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdBreaks(value: js.Array[AdBreak]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adBreaks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdBreaks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adBreaks")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAdsOnEmbeds(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adsOnEmbeds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdsOnEmbeds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("adsOnEmbeds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountriesRestriction(value: js.Array[CountriesRestriction]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countriesRestriction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountriesRestriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("countriesRestriction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

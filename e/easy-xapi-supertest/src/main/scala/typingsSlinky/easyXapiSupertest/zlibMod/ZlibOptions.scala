@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ZlibOptions extends js.Object {
-  var chunkSize: js.UndefOr[Double] = js.native
-  var dictionary: js.UndefOr[js.Any] = js.native
-  var level: js.UndefOr[Double] = js.native
-  var memLevel: js.UndefOr[Double] = js.native
-  var strategy: js.UndefOr[Double] = js.native
-  var windowBits: js.UndefOr[Double] = js.native
+  var chunkSize: js.UndefOr[Double] = js.undefined
+  var dictionary: js.UndefOr[js.Any] = js.undefined
+  var level: js.UndefOr[Double] = js.undefined
+  var memLevel: js.UndefOr[Double] = js.undefined
+  var strategy: js.UndefOr[Double] = js.undefined
+  var windowBits: js.UndefOr[Double] = js.undefined
 }
 
 object ZlibOptions {
   @scala.inline
-  def apply(): ZlibOptions = {
+  def apply(
+    chunkSize: js.UndefOr[Double] = js.undefined,
+    dictionary: js.Any = null,
+    level: js.UndefOr[Double] = js.undefined,
+    memLevel: js.UndefOr[Double] = js.undefined,
+    strategy: js.UndefOr[Double] = js.undefined,
+    windowBits: js.UndefOr[Double] = js.undefined
+  ): ZlibOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chunkSize)) __obj.updateDynamic("chunkSize")(chunkSize.get.asInstanceOf[js.Any])
+    if (dictionary != null) __obj.updateDynamic("dictionary")(dictionary.asInstanceOf[js.Any])
+    if (!js.isUndefined(level)) __obj.updateDynamic("level")(level.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(memLevel)) __obj.updateDynamic("memLevel")(memLevel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strategy)) __obj.updateDynamic("strategy")(strategy.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowBits)) __obj.updateDynamic("windowBits")(windowBits.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZlibOptions]
   }
-  @scala.inline
-  implicit class ZlibOptionsOps[Self <: ZlibOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChunkSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDictionary(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memLevel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memLevel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrategy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrategy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowBits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowBits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowBits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowBits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

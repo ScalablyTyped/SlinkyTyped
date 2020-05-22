@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   *     },
   *  ]
   */
-@js.native
 trait Endpoints extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -28,19 +27,19 @@ trait Endpoints extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]] = js.native
+  var apiVersion: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]] = js.undefined
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Endpoints]] = js.native
+  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Endpoints]] = js.undefined
   /**
     * Standard object's metadata. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  var metadata: js.UndefOr[Input[ObjectMeta]] = js.native
+  var metadata: js.UndefOr[Input[ObjectMeta]] = js.undefined
   /**
     * The set of all endpoints is the union of all subsets. Addresses are placed into subsets
     * according to the IPs they share. A single address with multiple ports, some of which are
@@ -49,70 +48,23 @@ trait Endpoints extends js.Object {
     * will appear in both Addresses and NotReadyAddresses in the same subset. Sets of addresses
     * and ports that comprise a service.
     */
-  var subsets: js.UndefOr[Input[js.Array[Input[EndpointSubset]]]] = js.native
+  var subsets: js.UndefOr[Input[js.Array[Input[EndpointSubset]]]] = js.undefined
 }
 
 object Endpoints {
   @scala.inline
-  def apply(): Endpoints = {
+  def apply(
+    apiVersion: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1] = null,
+    kind: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Endpoints] = null,
+    metadata: Input[ObjectMeta] = null,
+    subsets: Input[js.Array[Input[EndpointSubset]]] = null
+  ): Endpoints = {
     val __obj = js.Dynamic.literal()
+    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (subsets != null) __obj.updateDynamic("subsets")(subsets.asInstanceOf[js.Any])
     __obj.asInstanceOf[Endpoints]
   }
-  @scala.inline
-  implicit class EndpointsOps[Self <: Endpoints] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiVersion(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.v1]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.Endpoints]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: Input[ObjectMeta]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubsets(value: Input[js.Array[Input[EndpointSubset]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subsets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubsets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subsets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

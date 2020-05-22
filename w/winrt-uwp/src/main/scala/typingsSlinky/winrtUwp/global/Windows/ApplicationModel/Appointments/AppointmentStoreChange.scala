@@ -8,5 +8,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentStoreChange")
 @js.native
 abstract class AppointmentStoreChange ()
-  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChange
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChange {
+  /** Gets the Appointment associated with the change. */
+  /* CompleteClass */
+  override var appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment = js.native
+  /** Gets the AppointmentCalendar in which the change occurred. */
+  /* CompleteClass */
+  override var appointmentCalendar: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentCalendar = js.native
+  /** Gets an AppointmentStoreChangeType value indicating the type of change represented by the object. */
+  /* CompleteClass */
+  override var changeType: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreChangeType = js.native
+}
 

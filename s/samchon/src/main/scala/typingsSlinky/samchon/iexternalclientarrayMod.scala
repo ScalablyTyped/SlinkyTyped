@@ -1,5 +1,8 @@
 package typingsSlinky.samchon
 
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray
 import typingsSlinky.samchon.externalSystemMod.ExternalSystem
 import typingsSlinky.samchon.iserverMod.IServer
@@ -18,6 +21,8 @@ object iexternalclientarrayMod extends js.Object {
   trait IExternalClientArray[System /* <: ExternalSystem */]
     extends ExternalSystemArray[System]
        with IServer {
+    /* InferMemberOverrides */
+    override def addEventListener(`type`: Type, listener: Listener[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -38,6 +43,14 @@ object iexternalclientarrayMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    /* InferMemberOverrides */
+    override def dispatchEvent(event: CollectionEvent[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
+    /**
+      * Test whether container is empty.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
     /**
       * Iterator to the end.
       *
@@ -74,11 +87,24 @@ object iexternalclientarrayMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def front(`val`: System): Unit = js.native
+    /* InferMemberOverrides */
+    override def hasEventListener(`type`: Type): Boolean = js.native
+    /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def push(items: System*): Double = js.native
     /**
       * Insert an element at the end.
       *
       * @param val Value to insert.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def push_back(`val`: System): Unit = js.native
@@ -88,16 +114,21 @@ object iexternalclientarrayMod extends js.Object {
       * @return Reverse iterator to the first.
       */
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[System] = js.native
+    /* InferMemberOverrides */
+    override def removeEventListener(`type`: Type, listener: Listener[System, Deque[System], Iterator[System], ReverseIterator[System]]): Unit = js.native
     /**
       * Reverse iterator to the reverse end.
       *
       * @return Reverse iterator to the end.
       */
     /* InferMemberOverrides */
-    /* InferMemberOverrides */
     override def rend(): ReverseIterator[System] = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

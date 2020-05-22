@@ -28,53 +28,16 @@ trait BrokerSoftwareInfo extends js.Object {
 
 object BrokerSoftwareInfo {
   @scala.inline
-  def apply(): BrokerSoftwareInfo = {
+  def apply(
+    ConfigurationArn: string = null,
+    ConfigurationRevision: js.UndefOr[long] = js.undefined,
+    KafkaVersion: string = null
+  ): BrokerSoftwareInfo = {
     val __obj = js.Dynamic.literal()
+    if (ConfigurationArn != null) __obj.updateDynamic("ConfigurationArn")(ConfigurationArn.asInstanceOf[js.Any])
+    if (!js.isUndefined(ConfigurationRevision)) __obj.updateDynamic("ConfigurationRevision")(ConfigurationRevision.get.asInstanceOf[js.Any])
+    if (KafkaVersion != null) __obj.updateDynamic("KafkaVersion")(KafkaVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerSoftwareInfo]
   }
-  @scala.inline
-  implicit class BrokerSoftwareInfoOps[Self <: BrokerSoftwareInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfigurationArn(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withConfigurationRevision(value: long): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConfigurationRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationRevision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKafkaVersion(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KafkaVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKafkaVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KafkaVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

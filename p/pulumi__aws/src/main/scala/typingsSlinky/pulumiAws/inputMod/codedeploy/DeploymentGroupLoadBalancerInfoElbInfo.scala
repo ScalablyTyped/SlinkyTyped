@@ -8,36 +8,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DeploymentGroupLoadBalancerInfoElbInfo extends js.Object {
   /**
-    * Name of the target group.
+    * The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
     */
   var name: js.UndefOr[Input[String]] = js.native
 }
 
 object DeploymentGroupLoadBalancerInfoElbInfo {
   @scala.inline
-  def apply(): DeploymentGroupLoadBalancerInfoElbInfo = {
+  def apply(name: Input[String] = null): DeploymentGroupLoadBalancerInfoElbInfo = {
     val __obj = js.Dynamic.literal()
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentGroupLoadBalancerInfoElbInfo]
   }
-  @scala.inline
-  implicit class DeploymentGroupLoadBalancerInfoElbInfoOps[Self <: DeploymentGroupLoadBalancerInfoElbInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

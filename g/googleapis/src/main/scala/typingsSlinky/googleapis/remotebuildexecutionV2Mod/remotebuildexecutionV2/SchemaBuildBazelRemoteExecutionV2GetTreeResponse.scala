@@ -23,41 +23,14 @@ trait SchemaBuildBazelRemoteExecutionV2GetTreeResponse extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2GetTreeResponse {
   @scala.inline
-  def apply(): SchemaBuildBazelRemoteExecutionV2GetTreeResponse = {
+  def apply(
+    directories: js.Array[SchemaBuildBazelRemoteExecutionV2Directory] = null,
+    nextPageToken: String = null
+  ): SchemaBuildBazelRemoteExecutionV2GetTreeResponse = {
     val __obj = js.Dynamic.literal()
+    if (directories != null) __obj.updateDynamic("directories")(directories.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2GetTreeResponse]
   }
-  @scala.inline
-  implicit class SchemaBuildBazelRemoteExecutionV2GetTreeResponseOps[Self <: SchemaBuildBazelRemoteExecutionV2GetTreeResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDirectories(value: js.Array[SchemaBuildBazelRemoteExecutionV2Directory]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectories: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,8 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Type[T]
-  extends js.Function
-     with Constructor[T] {
+  extends js.Function {
   var displayName: java.lang.String = js.native
   @JSName("is")
   var is_Original: TypeGuardPredicate[T] = js.native

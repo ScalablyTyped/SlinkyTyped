@@ -7,177 +7,84 @@ import scala.scalajs.js.annotation._
 /**
   * Data type and Profile for this element
   */
-@js.native
 trait ElementDefinitionType extends Element {
   /**
     * Contains extended information for property 'aggregation'.
     */
-  var _aggregation: js.UndefOr[js.Array[Element]] = js.native
+  var _aggregation: js.UndefOr[js.Array[Element]] = js.undefined
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.native
+  var _code: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'profile'.
     */
-  var _profile: js.UndefOr[Element] = js.native
+  var _profile: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'targetProfile'.
     */
-  var _targetProfile: js.UndefOr[Element] = js.native
+  var _targetProfile: js.UndefOr[Element] = js.undefined
   /**
     * Contains extended information for property 'versioning'.
     */
-  var _versioning: js.UndefOr[Element] = js.native
+  var _versioning: js.UndefOr[Element] = js.undefined
   /**
     * contained | referenced | bundled - how aggregated
     */
-  var aggregation: js.UndefOr[js.Array[code]] = js.native
+  var aggregation: js.UndefOr[js.Array[code]] = js.undefined
   /**
     * Data type or Resource (reference to definition)
     */
-  var code: uri = js.native
+  var code: uri
   /**
     * Profile (StructureDefinition) to apply (or IG)
     */
-  var profile: js.UndefOr[uri] = js.native
+  var profile: js.UndefOr[uri] = js.undefined
   /**
     * Profile (StructureDefinition) to apply to reference target (or IG)
     */
-  var targetProfile: js.UndefOr[uri] = js.native
+  var targetProfile: js.UndefOr[uri] = js.undefined
   /**
     * either | independent | specific
     */
-  var versioning: js.UndefOr[code] = js.native
+  var versioning: js.UndefOr[code] = js.undefined
 }
 
 object ElementDefinitionType {
   @scala.inline
-  def apply(code: uri): ElementDefinitionType = {
+  def apply(
+    code: uri,
+    _aggregation: js.Array[Element] = null,
+    _code: Element = null,
+    _fhir_comments: js.Array[Element] = null,
+    _id: Element = null,
+    _profile: Element = null,
+    _targetProfile: Element = null,
+    _versioning: Element = null,
+    aggregation: js.Array[code] = null,
+    extension: js.Array[Extension] = null,
+    fhir_comments: js.Array[String] = null,
+    id: String = null,
+    profile: uri = null,
+    targetProfile: uri = null,
+    versioning: code = null
+  ): ElementDefinitionType = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    if (_aggregation != null) __obj.updateDynamic("_aggregation")(_aggregation.asInstanceOf[js.Any])
+    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
+    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
+    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
+    if (_profile != null) __obj.updateDynamic("_profile")(_profile.asInstanceOf[js.Any])
+    if (_targetProfile != null) __obj.updateDynamic("_targetProfile")(_targetProfile.asInstanceOf[js.Any])
+    if (_versioning != null) __obj.updateDynamic("_versioning")(_versioning.asInstanceOf[js.Any])
+    if (aggregation != null) __obj.updateDynamic("aggregation")(aggregation.asInstanceOf[js.Any])
+    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
+    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
+    if (targetProfile != null) __obj.updateDynamic("targetProfile")(targetProfile.asInstanceOf[js.Any])
+    if (versioning != null) __obj.updateDynamic("versioning")(versioning.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementDefinitionType]
   }
-  @scala.inline
-  implicit class ElementDefinitionTypeOps[Self <: ElementDefinitionType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCode(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with_aggregation(value: js.Array[Element]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_aggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_aggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_aggregation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_code(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_profile(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_profile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_targetProfile(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_targetProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_versioning(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_versioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_versioning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_versioning")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAggregation(value: js.Array[code]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProfile(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetProfile(value: uri): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetProfile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetProfile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetProfile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersioning(value: code): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersioning: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

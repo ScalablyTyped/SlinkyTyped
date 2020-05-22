@@ -4,55 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MaxAgeSeconds extends js.Object {
   /**
-  		 * Cache will only hold entries for X seconds.
-  		 */
-  var maxAgeSeconds: js.UndefOr[Double] = js.native
+    * Cache will only hold entries for X seconds.
+    */
+  var maxAgeSeconds: js.UndefOr[Double] = js.undefined
   /**
-  		 * Cache will only hold X entries.
-  		 */
-  var maxEntries: js.UndefOr[Double] = js.native
+    * Cache will only hold X entries.
+    */
+  var maxEntries: js.UndefOr[Double] = js.undefined
 }
 
 object MaxAgeSeconds {
   @scala.inline
-  def apply(): MaxAgeSeconds = {
+  def apply(maxAgeSeconds: js.UndefOr[Double] = js.undefined, maxEntries: js.UndefOr[Double] = js.undefined): MaxAgeSeconds = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxAgeSeconds)) __obj.updateDynamic("maxAgeSeconds")(maxAgeSeconds.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxEntries)) __obj.updateDynamic("maxEntries")(maxEntries.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaxAgeSeconds]
   }
-  @scala.inline
-  implicit class MaxAgeSecondsOps[Self <: MaxAgeSeconds] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxAgeSeconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAgeSeconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAgeSeconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAgeSeconds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxEntries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEntries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxEntries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEntries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

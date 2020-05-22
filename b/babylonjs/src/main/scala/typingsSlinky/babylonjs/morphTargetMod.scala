@@ -40,6 +40,11 @@ object morphTargetMod extends js.Object {
     var _uniqueId: js.Any = js.native
     var _uvs: js.Any = js.native
     /**
+      * Array of animations
+      */
+    /* CompleteClass */
+    override var animations: Nullable[js.Array[Animation]] = js.native
+    /**
       * Gets or sets the list of animations
       */
     @JSName("animations")

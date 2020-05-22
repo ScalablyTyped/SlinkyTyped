@@ -5,244 +5,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DependencyConfig extends js.Object {
-  var attributes: js.UndefOr[Crossorigin] = js.native
-  var `css-slot`: js.UndefOr[String] = js.native
-  var dependencies: js.UndefOr[js.Array[DependencyConfig | String]] = js.native
-  var external: js.UndefOr[Boolean] = js.native
-  var from: js.UndefOr[String] = js.native
-  var `if`: js.UndefOr[String] = js.native
-  var `if-flag`: js.UndefOr[String] = js.native
-  var `if-not-flag`: js.UndefOr[String] = js.native
-  var `inline`: js.UndefOr[String] = js.native
-  var `js-slot`: js.UndefOr[String] = js.native
-  var path: js.UndefOr[String] = js.native
-  var require: js.UndefOr[String] = js.native
-  var `require-run`: js.UndefOr[String] = js.native
-  var slot: js.UndefOr[String] = js.native
-  var to: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var url: js.UndefOr[String] = js.native
+  var attributes: js.UndefOr[Crossorigin] = js.undefined
+  var `css-slot`: js.UndefOr[String] = js.undefined
+  var dependencies: js.UndefOr[js.Array[DependencyConfig | String]] = js.undefined
+  var external: js.UndefOr[Boolean] = js.undefined
+  var from: js.UndefOr[String] = js.undefined
+  var `if`: js.UndefOr[String] = js.undefined
+  var `if-flag`: js.UndefOr[String] = js.undefined
+  var `if-not-flag`: js.UndefOr[String] = js.undefined
+  var `inline`: js.UndefOr[String] = js.undefined
+  var `js-slot`: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.undefined
+  var require: js.UndefOr[String] = js.undefined
+  var `require-run`: js.UndefOr[String] = js.undefined
+  var slot: js.UndefOr[String] = js.undefined
+  var to: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.undefined
 }
 
 object DependencyConfig {
   @scala.inline
-  def apply(): DependencyConfig = {
+  def apply(
+    attributes: Crossorigin = null,
+    `css-slot`: String = null,
+    dependencies: js.Array[DependencyConfig | String] = null,
+    external: js.UndefOr[Boolean] = js.undefined,
+    from: String = null,
+    `if`: String = null,
+    `if-flag`: String = null,
+    `if-not-flag`: String = null,
+    `inline`: String = null,
+    `js-slot`: String = null,
+    path: String = null,
+    require: String = null,
+    `require-run`: String = null,
+    slot: String = null,
+    to: String = null,
+    `type`: String = null,
+    url: String = null
+  ): DependencyConfig = {
     val __obj = js.Dynamic.literal()
+    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (`css-slot` != null) __obj.updateDynamic("css-slot")(`css-slot`.asInstanceOf[js.Any])
+    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
+    if (!js.isUndefined(external)) __obj.updateDynamic("external")(external.get.asInstanceOf[js.Any])
+    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
+    if (`if` != null) __obj.updateDynamic("if")(`if`.asInstanceOf[js.Any])
+    if (`if-flag` != null) __obj.updateDynamic("if-flag")(`if-flag`.asInstanceOf[js.Any])
+    if (`if-not-flag` != null) __obj.updateDynamic("if-not-flag")(`if-not-flag`.asInstanceOf[js.Any])
+    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
+    if (`js-slot` != null) __obj.updateDynamic("js-slot")(`js-slot`.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (require != null) __obj.updateDynamic("require")(require.asInstanceOf[js.Any])
+    if (`require-run` != null) __obj.updateDynamic("require-run")(`require-run`.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[DependencyConfig]
   }
-  @scala.inline
-  implicit class DependencyConfigOps[Self <: DependencyConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: Crossorigin): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withCss-slot`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css-slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutCss-slot`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("css-slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDependencies(value: js.Array[DependencyConfig | String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDependencies: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExternal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExternal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("external")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrom(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIf(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIf: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withIf-flag`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if-flag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutIf-flag`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if-flag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withIf-not-flag`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if-not-flag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutIf-not-flag`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("if-not-flag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withJs-slot`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js-slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutJs-slot`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("js-slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequire(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequire: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def `withRequire-run`(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require-run")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def `withoutRequire-run`: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("require-run")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

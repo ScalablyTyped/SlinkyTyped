@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait InflateOptions extends js.Object {
-  var chunkSize: js.UndefOr[Double] = js.native
-  var dictionary: js.UndefOr[js.Any] = js.native
-  var raw: js.UndefOr[Boolean] = js.native
-  var to: js.UndefOr[string] = js.native
-  var windowBits: js.UndefOr[Double] = js.native
+  var chunkSize: js.UndefOr[Double] = js.undefined
+  var dictionary: js.UndefOr[js.Any] = js.undefined
+  var raw: js.UndefOr[Boolean] = js.undefined
+  var to: js.UndefOr[string] = js.undefined
+  var windowBits: js.UndefOr[Double] = js.undefined
 }
 
 object InflateOptions {
   @scala.inline
-  def apply(): InflateOptions = {
+  def apply(
+    chunkSize: js.UndefOr[Double] = js.undefined,
+    dictionary: js.Any = null,
+    raw: js.UndefOr[Boolean] = js.undefined,
+    to: string = null,
+    windowBits: js.UndefOr[Double] = js.undefined
+  ): InflateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chunkSize)) __obj.updateDynamic("chunkSize")(chunkSize.get.asInstanceOf[js.Any])
+    if (dictionary != null) __obj.updateDynamic("dictionary")(dictionary.asInstanceOf[js.Any])
+    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.get.asInstanceOf[js.Any])
+    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowBits)) __obj.updateDynamic("windowBits")(windowBits.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[InflateOptions]
   }
-  @scala.inline
-  implicit class InflateOptionsOps[Self <: InflateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChunkSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChunkSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chunkSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDictionary(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDictionary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRaw(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRaw: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTo(value: string): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowBits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowBits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowBits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowBits")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,13 +7,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PatternPrompt * / any */ @js.native
-trait TestPathPatternPrompt extends js.Object {
-  var _searchSources: js.UndefOr[SearchSources] = js.native
-  def _getMatchedTests(pattern: String): js.Array[Test] = js.native
-  def _onChange(pattern: String, options: ScrollOptions): Unit = js.native
-  def _printPrompt(pattern: String): Unit = js.native
-  def updateSearchSources(searchSources: SearchSources): Unit = js.native
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PatternPrompt * / any */ trait TestPathPatternPrompt extends js.Object {
+  var _searchSources: js.UndefOr[SearchSources] = js.undefined
+  def _getMatchedTests(pattern: String): js.Array[Test]
+  def _onChange(pattern: String, options: ScrollOptions): Unit
+  def _printPrompt(pattern: String): Unit
+  def updateSearchSources(searchSources: SearchSources): Unit
 }
 
 object TestPathPatternPrompt {
@@ -22,54 +21,12 @@ object TestPathPatternPrompt {
     _getMatchedTests: String => js.Array[Test],
     _onChange: (String, ScrollOptions) => Unit,
     _printPrompt: String => Unit,
-    updateSearchSources: SearchSources => Unit
+    updateSearchSources: SearchSources => Unit,
+    _searchSources: SearchSources = null
   ): TestPathPatternPrompt = {
     val __obj = js.Dynamic.literal(_getMatchedTests = js.Any.fromFunction1(_getMatchedTests), _onChange = js.Any.fromFunction2(_onChange), _printPrompt = js.Any.fromFunction1(_printPrompt), updateSearchSources = js.Any.fromFunction1(updateSearchSources))
+    if (_searchSources != null) __obj.updateDynamic("_searchSources")(_searchSources.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestPathPatternPrompt]
   }
-  @scala.inline
-  implicit class TestPathPatternPromptOps[Self <: TestPathPatternPrompt] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with_getMatchedTests(value: String => js.Array[Test]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_getMatchedTests")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_onChange(value: (String, ScrollOptions) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_onChange")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def with_printPrompt(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_printPrompt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpdateSearchSources(value: SearchSources => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSearchSources")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def with_searchSources(value: SearchSources): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_searchSources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without_searchSources: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_searchSources")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -10,26 +10,25 @@ import scala.scalajs.js.annotation._
   *
   * Note: Whether or not every callback is supported is dependent on the parser implementation.
   */
-@js.native
 trait XExtendedDocumentHandler extends XDocumentHandler {
   /** informs a writer that it is allowable to insert a line break and indentation before the next XDocumentHandler-call. */
-  def allowLineBreak(): Unit = js.native
+  def allowLineBreak(): Unit
   /** receives notification about a comment in the XML-source. */
-  def comment(sComment: String): Unit = js.native
+  def comment(sComment: String): Unit
   /**
     * informs about the end of a CDATA-Section.
     *
     * Note that `startCDATA/endCDATA` MUST NOT enclose any `startElement/endElement` -call!
     */
-  def endCDATA(): Unit = js.native
+  def endCDATA(): Unit
   /**
     * receives notification about the start of a CDATA section in the XML-source.
     *
     * Any string coming in via character handler may include chars, that would otherwise be interpreted as markup.
     */
-  def startCDATA(): Unit = js.native
+  def startCDATA(): Unit
   /** notifies that any characters that cannot be handled by other callback methods are announced through this method. */
-  def unknown(sString: String): Unit = js.native
+  def unknown(sString: String): Unit
 }
 
 object XExtendedDocumentHandler {
@@ -55,43 +54,5 @@ object XExtendedDocumentHandler {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), allowLineBreak = js.Any.fromFunction0(allowLineBreak), characters = js.Any.fromFunction1(characters), comment = js.Any.fromFunction1(comment), endCDATA = js.Any.fromFunction0(endCDATA), endDocument = js.Any.fromFunction0(endDocument), endElement = js.Any.fromFunction1(endElement), ignorableWhitespace = js.Any.fromFunction1(ignorableWhitespace), processingInstruction = js.Any.fromFunction2(processingInstruction), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setDocumentLocator = js.Any.fromFunction1(setDocumentLocator), startCDATA = js.Any.fromFunction0(startCDATA), startDocument = js.Any.fromFunction0(startDocument), startElement = js.Any.fromFunction2(startElement), unknown = js.Any.fromFunction1(unknown))
     __obj.asInstanceOf[XExtendedDocumentHandler]
   }
-  @scala.inline
-  implicit class XExtendedDocumentHandlerOps[Self <: XExtendedDocumentHandler] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowLineBreak(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLineBreak")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withComment(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEndCDATA(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCDATA")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStartCDATA(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startCDATA")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withUnknown(value: String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unknown")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

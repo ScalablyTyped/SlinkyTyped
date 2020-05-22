@@ -6,143 +6,50 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Parameters for the `listSynonyms` operation. */
-@js.native
 trait ListSynonymsParams extends js.Object {
   /** A token identifying the page of results to retrieve. */
-  var cursor: js.UndefOr[String] = js.native
+  var cursor: js.UndefOr[String] = js.undefined
   /** The name of the entity. */
-  var entity: String = js.native
-  var headers: js.UndefOr[js.Object] = js.native
+  var entity: String
+  var headers: js.UndefOr[js.Object] = js.undefined
   /** Whether to include the audit properties (`created` and `updated` timestamps) in the response. */
-  var include_audit: js.UndefOr[Boolean] = js.native
+  var include_audit: js.UndefOr[Boolean] = js.undefined
   /** Whether to include information about the number of records returned. */
-  var include_count: js.UndefOr[Boolean] = js.native
+  var include_count: js.UndefOr[Boolean] = js.undefined
   /** The number of records to return in each page of results. */
-  var page_limit: js.UndefOr[Double] = js.native
-  var return_response: js.UndefOr[Boolean] = js.native
+  var page_limit: js.UndefOr[Double] = js.undefined
+  var return_response: js.UndefOr[Boolean] = js.undefined
   /** The attribute by which returned entity value synonyms will be sorted. To reverse the sort order, prefix the value with a minus sign (`-`). */
-  var sort: js.UndefOr[Sort | String] = js.native
+  var sort: js.UndefOr[Sort | String] = js.undefined
   /** The text of the entity value. */
-  var value: String = js.native
+  var value: String
   /** Unique identifier of the workspace. */
-  var workspace_id: String = js.native
+  var workspace_id: String
 }
 
 object ListSynonymsParams {
   @scala.inline
-  def apply(entity: String, value: String, workspace_id: String): ListSynonymsParams = {
+  def apply(
+    entity: String,
+    value: String,
+    workspace_id: String,
+    cursor: String = null,
+    headers: js.Object = null,
+    include_audit: js.UndefOr[Boolean] = js.undefined,
+    include_count: js.UndefOr[Boolean] = js.undefined,
+    page_limit: js.UndefOr[Double] = js.undefined,
+    return_response: js.UndefOr[Boolean] = js.undefined,
+    sort: Sort | String = null
+  ): ListSynonymsParams = {
     val __obj = js.Dynamic.literal(entity = entity.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], workspace_id = workspace_id.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_audit)) __obj.updateDynamic("include_audit")(include_audit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(include_count)) __obj.updateDynamic("include_count")(include_count.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(page_limit)) __obj.updateDynamic("page_limit")(page_limit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.get.asInstanceOf[js.Any])
+    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSynonymsParams]
   }
-  @scala.inline
-  implicit class ListSynonymsParamsOps[Self <: ListSynonymsParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEntity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWorkspace_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("workspace_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCursor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCursor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_audit(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_audit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_audit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_audit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInclude_count(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInclude_count: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("include_count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPage_limit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_limit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPage_limit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("page_limit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReturn_response(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReturn_response: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSort(value: Sort | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

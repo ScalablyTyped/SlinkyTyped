@@ -12,175 +12,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GraphQLSchemaConfig extends GraphQLSchemaValidationOptions {
-  var astNode: js.UndefOr[Maybe[SchemaDefinitionNode]] = js.native
-  var directives: js.UndefOr[Maybe[js.Array[GraphQLDirective]]] = js.native
-  var extensionASTNodes: js.UndefOr[Maybe[js.Array[SchemaExtensionNode]]] = js.native
-  var extensions: js.UndefOr[Maybe[Record[String, _]]] = js.native
-  var mutation: js.UndefOr[Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]] = js.native
-  var query: Maybe[GraphQLObjectType[_, _, StringDictionary[_]]] = js.native
-  var subscription: js.UndefOr[Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]] = js.native
-  var types: js.UndefOr[Maybe[js.Array[GraphQLNamedType]]] = js.native
+  var astNode: js.UndefOr[Maybe[SchemaDefinitionNode]] = js.undefined
+  var directives: js.UndefOr[Maybe[js.Array[GraphQLDirective]]] = js.undefined
+  var extensionASTNodes: js.UndefOr[Maybe[js.Array[SchemaExtensionNode]]] = js.undefined
+  var extensions: js.UndefOr[Maybe[Record[String, _]]] = js.undefined
+  var mutation: js.UndefOr[Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]] = js.undefined
+  var query: Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]
+  var subscription: js.UndefOr[Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]] = js.undefined
+  var types: js.UndefOr[Maybe[js.Array[GraphQLNamedType]]] = js.undefined
 }
 
 object GraphQLSchemaConfig {
   @scala.inline
-  def apply(): GraphQLSchemaConfig = {
+  def apply(
+    allowedLegacyNames: js.UndefOr[Null | Maybe[js.Array[String]]] = js.undefined,
+    assumeValid: js.UndefOr[Boolean] = js.undefined,
+    astNode: js.UndefOr[Null | Maybe[SchemaDefinitionNode]] = js.undefined,
+    directives: js.UndefOr[Null | Maybe[js.Array[GraphQLDirective]]] = js.undefined,
+    extensionASTNodes: js.UndefOr[Null | Maybe[js.Array[SchemaExtensionNode]]] = js.undefined,
+    extensions: js.UndefOr[Null | (Maybe[Record[String, _]])] = js.undefined,
+    mutation: js.UndefOr[Null | (Maybe[GraphQLObjectType[_, _, StringDictionary[_]]])] = js.undefined,
+    query: js.UndefOr[Null | (Maybe[GraphQLObjectType[_, _, StringDictionary[_]]])] = js.undefined,
+    subscription: js.UndefOr[Null | (Maybe[GraphQLObjectType[_, _, StringDictionary[_]]])] = js.undefined,
+    types: js.UndefOr[Null | Maybe[js.Array[GraphQLNamedType]]] = js.undefined
+  ): GraphQLSchemaConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowedLegacyNames)) __obj.updateDynamic("allowedLegacyNames")(allowedLegacyNames.asInstanceOf[js.Any])
+    if (!js.isUndefined(assumeValid)) __obj.updateDynamic("assumeValid")(assumeValid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(astNode)) __obj.updateDynamic("astNode")(astNode.asInstanceOf[js.Any])
+    if (!js.isUndefined(directives)) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
+    if (!js.isUndefined(extensionASTNodes)) __obj.updateDynamic("extensionASTNodes")(extensionASTNodes.asInstanceOf[js.Any])
+    if (!js.isUndefined(extensions)) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(mutation)) __obj.updateDynamic("mutation")(mutation.asInstanceOf[js.Any])
+    if (!js.isUndefined(query)) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
+    if (!js.isUndefined(subscription)) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
+    if (!js.isUndefined(types)) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLSchemaConfig]
   }
-  @scala.inline
-  implicit class GraphQLSchemaConfigOps[Self <: GraphQLSchemaConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAstNode(value: Maybe[SchemaDefinitionNode]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAstNode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAstNodeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(null)
-        ret
-    }
-    @scala.inline
-    def withDirectives(value: Maybe[js.Array[GraphQLDirective]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDirectives: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDirectivesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(null)
-        ret
-    }
-    @scala.inline
-    def withExtensionASTNodes(value: Maybe[js.Array[SchemaExtensionNode]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionASTNodes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensionASTNodes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionASTNodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensionASTNodesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionASTNodes")(null)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: Maybe[Record[String, _]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensionsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(null)
-        ret
-    }
-    @scala.inline
-    def withMutation(value: Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMutation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMutationNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mutation")(null)
-        ret
-    }
-    @scala.inline
-    def withQuery(value: Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQueryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(null)
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: Maybe[GraphQLObjectType[_, _, StringDictionary[_]]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscriptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(null)
-        ret
-    }
-    @scala.inline
-    def withTypes(value: Maybe[js.Array[GraphQLNamedType]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(null)
-        ret
-    }
-  }
-  
 }
 

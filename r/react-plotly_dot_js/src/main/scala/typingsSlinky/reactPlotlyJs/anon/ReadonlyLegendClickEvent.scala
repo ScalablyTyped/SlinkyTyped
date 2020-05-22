@@ -9,18 +9,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Readonly<plotly.js.plotly.js.LegendClickEvent> */
-@js.native
 trait ReadonlyLegendClickEvent extends js.Object {
-  val config: typingsSlinky.plotlyJs.anon.PartialConfig = js.native
-  val curveNumber: Double = js.native
-  val data: js.Array[Data] = js.native
-  val event: MouseEvent = js.native
-  val expandedIndex: Double = js.native
-  val frames: js.Array[Frame] = js.native
-  val fullData: js.Array[Data] = js.native
-  val fullLayout: typingsSlinky.plotlyJs.anon.PartialLayout = js.native
-  val layout: typingsSlinky.plotlyJs.anon.PartialLayout = js.native
-  val node: PlotlyHTMLElement = js.native
+  val config: typingsSlinky.plotlyJs.anon.PartialConfig
+  val curveNumber: Double
+  val data: js.Array[Data]
+  val event: MouseEvent
+  val expandedIndex: Double
+  val frames: js.Array[Frame]
+  val fullData: js.Array[Data]
+  val fullLayout: typingsSlinky.plotlyJs.anon.PartialLayout
+  val layout: typingsSlinky.plotlyJs.anon.PartialLayout
+  val node: PlotlyHTMLElement
 }
 
 object ReadonlyLegendClickEvent {
@@ -40,73 +39,5 @@ object ReadonlyLegendClickEvent {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], curveNumber = curveNumber.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], expandedIndex = expandedIndex.asInstanceOf[js.Any], frames = frames.asInstanceOf[js.Any], fullData = fullData.asInstanceOf[js.Any], fullLayout = fullLayout.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlyLegendClickEvent]
   }
-  @scala.inline
-  implicit class ReadonlyLegendClickEventOps[Self <: ReadonlyLegendClickEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConfig(value: typingsSlinky.plotlyJs.anon.PartialConfig): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCurveNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curveNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withData(value: js.Array[Data]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEvent(value: MouseEvent): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpandedIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expandedIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFrames(value: js.Array[Frame]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullData(value: js.Array[Data]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFullLayout(value: typingsSlinky.plotlyJs.anon.PartialLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullLayout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLayout(value: typingsSlinky.plotlyJs.anon.PartialLayout): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNode(value: PlotlyHTMLElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

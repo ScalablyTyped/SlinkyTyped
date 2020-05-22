@@ -15,25 +15,24 @@ import scala.scalajs.js.annotation._
   * the same element of this type's value set.
   * @see Map for a default implementation of this interface
   */
-@js.native
 trait XMap extends XElementAccess {
   /**
     * denotes the type of the keys in the map.
     *
     * Implementations are free to accept any supertype of `KeyType` as keys.
     */
-  var KeyType: `type` = js.native
+  var KeyType: `type`
   /**
     * denotes the type of the values in the map.
     *
     * Implementations are free to accept any supertype of the `ValueType` as values.
     */
-  var ValueType: `type` = js.native
+  var ValueType: `type`
   /**
     * clears the map, removing all key-value pairs from it.
     * @throws com::sun::star::lang::NoSupportException if the map is not mutable.
     */
-  def clear(): Unit = js.native
+  def clear(): Unit
   /**
     * determines whether a mapping for the given key exists in the map
     * @param Key is the key whose presence in the map is to be tested.
@@ -41,7 +40,7 @@ trait XMap extends XElementAccess {
     * @throws com::sun::star::beans::IllegalTypeException if the given key is not of a type which is accepted by the map
     * @throws com::sun::star::lang::IllegalArgumentException if the given key is not supported to be put into the map. It's up to the service implementing the
     */
-  def containsKey(Key: js.Any): Boolean = js.native
+  def containsKey(Key: js.Any): Boolean
   /**
     * determines whether the map contains a mapping to a given value.
     * @param Value is the value whose presence in the map is to be tested.
@@ -49,7 +48,7 @@ trait XMap extends XElementAccess {
     * @throws com::sun::star::beans::IllegalTypeException if the given value is not of a type which is accepted by the map. It's up to the service implementing
     * @throws com::sun::star::lang::IllegalArgumentException if the given value is not supported to be put into the map.
     */
-  def containsValue(Value: js.Any): Boolean = js.native
+  def containsValue(Value: js.Any): Boolean
   /**
     * gets the value to which a given key maps.
     * @param Key they key whose associated value is to be returned.
@@ -58,7 +57,7 @@ trait XMap extends XElementAccess {
     * @throws com::sun::star::lang::IllegalArgumentException if the given key is not supported to be put into the map. It's up to the service implementing the
     * @throws com::sun::star::container::NoSuchElementException if there is no value associated with the given key
     */
-  def get(Key: js.Any): js.Any = js.native
+  def get(Key: js.Any): js.Any
   /**
     * associates a given key with a given value
     *
@@ -70,7 +69,7 @@ trait XMap extends XElementAccess {
     * @throws com::sun::star::lang::IllegalArgumentException if the given key, or the given value, is not supported to be put into the map. It's up to the serv
     * @throws com::sun::star::lang::NoSupportException if the map does not support putting new mappings into it
     */
-  def put(Key: js.Any, Value: js.Any): js.Any = js.native
+  def put(Key: js.Any, Value: js.Any): js.Any
   /**
     * removes a key-value mapping, given by key, from the map.
     * @param Key is the key whose mapping should be removed from the map
@@ -80,7 +79,7 @@ trait XMap extends XElementAccess {
     * @throws com::sun::star::lang::NoSupportException if the map does not support removing mappings
     * @throws com::sun::star::container::NoSuchElementException if there is no value associated with the given key
     */
-  def remove(Key: js.Any): js.Any = js.native
+  def remove(Key: js.Any): js.Any
 }
 
 object XMap {
@@ -104,61 +103,5 @@ object XMap {
     val __obj = js.Dynamic.literal(ElementType = ElementType.asInstanceOf[js.Any], KeyType = KeyType.asInstanceOf[js.Any], ValueType = ValueType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), clear = js.Any.fromFunction0(clear), containsKey = js.Any.fromFunction1(containsKey), containsValue = js.Any.fromFunction1(containsValue), get = js.Any.fromFunction1(get), getElementType = js.Any.fromFunction0(getElementType), hasElements = js.Any.fromFunction0(hasElements), put = js.Any.fromFunction2(put), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), remove = js.Any.fromFunction1(remove))
     __obj.asInstanceOf[XMap]
   }
-  @scala.inline
-  implicit class XMapOps[Self <: XMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKeyType(value: `type`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValueType(value: `type`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClear(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withContainsKey(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsKey")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withContainsValue(value: js.Any => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("containsValue")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGet(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPut(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("put")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: js.Any => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

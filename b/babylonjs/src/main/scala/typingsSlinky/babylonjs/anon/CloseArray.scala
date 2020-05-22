@@ -8,173 +8,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CloseArray extends js.Object {
-  var backUVs: js.UndefOr[Vector4] = js.native
-  var closeArray: js.UndefOr[Boolean] = js.native
-  var closePath: js.UndefOr[Boolean] = js.native
-  var colors: js.UndefOr[js.Array[Color4]] = js.native
-  var frontUVs: js.UndefOr[Vector4] = js.native
-  var instance: js.UndefOr[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
-  var invertUV: js.UndefOr[Boolean] = js.native
-  var offset: js.UndefOr[Double] = js.native
-  var pathArray: js.Array[js.Array[Vector3]] = js.native
-  var sideOrientation: js.UndefOr[Double] = js.native
-  var updatable: js.UndefOr[Boolean] = js.native
-  var uvs: js.UndefOr[js.Array[Vector2]] = js.native
+  var backUVs: js.UndefOr[Vector4] = js.undefined
+  var closeArray: js.UndefOr[Boolean] = js.undefined
+  var closePath: js.UndefOr[Boolean] = js.undefined
+  var colors: js.UndefOr[js.Array[Color4]] = js.undefined
+  var frontUVs: js.UndefOr[Vector4] = js.undefined
+  var instance: js.UndefOr[typingsSlinky.babylonjs.meshMod.Mesh] = js.undefined
+  var invertUV: js.UndefOr[Boolean] = js.undefined
+  var offset: js.UndefOr[Double] = js.undefined
+  var pathArray: js.Array[js.Array[Vector3]]
+  var sideOrientation: js.UndefOr[Double] = js.undefined
+  var updatable: js.UndefOr[Boolean] = js.undefined
+  var uvs: js.UndefOr[js.Array[Vector2]] = js.undefined
 }
 
 object CloseArray {
   @scala.inline
-  def apply(pathArray: js.Array[js.Array[Vector3]]): CloseArray = {
+  def apply(
+    pathArray: js.Array[js.Array[Vector3]],
+    backUVs: Vector4 = null,
+    closeArray: js.UndefOr[Boolean] = js.undefined,
+    closePath: js.UndefOr[Boolean] = js.undefined,
+    colors: js.Array[Color4] = null,
+    frontUVs: Vector4 = null,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh = null,
+    invertUV: js.UndefOr[Boolean] = js.undefined,
+    offset: js.UndefOr[Double] = js.undefined,
+    sideOrientation: js.UndefOr[Double] = js.undefined,
+    updatable: js.UndefOr[Boolean] = js.undefined,
+    uvs: js.Array[Vector2] = null
+  ): CloseArray = {
     val __obj = js.Dynamic.literal(pathArray = pathArray.asInstanceOf[js.Any])
+    if (backUVs != null) __obj.updateDynamic("backUVs")(backUVs.asInstanceOf[js.Any])
+    if (!js.isUndefined(closeArray)) __obj.updateDynamic("closeArray")(closeArray.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(closePath)) __obj.updateDynamic("closePath")(closePath.get.asInstanceOf[js.Any])
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
+    if (frontUVs != null) __obj.updateDynamic("frontUVs")(frontUVs.asInstanceOf[js.Any])
+    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
+    if (!js.isUndefined(invertUV)) __obj.updateDynamic("invertUV")(invertUV.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(offset)) __obj.updateDynamic("offset")(offset.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(sideOrientation)) __obj.updateDynamic("sideOrientation")(sideOrientation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatable)) __obj.updateDynamic("updatable")(updatable.get.asInstanceOf[js.Any])
+    if (uvs != null) __obj.updateDynamic("uvs")(uvs.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloseArray]
   }
-  @scala.inline
-  implicit class CloseArrayOps[Self <: CloseArray] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPathArray(value: js.Array[js.Array[Vector3]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pathArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBackUVs(value: Vector4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackUVs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backUVs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloseArray(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeArray")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloseArray: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closeArray")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClosePath(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closePath")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClosePath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("closePath")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColors(value: js.Array[Color4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFrontUVs(value: Vector4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontUVs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFrontUVs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frontUVs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstance(value: typingsSlinky.babylonjs.meshMod.Mesh): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvertUV(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invertUV")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvertUV: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invertUV")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffset(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSideOrientation(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSideOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sideOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUvs(value: js.Array[Vector2]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uvs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUvs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uvs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

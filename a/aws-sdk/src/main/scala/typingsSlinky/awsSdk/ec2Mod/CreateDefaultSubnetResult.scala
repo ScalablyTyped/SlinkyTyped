@@ -14,29 +14,10 @@ trait CreateDefaultSubnetResult extends js.Object {
 
 object CreateDefaultSubnetResult {
   @scala.inline
-  def apply(): CreateDefaultSubnetResult = {
+  def apply(Subnet: Subnet = null): CreateDefaultSubnetResult = {
     val __obj = js.Dynamic.literal()
+    if (Subnet != null) __obj.updateDynamic("Subnet")(Subnet.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDefaultSubnetResult]
   }
-  @scala.inline
-  implicit class CreateDefaultSubnetResultOps[Self <: CreateDefaultSubnetResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubnet(value: Subnet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnet")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubnet: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnet")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

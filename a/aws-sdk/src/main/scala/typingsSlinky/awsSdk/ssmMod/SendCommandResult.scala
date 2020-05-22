@@ -14,29 +14,10 @@ trait SendCommandResult extends js.Object {
 
 object SendCommandResult {
   @scala.inline
-  def apply(): SendCommandResult = {
+  def apply(Command: Command = null): SendCommandResult = {
     val __obj = js.Dynamic.literal()
+    if (Command != null) __obj.updateDynamic("Command")(Command.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendCommandResult]
   }
-  @scala.inline
-  implicit class SendCommandResultOps[Self <: SendCommandResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommand(value: Command): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Command")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCommand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Command")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

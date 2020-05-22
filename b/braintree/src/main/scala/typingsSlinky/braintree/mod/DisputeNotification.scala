@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisputeNotification
   extends BaseWebhookNotification
      with WebhookNotification {
-  var dispute: Dispute = js.native
+  var dispute: Dispute
   @JSName("kind")
-  var kind_DisputeNotification: DisputeNotificationKind = js.native
+  var kind_DisputeNotification: DisputeNotificationKind
 }
 
 object DisputeNotification {
@@ -19,25 +18,5 @@ object DisputeNotification {
     val __obj = js.Dynamic.literal(dispute = dispute.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisputeNotification]
   }
-  @scala.inline
-  implicit class DisputeNotificationOps[Self <: DisputeNotification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDispute(value: Dispute): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dispute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: DisputeNotificationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

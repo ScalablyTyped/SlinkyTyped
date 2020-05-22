@@ -19,41 +19,11 @@ trait SchemaTextConfig extends js.Object {
 
 object SchemaTextConfig {
   @scala.inline
-  def apply(): SchemaTextConfig = {
+  def apply(experimentalConfig: String = null, transformations: js.Array[SchemaInfoTypeTransformation] = null): SchemaTextConfig = {
     val __obj = js.Dynamic.literal()
+    if (experimentalConfig != null) __obj.updateDynamic("experimentalConfig")(experimentalConfig.asInstanceOf[js.Any])
+    if (transformations != null) __obj.updateDynamic("transformations")(transformations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTextConfig]
   }
-  @scala.inline
-  implicit class SchemaTextConfigOps[Self <: SchemaTextConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExperimentalConfig(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalConfig")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExperimentalConfig: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalConfig")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransformations(value: js.Array[SchemaInfoTypeTransformation]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransformations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

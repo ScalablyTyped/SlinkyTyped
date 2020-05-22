@@ -11,7 +11,7 @@ import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSet
 import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSetItemProps
 import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSetProps
 import typingsSlinky.officeUiFabricReact.overflowSetTypesMod.IOverflowSetStyles
-import typingsSlinky.std.Partial
+import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
@@ -52,7 +52,7 @@ object OverflowSetBase {
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
-    def stylesFunction1(value: IOverflowSetProps => Partial[IOverflowSetStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    def stylesFunction1(value: IOverflowSetProps => DeepPartial[IOverflowSetStyles]): this.type = set("styles", js.Any.fromFunction1(value))
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IOverflowSetProps, IOverflowSetStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline

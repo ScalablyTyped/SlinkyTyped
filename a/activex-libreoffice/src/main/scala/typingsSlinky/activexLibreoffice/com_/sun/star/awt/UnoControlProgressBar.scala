@@ -11,7 +11,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** specifies a progress bar control. */
-@js.native
 trait UnoControlProgressBar
   extends XControl
      with XWindow

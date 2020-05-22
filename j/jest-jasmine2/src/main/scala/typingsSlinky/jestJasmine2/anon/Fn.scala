@@ -4,62 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Fn extends js.Object {
-  var fn: js.UndefOr[js.Function] = js.native
-  var getSpy: js.UndefOr[js.Function0[_]] = js.native
-  var name: js.UndefOr[String] = js.native
+  var fn: js.UndefOr[js.Function] = js.undefined
+  var getSpy: js.UndefOr[js.Function0[_]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
 }
 
 object Fn {
   @scala.inline
-  def apply(): Fn = {
+  def apply(fn: js.Function = null, getSpy: () => _ = null, name: String = null): Fn = {
     val __obj = js.Dynamic.literal()
+    if (fn != null) __obj.updateDynamic("fn")(fn.asInstanceOf[js.Any])
+    if (getSpy != null) __obj.updateDynamic("getSpy")(js.Any.fromFunction0(getSpy))
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fn]
   }
-  @scala.inline
-  implicit class FnOps[Self <: Fn] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFn(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetSpy(value: () => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSpy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetSpy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getSpy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

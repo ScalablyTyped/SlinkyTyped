@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
   */
-@js.native
 trait PlusNativeObjAnimationViewStyles extends js.Object {
   /**
     * 动画窗口上绘制的背景图片
@@ -18,89 +17,42 @@ trait PlusNativeObjAnimationViewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var bitmap: js.UndefOr[PlusNativeObjBitmap] = js.native
+  var bitmap: js.UndefOr[PlusNativeObjBitmap] = js.undefined
   /**
     * 动画窗口上绘制的文本内容
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.undefined
   /**
     * 动画窗口上绘制的文本区域
     * 默认值为{top:'0px',left:'0px',width:'100%',height:'44px'}。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var textRect: js.UndefOr[PlusNativeObjRect] = js.native
+  var textRect: js.UndefOr[PlusNativeObjRect] = js.undefined
   /**
     * 动画窗口上绘制的文本样式
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeobj.html](http://www.html5plus.org/doc/zh_cn/nativeobj.html)
     */
-  var textStyles: js.UndefOr[PlusNativeObjTextStyles] = js.native
+  var textStyles: js.UndefOr[PlusNativeObjTextStyles] = js.undefined
 }
 
 object PlusNativeObjAnimationViewStyles {
   @scala.inline
-  def apply(): PlusNativeObjAnimationViewStyles = {
+  def apply(
+    bitmap: PlusNativeObjBitmap = null,
+    text: String = null,
+    textRect: PlusNativeObjRect = null,
+    textStyles: PlusNativeObjTextStyles = null
+  ): PlusNativeObjAnimationViewStyles = {
     val __obj = js.Dynamic.literal()
+    if (bitmap != null) __obj.updateDynamic("bitmap")(bitmap.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (textRect != null) __obj.updateDynamic("textRect")(textRect.asInstanceOf[js.Any])
+    if (textStyles != null) __obj.updateDynamic("textStyles")(textStyles.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusNativeObjAnimationViewStyles]
   }
-  @scala.inline
-  implicit class PlusNativeObjAnimationViewStylesOps[Self <: PlusNativeObjAnimationViewStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitmap(value: PlusNativeObjBitmap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitmap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBitmap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitmap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withText(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextRect(value: PlusNativeObjRect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextRect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textRect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextStyles(value: PlusNativeObjTextStyles): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

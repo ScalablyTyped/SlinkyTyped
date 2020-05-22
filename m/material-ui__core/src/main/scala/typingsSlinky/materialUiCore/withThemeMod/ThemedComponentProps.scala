@@ -16,59 +16,11 @@ trait ThemedComponentProps extends js.Object {
 
 object ThemedComponentProps {
   @scala.inline
-  def apply(): ThemedComponentProps = {
+  def apply(innerRef: js.UndefOr[Null | Ref[_] | ReactRef[_]] = js.undefined, theme: Theme = null): ThemedComponentProps = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(innerRef)) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThemedComponentProps]
   }
-  @scala.inline
-  implicit class ThemedComponentPropsOps[Self <: ThemedComponentProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInnerRefRefObject(value: ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInnerRefFunction1(value: /* instance */ _ | Null => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withInnerRef(value: Ref[_] | ReactRef[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInnerRef: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInnerRefNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(null)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: Theme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

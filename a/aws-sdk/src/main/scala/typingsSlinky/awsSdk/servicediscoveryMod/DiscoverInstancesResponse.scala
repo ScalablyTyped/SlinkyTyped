@@ -14,29 +14,10 @@ trait DiscoverInstancesResponse extends js.Object {
 
 object DiscoverInstancesResponse {
   @scala.inline
-  def apply(): DiscoverInstancesResponse = {
+  def apply(Instances: HttpInstanceSummaryList = null): DiscoverInstancesResponse = {
     val __obj = js.Dynamic.literal()
+    if (Instances != null) __obj.updateDynamic("Instances")(Instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoverInstancesResponse]
   }
-  @scala.inline
-  implicit class DiscoverInstancesResponseOps[Self <: DiscoverInstancesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstances(value: HttpInstanceSummaryList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

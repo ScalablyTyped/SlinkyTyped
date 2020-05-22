@@ -5,265 +5,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ISliderStyles extends js.Object {
   /**
     * Style set for active portion of the line.
     */
-  var activeSection: IStyle = js.native
+  var activeSection: IStyle
   /**
     * Style set for the container of the slider.
     */
-  var container: IStyle = js.native
+  var container: IStyle
   /**
     * Style set for inactive portion of the line.
     */
-  var inactiveSection: IStyle = js.native
+  var inactiveSection: IStyle
   /**
     * Style set for element that contains all the lines.
     */
-  var line: IStyle = js.native
+  var line: IStyle
   /**
     * Style set for both active and inactive sections of the line.
     */
-  var lineContainer: IStyle = js.native
+  var lineContainer: IStyle
   /**
     * Style set for the root element.
     */
-  var root: IStyle = js.native
+  var root: IStyle
   /**
     * Style set for the actual box containting interactive elements of the slider.
     */
-  var slideBox: IStyle = js.native
+  var slideBox: IStyle
   /**
     * Style set for thumb of the slider.
     */
-  var thumb: IStyle = js.native
+  var thumb: IStyle
   /**
     * Style set for the title label above the slider.
     */
-  var titleLabel: IStyle = js.native
+  var titleLabel: IStyle
   /**
     * Style set for value label on right/below of the slider.
     */
-  var valueLabel: IStyle = js.native
+  var valueLabel: IStyle
   /**
     * Style set for tick on 0 on number line. This element only shows up when originFromZero prop is true.
     */
-  var zeroTick: IStyle = js.native
+  var zeroTick: IStyle
 }
 
 object ISliderStyles {
   @scala.inline
-  def apply(): ISliderStyles = {
+  def apply(
+    activeSection: js.UndefOr[Null | IStyle] = js.undefined,
+    container: js.UndefOr[Null | IStyle] = js.undefined,
+    inactiveSection: js.UndefOr[Null | IStyle] = js.undefined,
+    line: js.UndefOr[Null | IStyle] = js.undefined,
+    lineContainer: js.UndefOr[Null | IStyle] = js.undefined,
+    root: js.UndefOr[Null | IStyle] = js.undefined,
+    slideBox: js.UndefOr[Null | IStyle] = js.undefined,
+    thumb: js.UndefOr[Null | IStyle] = js.undefined,
+    titleLabel: js.UndefOr[Null | IStyle] = js.undefined,
+    valueLabel: js.UndefOr[Null | IStyle] = js.undefined,
+    zeroTick: js.UndefOr[Null | IStyle] = js.undefined
+  ): ISliderStyles = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(activeSection)) __obj.updateDynamic("activeSection")(activeSection.asInstanceOf[js.Any])
+    if (!js.isUndefined(container)) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
+    if (!js.isUndefined(inactiveSection)) __obj.updateDynamic("inactiveSection")(inactiveSection.asInstanceOf[js.Any])
+    if (!js.isUndefined(line)) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
+    if (!js.isUndefined(lineContainer)) __obj.updateDynamic("lineContainer")(lineContainer.asInstanceOf[js.Any])
+    if (!js.isUndefined(root)) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (!js.isUndefined(slideBox)) __obj.updateDynamic("slideBox")(slideBox.asInstanceOf[js.Any])
+    if (!js.isUndefined(thumb)) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
+    if (!js.isUndefined(titleLabel)) __obj.updateDynamic("titleLabel")(titleLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(valueLabel)) __obj.updateDynamic("valueLabel")(valueLabel.asInstanceOf[js.Any])
+    if (!js.isUndefined(zeroTick)) __obj.updateDynamic("zeroTick")(zeroTick.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISliderStyles]
   }
-  @scala.inline
-  implicit class ISliderStylesOps[Self <: ISliderStyles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActiveSection(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutActiveSection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withActiveSectionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("activeSection")(null)
-        ret
-    }
-    @scala.inline
-    def withContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(null)
-        ret
-    }
-    @scala.inline
-    def withInactiveSection(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveSection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInactiveSection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveSection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInactiveSectionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveSection")(null)
-        ret
-    }
-    @scala.inline
-    def withLine(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(null)
-        ret
-    }
-    @scala.inline
-    def withLineContainer(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineContainer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineContainer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineContainerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineContainer")(null)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRootNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
-        ret
-    }
-    @scala.inline
-    def withSlideBox(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideBox")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlideBox: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideBox")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlideBoxNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideBox")(null)
-        ret
-    }
-    @scala.inline
-    def withThumb(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutThumb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThumbNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb")(null)
-        ret
-    }
-    @scala.inline
-    def withTitleLabel(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleLabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLabel")(null)
-        ret
-    }
-    @scala.inline
-    def withValueLabel(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueLabelNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLabel")(null)
-        ret
-    }
-    @scala.inline
-    def withZeroTick(value: IStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroTick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZeroTick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroTick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZeroTickNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroTick")(null)
-        ret
-    }
-  }
-  
 }
 

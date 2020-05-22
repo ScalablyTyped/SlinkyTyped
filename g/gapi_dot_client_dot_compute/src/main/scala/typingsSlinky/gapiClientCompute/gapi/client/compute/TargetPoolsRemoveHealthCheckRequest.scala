@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TargetPoolsRemoveHealthCheckRequest extends js.Object {
   /**
     * Health check URL to be removed. This can be a full or valid partial URL. For example, the following are valid URLs:
@@ -12,34 +11,15 @@ trait TargetPoolsRemoveHealthCheckRequest extends js.Object {
     * - projects/project/global/httpHealthChecks/health-check
     * - global/httpHealthChecks/health-check
     */
-  var healthChecks: js.UndefOr[js.Array[HealthCheckReference]] = js.native
+  var healthChecks: js.UndefOr[js.Array[HealthCheckReference]] = js.undefined
 }
 
 object TargetPoolsRemoveHealthCheckRequest {
   @scala.inline
-  def apply(): TargetPoolsRemoveHealthCheckRequest = {
+  def apply(healthChecks: js.Array[HealthCheckReference] = null): TargetPoolsRemoveHealthCheckRequest = {
     val __obj = js.Dynamic.literal()
+    if (healthChecks != null) __obj.updateDynamic("healthChecks")(healthChecks.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetPoolsRemoveHealthCheckRequest]
   }
-  @scala.inline
-  implicit class TargetPoolsRemoveHealthCheckRequestOps[Self <: TargetPoolsRemoveHealthCheckRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHealthChecks(value: js.Array[HealthCheckReference]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthChecks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthChecks: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("healthChecks")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

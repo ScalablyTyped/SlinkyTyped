@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMediaEncodingProfile extends js.Object {
-  var audio: AudioEncodingProperties = js.native
-  var container: ContainerEncodingProperties = js.native
-  var video: VideoEncodingProperties = js.native
+  var audio: AudioEncodingProperties
+  var container: ContainerEncodingProperties
+  var video: VideoEncodingProperties
 }
 
 object IMediaEncodingProfile {
@@ -21,31 +20,5 @@ object IMediaEncodingProfile {
     val __obj = js.Dynamic.literal(audio = audio.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMediaEncodingProfile]
   }
-  @scala.inline
-  implicit class IMediaEncodingProfileOps[Self <: IMediaEncodingProfile] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAudio(value: AudioEncodingProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withContainer(value: ContainerEncodingProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVideo(value: VideoEncodingProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

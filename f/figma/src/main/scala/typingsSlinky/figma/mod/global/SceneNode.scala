@@ -21,32 +21,3 @@ import scala.scalajs.js.annotation._
 */
 trait SceneNode extends BaseNode
 
-object SceneNode {
-  @scala.inline
-  implicit def apply(value: BooleanOperationNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: ComponentNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: EllipseNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: FrameNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: GroupNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: InstanceNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: LineNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: PolygonNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: RectangleNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: SliceNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: StarNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: TextNode): SceneNode = value.asInstanceOf[SceneNode]
-  @scala.inline
-  implicit def apply(value: VectorNode): SceneNode = value.asInstanceOf[SceneNode]
-}
-

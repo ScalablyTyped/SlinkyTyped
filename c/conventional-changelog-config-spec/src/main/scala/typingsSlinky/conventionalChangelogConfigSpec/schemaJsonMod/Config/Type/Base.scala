@@ -7,66 +7,29 @@ import scala.scalajs.js.annotation._
 /**
   * An object that describes a commit type's settings in the CHANGELOG.
   */
-@js.native
 trait Base extends js.Object {
   /**
     * Set to `true` to hide matched commit types in the CHANGELOG.
     */
-  var hidden: js.UndefOr[Boolean] = js.native
+  var hidden: js.UndefOr[Boolean] = js.undefined
   /**
     * The section where the matched commit type will display in the CHANGELOG.
     */
-  var section: js.UndefOr[String] = js.native
+  var section: js.UndefOr[String] = js.undefined
   /**
     * A string used to match <type>s used in the Conventional Commits convention.
     */
-  var `type`: String = js.native
+  var `type`: String
 }
 
 object Base {
   @scala.inline
-  def apply(`type`: String): Base = {
+  def apply(`type`: String, hidden: js.UndefOr[Boolean] = js.undefined, section: String = null): Base = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.get.asInstanceOf[js.Any])
+    if (section != null) __obj.updateDynamic("section")(section.asInstanceOf[js.Any])
     __obj.asInstanceOf[Base]
   }
-  @scala.inline
-  implicit class BaseOps[Self <: Base] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHidden(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHidden: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSection(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

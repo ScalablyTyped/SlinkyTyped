@@ -17,19 +17,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ErrorBar
   extends XDataSink
      with LineProperties
      with XDataSource {
   /** @see com.sun.star.chart.ErrorBarStyle */
-  var ErrorBarStyle: Double = js.native
-  var NegativeError: Double = js.native
-  var PositiveError: Double = js.native
-  var ShowNegativeError: Boolean = js.native
-  var ShowPositiveError: Boolean = js.native
+  var ErrorBarStyle: Double
+  var NegativeError: Double
+  var PositiveError: Double
+  var ShowNegativeError: Boolean
+  var ShowPositiveError: Boolean
   /** The weight for the standard deviation. */
-  var Weight: Double = js.native
+  var Weight: Double
 }
 
 object ErrorBar {
@@ -67,49 +66,5 @@ object ErrorBar {
     val __obj = js.Dynamic.literal(DataSequences = DataSequences.asInstanceOf[js.Any], ErrorBarStyle = ErrorBarStyle.asInstanceOf[js.Any], LineCap = LineCap.asInstanceOf[js.Any], LineColor = LineColor.asInstanceOf[js.Any], LineDash = LineDash.asInstanceOf[js.Any], LineDashName = LineDashName.asInstanceOf[js.Any], LineEnd = LineEnd.asInstanceOf[js.Any], LineEndCenter = LineEndCenter.asInstanceOf[js.Any], LineEndName = LineEndName.asInstanceOf[js.Any], LineEndWidth = LineEndWidth.asInstanceOf[js.Any], LineJoint = LineJoint.asInstanceOf[js.Any], LineStart = LineStart.asInstanceOf[js.Any], LineStartCenter = LineStartCenter.asInstanceOf[js.Any], LineStartName = LineStartName.asInstanceOf[js.Any], LineStartWidth = LineStartWidth.asInstanceOf[js.Any], LineStyle = LineStyle.asInstanceOf[js.Any], LineTransparence = LineTransparence.asInstanceOf[js.Any], LineWidth = LineWidth.asInstanceOf[js.Any], NegativeError = NegativeError.asInstanceOf[js.Any], PositiveError = PositiveError.asInstanceOf[js.Any], ShowNegativeError = ShowNegativeError.asInstanceOf[js.Any], ShowPositiveError = ShowPositiveError.asInstanceOf[js.Any], Weight = Weight.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getDataSequences = js.Any.fromFunction0(getDataSequences), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setData = js.Any.fromFunction1(setData))
     __obj.asInstanceOf[ErrorBar]
   }
-  @scala.inline
-  implicit class ErrorBarOps[Self <: ErrorBar] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withErrorBarStyle(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorBarStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNegativeError(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NegativeError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPositiveError(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PositiveError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowNegativeError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowNegativeError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withShowPositiveError(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowPositiveError")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

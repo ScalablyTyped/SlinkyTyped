@@ -7,594 +7,246 @@ import scala.scalajs.js.annotation._
 /**
   * Pretty photo settings
   */
-@js.native
 trait PrettyPhotoSettings extends js.Object {
-  var ajaxcallback: js.UndefOr[js.Function0[Unit]] = js.native
+  var ajaxcallback: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Allow the user to expand a resized image. true/false
     * @default true
     */
-  var allow_expand: js.UndefOr[Boolean] = js.native
+  var allow_expand: js.UndefOr[Boolean] = js.undefined
   /**
     * Resize the photos bigger than viewport. true/false
     * @default true
     */
-  var allow_resize: js.UndefOr[Boolean] = js.native
+  var allow_resize: js.UndefOr[Boolean] = js.undefined
   /**
     * fast/slow/normal
     * @default 'fast'
     */
-  var animation_speed: js.UndefOr[String] = js.native
+  var animation_speed: js.UndefOr[String] = js.undefined
   /**
     * Automatically start videos: True/False
     * @default true
     */
-  var autoplay: js.UndefOr[Boolean] = js.native
+  var autoplay: js.UndefOr[Boolean] = js.undefined
   /**
     * true/false
     * @default false
     */
-  var autoplay_slideshow: js.UndefOr[Boolean] = js.native
+  var autoplay_slideshow: js.UndefOr[Boolean] = js.undefined
   /**
     * Called when prettyPhoto is closed
     * @default function () { }
     */
-  var callback: js.UndefOr[js.Function0[Unit]] = js.native
+  var callback: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * Called everytime an item is shown/changed
     * @default function () { }
     */
-  var changepicturecallback: js.UndefOr[js.Function0[Unit]] = js.native
+  var changepicturecallback: js.UndefOr[js.Function0[Unit]] = js.undefined
   /**
     * The separator for the gallery counter 1 "of" 2
     * @default '/'
     */
-  var counter_separator_label: js.UndefOr[String] = js.native
+  var counter_separator_label: js.UndefOr[String] = js.undefined
   /**
     * @default ''
     */
-  var custom_markup: js.UndefOr[String] = js.native
+  var custom_markup: js.UndefOr[String] = js.undefined
   /**
     * Allow prettyPhoto to update the url to enable deeplinking.
     * @default true
     */
-  var deeplinking: js.UndefOr[Boolean] = js.native
+  var deeplinking: js.UndefOr[Boolean] = js.undefined
   /**
     * Pixels
     * @default 344
     */
-  var default_height: js.UndefOr[Double] = js.native
+  var default_height: js.UndefOr[Double] = js.undefined
   /**
     * Pixels
     * @default 500
     */
-  var default_width: js.UndefOr[Double] = js.native
+  var default_width: js.UndefOr[Double] = js.undefined
   /**
     * Markup for flash
     * @default '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="{width}" height="{height}"><param name="wmode" value="{wmode}" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="{path}" /><embed src="{path}" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="{width}" height="{height}" wmode="{wmode}"></embed></object>'
     */
-  var flash_markup: js.UndefOr[String] = js.native
+  var flash_markup: js.UndefOr[String] = js.undefined
   /**
     * Markup for pretty photo gallery
     * @default omitted for brevity
     */
-  var gallery_markup: js.UndefOr[String] = js.native
+  var gallery_markup: js.UndefOr[String] = js.undefined
   /**
     * Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto
     * @default false
     */
-  var hideflash: js.UndefOr[Boolean] = js.native
+  var hideflash: js.UndefOr[Boolean] = js.undefined
   /**
     * the attribute tag to use for prettyPhoto hooks.  For HTML5, use "data-rel" or similar.
     * @default 'rel'
     */
-  var hook: js.UndefOr[String] = js.native
+  var hook: js.UndefOr[String] = js.undefined
   /**
     * The padding on each side of the picture
     * @default 20
     */
-  var horizontal_padding: js.UndefOr[Double] = js.native
+  var horizontal_padding: js.UndefOr[Double] = js.undefined
   /**
     * @default true
     */
-  var ie6_fallback: js.UndefOr[Boolean] = js.native
+  var ie6_fallback: js.UndefOr[Boolean] = js.undefined
   /**
     * Markup for iframe
     * @default '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>'
     */
-  var iframe_markup: js.UndefOr[String] = js.native
+  var iframe_markup: js.UndefOr[String] = js.undefined
   /**
     * Markup for image
     * @default '<img id="fullResImage" src="{path}" />'
     */
-  var image_markup: js.UndefOr[String] = js.native
+  var image_markup: js.UndefOr[String] = js.undefined
   /**
     * @default '<div class="pp_inline">{content}</div>'
     */
-  var inline_markup: js.UndefOr[String] = js.native
+  var inline_markup: js.UndefOr[String] = js.undefined
   /**
     * Set to false if you open forms inside prettyPhoto
     * @default true
     */
-  var keyboard_shortcuts: js.UndefOr[Boolean] = js.native
+  var keyboard_shortcuts: js.UndefOr[Boolean] = js.undefined
   /**
     * Markup for pretty photo
     * @default omitted for brevity
     */
-  var markup: js.UndefOr[String] = js.native
+  var markup: js.UndefOr[String] = js.undefined
   /**
     * If set to true, only the close button will close the window
     * @default false
     */
-  var modal: js.UndefOr[Boolean] = js.native
+  var modal: js.UndefOr[Boolean] = js.undefined
   /**
     * Value between 0 and 1
     * @default 0.80
     */
-  var opacity: js.UndefOr[Double] = js.native
+  var opacity: js.UndefOr[Double] = js.undefined
   /**
     * If set to true, a gallery will overlay the fullscreen image on mouse over
     * @default true
     */
-  var overlay_gallery: js.UndefOr[Boolean] = js.native
+  var overlay_gallery: js.UndefOr[Boolean] = js.undefined
   /**
     * Maximum number of pictures in the overlay gallery
     * @default 30
     */
-  var overlay_gallery_max: js.UndefOr[Double] = js.native
+  var overlay_gallery_max: js.UndefOr[Double] = js.undefined
   /**
     * Markup for quicktime
     * @default '<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" height="{height}" width="{width}"><param name="src" value="{path}"><param name="autoplay" value="{autoplay}"><param name="type" value="video/quicktime"><embed src="{path}" height="{height}" width="{width}" autoplay="{autoplay}" type="video/quicktime" pluginspage="http://www.apple.com/quicktime/download/"></embed></object>'
     */
-  var quicktime_markup: js.UndefOr[String] = js.native
+  var quicktime_markup: js.UndefOr[String] = js.undefined
   /**
     * true/false
     * @default true
     */
-  var show_title: js.UndefOr[Boolean] = js.native
+  var show_title: js.UndefOr[Boolean] = js.undefined
   /**
     * false OR interval time in ms
     * @default 5000
     */
-  var slideshow: js.UndefOr[js.Any] = js.native
+  var slideshow: js.UndefOr[js.Any] = js.undefined
   /**
     * Markup for social tools, set to html or false to disable
     * @default '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>'
     */
-  var social_tools: js.UndefOr[js.Any] = js.native
+  var social_tools: js.UndefOr[js.Any] = js.undefined
   /**
     * light_rounded / dark_rounded / light_square / dark_square / facebook
     * @default 'pp_default'
     */
-  var theme: js.UndefOr[String] = js.native
+  var theme: js.UndefOr[String] = js.undefined
   /**
     * Set the flash wmode attribute
     * @default 'opaque'
     */
-  var wmode: js.UndefOr[String] = js.native
+  var wmode: js.UndefOr[String] = js.undefined
 }
 
 object PrettyPhotoSettings {
   @scala.inline
-  def apply(): PrettyPhotoSettings = {
+  def apply(
+    ajaxcallback: () => Unit = null,
+    allow_expand: js.UndefOr[Boolean] = js.undefined,
+    allow_resize: js.UndefOr[Boolean] = js.undefined,
+    animation_speed: String = null,
+    autoplay: js.UndefOr[Boolean] = js.undefined,
+    autoplay_slideshow: js.UndefOr[Boolean] = js.undefined,
+    callback: () => Unit = null,
+    changepicturecallback: () => Unit = null,
+    counter_separator_label: String = null,
+    custom_markup: String = null,
+    deeplinking: js.UndefOr[Boolean] = js.undefined,
+    default_height: js.UndefOr[Double] = js.undefined,
+    default_width: js.UndefOr[Double] = js.undefined,
+    flash_markup: String = null,
+    gallery_markup: String = null,
+    hideflash: js.UndefOr[Boolean] = js.undefined,
+    hook: String = null,
+    horizontal_padding: js.UndefOr[Double] = js.undefined,
+    ie6_fallback: js.UndefOr[Boolean] = js.undefined,
+    iframe_markup: String = null,
+    image_markup: String = null,
+    inline_markup: String = null,
+    keyboard_shortcuts: js.UndefOr[Boolean] = js.undefined,
+    markup: String = null,
+    modal: js.UndefOr[Boolean] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    overlay_gallery: js.UndefOr[Boolean] = js.undefined,
+    overlay_gallery_max: js.UndefOr[Double] = js.undefined,
+    quicktime_markup: String = null,
+    show_title: js.UndefOr[Boolean] = js.undefined,
+    slideshow: js.Any = null,
+    social_tools: js.Any = null,
+    theme: String = null,
+    wmode: String = null
+  ): PrettyPhotoSettings = {
     val __obj = js.Dynamic.literal()
+    if (ajaxcallback != null) __obj.updateDynamic("ajaxcallback")(js.Any.fromFunction0(ajaxcallback))
+    if (!js.isUndefined(allow_expand)) __obj.updateDynamic("allow_expand")(allow_expand.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allow_resize)) __obj.updateDynamic("allow_resize")(allow_resize.get.asInstanceOf[js.Any])
+    if (animation_speed != null) __obj.updateDynamic("animation_speed")(animation_speed.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoplay_slideshow)) __obj.updateDynamic("autoplay_slideshow")(autoplay_slideshow.get.asInstanceOf[js.Any])
+    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction0(callback))
+    if (changepicturecallback != null) __obj.updateDynamic("changepicturecallback")(js.Any.fromFunction0(changepicturecallback))
+    if (counter_separator_label != null) __obj.updateDynamic("counter_separator_label")(counter_separator_label.asInstanceOf[js.Any])
+    if (custom_markup != null) __obj.updateDynamic("custom_markup")(custom_markup.asInstanceOf[js.Any])
+    if (!js.isUndefined(deeplinking)) __obj.updateDynamic("deeplinking")(deeplinking.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(default_height)) __obj.updateDynamic("default_height")(default_height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(default_width)) __obj.updateDynamic("default_width")(default_width.get.asInstanceOf[js.Any])
+    if (flash_markup != null) __obj.updateDynamic("flash_markup")(flash_markup.asInstanceOf[js.Any])
+    if (gallery_markup != null) __obj.updateDynamic("gallery_markup")(gallery_markup.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideflash)) __obj.updateDynamic("hideflash")(hideflash.get.asInstanceOf[js.Any])
+    if (hook != null) __obj.updateDynamic("hook")(hook.asInstanceOf[js.Any])
+    if (!js.isUndefined(horizontal_padding)) __obj.updateDynamic("horizontal_padding")(horizontal_padding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(ie6_fallback)) __obj.updateDynamic("ie6_fallback")(ie6_fallback.get.asInstanceOf[js.Any])
+    if (iframe_markup != null) __obj.updateDynamic("iframe_markup")(iframe_markup.asInstanceOf[js.Any])
+    if (image_markup != null) __obj.updateDynamic("image_markup")(image_markup.asInstanceOf[js.Any])
+    if (inline_markup != null) __obj.updateDynamic("inline_markup")(inline_markup.asInstanceOf[js.Any])
+    if (!js.isUndefined(keyboard_shortcuts)) __obj.updateDynamic("keyboard_shortcuts")(keyboard_shortcuts.get.asInstanceOf[js.Any])
+    if (markup != null) __obj.updateDynamic("markup")(markup.asInstanceOf[js.Any])
+    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overlay_gallery)) __obj.updateDynamic("overlay_gallery")(overlay_gallery.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overlay_gallery_max)) __obj.updateDynamic("overlay_gallery_max")(overlay_gallery_max.get.asInstanceOf[js.Any])
+    if (quicktime_markup != null) __obj.updateDynamic("quicktime_markup")(quicktime_markup.asInstanceOf[js.Any])
+    if (!js.isUndefined(show_title)) __obj.updateDynamic("show_title")(show_title.get.asInstanceOf[js.Any])
+    if (slideshow != null) __obj.updateDynamic("slideshow")(slideshow.asInstanceOf[js.Any])
+    if (social_tools != null) __obj.updateDynamic("social_tools")(social_tools.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (wmode != null) __obj.updateDynamic("wmode")(wmode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrettyPhotoSettings]
   }
-  @scala.inline
-  implicit class PrettyPhotoSettingsOps[Self <: PrettyPhotoSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAjaxcallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxcallback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutAjaxcallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxcallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_expand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_expand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_expand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_expand")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllow_resize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_resize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllow_resize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_resize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnimation_speed(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation_speed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnimation_speed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("animation_speed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoplay_slideshow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay_slideshow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoplay_slideshow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay_slideshow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutCallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChangepicturecallback(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changepicturecallback")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutChangepicturecallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changepicturecallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCounter_separator_label(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter_separator_label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounter_separator_label: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter_separator_label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustom_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustom_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeeplinking(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deeplinking")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeeplinking: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deeplinking")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_height(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_height: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefault_width(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefault_width: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("default_width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlash_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flash_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlash_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flash_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGallery_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gallery_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGallery_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gallery_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideflash(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideflash")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideflash: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideflash")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHook(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHook: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hook")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHorizontal_padding(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal_padding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHorizontal_padding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal_padding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIe6_fallback(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie6_fallback")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIe6_fallback: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ie6_fallback")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIframe_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIframe_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImage_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImage_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("image_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInline_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInline_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inline_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard_shortcuts(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard_shortcuts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard_shortcuts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard_shortcuts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMarkup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMarkup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay_gallery(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay_gallery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay_gallery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay_gallery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverlay_gallery_max(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay_gallery_max")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverlay_gallery_max: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay_gallery_max")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuicktime_markup(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quicktime_markup")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuicktime_markup: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("quicktime_markup")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow_title(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show_title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow_title: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show_title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlideshow(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideshow")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlideshow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slideshow")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSocial_tools(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("social_tools")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSocial_tools: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("social_tools")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWmode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wmode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWmode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wmode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.intercomClient.companyMod
 
-import typingsSlinky.intercomClient.anon.Companyid
-import typingsSlinky.intercomClient.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait CompanyIdentifier extends js.Object
 
 object CompanyIdentifier {
   @scala.inline
-  implicit def apply(value: Companyid): CompanyIdentifier = value.asInstanceOf[CompanyIdentifier]
+  def Id(id: String): CompanyIdentifier = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CompanyIdentifier]
+  }
   @scala.inline
-  implicit def apply(value: Id): CompanyIdentifier = value.asInstanceOf[CompanyIdentifier]
+  def Companyid(company_id: String): CompanyIdentifier = {
+    val __obj = js.Dynamic.literal(company_id = company_id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CompanyIdentifier]
+  }
 }
 

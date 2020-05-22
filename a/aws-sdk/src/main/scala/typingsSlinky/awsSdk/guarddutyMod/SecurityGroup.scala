@@ -7,52 +7,22 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SecurityGroup extends js.Object {
   /**
-    * EC2 instance's security group ID.
+    * The security group ID of the EC2 instance.
     */
   var GroupId: js.UndefOr[String] = js.native
   /**
-    * EC2 instance's security group name.
+    * The security group name of the EC2 instance.
     */
   var GroupName: js.UndefOr[String] = js.native
 }
 
 object SecurityGroup {
   @scala.inline
-  def apply(): SecurityGroup = {
+  def apply(GroupId: String = null, GroupName: String = null): SecurityGroup = {
     val __obj = js.Dynamic.literal()
+    if (GroupId != null) __obj.updateDynamic("GroupId")(GroupId.asInstanceOf[js.Any])
+    if (GroupName != null) __obj.updateDynamic("GroupName")(GroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityGroup]
   }
-  @scala.inline
-  implicit class SecurityGroupOps[Self <: SecurityGroup] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGroupId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

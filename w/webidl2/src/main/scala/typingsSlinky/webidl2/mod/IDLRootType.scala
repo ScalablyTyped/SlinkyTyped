@@ -1,5 +1,15 @@
 package typingsSlinky.webidl2.mod
 
+import typingsSlinky.webidl2.anon.Type
+import typingsSlinky.webidl2.webidl2Strings.`callback interface`
+import typingsSlinky.webidl2.webidl2Strings.`interface mixin`
+import typingsSlinky.webidl2.webidl2Strings.callback
+import typingsSlinky.webidl2.webidl2Strings.dictionary
+import typingsSlinky.webidl2.webidl2Strings.enum
+import typingsSlinky.webidl2.webidl2Strings.includes
+import typingsSlinky.webidl2.webidl2Strings.interface
+import typingsSlinky.webidl2.webidl2Strings.namespace
+import typingsSlinky.webidl2.webidl2Strings.typedef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,20 +28,84 @@ trait IDLRootType extends js.Object
 
 object IDLRootType {
   @scala.inline
-  implicit def apply(value: CallbackType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def CallbackType(
+    arguments: js.Array[Argument],
+    extAttrs: js.Array[ExtendedAttribute],
+    idlType: IDLTypeDescription,
+    name: String,
+    `type`: callback
+  ): IDLRootType = {
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: DictionaryType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def DictionaryType(
+    extAttrs: js.Array[ExtendedAttribute],
+    members: js.Array[DictionaryMemberType],
+    name: String,
+    partial: Boolean,
+    `type`: dictionary,
+    inheritance: String = null
+  ): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any], inheritance = inheritance.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: EnumType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def NamespaceType(
+    extAttrs: js.Array[ExtendedAttribute],
+    members: js.Array[IDLNamespaceMemberType],
+    name: String,
+    partial: Boolean,
+    `type`: namespace
+  ): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: IncludesType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def IncludesType(extAttrs: js.Array[ExtendedAttribute], includes: String, target: String, `type`: includes): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], includes = includes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: InterfaceMixinType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def InterfaceMixinType(
+    extAttrs: js.Array[ExtendedAttribute],
+    members: js.Array[IDLInterfaceMemberType],
+    name: String,
+    partial: Boolean,
+    `type`: `interface mixin`
+  ): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: InterfaceType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def EnumType(extAttrs: js.Array[ExtendedAttribute], name: String, `type`: enum, values: js.Array[Type]): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: NamespaceType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def InterfaceType(
+    extAttrs: js.Array[ExtendedAttribute],
+    members: js.Array[IDLInterfaceMemberType],
+    name: String,
+    partial: Boolean,
+    `type`: interface | (`callback interface`),
+    inheritance: String = null
+  ): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any], inheritance = inheritance.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
   @scala.inline
-  implicit def apply(value: TypedefType): IDLRootType = value.asInstanceOf[IDLRootType]
+  def TypedefType(extAttrs: js.Array[ExtendedAttribute], idlType: IDLTypeDescription, name: String, `type`: typedef): IDLRootType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IDLRootType]
+  }
 }
 

@@ -6,88 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceSourceOptions extends js.Object {
-  var attributions: js.UndefOr[AttributionLike] = js.native
-  var logo: js.UndefOr[String | LogoOptions] = js.native
-  var projection: ProjectionLike = js.native
-  var state: js.UndefOr[State] = js.native
-  var wrapX: js.UndefOr[Boolean] = js.native
+  var attributions: js.UndefOr[AttributionLike] = js.undefined
+  var logo: js.UndefOr[String | LogoOptions] = js.undefined
+  var projection: ProjectionLike
+  var state: js.UndefOr[State] = js.undefined
+  var wrapX: js.UndefOr[Boolean] = js.undefined
 }
 
 object SourceSourceOptions {
   @scala.inline
-  def apply(): SourceSourceOptions = {
+  def apply(
+    attributions: AttributionLike = null,
+    logo: String | LogoOptions = null,
+    projection: ProjectionLike = null,
+    state: State = null,
+    wrapX: js.UndefOr[Boolean] = js.undefined
+  ): SourceSourceOptions = {
     val __obj = js.Dynamic.literal()
+    if (attributions != null) __obj.updateDynamic("attributions")(attributions.asInstanceOf[js.Any])
+    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
+    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
+    if (!js.isUndefined(wrapX)) __obj.updateDynamic("wrapX")(wrapX.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceSourceOptions]
   }
-  @scala.inline
-  implicit class SourceSourceOptionsOps[Self <: SourceSourceOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributions(value: AttributionLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogo(value: String | LogoOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProjection(value: ProjectionLike): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProjection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: State): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapX(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -188,9 +188,9 @@ object Curves extends js.Object {
     def getStartPoint[O /* <: Vector2 */](): O = js.native
     def getStartPoint[O /* <: Vector2 */](out: O): O = js.native
     /**
-      * [description]
-      * @param distance [description]
-      * @param divisions [description]
+      * Given a distance in pixels, get a t to find p.
+      * @param distance The distance, in pixels.
+      * @param divisions Optional amount of divisions.
       */
     def getTFromDistance(distance: integer): Double = js.native
     def getTFromDistance(distance: integer, divisions: integer): Double = js.native
@@ -212,10 +212,10 @@ object Curves extends js.Object {
     def getTangentAt[O /* <: Vector2 */](u: Double): O = js.native
     def getTangentAt[O /* <: Vector2 */](u: Double, out: O): O = js.native
     /**
-      * [description]
-      * @param u [description]
-      * @param distance [description]
-      * @param divisions [description]
+      * Given u ( 0 .. 1 ), get a t to find p. This gives you points which are equidistant.
+      * @param u A float between 0 and 1.
+      * @param distance The distance, in pixels.
+      * @param divisions Optional amount of divisions.
       */
     def getUtoTmapping(u: Double, distance: integer): Double = js.native
     def getUtoTmapping(u: Double, distance: integer, divisions: integer): Double = js.native
@@ -280,50 +280,50 @@ object Curves extends js.Object {
     def getPoint[O /* <: Vector2 */](t: Double): O = js.native
     def getPoint[O /* <: Vector2 */](t: Double, out: O): O = js.native
     /**
-      * [description]
-      * @param divisions [description]
+      * Get the resolution of the curve.
+      * @param divisions Optional divisions value.
       */
     def getResolution(divisions: Double): Double = js.native
     /**
       * Sets if this curve extends clockwise or anti-clockwise.
       * @param value The clockwise state of this curve.
       */
-    def setClockwise(value: Boolean): Ellipse = js.native
+    def setClockwise(value: Boolean): this.type = js.native
     /**
       * Sets the end angle of this curve.
       * @param value The end angle of this curve, in radians.
       */
-    def setEndAngle(value: Double): Ellipse = js.native
+    def setEndAngle(value: Double): this.type = js.native
     /**
       * Sets the height of this curve.
       * @param value The height of this curve.
       */
-    def setHeight(value: Double): Ellipse = js.native
+    def setHeight(value: Double): this.type = js.native
     /**
       * Sets the rotation of this curve.
       * @param value The rotation of this curve, in radians.
       */
-    def setRotation(value: Double): Ellipse = js.native
+    def setRotation(value: Double): this.type = js.native
     /**
       * Sets the start angle of this curve.
       * @param value The start angle of this curve, in radians.
       */
-    def setStartAngle(value: Double): Ellipse = js.native
+    def setStartAngle(value: Double): this.type = js.native
     /**
       * Sets the width of this curve.
       * @param value The width of this curve.
       */
-    def setWidth(value: Double): Ellipse = js.native
+    def setWidth(value: Double): this.type = js.native
     /**
       * Sets the horizontal radius of this curve.
       * @param value The horizontal radius of this curve.
       */
-    def setXRadius(value: Double): Ellipse = js.native
+    def setXRadius(value: Double): this.type = js.native
     /**
       * Sets the vertical radius of this curve.
       * @param value The vertical radius of this curve.
       */
-    def setYRadius(value: Double): Ellipse = js.native
+    def setYRadius(value: Double): this.type = js.native
     /**
       * JSON serialization of the curve.
       */
@@ -448,16 +448,16 @@ object Curves extends js.Object {
       * The Curve does not have to start where the Path ends or, for an empty Path, at its defined starting point.
       * @param curve The Curve to append.
       */
-    def add(curve: Curve): Path = js.native
+    def add(curve: Curve): this.type = js.native
     /**
       * Creates a circular Ellipse Curve positioned at the end of the Path.
       * @param radius The radius of the circle.
       * @param clockwise `true` to create a clockwise circle as opposed to a counter-clockwise circle. Default false.
       * @param rotation The rotation of the circle in degrees. Default 0.
       */
-    def circleTo(radius: Double): Path = js.native
-    def circleTo(radius: Double, clockwise: Boolean): Path = js.native
-    def circleTo(radius: Double, clockwise: Boolean, rotation: Double): Path = js.native
+    def circleTo(radius: Double): this.type = js.native
+    def circleTo(radius: Double, clockwise: Boolean): this.type = js.native
+    def circleTo(radius: Double, clockwise: Boolean, rotation: Double): this.type = js.native
     /**
       * Ensures that the Path is closed.
       * 
@@ -465,7 +465,7 @@ object Curves extends js.Object {
       * 
       * Calling this method on an empty Path will result in an error.
       */
-    def closePath(): Path = js.native
+    def closePath(): this.type = js.native
     /**
       * Creates a cubic bezier curve starting at the previous end point and ending at p3, using p1 and p2 as control points.
       * @param x The x coordinate of the end point. Or, if a Vector2, the p1 value.
@@ -475,37 +475,37 @@ object Curves extends js.Object {
       * @param control2X The x coordinate of the second control point. Not used if Vector2s are provided as the first 3 arguments.
       * @param control2Y The y coordinate of the second control point. Not used if Vector2s are provided as the first 3 arguments.
       */
-    def cubicBezierTo(x: Double, y: Double, control1X: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Double, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Double, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Vector2): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Vector2, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Vector2, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Double, control1X: Vector2, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Double, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Double, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Double, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Double, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double, control1Y: Double, control2X: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Vector2): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Vector2, control1Y: Double): Path = js.native
-    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Vector2, control1Y: Double, control2X: Double): Path = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Double, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Double, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Vector2): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Vector2, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Vector2, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Double, control1X: Vector2, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Double, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Double, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Double, y: Vector2, control1X: Vector2, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Double, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Double, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Double, control1X: Vector2, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double, control1Y: Double, control2X: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Double, control1Y: Double, control2X: Double, control2Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Vector2): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Vector2, control1Y: Double): this.type = js.native
+    def cubicBezierTo(x: Vector2, y: Vector2, control1X: Vector2, control1Y: Double, control2X: Double): this.type = js.native
     def cubicBezierTo(
       x: Vector2,
       y: Vector2,
@@ -513,7 +513,7 @@ object Curves extends js.Object {
       control1Y: Double,
       control2X: Double,
       control2Y: Double
-    ): Path = js.native
+    ): this.type = js.native
     /**
       * Disposes of this Path, clearing its internal references to objects so they can be garbage-collected.
       */
@@ -541,14 +541,14 @@ object Curves extends js.Object {
       endAngle: js.UndefOr[integer],
       clockwise: js.UndefOr[Boolean],
       rotation: js.UndefOr[Double]
-    ): Path = js.native
+    ): this.type = js.native
     /**
       * Creates a Path from a Path Configuration object.
       * 
       * The provided object should be a {@link Phaser.Types.Curves.JSONPath}, as returned by {@link #toJSON}. Providing a malformed object may cause errors.
       * @param data The JSON object containing the Path data.
       */
-    def fromJSON(data: JSONPath): Path = js.native
+    def fromJSON(data: JSONPath): this.type = js.native
     /**
       * Returns a Rectangle with a position and size matching the bounds of this Path.
       * @param out The Rectangle to store the bounds in.
@@ -613,14 +613,21 @@ object Curves extends js.Object {
     def getStartPoint[O /* <: Vector2 */](): O = js.native
     def getStartPoint[O /* <: Vector2 */](out: O): O = js.native
     /**
+      * Gets a unit vector tangent at a relative position on the path.
+      * @param t The relative position on the path, [0..1].
+      * @param out A vector to store the result in.
+      */
+    def getTangent[O /* <: Vector2 */](t: Double): O = js.native
+    def getTangent[O /* <: Vector2 */](t: Double, out: O): O = js.native
+    /**
       * Creates a line curve from the previous end point to x/y.
       * @param x The X coordinate of the line's end point, or a `Vector2` containing the entire end point.
       * @param y The Y coordinate of the line's end point, if a number was passed as the X parameter.
       */
-    def lineTo(x: Double): Path = js.native
-    def lineTo(x: Double, y: Double): Path = js.native
-    def lineTo(x: Vector2): Path = js.native
-    def lineTo(x: Vector2, y: Double): Path = js.native
+    def lineTo(x: Double): this.type = js.native
+    def lineTo(x: Double, y: Double): this.type = js.native
+    def lineTo(x: Vector2): this.type = js.native
+    def lineTo(x: Vector2, y: Double): this.type = js.native
     /**
       * Creates a "gap" in this path from the path's current end point to the given coordinates.
       * 
@@ -628,12 +635,12 @@ object Curves extends js.Object {
       * @param x The X coordinate of the position to move the path's end point to, or a `Vector2` containing the entire new end point.
       * @param y The Y coordinate of the position to move the path's end point to, if a number was passed as the X coordinate.
       */
-    def moveTo(x: Double, y: Double): Path = js.native
-    def moveTo(x: Vector2, y: Double): Path = js.native
-    def quadraticBezierTo(x: js.Array[Vector2]): Path = js.native
-    def quadraticBezierTo(x: js.Array[Vector2], y: Double): Path = js.native
-    def quadraticBezierTo(x: js.Array[Vector2], y: Double, controlX: Double): Path = js.native
-    def quadraticBezierTo(x: js.Array[Vector2], y: Double, controlX: Double, controlY: Double): Path = js.native
+    def moveTo(x: Double, y: Double): this.type = js.native
+    def moveTo(x: Vector2, y: Double): this.type = js.native
+    def quadraticBezierTo(x: js.Array[Vector2]): this.type = js.native
+    def quadraticBezierTo(x: js.Array[Vector2], y: Double): this.type = js.native
+    def quadraticBezierTo(x: js.Array[Vector2], y: Double, controlX: Double): this.type = js.native
+    def quadraticBezierTo(x: js.Array[Vector2], y: Double, controlX: Double, controlY: Double): this.type = js.native
     /**
       * Creates a Quadratic Bezier Curve starting at the ending point of the Path.
       * @param x The X coordinate of the second control point or, if it's a `Vector2`, the first control point.
@@ -641,15 +648,15 @@ object Curves extends js.Object {
       * @param controlX If `x` is not a `Vector2`, the X coordinate of the first control point.
       * @param controlY If `x` is not a `Vector2`, the Y coordinate of the first control point.
       */
-    def quadraticBezierTo(x: Double): Path = js.native
-    def quadraticBezierTo(x: Double, y: Double): Path = js.native
-    def quadraticBezierTo(x: Double, y: Double, controlX: Double): Path = js.native
-    def quadraticBezierTo(x: Double, y: Double, controlX: Double, controlY: Double): Path = js.native
+    def quadraticBezierTo(x: Double): this.type = js.native
+    def quadraticBezierTo(x: Double, y: Double): this.type = js.native
+    def quadraticBezierTo(x: Double, y: Double, controlX: Double): this.type = js.native
+    def quadraticBezierTo(x: Double, y: Double, controlX: Double, controlY: Double): this.type = js.native
     /**
       * Creates a spline curve starting at the previous end point, using the given points on the curve.
       * @param points The points the newly created spline curve should consist of.
       */
-    def splineTo(points: js.Array[Vector2]): Path = js.native
+    def splineTo(points: js.Array[Vector2]): this.type = js.native
     /**
       * Converts this Path to a JSON object containing the path information and its constituent curves.
       */
@@ -661,20 +668,20 @@ object Curves extends js.Object {
   }
   
   /**
-    * [description]
+    * A quadratic Bézier curve constructed from two control points.
     */
   @js.native
   trait QuadraticBezier extends Curve {
     /**
-      * [description]
+      * The start point.
       */
     var p0: Vector2 = js.native
     /**
-      * [description]
+      * The first control point.
       */
     var p1: Vector2 = js.native
     /**
-      * [description]
+      * The second control point.
       */
     var p2: Vector2 = js.native
     /**
@@ -685,8 +692,8 @@ object Curves extends js.Object {
     def getPoint[O /* <: Vector2 */](t: Double): O = js.native
     def getPoint[O /* <: Vector2 */](t: Double, out: O): O = js.native
     /**
-      * [description]
-      * @param divisions [description]
+      * Get the resolution of the curve.
+      * @param divisions Optional divisions value.
       */
     def getResolution(divisions: Double): Double = js.native
     /**
@@ -714,7 +721,7 @@ object Curves extends js.Object {
       * Add a list of points to the current list of Vector2 points of the curve.
       * @param points The points that configure the curve.
       */
-    def addPoints(points: js.Array[js.Array[Double] | Double | Vector2]): Spline = js.native
+    def addPoints(points: js.Array[js.Array[Double] | Double | Vector2]): this.type = js.native
     /**
       * Get point at relative position in curve according to length.
       * @param t The position along the curve to return. Where 0 is the start and 1 is the end.
@@ -723,8 +730,8 @@ object Curves extends js.Object {
     def getPoint[O /* <: Vector2 */](t: Double): O = js.native
     def getPoint[O /* <: Vector2 */](t: Double, out: O): O = js.native
     /**
-      * [description]
-      * @param divisions [description]
+      * Get the resolution of the curve.
+      * @param divisions Optional divisions value.
       */
     def getResolution(divisions: Double): Double = js.native
     /**

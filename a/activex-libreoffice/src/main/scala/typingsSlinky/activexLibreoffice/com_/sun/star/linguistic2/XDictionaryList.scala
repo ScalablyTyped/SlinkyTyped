@@ -16,15 +16,14 @@ import scala.scalajs.js.annotation._
   * @see com.sun.star.linguistic2.XDictionary
   * @see com.sun.star.uno.XInterface
   */
-@js.native
 trait XDictionaryList extends XInterface {
   /** @returns the number of dictionaries in the list. */
-  val Count: Double = js.native
+  val Count: Double
   /**
     * @returns a sequence with an entry for every dictionary in the list.
     * @see com.sun.star.linguistic2.XDictionary
     */
-  val Dictionaries: SafeArray[XDictionary] = js.native
+  val Dictionaries: SafeArray[XDictionary]
   /**
     * adds a dictionary to the list.
     *
@@ -33,7 +32,7 @@ trait XDictionaryList extends XInterface {
     * @returns `TRUE` if the dictionary was added successfully, `FALSE` otherwise.
     * @see com.sun.star.linguistic2.XDictionary
     */
-  def addDictionary(xDictionary: XDictionary): Boolean = js.native
+  def addDictionary(xDictionary: XDictionary): Boolean
   /**
     * adds an entry to the list of dictionary-list event listeners.
     *
@@ -45,7 +44,7 @@ trait XDictionaryList extends XInterface {
     * @see com.sun.star.linguistic2.XDictionaryListEventListener
     * @see com.sun.star.linguistic2.XDictionaryListEvent
     */
-  def addDictionaryListEventListener(xListener: XDictionaryListEventListener, bReceiveVerbose: Boolean): Boolean = js.native
+  def addDictionaryListEventListener(xListener: XDictionaryListEventListener, bReceiveVerbose: Boolean): Boolean
   /**
     * increases request level for event buffering by one.
     *
@@ -57,7 +56,7 @@ trait XDictionaryList extends XInterface {
     * @see com.sun.star.linguistic2.XDictionaryList.endCollectEvents()
     * @see com.sun.star.linguistic2.XDictionaryList.flushEvents()
     */
-  def beginCollectEvents(): Double = js.native
+  def beginCollectEvents(): Double
   /**
     * creates a new dictionary.
     * @param aName is the name of the dictionary (should be unique).
@@ -69,7 +68,7 @@ trait XDictionaryList extends XInterface {
     * @see com.sun.star.lang.Locale
     * @see com.sun.star.linguistic2.DictionaryType
     */
-  def createDictionary(aName: String, aLocale: Locale, eDicType: DictionaryType, aURL: String): XDictionary = js.native
+  def createDictionary(aName: String, aLocale: Locale, eDicType: DictionaryType, aURL: String): XDictionary
   /**
     * flushes the event buffer and decreases the request level for event buffering by one.
     *
@@ -81,7 +80,7 @@ trait XDictionaryList extends XInterface {
     * @see com.sun.star.linguistic2.XDictionaryList.beginCollectEvents()
     * @see com.sun.star.linguistic2.XDictionaryList.flushEvents()
     */
-  def endCollectEvents(): Double = js.native
+  def endCollectEvents(): Double
   /**
     * notifies the listeners of all buffered events and then clears that buffer.
     * @returns the current request level for event buffering.
@@ -90,21 +89,21 @@ trait XDictionaryList extends XInterface {
     * @see com.sun.star.linguistic2.XDictionaryList.beginCollectEvents()
     * @see com.sun.star.linguistic2.XDictionaryList.endCollectEvents()
     */
-  def flushEvents(): Double = js.native
+  def flushEvents(): Double
   /** @returns the number of dictionaries in the list. */
-  def getCount(): Double = js.native
+  def getCount(): Double
   /**
     * @returns a sequence with an entry for every dictionary in the list.
     * @see com.sun.star.linguistic2.XDictionary
     */
-  def getDictionaries(): SafeArray[XDictionary] = js.native
+  def getDictionaries(): SafeArray[XDictionary]
   /**
     * searches the list for a dictionary with a given name.
     * @param aDictionaryName specifies the name of the dictionary to look for.
     * @returns the {@link XDictionary} with the specified name. If no such dictionary exists, `NULL` will be returned.
     * @see com.sun.star.linguistic2.XDictionary
     */
-  def getDictionaryByName(aDictionaryName: String): XDictionary = js.native
+  def getDictionaryByName(aDictionaryName: String): XDictionary
   /**
     * removes a single dictionary from the list.
     *
@@ -114,7 +113,7 @@ trait XDictionaryList extends XInterface {
     * @returns `TRUE` if the dictionary was removed successfully, `FALSE` otherwise.
     * @see com.sun.star.linguistic2.XDictionary
     */
-  def removeDictionary(xDictionary: XDictionary): Boolean = js.native
+  def removeDictionary(xDictionary: XDictionary): Boolean
   /**
     * removes an entry from the list of dictionary-list event listeners.
     * @param xListener the object to be removed from the listener list.
@@ -122,7 +121,7 @@ trait XDictionaryList extends XInterface {
     * @see com.sun.star.linguistic2.XDictionaryListEventListener
     * @see com.sun.star.linguistic2.XDictionaryListEvent
     */
-  def removeDictionaryListEventListener(xListener: XDictionaryListEventListener): Boolean = js.native
+  def removeDictionaryListEventListener(xListener: XDictionaryListEventListener): Boolean
 }
 
 object XDictionaryList {
@@ -148,91 +147,5 @@ object XDictionaryList {
     val __obj = js.Dynamic.literal(Count = Count.asInstanceOf[js.Any], Dictionaries = Dictionaries.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addDictionary = js.Any.fromFunction1(addDictionary), addDictionaryListEventListener = js.Any.fromFunction2(addDictionaryListEventListener), beginCollectEvents = js.Any.fromFunction0(beginCollectEvents), createDictionary = js.Any.fromFunction4(createDictionary), endCollectEvents = js.Any.fromFunction0(endCollectEvents), flushEvents = js.Any.fromFunction0(flushEvents), getCount = js.Any.fromFunction0(getCount), getDictionaries = js.Any.fromFunction0(getDictionaries), getDictionaryByName = js.Any.fromFunction1(getDictionaryByName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeDictionary = js.Any.fromFunction1(removeDictionary), removeDictionaryListEventListener = js.Any.fromFunction1(removeDictionaryListEventListener))
     __obj.asInstanceOf[XDictionaryList]
   }
-  @scala.inline
-  implicit class XDictionaryListOps[Self <: XDictionaryList] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDictionaries(value: SafeArray[XDictionary]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Dictionaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAddDictionary(value: XDictionary => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addDictionary")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withAddDictionaryListEventListener(value: (XDictionaryListEventListener, Boolean) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addDictionaryListEventListener")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withBeginCollectEvents(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beginCollectEvents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCreateDictionary(value: (String, Locale, DictionaryType, String) => XDictionary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createDictionary")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withEndCollectEvents(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("endCollectEvents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFlushEvents(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushEvents")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetCount(value: () => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getCount")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDictionaries(value: () => SafeArray[XDictionary]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDictionaries")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDictionaryByName(value: String => XDictionary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDictionaryByName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveDictionary(value: XDictionary => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDictionary")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveDictionaryListEventListener(value: XDictionaryListEventListener => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeDictionaryListEventListener")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
   * @param plugin
   *         A sub-class of `Plugin` or a function for basic plugins.
   *
-  * @return	For advanced plugins, a factory function for that plugin. For
+  * @return    For advanced plugins, a factory function for that plugin. For
   *         basic plugins, a wrapper function that initializes the plugin.
   */
 @JSImport("video.js/dist/alt/video.core", "registerPlugin")

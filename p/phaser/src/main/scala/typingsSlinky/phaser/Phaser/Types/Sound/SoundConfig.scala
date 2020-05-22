@@ -7,135 +7,57 @@ import scala.scalajs.js.annotation._
 /**
   * Config object containing various sound settings.
   */
-@js.native
 trait SoundConfig extends js.Object {
   /**
     * Time, in seconds, that should elapse before the sound actually starts its playback.
     */
-  var delay: js.UndefOr[Double] = js.native
+  var delay: js.UndefOr[Double] = js.undefined
   /**
     * Represents detuning of sound in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
     */
-  var detune: js.UndefOr[Double] = js.native
+  var detune: js.UndefOr[Double] = js.undefined
   /**
     * Whether or not the sound or current sound marker should loop.
     */
-  var loop: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Boolean] = js.undefined
   /**
     * Boolean indicating whether the sound should be muted or not.
     */
-  var mute: js.UndefOr[Boolean] = js.native
+  var mute: js.UndefOr[Boolean] = js.undefined
   /**
     * Defines the speed at which the sound should be played.
     */
-  var rate: js.UndefOr[Double] = js.native
+  var rate: js.UndefOr[Double] = js.undefined
   /**
     * Position of playback for this sound, in seconds.
     */
-  var seek: js.UndefOr[Double] = js.native
+  var seek: js.UndefOr[Double] = js.undefined
   /**
     * A value between 0 (silence) and 1 (full volume).
     */
-  var volume: js.UndefOr[Double] = js.native
+  var volume: js.UndefOr[Double] = js.undefined
 }
 
 object SoundConfig {
   @scala.inline
-  def apply(): SoundConfig = {
+  def apply(
+    delay: js.UndefOr[Double] = js.undefined,
+    detune: js.UndefOr[Double] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    mute: js.UndefOr[Boolean] = js.undefined,
+    rate: js.UndefOr[Double] = js.undefined,
+    seek: js.UndefOr[Double] = js.undefined,
+    volume: js.UndefOr[Double] = js.undefined
+  ): SoundConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delay)) __obj.updateDynamic("delay")(delay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(detune)) __obj.updateDynamic("detune")(detune.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(mute)) __obj.updateDynamic("mute")(mute.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rate)) __obj.updateDynamic("rate")(rate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(seek)) __obj.updateDynamic("seek")(seek.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(volume)) __obj.updateDynamic("volume")(volume.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SoundConfig]
   }
-  @scala.inline
-  implicit class SoundConfigOps[Self <: SoundConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDetune(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detune")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDetune: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("detune")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMute(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mute")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMute: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mute")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeek(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeek: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

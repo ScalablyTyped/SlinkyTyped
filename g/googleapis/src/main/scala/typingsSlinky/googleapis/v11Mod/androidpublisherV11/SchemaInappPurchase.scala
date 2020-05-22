@@ -51,101 +51,24 @@ trait SchemaInappPurchase extends js.Object {
 
 object SchemaInappPurchase {
   @scala.inline
-  def apply(): SchemaInappPurchase = {
+  def apply(
+    consumptionState: js.UndefOr[Double] = js.undefined,
+    developerPayload: String = null,
+    kind: String = null,
+    orderId: String = null,
+    purchaseState: js.UndefOr[Double] = js.undefined,
+    purchaseTime: String = null,
+    purchaseType: js.UndefOr[Double] = js.undefined
+  ): SchemaInappPurchase = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(consumptionState)) __obj.updateDynamic("consumptionState")(consumptionState.get.asInstanceOf[js.Any])
+    if (developerPayload != null) __obj.updateDynamic("developerPayload")(developerPayload.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (orderId != null) __obj.updateDynamic("orderId")(orderId.asInstanceOf[js.Any])
+    if (!js.isUndefined(purchaseState)) __obj.updateDynamic("purchaseState")(purchaseState.get.asInstanceOf[js.Any])
+    if (purchaseTime != null) __obj.updateDynamic("purchaseTime")(purchaseTime.asInstanceOf[js.Any])
+    if (!js.isUndefined(purchaseType)) __obj.updateDynamic("purchaseType")(purchaseType.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInappPurchase]
   }
-  @scala.inline
-  implicit class SchemaInappPurchaseOps[Self <: SchemaInappPurchase] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConsumptionState(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumptionState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConsumptionState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("consumptionState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeveloperPayload(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerPayload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeveloperPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("developerPayload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurchaseState(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseState")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurchaseState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseState")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurchaseTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurchaseTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPurchaseType(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPurchaseType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -29,7 +29,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This service is for a {@link CustomShape} */
-@js.native
 trait CustomShape
   extends Shape
      with FillProperties
@@ -39,9 +38,9 @@ trait CustomShape
      with TextProperties
      with RotationDescriptor {
   /** This property can be used to store data that the {@link CustomShapeEngine} may use for rendering */
-  var CustomShapeData: String = js.native
+  var CustomShapeData: String
   /** This property contains the {@link CustomShapeEngine} service name that has to be used for rendering. */
-  var CustomShapeEngine: String = js.native
+  var CustomShapeEngine: String
   /**
     * This property describes the geometry of the {@link CustomShape} . The {@link CustomShapeEngine} that is used should be able to get on with the content
     * of this property.
@@ -49,9 +48,9 @@ trait CustomShape
     * If the {@link CustomShapeEngine} property is "com.sun.star.drawing.EnhancedCustomShapeEngine", then this property is containing properties as they are
     * specified in the service {@link com.sun.star.drawing.EnhancedCustomShapeGeometry}
     */
-  var CustomShapeGeometry: SafeArray[PropertyValue] = js.native
+  var CustomShapeGeometry: SafeArray[PropertyValue]
   /** This property describes the URL to a replacement graphic that could be displayed if the {@link CustomShape} engine is not available. */
-  var CustomShapeReplacementURL: String = js.native
+  var CustomShapeReplacementURL: String
 }
 
 object CustomShape {
@@ -174,37 +173,5 @@ object CustomShape {
     js.Dynamic.global.Object.assign(__obj, TextProperties)
     __obj.asInstanceOf[CustomShape]
   }
-  @scala.inline
-  implicit class CustomShapeOps[Self <: CustomShape] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCustomShapeData(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomShapeData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomShapeEngine(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomShapeEngine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomShapeGeometry(value: SafeArray[PropertyValue]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomShapeGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomShapeReplacementURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomShapeReplacementURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

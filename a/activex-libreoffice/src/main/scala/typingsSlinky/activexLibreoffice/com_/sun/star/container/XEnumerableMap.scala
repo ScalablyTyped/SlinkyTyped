@@ -25,7 +25,6 @@ import scala.scalajs.js.annotation._
   * service to specify this. Requesting an enumerator type which is not supported will generally result in an {@link com.sun.star.lang.NoSupportException}
   * being thrown.
   */
-@js.native
 trait XEnumerableMap extends XMap {
   /**
     * creates a enumerator for the key-value pairs of the map
@@ -34,19 +33,19 @@ trait XEnumerableMap extends XMap {
     * @param Isolated controls whether the newly create enumerator should be isolated from the map.
     * @throws com::sun::star::lang::NoSupportException if the specified enumerator method is not supported by the implementation.
     */
-  def createElementEnumeration(Isolated: Boolean): XEnumeration = js.native
+  def createElementEnumeration(Isolated: Boolean): XEnumeration
   /**
     * creates a enumerator for the keys of the map
     * @param Isolated controls whether the newly create enumerator should be isolated from the map.
     * @throws com::sun::star::lang::NoSupportException if the specified enumerator method is not supported by the implementation.
     */
-  def createKeyEnumeration(Isolated: Boolean): XEnumeration = js.native
+  def createKeyEnumeration(Isolated: Boolean): XEnumeration
   /**
     * creates a enumerator for the values of the map
     * @param Isolated controls whether the newly create enumerator should be isolated from the map.
     * @throws com::sun::star::lang::NoSupportException if the specified enumerator method is not supported by the implementation.
     */
-  def createValueEnumeration(Isolated: Boolean): XEnumeration = js.native
+  def createValueEnumeration(Isolated: Boolean): XEnumeration
 }
 
 object XEnumerableMap {
@@ -73,31 +72,5 @@ object XEnumerableMap {
     val __obj = js.Dynamic.literal(ElementType = ElementType.asInstanceOf[js.Any], KeyType = KeyType.asInstanceOf[js.Any], ValueType = ValueType.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), clear = js.Any.fromFunction0(clear), containsKey = js.Any.fromFunction1(containsKey), containsValue = js.Any.fromFunction1(containsValue), createElementEnumeration = js.Any.fromFunction1(createElementEnumeration), createKeyEnumeration = js.Any.fromFunction1(createKeyEnumeration), createValueEnumeration = js.Any.fromFunction1(createValueEnumeration), get = js.Any.fromFunction1(get), getElementType = js.Any.fromFunction0(getElementType), hasElements = js.Any.fromFunction0(hasElements), put = js.Any.fromFunction2(put), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), remove = js.Any.fromFunction1(remove))
     __obj.asInstanceOf[XEnumerableMap]
   }
-  @scala.inline
-  implicit class XEnumerableMapOps[Self <: XEnumerableMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreateElementEnumeration(value: Boolean => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createElementEnumeration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateKeyEnumeration(value: Boolean => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createKeyEnumeration")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withCreateValueEnumeration(value: Boolean => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createValueEnumeration")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

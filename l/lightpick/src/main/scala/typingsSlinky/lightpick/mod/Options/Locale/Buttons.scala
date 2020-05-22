@@ -4,89 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Buttons extends js.Object {
   @JSName("apply")
-  var apply: js.UndefOr[String] = js.native
-  var close: js.UndefOr[String] = js.native
-  var next: js.UndefOr[String] = js.native
-  var prev: js.UndefOr[String] = js.native
-  var reset: js.UndefOr[String] = js.native
+  var apply: js.UndefOr[String] = js.undefined
+  var close: js.UndefOr[String] = js.undefined
+  var next: js.UndefOr[String] = js.undefined
+  var prev: js.UndefOr[String] = js.undefined
+  var reset: js.UndefOr[String] = js.undefined
 }
 
 object Buttons {
   @scala.inline
-  def apply(): Buttons = {
+  def apply(
+    apply: String = null,
+    close: String = null,
+    next: String = null,
+    prev: String = null,
+    reset: String = null
+  ): Buttons = {
     val __obj = js.Dynamic.literal()
+    if (apply != null) __obj.updateDynamic("apply")(apply.asInstanceOf[js.Any])
+    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
+    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
+    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
+    if (reset != null) __obj.updateDynamic("reset")(reset.asInstanceOf[js.Any])
     __obj.asInstanceOf[Buttons]
   }
-  @scala.inline
-  implicit class ButtonsOps[Self <: Buttons] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApply(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApply: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClose(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNext(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrev(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrev: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

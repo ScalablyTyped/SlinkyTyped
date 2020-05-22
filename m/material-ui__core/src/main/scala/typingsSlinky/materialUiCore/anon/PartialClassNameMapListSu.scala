@@ -17,89 +17,22 @@ trait PartialClassNameMapListSu extends js.Object {
 
 object PartialClassNameMapListSu {
   @scala.inline
-  def apply(): PartialClassNameMapListSu = {
+  def apply(
+    colorInherit: String = null,
+    colorPrimary: String = null,
+    gutters: String = null,
+    inset: String = null,
+    root: String = null,
+    sticky: String = null
+  ): PartialClassNameMapListSu = {
     val __obj = js.Dynamic.literal()
+    if (colorInherit != null) __obj.updateDynamic("colorInherit")(colorInherit.asInstanceOf[js.Any])
+    if (colorPrimary != null) __obj.updateDynamic("colorPrimary")(colorPrimary.asInstanceOf[js.Any])
+    if (gutters != null) __obj.updateDynamic("gutters")(gutters.asInstanceOf[js.Any])
+    if (inset != null) __obj.updateDynamic("inset")(inset.asInstanceOf[js.Any])
+    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
+    if (sticky != null) __obj.updateDynamic("sticky")(sticky.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapListSu]
   }
-  @scala.inline
-  implicit class PartialClassNameMapListSuOps[Self <: PartialClassNameMapListSu] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColorInherit(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorInherit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorInherit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorInherit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColorPrimary(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColorPrimary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGutters(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGutters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gutters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInset(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoot(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSticky(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sticky")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSticky: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sticky")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

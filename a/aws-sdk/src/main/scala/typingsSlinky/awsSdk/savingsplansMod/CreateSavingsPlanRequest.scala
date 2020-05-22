@@ -30,65 +30,18 @@ trait CreateSavingsPlanRequest extends js.Object {
 
 object CreateSavingsPlanRequest {
   @scala.inline
-  def apply(commitment: Amount, savingsPlanOfferingId: SavingsPlanOfferingId): CreateSavingsPlanRequest = {
+  def apply(
+    commitment: Amount,
+    savingsPlanOfferingId: SavingsPlanOfferingId,
+    clientToken: ClientToken = null,
+    tags: TagMap = null,
+    upfrontPaymentAmount: Amount = null
+  ): CreateSavingsPlanRequest = {
     val __obj = js.Dynamic.literal(commitment = commitment.asInstanceOf[js.Any], savingsPlanOfferingId = savingsPlanOfferingId.asInstanceOf[js.Any])
+    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
+    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
+    if (upfrontPaymentAmount != null) __obj.updateDynamic("upfrontPaymentAmount")(upfrontPaymentAmount.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSavingsPlanRequest]
   }
-  @scala.inline
-  implicit class CreateSavingsPlanRequestOps[Self <: CreateSavingsPlanRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCommitment(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("commitment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSavingsPlanOfferingId(value: SavingsPlanOfferingId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsPlanOfferingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientToken(value: ClientToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: TagMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpfrontPaymentAmount(value: Amount): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upfrontPaymentAmount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpfrontPaymentAmount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upfrontPaymentAmount")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

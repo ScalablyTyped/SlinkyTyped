@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait QRow extends js.Object {
-  var cells: js.Array[QDimensionCell | QMeasureCell] = js.native
-  var dimensions: js.Array[QDimensionCell] = js.native
-  var measures: js.Array[QMeasureCell] = js.native
+  var cells: js.Array[QDimensionCell | QMeasureCell]
+  var dimensions: js.Array[QDimensionCell]
+  var measures: js.Array[QMeasureCell]
 }
 
 object QRow {
@@ -21,31 +20,5 @@ object QRow {
     val __obj = js.Dynamic.literal(cells = cells.asInstanceOf[js.Any], dimensions = dimensions.asInstanceOf[js.Any], measures = measures.asInstanceOf[js.Any])
     __obj.asInstanceOf[QRow]
   }
-  @scala.inline
-  implicit class QRowOps[Self <: QRow] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCells(value: js.Array[QDimensionCell | QMeasureCell]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDimensions(value: js.Array[QDimensionCell]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMeasures(value: js.Array[QMeasureCell]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

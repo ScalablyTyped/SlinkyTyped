@@ -1,7 +1,6 @@
 package typingsSlinky.reactStripeElements.mod.ReactStripeElements
 
-import typingsSlinky.reactStripeElements.anon.apiKeyneverstripeStripenu
-import typingsSlinky.reactStripeElements.anon.apiKeystringstripeneverSt
+import typingsSlinky.stripeV3.stripe.Stripe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +13,16 @@ trait StripeProviderProps extends js.Object
 
 object StripeProviderProps {
   @scala.inline
-  implicit def apply(value: apiKeyneverstripeStripenu): StripeProviderProps = value.asInstanceOf[StripeProviderProps]
+  def apiKeystringstripeneverSt(apiKey: String, stripeAccount: String = null): StripeProviderProps = {
+    val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any])
+    if (stripeAccount != null) __obj.updateDynamic("stripeAccount")(stripeAccount.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StripeProviderProps]
+  }
   @scala.inline
-  implicit def apply(value: apiKeystringstripeneverSt): StripeProviderProps = value.asInstanceOf[StripeProviderProps]
+  def apiKeyneverstripeStripenu(stripe: Stripe = null, stripeAccount: String = null): StripeProviderProps = {
+    val __obj = js.Dynamic.literal(stripe = stripe.asInstanceOf[js.Any])
+    if (stripeAccount != null) __obj.updateDynamic("stripeAccount")(stripeAccount.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StripeProviderProps]
+  }
 }
 

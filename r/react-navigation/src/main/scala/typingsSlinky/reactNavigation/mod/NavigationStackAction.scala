@@ -1,5 +1,15 @@
 package typingsSlinky.reactNavigation.mod
 
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashBACK
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashCOMPLETE_TRANSITION
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashINIT
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashNAVIGATE
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashPOP
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashPOP_TO_TOP
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashPUSH
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashREPLACE
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashRESET
+import typingsSlinky.reactNavigation.reactNavigationStrings.NavigationSlashSET_PARAMS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,28 +26,124 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNavigation.mod.NavigationPopToTopAction
   - typingsSlinky.reactNavigation.mod.NavigationCompleteTransitionAction
 */
-trait NavigationStackAction extends NavigationAction
+trait NavigationStackAction extends _NavigationAction
 
 object NavigationStackAction {
   @scala.inline
-  implicit def apply(value: NavigationBackAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationCompleteTransitionAction(key: String, `type`: NavigationSlashCOMPLETE_TRANSITION): NavigationStackAction = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationCompleteTransitionAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationBackAction(
+    `type`: NavigationSlashBACK,
+    immediate: js.UndefOr[Boolean] = js.undefined,
+    key: js.UndefOr[Null | String] = js.undefined
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationInitAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationPushAction(
+    routeName: String,
+    `type`: NavigationSlashPUSH,
+    action: NavigationNavigateAction = null,
+    key: String = null,
+    params: NavigationParams = null
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal(routeName = routeName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationNavigateAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationPopToTopAction(
+    `type`: NavigationSlashPOP_TO_TOP,
+    immediate: js.UndefOr[Boolean] = js.undefined,
+    key: String = null
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationPopAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationInitAction(`type`: NavigationSlashINIT, key: String = null, params: NavigationParams = null): NavigationStackAction = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationPopToTopAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationResetAction(
+    actions: js.Array[NavigationNavigateAction],
+    index: Double,
+    `type`: NavigationSlashRESET,
+    key: js.UndefOr[Null | String] = js.undefined
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(key)) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationPushAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationNavigateAction(
+    routeName: String,
+    `type`: NavigationSlashNAVIGATE,
+    action: typingsSlinky.reactNavigation.mod.NavigationNavigateAction = null,
+    key: String = null,
+    params: NavigationParams = null
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal(routeName = routeName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationReplaceAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationPopAction(
+    `type`: NavigationSlashPOP,
+    immediate: js.UndefOr[Boolean] = js.undefined,
+    key: String = null,
+    n: js.UndefOr[Double] = js.undefined,
+    prune: js.UndefOr[Boolean] = js.undefined
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(immediate)) __obj.updateDynamic("immediate")(immediate.get.asInstanceOf[js.Any])
+    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
+    if (!js.isUndefined(n)) __obj.updateDynamic("n")(n.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(prune)) __obj.updateDynamic("prune")(prune.get.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationResetAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationReplaceAction(
+    key: String,
+    routeName: String,
+    `type`: NavigationSlashREPLACE,
+    action: NavigationAction = null,
+    params: NavigationParams = null
+  ): NavigationStackAction = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], routeName = routeName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
+    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
   @scala.inline
-  implicit def apply(value: NavigationSetParamsAction): NavigationStackAction = value.asInstanceOf[NavigationStackAction]
+  def NavigationSetParamsAction(key: String, params: NavigationParams, `type`: NavigationSlashSET_PARAMS): NavigationStackAction = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavigationStackAction]
+  }
 }
 

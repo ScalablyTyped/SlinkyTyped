@@ -4,73 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TransferOptions extends js.Object {
   /**
     * Whether objects should be deleted from the source after they are
     * transferred to the sink.  Note that this option and
     * `deleteObjectsUniqueInSink` are mutually exclusive.
     */
-  var deleteObjectsFromSourceAfterTransfer: js.UndefOr[Boolean] = js.native
+  var deleteObjectsFromSourceAfterTransfer: js.UndefOr[Boolean] = js.undefined
   /**
     * Whether objects that exist only in the sink should be deleted.  Note that
     * this option and `deleteObjectsFromSourceAfterTransfer` are mutually
     * exclusive.
     */
-  var deleteObjectsUniqueInSink: js.UndefOr[Boolean] = js.native
+  var deleteObjectsUniqueInSink: js.UndefOr[Boolean] = js.undefined
   /** Whether overwriting objects that already exist in the sink is allowed. */
-  var overwriteObjectsAlreadyExistingInSink: js.UndefOr[Boolean] = js.native
+  var overwriteObjectsAlreadyExistingInSink: js.UndefOr[Boolean] = js.undefined
 }
 
 object TransferOptions {
   @scala.inline
-  def apply(): TransferOptions = {
+  def apply(
+    deleteObjectsFromSourceAfterTransfer: js.UndefOr[Boolean] = js.undefined,
+    deleteObjectsUniqueInSink: js.UndefOr[Boolean] = js.undefined,
+    overwriteObjectsAlreadyExistingInSink: js.UndefOr[Boolean] = js.undefined
+  ): TransferOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(deleteObjectsFromSourceAfterTransfer)) __obj.updateDynamic("deleteObjectsFromSourceAfterTransfer")(deleteObjectsFromSourceAfterTransfer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(deleteObjectsUniqueInSink)) __obj.updateDynamic("deleteObjectsUniqueInSink")(deleteObjectsUniqueInSink.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overwriteObjectsAlreadyExistingInSink)) __obj.updateDynamic("overwriteObjectsAlreadyExistingInSink")(overwriteObjectsAlreadyExistingInSink.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransferOptions]
   }
-  @scala.inline
-  implicit class TransferOptionsOps[Self <: TransferOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeleteObjectsFromSourceAfterTransfer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteObjectsFromSourceAfterTransfer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteObjectsFromSourceAfterTransfer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteObjectsFromSourceAfterTransfer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeleteObjectsUniqueInSink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteObjectsUniqueInSink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeleteObjectsUniqueInSink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteObjectsUniqueInSink")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOverwriteObjectsAlreadyExistingInSink(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteObjectsAlreadyExistingInSink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOverwriteObjectsAlreadyExistingInSink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("overwriteObjectsAlreadyExistingInSink")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

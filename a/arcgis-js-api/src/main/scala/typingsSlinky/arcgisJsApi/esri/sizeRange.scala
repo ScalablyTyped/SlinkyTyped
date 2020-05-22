@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-heuristics-sizeRange.html)
   */
-@js.native
 trait sizeRange extends js.Object {
   /**
     * Generates a suggested size range (i.e. the `minSize` and `maxSize`) of a [scale-dependent size visual variable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html#ScaleDependentIcons)).
@@ -24,7 +23,7 @@ trait sizeRange extends js.Object {
     * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def sizeRange(params: sizeRangeSizeRangeParams): js.Promise[SizeRangeResult] = js.native
+  def sizeRange(params: sizeRangeSizeRangeParams): js.Promise[SizeRangeResult]
 }
 
 object sizeRange {
@@ -33,19 +32,5 @@ object sizeRange {
     val __obj = js.Dynamic.literal(sizeRange = js.Any.fromFunction1(sizeRange))
     __obj.asInstanceOf[sizeRange]
   }
-  @scala.inline
-  implicit class sizeRangeOps[Self <: sizeRange] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSizeRange(value: sizeRangeSizeRangeParams => js.Promise[SizeRangeResult]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeRange")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

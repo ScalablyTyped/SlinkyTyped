@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DialogSheetView extends SheetView {
-  val Application: typingsSlinky.activexExcel.Excel.Application = js.native
-  val Creator: XlCreator = js.native
+  val Application: typingsSlinky.activexExcel.Excel.Application
+  val Creator: XlCreator
   @JSName("Excel.DialogSheetView_typekey")
-  var ExcelDotDialogSheetView_typekey: DialogSheetView = js.native
-  val Parent: js.Any = js.native
-  val Sheet: DialogSheet = js.native
+  var ExcelDotDialogSheetView_typekey: DialogSheetView
+  val Parent: js.Any
+  val Sheet: DialogSheet
 }
 
 object DialogSheetView {
@@ -27,43 +26,5 @@ object DialogSheetView {
     __obj.updateDynamic("Excel.DialogSheetView_typekey")(ExcelDotDialogSheetView_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogSheetView]
   }
-  @scala.inline
-  implicit class DialogSheetViewOps[Self <: DialogSheetView] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: XlCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExcelDotDialogSheetView_typekey(value: DialogSheetView): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.DialogSheetView_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSheet(value: DialogSheet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Sheet")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

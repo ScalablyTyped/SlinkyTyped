@@ -1,75 +1,86 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import typingsSlinky.devextreme.anon.BorderColor
+import typingsSlinky.devextreme.anon.ColorDashStyle
+import typingsSlinky.devextreme.anon.DisplayMode
+import typingsSlinky.devextreme.devextremeStrings.dash
+import typingsSlinky.devextreme.devextremeStrings.dot
 import typingsSlinky.devextreme.devextremeStrings.excludePoints
 import typingsSlinky.devextreme.devextremeStrings.includePoints
+import typingsSlinky.devextreme.devextremeStrings.longDash
 import typingsSlinky.devextreme.devextremeStrings.nearestPoint
 import typingsSlinky.devextreme.devextremeStrings.none
+import typingsSlinky.devextreme.devextremeStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait dxPolarChartSeriesTypesAreapolarseries extends dxPolarChartSeriesTypesCommonPolarChartSeries {
-  /** Specifies series elements to be highlighted when a user points to the series. */
+  /** @name dxPolarChartSeriesTypes.areapolarseries.hoverMode */
   @JSName("hoverMode")
-  var hoverMode_dxPolarChartSeriesTypesAreapolarseries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
-  /** An object defining configuration options for points in line and area series. */
+  var hoverMode_dxPolarChartSeriesTypesAreapolarseries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.undefined
+  /** @name dxPolarChartSeriesTypes.areapolarseries.point */
   @JSName("point")
-  var point_dxPolarChartSeriesTypesAreapolarseries: js.UndefOr[dxPolarChartSeriesTypesAreapolarseriesPoint] = js.native
-  /** Specifies series elements to be highlighted when a user selects the series. */
+  var point_dxPolarChartSeriesTypesAreapolarseries: js.UndefOr[dxPolarChartSeriesTypesAreapolarseriesPoint] = js.undefined
+  /** @name dxPolarChartSeriesTypes.areapolarseries.selectionMode */
   @JSName("selectionMode")
-  var selectionMode_dxPolarChartSeriesTypesAreapolarseries: js.UndefOr[includePoints | excludePoints | none] = js.native
+  var selectionMode_dxPolarChartSeriesTypesAreapolarseries: js.UndefOr[includePoints | excludePoints | none] = js.undefined
 }
 
 object dxPolarChartSeriesTypesAreapolarseries {
   @scala.inline
-  def apply(): dxPolarChartSeriesTypesAreapolarseries = {
+  def apply(
+    argumentField: String = null,
+    barPadding: js.UndefOr[Double] = js.undefined,
+    barWidth: js.UndefOr[Double] = js.undefined,
+    border: ColorDashStyle = null,
+    closed: js.UndefOr[Boolean] = js.undefined,
+    color: String = null,
+    dashStyle: dash | dot | longDash | solid = null,
+    hoverMode: nearestPoint | includePoints | excludePoints | none = null,
+    hoverStyle: BorderColor = null,
+    ignoreEmptyPoints: js.UndefOr[Boolean] = js.undefined,
+    label: dxPolarChartSeriesTypesCommonPolarChartSeriesLabel = null,
+    maxLabelCount: js.UndefOr[Double] = js.undefined,
+    minBarSize: js.UndefOr[Double] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    point: dxPolarChartSeriesTypesAreapolarseriesPoint = null,
+    selectionMode: includePoints | excludePoints | none = null,
+    selectionStyle: BorderColor = null,
+    showInLegend: js.UndefOr[Boolean] = js.undefined,
+    stack: String = null,
+    tagField: String = null,
+    valueErrorBar: DisplayMode = null,
+    valueField: String = null,
+    visible: js.UndefOr[Boolean] = js.undefined,
+    width: js.UndefOr[Double] = js.undefined
+  ): dxPolarChartSeriesTypesAreapolarseries = {
     val __obj = js.Dynamic.literal()
+    if (argumentField != null) __obj.updateDynamic("argumentField")(argumentField.asInstanceOf[js.Any])
+    if (!js.isUndefined(barPadding)) __obj.updateDynamic("barPadding")(barPadding.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(barWidth)) __obj.updateDynamic("barWidth")(barWidth.get.asInstanceOf[js.Any])
+    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
+    if (!js.isUndefined(closed)) __obj.updateDynamic("closed")(closed.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
+    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
+    if (hoverStyle != null) __obj.updateDynamic("hoverStyle")(hoverStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreEmptyPoints)) __obj.updateDynamic("ignoreEmptyPoints")(ignoreEmptyPoints.get.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxLabelCount)) __obj.updateDynamic("maxLabelCount")(maxLabelCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minBarSize)) __obj.updateDynamic("minBarSize")(minBarSize.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
+    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
+    if (selectionStyle != null) __obj.updateDynamic("selectionStyle")(selectionStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.get.asInstanceOf[js.Any])
+    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
+    if (tagField != null) __obj.updateDynamic("tagField")(tagField.asInstanceOf[js.Any])
+    if (valueErrorBar != null) __obj.updateDynamic("valueErrorBar")(valueErrorBar.asInstanceOf[js.Any])
+    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
+    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartSeriesTypesAreapolarseries]
   }
-  @scala.inline
-  implicit class dxPolarChartSeriesTypesAreapolarseriesOps[Self <: dxPolarChartSeriesTypesAreapolarseries] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHoverMode(value: nearestPoint | includePoints | excludePoints | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHoverMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPoint(value: dxPolarChartSeriesTypesAreapolarseriesPoint): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionMode(value: includePoints | excludePoints | none): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

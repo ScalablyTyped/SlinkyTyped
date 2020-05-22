@@ -9,17 +9,16 @@ import scala.scalajs.js.annotation._
   * any object you create that can create a copy of itself. This mixin is
   * added automatically to the built-in array.
   */
-@js.native
 trait Copyable extends js.Object {
   /**
     * __Required.__ You must implement this method to apply this mixin.
     */
-  def copy(deep: Boolean): Copyable = js.native
+  def copy(deep: Boolean): Copyable
   /**
     * If the object implements `Ember.Freezable`, then this will return a new
     * copy if the object is not frozen and the receiver if the object is frozen.
     */
-  def frozenCopy(): Copyable = js.native
+  def frozenCopy(): Copyable
 }
 
 object Copyable {
@@ -28,25 +27,5 @@ object Copyable {
     val __obj = js.Dynamic.literal(copy = js.Any.fromFunction1(copy), frozenCopy = js.Any.fromFunction0(frozenCopy))
     __obj.asInstanceOf[Copyable]
   }
-  @scala.inline
-  implicit class CopyableOps[Self <: Copyable] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCopy(value: Boolean => Copyable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFrozenCopy(value: () => Copyable): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("frozenCopy")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

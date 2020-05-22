@@ -34,83 +34,21 @@ trait UpdateGlobalTableSettingsInput extends js.Object {
 
 object UpdateGlobalTableSettingsInput {
   @scala.inline
-  def apply(GlobalTableName: TableName): UpdateGlobalTableSettingsInput = {
+  def apply(
+    GlobalTableName: TableName,
+    GlobalTableBillingMode: BillingMode = null,
+    GlobalTableGlobalSecondaryIndexSettingsUpdate: GlobalTableGlobalSecondaryIndexSettingsUpdateList = null,
+    GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate: AutoScalingSettingsUpdate = null,
+    GlobalTableProvisionedWriteCapacityUnits: js.UndefOr[PositiveLongObject] = js.undefined,
+    ReplicaSettingsUpdate: ReplicaSettingsUpdateList = null
+  ): UpdateGlobalTableSettingsInput = {
     val __obj = js.Dynamic.literal(GlobalTableName = GlobalTableName.asInstanceOf[js.Any])
+    if (GlobalTableBillingMode != null) __obj.updateDynamic("GlobalTableBillingMode")(GlobalTableBillingMode.asInstanceOf[js.Any])
+    if (GlobalTableGlobalSecondaryIndexSettingsUpdate != null) __obj.updateDynamic("GlobalTableGlobalSecondaryIndexSettingsUpdate")(GlobalTableGlobalSecondaryIndexSettingsUpdate.asInstanceOf[js.Any])
+    if (GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate != null) __obj.updateDynamic("GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate")(GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate.asInstanceOf[js.Any])
+    if (!js.isUndefined(GlobalTableProvisionedWriteCapacityUnits)) __obj.updateDynamic("GlobalTableProvisionedWriteCapacityUnits")(GlobalTableProvisionedWriteCapacityUnits.get.asInstanceOf[js.Any])
+    if (ReplicaSettingsUpdate != null) __obj.updateDynamic("ReplicaSettingsUpdate")(ReplicaSettingsUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateGlobalTableSettingsInput]
   }
-  @scala.inline
-  implicit class UpdateGlobalTableSettingsInputOps[Self <: UpdateGlobalTableSettingsInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalTableName(value: TableName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalTableBillingMode(value: BillingMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableBillingMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableBillingMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableBillingMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTableGlobalSecondaryIndexSettingsUpdate(value: GlobalTableGlobalSecondaryIndexSettingsUpdateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableGlobalSecondaryIndexSettingsUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableGlobalSecondaryIndexSettingsUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableGlobalSecondaryIndexSettingsUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate(value: AutoScalingSettingsUpdate): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGlobalTableProvisionedWriteCapacityUnits(value: PositiveLongObject): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableProvisionedWriteCapacityUnits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalTableProvisionedWriteCapacityUnits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableProvisionedWriteCapacityUnits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplicaSettingsUpdate(value: ReplicaSettingsUpdateList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaSettingsUpdate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplicaSettingsUpdate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaSettingsUpdate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

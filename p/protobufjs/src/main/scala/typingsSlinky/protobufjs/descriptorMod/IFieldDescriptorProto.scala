@@ -4,153 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IFieldDescriptorProto extends js.Object {
-  var defaultValue: js.UndefOr[String] = js.native
-  var extendee: js.UndefOr[String] = js.native
-  var jsonName: js.UndefOr[js.Any] = js.native
-  var label: js.UndefOr[IFieldDescriptorProtoLabel] = js.native
-  var name: js.UndefOr[String] = js.native
-  var number: js.UndefOr[Double] = js.native
-  var oneofIndex: js.UndefOr[Double] = js.native
-  var options: js.UndefOr[IFieldOptions] = js.native
-  var `type`: js.UndefOr[IFieldDescriptorProtoType] = js.native
-  var typeName: js.UndefOr[String] = js.native
+  var defaultValue: js.UndefOr[String] = js.undefined
+  var extendee: js.UndefOr[String] = js.undefined
+  var jsonName: js.UndefOr[js.Any] = js.undefined
+  var label: js.UndefOr[IFieldDescriptorProtoLabel] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var number: js.UndefOr[Double] = js.undefined
+  var oneofIndex: js.UndefOr[Double] = js.undefined
+  var options: js.UndefOr[IFieldOptions] = js.undefined
+  var `type`: js.UndefOr[IFieldDescriptorProtoType] = js.undefined
+  var typeName: js.UndefOr[String] = js.undefined
 }
 
 object IFieldDescriptorProto {
   @scala.inline
-  def apply(): IFieldDescriptorProto = {
+  def apply(
+    defaultValue: String = null,
+    extendee: String = null,
+    jsonName: js.Any = null,
+    label: js.UndefOr[IFieldDescriptorProtoLabel] = js.undefined,
+    name: String = null,
+    number: js.UndefOr[Double] = js.undefined,
+    oneofIndex: js.UndefOr[Double] = js.undefined,
+    options: IFieldOptions = null,
+    `type`: js.UndefOr[IFieldDescriptorProtoType] = js.undefined,
+    typeName: String = null
+  ): IFieldDescriptorProto = {
     val __obj = js.Dynamic.literal()
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (extendee != null) __obj.updateDynamic("extendee")(extendee.asInstanceOf[js.Any])
+    if (jsonName != null) __obj.updateDynamic("jsonName")(jsonName.asInstanceOf[js.Any])
+    if (!js.isUndefined(label)) __obj.updateDynamic("label")(label.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (!js.isUndefined(number)) __obj.updateDynamic("number")(number.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(oneofIndex)) __obj.updateDynamic("oneofIndex")(oneofIndex.get.asInstanceOf[js.Any])
+    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
+    if (!js.isUndefined(`type`)) __obj.updateDynamic("type")(`type`.get.asInstanceOf[js.Any])
+    if (typeName != null) __obj.updateDynamic("typeName")(typeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFieldDescriptorProto]
   }
-  @scala.inline
-  implicit class IFieldDescriptorProtoOps[Self <: IFieldDescriptorProto] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDefaultValue(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtendee(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendee")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtendee: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extendee")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withJsonName(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutJsonName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabel(value: IFieldDescriptorProtoLabel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumber(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOneofIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneofIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOneofIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oneofIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOptions(value: IFieldOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: IFieldDescriptorProtoType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTypeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTypeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("typeName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

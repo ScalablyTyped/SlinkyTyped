@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+// TODO find source documentation
 @js.native
 trait MapsEngineLayer extends MVCObject {
   def getLayerId(): String = js.native

@@ -26,65 +26,18 @@ trait DescribeAccountLimitsAnswer extends js.Object {
 
 object DescribeAccountLimitsAnswer {
   @scala.inline
-  def apply(): DescribeAccountLimitsAnswer = {
+  def apply(
+    MaxNumberOfAutoScalingGroups: js.UndefOr[MaxNumberOfAutoScalingGroups] = js.undefined,
+    MaxNumberOfLaunchConfigurations: js.UndefOr[MaxNumberOfLaunchConfigurations] = js.undefined,
+    NumberOfAutoScalingGroups: js.UndefOr[NumberOfAutoScalingGroups] = js.undefined,
+    NumberOfLaunchConfigurations: js.UndefOr[NumberOfLaunchConfigurations] = js.undefined
+  ): DescribeAccountLimitsAnswer = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(MaxNumberOfAutoScalingGroups)) __obj.updateDynamic("MaxNumberOfAutoScalingGroups")(MaxNumberOfAutoScalingGroups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(MaxNumberOfLaunchConfigurations)) __obj.updateDynamic("MaxNumberOfLaunchConfigurations")(MaxNumberOfLaunchConfigurations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfAutoScalingGroups)) __obj.updateDynamic("NumberOfAutoScalingGroups")(NumberOfAutoScalingGroups.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(NumberOfLaunchConfigurations)) __obj.updateDynamic("NumberOfLaunchConfigurations")(NumberOfLaunchConfigurations.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAccountLimitsAnswer]
   }
-  @scala.inline
-  implicit class DescribeAccountLimitsAnswerOps[Self <: DescribeAccountLimitsAnswer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxNumberOfAutoScalingGroups(value: MaxNumberOfAutoScalingGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxNumberOfAutoScalingGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxNumberOfAutoScalingGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxNumberOfAutoScalingGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxNumberOfLaunchConfigurations(value: MaxNumberOfLaunchConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxNumberOfLaunchConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxNumberOfLaunchConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxNumberOfLaunchConfigurations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfAutoScalingGroups(value: NumberOfAutoScalingGroups): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAutoScalingGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfAutoScalingGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAutoScalingGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberOfLaunchConfigurations(value: NumberOfLaunchConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfLaunchConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberOfLaunchConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfLaunchConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

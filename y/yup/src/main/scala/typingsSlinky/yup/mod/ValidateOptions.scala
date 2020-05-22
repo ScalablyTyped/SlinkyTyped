@@ -4,103 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ValidateOptions extends js.Object {
   /**
     * Return from validation methods on the first error rather than after all validations run. Default - true
     */
-  var abortEarly: js.UndefOr[Boolean] = js.native
+  var abortEarly: js.UndefOr[Boolean] = js.undefined
   /**
     * Any context needed for validating schema conditions (see: when())
     */
-  var context: js.UndefOr[js.Object] = js.native
+  var context: js.UndefOr[js.Object] = js.undefined
   /**
     * When false validations will not descend into nested schema (relevant for objects or arrays). Default - true
     */
-  var recursive: js.UndefOr[Boolean] = js.native
+  var recursive: js.UndefOr[Boolean] = js.undefined
   /**
     * Only validate the input, and skip and coercion or transformation. Default - false
     */
-  var strict: js.UndefOr[Boolean] = js.native
+  var strict: js.UndefOr[Boolean] = js.undefined
   /**
     * Remove unspecified keys from objects. Default - false
     */
-  var stripUnknown: js.UndefOr[Boolean] = js.native
+  var stripUnknown: js.UndefOr[Boolean] = js.undefined
 }
 
 object ValidateOptions {
   @scala.inline
-  def apply(): ValidateOptions = {
+  def apply(
+    abortEarly: js.UndefOr[Boolean] = js.undefined,
+    context: js.Object = null,
+    recursive: js.UndefOr[Boolean] = js.undefined,
+    strict: js.UndefOr[Boolean] = js.undefined,
+    stripUnknown: js.UndefOr[Boolean] = js.undefined
+  ): ValidateOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(abortEarly)) __obj.updateDynamic("abortEarly")(abortEarly.get.asInstanceOf[js.Any])
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(stripUnknown)) __obj.updateDynamic("stripUnknown")(stripUnknown.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidateOptions]
   }
-  @scala.inline
-  implicit class ValidateOptionsOps[Self <: ValidateOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAbortEarly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abortEarly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAbortEarly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("abortEarly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecursive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecursive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrict(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrict: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStripUnknown(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripUnknown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStripUnknown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stripUnknown")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IOpacityAnimation extends IPropertyAnimation {
-  var finalOpacity: Double = js.native
-  var initialOpacity: Double = js.native
+  var finalOpacity: Double
+  var initialOpacity: Double
 }
 
 object IOpacityAnimation {
@@ -26,25 +25,5 @@ object IOpacityAnimation {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOpacityAnimation]
   }
-  @scala.inline
-  implicit class IOpacityAnimationOps[Self <: IOpacityAnimation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFinalOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInitialOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialOpacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

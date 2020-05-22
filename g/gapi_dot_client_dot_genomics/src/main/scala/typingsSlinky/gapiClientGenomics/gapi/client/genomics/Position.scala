@@ -4,68 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Position extends js.Object {
   /** The 0-based offset from the start of the forward strand for that reference. */
-  var position: js.UndefOr[String] = js.native
+  var position: js.UndefOr[String] = js.undefined
   /** The name of the reference in whatever reference set is being used. */
-  var referenceName: js.UndefOr[String] = js.native
+  var referenceName: js.UndefOr[String] = js.undefined
   /**
     * Whether this position is on the reverse strand, as opposed to the forward
     * strand.
     */
-  var reverseStrand: js.UndefOr[Boolean] = js.native
+  var reverseStrand: js.UndefOr[Boolean] = js.undefined
 }
 
 object Position {
   @scala.inline
-  def apply(): Position = {
+  def apply(
+    position: String = null,
+    referenceName: String = null,
+    reverseStrand: js.UndefOr[Boolean] = js.undefined
+  ): Position = {
     val __obj = js.Dynamic.literal()
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (referenceName != null) __obj.updateDynamic("referenceName")(referenceName.asInstanceOf[js.Any])
+    if (!js.isUndefined(reverseStrand)) __obj.updateDynamic("reverseStrand")(reverseStrand.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Position]
   }
-  @scala.inline
-  implicit class PositionOps[Self <: Position] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReferenceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReferenceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReverseStrand(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStrand")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReverseStrand: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStrand")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -26,9 +26,16 @@ object uploadMultipartPartCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UploadMultipartPartInput[Readable]) = this()
+    /* CompleteClass */
+    override val input: UploadMultipartPartInput[Readable] = js.native
     val middlewareStack: MiddlewareStack[UploadMultipartPartInput[Readable], UploadMultipartPartOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: GlacierResolvedConfiguration
+    ): Handler[UploadMultipartPartInput[Readable], UploadMultipartPartOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[UploadMultipartPartInput[Readable], UploadMultipartPartOutput] = js.native
   }

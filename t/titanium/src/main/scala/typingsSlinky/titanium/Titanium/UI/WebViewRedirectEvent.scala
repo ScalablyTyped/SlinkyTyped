@@ -5,18 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**
-		 * Fired when a web view receives a server redirect.
-		 */
-@js.native
+  * Fired when a web view receives a server redirect.
+  */
 trait WebViewRedirectEvent extends WebViewBaseEvent {
   /**
-  			 * Page title of webpage.
-  			 */
-  var title: String = js.native
+    * Page title of webpage.
+    */
+  var title: String
   /**
-  			 * URL of the web document being loaded.
-  			 */
-  var url: String = js.native
+    * URL of the web document being loaded.
+    */
+  var url: String
 }
 
 object WebViewRedirectEvent {
@@ -25,25 +24,5 @@ object WebViewRedirectEvent {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebViewRedirectEvent]
   }
-  @scala.inline
-  implicit class WebViewRedirectEventOps[Self <: WebViewRedirectEvent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@js.native
 trait ConditionalCellValueRule extends js.Object {
   /**
     *
@@ -27,65 +26,33 @@ trait ConditionalCellValueRule extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var formula1: String = js.native
+  var formula1: String
   /**
     *
     * The formula, if required, to evaluate the conditional format rule on.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var formula2: js.UndefOr[String] = js.native
+  var formula2: js.UndefOr[String] = js.undefined
   /**
     *
-    * The operator of the text conditional format.
+    * The operator of the cell value conditional format.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var operator: ConditionalCellValueOperator | Invalid | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqual | LessThanOrEqual = js.native
+  var operator: ConditionalCellValueOperator | Invalid | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqual | LessThanOrEqual
 }
 
 object ConditionalCellValueRule {
   @scala.inline
   def apply(
     formula1: String,
-    operator: ConditionalCellValueOperator | Invalid | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqual | LessThanOrEqual
+    operator: ConditionalCellValueOperator | Invalid | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqual | LessThanOrEqual,
+    formula2: String = null
   ): ConditionalCellValueRule = {
     val __obj = js.Dynamic.literal(formula1 = formula1.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any])
+    if (formula2 != null) __obj.updateDynamic("formula2")(formula2.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalCellValueRule]
   }
-  @scala.inline
-  implicit class ConditionalCellValueRuleOps[Self <: ConditionalCellValueRule] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormula1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOperator(
-      value: ConditionalCellValueOperator | Invalid | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqual | LessThanOrEqual
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormula2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormula2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formula2")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

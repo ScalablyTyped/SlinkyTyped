@@ -44,53 +44,16 @@ trait SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig {
   @scala.inline
-  def apply(): SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig = {
+  def apply(
+    bucketSize: js.UndefOr[Double] = js.undefined,
+    lowerBound: SchemaGooglePrivacyDlpV2Value = null,
+    upperBound: SchemaGooglePrivacyDlpV2Value = null
+  ): SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(bucketSize)) __obj.updateDynamic("bucketSize")(bucketSize.get.asInstanceOf[js.Any])
+    if (lowerBound != null) __obj.updateDynamic("lowerBound")(lowerBound.asInstanceOf[js.Any])
+    if (upperBound != null) __obj.updateDynamic("upperBound")(upperBound.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig]
   }
-  @scala.inline
-  implicit class SchemaGooglePrivacyDlpV2FixedSizeBucketingConfigOps[Self <: SchemaGooglePrivacyDlpV2FixedSizeBucketingConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBucketSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBucketSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowerBound(value: SchemaGooglePrivacyDlpV2Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowerBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperBound(value: SchemaGooglePrivacyDlpV2Value): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperBound: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

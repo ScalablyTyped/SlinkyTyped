@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Modules extends js.Object {
-  var modules: js.Any = js.native
+  var modules: js.Any
 }
 
 object Modules {
@@ -15,19 +14,5 @@ object Modules {
     val __obj = js.Dynamic.literal(modules = modules.asInstanceOf[js.Any])
     __obj.asInstanceOf[Modules]
   }
-  @scala.inline
-  implicit class ModulesOps[Self <: Modules] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withModules(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BABYLON.MultiObserver")
 @js.native
 class MultiObserver[T] ()
-  extends typingsSlinky.babylonjs.BABYLON.MultiObserver[T]
+  extends typingsSlinky.babylonjs.BABYLON.MultiObserver[T] {
+  /* CompleteClass */
+  override var _observables: js.Any = js.native
+  /* CompleteClass */
+  override var _observers: js.Any = js.native
+  /**
+    * Release associated resources
+    */
+  /* CompleteClass */
+  override def dispose(): Unit = js.native
+}
 
 /* static members */
 @JSGlobal("BABYLON.MultiObserver")

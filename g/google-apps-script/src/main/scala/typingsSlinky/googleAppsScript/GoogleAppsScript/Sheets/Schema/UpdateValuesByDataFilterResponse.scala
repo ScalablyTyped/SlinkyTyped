@@ -4,101 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UpdateValuesByDataFilterResponse extends js.Object {
-  var dataFilter: js.UndefOr[DataFilter] = js.native
-  var updatedCells: js.UndefOr[Double] = js.native
-  var updatedColumns: js.UndefOr[Double] = js.native
-  var updatedData: js.UndefOr[ValueRange] = js.native
-  var updatedRange: js.UndefOr[String] = js.native
-  var updatedRows: js.UndefOr[Double] = js.native
+  var dataFilter: js.UndefOr[DataFilter] = js.undefined
+  var updatedCells: js.UndefOr[Double] = js.undefined
+  var updatedColumns: js.UndefOr[Double] = js.undefined
+  var updatedData: js.UndefOr[ValueRange] = js.undefined
+  var updatedRange: js.UndefOr[String] = js.undefined
+  var updatedRows: js.UndefOr[Double] = js.undefined
 }
 
 object UpdateValuesByDataFilterResponse {
   @scala.inline
-  def apply(): UpdateValuesByDataFilterResponse = {
+  def apply(
+    dataFilter: DataFilter = null,
+    updatedCells: js.UndefOr[Double] = js.undefined,
+    updatedColumns: js.UndefOr[Double] = js.undefined,
+    updatedData: ValueRange = null,
+    updatedRange: String = null,
+    updatedRows: js.UndefOr[Double] = js.undefined
+  ): UpdateValuesByDataFilterResponse = {
     val __obj = js.Dynamic.literal()
+    if (dataFilter != null) __obj.updateDynamic("dataFilter")(dataFilter.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatedCells)) __obj.updateDynamic("updatedCells")(updatedCells.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatedColumns)) __obj.updateDynamic("updatedColumns")(updatedColumns.get.asInstanceOf[js.Any])
+    if (updatedData != null) __obj.updateDynamic("updatedData")(updatedData.asInstanceOf[js.Any])
+    if (updatedRange != null) __obj.updateDynamic("updatedRange")(updatedRange.asInstanceOf[js.Any])
+    if (!js.isUndefined(updatedRows)) __obj.updateDynamic("updatedRows")(updatedRows.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateValuesByDataFilterResponse]
   }
-  @scala.inline
-  implicit class UpdateValuesByDataFilterResponseOps[Self <: UpdateValuesByDataFilterResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDataFilter(value: DataFilter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFilter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataFilter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFilter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedCells(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedCells")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedCells: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedCells")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedColumns(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedColumns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedColumns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedData(value: ValueRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedRange(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRange")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRange")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdatedRows(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRows")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdatedRows: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedRows")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

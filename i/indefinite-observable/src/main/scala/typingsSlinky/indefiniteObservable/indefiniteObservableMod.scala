@@ -2,6 +2,8 @@ package typingsSlinky.indefiniteObservable
 
 import typingsSlinky.indefiniteObservable.typesMod.Connect
 import typingsSlinky.indefiniteObservable.typesMod.Observable
+import typingsSlinky.indefiniteObservable.typesMod.ObserverOrNext
+import typingsSlinky.indefiniteObservable.typesMod.Subscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +23,8 @@ object indefiniteObservableMod extends js.Object {
       */
     def this(connect: Connect[T]) = this()
     var _connect: js.Any = js.native
+    /* CompleteClass */
+    override def subscribe(observerOrNext: ObserverOrNext[T]): Subscription = js.native
   }
   
   @js.native

@@ -25,65 +25,18 @@ trait SchemaUrlMapValidationResult extends js.Object {
 
 object SchemaUrlMapValidationResult {
   @scala.inline
-  def apply(): SchemaUrlMapValidationResult = {
+  def apply(
+    loadErrors: js.Array[String] = null,
+    loadSucceeded: js.UndefOr[Boolean] = js.undefined,
+    testFailures: js.Array[SchemaTestFailure] = null,
+    testPassed: js.UndefOr[Boolean] = js.undefined
+  ): SchemaUrlMapValidationResult = {
     val __obj = js.Dynamic.literal()
+    if (loadErrors != null) __obj.updateDynamic("loadErrors")(loadErrors.asInstanceOf[js.Any])
+    if (!js.isUndefined(loadSucceeded)) __obj.updateDynamic("loadSucceeded")(loadSucceeded.get.asInstanceOf[js.Any])
+    if (testFailures != null) __obj.updateDynamic("testFailures")(testFailures.asInstanceOf[js.Any])
+    if (!js.isUndefined(testPassed)) __obj.updateDynamic("testPassed")(testPassed.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUrlMapValidationResult]
   }
-  @scala.inline
-  implicit class SchemaUrlMapValidationResultOps[Self <: SchemaUrlMapValidationResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLoadErrors(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadErrors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadErrors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadErrors")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadSucceeded(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadSucceeded")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadSucceeded: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadSucceeded")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestFailures(value: js.Array[SchemaTestFailure]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testFailures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestFailures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testFailures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTestPassed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testPassed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTestPassed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("testPassed")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

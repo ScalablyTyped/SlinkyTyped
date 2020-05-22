@@ -6,7 +6,7 @@ import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsDatetime.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
-import typingsSlinky.blueprintjsDatetime.dateUtilsMod.DateRange
+import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
 import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js

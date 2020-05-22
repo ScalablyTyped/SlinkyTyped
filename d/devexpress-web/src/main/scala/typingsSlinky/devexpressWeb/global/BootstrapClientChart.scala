@@ -1,5 +1,27 @@
 package typingsSlinky.devexpressWeb.global
 
+import typingsSlinky.devexpressWeb.ASPxClientEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBaseDoneEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBaseLegendClickEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBasePointClickEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBasePointHoverChangedEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBasePointSelectionChangedEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBaseTooltipHiddenEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartBaseTooltipShownEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartZoomEndEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientChartZoomStartEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientCoordinateSystemChartArgumentAxisClickEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientCoordinateSystemChartSeriesClickEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientCoordinateSystemChartSeriesHoverChangedEventHandler
+import typingsSlinky.devexpressWeb.BootstrapClientCoordinateSystemChartSeriesSelectionChangedEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetDisposingEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetDrawnEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetErrorEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetExportedEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetExportingEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetFileSavingEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetInitializedEventHandler
+import typingsSlinky.devexpressWeb.BootstrapUIWidgetOptionChangedEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +32,273 @@ import scala.scalajs.js.annotation._
 @JSGlobal("BootstrapClientChart")
 @js.native
 class BootstrapClientChart ()
-  extends typingsSlinky.devexpressWeb.BootstrapClientChart
+  extends typingsSlinky.devexpressWeb.BootstrapClientChart {
+  /**
+    * Fires when a user clicks a label on the argument axis.
+    */
+  /* CompleteClass */
+  override var ArgumentAxisClick: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientCoordinateSystemChartArgumentAxisClickEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when the widget is removed from the DOM using the remove(), empty(), or html() jQuery methods only.
+    */
+  /* CompleteClass */
+  override var Disposing: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetDisposingEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Fires when the Series and Points chart elements are ready to be accessed.
+    */
+  /* CompleteClass */
+  override var Done: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBaseDoneEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when the widget has finished drawing itself.
+    */
+  /* CompleteClass */
+  override var Drawn: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetDrawnEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Fires after data from the widget is exported.
+    */
+  /* CompleteClass */
+  override var Exported: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetExportedEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Fires before data from the widget is exported.
+    */
+  /* CompleteClass */
+  override var Exporting: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetExportingEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Raised before a file with exported data is saved on the user's local storage.
+    */
+  /* CompleteClass */
+  override var FileSaving: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetFileSavingEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Fires when an error or warning appears in the widget.
+    */
+  /* CompleteClass */
+  override var IncidentOccurred: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetErrorEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Occurs on the client side after the control has been initialized.
+    */
+  /* CompleteClass */
+  override var Init: typingsSlinky.devexpressWeb.ASPxClientEvent[ASPxClientEventHandler[typingsSlinky.devexpressWeb.ASPxClientControlBase]] = js.native
+  /**
+    * Fires once, after the widget is initialized.
+    */
+  /* CompleteClass */
+  @JSName("Init")
+  override var Init_BootstrapUIWidgetBase: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetInitializedEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Fires when an item on the chart legend is clicked.
+    */
+  /* CompleteClass */
+  override var LegendClick: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBaseLegendClickEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires after an option of the widget has been changed.
+    */
+  /* CompleteClass */
+  override var OptionChanged: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapUIWidgetOptionChangedEventHandler[typingsSlinky.devexpressWeb.BootstrapUIWidgetBase]
+  ] = js.native
+  /**
+    * Fires when a user clicks a series point.
+    */
+  /* CompleteClass */
+  override var PointClick: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBasePointClickEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when the hover state of a series point has been changed.
+    */
+  /* CompleteClass */
+  override var PointHoverChanged: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBasePointHoverChangedEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when the selection state of a series point has been changed.
+    */
+  /* CompleteClass */
+  override var PointSelectionChanged: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBasePointSelectionChangedEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when a user clicks a series.
+    */
+  /* CompleteClass */
+  override var SeriesClick: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientCoordinateSystemChartSeriesClickEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when the hover state of a series has been changed.
+    */
+  /* CompleteClass */
+  override var SeriesHoverChanged: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientCoordinateSystemChartSeriesHoverChangedEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when the selection state of a series has been changed.
+    */
+  /* CompleteClass */
+  override var SeriesSelectionChanged: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientCoordinateSystemChartSeriesSelectionChangedEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when a point's tooltip becomes hidden.
+    */
+  /* CompleteClass */
+  override var TooltipHidden: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBaseTooltipHiddenEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when a point's tooltip appears.
+    */
+  /* CompleteClass */
+  override var TooltipShown: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartBaseTooltipShownEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChartBase]
+  ] = js.native
+  /**
+    * Fires when a chart zooming or scrolling ends.
+    */
+  /* CompleteClass */
+  override var ZoomEnd: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartZoomEndEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChart]
+  ] = js.native
+  /**
+    * Fires when a chart zooming or scrolling begins.
+    */
+  /* CompleteClass */
+  override var ZoomStart: typingsSlinky.devexpressWeb.ASPxClientEvent[
+    BootstrapClientChartZoomStartEventHandler[typingsSlinky.devexpressWeb.BootstrapClientChart]
+  ] = js.native
+  /**
+    * Gets the unique, hierarchically-qualified identifier for the control.
+    */
+  /* CompleteClass */
+  override var name: String = js.native
+  /**
+    * Modifies the control's size against the control's container.
+    */
+  /* CompleteClass */
+  override def AdjustControl(): Unit = js.native
+  /**
+    * Exports the widget.
+    * @param format A string specifying the target file format.
+    * @param fileName A string specifying the file name.
+    */
+  /* CompleteClass */
+  override def ExportTo(format: String, fileName: String): Unit = js.native
+  /** @deprecated Use the GetVisible method instead. */
+  /**
+    * Returns a value specifying whether a control is displayed.
+    */
+  /* CompleteClass */
+  override def GetClientVisible(): Boolean = js.native
+  /**
+    * Gets the client data source instance.
+    */
+  /* CompleteClass */
+  override def GetDataSource(): js.Any = js.native
+  /* CompleteClass */
+  override def GetEnabled(): Boolean = js.native
+  /**
+    * Returns the control's height.
+    */
+  /* CompleteClass */
+  override def GetHeight(): Double = js.native
+  /**
+    * Gets an instance of the widget.
+    */
+  /* CompleteClass */
+  override def GetInstance(): js.Any = js.native
+  /**
+    * Returns an HTML element that is the root of the control's hierarchy.
+    */
+  /* CompleteClass */
+  override def GetMainElement(): js.Any = js.native
+  /**
+    * Returns a client instance of the control that is the parent for a specified control.
+    */
+  /* CompleteClass */
+  override def GetParentControl(): js.Any = js.native
+  /**
+    * Returns a value specifying whether a control is displayed.
+    */
+  /* CompleteClass */
+  override def GetVisible(): Boolean = js.native
+  /**
+    * Returns the control's width.
+    */
+  /* CompleteClass */
+  override def GetWidth(): Double = js.native
+  /**
+    * Returns a value that determines whether a callback request sent by a web control is being currently processed on the server side.
+    */
+  /* CompleteClass */
+  override def InCallback(): Boolean = js.native
+  /**
+    * Invokes the browser's Print window to print the widget's contents.
+    */
+  /* CompleteClass */
+  override def Print(): Unit = js.native
+  /**
+    * Specifies the text that Assistive Technologies (screen readers or braille display, for example) will provide to a user.
+    * @param message A String value that specifies a text.
+    */
+  /* CompleteClass */
+  override def SendMessageToAssistiveTechnology(message: String): Unit = js.native
+  /** @deprecated Use the SetVisible method instead. */
+  /**
+    * Specifies whether a control is displayed.
+    */
+  /* CompleteClass */
+  override def SetClientVisible(visible: Boolean): Unit = js.native
+  /**
+    * Sets the client data source instance.
+    * @param dataSource A DevExtreme <a href="https://js.devexpress.com/DevExtreme/ApiReference/Data_Layer/DataSource/">DataSource</a> object.
+    */
+  /* CompleteClass */
+  override def SetDataSource(dataSource: js.Any): Unit = js.native
+  /* CompleteClass */
+  override def SetEnabled(enabled: Boolean): Unit = js.native
+  /**
+    * Specifies the control's height.  Note that this method is not in effect for some controls.
+    * @param height An integer value that specifies the control's height.
+    */
+  /* CompleteClass */
+  override def SetHeight(height: Double): Unit = js.native
+  /**
+    * Sets the widget's options to values specified in the passed object.
+    * @param options An object containing key-value pairs specifying new option values.
+    */
+  /* CompleteClass */
+  override def SetOptions(options: js.Any): Unit = js.native
+  /**
+    * Specifies whether a control is displayed.
+    * @param visible true to make a control visible; false to make it hidden.
+    */
+  /* CompleteClass */
+  override def SetVisible(visible: Boolean): Unit = js.native
+  /**
+    * Specifies the control's width in pixels.
+    * @param width An integer value that specifies the control's width, in pixels.
+    */
+  /* CompleteClass */
+  override def SetWidth(width: Double): Unit = js.native
+}
 

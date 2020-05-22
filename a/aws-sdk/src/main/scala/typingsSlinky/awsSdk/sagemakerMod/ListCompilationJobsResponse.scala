@@ -18,35 +18,10 @@ trait ListCompilationJobsResponse extends js.Object {
 
 object ListCompilationJobsResponse {
   @scala.inline
-  def apply(CompilationJobSummaries: CompilationJobSummaries): ListCompilationJobsResponse = {
+  def apply(CompilationJobSummaries: CompilationJobSummaries, NextToken: NextToken = null): ListCompilationJobsResponse = {
     val __obj = js.Dynamic.literal(CompilationJobSummaries = CompilationJobSummaries.asInstanceOf[js.Any])
+    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCompilationJobsResponse]
   }
-  @scala.inline
-  implicit class ListCompilationJobsResponseOps[Self <: ListCompilationJobsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCompilationJobSummaries(value: CompilationJobSummaries): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CompilationJobSummaries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNextToken(value: NextToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

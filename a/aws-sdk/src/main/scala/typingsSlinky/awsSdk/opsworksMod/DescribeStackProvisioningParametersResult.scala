@@ -18,41 +18,11 @@ trait DescribeStackProvisioningParametersResult extends js.Object {
 
 object DescribeStackProvisioningParametersResult {
   @scala.inline
-  def apply(): DescribeStackProvisioningParametersResult = {
+  def apply(AgentInstallerUrl: String = null, Parameters: Parameters = null): DescribeStackProvisioningParametersResult = {
     val __obj = js.Dynamic.literal()
+    if (AgentInstallerUrl != null) __obj.updateDynamic("AgentInstallerUrl")(AgentInstallerUrl.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStackProvisioningParametersResult]
   }
-  @scala.inline
-  implicit class DescribeStackProvisioningParametersResultOps[Self <: DescribeStackProvisioningParametersResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAgentInstallerUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentInstallerUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAgentInstallerUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentInstallerUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: Parameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

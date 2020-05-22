@@ -18,35 +18,10 @@ trait Featurization extends js.Object {
 
 object Featurization {
   @scala.inline
-  def apply(AttributeName: Name): Featurization = {
+  def apply(AttributeName: Name, FeaturizationPipeline: FeaturizationPipeline = null): Featurization = {
     val __obj = js.Dynamic.literal(AttributeName = AttributeName.asInstanceOf[js.Any])
+    if (FeaturizationPipeline != null) __obj.updateDynamic("FeaturizationPipeline")(FeaturizationPipeline.asInstanceOf[js.Any])
     __obj.asInstanceOf[Featurization]
   }
-  @scala.inline
-  implicit class FeaturizationOps[Self <: Featurization] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeName(value: Name): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFeaturizationPipeline(value: FeaturizationPipeline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeaturizationPipeline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFeaturizationPipeline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FeaturizationPipeline")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

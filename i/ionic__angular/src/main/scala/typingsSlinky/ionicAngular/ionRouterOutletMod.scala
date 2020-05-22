@@ -122,6 +122,21 @@ object ionRouterOutletMod extends js.Object {
     def getLastUrl(): js.UndefOr[String] = js.native
     def getLastUrl(stackId: String): js.UndefOr[String] = js.native
     /**
+      * A callback method that performs custom clean-up, invoked immediately
+      * after a directive, pipe, or service instance is destroyed.
+      */
+    /* CompleteClass */
+    override def ngOnDestroy(): Unit = js.native
+    /**
+      * A callback method that is invoked immediately after the
+      * default change detector has checked the directive's
+      * data-bound properties for the first time,
+      * and before any of the view or content children have been checked.
+      * It is invoked only once when the directive is instantiated.
+      */
+    /* CompleteClass */
+    override def ngOnInit(): Unit = js.native
+    /**
       * Resolves to `true` if it the outlet was able to sucessfully pop the last N pages.
       */
     def pop(): js.Promise[Boolean] = js.native

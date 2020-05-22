@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
   * The `AppointmentForm` object is used to access the currently selected appointment.
   *
   * @remarks
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `Restricted`
-  * 
+  *
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
-@js.native
 trait AppointmentForm extends js.Object {
   /**
     * Gets an object that provides methods for manipulating the body of an item.
@@ -23,14 +22,14 @@ trait AppointmentForm extends js.Object {
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var body: Body | String = js.native
+  var body: Body | String
   /**
     * Gets or sets the date and time that the appointment is to end.
     *
-    * The `end` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the `convertToLocalClientTime` method to 
+    * The `end` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the `convertToLocalClientTime` method to
     * convert the `end` property value to the client's local date and time.
     *
     * *Read mode*
@@ -41,16 +40,16 @@ trait AppointmentForm extends js.Object {
     *
     * The `end` property returns a `Time` object.
     *
-    * When you use the `Time.setAsync` method to set the end time, you should use the `convertToUtcClientTime` method to convert the local time on 
+    * When you use the `Time.setAsync` method to set the end time, you should use the `convertToUtcClientTime` method to convert the local time on
     * the client to UTC for the server.
     *
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var end: Time | js.Date = js.native
+  var end: Time | js.Date
   /**
     * Gets or sets the location of an appointment.
     *
@@ -65,10 +64,10 @@ trait AppointmentForm extends js.Object {
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var location: Location | String = js.native
+  var location: Location | String
   /**
     * Provides access to the optional attendees of an event. The type of object and level of access depends on the mode of the current item.
     *
@@ -89,10 +88,10 @@ trait AppointmentForm extends js.Object {
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var optionalAttendees: js.Array[EmailAddressDetails | Recipients] = js.native
+  var optionalAttendees: js.Array[EmailAddressDetails | Recipients]
   /**
     * Provides access to the required attendees of an event. The type of object and level of access depends on the mode of the current item.
     *
@@ -113,24 +112,24 @@ trait AppointmentForm extends js.Object {
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var requiredAttendees: js.Array[EmailAddressDetails | Recipients] = js.native
+  var requiredAttendees: js.Array[EmailAddressDetails | Recipients]
   /**
     * Provides access to the resources of an event. Returns an array of strings containing the resources required for the appointment.
     *
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var resources: js.Array[String] = js.native
+  var resources: js.Array[String]
   /**
     * Gets or sets the date and time that the appointment is to begin.
     *
-    * The `start` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the `convertToLocalClientTime` method 
+    * The `start` property is expressed as a Coordinated Universal Time (UTC) date and time value. You can use the `convertToLocalClientTime` method
     * to convert the value to the client's local date and time.
     *
     * *Read mode*
@@ -141,16 +140,16 @@ trait AppointmentForm extends js.Object {
     *
     * The `start` property returns a `Time` object.
     *
-    * When you use the `Time.setAsync` method to set the start time, you should use the `convertToUtcClientTime` method to convert the local time on 
+    * When you use the `Time.setAsync` method to set the start time, you should use the `convertToUtcClientTime` method to convert the local time on
     * the client to UTC for the server.
     *
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var start: Time | js.Date = js.native
+  var start: Time | js.Date
   /**
     * Gets or sets the description that appears in the subject field of an item.
     *
@@ -167,10 +166,10 @@ trait AppointmentForm extends js.Object {
     * @remarks
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
-    * 
+    *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var subject: Subject | String = js.native
+  var subject: Subject | String
 }
 
 object AppointmentForm {
@@ -188,73 +187,5 @@ object AppointmentForm {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], optionalAttendees = optionalAttendees.asInstanceOf[js.Any], requiredAttendees = requiredAttendees.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppointmentForm]
   }
-  @scala.inline
-  implicit class AppointmentFormOps[Self <: AppointmentForm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBody(value: Body | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEndDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnd(value: Time | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocation(value: Location | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOptionalAttendees(value: js.Array[EmailAddressDetails | Recipients]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("optionalAttendees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequiredAttendees(value: js.Array[EmailAddressDetails | Recipients]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredAttendees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withResources(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStartDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Time | js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSubject(value: Subject | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

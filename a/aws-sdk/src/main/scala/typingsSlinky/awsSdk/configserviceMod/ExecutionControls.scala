@@ -14,29 +14,10 @@ trait ExecutionControls extends js.Object {
 
 object ExecutionControls {
   @scala.inline
-  def apply(): ExecutionControls = {
+  def apply(SsmControls: SsmControls = null): ExecutionControls = {
     val __obj = js.Dynamic.literal()
+    if (SsmControls != null) __obj.updateDynamic("SsmControls")(SsmControls.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionControls]
   }
-  @scala.inline
-  implicit class ExecutionControlsOps[Self <: ExecutionControls] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSsmControls(value: SsmControls): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SsmControls")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSsmControls: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SsmControls")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

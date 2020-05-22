@@ -5,88 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AutoAppIndexData extends js.Object {
-  var androidPackageName: js.UndefOr[String] = js.native
-  var androidURL: js.UndefOr[String] = js.native
-  var data: js.UndefOr[StringDictionary[CustomLinkData]] = js.native
-  var iosAppId: js.UndefOr[String] = js.native
-  var iosURL: js.UndefOr[String] = js.native
+  var androidPackageName: js.UndefOr[String] = js.undefined
+  var androidURL: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[StringDictionary[CustomLinkData]] = js.undefined
+  var iosAppId: js.UndefOr[String] = js.undefined
+  var iosURL: js.UndefOr[String] = js.undefined
 }
 
 object AutoAppIndexData {
   @scala.inline
-  def apply(): AutoAppIndexData = {
+  def apply(
+    androidPackageName: String = null,
+    androidURL: String = null,
+    data: StringDictionary[CustomLinkData] = null,
+    iosAppId: String = null,
+    iosURL: String = null
+  ): AutoAppIndexData = {
     val __obj = js.Dynamic.literal()
+    if (androidPackageName != null) __obj.updateDynamic("androidPackageName")(androidPackageName.asInstanceOf[js.Any])
+    if (androidURL != null) __obj.updateDynamic("androidURL")(androidURL.asInstanceOf[js.Any])
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (iosAppId != null) __obj.updateDynamic("iosAppId")(iosAppId.asInstanceOf[js.Any])
+    if (iosURL != null) __obj.updateDynamic("iosURL")(iosURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoAppIndexData]
   }
-  @scala.inline
-  implicit class AutoAppIndexDataOps[Self <: AutoAppIndexData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidPackageName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPackageName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidPackageName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPackageName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAndroidURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: StringDictionary[CustomLinkData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosAppId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosAppId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosAppId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosAppId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosURL")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -16,5 +16,10 @@ class ASPxClientVerticalGridRowExpandedEventArgs protected ()
     * @param row A ASPxClientVerticalGridRow object that uniquely identifies the expanded row. This value is assigned to the ASPxClientVerticalGridRowExpandedEventArgs.row property.
     */
   def this(row: typingsSlinky.devexpressWeb.ASPxClientVerticalGridRow) = this()
+  /**
+    * Gets the expanded row.
+    */
+  /* CompleteClass */
+  override var row: typingsSlinky.devexpressWeb.ASPxClientVerticalGridRow = js.native
 }
 

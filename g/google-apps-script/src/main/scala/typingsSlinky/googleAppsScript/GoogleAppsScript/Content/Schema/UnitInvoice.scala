@@ -4,75 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UnitInvoice extends js.Object {
-  var additionalCharges: js.UndefOr[js.Array[UnitInvoiceAdditionalCharge]] = js.native
-  var promotions: js.UndefOr[js.Array[Promotion]] = js.native
-  var unitPricePretax: js.UndefOr[Price] = js.native
-  var unitPriceTaxes: js.UndefOr[js.Array[UnitInvoiceTaxLine]] = js.native
+  var additionalCharges: js.UndefOr[js.Array[UnitInvoiceAdditionalCharge]] = js.undefined
+  var promotions: js.UndefOr[js.Array[Promotion]] = js.undefined
+  var unitPricePretax: js.UndefOr[Price] = js.undefined
+  var unitPriceTaxes: js.UndefOr[js.Array[UnitInvoiceTaxLine]] = js.undefined
 }
 
 object UnitInvoice {
   @scala.inline
-  def apply(): UnitInvoice = {
+  def apply(
+    additionalCharges: js.Array[UnitInvoiceAdditionalCharge] = null,
+    promotions: js.Array[Promotion] = null,
+    unitPricePretax: Price = null,
+    unitPriceTaxes: js.Array[UnitInvoiceTaxLine] = null
+  ): UnitInvoice = {
     val __obj = js.Dynamic.literal()
+    if (additionalCharges != null) __obj.updateDynamic("additionalCharges")(additionalCharges.asInstanceOf[js.Any])
+    if (promotions != null) __obj.updateDynamic("promotions")(promotions.asInstanceOf[js.Any])
+    if (unitPricePretax != null) __obj.updateDynamic("unitPricePretax")(unitPricePretax.asInstanceOf[js.Any])
+    if (unitPriceTaxes != null) __obj.updateDynamic("unitPriceTaxes")(unitPriceTaxes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnitInvoice]
   }
-  @scala.inline
-  implicit class UnitInvoiceOps[Self <: UnitInvoice] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalCharges(value: js.Array[UnitInvoiceAdditionalCharge]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalCharges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalCharges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalCharges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromotions(value: js.Array[Promotion]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromotions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("promotions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPricePretax(value: Price): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPricePretax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPricePretax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPricePretax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUnitPriceTaxes(value: js.Array[UnitInvoiceTaxLine]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPriceTaxes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUnitPriceTaxes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("unitPriceTaxes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

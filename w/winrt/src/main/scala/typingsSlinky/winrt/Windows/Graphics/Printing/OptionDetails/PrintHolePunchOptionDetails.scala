@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrintHolePunchOptionDetails extends IPrintItemListOptionDetails
 
 object PrintHolePunchOptionDetails {

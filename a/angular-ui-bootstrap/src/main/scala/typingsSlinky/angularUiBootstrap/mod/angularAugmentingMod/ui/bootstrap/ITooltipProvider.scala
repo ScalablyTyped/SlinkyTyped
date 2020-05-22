@@ -5,16 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITooltipProvider extends IServiceProvider {
   /**
     * Provide a set of defaults for certain tooltip and popover attributes.
     */
-  def options(value: ITooltipOptions): Unit = js.native
+  def options(value: ITooltipOptions): Unit
   /**
     * Extends the default trigger mappings with mappings of your own. E.g. `{ 'openTrigger': 'closeTrigger' }`.
     */
-  def setTriggers(triggers: js.Object): Unit = js.native
+  def setTriggers(triggers: js.Object): Unit
 }
 
 object ITooltipProvider {
@@ -23,25 +22,5 @@ object ITooltipProvider {
     val __obj = js.Dynamic.literal($get = $get.asInstanceOf[js.Any], options = js.Any.fromFunction1(options), setTriggers = js.Any.fromFunction1(setTriggers))
     __obj.asInstanceOf[ITooltipProvider]
   }
-  @scala.inline
-  implicit class ITooltipProviderOps[Self <: ITooltipProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOptions(value: ITooltipOptions => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetTriggers(value: js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTriggers")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

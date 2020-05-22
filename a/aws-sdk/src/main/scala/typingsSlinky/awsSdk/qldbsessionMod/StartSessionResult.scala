@@ -14,29 +14,10 @@ trait StartSessionResult extends js.Object {
 
 object StartSessionResult {
   @scala.inline
-  def apply(): StartSessionResult = {
+  def apply(SessionToken: SessionToken = null): StartSessionResult = {
     val __obj = js.Dynamic.literal()
+    if (SessionToken != null) __obj.updateDynamic("SessionToken")(SessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartSessionResult]
   }
-  @scala.inline
-  implicit class StartSessionResultOps[Self <: StartSessionResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSessionToken(value: SessionToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSessionToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

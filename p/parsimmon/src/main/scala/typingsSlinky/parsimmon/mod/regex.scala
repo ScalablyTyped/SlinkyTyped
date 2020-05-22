@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object regex extends js.Object {
   /**
-  	 * This was the original name for Parsimmon.regexp, but now it is just an alias.
-  	 */
+    * This was the original name for Parsimmon.regexp, but now it is just an alias.
+    */
   def apply(myregex: js.RegExp): Parser[String] = js.native
   def apply(myregex: js.RegExp, group: Double): Parser[String] = js.native
 }

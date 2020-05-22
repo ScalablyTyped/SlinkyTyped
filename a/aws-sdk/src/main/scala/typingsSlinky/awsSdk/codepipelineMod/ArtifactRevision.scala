@@ -34,89 +34,22 @@ trait ArtifactRevision extends js.Object {
 
 object ArtifactRevision {
   @scala.inline
-  def apply(): ArtifactRevision = {
+  def apply(
+    created: js.Date = null,
+    name: ArtifactName = null,
+    revisionChangeIdentifier: RevisionChangeIdentifier = null,
+    revisionId: Revision = null,
+    revisionSummary: RevisionSummary = null,
+    revisionUrl: Url = null
+  ): ArtifactRevision = {
     val __obj = js.Dynamic.literal()
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (revisionChangeIdentifier != null) __obj.updateDynamic("revisionChangeIdentifier")(revisionChangeIdentifier.asInstanceOf[js.Any])
+    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
+    if (revisionSummary != null) __obj.updateDynamic("revisionSummary")(revisionSummary.asInstanceOf[js.Any])
+    if (revisionUrl != null) __obj.updateDynamic("revisionUrl")(revisionUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArtifactRevision]
   }
-  @scala.inline
-  implicit class ArtifactRevisionOps[Self <: ArtifactRevision] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreated(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: ArtifactName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionChangeIdentifier(value: RevisionChangeIdentifier): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionChangeIdentifier")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionChangeIdentifier: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionChangeIdentifier")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionId(value: Revision): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionSummary(value: RevisionSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevisionUrl(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevisionUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

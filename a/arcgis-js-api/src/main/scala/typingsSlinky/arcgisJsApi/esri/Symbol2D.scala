@@ -18,18 +18,3 @@ trait Symbol2D
      with Symbol2D3D
      with symbolsSymbol
 
-object Symbol2D {
-  @scala.inline
-  implicit def apply(value: PictureFillSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
-  @scala.inline
-  implicit def apply(value: PictureMarkerSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
-  @scala.inline
-  implicit def apply(value: SimpleFillSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
-  @scala.inline
-  implicit def apply(value: SimpleLineSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
-  @scala.inline
-  implicit def apply(value: SimpleMarkerSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
-  @scala.inline
-  implicit def apply(value: TextSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
-}
-

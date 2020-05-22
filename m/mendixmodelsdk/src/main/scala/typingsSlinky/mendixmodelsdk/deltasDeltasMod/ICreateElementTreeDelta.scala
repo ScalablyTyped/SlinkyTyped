@@ -5,28 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICreateElementTreeDelta
   extends IDelta
      with Delta {
   /**
     * Index where the element should be created. Only for listy properties.
     */
-  var additionIndex: js.UndefOr[Double] = js.native
-  var deltaType: CREATE_ELEMENT_TREE = js.native
+  var additionIndex: js.UndefOr[Double] = js.undefined
+  var deltaType: CREATE_ELEMENT_TREE
   /**
     * The JSON of the element tree to create.
     */
-  var elementTree: IStructureJSON = js.native
+  var elementTree: IStructureJSON
   /**
     * The ID of the parent element to create the new element in.
     */
-  var parentId: String = js.native
+  var parentId: String
   /**
     * The name of the property to create the new element on/in.
     * This must a property of PART kind with an element type compatible with `elementType`.
     */
-  var parentPropertyName: String = js.native
+  var parentPropertyName: String
 }
 
 object ICreateElementTreeDelta {
@@ -36,54 +35,12 @@ object ICreateElementTreeDelta {
     elementTree: IStructureJSON,
     parentId: String,
     parentPropertyName: String,
-    unitId: String
+    unitId: String,
+    additionIndex: js.UndefOr[Double] = js.undefined
   ): ICreateElementTreeDelta = {
     val __obj = js.Dynamic.literal(deltaType = deltaType.asInstanceOf[js.Any], elementTree = elementTree.asInstanceOf[js.Any], parentId = parentId.asInstanceOf[js.Any], parentPropertyName = parentPropertyName.asInstanceOf[js.Any], unitId = unitId.asInstanceOf[js.Any])
+    if (!js.isUndefined(additionIndex)) __obj.updateDynamic("additionIndex")(additionIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICreateElementTreeDelta]
   }
-  @scala.inline
-  implicit class ICreateElementTreeDeltaOps[Self <: ICreateElementTreeDelta] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeltaType(value: CREATE_ELEMENT_TREE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withElementTree(value: IStructureJSON): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementTree")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withParentPropertyName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parentPropertyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAdditionIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -9,75 +9,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait EditOnKeyPress extends js.Object {
-  var editOnKeyPress: js.UndefOr[Boolean] = js.native
-  var enabled: js.UndefOr[Boolean] = js.native
-  var enterKeyAction: js.UndefOr[startEdit | moveFocus] = js.native
-  var enterKeyDirection: js.UndefOr[none | column | row] = js.native
+  var editOnKeyPress: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enterKeyAction: js.UndefOr[startEdit | moveFocus] = js.undefined
+  var enterKeyDirection: js.UndefOr[none | column | row] = js.undefined
 }
 
 object EditOnKeyPress {
   @scala.inline
-  def apply(): EditOnKeyPress = {
+  def apply(
+    editOnKeyPress: js.UndefOr[Boolean] = js.undefined,
+    enabled: js.UndefOr[Boolean] = js.undefined,
+    enterKeyAction: startEdit | moveFocus = null,
+    enterKeyDirection: none | column | row = null
+  ): EditOnKeyPress = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(editOnKeyPress)) __obj.updateDynamic("editOnKeyPress")(editOnKeyPress.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.get.asInstanceOf[js.Any])
+    if (enterKeyAction != null) __obj.updateDynamic("enterKeyAction")(enterKeyAction.asInstanceOf[js.Any])
+    if (enterKeyDirection != null) __obj.updateDynamic("enterKeyDirection")(enterKeyDirection.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditOnKeyPress]
   }
-  @scala.inline
-  implicit class EditOnKeyPressOps[Self <: EditOnKeyPress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEditOnKeyPress(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editOnKeyPress")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEditOnKeyPress: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("editOnKeyPress")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterKeyAction(value: startEdit | moveFocus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterKeyAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterKeyAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterKeyAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnterKeyDirection(value: none | column | row): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterKeyDirection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnterKeyDirection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterKeyDirection")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

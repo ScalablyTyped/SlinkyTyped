@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EndpointConfiguration extends js.Object {
   /**
-    * Indicates whether client IP address preservation is enabled for an Application Load Balancer endpoint. The value is true or false. The default value is true for new accelerators.  If the value is set to true, the client's IP address is preserved in the X-Forwarded-For request header as traffic travels to applications on the Application Load Balancer endpoint fronted by the accelerator. For more information, see  Viewing Client IP Addresses in AWS Global Accelerator in the AWS Global Accelerator Developer Guide.
+    * Indicates whether client IP address preservation is enabled for an Application Load Balancer endpoint. The value is true or false. The default value is true for new accelerators.  If the value is set to true, the client's IP address is preserved in the X-Forwarded-For request header as traffic travels to applications on the Application Load Balancer endpoint fronted by the accelerator. For more information, see  Preserve Client IP Addresses in AWS Global Accelerator in the AWS Global Accelerator Developer Guide.
     */
   var ClientIPPreservationEnabled: js.UndefOr[GenericBoolean] = js.native
   /**
@@ -22,53 +22,16 @@ trait EndpointConfiguration extends js.Object {
 
 object EndpointConfiguration {
   @scala.inline
-  def apply(): EndpointConfiguration = {
+  def apply(
+    ClientIPPreservationEnabled: js.UndefOr[GenericBoolean] = js.undefined,
+    EndpointId: GenericString = null,
+    Weight: js.UndefOr[EndpointWeight] = js.undefined
+  ): EndpointConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(ClientIPPreservationEnabled)) __obj.updateDynamic("ClientIPPreservationEnabled")(ClientIPPreservationEnabled.get.asInstanceOf[js.Any])
+    if (EndpointId != null) __obj.updateDynamic("EndpointId")(EndpointId.asInstanceOf[js.Any])
+    if (!js.isUndefined(Weight)) __obj.updateDynamic("Weight")(Weight.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointConfiguration]
   }
-  @scala.inline
-  implicit class EndpointConfigurationOps[Self <: EndpointConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClientIPPreservationEnabled(value: GenericBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIPPreservationEnabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientIPPreservationEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIPPreservationEnabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEndpointId(value: GenericString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEndpointId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWeight(value: EndpointWeight): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

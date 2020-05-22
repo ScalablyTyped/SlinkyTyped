@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TabRemoveInfo extends js.Object {
   /** True when the tab is being closed because its window is being closed. */
-  var isWindowClosing: Boolean = js.native
+  var isWindowClosing: Boolean
   /**
     * The window whose tab is closed.
     * @since Chrome 25.
     */
-  var windowId: Double = js.native
+  var windowId: Double
 }
 
 object TabRemoveInfo {
@@ -21,25 +20,5 @@ object TabRemoveInfo {
     val __obj = js.Dynamic.literal(isWindowClosing = isWindowClosing.asInstanceOf[js.Any], windowId = windowId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabRemoveInfo]
   }
-  @scala.inline
-  implicit class TabRemoveInfoOps[Self <: TabRemoveInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsWindowClosing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isWindowClosing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWindowId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

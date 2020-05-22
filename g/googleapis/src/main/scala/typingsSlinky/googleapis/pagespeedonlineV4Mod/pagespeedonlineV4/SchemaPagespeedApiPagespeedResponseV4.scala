@@ -1,11 +1,11 @@
 package typingsSlinky.googleapis.pagespeedonlineV4Mod.pagespeedonlineV4
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleapis.AnonCms
-import typingsSlinky.googleapis.AnonInitialurl
-import typingsSlinky.googleapis.AnonLocaleRuleResults
-import typingsSlinky.googleapis.AnonMajor
-import typingsSlinky.googleapis.AnonPass
+import typingsSlinky.googleapis.anon.Cms
+import typingsSlinky.googleapis.anon.Initialurl
+import typingsSlinky.googleapis.anon.LocaleRuleResults
+import typingsSlinky.googleapis.anon.Major
+import typingsSlinky.googleapis.anon.Pass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait SchemaPagespeedApiPagespeedResponseV4 extends js.Object {
     * Localized PageSpeed results. Contains a ruleResults entry for each
     * PageSpeed rule instantiated and run by the server.
     */
-  var formattedResults: js.UndefOr[AnonLocaleRuleResults] = js.native
+  var formattedResults: js.UndefOr[LocaleRuleResults] = js.native
   /**
     * Canonicalized and final URL for the document, after following page
     * redirects (if any).
@@ -38,12 +38,12 @@ trait SchemaPagespeedApiPagespeedResponseV4 extends js.Object {
   /**
     * Metrics of end users&#39; page loading experience.
     */
-  var loadingExperience: js.UndefOr[AnonInitialurl] = js.native
+  var loadingExperience: js.UndefOr[Initialurl] = js.native
   /**
     * Summary statistics for the page, such as number of JavaScript bytes,
     * number of HTML bytes, etc.
     */
-  var pageStats: js.UndefOr[AnonCms] = js.native
+  var pageStats: js.UndefOr[Cms] = js.native
   /**
     * Response code for the document. 200 indicates a normal page load. 4xx/5xx
     * indicates an error.
@@ -52,7 +52,7 @@ trait SchemaPagespeedApiPagespeedResponseV4 extends js.Object {
   /**
     * A map with one entry for each rule group in these results.
     */
-  var ruleGroups: js.UndefOr[StringDictionary[AnonPass]] = js.native
+  var ruleGroups: js.UndefOr[StringDictionary[Pass]] = js.native
   /**
     * Base64-encoded screenshot of the page that was analyzed.
     */
@@ -69,178 +69,41 @@ trait SchemaPagespeedApiPagespeedResponseV4 extends js.Object {
   /**
     * The version of PageSpeed used to generate these results.
     */
-  var version: js.UndefOr[AnonMajor] = js.native
+  var version: js.UndefOr[Major] = js.native
 }
 
 object SchemaPagespeedApiPagespeedResponseV4 {
   @scala.inline
-  def apply(): SchemaPagespeedApiPagespeedResponseV4 = {
+  def apply(
+    captchaResult: String = null,
+    formattedResults: LocaleRuleResults = null,
+    id: String = null,
+    invalidRules: js.Array[String] = null,
+    kind: String = null,
+    loadingExperience: Initialurl = null,
+    pageStats: Cms = null,
+    responseCode: js.UndefOr[Double] = js.undefined,
+    ruleGroups: StringDictionary[Pass] = null,
+    screenshot: SchemaPagespeedApiImageV4 = null,
+    snapshots: js.Array[SchemaPagespeedApiImageV4] = null,
+    title: String = null,
+    version: Major = null
+  ): SchemaPagespeedApiPagespeedResponseV4 = {
     val __obj = js.Dynamic.literal()
+    if (captchaResult != null) __obj.updateDynamic("captchaResult")(captchaResult.asInstanceOf[js.Any])
+    if (formattedResults != null) __obj.updateDynamic("formattedResults")(formattedResults.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (invalidRules != null) __obj.updateDynamic("invalidRules")(invalidRules.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (loadingExperience != null) __obj.updateDynamic("loadingExperience")(loadingExperience.asInstanceOf[js.Any])
+    if (pageStats != null) __obj.updateDynamic("pageStats")(pageStats.asInstanceOf[js.Any])
+    if (!js.isUndefined(responseCode)) __obj.updateDynamic("responseCode")(responseCode.get.asInstanceOf[js.Any])
+    if (ruleGroups != null) __obj.updateDynamic("ruleGroups")(ruleGroups.asInstanceOf[js.Any])
+    if (screenshot != null) __obj.updateDynamic("screenshot")(screenshot.asInstanceOf[js.Any])
+    if (snapshots != null) __obj.updateDynamic("snapshots")(snapshots.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
+    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPagespeedApiPagespeedResponseV4]
   }
-  @scala.inline
-  implicit class SchemaPagespeedApiPagespeedResponseV4Ops[Self <: SchemaPagespeedApiPagespeedResponseV4] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaptchaResult(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaptchaResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("captchaResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormattedResults(value: AnonLocaleRuleResults): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormattedResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInvalidRules(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidRules")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInvalidRules: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidRules")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadingExperience(value: AnonInitialurl): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingExperience")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadingExperience: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingExperience")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPageStats(value: AnonCms): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageStats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPageStats: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pageStats")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseCode(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleGroups(value: StringDictionary[AnonPass]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleGroups")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleGroups: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleGroups")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScreenshot(value: SchemaPagespeedApiImageV4): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScreenshot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshot")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSnapshots(value: js.Array[SchemaPagespeedApiImageV4]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSnapshots: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshots")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: AnonMajor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

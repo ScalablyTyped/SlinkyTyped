@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ServerUnaryCall[RequestType, ResponseType] extends js.Object {
   var cancelled: Boolean = js.native
+  val metadata: Metadata = js.native
   var request: RequestType | Null = js.native
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native

@@ -22,47 +22,15 @@ trait NotifyEmailType extends js.Object {
 
 object NotifyEmailType {
   @scala.inline
-  def apply(Subject: EmailNotificationSubjectType): NotifyEmailType = {
+  def apply(
+    Subject: EmailNotificationSubjectType,
+    HtmlBody: EmailNotificationBodyType = null,
+    TextBody: EmailNotificationBodyType = null
+  ): NotifyEmailType = {
     val __obj = js.Dynamic.literal(Subject = Subject.asInstanceOf[js.Any])
+    if (HtmlBody != null) __obj.updateDynamic("HtmlBody")(HtmlBody.asInstanceOf[js.Any])
+    if (TextBody != null) __obj.updateDynamic("TextBody")(TextBody.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotifyEmailType]
   }
-  @scala.inline
-  implicit class NotifyEmailTypeOps[Self <: NotifyEmailType] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSubject(value: EmailNotificationSubjectType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHtmlBody(value: EmailNotificationBodyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHtmlBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlBody")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextBody(value: EmailNotificationBodyType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTextBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextBody")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

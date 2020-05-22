@@ -4,25 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TextDocumentItem extends js.Object {
   /**
     * The text document's language identifier
     */
-  var languageId: String = js.native
+  var languageId: String
   /**
     * The content of the opened text document.
     */
-  var text: String = js.native
+  var text: String
   /**
     * The text document's uri.
     */
-  var uri: DocumentUri = js.native
+  var uri: DocumentUri
   /**
     * The version number of this document (it will increase after each
     * change, including undo/redo).
     */
-  var version: Double = js.native
+  var version: Double
 }
 
 @JSImport("vscode-languageserver-types", "TextDocumentItem")

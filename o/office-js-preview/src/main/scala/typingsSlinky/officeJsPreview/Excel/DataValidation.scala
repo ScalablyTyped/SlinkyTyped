@@ -41,7 +41,7 @@ trait DataValidation extends ClientObject {
   var errorAlert: DataValidationErrorAlert = js.native
   /**
     *
-    * Ignore blanks: no data validation will be performed on blank cells, it defaults to true.
+    * Specifies if data validation will be performed on blank cells, it defaults to true.
     *
     * [Api set: ExcelApi 1.8]
     */

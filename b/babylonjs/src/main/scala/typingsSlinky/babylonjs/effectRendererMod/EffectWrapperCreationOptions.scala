@@ -8,123 +8,55 @@ import scala.scalajs.js.annotation._
 /**
   * Options to create an EffectWrapper
   */
-@js.native
 trait EffectWrapperCreationOptions extends js.Object {
   /**
     * Attributes to use in the shader
     */
-  var attributeNames: js.UndefOr[js.Array[String]] = js.native
+  var attributeNames: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Engine to use to create the effect
     */
-  var engine: ThinEngine = js.native
+  var engine: ThinEngine
   /**
     * Fragment shader for the effect
     */
-  var fragmentShader: String = js.native
+  var fragmentShader: String
   /**
     * The friendly name of the effect displayed in Spector.
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     * Texture sampler names to use in the shader
     */
-  var samplerNames: js.UndefOr[js.Array[String]] = js.native
+  var samplerNames: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Uniforms to use in the shader
     */
-  var uniformNames: js.UndefOr[js.Array[String]] = js.native
+  var uniformNames: js.UndefOr[js.Array[String]] = js.undefined
   /**
     * Vertex shader for the effect
     */
-  var vertexShader: js.UndefOr[String] = js.native
+  var vertexShader: js.UndefOr[String] = js.undefined
 }
 
 object EffectWrapperCreationOptions {
   @scala.inline
-  def apply(engine: ThinEngine, fragmentShader: String): EffectWrapperCreationOptions = {
+  def apply(
+    engine: ThinEngine,
+    fragmentShader: String,
+    attributeNames: js.Array[String] = null,
+    name: String = null,
+    samplerNames: js.Array[String] = null,
+    uniformNames: js.Array[String] = null,
+    vertexShader: String = null
+  ): EffectWrapperCreationOptions = {
     val __obj = js.Dynamic.literal(engine = engine.asInstanceOf[js.Any], fragmentShader = fragmentShader.asInstanceOf[js.Any])
+    if (attributeNames != null) __obj.updateDynamic("attributeNames")(attributeNames.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (samplerNames != null) __obj.updateDynamic("samplerNames")(samplerNames.asInstanceOf[js.Any])
+    if (uniformNames != null) __obj.updateDynamic("uniformNames")(uniformNames.asInstanceOf[js.Any])
+    if (vertexShader != null) __obj.updateDynamic("vertexShader")(vertexShader.asInstanceOf[js.Any])
     __obj.asInstanceOf[EffectWrapperCreationOptions]
   }
-  @scala.inline
-  implicit class EffectWrapperCreationOptionsOps[Self <: EffectWrapperCreationOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEngine(value: ThinEngine): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFragmentShader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fragmentShader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAttributeNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSamplerNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplerNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSamplerNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("samplerNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUniformNames(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniformNames")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUniformNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uniformNames")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVertexShader(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexShader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVertexShader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexShader")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

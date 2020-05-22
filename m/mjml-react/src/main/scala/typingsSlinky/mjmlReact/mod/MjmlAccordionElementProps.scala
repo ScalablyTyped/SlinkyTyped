@@ -7,153 +7,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait MjmlAccordionElementProps extends js.Object {
-  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
-  var fontFamily: js.UndefOr[String] = js.native
-  var iconAlign: js.UndefOr[String] = js.native
-  var iconHeight: js.UndefOr[String] = js.native
-  var iconPosition: js.UndefOr[left | right] = js.native
-  var iconUnwrappedAlt: js.UndefOr[String] = js.native
-  var iconUnwrappedUrl: js.UndefOr[String] = js.native
-  var iconWidth: js.UndefOr[String] = js.native
-  var iconWrappedAlt: js.UndefOr[String] = js.native
-  var iconWrappedUrl: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.undefined
+  var fontFamily: js.UndefOr[String] = js.undefined
+  var iconAlign: js.UndefOr[String] = js.undefined
+  var iconHeight: js.UndefOr[String] = js.undefined
+  var iconPosition: js.UndefOr[left | right] = js.undefined
+  var iconUnwrappedAlt: js.UndefOr[String] = js.undefined
+  var iconUnwrappedUrl: js.UndefOr[String] = js.undefined
+  var iconWidth: js.UndefOr[String] = js.undefined
+  var iconWrappedAlt: js.UndefOr[String] = js.undefined
+  var iconWrappedUrl: js.UndefOr[String] = js.undefined
 }
 
 object MjmlAccordionElementProps {
   @scala.inline
-  def apply(): MjmlAccordionElementProps = {
+  def apply(
+    backgroundColor: BackgroundColorProperty = null,
+    fontFamily: String = null,
+    iconAlign: String = null,
+    iconHeight: String = null,
+    iconPosition: left | right = null,
+    iconUnwrappedAlt: String = null,
+    iconUnwrappedUrl: String = null,
+    iconWidth: String = null,
+    iconWrappedAlt: String = null,
+    iconWrappedUrl: String = null
+  ): MjmlAccordionElementProps = {
     val __obj = js.Dynamic.literal()
+    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (iconAlign != null) __obj.updateDynamic("iconAlign")(iconAlign.asInstanceOf[js.Any])
+    if (iconHeight != null) __obj.updateDynamic("iconHeight")(iconHeight.asInstanceOf[js.Any])
+    if (iconPosition != null) __obj.updateDynamic("iconPosition")(iconPosition.asInstanceOf[js.Any])
+    if (iconUnwrappedAlt != null) __obj.updateDynamic("iconUnwrappedAlt")(iconUnwrappedAlt.asInstanceOf[js.Any])
+    if (iconUnwrappedUrl != null) __obj.updateDynamic("iconUnwrappedUrl")(iconUnwrappedUrl.asInstanceOf[js.Any])
+    if (iconWidth != null) __obj.updateDynamic("iconWidth")(iconWidth.asInstanceOf[js.Any])
+    if (iconWrappedAlt != null) __obj.updateDynamic("iconWrappedAlt")(iconWrappedAlt.asInstanceOf[js.Any])
+    if (iconWrappedUrl != null) __obj.updateDynamic("iconWrappedUrl")(iconWrappedUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[MjmlAccordionElementProps]
   }
-  @scala.inline
-  implicit class MjmlAccordionElementPropsOps[Self <: MjmlAccordionElementProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBackgroundColor(value: BackgroundColorProperty): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackgroundColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFontFamily(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontFamily: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconAlign(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconHeight(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconPosition(value: left | right): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconPosition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconPosition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconUnwrappedAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUnwrappedAlt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconUnwrappedAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUnwrappedAlt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconUnwrappedUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUnwrappedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconUnwrappedUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUnwrappedUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconWidth(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconWrappedAlt(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWrappedAlt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconWrappedAlt: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWrappedAlt")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIconWrappedUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWrappedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIconWrappedUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iconWrappedUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbCore
 
-import typingsSlinky.pouchdbCore.PouchDB.Core.AttachmentData
+import typingsSlinky.pouchdbCore.PouchDB.Core._AttachmentData
 import typingsSlinky.pouchdbCore.anon.Data
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Buffer
   extends Uint8Array
-     with AttachmentData {
+     with _AttachmentData {
   def compare(otherBuffer: Buffer): Double = js.native
   def compare(otherBuffer: Buffer, targetStart: Double): Double = js.native
   def compare(otherBuffer: Buffer, targetStart: Double, targetEnd: Double): Double = js.native

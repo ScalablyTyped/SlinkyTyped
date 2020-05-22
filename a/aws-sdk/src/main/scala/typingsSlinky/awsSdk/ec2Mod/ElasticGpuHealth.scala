@@ -14,29 +14,10 @@ trait ElasticGpuHealth extends js.Object {
 
 object ElasticGpuHealth {
   @scala.inline
-  def apply(): ElasticGpuHealth = {
+  def apply(Status: ElasticGpuStatus = null): ElasticGpuHealth = {
     val __obj = js.Dynamic.literal()
+    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticGpuHealth]
   }
-  @scala.inline
-  implicit class ElasticGpuHealthOps[Self <: ElasticGpuHealth] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: ElasticGpuStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

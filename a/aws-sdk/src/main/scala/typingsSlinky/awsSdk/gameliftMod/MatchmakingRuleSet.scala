@@ -26,59 +26,17 @@ trait MatchmakingRuleSet extends js.Object {
 
 object MatchmakingRuleSet {
   @scala.inline
-  def apply(RuleSetBody: RuleSetBody): MatchmakingRuleSet = {
+  def apply(
+    RuleSetBody: RuleSetBody,
+    CreationTime: js.Date = null,
+    RuleSetArn: MatchmakingRuleSetArn = null,
+    RuleSetName: MatchmakingIdStringModel = null
+  ): MatchmakingRuleSet = {
     val __obj = js.Dynamic.literal(RuleSetBody = RuleSetBody.asInstanceOf[js.Any])
+    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
+    if (RuleSetArn != null) __obj.updateDynamic("RuleSetArn")(RuleSetArn.asInstanceOf[js.Any])
+    if (RuleSetName != null) __obj.updateDynamic("RuleSetName")(RuleSetName.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatchmakingRuleSet]
   }
-  @scala.inline
-  implicit class MatchmakingRuleSetOps[Self <: MatchmakingRuleSet] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRuleSetBody(value: RuleSetBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetBody")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreationTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleSetArn(value: MatchmakingRuleSetArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleSetArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRuleSetName(value: MatchmakingIdStringModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRuleSetName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleSetName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

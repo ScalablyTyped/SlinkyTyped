@@ -19,41 +19,14 @@ trait FunctionEventInvokeConfigDestinationConfig extends js.Object {
 
 object FunctionEventInvokeConfigDestinationConfig {
   @scala.inline
-  def apply(): FunctionEventInvokeConfigDestinationConfig = {
+  def apply(
+    onFailure: Input[FunctionEventInvokeConfigDestinationConfigOnFailure] = null,
+    onSuccess: Input[FunctionEventInvokeConfigDestinationConfigOnSuccess] = null
+  ): FunctionEventInvokeConfigDestinationConfig = {
     val __obj = js.Dynamic.literal()
+    if (onFailure != null) __obj.updateDynamic("onFailure")(onFailure.asInstanceOf[js.Any])
+    if (onSuccess != null) __obj.updateDynamic("onSuccess")(onSuccess.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionEventInvokeConfigDestinationConfig]
   }
-  @scala.inline
-  implicit class FunctionEventInvokeConfigDestinationConfigOps[Self <: FunctionEventInvokeConfigDestinationConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withOnFailure(value: Input[FunctionEventInvokeConfigDestinationConfigOnFailure]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnFailure: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSuccess(value: Input[FunctionEventInvokeConfigDestinationConfigOnSuccess]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

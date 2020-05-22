@@ -2,7 +2,7 @@ package typingsSlinky.blueprintjsTable.headerMod
 
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.blueprintjsTable.draggableMod.IClientCoordinates
+import typingsSlinky.blueprintjsTable.dragTypesMod.IClientCoordinates
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.esmRegionsMod.RegionCardinality
 import typingsSlinky.blueprintjsTable.resizeHandleMod.Orientation

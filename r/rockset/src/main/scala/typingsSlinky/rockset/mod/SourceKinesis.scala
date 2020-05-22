@@ -4,45 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceKinesis extends js.Object {
   // AWS region name of Kinesis stream, by default us-west-2 is used
-  var aws_region: js.UndefOr[String] = js.native
+  var aws_region: js.UndefOr[String] = js.undefined
   // name of kinesis stream
-  var stream_name: String = js.native
+  var stream_name: String
 }
 
 object SourceKinesis {
   @scala.inline
-  def apply(stream_name: String): SourceKinesis = {
+  def apply(stream_name: String, aws_region: String = null): SourceKinesis = {
     val __obj = js.Dynamic.literal(stream_name = stream_name.asInstanceOf[js.Any])
+    if (aws_region != null) __obj.updateDynamic("aws_region")(aws_region.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceKinesis]
   }
-  @scala.inline
-  implicit class SourceKinesisOps[Self <: SourceKinesis] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStream_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAws_region(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aws_region")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAws_region: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aws_region")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

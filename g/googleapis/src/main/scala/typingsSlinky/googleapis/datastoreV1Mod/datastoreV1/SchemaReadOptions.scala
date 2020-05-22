@@ -23,41 +23,11 @@ trait SchemaReadOptions extends js.Object {
 
 object SchemaReadOptions {
   @scala.inline
-  def apply(): SchemaReadOptions = {
+  def apply(readConsistency: String = null, transaction: String = null): SchemaReadOptions = {
     val __obj = js.Dynamic.literal()
+    if (readConsistency != null) __obj.updateDynamic("readConsistency")(readConsistency.asInstanceOf[js.Any])
+    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReadOptions]
   }
-  @scala.inline
-  implicit class SchemaReadOptionsOps[Self <: SchemaReadOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withReadConsistency(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readConsistency")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadConsistency: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readConsistency")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransaction(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransaction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

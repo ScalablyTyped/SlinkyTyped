@@ -5,20 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RouterState_ extends js.Object {
-  var canEnter: js.Function0[Boolean | js.Promise[Boolean]] = js.native
-  var canExit: js.Function0[Boolean | js.Promise[Boolean]] = js.native
-  var enter: js.Function0[js.Promise[Unit] | Unit] = js.native
-  var exit: js.Function0[js.Promise[Unit] | Unit] = js.native
-  val id: String = js.native
-  var label: js.UndefOr[String] = js.native
-  var parameters: js.Object = js.native
-  var title: String | js.Function0[js.UndefOr[String]] = js.native
-  var value: js.Any = js.native
+  var canEnter: js.Function0[Boolean | js.Promise[Boolean]]
+  var canExit: js.Function0[Boolean | js.Promise[Boolean]]
+  var enter: js.Function0[js.Promise[Unit] | Unit]
+  var exit: js.Function0[js.Promise[Unit] | Unit]
+  val id: String
+  var label: js.UndefOr[String] = js.undefined
+  var parameters: js.Object
+  var title: String | js.Function0[js.UndefOr[String]]
+  var value: js.Any
   // constructor(id: string, options?: RouterState.ConfigOptions, router?: Router);
-  def go(): js.Promise[HasChanged] = js.native
-  def isCurrent(): Boolean = js.native
+  def go(): js.Promise[HasChanged]
+  def isCurrent(): Boolean
 }
 
 object RouterState_ {
@@ -33,96 +32,12 @@ object RouterState_ {
     isCurrent: () => Boolean,
     parameters: js.Object,
     title: String | js.Function0[js.UndefOr[String]],
-    value: js.Any
+    value: js.Any,
+    label: String = null
   ): RouterState_ = {
     val __obj = js.Dynamic.literal(canEnter = js.Any.fromFunction0(canEnter), canExit = js.Any.fromFunction0(canExit), enter = js.Any.fromFunction0(enter), exit = js.Any.fromFunction0(exit), go = js.Any.fromFunction0(go), id = id.asInstanceOf[js.Any], isCurrent = js.Any.fromFunction0(isCurrent), parameters = parameters.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouterState_]
   }
-  @scala.inline
-  implicit class RouterState_Ops[Self <: RouterState_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanEnter(value: () => Boolean | js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canEnter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withCanExit(value: () => Boolean | js.Promise[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canExit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withEnter(value: () => js.Promise[Unit] | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExit(value: () => js.Promise[Unit] | Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGo(value: () => js.Promise[HasChanged]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("go")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsCurrent(value: () => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCurrent")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParameters(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTitleFunction0(value: () => js.UndefOr[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withTitle(value: String | js.Function0[js.UndefOr[String]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withValue(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

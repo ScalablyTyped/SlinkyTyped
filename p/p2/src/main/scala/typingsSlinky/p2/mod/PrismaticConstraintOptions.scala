@@ -4,114 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PrismaticConstraintOptions extends ConstraintOptions {
-  var disableRotationalLock: js.UndefOr[Boolean] = js.native
-  var localAnchorA: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var localAnchorB: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var localAxisA: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var lowerLimit: js.UndefOr[Double] = js.native
-  var maxForce: js.UndefOr[Double] = js.native
-  var upperLimit: js.UndefOr[Double] = js.native
+  var disableRotationalLock: js.UndefOr[Boolean] = js.undefined
+  var localAnchorA: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var localAnchorB: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var localAxisA: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var lowerLimit: js.UndefOr[Double] = js.undefined
+  var maxForce: js.UndefOr[Double] = js.undefined
+  var upperLimit: js.UndefOr[Double] = js.undefined
 }
 
 object PrismaticConstraintOptions {
   @scala.inline
-  def apply(): PrismaticConstraintOptions = {
+  def apply(
+    collideConnected: js.UndefOr[Boolean] = js.undefined,
+    disableRotationalLock: js.UndefOr[Boolean] = js.undefined,
+    localAnchorA: js.Tuple2[Double, Double] = null,
+    localAnchorB: js.Tuple2[Double, Double] = null,
+    localAxisA: js.Tuple2[Double, Double] = null,
+    lowerLimit: js.UndefOr[Double] = js.undefined,
+    maxForce: js.UndefOr[Double] = js.undefined,
+    upperLimit: js.UndefOr[Double] = js.undefined,
+    wakeUpBodies: js.UndefOr[Boolean] = js.undefined
+  ): PrismaticConstraintOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(collideConnected)) __obj.updateDynamic("collideConnected")(collideConnected.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableRotationalLock)) __obj.updateDynamic("disableRotationalLock")(disableRotationalLock.get.asInstanceOf[js.Any])
+    if (localAnchorA != null) __obj.updateDynamic("localAnchorA")(localAnchorA.asInstanceOf[js.Any])
+    if (localAnchorB != null) __obj.updateDynamic("localAnchorB")(localAnchorB.asInstanceOf[js.Any])
+    if (localAxisA != null) __obj.updateDynamic("localAxisA")(localAxisA.asInstanceOf[js.Any])
+    if (!js.isUndefined(lowerLimit)) __obj.updateDynamic("lowerLimit")(lowerLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxForce)) __obj.updateDynamic("maxForce")(maxForce.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(upperLimit)) __obj.updateDynamic("upperLimit")(upperLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(wakeUpBodies)) __obj.updateDynamic("wakeUpBodies")(wakeUpBodies.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrismaticConstraintOptions]
   }
-  @scala.inline
-  implicit class PrismaticConstraintOptionsOps[Self <: PrismaticConstraintOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDisableRotationalLock(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRotationalLock")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableRotationalLock: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disableRotationalLock")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalAnchorA(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalAnchorA: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorA")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalAnchorB(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalAnchorB: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorB")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalAxisA(value: js.Tuple2[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAxisA")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalAxisA: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("localAxisA")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLowerLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLowerLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxForce(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxForce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxForce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpperLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpperLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upperLimit")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

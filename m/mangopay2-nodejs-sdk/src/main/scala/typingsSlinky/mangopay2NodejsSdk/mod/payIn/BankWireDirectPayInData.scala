@@ -11,30 +11,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BankWireDirectPayInData
   extends BasePayInData
      with PayInData {
   /**
     * Bank account details
     */
-  var BankAccount: BankAccountData = js.native
+  var BankAccount: BankAccountData
   /**
     * The declared debited funds
     */
-  var DeclaredDebitedFunds: MoneyData = js.native
+  var DeclaredDebitedFunds: MoneyData
   /**
     * The declared fees
     */
-  var DeclaredFees: MoneyData = js.native
+  var DeclaredFees: MoneyData
   @JSName("ExecutionType")
-  var ExecutionType_BankWireDirectPayInData: DIRECT = js.native
+  var ExecutionType_BankWireDirectPayInData: DIRECT
   @JSName("PaymentType")
-  var PaymentType_BankWireDirectPayInData: BANK_WIRE = js.native
+  var PaymentType_BankWireDirectPayInData: BANK_WIRE
   /**
     * Wire reference
     */
-  var WireReference: String = js.native
+  var WireReference: String
 }
 
 object BankWireDirectPayInData {
@@ -66,49 +65,5 @@ object BankWireDirectPayInData {
     val __obj = js.Dynamic.literal(AuthorId = AuthorId.asInstanceOf[js.Any], BankAccount = BankAccount.asInstanceOf[js.Any], CreationDate = CreationDate.asInstanceOf[js.Any], CreditedFunds = CreditedFunds.asInstanceOf[js.Any], CreditedUserId = CreditedUserId.asInstanceOf[js.Any], CreditedWalletId = CreditedWalletId.asInstanceOf[js.Any], DebitedFunds = DebitedFunds.asInstanceOf[js.Any], DebitedWalletId = DebitedWalletId.asInstanceOf[js.Any], DeclaredDebitedFunds = DeclaredDebitedFunds.asInstanceOf[js.Any], DeclaredFees = DeclaredFees.asInstanceOf[js.Any], ExecutionDate = ExecutionDate.asInstanceOf[js.Any], ExecutionType = ExecutionType.asInstanceOf[js.Any], Fees = Fees.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Nature = Nature.asInstanceOf[js.Any], PaymentType = PaymentType.asInstanceOf[js.Any], ResultCode = ResultCode.asInstanceOf[js.Any], ResultMessage = ResultMessage.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any], Tag = Tag.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any], WireReference = WireReference.asInstanceOf[js.Any])
     __obj.asInstanceOf[BankWireDirectPayInData]
   }
-  @scala.inline
-  implicit class BankWireDirectPayInDataOps[Self <: BankWireDirectPayInData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBankAccount(value: BankAccountData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("BankAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeclaredDebitedFunds(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclaredDebitedFunds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDeclaredFees(value: MoneyData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclaredFees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExecutionType(value: DIRECT): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPaymentType(value: BANK_WIRE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PaymentType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWireReference(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WireReference")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

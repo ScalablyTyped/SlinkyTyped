@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HoldRestartJobRequest extends js.Object {
-  var `operation-attributes-tag`: Jobholduntil = js.native
+  var `operation-attributes-tag`: Jobholduntil
 }
 
 object HoldRestartJobRequest {
@@ -17,19 +16,5 @@ object HoldRestartJobRequest {
     __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HoldRestartJobRequest]
   }
-  @scala.inline
-  implicit class HoldRestartJobRequestOps[Self <: HoldRestartJobRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withOperation-attributes-tag`(value: Jobholduntil): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

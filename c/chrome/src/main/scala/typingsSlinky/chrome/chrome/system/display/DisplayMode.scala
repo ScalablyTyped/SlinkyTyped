@@ -4,32 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DisplayMode extends js.Object {
   /** The display mode device scale factor. */
-  var deviceScaleFactor: Double = js.native
+  var deviceScaleFactor: Double
   /** The display mode height in device independent (user visible) pixels. */
-  var height: Double = js.native
+  var height: Double
   /** The display mode height in native pixels. */
-  var heightInNativePixels: Double = js.native
+  var heightInNativePixels: Double
   /** True if the mode is the display's native mode. */
-  var isNative: Boolean = js.native
+  var isNative: Boolean
   /** True if the display mode is currently selected. */
-  var isSelected: Boolean = js.native
+  var isSelected: Boolean
   /**
     * The display mode refresh rate in hertz.
     * @since Chrome 67
     */
-  var refreshRate: Double = js.native
+  var refreshRate: Double
   /**
     * @deprecated Deprecated since Chrome 70. Use `displayZoomFactor`
     * @description The display mode UI scale factor.
     **/
-  var uiScale: Double = js.native
+  var uiScale: Double
   /** The display mode width in device independent (user visible) pixels. */
-  var width: Double = js.native
+  var width: Double
   /** The display mode width in native pixels. */
-  var widthInNativePixels: Double = js.native
+  var widthInNativePixels: Double
 }
 
 object DisplayMode {
@@ -48,67 +47,5 @@ object DisplayMode {
     val __obj = js.Dynamic.literal(deviceScaleFactor = deviceScaleFactor.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], heightInNativePixels = heightInNativePixels.asInstanceOf[js.Any], isNative = isNative.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], refreshRate = refreshRate.asInstanceOf[js.Any], uiScale = uiScale.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], widthInNativePixels = widthInNativePixels.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayMode]
   }
-  @scala.inline
-  implicit class DisplayModeOps[Self <: DisplayMode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDeviceScaleFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceScaleFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHeightInNativePixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("heightInNativePixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsNative(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNative")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsSelected(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRefreshRate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshRate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUiScale(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("uiScale")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWidthInNativePixels(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("widthInNativePixels")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

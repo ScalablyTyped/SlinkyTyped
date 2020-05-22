@@ -4,71 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Identity extends js.Object {
   /**
     * The principal ID of the resource identity.
     */
-  val principalId: js.UndefOr[String] = js.native
+  val principalId: js.UndefOr[String] = js.undefined
   /**
     * The tenant ID of the resource identity.
     */
-  val tenantId: js.UndefOr[String] = js.native
+  val tenantId: js.UndefOr[String] = js.undefined
   /**
     * The identity type. Possible values include: 'SystemAssigned', 'None'
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.undefined
 }
 
 object Identity {
   @scala.inline
-  def apply(): Identity = {
+  def apply(principalId: String = null, tenantId: String = null, `type`: String = null): Identity = {
     val __obj = js.Dynamic.literal()
+    if (principalId != null) __obj.updateDynamic("principalId")(principalId.asInstanceOf[js.Any])
+    if (tenantId != null) __obj.updateDynamic("tenantId")(tenantId.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Identity]
   }
-  @scala.inline
-  implicit class IdentityOps[Self <: Identity] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrincipalId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrincipalId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("principalId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTenantId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTenantId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tenantId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -25,12 +25,20 @@ class Promise[T, E] () extends js.Object {
 object Promise extends js.Object {
   @js.native
   class CancellationError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     @JSName("name")
     var name_CancellationError: typingsSlinky.workerpool.workerpoolStrings.CancellationError = js.native
   }
   
   @js.native
   class TimeoutError () extends Error {
+    /* CompleteClass */
+    override var message: String = js.native
+    /* CompleteClass */
+    override var name: String = js.native
     @JSName("name")
     var name_TimeoutError: typingsSlinky.workerpool.workerpoolStrings.TimeoutError = js.native
   }

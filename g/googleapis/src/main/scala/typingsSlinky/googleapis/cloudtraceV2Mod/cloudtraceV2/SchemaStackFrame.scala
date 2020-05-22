@@ -46,101 +46,24 @@ trait SchemaStackFrame extends js.Object {
 
 object SchemaStackFrame {
   @scala.inline
-  def apply(): SchemaStackFrame = {
+  def apply(
+    columnNumber: String = null,
+    fileName: SchemaTruncatableString = null,
+    functionName: SchemaTruncatableString = null,
+    lineNumber: String = null,
+    loadModule: SchemaModule = null,
+    originalFunctionName: SchemaTruncatableString = null,
+    sourceVersion: SchemaTruncatableString = null
+  ): SchemaStackFrame = {
     val __obj = js.Dynamic.literal()
+    if (columnNumber != null) __obj.updateDynamic("columnNumber")(columnNumber.asInstanceOf[js.Any])
+    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
+    if (functionName != null) __obj.updateDynamic("functionName")(functionName.asInstanceOf[js.Any])
+    if (lineNumber != null) __obj.updateDynamic("lineNumber")(lineNumber.asInstanceOf[js.Any])
+    if (loadModule != null) __obj.updateDynamic("loadModule")(loadModule.asInstanceOf[js.Any])
+    if (originalFunctionName != null) __obj.updateDynamic("originalFunctionName")(originalFunctionName.asInstanceOf[js.Any])
+    if (sourceVersion != null) __obj.updateDynamic("sourceVersion")(sourceVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStackFrame]
   }
-  @scala.inline
-  implicit class SchemaStackFrameOps[Self <: SchemaStackFrame] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumnNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileName(value: SchemaTruncatableString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFunctionName(value: SchemaTruncatableString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLineNumber(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLineNumber: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lineNumber")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadModule(value: SchemaModule): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModule")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadModule: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModule")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalFunctionName(value: SchemaTruncatableString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFunctionName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalFunctionName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalFunctionName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSourceVersion(value: SchemaTruncatableString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSourceVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

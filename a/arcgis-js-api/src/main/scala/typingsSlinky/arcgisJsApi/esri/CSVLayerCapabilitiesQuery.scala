@@ -6,116 +6,115 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CSVLayerCapabilitiesQuery extends Object {
   /**
     * Indicates if the geometry centroid associated with each polygon feature can be returned. This operation is only supported in ArcGIS Online hosted feature services.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsCentroid: Boolean = js.native
+  var supportsCentroid: Boolean
   /**
     * Indicates if the query operation supports `disjoint` [spatial relationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#spatialRelationship). This is valid only for [hosted feature services](http://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsDisjointSpatialRelationship: Boolean = js.native
+  var supportsDisjointSpatialRelationship: Boolean
   /**
     * Indicates if the layer's query operation supports a buffer distance for input geometries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsDistance: Boolean = js.native
+  var supportsDistance: Boolean
   /**
     * Indicates if the layer supports queries for distinct values based on fields specified in the [outFields](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#outFields).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsDistinct: Boolean = js.native
+  var supportsDistinct: Boolean
   /**
     * Indicates if the layer's query response includes the extent of features.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsExtent: Boolean = js.native
+  var supportsExtent: Boolean
   /**
     * Indicates if the layer's query response contains geometry attributes, including shape area and length attributes. This operation is only supported in ArcGIS Online hosted feature services.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsGeometryProperties: Boolean = js.native
+  var supportsGeometryProperties: Boolean
   /**
     * Indicates if the layer supports the [having](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#having) clause on the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsHavingClause: Boolean = js.native
+  var supportsHavingClause: Boolean
   /**
     * Indicates if the layer supports historic moment query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsHistoricMoment: Boolean = js.native
+  var supportsHistoricMoment: Boolean
   /**
     * Indicates if features returned in the query response can be ordered by one or more fields.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsOrderBy: Boolean = js.native
+  var supportsOrderBy: Boolean
   /**
     * Indicates if the query response supports pagination.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsPagination: Boolean = js.native
+  var supportsPagination: Boolean
   /**
     * Indicates if the layer supports [percentile statisticType](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticType).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsPercentileStatistics: Boolean = js.native
+  var supportsPercentileStatistics: Boolean
   /**
     * Indicates if the query operation supports the projection of geometries onto a virtual grid.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsQuantization: Boolean = js.native
+  var supportsQuantization: Boolean
   /**
     * Indicates if the query operation supports quantization designed to be used in edit mode (highest resolution at the given spatial reference).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsQuantizationEditMode: Boolean = js.native
+  var supportsQuantizationEditMode: Boolean
   /**
     * Indicates if the query response includes the [query geometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FeatureSet.html#queryGeometry).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsQueryGeometry: Boolean = js.native
+  var supportsQueryGeometry: Boolean
   /**
     * Indicates if the number of features returned by the query operation can be controlled.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsResultType: Boolean = js.native
+  var supportsResultType: Boolean
   /**
     * Indicates if the query operation supports SQL expressions.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsSqlExpression: Boolean = js.native
+  var supportsSqlExpression: Boolean
   /**
     * Indicates if the query operation supports using standardized queries. Learn more about [standardized queries here](http://server.arcgis.com/en/server/latest/administer/linux/about-standardized-queries.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsStandardizedQueriesOnly: Boolean = js.native
+  var supportsStandardizedQueriesOnly: Boolean
   /**
     * Indicates if the layer supports field-based statistical functions.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
-  var supportsStatistics: Boolean = js.native
+  var supportsStatistics: Boolean
 }
 
 object CSVLayerCapabilitiesQuery {
@@ -146,121 +145,5 @@ object CSVLayerCapabilitiesQuery {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), supportsCentroid = supportsCentroid.asInstanceOf[js.Any], supportsDisjointSpatialRelationship = supportsDisjointSpatialRelationship.asInstanceOf[js.Any], supportsDistance = supportsDistance.asInstanceOf[js.Any], supportsDistinct = supportsDistinct.asInstanceOf[js.Any], supportsExtent = supportsExtent.asInstanceOf[js.Any], supportsGeometryProperties = supportsGeometryProperties.asInstanceOf[js.Any], supportsHavingClause = supportsHavingClause.asInstanceOf[js.Any], supportsHistoricMoment = supportsHistoricMoment.asInstanceOf[js.Any], supportsOrderBy = supportsOrderBy.asInstanceOf[js.Any], supportsPagination = supportsPagination.asInstanceOf[js.Any], supportsPercentileStatistics = supportsPercentileStatistics.asInstanceOf[js.Any], supportsQuantization = supportsQuantization.asInstanceOf[js.Any], supportsQuantizationEditMode = supportsQuantizationEditMode.asInstanceOf[js.Any], supportsQueryGeometry = supportsQueryGeometry.asInstanceOf[js.Any], supportsResultType = supportsResultType.asInstanceOf[js.Any], supportsSqlExpression = supportsSqlExpression.asInstanceOf[js.Any], supportsStandardizedQueriesOnly = supportsStandardizedQueriesOnly.asInstanceOf[js.Any], supportsStatistics = supportsStatistics.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSVLayerCapabilitiesQuery]
   }
-  @scala.inline
-  implicit class CSVLayerCapabilitiesQueryOps[Self <: CSVLayerCapabilitiesQuery] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportsCentroid(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCentroid")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsDisjointSpatialRelationship(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsDisjointSpatialRelationship")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsDistance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsDistinct(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsDistinct")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsExtent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsExtent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsGeometryProperties(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsGeometryProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsHavingClause(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsHavingClause")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsHistoricMoment(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsHistoricMoment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsOrderBy(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsOrderBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsPagination(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsPagination")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsPercentileStatistics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsPercentileStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsQuantization(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsQuantization")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsQuantizationEditMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsQuantizationEditMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsQueryGeometry(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsQueryGeometry")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsResultType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsResultType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsSqlExpression(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsSqlExpression")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsStandardizedQueriesOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsStandardizedQueriesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSupportsStatistics(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsStatistics")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

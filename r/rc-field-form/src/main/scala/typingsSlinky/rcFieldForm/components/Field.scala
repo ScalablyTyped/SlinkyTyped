@@ -5,30 +5,36 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.fieldMod.FieldProps
 import typingsSlinky.rcFieldForm.fieldMod.ShouldUpdate
-import typingsSlinky.rcFieldForm.fieldMod.default
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
 import typingsSlinky.rcFieldForm.interfaceMod.Rule
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Field {
-  @JSImport("rc-field-form/lib/Field", JSImport.Default)
+  @JSImport("rc-field-form/es/Field", JSImport.Default)
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def dependencies(value: js.Array[NamePath]): this.type = set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def getValueFromEvent(value: /* args */ EventArgs => StoreValue): this.type = set("getValueFromEvent", js.Any.fromFunction1(value))
+    @scala.inline
+    def getValueProps(value: /* value */ StoreValue => js.Object): this.type = set("getValueProps", js.Any.fromFunction1(value))
+    @scala.inline
+    def initialValue(value: js.Any): this.type = set("initialValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def messageVariables(value: Record[String, String]): this.type = set("messageVariables", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline

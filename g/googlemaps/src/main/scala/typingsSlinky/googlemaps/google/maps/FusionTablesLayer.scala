@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+// TODO find source documentation
 @js.native
 trait FusionTablesLayer extends MVCObject {
   def getMap(): Map[Element] = js.native

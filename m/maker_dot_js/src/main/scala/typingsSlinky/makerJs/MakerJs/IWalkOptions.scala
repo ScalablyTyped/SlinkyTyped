@@ -7,62 +7,24 @@ import scala.scalajs.js.annotation._
 /**
   * Options to pass to model.walk().
   */
-@js.native
 trait IWalkOptions extends js.Object {
-  var afterChildWalk: js.UndefOr[IWalkModelCallback] = js.native
-  var beforeChildWalk: js.UndefOr[IWalkModelCancellableCallback] = js.native
-  var onPath: js.UndefOr[IWalkPathCallback] = js.native
+  var afterChildWalk: js.UndefOr[IWalkModelCallback] = js.undefined
+  var beforeChildWalk: js.UndefOr[IWalkModelCancellableCallback] = js.undefined
+  var onPath: js.UndefOr[IWalkPathCallback] = js.undefined
 }
 
 object IWalkOptions {
   @scala.inline
-  def apply(): IWalkOptions = {
+  def apply(
+    afterChildWalk: /* context */ IWalkModel => Unit = null,
+    beforeChildWalk: /* context */ IWalkModel => Boolean = null,
+    onPath: /* context */ IWalkPath => Unit = null
+  ): IWalkOptions = {
     val __obj = js.Dynamic.literal()
+    if (afterChildWalk != null) __obj.updateDynamic("afterChildWalk")(js.Any.fromFunction1(afterChildWalk))
+    if (beforeChildWalk != null) __obj.updateDynamic("beforeChildWalk")(js.Any.fromFunction1(beforeChildWalk))
+    if (onPath != null) __obj.updateDynamic("onPath")(js.Any.fromFunction1(onPath))
     __obj.asInstanceOf[IWalkOptions]
   }
-  @scala.inline
-  implicit class IWalkOptionsOps[Self <: IWalkOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAfterChildWalk(value: /* context */ IWalkModel => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterChildWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAfterChildWalk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("afterChildWalk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBeforeChildWalk(value: /* context */ IWalkModel => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeChildWalk")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutBeforeChildWalk: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeChildWalk")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnPath(value: /* context */ IWalkPath => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPath")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onPath")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

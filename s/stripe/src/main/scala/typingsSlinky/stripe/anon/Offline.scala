@@ -8,103 +8,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Offline extends js.Object {
-  var date: js.UndefOr[Double] = js.native
-  var ip: js.UndefOr[String] = js.native
-  var offline: js.UndefOr[Contactemail] = js.native
-  var online: js.UndefOr[Ip] = js.native
-  var status: accepted | refused = js.native
-  var `type`: online | offline = js.native
-  var user_agent: js.UndefOr[String] = js.native
+  var date: js.UndefOr[Double] = js.undefined
+  var ip: js.UndefOr[String] = js.undefined
+  var offline: js.UndefOr[Contactemail] = js.undefined
+  var online: js.UndefOr[Ip] = js.undefined
+  var status: accepted | refused
+  var `type`: online | offline
+  var user_agent: js.UndefOr[String] = js.undefined
 }
 
 object Offline {
   @scala.inline
-  def apply(status: accepted | refused, `type`: online | offline): Offline = {
+  def apply(
+    status: accepted | refused,
+    `type`: online | offline,
+    date: js.UndefOr[Double] = js.undefined,
+    ip: String = null,
+    offline: Contactemail = null,
+    online: Ip = null,
+    user_agent: String = null
+  ): Offline = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(date)) __obj.updateDynamic("date")(date.get.asInstanceOf[js.Any])
+    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
+    if (offline != null) __obj.updateDynamic("offline")(offline.asInstanceOf[js.Any])
+    if (online != null) __obj.updateDynamic("online")(online.asInstanceOf[js.Any])
+    if (user_agent != null) __obj.updateDynamic("user_agent")(user_agent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Offline]
   }
-  @scala.inline
-  implicit class OfflineOps[Self <: Offline] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: accepted | refused): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: online | offline): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDate(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOffline(value: Contactemail): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOffline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("offline")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnline(value: Ip): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("online")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnline: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("online")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUser_agent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_agent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUser_agent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("user_agent")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,36 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Colors extends js.Object {
-  var colors: js.UndefOr[typingsSlinky.ionicCliFramework.colorsMod.Colors] = js.native
+  var colors: js.UndefOr[typingsSlinky.ionicCliFramework.colorsMod.Colors] = js.undefined
 }
 
 object Colors {
   @scala.inline
-  def apply(): Colors = {
+  def apply(colors: typingsSlinky.ionicCliFramework.colorsMod.Colors = null): Colors = {
     val __obj = js.Dynamic.literal()
+    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
     __obj.asInstanceOf[Colors]
   }
-  @scala.inline
-  implicit class ColorsOps[Self <: Colors] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColors(value: typingsSlinky.ionicCliFramework.colorsMod.Colors): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColors: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

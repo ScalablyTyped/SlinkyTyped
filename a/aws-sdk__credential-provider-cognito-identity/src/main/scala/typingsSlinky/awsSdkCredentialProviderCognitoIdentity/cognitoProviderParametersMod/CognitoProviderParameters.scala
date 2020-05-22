@@ -6,20 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CognitoProviderParameters extends js.Object {
   /**
     * The SDK client with which the credential provider will contact the Amazon
     * Cognito service.
     */
-  var client: CognitoIdentityClient = js.native
+  var client: CognitoIdentityClient
   /**
     * The Amazon Resource Name (ARN) of the role to be assumed when multiple
     * roles were received in the token from the identity provider. For example,
     * a SAML-based identity provider. This parameter is optional for identity
     * providers that do not support role customization.
     */
-  var customRoleArn: js.UndefOr[String] = js.native
+  var customRoleArn: js.UndefOr[String] = js.undefined
   /**
     * A set of key-value pairs that map external identity provider names to
     * login tokens or functions that return promises for login tokens. The
@@ -28,52 +27,16 @@ trait CognitoProviderParameters extends js.Object {
     * Logins should not be specified when trying to get credentials for an
     * unauthenticated identity.
     */
-  var logins: js.UndefOr[Logins] = js.native
+  var logins: js.UndefOr[Logins] = js.undefined
 }
 
 object CognitoProviderParameters {
   @scala.inline
-  def apply(client: CognitoIdentityClient): CognitoProviderParameters = {
+  def apply(client: CognitoIdentityClient, customRoleArn: String = null, logins: Logins = null): CognitoProviderParameters = {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any])
+    if (customRoleArn != null) __obj.updateDynamic("customRoleArn")(customRoleArn.asInstanceOf[js.Any])
+    if (logins != null) __obj.updateDynamic("logins")(logins.asInstanceOf[js.Any])
     __obj.asInstanceOf[CognitoProviderParameters]
   }
-  @scala.inline
-  implicit class CognitoProviderParametersOps[Self <: CognitoProviderParameters] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withClient(value: CognitoIdentityClient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCustomRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogins(value: Logins): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logins")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogins: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logins")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

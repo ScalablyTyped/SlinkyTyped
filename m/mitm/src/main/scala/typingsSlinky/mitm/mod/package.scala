@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Callback = typingsSlinky.mitm.mod.SocketConnectCallback | typingsSlinky.mitm.mod.SocketConnectionCallback | typingsSlinky.mitm.mod.HttpCallback
   type HttpCallback = js.Function2[
     /* request */ typingsSlinky.node.httpMod.IncomingMessage, 
     /* response */ typingsSlinky.node.httpMod.ServerResponse, 

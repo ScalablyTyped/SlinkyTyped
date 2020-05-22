@@ -485,11 +485,11 @@ trait MessageCompose extends Item {
     *                 the failure.
     */
   def getAttachmentsAsync(): Unit = js.native
-  def getAttachmentsAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetails]], Unit]): Unit = js.native
+  def getAttachmentsAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]): Unit = js.native
   def getAttachmentsAsync(options: AsyncContextOptions): Unit = js.native
   def getAttachmentsAsync(
     options: AsyncContextOptions,
-    callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetails]], Unit]
+    callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]
   ): Unit = js.native
   /**
     * Asynchronously gets the ID of a saved item.

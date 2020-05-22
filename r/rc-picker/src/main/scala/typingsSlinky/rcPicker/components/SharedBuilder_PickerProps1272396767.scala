@@ -159,6 +159,8 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   @scala.inline
   def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
   @scala.inline
+  def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+  @scala.inline
   def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -192,6 +194,8 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
   @scala.inline
   def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+  @scala.inline
+  def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
   @scala.inline
   def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
   @scala.inline

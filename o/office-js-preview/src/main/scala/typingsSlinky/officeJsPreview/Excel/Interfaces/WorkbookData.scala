@@ -5,29 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `workbook.toJSON()`. */
-@js.native
 trait WorkbookData extends js.Object {
   /**
     *
-    * Specifies whether or not the workbook is in autosave mode. Read-Only.
+    * Specifies if the workbook is in autosave mode.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var autoSave: js.UndefOr[Boolean] = js.native
+  var autoSave: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents a collection of bindings that are part of the workbook. Read-only.
+    * Represents a collection of bindings that are part of the workbook.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var bindings: js.UndefOr[js.Array[BindingData]] = js.native
+  var bindings: js.UndefOr[js.Array[BindingData]] = js.undefined
   /**
     *
-    * Returns a number about the version of Excel Calculation Engine. Read-Only.
+    * Returns a number about the version of Excel Calculation Engine.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var calculationEngineVersion: js.UndefOr[Double] = js.native
+  var calculationEngineVersion: js.UndefOr[Double] = js.undefined
   /**
     *
     * True if all charts in the workbook are tracking the actual data points to which they are attached.
@@ -35,134 +34,142 @@ trait WorkbookData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var chartDataPointTrack: js.UndefOr[Boolean] = js.native
+  var chartDataPointTrack: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents a collection of Comments associated with the workbook. Read-only.
+    * Represents a collection of Comments associated with the workbook.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var comments: js.UndefOr[js.Array[CommentData]] = js.native
+  var comments: js.UndefOr[js.Array[CommentData]] = js.undefined
   /**
     *
-    * Represents the collection of custom XML parts contained by this workbook. Read-only.
+    * Represents the collection of custom XML parts contained by this workbook.
     *
     * [Api set: ExcelApi 1.5]
     */
-  var customXmlParts: js.UndefOr[js.Array[CustomXmlPartData]] = js.native
+  var customXmlParts: js.UndefOr[js.Array[CustomXmlPartData]] = js.undefined
   /**
     *
-    * Specifies whether or not changes have been made since the workbook was last saved.
+    * Specifies if changes have been made since the workbook was last saved.
     You can set this property to true if you want to close a modified workbook without either saving it or being prompted to save it.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var isDirty: js.UndefOr[Boolean] = js.native
+  var isDirty: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets the workbook name. Read-only.
+    * Gets the workbook name.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.undefined
   /**
     *
-    * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+    * Represents a collection of workbook scoped named items (named ranges and constants).
     *
     * [Api set: ExcelApi 1.1]
     */
-  var names: js.UndefOr[js.Array[NamedItemData]] = js.native
+  var names: js.UndefOr[js.Array[NamedItemData]] = js.undefined
   /**
     *
-    * Represents a collection of PivotTableStyles associated with the workbook. Read-only.
+    * Represents a collection of PivotTableStyles associated with the workbook.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var pivotTableStyles: js.UndefOr[js.Array[PivotTableStyleData]] = js.native
+  var pivotTableStyles: js.UndefOr[js.Array[PivotTableStyleData]] = js.undefined
   /**
     *
-    * Represents a collection of PivotTables associated with the workbook. Read-only.
+    * Represents a collection of PivotTables associated with the workbook.
     *
     * [Api set: ExcelApi 1.3]
     */
-  var pivotTables: js.UndefOr[js.Array[PivotTableData]] = js.native
+  var pivotTables: js.UndefOr[js.Array[PivotTableData]] = js.undefined
   /**
     *
-    * Specifies whether or not the workbook has ever been saved locally or online. Read-Only.
+    * Specifies if the workbook has ever been saved locally or online.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var previouslySaved: js.UndefOr[Boolean] = js.native
+  var previouslySaved: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Gets the workbook properties. Read-only.
+    * Gets the workbook properties.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var properties: js.UndefOr[DocumentPropertiesData] = js.native
+  var properties: js.UndefOr[DocumentPropertiesData] = js.undefined
   /**
     *
-    * Returns workbook protection object for a workbook. Read-only.
+    * Returns workbook protection object for a workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var protection: js.UndefOr[WorkbookProtectionData] = js.native
+  var protection: js.UndefOr[WorkbookProtectionData] = js.undefined
   /**
     *
-    * True if the workbook is open in Read-only mode. Read-only.
+    * True if the workbook is open in Read-only mode.
     *
     * [Api set: ExcelApi 1.8]
     */
-  var readOnly: js.UndefOr[Boolean] = js.native
+  var readOnly: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents a collection of Settings associated with the workbook. Read-only.
+    * Represents a collection of Settings associated with the workbook.
     *
     * [Api set: ExcelApi 1.4]
     */
-  var settings: js.UndefOr[js.Array[SettingData]] = js.native
+  var settings: js.UndefOr[js.Array[SettingData]] = js.undefined
   /**
     *
-    * Represents a collection of SlicerStyles associated with the workbook. Read-only.
+    * Specifies whether the PivotTable's field list pane is shown at the workbook level.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var showPivotFieldList: js.UndefOr[Boolean] = js.undefined
+  /**
+    *
+    * Represents a collection of SlicerStyles associated with the workbook.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var slicerStyles: js.UndefOr[js.Array[SlicerStyleData]] = js.native
+  var slicerStyles: js.UndefOr[js.Array[SlicerStyleData]] = js.undefined
   /**
     *
-    * Represents a collection of Slicers associated with the workbook. Read-only.
+    * Represents a collection of Slicers associated with the workbook.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var slicers: js.UndefOr[js.Array[SlicerData]] = js.native
+  var slicers: js.UndefOr[js.Array[SlicerData]] = js.undefined
   /**
     *
-    * Represents a collection of styles associated with the workbook. Read-only.
+    * Represents a collection of styles associated with the workbook.
     *
     * [Api set: ExcelApi 1.7]
     */
-  var styles: js.UndefOr[js.Array[StyleData]] = js.native
+  var styles: js.UndefOr[js.Array[StyleData]] = js.undefined
   /**
     *
-    * Represents a collection of TableStyles associated with the workbook. Read-only.
+    * Represents a collection of TableStyles associated with the workbook.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var tableStyles: js.UndefOr[js.Array[TableStyleData]] = js.native
+  var tableStyles: js.UndefOr[js.Array[TableStyleData]] = js.undefined
   /**
     *
-    * Represents a collection of tables associated with the workbook. Read-only.
+    * Represents a collection of tables associated with the workbook.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var tables: js.UndefOr[js.Array[TableData]] = js.native
+  var tables: js.UndefOr[js.Array[TableData]] = js.undefined
   /**
     *
-    * Represents a collection of TimelineStyles associated with the workbook. Read-only.
+    * Represents a collection of TimelineStyles associated with the workbook.
     *
     * [Api set: ExcelApi 1.10]
     */
-  var timelineStyles: js.UndefOr[js.Array[TimelineStyleData]] = js.native
+  var timelineStyles: js.UndefOr[js.Array[TimelineStyleData]] = js.undefined
   /**
     *
     * True if the workbook uses the 1904 date system.
@@ -170,7 +177,7 @@ trait WorkbookData extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var use1904DateSystem: js.UndefOr[Boolean] = js.native
+  var use1904DateSystem: js.UndefOr[Boolean] = js.undefined
   /**
     *
     * True if calculations in this workbook will be done using only the precision of the numbers as they're displayed.
@@ -178,329 +185,74 @@ trait WorkbookData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.native
+  var usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.undefined
   /**
     *
-    * Represents a collection of worksheets associated with the workbook. Read-only.
+    * Represents a collection of worksheets associated with the workbook.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var worksheets: js.UndefOr[js.Array[WorksheetData]] = js.native
+  var worksheets: js.UndefOr[js.Array[WorksheetData]] = js.undefined
 }
 
 object WorkbookData {
   @scala.inline
-  def apply(): WorkbookData = {
+  def apply(
+    autoSave: js.UndefOr[Boolean] = js.undefined,
+    bindings: js.Array[BindingData] = null,
+    calculationEngineVersion: js.UndefOr[Double] = js.undefined,
+    chartDataPointTrack: js.UndefOr[Boolean] = js.undefined,
+    comments: js.Array[CommentData] = null,
+    customXmlParts: js.Array[CustomXmlPartData] = null,
+    isDirty: js.UndefOr[Boolean] = js.undefined,
+    name: String = null,
+    names: js.Array[NamedItemData] = null,
+    pivotTableStyles: js.Array[PivotTableStyleData] = null,
+    pivotTables: js.Array[PivotTableData] = null,
+    previouslySaved: js.UndefOr[Boolean] = js.undefined,
+    properties: DocumentPropertiesData = null,
+    protection: WorkbookProtectionData = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
+    settings: js.Array[SettingData] = null,
+    showPivotFieldList: js.UndefOr[Boolean] = js.undefined,
+    slicerStyles: js.Array[SlicerStyleData] = null,
+    slicers: js.Array[SlicerData] = null,
+    styles: js.Array[StyleData] = null,
+    tableStyles: js.Array[TableStyleData] = null,
+    tables: js.Array[TableData] = null,
+    timelineStyles: js.Array[TimelineStyleData] = null,
+    use1904DateSystem: js.UndefOr[Boolean] = js.undefined,
+    usePrecisionAsDisplayed: js.UndefOr[Boolean] = js.undefined,
+    worksheets: js.Array[WorksheetData] = null
+  ): WorkbookData = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(autoSave)) __obj.updateDynamic("autoSave")(autoSave.get.asInstanceOf[js.Any])
+    if (bindings != null) __obj.updateDynamic("bindings")(bindings.asInstanceOf[js.Any])
+    if (!js.isUndefined(calculationEngineVersion)) __obj.updateDynamic("calculationEngineVersion")(calculationEngineVersion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(chartDataPointTrack)) __obj.updateDynamic("chartDataPointTrack")(chartDataPointTrack.get.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (customXmlParts != null) __obj.updateDynamic("customXmlParts")(customXmlParts.asInstanceOf[js.Any])
+    if (!js.isUndefined(isDirty)) __obj.updateDynamic("isDirty")(isDirty.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (names != null) __obj.updateDynamic("names")(names.asInstanceOf[js.Any])
+    if (pivotTableStyles != null) __obj.updateDynamic("pivotTableStyles")(pivotTableStyles.asInstanceOf[js.Any])
+    if (pivotTables != null) __obj.updateDynamic("pivotTables")(pivotTables.asInstanceOf[js.Any])
+    if (!js.isUndefined(previouslySaved)) __obj.updateDynamic("previouslySaved")(previouslySaved.get.asInstanceOf[js.Any])
+    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
+    if (protection != null) __obj.updateDynamic("protection")(protection.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.get.asInstanceOf[js.Any])
+    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
+    if (!js.isUndefined(showPivotFieldList)) __obj.updateDynamic("showPivotFieldList")(showPivotFieldList.get.asInstanceOf[js.Any])
+    if (slicerStyles != null) __obj.updateDynamic("slicerStyles")(slicerStyles.asInstanceOf[js.Any])
+    if (slicers != null) __obj.updateDynamic("slicers")(slicers.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (tableStyles != null) __obj.updateDynamic("tableStyles")(tableStyles.asInstanceOf[js.Any])
+    if (tables != null) __obj.updateDynamic("tables")(tables.asInstanceOf[js.Any])
+    if (timelineStyles != null) __obj.updateDynamic("timelineStyles")(timelineStyles.asInstanceOf[js.Any])
+    if (!js.isUndefined(use1904DateSystem)) __obj.updateDynamic("use1904DateSystem")(use1904DateSystem.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePrecisionAsDisplayed)) __obj.updateDynamic("usePrecisionAsDisplayed")(usePrecisionAsDisplayed.get.asInstanceOf[js.Any])
+    if (worksheets != null) __obj.updateDynamic("worksheets")(worksheets.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkbookData]
   }
-  @scala.inline
-  implicit class WorkbookDataOps[Self <: WorkbookData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoSave(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoSave: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBindings(value: js.Array[BindingData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBindings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalculationEngineVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationEngineVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalculationEngineVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calculationEngineVersion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withChartDataPointTrack(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartDataPointTrack")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartDataPointTrack: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartDataPointTrack")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomXmlParts(value: js.Array[CustomXmlPartData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customXmlParts")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomXmlParts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customXmlParts")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDirty(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDirty: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirty")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNames(value: js.Array[NamedItemData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNames: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotTableStyles(value: js.Array[PivotTableStyleData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTableStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotTableStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTableStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPivotTables(value: js.Array[PivotTableData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivotTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviouslySaved(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previouslySaved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviouslySaved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previouslySaved")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProperties(value: DocumentPropertiesData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProtection(value: WorkbookProtectionData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProtection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("protection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSettings(value: js.Array[SettingData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlicerStyles(value: js.Array[SlicerStyleData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicerStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlicerStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicerStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSlicers(value: js.Array[SlicerData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSlicers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("slicers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyles(value: js.Array[StyleData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTableStyles(value: js.Array[TableStyleData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTableStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tableStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTables(value: js.Array[TableData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTables: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimelineStyles(value: js.Array[TimelineStyleData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineStyles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimelineStyles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timelineStyles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUse1904DateSystem(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use1904DateSystem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUse1904DateSystem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("use1904DateSystem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUsePrecisionAsDisplayed(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecisionAsDisplayed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUsePrecisionAsDisplayed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("usePrecisionAsDisplayed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWorksheets(value: js.Array[WorksheetData]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheets")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWorksheets: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheets")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BatchPublishOptions extends js.Object {
-  var maxBytes: js.UndefOr[Double] = js.native
-  var maxMessages: js.UndefOr[Double] = js.native
-  var maxMilliseconds: js.UndefOr[Double] = js.native
+  var maxBytes: js.UndefOr[Double] = js.undefined
+  var maxMessages: js.UndefOr[Double] = js.undefined
+  var maxMilliseconds: js.UndefOr[Double] = js.undefined
 }
 
 object BatchPublishOptions {
   @scala.inline
-  def apply(): BatchPublishOptions = {
+  def apply(
+    maxBytes: js.UndefOr[Double] = js.undefined,
+    maxMessages: js.UndefOr[Double] = js.undefined,
+    maxMilliseconds: js.UndefOr[Double] = js.undefined
+  ): BatchPublishOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(maxBytes)) __obj.updateDynamic("maxBytes")(maxBytes.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMessages)) __obj.updateDynamic("maxMessages")(maxMessages.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxMilliseconds)) __obj.updateDynamic("maxMilliseconds")(maxMilliseconds.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchPublishOptions]
   }
-  @scala.inline
-  implicit class BatchPublishOptionsOps[Self <: BatchPublishOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMaxBytes(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBytes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBytes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBytes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMessages(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxMilliseconds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMilliseconds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxMilliseconds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMilliseconds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

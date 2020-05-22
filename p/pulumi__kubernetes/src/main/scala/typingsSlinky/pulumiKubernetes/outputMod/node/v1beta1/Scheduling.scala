@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
 /**
   * Scheduling specifies the scheduling constraints for nodes supporting a RuntimeClass.
   */
-@js.native
 trait Scheduling extends js.Object {
   /**
     * nodeSelector lists labels that must be present on nodes that support this RuntimeClass.
@@ -17,13 +16,13 @@ trait Scheduling extends js.Object {
     * RuntimeClass nodeSelector is merged with a pod's existing nodeSelector. Any conflicts will
     * cause the pod to be rejected in admission.
     */
-  val nodeSelector: StringDictionary[String] = js.native
+  val nodeSelector: StringDictionary[String]
   /**
     * tolerations are appended (excluding duplicates) to pods running with this RuntimeClass
     * during admission, effectively unioning the set of nodes tolerated by the pod and the
     * RuntimeClass.
     */
-  val tolerations: js.Array[Toleration] = js.native
+  val tolerations: js.Array[Toleration]
 }
 
 object Scheduling {
@@ -32,25 +31,5 @@ object Scheduling {
     val __obj = js.Dynamic.literal(nodeSelector = nodeSelector.asInstanceOf[js.Any], tolerations = tolerations.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scheduling]
   }
-  @scala.inline
-  implicit class SchedulingOps[Self <: Scheduling] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNodeSelector(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSelector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTolerations(value: js.Array[Toleration]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerations")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

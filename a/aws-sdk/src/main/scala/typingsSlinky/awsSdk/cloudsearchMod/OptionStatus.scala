@@ -30,59 +30,17 @@ trait OptionStatus extends js.Object {
 
 object OptionStatus {
   @scala.inline
-  def apply(CreationDate: js.Date, State: OptionState, UpdateDate: js.Date): OptionStatus = {
+  def apply(
+    CreationDate: js.Date,
+    State: OptionState,
+    UpdateDate: js.Date,
+    PendingDeletion: js.UndefOr[Boolean] = js.undefined,
+    UpdateVersion: js.UndefOr[UIntValue] = js.undefined
+  ): OptionStatus = {
     val __obj = js.Dynamic.literal(CreationDate = CreationDate.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any], UpdateDate = UpdateDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(PendingDeletion)) __obj.updateDynamic("PendingDeletion")(PendingDeletion.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(UpdateVersion)) __obj.updateDynamic("UpdateVersion")(UpdateVersion.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionStatus]
   }
-  @scala.inline
-  implicit class OptionStatusOps[Self <: OptionStatus] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreationDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withState(value: OptionState): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUpdateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPendingDeletion(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingDeletion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPendingDeletion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingDeletion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateVersion(value: UIntValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateVersion")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

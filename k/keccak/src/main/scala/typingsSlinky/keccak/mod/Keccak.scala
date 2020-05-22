@@ -26,7 +26,7 @@ class Keccak protected () extends Transform {
     options: TransformOptions
   ) = this()
   def digest(): Buffer = js.native
-  def digest(encoding: BufferEncoding): Buffer = js.native
+  def digest(encoding: BufferEncoding): String = js.native
   def update(data: String): Keccak = js.native
   def update(data: String, encoding: BufferEncoding): Keccak = js.native
   def update(data: Buffer): Keccak = js.native

@@ -25,53 +25,16 @@ trait SchemaEmbeddedChart extends js.Object {
 
 object SchemaEmbeddedChart {
   @scala.inline
-  def apply(): SchemaEmbeddedChart = {
+  def apply(
+    chartId: js.UndefOr[Double] = js.undefined,
+    position: SchemaEmbeddedObjectPosition = null,
+    spec: SchemaChartSpec = null
+  ): SchemaEmbeddedChart = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(chartId)) __obj.updateDynamic("chartId")(chartId.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEmbeddedChart]
   }
-  @scala.inline
-  implicit class SchemaEmbeddedChartOps[Self <: SchemaEmbeddedChart] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChartId(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChartId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: SchemaEmbeddedObjectPosition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpec(value: SchemaChartSpec): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

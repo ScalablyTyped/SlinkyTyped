@@ -9,11 +9,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ITextFilterParams extends IComparableFilterParams {
-  var caseSensitive: js.UndefOr[Boolean] = js.native
-  var debounceMs: js.UndefOr[Double] = js.native
-  var textCustomComparator: js.UndefOr[TextComparator] = js.native
+  var caseSensitive: js.UndefOr[Boolean] = js.undefined
+  var debounceMs: js.UndefOr[Double] = js.undefined
+  var textCustomComparator: js.UndefOr[TextComparator] = js.undefined
 }
 
 object ITextFilterParams {
@@ -28,54 +27,28 @@ object ITextFilterParams {
     filterModifiedCallback: () => Unit,
     rowModel: IRowModel,
     suppressAndOrCondition: Boolean,
-    valueGetter: RowNode => js.Any
+    valueGetter: RowNode => js.Any,
+    applyButton: js.UndefOr[Boolean] = js.undefined,
+    caseSensitive: js.UndefOr[Boolean] = js.undefined,
+    clearButton: js.UndefOr[Boolean] = js.undefined,
+    debounceMs: js.UndefOr[Double] = js.undefined,
+    defaultOption: String = null,
+    filterOptions: js.Array[String] = null,
+    newRowsAction: String = null,
+    textCustomComparator: (/* filter */ String, /* gridValue */ js.Any, /* filterText */ String) => Boolean = null,
+    textFormatter: /* from */ String => String = null
   ): ITextFilterParams = {
     val __obj = js.Dynamic.literal($scope = $scope.asInstanceOf[js.Any], colDef = colDef.asInstanceOf[js.Any], column = column.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], doesRowPassOtherFilter = js.Any.fromFunction1(doesRowPassOtherFilter), filterChangedCallback = js.Any.fromFunction0(filterChangedCallback), filterModifiedCallback = js.Any.fromFunction0(filterModifiedCallback), rowModel = rowModel.asInstanceOf[js.Any], suppressAndOrCondition = suppressAndOrCondition.asInstanceOf[js.Any], valueGetter = js.Any.fromFunction1(valueGetter))
+    if (!js.isUndefined(applyButton)) __obj.updateDynamic("applyButton")(applyButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(clearButton)) __obj.updateDynamic("clearButton")(clearButton.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(debounceMs)) __obj.updateDynamic("debounceMs")(debounceMs.get.asInstanceOf[js.Any])
+    if (defaultOption != null) __obj.updateDynamic("defaultOption")(defaultOption.asInstanceOf[js.Any])
+    if (filterOptions != null) __obj.updateDynamic("filterOptions")(filterOptions.asInstanceOf[js.Any])
+    if (newRowsAction != null) __obj.updateDynamic("newRowsAction")(newRowsAction.asInstanceOf[js.Any])
+    if (textCustomComparator != null) __obj.updateDynamic("textCustomComparator")(js.Any.fromFunction3(textCustomComparator))
+    if (textFormatter != null) __obj.updateDynamic("textFormatter")(js.Any.fromFunction1(textFormatter))
     __obj.asInstanceOf[ITextFilterParams]
   }
-  @scala.inline
-  implicit class ITextFilterParamsOps[Self <: ITextFilterParams] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCaseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebounceMs(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounceMs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebounceMs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debounceMs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTextCustomComparator(value: (/* filter */ String, /* gridValue */ js.Any, /* filterText */ String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textCustomComparator")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withoutTextCustomComparator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("textCustomComparator")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

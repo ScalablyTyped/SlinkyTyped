@@ -22,41 +22,10 @@ trait StartImportTaskRequest extends js.Object {
 
 object StartImportTaskRequest {
   @scala.inline
-  def apply(importUrl: ImportURL, name: ImportTaskName): StartImportTaskRequest = {
+  def apply(importUrl: ImportURL, name: ImportTaskName, clientRequestToken: ClientRequestToken = null): StartImportTaskRequest = {
     val __obj = js.Dynamic.literal(importUrl = importUrl.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartImportTaskRequest]
   }
-  @scala.inline
-  implicit class StartImportTaskRequestOps[Self <: StartImportTaskRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImportUrl(value: ImportURL): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: ImportTaskName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClientRequestToken(value: ClientRequestToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClientRequestToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

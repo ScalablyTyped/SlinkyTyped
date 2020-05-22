@@ -26,6 +26,11 @@ object CustomHeader {
   }
   
   def withProps[Data](p: CustomHeaderProps[Data]): Builder[Data] = new Builder[Data](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Data](): Builder[Data] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Data](js.Array(this.component, __props.asInstanceOf[CustomHeaderProps[Data]]))
+  }
   implicit def make[Data](companion: CustomHeader.type): Builder[Data] = new Builder[Data](js.Array(this.component, js.Dictionary.empty))()
 }
 

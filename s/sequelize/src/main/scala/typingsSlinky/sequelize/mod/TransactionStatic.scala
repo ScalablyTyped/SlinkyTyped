@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation._
   *
   * @see Transaction
   */
-@js.native
 trait TransactionStatic extends js.Object {
   /**
     * Isolations levels can be set per-transaction by passing `options.isolationLevel` to
@@ -46,7 +45,7 @@ trait TransactionStatic extends js.Object {
     *
     * @see ISOLATION_LEVELS
     */
-  var ISOLATION_LEVELS: TransactionIsolationLevels = js.native
+  var ISOLATION_LEVELS: TransactionIsolationLevels
   /**
     * Possible options for row locking. Used in conjuction with `find` calls:
     *
@@ -82,7 +81,7 @@ trait TransactionStatic extends js.Object {
     * ```
     * UserModel will be locked but TaskModel won't!
     */
-  var LOCK: TransactionLock = js.native
+  var LOCK: TransactionLock
   /**
     * Transaction type can be set per-transaction by passing `options.type` to
     * `sequelize.transaction`. Default to `DEFERRED` but you can override the default isolation level
@@ -116,7 +115,7 @@ trait TransactionStatic extends js.Object {
     *
     * @see Sequelize.Transaction.TYPES
     */
-  var TYPES: TransactionTypes = js.native
+  var TYPES: TransactionTypes
 }
 
 object TransactionStatic {
@@ -125,31 +124,5 @@ object TransactionStatic {
     val __obj = js.Dynamic.literal(ISOLATION_LEVELS = ISOLATION_LEVELS.asInstanceOf[js.Any], LOCK = LOCK.asInstanceOf[js.Any], TYPES = TYPES.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactionStatic]
   }
-  @scala.inline
-  implicit class TransactionStaticOps[Self <: TransactionStatic] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withISOLATION_LEVELS(value: TransactionIsolationLevels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ISOLATION_LEVELS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLOCK(value: TransactionLock): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LOCK")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTYPES(value: TransactionTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TYPES")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

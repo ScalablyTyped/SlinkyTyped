@@ -4,65 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PortalRatingProperties extends js.Object {
   /**
     * Date the rating was added to the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalRating.html#created)
     */
-  var created: js.UndefOr[DateProperties] = js.native
+  var created: js.UndefOr[DateProperties] = js.undefined
   /**
     * A rating between 1.0 and 5.0 for the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalRating.html#rating)
     */
-  var rating: js.UndefOr[Double] = js.native
+  var rating: js.UndefOr[Double] = js.undefined
 }
 
 object PortalRatingProperties {
   @scala.inline
-  def apply(): PortalRatingProperties = {
+  def apply(created: DateProperties = null, rating: js.UndefOr[Double] = js.undefined): PortalRatingProperties = {
     val __obj = js.Dynamic.literal()
+    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
+    if (!js.isUndefined(rating)) __obj.updateDynamic("rating")(rating.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PortalRatingProperties]
   }
-  @scala.inline
-  implicit class PortalRatingPropertiesOps[Self <: PortalRatingProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCreatedDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreated(value: DateProperties): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRating(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRating: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** knows all currently used and all free numbers for using with untitled but counted objects. */
-@js.native
 trait XUntitledNumbers extends XInterface {
   /**
     * returns the localized string value to be used for untitled objects in combination with the leased number.
@@ -16,7 +15,7 @@ trait XUntitledNumbers extends XInterface {
     * string.
     * @returns the localized string for untitled components.
     */
-  val UntitledPrefix: String = js.native
+  val UntitledPrefix: String
   /**
     * returns the localized string value to be used for untitled objects in combination with the leased number.
     *
@@ -24,7 +23,7 @@ trait XUntitledNumbers extends XInterface {
     * string.
     * @returns the localized string for untitled components.
     */
-  def getUntitledPrefix(): String = js.native
+  def getUntitledPrefix(): String
   /**
     * callee has to lease a number before they can use it within in its own title.
     *
@@ -33,7 +32,7 @@ trait XUntitledNumbers extends XInterface {
     * @returns the new number for these object or 0 if no further numbers are available.
     * @throws [IllegalArgumentException] if an invalid object reference was provided to this method.
     */
-  def leaseNumber(xComponent: XInterface): Double = js.native
+  def leaseNumber(xComponent: XInterface): Double
   /**
     * has to be used to mark those number as "free for using".
     *
@@ -43,13 +42,13 @@ trait XUntitledNumbers extends XInterface {
     * @param nNumber specify number for release.
     * @throws [IllegalArgumentException] if the given number is the special value 0.
     */
-  def releaseNumber(nNumber: Double): Unit = js.native
+  def releaseNumber(nNumber: Double): Unit
   /**
     * does the same then releaseNumber () but it searches the corresponding number for the specified component and deregister it.
     * @param xComponent the component for deregistration.
     * @throws [IllegalArgumentException] if an invalid object reference was provided to this method.
     */
-  def releaseNumberForComponent(xComponent: XInterface): Unit = js.native
+  def releaseNumberForComponent(xComponent: XInterface): Unit
 }
 
 object XUntitledNumbers {
@@ -67,43 +66,5 @@ object XUntitledNumbers {
     val __obj = js.Dynamic.literal(UntitledPrefix = UntitledPrefix.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getUntitledPrefix = js.Any.fromFunction0(getUntitledPrefix), leaseNumber = js.Any.fromFunction1(leaseNumber), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), releaseNumber = js.Any.fromFunction1(releaseNumber), releaseNumberForComponent = js.Any.fromFunction1(releaseNumberForComponent))
     __obj.asInstanceOf[XUntitledNumbers]
   }
-  @scala.inline
-  implicit class XUntitledNumbersOps[Self <: XUntitledNumbers] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withUntitledPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UntitledPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetUntitledPrefix(value: () => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUntitledPrefix")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withLeaseNumber(value: XInterface => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseNumber")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReleaseNumber(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseNumber")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withReleaseNumberForComponent(value: XInterface => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseNumberForComponent")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

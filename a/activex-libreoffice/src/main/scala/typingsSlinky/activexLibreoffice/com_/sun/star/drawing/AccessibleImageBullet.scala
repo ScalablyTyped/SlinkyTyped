@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation._
   * The accessible view of an image bullet.
   * @since OOo 1.1.2
   */
-@js.native
 trait AccessibleImageBullet
   extends XAccessibleContext
      with XAccessibleComponent

@@ -18,41 +18,11 @@ trait GetAdminAccountResponse extends js.Object {
 
 object GetAdminAccountResponse {
   @scala.inline
-  def apply(): GetAdminAccountResponse = {
+  def apply(AdminAccount: AWSAccountId = null, RoleStatus: AccountRoleStatus = null): GetAdminAccountResponse = {
     val __obj = js.Dynamic.literal()
+    if (AdminAccount != null) __obj.updateDynamic("AdminAccount")(AdminAccount.asInstanceOf[js.Any])
+    if (RoleStatus != null) __obj.updateDynamic("RoleStatus")(RoleStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAdminAccountResponse]
   }
-  @scala.inline
-  implicit class GetAdminAccountResponseOps[Self <: GetAdminAccountResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdminAccount(value: AWSAccountId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminAccount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdminAccount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminAccount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRoleStatus(value: AccountRoleStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRoleStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

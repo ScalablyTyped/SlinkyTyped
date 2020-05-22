@@ -38,95 +38,23 @@ trait CreateCsvClassifierRequest extends js.Object {
 
 object CreateCsvClassifierRequest {
   @scala.inline
-  def apply(Name: NameString): CreateCsvClassifierRequest = {
+  def apply(
+    Name: NameString,
+    AllowSingleColumn: js.UndefOr[NullableBoolean] = js.undefined,
+    ContainsHeader: CsvHeaderOption = null,
+    Delimiter: CsvColumnDelimiter = null,
+    DisableValueTrimming: js.UndefOr[NullableBoolean] = js.undefined,
+    Header: CsvHeader = null,
+    QuoteSymbol: CsvQuoteSymbol = null
+  ): CreateCsvClassifierRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+    if (!js.isUndefined(AllowSingleColumn)) __obj.updateDynamic("AllowSingleColumn")(AllowSingleColumn.get.asInstanceOf[js.Any])
+    if (ContainsHeader != null) __obj.updateDynamic("ContainsHeader")(ContainsHeader.asInstanceOf[js.Any])
+    if (Delimiter != null) __obj.updateDynamic("Delimiter")(Delimiter.asInstanceOf[js.Any])
+    if (!js.isUndefined(DisableValueTrimming)) __obj.updateDynamic("DisableValueTrimming")(DisableValueTrimming.get.asInstanceOf[js.Any])
+    if (Header != null) __obj.updateDynamic("Header")(Header.asInstanceOf[js.Any])
+    if (QuoteSymbol != null) __obj.updateDynamic("QuoteSymbol")(QuoteSymbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCsvClassifierRequest]
   }
-  @scala.inline
-  implicit class CreateCsvClassifierRequestOps[Self <: CreateCsvClassifierRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: NameString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAllowSingleColumn(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowSingleColumn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSingleColumn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowSingleColumn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContainsHeader(value: CsvHeaderOption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsHeader")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContainsHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ContainsHeader")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDelimiter(value: CsvColumnDelimiter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelimiter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisableValueTrimming(value: NullableBoolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableValueTrimming")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisableValueTrimming: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableValueTrimming")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeader(value: CsvHeader): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeader: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withQuoteSymbol(value: CsvQuoteSymbol): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuoteSymbol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutQuoteSymbol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("QuoteSymbol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

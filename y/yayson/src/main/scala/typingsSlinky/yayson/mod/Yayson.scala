@@ -6,11 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Yayson extends js.Object {
-  var Adapter: typingsSlinky.yayson.mod.Adapter = js.native
-  var Presenter: TypeofPresenter = js.native
-  var Store: Instantiable0[typingsSlinky.yayson.mod.Store] = js.native
+  var Adapter: typingsSlinky.yayson.mod.Adapter
+  var Presenter: TypeofPresenter
+  var Store: Instantiable0[typingsSlinky.yayson.mod.Store]
 }
 
 object Yayson {
@@ -19,31 +18,5 @@ object Yayson {
     val __obj = js.Dynamic.literal(Adapter = Adapter.asInstanceOf[js.Any], Presenter = Presenter.asInstanceOf[js.Any], Store = Store.asInstanceOf[js.Any])
     __obj.asInstanceOf[Yayson]
   }
-  @scala.inline
-  implicit class YaysonOps[Self <: Yayson] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdapter(value: Adapter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Adapter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPresenter(value: TypeofPresenter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Presenter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStore(value: Instantiable0[Store]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Store")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

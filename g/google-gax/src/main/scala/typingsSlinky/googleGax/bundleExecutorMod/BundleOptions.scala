@@ -4,88 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait BundleOptions extends js.Object {
-  var delayThreshold: js.UndefOr[Double] = js.native
-  var elementCountLimit: js.UndefOr[Double] = js.native
-  var elementCountThreshold: js.UndefOr[Double] = js.native
-  var requestByteLimit: js.UndefOr[Double] = js.native
-  var requestByteThreshold: js.UndefOr[Double] = js.native
+  var delayThreshold: js.UndefOr[Double] = js.undefined
+  var elementCountLimit: js.UndefOr[Double] = js.undefined
+  var elementCountThreshold: js.UndefOr[Double] = js.undefined
+  var requestByteLimit: js.UndefOr[Double] = js.undefined
+  var requestByteThreshold: js.UndefOr[Double] = js.undefined
 }
 
 object BundleOptions {
   @scala.inline
-  def apply(): BundleOptions = {
+  def apply(
+    delayThreshold: js.UndefOr[Double] = js.undefined,
+    elementCountLimit: js.UndefOr[Double] = js.undefined,
+    elementCountThreshold: js.UndefOr[Double] = js.undefined,
+    requestByteLimit: js.UndefOr[Double] = js.undefined,
+    requestByteThreshold: js.UndefOr[Double] = js.undefined
+  ): BundleOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(delayThreshold)) __obj.updateDynamic("delayThreshold")(delayThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(elementCountLimit)) __obj.updateDynamic("elementCountLimit")(elementCountLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(elementCountThreshold)) __obj.updateDynamic("elementCountThreshold")(elementCountThreshold.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestByteLimit)) __obj.updateDynamic("requestByteLimit")(requestByteLimit.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(requestByteThreshold)) __obj.updateDynamic("requestByteThreshold")(requestByteThreshold.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[BundleOptions]
   }
-  @scala.inline
-  implicit class BundleOptionsOps[Self <: BundleOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelayThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelayThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delayThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementCountLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementCountLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElementCountLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementCountLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementCountThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementCountThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElementCountThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementCountThreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestByteLimit(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestByteLimit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestByteLimit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestByteLimit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRequestByteThreshold(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestByteThreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRequestByteThreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("requestByteThreshold")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

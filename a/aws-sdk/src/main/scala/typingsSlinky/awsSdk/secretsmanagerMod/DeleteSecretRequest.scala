@@ -22,47 +22,15 @@ trait DeleteSecretRequest extends js.Object {
 
 object DeleteSecretRequest {
   @scala.inline
-  def apply(SecretId: SecretIdType): DeleteSecretRequest = {
+  def apply(
+    SecretId: SecretIdType,
+    ForceDeleteWithoutRecovery: js.UndefOr[BooleanType] = js.undefined,
+    RecoveryWindowInDays: js.UndefOr[RecoveryWindowInDaysType] = js.undefined
+  ): DeleteSecretRequest = {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any])
+    if (!js.isUndefined(ForceDeleteWithoutRecovery)) __obj.updateDynamic("ForceDeleteWithoutRecovery")(ForceDeleteWithoutRecovery.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(RecoveryWindowInDays)) __obj.updateDynamic("RecoveryWindowInDays")(RecoveryWindowInDays.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteSecretRequest]
   }
-  @scala.inline
-  implicit class DeleteSecretRequestOps[Self <: DeleteSecretRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecretId(value: SecretIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withForceDeleteWithoutRecovery(value: BooleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceDeleteWithoutRecovery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForceDeleteWithoutRecovery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceDeleteWithoutRecovery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecoveryWindowInDays(value: RecoveryWindowInDaysType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryWindowInDays")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecoveryWindowInDays: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryWindowInDays")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

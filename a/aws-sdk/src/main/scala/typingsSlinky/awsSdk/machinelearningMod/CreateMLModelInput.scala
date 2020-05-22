@@ -38,83 +38,21 @@ trait CreateMLModelInput extends js.Object {
 
 object CreateMLModelInput {
   @scala.inline
-  def apply(MLModelId: EntityId, MLModelType: MLModelType, TrainingDataSourceId: EntityId): CreateMLModelInput = {
+  def apply(
+    MLModelId: EntityId,
+    MLModelType: MLModelType,
+    TrainingDataSourceId: EntityId,
+    MLModelName: EntityName = null,
+    Parameters: TrainingParameters = null,
+    Recipe: Recipe = null,
+    RecipeUri: S3Url = null
+  ): CreateMLModelInput = {
     val __obj = js.Dynamic.literal(MLModelId = MLModelId.asInstanceOf[js.Any], MLModelType = MLModelType.asInstanceOf[js.Any], TrainingDataSourceId = TrainingDataSourceId.asInstanceOf[js.Any])
+    if (MLModelName != null) __obj.updateDynamic("MLModelName")(MLModelName.asInstanceOf[js.Any])
+    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
+    if (Recipe != null) __obj.updateDynamic("Recipe")(Recipe.asInstanceOf[js.Any])
+    if (RecipeUri != null) __obj.updateDynamic("RecipeUri")(RecipeUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateMLModelInput]
   }
-  @scala.inline
-  implicit class CreateMLModelInputOps[Self <: CreateMLModelInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMLModelId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMLModelType(value: MLModelType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrainingDataSourceId(value: EntityId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingDataSourceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMLModelName(value: EntityName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMLModelName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MLModelName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameters(value: TrainingParameters): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipe(value: Recipe): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recipe")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipe: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Recipe")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecipeUri(value: S3Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipeUri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecipeUri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("RecipeUri")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,114 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ComponentDefaultConfig extends js.Object {
-  var collated: js.UndefOr[Boolean] = js.native
-  var collator: js.UndefOr[Collator] = js.native
-  var context: js.UndefOr[js.Any] = js.native
-  var display: js.UndefOr[js.Any] = js.native
-  var prefix: js.UndefOr[String] = js.native
-  var preview: js.UndefOr[String] = js.native
-  var status: js.UndefOr[String] = js.native
+  var collated: js.UndefOr[Boolean] = js.undefined
+  var collator: js.UndefOr[Collator] = js.undefined
+  var context: js.UndefOr[js.Any] = js.undefined
+  var display: js.UndefOr[js.Any] = js.undefined
+  var prefix: js.UndefOr[String] = js.undefined
+  var preview: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.undefined
 }
 
 object ComponentDefaultConfig {
   @scala.inline
-  def apply(): ComponentDefaultConfig = {
+  def apply(
+    collated: js.UndefOr[Boolean] = js.undefined,
+    collator: (/* markup */ String, /* item */ Handle) => String = null,
+    context: js.Any = null,
+    display: js.Any = null,
+    prefix: String = null,
+    preview: String = null,
+    status: String = null
+  ): ComponentDefaultConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(collated)) __obj.updateDynamic("collated")(collated.get.asInstanceOf[js.Any])
+    if (collator != null) __obj.updateDynamic("collator")(js.Any.fromFunction2(collator))
+    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (preview != null) __obj.updateDynamic("preview")(preview.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComponentDefaultConfig]
   }
-  @scala.inline
-  implicit class ComponentDefaultConfigOps[Self <: ComponentDefaultConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCollated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collated")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollator(value: (/* markup */ String, /* item */ Handle) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collator")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutCollator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withContext(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDisplay(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisplay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreview(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

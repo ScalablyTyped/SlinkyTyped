@@ -11,4 +11,5 @@ package object mod {
     scala.Boolean | typingsSlinky.webpackBlocksUglify.mod.ExtractCommentsObject
   ]
   type FileNameFunction = js.Function1[/* file */ java.lang.String, java.lang.String]
+  type TestType = java.lang.String | js.RegExp
 }

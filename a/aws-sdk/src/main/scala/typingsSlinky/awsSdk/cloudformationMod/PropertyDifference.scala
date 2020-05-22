@@ -35,37 +35,5 @@ object PropertyDifference {
     val __obj = js.Dynamic.literal(ActualValue = ActualValue.asInstanceOf[js.Any], DifferenceType = DifferenceType.asInstanceOf[js.Any], ExpectedValue = ExpectedValue.asInstanceOf[js.Any], PropertyPath = PropertyPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropertyDifference]
   }
-  @scala.inline
-  implicit class PropertyDifferenceOps[Self <: PropertyDifference] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActualValue(value: PropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActualValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDifferenceType(value: DifferenceType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DifferenceType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withExpectedValue(value: PropertyValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyPath(value: PropertyPath): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyPath")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 /** module Or Internal Object */
 /**
-	* @brief gui 模块
-	* @detail 使用方法：,```JavaScript,var gui = require('gui');,```
-	*/
+  * @brief gui 模块
+  * @detail 使用方法：,```JavaScript,var gui = require('gui');,```
+  */
 @JSImport("gui", JSImport.Namespace)
 @js.native
 object guiMod extends js.Object {

@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Meeting extends js.Object {
   /**
+    * The external meeting ID.
+    */
+  var ExternalMeetingId: js.UndefOr[ExternalMeetingIdType] = js.native
+  /**
     * The media placement for the meeting.
     */
   var MediaPlacement: js.UndefOr[typingsSlinky.awsSdk.chimeMod.MediaPlacement] = js.native
@@ -22,53 +26,18 @@ trait Meeting extends js.Object {
 
 object Meeting {
   @scala.inline
-  def apply(): Meeting = {
+  def apply(
+    ExternalMeetingId: ExternalMeetingIdType = null,
+    MediaPlacement: MediaPlacement = null,
+    MediaRegion: String = null,
+    MeetingId: GuidString = null
+  ): Meeting = {
     val __obj = js.Dynamic.literal()
+    if (ExternalMeetingId != null) __obj.updateDynamic("ExternalMeetingId")(ExternalMeetingId.asInstanceOf[js.Any])
+    if (MediaPlacement != null) __obj.updateDynamic("MediaPlacement")(MediaPlacement.asInstanceOf[js.Any])
+    if (MediaRegion != null) __obj.updateDynamic("MediaRegion")(MediaRegion.asInstanceOf[js.Any])
+    if (MeetingId != null) __obj.updateDynamic("MeetingId")(MeetingId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Meeting]
   }
-  @scala.inline
-  implicit class MeetingOps[Self <: Meeting] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withMediaPlacement(value: MediaPlacement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediaRegion(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediaRegion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaRegion")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMeetingId(value: GuidString): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMeetingId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MeetingId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

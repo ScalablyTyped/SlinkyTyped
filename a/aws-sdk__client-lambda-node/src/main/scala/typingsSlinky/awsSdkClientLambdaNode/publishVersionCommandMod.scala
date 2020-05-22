@@ -26,9 +26,16 @@ object publishVersionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PublishVersionInput) = this()
+    /* CompleteClass */
+    override val input: PublishVersionInput = js.native
     val middlewareStack: MiddlewareStack[PublishVersionInput, PublishVersionOutput, Readable] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[PublishVersionInput, PublishVersionOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[PublishVersionInput, PublishVersionOutput] = js.native
   }

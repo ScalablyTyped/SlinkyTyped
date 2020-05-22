@@ -5,12 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** 需要添加的卡券列表 */
-@js.native
 trait AddCardRequestInfo extends js.Object {
   /** 卡券的扩展参数。需进行 JSON 序列化为**字符串**传入 */
-  var cardExt: CardExt = js.native
+  var cardExt: CardExt
   /** 卡券 ID */
-  var cardId: String = js.native
+  var cardId: String
 }
 
 object AddCardRequestInfo {
@@ -19,25 +18,5 @@ object AddCardRequestInfo {
     val __obj = js.Dynamic.literal(cardExt = cardExt.asInstanceOf[js.Any], cardId = cardId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddCardRequestInfo]
   }
-  @scala.inline
-  implicit class AddCardRequestInfoOps[Self <: AddCardRequestInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCardExt(value: CardExt): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardExt")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCardId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cardId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

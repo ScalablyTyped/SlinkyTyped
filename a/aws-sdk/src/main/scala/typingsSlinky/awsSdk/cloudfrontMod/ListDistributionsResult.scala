@@ -14,29 +14,10 @@ trait ListDistributionsResult extends js.Object {
 
 object ListDistributionsResult {
   @scala.inline
-  def apply(): ListDistributionsResult = {
+  def apply(DistributionList: DistributionList = null): ListDistributionsResult = {
     val __obj = js.Dynamic.literal()
+    if (DistributionList != null) __obj.updateDynamic("DistributionList")(DistributionList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDistributionsResult]
   }
-  @scala.inline
-  implicit class ListDistributionsResultOps[Self <: ListDistributionsResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistributionList(value: DistributionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributionList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistributionList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributionList")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

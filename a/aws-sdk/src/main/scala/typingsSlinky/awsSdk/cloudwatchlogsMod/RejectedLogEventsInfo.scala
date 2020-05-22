@@ -22,53 +22,16 @@ trait RejectedLogEventsInfo extends js.Object {
 
 object RejectedLogEventsInfo {
   @scala.inline
-  def apply(): RejectedLogEventsInfo = {
+  def apply(
+    expiredLogEventEndIndex: js.UndefOr[LogEventIndex] = js.undefined,
+    tooNewLogEventStartIndex: js.UndefOr[LogEventIndex] = js.undefined,
+    tooOldLogEventEndIndex: js.UndefOr[LogEventIndex] = js.undefined
+  ): RejectedLogEventsInfo = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(expiredLogEventEndIndex)) __obj.updateDynamic("expiredLogEventEndIndex")(expiredLogEventEndIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tooNewLogEventStartIndex)) __obj.updateDynamic("tooNewLogEventStartIndex")(tooNewLogEventStartIndex.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(tooOldLogEventEndIndex)) __obj.updateDynamic("tooOldLogEventEndIndex")(tooOldLogEventEndIndex.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RejectedLogEventsInfo]
   }
-  @scala.inline
-  implicit class RejectedLogEventsInfoOps[Self <: RejectedLogEventsInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExpiredLogEventEndIndex(value: LogEventIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiredLogEventEndIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExpiredLogEventEndIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("expiredLogEventEndIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooNewLogEventStartIndex(value: LogEventIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooNewLogEventStartIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooNewLogEventStartIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooNewLogEventStartIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTooOldLogEventEndIndex(value: LogEventIndex): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooOldLogEventEndIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTooOldLogEventEndIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tooOldLogEventEndIndex")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

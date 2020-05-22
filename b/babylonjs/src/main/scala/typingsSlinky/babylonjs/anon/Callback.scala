@@ -5,10 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Callback extends js.Object {
-  var otherImpostors: js.Array[PhysicsImpostor] = js.native
-  def callback(collider: PhysicsImpostor, collidedAgainst: PhysicsImpostor): Unit = js.native
+  var otherImpostors: js.Array[PhysicsImpostor]
+  def callback(collider: PhysicsImpostor, collidedAgainst: PhysicsImpostor): Unit
 }
 
 object Callback {
@@ -17,25 +16,5 @@ object Callback {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction2(callback), otherImpostors = otherImpostors.asInstanceOf[js.Any])
     __obj.asInstanceOf[Callback]
   }
-  @scala.inline
-  implicit class CallbackOps[Self <: Callback] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallback(value: (PhysicsImpostor, PhysicsImpostor) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOtherImpostors(value: js.Array[PhysicsImpostor]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("otherImpostors")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

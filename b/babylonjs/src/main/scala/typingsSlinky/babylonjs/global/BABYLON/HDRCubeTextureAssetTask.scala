@@ -128,5 +128,10 @@ class HDRCubeTextureAssetTask protected ()
     */
   reserved: Boolean
   ) = this()
+  /**
+    * Gets the loaded texture
+    */
+  /* CompleteClass */
+  override var texture: typingsSlinky.babylonjs.BABYLON.HDRCubeTexture = js.native
 }
 

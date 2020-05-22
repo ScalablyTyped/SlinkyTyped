@@ -12,8 +12,14 @@ trait TopLevelCondition extends NestedCondition
 
 object TopLevelCondition {
   @scala.inline
-  implicit def apply(value: AllConditions): TopLevelCondition = value.asInstanceOf[TopLevelCondition]
+  def AllConditions(all: js.Array[NestedCondition]): TopLevelCondition = {
+    val __obj = js.Dynamic.literal(all = all.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TopLevelCondition]
+  }
   @scala.inline
-  implicit def apply(value: AnyConditions): TopLevelCondition = value.asInstanceOf[TopLevelCondition]
+  def AnyConditions(any: js.Array[NestedCondition]): TopLevelCondition = {
+    val __obj = js.Dynamic.literal(any = any.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TopLevelCondition]
+  }
 }
 

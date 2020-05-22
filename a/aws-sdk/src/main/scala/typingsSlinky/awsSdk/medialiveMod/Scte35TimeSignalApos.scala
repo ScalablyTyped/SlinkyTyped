@@ -22,53 +22,16 @@ trait Scte35TimeSignalApos extends js.Object {
 
 object Scte35TimeSignalApos {
   @scala.inline
-  def apply(): Scte35TimeSignalApos = {
+  def apply(
+    AdAvailOffset: js.UndefOr[integerMinNegative1000Max1000] = js.undefined,
+    NoRegionalBlackoutFlag: Scte35AposNoRegionalBlackoutBehavior = null,
+    WebDeliveryAllowedFlag: Scte35AposWebDeliveryAllowedBehavior = null
+  ): Scte35TimeSignalApos = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(AdAvailOffset)) __obj.updateDynamic("AdAvailOffset")(AdAvailOffset.get.asInstanceOf[js.Any])
+    if (NoRegionalBlackoutFlag != null) __obj.updateDynamic("NoRegionalBlackoutFlag")(NoRegionalBlackoutFlag.asInstanceOf[js.Any])
+    if (WebDeliveryAllowedFlag != null) __obj.updateDynamic("WebDeliveryAllowedFlag")(WebDeliveryAllowedFlag.asInstanceOf[js.Any])
     __obj.asInstanceOf[Scte35TimeSignalApos]
   }
-  @scala.inline
-  implicit class Scte35TimeSignalAposOps[Self <: Scte35TimeSignalApos] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdAvailOffset(value: integerMinNegative1000Max1000): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdAvailOffset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdAvailOffset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AdAvailOffset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoRegionalBlackoutFlag(value: Scte35AposNoRegionalBlackoutBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoRegionalBlackoutFlag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoRegionalBlackoutFlag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NoRegionalBlackoutFlag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebDeliveryAllowedFlag(value: Scte35AposWebDeliveryAllowedBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebDeliveryAllowedFlag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebDeliveryAllowedFlag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("WebDeliveryAllowedFlag")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

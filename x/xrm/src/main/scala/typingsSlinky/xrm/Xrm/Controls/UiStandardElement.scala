@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 /**
   * Base interface for standard UI elements.
   */
-@js.native
 trait UiStandardElement
   extends UiCanGetVisibleElement
      with UiLabelElement {
@@ -15,7 +14,7 @@ trait UiStandardElement
     * Sets the visibility state.
     * @param visible true to show, false to hide.
     */
-  def setVisible(visible: Boolean): Unit = js.native
+  def setVisible(visible: Boolean): Unit
 }
 
 object UiStandardElement {
@@ -29,19 +28,5 @@ object UiStandardElement {
     val __obj = js.Dynamic.literal(getLabel = js.Any.fromFunction0(getLabel), getVisible = js.Any.fromFunction0(getVisible), setLabel = js.Any.fromFunction1(setLabel), setVisible = js.Any.fromFunction1(setVisible))
     __obj.asInstanceOf[UiStandardElement]
   }
-  @scala.inline
-  implicit class UiStandardElementOps[Self <: UiStandardElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetVisible(value: Boolean => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisible")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

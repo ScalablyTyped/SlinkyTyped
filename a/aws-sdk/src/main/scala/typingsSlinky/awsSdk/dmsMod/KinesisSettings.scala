@@ -42,113 +42,26 @@ trait KinesisSettings extends js.Object {
 
 object KinesisSettings {
   @scala.inline
-  def apply(): KinesisSettings = {
+  def apply(
+    IncludeControlDetails: js.UndefOr[BooleanOptional] = js.undefined,
+    IncludePartitionValue: js.UndefOr[BooleanOptional] = js.undefined,
+    IncludeTableAlterOperations: js.UndefOr[BooleanOptional] = js.undefined,
+    IncludeTransactionDetails: js.UndefOr[BooleanOptional] = js.undefined,
+    MessageFormat: MessageFormatValue = null,
+    PartitionIncludeSchemaTable: js.UndefOr[BooleanOptional] = js.undefined,
+    ServiceAccessRoleArn: String = null,
+    StreamArn: String = null
+  ): KinesisSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(IncludeControlDetails)) __obj.updateDynamic("IncludeControlDetails")(IncludeControlDetails.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludePartitionValue)) __obj.updateDynamic("IncludePartitionValue")(IncludePartitionValue.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeTableAlterOperations)) __obj.updateDynamic("IncludeTableAlterOperations")(IncludeTableAlterOperations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(IncludeTransactionDetails)) __obj.updateDynamic("IncludeTransactionDetails")(IncludeTransactionDetails.get.asInstanceOf[js.Any])
+    if (MessageFormat != null) __obj.updateDynamic("MessageFormat")(MessageFormat.asInstanceOf[js.Any])
+    if (!js.isUndefined(PartitionIncludeSchemaTable)) __obj.updateDynamic("PartitionIncludeSchemaTable")(PartitionIncludeSchemaTable.get.asInstanceOf[js.Any])
+    if (ServiceAccessRoleArn != null) __obj.updateDynamic("ServiceAccessRoleArn")(ServiceAccessRoleArn.asInstanceOf[js.Any])
+    if (StreamArn != null) __obj.updateDynamic("StreamArn")(StreamArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[KinesisSettings]
   }
-  @scala.inline
-  implicit class KinesisSettingsOps[Self <: KinesisSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIncludeControlDetails(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeControlDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeControlDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeControlDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludePartitionValue(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludePartitionValue")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludePartitionValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludePartitionValue")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeTableAlterOperations(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeTableAlterOperations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeTableAlterOperations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeTableAlterOperations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIncludeTransactionDetails(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeTransactionDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIncludeTransactionDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeTransactionDetails")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMessageFormat(value: MessageFormatValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMessageFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPartitionIncludeSchemaTable(value: BooleanOptional): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionIncludeSchemaTable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPartitionIncludeSchemaTable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionIncludeSchemaTable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceAccessRoleArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceAccessRoleArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceAccessRoleArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamArn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamArn")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

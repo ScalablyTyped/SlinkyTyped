@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
 import typingsSlinky.antd.antdBooleans.`false`
-import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.tableInterfaceMod.TablePaginationConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,6 +21,6 @@ object usePaginationMod extends js.Object {
     pagination: js.UndefOr[`false`],
     onChange: js.Function2[/* current */ Double, /* pageSize */ Double, Unit]
   ): js.Tuple2[TablePaginationConfig, js.Function0[Unit]] = js.native
-  def getPaginationParam(pagination: js.UndefOr[Boolean | PaginationConfig], mergedPagination: PaginationConfig): js.Any = js.native
+  def getPaginationParam(pagination: js.UndefOr[Boolean | TablePaginationConfig], mergedPagination: TablePaginationConfig): js.Any = js.native
 }
 

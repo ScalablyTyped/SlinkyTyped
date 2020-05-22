@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IUserInfo extends IWorkflowInfo {
-  var roleId: String = js.native
+  var roleId: String
 }
 
 object IUserInfo {
@@ -15,19 +14,5 @@ object IUserInfo {
     val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], roleId = roleId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUserInfo]
   }
-  @scala.inline
-  implicit class IUserInfoOps[Self <: IUserInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withRoleId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("roleId")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -5,101 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<stripe.stripe.IAddress> */
-@js.native
 trait PartialIAddress extends js.Object {
-  var city: js.UndefOr[String] = js.native
-  var country: js.UndefOr[String] = js.native
-  var line1: js.UndefOr[String] = js.native
-  var line2: js.UndefOr[String] = js.native
-  var postal_code: js.UndefOr[String] = js.native
-  var state: js.UndefOr[String] = js.native
+  var city: js.UndefOr[String] = js.undefined
+  var country: js.UndefOr[String] = js.undefined
+  var line1: js.UndefOr[String] = js.undefined
+  var line2: js.UndefOr[String] = js.undefined
+  var postal_code: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.undefined
 }
 
 object PartialIAddress {
   @scala.inline
-  def apply(): PartialIAddress = {
+  def apply(
+    city: String = null,
+    country: String = null,
+    line1: String = null,
+    line2: String = null,
+    postal_code: String = null,
+    state: String = null
+  ): PartialIAddress = {
     val __obj = js.Dynamic.literal()
+    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
+    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
+    if (line1 != null) __obj.updateDynamic("line1")(line1.asInstanceOf[js.Any])
+    if (line2 != null) __obj.updateDynamic("line2")(line2.asInstanceOf[js.Any])
+    if (postal_code != null) __obj.updateDynamic("postal_code")(postal_code.asInstanceOf[js.Any])
+    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIAddress]
   }
-  @scala.inline
-  implicit class PartialIAddressOps[Self <: PartialIAddress] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCity(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCountry(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCountry: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine1(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line1")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine1: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line1")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLine2(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line2")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLine2: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("line2")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostal_code(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postal_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostal_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postal_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withState(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

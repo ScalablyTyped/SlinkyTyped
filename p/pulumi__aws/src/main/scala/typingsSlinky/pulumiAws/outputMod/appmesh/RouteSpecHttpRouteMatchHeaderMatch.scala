@@ -11,7 +11,8 @@ trait RouteSpecHttpRouteMatchHeaderMatch extends js.Object {
     */
   var exact: js.UndefOr[String] = js.native
   /**
-    * The header value sent by the client must begin with the specified characters.
+    * Specifies the path with which to match requests.
+    * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
     * * `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
     */
   var prefix: js.UndefOr[String] = js.native
@@ -28,77 +29,20 @@ trait RouteSpecHttpRouteMatchHeaderMatch extends js.Object {
 
 object RouteSpecHttpRouteMatchHeaderMatch {
   @scala.inline
-  def apply(): RouteSpecHttpRouteMatchHeaderMatch = {
+  def apply(
+    exact: String = null,
+    prefix: String = null,
+    range: RouteSpecHttpRouteMatchHeaderMatchRange = null,
+    regex: String = null,
+    suffix: String = null
+  ): RouteSpecHttpRouteMatchHeaderMatch = {
     val __obj = js.Dynamic.literal()
+    if (exact != null) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
+    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
+    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteSpecHttpRouteMatchHeaderMatch]
   }
-  @scala.inline
-  implicit class RouteSpecHttpRouteMatchHeaderMatchOps[Self <: RouteSpecHttpRouteMatchHeaderMatch] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withExact(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExact: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRange(value: RouteSpecHttpRouteMatchHeaderMatchRange): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegex(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuffix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuffix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

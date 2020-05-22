@@ -9,117 +9,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SourceTableFeatureDetails extends js.Object {
   /**
     * <p>Represents the GSI properties for the table when the backup was created. It includes the IndexName, KeySchema, Projection and ProvisionedThroughput for the GSIs on the table at the time of backup. </p>
     */
-  var GlobalSecondaryIndexes: js.UndefOr[js.Array[GlobalSecondaryIndexInfo] | js.Iterable[GlobalSecondaryIndexInfo]] = js.native
+  var GlobalSecondaryIndexes: js.UndefOr[js.Array[GlobalSecondaryIndexInfo] | js.Iterable[GlobalSecondaryIndexInfo]] = js.undefined
   /**
     * <p>Represents the LSI properties for the table when the backup was created. It includes the IndexName, KeySchema and Projection for the LSIs on the table at the time of backup. </p>
     */
-  var LocalSecondaryIndexes: js.UndefOr[js.Array[LocalSecondaryIndexInfo] | js.Iterable[LocalSecondaryIndexInfo]] = js.native
+  var LocalSecondaryIndexes: js.UndefOr[js.Array[LocalSecondaryIndexInfo] | js.Iterable[LocalSecondaryIndexInfo]] = js.undefined
   /**
     * <p>The description of the server-side encryption status on the table when the backup was created.</p>
     */
-  var SSEDescription: js.UndefOr[typingsSlinky.awsSdkClientDynamodbBrowser.typesSsedescriptionMod.SSEDescription] = js.native
+  var SSEDescription: js.UndefOr[typingsSlinky.awsSdkClientDynamodbBrowser.typesSsedescriptionMod.SSEDescription] = js.undefined
   /**
     * <p>Stream settings on the table when the backup was created.</p>
     */
-  var StreamDescription: js.UndefOr[StreamSpecification] = js.native
+  var StreamDescription: js.UndefOr[StreamSpecification] = js.undefined
   /**
     * <p>Time to Live settings on the table when the backup was created.</p>
     */
   var TimeToLiveDescription: js.UndefOr[
     typingsSlinky.awsSdkClientDynamodbBrowser.typesTimeToLiveDescriptionMod.TimeToLiveDescription
-  ] = js.native
+  ] = js.undefined
 }
 
 object SourceTableFeatureDetails {
   @scala.inline
-  def apply(): SourceTableFeatureDetails = {
+  def apply(
+    GlobalSecondaryIndexes: js.Array[GlobalSecondaryIndexInfo] | js.Iterable[GlobalSecondaryIndexInfo] = null,
+    LocalSecondaryIndexes: js.Array[LocalSecondaryIndexInfo] | js.Iterable[LocalSecondaryIndexInfo] = null,
+    SSEDescription: SSEDescription = null,
+    StreamDescription: StreamSpecification = null,
+    TimeToLiveDescription: TimeToLiveDescription = null
+  ): SourceTableFeatureDetails = {
     val __obj = js.Dynamic.literal()
+    if (GlobalSecondaryIndexes != null) __obj.updateDynamic("GlobalSecondaryIndexes")(GlobalSecondaryIndexes.asInstanceOf[js.Any])
+    if (LocalSecondaryIndexes != null) __obj.updateDynamic("LocalSecondaryIndexes")(LocalSecondaryIndexes.asInstanceOf[js.Any])
+    if (SSEDescription != null) __obj.updateDynamic("SSEDescription")(SSEDescription.asInstanceOf[js.Any])
+    if (StreamDescription != null) __obj.updateDynamic("StreamDescription")(StreamDescription.asInstanceOf[js.Any])
+    if (TimeToLiveDescription != null) __obj.updateDynamic("TimeToLiveDescription")(TimeToLiveDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceTableFeatureDetails]
   }
-  @scala.inline
-  implicit class SourceTableFeatureDetailsOps[Self <: SourceTableFeatureDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGlobalSecondaryIndexesIterable(value: js.Iterable[GlobalSecondaryIndexInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGlobalSecondaryIndexes(value: js.Array[GlobalSecondaryIndexInfo] | js.Iterable[GlobalSecondaryIndexInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGlobalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocalSecondaryIndexesIterable(value: js.Iterable[LocalSecondaryIndexInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocalSecondaryIndexes(value: js.Array[LocalSecondaryIndexInfo] | js.Iterable[LocalSecondaryIndexInfo]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocalSecondaryIndexes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSSEDescription(value: SSEDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSSEDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreamDescription(value: StreamSpecification): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreamDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamDescription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimeToLiveDescription(value: TimeToLiveDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveDescription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimeToLiveDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeToLiveDescription")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

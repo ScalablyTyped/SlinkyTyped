@@ -15,7 +15,6 @@ import scala.scalajs.js.annotation._
   * correctly written.
   * @see com.sun.star.linguistic2.XSupportedLocales
   */
-@js.native
 trait XSpellChecker extends XSupportedLocales {
   /**
     * checks if a word is spelled correctly in a given language.
@@ -25,7 +24,7 @@ trait XSpellChecker extends XSupportedLocales {
     * @returns `TRUE` if the word is spelled correctly using the specified language, `FALSE` otherwise.
     * @see com.sun.star.lang.Locale
     */
-  def isValid(aWord: String, aLocale: Locale, aProperties: PropertyValues): Boolean = js.native
+  def isValid(aWord: String, aLocale: Locale, aProperties: PropertyValues): Boolean
   /**
     * This method checks if a word is spelled correctly in a given language.
     * @param aWord the word to be checked.
@@ -35,7 +34,7 @@ trait XSpellChecker extends XSupportedLocales {
     * @see com.sun.star.linguistic2.XSpellAlternatives
     * @see com.sun.star.lang.Locale
     */
-  def spell(aWord: String, aLocale: Locale, aProperties: PropertyValues): XSpellAlternatives = js.native
+  def spell(aWord: String, aLocale: Locale, aProperties: PropertyValues): XSpellAlternatives
 }
 
 object XSpellChecker {
@@ -53,25 +52,5 @@ object XSpellChecker {
     val __obj = js.Dynamic.literal(Locales = Locales.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getLocales = js.Any.fromFunction0(getLocales), hasLocale = js.Any.fromFunction1(hasLocale), isValid = js.Any.fromFunction3(isValid), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), spell = js.Any.fromFunction3(spell))
     __obj.asInstanceOf[XSpellChecker]
   }
-  @scala.inline
-  implicit class XSpellCheckerOps[Self <: XSpellChecker] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withIsValid(value: (String, Locale, PropertyValues) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSpell(value: (String, Locale, PropertyValues) => XSpellAlternatives): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spell")(js.Any.fromFunction3(value))
-        ret
-    }
-  }
-  
 }
 

@@ -250,27 +250,27 @@ trait BaseCamera
     * @param x The horizontal coordinate to center on.
     * @param y The vertical coordinate to center on.
     */
-  def centerOn(x: Double, y: Double): BaseCamera = js.native
+  def centerOn(x: Double, y: Double): this.type = js.native
   /**
     * Moves the Camera horizontally so that it is centered on the given x coordinate, bounds allowing.
     * Calling this does not change the scrollY value.
     * @param x The horizontal coordinate to center on.
     */
-  def centerOnX(x: Double): BaseCamera = js.native
+  def centerOnX(x: Double): this.type = js.native
   /**
     * Moves the Camera vertically so that it is centered on the given y coordinate, bounds allowing.
     * Calling this does not change the scrollX value.
     * @param y The vertical coordinate to center on.
     */
-  def centerOnY(y: Double): BaseCamera = js.native
+  def centerOnY(y: Double): this.type = js.native
   /**
     * Moves the Camera so that it is looking at the center of the Camera Bounds, if enabled.
     */
-  def centerToBounds(): BaseCamera = js.native
+  def centerToBounds(): this.type = js.native
   /**
     * Moves the Camera so that it is re-centered based on its viewport size.
     */
-  def centerToSize(): BaseCamera = js.native
+  def centerToSize(): this.type = js.native
   /**
     * Takes an x value and checks it's within the range of the Camera bounds, adjusting if required.
     * Do not call this method if you are not using camera bounds.
@@ -324,14 +324,14 @@ trait BaseCamera
     */
   def getWorldPoint[O /* <: Vector2 */](x: Double, y: Double): O = js.native
   def getWorldPoint[O /* <: Vector2 */](x: Double, y: Double, output: O): O = js.native
-  def ignore(entries: js.Array[GameObject]): BaseCamera = js.native
+  def ignore(entries: js.Array[GameObject]): this.type = js.native
   /**
     * Given a Game Object, or an array of Game Objects, it will update all of their camera filter settings
     * so that they are ignored by this Camera. This means they will not be rendered by this Camera.
     * @param entries The Game Object, or array of Game Objects, to be ignored by this Camera.
     */
-  def ignore(entries: GameObject): BaseCamera = js.native
-  def ignore(entries: Group): BaseCamera = js.native
+  def ignore(entries: GameObject): this.type = js.native
+  def ignore(entries: Group): this.type = js.native
   /**
     * Internal preRender step.
     * @param resolution The game resolution, as set in the Scale Manager.
@@ -340,15 +340,15 @@ trait BaseCamera
   /**
     * If this Camera has previously had movement bounds set on it, this will remove them.
     */
-  def removeBounds(): BaseCamera = js.native
+  def removeBounds(): this.type = js.native
   /**
     * Set the rotation of this Camera. This causes everything it renders to appear rotated.
     * 
     * Rotating a camera does not rotate the viewport itself, it is applied during rendering.
     * @param value The cameras angle of rotation, given in degrees. Default 0.
     */
-  def setAngle(): BaseCamera = js.native
-  def setAngle(value: Double): BaseCamera = js.native
+  def setAngle(): this.type = js.native
+  def setAngle(value: Double): this.type = js.native
   /**
     * Sets the background color for this Camera.
     * 
@@ -358,10 +358,10 @@ trait BaseCamera
     * The color value can be specified using CSS color notation, hex or numbers.
     * @param color The color value. In CSS, hex or numeric color notation. Default 'rgba(0,0,0,0)'.
     */
-  def setBackgroundColor(): BaseCamera = js.native
-  def setBackgroundColor(color: String): BaseCamera = js.native
-  def setBackgroundColor(color: Double): BaseCamera = js.native
-  def setBackgroundColor(color: InputColorObject): BaseCamera = js.native
+  def setBackgroundColor(): this.type = js.native
+  def setBackgroundColor(color: String): this.type = js.native
+  def setBackgroundColor(color: Double): this.type = js.native
+  def setBackgroundColor(color: InputColorObject): this.type = js.native
   /**
     * Set the bounds of the Camera. The bounds are an axis-aligned rectangle.
     * 
@@ -386,8 +386,8 @@ trait BaseCamera
     * @param height The height of the bounds, in pixels.
     * @param centerOn If `true` the Camera will automatically be centered on the new bounds. Default false.
     */
-  def setBounds(x: integer, y: integer, width: integer, height: integer): BaseCamera = js.native
-  def setBounds(x: integer, y: integer, width: integer, height: integer, centerOn: Boolean): BaseCamera = js.native
+  def setBounds(x: integer, y: integer, width: integer, height: integer): this.type = js.native
+  def setBounds(x: integer, y: integer, width: integer, height: integer, centerOn: Boolean): this.type = js.native
   /**
     * Sets the mask to be applied to this Camera during rendering.
     * 
@@ -413,8 +413,8 @@ trait BaseCamera
     * This value is for your own use and isn't used internally.
     * @param value The name of the Camera. Default ''.
     */
-  def setName(): BaseCamera = js.native
-  def setName(value: String): BaseCamera = js.native
+  def setName(): this.type = js.native
+  def setName(value: String): this.type = js.native
   /**
     * Sets the rotation origin of this Camera.
     * 
@@ -437,30 +437,30 @@ trait BaseCamera
     * @param x The top-left x coordinate of the Camera viewport.
     * @param y The top-left y coordinate of the Camera viewport. Default x.
     */
-  def setPosition(x: Double): BaseCamera = js.native
-  def setPosition(x: Double, y: Double): BaseCamera = js.native
+  def setPosition(x: Double): this.type = js.native
+  def setPosition(x: Double, y: Double): this.type = js.native
   /**
     * Set the rotation of this Camera. This causes everything it renders to appear rotated.
     * 
     * Rotating a camera does not rotate the viewport itself, it is applied during rendering.
     * @param value The rotation of the Camera, in radians. Default 0.
     */
-  def setRotation(): BaseCamera = js.native
-  def setRotation(value: Double): BaseCamera = js.native
+  def setRotation(): this.type = js.native
+  def setRotation(value: Double): this.type = js.native
   /**
     * Should the Camera round pixel values to whole integers when rendering Game Objects?
     * 
     * In some types of game, especially with pixel art, this is required to prevent sub-pixel aliasing.
     * @param value `true` to round Camera pixels, `false` to not.
     */
-  def setRoundPixels(value: Boolean): BaseCamera = js.native
+  def setRoundPixels(value: Boolean): this.type = js.native
   /**
     * Sets the Scene the Camera is bound to.
     * 
     * Also populates the `resolution` property and updates the internal size values.
     * @param scene The Scene the camera is bound to.
     */
-  def setScene(scene: Scene): BaseCamera = js.native
+  def setScene(scene: Scene): this.type = js.native
   /**
     * Set the position of where the Camera is looking within the game.
     * You can also modify the properties `Camera.scrollX` and `Camera.scrollY` directly.
@@ -470,8 +470,8 @@ trait BaseCamera
     * @param x The x coordinate of the Camera in the game world.
     * @param y The y coordinate of the Camera in the game world. Default x.
     */
-  def setScroll(x: Double): BaseCamera = js.native
-  def setScroll(x: Double, y: Double): BaseCamera = js.native
+  def setScroll(x: Double): this.type = js.native
+  def setScroll(x: Double, y: Double): this.type = js.native
   /**
     * Set the size of the Camera viewport.
     * 
@@ -481,8 +481,8 @@ trait BaseCamera
     * @param width The width of the Camera viewport.
     * @param height The height of the Camera viewport. Default width.
     */
-  def setSize(width: integer): BaseCamera = js.native
-  def setSize(width: integer, height: integer): BaseCamera = js.native
+  def setSize(width: integer): this.type = js.native
+  def setSize(width: integer, height: integer): this.type = js.native
   /**
     * This method sets the position and size of the Camera viewport in a single call.
     * 
@@ -498,8 +498,8 @@ trait BaseCamera
     * @param width The width of the Camera viewport.
     * @param height The height of the Camera viewport. Default width.
     */
-  def setViewport(x: Double, y: Double, width: integer): BaseCamera = js.native
-  def setViewport(x: Double, y: Double, width: integer, height: integer): BaseCamera = js.native
+  def setViewport(x: Double, y: Double, width: integer): this.type = js.native
+  def setViewport(x: Double, y: Double, width: integer, height: integer): this.type = js.native
   /**
     * Set the zoom value of the Camera.
     * 
@@ -511,8 +511,8 @@ trait BaseCamera
     * Changing the zoom does not impact the Camera viewport in any way, it is only applied during rendering.
     * @param value The zoom value of the Camera. The minimum it can be is 0.001. Default 1.
     */
-  def setZoom(): BaseCamera = js.native
-  def setZoom(value: Double): BaseCamera = js.native
+  def setZoom(): this.type = js.native
+  def setZoom(value: Double): this.type = js.native
   /**
     * Returns an Object suitable for JSON storage containing all of the Camera viewport and rendering properties.
     */

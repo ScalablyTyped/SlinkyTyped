@@ -1,5 +1,6 @@
 package typingsSlinky.reduxLittleRouter.mod
 
+import typingsSlinky.reduxLittleRouter.anon.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,22 +20,61 @@ trait RouterActions extends js.Object
 
 object RouterActions {
   @scala.inline
-  implicit def apply(value: BlockAction): RouterActions = value.asInstanceOf[RouterActions]
+  def LocationChangedAction(payload: Location, `type`: /* "ROUTER_LOCATION_CHANGED" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: GoAction): RouterActions = value.asInstanceOf[RouterActions]
+  def GoBackAction(`type`: /* "ROUTER_GO_BACK" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: GoBackAction): RouterActions = value.asInstanceOf[RouterActions]
+  def PushAction(payload: Location, `type`: /* "ROUTER_PUSH" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: GoForwardAction): RouterActions = value.asInstanceOf[RouterActions]
+  def ReplaceRoutesAction(payload: Options, `type`: /* "ROUTER_REPLACE_ROUTES" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: LocationChangedAction): RouterActions = value.asInstanceOf[RouterActions]
+  def UnblockAction(`type`: /* "ROUTER_UNBLOCK" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: PushAction): RouterActions = value.asInstanceOf[RouterActions]
+  def BlockAction(
+    payload: (/* location */ Location, /* action */ js.UndefOr[HistoryAction]) => String,
+    `type`: /* "ROUTER_BLOCK" */ String
+  ): RouterActions = {
+    val __obj = js.Dynamic.literal(payload = js.Any.fromFunction2(payload))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: ReplaceAction): RouterActions = value.asInstanceOf[RouterActions]
+  def GoAction(payload: Double, `type`: /* "ROUTER_GO" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: ReplaceRoutesAction): RouterActions = value.asInstanceOf[RouterActions]
+  def ReplaceAction(payload: Location, `type`: /* "ROUTER_REPLACE" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
   @scala.inline
-  implicit def apply(value: UnblockAction): RouterActions = value.asInstanceOf[RouterActions]
+  def GoForwardAction(`type`: /* "ROUTER_GO_FORWARD" */ String): RouterActions = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RouterActions]
+  }
 }
 

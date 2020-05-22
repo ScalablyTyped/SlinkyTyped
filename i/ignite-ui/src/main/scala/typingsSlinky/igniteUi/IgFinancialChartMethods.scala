@@ -4,99 +4,98 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IgFinancialChartMethods extends js.Object {
   /**
-  	 * Adds a new item to the data source and notifies the chart.
-  	 *
-  	 * @param item The item that we want to add to the data source.
-  	 */
-  def addItem(item: js.Object): js.Object = js.native
+    * Adds a new item to the data source and notifies the chart.
+    *
+    * @param item The item that we want to add to the data source.
+    */
+  def addItem(item: js.Object): js.Object
   /**
-  	 * Get reference to chart object.
-  	 */
-  def chart(): js.Object = js.native
+    * Get reference to chart object.
+    */
+  def chart(): js.Object
   /**
-  	 * Binds data to the chart
-  	 */
-  def dataBind(): Unit = js.native
-  def destroy(): Unit = js.native
-  def exportVisualData(): Unit = js.native
+    * Binds data to the chart
+    */
+  def dataBind(): Unit
+  def destroy(): Unit
+  def exportVisualData(): Unit
   /**
-  	 * Find index of item within actual data used by chart.
-  	 *
-  	 * @param item The reference to item.
-  	 */
-  def findIndexOfItem(item: js.Object): Double = js.native
+    * Find index of item within actual data used by chart.
+    *
+    * @param item The reference to item.
+    */
+  def findIndexOfItem(item: js.Object): Double
   /**
-  	 * Forces any pending deferred work to render on the chart before continuing
-  	 */
-  def flush(): Unit = js.native
+    * Forces any pending deferred work to render on the chart before continuing
+    */
+  def flush(): Unit
   /**
-  	 * Get reference of actual data used by chart.
-  	 */
-  def getData(): js.Array[_] = js.native
+    * Get reference of actual data used by chart.
+    */
+  def getData(): js.Array[_]
   /**
-  	 * Get item within actual data used by chart. That is similar to this.getData()[ index ].
-  	 *
-  	 * @param index Index of data item.
-  	 */
-  def getDataItem(index: js.Object): js.Object = js.native
-  def id(): Unit = js.native
+    * Get item within actual data used by chart. That is similar to this.getData()[ index ].
+    *
+    * @param index Index of data item.
+    */
+  def getDataItem(index: js.Object): js.Object
+  def id(): Unit
   /**
-  	 * Inserts a new item to the data source and notifies the chart.
-  	 *
-  	 * @param item the new item that we want to insert in the data source.
-  	 * @param index The index in the data source where the new item will be inserted.
-  	 */
-  def insertItem(item: js.Object, index: Double): js.Object = js.native
+    * Inserts a new item to the data source and notifies the chart.
+    *
+    * @param item the new item that we want to insert in the data source.
+    * @param index The index in the data source where the new item will be inserted.
+    */
+  def insertItem(item: js.Object, index: Double): js.Object
   /**
-  	 * Notifies the chart that the items have been cleared from an associated data source.
-  	 * It's not necessary to notify more than one target of a change if they share the same items source.
-  	 *
-  	 * @param dataSource The data source in which the change happened.
-  	 */
-  def notifyClearItems(dataSource: js.Object): js.Object = js.native
+    * Notifies the chart that the items have been cleared from an associated data source.
+    * It's not necessary to notify more than one target of a change if they share the same items source.
+    *
+    * @param dataSource The data source in which the change happened.
+    */
+  def notifyClearItems(dataSource: js.Object): js.Object
   /**
-  	 * Notifies the target axis or series that an item has been inserted at the specified index in its data source.
-  	 * It's not necessary to notify more than one target of a change if they share the same items source.
-  	 *
-  	 * @param dataSource The data source in which the change happened.
-  	 * @param index The index in the items source where the new item has been inserted.
-  	 * @param newItem the new item that has been set in the collection.
-  	 */
-  def notifyInsertItem(dataSource: js.Object, index: Double, newItem: js.Object): js.Object = js.native
+    * Notifies the target axis or series that an item has been inserted at the specified index in its data source.
+    * It's not necessary to notify more than one target of a change if they share the same items source.
+    *
+    * @param dataSource The data source in which the change happened.
+    * @param index The index in the items source where the new item has been inserted.
+    * @param newItem the new item that has been set in the collection.
+    */
+  def notifyInsertItem(dataSource: js.Object, index: Double, newItem: js.Object): js.Object
   /**
-  	 * Notifies the target axis or series that an item has been removed from the specified index in its data source.
-  	 * It's not necessary to notify more than one target of a change if they share the same items source.
-  	 *
-  	 * @param dataSource The data source in which the change happened.
-  	 * @param index The index in the items source from where the old item has been removed.
-  	 * @param oldItem the old item that has been removed from the collection.
-  	 */
-  def notifyRemoveItem(dataSource: js.Object, index: Double, oldItem: js.Object): js.Object = js.native
+    * Notifies the target axis or series that an item has been removed from the specified index in its data source.
+    * It's not necessary to notify more than one target of a change if they share the same items source.
+    *
+    * @param dataSource The data source in which the change happened.
+    * @param index The index in the items source from where the old item has been removed.
+    * @param oldItem the old item that has been removed from the collection.
+    */
+  def notifyRemoveItem(dataSource: js.Object, index: Double, oldItem: js.Object): js.Object
   /**
-  	 * Notifies the chart that an item has been set in an associated data source.
-  	 *
-  	 * @param dataSource The data source in which the change happened.
-  	 * @param index The index in the items source that has been changed.
-  	 * @param newItem the new item that has been set in the collection.
-  	 * @param oldItem the old item that has been overwritten in the collection.
-  	 */
-  def notifySetItem(dataSource: js.Object, index: Double, newItem: js.Object, oldItem: js.Object): js.Object = js.native
+    * Notifies the chart that an item has been set in an associated data source.
+    *
+    * @param dataSource The data source in which the change happened.
+    * @param index The index in the items source that has been changed.
+    * @param newItem the new item that has been set in the collection.
+    * @param oldItem the old item that has been overwritten in the collection.
+    */
+  def notifySetItem(dataSource: js.Object, index: Double, newItem: js.Object, oldItem: js.Object): js.Object
   /**
-  	 * Deletes an item from the data source and notifies the chart.
-  	 *
-  	 * @param index The index in the data source from where the item will be been removed.
-  	 */
-  def removeItem(index: Double): js.Object = js.native
+    * Deletes an item from the data source and notifies the chart.
+    *
+    * @param index The index in the data source from where the item will be been removed.
+    */
+  def removeItem(index: Double): js.Object
   /**
-  	 * Updates an item in the data source and notifies the chart.
-  	 *
-  	 * @param index The index of the item in the data source that we want to change.
-  	 * @param item The new item object that will be set in the data source.
-  	 */
-  def setItem(index: Double, item: js.Object): js.Object = js.native
+    * Updates an item in the data source and notifies the chart.
+    *
+    * @param index The index of the item in the data source that we want to change.
+    * @param item The new item object that will be set in the data source.
+    */
+  def setItem(index: Double, item: js.Object): js.Object
 }
 
 object IgFinancialChartMethods {
@@ -123,115 +122,5 @@ object IgFinancialChartMethods {
     val __obj = js.Dynamic.literal(addItem = js.Any.fromFunction1(addItem), chart = js.Any.fromFunction0(chart), dataBind = js.Any.fromFunction0(dataBind), destroy = js.Any.fromFunction0(destroy), exportVisualData = js.Any.fromFunction0(exportVisualData), findIndexOfItem = js.Any.fromFunction1(findIndexOfItem), flush = js.Any.fromFunction0(flush), getData = js.Any.fromFunction0(getData), getDataItem = js.Any.fromFunction1(getDataItem), id = js.Any.fromFunction0(id), insertItem = js.Any.fromFunction2(insertItem), notifyClearItems = js.Any.fromFunction1(notifyClearItems), notifyInsertItem = js.Any.fromFunction3(notifyInsertItem), notifyRemoveItem = js.Any.fromFunction3(notifyRemoveItem), notifySetItem = js.Any.fromFunction4(notifySetItem), removeItem = js.Any.fromFunction1(removeItem), setItem = js.Any.fromFunction2(setItem))
     __obj.asInstanceOf[IgFinancialChartMethods]
   }
-  @scala.inline
-  implicit class IgFinancialChartMethodsOps[Self <: IgFinancialChartMethods] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddItem(value: js.Object => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withChart(value: () => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDataBind(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBind")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withExportVisualData(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exportVisualData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFindIndexOfItem(value: js.Object => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("findIndexOfItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFlush(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetData(value: () => js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetDataItem(value: js.Object => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withId(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withInsertItem(value: (js.Object, Double) => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("insertItem")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withNotifyClearItems(value: js.Object => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyClearItems")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withNotifyInsertItem(value: (js.Object, Double, js.Object) => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyInsertItem")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withNotifyRemoveItem(value: (js.Object, Double, js.Object) => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyRemoveItem")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withNotifySetItem(value: (js.Object, Double, js.Object, js.Object) => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("notifySetItem")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveItem(value: Double => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetItem(value: (Double, js.Object) => js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setItem")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

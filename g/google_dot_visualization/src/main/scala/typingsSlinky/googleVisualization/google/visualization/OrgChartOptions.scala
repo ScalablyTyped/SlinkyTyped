@@ -4,119 +4,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait OrgChartOptions extends js.Object {
-  var allowCollapse: js.UndefOr[Boolean] = js.native
-  var allowHtml: js.UndefOr[Boolean] = js.native
-  var color: js.UndefOr[String] = js.native
-  var nodeClass: js.UndefOr[String] = js.native
-  var selectedNodeClass: js.UndefOr[String] = js.native
-  var selectionColor: js.UndefOr[String] = js.native
+  var allowCollapse: js.UndefOr[Boolean] = js.undefined
+  var allowHtml: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[String] = js.undefined
+  var nodeClass: js.UndefOr[String] = js.undefined
+  var selectedNodeClass: js.UndefOr[String] = js.undefined
+  var selectionColor: js.UndefOr[String] = js.undefined
   /**
     * Chart size
     * @type {('small'|'medium'|'large')}
     * @default 'medium'
     */
-  var size: js.UndefOr[String] = js.native
+  var size: js.UndefOr[String] = js.undefined
 }
 
 object OrgChartOptions {
   @scala.inline
-  def apply(): OrgChartOptions = {
+  def apply(
+    allowCollapse: js.UndefOr[Boolean] = js.undefined,
+    allowHtml: js.UndefOr[Boolean] = js.undefined,
+    color: String = null,
+    nodeClass: String = null,
+    selectedNodeClass: String = null,
+    selectionColor: String = null,
+    size: String = null
+  ): OrgChartOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowCollapse)) __obj.updateDynamic("allowCollapse")(allowCollapse.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowHtml)) __obj.updateDynamic("allowHtml")(allowHtml.get.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (nodeClass != null) __obj.updateDynamic("nodeClass")(nodeClass.asInstanceOf[js.Any])
+    if (selectedNodeClass != null) __obj.updateDynamic("selectedNodeClass")(selectedNodeClass.asInstanceOf[js.Any])
+    if (selectionColor != null) __obj.updateDynamic("selectionColor")(selectionColor.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgChartOptions]
   }
-  @scala.inline
-  implicit class OrgChartOptionsOps[Self <: OrgChartOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowCollapse(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCollapse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowCollapse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCollapse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowHtml(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHtml")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowHtml: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHtml")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNodeClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNodeClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectedNodeClass(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNodeClass")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectedNodeClass: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNodeClass")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectionColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectionColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSize(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

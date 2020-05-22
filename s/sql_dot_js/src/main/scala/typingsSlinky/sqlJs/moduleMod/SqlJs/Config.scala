@@ -11,613 +11,156 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<emscripten.EmscriptenModule> */
-@js.native
 trait Config extends js.Object {
-  var FAST_MEMORY: js.UndefOr[Double] = js.native
-  var FHEAP: js.UndefOr[js.typedarray.Float64Array] = js.native
-  var HEAP: js.UndefOr[js.typedarray.Int32Array] = js.native
-  var HEAP16: js.UndefOr[js.typedarray.Int16Array] = js.native
-  var HEAP32: js.UndefOr[js.typedarray.Int32Array] = js.native
-  var HEAP8: js.UndefOr[js.typedarray.Int8Array] = js.native
-  var HEAPF32: js.UndefOr[js.typedarray.Float32Array] = js.native
-  var HEAPF64: js.UndefOr[js.typedarray.Float64Array] = js.native
-  var HEAPU16: js.UndefOr[js.typedarray.Uint16Array] = js.native
-  var HEAPU32: js.UndefOr[js.typedarray.Uint32Array] = js.native
-  var HEAPU8: js.UndefOr[js.typedarray.Uint8Array] = js.native
-  var IHEAP: js.UndefOr[js.typedarray.Int32Array] = js.native
-  var TOTAL_MEMORY: js.UndefOr[Double] = js.native
-  var TOTAL_STACK: js.UndefOr[Double] = js.native
-  var _free: js.UndefOr[js.Function1[/* ptr */ Double, Unit]] = js.native
-  var _malloc: js.UndefOr[js.Function1[/* size */ Double, Double]] = js.native
-  var addOnExit: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.native
-  var addOnInit: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.native
-  var addOnPostRun: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.native
-  var addOnPreMain: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.native
-  var addOnPreRun: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.native
-  var arguments: js.UndefOr[js.Array[String]] = js.native
-  var destroy: js.UndefOr[js.Function1[/* object */ js.Object, Unit]] = js.native
-  var environment: js.UndefOr[EnvironmentType] = js.native
-  var filePackagePrefixURL: js.UndefOr[String] = js.native
+  var FAST_MEMORY: js.UndefOr[Double] = js.undefined
+  var FHEAP: js.UndefOr[js.typedarray.Float64Array] = js.undefined
+  var HEAP: js.UndefOr[js.typedarray.Int32Array] = js.undefined
+  var HEAP16: js.UndefOr[js.typedarray.Int16Array] = js.undefined
+  var HEAP32: js.UndefOr[js.typedarray.Int32Array] = js.undefined
+  var HEAP8: js.UndefOr[js.typedarray.Int8Array] = js.undefined
+  var HEAPF32: js.UndefOr[js.typedarray.Float32Array] = js.undefined
+  var HEAPF64: js.UndefOr[js.typedarray.Float64Array] = js.undefined
+  var HEAPU16: js.UndefOr[js.typedarray.Uint16Array] = js.undefined
+  var HEAPU32: js.UndefOr[js.typedarray.Uint32Array] = js.undefined
+  var HEAPU8: js.UndefOr[js.typedarray.Uint8Array] = js.undefined
+  var IHEAP: js.UndefOr[js.typedarray.Int32Array] = js.undefined
+  var TOTAL_MEMORY: js.UndefOr[Double] = js.undefined
+  var TOTAL_STACK: js.UndefOr[Double] = js.undefined
+  var _free: js.UndefOr[js.Function1[/* ptr */ Double, Unit]] = js.undefined
+  var _malloc: js.UndefOr[js.Function1[/* size */ Double, Double]] = js.undefined
+  var addOnExit: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.undefined
+  var addOnInit: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.undefined
+  var addOnPostRun: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.undefined
+  var addOnPreMain: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.undefined
+  var addOnPreRun: js.UndefOr[js.Function1[/* cb */ js.Function0[_], Unit]] = js.undefined
+  var arguments: js.UndefOr[js.Array[String]] = js.undefined
+  var destroy: js.UndefOr[js.Function1[/* object */ js.Object, Unit]] = js.undefined
+  var environment: js.UndefOr[EnvironmentType] = js.undefined
+  var filePackagePrefixURL: js.UndefOr[String] = js.undefined
   var getPreloadedPackage: js.UndefOr[
     js.Function2[
       /* remotePackageName */ String, 
       /* remotePackageSize */ Double, 
       js.typedarray.ArrayBuffer
     ]
-  ] = js.native
+  ] = js.undefined
   var instantiateWasm: js.UndefOr[
     js.Function2[
       /* imports */ WebAssemblyImports, 
       /* successCallback */ js.Function1[/* module */ Module, Unit], 
       WebAssemblyExports
     ]
-  ] = js.native
-  var locateFile: js.UndefOr[js.Function2[/* url */ String, /* scriptDirectory */ String, String]] = js.native
-  var logReadFiles: js.UndefOr[Boolean] = js.native
-  var noExitRuntime: js.UndefOr[Boolean] = js.native
-  var noInitialRun: js.UndefOr[Boolean] = js.native
-  var onAbort: js.UndefOr[js.Function1[/* what */ js.Any, Unit]] = js.native
-  var onCustomMessage: js.UndefOr[js.Function1[/* event */ MessageEvent, Unit]] = js.native
-  var onRuntimeInitialized: js.UndefOr[js.Function0[Unit]] = js.native
-  var postRun: js.UndefOr[js.Array[js.Function0[Unit]]] = js.native
-  var preInit: js.UndefOr[js.Array[js.Function0[Unit]]] = js.native
-  var preRun: js.UndefOr[js.Array[js.Function0[Unit]]] = js.native
-  var preinitializedWebGLContext: js.UndefOr[WebGLRenderingContext] = js.native
-  var preloadedAudios: js.UndefOr[js.Any] = js.native
-  var preloadedImages: js.UndefOr[js.Any] = js.native
-  var print: js.UndefOr[js.Function1[/* str */ String, Unit]] = js.native
-  var printErr: js.UndefOr[js.Function1[/* str */ String, Unit]] = js.native
-  var `then`: js.UndefOr[
-    js.Function1[/* callback */ js.Function1[/* module */ this.type, Unit], this.type]
-  ] = js.native
-  var wasmBinary: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
+  ] = js.undefined
+  var locateFile: js.UndefOr[js.Function2[/* url */ String, /* scriptDirectory */ String, String]] = js.undefined
+  var logReadFiles: js.UndefOr[Boolean] = js.undefined
+  var noExitRuntime: js.UndefOr[Boolean] = js.undefined
+  var noInitialRun: js.UndefOr[Boolean] = js.undefined
+  var onAbort: js.UndefOr[js.Function1[/* what */ js.Any, Unit]] = js.undefined
+  var onCustomMessage: js.UndefOr[js.Function1[/* event */ MessageEvent, Unit]] = js.undefined
+  var onRuntimeInitialized: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var postRun: js.UndefOr[js.Array[js.Function0[Unit]]] = js.undefined
+  var preInit: js.UndefOr[js.Array[js.Function0[Unit]]] = js.undefined
+  var preRun: js.UndefOr[js.Array[js.Function0[Unit]]] = js.undefined
+  var preinitializedWebGLContext: js.UndefOr[WebGLRenderingContext] = js.undefined
+  var preloadedAudios: js.UndefOr[js.Any] = js.undefined
+  var preloadedImages: js.UndefOr[js.Any] = js.undefined
+  var print: js.UndefOr[js.Function1[/* str */ String, Unit]] = js.undefined
+  var printErr: js.UndefOr[js.Function1[/* str */ String, Unit]] = js.undefined
+  var wasmBinary: js.UndefOr[js.typedarray.ArrayBuffer] = js.undefined
 }
 
 object Config {
   @scala.inline
-  def apply(): Config = {
+  def apply(
+    FAST_MEMORY: js.UndefOr[Double] = js.undefined,
+    FHEAP: js.typedarray.Float64Array = null,
+    HEAP: js.typedarray.Int32Array = null,
+    HEAP16: js.typedarray.Int16Array = null,
+    HEAP32: js.typedarray.Int32Array = null,
+    HEAP8: js.typedarray.Int8Array = null,
+    HEAPF32: js.typedarray.Float32Array = null,
+    HEAPF64: js.typedarray.Float64Array = null,
+    HEAPU16: js.typedarray.Uint16Array = null,
+    HEAPU32: js.typedarray.Uint32Array = null,
+    HEAPU8: js.typedarray.Uint8Array = null,
+    IHEAP: js.typedarray.Int32Array = null,
+    TOTAL_MEMORY: js.UndefOr[Double] = js.undefined,
+    TOTAL_STACK: js.UndefOr[Double] = js.undefined,
+    _free: /* ptr */ Double => Unit = null,
+    _malloc: /* size */ Double => Double = null,
+    addOnExit: /* cb */ js.Function0[_] => Unit = null,
+    addOnInit: /* cb */ js.Function0[_] => Unit = null,
+    addOnPostRun: /* cb */ js.Function0[_] => Unit = null,
+    addOnPreMain: /* cb */ js.Function0[_] => Unit = null,
+    addOnPreRun: /* cb */ js.Function0[_] => Unit = null,
+    arguments: js.Array[String] = null,
+    destroy: /* object */ js.Object => Unit = null,
+    environment: EnvironmentType = null,
+    filePackagePrefixURL: String = null,
+    getPreloadedPackage: (/* remotePackageName */ String, /* remotePackageSize */ Double) => js.typedarray.ArrayBuffer = null,
+    instantiateWasm: (/* imports */ WebAssemblyImports, /* successCallback */ js.Function1[/* module */ Module, Unit]) => WebAssemblyExports = null,
+    locateFile: (/* url */ String, /* scriptDirectory */ String) => String = null,
+    logReadFiles: js.UndefOr[Boolean] = js.undefined,
+    noExitRuntime: js.UndefOr[Boolean] = js.undefined,
+    noInitialRun: js.UndefOr[Boolean] = js.undefined,
+    onAbort: /* what */ js.Any => Unit = null,
+    onCustomMessage: /* event */ MessageEvent => Unit = null,
+    onRuntimeInitialized: () => Unit = null,
+    postRun: js.Array[js.Function0[Unit]] = null,
+    preInit: js.Array[js.Function0[Unit]] = null,
+    preRun: js.Array[js.Function0[Unit]] = null,
+    preinitializedWebGLContext: WebGLRenderingContext = null,
+    preloadedAudios: js.Any = null,
+    preloadedImages: js.Any = null,
+    print: /* str */ String => Unit = null,
+    printErr: /* str */ String => Unit = null,
+    wasmBinary: js.typedarray.ArrayBuffer = null
+  ): Config = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(FAST_MEMORY)) __obj.updateDynamic("FAST_MEMORY")(FAST_MEMORY.get.asInstanceOf[js.Any])
+    if (FHEAP != null) __obj.updateDynamic("FHEAP")(FHEAP.asInstanceOf[js.Any])
+    if (HEAP != null) __obj.updateDynamic("HEAP")(HEAP.asInstanceOf[js.Any])
+    if (HEAP16 != null) __obj.updateDynamic("HEAP16")(HEAP16.asInstanceOf[js.Any])
+    if (HEAP32 != null) __obj.updateDynamic("HEAP32")(HEAP32.asInstanceOf[js.Any])
+    if (HEAP8 != null) __obj.updateDynamic("HEAP8")(HEAP8.asInstanceOf[js.Any])
+    if (HEAPF32 != null) __obj.updateDynamic("HEAPF32")(HEAPF32.asInstanceOf[js.Any])
+    if (HEAPF64 != null) __obj.updateDynamic("HEAPF64")(HEAPF64.asInstanceOf[js.Any])
+    if (HEAPU16 != null) __obj.updateDynamic("HEAPU16")(HEAPU16.asInstanceOf[js.Any])
+    if (HEAPU32 != null) __obj.updateDynamic("HEAPU32")(HEAPU32.asInstanceOf[js.Any])
+    if (HEAPU8 != null) __obj.updateDynamic("HEAPU8")(HEAPU8.asInstanceOf[js.Any])
+    if (IHEAP != null) __obj.updateDynamic("IHEAP")(IHEAP.asInstanceOf[js.Any])
+    if (!js.isUndefined(TOTAL_MEMORY)) __obj.updateDynamic("TOTAL_MEMORY")(TOTAL_MEMORY.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(TOTAL_STACK)) __obj.updateDynamic("TOTAL_STACK")(TOTAL_STACK.get.asInstanceOf[js.Any])
+    if (_free != null) __obj.updateDynamic("_free")(js.Any.fromFunction1(_free))
+    if (_malloc != null) __obj.updateDynamic("_malloc")(js.Any.fromFunction1(_malloc))
+    if (addOnExit != null) __obj.updateDynamic("addOnExit")(js.Any.fromFunction1(addOnExit))
+    if (addOnInit != null) __obj.updateDynamic("addOnInit")(js.Any.fromFunction1(addOnInit))
+    if (addOnPostRun != null) __obj.updateDynamic("addOnPostRun")(js.Any.fromFunction1(addOnPostRun))
+    if (addOnPreMain != null) __obj.updateDynamic("addOnPreMain")(js.Any.fromFunction1(addOnPreMain))
+    if (addOnPreRun != null) __obj.updateDynamic("addOnPreRun")(js.Any.fromFunction1(addOnPreRun))
+    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
+    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
+    if (filePackagePrefixURL != null) __obj.updateDynamic("filePackagePrefixURL")(filePackagePrefixURL.asInstanceOf[js.Any])
+    if (getPreloadedPackage != null) __obj.updateDynamic("getPreloadedPackage")(js.Any.fromFunction2(getPreloadedPackage))
+    if (instantiateWasm != null) __obj.updateDynamic("instantiateWasm")(js.Any.fromFunction2(instantiateWasm))
+    if (locateFile != null) __obj.updateDynamic("locateFile")(js.Any.fromFunction2(locateFile))
+    if (!js.isUndefined(logReadFiles)) __obj.updateDynamic("logReadFiles")(logReadFiles.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noExitRuntime)) __obj.updateDynamic("noExitRuntime")(noExitRuntime.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(noInitialRun)) __obj.updateDynamic("noInitialRun")(noInitialRun.get.asInstanceOf[js.Any])
+    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
+    if (onCustomMessage != null) __obj.updateDynamic("onCustomMessage")(js.Any.fromFunction1(onCustomMessage))
+    if (onRuntimeInitialized != null) __obj.updateDynamic("onRuntimeInitialized")(js.Any.fromFunction0(onRuntimeInitialized))
+    if (postRun != null) __obj.updateDynamic("postRun")(postRun.asInstanceOf[js.Any])
+    if (preInit != null) __obj.updateDynamic("preInit")(preInit.asInstanceOf[js.Any])
+    if (preRun != null) __obj.updateDynamic("preRun")(preRun.asInstanceOf[js.Any])
+    if (preinitializedWebGLContext != null) __obj.updateDynamic("preinitializedWebGLContext")(preinitializedWebGLContext.asInstanceOf[js.Any])
+    if (preloadedAudios != null) __obj.updateDynamic("preloadedAudios")(preloadedAudios.asInstanceOf[js.Any])
+    if (preloadedImages != null) __obj.updateDynamic("preloadedImages")(preloadedImages.asInstanceOf[js.Any])
+    if (print != null) __obj.updateDynamic("print")(js.Any.fromFunction1(print))
+    if (printErr != null) __obj.updateDynamic("printErr")(js.Any.fromFunction1(printErr))
+    if (wasmBinary != null) __obj.updateDynamic("wasmBinary")(wasmBinary.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
-  @scala.inline
-  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFAST_MEMORY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAST_MEMORY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFAST_MEMORY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FAST_MEMORY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFHEAP(value: js.typedarray.Float64Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FHEAP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFHEAP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FHEAP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAP(value: js.typedarray.Int32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAP16(value: js.typedarray.Int16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP16")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAP16: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP16")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAP32(value: js.typedarray.Int32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAP32: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP32")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAP8(value: js.typedarray.Int8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP8")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAP8: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAP8")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAPF32(value: js.typedarray.Float32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPF32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAPF32: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPF32")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAPF64(value: js.typedarray.Float64Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPF64")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAPF64: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPF64")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAPU16(value: js.typedarray.Uint16Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPU16")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAPU16: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPU16")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAPU32(value: js.typedarray.Uint32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPU32")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAPU32: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPU32")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHEAPU8(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPU8")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHEAPU8: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HEAPU8")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIHEAP(value: js.typedarray.Int32Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IHEAP")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIHEAP: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IHEAP")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTOTAL_MEMORY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TOTAL_MEMORY")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTOTAL_MEMORY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TOTAL_MEMORY")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTOTAL_STACK(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TOTAL_STACK")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTOTAL_STACK: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TOTAL_STACK")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_free(value: /* ptr */ Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_free")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def without_free: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_free")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with_malloc(value: /* size */ Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_malloc")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def without_malloc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_malloc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddOnExit(value: /* cb */ js.Function0[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnExit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddOnExit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnExit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddOnInit(value: /* cb */ js.Function0[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnInit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddOnInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddOnPostRun(value: /* cb */ js.Function0[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPostRun")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddOnPostRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPostRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddOnPreMain(value: /* cb */ js.Function0[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPreMain")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddOnPreMain: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPreMain")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAddOnPreRun(value: /* cb */ js.Function0[_] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPreRun")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutAddOnPreRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnPreRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArguments(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDestroy(value: /* object */ js.Object => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutDestroy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnvironment(value: EnvironmentType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnvironment: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFilePackagePrefixURL(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePackagePrefixURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilePackagePrefixURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filePackagePrefixURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGetPreloadedPackage(
-      value: (/* remotePackageName */ String, /* remotePackageSize */ Double) => js.typedarray.ArrayBuffer
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreloadedPackage")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutGetPreloadedPackage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreloadedPackage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstantiateWasm(
-      value: (/* imports */ WebAssemblyImports, /* successCallback */ js.Function1[/* module */ Module, Unit]) => WebAssemblyExports
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiateWasm")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutInstantiateWasm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiateWasm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocateFile(value: (/* url */ String, /* scriptDirectory */ String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locateFile")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withoutLocateFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locateFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLogReadFiles(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logReadFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLogReadFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logReadFiles")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoExitRuntime(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noExitRuntime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoExitRuntime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noExitRuntime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNoInitialRun(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noInitialRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNoInitialRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("noInitialRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnAbort(value: /* what */ js.Any => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnAbort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnCustomMessage(value: /* event */ MessageEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCustomMessage")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnCustomMessage: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onCustomMessage")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRuntimeInitialized(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRuntimeInitialized")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withoutOnRuntimeInitialized: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRuntimeInitialized")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPostRun(value: js.Array[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPostRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("postRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreInit(value: js.Array[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preInit")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreInit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preInit")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreRun(value: js.Array[js.Function0[Unit]]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preRun")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreRun: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preRun")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreinitializedWebGLContext(value: WebGLRenderingContext): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preinitializedWebGLContext")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreinitializedWebGLContext: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preinitializedWebGLContext")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreloadedAudios(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadedAudios")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreloadedAudios: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadedAudios")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreloadedImages(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadedImages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreloadedImages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadedImages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrint(value: /* str */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrintErr(value: /* str */ String => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printErr")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutPrintErr: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("printErr")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withThen(value: /* callback */ js.Function1[Config, Unit] => Config): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutThen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("then")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWasmBinary(value: js.typedarray.ArrayBuffer): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wasmBinary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWasmBinary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wasmBinary")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

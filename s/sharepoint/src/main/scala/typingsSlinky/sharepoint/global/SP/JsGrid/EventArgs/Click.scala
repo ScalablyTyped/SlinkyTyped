@@ -11,5 +11,13 @@ import scala.scalajs.js.annotation._
 class Click protected ()
   extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.Click {
   def this(eventInfo: DomEvent, context: ClickContext, recordKey: Double, fieldKey: String) = this()
+  /* CompleteClass */
+  override var context: ClickContext = js.native
+  /* CompleteClass */
+  override var eventInfo: DomEvent = js.native
+  /* CompleteClass */
+  override var fieldKey: String = js.native
+  /* CompleteClass */
+  override var recordKey: Double = js.native
 }
 

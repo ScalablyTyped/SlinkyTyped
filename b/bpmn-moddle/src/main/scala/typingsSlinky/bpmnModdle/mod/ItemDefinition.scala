@@ -1,16 +1,16 @@
 package typingsSlinky.bpmnModdle.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ItemDefinition extends BaseElement {
-  var `import`: Import = js.native
+  var `import`: Import
   /** @default false */
-  var isCollection: Boolean = js.native
-  var itemKind: ItemKind = js.native
-  var structureRef: String = js.native
+  var isCollection: Boolean
+  var itemKind: ItemKind
+  var structureRef: String
 }
 
 object ItemDefinition {
@@ -22,43 +22,19 @@ object ItemDefinition {
     `import`: Import,
     isCollection: Boolean,
     itemKind: ItemKind,
-    structureRef: String
+    structureRef: String,
+    $attrs: StringDictionary[js.Any] = null,
+    documentation: js.Array[Documentation] = null,
+    extensionDefinitions: js.Array[ExtensionDefinition] = null,
+    extensionElements: ExtensionElements = null
   ): ItemDefinition = {
     val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isCollection = isCollection.asInstanceOf[js.Any], itemKind = itemKind.asInstanceOf[js.Any], structureRef = structureRef.asInstanceOf[js.Any])
     __obj.updateDynamic("import")(`import`.asInstanceOf[js.Any])
+    if ($attrs != null) __obj.updateDynamic("$attrs")($attrs.asInstanceOf[js.Any])
+    if (documentation != null) __obj.updateDynamic("documentation")(documentation.asInstanceOf[js.Any])
+    if (extensionDefinitions != null) __obj.updateDynamic("extensionDefinitions")(extensionDefinitions.asInstanceOf[js.Any])
+    if (extensionElements != null) __obj.updateDynamic("extensionElements")(extensionElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemDefinition]
   }
-  @scala.inline
-  implicit class ItemDefinitionOps[Self <: ItemDefinition] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withImport(value: Import): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIsCollection(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItemKind(value: ItemKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("itemKind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStructureRef(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("structureRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

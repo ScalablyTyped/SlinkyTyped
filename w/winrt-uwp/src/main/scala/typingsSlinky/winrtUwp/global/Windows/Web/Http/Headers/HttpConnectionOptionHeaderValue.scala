@@ -15,6 +15,9 @@ class HttpConnectionOptionHeaderValue protected ()
     * @param token The value of the connection-token to use.
     */
   def this(token: String) = this()
+  /** Gets the value of the connection-token in the Connection HTTP header. */
+  /* CompleteClass */
+  override var token: String = js.native
 }
 
 /* static members */

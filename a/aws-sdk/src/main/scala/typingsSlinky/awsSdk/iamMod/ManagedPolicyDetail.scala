@@ -55,161 +55,34 @@ trait ManagedPolicyDetail extends js.Object {
 
 object ManagedPolicyDetail {
   @scala.inline
-  def apply(): ManagedPolicyDetail = {
+  def apply(
+    Arn: arnType = null,
+    AttachmentCount: js.UndefOr[attachmentCountType] = js.undefined,
+    CreateDate: js.Date = null,
+    DefaultVersionId: policyVersionIdType = null,
+    Description: policyDescriptionType = null,
+    IsAttachable: js.UndefOr[booleanType] = js.undefined,
+    Path: policyPathType = null,
+    PermissionsBoundaryUsageCount: js.UndefOr[attachmentCountType] = js.undefined,
+    PolicyId: idType = null,
+    PolicyName: policyNameType = null,
+    PolicyVersionList: policyDocumentVersionListType = null,
+    UpdateDate: js.Date = null
+  ): ManagedPolicyDetail = {
     val __obj = js.Dynamic.literal()
+    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
+    if (!js.isUndefined(AttachmentCount)) __obj.updateDynamic("AttachmentCount")(AttachmentCount.get.asInstanceOf[js.Any])
+    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
+    if (DefaultVersionId != null) __obj.updateDynamic("DefaultVersionId")(DefaultVersionId.asInstanceOf[js.Any])
+    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsAttachable)) __obj.updateDynamic("IsAttachable")(IsAttachable.get.asInstanceOf[js.Any])
+    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
+    if (!js.isUndefined(PermissionsBoundaryUsageCount)) __obj.updateDynamic("PermissionsBoundaryUsageCount")(PermissionsBoundaryUsageCount.get.asInstanceOf[js.Any])
+    if (PolicyId != null) __obj.updateDynamic("PolicyId")(PolicyId.asInstanceOf[js.Any])
+    if (PolicyName != null) __obj.updateDynamic("PolicyName")(PolicyName.asInstanceOf[js.Any])
+    if (PolicyVersionList != null) __obj.updateDynamic("PolicyVersionList")(PolicyVersionList.asInstanceOf[js.Any])
+    if (UpdateDate != null) __obj.updateDynamic("UpdateDate")(UpdateDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedPolicyDetail]
   }
-  @scala.inline
-  implicit class ManagedPolicyDetailOps[Self <: ManagedPolicyDetail] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withArn(value: arnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttachmentCount(value: attachmentCountType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachmentCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachmentCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttachmentCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDefaultVersionId(value: policyVersionIdType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDefaultVersionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersionId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: policyDescriptionType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAttachable(value: booleanType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAttachable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAttachable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAttachable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPath(value: policyPathType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPath: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPermissionsBoundaryUsageCount(value: attachmentCountType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryUsageCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermissionsBoundaryUsageCount: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryUsageCount")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyId(value: idType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyName(value: policyNameType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicyVersionList(value: policyDocumentVersionListType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyVersionList")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicyVersionList: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyVersionList")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateDate(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateDate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

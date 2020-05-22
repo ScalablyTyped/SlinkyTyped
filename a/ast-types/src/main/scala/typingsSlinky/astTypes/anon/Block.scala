@@ -8,132 +8,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Block extends js.Object {
-  var block: BlockStatementKind = js.native
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
-  var finalizer: js.UndefOr[BlockStatementKind | Null] = js.native
-  var guardedHandlers: js.UndefOr[js.Array[CatchClauseKind]] = js.native
-  var handler: js.UndefOr[CatchClauseKind | Null] = js.native
-  var handlers: js.UndefOr[js.Array[CatchClauseKind]] = js.native
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var block: BlockStatementKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
+  var finalizer: js.UndefOr[BlockStatementKind | Null] = js.undefined
+  var guardedHandlers: js.UndefOr[js.Array[CatchClauseKind]] = js.undefined
+  var handler: js.UndefOr[CatchClauseKind | Null] = js.undefined
+  var handlers: js.UndefOr[js.Array[CatchClauseKind]] = js.undefined
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
 }
 
 object Block {
   @scala.inline
-  def apply(block: BlockStatementKind): Block = {
+  def apply(
+    block: BlockStatementKind,
+    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
+    finalizer: js.UndefOr[Null | BlockStatementKind] = js.undefined,
+    guardedHandlers: js.Array[CatchClauseKind] = null,
+    handler: js.UndefOr[Null | CatchClauseKind] = js.undefined,
+    handlers: js.Array[CatchClauseKind] = null,
+    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined
+  ): Block = {
     val __obj = js.Dynamic.literal(block = block.asInstanceOf[js.Any])
+    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (!js.isUndefined(finalizer)) __obj.updateDynamic("finalizer")(finalizer.asInstanceOf[js.Any])
+    if (guardedHandlers != null) __obj.updateDynamic("guardedHandlers")(guardedHandlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(handler)) __obj.updateDynamic("handler")(handler.asInstanceOf[js.Any])
+    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
+    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Block]
   }
-  @scala.inline
-  implicit class BlockOps[Self <: Block] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlock(value: BlockStatementKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withComments(value: js.Array[CommentKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCommentsNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
-        ret
-    }
-    @scala.inline
-    def withFinalizer(value: BlockStatementKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFinalizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFinalizerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizer")(null)
-        ret
-    }
-    @scala.inline
-    def withGuardedHandlers(value: js.Array[CatchClauseKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guardedHandlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuardedHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guardedHandlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandler(value: CatchClauseKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandler: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHandlerNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(null)
-        ret
-    }
-    @scala.inline
-    def withHandlers(value: js.Array[CatchClauseKind]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHandlers: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoc(value: SourceLocationKind): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
-        ret
-    }
-  }
-  
 }
 

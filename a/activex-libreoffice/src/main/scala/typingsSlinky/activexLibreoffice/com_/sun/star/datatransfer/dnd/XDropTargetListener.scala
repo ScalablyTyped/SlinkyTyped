@@ -13,23 +13,22 @@ import scala.scalajs.js.annotation._
   *
   * Methods of this interface may be implemented to provide "drag under" visual feedback to the user throughout the Drag and Drop operation.
   */
-@js.native
 trait XDropTargetListener extends XEventListener {
   /**
     * Called when a drag operation has encountered the drop target.
     * @param dtdee The {@link DropTargetDragEvent} .
     */
-  def dragEnter(dtdee: DropTargetDragEnterEvent): Unit = js.native
+  def dragEnter(dtdee: DropTargetDragEnterEvent): Unit
   /**
     * The drag operation has departed the drop target without dropping.
     * @param dte The {@link DropTargetEvent} .
     */
-  def dragExit(dte: DropTargetEvent): Unit = js.native
+  def dragExit(dte: DropTargetEvent): Unit
   /**
     * Called when a drag operation is ongoing on the drop target.
     * @param dtde The {@link DropTargetEvent} .
     */
-  def dragOver(dtde: DropTargetDragEvent): Unit = js.native
+  def dragOver(dtde: DropTargetDragEvent): Unit
   /**
     * The drag operation has terminated with a drop on this drop target.
     *
@@ -38,12 +37,12 @@ trait XDropTargetListener extends XEventListener {
     * should not assume the {@link DropTargetDropEvent} to be meaningful after returning from the {@link XDropTargetListener.drop()} method.
     * @param dtde The {@link DropTargetDropEvent} .
     */
-  def drop(dtde: DropTargetDropEvent): Unit = js.native
+  def drop(dtde: DropTargetDropEvent): Unit
   /**
     * Called when the user has modified the drop gesture.
     * @param dtde The {@link DropTargetEvent} .
     */
-  def dropActionChanged(dtde: DropTargetDragEvent): Unit = js.native
+  def dropActionChanged(dtde: DropTargetDragEvent): Unit
 }
 
 object XDropTargetListener {
@@ -62,43 +61,5 @@ object XDropTargetListener {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), disposing = js.Any.fromFunction1(disposing), dragEnter = js.Any.fromFunction1(dragEnter), dragExit = js.Any.fromFunction1(dragExit), dragOver = js.Any.fromFunction1(dragOver), drop = js.Any.fromFunction1(drop), dropActionChanged = js.Any.fromFunction1(dropActionChanged), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XDropTargetListener]
   }
-  @scala.inline
-  implicit class XDropTargetListenerOps[Self <: XDropTargetListener] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDragEnter(value: DropTargetDragEnterEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDragExit(value: DropTargetEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragExit")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDragOver(value: DropTargetDragEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragOver")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDrop(value: DropTargetDropEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDropActionChanged(value: DropTargetDragEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropActionChanged")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

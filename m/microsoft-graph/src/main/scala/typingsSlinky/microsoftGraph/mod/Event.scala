@@ -4,535 +4,187 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Event extends OutlookItem {
   /**
     * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only.
     * Nullable.
     */
-  var attachments: js.UndefOr[js.Array[Attachment]] = js.native
+  var attachments: js.UndefOr[js.Array[Attachment]] = js.undefined
   // The collection of attendees for the event.
-  var attendees: js.UndefOr[js.Array[Attendee]] = js.native
+  var attendees: js.UndefOr[js.Array[Attendee]] = js.undefined
   // The body of the message associated with the event. It can be in HTML or text format.
-  var body: js.UndefOr[ItemBody] = js.native
+  var body: js.UndefOr[ItemBody] = js.undefined
   // The preview of the message associated with the event. It is in text format.
-  var bodyPreview: js.UndefOr[String] = js.native
+  var bodyPreview: js.UndefOr[String] = js.undefined
   // The calendar that contains the event. Navigation property. Read-only.
-  var calendar: js.UndefOr[Calendar] = js.native
+  var calendar: js.UndefOr[Calendar] = js.undefined
   // The date, time, and time zone that the event ends. By default, the end time is in UTC.
-  var end: js.UndefOr[DateTimeTimeZone] = js.native
+  var end: js.UndefOr[DateTimeTimeZone] = js.undefined
   // The collection of open extensions defined for the event. Read-only. Nullable.
-  var extensions: js.UndefOr[js.Array[Extension]] = js.native
+  var extensions: js.UndefOr[js.Array[Extension]] = js.undefined
   // Set to true if the event has attachments.
-  var hasAttachments: js.UndefOr[Boolean] = js.native
+  var hasAttachments: js.UndefOr[Boolean] = js.undefined
   // A unique identifier that is shared by all instances of an event across different calendars. Read-only.
-  var iCalUId: js.UndefOr[String] = js.native
+  var iCalUId: js.UndefOr[String] = js.undefined
   // The importance of the event. The possible values are: low, normal, high.
-  var importance: js.UndefOr[Importance] = js.native
+  var importance: js.UndefOr[Importance] = js.undefined
   // The instances of the event. Navigation property. Read-only. Nullable.
-  var instances: js.UndefOr[js.Array[Event]] = js.native
+  var instances: js.UndefOr[js.Array[Event]] = js.undefined
   // Set to true if the event lasts all day.
-  var isAllDay: js.UndefOr[Boolean] = js.native
+  var isAllDay: js.UndefOr[Boolean] = js.undefined
   // Set to true if the event has been canceled.
-  var isCancelled: js.UndefOr[Boolean] = js.native
+  var isCancelled: js.UndefOr[Boolean] = js.undefined
   // Set to true if the message sender is also the organizer.
-  var isOrganizer: js.UndefOr[Boolean] = js.native
+  var isOrganizer: js.UndefOr[Boolean] = js.undefined
   // Set to true if an alert is set to remind the user of the event.
-  var isReminderOn: js.UndefOr[Boolean] = js.native
+  var isReminderOn: js.UndefOr[Boolean] = js.undefined
   // The location of the event.
-  var location: js.UndefOr[Location] = js.native
+  var location: js.UndefOr[Location] = js.undefined
   /**
     * The locations where the event is held or attended from. The location and locations properties always correspond with
     * each other. If you update the location property, any prior locations in the locations collection would be removed and
     * replaced by the new location value.
     */
-  var locations: js.UndefOr[js.Array[Location]] = js.native
+  var locations: js.UndefOr[js.Array[Location]] = js.undefined
   // The collection of multi-value extended properties defined for the event. Read-only. Nullable.
-  var multiValueExtendedProperties: js.UndefOr[js.Array[MultiValueLegacyExtendedProperty]] = js.native
+  var multiValueExtendedProperties: js.UndefOr[js.Array[MultiValueLegacyExtendedProperty]] = js.undefined
   /**
     * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as
     * a Skype meeting. Read-only.
     */
-  var onlineMeetingUrl: js.UndefOr[String] = js.native
+  var onlineMeetingUrl: js.UndefOr[String] = js.undefined
   // The organizer of the event.
-  var organizer: js.UndefOr[Recipient] = js.native
+  var organizer: js.UndefOr[Recipient] = js.undefined
   /**
     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy
     * custom time zone was set in desktop Outlook.
     */
-  var originalEndTimeZone: js.UndefOr[String] = js.native
+  var originalEndTimeZone: js.UndefOr[String] = js.undefined
   /**
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example,
     * midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     */
-  var originalStart: js.UndefOr[String] = js.native
+  var originalStart: js.UndefOr[String] = js.undefined
   /**
     * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a
     * legacy custom time zone was set in desktop Outlook.
     */
-  var originalStartTimeZone: js.UndefOr[String] = js.native
+  var originalStartTimeZone: js.UndefOr[String] = js.undefined
   // The recurrence pattern for the event.
-  var recurrence: js.UndefOr[PatternedRecurrence] = js.native
+  var recurrence: js.UndefOr[PatternedRecurrence] = js.undefined
   // The number of minutes before the event start time that the reminder alert occurs.
-  var reminderMinutesBeforeStart: js.UndefOr[Double] = js.native
+  var reminderMinutesBeforeStart: js.UndefOr[Double] = js.undefined
   // Set to true if the sender would like a response when the event is accepted or declined.
-  var responseRequested: js.UndefOr[Boolean] = js.native
+  var responseRequested: js.UndefOr[Boolean] = js.undefined
   // Indicates the type of response sent in response to an event message.
-  var responseStatus: js.UndefOr[ResponseStatus] = js.native
+  var responseStatus: js.UndefOr[ResponseStatus] = js.undefined
   // The possible values are: normal, personal, private, confidential.
-  var sensitivity: js.UndefOr[Sensitivity] = js.native
+  var sensitivity: js.UndefOr[Sensitivity] = js.undefined
   // The ID for the recurring series master item, if this event is part of a recurring series.
-  var seriesMasterId: js.UndefOr[String] = js.native
+  var seriesMasterId: js.UndefOr[String] = js.undefined
   // The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-  var showAs: js.UndefOr[FreeBusyStatus] = js.native
+  var showAs: js.UndefOr[FreeBusyStatus] = js.undefined
   // The collection of single-value extended properties defined for the event. Read-only. Nullable.
-  var singleValueExtendedProperties: js.UndefOr[js.Array[SingleValueLegacyExtendedProperty]] = js.native
+  var singleValueExtendedProperties: js.UndefOr[js.Array[SingleValueLegacyExtendedProperty]] = js.undefined
   // The date, time, and time zone that the event starts. By default, the start time is in UTC.
-  var start: js.UndefOr[DateTimeTimeZone] = js.native
+  var start: js.UndefOr[DateTimeTimeZone] = js.undefined
   // The text of the event's subject line.
-  var subject: js.UndefOr[String] = js.native
+  var subject: js.UndefOr[String] = js.undefined
   // The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
-  var `type`: js.UndefOr[EventType] = js.native
+  var `type`: js.UndefOr[EventType] = js.undefined
   /**
     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in
     * to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
     */
-  var webLink: js.UndefOr[String] = js.native
+  var webLink: js.UndefOr[String] = js.undefined
 }
 
 object Event {
   @scala.inline
-  def apply(): Event = {
+  def apply(
+    attachments: js.Array[Attachment] = null,
+    attendees: js.Array[Attendee] = null,
+    body: ItemBody = null,
+    bodyPreview: String = null,
+    calendar: Calendar = null,
+    categories: js.Array[String] = null,
+    changeKey: String = null,
+    createdDateTime: String = null,
+    end: DateTimeTimeZone = null,
+    extensions: js.Array[Extension] = null,
+    hasAttachments: js.UndefOr[Boolean] = js.undefined,
+    iCalUId: String = null,
+    id: String = null,
+    importance: Importance = null,
+    instances: js.Array[Event] = null,
+    isAllDay: js.UndefOr[Boolean] = js.undefined,
+    isCancelled: js.UndefOr[Boolean] = js.undefined,
+    isOrganizer: js.UndefOr[Boolean] = js.undefined,
+    isReminderOn: js.UndefOr[Boolean] = js.undefined,
+    lastModifiedDateTime: String = null,
+    location: Location = null,
+    locations: js.Array[Location] = null,
+    multiValueExtendedProperties: js.Array[MultiValueLegacyExtendedProperty] = null,
+    onlineMeetingUrl: String = null,
+    organizer: Recipient = null,
+    originalEndTimeZone: String = null,
+    originalStart: String = null,
+    originalStartTimeZone: String = null,
+    recurrence: PatternedRecurrence = null,
+    reminderMinutesBeforeStart: js.UndefOr[Double] = js.undefined,
+    responseRequested: js.UndefOr[Boolean] = js.undefined,
+    responseStatus: ResponseStatus = null,
+    sensitivity: Sensitivity = null,
+    seriesMasterId: String = null,
+    showAs: FreeBusyStatus = null,
+    singleValueExtendedProperties: js.Array[SingleValueLegacyExtendedProperty] = null,
+    start: DateTimeTimeZone = null,
+    subject: String = null,
+    `type`: EventType = null,
+    webLink: String = null
+  ): Event = {
     val __obj = js.Dynamic.literal()
+    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
+    if (attendees != null) __obj.updateDynamic("attendees")(attendees.asInstanceOf[js.Any])
+    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
+    if (bodyPreview != null) __obj.updateDynamic("bodyPreview")(bodyPreview.asInstanceOf[js.Any])
+    if (calendar != null) __obj.updateDynamic("calendar")(calendar.asInstanceOf[js.Any])
+    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
+    if (changeKey != null) __obj.updateDynamic("changeKey")(changeKey.asInstanceOf[js.Any])
+    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
+    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
+    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
+    if (!js.isUndefined(hasAttachments)) __obj.updateDynamic("hasAttachments")(hasAttachments.get.asInstanceOf[js.Any])
+    if (iCalUId != null) __obj.updateDynamic("iCalUId")(iCalUId.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (importance != null) __obj.updateDynamic("importance")(importance.asInstanceOf[js.Any])
+    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
+    if (!js.isUndefined(isAllDay)) __obj.updateDynamic("isAllDay")(isAllDay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isCancelled)) __obj.updateDynamic("isCancelled")(isCancelled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOrganizer)) __obj.updateDynamic("isOrganizer")(isOrganizer.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(isReminderOn)) __obj.updateDynamic("isReminderOn")(isReminderOn.get.asInstanceOf[js.Any])
+    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
+    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (locations != null) __obj.updateDynamic("locations")(locations.asInstanceOf[js.Any])
+    if (multiValueExtendedProperties != null) __obj.updateDynamic("multiValueExtendedProperties")(multiValueExtendedProperties.asInstanceOf[js.Any])
+    if (onlineMeetingUrl != null) __obj.updateDynamic("onlineMeetingUrl")(onlineMeetingUrl.asInstanceOf[js.Any])
+    if (organizer != null) __obj.updateDynamic("organizer")(organizer.asInstanceOf[js.Any])
+    if (originalEndTimeZone != null) __obj.updateDynamic("originalEndTimeZone")(originalEndTimeZone.asInstanceOf[js.Any])
+    if (originalStart != null) __obj.updateDynamic("originalStart")(originalStart.asInstanceOf[js.Any])
+    if (originalStartTimeZone != null) __obj.updateDynamic("originalStartTimeZone")(originalStartTimeZone.asInstanceOf[js.Any])
+    if (recurrence != null) __obj.updateDynamic("recurrence")(recurrence.asInstanceOf[js.Any])
+    if (!js.isUndefined(reminderMinutesBeforeStart)) __obj.updateDynamic("reminderMinutesBeforeStart")(reminderMinutesBeforeStart.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(responseRequested)) __obj.updateDynamic("responseRequested")(responseRequested.get.asInstanceOf[js.Any])
+    if (responseStatus != null) __obj.updateDynamic("responseStatus")(responseStatus.asInstanceOf[js.Any])
+    if (sensitivity != null) __obj.updateDynamic("sensitivity")(sensitivity.asInstanceOf[js.Any])
+    if (seriesMasterId != null) __obj.updateDynamic("seriesMasterId")(seriesMasterId.asInstanceOf[js.Any])
+    if (showAs != null) __obj.updateDynamic("showAs")(showAs.asInstanceOf[js.Any])
+    if (singleValueExtendedProperties != null) __obj.updateDynamic("singleValueExtendedProperties")(singleValueExtendedProperties.asInstanceOf[js.Any])
+    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
+    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (webLink != null) __obj.updateDynamic("webLink")(webLink.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
-  @scala.inline
-  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttachments(value: js.Array[Attachment]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttendees(value: js.Array[Attendee]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attendees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttendees: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attendees")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBody(value: ItemBody): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBody: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBodyPreview(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyPreview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBodyPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyPreview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCalendar(value: Calendar): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCalendar: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnd(value: DateTimeTimeZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExtensions(value: js.Array[Extension]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExtensions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasAttachments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttachments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasAttachments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttachments")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withICalUId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iCalUId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutICalUId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iCalUId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withImportance(value: Importance): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutImportance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstances(value: js.Array[Event]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsAllDay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAllDay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAllDay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAllDay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCancelled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCancelled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCancelled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCancelled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOrganizer(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOrganizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOrganizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOrganizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsReminderOn(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReminderOn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsReminderOn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isReminderOn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocation(value: Location): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLocations(value: js.Array[Location]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLocations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiValueExtendedProperties(value: js.Array[MultiValueLegacyExtendedProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValueExtendedProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiValueExtendedProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiValueExtendedProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnlineMeetingUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlineMeetingUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnlineMeetingUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onlineMeetingUrl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOrganizer(value: Recipient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOrganizer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("organizer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalEndTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEndTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalEndTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEndTimeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalStart(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOriginalStartTimeZone(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStartTimeZone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOriginalStartTimeZone: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStartTimeZone")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRecurrence(value: PatternedRecurrence): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrence")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRecurrence: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrence")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReminderMinutesBeforeStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reminderMinutesBeforeStart")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReminderMinutesBeforeStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reminderMinutesBeforeStart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseRequested(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseRequested")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseRequested: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseRequested")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseStatus(value: ResponseStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseStatus")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSensitivity(value: Sensitivity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitivity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSensitivity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitivity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSeriesMasterId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMasterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSeriesMasterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMasterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowAs(value: FreeBusyStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowAs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showAs")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSingleValueExtendedProperties(value: js.Array[SingleValueLegacyExtendedProperty]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleValueExtendedProperties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSingleValueExtendedProperties: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("singleValueExtendedProperties")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart(value: DateTimeTimeZone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubject(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubject: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: EventType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWebLink(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webLink")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWebLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("webLink")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait DescribeAggregateIdFormatResult extends js.Object {
 
 object DescribeAggregateIdFormatResult {
   @scala.inline
-  def apply(): DescribeAggregateIdFormatResult = {
+  def apply(Statuses: IdFormatList = null, UseLongIdsAggregated: js.UndefOr[Boolean] = js.undefined): DescribeAggregateIdFormatResult = {
     val __obj = js.Dynamic.literal()
+    if (Statuses != null) __obj.updateDynamic("Statuses")(Statuses.asInstanceOf[js.Any])
+    if (!js.isUndefined(UseLongIdsAggregated)) __obj.updateDynamic("UseLongIdsAggregated")(UseLongIdsAggregated.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAggregateIdFormatResult]
   }
-  @scala.inline
-  implicit class DescribeAggregateIdFormatResultOps[Self <: DescribeAggregateIdFormatResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatuses(value: IdFormatList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statuses")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatuses: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Statuses")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseLongIdsAggregated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLongIdsAggregated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseLongIdsAggregated: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLongIdsAggregated")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

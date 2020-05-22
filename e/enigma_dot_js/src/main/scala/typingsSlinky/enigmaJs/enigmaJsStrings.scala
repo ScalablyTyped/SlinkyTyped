@@ -1,19 +1,19 @@
 package typingsSlinky.enigmaJs
 
-import typingsSlinky.enigmaJs.enigmaJS.MixinType
+import typingsSlinky.enigmaJs.enigmaJS._MixinType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object enigmaJsStrings {
   @js.native
-  sealed trait Doc extends MixinType
+  sealed trait Doc extends _MixinType
   
   @js.native
-  sealed trait GenericBookmark extends MixinType
+  sealed trait GenericBookmark extends _MixinType
   
   @js.native
-  sealed trait GenericObject extends MixinType
+  sealed trait GenericObject extends _MixinType
   
   @js.native
   sealed trait changed extends js.Object

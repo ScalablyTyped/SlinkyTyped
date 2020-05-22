@@ -15,469 +15,119 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<semantic-ui-search.SemanticUI.SearchSettings._Impl, keyof semantic-ui-search.SemanticUI.SearchSettings._Impl>> */
-@js.native
 trait PartialPickImplkeyofImpl extends js.Object {
-  var apiSettings: js.UndefOr[ApiSettings] = js.native
-  var cache: js.UndefOr[Boolean] = js.native
-  var className: js.UndefOr[ClassNameSettings] = js.native
-  var debug: js.UndefOr[Boolean] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var easing: js.UndefOr[String] = js.native
-  var error: js.UndefOr[ErrorSettings] = js.native
-  var fields: js.UndefOr[FieldsSettings] = js.native
-  var hideDelay: js.UndefOr[Double] = js.native
-  var maxResults: js.UndefOr[Double] = js.native
-  var metadata: js.UndefOr[MetadataSettings] = js.native
-  var minCharacters: js.UndefOr[Double] = js.native
-  var name: js.UndefOr[String] = js.native
-  var namespace: js.UndefOr[String] = js.native
-  var onResults: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* response */ js.Any, Unit]] = js.native
-  var onResultsAdd: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* html */ String, `false` | Unit]] = js.native
-  var onResultsClose: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onResultsOpen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.native
-  var onSearchQuery: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* query */ String, Unit]] = js.native
+  var apiSettings: js.UndefOr[ApiSettings] = js.undefined
+  var cache: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[ClassNameSettings] = js.undefined
+  var debug: js.UndefOr[Boolean] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var easing: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[ErrorSettings] = js.undefined
+  var fields: js.UndefOr[FieldsSettings] = js.undefined
+  var hideDelay: js.UndefOr[Double] = js.undefined
+  var maxResults: js.UndefOr[Double] = js.undefined
+  var metadata: js.UndefOr[MetadataSettings] = js.undefined
+  var minCharacters: js.UndefOr[Double] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var namespace: js.UndefOr[String] = js.undefined
+  var onResults: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* response */ js.Any, Unit]] = js.undefined
+  var onResultsAdd: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* html */ String, `false` | Unit]] = js.undefined
+  var onResultsClose: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onResultsOpen: js.UndefOr[js.ThisFunction0[/* this */ JQuery, Unit]] = js.undefined
+  var onSearchQuery: js.UndefOr[js.ThisFunction1[/* this */ JQuery, /* query */ String, Unit]] = js.undefined
   var onSelect: js.UndefOr[
     js.ThisFunction2[/* this */ JQuery, /* result */ js.Any, /* response */ js.Any, `false` | Unit]
-  ] = js.native
-  var performance: js.UndefOr[Boolean] = js.native
-  var regExp: js.UndefOr[RegExpSettings] = js.native
-  var searchDelay: js.UndefOr[Double] = js.native
-  var searchFields: js.UndefOr[js.Array[String]] = js.native
-  var searchFullText: js.UndefOr[Boolean] = js.native
-  var selectFirstResult: js.UndefOr[Boolean] = js.native
-  var selector: js.UndefOr[SelectorSettings] = js.native
-  var showNoResults: js.UndefOr[Boolean] = js.native
-  var silent: js.UndefOr[Boolean] = js.native
-  var source: js.UndefOr[`false` | js.Any] = js.native
-  var templates: js.UndefOr[TemplatesSettings] = js.native
-  var transition: js.UndefOr[String] = js.native
-  var `type`: js.UndefOr[String] = js.native
-  var verbose: js.UndefOr[Boolean] = js.native
+  ] = js.undefined
+  var performance: js.UndefOr[Boolean] = js.undefined
+  var regExp: js.UndefOr[RegExpSettings] = js.undefined
+  var searchDelay: js.UndefOr[Double] = js.undefined
+  var searchFields: js.UndefOr[js.Array[String]] = js.undefined
+  var searchFullText: js.UndefOr[Boolean] = js.undefined
+  var selectFirstResult: js.UndefOr[Boolean] = js.undefined
+  var selector: js.UndefOr[SelectorSettings] = js.undefined
+  var showNoResults: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.undefined
+  var source: js.UndefOr[`false` | js.Any] = js.undefined
+  var templates: js.UndefOr[TemplatesSettings] = js.undefined
+  var transition: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+  var verbose: js.UndefOr[Boolean] = js.undefined
 }
 
 object PartialPickImplkeyofImpl {
   @scala.inline
-  def apply(): PartialPickImplkeyofImpl = {
+  def apply(
+    apiSettings: ApiSettings = null,
+    cache: js.UndefOr[Boolean] = js.undefined,
+    className: ClassNameSettings = null,
+    debug: js.UndefOr[Boolean] = js.undefined,
+    duration: js.UndefOr[Double] = js.undefined,
+    easing: String = null,
+    error: ErrorSettings = null,
+    fields: FieldsSettings = null,
+    hideDelay: js.UndefOr[Double] = js.undefined,
+    maxResults: js.UndefOr[Double] = js.undefined,
+    metadata: MetadataSettings = null,
+    minCharacters: js.UndefOr[Double] = js.undefined,
+    name: String = null,
+    namespace: String = null,
+    onResults: js.ThisFunction1[/* this */ JQuery, /* response */ js.Any, Unit] = null,
+    onResultsAdd: js.ThisFunction1[/* this */ JQuery, /* html */ String, `false` | Unit] = null,
+    onResultsClose: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onResultsOpen: js.ThisFunction0[/* this */ JQuery, Unit] = null,
+    onSearchQuery: js.ThisFunction1[/* this */ JQuery, /* query */ String, Unit] = null,
+    onSelect: js.ThisFunction2[/* this */ JQuery, /* result */ js.Any, /* response */ js.Any, `false` | Unit] = null,
+    performance: js.UndefOr[Boolean] = js.undefined,
+    regExp: RegExpSettings = null,
+    searchDelay: js.UndefOr[Double] = js.undefined,
+    searchFields: js.Array[String] = null,
+    searchFullText: js.UndefOr[Boolean] = js.undefined,
+    selectFirstResult: js.UndefOr[Boolean] = js.undefined,
+    selector: SelectorSettings = null,
+    showNoResults: js.UndefOr[Boolean] = js.undefined,
+    silent: js.UndefOr[Boolean] = js.undefined,
+    source: `false` | js.Any = null,
+    templates: TemplatesSettings = null,
+    transition: String = null,
+    `type`: String = null,
+    verbose: js.UndefOr[Boolean] = js.undefined
+  ): PartialPickImplkeyofImpl = {
     val __obj = js.Dynamic.literal()
+    if (apiSettings != null) __obj.updateDynamic("apiSettings")(apiSettings.asInstanceOf[js.Any])
+    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.get.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideDelay)) __obj.updateDynamic("hideDelay")(hideDelay.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxResults)) __obj.updateDynamic("maxResults")(maxResults.get.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCharacters)) __obj.updateDynamic("minCharacters")(minCharacters.get.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
+    if (onResults != null) __obj.updateDynamic("onResults")(onResults.asInstanceOf[js.Any])
+    if (onResultsAdd != null) __obj.updateDynamic("onResultsAdd")(onResultsAdd.asInstanceOf[js.Any])
+    if (onResultsClose != null) __obj.updateDynamic("onResultsClose")(onResultsClose.asInstanceOf[js.Any])
+    if (onResultsOpen != null) __obj.updateDynamic("onResultsOpen")(onResultsOpen.asInstanceOf[js.Any])
+    if (onSearchQuery != null) __obj.updateDynamic("onSearchQuery")(onSearchQuery.asInstanceOf[js.Any])
+    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
+    if (!js.isUndefined(performance)) __obj.updateDynamic("performance")(performance.get.asInstanceOf[js.Any])
+    if (regExp != null) __obj.updateDynamic("regExp")(regExp.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchDelay)) __obj.updateDynamic("searchDelay")(searchDelay.get.asInstanceOf[js.Any])
+    if (searchFields != null) __obj.updateDynamic("searchFields")(searchFields.asInstanceOf[js.Any])
+    if (!js.isUndefined(searchFullText)) __obj.updateDynamic("searchFullText")(searchFullText.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(selectFirstResult)) __obj.updateDynamic("selectFirstResult")(selectFirstResult.get.asInstanceOf[js.Any])
+    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
+    if (!js.isUndefined(showNoResults)) __obj.updateDynamic("showNoResults")(showNoResults.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.get.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
+    if (templates != null) __obj.updateDynamic("templates")(templates.asInstanceOf[js.Any])
+    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickImplkeyofImpl]
   }
-  @scala.inline
-  implicit class PartialPickImplkeyofImplOps[Self <: PartialPickImplkeyofImpl] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApiSettings(value: ApiSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApiSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("apiSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCache(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCache: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClassName(value: ClassNameSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClassName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDebug(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDebug: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEasing(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEasing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: ErrorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFields(value: FieldsSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHideDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHideDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxResults(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: MetadataSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCharacters(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCharacters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCharacters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCharacters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNamespace(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNamespace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResults(value: js.ThisFunction1[/* this */ JQuery, /* response */ js.Any, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResultsAdd(value: js.ThisFunction1[/* this */ JQuery, /* html */ String, `false` | Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResultsAdd")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnResultsAdd: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResultsAdd")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResultsClose(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResultsClose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnResultsClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResultsClose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnResultsOpen(value: js.ThisFunction0[/* this */ JQuery, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResultsOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnResultsOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onResultsOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSearchQuery(value: js.ThisFunction1[/* this */ JQuery, /* query */ String, Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchQuery")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSearchQuery: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchQuery")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnSelect(
-      value: js.ThisFunction2[/* this */ JQuery, /* result */ js.Any, /* response */ js.Any, `false` | Unit]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnSelect: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerformance(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerformance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRegExp(value: RegExpSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRegExp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchDelay")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchFields(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchFields: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFields")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSearchFullText(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFullText")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSearchFullText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchFullText")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelectFirstResult(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectFirstResult")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelectFirstResult: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selectFirstResult")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSelector(value: SelectorSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSelector: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShowNoResults(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNoResults")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShowNoResults: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showNoResults")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSilent(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSilent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSource(value: `false` | js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplates(value: TemplatesSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplates: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVerbose(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVerbose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,10 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ P in string ]: any} */ @js.native
-trait Mixins extends js.Object {
-  var locks: Double = js.native
-  var methods: js.Array[js.Function] = js.native
+- Dropped {[ P in string ]: any} */ trait Mixins extends js.Object {
+  var locks: Double
+  var methods: js.Array[js.Function]
 }
 
 object Mixins {
@@ -17,25 +16,5 @@ object Mixins {
     val __obj = js.Dynamic.literal(locks = locks.asInstanceOf[js.Any], methods = methods.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mixins]
   }
-  @scala.inline
-  implicit class MixinsOps[Self <: Mixins] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLocks(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("locks")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMethods(value: js.Array[js.Function]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

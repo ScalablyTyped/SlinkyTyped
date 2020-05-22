@@ -17,4 +17,10 @@ package object forecastqueryserviceMod {
   type Statistic = java.lang.String
   type TimeSeries = js.Array[typingsSlinky.awsSdk.forecastqueryserviceMod.DataPoint]
   type Timestamp = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2018-06-26`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.forecastqueryserviceMod._apiVersion | java.lang.String
 }

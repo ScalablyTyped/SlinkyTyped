@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RpcRequest extends js.Object {
   /**
     * Executes the request and runs the supplied callback with the response.
     * @param callback The callback function which executes when the request succeeds or fails.
     */
-  def callback(callback: js.Function2[/* jsonResp */ js.Any, /* rawResp */ String, Unit]): Unit = js.native
+  def callback(callback: js.Function2[/* jsonResp */ js.Any, /* rawResp */ String, Unit]): Unit
 }
 
 object RpcRequest {
@@ -19,19 +18,5 @@ object RpcRequest {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction1(callback))
     __obj.asInstanceOf[RpcRequest]
   }
-  @scala.inline
-  implicit class RpcRequestOps[Self <: RpcRequest] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCallback(value: js.Function2[/* jsonResp */ js.Any, /* rawResp */ String, Unit] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

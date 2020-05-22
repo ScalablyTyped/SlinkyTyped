@@ -18,41 +18,11 @@ trait UpdateFieldLevelEncryptionConfigResult extends js.Object {
 
 object UpdateFieldLevelEncryptionConfigResult {
   @scala.inline
-  def apply(): UpdateFieldLevelEncryptionConfigResult = {
+  def apply(ETag: String = null, FieldLevelEncryption: FieldLevelEncryption = null): UpdateFieldLevelEncryptionConfigResult = {
     val __obj = js.Dynamic.literal()
+    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
+    if (FieldLevelEncryption != null) __obj.updateDynamic("FieldLevelEncryption")(FieldLevelEncryption.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFieldLevelEncryptionConfigResult]
   }
-  @scala.inline
-  implicit class UpdateFieldLevelEncryptionConfigResultOps[Self <: UpdateFieldLevelEncryptionConfigResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withETag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutETag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFieldLevelEncryption(value: FieldLevelEncryption): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFieldLevelEncryption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldLevelEncryption")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

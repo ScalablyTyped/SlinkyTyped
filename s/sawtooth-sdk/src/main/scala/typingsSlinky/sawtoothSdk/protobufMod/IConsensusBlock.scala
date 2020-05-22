@@ -4,147 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IConsensusBlock extends js.Object {
   /** ConsensusBlock blockId */
-  var blockId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var blockId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
   /** ConsensusBlock blockNum */
   var blockNum: js.UndefOr[
     Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any) | Null
-  ] = js.native
+  ] = js.undefined
   /** ConsensusBlock payload */
-  var payload: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var payload: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
   /** ConsensusBlock previousId */
-  var previousId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var previousId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
   /** ConsensusBlock signerId */
-  var signerId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var signerId: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
   /** ConsensusBlock summary */
-  var summary: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
+  var summary: js.UndefOr[js.typedarray.Uint8Array | Null] = js.undefined
 }
 
 object IConsensusBlock {
   @scala.inline
-  def apply(): IConsensusBlock = {
+  def apply(
+    blockId: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
+    blockNum: js.UndefOr[
+      Null | Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any)
+    ] = js.undefined,
+    payload: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
+    previousId: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
+    signerId: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined,
+    summary: js.UndefOr[Null | js.typedarray.Uint8Array] = js.undefined
+  ): IConsensusBlock = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(blockId)) __obj.updateDynamic("blockId")(blockId.asInstanceOf[js.Any])
+    if (!js.isUndefined(blockNum)) __obj.updateDynamic("blockNum")(blockNum.asInstanceOf[js.Any])
+    if (!js.isUndefined(payload)) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
+    if (!js.isUndefined(previousId)) __obj.updateDynamic("previousId")(previousId.asInstanceOf[js.Any])
+    if (!js.isUndefined(signerId)) __obj.updateDynamic("signerId")(signerId.asInstanceOf[js.Any])
+    if (!js.isUndefined(summary)) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConsensusBlock]
   }
-  @scala.inline
-  implicit class IConsensusBlockOps[Self <: IConsensusBlock] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBlockId(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockId")(null)
-        ret
-    }
-    @scala.inline
-    def withBlockNum(
-      value: Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any)
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNum")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlockNum: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNum")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlockNumNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNum")(null)
-        ret
-    }
-    @scala.inline
-    def withPayload(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPayload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPayloadNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(null)
-        ret
-    }
-    @scala.inline
-    def withPreviousId(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousId")(null)
-        ret
-    }
-    @scala.inline
-    def withSignerId(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSignerId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSignerIdNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("signerId")(null)
-        ret
-    }
-    @scala.inline
-    def withSummary(value: js.typedarray.Uint8Array): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSummaryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(null)
-        ret
-    }
-  }
-  
 }
 

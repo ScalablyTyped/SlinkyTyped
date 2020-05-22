@@ -7,83 +7,27 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a PushConfig. */
-@js.native
 trait IPushConfig extends js.Object {
   /** PushConfig attributes */
-  var attributes: js.UndefOr[StringDictionary[String] | Null] = js.native
+  var attributes: js.UndefOr[StringDictionary[String] | Null] = js.undefined
   /** PushConfig oidcToken */
-  var oidcToken: js.UndefOr[IOidcToken | Null] = js.native
+  var oidcToken: js.UndefOr[IOidcToken | Null] = js.undefined
   /** PushConfig pushEndpoint */
-  var pushEndpoint: js.UndefOr[String | Null] = js.native
+  var pushEndpoint: js.UndefOr[String | Null] = js.undefined
 }
 
 object IPushConfig {
   @scala.inline
-  def apply(): IPushConfig = {
+  def apply(
+    attributes: js.UndefOr[Null | StringDictionary[String]] = js.undefined,
+    oidcToken: js.UndefOr[Null | IOidcToken] = js.undefined,
+    pushEndpoint: js.UndefOr[Null | String] = js.undefined
+  ): IPushConfig = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(attributes)) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
+    if (!js.isUndefined(oidcToken)) __obj.updateDynamic("oidcToken")(oidcToken.asInstanceOf[js.Any])
+    if (!js.isUndefined(pushEndpoint)) __obj.updateDynamic("pushEndpoint")(pushEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPushConfig]
   }
-  @scala.inline
-  implicit class IPushConfigOps[Self <: IPushConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributes(value: StringDictionary[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributesNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(null)
-        ret
-    }
-    @scala.inline
-    def withOidcToken(value: IOidcToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOidcToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOidcTokenNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(null)
-        ret
-    }
-    @scala.inline
-    def withPushEndpoint(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushEndpoint: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPushEndpointNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(null)
-        ret
-    }
-  }
-  
 }
 

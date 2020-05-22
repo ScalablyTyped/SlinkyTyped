@@ -6,127 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChangeStreamOptions extends js.Object {
-  var batchSize: js.UndefOr[scala.Double] = js.native
-  var collation: js.UndefOr[CollationDocument] = js.native
-  var fullDocument: js.UndefOr[default_ | updateLookup] = js.native
-  var maxAwaitTimeMS: js.UndefOr[scala.Double] = js.native
-  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.native
-  var resumeAfter: js.UndefOr[ResumeToken] = js.native
-  var startAfter: js.UndefOr[ResumeToken] = js.native
-  var startAtOperationTime: js.UndefOr[typingsSlinky.bson.mod.Timestamp] = js.native
+  var batchSize: js.UndefOr[scala.Double] = js.undefined
+  var collation: js.UndefOr[CollationDocument] = js.undefined
+  var fullDocument: js.UndefOr[default_ | updateLookup] = js.undefined
+  var maxAwaitTimeMS: js.UndefOr[scala.Double] = js.undefined
+  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.undefined
+  var resumeAfter: js.UndefOr[ResumeToken] = js.undefined
+  var startAfter: js.UndefOr[ResumeToken] = js.undefined
+  var startAtOperationTime: js.UndefOr[typingsSlinky.bson.mod.Timestamp] = js.undefined
 }
 
 object ChangeStreamOptions {
   @scala.inline
-  def apply(): ChangeStreamOptions = {
+  def apply(
+    batchSize: js.UndefOr[scala.Double] = js.undefined,
+    collation: CollationDocument = null,
+    fullDocument: default_ | updateLookup = null,
+    maxAwaitTimeMS: js.UndefOr[scala.Double] = js.undefined,
+    readPreference: ReadPreferenceOrMode = null,
+    resumeAfter: ResumeToken = null,
+    startAfter: ResumeToken = null,
+    startAtOperationTime: typingsSlinky.bson.mod.Timestamp = null
+  ): ChangeStreamOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(batchSize)) __obj.updateDynamic("batchSize")(batchSize.get.asInstanceOf[js.Any])
+    if (collation != null) __obj.updateDynamic("collation")(collation.asInstanceOf[js.Any])
+    if (fullDocument != null) __obj.updateDynamic("fullDocument")(fullDocument.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxAwaitTimeMS)) __obj.updateDynamic("maxAwaitTimeMS")(maxAwaitTimeMS.get.asInstanceOf[js.Any])
+    if (readPreference != null) __obj.updateDynamic("readPreference")(readPreference.asInstanceOf[js.Any])
+    if (resumeAfter != null) __obj.updateDynamic("resumeAfter")(resumeAfter.asInstanceOf[js.Any])
+    if (startAfter != null) __obj.updateDynamic("startAfter")(startAfter.asInstanceOf[js.Any])
+    if (startAtOperationTime != null) __obj.updateDynamic("startAtOperationTime")(startAtOperationTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeStreamOptions]
   }
-  @scala.inline
-  implicit class ChangeStreamOptionsOps[Self <: ChangeStreamOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBatchSize(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBatchSize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollation(value: CollationDocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFullDocument(value: default_ | updateLookup): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullDocument")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFullDocument: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fullDocument")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxAwaitTimeMS(value: scala.Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAwaitTimeMS")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxAwaitTimeMS: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAwaitTimeMS")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReadPreference(value: ReadPreferenceOrMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadPreference: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readPreference")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResumeAfter(value: ResumeToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResumeAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAfter(value: ResumeToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAfter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAfter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAfter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartAtOperationTime(value: typingsSlinky.bson.mod.Timestamp): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAtOperationTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartAtOperationTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startAtOperationTime")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

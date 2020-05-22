@@ -4,114 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Privilege extends js.Object {
-  var childPrivileges: js.UndefOr[js.Array[Privilege]] = js.native
-  var etag: js.UndefOr[String] = js.native
-  var isOuScopable: js.UndefOr[Boolean] = js.native
-  var kind: js.UndefOr[String] = js.native
-  var privilegeName: js.UndefOr[String] = js.native
-  var serviceId: js.UndefOr[String] = js.native
-  var serviceName: js.UndefOr[String] = js.native
+  var childPrivileges: js.UndefOr[js.Array[Privilege]] = js.undefined
+  var etag: js.UndefOr[String] = js.undefined
+  var isOuScopable: js.UndefOr[Boolean] = js.undefined
+  var kind: js.UndefOr[String] = js.undefined
+  var privilegeName: js.UndefOr[String] = js.undefined
+  var serviceId: js.UndefOr[String] = js.undefined
+  var serviceName: js.UndefOr[String] = js.undefined
 }
 
 object Privilege {
   @scala.inline
-  def apply(): Privilege = {
+  def apply(
+    childPrivileges: js.Array[Privilege] = null,
+    etag: String = null,
+    isOuScopable: js.UndefOr[Boolean] = js.undefined,
+    kind: String = null,
+    privilegeName: String = null,
+    serviceId: String = null,
+    serviceName: String = null
+  ): Privilege = {
     val __obj = js.Dynamic.literal()
+    if (childPrivileges != null) __obj.updateDynamic("childPrivileges")(childPrivileges.asInstanceOf[js.Any])
+    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
+    if (!js.isUndefined(isOuScopable)) __obj.updateDynamic("isOuScopable")(isOuScopable.get.asInstanceOf[js.Any])
+    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
+    if (privilegeName != null) __obj.updateDynamic("privilegeName")(privilegeName.asInstanceOf[js.Any])
+    if (serviceId != null) __obj.updateDynamic("serviceId")(serviceId.asInstanceOf[js.Any])
+    if (serviceName != null) __obj.updateDynamic("serviceName")(serviceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Privilege]
   }
-  @scala.inline
-  implicit class PrivilegeOps[Self <: Privilege] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildPrivileges(value: js.Array[Privilege]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childPrivileges")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildPrivileges: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("childPrivileges")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEtag: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsOuScopable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOuScopable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsOuScopable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isOuScopable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKind: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPrivilegeName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privilegeName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPrivilegeName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("privilegeName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withServiceName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutServiceName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

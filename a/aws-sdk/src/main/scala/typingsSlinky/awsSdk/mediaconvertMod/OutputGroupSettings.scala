@@ -34,89 +34,22 @@ trait OutputGroupSettings extends js.Object {
 
 object OutputGroupSettings {
   @scala.inline
-  def apply(): OutputGroupSettings = {
+  def apply(
+    CmafGroupSettings: CmafGroupSettings = null,
+    DashIsoGroupSettings: DashIsoGroupSettings = null,
+    FileGroupSettings: FileGroupSettings = null,
+    HlsGroupSettings: HlsGroupSettings = null,
+    MsSmoothGroupSettings: MsSmoothGroupSettings = null,
+    Type: OutputGroupType = null
+  ): OutputGroupSettings = {
     val __obj = js.Dynamic.literal()
+    if (CmafGroupSettings != null) __obj.updateDynamic("CmafGroupSettings")(CmafGroupSettings.asInstanceOf[js.Any])
+    if (DashIsoGroupSettings != null) __obj.updateDynamic("DashIsoGroupSettings")(DashIsoGroupSettings.asInstanceOf[js.Any])
+    if (FileGroupSettings != null) __obj.updateDynamic("FileGroupSettings")(FileGroupSettings.asInstanceOf[js.Any])
+    if (HlsGroupSettings != null) __obj.updateDynamic("HlsGroupSettings")(HlsGroupSettings.asInstanceOf[js.Any])
+    if (MsSmoothGroupSettings != null) __obj.updateDynamic("MsSmoothGroupSettings")(MsSmoothGroupSettings.asInstanceOf[js.Any])
+    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputGroupSettings]
   }
-  @scala.inline
-  implicit class OutputGroupSettingsOps[Self <: OutputGroupSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCmafGroupSettings(value: CmafGroupSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CmafGroupSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCmafGroupSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CmafGroupSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDashIsoGroupSettings(value: DashIsoGroupSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashIsoGroupSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDashIsoGroupSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("DashIsoGroupSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileGroupSettings(value: FileGroupSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileGroupSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileGroupSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FileGroupSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHlsGroupSettings(value: HlsGroupSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsGroupSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHlsGroupSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsGroupSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMsSmoothGroupSettings(value: MsSmoothGroupSettings): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MsSmoothGroupSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMsSmoothGroupSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MsSmoothGroupSettings")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: OutputGroupType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

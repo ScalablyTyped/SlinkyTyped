@@ -29,65 +29,18 @@ trait SchemaResources extends js.Object {
 
 object SchemaResources {
   @scala.inline
-  def apply(): SchemaResources = {
+  def apply(
+    cpu: js.UndefOr[Double] = js.undefined,
+    diskGb: js.UndefOr[Double] = js.undefined,
+    memoryGb: js.UndefOr[Double] = js.undefined,
+    volumes: js.Array[SchemaVolume] = null
+  ): SchemaResources = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(cpu)) __obj.updateDynamic("cpu")(cpu.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(diskGb)) __obj.updateDynamic("diskGb")(diskGb.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(memoryGb)) __obj.updateDynamic("memoryGb")(memoryGb.get.asInstanceOf[js.Any])
+    if (volumes != null) __obj.updateDynamic("volumes")(volumes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaResources]
   }
-  @scala.inline
-  implicit class SchemaResourcesOps[Self <: SchemaResources] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCpu(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCpu: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cpu")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDiskGb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDiskGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("diskGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMemoryGb(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryGb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMemoryGb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryGb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolumes(value: js.Array[SchemaVolume]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolumes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

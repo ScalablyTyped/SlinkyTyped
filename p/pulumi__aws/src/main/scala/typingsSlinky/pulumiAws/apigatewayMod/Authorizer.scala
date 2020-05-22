@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.apigatewayMod
 
-import typingsSlinky.pulumiAws.authorizerMod.AuthorizerArgs
-import typingsSlinky.pulumiAws.authorizerMod.AuthorizerState
+import typingsSlinky.pulumiAws.apigatewayAuthorizerMod.AuthorizerArgs
+import typingsSlinky.pulumiAws.apigatewayAuthorizerMod.AuthorizerState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@pulumi/aws/apigateway", "Authorizer")
 @js.native
 class Authorizer protected ()
-  extends typingsSlinky.pulumiAws.authorizerMod.Authorizer {
+  extends typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer {
   /**
     * Create a Authorizer resource with the given unique name, arguments, and options.
     *
@@ -36,9 +36,9 @@ object Authorizer extends js.Object {
     * @param id The _unique_ provider ID of the resource to lookup.
     * @param state Any extra arguments used during the lookup.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.authorizerMod.Authorizer = js.native
-  def get(name: String, id: Input[ID], state: AuthorizerState): typingsSlinky.pulumiAws.authorizerMod.Authorizer = js.native
-  def get(name: String, id: Input[ID], state: AuthorizerState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.authorizerMod.Authorizer = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
+  def get(name: String, id: Input[ID], state: AuthorizerState): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
+  def get(name: String, id: Input[ID], state: AuthorizerState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.apigatewayAuthorizerMod.Authorizer = js.native
   /**
     * Returns true if the given object is an instance of Authorizer.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.

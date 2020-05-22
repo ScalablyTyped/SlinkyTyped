@@ -9,140 +9,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AssetPrefix extends js.Object {
-  var assetPrefix: js.UndefOr[String] = js.native
-  var elementInput: js.UndefOr[ElementInput] = js.native
-  var gamepads: js.UndefOr[GamePads] = js.native
-  var graphicsDeviceOptions: js.UndefOr[js.Any] = js.native
-  var keyboard: js.UndefOr[Keyboard] = js.native
-  var mouse: js.UndefOr[Mouse] = js.native
-  var scriptPrefix: js.UndefOr[String] = js.native
-  var scriptsOrder: js.UndefOr[js.Array[String]] = js.native
-  var touch: js.UndefOr[TouchDevice] = js.native
+  var assetPrefix: js.UndefOr[String] = js.undefined
+  var elementInput: js.UndefOr[ElementInput] = js.undefined
+  var gamepads: js.UndefOr[GamePads] = js.undefined
+  var graphicsDeviceOptions: js.UndefOr[js.Any] = js.undefined
+  var keyboard: js.UndefOr[Keyboard] = js.undefined
+  var mouse: js.UndefOr[Mouse] = js.undefined
+  var scriptPrefix: js.UndefOr[String] = js.undefined
+  var scriptsOrder: js.UndefOr[js.Array[String]] = js.undefined
+  var touch: js.UndefOr[TouchDevice] = js.undefined
 }
 
 object AssetPrefix {
   @scala.inline
-  def apply(): AssetPrefix = {
+  def apply(
+    assetPrefix: String = null,
+    elementInput: ElementInput = null,
+    gamepads: GamePads = null,
+    graphicsDeviceOptions: js.Any = null,
+    keyboard: Keyboard = null,
+    mouse: Mouse = null,
+    scriptPrefix: String = null,
+    scriptsOrder: js.Array[String] = null,
+    touch: TouchDevice = null
+  ): AssetPrefix = {
     val __obj = js.Dynamic.literal()
+    if (assetPrefix != null) __obj.updateDynamic("assetPrefix")(assetPrefix.asInstanceOf[js.Any])
+    if (elementInput != null) __obj.updateDynamic("elementInput")(elementInput.asInstanceOf[js.Any])
+    if (gamepads != null) __obj.updateDynamic("gamepads")(gamepads.asInstanceOf[js.Any])
+    if (graphicsDeviceOptions != null) __obj.updateDynamic("graphicsDeviceOptions")(graphicsDeviceOptions.asInstanceOf[js.Any])
+    if (keyboard != null) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
+    if (mouse != null) __obj.updateDynamic("mouse")(mouse.asInstanceOf[js.Any])
+    if (scriptPrefix != null) __obj.updateDynamic("scriptPrefix")(scriptPrefix.asInstanceOf[js.Any])
+    if (scriptsOrder != null) __obj.updateDynamic("scriptsOrder")(scriptsOrder.asInstanceOf[js.Any])
+    if (touch != null) __obj.updateDynamic("touch")(touch.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssetPrefix]
   }
-  @scala.inline
-  implicit class AssetPrefixOps[Self <: AssetPrefix] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAssetPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAssetPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("assetPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElementInput(value: ElementInput): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementInput")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElementInput: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elementInput")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGamepads(value: GamePads): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gamepads")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGamepads: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gamepads")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGraphicsDeviceOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphicsDeviceOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGraphicsDeviceOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("graphicsDeviceOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyboard(value: Keyboard): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyboard: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMouse(value: Mouse): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouse")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMouse: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mouse")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScriptsOrder(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptsOrder")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScriptsOrder: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptsOrder")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTouch(value: TouchDevice): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTouch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

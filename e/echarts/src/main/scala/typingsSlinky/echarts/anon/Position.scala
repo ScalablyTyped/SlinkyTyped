@@ -4,12 +4,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Position extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.emphasis
     */
-  var emphasis: js.UndefOr[Formatter] = js.native
+  var emphasis: js.UndefOr[Formatter] = js.undefined
   /**
     * Data label formatter, which supports string template
     * and callback function.
@@ -55,7 +54,7 @@ trait Position extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.formatter
     */
-  var formatter: js.UndefOr[js.Function | String] = js.native
+  var formatter: js.UndefOr[js.Function | String] = js.undefined
   /**
     * Positions of labels can be:
     *
@@ -68,7 +67,7 @@ trait Position extends js.Object {
     * "end"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.position
     */
-  var position: js.UndefOr[String] = js.native
+  var position: js.UndefOr[String] = js.undefined
   /**
     * Whether show label or not.
     *
@@ -77,70 +76,23 @@ trait Position extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.label.show
     */
-  var show: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.undefined
 }
 
 object Position {
   @scala.inline
-  def apply(): Position = {
+  def apply(
+    emphasis: Formatter = null,
+    formatter: js.Function | String = null,
+    position: String = null,
+    show: js.UndefOr[Boolean] = js.undefined
+  ): Position = {
     val __obj = js.Dynamic.literal()
+    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
+    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Position]
   }
-  @scala.inline
-  implicit class PositionOps[Self <: Position] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmphasis(value: Formatter): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmphasis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFormatter(value: js.Function | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFormatter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShow(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

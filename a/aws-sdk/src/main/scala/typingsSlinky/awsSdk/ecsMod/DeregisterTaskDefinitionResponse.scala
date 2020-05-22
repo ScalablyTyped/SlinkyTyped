@@ -14,29 +14,10 @@ trait DeregisterTaskDefinitionResponse extends js.Object {
 
 object DeregisterTaskDefinitionResponse {
   @scala.inline
-  def apply(): DeregisterTaskDefinitionResponse = {
+  def apply(taskDefinition: TaskDefinition = null): DeregisterTaskDefinitionResponse = {
     val __obj = js.Dynamic.literal()
+    if (taskDefinition != null) __obj.updateDynamic("taskDefinition")(taskDefinition.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeregisterTaskDefinitionResponse]
   }
-  @scala.inline
-  implicit class DeregisterTaskDefinitionResponseOps[Self <: DeregisterTaskDefinitionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTaskDefinition(value: TaskDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskDefinition")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTaskDefinition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("taskDefinition")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

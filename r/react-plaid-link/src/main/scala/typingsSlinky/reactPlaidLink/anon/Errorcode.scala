@@ -20,24 +20,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Errorcode extends js.Object {
-  var error_code: js.UndefOr[String | Null] = js.native
-  var error_message: js.UndefOr[String | Null] = js.native
+  var error_code: js.UndefOr[String | Null] = js.undefined
+  var error_message: js.UndefOr[String | Null] = js.undefined
   var error_type: js.UndefOr[
     INVALID_REQUEST | INVALID_INPUT | INSTITUTION_ERROR | RATE_LIMIT_EXCEEDED | API_ERROR | ITEM_ERROR | ASSET_REPORT_ERROR | Null
-  ] = js.native
-  var exit_status: js.UndefOr[String | Double | Null] = js.native
-  var institution_id: String = js.native
-  var institution_name: String = js.native
-  var institution_search_query: js.UndefOr[String | Null] = js.native
-  var link_session_id: String = js.native
-  var mfa_type: js.UndefOr[String | Null] = js.native
-  var request_id: String = js.native
-  var timestamp: String = js.native
+  ] = js.undefined
+  var exit_status: js.UndefOr[String | Double | Null] = js.undefined
+  var institution_id: String
+  var institution_name: String
+  var institution_search_query: js.UndefOr[String | Null] = js.undefined
+  var link_session_id: String
+  var mfa_type: js.UndefOr[String | Null] = js.undefined
+  var request_id: String
+  var timestamp: String
   var view_name: js.UndefOr[
     CONNECTED | CREDENTIAL | ERROR | EXIT | LOADING | MFA | RECAPTCHA | SELECT_ACCOUNT | SELECT_INSTITUTION | Null
-  ] = js.native
+  ] = js.undefined
 }
 
 object Errorcode {
@@ -47,178 +46,28 @@ object Errorcode {
     institution_name: String,
     link_session_id: String,
     request_id: String,
-    timestamp: String
+    timestamp: String,
+    error_code: js.UndefOr[Null | String] = js.undefined,
+    error_message: js.UndefOr[Null | String] = js.undefined,
+    error_type: js.UndefOr[
+      Null | INVALID_REQUEST | INVALID_INPUT | INSTITUTION_ERROR | RATE_LIMIT_EXCEEDED | API_ERROR | ITEM_ERROR | ASSET_REPORT_ERROR
+    ] = js.undefined,
+    exit_status: js.UndefOr[Null | String | Double] = js.undefined,
+    institution_search_query: js.UndefOr[Null | String] = js.undefined,
+    mfa_type: js.UndefOr[Null | String] = js.undefined,
+    view_name: js.UndefOr[
+      Null | CONNECTED | CREDENTIAL | ERROR | EXIT | LOADING | MFA | RECAPTCHA | SELECT_ACCOUNT | SELECT_INSTITUTION
+    ] = js.undefined
   ): Errorcode = {
     val __obj = js.Dynamic.literal(institution_id = institution_id.asInstanceOf[js.Any], institution_name = institution_name.asInstanceOf[js.Any], link_session_id = link_session_id.asInstanceOf[js.Any], request_id = request_id.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_code)) __obj.updateDynamic("error_code")(error_code.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_message)) __obj.updateDynamic("error_message")(error_message.asInstanceOf[js.Any])
+    if (!js.isUndefined(error_type)) __obj.updateDynamic("error_type")(error_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(exit_status)) __obj.updateDynamic("exit_status")(exit_status.asInstanceOf[js.Any])
+    if (!js.isUndefined(institution_search_query)) __obj.updateDynamic("institution_search_query")(institution_search_query.asInstanceOf[js.Any])
+    if (!js.isUndefined(mfa_type)) __obj.updateDynamic("mfa_type")(mfa_type.asInstanceOf[js.Any])
+    if (!js.isUndefined(view_name)) __obj.updateDynamic("view_name")(view_name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Errorcode]
   }
-  @scala.inline
-  implicit class ErrorcodeOps[Self <: Errorcode] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withInstitution_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("institution_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withInstitution_name(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("institution_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLink_session_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link_session_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRequest_id(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("request_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTimestamp(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withError_code(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_code")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_code: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_code")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError_codeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_code")(null)
-        ret
-    }
-    @scala.inline
-    def withError_message(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_message")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_message: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_message")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError_messageNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_message")(null)
-        ret
-    }
-    @scala.inline
-    def withError_type(
-      value: INVALID_REQUEST | INVALID_INPUT | INSTITUTION_ERROR | RATE_LIMIT_EXCEEDED | API_ERROR | ITEM_ERROR | ASSET_REPORT_ERROR
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError_typeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error_type")(null)
-        ret
-    }
-    @scala.inline
-    def withExit_status(value: String | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutExit_status: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withExit_statusNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("exit_status")(null)
-        ret
-    }
-    @scala.inline
-    def withInstitution_search_query(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("institution_search_query")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstitution_search_query: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("institution_search_query")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstitution_search_queryNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("institution_search_query")(null)
-        ret
-    }
-    @scala.inline
-    def withMfa_type(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mfa_type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMfa_type: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mfa_type")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMfa_typeNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("mfa_type")(null)
-        ret
-    }
-    @scala.inline
-    def withView_name(
-      value: CONNECTED | CREDENTIAL | ERROR | EXIT | LOADING | MFA | RECAPTCHA | SELECT_ACCOUNT | SELECT_INSTITUTION
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view_name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutView_name: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view_name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withView_nameNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("view_name")(null)
-        ret
-    }
-  }
-  
 }
 

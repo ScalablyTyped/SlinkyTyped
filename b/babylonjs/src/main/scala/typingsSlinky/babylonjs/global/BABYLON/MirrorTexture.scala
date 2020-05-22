@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.Ratio
 import typingsSlinky.babylonjs.anon.Width
 import scala.scalajs.js
@@ -103,5 +104,10 @@ class MirrorTexture protected ()
     samplingMode: Double,
     generateDepthBuffer: Boolean
   ) = this()
+  /**
+    * Array of animations
+    */
+  /* CompleteClass */
+  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
 

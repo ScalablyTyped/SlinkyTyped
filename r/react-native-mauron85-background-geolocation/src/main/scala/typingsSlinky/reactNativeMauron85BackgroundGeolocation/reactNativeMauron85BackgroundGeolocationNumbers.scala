@@ -1,10 +1,10 @@
 package typingsSlinky.reactNativeMauron85BackgroundGeolocation
 
-import typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod.AccuracyLevel
 import typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod.AuthorizationStatus
 import typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod.LocationErrorCode
 import typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod.LocationProvider
 import typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod.ServiceMode
+import typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod._AccuracyLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 object reactNativeMauron85BackgroundGeolocationNumbers {
   @js.native
   sealed trait `0`
-    extends AccuracyLevel
-       with AuthorizationStatus
+    extends AuthorizationStatus
        with LocationProvider
        with ServiceMode
+       with _AccuracyLevel
   
   @js.native
   sealed trait `1`
@@ -25,13 +25,13 @@ object reactNativeMauron85BackgroundGeolocationNumbers {
        with ServiceMode
   
   @js.native
-  sealed trait `100` extends AccuracyLevel
+  sealed trait `100` extends _AccuracyLevel
   
   @js.native
-  sealed trait `1000` extends AccuracyLevel
+  sealed trait `1000` extends _AccuracyLevel
   
   @js.native
-  sealed trait `10000` extends AccuracyLevel
+  sealed trait `10000` extends _AccuracyLevel
   
   @js.native
   sealed trait `2`

@@ -1,79 +1,44 @@
 package typingsSlinky.node.childProcessMod
 
+import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.NodeJS.Signals
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ExecFileOptions extends CommonOptions {
-  var killSignal: js.UndefOr[Signals | Double] = js.native
-  var maxBuffer: js.UndefOr[Double] = js.native
-  var shell: js.UndefOr[Boolean | String] = js.native
-  var windowsVerbatimArguments: js.UndefOr[Boolean] = js.native
+  var killSignal: js.UndefOr[Signals | Double] = js.undefined
+  var maxBuffer: js.UndefOr[Double] = js.undefined
+  var shell: js.UndefOr[Boolean | String] = js.undefined
+  var windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
 }
 
 object ExecFileOptions {
   @scala.inline
-  def apply(): ExecFileOptions = {
+  def apply(
+    cwd: String = null,
+    env: ProcessEnv = null,
+    gid: js.UndefOr[Double] = js.undefined,
+    killSignal: Signals | Double = null,
+    maxBuffer: js.UndefOr[Double] = js.undefined,
+    shell: Boolean | String = null,
+    timeout: js.UndefOr[Double] = js.undefined,
+    uid: js.UndefOr[Double] = js.undefined,
+    windowsHide: js.UndefOr[Boolean] = js.undefined,
+    windowsVerbatimArguments: js.UndefOr[Boolean] = js.undefined
+  ): ExecFileOptions = {
     val __obj = js.Dynamic.literal()
+    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
+    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
+    if (!js.isUndefined(gid)) __obj.updateDynamic("gid")(gid.get.asInstanceOf[js.Any])
+    if (killSignal != null) __obj.updateDynamic("killSignal")(killSignal.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxBuffer)) __obj.updateDynamic("maxBuffer")(maxBuffer.get.asInstanceOf[js.Any])
+    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
+    if (!js.isUndefined(timeout)) __obj.updateDynamic("timeout")(timeout.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(uid)) __obj.updateDynamic("uid")(uid.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsHide)) __obj.updateDynamic("windowsHide")(windowsHide.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(windowsVerbatimArguments)) __obj.updateDynamic("windowsVerbatimArguments")(windowsVerbatimArguments.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecFileOptions]
   }
-  @scala.inline
-  implicit class ExecFileOptionsOps[Self <: ExecFileOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withKillSignal(value: Signals | Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("killSignal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKillSignal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("killSignal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxBuffer(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBuffer")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxBuffer: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBuffer")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShell(value: Boolean | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShell: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindowsVerbatimArguments(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsVerbatimArguments")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindowsVerbatimArguments: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("windowsVerbatimArguments")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -18,41 +18,11 @@ trait ListProvisioningArtifactsOutput extends js.Object {
 
 object ListProvisioningArtifactsOutput {
   @scala.inline
-  def apply(): ListProvisioningArtifactsOutput = {
+  def apply(NextPageToken: PageToken = null, ProvisioningArtifactDetails: ProvisioningArtifactDetails = null): ListProvisioningArtifactsOutput = {
     val __obj = js.Dynamic.literal()
+    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
+    if (ProvisioningArtifactDetails != null) __obj.updateDynamic("ProvisioningArtifactDetails")(ProvisioningArtifactDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListProvisioningArtifactsOutput]
   }
-  @scala.inline
-  implicit class ListProvisioningArtifactsOutputOps[Self <: ListProvisioningArtifactsOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: PageToken): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withProvisioningArtifactDetails(value: ProvisioningArtifactDetails): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactDetails")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutProvisioningArtifactDetails: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningArtifactDetails")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -13,32 +13,31 @@ import scala.scalajs.js.annotation._
   * provides methods to access cell ranges in a collection via index and to add and remove cell ranges.
   * @see com.sun.star.sheet.SheetCellRanges
   */
-@js.native
 trait XSheetCellRangeContainer extends XSheetCellRanges {
   /**
     * adds the given range to the collection of cell ranges.
     * @param aCellRangeAddress contains the address of the new range.
     * @param bMergeRanges defines how the range should be added. To merge the ranges takes more time, but the memory usage is lower.
     */
-  def addRangeAddress(aCellRangeAddress: CellRangeAddress, bMergeRanges: Boolean): Unit = js.native
+  def addRangeAddress(aCellRangeAddress: CellRangeAddress, bMergeRanges: Boolean): Unit
   /**
     * adds the given ranges to the collection of cell ranges.
     * @param aCellRangeAddresses contains a sequence of addresses of all new ranges.
     * @param bMergeRanges defines how the ranges should be added. To merge the ranges takes more time, but the memory usage is lower.
     */
-  def addRangeAddresses(aCellRangeAddresses: SeqEquiv[CellRangeAddress], bMergeRanges: Boolean): Unit = js.native
+  def addRangeAddresses(aCellRangeAddresses: SeqEquiv[CellRangeAddress], bMergeRanges: Boolean): Unit
   /**
     * removes the given range from the collection of cell ranges.
     * @param aCellRangeAddress contains the address of the range to be removed.  The specified range must fit exactly to an element of the collection. The met
     * @throws com::sun::star::container::NoSuchElementException if the collection does not contain the specified range.
     */
-  def removeRangeAddress(aCellRangeAddress: CellRangeAddress): Unit = js.native
+  def removeRangeAddress(aCellRangeAddress: CellRangeAddress): Unit
   /**
     * removes the given ranges from the collection of cell ranges.
     * @param aCellRangeAddresses contains a sequence of addresses of all ranges to be removed.  All specified ranges must fit exactly to elements of the colle
     * @throws com::sun::star::container::NoSuchElementException if the collection does not contain any of the specified ranges.
     */
-  def removeRangeAddresses(aCellRangeAddresses: SeqEquiv[CellRangeAddress]): Unit = js.native
+  def removeRangeAddresses(aCellRangeAddresses: SeqEquiv[CellRangeAddress]): Unit
 }
 
 object XSheetCellRangeContainer {
@@ -67,37 +66,5 @@ object XSheetCellRangeContainer {
     val __obj = js.Dynamic.literal(Cells = Cells.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], ElementType = ElementType.asInstanceOf[js.Any], RangeAddresses = RangeAddresses.asInstanceOf[js.Any], RangeAddressesAsString = RangeAddressesAsString.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addRangeAddress = js.Any.fromFunction2(addRangeAddress), addRangeAddresses = js.Any.fromFunction2(addRangeAddresses), getByIndex = js.Any.fromFunction1(getByIndex), getCells = js.Any.fromFunction0(getCells), getCount = js.Any.fromFunction0(getCount), getElementType = js.Any.fromFunction0(getElementType), getRangeAddresses = js.Any.fromFunction0(getRangeAddresses), getRangeAddressesAsString = js.Any.fromFunction0(getRangeAddressesAsString), hasElements = js.Any.fromFunction0(hasElements), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeRangeAddress = js.Any.fromFunction1(removeRangeAddress), removeRangeAddresses = js.Any.fromFunction1(removeRangeAddresses))
     __obj.asInstanceOf[XSheetCellRangeContainer]
   }
-  @scala.inline
-  implicit class XSheetCellRangeContainerOps[Self <: XSheetCellRangeContainer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAddRangeAddress(value: (CellRangeAddress, Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRangeAddress")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withAddRangeAddresses(value: (SeqEquiv[CellRangeAddress], Boolean) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("addRangeAddresses")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveRangeAddress(value: CellRangeAddress => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRangeAddress")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRemoveRangeAddresses(value: SeqEquiv[CellRangeAddress] => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRangeAddresses")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

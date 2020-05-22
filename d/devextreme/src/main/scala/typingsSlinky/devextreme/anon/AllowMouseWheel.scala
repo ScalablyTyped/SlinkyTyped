@@ -12,114 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AllowMouseWheel extends js.Object {
-  var allowMouseWheel: js.UndefOr[Boolean] = js.native
-  var allowTouchGestures: js.UndefOr[Boolean] = js.native
-  var argumentAxis: js.UndefOr[both | none | pan | zoom] = js.native
-  var dragBoxStyle: js.UndefOr[Opacity] = js.native
-  var dragToZoom: js.UndefOr[Boolean] = js.native
-  var panKey: js.UndefOr[alt | ctrl | meta | shift] = js.native
-  var valueAxis: js.UndefOr[both | none | pan | zoom] = js.native
+  var allowMouseWheel: js.UndefOr[Boolean] = js.undefined
+  var allowTouchGestures: js.UndefOr[Boolean] = js.undefined
+  var argumentAxis: js.UndefOr[both | none | pan | zoom] = js.undefined
+  var dragBoxStyle: js.UndefOr[Opacity] = js.undefined
+  var dragToZoom: js.UndefOr[Boolean] = js.undefined
+  var panKey: js.UndefOr[alt | ctrl | meta | shift] = js.undefined
+  var valueAxis: js.UndefOr[both | none | pan | zoom] = js.undefined
 }
 
 object AllowMouseWheel {
   @scala.inline
-  def apply(): AllowMouseWheel = {
+  def apply(
+    allowMouseWheel: js.UndefOr[Boolean] = js.undefined,
+    allowTouchGestures: js.UndefOr[Boolean] = js.undefined,
+    argumentAxis: both | none | pan | zoom = null,
+    dragBoxStyle: Opacity = null,
+    dragToZoom: js.UndefOr[Boolean] = js.undefined,
+    panKey: alt | ctrl | meta | shift = null,
+    valueAxis: both | none | pan | zoom = null
+  ): AllowMouseWheel = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowMouseWheel)) __obj.updateDynamic("allowMouseWheel")(allowMouseWheel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowTouchGestures)) __obj.updateDynamic("allowTouchGestures")(allowTouchGestures.get.asInstanceOf[js.Any])
+    if (argumentAxis != null) __obj.updateDynamic("argumentAxis")(argumentAxis.asInstanceOf[js.Any])
+    if (dragBoxStyle != null) __obj.updateDynamic("dragBoxStyle")(dragBoxStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(dragToZoom)) __obj.updateDynamic("dragToZoom")(dragToZoom.get.asInstanceOf[js.Any])
+    if (panKey != null) __obj.updateDynamic("panKey")(panKey.asInstanceOf[js.Any])
+    if (valueAxis != null) __obj.updateDynamic("valueAxis")(valueAxis.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllowMouseWheel]
   }
-  @scala.inline
-  implicit class AllowMouseWheelOps[Self <: AllowMouseWheel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowMouseWheel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMouseWheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowMouseWheel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowMouseWheel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowTouchGestures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTouchGestures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowTouchGestures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTouchGestures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withArgumentAxis(value: both | none | pan | zoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutArgumentAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentAxis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragBoxStyle(value: Opacity): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragBoxStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragBoxStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragBoxStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragToZoom(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragToZoom")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragToZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragToZoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPanKey(value: alt | ctrl | meta | shift): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPanKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("panKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValueAxis(value: both | none | pan | zoom): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValueAxis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

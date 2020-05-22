@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TaskHubLicenseDetails extends js.Object {
-  var enterpriseUsersCount: Double = js.native
-  var freeLicenseCount: Double = js.native
-  var hasLicenseCountEverUpdated: Boolean = js.native
-  var hostedAgentMinutesFreeCount: Double = js.native
-  var hostedAgentMinutesUsedCount: Double = js.native
-  var msdnUsersCount: Double = js.native
-  var purchasedHostedLicenseCount: Double = js.native
-  var purchasedLicenseCount: Double = js.native
-  var totalLicenseCount: Double = js.native
+  var enterpriseUsersCount: Double
+  var freeLicenseCount: Double
+  var hasLicenseCountEverUpdated: Boolean
+  var hostedAgentMinutesFreeCount: Double
+  var hostedAgentMinutesUsedCount: Double
+  var msdnUsersCount: Double
+  var purchasedHostedLicenseCount: Double
+  var purchasedLicenseCount: Double
+  var totalLicenseCount: Double
 }
 
 object TaskHubLicenseDetails {
@@ -33,67 +32,5 @@ object TaskHubLicenseDetails {
     val __obj = js.Dynamic.literal(enterpriseUsersCount = enterpriseUsersCount.asInstanceOf[js.Any], freeLicenseCount = freeLicenseCount.asInstanceOf[js.Any], hasLicenseCountEverUpdated = hasLicenseCountEverUpdated.asInstanceOf[js.Any], hostedAgentMinutesFreeCount = hostedAgentMinutesFreeCount.asInstanceOf[js.Any], hostedAgentMinutesUsedCount = hostedAgentMinutesUsedCount.asInstanceOf[js.Any], msdnUsersCount = msdnUsersCount.asInstanceOf[js.Any], purchasedHostedLicenseCount = purchasedHostedLicenseCount.asInstanceOf[js.Any], purchasedLicenseCount = purchasedLicenseCount.asInstanceOf[js.Any], totalLicenseCount = totalLicenseCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[TaskHubLicenseDetails]
   }
-  @scala.inline
-  implicit class TaskHubLicenseDetailsOps[Self <: TaskHubLicenseDetails] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnterpriseUsersCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseUsersCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFreeLicenseCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("freeLicenseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHasLicenseCountEverUpdated(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLicenseCountEverUpdated")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostedAgentMinutesFreeCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedAgentMinutesFreeCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHostedAgentMinutesUsedCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedAgentMinutesUsedCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMsdnUsersCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("msdnUsersCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPurchasedHostedLicenseCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchasedHostedLicenseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPurchasedLicenseCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("purchasedLicenseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTotalLicenseCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("totalLicenseCount")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

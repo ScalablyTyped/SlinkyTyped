@@ -26,65 +26,18 @@ trait PutAutoScalingPolicyOutput extends js.Object {
 
 object PutAutoScalingPolicyOutput {
   @scala.inline
-  def apply(): PutAutoScalingPolicyOutput = {
+  def apply(
+    AutoScalingPolicy: AutoScalingPolicyDescription = null,
+    ClusterArn: ArnType = null,
+    ClusterId: ClusterId = null,
+    InstanceGroupId: InstanceGroupId = null
+  ): PutAutoScalingPolicyOutput = {
     val __obj = js.Dynamic.literal()
+    if (AutoScalingPolicy != null) __obj.updateDynamic("AutoScalingPolicy")(AutoScalingPolicy.asInstanceOf[js.Any])
+    if (ClusterArn != null) __obj.updateDynamic("ClusterArn")(ClusterArn.asInstanceOf[js.Any])
+    if (ClusterId != null) __obj.updateDynamic("ClusterId")(ClusterId.asInstanceOf[js.Any])
+    if (InstanceGroupId != null) __obj.updateDynamic("InstanceGroupId")(InstanceGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutAutoScalingPolicyOutput]
   }
-  @scala.inline
-  implicit class PutAutoScalingPolicyOutputOps[Self <: PutAutoScalingPolicyOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoScalingPolicy(value: AutoScalingPolicyDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoScalingPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterArn(value: ArnType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterArn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClusterId(value: ClusterId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClusterId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceGroupId(value: InstanceGroupId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceGroupId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

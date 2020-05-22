@@ -26,9 +26,16 @@ object getBaiduChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetBaiduChannelInput) = this()
+    /* CompleteClass */
+    override val input: GetBaiduChannelInput = js.native
     val middlewareStack: MiddlewareStack[GetBaiduChannelInput, GetBaiduChannelOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: PinpointResolvedConfiguration
+    ): Handler[GetBaiduChannelInput, GetBaiduChannelOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetBaiduChannelInput, GetBaiduChannelOutput] = js.native
   }

@@ -16,12 +16,11 @@ import scala.scalajs.js.annotation._
   * 
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
-@js.native
 trait AttachmentContent extends js.Object {
   /**
     * The content of an attachment as a string.
     */
-  var content: String = js.native
+  var content: String
   /**
     * The string format to use for an attachment's content.
     * 
@@ -37,7 +36,7 @@ trait AttachmentContent extends js.Object {
     * 
     * For cloud attachments, the formatting is a URL string.
     */
-  var format: AttachmentContentFormat | String = js.native
+  var format: AttachmentContentFormat | String
 }
 
 object AttachmentContent {
@@ -46,25 +45,5 @@ object AttachmentContent {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentContent]
   }
-  @scala.inline
-  implicit class AttachmentContentOps[Self <: AttachmentContent] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withContent(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFormat(value: AttachmentContentFormat | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

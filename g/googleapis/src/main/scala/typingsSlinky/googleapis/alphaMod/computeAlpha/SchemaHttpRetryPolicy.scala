@@ -43,53 +43,16 @@ trait SchemaHttpRetryPolicy extends js.Object {
 
 object SchemaHttpRetryPolicy {
   @scala.inline
-  def apply(): SchemaHttpRetryPolicy = {
+  def apply(
+    numRetries: js.UndefOr[Double] = js.undefined,
+    perTryTimeout: SchemaDuration = null,
+    retryConditions: js.Array[String] = null
+  ): SchemaHttpRetryPolicy = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(numRetries)) __obj.updateDynamic("numRetries")(numRetries.get.asInstanceOf[js.Any])
+    if (perTryTimeout != null) __obj.updateDynamic("perTryTimeout")(perTryTimeout.asInstanceOf[js.Any])
+    if (retryConditions != null) __obj.updateDynamic("retryConditions")(retryConditions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpRetryPolicy]
   }
-  @scala.inline
-  implicit class SchemaHttpRetryPolicyOps[Self <: SchemaHttpRetryPolicy] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumRetries(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numRetries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumRetries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numRetries")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPerTryTimeout(value: SchemaDuration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perTryTimeout")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPerTryTimeout: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("perTryTimeout")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRetryConditions(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConditions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRetryConditions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConditions")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

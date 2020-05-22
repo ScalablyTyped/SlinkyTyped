@@ -35,7 +35,7 @@ trait DeploymentInfo extends js.Object {
     */
   var createTime: js.UndefOr[js.Date] = js.native
   /**
-    * The means by which the deployment was created:   user: A user created the deployment.   autoscaling: Amazon EC2 Auto Scaling created the deployment.   codeDeployRollback: A rollback process created the deployment.  
+    * The means by which the deployment was created:    user: A user created the deployment.    autoscaling: Amazon EC2 Auto Scaling created the deployment.    codeDeployRollback: A rollback process created the deployment.  
     */
   var creator: js.UndefOr[DeploymentCreator] = js.native
   /**
@@ -71,7 +71,11 @@ trait DeploymentInfo extends js.Object {
     */
   var errorInformation: js.UndefOr[ErrorInformation] = js.native
   /**
-    * Information about how AWS CodeDeploy handles files that already exist in a deployment target location but weren't part of the previous successful deployment.   DISALLOW: The deployment fails. This is also the default behavior if no option is specified.   OVERWRITE: The version of the file from the application revision currently being deployed replaces the version already on the instance.   RETAIN: The version of the file already on the instance is kept and used as part of the new deployment.  
+    * The unique ID for an external resource (for example, a CloudFormation stack ID) that is linked to this deployment.
+    */
+  var externalId: js.UndefOr[ExternalId] = js.native
+  /**
+    * Information about how AWS CodeDeploy handles files that already exist in a deployment target location but weren't part of the previous successful deployment.    DISALLOW: The deployment fails. This is also the default behavior if no option is specified.    OVERWRITE: The version of the file from the application revision currently being deployed replaces the version already on the instance.    RETAIN: The version of the file already on the instance is kept and used as part of the new deployment.  
     */
   var fileExistsBehavior: js.UndefOr[FileExistsBehavior] = js.native
   /**
@@ -118,341 +122,66 @@ trait DeploymentInfo extends js.Object {
 
 object DeploymentInfo {
   @scala.inline
-  def apply(): DeploymentInfo = {
+  def apply(
+    additionalDeploymentStatusInfo: AdditionalDeploymentStatusInfo = null,
+    applicationName: ApplicationName = null,
+    autoRollbackConfiguration: AutoRollbackConfiguration = null,
+    blueGreenDeploymentConfiguration: BlueGreenDeploymentConfiguration = null,
+    completeTime: js.Date = null,
+    computePlatform: ComputePlatform = null,
+    createTime: js.Date = null,
+    creator: DeploymentCreator = null,
+    deploymentConfigName: DeploymentConfigName = null,
+    deploymentGroupName: DeploymentGroupName = null,
+    deploymentId: DeploymentId = null,
+    deploymentOverview: DeploymentOverview = null,
+    deploymentStatusMessages: DeploymentStatusMessageList = null,
+    deploymentStyle: DeploymentStyle = null,
+    description: Description = null,
+    errorInformation: ErrorInformation = null,
+    externalId: ExternalId = null,
+    fileExistsBehavior: FileExistsBehavior = null,
+    ignoreApplicationStopFailures: js.UndefOr[Boolean] = js.undefined,
+    instanceTerminationWaitTimeStarted: js.UndefOr[Boolean] = js.undefined,
+    loadBalancerInfo: LoadBalancerInfo = null,
+    previousRevision: RevisionLocation = null,
+    revision: RevisionLocation = null,
+    rollbackInfo: RollbackInfo = null,
+    startTime: js.Date = null,
+    status: DeploymentStatus = null,
+    targetInstances: TargetInstances = null,
+    updateOutdatedInstancesOnly: js.UndefOr[Boolean] = js.undefined
+  ): DeploymentInfo = {
     val __obj = js.Dynamic.literal()
+    if (additionalDeploymentStatusInfo != null) __obj.updateDynamic("additionalDeploymentStatusInfo")(additionalDeploymentStatusInfo.asInstanceOf[js.Any])
+    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
+    if (autoRollbackConfiguration != null) __obj.updateDynamic("autoRollbackConfiguration")(autoRollbackConfiguration.asInstanceOf[js.Any])
+    if (blueGreenDeploymentConfiguration != null) __obj.updateDynamic("blueGreenDeploymentConfiguration")(blueGreenDeploymentConfiguration.asInstanceOf[js.Any])
+    if (completeTime != null) __obj.updateDynamic("completeTime")(completeTime.asInstanceOf[js.Any])
+    if (computePlatform != null) __obj.updateDynamic("computePlatform")(computePlatform.asInstanceOf[js.Any])
+    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
+    if (creator != null) __obj.updateDynamic("creator")(creator.asInstanceOf[js.Any])
+    if (deploymentConfigName != null) __obj.updateDynamic("deploymentConfigName")(deploymentConfigName.asInstanceOf[js.Any])
+    if (deploymentGroupName != null) __obj.updateDynamic("deploymentGroupName")(deploymentGroupName.asInstanceOf[js.Any])
+    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
+    if (deploymentOverview != null) __obj.updateDynamic("deploymentOverview")(deploymentOverview.asInstanceOf[js.Any])
+    if (deploymentStatusMessages != null) __obj.updateDynamic("deploymentStatusMessages")(deploymentStatusMessages.asInstanceOf[js.Any])
+    if (deploymentStyle != null) __obj.updateDynamic("deploymentStyle")(deploymentStyle.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (errorInformation != null) __obj.updateDynamic("errorInformation")(errorInformation.asInstanceOf[js.Any])
+    if (externalId != null) __obj.updateDynamic("externalId")(externalId.asInstanceOf[js.Any])
+    if (fileExistsBehavior != null) __obj.updateDynamic("fileExistsBehavior")(fileExistsBehavior.asInstanceOf[js.Any])
+    if (!js.isUndefined(ignoreApplicationStopFailures)) __obj.updateDynamic("ignoreApplicationStopFailures")(ignoreApplicationStopFailures.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(instanceTerminationWaitTimeStarted)) __obj.updateDynamic("instanceTerminationWaitTimeStarted")(instanceTerminationWaitTimeStarted.get.asInstanceOf[js.Any])
+    if (loadBalancerInfo != null) __obj.updateDynamic("loadBalancerInfo")(loadBalancerInfo.asInstanceOf[js.Any])
+    if (previousRevision != null) __obj.updateDynamic("previousRevision")(previousRevision.asInstanceOf[js.Any])
+    if (revision != null) __obj.updateDynamic("revision")(revision.asInstanceOf[js.Any])
+    if (rollbackInfo != null) __obj.updateDynamic("rollbackInfo")(rollbackInfo.asInstanceOf[js.Any])
+    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (targetInstances != null) __obj.updateDynamic("targetInstances")(targetInstances.asInstanceOf[js.Any])
+    if (!js.isUndefined(updateOutdatedInstancesOnly)) __obj.updateDynamic("updateOutdatedInstancesOnly")(updateOutdatedInstancesOnly.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentInfo]
   }
-  @scala.inline
-  implicit class DeploymentInfoOps[Self <: DeploymentInfo] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAdditionalDeploymentStatusInfo(value: AdditionalDeploymentStatusInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalDeploymentStatusInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalDeploymentStatusInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalDeploymentStatusInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withApplicationName(value: ApplicationName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoRollbackConfiguration(value: AutoRollbackConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRollbackConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoRollbackConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRollbackConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBlueGreenDeploymentConfiguration(value: BlueGreenDeploymentConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueGreenDeploymentConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBlueGreenDeploymentConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("blueGreenDeploymentConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompleteTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completeTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompleteTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("completeTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withComputePlatform(value: ComputePlatform): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComputePlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreateTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreateTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreator(value: DeploymentCreator): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("creator")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentConfigName(value: DeploymentConfigName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentConfigName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentGroupName(value: DeploymentGroupName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentGroupName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentId(value: DeploymentId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentOverview(value: DeploymentOverview): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentOverview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentOverview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentOverview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentStatusMessages(value: DeploymentStatusMessageList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentStatusMessages")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentStatusMessages: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentStatusMessages")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeploymentStyle(value: DeploymentStyle): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDeploymentStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Description): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withErrorInformation(value: ErrorInformation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorInformation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutErrorInformation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorInformation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFileExistsBehavior(value: FileExistsBehavior): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExistsBehavior")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFileExistsBehavior: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fileExistsBehavior")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIgnoreApplicationStopFailures(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreApplicationStopFailures")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIgnoreApplicationStopFailures: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreApplicationStopFailures")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInstanceTerminationWaitTimeStarted(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTerminationWaitTimeStarted")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInstanceTerminationWaitTimeStarted: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTerminationWaitTimeStarted")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadBalancerInfo(value: LoadBalancerInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadBalancerInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadBalancerInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviousRevision(value: RevisionLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreviousRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("previousRevision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRevision(value: RevisionLocation): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRollbackInfo(value: RollbackInfo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackInfo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRollbackInfo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackInfo")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: js.Date): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStatus(value: DeploymentStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetInstances(value: TargetInstances): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstances")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetInstances: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("targetInstances")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUpdateOutdatedInstancesOnly(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOutdatedInstancesOnly")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUpdateOutdatedInstancesOnly: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOutdatedInstancesOnly")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

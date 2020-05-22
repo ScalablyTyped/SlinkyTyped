@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LocationContext extends js.Object {
   /**
     * IDs representing the geo location for this context.
@@ -12,34 +11,15 @@ trait LocationContext extends js.Object {
     * [geo-table.csv](https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv)
     * file for different geo criteria IDs.
     */
-  var geoCriteriaIds: js.UndefOr[js.Array[Double]] = js.native
+  var geoCriteriaIds: js.UndefOr[js.Array[Double]] = js.undefined
 }
 
 object LocationContext {
   @scala.inline
-  def apply(): LocationContext = {
+  def apply(geoCriteriaIds: js.Array[Double] = null): LocationContext = {
     val __obj = js.Dynamic.literal()
+    if (geoCriteriaIds != null) __obj.updateDynamic("geoCriteriaIds")(geoCriteriaIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationContext]
   }
-  @scala.inline
-  implicit class LocationContextOps[Self <: LocationContext] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGeoCriteriaIds(value: js.Array[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoCriteriaIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGeoCriteriaIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("geoCriteriaIds")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

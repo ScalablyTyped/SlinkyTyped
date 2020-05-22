@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FeedUrl_ extends js.Object {
-  var feedUrl: String = js.native
+  var feedUrl: String
 }
 
 object FeedUrl_ {
@@ -15,19 +14,5 @@ object FeedUrl_ {
     val __obj = js.Dynamic.literal(feedUrl = feedUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeedUrl_]
   }
-  @scala.inline
-  implicit class FeedUrl_Ops[Self <: FeedUrl_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFeedUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("feedUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

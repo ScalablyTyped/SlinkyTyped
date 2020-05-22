@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait XCompatWriterDocProperties extends js.Object {
-  var Category: String = js.native
-  var Company: String = js.native
-  var Manager: String = js.native
+  var Category: String
+  var Company: String
+  var Manager: String
 }
 
 object XCompatWriterDocProperties {
@@ -17,31 +16,5 @@ object XCompatWriterDocProperties {
     val __obj = js.Dynamic.literal(Category = Category.asInstanceOf[js.Any], Company = Company.asInstanceOf[js.Any], Manager = Manager.asInstanceOf[js.Any])
     __obj.asInstanceOf[XCompatWriterDocProperties]
   }
-  @scala.inline
-  implicit class XCompatWriterDocPropertiesOps[Self <: XCompatWriterDocProperties] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCategory(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCompany(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Company")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withManager(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Manager")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

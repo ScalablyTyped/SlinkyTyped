@@ -8,19 +8,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ChangedFiles extends js.Object {
   var changedFiles: js.UndefOr[
     Map[
       String, 
       js.Tuple6[String, Double, Double, `0` | `1`, String, js.UndefOr[String | Null]]
     ]
-  ] = js.native
-  var hasteMap: InternalHasteMap = js.native
+  ] = js.undefined
+  var hasteMap: InternalHasteMap
   var removedFiles: Map[
     String, 
     js.Tuple6[String, Double, Double, `0` | `1`, String, js.UndefOr[String | Null]]
-  ] = js.native
+  ]
 }
 
 object ChangedFiles {
@@ -30,52 +29,15 @@ object ChangedFiles {
     removedFiles: Map[
       String, 
       js.Tuple6[String, Double, Double, `0` | `1`, String, js.UndefOr[String | Null]]
-    ]
+    ],
+    changedFiles: Map[
+      String, 
+      js.Tuple6[String, Double, Double, `0` | `1`, String, js.UndefOr[String | Null]]
+    ] = null
   ): ChangedFiles = {
     val __obj = js.Dynamic.literal(hasteMap = hasteMap.asInstanceOf[js.Any], removedFiles = removedFiles.asInstanceOf[js.Any])
+    if (changedFiles != null) __obj.updateDynamic("changedFiles")(changedFiles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangedFiles]
   }
-  @scala.inline
-  implicit class ChangedFilesOps[Self <: ChangedFiles] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHasteMap(value: InternalHasteMap): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasteMap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRemovedFiles(
-      value: Map[
-          String, 
-          js.Tuple6[String, Double, Double, `0` | `1`, String, js.UndefOr[String | Null]]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("removedFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChangedFiles(
-      value: Map[
-          String, 
-          js.Tuple6[String, Double, Double, `0` | `1`, String, js.UndefOr[String | Null]]
-        ]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedFiles")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChangedFiles: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("changedFiles")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

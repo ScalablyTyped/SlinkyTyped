@@ -1,5 +1,10 @@
 package typingsSlinky.awsLambda.cloudformationCustomResourceMod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.awsLambda.anon.DictKey
+import typingsSlinky.awsLambda.awsLambdaStrings.Create
+import typingsSlinky.awsLambda.awsLambdaStrings.Delete
+import typingsSlinky.awsLambda.awsLambdaStrings.Update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +18,49 @@ trait CloudFormationCustomResourceEvent extends js.Object
 
 object CloudFormationCustomResourceEvent {
   @scala.inline
-  implicit def apply(value: CloudFormationCustomResourceCreateEvent): CloudFormationCustomResourceEvent = value.asInstanceOf[CloudFormationCustomResourceEvent]
+  def CloudFormationCustomResourceCreateEvent(
+    LogicalResourceId: String,
+    RequestId: String,
+    RequestType: Create,
+    ResourceProperties: DictKey,
+    ResourceType: String,
+    ResponseURL: String,
+    ServiceToken: String,
+    StackId: String
+  ): CloudFormationCustomResourceEvent = {
+    val __obj = js.Dynamic.literal(LogicalResourceId = LogicalResourceId.asInstanceOf[js.Any], RequestId = RequestId.asInstanceOf[js.Any], RequestType = RequestType.asInstanceOf[js.Any], ResourceProperties = ResourceProperties.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any], ResponseURL = ResponseURL.asInstanceOf[js.Any], ServiceToken = ServiceToken.asInstanceOf[js.Any], StackId = StackId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CloudFormationCustomResourceEvent]
+  }
   @scala.inline
-  implicit def apply(value: CloudFormationCustomResourceDeleteEvent): CloudFormationCustomResourceEvent = value.asInstanceOf[CloudFormationCustomResourceEvent]
+  def CloudFormationCustomResourceUpdateEvent(
+    LogicalResourceId: String,
+    OldResourceProperties: StringDictionary[js.Any],
+    PhysicalResourceId: String,
+    RequestId: String,
+    RequestType: Update,
+    ResourceProperties: DictKey,
+    ResourceType: String,
+    ResponseURL: String,
+    ServiceToken: String,
+    StackId: String
+  ): CloudFormationCustomResourceEvent = {
+    val __obj = js.Dynamic.literal(LogicalResourceId = LogicalResourceId.asInstanceOf[js.Any], OldResourceProperties = OldResourceProperties.asInstanceOf[js.Any], PhysicalResourceId = PhysicalResourceId.asInstanceOf[js.Any], RequestId = RequestId.asInstanceOf[js.Any], RequestType = RequestType.asInstanceOf[js.Any], ResourceProperties = ResourceProperties.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any], ResponseURL = ResponseURL.asInstanceOf[js.Any], ServiceToken = ServiceToken.asInstanceOf[js.Any], StackId = StackId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CloudFormationCustomResourceEvent]
+  }
   @scala.inline
-  implicit def apply(value: CloudFormationCustomResourceUpdateEvent): CloudFormationCustomResourceEvent = value.asInstanceOf[CloudFormationCustomResourceEvent]
+  def CloudFormationCustomResourceDeleteEvent(
+    LogicalResourceId: String,
+    PhysicalResourceId: String,
+    RequestId: String,
+    RequestType: Delete,
+    ResourceProperties: DictKey,
+    ResourceType: String,
+    ResponseURL: String,
+    ServiceToken: String,
+    StackId: String
+  ): CloudFormationCustomResourceEvent = {
+    val __obj = js.Dynamic.literal(LogicalResourceId = LogicalResourceId.asInstanceOf[js.Any], PhysicalResourceId = PhysicalResourceId.asInstanceOf[js.Any], RequestId = RequestId.asInstanceOf[js.Any], RequestType = RequestType.asInstanceOf[js.Any], ResourceProperties = ResourceProperties.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any], ResponseURL = ResponseURL.asInstanceOf[js.Any], ServiceToken = ServiceToken.asInstanceOf[js.Any], StackId = StackId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CloudFormationCustomResourceEvent]
+  }
 }
 

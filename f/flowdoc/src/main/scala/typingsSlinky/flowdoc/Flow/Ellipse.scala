@@ -6,32 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Ellipse extends Shape {
   @JSName("type")
-  var type_Ellipse: ELLIPSE = js.native
+  var type_Ellipse: ELLIPSE
 }
 
 object Ellipse {
   @scala.inline
-  def apply(id: String, name: String, position: Point, size: Size, `type`: ELLIPSE): Ellipse = {
+  def apply(
+    id: String,
+    name: String,
+    position: Point,
+    size: Size,
+    `type`: ELLIPSE,
+    connections: js.Array[Connection] = null
+  ): Ellipse = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (connections != null) __obj.updateDynamic("connections")(connections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ellipse]
   }
-  @scala.inline
-  implicit class EllipseOps[Self <: Ellipse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withType(value: ELLIPSE): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

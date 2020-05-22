@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   *
   * The needed cache on server side you can create using {@link XCachedDynamicResultSetFactory} .
   */
-@js.native
 trait XCachedDynamicResultSetStubFactory extends XInterface {
   /**
     * If you have instantiated a {@link CachedDynamicResultSet} on client side already, use this to connect your given Source on server side to the
@@ -37,13 +36,13 @@ trait XCachedDynamicResultSetStubFactory extends XInterface {
     TargetCache: XDynamicResultSet,
     SortingInfo: SeqEquiv[NumberedSortingInfo],
     CompareFactory: XAnyCompareFactory
-  ): Unit = js.native
+  ): Unit
   /**
     * creates a remote optimizes {@link XDynamicResultSet} .
     * @param Source must be an instance of service {@link DynamicResultSet} .
     * @returns an instance of service {@link CachedDynamicResultSetStub} .
     */
-  def createCachedDynamicResultSetStub(Source: XDynamicResultSet): XDynamicResultSet = js.native
+  def createCachedDynamicResultSetStub(Source: XDynamicResultSet): XDynamicResultSet
 }
 
 object XCachedDynamicResultSetStubFactory {
@@ -58,27 +57,5 @@ object XCachedDynamicResultSetStubFactory {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), connectToCache = js.Any.fromFunction4(connectToCache), createCachedDynamicResultSetStub = js.Any.fromFunction1(createCachedDynamicResultSetStub), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XCachedDynamicResultSetStubFactory]
   }
-  @scala.inline
-  implicit class XCachedDynamicResultSetStubFactoryOps[Self <: XCachedDynamicResultSetStubFactory] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnectToCache(
-      value: (XDynamicResultSet, XDynamicResultSet, SeqEquiv[NumberedSortingInfo], XAnyCompareFactory) => Unit
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connectToCache")(js.Any.fromFunction4(value))
-        ret
-    }
-    @scala.inline
-    def withCreateCachedDynamicResultSetStub(value: XDynamicResultSet => XDynamicResultSet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createCachedDynamicResultSetStub")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

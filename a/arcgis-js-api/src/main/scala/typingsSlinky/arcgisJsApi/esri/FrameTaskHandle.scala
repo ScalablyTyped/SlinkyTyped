@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FrameTaskHandle extends Object {
   /**
     * Pause the execution the frame task at every frame.
@@ -15,7 +14,7 @@ trait FrameTaskHandle extends Object {
     *
     *
     */
-  def pause(): Unit = js.native
+  def pause(): Unit
   /**
     * Removes the frame task.
     *
@@ -23,7 +22,7 @@ trait FrameTaskHandle extends Object {
     *
     *
     */
-  def remove(): Unit = js.native
+  def remove(): Unit
   /**
     * Resumes the execution the frame task.
     *
@@ -31,7 +30,7 @@ trait FrameTaskHandle extends Object {
     *
     *
     */
-  def resume(): Unit = js.native
+  def resume(): Unit
 }
 
 object FrameTaskHandle {
@@ -47,31 +46,5 @@ object FrameTaskHandle {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), pause = js.Any.fromFunction0(pause), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), remove = js.Any.fromFunction0(remove), resume = js.Any.fromFunction0(resume))
     __obj.asInstanceOf[FrameTaskHandle]
   }
-  @scala.inline
-  implicit class FrameTaskHandleOps[Self <: FrameTaskHandle] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPause(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withRemove(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withResume(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

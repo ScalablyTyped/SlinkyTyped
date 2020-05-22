@@ -31,10 +31,8 @@ object utilInternalHelpersMod extends js.Object {
     ]
   ): js.Promise[Unit] = js.native
   def withTestDatastore(fn: js.Function1[/* datastore */ Datastore, js.Promise[Unit]]): js.Promise[Unit] = js.native
-  def withTestDatastore(fn: js.Function1[/* datastore */ Datastore, js.Promise[Unit]], queue: AsyncQueue): js.Promise[Unit] = js.native
   def withTestDatastore(
     fn: js.Function1[/* datastore */ Datastore, js.Promise[Unit]],
-    queue: AsyncQueue,
     credentialsProvider: CredentialsProvider
   ): js.Promise[Unit] = js.native
 }

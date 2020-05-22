@@ -7,15 +7,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LogsResource extends js.Object {
   /**
     * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries written shortly before the delete operation might not
     * be deleted.
     */
-  def delete(request: Fields): Request[js.Object] = js.native
+  def delete(request: Fields): Request[js.Object]
   /** Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have entries are listed. */
-  def list(request: Bearertoken): Request[ListLogsResponse] = js.native
+  def list(request: Bearertoken): Request[ListLogsResponse]
 }
 
 object LogsResource {
@@ -24,25 +23,5 @@ object LogsResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LogsResource]
   }
-  @scala.inline
-  implicit class LogsResourceOps[Self <: LogsResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Fields => Request[js.Object]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: Bearertoken => Request[ListLogsResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

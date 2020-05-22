@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait IMemoizedFunctionMethods extends js.Object {
   /**
     * Lock the memoization to always return the cached
@@ -17,11 +16,11 @@ trait IMemoizedFunctionMethods extends js.Object {
     *
     * @param fn
     */
-  def doLocked[T](fn: js.Function0[T]): T = js.native
+  def doLocked[T](fn: js.Function0[T]): T
   /**
     * Turn on perf logging. Useful for debugging.
     */
-  def logPerformance(): this.type = js.native
+  def logPerformance(): this.type
 }
 
 object IMemoizedFunctionMethods {
@@ -30,25 +29,5 @@ object IMemoizedFunctionMethods {
     val __obj = js.Dynamic.literal(doLocked = js.Any.fromFunction1(doLocked), logPerformance = js.Any.fromFunction0(logPerformance))
     __obj.asInstanceOf[IMemoizedFunctionMethods]
   }
-  @scala.inline
-  implicit class IMemoizedFunctionMethodsOps[Self <: IMemoizedFunctionMethods] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDoLocked(value: js.Function0[js.Any] => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("doLocked")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withLogPerformance(value: () => IMemoizedFunctionMethods): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("logPerformance")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

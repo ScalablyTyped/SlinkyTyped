@@ -7,30 +7,29 @@ import scala.scalajs.js.annotation._
 /**
   * An energy source object. Can be harvested by creeps with a WORK body part.
   */
-@js.native
 trait Source extends RoomObject {
   /**
     * The remaining amount of energy.
     */
-  var energy: Double = js.native
+  var energy: Double
   /**
     * The total amount of energy in the source. Equals to 3000 in most cases.
     */
-  var energyCapacity: Double = js.native
+  var energyCapacity: Double
   /**
     * A unique object identifier. You can use Game.getObjectById method to retrieve an object instance by its id.
     */
-  var id: Id[this.type] = js.native
+  var id: Id[this.type]
   /**
     * If you can get an instance of Source, you can see it.
     * If you can see a Source, you can see the room it's in.
     */
   @JSName("room")
-  var room_Source: Room = js.native
+  var room_Source: Room
   /**
     * The remaining time after which the source will be refilled.
     */
-  var ticksToRegeneration: Double = js.native
+  var ticksToRegeneration: Double
 }
 
 object Source {
@@ -47,43 +46,5 @@ object Source {
     val __obj = js.Dynamic.literal(effects = effects.asInstanceOf[js.Any], energy = energy.asInstanceOf[js.Any], energyCapacity = energyCapacity.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], ticksToRegeneration = ticksToRegeneration.asInstanceOf[js.Any])
     __obj.asInstanceOf[Source]
   }
-  @scala.inline
-  implicit class SourceOps[Self <: Source] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnergy(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("energy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEnergyCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("energyCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withId(value: Id[Source]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRoom(value: Room): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTicksToRegeneration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToRegeneration")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

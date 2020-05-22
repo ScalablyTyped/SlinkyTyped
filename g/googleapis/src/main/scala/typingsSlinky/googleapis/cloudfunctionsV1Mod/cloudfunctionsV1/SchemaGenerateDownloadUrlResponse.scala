@@ -18,29 +18,10 @@ trait SchemaGenerateDownloadUrlResponse extends js.Object {
 
 object SchemaGenerateDownloadUrlResponse {
   @scala.inline
-  def apply(): SchemaGenerateDownloadUrlResponse = {
+  def apply(downloadUrl: String = null): SchemaGenerateDownloadUrlResponse = {
     val __obj = js.Dynamic.literal()
+    if (downloadUrl != null) __obj.updateDynamic("downloadUrl")(downloadUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGenerateDownloadUrlResponse]
   }
-  @scala.inline
-  implicit class SchemaGenerateDownloadUrlResponseOps[Self <: SchemaGenerateDownloadUrlResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDownloadUrl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDownloadUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

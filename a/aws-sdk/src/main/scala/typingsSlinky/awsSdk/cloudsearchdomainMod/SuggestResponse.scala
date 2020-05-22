@@ -18,41 +18,11 @@ trait SuggestResponse extends js.Object {
 
 object SuggestResponse {
   @scala.inline
-  def apply(): SuggestResponse = {
+  def apply(status: SuggestStatus = null, suggest: SuggestModel = null): SuggestResponse = {
     val __obj = js.Dynamic.literal()
+    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (suggest != null) __obj.updateDynamic("suggest")(suggest.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuggestResponse]
   }
-  @scala.inline
-  implicit class SuggestResponseOps[Self <: SuggestResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStatus(value: SuggestStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuggest(value: SuggestModel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSuggest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

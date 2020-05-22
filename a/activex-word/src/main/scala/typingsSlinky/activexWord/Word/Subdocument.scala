@@ -4,22 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Subdocument extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val HasFile: Boolean = js.native
-  val Level: Double = js.native
-  var Locked: Boolean = js.native
-  val Name: String = js.native
-  val Parent: js.Any = js.native
-  val Path: String = js.native
-  val Range: typingsSlinky.activexWord.Word.Range = js.native
+  val Application: typingsSlinky.activexWord.Word.Application
+  val Creator: Double
+  val HasFile: Boolean
+  val Level: Double
+  var Locked: Boolean
+  val Name: String
+  val Parent: js.Any
+  val Path: String
+  val Range: typingsSlinky.activexWord.Word.Range
   @JSName("Word.Subdocument_typekey")
-  var WordDotSubdocument_typekey: Subdocument = js.native
-  def Delete(): Unit = js.native
-  def Open(): Document = js.native
-  def Split(Range: typingsSlinky.activexWord.Word.Range): Unit = js.native
+  var WordDotSubdocument_typekey: Subdocument
+  def Delete(): Unit
+  def Open(): Document
+  def Split(Range: typingsSlinky.activexWord.Word.Range): Unit
 }
 
 object Subdocument {
@@ -43,91 +42,5 @@ object Subdocument {
     __obj.updateDynamic("Word.Subdocument_typekey")(WordDotSubdocument_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subdocument]
   }
-  @scala.inline
-  implicit class SubdocumentOps[Self <: Subdocument] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplication(value: Application): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCreator(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withDelete(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withHasFile(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLevel(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLocked(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Locked")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpen(value: () => Document): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Open")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withParent(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPath(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRange(value: Range): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSplit(value: Range => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Split")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withWordDotSubdocument_typekey(value: Subdocument): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.Subdocument_typekey")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

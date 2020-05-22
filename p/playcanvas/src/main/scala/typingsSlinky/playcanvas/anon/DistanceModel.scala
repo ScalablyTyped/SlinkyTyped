@@ -5,166 +5,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DistanceModel extends js.Object {
-  var distanceModel: js.UndefOr[String] = js.native
-  var duration: js.UndefOr[Double] = js.native
-  var loop: js.UndefOr[Boolean] = js.native
-  var maxDistance: js.UndefOr[Double] = js.native
-  var pitch: js.UndefOr[Double] = js.native
-  var position: js.UndefOr[Vec3] = js.native
-  var refDistance: js.UndefOr[Double] = js.native
-  var rollOffFactor: js.UndefOr[Double] = js.native
-  var startTime: js.UndefOr[Double] = js.native
-  var velocity: js.UndefOr[Vec3] = js.native
-  var volume: js.UndefOr[Double] = js.native
+  var distanceModel: js.UndefOr[String] = js.undefined
+  var duration: js.UndefOr[Double] = js.undefined
+  var loop: js.UndefOr[Boolean] = js.undefined
+  var maxDistance: js.UndefOr[Double] = js.undefined
+  var pitch: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[Vec3] = js.undefined
+  var refDistance: js.UndefOr[Double] = js.undefined
+  var rollOffFactor: js.UndefOr[Double] = js.undefined
+  var startTime: js.UndefOr[Double] = js.undefined
+  var velocity: js.UndefOr[Vec3] = js.undefined
+  var volume: js.UndefOr[Double] = js.undefined
 }
 
 object DistanceModel {
   @scala.inline
-  def apply(): DistanceModel = {
+  def apply(
+    distanceModel: String = null,
+    duration: js.UndefOr[Double] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    maxDistance: js.UndefOr[Double] = js.undefined,
+    pitch: js.UndefOr[Double] = js.undefined,
+    position: Vec3 = null,
+    refDistance: js.UndefOr[Double] = js.undefined,
+    rollOffFactor: js.UndefOr[Double] = js.undefined,
+    startTime: js.UndefOr[Double] = js.undefined,
+    velocity: Vec3 = null,
+    volume: js.UndefOr[Double] = js.undefined
+  ): DistanceModel = {
     val __obj = js.Dynamic.literal()
+    if (distanceModel != null) __obj.updateDynamic("distanceModel")(distanceModel.asInstanceOf[js.Any])
+    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxDistance)) __obj.updateDynamic("maxDistance")(maxDistance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(pitch)) __obj.updateDynamic("pitch")(pitch.get.asInstanceOf[js.Any])
+    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
+    if (!js.isUndefined(refDistance)) __obj.updateDynamic("refDistance")(refDistance.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rollOffFactor)) __obj.updateDynamic("rollOffFactor")(rollOffFactor.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(startTime)) __obj.updateDynamic("startTime")(startTime.get.asInstanceOf[js.Any])
+    if (velocity != null) __obj.updateDynamic("velocity")(velocity.asInstanceOf[js.Any])
+    if (!js.isUndefined(volume)) __obj.updateDynamic("volume")(volume.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistanceModel]
   }
-  @scala.inline
-  implicit class DistanceModelOps[Self <: DistanceModel] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDistanceModel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceModel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDistanceModel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceModel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPitch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPitch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPosition: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefDistance(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refDistance")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefDistance: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refDistance")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRollOffFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollOffFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRollOffFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rollOffFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStartTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStartTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVelocity(value: Vec3): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVelocity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVolume(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVolume: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

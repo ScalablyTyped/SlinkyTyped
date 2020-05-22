@@ -14,7 +14,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** offers spell checking functionality. */
-@js.native
 trait SpellChecker
   extends XSpellChecker
      with XLinguServiceEventBroadcaster

@@ -29,7 +29,13 @@ object Match extends js.Object {
   def Maybe(pattern: Double): Matcher[js.UndefOr[PatternMatch[Double] | Null]] = js.native
   def Maybe[T /* <: (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number]) | (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (ObjectConstructor with Instantiable0[Object]) | (FunctionConstructor with (Instantiable1[/* args (repeated) */ String, Function])) | (Instantiable1[/* args (repeated) */ js.Any, js.Any]) | js.Array[Pattern] | StringDictionary[Pattern] | Matcher[_] */](pattern: T): Matcher[js.UndefOr[PatternMatch[T] | Null]] = js.native
   def ObjectIncluding[T /* <: StringDictionary[Pattern] */](dico: T): Matcher[PatternMatch[T]] = js.native
-  def OneOf[T /* <: Pattern */](patterns: T*): Matcher[PatternMatch[T]] = js.native
+  def OneOf[T /* <: js.Array[Pattern] */](
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param patterns because its type T is not an array type */ patterns: T
+  ): Matcher[
+    PatternMatch[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[number] */ js.Any
+    ]
+  ] = js.native
   def Optional(): Matcher[js.UndefOr[PatternMatch[js.UndefOr[scala.Nothing]]]] = js.native
   def Optional(pattern: String): Matcher[js.UndefOr[PatternMatch[String]]] = js.native
   def Optional(pattern: Boolean): Matcher[js.UndefOr[PatternMatch[Boolean]]] = js.native

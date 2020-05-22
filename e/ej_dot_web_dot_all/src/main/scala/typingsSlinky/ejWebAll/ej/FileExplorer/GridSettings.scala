@@ -4,72 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GridSettings extends js.Object {
   /** Allows to Resize the width of the columns by simply click and move the particular column header line.
     * @Default {true}
     */
-  var allowResizing: js.UndefOr[Boolean] = js.native
+  var allowResizing: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets a value that indicates whether to enable the dynamic sorting behavior on grid data. Sorting can be done through clicking on particular column header.
     * @Default {true}
     */
-  var allowSorting: js.UndefOr[Boolean] = js.native
+  var allowSorting: js.UndefOr[Boolean] = js.undefined
   /** Gets or sets an object that indicates to render the grid with specified columns. You can use this property same as the column property in Grid control.
     * @Default {[{ field: name, headerText: Name, width: 30% }, { field: dateModified, headerText: Date Modified, width: 30% }, { field: type, headerText: Type, width: 15% }, { field:
     * size, headerText: Size, width: 12%, textAlign: right, headerTextAlign: left }]}
     */
-  var columns: js.UndefOr[js.Array[_]] = js.native
+  var columns: js.UndefOr[js.Array[_]] = js.undefined
 }
 
 object GridSettings {
   @scala.inline
-  def apply(): GridSettings = {
+  def apply(
+    allowResizing: js.UndefOr[Boolean] = js.undefined,
+    allowSorting: js.UndefOr[Boolean] = js.undefined,
+    columns: js.Array[_] = null
+  ): GridSettings = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(allowResizing)) __obj.updateDynamic("allowResizing")(allowResizing.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(allowSorting)) __obj.updateDynamic("allowSorting")(allowSorting.get.asInstanceOf[js.Any])
+    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridSettings]
   }
-  @scala.inline
-  implicit class GridSettingsOps[Self <: GridSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAllowResizing(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResizing")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowResizing: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowResizing")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowSorting(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowSorting: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withColumns(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColumns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

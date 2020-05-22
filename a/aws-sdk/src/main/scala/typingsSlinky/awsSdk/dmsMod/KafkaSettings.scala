@@ -18,41 +18,11 @@ trait KafkaSettings extends js.Object {
 
 object KafkaSettings {
   @scala.inline
-  def apply(): KafkaSettings = {
+  def apply(Broker: String = null, Topic: String = null): KafkaSettings = {
     val __obj = js.Dynamic.literal()
+    if (Broker != null) __obj.updateDynamic("Broker")(Broker.asInstanceOf[js.Any])
+    if (Topic != null) __obj.updateDynamic("Topic")(Topic.asInstanceOf[js.Any])
     __obj.asInstanceOf[KafkaSettings]
   }
-  @scala.inline
-  implicit class KafkaSettingsOps[Self <: KafkaSettings] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBroker(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Broker")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBroker: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Broker")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Topic")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

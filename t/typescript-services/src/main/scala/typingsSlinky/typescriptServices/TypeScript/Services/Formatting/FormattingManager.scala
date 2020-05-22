@@ -5,19 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormattingManager extends js.Object {
-  var options: js.Any = js.native
-  var rulesProvider: js.Any = js.native
-  var snapshot: js.Any = js.native
-  var syntaxTree: js.Any = js.native
-  def formatDocument(minChar: Double, limChar: Double): js.Array[TextEdit] = js.native
-  def formatOnClosingCurlyBrace(caretPosition: Double): js.Array[TextEdit] = js.native
-  def formatOnEnter(caretPosition: Double): js.Array[TextEdit] = js.native
-  def formatOnPaste(minChar: Double, limChar: Double): js.Array[TextEdit] = js.native
-  def formatOnSemicolon(caretPosition: Double): js.Array[TextEdit] = js.native
-  def formatSelection(minChar: Double, limChar: Double): js.Array[TextEdit] = js.native
-  /* private */ def formatSpan(span: js.Any, formattingRequestKind: js.Any): js.Any = js.native
+  var options: js.Any
+  var rulesProvider: js.Any
+  var snapshot: js.Any
+  var syntaxTree: js.Any
+  def formatDocument(minChar: Double, limChar: Double): js.Array[TextEdit]
+  def formatOnClosingCurlyBrace(caretPosition: Double): js.Array[TextEdit]
+  def formatOnEnter(caretPosition: Double): js.Array[TextEdit]
+  def formatOnPaste(minChar: Double, limChar: Double): js.Array[TextEdit]
+  def formatOnSemicolon(caretPosition: Double): js.Array[TextEdit]
+  def formatSelection(minChar: Double, limChar: Double): js.Array[TextEdit]
+  /* private */ def formatSpan(span: js.Any, formattingRequestKind: js.Any): js.Any
 }
 
 object FormattingManager {
@@ -38,79 +37,5 @@ object FormattingManager {
     val __obj = js.Dynamic.literal(formatDocument = js.Any.fromFunction2(formatDocument), formatOnClosingCurlyBrace = js.Any.fromFunction1(formatOnClosingCurlyBrace), formatOnEnter = js.Any.fromFunction1(formatOnEnter), formatOnPaste = js.Any.fromFunction2(formatOnPaste), formatOnSemicolon = js.Any.fromFunction1(formatOnSemicolon), formatSelection = js.Any.fromFunction2(formatSelection), formatSpan = js.Any.fromFunction2(formatSpan), options = options.asInstanceOf[js.Any], rulesProvider = rulesProvider.asInstanceOf[js.Any], snapshot = snapshot.asInstanceOf[js.Any], syntaxTree = syntaxTree.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormattingManager]
   }
-  @scala.inline
-  implicit class FormattingManagerOps[Self <: FormattingManager] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFormatDocument(value: (Double, Double) => js.Array[TextEdit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDocument")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFormatOnClosingCurlyBrace(value: Double => js.Array[TextEdit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOnClosingCurlyBrace")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormatOnEnter(value: Double => js.Array[TextEdit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOnEnter")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormatOnPaste(value: (Double, Double) => js.Array[TextEdit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOnPaste")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFormatOnSemicolon(value: Double => js.Array[TextEdit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatOnSemicolon")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withFormatSelection(value: (Double, Double) => js.Array[TextEdit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatSelection")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withFormatSpan(value: (js.Any, js.Any) => js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("formatSpan")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withOptions(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withRulesProvider(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesProvider")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSnapshot(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSyntaxTree(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("syntaxTree")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

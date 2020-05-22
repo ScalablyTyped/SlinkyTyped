@@ -31,65 +31,18 @@ trait SchemaMaterial extends js.Object {
 
 object SchemaMaterial {
   @scala.inline
-  def apply(): SchemaMaterial = {
+  def apply(
+    driveFile: SchemaSharedDriveFile = null,
+    form: SchemaForm = null,
+    link: SchemaLink = null,
+    youtubeVideo: SchemaYouTubeVideo = null
+  ): SchemaMaterial = {
     val __obj = js.Dynamic.literal()
+    if (driveFile != null) __obj.updateDynamic("driveFile")(driveFile.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
+    if (youtubeVideo != null) __obj.updateDynamic("youtubeVideo")(youtubeVideo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMaterial]
   }
-  @scala.inline
-  implicit class SchemaMaterialOps[Self <: SchemaMaterial] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDriveFile(value: SchemaSharedDriveFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveFile")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDriveFile: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("driveFile")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withForm(value: SchemaForm): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutForm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLink(value: SchemaLink): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLink: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withYoutubeVideo(value: SchemaYouTubeVideo): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeVideo")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutYoutubeVideo: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeVideo")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

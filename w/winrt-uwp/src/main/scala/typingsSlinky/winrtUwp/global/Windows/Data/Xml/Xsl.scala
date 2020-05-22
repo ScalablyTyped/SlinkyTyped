@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Data.Xml
 
+import typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.IXmlNode
 import typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +19,20 @@ object Xsl extends js.Object {
       * @param document The XSLT to process.
       */
     def this(document: XmlDocument) = this()
+    /**
+      * Processes a node and its children and returns the resulting XmlDocument .
+      * @param inputNode The node to process.
+      * @return The resulting transformation.
+      */
+    /* CompleteClass */
+    override def transformToDocument(inputNode: IXmlNode): XmlDocument = js.native
+    /**
+      * Processes a node and its children and returns the resulting string transformation.
+      * @param inputNode The node to process.
+      * @return The resulting transformation.
+      */
+    /* CompleteClass */
+    override def transformToString(inputNode: IXmlNode): String = js.native
   }
   
 }

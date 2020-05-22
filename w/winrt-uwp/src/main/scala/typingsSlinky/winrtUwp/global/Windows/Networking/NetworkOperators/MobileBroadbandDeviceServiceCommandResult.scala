@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,5 +9,12 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult")
 @js.native
 abstract class MobileBroadbandDeviceServiceCommandResult ()
-  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult {
+  /** Gets the response data from the command execution on a mobile broadband device service. */
+  /* CompleteClass */
+  override var responseData: IBuffer = js.native
+  /** Gets the status code of the command execution on a mobile broadband device service. */
+  /* CompleteClass */
+  override var statusCode: Double = js.native
+}
 

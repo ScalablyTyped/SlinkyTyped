@@ -11,12 +11,3 @@ import scala.scalajs.js.annotation._
 */
 trait DestructuringPattern extends js.Object
 
-object DestructuringPattern {
-  @scala.inline
-  implicit def apply(value: ArrayLiteralExpression): DestructuringPattern = value.asInstanceOf[DestructuringPattern]
-  @scala.inline
-  implicit def apply(value: BindingPattern): DestructuringPattern = value.asInstanceOf[DestructuringPattern]
-  @scala.inline
-  implicit def apply(value: ObjectLiteralExpression): DestructuringPattern = value.asInstanceOf[DestructuringPattern]
-}
-

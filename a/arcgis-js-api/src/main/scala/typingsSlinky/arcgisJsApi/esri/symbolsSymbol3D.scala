@@ -15,16 +15,3 @@ trait symbolsSymbol3D
   extends typingsSlinky.arcgisJsApi.esri.symbols.Symbol
      with symbolsSymbol
 
-object symbolsSymbol3D {
-  @scala.inline
-  implicit def apply(value: LabelSymbol3D): symbolsSymbol3D = value.asInstanceOf[symbolsSymbol3D]
-  @scala.inline
-  implicit def apply(value: LineSymbol3D): symbolsSymbol3D = value.asInstanceOf[symbolsSymbol3D]
-  @scala.inline
-  implicit def apply(value: MeshSymbol3D): symbolsSymbol3D = value.asInstanceOf[symbolsSymbol3D]
-  @scala.inline
-  implicit def apply(value: PointSymbol3D): symbolsSymbol3D = value.asInstanceOf[symbolsSymbol3D]
-  @scala.inline
-  implicit def apply(value: PolygonSymbol3D): symbolsSymbol3D = value.asInstanceOf[symbolsSymbol3D]
-}
-

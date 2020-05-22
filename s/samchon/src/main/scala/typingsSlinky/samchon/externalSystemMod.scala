@@ -1,10 +1,14 @@
 package typingsSlinky.samchon
 
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
+import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.samchon.entityCollectionMod.EntityDequeCollection
 import typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray
 import typingsSlinky.samchon.externalSystemRoleMod.ExternalSystemRole
 import typingsSlinky.samchon.iclientdriverMod.IClientDriver
 import typingsSlinky.samchon.icommunicatorMod.ICommunicator
+import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import typingsSlinky.tstl.dequeMod.Deque
 import typingsSlinky.tstl.dequeMod.Deque.Iterator
@@ -57,6 +61,17 @@ object externalSystemMod extends js.Object {
       * @hidden
       */
     var system_array_ : js.Any = js.native
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def addEventListener(
+      `type`: Type,
+      listener: Listener[
+          ExternalSystemRole, 
+          Deque[ExternalSystemRole], 
+          Iterator[ExternalSystemRole], 
+          ReverseIterator[ExternalSystemRole]
+        ]
+    ): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -116,6 +131,22 @@ object externalSystemMod extends js.Object {
       * ```
       */
     /* protected */ def destructor(): Unit = js.native
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def dispatchEvent(
+      event: CollectionEvent[
+          ExternalSystemRole, 
+          Deque[ExternalSystemRole], 
+          Iterator[ExternalSystemRole], 
+          ReverseIterator[ExternalSystemRole]
+        ]
+    ): Unit = js.native
+    /**
+      * Test whether container is empty.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def empty(): Boolean = js.native
     /**
       * Iterator to the end.
       *
@@ -174,12 +205,25 @@ object externalSystemMod extends js.Object {
       */
     @JSName("getSystemArray")
     def getSystemArray_SystemArray_ExternalSystemArrayExternalSystem_SystemArray[SystemArray /* <: ExternalSystemArray[ExternalSystem] */](): SystemArray = js.native
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def hasEventListener(`type`: Type): Boolean = js.native
+    /**
+      * Insert items at the end.
+      *
+      * @param items Items to insert.
+      * @return Number of elements in the container after insertion.
+      */
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def push(items: ExternalSystemRole*): Double = js.native
     /**
       * Insert an element at the end.
       *
       * @param val Value to insert.
       */
-    /* InferMemberOverrides */
+    /* CompleteClass */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def push_back(`val`: ExternalSystemRole): Unit = js.native
@@ -188,17 +232,54 @@ object externalSystemMod extends js.Object {
       *
       * @return Reverse iterator to the first.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def rbegin(): ReverseIterator[ExternalSystemRole] = js.native
+    /* CompleteClass */
+    /* InferMemberOverrides */
+    override def removeEventListener(
+      `type`: Type,
+      listener: Listener[
+          ExternalSystemRole, 
+          Deque[ExternalSystemRole], 
+          Iterator[ExternalSystemRole], 
+          ReverseIterator[ExternalSystemRole]
+        ]
+    ): Unit = js.native
     /**
       * Reverse iterator to the reverse end.
       *
       * @return Reverse iterator to the end.
       */
+    /* CompleteClass */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def rend(): ReverseIterator[ExternalSystemRole] = js.native
+    /**
+      * Sending message.
+      *
+      * Sends message to related system or shifts the responsibility to chain.
+      *
+      * @param invoke Invoke message to send
+      */
+    /* CompleteClass */
+    override def replyData(invoke: Invoke): Unit = js.native
+    /**
+      * Handling replied message.
+      *
+      * Handles replied message or shifts the responsibility to chain.
+      *
+      * @param invoke An {@link Invoke} message has received.
+      */
+    /* CompleteClass */
+    override def sendData(invoke: Invoke): Unit = js.native
+    /**
+      * Number of elements in the container.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def size(): Double = js.native
     /**
       * Swap elements.
       *

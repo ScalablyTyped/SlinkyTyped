@@ -7,7 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
   /**
     * (Highcharts) Approximation used to calculate repulsive forces affecting
@@ -19,7 +18,7 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     * directly for nearby cells, and for all others, cells are treated as a
     * separate node with center of mass.
     */
-  var approximation: js.UndefOr[OptionsApproximationValue] = js.native
+  var approximation: js.UndefOr[OptionsApproximationValue] = js.undefined
   /**
     * (Highcharts) Attraction force applied on a node which is conected to
     * another node by a link. Passed are two arguments:
@@ -31,35 +30,35 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     * In `verlet` integration, defaults to: `function (d, k) { return (k - d) /
     * d; }`
     */
-  var attractiveForce: js.UndefOr[js.Function] = js.native
+  var attractiveForce: js.UndefOr[js.Function] = js.undefined
   /**
     * (Highcharts) Experimental. Enables live simulation of the algorithm
     * implementation. All nodes are animated as the forces applies on them.
     */
-  var enableSimulation: js.UndefOr[Boolean] = js.native
+  var enableSimulation: js.UndefOr[Boolean] = js.undefined
   /**
     * (Highcharts) Friction applied on forces to prevent nodes rushing to fast
     * to the desired positions.
     */
-  var friction: js.UndefOr[Double] = js.native
+  var friction: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Gravitational const used in the barycenter force of the
     * algorithm.
     */
-  var gravitationalConstant: js.UndefOr[Double] = js.native
+  var gravitationalConstant: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) When `initialPositions` are set to 'circle',
     * `initialPositionRadius` is a distance from the center of circle, in which
     * nodes are created.
     */
-  var initialPositionRadius: js.UndefOr[Double] = js.native
+  var initialPositionRadius: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Initial layout algorithm for positioning nodes. Can be one
     * of built-in options ("circle", "random") or a function where positions
     * should be set on each node (`this.nodes`) as `node.plotX` and
     * `node.plotY`
     */
-  var initialPositions: js.UndefOr[circle | random | js.Function] = js.native
+  var initialPositions: js.UndefOr[circle | random | js.Function] = js.undefined
   /**
     * (Highcharts) Integration type. Available options are `'euler'` and
     * `'verlet'`. Integration determines how forces are applied on particles.
@@ -73,7 +72,7 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     *
     * In Highcharts v7.0.x only `'euler'` integration was supported.
     */
-  var integration: js.UndefOr[OptionsIntegrationValue] = js.native
+  var integration: js.UndefOr[OptionsIntegrationValue] = js.undefined
   /**
     * (Highcharts) Ideal length (px) of the link between two nodes. When not
     * defined, length is calculated as: `Math.pow(availableWidth *
@@ -82,14 +81,14 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     * Note: Because of the algorithm specification, length of each link might
     * be not exactly as specified.
     */
-  var linkLength: js.UndefOr[Double] = js.native
+  var linkLength: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Max number of iterations before algorithm will stop. In
     * general, algorithm should find positions sooner, but when rendering huge
     * number of nodes, it is recommended to increase this value as finding
     * perfect graph positions can require more time.
     */
-  var maxIterations: js.UndefOr[Double] = js.native
+  var maxIterations: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Verlet integration only. Max speed that node can get in one
     * iteration. In terms of simulation, it's a maximum translation (in pixels)
@@ -97,7 +96,7 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     * applied on all nodes, max speed is applied only for nodes that move very
     * fast, for example small or disconnected ones.
     */
-  var maxSpeed: js.UndefOr[Double] = js.native
+  var maxSpeed: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Repulsive force applied on a node. Passed are two arguments:
     *
@@ -108,7 +107,7 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     * In `verlet` integration, defaults to: `function (d, k) { return (k - d) /
     * d * (k > d ? 1 : 0) }`
     */
-  var repulsiveForce: js.UndefOr[js.Function] = js.native
+  var repulsiveForce: js.UndefOr[js.Function] = js.undefined
   /**
     * (Highcharts) Barnes-Hut approximation only. Deteremines when distance
     * between cell and node is small enough to caculate forces. Value of
@@ -116,194 +115,47 @@ trait PlotNetworkgraphLayoutAlgorithmOptions extends js.Object {
     * of the cell, and `d` is distance between center of cell's mass and
     * currently compared node.
     */
-  var theta: js.UndefOr[Double] = js.native
+  var theta: js.UndefOr[Double] = js.undefined
   /**
     * (Highcharts) Type of the algorithm used when positioning nodes.
     */
-  var `type`: js.UndefOr[`reingold-fruchterman`] = js.native
+  var `type`: js.UndefOr[`reingold-fruchterman`] = js.undefined
 }
 
 object PlotNetworkgraphLayoutAlgorithmOptions {
   @scala.inline
-  def apply(): PlotNetworkgraphLayoutAlgorithmOptions = {
+  def apply(
+    approximation: OptionsApproximationValue = null,
+    attractiveForce: js.Function = null,
+    enableSimulation: js.UndefOr[Boolean] = js.undefined,
+    friction: js.UndefOr[Double] = js.undefined,
+    gravitationalConstant: js.UndefOr[Double] = js.undefined,
+    initialPositionRadius: js.UndefOr[Double] = js.undefined,
+    initialPositions: circle | random | js.Function = null,
+    integration: OptionsIntegrationValue = null,
+    linkLength: js.UndefOr[Double] = js.undefined,
+    maxIterations: js.UndefOr[Double] = js.undefined,
+    maxSpeed: js.UndefOr[Double] = js.undefined,
+    repulsiveForce: js.Function = null,
+    theta: js.UndefOr[Double] = js.undefined,
+    `type`: `reingold-fruchterman` = null
+  ): PlotNetworkgraphLayoutAlgorithmOptions = {
     val __obj = js.Dynamic.literal()
+    if (approximation != null) __obj.updateDynamic("approximation")(approximation.asInstanceOf[js.Any])
+    if (attractiveForce != null) __obj.updateDynamic("attractiveForce")(attractiveForce.asInstanceOf[js.Any])
+    if (!js.isUndefined(enableSimulation)) __obj.updateDynamic("enableSimulation")(enableSimulation.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(friction)) __obj.updateDynamic("friction")(friction.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(gravitationalConstant)) __obj.updateDynamic("gravitationalConstant")(gravitationalConstant.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialPositionRadius)) __obj.updateDynamic("initialPositionRadius")(initialPositionRadius.get.asInstanceOf[js.Any])
+    if (initialPositions != null) __obj.updateDynamic("initialPositions")(initialPositions.asInstanceOf[js.Any])
+    if (integration != null) __obj.updateDynamic("integration")(integration.asInstanceOf[js.Any])
+    if (!js.isUndefined(linkLength)) __obj.updateDynamic("linkLength")(linkLength.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxIterations)) __obj.updateDynamic("maxIterations")(maxIterations.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxSpeed)) __obj.updateDynamic("maxSpeed")(maxSpeed.get.asInstanceOf[js.Any])
+    if (repulsiveForce != null) __obj.updateDynamic("repulsiveForce")(repulsiveForce.asInstanceOf[js.Any])
+    if (!js.isUndefined(theta)) __obj.updateDynamic("theta")(theta.get.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotNetworkgraphLayoutAlgorithmOptions]
   }
-  @scala.inline
-  implicit class PlotNetworkgraphLayoutAlgorithmOptionsOps[Self <: PlotNetworkgraphLayoutAlgorithmOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApproximation(value: OptionsApproximationValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approximation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApproximation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("approximation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttractiveForce(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attractiveForce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttractiveForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("attractiveForce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnableSimulation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSimulation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnableSimulation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSimulation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFriction(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFriction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGravitationalConstant(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravitationalConstant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGravitationalConstant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("gravitationalConstant")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialPositionRadius(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPositionRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialPositionRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPositionRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialPositions(value: circle | random | js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPositions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialPositions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialPositions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIntegration(value: OptionsIntegrationValue): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIntegration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("integration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLinkLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLinkLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("linkLength")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxIterations(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIterations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxIterations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIterations")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxSpeed(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxSpeed: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeed")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepulsiveForce(value: js.Function): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repulsiveForce")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepulsiveForce: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("repulsiveForce")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheta(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withType(value: `reingold-fruchterman`): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

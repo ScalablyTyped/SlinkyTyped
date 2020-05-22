@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FluxChildMixin extends js.Object {
-  def getFlux(): Flux = js.native
+  def getFlux(): Flux
 }
 
 @JSImport("fluxxor", "FluxChildMixin")

@@ -4,19 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ListAnalyticsResponse extends js.Object {
   /**
     * The list of analytics.
     * Sorted in ascending order of
     * Analytics.event_date.
     */
-  var analytics: js.UndefOr[js.Array[Analytics]] = js.native
+  var analytics: js.UndefOr[js.Array[Analytics]] = js.undefined
   /**
     * Aggregated information across the response's
     * analytics.
     */
-  var analyticsSummary: js.UndefOr[AnalyticsSummary] = js.native
+  var analyticsSummary: js.UndefOr[AnalyticsSummary] = js.undefined
   /**
     * A token to retrieve next page of results.
     * Pass this value in the `ListAnalyticsRequest.page_token` field in the
@@ -24,72 +23,25 @@ trait ListAnalyticsResponse extends js.Object {
     * ListAnalytics to retrieve the
     * next page of results.
     */
-  var nextPageToken: js.UndefOr[String] = js.native
+  var nextPageToken: js.UndefOr[String] = js.undefined
   /** Current response metadata. */
-  var responseMetadata: js.UndefOr[ResponseMetadata] = js.native
+  var responseMetadata: js.UndefOr[ResponseMetadata] = js.undefined
 }
 
 object ListAnalyticsResponse {
   @scala.inline
-  def apply(): ListAnalyticsResponse = {
+  def apply(
+    analytics: js.Array[Analytics] = null,
+    analyticsSummary: AnalyticsSummary = null,
+    nextPageToken: String = null,
+    responseMetadata: ResponseMetadata = null
+  ): ListAnalyticsResponse = {
     val __obj = js.Dynamic.literal()
+    if (analytics != null) __obj.updateDynamic("analytics")(analytics.asInstanceOf[js.Any])
+    if (analyticsSummary != null) __obj.updateDynamic("analyticsSummary")(analyticsSummary.asInstanceOf[js.Any])
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (responseMetadata != null) __obj.updateDynamic("responseMetadata")(responseMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAnalyticsResponse]
   }
-  @scala.inline
-  implicit class ListAnalyticsResponseOps[Self <: ListAnalyticsResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAnalytics(value: js.Array[Analytics]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analytics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalytics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analytics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAnalyticsSummary(value: AnalyticsSummary): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsSummary")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAnalyticsSummary: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsSummary")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponseMetadata(value: ResponseMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMetadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponseMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMetadata")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

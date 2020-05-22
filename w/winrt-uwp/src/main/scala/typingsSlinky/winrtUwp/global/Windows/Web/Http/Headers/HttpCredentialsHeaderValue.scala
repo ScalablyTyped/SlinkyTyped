@@ -1,5 +1,6 @@
 package typingsSlinky.winrtUwp.global.Windows.Web.Http.Headers
 
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.anon.CredentialsHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +22,15 @@ class HttpCredentialsHeaderValue protected ()
     * @param token The user token information to use for authentication.
     */
   def this(scheme: String, token: String) = this()
+  /** Gets a set of name/value pairs included in the Authorization or Proxy-Authorization HTTP header. */
+  /* CompleteClass */
+  override var parameters: IVector[typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpNameValueHeaderValue] = js.native
+  /** Gets the scheme to use for authentication. */
+  /* CompleteClass */
+  override var scheme: String = js.native
+  /** Gets the user token information used in the Authorization or Proxy-Authorization HTTP header. */
+  /* CompleteClass */
+  override var token: String = js.native
 }
 
 /* static members */

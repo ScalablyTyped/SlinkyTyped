@@ -31,8 +31,8 @@ trait StructureFactory
     * Produces the specified commodity.
     * All ingredients should be available in the factory store.
     */
-  def produce(resource: CommodityConstant): ScreepsReturnCode = js.native
-  def produce(resource: MineralConstant): ScreepsReturnCode = js.native
+  def produce(resource: CommodityConstant | MineralConstant): ScreepsReturnCode = js.native
+  def produce(resource: RESOURCE_ENERGY): ScreepsReturnCode = js.native
   def produce(resource: RESOURCE_GHODIUM): ScreepsReturnCode = js.native
 }
 

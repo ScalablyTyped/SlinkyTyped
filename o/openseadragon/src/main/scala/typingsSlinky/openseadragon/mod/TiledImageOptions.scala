@@ -7,315 +7,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TiledImageOptions extends js.Object {
-  var ajaxHeaders: js.UndefOr[js.Object] = js.native
-  var ajaxWithCredentials: js.UndefOr[Boolean] = js.native
-  var clip: js.UndefOr[Rect] = js.native
-  var collectionImmediately: js.UndefOr[Boolean] = js.native
-  var compositeOperation: js.UndefOr[String] = js.native
-  var crossOriginPolicy: js.UndefOr[String] = js.native
-  var degrees: js.UndefOr[Double] = js.native
-  var error: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
-  var fitBounds: js.UndefOr[Rect] = js.native
-  var fitBoundsPlacement: js.UndefOr[Placement] = js.native
-  var height: js.UndefOr[Double] = js.native
-  var index: js.UndefOr[Double] = js.native
-  var loadTilesWithAjax: js.UndefOr[Boolean] = js.native
-  var opacity: js.UndefOr[Double] = js.native
-  var placeholderFillStyle: js.UndefOr[String | CanvasGradient | CanvasPattern] = js.native
-  var preload: js.UndefOr[Boolean] = js.native
-  var replace: js.UndefOr[Boolean] = js.native
-  var success: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
-  var tileSource: String | js.Object = js.native
-  var width: js.UndefOr[Double] = js.native
-  var x: js.UndefOr[Double] = js.native
-  var y: js.UndefOr[Double] = js.native
+  var ajaxHeaders: js.UndefOr[js.Object] = js.undefined
+  var ajaxWithCredentials: js.UndefOr[Boolean] = js.undefined
+  var clip: js.UndefOr[Rect] = js.undefined
+  var collectionImmediately: js.UndefOr[Boolean] = js.undefined
+  var compositeOperation: js.UndefOr[String] = js.undefined
+  var crossOriginPolicy: js.UndefOr[String] = js.undefined
+  var degrees: js.UndefOr[Double] = js.undefined
+  var error: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
+  var fitBounds: js.UndefOr[Rect] = js.undefined
+  var fitBoundsPlacement: js.UndefOr[Placement] = js.undefined
+  var height: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.undefined
+  var loadTilesWithAjax: js.UndefOr[Boolean] = js.undefined
+  var opacity: js.UndefOr[Double] = js.undefined
+  var placeholderFillStyle: js.UndefOr[String | CanvasGradient | CanvasPattern] = js.undefined
+  var preload: js.UndefOr[Boolean] = js.undefined
+  var replace: js.UndefOr[Boolean] = js.undefined
+  var success: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.undefined
+  var tileSource: String | js.Object
+  var width: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.undefined
+  var y: js.UndefOr[Double] = js.undefined
 }
 
 object TiledImageOptions {
   @scala.inline
-  def apply(tileSource: String | js.Object): TiledImageOptions = {
+  def apply(
+    tileSource: String | js.Object,
+    ajaxHeaders: js.Object = null,
+    ajaxWithCredentials: js.UndefOr[Boolean] = js.undefined,
+    clip: Rect = null,
+    collectionImmediately: js.UndefOr[Boolean] = js.undefined,
+    compositeOperation: String = null,
+    crossOriginPolicy: String = null,
+    degrees: js.UndefOr[Double] = js.undefined,
+    error: /* error */ js.Error => Unit = null,
+    fitBounds: Rect = null,
+    fitBoundsPlacement: Placement = null,
+    height: js.UndefOr[Double] = js.undefined,
+    index: js.UndefOr[Double] = js.undefined,
+    loadTilesWithAjax: js.UndefOr[Boolean] = js.undefined,
+    opacity: js.UndefOr[Double] = js.undefined,
+    placeholderFillStyle: String | CanvasGradient | CanvasPattern = null,
+    preload: js.UndefOr[Boolean] = js.undefined,
+    replace: js.UndefOr[Boolean] = js.undefined,
+    success: /* event */ Event => Unit = null,
+    width: js.UndefOr[Double] = js.undefined,
+    x: js.UndefOr[Double] = js.undefined,
+    y: js.UndefOr[Double] = js.undefined
+  ): TiledImageOptions = {
     val __obj = js.Dynamic.literal(tileSource = tileSource.asInstanceOf[js.Any])
+    if (ajaxHeaders != null) __obj.updateDynamic("ajaxHeaders")(ajaxHeaders.asInstanceOf[js.Any])
+    if (!js.isUndefined(ajaxWithCredentials)) __obj.updateDynamic("ajaxWithCredentials")(ajaxWithCredentials.get.asInstanceOf[js.Any])
+    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+    if (!js.isUndefined(collectionImmediately)) __obj.updateDynamic("collectionImmediately")(collectionImmediately.get.asInstanceOf[js.Any])
+    if (compositeOperation != null) __obj.updateDynamic("compositeOperation")(compositeOperation.asInstanceOf[js.Any])
+    if (crossOriginPolicy != null) __obj.updateDynamic("crossOriginPolicy")(crossOriginPolicy.asInstanceOf[js.Any])
+    if (!js.isUndefined(degrees)) __obj.updateDynamic("degrees")(degrees.get.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
+    if (fitBounds != null) __obj.updateDynamic("fitBounds")(fitBounds.asInstanceOf[js.Any])
+    if (fitBoundsPlacement != null) __obj.updateDynamic("fitBoundsPlacement")(fitBoundsPlacement.asInstanceOf[js.Any])
+    if (!js.isUndefined(height)) __obj.updateDynamic("height")(height.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(loadTilesWithAjax)) __obj.updateDynamic("loadTilesWithAjax")(loadTilesWithAjax.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(opacity)) __obj.updateDynamic("opacity")(opacity.get.asInstanceOf[js.Any])
+    if (placeholderFillStyle != null) __obj.updateDynamic("placeholderFillStyle")(placeholderFillStyle.asInstanceOf[js.Any])
+    if (!js.isUndefined(preload)) __obj.updateDynamic("preload")(preload.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.get.asInstanceOf[js.Any])
+    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
+    if (!js.isUndefined(width)) __obj.updateDynamic("width")(width.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(x)) __obj.updateDynamic("x")(x.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(y)) __obj.updateDynamic("y")(y.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TiledImageOptions]
   }
-  @scala.inline
-  implicit class TiledImageOptionsOps[Self <: TiledImageOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTileSource(value: String | js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withAjaxHeaders(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxHeaders")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxHeaders: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxHeaders")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAjaxWithCredentials(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWithCredentials")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAjaxWithCredentials: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ajaxWithCredentials")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withClip(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCollectionImmediately(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionImmediately")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCollectionImmediately: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionImmediately")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCompositeOperation(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositeOperation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCompositeOperation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("compositeOperation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrossOriginPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginPolicy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrossOriginPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOriginPolicy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDegrees(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("degrees")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDegrees: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("degrees")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withError(value: /* error */ js.Error => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFitBounds(value: Rect): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBounds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFitBounds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBounds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFitBoundsPlacement(value: Placement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBoundsPlacement")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFitBoundsPlacement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fitBoundsPlacement")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIndex(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoadTilesWithAjax(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadTilesWithAjax")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoadTilesWithAjax: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadTilesWithAjax")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOpacity: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlaceholderFillStyleCanvasPattern(value: CanvasPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderFillStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaceholderFillStyleCanvasGradient(value: CanvasGradient): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderFillStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPlaceholderFillStyle(value: String | CanvasGradient | CanvasPattern): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderFillStyle")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlaceholderFillStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderFillStyle")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreload(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreload: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preload")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReplace(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReplace: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSuccess(value: /* event */ Event => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutSuccess: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withX(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutX: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withY(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutY: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

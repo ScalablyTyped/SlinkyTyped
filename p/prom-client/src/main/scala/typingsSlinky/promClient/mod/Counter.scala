@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("prom-client", "Counter")
 @js.native
-class Counter protected () extends Metric_ {
+class Counter protected () extends _Metric_ {
   /**
   	 * @param configuration Configuration when creating a Counter metric. Name and Help is required.
   	 */

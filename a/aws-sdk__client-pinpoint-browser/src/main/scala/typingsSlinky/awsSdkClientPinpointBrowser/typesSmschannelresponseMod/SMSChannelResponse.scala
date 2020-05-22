@@ -4,247 +4,99 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SMSChannelResponse extends js.Object {
   /**
     * The unique ID of the application to which the SMS channel belongs.
     */
-  var ApplicationId: js.UndefOr[String] = js.native
+  var ApplicationId: js.UndefOr[String] = js.undefined
   /**
     * The date that the settings were last updated in ISO 8601 format.
     */
-  var CreationDate: js.UndefOr[String] = js.native
+  var CreationDate: js.UndefOr[String] = js.undefined
   /**
     * If the channel is enabled for sending messages.
     */
-  var Enabled: js.UndefOr[Boolean] = js.native
+  var Enabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Not used. Retained for backwards compatibility.
     */
-  var HasCredential: js.UndefOr[Boolean] = js.native
+  var HasCredential: js.UndefOr[Boolean] = js.undefined
   /**
     * Channel ID. Not used, only for backwards compatibility.
     */
-  var Id: js.UndefOr[String] = js.native
+  var Id: js.UndefOr[String] = js.undefined
   /**
     * Is this channel archived
     */
-  var IsArchived: js.UndefOr[Boolean] = js.native
+  var IsArchived: js.UndefOr[Boolean] = js.undefined
   /**
     * Who last updated this entry
     */
-  var LastModifiedBy: js.UndefOr[String] = js.native
+  var LastModifiedBy: js.UndefOr[String] = js.undefined
   /**
     * Last date this was updated
     */
-  var LastModifiedDate: js.UndefOr[String] = js.native
+  var LastModifiedDate: js.UndefOr[String] = js.undefined
   /**
     * Platform type. Will be "SMS"
     */
-  var Platform: js.UndefOr[String] = js.native
+  var Platform: js.UndefOr[String] = js.undefined
   /**
     * Promotional messages per second that can be sent
     */
-  var PromotionalMessagesPerSecond: js.UndefOr[Double] = js.native
+  var PromotionalMessagesPerSecond: js.UndefOr[Double] = js.undefined
   /**
     * Sender identifier of your messages.
     */
-  var SenderId: js.UndefOr[String] = js.native
+  var SenderId: js.UndefOr[String] = js.undefined
   /**
     * The short code registered with the phone provider.
     */
-  var ShortCode: js.UndefOr[String] = js.native
+  var ShortCode: js.UndefOr[String] = js.undefined
   /**
     * Transactional messages per second that can be sent
     */
-  var TransactionalMessagesPerSecond: js.UndefOr[Double] = js.native
+  var TransactionalMessagesPerSecond: js.UndefOr[Double] = js.undefined
   /**
     * Version of channel
     */
-  var Version: js.UndefOr[Double] = js.native
+  var Version: js.UndefOr[Double] = js.undefined
 }
 
 object SMSChannelResponse {
   @scala.inline
-  def apply(): SMSChannelResponse = {
+  def apply(
+    ApplicationId: String = null,
+    CreationDate: String = null,
+    Enabled: js.UndefOr[Boolean] = js.undefined,
+    HasCredential: js.UndefOr[Boolean] = js.undefined,
+    Id: String = null,
+    IsArchived: js.UndefOr[Boolean] = js.undefined,
+    LastModifiedBy: String = null,
+    LastModifiedDate: String = null,
+    Platform: String = null,
+    PromotionalMessagesPerSecond: js.UndefOr[Double] = js.undefined,
+    SenderId: String = null,
+    ShortCode: String = null,
+    TransactionalMessagesPerSecond: js.UndefOr[Double] = js.undefined,
+    Version: js.UndefOr[Double] = js.undefined
+  ): SMSChannelResponse = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationId != null) __obj.updateDynamic("ApplicationId")(ApplicationId.asInstanceOf[js.Any])
+    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
+    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(HasCredential)) __obj.updateDynamic("HasCredential")(HasCredential.get.asInstanceOf[js.Any])
+    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
+    if (!js.isUndefined(IsArchived)) __obj.updateDynamic("IsArchived")(IsArchived.get.asInstanceOf[js.Any])
+    if (LastModifiedBy != null) __obj.updateDynamic("LastModifiedBy")(LastModifiedBy.asInstanceOf[js.Any])
+    if (LastModifiedDate != null) __obj.updateDynamic("LastModifiedDate")(LastModifiedDate.asInstanceOf[js.Any])
+    if (Platform != null) __obj.updateDynamic("Platform")(Platform.asInstanceOf[js.Any])
+    if (!js.isUndefined(PromotionalMessagesPerSecond)) __obj.updateDynamic("PromotionalMessagesPerSecond")(PromotionalMessagesPerSecond.get.asInstanceOf[js.Any])
+    if (SenderId != null) __obj.updateDynamic("SenderId")(SenderId.asInstanceOf[js.Any])
+    if (ShortCode != null) __obj.updateDynamic("ShortCode")(ShortCode.asInstanceOf[js.Any])
+    if (!js.isUndefined(TransactionalMessagesPerSecond)) __obj.updateDynamic("TransactionalMessagesPerSecond")(TransactionalMessagesPerSecond.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(Version)) __obj.updateDynamic("Version")(Version.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SMSChannelResponse]
   }
-  @scala.inline
-  implicit class SMSChannelResponseOps[Self <: SMSChannelResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCreationDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCreationDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEnabled(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEnabled: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHasCredential(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasCredential")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasCredential: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HasCredential")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsArchived(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsArchived")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsArchived: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("IsArchived")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedBy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedBy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedBy")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLastModifiedDate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLastModifiedDate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedDate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPlatform(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPlatform: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPromotionalMessagesPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PromotionalMessagesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPromotionalMessagesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PromotionalMessagesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSenderId(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSenderId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SenderId")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withShortCode(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortCode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutShortCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortCode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTransactionalMessagesPerSecond(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionalMessagesPerSecond")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionalMessagesPerSecond: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionalMessagesPerSecond")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVersion: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Version")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

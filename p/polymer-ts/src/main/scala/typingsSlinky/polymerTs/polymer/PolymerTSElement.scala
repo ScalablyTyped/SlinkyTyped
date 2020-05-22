@@ -5,77 +5,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait PolymerTSElement extends js.Object {
   @JSName("$custom_cons")
-  var $custom_cons: js.UndefOr[FunctionConstructor] = js.native
+  var $custom_cons: js.UndefOr[FunctionConstructor] = js.undefined
   @JSName("$custom_cons_args")
-  var $custom_cons_args: js.UndefOr[js.Array[_]] = js.native
-  var style: js.UndefOr[String] = js.native
-  var template: js.UndefOr[String] = js.native
+  var $custom_cons_args: js.UndefOr[js.Array[_]] = js.undefined
+  var style: js.UndefOr[String] = js.undefined
+  var template: js.UndefOr[String] = js.undefined
 }
 
 object PolymerTSElement {
   @scala.inline
-  def apply(): PolymerTSElement = {
+  def apply(
+    $custom_cons: FunctionConstructor = null,
+    $custom_cons_args: js.Array[_] = null,
+    style: String = null,
+    template: String = null
+  ): PolymerTSElement = {
     val __obj = js.Dynamic.literal()
+    if ($custom_cons != null) __obj.updateDynamic("$custom_cons")($custom_cons.asInstanceOf[js.Any])
+    if ($custom_cons_args != null) __obj.updateDynamic("$custom_cons_args")($custom_cons_args.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolymerTSElement]
   }
-  @scala.inline
-  implicit class PolymerTSElementOps[Self <: PolymerTSElement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$custom_cons(value: FunctionConstructor): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$custom_cons")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$custom_cons: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$custom_cons")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$custom_cons_args(value: js.Array[_]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$custom_cons_args")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$custom_cons_args: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$custom_cons_args")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStyle(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStyle: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTemplate(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

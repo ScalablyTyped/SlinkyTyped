@@ -5,20 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait GoogleApiYouTubeVideoGetRatingResponse extends js.Object {
   /**
     * The ETag of the response.
     */
-  var etag: String = js.native
+  var etag: String
   /**
     * A list of ratings that match the request criteria.
     */
-  var items: js.Array[Rating] = js.native
+  var items: js.Array[Rating]
   /**
     * The type of the API response. For this operation, the value will be youtube#videoGetRatingResponse.
     */
-  var kind: String = js.native
+  var kind: String
 }
 
 object GoogleApiYouTubeVideoGetRatingResponse {
@@ -27,31 +26,5 @@ object GoogleApiYouTubeVideoGetRatingResponse {
     val __obj = js.Dynamic.literal(etag = etag.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubeVideoGetRatingResponse]
   }
-  @scala.inline
-  implicit class GoogleApiYouTubeVideoGetRatingResponseOps[Self <: GoogleApiYouTubeVideoGetRatingResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEtag(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withItems(value: js.Array[Rating]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKind(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

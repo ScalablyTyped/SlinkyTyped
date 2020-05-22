@@ -21,14 +21,13 @@ trait KnockoutMapping extends js.Object {
     * @param target View model object previosly mapped to be updated.
     */
   def fromJS[T](source: T): MappedType[T] = js.native
-  def fromJS[T](source: T, options: KnockoutMappingOptions[T]): MappedType[T] = js.native
-  def fromJS[T](source: T, options: KnockoutMappingOptions[T], target: MappedType[T]): MappedType[T] = js.native
   /**
     * Updates target's observable properties with those of the sources.
     * @param source Plain JavaScript object to be mapped.
     * @param target View model object previosly mapped to be updated.
     */
-  def fromJS[T](source: T, target: MappedType[T]): MappedType[T] = js.native
+  def fromJS[T](source: T, options: KnockoutMappingOptions[T] | MappedType[T]): MappedType[T] = js.native
+  def fromJS[T](source: T, options: KnockoutMappingOptions[T], target: MappedType[T]): MappedType[T] = js.native
   /**
     * Creates an readonly observable array view model. Objects on the source array are also converted to observables. Primitive types and arrays are not. 
     * If 'target' is supplied, instead, target's observable properties are updated.

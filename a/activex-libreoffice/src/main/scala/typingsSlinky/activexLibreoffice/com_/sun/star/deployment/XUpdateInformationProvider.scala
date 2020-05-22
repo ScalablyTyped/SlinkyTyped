@@ -13,23 +13,22 @@ import scala.scalajs.js.annotation._
   * Objects implementing this interface provide access to the xml root of one or more update information files for a given set of URLs.
   * @since OOo 2.2
   */
-@js.native
 trait XUpdateInformationProvider extends js.Object {
   /** interrupts a getUpdateInformation call and let's it return immediately. */
-  def cancel(): Unit = js.native
+  def cancel(): Unit
   /**
     * get update information for a specific extension or all available information from a repository.
     * @param repositories a repository and its mirrors.
     * @param extensionId the unique identifier of an extension. If it is not empty and the update document is an atom feed, only items whose "term" attribute
     */
-  def getUpdateInformation(repositories: SeqEquiv[String], extensionId: String): SafeArray[XElement] = js.native
+  def getUpdateInformation(repositories: SeqEquiv[String], extensionId: String): SafeArray[XElement]
   /**
     * get update information for a specific extension or all available information from a repository.
     * @param repositories a repository and its mirrors.
     * @param extensionId the unique identifier of an extension. If it is not empty and the update document is an atom feed, only items whose "term" attribute
     * @returns an enumeration of {@link UpdateInformationEntry} .
     */
-  def getUpdateInformationEnumeration(repositories: SeqEquiv[String], extensionId: String): XEnumeration = js.native
+  def getUpdateInformationEnumeration(repositories: SeqEquiv[String], extensionId: String): XEnumeration
   /**
     * Sets an interaction handler to be used for further operations.
     *
@@ -38,7 +37,7 @@ trait XUpdateInformationProvider extends js.Object {
     * @param handler The interaction handler to be set
     * @see com.sun.star.task.InteractionHandler
     */
-  def setInteractionHandler(handler: XInteractionHandler): Unit = js.native
+  def setInteractionHandler(handler: XInteractionHandler): Unit
 }
 
 object XUpdateInformationProvider {
@@ -52,37 +51,5 @@ object XUpdateInformationProvider {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction0(cancel), getUpdateInformation = js.Any.fromFunction2(getUpdateInformation), getUpdateInformationEnumeration = js.Any.fromFunction2(getUpdateInformationEnumeration), setInteractionHandler = js.Any.fromFunction1(setInteractionHandler))
     __obj.asInstanceOf[XUpdateInformationProvider]
   }
-  @scala.inline
-  implicit class XUpdateInformationProviderOps[Self <: XUpdateInformationProvider] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCancel(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpdateInformation(value: (SeqEquiv[String], String) => SafeArray[XElement]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdateInformation")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withGetUpdateInformationEnumeration(value: (SeqEquiv[String], String) => XEnumeration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdateInformationEnumeration")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSetInteractionHandler(value: XInteractionHandler => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setInteractionHandler")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

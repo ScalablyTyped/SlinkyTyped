@@ -4,62 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait SubtitleColor extends js.Object {
-  var fontWeight: js.UndefOr[Double] = js.native
-  var subtitleColor: js.UndefOr[String] = js.native
-  var titleColor: js.UndefOr[String] = js.native
+  var fontWeight: js.UndefOr[Double] = js.undefined
+  var subtitleColor: js.UndefOr[String] = js.undefined
+  var titleColor: js.UndefOr[String] = js.undefined
 }
 
 object SubtitleColor {
   @scala.inline
-  def apply(): SubtitleColor = {
+  def apply(
+    fontWeight: js.UndefOr[Double] = js.undefined,
+    subtitleColor: String = null,
+    titleColor: String = null
+  ): SubtitleColor = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(fontWeight)) __obj.updateDynamic("fontWeight")(fontWeight.get.asInstanceOf[js.Any])
+    if (subtitleColor != null) __obj.updateDynamic("subtitleColor")(subtitleColor.asInstanceOf[js.Any])
+    if (titleColor != null) __obj.updateDynamic("titleColor")(titleColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubtitleColor]
   }
-  @scala.inline
-  implicit class SubtitleColorOps[Self <: SubtitleColor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFontWeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFontWeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubtitleColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubtitleColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTitleColor(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTitleColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("titleColor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

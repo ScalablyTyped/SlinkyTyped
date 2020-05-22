@@ -13,12 +13,11 @@ import scala.scalajs.js.annotation._
   *    are ignored as well.
   *  - "draworder" is ignored.
   */
-@js.native
 trait ObjectLayer extends js.Object {
   /**
     * The name of the Object Layer.
     */
-  var name: String = js.native
+  var name: String
   /**
     * An array of all objects on this Object Layer.
     * 
@@ -38,27 +37,27 @@ trait ObjectLayer extends js.Object {
     * 
     * Rectangles and ellipses have a `rectangle` or `ellipse` property set to `true`.
     */
-  var objects: js.Array[TiledObject] = js.native
+  var objects: js.Array[TiledObject]
   /**
     * The opacity of the layer, between 0 and 1.
     */
-  var opacity: Double = js.native
+  var opacity: Double
   /**
     * The custom properties defined on the Object Layer, keyed by their name.
     */
-  var properties: js.Object = js.native
+  var properties: js.Object
   /**
     * The type of each custom property defined on the Object Layer, keyed by its name.
     */
-  var propertyTypes: js.Object = js.native
+  var propertyTypes: js.Object
   /**
     * The type of the layer, which should be `objectgroup`.
     */
-  var `type`: String = js.native
+  var `type`: String
   /**
     * Whether the layer is shown (`true`) or hidden (`false`).
     */
-  var visible: Boolean = js.native
+  var visible: Boolean
 }
 
 object ObjectLayer {
@@ -76,55 +75,5 @@ object ObjectLayer {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectLayer]
   }
-  @scala.inline
-  implicit class ObjectLayerOps[Self <: ObjectLayer] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withObjects(value: js.Array[TiledObject]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOpacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withProperties(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPropertyTypes(value: js.Object): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVisible(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

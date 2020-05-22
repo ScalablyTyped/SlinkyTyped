@@ -7,542 +7,132 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Options extends js.Object {
-  var aspectRatio: js.UndefOr[Double] = js.native
-  var autoCrop: js.UndefOr[Boolean] = js.native
-  var autoCropArea: js.UndefOr[Double] = js.native
-  var background: js.UndefOr[Boolean] = js.native
-  var center: js.UndefOr[Boolean] = js.native
-  var checkCrossOrigin: js.UndefOr[Boolean] = js.native
-  var checkOrientation: js.UndefOr[Boolean] = js.native
-  var crop: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
-  var cropBoxMovable: js.UndefOr[Boolean] = js.native
-  var cropBoxResizable: js.UndefOr[Boolean] = js.native
-  var cropend: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
-  var cropmove: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
-  var cropstart: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
-  var data: js.UndefOr[Data] = js.native
-  var dragMode: js.UndefOr[DragMode] = js.native
-  var guides: js.UndefOr[Boolean] = js.native
-  var highlight: js.UndefOr[Boolean] = js.native
-  var initialAspectRatio: js.UndefOr[Double] = js.native
-  var minCanvasHeight: js.UndefOr[Double] = js.native
-  var minCanvasWidth: js.UndefOr[Double] = js.native
-  var minContainerHeight: js.UndefOr[Double] = js.native
-  var minContainerWidth: js.UndefOr[Double] = js.native
-  var minCropBoxHeight: js.UndefOr[Double] = js.native
-  var minCropBoxWidth: js.UndefOr[Double] = js.native
-  var modal: js.UndefOr[Boolean] = js.native
-  var movable: js.UndefOr[Boolean] = js.native
-  var preview: js.UndefOr[Element | js.Array[Element] | NodeList | String] = js.native
-  var ready: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
-  var responsive: js.UndefOr[Boolean] = js.native
-  var restore: js.UndefOr[Boolean] = js.native
-  var rotatable: js.UndefOr[Boolean] = js.native
-  var scalable: js.UndefOr[Boolean] = js.native
-  var toggleDragModeOnDblclick: js.UndefOr[Boolean] = js.native
-  var viewMode: js.UndefOr[ViewMode] = js.native
-  var wheelZoomRatio: js.UndefOr[Double] = js.native
-  var zoom: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
-  var zoomOnTouch: js.UndefOr[Boolean] = js.native
-  var zoomOnWheel: js.UndefOr[Boolean] = js.native
-  var zoomable: js.UndefOr[Boolean] = js.native
+  var aspectRatio: js.UndefOr[Double] = js.undefined
+  var autoCrop: js.UndefOr[Boolean] = js.undefined
+  var autoCropArea: js.UndefOr[Double] = js.undefined
+  var background: js.UndefOr[Boolean] = js.undefined
+  var center: js.UndefOr[Boolean] = js.undefined
+  var checkCrossOrigin: js.UndefOr[Boolean] = js.undefined
+  var checkOrientation: js.UndefOr[Boolean] = js.undefined
+  var crop: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var cropBoxMovable: js.UndefOr[Boolean] = js.undefined
+  var cropBoxResizable: js.UndefOr[Boolean] = js.undefined
+  var cropend: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var cropmove: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var cropstart: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var data: js.UndefOr[Data] = js.undefined
+  var dragMode: js.UndefOr[DragMode] = js.undefined
+  var guides: js.UndefOr[Boolean] = js.undefined
+  var highlight: js.UndefOr[Boolean] = js.undefined
+  var initialAspectRatio: js.UndefOr[Double] = js.undefined
+  var minCanvasHeight: js.UndefOr[Double] = js.undefined
+  var minCanvasWidth: js.UndefOr[Double] = js.undefined
+  var minContainerHeight: js.UndefOr[Double] = js.undefined
+  var minContainerWidth: js.UndefOr[Double] = js.undefined
+  var minCropBoxHeight: js.UndefOr[Double] = js.undefined
+  var minCropBoxWidth: js.UndefOr[Double] = js.undefined
+  var modal: js.UndefOr[Boolean] = js.undefined
+  var movable: js.UndefOr[Boolean] = js.undefined
+  var preview: js.UndefOr[Element | js.Array[Element] | NodeList | String] = js.undefined
+  var ready: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var responsive: js.UndefOr[Boolean] = js.undefined
+  var restore: js.UndefOr[Boolean] = js.undefined
+  var rotatable: js.UndefOr[Boolean] = js.undefined
+  var scalable: js.UndefOr[Boolean] = js.undefined
+  var toggleDragModeOnDblclick: js.UndefOr[Boolean] = js.undefined
+  var viewMode: js.UndefOr[ViewMode] = js.undefined
+  var wheelZoomRatio: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var zoomOnTouch: js.UndefOr[Boolean] = js.undefined
+  var zoomOnWheel: js.UndefOr[Boolean] = js.undefined
+  var zoomable: js.UndefOr[Boolean] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(): Options = {
+  def apply(
+    aspectRatio: js.UndefOr[Double] = js.undefined,
+    autoCrop: js.UndefOr[Boolean] = js.undefined,
+    autoCropArea: js.UndefOr[Double] = js.undefined,
+    background: js.UndefOr[Boolean] = js.undefined,
+    center: js.UndefOr[Boolean] = js.undefined,
+    checkCrossOrigin: js.UndefOr[Boolean] = js.undefined,
+    checkOrientation: js.UndefOr[Boolean] = js.undefined,
+    crop: /* event */ CustomEvent => Unit = null,
+    cropBoxMovable: js.UndefOr[Boolean] = js.undefined,
+    cropBoxResizable: js.UndefOr[Boolean] = js.undefined,
+    cropend: /* event */ CustomEvent => Unit = null,
+    cropmove: /* event */ CustomEvent => Unit = null,
+    cropstart: /* event */ CustomEvent => Unit = null,
+    data: Data = null,
+    dragMode: DragMode = null,
+    guides: js.UndefOr[Boolean] = js.undefined,
+    highlight: js.UndefOr[Boolean] = js.undefined,
+    initialAspectRatio: js.UndefOr[Double] = js.undefined,
+    minCanvasHeight: js.UndefOr[Double] = js.undefined,
+    minCanvasWidth: js.UndefOr[Double] = js.undefined,
+    minContainerHeight: js.UndefOr[Double] = js.undefined,
+    minContainerWidth: js.UndefOr[Double] = js.undefined,
+    minCropBoxHeight: js.UndefOr[Double] = js.undefined,
+    minCropBoxWidth: js.UndefOr[Double] = js.undefined,
+    modal: js.UndefOr[Boolean] = js.undefined,
+    movable: js.UndefOr[Boolean] = js.undefined,
+    preview: Element | js.Array[Element] | NodeList | String = null,
+    ready: /* event */ CustomEvent => Unit = null,
+    responsive: js.UndefOr[Boolean] = js.undefined,
+    restore: js.UndefOr[Boolean] = js.undefined,
+    rotatable: js.UndefOr[Boolean] = js.undefined,
+    scalable: js.UndefOr[Boolean] = js.undefined,
+    toggleDragModeOnDblclick: js.UndefOr[Boolean] = js.undefined,
+    viewMode: ViewMode = null,
+    wheelZoomRatio: js.UndefOr[Double] = js.undefined,
+    zoom: /* event */ CustomEvent => Unit = null,
+    zoomOnTouch: js.UndefOr[Boolean] = js.undefined,
+    zoomOnWheel: js.UndefOr[Boolean] = js.undefined,
+    zoomable: js.UndefOr[Boolean] = js.undefined
+  ): Options = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(aspectRatio)) __obj.updateDynamic("aspectRatio")(aspectRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoCrop)) __obj.updateDynamic("autoCrop")(autoCrop.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoCropArea)) __obj.updateDynamic("autoCropArea")(autoCropArea.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(background)) __obj.updateDynamic("background")(background.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(checkCrossOrigin)) __obj.updateDynamic("checkCrossOrigin")(checkCrossOrigin.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(checkOrientation)) __obj.updateDynamic("checkOrientation")(checkOrientation.get.asInstanceOf[js.Any])
+    if (crop != null) __obj.updateDynamic("crop")(js.Any.fromFunction1(crop))
+    if (!js.isUndefined(cropBoxMovable)) __obj.updateDynamic("cropBoxMovable")(cropBoxMovable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(cropBoxResizable)) __obj.updateDynamic("cropBoxResizable")(cropBoxResizable.get.asInstanceOf[js.Any])
+    if (cropend != null) __obj.updateDynamic("cropend")(js.Any.fromFunction1(cropend))
+    if (cropmove != null) __obj.updateDynamic("cropmove")(js.Any.fromFunction1(cropmove))
+    if (cropstart != null) __obj.updateDynamic("cropstart")(js.Any.fromFunction1(cropstart))
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (dragMode != null) __obj.updateDynamic("dragMode")(dragMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(guides)) __obj.updateDynamic("guides")(guides.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialAspectRatio)) __obj.updateDynamic("initialAspectRatio")(initialAspectRatio.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCanvasHeight)) __obj.updateDynamic("minCanvasHeight")(minCanvasHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCanvasWidth)) __obj.updateDynamic("minCanvasWidth")(minCanvasWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minContainerHeight)) __obj.updateDynamic("minContainerHeight")(minContainerHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minContainerWidth)) __obj.updateDynamic("minContainerWidth")(minContainerWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCropBoxHeight)) __obj.updateDynamic("minCropBoxHeight")(minCropBoxHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(minCropBoxWidth)) __obj.updateDynamic("minCropBoxWidth")(minCropBoxWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(modal)) __obj.updateDynamic("modal")(modal.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(movable)) __obj.updateDynamic("movable")(movable.get.asInstanceOf[js.Any])
+    if (preview != null) __obj.updateDynamic("preview")(preview.asInstanceOf[js.Any])
+    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
+    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(restore)) __obj.updateDynamic("restore")(restore.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(rotatable)) __obj.updateDynamic("rotatable")(rotatable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(scalable)) __obj.updateDynamic("scalable")(scalable.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(toggleDragModeOnDblclick)) __obj.updateDynamic("toggleDragModeOnDblclick")(toggleDragModeOnDblclick.get.asInstanceOf[js.Any])
+    if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
+    if (!js.isUndefined(wheelZoomRatio)) __obj.updateDynamic("wheelZoomRatio")(wheelZoomRatio.get.asInstanceOf[js.Any])
+    if (zoom != null) __obj.updateDynamic("zoom")(js.Any.fromFunction1(zoom))
+    if (!js.isUndefined(zoomOnTouch)) __obj.updateDynamic("zoomOnTouch")(zoomOnTouch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomOnWheel)) __obj.updateDynamic("zoomOnWheel")(zoomOnWheel.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(zoomable)) __obj.updateDynamic("zoomable")(zoomable.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
-  @scala.inline
-  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAspectRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoCrop(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCrop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCrop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoCropArea(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCropArea")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoCropArea: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCropArea")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBackground(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBackground: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCenter(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCenter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckCrossOrigin(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCrossOrigin")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckCrossOrigin: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCrossOrigin")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCheckOrientation(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOrientation")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCheckOrientation: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOrientation")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrop(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCrop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropBoxMovable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropBoxMovable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCropBoxMovable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropBoxMovable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropBoxResizable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropBoxResizable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCropBoxResizable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropBoxResizable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropend(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropend")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCropend: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropend")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropmove(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropmove")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCropmove: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropmove")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropstart(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropstart")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutCropstart: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropstart")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withData(value: Data): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDragMode(value: DragMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDragMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dragMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGuides(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guides")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGuides: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("guides")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withHighlight(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHighlight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialAspectRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialAspectRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialAspectRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialAspectRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCanvasHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCanvasHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCanvasHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCanvasHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCanvasWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCanvasWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCanvasWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCanvasWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinContainerHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minContainerHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinContainerHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minContainerHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinContainerWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minContainerWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinContainerWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minContainerWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCropBoxHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCropBoxHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCropBoxHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCropBoxHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinCropBoxWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCropBoxWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinCropBoxWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minCropBoxWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withModal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModal: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("modal")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMovable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("movable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMovable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("movable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPreviewNodeList(value: NodeList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreviewElement(value: Element): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withPreview(value: Element | js.Array[Element] | NodeList | String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPreview: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withReady(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResponsive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResponsive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("responsive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRestore(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRestore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRotatable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotatable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRotatable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rotatable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScalable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScalable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scalable")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withToggleDragModeOnDblclick(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleDragModeOnDblclick")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutToggleDragModeOnDblclick: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleDragModeOnDblclick")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withViewMode(value: ViewMode): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutViewMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWheelZoomRatio(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelZoomRatio")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWheelZoomRatio: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelZoomRatio")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoom(value: /* event */ CustomEvent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withoutZoom: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomOnTouch(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOnTouch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomOnTouch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOnTouch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomOnWheel(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOnWheel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomOnWheel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOnWheel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withZoomable(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomable")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutZoomable: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomable")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

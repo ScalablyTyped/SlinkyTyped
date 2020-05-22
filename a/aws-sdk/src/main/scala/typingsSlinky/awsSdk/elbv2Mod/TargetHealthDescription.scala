@@ -22,53 +22,16 @@ trait TargetHealthDescription extends js.Object {
 
 object TargetHealthDescription {
   @scala.inline
-  def apply(): TargetHealthDescription = {
+  def apply(
+    HealthCheckPort: HealthCheckPort = null,
+    Target: TargetDescription = null,
+    TargetHealth: TargetHealth = null
+  ): TargetHealthDescription = {
     val __obj = js.Dynamic.literal()
+    if (HealthCheckPort != null) __obj.updateDynamic("HealthCheckPort")(HealthCheckPort.asInstanceOf[js.Any])
+    if (Target != null) __obj.updateDynamic("Target")(Target.asInstanceOf[js.Any])
+    if (TargetHealth != null) __obj.updateDynamic("TargetHealth")(TargetHealth.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetHealthDescription]
   }
-  @scala.inline
-  implicit class TargetHealthDescriptionOps[Self <: TargetHealthDescription] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withHealthCheckPort(value: HealthCheckPort): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPort")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHealthCheckPort: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPort")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTarget(value: TargetDescription): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTarget: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTargetHealth(value: TargetHealth): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetHealth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTargetHealth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetHealth")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

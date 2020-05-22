@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CanMakePaymentResult extends js.Object {
   /**
     * true if the browser payment API supports Apple Pay.
     * NOTE: using the paymentRequestButton Element is automatically cross-browser.
     * If you use this PaymentRequest object to create a paymentRequestButton Element, you don‘t need to check applePay yourself
     */
-  val applePay: Boolean = js.native
+  val applePay: Boolean
 }
 
 object CanMakePaymentResult {
@@ -20,19 +19,5 @@ object CanMakePaymentResult {
     val __obj = js.Dynamic.literal(applePay = applePay.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanMakePaymentResult]
   }
-  @scala.inline
-  implicit class CanMakePaymentResultOps[Self <: CanMakePaymentResult] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplePay(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("applePay")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

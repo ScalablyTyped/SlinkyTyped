@@ -47,7 +47,29 @@ object resolvableMod extends js.Object {
     @JSName("policy")
     var policy_Resolvable: ResolvePolicy = js.native
     var promise: js.Promise[_] = js.native
+    /**
+      * A function which fetches the Resolvable's data
+      *
+      * A function which returns one of:
+      *
+      * - The resolved value (synchronously)
+      * - A promise for the resolved value
+      * - An Observable of the resolved value(s)
+      *
+      * This function will be provided the dependencies listed in [[deps]] as its arguments.
+      * The resolve system will asynchronously fetch the dependencies before invoking this function.
+      */
+    /* CompleteClass */
+    override var resolveFn: js.Function = js.native
     var resolved: Boolean = js.native
+    /**
+      * A Dependency Injection token
+      *
+      * This Resolvable's DI token.
+      * The Resolvable will be injectable elsewhere using the token.
+      */
+    /* CompleteClass */
+    override var token: js.Any = js.native
     /**
       * Gets a promise for this Resolvable's data.
       *

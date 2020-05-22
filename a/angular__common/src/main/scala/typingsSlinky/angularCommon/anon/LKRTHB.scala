@@ -4,11 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait LKRTHB extends js.Object {
-  var LKR: js.Array[String] = js.native
-  var THB: js.Array[String] = js.native
-  var TWD: js.Array[String] = js.native
+  var LKR: js.Array[String]
+  var THB: js.Array[String]
+  var TWD: js.Array[String]
 }
 
 object LKRTHB {
@@ -17,31 +16,5 @@ object LKRTHB {
     val __obj = js.Dynamic.literal(LKR = LKR.asInstanceOf[js.Any], THB = THB.asInstanceOf[js.Any], TWD = TWD.asInstanceOf[js.Any])
     __obj.asInstanceOf[LKRTHB]
   }
-  @scala.inline
-  implicit class LKRTHBOps[Self <: LKRTHB] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withLKR(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("LKR")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTHB(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("THB")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTWD(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TWD")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

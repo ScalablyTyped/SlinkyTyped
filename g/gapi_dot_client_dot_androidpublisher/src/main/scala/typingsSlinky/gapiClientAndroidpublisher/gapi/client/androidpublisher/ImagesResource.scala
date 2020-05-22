@@ -7,16 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ImagesResource extends js.Object {
   /** Deletes the image (specified by id) from the edit. */
-  def delete(request: Fields): Request[Unit] = js.native
+  def delete(request: Fields): Request[Unit]
   /** Deletes all images for the specified language and image type. */
-  def deleteall(request: ImageType): Request[ImagesDeleteAllResponse] = js.native
+  def deleteall(request: ImageType): Request[ImagesDeleteAllResponse]
   /** Lists all images for the specified language and image type. */
-  def list(request: ImageType): Request[ImagesListResponse] = js.native
+  def list(request: ImageType): Request[ImagesListResponse]
   /** Uploads a new image and adds it to the list of images for the specified language and image type. */
-  def upload(request: ImageType): Request[ImagesUploadResponse] = js.native
+  def upload(request: ImageType): Request[ImagesUploadResponse]
 }
 
 object ImagesResource {
@@ -30,37 +29,5 @@ object ImagesResource {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), deleteall = js.Any.fromFunction1(deleteall), list = js.Any.fromFunction1(list), upload = js.Any.fromFunction1(upload))
     __obj.asInstanceOf[ImagesResource]
   }
-  @scala.inline
-  implicit class ImagesResourceOps[Self <: ImagesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDelete(value: Fields => Request[Unit]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withDeleteall(value: ImageType => Request[ImagesDeleteAllResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteall")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: ImageType => Request[ImagesListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withUpload(value: ImageType => Request[ImagesUploadResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

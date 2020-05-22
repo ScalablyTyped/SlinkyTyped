@@ -47,101 +47,24 @@ trait SchemaPubsubLocation extends js.Object {
 
 object SchemaPubsubLocation {
   @scala.inline
-  def apply(): SchemaPubsubLocation = {
+  def apply(
+    dropLateData: js.UndefOr[Boolean] = js.undefined,
+    idLabel: String = null,
+    subscription: String = null,
+    timestampLabel: String = null,
+    topic: String = null,
+    trackingSubscription: String = null,
+    withAttributes: js.UndefOr[Boolean] = js.undefined
+  ): SchemaPubsubLocation = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dropLateData)) __obj.updateDynamic("dropLateData")(dropLateData.get.asInstanceOf[js.Any])
+    if (idLabel != null) __obj.updateDynamic("idLabel")(idLabel.asInstanceOf[js.Any])
+    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
+    if (timestampLabel != null) __obj.updateDynamic("timestampLabel")(timestampLabel.asInstanceOf[js.Any])
+    if (topic != null) __obj.updateDynamic("topic")(topic.asInstanceOf[js.Any])
+    if (trackingSubscription != null) __obj.updateDynamic("trackingSubscription")(trackingSubscription.asInstanceOf[js.Any])
+    if (!js.isUndefined(withAttributes)) __obj.updateDynamic("withAttributes")(withAttributes.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPubsubLocation]
   }
-  @scala.inline
-  implicit class SchemaPubsubLocationOps[Self <: SchemaPubsubLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDropLateData(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropLateData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDropLateData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dropLateData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSubscription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTimestampLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampLabel")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTimestampLabel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampLabel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTopic(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTopic: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("topic")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrackingSubscription(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingSubscription")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrackingSubscription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trackingSubscription")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWithAttributes(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withAttributes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWithAttributes: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("withAttributes")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

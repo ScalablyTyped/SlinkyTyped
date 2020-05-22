@@ -4,14 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DiagnosticWithLocation extends Diagnostic {
   @JSName("file")
-  var file_DiagnosticWithLocation: SourceFile = js.native
+  var file_DiagnosticWithLocation: SourceFile
   @JSName("length")
-  var length_DiagnosticWithLocation: Double = js.native
+  var length_DiagnosticWithLocation: Double
   @JSName("start")
-  var start_DiagnosticWithLocation: Double = js.native
+  var start_DiagnosticWithLocation: Double
 }
 
 object DiagnosticWithLocation {
@@ -22,36 +21,16 @@ object DiagnosticWithLocation {
     file: SourceFile,
     length: Double,
     messageText: java.lang.String | DiagnosticMessageChain,
-    start: Double
+    start: Double,
+    relatedInformation: js.Array[DiagnosticRelatedInformation] = null,
+    reportsUnnecessary: js.Object = null,
+    source: java.lang.String = null
   ): DiagnosticWithLocation = {
     val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], file = file.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], messageText = messageText.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    if (relatedInformation != null) __obj.updateDynamic("relatedInformation")(relatedInformation.asInstanceOf[js.Any])
+    if (reportsUnnecessary != null) __obj.updateDynamic("reportsUnnecessary")(reportsUnnecessary.asInstanceOf[js.Any])
+    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagnosticWithLocation]
   }
-  @scala.inline
-  implicit class DiagnosticWithLocationOps[Self <: DiagnosticWithLocation] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withFile(value: SourceFile): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withLength(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStart(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

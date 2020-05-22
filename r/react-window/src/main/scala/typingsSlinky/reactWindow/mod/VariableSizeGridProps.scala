@@ -1,11 +1,14 @@
 package typingsSlinky.reactWindow.mod
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactWindow.anon.ColumnIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait VariableSizeGridProps extends GridProps {
   /**
     * Average (or estimated) column width for unrendered columns.
@@ -13,22 +16,22 @@ trait VariableSizeGridProps extends GridProps {
     * This value is used to calculated the estimated total width of a Grid before its columns have all been measured.
     * The estimated width impacts user scrolling behavior. It is updated whenever new columns are measured.
     */
-  var estimatedColumnWidth: js.UndefOr[Double] = js.native
+  var estimatedColumnWidth: js.UndefOr[Double] = js.undefined
   /**
     * Average (or estimated) row height for unrendered rows.
     *
     * This value is used to calculated the estimated total height of a Grid before its rows have all been measured.
     * The estimated height impacts user scrolling behavior. It is updated whenever new rows are measured.
     */
-  var estimatedRowHeight: js.UndefOr[Double] = js.native
+  var estimatedRowHeight: js.UndefOr[Double] = js.undefined
   /**
     * Returns the width of the specified column.
     */
-  def columnWidth(index: Double): Double = js.native
+  def columnWidth(index: Double): Double
   /**
     * Returns the height of the specified row.
     */
-  def rowHeight(index: Double): Double = js.native
+  def rowHeight(index: Double): Double
 }
 
 object VariableSizeGridProps {
@@ -40,54 +43,56 @@ object VariableSizeGridProps {
     height: Double,
     rowCount: Double,
     rowHeight: Double => Double,
-    width: Double
+    width: Double,
+    className: String = null,
+    direction: CSSDirection = null,
+    estimatedColumnWidth: js.UndefOr[Double] = js.undefined,
+    estimatedRowHeight: js.UndefOr[Double] = js.undefined,
+    initialScrollLeft: js.UndefOr[Double] = js.undefined,
+    initialScrollTop: js.UndefOr[Double] = js.undefined,
+    innerElementType: ReactElementType = null,
+    innerRef: js.UndefOr[Null | Ref[_]] = js.undefined,
+    innerTagName: String = null,
+    itemData: js.Any = null,
+    itemKey: /* params */ ColumnIndex => Key = null,
+    onItemsRendered: /* props */ GridOnItemsRenderedProps => _ = null,
+    onScroll: /* props */ GridOnScrollProps => _ = null,
+    outerElementType: ReactElementType = null,
+    outerRef: js.UndefOr[Null | Ref[_]] = js.undefined,
+    outerTagName: String = null,
+    overscanColumnCount: js.UndefOr[Double] = js.undefined,
+    overscanColumnsCount: js.UndefOr[Double] = js.undefined,
+    overscanCount: js.UndefOr[Double] = js.undefined,
+    overscanRowCount: js.UndefOr[Double] = js.undefined,
+    overscanRowsCount: js.UndefOr[Double] = js.undefined,
+    style: CSSProperties = null,
+    useIsScrolling: js.UndefOr[Boolean] = js.undefined
   ): VariableSizeGridProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], columnCount = columnCount.asInstanceOf[js.Any], columnWidth = js.Any.fromFunction1(columnWidth), height = height.asInstanceOf[js.Any], rowCount = rowCount.asInstanceOf[js.Any], rowHeight = js.Any.fromFunction1(rowHeight), width = width.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(estimatedColumnWidth)) __obj.updateDynamic("estimatedColumnWidth")(estimatedColumnWidth.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(estimatedRowHeight)) __obj.updateDynamic("estimatedRowHeight")(estimatedRowHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialScrollLeft)) __obj.updateDynamic("initialScrollLeft")(initialScrollLeft.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialScrollTop)) __obj.updateDynamic("initialScrollTop")(initialScrollTop.get.asInstanceOf[js.Any])
+    if (innerElementType != null) __obj.updateDynamic("innerElementType")(innerElementType.asInstanceOf[js.Any])
+    if (!js.isUndefined(innerRef)) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
+    if (innerTagName != null) __obj.updateDynamic("innerTagName")(innerTagName.asInstanceOf[js.Any])
+    if (itemData != null) __obj.updateDynamic("itemData")(itemData.asInstanceOf[js.Any])
+    if (itemKey != null) __obj.updateDynamic("itemKey")(js.Any.fromFunction1(itemKey))
+    if (onItemsRendered != null) __obj.updateDynamic("onItemsRendered")(js.Any.fromFunction1(onItemsRendered))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (outerElementType != null) __obj.updateDynamic("outerElementType")(outerElementType.asInstanceOf[js.Any])
+    if (!js.isUndefined(outerRef)) __obj.updateDynamic("outerRef")(outerRef.asInstanceOf[js.Any])
+    if (outerTagName != null) __obj.updateDynamic("outerTagName")(outerTagName.asInstanceOf[js.Any])
+    if (!js.isUndefined(overscanColumnCount)) __obj.updateDynamic("overscanColumnCount")(overscanColumnCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overscanColumnsCount)) __obj.updateDynamic("overscanColumnsCount")(overscanColumnsCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overscanCount)) __obj.updateDynamic("overscanCount")(overscanCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overscanRowCount)) __obj.updateDynamic("overscanRowCount")(overscanRowCount.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(overscanRowsCount)) __obj.updateDynamic("overscanRowsCount")(overscanRowsCount.get.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (!js.isUndefined(useIsScrolling)) __obj.updateDynamic("useIsScrolling")(useIsScrolling.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[VariableSizeGridProps]
   }
-  @scala.inline
-  implicit class VariableSizeGridPropsOps[Self <: VariableSizeGridProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withColumnWidth(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withRowHeight(value: Double => Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withEstimatedColumnWidth(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedColumnWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedColumnWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedColumnWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEstimatedRowHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRowHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEstimatedRowHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedRowHeight")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

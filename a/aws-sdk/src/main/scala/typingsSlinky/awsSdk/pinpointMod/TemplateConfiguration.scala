@@ -26,65 +26,18 @@ trait TemplateConfiguration extends js.Object {
 
 object TemplateConfiguration {
   @scala.inline
-  def apply(): TemplateConfiguration = {
+  def apply(
+    EmailTemplate: Template = null,
+    PushTemplate: Template = null,
+    SMSTemplate: Template = null,
+    VoiceTemplate: Template = null
+  ): TemplateConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (EmailTemplate != null) __obj.updateDynamic("EmailTemplate")(EmailTemplate.asInstanceOf[js.Any])
+    if (PushTemplate != null) __obj.updateDynamic("PushTemplate")(PushTemplate.asInstanceOf[js.Any])
+    if (SMSTemplate != null) __obj.updateDynamic("SMSTemplate")(SMSTemplate.asInstanceOf[js.Any])
+    if (VoiceTemplate != null) __obj.updateDynamic("VoiceTemplate")(VoiceTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateConfiguration]
   }
-  @scala.inline
-  implicit class TemplateConfigurationOps[Self <: TemplateConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEmailTemplate(value: Template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEmailTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPushTemplate(value: Template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PushTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPushTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("PushTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSMSTemplate(value: Template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SMSTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSMSTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SMSTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVoiceTemplate(value: Template): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVoiceTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceTemplate")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -14,29 +14,10 @@ trait RollbackTransactionResponse extends js.Object {
 
 object RollbackTransactionResponse {
   @scala.inline
-  def apply(): RollbackTransactionResponse = {
+  def apply(transactionStatus: TransactionStatus = null): RollbackTransactionResponse = {
     val __obj = js.Dynamic.literal()
+    if (transactionStatus != null) __obj.updateDynamic("transactionStatus")(transactionStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollbackTransactionResponse]
   }
-  @scala.inline
-  implicit class RollbackTransactionResponseOps[Self <: RollbackTransactionResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withTransactionStatus(value: TransactionStatus): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionStatus")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTransactionStatus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionStatus")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

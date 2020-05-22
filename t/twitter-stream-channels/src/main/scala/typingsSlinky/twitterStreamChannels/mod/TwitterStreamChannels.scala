@@ -14,7 +14,6 @@ import scala.scalajs.js.annotation._
   * @param {String} credentials.access_token_secret
   * @return {TwitterStreamChannels}
   */
-@js.native
 trait TwitterStreamChannels extends js.Object {
   /**
     * Returns a Twitter API client on which you can do pretty much what you want.
@@ -23,7 +22,7 @@ trait TwitterStreamChannels extends js.Object {
     * @returns {Twit}
     * @see https://github.com/topheman/twitter-stream-channels/blob/master/lib/TwitterStreamChannels.js#L113
     */
-  def getApiClient(): typingsSlinky.twit.mod.^ = js.native
+  def getApiClient(): typingsSlinky.twit.mod.^
   /**
     * Opens a Twitter Stream and returns you an other one on which you'll be able to attach events for each channels
     * @method streamChannels
@@ -37,7 +36,7 @@ trait TwitterStreamChannels extends js.Object {
     * @return {StreamChannels}
     * @see https://github.com/topheman/twitter-stream-channels/blob/master/lib/TwitterStreamChannels.js#L131
     */
-  def streamChannels(options: StreamChannelsOptions): StreamChannels = js.native
+  def streamChannels(options: StreamChannelsOptions): StreamChannels
 }
 
 object TwitterStreamChannels {
@@ -49,25 +48,5 @@ object TwitterStreamChannels {
     val __obj = js.Dynamic.literal(getApiClient = js.Any.fromFunction0(getApiClient), streamChannels = js.Any.fromFunction1(streamChannels))
     __obj.asInstanceOf[TwitterStreamChannels]
   }
-  @scala.inline
-  implicit class TwitterStreamChannelsOps[Self <: TwitterStreamChannels] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetApiClient(value: () => typingsSlinky.twit.mod.^): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getApiClient")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withStreamChannels(value: StreamChannelsOptions => StreamChannels): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streamChannels")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

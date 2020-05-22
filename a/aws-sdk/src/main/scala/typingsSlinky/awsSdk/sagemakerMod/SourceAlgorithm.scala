@@ -18,35 +18,10 @@ trait SourceAlgorithm extends js.Object {
 
 object SourceAlgorithm {
   @scala.inline
-  def apply(AlgorithmName: ArnOrName): SourceAlgorithm = {
+  def apply(AlgorithmName: ArnOrName, ModelDataUrl: Url = null): SourceAlgorithm = {
     val __obj = js.Dynamic.literal(AlgorithmName = AlgorithmName.asInstanceOf[js.Any])
+    if (ModelDataUrl != null) __obj.updateDynamic("ModelDataUrl")(ModelDataUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceAlgorithm]
   }
-  @scala.inline
-  implicit class SourceAlgorithmOps[Self <: SourceAlgorithm] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAlgorithmName(value: ArnOrName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withModelDataUrl(value: Url): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelDataUrl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutModelDataUrl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelDataUrl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

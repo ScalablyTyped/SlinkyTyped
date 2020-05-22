@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   * @see XConnectionTools
   * @since OOo 2.0.4
   */
-@js.native
 trait XObjectNames extends js.Object {
   /**
     * checks whether a given name is allowed for a to-be-created table or query in the database.
@@ -35,7 +34,7 @@ trait XObjectNames extends js.Object {
     * @see com.sun.star.sdb.ErrorMessageDialog
     * @see com.sun.star.sdb.InteractionHandler
     */
-  def checkNameForCreate(CommandType: Double, Name: String): Unit = js.native
+  def checkNameForCreate(CommandType: Double, Name: String): Unit
   /**
     * converts the given object name to a name which is valid in the database.
     *
@@ -43,7 +42,7 @@ trait XObjectNames extends js.Object {
     * by the database, with an underscore character (_).
     * @see com.sun.star.sdbc.XDatabaseMetaData.getExtraNameCharacters
     */
-  def convertToSQLName(Name: String): String = js.native
+  def convertToSQLName(Name: String): String
   /**
     * checks whether a given name is used as table respectively query name in the database.
     *
@@ -57,7 +56,7 @@ trait XObjectNames extends js.Object {
     * @see checkNameIsUsed
     * @throws com::sun::star::lang::IllegalArgumentException if {@link CommandType} specifies an invalid command type.
     */
-  def isNameUsed(CommandType: Double, Name: String): Boolean = js.native
+  def isNameUsed(CommandType: Double, Name: String): Boolean
   /**
     * checks whether a given name is valid as table or query name
     *
@@ -66,7 +65,7 @@ trait XObjectNames extends js.Object {
     * For queries, names are nearly arbitrary, except that usual quoting characters must not be part of the name.
     * @see com.sun.star.sdbc.XDatabaseMetaData.getExtraNameCharacters
     */
-  def isNameValid(CommandType: Double, Name: String): Boolean = js.native
+  def isNameValid(CommandType: Double, Name: String): Boolean
   /**
     * suggests a (unique) table or query name
     *
@@ -82,7 +81,7 @@ trait XObjectNames extends js.Object {
     * @param BaseName specifies the base of the to-be-created object name. If empty, a default base name will be used.
     * @throws com::sun::star::lang::IllegalArgumentException if {@link CommandType} specifies an invalid command type.
     */
-  def suggestName(CommandType: Double, BaseName: String): String = js.native
+  def suggestName(CommandType: Double, BaseName: String): String
 }
 
 object XObjectNames {
@@ -97,43 +96,5 @@ object XObjectNames {
     val __obj = js.Dynamic.literal(checkNameForCreate = js.Any.fromFunction2(checkNameForCreate), convertToSQLName = js.Any.fromFunction1(convertToSQLName), isNameUsed = js.Any.fromFunction2(isNameUsed), isNameValid = js.Any.fromFunction2(isNameValid), suggestName = js.Any.fromFunction2(suggestName))
     __obj.asInstanceOf[XObjectNames]
   }
-  @scala.inline
-  implicit class XObjectNamesOps[Self <: XObjectNames] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCheckNameForCreate(value: (Double, String) => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("checkNameForCreate")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withConvertToSQLName(value: String => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("convertToSQLName")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withIsNameUsed(value: (Double, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNameUsed")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withIsNameValid(value: (Double, String) => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isNameValid")(js.Any.fromFunction2(value))
-        ret
-    }
-    @scala.inline
-    def withSuggestName(value: (Double, String) => String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestName")(js.Any.fromFunction2(value))
-        ret
-    }
-  }
-  
 }
 

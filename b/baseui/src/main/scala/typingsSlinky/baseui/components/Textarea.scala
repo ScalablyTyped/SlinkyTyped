@@ -39,6 +39,8 @@ object Textarea {
     @scala.inline
     def `aria-describedby`(value: String): this.type = set("aria-describedby", value.asInstanceOf[js.Any])
     @scala.inline
+    def `aria-errormessage`(value: String): this.type = set("aria-errormessage", value.asInstanceOf[js.Any])
+    @scala.inline
     def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
     @scala.inline
     def `aria-labelledby`(value: String): this.type = set("aria-labelledby", value.asInstanceOf[js.Any])
@@ -86,6 +88,8 @@ object Textarea {
     def onKeyUp(value: SyntheticKeyboardEvent[HTMLTextAreaElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: BaseInputOverrides[SharedProps]): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

@@ -22,53 +22,16 @@ trait RunConfiguration extends js.Object {
 
 object RunConfiguration {
   @scala.inline
-  def apply(): RunConfiguration = {
+  def apply(
+    ApplicationRestoreConfiguration: ApplicationRestoreConfiguration = null,
+    FlinkRunConfiguration: FlinkRunConfiguration = null,
+    SqlRunConfigurations: SqlRunConfigurations = null
+  ): RunConfiguration = {
     val __obj = js.Dynamic.literal()
+    if (ApplicationRestoreConfiguration != null) __obj.updateDynamic("ApplicationRestoreConfiguration")(ApplicationRestoreConfiguration.asInstanceOf[js.Any])
+    if (FlinkRunConfiguration != null) __obj.updateDynamic("FlinkRunConfiguration")(FlinkRunConfiguration.asInstanceOf[js.Any])
+    if (SqlRunConfigurations != null) __obj.updateDynamic("SqlRunConfigurations")(SqlRunConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunConfiguration]
   }
-  @scala.inline
-  implicit class RunConfigurationOps[Self <: RunConfiguration] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withApplicationRestoreConfiguration(value: ApplicationRestoreConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationRestoreConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplicationRestoreConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationRestoreConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFlinkRunConfiguration(value: FlinkRunConfiguration): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkRunConfiguration")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFlinkRunConfiguration: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkRunConfiguration")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqlRunConfigurations(value: SqlRunConfigurations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlRunConfigurations")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqlRunConfigurations: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SqlRunConfigurations")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

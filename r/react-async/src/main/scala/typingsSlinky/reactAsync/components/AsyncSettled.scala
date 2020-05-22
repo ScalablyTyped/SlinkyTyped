@@ -11,6 +11,11 @@ object AsyncSettled {
   object component extends js.Object
   
   def withProps[T](p: ChildrenSettledChildren[T]): SharedBuilder_ChildrenSettledChildren1671893832[T] = new SharedBuilder_ChildrenSettledChildren1671893832[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](): SharedBuilder_ChildrenSettledChildren1671893832[T] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_ChildrenSettledChildren1671893832[T](js.Array(this.component, __props.asInstanceOf[ChildrenSettledChildren[T]]))
+  }
   implicit def make[T](companion: AsyncSettled.type): SharedBuilder_ChildrenSettledChildren1671893832[T] = new SharedBuilder_ChildrenSettledChildren1671893832[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

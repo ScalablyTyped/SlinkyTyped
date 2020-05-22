@@ -1,7 +1,6 @@
 package typingsSlinky.reactNavigation.anon
 
 import slinky.core.ReactComponentClass
-import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNavigation.mod.NavigationFocusInjectedProps
 import typingsSlinky.reactNavigation.mod.NavigationParams
@@ -10,54 +9,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait `0`[T /* <: ReactComponentClass[P] */, P /* <: NavigationFocusInjectedProps[NavigationParams] */] extends js.Object {
-  var onRef: js.UndefOr[Ref[InstanceType[T]]] = js.native
+  var onRef: js.UndefOr[Ref[InstanceType[T]]] = js.undefined
 }
 
 object `0` {
   @scala.inline
-  def apply[T, P](): `0`[T, P] = {
+  def apply[T, P](onRef: js.UndefOr[Null | Ref[InstanceType[T]]] = js.undefined): `0`[T, P] = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(onRef)) __obj.updateDynamic("onRef")(onRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[`0`[T, P]]
   }
-  @scala.inline
-  implicit class `0Ops`[Self[t, p] <: `0`[t, p], T, P] (val x: Self[T, P]) extends AnyVal {
-    @scala.inline
-    def duplicate: Self[T, P] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T, P]]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): (Self[T, P]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, P]) with Other]
-    @scala.inline
-    def withOnRefRefObject(value: ReactRef[InstanceType[T]]): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withOnRefFunction1(value: /* instance */ InstanceType[T] | Null => Unit): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRef")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withOnRef(value: Ref[InstanceType[T]]): Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnRef: Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRef")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnRefNull: Self[T, P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onRef")(null)
-        ret
-    }
-  }
-  
 }
 

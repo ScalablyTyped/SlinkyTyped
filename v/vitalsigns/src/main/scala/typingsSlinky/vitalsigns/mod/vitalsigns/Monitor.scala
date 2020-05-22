@@ -4,13 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait Monitor extends js.Object {
   /**
     * Connections.
     * @type {any}
     */
-  var connections: js.Any = js.native
+  var connections: js.Any
 }
 
 object Monitor {
@@ -19,19 +18,5 @@ object Monitor {
     val __obj = js.Dynamic.literal(connections = connections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Monitor]
   }
-  @scala.inline
-  implicit class MonitorOps[Self <: Monitor] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withConnections(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("connections")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

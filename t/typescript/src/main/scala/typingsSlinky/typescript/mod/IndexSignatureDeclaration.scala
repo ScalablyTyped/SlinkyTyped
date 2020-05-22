@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.typescript.mod.ClassElement because var conflicts: _declarationBrand, decorators, end, flags, kind, modifiers, name, parent, pos. Inlined _classElementBrand */ @js.native
 trait IndexSignatureDeclaration
   extends SignatureDeclarationBase
-     with HasJSDoc
-     with SignatureDeclaration {
+     with SignatureDeclaration
+     with _HasJSDoc {
   var _classElementBrand: js.Any = js.native
   var _typeElementBrand: js.Any = js.native
   @JSName("kind")

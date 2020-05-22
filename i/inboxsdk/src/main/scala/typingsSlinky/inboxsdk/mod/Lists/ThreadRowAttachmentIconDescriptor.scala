@@ -12,8 +12,17 @@ trait ThreadRowAttachmentIconDescriptor extends js.Object
 
 object ThreadRowAttachmentIconDescriptor {
   @scala.inline
-  implicit def apply(value: ThreadRowAttachmentIconHtmlDescriptor): ThreadRowAttachmentIconDescriptor = value.asInstanceOf[ThreadRowAttachmentIconDescriptor]
+  def ThreadRowAttachmentIconUrlDescriptor(iconUrl: String, iconClass: String = null, tooltip: String = null): ThreadRowAttachmentIconDescriptor = {
+    val __obj = js.Dynamic.literal(iconUrl = iconUrl.asInstanceOf[js.Any])
+    if (iconClass != null) __obj.updateDynamic("iconClass")(iconClass.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ThreadRowAttachmentIconDescriptor]
+  }
   @scala.inline
-  implicit def apply(value: ThreadRowAttachmentIconUrlDescriptor): ThreadRowAttachmentIconDescriptor = value.asInstanceOf[ThreadRowAttachmentIconDescriptor]
+  def ThreadRowAttachmentIconHtmlDescriptor(iconHtml: String, tooltip: String = null): ThreadRowAttachmentIconDescriptor = {
+    val __obj = js.Dynamic.literal(iconHtml = iconHtml.asInstanceOf[js.Any])
+    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ThreadRowAttachmentIconDescriptor]
+  }
 }
 

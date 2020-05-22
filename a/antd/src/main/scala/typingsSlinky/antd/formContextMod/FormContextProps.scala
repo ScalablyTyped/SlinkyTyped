@@ -6,95 +6,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait FormContextProps extends js.Object {
-  var colon: js.UndefOr[Boolean] = js.native
-  var labelAlign: js.UndefOr[FormLabelAlign] = js.native
-  var labelCol: js.UndefOr[ColProps] = js.native
-  var name: js.UndefOr[String] = js.native
-  var vertical: Boolean = js.native
-  var wrapperCol: js.UndefOr[ColProps] = js.native
+  var colon: js.UndefOr[Boolean] = js.undefined
+  var labelAlign: js.UndefOr[FormLabelAlign] = js.undefined
+  var labelCol: js.UndefOr[ColProps] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var vertical: Boolean
+  var wrapperCol: js.UndefOr[ColProps] = js.undefined
 }
 
 object FormContextProps {
   @scala.inline
-  def apply(vertical: Boolean): FormContextProps = {
+  def apply(
+    vertical: Boolean,
+    colon: js.UndefOr[Boolean] = js.undefined,
+    labelAlign: FormLabelAlign = null,
+    labelCol: ColProps = null,
+    name: String = null,
+    wrapperCol: ColProps = null
+  ): FormContextProps = {
     val __obj = js.Dynamic.literal(vertical = vertical.asInstanceOf[js.Any])
+    if (!js.isUndefined(colon)) __obj.updateDynamic("colon")(colon.get.asInstanceOf[js.Any])
+    if (labelAlign != null) __obj.updateDynamic("labelAlign")(labelAlign.asInstanceOf[js.Any])
+    if (labelCol != null) __obj.updateDynamic("labelCol")(labelCol.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (wrapperCol != null) __obj.updateDynamic("wrapperCol")(wrapperCol.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormContextProps]
   }
-  @scala.inline
-  implicit class FormContextPropsOps[Self <: FormContextProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withVertical(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withColon(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colon")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutColon: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("colon")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelAlign(value: FormLabelAlign): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAlign")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelAlign")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLabelCol(value: ColProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelCol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLabelCol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("labelCol")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrapperCol(value: ColProps): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperCol")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrapperCol: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperCol")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -22,41 +22,11 @@ trait SchemaListSavedQueriesResponse extends js.Object {
 
 object SchemaListSavedQueriesResponse {
   @scala.inline
-  def apply(): SchemaListSavedQueriesResponse = {
+  def apply(nextPageToken: String = null, savedQueries: js.Array[SchemaSavedQuery] = null): SchemaListSavedQueriesResponse = {
     val __obj = js.Dynamic.literal()
+    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
+    if (savedQueries != null) __obj.updateDynamic("savedQueries")(savedQueries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListSavedQueriesResponse]
   }
-  @scala.inline
-  implicit class SchemaListSavedQueriesResponseOps[Self <: SchemaListSavedQueriesResponse] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNextPageToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNextPageToken: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSavedQueries(value: js.Array[SchemaSavedQuery]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savedQueries")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSavedQueries: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("savedQueries")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.qlik.qlikStrings.pt
   - typingsSlinky.qlik.qlikStrings.`pt-BR`
 */
-trait BrazilianPortuguese extends ALL
+trait BrazilianPortuguese extends _ALL
 
 object BrazilianPortuguese {
   @scala.inline

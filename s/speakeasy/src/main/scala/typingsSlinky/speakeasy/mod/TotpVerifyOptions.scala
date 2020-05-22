@@ -4,38 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait TotpVerifyOptions extends SharedOptions {
   /**
     * The counter value, calculated from time by default
     */
-  var counter: js.UndefOr[Double] = js.native
+  var counter: js.UndefOr[Double] = js.undefined
   /**
     * The number of digits for the one-time passcode, defaults to 6
     */
-  var digits: js.UndefOr[Double] = js.native
+  var digits: js.UndefOr[Double] = js.undefined
   /**
     * Initial time since the UNIX epoch from which to calculate the counter value,
     * defaults to 0 (no offset).
     */
-  var epoch: js.UndefOr[Double] = js.native
+  var epoch: js.UndefOr[Double] = js.undefined
   /**
     * Shared secret key
     */
-  var secret: String = js.native
+  var secret: String
   /**
     * Time step in seconds, defaults to 30
     */
-  var step: js.UndefOr[Double] = js.native
+  var step: js.UndefOr[Double] = js.undefined
   /**
     * Time in seconds with which to calculate
     * counter value, defaults to `Date.now() / 1000`.
     */
-  var time: js.UndefOr[Double] = js.native
+  var time: js.UndefOr[Double] = js.undefined
   /**
     * Passcode to validate
     */
-  var token: String = js.native
+  var token: String
   /**
     * The allowable margin for the counter.
     * The function will check "W" codes in the future and the past against the
@@ -43,106 +42,33 @@ trait TotpVerifyOptions extends SharedOptions {
     * the passcode against all One Time Passcodes between 995 and 1005, inclusive
     * defaults to 0
     */
-  var window: js.UndefOr[Double] = js.native
+  var window: js.UndefOr[Double] = js.undefined
 }
 
 object TotpVerifyOptions {
   @scala.inline
-  def apply(secret: String, token: String): TotpVerifyOptions = {
+  def apply(
+    secret: String,
+    token: String,
+    algorithm: Algorithm = null,
+    counter: js.UndefOr[Double] = js.undefined,
+    digits: js.UndefOr[Double] = js.undefined,
+    encoding: Encoding = null,
+    epoch: js.UndefOr[Double] = js.undefined,
+    step: js.UndefOr[Double] = js.undefined,
+    time: js.UndefOr[Double] = js.undefined,
+    window: js.UndefOr[Double] = js.undefined
+  ): TotpVerifyOptions = {
     val __obj = js.Dynamic.literal(secret = secret.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any])
+    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
+    if (!js.isUndefined(counter)) __obj.updateDynamic("counter")(counter.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(digits)) __obj.updateDynamic("digits")(digits.get.asInstanceOf[js.Any])
+    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+    if (!js.isUndefined(epoch)) __obj.updateDynamic("epoch")(epoch.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(step)) __obj.updateDynamic("step")(step.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(time)) __obj.updateDynamic("time")(time.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(window)) __obj.updateDynamic("window")(window.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[TotpVerifyOptions]
   }
-  @scala.inline
-  implicit class TotpVerifyOptionsOps[Self <: TotpVerifyOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSecret(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withToken(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCounter(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCounter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("counter")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDigits(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDigits: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("digits")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEpoch(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epoch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEpoch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("epoch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStep(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStep: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTime(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWindow(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWindow: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.makerJs.global.MakerJs.models
 
+import typingsSlinky.makerJs.MakerJs.IPathMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +11,8 @@ class Dome protected ()
   extends typingsSlinky.makerJs.MakerJs.models.Dome {
   def this(width: Double, height: Double) = this()
   def this(width: Double, height: Double, radius: Double) = this()
+  /* CompleteClass */
+  @JSName("paths")
+  override var paths_Dome: IPathMap = js.native
 }
 

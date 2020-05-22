@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait UUIDClass extends js.Object {
-  val bitFields: UUIDFields[String] = js.native
-  val bitString: String = js.native
-  val hexFields: UUIDFields[String] = js.native
-  val hexNoDelim: String = js.native
-  val hexString: String = js.native
-  val intFields: UUIDFields[Double] = js.native
-  val urn: String = js.native
-  val version: Double = js.native
-  def equals(uuid: UUIDClass): Boolean = js.native
+  val bitFields: UUIDFields[String]
+  val bitString: String
+  val hexFields: UUIDFields[String]
+  val hexNoDelim: String
+  val hexString: String
+  val intFields: UUIDFields[Double]
+  val urn: String
+  val version: Double
+  def equals(uuid: UUIDClass): Boolean
 }
 
 object UUIDClass {
@@ -33,67 +32,5 @@ object UUIDClass {
     val __obj = js.Dynamic.literal(bitFields = bitFields.asInstanceOf[js.Any], bitString = bitString.asInstanceOf[js.Any], equals = js.Any.fromFunction1(equals), hexFields = hexFields.asInstanceOf[js.Any], hexNoDelim = hexNoDelim.asInstanceOf[js.Any], hexString = hexString.asInstanceOf[js.Any], intFields = intFields.asInstanceOf[js.Any], urn = urn.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[UUIDClass]
   }
-  @scala.inline
-  implicit class UUIDClassOps[Self <: UUIDClass] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withBitFields(value: UUIDFields[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withBitString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("bitString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withEquals(value: UUIDClass => Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withHexFields(value: UUIDFields[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHexNoDelim(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexNoDelim")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withHexString(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hexString")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withIntFields(value: UUIDFields[Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("intFields")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withUrn(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("urn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withVersion(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

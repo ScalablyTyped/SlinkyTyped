@@ -1,7 +1,5 @@
 package typingsSlinky.eslint.mod.Rule
 
-import typingsSlinky.eslint.anon.Message
-import typingsSlinky.eslint.anon.MessageId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +12,14 @@ trait ReportDescriptorMessage extends js.Object
 
 object ReportDescriptorMessage {
   @scala.inline
-  implicit def apply(value: Message): ReportDescriptorMessage = value.asInstanceOf[ReportDescriptorMessage]
+  def Message(message: String): ReportDescriptorMessage = {
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReportDescriptorMessage]
+  }
   @scala.inline
-  implicit def apply(value: MessageId): ReportDescriptorMessage = value.asInstanceOf[ReportDescriptorMessage]
+  def MessageId(messageId: String): ReportDescriptorMessage = {
+    val __obj = js.Dynamic.literal(messageId = messageId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReportDescriptorMessage]
+  }
 }
 

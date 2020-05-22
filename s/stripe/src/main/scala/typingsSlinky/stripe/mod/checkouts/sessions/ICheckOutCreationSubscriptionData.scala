@@ -5,98 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ICheckOutCreationSubscriptionData extends js.Object {
   /**
     * A non-negative decimal between 0 and 100, with at most two decimal places.
     * This represents the percentage of the subscription invoice subtotal that will be transferred to the application owner’s Stripe account.
     */
-  var application_fee_percent: js.UndefOr[Double] = js.native
+  var application_fee_percent: js.UndefOr[Double] = js.undefined
   /**
     * A list of items, each with an attached plan, that the customer is subscribing to. Use this parameter for subscriptions. To create one-time payments, use line_items.
     */
-  var items: js.Array[ICheckOutCreationSubscriptionDataItem] = js.native
+  var items: js.Array[ICheckOutCreationSubscriptionDataItem]
   /**
     * Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
     */
-  var metadata: js.UndefOr[IMetadata] = js.native
+  var metadata: js.UndefOr[IMetadata] = js.undefined
   /**
     * Unix timestamp representing the end of the trial period the customer will get before being charged for the first time. Has to be at least 48 hours in the future.
     */
-  var trial_end: js.UndefOr[Double] = js.native
+  var trial_end: js.UndefOr[Double] = js.undefined
   /**
     * Integer representing the number of trial period days before the customer is charged for the first time. Has to be at least 1.
     */
-  var trial_period_days: js.UndefOr[Double] = js.native
+  var trial_period_days: js.UndefOr[Double] = js.undefined
 }
 
 object ICheckOutCreationSubscriptionData {
   @scala.inline
-  def apply(items: js.Array[ICheckOutCreationSubscriptionDataItem]): ICheckOutCreationSubscriptionData = {
+  def apply(
+    items: js.Array[ICheckOutCreationSubscriptionDataItem],
+    application_fee_percent: js.UndefOr[Double] = js.undefined,
+    metadata: IMetadata = null,
+    trial_end: js.UndefOr[Double] = js.undefined,
+    trial_period_days: js.UndefOr[Double] = js.undefined
+  ): ICheckOutCreationSubscriptionData = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    if (!js.isUndefined(application_fee_percent)) __obj.updateDynamic("application_fee_percent")(application_fee_percent.get.asInstanceOf[js.Any])
+    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
+    if (!js.isUndefined(trial_end)) __obj.updateDynamic("trial_end")(trial_end.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(trial_period_days)) __obj.updateDynamic("trial_period_days")(trial_period_days.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICheckOutCreationSubscriptionData]
   }
-  @scala.inline
-  implicit class ICheckOutCreationSubscriptionDataOps[Self <: ICheckOutCreationSubscriptionData] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[ICheckOutCreationSubscriptionDataItem]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withApplication_fee_percent(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application_fee_percent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutApplication_fee_percent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("application_fee_percent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMetadata(value: IMetadata): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetadata: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrial_end(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trial_end")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrial_end: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trial_end")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrial_period_days(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trial_period_days")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrial_period_days: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("trial_period_days")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.resizeObserverPolyfill.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.resizeObserverPolyfill.mod.global.ResizeObserverCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,5 +10,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class defaultCls protected () extends ResizeObserver {
   def this(callback: ResizeObserverCallback) = this()
+  /* CompleteClass */
+  override def disconnect(): Unit = js.native
+  /* CompleteClass */
+  override def observe(target: Element): Unit = js.native
+  /* CompleteClass */
+  override def unobserve(target: Element): Unit = js.native
 }
 

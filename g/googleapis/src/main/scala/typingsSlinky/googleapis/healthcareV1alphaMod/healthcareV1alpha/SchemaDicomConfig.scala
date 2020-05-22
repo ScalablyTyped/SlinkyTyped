@@ -19,29 +19,10 @@ trait SchemaDicomConfig extends js.Object {
 
 object SchemaDicomConfig {
   @scala.inline
-  def apply(): SchemaDicomConfig = {
+  def apply(whitelistTags: js.Array[String] = null): SchemaDicomConfig = {
     val __obj = js.Dynamic.literal()
+    if (whitelistTags != null) __obj.updateDynamic("whitelistTags")(whitelistTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDicomConfig]
   }
-  @scala.inline
-  implicit class SchemaDicomConfigOps[Self <: SchemaDicomConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withWhitelistTags(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelistTags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWhitelistTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelistTags")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

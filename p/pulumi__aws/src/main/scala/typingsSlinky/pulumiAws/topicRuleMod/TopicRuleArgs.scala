@@ -53,191 +53,39 @@ trait TopicRuleArgs extends js.Object {
 
 object TopicRuleArgs {
   @scala.inline
-  def apply(enabled: Input[Boolean], sql: Input[String], sqlVersion: Input[String]): TopicRuleArgs = {
+  def apply(
+    enabled: Input[Boolean],
+    sql: Input[String],
+    sqlVersion: Input[String],
+    cloudwatchAlarm: Input[TopicRuleCloudwatchAlarm] = null,
+    cloudwatchMetric: Input[TopicRuleCloudwatchMetric] = null,
+    description: Input[String] = null,
+    dynamodb: Input[TopicRuleDynamodb] = null,
+    elasticsearch: Input[TopicRuleElasticsearch] = null,
+    firehose: Input[TopicRuleFirehose] = null,
+    kinesis: Input[TopicRuleKinesis] = null,
+    lambda: Input[TopicRuleLambda] = null,
+    name: Input[String] = null,
+    republish: Input[TopicRuleRepublish] = null,
+    s3: Input[TopicRuleS3] = null,
+    sns: Input[TopicRuleSns] = null,
+    sqs: Input[TopicRuleSqs] = null
+  ): TopicRuleArgs = {
     val __obj = js.Dynamic.literal(enabled = enabled.asInstanceOf[js.Any], sql = sql.asInstanceOf[js.Any], sqlVersion = sqlVersion.asInstanceOf[js.Any])
+    if (cloudwatchAlarm != null) __obj.updateDynamic("cloudwatchAlarm")(cloudwatchAlarm.asInstanceOf[js.Any])
+    if (cloudwatchMetric != null) __obj.updateDynamic("cloudwatchMetric")(cloudwatchMetric.asInstanceOf[js.Any])
+    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
+    if (dynamodb != null) __obj.updateDynamic("dynamodb")(dynamodb.asInstanceOf[js.Any])
+    if (elasticsearch != null) __obj.updateDynamic("elasticsearch")(elasticsearch.asInstanceOf[js.Any])
+    if (firehose != null) __obj.updateDynamic("firehose")(firehose.asInstanceOf[js.Any])
+    if (kinesis != null) __obj.updateDynamic("kinesis")(kinesis.asInstanceOf[js.Any])
+    if (lambda != null) __obj.updateDynamic("lambda")(lambda.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (republish != null) __obj.updateDynamic("republish")(republish.asInstanceOf[js.Any])
+    if (s3 != null) __obj.updateDynamic("s3")(s3.asInstanceOf[js.Any])
+    if (sns != null) __obj.updateDynamic("sns")(sns.asInstanceOf[js.Any])
+    if (sqs != null) __obj.updateDynamic("sqs")(sqs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TopicRuleArgs]
   }
-  @scala.inline
-  implicit class TopicRuleArgsOps[Self <: TopicRuleArgs] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withEnabled(value: Input[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSql(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withSqlVersion(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqlVersion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloudwatchAlarm(value: Input[TopicRuleCloudwatchAlarm]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchAlarm")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudwatchAlarm: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchAlarm")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCloudwatchMetric(value: Input[TopicRuleCloudwatchMetric]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchMetric")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCloudwatchMetric: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudwatchMetric")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDescription(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDescription: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDynamodb(value: Input[TopicRuleDynamodb]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodb")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDynamodb: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamodb")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withElasticsearch(value: Input[TopicRuleElasticsearch]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElasticsearch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("elasticsearch")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withFirehose(value: Input[TopicRuleFirehose]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFirehose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("firehose")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKinesis(value: Input[TopicRuleKinesis]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesis")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKinesis: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("kinesis")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLambda(value: Input[TopicRuleLambda]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLambda: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("lambda")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withName(value: Input[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRepublish(value: Input[TopicRuleRepublish]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("republish")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRepublish: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("republish")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withS3(value: Input[TopicRuleS3]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutS3: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSns(value: Input[TopicRuleSns]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSns: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sns")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSqs(value: Input[TopicRuleSqs]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSqs: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("sqs")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

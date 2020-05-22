@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeAnnotation */
-@js.native
 trait TSMethodSignature
   extends ASTNode
      with DeclarationKind
@@ -33,15 +32,15 @@ trait TSMethodSignature
      with StatementKind
      with TSHasOptionalTypeAnnotationKind
      with TSHasOptionalTypeParametersKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var computed: js.UndefOr[Boolean] = js.native
-  var key: ExpressionKind = js.native
-  var loc: js.UndefOr[SourceLocationKind] = js.native
-  var optional: js.UndefOr[Boolean] = js.native
-  var parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind] = js.native
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSMethodSignature = js.native
-  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.native
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var computed: js.UndefOr[Boolean] = js.undefined
+  var key: ExpressionKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var optional: js.UndefOr[Boolean] = js.undefined
+  var parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSMethodSignature
+  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.undefined
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSMethodSignature")

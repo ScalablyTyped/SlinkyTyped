@@ -10,101 +10,33 @@ import scala.scalajs.js.annotation._
   * interfaces
   */
 // chayns.register()
-@js.native
 trait RegisterConfig extends js.Object {
-  var appName: js.UndefOr[String] = js.native
-  var autoResize: js.UndefOr[Boolean] = js.native
-  var callbackPrefix: js.UndefOr[String] = js.native
-  var cssPrefix: js.UndefOr[String] = js.native
-  var initialHeight: js.UndefOr[Double] = js.native
-  var strictMode: js.UndefOr[Boolean] = js.native
+  var appName: js.UndefOr[String] = js.undefined
+  var autoResize: js.UndefOr[Boolean] = js.undefined
+  var callbackPrefix: js.UndefOr[String] = js.undefined
+  var cssPrefix: js.UndefOr[String] = js.undefined
+  var initialHeight: js.UndefOr[Double] = js.undefined
+  var strictMode: js.UndefOr[Boolean] = js.undefined
 }
 
 object RegisterConfig {
   @scala.inline
-  def apply(): RegisterConfig = {
+  def apply(
+    appName: String = null,
+    autoResize: js.UndefOr[Boolean] = js.undefined,
+    callbackPrefix: String = null,
+    cssPrefix: String = null,
+    initialHeight: js.UndefOr[Double] = js.undefined,
+    strictMode: js.UndefOr[Boolean] = js.undefined
+  ): RegisterConfig = {
     val __obj = js.Dynamic.literal()
+    if (appName != null) __obj.updateDynamic("appName")(appName.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoResize)) __obj.updateDynamic("autoResize")(autoResize.get.asInstanceOf[js.Any])
+    if (callbackPrefix != null) __obj.updateDynamic("callbackPrefix")(callbackPrefix.asInstanceOf[js.Any])
+    if (cssPrefix != null) __obj.updateDynamic("cssPrefix")(cssPrefix.asInstanceOf[js.Any])
+    if (!js.isUndefined(initialHeight)) __obj.updateDynamic("initialHeight")(initialHeight.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(strictMode)) __obj.updateDynamic("strictMode")(strictMode.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterConfig]
   }
-  @scala.inline
-  implicit class RegisterConfigOps[Self <: RegisterConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAppName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAppName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoResize(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoResize: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCallbackPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCallbackPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCssPrefix(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssPrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCssPrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cssPrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withInitialHeight(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialHeight")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitialHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initialHeight")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStrictMode(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictMode")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStrictMode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("strictMode")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

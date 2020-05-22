@@ -1,6 +1,5 @@
 package typingsSlinky.firebaseFirestore.serializerMod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.firebaseFirestore.blobMod.Blob
 import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseId
@@ -8,12 +7,10 @@ import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.documentMod.Document
 import typingsSlinky.firebaseFirestore.documentMod.MaybeDocument
 import typingsSlinky.firebaseFirestore.errorMod.FirestoreError
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.ArrayValue
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.FieldValue
-import typingsSlinky.firebaseFirestore.modelFieldValueMod.ObjectValue
 import typingsSlinky.firebaseFirestore.mutationMod.FieldMask
 import typingsSlinky.firebaseFirestore.mutationMod.Mutation
 import typingsSlinky.firebaseFirestore.mutationMod.MutationResult
+import typingsSlinky.firebaseFirestore.objectValueMod.ObjectValue
 import typingsSlinky.firebaseFirestore.pathMod.FieldPath
 import typingsSlinky.firebaseFirestore.pathMod.ResourcePath
 import typingsSlinky.firebaseFirestore.queryMod.Direction
@@ -24,6 +21,7 @@ import typingsSlinky.firebaseFirestore.queryMod.OrderBy
 import typingsSlinky.firebaseFirestore.snapshotVersionMod.SnapshotVersion
 import typingsSlinky.firebaseFirestore.targetDataMod.TargetData
 import typingsSlinky.firebaseFirestore.targetMod.Target
+import typingsSlinky.firebaseFirestore.timestampMod.Timestamp
 import typingsSlinky.firebaseFirestore.watchChangeMod.WatchChange
 import typingsSlinky.firebaseFirestore.watchChangeMod.WatchTargetChangeState
 import scala.scalajs.js
@@ -36,32 +34,20 @@ class JsonProtoSerializer protected () extends js.Object {
   def this(databaseId: DatabaseId, options: SerializerOptions) = this()
   var databaseId: js.Any = js.native
   var extractLocalPathFromResourceName: js.Any = js.native
-  /**
-    * Parse the blob from the protos into the internal Blob class. Note that the
-    * typings assume all blobs are strings, but they are actually Uint8Arrays
-    * on Node.
-    */
-  var fromBlob: js.Any = js.native
   var fromCursor: js.Any = js.native
   var fromFieldTransform: js.Any = js.native
   var fromFilter: js.Any = js.native
   var fromFound: js.Any = js.native
   /**
     * Returns a number (or null) from a google.protobuf.Int32Value proto.
-    * DO NOT USE THIS FOR ANYTHING ELSE.
-    * This method cheats. It's typed as accepting "number" because that's what
-    * our generated proto interfaces say Int32Value must be, but it actually
-    * accepts { value: number } to match our serialization in toInt32Value().
     */
-  var fromInt32Value: js.Any = js.native
-  var fromIso8601String: js.Any = js.native
+  var fromInt32Proto: js.Any = js.native
   var fromMissing: js.Any = js.native
   var fromOrder: js.Any = js.native
   var fromPrecondition: js.Any = js.native
   var fromTimestamp: js.Any = js.native
   var fromWriteResult: js.Any = js.native
   var fullyQualifiedPrefixPath: js.Any = js.native
-  var isValidResourceName: js.Any = js.native
   var options: js.Any = js.native
   var toCursor: js.Any = js.native
   var toFieldTransform: js.Any = js.native
@@ -74,19 +60,10 @@ class JsonProtoSerializer protected () extends js.Object {
     * our generated proto interfaces say Int32Value must be. But GRPC actually
     * expects a { value: <number> } struct.
     */
-  var toInt32Value: js.Any = js.native
+  var toInt32Proto: js.Any = js.native
   var toLabel: js.Any = js.native
   var toOrder: js.Any = js.native
   var toPrecondition: js.Any = js.native
-  /**
-    * Returns a value for a Date that's appropriate to put into a proto.
-    * DO NOT USE THIS FOR ANYTHING ELSE.
-    * This method cheats. It's typed as returning "string" because that's what
-    * our generated proto interfaces say dates must be. But it's easier and safer
-    * to actually return a Timestamp proto.
-    */
-  var toTimestamp: js.Any = js.native
-  var toWatchTargetChangeState: js.Any = js.native
   def encodedDatabaseId: String = js.native
   /**
     * Returns a ByteString based on the proto string value.
@@ -117,7 +94,6 @@ class JsonProtoSerializer protected () extends js.Object {
   def fromFieldPathReference(
     fieldReference: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.FieldReference */ js.Any
   ): FieldPath = js.native
-  def fromFields(`object`: js.Object): ObjectValue = js.native
   def fromMaybeDocument(
     result: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.BatchGetDocumentsResponse */ js.Any
   ): MaybeDocument = js.native
@@ -142,10 +118,9 @@ class JsonProtoSerializer protected () extends js.Object {
   def fromUnaryFilter(
     filter: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.Filter */ js.Any
   ): Filter = js.native
-  def fromValue(
-    obj: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.Value */ js.Any
-  ): FieldValue = js.native
-  def fromVersion(version: String): SnapshotVersion = js.native
+  def fromVersion(
+    version: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.Timestamp */ js.Any
+  ): SnapshotVersion = js.native
   def fromWatchChange(
     change: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.ListenResponse */ js.Any
   ): WatchChange = js.native
@@ -162,44 +137,53 @@ class JsonProtoSerializer protected () extends js.Object {
     protos: js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.WriteResult */ _
     ],
-    commitTime: String
+    commitTime: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.Timestamp */ js.Any
   ): js.Array[MutationResult] = js.native
-  def toArrayValue(array: ArrayValue): js.Any = js.native
   /**
     * Returns a value for bytes that's appropriate to put in a proto.
-    * DO NOT USE THIS FOR ANYTHING ELSE.
-    * This method cheats. It's typed as returning "string" because that's what
-    * our generated proto interfaces say bytes must be. But it should return
-    * an Uint8Array in Node.
     *
     * Visible for testing.
     */
-  def toBytes(bytes: Blob): String = js.native
-  def toBytes(bytes: ByteString): String = js.native
+  def toBytes(bytes: Blob): String | js.typedarray.Uint8Array = js.native
+  def toBytes(bytes: ByteString): String | js.typedarray.Uint8Array = js.native
   def toDirection(dir: Direction): js.Any = js.native
   def toDocument(document: Document): js.Any = js.native
   def toDocumentMask(fieldMask: FieldMask): js.Any = js.native
   def toDocumentsTarget(target: Target): js.Any = js.native
+  /**
+    * Returns an DoubleValue for `value` that is encoded based the serializer's
+    * `useProto3Json` setting.
+    */
+  def toDouble(value: Double): js.Any = js.native
   def toFieldPathReference(path: FieldPath): js.Any = js.native
-  def toFields(fields: ObjectValue): StringDictionary[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.Value */ js.Any
-  ] = js.native
+  /**
+    * Returns an IntegerValue for `value`.
+    */
+  def toInteger(value: Double): js.Any = js.native
   def toListenRequestLabels(targetData: TargetData): (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.ApiClientObjectMap<string> */ js.Any) | Null = js.native
-  def toMapValue(map: ObjectValue): js.Any = js.native
   def toMutation(mutation: Mutation): js.Any = js.native
   /** Creates an api.Document from key and fields (but no create/update time) */
   def toMutationDocument(key: DocumentKey, fields: ObjectValue): js.Any = js.native
   def toName(key: DocumentKey): String = js.native
+  /**
+    * Returns a value for a number that's appropriate to put into a proto.
+    * The return value is an IntegerValue if it can safely represent the value,
+    * otherwise a DoubleValue is returned.
+    */
+  def toNumber(value: Double): js.Any = js.native
   def toOperatorName(op: Operator): js.Any = js.native
   def toPropertyOrder(orderBy: OrderBy): js.Any = js.native
   def toQueryPath(path: ResourcePath): String = js.native
   def toQueryTarget(target: Target): js.Any = js.native
-  def toResourceName(databaseId: DatabaseId, path: ResourcePath): String = js.native
+  def toResourceName(path: ResourcePath): String = js.native
+  def toResourceName(path: ResourcePath, databaseId: DatabaseId): String = js.native
   def toTarget(targetData: TargetData): js.Any = js.native
-  def toTestWatchChange(watchChange: WatchChange): js.Any = js.native
+  /**
+    * Returns a value for a Date that's appropriate to put into a proto.
+    */
+  def toTimestamp(timestamp: Timestamp): js.Any = js.native
   def toUnaryOrFieldFilter(filter: FieldFilter): js.Any = js.native
-  def toValue(`val`: FieldValue): js.Any = js.native
-  def toVersion(version: SnapshotVersion): String = js.native
+  def toVersion(version: SnapshotVersion): js.Any = js.native
   def versionFromListenResponse(
     change: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify api.ListenResponse */ js.Any
   ): SnapshotVersion = js.native

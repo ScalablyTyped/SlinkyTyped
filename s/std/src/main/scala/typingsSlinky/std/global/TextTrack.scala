@@ -13,13 +13,5 @@ class TextTrack ()
 @JSGlobal("TextTrack")
 @js.native
 object TextTrack
-  extends Instantiable0[org.scalajs.dom.raw.TextTrack] {
-  val DISABLED: Double = js.native
-  val ERROR: Double = js.native
-  val HIDDEN: Double = js.native
-  val LOADED: Double = js.native
-  val LOADING: Double = js.native
-  val NONE: Double = js.native
-  val SHOWING: Double = js.native
-}
+  extends Instantiable0[org.scalajs.dom.raw.TextTrack]
 

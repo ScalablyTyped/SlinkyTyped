@@ -7,24 +7,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DevicesResource extends js.Object {
   /** Retrieves the details of a device. */
-  def get(request: Alt): Request[Device] = js.native
+  def get(request: Alt): Request[Device]
   /**
     * Retrieves whether a device's access to Google services is enabled or disabled. The device state takes effect only if enforcing EMM policies on Android
     * devices is enabled in the Google Admin Console. Otherwise, the device state is ignored and all devices are allowed access to Google services. This is
     * only supported for Google-managed users.
     */
-  def getState(request: Alt): Request[DeviceState] = js.native
+  def getState(request: Alt): Request[DeviceState]
   /** Retrieves the IDs of all of a user's devices. */
-  def list(request: EnterpriseId): Request[DevicesListResponse] = js.native
+  def list(request: EnterpriseId): Request[DevicesListResponse]
   /**
     * Sets whether a device's access to Google services is enabled or disabled. The device state takes effect only if enforcing EMM policies on Android
     * devices is enabled in the Google Admin Console. Otherwise, the device state is ignored and all devices are allowed access to Google services. This is
     * only supported for Google-managed users.
     */
-  def setState(request: Alt): Request[DeviceState] = js.native
+  def setState(request: Alt): Request[DeviceState]
 }
 
 object DevicesResource {
@@ -38,37 +37,5 @@ object DevicesResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), getState = js.Any.fromFunction1(getState), list = js.Any.fromFunction1(list), setState = js.Any.fromFunction1(setState))
     __obj.asInstanceOf[DevicesResource]
   }
-  @scala.inline
-  implicit class DevicesResourceOps[Self <: DevicesResource] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGet(value: Alt => Request[Device]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetState(value: Alt => Request[DeviceState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withList(value: EnterpriseId => Request[DevicesListResponse]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSetState(value: Alt => Request[DeviceState]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setState")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

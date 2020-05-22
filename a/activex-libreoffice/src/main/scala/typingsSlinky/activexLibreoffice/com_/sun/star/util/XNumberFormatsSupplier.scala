@@ -8,16 +8,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** supplies the collection of {@link NumberFormats} (for example, in a document) and the settings belonging to these formats. */
-@js.native
 trait XNumberFormatsSupplier extends XInterface {
   /** @returns the {@link NumberFormatSettings} of this object. */
-  val NumberFormatSettings: XPropertySet = js.native
+  val NumberFormatSettings: XPropertySet
   /** @returns the collection of number formats belonging to this object (e.g., to this document). */
-  val NumberFormats: XNumberFormats = js.native
+  val NumberFormats: XNumberFormats
   /** @returns the {@link NumberFormatSettings} of this object. */
-  def getNumberFormatSettings(): XPropertySet = js.native
+  def getNumberFormatSettings(): XPropertySet
   /** @returns the collection of number formats belonging to this object (e.g., to this document). */
-  def getNumberFormats(): XNumberFormats = js.native
+  def getNumberFormats(): XNumberFormats
 }
 
 object XNumberFormatsSupplier {
@@ -34,37 +33,5 @@ object XNumberFormatsSupplier {
     val __obj = js.Dynamic.literal(NumberFormatSettings = NumberFormatSettings.asInstanceOf[js.Any], NumberFormats = NumberFormats.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getNumberFormatSettings = js.Any.fromFunction0(getNumberFormatSettings), getNumberFormats = js.Any.fromFunction0(getNumberFormats), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
     __obj.asInstanceOf[XNumberFormatsSupplier]
   }
-  @scala.inline
-  implicit class XNumberFormatsSupplierOps[Self <: XNumberFormatsSupplier] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNumberFormatSettings(value: XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberFormatSettings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withNumberFormats(value: XNumberFormats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberFormats")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetNumberFormatSettings(value: () => XPropertySet): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberFormatSettings")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetNumberFormats(value: () => XNumberFormats): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getNumberFormats")(js.Any.fromFunction0(value))
-        ret
-    }
-  }
-  
 }
 

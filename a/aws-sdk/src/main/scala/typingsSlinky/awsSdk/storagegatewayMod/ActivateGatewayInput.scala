@@ -46,90 +46,18 @@ object ActivateGatewayInput {
     ActivationKey: ActivationKey,
     GatewayName: GatewayName,
     GatewayRegion: RegionId,
-    GatewayTimezone: GatewayTimezone
+    GatewayTimezone: GatewayTimezone,
+    GatewayType: GatewayType = null,
+    MediumChangerType: MediumChangerType = null,
+    Tags: Tags = null,
+    TapeDriveType: TapeDriveType = null
   ): ActivateGatewayInput = {
     val __obj = js.Dynamic.literal(ActivationKey = ActivationKey.asInstanceOf[js.Any], GatewayName = GatewayName.asInstanceOf[js.Any], GatewayRegion = GatewayRegion.asInstanceOf[js.Any], GatewayTimezone = GatewayTimezone.asInstanceOf[js.Any])
+    if (GatewayType != null) __obj.updateDynamic("GatewayType")(GatewayType.asInstanceOf[js.Any])
+    if (MediumChangerType != null) __obj.updateDynamic("MediumChangerType")(MediumChangerType.asInstanceOf[js.Any])
+    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
+    if (TapeDriveType != null) __obj.updateDynamic("TapeDriveType")(TapeDriveType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivateGatewayInput]
   }
-  @scala.inline
-  implicit class ActivateGatewayInputOps[Self <: ActivateGatewayInput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withActivationKey(value: ActivationKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ActivationKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGatewayName(value: GatewayName): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGatewayRegion(value: RegionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayRegion")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGatewayTimezone(value: GatewayTimezone): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayTimezone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGatewayType(value: GatewayType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGatewayType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMediumChangerType(value: MediumChangerType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumChangerType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMediumChangerType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumChangerType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTags(value: Tags): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTags: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTapeDriveType(value: TapeDriveType): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeDriveType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTapeDriveType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeDriveType")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

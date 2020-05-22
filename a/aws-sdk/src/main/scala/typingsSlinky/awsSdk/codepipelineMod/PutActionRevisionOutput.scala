@@ -18,41 +18,11 @@ trait PutActionRevisionOutput extends js.Object {
 
 object PutActionRevisionOutput {
   @scala.inline
-  def apply(): PutActionRevisionOutput = {
+  def apply(newRevision: js.UndefOr[Boolean] = js.undefined, pipelineExecutionId: PipelineExecutionId = null): PutActionRevisionOutput = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(newRevision)) __obj.updateDynamic("newRevision")(newRevision.get.asInstanceOf[js.Any])
+    if (pipelineExecutionId != null) __obj.updateDynamic("pipelineExecutionId")(pipelineExecutionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutActionRevisionOutput]
   }
-  @scala.inline
-  implicit class PutActionRevisionOutputOps[Self <: PutActionRevisionOutput] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withNewRevision(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRevision")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNewRevision: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("newRevision")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPipelineExecutionId(value: PipelineExecutionId): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionId")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPipelineExecutionId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionId")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -23,5 +23,9 @@ class AssertionError protected () extends Error {
     * @api
     */
   var code: Double = js.native
+  /* CompleteClass */
+  override var message: String = js.native
+  /* CompleteClass */
+  override var name: String = js.native
 }
 

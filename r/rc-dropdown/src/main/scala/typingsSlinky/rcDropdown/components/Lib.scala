@@ -12,7 +12,7 @@ object Lib {
   @js.native
   object component extends js.Object
   
-  def withProps(p: DropdownProps with RefAttributes[js.Any]): `SharedBuilder_<intersection>821852308`[Ref[js.Any]] = new `SharedBuilder_<intersection>821852308`[Ref[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Lib.type): `SharedBuilder_<intersection>821852308`[Ref[js.Any]] = new `SharedBuilder_<intersection>821852308`[Ref[js.Any]](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: DropdownProps with RefAttributes[js.Any]): SharedBuilder_DropdownPropsRefAttributes821852308[Ref[js.Any] with js.Object] = new SharedBuilder_DropdownPropsRefAttributes821852308[Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Lib.type): SharedBuilder_DropdownPropsRefAttributes821852308[Ref[js.Any] with js.Object] = new SharedBuilder_DropdownPropsRefAttributes821852308[Ref[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

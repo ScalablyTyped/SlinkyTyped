@@ -15,7 +15,7 @@ trait RegexPatternSetReferenceStatement extends js.Object {
     */
   var FieldToMatch: typingsSlinky.awsSdk.wafv2Mod.FieldToMatch = js.native
   /**
-    * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content identified by FieldToMatch, starting from the lowest priority setting, before inspecting the content for a match.
+    * Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content of the request component identified by FieldToMatch, starting from the lowest priority setting, before inspecting the content for a match.
     */
   var TextTransformations: typingsSlinky.awsSdk.wafv2Mod.TextTransformations = js.native
 }
@@ -26,31 +26,5 @@ object RegexPatternSetReferenceStatement {
     val __obj = js.Dynamic.literal(ARN = ARN.asInstanceOf[js.Any], FieldToMatch = FieldToMatch.asInstanceOf[js.Any], TextTransformations = TextTransformations.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegexPatternSetReferenceStatement]
   }
-  @scala.inline
-  implicit class RegexPatternSetReferenceStatementOps[Self <: RegexPatternSetReferenceStatement] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withARN(value: ResourceArn): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withFieldToMatch(value: FieldToMatch): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldToMatch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTextTransformations(value: TextTransformations): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TextTransformations")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

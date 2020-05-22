@@ -30,53 +30,12 @@ trait SchemaLifecycleConfig extends js.Object {
 
 object SchemaLifecycleConfig {
   @scala.inline
-  def apply(): SchemaLifecycleConfig = {
+  def apply(autoDeleteTime: String = null, autoDeleteTtl: String = null, idleDeleteTtl: String = null): SchemaLifecycleConfig = {
     val __obj = js.Dynamic.literal()
+    if (autoDeleteTime != null) __obj.updateDynamic("autoDeleteTime")(autoDeleteTime.asInstanceOf[js.Any])
+    if (autoDeleteTtl != null) __obj.updateDynamic("autoDeleteTtl")(autoDeleteTtl.asInstanceOf[js.Any])
+    if (idleDeleteTtl != null) __obj.updateDynamic("idleDeleteTtl")(idleDeleteTtl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLifecycleConfig]
   }
-  @scala.inline
-  implicit class SchemaLifecycleConfigOps[Self <: SchemaLifecycleConfig] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAutoDeleteTime(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDeleteTime")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDeleteTime: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDeleteTime")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAutoDeleteTtl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDeleteTtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAutoDeleteTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDeleteTtl")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIdleDeleteTtl(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleDeleteTtl")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIdleDeleteTtl: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("idleDeleteTtl")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

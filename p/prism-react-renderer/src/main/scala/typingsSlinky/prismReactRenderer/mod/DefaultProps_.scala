@@ -4,10 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait DefaultProps_ extends js.Object {
-  var Prism: PrismLib = js.native
-  var theme: PrismTheme = js.native
+  var Prism: PrismLib
+  var theme: PrismTheme
 }
 
 object DefaultProps_ {
@@ -16,25 +15,5 @@ object DefaultProps_ {
     val __obj = js.Dynamic.literal(Prism = Prism.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultProps_]
   }
-  @scala.inline
-  implicit class DefaultProps_Ops[Self <: DefaultProps_] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPrism(value: PrismLib): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("Prism")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTheme(value: PrismTheme): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

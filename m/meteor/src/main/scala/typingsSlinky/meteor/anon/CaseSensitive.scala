@@ -4,73 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait CaseSensitive extends js.Object {
   @JSName("$caseSensitive")
-  var $caseSensitive: js.UndefOr[Boolean] = js.native
+  var $caseSensitive: js.UndefOr[Boolean] = js.undefined
   @JSName("$diacriticSensitive")
-  var $diacriticSensitive: js.UndefOr[Boolean] = js.native
+  var $diacriticSensitive: js.UndefOr[Boolean] = js.undefined
   @JSName("$language")
-  var $language: js.UndefOr[String] = js.native
+  var $language: js.UndefOr[String] = js.undefined
   @JSName("$search")
-  var $search: String = js.native
+  var $search: String
 }
 
 object CaseSensitive {
   @scala.inline
-  def apply($search: String): CaseSensitive = {
+  def apply(
+    $search: String,
+    $caseSensitive: js.UndefOr[Boolean] = js.undefined,
+    $diacriticSensitive: js.UndefOr[Boolean] = js.undefined,
+    $language: String = null
+  ): CaseSensitive = {
     val __obj = js.Dynamic.literal($search = $search.asInstanceOf[js.Any])
+    if (!js.isUndefined($caseSensitive)) __obj.updateDynamic("$caseSensitive")($caseSensitive.get.asInstanceOf[js.Any])
+    if (!js.isUndefined($diacriticSensitive)) __obj.updateDynamic("$diacriticSensitive")($diacriticSensitive.get.asInstanceOf[js.Any])
+    if ($language != null) __obj.updateDynamic("$language")($language.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaseSensitive]
   }
-  @scala.inline
-  implicit class CaseSensitiveOps[Self <: CaseSensitive] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def with$search(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$search")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def with$caseSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$caseSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$caseSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$caseSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$diacriticSensitive(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$diacriticSensitive")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$diacriticSensitive: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$diacriticSensitive")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def with$language(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$language")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def without$language: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("$language")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HTMLElementTagNameMap extends js.Object {
-  var `ion-icon`: HTMLIonIconElement = js.native
+  var `ion-icon`: HTMLIonIconElement
 }
 
 object HTMLElementTagNameMap {
@@ -16,19 +15,5 @@ object HTMLElementTagNameMap {
     __obj.updateDynamic("ion-icon")(`ion-icon`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLElementTagNameMap]
   }
-  @scala.inline
-  implicit class HTMLElementTagNameMapOps[Self <: HTMLElementTagNameMap] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def `withIon-icon`(value: HTMLIonIconElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-icon")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

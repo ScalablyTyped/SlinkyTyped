@@ -6,117 +6,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait RequestCaptureOptions extends js.Object {
   /**
     * If true, then dump captured records on the *default* request id when
     * dumping. I.e. dump records logged without "req_id" field. Default
     * false.
     */
-  var dumpDefault: js.UndefOr[Boolean] = js.native
+  var dumpDefault: js.UndefOr[Boolean] = js.undefined
   /**
     * The level at which to trigger dumping captured records. Defaults to
     * bunyan.WARN.
     */
-  var level: js.UndefOr[LogLevel] = js.native
+  var level: js.UndefOr[LogLevel] = js.undefined
   /** Number of records to capture. Default 100. */
-  var maxRecords: js.UndefOr[Double] = js.native
+  var maxRecords: js.UndefOr[Double] = js.undefined
   /**
     * Number of simultaneous request id capturing buckets to maintain.
     * Default 1000.
     */
-  var maxRequestIds: js.UndefOr[Double] = js.native
+  var maxRequestIds: js.UndefOr[Double] = js.undefined
   /** The stream to which to write when dumping captured records. */
-  var stream: js.UndefOr[Stream] = js.native
+  var stream: js.UndefOr[Stream] = js.undefined
   /** The streams to which to write when dumping captured records. */
-  var streams: js.UndefOr[js.Array[Stream]] = js.native
+  var streams: js.UndefOr[js.Array[Stream]] = js.undefined
 }
 
 object RequestCaptureOptions {
   @scala.inline
-  def apply(): RequestCaptureOptions = {
+  def apply(
+    dumpDefault: js.UndefOr[Boolean] = js.undefined,
+    level: LogLevel = null,
+    maxRecords: js.UndefOr[Double] = js.undefined,
+    maxRequestIds: js.UndefOr[Double] = js.undefined,
+    stream: Stream = null,
+    streams: js.Array[Stream] = null
+  ): RequestCaptureOptions = {
     val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dumpDefault)) __obj.updateDynamic("dumpDefault")(dumpDefault.get.asInstanceOf[js.Any])
+    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRecords)) __obj.updateDynamic("maxRecords")(maxRecords.get.asInstanceOf[js.Any])
+    if (!js.isUndefined(maxRequestIds)) __obj.updateDynamic("maxRequestIds")(maxRequestIds.get.asInstanceOf[js.Any])
+    if (stream != null) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
+    if (streams != null) __obj.updateDynamic("streams")(streams.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestCaptureOptions]
   }
-  @scala.inline
-  implicit class RequestCaptureOptionsOps[Self <: RequestCaptureOptions] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withDumpDefault(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpDefault")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDumpDefault: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpDefault")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLevel(value: LogLevel): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLevel: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRecords(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRecords")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRecords: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRecords")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMaxRequestIds(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRequestIds")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxRequestIds: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRequestIds")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStream(value: Stream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStream: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStreams(value: js.Array[Stream]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streams")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStreams: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("streams")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

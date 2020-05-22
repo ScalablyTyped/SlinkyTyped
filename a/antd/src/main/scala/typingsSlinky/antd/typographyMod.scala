@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/typography", JSImport.Namespace)
 @js.native
 object typographyMod extends js.Object {
-  /* Inlined react.react.FC<antd.antd/lib/typography/Typography.TypographyProps> & {  Text  :react.react.SFC<antd.antd/lib/typography/Text.TextProps>,   Title  :react.react.SFC<antd.antd/lib/typography/Title.TitleProps>,   Paragraph  :react.react.SFC<antd.antd/lib/typography/Paragraph.ParagraphProps>} */
+  /* Inlined react.react.FC<antd.antd/lib/typography/Typography.TypographyProps> & {  Text  :react.react.FC<antd.antd/lib/typography/Text.TextProps>,   Title  :react.react.FC<antd.antd/lib/typography/Title.TitleProps>,   Paragraph  :react.react.FC<antd.antd/lib/typography/Paragraph.ParagraphProps>} */
   @js.native
   trait TypographyProps extends js.Object {
     var Paragraph: ReactComponentClass[ParagraphProps] = js.native

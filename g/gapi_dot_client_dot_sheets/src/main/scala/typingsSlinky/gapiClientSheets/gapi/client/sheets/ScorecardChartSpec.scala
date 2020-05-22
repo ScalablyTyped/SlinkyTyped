@@ -4,155 +4,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait ScorecardChartSpec extends js.Object {
   /**
     * The aggregation type for key and baseline chart data in scorecard chart.
     * This field is optional.
     */
-  var aggregateType: js.UndefOr[String] = js.native
+  var aggregateType: js.UndefOr[String] = js.undefined
   /**
     * The data for scorecard baseline value.
     * This field is optional.
     */
-  var baselineValueData: js.UndefOr[ChartData] = js.native
+  var baselineValueData: js.UndefOr[ChartData] = js.undefined
   /**
     * Formatting options for baseline value.
     * This field is needed only if baseline_value_data is specified.
     */
-  var baselineValueFormat: js.UndefOr[BaselineValueFormat] = js.native
+  var baselineValueFormat: js.UndefOr[BaselineValueFormat] = js.undefined
   /**
     * Custom formatting options for numeric key/baseline values in scorecard
     * chart. This field is used only when number_format_source is set to
     * CUSTOM. This field is optional.
     */
-  var customFormatOptions: js.UndefOr[ChartCustomNumberFormatOptions] = js.native
+  var customFormatOptions: js.UndefOr[ChartCustomNumberFormatOptions] = js.undefined
   /** The data for scorecard key value. */
-  var keyValueData: js.UndefOr[ChartData] = js.native
+  var keyValueData: js.UndefOr[ChartData] = js.undefined
   /** Formatting options for key value. */
-  var keyValueFormat: js.UndefOr[KeyValueFormat] = js.native
+  var keyValueFormat: js.UndefOr[KeyValueFormat] = js.undefined
   /**
     * The number format source used in the scorecard chart.
     * This field is optional.
     */
-  var numberFormatSource: js.UndefOr[String] = js.native
+  var numberFormatSource: js.UndefOr[String] = js.undefined
   /**
     * Value to scale scorecard key and baseline value. For example, a factor of
     * 10 can be used to divide all values in the chart by 10.
     * This field is optional.
     */
-  var scaleFactor: js.UndefOr[Double] = js.native
+  var scaleFactor: js.UndefOr[Double] = js.undefined
 }
 
 object ScorecardChartSpec {
   @scala.inline
-  def apply(): ScorecardChartSpec = {
+  def apply(
+    aggregateType: String = null,
+    baselineValueData: ChartData = null,
+    baselineValueFormat: BaselineValueFormat = null,
+    customFormatOptions: ChartCustomNumberFormatOptions = null,
+    keyValueData: ChartData = null,
+    keyValueFormat: KeyValueFormat = null,
+    numberFormatSource: String = null,
+    scaleFactor: js.UndefOr[Double] = js.undefined
+  ): ScorecardChartSpec = {
     val __obj = js.Dynamic.literal()
+    if (aggregateType != null) __obj.updateDynamic("aggregateType")(aggregateType.asInstanceOf[js.Any])
+    if (baselineValueData != null) __obj.updateDynamic("baselineValueData")(baselineValueData.asInstanceOf[js.Any])
+    if (baselineValueFormat != null) __obj.updateDynamic("baselineValueFormat")(baselineValueFormat.asInstanceOf[js.Any])
+    if (customFormatOptions != null) __obj.updateDynamic("customFormatOptions")(customFormatOptions.asInstanceOf[js.Any])
+    if (keyValueData != null) __obj.updateDynamic("keyValueData")(keyValueData.asInstanceOf[js.Any])
+    if (keyValueFormat != null) __obj.updateDynamic("keyValueFormat")(keyValueFormat.asInstanceOf[js.Any])
+    if (numberFormatSource != null) __obj.updateDynamic("numberFormatSource")(numberFormatSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(scaleFactor)) __obj.updateDynamic("scaleFactor")(scaleFactor.get.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScorecardChartSpec]
   }
-  @scala.inline
-  implicit class ScorecardChartSpecOps[Self <: ScorecardChartSpec] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAggregateType(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAggregateType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateType")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaselineValueData(value: ChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineValueData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineValueData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineValueData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withBaselineValueFormat(value: BaselineValueFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineValueFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBaselineValueFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineValueFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCustomFormatOptions(value: ChartCustomNumberFormatOptions): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormatOptions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCustomFormatOptions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("customFormatOptions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyValueData(value: ChartData): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValueData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyValueData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValueData")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withKeyValueFormat(value: KeyValueFormat): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValueFormat")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeyValueFormat: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValueFormat")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNumberFormatSource(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormatSource")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNumberFormatSource: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("numberFormatSource")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withScaleFactor(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutScaleFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleFactor")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

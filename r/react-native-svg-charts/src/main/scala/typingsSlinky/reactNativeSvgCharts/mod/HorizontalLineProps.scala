@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait HorizontalLineProps extends js.Object {
-  var stroke: String = js.native
+  var stroke: String
 }
 
 object HorizontalLineProps {
@@ -15,19 +14,5 @@ object HorizontalLineProps {
     val __obj = js.Dynamic.literal(stroke = stroke.asInstanceOf[js.Any])
     __obj.asInstanceOf[HorizontalLineProps]
   }
-  @scala.inline
-  implicit class HorizontalLinePropsOps[Self <: HorizontalLineProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStroke(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

@@ -1,13 +1,13 @@
 package typingsSlinky.node.urlMod
 
-import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.fsMod._PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("url", "URL")
 @js.native
-class URL_ protected () extends PathLike {
+class URL_ protected () extends _PathLike {
   def this(input: String) = this()
   def this(input: String, base: String) = this()
   def this(input: String, base: URL_) = this()

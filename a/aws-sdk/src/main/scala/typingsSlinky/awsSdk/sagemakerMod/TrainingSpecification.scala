@@ -45,96 +45,20 @@ object TrainingSpecification {
   def apply(
     SupportedTrainingInstanceTypes: TrainingInstanceTypes,
     TrainingChannels: ChannelSpecifications,
-    TrainingImage: Image
+    TrainingImage: Image,
+    MetricDefinitions: MetricDefinitionList = null,
+    SupportedHyperParameters: HyperParameterSpecifications = null,
+    SupportedTuningJobObjectiveMetrics: HyperParameterTuningJobObjectives = null,
+    SupportsDistributedTraining: js.UndefOr[Boolean] = js.undefined,
+    TrainingImageDigest: ImageDigest = null
   ): TrainingSpecification = {
     val __obj = js.Dynamic.literal(SupportedTrainingInstanceTypes = SupportedTrainingInstanceTypes.asInstanceOf[js.Any], TrainingChannels = TrainingChannels.asInstanceOf[js.Any], TrainingImage = TrainingImage.asInstanceOf[js.Any])
+    if (MetricDefinitions != null) __obj.updateDynamic("MetricDefinitions")(MetricDefinitions.asInstanceOf[js.Any])
+    if (SupportedHyperParameters != null) __obj.updateDynamic("SupportedHyperParameters")(SupportedHyperParameters.asInstanceOf[js.Any])
+    if (SupportedTuningJobObjectiveMetrics != null) __obj.updateDynamic("SupportedTuningJobObjectiveMetrics")(SupportedTuningJobObjectiveMetrics.asInstanceOf[js.Any])
+    if (!js.isUndefined(SupportsDistributedTraining)) __obj.updateDynamic("SupportsDistributedTraining")(SupportsDistributedTraining.get.asInstanceOf[js.Any])
+    if (TrainingImageDigest != null) __obj.updateDynamic("TrainingImageDigest")(TrainingImageDigest.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrainingSpecification]
   }
-  @scala.inline
-  implicit class TrainingSpecificationOps[Self <: TrainingSpecification] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSupportedTrainingInstanceTypes(value: TrainingInstanceTypes): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedTrainingInstanceTypes")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrainingChannels(value: ChannelSpecifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingChannels")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withTrainingImage(value: Image): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingImage")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withMetricDefinitions(value: MetricDefinitionList): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDefinitions")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMetricDefinitions: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDefinitions")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedHyperParameters(value: HyperParameterSpecifications): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedHyperParameters")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedHyperParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedHyperParameters")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportedTuningJobObjectiveMetrics(value: HyperParameterTuningJobObjectives): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedTuningJobObjectiveMetrics")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportedTuningJobObjectiveMetrics: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedTuningJobObjectiveMetrics")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSupportsDistributedTraining(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsDistributedTraining")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSupportsDistributedTraining: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsDistributedTraining")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTrainingImageDigest(value: ImageDigest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingImageDigest")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTrainingImageDigest: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingImageDigest")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

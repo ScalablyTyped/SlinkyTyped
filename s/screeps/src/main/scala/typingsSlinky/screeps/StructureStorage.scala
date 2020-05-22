@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation._
   * A structure that can store huge amount of resource units. Only one structure
   * per room is allowed that can be addressed by `Room.storage` property.
   */
-@js.native
 trait StructureStorage
   extends OwnedStructure[STRUCTURE_STORAGE]
      with AnyOwnedStructure
@@ -17,12 +16,12 @@ trait StructureStorage
   /**
     * An object with the storage contents.
     */
-  var store: StoreDefinition = js.native
+  var store: StoreDefinition
   /**
     * The total amount of resources the storage can contain.
     * @deprecated An alias for .store.getCapacity().
     */
-  var storeCapacity: Double = js.native
+  var storeCapacity: Double
 }
 
 object StructureStorage {
@@ -34,35 +33,18 @@ object StructureStorage {
     hitsMax: Double,
     id: Id[StructureStorage],
     isActive: () => Boolean,
+    my: Boolean,
     notifyWhenAttacked: Boolean => ScreepsReturnCode,
     pos: RoomPosition,
     room: Room,
     store: StoreDefinition,
     storeCapacity: Double,
-    structureType: STRUCTURE_STORAGE
+    structureType: STRUCTURE_STORAGE,
+    owner: Owner = null
   ): StructureStorage = {
-    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], storeCapacity = storeCapacity.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), my = my.asInstanceOf[js.Any], notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], storeCapacity = storeCapacity.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any])
+    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureStorage]
   }
-  @scala.inline
-  implicit class StructureStorageOps[Self <: StructureStorage] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withStore(value: StoreDefinition): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withStoreCapacity(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("storeCapacity")(value.asInstanceOf[js.Any])
-        ret
-    }
-  }
-  
 }
 

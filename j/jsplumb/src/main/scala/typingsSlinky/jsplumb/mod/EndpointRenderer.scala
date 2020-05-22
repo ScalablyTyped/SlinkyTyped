@@ -7,6 +7,5 @@ import scala.scalajs.js.annotation._
 /**
   * The actual component that does the rendering.
   */
-@js.native
 trait EndpointRenderer extends js.Object
 

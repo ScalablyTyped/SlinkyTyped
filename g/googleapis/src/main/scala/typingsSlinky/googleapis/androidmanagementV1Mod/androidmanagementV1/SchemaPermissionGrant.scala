@@ -22,41 +22,11 @@ trait SchemaPermissionGrant extends js.Object {
 
 object SchemaPermissionGrant {
   @scala.inline
-  def apply(): SchemaPermissionGrant = {
+  def apply(permission: String = null, policy: String = null): SchemaPermissionGrant = {
     val __obj = js.Dynamic.literal()
+    if (permission != null) __obj.updateDynamic("permission")(permission.asInstanceOf[js.Any])
+    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPermissionGrant]
   }
-  @scala.inline
-  implicit class SchemaPermissionGrantOps[Self <: SchemaPermissionGrant] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withPermission(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPermission: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPolicy(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPolicy: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

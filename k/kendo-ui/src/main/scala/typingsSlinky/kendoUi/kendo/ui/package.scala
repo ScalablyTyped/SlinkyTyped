@@ -37,6 +37,7 @@ package object ui {
   type DropTargetDragenterEvent = typingsSlinky.kendoUi.kendo.ui.DropTargetEvent
   type DropTargetDragleaveEvent = typingsSlinky.kendoUi.kendo.ui.DropTargetEvent
   type DropTargetDropEvent = typingsSlinky.kendoUi.kendo.ui.DropTargetEvent
+  type FormData = org.scalablytyped.runtime.StringDictionary[js.Any]
   type GanttChangeEvent = typingsSlinky.kendoUi.kendo.ui.GanttEvent
   type GanttDataBindingEvent = typingsSlinky.kendoUi.kendo.ui.GanttEvent
   type GanttDataBoundEvent = typingsSlinky.kendoUi.kendo.ui.GanttEvent
@@ -66,6 +67,7 @@ package object ui {
   type SchedulerDataBoundEvent = typingsSlinky.kendoUi.kendo.ui.SchedulerEvent
   type SpreadsheetInsertSheetEvent = typingsSlinky.kendoUi.kendo.ui.SpreadsheetEvent
   type SpreadsheetRenderEvent = typingsSlinky.kendoUi.kendo.ui.SpreadsheetEvent
+  type TextBoxChangeEvent = typingsSlinky.kendoUi.kendo.ui.TextBoxEvent
   type TimePickerChangeEvent = typingsSlinky.kendoUi.kendo.ui.TimePickerEvent
   type TimePickerCloseEvent = typingsSlinky.kendoUi.kendo.ui.TimePickerEvent
   type TimePickerOpenEvent = typingsSlinky.kendoUi.kendo.ui.TimePickerEvent

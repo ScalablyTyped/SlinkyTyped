@@ -6,56 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait AccordionProps extends js.Object {
-  var items: js.Array[Content] = js.native
-  var keepOnlyOneOpen: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[BaseFontSize] = js.native
+  var items: js.Array[Content]
+  var keepOnlyOneOpen: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[BaseFontSize] = js.undefined
 }
 
 object AccordionProps {
   @scala.inline
-  def apply(items: js.Array[Content]): AccordionProps = {
+  def apply(
+    items: js.Array[Content],
+    keepOnlyOneOpen: js.UndefOr[Boolean] = js.undefined,
+    theme: BaseFontSize = null
+  ): AccordionProps = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    if (!js.isUndefined(keepOnlyOneOpen)) __obj.updateDynamic("keepOnlyOneOpen")(keepOnlyOneOpen.get.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccordionProps]
   }
-  @scala.inline
-  implicit class AccordionPropsOps[Self <: AccordionProps] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withItems(value: js.Array[Content]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withKeepOnlyOneOpen(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepOnlyOneOpen")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutKeepOnlyOneOpen: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("keepOnlyOneOpen")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withTheme(value: BaseFontSize): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTheme: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

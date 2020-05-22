@@ -7,40 +7,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Supports reading and writing to a file at a specified position. */
-@js.native
 trait FileRandomAccessStream extends js.Object {
   /** Gets a value that indicates whether the stream can be read from. */
-  var canRead: Boolean = js.native
+  var canRead: Boolean
   /** Gets a value that indicates whether the file can be written to. */
-  var canWrite: Boolean = js.native
+  var canWrite: Boolean
   /** Gets the byte offset of the stream. */
-  var position: Double = js.native
+  var position: Double
   /** Gets or sets the size of the random access stream. */
-  var size: Double = js.native
+  var size: Double
   /**
     * Creates a new instance of a IRandomAccessStream over the same resource as the current stream.
     * @return The new stream. The initial, internal position of the stream is 0.
     */
-  def cloneStream(): IRandomAccessStream = js.native
+  def cloneStream(): IRandomAccessStream
   /** Closes the current stream and releases system resources. */
-  def close(): Unit = js.native
+  def close(): Unit
   /**
     * Flushes data asynchronously in a sequential stream.
     * @return The stream flush operation.
     */
-  def flushAsync(): IPromiseWithIAsyncOperation[Boolean] = js.native
+  def flushAsync(): IPromiseWithIAsyncOperation[Boolean]
   /**
     * Returns an input stream at a specified location in a stream.
     * @param position The location in the stream at which to begin.
     * @return The input stream.
     */
-  def getInputStreamAt(position: Double): IInputStream = js.native
+  def getInputStreamAt(position: Double): IInputStream
   /**
     * Returns an output stream at a specified location in a stream.
     * @param position The location in the output stream at which to begin.
     * @return The output stream.
     */
-  def getOutputStreamAt(position: Double): IOutputStream = js.native
+  def getOutputStreamAt(position: Double): IOutputStream
   /**
     * Returns an asynchronous byte reader object.
     * @param buffer The buffer into which the asynchronous read operation places the bytes that are read.
@@ -48,18 +47,18 @@ trait FileRandomAccessStream extends js.Object {
     * @param options Specifies the type of the asynchronous read operation.
     * @return The asynchronous operation.
     */
-  def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double] = js.native
+  def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
   /**
     * Sets the position of the stream to the specified value.
     * @param position The new position of the stream.
     */
-  def seek(position: Double): Unit = js.native
+  def seek(position: Double): Unit
   /**
     * Writes data asynchronously to a file.
     * @param buffer The buffer into which the asynchronous writer operation writes.
     * @return The byte writer operation.
     */
-  def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double] = js.native
+  def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double]
 }
 
 object FileRandomAccessStream {
@@ -81,87 +80,5 @@ object FileRandomAccessStream {
     val __obj = js.Dynamic.literal(canRead = canRead.asInstanceOf[js.Any], canWrite = canWrite.asInstanceOf[js.Any], cloneStream = js.Any.fromFunction0(cloneStream), close = js.Any.fromFunction0(close), flushAsync = js.Any.fromFunction0(flushAsync), getInputStreamAt = js.Any.fromFunction1(getInputStreamAt), getOutputStreamAt = js.Any.fromFunction1(getOutputStreamAt), position = position.asInstanceOf[js.Any], readAsync = js.Any.fromFunction3(readAsync), seek = js.Any.fromFunction1(seek), size = size.asInstanceOf[js.Any], writeAsync = js.Any.fromFunction1(writeAsync))
     __obj.asInstanceOf[FileRandomAccessStream]
   }
-  @scala.inline
-  implicit class FileRandomAccessStreamOps[Self <: FileRandomAccessStream] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withCanRead(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canRead")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCanWrite(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canWrite")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withCloneStream(value: () => IRandomAccessStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneStream")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withClose(value: () => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withFlushAsync(value: () => IPromiseWithIAsyncOperation[Boolean]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("flushAsync")(js.Any.fromFunction0(value))
-        ret
-    }
-    @scala.inline
-    def withGetInputStreamAt(value: Double => IInputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getInputStreamAt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withGetOutputStreamAt(value: Double => IOutputStream): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getOutputStreamAt")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withPosition(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withReadAsync(
-      value: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsync")(js.Any.fromFunction3(value))
-        ret
-    }
-    @scala.inline
-    def withSeek(value: Double => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
-        ret
-    }
-    @scala.inline
-    def withSize(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withWriteAsync(value: IBuffer => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAsync")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

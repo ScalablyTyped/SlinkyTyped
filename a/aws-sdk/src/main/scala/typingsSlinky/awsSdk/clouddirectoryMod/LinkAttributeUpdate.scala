@@ -18,41 +18,11 @@ trait LinkAttributeUpdate extends js.Object {
 
 object LinkAttributeUpdate {
   @scala.inline
-  def apply(): LinkAttributeUpdate = {
+  def apply(AttributeAction: LinkAttributeAction = null, AttributeKey: AttributeKey = null): LinkAttributeUpdate = {
     val __obj = js.Dynamic.literal()
+    if (AttributeAction != null) __obj.updateDynamic("AttributeAction")(AttributeAction.asInstanceOf[js.Any])
+    if (AttributeKey != null) __obj.updateDynamic("AttributeKey")(AttributeKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkAttributeUpdate]
   }
-  @scala.inline
-  implicit class LinkAttributeUpdateOps[Self <: LinkAttributeUpdate] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAttributeAction(value: LinkAttributeAction): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeAction")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeAction: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeAction")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAttributeKey(value: AttributeKey): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAttributeKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeKey")(js.undefined)
-        ret
-    }
-  }
-  
 }
 

@@ -5,13 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
 trait StaticMapService extends js.Object {
   /**
     * Get a static map image..
     * @param request
     */
-  def getStaticImage(request: StaticMapRequest): MapiRequest = js.native
+  def getStaticImage(request: StaticMapRequest): MapiRequest
 }
 
 object StaticMapService {
@@ -20,19 +19,5 @@ object StaticMapService {
     val __obj = js.Dynamic.literal(getStaticImage = js.Any.fromFunction1(getStaticImage))
     __obj.asInstanceOf[StaticMapService]
   }
-  @scala.inline
-  implicit class StaticMapServiceOps[Self <: StaticMapService] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetStaticImage(value: StaticMapRequest => MapiRequest): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getStaticImage")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

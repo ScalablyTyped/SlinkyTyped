@@ -16,14 +16,13 @@ import scala.scalajs.js.annotation._
   * @see ImportFilter
   * @see XExporter
   */
-@js.native
 trait XImporter extends XInterface {
   /**
     * sets the target document for the importer
     * @param Document the target document
     * @throws com::sun::star::lang::IllegalArgumentException if **Document** does not support any service which is supported by this importer
     */
-  def setTargetDocument(Document: XComponent): Unit = js.native
+  def setTargetDocument(Document: XComponent): Unit
 }
 
 object XImporter {
@@ -37,19 +36,5 @@ object XImporter {
     val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setTargetDocument = js.Any.fromFunction1(setTargetDocument))
     __obj.asInstanceOf[XImporter]
   }
-  @scala.inline
-  implicit class XImporterOps[Self <: XImporter] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withSetTargetDocument(value: XComponent => Unit): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("setTargetDocument")(js.Any.fromFunction1(value))
-        ret
-    }
-  }
-  
 }
 

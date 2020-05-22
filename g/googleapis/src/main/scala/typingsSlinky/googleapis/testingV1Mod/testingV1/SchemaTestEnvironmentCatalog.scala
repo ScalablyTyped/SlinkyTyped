@@ -29,65 +29,18 @@ trait SchemaTestEnvironmentCatalog extends js.Object {
 
 object SchemaTestEnvironmentCatalog {
   @scala.inline
-  def apply(): SchemaTestEnvironmentCatalog = {
+  def apply(
+    androidDeviceCatalog: SchemaAndroidDeviceCatalog = null,
+    iosDeviceCatalog: SchemaIosDeviceCatalog = null,
+    networkConfigurationCatalog: SchemaNetworkConfigurationCatalog = null,
+    softwareCatalog: SchemaProvidedSoftwareCatalog = null
+  ): SchemaTestEnvironmentCatalog = {
     val __obj = js.Dynamic.literal()
+    if (androidDeviceCatalog != null) __obj.updateDynamic("androidDeviceCatalog")(androidDeviceCatalog.asInstanceOf[js.Any])
+    if (iosDeviceCatalog != null) __obj.updateDynamic("iosDeviceCatalog")(iosDeviceCatalog.asInstanceOf[js.Any])
+    if (networkConfigurationCatalog != null) __obj.updateDynamic("networkConfigurationCatalog")(networkConfigurationCatalog.asInstanceOf[js.Any])
+    if (softwareCatalog != null) __obj.updateDynamic("softwareCatalog")(softwareCatalog.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestEnvironmentCatalog]
   }
-  @scala.inline
-  implicit class SchemaTestEnvironmentCatalogOps[Self <: SchemaTestEnvironmentCatalog] (val x: Self) extends AnyVal {
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withAndroidDeviceCatalog(value: SchemaAndroidDeviceCatalog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDeviceCatalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAndroidDeviceCatalog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("androidDeviceCatalog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIosDeviceCatalog(value: SchemaIosDeviceCatalog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosDeviceCatalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIosDeviceCatalog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iosDeviceCatalog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withNetworkConfigurationCatalog(value: SchemaNetworkConfigurationCatalog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfigurationCatalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNetworkConfigurationCatalog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("networkConfigurationCatalog")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSoftwareCatalog(value: SchemaProvidedSoftwareCatalog): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareCatalog")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSoftwareCatalog: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareCatalog")(js.undefined)
-        ret
-    }
-  }
-  
 }
 
